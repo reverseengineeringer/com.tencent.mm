@@ -1,120 +1,118 @@
 package com.tencent.mm.modelmulti;
 
-import com.tencent.mm.d.b.bg;
+import com.tencent.mm.e.b.bj;
 import com.tencent.mm.model.c;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.protocal.b.aj;
-import com.tencent.mm.r.c.a;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.platformtools.s;
+import com.tencent.mm.protocal.b.am;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.aj;
+import com.tencent.mm.t.c.a;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
 
 final class a$4
-  implements af.a
+  implements ah.a
 {
-  private m bUC = new m(false);
+  private n bOd = new n(false);
   
   a$4(a parama) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    if (!tDrskgi) {
-      com.tencent.mm.model.ah.tD().rs().aXL();
-    }
-    if (bUB.bOO.isEmpty())
+    com.tencent.mm.model.ah.tE().rt().Hj("MicroMsg.GetChatRoomMsgService" + bOc.hashCode());
+    if (bOc.bIj.isEmpty())
     {
-      u.i("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr respHandler queue maybe this time is null and return!");
-      com.tencent.mm.model.ah.tD().rs().aXM();
+      v.i("MicroMsg.GetChatRoomMsgService", "summerbadcr respHandler queue maybe this time is null and return!");
+      com.tencent.mm.model.ah.tE().rt().Hk("MicroMsg.GetChatRoomMsgService" + bOc.hashCode());
       return false;
     }
-    long l = t.FS();
+    long l = s.Gp();
     int i;
     int j;
-    label96:
+    label128:
     a.b localb;
     boolean bool;
-    if (bUB.bDG)
+    if (bOc.bwQ)
     {
       i = 9;
       j = i + 1;
-      u.d("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr respHandler start maxCnt[%d]", new Object[] { Integer.valueOf(j) });
+      v.d("MicroMsg.GetChatRoomMsgService", "summerbadcr respHandler start maxCnt[%d]", new Object[] { Integer.valueOf(j) });
       i = 0;
       if (i >= j) {
-        break label636;
+        break label712;
       }
-      localb = (a.b)bUB.bOO.peek();
+      localb = (a.b)bOc.bIj.peek();
       if (localb != null) {
-        break label227;
+        break label281;
       }
-      u.i("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr respHandler queue maybe this time is null and break!");
-      com.tencent.mm.model.ah.tD().rs().aXM();
+      v.i("MicroMsg.GetChatRoomMsgService", "summerbadcr respHandler queue maybe this time is null and break!");
+      com.tencent.mm.model.ah.tE().rt().Hk("MicroMsg.GetChatRoomMsgService" + bOc.hashCode());
       bool = false;
-      bUB.bOS.ds(0L);
+      bOc.bIn.dJ(0L);
     }
     for (;;)
     {
-      u.i("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr respHandler onTimerExpired netSceneRunning:" + bUB.bDG + " ret:" + bool + " maxCnt:" + j + " take:" + (t.FS() - l) + "ms");
+      v.i("MicroMsg.GetChatRoomMsgService", "summerbadcr respHandler onTimerExpired netSceneRunning:" + bOc.bwQ + " ret:" + bool + " maxCnt:" + j + " take:" + (s.Gp() - l) + "ms");
       return bool;
       i = 18;
       break;
-      label227:
-      Object localObject1 = bUH;
+      label281:
+      Object localObject1 = bOi;
       int k = ((LinkedList)localObject1).size();
       int m = k - 1;
-      int n = bPb;
+      int n = bIw;
       if (k <= n)
       {
-        bUB.bOO.poll();
-        if (bUB.bOO.isEmpty())
+        bOc.bIj.poll();
+        if (bOc.bIj.isEmpty())
         {
-          a.f(new HashMap(bUB.bUA), bUD);
-          com.tencent.mm.model.ah.tD().rs().aXM();
-          u.i("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr respHandler resp proc fin gr.curIdx:%d size:%d and retList is empty break", new Object[] { Integer.valueOf(n), Integer.valueOf(k) });
+          a.d(new HashMap(bOc.bOb), bOe);
+          com.tencent.mm.model.ah.tE().rt().Hk("MicroMsg.GetChatRoomMsgService" + bOc.hashCode());
+          v.i("MicroMsg.GetChatRoomMsgService", "summerbadcr respHandler resp proc fin gr.curIdx:%d size:%d and retList is empty break", new Object[] { Integer.valueOf(n), Integer.valueOf(k) });
           bool = false;
-          bUB.bOS.ds(0L);
+          bOc.bIn.dJ(0L);
           continue;
         }
-        u.d("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr respHandler resp proc fin gr.curIdx:%d size:%d and retList is not empty continue next", new Object[] { Integer.valueOf(n), Integer.valueOf(k) });
+        v.d("MicroMsg.GetChatRoomMsgService", "summerbadcr respHandler resp proc fin gr.curIdx:%d size:%d and retList is not empty continue next", new Object[] { Integer.valueOf(n), Integer.valueOf(k) });
         i += 1;
-        break label96;
+        break label128;
       }
-      localObject1 = (aj)((LinkedList)localObject1).get(n);
-      label423:
-      m localm;
-      if ((bUI) && (n == m))
+      localObject1 = (am)((LinkedList)localObject1).get(n);
+      label499:
+      n localn;
+      if ((bOj) && (n == m))
       {
         bool = true;
-        u.d("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr respHandler process curIdx[%d] fault[%b] MsgSeq[%d], CreateTime[%d], MsgType[%d]", new Object[] { Integer.valueOf(n), Boolean.valueOf(bool), Integer.valueOf(iXB), Integer.valueOf(fpL), Integer.valueOf(iXu) });
-        if ((!bUI) || (n != m) || (bUG == 0)) {
-          break label592;
+        v.d("MicroMsg.GetChatRoomMsgService", "summerbadcr respHandler process curIdx[%d] fault[%b] MsgSeq[%d], CreateTime[%d], MsgType[%d]", new Object[] { Integer.valueOf(n), Boolean.valueOf(bool), Integer.valueOf(jvf), Integer.valueOf(fyR), Integer.valueOf(juY) });
+        if ((!bOj) || (n != m) || (bOh == 0)) {
+          break label668;
         }
-        localObject2 = com.tencent.mm.model.ah.tD().rs().y(bUD, iXB);
-        localm = bUC;
+        localObject2 = com.tencent.mm.model.ah.tE().rt().D(bOe, jvf);
+        localn = bOd;
         if (field_msgId != 0L) {
-          break label586;
+          break label662;
         }
       }
-      label586:
+      label662:
       for (bool = true;; bool = false)
       {
-        localm.d(new c.a((aj)localObject1, true, bool, true));
-        bPb += 1;
+        localn.d(new c.a((am)localObject1, true, bool, true));
+        bIw += 1;
         break;
         bool = false;
-        break label423;
+        break label499;
       }
-      label592:
-      Object localObject2 = bUC;
-      if (bUG != 0) {}
+      label668:
+      Object localObject2 = bOd;
+      if (bOh != 0) {}
       for (bool = true;; bool = false)
       {
-        ((m)localObject2).d(new c.a((aj)localObject1, true, false, bool));
+        ((n)localObject2).d(new c.a((am)localObject1, true, false, bool));
         break;
       }
-      label636:
+      label712:
       bool = true;
     }
   }

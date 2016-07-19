@@ -1,6 +1,7 @@
 package com.tencent.mm.ui.contact;
 
-import com.tencent.mm.sdk.platformtools.u;
+import android.view.View;
+import android.widget.ListView;
 import com.tencent.mm.ui.base.MMSlideDelView.f;
 
 final class AddressUI$a$18
@@ -8,14 +9,9 @@ final class AddressUI$a$18
 {
   AddressUI$a$18(AddressUI.a parama) {}
   
-  public final void Z(Object paramObject)
+  public final void j(View paramView, int paramInt)
   {
-    if (paramObject == null)
-    {
-      u.e("!32@/B4Tb64lLpJvPADYHZ60V4qqnXgYeWWp", "onItemDel object null");
-      return;
-    }
-    AddressUI.a.a(liu, paramObject.toString());
+    AddressUI.a.c(lIF).performItemClick(paramView, paramInt, 0L);
   }
 }
 

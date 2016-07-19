@@ -13,18 +13,32 @@
     name = "c"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/dbsupport/newcursor/k",
+        "<TK;TT;>;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic kjZ:Lcom/tencent/mm/ui/e;
+.field final synthetic kKh:Lcom/tencent/mm/ui/e;
 
 
 # direct methods
 .method public constructor <init>(Lcom/tencent/mm/ui/e;Lcom/tencent/mm/dbsupport/newcursor/e;)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/tencent/mm/dbsupport/newcursor/e",
+            "<TK;>;)V"
+        }
+    .end annotation
 
     .prologue
     .line 233
-    iput-object p1, p0, Lcom/tencent/mm/ui/e$c;->kjZ:Lcom/tencent/mm/ui/e;
+    iput-object p1, p0, Lcom/tencent/mm/ui/e$c;->kKh:Lcom/tencent/mm/ui/e;
 
     .line 234
     invoke-static {p1}, Lcom/tencent/mm/ui/e;->a(Lcom/tencent/mm/ui/e;)I
@@ -39,28 +53,42 @@
 
 
 # virtual methods
-.method public final d(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+.method public final e(Ljava/util/ArrayList;)Ljava/util/ArrayList;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList;",
+            ")",
+            "Ljava/util/ArrayList",
+            "<TT;>;"
+        }
+    .end annotation
 
     .prologue
     .line 244
-    iget-object v0, p0, Lcom/tencent/mm/ui/e$c;->kjZ:Lcom/tencent/mm/ui/e;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e$c;->kKh:Lcom/tencent/mm/ui/e;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/e;->d(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/e;->e(Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final qM()Lcom/tencent/mm/dbsupport/newcursor/a;
+.method public final pq()Lcom/tencent/mm/dbsupport/newcursor/a;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
 
     .prologue
     .line 239
-    iget-object v0, p0, Lcom/tencent/mm/ui/e$c;->kjZ:Lcom/tencent/mm/ui/e;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e$c;->kKh:Lcom/tencent/mm/ui/e;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/e;->qD()Lcom/tencent/mm/dbsupport/newcursor/a;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/e;->ph()Lcom/tencent/mm/dbsupport/newcursor/a;
 
     move-result-object v0
 

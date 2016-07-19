@@ -13,36 +13,36 @@ final class FindMContactInviteUI$6
   
   public final void notifyDataSetChanged()
   {
-    if ((FindMContactInviteUI.d(lrv) != 2) && (FindMContactInviteUI.d(lrv) == 1))
+    if ((FindMContactInviteUI.d(lRZ) != 2) && (FindMContactInviteUI.d(lRZ) == 1))
     {
-      FindMContactInviteUI.e(lrv).setText(lrv.getString(2131428722));
-      if (!FindMContactInviteUI.b(lrv).yy()) {
+      FindMContactInviteUI.e(lRZ).setText(lRZ.getString(2131232766));
+      if (!FindMContactInviteUI.b(lRZ).yL()) {
         break label230;
       }
-      if ((FindMContactInviteUI.d(lrv) != 1) && (FindMContactInviteUI.e(lrv).getVisibility() == 0) && (FindMContactInviteUI.f(lrv) != null))
+      if ((FindMContactInviteUI.d(lRZ) != 1) && (FindMContactInviteUI.e(lRZ).getVisibility() == 0) && (FindMContactInviteUI.f(lRZ) != null))
       {
-        FindMContactInviteUI.e(lrv).setVisibility(8);
-        FindMContactInviteUI.f(lrv).setVisibility(0);
+        FindMContactInviteUI.e(lRZ).setVisibility(8);
+        FindMContactInviteUI.f(lRZ).setVisibility(0);
       }
     }
     for (;;)
     {
-      if ((FindMContactInviteUI.b(lrv).getSelectCount() <= 0) || (FindMContactInviteUI.d(lrv) == 1)) {
+      if ((FindMContactInviteUI.b(lRZ).yK() <= 0) || (FindMContactInviteUI.d(lRZ) == 1)) {
         break label292;
       }
-      FindMContactInviteUI.g(lrv).setText(lrv.getResources().getQuantityString(2131755021, FindMContactInviteUI.b(lrv).getSelectCount(), new Object[] { Integer.valueOf(FindMContactInviteUI.b(lrv).getSelectCount()) }));
+      FindMContactInviteUI.g(lRZ).setText(lRZ.getResources().getQuantityString(2131361798, FindMContactInviteUI.b(lRZ).yK(), new Object[] { Integer.valueOf(FindMContactInviteUI.b(lRZ).yK()) }));
       return;
-      FindMContactInviteUI.e(lrv).setText(lrv.getString(2131428726, new Object[] { Integer.valueOf(FindMContactInviteUI.b(lrv).getCount()) }));
+      FindMContactInviteUI.e(lRZ).setText(lRZ.getString(2131232765, new Object[] { Integer.valueOf(FindMContactInviteUI.b(lRZ).getCount()) }));
       break;
       label230:
-      if ((FindMContactInviteUI.d(lrv) != 1) && (FindMContactInviteUI.e(lrv).getVisibility() == 8) && (FindMContactInviteUI.f(lrv) != null))
+      if ((FindMContactInviteUI.d(lRZ) != 1) && (FindMContactInviteUI.e(lRZ).getVisibility() == 8) && (FindMContactInviteUI.f(lRZ) != null))
       {
-        FindMContactInviteUI.e(lrv).setVisibility(0);
-        FindMContactInviteUI.f(lrv).setVisibility(8);
+        FindMContactInviteUI.e(lRZ).setVisibility(0);
+        FindMContactInviteUI.f(lRZ).setVisibility(8);
       }
     }
     label292:
-    FindMContactInviteUI.g(lrv).setText(lrv.getResources().getQuantityString(2131755019, FindMContactInviteUI.b(lrv).getCount(), new Object[] { Integer.valueOf(FindMContactInviteUI.b(lrv).getCount()) }));
+    FindMContactInviteUI.g(lRZ).setText(lRZ.getResources().getQuantityString(2131361799, FindMContactInviteUI.b(lRZ).getCount(), new Object[] { Integer.valueOf(FindMContactInviteUI.b(lRZ).getCount()) }));
   }
 }
 

@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/ui/base/MMPullDownView$1;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.super Lcom/tencent/mm/sdk/platformtools/ac;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic kGp:Lcom/tencent/mm/ui/base/MMPullDownView;
+.field final synthetic lft:Lcom/tencent/mm/ui/base/MMPullDownView;
 
 
 # direct methods
@@ -23,10 +23,10 @@
     .locals 0
 
     .prologue
-    .line 303
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->kGp:Lcom/tencent/mm/ui/base/MMPullDownView;
+    .line 301
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->lft:Lcom/tencent/mm/ui/base/MMPullDownView;
 
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
     return-void
 .end method
@@ -39,11 +39,11 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 307
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/platformtools/aa;->handleMessage(Landroid/os/Message;)V
+    .line 305
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/platformtools/ac;->handleMessage(Landroid/os/Message;)V
 
-    .line 308
-    const-string/jumbo v0, "!32@/B4Tb64lLpI7QFnGqEKENPRhNROls06u"
+    .line 306
+    const-string/jumbo v0, "MicroMsg.MMPullDownView"
 
     const-string/jumbo v1, "updateDelayHandler handleMessage loadDataType[%d]"
 
@@ -51,7 +51,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->kGp:Lcom/tencent/mm/ui/base/MMPullDownView;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->lft:Lcom/tencent/mm/ui/base/MMPullDownView;
 
     invoke-static {v3}, Lcom/tencent/mm/ui/base/MMPullDownView;->a(Lcom/tencent/mm/ui/base/MMPullDownView;)I
 
@@ -63,10 +63,10 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 309
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->kGp:Lcom/tencent/mm/ui/base/MMPullDownView;
+    .line 307
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->lft:Lcom/tencent/mm/ui/base/MMPullDownView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMPullDownView;->a(Lcom/tencent/mm/ui/base/MMPullDownView;)I
 
@@ -74,19 +74,19 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 329
+    .line 327
     :cond_0
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->kGp:Lcom/tencent/mm/ui/base/MMPullDownView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->lft:Lcom/tencent/mm/ui/base/MMPullDownView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMPullDownView;->g(Lcom/tencent/mm/ui/base/MMPullDownView;)Z
 
-    .line 330
+    .line 328
     return-void
 
-    .line 311
+    .line 309
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->kGp:Lcom/tencent/mm/ui/base/MMPullDownView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->lft:Lcom/tencent/mm/ui/base/MMPullDownView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMPullDownView;->b(Lcom/tencent/mm/ui/base/MMPullDownView;)Lcom/tencent/mm/ui/base/MMPullDownView$g;
 
@@ -94,18 +94,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 312
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->kGp:Lcom/tencent/mm/ui/base/MMPullDownView;
+    .line 310
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->lft:Lcom/tencent/mm/ui/base/MMPullDownView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMPullDownView;->b(Lcom/tencent/mm/ui/base/MMPullDownView;)Lcom/tencent/mm/ui/base/MMPullDownView$g;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/base/MMPullDownView$g;->aiq()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/base/MMPullDownView$g;->akX()V
 
-    .line 314
+    .line 312
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->kGp:Lcom/tencent/mm/ui/base/MMPullDownView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->lft:Lcom/tencent/mm/ui/base/MMPullDownView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMPullDownView;->c(Lcom/tencent/mm/ui/base/MMPullDownView;)Landroid/view/View;
 
@@ -117,10 +117,10 @@
 
     if-nez v0, :cond_0
 
-    .line 315
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->kGp:Lcom/tencent/mm/ui/base/MMPullDownView;
+    .line 313
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->lft:Lcom/tencent/mm/ui/base/MMPullDownView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->kGp:Lcom/tencent/mm/ui/base/MMPullDownView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->lft:Lcom/tencent/mm/ui/base/MMPullDownView;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/base/MMPullDownView;->d(Lcom/tencent/mm/ui/base/MMPullDownView;)I
 
@@ -130,9 +130,9 @@
 
     goto :goto_0
 
-    .line 319
+    .line 317
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->kGp:Lcom/tencent/mm/ui/base/MMPullDownView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->lft:Lcom/tencent/mm/ui/base/MMPullDownView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMPullDownView;->e(Lcom/tencent/mm/ui/base/MMPullDownView;)Lcom/tencent/mm/ui/base/MMPullDownView$e;
 
@@ -140,18 +140,18 @@
 
     if-eqz v0, :cond_2
 
-    .line 320
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->kGp:Lcom/tencent/mm/ui/base/MMPullDownView;
+    .line 318
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->lft:Lcom/tencent/mm/ui/base/MMPullDownView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMPullDownView;->e(Lcom/tencent/mm/ui/base/MMPullDownView;)Lcom/tencent/mm/ui/base/MMPullDownView$e;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/base/MMPullDownView$e;->QR()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/base/MMPullDownView$e;->Sg()V
 
-    .line 322
+    .line 320
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->kGp:Lcom/tencent/mm/ui/base/MMPullDownView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->lft:Lcom/tencent/mm/ui/base/MMPullDownView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMPullDownView;->f(Lcom/tencent/mm/ui/base/MMPullDownView;)Landroid/view/View;
 
@@ -163,10 +163,10 @@
 
     if-nez v0, :cond_0
 
-    .line 323
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->kGp:Lcom/tencent/mm/ui/base/MMPullDownView;
+    .line 321
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->lft:Lcom/tencent/mm/ui/base/MMPullDownView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->kGp:Lcom/tencent/mm/ui/base/MMPullDownView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMPullDownView$1;->lft:Lcom/tencent/mm/ui/base/MMPullDownView;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/base/MMPullDownView;->d(Lcom/tencent/mm/ui/base/MMPullDownView;)I
 
@@ -176,7 +176,7 @@
 
     goto :goto_0
 
-    .line 309
+    .line 307
     nop
 
     :pswitch_data_0

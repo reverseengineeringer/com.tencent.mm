@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ae1" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:background="@drawable/aei" android:paddingLeft="6.0dip" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="6.0dip" style="@style/MMFooter">
+        <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:background="@drawable/aj4" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.tencent.mm.ui.widget.MMEditText android:textColor="@color/ak" android:id="@id/b_u" android:background="@null" android:layout_width="0.0dip" android:layout_marginBottom="@dimen/i9" android:maxHeight="@dimen/d6" android:minHeight="@dimen/d7" android:singleLine="false" android:layout_weight="1.0" android:inputType="textCapSentences|textMultiLine" style="@style/MMEditText" />
+            <ImageButton android:id="@id/b_v" android:background="@null" android:padding="@dimen/j8" android:layout_width="@dimen/d_" android:layout_height="@dimen/d_" android:layout_marginLeft="@dimen/cp" android:layout_marginBottom="@dimen/i9" android:src="@drawable/d5" android:contentDescription="@string/wu" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip">
+            <TextView android:gravity="top" android:id="@id/yz" android:visibility="gone" style="@style/ChattingUIWordCount" />
+            <Button android:textColor="@color/p8" android:id="@id/b_w" android:background="@drawable/cj" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:layout_width="wrap_content" android:layout_height="@dimen/d_" android:minWidth="@dimen/db" android:text="@string/a1_" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

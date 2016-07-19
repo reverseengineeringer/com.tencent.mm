@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field iO:Landroid/support/v7/internal/view/menu/f;
+.field jf:Landroid/support/v7/internal/view/menu/f;
 
-.field final synthetic oh:Landroid/support/v7/internal/widget/ActionBarView;
+.field final synthetic ox:Landroid/support/v7/internal/widget/ActionBarView;
 
-.field public oi:Landroid/support/v7/internal/view/menu/h;
+.field public oy:Landroid/support/v7/internal/view/menu/h;
 
 
 # direct methods
@@ -31,7 +31,7 @@
 
     .prologue
     .line 1367
-    iput-object p1, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iput-object p1, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -55,24 +55,24 @@
 
     .prologue
     .line 1375
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->iO:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->jf:Landroid/support/v7/internal/view/menu/f;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oi:Landroid/support/v7/internal/view/menu/h;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oy:Landroid/support/v7/internal/view/menu/h;
 
     if-eqz v0, :cond_0
 
     .line 1376
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->iO:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->jf:Landroid/support/v7/internal/view/menu/f;
 
-    iget-object v1, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oi:Landroid/support/v7/internal/view/menu/h;
+    iget-object v1, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oy:Landroid/support/v7/internal/view/menu/h;
 
     invoke-virtual {v0, v1}, Landroid/support/v7/internal/view/menu/f;->g(Landroid/support/v7/internal/view/menu/h;)Z
 
     .line 1378
     :cond_0
-    iput-object p2, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->iO:Landroid/support/v7/internal/view/menu/f;
+    iput-object p2, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->jf:Landroid/support/v7/internal/view/menu/f;
 
     .line 1379
     return-void
@@ -96,7 +96,7 @@
     return v0
 .end method
 
-.method public final bj()Z
+.method public final bk()Z
     .locals 1
 
     .prologue
@@ -115,22 +115,22 @@
     const/16 v3, 0x8
 
     .line 1430
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-virtual {p1}, Landroid/support/v7/internal/view/menu/h;->getActionView()Landroid/view/View;
 
     move-result-object v1
 
-    iput-object v1, v0, Landroid/support/v7/internal/widget/ActionBarView;->oc:Landroid/view/View;
+    iput-object v1, v0, Landroid/support/v7/internal/widget/ActionBarView;->os:Landroid/view/View;
 
     .line 1431
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->d(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/support/v7/internal/widget/ActionBarView$HomeView;
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v1, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v1}, Landroid/support/v7/internal/widget/ActionBarView;->c(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/graphics/drawable/Drawable;
 
@@ -140,7 +140,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v2, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-virtual {v2}, Landroid/support/v7/internal/widget/ActionBarView;->getResources()Landroid/content/res/Resources;
 
@@ -153,33 +153,33 @@
     invoke-virtual {v0, v1}, Landroid/support/v7/internal/widget/ActionBarView$HomeView;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 1432
-    iput-object p1, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oi:Landroid/support/v7/internal/view/menu/h;
+    iput-object p1, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oy:Landroid/support/v7/internal/view/menu/h;
 
     .line 1433
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
-    iget-object v0, v0, Landroid/support/v7/internal/widget/ActionBarView;->oc:Landroid/view/View;
+    iget-object v0, v0, Landroid/support/v7/internal/widget/ActionBarView;->os:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v1, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     if-eq v0, v1, :cond_0
 
     .line 1434
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
-    iget-object v1, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v1, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
-    iget-object v1, v1, Landroid/support/v7/internal/widget/ActionBarView;->oc:Landroid/view/View;
+    iget-object v1, v1, Landroid/support/v7/internal/widget/ActionBarView;->os:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/support/v7/internal/widget/ActionBarView;->addView(Landroid/view/View;)V
 
     .line 1436
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->d(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/support/v7/internal/widget/ActionBarView$HomeView;
 
@@ -189,14 +189,14 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v1, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     if-eq v0, v1, :cond_1
 
     .line 1437
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
-    iget-object v1, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v1, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v1}, Landroid/support/v7/internal/widget/ActionBarView;->d(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/support/v7/internal/widget/ActionBarView$HomeView;
 
@@ -206,7 +206,7 @@
 
     .line 1439
     :cond_1
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->e(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/support/v7/internal/widget/ActionBarView$HomeView;
 
@@ -215,7 +215,7 @@
     invoke-virtual {v0, v3}, Landroid/support/v7/internal/widget/ActionBarView$HomeView;->setVisibility(I)V
 
     .line 1440
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->f(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/widget/LinearLayout;
 
@@ -224,7 +224,7 @@
     if-eqz v0, :cond_2
 
     .line 1441
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->f(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/widget/LinearLayout;
 
@@ -234,7 +234,7 @@
 
     .line 1443
     :cond_2
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->g(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/support/v7/internal/widget/ScrollingTabContainerView;
 
@@ -243,7 +243,7 @@
     if-eqz v0, :cond_3
 
     .line 1444
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->g(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/support/v7/internal/widget/ScrollingTabContainerView;
 
@@ -253,7 +253,7 @@
 
     .line 1446
     :cond_3
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->h(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/support/v7/internal/widget/d;
 
@@ -262,7 +262,7 @@
     if-eqz v0, :cond_4
 
     .line 1447
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->h(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/support/v7/internal/widget/d;
 
@@ -272,7 +272,7 @@
 
     .line 1449
     :cond_4
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->i(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/view/View;
 
@@ -281,7 +281,7 @@
     if-eqz v0, :cond_5
 
     .line 1450
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->i(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/view/View;
 
@@ -291,26 +291,26 @@
 
     .line 1452
     :cond_5
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/widget/ActionBarView;->requestLayout()V
 
     .line 1453
-    invoke-virtual {p1, v4}, Landroid/support/v7/internal/view/menu/h;->x(Z)V
+    invoke-virtual {p1, v4}, Landroid/support/v7/internal/view/menu/h;->w(Z)V
 
     .line 1455
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
-    iget-object v0, v0, Landroid/support/v7/internal/widget/ActionBarView;->oc:Landroid/view/View;
+    iget-object v0, v0, Landroid/support/v7/internal/widget/ActionBarView;->os:Landroid/view/View;
 
     instance-of v0, v0, Landroid/support/v7/a/b;
 
     if-eqz v0, :cond_6
 
     .line 1456
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
-    iget-object v0, v0, Landroid/support/v7/internal/widget/ActionBarView;->oc:Landroid/view/View;
+    iget-object v0, v0, Landroid/support/v7/internal/widget/ActionBarView;->os:Landroid/view/View;
 
     check-cast v0, Landroid/support/v7/a/b;
 
@@ -332,18 +332,18 @@
     const/4 v2, 0x0
 
     .line 1466
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
-    iget-object v0, v0, Landroid/support/v7/internal/widget/ActionBarView;->oc:Landroid/view/View;
+    iget-object v0, v0, Landroid/support/v7/internal/widget/ActionBarView;->os:Landroid/view/View;
 
     instance-of v0, v0, Landroid/support/v7/a/b;
 
     if-eqz v0, :cond_0
 
     .line 1467
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
-    iget-object v0, v0, Landroid/support/v7/internal/widget/ActionBarView;->oc:Landroid/view/View;
+    iget-object v0, v0, Landroid/support/v7/internal/widget/ActionBarView;->os:Landroid/view/View;
 
     check-cast v0, Landroid/support/v7/a/b;
 
@@ -351,18 +351,18 @@
 
     .line 1470
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
-    iget-object v1, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v1, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
-    iget-object v1, v1, Landroid/support/v7/internal/widget/ActionBarView;->oc:Landroid/view/View;
+    iget-object v1, v1, Landroid/support/v7/internal/widget/ActionBarView;->os:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/support/v7/internal/widget/ActionBarView;->removeView(Landroid/view/View;)V
 
     .line 1471
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
-    iget-object v1, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v1, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v1}, Landroid/support/v7/internal/widget/ActionBarView;->d(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/support/v7/internal/widget/ActionBarView$HomeView;
 
@@ -371,12 +371,12 @@
     invoke-virtual {v0, v1}, Landroid/support/v7/internal/widget/ActionBarView;->removeView(Landroid/view/View;)V
 
     .line 1472
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
-    iput-object v3, v0, Landroid/support/v7/internal/widget/ActionBarView;->oc:Landroid/view/View;
+    iput-object v3, v0, Landroid/support/v7/internal/widget/ActionBarView;->os:Landroid/view/View;
 
     .line 1473
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->j(Landroid/support/v7/internal/widget/ActionBarView;)I
 
@@ -387,7 +387,7 @@
     if-eqz v0, :cond_1
 
     .line 1474
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->e(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/support/v7/internal/widget/ActionBarView$HomeView;
 
@@ -397,7 +397,7 @@
 
     .line 1476
     :cond_1
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->j(Landroid/support/v7/internal/widget/ActionBarView;)I
 
@@ -408,7 +408,7 @@
     if-eqz v0, :cond_2
 
     .line 1477
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->f(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/widget/LinearLayout;
 
@@ -417,14 +417,14 @@
     if-nez v0, :cond_6
 
     .line 1478
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->k(Landroid/support/v7/internal/widget/ActionBarView;)V
 
     .line 1483
     :cond_2
     :goto_0
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->g(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/support/v7/internal/widget/ScrollingTabContainerView;
 
@@ -432,7 +432,7 @@
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->l(Landroid/support/v7/internal/widget/ActionBarView;)I
 
@@ -443,7 +443,7 @@
     if-ne v0, v1, :cond_3
 
     .line 1484
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->g(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/support/v7/internal/widget/ScrollingTabContainerView;
 
@@ -453,7 +453,7 @@
 
     .line 1486
     :cond_3
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->h(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/support/v7/internal/widget/d;
 
@@ -461,7 +461,7 @@
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->l(Landroid/support/v7/internal/widget/ActionBarView;)I
 
@@ -470,7 +470,7 @@
     if-ne v0, v4, :cond_4
 
     .line 1487
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->h(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/support/v7/internal/widget/d;
 
@@ -480,7 +480,7 @@
 
     .line 1489
     :cond_4
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->i(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/view/View;
 
@@ -488,7 +488,7 @@
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->j(Landroid/support/v7/internal/widget/ActionBarView;)I
 
@@ -499,7 +499,7 @@
     if-eqz v0, :cond_5
 
     .line 1490
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->i(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/view/View;
 
@@ -509,7 +509,7 @@
 
     .line 1492
     :cond_5
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->d(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/support/v7/internal/widget/ActionBarView$HomeView;
 
@@ -518,22 +518,22 @@
     invoke-virtual {v0, v3}, Landroid/support/v7/internal/widget/ActionBarView$HomeView;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 1493
-    iput-object v3, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oi:Landroid/support/v7/internal/view/menu/h;
+    iput-object v3, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oy:Landroid/support/v7/internal/view/menu/h;
 
     .line 1494
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/widget/ActionBarView;->requestLayout()V
 
     .line 1495
-    invoke-virtual {p1, v2}, Landroid/support/v7/internal/view/menu/h;->x(Z)V
+    invoke-virtual {p1, v2}, Landroid/support/v7/internal/view/menu/h;->w(Z)V
 
     .line 1497
     return v4
 
     .line 1480
     :cond_6
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->f(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/widget/LinearLayout;
 
@@ -544,24 +544,24 @@
     goto :goto_0
 .end method
 
-.method public final q(Z)V
+.method public final p(Z)V
     .locals 5
 
     .prologue
     const/4 v1, 0x0
 
     .line 1389
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oi:Landroid/support/v7/internal/view/menu/h;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oy:Landroid/support/v7/internal/view/menu/h;
 
     if-eqz v0, :cond_0
 
     .line 1392
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->iO:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->jf:Landroid/support/v7/internal/view/menu/f;
 
     if-eqz v0, :cond_2
 
     .line 1393
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->iO:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->jf:Landroid/support/v7/internal/view/menu/f;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/f;->size()I
 
@@ -574,7 +574,7 @@
     if-ge v2, v3, :cond_2
 
     .line 1395
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->iO:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->jf:Landroid/support/v7/internal/view/menu/f;
 
     invoke-virtual {v0, v2}, Landroid/support/v7/internal/view/menu/f;->getItem(I)Landroid/view/MenuItem;
 
@@ -583,7 +583,7 @@
     check-cast v0, Landroid/support/v4/a/a/b;
 
     .line 1396
-    iget-object v4, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oi:Landroid/support/v7/internal/view/menu/h;
+    iget-object v4, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oy:Landroid/support/v7/internal/view/menu/h;
 
     if-ne v0, v4, :cond_1
 
@@ -595,7 +595,7 @@
     if-nez v0, :cond_0
 
     .line 1405
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oi:Landroid/support/v7/internal/view/menu/h;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$a;->oy:Landroid/support/v7/internal/view/menu/h;
 
     invoke-virtual {p0, v0}, Landroid/support/v7/internal/widget/ActionBarView$a;->e(Landroid/support/v7/internal/view/menu/h;)Z
 

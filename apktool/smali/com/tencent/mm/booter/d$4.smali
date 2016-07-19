@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bmw:Lcom/tencent/mm/booter/d;
+.field final synthetic bac:Lcom/tencent/mm/booter/d;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 241
-    iput-object p1, p0, Lcom/tencent/mm/booter/d$4;->bmw:Lcom/tencent/mm/booter/d;
+    iput-object p1, p0, Lcom/tencent/mm/booter/d$4;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 245
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$4;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$4;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-static {v0}, Lcom/tencent/mm/booter/d;->c(Lcom/tencent/mm/booter/d;)Ljava/util/List;
 
@@ -69,7 +69,7 @@
     if-eqz v0, :cond_0
 
     .line 248
-    const-string/jumbo v2, "!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei"
+    const-string/jumbo v2, "MicroMsg.DownloadPlayer"
 
     const-string/jumbo v3, "on resume call back: %s"
 
@@ -85,7 +85,7 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 249
     invoke-interface {v0}, Lcom/tencent/mm/model/v;->onResume()V
@@ -94,15 +94,15 @@
 
     .line 253
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$4;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$4;->bac:Lcom/tencent/mm/booter/d;
 
-    invoke-static {v0}, Lcom/tencent/mm/booter/d;->d(Lcom/tencent/mm/booter/d;)Lcom/tencent/mm/sdk/platformtools/af;
+    invoke-static {v0}, Lcom/tencent/mm/booter/d;->d(Lcom/tencent/mm/booter/d;)Lcom/tencent/mm/sdk/platformtools/ah;
 
     move-result-object v0
 
-    const-wide/16 v1, 0x32
+    const-wide/16 v2, 0x32
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;->ds(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ah;->dJ(J)V
 
     .line 254
     return-void

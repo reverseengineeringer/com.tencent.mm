@@ -27,6 +27,24 @@
 # direct methods
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Lcom/tencent/mm/ui/base/g$d;)Landroid/app/Dialog;
     .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;",
+            "Lcom/tencent/mm/ui/base/g$d;",
+            ")",
+            "Landroid/app/Dialog;"
+        }
+    .end annotation
 
     .prologue
     .line 901
@@ -53,6 +71,25 @@
 
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lcom/tencent/mm/ui/base/g$d;)Landroid/app/Dialog;
     .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/ui/base/g$d;",
+            ")",
+            "Landroid/app/Dialog;"
+        }
+    .end annotation
 
     .prologue
     .line 890
@@ -79,6 +116,26 @@
 
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;ZLcom/tencent/mm/ui/base/g$d;)Landroid/app/Dialog;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;",
+            "Ljava/lang/String;",
+            "Z",
+            "Lcom/tencent/mm/ui/base/g$d;",
+            ")",
+            "Landroid/app/Dialog;"
+        }
+    .end annotation
 
     .prologue
     .line 896
@@ -231,7 +288,7 @@
     if-nez v0, :cond_2
 
     :cond_1
-    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -260,7 +317,7 @@
 
     .line 1053
     :cond_3
-    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -283,20 +340,20 @@
 
     invoke-direct {v2, p1, v0}, Lcom/tencent/mm/ui/base/g$6;-><init>(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    iput-object v2, v1, Lcom/tencent/mm/ui/tools/m;->hle:Lcom/tencent/mm/ui/base/n$c;
+    iput-object v2, v1, Lcom/tencent/mm/ui/tools/m;->hoS:Lcom/tencent/mm/ui/base/n$c;
 
     .line 1073
     new-instance v0, Lcom/tencent/mm/ui/base/g$7;
 
     invoke-direct {v0, p5}, Lcom/tencent/mm/ui/base/g$7;-><init>(Lcom/tencent/mm/ui/base/g$c;)V
 
-    iput-object v0, v1, Lcom/tencent/mm/ui/tools/m;->hlf:Lcom/tencent/mm/ui/base/n$d;
+    iput-object v0, v1, Lcom/tencent/mm/ui/tools/m;->hoT:Lcom/tencent/mm/ui/base/n$d;
 
     .line 1082
     invoke-virtual {v1, p6}, Lcom/tencent/mm/ui/tools/m;->d(Landroid/content/DialogInterface$OnCancelListener;)V
 
     .line 1083
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/m;->biF()Landroid/app/Dialog;
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/m;->boB()Landroid/app/Dialog;
 
     move-result-object v0
 
@@ -316,17 +373,17 @@
 
     invoke-direct {v3, p1, v0}, Lcom/tencent/mm/ui/base/g$8;-><init>(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    iput-object v3, v2, Lcom/tencent/mm/ui/tools/n;->hle:Lcom/tencent/mm/ui/base/n$c;
+    iput-object v3, v2, Lcom/tencent/mm/ui/tools/n;->hoS:Lcom/tencent/mm/ui/base/n$c;
 
     .line 1100
     new-instance v0, Lcom/tencent/mm/ui/base/g$9;
 
     invoke-direct {v0, p5}, Lcom/tencent/mm/ui/base/g$9;-><init>(Lcom/tencent/mm/ui/base/g$c;)V
 
-    iput-object v0, v2, Lcom/tencent/mm/ui/tools/n;->hlf:Lcom/tencent/mm/ui/base/n$d;
+    iput-object v0, v2, Lcom/tencent/mm/ui/tools/n;->hoT:Lcom/tencent/mm/ui/base/n$d;
 
     .line 1109
-    iput-object p6, v2, Lcom/tencent/mm/ui/tools/s;->lxZ:Landroid/content/DialogInterface$OnCancelListener;
+    iput-object p6, v2, Lcom/tencent/mm/ui/tools/s;->lYO:Landroid/content/DialogInterface$OnCancelListener;
 
     .line 1110
     invoke-virtual {v2}, Lcom/tencent/mm/ui/tools/n;->bH()Z
@@ -373,11 +430,11 @@
     if-eqz p2, :cond_1
 
     .line 340
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->qz(I)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->ss(I)Lcom/tencent/mm/ui/base/h$a;
 
     .line 342
     :cond_1
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->qA(I)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->st(I)Lcom/tencent/mm/ui/base/h$a;
 
     .line 343
     invoke-virtual {v0, p3, p5}, Lcom/tencent/mm/ui/base/h$a;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
@@ -393,7 +450,7 @@
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/h$a;->c(Landroid/content/DialogInterface$OnCancelListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 354
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -556,22 +613,22 @@
     if-lez p2, :cond_1
 
     .line 152
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->qz(I)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->ss(I)Lcom/tencent/mm/ui/base/h$a;
 
     .line 154
     :cond_1
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->qA(I)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->st(I)Lcom/tencent/mm/ui/base/h$a;
 
     .line 155
-    const v1, 0x7f0b0de8
+    const v1, 0x7f0800f7
 
     invoke-virtual {v0, v1, p4}, Lcom/tencent/mm/ui/base/h$a;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 156
-    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 157
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -589,7 +646,7 @@
 
     .prologue
     .line 327
-    const v0, 0x7f0b1648
+    const v0, 0x7f08130f
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -599,13 +656,13 @@
     const-string/jumbo v2, ""
 
     .line 329
-    const v0, 0x7f0b0de7
+    const v0, 0x7f080095
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v0, 0x7f0b0de4
+    const v0, 0x7f080099
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -615,7 +672,7 @@
 
     const/4 v7, 0x0
 
-    const v8, 0x7f0801f3
+    const v8, 0x7f0f0023
 
     move-object v0, p0
 
@@ -661,18 +718,18 @@
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 423
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 424
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->aq(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->au(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 425
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 426
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -719,24 +776,24 @@
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 294
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 295
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/h$a;->Gz(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/h$a;->IN(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 296
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->GA(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->IO(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 297
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->g(Landroid/graphics/drawable/Drawable;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->h(Landroid/graphics/drawable/Drawable;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 298
-    const v1, 0x7f0b0de8
+    const v1, 0x7f0800f7
 
     invoke-virtual {v0, v1, p3}, Lcom/tencent/mm/ui/base/h$a;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 299
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -782,18 +839,18 @@
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 440
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 441
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->aq(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->au(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 442
-    const v1, 0x7f0b0de8
+    const v1, 0x7f0800f7
 
     invoke-virtual {v0, v1, p3}, Lcom/tencent/mm/ui/base/h$a;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 443
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -840,21 +897,21 @@
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 506
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 507
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/h$a;->Gz(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/h$a;->IN(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 508
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->aq(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->au(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 509
-    const v1, 0x7f0b0de8
+    const v1, 0x7f0800f7
 
     invoke-virtual {v0, v1, p3}, Lcom/tencent/mm/ui/base/h$a;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 510
-    const v1, 0x7f0b0de4
+    const v1, 0x7f080099
 
     invoke-virtual {v0, v1, p4}, Lcom/tencent/mm/ui/base/h$a;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
@@ -866,7 +923,7 @@
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/h$a;->c(Landroid/content/DialogInterface$OnCancelListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 520
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -954,13 +1011,13 @@
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 739
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 740
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->Gz(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->IN(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 741
-    const v1, 0x7f0b0de8
+    const v1, 0x7f0800f7
 
     invoke-virtual {v0, v1, p3}, Lcom/tencent/mm/ui/base/h$a;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
@@ -968,7 +1025,7 @@
     invoke-virtual {v0, p4}, Lcom/tencent/mm/ui/base/h$a;->c(Landroid/content/DialogInterface$OnCancelListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 743
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -1014,23 +1071,23 @@
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 212
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 213
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->Gz(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->IN(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 214
-    const v1, 0x7f0b0de8
+    const v1, 0x7f0800f7
 
     invoke-virtual {v0, v1, p3}, Lcom/tencent/mm/ui/base/h$a;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 215
-    const v1, 0x7f0b0de4
+    const v1, 0x7f080099
 
     invoke-virtual {v0, v1, p4}, Lcom/tencent/mm/ui/base/h$a;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 216
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -1076,16 +1133,16 @@
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 490
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 491
-    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/base/h$a;->aq(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/base/h$a;->au(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 492
     invoke-virtual {v0, p2, p4}, Lcom/tencent/mm/ui/base/h$a;->a(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 493
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -1132,25 +1189,25 @@
 
     invoke-direct {v3, p0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v3, v6}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v3, v6}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
     const/4 v0, 0x1
 
-    invoke-virtual {v3, v0}, Lcom/tencent/mm/ui/base/h$a;->hx(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v3, v0}, Lcom/tencent/mm/ui/base/h$a;->hV(Z)Lcom/tencent/mm/ui/base/h$a;
 
-    const v0, 0x7f0b0de4
+    const v0, 0x7f080099
 
     invoke-virtual {v3, v0, v2}, Lcom/tencent/mm/ui/base/h$a;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
-    invoke-virtual {v3, p1}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v3, p1}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
-    const v0, 0x7f0a05c1
+    const v0, 0x7f030390
 
     invoke-static {p0, v0, v2}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v4
 
-    const v0, 0x7f0704d4
+    const v0, 0x7f1000cf
 
     invoke-virtual {v4, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1158,7 +1215,7 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -1167,7 +1224,7 @@
     invoke-virtual {v0, p2}, Landroid/widget/EditText;->append(Ljava/lang/CharSequence;)V
 
     :cond_2
-    const v1, 0x7f070186
+    const v1, 0x7f100728
 
     invoke-virtual {v4, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1175,7 +1232,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v5
 
@@ -1186,7 +1243,7 @@
     invoke-virtual {v1, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
     :goto_1
-    const v1, 0x7f0b0de8
+    const v1, 0x7f0800f7
 
     new-instance v5, Lcom/tencent/mm/ui/base/g$12;
 
@@ -1200,16 +1257,16 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p4}, Lcom/tencent/mm/ui/tools/a/c;->rZ(I)Lcom/tencent/mm/ui/tools/a/c;
+    invoke-virtual {v0, p4}, Lcom/tencent/mm/ui/tools/a/c;->ud(I)Lcom/tencent/mm/ui/tools/a/c;
 
     move-result-object v0
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/tools/a/c;->a(Lcom/tencent/mm/ui/tools/a/c$a;)V
 
     :cond_3
-    invoke-virtual {v3, v4}, Lcom/tencent/mm/ui/base/h$a;->aq(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v3, v4}, Lcom/tencent/mm/ui/base/h$a;->au(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v3}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -1259,64 +1316,6 @@
     return-object v0
 .end method
 
-.method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
-    .locals 1
-
-    .prologue
-    .line 363
-    instance-of v0, p0, Landroid/app/Activity;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p0
-
-    check-cast v0, Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 364
-    const/4 v0, 0x0
-
-    .line 376
-    :goto_0
-    return-object v0
-
-    .line 367
-    :cond_0
-    new-instance v0, Lcom/tencent/mm/ui/base/h$a;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
-
-    .line 368
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
-
-    .line 369
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->Gz(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
-
-    .line 370
-    invoke-virtual {v0, p3, p5}, Lcom/tencent/mm/ui/base/h$a;->a(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
-
-    .line 371
-    invoke-virtual {v0, p4, p6}, Lcom/tencent/mm/ui/base/h$a;->b(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
-
-    .line 372
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
-
-    move-result-object v0
-
-    .line 373
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->show()V
-
-    .line 375
-    invoke-static {p0, v0}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Landroid/app/Dialog;)V
-
-    goto :goto_0
-.end method
-
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;I)Lcom/tencent/mm/ui/base/h;
     .locals 2
 
@@ -1350,10 +1349,10 @@
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 386
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 387
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->Gz(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->IN(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 388
     invoke-virtual {v0, p3, p5}, Lcom/tencent/mm/ui/base/h$a;->a(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
@@ -1362,7 +1361,7 @@
     invoke-virtual {v0, p4, p6}, Lcom/tencent/mm/ui/base/h$a;->b(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 390
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -1375,7 +1374,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/h;->qy(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/h;->sr(I)V
 
     .line 392
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->show()V
@@ -1449,10 +1448,10 @@
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 253
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 254
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->Gz(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->IN(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 255
     invoke-virtual {v0, p3, p6}, Lcom/tencent/mm/ui/base/h$a;->a(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
@@ -1461,10 +1460,10 @@
     invoke-virtual {v0, p4, p7}, Lcom/tencent/mm/ui/base/h$a;->b(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 257
-    invoke-virtual {v0, p5}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p5}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 258
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -1480,7 +1479,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/h;->qy(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/h;->sr(I)V
 
     .line 262
     :cond_1
@@ -1525,19 +1524,19 @@
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 195
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 196
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->Gz(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->IN(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 197
     invoke-virtual {v0, p3, p5}, Lcom/tencent/mm/ui/base/h$a;->a(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 198
-    invoke-virtual {v0, p4}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p4}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 199
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -1583,21 +1582,21 @@
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 174
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 175
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->Gz(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->IN(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 176
-    const v1, 0x7f0b0de8
+    const v1, 0x7f0800f7
 
     invoke-virtual {v0, v1, p4}, Lcom/tencent/mm/ui/base/h$a;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 177
-    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 178
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -1643,26 +1642,26 @@
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 229
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 230
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->Gz(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->IN(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 231
-    const v1, 0x7f0b0de8
+    const v1, 0x7f0800f7
 
     invoke-virtual {v0, v1, p4}, Lcom/tencent/mm/ui/base/h$a;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 232
-    const v1, 0x7f0b0de4
+    const v1, 0x7f080099
 
     invoke-virtual {v0, v1, p5}, Lcom/tencent/mm/ui/base/h$a;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 233
-    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 234
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -1677,6 +1676,20 @@
 
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;ILcom/tencent/mm/ui/base/g$a;)Lcom/tencent/mm/ui/base/h;
     .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;I",
+            "Lcom/tencent/mm/ui/base/g$a;",
+            ")",
+            "Lcom/tencent/mm/ui/base/h;"
+        }
+    .end annotation
 
     .prologue
     const/4 v3, 0x0
@@ -1713,11 +1726,11 @@
     if-eqz v0, :cond_1
 
     .line 665
-    const-string/jumbo v0, "!32@/B4Tb64lLpK6ZJSQRdrgGEFdUYhqDjxF"
+    const-string/jumbo v0, "MicroMsg.MMAlert"
 
     const-string/jumbo v1, "show switch alert fail"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v3
 
@@ -1731,25 +1744,25 @@
     invoke-direct {v5, p0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 669
-    invoke-virtual {v5, v8}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v5, v8}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 670
-    const v0, 0x7f0b0de4
+    const v0, 0x7f080099
 
     invoke-virtual {v5, v0, v3}, Lcom/tencent/mm/ui/base/h$a;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 671
-    invoke-virtual {v5, p1}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v5, p1}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 672
-    const v0, 0x7f0a058f
+    const v0, 0x7f030391
 
     invoke-static {p0, v0, v3}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v6
 
     .line 674
-    const v0, 0x7f0710ad
+    const v0, 0x7f100bda
 
     invoke-virtual {v6, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1770,7 +1783,7 @@
     if-ltz v4, :cond_4
 
     .line 676
-    const v1, 0x7f0a057b
+    const v1, 0x7f03048d
 
     invoke-static {p0, v1, v3}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -1791,7 +1804,7 @@
     if-ne v4, p3, :cond_2
 
     .line 679
-    const v2, 0x7f0301b6
+    const v2, 0x7f07025f
 
     invoke-virtual {v1, v2, v8, v8, v8}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
@@ -1810,12 +1823,12 @@
 
     move-result-object v2
 
-    const v7, 0x7f0501db
+    const v7, 0x7f0b0152
 
     invoke-virtual {v2, v7}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     .line 683
-    const v2, 0x7f0406a2
+    const v2, 0x7f02077b
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
@@ -1846,10 +1859,10 @@
 
     .line 714
     :cond_4
-    invoke-virtual {v5, v6}, Lcom/tencent/mm/ui/base/h$a;->aq(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v5, v6}, Lcom/tencent/mm/ui/base/h$a;->au(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 715
-    invoke-virtual {v5}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v5}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v1
 
@@ -1931,10 +1944,10 @@
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 469
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 470
-    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/base/h$a;->aq(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/base/h$a;->au(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 471
     invoke-virtual {v0, p4, p6}, Lcom/tencent/mm/ui/base/h$a;->a(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
@@ -1943,10 +1956,10 @@
     invoke-virtual {v0, p5, p7}, Lcom/tencent/mm/ui/base/h$a;->b(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 473
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 474
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -1962,7 +1975,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/h;->qy(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/h;->sr(I)V
 
     .line 478
     :cond_1
@@ -2007,10 +2020,10 @@
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 404
-    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 405
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->Gz(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->IN(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 406
     invoke-virtual {v0, p4, p6}, Lcom/tencent/mm/ui/base/h$a;->a(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
@@ -2019,10 +2032,10 @@
     invoke-virtual {v0, p5, p7}, Lcom/tencent/mm/ui/base/h$a;->b(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 408
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 409
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -2137,20 +2150,59 @@
     return-void
 .end method
 
-.method public static aZ(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
+.method public static aY(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
     .locals 1
 
     .prologue
     .line 89
-    invoke-static {p0, p1}, Lcom/tencent/mm/ui/base/g;->ba(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
+    invoke-static {p0, p1}, Lcom/tencent/mm/ui/base/g;->aZ(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
 
     move-result-object v0
 
     return-object v0
 .end method
 
+.method public static aZ(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
+    .locals 1
+
+    .prologue
+    .line 93
+    const/4 v0, 0x0
+
+    invoke-static {p0, p1, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    .line 94
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    .line 95
+    return-object v0
+.end method
+
 .method private static b(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;ZLcom/tencent/mm/ui/base/g$d;)Landroid/app/Dialog;
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;",
+            "Ljava/lang/String;",
+            "Z",
+            "Lcom/tencent/mm/ui/base/g$d;",
+            ")",
+            "Landroid/app/Dialog;"
+        }
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -2167,7 +2219,7 @@
     if-nez v1, :cond_1
 
     :cond_0
-    invoke-static {p4}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p4}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -2200,20 +2252,20 @@
 
     invoke-direct {v2, p1, p2, p3, p4}, Lcom/tencent/mm/ui/base/g$2;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;)V
 
-    iput-object v2, v1, Lcom/tencent/mm/ui/tools/m;->hle:Lcom/tencent/mm/ui/base/n$c;
+    iput-object v2, v1, Lcom/tencent/mm/ui/tools/m;->hoS:Lcom/tencent/mm/ui/base/n$c;
 
     .line 944
     new-instance v2, Lcom/tencent/mm/ui/base/g$3;
 
     invoke-direct {v2, p6}, Lcom/tencent/mm/ui/base/g$3;-><init>(Lcom/tencent/mm/ui/base/g$d;)V
 
-    iput-object v2, v1, Lcom/tencent/mm/ui/tools/m;->hlf:Lcom/tencent/mm/ui/base/n$d;
+    iput-object v2, v1, Lcom/tencent/mm/ui/tools/m;->hoT:Lcom/tencent/mm/ui/base/n$d;
 
     .line 953
     invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/tools/m;->d(Landroid/content/DialogInterface$OnCancelListener;)V
 
     .line 954
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/m;->biF()Landroid/app/Dialog;
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/m;->boB()Landroid/app/Dialog;
 
     move-result-object v0
 
@@ -2233,17 +2285,17 @@
 
     invoke-direct {v2, p1, p2, p3, p4}, Lcom/tencent/mm/ui/base/g$4;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;)V
 
-    iput-object v2, v1, Lcom/tencent/mm/ui/tools/n;->hle:Lcom/tencent/mm/ui/base/n$c;
+    iput-object v2, v1, Lcom/tencent/mm/ui/tools/n;->hoS:Lcom/tencent/mm/ui/base/n$c;
 
     .line 975
     new-instance v2, Lcom/tencent/mm/ui/base/g$5;
 
     invoke-direct {v2, p6}, Lcom/tencent/mm/ui/base/g$5;-><init>(Lcom/tencent/mm/ui/base/g$d;)V
 
-    iput-object v2, v1, Lcom/tencent/mm/ui/tools/n;->hlf:Lcom/tencent/mm/ui/base/n$d;
+    iput-object v2, v1, Lcom/tencent/mm/ui/tools/n;->hoT:Lcom/tencent/mm/ui/base/n$d;
 
     .line 984
-    iput-object v0, v1, Lcom/tencent/mm/ui/tools/s;->lxZ:Landroid/content/DialogInterface$OnCancelListener;
+    iput-object v0, v1, Lcom/tencent/mm/ui/tools/s;->lYO:Landroid/content/DialogInterface$OnCancelListener;
 
     .line 985
     invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/n;->bH()Z
@@ -2299,81 +2351,65 @@
     goto :goto_1
 .end method
 
-.method public static ba(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
+.method public static b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
     .locals 1
 
     .prologue
-    .line 93
+    .line 363
+    instance-of v0, p0, Landroid/app/Activity;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p0
+
+    check-cast v0, Landroid/app/Activity;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 364
     const/4 v0, 0x0
 
-    invoke-static {p0, p1, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    .line 94
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    .line 95
-    return-object v0
-.end method
-
-.method public static e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
-    .locals 2
-
-    .prologue
-    .line 135
-    if-lez p1, :cond_0
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    .line 136
+    .line 376
     :goto_0
-    if-lez p2, :cond_1
-
-    invoke-virtual {p0, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 137
-    :goto_1
-    invoke-static {p0, v1, v0}, Lcom/tencent/mm/ui/base/g;->y(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/tencent/mm/ui/base/h;
-
-    move-result-object v0
-
     return-object v0
 
-    .line 135
+    .line 367
     :cond_0
-    const-string/jumbo v0, ""
+    new-instance v0, Lcom/tencent/mm/ui/base/h$a;
 
-    move-object v1, v0
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
+
+    .line 368
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+
+    .line 369
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->IN(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+
+    .line 370
+    invoke-virtual {v0, p3, p5}, Lcom/tencent/mm/ui/base/h$a;->a(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
+
+    .line 371
+    invoke-virtual {v0, p4, p6}, Lcom/tencent/mm/ui/base/h$a;->b(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
+
+    .line 372
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
+
+    move-result-object v0
+
+    .line 373
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->show()V
+
+    .line 375
+    invoke-static {p0, v0}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Landroid/app/Dialog;)V
 
     goto :goto_0
-
-    .line 136
-    :cond_1
-    const-string/jumbo v0, ""
-
-    goto :goto_1
 .end method
 
-.method public static x(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/tencent/mm/ui/base/h;
-    .locals 1
-
-    .prologue
-    .line 103
-    invoke-static {p0, p1, p2}, Lcom/tencent/mm/ui/base/g;->y(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/tencent/mm/ui/base/h;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static y(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/tencent/mm/ui/base/h;
+.method public static b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Z)Lcom/tencent/mm/ui/base/h;
     .locals 3
 
     .prologue
@@ -2406,18 +2442,16 @@
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
     .line 113
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 114
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->Gz(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/h$a;->IN(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 115
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
     .line 116
-    const v1, 0x7f0b0de8
+    const v1, 0x7f0800f7
 
     new-instance v2, Lcom/tencent/mm/ui/base/g$1;
 
@@ -2426,7 +2460,7 @@
     invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/base/h$a;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 123
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -2437,4 +2471,64 @@
     invoke-static {p0, v0}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Landroid/app/Dialog;)V
 
     goto :goto_0
+.end method
+
+.method public static f(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
+    .locals 3
+
+    .prologue
+    .line 135
+    if-lez p1, :cond_0
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    .line 136
+    :goto_0
+    if-lez p2, :cond_1
+
+    invoke-virtual {p0, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 137
+    :goto_1
+    const/4 v2, 0x1
+
+    invoke-static {p0, v1, v0, v2}, Lcom/tencent/mm/ui/base/g;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Z)Lcom/tencent/mm/ui/base/h;
+
+    move-result-object v0
+
+    return-object v0
+
+    .line 135
+    :cond_0
+    const-string/jumbo v0, ""
+
+    move-object v1, v0
+
+    goto :goto_0
+
+    .line 136
+    :cond_1
+    const-string/jumbo v0, ""
+
+    goto :goto_1
+.end method
+
+.method public static y(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/tencent/mm/ui/base/h;
+    .locals 1
+
+    .prologue
+    .line 103
+    const/4 v0, 0x1
+
+    invoke-static {p0, p1, p2, v0}, Lcom/tencent/mm/ui/base/g;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Z)Lcom/tencent/mm/ui/base/h;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/model/ar$a;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
@@ -18,20 +18,16 @@
 
 
 # instance fields
-.field final synthetic cYO:Landroid/app/ProgressDialog;
-
-.field final synthetic loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+.field final synthetic lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/conversation/BizConversationUI$a;Landroid/app/ProgressDialog;)V
+.method constructor <init>(Lcom/tencent/mm/ui/conversation/BizConversationUI$a;)V
     .locals 0
 
     .prologue
-    .line 607
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$8;->loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
-
-    iput-object p2, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$8;->cYO:Landroid/app/ProgressDialog;
+    .line 222
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$8;->lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,35 +36,19 @@
 
 
 # virtual methods
-.method public final uh()V
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
     .prologue
-    .line 616
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$8;->cYO:Landroid/app/ProgressDialog;
+    .line 226
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$8;->lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
-    if-eqz v0, :cond_0
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizConversationUI$a;->a(Lcom/tencent/mm/ui/conversation/BizConversationUI$a;)Landroid/widget/ListView;
 
-    .line 617
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$8;->cYO:Landroid/app/ProgressDialog;
+    move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/a$b;->a(Landroid/widget/ListView;)V
 
-    .line 620
-    :cond_0
+    .line 227
     return-void
-.end method
-
-.method public final ui()Z
-    .locals 1
-
-    .prologue
-    .line 611
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$8;->loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizConversationUI$a;->j(Lcom/tencent/mm/ui/conversation/BizConversationUI$a;)Z
-
-    move-result v0
-
-    return v0
 .end method

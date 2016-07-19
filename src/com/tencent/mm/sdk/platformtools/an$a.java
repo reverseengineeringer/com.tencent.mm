@@ -1,31 +1,8 @@
 package com.tencent.mm.sdk.platformtools;
 
-final class an$a
+public abstract interface an$a
 {
-  final Object jXp;
-  
-  an$a(Object paramObject)
-  {
-    jXp = paramObject;
-  }
-  
-  public final boolean equals(Object paramObject)
-  {
-    if (paramObject == null) {}
-    do
-    {
-      do
-      {
-        return false;
-      } while (!(paramObject instanceof a));
-      paramObject = (a)paramObject;
-      if (jXp != null) {
-        break;
-      }
-    } while (jXp != null);
-    return true;
-    return jXp.equals(jXp);
-  }
+  public abstract void bP(int paramInt);
 }
 
 /* Location:

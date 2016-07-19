@@ -12,63 +12,63 @@
 
 
 # instance fields
-.field public bqQ:I
+.field public beQ:I
 
-.field public bqR:Z
+.field public beR:Z
 
-.field public bqS:I
+.field public beS:I
 
-.field public bqT:Z
+.field public beT:Z
 
-.field public bqU:I
+.field public beU:I
 
-.field public bqV:Z
+.field public beV:Z
 
-.field public bqW:Lcom/tencent/mm/compatible/d/b$a;
+.field public beW:Lcom/tencent/mm/compatible/d/b$a;
 
-.field public bqX:Z
+.field public beX:Z
 
-.field public bqY:Lcom/tencent/mm/compatible/d/b$a;
+.field public beY:Lcom/tencent/mm/compatible/d/b$a;
 
-.field public bqZ:Z
+.field public beZ:Z
 
-.field public bra:Z
+.field public bfa:Z
 
-.field public brb:I
+.field public bfb:I
 
-.field public brc:I
+.field public bfc:I
 
-.field public brd:I
+.field public bfd:I
 
-.field public bre:I
+.field public bfe:I
 
-.field public brf:I
+.field public bff:I
 
-.field public brg:Z
+.field public bfg:Z
 
-.field public brh:I
+.field public bfh:I
 
-.field public bri:I
+.field public bfi:I
 
-.field public brj:I
+.field public bfj:I
 
-.field public brk:I
+.field public bfk:I
 
-.field public brl:I
+.field public bfl:I
 
-.field public brm:I
+.field public bfm:I
 
-.field public brn:I
+.field public bfn:I
 
-.field public bro:I
+.field public bfo:I
 
-.field public brp:I
+.field public bfp:I
 
-.field public brq:I
+.field public bfq:I
 
-.field public brr:I
+.field public bfr:I
 
-.field public brs:I
+.field public bfs:I
 
 
 # direct methods
@@ -84,14 +84,14 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/compatible/d/b$a;-><init>(Lcom/tencent/mm/compatible/d/b;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/compatible/d/b;->bqW:Lcom/tencent/mm/compatible/d/b$a;
+    iput-object v0, p0, Lcom/tencent/mm/compatible/d/b;->beW:Lcom/tencent/mm/compatible/d/b$a;
 
     .line 33
     new-instance v0, Lcom/tencent/mm/compatible/d/b$a;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/compatible/d/b$a;-><init>(Lcom/tencent/mm/compatible/d/b;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/compatible/d/b;->bqY:Lcom/tencent/mm/compatible/d/b$a;
+    iput-object v0, p0, Lcom/tencent/mm/compatible/d/b;->beY:Lcom/tencent/mm/compatible/d/b$a;
 
     .line 157
     invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/b;->reset()V
@@ -108,112 +108,112 @@
     .prologue
     const/4 v3, 0x1
 
-    const/4 v2, -0x1
+    const/4 v2, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, -0x1
 
     .line 161
-    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/b;->bqR:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/compatible/d/b;->beR:Z
 
     .line 162
-    iput v1, p0, Lcom/tencent/mm/compatible/d/b;->bqQ:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/b;->beQ:I
 
     .line 164
-    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/b;->bqT:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/compatible/d/b;->beT:Z
 
     .line 165
-    iput v1, p0, Lcom/tencent/mm/compatible/d/b;->bqS:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/b;->beS:I
 
     .line 167
-    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/b;->bqV:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/compatible/d/b;->beV:Z
 
     .line 168
-    iput v1, p0, Lcom/tencent/mm/compatible/d/b;->bqU:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/b;->beU:I
 
     .line 170
-    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/b;->bqX:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/compatible/d/b;->beX:Z
 
     .line 171
-    iget-object v0, p0, Lcom/tencent/mm/compatible/d/b;->bqW:Lcom/tencent/mm/compatible/d/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/d/b;->beW:Lcom/tencent/mm/compatible/d/b$a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/b$a;->reset()V
 
     .line 173
-    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/b;->bqZ:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/compatible/d/b;->beZ:Z
 
     .line 174
-    iget-object v0, p0, Lcom/tencent/mm/compatible/d/b;->bqY:Lcom/tencent/mm/compatible/d/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/d/b;->beY:Lcom/tencent/mm/compatible/d/b$a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/b$a;->reset()V
 
     .line 176
-    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/b;->bra:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/compatible/d/b;->bfa:Z
 
     .line 177
-    iput v2, p0, Lcom/tencent/mm/compatible/d/b;->brb:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/b;->bfb:I
 
     .line 178
-    iput v2, p0, Lcom/tencent/mm/compatible/d/b;->brc:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/b;->bfc:I
 
     .line 179
-    iput v2, p0, Lcom/tencent/mm/compatible/d/b;->brd:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/b;->bfd:I
 
     .line 180
-    iput v2, p0, Lcom/tencent/mm/compatible/d/b;->bre:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/b;->bfe:I
 
     .line 182
-    iput v2, p0, Lcom/tencent/mm/compatible/d/b;->brh:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/b;->bfh:I
 
     .line 184
-    iput v2, p0, Lcom/tencent/mm/compatible/d/b;->brf:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/b;->bff:I
 
     .line 185
-    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/b;->brg:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/compatible/d/b;->bfg:Z
 
     .line 187
-    iput v2, p0, Lcom/tencent/mm/compatible/d/b;->brh:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/b;->bfh:I
 
     .line 189
-    iput v2, p0, Lcom/tencent/mm/compatible/d/b;->brf:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/b;->bff:I
 
     .line 190
-    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/b;->brg:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/compatible/d/b;->bfg:Z
 
     .line 192
-    iput v2, p0, Lcom/tencent/mm/compatible/d/b;->bri:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/b;->bfi:I
 
     .line 194
-    iput v2, p0, Lcom/tencent/mm/compatible/d/b;->bri:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/b;->bfi:I
 
     .line 196
-    iput v2, p0, Lcom/tencent/mm/compatible/d/b;->brj:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/b;->bfj:I
 
     .line 197
-    iput v2, p0, Lcom/tencent/mm/compatible/d/b;->brk:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/b;->bfk:I
 
     .line 199
-    iput v1, p0, Lcom/tencent/mm/compatible/d/b;->brl:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/b;->bfl:I
 
     .line 200
-    iput v3, p0, Lcom/tencent/mm/compatible/d/b;->brm:I
+    iput v3, p0, Lcom/tencent/mm/compatible/d/b;->bfm:I
 
     .line 201
-    iput v3, p0, Lcom/tencent/mm/compatible/d/b;->brn:I
+    iput v3, p0, Lcom/tencent/mm/compatible/d/b;->bfn:I
 
     .line 202
-    iput v3, p0, Lcom/tencent/mm/compatible/d/b;->bro:I
+    iput v3, p0, Lcom/tencent/mm/compatible/d/b;->bfo:I
 
     .line 203
-    iput v3, p0, Lcom/tencent/mm/compatible/d/b;->brp:I
+    iput v3, p0, Lcom/tencent/mm/compatible/d/b;->bfp:I
 
     .line 204
-    iput v2, p0, Lcom/tencent/mm/compatible/d/b;->brq:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/b;->bfq:I
 
     .line 206
-    iput v1, p0, Lcom/tencent/mm/compatible/d/b;->brr:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/b;->bfr:I
 
     .line 207
-    iput v1, p0, Lcom/tencent/mm/compatible/d/b;->brs:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/b;->bfs:I
 
     .line 208
     return-void

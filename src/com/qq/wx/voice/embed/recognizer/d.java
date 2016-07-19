@@ -2,18 +2,18 @@ package com.qq.wx.voice.embed.recognizer;
 
 public final class d
 {
-  public String ajh;
-  public String aji;
-  public String ajj;
-  public String ajk;
-  public String ajl;
-  public String ajm;
+  public String UX;
+  public String UY;
+  public String UZ;
+  public String Va;
+  public String Vb;
+  public String Vc;
   
   public d(String paramString1, String paramString2, String paramString3)
   {
-    ajh = paramString1;
-    aji = paramString2;
-    ajj = paramString3;
+    UX = paramString1;
+    UY = paramString2;
+    UZ = paramString3;
   }
 }
 

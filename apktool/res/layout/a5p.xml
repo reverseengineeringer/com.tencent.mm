@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/RecordListItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView style="@style/RecordListItemAvatar" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/record_listitem_header" />
+        <TextView android:id="@id/by8" android:paddingRight="@dimen/fl" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/FavRecordContent" />
+        <ImageView android:layout_width="fill_parent" android:layout_height="1.0px" style="@style/RecordListItemEndDivider" />
+    </LinearLayout>
+</LinearLayout>

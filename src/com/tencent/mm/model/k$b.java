@@ -1,8 +1,8 @@
 package com.tencent.mm.model;
 
-public final class k$b
+final class k$b
 {
-  public k.a bAg = new k.a();
+  k.a btj = new k.a();
 }
 
 /* Location:

@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private cal:Lcom/tencent/mm/modelsfs/a;
+.field private bTU:Lcom/tencent/mm/modelsfs/a;
 
 
 # direct methods
@@ -20,7 +20,7 @@
 
     invoke-direct {v0, p3, p4}, Lcom/tencent/mm/modelsfs/a;-><init>(J)V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsfs/d;->cal:Lcom/tencent/mm/modelsfs/a;
+    iput-object v0, p0, Lcom/tencent/mm/modelsfs/d;->bTU:Lcom/tencent/mm/modelsfs/a;
 
     .line 16
     return-void
@@ -36,12 +36,12 @@
     invoke-super {p0}, Lcom/tencent/mm/modelsfs/SFSInputStream;->close()V
 
     .line 55
-    iget-object v0, p0, Lcom/tencent/mm/modelsfs/d;->cal:Lcom/tencent/mm/modelsfs/a;
+    iget-object v0, p0, Lcom/tencent/mm/modelsfs/d;->bTU:Lcom/tencent/mm/modelsfs/a;
 
     if-eqz v0, :cond_0
 
     .line 56
-    iget-object v0, p0, Lcom/tencent/mm/modelsfs/d;->cal:Lcom/tencent/mm/modelsfs/a;
+    iget-object v0, p0, Lcom/tencent/mm/modelsfs/d;->bTU:Lcom/tencent/mm/modelsfs/a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/modelsfs/a;->free()V
 
@@ -58,9 +58,9 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/modelsfs/SFSInputStream;->mark(I)V
 
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/modelsfs/d;->cal:Lcom/tencent/mm/modelsfs/a;
+    iget-object v0, p0, Lcom/tencent/mm/modelsfs/d;->bTU:Lcom/tencent/mm/modelsfs/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/modelsfs/a;->Cf()J
+    invoke-virtual {v0}, Lcom/tencent/mm/modelsfs/a;->Cm()J
 
     .line 22
     return-void
@@ -96,7 +96,7 @@
 
     .line 41
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/modelsfs/d;->cal:Lcom/tencent/mm/modelsfs/a;
+    iget-object v1, p0, Lcom/tencent/mm/modelsfs/d;->bTU:Lcom/tencent/mm/modelsfs/a;
 
     invoke-virtual {v1, p1, p3}, Lcom/tencent/mm/modelsfs/a;->j([BI)I
 
@@ -111,7 +111,7 @@
     invoke-super {p0}, Lcom/tencent/mm/modelsfs/SFSInputStream;->reset()V
 
     .line 27
-    iget-object v0, p0, Lcom/tencent/mm/modelsfs/d;->cal:Lcom/tencent/mm/modelsfs/a;
+    iget-object v0, p0, Lcom/tencent/mm/modelsfs/d;->bTU:Lcom/tencent/mm/modelsfs/a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/modelsfs/a;->reset()V
 
@@ -129,7 +129,7 @@
     move-result-wide v0
 
     .line 48
-    iget-object v2, p0, Lcom/tencent/mm/modelsfs/d;->cal:Lcom/tencent/mm/modelsfs/a;
+    iget-object v2, p0, Lcom/tencent/mm/modelsfs/d;->bTU:Lcom/tencent/mm/modelsfs/a;
 
     invoke-virtual {v2, p1, p2}, Lcom/tencent/mm/modelsfs/a;->seek(J)V
 

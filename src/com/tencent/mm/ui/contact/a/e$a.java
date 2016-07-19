@@ -8,11 +8,11 @@ import android.widget.TextView;
 public class e$a
   extends a.a
 {
-  public View cMt;
-  public TextView cNT;
-  public TextView cOd;
-  public ImageView czS;
-  public CheckBox czW;
+  public View cJf;
+  public ImageView cui;
+  public TextView cuj;
+  public TextView cuk;
+  public CheckBox cul;
   
   public e$a(e parame)
   {

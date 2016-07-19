@@ -13,7 +13,7 @@ final class MMPhoneNumberEditText$1
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
     boolean bool2 = true;
-    paramView = iGU;
+    paramView = jdP;
     boolean bool1;
     if (paramView.getCompoundDrawables()[2] == null) {
       bool1 = false;
@@ -25,7 +25,7 @@ final class MMPhoneNumberEditText$1
         return bool1;
         bool1 = bool2;
       } while (paramMotionEvent.getAction() != 1);
-      if (paramMotionEvent.getX() <= paramView.getWidth() - paramView.getPaddingRight() - iGU.iGP.getIntrinsicWidth()) {
+      if (paramMotionEvent.getX() <= paramView.getWidth() - paramView.getPaddingRight() - jdP.jdK.getIntrinsicWidth()) {
         break;
       }
       if (paramView.isFocused())
@@ -35,8 +35,8 @@ final class MMPhoneNumberEditText$1
         return true;
       }
       bool1 = bool2;
-    } while (MMPhoneNumberEditText.b(iGU) == null);
-    MMPhoneNumberEditText.b(iGU).f(paramView);
+    } while (MMPhoneNumberEditText.b(jdP) == null);
+    MMPhoneNumberEditText.b(jdP).f(paramView);
     return true;
     paramView.requestFocus();
     paramView.performClick();

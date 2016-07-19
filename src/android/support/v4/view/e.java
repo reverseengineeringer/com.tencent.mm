@@ -5,20 +5,20 @@ import android.view.Gravity;
 
 public final class e
 {
-  static final a eB = new b();
+  static final a eX = new b();
   
   static
   {
     if (Build.VERSION.SDK_INT >= 17)
     {
-      eB = new c();
+      eX = new c();
       return;
     }
   }
   
   public static int getAbsoluteGravity(int paramInt1, int paramInt2)
   {
-    return eB.getAbsoluteGravity(paramInt1, paramInt2);
+    return eX.getAbsoluteGravity(paramInt1, paramInt2);
   }
   
   static abstract interface a

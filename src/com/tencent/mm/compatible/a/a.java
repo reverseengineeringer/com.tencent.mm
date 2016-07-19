@@ -6,7 +6,7 @@ public final class a
 {
   public static boolean a(int paramInt, a parama)
   {
-    if (e.bU(paramInt))
+    if (e.cm(paramInt))
     {
       parama.run();
       return true;

@@ -4,7 +4,7 @@ import android.net.Uri;
 import android.webkit.ValueCallback;
 
 class SystemWebChromeClient$3
-  implements u
+  implements u<Uri>
 {
   SystemWebChromeClient$3(SystemWebChromeClient paramSystemWebChromeClient, ValueCallback paramValueCallback) {}
   

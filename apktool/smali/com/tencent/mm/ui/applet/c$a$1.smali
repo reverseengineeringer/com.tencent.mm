@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kzC:Lcom/tencent/mm/ui/applet/c$a;
+.field final synthetic kYJ:Lcom/tencent/mm/ui/applet/c$a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 53
-    iput-object p1, p0, Lcom/tencent/mm/ui/applet/c$a$1;->kzC:Lcom/tencent/mm/ui/applet/c$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/applet/c$a$1;->kYJ:Lcom/tencent/mm/ui/applet/c$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 57
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/c$a$1;->kzC:Lcom/tencent/mm/ui/applet/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/c$a$1;->kYJ:Lcom/tencent/mm/ui/applet/c$a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/applet/c$a;->kv()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/applet/c$a;->iY()V
 
     .line 58
     return-void

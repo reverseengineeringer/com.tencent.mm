@@ -10,7 +10,7 @@ final class ContactRemarkImagePreviewUI$2
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    ContactRemarkImagePreviewUI.a(ljp, false);
+    ContactRemarkImagePreviewUI.a(lJA, false);
     return false;
   }
 }

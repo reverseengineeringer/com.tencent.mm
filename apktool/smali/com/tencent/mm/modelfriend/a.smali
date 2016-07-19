@@ -13,9 +13,18 @@
 
 
 # static fields
-.field public static final bLp:Ljava/util/HashSet;
+.field public static final bEJ:Ljava/util/HashSet;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashSet",
+            "<",
+            "Lcom/tencent/mm/modelfriend/a$b;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private static final bLq:Lcom/tencent/mm/modelfriend/a$b;
+.field private static final bEK:Lcom/tencent/mm/modelfriend/a$b;
 
 .field private static thread:Ljava/lang/Thread;
 
@@ -35,14 +44,14 @@
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/modelfriend/a;->bLp:Ljava/util/HashSet;
+    sput-object v0, Lcom/tencent/mm/modelfriend/a;->bEJ:Ljava/util/HashSet;
 
     .line 38
     new-instance v0, Lcom/tencent/mm/modelfriend/a$1;
 
     invoke-direct {v0}, Lcom/tencent/mm/modelfriend/a$1;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/modelfriend/a;->bLq:Lcom/tencent/mm/modelfriend/a$b;
+    sput-object v0, Lcom/tencent/mm/modelfriend/a;->bEK:Lcom/tencent/mm/modelfriend/a$b;
 
     return-void
 .end method
@@ -75,7 +84,7 @@
     move-result-wide v2
 
     .line 77
-    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yG()Z
+    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yT()Z
 
     move-result v4
 
@@ -83,7 +92,7 @@
     if-nez v4, :cond_0
 
     .line 79
-    const-string/jumbo v2, "!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw="
+    const-string/jumbo v2, "MicroMsg.AddrBookSyncHelper"
 
     const-string/jumbo v3, "canSync:%b, skip"
 
@@ -95,7 +104,7 @@
 
     aput-object v4, v1, v0
 
-    invoke-static {v2, v3, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 101
     :goto_0
@@ -107,7 +116,7 @@
 
     invoke-direct {v0, v2, v3, p0}, Lcom/tencent/mm/modelfriend/a$2;-><init>(JLcom/tencent/mm/modelfriend/a$b;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
     move v0, v1
 
@@ -115,12 +124,12 @@
     goto :goto_0
 .end method
 
-.method public static yc()Z
+.method public static yo()Z
     .locals 1
 
     .prologue
     .line 64
-    sget-object v0, Lcom/tencent/mm/modelfriend/a;->bLq:Lcom/tencent/mm/modelfriend/a$b;
+    sget-object v0, Lcom/tencent/mm/modelfriend/a;->bEK:Lcom/tencent/mm/modelfriend/a$b;
 
     invoke-static {v0}, Lcom/tencent/mm/modelfriend/a;->a(Lcom/tencent/mm/modelfriend/a$b;)Z
 
@@ -129,17 +138,17 @@
     return v0
 .end method
 
-.method public static yd()Z
+.method public static yp()Z
     .locals 1
 
     .prologue
     .line 109
-    sget-boolean v0, Lcom/tencent/mm/modelfriend/a$a;->bLk:Z
+    sget-boolean v0, Lcom/tencent/mm/modelfriend/a$a;->bEE:Z
 
     return v0
 .end method
 
-.method static synthetic ye()Ljava/lang/Thread;
+.method static synthetic yq()Ljava/lang/Thread;
     .locals 1
 
     .prologue

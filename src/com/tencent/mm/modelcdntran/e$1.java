@@ -1,27 +1,27 @@
 package com.tencent.mm.modelcdntran;
 
 import com.tencent.mm.model.ah;
-import com.tencent.mm.protocal.b.gh;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.gm;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class e$1
-  implements com.tencent.mm.r.b
+  implements com.tencent.mm.t.b
 {
   e$1(e parame) {}
   
-  public final void a(gh paramgh1, gh paramgh2, gh paramgh3)
+  public final void a(gm paramgm1, gm paramgm2, gm paramgm3)
   {
-    u.d("!44@/B4Tb64lLpIAhUt0Bg2QToookYEZHCVFCAb/yW4GbfY=", "cdntra infoUpdate dns info " + paramgh1.toString() + " getCore().engine:" + e.xX());
-    if (e.xX() != null)
+    v.d("MicroMsg.SubCoreCdnTransport", "cdntra infoUpdate dns info " + paramgm1.toString() + " getCore().engine:" + e.ya());
+    if (e.ya() != null)
     {
-      e.xX().a(paramgh1, paramgh2, paramgh3, null);
-      ah.tv().r(new Runnable()
+      e.ya().a(paramgm1, paramgm2, paramgm3, null);
+      ah.tw().t(new Runnable()
       {
         public final void run()
         {
-          if (e.xW() != null) {
-            e.xW().aS(false);
+          if (e.xZ() != null) {
+            e.xZ().ay(false);
           }
         }
         

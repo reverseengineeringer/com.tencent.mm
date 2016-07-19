@@ -12,9 +12,9 @@
 
 
 # instance fields
-.field private gjM:Ljava/lang/String;
+.field private guh:Ljava/lang/String;
 
-.field private iAM:Lcom/tencent/mm/pluginsdk/model/s$a;
+.field private iXm:Lcom/tencent/mm/pluginsdk/model/s$a;
 
 
 # direct methods
@@ -26,7 +26,7 @@
     invoke-direct {p0, p1}, Landroid/os/FileObserver;-><init>(Ljava/lang/String;)V
 
     .line 32
-    const-string/jumbo v0, "!44@/B4Tb64lLpK9WkebJFLOT+TjSV+I1/x0ls94CDmXe4Y="
+    const-string/jumbo v0, "MicroMsg.ScreenshotObserver"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -42,10 +42,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 33
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/model/s;->iAM:Lcom/tencent/mm/pluginsdk/model/s$a;
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/model/s;->iXm:Lcom/tencent/mm/pluginsdk/model/s$a;
 
     .line 34
     return-void
@@ -65,11 +65,11 @@
     if-ne p1, v0, :cond_1
 
     .line 41
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/s;->gjM:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/s;->guh:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/s;->gjM:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/s;->guh:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -79,15 +79,15 @@
 
     .line 45
     :cond_0
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/model/s;->gjM:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/model/s;->guh:Ljava/lang/String;
 
     .line 46
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/s;->iAM:Lcom/tencent/mm/pluginsdk/model/s$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/s;->iXm:Lcom/tencent/mm/pluginsdk/model/s$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/model/s$a;->aBG()V
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/model/s$a;->aEC()V
 
     .line 47
-    const-string/jumbo v0, "!44@/B4Tb64lLpK9WkebJFLOT+TjSV+I1/x0ls94CDmXe4Y="
+    const-string/jumbo v0, "MicroMsg.ScreenshotObserver"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -103,7 +103,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 49
     :cond_1

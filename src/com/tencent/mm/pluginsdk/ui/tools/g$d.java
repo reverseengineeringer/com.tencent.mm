@@ -13,11 +13,11 @@ import java.lang.ref.WeakReference;
 public final class g$d
   extends Drawable
 {
-  static final Paint iSH = new Paint(6);
-  final Rect ewu = new Rect();
-  WeakReference iSI = new WeakReference(null);
-  private boolean iSJ = false;
-  private boolean iSK = false;
+  static final Paint jpQ = new Paint(6);
+  final Rect eCN = new Rect();
+  WeakReference<Bitmap> jpR = new WeakReference(null);
+  private boolean jpS = false;
+  private boolean jpT = false;
   
   public static void b(ImageView paramImageView, Bitmap paramBitmap)
   {
@@ -26,13 +26,13 @@ public final class g$d
     if ((paramImageView.getDrawable() instanceof d))
     {
       locald = (d)paramImageView.getDrawable();
-      iSI = new WeakReference(paramBitmap);
+      jpR = new WeakReference(paramBitmap);
       if (paramImageView.getScaleType() != ImageView.ScaleType.FIT_XY) {
         break label93;
       }
       bool1 = true;
       label46:
-      iSJ = bool1;
+      jpS = bool1;
       if (paramImageView.getScaleType() != ImageView.ScaleType.CENTER_CROP) {
         break label98;
       }
@@ -41,7 +41,7 @@ public final class g$d
     label98:
     for (boolean bool1 = bool2;; bool1 = false)
     {
-      iSK = bool1;
+      jpT = bool1;
       paramImageView.setImageDrawable(locald);
       paramImageView.postInvalidate();
       return;
@@ -59,14 +59,14 @@ public final class g$d
   
   public final void draw(Canvas paramCanvas)
   {
-    Bitmap localBitmap = (Bitmap)iSI.get();
+    Bitmap localBitmap = (Bitmap)jpR.get();
     if ((localBitmap == null) || (localBitmap.isRecycled())) {}
     for (int i = 0;; i = 1)
     {
       if (i != 0) {}
       return;
-      copyBounds(ewu);
-      paramCanvas.drawBitmap(localBitmap, null, ewu, iSH);
+      copyBounds(eCN);
+      paramCanvas.drawBitmap(localBitmap, null, eCN, jpQ);
     }
   }
   

@@ -1,56 +1,53 @@
 package com.tencent.mm.modelfriend;
 
 import android.content.Context;
-import com.tencent.mm.d.a.nj;
-import com.tencent.mm.d.a.nk;
+import com.tencent.mm.e.a.nw;
+import com.tencent.mm.e.a.nx;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.model.c;
 import com.tencent.mm.network.e;
 import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b;
-import com.tencent.mm.protocal.b.en;
-import com.tencent.mm.protocal.b.eo;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.a.c;
-import com.tencent.mm.r.d;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.protocal.b.eq;
+import com.tencent.mm.protocal.b.er;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.sdk.platformtools.f;
-import com.tencent.mm.sdk.platformtools.t;
 import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
 import com.tencent.mm.storage.h;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.a.c;
+import com.tencent.mm.t.d;
 
 public final class v
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private String aAo = null;
-  private String aAq = null;
-  private d anM = null;
-  public final com.tencent.mm.r.a anN;
+  private String amu = null;
+  private String amw = null;
+  public final com.tencent.mm.t.a bkQ;
+  private d bkT = null;
   
   public v(String paramString1, int paramInt1, String paramString2, int paramInt2, String paramString3)
   {
     Object localObject = new a.a();
-    bFa = new en();
-    bFb = new eo();
+    byl = new eq();
+    bym = new er();
     uri = "/cgi-bin/micromsg-bin/bindopmobile";
-    bEY = 132;
-    bFc = 45;
-    bFd = 1000000045;
-    anN = ((a.a)localObject).vy();
-    localObject = (en)anN.bEW.bFf;
-    iZE = paramInt1;
-    jbs = paramInt2;
-    jbt = paramString3;
-    if ((ay.kz(aAo)) && (ay.kz(aAq)))
+    byj = 132;
+    byn = 45;
+    byo = 1000000045;
+    bkQ = ((a.a)localObject).vA();
+    localObject = (eq)bkQ.byh.byq;
+    jxj = paramInt1;
+    jyY = paramInt2;
+    jyZ = paramString3;
+    if ((be.kf(amu)) && (be.kf(amw)))
     {
-      if (f.jVf)
+      if (f.kuL)
       {
-        paramString3 = y.getContext().getString(2131429297);
-        jbv = paramString3;
-        jbw = b.iUd;
+        paramString3 = aa.getContext().getString(2131234682);
+        jzb = paramString3;
+        jzc = com.tencent.mm.protocal.c.jrw;
       }
     }
     else
@@ -58,22 +55,22 @@ public final class v
       if ((paramString1 == null) || (paramString1.length() <= 0) || ((paramInt1 != 1) && (paramInt1 != 4) && (paramInt1 != 18))) {
         break label289;
       }
-      ah.tD().rn().set(4097, paramString1);
+      ah.tE().ro().set(4097, paramString1);
     }
     for (;;)
     {
-      u.d("!44@/B4Tb64lLpK+IBX8XDgnvmzqgoquDYqOHJ2BkZdfhUE=", "Get mobile:" + paramString1 + " opcode:" + paramInt1 + " verifyCode:" + paramString2);
-      jbq = paramString1;
-      jbr = paramString2;
-      dzi = t.aUB();
+      com.tencent.mm.sdk.platformtools.v.d("MicroMsg.NetSceneBindOpMobile", "Get mobile:" + paramString1 + " opcode:" + paramInt1 + " verifyCode:" + paramString2);
+      jyW = paramString1;
+      jyX = paramString2;
+      dAD = u.aZF();
       return;
-      paramString3 = y.getContext().getString(2131429296);
+      paramString3 = aa.getContext().getString(2131234681);
       break;
       label289:
       if ((paramInt1 == 2) || (paramInt1 == 19)) {
-        paramString1 = (String)ah.tD().rn().get(4097, null);
+        paramString1 = (String)ah.tE().ro().get(4097, null);
       } else if (paramInt1 == 3) {
-        paramString1 = (String)ah.tD().rn().get(6, null);
+        paramString1 = (String)ah.tE().ro().get(6, null);
       }
     }
   }
@@ -81,81 +78,81 @@ public final class v
   public v(String paramString1, int paramInt, String paramString2, String paramString3, String paramString4, String paramString5)
   {
     this(paramString1, paramInt, paramString2, 0, paramString3);
-    aAo = paramString4;
-    aAq = paramString5;
-    paramString1 = (en)anN.bEW.bFf;
-    jbv = paramString4;
-    jbw = paramString5;
+    amu = paramString4;
+    amw = paramString5;
+    paramString1 = (eq)bkQ.byh.byq;
+    jzb = paramString4;
+    jzc = paramString5;
   }
   
   public final int a(e parame, d paramd)
   {
-    anM = paramd;
-    paramd = (en)anN.bEW.bFf;
-    if ((jbq == null) || (jbq.length() <= 0))
+    bkT = paramd;
+    paramd = (eq)bkQ.byh.byq;
+    if ((jyW == null) || (jyW.length() <= 0))
     {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvmzqgoquDYqOHJ2BkZdfhUE=", "doScene getMobile Error: " + jbq);
+      com.tencent.mm.sdk.platformtools.v.e("MicroMsg.NetSceneBindOpMobile", "doScene getMobile Error: " + jyW);
       return -1;
     }
-    if (((iZE == 2) || (iZE == 19)) && ((jbr == null) || (jbr.length() <= 0)))
+    if (((jxj == 2) || (jxj == 19)) && ((jyX == null) || (jyX.length() <= 0)))
     {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvmzqgoquDYqOHJ2BkZdfhUE=", "doScene getVerifyCode Error: " + jbq);
+      com.tencent.mm.sdk.platformtools.v.e("MicroMsg.NetSceneBindOpMobile", "doScene getVerifyCode Error: " + jyW);
       return -1;
     }
-    return a(parame, anN, this);
+    return a(parame, bkQ, this);
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
     if ((paramInt2 != 0) || (paramInt3 != 0))
     {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvmzqgoquDYqOHJ2BkZdfhUE=", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3);
-      anM.a(paramInt2, paramInt3, paramString, this);
+      com.tencent.mm.sdk.platformtools.v.e("MicroMsg.NetSceneBindOpMobile", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3);
+      bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
       return;
     }
-    paramo = (en)anN.bEW.bFf;
-    paramArrayOfByte = (eo)anN.bEX.bFf;
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvmzqgoquDYqOHJ2BkZdfhUE=", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3 + " sms:" + jbA + "safedevice status = " + iWd);
-    if ((iZE == 2) || (iZE == 4) || (iZE == 11) || (iZE == 19))
+    paramo = (eq)bkQ.byh.byq;
+    paramArrayOfByte = (er)bkQ.byi.byq;
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.NetSceneBindOpMobile", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3 + " sms:" + jzg + "safedevice status = " + jtE);
+    if ((jxj == 2) || (jxj == 4) || (jxj == 11) || (jxj == 19))
     {
-      ah.tD().rn().set(4097, "");
-      ah.tD().rn().set(6, jbq);
-      if ((ay.kz(aAo)) || (ay.kz(aAq))) {
-        m.yA();
+      ah.tE().ro().set(4097, "");
+      ah.tE().ro().set(6, jyW);
+      if ((be.kf(amu)) || (be.kf(amw))) {
+        m.yN();
       }
-      if ((!ay.kz(aAo)) && (!ay.kz(aAq)))
+      if ((!be.kf(amu)) && (!be.kf(amw)))
       {
-        nj localnj = new nj();
-        aJJ.aJK = paramArrayOfByte;
-        com.tencent.mm.sdk.c.a.jUF.j(localnj);
-        ah.tD().rn().set(64, Integer.valueOf(iWd));
-        paramArrayOfByte = new nk();
-        aJL.aJM = true;
-        aJL.aJN = true;
-        com.tencent.mm.sdk.c.a.jUF.j(paramArrayOfByte);
+        nw localnw = new nw();
+        awd.awe = paramArrayOfByte;
+        com.tencent.mm.sdk.c.a.kug.y(localnw);
+        ah.tE().ro().set(64, Integer.valueOf(jtE));
+        paramArrayOfByte = new nx();
+        awf.awg = true;
+        awf.awh = true;
+        com.tencent.mm.sdk.c.a.kug.y(paramArrayOfByte);
       }
-      if (iZE == 19) {
-        ah.tD().rn().set(12322, null);
+      if (jxj == 19) {
+        ah.tE().ro().set(12322, null);
       }
-      u.d("!44@/B4Tb64lLpK+IBX8XDgnvmzqgoquDYqOHJ2BkZdfhUE=", "onGYNetEnd  mobile binded");
+      com.tencent.mm.sdk.platformtools.v.d("MicroMsg.NetSceneBindOpMobile", "onGYNetEnd  mobile binded");
     }
     for (;;)
     {
-      anM.a(paramInt2, paramInt3, paramString, this);
+      bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
       return;
-      if (iZE == 3)
+      if (jxj == 3)
       {
-        ah.tD().rn().set(4097, "");
-        ah.tD().rn().set(6, "");
-        ah.tD().rn().set(12322, null);
-        ah.tD().rn().set(64, Integer.valueOf(iWd));
-        paramo = new nk();
-        aJL.aJM = false;
-        aJL.aJN = true;
-        com.tencent.mm.sdk.c.a.jUF.j(paramo);
-        m.yH();
-        m.yI();
-        u.d("!44@/B4Tb64lLpK+IBX8XDgnvmzqgoquDYqOHJ2BkZdfhUE=", "onGYNetEnd  mobile unbinded");
+        ah.tE().ro().set(4097, "");
+        ah.tE().ro().set(6, "");
+        ah.tE().ro().set(12322, null);
+        ah.tE().ro().set(64, Integer.valueOf(jtE));
+        paramo = new nx();
+        awf.awg = false;
+        awf.awh = true;
+        com.tencent.mm.sdk.c.a.kug.y(paramo);
+        m.yU();
+        m.yV();
+        com.tencent.mm.sdk.platformtools.v.d("MicroMsg.NetSceneBindOpMobile", "onGYNetEnd  mobile unbinded");
       }
     }
   }
@@ -165,9 +162,9 @@ public final class v
     return 132;
   }
   
-  public final int va()
+  public final int vc()
   {
-    return anN.bEW.bFf).iZE;
+    return bkQ.byh.byq).jxj;
   }
 }
 

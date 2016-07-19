@@ -1,5 +1,7 @@
 package com.tencent.mm.plugin.sns.ui;
 
+import com.tencent.mm.sdk.platformtools.v;
+
 final class SnsTimeLineUI$21
   implements Runnable
 {
@@ -7,12 +9,12 @@ final class SnsTimeLineUI$21
   
   public final void run()
   {
-    hkJ.G();
-  }
-  
-  public final String toString()
-  {
-    return super.toString() + "|supportInvalidateOptionsMenu";
+    v.i("MicroMsg.SnsTimeLineUI", "onResume go to playAnim " + SnsTimeLineUI.v(hzE));
+    if (SnsTimeLineUI.v(hzE))
+    {
+      SnsTimeLineUI.w(hzE);
+      SnsTimeLineUI.x(hzE).aFP();
+    }
   }
 }
 

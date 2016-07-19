@@ -6,16 +6,16 @@ import java.util.List;
 
 public final class p$e$a$a
 {
-  public w dk;
-  public PendingIntent dl;
-  public PendingIntent dm;
-  public long jdField_do;
-  public final List dq = new ArrayList();
-  public final String dr;
+  public w dA;
+  public PendingIntent dB;
+  public PendingIntent dC;
+  public long dE;
+  public final List<String> dG = new ArrayList();
+  public final String dH;
   
   public p$e$a$a(String paramString)
   {
-    dr = paramString;
+    dH = paramString;
   }
 }
 

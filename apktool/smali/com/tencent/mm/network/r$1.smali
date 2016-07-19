@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/network/r$1;
-.super Lcom/tencent/mm/sdk/platformtools/at;
+.super Lcom/tencent/mm/sdk/platformtools/az;
 .source "SourceFile"
 
 
@@ -13,11 +13,20 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/platformtools/az",
+        "<",
+        "Ljava/lang/Object;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic bGq:I
+.field final synthetic bzB:I
 
-.field final synthetic ciT:Lcom/tencent/mm/network/r;
+.field final synthetic cek:Lcom/tencent/mm/network/r;
 
 
 # direct methods
@@ -26,15 +35,15 @@
 
     .prologue
     .line 221
-    iput-object p1, p0, Lcom/tencent/mm/network/r$1;->ciT:Lcom/tencent/mm/network/r;
+    iput-object p1, p0, Lcom/tencent/mm/network/r$1;->cek:Lcom/tencent/mm/network/r;
 
-    iput p2, p0, Lcom/tencent/mm/network/r$1;->bGq:I
+    iput p2, p0, Lcom/tencent/mm/network/r$1;->bzB:I
 
     const-wide/16 v0, 0x3e8
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/at;-><init>(JLjava/lang/Object;)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/az;-><init>(JLjava/lang/Object;)V
 
     return-void
 .end method
@@ -47,9 +56,9 @@
     .prologue
     .line 226
     :try_start_0
-    iget v0, p0, Lcom/tencent/mm/network/r$1;->bGq:I
+    iget v0, p0, Lcom/tencent/mm/network/r$1;->bzB:I
 
-    invoke-static {v0}, Lcom/tencent/mm/network/r;->ef(I)V
+    invoke-static {v0}, Lcom/tencent/mm/network/r;->eO(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -64,7 +73,7 @@
     move-exception v0
 
     .line 229
-    const-string/jumbo v1, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v1, "MicroMsg.AutoAuth"
 
     const-string/jumbo v2, "exception:%s"
 
@@ -74,13 +83,13 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method

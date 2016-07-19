@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/contact/AddressUI$a;->aZk()V
+    value = Lcom/tencent/mm/ui/contact/AddressUI$a;->beB()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+.field final synthetic lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1069
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$11;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    .line 1032
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$11;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,30 +37,19 @@
 
 # virtual methods
 .method public final run()V
-    .locals 4
+    .locals 1
 
     .prologue
-    const/4 v3, 0x1
+    .line 1036
+    const/16 v0, 0xa
 
-    .line 1073
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$11;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/contact/AddressUI$a;->a(Lcom/tencent/mm/ui/contact/AddressUI$a;)Lcom/tencent/mm/ui/contact/a;
+    .line 1037
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$11;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
-    move-result-object v0
+    invoke-static {v0}, Lcom/tencent/mm/ui/contact/AddressUI$a;->l(Lcom/tencent/mm/ui/contact/AddressUI$a;)V
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/e;->TAG:Ljava/lang/String;
-
-    const-string/jumbo v2, "newcursor resume "
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-boolean v3, v0, Lcom/tencent/mm/ui/e;->kjN:Z
-
-    const-string/jumbo v1, "resume"
-
-    invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/ui/e;->ap(Ljava/lang/String;Z)V
-
-    .line 1074
+    .line 1038
     return-void
 .end method

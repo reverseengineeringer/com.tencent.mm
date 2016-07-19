@@ -2,38 +2,33 @@ package com.tencent.mm.modelstat;
 
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.protocal.b.akn;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.t.a;
-import com.tencent.mm.sdk.b.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.j.a;
+import com.tencent.mm.model.h;
+import com.tencent.mm.platformtools.p;
 
 final class g$2
-  implements t.a
+  implements Runnable
 {
-  g$2(long paramLong1, akn paramakn, String[] paramArrayOfString, float paramFloat1, float paramFloat2, int paramInt, long paramLong2) {}
+  g$2(g paramg, int paramInt, String paramString) {}
   
-  public final int a(int paramInt1, int paramInt2, String paramString, a parama, j paramj)
+  public final void run()
   {
-    u.d("!44@/B4Tb64lLpL5Ojn0IScONoo+FDv6oyheT6xM4CLuwD0=", "onGYNetEnd errType:%d errCode:%d msg:%s  %d val:%s ", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString, Long.valueOf(ay.an(cem)), cen.fUt });
-    if ((paramInt1 != 0) || (paramInt2 != 0))
+    switch (bYQ)
     {
-      parama = com.tencent.mm.plugin.report.service.h.fUJ;
-      paramj = new StringBuilder().append(ceo[0]).append("1,").append(cep).append(",").append(ceq).append(",").append(cer).append(",").append(ces).append(",");
-      if (!b.foreground) {
-        break label224;
-      }
+    default: 
+      return;
+    case 1: 
+      p.a(tEbsC + bYR, h.se(), false, true);
+      return;
+    case 2: 
+      p.a(tEcachePath + bYR, h.se(), false, true);
+      return;
     }
-    label224:
-    for (paramString = "1";; paramString = "0")
-    {
-      parama.O(11747, paramString + "," + ceo[1] + "," + ceo[2] + "," + ceo[3]);
-      ah.tD().rn().b(j.a.kbq, Long.valueOf(ay.FS()));
-      return 0;
-    }
+    p.a(bYR, h.se(), false, true);
+  }
+  
+  public final String toString()
+  {
+    return super.toString() + "|onPreAddMessage";
   }
 }
 

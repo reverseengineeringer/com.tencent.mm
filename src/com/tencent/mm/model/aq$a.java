@@ -1,7 +1,7 @@
 package com.tencent.mm.model;
 
 public final class aq$a
-  extends Enum
+  extends Enum<a>
 {}
 
 /* Location:

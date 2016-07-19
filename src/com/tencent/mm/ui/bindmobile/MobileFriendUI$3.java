@@ -10,8 +10,8 @@ final class MobileFriendUI$3
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    kPt.age();
-    kPt.finish();
+    loJ.aiI();
+    loJ.finish();
     return true;
   }
 }

@@ -1,20 +1,19 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.Context;
-import android.view.ContextMenu;
-import android.view.ContextMenu.ContextMenuInfo;
-import android.view.View;
-import android.view.View.OnCreateContextMenuListener;
+import com.tencent.mm.model.as.a;
+import com.tencent.mm.network.e;
 
 final class ChattingUI$a$47
-  implements View.OnCreateContextMenuListener
+  implements as.a
 {
   ChattingUI$a$47(ChattingUI.a parama) {}
   
-  public final void onCreateContextMenu(ContextMenu paramContextMenu, View paramView, ContextMenu.ContextMenuInfo paramContextMenuInfo)
+  public final void a(e parame)
   {
-    paramContextMenu.add(0, 0, 0, paramView.getContext().getString(2131432791));
-    paramContextMenu.add(0, 1, 1, paramView.getContext().getString(2131432794));
+    if (parame == null) {
+      return;
+    }
+    parame.keepSignalling();
   }
 }
 

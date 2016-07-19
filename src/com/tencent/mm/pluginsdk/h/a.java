@@ -1,97 +1,101 @@
 package com.tencent.mm.pluginsdk.h;
 
 import android.app.Activity;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.u;
-import java.util.Iterator;
-import java.util.Set;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.os.Build.VERSION;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.base.g;
 
 public final class a
 {
-  private i iCG;
-  private j iCH;
-  private k iCI;
-  private g iCJ;
-  private h iCK;
-  private f iCL;
-  
-  private static void a(b paramb)
+  public static boolean a(Activity paramActivity, final String paramString1, final int paramInt, String paramString2, String paramString3)
   {
-    if (paramb != null)
-    {
-      Iterator localIterator = iCM.iterator();
-      while (localIterator.hasNext())
-      {
-        Integer localInteger = (Integer)localIterator.next();
-        ah.tE().b(localInteger.intValue(), paramb);
-      }
-      asX = null;
-    }
-  }
-  
-  public final boolean a(Activity paramActivity, o paramo)
-  {
-    if ((type == 0) || (action == 0)) {
-      return false;
-    }
-    if (iCL == null) {
-      iCL = new f(paramActivity);
-    }
-    if (iCL.a(paramo)) {
+    if ((Build.VERSION.SDK_INT < 23) && (!"MNC".equals(Build.VERSION.CODENAME))) {
       return true;
     }
-    switch (type)
+    for (;;)
     {
-    default: 
-      u.e("!44@/B4Tb64lLpI82FDEKU4MMswDBO/xZgZna735fRAmfMs=", "Unkown error type");
-      return false;
-    case 1: 
-      if (iCG == null) {
-        iCG = new i(paramActivity);
+      try
+      {
+        int i = android.support.v4.content.a.c(paramActivity, paramString1);
+        if (i == 0) {
+          break;
+        }
+        if (!be.kf(paramString3))
+        {
+          g.a(paramActivity, paramString3, paramString2, false, new DialogInterface.OnClickListener()
+          {
+            public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+            {
+              paramAnonymousDialogInterface.dismiss();
+              paramAnonymousDialogInterface = O;
+              String str = paramString1;
+              paramAnonymousInt = paramInt;
+              android.support.v4.app.a.a(paramAnonymousDialogInterface, new String[] { str }, paramAnonymousInt);
+            }
+          });
+          return false;
+        }
       }
-      iCG.a(paramo);
-      return false;
-    case 2: 
-      if (iCH == null) {
-        iCH = new j(paramActivity);
+      catch (Exception paramActivity)
+      {
+        v.e("MicroMsg.MPermissionUtil", "check mpermission exception:%s.", new Object[] { paramActivity });
+        return true;
       }
-      iCH.a(paramo);
-      return false;
-    case 3: 
-      if (iCI == null) {
-        iCI = new k(paramActivity);
-      }
-      iCI.a(paramo);
-      return false;
-    case 4: 
-      if (iCJ == null) {
-        iCJ = new g(paramActivity);
-      }
-      iCJ.a(paramo);
-      return false;
-    case 5: 
-      if (iCK == null) {
-        iCK = new h(paramActivity);
-      }
-      iCK.a(paramo);
-      return false;
+      android.support.v4.app.a.a(paramActivity, new String[] { paramString1 }, paramInt);
     }
-    if (iCL == null) {
-      iCL = new f(paramActivity);
-    }
-    iCL.a(paramo);
-    return false;
   }
   
-  public final void close()
+  public static boolean aK(Context paramContext, String paramString)
   {
-    a(iCG);
-    a(iCH);
-    a(iCI);
-    a(iCJ);
-    a(iCK);
-    a(iCL);
+    int i;
+    try
+    {
+      i = android.support.v4.content.a.c(paramContext, paramString);
+      if (i != 0) {
+        return false;
+      }
+    }
+    catch (Exception paramContext)
+    {
+      v.e("MicroMsg.MPermissionUtil", "check mpermission exception:%s.", new Object[] { paramContext });
+      return false;
+    }
+    String str = null;
+    if (paramString.equals("android.permission.READ_CONTACTS"))
+    {
+      str = "android.permission.WRITE_CONTACTS";
+      if (be.kf(str)) {
+        break label98;
+      }
+    }
+    label96:
+    label98:
+    for (;;)
+    {
+      try
+      {
+        i = android.support.v4.content.a.c(paramContext, str);
+        if (i != 0) {
+          break label96;
+        }
+        return true;
+      }
+      catch (Exception paramContext)
+      {
+        v.e("MicroMsg.MPermissionUtil", "check mpermission otherPermisson exception:%s.", new Object[] { paramContext });
+        return false;
+      }
+      if (!paramString.equals("android.permission.WRITE_CONTACTS")) {
+        break;
+      }
+      str = "android.permission.READ_CONTACTS";
+      break;
+      return false;
+    }
   }
 }
 

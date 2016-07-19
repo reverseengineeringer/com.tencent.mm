@@ -1,102 +1,143 @@
 package com.tencent.mm.protocal.b;
 
 import a.a.a.b;
-import java.util.LinkedList;
 
 public final class asn
-  extends alq
+  extends com.tencent.mm.ax.a
 {
-  public String jMh;
-  public int jev;
-  public String jew;
+  public int agr;
+  public int bVO;
+  public long bVP;
+  public int bVQ;
+  public int bVR;
+  public int bVS;
+  public String kkn;
+  public String kko;
+  public String kkp;
+  public String kkq;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
+    int i;
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (jHj == null) {
-        throw new b("Not all required fields were included: BaseResponse");
+      if (kkn == null) {
+        throw new b("Not all required fields were included: StatusDesc1");
       }
-      if (jHj != null)
-      {
-        paramVarArgs.cj(1, jHj.kn());
-        jHj.a(paramVarArgs);
+      if (kko == null) {
+        throw new b("Not all required fields were included: StatusDesc2");
       }
-      if (jMh != null) {
-        paramVarArgs.d(2, jMh);
+      if (kkp == null) {
+        throw new b("Not all required fields were included: DataFlowSourceInfo");
       }
-      paramVarArgs.ci(3, jev);
-      if (jew != null) {
-        paramVarArgs.d(4, jew);
+      if (kkq == null) {
+        throw new b("Not all required fields were included: DataFlowResultInfo");
+      }
+      paramVarArgs.cw(1, agr);
+      paramVarArgs.cw(2, bVS);
+      paramVarArgs.cw(3, bVO);
+      paramVarArgs.z(4, bVP);
+      paramVarArgs.cw(5, bVQ);
+      paramVarArgs.cw(6, bVR);
+      if (kkn != null) {
+        paramVarArgs.e(7, kkn);
+      }
+      if (kko != null) {
+        paramVarArgs.e(8, kko);
+      }
+      if (kkp != null) {
+        paramVarArgs.e(9, kkp);
+      }
+      if (kkq != null) {
+        paramVarArgs.e(10, kkq);
+      }
+      i = 0;
+    }
+    do
+    {
+      return i;
+      if (paramInt != 1) {
+        break;
+      }
+      i = a.a.a.a.cu(1, agr) + 0 + a.a.a.a.cu(2, bVS) + a.a.a.a.cu(3, bVO) + a.a.a.a.y(4, bVP) + a.a.a.a.cu(5, bVQ) + a.a.a.a.cu(6, bVR);
+      paramInt = i;
+      if (kkn != null) {
+        paramInt = i + a.a.a.b.b.a.f(7, kkn);
+      }
+      i = paramInt;
+      if (kko != null) {
+        i = paramInt + a.a.a.b.b.a.f(8, kko);
+      }
+      paramInt = i;
+      if (kkp != null) {
+        paramInt = i + a.a.a.b.b.a.f(9, kkp);
+      }
+      i = paramInt;
+    } while (kkq == null);
+    return paramInt + a.a.a.b.b.a.f(10, kkq);
+    if (paramInt == 2)
+    {
+      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+      for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
+        if (!super.a(paramVarArgs, this, paramInt)) {
+          paramVarArgs.bve();
+        }
+      }
+      if (kkn == null) {
+        throw new b("Not all required fields were included: StatusDesc1");
+      }
+      if (kko == null) {
+        throw new b("Not all required fields were included: StatusDesc2");
+      }
+      if (kkp == null) {
+        throw new b("Not all required fields were included: DataFlowSourceInfo");
+      }
+      if (kkq == null) {
+        throw new b("Not all required fields were included: DataFlowResultInfo");
       }
       return 0;
     }
-    if (paramInt == 1) {
-      if (jHj == null) {
-        break label454;
-      }
-    }
-    label454:
-    for (paramInt = a.a.a.a.ch(1, jHj.kn()) + 0;; paramInt = 0)
+    if (paramInt == 3)
     {
-      int i = paramInt;
-      if (jMh != null) {
-        i = paramInt + a.a.a.b.b.a.e(2, jMh);
-      }
-      i += a.a.a.a.cg(3, jev);
-      paramInt = i;
-      if (jew != null) {
-        paramInt = i + a.a.a.b.b.a.e(4, jew);
-      }
-      return paramInt;
-      if (paramInt == 2)
+      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+      asn localasn = (asn)paramVarArgs[1];
+      switch (((Integer)paramVarArgs[2]).intValue())
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = alq.a(paramVarArgs); paramInt > 0; paramInt = alq.a(paramVarArgs)) {
-          if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
-          }
-        }
-        if (jHj != null) {
-          break;
-        }
-        throw new b("Not all required fields were included: BaseResponse");
-      }
-      if (paramInt == 3)
-      {
-        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
-        asn localasn = (asn)paramVarArgs[1];
-        paramInt = ((Integer)paramVarArgs[2]).intValue();
-        switch (paramInt)
-        {
-        default: 
-          return -1;
-        case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-          i = paramVarArgs.size();
-          paramInt = 0;
-          while (paramInt < i)
-          {
-            Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new dd();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-            for (boolean bool = true; bool; bool = ((dd)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, alq.a((a.a.a.a.a)localObject2))) {}
-            jHj = ((dd)localObject1);
-            paramInt += 1;
-          }
-        case 2: 
-          jMh = maU.readString();
-          return 0;
-        case 3: 
-          jev = maU.jC();
-          return 0;
-        }
-        jew = maU.readString();
+      default: 
+        return -1;
+      case 1: 
+        agr = mMY.id();
+        return 0;
+      case 2: 
+        bVS = mMY.id();
+        return 0;
+      case 3: 
+        bVO = mMY.id();
+        return 0;
+      case 4: 
+        bVP = mMY.ie();
+        return 0;
+      case 5: 
+        bVQ = mMY.id();
+        return 0;
+      case 6: 
+        bVR = mMY.id();
+        return 0;
+      case 7: 
+        kkn = mMY.readString();
+        return 0;
+      case 8: 
+        kko = mMY.readString();
+        return 0;
+      case 9: 
+        kkp = mMY.readString();
         return 0;
       }
-      return -1;
+      kkq = mMY.readString();
+      return 0;
     }
+    return -1;
   }
 }
 

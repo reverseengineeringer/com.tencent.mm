@@ -10,7 +10,7 @@ final class SingleChatInfoUI$4
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    krj.finish();
+    kQq.finish();
     return true;
   }
 }

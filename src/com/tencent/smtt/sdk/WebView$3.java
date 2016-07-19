@@ -1,36 +1,20 @@
 package com.tencent.smtt.sdk;
 
-import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
-import android.content.Context;
-import android.provider.Settings.System;
-import android.view.View;
-import android.view.View.OnClickListener;
+import com.tencent.smtt.sdk.a.c;
 
 class WebView$3
-  implements View.OnClickListener
+  implements android.webkit.DownloadListener
 {
-  WebView$3(WebView paramWebView, Context paramContext) {}
+  WebView$3(WebView paramWebView, DownloadListener paramDownloadListener) {}
   
-  public void onClick(View paramView)
+  public void onDownloadStart(String paramString1, String paramString2, String paramString3, String paramString4, long paramLong)
   {
-    if (QbSdk.mTbsDebugInstallOnline)
+    if (val$listener == null)
     {
-      paramView = new AlertDialog.Builder(val$context);
-      paramView.setTitle("提示");
-      paramView.setPositiveButton("确定", null);
-      paramView.setMessage("正在进行线上安装，请等待!");
-      paramView.create().show();
-    }
-    do
-    {
+      c.b(WebView.d(this$0), paramString1, null);
       return;
-      paramView = WebView.TBS_DEBUG_INSTALL_ONLINE + val$context.getPackageName();
-      Settings.System.putString(WebView.b(this$0).getContentResolver(), paramView, "true");
-      QbSdk.mTbsDebugInstallOnline = true;
-      QbSdk.reset(val$context);
-    } while (!k.eX(val$context));
-    k.eY(val$context);
+    }
+    val$listener.onDownloadStart(paramString1, paramString2, paramString3, paramString4, paramLong);
   }
 }
 

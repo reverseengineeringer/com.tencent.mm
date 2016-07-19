@@ -16,6 +16,16 @@
     name = "b"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/tencent/mm/modelsearch/m$g;",
+        ">;"
+    }
+.end annotation
+
 
 # direct methods
 .method public constructor <init>()V
@@ -69,9 +79,9 @@
     goto :goto_0
 
     :cond_2
-    iget v2, p1, Lcom/tencent/mm/modelsearch/m$g;->bZJ:I
+    iget v2, p1, Lcom/tencent/mm/modelsearch/m$g;->bTs:I
 
-    iget v3, p2, Lcom/tencent/mm/modelsearch/m$g;->bZJ:I
+    iget v3, p2, Lcom/tencent/mm/modelsearch/m$g;->bTs:I
 
     if-ge v2, v3, :cond_3
 
@@ -80,9 +90,9 @@
     goto :goto_0
 
     :cond_3
-    iget v1, p1, Lcom/tencent/mm/modelsearch/m$g;->bZJ:I
+    iget v1, p1, Lcom/tencent/mm/modelsearch/m$g;->bTs:I
 
-    iget v2, p2, Lcom/tencent/mm/modelsearch/m$g;->bZJ:I
+    iget v2, p2, Lcom/tencent/mm/modelsearch/m$g;->bTs:I
 
     if-gt v1, v2, :cond_0
 

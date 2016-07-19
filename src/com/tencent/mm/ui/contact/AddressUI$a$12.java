@@ -7,15 +7,15 @@ final class AddressUI$a$12
 {
   AddressUI$a$12(AddressUI.a parama) {}
   
-  public final void Gh()
+  public final void GE()
   {
-    AddressUI.a locala = liu;
-    AddressUI.a.a(liu).getCount();
+    AddressUI.a locala = lIF;
+    AddressUI.a.a(lIF).getCount();
     AddressUI.a.b(locala);
-    AddressUI.a.a(liu).bgV();
+    AddressUI.a.a(lIF).bmD();
   }
   
-  public final void Gi() {}
+  public final void GF() {}
 }
 
 /* Location:

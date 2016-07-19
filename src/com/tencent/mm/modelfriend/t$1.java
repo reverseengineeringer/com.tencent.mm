@@ -2,25 +2,25 @@ package com.tencent.mm.modelfriend;
 
 import com.tencent.mm.sdk.h.d;
 import com.tencent.mm.sdk.h.j;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class t$1
   extends j
 {
   t$1(t paramt) {}
   
-  protected final boolean yv()
+  protected final boolean yH()
   {
     boolean bool = true;
-    if ((t.a(bMI) == null) || (t.a(bMI).aVP())) {
-      if (t.a(bMI) != null) {
+    if ((t.a(bGc) == null) || (t.a(bGc).bbc())) {
+      if (t.a(bGc) != null) {
         break label59;
       }
     }
     label59:
-    for (Object localObject = "null";; localObject = Boolean.valueOf(t.a(bMI).aVP()))
+    for (Object localObject = "null";; localObject = Boolean.valueOf(t.a(bGc).bbc()))
     {
-      u.w("!44@/B4Tb64lLpJ4FHnyJpFGLGUFfp8Yd7awqsKJHV4TzI0=", "shouldProcessEvent db is close :%s", new Object[] { localObject });
+      v.w("MicroMsg.LinkedInFriendStorage", "shouldProcessEvent db is close :%s", new Object[] { localObject });
       bool = false;
       return bool;
     }

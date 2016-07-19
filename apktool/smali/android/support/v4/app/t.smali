@@ -12,13 +12,13 @@
 
 
 # static fields
-.field private static final dA:Ljava/lang/Object;
+.field private static final dN:Ljava/lang/Object;
 
-.field private static final dx:Ljava/lang/Object;
+.field private static dO:Ljava/lang/reflect/Field;
 
-.field private static dy:Ljava/lang/reflect/Field;
+.field private static dP:Z
 
-.field private static dz:Z
+.field private static final dQ:Ljava/lang/Object;
 
 
 # direct methods
@@ -31,14 +31,14 @@
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Landroid/support/v4/app/t;->dx:Ljava/lang/Object;
+    sput-object v0, Landroid/support/v4/app/t;->dN:Ljava/lang/Object;
 
     .line 56
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Landroid/support/v4/app/t;->dA:Ljava/lang/Object;
+    sput-object v0, Landroid/support/v4/app/t;->dQ:Ljava/lang/Object;
 
     return-void
 .end method
@@ -50,13 +50,13 @@
     const/4 v1, 0x0
 
     .line 212
-    sget-object v2, Landroid/support/v4/app/t;->dx:Ljava/lang/Object;
+    sget-object v2, Landroid/support/v4/app/t;->dN:Ljava/lang/Object;
 
     monitor-enter v2
 
     .line 213
     :try_start_0
-    sget-boolean v0, Landroid/support/v4/app/t;->dz:Z
+    sget-boolean v0, Landroid/support/v4/app/t;->dP:Z
 
     if-eqz v0, :cond_0
 
@@ -74,7 +74,7 @@
     .line 217
     :cond_0
     :try_start_1
-    sget-object v0, Landroid/support/v4/app/t;->dy:Ljava/lang/reflect/Field;
+    sget-object v0, Landroid/support/v4/app/t;->dO:Ljava/lang/reflect/Field;
 
     if-nez v0, :cond_2
 
@@ -103,7 +103,7 @@
     .line 220
     const/4 v0, 0x1
 
-    sput-boolean v0, Landroid/support/v4/app/t;->dz:Z
+    sput-boolean v0, Landroid/support/v4/app/t;->dP:Z
     :try_end_1
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/NoSuchFieldException; {:try_start_1 .. :try_end_1} :catch_0
@@ -127,11 +127,11 @@
     invoke-virtual {v0, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
     .line 225
-    sput-object v0, Landroid/support/v4/app/t;->dy:Ljava/lang/reflect/Field;
+    sput-object v0, Landroid/support/v4/app/t;->dO:Ljava/lang/reflect/Field;
 
     .line 227
     :cond_2
-    sget-object v0, Landroid/support/v4/app/t;->dy:Ljava/lang/reflect/Field;
+    sget-object v0, Landroid/support/v4/app/t;->dO:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -148,7 +148,7 @@
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 230
-    sget-object v3, Landroid/support/v4/app/t;->dy:Ljava/lang/reflect/Field;
+    sget-object v3, Landroid/support/v4/app/t;->dO:Ljava/lang/reflect/Field;
 
     invoke-virtual {v3, p0, v0}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
     :try_end_3
@@ -181,7 +181,7 @@
     const/4 v0, 0x1
 
     :try_start_5
-    sput-boolean v0, Landroid/support/v4/app/t;->dz:Z
+    sput-boolean v0, Landroid/support/v4/app/t;->dP:Z
 
     .line 239
     monitor-exit v2
@@ -206,7 +206,7 @@
     .line 168
     new-instance v0, Landroid/app/Notification$BigPictureStyle;
 
-    invoke-interface {p0}, Landroid/support/v4/app/o;->V()Landroid/app/Notification$Builder;
+    invoke-interface {p0}, Landroid/support/v4/app/o;->U()Landroid/app/Notification$Builder;
 
     move-result-object v1
 
@@ -245,7 +245,7 @@
     .line 156
     new-instance v0, Landroid/app/Notification$BigTextStyle;
 
-    invoke-interface {p0}, Landroid/support/v4/app/o;->V()Landroid/app/Notification$Builder;
+    invoke-interface {p0}, Landroid/support/v4/app/o;->U()Landroid/app/Notification$Builder;
 
     move-result-object v1
 
@@ -272,12 +272,25 @@
 
 .method public static a(Landroid/support/v4/app/o;Ljava/lang/CharSequence;ZLjava/lang/CharSequence;Ljava/util/ArrayList;)V
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/support/v4/app/o;",
+            "Ljava/lang/CharSequence;",
+            "Z",
+            "Ljava/lang/CharSequence;",
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/CharSequence;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
     .line 182
     new-instance v0, Landroid/app/Notification$InboxStyle;
 
-    invoke-interface {p0}, Landroid/support/v4/app/o;->V()Landroid/app/Notification$Builder;
+    invoke-interface {p0}, Landroid/support/v4/app/o;->U()Landroid/app/Notification$Builder;
 
     move-result-object v1
 
@@ -335,7 +348,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Landroid/support/v4/app/s$a;->X()Landroid/app/PendingIntent;
+    invoke-virtual {p1}, Landroid/support/v4/app/s$a;->W()Landroid/app/PendingIntent;
 
     move-result-object v2
 
@@ -351,7 +364,7 @@
     invoke-direct {v0, v1}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
     .line 260
-    invoke-virtual {p1}, Landroid/support/v4/app/s$a;->Y()[Landroid/support/v4/app/y$a;
+    invoke-virtual {p1}, Landroid/support/v4/app/s$a;->X()[Landroid/support/v4/app/y$a;
 
     move-result-object v1
 
@@ -360,7 +373,7 @@
     .line 261
     const-string/jumbo v1, "android.support.remoteInputs"
 
-    invoke-virtual {p1}, Landroid/support/v4/app/s$a;->Y()[Landroid/support/v4/app/y$a;
+    invoke-virtual {p1}, Landroid/support/v4/app/s$a;->X()[Landroid/support/v4/app/y$a;
 
     move-result-object v2
 
@@ -377,6 +390,19 @@
 
 .method public static c(Ljava/util/List;)Landroid/util/SparseArray;
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Landroid/os/Bundle;",
+            ">;)",
+            "Landroid/util/SparseArray",
+            "<",
+            "Landroid/os/Bundle;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 194

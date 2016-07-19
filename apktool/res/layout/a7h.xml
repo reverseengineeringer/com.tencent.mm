@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingTop="@dimen/i7" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:flowlayout="http://schemas.android.com/apk/res-auto">
+    <ListView android:id="@id/fu" android:focusable="true" android:scrollbars="none" android:transcriptMode="disabled" android:overScrollMode="never" style="@style/MMList" />
+    <com.tencent.mm.pluginsdk.ui.MultiSelectContactView android:id="@id/c2x" android:paddingLeft="@dimen/i7" android:paddingRight="@dimen/co" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.tencent.mm.ui.contact.LabelContainerView android:orientation="vertical" android:id="@id/c2y" android:background="#f7ffffff" android:paddingLeft="@dimen/i7" android:paddingTop="@dimen/cp" android:paddingRight="@dimen/i7" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/c2x">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/select_contact_label_header" />
+            <com.tencent.mm.ui.base.MMTagPanel android:id="@id/c2z" android:paddingTop="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content" flowlayout:horizontalSpacing="@dimen/ct" flowlayout:verticalSpacing="@dimen/ct" />
+        </LinearLayout>
+    </com.tencent.mm.ui.contact.LabelContainerView>
+    <ImageView android:id="@id/b4f" android:background="@drawable/aht" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/c2x" />
+    <TextView android:textColor="@color/j_" android:gravity="center_horizontal" android:id="@id/fv" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/c2x" style="@style/MMFontEmptyMsgLarge" />
+    <com.tencent.mm.ui.base.AlphabetScrollBar android:id="@id/fx" android:layout_width="@dimen/co" android:layout_height="fill_parent" android:layout_below="@id/c2x" android:layout_alignParentRight="true" />
+</RelativeLayout>

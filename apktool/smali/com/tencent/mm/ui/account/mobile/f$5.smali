@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/mobile/f;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/account/mobile/f;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kyz:Lcom/tencent/mm/ui/account/mobile/f;
+.field final synthetic kXG:Lcom/tencent/mm/ui/account/mobile/f;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 221
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/f$5;->kyz:Lcom/tencent/mm/ui/account/mobile/f;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/f$5;->kXG:Lcom/tencent/mm/ui/account/mobile/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 225
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/f$5;->kyz:Lcom/tencent/mm/ui/account/mobile/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/f$5;->kXG:Lcom/tencent/mm/ui/account/mobile/f;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/mobile/f;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/mobile/f;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iput-object p1, v0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->coM:Landroid/app/ProgressDialog;
+    iput-object p1, v0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->cka:Landroid/app/ProgressDialog;
 
     .line 227
     return-void

@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic bKv:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
+.field final synthetic bDP:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
 
 .field public field_AckSlice:I
 
@@ -46,62 +46,68 @@
 
 # direct methods
 .method constructor <init>(Lcom/tencent/mm/modelcdntran/CdnTransportEngine;)V
-    .locals 2
+    .locals 3
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    .line 381
-    iput-object p1, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$c;->bKv:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
+    const/4 v1, 0x1
+
+    .line 389
+    iput-object p1, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$c;->bDP:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 382
+    .line 390
     const/16 v0, 0x5a
 
     iput v0, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$c;->field_WifiEtl:I
 
-    .line 383
+    .line 391
     const/16 v0, 0x46
 
     iput v0, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$c;->field_noWifiEtl:I
 
-    .line 384
+    .line 392
     const/16 v0, 0x23
 
     iput v0, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$c;->field_Ptl:I
 
-    .line 385
+    .line 393
     iput v1, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$c;->field_UseStreamCDN:I
 
-    .line 386
+    .line 394
     const/16 v0, 0x2000
 
     iput v0, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$c;->field_AckSlice:I
 
-    .line 387
+    .line 395
     iput v1, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$c;->field_EnableCDNVerifyConnect:I
 
-    .line 388
+    .line 396
     iput v1, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$c;->field_EnableCDNVideoRedirectOC:I
 
-    .line 389
+    .line 397
     iput v1, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$c;->field_EnableStreamUploadVideo:I
 
-    .line 390
-    iput v1, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$c;->field_UseDynamicETL:I
+    .line 398
+    iput v2, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$c;->field_UseDynamicETL:I
 
-    .line 391
-    iput v1, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$c;->field_C2COverloadDelaySeconds:I
+    .line 399
+    const/16 v0, 0xa
 
-    .line 392
-    iput v1, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$c;->field_SNSOverloadDelaySeconds:I
+    iput v0, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$c;->field_C2COverloadDelaySeconds:I
 
-    .line 394
-    iput-boolean v1, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$c;->field_onlysendETL:Z
+    .line 400
+    const/16 v0, 0x3c
 
-    .line 395
-    iput-boolean v1, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$c;->field_onlyrecvPtl:Z
+    iput v0, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$c;->field_SNSOverloadDelaySeconds:I
+
+    .line 402
+    iput-boolean v2, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$c;->field_onlysendETL:Z
+
+    .line 403
+    iput-boolean v2, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$c;->field_onlyrecvPtl:Z
 
     return-void
 .end method
@@ -112,7 +118,7 @@
     .locals 4
 
     .prologue
-    .line 399
+    .line 407
     const-string/jumbo v0, "wifietl:%d, nowifietl:%d,ptl:%d,UseStreamCDN:%d,onlysendetl:%b,onlyrecvptl:%b,ackslice:%d,enableverify:%d,enableoc:%d,enablevideo:%d,dynamicetl:%b,c2coverload:%d,snsoverload:%d"
 
     const/16 v1, 0xd
@@ -253,6 +259,6 @@
 
     move-result-object v0
 
-    .line 408
+    .line 416
     return-object v0
 .end method

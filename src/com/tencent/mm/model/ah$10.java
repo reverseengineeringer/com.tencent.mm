@@ -7,24 +7,24 @@ import java.util.Set;
 final class ah$10
   implements a
 {
-  public final void fg(String paramString)
+  public final void ft(String paramString)
   {
-    if (ah.tl() != null)
+    if (ah.tm() != null)
     {
-      bf localbf = ah.tl();
-      bCZ = true;
-      Iterator localIterator = bDa.iterator();
+      bf localbf = ah.tm();
+      bwj = true;
+      Iterator localIterator = bwk.iterator();
       while (localIterator.hasNext())
       {
         bf.a locala = (bf.a)localIterator.next();
         if (locala != null) {
-          locala.uK();
+          locala.uM();
         }
       }
-      bCZ = false;
+      bwj = false;
     }
-    if (ah.tD() != null) {
-      ah.tD().cu(paramString);
+    if (ah.tE() != null) {
+      ah.tE().cz(paramString);
     }
   }
 }

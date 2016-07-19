@@ -15,19 +15,19 @@
 
 
 # instance fields
-.field bMr:Landroid/widget/ImageView;
+.field bFL:Landroid/widget/ImageView;
 
-.field bMs:Landroid/widget/TextView;
+.field bFM:Landroid/widget/TextView;
 
-.field bMt:Landroid/widget/TextView;
+.field bFN:Landroid/widget/TextView;
 
-.field bMu:Landroid/widget/Button;
+.field bFO:Landroid/widget/Button;
 
-.field bMv:Landroid/widget/Button;
+.field bFP:Landroid/widget/Button;
 
-.field bMw:Landroid/widget/TextView;
+.field bFQ:Landroid/widget/TextView;
 
-.field bMx:Landroid/widget/TextView;
+.field bFR:Landroid/widget/TextView;
 
 
 # direct methods

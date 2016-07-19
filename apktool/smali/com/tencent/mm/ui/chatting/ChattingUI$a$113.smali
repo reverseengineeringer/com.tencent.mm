@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ui/base/MMPullDownView$b;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;->goBack()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.field final synthetic lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 5227
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$113;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 5971
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$113;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,10 +36,15 @@
 
 
 # virtual methods
-.method public final UV()V
-    .locals 0
+.method public final run()V
+    .locals 1
 
     .prologue
-    .line 5233
+    .line 5975
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$113;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->am(Lcom/tencent/mm/ui/chatting/ChattingUI$a;)V
+
+    .line 5976
     return-void
 .end method

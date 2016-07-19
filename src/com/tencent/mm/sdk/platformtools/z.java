@@ -1,32 +1,48 @@
 package com.tencent.mm.sdk.platformtools;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public final class z
 {
-  private static Set jVE = new HashSet();
-  
-  public static boolean CQ(String paramString)
+  protected static char[] kvq = { 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 97, 98, 99, 100, 101, 102 };
+  protected static ThreadLocal<MessageDigest> kvr = new ThreadLocal()
   {
-    if (CS(paramString))
+    private static MessageDigest aZK()
     {
-      u.d("!32@/B4Tb64lLpIEAZRXGnbxCKv0yDb0jVnH", "locked-" + paramString);
-      return false;
+      try
+      {
+        MessageDigest localMessageDigest = MessageDigest.getInstance("MD5");
+        return localMessageDigest;
+      }
+      catch (NoSuchAlgorithmException localNoSuchAlgorithmException)
+      {
+        throw new RuntimeException("Initialize MD5 failed.", localNoSuchAlgorithmException);
+      }
     }
-    u.d("!32@/B4Tb64lLpIEAZRXGnbxCKv0yDb0jVnH", "lock-" + paramString);
-    return jVE.add(paramString);
+  };
+  
+  public static String Fb(String paramString)
+  {
+    return bb(paramString.getBytes());
   }
   
-  public static void CR(String paramString)
+  public static String bb(byte[] paramArrayOfByte)
   {
-    jVE.remove(paramString);
-    u.d("!32@/B4Tb64lLpIEAZRXGnbxCKv0yDb0jVnH", "unlock-" + paramString);
-  }
-  
-  public static boolean CS(String paramString)
-  {
-    return jVE.contains(paramString);
+    paramArrayOfByte = ((MessageDigest)kvr.get()).digest(paramArrayOfByte);
+    int j = paramArrayOfByte.length;
+    StringBuffer localStringBuffer = new StringBuffer(j * 2);
+    int i = 0;
+    while (i < j + 0)
+    {
+      int k = paramArrayOfByte[i];
+      char c1 = kvq[((k & 0xF0) >> 4)];
+      char c2 = kvq[(k & 0xF)];
+      localStringBuffer.append(c1);
+      localStringBuffer.append(c2);
+      i += 1;
+    }
+    return localStringBuffer.toString();
   }
 }
 

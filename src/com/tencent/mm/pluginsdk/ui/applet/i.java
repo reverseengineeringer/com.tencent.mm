@@ -10,15 +10,13 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.tencent.mm.model.ah;
 import com.tencent.mm.pluginsdk.model.l;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.p;
@@ -28,114 +26,66 @@ import junit.framework.Assert;
 public final class i
   implements d
 {
-  com.tencent.mm.ui.base.h apf = null;
-  p coc;
+  p cjq;
   Context context;
-  EditText fEO;
-  LinkedList fJy;
-  View fKJ;
-  TextView fKL;
-  String iHQ;
-  a iJm;
-  LinkedList iJn;
-  boolean iJo = true;
+  EditText fNQ;
+  LinkedList<Integer> fSA;
+  com.tencent.mm.ui.base.h fTL = null;
+  View fTM;
+  TextView fTO;
+  String jeN;
+  a jgi;
+  LinkedList<String> jgj;
+  boolean jgk = true;
   
   public i(Context paramContext, a parama)
   {
     context = paramContext;
-    iJm = parama;
+    jgi = parama;
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
-  {
-    if (paramj.getType() != 30)
-    {
-      u.w("!44@/B4Tb64lLpLVd6spdHyDjUdOUXrNyAnPpMhB/tzZ/pc=", "not expected scene,  type = " + paramj.getType());
-      return;
-    }
-    u.d("!44@/B4Tb64lLpLVd6spdHyDjUdOUXrNyAnPpMhB/tzZ/pc=", "onSceneEnd, errType = " + paramInt1 + ", errCode = " + paramInt2);
-    if (coc != null)
-    {
-      coc.dismiss();
-      coc = null;
-    }
-    onStop();
-    if ((paramInt1 == 0) && (paramInt2 == 0))
-    {
-      if (iJo) {
-        g.ba(context, context.getString(2131431088));
-      }
-      iJm.bK(true);
-      return;
-    }
-    if ((paramInt1 == 4) && (paramInt2 == -34)) {
-      paramj = context.getString(2131431093);
-    }
-    for (;;)
-    {
-      if (iJo) {
-        Toast.makeText(context, paramj, 1).show();
-      }
-      iJm.bK(false);
-      return;
-      if ((paramInt1 == 4) && (paramInt2 == -94))
-      {
-        paramj = context.getString(2131431094);
-      }
-      else if ((paramInt1 == 4) && (paramInt2 == -24))
-      {
-        paramj = paramString;
-        if (!ay.kz(paramString)) {}
-      }
-      else
-      {
-        paramj = context.getString(2131431089);
-      }
-    }
-  }
-  
-  public final void e(LinkedList paramLinkedList1, LinkedList paramLinkedList2)
+  public final void d(LinkedList<String> paramLinkedList, LinkedList<Integer> paramLinkedList1)
   {
     boolean bool;
-    if (paramLinkedList1.size() > 0)
+    if (paramLinkedList.size() > 0)
     {
       bool = true;
       Assert.assertTrue(bool);
-      if (paramLinkedList2.size() <= 0) {
+      if (paramLinkedList1.size() <= 0) {
         break label299;
       }
       bool = true;
       label25:
       Assert.assertTrue(bool);
       onStart();
-      iJn = paramLinkedList1;
-      fJy = paramLinkedList2;
-      fKJ = View.inflate(context, 2131363000, null);
-      if (iHQ != null) {
+      jgj = paramLinkedList;
+      fSA = paramLinkedList1;
+      fTM = View.inflate(context, 2130904331, null);
+      if (jeN != null) {
         break label305;
       }
       bool = true;
       label68:
-      if (iHQ != null) {
+      if (jeN != null) {
         break label311;
       }
     }
     label299:
     label305:
     label311:
-    for (int i = 0;; i = iHQ.length())
+    for (int i = 0;; i = jeN.length())
     {
-      u.i("!44@/B4Tb64lLpLVd6spdHyDjUdOUXrNyAnPpMhB/tzZ/pc=", "verifyTip is null: %b, length : %d, value : [%s]", new Object[] { Boolean.valueOf(bool), Integer.valueOf(i), iHQ });
-      if (!ay.kz(iHQ)) {
-        ((TextView)fKJ.findViewById(2131168974)).setText(iHQ);
+      v.i("MicroMsg.SendVerifyRequest", "verifyTip is null: %b, length : %d, value : [%s]", new Object[] { Boolean.valueOf(bool), Integer.valueOf(i), jeN });
+      if (!be.kf(jeN)) {
+        ((TextView)fTM.findViewById(2131758865)).setText(jeN);
       }
-      fEO = ((EditText)fKJ.findViewById(2131168975));
-      fKL = ((TextView)fKJ.findViewById(2131165331));
-      fKL.setVisibility(0);
-      fEO.setText(null);
-      fKL.setText("50");
-      fEO.setFilters(com.tencent.mm.pluginsdk.ui.tools.h.iSL);
-      fEO.addTextChangedListener(new TextWatcher()
+      fNQ = ((EditText)fTM.findViewById(2131758866));
+      fTO = ((TextView)fTM.findViewById(2131756374));
+      fTO.setVisibility(0);
+      fNQ.setText(null);
+      fTO.setText("50");
+      fNQ.setFilters(com.tencent.mm.pluginsdk.ui.tools.h.jpU);
+      fNQ.addTextChangedListener(new TextWatcher()
       {
         public final void afterTextChanged(Editable paramAnonymousEditable)
         {
@@ -144,8 +94,8 @@ public final class i
           if (j < 0) {
             i = 0;
           }
-          if (fKL != null) {
-            fKL.setText(String.valueOf(i));
+          if (fTO != null) {
+            fTO.setText(String.valueOf(i));
           }
         }
         
@@ -153,58 +103,58 @@ public final class i
         
         public final void onTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
       });
+      paramLinkedList = new DialogInterface.OnClickListener()
+      {
+        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+        {
+          if (fTL != null)
+          {
+            fTL.dismiss();
+            fTL = null;
+          }
+          new com.tencent.mm.sdk.platformtools.ah(new ah.a()
+          {
+            public final boolean jK()
+            {
+              if (fTM != null)
+              {
+                i locali = i.this;
+                String str = fNQ.getText().toString().trim();
+                Context localContext = context;
+                context.getString(2131231028);
+                cjq = g.a(localContext, context.getString(2131234901), true, new i.5(locali));
+                com.tencent.mm.model.ah.tF().a(new l(2, jgj, fSA, str, ""), 0);
+              }
+              return false;
+            }
+          }, false).dJ(500L);
+        }
+      };
       paramLinkedList1 = new DialogInterface.OnClickListener()
       {
         public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
         {
-          if (apf != null)
+          if (fTL != null)
           {
-            apf.dismiss();
-            apf = null;
-          }
-          new af(new af.a()
-          {
-            public final boolean lj()
-            {
-              if (fKJ != null)
-              {
-                i locali = i.this;
-                String str = fEO.getText().toString().trim();
-                Context localContext = context;
-                context.getString(2131430877);
-                coc = g.a(localContext, context.getString(2131431087), true, new i.5(locali));
-                ah.tE().d(new l(2, iJn, fJy, str, ""));
-              }
-              return false;
-            }
-          }, false).ds(500L);
-        }
-      };
-      paramLinkedList2 = new DialogInterface.OnClickListener()
-      {
-        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
-        {
-          if (apf != null)
-          {
-            apf.dismiss();
-            apf = null;
+            fTL.dismiss();
+            fTL = null;
           }
           onStop();
-          if (iJm != null) {
-            iJm.bK(false);
+          if (jgi != null) {
+            jgi.bz(false);
           }
         }
       };
-      apf = g.a(context, context.getString(2131431084), fKJ, paramLinkedList1, paramLinkedList2);
-      if (apf == null) {
+      fTL = g.a(context, context.getString(2131234904), fTM, paramLinkedList, paramLinkedList1);
+      if (fTL == null) {
         onStop();
       }
-      fEO.post(new Runnable()
+      fNQ.post(new Runnable()
       {
         public final void run()
         {
           if ((context instanceof MMActivity)) {
-            ((MMActivity)context).apz();
+            ((MMActivity)context).asv();
           }
         }
       });
@@ -218,24 +168,72 @@ public final class i
     }
   }
   
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
+  {
+    if (paramj.getType() != 30)
+    {
+      v.w("MicroMsg.SendVerifyRequest", "not expected scene,  type = " + paramj.getType());
+      return;
+    }
+    v.d("MicroMsg.SendVerifyRequest", "onSceneEnd, errType = " + paramInt1 + ", errCode = " + paramInt2);
+    if (cjq != null)
+    {
+      cjq.dismiss();
+      cjq = null;
+    }
+    onStop();
+    if ((paramInt1 == 0) && (paramInt2 == 0))
+    {
+      if (jgk) {
+        g.aZ(context, context.getString(2131234900));
+      }
+      jgi.bz(true);
+      return;
+    }
+    if ((paramInt1 == 4) && (paramInt2 == -34)) {
+      paramj = context.getString(2131232820);
+    }
+    for (;;)
+    {
+      if (jgk) {
+        Toast.makeText(context, paramj, 1).show();
+      }
+      jgi.bz(false);
+      return;
+      if ((paramInt1 == 4) && (paramInt2 == -94))
+      {
+        paramj = context.getString(2131232821);
+      }
+      else if ((paramInt1 == 4) && (paramInt2 == -24))
+      {
+        paramj = paramString;
+        if (!be.kf(paramString)) {}
+      }
+      else
+      {
+        paramj = context.getString(2131234899);
+      }
+    }
+  }
+  
   final void onStart()
   {
-    ah.tE().a(30, this);
+    com.tencent.mm.model.ah.tF().a(30, this);
   }
   
   final void onStop()
   {
-    ah.tE().b(30, this);
-    if (apf != null)
+    com.tencent.mm.model.ah.tF().b(30, this);
+    if (fTL != null)
     {
-      apf.dismiss();
-      apf = null;
+      fTL.dismiss();
+      fTL = null;
     }
   }
   
   public static abstract interface a
   {
-    public abstract void bK(boolean paramBoolean);
+    public abstract void bz(boolean paramBoolean);
   }
 }
 

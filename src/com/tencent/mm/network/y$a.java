@@ -2,9 +2,9 @@ package com.tencent.mm.network;
 
 final class y$a
 {
-  p cjK;
-  k cjL;
-  c cjM;
+  p cfb;
+  k cfc;
+  c cfd;
   long startTime;
 }
 

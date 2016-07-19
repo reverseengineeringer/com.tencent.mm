@@ -1,14 +1,14 @@
 package com.tencent.mm.plugin.ext.provider;
 
 import android.database.MatrixCursor;
-import com.tencent.mm.d.a.do;
-import com.tencent.mm.d.a.do.b;
-import com.tencent.mm.d.a.dt;
-import com.tencent.mm.d.a.dt.b;
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.sdk.platformtools.ah;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.e.a.ds;
+import com.tencent.mm.e.a.ds.b;
+import com.tencent.mm.e.a.dy;
+import com.tencent.mm.e.a.dy.b;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class ExtControlProviderMsg$1
   implements Runnable
@@ -19,93 +19,93 @@ final class ExtControlProviderMsg$1
   {
     Object localObject1;
     Object localObject2;
-    if (dLc == 1)
+    if (dML == 1)
     {
-      com.tencent.mm.plugin.ext.b.Vo();
-      localObject1 = com.tencent.mm.plugin.ext.b.ba(dLd);
-      if ((localObject1 == null) || ((int)bvi <= 0))
+      com.tencent.mm.plugin.ext.b.WP();
+      localObject1 = com.tencent.mm.plugin.ext.b.bi(dMM);
+      if ((localObject1 == null) || ((int)bjS <= 0))
       {
-        dLf.gK(3);
-        dKP.countDown();
+        dMN.hJ(3);
+        dMy.countDown();
         return;
       }
-      localObject2 = new do();
-      axq.op = 1;
-      axq.username = field_username;
-      if (!com.tencent.mm.sdk.c.a.jUF.j((com.tencent.mm.sdk.c.b)localObject2))
+      localObject2 = new ds();
+      ajp.op = 1;
+      ajp.username = field_username;
+      if (!com.tencent.mm.sdk.c.a.kug.y((com.tencent.mm.sdk.c.b)localObject2))
       {
-        dLf.gK(4);
-        dKP.countDown();
+        dMN.hJ(4);
+        dMy.countDown();
         return;
       }
-      ExtControlProviderMsg.a(dLf, new MatrixCursor(ExtControlProviderMsg.Vz()));
-      if ((localObject1 != null) && ((int)bvi > 0) && (axr.atR))
+      ExtControlProviderMsg.a(dMN, new MatrixCursor(ExtControlProviderMsg.Xh()));
+      if ((localObject1 != null) && ((int)bjS > 0) && (ajq.afB))
       {
-        ExtControlProviderMsg.a(dLf).addRow(new Object[] { dLe[1], Integer.valueOf(1), "0" });
-        dLf.gK(0);
-        u.d("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI=", "start record, ret=[%s], fileName=[%s]", new Object[] { Boolean.valueOf(axr.atR), axr.anC });
+        ExtControlProviderMsg.a(dMN).addRow(new Object[] { dMm[1], Integer.valueOf(1), "0" });
+        dMN.hJ(0);
+        v.d("MicroMsg.ExtControlProviderMsg", "start record, ret=[%s], fileName=[%s]", new Object[] { Boolean.valueOf(ajq.afB), ajq.aaq });
       }
     }
     for (;;)
     {
-      dKP.countDown();
+      dMy.countDown();
       return;
-      ExtControlProviderMsg.a(dLf).addRow(new Object[] { dLe[1], Integer.valueOf(2), "0" });
-      dLf.gK(3);
+      ExtControlProviderMsg.a(dMN).addRow(new Object[] { dMm[1], Integer.valueOf(2), "0" });
+      dMN.hJ(3);
       break;
-      if (dLc == 2)
+      if (dML == 2)
       {
-        localObject1 = new do();
-        axq.op = 2;
-        if (!com.tencent.mm.sdk.c.a.jUF.j((com.tencent.mm.sdk.c.b)localObject1))
+        localObject1 = new ds();
+        ajp.op = 2;
+        if (!com.tencent.mm.sdk.c.a.kug.y((com.tencent.mm.sdk.c.b)localObject1))
         {
-          dLf.gK(4);
-          dKP.countDown();
+          dMN.hJ(4);
+          dMy.countDown();
           return;
         }
-        localObject2 = axr.anC;
-        ExtControlProviderMsg.a(dLf, new MatrixCursor(ExtControlProviderMsg.Vz()));
-        dt localdt = new dt();
-        axF.anC = ((String)localObject2);
-        if (!com.tencent.mm.sdk.c.a.jUF.j(localdt))
+        localObject2 = ajq.aaq;
+        ExtControlProviderMsg.a(dMN, new MatrixCursor(ExtControlProviderMsg.Xh()));
+        dy localdy = new dy();
+        ajM.aaq = ((String)localObject2);
+        if (!com.tencent.mm.sdk.c.a.kug.y(localdy))
         {
-          dLf.gK(4);
-          ExtControlProviderMsg.a(dLf).close();
-          dKP.countDown();
+          dMN.hJ(4);
+          ExtControlProviderMsg.a(dMN).close();
+          dMy.countDown();
           return;
         }
-        u.d("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI=", "stop record, msgId=[%s]", new Object[] { Long.valueOf(axG.avg) });
-        long l = axG.avg;
+        v.d("MicroMsg.ExtControlProviderMsg", "stop record, msgId=[%s]", new Object[] { Long.valueOf(ajN.agU) });
+        long l = ajN.agU;
         if (l > 0L)
         {
           try
           {
-            if (!axr.atR) {
+            if (!ajq.afB) {
               break label595;
             }
-            if ((y.getContext() == null) || (!ah.ds(y.getContext()))) {
+            if ((aa.getContext() == null) || (!ak.dt(aa.getContext()))) {
               break label546;
             }
-            ExtControlProviderMsg.a(dLf).addRow(new Object[] { dLe[1], Integer.valueOf(1), com.tencent.mm.plugin.ext.a.a.bc(l) });
-            dLf.gK(0);
+            ExtControlProviderMsg.a(dMN).addRow(new Object[] { dMm[1], Integer.valueOf(1), com.tencent.mm.plugin.ext.a.a.bk(l) });
+            dMN.hJ(0);
           }
           catch (Exception localException)
           {
-            u.w("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI=", localException.getMessage());
-            dLf.gK(4);
+            v.w("MicroMsg.ExtControlProviderMsg", localException.getMessage());
+            dMN.hJ(4);
           }
           continue;
           label546:
-          ExtControlProviderMsg.a(dLf).addRow(new Object[] { dLe[1], Integer.valueOf(6), com.tencent.mm.plugin.ext.a.a.bc(l) });
-          dLf.gK(4);
+          ExtControlProviderMsg.a(dMN).addRow(new Object[] { dMm[1], Integer.valueOf(6), com.tencent.mm.plugin.ext.a.a.bk(l) });
+          dMN.hJ(4);
           continue;
           label595:
-          ExtControlProviderMsg.a(dLf).addRow(new Object[] { dLe[1], Integer.valueOf(4), com.tencent.mm.plugin.ext.a.a.bc(l) });
-          dLf.gK(4);
+          ExtControlProviderMsg.a(dMN).addRow(new Object[] { dMm[1], Integer.valueOf(4), com.tencent.mm.plugin.ext.a.a.bk(l) });
+          dMN.hJ(4);
         }
         else
         {
-          dLf.gK(3);
+          dMN.hJ(3);
         }
       }
     }

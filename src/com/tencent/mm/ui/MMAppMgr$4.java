@@ -12,7 +12,7 @@ final class MMAppMgr$4
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    cms.onKeyDown(4, new KeyEvent(0, 4));
+    chx.onKeyDown(4, new KeyEvent(0, 4));
   }
 }
 

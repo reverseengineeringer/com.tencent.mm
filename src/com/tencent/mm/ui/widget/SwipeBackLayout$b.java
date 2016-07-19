@@ -8,8 +8,8 @@ import android.support.v4.widget.f.a;
 import android.view.View;
 import android.view.Window;
 import com.tencent.mm.compatible.util.c;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.b.a;
 import com.tencent.mm.ui.base.b.b;
 import com.tencent.mm.ui.tools.k;
@@ -23,65 +23,65 @@ final class SwipeBackLayout$b
   extends f.a
   implements b.a
 {
-  int lGM = 0;
-  int lGN = 0;
-  int lGO = 0;
+  int mia = 0;
+  int mib = 0;
+  int mic = 0;
   
   private SwipeBackLayout$b(SwipeBackLayout paramSwipeBackLayout) {}
   
   public final void a(View paramView, float paramFloat1, float paramFloat2)
   {
     int i = paramView.getWidth();
-    lGN = 0;
-    lGO = 0;
-    if ((paramFloat1 > 0.0F) || ((paramFloat1 == 0.0F) && (SwipeBackLayout.e(lGP) > SwipeBackLayout.h(lGP)))) {}
-    for (i = i + SwipeBackLayout.d(lGP).getIntrinsicWidth() + 10;; i = 0)
+    mib = 0;
+    mic = 0;
+    if ((paramFloat1 > 0.0F) || ((paramFloat1 == 0.0F) && (SwipeBackLayout.e(mid) > SwipeBackLayout.h(mid)))) {}
+    for (i = i + SwipeBackLayout.d(mid).getIntrinsicWidth() + 10;; i = 0)
     {
-      lGN = i;
-      u.i("!44@/B4Tb64lLpK0aWizdgE60RZj+63liLyIPH/0AOVXUq4=", "ashutest::onViewReleased, xvel:%f yvel:%f, releaseLeft:%d, releaseTop:%d, translucent %B", new Object[] { Float.valueOf(paramFloat1), Float.valueOf(paramFloat2), Integer.valueOf(lGN), Integer.valueOf(lGO), Boolean.valueOf(SwipeBackLayout.b(lGP)) });
-      SwipeBackLayout.b(lGP, true);
-      if (!SwipeBackLayout.b(lGP)) {
+      mib = i;
+      v.i("MicroMsg.SwipeBackLayout", "ashutest::onViewReleased, xvel:%f yvel:%f, releaseLeft:%d, releaseTop:%d, translucent %B", new Object[] { Float.valueOf(paramFloat1), Float.valueOf(paramFloat2), Integer.valueOf(mib), Integer.valueOf(mic), Boolean.valueOf(SwipeBackLayout.b(mid)) });
+      SwipeBackLayout.b(mid, true);
+      if (!SwipeBackLayout.b(mid)) {
         break;
       }
-      SwipeBackLayout.a(lGP).i(lGN, lGO);
-      lGP.invalidate();
+      SwipeBackLayout.a(mid).g(mib, mic);
+      mid.invalidate();
       return;
     }
-    SwipeBackLayout.c(lGP, true);
+    SwipeBackLayout.c(mid, true);
   }
   
   public final void a(View paramView, int paramInt1, int paramInt2)
   {
-    if (!SwipeBackLayout.b(lGP)) {}
+    if (!SwipeBackLayout.b(mid)) {}
     for (;;)
     {
       return;
-      SwipeBackLayout.a(lGP, Math.abs(paramInt1 / (SwipeBackLayout.c(lGP).getWidth() + SwipeBackLayout.d(lGP).getIntrinsicWidth())));
-      SwipeBackLayout.a(lGP, paramInt1);
-      SwipeBackLayout.b(lGP, paramInt2);
-      lGP.invalidate();
-      if ((Float.compare(SwipeBackLayout.e(lGP), 1.0F) >= 0) && (!SwipeBackLayout.f(lGP)))
+      SwipeBackLayout.a(mid, Math.abs(paramInt1 / (SwipeBackLayout.c(mid).getWidth() + SwipeBackLayout.d(mid).getIntrinsicWidth())));
+      SwipeBackLayout.a(mid, paramInt1);
+      SwipeBackLayout.b(mid, paramInt2);
+      mid.invalidate();
+      if ((Float.compare(SwipeBackLayout.e(mid), 1.0F) >= 0) && (!SwipeBackLayout.f(mid)))
       {
-        SwipeBackLayout.a(lGP, true);
-        ab.j(new Runnable()
+        SwipeBackLayout.a(mid, true);
+        ad.k(new Runnable()
         {
           public final void run()
           {
-            if (SwipeBackLayout.g(lGP) != null)
+            if (SwipeBackLayout.g(mid) != null)
             {
-              SwipeBackLayout.g(lGP).aNg();
-              u.d("!44@/B4Tb64lLpK0aWizdgE60RZj+63liLyIPH/0AOVXUq4=", "ashutest:: on popOut");
+              SwipeBackLayout.g(mid).aEs();
+              v.d("MicroMsg.SwipeBackLayout", "ashutest:: on popOut");
             }
-            SwipeBackLayout.b(lGP, false);
+            SwipeBackLayout.b(mid, false);
           }
         });
       }
-      while (alGP).ij == 1)
+      while (amid).iC == 1)
       {
-        f.I(SwipeBackLayout.e(lGP));
+        f.H(SwipeBackLayout.e(mid));
         return;
-        if (Float.compare(SwipeBackLayout.e(lGP), 0.01F) <= 0) {
-          SwipeBackLayout.b(lGP, false);
+        if (Float.compare(SwipeBackLayout.e(mid), 0.01F) <= 0) {
+          SwipeBackLayout.b(mid, false);
         }
       }
     }
@@ -89,50 +89,50 @@ final class SwipeBackLayout$b
   
   public final boolean d(View paramView, int paramInt)
   {
-    paramView = SwipeBackLayout.a(lGP);
-    return (paramView.v(paramInt)) && ((iq[paramInt] & 0x1) != 0);
+    paramView = SwipeBackLayout.a(mid);
+    return (paramView.A(paramInt)) && ((iH[paramInt] & 0x1) != 0);
   }
   
   public final int e(View paramView, int paramInt)
   {
-    if (SwipeBackLayout.b(lGP))
+    if (SwipeBackLayout.b(mid))
     {
-      paramInt = Math.max(lGM, paramInt);
-      lGM = 0;
+      paramInt = Math.max(mia, paramInt);
+      mia = 0;
       return Math.min(paramView.getWidth(), Math.max(paramInt, 0));
     }
-    lGM = Math.max(lGM, paramInt);
+    mia = Math.max(mia, paramInt);
     return 0;
   }
   
-  public final void hu(final boolean paramBoolean)
+  public final void hS(final boolean paramBoolean)
   {
-    ab.j(new Runnable()
+    ad.k(new Runnable()
     {
       public final void run()
       {
-        u.i("!44@/B4Tb64lLpK0aWizdgE60RZj+63liLyIPH/0AOVXUq4=", "on Complete, result %B, releaseLeft %d", new Object[] { Boolean.valueOf(paramBoolean), Integer.valueOf(lGN) });
-        SwipeBackLayout.d(lGP, paramBoolean);
+        v.i("MicroMsg.SwipeBackLayout", "on Complete, result %B, releaseLeft %d", new Object[] { Boolean.valueOf(paramBoolean), Integer.valueOf(mib) });
+        SwipeBackLayout.d(mid, paramBoolean);
         if (paramBoolean) {
-          if (lGN > 0)
+          if (mib > 0)
           {
-            f.I(0.0F);
-            lGP.io(paramBoolean);
-            if ((paramBoolean) && (SwipeBackLayout.j(lGP)))
+            f.H(0.0F);
+            mid.iX(paramBoolean);
+            if ((paramBoolean) && (SwipeBackLayout.j(mid)))
             {
-              if (lGN != 0) {
+              if (mib != 0) {
                 break label174;
               }
-              k.a(SwipeBackLayout.c(lGP), 200L, 0.0F, new k.a()
+              k.a(SwipeBackLayout.c(mid), 200L, 0.0F, new k.a()
               {
-                public final void biD()
+                public final void boz()
                 {
                   onAnimationEnd();
                 }
                 
                 public final void onAnimationEnd()
                 {
-                  SwipeBackLayout.b(lGP, false);
+                  SwipeBackLayout.b(mid, false);
                 }
               });
             }
@@ -140,91 +140,96 @@ final class SwipeBackLayout$b
         }
         for (;;)
         {
-          SwipeBackLayout.c(lGP, false);
+          SwipeBackLayout.c(mid, false);
           return;
-          f.I(1.0F);
+          f.H(1.0F);
           break;
-          SwipeBackLayout.b(lGP, false);
+          SwipeBackLayout.b(mid, false);
           break;
           label174:
-          k.a(SwipeBackLayout.c(lGP), 200L, lGN, new k.a()
+          k.a(SwipeBackLayout.c(mid), 200L, mib, new k.a()
           {
-            public final void biD()
+            public final void boz()
             {
               onAnimationEnd();
             }
             
             public final void onAnimationEnd()
             {
-              SwipeBackLayout.a(lGP, true);
-              ab.j(new Runnable()
+              SwipeBackLayout.a(mid, true);
+              ad.k(new Runnable()
               {
                 public final void run()
                 {
-                  if (SwipeBackLayout.g(lGP) != null)
+                  if (SwipeBackLayout.g(mid) != null)
                   {
-                    SwipeBackLayout.g(lGP).aNg();
-                    u.d("!44@/B4Tb64lLpK0aWizdgE60RZj+63liLyIPH/0AOVXUq4=", "ashutest:: on onSwipeBack");
+                    SwipeBackLayout.g(mid).aEs();
+                    v.d("MicroMsg.SwipeBackLayout", "ashutest:: on onSwipeBack");
                   }
-                  f.I(1.0F);
-                  SwipeBackLayout.b(lGP, false);
+                  f.H(1.0F);
+                  SwipeBackLayout.b(mid, false);
                 }
               });
             }
           });
-          f.l(true, lGN);
+          f.l(true, mib);
         }
       }
     });
   }
   
-  public final void t(int paramInt)
+  public final int y(View paramView)
   {
-    u.i("!44@/B4Tb64lLpK0aWizdgE60RZj+63liLyIPH/0AOVXUq4=", "ashutest::onViewDragStateChanged state %d, requestedTranslucent %B fastRelease %B", new Object[] { Integer.valueOf(paramInt), Boolean.valueOf(SwipeBackLayout.i(lGP)), Boolean.valueOf(SwipeBackLayout.j(lGP)) });
+    return 1;
+  }
+  
+  public final void y(int paramInt)
+  {
+    v.i("MicroMsg.SwipeBackLayout", "ashutest::onViewDragStateChanged state %d, requestedTranslucent %B fastRelease %B", new Object[] { Integer.valueOf(paramInt), Boolean.valueOf(SwipeBackLayout.i(mid)), Boolean.valueOf(SwipeBackLayout.j(mid)) });
     if (1 == paramInt)
     {
-      u.i("!44@/B4Tb64lLpK0aWizdgE60RZj+63liLyIPH/0AOVXUq4=", "ashutest:: on drag");
-      if ((lGP.getContext() instanceof Activity)) {
-        ((Activity)lGP.getContext()).getWindow().getDecorView().setBackgroundResource(2131231114);
+      v.i("MicroMsg.SwipeBackLayout", "ashutest:: on drag");
+      if ((mid.getContext() instanceof Activity)) {
+        ((Activity)mid.getContext()).getWindow().getDecorView().setBackgroundResource(2131690001);
       }
-      if (SwipeBackLayout.g(lGP) != null) {
-        SwipeBackLayout.g(lGP).aNh();
+      if (SwipeBackLayout.g(mid) != null) {
+        SwipeBackLayout.g(mid).aQQ();
       }
-      SwipeBackLayout.a(lGP, false);
-      if (SwipeBackLayout.b(lGP)) {
-        f.I(0.0F);
+      SwipeBackLayout.a(mid, false);
+      if (SwipeBackLayout.b(mid)) {
+        f.H(0.0F);
       }
     }
-    if ((paramInt == 0) && (!SwipeBackLayout.j(lGP)))
+    if ((paramInt == 0) && (!SwipeBackLayout.j(mid)))
     {
-      u.i("!44@/B4Tb64lLpK0aWizdgE60RZj+63liLyIPH/0AOVXUq4=", "ashutest:: on cancel");
-      if (SwipeBackLayout.g(lGP) != null) {
-        SwipeBackLayout.g(lGP).onCancel();
+      v.i("MicroMsg.SwipeBackLayout", "ashutest:: on cancel");
+      if (SwipeBackLayout.g(mid) != null) {
+        SwipeBackLayout.g(mid).onCancel();
       }
-      f.I(1.0F);
+      f.H(1.0F);
     }
     Activity localActivity;
     boolean bool;
-    if ((1 == paramInt) && (SwipeBackLayout.k(lGP)) && ((lGP.getContext() instanceof Activity)) && (!SwipeBackLayout.b(lGP)) && (!SwipeBackLayout.i(lGP)))
+    if ((1 == paramInt) && (SwipeBackLayout.k(mid)) && ((mid.getContext() instanceof Activity)) && (!SwipeBackLayout.b(mid)) && (!SwipeBackLayout.i(mid)))
     {
-      u.i("!44@/B4Tb64lLpK0aWizdgE60RZj+63liLyIPH/0AOVXUq4=", "ashutest:: match dragging");
-      SwipeBackLayout.d(lGP, true);
-      localActivity = (Activity)lGP.getContext();
-      if (c.bV(16)) {
-        u.w("!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i", "convertActivityToTranslucent::Android Version Error %d", new Object[] { Integer.valueOf(Build.VERSION.SDK_INT) });
+      v.i("MicroMsg.SwipeBackLayout", "ashutest:: match dragging");
+      SwipeBackLayout.d(mid, true);
+      localActivity = (Activity)mid.getContext();
+      if (c.cn(16)) {
+        v.w("MicroMsg.ActivityUtil", "convertActivityToTranslucent::Android Version Error %d", new Object[] { Integer.valueOf(Build.VERSION.SDK_INT) });
       }
     }
     else
     {
       if (2 == paramInt)
       {
-        u.i("!44@/B4Tb64lLpK0aWizdgE60RZj+63liLyIPH/0AOVXUq4=", "ashutest:: notify settle, mReleasedLeft %d", new Object[] { Integer.valueOf(lGN) });
-        if (lGN <= 0) {
+        v.i("MicroMsg.SwipeBackLayout", "ashutest:: notify settle, mReleasedLeft %d", new Object[] { Integer.valueOf(mib) });
+        if (mib <= 0) {
           break label564;
         }
         bool = true;
         label323:
-        f.l(bool, lGN);
+        f.l(bool, mib);
       }
       return;
     }
@@ -250,9 +255,9 @@ final class SwipeBackLayout$b
           break label570;
         }
         localObject2 = new b.b((byte)0);
-        kBn = new WeakReference(this);
+        las = new WeakReference(this);
         localObject2 = Proxy.newProxyInstance(((Class)localObject1).getClassLoader(), new Class[] { localObject1 }, (InvocationHandler)localObject2);
-        if (!c.bV(21)) {
+        if (!c.cn(21)) {
           break label509;
         }
         localObject1 = Activity.class.getDeclaredMethod("convertToTranslucent", new Class[] { localObject1 });
@@ -261,7 +266,7 @@ final class SwipeBackLayout$b
       }
       catch (Throwable localThrowable)
       {
-        u.printErrStackTrace("!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i", localThrowable, "call convertActivityToTranslucent Fail: %s", new Object[] { localThrowable.getMessage() });
+        v.printErrStackTrace("MicroMsg.ActivityUtil", localThrowable, "call convertActivityToTranslucent Fail: %s", new Object[] { localThrowable.getMessage() });
       }
       break;
       label509:
@@ -278,11 +283,6 @@ final class SwipeBackLayout$b
       label576:
       i += 1;
     }
-  }
-  
-  public final int y(View paramView)
-  {
-    return 1;
   }
 }
 

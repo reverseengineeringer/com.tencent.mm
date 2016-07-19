@@ -8,26 +8,26 @@ import java.util.ArrayList;
 class GroupIDKeyDataInfo
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
-  ArrayList fUg = new ArrayList();
-  public boolean fUh;
+  public static final Parcelable.Creator<GroupIDKeyDataInfo> CREATOR = new Parcelable.Creator() {};
+  ArrayList<KVReportJni.IDKeyDataInfo> gdv = new ArrayList();
+  public boolean gdw;
   
   protected GroupIDKeyDataInfo(Parcel paramParcel)
   {
-    paramParcel.readTypedList(fUg, KVReportJni.IDKeyDataInfo.CREATOR);
+    paramParcel.readTypedList(gdv, KVReportJni.IDKeyDataInfo.CREATOR);
     if (paramParcel.readInt() == 1) {}
     for (;;)
     {
-      fUh = bool;
+      gdw = bool;
       return;
       bool = false;
     }
   }
   
-  GroupIDKeyDataInfo(ArrayList paramArrayList, boolean paramBoolean)
+  GroupIDKeyDataInfo(ArrayList<KVReportJni.IDKeyDataInfo> paramArrayList, boolean paramBoolean)
   {
-    fUg = paramArrayList;
-    fUh = paramBoolean;
+    gdv = paramArrayList;
+    gdw = paramBoolean;
   }
   
   public int describeContents()
@@ -37,8 +37,8 @@ class GroupIDKeyDataInfo
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    paramParcel.writeTypedList(fUg);
-    if (fUh) {}
+    paramParcel.writeTypedList(gdv);
+    if (gdw) {}
     for (paramInt = 1;; paramInt = 0)
     {
       paramParcel.writeInt(paramInt);

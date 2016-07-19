@@ -8,13 +8,13 @@ final class g$3
 {
   g$3(k paramk, DialogInterface.OnDismissListener paramOnDismissListener) {}
   
-  public final void db(boolean paramBoolean)
+  public final void cZ(boolean paramBoolean)
   {
     if (paramBoolean)
     {
-      iPN.dismiss();
-      if (iPL != null) {
-        iPL.onDismiss(null);
+      jmU.dismiss();
+      if (jmS != null) {
+        jmS.onDismiss(null);
       }
     }
   }

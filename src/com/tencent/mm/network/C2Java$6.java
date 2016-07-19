@@ -7,8 +7,8 @@ final class C2Java$6
   
   public final void run()
   {
-    z.Fi();
-    x.onOOBNotify(cix, ciy);
+    z.FE();
+    x.onOOBNotify(cdO, cdP);
   }
 }
 

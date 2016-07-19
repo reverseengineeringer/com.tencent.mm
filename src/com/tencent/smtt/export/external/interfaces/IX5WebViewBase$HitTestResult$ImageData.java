@@ -9,6 +9,11 @@ public class IX5WebViewBase$HitTestResult$ImageData
   public long mRawDataSize;
   
   public IX5WebViewBase$HitTestResult$ImageData(IX5WebViewBase.HitTestResult paramHitTestResult) {}
+  
+  public Bitmap getBitmap()
+  {
+    return this$0.getBitmapData();
+  }
 }
 
 /* Location:

@@ -11,8 +11,8 @@ public final class LauncherUI$12
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ah.fe("");
-    MMAppMgr.hk(true);
+    ah.fr("");
+    MMAppMgr.hI(true);
   }
 }
 

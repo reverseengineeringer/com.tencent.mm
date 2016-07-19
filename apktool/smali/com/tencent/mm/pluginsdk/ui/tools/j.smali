@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static iSP:Ljava/lang/String;
+.field private static jqb:Ljava/lang/String;
 
-.field private static final iSQ:[Ljava/lang/String;
+.field private static final jqc:[Ljava/lang/String;
 
 
 # direct methods
@@ -17,7 +17,7 @@
     .line 50
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->iSP:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->jqb:Ljava/lang/String;
 
     .line 74
     const/16 v0, 0x8
@@ -72,22 +72,22 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->iSQ:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->jqc:[Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static be(II)V
-    .locals 13
+.method public static bi(II)V
+    .locals 14
 
     .prologue
-    const/4 v12, 0x3
+    const/4 v13, 0x3
 
-    const/4 v11, 0x2
+    const/4 v12, 0x2
 
-    const/4 v10, 0x1
+    const/4 v11, 0x1
 
-    const/4 v9, 0x0
+    const/4 v10, 0x0
 
     .line 33
     if-lez p0, :cond_0
@@ -98,19 +98,19 @@
 
     .line 34
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpISxnUMUi4flWrSvvOSsz//"
+    const-string/jumbo v0, "MicroMsg.TBSReporter"
 
     const-string/jumbo v1, "report invalid scene = %d"
 
-    new-array v2, v10, [Ljava/lang/Object;
+    new-array v2, v11, [Ljava/lang/Object;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    aput-object v3, v2, v9
+    aput-object v3, v2, v10
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 47
     :goto_0
@@ -118,34 +118,34 @@
 
     .line 38
     :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpISxnUMUi4flWrSvvOSsz//"
+    const-string/jumbo v0, "MicroMsg.TBSReporter"
 
     const-string/jumbo v1, "logSceneDetail, scene = %d_%s, errcode = %d"
 
-    new-array v2, v12, [Ljava/lang/Object;
+    new-array v2, v13, [Ljava/lang/Object;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    aput-object v3, v2, v9
+    aput-object v3, v2, v10
 
-    sget-object v3, Lcom/tencent/mm/pluginsdk/ui/tools/j;->iSQ:[Ljava/lang/String;
+    sget-object v3, Lcom/tencent/mm/pluginsdk/ui/tools/j;->jqc:[Ljava/lang/String;
 
     aget-object v3, v3, p0
 
-    aput-object v3, v2, v10
+    aput-object v3, v2, v11
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    aput-object v3, v2, v11
+    aput-object v3, v2, v12
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 40
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -160,12 +160,12 @@
     move-result v2
 
     .line 43
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/j;->cT(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/j;->cR(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 45
-    sget-object v3, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v3, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v3, 0x2d71
 
@@ -177,33 +177,33 @@
 
     move-result-object v5
 
-    aput-object v5, v4, v9
+    aput-object v5, v4, v10
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    const-wide/16 v7, 0x3e8
+    const-wide/16 v8, 0x3e8
 
-    div-long/2addr v5, v7
+    div-long/2addr v6, v8
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
 
-    aput-object v5, v4, v10
+    aput-object v5, v4, v11
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    aput-object v1, v4, v11
+    aput-object v1, v4, v12
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    aput-object v1, v4, v12
+    aput-object v1, v4, v13
 
     const/4 v1, 0x4
 
@@ -217,22 +217,22 @@
 
     aput-object v1, v4, v0
 
-    invoke-static {v3, v9, v10, v4}, Lcom/tencent/mm/plugin/report/service/h;->a(IZZ[Ljava/lang/Object;)V
+    invoke-static {v3, v10, v11, v4}, Lcom/tencent/mm/plugin/report/service/g;->a(IZZ[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method private static cT(Landroid/content/Context;)Ljava/lang/String;
+.method private static cR(Landroid/content/Context;)Ljava/lang/String;
     .locals 5
 
     .prologue
     .line 53
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->iSP:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->jqb:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
     .line 54
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->iSP:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->jqb:Ljava/lang/String;
 
     .line 70
     :goto_0
@@ -245,7 +245,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getPackageName()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -272,14 +272,14 @@
     move-result-object v0
 
     .line 61
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
     .line 62
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->iSP:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->jqb:Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -290,7 +290,7 @@
     move-exception v0
 
     .line 68
-    const-string/jumbo v1, "!32@/B4Tb64lLpISxnUMUi4flWrSvvOSsz//"
+    const-string/jumbo v1, "MicroMsg.TBSReporter"
 
     const-string/jumbo v2, "getMetaTbsCode, ex = %s"
 
@@ -306,7 +306,7 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 70
     :cond_1
@@ -315,14 +315,14 @@
     goto :goto_0
 .end method
 
-.method public static lp(I)V
+.method public static id(I)V
     .locals 1
 
     .prologue
     .line 29
     const/4 v0, 0x0
 
-    invoke-static {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/j;->be(II)V
+    invoke-static {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/j;->bi(II)V
 
     .line 30
     return-void

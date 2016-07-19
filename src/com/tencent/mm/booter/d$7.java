@@ -2,10 +2,8 @@ package com.tencent.mm.booter;
 
 import android.content.Context;
 import android.widget.Toast;
-import com.tencent.mm.model.v;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ah;
 import java.util.Iterator;
 import java.util.List;
 
@@ -16,18 +14,18 @@ final class d$7
   
   public final void run()
   {
-    d.d(bmw).aUF();
-    Iterator localIterator = d.c(bmw).iterator();
+    d.d(bac).aZJ();
+    Iterator localIterator = d.c(bac).iterator();
     while (localIterator.hasNext())
     {
-      v localv = (v)localIterator.next();
+      com.tencent.mm.model.v localv = (com.tencent.mm.model.v)localIterator.next();
       if (localv != null)
       {
-        u.e("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "on error call back: %s", new Object[] { localv.toString() });
+        com.tencent.mm.sdk.platformtools.v.e("MicroMsg.DownloadPlayer", "on error call back: %s", new Object[] { localv.toString() });
         localv.onError();
       }
     }
-    Toast.makeText(y.getContext(), y.getContext().getString(2131427811), 1).show();
+    Toast.makeText(aa.getContext(), aa.getContext().getString(2131233958), 1).show();
   }
 }
 

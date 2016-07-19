@@ -2,9 +2,9 @@ package com.tencent.mm.model;
 
 public abstract interface ar$a
 {
-  public abstract void uh();
+  public abstract void ui();
   
-  public abstract boolean ui();
+  public abstract boolean uj();
 }
 
 /* Location:

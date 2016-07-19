@@ -6,42 +6,39 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import com.tencent.mm.network.z;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.w;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.sdk.platformtools.y;
 
 public class MMReceivers$AlarmReceiver
   extends BroadcastReceiver
 {
-  public static void ap(Context paramContext)
+  public static void am(Context paramContext)
   {
-    long l = w.aUE();
-    u.d("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "bumper comes, next=" + l);
-    if (l > 1860000L) {
+    long l2 = y.aZI();
+    v.d("MicroMsg.AlarmReceiver", "bumper comes, next=" + l2);
+    if (l2 > 1860000L) {
       return;
     }
-    if (l < 30000L) {
-      l = 30000L;
+    long l1 = l2;
+    if (l2 < 30000L) {
+      l1 = 30000L;
     }
-    for (;;)
+    v.w("MicroMsg.AlarmReceiver", "reset bumper, interval=" + l1);
+    AlarmManager localAlarmManager = (AlarmManager)paramContext.getSystemService("alarm");
+    if (localAlarmManager == null)
     {
-      u.w("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "reset bumper, interval=" + l);
-      AlarmManager localAlarmManager = (AlarmManager)paramContext.getSystemService("alarm");
-      if (localAlarmManager == null)
-      {
-        u.e("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "keep bumper failed, null am");
-        return;
-      }
-      paramContext = PendingIntent.getBroadcast(paramContext, 1, new Intent(paramContext, AlarmReceiver.class).putExtra("MMBoot_Bump", true), 268435456);
-      localAlarmManager.set(0, l + System.currentTimeMillis(), paramContext);
+      v.e("MicroMsg.AlarmReceiver", "keep bumper failed, null am");
       return;
     }
+    paramContext = PendingIntent.getBroadcast(paramContext, 1, new Intent(paramContext, AlarmReceiver.class).putExtra("MMBoot_Bump", true), 268435456);
+    localAlarmManager.set(0, l1 + System.currentTimeMillis(), paramContext);
   }
   
-  public static void aq(Context paramContext)
+  public static void an(Context paramContext)
   {
     AlarmManager localAlarmManager = (AlarmManager)paramContext.getSystemService("alarm");
     if (localAlarmManager == null) {
-      u.e("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "stop bumper failed, null am");
+      v.e("MicroMsg.AlarmReceiver", "stop bumper failed, null am");
     }
     do
     {
@@ -52,16 +49,16 @@ public class MMReceivers$AlarmReceiver
     paramContext.cancel();
   }
   
-  public static void ar(Context paramContext)
+  public static void ao(Context paramContext)
   {
-    u.w("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "keep awaker");
+    v.w("MicroMsg.AlarmReceiver", "keep awaker");
     AlarmManager localAlarmManager = (AlarmManager)paramContext.getSystemService("alarm");
     if (localAlarmManager == null)
     {
-      u.e("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "keep awaker failed, null am");
+      v.e("MicroMsg.AlarmReceiver", "keep awaker failed, null am");
       return;
     }
-    if (z.Fb()) {}
+    if (z.Fx()) {}
     for (int i = 300000;; i = 900000)
     {
       paramContext = PendingIntent.getBroadcast(paramContext, 0, new Intent(paramContext, AlarmReceiver.class), 268435456);
@@ -70,12 +67,12 @@ public class MMReceivers$AlarmReceiver
     }
   }
   
-  public static void as(Context paramContext)
+  public static void ap(Context paramContext)
   {
-    u.w("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "stop awaker");
+    v.w("MicroMsg.AlarmReceiver", "stop awaker");
     AlarmManager localAlarmManager = (AlarmManager)paramContext.getSystemService("alarm");
     if (localAlarmManager == null) {
-      u.e("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "keep awaker failed, null am");
+      v.e("MicroMsg.AlarmReceiver", "keep awaker failed, null am");
     }
     do
     {
@@ -93,15 +90,15 @@ public class MMReceivers$AlarmReceiver
     {
       return;
       boolean bool = paramIntent.getBooleanExtra("MMBoot_Bump", false);
-      u.i("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "[ALARM NOTIFICATION] bump:" + bool);
+      v.i("MicroMsg.AlarmReceiver", "[ALARM NOTIFICATION] bump:" + bool);
       if (bool)
       {
-        ap(paramContext);
+        am(paramContext);
         return;
       }
-    } while (b.q(paramContext, "alarm"));
-    as(paramContext);
-    u.appenderFlush();
+    } while (b.r(paramContext, "alarm"));
+    ap(paramContext);
+    v.appenderFlush();
   }
 }
 

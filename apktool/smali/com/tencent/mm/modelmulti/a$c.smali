@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract AM()Ljava/lang/String;
+.method public abstract AY()Ljava/lang/String;
 .end method

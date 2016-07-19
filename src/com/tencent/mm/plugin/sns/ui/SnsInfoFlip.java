@@ -1,14 +1,17 @@
 package com.tencent.mm.plugin.sns.ui;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory.Options;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -21,82 +24,91 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.tencent.mm.g.e;
+import com.tencent.mm.memory.n;
 import com.tencent.mm.modelsfs.FileOp;
 import com.tencent.mm.plugin.sight.decode.a.a;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.ai;
-import com.tencent.mm.plugin.sns.d.am;
-import com.tencent.mm.plugin.sns.d.g;
-import com.tencent.mm.plugin.sns.d.g.9;
-import com.tencent.mm.plugin.sns.h.k;
-import com.tencent.mm.plugin.sns.h.l;
+import com.tencent.mm.plugin.sns.data.i;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.ah;
+import com.tencent.mm.plugin.sns.e.al;
+import com.tencent.mm.plugin.sns.e.g.11;
+import com.tencent.mm.plugin.sns.i.k;
+import com.tencent.mm.plugin.sns.i.l;
 import com.tencent.mm.pluginsdk.ui.tools.m;
-import com.tencent.mm.protocal.b.add;
-import com.tencent.mm.protocal.b.adf;
-import com.tencent.mm.protocal.b.atp;
-import com.tencent.mm.protocal.b.iv;
+import com.tencent.mm.protocal.b.adw;
+import com.tencent.mm.protocal.b.ady;
+import com.tencent.mm.protocal.b.auf;
+import com.tencent.mm.protocal.b.je;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.sdk.platformtools.ah;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.sdk.platformtools.d;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
-import com.tencent.mm.storage.i.a;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.z;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.MMPageControlView;
 import com.tencent.mm.ui.base.MultiTouchImageView;
 import com.tencent.mm.ui.tools.MMGestureGallery;
 import com.tencent.mm.ui.tools.MMGestureGallery.d;
 import com.tencent.mm.ui.tools.MMGestureGallery.e;
+import com.tencent.mm.ui.tools.h;
+import com.tencent.mm.ui.tools.h.b;
 import com.tencent.mm.ui.widget.MMPinProgressBtn;
 import java.lang.ref.WeakReference;
-import java.text.SimpleDateFormat;
 import java.util.Collection;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 public class SnsInfoFlip
   extends FlipView
 {
+  private static int bqm = 0;
+  private static int bqn = 0;
+  List<com.tencent.mm.plugin.sns.g.b> clW;
   private Context context;
-  List cqJ;
-  private i.a gHB;
-  boolean gHq = false;
-  private com.tencent.mm.sdk.platformtools.aa handler = new com.tencent.mm.sdk.platformtools.aa();
-  private boolean hbM = false;
-  private boolean heA = true;
-  private boolean heB = true;
-  private float heC = 1.0F;
-  MMPageControlView heD;
-  private Runnable heE = null;
-  private String heF = "";
-  private int heG = -1;
-  private boolean heH = false;
-  long heI = 0L;
-  private HashSet heJ = new HashSet();
-  private c heK;
-  private HashMap heL = new HashMap();
-  int heM = -1;
-  private HashSet heN = new HashSet();
-  public int heO = 0;
-  public int heP = 0;
-  private HashMap heQ = new HashMap();
-  b hep;
-  Gallery heq;
-  private boolean her = true;
-  HashMap hes = new HashMap();
-  HashMap het = new HashMap();
-  HashMap heu = new HashMap();
-  private boolean hev = false;
-  private boolean hew = false;
-  private boolean hex = false;
-  private boolean hey = false;
-  private boolean hez = false;
+  z gOG = z.kFU;
+  boolean gOv = false;
+  private ac handler = new ac();
+  boolean hqC = false;
+  private h hqH;
+  private boolean htA = false;
+  c htB;
+  private HashMap<String, k> htC = new HashMap();
+  int htD = -1;
+  HashSet<String> htE = new HashSet();
+  public int htF = 0;
+  public int htG = 0;
+  private HashMap<String, a> htH = new HashMap();
+  b htb;
+  Gallery htc;
+  private boolean htd = true;
+  HashMap<Integer, Integer> hte = new HashMap();
+  HashMap<Integer, Long> htf = new HashMap();
+  HashMap<Integer, Long> htg = new HashMap();
+  boolean hth = false;
+  boolean hti = false;
+  boolean htj = false;
+  boolean htk = false;
+  boolean htl = false;
+  private boolean htm = true;
+  private boolean htn = true;
+  private float hto = 1.0F;
+  MMPageControlView htp;
+  Runnable htq = null;
+  private String htr = "";
+  private int hts = -1;
+  int htt = -1;
+  private boolean htu = false;
+  long htv = 0L;
+  private HashSet<String> htw = new HashSet();
+  private Map<String, Boolean> htx;
+  private int hty = 0;
+  private int htz = 0;
   
   public SnsInfoFlip(Context paramContext)
   {
@@ -110,55 +122,48 @@ public class SnsInfoFlip
     init(paramContext);
   }
   
-  private void a(add paramadd, int paramInt, String paramString)
+  private void a(adw paramadw, int paramInt, String paramString)
   {
-    if ((heq == null) || (!(heq instanceof MMGestureGallery))) {}
-    label107:
-    label198:
-    label505:
-    label588:
-    label653:
-    label1077:
-    label1083:
-    label1089:
-    label1095:
-    label1145:
-    label1146:
-    for (;;)
+    long l2 = 0L;
+    String str1;
+    int i;
+    label116:
+    float f1;
+    if ((htc == null) || (!(htc instanceof MMGestureGallery)))
     {
-      if (heK != null) {
-        heK.mc(paramInt);
+      if (htB != null) {
+        htB.nu(paramInt);
       }
-      if (heG == -1) {
-        heG = paramInt;
+      if (hts == -1) {
+        hts = paramInt;
       }
-      String str = iXW;
-      int i;
-      float f1;
-      float f2;
-      Object localObject1;
-      if (ay.kz(paramString))
+      htt = 1;
+      str1 = jvB;
+      if (be.kf(paramString))
       {
-        i = hep.getCount();
-        paramadd = paramInt + 1 + " / " + i;
-        gXN.by(paramadd, null);
-        return;
-        f1 = 0.0F;
-        f2 = 0.0F;
-        if (jzw != null)
+        i = htb.getCount();
+        paramadw = paramInt + 1 + " / " + i;
+        hkZ.bJ(paramadw, null);
+      }
+    }
+    else
+    {
+      if (jYj == null) {
+        break label1156;
+      }
+      f1 = jYj.jYM;
+    }
+    for (float f2 = jYj.jYL;; f2 = 0.0F)
+    {
+      Object localObject1;
+      if ((f1 <= 0.0F) || (f2 <= 0.0F)) {
+        if (jvB.startsWith("Locall_path"))
         {
-          f1 = jzw.jzZ;
-          f2 = jzw.jzY;
-        }
-        if ((f1 > 0.0F) && (f2 > 0.0F)) {
-          break label1145;
-        }
-        if (iXW.startsWith("Locall_path"))
-        {
-          localObject1 = am.bp(ad.ayV(), iXW) + com.tencent.mm.plugin.sns.data.h.l(paramadd);
-          localObject1 = d.CB((String)localObject1);
+          localObject1 = al.bx(ad.aBw(), jvB) + i.l(paramadw);
+          label201:
+          localObject1 = d.EO((String)localObject1);
           if (localObject1 == null) {
-            continue;
+            break;
           }
           f1 = outHeight;
           f2 = outWidth;
@@ -167,89 +172,89 @@ public class SnsInfoFlip
       for (;;)
       {
         if ((f1 <= 0.0F) || (f2 <= 0.0F)) {
-          break label1146;
+          break label1154;
         }
-        localObject1 = (MMGestureGallery)heq;
-        if ((hez) && (f2 * 1.0D > 2.0D * f1))
+        localObject1 = (MMGestureGallery)htc;
+        if ((htl) && (f2 * 1.0D > f1 * 2.0D))
         {
-          u.d("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "set on fling true");
-          lwC = true;
+          v.d("MicroMsg.SnsInfoFlip", "set on fling true");
+          lXo = true;
           break;
-          localObject1 = am.bp(ad.ayV(), iXW) + com.tencent.mm.plugin.sns.data.h.b(paramadd);
-          break label198;
+          localObject1 = al.bx(ad.aBw(), jvB) + i.b(paramadw);
+          break label201;
         }
-        u.d("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "set on fling false");
-        lwC = false;
+        v.d("MicroMsg.SnsInfoFlip", "set on fling false");
+        lXo = false;
         break;
-        Object localObject2 = (k)heL.get(paramString);
+        Object localObject2 = (k)htC.get(paramString);
         localObject1 = localObject2;
         if (localObject2 == null)
         {
-          localObject1 = ad.azi().vo(paramString);
-          heL.put(paramString, localObject1);
+          localObject1 = ad.aBI().wA(paramString);
+          htC.put(paramString, localObject1);
         }
         if (localObject1 == null) {
-          break label107;
+          break label116;
         }
+        label508:
         long l1;
-        long l2;
-        if (dzC == 2)
+        if (Type == 2)
         {
-          if ((heq instanceof MMGestureGallery)) {
-            ((MMGestureGallery)heq).setLoadQuit(false);
+          if ((htc instanceof MMGestureGallery)) {
+            htc).lXn = false;
           }
-          ad.ZP().post(new Runnable()
+          ad.acj().post(new Runnable()
           {
             public final void run()
             {
-              SnsInfoFlip.d(SnsInfoFlip.this).fd(true);
+              SnsInfoFlip.d(SnsInfoFlip.this).fm(true);
             }
           });
-          u.d("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "onItemSelected  " + paramInt + " localId " + paramString);
-          if (heM != paramInt)
+          v.d("MicroMsg.SnsInfoFlip", "onItemSelected  " + paramInt + " localId " + paramString);
+          if (htD != paramInt)
           {
-            if (!hes.containsKey(Integer.valueOf(paramInt))) {
-              break label1077;
+            if (!hte.containsKey(Integer.valueOf(paramInt))) {
+              break label1091;
             }
-            i = ((Integer)hes.get(Integer.valueOf(paramInt))).intValue();
-            hes.put(Integer.valueOf(paramInt), Integer.valueOf(i + 1));
-            het.put(Integer.valueOf(paramInt), Long.valueOf(ay.FT()));
-            if (heM >= 0)
+            i = ((Integer)hte.get(Integer.valueOf(paramInt))).intValue();
+            hte.put(Integer.valueOf(paramInt), Integer.valueOf(i + 1));
+            htf.put(Integer.valueOf(paramInt), Long.valueOf(be.Gq()));
+            if (htD >= 0)
             {
-              if (!het.containsKey(Integer.valueOf(heM))) {
-                break label1083;
+              if (!htf.containsKey(Integer.valueOf(htD))) {
+                break label1097;
               }
-              l1 = ((Long)het.get(Integer.valueOf(heM))).longValue();
+              l1 = ((Long)htf.get(Integer.valueOf(htD))).longValue();
+              label591:
               if (l1 > 0L)
               {
-                het.put(Integer.valueOf(heM), Long.valueOf(0L));
-                if (!heu.containsKey(Integer.valueOf(heM))) {
-                  break label1089;
+                htf.put(Integer.valueOf(htD), Long.valueOf(0L));
+                if (htg.containsKey(Integer.valueOf(htD))) {
+                  l2 = ((Long)htg.get(Integer.valueOf(htD))).longValue();
                 }
-                l2 = ((Long)heu.get(Integer.valueOf(heM))).longValue();
-                l1 = ay.ao(l1);
+                l1 = be.av(l1);
                 l2 += l1;
-                heu.put(Integer.valueOf(heM), Long.valueOf(l2));
-                u.i("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "lastSelectPosition " + heM + " curtime " + l2 + " passtime " + l1 / 1000.0D);
+                htg.put(Integer.valueOf(htD), Long.valueOf(l2));
+                v.i("MicroMsg.SnsInfoFlip", "lastSelectPosition " + htD + " curtime " + l2 + " passtime " + l1 / 1000.0D);
               }
             }
-            if ((hbM) && (hep != null))
+            if ((hqC) && (htb != null))
             {
-              paramadd = (com.tencent.mm.plugin.sns.f.b)hep.getItem(heM);
-              if (paramadd != null)
+              paramadw = (com.tencent.mm.plugin.sns.g.b)htb.getItem(htD);
+              if (paramadw != null)
               {
-                paramadd = aHW.iXW;
-                u.d("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "recordMediaScollOver, bigPicId:%s", new Object[] { paramadd });
-                if (heQ.containsKey(paramadd))
+                paramadw = aus.jvB;
+                v.d("MicroMsg.SnsInfoFlip", "recordMediaScollOver, bigPicId:%s", new Object[] { paramadw });
+                if (htH.containsKey(paramadw))
                 {
-                  paramadd = (a)heQ.get(paramadd);
-                  networkType = getReportNetworkType();
-                  if (heV == -1L) {
-                    break label1095;
+                  paramadw = (a)htH.get(paramadw);
+                  networkType = aEX();
+                  if (htM == -1L) {
+                    break label1103;
                   }
-                  heT = 1;
-                  gPU = (heV - heU);
-                  u.d("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "recordMediaScollOver, load success, costTime:%d", new Object[] { Long.valueOf(gPU) });
+                  htK = 1;
+                  gXT = (htM - htL);
+                  v.d("MicroMsg.SnsInfoFlip", "recordMediaScollOver, load success, costTime:%d", new Object[] { Long.valueOf(gXT) });
                 }
               }
             }
@@ -257,131 +262,137 @@ public class SnsInfoFlip
         }
         for (;;)
         {
-          heM = paramInt;
-          if (gXM != null) {
-            gXM.vN(paramString);
+          htD = paramInt;
+          if (hkY != null) {
+            hkY.xa(paramString);
           }
           i = field_createTime;
-          atp localatp = ((k)localObject1).azR();
-          localObject2 = ao.i(context, i * 1000L);
+          localObject2 = ((k)localObject1).aCD();
+          String str2 = at.i(context, i * 1000L);
           localObject1 = null;
-          paramadd = (add)localObject1;
-          if (localatp != null)
+          paramadw = (adw)localObject1;
+          if (localObject2 != null)
           {
-            paramadd = (add)localObject1;
-            if (jMx != null)
+            paramadw = (adw)localObject1;
+            if (kli != null)
             {
-              paramadd = (add)localObject1;
-              if (jMx.jhw.size() > 1)
+              paramadw = (adw)localObject1;
+              if (kli.jFv.size() > 1)
               {
-                i = jMx.jhw.size();
-                paramadd = c(str, localatp) + " / " + i;
+                i = kli.jFv.size();
+                paramadw = c(str1, (auf)localObject2) + " / " + i;
+                htt = c(str1, (auf)localObject2);
               }
             }
           }
-          gXN.by((String)localObject2, paramadd);
-          gXN.ao(paramString, paramInt);
+          hkZ.bJ(str2, paramadw);
+          hkZ.aq(paramString, paramInt);
           return;
-          if ((heq instanceof MMGestureGallery)) {
-            ((MMGestureGallery)heq).setLoadQuit(true);
+          if ((htc instanceof MMGestureGallery)) {
+            htc).lXn = true;
           }
-          ad.ZP().post(new Runnable()
+          ad.acj().post(new Runnable()
           {
             public final void run()
             {
-              SnsInfoFlip.d(SnsInfoFlip.this).fd(false);
+              SnsInfoFlip.d(SnsInfoFlip.this).fm(false);
             }
           });
           break;
+          label1091:
           i = 0;
-          break label505;
+          break label508;
+          label1097:
           l1 = 0L;
-          break label588;
-          l2 = 0L;
-          break label653;
-          heT = 2;
-          heV = System.currentTimeMillis();
-          gPU = (heV - heU);
-          u.d("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "recordMediaScollOver, load failed, costTime:%d", new Object[] { Long.valueOf(gPU) });
+          break label591;
+          label1103:
+          htK = 2;
+          htM = System.currentTimeMillis();
+          gXT = (htM - htL);
+          v.d("MicroMsg.SnsInfoFlip", "recordMediaScollOver, load failed, costTime:%d", new Object[] { Long.valueOf(gXT) });
         }
       }
+      label1154:
+      break;
+      label1156:
+      f1 = 0.0F;
     }
   }
   
-  private void aBS()
+  private void aES()
   {
-    if ((heq.getSelectedItem() == null) || (hep == null)) {
+    if ((htc.getSelectedItem() == null) || (htb == null)) {
       return;
     }
-    int i = heq.getSelectedItemPosition();
-    if ((hev) && (hep.getCount() > 1))
+    int i = htc.getSelectedItemPosition();
+    if ((hth) && (htb.getCount() > 1))
     {
-      heD.setVisibility(0);
-      heD.setPage(i);
+      htp.setVisibility(0);
+      htp.sE(i);
     }
-    add localadd = heq.getSelectedItem()).aHW;
-    heN.add(iXW);
-    String str1 = heq.getSelectedItem()).gSz;
-    String str2 = iXW;
-    if ((ay.kz(heF)) || (!heF.equals(str2))) {
-      heF = "";
+    adw localadw = htc.getSelectedItem()).aus;
+    htE.add(jvB);
+    String str1 = htc.getSelectedItem()).haC;
+    String str2 = jvB;
+    if ((be.kf(htr)) || (!htr.equals(str2))) {
+      htr = "";
     }
-    a(localadd, i, str1);
+    a(localadw, i, str1);
   }
   
-  private static int c(String paramString, atp paramatp)
+  private static int aEX()
   {
-    paramatp = jMx.jhw.iterator();
+    Context localContext = com.tencent.mm.sdk.platformtools.aa.getContext();
+    if (ak.dy(localContext)) {
+      return 1;
+    }
+    if (ak.dB(localContext)) {
+      return 2;
+    }
+    if (ak.dz(localContext)) {
+      return 3;
+    }
+    if (ak.dC(localContext)) {
+      return 4;
+    }
+    return 0;
+  }
+  
+  private static int c(String paramString, auf paramauf)
+  {
+    paramauf = kli.jFv.iterator();
     int i = 0;
-    while (paramatp.hasNext())
+    while (paramauf.hasNext())
     {
-      add localadd = (add)paramatp.next();
+      adw localadw = (adw)paramauf.next();
       int j = i + 1;
       i = j;
-      if (paramString.equals(iXW)) {
+      if (paramString.equals(jvB)) {
         return j;
       }
     }
     return 0;
   }
   
-  private int getReportNetworkType()
-  {
-    Context localContext = y.getContext();
-    if (ah.dx(localContext)) {
-      return 1;
-    }
-    if (ah.dA(localContext)) {
-      return 2;
-    }
-    if (ah.dy(localContext)) {
-      return 3;
-    }
-    if (ah.dB(localContext)) {
-      return 4;
-    }
-    return 0;
-  }
-  
   private void init(final Context paramContext)
   {
-    heI = System.currentTimeMillis();
+    htv = System.currentTimeMillis();
     context = paramContext;
-    View localView = inflate(paramContext, 2131362899, this);
-    if (com.tencent.mm.ui.base.f.aDK()) {
-      localView.findViewById(2131168725).setVisibility(0);
+    View localView = inflate(paramContext, 2130904436, this);
+    if (com.tencent.mm.ui.base.f.aHm()) {
+      localView.findViewById(2131759161).setVisibility(0);
     }
-    for (heq = ((Gallery)localView.findViewById(2131168725));; heq = ((Gallery)localView.findViewById(2131168724)))
+    for (htc = ((Gallery)localView.findViewById(2131759161));; htc = ((Gallery)localView.findViewById(2131759160)))
     {
-      if ((heq instanceof MMGestureGallery))
+      if ((htc instanceof MMGestureGallery))
       {
-        ((MMGestureGallery)heq).setSingleClickOverListener(new MMGestureGallery.e()
+        htc).lXk = new MMGestureGallery.e()
         {
-          public final void aap()
+          public final void YB()
           {
             if ((paramContext instanceof SnsBrowseUI))
             {
-              ((SnsBrowseUI)paramContext).aBF();
+              ((SnsBrowseUI)paramContext).aEu();
               return;
             }
             if (SnsInfoFlip.a(SnsInfoFlip.this))
@@ -393,151 +404,154 @@ public class SnsInfoFlip
             {
               public final void run()
               {
-                if ((gXN != null) && (SnsInfoFlip.b(SnsInfoFlip.this))) {
-                  gXN.Kk();
+                if ((hkZ != null) && (SnsInfoFlip.b(SnsInfoFlip.this))) {
+                  hkZ.KU();
                 }
               }
             });
           }
-        });
-        ((MMGestureGallery)heq).setScrollLeftRightListener(new MMGestureGallery.d()
+        };
+        htc).lXm = new MMGestureGallery.d()
         {
-          public final void aBX()
+          public final void aFa()
           {
-            if (gXN != null) {
-              gXN.aBa();
+            if (hkZ != null) {
+              hkZ.aDV();
             }
           }
-        });
+        };
       }
-      heD = ((MMPageControlView)findViewById(2131168726));
-      heD.setIndicatorLayoutRes(2131362886);
+      htp = ((MMPageControlView)findViewById(2131759162));
+      htp.leC = 2130904504;
+      htx = new HashMap();
       return;
-      localView.findViewById(2131168724).setVisibility(0);
+      localView.findViewById(2131759160).setVisibility(0);
     }
   }
   
-  public final void R(String paramString, boolean paramBoolean)
+  public final void X(String paramString, boolean paramBoolean)
   {
+    Object localObject;
     if (!paramBoolean)
     {
-      add localadd = heq.getSelectedItem()).aHW;
-      if ((localadd != null) && (iXW != null) && (iXW.equals(paramString)))
+      localObject = htc.getSelectedItem()).aus;
+      if ((localObject != null) && (jvB != null) && (jvB.equals(paramString)))
       {
-        Toast.makeText(context, context.getString(2131433020), 0).show();
-        heF = paramString;
+        Toast.makeText(context, context.getString(2131235410), 0).show();
+        htr = paramString;
       }
     }
-    heP += 1;
-    if (hbM)
+    htG += 1;
+    if (hqC)
     {
-      u.d("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "recordLoadEnd, bigPicId:%s, suceess:%b", new Object[] { paramString, Boolean.valueOf(paramBoolean) });
-      if ((paramBoolean) && (heQ.containsKey(paramString)))
+      v.d("MicroMsg.SnsInfoFlip", "recordLoadEnd, bigPicId:%s, suceess:%b", new Object[] { paramString, Boolean.valueOf(paramBoolean) });
+      if ((paramBoolean) && (htH.containsKey(paramString)))
       {
-        paramString = (a)heQ.get(paramString);
-        heV = System.currentTimeMillis();
-        networkType = getReportNetworkType();
-        u.d("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "recordLoadEnd, update map");
+        localObject = (a)htH.get(paramString);
+        htM = System.currentTimeMillis();
+        networkType = aEX();
+        v.d("MicroMsg.SnsInfoFlip", "recordLoadEnd, update map");
+        htx.put(paramString, Boolean.valueOf(true));
       }
     }
-    if (hep != null) {
-      hep.notifyDataSetChanged();
+    if (htb != null) {
+      htb.notifyDataSetChanged();
     }
   }
   
-  public final void S(String paramString, boolean paramBoolean)
+  public final void Y(String paramString, boolean paramBoolean)
   {
-    u.i("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "onSightFinish " + paramString + " " + paramBoolean);
+    v.i("MicroMsg.SnsInfoFlip", "onSightFinish " + paramString + " " + paramBoolean);
     if (!paramBoolean)
     {
-      add localadd = heq.getSelectedItem()).aHW;
-      if ((localadd != null) && (iXW != null) && (iXW.equals(paramString)))
+      adw localadw = htc.getSelectedItem()).aus;
+      if ((localadw != null) && (jvB != null) && (jvB.equals(paramString)))
       {
-        Toast.makeText(context, context.getString(2131433021), 0).show();
-        heF = paramString;
+        Toast.makeText(context, context.getString(2131235411), 0).show();
+        htr = paramString;
       }
     }
-    if (hep != null) {
-      hep.notifyDataSetChanged();
+    if (htb != null) {
+      htb.notifyDataSetChanged();
     }
   }
   
-  public final void a(List paramList, String paramString, int paramInt, q paramq, o.a parama)
+  public final void a(List<com.tencent.mm.plugin.sns.g.b> paramList, String paramString, int paramInt, s params, q.a parama)
   {
-    ad.aze().a(this);
-    cqJ = paramList;
+    ad.aBE().a(this);
+    clW = paramList;
     boolean bool;
-    if (cqJ.size() > 1)
+    if (clW.size() > 1)
     {
       bool = true;
-      heH = bool;
-      ai.uI(paramString);
-      gXM = paramq;
-      gXN = parama;
-      hep = new b(context);
-      heq.setAdapter(hep);
-      if ((paramInt >= 0) && (paramInt < cqJ.size()))
+      htu = bool;
+      ah.vO(paramString);
+      hkY = params;
+      hkZ = parama;
+      htb = new b(context);
+      htc.setAdapter(htb);
+      if ((paramInt >= 0) && (paramInt < clW.size()))
       {
-        heq.setSelection(paramInt);
-        if (heB)
+        htc.setSelection(paramInt);
+        if (htn)
         {
-          heB = false;
-          paramList = cqJ.get(paramInt)).aHW;
-          if ((paramList == null) || (jzw == null) || (jzw.jzZ <= 0.0F)) {
+          htn = false;
+          paramList = clW.get(paramInt)).aus;
+          if ((paramList == null) || (jYj == null) || (jYj.jYM <= 0.0F)) {
             break label267;
           }
         }
       }
     }
     label267:
-    for (heC = (jzw.jzY / jzw.jzZ);; heC = 1.0F)
+    for (hto = (jYj.jYL / jYj.jYM);; hto = 1.0F)
     {
-      heq.setFadingEdgeLength(0);
-      heq.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+      htc.setFadingEdgeLength(0);
+      htc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
       {
-        public final void onItemSelected(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+        public final void onItemSelected(AdapterView<?> paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
         {
           if (SnsInfoFlip.d(SnsInfoFlip.this) != null)
           {
             if ((SnsInfoFlip.e(SnsInfoFlip.this)) && (SnsInfoFlip.d(SnsInfoFlip.this).getCount() > 1))
             {
               SnsInfoFlip.f(SnsInfoFlip.this).setVisibility(0);
-              SnsInfoFlip.f(SnsInfoFlip.this).setPage(paramAnonymousInt);
+              SnsInfoFlip.f(SnsInfoFlip.this).sE(paramAnonymousInt);
             }
-            paramAnonymousAdapterView = dgetItemaHW;
-            String str = dgetItemgSz;
+            paramAnonymousAdapterView = dgetItemaus;
+            String str = dgetItemhaC;
             SnsInfoFlip.a(SnsInfoFlip.this, paramAnonymousAdapterView, paramAnonymousInt, str);
             if ((paramAnonymousView instanceof MultiTouchImageView)) {
-              ((MultiTouchImageView)paramAnonymousView).bdf();
+              ((MultiTouchImageView)paramAnonymousView).biI();
             }
           }
         }
         
-        public final void onNothingSelected(AdapterView paramAnonymousAdapterView) {}
+        public final void onNothingSelected(AdapterView<?> paramAnonymousAdapterView) {}
       });
-      if (her) {
-        heq.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener()
+      if (htd) {
+        htc.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener()
         {
-          public final boolean onItemLongClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+          public final boolean onItemLongClick(AdapterView<?> paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
           {
             if (!SnsInfoFlip.g(SnsInfoFlip.this)) {
               return true;
             }
-            paramAnonymousAdapterView = dgetItemgSz;
-            if (ay.kz(paramAnonymousAdapterView)) {
+            paramAnonymousAdapterView = dgetItemhaC;
+            if (be.kf(paramAnonymousAdapterView)) {
               return false;
             }
-            paramAnonymousView = dgetItemaHW.iXW;
-            String str = am.bp(ad.ayV(), paramAnonymousView) + com.tencent.mm.plugin.sns.data.h.k(dgetItemaHW);
+            paramAnonymousView = dgetItemaus.jvB;
+            String str = al.bx(ad.aBw(), paramAnonymousView) + i.k(dgetItemaus);
             c(str, paramAnonymousAdapterView, paramAnonymousView, true);
             return true;
           }
         });
       }
-      if ((hev) && (hep.getCount() > 1))
+      if ((hth) && (htb.getCount() > 1))
       {
-        heD.setVisibility(0);
-        heD.bM(hep.getCount(), paramInt);
+        htp.setVisibility(0);
+        htp.bS(htb.getCount(), paramInt);
       }
       return;
       bool = false;
@@ -545,97 +559,84 @@ public class SnsInfoFlip
     }
   }
   
-  public final void aBT()
+  public final long aDR()
   {
-    if (hep != null)
-    {
-      u.d("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "onRefresh ");
-      hep.notifyDataSetChanged();
-      aBS();
+    Object localObject = (com.tencent.mm.plugin.sns.g.b)htc.getSelectedItem();
+    if (localObject == null) {
+      localObject = "";
     }
-  }
-  
-  public final void aBU()
-  {
-    ad.aze().b(this);
-    hep.fd(true);
-  }
-  
-  public final int aBV()
-  {
-    if (heq == null) {
-      return -1;
-    }
-    int i = heq.getSelectedItemPosition();
-    cqJ.remove(i);
-    hep.notifyDataSetChanged();
-    aBS();
-    return hep.getCount();
-  }
-  
-  public final void aBW()
-  {
-    Iterator localIterator = heQ.values().iterator();
-    while (localIterator.hasNext())
+    while (!be.kf((String)localObject))
     {
-      a locala = (a)localIterator.next();
-      if (heT != -1)
+      localObject = ad.aBI().wA((String)localObject);
+      if (localObject == null)
       {
-        com.tencent.mm.plugin.report.service.h.fUJ.g(11601, new Object[] { Integer.valueOf(gPV), Integer.valueOf(heT), Long.valueOf(gPU), Integer.valueOf(networkType) });
-        u.d("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "report big pic load, picNum:%d, loadResult:%d, loadCostTime:%d, networkType:%d", new Object[] { Integer.valueOf(gPV), Integer.valueOf(heT), Long.valueOf(gPU), Integer.valueOf(networkType) });
+        return 0L;
+        localObject = haC;
       }
-      else if (heU != -1L)
+      else
       {
-        if (heV != -1L) {
-          heT = 1;
-        }
-        for (;;)
-        {
-          gPU = (heV - heU);
-          com.tencent.mm.plugin.report.service.h.fUJ.g(11601, new Object[] { Integer.valueOf(gPV), Integer.valueOf(heT), Long.valueOf(gPU), Integer.valueOf(networkType) });
-          u.d("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "report big pic load, picNum:%d, loadResult:%d, loadCostTime:%d, networkType:%d", new Object[] { Integer.valueOf(gPV), Integer.valueOf(heT), Long.valueOf(gPU), Integer.valueOf(networkType) });
-          break;
-          heT = 2;
-          heV = System.currentTimeMillis();
-        }
+        return field_snsId;
       }
     }
-    heQ.clear();
+    return 0L;
   }
   
-  public add getCntMedia()
+  public final boolean aDS()
   {
-    if (hep != null)
+    return hqC;
+  }
+  
+  public final adw aDT()
+  {
+    if (htb != null)
     {
-      int i = heq.getSelectedItemPosition();
-      if ((cqJ != null) && (i < cqJ.size())) {
-        return cqJ.get(i)).aHW;
+      int i = htc.getSelectedItemPosition();
+      if ((clW != null) && (i < clW.size())) {
+        return clW.get(i)).aus;
       }
     }
     return null;
   }
   
-  public int getCount()
+  public final com.tencent.mm.plugin.sns.g.b aER()
   {
-    if (hep != null) {
-      return hep.getCount();
+    if (htc == null) {
+      return null;
     }
-    return 0;
+    return (com.tencent.mm.plugin.sns.g.b)htc.getSelectedItem();
   }
   
-  public List getFlipList()
+  public final void aET()
   {
-    return cqJ;
+    if (htb != null)
+    {
+      v.d("MicroMsg.SnsInfoFlip", "onRefresh ");
+      htb.notifyDataSetChanged();
+      aES();
+    }
   }
   
-  public Gallery getGallery()
+  public final void aEU()
   {
-    return heq;
+    ad.aBE().b(this);
+    htb.fm(true);
   }
   
-  public int getNumOfFileExist()
+  public final int aEV()
   {
-    Iterator localIterator = cqJ.iterator();
+    if (htc == null) {
+      return -1;
+    }
+    int i = htc.getSelectedItemPosition();
+    clW.remove(i);
+    htb.notifyDataSetChanged();
+    aES();
+    return htb.getCount();
+  }
+  
+  public final int aEW()
+  {
+    Iterator localIterator = clW.iterator();
     int k = 0;
     int j;
     for (int i = 0;; i = j)
@@ -643,10 +644,10 @@ public class SnsInfoFlip
       j = i;
       if (localIterator.hasNext())
       {
-        com.tencent.mm.plugin.sns.f.b localb = (com.tencent.mm.plugin.sns.f.b)localIterator.next();
-        ad.azg();
+        com.tencent.mm.plugin.sns.g.b localb = (com.tencent.mm.plugin.sns.g.b)localIterator.next();
+        ad.aBG();
         j = i;
-        if (FileOp.ax(g.D(aHW))) {
+        if (FileOp.aB(com.tencent.mm.plugin.sns.e.g.D(aus))) {
           j = i + 1;
         }
         k += 1;
@@ -659,163 +660,82 @@ public class SnsInfoFlip
     }
   }
   
-  public int getPosition()
+  public final void aEY()
   {
+    Iterator localIterator = htH.values().iterator();
+    while (localIterator.hasNext())
+    {
+      a locala = (a)localIterator.next();
+      if (htK != -1)
+      {
+        com.tencent.mm.plugin.report.service.g.gdY.h(11601, new Object[] { Integer.valueOf(gXU), Integer.valueOf(htK), Long.valueOf(gXT), Integer.valueOf(networkType) });
+        v.d("MicroMsg.SnsInfoFlip", "report big pic load, picNum:%d, loadResult:%d, loadCostTime:%d, networkType:%d", new Object[] { Integer.valueOf(gXU), Integer.valueOf(htK), Long.valueOf(gXT), Integer.valueOf(networkType) });
+      }
+      else if (htL != -1L)
+      {
+        if (htM != -1L) {
+          htK = 1;
+        }
+        for (;;)
+        {
+          gXT = (htM - htL);
+          com.tencent.mm.plugin.report.service.g.gdY.h(11601, new Object[] { Integer.valueOf(gXU), Integer.valueOf(htK), Long.valueOf(gXT), Integer.valueOf(networkType) });
+          v.d("MicroMsg.SnsInfoFlip", "report big pic load, picNum:%d, loadResult:%d, loadCostTime:%d, networkType:%d", new Object[] { Integer.valueOf(gXU), Integer.valueOf(htK), Long.valueOf(gXT), Integer.valueOf(networkType) });
+          break;
+          htK = 2;
+          htM = System.currentTimeMillis();
+        }
+      }
+    }
+    htH.clear();
+  }
+  
+  public final int getCount()
+  {
+    if (htb != null) {
+      return htb.getCount();
+    }
     return 0;
   }
   
-  public int getSelectCount()
+  public final int getPosition()
   {
-    return heN.size();
+    return htt;
   }
   
-  public String getSelectId()
+  public final void nq(int paramInt)
   {
-    if (heq == null) {
-      return "";
-    }
-    com.tencent.mm.plugin.sns.f.b localb = (com.tencent.mm.plugin.sns.f.b)heq.getSelectedItem();
-    if (localb == null) {
-      return "";
-    }
-    return gSz;
+    infoType = paramInt;
   }
   
-  public com.tencent.mm.plugin.sns.f.b getSelectItem()
+  protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
-    if (heq == null) {
-      return null;
-    }
-    return (com.tencent.mm.plugin.sns.f.b)heq.getSelectedItem();
+    htA = false;
+    super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
   }
   
-  public String getSelectedMediaId()
+  protected void onMeasure(int paramInt1, int paramInt2)
   {
-    if (heq == null) {
-      return null;
-    }
-    com.tencent.mm.plugin.sns.f.b localb = (com.tencent.mm.plugin.sns.f.b)heq.getSelectedItem();
-    if (localb == null) {
-      return null;
-    }
-    return aHW.iXW;
-  }
-  
-  public long getSnsId()
-  {
-    Object localObject = (com.tencent.mm.plugin.sns.f.b)heq.getSelectedItem();
-    if (localObject == null) {
-      localObject = "";
-    }
-    while (!ay.kz((String)localObject))
-    {
-      localObject = ad.azi().vo((String)localObject);
-      if (localObject == null)
-      {
-        return 0L;
-        localObject = gSz;
-      }
-      else
-      {
-        return field_snsId;
-      }
-    }
-    return 0L;
-  }
-  
-  public float getWidthModHeight()
-  {
-    return heC;
-  }
-  
-  public int gettotalSuccDownload()
-  {
-    return heP;
+    htA = true;
+    super.onMeasure(paramInt1, paramInt2);
   }
   
   protected final void onPause()
   {
     super.onPause();
-    if (hep != null) {
-      hep.fd(true);
+    if (htb != null) {
+      htb.fm(true);
     }
-  }
-  
-  public void setDoubleClick(boolean paramBoolean)
-  {
-    hew = paramBoolean;
-  }
-  
-  public void setEnableHorLongBmpMode(boolean paramBoolean)
-  {
-    hez = paramBoolean;
-  }
-  
-  public void setFromScene(i.a parama)
-  {
-    gHB = parama;
-  }
-  
-  public void setInfoType(int paramInt)
-  {
-    infoType = paramInt;
-  }
-  
-  public void setIsAd(boolean paramBoolean)
-  {
-    gHq = paramBoolean;
-  }
-  
-  public void setIsFromMainTimeline(boolean paramBoolean)
-  {
-    hbM = paramBoolean;
-  }
-  
-  public void setItems(List paramList)
-  {
-    cqJ = paramList;
-  }
-  
-  public void setOnDeleteAllAction(Runnable paramRunnable)
-  {
-    heE = paramRunnable;
-  }
-  
-  public void setOnPageSelectListener(c paramc)
-  {
-    heK = paramc;
-  }
-  
-  public void setOreitaion(boolean paramBoolean) {}
-  
-  public void setShowLongClickMenu(boolean paramBoolean)
-  {
-    her = paramBoolean;
-  }
-  
-  public void setShowPageControl(boolean paramBoolean)
-  {
-    hev = paramBoolean;
-  }
-  
-  public void setShowTitle(boolean paramBoolean)
-  {
-    hey = paramBoolean;
-  }
-  
-  public void setTouchFinish(boolean paramBoolean)
-  {
-    hex = paramBoolean;
   }
   
   final class a
   {
-    long gPU = -1L;
-    int gPV;
-    int heT = -1;
-    long heU = -1L;
-    long heV = -1L;
-    String heW;
+    long gXT = -1L;
+    int gXU;
+    int htK = -1;
+    long htL = -1L;
+    long htM = -1L;
+    String htN;
     int networkType;
     
     a() {}
@@ -824,89 +744,42 @@ public class SnsInfoFlip
   final class b
     extends BaseAdapter
   {
-    private String bCF = "";
+    private String bvP = "";
     private Context context;
-    private int gVE = 0;
-    private boolean heX = false;
-    private boolean heY = true;
-    LinkedList heZ = new LinkedList();
+    private int hja = 0;
+    private boolean htO = false;
+    private boolean htP = true;
+    LinkedList<WeakReference<View>> htQ = new LinkedList();
     
     public b(Context paramContext)
     {
       context = paramContext;
-      heX = com.tencent.mm.ui.base.f.aDK();
-      gVE = SnsInfoFlip.h(SnsInfoFlip.this).size();
-      bCF = com.tencent.mm.g.h.pS().getValue("SnsImgPreLoadingAroundTimeLimit");
-      u.i("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "config val " + bCF);
-      try
-      {
-        this$1 = new SimpleDateFormat("HH:mm").format(new Date());
-        paramContext = split(":");
-        int k = ay.Dr(paramContext[0]) * 60 + ay.Dr(paramContext[1]);
-        int i = k - ((int)com.tencent.mm.plugin.sns.data.h.axD() - 8) * 60;
-        if (i < 0) {
-          i += 1440;
-        }
-        for (;;)
-        {
-          paramContext = bCF.split(";");
-          int j = 0;
-          for (;;)
-          {
-            if (j < paramContext.length)
-            {
-              String[] arrayOfString1 = paramContext[j].split("-");
-              String[] arrayOfString2 = arrayOfString1[0].split(":");
-              int m = ay.Dr(arrayOfString2[0]);
-              m = ay.Dr(arrayOfString2[1]) + m * 60;
-              arrayOfString1 = arrayOfString1[1].split(":");
-              int n = ay.Dr(arrayOfString1[0]);
-              n = ay.Dr(arrayOfString1[1]) + n * 60;
-              u.i("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "i " + j + " start " + m + " " + n);
-              if ((i < n) && (i > m)) {
-                heY = false;
-              }
-            }
-            else
-            {
-              u.i("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "old current " + k + " newcurrent " + i + " " + com.tencent.mm.plugin.sns.data.h.axD() + " " + SnsInfoFlip.this);
-              return;
-              if (i < 1440) {
-                break label428;
-              }
-              i -= 1440;
-              break;
-            }
-            j += 1;
-          }
-        }
-      }
-      catch (Exception this$1)
-      {
-        u.e("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "ImageAdapter :%s", new Object[] { ay.b(SnsInfoFlip.this) });
-        return;
-      }
+      htO = com.tencent.mm.ui.base.f.aHm();
+      hja = SnsInfoFlip.h(SnsInfoFlip.this).size();
+      com.tencent.mm.x.b.yf();
+      htP = com.tencent.mm.x.b.yh();
     }
     
-    private void mb(int paramInt)
+    private void nt(int paramInt)
     {
-      add localadd = hgetaHW;
-      if (dzC != 2) {}
+      adw localadw = hgetaus;
+      z localz = z.a(SnsInfoFlip.i(SnsInfoFlip.this), hgetbJF);
+      if (Type != 2) {}
       boolean bool;
       do
       {
         return;
-        ad.azg();
-        bool = g.a(localadd, SnsInfoFlip.i(SnsInfoFlip.this));
+        ad.aBG();
+        bool = com.tencent.mm.plugin.sns.e.g.a(localadw, localz);
       } while ((!SnsInfoFlip.j(SnsInfoFlip.this)) || (bool));
-      SnsInfoFlip.a(SnsInfoFlip.this, iXW);
+      SnsInfoFlip.a(SnsInfoFlip.this, jvB);
     }
     
-    public final void fd(boolean paramBoolean)
+    public final void fm(boolean paramBoolean)
     {
-      u.i("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "stopOther " + heZ.size() + " " + SnsInfoFlip.m(SnsInfoFlip.this));
+      v.i("MicroMsg.SnsInfoFlip", "stopOther " + htQ.size() + " " + SnsInfoFlip.m(SnsInfoFlip.this));
       Object localObject1 = new LinkedList();
-      Object localObject2 = heZ.iterator();
+      Object localObject2 = htQ.iterator();
       Object localObject3;
       SnsInfoFlip.d locald;
       for (;;)
@@ -920,24 +793,24 @@ public class SnsInfoFlip
             if (locald != null) {
               if (paramBoolean)
               {
-                hfd.stop();
+                htU.stop();
                 if (((View)((WeakReference)localObject3).get()).getParent() == null) {
                   ((LinkedList)localObject1).add(localObject3);
                 }
-                u.i("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "sight stop " + ((View)((WeakReference)localObject3).get()).hashCode() + " p: " + position);
+                v.i("MicroMsg.SnsInfoFlip", "sight stop " + ((View)((WeakReference)localObject3).get()).hashCode() + " p: " + position);
               }
               else if ((((View)((WeakReference)localObject3).get()).getParent() == null) || (position != SnsInfoFlip.m(SnsInfoFlip.this)))
               {
-                hfd.stop();
+                htU.stop();
                 if (((View)((WeakReference)localObject3).get()).getParent() == null) {
                   ((LinkedList)localObject1).add(localObject3);
                 }
-                u.i("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "sight stop " + ((View)((WeakReference)localObject3).get()).hashCode() + " p: " + position);
+                v.i("MicroMsg.SnsInfoFlip", "sight stop " + ((View)((WeakReference)localObject3).get()).hashCode() + " p: " + position);
               }
               else if ((((View)((WeakReference)localObject3).get()).getParent() != null) && (position == SnsInfoFlip.m(SnsInfoFlip.this)))
               {
-                localObject3 = aHM;
-                if (FileOp.ax((String)localObject3)) {
+                localObject3 = auc;
+                if (FileOp.aB((String)localObject3)) {
                   if (!SnsInfoFlip.n(SnsInfoFlip.this).contains(localObject3)) {
                     break;
                   }
@@ -950,10 +823,10 @@ public class SnsInfoFlip
       for (;;)
       {
         return;
-        if ((hfd instanceof a)) {
-          ((a)hfd).eD(false);
+        if ((htU instanceof a)) {
+          ((a)htU).es(false);
         }
-        if (!hfd.start())
+        if (!htU.start())
         {
           SnsInfoFlip.n(SnsInfoFlip.this).add(localObject3);
           break;
@@ -964,7 +837,7 @@ public class SnsInfoFlip
         while (((Iterator)localObject1).hasNext())
         {
           localObject2 = (WeakReference)((Iterator)localObject1).next();
-          heZ.remove(localObject2);
+          htQ.remove(localObject2);
         }
       }
     }
@@ -992,7 +865,7 @@ public class SnsInfoFlip
     
     public final int getItemViewType(int paramInt)
     {
-      if (hgetaHW.dzC == 6) {
+      if (hgetaus.Type == 6) {
         return 0;
       }
       return 1;
@@ -1000,195 +873,207 @@ public class SnsInfoFlip
     
     public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
     {
-      Object localObject2;
+      SnsInfoFlip.d locald;
+      adw localadw;
       int i;
-      label279:
+      label278:
       int j;
-      label291:
-      Object localObject3;
-      Object localObject4;
-      if (hgetaHW.dzC == 6)
+      label321:
+      Object localObject1;
+      Object localObject2;
+      if (hgetaus.Type == 6)
       {
-        u.i("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "fillViewSight " + paramInt);
-        localObject1 = new SnsInfoFlip.d();
+        v.i("MicroMsg.SnsInfoFlip", "fillViewSight " + paramInt);
+        locald = new SnsInfoFlip.d();
         if (paramView == null)
         {
-          paramView = View.inflate(context, 2131362885, null);
-          hfd = m.cU(paramView.getContext());
+          paramView = View.inflate(context, 2130904430, null);
+          htU = m.cS(paramView.getContext());
           paramViewGroup = new RelativeLayout.LayoutParams(-1, -2);
           paramViewGroup.addRule(13);
-          ((ViewGroup)paramView).addView((View)hfd, paramViewGroup);
-          hfh = paramView.findViewById(2131165574);
-          hfh.setVisibility(8);
-          hfg = ((MMPinProgressBtn)paramView.findViewById(2131168597));
-          hfg.setVisibility(8);
-          hfe = ((ImageView)paramView.findViewById(2131168596));
-          hff = ((ImageView)paramView.findViewById(2131168598));
-          paramView.setTag(localObject1);
+          ((ViewGroup)paramView).addView((View)htU, paramViewGroup);
+          htY = paramView.findViewById(2131756840);
+          htY.setVisibility(8);
+          htX = ((MMPinProgressBtn)paramView.findViewById(2131758988));
+          htX.setVisibility(8);
+          htV = ((ImageView)paramView.findViewById(2131758987));
+          htW = ((ImageView)paramView.findViewById(2131758989));
+          paramView.setTag(locald);
           position = paramInt;
-          heZ.add(new WeakReference(paramView));
-          localObject2 = hgetaHW;
-          if ((ay.kz(SnsInfoFlip.k(SnsInfoFlip.this))) || (!SnsInfoFlip.k(SnsInfoFlip.this).equals(iXW))) {
-            break label604;
+          htQ.add(new WeakReference(paramView));
+          localadw = hgetaus;
+          if ((be.kf(SnsInfoFlip.k(SnsInfoFlip.this))) || (!SnsInfoFlip.k(SnsInfoFlip.this).equals(jvB))) {
+            break label625;
           }
           i = 1;
-          paramViewGroup = ad.azg();
+          localz = z.a(SnsInfoFlip.i(SnsInfoFlip.this), hgetbJF);
+          paramViewGroup = ad.aBG();
           if (i != 0) {
-            break label610;
+            break label631;
           }
           j = 1;
-          localObject3 = SnsInfoFlip.i(SnsInfoFlip.this);
-          localObject4 = am.bp(ad.ayV(), iXW);
-          String str = com.tencent.mm.plugin.sns.data.h.i((add)localObject2);
-          if (!FileOp.ax((String)localObject4 + str)) {
-            break label616;
+          localObject1 = al.bx(ad.aBw(), jvB);
+          localObject2 = i.i(localadw);
+          if (!FileOp.aB((String)localObject1 + (String)localObject2)) {
+            break label637;
           }
-          paramViewGroup = (String)localObject4 + str;
-        }
-        for (;;)
-        {
-          ad.azg().U(aAF);
+          paramViewGroup = (String)localObject1 + (String)localObject2;
+          label388:
+          ad.aBG().V(amO);
           paramView.setOnTouchListener(null);
           paramView.setEnabled(false);
           paramView.setClickable(false);
-          ((View)hfd).setOnTouchListener(null);
-          ((View)hfd).setClickable(false);
+          ((View)htU).setOnTouchListener(null);
+          ((View)htU).setClickable(false);
           if ((SnsInfoFlip.l(SnsInfoFlip.this) instanceof MMGestureGallery)) {
-            ((MMGestureGallery)SnsInfoFlip.l(SnsInfoFlip.this)).setLoadQuit(true);
+            llXn = true;
           }
-          aHM = paramViewGroup;
-          if (!FileOp.ax(paramViewGroup)) {
-            break label766;
+          auc = paramViewGroup;
+          if (!FileOp.aB(paramViewGroup)) {
+            break label787;
           }
-          u.i("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "fileop fileexist " + paramViewGroup + " lastSelectPosition: " + SnsInfoFlip.m(SnsInfoFlip.this) + " position " + paramInt);
-          ((View)hfd).setVisibility(0);
-          hfd.setVideoPath(paramViewGroup);
-          hfg.setVisibility(8);
-          hfe.setVisibility(8);
-          u.i("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "current onvertView " + paramView.hashCode());
-          ad.ZP().post(new Runnable()
+          v.i("MicroMsg.SnsInfoFlip", "fileop fileexist " + paramViewGroup + " lastSelectPosition: " + SnsInfoFlip.m(SnsInfoFlip.this) + " position " + paramInt);
+          ((View)htU).setVisibility(0);
+          htU.setVideoPath(paramViewGroup);
+          htX.setVisibility(8);
+          htV.setVisibility(8);
+          v.i("MicroMsg.SnsInfoFlip", "current onvertView " + paramView.hashCode());
+          ad.acj().post(new Runnable()
           {
             public final void run()
             {
-              fd(false);
+              fm(false);
             }
           });
           paramViewGroup = paramView;
-          return paramViewGroup;
-          localObject1 = (SnsInfoFlip.d)paramView.getTag();
-          break;
-          label604:
-          i = 0;
-          break label279;
-          label610:
-          j = 0;
-          break label291;
-          label616:
-          if ((FileOp.ax((String)localObject4 + com.tencent.mm.plugin.sns.data.h.o((add)localObject2))) && (iXW != null) && (iXW.startsWith("Locall_path")))
-          {
-            paramViewGroup = (String)localObject4 + com.tencent.mm.plugin.sns.data.h.o((add)localObject2);
-          }
-          else
-          {
-            u.i("!44@/B4Tb64lLpKfv4J3pSjdmocDFxYkuwbYDgnaIbU7POY=", "push sight loader " + iXW + " url: " + eiq);
-            if (j != 0) {
-              ad.ZP().postDelayed(new g.9(paramViewGroup, (add)localObject2, (i.a)localObject3), 0L);
-            }
-            paramViewGroup = "";
-          }
         }
-        label766:
-        ((View)hfd).setVisibility(0);
-        ((View)hfd).setOnTouchListener(null);
-        ((View)hfd).setClickable(false);
-        hfd.setVideoPath(null);
+      }
+      label625:
+      label631:
+      label637:
+      label787:
+      label1210:
+      do
+      {
+        return paramViewGroup;
+        locald = (SnsInfoFlip.d)paramView.getTag();
+        break;
+        i = 0;
+        break label278;
+        j = 0;
+        break label321;
+        if ((FileOp.aB((String)localObject1 + i.o(localadw))) && (jvB != null) && (jvB.startsWith("Locall_path")))
+        {
+          paramViewGroup = (String)localObject1 + i.o(localadw);
+          break label388;
+        }
+        v.i("MicroMsg.LazyerImageLoader2", "push sight loader " + jvB + " url: " + emu);
+        if (j != 0) {
+          ad.acj().postDelayed(new g.11(paramViewGroup, localadw, localz), 0L);
+        }
+        paramViewGroup = "";
+        break label388;
+        ((View)htU).setVisibility(0);
+        ((View)htU).setOnTouchListener(null);
+        ((View)htU).setClickable(false);
+        htU.setVideoPath(null);
         if (i != 0) {
-          hfg.setVisibility(8);
+          htX.setVisibility(8);
         }
         for (;;)
         {
-          hfe.setVisibility(0);
+          htV.setVisibility(0);
           paramViewGroup = context.getResources().getDisplayMetrics();
           i = Math.min(widthPixels, heightPixels);
           paramInt = i;
           if (i % 32 != 0) {
             paramInt = i - i % 32;
           }
-          paramViewGroup = hfe.getLayoutParams();
+          paramViewGroup = htV.getLayoutParams();
           width = paramInt;
           height = ((int)(paramInt * 1.0D * 240.0D / 320.0D));
-          hfe.setLayoutParams(paramViewGroup);
-          hfd.stop();
-          ad.azg().c((add)localObject2, hfe, 2130969846, context.hashCode(), SnsInfoFlip.i(SnsInfoFlip.this));
+          htV.setLayoutParams(paramViewGroup);
+          htU.stop();
+          ad.aBG().c(localadw, htV, 2130837729, context.hashCode(), localz);
           break;
-          hfg.setVisibility(0);
-          hfg.bjH();
+          htX.setVisibility(0);
+          htX.bpF();
         }
-      }
-      Object localObject1 = hgetaHW;
-      u.d("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "gallery position " + paramInt + " " + gVE + " " + iXW);
-      if ((paramInt != SnsInfoFlip.o(SnsInfoFlip.this)) && ((SnsInfoFlip.l(SnsInfoFlip.this) instanceof MMGestureGallery))) {
-        ((MMGestureGallery)SnsInfoFlip.l(SnsInfoFlip.this)).setLoadQuit(false);
-      }
-      label1187:
-      label1265:
+        localadw = hgetaus;
+        v.d("MicroMsg.SnsInfoFlip", "gallery position " + paramInt + " " + hja + " " + jvB);
+        if ((paramInt != SnsInfoFlip.o(SnsInfoFlip.this)) && ((SnsInfoFlip.l(SnsInfoFlip.this) instanceof MMGestureGallery))) {
+          llXn = false;
+        }
+        if (paramView != null) {
+          break label1938;
+        }
+        locald = new SnsInfoFlip.d();
+        paramView = View.inflate(context, 2130904433, null);
+        htS = paramView.findViewById(2131759147);
+        eup = ((ProgressBar)paramView.findViewById(2131757362));
+        eWV = ((TextView)paramView.findViewById(2131759149));
+        htT = ((FrameLayout)paramView.findViewById(2131759148));
+        amO = ((ImageView)paramView.findViewById(2131755043));
+        paramView.setTag(locald);
+        paramViewGroup = paramView;
+      } while (SnsInfoFlip.p(SnsInfoFlip.this));
+      position = paramInt;
+      z localz = z.a(SnsInfoFlip.i(SnsInfoFlip.this), hgetbJF);
+      paramView.setLayoutParams(new Gallery.LayoutParams(-1, -1));
+      eup.setVisibility(8);
+      eWV.setVisibility(8);
+      htT.setVisibility(0);
+      label1335:
       boolean bool;
-      label1293:
+      label1363:
+      int k;
+      int m;
+      label1554:
       double d2;
       double d4;
-      if (paramView == null)
+      if ((!be.kf(SnsInfoFlip.k(SnsInfoFlip.this))) && (SnsInfoFlip.k(SnsInfoFlip.this).equals(jvB)))
       {
-        paramViewGroup = new SnsInfoFlip.d();
-        paramView = View.inflate(context, 2131362850, null);
-        hfb = paramView.findViewById(2131168592);
-        epr = ((ProgressBar)paramView.findViewById(2131166214));
-        ePc = ((TextView)paramView.findViewById(2131168594));
-        hfc = ((FrameLayout)paramView.findViewById(2131168593));
-        aAF = ((ImageView)paramView.findViewById(2131165228));
-        paramView.setTag(paramViewGroup);
-        position = paramInt;
-        paramView.setLayoutParams(new Gallery.LayoutParams(-1, -1));
-        epr.setVisibility(8);
-        ePc.setVisibility(8);
-        hfc.setVisibility(0);
-        if ((ay.kz(SnsInfoFlip.k(SnsInfoFlip.this))) || (!SnsInfoFlip.k(SnsInfoFlip.this).equals(iXW))) {
-          break label1837;
-        }
         i = 1;
-        localObject2 = ad.azg();
-        localObject3 = aAF;
+        paramViewGroup = ad.aBG();
+        localObject1 = amO;
         j = context.hashCode();
         if (i != 0) {
-          break label1843;
+          break label1956;
         }
         bool = true;
-        localObject3 = ((g)localObject2).a((add)localObject1, (View)localObject3, j, bool, SnsInfoFlip.i(SnsInfoFlip.this));
-        if ((localObject3 == null) && (SnsInfoFlip.j(SnsInfoFlip.this))) {
-          SnsInfoFlip.a(SnsInfoFlip.this, iXW);
+        paramViewGroup = paramViewGroup.a(localadw, (View)localObject1, j, bool, localz);
+        if ((paramViewGroup == null) && (SnsInfoFlip.j(SnsInfoFlip.this))) {
+          SnsInfoFlip.a(SnsInfoFlip.this, jvB);
         }
-        localObject2 = aAF.getLayoutParams();
+        localObject1 = amO.getLayoutParams();
         width = -1;
         height = -1;
-        aAF.setLayoutParams((ViewGroup.LayoutParams)localObject2);
-        if ((localObject3 != null) || (iXW == null) || (iXW.startsWith("pre_temp_extend_pic"))) {
-          break label1955;
+        amO.setLayoutParams((ViewGroup.LayoutParams)localObject1);
+        if ((paramViewGroup != null) || (jvB == null) || (jvB.startsWith("pre_temp_extend_pic"))) {
+          break label2073;
         }
-        localObject3 = aAF.getLayoutParams();
-        if (SnsInfoFlip.p(SnsInfoFlip.this)) {
-          break label1862;
+        localObject2 = amO.getLayoutParams();
+        if (SnsInfoFlip.q(SnsInfoFlip.this)) {
+          break label1980;
         }
         j = BackwardSupportUtil.b.a(context, 160.0F);
-        int k = BackwardSupportUtil.b.a(context, 200.0F);
-        int m = BackwardSupportUtil.b.a(context, 44.0F);
-        localObject4 = ad.azg().t((add)localObject1);
+        k = BackwardSupportUtil.b.a(context, 200.0F);
+        m = BackwardSupportUtil.b.a(context, 44.0F);
+        paramViewGroup = ad.aBG();
+        String str1 = i.aa(1, jvB);
+        String str2 = jvB;
+        paramViewGroup = paramViewGroup.Lr(str1);
+        if (!i.b(paramViewGroup)) {
+          break label1962;
+        }
         height = j;
         width = j;
-        if (localObject4 != null)
+        if (paramViewGroup != null)
         {
-          double d3 = ((Bitmap)localObject4).getWidth();
-          double d1 = ((Bitmap)localObject4).getHeight();
+          double d3 = bitmap.getWidth();
+          double d1 = bitmap.getHeight();
           if ((d3 <= 0.0D) || (d1 <= 0.0D)) {
-            break label1849;
+            break label1967;
           }
           d2 = Math.min(k / d3, k / d1);
           d3 *= d2;
@@ -1205,7 +1090,7 @@ public class SnsInfoFlip
           d4 = d2;
           if (d1 < m)
           {
-            d3 = 1.0D * m / d1;
+            d3 = m * 1.0D / d1;
             d4 = d2 * d3;
             d3 = d1 * d3;
           }
@@ -1220,84 +1105,144 @@ public class SnsInfoFlip
             d2 = k;
             d4 = d1;
           }
-          label1670:
+          label1763:
           height = ((int)d2);
           width = ((int)d4);
         }
-        aAF.setLayoutParams((ViewGroup.LayoutParams)localObject2);
-        epr.setVisibility(0);
-        aAF.setVisibility(0);
-        ad.azg().U(aAF);
-        ad.azg().c((add)localObject1, aAF, 2130969846, context.hashCode(), SnsInfoFlip.i(SnsInfoFlip.this));
-        label1751:
+        amO.setLayoutParams((ViewGroup.LayoutParams)localObject1);
+        eup.setVisibility(0);
+        amO.setVisibility(0);
+        ad.aBG().V(amO);
+        ad.aBG().c(localadw, amO, 2130837729, context.hashCode(), localz);
+        label1844:
+        SnsInfoFlip.nr(width);
+        SnsInfoFlip.ns(height);
         if (i != 0) {
-          epr.setVisibility(8);
+          eup.setVisibility(8);
         }
       }
       for (;;)
       {
         paramViewGroup = paramView;
-        if (!heY) {
+        if (!htP) {
           break;
         }
         paramViewGroup = paramView;
-        if (!com.tencent.mm.network.aa.bg(context)) {
+        if (!com.tencent.mm.network.aa.bd(context)) {
           break;
         }
         if (paramInt - 1 >= 0) {
-          mb(paramInt - 1);
+          nt(paramInt - 1);
         }
         paramViewGroup = paramView;
         if (paramInt + 1 >= SnsInfoFlip.d(SnsInfoFlip.this).getCount()) {
           break;
         }
-        mb(paramInt + 1);
+        nt(paramInt + 1);
         return paramView;
-        paramViewGroup = (SnsInfoFlip.d)paramView.getTag();
-        break label1187;
-        label1837:
+        label1938:
+        locald = (SnsInfoFlip.d)paramView.getTag();
+        break label1210;
         i = 0;
-        break label1265;
-        label1843:
+        break label1335;
+        label1956:
         bool = false;
-        break label1293;
-        label1849:
+        break label1363;
+        label1962:
+        paramViewGroup = null;
+        break label1554;
+        label1967:
         d4 = j;
         d2 = j;
-        break label1670;
-        label1862:
+        break label1763;
+        label1980:
         j = BackwardSupportUtil.b.a(context, 73.0F);
         height = j;
         width = j;
-        aAF.setLayoutParams((ViewGroup.LayoutParams)localObject2);
-        epr.setVisibility(0);
-        aAF.setVisibility(0);
-        ad.azg().U(aAF);
-        ad.azg().b((add)localObject1, aAF, 2130969846, context.hashCode(), SnsInfoFlip.i(SnsInfoFlip.this));
-        break label1751;
-        label1955:
-        if (heX)
+        amO.setLayoutParams((ViewGroup.LayoutParams)localObject1);
+        eup.setVisibility(0);
+        amO.setVisibility(0);
+        ad.aBG().V(amO);
+        ad.aBG().b(localadw, amO, 2130837729, context.hashCode(), localz);
+        break label1844;
+        label2073:
+        if (htO)
         {
-          epr.setVisibility(8);
-          if (localObject3 != null)
+          eup.setVisibility(8);
+          if (paramViewGroup == null) {
+            continue;
+          }
+          v.i("MicroMsg.SnsInfoFlip", "update view ");
+          paramView = new MultiTouchImageView(context, paramViewGroup.getWidth(), paramViewGroup.getHeight());
+          htl = SnsInfoFlip.r(SnsInfoFlip.this);
+          paramView.setLayoutParams(new Gallery.LayoutParams(-1, -1));
+          ad.aBG().V(amO);
+          ad.aBG().a(localadw, paramView, context.hashCode(), localz);
+          paramView.setImageBitmap(paramViewGroup);
+          v.d("MicroMsg.SnsInfoFlip", "dancy mediaId: %s, isbigImgLoaded: %s, view: %s", new Object[] { jvB, SnsInfoFlip.s(SnsInfoFlip.this).get(jvB), Integer.valueOf(paramView.getId()) });
+          paramViewGroup = paramView;
+          if (!be.c((Boolean)SnsInfoFlip.s(SnsInfoFlip.this).get(jvB))) {
+            break;
+          }
+          paramInt = 0;
+          i = 0;
+          if ((context instanceof Activity))
           {
-            u.i("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "update view ");
-            paramView = new MultiTouchImageView(context, ((Bitmap)localObject3).getWidth(), ((Bitmap)localObject3).getHeight());
-            paramView.setEnableHorLongBmpMode(SnsInfoFlip.q(SnsInfoFlip.this));
-            paramView.setLayoutParams(new Gallery.LayoutParams(-1, -1));
-            ad.azg().U(aAF);
-            ad.azg().a((add)localObject1, paramView, context.hashCode(), SnsInfoFlip.i(SnsInfoFlip.this));
-            paramView.setImageBitmap((Bitmap)localObject3);
+            paramInt = ((Activity)context).getWindowManager().getDefaultDisplay().getWidth();
+            i = ((Activity)context).getWindowManager().getDefaultDisplay().getHeight();
+          }
+          j = BackwardSupportUtil.b.a(context, 20.0F);
+          SnsInfoFlip.a(SnsInfoFlip.this, paramInt / 2);
+          SnsInfoFlip.b(SnsInfoFlip.this, (i - j) / 2);
+          m = imageWidth;
+          int n = imageHeight;
+          k = n;
+          j = m;
+          if (paramInt != 0)
+          {
+            k = n;
+            j = m;
+            if (i != 0)
+            {
+              j = (int)(imageHeight / imageWidth * paramInt);
+              k = j;
+              if (j > i) {
+                k = i;
+              }
+              if (!SnsInfoFlip.q(SnsInfoFlip.this)) {
+                break label2621;
+              }
+              if (paramInt >= k) {
+                break label2605;
+              }
+              SnsInfoFlip.ns((int)(k / paramInt * SnsInfoFlip.Qp()));
+            }
+          }
+          label2605:
+          label2621:
+          for (j = paramInt;; j = paramInt)
+          {
+            SnsInfoFlip.a(SnsInfoFlip.this, new h(getContext()));
+            m = SnsInfoFlip.t(SnsInfoFlip.this);
+            paramInt = (int)(i / paramInt * SnsInfoFlip.Qp()) / 2;
+            SnsInfoFlip.v(SnsInfoFlip.this).h(SnsInfoFlip.u(SnsInfoFlip.this) - SnsInfoFlip.Qp() / 2, m - paramInt, SnsInfoFlip.Qp(), SnsInfoFlip.aEZ());
+            SnsInfoFlip.v(SnsInfoFlip.this).cb(j, k);
+            vhix = 150;
+            SnsInfoFlip.v(SnsInfoFlip.this).a(paramView, null, new h.b()
+            {
+              public final void onAnimationEnd() {}
+              
+              public final void onAnimationStart() {}
+            });
+            SnsInfoFlip.s(SnsInfoFlip.this).put(jvB, Boolean.valueOf(false));
             return paramView;
+            SnsInfoFlip.nr((int)(paramInt / k * SnsInfoFlip.aEZ()));
           }
         }
-        else
-        {
-          epr.setVisibility(8);
-          ad.azg().a((add)localObject1, aAF, context.hashCode(), SnsInfoFlip.i(SnsInfoFlip.this));
-          aAF.setImageBitmap((Bitmap)localObject3);
-          aAF.setVisibility(0);
-        }
+        eup.setVisibility(8);
+        ad.aBG().a(localadw, amO, context.hashCode(), localz);
+        amO.setImageBitmap(paramViewGroup);
+        amO.setVisibility(0);
       }
     }
     
@@ -1308,35 +1253,35 @@ public class SnsInfoFlip
     
     public final void notifyDataSetChanged()
     {
-      gVE = SnsInfoFlip.h(SnsInfoFlip.this).size();
-      u.d("!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed", "items.size:" + SnsInfoFlip.h(SnsInfoFlip.this).size());
+      hja = SnsInfoFlip.h(SnsInfoFlip.this).size();
+      v.d("MicroMsg.SnsInfoFlip", "items.size:" + SnsInfoFlip.h(SnsInfoFlip.this).size());
       invalidate();
       requestLayout();
       super.notifyDataSetChanged();
-      if ((SnsInfoFlip.h(SnsInfoFlip.this).size() <= 0) && (SnsInfoFlip.r(SnsInfoFlip.this) != null)) {
-        SnsInfoFlip.r(SnsInfoFlip.this).run();
+      if ((SnsInfoFlip.h(SnsInfoFlip.this).size() <= 0) && (SnsInfoFlip.w(SnsInfoFlip.this) != null)) {
+        SnsInfoFlip.w(SnsInfoFlip.this).run();
       }
     }
   }
   
   public static abstract interface c
   {
-    public abstract void mc(int paramInt);
+    public abstract void nu(int paramInt);
   }
   
   static final class d
   {
-    ImageView aAF;
-    String aHM = "";
-    TextView ePc;
-    ProgressBar epr;
-    View hfb;
-    FrameLayout hfc;
-    com.tencent.mm.pluginsdk.ui.tools.f hfd;
-    ImageView hfe;
-    ImageView hff;
-    MMPinProgressBtn hfg;
-    View hfh;
+    ImageView amO;
+    String auc = "";
+    TextView eWV;
+    ProgressBar eup;
+    View htS;
+    FrameLayout htT;
+    com.tencent.mm.pluginsdk.ui.tools.f htU;
+    ImageView htV;
+    ImageView htW;
+    MMPinProgressBtn htX;
+    View htY;
     int position;
   }
 }

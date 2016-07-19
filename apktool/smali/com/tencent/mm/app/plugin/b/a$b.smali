@@ -13,73 +13,68 @@
     name = "b"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/dm;",
+        ">;"
+    }
+.end annotation
+
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
     .prologue
-    .line 218
-    const/4 v0, 0x0
+    .line 172
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/dm;
 
-    .line 219
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/app/plugin/b/a$b;->kum:I
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 3
 
     .prologue
-    .line 223
-    instance-of v0, p1, Lcom/tencent/mm/d/a/dj;
+    .line 172
+    check-cast p1, Lcom/tencent/mm/e/a/dm;
 
-    if-nez v0, :cond_0
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$ai;->iVC:Lcom/tencent/mm/pluginsdk/i$o$d;
 
-    .line 224
-    const-string/jumbo v0, "!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc="
+    if-eqz v0, :cond_0
 
-    const-string/jumbo v1, "mismatched event"
+    iget-object v0, p1, Lcom/tencent/mm/e/a/dm;->aiM:Lcom/tencent/mm/e/a/dm$b;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->f(Ljava/lang/String;Ljava/lang/String;)V
+    sget-object v1, Lcom/tencent/mm/pluginsdk/i$ai;->iVC:Lcom/tencent/mm/pluginsdk/i$o$d;
 
-    .line 225
-    const/4 v0, 0x0
+    iget-object v2, p1, Lcom/tencent/mm/e/a/dm;->aiL:Lcom/tencent/mm/e/a/dm$a;
 
-    .line 231
-    :goto_0
-    return v0
+    iget-object v2, v2, Lcom/tencent/mm/e/a/dm$a;->aiN:Ljava/lang/String;
 
-    .line 227
-    :cond_0
-    check-cast p1, Lcom/tencent/mm/d/a/dj;
-
-    .line 228
-    sget-object v0, Lcom/tencent/mm/pluginsdk/i$ai;->izg:Lcom/tencent/mm/pluginsdk/i$o$d;
-
-    if-eqz v0, :cond_1
-
-    .line 229
-    iget-object v0, p1, Lcom/tencent/mm/d/a/dj;->awR:Lcom/tencent/mm/d/a/dj$b;
-
-    sget-object v1, Lcom/tencent/mm/pluginsdk/i$ai;->izg:Lcom/tencent/mm/pluginsdk/i$o$d;
-
-    iget-object v2, p1, Lcom/tencent/mm/d/a/dj;->awQ:Lcom/tencent/mm/d/a/dj$a;
-
-    iget-object v2, v2, Lcom/tencent/mm/d/a/dj$a;->awS:Ljava/lang/String;
-
-    invoke-interface {v1, v2}, Lcom/tencent/mm/pluginsdk/i$o$d;->vA(Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-interface {v1, v2}, Lcom/tencent/mm/pluginsdk/i$o$d;->wM(Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/d/a/dj$b;->awP:Landroid/database/Cursor;
+    iput-object v1, v0, Lcom/tencent/mm/e/a/dm$b;->aiE:Landroid/database/Cursor;
 
-    .line 231
-    :cond_1
+    :cond_0
     const/4 v0, 0x1
 
-    goto :goto_0
+    return v0
 .end method

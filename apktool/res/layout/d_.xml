@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/ra" android:background="@color/lf" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:paddingBottom="@dimen/j8" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/rb" android:background="@drawable/ag2" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/ja" android:textColor="@color/g8" android:gravity="center" android:id="@id/rc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hb" />
+                <TextView android:textSize="@dimen/cx" android:textColor="@color/ak" android:gravity="center" android:id="@id/dq" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/cy" android:layout_marginBottom="@dimen/he" />
+                <LinearLayout android:gravity="center" android:id="@id/rd" android:background="@drawable/by" android:visibility="gone" android:layout_width="62.0dip" android:layout_height="62.0dip">
+                    <ImageView android:id="@id/re" android:layout_width="@dimen/k7" android:layout_height="@dimen/k7" android:layout_marginTop="@dimen/hr" android:layout_marginBottom="@dimen/hr" android:src="@drawable/amw" android:scaleType="fitCenter" android:layout_centerHorizontal="true" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:id="@id/rf" android:background="@drawable/dw" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/hr" android:layout_marginRight="@dimen/hr" android:layout_marginBottom="0.0dip" android:layout_alignBottom="@id/rb" android:layerType="software" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/ag0" android:paddingTop="42.0dip" android:paddingBottom="42.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ViewStub android:id="@id/rg" android:layout="@layout/d8" android:inflatedId="@id/rh" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <ViewStub android:id="@id/ri" android:layout="@layout/d7" android:inflatedId="@id/rj" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <ViewStub android:id="@id/rk" android:layout="@layout/d9" android:inflatedId="@id/rl" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/g8" android:gravity="center" android:id="@id/rm" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/i7" />
+        </LinearLayout>
+        <RelativeLayout android:gravity="top" android:layout_gravity="top" android:id="@id/rn" android:focusable="false" android:focusableInTouchMode="true" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="@dimen/hb" android:layout_marginRight="@dimen/hb" android:layout_weight="1.0">
+            <CheckBox android:textSize="@dimen/ja" android:textColor="@color/ow" android:id="@id/ro" android:background="@null" android:paddingTop="@dimen/cp" android:paddingBottom="@dimen/cp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hb" android:button="@drawable/bn" android:drawablePadding="5.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

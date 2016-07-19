@@ -2,7 +2,7 @@ package com.tencent.mm.model;
 
 public abstract interface ab
 {
-  public abstract void fa(String paramString);
+  public abstract void fn(String paramString);
 }
 
 /* Location:

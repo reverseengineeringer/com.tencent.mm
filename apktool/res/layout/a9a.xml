@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SurfaceView android:layout_gravity="center" android:id="@id/c6z" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <include layout="@layout/sight_camera_mask_merge" />
+</merge>

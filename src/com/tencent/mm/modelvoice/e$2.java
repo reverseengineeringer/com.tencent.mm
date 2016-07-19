@@ -1,17 +1,17 @@
 package com.tencent.mm.modelvoice;
 
-import com.tencent.mm.r.d;
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.t.d;
 
 final class e$2
-  implements af.a
+  implements ah.a
 {
   e$2(e parame) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    if (cgJ.a(e.a(cgJ), e.b(cgJ)) == -1) {
-      e.b(cgJ).a(3, -1, "doScene failed", cgJ);
+    if (cbZ.a(e.a(cbZ), e.b(cbZ)) == -1) {
+      e.b(cbZ).onSceneEnd(3, -1, "doScene failed", cbZ);
     }
     return false;
   }

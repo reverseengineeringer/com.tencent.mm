@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">%1$s എന്നതിന് Android Wear അപ്ലിക്കേഷനിലേക്ക് അപ്‌ഡേറ്റ് ആവശ്യമാണ്.</string>
+    <string name="b">നിങ്ങൾ Android Wear അപ്ലിക്കേഷൻ അപ്‌ഡേറ്റുചെയ്യാത്തിടത്തോളം %1$s പ്രവർത്തിക്കില്ല.</string>
+    <string name="c">Android Wear അപ്‌ഡേറ്റുചെയ്യുക</string>
+    <string name="d">%1$s എന്നതിന് നിലവിൽ ലഭ്യമല്ലാത്ത ഒന്നോ അതിൽക്കൂടുതലോ Google Play സേവനങ്ങൾ ആവശ്യമാണ്. സഹായത്തിന് ഡവലപ്പറെ ബന്ധപ്പെടുക.</string>
+    <string name="e">Google Play സേവനങ്ങൾ പ്രവർത്തനക്ഷമമാക്കുക</string>
+    <string name="f">നിങ്ങൾ Google Play സേവനങ്ങൾ പ്രവർത്തനക്ഷമമാക്കുന്നില്ലെങ്കിൽ %1$s പ്രവർത്തിയ്‌ക്കില്ല.</string>
+    <string name="g">Google Play സേവനങ്ങൾ പ്രവർത്തനക്ഷമമാക്കുക</string>
+    <string name="h">%1$s അഭ്യർത്ഥിച്ചത്</string>
+    <string name="i">Google Play സേവനങ്ങൾ നേടുക</string>
+    <string name="j">നിങ്ങളുടെ ഫോണിൽ നിന്നും നഷ്‌ടപ്പെട്ട Google Play സേവനങ്ങളില്ലാതെ %1$s പ്രവർത്തിയ്‌ക്കില്ല.</string>
+    <string name="k">നിങ്ങളുടെ ടാബ്‌ലെറ്റിൽ നിന്നും നഷ്‌ടപ്പെട്ട Google Play സേവനങ്ങളില്ലാതെ %1$s പ്രവർത്തിയ്‌ക്കില്ല.</string>
+    <string name="l">Google Play സേവനങ്ങൾ നേടുക</string>
+    <string name="m">വ്യക്തമാക്കിയ അക്കൗണ്ട് ഈ ഉപകരണത്തിൽ നിലവിലില്ല. മറ്റൊരു അക്കൗണ്ട് തിരഞ്ഞെടുക്കുക.</string>
+    <string name="n">അക്കൗണ്ട് അസാധുവാണ്</string>
+    <string name="o">ഒരു അപ്ലിക്കേഷന് Google Play സേവനങ്ങൾ പ്രവർത്തനക്ഷമമാക്കേണ്ടതുണ്ട്.</string>
+    <string name="p">Google Play സേവനങ്ങളിലേയ്ക്ക് കണക്റ്റുചെയ്യുന്നതിന് ഒരു ഡാറ്റ കണക്ഷൻ ആവശ്യമാണ്.</string>
+    <string name="q">നെറ്റ്‌വർക്ക് പിശക്</string>
+    <string name="r">ഒരു അപ്ലിക്കേഷന് Google Play സേവനങ്ങൾ അപ്‌ഡേറ്റുചെയ്യേണ്ടതുണ്ട്.</string>
+    <string name="s">Google Play സേവനങ്ങളിലെ പിശക്</string>
+    <string name="t">നിർദ്ദിഷ്‌ട അക്കൗണ്ടിൽ സൈൻ ഇൻ ചെയ്യുന്നതിൽ പിശക്. മറ്റൊരു അക്കൗണ്ട് തിരഞ്ഞെടുക്കുക.</string>
+    <string name="u">സൈൻ ഇൻ പരാജയപ്പെട്ടു</string>
+    <string name="v">Google Play സേവനങ്ങളിലെ അജ്ഞാത പ്രശ്‌നം.</string>
+    <string name="w">%1$s ആശ്രയിക്കുന്ന Google Play സേവനങ്ങളെ നിങ്ങളുടെ ഉപകരണം പിന്തുണയ്‌ക്കുന്നില്ല. സഹായത്തിനായി നിർമ്മാതാവിനെ ബന്ധപ്പെടുക.</string>
+    <string name="x">Google Play സേവനങ്ങൾ</string>
+    <string name="y">അപ്‌ഡേറ്റുചെയ്യുക</string>
+    <string name="z">നിങ്ങൾ Google Play സേവനങ്ങൾ അപ്‌ഡേറ്റുചെയ്‌തില്ലെങ്കിൽ %1$s പ്രവർത്തിക്കില്ല.</string>
+    <string name="a0">Google Play സേവനങ്ങൾ അപ്‌ഡേറ്റുചെയ്യുക</string>
+    <string name="a1">%1$s, നിലവിൽ അപ്‌ഡേറ്റുചെയ്യുന്ന Google Play സേവനങ്ങൾ ഇല്ലാതെ പ്രവർത്തിക്കില്ല.</string>
+    <string name="a2">Google Play സേവനങ്ങൾ അപ്‌ഡേറ്റുചെയ്യുകയാണ്</string>
+    <string name="a3">ഫോണിൽ തുറക്കുക</string>
+    <string name="a4">സൈൻ ഇൻ ചെയ്യുക</string>
+    <string name="a5">Google ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്യുക</string>
+</resources>

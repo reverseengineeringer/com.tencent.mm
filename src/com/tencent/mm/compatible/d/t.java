@@ -1,35 +1,23 @@
 package com.tencent.mm.compatible.d;
 
+import java.util.Map;
+
 public final class t
 {
-  public boolean bsX;
-  public int bsY;
-  public int bsZ;
-  public int bta;
-  public int btb;
-  public int btc;
-  public int btd;
-  public int bte;
-  public int btf;
-  public int btg;
+  public static boolean bhe = false;
+  public String bhf = "";
+  Map<String, String> bhg = null;
+  public int bhh = 0;
   
-  public t()
+  public static boolean nd()
   {
-    reset();
-  }
-  
-  public final void reset()
-  {
-    bsX = false;
-    bsZ = 224;
-    bsY = 288;
-    bta = 10;
-    btb = 3000000;
-    btc = 1;
-    btd = 1;
-    bte = 1;
-    btf = 0;
-    btg = 1;
+    boolean bool = false;
+    if (bhe)
+    {
+      bhe = false;
+      bool = true;
+    }
+    return bool;
   }
 }
 

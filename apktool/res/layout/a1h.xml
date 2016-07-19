@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/d4" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/aq9" android:background="@color/iy" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/blq" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ListView android:id="@id/bby" android:background="@color/d4" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@color/nl" android:dividerHeight="0.0px" android:layout_below="@id/aq9" />
+    <com.tencent.mm.pluginsdk.ui.MultiSelectContactView android:id="@id/bgi" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/aq9" />
+    <ImageView android:id="@id/b4f" android:background="@drawable/aht" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/bgi" />
+    <LinearLayout android:gravity="center_horizontal" android:id="@id/aq2" android:background="@color/d4" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/bgi">
+        <TextView android:textColor="@color/ow" android:id="@id/bgl" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/bg9" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/i8" android:textColor="@color/j9" android:gravity="center_vertical" android:id="@id/bk_" android:background="#f2ebebeb" android:padding="@dimen/i7" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawableRight="@drawable/m3" android:drawablePadding="@dimen/i7" android:layout_below="@id/bgi" />
+</RelativeLayout>

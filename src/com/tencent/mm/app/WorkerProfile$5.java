@@ -1,24 +1,14 @@
 package com.tencent.mm.app;
 
-import com.tencent.mm.d.a.ky;
-import com.tencent.mm.d.a.ky.a;
-import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.e.a.lh;
 import com.tencent.mm.sdk.c.c;
-import com.tencent.mm.ui.contact.e;
 
 final class WorkerProfile$5
-  extends c
+  extends c<lh>
 {
   WorkerProfile$5(WorkerProfile paramWorkerProfile)
   {
-    super(0);
-  }
-  
-  public final boolean a(b paramb)
-  {
-    paramb = (ky)paramb;
-    e.a(aHu.intent, aHu.username);
-    return false;
+    kum = lh.class.getName().hashCode();
   }
 }
 

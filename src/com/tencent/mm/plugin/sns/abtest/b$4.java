@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sns.abtest;
 
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
-import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.ad;
 
 final class b$4
   implements Animation.AnimationListener
@@ -11,21 +11,21 @@ final class b$4
   
   public final void onAnimationEnd(Animation paramAnimation)
   {
-    ab.j(new Runnable()
+    ad.k(new Runnable()
     {
       public final void run()
       {
-        gFE.axr();
+        gMg.azT();
       }
     });
-    gFE.gFC = false;
+    gMg.gMe = false;
   }
   
   public final void onAnimationRepeat(Animation paramAnimation) {}
   
   public final void onAnimationStart(Animation paramAnimation)
   {
-    gFE.gFC = true;
+    gMg.gMe = true;
   }
 }
 

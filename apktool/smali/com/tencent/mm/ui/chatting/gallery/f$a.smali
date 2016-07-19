@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static lgb:Lcom/tencent/mm/ui/chatting/gallery/f;
+.field public static lGo:Lcom/tencent/mm/ui/chatting/gallery/f;
 
 
 # direct methods
@@ -28,7 +28,7 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/ui/chatting/gallery/f;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/ui/chatting/gallery/f$a;->lgb:Lcom/tencent/mm/ui/chatting/gallery/f;
+    sput-object v0, Lcom/tencent/mm/ui/chatting/gallery/f$a;->lGo:Lcom/tencent/mm/ui/chatting/gallery/f;
 
     return-void
 .end method

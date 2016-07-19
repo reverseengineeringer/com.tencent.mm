@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public arz:J
+.field public adh:J
 
 .field public count:I
 
@@ -36,7 +36,7 @@
     .line 36
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/c/c/a$a;->arz:J
+    iput-wide v0, p0, Lcom/tencent/mm/c/c/a$a;->adh:J
 
     return-void
 .end method

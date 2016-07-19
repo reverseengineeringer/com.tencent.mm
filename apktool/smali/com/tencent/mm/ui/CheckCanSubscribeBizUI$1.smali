@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/CheckCanSubscribeBizUI;->aZz()Z
+    value = Lcom/tencent/mm/ui/CheckCanSubscribeBizUI;->beX()Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kjH:Lcom/tencent/mm/ui/CheckCanSubscribeBizUI;
+.field final synthetic kJP:Lcom/tencent/mm/ui/CheckCanSubscribeBizUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 293
-    iput-object p1, p0, Lcom/tencent/mm/ui/CheckCanSubscribeBizUI$1;->kjH:Lcom/tencent/mm/ui/CheckCanSubscribeBizUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/CheckCanSubscribeBizUI$1;->kJP:Lcom/tencent/mm/ui/CheckCanSubscribeBizUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final f(Ljava/lang/String;Z)V
+.method public final i(Ljava/lang/String;Z)V
     .locals 1
 
     .prologue
@@ -44,12 +44,12 @@
     if-nez p2, :cond_0
 
     .line 298
-    iget-object v0, p0, Lcom/tencent/mm/ui/CheckCanSubscribeBizUI$1;->kjH:Lcom/tencent/mm/ui/CheckCanSubscribeBizUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/CheckCanSubscribeBizUI$1;->kJP:Lcom/tencent/mm/ui/CheckCanSubscribeBizUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/CheckCanSubscribeBizUI;->a(Lcom/tencent/mm/ui/CheckCanSubscribeBizUI;)Z
 
     .line 299
-    iget-object v0, p0, Lcom/tencent/mm/ui/CheckCanSubscribeBizUI$1;->kjH:Lcom/tencent/mm/ui/CheckCanSubscribeBizUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/CheckCanSubscribeBizUI$1;->kJP:Lcom/tencent/mm/ui/CheckCanSubscribeBizUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/CheckCanSubscribeBizUI;->b(Lcom/tencent/mm/ui/CheckCanSubscribeBizUI;)V
 

@@ -7,8 +7,8 @@ final class ImageGalleryUI$13$1$1
   
   public final void run()
   {
-    if (lgP.lgO.lgM.lgB != null) {
-      lgP.lgO.lgM.lgB.f(Boolean.valueOf(false));
+    if (lHb.lHa.lGY.lGN != null) {
+      lHb.lHa.lGY.lGN.e(Boolean.valueOf(false));
     }
   }
 }

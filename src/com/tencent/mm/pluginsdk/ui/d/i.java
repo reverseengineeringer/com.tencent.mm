@@ -8,22 +8,23 @@ import android.view.View;
 import com.tencent.mm.pluginsdk.i.a;
 import com.tencent.mm.pluginsdk.i.c;
 import com.tencent.mm.pluginsdk.ui.applet.g;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.v;
 import java.lang.ref.WeakReference;
 import java.util.LinkedList;
 
 public class i
   extends ClickableSpan
 {
-  private int frQ;
-  boolean fxe = true;
-  String gZd;
-  public boolean iQe = false;
-  private int iQf;
-  c iQg = null;
-  private g iQh = null;
-  private WeakReference iQi = null;
+  private int fAW;
+  boolean fGj = true;
+  String hmp;
+  private Context jnh = null;
+  public boolean jnm = false;
+  private int jnn;
+  c jno = null;
+  private g jnp = null;
+  private WeakReference<View> jnq = null;
   
   public i() {}
   
@@ -38,97 +39,107 @@ public class i
     for (;;)
     {
       if ((j == 0) && (i == 0)) {
-        oK(paramInt);
+        qx(paramInt);
       }
       for (;;)
       {
-        iQg = new c();
-        iQh = paramg;
+        jno = new c();
+        jnp = paramg;
         return;
-        bE(j, i);
+        bI(j, i);
       }
       j = 0;
     }
   }
   
-  private void bE(int paramInt1, int paramInt2)
+  private void bI(int paramInt1, int paramInt2)
   {
-    iQf = paramInt1;
-    frQ = paramInt2;
-  }
-  
-  public final void aOI()
-  {
-    iQg.mContext = null;
-  }
-  
-  protected final void oK(int paramInt)
-  {
-    Context localContext = y.getContext();
-    switch (paramInt)
-    {
-    default: 
-      return;
-    case 1: 
-      bE(localContext.getResources().getColor(2131231129), -5908174);
-      return;
-    case 2: 
-      bE(localContext.getResources().getColor(2131231118), localContext.getResources().getColor(2131230724));
-      return;
-    }
-    bE(localContext.getResources().getColor(2131231240), localContext.getResources().getColor(2131230724));
+    jnn = paramInt1;
+    fAW = paramInt2;
   }
   
   public void onClick(View paramView)
   {
     c localc;
     g localg;
-    if ((iQg != null) && (iQh != null) && (fxe))
+    if ((jno != null) && (jnp != null) && (fGj))
     {
-      iQg.mContext = paramView.getContext();
-      localc = iQg;
-      localg = iQh;
+      localc = jno;
+      if (jnh == null) {
+        break label80;
+      }
+      paramView = jnh;
+      mContext = paramView;
+      localc = jno;
+      localg = jnp;
       if (localg != null) {
-        break label69;
+        break label88;
       }
-      u.e("!44@/B4Tb64lLpLO1dGQBsz4NTV9+/0VhiZSRvamG9JME6w=", "onClick error, hrefInfo is null!");
+      v.e("MicroMsg.MMSpanClickListener", "onClick error, hrefInfo is null!");
     }
     for (;;)
     {
-      iQg.mContext = null;
-      fxe = false;
+      jno.mContext = null;
+      fGj = false;
       return;
-      label69:
-      u.d("!44@/B4Tb64lLpLO1dGQBsz4NTV9+/0VhiZSRvamG9JME6w=", "MMSpanClickListener.onClick, hrefInfo type = %d", new Object[] { Integer.valueOf(type) });
+      label80:
+      paramView = paramView.getContext();
+      break;
+      label88:
+      v.d("MicroMsg.MMSpanClickListener", "MMSpanClickListener.onClick, hrefInfo type = %d", new Object[] { Integer.valueOf(type) });
       if (mContext != null) {
-        break;
+        break label127;
       }
-      u.e("!44@/B4Tb64lLpLO1dGQBsz4NTV9+/0VhiZSRvamG9JME6w=", "onClick error, context is null!");
+      v.e("MicroMsg.MMSpanClickListener", "onClick error, context is null!");
     }
-    if ((e.iPI != null) && (e.iPI.size() > 0))
+    label127:
+    if ((e.jmP != null) && (e.jmP.size() > 0))
     {
-      int i = e.iPI.size();
-      paramView = (b)e.iPI.getLast();
-      u.d("!44@/B4Tb64lLpLO1dGQBsz4NTV9+/0VhiZSRvamG9JME6w=", "spanCallbackList.size:%d, get the last callback", new Object[] { Integer.valueOf(i) });
+      int i = e.jmP.size();
+      paramView = (b)e.jmP.getLast();
+      v.d("MicroMsg.MMSpanClickListener", "spanCallbackList.size:%d, get the last callback", new Object[] { Integer.valueOf(i) });
     }
     for (;;)
     {
-      gZd = gZd;
-      i.a.iyS.a(mContext, localg, paramView);
-      gZd = null;
+      hmp = hmp;
+      i.a.iVo.a(mContext, localg, paramView);
+      hmp = null;
       break;
       paramView = null;
     }
   }
   
+  protected final void qx(int paramInt)
+  {
+    Context localContext = aa.getContext();
+    switch (paramInt)
+    {
+    default: 
+      return;
+    case 1: 
+      bI(localContext.getResources().getColor(2131689585), -5908174);
+      return;
+    case 2: 
+      bI(localContext.getResources().getColor(2131689770), localContext.getResources().getColor(2131689956));
+      return;
+    }
+    bI(localContext.getResources().getColor(2131689963), localContext.getResources().getColor(2131689956));
+  }
+  
+  public final void setContext(Context paramContext)
+  {
+    jnh = paramContext;
+    jno.mContext = paramContext;
+  }
+  
   public void updateDrawState(TextPaint paramTextPaint)
   {
     super.updateDrawState(paramTextPaint);
-    paramTextPaint.setColor(iQf);
+    paramTextPaint.setColor(jnn);
     paramTextPaint.setUnderlineText(false);
-    if (iQe)
+    if (jnm)
     {
-      bgColor = frQ;
+      bgColor = fAW;
       return;
     }
     bgColor = 0;

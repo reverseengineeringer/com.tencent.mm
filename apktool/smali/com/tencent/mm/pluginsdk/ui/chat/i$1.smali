@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iMq:Lcom/tencent/mm/pluginsdk/ui/chat/i;
+.field final synthetic jjn:Lcom/tencent/mm/pluginsdk/ui/chat/i;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 84
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/i$1;->iMq:Lcom/tencent/mm/pluginsdk/ui/chat/i;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/i$1;->jjn:Lcom/tencent/mm/pluginsdk/ui/chat/i;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,36 +41,36 @@
 
     .prologue
     .line 87
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/i$1;->iMq:Lcom/tencent/mm/pluginsdk/ui/chat/i;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/i$1;->jjn:Lcom/tencent/mm/pluginsdk/ui/chat/i;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/chat/i;->iMp:Lcom/tencent/mm/pluginsdk/ui/chat/i$a;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/chat/i;->jjm:Lcom/tencent/mm/pluginsdk/ui/chat/i$a;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/i$1;->iMq:Lcom/tencent/mm/pluginsdk/ui/chat/i;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/i$1;->jjn:Lcom/tencent/mm/pluginsdk/ui/chat/i;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/chat/i;->iMl:Lcom/tencent/mm/pluginsdk/ui/chat/g;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/chat/i;->jji:Lcom/tencent/mm/pluginsdk/ui/chat/g;
 
     if-eqz v0, :cond_0
 
     .line 88
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/i$1;->iMq:Lcom/tencent/mm/pluginsdk/ui/chat/i;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/i$1;->jjn:Lcom/tencent/mm/pluginsdk/ui/chat/i;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/chat/i;->iMp:Lcom/tencent/mm/pluginsdk/ui/chat/i$a;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/chat/i;->jjm:Lcom/tencent/mm/pluginsdk/ui/chat/i$a;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/i$1;->iMq:Lcom/tencent/mm/pluginsdk/ui/chat/i;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/i$1;->jjn:Lcom/tencent/mm/pluginsdk/ui/chat/i;
 
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/chat/i;->iMl:Lcom/tencent/mm/pluginsdk/ui/chat/g;
+    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/chat/i;->jji:Lcom/tencent/mm/pluginsdk/ui/chat/g;
 
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/chat/g;->iMj:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/chat/g;->jjg:Ljava/lang/String;
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/chat/i$a;->AI(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/chat/i$a;->CO(Ljava/lang/String;)V
 
     .line 91
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/i$1;->iMq:Lcom/tencent/mm/pluginsdk/ui/chat/i;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/i$1;->jjn:Lcom/tencent/mm/pluginsdk/ui/chat/i;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/chat/i;->iMm:Lcom/tencent/mm/ui/base/o;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/chat/i;->jjj:Lcom/tencent/mm/ui/base/o;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/o;->dismiss()V
 

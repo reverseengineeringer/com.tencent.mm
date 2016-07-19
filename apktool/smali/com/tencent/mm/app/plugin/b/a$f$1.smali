@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/af$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ah$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic anL:Lcom/tencent/mm/app/plugin/b/a$f;
+.field final synthetic aaz:Lcom/tencent/mm/app/plugin/b/a$f;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 361
-    iput-object p1, p0, Lcom/tencent/mm/app/plugin/b/a$f$1;->anL:Lcom/tencent/mm/app/plugin/b/a$f;
+    .line 299
+    iput-object p1, p0, Lcom/tencent/mm/app/plugin/b/a$f$1;->aaz:Lcom/tencent/mm/app/plugin/b/a$f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,30 +36,30 @@
 
 
 # virtual methods
-.method public final lj()Z
+.method public final jK()Z
     .locals 2
 
     .prologue
-    .line 365
-    const-string/jumbo v0, "!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc="
+    .line 303
+    const-string/jumbo v0, "MicroMsg.SubCoreExtAgent"
 
     const-string/jumbo v1, "Voice record timeout."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 366
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/b/a$f$1;->anL:Lcom/tencent/mm/app/plugin/b/a$f;
+    .line 304
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/b/a$f$1;->aaz:Lcom/tencent/mm/app/plugin/b/a$f;
 
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lcom/tencent/mm/app/plugin/b/a$f;->anI:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/app/plugin/b/a$f;->aaw:Z
 
-    .line 367
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/b/a$f$1;->anL:Lcom/tencent/mm/app/plugin/b/a$f;
+    .line 305
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/b/a$f$1;->aaz:Lcom/tencent/mm/app/plugin/b/a$f;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/app/plugin/b/a$f;->li()V
+    invoke-virtual {v0}, Lcom/tencent/mm/app/plugin/b/a$f;->jJ()V
 
-    .line 368
+    .line 306
     const/4 v0, 0x0
 
     return v0

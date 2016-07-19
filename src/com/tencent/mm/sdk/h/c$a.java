@@ -6,11 +6,11 @@ import java.util.Map;
 
 public final class c$a
 {
-  public String[] blR;
-  public Field[] ceD;
-  public String jYw;
-  public Map jYx = new HashMap();
-  public String jYy;
+  public String[] aZx;
+  public Field[] bZI;
+  public String kyT;
+  public Map<String, String> kyU = new HashMap();
+  public String kyV;
 }
 
 /* Location:

@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic mB:Landroid/support/v7/internal/view/menu/i;
+.field final synthetic mR:Landroid/support/v7/internal/view/menu/i;
 
-.field final synthetic mC:Landroid/support/v7/internal/view/menu/i$a;
+.field final synthetic mS:Landroid/support/v7/internal/view/menu/i$a;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 381
-    iput-object p1, p0, Landroid/support/v7/internal/view/menu/i$a$1;->mC:Landroid/support/v7/internal/view/menu/i$a;
+    iput-object p1, p0, Landroid/support/v7/internal/view/menu/i$a$1;->mS:Landroid/support/v7/internal/view/menu/i$a;
 
-    iput-object p2, p0, Landroid/support/v7/internal/view/menu/i$a$1;->mB:Landroid/support/v7/internal/view/menu/i;
+    iput-object p2, p0, Landroid/support/v7/internal/view/menu/i$a$1;->mR:Landroid/support/v7/internal/view/menu/i;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

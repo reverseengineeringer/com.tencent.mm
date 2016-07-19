@@ -3,46 +3,46 @@ package com.tencent.mm.storage;
 import java.util.LinkedList;
 
 public final class t
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public int kff;
-  public LinkedList kfg = new LinkedList();
-  public LinkedList kfh = new LinkedList();
-  public LinkedList kfi = new LinkedList();
-  public LinkedList kfj = new LinkedList();
-  public LinkedList kfk = new LinkedList();
-  public LinkedList kfl = new LinkedList();
+  public int kFm;
+  public LinkedList<Integer> kFn = new LinkedList();
+  public LinkedList<Integer> kFo = new LinkedList();
+  public LinkedList<Integer> kFp = new LinkedList();
+  public LinkedList<Long> kFq = new LinkedList();
+  public LinkedList<Long> kFr = new LinkedList();
+  public LinkedList<Long> kFs = new LinkedList();
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.ci(1, kff);
-      paramVarArgs.d(2, 2, kfg);
-      paramVarArgs.d(3, 2, kfh);
-      paramVarArgs.d(4, 2, kfi);
-      paramVarArgs.d(5, 3, kfj);
-      paramVarArgs.d(6, 3, kfk);
-      paramVarArgs.d(7, 3, kfl);
+      paramVarArgs.cw(1, kFm);
+      paramVarArgs.d(2, 2, kFn);
+      paramVarArgs.d(3, 2, kFo);
+      paramVarArgs.d(4, 2, kFp);
+      paramVarArgs.d(5, 3, kFq);
+      paramVarArgs.d(6, 3, kFr);
+      paramVarArgs.d(7, 3, kFs);
       return 0;
     }
     if (paramInt == 1) {
-      return a.a.a.a.cg(1, kff) + 0 + a.a.a.a.c(2, 2, kfg) + a.a.a.a.c(3, 2, kfh) + a.a.a.a.c(4, 2, kfi) + a.a.a.a.c(5, 3, kfj) + a.a.a.a.c(6, 3, kfk) + a.a.a.a.c(7, 3, kfl);
+      return a.a.a.a.cu(1, kFm) + 0 + a.a.a.a.c(2, 2, kFn) + a.a.a.a.c(3, 2, kFo) + a.a.a.a.c(4, 2, kFp) + a.a.a.a.c(5, 3, kFq) + a.a.a.a.c(6, 3, kFr) + a.a.a.a.c(7, 3, kFs);
     }
     if (paramInt == 2)
     {
       paramVarArgs = (byte[])paramVarArgs[0];
-      kfg.clear();
-      kfh.clear();
-      kfi.clear();
-      kfj.clear();
-      kfk.clear();
-      kfl.clear();
-      paramVarArgs = new a.a.a.a.a(paramVarArgs, iTR);
-      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+      kFn.clear();
+      kFo.clear();
+      kFp.clear();
+      kFq.clear();
+      kFr.clear();
+      kFs.clear();
+      paramVarArgs = new a.a.a.a.a(paramVarArgs, jrk);
+      for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
         if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.bog();
+          paramVarArgs.bve();
         }
       }
       return 0;
@@ -56,25 +56,25 @@ public final class t
       default: 
         return -1;
       case 1: 
-        kff = maU.jC();
+        kFm = mMY.id();
         return 0;
       case 2: 
-        kfg.add(Integer.valueOf(maU.jC()));
+        kFn.add(Integer.valueOf(mMY.id()));
         return 0;
       case 3: 
-        kfh.add(Integer.valueOf(maU.jC()));
+        kFo.add(Integer.valueOf(mMY.id()));
         return 0;
       case 4: 
-        kfi.add(Integer.valueOf(maU.jC()));
+        kFp.add(Integer.valueOf(mMY.id()));
         return 0;
       case 5: 
-        kfj.add(Long.valueOf(maU.jD()));
+        kFq.add(Long.valueOf(mMY.ie()));
         return 0;
       case 6: 
-        kfk.add(Long.valueOf(maU.jD()));
+        kFr.add(Long.valueOf(mMY.ie()));
         return 0;
       }
-      kfl.add(Long.valueOf(maU.jD()));
+      kFs.add(Long.valueOf(mMY.ie()));
       return 0;
     }
     return -1;

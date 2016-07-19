@@ -6,6 +6,18 @@
 .implements Ljava/lang/Comparable;
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/lang/Comparable",
+        "<",
+        "Lcom/tencent/mm/modelsearch/k;",
+        ">;"
+    }
+.end annotation
+
+
 # virtual methods
 .method public abstract create()V
 .end method

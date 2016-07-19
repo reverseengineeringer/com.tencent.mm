@@ -2,7 +2,7 @@ package com.tencent.mm.ui.chatting.gallery;
 
 final class g$a
 {
-  private static final g lge = new g((byte)0);
+  private static final g lGr = new g((byte)0);
 }
 
 /* Location:

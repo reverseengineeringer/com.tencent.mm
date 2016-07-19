@@ -2,41 +2,41 @@ package com.tencent.mm.pluginsdk.model.downloader;
 
 public final class d$a
 {
-  public d iCw = new d((byte)0);
+  public d iZk = new d((byte)0);
   
-  public final void Ac(String paramString)
+  public final void Cc(String paramString)
   {
-    iCw.iCq = paramString;
+    iZk.iZe = paramString;
   }
   
-  public final void Ad(String paramString)
+  public final void Cd(String paramString)
   {
-    iCw.mFileName = paramString;
+    iZk.mFileName = paramString;
   }
   
-  public final void Ae(String paramString)
+  public final void Ce(String paramString)
   {
-    iCw.iCr = paramString;
+    iZk.iZf = paramString;
   }
   
-  public final void Af(String paramString)
+  public final void Cf(String paramString)
   {
-    iCw.elm = paramString;
+    iZk.eqa = paramString;
   }
   
-  public final void gj(boolean paramBoolean)
+  public final void gH(boolean paramBoolean)
   {
-    iCw.iCt = paramBoolean;
+    iZk.iZh = paramBoolean;
   }
   
-  public final void oh(int paramInt)
+  public final void pM(int paramInt)
   {
-    iCw.iCs = paramInt;
+    iZk.iZg = paramInt;
   }
   
   public final void setAppId(String paramString)
   {
-    iCw.ehh = paramString;
+    iZk.ekS = paramString;
   }
 }
 

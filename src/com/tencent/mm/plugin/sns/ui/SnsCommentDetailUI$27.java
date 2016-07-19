@@ -6,14 +6,14 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.tencent.mm.plugin.sns.h.f;
-import com.tencent.mm.plugin.sns.h.k;
-import com.tencent.mm.plugin.sns.h.s;
+import com.tencent.mm.plugin.sns.i.f;
+import com.tencent.mm.plugin.sns.i.k;
+import com.tencent.mm.plugin.sns.i.s;
 import com.tencent.mm.plugin.sns.lucky.b.w;
 import com.tencent.mm.plugin.sns.lucky.ui.b;
-import com.tencent.mm.protocal.b.atp;
-import com.tencent.mm.protocal.b.iv;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.auf;
+import com.tencent.mm.protocal.b.je;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.j;
 
@@ -24,60 +24,60 @@ final class SnsCommentDetailUI$27
   
   public final void onClick(View paramView)
   {
-    u.d("!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc=", "showComment click" + SnsCommentDetailUI.v(hda).getVisibility());
-    paramView = hdb.azR();
-    if ((paramView != null) && (jMx.jhv == 21) && (!w.ut(hdb.aAl())))
+    v.d("MicroMsg.SnsCommentDetailUI", "showComment click" + SnsCommentDetailUI.v(hrN).getVisibility());
+    paramView = hrO.aCD();
+    if ((paramView != null) && (kli.jFu == 21) && (!w.vy(hrO.aCX())))
     {
-      b.d(hda.koJ.kpc, hda.hcX.lW(0));
+      b.d(hrN.kNN.kOg, hrN.hrK.nl(0));
       return;
     }
-    if (SnsCommentDetailUI.v(hda).getVisibility() == 0)
+    if (SnsCommentDetailUI.v(hrN).getVisibility() == 0)
     {
-      SnsCommentDetailUI.g(hda);
+      SnsCommentDetailUI.g(hrN);
       return;
     }
-    SnsCommentDetailUI.v(hda).setVisibility(0);
-    SnsCommentDetailUI.v(hda).startAnimation(SnsCommentDetailUI.w(hda));
-    if (SnsCommentDetailUI.x(hda) == 11) {
-      SnsCommentDetailUI.y(hda).findViewById(2131168689).setBackgroundResource(2130969728);
+    SnsCommentDetailUI.v(hrN).setVisibility(0);
+    SnsCommentDetailUI.v(hrN).startAnimation(SnsCommentDetailUI.w(hrN));
+    if (SnsCommentDetailUI.x(hrN) == 11) {
+      SnsCommentDetailUI.y(hrN).findViewById(2131755229).setBackgroundResource(2130838341);
     }
-    if (!s.vJ(SnsCommentDetailUI.l(hda)))
+    if (!s.wW(SnsCommentDetailUI.l(hrN)))
     {
-      hda.hcl.setEnabled(false);
-      hda.hcm.setEnabled(false);
-      hdf.setText(hda.getString(2131433036));
-      hdf.setTextColor(hda.getResources().getColor(2131230730));
-      hdg.setTextColor(hda.getResources().getColor(2131230730));
-      if (SnsCommentDetailUI.x(hda) == 11)
+      hrN.hqX.setEnabled(false);
+      hrN.hqY.setEnabled(false);
+      hrS.setText(hrN.getString(2131235475));
+      hrS.setTextColor(hrN.getResources().getColor(2131689954));
+      hrT.setTextColor(hrN.getResources().getColor(2131689954));
+      if (SnsCommentDetailUI.x(hrN) == 11)
       {
-        hdh.setImageResource(2130903292);
+        hrU.setImageResource(2131165487);
         return;
       }
-      hdh.setImageResource(2130903315);
+      hrU.setImageResource(2131165490);
       return;
     }
-    hda.hcl.setEnabled(true);
-    hdh.setImageResource(2130969776);
-    hda.hcm.setEnabled(true);
-    hdf.setTextColor(hda.getResources().getColor(2131231100));
-    hdg.setTextColor(hda.getResources().getColor(2131231100));
-    paramView = f.vn(SnsCommentDetailUI.l(hda));
-    if (SnsCommentDetailUI.x(hda) == 11)
+    hrN.hqX.setEnabled(true);
+    hrU.setImageResource(2130838349);
+    hrN.hqY.setEnabled(true);
+    hrS.setTextColor(hrN.getResources().getColor(2131690049));
+    hrT.setTextColor(hrN.getResources().getColor(2131690049));
+    paramView = f.wz(SnsCommentDetailUI.l(hrN));
+    if (SnsCommentDetailUI.x(hrN) == 11)
     {
-      hdh.setImageResource(2130969738);
-      hdi.setImageResource(2130969733);
-      hdf.setTextColor(hda.getResources().getColor(2131231010));
-      hdg.setTextColor(hda.getResources().getColor(2131231010));
+      hrU.setImageResource(2130838603);
+      hrV.setImageResource(2130838604);
+      hrS.setTextColor(hrN.getResources().getColor(2131689961));
+      hrT.setTextColor(hrN.getResources().getColor(2131689961));
     }
     while (field_likeFlag == 0)
     {
-      hdf.setText(hda.getString(2131433036));
+      hrS.setText(hrN.getString(2131235475));
       return;
-      hdh.setImageResource(2130969776);
-      hdf.setTextColor(hda.getResources().getColor(2131231100));
-      hdg.setTextColor(hda.getResources().getColor(2131231100));
+      hrU.setImageResource(2130838349);
+      hrS.setTextColor(hrN.getResources().getColor(2131690049));
+      hrT.setTextColor(hrN.getResources().getColor(2131690049));
     }
-    hdf.setText(hda.getString(2131433037));
+    hrS.setText(hrN.getString(2131235439));
   }
 }
 

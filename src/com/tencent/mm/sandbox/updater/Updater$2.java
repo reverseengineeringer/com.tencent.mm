@@ -12,11 +12,11 @@ final class Updater$2
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    ah.kU().cancel(99);
-    Updater.pj(2);
-    jTV.cancel();
-    if ((!Updater.a(jTV)) && (jTW != null)) {
-      jTW.onCancel(paramDialogInterface);
+    ah.jv().cancel(99);
+    Updater.qZ(2);
+    ktt.cancel();
+    if ((!Updater.a(ktt)) && (ktu != null)) {
+      ktu.onCancel(paramDialogInterface);
     }
   }
 }

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/voicesearch/b;->il(Z)V
+    value = Lcom/tencent/mm/ui/voicesearch/b;->iT(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic cCD:Z
+.field final synthetic czA:Z
 
-.field final synthetic lCw:Lcom/tencent/mm/ui/voicesearch/b;
+.field final synthetic mdn:Lcom/tencent/mm/ui/voicesearch/b;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 195
-    iput-object p1, p0, Lcom/tencent/mm/ui/voicesearch/b$6;->lCw:Lcom/tencent/mm/ui/voicesearch/b;
+    iput-object p1, p0, Lcom/tencent/mm/ui/voicesearch/b$6;->mdn:Lcom/tencent/mm/ui/voicesearch/b;
 
-    iput-boolean p2, p0, Lcom/tencent/mm/ui/voicesearch/b$6;->cCD:Z
+    iput-boolean p2, p0, Lcom/tencent/mm/ui/voicesearch/b$6;->czA:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,9 +45,9 @@
 
     .prologue
     .line 199
-    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/b$6;->lCw:Lcom/tencent/mm/ui/voicesearch/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/b$6;->mdn:Lcom/tencent/mm/ui/voicesearch/b;
 
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/voicesearch/b$6;->cCD:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/voicesearch/b$6;->czA:Z
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/voicesearch/b;->a(Lcom/tencent/mm/ui/voicesearch/b;Z)Z
 

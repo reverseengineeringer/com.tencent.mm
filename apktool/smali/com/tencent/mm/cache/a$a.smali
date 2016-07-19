@@ -15,7 +15,17 @@
 
 
 # static fields
-.field private static boW:Ljava/util/Map;
+.field private static bcV:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/cache/a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -28,13 +38,23 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/cache/a$a;->boW:Ljava/util/Map;
+    sput-object v0, Lcom/tencent/mm/cache/a$a;->bcV:Ljava/util/Map;
 
     return-void
 .end method
 
 .method private static a(Lcom/tencent/mm/cache/a;Ljava/lang/String;)Ljava/lang/Object;
     .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lcom/tencent/mm/cache/a;",
+            "Ljava/lang/String;",
+            ")TT;"
+        }
+    .end annotation
 
     .prologue
     const/4 v0, 0x0
@@ -43,11 +63,11 @@
     if-nez p0, :cond_0
 
     .line 94
-    const-string/jumbo v1, "!44@/B4Tb64lLpLHfqyLRpCoWpdGl5cyXLfncLG4kHo+hsY="
+    const-string/jumbo v1, "MicroMsg.ICacheService.Factory"
 
     const-string/jumbo v2, "null service"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 106
     :goto_0
@@ -69,14 +89,14 @@
     move-exception v1
 
     .line 102
-    const-string/jumbo v2, "!44@/B4Tb64lLpLHfqyLRpCoWpdGl5cyXLfncLG4kHo+hsY="
+    const-string/jumbo v2, "MicroMsg.ICacheService.Factory"
 
     const-string/jumbo v3, "cast failed, different type ?"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 103
-    const-string/jumbo v2, "!44@/B4Tb64lLpLHfqyLRpCoWpdGl5cyXLfncLG4kHo+hsY="
+    const-string/jumbo v2, "MicroMsg.ICacheService.Factory"
 
     const-string/jumbo v3, "exception:%s"
 
@@ -86,19 +106,29 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v1
 
     aput-object v1, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
 .method private static a(Lcom/tencent/mm/cache/a;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lcom/tencent/mm/cache/a;",
+            "Ljava/lang/String;",
+            "TT;)TT;"
+        }
+    .end annotation
 
     .prologue
     const/4 v0, 0x0
@@ -107,11 +137,11 @@
     if-nez p0, :cond_0
 
     .line 53
-    const-string/jumbo v1, "!44@/B4Tb64lLpLHfqyLRpCoWpdGl5cyXLfncLG4kHo+hsY="
+    const-string/jumbo v1, "MicroMsg.ICacheService.Factory"
 
     const-string/jumbo v2, "null service"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 65
     :goto_0
@@ -133,14 +163,14 @@
     move-exception v1
 
     .line 61
-    const-string/jumbo v2, "!44@/B4Tb64lLpLHfqyLRpCoWpdGl5cyXLfncLG4kHo+hsY="
+    const-string/jumbo v2, "MicroMsg.ICacheService.Factory"
 
     const-string/jumbo v3, "cast failed, different type ?"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 62
-    const-string/jumbo v2, "!44@/B4Tb64lLpLHfqyLRpCoWpdGl5cyXLfncLG4kHo+hsY="
+    const-string/jumbo v2, "MicroMsg.ICacheService.Factory"
 
     const-string/jumbo v3, "exception:%s"
 
@@ -150,13 +180,13 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v1
 
     aput-object v1, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -166,7 +196,7 @@
 
     .prologue
     .line 23
-    sget-object v0, Lcom/tencent/mm/cache/a$a;->boW:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/cache/a$a;->bcV:Ljava/util/Map;
 
     invoke-interface {v0, p0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -176,20 +206,30 @@
 
 .method public static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "TT;)V"
+        }
+    .end annotation
 
     .prologue
     .line 35
-    invoke-static {p0}, Lcom/tencent/mm/cache/a$a;->cX(Ljava/lang/String;)Lcom/tencent/mm/cache/a;
+    invoke-static {p0}, Lcom/tencent/mm/cache/a$a;->de(Ljava/lang/String;)Lcom/tencent/mm/cache/a;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpLHfqyLRpCoWpdGl5cyXLfncLG4kHo+hsY="
+    const-string/jumbo v0, "MicroMsg.ICacheService.Factory"
 
     const-string/jumbo v1, "null service"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 36
     :goto_0
@@ -197,17 +237,17 @@
 
     .line 35
     :cond_0
-    invoke-interface {v0, p1, p2}, Lcom/tencent/mm/cache/a;->f(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2}, Lcom/tencent/mm/cache/a;->i(Ljava/lang/Object;Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method private static cX(Ljava/lang/String;)Lcom/tencent/mm/cache/a;
+.method private static de(Ljava/lang/String;)Lcom/tencent/mm/cache/a;
     .locals 1
 
     .prologue
     .line 27
-    sget-object v0, Lcom/tencent/mm/cache/a$a;->boW:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/cache/a$a;->bcV:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -218,12 +258,22 @@
     return-object v0
 .end method
 
-.method public static u(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+.method public static s(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")TT;"
+        }
+    .end annotation
 
     .prologue
     .line 31
-    invoke-static {p0}, Lcom/tencent/mm/cache/a$a;->cX(Ljava/lang/String;)Lcom/tencent/mm/cache/a;
+    invoke-static {p0}, Lcom/tencent/mm/cache/a$a;->de(Ljava/lang/String;)Lcom/tencent/mm/cache/a;
 
     move-result-object v0
 
@@ -236,12 +286,22 @@
     return-object v0
 .end method
 
-.method public static x(Ljava/lang/String;Ljava/lang/String;)V
+.method public static t(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
     .line 39
-    invoke-static {p0}, Lcom/tencent/mm/cache/a$a;->cX(Ljava/lang/String;)Lcom/tencent/mm/cache/a;
+    invoke-static {p0}, Lcom/tencent/mm/cache/a$a;->de(Ljava/lang/String;)Lcom/tencent/mm/cache/a;
 
     move-result-object v0
 

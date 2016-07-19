@@ -1,28 +1,18 @@
 package com.tencent.mm.ui.conversation;
 
-import com.tencent.mm.network.m.a;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah.a;
 
 final class e$1
-  extends m.a
+  implements ah.a
 {
-  private final af lql = new af(new af.a()
-  {
-    public final boolean lj()
-    {
-      e.a(lqm);
-      return false;
-    }
-  }, false);
-  
   e$1(e parame) {}
   
-  public final void aK(int paramInt)
+  public final boolean jK()
   {
-    if (lql != null) {
-      lql.ds(10L);
+    if (e.d(lPY)) {
+      e.e(lPY);
     }
+    return false;
   }
 }
 

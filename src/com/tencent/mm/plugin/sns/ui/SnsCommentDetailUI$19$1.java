@@ -7,7 +7,7 @@ final class SnsCommentDetailUI$19$1
   
   public final void run()
   {
-    hdc.hda.aBH();
+    hrP.hrN.aED();
   }
 }
 

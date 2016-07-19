@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 import android.app.Dialog;
 import android.content.Context;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class i
   extends Dialog
@@ -21,7 +21,7 @@ public class i
     }
     catch (Exception localException)
     {
-      u.printErrStackTrace("!32@/B4Tb64lLpJ93Ympv7FhFV0Og0UsIWxy", localException, "", new Object[0]);
+      v.printErrStackTrace("MicroMsg.MMDialog", localException, "", new Object[0]);
     }
   }
   
@@ -34,7 +34,7 @@ public class i
     }
     catch (Exception localException)
     {
-      u.printErrStackTrace("!32@/B4Tb64lLpJ93Ympv7FhFV0Og0UsIWxy", localException, "", new Object[0]);
+      v.printErrStackTrace("MicroMsg.MMDialog", localException, "", new Object[0]);
     }
   }
 }

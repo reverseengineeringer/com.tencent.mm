@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;->bdC()V
+    value = Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;->bjj()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kOV:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
+.field final synthetic lol:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 233
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$6;->kOV:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$6;->lol:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
     .line 237
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$6;->kOV:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$6;->lol:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
     const-class v2, Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI;
 
@@ -52,7 +52,7 @@
     .line 238
     const-string/jumbo v1, "regsetinfo_ticket"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$6;->kOV:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$6;->lol:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;->a(Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;)Ljava/lang/String;
 
@@ -63,7 +63,7 @@
     .line 239
     const-string/jumbo v1, "regsetinfo_NextStep"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$6;->kOV:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$6;->lol:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;->b(Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;)Ljava/lang/String;
 
@@ -74,7 +74,7 @@
     .line 240
     const-string/jumbo v1, "regsetinfo_NextStyle"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$6;->kOV:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$6;->lol:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;->c(Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;)I
 
@@ -83,7 +83,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 241
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$6;->kOV:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$6;->lol:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
     invoke-static {v1, v0}, Lcom/tencent/mm/ui/MMWizardActivity;->v(Landroid/content/Context;Landroid/content/Intent;)V
 

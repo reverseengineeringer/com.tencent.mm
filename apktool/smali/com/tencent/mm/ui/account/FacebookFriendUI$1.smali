@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/FacebookFriendUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/FacebookFriendUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+.field final synthetic kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 105
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$1;->ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$1;->kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final Gd()V
+.method public final GA()V
     .locals 0
 
     .prologue
@@ -44,7 +44,7 @@
     return-void
 .end method
 
-.method public final Ge()V
+.method public final GB()V
     .locals 0
 
     .prologue
@@ -52,7 +52,7 @@
     return-void
 .end method
 
-.method public final Gf()V
+.method public final GC()V
     .locals 0
 
     .prologue
@@ -60,7 +60,7 @@
     return-void
 .end method
 
-.method public final Gg()V
+.method public final GD()V
     .locals 0
 
     .prologue
@@ -68,7 +68,7 @@
     return-void
 .end method
 
-.method public final kE(Ljava/lang/String;)Z
+.method public final ln(Ljava/lang/String;)Z
     .locals 1
 
     .prologue
@@ -78,31 +78,31 @@
     return v0
 .end method
 
-.method public final kF(Ljava/lang/String;)V
+.method public final lo(Ljava/lang/String;)V
     .locals 2
 
     .prologue
     .line 115
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$1;->ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$1;->kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kx(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->lh(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/account/FacebookFriendUI;->a(Lcom/tencent/mm/ui/account/FacebookFriendUI;Ljava/lang/String;)Ljava/lang/String;
 
     .line 116
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$1;->ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$1;->kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/account/FacebookFriendUI;->ksp:Lcom/tencent/mm/ui/account/d;
+    iget-object v1, v0, Lcom/tencent/mm/ui/account/FacebookFriendUI;->kRx:Lcom/tencent/mm/ui/account/d;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/account/FacebookFriendUI;->ksp:Lcom/tencent/mm/ui/account/d;
+    iget-object v1, v0, Lcom/tencent/mm/ui/account/FacebookFriendUI;->kRx:Lcom/tencent/mm/ui/account/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/FacebookFriendUI;->coN:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/FacebookFriendUI;->ckb:Ljava/lang/String;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/account/d;->pH(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/account/d;->qY(Ljava/lang/String;)V
 
     .line 117
     :cond_0

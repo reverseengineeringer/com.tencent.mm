@@ -10,7 +10,7 @@ final class LoginUI$2
   
   public final void onDismiss(DialogInterface paramDialogInterface)
   {
-    LoginUI.f(ktY);
+    LoginUI.f(kTf);
   }
 }
 

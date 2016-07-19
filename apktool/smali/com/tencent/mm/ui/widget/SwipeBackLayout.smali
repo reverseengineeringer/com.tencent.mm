@@ -13,41 +13,41 @@
 
 
 # instance fields
-.field public cRI:Landroid/view/View;
+.field private aO:Z
 
-.field private fxe:Z
+.field public cPr:Landroid/view/View;
 
-.field public hW:Landroid/support/v4/widget/f;
+.field public fGj:Z
 
-.field private hf:F
+.field private hM:Landroid/graphics/Rect;
 
-.field private ht:Landroid/graphics/Rect;
+.field private hz:F
 
-.field public lEy:Z
+.field public iq:Landroid/support/v4/widget/f;
 
-.field private lGB:F
+.field public mfo:Z
 
-.field private lGC:I
+.field private mhP:F
 
-.field private lGD:I
+.field private mhQ:I
 
-.field private lGE:F
+.field private mhR:I
 
-.field public lGF:Landroid/graphics/drawable/Drawable;
+.field private mhS:F
 
-.field private lGG:Z
+.field public mhT:Landroid/graphics/drawable/Drawable;
 
-.field private lGH:Z
+.field public mhU:Z
 
-.field public lGI:Z
+.field private mhV:Z
 
-.field public lGJ:Z
+.field public mhW:Z
 
-.field private lGK:Z
+.field public mhX:Z
 
-.field public lGL:Lcom/tencent/mm/ui/widget/SwipeBackLayout$a;
+.field private mhY:Z
 
-.field private mInLayout:Z
+.field public mhZ:Lcom/tencent/mm/ui/widget/SwipeBackLayout$a;
 
 
 # direct methods
@@ -78,53 +78,53 @@
     .line 32
     const v0, 0x3e99999a    # 0.3f
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGB:F
+    iput v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhP:F
 
     .line 36
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->fxe:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->fGj:Z
 
     .line 42
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->ht:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->hM:Landroid/graphics/Rect;
 
     .line 43
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGG:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhU:Z
 
     .line 44
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGH:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhV:Z
 
     .line 45
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGI:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhW:Z
 
     .line 46
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGJ:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhX:Z
 
     .line 47
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lEy:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mfo:Z
 
     .line 48
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGK:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhY:Z
 
     .line 494
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGL:Lcom/tencent/mm/ui/widget/SwipeBackLayout$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhZ:Lcom/tencent/mm/ui/widget/SwipeBackLayout$a;
 
     .line 60
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f040671
+    const v1, 0x7f0206cd
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGF:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhT:Landroid/graphics/drawable/Drawable;
 
     .line 62
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->setFocusable(Z)V
@@ -146,7 +146,7 @@
 
     .prologue
     .line 21
-    iput p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGE:F
+    iput p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhS:F
 
     return p1
 .end method
@@ -156,7 +156,7 @@
 
     .prologue
     .line 21
-    iput p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGC:I
+    iput p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhQ:I
 
     return p1
 .end method
@@ -166,7 +166,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->hW:Landroid/support/v4/widget/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->iq:Landroid/support/v4/widget/f;
 
     return-object v0
 .end method
@@ -176,7 +176,7 @@
 
     .prologue
     .line 21
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGJ:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhX:Z
 
     return p1
 .end method
@@ -186,7 +186,7 @@
 
     .prologue
     .line 21
-    iput p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGD:I
+    iput p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhR:I
 
     return p1
 .end method
@@ -196,7 +196,7 @@
 
     .prologue
     .line 21
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGI:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhW:Z
 
     return v0
 .end method
@@ -206,7 +206,7 @@
 
     .prologue
     .line 21
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lEy:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mfo:Z
 
     return p1
 .end method
@@ -216,7 +216,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->cRI:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->cPr:Landroid/view/View;
 
     return-object v0
 .end method
@@ -226,7 +226,7 @@
 
     .prologue
     .line 21
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGK:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhY:Z
 
     return p1
 .end method
@@ -236,7 +236,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGF:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhT:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -246,7 +246,7 @@
 
     .prologue
     .line 21
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGH:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhV:Z
 
     return p1
 .end method
@@ -256,7 +256,7 @@
 
     .prologue
     .line 21
-    iget v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGE:F
+    iget v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhS:F
 
     return v0
 .end method
@@ -266,7 +266,7 @@
 
     .prologue
     .line 21
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGJ:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhX:Z
 
     return v0
 .end method
@@ -276,7 +276,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGL:Lcom/tencent/mm/ui/widget/SwipeBackLayout$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhZ:Lcom/tencent/mm/ui/widget/SwipeBackLayout$a;
 
     return-object v0
 .end method
@@ -286,7 +286,7 @@
 
     .prologue
     .line 21
-    iget v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGB:F
+    iget v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhP:F
 
     return v0
 .end method
@@ -296,7 +296,7 @@
 
     .prologue
     .line 21
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGH:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhV:Z
 
     return v0
 .end method
@@ -306,7 +306,7 @@
 
     .prologue
     .line 21
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGK:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhY:Z
 
     return v0
 .end method
@@ -316,34 +316,34 @@
 
     .prologue
     .line 21
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGG:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhU:Z
 
     return v0
 .end method
 
 
 # virtual methods
-.method public final bjR()Z
+.method public final bpP()Z
     .locals 1
 
     .prologue
     .line 118
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->bjS()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->bpQ()Z
 
     .line 119
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lEy:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mfo:Z
 
     return v0
 .end method
 
-.method public final bjS()Z
+.method public final bpQ()Z
     .locals 3
 
     .prologue
     const/4 v0, 0x0
 
     .line 145
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lEy:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mfo:Z
 
     if-nez v1, :cond_0
 
@@ -353,7 +353,7 @@
 
     .line 148
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->cRI:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->cPr:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getLeft()I
 
@@ -370,7 +370,7 @@
     if-gtz v1, :cond_1
 
     .line 149
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lEy:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mfo:Z
 
     goto :goto_0
 
@@ -390,7 +390,7 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    iget v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGE:F
+    iget v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhS:F
 
     sub-float/2addr v1, v2
 
@@ -398,12 +398,12 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->hf:F
+    iput v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->hz:F
 
     .line 248
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->hW:Landroid/support/v4/widget/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->iq:Landroid/support/v4/widget/f;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/f;->aH()Z
+    invoke-virtual {v0}, Landroid/support/v4/widget/f;->aG()Z
 
     move-result v0
 
@@ -426,7 +426,7 @@
     const/4 v1, 0x0
 
     .line 160
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->fxe:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->fGj:Z
 
     if-nez v2, :cond_0
 
@@ -441,7 +441,7 @@
 
     .line 164
     :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->bjS()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->bpQ()Z
 
     move-result v2
 
@@ -457,14 +457,14 @@
     .line 168
     :cond_1
     :try_start_0
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->hW:Landroid/support/v4/widget/f;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->iq:Landroid/support/v4/widget/f;
 
-    iget v2, v2, Landroid/support/v4/widget/f;->ij:I
+    iget v2, v2, Landroid/support/v4/widget/f;->iC:I
 
     if-ne v2, v0, :cond_2
 
     .line 169
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->hW:Landroid/support/v4/widget/f;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->iq:Landroid/support/v4/widget/f;
 
     invoke-virtual {v2, p1}, Landroid/support/v4/widget/f;->j(Landroid/view/MotionEvent;)V
     :try_end_0
@@ -479,13 +479,13 @@
     move-exception v0
 
     .line 186
-    const-string/jumbo v2, "!44@/B4Tb64lLpK0aWizdgE60RZj+63liLyIPH/0AOVXUq4="
+    const-string/jumbo v2, "MicroMsg.SwipeBackLayout"
 
     const-string/jumbo v3, "got an NullPointerException"
 
     new-array v4, v1, [Ljava/lang/Object;
 
-    invoke-static {v2, v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -495,7 +495,7 @@
     .line 172
     :cond_2
     :try_start_1
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->hW:Landroid/support/v4/widget/f;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->iq:Landroid/support/v4/widget/f;
 
     invoke-virtual {v2, p1}, Landroid/support/v4/widget/f;->i(Landroid/view/MotionEvent;)Z
 
@@ -522,13 +522,13 @@
     move-exception v0
 
     .line 190
-    const-string/jumbo v2, "!44@/B4Tb64lLpK0aWizdgE60RZj+63liLyIPH/0AOVXUq4="
+    const-string/jumbo v2, "MicroMsg.SwipeBackLayout"
 
     const-string/jumbo v3, "got an IllegalArgumentException"
 
     new-array v4, v1, [Ljava/lang/Object;
 
-    invoke-static {v2, v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -551,13 +551,13 @@
     move-exception v0
 
     .line 194
-    const-string/jumbo v2, "!44@/B4Tb64lLpK0aWizdgE60RZj+63liLyIPH/0AOVXUq4="
+    const-string/jumbo v2, "MicroMsg.SwipeBackLayout"
 
     const-string/jumbo v3, "got an ArrayIndexOutOfBoundsException"
 
     new-array v4, v1, [Ljava/lang/Object;
 
-    invoke-static {v2, v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -566,11 +566,11 @@
 .end method
 
 .method protected drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
-    .locals 6
+    .locals 7
 
     .prologue
     .line 221
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->cRI:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->cPr:Landroid/view/View;
 
     if-ne p2, v0, :cond_1
 
@@ -583,7 +583,7 @@
     move-result v1
 
     .line 225
-    iget v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->hf:F
+    iget v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->hz:F
 
     const/4 v3, 0x0
 
@@ -595,22 +595,22 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->hW:Landroid/support/v4/widget/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->iq:Landroid/support/v4/widget/f;
 
-    iget v0, v0, Landroid/support/v4/widget/f;->ij:I
+    iget v0, v0, Landroid/support/v4/widget/f;->iC:I
 
     if-eqz v0, :cond_0
 
     .line 228
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->ht:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->hM:Landroid/graphics/Rect;
 
     invoke-virtual {p2, v0}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGF:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhT:Landroid/graphics/drawable/Drawable;
 
     iget v3, v0, Landroid/graphics/Rect;->left:I
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGF:Landroid/graphics/drawable/Drawable;
+    iget-object v4, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhT:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -626,9 +626,9 @@
 
     invoke-virtual {v2, v3, v4, v5, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGF:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhT:Landroid/graphics/drawable/Drawable;
 
-    iget v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->hf:F
+    iget v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->hz:F
 
     const/high16 v3, 0x437f0000    # 255.0f
 
@@ -638,7 +638,7 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGF:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhT:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
@@ -651,6 +651,36 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method public final iX(Z)V
+    .locals 5
+
+    .prologue
+    .line 82
+    const-string/jumbo v0, "MicroMsg.SwipeBackLayout"
+
+    const-string/jumbo v1, "ashutest::markTranslucent %B"
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 83
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhW:Z
+
+    .line 84
+    return-void
 .end method
 
 .method public final init()V
@@ -668,14 +698,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->hW:Landroid/support/v4/widget/f;
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->iq:Landroid/support/v4/widget/f;
 
     .line 70
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->hW:Landroid/support/v4/widget/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->iq:Landroid/support/v4/widget/f;
 
     const/4 v1, 0x1
 
-    iput v1, v0, Landroid/support/v4/widget/f;->ix:I
+    iput v1, v0, Landroid/support/v4/widget/f;->iO:I
 
     .line 71
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->getResources()Landroid/content/res/Resources;
@@ -699,52 +729,22 @@
     mul-float/2addr v0, v2
 
     .line 74
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->hW:Landroid/support/v4/widget/f;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->iq:Landroid/support/v4/widget/f;
 
-    iput v1, v2, Landroid/support/v4/widget/f;->iv:F
+    iput v1, v2, Landroid/support/v4/widget/f;->iM:F
 
     .line 75
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->hW:Landroid/support/v4/widget/f;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->iq:Landroid/support/v4/widget/f;
 
-    iput v0, v1, Landroid/support/v4/widget/f;->iu:F
+    iput v0, v1, Landroid/support/v4/widget/f;->iL:F
 
     .line 77
-    iput v3, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGC:I
+    iput v3, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhQ:I
 
     .line 78
-    iput v3, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGD:I
+    iput v3, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhR:I
 
     .line 79
-    return-void
-.end method
-
-.method public final io(Z)V
-    .locals 5
-
-    .prologue
-    .line 82
-    const-string/jumbo v0, "!44@/B4Tb64lLpK0aWizdgE60RZj+63liLyIPH/0AOVXUq4="
-
-    const-string/jumbo v1, "ashutest::markTranslucent %B"
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 83
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGI:Z
-
-    .line 84
     return-void
 .end method
 
@@ -753,7 +753,7 @@
 
     .prologue
     .line 137
-    iput-object p0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->cRI:Landroid/view/View;
+    iput-object p0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->cPr:Landroid/view/View;
 
     .line 138
     return-void
@@ -766,23 +766,23 @@
     .line 202
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mInLayout:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->aO:Z
 
     .line 203
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->cRI:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->cPr:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
     .line 204
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->cRI:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->cPr:Landroid/view/View;
 
-    iget v1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGC:I
+    iget v1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhQ:I
 
-    iget v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGD:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhR:I
 
-    iget v3, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGC:I
+    iget v3, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhQ:I
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->cRI:Landroid/view/View;
+    iget-object v4, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->cPr:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -790,9 +790,9 @@
 
     add-int/2addr v3, v4
 
-    iget v4, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGD:I
+    iget v4, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhR:I
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->cRI:Landroid/view/View;
+    iget-object v5, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->cPr:Landroid/view/View;
 
     invoke-virtual {v5}, Landroid/view/View;->getMeasuredHeight()I
 
@@ -806,7 +806,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mInLayout:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->aO:Z
 
     .line 209
     return-void
@@ -817,7 +817,7 @@
 
     .prologue
     .line 213
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mInLayout:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->aO:Z
 
     if-nez v0, :cond_0
 
@@ -826,49 +826,5 @@
 
     .line 216
     :cond_0
-    return-void
-.end method
-
-.method public setContentView(Landroid/view/View;)V
-    .locals 0
-
-    .prologue
-    .line 132
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->cRI:Landroid/view/View;
-
-    .line 133
-    return-void
-.end method
-
-.method public setEnableGesture(Z)V
-    .locals 0
-
-    .prologue
-    .line 141
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->fxe:Z
-
-    .line 142
-    return-void
-.end method
-
-.method public setNeedRequestActivityTranslucent(Z)V
-    .locals 0
-
-    .prologue
-    .line 87
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGG:Z
-
-    .line 88
-    return-void
-.end method
-
-.method public setSwipeGestureDelegate(Lcom/tencent/mm/ui/widget/SwipeBackLayout$a;)V
-    .locals 0
-
-    .prologue
-    .line 497
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lGL:Lcom/tencent/mm/ui/widget/SwipeBackLayout$a;
-
-    .line 498
     return-void
 .end method

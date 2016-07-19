@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/MMBody">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dip">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/xq" />
+            <TextView android:textSize="@dimen/hg" android:textColor="@color/ak" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/fn" />
+        </LinearLayout>
+        <RelativeLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <Button android:id="@id/c31" android:layout_marginTop="50.0dip" android:text="@string/b5l" style="@style/MMSolidGreenLargeButton" />
+            <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/c31">
+                <Button android:layout_gravity="center_horizontal" android:id="@id/c32" android:layout_width="100.0dip" android:text="@string/b5m" style="@style/MMSolidWhiteLargeButton" />
+                <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/c33" android:paddingTop="30.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/c_y" style="@style/loginHint" />
+                    <TextView android:id="@id/c34" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/loginHint" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

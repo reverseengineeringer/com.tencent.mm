@@ -5,20 +5,20 @@ import oicq.wlogin_sdk.tools.util;
 public final class b
   extends a
 {
-  int mcp = 4;
-  int mcq = 14;
-  int mcr = 1;
-  int mcs = 20;
-  byte[] mct = new byte[2];
+  int mOt = 4;
+  int mOu = 14;
+  int mOv = 1;
+  int mOw = 20;
+  byte[] mOx = new byte[2];
   
   public b()
   {
-    mbE = 1;
+    mNI = 1;
   }
   
-  public final Boolean bot()
+  public final Boolean bvr()
   {
-    if (mco < 20) {
+    if (mOs < 20) {
       return Boolean.valueOf(false);
     }
     return Boolean.valueOf(true);
@@ -26,17 +26,17 @@ public final class b
   
   public final byte[] f(long paramLong, byte[] paramArrayOfByte)
   {
-    byte[] arrayOfByte = new byte[mcs];
-    util.m(arrayOfByte, 0, mcr);
-    util.n(arrayOfByte, 2, util.boy());
-    util.n(arrayOfByte, 6, (int)paramLong);
-    util.c(arrayOfByte, 10, util.boA());
+    byte[] arrayOfByte = new byte[mOw];
+    util.o(arrayOfByte, 0, mOv);
+    util.p(arrayOfByte, 2, util.bvw());
+    util.p(arrayOfByte, 6, (int)paramLong);
+    util.c(arrayOfByte, 10, util.bvy());
     System.arraycopy(paramArrayOfByte, 0, arrayOfByte, 14, paramArrayOfByte.length);
-    util.m(arrayOfByte, paramArrayOfByte.length + 14, 0);
-    super.sL(mbE);
-    super.A(arrayOfByte, mcs);
-    super.bos();
-    return super.boo();
+    util.o(arrayOfByte, paramArrayOfByte.length + 14, 0);
+    super.vE(mNI);
+    super.B(arrayOfByte, mOw);
+    super.bvq();
+    return super.bvm();
   }
 }
 

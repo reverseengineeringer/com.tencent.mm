@@ -1,6 +1,10 @@
-.class public final Lcom/tencent/mm/plugin/sns/ui/av;
+.class public Lcom/tencent/mm/plugin/sns/ui/av;
 .super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcom/tencent/mm/plugin/sns/e/ar$a;
+.implements Lcom/tencent/mm/plugin/sns/e/b$b;
 
 
 # annotations
@@ -12,780 +16,817 @@
 
 
 # instance fields
-.field private gGH:I
+.field protected cjq:Lcom/tencent/mm/ui/base/p;
 
-.field private gRM:Lcom/tencent/mm/plugin/sns/ui/an;
+.field protected eLC:Landroid/widget/ListView;
 
-.field private gRh:Landroid/widget/FrameLayout;
+.field private eqe:Ljava/lang/String;
 
-.field gRi:Landroid/widget/AbsoluteLayout;
+.field protected filePath:Ljava/lang/String;
 
-.field hcl:Landroid/widget/LinearLayout;
+.field protected fjR:Lcom/tencent/mm/ui/base/MMPullDownView;
 
-.field hcm:Landroid/widget/LinearLayout;
+.field public gMs:I
 
-.field private mContext:Landroid/content/Context;
+.field protected hBn:Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;
+
+.field private hBo:I
+
+.field private hBp:Z
+
+.field protected hBq:Z
+
+.field private hBr:Z
+
+.field public hBs:I
+
+.field hBt:Lcom/tencent/mm/plugin/sns/ui/av$a;
+
+.field private hBu:Ljava/lang/String;
+
+.field hBv:Lcom/tencent/mm/modelsns/a;
+
+.field protected haS:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+
+.field private jO:Landroid/app/Activity;
+
+.field private mIsFriend:Z
+
+.field private mIsSelf:Z
+
+.field private mSelfName:Ljava/lang/String;
+
+.field private mSnsSource:I
+
+.field private mUsername:Ljava/lang/String;
+
+.field protected title:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/tencent/mm/plugin/sns/ui/an;Landroid/widget/FrameLayout;)V
-    .locals 1
+.method public constructor <init>(Landroid/app/Activity;)V
+    .locals 2
 
     .prologue
-    .line 44
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
-    .line 51
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRi:Landroid/widget/AbsoluteLayout;
+    .line 141
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 147
-    const/4 v0, -0x1
+    .line 115
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->cjq:Lcom/tencent/mm/ui/base/p;
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gGH:I
+    .line 124
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBo:I
 
-    .line 45
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mContext:Landroid/content/Context;
+    .line 126
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBp:Z
 
-    .line 46
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRM:Lcom/tencent/mm/plugin/sns/ui/an;
+    .line 128
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBq:Z
 
-    .line 47
-    iput-object p3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRh:Landroid/widget/FrameLayout;
+    .line 130
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBr:Z
 
-    .line 49
+    .line 134
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gMs:I
+
+    .line 136
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBs:I
+
+    .line 704
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBv:Lcom/tencent/mm/modelsns/a;
+
+    .line 142
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
+
+    .line 143
     return-void
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/plugin/sns/ui/av;Landroid/view/View;Landroid/view/View;)V
-    .locals 11
+.method private F(Landroid/content/Intent;)V
+    .locals 7
 
     .prologue
-    const v10, 0x7f080122
+    const/4 v6, 0x1
 
-    const v9, 0x7f08000a
+    const/4 v1, 0x0
 
-    const/4 v8, 0x1
+    .line 661
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
-    const/16 v7, 0xb
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    const/4 v5, 0x0
+    move-result-object v2
 
-    .line 37
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    invoke-direct {v0, v2}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
+
+    new-instance v2, Lcom/tencent/mm/plugin/sns/ui/av$3;
+
+    invoke-direct {v2, p0}, Lcom/tencent/mm/plugin/sns/ui/av$3;-><init>(Lcom/tencent/mm/plugin/sns/ui/av;)V
+
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
+
+    .line 668
+    const-string/jumbo v0, "MicroMsg.SnsActivity"
+
+    const-string/jumbo v2, "onActivityResult CONTEXT_CHOSE_IMAGE_CONFIRM"
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 670
+    const-string/jumbo v0, "MicroMsg.SnsActivity"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "CONTEXT_CHOSE_IMAGE_CONFIRM filePath "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->filePath:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 671
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->filePath:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    .line 701
+    :goto_0
+    return-void
+
+    .line 674
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "pre_temp_sns_pic"
+
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->filePath:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v4
+
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/tencent/mm/a/g;->j([B)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/plugin/sns/ui/b/a$b;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azi()Lcom/tencent/mm/plugin/sns/h/l;
+    move-result-object v0
 
-    move-result-object v1
-
-    iget-object v2, v0, Lcom/tencent/mm/plugin/sns/ui/b/a$b;->gHs:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/plugin/sns/h/l;->vo(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/h/k;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    const/16 v2, 0x2e4
-
-    invoke-static {v2}, Lcom/tencent/mm/modelsns/a;->dQ(I)Lcom/tencent/mm/modelsns/a;
+    .line 677
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBx()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/d/ai;->l(Lcom/tencent/mm/plugin/sns/h/k;)Lcom/tencent/mm/protocal/b/aqi;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->filePath:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0}, Lcom/tencent/mm/plugin/sns/i/p;->H(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+
+    .line 678
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBx()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/data/h;->g(Lcom/tencent/mm/plugin/sns/h/k;)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v4
+    move-result-object v2
 
-    invoke-virtual {v2, v4}, Lcom/tencent/mm/modelsns/a;->jf(Ljava/lang/String;)Lcom/tencent/mm/modelsns/a;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v4
+    move-result-object v0
 
-    iget v6, v1, Lcom/tencent/mm/plugin/sns/h/k;->field_type:I
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v4, v6}, Lcom/tencent/mm/modelsns/a;->dT(I)Lcom/tencent/mm/modelsns/a;
+    move-result-object v0
 
-    move-result-object v4
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->filePath:Ljava/lang/String;
 
-    const/16 v6, 0x20
+    .line 679
+    const-string/jumbo v0, "MicroMsg.SnsActivity"
 
-    invoke-virtual {v1, v6}, Lcom/tencent/mm/plugin/sns/h/k;->lN(I)Z
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move-result v6
+    const-string/jumbo v3, "newPath "
 
-    invoke-virtual {v4, v6}, Lcom/tencent/mm/modelsns/a;->bc(Z)Lcom/tencent/mm/modelsns/a;
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v4
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->filePath:Ljava/lang/String;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/h/k;->aAv()Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v2
 
-    invoke-virtual {v4, v6}, Lcom/tencent/mm/modelsns/a;->jf(Ljava/lang/String;)Lcom/tencent/mm/modelsns/a;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v2
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v4, v1}, Lcom/tencent/mm/modelsns/a;->jf(Ljava/lang/String;)Lcom/tencent/mm/modelsns/a;
+    .line 682
+    if-eqz p1, :cond_3
 
-    move-result-object v4
+    .line 683
+    const-string/jumbo v0, "CropImage_filterId"
 
-    if-nez v3, :cond_2
+    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    move v1, v5
+    move-result v0
 
-    :goto_0
-    invoke-virtual {v4, v1}, Lcom/tencent/mm/modelsns/a;->dT(I)Lcom/tencent/mm/modelsns/a;
-
-    move-result-object v4
-
-    if-nez v3, :cond_3
-
-    move v1, v5
-
+    .line 685
     :goto_1
-    invoke-virtual {v4, v1}, Lcom/tencent/mm/modelsns/a;->dT(I)Lcom/tencent/mm/modelsns/a;
+    new-instance v2, Landroid/content/Intent;
 
-    invoke-virtual {v2}, Lcom/tencent/mm/modelsns/a;->CV()Z
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
 
-    :cond_0
-    invoke-virtual {p2, v5}, Landroid/view/View;->setVisibility(I)V
+    const-class v4, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRM:Lcom/tencent/mm/plugin/sns/ui/an;
+    invoke-direct {v2, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/an;->hcj:Landroid/view/animation/ScaleAnimation;
+    .line 686
+    const-string/jumbo v3, "KSnsPostManu"
 
-    invoke-virtual {p2, v1}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+    invoke-virtual {v2, v3, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    const v1, 0x7f070db7
+    .line 687
+    const-string/jumbo v3, "KTouchCameraTime"
 
-    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Go()J
 
-    move-result-object v1
+    move-result-wide v4
 
-    check-cast v1, Landroid/widget/LinearLayout;
+    invoke-virtual {v2, v3, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hcl:Landroid/widget/LinearLayout;
+    .line 688
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBv:Lcom/tencent/mm/modelsns/a;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hcl:Landroid/widget/LinearLayout;
+    if-eqz v3, :cond_1
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRM:Lcom/tencent/mm/plugin/sns/ui/an;
+    .line 689
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBv:Lcom/tencent/mm/modelsns/a;
 
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/an;->gRg:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    .line 690
+    const-string/jumbo v4, "intent_key_StatisticsOplog"
 
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/c/b;->hoW:Landroid/view/View$OnClickListener;
+    invoke-virtual {v3, v2, v4}, Lcom/tencent/mm/modelsns/a;->b(Landroid/content/Intent;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    .line 691
+    const/4 v3, 0x0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hcl:Landroid/widget/LinearLayout;
+    iput-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBv:Lcom/tencent/mm/modelsns/a;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRM:Lcom/tencent/mm/plugin/sns/ui/an;
-
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/an;->gYg:Landroid/view/View$OnTouchListener;
-
-    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    const v1, 0x7f070db2
-
-    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/LinearLayout;
-
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hcm:Landroid/widget/LinearLayout;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hcm:Landroid/widget/LinearLayout;
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRM:Lcom/tencent/mm/plugin/sns/ui/an;
-
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/an;->gRg:Lcom/tencent/mm/plugin/sns/ui/c/b;
-
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/c/b;->hoX:Landroid/view/View$OnClickListener;
-
-    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hcm:Landroid/widget/LinearLayout;
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRM:Lcom/tencent/mm/plugin/sns/ui/an;
-
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/an;->gYg:Landroid/view/View$OnTouchListener;
-
-    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hcm:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->setTag(Ljava/lang/Object;)V
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hcl:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->setTag(Ljava/lang/Object;)V
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hcm:Landroid/widget/LinearLayout;
-
-    const v2, 0x7f070db3
-
-    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/ImageView;
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hcl:Landroid/widget/LinearLayout;
-
-    const v3, 0x7f070db6
-
-    invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/ImageView;
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hcm:Landroid/widget/LinearLayout;
-
-    const v4, 0x7f070db4
-
-    invoke-virtual {v3, v4}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/widget/TextView;
-
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hcl:Landroid/widget/LinearLayout;
-
-    const v6, 0x7f070e21
-
-    invoke-virtual {v4, v6}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/widget/TextView;
-
-    iget-object v6, v0, Lcom/tencent/mm/plugin/sns/ui/b/a$b;->gPn:Ljava/lang/String;
-
-    invoke-static {v6}, Lcom/tencent/mm/plugin/sns/h/s;->vK(Ljava/lang/String;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_5
-
-    iget-object v6, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hcl:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v6, v5}, Landroid/widget/LinearLayout;->setEnabled(Z)V
-
-    iget-object v6, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hcm:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v6, v5}, Landroid/widget/LinearLayout;->setEnabled(Z)V
-
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v9}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v5
-
-    invoke-virtual {v4, v5}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget v4, v0, Lcom/tencent/mm/plugin/sns/ui/b/a$b;->eLV:I
-
-    if-ne v4, v7, :cond_4
-
-    const v4, 0x7f0300fc
-
-    invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    const v1, 0x7f0300f7
-
-    invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    :goto_2
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mContext:Landroid/content/Context;
-
-    const v2, 0x7f0b164c
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v9}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v3, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    :goto_3
-    iget v0, v0, Lcom/tencent/mm/plugin/sns/ui/b/a$b;->eLV:I
-
-    if-ne v0, v7, :cond_1
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hcm:Landroid/widget/LinearLayout;
-
-    const v1, 0x7f0404b4
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hcl:Landroid/widget/LinearLayout;
-
-    const v1, 0x7f04049b
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
-
+    .line 693
     :cond_1
-    return-void
+    const-string/jumbo v3, "sns_kemdia_path"
 
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/av;->filePath:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 694
+    const-string/jumbo v3, "KFilterId"
+
+    invoke-virtual {v2, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 695
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBr:Z
+
+    if-eqz v0, :cond_2
+
+    .line 696
+    const-string/jumbo v0, "Kis_take_photo"
+
+    invoke-virtual {v2, v0, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 698
     :cond_2
-    iget v1, v3, Lcom/tencent/mm/protocal/b/aqi;->jJS:I
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
+
+    const/4 v3, 0x6
+
+    invoke-virtual {v0, v2, v3}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    .line 700
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBr:Z
 
     goto/16 :goto_0
 
     :cond_3
-    iget v1, v3, Lcom/tencent/mm/protocal/b/aqi;->jJV:I
+    move v0, v1
 
-    goto/16 :goto_1
+    goto :goto_1
+.end method
 
-    :cond_4
-    const v4, 0x7f030113
+.method static synthetic a(Lcom/tencent/mm/plugin/sns/ui/av;I)I
+    .locals 0
 
-    invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setImageResource(I)V
+    .prologue
+    .line 76
+    iput p1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBo:I
 
-    const v1, 0x7f030108
+    return p1
+.end method
 
-    invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+.method static synthetic a(Lcom/tencent/mm/plugin/sns/ui/av;)Landroid/app/Activity;
+    .locals 1
 
-    goto :goto_2
+    .prologue
+    .line 76
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
 
-    :cond_5
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hcl:Landroid/widget/LinearLayout;
+    return-object v0
+.end method
 
-    invoke-virtual {v5, v8}, Landroid/widget/LinearLayout;->setEnabled(Z)V
+.method static synthetic b(Lcom/tencent/mm/plugin/sns/ui/av;)Z
+    .locals 1
 
-    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/b/a$b;->eLV:I
+    .prologue
+    .line 76
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mIsSelf:Z
 
-    if-ne v5, v7, :cond_6
+    return v0
+.end method
 
-    const v5, 0x7f04048a
+.method static synthetic c(Lcom/tencent/mm/plugin/sns/ui/av;)Lcom/tencent/mm/plugin/sns/ui/av$a;
+    .locals 1
 
-    invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setImageResource(I)V
+    .prologue
+    .line 76
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBt:Lcom/tencent/mm/plugin/sns/ui/av$a;
 
-    const v1, 0x7f040485
+    return-object v0
+.end method
 
-    invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+.method static synthetic d(Lcom/tencent/mm/plugin/sns/ui/av;)Ljava/lang/String;
+    .locals 1
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mContext:Landroid/content/Context;
+    .prologue
+    .line 76
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mUsername:Ljava/lang/String;
 
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    return-object v0
+.end method
 
-    move-result-object v1
+.method static synthetic e(Lcom/tencent/mm/plugin/sns/ui/av;)V
+    .locals 8
 
-    invoke-virtual {v1, v10}, Landroid/content/res/Resources;->getColor(I)I
+    .prologue
+    const-wide/16 v6, 0x46
 
-    move-result v1
+    .line 76
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
 
-    invoke-virtual {v3, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v10}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v4, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    :goto_4
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hcm:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v1, v8}, Landroid/widget/LinearLayout;->setEnabled(Z)V
-
-    iget v1, v0, Lcom/tencent/mm/plugin/sns/ui/b/a$b;->hnD:I
-
-    if-nez v1, :cond_7
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mContext:Landroid/content/Context;
-
-    const v2, 0x7f0b164c
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v1
 
-    invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    const v2, 0x7f030592
 
-    goto :goto_3
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
 
-    :cond_6
-    const v2, 0x7f0404b0
+    const v3, 0x7f101072
 
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
+    invoke-virtual {v0, v3}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mContext:Landroid/content/Context;
+    move-result-object v0
 
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    check-cast v0, Landroid/view/ViewGroup;
 
-    move-result-object v1
+    invoke-virtual {v1, v2, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v2, 0x7f08017c
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+    new-instance v1, Lcom/tencent/mm/ui/base/s;
 
-    move-result v1
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
 
-    invoke-virtual {v3, v1}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-direct {v1, v2}, Lcom/tencent/mm/ui/base/s;-><init>(Landroid/content/Context;)V
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
 
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    const/high16 v3, 0x43480000    # 200.0f
 
-    move-result-object v1
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$b;->a(Landroid/content/Context;F)I
 
-    const v2, 0x7f08017c
+    move-result v2
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+    const/16 v3, 0x30
 
-    move-result v1
+    const/4 v4, 0x0
 
-    invoke-virtual {v4, v1}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v1, v3, v4, v2}, Lcom/tencent/mm/ui/base/s;->setGravity(III)V
 
-    goto :goto_4
+    const-wide/16 v2, 0x3e8
 
-    :cond_7
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mContext:Landroid/content/Context;
+    iput-wide v2, v1, Lcom/tencent/mm/ui/base/s;->dXQ:J
 
-    const v2, 0x7f0b164d
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/base/s;->setView(Landroid/view/View;)V
 
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/base/s;->cancel()V
 
-    move-result-object v1
+    iget-object v0, v1, Lcom/tencent/mm/ui/base/s;->aat:Lcom/tencent/mm/sdk/platformtools/ah;
 
-    invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ah;->aZJ()V
 
-    goto/16 :goto_3
+    iget-wide v2, v1, Lcom/tencent/mm/ui/base/s;->dXQ:J
+
+    div-long/2addr v2, v6
+
+    long-to-int v0, v2
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, v1, Lcom/tencent/mm/ui/base/s;->cUl:I
+
+    iget-object v0, v1, Lcom/tencent/mm/ui/base/s;->aat:Lcom/tencent/mm/sdk/platformtools/ah;
+
+    invoke-virtual {v0, v6, v7}, Lcom/tencent/mm/sdk/platformtools/ah;->dJ(J)V
+
+    return-void
+.end method
+
+.method static synthetic f(Lcom/tencent/mm/plugin/sns/ui/av;)I
+    .locals 1
+
+    .prologue
+    .line 76
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBo:I
+
+    return v0
+.end method
+
+.method static synthetic g(Lcom/tencent/mm/plugin/sns/ui/av;)V
+    .locals 1
+
+    .prologue
+    .line 76
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBt:Lcom/tencent/mm/plugin/sns/ui/av$a;
+
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/av$a;->aFH()V
+
+    return-void
+.end method
+
+.method public static onPause()V
+    .locals 3
+
+    .prologue
+    .line 446
+    new-instance v0, Lcom/tencent/mm/e/a/io;
+
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/io;-><init>()V
+
+    .line 447
+    iget-object v1, v0, Lcom/tencent/mm/e/a/io;->aqg:Lcom/tencent/mm/e/a/io$a;
+
+    const/4 v2, 0x0
+
+    iput-boolean v2, v1, Lcom/tencent/mm/e/a/io$a;->aqh:Z
+
+    .line 448
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/sdk/c/a;->a(Lcom/tencent/mm/sdk/c/b;Landroid/os/Looper;)V
+
+    .line 449
+    const-string/jumbo v0, "MicroMsg.SnsActivity"
+
+    const-string/jumbo v1, "AppAttachDownloadUI cancel pause auto download logic"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 450
+    return-void
+.end method
+
+.method public static onResume()V
+    .locals 3
+
+    .prologue
+    .line 434
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBE()Lcom/tencent/mm/plugin/sns/e/b;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/sns/e/b;->A(IZ)V
+
+    .line 435
+    const/4 v0, 0x7
+
+    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/wallet/e;->qB(I)V
+
+    .line 436
+    new-instance v0, Lcom/tencent/mm/e/a/io;
+
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/io;-><init>()V
+
+    .line 437
+    iget-object v1, v0, Lcom/tencent/mm/e/a/io;->aqg:Lcom/tencent/mm/e/a/io$a;
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, v1, Lcom/tencent/mm/e/a/io$a;->aqh:Z
+
+    .line 438
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/sdk/c/a;->a(Lcom/tencent/mm/sdk/c/b;Landroid/os/Looper;)V
+
+    .line 439
+    const-string/jumbo v0, "MicroMsg.SnsActivity"
+
+    const-string/jumbo v1, "SnsActivity req pause auto download logic"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 440
+    return-void
 .end method
 
 
 # virtual methods
-.method public final aAV()Z
+.method public final D(IZ)V
+    .locals 1
+
+    .prologue
+    .line 859
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBt:Lcom/tencent/mm/plugin/sns/ui/av$a;
+
+    invoke-interface {v0, p1, p2}, Lcom/tencent/mm/plugin/sns/ui/av$a;->D(IZ)V
+
+    .line 860
+    return-void
+.end method
+
+.method public final X(Ljava/lang/String;Z)V
     .locals 2
 
     .prologue
-    .line 288
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRi:Landroid/widget/AbsoluteLayout;
+    .line 871
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBt:Lcom/tencent/mm/plugin/sns/ui/av$a;
+
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/av$a;->getType()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    .line 872
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->eLC:Landroid/widget/ListView;
 
     if-eqz v0, :cond_0
 
-    .line 289
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRh:Landroid/widget/FrameLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->eLC:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRi:Landroid/widget/AbsoluteLayout;
-
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
-
-    .line 290
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRi:Landroid/widget/AbsoluteLayout;
-
-    .line 291
-    const/4 v0, 0x1
-
-    .line 293
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final ad(Landroid/view/View;)Z
-    .locals 12
-
-    .prologue
-    .line 69
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/tencent/mm/plugin/sns/ui/b/a$b;
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->eLC:Landroid/widget/ListView;
+
+    invoke-virtual {v0}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
+
+    move-result-object v0
+
+    instance-of v0, v0, Lcom/tencent/mm/plugin/sns/ui/ar;
+
+    if-eqz v0, :cond_0
+
+    .line 873
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->eLC:Landroid/widget/ListView;
+
+    invoke-virtual {v0}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/plugin/sns/ui/ar;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/ar;->notifyDataSetChanged()V
+
+    .line 876
+    :cond_0
+    return-void
+.end method
+
+.method public final Y(Ljava/lang/String;Z)V
+    .locals 0
+
+    .prologue
+    .line 812
+    return-void
+.end method
+
+.method public final a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZI)V
+    .locals 0
+
+    .prologue
+    .line 368
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mSelfName:Ljava/lang/String;
+
+    .line 369
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mUsername:Ljava/lang/String;
+
+    .line 370
+    iput-object p3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->eqe:Ljava/lang/String;
+
+    .line 371
+    iput-object p4, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBu:Ljava/lang/String;
+
+    .line 372
+    iput-boolean p5, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mIsFriend:Z
+
+    .line 373
+    iput-boolean p6, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mIsSelf:Z
+
+    .line 374
+    iput p7, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mSnsSource:I
+
+    .line 375
+    return-void
+.end method
+
+.method public final aAf()V
+    .locals 1
+
+    .prologue
+    .line 816
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->haS:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->aEP()V
+
+    .line 817
+    return-void
+.end method
+
+.method public final aCi()V
+    .locals 1
+
+    .prologue
+    .line 864
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->haS:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+
+    if-eqz v0, :cond_0
+
+    .line 865
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->haS:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->aEP()V
+
+    .line 867
+    :cond_0
+    return-void
+.end method
+
+.method public final aFI()Landroid/widget/ListView;
+    .locals 1
+
+    .prologue
+    .line 978
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBt:Lcom/tencent/mm/plugin/sns/ui/av$a;
+
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/av$a;->aFI()Landroid/widget/ListView;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method protected final ff(Z)V
+    .locals 2
+
+    .prologue
+    .line 831
+    const-string/jumbo v0, "MicroMsg.SnsActivity"
+
+    const-string/jumbo v1, "snsactivty onIsAll "
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 832
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBn:Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;
+
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->ff(Z)V
+
+    .line 841
+    return-void
+.end method
+
+.method public final fo(Z)V
+    .locals 1
+
+    .prologue
+    .line 356
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBt:Lcom/tencent/mm/plugin/sns/ui/av$a;
+
+    invoke-interface {v0, p1}, Lcom/tencent/mm/plugin/sns/ui/av$a;->fo(Z)V
+
+    .line 357
+    return-void
+.end method
+
+.method protected final nB(I)Z
+    .locals 7
+
+    .prologue
+    const/4 v6, 0x2
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    .line 712
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->isSDCardAvailable()Z
+
+    move-result v0
 
     if-nez v0, :cond_0
 
-    .line 70
-    const/4 v0, 0x0
+    .line 713
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
 
-    .line 144
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/s;->ep(Landroid/content/Context;)V
+
+    move v0, v1
+
+    .line 778
     :goto_0
     return v0
 
-    .line 72
+    .line 717
     :cond_0
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    const-string/jumbo v0, "MicroMsg.SnsActivity"
 
-    move-result-object v0
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    check-cast v0, Lcom/tencent/mm/plugin/sns/ui/b/a$b;
+    const-string/jumbo v4, "selectPhoto "
 
-    .line 74
-    iget-object v2, v0, Lcom/tencent/mm/plugin/sns/ui/b/a$b;->gHs:Ljava/lang/String;
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 75
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRi:Landroid/widget/AbsoluteLayout;
-
-    if-eqz v1, :cond_3
-
-    .line 76
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRi:Landroid/widget/AbsoluteLayout;
-
-    invoke-virtual {v1}, Landroid/widget/AbsoluteLayout;->getTag()Ljava/lang/Object;
-
-    move-result-object v1
-
-    instance-of v1, v1, Lcom/tencent/mm/plugin/sns/ui/av$a;
-
-    if-eqz v1, :cond_2
-
-    .line 77
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRi:Landroid/widget/AbsoluteLayout;
-
-    invoke-virtual {v1}, Landroid/widget/AbsoluteLayout;->getTag()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/tencent/mm/plugin/sns/ui/av$a;
-
-    .line 78
-    iget-object v3, v1, Lcom/tencent/mm/plugin/sns/ui/av$a;->gRB:Ljava/lang/String;
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    .line 79
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sns/ui/av$a;->gFN:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRM:Lcom/tencent/mm/plugin/sns/ui/an;
-
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/an;->hck:Landroid/view/animation/ScaleAnimation;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRM:Lcom/tencent/mm/plugin/sns/ui/an;
-
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/an;->hck:Landroid/view/animation/ScaleAnimation;
-
-    new-instance v2, Lcom/tencent/mm/plugin/sns/ui/av$2;
-
-    invoke-direct {v2, p0, v0}, Lcom/tencent/mm/plugin/sns/ui/av$2;-><init>(Lcom/tencent/mm/plugin/sns/ui/av;Landroid/view/View;)V
-
-    invoke-virtual {v1, v2}, Landroid/view/animation/ScaleAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
-
-    .line 80
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    .line 82
-    :cond_1
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/av;->aAV()Z
-
-    .line 84
-    :cond_2
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRi:Landroid/widget/AbsoluteLayout;
-
-    .line 86
-    :cond_3
-    new-instance v1, Landroid/widget/AbsoluteLayout;
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mContext:Landroid/content/Context;
-
-    invoke-direct {v1, v3}, Landroid/widget/AbsoluteLayout;-><init>(Landroid/content/Context;)V
-
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRi:Landroid/widget/AbsoluteLayout;
-
-    .line 87
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRi:Landroid/widget/AbsoluteLayout;
-
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/k;->H(Landroid/view/View;)V
-
-    .line 88
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRi:Landroid/widget/AbsoluteLayout;
-
-    const v3, 0x7f070da4
-
-    invoke-virtual {v1, v3}, Landroid/widget/AbsoluteLayout;->setId(I)V
-
-    .line 89
-    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/4 v3, -0x1
-
-    const/4 v4, -0x1
-
-    invoke-direct {v1, v3, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    .line 91
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRh:Landroid/widget/FrameLayout;
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRi:Landroid/widget/AbsoluteLayout;
-
-    invoke-virtual {v1, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
-
-    .line 93
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mContext:Landroid/content/Context;
-
-    const/high16 v3, 0x43400000    # 192.0f
-
-    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$b;->a(Landroid/content/Context;F)I
-
-    move-result v1
-
-    .line 94
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mContext:Landroid/content/Context;
-
-    const/high16 v4, 0x42980000    # 76.0f
-
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$b;->a(Landroid/content/Context;F)I
-
-    move-result v3
-
-    .line 95
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mContext:Landroid/content/Context;
-
-    const/high16 v5, 0x41a00000    # 20.0f
-
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$b;->a(Landroid/content/Context;F)I
-
-    .line 96
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mContext:Landroid/content/Context;
-
-    const/high16 v5, 0x41400000    # 12.0f
-
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$b;->a(Landroid/content/Context;F)I
-
-    move-result v4
-
-    .line 98
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mContext:Landroid/content/Context;
-
-    const/high16 v6, 0x42200000    # 40.0f
-
-    invoke-static {v5, v6}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$b;->a(Landroid/content/Context;F)I
-
-    move-result v5
-
-    .line 102
-    iget-object v6, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mContext:Landroid/content/Context;
-
-    invoke-static {v6}, Lcom/tencent/mm/ui/p;->ee(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v6
-
-    const v7, 0x7f0a0475
-
-    const/4 v8, 0x0
-
-    invoke-virtual {v6, v7, v8}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v6
-
-    .line 103
-    new-instance v7, Landroid/graphics/Rect;
-
-    invoke-direct {v7}, Landroid/graphics/Rect;-><init>()V
-
-    .line 104
-    const/4 v7, 0x2
-
-    new-array v7, v7, [I
-
-    .line 107
-    iget-object v8, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mContext:Landroid/content/Context;
-
-    invoke-static {v8}, Lcom/tencent/mm/pluginsdk/e;->cI(Landroid/content/Context;)I
-
-    move-result v8
-
-    .line 109
-    invoke-virtual {p1, v7}, Landroid/view/View;->getLocationInWindow([I)V
-
-    .line 110
-    const-string/jumbo v9, "!44@/B4Tb64lLpKrDzi69O5I2VKZ/0n8YfeBybUjv0aqOuw="
-
-    new-instance v10, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v11, "addCommentView getLocationInWindow "
-
-    invoke-direct {v10, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/4 v11, 0x0
-
-    aget v11, v7, v11
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    const-string/jumbo v11, "  "
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    const/4 v11, 0x1
-
-    aget v11, v7, v11
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    const-string/jumbo v11, " height: "
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    invoke-virtual {v10, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    const-string/jumbo v11, " height_hardcode:"
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    invoke-virtual {v10, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -793,108 +834,1681 @@
 
     move-result-object v3
 
-    invoke-static {v9, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 116
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mContext:Landroid/content/Context;
+    .line 718
+    if-ne p1, v6, :cond_1
 
-    invoke-static {v3}, Lcom/tencent/mm/pluginsdk/e;->cJ(Landroid/content/Context;)I
+    .line 719
+    new-instance v0, Landroid/content/Intent;
 
-    move-result v3
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    iput v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gGH:I
+    .line 720
+    const-string/jumbo v1, "username"
 
-    .line 122
-    new-instance v3, Landroid/widget/AbsoluteLayout$LayoutParams;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mSelfName:Ljava/lang/String;
 
-    const/4 v9, -0x2
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    const/4 v10, -0x2
+    .line 722
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
 
-    const/4 v11, 0x0
+    const-class v3, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
 
-    aget v11, v7, v11
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    sub-int v1, v11, v1
+    .line 723
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
 
-    add-int/2addr v1, v4
+    const/4 v3, 0x7
 
-    const/4 v4, 0x1
+    invoke-virtual {v1, v0, v3}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    aget v4, v7, v4
+    move v0, v2
 
-    iget v7, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gGH:I
+    .line 724
+    goto :goto_0
 
-    sub-int/2addr v4, v7
+    .line 728
+    :cond_1
+    if-ne p1, v2, :cond_3
 
-    sub-int/2addr v4, v8
-
-    div-int/lit8 v5, v5, 0x2
-
-    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v7
-
-    div-int/lit8 v7, v7, 0x2
-
-    sub-int/2addr v5, v7
-
-    sub-int/2addr v4, v5
-
-    invoke-direct {v3, v9, v10, v1, v4}, Landroid/widget/AbsoluteLayout$LayoutParams;-><init>(IIII)V
-
-    .line 126
-    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/av$a;
-
-    invoke-direct {v1, p0, v2, v6}, Lcom/tencent/mm/plugin/sns/ui/av$a;-><init>(Lcom/tencent/mm/plugin/sns/ui/av;Ljava/lang/String;Landroid/view/View;)V
-
-    .line 127
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRi:Landroid/widget/AbsoluteLayout;
-
-    invoke-virtual {v2, v1}, Landroid/widget/AbsoluteLayout;->setTag(Ljava/lang/Object;)V
-
-    .line 128
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gRi:Landroid/widget/AbsoluteLayout;
-
-    invoke-virtual {v1, v6, v3}, Landroid/widget/AbsoluteLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 132
-    iget v0, v0, Lcom/tencent/mm/plugin/sns/ui/b/a$b;->eLV:I
-
-    const/16 v1, 0xb
-
-    if-ne v0, v1, :cond_4
-
-    .line 133
-    const v0, 0x7f070db1
-
-    invoke-virtual {v6, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 729
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    const v1, 0x7f040480
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
+    move-result-object v0
 
-    .line 136
+    const v3, 0x10b21
+
+    invoke-virtual {v0, v3, v5}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/lang/Integer;I)I
+
+    move-result v3
+
+    .line 730
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
+
+    move-result-object v0
+
+    const v4, 0x10b22
+
+    invoke-virtual {v0, v4, v5}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/lang/Integer;I)I
+
+    move-result v0
+
+    .line 731
+    iget-boolean v4, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBp:Z
+
+    if-nez v4, :cond_2
+
+    const/4 v4, 0x3
+
+    if-ge v3, v4, :cond_2
+
+    if-nez v0, :cond_2
+
+    .line 732
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBp:Z
+
+    .line 733
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
+
+    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/av$4;
+
+    invoke-direct {v1, p0, p1}, Lcom/tencent/mm/plugin/sns/ui/av$4;-><init>(Lcom/tencent/mm/plugin/sns/ui/av;I)V
+
+    new-instance v3, Lcom/tencent/mm/ui/base/h$a;
+
+    invoke-direct {v3, v0}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
+
+    const v4, 0x7f081317
+
+    invoke-virtual {v3, v4}, Lcom/tencent/mm/ui/base/h$a;->ss(I)Lcom/tencent/mm/ui/base/h$a;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const v5, 0x7f081318
+
+    invoke-virtual {v0, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string/jumbo v5, "\n\n"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const v5, 0x7f081319
+
+    invoke-virtual {v0, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Lcom/tencent/mm/ui/base/h$a;->IN(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+
+    const v0, 0x7f081316
+
+    invoke-virtual {v3, v0, v1}, Lcom/tencent/mm/ui/base/h$a;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
+
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/aw$1;
+
+    invoke-direct {v0}, Lcom/tencent/mm/plugin/sns/ui/aw$1;-><init>()V
+
+    invoke-virtual {v3, v0}, Lcom/tencent/mm/ui/base/h$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/tencent/mm/ui/base/h$a;
+
+    invoke-virtual {v3}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->show()V
+
+    move v0, v2
+
+    .line 743
+    goto/16 :goto_0
+
+    .line 746
+    :cond_2
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3, v1}, Landroid/app/Activity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "gallery"
+
+    const-string/jumbo v3, "1"
+
+    invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 748
+    const-string/jumbo v1, "0"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 749
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
+
+    invoke-static {v0, v6, v5}, Lcom/tencent/mm/pluginsdk/ui/tools/k;->a(Landroid/app/Activity;ILandroid/content/Intent;)Z
+
+    :cond_3
+    :goto_1
+    move v0, v2
+
+    .line 778
+    goto/16 :goto_0
+
+    .line 751
     :cond_4
-    const/16 v0, 0x8
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
 
-    invoke-virtual {v6, v0}, Landroid/view/View;->setVisibility(I)V
+    const/16 v1, 0xe
 
-    .line 137
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    const/16 v3, 0x9
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    const/4 v4, 0x4
 
-    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/av$1;
+    invoke-static {v0, v1, v3, v4, v5}, Lcom/tencent/mm/pluginsdk/ui/tools/k;->a(Landroid/app/Activity;IIILandroid/content/Intent;)V
 
-    invoke-direct {v1, p0, p1, v6}, Lcom/tencent/mm/plugin/sns/ui/av$1;-><init>(Lcom/tencent/mm/plugin/sns/ui/av;Landroid/view/View;Landroid/view/View;)V
+    goto :goto_1
+.end method
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+.method protected final onActivityResult(IILandroid/content/Intent;)V
+    .locals 10
 
-    .line 144
+    .prologue
+    .line 454
+    const-string/jumbo v0, "MicroMsg.SnsActivity"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "onAcvityResult requestCode:"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 455
+    const/4 v0, -0x1
+
+    if-eq p2, v0, :cond_2
+
+    .line 456
+    const/4 v0, 0x5
+
+    if-eq p1, v0, :cond_0
+
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_0
+
+    const/4 v0, 0x4
+
+    if-ne p1, v0, :cond_1
+
+    .line 457
+    :cond_0
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
+
+    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/av$12;
+
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/av$12;-><init>(Lcom/tencent/mm/plugin/sns/ui/av;)V
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
+
+    .line 659
+    :cond_1
+    :goto_0
+    :pswitch_0
+    return-void
+
+    .line 466
+    :cond_2
+    packed-switch p1, :pswitch_data_0
+
+    .line 656
+    :pswitch_1
+    const-string/jumbo v0, "MicroMsg.SnsActivity"
+
+    const-string/jumbo v1, "onActivityResult: not found this requestCode"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 468
+    :pswitch_2
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBx()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, p3, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/k;->a(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->filePath:Ljava/lang/String;
+
+    .line 469
+    const-string/jumbo v0, "MicroMsg.SnsActivity"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "onActivityResult CONTEXT_TAKE_PHOTO  filePath"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/av;->filePath:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 470
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->filePath:Ljava/lang/String;
+
+    if-eqz v0, :cond_1
+
+    .line 474
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
+
+    move-result-object v0
+
+    const v1, 0x10b28
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/lang/Integer;I)I
+
+    move-result v0
+
+    .line 475
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
+
+    move-result-object v1
+
+    const v2, 0x10b28
+
+    add-int/lit8 v0, v0, 0x1
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
+
+    .line 489
     const/4 v0, 0x1
 
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBr:Z
+
+    .line 490
+    invoke-direct {p0, p3}, Lcom/tencent/mm/plugin/sns/ui/av;->F(Landroid/content/Intent;)V
+
+    goto :goto_0
+
+    .line 496
+    :pswitch_3
+    if-eqz p3, :cond_1
+
+    .line 499
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
+
+    move-result-object v0
+
+    const v1, 0x10b29
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/lang/Integer;I)I
+
+    move-result v0
+
+    .line 500
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
+
+    move-result-object v1
+
+    const v2, 0x10b29
+
+    add-int/lit8 v0, v0, 0x1
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
+
+    .line 502
+    new-instance v3, Landroid/content/Intent;
+
+    invoke-direct {v3}, Landroid/content/Intent;-><init>()V
+
+    .line 504
+    const-string/jumbo v0, "CropImageMode"
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 505
+    const-string/jumbo v0, "CropImage_Filter"
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 506
+    const-string/jumbo v0, "CropImage_DirectlyIntoFilter"
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 513
+    sget-object v0, Lcom/tencent/mm/plugin/sns/b/a;->cjo:Lcom/tencent/mm/pluginsdk/g;
+
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
+
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBx()Ljava/lang/String;
+
+    move-result-object v4
+
+    const/4 v5, 0x4
+
+    new-instance v6, Lcom/tencent/mm/plugin/sns/ui/av$13;
+
+    invoke-direct {v6, p0}, Lcom/tencent/mm/plugin/sns/ui/av$13;-><init>(Lcom/tencent/mm/plugin/sns/ui/av;)V
+
+    move-object v2, p3
+
+    invoke-interface/range {v0 .. v6}, Lcom/tencent/mm/pluginsdk/g;->a(Landroid/app/Activity;Landroid/content/Intent;Landroid/content/Intent;Ljava/lang/String;ILcom/tencent/mm/ui/tools/a$a;)V
+
     goto/16 :goto_0
+
+    .line 524
+    :pswitch_4
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
+
+    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/av$2;
+
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/av$2;-><init>(Lcom/tencent/mm/plugin/sns/ui/av;)V
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
+
+    .line 531
+    const-string/jumbo v0, "CropImage_OutputPath_List"
+
+    invoke-virtual {p3, v0}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    .line 532
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    .line 533
+    :cond_3
+    const-string/jumbo v0, "MicroMsg.SnsActivity"
+
+    const-string/jumbo v1, "no image selected"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    .line 537
+    :cond_4
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    .line 538
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :cond_5
+    :goto_1
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 539
+    invoke-static {v0}, Lcom/tencent/mm/compatible/util/Exif;->fromFile(Ljava/lang/String;)Lcom/tencent/mm/compatible/util/Exif;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/tencent/mm/compatible/util/Exif;->getLocation()Lcom/tencent/mm/compatible/util/Exif$a;
+
+    move-result-object v4
+
+    .line 540
+    if-eqz v4, :cond_5
+
+    .line 541
+    const-string/jumbo v5, "%s\n%f\n%f"
+
+    const/4 v6, 0x3
+
+    new-array v6, v6, [Ljava/lang/Object;
+
+    const/4 v7, 0x0
+
+    aput-object v0, v6, v7
+
+    const/4 v0, 0x1
+
+    iget-wide v8, v4, Lcom/tencent/mm/compatible/util/Exif$a;->latitude:D
+
+    invoke-static {v8, v9}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v7
+
+    aput-object v7, v6, v0
+
+    const/4 v0, 0x2
+
+    iget-wide v8, v4, Lcom/tencent/mm/compatible/util/Exif$a;->longitude:D
+
+    invoke-static {v8, v9}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v4
+
+    aput-object v4, v6, v0
+
+    invoke-static {v5, v6}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    .line 544
+    :cond_6
+    const-string/jumbo v0, "isTakePhoto"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p3, v0, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBr:Z
+
+    .line 547
+    new-instance v0, Landroid/content/Intent;
+
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
+
+    const-class v4, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+
+    invoke-direct {v0, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 548
+    const-string/jumbo v3, "KSnsPostManu"
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 549
+    const-string/jumbo v3, "KTouchCameraTime"
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Go()J
+
+    move-result-wide v4
+
+    invoke-virtual {v0, v3, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+
+    .line 550
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBv:Lcom/tencent/mm/modelsns/a;
+
+    if-eqz v3, :cond_7
+
+    .line 551
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBv:Lcom/tencent/mm/modelsns/a;
+
+    .line 552
+    const-string/jumbo v4, "intent_key_StatisticsOplog"
+
+    invoke-virtual {v3, v0, v4}, Lcom/tencent/mm/modelsns/a;->b(Landroid/content/Intent;Ljava/lang/String;)V
+
+    .line 553
+    const/4 v3, 0x0
+
+    iput-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBv:Lcom/tencent/mm/modelsns/a;
+
+    .line 555
+    :cond_7
+    const-string/jumbo v3, "CropImage_filterId"
+
+    const/4 v4, 0x0
+
+    invoke-virtual {p3, v3, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v3
+
+    .line 556
+    const-string/jumbo v4, "sns_kemdia_path_list"
+
+    invoke-virtual {v0, v4, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
+
+    .line 557
+    const-string/jumbo v1, "KFilterId"
+
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 558
+    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBr:Z
+
+    if-eqz v1, :cond_8
+
+    .line 559
+    const-string/jumbo v1, "Kis_take_photo"
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 561
+    :cond_8
+    const-string/jumbo v1, "sns_media_latlong_list"
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putStringArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
+
+    .line 562
+    const-string/jumbo v1, "MicroMsg.SnsActivity"
+
+    const-string/jumbo v2, "shared type %d"
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    const-string/jumbo v5, "Ksnsupload_type"
+
+    const/4 v6, -0x1
+
+    invoke-virtual {v0, v5, v6}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v5
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 563
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
+
+    const/4 v2, 0x6
+
+    invoke-virtual {v1, v0, v2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    goto/16 :goto_0
+
+    .line 568
+    :pswitch_5
+    if-eqz p3, :cond_1
+
+    .line 571
+    const-string/jumbo v0, "CropImage_OutputPath"
+
+    invoke-virtual {p3, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->filePath:Ljava/lang/String;
+
+    .line 572
+    invoke-direct {p0, p3}, Lcom/tencent/mm/plugin/sns/ui/av;->F(Landroid/content/Intent;)V
+
+    goto/16 :goto_0
+
+    .line 577
+    :pswitch_6
+    const-string/jumbo v0, "MicroMsg.SnsActivity"
+
+    const-string/jumbo v1, "onActivityResult CONTEXT_UPLOAD_MEDIA"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 578
+    if-eqz p3, :cond_1
+
+    .line 581
+    const-string/jumbo v0, "sns_local_id"
+
+    const/4 v1, -0x1
+
+    invoke-virtual {p3, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v0
+
+    .line 582
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBt:Lcom/tencent/mm/plugin/sns/ui/av$a;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-interface {v1, v0, v2, v3}, Lcom/tencent/mm/plugin/sns/ui/av$a;->a(ILjava/util/List;Ljava/util/List;)V
+
+    .line 583
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBF()Lcom/tencent/mm/plugin/sns/e/ar;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/ar;->aCf()V
+
+    goto/16 :goto_0
+
+    .line 588
+    :pswitch_7
+    const-string/jumbo v0, "MicroMsg.SnsActivity"
+
+    const-string/jumbo v1, "onActivityResult CONTEXT_CHANGE_BG"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 589
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->haS:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->aEP()V
+
+    .line 590
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBF()Lcom/tencent/mm/plugin/sns/e/ar;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/ar;->aCf()V
+
+    goto/16 :goto_0
+
+    .line 595
+    :pswitch_8
+    if-eqz p3, :cond_1
+
+    .line 598
+    const-string/jumbo v0, "MicroMsg.SnsActivity"
+
+    const-string/jumbo v1, "onActivityResult CONTEXT_GALLERY_OP"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 599
+    const-string/jumbo v0, "sns_cmd_list"
+
+    invoke-virtual {p3, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;
+
+    .line 600
+    if-eqz v0, :cond_1
+
+    .line 601
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBt:Lcom/tencent/mm/plugin/sns/ui/av$a;
+
+    const/4 v2, -0x1
+
+    iget-object v3, v0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOB:Ljava/util/List;
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOC:Ljava/util/List;
+
+    invoke-interface {v1, v2, v3, v0}, Lcom/tencent/mm/plugin/sns/ui/av$a;->a(ILjava/util/List;Ljava/util/List;)V
+
+    goto/16 :goto_0
+
+    .line 607
+    :pswitch_9
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBF()Lcom/tencent/mm/plugin/sns/e/ar;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/ar;->aCf()V
+
+    .line 608
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->eLC:Landroid/widget/ListView;
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$c;->a(Landroid/widget/ListView;)V
+
+    goto/16 :goto_0
+
+    .line 613
+    :pswitch_a
+    if-eqz p3, :cond_1
+
+    .line 616
+    const/4 v0, -0x1
+
+    if-ne p2, v0, :cond_1
+
+    .line 617
+    invoke-virtual {p3}, Landroid/content/Intent;->getData()Landroid/net/Uri;
+
+    move-result-object v1
+
+    .line 618
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    invoke-virtual/range {v0 .. v5}, Landroid/app/Activity;->managedQuery(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v0
+
+    .line 619
+    invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 620
+    const-string/jumbo v1, "_id"
+
+    invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-interface {v0, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 621
+    new-instance v1, Landroid/content/Intent;
+
+    const-string/jumbo v2, "android.intent.action.EDIT"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v4, "content://com.android.contacts/contacts/"
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-direct {v1, v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    .line 622
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
+
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+
+    goto/16 :goto_0
+
+    .line 633
+    :pswitch_b
+    const-string/jumbo v0, "sns_gallery_op_id"
+
+    const/4 v1, -0x1
+
+    invoke-virtual {p3, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v0
+
+    .line 634
+    if-lez v0, :cond_1
+
+    .line 635
+    const-string/jumbo v1, "MicroMsg.SnsActivity"
+
+    const-string/jumbo v2, "notify cause by del item"
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 636
+    new-instance v1, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;
+
+    invoke-direct {v1}, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;-><init>()V
+
+    .line 637
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->mu(I)V
+
+    .line 638
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBt:Lcom/tencent/mm/plugin/sns/ui/av$a;
+
+    const/4 v2, -0x1
+
+    iget-object v3, v1, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOB:Ljava/util/List;
+
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOC:Ljava/util/List;
+
+    invoke-interface {v0, v2, v3, v1}, Lcom/tencent/mm/plugin/sns/ui/av$a;->a(ILjava/util/List;Ljava/util/List;)V
+
+    goto/16 :goto_0
+
+    .line 644
+    :pswitch_c
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBL()Lcom/tencent/mm/plugin/sns/i/h;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/h;->Nj()Z
+
+    goto/16 :goto_0
+
+    .line 466
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_3
+        :pswitch_1
+        :pswitch_5
+        :pswitch_2
+        :pswitch_6
+        :pswitch_7
+        :pswitch_8
+        :pswitch_9
+        :pswitch_a
+        :pswitch_1
+        :pswitch_b
+        :pswitch_c
+        :pswitch_4
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onCreate()V
+    .locals 9
+
+    .prologue
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 150
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+
+    move-result-object v0
+
+    .line 151
+    invoke-virtual {v0}, Landroid/view/Display;->getHeight()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->gMs:I
+
+    .line 153
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/g;->start()V
+
+    .line 160
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBt:Lcom/tencent/mm/plugin/sns/ui/av$a;
+
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/av$a;->aFI()Landroid/widget/ListView;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->eLC:Landroid/widget/ListView;
+
+    .line 162
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->eLC:Landroid/widget/ListView;
+
+    new-instance v3, Lcom/tencent/mm/plugin/sns/ui/av$1;
+
+    invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sns/ui/av$1;-><init>(Lcom/tencent/mm/plugin/sns/ui/av;)V
+
+    invoke-virtual {v0, v3}, Landroid/widget/ListView;->post(Ljava/lang/Runnable;)Z
+
+    .line 171
+    const-string/jumbo v3, "MicroMsg.SnsActivity"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v0, "list is null ? "
+
+    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->eLC:Landroid/widget/ListView;
+
+    if-eqz v0, :cond_2
+
+    move v0, v1
+
+    :goto_0
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v3, v0}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 172
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->eLC:Landroid/widget/ListView;
+
+    invoke-virtual {v0, v2}, Landroid/widget/ListView;->setScrollingCacheEnabled(Z)V
+
+    .line 174
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
+
+    invoke-direct {v0, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->haS:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+
+    .line 177
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->haS:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+
+    new-instance v3, Lcom/tencent/mm/plugin/sns/ui/av$6;
+
+    invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sns/ui/av$6;-><init>(Lcom/tencent/mm/plugin/sns/ui/av;)V
+
+    iput-object v3, v0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsO:Lcom/tencent/mm/plugin/sns/ui/SnsHeader$a;
+
+    .line 219
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;
+
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
+
+    invoke-direct {v0, v3}, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBn:Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;
+
+    .line 228
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->eLC:Landroid/widget/ListView;
+
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->haS:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+
+    invoke-virtual {v0, v3}, Landroid/widget/ListView;->addHeaderView(Landroid/view/View;)V
+
+    .line 229
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->eLC:Landroid/widget/ListView;
+
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBn:Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;
+
+    invoke-virtual {v0, v3}, Landroid/widget/ListView;->addFooterView(Landroid/view/View;)V
+
+    .line 231
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->eLC:Landroid/widget/ListView;
+
+    new-instance v3, Lcom/tencent/mm/plugin/sns/ui/av$7;
+
+    invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sns/ui/av$7;-><init>(Lcom/tencent/mm/plugin/sns/ui/av;)V
+
+    invoke-virtual {v0, v3}, Landroid/widget/ListView;->setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
+
+    .line 278
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBt:Lcom/tencent/mm/plugin/sns/ui/av$a;
+
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/av$a;->aFJ()Lcom/tencent/mm/ui/base/MMPullDownView;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->fjR:Lcom/tencent/mm/ui/base/MMPullDownView;
+
+    .line 279
+    const-string/jumbo v3, "MicroMsg.SnsActivity"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v0, "pullDownView is null ? "
+
+    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->fjR:Lcom/tencent/mm/ui/base/MMPullDownView;
+
+    if-eqz v0, :cond_3
+
+    move v0, v1
+
+    :goto_1
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v3, v0}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 281
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->fjR:Lcom/tencent/mm/ui/base/MMPullDownView;
+
+    new-instance v3, Lcom/tencent/mm/plugin/sns/ui/av$8;
+
+    invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sns/ui/av$8;-><init>(Lcom/tencent/mm/plugin/sns/ui/av;)V
+
+    iput-object v3, v0, Lcom/tencent/mm/ui/base/MMPullDownView;->leM:Lcom/tencent/mm/ui/base/MMPullDownView$g;
+
+    .line 289
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->fjR:Lcom/tencent/mm/ui/base/MMPullDownView;
+
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/base/MMPullDownView;->ia(Z)V
+
+    .line 290
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->fjR:Lcom/tencent/mm/ui/base/MMPullDownView;
+
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/base/MMPullDownView;->hY(Z)V
+
+    .line 292
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->fjR:Lcom/tencent/mm/ui/base/MMPullDownView;
+
+    new-instance v3, Lcom/tencent/mm/plugin/sns/ui/av$9;
+
+    invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sns/ui/av$9;-><init>(Lcom/tencent/mm/plugin/sns/ui/av;)V
+
+    iput-object v3, v0, Lcom/tencent/mm/ui/base/MMPullDownView;->leY:Lcom/tencent/mm/ui/base/MMPullDownView$c;
+
+    .line 307
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->fjR:Lcom/tencent/mm/ui/base/MMPullDownView;
+
+    new-instance v3, Lcom/tencent/mm/plugin/sns/ui/av$10;
+
+    invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sns/ui/av$10;-><init>(Lcom/tencent/mm/plugin/sns/ui/av;)V
+
+    iput-object v3, v0, Lcom/tencent/mm/ui/base/MMPullDownView;->leZ:Lcom/tencent/mm/ui/base/MMPullDownView$d;
+
+    .line 318
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->fjR:Lcom/tencent/mm/ui/base/MMPullDownView;
+
+    iput-boolean v2, v0, Lcom/tencent/mm/ui/base/MMPullDownView;->leX:Z
+
+    .line 319
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->fjR:Lcom/tencent/mm/ui/base/MMPullDownView;
+
+    new-instance v3, Lcom/tencent/mm/plugin/sns/ui/av$11;
+
+    invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sns/ui/av$11;-><init>(Lcom/tencent/mm/plugin/sns/ui/av;)V
+
+    iput-object v3, v0, Lcom/tencent/mm/ui/base/MMPullDownView;->leN:Lcom/tencent/mm/ui/base/MMPullDownView$e;
+
+    .line 328
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->fjR:Lcom/tencent/mm/ui/base/MMPullDownView;
+
+    iput-boolean v1, v0, Lcom/tencent/mm/ui/base/MMPullDownView;->lfp:Z
+
+    .line 329
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->fjR:Lcom/tencent/mm/ui/base/MMPullDownView;
+
+    const-string/jumbo v3, "#f4f4f4"
+
+    invoke-static {v3}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+
+    move-result v3
+
+    iput v3, v0, Lcom/tencent/mm/ui/base/MMPullDownView;->bgColor:I
+
+    iget v3, v0, Lcom/tencent/mm/ui/base/MMPullDownView;->bgColor:I
+
+    iput v3, v0, Lcom/tencent/mm/ui/base/MMPullDownView;->lfr:I
+
+    .line 331
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string/jumbo v3, "sns_title"
+
+    invoke-virtual {v0, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->title:Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/av;->haS:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mUsername:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mSelfName:Ljava/lang/String;
+
+    :goto_2
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mSelfName:Ljava/lang/String;
+
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/av;->eqe:Ljava/lang/String;
+
+    iget-object v6, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBu:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    if-nez v4, :cond_5
+
+    :cond_0
+    const-string/jumbo v0, "MicroMsg.SnsHeader"
+
+    const-string/jumbo v2, "userName or selfName is null "
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_3
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->haS:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBt:Lcom/tencent/mm/plugin/sns/ui/av$a;
+
+    invoke-interface {v2}, Lcom/tencent/mm/plugin/sns/ui/av$a;->getType()I
+
+    move-result v2
+
+    iput v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->type:I
+
+    if-ne v2, v1, :cond_1
+
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsN:Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;
+
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;->hjC:Landroid/widget/TextView;
+
+    if-eqz v1, :cond_1
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsN:Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;->hjC:Landroid/widget/TextView;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->haS:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->aEP()V
+
+    .line 332
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0xb
+
+    if-ge v0, v1, :cond_9
+
+    const-string/jumbo v0, "MicroMsg.SnsActivity"
+
+    const-string/jumbo v1, "sdk not support dragdrop event"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 335
+    :goto_4
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBF()Lcom/tencent/mm/plugin/sns/e/ar;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/e/ar;->bdA:Ljava/util/Set;
+
+    invoke-interface {v0, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget v0, Lcom/tencent/mm/plugin/sns/e/ar;->gTu:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    sput v0, Lcom/tencent/mm/plugin/sns/e/ar;->gTu:I
+
+    .line 336
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBE()Lcom/tencent/mm/plugin/sns/e/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sns/e/b;->a(Lcom/tencent/mm/plugin/sns/e/b$b;)V
+
+    .line 338
+    return-void
+
+    :cond_2
+    move v0, v2
+
+    .line 171
+    goto/16 :goto_0
+
+    :cond_3
+    move v0, v2
+
+    .line 279
+    goto/16 :goto_1
+
+    .line 331
+    :cond_4
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->mUsername:Ljava/lang/String;
+
+    goto :goto_2
+
+    :cond_5
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v7
+
+    iput-object v7, v3, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->UX:Ljava/lang/String;
+
+    invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v7
+
+    iput-object v7, v3, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->baY:Ljava/lang/String;
+
+    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    iput-boolean v4, v3, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->ajw:Z
+
+    const-string/jumbo v4, "MicroMsg.SnsHeader"
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v8, "userNamelen "
+
+    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    const-string/jumbo v8, "  "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v4, v7}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v4, v3, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsN:Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;
+
+    iget-object v4, v4, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;->cvE:Landroid/widget/TextView;
+
+    invoke-virtual {v4, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v4, v3, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsN:Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;
+
+    if-eqz v4, :cond_6
+
+    iget-object v4, v3, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsN:Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;
+
+    iget-object v4, v4, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;->ckm:Landroid/widget/ImageView;
+
+    if-nez v4, :cond_8
+
+    :cond_6
+    :goto_5
+    if-eqz v0, :cond_7
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-lez v0, :cond_7
+
+    invoke-static {v5}, Lcom/tencent/mm/plugin/sns/data/i;->t(Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v4, v3, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsN:Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;
+
+    iget-object v4, v4, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;->cvE:Landroid/widget/TextView;
+
+    iget-object v5, v3, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->context:Landroid/content/Context;
+
+    invoke-static {v5, v0}, Lcom/tencent/mm/pluginsdk/ui/d/e;->a(Landroid/content/Context;Ljava/lang/CharSequence;)Landroid/text/SpannableString;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, v3, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsN:Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;->hjC:Landroid/widget/TextView;
+
+    iget-object v4, v3, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->context:Landroid/content/Context;
+
+    iget-object v5, v3, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsN:Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;
+
+    iget-object v5, v5, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;->hjC:Landroid/widget/TextView;
+
+    invoke-virtual {v5}, Landroid/widget/TextView;->getTextSize()F
+
+    move-result v5
+
+    invoke-static {v4, v6, v5}, Lcom/tencent/mm/pluginsdk/ui/d/e;->a(Landroid/content/Context;Ljava/lang/CharSequence;F)Landroid/text/SpannableString;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_7
+    iget-object v0, v3, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsN:Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;->ckm:Landroid/widget/ImageView;
+
+    iget-object v4, v3, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->context:Landroid/content/Context;
+
+    const v5, 0x7f081240
+
+    new-array v6, v1, [Ljava/lang/Object;
+
+    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsN:Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;
+
+    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;->cvE:Landroid/widget/TextView;
+
+    invoke-virtual {v3}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v3
+
+    aput-object v3, v6, v2
+
+    invoke-virtual {v4, v5, v6}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    goto/16 :goto_3
+
+    :cond_8
+    iget-object v4, v3, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsN:Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;
+
+    iget-object v4, v4, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;->ckm:Landroid/widget/ImageView;
+
+    iget-object v7, v3, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->UX:Ljava/lang/String;
+
+    invoke-static {v4, v7, v1}, Lcom/tencent/mm/pluginsdk/ui/a$b;->b(Landroid/widget/ImageView;Ljava/lang/String;Z)V
+
+    goto :goto_5
+
+    .line 332
+    :cond_9
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/av$5;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/av$5;-><init>(Lcom/tencent/mm/plugin/sns/ui/av;)V
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/av$5;->run()V
+
+    goto/16 :goto_4
+.end method
+
+.method public final onDestroy()V
+    .locals 2
+
+    .prologue
+    .line 784
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->haS:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+
+    if-eqz v0, :cond_0
+
+    .line 785
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->haS:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsS:Landroid/graphics/Bitmap;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsS:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->hsS:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
+
+    .line 788
+    :cond_0
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 789
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av;->jO:Landroid/app/Activity;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/e/g;->G(Landroid/app/Activity;)V
+
+    .line 790
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBE()Lcom/tencent/mm/plugin/sns/e/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sns/e/b;->b(Lcom/tencent/mm/plugin/sns/e/b$b;)V
+
+    .line 792
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->cjq:Lcom/tencent/mm/ui/base/p;
+
+    if-eqz v0, :cond_2
+
+    .line 793
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->cjq:Lcom/tencent/mm/ui/base/p;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/p;->dismiss()V
+
+    .line 794
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->cjq:Lcom/tencent/mm/ui/base/p;
+
+    .line 796
+    :cond_2
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 797
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBF()Lcom/tencent/mm/plugin/sns/e/ar;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/e/ar;->bdA:Ljava/util/Set;
+
+    invoke-interface {v0, p0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    sget v0, Lcom/tencent/mm/plugin/sns/e/ar;->gTu:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    sput v0, Lcom/tencent/mm/plugin/sns/e/ar;->gTu:I
+
+    .line 800
+    :cond_3
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av;->hBn:Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->setVisibility(I)V
+
+    .line 801
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/ui/x;->aEh()V
+
+    .line 803
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/g;->start()V
+
+    .line 804
+    return-void
+.end method
+
+.method public final vw(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 809
+    return-void
 .end method

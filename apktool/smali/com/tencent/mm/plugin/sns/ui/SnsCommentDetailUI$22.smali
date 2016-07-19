@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aBH()Z
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aED()Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+.field final synthetic hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 2050
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$22;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    .line 2204
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$22;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,12 +40,12 @@
     .locals 5
 
     .prologue
-    .line 2053
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$22;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    .line 2207
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$22;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
-    const v1, 0x7f0b165f
+    const v1, 0x7f0812f7
 
-    const v2, 0x7f0b0ddd
+    const v2, 0x7f080134
 
     new-instance v3, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$22$1;
 
@@ -55,6 +55,6 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;IILandroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
-    .line 2103
+    .line 2257
     return-void
 .end method

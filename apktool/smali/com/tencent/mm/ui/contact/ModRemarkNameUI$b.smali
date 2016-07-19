@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field private gjm:I
+.field private gtH:I
 
-.field final synthetic llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+.field final synthetic lMe:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
 
 # direct methods
@@ -29,14 +29,14 @@
 
     .prologue
     .line 520
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->lMe:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 521
     const/16 v0, 0x320
 
-    iput v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->gjm:I
+    iput v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->gtH:I
 
     return-void
 .end method
@@ -64,25 +64,25 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/tools/i;->ai(ILjava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/tools/i;->as(ILjava/lang/String;)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->gjm:I
+    iput v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->gtH:I
 
     .line 535
-    iget v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->gjm:I
+    iget v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->gtH:I
 
     if-gez v0, :cond_0
 
     .line 536
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->gjm:I
+    iput v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->gtH:I
 
     .line 538
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->lMe:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->l(Lcom/tencent/mm/ui/contact/ModRemarkNameUI;)Landroid/widget/TextView;
 
@@ -91,7 +91,7 @@
     if-eqz v0, :cond_1
 
     .line 539
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->lMe:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->l(Lcom/tencent/mm/ui/contact/ModRemarkNameUI;)Landroid/widget/TextView;
 
@@ -101,7 +101,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget v2, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->gjm:I
+    iget v2, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->gtH:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -115,7 +115,7 @@
 
     .line 542
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->lMe:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->m(Lcom/tencent/mm/ui/contact/ModRemarkNameUI;)V
 

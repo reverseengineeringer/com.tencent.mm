@@ -15,10 +15,10 @@ final class InviteFacebookFriendsUI$2
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramDialogInterface = new Intent(coP.koJ.kpc, FacebookAuthUI.class);
+    paramDialogInterface = new Intent(ckd.kNN.kOg, FacebookAuthUI.class);
     paramDialogInterface.putExtra("is_force_unbind", true);
-    coP.koJ.kpc.startActivity(paramDialogInterface);
-    coP.finish();
+    ckd.kNN.kOg.startActivity(paramDialogInterface);
+    ckd.finish();
   }
 }
 

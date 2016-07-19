@@ -1,70 +1,158 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.res.Resources;
+import android.content.Context;
+import android.content.Intent;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.CheckBox;
-import android.widget.RelativeLayout;
-import android.widget.RelativeLayout.LayoutParams;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.tencent.mm.aw.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.i;
+import com.tencent.mm.pluginsdk.ui.d.e;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.ai.b;
+import com.tencent.mm.storage.aj;
+import com.tencent.mm.ui.j;
+import com.tencent.mm.ui.o;
+import com.tencent.mm.ui.transmit.MsgRetransmitUI;
 
-public final class ax
-  extends RelativeLayout
+final class ax
+  extends ab.c
 {
-  private LayoutInflater fbg;
-  private int kTY;
+  private ChattingUI.a ltl;
+  private String lud;
   
-  public ax(LayoutInflater paramLayoutInflater, int paramInt)
+  public ax()
   {
-    super(paramLayoutInflater.getContext());
-    fbg = paramLayoutInflater;
-    kTY = paramInt;
-    paramLayoutInflater = fbg.inflate(2131362002, null);
-    RelativeLayout.LayoutParams localLayoutParams = new RelativeLayout.LayoutParams(-1, -2);
-    paramLayoutInflater.setId(2131165188);
-    localLayoutParams.setMargins(0, getResources().getDimensionPixelSize(2131034587), 0, getResources().getDimensionPixelSize(2131034587));
-    paramLayoutInflater.setVisibility(8);
-    addView(paramLayoutInflater, localLayoutParams);
-    paramLayoutInflater = new TextView(getContext(), null, 2131100085);
-    paramLayoutInflater.setId(2131165184);
-    paramLayoutInflater.setTextSize(0, a.z(getContext(), 2131034567));
-    localLayoutParams = new RelativeLayout.LayoutParams(-2, -2);
-    localLayoutParams.addRule(3, 2131165188);
-    localLayoutParams.addRule(14);
-    localLayoutParams.setMargins(0, getResources().getDimensionPixelSize(2131034587), 0, getResources().getDimensionPixelSize(2131034587));
-    addView(paramLayoutInflater, localLayoutParams);
-    paramLayoutInflater = (CheckBox)LayoutInflater.from(getContext()).inflate(2131363256, this, false);
-    paramLayoutInflater.setId(2131165186);
-    paramInt = a.fromDPToPix(getContext(), 32);
-    localLayoutParams = new RelativeLayout.LayoutParams(paramInt, paramInt);
-    localLayoutParams.setMargins(0, getResources().getDimensionPixelSize(2131034576), getResources().getDimensionPixelSize(2131034577), 0);
-    localLayoutParams.addRule(3, 2131165184);
-    localLayoutParams.addRule(11);
-    width = paramInt;
-    height = paramInt;
-    addView(paramLayoutInflater, localLayoutParams);
-    paramLayoutInflater = fbg.inflate(kTY, null);
-    int i = paramLayoutInflater.getId();
-    paramInt = i;
-    if (-1 == i)
+    super(13);
+  }
+  
+  public final View a(LayoutInflater paramLayoutInflater, View paramView)
+  {
+    Object localObject;
+    if ((paramView != null) && (paramView.getTag() != null))
     {
-      u.v("!44@/B4Tb64lLpKwUcOR+EdWcg2fJDecFVGIxHkQgJMBNWM=", "content view has no id, use defaul id");
-      paramInt = 2131165185;
-      paramLayoutInflater.setId(2131165185);
+      localObject = paramView;
+      if (getTagtype == cTv) {}
     }
-    localLayoutParams = new RelativeLayout.LayoutParams(-1, -2);
-    localLayoutParams.addRule(3, 2131165184);
-    localLayoutParams.addRule(0, 2131165186);
-    addView(paramLayoutInflater, localLayoutParams);
-    paramLayoutInflater = new View(getContext());
-    paramLayoutInflater.setId(2131165187);
-    paramLayoutInflater.setVisibility(8);
-    localLayoutParams = new RelativeLayout.LayoutParams(-1, -1);
-    localLayoutParams.addRule(6, paramInt);
-    localLayoutParams.addRule(8, paramInt);
-    addView(paramLayoutInflater, localLayoutParams);
+    else
+    {
+      localObject = new ay(paramLayoutInflater, 2130903320);
+      ((View)localObject).setTag(new s(cTv).f((View)localObject, false));
+    }
+    return (View)localObject;
+  }
+  
+  public final void a(ab.a parama, int paramInt, ChattingUI.a parama1, ai paramai, String paramString)
+  {
+    ltl = parama1;
+    parama = (s)parama;
+    paramString = ah.tE().rt().HA(field_content);
+    if ((iAQ == null) || (iAQ.length() <= 0)) {
+      v.e("MicroMsg.ChattingItemCardTo", "getView : parse possible friend msg failed");
+    }
+    lud = iAQ;
+    if (i.dc(iBE))
+    {
+      lrC.setText(2131231632);
+      lrD.setVisibility(8);
+      if (com.tencent.mm.compatible.util.c.cm(16))
+      {
+        lrB.setBackground(null);
+        o(lrB, lud);
+        label117:
+        cEo.setText(e.a(kNN.kOg, bGH, cEo.getTextSize()));
+        if (com.tencent.mm.platformtools.s.kf(s.a(paramString))) {
+          break label359;
+        }
+        lrD.setVisibility(0);
+        lrD.setText(s.a(paramString));
+        label177:
+        lth.setTag(new dh(paramai, kZE, paramInt, null, 0, (byte)0));
+        lth.setOnClickListener(lsL.lvy);
+        lth.setOnLongClickListener(lsL.lvA);
+        if (!bkb()) {
+          break label390;
+        }
+        if (fPG != null) {
+          fPG.setVisibility(8);
+        }
+        if ((field_status != 2) || (!a(lsL, field_msgId))) {
+          break label371;
+        }
+        if (lqs != null) {
+          lqs.setVisibility(0);
+        }
+      }
+    }
+    for (;;)
+    {
+      a(paramInt, parama, paramai, lsL.bxU, kZE, lsL.lvy);
+      return;
+      lrB.setBackgroundDrawable(null);
+      break;
+      lrC.setText(2131231725);
+      lrB.setBackgroundResource(2130838112);
+      n(lrB, lud);
+      break label117;
+      label359:
+      lrD.setVisibility(8);
+      break label177;
+      label371:
+      if (lqs != null)
+      {
+        lqs.setVisibility(8);
+        continue;
+        label390:
+        if (fPG != null)
+        {
+          fPG.setVisibility(0);
+          if (field_status >= 2) {
+            fPG.setVisibility(8);
+          }
+        }
+      }
+    }
+  }
+  
+  public final boolean a(ContextMenu paramContextMenu, View paramView, ai paramai)
+  {
+    int i = getTagposition;
+    if (i.el(lud)) {
+      paramContextMenu.add(i, 118, 0, paramView.getContext().getString(2131234525));
+    }
+    if ((!paramai.bco()) && ((field_status == 2) || (aQo == 1)) && (paramai.bcy()) && (bka()) && (IZ(field_talker))) {
+      paramContextMenu.add(i, 123, 0, paramView.getContext().getString(2131231706));
+    }
+    if (!ltl.bln()) {
+      paramContextMenu.add(i, 100, 0, paramView.getContext().getString(2131231700));
+    }
+    return true;
+  }
+  
+  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ai paramai)
+  {
+    switch (paramMenuItem.getItemId())
+    {
+    default: 
+      return false;
+    }
+    paramMenuItem = new Intent(kNN.kOg, MsgRetransmitUI.class);
+    paramMenuItem.putExtra("Retr_Msg_content", parama.bm(field_content, field_isSend));
+    paramMenuItem.putExtra("Retr_Msg_Type", 8);
+    paramMenuItem.putExtra("Retr_Msg_Id", field_msgId);
+    parama.startActivity(paramMenuItem);
+    return false;
+  }
+  
+  public final boolean a(View paramView, ChattingUI.a parama, ai paramai)
+  {
+    return false;
   }
 }
 

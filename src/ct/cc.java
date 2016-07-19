@@ -1,88 +1,42 @@
 package ct;
 
-import android.content.Context;
-import android.util.Pair;
-import java.io.File;
-import java.io.FileFilter;
-import java.io.IOException;
-import java.util.UUID;
+import android.net.wifi.ScanResult;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public final class cc
-  implements cd
 {
-  private final File a;
-  private final File b;
+  private static List<String> a;
   
-  public cc(bj parambj)
+  static
   {
-    a = a.getDir("abcdef", 0);
-    b = new File(a, "abcdef");
+    ArrayList localArrayList = new ArrayList();
+    a = localArrayList;
+    localArrayList.add("mobile");
+    a.add("16wifi");
+    a.add("cmcc");
+    a.add("360wifi");
+    a.add("androidap");
+    a.add("htcphone");
+    a.add("xiaomi");
+    a.add("lenovo");
+    a.add("macbook");
   }
   
-  private Pair a()
+  public static List<ScanResult> a(List<ScanResult> paramList)
   {
-    int j = 0;
-    File[] arrayOfFile = a.listFiles(new FileFilter()
+    paramList = new ArrayList(paramList);
+    paramList.size();
+    Iterator localIterator = paramList.iterator();
+    while (localIterator.hasNext())
     {
-      public final boolean accept(File paramAnonymousFile)
-      {
-        return paramAnonymousFile.getName().startsWith("abcdef.");
+      String str = nextBSSID;
+      if ((str == null) || (str.equals("000000000000")) || (str.equals("00-00-00-00-00-00")) || (str.equals("00:00:00:00:00:00"))) {
+        localIterator.remove();
       }
-    });
-    if ((arrayOfFile != null) && (arrayOfFile.length > 0))
-    {
-      long l1 = arrayOfFile[0].lastModified();
-      int i = 1;
-      while (i < arrayOfFile.length)
-      {
-        long l3 = arrayOfFile[i].lastModified();
-        long l2 = l1;
-        if (l3 < l1)
-        {
-          l2 = l3;
-          j = i;
-        }
-        i += 1;
-        l1 = l2;
-      }
-      return Pair.create(Integer.valueOf(arrayOfFile.length), arrayOfFile[j]);
     }
-    return Pair.create(Integer.valueOf(0), null);
-  }
-  
-  public final void b(String paramString)
-  {
-    paramString = b.a.a(paramString.getBytes());
-    if (b.length() > 30720L)
-    {
-      Object localObject = a();
-      if (((Integer)first).intValue() > 5)
-      {
-        localObject = (File)second;
-        if (localObject != null) {
-          ((File)localObject).delete();
-        }
-      }
-      localObject = new File(a, "abcdef." + UUID.randomUUID().toString());
-      b.renameTo((File)localObject);
-    }
-    try
-    {
-      b.a.a(paramString, b);
-      return;
-    }
-    catch (IOException paramString)
-    {
-      b.a.a("TxOfflineDataManager", paramString.getMessage(), paramString);
-    }
-  }
-  
-  public final void d()
-  {
-    File localFile = (File)asecond;
-    if (localFile != null) {
-      localFile.delete();
-    }
+    return paramList;
   }
 }
 

@@ -18,11 +18,11 @@
 .method public abstract b(Ljava/lang/String;Ljava/lang/String;IJ[I)V
 .end method
 
-.method public abstract dv(Ljava/lang/String;)V
+.method public abstract dD(Ljava/lang/String;)V
 .end method
 
-.method public abstract qJ()Z
+.method public abstract pn()Z
 .end method
 
-.method public abstract qK()J
+.method public abstract po()J
 .end method

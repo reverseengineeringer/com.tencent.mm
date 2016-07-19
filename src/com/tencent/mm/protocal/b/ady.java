@@ -1,29 +1,31 @@
 package com.tencent.mm.protocal.b;
 
 public final class ady
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public int jAN;
-  public int jAO;
+  public float jYL;
+  public float jYM;
+  public float jYN;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.ci(1, jAN);
-      paramVarArgs.ci(2, jAO);
+      paramVarArgs.e(1, jYL);
+      paramVarArgs.e(2, jYM);
+      paramVarArgs.e(3, jYN);
       return 0;
     }
     if (paramInt == 1) {
-      return a.a.a.a.cg(1, jAN) + 0 + a.a.a.a.cg(2, jAO);
+      return a.a.a.b.b.a.aQ(1) + 4 + 0 + (a.a.a.b.b.a.aQ(2) + 4) + (a.a.a.b.b.a.aQ(3) + 4);
     }
     if (paramInt == 2)
     {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+      for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
         if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.bog();
+          paramVarArgs.bve();
         }
       }
       return 0;
@@ -37,10 +39,13 @@ public final class ady
       default: 
         return -1;
       case 1: 
-        jAN = maU.jC();
+        jYL = mMY.readFloat();
+        return 0;
+      case 2: 
+        jYM = mMY.readFloat();
         return 0;
       }
-      jAO = maU.jC();
+      jYN = mMY.readFloat();
       return 0;
     }
     return -1;

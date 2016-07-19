@@ -1,6 +1,5 @@
 package com.tencent.mm.ui;
 
-import android.graphics.Color;
 import com.tencent.mm.ui.base.preference.IconPreference;
 
 final class f$4$3
@@ -10,11 +9,11 @@ final class f$4$3
   
   public final void run()
   {
-    f.a(klu.klo, true);
-    IconPreference localIconPreference = (IconPreference)f.a(klu.klo).GB("more_tab_game_recommend");
-    localIconPreference.y(klu.klt, -1, Color.parseColor("#8c8c8c"));
-    f.a(localIconPreference, 8, 0, true, 8, 8, 8);
-    f.a(klu.klo, klu.amV, klu.hWn, klu.klq, klu.bCX, 2);
+    f.a(kKS.kKO, true);
+    IconPreference localIconPreference = (IconPreference)f.a(kKS.kKO).IR("more_tab_game_recommend");
+    localIconPreference.ah(kKS.kKO.getString(2131230964), 2130838891);
+    f.a(localIconPreference, 0, 8, false, 8, 8, 8);
+    f.a(kKS.kKO, kKS.ZK, kKS.ipT, kKS.kKQ, kKS.bwh, 1);
   }
 }
 

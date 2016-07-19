@@ -15,7 +15,7 @@ public final class c
   private final int height = 96;
   private final int width = 96;
   
-  protected final int h(int paramInt, Object... paramVarArgs)
+  protected final int i(int paramInt, Object... paramVarArgs)
   {
     switch (paramInt)
     {
@@ -27,30 +27,26 @@ public final class c
       return 96;
       Canvas localCanvas = (Canvas)paramVarArgs[0];
       paramVarArgs = (Looper)paramVarArgs[1];
-      com.tencent.mm.svg.c.e(paramVarArgs);
       com.tencent.mm.svg.c.d(paramVarArgs);
-      Paint localPaint1 = com.tencent.mm.svg.c.h(paramVarArgs);
-      localPaint1.setFlags(385);
-      localPaint1.setStyle(Paint.Style.FILL);
-      Object localObject = com.tencent.mm.svg.c.h(paramVarArgs);
+      com.tencent.mm.svg.c.c(paramVarArgs);
+      Paint localPaint = com.tencent.mm.svg.c.g(paramVarArgs);
+      localPaint.setFlags(385);
+      localPaint.setStyle(Paint.Style.FILL);
+      Object localObject = com.tencent.mm.svg.c.g(paramVarArgs);
       ((Paint)localObject).setFlags(385);
       ((Paint)localObject).setStyle(Paint.Style.STROKE);
-      localPaint1.setColor(-16777216);
+      localPaint.setColor(-16777216);
       ((Paint)localObject).setStrokeWidth(1.0F);
       ((Paint)localObject).setStrokeCap(Paint.Cap.BUTT);
       ((Paint)localObject).setStrokeJoin(Paint.Join.MITER);
       ((Paint)localObject).setStrokeMiter(4.0F);
       ((Paint)localObject).setPathEffect(null);
-      Paint localPaint2 = com.tencent.mm.svg.c.a((Paint)localObject, paramVarArgs);
-      localPaint2.set((Paint)localObject);
-      localPaint2.setStrokeWidth(1.0F);
-      localObject = com.tencent.mm.svg.c.a(localPaint1, paramVarArgs);
-      ((Paint)localObject).set(localPaint1);
-      ((Paint)localObject).setColor(-1);
+      com.tencent.mm.svg.c.a((Paint)localObject, paramVarArgs).setStrokeWidth(1.0F);
+      localPaint = com.tencent.mm.svg.c.a(localPaint, paramVarArgs);
+      localPaint.setColor(-1);
       localCanvas.save();
-      localPaint1 = com.tencent.mm.svg.c.a((Paint)localObject, paramVarArgs);
-      localPaint1.set((Paint)localObject);
-      localObject = com.tencent.mm.svg.c.i(paramVarArgs);
+      localPaint = com.tencent.mm.svg.c.a(localPaint, paramVarArgs);
+      localObject = com.tencent.mm.svg.c.h(paramVarArgs);
       ((Path)localObject).moveTo(45.0F, 45.0F);
       ((Path)localObject).lineTo(45.0F, 20.995752F);
       ((Path)localObject).cubicTo(45.0F, 20.45077F, 45.44359F, 20.0F, 45.99078F, 20.0F);
@@ -74,9 +70,9 @@ public final class c
       ((Path)localObject).lineTo(45.0F, 45.0F);
       ((Path)localObject).close();
       WeChatSVGRenderC2Java.setFillType((Path)localObject, 2);
-      localCanvas.drawPath((Path)localObject, localPaint1);
+      localCanvas.drawPath((Path)localObject, localPaint);
       localCanvas.restore();
-      com.tencent.mm.svg.c.g(paramVarArgs);
+      com.tencent.mm.svg.c.f(paramVarArgs);
     }
   }
 }

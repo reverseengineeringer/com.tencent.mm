@@ -10,37 +10,27 @@ import android.widget.ListView;
 final class MMListPopupWindow$a
   extends ListView
 {
-  private boolean qj;
-  private boolean qk;
+  private boolean qx;
+  private boolean qy;
   
   public MMListPopupWindow$a(Context paramContext, boolean paramBoolean)
   {
-    super(paramContext, null, 2130772135);
-    qk = paramBoolean;
+    super(paramContext, null, 2130771999);
+    qy = paramBoolean;
     setCacheColorHint(0);
   }
   
   public final boolean hasFocus()
   {
-    return (qk) || (super.hasFocus());
+    return (qy) || (super.hasFocus());
   }
   
   public final boolean hasWindowFocus()
   {
-    return (qk) || (super.hasWindowFocus());
+    return (qy) || (super.hasWindowFocus());
   }
   
-  public final boolean isFocused()
-  {
-    return (qk) || (super.isFocused());
-  }
-  
-  public final boolean isInTouchMode()
-  {
-    return ((qk) && (qj)) || (super.isInTouchMode());
-  }
-  
-  final int k(int paramInt1, int paramInt2)
+  final int i(int paramInt1, int paramInt2)
   {
     int i = getListPaddingTop();
     int k = getListPaddingBottom();
@@ -108,6 +98,16 @@ final class MMListPopupWindow$a
       return i;
       break label116;
     }
+  }
+  
+  public final boolean isFocused()
+  {
+    return (qy) || (super.isFocused());
+  }
+  
+  public final boolean isInTouchMode()
+  {
+    return ((qy) && (qx)) || (super.isInTouchMode());
   }
 }
 

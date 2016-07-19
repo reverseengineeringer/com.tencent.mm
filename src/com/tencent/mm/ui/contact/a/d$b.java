@@ -20,17 +20,17 @@ public final class d$b
   
   public final View a(Context paramContext, ViewGroup paramViewGroup)
   {
-    paramViewGroup = LayoutInflater.from(paramContext).inflate(2131363057, paramViewGroup, false);
-    d.a locala = (d.a)lmY.lmX;
-    czS = ((ImageView)paramViewGroup.findViewById(2131165293));
-    cNT = ((TextView)paramViewGroup.findViewById(2131165340));
-    cNT.setMaxWidth(com.tencent.mm.aw.a.fromDPToPix(paramContext, 200));
-    cOd = ((TextView)paramViewGroup.findViewById(2131165341));
-    fKK = ((TextView)paramViewGroup.findViewById(2131166160));
-    cMt = paramViewGroup.findViewById(2131167176);
-    czW = ((CheckBox)paramViewGroup.findViewById(2131165695));
-    if (lmY.cLD) {
-      cMt.setBackgroundResource(2130970303);
+    paramViewGroup = LayoutInflater.from(paramContext).inflate(2130904323, paramViewGroup, false);
+    d.a locala = (d.a)lNt.lNs;
+    cui = ((ImageView)paramViewGroup.findViewById(2131755444));
+    cuj = ((TextView)paramViewGroup.findViewById(2131755331));
+    cuj.setMaxWidth(com.tencent.mm.az.a.fromDPToPix(paramContext, 200));
+    cuk = ((TextView)paramViewGroup.findViewById(2131755333));
+    fTN = ((TextView)paramViewGroup.findViewById(2131755247));
+    cJf = paramViewGroup.findViewById(2131758184);
+    cul = ((CheckBox)paramViewGroup.findViewById(2131755446));
+    if (lNt.cIG) {
+      cJf.setBackgroundResource(2130838073);
     }
     paramViewGroup.setTag(locala);
     return paramViewGroup;
@@ -42,37 +42,37 @@ public final class d$b
     parama = (d)parama1;
     if ((username != null) && (username.length() > 0))
     {
-      com.tencent.mm.pluginsdk.ui.a.b.b(czS, username);
-      f.a(cKS, cNT);
-      f.a(ghW, cOd);
-      f.a(lmV, fKK);
-      if (!lmY.lkT) {
+      com.tencent.mm.pluginsdk.ui.a.b.a(cui, username);
+      f.a(cHV, cuj);
+      f.a(gsw, cuk);
+      f.a(lNq, fTN);
+      if (!lNt.lLe) {
         break label146;
       }
       if (!paramBoolean1) {
         break label126;
       }
-      czW.setChecked(true);
-      czW.setEnabled(false);
+      cul.setChecked(true);
+      cul.setEnabled(false);
     }
     for (;;)
     {
-      czW.setVisibility(0);
+      cul.setVisibility(0);
       return;
-      czS.setImageResource(2130970523);
+      cui.setImageResource(2130838112);
       break;
       label126:
-      czW.setChecked(paramBoolean2);
-      czW.setEnabled(true);
+      cul.setChecked(paramBoolean2);
+      cul.setEnabled(true);
     }
     label146:
-    czW.setVisibility(8);
+    cul.setVisibility(8);
   }
   
-  public final boolean bhz()
+  public final boolean bnp()
   {
-    if (lmY.cNY != null) {
-      m.b(lmY.aEy, lmY.cNY, 1);
+    if (lNt.cKY != null) {
+      m.b(lNt.aqC, lNt.cKY, 1);
     }
     return false;
   }

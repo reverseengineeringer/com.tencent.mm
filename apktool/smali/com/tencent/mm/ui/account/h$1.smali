@@ -1,11 +1,11 @@
 .class final Lcom/tencent/mm/ui/account/h$1;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.super Lcom/tencent/mm/sdk/platformtools/ac;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/h;->bbG()V
+    value = Lcom/tencent/mm/ui/account/h;->bgS()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic kuh:Lcom/tencent/mm/ui/account/h;
+.field final synthetic kTo:Lcom/tencent/mm/ui/account/h;
 
 
 # direct methods
@@ -24,9 +24,9 @@
 
     .prologue
     .line 43
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/h$1;->kuh:Lcom/tencent/mm/ui/account/h;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/h$1;->kTo:Lcom/tencent/mm/ui/account/h;
 
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
     return-void
 .end method
@@ -49,16 +49,16 @@
 
     .line 49
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/h$1;->kuh:Lcom/tencent/mm/ui/account/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/h$1;->kTo:Lcom/tencent/mm/ui/account/h;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/h;->kug:Lcom/tencent/mm/ui/account/h$a;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/h;->kTn:Lcom/tencent/mm/ui/account/h$a;
 
     if-eqz v0, :cond_0
 
     .line 50
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/h$1;->kuh:Lcom/tencent/mm/ui/account/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/h$1;->kTo:Lcom/tencent/mm/ui/account/h;
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/account/h;->kug:Lcom/tencent/mm/ui/account/h$a;
+    iget-object v1, v0, Lcom/tencent/mm/ui/account/h;->kTn:Lcom/tencent/mm/ui/account/h$a;
 
     iget v2, p1, Landroid/os/Message;->arg1:I
 
@@ -72,22 +72,22 @@
 
     .line 54
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/h$1;->kuh:Lcom/tencent/mm/ui/account/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/h$1;->kTo:Lcom/tencent/mm/ui/account/h;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/h;->kug:Lcom/tencent/mm/ui/account/h$a;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/h;->kTn:Lcom/tencent/mm/ui/account/h$a;
 
     if-eqz v0, :cond_0
 
     .line 55
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/h$1;->kuh:Lcom/tencent/mm/ui/account/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/h$1;->kTo:Lcom/tencent/mm/ui/account/h;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/h;->kug:Lcom/tencent/mm/ui/account/h$a;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/h;->kTn:Lcom/tencent/mm/ui/account/h$a;
 
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/account/h$a;->g(Landroid/os/Bundle;)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/account/h$a;->i(Landroid/os/Bundle;)V
 
     goto :goto_0
 

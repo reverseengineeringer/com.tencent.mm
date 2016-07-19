@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">%1$s kërkon një përditësim të aplikacionit të \"Teknologjisë Android që vishet\".</string>
+    <string name="b">%1$s nuk do të ekzekutohet nëse nuk përditëson aplikacionin e \"Teknologjisë Android që vishet\".</string>
+    <string name="c">Përditëso \"Teknologjia Android që vishet\"</string>
+    <string name="d">%1$s kërkon një ose më shumë shërbime të \"Luaj me Google\" që aktualisht janë të papërdorshme. Kontakto me zhvilluesin për ndihmë.</string>
+    <string name="e">Aktivizo shërbimet e \"Luaj me Google\"</string>
+    <string name="f">%1$s nuk do të funksionojë nëse nuk aktivizon shërbimet e \"Luaj me Google\".</string>
+    <string name="g">Aktivizo shërbimet e \"Luaj me Google\"</string>
+    <string name="h">Kërkuar nga %1$s</string>
+    <string name="i">Merr shërbimet e \"Luaj me Google\"</string>
+    <string name="j">%1$s nuk do të funksionojë pa shërbimet e \"Luaj me Google\", të cilat mungojnë në telefonin tënd.</string>
+    <string name="k">%1$s nuk do të funksionojë pa shërbimet e \"Luaj me Google\", të cilat mungojnë në tabletin tënd.</string>
+    <string name="l">Merr shërbimet e \"Luaj me Google\"</string>
+    <string name="m">Llogaria e specifikuar nuk ekziston në këtë pajisje. Zgjidh një llogari tjetër.</string>
+    <string name="n">Llogari e pavlefshme</string>
+    <string name="o">"Një aplikacion kërkon shërbimet e \"Luaj me Google\" për t'u aktivizuar."</string>
+    <string name="p">"Kërkohet një lidhje të dhënash për t'u lidhur me shërbimet e \"Luaj me Google\"."</string>
+    <string name="q">Gabim rrjeti</string>
+    <string name="r">Një aplikacion kërkon përditësim për shërbimet e \"Luaj me Google\".</string>
+    <string name="s">Gabim në shërbimet e \"Luaj me Google\"</string>
+    <string name="t">Gabim gjatë identifikimit në llogarinë e specifikuar. Zgjidh një llogari tjetër.</string>
+    <string name="u">Identifikimi dështoi!</string>
+    <string name="v">Problem i panjohur me shërbimet e \"Luaj me Google\".</string>
+    <string name="w">%1$s mbështetet në shërbimet e \"Luaj me Google\", të cilat nuk mbështeten nga pajisja jote. Kontakto me prodhuesin për ndihmë.</string>
+    <string name="x">Shërbimet e \"Luaj me Google\"</string>
+    <string name="y">Përditëso</string>
+    <string name="z">%1$s nuk do të funksionojë nëse nuk përditëson shërbimet e \"Luaj me Google\".</string>
+    <string name="a0">Përditëso shërbimet e \"Luaj me Google\"</string>
+    <string name="a1">%1$s nuk do të funksionojë pa shërbimet e \"Luaj me Google\", të cilat po përditësohen aktualisht.</string>
+    <string name="a2">Shërbimet e \"Luaj\" po përditësohen</string>
+    <string name="a3">Hape në telefon</string>
+    <string name="a4">Identifikohu</string>
+    <string name="a5">Identifikohu me Google</string>
+</resources>

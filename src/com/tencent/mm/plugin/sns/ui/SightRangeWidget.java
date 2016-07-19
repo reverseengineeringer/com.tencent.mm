@@ -22,10 +22,10 @@ public class SightRangeWidget
     super.a(paramInt1, paramInt2, paramIntent, paramAtContactWidget);
     if (paramAtContactWidget != null)
     {
-      if (getLabelRange() == 1)
+      if (hnR == 1)
       {
         paramAtContactWidget.setVisibility(4);
-        paramAtContactWidget.aAP();
+        paramAtContactWidget.aDG();
       }
     }
     else {
@@ -35,14 +35,14 @@ public class SightRangeWidget
     return true;
   }
   
-  protected int getLayoutResource()
-  {
-    return 2131362896;
-  }
-  
-  protected int getMaxTagNameLen()
+  protected final int aEk()
   {
     return 10;
+  }
+  
+  protected final int getLayoutResource()
+  {
+    return 2130904387;
   }
 }
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView style="@style/MMScroll">
+        <LinearLayout style="@style/MMBody">
+            <EditText android:id="@id/c4_" android:inputType="textEmailAddress" style="@style/MMLineEditText" />
+            <View style="@style/MMLabelSplit" />
+            <TextView android:id="@id/c4a" android:text="@string/cf3" android:layout_weight="1.0" style="@style/MMBriefText" />
+            <LinearLayout android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:id="@id/c4b" android:text="@string/cik" style="@style/MMSolidRedLargeButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

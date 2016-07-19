@@ -4,7 +4,16 @@
 
 
 # instance fields
-.field private kKR:Landroid/util/SparseArray;
+.field private lkg:Landroid/util/SparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/SparseArray",
+            "<",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -20,7 +29,7 @@
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/a;->kKR:Landroid/util/SparseArray;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/a;->lkg:Landroid/util/SparseArray;
 
     .line 25
     return-void
@@ -54,7 +63,7 @@
     return-object v0
 
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/a;->kKR:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/a;->lkg:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -75,7 +84,7 @@
     move-result-object v0
 
     .line 30
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/a;->kKR:Landroid/util/SparseArray;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/a;->lkg:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 

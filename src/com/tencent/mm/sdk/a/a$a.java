@@ -6,13 +6,13 @@ public final class a$a
 {
   public String content;
   public int flags = -1;
-  public Bundle jUA;
-  public String jUy;
-  public String jUz;
+  public String ktZ;
+  public String kua;
+  public Bundle kub;
   
   public final String toString()
   {
-    return "targetPkgName:" + jUy + ", targetClassName:" + jUz + ", content:" + content + ", flags:" + flags + ", bundle:" + jUA;
+    return "targetPkgName:" + ktZ + ", targetClassName:" + kua + ", content:" + content + ", flags:" + flags + ", bundle:" + kub;
   }
 }
 

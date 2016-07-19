@@ -3,12 +3,12 @@ package com.tencent.mm.ui.account;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.h;
-import com.tencent.mm.ui.d.a.b;
-import com.tencent.mm.ui.d.a.c.a;
-import com.tencent.mm.ui.d.a.d;
+import com.tencent.mm.t.m;
+import com.tencent.mm.ui.e.a.b;
+import com.tencent.mm.ui.e.a.c.a;
+import com.tencent.mm.ui.e.a.d;
 
 final class FacebookAuthUI$a
   implements c.a
@@ -17,38 +17,38 @@ final class FacebookAuthUI$a
   
   public final void a(b paramb)
   {
-    u.d("!32@/B4Tb64lLpKNEztPnVXezyEM445BVS+m", "onError:" + paramb.getMessage());
-    com.tencent.mm.ui.base.g.y(ksk, paramb.getMessage(), ksk.getString(2131429143));
-    FacebookAuthUI.hp(false);
+    v.d("MicroMsg.FacebookAuthUI", "onError:" + paramb.getMessage());
+    com.tencent.mm.ui.base.g.b(kRs, paramb.getMessage(), kRs.getString(2131231929), true);
+    FacebookAuthUI.hN(false);
   }
   
   public final void a(d paramd)
   {
-    u.d("!32@/B4Tb64lLpKNEztPnVXezyEM445BVS+m", "onFacebookError:" + lqX);
-    com.tencent.mm.ui.base.g.y(ksk, paramd.getMessage(), ksk.getString(2131429143));
-    FacebookAuthUI.hp(false);
+    v.d("MicroMsg.FacebookAuthUI", "onFacebookError:" + lRC);
+    com.tencent.mm.ui.base.g.b(kRs, paramd.getMessage(), kRs.getString(2131231929), true);
+    FacebookAuthUI.hN(false);
   }
   
-  public final void g(Bundle paramBundle)
+  public final void i(Bundle paramBundle)
   {
-    u.d("!32@/B4Tb64lLpKNEztPnVXezyEM445BVS+m", "token:" + eksk).kMS);
-    ah.tD().rn().set(65830, eksk).kMS);
-    if (eksk).lqQ != 0L) {
-      ah.tD().rn().set(65832, Long.valueOf(eksk).lqQ));
+    v.d("MicroMsg.FacebookAuthUI", "token:" + ekRs).lmh);
+    ah.tE().ro().set(65830, ekRs).lmh);
+    if (ekRs).lRv != 0L) {
+      ah.tE().ro().set(65832, Long.valueOf(ekRs).lRv));
     }
-    paramBundle = ksk.getString(2131430877);
-    String str = ksk.getString(2131429154);
-    FacebookAuthUI.a(ksk, ProgressDialog.show(ksk, paramBundle, str, true));
-    FacebookAuthUI.d(ksk).setOnCancelListener(FacebookAuthUI.c(ksk));
-    FacebookAuthUI.a(ksk, new com.tencent.mm.modelsimple.g(1, eksk).kMS));
-    ah.tE().d(FacebookAuthUI.a(ksk));
-    FacebookAuthUI.hp(true);
+    paramBundle = kRs.getString(2131231028);
+    String str = kRs.getString(2131232557);
+    FacebookAuthUI.a(kRs, ProgressDialog.show(kRs, paramBundle, str, true));
+    FacebookAuthUI.d(kRs).setOnCancelListener(FacebookAuthUI.c(kRs));
+    FacebookAuthUI.a(kRs, new com.tencent.mm.modelsimple.g(1, ekRs).lmh));
+    ah.tF().a(FacebookAuthUI.a(kRs), 0);
+    FacebookAuthUI.hN(true);
   }
   
   public final void onCancel()
   {
-    u.d("!32@/B4Tb64lLpKNEztPnVXezyEM445BVS+m", "onCancel");
-    FacebookAuthUI.hp(false);
+    v.d("MicroMsg.FacebookAuthUI", "onCancel");
+    FacebookAuthUI.hN(false);
   }
 }
 

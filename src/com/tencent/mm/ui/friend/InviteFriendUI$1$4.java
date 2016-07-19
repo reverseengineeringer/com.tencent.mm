@@ -18,11 +18,11 @@ final class InviteFriendUI$1$4
   {
     paramMenuItem = paramMenuItem.getTitle();
     Intent localIntent = new Intent();
-    localIntent.setComponent(new ComponentName(lrN.get(paramMenuItem)).activityInfo.packageName, lrN.get(paramMenuItem)).activityInfo.name));
+    localIntent.setComponent(new ComponentName(lSr.get(paramMenuItem)).activityInfo.packageName, lSr.get(paramMenuItem)).activityInfo.name));
     localIntent.setAction("android.intent.action.SENDTO");
-    localIntent.setData(lrQ);
-    localIntent.putExtra("sms_body", lrR);
-    lrP.lrM.startActivity(localIntent);
+    localIntent.setData(lSu);
+    localIntent.putExtra("sms_body", lSv);
+    lSt.lSq.startActivity(localIntent);
   }
 }
 

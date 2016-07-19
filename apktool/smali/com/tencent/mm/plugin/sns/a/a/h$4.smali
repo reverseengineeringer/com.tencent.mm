@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/a/a/h;->axz()V
+    value = Lcom/tencent/mm/plugin/sns/a/a/h;->aAb()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gHh:Lcom/tencent/mm/plugin/sns/a/a/h;
+.field final synthetic gNI:Lcom/tencent/mm/plugin/sns/a/a/h;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 196
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/a/a/h$4;->gHh:Lcom/tencent/mm/plugin/sns/a/a/h;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/a/a/h$4;->gNI:Lcom/tencent/mm/plugin/sns/a/a/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 199
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/h$4;->gHh:Lcom/tencent/mm/plugin/sns/a/a/h;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/h$4;->gNI:Lcom/tencent/mm/plugin/sns/a/a/h;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/a/a/h;->e(Lcom/tencent/mm/plugin/sns/a/a/h;)V
 

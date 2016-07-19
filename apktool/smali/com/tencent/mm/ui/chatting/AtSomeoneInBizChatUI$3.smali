@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;->Gb()V
+    value = Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kRd:Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;
+.field final synthetic lrg:Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 129
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI$3;->kRd:Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI$3;->lrg:Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,6 +38,15 @@
 # virtual methods
 .method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
     .line 134
@@ -46,7 +55,7 @@
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
     .line 135
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI$3;->kRd:Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI$3;->lrg:Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;->a(Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;)Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI$a;
 
@@ -56,25 +65,25 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/t/j;
+    check-cast v0, Lcom/tencent/mm/v/k;
 
     .line 137
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI$3;->kRd:Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI$3;->lrg:Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;
 
-    invoke-static {v2}, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;->b(Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;)Lcom/tencent/mm/t/d;
+    invoke-static {v2}, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;->b(Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;)Lcom/tencent/mm/v/d;
 
     move-result-object v2
 
-    iget-object v3, v0, Lcom/tencent/mm/t/j;->field_userId:Ljava/lang/String;
+    iget-object v3, v0, Lcom/tencent/mm/v/k;->field_userId:Ljava/lang/String;
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;->a(Lcom/tencent/mm/t/d;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;->a(Lcom/tencent/mm/v/d;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 138
     const-string/jumbo v3, "select_raw_user_name"
 
-    iget-object v0, v0, Lcom/tencent/mm/t/j;->field_userId:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/v/k;->field_userId:Ljava/lang/String;
 
     invoke-virtual {v1, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -84,14 +93,14 @@
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 140
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI$3;->kRd:Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI$3;->lrg:Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;
 
     const/4 v2, -0x1
 
     invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;->setResult(ILandroid/content/Intent;)V
 
     .line 141
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI$3;->kRd:Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI$3;->lrg:Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;->finish()V
 

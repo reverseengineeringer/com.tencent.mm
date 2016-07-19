@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic oh:Landroid/support/v7/internal/widget/ActionBarView;
+.field final synthetic ox:Landroid/support/v7/internal/widget/ActionBarView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 137
-    iput-object p1, p0, Landroid/support/v7/internal/widget/ActionBarView$1;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iput-object p1, p0, Landroid/support/v7/internal/widget/ActionBarView$1;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

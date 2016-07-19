@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.ui.conversation.EnterpriseFullHeightListView android:id="@id/afi" android:background="@color/j3" style="@style/MMList" />
+    <TextView android:id="@id/afj" style="@style/MMFontEmptyMsgLarge" />
+</LinearLayout>

@@ -1,6 +1,5 @@
 .class synthetic Lcom/tencent/smtt/export/external/libwebp$1;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # annotations
@@ -22,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 155
     invoke-static {}, Landroid/graphics/Bitmap$Config;->values()[Landroid/graphics/Bitmap$Config;
 
     move-result-object v0

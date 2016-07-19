@@ -10,7 +10,7 @@ final class ContactRemarkInfoModUI$13
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ljV.finish();
+    lKg.finish();
   }
 }
 

@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 public abstract interface MMAutoSwitchEditTextView$b
 {
-  public abstract void bbz();
+  public abstract void bgL();
 }
 
 /* Location:

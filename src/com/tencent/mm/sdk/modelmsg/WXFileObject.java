@@ -1,14 +1,14 @@
 package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.File;
 
 public class WXFileObject
   implements WXMediaMessage.b
 {
   private static final int CONTENT_LENGTH_LIMIT = 10485760;
-  private static final String TAG = "!44@/B4Tb64lLpISsBeGklBKOYzdO14BK4vr5Asj6Oq15NY=";
+  private static final String TAG = "MicroMsg.SDK.WXFileObject";
   private int contentLengthLimit = 10485760;
   public byte[] fileData;
   public String filePath;
@@ -44,17 +44,17 @@ public class WXFileObject
   {
     if (((fileData == null) || (fileData.length == 0)) && ((filePath == null) || (filePath.length() == 0)))
     {
-      u.e("!44@/B4Tb64lLpISsBeGklBKOYzdO14BK4vr5Asj6Oq15NY=", "checkArgs fail, both arguments is null");
+      v.e("MicroMsg.SDK.WXFileObject", "checkArgs fail, both arguments is null");
       return false;
     }
     if ((fileData != null) && (fileData.length > contentLengthLimit))
     {
-      u.e("!44@/B4Tb64lLpISsBeGklBKOYzdO14BK4vr5Asj6Oq15NY=", "checkArgs fail, fileData is too large");
+      v.e("MicroMsg.SDK.WXFileObject", "checkArgs fail, fileData is too large");
       return false;
     }
     if ((filePath != null) && (getFileSize(filePath) > contentLengthLimit))
     {
-      u.e("!44@/B4Tb64lLpISsBeGklBKOYzdO14BK4vr5Asj6Oq15NY=", "checkArgs fail, fileSize is too large");
+      v.e("MicroMsg.SDK.WXFileObject", "checkArgs fail, fileSize is too large");
       return false;
     }
     return true;

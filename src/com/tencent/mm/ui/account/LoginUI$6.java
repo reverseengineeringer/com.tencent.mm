@@ -1,11 +1,11 @@
 package com.tencent.mm.ui.account;
 
 import android.content.Intent;
-import com.tencent.mm.modelsimple.t;
+import com.tencent.mm.modelsimple.r;
 import com.tencent.mm.plugin.a.a;
 import com.tencent.mm.pluginsdk.g;
-import com.tencent.mm.r.j;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.j;
 
 final class LoginUI$6
   implements Runnable
@@ -14,14 +14,14 @@ final class LoginUI$6
   
   public final void run()
   {
-    u.d("!32@/B4Tb64lLpJTKkcMldEZqYg5eKm6NcjH", "onSceneEnd, in runnable");
-    Intent localIntent = a.coa.ak(ktY);
+    v.d("MicroMsg.LoginUI", "onSceneEnd, in runnable");
+    Intent localIntent = a.cjo.ag(kTf);
     localIntent.addFlags(67108864);
-    localIntent.putExtra("kstyle_show_bind_mobile_afterauth", ((t)aoT).CA());
-    localIntent.putExtra("kstyle_bind_wording", ((t)aoT).CB());
-    localIntent.putExtra("kstyle_bind_recommend_show", ((t)aoT).CC());
-    ktY.startActivity(localIntent);
-    ktY.finish();
+    localIntent.putExtra("kstyle_show_bind_mobile_afterauth", ((r)acZ).CN());
+    localIntent.putExtra("kstyle_bind_wording", ((r)acZ).CO());
+    localIntent.putExtra("kstyle_bind_recommend_show", ((r)acZ).CP());
+    kTf.startActivity(localIntent);
+    kTf.finish();
   }
 }
 

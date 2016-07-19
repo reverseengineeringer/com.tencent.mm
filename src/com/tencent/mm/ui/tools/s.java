@@ -28,40 +28,40 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.PopupWindow.OnDismissListener;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.MMListPopupWindow;
 import com.tencent.mm.ui.base.o;
 
 public abstract class s
   implements View.OnKeyListener, ViewTreeObserver.OnGlobalLayoutListener, AdapterView.OnItemClickListener, PopupWindow.OnDismissListener
 {
-  private BaseAdapter cTk;
+  private BaseAdapter cQB;
   private int dividerHeight;
-  private boolean kFm = false;
-  private MMListPopupWindow kRT;
-  private int kRU = 2131100052;
-  public DialogInterface.OnCancelListener lxZ;
-  private PopupWindow.OnDismissListener lya;
-  private boolean lyb = false;
-  public boolean lyc = true;
-  public View lyd;
-  public int lye;
-  private int lyf = 0;
-  private int lyg = 0;
-  private int lyh = 0;
-  public float lyi = 0.0F;
-  public float lyj = 0.0F;
+  public DialogInterface.OnCancelListener lYO;
+  private PopupWindow.OnDismissListener lYP;
+  private boolean lYQ = false;
+  public boolean lYR = true;
+  public View lYS;
+  public int lYT;
+  private int lYU = 0;
+  private int lYV = 0;
+  private int lYW = 0;
+  private float lYX = 0.0F;
+  private float lYY = 0.0F;
+  private boolean leq = false;
+  private MMListPopupWindow lrV;
+  private int lrW = 2131493005;
   protected Context mContext;
-  private int mH;
-  private View mI;
-  private ViewTreeObserver mK;
-  private ViewGroup mM;
+  private int mX;
+  private View mY;
+  private ViewTreeObserver na;
+  private ViewGroup nc;
   
   public s(Context paramContext)
   {
     mContext = paramContext;
     paramContext = paramContext.getResources();
-    mH = Math.min(getDisplayMetricswidthPixels * 4 / 5, paramContext.getDimensionPixelSize(2131034685));
+    mX = Math.min(getDisplayMetricswidthPixels * 4 / 5, paramContext.getDimensionPixelSize(2131427350));
     ViewGroup localViewGroup;
     if ((mContext instanceof Activity))
     {
@@ -71,18 +71,18 @@ public abstract class s
       }
     }
     label183:
-    for (mI = localViewGroup.getChildAt(0);; mI = localViewGroup)
+    for (mY = localViewGroup.getChildAt(0);; mY = localViewGroup)
     {
       dividerHeight = BackwardSupportUtil.b.a(mContext, 1.0F);
-      lyf = (paramContext.getDimensionPixelSize(2131034587) * 2);
-      lyg = paramContext.getDimensionPixelSize(2131034596);
-      lyh = BackwardSupportUtil.b.a(mContext, 36.0F);
-      cTk = Li();
+      lYU = (paramContext.getDimensionPixelSize(2131427666) * 2);
+      lYV = paramContext.getDimensionPixelSize(2131427703);
+      lYW = BackwardSupportUtil.b.a(mContext, 36.0F);
+      cQB = Mc();
       return;
     }
   }
   
-  private int a(ListAdapter paramListAdapter)
+  private int b(ListAdapter paramListAdapter)
   {
     int n = View.MeasureSpec.makeMeasureSpec(0, 0);
     int i1 = View.MeasureSpec.makeMeasureSpec(0, 0);
@@ -103,10 +103,10 @@ public abstract class s
     label127:
     for (;;)
     {
-      if (mM == null) {
-        mM = new FrameLayout(mContext);
+      if (nc == null) {
+        nc = new FrameLayout(mContext);
       }
-      localView = paramListAdapter.getView(j, localView, mM);
+      localView = paramListAdapter.getView(j, localView, nc);
       localView.measure(n, i1);
       k = Math.max(k, localView.getMeasuredWidth());
       j += 1;
@@ -115,13 +115,13 @@ public abstract class s
     }
   }
   
-  private boolean biO()
+  private boolean boK()
   {
     DisplayMetrics localDisplayMetrics = mContext.getResources().getDisplayMetrics();
     return widthPixels > heightPixels;
   }
   
-  public abstract BaseAdapter Li();
+  public abstract BaseAdapter Mc();
   
   public boolean bH()
   {
@@ -131,8 +131,8 @@ public abstract class s
     Object localObject2;
     if ((mContext instanceof ActionBarActivity))
     {
-      i = mContext).iF.aP().getHeight();
-      i -= mContext.getResources().getDimensionPixelSize(2131034587);
+      i = mContext).iW.aP().getHeight();
+      i -= mContext.getResources().getDimensionPixelSize(2131427666);
       if (!(mContext instanceof Activity)) {
         break label961;
       }
@@ -158,36 +158,36 @@ public abstract class s
     label961:
     for (;;)
     {
-      lyb = biO();
-      if ((kRT == null) || (true == lyc)) {
-        kRT = new MMListPopupWindow(mContext, null, 0);
+      lYQ = boK();
+      if ((lrV == null) || (true == lYR)) {
+        lrV = new MMListPopupWindow(mContext, null, 0);
       }
-      kRT.setOnDismissListener(this);
-      kRT.qa = this;
-      kRT.setAdapter(cTk);
-      kRT.ce();
-      kRT.setBackgroundDrawable(mContext.getResources().getDrawable(2130970376));
-      kRT.setAnimationStyle(kRU);
-      kRT.pP = 0;
-      kRT.pY = mI;
+      lrV.setOnDismissListener(this);
+      lrV.qo = this;
+      lrV.setAdapter(cQB);
+      lrV.cg();
+      lrV.setBackgroundDrawable(mContext.getResources().getDrawable(2130838943));
+      lrV.setAnimationStyle(lrW);
+      lrV.qd = 0;
+      lrV.qm = mY;
       boolean bool;
-      if (mI != null)
+      if (mY != null)
       {
-        if (mK != null) {
+        if (na != null) {
           break label882;
         }
         bool = true;
-        mK = mI.getViewTreeObserver();
-        u.v("!44@/B4Tb64lLpKI+vIdmlsJaOm1vKkKLfRfkU+VQyH8HM8=", "tryshow addGlobalListener:%b", new Object[] { Boolean.valueOf(bool) });
+        na = mY.getViewTreeObserver();
+        v.v("MicroMsg.SubMenuHelperBase", "tryshow addGlobalListener:%b", new Object[] { Boolean.valueOf(bool) });
         if (bool) {
-          mK.addOnGlobalLayoutListener(this);
+          na.addOnGlobalLayoutListener(this);
         }
       }
-      kRT.setVerticalOffset(i);
-      kRT.kFm = kFm;
-      kRT.setContentWidth(Math.min(a(cTk), mH));
-      kRT.cf();
-      if ((lyi != 0.0F) && (lyj != 0.0F))
+      lrV.setVerticalOffset(i);
+      lrV.leq = leq;
+      lrV.setContentWidth(Math.min(b(cQB), mX));
+      lrV.ch();
+      if ((lYX != 0.0F) && (lYY != 0.0F))
       {
         localObject1 = new DisplayMetrics();
         ((Activity)mContext).getWindowManager().getDefaultDisplay().getMetrics((DisplayMetrics)localObject1);
@@ -207,43 +207,43 @@ public abstract class s
       {
         if (i != 0)
         {
-          i = (int)(lyj * j);
-          u.d("!44@/B4Tb64lLpKI+vIdmlsJaOm1vKkKLfRfkU+VQyH8HM8=", "menuHeightPercentPort(%f), menuHeightPercentLand(%f), frameHeight(%d), decorViewHeight(%d), menuHeight(%d)", new Object[] { Float.valueOf(lyi), Float.valueOf(lyj), Integer.valueOf(((Rect)localObject1).height()), Integer.valueOf(j), Integer.valueOf(i) });
-          i = Math.round(i / lyg);
-          if ((i <= 0) || (cTk == null)) {
+          i = (int)(lYY * j);
+          v.d("MicroMsg.SubMenuHelperBase", "menuHeightPercentPort(%f), menuHeightPercentLand(%f), frameHeight(%d), decorViewHeight(%d), menuHeight(%d)", new Object[] { Float.valueOf(lYX), Float.valueOf(lYY), Integer.valueOf(((Rect)localObject1).height()), Integer.valueOf(j), Integer.valueOf(i) });
+          i = Math.round(i / lYV);
+          if ((i <= 0) || (cQB == null)) {
             break label946;
           }
-          j = lyg * i + lyf;
-          if ((j == 0) || (j >= cTk.getCount() * lyg)) {
+          j = lYV * i + lYU;
+          if ((j == 0) || (j >= cQB.getCount() * lYV)) {
             break label905;
           }
-          j = lyg;
-          int k = lyf;
-          int m = lyh;
-          kRT.pN = ((i - 1) * j + k + m);
+          j = lYV;
+          int k = lYU;
+          int m = lYW;
+          lrV.qb = ((i - 1) * j + k + m);
         }
         for (;;)
         {
-          if ((kRT != null) && (lyd != null))
+          if ((lrV != null) && (lYS != null))
           {
-            localObject1 = kRT;
-            localObject2 = lyd;
-            bool = cWm.isShowing();
+            localObject1 = lrV;
+            localObject2 = lYS;
+            bool = cUC.isShowing();
             if (bool) {
-              ((MMListPopupWindow)localObject1).bcE();
+              ((MMListPopupWindow)localObject1).bib();
             }
-            pV = ((View)localObject2);
+            qj = ((View)localObject2);
             if (bool) {
               ((MMListPopupWindow)localObject1).show();
             }
-            kRT.pW = lye;
+            lrV.qk = lYT;
           }
-          kRT.show();
-          kRT.kFh.setOnKeyListener(this);
-          kRT.kFh.setSelector(new ColorDrawable(mContext.getResources().getColor(2131231114)));
-          kRT.kFh.setDividerHeight(0);
-          kRT.kFh.setVerticalScrollBarEnabled(true);
-          kRT.kFh.setHorizontalScrollBarEnabled(false);
+          lrV.show();
+          lrV.lek.setOnKeyListener(this);
+          lrV.lek.setSelector(new ColorDrawable(mContext.getResources().getColor(2131690001)));
+          lrV.lek.setDividerHeight(0);
+          lrV.lek.setVerticalScrollBarEnabled(true);
+          lrV.lek.setHorizontalScrollBarEnabled(false);
           return true;
           localObject2 = mContext.getResources().getDisplayMetrics();
           if (widthPixels > heightPixels)
@@ -259,84 +259,90 @@ public abstract class s
           break label289;
           i = 0;
           break label444;
-          i = (int)(lyi * j);
+          i = (int)(lYX * j);
           break label516;
-          u.w("!44@/B4Tb64lLpKI+vIdmlsJaOm1vKkKLfRfkU+VQyH8HM8=", "[cpan] menuheight:%d,listHeight:%d", new Object[] { Integer.valueOf(j), Integer.valueOf(cTk.getCount() * lyg) });
+          v.w("MicroMsg.SubMenuHelperBase", "[cpan] menuheight:%d,listHeight:%d", new Object[] { Integer.valueOf(j), Integer.valueOf(cQB.getCount() * lYV) });
           continue;
-          u.e("!44@/B4Tb64lLpKI+vIdmlsJaOm1vKkKLfRfkU+VQyH8HM8=", "[cpan] setpopuHeight error.");
+          v.e("MicroMsg.SubMenuHelperBase", "[cpan] setpopuHeight error.");
         }
       }
     }
   }
   
+  public final void boL()
+  {
+    lYX = 0.65F;
+    lYY = 0.75F;
+  }
+  
   public final void dismiss()
   {
     if (isShowing()) {
-      kRT.dismiss();
+      lrV.dismiss();
     }
   }
   
-  public final void ih(boolean paramBoolean)
+  public final void iP(boolean paramBoolean)
   {
-    kFm = paramBoolean;
+    leq = paramBoolean;
     if (paramBoolean)
     {
-      kRU = 2131100054;
+      lrW = 2131492963;
       return;
     }
-    kRU = 2131100052;
+    lrW = 2131493005;
   }
   
   public final boolean isShowing()
   {
-    return (kRT != null) && (kRT.cWm.isShowing());
+    return (lrV != null) && (lrV.cUC.isShowing());
   }
   
   public void onDismiss()
   {
-    kRT = null;
-    if (mK != null)
+    lrV = null;
+    if (na != null)
     {
-      if (!mK.isAlive()) {
-        mK = mI.getViewTreeObserver();
+      if (!na.isAlive()) {
+        na = mY.getViewTreeObserver();
       }
-      mK.removeGlobalOnLayoutListener(this);
-      mK = null;
+      na.removeGlobalOnLayoutListener(this);
+      na = null;
     }
-    if (lxZ != null) {
-      lxZ.onCancel(null);
+    if (lYO != null) {
+      lYO.onCancel(null);
     }
-    if (lya != null) {
-      lya.onDismiss();
+    if (lYP != null) {
+      lYP.onDismiss();
     }
   }
   
   public void onGlobalLayout()
   {
-    u.v("!44@/B4Tb64lLpKI+vIdmlsJaOm1vKkKLfRfkU+VQyH8HM8=", "onGlobalLayout showing:%b, anchorshown:%b", new Object[] { Boolean.valueOf(isShowing()), Boolean.valueOf(mI.isShown()) });
+    v.v("MicroMsg.SubMenuHelperBase", "onGlobalLayout showing:%b, anchorshown:%b", new Object[] { Boolean.valueOf(isShowing()), Boolean.valueOf(mY.isShown()) });
     if (isShowing())
     {
-      View localView = mI;
+      View localView = mY;
       if ((localView != null) && (localView.isShown())) {
         break label64;
       }
       dismiss();
     }
     label64:
-    while ((!isShowing()) || (lyb == biO())) {
+    while ((!isShowing()) || (lYQ == boK())) {
       return;
     }
-    kRT.dismiss();
+    lrV.dismiss();
   }
   
-  public void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
     dismiss();
   }
   
   public boolean onKey(View paramView, int paramInt, KeyEvent paramKeyEvent)
   {
-    u.v("!44@/B4Tb64lLpKI+vIdmlsJaOm1vKkKLfRfkU+VQyH8HM8=", "onKey");
+    v.v("MicroMsg.SubMenuHelperBase", "onKey");
     if ((paramKeyEvent.getAction() == 1) && (paramInt == 82))
     {
       dismiss();

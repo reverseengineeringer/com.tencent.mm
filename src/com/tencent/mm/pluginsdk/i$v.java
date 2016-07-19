@@ -4,19 +4,19 @@ public abstract interface i$v
 {
   public abstract void a(i.w paramw);
   
-  public abstract short aED();
+  public abstract void aHI();
   
-  public abstract short aEE();
+  public abstract boolean aHZ();
   
-  public abstract boolean aEF();
+  public abstract void aIa();
   
-  public abstract void aEg();
+  public abstract short aIf();
   
-  public abstract boolean aEx();
+  public abstract short aIg();
   
-  public abstract void aEy();
+  public abstract boolean aIh();
   
-  public abstract void as(String paramString, int paramInt);
+  public abstract void au(String paramString, int paramInt);
   
   public abstract void b(i.w paramw);
 }

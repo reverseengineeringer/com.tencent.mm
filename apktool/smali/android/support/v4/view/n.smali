@@ -14,7 +14,7 @@
 
 
 # static fields
-.field static final fx:Landroid/support/v4/view/n$c;
+.field static final fT:Landroid/support/v4/view/n$c;
 
 
 # direct methods
@@ -34,7 +34,7 @@
 
     invoke-direct {v0}, Landroid/support/v4/view/n$b;-><init>()V
 
-    sput-object v0, Landroid/support/v4/view/n;->fx:Landroid/support/v4/view/n$c;
+    sput-object v0, Landroid/support/v4/view/n;->fT:Landroid/support/v4/view/n$c;
 
     .line 63
     :goto_0
@@ -46,7 +46,7 @@
 
     invoke-direct {v0}, Landroid/support/v4/view/n$a;-><init>()V
 
-    sput-object v0, Landroid/support/v4/view/n;->fx:Landroid/support/v4/view/n$c;
+    sput-object v0, Landroid/support/v4/view/n;->fT:Landroid/support/v4/view/n$c;
 
     goto :goto_0
 .end method
@@ -56,7 +56,7 @@
 
     .prologue
     .line 73
-    sget-object v0, Landroid/support/v4/view/n;->fx:Landroid/support/v4/view/n$c;
+    sget-object v0, Landroid/support/v4/view/n;->fT:Landroid/support/v4/view/n$c;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/n$c;->a(Landroid/view/ViewConfiguration;)I
 

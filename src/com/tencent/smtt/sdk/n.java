@@ -2,11 +2,11 @@ package com.tencent.smtt.sdk;
 
 public abstract interface n
 {
-  public abstract void onDownloadFinish(int paramInt);
+  public abstract void qW(int paramInt);
   
-  public abstract void onDownloadProgress(int paramInt);
+  public abstract void qX(int paramInt);
   
-  public abstract void onInstallFinish(int paramInt);
+  public abstract void qY(int paramInt);
 }
 
 /* Location:

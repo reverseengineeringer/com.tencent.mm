@@ -4,48 +4,48 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.h.g;
-import com.tencent.mm.plugin.sns.h.h;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.i.g;
+import com.tencent.mm.plugin.sns.i.h;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SnsMsgUI$11
   implements AdapterView.OnItemClickListener
 {
   SnsMsgUI$11(SnsMsgUI paramSnsMsgUI) {}
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    if (paramInt == SnsMsgUI.d(hfU).getCount())
+    if (paramInt == SnsMsgUI.d(huL).getCount())
     {
       paramInt = 1;
-      if (ad.azl().DE() > 0) {
-        ad.azl().Mb();
+      if (ad.aBL().DV() > 0) {
+        ad.aBL().Nj();
       }
       for (;;)
       {
-        SnsMsgUI.d(hfU).a(null, null);
-        if (!SnsMsgUI.f(hfU))
+        SnsMsgUI.d(huL).a(null, null);
+        if (!SnsMsgUI.f(huL))
         {
-          if (SnsMsgUI.e(hfU).getParent() != null)
+          if (SnsMsgUI.e(huL).getParent() != null)
           {
-            u.d("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "remove footer");
-            SnsMsgUI.b(hfU).removeFooterView(SnsMsgUI.e(hfU));
+            v.d("MicroMsg.SnsMsgUI", "remove footer");
+            SnsMsgUI.b(huL).removeFooterView(SnsMsgUI.e(huL));
           }
-          if ((SnsMsgUI.g(hfU).getParent() == null) && (paramInt > 0))
+          if ((SnsMsgUI.g(huL).getParent() == null) && (paramInt > 0))
           {
-            SnsMsgUI.b(hfU).addFooterView(SnsMsgUI.g(hfU));
-            u.i("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "add mLoadingFooterView");
+            SnsMsgUI.b(huL).addFooterView(SnsMsgUI.g(huL));
+            v.i("MicroMsg.SnsMsgUI", "add mLoadingFooterView");
           }
         }
-        SnsMsgUI.h(hfU);
-        SnsMsgUI.e(hfU).setVisibility(8);
+        SnsMsgUI.h(huL);
+        SnsMsgUI.e(huL).setVisibility(8);
         return;
-        paramInt = SnsMsgUI.d(hfU).Nw();
+        paramInt = SnsMsgUI.d(huL).OE();
       }
     }
-    paramAdapterView = (g)SnsMsgUI.d(hfU).getItem(paramInt);
-    SnsMsgUI.a(hfU, paramAdapterView);
+    paramAdapterView = (g)SnsMsgUI.d(huL).getItem(paramInt);
+    SnsMsgUI.a(huL, paramAdapterView);
   }
 }
 

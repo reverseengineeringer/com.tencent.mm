@@ -7,59 +7,57 @@ import android.content.DialogInterface.OnClickListener;
 import com.tencent.kingkong.support.Log;
 import com.tencent.mm.model.ar.a;
 import com.tencent.mm.storage.k;
-import com.tencent.mm.t.l;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.p;
+import com.tencent.mm.v.m;
 
 public final class c
 {
-  private static boolean cHw = false;
-  private static p coc = null;
+  private static boolean cEA = false;
+  private static p cjq = null;
   
-  public static void a(l paraml, Activity paramActivity, k paramk)
+  public static void a(m paramm, Activity paramActivity, k paramk, int paramInt)
   {
-    a(paraml, paramActivity, paramk, false, null);
+    a(paramm, paramActivity, paramk, false, null, paramInt);
   }
   
-  public static void a(l paraml, final Activity paramActivity, final k paramk, final boolean paramBoolean, final Runnable paramRunnable)
+  public static void a(m paramm, final Activity paramActivity, final k paramk, final boolean paramBoolean, final Runnable paramRunnable, final int paramInt)
   {
-    boolean bool2 = true;
-    if ((paraml == null) || (paramActivity == null) || (paramk == null))
+    if ((paramm == null) || (paramActivity == null) || (paramk == null))
     {
       boolean bool1;
-      if (paraml == null)
+      if (paramm == null)
       {
         paramBoolean = true;
         if (paramActivity != null) {
           break label73;
         }
         bool1 = true;
-        label28:
+        label25:
         if (paramk != null) {
           break label79;
         }
       }
-      for (;;)
+      label73:
+      label79:
+      for (boolean bool2 = true;; bool2 = false)
       {
-        Log.e("!44@/B4Tb64lLpJcZAIZpKXu2jAJsuCaf+nmCcaYSxN3GfI=", "bizInfo null : %s, context null : %s, ct null : %s", new Object[] { Boolean.valueOf(paramBoolean), Boolean.valueOf(bool1), Boolean.valueOf(bool2) });
+        Log.e("MicroMsg.BizContactDeleteUtil", "bizInfo null : %s, context null : %s, ct null : %s", new Object[] { Boolean.valueOf(paramBoolean), Boolean.valueOf(bool1), Boolean.valueOf(bool2) });
         return;
         paramBoolean = false;
         break;
-        label73:
         bool1 = false;
-        break label28;
-        label79:
-        bool2 = false;
+        break label25;
       }
     }
-    if (paraml.wF()) {}
-    for (String str = paramActivity.getString(2131429728);; str = paramActivity.getString(2131429729, new Object[] { paramk.qz() }))
+    if (paramm.wH()) {}
+    for (String str = paramActivity.getString(2131231411);; str = paramActivity.getString(2131231412, new Object[] { paramk.pc() }))
     {
-      g.a(paramActivity, str, "", paramActivity.getString(2131429723), paramActivity.getString(2131430884), new DialogInterface.OnClickListener()
+      g.b(paramActivity, str, "", paramActivity.getString(2131232046), paramActivity.getString(2131230873), new DialogInterface.OnClickListener()
       {
         public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
         {
-          c.a(ltX, paramActivity, paramk, paramBoolean);
+          c.a(lUY, paramActivity, paramk, paramBoolean, paramInt);
           if (paramRunnable != null) {
             paramRunnable.run();
           }

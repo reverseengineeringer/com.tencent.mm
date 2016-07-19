@@ -4,13 +4,13 @@
 
 
 # static fields
-.field private static ajT:Lcom/tencent/c/a/a/i;
+.field private static VM:Lcom/tencent/c/a/a/i;
 
-.field static ajU:Lcom/tencent/c/a/a/f;
+.field static VN:Lcom/tencent/c/a/a/f;
 
-.field public static volatile ajV:J
+.field public static volatile VO:J
 
-.field static ajW:Lcom/tencent/c/a/a/h;
+.field static VP:Lcom/tencent/c/a/a/h;
 
 .field public static mContext:Landroid/content/Context;
 
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private ajX:Lcom/tencent/c/a/a/g;
+.field private VQ:Lcom/tencent/c/a/a/g;
 
 
 # direct methods
@@ -35,18 +35,18 @@
     sput-object v2, Lcom/tencent/c/a/a/i;->mHandler:Landroid/os/Handler;
 
     .line 30
-    sput-object v2, Lcom/tencent/c/a/a/i;->ajT:Lcom/tencent/c/a/a/i;
+    sput-object v2, Lcom/tencent/c/a/a/i;->VM:Lcom/tencent/c/a/a/i;
 
     .line 31
-    sput-object v2, Lcom/tencent/c/a/a/i;->ajU:Lcom/tencent/c/a/a/f;
+    sput-object v2, Lcom/tencent/c/a/a/i;->VN:Lcom/tencent/c/a/a/f;
 
     .line 33
     const-wide/16 v0, 0x0
 
-    sput-wide v0, Lcom/tencent/c/a/a/i;->ajV:J
+    sput-wide v0, Lcom/tencent/c/a/a/i;->VO:J
 
     .line 34
-    sput-object v2, Lcom/tencent/c/a/a/i;->ajW:Lcom/tencent/c/a/a/h;
+    sput-object v2, Lcom/tencent/c/a/a/i;->VP:Lcom/tencent/c/a/a/h;
 
     return-void
 .end method
@@ -61,7 +61,7 @@
     .line 68
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/c/a/a/i;->ajX:Lcom/tencent/c/a/a/g;
+    iput-object v0, p0, Lcom/tencent/c/a/a/i;->VQ:Lcom/tencent/c/a/a/g;
 
     .line 37
     new-instance v0, Landroid/os/HandlerThread;
@@ -113,18 +113,18 @@
 
     move-result-wide v0
 
-    sput-wide v0, Lcom/tencent/c/a/a/i;->ajV:J
+    sput-wide v0, Lcom/tencent/c/a/a/i;->VO:J
 
     .line 46
     return-void
 .end method
 
-.method public static Q(Landroid/content/Context;)Lcom/tencent/c/a/a/i;
+.method public static M(Landroid/content/Context;)Lcom/tencent/c/a/a/i;
     .locals 2
 
     .prologue
     .line 49
-    sget-object v0, Lcom/tencent/c/a/a/i;->ajT:Lcom/tencent/c/a/a/i;
+    sget-object v0, Lcom/tencent/c/a/a/i;->VM:Lcom/tencent/c/a/a/i;
 
     if-nez v0, :cond_1
 
@@ -135,7 +135,7 @@
 
     .line 51
     :try_start_0
-    sget-object v0, Lcom/tencent/c/a/a/i;->ajT:Lcom/tencent/c/a/a/i;
+    sget-object v0, Lcom/tencent/c/a/a/i;->VM:Lcom/tencent/c/a/a/i;
 
     if-nez v0, :cond_0
 
@@ -144,7 +144,7 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/c/a/a/i;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/tencent/c/a/a/i;->ajT:Lcom/tencent/c/a/a/i;
+    sput-object v0, Lcom/tencent/c/a/a/i;->VM:Lcom/tencent/c/a/a/i;
 
     .line 50
     :cond_0
@@ -154,7 +154,7 @@
 
     .line 56
     :cond_1
-    sget-object v0, Lcom/tencent/c/a/a/i;->ajT:Lcom/tencent/c/a/a/i;
+    sget-object v0, Lcom/tencent/c/a/a/i;->VM:Lcom/tencent/c/a/a/i;
 
     return-object v0
 
@@ -175,7 +175,7 @@
 
     .prologue
     .line 68
-    iget-object v0, p0, Lcom/tencent/c/a/a/i;->ajX:Lcom/tencent/c/a/a/g;
+    iget-object v0, p0, Lcom/tencent/c/a/a/i;->VQ:Lcom/tencent/c/a/a/g;
 
     return-object v0
 .end method
@@ -185,13 +185,13 @@
 
     .prologue
     .line 65
-    sput-object p0, Lcom/tencent/c/a/a/i;->ajU:Lcom/tencent/c/a/a/f;
+    sput-object p0, Lcom/tencent/c/a/a/i;->VN:Lcom/tencent/c/a/a/f;
 
     .line 66
     return-void
 .end method
 
-.method static synthetic ke()Landroid/content/Context;
+.method static synthetic iF()Landroid/content/Context;
     .locals 1
 
     .prologue
@@ -203,20 +203,20 @@
 
 
 # virtual methods
-.method public final kc()Ljava/lang/String;
+.method public final iD()Ljava/lang/String;
     .locals 4
 
     .prologue
     .line 77
-    iget-object v0, p0, Lcom/tencent/c/a/a/i;->ajX:Lcom/tencent/c/a/a/g;
+    iget-object v0, p0, Lcom/tencent/c/a/a/i;->VQ:Lcom/tencent/c/a/a/g;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/c/a/a/i;->ajX:Lcom/tencent/c/a/a/g;
+    iget-object v0, p0, Lcom/tencent/c/a/a/i;->VQ:Lcom/tencent/c/a/a/g;
 
-    iget-object v0, v0, Lcom/tencent/c/a/a/g;->ajR:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/c/a/a/g;->VK:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/c/a/a/s;->at(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/c/a/a/s;->ax(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -226,22 +226,22 @@
     :cond_0
     sget-object v0, Lcom/tencent/c/a/a/i;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/tencent/c/a/a/r;->S(Landroid/content/Context;)Lcom/tencent/c/a/a/r;
+    invoke-static {v0}, Lcom/tencent/c/a/a/r;->O(Landroid/content/Context;)Lcom/tencent/c/a/a/r;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/c/a/a/r;->kh()Lcom/tencent/c/a/a/g;
+    invoke-virtual {v0}, Lcom/tencent/c/a/a/r;->iI()Lcom/tencent/c/a/a/g;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/c/a/a/i;->ajX:Lcom/tencent/c/a/a/g;
+    iput-object v0, p0, Lcom/tencent/c/a/a/i;->VQ:Lcom/tencent/c/a/a/g;
 
     .line 79
-    iget-object v0, p0, Lcom/tencent/c/a/a/i;->ajX:Lcom/tencent/c/a/a/g;
+    iget-object v0, p0, Lcom/tencent/c/a/a/i;->VQ:Lcom/tencent/c/a/a/g;
 
-    iget-object v0, v0, Lcom/tencent/c/a/a/g;->ajR:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/c/a/a/g;->VK:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/c/a/a/s;->at(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/c/a/a/s;->ax(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -274,17 +274,17 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/tencent/c/a/a/i;->ajX:Lcom/tencent/c/a/a/g;
+    iget-object v1, p0, Lcom/tencent/c/a/a/i;->VQ:Lcom/tencent/c/a/a/g;
 
-    iget-object v1, v1, Lcom/tencent/c/a/a/g;->ajR:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/c/a/a/g;->VK:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 86
     :cond_2
-    iget-object v0, p0, Lcom/tencent/c/a/a/i;->ajX:Lcom/tencent/c/a/a/g;
+    iget-object v0, p0, Lcom/tencent/c/a/a/i;->VQ:Lcom/tencent/c/a/a/g;
 
-    iget-object v0, v0, Lcom/tencent/c/a/a/g;->ajR:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/c/a/a/g;->VK:Ljava/lang/String;
 
     return-object v0
 
@@ -295,20 +295,20 @@
     goto :goto_0
 .end method
 
-.method public final kd()Ljava/lang/String;
+.method public final iE()Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 95
-    iget-object v0, p0, Lcom/tencent/c/a/a/i;->ajX:Lcom/tencent/c/a/a/g;
+    iget-object v0, p0, Lcom/tencent/c/a/a/i;->VQ:Lcom/tencent/c/a/a/g;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/c/a/a/i;->ajX:Lcom/tencent/c/a/a/g;
+    iget-object v0, p0, Lcom/tencent/c/a/a/i;->VQ:Lcom/tencent/c/a/a/g;
 
-    iget-object v0, v0, Lcom/tencent/c/a/a/g;->ajR:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/c/a/a/g;->VK:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/c/a/a/s;->at(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/c/a/a/s;->ax(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -318,21 +318,21 @@
     :cond_0
     sget-object v0, Lcom/tencent/c/a/a/i;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/tencent/c/a/a/r;->S(Landroid/content/Context;)Lcom/tencent/c/a/a/r;
+    invoke-static {v0}, Lcom/tencent/c/a/a/r;->O(Landroid/content/Context;)Lcom/tencent/c/a/a/r;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/c/a/a/r;->kh()Lcom/tencent/c/a/a/g;
+    invoke-virtual {v0}, Lcom/tencent/c/a/a/r;->iI()Lcom/tencent/c/a/a/g;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/c/a/a/i;->ajX:Lcom/tencent/c/a/a/g;
+    iput-object v0, p0, Lcom/tencent/c/a/a/i;->VQ:Lcom/tencent/c/a/a/g;
 
     .line 98
     :cond_1
-    iget-object v0, p0, Lcom/tencent/c/a/a/i;->ajX:Lcom/tencent/c/a/a/g;
+    iget-object v0, p0, Lcom/tencent/c/a/a/i;->VQ:Lcom/tencent/c/a/a/g;
 
-    iget-object v0, v0, Lcom/tencent/c/a/a/g;->ajR:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/c/a/a/g;->VK:Ljava/lang/String;
 
     return-object v0
 .end method

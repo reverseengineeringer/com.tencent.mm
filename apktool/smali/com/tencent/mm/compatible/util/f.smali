@@ -12,7 +12,7 @@
 
 
 # direct methods
-.method public static oX()I
+.method public static np()I
     .locals 2
 
     .prologue
@@ -37,7 +37,7 @@
     return v0
 .end method
 
-.method public static oY()Ljava/lang/String;
+.method public static nq()Ljava/lang/String;
     .locals 2
 
     .prologue
@@ -62,7 +62,7 @@
     return-object v0
 .end method
 
-.method public static oZ()Ljava/lang/String;
+.method public static nr()Ljava/lang/String;
     .locals 4
 
     .prologue

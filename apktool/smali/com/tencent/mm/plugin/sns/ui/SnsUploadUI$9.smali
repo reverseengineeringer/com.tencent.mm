@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+.field final synthetic hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 452
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$9;->hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+    .line 470
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$9;->hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,13 +40,13 @@
     .locals 2
 
     .prologue
-    .line 455
+    .line 473
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 456
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$9;->hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+    .line 474
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$9;->hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
     invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->getWindowManager()Landroid/view/WindowManager;
 
@@ -58,15 +58,15 @@
 
     invoke-virtual {v1, v0}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 457
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayY()Lcom/tencent/mm/plugin/sns/h/p;
+    .line 475
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBz()Lcom/tencent/mm/plugin/sns/i/p;
 
     iget v1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/plugin/sns/h/p;->bh(II)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/plugin/sns/i/p;->bm(II)V
 
-    .line 458
+    .line 476
     return-void
 .end method

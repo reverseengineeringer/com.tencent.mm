@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/transmit/SelectConversationUI;->k(Landroid/content/Intent;Ljava/lang/String;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/ui/transmit/SelectConversationUI;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lBq:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
+.field final synthetic mci:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
 
 .field final synthetic val$intent:Landroid/content/Intent;
 
@@ -28,8 +28,8 @@
     .locals 0
 
     .prologue
-    .line 516
-    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$5;->lBq:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
+    .line 627
+    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$5;->mci:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
 
     iput-object p2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$5;->val$intent:Landroid/content/Intent;
 
@@ -40,20 +40,12 @@
 
 
 # virtual methods
-.method public final a(ZLjava/lang/String;I)V
+.method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 3
 
     .prologue
-    .line 520
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$5;->lBq:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->age()V
-
-    .line 521
-    if-eqz p1, :cond_0
-
-    .line 522
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$5;->lBq:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
+    .line 631
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$5;->mci:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
 
     const/4 v1, -0x1
 
@@ -61,12 +53,11 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->setResult(ILandroid/content/Intent;)V
 
-    .line 523
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$5;->lBq:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
+    .line 632
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$5;->mci:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->finish()V
 
-    .line 525
-    :cond_0
+    .line 633
     return-void
 .end method

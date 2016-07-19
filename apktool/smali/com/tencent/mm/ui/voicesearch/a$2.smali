@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lCk:Lcom/tencent/mm/ui/voicesearch/a;
+.field final synthetic mdb:Lcom/tencent/mm/ui/voicesearch/a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 202
-    iput-object p1, p0, Lcom/tencent/mm/ui/voicesearch/a$2;->lCk:Lcom/tencent/mm/ui/voicesearch/a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/voicesearch/a$2;->mdb:Lcom/tencent/mm/ui/voicesearch/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final dd(I)Ljava/lang/String;
+.method public final dI(I)Ljava/lang/String;
     .locals 3
 
     .prologue
@@ -45,7 +45,7 @@
     .line 206
     if-ltz p1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/a$2;->lCk:Lcom/tencent/mm/ui/voicesearch/a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/a$2;->mdb:Lcom/tencent/mm/ui/voicesearch/a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/voicesearch/a;->getCount()I
 
@@ -55,11 +55,11 @@
 
     .line 207
     :cond_0
-    const-string/jumbo v0, "!56@/B4Tb64lLpIuhwFNmr0jFWYgIN094j0aBZ18bmsj7hGfIxUgiYP/JA=="
+    const-string/jumbo v0, "MicroMsg.SearchConversationAdapter"
 
     const-string/jumbo v2, "pos is invalid"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -69,7 +69,7 @@
 
     .line 211
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/a$2;->lCk:Lcom/tencent/mm/ui/voicesearch/a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/a$2;->mdb:Lcom/tencent/mm/ui/voicesearch/a;
 
     invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/voicesearch/a;->getItem(I)Ljava/lang/Object;
 
@@ -85,17 +85,17 @@
     goto :goto_0
 
     :cond_2
-    iget-object v0, v0, Lcom/tencent/mm/d/b/t;->field_username:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/e/b/t;->field_username:Ljava/lang/String;
 
     goto :goto_0
 .end method
 
-.method public final yz()I
+.method public final yM()I
     .locals 1
 
     .prologue
     .line 217
-    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/a$2;->lCk:Lcom/tencent/mm/ui/voicesearch/a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/a$2;->mdb:Lcom/tencent/mm/ui/voicesearch/a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/voicesearch/a;->getCount()I
 

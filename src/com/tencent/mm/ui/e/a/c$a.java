@@ -1,20 +1,16 @@
 package com.tencent.mm.ui.e.a;
 
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.os.Bundle;
 
-public final class c$a
-  extends a.a
+public abstract interface c$a
 {
-  public View cMt;
-  public ImageView cNV;
-  public TextView fKK;
+  public abstract void a(b paramb);
   
-  public c$a(c paramc)
-  {
-    super(paramc);
-  }
+  public abstract void a(d paramd);
+  
+  public abstract void i(Bundle paramBundle);
+  
+  public abstract void onCancel();
 }
 
 /* Location:

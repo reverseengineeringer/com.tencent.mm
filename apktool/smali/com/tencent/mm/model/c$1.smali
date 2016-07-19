@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/az/g$a;
+.implements Lcom/tencent/mm/bc/g$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bzL:Lcom/tencent/mm/model/c;
+.field final synthetic bsO:Lcom/tencent/mm/model/c;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 390
-    iput-object p1, p0, Lcom/tencent/mm/model/c$1;->bzL:Lcom/tencent/mm/model/c;
+    .line 444
+    iput-object p1, p0, Lcom/tencent/mm/model/c$1;->bsO:Lcom/tencent/mm/model/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,14 +36,14 @@
 
 
 # virtual methods
-.method public final rY()V
+.method public final sa()V
     .locals 6
 
     .prologue
     const/4 v4, 0x1
 
-    .line 394
-    iget-object v0, p0, Lcom/tencent/mm/model/c$1;->bzL:Lcom/tencent/mm/model/c;
+    .line 448
+    iget-object v0, p0, Lcom/tencent/mm/model/c$1;->bsO:Lcom/tencent/mm/model/c;
 
     invoke-static {v0}, Lcom/tencent/mm/model/c;->a(Lcom/tencent/mm/model/c;)Lcom/tencent/mm/storage/h;
 
@@ -51,8 +51,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 395
-    const-string/jumbo v0, "!32@/B4Tb64lLpIaKqQrIg/z8CiDfdaO9WDN"
+    .line 449
+    const-string/jumbo v0, "MicroMsg.AccountStorage"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -60,7 +60,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/model/c$1;->bzL:Lcom/tencent/mm/model/c;
+    iget-object v2, p0, Lcom/tencent/mm/model/c$1;->bsO:Lcom/tencent/mm/model/c;
 
     invoke-static {v2}, Lcom/tencent/mm/model/c;->a(Lcom/tencent/mm/model/c;)Lcom/tencent/mm/storage/h;
 
@@ -74,28 +74,28 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 396
-    iget-object v0, p0, Lcom/tencent/mm/model/c$1;->bzL:Lcom/tencent/mm/model/c;
+    .line 450
+    iget-object v0, p0, Lcom/tencent/mm/model/c$1;->bsO:Lcom/tencent/mm/model/c;
 
     invoke-static {v0}, Lcom/tencent/mm/model/c;->a(Lcom/tencent/mm/model/c;)Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/storage/h;->gN(Z)V
+    invoke-virtual {v0, v4}, Lcom/tencent/mm/storage/h;->hn(Z)V
 
-    .line 399
+    .line 453
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/modelstat/h;->Dw()Lcom/tencent/mm/modelstat/e;
+    invoke-static {}, Lcom/tencent/mm/modelstat/l;->DM()Lcom/tencent/mm/modelstat/h;
 
     move-result-object v0
 
-    .line 400
+    .line 454
     if-eqz v0, :cond_1
 
-    .line 401
-    const-string/jumbo v1, "!32@/B4Tb64lLpIaKqQrIg/z8CiDfdaO9WDN"
+    .line 455
+    const-string/jumbo v1, "MicroMsg.AccountStorage"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -111,32 +111,32 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 402
+    .line 456
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-object v0, v0, Lcom/tencent/mm/modelstat/e;->cdX:Lcom/tencent/mm/sdk/platformtools/an;
+    iget-object v0, v0, Lcom/tencent/mm/modelstat/h;->bYY:Lcom/tencent/mm/sdk/platformtools/ar;
 
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/sdk/platformtools/an;->gK(Z)V
+    invoke-virtual {v0, v4}, Lcom/tencent/mm/sdk/platformtools/ar;->hk(Z)V
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpKaLNAssnLXZm7wD8ibTC7s"
+    const-string/jumbo v0, "MicroMsg.NetStat"
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
     const-string/jumbo v4, "summer net appendAllToDisk end takes: "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    sub-long v1, v4, v1
+    sub-long v2, v4, v2
 
-    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -150,17 +150,17 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 404
+    .line 458
     :cond_1
     return-void
 .end method
 
-.method public final rZ()V
+.method public final sb()V
     .locals 0
 
     .prologue
-    .line 412
+    .line 466
     return-void
 .end method

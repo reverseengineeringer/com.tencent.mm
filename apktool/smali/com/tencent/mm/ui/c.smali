@@ -12,53 +12,53 @@
 
 
 # virtual methods
-.method public abstract aZw()V
+.method public abstract a(Lcom/tencent/mm/ui/c$a;)V
 .end method
 
 .method public abstract b(IF)V
 .end method
 
-.method public abstract gS(Z)V
+.method public abstract beN()V
 .end method
 
-.method public abstract gT(Z)V
+.method public abstract beO()I
 .end method
 
-.method public abstract getContactTabUnread()I
+.method public abstract beP()I
 .end method
 
-.method public abstract getCurIdx()I
+.method public abstract beQ()I
 .end method
 
-.method public abstract getFriendTabUnread()I
+.method public abstract beR()I
 .end method
 
-.method public abstract getMainTabUnread()I
+.method public abstract beS()Z
 .end method
 
-.method public abstract getSettingsPoint()Z
+.method public abstract beT()Z
 .end method
 
-.method public abstract getSettingsTabUnread()I
+.method public abstract beU()I
 .end method
 
-.method public abstract getShowFriendPoint()Z
+.method public abstract hn(I)V
 .end method
 
-.method public abstract pP(I)V
+.method public abstract hs(Z)V
 .end method
 
-.method public abstract pQ(I)V
+.method public abstract ht(Z)V
 .end method
 
-.method public abstract pR(I)V
+.method public abstract rE(I)V
 .end method
 
-.method public abstract pS(I)V
+.method public abstract rF(I)V
 .end method
 
-.method public abstract setOnTabClickListener(Lcom/tencent/mm/ui/c$a;)V
+.method public abstract rG(I)V
 .end method
 
-.method public abstract setTo(I)V
+.method public abstract rH(I)V
 .end method

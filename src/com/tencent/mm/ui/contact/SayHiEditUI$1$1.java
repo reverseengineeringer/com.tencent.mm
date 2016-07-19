@@ -4,7 +4,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.pluginsdk.model.l;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 
 final class SayHiEditUI$1$1
   implements DialogInterface.OnCancelListener
@@ -13,7 +13,7 @@ final class SayHiEditUI$1$1
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    ah.tE().c(fzd);
+    ah.tF().c(fIh);
   }
 }
 

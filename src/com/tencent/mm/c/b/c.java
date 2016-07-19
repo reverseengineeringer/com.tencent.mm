@@ -7,59 +7,48 @@ import com.tencent.mm.compatible.b.e.a;
 import com.tencent.mm.compatible.d.j;
 import com.tencent.mm.compatible.d.l;
 import com.tencent.mm.compatible.d.p;
-import com.tencent.mm.d.a.il;
-import com.tencent.mm.d.a.il.b;
-import com.tencent.mm.d.a.im;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.e.a.iq;
+import com.tencent.mm.e.a.iq.b;
+import com.tencent.mm.e.a.ir;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class c
 {
-  private int apH = 8000;
-  public int apY = 0;
-  int apZ = 0;
-  int aqa = 0;
-  int aqb = 0;
-  private int aqc = 1;
-  int aqd = 120;
-  private boolean aqe = false;
-  boolean aqf = false;
-  private int aqg = 10;
-  private int aqh = -1;
-  public int aqi = -123456789;
-  private boolean aqj = false;
-  long aqk = -1L;
-  int aql;
-  boolean aqm = false;
-  int aqn;
-  private boolean aqo = false;
-  int aqp = 0;
-  boolean aqq = false;
-  boolean aqr = false;
-  private AudioRecord aqs;
-  public a aqt;
-  public f aqu;
-  private com.tencent.mm.compatible.b.e aqv;
-  com.tencent.mm.c.c.b aqw;
-  private int aqx = 2;
-  public int aqy = 1;
-  private f.a aqz = new f.a()
+  private int aaZ = 8000;
+  public int abA = -123456789;
+  private boolean abB = false;
+  long abC = -1L;
+  int abD;
+  boolean abE = false;
+  int abF;
+  private boolean abG = false;
+  int abH = 0;
+  boolean abI = false;
+  boolean abJ = false;
+  private AudioRecord abK;
+  public a abL;
+  public f abM;
+  private com.tencent.mm.compatible.b.e abN;
+  com.tencent.mm.c.c.b abO;
+  private int abP = 2;
+  public int abQ = 1;
+  private f.a abR = new f.a()
   {
     public final void c(int paramAnonymousInt, byte[] paramAnonymousArrayOfByte)
     {
       Object localObject = c.this;
-      aqp += 1;
-      if ((aqr) && (System.currentTimeMillis() - aqk <= 1000L) && (aqp - 10 > (System.currentTimeMillis() - aqk) / aqd))
+      abH += 1;
+      if ((abJ) && (System.currentTimeMillis() - abC <= 1000L) && (abH - 10 > (System.currentTimeMillis() - abC) / abv))
       {
-        localObject = h.fUJ;
-        h.b(151L, 0L, 1L, false);
-        localObject = h.fUJ;
-        h.b(151L, 4L, 1L, false);
-        u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "return too many data, force stop, %d, %d", new Object[] { Integer.valueOf(aqp), Long.valueOf((System.currentTimeMillis() - aqk) / aqd) });
-        aqq = true;
+        localObject = com.tencent.mm.plugin.report.service.g.gdY;
+        com.tencent.mm.plugin.report.service.g.b(151L, 0L, 1L, false);
+        localObject = com.tencent.mm.plugin.report.service.g.gdY;
+        com.tencent.mm.plugin.report.service.g.b(151L, 4L, 1L, false);
+        v.e("MicroMsg.MMPcmRecorder", "return too many data, force stop, %d, %d", new Object[] { Integer.valueOf(abH), Long.valueOf((System.currentTimeMillis() - abC) / abv) });
+        abI = true;
       }
-      if (aqw != null) {
-        aqw.h(paramAnonymousArrayOfByte, paramAnonymousInt);
+      if (abO != null) {
+        abO.h(paramAnonymousArrayOfByte, paramAnonymousInt);
       }
       int m;
       int i;
@@ -69,14 +58,14 @@ public final class c
       if (paramAnonymousInt > 0)
       {
         localObject = c.this;
-        if ((!aqm) || (-2 != aqa))
+        if ((!abE) || (-2 != abs))
         {
-          m = paramAnonymousInt / aql;
+          m = paramAnonymousInt / abD;
           i = 5;
-          if (i <= aqn + m)
+          if (i <= abF + m)
           {
-            k = (i - aqn - 1) * aql;
-            n = aql + k;
+            k = (i - abF - 1) * abD;
+            n = abD + k;
             if (k >= 0)
             {
               j = k;
@@ -84,35 +73,35 @@ public final class c
                 break label638;
               }
             }
-            u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "error start: %d, end: %d", new Object[] { Integer.valueOf(k), Integer.valueOf(n) });
+            v.e("MicroMsg.MMPcmRecorder", "error start: %d, end: %d", new Object[] { Integer.valueOf(k), Integer.valueOf(n) });
           }
-          aqn = ((aqn + m) % 5);
-          if (aqa == 20)
+          abF = ((abF + m) % 5);
+          if (abs == 20)
           {
-            apY = 6;
-            u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DATAZERO_ERROR");
-            if ((apZ != -1) || (aqb != -1)) {
+            abq = 6;
+            v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DATAZERO_ERROR");
+            if ((abr != -1) || (abt != -1)) {
               break label683;
             }
-            apY = 11;
-            u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DATAZERO_DISTORTION_READRET_ERROR");
+            abq = 11;
+            v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DATAZERO_DISTORTION_READRET_ERROR");
             label383:
-            h localh = h.fUJ;
-            h.b(151L, 0L, 1L, false);
-            localh = h.fUJ;
-            h.b(151L, 5L, 1L, false);
-            aqa = -2;
-            ((c)localObject).lO();
+            com.tencent.mm.plugin.report.service.g localg = com.tencent.mm.plugin.report.service.g.gdY;
+            com.tencent.mm.plugin.report.service.g.b(151L, 0L, 1L, false);
+            localg = com.tencent.mm.plugin.report.service.g.gdY;
+            com.tencent.mm.plugin.report.service.g.b(151L, 5L, 1L, false);
+            abs = -2;
+            ((c)localObject).jZ();
           }
         }
       }
-      if (aqf)
+      if (abx)
       {
         if (paramAnonymousInt <= 0) {
           break label799;
         }
         localObject = c.this;
-        if (apZ != -1)
+        if (abr != -1)
         {
           j = 0;
           i = 0;
@@ -132,24 +121,24 @@ public final class c
             if (k < 5) {
               break label735;
             }
-            apZ += 1;
+            abr += 1;
           }
-          if (apZ > 100)
+          if (abr > 100)
           {
-            apY = 7;
-            u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DISTORTION_ERROR");
-            if ((aqa != -2) || (aqb != -1)) {
+            abq = 7;
+            v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DISTORTION_ERROR");
+            if ((abs != -2) || (abt != -1)) {
               break label746;
             }
-            apY = 11;
-            u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DATAZERO_DISTORTION_READRET_ERROR");
+            abq = 11;
+            v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DATAZERO_DISTORTION_READRET_ERROR");
             label592:
-            paramAnonymousArrayOfByte = h.fUJ;
-            h.b(151L, 0L, 1L, false);
-            paramAnonymousArrayOfByte = h.fUJ;
-            h.b(151L, 6L, 1L, false);
-            ((c)localObject).lO();
-            apZ = -1;
+            paramAnonymousArrayOfByte = com.tencent.mm.plugin.report.service.g.gdY;
+            com.tencent.mm.plugin.report.service.g.b(151L, 0L, 1L, false);
+            paramAnonymousArrayOfByte = com.tencent.mm.plugin.report.service.g.gdY;
+            com.tencent.mm.plugin.report.service.g.b(151L, 6L, 1L, false);
+            ((c)localObject).jZ();
+            abr = -1;
           }
         }
       }
@@ -170,116 +159,126 @@ public final class c
               break;
             }
           } while (paramAnonymousArrayOfByte[j] == 0);
-          aqa = -1;
-          aqm = true;
-          aqa += 1;
+          abs = -1;
+          abE = true;
+          abs += 1;
           i += 5;
           break;
-          if (apZ == -1)
+          if (abr == -1)
           {
-            apY = 8;
-            u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DATAZERO_DISTORTION_ERROR");
+            abq = 8;
+            v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DATAZERO_DISTORTION_ERROR");
             break label383;
           }
-          if (aqb != -1) {
+          if (abt != -1) {
             break label383;
           }
-          apY = 9;
-          u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DATAZERO_READRET_ERROR");
+          abq = 9;
+          v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DATAZERO_READRET_ERROR");
           break label383;
           i += 1;
           j = k;
           break label459;
-          if (aqa == -2)
+          if (abs == -2)
           {
-            apY = 8;
-            u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DATAZERO_DISTORTION_ERROR");
+            abq = 8;
+            v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DATAZERO_DISTORTION_ERROR");
             break label592;
           }
-          if (aqb != -1) {
+          if (abt != -1) {
             break label592;
           }
-          apY = 10;
-          u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DISTORTION_READRET_ERROR");
+          abq = 10;
+          v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DISTORTION_READRET_ERROR");
           break label592;
           paramAnonymousArrayOfByte = c.this;
-        } while ((aqb == -1) || (paramAnonymousInt >= 0));
-        aqb += 1;
-      } while (aqb < 50);
-      apY = 5;
-      u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_READRET_ERROR");
-      if ((aqa == -2) && (apZ == -1))
+        } while ((abt == -1) || (paramAnonymousInt >= 0));
+        abt += 1;
+      } while (abt < 50);
+      abq = 5;
+      v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_READRET_ERROR");
+      if ((abs == -2) && (abr == -1))
       {
-        apY = 11;
-        u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DATAZERO_DISTORTION_READRET_ERROR");
+        abq = 11;
+        v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DATAZERO_DISTORTION_READRET_ERROR");
       }
       for (;;)
       {
-        localObject = h.fUJ;
-        h.b(151L, 0L, 1L, false);
-        localObject = h.fUJ;
-        h.b(151L, 7L, 1L, false);
-        paramAnonymousArrayOfByte.lO();
-        aqb = -1;
+        localObject = com.tencent.mm.plugin.report.service.g.gdY;
+        com.tencent.mm.plugin.report.service.g.b(151L, 0L, 1L, false);
+        localObject = com.tencent.mm.plugin.report.service.g.gdY;
+        com.tencent.mm.plugin.report.service.g.b(151L, 7L, 1L, false);
+        paramAnonymousArrayOfByte.jZ();
+        abt = -1;
         return;
-        if (aqa == -2)
+        if (abs == -2)
         {
-          apY = 9;
-          u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DATAZERO_READRET_ERROR");
+          abq = 9;
+          v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DATAZERO_READRET_ERROR");
         }
-        else if (apZ == -1)
+        else if (abr == -1)
         {
-          apY = 10;
-          u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DISTORTION_READRET_ERROR");
+          abq = 10;
+          v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DISTORTION_READRET_ERROR");
         }
       }
     }
   };
+  public int abq = 0;
+  int abr = 0;
+  int abs = 0;
+  int abt = 0;
+  private int abu = 1;
+  int abv = 120;
+  private boolean abw = false;
+  boolean abx = false;
+  private int aby = 10;
+  private int abz = -1;
   
   public c(int paramInt1, int paramInt2)
   {
-    apH = paramInt1;
-    aqh = paramInt2;
-    if (aqc == 2)
+    aaZ = paramInt1;
+    abz = paramInt2;
+    if (abu == 2)
     {
-      aqx = 3;
-      if ((aqh == 0) && (bsQbrK > 0)) {
-        aqd = bsQbrK;
+      abP = 3;
+      if ((abz == 0) && (bgWbfL > 0)) {
+        abv = bgWbfL;
       }
-      if (bsQbrV > 0) {
-        aqx = bsQbrV;
+      if (bgWbfW > 0) {
+        abP = bgWbfW;
       }
-      if (bsQbrF > 0) {
-        aqg = bsQbrF;
+      if (bgWbfG > 0) {
+        aby = bgWbfG;
       }
-      if (bsLbql) {
-        aqw = new com.tencent.mm.c.c.b(g.aqX, aqc, apH);
+      if (bgPbel) {
+        abO = new com.tencent.mm.c.c.b(g.acp, abu, aaZ);
       }
-      if (1 != g.j("EnableRecorderCheckUnreasonableData", 1)) {
+      if (1 != g.g("EnableRecorderCheckUnreasonableData", 1)) {
         break label338;
       }
     }
     label338:
     for (boolean bool = true;; bool = false)
     {
-      aqr = bool;
-      u.i("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "MMPcmRecorder sampleRate:%d channelCnt:%d durationPreFrame:%d newBufPreFrame:%b Biz:%d", new Object[] { Integer.valueOf(apH), Integer.valueOf(aqc), Integer.valueOf(aqd), Boolean.valueOf(aqe), Integer.valueOf(aqh) });
+      abJ = bool;
+      v.i("MicroMsg.MMPcmRecorder", "MMPcmRecorder sampleRate:%d channelCnt:%d durationPreFrame:%d newBufPreFrame:%b Biz:%d", new Object[] { Integer.valueOf(aaZ), Integer.valueOf(abu), Integer.valueOf(abv), Boolean.valueOf(abw), Integer.valueOf(abz) });
       return;
-      aqx = 2;
+      abP = 2;
       break;
     }
   }
   
   private boolean init()
   {
-    aqy = 1;
+    abQ = 1;
     boolean bool1;
     int i;
-    if (bsQbrG == 2)
+    if (bgWbfH == 2)
     {
       bool1 = false;
-      i = l.ok();
-      j = bsLbqy;
+      i = l.mA();
+      j = bgPbey;
       if ((i & 0x400) == 0) {
         break label151;
       }
@@ -287,7 +286,7 @@ public final class c
       if (j <= 0) {
         i = 0;
       }
-      u.i("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "CPU ARMv7, enableRecTimerMode: " + i);
+      v.i("MicroMsg.MMPcmRecorder", "CPU ARMv7, enableRecTimerMode: " + i);
       label66:
       if (i != 1) {
         break label156;
@@ -298,15 +297,15 @@ public final class c
     label156:
     for (int k = 1;; k = 0)
     {
-      u.d("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "init, start getMinBufferSize");
-      m = AudioRecord.getMinBufferSize(apH, aqx, 2);
+      v.d("MicroMsg.MMPcmRecorder", "init, start getMinBufferSize");
+      m = AudioRecord.getMinBufferSize(aaZ, abP, 2);
       if ((m != -2) && (m != -1)) {
         break label161;
       }
-      aqy = 3;
-      apY = 1;
-      u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_MINBUFFER_ERROR " + m);
-      lO();
+      abQ = 3;
+      abq = 1;
+      v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_MINBUFFER_ERROR " + m);
+      jZ();
       return false;
       bool1 = true;
       break;
@@ -314,12 +313,12 @@ public final class c
       break label66;
     }
     label161:
-    u.d("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "finish getMinBufferSize, minBufSize: %d", new Object[] { Integer.valueOf(m) });
-    aql = (apH * 20 * aqc * 2 / 1000);
-    int n = apH * aqd * aqc / 1000;
+    v.d("MicroMsg.MMPcmRecorder", "finish getMinBufferSize, minBufSize: %d", new Object[] { Integer.valueOf(m) });
+    abD = (aaZ * 20 * abu * 2 / 1000);
+    int n = aaZ * abv * abu / 1000;
     int i1 = n * 2;
-    u.i("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "Construct AudioRecord, minBufSize:%d, sampleRate:%d, sampleCntPreFrame:%d, sizePreFrame:%d, timesOfMinBuffer:%d, readMode:%b", new Object[] { Integer.valueOf(m), Integer.valueOf(apH), Integer.valueOf(n), Integer.valueOf(i1), Integer.valueOf(aqg), Boolean.valueOf(bool1) });
-    int i2 = aqh;
+    v.i("MicroMsg.MMPcmRecorder", "Construct AudioRecord, minBufSize:%d, sampleRate:%d, sampleCntPreFrame:%d, sizePreFrame:%d, timesOfMinBuffer:%d, readMode:%b", new Object[] { Integer.valueOf(m), Integer.valueOf(aaZ), Integer.valueOf(n), Integer.valueOf(i1), Integer.valueOf(aby), Boolean.valueOf(bool1) });
+    int i2 = abz;
     int j = 1;
     if ((1 == i2) || (6 == i2))
     {
@@ -327,13 +326,13 @@ public final class c
         break label577;
       }
       i = 1;
-      if (bsLbpH) {
+      if (bgPbdH) {
         i = 1;
       }
-      if (bsLbqf < 0) {
+      if (bgPbef < 0) {
         break label1214;
       }
-      i = bsLbqf;
+      i = bgPbef;
     }
     label577:
     label629:
@@ -347,8 +346,8 @@ public final class c
       if (6 == i2)
       {
         j = i;
-        if (bsLbqI >= 0) {
-          j = bsLbqI;
+        if (bgPbeI >= 0) {
+          j = bgPbeI;
         }
       }
       Object localObject1;
@@ -356,45 +355,45 @@ public final class c
       {
         try
         {
-          aqs = new AudioRecord(j, apH, aqx, 2, aqg * m);
-          if (aqs.getState() == 0)
+          abK = new AudioRecord(j, aaZ, abP, 2, aby * m);
+          if (abK.getState() == 0)
           {
-            localh = h.fUJ;
-            h.b(151L, 0L, 1L, false);
-            localh = h.fUJ;
-            h.b(151L, 2L, 1L, false);
-            aqs.release();
-            apY = 2;
-            u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_NEWAUDIORECORD_ERROR");
+            localg = com.tencent.mm.plugin.report.service.g.gdY;
+            com.tencent.mm.plugin.report.service.g.b(151L, 0L, 1L, false);
+            localg = com.tencent.mm.plugin.report.service.g.gdY;
+            com.tencent.mm.plugin.report.service.g.b(151L, 2L, 1L, false);
+            abK.release();
+            abq = 2;
+            v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_NEWAUDIORECORD_ERROR");
             if (7 != j) {
               break label629;
             }
             i = 1;
-            aqs = new AudioRecord(i, apH, aqx, 2, aqg * m);
+            abK = new AudioRecord(i, aaZ, abP, 2, aby * m);
           }
-          if (aqs.getState() != 0) {
+          if (abK.getState() != 0) {
             break label634;
           }
-          h localh = h.fUJ;
-          h.b(151L, 0L, 1L, false);
-          localh = h.fUJ;
-          h.b(151L, 2L, 1L, false);
-          aqs.release();
-          aqs = null;
-          aqy = 2;
-          apY = 3;
-          u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_SECNEWAUDIORECORD_ERROR");
-          lO();
+          com.tencent.mm.plugin.report.service.g localg = com.tencent.mm.plugin.report.service.g.gdY;
+          com.tencent.mm.plugin.report.service.g.b(151L, 0L, 1L, false);
+          localg = com.tencent.mm.plugin.report.service.g.gdY;
+          com.tencent.mm.plugin.report.service.g.b(151L, 2L, 1L, false);
+          abK.release();
+          abK = null;
+          abQ = 2;
+          abq = 3;
+          v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_SECNEWAUDIORECORD_ERROR");
+          jZ();
           return false;
         }
         catch (Exception localException)
         {
-          u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "new AudioRecord failed");
-          apY = 12;
-          localObject1 = h.fUJ;
-          h.b(151L, 0L, 1L, false);
-          localObject1 = h.fUJ;
-          h.b(151L, 1L, 1L, false);
+          v.e("MicroMsg.MMPcmRecorder", "new AudioRecord failed");
+          abq = 12;
+          localObject1 = com.tencent.mm.plugin.report.service.g.gdY;
+          com.tencent.mm.plugin.report.service.g.b(151L, 0L, 1L, false);
+          localObject1 = com.tencent.mm.plugin.report.service.g.gdY;
+          com.tencent.mm.plugin.report.service.g.b(151L, 1L, 1L, false);
           return false;
         }
         i = 7;
@@ -404,30 +403,30 @@ public final class c
       Object localObject2;
       if (bool1)
       {
-        localObject1 = aqs;
-        boolean bool2 = aqe;
-        localObject2 = aqt;
-        if (((aqh == 1) || (aqh == 6)) && (k != 0))
+        localObject1 = abK;
+        boolean bool2 = abw;
+        localObject2 = abL;
+        if (((abz == 1) || (abz == 6)) && (k != 0))
         {
           bool1 = true;
-          aqu = new e((AudioRecord)localObject1, bool2, i1, (a)localObject2, bool1);
-          aqu.a(aqz);
-          if (-123456789 != aqi) {
-            aqu.aQ(aqi);
+          abM = new e((AudioRecord)localObject1, bool2, i1, (a)localObject2, bool1);
+          abM.a(abR);
+          if (-123456789 != abA) {
+            abM.bg(abA);
           }
-          if (aqj)
+          if (abB)
           {
-            aqv = new com.tencent.mm.compatible.b.e();
-            localObject1 = aqv;
-            localObject2 = aqs;
-            i = aqh;
-            u.d("!44@/B4Tb64lLpLjA0AEL11ABlFPDKYPJYIIv78olPSFBGo=", "api " + Build.VERSION.SDK_INT);
-            if (!com.tencent.mm.compatible.util.e.bV(16))
+            abN = new com.tencent.mm.compatible.b.e();
+            localObject1 = abN;
+            localObject2 = abK;
+            i = abz;
+            v.d("MicroMsg.MMAudioPreProcess", "api " + Build.VERSION.SDK_INT);
+            if (!com.tencent.mm.compatible.util.e.cn(16))
             {
               if (localObject2 != null) {
                 break label853;
               }
-              u.d("!44@/B4Tb64lLpLjA0AEL11ABlFPDKYPJYIIv78olPSFBGo=", "audio is null");
+              v.d("MicroMsg.MMAudioPreProcess", "audio is null");
             }
           }
         }
@@ -437,90 +436,90 @@ public final class c
         return true;
         bool1 = false;
         break;
-        aqu = new d(aqs, aqt, aqe, n, i1);
+        abM = new d(abK, abL, abw, n, i1);
         break label702;
         if (1 == i)
         {
-          if (bsQbsa != 1)
+          if (bgWbgd != 1)
           {
-            u.d("!44@/B4Tb64lLpLjA0AEL11ABlFPDKYPJYIIv78olPSFBGo=", "disable by config");
+            v.d("MicroMsg.MMAudioPreProcess", "disable by config");
           }
           else
           {
-            if (bsQbsb != 2)
+            if (bgWbge != 2)
             {
-              bpC = new com.tencent.mm.compatible.b.g((AudioRecord)localObject2);
-              if ((bpC != null) && (bpC.isAvailable())) {
-                bpC.nK();
+              bdC = new com.tencent.mm.compatible.b.g((AudioRecord)localObject2);
+              if ((bdC != null) && (bdC.isAvailable())) {
+                bdC.lY();
               }
             }
-            if (bsQbsc != 2)
+            if (bgWbgf != 2)
             {
-              bpD = new com.tencent.mm.compatible.b.c((AudioRecord)localObject2);
-              if ((bpD != null) && (bpD.isAvailable())) {
-                bpD.nK();
+              bdD = new com.tencent.mm.compatible.b.c((AudioRecord)localObject2);
+              if ((bdD != null) && (bdD.isAvailable())) {
+                bdD.lY();
               }
             }
-            if (bsQbsd != 2)
+            if (bgWbgg != 2)
             {
-              bpE = new com.tencent.mm.compatible.b.f((AudioRecord)localObject2);
-              if ((bpE != null) && (bpE.isAvailable())) {
-                bpE.nK();
+              bdE = new com.tencent.mm.compatible.b.f((AudioRecord)localObject2);
+              if ((bdE != null) && (bdE.isAvailable())) {
+                bdE.lY();
               }
             }
           }
         }
-        else if (bsQbrJ != 1)
+        else if (bgWbfK != 1)
         {
-          u.d("!44@/B4Tb64lLpLjA0AEL11ABlFPDKYPJYIIv78olPSFBGo=", "disable by config");
+          v.d("MicroMsg.MMAudioPreProcess", "disable by config");
         }
         else
         {
-          bpC = new com.tencent.mm.compatible.b.g((AudioRecord)localObject2);
-          if ((bpC != null) && (bpC.isAvailable())) {
-            bpC.nK();
+          bdC = new com.tencent.mm.compatible.b.g((AudioRecord)localObject2);
+          if ((bdC != null) && (bdC.isAvailable())) {
+            bdC.lY();
           }
-          bpD = new com.tencent.mm.compatible.b.c((AudioRecord)localObject2);
-          if ((bpD != null) && (bpD.isAvailable())) {
-            bpD.nK();
+          bdD = new com.tencent.mm.compatible.b.c((AudioRecord)localObject2);
+          if ((bdD != null) && (bdD.isAvailable())) {
+            bdD.lY();
           }
-          bpE = new com.tencent.mm.compatible.b.f((AudioRecord)localObject2);
-          if ((bpE != null) && (bpE.isAvailable())) {
-            bpE.nK();
+          bdE = new com.tencent.mm.compatible.b.f((AudioRecord)localObject2);
+          if ((bdE != null) && (bdE.isAvailable())) {
+            bdE.lY();
           }
         }
       }
     }
   }
   
-  public final void aP(int paramInt)
+  public final void O(boolean paramBoolean)
   {
-    aqd = paramInt;
-    u.i("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "mDurationPreFrame: " + aqd);
+    abw = paramBoolean;
+    v.i("MicroMsg.MMPcmRecorder", "mNewBufPreFrame: " + abw);
   }
   
-  public final void al(boolean paramBoolean)
+  public final void P(boolean paramBoolean)
   {
-    aqe = paramBoolean;
-    u.i("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "mNewBufPreFrame: " + aqe);
+    abB = paramBoolean;
+    v.i("MicroMsg.MMPcmRecorder", "mUsePreProcess: " + abB);
   }
   
-  public final void am(boolean paramBoolean)
+  public final void Q(boolean paramBoolean)
   {
-    aqj = paramBoolean;
-    u.i("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "mUsePreProcess: " + aqj);
-  }
-  
-  public final void an(boolean paramBoolean)
-  {
-    u.i("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "switchMute mute:" + paramBoolean);
-    if (aqu != null) {
-      aqu.an(paramBoolean);
+    v.i("MicroMsg.MMPcmRecorder", "switchMute mute:" + paramBoolean);
+    if (abM != null) {
+      abM.Q(paramBoolean);
     }
   }
   
+  public final void bf(int paramInt)
+  {
+    abv = paramInt;
+    v.i("MicroMsg.MMPcmRecorder", "mDurationPreFrame: " + abv);
+  }
+  
   /* Error */
-  public final boolean lH()
+  public final boolean jR()
   {
     // Byte code:
     //   0: iconst_1
@@ -531,135 +530,135 @@ public final class c
     //   5: monitorenter
     //   6: iconst_1
     //   7: aload_0
-    //   8: getfield 87	com/tencent/mm/c/b/c:aqo	Z
+    //   8: getfield 87	com/tencent/mm/c/b/c:abG	Z
     //   11: if_icmpne +15 -> 26
     //   14: ldc -107
-    //   16: ldc_w 383
-    //   19: invokestatic 203	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   16: ldc_w 382
+    //   19: invokestatic 203	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;)V
     //   22: aload_0
     //   23: monitorexit
     //   24: iload_1
     //   25: ireturn
     //   26: aload_0
     //   27: iconst_1
-    //   28: putfield 87	com/tencent/mm/c/b/c:aqo	Z
-    //   31: new 385	com/tencent/mm/compatible/util/f$a
+    //   28: putfield 87	com/tencent/mm/c/b/c:abG	Z
+    //   31: new 384	com/tencent/mm/compatible/util/f$a
     //   34: dup
-    //   35: invokespecial 386	com/tencent/mm/compatible/util/f$a:<init>	()V
+    //   35: invokespecial 385	com/tencent/mm/compatible/util/f$a:<init>	()V
     //   38: astore_3
     //   39: aload_0
-    //   40: getfield 141	com/tencent/mm/c/b/c:aqw	Lcom/tencent/mm/c/c/b;
+    //   40: getfield 141	com/tencent/mm/c/b/c:abO	Lcom/tencent/mm/c/c/b;
     //   43: ifnull +15 -> 58
     //   46: aload_0
-    //   47: getfield 141	com/tencent/mm/c/b/c:aqw	Lcom/tencent/mm/c/c/b;
-    //   50: invokevirtual 389	com/tencent/mm/c/c/b:lV	()V
+    //   47: getfield 141	com/tencent/mm/c/b/c:abO	Lcom/tencent/mm/c/c/b;
+    //   50: invokevirtual 388	com/tencent/mm/c/c/b:kl	()V
     //   53: aload_0
     //   54: aconst_null
-    //   55: putfield 141	com/tencent/mm/c/b/c:aqw	Lcom/tencent/mm/c/c/b;
+    //   55: putfield 141	com/tencent/mm/c/b/c:abO	Lcom/tencent/mm/c/c/b;
     //   58: aload_3
-    //   59: invokestatic 395	android/os/SystemClock:elapsedRealtime	()J
-    //   62: putfield 398	com/tencent/mm/compatible/util/f$a:buw	J
+    //   59: invokestatic 394	android/os/SystemClock:elapsedRealtime	()J
+    //   62: putfield 397	com/tencent/mm/compatible/util/f$a:biW	J
     //   65: aload_0
-    //   66: getfield 285	com/tencent/mm/c/b/c:aqu	Lcom/tencent/mm/c/b/f;
+    //   66: getfield 284	com/tencent/mm/c/b/c:abM	Lcom/tencent/mm/c/b/f;
     //   69: ifnull +15 -> 84
     //   72: aload_0
-    //   73: getfield 285	com/tencent/mm/c/b/c:aqu	Lcom/tencent/mm/c/b/f;
-    //   76: invokevirtual 401	com/tencent/mm/c/b/f:li	()V
+    //   73: getfield 284	com/tencent/mm/c/b/c:abM	Lcom/tencent/mm/c/b/f;
+    //   76: invokevirtual 400	com/tencent/mm/c/b/f:jJ	()V
     //   79: aload_0
     //   80: aconst_null
-    //   81: putfield 285	com/tencent/mm/c/b/c:aqu	Lcom/tencent/mm/c/b/f;
+    //   81: putfield 284	com/tencent/mm/c/b/c:abM	Lcom/tencent/mm/c/b/f;
     //   84: ldc -107
     //   86: new 187	java/lang/StringBuilder
     //   89: dup
-    //   90: ldc_w 403
+    //   90: ldc_w 402
     //   93: invokespecial 192	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   96: aload_3
-    //   97: invokevirtual 406	com/tencent/mm/compatible/util/f$a:pa	()J
-    //   100: invokevirtual 409	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
-    //   103: ldc_w 411
-    //   106: invokevirtual 414	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   97: invokevirtual 405	com/tencent/mm/compatible/util/f$a:ns	()J
+    //   100: invokevirtual 408	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
+    //   103: ldc_w 410
+    //   106: invokevirtual 413	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   109: invokevirtual 200	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   112: invokestatic 203	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   112: invokestatic 203	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;)V
     //   115: ldc -107
     //   117: new 187	java/lang/StringBuilder
     //   120: dup
-    //   121: ldc_w 416
+    //   121: ldc_w 415
     //   124: invokespecial 192	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   127: invokestatic 422	java/lang/Thread:currentThread	()Ljava/lang/Thread;
-    //   130: invokevirtual 426	java/lang/Thread:getStackTrace	()[Ljava/lang/StackTraceElement;
+    //   127: invokestatic 421	java/lang/Thread:currentThread	()Ljava/lang/Thread;
+    //   130: invokevirtual 425	java/lang/Thread:getStackTrace	()[Ljava/lang/StackTraceElement;
     //   133: iconst_2
     //   134: aaload
-    //   135: invokevirtual 431	java/lang/StackTraceElement:getMethodName	()Ljava/lang/String;
-    //   138: invokevirtual 414	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   135: invokevirtual 430	java/lang/StackTraceElement:getMethodName	()Ljava/lang/String;
+    //   138: invokevirtual 413	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   141: invokevirtual 200	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   144: invokestatic 203	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   144: invokestatic 203	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;)V
     //   147: aload_0
-    //   148: getfield 249	com/tencent/mm/c/b/c:aqs	Landroid/media/AudioRecord;
+    //   148: getfield 249	com/tencent/mm/c/b/c:abK	Landroid/media/AudioRecord;
     //   151: ifnonnull +130 -> 281
     //   154: ldc -107
-    //   156: ldc_w 433
-    //   159: invokestatic 219	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   156: ldc_w 432
+    //   159: invokestatic 219	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   162: iconst_0
     //   163: istore_1
     //   164: aload_0
-    //   165: getfield 85	com/tencent/mm/c/b/c:aqm	Z
+    //   165: getfield 85	com/tencent/mm/c/b/c:abE	Z
     //   168: ifne +29 -> 197
     //   171: ldc2_w 80
     //   174: aload_0
-    //   175: getfield 83	com/tencent/mm/c/b/c:aqk	J
+    //   175: getfield 83	com/tencent/mm/c/b/c:abC	J
     //   178: lcmp
     //   179: ifeq +18 -> 197
-    //   182: invokestatic 438	java/lang/System:currentTimeMillis	()J
+    //   182: invokestatic 437	java/lang/System:currentTimeMillis	()J
     //   185: aload_0
-    //   186: getfield 83	com/tencent/mm/c/b/c:aqk	J
+    //   186: getfield 83	com/tencent/mm/c/b/c:abC	J
     //   189: lsub
-    //   190: ldc2_w 439
+    //   190: ldc2_w 438
     //   193: lcmp
     //   194: ifge +10 -> 204
     //   197: aload_0
-    //   198: getfield 91	com/tencent/mm/c/b/c:aqq	Z
+    //   198: getfield 91	com/tencent/mm/c/b/c:abI	Z
     //   201: ifeq +37 -> 238
     //   204: ldc -107
-    //   206: ldc_w 442
-    //   209: invokestatic 203	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
-    //   212: new 444	com/tencent/mm/d/a/im
+    //   206: ldc_w 441
+    //   209: invokestatic 203	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   212: new 443	com/tencent/mm/e/a/ir
     //   215: dup
-    //   216: invokespecial 445	com/tencent/mm/d/a/im:<init>	()V
+    //   216: invokespecial 444	com/tencent/mm/e/a/ir:<init>	()V
     //   219: astore_3
     //   220: aload_3
-    //   221: getfield 449	com/tencent/mm/d/a/im:aEu	Lcom/tencent/mm/d/a/im$a;
+    //   221: getfield 448	com/tencent/mm/e/a/ir:aqy	Lcom/tencent/mm/e/a/ir$a;
     //   224: iconst_1
-    //   225: putfield 454	com/tencent/mm/d/a/im$a:type	I
-    //   228: getstatic 460	com/tencent/mm/sdk/c/a:jUF	Lcom/tencent/mm/sdk/c/a;
+    //   225: putfield 453	com/tencent/mm/e/a/ir$a:type	I
+    //   228: getstatic 459	com/tencent/mm/sdk/c/a:kug	Lcom/tencent/mm/sdk/c/a;
     //   231: aload_3
-    //   232: invokevirtual 463	com/tencent/mm/sdk/c/a:j	(Lcom/tencent/mm/sdk/c/b;)Z
+    //   232: invokevirtual 463	com/tencent/mm/sdk/c/a:y	(Lcom/tencent/mm/sdk/c/b;)Z
     //   235: pop
     //   236: iconst_0
     //   237: istore_2
-    //   238: new 465	com/tencent/mm/d/a/il
+    //   238: new 465	com/tencent/mm/e/a/iq
     //   241: dup
-    //   242: invokespecial 466	com/tencent/mm/d/a/il:<init>	()V
+    //   242: invokespecial 466	com/tencent/mm/e/a/iq:<init>	()V
     //   245: astore_3
     //   246: aload_3
-    //   247: getfield 470	com/tencent/mm/d/a/il:aEp	Lcom/tencent/mm/d/a/il$a;
+    //   247: getfield 470	com/tencent/mm/e/a/iq:aqt	Lcom/tencent/mm/e/a/iq$a;
     //   250: iconst_1
-    //   251: putfield 473	com/tencent/mm/d/a/il$a:type	I
+    //   251: putfield 473	com/tencent/mm/e/a/iq$a:type	I
     //   254: aload_3
-    //   255: getfield 470	com/tencent/mm/d/a/il:aEp	Lcom/tencent/mm/d/a/il$a;
+    //   255: getfield 470	com/tencent/mm/e/a/iq:aqt	Lcom/tencent/mm/e/a/iq$a;
     //   258: iconst_0
-    //   259: putfield 476	com/tencent/mm/d/a/il$a:aEr	Z
+    //   259: putfield 476	com/tencent/mm/e/a/iq$a:aqv	Z
     //   262: aload_3
-    //   263: getfield 470	com/tencent/mm/d/a/il:aEp	Lcom/tencent/mm/d/a/il$a;
+    //   263: getfield 470	com/tencent/mm/e/a/iq:aqt	Lcom/tencent/mm/e/a/iq$a;
     //   266: iload_2
-    //   267: putfield 479	com/tencent/mm/d/a/il$a:aEs	Z
-    //   270: getstatic 460	com/tencent/mm/sdk/c/a:jUF	Lcom/tencent/mm/sdk/c/a;
+    //   267: putfield 479	com/tencent/mm/e/a/iq$a:aqw	Z
+    //   270: getstatic 459	com/tencent/mm/sdk/c/a:kug	Lcom/tencent/mm/sdk/c/a;
     //   273: aload_3
-    //   274: invokevirtual 463	com/tencent/mm/sdk/c/a:j	(Lcom/tencent/mm/sdk/c/b;)Z
+    //   274: invokevirtual 463	com/tencent/mm/sdk/c/a:y	(Lcom/tencent/mm/sdk/c/b;)Z
     //   277: pop
     //   278: goto -256 -> 22
     //   281: aload_0
-    //   282: getfield 249	com/tencent/mm/c/b/c:aqs	Landroid/media/AudioRecord;
-    //   285: invokevirtual 253	android/media/AudioRecord:getState	()I
+    //   282: getfield 249	com/tencent/mm/c/b/c:abK	Landroid/media/AudioRecord;
+    //   285: invokevirtual 252	android/media/AudioRecord:getState	()I
     //   288: iconst_1
     //   289: if_icmpeq +36 -> 325
     //   292: ldc -107
@@ -668,38 +667,38 @@ public final class c
     //   298: ldc_w 481
     //   301: invokespecial 192	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   304: aload_0
-    //   305: getfield 249	com/tencent/mm/c/b/c:aqs	Landroid/media/AudioRecord;
-    //   308: invokevirtual 253	android/media/AudioRecord:getState	()I
+    //   305: getfield 249	com/tencent/mm/c/b/c:abK	Landroid/media/AudioRecord;
+    //   308: invokevirtual 252	android/media/AudioRecord:getState	()I
     //   311: invokevirtual 196	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
     //   314: invokevirtual 200	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   317: invokestatic 219	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   317: invokestatic 219	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   320: iconst_0
     //   321: istore_1
     //   322: goto -158 -> 164
     //   325: aload_3
-    //   326: invokestatic 395	android/os/SystemClock:elapsedRealtime	()J
-    //   329: putfield 398	com/tencent/mm/compatible/util/f$a:buw	J
+    //   326: invokestatic 394	android/os/SystemClock:elapsedRealtime	()J
+    //   329: putfield 397	com/tencent/mm/compatible/util/f$a:biW	J
     //   332: aload_0
-    //   333: getfield 249	com/tencent/mm/c/b/c:aqs	Landroid/media/AudioRecord;
+    //   333: getfield 249	com/tencent/mm/c/b/c:abK	Landroid/media/AudioRecord;
     //   336: invokevirtual 484	android/media/AudioRecord:stop	()V
     //   339: aload_0
-    //   340: getfield 249	com/tencent/mm/c/b/c:aqs	Landroid/media/AudioRecord;
-    //   343: invokevirtual 270	android/media/AudioRecord:release	()V
+    //   340: getfield 249	com/tencent/mm/c/b/c:abK	Landroid/media/AudioRecord;
+    //   343: invokevirtual 269	android/media/AudioRecord:release	()V
     //   346: aload_0
     //   347: aconst_null
-    //   348: putfield 249	com/tencent/mm/c/b/c:aqs	Landroid/media/AudioRecord;
+    //   348: putfield 249	com/tencent/mm/c/b/c:abK	Landroid/media/AudioRecord;
     //   351: ldc -107
     //   353: new 187	java/lang/StringBuilder
     //   356: dup
-    //   357: ldc_w 403
+    //   357: ldc_w 402
     //   360: invokespecial 192	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   363: aload_3
-    //   364: invokevirtual 406	com/tencent/mm/compatible/util/f$a:pa	()J
-    //   367: invokevirtual 409	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
+    //   364: invokevirtual 405	com/tencent/mm/compatible/util/f$a:ns	()J
+    //   367: invokevirtual 408	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
     //   370: ldc_w 486
-    //   373: invokevirtual 414	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   373: invokevirtual 413	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   376: invokevirtual 200	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   379: invokestatic 203	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   379: invokestatic 203	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;)V
     //   382: iconst_1
     //   383: istore_1
     //   384: goto -220 -> 164
@@ -729,34 +728,34 @@ public final class c
     //   325	382	387	finally
   }
   
-  public final void lM()
+  public final void jX()
   {
-    aqf = true;
-    u.i("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "mCheckAudioQuality: " + aqf);
+    abx = true;
+    v.i("MicroMsg.MMPcmRecorder", "mCheckAudioQuality: " + abx);
   }
   
-  public final boolean lN()
+  public final boolean jY()
   {
     boolean bool1 = false;
     boolean bool2 = false;
-    u.d("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "startRecord");
-    Object localObject = new il();
-    aEp.type = 1;
-    aEp.aEr = true;
-    com.tencent.mm.sdk.c.a.jUF.j((com.tencent.mm.sdk.c.b)localObject);
-    aqk = System.currentTimeMillis();
-    aqm = false;
-    if (aEq.aEt)
+    v.d("MicroMsg.MMPcmRecorder", "startRecord");
+    Object localObject = new iq();
+    aqt.type = 1;
+    aqt.aqv = true;
+    com.tencent.mm.sdk.c.a.kug.y((com.tencent.mm.sdk.c.b)localObject);
+    abC = System.currentTimeMillis();
+    abE = false;
+    if (aqu.aqx)
     {
-      u.i("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "can't start record due to permission tips policy");
-      apY = 13;
+      v.i("MicroMsg.MMPcmRecorder", "can't start record due to permission tips policy");
+      abq = 13;
       return bool2;
     }
-    aqo = false;
+    abG = false;
     localObject = new com.tencent.mm.compatible.util.f.a();
-    u.i("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "startRecord, " + Thread.currentThread().getStackTrace()[2].getMethodName());
-    if (aqs != null) {
-      u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "start error ,is recording ");
+    v.i("MicroMsg.MMPcmRecorder", "startRecord, " + Thread.currentThread().getStackTrace()[2].getMethodName());
+    if (abK != null) {
+      v.e("MicroMsg.MMPcmRecorder", "start error ,is recording ");
     }
     for (;;)
     {
@@ -764,59 +763,59 @@ public final class c
       if (bool1) {
         break;
       }
-      lH();
-      localObject = new im();
-      aEu.type = 1;
-      com.tencent.mm.sdk.c.a.jUF.j((com.tencent.mm.sdk.c.b)localObject);
+      jR();
+      localObject = new ir();
+      aqy.type = 1;
+      com.tencent.mm.sdk.c.a.kug.y((com.tencent.mm.sdk.c.b)localObject);
       return bool1;
-      buw = SystemClock.elapsedRealtime();
-      u.d("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "startRecordInternal, start init");
+      biW = SystemClock.elapsedRealtime();
+      v.d("MicroMsg.MMPcmRecorder", "startRecordInternal, start init");
       if (!init())
       {
-        u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "startRecord init error");
+        v.e("MicroMsg.MMPcmRecorder", "startRecord init error");
       }
       else
       {
-        u.i("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "init cost: " + ((com.tencent.mm.compatible.util.f.a)localObject).pa() + "ms");
-        buw = SystemClock.elapsedRealtime();
-        aqs.startRecording();
-        u.i("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "startRecording cost: " + ((com.tencent.mm.compatible.util.f.a)localObject).pa());
-        if (aqs.getRecordingState() != 3)
+        v.i("MicroMsg.MMPcmRecorder", "init cost: " + ((com.tencent.mm.compatible.util.f.a)localObject).ns() + "ms");
+        biW = SystemClock.elapsedRealtime();
+        abK.startRecording();
+        v.i("MicroMsg.MMPcmRecorder", "startRecording cost: " + ((com.tencent.mm.compatible.util.f.a)localObject).ns());
+        if (abK.getRecordingState() != 3)
         {
-          localObject = h.fUJ;
-          h.b(151L, 0L, 1L, false);
-          localObject = h.fUJ;
-          h.b(151L, 3L, 1L, false);
-          aqy = 2;
-          apY = 4;
-          u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_STARTRECORDING_ERROR");
-          lO();
+          localObject = com.tencent.mm.plugin.report.service.g.gdY;
+          com.tencent.mm.plugin.report.service.g.b(151L, 0L, 1L, false);
+          localObject = com.tencent.mm.plugin.report.service.g.gdY;
+          com.tencent.mm.plugin.report.service.g.b(151L, 3L, 1L, false);
+          abQ = 2;
+          abq = 4;
+          v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_STARTRECORDING_ERROR");
+          jZ();
         }
-        else if (aqu != null)
+        else if (abM != null)
         {
-          bool1 = aqu.lN();
+          bool1 = abM.jY();
         }
         else
         {
-          u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "mRecordMode is null");
+          v.e("MicroMsg.MMPcmRecorder", "mRecordMode is null");
         }
       }
     }
   }
   
-  final void lO()
+  final void jZ()
   {
-    if (aqt != null) {
-      aqt.B(aqy, apY);
+    if (abL != null) {
+      abL.B(abQ, abq);
     }
   }
   
   public final void m(int paramInt, boolean paramBoolean)
   {
-    if ((10 == aqg) || (paramBoolean))
+    if ((10 == aby) || (paramBoolean))
     {
-      aqg = paramInt;
-      u.i("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "mMultipleOfMinBuffer: " + aqg);
+      aby = paramInt;
+      v.i("MicroMsg.MMPcmRecorder", "mMultipleOfMinBuffer: " + aby);
     }
   }
   

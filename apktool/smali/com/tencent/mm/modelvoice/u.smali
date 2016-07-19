@@ -4,17 +4,47 @@
 
 
 # static fields
-.field public static final aoY:[Ljava/lang/String;
+.field public static final bkN:[Ljava/lang/String;
 
 
 # instance fields
-.field public bCw:Lcom/tencent/mm/az/g;
+.field public bvG:Lcom/tencent/mm/bc/g;
 
-.field chR:Ljava/util/Map;
+.field cdi:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/modelvoice/a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field chS:Ljava/util/Map;
+.field cdj:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/modelvoice/l;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field chT:Ljava/util/Map;
+.field cdk:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/modelvoice/h;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -51,12 +81,12 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/modelvoice/u;->aoY:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/modelvoice/u;->bkN:[Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/tencent/mm/az/g;)V
+.method public constructor <init>(Lcom/tencent/mm/bc/g;)V
     .locals 1
 
     .prologue
@@ -68,33 +98,33 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelvoice/u;->chR:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/modelvoice/u;->cdi:Ljava/util/Map;
 
     .line 93
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelvoice/u;->chS:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/modelvoice/u;->cdj:Ljava/util/Map;
 
     .line 94
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelvoice/u;->chT:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/modelvoice/u;->cdk:Ljava/util/Map;
 
     .line 43
-    invoke-static {p1}, Lcom/tencent/mm/modelvoice/u;->b(Lcom/tencent/mm/az/g;)V
+    invoke-static {p1}, Lcom/tencent/mm/modelvoice/u;->b(Lcom/tencent/mm/bc/g;)V
 
     .line 44
-    iput-object p1, p0, Lcom/tencent/mm/modelvoice/u;->bCw:Lcom/tencent/mm/az/g;
+    iput-object p1, p0, Lcom/tencent/mm/modelvoice/u;->bvG:Lcom/tencent/mm/bc/g;
 
     .line 45
     return-void
 .end method
 
-.method private static b(Lcom/tencent/mm/az/g;)V
+.method private static b(Lcom/tencent/mm/bc/g;)V
     .locals 7
 
     .prologue
@@ -108,7 +138,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {p0, v1, v2}, Lcom/tencent/mm/az/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {p0, v1, v2}, Lcom/tencent/mm/bc/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v4
 
@@ -116,11 +146,11 @@
     if-nez v4, :cond_7
 
     .line 54
-    const-string/jumbo v0, "!32@/B4Tb64lLpIv/qzEF4E8ss0xfK7O4cQt"
+    const-string/jumbo v0, "MicroMsg.VoiceStorage"
 
     const-string/jumbo v1, "addNewColIfNeed failed, cursor is null."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 86
     :cond_0
@@ -202,7 +232,7 @@
     .line 76
     const-string/jumbo v3, "voiceinfo"
 
-    invoke-virtual {p0, v3, v2}, Lcom/tencent/mm/az/g;->cj(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-virtual {p0, v3, v2}, Lcom/tencent/mm/bc/g;->cx(Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 78
     :cond_5
@@ -214,7 +244,7 @@
     .line 80
     const-string/jumbo v2, "voiceinfo"
 
-    invoke-virtual {p0, v2, v1}, Lcom/tencent/mm/az/g;->cj(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-virtual {p0, v2, v1}, Lcom/tencent/mm/bc/g;->cx(Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 82
     :cond_6
@@ -226,7 +256,7 @@
     .line 84
     const-string/jumbo v1, "voiceinfo"
 
-    invoke-virtual {p0, v1, v0}, Lcom/tencent/mm/az/g;->cj(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-virtual {p0, v1, v0}, Lcom/tencent/mm/bc/g;->cx(Ljava/lang/String;Ljava/lang/String;)Z
 
     goto :goto_0
 
@@ -238,12 +268,12 @@
     goto :goto_1
 .end method
 
-.method public static kh(Ljava/lang/String;)Ljava/lang/String;
+.method public static kR(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
     .prologue
     .line 89
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gp()J
 
     move-result-wide v0
 
@@ -256,7 +286,7 @@
 
 
 # virtual methods
-.method public final ak(J)Lcom/tencent/mm/modelvoice/p;
+.method public final ar(J)Lcom/tencent/mm/modelvoice/p;
     .locals 3
 
     .prologue
@@ -290,9 +320,9 @@
     move-result-object v1
 
     .line 287
-    iget-object v2, p0, Lcom/tencent/mm/modelvoice/u;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v2, p0, Lcom/tencent/mm/modelvoice/u;->bvG:Lcom/tencent/mm/bc/g;
 
-    invoke-virtual {v2, v1, v0}, Lcom/tencent/mm/az/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v2, v1, v0}, Lcom/tencent/mm/bc/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
 
@@ -309,7 +339,7 @@
     invoke-direct {v0}, Lcom/tencent/mm/modelvoice/p;-><init>()V
 
     .line 290
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelvoice/p;->c(Landroid/database/Cursor;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelvoice/p;->b(Landroid/database/Cursor;)V
 
     .line 292
     :cond_0
@@ -320,7 +350,7 @@
 .end method
 
 .method public final b(Lcom/tencent/mm/modelvoice/p;)Z
-    .locals 5
+    .locals 6
 
     .prologue
     const/4 v0, 0x1
@@ -329,7 +359,7 @@
     invoke-static {v0}, Ljunit/framework/Assert;->assertTrue(Z)V
 
     .line 194
-    invoke-virtual {p1}, Lcom/tencent/mm/modelvoice/p;->lX()Landroid/content/ContentValues;
+    invoke-virtual {p1}, Lcom/tencent/mm/modelvoice/p;->kn()Landroid/content/ContentValues;
 
     move-result-object v1
 
@@ -341,11 +371,11 @@
     if-gtz v2, :cond_1
 
     .line 197
-    const-string/jumbo v0, "!32@/B4Tb64lLpIv/qzEF4E8ss0xfK7O4cQt"
+    const-string/jumbo v0, "MicroMsg.VoiceStorage"
 
     const-string/jumbo v1, "insert falied, no values set"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 204
     :cond_0
@@ -356,29 +386,29 @@
 
     .line 199
     :cond_1
-    iget-object v2, p0, Lcom/tencent/mm/modelvoice/u;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v2, p0, Lcom/tencent/mm/modelvoice/u;->bvG:Lcom/tencent/mm/bc/g;
 
     const-string/jumbo v3, "voiceinfo"
 
     const-string/jumbo v4, "FileName"
 
-    invoke-virtual {v2, v3, v4, v1}, Lcom/tencent/mm/az/g;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
+    invoke-virtual {v2, v3, v4, v1}, Lcom/tencent/mm/bc/g;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    const-wide/16 v3, -0x1
+    const-wide/16 v4, -0x1
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-eqz v1, :cond_0
 
     .line 200
-    invoke-virtual {p0}, Lcom/tencent/mm/modelvoice/u;->Ep()V
+    invoke-virtual {p0}, Lcom/tencent/mm/modelvoice/u;->EJ()V
 
     goto :goto_0
 .end method
 
-.method public final ee(I)Lcom/tencent/mm/modelvoice/p;
+.method public final eN(I)Lcom/tencent/mm/modelvoice/p;
     .locals 3
 
     .prologue
@@ -412,9 +442,9 @@
     move-result-object v1
 
     .line 301
-    iget-object v2, p0, Lcom/tencent/mm/modelvoice/u;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v2, p0, Lcom/tencent/mm/modelvoice/u;->bvG:Lcom/tencent/mm/bc/g;
 
-    invoke-virtual {v2, v1, v0}, Lcom/tencent/mm/az/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v2, v1, v0}, Lcom/tencent/mm/bc/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
 
@@ -431,7 +461,7 @@
     invoke-direct {v0}, Lcom/tencent/mm/modelvoice/p;-><init>()V
 
     .line 304
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelvoice/p;->c(Landroid/database/Cursor;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelvoice/p;->b(Landroid/database/Cursor;)V
 
     .line 306
     :cond_0
@@ -441,7 +471,7 @@
     return-object v0
 .end method
 
-.method public final ki(Ljava/lang/String;)Lcom/tencent/mm/modelvoice/p;
+.method public final kS(Ljava/lang/String;)Lcom/tencent/mm/modelvoice/p;
     .locals 5
 
     .prologue
@@ -471,7 +501,7 @@
     move-result-object v1
 
     .line 315
-    iget-object v2, p0, Lcom/tencent/mm/modelvoice/u;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v2, p0, Lcom/tencent/mm/modelvoice/u;->bvG:Lcom/tencent/mm/bc/g;
 
     const/4 v3, 0x1
 
@@ -481,7 +511,7 @@
 
     aput-object p1, v3, v4
 
-    invoke-virtual {v2, v1, v3}, Lcom/tencent/mm/az/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v2, v1, v3}, Lcom/tencent/mm/bc/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
 
@@ -498,7 +528,7 @@
     invoke-direct {v0}, Lcom/tencent/mm/modelvoice/p;-><init>()V
 
     .line 318
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelvoice/p;->c(Landroid/database/Cursor;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelvoice/p;->b(Landroid/database/Cursor;)V
 
     .line 320
     :cond_0

@@ -13,10 +13,10 @@ final class UIEntryStub$1
   {
     if (parame == null)
     {
-      cBa.finish();
+      cxV.finish();
       return;
     }
-    UIEntryStub.a(cBa, UIEntryStub.a(cBa).getExtras());
+    UIEntryStub.a(cxV, UIEntryStub.a(cxV).getExtras());
   }
 }
 

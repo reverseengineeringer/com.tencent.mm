@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$1;
-.super Landroid/os/Handler;
+.super Lcom/tencent/mm/sdk/platformtools/ac;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic kXv:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+.field final synthetic lxJ:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
 
 
 # direct methods
@@ -23,10 +23,10 @@
     .locals 0
 
     .prologue
-    .line 251
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$1;->kXv:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+    .line 395
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$1;->lxJ:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
     return-void
 .end method
@@ -37,21 +37,21 @@
     .locals 3
 
     .prologue
-    .line 254
-    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
+    .line 398
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/platformtools/ac;->handleMessage(Landroid/os/Message;)V
 
-    .line 255
+    .line 399
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 258
+    .line 402
     :goto_0
     return-void
 
-    .line 257
+    .line 401
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$1;->kXv:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$1;->lxJ:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;->c(Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;)Landroid/widget/TextView;
 
@@ -71,7 +71,7 @@
 
     goto :goto_0
 
-    .line 255
+    .line 399
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

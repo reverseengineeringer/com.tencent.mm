@@ -3,49 +3,79 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/r/d;
+.implements Lcom/tencent/mm/t/d;
 
 
 # static fields
-.field private static final hgr:[Ljava/lang/String;
+.field private static final hvh:[Ljava/lang/String;
 
-.field private static final hgs:[I
+.field private static final hvi:[I
 
-.field private static final hgw:[I
+.field private static final hvm:[I
 
 
 # instance fields
-.field private cMA:Lcom/tencent/mm/ui/base/preference/f;
+.field private cJw:Lcom/tencent/mm/ui/base/preference/f;
 
-.field private cOt:Lcom/tencent/mm/ui/base/p;
+.field private cLs:Lcom/tencent/mm/ui/base/p;
 
-.field private fBB:Ljava/lang/String;
+.field private fKF:Ljava/lang/String;
 
-.field private hgA:Landroid/widget/LinearLayout;
+.field private hvj:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private hgB:I
+.field private hvk:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private hgC:I
+.field private hvl:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private hgD:J
+.field private hvn:Landroid/widget/TextView;
 
-.field private hgE:Z
+.field private hvo:Landroid/widget/EditText;
 
-.field private hgF:Z
+.field private hvp:Landroid/widget/ListView;
 
-.field hgG:Lcom/tencent/mm/plugin/sns/d/p;
+.field private hvq:Landroid/widget/LinearLayout;
 
-.field private hgt:Ljava/util/HashMap;
+.field private hvr:I
 
-.field private hgu:Ljava/util/HashMap;
+.field private hvs:I
 
-.field private hgv:Ljava/util/HashMap;
+.field private hvt:J
 
-.field private hgx:Landroid/widget/TextView;
+.field private hvu:Z
 
-.field private hgy:Landroid/widget/EditText;
+.field private hvv:Z
 
-.field private hgz:Landroid/widget/ListView;
+.field hvw:Lcom/tencent/mm/plugin/sns/e/p;
 
 
 # direct methods
@@ -100,21 +130,21 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgr:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvh:[Ljava/lang/String;
 
     .line 61
     new-array v0, v3, [I
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgs:[I
+    sput-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvi:[I
 
     .line 76
     new-array v0, v3, [I
 
     fill-array-data v0, :array_1
 
-    sput-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgw:[I
+    sput-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvm:[I
 
     return-void
 
@@ -133,13 +163,13 @@
     .line 76
     :array_1
     .array-data 4
-        0x7f0b16fc
-        0x7f0b16fd
-        0x7f0b16ff
-        0x7f0b1700
-        0x7f0b1701
-        0x7f0b1702
-        0x7f0b1703
+        0x7f081259
+        0x7f08125e
+        0x7f08125f
+        0x7f081258
+        0x7f081257
+        0x7f08125c
+        0x7f08125a
     .end array-data
 .end method
 
@@ -157,50 +187,50 @@
     .line 71
     new-instance v0, Ljava/util/HashMap;
 
-    sget-object v1, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgr:[Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvh:[Ljava/lang/String;
 
     array-length v1, v1
 
     invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgt:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvj:Ljava/util/HashMap;
 
     .line 72
     new-instance v0, Ljava/util/HashMap;
 
-    sget-object v1, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgs:[I
+    sget-object v1, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvi:[I
 
     array-length v1, v1
 
     invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgu:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvk:Ljava/util/HashMap;
 
     .line 73
     new-instance v0, Ljava/util/HashMap;
 
-    sget-object v1, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgs:[I
+    sget-object v1, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvi:[I
 
     array-length v1, v1
 
     invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgv:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvl:Ljava/util/HashMap;
 
     .line 83
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->fBB:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->fKF:Ljava/lang/String;
 
     .line 96
-    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgE:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvu:Z
 
     .line 97
-    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgF:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvv:Z
 
     .line 99
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->cOt:Lcom/tencent/mm/ui/base/p;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->cLs:Lcom/tencent/mm/ui/base/p;
 
     .line 100
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgG:Lcom/tencent/mm/plugin/sns/d/p;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvw:Lcom/tencent/mm/plugin/sns/e/p;
 
     return-void
 .end method
@@ -210,19 +240,19 @@
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgA:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvq:Landroid/widget/LinearLayout;
 
     return-object v0
 .end method
 
-.method private aCh()V
+.method private aFh()V
     .locals 7
 
     .prologue
     const/4 v0, 0x0
 
     .line 132
-    sget-object v2, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgr:[Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvh:[Ljava/lang/String;
 
     array-length v3, v2
 
@@ -234,7 +264,7 @@
     aget-object v4, v2, v1
 
     .line 133
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgt:Ljava/util/HashMap;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvj:Ljava/util/HashMap;
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -249,7 +279,7 @@
 
     .line 135
     :cond_0
-    sget-object v2, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgs:[I
+    sget-object v2, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvi:[I
 
     array-length v3, v2
 
@@ -261,7 +291,7 @@
     aget v4, v2, v1
 
     .line 136
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgu:Ljava/util/HashMap;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvk:Ljava/util/HashMap;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -281,20 +311,20 @@
     .line 138
     :cond_1
     :goto_2
-    sget-object v1, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgs:[I
+    sget-object v1, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvi:[I
 
     array-length v1, v1
 
     if-ge v0, v1, :cond_2
 
     .line 139
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgv:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvl:Ljava/util/HashMap;
 
-    sget-object v2, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgr:[Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvh:[Ljava/lang/String;
 
     aget-object v2, v2, v0
 
-    sget-object v3, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgs:[I
+    sget-object v3, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvi:[I
 
     aget v3, v3, v0
 
@@ -315,17 +345,17 @@
 .end method
 
 .method static synthetic b(Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;)V
-    .locals 7
+    .locals 8
 
     .prologue
     const/4 v6, 0x1
 
-    const/4 v5, 0x0
+    const/4 v7, 0x0
 
     .line 38
-    iput v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgC:I
+    iput v7, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvs:I
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgu:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvk:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
@@ -353,7 +383,7 @@
 
     move-result v2
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgu:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvk:Ljava/util/HashMap;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -371,25 +401,25 @@
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgC:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvs:I
 
     if-nez v0, :cond_1
 
-    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgC:I
+    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvs:I
 
     goto :goto_0
 
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgC:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvs:I
 
     or-int/2addr v0, v2
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgC:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvs:I
 
     goto :goto_0
 
     :cond_2
-    iget-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgD:J
+    iget-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvt:J
 
     const-wide/16 v2, 0x0
 
@@ -397,19 +427,19 @@
 
     if-eqz v0, :cond_3
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgB:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvr:I
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v1, 0x7f0b0ddd
+    const v1, 0x7f080134
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->getString(I)Ljava/lang/String;
 
-    const v1, 0x7f0b0e1d
+    const v1, 0x7f080149
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->getString(I)Ljava/lang/String;
 
@@ -423,9 +453,9 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->cOt:Lcom/tencent/mm/ui/base/p;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->cLs:Lcom/tencent/mm/ui/base/p;
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpKPysbTDt0jz3tGyI328ChJpWI2LUidORs="
+    const-string/jumbo v0, "MicroMsg.SnsNotInterestUI"
 
     const-string/jumbo v1, "start send not inteset, snsId:%d, scene:%d, type:%d, isNeedSupplement:%b"
 
@@ -433,15 +463,15 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget-wide v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgD:J
+    iget-wide v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvt:J
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
-    aput-object v3, v2, v5
+    aput-object v3, v2, v7
 
-    iget v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgB:I
+    iget v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvr:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -451,7 +481,7 @@
 
     const/4 v3, 0x2
 
-    iget v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgC:I
+    iget v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvs:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -461,7 +491,7 @@
 
     const/4 v3, 0x3
 
-    iget-boolean v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgF:Z
+    iget-boolean v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvv:Z
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -471,53 +501,63 @@
 
     invoke-static {v0, v1, v2}, Lcom/tencent/kingkong/support/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    new-instance v0, Lcom/tencent/mm/plugin/sns/d/p;
+    new-instance v1, Lcom/tencent/mm/plugin/sns/e/p;
 
-    iget-wide v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgD:J
+    iget-wide v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvt:J
 
-    iget v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgB:I
+    iget v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvr:I
 
-    iget v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgC:I
+    iget v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvs:I
 
-    iget-boolean v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgF:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvv:Z
 
-    if-eqz v5, :cond_4
+    if-eqz v0, :cond_4
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgy:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvo:Landroid/widget/EditText;
 
-    invoke-virtual {v5}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    :goto_1
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/plugin/sns/d/p;-><init>(JIILjava/lang/String;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgG:Lcom/tencent/mm/plugin/sns/d/p;
-
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgG:Lcom/tencent/mm/plugin/sns/d/p;
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    move-result-object v6
+
+    :goto_1
+    invoke-direct/range {v1 .. v6}, Lcom/tencent/mm/plugin/sns/e/p;-><init>(JIILjava/lang/String;)V
+
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvw:Lcom/tencent/mm/plugin/sns/e/p;
+
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvw:Lcom/tencent/mm/plugin/sns/e/p;
+
+    invoke-virtual {v0, v1, v7}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
     :cond_3
     return-void
 
     :cond_4
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     goto :goto_1
 .end method
 
 
 # virtual methods
-.method protected final Gb()V
+.method public final GK()I
+    .locals 1
+
+    .prologue
+    .line 234
+    const/4 v0, -0x1
+
+    return v0
+.end method
+
+.method protected final Gy()V
     .locals 5
 
     .prologue
@@ -526,12 +566,12 @@
     const/4 v1, 0x0
 
     .line 157
-    invoke-super {p0}, Lcom/tencent/mm/ui/base/preference/MMPreference;->Gb()V
+    invoke-super {p0}, Lcom/tencent/mm/ui/base/preference/MMPreference;->Gy()V
 
     .line 158
-    const v0, 0x7f0b16fa
+    const v0, 0x7f081262
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->qb(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->rR(I)V
 
     .line 159
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI$1;
@@ -541,7 +581,7 @@
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 166
-    const v0, 0x7f070e13
+    const v0, 0x7f101017
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->findViewById(I)Landroid/view/View;
 
@@ -549,10 +589,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgx:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvn:Landroid/widget/TextView;
 
     .line 167
-    const v0, 0x7f070e14
+    const v0, 0x7f101018
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->findViewById(I)Landroid/view/View;
 
@@ -560,7 +600,7 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgy:Landroid/widget/EditText;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvo:Landroid/widget/EditText;
 
     .line 168
     const v0, 0x102000a
@@ -571,10 +611,10 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgz:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvp:Landroid/widget/ListView;
 
     .line 169
-    const v0, 0x7f070e12
+    const v0, 0x7f101016
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->findViewById(I)Landroid/view/View;
 
@@ -582,10 +622,10 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgA:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvq:Landroid/widget/LinearLayout;
 
     .line 171
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgA:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvq:Landroid/widget/LinearLayout;
 
     new-instance v2, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI$2;
 
@@ -594,26 +634,26 @@
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 179
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgy:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvo:Landroid/widget/EditText;
 
     invoke-virtual {v0, v3}, Landroid/widget/EditText;->setVisibility(I)V
 
     .line 180
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgx:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvn:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 182
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/MMPreference;->kLL:Lcom/tencent/mm/ui/base/preference/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/MMPreference;->lla:Lcom/tencent/mm/ui/base/preference/h;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->cMA:Lcom/tencent/mm/ui/base/preference/f;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->cJw:Lcom/tencent/mm/ui/base/preference/f;
 
     .line 183
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->cMA:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->cJw:Lcom/tencent/mm/ui/base/preference/f;
 
     if-nez v0, :cond_1
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpKPysbTDt0jz3tGyI328ChJpWI2LUidORs="
+    const-string/jumbo v0, "MicroMsg.SnsNotInterestUI"
 
     const-string/jumbo v2, "initPref error, PreferenceScreen is null!"
 
@@ -621,7 +661,7 @@
 
     .line 185
     :cond_0
-    const v0, 0x7f0b04e1
+    const v0, 0x7f08027e
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->getString(I)Ljava/lang/String;
 
@@ -631,7 +671,7 @@
 
     invoke-direct {v2, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI$3;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;)V
 
-    sget v3, Lcom/tencent/mm/ui/j$b;->kpJ:I
+    sget v3, Lcom/tencent/mm/ui/j$b;->kOO:I
 
     invoke-virtual {p0, v1, v0, v2, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->a(ILjava/lang/String;Landroid/view/MenuItem$OnMenuItemClickListener;I)V
 
@@ -643,11 +683,11 @@
 
     .line 183
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->cMA:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->cJw:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v2, "sns_expose_desc"
 
-    invoke-interface {v0, v2}, Lcom/tencent/mm/ui/base/preference/f;->GB(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
+    invoke-interface {v0, v2}, Lcom/tencent/mm/ui/base/preference/f;->IR(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
 
     move-result-object v0
 
@@ -657,7 +697,7 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/preference/PreferenceTitleCategory;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0b16fb
+    const v2, 0x7f081255
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/base/preference/Preference;->setTitle(I)V
 
@@ -665,7 +705,7 @@
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/base/preference/Preference;->setKey(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->cMA:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->cJw:Lcom/tencent/mm/ui/base/preference/f;
 
     invoke-interface {v2, v0}, Lcom/tencent/mm/ui/base/preference/f;->a(Lcom/tencent/mm/ui/base/preference/Preference;)V
 
@@ -673,23 +713,23 @@
     move v0, v1
 
     :goto_0
-    sget-object v2, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgr:[Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvh:[Ljava/lang/String;
 
     array-length v2, v2
 
     if-ge v0, v2, :cond_0
 
-    sget-object v2, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgr:[Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvh:[Ljava/lang/String;
 
     aget-object v2, v2, v0
 
-    sget-object v3, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgw:[I
+    sget-object v3, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvm:[I
 
     aget v3, v3, v0
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->cMA:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->cJw:Lcom/tencent/mm/ui/base/preference/f;
 
-    invoke-interface {v4, v2}, Lcom/tencent/mm/ui/base/preference/f;->GB(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
+    invoke-interface {v4, v2}, Lcom/tencent/mm/ui/base/preference/f;->IR(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
 
     move-result-object v4
 
@@ -703,131 +743,20 @@
 
     invoke-virtual {v4, v2}, Lcom/tencent/mm/ui/base/preference/Preference;->setKey(Ljava/lang/String;)V
 
-    const v2, 0x7f0a05d6
+    const v2, 0x7f0303ad
 
     invoke-virtual {v4, v2}, Lcom/tencent/mm/ui/base/preference/Preference;->setLayoutResource(I)V
 
-    const v2, 0x7f0a05dd
+    const v2, 0x7f0303b5
 
     invoke-virtual {v4, v2}, Lcom/tencent/mm/ui/base/preference/Preference;->setWidgetLayoutResource(I)V
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->cMA:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->cJw:Lcom/tencent/mm/ui/base/preference/f;
 
     invoke-interface {v2, v4}, Lcom/tencent/mm/ui/base/preference/f;->a(Lcom/tencent/mm/ui/base/preference/Preference;)V
 
     :cond_3
     add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-.end method
-
-.method public final Gn()I
-    .locals 1
-
-    .prologue
-    .line 234
-    const/4 v0, -0x1
-
-    return v0
-.end method
-
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
-    .locals 6
-
-    .prologue
-    const/4 v5, 0x0
-
-    const/4 v4, 0x1
-
-    .line 324
-    const-string/jumbo v0, "!44@/B4Tb64lLpKPysbTDt0jz3tGyI328ChJpWI2LUidORs="
-
-    const-string/jumbo v1, "onSceneEnd, errType:%d, errCode:%d"
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v2, v5
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v2, v4
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/kingkong/support/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 325
-    invoke-virtual {p4}, Lcom/tencent/mm/r/j;->getType()I
-
-    move-result v0
-
-    const/16 v1, 0xda
-
-    if-ne v0, v1, :cond_0
-
-    .line 326
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->cOt:Lcom/tencent/mm/ui/base/p;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/p;->dismiss()V
-
-    .line 327
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->cOt:Lcom/tencent/mm/ui/base/p;
-
-    .line 328
-    check-cast p4, Lcom/tencent/mm/plugin/sns/d/p;
-
-    .line 329
-    iget v0, p4, Lcom/tencent/mm/plugin/sns/d/p;->type:I
-
-    const/16 v1, 0x9
-
-    if-ne v0, v1, :cond_0
-
-    .line 330
-    if-nez p1, :cond_1
-
-    if-nez p2, :cond_1
-
-    .line 331
-    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgE:Z
-
-    .line 332
-    const v0, 0x7f0b1705
-
-    invoke-static {p0, v0, v4}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    .line 333
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->finish()V
-
-    .line 341
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 335
-    :cond_1
-    iput-boolean v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgE:Z
-
-    .line 336
-    const v0, 0x7f0b1706
-
-    invoke-static {p0, v0, v4}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
     goto :goto_0
 .end method
@@ -852,10 +781,10 @@
 
     .line 242
     :cond_1
-    iget-object v4, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    iget-object v4, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
     .line 243
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgt:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvj:Ljava/util/HashMap;
 
     invoke-virtual {v0, v4}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -864,7 +793,7 @@
     if-eqz v0, :cond_0
 
     .line 244
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgt:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvj:Ljava/util/HashMap;
 
     invoke-virtual {v0, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -880,7 +809,7 @@
     if-eqz v0, :cond_3
 
     .line 246
-    const v1, 0x7f0a05dd
+    const v1, 0x7f0303b5
 
     invoke-virtual {p2, v1}, Lcom/tencent/mm/ui/base/preference/Preference;->setWidgetLayoutResource(I)V
 
@@ -895,7 +824,7 @@
 
     .line 252
     :goto_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgt:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvj:Ljava/util/HashMap;
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -904,7 +833,7 @@
     invoke-virtual {v0, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 254
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgv:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvl:Ljava/util/HashMap;
 
     invoke-virtual {v0, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -917,7 +846,7 @@
     move-result v0
 
     .line 255
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgu:Ljava/util/HashMap;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvk:Ljava/util/HashMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -930,7 +859,7 @@
     invoke-virtual {v5, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 257
-    const-string/jumbo v5, "!44@/B4Tb64lLpKPysbTDt0jz3tGyI328ChJpWI2LUidORs="
+    const-string/jumbo v5, "MicroMsg.SnsNotInterestUI"
 
     const-string/jumbo v6, "click: %s, notInterestType: %d, isCheck: %b"
 
@@ -957,7 +886,7 @@
     invoke-static {v5, v6, v7}, Lcom/tencent/kingkong/support/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 259
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgt:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvj:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
@@ -1007,25 +936,25 @@
     if-eqz v0, :cond_7
 
     .line 266
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgy:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvo:Landroid/widget/EditText;
 
     invoke-virtual {v0, v3}, Landroid/widget/EditText;->setVisibility(I)V
 
     .line 267
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgx:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvn:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 268
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgy:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvo:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
     .line 269
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgF:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvv:Z
 
     .line 270
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->apz()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->asv()V
 
     :goto_5
     move v3, v2
@@ -1035,7 +964,7 @@
 
     .line 248
     :cond_3
-    const v1, 0x7f0a05bb
+    const v1, 0x7f0303b4
 
     invoke-virtual {p2, v1}, Lcom/tencent/mm/ui/base/preference/Preference;->setWidgetLayoutResource(I)V
 
@@ -1061,7 +990,7 @@
 
     .line 271
     :cond_7
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgt:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvj:Ljava/util/HashMap;
 
     const-string/jumbo v1, "sns_expose_reason_other"
 
@@ -1078,36 +1007,36 @@
     if-nez v0, :cond_8
 
     .line 272
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgy:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvo:Landroid/widget/EditText;
 
     invoke-virtual {v0, v9}, Landroid/widget/EditText;->setVisibility(I)V
 
     .line 273
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgx:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvn:Landroid/widget/TextView;
 
     invoke-virtual {v0, v9}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 274
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgz:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvp:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->requestFocus()Z
 
     .line 275
-    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgF:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvv:Z
 
     .line 276
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->age()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->aiI()V
 
     goto :goto_5
 
     .line 278
     :cond_8
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgz:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvp:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->requestFocus()Z
 
     .line 279
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->age()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->aiI()V
 
     goto :goto_5
 .end method
@@ -1117,18 +1046,18 @@
 
     .prologue
     .line 229
-    const v0, 0x7f0a046f
+    const v0, 0x7f03056d
 
     return v0
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 6
+    .locals 8
 
     .prologue
-    const-wide/16 v4, 0x0
+    const-wide/16 v6, 0x0
 
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
     .line 104
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/base/preference/MMPreference;->onCreate(Landroid/os/Bundle;)V
@@ -1146,7 +1075,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgB:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvr:I
 
     .line 107
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->getIntent()Landroid/content/Intent;
@@ -1155,95 +1084,95 @@
 
     const-string/jumbo v1, "sns_info_svr_id"
 
-    invoke-virtual {v0, v1, v4, v5}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+    invoke-virtual {v0, v1, v6, v7}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgD:J
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvt:J
 
     .line 109
-    iget-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgD:J
+    iget-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvt:J
 
-    cmp-long v0, v0, v4
+    cmp-long v0, v0, v6
 
     if-eqz v0, :cond_0
 
     .line 110
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azi()Lcom/tencent/mm/plugin/sns/h/l;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBI()Lcom/tencent/mm/plugin/sns/i/l;
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgD:J
+    iget-wide v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvt:J
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/sns/h/l;->cx(J)Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/plugin/sns/i/l;->cM(J)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v0
 
     .line 111
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/i/k;->field_userName:Ljava/lang/String;
 
     .line 112
     if-eqz v0, :cond_0
 
     .line 113
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/storage/q;->Eo(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/storage/q;->GC(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
 
     move-result-object v0
 
     .line 116
-    iget v1, v0, Lcom/tencent/mm/d/b/p;->aSu:I
+    iget v1, v0, Lcom/tencent/mm/e/b/p;->aFd:I
 
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_1
 
     .line 117
-    sget-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgw:[I
+    sget-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvm:[I
 
-    const v1, 0x7f0b16fe
+    const v1, 0x7f08125d
 
-    aput v1, v0, v3
+    aput v1, v0, v4
 
     .line 125
     :cond_0
     :goto_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0xda
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
     .line 127
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->aCh()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->aFh()V
 
     .line 128
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->Gb()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->Gy()V
 
     .line 129
     return-void
 
     .line 118
     :cond_1
-    iget v0, v0, Lcom/tencent/mm/d/b/p;->aSu:I
+    iget v0, v0, Lcom/tencent/mm/e/b/p;->aFd:I
 
-    if-ne v0, v3, :cond_0
+    if-ne v0, v4, :cond_0
 
     .line 119
-    sget-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgw:[I
+    sget-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvm:[I
 
-    const v1, 0x7f0b16fd
+    const v1, 0x7f08125e
 
-    aput v1, v0, v3
+    aput v1, v0, v4
 
     goto :goto_0
 .end method
@@ -1256,41 +1185,142 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/base/preference/MMPreference;->onDestroy()V
 
     .line 146
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->aCh()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->aFh()V
 
     .line 147
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0xda
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
     .line 149
-    new-instance v0, Lcom/tencent/mm/d/a/en;
+    new-instance v0, Lcom/tencent/mm/e/a/er;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/en;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/er;-><init>()V
 
     .line 150
-    iget-object v1, v0, Lcom/tencent/mm/d/a/en;->azj:Lcom/tencent/mm/d/a/en$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/er;->all:Lcom/tencent/mm/e/a/er$a;
 
-    iget-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgE:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvu:Z
 
-    iput-boolean v2, v1, Lcom/tencent/mm/d/a/en$a;->azk:Z
+    iput-boolean v2, v1, Lcom/tencent/mm/e/a/er$a;->alm:Z
 
     .line 151
-    iget-object v1, v0, Lcom/tencent/mm/d/a/en;->azj:Lcom/tencent/mm/d/a/en$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/er;->all:Lcom/tencent/mm/e/a/er$a;
 
-    iget-wide v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hgD:J
+    iget-wide v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvt:J
 
-    iput-wide v2, v1, Lcom/tencent/mm/d/a/en$a;->azl:J
+    iput-wide v2, v1, Lcom/tencent/mm/e/a/er$a;->aln:J
 
     .line 152
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 153
     return-void
+.end method
+
+.method public onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
+    .locals 6
+
+    .prologue
+    const/4 v5, 0x0
+
+    const/4 v4, 0x1
+
+    .line 324
+    const-string/jumbo v0, "MicroMsg.SnsNotInterestUI"
+
+    const-string/jumbo v1, "onSceneEnd, errType:%d, errCode:%d"
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v5
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v4
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/kingkong/support/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 325
+    invoke-virtual {p4}, Lcom/tencent/mm/t/j;->getType()I
+
+    move-result v0
+
+    const/16 v1, 0xda
+
+    if-ne v0, v1, :cond_0
+
+    .line 326
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->cLs:Lcom/tencent/mm/ui/base/p;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/p;->dismiss()V
+
+    .line 327
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->cLs:Lcom/tencent/mm/ui/base/p;
+
+    .line 328
+    check-cast p4, Lcom/tencent/mm/plugin/sns/e/p;
+
+    .line 329
+    iget v0, p4, Lcom/tencent/mm/plugin/sns/e/p;->type:I
+
+    const/16 v1, 0x9
+
+    if-ne v0, v1, :cond_0
+
+    .line 330
+    if-nez p1, :cond_1
+
+    if-nez p2, :cond_1
+
+    .line 331
+    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvu:Z
+
+    .line 332
+    const v0, 0x7f081261
+
+    invoke-static {p0, v0, v4}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    .line 333
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->finish()V
+
+    .line 341
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 335
+    :cond_1
+    iput-boolean v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->hvu:Z
+
+    .line 336
+    const v0, 0x7f081256
+
+    invoke-static {p0, v0, v4}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    goto :goto_0
 .end method

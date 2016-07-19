@@ -16,6 +16,16 @@
     name = "d"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/tencent/mm/modelsearch/m$g;",
+        ">;"
+    }
+.end annotation
+
 
 # direct methods
 .method public constructor <init>()V

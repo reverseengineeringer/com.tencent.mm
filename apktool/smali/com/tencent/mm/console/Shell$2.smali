@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/console/Shell$a;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 48
+    .line 148
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,43 +30,70 @@
 
 
 # virtual methods
-.method public final i(Landroid/content/Intent;)V
-    .locals 6
+.method public final run()V
+    .locals 8
 
     .prologue
-    const/4 v5, 0x0
+    const/4 v7, 0x1
 
-    .line 52
-    const-string/jumbo v0, "level"
+    const/4 v6, 0x0
 
-    invoke-virtual {p1, v0, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    .line 153
+    const-string/jumbo v0, "MicroMsg.Shell"
 
-    move-result v0
+    const-string/jumbo v1, "dkcrash begin tid:%d [%s]"
 
-    .line 53
-    const-string/jumbo v1, "!24@/B4Tb64lLpLOIdMtS2bKaA=="
+    const/4 v2, 0x2
 
-    const-string/jumbo v2, "kiro set Log.level=%d"
+    new-array v2, v2, [Ljava/lang/Object;
 
-    const/4 v3, 0x1
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    new-array v3, v3, [Ljava/lang/Object;
+    move-result-object v3
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->getLogLevel()I
+    invoke-virtual {v3}, Ljava/lang/Thread;->getId()J
 
-    move-result v4
+    move-result-wide v4
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v4
+    move-result-object v3
 
-    aput-object v4, v3, v5
+    aput-object v3, v2, v6
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    .line 54
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/u;->pp(I)V
+    move-result-object v3
 
-    .line 55
+    invoke-virtual {v3}, Ljava/lang/Thread;->getName()Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v2, v7
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 154
+    const-string/jumbo v0, "MicroMsg.Shell"
+
+    const-string/jumbo v1, "%d "
+
+    new-array v2, v7, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v6
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 156
     return-void
 .end method

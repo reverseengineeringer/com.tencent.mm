@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto">
+    <PreferenceTitleCategory android:title="@string/cd5" />
+    <Preference android:layout="@layout/yk" android:title="@string/ciu" android:key="settings_username" />
+    <Preference android:layout="@layout/yk" android:title="@string/cij" android:key="settings_uin" />
+    <Preference android:layout="@layout/yk" android:title="@string/cf0" android:key="settings_mobile" />
+    <Preference android:layout="@layout/yk" android:title="@string/cdj" android:key="settings_email_addr" />
+    <Preference android:layout="@layout/yk" android:title="@string/cck" android:key="settings_about_domainmail" />
+    <Preference android:layout="@layout/yk" android:title="@string/b3d" android:key="settings_facebook" />
+    <com.tencent.mm.ui.base.preference.PluginTextPreference android:key="settings_about_vusertitle" />
+    <com.tencent.mm.plugin.setting.ui.setting.SelfVuserPreference android:key="settings_about_vuserinfo" />
+    <Preference android:layout="@layout/yk" android:title="@string/a_s" android:key="settings_about_vuser_about" />
+    <PreferenceTitleCategory android:title="@string/cd8" />
+    <com.tencent.mm.ui.base.preference.IconPreference android:layout="@layout/yk" android:title="@string/ce3" android:key="settings_fingerprint_title" />
+    <com.tencent.mm.ui.base.preference.IconPreference android:layout="@layout/yk" android:title="@string/ciz" android:key="settings_voiceprint_title" />
+    <Preference android:layout="@layout/yk" android:title="@string/ce8" android:key="settings_independent_password" />
+    <com.tencent.mm.ui.base.preference.IconSwitchKeyValuePreference android:layout="@layout/yk" android:title="@string/c68" android:key="settings_safe_device" />
+    <com.tencent.mm.ui.base.preference.IconSwitchKeyValuePreference android:layout="@layout/yk" android:title="@string/brz" android:key="settings_phone_security" />
+    <com.tencent.mm.ui.base.preference.IconSummaryPreference android:title="@string/ch6" android:key="settings_room_right" />
+    <Preference android:layout="@layout/a0i" android:summary="@string/cha" android:title="@string/ch_" android:key="settings_security_center" />
+    <Preference android:layout="@layout/yk" android:title="@string/cbn" android:key="settings_delete_account" />
+</PreferenceScreen>

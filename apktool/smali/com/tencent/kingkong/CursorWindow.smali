@@ -8,6 +8,15 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Lcom/tencent/kingkong/CursorWindow;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private static final STATS_TAG:Ljava/lang/String; = "MicroMsg.kkdb.CursorWindowStats"
 
@@ -69,12 +78,11 @@
 
     sput v0, Lcom/tencent/kingkong/CursorWindow;->sCursorWindowSize:I
 
-    .line 673
+    .line 672
     new-instance v0, Lcom/tencent/kingkong/CursorWindow$1;
 
     invoke-direct {v0}, Lcom/tencent/kingkong/CursorWindow$1;-><init>()V
 
-    .line 672
     sput-object v0, Lcom/tencent/kingkong/CursorWindow;->CREATOR:Landroid/os/Parcelable$Creator;
 
     .line 710
@@ -84,7 +92,6 @@
 
     sput-object v0, Lcom/tencent/kingkong/CursorWindow;->sWindowToPidMap:Landroid/util/SparseIntArray;
 
-    .line 39
     return-void
 
     .line 51
@@ -145,11 +152,11 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/tencent/kingkong/CursorWindow;)V
+.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/tencent/kingkong/CursorWindow$1;)V
     .locals 0
 
     .prologue
-    .line 130
+    .line 39
     invoke-direct {p0, p1}, Lcom/tencent/kingkong/CursorWindow;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -204,7 +211,6 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 107
     sget v2, Lcom/tencent/kingkong/CursorWindow;->sCursorWindowSize:I
 
     div-int/lit16 v2, v2, 0x400
@@ -231,7 +237,6 @@
 
     move-result-object v1
 
-    .line 106
     invoke-direct {v0, v1}, Lcom/tencent/kingkong/CursorWindowAllocationException;-><init>(Ljava/lang/String;)V
 
     throw v0
@@ -419,11 +424,9 @@
     if-nez v6, :cond_0
 
     .line 740
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     const-string/jumbo v0, ""
+
+    monitor-exit v2
 
     .line 763
     :goto_0
@@ -434,63 +437,9 @@
 
     .line 742
     :goto_1
-    if-lt v0, v6, :cond_1
-
-    .line 736
-    :try_start_1
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 748
-    invoke-virtual {v5}, Landroid/util/SparseIntArray;->size()I
-
-    move-result v6
-
-    move v0, v1
-
-    move v2, v1
-
-    .line 749
-    :goto_2
-    if-lt v0, v6, :cond_2
-
-    .line 762
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
-
-    move-result v0
-
-    if-le v0, v10, :cond_4
-
-    invoke-virtual {v3, v1, v10}, Ljava/lang/StringBuilder;->substring(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 763
-    :goto_3
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v3, "# Open Cursors="
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
+    if-ge v0, v6, :cond_1
 
     .line 743
-    :cond_1
-    :try_start_2
     sget-object v7, Lcom/tencent/kingkong/CursorWindow;->sWindowToPidMap:Landroid/util/SparseIntArray;
 
     invoke-virtual {v7, v0}, Landroid/util/SparseIntArray;->valueAt(I)I
@@ -512,18 +461,26 @@
 
     goto :goto_1
 
-    .line 736
-    :catchall_0
-    move-exception v0
-
+    .line 747
+    :cond_1
     monitor-exit v2
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v0
+    .line 748
+    invoke-virtual {v5}, Landroid/util/SparseIntArray;->size()I
+
+    move-result v6
+
+    move v0, v1
+
+    move v2, v1
+
+    .line 749
+    :goto_2
+    if-ge v0, v6, :cond_3
 
     .line 750
-    :cond_2
     const-string/jumbo v7, " (# cursors opened by "
 
     invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -534,7 +491,7 @@
     move-result v7
 
     .line 752
-    if-ne v7, v4, :cond_3
+    if-ne v7, v4, :cond_2
 
     .line 753
     const-string/jumbo v8, "this proc="
@@ -542,7 +499,7 @@
     invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 757
-    :goto_4
+    :goto_3
     invoke-virtual {v5, v7}, Landroid/util/SparseIntArray;->get(I)I
 
     move-result v7
@@ -550,11 +507,11 @@
     .line 758
     new-instance v8, Ljava/lang/StringBuilder;
 
-    invoke-static {v7}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v9
+    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v8
 
     const-string/jumbo v9, ")"
 
@@ -576,8 +533,19 @@
 
     goto :goto_2
 
+    .line 747
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+
     .line 755
-    :cond_3
+    :cond_2
     new-instance v8, Ljava/lang/StringBuilder;
 
     const-string/jumbo v9, "pid "
@@ -600,7 +568,41 @@
 
     invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_4
+    goto :goto_3
+
+    .line 762
+    :cond_3
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v0
+
+    if-le v0, v10, :cond_4
+
+    invoke-virtual {v3, v1, v10}, Ljava/lang/StringBuilder;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 763
+    :goto_4
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "# Open Cursors="
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto/16 :goto_0
 
     .line 762
     :cond_4
@@ -608,7 +610,7 @@
 
     move-result-object v0
 
-    goto :goto_3
+    goto :goto_4
 .end method
 
 .method private recordClosingOfWindow(I)V
@@ -633,6 +635,7 @@
     .line 725
     monitor-exit v1
 
+    .line 728
     :goto_0
     return-void
 
@@ -642,7 +645,7 @@
 
     invoke-virtual {v0, p1}, Landroid/util/SparseIntArray;->delete(I)V
 
-    .line 722
+    .line 728
     monitor-exit v1
 
     goto :goto_0
@@ -672,7 +675,7 @@
 
     invoke-virtual {v0, p2, p1}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 713
+    .line 718
     monitor-exit v1
 
     return-void
@@ -709,17 +712,13 @@
     .line 253
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 251
     return v0
 
-    .line 252
     :catchall_0
     move-exception v0
 
-    .line 253
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 254
     throw v0
 .end method
 
@@ -746,17 +745,15 @@
     .line 179
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 181
+    .line 180
     return-void
 
-    .line 178
+    .line 179
     :catchall_0
     move-exception v0
 
-    .line 179
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 180
     throw v0
 .end method
 
@@ -795,17 +792,15 @@
     .line 472
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 474
+    .line 473
     return-void
 
-    .line 471
+    .line 472
     :catchall_0
     move-exception v0
 
-    .line 472
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 473
     throw v0
 .end method
 
@@ -832,17 +827,15 @@
     .line 145
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 147
+    .line 146
     return-void
 
-    .line 144
+    .line 145
     :catchall_0
     move-exception v0
 
-    .line 145
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 146
     throw v0
 .end method
 
@@ -864,17 +857,15 @@
     .line 265
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 267
+    .line 266
     return-void
 
-    .line 264
+    .line 265
     :catchall_0
     move-exception v0
 
-    .line 265
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 266
     throw v0
 .end method
 
@@ -902,17 +893,13 @@
     .line 395
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 393
     return-object v0
 
-    .line 394
     :catchall_0
     move-exception v0
 
-    .line 395
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 396
     throw v0
 .end method
 
@@ -940,17 +927,13 @@
     .line 535
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 533
     return-wide v0
 
-    .line 534
     :catchall_0
     move-exception v0
 
-    .line 535
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 536
     throw v0
 .end method
 
@@ -1006,17 +989,13 @@
     .line 503
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 501
     return-wide v0
 
-    .line 502
     :catchall_0
     move-exception v0
 
-    .line 503
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 504
     throw v0
 .end method
 
@@ -1050,17 +1029,13 @@
     .line 219
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 217
     return v0
 
-    .line 218
     :catchall_0
     move-exception v0
 
-    .line 219
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 220
     throw v0
 .end method
 
@@ -1114,17 +1089,13 @@
     .line 430
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 428
     return-object v0
 
-    .line 429
     :catchall_0
     move-exception v0
 
-    .line 430
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 431
     throw v0
 .end method
 
@@ -1152,17 +1123,13 @@
     .line 365
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 363
     return v0
 
-    .line 364
     :catchall_0
     move-exception v0
 
-    .line 365
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 366
     throw v0
 .end method
 
@@ -1182,15 +1149,16 @@
 
     if-eq v0, v1, :cond_0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_1
 
-    const/4 v0, 0x0
+    :cond_0
+    const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    :cond_0
-    const/4 v0, 0x1
+    :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
@@ -1285,15 +1253,16 @@
 
     if-eq v0, v1, :cond_0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_1
 
-    const/4 v0, 0x0
+    :cond_0
+    const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    :cond_0
-    const/4 v0, 0x1
+    :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
@@ -1333,22 +1302,18 @@
     .line 600
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 598
     return v0
 
-    .line 599
     :catchall_0
     move-exception v0
 
-    .line 600
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 601
     throw v0
 .end method
 
 .method public putDouble(DII)Z
-    .locals 2
+    .locals 3
 
     .prologue
     .line 648
@@ -1371,22 +1336,18 @@
     .line 652
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 650
     return v0
 
-    .line 651
     :catchall_0
     move-exception v0
 
-    .line 652
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 653
     throw v0
 .end method
 
 .method public putLong(JII)Z
-    .locals 2
+    .locals 3
 
     .prologue
     .line 630
@@ -1409,17 +1370,13 @@
     .line 634
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 632
     return v0
 
-    .line 633
     :catchall_0
     move-exception v0
 
-    .line 634
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 635
     throw v0
 .end method
 
@@ -1447,17 +1404,13 @@
     .line 668
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 666
     return v0
 
-    .line 667
     :catchall_0
     move-exception v0
 
-    .line 668
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 669
     throw v0
 .end method
 
@@ -1485,17 +1438,13 @@
     .line 617
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 615
     return v0
 
-    .line 616
     :catchall_0
     move-exception v0
 
-    .line 617
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 618
     throw v0
 .end method
 
@@ -1519,17 +1468,13 @@
     .line 239
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 237
     return v0
 
-    .line 238
     :catchall_0
     move-exception v0
 
-    .line 239
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 240
     throw v0
 .end method
 
@@ -1551,15 +1496,15 @@
     .line 767
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string/jumbo v1, " {"
 
@@ -1625,13 +1570,11 @@
     :cond_0
     return-void
 
-    .line 696
+    .line 697
     :catchall_0
     move-exception v0
 
-    .line 697
     invoke-virtual {p0}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 698
     throw v0
 .end method

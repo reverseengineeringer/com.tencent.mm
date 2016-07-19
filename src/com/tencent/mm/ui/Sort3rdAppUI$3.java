@@ -1,10 +1,11 @@
 package com.tencent.mm.ui;
 
+import com.tencent.mm.pluginsdk.model.app.f;
 import java.util.Comparator;
 import java.util.List;
 
 final class Sort3rdAppUI$3
-  implements Comparator
+  implements Comparator<f>
 {
   Sort3rdAppUI$3(Sort3rdAppUI paramSort3rdAppUI, List paramList) {}
 }

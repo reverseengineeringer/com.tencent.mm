@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kPw:Lcom/tencent/mm/ui/bindqq/BindQQUI$7;
+.field final synthetic loM:Lcom/tencent/mm/ui/bindqq/BindQQUI$7;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 159
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/BindQQUI$7$1;->kPw:Lcom/tencent/mm/ui/bindqq/BindQQUI$7;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/BindQQUI$7$1;->loM:Lcom/tencent/mm/ui/bindqq/BindQQUI$7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,16 +41,16 @@
 
     .prologue
     .line 163
-    const v0, 0x7f0b052a
+    const v0, 0x7f08022d
 
     invoke-virtual {p1, v0}, Lcom/tencent/mm/ui/base/l;->setHeaderTitle(I)Landroid/view/ContextMenu;
 
     .line 164
     const/4 v0, 0x0
 
-    const v1, 0x7f0b038b
+    const v1, 0x7f081163
 
-    invoke-virtual {p1, v0, v1}, Lcom/tencent/mm/ui/base/l;->bL(II)Landroid/view/MenuItem;
+    invoke-virtual {p1, v0, v1}, Lcom/tencent/mm/ui/base/l;->bR(II)Landroid/view/MenuItem;
 
     .line 166
     return-void

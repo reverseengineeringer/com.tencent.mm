@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+.field final synthetic ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 871
-    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingBlacklistUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 870
+    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingBlacklistUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-direct {p0, p1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BaseUriSpanHandler;-><init>(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)V
 
@@ -40,44 +40,44 @@
     .locals 4
 
     .prologue
-    .line 894
+    .line 893
     iget v0, p1, Lcom/tencent/mm/pluginsdk/ui/applet/g;->type:I
 
     const/16 v1, 0xe
 
     if-ne v0, v1, :cond_2
 
-    .line 895
+    .line 894
     if-eqz p2, :cond_0
 
-    .line 896
+    .line 895
     invoke-interface {p2, p1}, Lcom/tencent/mm/pluginsdk/ui/d/b;->a(Lcom/tencent/mm/pluginsdk/ui/applet/g;)Ljava/lang/Object;
 
-    .line 898
+    .line 897
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingBlacklistUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingBlacklistUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0b0046
+    const v1, 0x7f08099d
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/model/n;->eX(Ljava/lang/String;)Lcom/tencent/mm/storage/ad;
+    invoke-static {v0}, Lcom/tencent/mm/model/n;->fj(Ljava/lang/String;)Lcom/tencent/mm/storage/ae;
 
     move-result-object v0
 
-    .line 899
+    .line 898
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 900
-    iget-object v2, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingBlacklistUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 899
+    iget-object v2, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingBlacklistUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v2}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -87,45 +87,45 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 901
+    .line 900
     const-string/jumbo v2, "Contact_GroupFilter_Type"
 
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ad;->getType()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ae;->getType()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 902
+    .line 901
     const-string/jumbo v2, "Contact_GroupFilter_DisplayName"
 
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ad;->qy()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ae;->pb()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 903
+    .line 902
     const/high16 v0, 0x4000000
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 904
-    invoke-static {}, Lcom/tencent/mm/ui/LauncherUI;->bat()Lcom/tencent/mm/ui/LauncherUI;
+    .line 903
+    invoke-static {}, Lcom/tencent/mm/ui/LauncherUI;->bfJ()Lcom/tencent/mm/ui/LauncherUI;
 
     move-result-object v0
 
-    .line 905
+    .line 904
     if-eqz v0, :cond_1
 
-    .line 906
+    .line 905
     const-string/jumbo v2, "tab_settings"
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/LauncherUI;->Gi(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/LauncherUI;->Ix(Ljava/lang/String;)V
 
-    .line 908
+    .line 907
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingBlacklistUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingBlacklistUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -133,10 +133,10 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 909
+    .line 908
     const/4 v0, 0x1
 
-    .line 914
+    .line 913
     :goto_0
     return v0
 
@@ -150,7 +150,7 @@
     .locals 4
 
     .prologue
-    .line 919
+    .line 918
     const-string/jumbo v0, "weixin://setting/blacklist"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -159,30 +159,30 @@
 
     if-eqz v0, :cond_2
 
-    .line 920
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingBlacklistUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 919
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingBlacklistUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0b0046
+    const v1, 0x7f08099d
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/model/n;->eX(Ljava/lang/String;)Lcom/tencent/mm/storage/ad;
+    invoke-static {v0}, Lcom/tencent/mm/model/n;->fj(Ljava/lang/String;)Lcom/tencent/mm/storage/ae;
 
     move-result-object v0
 
-    .line 921
+    .line 920
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 922
-    iget-object v2, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingBlacklistUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 921
+    iget-object v2, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingBlacklistUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v2}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -192,31 +192,31 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 923
+    .line 922
     const-string/jumbo v2, "Contact_GroupFilter_Type"
 
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ad;->getType()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ae;->getType()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 924
+    .line 923
     const-string/jumbo v2, "Contact_GroupFilter_DisplayName"
 
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ad;->qy()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ae;->pb()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 925
+    .line 924
     const/high16 v0, 0x4000000
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 926
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingBlacklistUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 925
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingBlacklistUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -226,28 +226,28 @@
 
     if-eqz v0, :cond_0
 
-    .line 927
+    .line 926
     const/high16 v0, 0x10000000
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 929
+    .line 928
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/ui/LauncherUI;->bat()Lcom/tencent/mm/ui/LauncherUI;
+    invoke-static {}, Lcom/tencent/mm/ui/LauncherUI;->bfJ()Lcom/tencent/mm/ui/LauncherUI;
 
     move-result-object v0
 
-    .line 930
+    .line 929
     if-eqz v0, :cond_1
 
-    .line 931
+    .line 930
     const-string/jumbo v2, "tab_settings"
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/LauncherUI;->Gi(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/LauncherUI;->Ix(Ljava/lang/String;)V
 
-    .line 933
+    .line 932
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingBlacklistUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingBlacklistUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -255,10 +255,10 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 934
+    .line 933
     const/4 v0, 0x1
 
-    .line 936
+    .line 935
     :goto_0
     return v0
 
@@ -268,13 +268,13 @@
     goto :goto_0
 .end method
 
-.method final bb(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
+.method final bg(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
     .locals 3
 
     .prologue
     const/4 v1, 0x0
 
-    .line 875
+    .line 874
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -287,14 +287,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 876
+    .line 875
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
     const/16 v2, 0xe
 
     invoke-direct {v0, p1, v2, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/g;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 879
+    .line 878
     :goto_0
     return-object v0
 
@@ -304,11 +304,11 @@
     goto :goto_0
 .end method
 
-.method final lg()[I
+.method final jH()[I
     .locals 3
 
     .prologue
-    .line 889
+    .line 888
     const/4 v0, 0x1
 
     new-array v0, v0, [I

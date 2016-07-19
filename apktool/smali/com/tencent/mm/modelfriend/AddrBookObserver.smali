@@ -12,11 +12,11 @@
 
 
 # static fields
-.field private static bLk:Z
+.field private static bEE:Z
 
-.field private static bLl:Landroid/content/Intent;
+.field private static bEF:Landroid/content/Intent;
 
-.field private static handler:Lcom/tencent/mm/sdk/platformtools/aa;
+.field private static handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
 
 # instance fields
@@ -28,12 +28,12 @@
     .locals 2
 
     .prologue
-    .line 28
+    .line 29
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/tencent/mm/modelfriend/AddrBookObserver;->bLk:Z
+    sput-boolean v0, Lcom/tencent/mm/modelfriend/AddrBookObserver;->bEE:Z
 
-    .line 31
+    .line 32
     new-instance v0, Lcom/tencent/mm/modelfriend/AddrBookObserver$1;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -42,7 +42,7 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/modelfriend/AddrBookObserver$1;-><init>(Landroid/os/Looper;)V
 
-    sput-object v0, Lcom/tencent/mm/modelfriend/AddrBookObserver;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    sput-object v0, Lcom/tencent/mm/modelfriend/AddrBookObserver;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
     return-void
 .end method
@@ -51,36 +51,36 @@
     .locals 1
 
     .prologue
-    .line 57
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->fetchFreeHandler()Landroid/os/Handler;
+    .line 58
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ac;->fetchFreeHandler()Landroid/os/Handler;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 58
+    .line 59
     iput-object p1, p0, Lcom/tencent/mm/modelfriend/AddrBookObserver;->context:Landroid/content/Context;
 
-    .line 59
+    .line 60
     return-void
 .end method
 
-.method static synthetic j(Landroid/content/Intent;)Landroid/content/Intent;
+.method static synthetic k(Landroid/content/Intent;)Landroid/content/Intent;
     .locals 0
 
     .prologue
-    .line 23
-    sput-object p0, Lcom/tencent/mm/modelfriend/AddrBookObserver;->bLl:Landroid/content/Intent;
+    .line 24
+    sput-object p0, Lcom/tencent/mm/modelfriend/AddrBookObserver;->bEF:Landroid/content/Intent;
 
     return-object p0
 .end method
 
-.method static synthetic yb()Landroid/content/Intent;
+.method static synthetic yn()Landroid/content/Intent;
     .locals 1
 
     .prologue
-    .line 23
-    sget-object v0, Lcom/tencent/mm/modelfriend/AddrBookObserver;->bLl:Landroid/content/Intent;
+    .line 24
+    sget-object v0, Lcom/tencent/mm/modelfriend/AddrBookObserver;->bEF:Landroid/content/Intent;
 
     return-object v0
 .end method
@@ -93,23 +93,23 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 63
+    .line 64
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 65
-    const-string/jumbo v0, "!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ="
+    .line 66
+    const-string/jumbo v0, "MicroMsg.AddrBookObserver"
 
     const-string/jumbo v1, "address book changed, start sync after 20 second"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 66
-    sget-boolean v0, Lcom/tencent/mm/modelfriend/AddrBookObserver;->bLk:Z
+    .line 67
+    sget-boolean v0, Lcom/tencent/mm/modelfriend/AddrBookObserver;->bEE:Z
 
     if-eqz v0, :cond_0
 
-    .line 67
-    const-string/jumbo v0, "!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ="
+    .line 68
+    const-string/jumbo v0, "MicroMsg.AddrBookObserver"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -117,7 +117,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-boolean v2, Lcom/tencent/mm/modelfriend/AddrBookObserver;->bLk:Z
+    sget-boolean v2, Lcom/tencent/mm/modelfriend/AddrBookObserver;->bEE:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -133,39 +133,39 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 76
+    .line 77
     :goto_0
     return-void
 
-    .line 71
-    :cond_0
-    sget-object v0, Lcom/tencent/mm/modelfriend/AddrBookObserver;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
-
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/sdk/platformtools/aa;->removeMessages(I)V
-
     .line 72
-    sget-object v0, Lcom/tencent/mm/modelfriend/AddrBookObserver;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    :cond_0
+    sget-object v0, Lcom/tencent/mm/modelfriend/AddrBookObserver;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/aa;->obtainMessage()Landroid/os/Message;
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/sdk/platformtools/ac;->removeMessages(I)V
+
+    .line 73
+    sget-object v0, Lcom/tencent/mm/modelfriend/AddrBookObserver;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ac;->obtainMessage()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 73
+    .line 74
     iget-object v1, p0, Lcom/tencent/mm/modelfriend/AddrBookObserver;->context:Landroid/content/Context;
 
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 74
+    .line 75
     iput v2, v0, Landroid/os/Message;->what:I
 
-    .line 75
-    sget-object v1, Lcom/tencent/mm/modelfriend/AddrBookObserver;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 76
+    sget-object v1, Lcom/tencent/mm/modelfriend/AddrBookObserver;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
     const-wide/16 v2, 0x4e20
 
-    invoke-virtual {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/aa;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ac;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     goto :goto_0
 .end method

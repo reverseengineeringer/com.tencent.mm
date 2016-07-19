@@ -2,22 +2,22 @@ package com.tencent.mm.pluginsdk.a;
 
 import android.content.Context;
 import com.tencent.mm.pluginsdk.i.f;
-import com.tencent.mm.r.c.a;
 import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
 import com.tencent.mm.storage.a.c;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.storage.ai;
 import com.tencent.mm.storage.y;
+import com.tencent.mm.t.c.a;
 import java.util.List;
 
 public final class b
   implements i.f
 {
-  public final boolean PP()
+  public final boolean Re()
   {
     return false;
   }
   
-  public final boolean PQ()
+  public final boolean Rf()
   {
     return false;
   }
@@ -32,9 +32,9 @@ public final class b
     return null;
   }
   
-  public final void a(Context paramContext, ag paramag) {}
+  public final void a(Context paramContext, ai paramai) {}
   
-  public final void a(String paramString, c paramc, ag paramag) {}
+  public final void a(String paramString, c paramc, ai paramai) {}
   
   public final boolean a(Context paramContext, c paramc, int paramInt)
   {
@@ -78,62 +78,62 @@ public final class b
     return false;
   }
   
-  public final boolean l(Context paramContext, String paramString1, String paramString2)
+  public final boolean j(Context paramContext, String paramString1, String paramString2)
   {
     return false;
   }
   
-  public final c mD(String paramString)
-  {
-    return null;
-  }
-  
-  public final boolean mE(String paramString)
+  public final boolean nA(String paramString)
   {
     return false;
   }
   
-  public final List mF(String paramString)
+  public final List<c> nB(String paramString)
   {
     return null;
   }
   
-  public final String mG(String paramString)
+  public final String nC(String paramString)
   {
     return null;
   }
   
-  public final boolean mH(String paramString)
+  public final boolean nD(String paramString)
   {
     return false;
   }
   
-  public final String mI(String paramString)
+  public final String nE(String paramString)
   {
     return null;
   }
   
-  public final String mJ(String paramString)
+  public final String nF(String paramString)
   {
     return null;
   }
   
-  public final String mK(String paramString)
+  public final String nG(String paramString)
   {
     return null;
   }
   
-  public final int mL(String paramString)
+  public final int nH(String paramString)
   {
     return 0;
   }
   
-  public final String mM(String paramString)
+  public final String nI(String paramString)
   {
     return null;
   }
   
-  public final void mN(String paramString) {}
+  public final void nJ(String paramString) {}
+  
+  public final c nz(String paramString)
+  {
+    return null;
+  }
 }
 
 /* Location:

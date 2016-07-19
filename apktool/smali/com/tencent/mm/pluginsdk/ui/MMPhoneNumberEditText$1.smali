@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iGU:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
+.field final synthetic jdP:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 78
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$1;->iGU:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$1;->jdP:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
     const/4 v0, 0x1
 
     .line 82
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$1;->iGU:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$1;->jdP:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
 
     .line 85
     invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->getCompoundDrawables()[Landroid/graphics/drawable/Drawable;
@@ -87,9 +87,9 @@
 
     sub-int/2addr v3, v4
 
-    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$1;->iGU:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
+    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$1;->jdP:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
 
-    iget-object v4, v4, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGP:Landroid/graphics/drawable/Drawable;
+    iget-object v4, v4, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdK:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -122,7 +122,7 @@
 
     .line 97
     :cond_2
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$1;->iGU:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$1;->jdP:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->b(Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;)Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$a;
 
@@ -131,7 +131,7 @@
     if-eqz v2, :cond_0
 
     .line 98
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$1;->iGU:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$1;->jdP:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->b(Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;)Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$a;
 

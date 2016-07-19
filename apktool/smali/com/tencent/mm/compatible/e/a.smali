@@ -13,29 +13,41 @@
 
 
 # static fields
-.field public static btO:Ljava/lang/Boolean;
+.field public static bhR:Ljava/lang/Boolean;
 
 
 # direct methods
 .method public static a(Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V
     .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/compatible/e/a$b;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/compatible/e/a$a;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
-    const/4 v3, 0x0
-
     .line 292
-    invoke-static {p0}, Lcom/tencent/mm/a/e;->ax(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/a/e;->aB(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 293
-    const-string/jumbo v0, "!44@/B4Tb64lLpL0qTj+UKAbT/+Av89GBeesRhJ5b9d5xPA="
+    const-string/jumbo v0, "MicroMsg.PermissionConfig"
 
     const-string/jumbo v1, "file is not exists"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 366
     :cond_0
@@ -44,13 +56,13 @@
 
     .line 297
     :cond_1
-    const-string/jumbo v4, ".perm.values."
+    const-string/jumbo v3, ".perm.values."
 
     .line 298
     const-string/jumbo v0, ""
 
     .line 299
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUB()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aZF()Ljava/lang/String;
 
     move-result-object v1
 
@@ -68,16 +80,19 @@
 
     move-object v1, v0
 
-    .line 310
+    .line 308
     :goto_1
+    const/4 v0, 0x0
+
+    .line 310
     :try_start_0
     new-instance v2, Ljava/io/BufferedReader;
 
-    new-instance v0, Ljava/io/FileReader;
+    new-instance v4, Ljava/io/FileReader;
 
-    invoke-direct {v0, p0}, Ljava/io/FileReader;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, p0}, Ljava/io/FileReader;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v2, v0}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
+    invoke-direct {v2, v4}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_7
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_6
@@ -96,10 +111,10 @@
     .line 313
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
     .line 314
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
 
     move-result v0
 
@@ -108,9 +123,7 @@
     .line 315
     const-string/jumbo v0, "perm"
 
-    const/4 v5, 0x0
-
-    invoke-static {v3, v0, v5}, Lcom/tencent/mm/sdk/platformtools/q;->J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/r;->cr(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v5
 
@@ -118,7 +131,7 @@
     if-nez v5, :cond_6
 
     .line 320
-    const-string/jumbo v0, "!44@/B4Tb64lLpL0qTj+UKAbT/+Av89GBeesRhJ5b9d5xPA="
+    const-string/jumbo v0, "MicroMsg.PermissionConfig"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -126,15 +139,15 @@
 
     invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
@@ -150,11 +163,11 @@
 
     :goto_3
     :try_start_2
-    const-string/jumbo v1, "!44@/B4Tb64lLpL0qTj+UKAbT/+Av89GBeesRhJ5b9d5xPA="
+    const-string/jumbo v1, "MicroMsg.PermissionConfig"
 
     const-string/jumbo v2, "file not found exception"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
@@ -255,7 +268,7 @@
     if-nez v0, :cond_7
 
     .line 326
-    const-string/jumbo v0, "!44@/B4Tb64lLpL0qTj+UKAbT/+Av89GBeesRhJ5b9d5xPA="
+    const-string/jumbo v0, "MicroMsg.PermissionConfig"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -263,15 +276,15 @@
 
     invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_4
     .catch Ljava/io/FileNotFoundException; {:try_start_4 .. :try_end_4} :catch_0
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
@@ -285,11 +298,11 @@
 
     :goto_4
     :try_start_5
-    const-string/jumbo v0, "!44@/B4Tb64lLpL0qTj+UKAbT/+Av89GBeesRhJ5b9d5xPA="
+    const-string/jumbo v0, "MicroMsg.PermissionConfig"
 
     const-string/jumbo v1, "read permission config file failed"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
@@ -313,27 +326,27 @@
     .line 330
     :cond_7
     :try_start_7
-    const-string/jumbo v3, "1"
+    const-string/jumbo v4, "1"
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_9
+    if-eqz v4, :cond_9
 
     .line 331
-    new-instance v3, Lcom/tencent/mm/compatible/e/a$b;
+    new-instance v4, Lcom/tencent/mm/compatible/e/a$b;
 
     const/4 v0, 0x0
 
-    invoke-direct {v3, v0}, Lcom/tencent/mm/compatible/e/a$b;-><init>(B)V
+    invoke-direct {v4, v0}, Lcom/tencent/mm/compatible/e/a$b;-><init>(B)V
 
     .line 332
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object v0, v3, Lcom/tencent/mm/compatible/e/a$b;->btS:Landroid/util/SparseArray;
+    iput-object v0, v4, Lcom/tencent/mm/compatible/e/a$b;->bhV:Landroid/util/SparseArray;
 
     .line 333
     const-string/jumbo v0, ".perm.manufacture"
@@ -344,7 +357,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    iput-object v0, v3, Lcom/tencent/mm/compatible/e/a$b;->btT:Ljava/lang/String;
+    iput-object v0, v4, Lcom/tencent/mm/compatible/e/a$b;->bhW:Ljava/lang/String;
 
     .line 334
     const-string/jumbo v0, ".perm.model"
@@ -355,7 +368,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    iput-object v0, v3, Lcom/tencent/mm/compatible/e/a$b;->model:Ljava/lang/String;
+    iput-object v0, v4, Lcom/tencent/mm/compatible/e/a$b;->model:Ljava/lang/String;
 
     .line 335
     const-string/jumbo v0, ".perm.version_release"
@@ -366,10 +379,10 @@
 
     check-cast v0, Ljava/lang/String;
 
-    iput-object v0, v3, Lcom/tencent/mm/compatible/e/a$b;->version:Ljava/lang/String;
+    iput-object v0, v4, Lcom/tencent/mm/compatible/e/a$b;->version:Ljava/lang/String;
 
     .line 336
-    iget-object v0, v3, Lcom/tencent/mm/compatible/e/a$b;->btS:Landroid/util/SparseArray;
+    iget-object v0, v4, Lcom/tencent/mm/compatible/e/a$b;->bhV:Landroid/util/SparseArray;
 
     const/4 v6, 0x1
 
@@ -377,7 +390,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v7
 
@@ -396,7 +409,7 @@
     invoke-virtual {v0, v6, v7}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
     .line 337
-    iget-object v0, v3, Lcom/tencent/mm/compatible/e/a$b;->btS:Landroid/util/SparseArray;
+    iget-object v0, v4, Lcom/tencent/mm/compatible/e/a$b;->bhV:Landroid/util/SparseArray;
 
     const/4 v6, 0x2
 
@@ -404,7 +417,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v7
 
@@ -437,14 +450,14 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->Dr(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->FG(Ljava/lang/String;)I
 
     move-result v0
 
-    iput v0, v3, Lcom/tencent/mm/compatible/e/a$b;->btR:I
+    iput v0, v4, Lcom/tencent/mm/compatible/e/a$b;->bhU:I
 
     .line 339
-    invoke-interface {p1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_7
     .catch Ljava/io/FileNotFoundException; {:try_start_7 .. :try_end_7} :catch_0
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_2
@@ -473,27 +486,27 @@
     .line 340
     :cond_9
     :try_start_9
-    const-string/jumbo v3, "2"
+    const-string/jumbo v4, "2"
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 341
-    new-instance v3, Lcom/tencent/mm/compatible/e/a$a;
+    new-instance v4, Lcom/tencent/mm/compatible/e/a$a;
 
     const/4 v0, 0x0
 
-    invoke-direct {v3, v0}, Lcom/tencent/mm/compatible/e/a$a;-><init>(B)V
+    invoke-direct {v4, v0}, Lcom/tencent/mm/compatible/e/a$a;-><init>(B)V
 
     .line 342
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object v0, v3, Lcom/tencent/mm/compatible/e/a$a;->btS:Landroid/util/SparseArray;
+    iput-object v0, v4, Lcom/tencent/mm/compatible/e/a$a;->bhV:Landroid/util/SparseArray;
 
     .line 343
     const-string/jumbo v0, ".perm.package"
@@ -504,7 +517,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    iput-object v0, v3, Lcom/tencent/mm/compatible/e/a$a;->alS:Ljava/lang/String;
+    iput-object v0, v4, Lcom/tencent/mm/compatible/e/a$a;->YH:Ljava/lang/String;
 
     .line 344
     const-string/jumbo v0, ".perm.min_versioncode"
@@ -515,11 +528,11 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->Dr(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->FG(Ljava/lang/String;)I
 
     move-result v0
 
-    iput v0, v3, Lcom/tencent/mm/compatible/e/a$a;->btP:I
+    iput v0, v4, Lcom/tencent/mm/compatible/e/a$a;->bhS:I
 
     .line 345
     const-string/jumbo v0, ".perm.max_versioncode"
@@ -530,14 +543,14 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->Dr(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->FG(Ljava/lang/String;)I
 
     move-result v0
 
-    iput v0, v3, Lcom/tencent/mm/compatible/e/a$a;->btQ:I
+    iput v0, v4, Lcom/tencent/mm/compatible/e/a$a;->bhT:I
 
     .line 346
-    iget-object v0, v3, Lcom/tencent/mm/compatible/e/a$a;->btS:Landroid/util/SparseArray;
+    iget-object v0, v4, Lcom/tencent/mm/compatible/e/a$a;->bhV:Landroid/util/SparseArray;
 
     const/4 v6, 0x1
 
@@ -545,7 +558,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v7
 
@@ -564,7 +577,7 @@
     invoke-virtual {v0, v6, v7}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
     .line 347
-    iget-object v0, v3, Lcom/tencent/mm/compatible/e/a$a;->btS:Landroid/util/SparseArray;
+    iget-object v0, v4, Lcom/tencent/mm/compatible/e/a$a;->bhV:Landroid/util/SparseArray;
 
     const/4 v6, 0x2
 
@@ -572,7 +585,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v7
 
@@ -605,14 +618,14 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->Dr(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->FG(Ljava/lang/String;)I
 
     move-result v0
 
-    iput v0, v3, Lcom/tencent/mm/compatible/e/a$a;->btR:I
+    iput v0, v4, Lcom/tencent/mm/compatible/e/a$a;->bhU:I
 
     .line 349
-    invoke-interface {p2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_9
     .catch Ljava/io/FileNotFoundException; {:try_start_9 .. :try_end_9} :catch_0
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_2
@@ -642,9 +655,11 @@
 
     .line 358
     :catchall_1
-    move-exception v0
+    move-exception v1
 
-    move-object v2, v3
+    move-object v2, v0
+
+    move-object v0, v1
 
     goto/16 :goto_5
 
@@ -659,17 +674,15 @@
 
     .line 356
     :catch_6
-    move-exception v0
+    move-exception v1
 
-    move-object v2, v3
+    move-object v2, v0
 
     goto/16 :goto_4
 
     .line 353
     :catch_7
-    move-exception v0
-
-    move-object v0, v3
+    move-exception v1
 
     goto/16 :goto_3
 .end method
@@ -731,8 +744,17 @@
     goto :goto_0
 .end method
 
-.method public static ay(Z)Ljava/util/List;
+.method public static ab(Z)Ljava/util/List;
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(Z)",
+            "Ljava/util/List",
+            "<",
+            "Landroid/content/pm/PackageInfo;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 246
@@ -744,7 +766,7 @@
     if-eqz p0, :cond_0
 
     .line 248
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -805,15 +827,15 @@
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpL0qTj+UKAbT/+Av89GBeesRhJ5b9d5xPA="
+    const-string/jumbo v0, "MicroMsg.PermissionConfig"
 
     const-string/jumbo v1, "getRunningServices failed"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 271
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 

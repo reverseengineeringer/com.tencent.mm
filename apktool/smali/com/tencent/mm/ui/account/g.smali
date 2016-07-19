@@ -15,14 +15,14 @@
     const/4 v2, 0x0
 
     .line 16
-    const v0, 0x7f0a0288
+    const v0, 0x7f030454
 
     invoke-static {p0, v0, v8}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v1
 
     .line 17
-    const v0, 0x7f070767
+    const v0, 0x7f100d2e
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -42,7 +42,7 @@
     invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/base/HorizontalListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 21
-    const v3, 0x7f04026b
+    const v3, 0x7f02072c
 
     invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/base/HorizontalListView;->setBackgroundResource(I)V
 
@@ -54,7 +54,7 @@
     .line 23
     const/16 v1, 0x78
 
-    invoke-static {p0, v1}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {p0, v1}, Lcom/tencent/mm/az/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -94,7 +94,7 @@
 
     .line 30
     :cond_0
-    invoke-static {p0, v7}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {p0, v7}, Lcom/tencent/mm/az/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -107,7 +107,7 @@
 
     move-result v0
 
-    invoke-static {p0, v7}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {p0, v7}, Lcom/tencent/mm/az/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v1
 

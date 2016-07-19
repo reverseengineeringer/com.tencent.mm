@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">Android Wear பயன்பாட்டைப் புதுப்பித்தல் %1$sக்குத் தேவை.</string>
+    <string name="b">Android Wear பயன்பாட்டைப் புதுப்பித்தால் மட்டுமே, %1$s செயல்படும்.</string>
+    <string name="c">Android வியரைப் புதுப்பி</string>
+    <string name="d">தற்போது கிடைக்காத, ஒன்று அல்லது அதற்கு மேற்பட்ட Google Play சேவைகள் %1$sக்குத் தேவை. உதவிக்கு, டெவெலப்பரைத் தொடர்புகொள்ளவும்.</string>
+    <string name="e">Google Play சேவைகளை இயக்கு</string>
+    <string name="f">Google Play சேவைகளை இயக்கினால் மட்டுமே, %1$s செயல்படும்.</string>
+    <string name="g">Google Play சேவைகளை இயக்கு</string>
+    <string name="h">%1$s ஆல் கோரப்பட்டது</string>
+    <string name="i">Google Play சேவைகளைப் பெறுக</string>
+    <string name="j">Google Play சேவைகள் இருந்தால் மட்டுமே, %1$s செயல்படும். அவை தற்போது ஃபோனில் இல்லை.</string>
+    <string name="k">Google Play சேவைகள் இருந்தால் மட்டுமே, %1$s செயல்படும். அவை தற்போது டேப்லெட்டில் இல்லை.</string>
+    <string name="l">Google Play சேவைகளைப் பெறுக</string>
+    <string name="m">இந்தச் சாதனத்தில் குறிப்பிடப்பட்ட கணக்கு இல்லை. வேறு கணக்கைத் தேர்வு செய்யவும்.</string>
+    <string name="n">தவறான கணக்கு</string>
+    <string name="o">பயன்பாடானது Google Play சேவைகள் இயக்கக் கேட்கிறது.</string>
+    <string name="p">Google Play சேவைகளில் இணைக்க தரவு இணைப்பு தேவை.</string>
+    <string name="q">பிணைய பிழை</string>
+    <string name="r">பயன்பாடானது Google Play சேவைகளுக்கான புதுப்பிப்பைக் கேட்கிறது.</string>
+    <string name="s">Google Play சேவைகள் பிழை</string>
+    <string name="t">குறிப்பிட்ட கணக்கில் உள்நுழைவதில் பிழை. வேறு கணக்கைத் தேர்ந்தெடுக்கவும்.</string>
+    <string name="u">உள்நுழைவு தோல்வி</string>
+    <string name="v">Google Play சேவைகளில் அறியப்படாத சிக்கல் உள்ளது.</string>
+    <string name="w">சாதனம் ஆதரிக்காத Google Play சேவைகளை %1$s சார்ந்துள்ளது. உதவிக்கு, தயாரிப்பாளரைத் தொடர்புகொள்ளவும்.</string>
+    <string name="x">Google Play சேவைகள்</string>
+    <string name="y">புதுப்பி</string>
+    <string name="z">Google Play சேவைகளை இயக்கினால் மட்டுமே, %1$s செயல்படும்.</string>
+    <string name="a0">Google Play சேவைகளைப் புதுப்பி</string>
+    <string name="a1">தற்போது புதுப்பிக்கப்படும், Google Play சேவைகள் இருந்தால் மட்டுமே, %1$s செயல்படும்.</string>
+    <string name="a2">Google Play சேவைகள் புதுப்பிக்கப்படுகின்றன</string>
+    <string name="a3">ஃபோனில் திற</string>
+    <string name="a4">உள்நுழைக</string>
+    <string name="a5">Google மூலம் உள்நுழை</string>
+</resources>

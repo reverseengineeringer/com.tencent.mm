@@ -4,12 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Looper;
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.Random;
 
 final class AddrBookObserver$1
-  extends aa
+  extends ac
 {
   AddrBookObserver$1(Looper paramLooper)
   {
@@ -20,22 +20,22 @@ final class AddrBookObserver$1
   {
     super.handleMessage(paramMessage);
     paramMessage = (Context)obj;
-    if (AddrBookObserver.yb() == null)
+    if (AddrBookObserver.yn() == null)
     {
-      AddrBookObserver.j(new Intent());
-      AddrBookObserver.yb().setClass(paramMessage, AddrBookObserver.AddrBookService.class);
+      AddrBookObserver.k(new Intent());
+      AddrBookObserver.yn().setClass(paramMessage, AddrBookObserver.AddrBookService.class);
     }
     float f = new Random(System.currentTimeMillis()).nextFloat();
-    AddrBookObserver.yb().putExtra(AddrBookObserver.AddrBookService.bLm, f);
+    AddrBookObserver.yn().putExtra(AddrBookObserver.AddrBookService.bEG, f);
     try
     {
-      u.i("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "time's up, start AddrBookObserver, session:%f", new Object[] { Float.valueOf(f) });
-      paramMessage.startService(AddrBookObserver.yb());
+      v.i("MicroMsg.AddrBookObserver", "time's up, start AddrBookObserver, session:%f", new Object[] { Float.valueOf(f) });
+      paramMessage.startService(AddrBookObserver.yn());
       return;
     }
     catch (Exception paramMessage)
     {
-      u.printErrStackTrace("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", paramMessage, "startService failed", new Object[0]);
+      v.printErrStackTrace("MicroMsg.AddrBookObserver", paramMessage, "startService failed", new Object[0]);
     }
   }
 }

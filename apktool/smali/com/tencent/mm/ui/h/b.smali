@@ -1,53 +1,58 @@
 .class public final Lcom/tencent/mm/ui/h/b;
-.super Landroid/app/Dialog;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# annotations
-.annotation build Landroid/annotation/SuppressLint;
-    value = {
-        "SetJavaScriptEnabled"
-    }
-.end annotation
-
-.annotation build Lcom/jg/JgClassChecked;
-    author = 0x14
-    fComment = "checked"
-    lastDate = "20140429"
-    reviewer = 0x14
-    vComment = {
-        .enum Lcom/jg/EType;->JSEXECUTECHECK:Lcom/jg/EType;
-    }
-.end annotation
-
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/mm/ui/h/b$a;,
-        Lcom/tencent/mm/ui/h/b$b;
-    }
-.end annotation
+# interfaces
+.implements Lcom/tencent/mm/ui/h/c$a;
 
 
 # static fields
-.field static final lqY:[F
+.field private static final YC:Ljava/lang/String;
 
-.field static final lqZ:[F
+.field private static final YD:Ljava/lang/String;
 
-.field static final lra:Landroid/widget/FrameLayout$LayoutParams;
+.field private static maZ:Lcom/tencent/mm/ui/h/b;
+
+.field public static final mba:Ljava/lang/String;
+
+.field private static mbj:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field private lBY:Lcom/tencent/mm/ui/h/b$a;
+.field private bpi:Landroid/content/SharedPreferences;
 
-.field private lrc:Landroid/app/ProgressDialog;
+.field public ciN:Z
 
-.field private lrd:Landroid/widget/ImageView;
+.field maF:[J
 
-.field private lre:Lcom/tencent/mm/ui/widget/MMWebView;
+.field private maG:J
 
-.field private lrf:Landroid/widget/FrameLayout;
+.field private volatile maH:Z
 
-.field private mUrl:Ljava/lang/String;
+.field private mbb:J
+
+.field private mbc:J
+
+.field private mbd:J
+
+.field mbe:J
+
+.field mbf:J
+
+.field private mbg:J
+
+.field private mbh:J
+
+.field public mbi:J
 
 
 # direct methods
@@ -55,356 +60,2392 @@
     .locals 3
 
     .prologue
-    const/4 v2, 0x2
+    .line 82
+    invoke-static {}, Lcom/tencent/mm/compatible/d/p;->mN()Ljava/lang/String;
 
-    const/4 v1, -0x1
+    move-result-object v0
 
-    .line 43
-    new-array v0, v2, [F
+    .line 83
+    sput-object v0, Lcom/tencent/mm/ui/h/b;->YC:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/tencent/mm/a/o;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/tencent/mm/ui/h/b;->YD:Ljava/lang/String;
+
+    .line 102
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/tencent/mm/compatible/util/d;->bpe:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "/tencent/MicroMsg/SQLTrace/"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/tencent/mm/ui/h/b;->mba:Ljava/lang/String;
+
+    .line 130
+    const/4 v0, 0x1
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    const-string/jumbo v2, "IndexMicroMsg.db"
+
+    aput-object v2, v0, v1
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/tencent/mm/ui/h/b;->mbj:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 2
+
+    .prologue
+    .line 142
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 109
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/h/b;->maH:Z
+
+    .line 116
+    const/4 v0, 0x3
+
+    new-array v0, v0, [J
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/tencent/mm/ui/h/b;->lqY:[F
+    iput-object v0, p0, Lcom/tencent/mm/ui/h/b;->maF:[J
 
-    .line 44
-    new-array v0, v2, [F
+    .line 118
+    const-wide/16 v0, 0x0
 
-    fill-array-data v0, :array_1
+    iput-wide v0, p0, Lcom/tencent/mm/ui/h/b;->maG:J
 
-    sput-object v0, Lcom/tencent/mm/ui/h/b;->lqZ:[F
+    .line 119
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZQ()Landroid/content/SharedPreferences;
 
-    .line 46
-    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+    move-result-object v0
 
-    invoke-direct {v0, v1, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    iput-object v0, p0, Lcom/tencent/mm/ui/h/b;->bpi:Landroid/content/SharedPreferences;
 
-    sput-object v0, Lcom/tencent/mm/ui/h/b;->lra:Landroid/widget/FrameLayout$LayoutParams;
+    .line 143
+    invoke-direct {p0}, Lcom/tencent/mm/ui/h/b;->bpb()V
 
+    .line 144
     return-void
 
-    .line 43
+    .line 116
     :array_0
-    .array-data 4
-        0x41a00000    # 20.0f
-        0x42700000    # 60.0f
-    .end array-data
-
-    .line 44
-    :array_1
-    .array-data 4
-        0x42200000    # 40.0f
-        0x42700000    # 60.0f
+    .array-data 8
+        0x0
+        0x0
+        0x0
     .end array-data
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/tencent/mm/ui/h/b$a;)V
+.method public static JT(Ljava/lang/String;)Ljava/lang/String;
+    .locals 4
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 328
+    new-instance v0, Ljava/io/File;
+
+    invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    .line 332
+    :try_start_0
+    new-instance v2, Ljava/io/FileInputStream;
+
+    invoke-direct {v2, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 333
+    :try_start_1
+    invoke-virtual {v2}, Ljava/io/FileInputStream;->available()I
+
+    move-result v0
+
+    .line 334
+    new-array v0, v0, [B
+
+    .line 335
+    invoke-virtual {v2, v0}, Ljava/io/FileInputStream;->read([B)I
+
+    .line 336
+    invoke-static {v0}, Lcom/tencent/mm/bd/d;->be([B)[B
+
+    move-result-object v3
+
+    .line 337
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, v3}, Ljava/lang/String;-><init>([B)V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    .line 342
+    :try_start_2
+    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+
+    .line 349
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    move-object v0, v1
+
+    .line 339
+    :goto_1
+    if-eqz v0, :cond_0
+
+    .line 343
+    :try_start_3
+    invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
+
+    :cond_0
+    :goto_2
+    move-object v0, v1
+
+    .line 346
+    goto :goto_0
+
+    .line 341
+    :catchall_0
+    move-exception v0
+
+    move-object v2, v1
+
+    .line 342
+    :goto_3
+    if-eqz v2, :cond_1
+
+    .line 343
+    :try_start_4
+    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_3
+
+    .line 346
+    :cond_1
+    :goto_4
+    throw v0
+
+    :catch_1
+    move-exception v1
+
+    goto :goto_0
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_3
+    move-exception v1
+
+    goto :goto_4
+
+    .line 341
+    :catchall_1
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_4
+    move-exception v0
+
+    move-object v0, v2
+
+    goto :goto_1
+.end method
+
+.method static synthetic JW(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 60
-    const v0, 0x1030010
+    .line 79
+    invoke-static {p0}, Lcom/tencent/mm/ui/h/b;->JT(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {p0, p1, v0}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
+    move-result-object v0
 
-    .line 61
-    iput-object p2, p0, Lcom/tencent/mm/ui/h/b;->mUrl:Ljava/lang/String;
+    return-object v0
+.end method
 
-    .line 62
-    iput-object p3, p0, Lcom/tencent/mm/ui/h/b;->lBY:Lcom/tencent/mm/ui/h/b$a;
+.method private static a(Ljava/lang/String;Lcom/tencent/mm/bc/g;)J
+    .locals 4
 
-    .line 63
+    .prologue
+    .line 354
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v1, "select count(*) from "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Lcom/tencent/mm/bc/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v2
+
+    .line 355
+    const-wide/16 v0, 0x0
+
+    .line 356
+    invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 357
+    const/4 v0, 0x0
+
+    invoke-interface {v2, v0}, Landroid/database/Cursor;->getLong(I)J
+
+    move-result-wide v0
+
+    .line 359
+    :cond_0
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+
+    .line 360
+    return-wide v0
+.end method
+
+.method private static a(Lcom/tencent/mm/bc/g;Ljava/io/PrintStream;Ljava/util/List;)V
+    .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/tencent/mm/bc/g;",
+            "Ljava/io/PrintStream;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v8, 0x0
+
+    .line 430
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Lcom/tencent/mm/bc/g;->isOpen()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 431
+    :cond_0
+    const-string/jumbo v0, "MicroMsg.SQLTraceManager"
+
+    const-string/jumbo v1, "db is not open!"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 448
+    :goto_0
+    return-void
+
+    .line 434
+    :cond_1
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    .line 435
+    if-eqz p2, :cond_2
+
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_2
+
+    .line 436
+    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 437
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v5, "#table : "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string/jumbo v5, " count="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-static {v0, p0}, Lcom/tencent/mm/ui/h/b;->a(Ljava/lang/String;Lcom/tencent/mm/bc/g;)J
+
+    move-result-wide v6
+
+    invoke-virtual {v4, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    goto :goto_1
+
+    .line 440
+    :cond_2
+    const-string/jumbo v0, "select name from sqlite_master where type=\'table\' "
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/bc/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v0
+
+    .line 441
+    :goto_2
+    invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    .line 442
+    invoke-interface {v0, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 443
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v5, "#table : "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string/jumbo v5, " count="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-static {v1, p0}, Lcom/tencent/mm/ui/h/b;->a(Ljava/lang/String;Lcom/tencent/mm/bc/g;)J
+
+    move-result-wide v6
+
+    invoke-virtual {v4, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    goto :goto_2
+
+    .line 445
+    :cond_3
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    .line 447
+    :cond_4
+    const-string/jumbo v0, "MicroMsg.SQLTraceManager"
+
+    const-string/jumbo v1, "dump all table count last %d"
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v6
+
+    sub-long v2, v6, v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    aput-object v2, v4, v8
+
+    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto/16 :goto_0
+.end method
+
+.method static synthetic a(Lcom/tencent/mm/ui/h/b;Ljava/io/File;)V
+    .locals 1
+
+    .prologue
+    .line 79
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, p1, v0}, Lcom/tencent/mm/ui/h/b;->c(Ljava/io/File;Z)V
+
     return-void
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/ui/h/b;)Lcom/tencent/mm/ui/h/b$a;
+.method static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    .locals 2
+
+    .prologue
+    .line 537
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, ":"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 538
+    return-void
+.end method
+
+.method static synthetic a(Lcom/tencent/mm/ui/h/b;)Z
     .locals 1
 
     .prologue
-    .line 41
-    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->lBY:Lcom/tencent/mm/ui/h/b$a;
+    .line 79
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/h/b;->ciN:Z
+
+    return v0
+.end method
+
+.method static synthetic b(Lcom/tencent/mm/ui/h/b;)J
+    .locals 2
+
+    .prologue
+    .line 79
+    iget-wide v0, p0, Lcom/tencent/mm/ui/h/b;->mbb:J
+
+    return-wide v0
+.end method
+
+.method private bir()Ljava/lang/String;
+    .locals 10
+
+    .prologue
+    .line 365
+    new-instance v2, Ljava/io/ByteArrayOutputStream;
+
+    invoke-direct {v2}, Ljava/io/ByteArrayOutputStream;-><init>()V
+
+    .line 366
+    new-instance v3, Ljava/io/PrintStream;
+
+    invoke-direct {v3, v2}, Ljava/io/PrintStream;-><init>(Ljava/io/OutputStream;)V
+
+    .line 368
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v1, "#client.version="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget v1, Lcom/tencent/mm/protocal/c;->jry:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    .line 369
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v1, "#accinfo.revision="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget-object v1, Lcom/tencent/mm/sdk/platformtools/e;->boQ:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    .line 370
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v1, "#accinfo.uin="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget-object v1, Lcom/tencent/mm/model/ag;->btA:Lcom/tencent/mm/model/ag;
+
+    const-string/jumbo v4, "last_login_uin"
+
+    sget-object v5, Lcom/tencent/mm/ui/h/b;->YD:Ljava/lang/String;
+
+    invoke-virtual {v1, v4, v5}, Lcom/tencent/mm/model/ag;->x(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    .line 371
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v1, "#accinfo.dev="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget-object v1, Lcom/tencent/mm/ui/h/b;->YC:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    .line 372
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v1, "#accinfo.build="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget-object v1, Lcom/tencent/mm/sdk/platformtools/e;->boT:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, ":"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/tencent/mm/sdk/platformtools/e;->boU:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, ":"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    sget v1, Lcom/tencent/mm/sdk/platformtools/f;->Xv:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    .line 373
+    const-string/jumbo v1, ""
+
+    .line 375
+    :try_start_0
+    invoke-static {}, Lcom/tencent/mm/compatible/util/g;->getDataDirectory()Ljava/io/File;
+
+    move-result-object v4
+
+    .line 376
+    new-instance v5, Landroid/os/StatFs;
+
+    invoke-virtual {v4}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v5, v0}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
+
+    .line 377
+    new-instance v6, Landroid/os/StatFs;
+
+    sget-object v0, Lcom/tencent/mm/compatible/util/d;->bpe:Ljava/lang/String;
+
+    invoke-direct {v6, v0}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
+
+    .line 378
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string/jumbo v7, "activity"
+
+    invoke-virtual {v0, v7}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/ActivityManager;
+
+    invoke-virtual {v0}, Landroid/app/ActivityManager;->getMemoryClass()I
+
+    move-result v0
+
+    .line 379
+    const-string/jumbo v7, "%dMB %s:%d:%d:%d %s:%d:%d:%d"
+
+    const/16 v8, 0x9
+
+    new-array v8, v8, [Ljava/lang/Object;
+
+    const/4 v9, 0x0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v8, v9
+
+    const/4 v0, 0x1
+
+    invoke-virtual {v4}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v8, v0
+
+    const/4 v0, 0x2
+
+    invoke-virtual {v5}, Landroid/os/StatFs;->getBlockSize()I
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v8, v0
+
+    const/4 v0, 0x3
+
+    invoke-virtual {v5}, Landroid/os/StatFs;->getBlockCount()I
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v8, v0
+
+    const/4 v0, 0x4
+
+    invoke-virtual {v5}, Landroid/os/StatFs;->getAvailableBlocks()I
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v8, v0
+
+    const/4 v0, 0x5
+
+    sget-object v4, Lcom/tencent/mm/compatible/util/d;->bpe:Ljava/lang/String;
+
+    aput-object v4, v8, v0
+
+    const/4 v0, 0x6
+
+    invoke-virtual {v6}, Landroid/os/StatFs;->getBlockSize()I
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v8, v0
+
+    const/4 v0, 0x7
+
+    invoke-virtual {v6}, Landroid/os/StatFs;->getBlockCount()I
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v8, v0
+
+    const/16 v0, 0x8
+
+    invoke-virtual {v6}, Landroid/os/StatFs;->getAvailableBlocks()I
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v8, v0
+
+    invoke-static {v7, v8}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    .line 384
+    :goto_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v4, "#accinfo.data="
+
+    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    .line 385
+    new-instance v0, Ljava/util/Date;
+
+    invoke-direct {v0}, Ljava/util/Date;-><init>()V
+
+    .line 386
+    new-instance v1, Ljava/text/SimpleDateFormat;
+
+    const-string/jumbo v4, "yyyy-MM-dd HH:mm:ss.SSSZ"
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v5
+
+    invoke-direct {v1, v4, v5}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    .line 387
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v5, "#accinfo.uploadTime="
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    .line 388
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/h/b;->eI(Landroid/content/Context;)J
+
+    move-result-wide v0
+
+    .line 389
+    const-wide/16 v4, 0x0
+
+    cmp-long v4, v0, v4
+
+    if-lez v4, :cond_0
+
+    .line 390
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v5, "#logfile.autoAdapteTime :"
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    .line 392
+    :cond_0
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lcom/tencent/mm/ui/h/b;->eH(Landroid/content/Context;)J
+
+    move-result-wide v4
+
+    const-wide/16 v6, 0x0
+
+    cmp-long v4, v4, v6
+
+    if-eqz v4, :cond_5
+
+    .line 393
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lcom/tencent/mm/ui/h/b;->eH(Landroid/content/Context;)J
+
+    move-result-wide v4
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v6
+
+    invoke-static {v6}, Lcom/tencent/mm/ui/h/b;->eG(Landroid/content/Context;)J
+
+    move-result-wide v6
+
+    sub-long/2addr v4, v6
+
+    .line 394
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v7, "#logfile.fulllast :"
+
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v3, v6}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    .line 395
+    const-wide/16 v6, 0x0
+
+    cmp-long v6, v4, v6
+
+    if-lez v6, :cond_1
+
+    const-wide/32 v6, 0x1b77400
+
+    cmp-long v4, v4, v6
+
+    if-gez v4, :cond_1
+
+    .line 396
+    const-wide/16 v4, 0x64
+
+    add-long/2addr v0, v4
+
+    .line 397
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-static {v4}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v4
+
+    const-string/jumbo v5, "sql_trace_log_autoAdaptaTime"
+
+    invoke-interface {v4, v5, v0, v1}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 398
+    const-string/jumbo v4, "MicroMsg.SQLTraceManager"
+
+    const-string/jumbo v5, "auto Adapte Time to %d"
+
+    const/4 v6, 0x1
+
+    new-array v6, v6, [Ljava/lang/Object;
+
+    const/4 v7, 0x0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    aput-object v0, v6, v7
+
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 399
+    invoke-direct {p0}, Lcom/tencent/mm/ui/h/b;->bpb()V
+
+    .line 404
+    :cond_1
+    :goto_1
+    invoke-static {}, Lcom/tencent/mm/ak/t;->BE()Lcom/tencent/mm/ak/n;
+
+    move-result-object v0
+
+    const/16 v1, 0x15
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ak/n;->el(I)[Lcom/tencent/mm/ak/m;
+
+    move-result-object v0
+
+    .line 405
+    if-eqz v0, :cond_2
+
+    array-length v1, v0
+
+    if-eqz v1, :cond_2
+
+    const/4 v1, 0x0
+
+    aget-object v1, v0, v1
+
+    if-nez v1, :cond_6
+
+    .line 406
+    :cond_2
+    const-string/jumbo v0, "#traceconfig hardcode"
+
+    invoke-virtual {v3, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    .line 411
+    :goto_2
+    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->maF:[J
+
+    const/4 v1, 0x1
+
+    aget-wide v0, v0, v1
+
+    const-wide/16 v4, -0x1
+
+    cmp-long v0, v0, v4
+
+    if-eqz v0, :cond_3
+
+    .line 412
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v1, "#wxpackage :cache size="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/h/b;->maF:[J
+
+    const/4 v4, 0x0
+
+    aget-wide v4, v1, v4
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, " data size= "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/h/b;->maF:[J
+
+    const/4 v4, 0x1
+
+    aget-wide v4, v1, v4
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, " code size ="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/h/b;->maF:[J
+
+    const/4 v4, 0x2
+
+    aget-wide v4, v1, v4
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    .line 413
+    :cond_3
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v1, "#dbsize : EnMicroMsg.db size="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    new-instance v1, Ljava/io/File;
+
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/tencent/mm/model/c;->rR()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {v1, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/io/File;->length()J
+
+    move-result-wide v4
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    .line 414
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v1, "#dbsize : SnsMicroMsg.db size="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    new-instance v1, Ljava/io/File;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v5
+
+    iget-object v5, v5, Lcom/tencent/mm/model/c;->cachePath:Ljava/lang/String;
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string/jumbo v5, "SnsMicroMsg.db"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {v1, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/io/File;->length()J
+
+    move-result-wide v4
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    .line 415
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/tencent/mm/model/c;->bsz:Lcom/tencent/mm/bc/g;
+
+    const/16 v1, 0x10
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    const/4 v4, 0x0
+
+    const-string/jumbo v5, "message"
+
+    aput-object v5, v1, v4
+
+    const/4 v4, 0x1
+
+    const-string/jumbo v5, "rconversation"
+
+    aput-object v5, v1, v4
+
+    const/4 v4, 0x2
+
+    const-string/jumbo v5, "rcontact"
+
+    aput-object v5, v1, v4
+
+    const/4 v4, 0x3
+
+    const-string/jumbo v5, "ImgInfo2"
+
+    aput-object v5, v1, v4
+
+    const/4 v4, 0x4
+
+    const-string/jumbo v5, "BizInfo"
+
+    aput-object v5, v1, v4
+
+    const/4 v4, 0x5
+
+    const-string/jumbo v5, "img_flag"
+
+    aput-object v5, v1, v4
+
+    const/4 v4, 0x6
+
+    const-string/jumbo v5, "fmessage_conversation"
+
+    aput-object v5, v1, v4
+
+    const/4 v4, 0x7
+
+    const-string/jumbo v5, "AppInfo"
+
+    aput-object v5, v1, v4
+
+    const/16 v4, 0x8
+
+    const-string/jumbo v5, "AppMessage"
+
+    aput-object v5, v1, v4
+
+    const/16 v4, 0x9
+
+    const-string/jumbo v5, "EmojiInfo"
+
+    aput-object v5, v1, v4
+
+    const/16 v4, 0xa
+
+    const-string/jumbo v5, "EmojiGroupInfo"
+
+    aput-object v5, v1, v4
+
+    const/16 v4, 0xb
+
+    const-string/jumbo v5, "bottleconversation"
+
+    aput-object v5, v1, v4
+
+    const/16 v4, 0xc
+
+    const-string/jumbo v5, "bottlemessage"
+
+    aput-object v5, v1, v4
+
+    const/16 v4, 0xd
+
+    const-string/jumbo v5, "chatroom"
+
+    aput-object v5, v1, v4
+
+    const/16 v4, 0xe
+
+    const-string/jumbo v5, "rbottleconversation"
+
+    aput-object v5, v1, v4
+
+    const/16 v4, 0xf
+
+    const-string/jumbo v5, "userinfo"
+
+    aput-object v5, v1, v4
+
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-static {v0, v3, v1}, Lcom/tencent/mm/ui/h/b;->a(Lcom/tencent/mm/bc/g;Ljava/io/PrintStream;Ljava/util/List;)V
+
+    .line 416
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$ai;->iVC:Lcom/tencent/mm/pluginsdk/i$o$d;
+
+    .line 417
+    if-eqz v0, :cond_4
+
+    .line 418
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/i$o$d;->aDq()Lcom/tencent/mm/bc/g;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    const/4 v4, 0x0
+
+    const-string/jumbo v5, "SnsInfo"
+
+    aput-object v5, v1, v4
+
+    const/4 v4, 0x1
+
+    const-string/jumbo v5, "SnsComment"
+
+    aput-object v5, v1, v4
+
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-static {v0, v3, v1}, Lcom/tencent/mm/ui/h/b;->a(Lcom/tencent/mm/bc/g;Ljava/io/PrintStream;Ljava/util/List;)V
+
+    .line 419
+    :cond_4
+    const-string/jumbo v0, "#sql.content:"
+
+    invoke-virtual {v3, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    .line 420
+    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 422
+    :try_start_1
+    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->close()V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    .line 425
+    :goto_3
+    return-object v0
+
+    .line 381
+    :catch_0
+    move-exception v0
+
+    .line 382
+    const-string/jumbo v4, "MicroMsg.SQLTraceManager"
+
+    const-string/jumbo v5, "check data size failed :%s"
+
+    const/4 v6, 0x1
+
+    new-array v6, v6, [Ljava/lang/Object;
+
+    const/4 v7, 0x0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v6, v7
+
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    move-object v0, v1
+
+    goto/16 :goto_0
+
+    .line 402
+    :cond_5
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v1, "#logfile.fullTimelast :"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v4
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/tencent/mm/ui/h/b;->eG(Landroid/content/Context;)J
+
+    move-result-wide v6
+
+    sub-long/2addr v4, v6
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    goto/16 :goto_1
+
+    .line 408
+    :cond_6
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v4, "#traceconfig id="
+
+    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/4 v4, 0x0
+
+    aget-object v4, v0, v4
+
+    iget v4, v4, Lcom/tencent/mm/ak/m;->id:I
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v4, " version="
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const/4 v4, 0x0
+
+    aget-object v0, v0, v4
+
+    iget v0, v0, Lcom/tencent/mm/ak/m;->version:I
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    goto/16 :goto_2
+
+    :catch_1
+    move-exception v1
+
+    goto :goto_3
+.end method
+
+.method public static bpa()Lcom/tencent/mm/ui/h/b;
+    .locals 1
+
+    .prologue
+    .line 134
+    sget-object v0, Lcom/tencent/mm/ui/h/b;->maZ:Lcom/tencent/mm/ui/h/b;
+
+    if-nez v0, :cond_0
+
+    .line 135
+    new-instance v0, Lcom/tencent/mm/ui/h/b;
+
+    invoke-direct {v0}, Lcom/tencent/mm/ui/h/b;-><init>()V
+
+    sput-object v0, Lcom/tencent/mm/ui/h/b;->maZ:Lcom/tencent/mm/ui/h/b;
+
+    .line 137
+    :cond_0
+    sget-object v0, Lcom/tencent/mm/ui/h/b;->maZ:Lcom/tencent/mm/ui/h/b;
 
     return-object v0
 .end method
 
-.method static synthetic b(Lcom/tencent/mm/ui/h/b;)Landroid/app/ProgressDialog;
+.method private bpb()V
+    .locals 8
+
+    .prologue
+    const/4 v7, 0x1
+
+    const/4 v6, 0x0
+
+    .line 147
+    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->bpi:Landroid/content/SharedPreferences;
+
+    const-string/jumbo v1, "sql_trace_main_thread_select_interval_time"
+
+    const-wide/16 v2, 0x12c
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/tencent/mm/ui/h/b;->mbb:J
+
+    .line 148
+    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->bpi:Landroid/content/SharedPreferences;
+
+    const-string/jumbo v1, "sql_trace_main_thread_update_interval_time"
+
+    const-wide/16 v2, 0x1f4
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/tencent/mm/ui/h/b;->mbc:J
+
+    .line 149
+    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->bpi:Landroid/content/SharedPreferences;
+
+    const-string/jumbo v1, "sql_trace_child_thread_interval_time"
+
+    const-wide/16 v2, 0x5dc
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/tencent/mm/ui/h/b;->mbd:J
+
+    .line 150
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/h/b;->eI(Landroid/content/Context;)J
+
+    move-result-wide v0
+
+    .line 151
+    const-wide/16 v2, 0x0
+
+    cmp-long v2, v0, v2
+
+    if-lez v2, :cond_0
+
+    .line 152
+    iget-wide v2, p0, Lcom/tencent/mm/ui/h/b;->mbb:J
+
+    add-long/2addr v2, v0
+
+    iput-wide v2, p0, Lcom/tencent/mm/ui/h/b;->mbb:J
+
+    .line 153
+    iget-wide v2, p0, Lcom/tencent/mm/ui/h/b;->mbc:J
+
+    add-long/2addr v2, v0
+
+    iput-wide v2, p0, Lcom/tencent/mm/ui/h/b;->mbc:J
+
+    .line 154
+    iget-wide v2, p0, Lcom/tencent/mm/ui/h/b;->mbd:J
+
+    add-long/2addr v2, v0
+
+    iput-wide v2, p0, Lcom/tencent/mm/ui/h/b;->mbd:J
+
+    .line 155
+    const-string/jumbo v2, "MicroMsg.SQLTraceManager"
+
+    const-string/jumbo v3, "auto adapte Time %d"
+
+    new-array v4, v7, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    aput-object v0, v4, v6
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 157
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->bpi:Landroid/content/SharedPreferences;
+
+    const-string/jumbo v1, "sql_trace_child_transaction_interval_time"
+
+    const-wide/16 v2, 0x1388
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/tencent/mm/ui/h/b;->mbe:J
+
+    .line 158
+    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->bpi:Landroid/content/SharedPreferences;
+
+    const-string/jumbo v1, "sql_trace_file_full_size"
+
+    const-wide/16 v2, 0x7800
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/tencent/mm/ui/h/b;->mbh:J
+
+    .line 159
+    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->bpi:Landroid/content/SharedPreferences;
+
+    const-string/jumbo v1, "sql_trace_log_file_max_size"
+
+    const-wide/32 v2, 0x8c00
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/tencent/mm/ui/h/b;->mbf:J
+
+    .line 160
+    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->bpi:Landroid/content/SharedPreferences;
+
+    const-string/jumbo v1, "sql_upload_time_interval"
+
+    const-wide/32 v2, 0x1499700
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/tencent/mm/ui/h/b;->mbg:J
+
+    .line 161
+    new-instance v0, Ljava/io/File;
+
+    sget-object v1, Lcom/tencent/mm/ui/h/b;->mba:Ljava/lang/String;
+
+    const-string/jumbo v2, "MMSQL.trace"
+
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/h/b;->r(Ljava/io/File;)V
+
+    .line 162
+    const-string/jumbo v0, "MicroMsg.SQLTraceManager"
+
+    const-string/jumbo v1, "update arg %d %d %d %d %d %d %d"
+
+    const/4 v2, 0x7
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    iget-wide v4, p0, Lcom/tencent/mm/ui/h/b;->mbb:J
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    aput-object v3, v2, v6
+
+    iget-wide v4, p0, Lcom/tencent/mm/ui/h/b;->mbc:J
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    aput-object v3, v2, v7
+
+    const/4 v3, 0x2
+
+    iget-wide v4, p0, Lcom/tencent/mm/ui/h/b;->mbd:J
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x3
+
+    iget-wide v4, p0, Lcom/tencent/mm/ui/h/b;->mbe:J
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x4
+
+    iget-wide v4, p0, Lcom/tencent/mm/ui/h/b;->mbh:J
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x5
+
+    iget-wide v4, p0, Lcom/tencent/mm/ui/h/b;->mbf:J
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x6
+
+    iget-wide v4, p0, Lcom/tencent/mm/ui/h/b;->mbg:J
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 163
+    return-void
+.end method
+
+.method static synthetic bpc()Ljava/util/List;
     .locals 1
 
     .prologue
-    .line 41
-    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->lrc:Landroid/app/ProgressDialog;
+    .line 79
+    sget-object v0, Lcom/tencent/mm/ui/h/b;->mbj:Ljava/util/List;
 
     return-object v0
 .end method
 
-.method static synthetic c(Lcom/tencent/mm/ui/h/b;)Landroid/widget/FrameLayout;
+.method static synthetic bpd()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 41
-    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->lrf:Landroid/widget/FrameLayout;
+    .line 79
+    sget-object v0, Lcom/tencent/mm/ui/h/b;->mba:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic d(Lcom/tencent/mm/ui/h/b;)Lcom/tencent/mm/ui/widget/MMWebView;
+.method static synthetic c(Lcom/tencent/mm/ui/h/b;)J
+    .locals 2
+
+    .prologue
+    .line 79
+    iget-wide v0, p0, Lcom/tencent/mm/ui/h/b;->mbd:J
+
+    return-wide v0
+.end method
+
+.method static synthetic d(Lcom/tencent/mm/ui/h/b;)J
+    .locals 2
+
+    .prologue
+    .line 79
+    iget-wide v0, p0, Lcom/tencent/mm/ui/h/b;->mbc:J
+
+    return-wide v0
+.end method
+
+.method static synthetic e(Lcom/tencent/mm/ui/h/b;)Z
     .locals 1
 
     .prologue
-    .line 41
-    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->lre:Lcom/tencent/mm/ui/widget/MMWebView;
+    .line 79
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/h/b;->maH:Z
+
+    return v0
+.end method
+
+.method public static eF(Landroid/content/Context;)J
+    .locals 4
+
+    .prologue
+    .line 646
+    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 647
+    const-string/jumbo v1, "sql_report_lastUploadTime"
+
+    const-wide/16 v2, 0x0
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method private static eG(Landroid/content/Context;)J
+    .locals 4
+
+    .prologue
+    .line 656
+    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 657
+    const-string/jumbo v1, "sql_trace_log_file_create_time"
+
+    const-wide/16 v2, 0x0
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method private static eH(Landroid/content/Context;)J
+    .locals 4
+
+    .prologue
+    .line 667
+    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 668
+    const-string/jumbo v1, "sql_trace_log_file_full_time"
+
+    const-wide/16 v2, 0x0
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method private static eI(Landroid/content/Context;)J
+    .locals 4
+
+    .prologue
+    .line 678
+    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 679
+    const-string/jumbo v1, "sql_trace_log_autoAdaptaTime"
+
+    const-wide/16 v2, 0x0
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method static synthetic f(Lcom/tencent/mm/ui/h/b;)J
+    .locals 2
+
+    .prologue
+    .line 79
+    iget-wide v0, p0, Lcom/tencent/mm/ui/h/b;->mbi:J
+
+    return-wide v0
+.end method
+
+.method static synthetic g(Lcom/tencent/mm/ui/h/b;)J
+    .locals 2
+
+    .prologue
+    .line 79
+    iget-wide v0, p0, Lcom/tencent/mm/ui/h/b;->mbg:J
+
+    return-wide v0
+.end method
+
+.method static synthetic h(Lcom/tencent/mm/ui/h/b;)[J
+    .locals 1
+
+    .prologue
+    .line 79
+    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->maF:[J
 
     return-object v0
 .end method
 
-.method static synthetic e(Lcom/tencent/mm/ui/h/b;)Landroid/widget/ImageView;
+.method static synthetic i(Lcom/tencent/mm/ui/h/b;)J
+    .locals 2
+
+    .prologue
+    .line 79
+    iget-wide v0, p0, Lcom/tencent/mm/ui/h/b;->maG:J
+
+    return-wide v0
+.end method
+
+.method static synthetic j(Lcom/tencent/mm/ui/h/b;)J
+    .locals 2
+
+    .prologue
+    .line 79
+    iget-wide v0, p0, Lcom/tencent/mm/ui/h/b;->mbf:J
+
+    return-wide v0
+.end method
+
+.method static synthetic k(Lcom/tencent/mm/ui/h/b;)Z
     .locals 1
 
     .prologue
-    .line 41
-    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->lrd:Landroid/widget/ImageView;
+    .line 79
+    const/4 v0, 0x0
 
-    return-object v0
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/h/b;->maH:Z
+
+    return v0
+.end method
+
+.method static synthetic l(Lcom/tencent/mm/ui/h/b;)J
+    .locals 2
+
+    .prologue
+    .line 79
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lcom/tencent/mm/ui/h/b;->maG:J
+
+    return-wide v0
+.end method
+
+.method static synthetic m(Lcom/tencent/mm/ui/h/b;)J
+    .locals 4
+
+    .prologue
+    .line 79
+    iget-wide v0, p0, Lcom/tencent/mm/ui/h/b;->maG:J
+
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v2, v0
+
+    iput-wide v2, p0, Lcom/tencent/mm/ui/h/b;->maG:J
+
+    return-wide v0
+.end method
+
+.method public static n(Landroid/content/Context;J)V
+    .locals 3
+
+    .prologue
+    .line 641
+    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    .line 642
+    const-string/jumbo v1, "sql_report_lastUploadTime"
+
+    invoke-interface {v0, v1, p1, p2}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 643
+    return-void
+.end method
+
+.method private static o(Landroid/content/Context;J)V
+    .locals 3
+
+    .prologue
+    .line 662
+    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    .line 663
+    const-string/jumbo v1, "sql_trace_log_file_full_time"
+
+    invoke-interface {v0, v1, p1, p2}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 664
+    return-void
 .end method
 
 
 # virtual methods
-.method protected final onCreate(Landroid/os/Bundle;)V
-    .locals 9
+.method public final JV(Ljava/lang/String;)V
+    .locals 5
 
     .prologue
-    const/4 v8, 0x4
+    .line 544
+    if-nez p1, :cond_0
 
-    const/4 v7, -0x1
+    .line 545
+    const-string/jumbo p1, ""
 
-    const/4 v6, -0x2
+    .line 547
+    :cond_0
+    new-instance v1, Landroid/content/Intent;
 
-    const/4 v5, 0x1
+    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    const/4 v4, 0x0
-
-    .line 68
-    invoke-super {p0, p1}, Landroid/app/Dialog;->onCreate(Landroid/os/Bundle;)V
-
-    .line 69
-    new-instance v0, Landroid/app/ProgressDialog;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/h/b;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/h/b;->lrc:Landroid/app/ProgressDialog;
-
-    .line 70
-    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->lrc:Landroid/app/ProgressDialog;
-
-    invoke-virtual {v0, v5}, Landroid/app/ProgressDialog;->requestWindowFeature(I)Z
-
-    .line 71
-    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->lrc:Landroid/app/ProgressDialog;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/h/b;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const v2, 0x7f0b0134
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
-
-    .line 73
-    invoke-virtual {p0, v5}, Lcom/tencent/mm/ui/h/b;->requestWindowFeature(I)Z
-
-    .line 74
-    new-instance v0, Landroid/widget/FrameLayout;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/h/b;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/h/b;->lrf:Landroid/widget/FrameLayout;
-
-    .line 80
-    new-instance v0, Landroid/widget/ImageView;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/h/b;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/h/b;->lrd:Landroid/widget/ImageView;
-
-    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->lrd:Landroid/widget/ImageView;
-
-    new-instance v1, Lcom/tencent/mm/ui/h/b$1;
-
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/h/b$1;-><init>(Lcom/tencent/mm/ui/h/b;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/h/b;->getContext()Landroid/content/Context;
+    .line 548
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    const-string/jumbo v2, "com.tencent.mm.sandbox.monitor.ExceptionMonitorService"
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 549
+    const-string/jumbo v0, "uncatch_exception"
+
+    invoke-virtual {v1, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 550
+    const-string/jumbo v0, "exceptionPid"
+
+    invoke-static {}, Landroid/os/Process;->myPid()I
+
+    move-result v2
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 551
+    const-string/jumbo v2, "userName"
+
+    sget-object v0, Lcom/tencent/mm/model/ag;->btA:Lcom/tencent/mm/model/ag;
+
+    const-string/jumbo v3, "login_weixin_username"
+
+    const-string/jumbo v4, ""
+
+    invoke-virtual {v0, v3, v4}, Lcom/tencent/mm/model/ag;->x(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    const v1, 0x7f040616
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    move-result v3
 
-    move-result-object v0
+    if-eqz v3, :cond_1
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/h/b;->lrd:Landroid/widget/ImageView;
+    sget-object v0, Lcom/tencent/mm/model/ag;->btA:Lcom/tencent/mm/model/ag;
 
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    const-string/jumbo v3, "login_user_name"
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->lrd:Landroid/widget/ImageView;
+    const-string/jumbo v4, "never_login_crash"
 
-    invoke-virtual {v0, v8}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 85
-    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->lrd:Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, v3, v4}, Lcom/tencent/mm/model/ag;->x(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+    :cond_1
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    move-result v0
+    .line 552
+    const-string/jumbo v0, "tag"
 
-    .line 86
-    div-int/lit8 v0, v0, 0x2
+    const-string/jumbo v2, "SqlTrace"
 
-    new-instance v1, Landroid/widget/LinearLayout;
+    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/h/b;->getContext()Landroid/content/Context;
+    .line 553
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v1, v2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/h/b;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/tencent/mm/ui/widget/MMWebView$a;->eG(Landroid/content/Context;)Lcom/tencent/mm/ui/widget/MMWebView;
+    invoke-direct {p0}, Lcom/tencent/mm/ui/h/b;->bir()Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/tencent/mm/ui/h/b;->lre:Lcom/tencent/mm/ui/widget/MMWebView;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/h/b;->lre:Lcom/tencent/mm/ui/widget/MMWebView;
+    move-result-object v0
 
-    invoke-virtual {v2, v4}, Lcom/tencent/mm/ui/widget/MMWebView;->setVerticalScrollBarEnabled(Z)V
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/h/b;->lre:Lcom/tencent/mm/ui/widget/MMWebView;
+    move-result-object v0
 
-    invoke-virtual {v2, v4}, Lcom/tencent/mm/ui/widget/MMWebView;->setHorizontalScrollBarEnabled(Z)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/h/b;->lre:Lcom/tencent/mm/ui/widget/MMWebView;
+    move-result-object v0
 
-    new-instance v3, Lcom/tencent/mm/ui/h/b$b;
+    .line 554
+    const-string/jumbo v2, "exceptionMsg"
 
-    invoke-direct {v3, p0, v4}, Lcom/tencent/mm/ui/h/b$b;-><init>(Lcom/tencent/mm/ui/h/b;B)V
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/widget/MMWebView;->setWebViewClient(Lcom/tencent/smtt/sdk/WebViewClient;)V
+    move-result-object v0
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/h/b;->lre:Lcom/tencent/mm/ui/widget/MMWebView;
+    const/4 v3, 0x2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/widget/MMWebView;->getSettings()Lcom/tencent/smtt/sdk/WebSettings;
+    invoke-static {v0, v3}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2, v5}, Lcom/tencent/smtt/sdk/WebSettings;->setJavaScriptEnabled(Z)V
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/h/b;->lre:Lcom/tencent/mm/ui/widget/MMWebView;
+    .line 555
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/h/b;->mUrl:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/widget/MMWebView;->loadUrl(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/h/b;->lre:Lcom/tencent/mm/ui/widget/MMWebView;
-
-    sget-object v3, Lcom/tencent/mm/ui/h/b;->lra:Landroid/widget/FrameLayout$LayoutParams;
-
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/widget/MMWebView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iget-object v2, p0, Lcom/tencent/mm/ui/h/b;->lre:Lcom/tencent/mm/ui/widget/MMWebView;
-
-    invoke-virtual {v2, v8}, Lcom/tencent/mm/ui/widget/MMWebView;->setVisibility(I)V
-
-    invoke-virtual {v1, v0, v0, v0, v0}, Landroid/widget/LinearLayout;->setPadding(IIII)V
-
-    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->lre:Lcom/tencent/mm/ui/widget/MMWebView;
-
-    invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
-
-    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->lrf:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
-
-    .line 91
-    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->lrf:Landroid/widget/FrameLayout;
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/h/b;->lrd:Landroid/widget/ImageView;
-
-    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
-
-    invoke-direct {v2, v6, v6}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v1, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 92
-    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->lrf:Landroid/widget/FrameLayout;
-
-    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
-
-    invoke-direct {v1, v7, v7}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/ui/h/b;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 93
+    .line 556
     return-void
 .end method
 
-.method public final onKeyDown(ILandroid/view/KeyEvent;)Z
-    .locals 1
+.method public final boW()V
+    .locals 2
 
     .prologue
-    .line 262
-    const/4 v0, 0x4
+    .line 689
+    const-string/jumbo v0, "MicroMsg.SQLTraceManager"
 
-    if-ne p1, v0, :cond_0
+    const-string/jumbo v1, "updateIntervalArg "
 
-    .line 263
-    iget-object v0, p0, Lcom/tencent/mm/ui/h/b;->lBY:Lcom/tencent/mm/ui/h/b$a;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/h/b$a;->onCancel()V
+    .line 690
+    invoke-direct {p0}, Lcom/tencent/mm/ui/h/b;->bpb()V
 
-    .line 264
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/h/b;->dismiss()V
+    .line 691
+    return-void
+.end method
 
-    .line 265
-    const/4 v0, 0x1
+.method c(Ljava/io/File;Z)V
+    .locals 5
 
-    .line 267
-    :goto_0
-    return v0
+    .prologue
+    .line 608
+    const-string/jumbo v0, "MicroMsg.SQLTraceManager"
 
-    :cond_0
-    invoke-super {p0, p1, p2}, Landroid/app/Dialog;->onKeyDown(ILandroid/view/KeyEvent;)Z
+    const-string/jumbo v1, "build log file ,needRecreate %b"
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 609
+    invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v0
 
+    if-eqz v0, :cond_0
+
+    .line 610
+    if-eqz p2, :cond_1
+
+    .line 611
+    invoke-virtual {p1}, Ljava/io/File;->delete()Z
+
+    .line 612
+    :cond_0
+    :try_start_0
+    invoke-virtual {p1}, Ljava/io/File;->createNewFile()Z
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "sql_trace_log_file_create_time"
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-wide/16 v2, 0x0
+
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/ui/h/b;->o(Landroid/content/Context;J)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 617
+    :cond_1
+    :goto_0
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/h/b;->r(Ljava/io/File;)V
+
+    .line 618
+    return-void
+
+    .line 612
+    :catch_0
+    move-exception v0
+
+    const-string/jumbo v0, "MicroMsg.SQLTraceManager"
+
+    const-string/jumbo v1, "recreate log file fail"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
     goto :goto_0
+.end method
+
+.method r(Ljava/io/File;)V
+    .locals 10
+
+    .prologue
+    const-wide/16 v8, 0x0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 253
+    invoke-virtual {p1}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 254
+    invoke-virtual {p1}, Ljava/io/File;->length()J
+
+    move-result-wide v4
+
+    iget-wide v6, p0, Lcom/tencent/mm/ui/h/b;->mbh:J
+
+    cmp-long v0, v4, v6
+
+    if-lez v0, :cond_1
+
+    move v0, v1
+
+    :goto_0
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/h/b;->maH:Z
+
+    .line 255
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/h/b;->maH:Z
+
+    if-eqz v0, :cond_0
+
+    .line 256
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/h/b;->eH(Landroid/content/Context;)J
+
+    move-result-wide v4
+
+    .line 257
+    const-string/jumbo v0, "MicroMsg.SQLTraceManager"
+
+    const-string/jumbo v3, "has mark lastFullTime %b"
+
+    new-array v6, v1, [Ljava/lang/Object;
+
+    cmp-long v7, v4, v8
+
+    if-eqz v7, :cond_2
+
+    :goto_1
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    aput-object v1, v6, v2
+
+    invoke-static {v0, v3, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 258
+    cmp-long v0, v4, v8
+
+    if-nez v0, :cond_0
+
+    .line 259
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/ui/h/b;->o(Landroid/content/Context;J)V
+
+    .line 265
+    :cond_0
+    :goto_2
+    return-void
+
+    :cond_1
+    move v0, v2
+
+    .line 254
+    goto :goto_0
+
+    :cond_2
+    move v1, v2
+
+    .line 257
+    goto :goto_1
+
+    .line 263
+    :cond_3
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/h/b;->maH:Z
+
+    goto :goto_2
 .end method

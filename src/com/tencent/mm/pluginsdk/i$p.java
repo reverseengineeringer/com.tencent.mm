@@ -12,15 +12,15 @@ public abstract interface i$p
   
   public abstract void a(String paramString1, String paramString2, int paramInt1, int paramInt2, String paramString3, long paramLong);
   
-  public abstract boolean bJ(Context paramContext);
+  public abstract boolean bE(Context paramContext);
   
-  public abstract void bK(Context paramContext);
+  public abstract void bF(Context paramContext);
   
-  public abstract void m(Context paramContext, String paramString1, String paramString2);
+  public abstract void k(Context paramContext, String paramString1, String paramString2);
   
-  public abstract void p(String paramString, int paramInt1, int paramInt2);
+  public abstract void q(String paramString, int paramInt1, int paramInt2);
   
-  public abstract void v(String paramString1, String paramString2, String paramString3);
+  public abstract void y(String paramString1, String paramString2, String paramString3);
 }
 
 /* Location:

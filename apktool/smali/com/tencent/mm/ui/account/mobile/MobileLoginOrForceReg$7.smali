@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kyq:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
+.field final synthetic kXx:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 671
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$7;->kyq:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$7;->kXx:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

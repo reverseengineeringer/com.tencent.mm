@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic cBj:Lcom/tencent/mm/plugin/base/stub/WXCommProvider;
+.field final synthetic cye:Lcom/tencent/mm/plugin/base/stub/WXCommProvider;
 
 
 # direct methods
@@ -23,8 +23,8 @@
     .locals 0
 
     .prologue
-    .line 175
-    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$1;->cBj:Lcom/tencent/mm/plugin/base/stub/WXCommProvider;
+    .line 199
+    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$1;->cye:Lcom/tencent/mm/plugin/base/stub/WXCommProvider;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -37,12 +37,12 @@
     .locals 8
 
     .prologue
-    .line 178
+    .line 202
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    sget-wide v2, Lcom/tencent/mm/pluginsdk/model/app/al;->iCe:J
+    sget-wide v2, Lcom/tencent/mm/pluginsdk/model/app/an;->iYO:J
 
     sub-long/2addr v0, v2
 
@@ -52,56 +52,56 @@
 
     if-ltz v0, :cond_1
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v0, "MicroMsg.AppUtil"
 
     const-string/jumbo v1, "hy: get comm model time expired"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     move-object v7, v0
 
-    .line 179
+    .line 203
     :goto_0
     if-eqz v7, :cond_0
 
-    .line 180
-    const-string/jumbo v0, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    .line 204
+    const-string/jumbo v0, "MicroMsg.WXCommProvider"
 
     const-string/jumbo v1, "hy: has wxcomm query request. start to continue requesting"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 181
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$1;->cBj:Lcom/tencent/mm/plugin/base/stub/WXCommProvider;
+    .line 205
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$1;->cye:Lcom/tencent/mm/plugin/base/stub/WXCommProvider;
 
-    iget-object v1, v7, Lcom/tencent/mm/pluginsdk/model/app/al;->uri:Landroid/net/Uri;
+    iget-object v1, v7, Lcom/tencent/mm/pluginsdk/model/app/an;->uri:Landroid/net/Uri;
 
-    iget-object v2, v7, Lcom/tencent/mm/pluginsdk/model/app/al;->projection:[Ljava/lang/String;
+    iget-object v2, v7, Lcom/tencent/mm/pluginsdk/model/app/an;->projection:[Ljava/lang/String;
 
-    iget-object v3, v7, Lcom/tencent/mm/pluginsdk/model/app/al;->selection:Ljava/lang/String;
+    iget-object v3, v7, Lcom/tencent/mm/pluginsdk/model/app/an;->selection:Ljava/lang/String;
 
-    iget-object v4, v7, Lcom/tencent/mm/pluginsdk/model/app/al;->selectionArgs:[Ljava/lang/String;
+    iget-object v4, v7, Lcom/tencent/mm/pluginsdk/model/app/an;->selectionArgs:[Ljava/lang/String;
 
-    iget-object v5, v7, Lcom/tencent/mm/pluginsdk/model/app/al;->iCb:Ljava/lang/String;
+    iget-object v5, v7, Lcom/tencent/mm/pluginsdk/model/app/an;->iYL:Ljava/lang/String;
 
-    iget v6, v7, Lcom/tencent/mm/pluginsdk/model/app/al;->cwi:I
+    iget v6, v7, Lcom/tencent/mm/pluginsdk/model/app/an;->crO:I
 
-    iget-object v7, v7, Lcom/tencent/mm/pluginsdk/model/app/al;->iCc:[Ljava/lang/String;
+    iget-object v7, v7, Lcom/tencent/mm/pluginsdk/model/app/an;->iYM:[Ljava/lang/String;
 
     invoke-virtual/range {v0 .. v7}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->a(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/String;)Landroid/database/Cursor;
 
-    .line 182
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/p;->aPL()V
+    .line 206
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/p;->aUt()V
 
-    .line 184
+    .line 208
     :cond_0
     return-void
 
-    .line 178
+    .line 202
     :cond_1
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/app/al;->iCd:Lcom/tencent/mm/pluginsdk/model/app/al;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/app/an;->iYN:Lcom/tencent/mm/pluginsdk/model/app/an;
 
     move-object v7, v0
 

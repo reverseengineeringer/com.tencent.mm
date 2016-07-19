@@ -10,25 +10,25 @@ final class h$1
   
   public final void onAnimationCancel(Animator paramAnimator)
   {
-    lvZ.mgi = lvZ.mgg;
+    lWM.hiD = lWM.hiB;
   }
   
   public final void onAnimationEnd(Animator paramAnimator)
   {
-    if (lvY != null) {
-      lvY.onAnimationEnd();
+    if (lWL != null) {
+      lWL.onAnimationEnd();
     }
-    lvZ.mgi = lvZ.mgg;
+    lWM.hiD = lWM.hiB;
   }
   
   public final void onAnimationRepeat(Animator paramAnimator) {}
   
   public final void onAnimationStart(Animator paramAnimator)
   {
-    if (lvY != null) {
-      lvY.onAnimationStart();
+    if (lWL != null) {
+      lWL.onAnimationStart();
     }
-    lvZ.mgi = lvZ.mgf;
+    lWM.hiD = lWM.hiA;
   }
 }
 

@@ -10,7 +10,7 @@ final class SnsUploadUI$10
   
   public final void onClick(View paramView)
   {
-    SnsUploadUI.h(hlY);
+    SnsUploadUI.h(hCb);
   }
 }
 

@@ -1,16 +1,16 @@
 package com.tencent.mm.modelmulti;
 
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.h.d;
-import com.tencent.mm.protocal.s.a;
-import com.tencent.mm.protocal.s.b;
-import com.tencent.mm.r.h;
+import com.tencent.mm.protocal.k.c;
+import com.tencent.mm.protocal.k.d;
+import com.tencent.mm.protocal.v.a;
+import com.tencent.mm.protocal.v.b;
+import com.tencent.mm.t.h;
 
 public final class e$b
   extends h
 {
-  private final s.a bVg = new s.a();
-  private final s.b bVh = new s.b();
+  private final v.a bOH = new v.a();
+  private final v.b bOI = new v.b();
   
   public final int getType()
   {
@@ -22,14 +22,14 @@ public final class e$b
     return "/cgi-bin/micromsg-bin/newinit";
   }
   
-  protected final h.c tW()
+  protected final k.c tX()
   {
-    return bVg;
+    return bOH;
   }
   
-  public final h.d tX()
+  public final k.d tY()
   {
-    return bVh;
+    return bOI;
   }
 }
 

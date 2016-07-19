@@ -1,10 +1,15 @@
 package com.tencent.mm.sdk.platformtools;
 
-public abstract interface am$a
+import java.util.LinkedList;
+import java.util.List;
+
+public final class am$a
 {
-  public abstract boolean vd();
-  
-  public abstract boolean ve();
+  String kxg;
+  String kxh;
+  int kxi = 10;
+  int kxj = 20;
+  List<am.b> kxk = new LinkedList();
 }
 
 /* Location:

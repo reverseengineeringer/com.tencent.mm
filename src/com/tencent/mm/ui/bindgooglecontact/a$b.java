@@ -5,34 +5,34 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class a$b
 {
-  ImageView coY;
-  TextView cqM;
-  TextView eEo;
-  String fxW;
-  TextView kMY;
-  View kMZ;
-  ProgressBar kNa;
+  ImageView ckm;
+  TextView clZ;
+  TextView eKo;
+  String fHa;
+  TextView lmn;
+  View lmo;
+  ProgressBar lmp;
   int position;
   
   public a$b(final a parama, View paramView)
   {
-    coY = ((ImageView)paramView.findViewById(2131169202));
-    cqM = ((TextView)paramView.findViewById(2131169203));
-    kMZ = paramView.findViewById(2131169205);
-    eEo = ((TextView)paramView.findViewById(2131169206));
-    kNa = ((ProgressBar)paramView.findViewById(2131169207));
-    kMY = ((TextView)paramView.findViewById(2131169204));
-    kMZ.setOnClickListener(new View.OnClickListener()
+    ckm = ((ImageView)paramView.findViewById(2131757267));
+    clZ = ((TextView)paramView.findViewById(2131757268));
+    lmo = paramView.findViewById(2131757270);
+    eKo = ((TextView)paramView.findViewById(2131757271));
+    lmp = ((ProgressBar)paramView.findViewById(2131757272));
+    lmn = ((TextView)paramView.findViewById(2131757269));
+    lmo.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
-        u.d("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92JmmhadCtsXjQrRrk90isnD", "onClick");
-        if (a.a(kNb) != null) {
-          a.a(kNb).qV(position);
+        v.d("MicroMsg.GoogleContact.GoogleFriendAdapter", "onClick");
+        if (a.a(lmq) != null) {
+          a.a(lmq).sX(position);
         }
       }
     });

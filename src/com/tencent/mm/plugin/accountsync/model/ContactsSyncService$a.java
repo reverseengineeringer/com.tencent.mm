@@ -8,7 +8,7 @@ import android.content.SyncResult;
 import android.os.Bundle;
 import android.os.Looper;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class ContactsSyncService$a
   extends AbstractThreadedSyncAdapter
@@ -19,29 +19,29 @@ final class ContactsSyncService$a
   {
     super(paramContext, true);
     mContext = paramContext;
-    u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService SyncAdapterImpl construction");
+    v.i("MicroMsg.ContactsSyncService", "ContactsSyncService SyncAdapterImpl construction");
   }
   
   public final void onPerformSync(Account paramAccount, Bundle paramBundle, String paramString, ContentProviderClient paramContentProviderClient, SyncResult paramSyncResult)
   {
-    u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService SyncAdapterImpl onPerformSync");
-    if (!ah.rh())
+    v.i("MicroMsg.ContactsSyncService", "ContactsSyncService SyncAdapterImpl onPerformSync");
+    if (!ah.rg())
     {
-      u.e("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService account not ready, ignore this sync");
+      v.e("MicroMsg.ContactsSyncService", "ContactsSyncService account not ready, ignore this sync");
       return;
     }
     try
     {
       Looper.prepare();
-      ContactsSyncService.a(coz, Looper.myLooper());
-      ContactsSyncService.a(coz, paramAccount);
+      ContactsSyncService.a(cjN, Looper.myLooper());
+      ContactsSyncService.a(cjN, paramAccount);
       Looper.loop();
       return;
     }
     catch (Exception paramAccount)
     {
-      ContactsSyncService.a(coz);
-      u.e("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService.onPerformSync error: " + paramAccount.getMessage());
+      ContactsSyncService.a(cjN);
+      v.e("MicroMsg.ContactsSyncService", "ContactsSyncService.onPerformSync error: " + paramAccount.getMessage());
     }
   }
 }

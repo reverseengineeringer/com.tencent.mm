@@ -13,7 +13,7 @@ final class RegSetInfoUI$4
   {
     if ((66 == paramInt) && (paramKeyEvent.getAction() == 0))
     {
-      RegSetInfoUI.q(kwh);
+      RegSetInfoUI.q(kVo);
       return true;
     }
     return false;

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/ab$b;
+.implements Lcom/tencent/mm/sdk/platformtools/ad$b;
 
 
 # annotations
@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 908
+    .line 912
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,12 +30,12 @@
 
 
 # virtual methods
-.method public final tP()V
+.method public final tQ()V
     .locals 1
 
     .prologue
-    .line 912
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tO()Lcom/tencent/mm/model/ah;
+    .line 916
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tP()Lcom/tencent/mm/model/ah;
 
     move-result-object v0
 
@@ -45,8 +45,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 913
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tO()Lcom/tencent/mm/model/ah;
+    .line 917
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tP()Lcom/tencent/mm/model/ah;
 
     move-result-object v0
 
@@ -56,7 +56,7 @@
 
     invoke-virtual {v0}, Lcom/tencent/mm/model/c;->release()V
 
-    .line 915
+    .line 919
     :cond_0
     return-void
 .end method

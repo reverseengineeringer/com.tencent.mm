@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+.field final synthetic kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 319
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$18;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 320
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$18;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,23 +40,23 @@
     .locals 3
 
     .prologue
-    .line 323
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$18;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 324
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$18;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, v0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$18;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$18;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
-    const v2, 0x7f0b1334
+    const v2, 0x7f0813b1
 
     invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->C(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->D(Landroid/content/Context;Ljava/lang/String;)Z
 
-    .line 324
+    .line 325
     return-void
 .end method

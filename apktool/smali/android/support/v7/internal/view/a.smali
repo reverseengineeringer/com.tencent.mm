@@ -22,7 +22,7 @@
     return-void
 .end method
 
-.method public static m(Landroid/content/Context;)Landroid/support/v7/internal/view/a;
+.method public static k(Landroid/content/Context;)Landroid/support/v7/internal/view/a;
     .locals 1
 
     .prologue
@@ -47,7 +47,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0f0001
+    const/high16 v1, 0x7f0d0000
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 

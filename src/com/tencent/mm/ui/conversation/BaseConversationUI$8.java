@@ -10,7 +10,7 @@ final class BaseConversationUI$8
   
   public final void onClick(View paramView)
   {
-    lnn.finish();
+    lNH.finish();
   }
 }
 

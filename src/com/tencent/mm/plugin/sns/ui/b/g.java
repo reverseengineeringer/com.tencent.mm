@@ -16,15 +16,20 @@ import com.tencent.mm.model.c;
 import com.tencent.mm.modelsfs.FileOp;
 import com.tencent.mm.plugin.sight.decode.a.b.e;
 import com.tencent.mm.plugin.sight.decode.a.b.f;
-import com.tencent.mm.plugin.sns.d.am;
-import com.tencent.mm.plugin.sns.h.k;
-import com.tencent.mm.plugin.sns.ui.an;
-import com.tencent.mm.protocal.b.add;
-import com.tencent.mm.protocal.b.atp;
-import com.tencent.mm.protocal.b.iv;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.i.a;
+import com.tencent.mm.plugin.sns.a.a.f;
+import com.tencent.mm.plugin.sns.data.i;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.al;
+import com.tencent.mm.plugin.sns.ui.ae;
+import com.tencent.mm.plugin.sns.ui.aq;
+import com.tencent.mm.plugin.sns.ui.as;
+import com.tencent.mm.protocal.b.adw;
+import com.tencent.mm.protocal.b.auf;
+import com.tencent.mm.protocal.b.je;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.h;
+import com.tencent.mm.storage.z;
 import com.tencent.mm.ui.tools.m;
 import com.tencent.mm.ui.widget.MMPinProgressBtn;
 import java.util.HashMap;
@@ -33,219 +38,260 @@ import java.util.LinkedList;
 public final class g
   extends a
 {
-  private b.e hoI = new b.e()
+  private b.e hFe = new b.e()
   {
-    public final void a(com.tencent.mm.plugin.sight.decode.a.b paramAnonymousb, int paramAnonymousInt) {}
+    public final void d(com.tencent.mm.plugin.sight.decode.a.b paramAnonymousb, int paramAnonymousInt) {}
   };
   private int mScreenHeight;
   private int mScreenWidth;
   
-  public final void a(final a.b paramb, int paramInt1, k paramk, atp paramatp, int paramInt2, final an paraman)
+  public final void a(a.b paramb, int paramInt1, as paramas, auf paramauf, int paramInt2, final aq paramaq)
   {
-    add localadd;
-    label135:
-    label245:
-    label363:
-    long l;
-    if ((jMx != null) && (jMx.jhw.size() > 0))
+    adw localadw;
+    label140:
+    com.tencent.mm.plugin.sns.e.g localg;
+    boolean bool;
+    if ((kli != null) && (kli.jFv.size() > 0))
     {
-      localadd = (add)jMx.jhw.get(0);
-      u.v("!44@/B4Tb64lLpIDAg6z0eV+3l9Tem5X3/SFdBL1spS4Uuk=", "videoTImeline %d ", new Object[] { Integer.valueOf(paramInt1) });
-      if ((!paramk.lN(32)) || (localadd == null)) {
-        break label406;
+      localadw = (adw)kli.jFv.get(0);
+      v.v("MicroMsg.VideoTimeLineItem", "videoTImeline %d ", new Object[] { Integer.valueOf(paramInt1) });
+      if ((!hjO) || (localadw == null)) {
+        break label467;
       }
-      hoz.gzz.setOnCompletionListener(new b.e()
+      final long l = hAm;
+      hEV.gGb.a(new b.e()
       {
-        public final void a(com.tencent.mm.plugin.sight.decode.a.b paramAnonymousb, int paramAnonymousInt)
+        public final void d(com.tencent.mm.plugin.sight.decode.a.b paramAnonymousb, int paramAnonymousInt)
         {
-          if ((paramAnonymousInt == -1) || (paraman == null) || (paramanhjE == null) || (paramanhjE.gWC == null)) {
+          if ((paramAnonymousInt == -1) || (paramaq == null) || (paramaqhyl == null) || (paramaqhyl.hka == null)) {
             return;
           }
-          paramanhjE.gWC.bV(parambhnB);
+          paramaqhyl.hka.cl(l);
         }
       });
-      if (!hjE.gWC.bW(hnB)) {
-        hoz.gzz.setOnDecodeDurationListener(new b.f()
+      if (!hyl.hka.cm(l)) {
+        hEV.gGb.a(new b.f()
         {
-          public final void a(com.tencent.mm.plugin.sight.decode.a.b paramAnonymousb, long paramAnonymousLong)
+          public final void b(com.tencent.mm.plugin.sight.decode.a.b paramAnonymousb, long paramAnonymousLong)
           {
-            if ((paraman == null) || (paramanhjE == null) || (paramanhjE.gWC == null)) {
+            if ((paramaq == null) || (paramaqhyl == null) || (paramaqhyl.hka == null)) {
               return;
             }
-            int i = (int)paramAnonymousb.avM();
-            paramanhjE.gWC.l(parambhnB, ay.FT());
-            paramanhjE.gWC.n(parambhnB, i);
-            paramanhjE.gWC.k(parambhnB, parambhnB);
-            parambhoz.gzz.setOnDecodeDurationListener(null);
+            int i = (int)paramAnonymousb.ayh();
+            paramaqhyl.hka.l(l, be.Gq());
+            paramaqhyl.hka.n(l, i);
+            paramaqhyl.hka.k(l, l);
+            hFi.hEV.gGb.a(null);
           }
         });
       }
-      hoz.a(paramatp, paramInt1, gHs, paramk.lN(32));
-      hoz.hbm.setVisibility(8);
-      if ((jMx == null) || (jMx.jhw.size() <= 0)) {
-        break label1105;
+      hEV.a(paramauf, paramInt1, hlg, hjO);
+      hEV.hfT.setVisibility(8);
+      localg = ad.aBG();
+      if ((kli == null) || (kli.jFv.size() <= 0)) {
+        break label1329;
       }
-      com.tencent.mm.plugin.sns.d.ad.azg();
-      if (com.tencent.mm.plugin.sns.d.g.w(localadd)) {
-        break label703;
+      l = System.nanoTime();
+      bool = com.tencent.mm.plugin.sns.e.g.w(localadw);
+      v.i("MicroMsg.VideoTimeLineItem", "isMediaSightExist duration %s", new Object[] { Long.valueOf(System.nanoTime() - l) });
+      if (bool) {
+        break label860;
       }
-      if (!com.tencent.mm.plugin.sns.d.ad.azg().z(localadd)) {
-        break label460;
+      if (!localg.z(localadw)) {
+        break label520;
       }
-      hoz.hbk.setVisibility(8);
-      hoz.hbl.setVisibility(0);
-      hoz.hbl.bjH();
-      hoz.gzz.setTagObject(hoz);
-      com.tencent.mm.plugin.sns.d.ad.azg().a(localadd, hoz.gzz, jx.hashCode(), paramInt1, i.a.kal);
-      hoz.hbj.setTag(hoz);
-      paramk = am.bp(com.tencent.mm.plugin.sns.d.ad.ayV(), iXW);
-      paramatp = com.tencent.mm.plugin.sns.data.h.i(localadd);
-      if (!FileOp.ax(paramk + paramatp)) {
-        break label1079;
+      hEV.hfS.setVisibility(8);
+      hEV.hfR.setVisibility(0);
+      hEV.hfR.bpF();
+      label280:
+      hEV.gGb.aF(hEV);
+      com.tencent.mm.plugin.sight.decode.a.a locala = hEV.gGb;
+      paramInt2 = jO.hashCode();
+      z localz = z.bcg();
+      fxK = fyR;
+      localg.a(localadw, locala, paramInt2, paramInt1, localz, hjO);
+      hEV.hoK.setTag(hEV);
+      paramb = al.bx(ad.aBw(), jvB);
+      paramauf = i.i(localadw);
+      if (!FileOp.aB(paramb + paramauf)) {
+        break label1281;
       }
-      hjE.gWC.b(hnB, 0, true);
-      paramk = hjE.gWC;
-      l = hnB;
-      if (com.tencent.mm.plugin.sns.d.ad.azg().ayz() != 5) {
-        break label1099;
+      hyl.hka.b(hAm, 0, true);
+      label423:
+      if (!hjO) {
+        break label1307;
       }
+      if (ad.aBG().aAZ() != 5) {
+        break label1301;
+      }
+      bool = true;
     }
-    label406:
-    label460:
-    label608:
-    label703:
-    label1077:
-    label1079:
-    label1099:
-    for (boolean bool = true;; bool = false)
+    for (;;)
     {
-      paramk.f(l, bool);
+      hyl.hka.g(hAm, bool);
       return;
-      localadd = null;
+      localadw = null;
       break;
-      hoz.hbn.setVisibility(8);
-      hoz.gzz.setOnSightCompletionAction(null);
-      hoz.gzz.setOnCompletionListener(null);
-      hoz.gzz.setOnDecodeDurationListener(null);
-      break label135;
-      if (com.tencent.mm.plugin.sns.d.ad.azg().ayz() == 5)
+      label467:
+      hEV.hoL.setVisibility(8);
+      hEV.gGb.ayc();
+      hEV.gGb.a(null);
+      hEV.gGb.a(null);
+      break label140;
+      label520:
+      if ((!hjO) && (localg.aAY() == 5))
       {
-        com.tencent.mm.plugin.sns.d.ad.azg().C(localadd);
-        hoz.hbk.setVisibility(8);
-        hoz.hbl.setVisibility(0);
-        hoz.hbl.bjH();
-        break label245;
+        localg.C(localadw);
+        hEV.hfS.setVisibility(8);
+        hEV.hfR.setVisibility(0);
+        hEV.hfR.bpF();
+        break label280;
       }
-      paramk = com.tencent.mm.plugin.sns.d.ad.azg();
-      if ((gMl.containsKey(iXW)) && (((Integer)gMl.get(iXW)).intValue() == 4)) {}
+      if ((hjO) && (localg.aAZ() == 5))
+      {
+        localg.C(localadw);
+        hEV.hfS.setVisibility(8);
+        hEV.hfR.setVisibility(0);
+        hEV.hfR.bpF();
+        break label280;
+      }
+      if ((gTV.containsKey(jvB)) && (((Integer)gTV.get(jvB)).intValue() == 4)) {}
       for (paramInt2 = 1;; paramInt2 = 0)
       {
         if (paramInt2 == 0) {
-          break label608;
+          break label730;
         }
-        hoz.hbl.setVisibility(8);
-        hoz.hbk.setImageResource(2130970230);
-        hoz.hbk.setVisibility(0);
+        hEV.hfR.setVisibility(8);
+        hEV.hfS.setImageResource(2130839312);
+        hEV.hfS.setVisibility(0);
         break;
       }
-      com.tencent.mm.plugin.sns.d.ad.azg().A(localadd);
-      hoz.hbk.setVisibility(0);
-      hoz.hbl.setVisibility(8);
-      hoz.hbk.setImageDrawable(com.tencent.mm.aw.a.y(jx, 2130970227));
-      hoz.hbk.setContentDescription(jx.getString(2131433202));
-      if (com.tencent.mm.plugin.sns.d.ad.azg().ayz() != 4) {
-        break label245;
-      }
-      hoz.hbm.setVisibility(0);
-      break label245;
-      if (com.tencent.mm.plugin.sns.d.ad.azg().x(localadd))
+      label730:
+      localg.A(localadw);
+      hEV.hfS.setVisibility(0);
+      hEV.hfR.setVisibility(8);
+      hEV.hfS.setImageDrawable(com.tencent.mm.az.a.C(jO, 2130839309));
+      hEV.hfS.setContentDescription(jO.getString(2131234159));
+      if ((!hjO) && (localg.aAY() == 4))
       {
-        hoz.hbk.setVisibility(0);
-        hoz.hbl.setVisibility(8);
-        hoz.hbk.setImageDrawable(com.tencent.mm.aw.a.y(jx, 2130970227));
-        hoz.hbk.setContentDescription(jx.getString(2131433202));
+        hEV.hfT.setVisibility(0);
+        break label280;
+      }
+      if ((!hjO) || (localg.aAZ() != 4)) {
+        break label280;
+      }
+      hEV.hfT.setVisibility(0);
+      break label280;
+      label860:
+      if (localg.x(localadw))
+      {
+        hEV.hfS.setVisibility(0);
+        hEV.hfR.setVisibility(8);
+        hEV.hfS.setImageDrawable(com.tencent.mm.az.a.C(jO, 2130839309));
+        hEV.hfS.setContentDescription(jO.getString(2131234159));
       }
       for (;;)
       {
-        if (!hoz.gzz.avG()) {
-          break label1077;
+        if (!hEV.gGb.aya()) {
+          break label1279;
         }
-        u.d("!44@/B4Tb64lLpIDAg6z0eV+3l9Tem5X3/SFdBL1spS4Uuk=", "play video error " + iXW + " " + eiq + " " + jzt + " " + paramInt1);
-        com.tencent.mm.plugin.sns.d.ad.azg().A(localadd);
-        hoz.hbk.setVisibility(0);
-        hoz.hbl.setVisibility(8);
-        hoz.hbk.setImageDrawable(com.tencent.mm.aw.a.y(jx, 2130970227));
-        hoz.hbk.setContentDescription(jx.getString(2131433202));
+        v.d("MicroMsg.VideoTimeLineItem", "play video error " + jvB + " " + emu + " " + jYg + " " + paramInt1);
+        localg.A(localadw);
+        hEV.hfS.setVisibility(0);
+        hEV.hfR.setVisibility(8);
+        hEV.hfS.setImageDrawable(com.tencent.mm.az.a.C(jO, 2130839309));
+        hEV.hfS.setContentDescription(jO.getString(2131234159));
         break;
-        if (com.tencent.mm.plugin.sns.d.ad.azg().y(localadd))
+        if (localg.y(localadw))
         {
-          hoz.hbk.setVisibility(8);
-          hoz.hbl.setVisibility(8);
+          hEV.hfS.setVisibility(8);
+          hEV.hfR.setVisibility(8);
         }
-        else if (com.tencent.mm.plugin.sns.d.ad.azg().ayz() <= 5)
+        else if ((!hjO) && (localg.aAY() <= 5))
         {
-          hoz.hbk.setVisibility(8);
-          hoz.hbl.setVisibility(8);
+          hEV.hfS.setVisibility(8);
+          hEV.hfR.setVisibility(8);
+        }
+        else if ((hjO) && (localg.aAZ() <= 5))
+        {
+          hEV.hfS.setVisibility(8);
+          hEV.hfR.setVisibility(8);
         }
         else
         {
-          com.tencent.mm.plugin.sns.d.ad.azg().A(localadd);
-          hoz.hbk.setVisibility(0);
-          hoz.hbl.setVisibility(8);
-          hoz.hbk.setImageDrawable(com.tencent.mm.aw.a.y(jx, 2130970227));
-          hoz.hbk.setContentDescription(jx.getString(2131433202));
+          localg.A(localadw);
+          hEV.hfS.setVisibility(0);
+          hEV.hfR.setVisibility(8);
+          hEV.hfS.setImageDrawable(com.tencent.mm.az.a.C(jO, 2130839309));
+          hEV.hfS.setContentDescription(jO.getString(2131234159));
         }
       }
-      break label245;
-      hjE.gWC.b(hnB, 0, false);
-      break label363;
+      label1279:
+      break label280;
+      label1281:
+      hyl.hka.b(hAm, 0, false);
+      break label423;
+      label1301:
+      bool = false;
+      continue;
+      label1307:
+      if (ad.aBG().aAY() == 5) {
+        bool = true;
+      } else {
+        bool = false;
+      }
     }
-    label1105:
-    paramk = com.tencent.mm.plugin.sns.d.ad.azg();
-    paramb = hoz.gzz;
-    paramk.a(paramb, "", -1, jx.hashCode());
-    paramb.setThumbBmp(null);
-    paramb.P(null, false);
+    label1329:
+    paramb = hEV.gGb;
+    localg.a(paramb, "", -1, jO.hashCode());
+    paramb.o(null);
+    paramb.V(null, false);
   }
   
-  public final void c(a.b paramb)
+  public final void d(a.b paramb)
   {
     Object localObject = new DisplayMetrics();
-    jx.getWindowManager().getDefaultDisplay().getMetrics((DisplayMetrics)localObject);
+    jO.getWindowManager().getDefaultDisplay().getMetrics((DisplayMetrics)localObject);
     mScreenWidth = widthPixels;
     mScreenHeight = heightPixels;
-    hnK.setLayoutResource(2131362862);
-    hox = ((ViewStub)hnK.findViewById(2131168681));
-    if (!hoy)
+    if (hEf != null)
     {
-      hoz.hbi = hox.inflate();
-      hoy = true;
+      hEf.setLayoutResource(2130904458);
+      hET = ((ViewStub)hDZ.findViewById(2131759100));
+      if (!hEU) {
+        hEV.hoJ = hET.inflate();
+      }
     }
-    hoz.hbj = hoz.hbi.findViewById(2131165257);
-    hoz.gzz = ((com.tencent.mm.plugin.sight.decode.a.a)hoz.hbi.findViewById(2131165228));
-    hoz.hbj.setOnClickListener(gRM.gRg.hpl);
-    hoz.hbk = ((ImageView)hoz.hbi.findViewById(2131168501));
-    hoz.hbl = ((MMPinProgressBtn)hoz.hbi.findViewById(2131165392));
-    hoz.hbn = ((TextView)hoz.hbi.findViewById(2131168500));
-    hoz.hbm = ((TextView)hoz.hbi.findViewById(2131168502));
-    localObject = hoz.gzz.getUIContext().getResources().getDisplayMetrics();
-    int j = (int)Math.min(widthPixels * 0.63F, heightPixels * 0.63F);
-    int i = j;
-    if (j % 32 != 0) {
-      i = j - j % 32;
-    }
-    u.d("!44@/B4Tb64lLpIDAg6z0eV+3l9Tem5X3/SFdBL1spS4Uuk=", "build content small side %d", new Object[] { Integer.valueOf(i) });
-    j = (int)(i * 1.0D * 240.0D / 320.0D);
-    hoz.gzz.bc(i, j);
-    localObject = hoz.hbn.getLayoutParams();
-    width = i;
-    height = j;
-    hoz.hbn.setLayoutParams((ViewGroup.LayoutParams)localObject);
-    gRM.dRJ.a(hoz.hbj, gRM.gRg.hpg, gRM.gRg.hoQ);
-    if (((Boolean)ah.tD().rn().get(344065, Boolean.valueOf(false))).booleanValue())
+    for (hEU = true;; hEU = true)
     {
-      localObject = (TextView)((ViewStub)hoz.hbi.findViewById(2131165413)).inflate();
-      hoz.gzz.setSightInfoView((TextView)localObject);
+      hEV.hoK = hEV.hoJ.findViewById(2131756021);
+      hEV.gGb = ((com.tencent.mm.plugin.sight.decode.a.a)hEV.hoJ.findViewById(2131755043));
+      hEV.hoK.setOnClickListener(gZP.gZj.hFI);
+      hEV.hfS = ((ImageView)hEV.hoJ.findViewById(2131755216));
+      hEV.hfR = ((MMPinProgressBtn)hEV.hoJ.findViewById(2131758016));
+      hEV.hoL = ((TextView)hEV.hoJ.findViewById(2131759003));
+      hEV.hfT = ((TextView)hEV.hoJ.findViewById(2131759004));
+      localObject = hEV.gGb.axZ().getResources().getDisplayMetrics();
+      int j = (int)Math.min(widthPixels * 0.63F, heightPixels * 0.63F);
+      int i = j;
+      if (j % 32 != 0) {
+        i = j - j % 32;
+      }
+      v.d("MicroMsg.VideoTimeLineItem", "build content small side %d", new Object[] { Integer.valueOf(i) });
+      j = (int)(i * 1.0D * 240.0D / 320.0D);
+      hEV.gGb.bg(i, j);
+      localObject = hEV.hoL.getLayoutParams();
+      width = i;
+      height = j;
+      hEV.hoL.setLayoutParams((ViewGroup.LayoutParams)localObject);
+      gZP.dTR.a(hEV.hoK, gZP.gZj.hFD, gZP.gZj.hFn);
+      if (((Boolean)ah.tE().ro().get(344065, Boolean.valueOf(false))).booleanValue())
+      {
+        localObject = (TextView)((ViewStub)hEV.hoJ.findViewById(2131756077)).inflate();
+        hEV.gGb.c((TextView)localObject);
+      }
+      return;
+      hEV.hoJ = hDZ.findViewById(2131759203);
     }
   }
 }

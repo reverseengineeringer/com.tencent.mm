@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 import android.graphics.Paint;
 import android.view.ViewGroup.LayoutParams;
-import com.tencent.mm.aw.a;
+import com.tencent.mm.az.a;
 
 final class VerticalScrollBar$1
   implements Runnable
@@ -11,17 +11,17 @@ final class VerticalScrollBar$1
   
   public final void run()
   {
-    if (kKC.eEz.length <= 0) {}
+    if (ljS.eKO.length <= 0) {}
     int i;
     do
     {
       return;
-      i = (int)VerticalScrollBar.a(kKC).measureText(kKC.eEz[(kKC.eEz.length - 1)]) + a.fromDPToPix(kKC.getContext(), 8);
-    } while (i <= eEI);
-    ViewGroup.LayoutParams localLayoutParams = kKC.getLayoutParams();
+      i = (int)VerticalScrollBar.a(ljS).measureText(ljS.eKO[(ljS.eKO.length - 1)]) + a.fromDPToPix(ljS.getContext(), 8);
+    } while (i <= eKW);
+    ViewGroup.LayoutParams localLayoutParams = ljS.getLayoutParams();
     width = i;
-    height = eEJ;
-    kKC.setLayoutParams(localLayoutParams);
+    height = eKX;
+    ljS.setLayoutParams(localLayoutParams);
   }
 }
 

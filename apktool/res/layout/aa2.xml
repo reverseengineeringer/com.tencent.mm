@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/ow" android:paddingBottom="22.0dip" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:gravity="top" android:id="@id/cay" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" android:layout_alignParentTop="true" />
+        <ImageView android:layout_width="82.0dip" android:layout_height="82.0dip" android:layout_marginTop="-41.0dip" android:src="@drawable/ak5" android:layout_below="@id/cay" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/b7p" android:layout_width="80.0dip" android:layout_height="80.0dip" android:layout_marginTop="-40.0dip" android:layout_below="@id/cay" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/cu" android:ellipsize="end" android:id="@id/b7r" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j8" android:layout_marginTop="20.0dip" android:layout_marginRight="@dimen/j8" android:singleLine="true" android:includeFontPadding="false" android:layout_below="@id/b7p" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/b7s" android:paddingBottom="3.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:src="@drawable/ak0" android:layout_toRightOf="@id/b7r" android:layout_alignBottom="@id/b7r" />
+        <TextView android:textSize="@dimen/h4" android:textColor="#ff999999" android:ellipsize="end" android:gravity="center" android:id="@id/b7t" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:maxLines="2" android:includeFontPadding="false" android:layout_below="@id/b7r" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/ow" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/b7u" android:paddingLeft="@dimen/n6" android:paddingTop="2.0dip" android:paddingRight="@dimen/n6" android:paddingBottom="@dimen/hf" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="60.0dip" android:textColor="@color/ak" android:id="@id/b7v" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/ak" android:id="@id/b7w" android:paddingBottom="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:text="@string/bcn" android:includeFontPadding="false" android:layout_toRightOf="@id/b7v" android:layout_alignBottom="@id/b7v" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/b7x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hb" android:layout_below="@id/b7v">
+                <ImageView android:id="@id/b7y" android:visibility="gone" android:layout_width="@dimen/hb" android:layout_height="@dimen/hb" android:layout_marginRight="@dimen/j_" android:src="@drawable/ajl" />
+                <TextView android:textSize="@dimen/jc" android:textColor="@color/hn" android:id="@id/b7z" android:paddingTop="1.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+            </LinearLayout>
+            <View android:visibility="gone" android:layout_marginTop="29.0dip" android:layout_below="@id/b7v" style="@style/LuckyMoneyDivider" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/b80" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="105.0dip">
+            <ImageView android:id="@id/b81" android:background="@drawable/ak0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+            <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/akf" android:scaleType="fitXY" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/b82" android:paddingLeft="@dimen/n6" android:paddingRight="@dimen/n6" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View style="@style/LuckyMoneyDivider" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <LinearLayout android:id="@id/b84" android:visibility="gone" style="@style/LuckyMoneyBusinessEntrance" />
+                <LinearLayout android:id="@id/b87" android:visibility="gone" style="@style/LuckyMoneyBusinessEntrance" />
+                <LinearLayout android:id="@id/b8_" android:visibility="gone" style="@style/LuckyMoneyBusinessEntrance" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/jc" android:textColor="#ffb2b2b2" android:ellipsize="end" android:gravity="left" android:id="@id/b8a" android:background="#fff5f5f5" android:paddingLeft="@dimen/n6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="6.0dip" android:singleLine="true" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/i8" android:textColor="#ff353535" android:ellipsize="end" android:gravity="center" android:id="@id/b8c" android:background="@color/ow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/bev" android:singleLine="true" android:includeFontPadding="false" />
+</LinearLayout>

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kIi:Lcom/tencent/mm/ui/base/MMViewPager;
+.field final synthetic lhv:Lcom/tencent/mm/ui/base/MMViewPager;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 241
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMViewPager$1;->kIi:Lcom/tencent/mm/ui/base/MMViewPager;
+    .line 471
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMViewPager$1;->lhv:Lcom/tencent/mm/ui/base/MMViewPager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,95 +40,95 @@
     .locals 1
 
     .prologue
-    .line 253
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$1;->kIi:Lcom/tencent/mm/ui/base/MMViewPager;
+    .line 483
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$1;->lhv:Lcom/tencent/mm/ui/base/MMViewPager;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->d(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/support/v4/view/ViewPager$e;
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->e(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/support/v4/view/ViewPager$e;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 254
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$1;->kIi:Lcom/tencent/mm/ui/base/MMViewPager;
+    .line 484
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$1;->lhv:Lcom/tencent/mm/ui/base/MMViewPager;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->d(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/support/v4/view/ViewPager$e;
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->e(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/support/v4/view/ViewPager$e;
 
     move-result-object v0
 
     invoke-interface {v0, p1, p2, p3}, Landroid/support/v4/view/ViewPager$e;->a(IFI)V
 
-    .line 256
+    .line 486
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$1;->kIi:Lcom/tencent/mm/ui/base/MMViewPager;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$1;->lhv:Lcom/tencent/mm/ui/base/MMViewPager;
 
     invoke-static {v0, p2}, Lcom/tencent/mm/ui/base/MMViewPager;->a(Lcom/tencent/mm/ui/base/MMViewPager;F)F
 
-    .line 257
+    .line 487
     return-void
 .end method
 
-.method public final n(I)V
+.method public final p(I)V
     .locals 1
 
     .prologue
-    .line 245
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$1;->kIi:Lcom/tencent/mm/ui/base/MMViewPager;
+    .line 475
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$1;->lhv:Lcom/tencent/mm/ui/base/MMViewPager;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->d(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/support/v4/view/ViewPager$e;
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->e(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/support/v4/view/ViewPager$e;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 246
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$1;->kIi:Lcom/tencent/mm/ui/base/MMViewPager;
+    .line 476
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$1;->lhv:Lcom/tencent/mm/ui/base/MMViewPager;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->d(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/support/v4/view/ViewPager$e;
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->e(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/support/v4/view/ViewPager$e;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Landroid/support/v4/view/ViewPager$e;->n(I)V
+    invoke-interface {v0, p1}, Landroid/support/v4/view/ViewPager$e;->p(I)V
 
-    .line 248
+    .line 478
     :cond_0
     return-void
 .end method
 
-.method public final o(I)V
+.method public final q(I)V
     .locals 2
 
     .prologue
-    .line 261
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$1;->kIi:Lcom/tencent/mm/ui/base/MMViewPager;
+    .line 491
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$1;->lhv:Lcom/tencent/mm/ui/base/MMViewPager;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->d(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/support/v4/view/ViewPager$e;
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->e(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/support/v4/view/ViewPager$e;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 262
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$1;->kIi:Lcom/tencent/mm/ui/base/MMViewPager;
+    .line 492
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$1;->lhv:Lcom/tencent/mm/ui/base/MMViewPager;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->d(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/support/v4/view/ViewPager$e;
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->e(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/support/v4/view/ViewPager$e;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Landroid/support/v4/view/ViewPager$e;->o(I)V
+    invoke-interface {v0, p1}, Landroid/support/v4/view/ViewPager$e;->q(I)V
 
-    .line 265
+    .line 495
     :cond_0
     if-nez p1, :cond_1
 
-    .line 266
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$1;->kIi:Lcom/tencent/mm/ui/base/MMViewPager;
+    .line 496
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$1;->lhv:Lcom/tencent/mm/ui/base/MMViewPager;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/MMViewPager;->a(Lcom/tencent/mm/ui/base/MMViewPager;F)F
 
-    .line 268
+    .line 498
     :cond_1
     return-void
 .end method

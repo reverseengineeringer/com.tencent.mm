@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.support.v4.view.g;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class r$8
   implements Runnable
@@ -14,37 +14,37 @@ final class r$8
   
   public final void run()
   {
-    if (lxI.dRe == null)
+    if (lYx.dTj == null)
     {
-      u.w(lxI.TAG, "on post expand search menu, but item is null");
+      v.w(lYx.TAG, "on post expand search menu, but item is null");
       return;
     }
-    u.i(lxI.TAG, "try to expand action view, searchViewExpand %B", new Object[] { Boolean.valueOf(lxI.lxv) });
-    if (lxI.lxu) {
-      if (!lxI.lxv) {
-        g.b(lxI.dRe);
+    v.i(lYx.TAG, "try to expand action view, searchViewExpand %B", new Object[] { Boolean.valueOf(lYx.lYk) });
+    if (lYx.lYj) {
+      if (!lYx.lYk) {
+        g.b(lYx.dTj);
       }
     }
     for (;;)
     {
-      final View localView = g.a(lxI.dRe);
-      if ((localView == null) || (!lxI.lxv)) {
+      final View localView = g.a(lYx.dTj);
+      if ((localView == null) || (!lYx.lYk)) {
         break;
       }
-      localView.findViewById(2131166420).requestFocus();
-      if (!lxI.lxy) {
+      localView.findViewById(2131755215).requestFocus();
+      if (!lYx.lYn) {
         break;
       }
-      lxI.bQM.postDelayed(new Runnable()
+      lYx.bpz.postDelayed(new Runnable()
       {
         public final void run()
         {
-          ((InputMethodManager)an.getSystemService("input_method")).showSoftInput(localView.findViewById(2131166420), 0);
+          ((InputMethodManager)O.getSystemService("input_method")).showSoftInput(localView.findViewById(2131755215), 0);
         }
       }, 128L);
       return;
-      if (lxI.lxH != null) {
-        lxI.lxH.biL();
+      if (lYx.lYw != null) {
+        lYx.lYw.boH();
       }
     }
   }

@@ -6,23 +6,23 @@ import android.media.MediaPlayer.OnErrorListener;
 import com.tencent.mm.a.e;
 import com.tencent.mm.compatible.d.a;
 import com.tencent.mm.compatible.d.p;
-import com.tencent.mm.sdk.platformtools.ak;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.an;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class s
   implements d
 {
-  String anC = "";
-  MediaPlayer blY = new MediaPlayer();
-  d.a chl = null;
-  d.b chm = null;
+  MediaPlayer aZE = new MediaPlayer();
+  String aaq = "";
+  d.a ccC = null;
+  d.b ccD = null;
   int status = 0;
   
   public s()
   {
-    EA();
-    EB();
+    EV();
+    EW();
   }
   
   public s(byte paramByte)
@@ -30,41 +30,41 @@ public final class s
     this();
   }
   
-  private void EA()
+  private void EV()
   {
-    blY.setOnCompletionListener(new MediaPlayer.OnCompletionListener()
+    aZE.setOnCompletionListener(new MediaPlayer.OnCompletionListener()
     {
       public final void onCompletion(MediaPlayer paramAnonymousMediaPlayer)
       {
-        if (chl != null) {
-          chl.lG();
+        if (ccC != null) {
+          ccC.jQ();
         }
         try
         {
-          blY.release();
+          aZE.release();
           status = 0;
           return;
         }
         catch (Exception paramAnonymousMediaPlayer)
         {
-          u.e("!24@40VYnhE9NJIehP//35gXMQ==", "setCompletion File[" + anC + "] ErrMsg[" + paramAnonymousMediaPlayer.getStackTrace() + "]");
+          v.e("VoicePlayer", "setCompletion File[" + aaq + "] ErrMsg[" + paramAnonymousMediaPlayer.getStackTrace() + "]");
         }
       }
     });
   }
   
-  private void EB()
+  private void EW()
   {
-    blY.setOnErrorListener(new MediaPlayer.OnErrorListener()
+    aZE.setOnErrorListener(new MediaPlayer.OnErrorListener()
     {
       public final boolean onError(MediaPlayer paramAnonymousMediaPlayer, int paramAnonymousInt1, int paramAnonymousInt2)
       {
-        if (chm != null) {
-          chm.onError();
+        if (ccD != null) {
+          ccD.onError();
         }
         try
         {
-          blY.release();
+          aZE.release();
           status = -1;
           return false;
         }
@@ -72,17 +72,17 @@ public final class s
         {
           for (;;)
           {
-            u.e("!24@40VYnhE9NJIehP//35gXMQ==", "setErrorListener File[" + anC + "] ErrMsg[" + paramAnonymousMediaPlayer.getStackTrace() + "]");
+            v.e("VoicePlayer", "setErrorListener File[" + aaq + "] ErrMsg[" + paramAnonymousMediaPlayer.getStackTrace() + "]");
           }
         }
       }
     });
   }
   
-  private void c(boolean paramBoolean, int paramInt)
+  private void b(boolean paramBoolean, int paramInt)
   {
     int j = 3;
-    if (!e.ax(anC)) {
+    if (!e.aB(aaq)) {
       return;
     }
     int i;
@@ -94,27 +94,27 @@ public final class s
     {
       try
       {
-        if (!bsLbpH) {
+        if (!bgPbdH) {
           break label146;
         }
-        p.bsL.dump();
-        if (bsLbpO != 1) {
+        p.bgP.dump();
+        if (bgPbdO != 1) {
           break label146;
         }
         i = j;
-        blY.setAudioStreamType(i);
-        blY.setDataSource(anC);
-        blY.prepare();
+        aZE.setAudioStreamType(i);
+        aZE.setDataSource(aaq);
+        aZE.prepare();
         if (paramInt > 0) {
-          blY.seekTo(paramInt);
+          aZE.seekTo(paramInt);
         }
-        blY.start();
+        aZE.start();
         return;
       }
       catch (Exception localException)
       {
-        u.e("!24@40VYnhE9NJIehP//35gXMQ==", "playImp : fail, exception = " + localException.getMessage());
-        u.e("!24@40VYnhE9NJIehP//35gXMQ==", "exception:%s", new Object[] { ay.b(localException) });
+        v.e("VoicePlayer", "playImp : fail, exception = " + localException.getMessage());
+        v.e("VoicePlayer", "exception:%s", new Object[] { be.f(localException) });
         return;
       }
       i = 0;
@@ -125,13 +125,13 @@ public final class s
   {
     if (status != 0)
     {
-      u.e("!24@40VYnhE9NJIehP//35gXMQ==", "startPlay error status:" + status);
+      v.e("VoicePlayer", "startPlay error status:" + status);
       return false;
     }
-    anC = paramString;
+    aaq = paramString;
     try
     {
-      c(paramBoolean, paramInt);
+      b(paramBoolean, paramInt);
       status = 1;
       return true;
     }
@@ -139,45 +139,45 @@ public final class s
     {
       try
       {
-        c(true, paramInt);
+        b(true, paramInt);
       }
       catch (Exception localException)
       {
-        u.e("!24@40VYnhE9NJIehP//35gXMQ==", "startPlay File[" + anC + "] failed");
-        u.e("!24@40VYnhE9NJIehP//35gXMQ==", "exception:%s", new Object[] { ay.b(paramString) });
+        v.e("VoicePlayer", "startPlay File[" + aaq + "] failed");
+        v.e("VoicePlayer", "exception:%s", new Object[] { be.f(paramString) });
         status = -1;
       }
     }
     return false;
   }
   
+  public final void N(boolean paramBoolean)
+  {
+    v.d("VoicePlayer", "setSpeakerOn=" + paramBoolean);
+    if (aZE == null) {
+      return;
+    }
+    if (an.awC)
+    {
+      v.v("VoicePlayer", "setSpeakOn return when calling");
+      return;
+    }
+    int i = aZE.getCurrentPosition();
+    jW();
+    aZE = new MediaPlayer();
+    EV();
+    EW();
+    d(aaq, paramBoolean, i);
+  }
+  
   public final void a(d.a parama)
   {
-    chl = parama;
+    ccC = parama;
   }
   
   public final void a(d.b paramb)
   {
-    chm = paramb;
-  }
-  
-  public final void ak(boolean paramBoolean)
-  {
-    u.d("!24@40VYnhE9NJIehP//35gXMQ==", "setSpeakerOn=" + paramBoolean);
-    if (blY == null) {
-      return;
-    }
-    if (ak.aKi)
-    {
-      u.v("!24@40VYnhE9NJIehP//35gXMQ==", "setSpeakOn return when calling");
-      return;
-    }
-    int i = blY.getCurrentPosition();
-    lv();
-    blY = new MediaPlayer();
-    EA();
-    EB();
-    d(anC, paramBoolean, i);
+    ccD = paramb;
   }
   
   public final boolean c(String paramString, boolean paramBoolean, int paramInt)
@@ -195,28 +195,28 @@ public final class s
     return status == 1;
   }
   
-  public final boolean lB()
+  public final boolean jL()
   {
     if (status != 2)
     {
-      u.e("!24@40VYnhE9NJIehP//35gXMQ==", "resume not STATUS_PAUSE error status:" + status);
+      v.e("VoicePlayer", "resume not STATUS_PAUSE error status:" + status);
       return false;
     }
     try
     {
-      blY.start();
+      aZE.start();
       status = 1;
       return true;
     }
     catch (Exception localException)
     {
-      u.e("!24@40VYnhE9NJIehP//35gXMQ==", "resume File[" + anC + "] ErrMsg[" + localException.getStackTrace() + "]");
+      v.e("VoicePlayer", "resume File[" + aaq + "] ErrMsg[" + localException.getStackTrace() + "]");
       status = -1;
     }
     return false;
   }
   
-  public final double lE()
+  public final double jO()
   {
     if ((status != 1) && (status != 2)) {
       return 0.0D;
@@ -225,40 +225,40 @@ public final class s
     int j;
     try
     {
-      i = blY.getCurrentPosition();
-      j = blY.getDuration();
+      i = aZE.getCurrentPosition();
+      j = aZE.getDuration();
       if (j == 0)
       {
-        u.e("!24@40VYnhE9NJIehP//35gXMQ==", "getDuration File[" + anC + "] Failed");
+        v.e("VoicePlayer", "getDuration File[" + aaq + "] Failed");
         return 0.0D;
       }
     }
     catch (Exception localException)
     {
-      u.e("!24@40VYnhE9NJIehP//35gXMQ==", "getNowProgress File[" + anC + "] ErrMsg[" + localException.getStackTrace() + "]");
-      lv();
+      v.e("VoicePlayer", "getNowProgress File[" + aaq + "] ErrMsg[" + localException.getStackTrace() + "]");
+      jW();
       return 0.0D;
     }
     return i / j;
   }
   
-  public final boolean lv()
+  public final boolean jW()
   {
     if ((status != 1) && (status != 2))
     {
-      u.e("!24@40VYnhE9NJIehP//35gXMQ==", "stop not STATUS_PLAYING or STATUS_PAUSE error status:" + status);
+      v.e("VoicePlayer", "stop not STATUS_PLAYING or STATUS_PAUSE error status:" + status);
       return false;
     }
     try
     {
-      blY.stop();
-      blY.release();
+      aZE.stop();
+      aZE.release();
       status = 0;
       return true;
     }
     catch (Exception localException)
     {
-      u.e("!24@40VYnhE9NJIehP//35gXMQ==", "stop File[" + anC + "] ErrMsg[" + localException.getStackTrace() + "]");
+      v.e("VoicePlayer", "stop File[" + aaq + "] ErrMsg[" + localException.getStackTrace() + "]");
       status = -1;
     }
     return false;
@@ -268,24 +268,24 @@ public final class s
   {
     if (status != 1)
     {
-      u.e("!24@40VYnhE9NJIehP//35gXMQ==", "pause not STATUS_PLAYING error status:" + status);
+      v.e("VoicePlayer", "pause not STATUS_PLAYING error status:" + status);
       return false;
     }
     try
     {
-      blY.pause();
+      aZE.pause();
       status = 2;
       return true;
     }
     catch (Exception localException)
     {
-      u.e("!24@40VYnhE9NJIehP//35gXMQ==", "pause File[" + anC + "] ErrMsg[" + localException.getStackTrace() + "]");
+      v.e("VoicePlayer", "pause File[" + aaq + "] ErrMsg[" + localException.getStackTrace() + "]");
       status = -1;
     }
     return false;
   }
   
-  public final boolean s(String paramString, boolean paramBoolean)
+  public final boolean w(String paramString, boolean paramBoolean)
   {
     return d(paramString, paramBoolean, 0);
   }

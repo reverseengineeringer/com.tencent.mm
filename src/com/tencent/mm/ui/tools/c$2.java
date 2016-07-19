@@ -8,7 +8,7 @@ final class c$2
 {
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    c.bit();
+    c.boq();
   }
 }
 

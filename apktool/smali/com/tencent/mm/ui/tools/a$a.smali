@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract vP(Ljava/lang/String;)Ljava/lang/String;
+.method public abstract xc(Ljava/lang/String;)Ljava/lang/String;
 .end method

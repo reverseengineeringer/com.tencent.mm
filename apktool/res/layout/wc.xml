@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/bbl" android:background="@null" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.ui.conversation.ConversationOverscrollListView android:id="@id/bbm" android:background="@color/ow" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@null" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="0.0px" android:layout_alignParentTop="true" android:overScrollMode="never" />
+    <TextView android:id="@id/bbn" android:background="@color/ow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/bfz" android:singleLine="false" style="@style/MMFontEmptyMsgLarge" />
+    <TextView android:id="@id/bbo" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/bg9" android:singleLine="false" style="@style/MMFontEmptyMsgLarge" />
+    <TextView android:id="@id/fy" android:background="@color/j3" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/bg_" android:singleLine="false" style="@style/MMFontEmptyMsgLarge" />
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView style="@style/MMScroll">
+        <LinearLayout style="@style/MMBody">
+            <TextView android:gravity="left" android:visibility="gone" android:layout_marginTop="5.0dip" android:text="@string/c6p" style="@style/MMBriefText" />
+            <EditText android:id="@id/bl3" android:hint="@string/c6t" style="@style/MMLineEditText" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

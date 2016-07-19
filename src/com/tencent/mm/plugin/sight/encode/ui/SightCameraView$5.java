@@ -2,10 +2,10 @@ package com.tencent.mm.plugin.sight.encode.ui;
 
 import android.os.Build;
 import com.tencent.mm.compatible.e.b;
-import com.tencent.mm.d.a.im;
-import com.tencent.mm.d.a.im.b;
+import com.tencent.mm.e.a.ir;
+import com.tencent.mm.e.a.ir.b;
 import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.h;
 
@@ -16,24 +16,24 @@ final class SightCameraView$5
   
   public final void run()
   {
-    Object localObject = gEp;
-    if ((!Build.MANUFACTURER.equalsIgnoreCase("meizu")) || (b.oR()))
+    Object localObject = gKQ;
+    if ((!Build.MANUFACTURER.equalsIgnoreCase("meizu")) || (b.ni()))
     {
-      im localim = new im();
-      aEu.type = 2;
-      a.jUF.j(localim);
-      if (!aEv.aEt)
+      ir localir = new ir();
+      aqy.type = 2;
+      a.kug.y(localir);
+      if (!aqz.aqx)
       {
-        localObject = g.e(((SightCameraView)localObject).getContext(), 2131430510, 2131430877);
+        localObject = g.f(((SightCameraView)localObject).getContext(), 2131235332, 2131231028);
         if (localObject != null) {
           break label87;
         }
-        u.e("!44@/B4Tb64lLpJusIoUV0UaqA9/77JaWY6wqEv+d4AfPg0=", "new dialog failed");
+        v.e("MicroMsg.SightCameraView", "new dialog failed");
       }
     }
     for (;;)
     {
-      gEp.aqS();
+      gKQ.aui();
       return;
       label87:
       ((h)localObject).setCancelable(false);

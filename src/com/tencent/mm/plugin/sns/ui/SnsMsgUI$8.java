@@ -2,16 +2,16 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.view.View;
 import android.widget.ListView;
-import com.tencent.mm.ui.base.MMSlideDelView.g;
+import com.tencent.mm.ui.base.MMSlideDelView.f;
 
 final class SnsMsgUI$8
-  implements MMSlideDelView.g
+  implements MMSlideDelView.f
 {
   SnsMsgUI$8(SnsMsgUI paramSnsMsgUI) {}
   
   public final void j(View paramView, int paramInt)
   {
-    SnsMsgUI.b(hfU).performItemClick(paramView, paramInt, 0L);
+    SnsMsgUI.b(huL).performItemClick(paramView, paramInt, 0L);
   }
 }
 

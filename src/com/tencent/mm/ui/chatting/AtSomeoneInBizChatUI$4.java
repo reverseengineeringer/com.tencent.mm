@@ -2,8 +2,8 @@ package com.tencent.mm.ui.chatting;
 
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
-import com.tencent.mm.ab.a.a;
-import com.tencent.mm.ab.n;
+import com.tencent.mm.ae.a.a;
+import com.tencent.mm.ae.n;
 
 final class AtSomeoneInBizChatUI$4
   implements AbsListView.OnScrollListener
@@ -14,7 +14,7 @@ final class AtSomeoneInBizChatUI$4
   
   public final void onScrollStateChanged(AbsListView paramAbsListView, int paramInt)
   {
-    n.As().dz(paramInt);
+    n.AC().ee(paramInt);
   }
 }
 

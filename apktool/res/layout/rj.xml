@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/aab" android:layout_width="160.0dip" android:layout_height="160.0dip" android:minWidth="160.0dip" android:minHeight="160.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="17.0sp" android:textColor="@color/ow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/b1d" />
+    <TextView android:textSize="14.0sp" android:textColor="#ffededed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:text="@string/b0_" />
+    <ProgressBar android:layout_width="36.0dip" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:max="100" android:progress="0" style="@style/GameProgressStyle" />
+</LinearLayout>

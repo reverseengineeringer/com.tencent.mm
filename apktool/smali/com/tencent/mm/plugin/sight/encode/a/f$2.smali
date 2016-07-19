@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic gAR:[I
+.field static final synthetic gHt:[I
 
 
 # direct methods
@@ -32,12 +32,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/tencent/mm/plugin/sight/encode/a/f$2;->gAR:[I
+    sput-object v0, Lcom/tencent/mm/plugin/sight/encode/a/f$2;->gHt:[I
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/plugin/sight/encode/a/f$2;->gAR:[I
+    sget-object v0, Lcom/tencent/mm/plugin/sight/encode/a/f$2;->gHt:[I
 
-    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzM:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gGo:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->ordinal()I
 
@@ -51,9 +51,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/tencent/mm/plugin/sight/encode/a/f$2;->gAR:[I
+    sget-object v0, Lcom/tencent/mm/plugin/sight/encode/a/f$2;->gHt:[I
 
-    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzN:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gGp:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->ordinal()I
 
@@ -67,9 +67,9 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/tencent/mm/plugin/sight/encode/a/f$2;->gAR:[I
+    sget-object v0, Lcom/tencent/mm/plugin/sight/encode/a/f$2;->gHt:[I
 
-    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzP:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gGr:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->ordinal()I
 
@@ -83,9 +83,9 @@
 
     :goto_2
     :try_start_3
-    sget-object v0, Lcom/tencent/mm/plugin/sight/encode/a/f$2;->gAR:[I
+    sget-object v0, Lcom/tencent/mm/plugin/sight/encode/a/f$2;->gHt:[I
 
-    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzQ:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gGs:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->ordinal()I
 

@@ -1,9 +1,10 @@
 package com.tencent.mm.ui.chatting.gallery;
 
+import android.support.v4.view.ViewPager;
 import android.view.ViewTreeObserver;
 import android.view.ViewTreeObserver.OnPreDrawListener;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.storage.ai;
 import com.tencent.mm.ui.base.MMViewPager;
 import com.tencent.mm.ui.base.MultiTouchImageView;
 import com.tencent.mm.ui.tools.h;
@@ -16,33 +17,33 @@ final class ImageGalleryUI$13
   
   public final boolean onPreDraw()
   {
-    lgM.efi.getViewTreeObserver().removeOnPreDrawListener(this);
-    lgM.hbO = lgM.efi.getWidth();
-    lgM.hbP = lgM.efi.getHeight();
-    if (ImageGalleryUI.e(lgM).bgo().aXh()) {
-      lgM.hbP = ((int)(lgM.hbO / lgM.hbT * lgM.hbU));
+    lGY.eiK.getViewTreeObserver().removeOnPreDrawListener(this);
+    lGY.hqF = lGY.eiK.getWidth();
+    lGY.hqG = lGY.eiK.getHeight();
+    if (ImageGalleryUI.e(lGY).blY().bcC()) {
+      lGY.hqG = ((int)(lGY.hqF / lGY.hpv * lGY.hpw));
     }
-    if (ImageGalleryUI.e(lgM).bgo().aXc()) {
-      ImageGalleryUI.a(lgM, ImageGalleryUI.e(lgM).hn(lgM.efi.getCurrentItem()));
+    if (ImageGalleryUI.e(lGY).blY().bcx()) {
+      ImageGalleryUI.a(lGY, ImageGalleryUI.e(lGY).ir(lGY.eiK.gc));
     }
-    if (ImageGalleryUI.j(lgM) != null)
+    if (ImageGalleryUI.i(lGY) != null)
     {
-      lgM.hbP = ((int)(lgM.hbO / ImageGalleryUI.j(lgM).getImageWidth() * ImageGalleryUI.j(lgM).getImageHeight()));
-      if (lgM.hbP > lgM.efi.getHeight()) {
-        lgM.hbP = lgM.efi.getHeight();
+      lGY.hqG = ((int)(lGY.hqF / ilGY).imageWidth * ilGY).imageHeight));
+      if (lGY.hqG > lGY.eiK.getHeight()) {
+        lGY.hqG = lGY.eiK.getHeight();
       }
     }
-    lgM.hbV.bU(lgM.hbO, lgM.hbP);
-    lgM.hbV.a(lgM.efi, ImageGalleryUI.k(lgM), new h.b()
+    lGY.hqH.cb(lGY.hqF, lGY.hqG);
+    lGY.hqH.a(lGY.eiK, ImageGalleryUI.j(lGY), new h.b()
     {
       public final void onAnimationEnd()
       {
-        ImageGalleryUI.l(lgM).post(new Runnable()
+        ImageGalleryUI.k(lGY).post(new Runnable()
         {
           public final void run()
           {
-            if (lgM.lgB != null) {
-              lgM.lgB.f(Boolean.valueOf(false));
+            if (lGY.lGN != null) {
+              lGY.lGN.e(Boolean.valueOf(false));
             }
           }
         });
@@ -50,8 +51,8 @@ final class ImageGalleryUI$13
       
       public final void onAnimationStart()
       {
-        if (lgM.lgB != null) {
-          lgM.lgB.f(Boolean.valueOf(true));
+        if (lGY.lGN != null) {
+          lGY.lGN.e(Boolean.valueOf(true));
         }
       }
     });

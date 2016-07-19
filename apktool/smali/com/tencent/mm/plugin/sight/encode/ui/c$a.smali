@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field final synthetic gCO:Lcom/tencent/mm/plugin/sight/encode/ui/c;
+.field final synthetic gJp:Lcom/tencent/mm/plugin/sight/encode/ui/c;
 
 
 # direct methods
@@ -31,7 +31,7 @@
 
     .prologue
     .line 96
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/c$a;->gCO:Lcom/tencent/mm/plugin/sight/encode/ui/c;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/c$a;->gJp:Lcom/tencent/mm/plugin/sight/encode/ui/c;
 
     .line 97
     invoke-direct {p0, p2}, Lcom/tencent/mm/ui/contact/a/e;-><init>(I)V
@@ -42,7 +42,7 @@
 
 
 # virtual methods
-.method public final ajt()Lcom/tencent/mm/ui/contact/a/a$b;
+.method public final amb()Lcom/tencent/mm/ui/contact/a/a$b;
     .locals 1
 
     .prologue
@@ -54,7 +54,7 @@
     return-object v0
 .end method
 
-.method protected final awR()Lcom/tencent/mm/ui/contact/a/a$a;
+.method protected final azo()Lcom/tencent/mm/ui/contact/a/a$a;
     .locals 1
 
     .prologue

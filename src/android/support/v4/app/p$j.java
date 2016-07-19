@@ -34,7 +34,7 @@ final class p$j
       i += 1;
     }
     localBundle1.putParcelableArray("messages", arrayOfParcelable);
-    localObject = paramb.Z();
+    localObject = paramb.Y();
     if (localObject != null) {
       localBundle1.putParcelable("remote_input", r.a((y.a)localObject));
     }
@@ -47,10 +47,10 @@ final class p$j
   
   public final Notification b(p.d paramd)
   {
-    r.a locala = new r.a(mContext, dg, cH, cI, cN, cL, cO, cJ, cK, cM, cT, cU, cV, cP, cQ, mPriority, cS, da, db, dh, mExtras, dc, dd, de, cW, cX, cY);
-    p.a(locala, cZ);
-    p.a(locala, cR);
-    return dw.build();
+    r.a locala = new r.a(mContext, dw, cX, cY, dd, db, de, cZ, da, dc, dk, dl, dm, dg, dh, mPriority, dj, dr, ds, dx, mExtras, dt, du, dv, dn, jdField_do, dp);
+    p.a(locala, dq);
+    p.a(locala, di);
+    return dM.build();
   }
 }
 

@@ -12,9 +12,18 @@
 
 
 # instance fields
-.field bCZ:Z
+.field bwj:Z
 
-.field bDa:Ljava/util/Set;
+.field bwk:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set",
+            "<",
+            "Lcom/tencent/mm/model/bf$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -28,14 +37,14 @@
     .line 15
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/model/bf;->bCZ:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/model/bf;->bwj:Z
 
     .line 17
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/model/bf;->bDa:Ljava/util/Set;
+    iput-object v0, p0, Lcom/tencent/mm/model/bf;->bwk:Ljava/util/Set;
 
     return-void
 .end method
@@ -47,16 +56,16 @@
 
     .prologue
     .line 20
-    iget-boolean v0, p0, Lcom/tencent/mm/model/bf;->bCZ:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/model/bf;->bwj:Z
 
     if-eqz v0, :cond_0
 
     .line 21
-    const-string/jumbo v0, "!32@/B4Tb64lLpIFIlpC8b6zf6sidN7sYXyI"
+    const-string/jumbo v0, "MicroMsg.UninitForUEH"
 
     const-string/jumbo v1, "add , is running , forbid add"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 22
     const/4 v0, 0x0
@@ -66,7 +75,7 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/model/bf;->bDa:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/model/bf;->bwk:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -80,16 +89,16 @@
 
     .prologue
     .line 28
-    iget-boolean v0, p0, Lcom/tencent/mm/model/bf;->bCZ:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/model/bf;->bwj:Z
 
     if-eqz v0, :cond_0
 
     .line 29
-    const-string/jumbo v0, "!32@/B4Tb64lLpIFIlpC8b6zf6sidN7sYXyI"
+    const-string/jumbo v0, "MicroMsg.UninitForUEH"
 
     const-string/jumbo v1, "remove , is running , forbid remove"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 30
     const/4 v0, 0x0
@@ -99,7 +108,7 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/model/bf;->bDa:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/model/bf;->bwk:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 

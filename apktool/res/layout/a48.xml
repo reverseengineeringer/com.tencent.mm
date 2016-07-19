@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/a2"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bt9" style="@style/MMPwdInputText" />
+    <ImageView android:id="@id/bt_" style="@style/MMPwdInputText" />
+    <ImageView android:id="@id/bta" style="@style/MMPwdInputText" />
+    <ImageView android:id="@id/btb" style="@style/MMPwdInputText" />
+</LinearLayout>

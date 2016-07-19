@@ -7,9 +7,9 @@ public abstract interface d
 {
   public abstract Cursor a(String paramString, String[] paramArrayOfString, boolean paramBoolean);
   
-  public abstract boolean aVP();
+  public abstract boolean bbc();
   
-  public abstract boolean cj(String paramString1, String paramString2);
+  public abstract boolean cx(String paramString1, String paramString2);
   
   public abstract int delete(String paramString1, String paramString2, String[] paramArrayOfString);
   

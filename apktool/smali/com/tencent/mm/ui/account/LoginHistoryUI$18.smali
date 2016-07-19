@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+.field final synthetic kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1195
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$18;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    .line 1201
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$18;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,51 +40,51 @@
     .locals 1
 
     .prologue
-    .line 1199
+    .line 1205
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v0
 
-    .line 1200
+    .line 1206
     packed-switch v0, :pswitch_data_0
 
-    .line 1212
+    .line 1218
     :goto_0
     return-void
 
-    .line 1202
+    .line 1208
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$18;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$18;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->l(Lcom/tencent/mm/ui/account/LoginHistoryUI;)V
 
     goto :goto_0
 
-    .line 1205
+    .line 1211
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$18;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$18;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->m(Lcom/tencent/mm/ui/account/LoginHistoryUI;)V
 
     goto :goto_0
 
-    .line 1208
+    .line 1214
     :pswitch_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$18;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$18;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->n(Lcom/tencent/mm/ui/account/LoginHistoryUI;)V
 
     goto :goto_0
 
-    .line 1211
+    .line 1217
     :pswitch_3
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$18;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$18;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->o(Lcom/tencent/mm/ui/account/LoginHistoryUI;)V
 
     goto :goto_0
 
-    .line 1200
+    .line 1206
     :pswitch_data_0
     .packed-switch 0x1b59
         :pswitch_0

@@ -10,7 +10,7 @@ final class BindGoogleContactIntroUI$2$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    BindGoogleContactIntroUI.b(kMJ.kMI);
+    BindGoogleContactIntroUI.b(llY.llX);
   }
 }
 

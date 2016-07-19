@@ -8,7 +8,7 @@ import com.tencent.mm.model.n;
 import com.tencent.mm.pluginsdk.l;
 import com.tencent.mm.pluginsdk.ui.applet.g;
 import com.tencent.mm.pluginsdk.ui.d.b;
-import com.tencent.mm.storage.ad;
+import com.tencent.mm.storage.ae;
 import com.tencent.mm.ui.LauncherUI;
 import com.tencent.mm.ui.contact.AddressUI;
 import com.tencent.mm.ui.contact.SelectContactUI;
@@ -29,17 +29,17 @@ class URISpanHandlerSet$SettingBlacklistUriSpanHandler
       if (paramb != null) {
         paramb.a(paramg);
       }
-      paramb = n.eX(URISpanHandlerSet.a(ang).getString(2131427398));
+      paramb = n.fj(URISpanHandlerSet.a(ZU).getString(2131233181));
       paramg = new Intent();
-      paramg.setClass(URISpanHandlerSet.a(ang), SelectContactUI.class);
+      paramg.setClass(URISpanHandlerSet.a(ZU), SelectContactUI.class);
       paramg.putExtra("Contact_GroupFilter_Type", paramb.getType());
-      paramg.putExtra("Contact_GroupFilter_DisplayName", paramb.qy());
+      paramg.putExtra("Contact_GroupFilter_DisplayName", paramb.pb());
       paramg.addFlags(67108864);
-      paramb = LauncherUI.bat();
+      paramb = LauncherUI.bfJ();
       if (paramb != null) {
-        paramb.Gi("tab_settings");
+        paramb.Ix("tab_settings");
       }
-      URISpanHandlerSet.a(ang).startActivity(paramg);
+      URISpanHandlerSet.a(ZU).startActivity(paramg);
       return true;
     }
     return false;
@@ -49,26 +49,26 @@ class URISpanHandlerSet$SettingBlacklistUriSpanHandler
   {
     if (paramString.equals("weixin://setting/blacklist"))
     {
-      paraml = n.eX(URISpanHandlerSet.a(ang).getString(2131427398));
+      paraml = n.fj(URISpanHandlerSet.a(ZU).getString(2131233181));
       paramString = new Intent();
-      paramString.setClass(URISpanHandlerSet.a(ang), AddressUI.class);
+      paramString.setClass(URISpanHandlerSet.a(ZU), AddressUI.class);
       paramString.putExtra("Contact_GroupFilter_Type", paraml.getType());
-      paramString.putExtra("Contact_GroupFilter_DisplayName", paraml.qy());
+      paramString.putExtra("Contact_GroupFilter_DisplayName", paraml.pb());
       paramString.addFlags(67108864);
-      if ((URISpanHandlerSet.a(ang) instanceof Service)) {
+      if ((URISpanHandlerSet.a(ZU) instanceof Service)) {
         paramString.addFlags(268435456);
       }
-      paraml = LauncherUI.bat();
+      paraml = LauncherUI.bfJ();
       if (paraml != null) {
-        paraml.Gi("tab_settings");
+        paraml.Ix("tab_settings");
       }
-      URISpanHandlerSet.a(ang).startActivity(paramString);
+      URISpanHandlerSet.a(ZU).startActivity(paramString);
       return true;
     }
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     if (paramString.trim().startsWith("weixin://setting/blacklist")) {
       return new g(paramString, 14, null);
@@ -76,7 +76,7 @@ class URISpanHandlerSet$SettingBlacklistUriSpanHandler
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 14 };
   }

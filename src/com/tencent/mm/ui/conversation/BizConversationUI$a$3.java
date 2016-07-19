@@ -1,22 +1,22 @@
 package com.tencent.mm.ui.conversation;
 
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.base.MMSlideDelView.f;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.base.MMSlideDelView.e;
 
 final class BizConversationUI$a$3
-  implements MMSlideDelView.f
+  implements MMSlideDelView.e
 {
   BizConversationUI$a$3(BizConversationUI.a parama) {}
   
-  public final void Z(Object paramObject)
+  public final void at(Object paramObject)
   {
     if (paramObject == null)
     {
-      u.e("!44@/B4Tb64lLpIMw+dFbL21OiX21bsyOnJqkPvIR1gSqXw=", "onItemDel object null");
+      v.e("MicroMsg.BizConversationUI", "onItemDel object null");
       return;
     }
     paramObject = paramObject.toString();
-    BizConversationUI.a.b(loi, (String)paramObject);
+    BizConversationUI.a.b(lOA, (String)paramObject);
   }
 }
 

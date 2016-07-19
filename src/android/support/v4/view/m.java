@@ -10,114 +10,104 @@ import android.view.ViewParent;
 
 public final class m
 {
-  static final h fw = new a();
+  static final e fS = new a();
   
   static
   {
     int i = Build.VERSION.SDK_INT;
     if (i >= 17)
     {
-      fw = new g();
+      fS = new d();
       return;
     }
     if (i >= 16)
     {
-      fw = new f();
+      fS = new c();
       return;
     }
     if (i >= 14)
     {
-      fw = new e();
-      return;
-    }
-    if (i >= 11)
-    {
-      fw = new d();
-      return;
-    }
-    if (i >= 9)
-    {
-      fw = new c();
+      fS = new b();
       return;
     }
   }
   
   public static void a(View paramView, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
-    fw.a(paramView, paramInt1, paramInt2, paramInt3, paramInt4);
+    fS.a(paramView, paramInt1, paramInt2, paramInt3, paramInt4);
   }
   
   public static void a(View paramView, int paramInt, Paint paramPaint)
   {
-    fw.a(paramView, paramInt, paramPaint);
+    fS.a(paramView, paramInt, paramPaint);
   }
   
   public static void a(View paramView, Paint paramPaint)
   {
-    fw.a(paramView, paramPaint);
+    fS.a(paramView, paramPaint);
   }
   
   public static void a(View paramView, a parama)
   {
-    fw.a(paramView, parama);
+    fS.a(paramView, parama);
   }
   
   public static void a(View paramView, Runnable paramRunnable)
   {
-    fw.a(paramView, paramRunnable);
+    fS.a(paramView, paramRunnable);
   }
   
   public static boolean a(View paramView, int paramInt)
   {
-    return fw.a(paramView, paramInt);
+    return fS.a(paramView, paramInt);
   }
   
   public static int f(View paramView)
   {
-    return fw.f(paramView);
+    return fS.f(paramView);
   }
   
   public static void g(View paramView)
   {
-    fw.g(paramView);
+    fS.g(paramView);
   }
   
   public static int h(View paramView)
   {
-    return fw.h(paramView);
+    return fS.h(paramView);
   }
   
   public static void i(View paramView)
   {
-    fw.b(paramView, 1);
+    fS.b(paramView, 1);
   }
   
   public static int j(View paramView)
   {
-    return fw.j(paramView);
+    return fS.j(paramView);
   }
   
   public static int k(View paramView)
   {
-    return fw.k(paramView);
+    return fS.k(paramView);
   }
   
   public static ViewParent l(View paramView)
   {
-    return fw.l(paramView);
+    return fS.l(paramView);
   }
   
   public static boolean m(View paramView)
   {
-    return fw.m(paramView);
+    return fS.m(paramView);
   }
   
   static class a
-    implements m.h
+    implements m.e
   {
     public void a(View paramView, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
     {
-      paramView.postInvalidateDelayed(ah(), paramInt1, paramInt2, paramInt3, paramInt4);
+      paramView.postInvalidateDelayed(af(), paramInt1, paramInt2, paramInt3, paramInt4);
     }
     
     public void a(View paramView, int paramInt, Paint paramPaint) {}
@@ -128,7 +118,7 @@ public final class m
     
     public void a(View paramView, Runnable paramRunnable)
     {
-      paramView.postDelayed(paramRunnable, ah());
+      paramView.postDelayed(paramRunnable, af());
     }
     
     public boolean a(View paramView, int paramInt)
@@ -136,7 +126,7 @@ public final class m
       return false;
     }
     
-    long ah()
+    long af()
     {
       return 10L;
     }
@@ -150,7 +140,7 @@ public final class m
     
     public void g(View paramView)
     {
-      paramView.postInvalidateDelayed(ah());
+      paramView.postInvalidateDelayed(af());
     }
     
     public int h(View paramView)
@@ -192,6 +182,42 @@ public final class m
   static class b
     extends m.a
   {
+    public final void a(View paramView, int paramInt, Paint paramPaint)
+    {
+      paramView.setLayerType(paramInt, paramPaint);
+    }
+    
+    public void a(View paramView, Paint paramPaint)
+    {
+      paramView.setLayerType(paramView.getLayerType(), paramPaint);
+      paramView.invalidate();
+    }
+    
+    public final void a(View paramView, a parama)
+    {
+      paramView.setAccessibilityDelegate((View.AccessibilityDelegate)eP);
+    }
+    
+    public final boolean a(View paramView, int paramInt)
+    {
+      return paramView.canScrollHorizontally(paramInt);
+    }
+    
+    final long af()
+    {
+      return ValueAnimator.getFrameDelay();
+    }
+    
+    public final int f(View paramView)
+    {
+      return paramView.getOverScrollMode();
+    }
+    
+    public final int j(View paramView)
+    {
+      return paramView.getLayerType();
+    }
+    
     public final boolean m(View paramView)
     {
       return paramView.isOpaque();
@@ -200,54 +226,6 @@ public final class m
   
   static class c
     extends m.b
-  {
-    public final int f(View paramView)
-    {
-      return paramView.getOverScrollMode();
-    }
-  }
-  
-  static class d
-    extends m.c
-  {
-    public final void a(View paramView, int paramInt, Paint paramPaint)
-    {
-      paramView.setLayerType(paramInt, paramPaint);
-    }
-    
-    public void a(View paramView, Paint paramPaint)
-    {
-      a(paramView, paramView.getLayerType(), paramPaint);
-      paramView.invalidate();
-    }
-    
-    final long ah()
-    {
-      return ValueAnimator.getFrameDelay();
-    }
-    
-    public final int j(View paramView)
-    {
-      return paramView.getLayerType();
-    }
-  }
-  
-  static class e
-    extends m.d
-  {
-    public final void a(View paramView, a parama)
-    {
-      paramView.setAccessibilityDelegate((View.AccessibilityDelegate)et);
-    }
-    
-    public final boolean a(View paramView, int paramInt)
-    {
-      return paramView.canScrollHorizontally(paramInt);
-    }
-  }
-  
-  static class f
-    extends m.e
   {
     public final void a(View paramView, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
     {
@@ -280,8 +258,8 @@ public final class m
     }
   }
   
-  static final class g
-    extends m.f
+  static final class d
+    extends m.c
   {
     public final void a(View paramView, Paint paramPaint)
     {
@@ -294,7 +272,7 @@ public final class m
     }
   }
   
-  static abstract interface h
+  static abstract interface e
   {
     public abstract void a(View paramView, int paramInt1, int paramInt2, int paramInt3, int paramInt4);
     

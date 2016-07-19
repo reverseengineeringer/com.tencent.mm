@@ -2,18 +2,18 @@ package com.tencent.mm.plugin.sns.lucky.b;
 
 import com.tencent.mm.a.g;
 import com.tencent.mm.model.h;
-import com.tencent.mm.platformtools.n;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.ai;
-import com.tencent.mm.plugin.sns.h.k;
-import com.tencent.mm.plugin.sns.h.l;
-import com.tencent.mm.protocal.b.ade;
-import com.tencent.mm.protocal.b.aqf;
-import com.tencent.mm.protocal.b.aqi;
-import com.tencent.mm.protocal.b.aqw;
-import com.tencent.mm.protocal.b.ye;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.platformtools.m;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.ah;
+import com.tencent.mm.plugin.sns.i.k;
+import com.tencent.mm.plugin.sns.i.l;
+import com.tencent.mm.protocal.b.adx;
+import com.tencent.mm.protocal.b.aqq;
+import com.tencent.mm.protocal.b.aqt;
+import com.tencent.mm.protocal.b.ari;
+import com.tencent.mm.protocal.b.yr;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -21,30 +21,30 @@ import java.util.List;
 
 public final class w
 {
-  private static final ThreadLocal gIT = new ThreadLocal();
+  private static final ThreadLocal<HashMap<String, Long>> gQu = new ThreadLocal();
   
-  public static boolean a(k paramk, aqi paramaqi)
+  public static boolean a(k paramk, aqt paramaqt)
   {
-    ade localade = paramk.aAe();
+    adx localadx = paramk.aCR();
     if (field_type != 21) {
       return true;
     }
-    if (eRP == 1) {
+    if (eZJ == 1) {
       return true;
     }
-    if (h.sc().equals(field_userName)) {
+    if (h.se().equals(field_userName)) {
       return true;
     }
-    if (jKj != null)
+    if (kiG != null)
     {
-      paramaqi = jKj.jKz;
-      if ((paramaqi == null) || (paramaqi.size() == 0)) {
+      paramaqt = kiG.kja;
+      if ((paramaqt == null) || (paramaqt.size() == 0)) {
         return false;
       }
-      paramk = h.sc();
-      paramaqi = paramaqi.iterator();
-      while (paramaqi.hasNext()) {
-        if (paramk.equals(nextiYA)) {
+      paramk = h.se();
+      paramaqt = paramaqt.iterator();
+      while (paramaqt.hasNext()) {
+        if (paramk.equals(nextjwf)) {
           return true;
         }
       }
@@ -52,7 +52,7 @@ public final class w
     return false;
   }
   
-  public static long b(k paramk, aqi paramaqi)
+  public static long b(k paramk, aqt paramaqt)
   {
     long l = 0L;
     if (paramk == null) {}
@@ -65,57 +65,57 @@ public final class w
         do
         {
           return 0L;
-          localObject1 = paramaqi;
-          if (paramaqi == null) {
-            localObject1 = ai.l(paramk);
+          localObject1 = paramaqt;
+          if (paramaqt == null) {
+            localObject1 = ah.l(paramk);
           }
         } while (localObject1 == null);
-        paramaqi = jKj;
-      } while (paramaqi == null);
-      localObject2 = jKz;
+        paramaqt = kiG;
+      } while (paramaqt == null);
+      localObject2 = kja;
     } while (localObject2 == null);
-    paramaqi = gUB;
-    if (ay.kz(paramaqi)) {}
-    for (paramk = g.m(field_content) + g.m(field_attrBuf);; paramk = paramaqi)
+    paramaqt = hht;
+    if (be.kf(paramaqt)) {}
+    for (paramk = g.j(field_content) + g.j(field_attrBuf);; paramk = paramaqt)
     {
-      localObject1 = (HashMap)gIT.get();
+      localObject1 = (HashMap)gQu.get();
       if ((localObject1 != null) && (((HashMap)localObject1).containsKey(paramk))) {
         return ((Long)((HashMap)localObject1).get(paramk)).longValue();
       }
-      paramaqi = ((List)localObject2).iterator();
+      paramaqt = ((List)localObject2).iterator();
       for (;;)
       {
-        if (paramaqi.hasNext())
+        if (paramaqt.hasNext())
         {
-          aqf localaqf = (aqf)paramaqi.next();
-          localObject2 = new ye();
+          aqq localaqq = (aqq)paramaqt.next();
+          localObject2 = new yr();
           try
           {
-            ((ye)localObject2).am(n.a(jJB));
-            l += eRY;
+            ((yr)localObject2).au(m.a(khY));
+            l += axj;
           }
           catch (Exception localException)
           {
             for (;;)
             {
-              u.e("!32@SA6ZNuiAVNNFIX/x/7A9SGk5yC+E5DI9", localException.getMessage() + "hbBuffer is error");
+              v.e("MicrMsg.SnsLuckyUtil", localException.getMessage() + "hbBuffer is error");
             }
           }
         }
       }
-      paramaqi = (aqi)localObject1;
+      paramaqt = (aqt)localObject1;
       if (localObject1 == null) {
-        paramaqi = new HashMap();
+        paramaqt = new HashMap();
       }
-      paramaqi.put(paramk, Long.valueOf(l));
-      gIT.set(paramaqi);
+      paramaqt.put(paramk, Long.valueOf(l));
+      gQu.set(paramaqt);
       return l;
     }
   }
   
   public static boolean h(k paramk)
   {
-    return a(paramk, ai.l(paramk));
+    return a(paramk, ah.l(paramk));
   }
   
   public static int i(k paramk)
@@ -126,11 +126,11 @@ public final class w
       do
       {
         return 0;
-        paramk = ai.l(paramk);
+        paramk = ah.l(paramk);
       } while (paramk == null);
-      paramk = jKj;
-    } while ((paramk == null) || (jKz.size() == 0));
-    return jKz.size();
+      paramk = kiG;
+    } while ((paramk == null) || (kja.size() == 0));
+    return kja.size();
   }
   
   public static long j(k paramk)
@@ -138,10 +138,10 @@ public final class w
     return b(paramk, null);
   }
   
-  public static boolean ut(String paramString)
+  public static boolean vy(String paramString)
   {
-    paramString = ad.azi().vo(paramString);
-    return a(paramString, ai.l(paramString));
+    paramString = ad.aBI().wA(paramString);
+    return a(paramString, ah.l(paramString));
   }
 }
 

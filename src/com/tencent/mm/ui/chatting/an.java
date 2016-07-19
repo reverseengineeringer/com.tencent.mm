@@ -1,33 +1,36 @@
 package com.tencent.mm.ui.chatting;
 
+import android.content.Context;
 import android.content.Intent;
-import android.text.SpannableString;
+import android.content.res.Resources;
+import android.support.v4.app.FragmentActivity;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.ar.c;
-import com.tencent.mm.d.b.bg;
+import com.tencent.mm.av.c;
+import com.tencent.mm.e.b.bj;
 import com.tencent.mm.model.ar;
-import com.tencent.mm.model.h;
-import com.tencent.mm.n.a.a;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.pluginsdk.ui.d.e;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.p.a.a;
+import com.tencent.mm.pluginsdk.i.a;
+import com.tencent.mm.pluginsdk.i.aa;
+import com.tencent.mm.pluginsdk.model.app.f;
+import com.tencent.mm.pluginsdk.model.app.g;
+import com.tencent.mm.pluginsdk.model.app.l;
+import com.tencent.mm.storage.ai;
 import com.tencent.mm.ui.j;
 import com.tencent.mm.ui.o;
+import com.tencent.mm.ui.transmit.MsgRetransmitUI;
 
 final class an
-  extends aa.b
+  extends ab.c
 {
-  private ChattingUI.a kTe;
+  private ChattingUI.a ltl;
   
   public an()
   {
-    super(53);
+    super(49);
   }
   
   public final View a(LayoutInflater paramLayoutInflater, View paramView)
@@ -36,138 +39,110 @@ final class an
     if ((paramView != null) && (paramView.getTag() != null) && ((paramView.getTag() instanceof i)))
     {
       localObject = paramView;
-      if (getTagtype == eLV) {}
+      if (getTagtype == cTv) {}
     }
     else
     {
-      localObject = new ax(paramLayoutInflater, 2131361987);
-      ((View)localObject).setTag(new i(eLV).az((View)localObject));
+      localObject = new ay(paramLayoutInflater, 2130903317);
+      ((View)localObject).setTag(new i(cTv).aC((View)localObject));
     }
     return (View)localObject;
   }
   
-  public final void a(aa.a parama, int paramInt, ChattingUI.a parama1, ag paramag, String paramString)
+  public final void a(ab.a parama, int paramInt, ChattingUI.a parama1, ai paramai, String paramString)
   {
-    kTe = parama1;
     paramString = (i)parama;
+    ltl = parama1;
     parama = field_content;
     if (parama != null) {}
-    for (parama = a.a.B(parama, field_reserved);; parama = null)
+    for (parama = a.a.y(parama, field_reserved);; parama = null)
     {
       if (parama != null)
       {
-        kQI.setSingleLine(true);
-        switch (byl)
-        {
-        case 2: 
-        default: 
-          kQH.setImageResource(2130903600);
-          kQI.setSingleLine(false);
-          kQI.setMaxLines(2);
-          kQJ.setText(null);
-          kQI.setText(description);
+        paramai = new dh(paramai, kZE, paramInt, null, 0, (byte)0);
+        lth.setTag(paramai);
+        lth.setOnClickListener(lsL.lvy);
+        if (jqM) {
+          lth.setOnLongClickListener(lsL.lvA);
         }
+        lqw.setText(title);
       }
-      for (;;)
+      if ((i.a.iVj != null) && (i.a.iVj.rJ(parama1.bjO())))
       {
-        kTa.setOnClickListener(kSE.kVs);
-        kTa.setOnLongClickListener(kSE.kVu);
-        parama = new dg(paramag, kAy, paramInt, null, 0, (byte)0);
-        kTa.setTag(parama);
+        lqw.setTextColor(parama1.y().getResources().getColor(2131689841));
+        lth.setClickable(true);
+        lth.setEnabled(true);
         return;
-        if (t.kz(byR)) {
-          kQI.setText(2131432326);
-        }
-        for (;;)
-        {
-          kQJ.setText(bym);
-          kQH.setImageResource(2130903600);
-          break;
-          SpannableString localSpannableString = e.a(koJ.kpc, byR);
-          kQI.setText(localSpannableString);
-        }
-        kQI.setText(2131432328);
-        kQJ.setText(bym);
-        kQH.setImageResource(2130903436);
-        continue;
-        kQI.setText(2131432329);
-        kQJ.setText(bym);
-        kQH.setImageResource(2130903564);
       }
+      lqw.setTextColor(-8750470);
+      lth.setClickable(false);
+      lth.setEnabled(false);
+      return;
     }
   }
   
-  public final boolean a(ContextMenu paramContextMenu, View paramView, ag paramag)
+  public final boolean a(ContextMenu paramContextMenu, View paramView, ai paramai)
   {
     int i = getTagposition;
-    if (paramag != null) {
-      paramContextMenu.add(i, 100, 0, kTe.getString(2131427849));
+    l.BO(ltl.bm(field_content, field_isSend));
+    a.a locala = a.a.dI(ltl.bm(field_content, field_isSend));
+    f localf = g.ar(appId, false);
+    if ((c.zM("favorite")) && ((localf == null) || (!localf.aUj()))) {
+      switch (type)
+      {
+      }
     }
-    return false;
+    for (;;)
+    {
+      if ((!paramai.bco()) && (paramai.bcz()) && ((field_status == 2) || (aQo == 1)) && (bka()) && (IZ(field_talker))) {
+        paramContextMenu.add(i, 123, 0, paramView.getContext().getString(2131231706));
+      }
+      if (!ltl.bln()) {
+        paramContextMenu.add(i, 100, 0, ltl.getString(2131231700));
+      }
+      return true;
+      paramContextMenu.add(i, 116, 0, paramView.getContext().getString(2131234160));
+    }
   }
   
-  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ag paramag)
+  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ai paramai)
   {
     switch (paramMenuItem.getItemId())
     {
     default: 
+    case 100: 
+      Object localObject;
+      do
+      {
+        do
+        {
+          return false;
+          localObject = field_content;
+          paramMenuItem = null;
+          if (localObject != null) {
+            paramMenuItem = a.a.dI((String)localObject);
+          }
+        } while (paramMenuItem == null);
+        l.BN(bpZ);
+        ar.H(field_msgId);
+        localObject = g.ar(appId, false);
+      } while ((localObject == null) || (!((f)localObject).aUj()));
+      a(parama, paramMenuItem, paramai, (f)localObject);
       return false;
     }
-    ar.E(field_msgId);
-    return true;
+    paramMenuItem = new Intent(kNN.kOg, MsgRetransmitUI.class);
+    paramMenuItem.putExtra("Retr_Msg_content", parama.bm(field_content, field_isSend));
+    paramMenuItem.putExtra("Retr_Msg_Type", 2);
+    paramMenuItem.putExtra("Retr_Msg_Id", field_msgId);
+    parama.startActivity(paramMenuItem);
+    return false;
   }
   
-  public final boolean a(View paramView, ChattingUI.a parama, ag paramag)
+  public final boolean a(View paramView, ChattingUI.a parama, ai paramai)
   {
-    Object localObject = field_content;
-    paramView = null;
-    if (localObject != null) {
-      paramView = a.a.B((String)localObject, field_reserved);
-    }
-    if (paramView != null)
-    {
-      localObject = new Intent();
-      ((Intent)localObject).putExtra("sender_name", field_talker);
-      switch (byl)
-      {
-      case 2: 
-      default: 
-        u.d("!64@/B4Tb64lLpKwUcOR+EdWcmbiHpejF20aQXi4km+3rnwu/B9R5rY9MUhzkuuLuPON", "Unrecognized type, probably version to low & check update!");
-        t.bl(koJ.kpc);
-        return true;
-      case 1: 
-        ((Intent)localObject).putExtra("invalid_time", byp);
-        ((Intent)localObject).putExtra("is_sender", false);
-        ((Intent)localObject).putExtra("appmsg_type", byl);
-        ((Intent)localObject).putExtra("transfer_id", byo);
-        ((Intent)localObject).putExtra("transaction_id", byn);
-        ((Intent)localObject).putExtra("effective_date", byq);
-        ((Intent)localObject).putExtra("total_fee", byr);
-        ((Intent)localObject).putExtra("fee_type", bys);
-        if (h.sp())
-        {
-          c.a(parama, "wallet_payu", ".remittance.ui.PayURemittanceDetailUI", (Intent)localObject, 221);
-          return true;
-        }
-        c.a(parama, "remittance", ".ui.RemittanceDetailUI", (Intent)localObject, 221);
-        return true;
-      }
-      ((Intent)localObject).putExtra("is_sender", true);
-      ((Intent)localObject).putExtra("appmsg_type", byl);
-      ((Intent)localObject).putExtra("transfer_id", byo);
-      ((Intent)localObject).putExtra("transaction_id", byn);
-      ((Intent)localObject).putExtra("effective_date", byq);
-      ((Intent)localObject).putExtra("total_fee", byr);
-      ((Intent)localObject).putExtra("fee_type", bys);
-      if (h.sp())
-      {
-        c.c(koJ.kpc, "wallet_payu", ".remittance.ui.PayURemittanceDetailUI", (Intent)localObject);
-        return true;
-      }
-      c.c(koJ.kpc, "remittance", ".ui.RemittanceDetailUI", (Intent)localObject);
-      return true;
-    }
-    return false;
+    parama.bjO();
+    parama.aE("fromMessage", true);
+    return true;
   }
 }
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="#ff121212" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.pluginsdk.ui.applet.CdnImageView android:id="@id/bi8" android:layout_width="180.0dip" android:layout_height="180.0dip" android:layout_marginTop="24.0dip" android:src="#ffeeeeee" android:contentDescription="@string/d_" />
+    <TextView android:id="@id/bic" android:layout_width="180.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+    <TextView android:id="@id/bi9" android:layout_width="180.0dip" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="{title}" />
+    <TextView android:id="@id/bi_" android:layout_width="180.0dip" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="{singer}" />
+    <TextView android:id="@id/bia" android:layout_width="180.0dip" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="{album}" />
+    <Button android:id="@id/bib" android:layout_width="200.0dip" android:layout_marginTop="12.0dip" android:text="@string/bmn" style="@style/MMSolidGreenLargeButton" />
+</LinearLayout>

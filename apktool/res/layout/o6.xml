@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/FavDetailBody"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/fav_detail_title_view" />
+    <include layout="@layout/favorite_tag_entrence" />
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/hf" />
+    <include layout="@layout/favorite_voice_view" />
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/hf" />
+    <include layout="@layout/fav_detail_footer_view" />
+</LinearLayout>

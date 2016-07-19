@@ -2,7 +2,7 @@ package com.tencent.mm.ui.bindmobile;
 
 import android.content.Intent;
 import android.view.MenuItem;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.ui.base.n.d;
 
 final class BindMContactIntroUI$23$2
@@ -17,12 +17,12 @@ final class BindMContactIntroUI$23$2
     default: 
       return;
     case 0: 
-      BindMContactIntroUI.d(kOw.kOs);
+      BindMContactIntroUI.d(lnM.lnI);
       return;
     }
     paramMenuItem = new Intent();
     paramMenuItem.putExtra("need_matte_high_light_item", "settings_find_me_by_mobile");
-    c.c(kOw.kOs, "setting", ".ui.setting.SettingsPrivacyUI", paramMenuItem);
+    c.c(lnM.lnI, "setting", ".ui.setting.SettingsPrivacyUI", paramMenuItem);
   }
 }
 

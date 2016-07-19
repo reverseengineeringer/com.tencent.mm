@@ -2,86 +2,86 @@ package com.tencent.mm.plugin.sight.encode.a;
 
 import android.view.View;
 import android.view.ViewGroup;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah;
+import com.tencent.mm.sdk.platformtools.ah.a;
 
 public final class h
-  implements af.a
+  implements ah.a
 {
-  protected View gAX;
-  protected View gAY;
-  protected View gAZ;
-  private af gBa;
+  protected View gHA;
+  protected View gHB;
+  private ah gHC;
+  protected View gHz;
   
-  private void la(int paramInt)
+  private void mh(int paramInt)
   {
-    if (gAX.getVisibility() == paramInt) {
+    if (gHz.getVisibility() == paramInt) {
       return;
     }
     if (paramInt == 0) {
-      gBa.ds(3000L);
+      gHC.dJ(3000L);
     }
     for (;;)
     {
-      gAX.setVisibility(paramInt);
+      gHz.setVisibility(paramInt);
       return;
-      gBa.aUF();
+      gHC.aZJ();
     }
   }
   
-  public final void awv()
+  public final void ayU()
   {
-    la(0);
-    if (gAY.getVisibility() != 8) {
-      gAY.setVisibility(8);
+    mh(0);
+    if (gHA.getVisibility() != 8) {
+      gHA.setVisibility(8);
     }
-    if (gAZ.getVisibility() != 8) {
-      gAZ.setVisibility(8);
+    if (gHB.getVisibility() != 8) {
+      gHB.setVisibility(8);
     }
   }
   
-  public final void aww()
+  public final void ayV()
   {
-    la(8);
-    if (gAY.getVisibility() != 0) {
-      gAY.setVisibility(0);
+    mh(8);
+    if (gHA.getVisibility() != 0) {
+      gHA.setVisibility(0);
     }
-    if (gAZ.getVisibility() != 8) {
-      gAZ.setVisibility(8);
+    if (gHB.getVisibility() != 8) {
+      gHB.setVisibility(8);
     }
   }
   
-  public final void awx()
+  public final void ayW()
   {
-    la(8);
-    if (gAY.getVisibility() != 8) {
-      gAY.setVisibility(8);
+    mh(8);
+    if (gHA.getVisibility() != 8) {
+      gHA.setVisibility(8);
     }
-    if (gAZ.getVisibility() != 0) {
-      gAZ.setVisibility(0);
+    if (gHB.getVisibility() != 0) {
+      gHB.setVisibility(0);
     }
   }
   
   public final void d(ViewGroup paramViewGroup)
   {
-    gBa = new af(this, false);
-    gAX = paramViewGroup.findViewById(2131169019);
-    gAY = paramViewGroup.findViewById(2131169021);
-    gAZ = paramViewGroup.findViewById(2131169020);
+    gHC = new ah(this, false);
+    gHz = paramViewGroup.findViewById(2131756164);
+    gHA = paramViewGroup.findViewById(2131756166);
+    gHB = paramViewGroup.findViewById(2131756165);
     hide();
   }
   
   public final void hide()
   {
-    la(8);
-    gAY.setVisibility(8);
-    gAZ.setVisibility(8);
+    mh(8);
+    gHA.setVisibility(8);
+    gHB.setVisibility(8);
   }
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    if (gAX != null) {
-      gAX.setVisibility(8);
+    if (gHz != null) {
+      gHz.setVisibility(8);
     }
     return false;
   }

@@ -5,42 +5,41 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Toast;
 import com.tencent.mm.model.ah;
+import com.tencent.mm.plugin.report.service.g;
 import com.tencent.mm.pluginsdk.model.app.p;
 import com.tencent.mm.pluginsdk.model.downloader.b;
 import com.tencent.mm.pluginsdk.model.downloader.d.a;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.sdk.platformtools.f;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.j.a;
-import com.tencent.mm.storage.z;
 import com.tencent.mm.ui.base.s;
 import java.io.File;
 
 public final class l
 {
-  public static void a(Context paramContext, Bundle paramBundle)
+  public static void b(Context paramContext, Bundle paramBundle)
   {
     int i;
-    z localz;
+    com.tencent.mm.storage.aa localaa;
     if (paramBundle != null)
     {
       i = paramBundle.getInt("fromScene");
-      com.tencent.mm.plugin.report.service.h.fUJ.g(11621, new Object[] { Integer.valueOf(i), Integer.valueOf(0) });
-      paramBundle = com.tencent.mm.pluginsdk.model.downloader.c.aQc();
-      localz = b.Aa("http://dianhua.qq.com/cgi-bin/cloudgrptemplate?t=dianhuaben_download&channel=100008");
-      if (localz == null) {
+      g.gdY.h(11621, new Object[] { Integer.valueOf(i), Integer.valueOf(0) });
+      paramBundle = com.tencent.mm.pluginsdk.model.downloader.c.aUL();
+      localaa = b.BZ("http://dianhua.qq.com/cgi-bin/cloudgrptemplate?t=dianhuaben_download&channel=100008");
+      if (localaa == null) {
         break label115;
       }
     }
     label115:
-    for (paramBundle = paramBundle.cH(field_downloadId);; paramBundle = new com.tencent.mm.pluginsdk.model.downloader.e())
+    for (paramBundle = paramBundle.cW(field_downloadId);; paramBundle = new com.tencent.mm.pluginsdk.model.downloader.e())
     {
       if ((paramBundle == null) || (status != 3)) {
         break label126;
       }
-      u.i("!44@/B4Tb64lLpKJ2tjJPAs9izyRRSOU7cWUv6KsEHXPyIo=", "weixin phonebook already download successfully, install directly");
-      if (com.tencent.mm.a.e.ax(path)) {
+      v.i("MicroMsg.WxPhoneBookHelper", "weixin phonebook already download successfully, install directly");
+      if (com.tencent.mm.a.e.aB(path)) {
         p.c(paramContext, Uri.fromFile(new File(path)));
       }
       return;
@@ -48,32 +47,69 @@ public final class l
       break;
     }
     label126:
-    s.makeText(paramContext, paramContext.getString(2131427985), 2000).show();
+    s.makeText(paramContext, paramContext.getString(2131231732), 2000).show();
     paramBundle = new d.a();
-    paramBundle.Ac("http://dianhua.qq.com/cgi-bin/cloudgrptemplate?t=dianhuaben_download&channel=100008");
-    paramBundle.Ad(paramContext.getString(2131427984));
-    paramBundle.oh(1);
-    paramBundle.gj(true);
-    com.tencent.mm.pluginsdk.model.downloader.c.aQc().a(iCw);
+    paramBundle.Cc("http://dianhua.qq.com/cgi-bin/cloudgrptemplate?t=dianhuaben_download&channel=100008");
+    paramBundle.Cd(paramContext.getString(2131231738));
+    paramBundle.pM(1);
+    paramBundle.gH(true);
+    com.tencent.mm.pluginsdk.model.downloader.c.aUL().a(iZk);
   }
   
-  public static boolean kN()
+  public static boolean jn()
   {
-    if (!ah.rh())
+    boolean bool3 = true;
+    if (!ah.rg()) {
+      v.e("MicroMsg.WxPhoneBookHelper", "needDisplayWxPBMenuItem, account not ready");
+    }
+    int i;
+    label76:
+    label93:
+    label151:
+    label156:
+    label161:
+    label166:
+    do
     {
-      u.e("!44@/B4Tb64lLpKJ2tjJPAs9izyRRSOU7cWUv6KsEHXPyIo=", "needDisplayWxPBMenuItem, account not ready");
       return false;
-    }
-    if ((!ay.AL()) && (f.akC != 1) && (ay.getInt(com.tencent.mm.g.h.pS().getValue("ShowWeixinPBIntro"), 0) == 0) && (!p.m(y.getContext(), "com.tencent.pb"))) {}
-    for (int i = 1; i == 0; i = 0) {
-      return false;
-    }
-    i = ay.b((Integer)ah.tD().rn().a(j.a.kby, null), 3);
-    u.v("!44@/B4Tb64lLpKJ2tjJPAs9izyRRSOU7cWUv6KsEHXPyIo=", "needDisplayWxPBMenuItem, counter = %d", new Object[] { Integer.valueOf(i) });
-    if (i <= 0) {
-      return false;
-    }
-    ah.tD().rn().set(352257, Integer.valueOf(i - 1));
+      boolean bool4;
+      boolean bool1;
+      boolean bool2;
+      if ((!be.AX()) && (f.Xv != 1) && (be.getInt(com.tencent.mm.h.h.om().getValue("ShowWeixinPBIntro"), 0) == 0) && (!p.n(com.tencent.mm.sdk.platformtools.aa.getContext(), "com.tencent.pb")))
+      {
+        i = 1;
+        if (i != 0) {
+          break label166;
+        }
+        bool4 = be.AX();
+        if (f.Xv == 1) {
+          break label151;
+        }
+        bool1 = true;
+        if (be.getInt(com.tencent.mm.h.h.om().getValue("ShowWeixinPBIntro"), 0) != 0) {
+          break label156;
+        }
+        bool2 = true;
+        if (p.n(com.tencent.mm.sdk.platformtools.aa.getContext(), "com.tencent.pb")) {
+          break label161;
+        }
+      }
+      for (;;)
+      {
+        v.d("MicroMsg.WxPhoneBookHelper", "%b, %b, %b, %b", new Object[] { Boolean.valueOf(bool4), Boolean.valueOf(bool1), Boolean.valueOf(bool2), Boolean.valueOf(bool3) });
+        return false;
+        i = 0;
+        break;
+        bool1 = false;
+        break label76;
+        bool2 = false;
+        break label93;
+        bool3 = false;
+      }
+      i = be.b((Integer)ah.tE().ro().a(j.a.kBK, null), 3);
+      v.v("MicroMsg.WxPhoneBookHelper", "needDisplayWxPBMenuItem, counter = %d", new Object[] { Integer.valueOf(i) });
+    } while (i <= 0);
+    ah.tE().ro().set(352257, Integer.valueOf(i - 1));
     return true;
   }
 }

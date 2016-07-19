@@ -3,7 +3,7 @@ package com.tencent.mm.sandbox.updater;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class i$1
   implements Runnable
@@ -12,13 +12,13 @@ final class i$1
   
   public final void run()
   {
-    ((NotificationManager)jUm.mContext.getSystemService("notification")).cancel(99);
-    u.d("!32@/B4Tb64lLpJ7QNEsxPPC9wTRgf8U5GU7", "finishType == " + jUl);
-    if ((jUl == 2) && (jUm.jSL == 1))
+    ((NotificationManager)ktN.mContext.getSystemService("notification")).cancel(99);
+    v.d("MicroMsg.UpdaterManager", "finishType == " + ktM);
+    if ((ktM == 2) && (ktN.ksf == 1))
     {
       Intent localIntent = new Intent();
       localIntent.setAction("com.tencent.mm.sandbox.updater.intent.ACTION_EXIT_APP");
-      jUm.mContext.sendBroadcast(localIntent, "com.tencent.mm.permission.MM_MESSAGE");
+      ktN.mContext.sendBroadcast(localIntent, "com.tencent.mm.permission.MM_MESSAGE");
     }
   }
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="@drawable/bs" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/cy" android:layout_marginRight="@dimen/cy">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/i7" android:layout_marginBottom="@dimen/i7" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/h4" android:ellipsize="end" android:id="@id/qu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/h3" android:ellipsize="end" android:id="@id/qv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/qw" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <TextView android:background="#ffeeeeee" android:layout_width="1.0px" android:layout_height="40.0dip" android:layout_marginLeft="@dimen/i7" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/qx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/i7" android:layout_marginRight="@dimen/i7" android:src="@drawable/afw" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/qy" android:background="#ffdfdfdf" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="@dimen/cy" android:layout_marginRight="@dimen/cy" />
+</LinearLayout>

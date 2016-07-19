@@ -15,9 +15,9 @@
 
 
 # static fields
-.field private static aqZ:Z
+.field private static acs:Z
 
-.field private static ara:Z
+.field private static act:Z
 
 
 # direct methods
@@ -32,18 +32,18 @@
     const/4 v5, 0x0
 
     .line 131
-    sput-boolean v5, Lcom/tencent/mm/c/b/g$b;->aqZ:Z
+    sput-boolean v5, Lcom/tencent/mm/c/b/g$b;->acs:Z
 
     .line 132
-    sput-boolean v5, Lcom/tencent/mm/c/b/g$b;->ara:Z
+    sput-boolean v5, Lcom/tencent/mm/c/b/g$b;->act:Z
 
     .line 135
-    invoke-static {}, Lcom/tencent/mm/compatible/d/l;->ok()S
+    invoke-static {}, Lcom/tencent/mm/compatible/d/l;->mA()I
 
     move-result v0
 
     .line 136
-    const-string/jumbo v1, "!32@/B4Tb64lLpIxLWWXLn1UOQo09hWH5jsc"
+    const-string/jumbo v1, "MicroMsg.RecorderUtil"
 
     const-string/jumbo v2, "abi: %s, abi2: %s, cpuFlag: %d"
 
@@ -65,12 +65,12 @@
 
     aput-object v4, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 137
     sget-object v1, Landroid/os/Build;->CPU_ABI:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -88,7 +88,7 @@
 
     sget-object v1, Landroid/os/Build;->CPU_ABI2:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -105,11 +105,11 @@
     if-nez v1, :cond_0
 
     .line 139
-    const-string/jumbo v0, "!32@/B4Tb64lLpIxLWWXLn1UOQo09hWH5jsc"
+    const-string/jumbo v0, "MicroMsg.RecorderUtil"
 
     const-string/jumbo v1, "don\'t contains armeabi"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 140
     const-string/jumbo v0, "wechatvoicesilk_v5"
@@ -123,20 +123,20 @@
     invoke-static {v0, v1}, Lcom/tencent/mm/compatible/util/i;->b(Ljava/lang/String;Ljava/lang/ClassLoader;)V
 
     .line 141
-    sput-boolean v6, Lcom/tencent/mm/c/b/g$b;->aqZ:Z
+    sput-boolean v6, Lcom/tencent/mm/c/b/g$b;->acs:Z
 
     .line 142
-    sput-boolean v5, Lcom/tencent/mm/c/b/g$b;->ara:Z
+    sput-boolean v5, Lcom/tencent/mm/c/b/g$b;->act:Z
 
     .line 165
     :goto_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpIxLWWXLn1UOQo09hWH5jsc"
+    const-string/jumbo v0, "MicroMsg.RecorderUtil"
 
     const-string/jumbo v1, "finish load silk so, canUseSilkDecode: %b, canUseSilkEncode: %b"
 
     new-array v2, v7, [Ljava/lang/Object;
 
-    sget-boolean v3, Lcom/tencent/mm/c/b/g$b;->aqZ:Z
+    sget-boolean v3, Lcom/tencent/mm/c/b/g$b;->acs:Z
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -144,7 +144,7 @@
 
     aput-object v3, v2, v5
 
-    sget-boolean v3, Lcom/tencent/mm/c/b/g$b;->ara:Z
+    sget-boolean v3, Lcom/tencent/mm/c/b/g$b;->act:Z
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -152,7 +152,7 @@
 
     aput-object v3, v2, v6
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 166
     return-void
@@ -178,12 +178,12 @@
     .line 147
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/tencent/mm/c/b/g$b;->aqZ:Z
+    sput-boolean v0, Lcom/tencent/mm/c/b/g$b;->acs:Z
 
     .line 148
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/tencent/mm/c/b/g$b;->ara:Z
+    sput-boolean v0, Lcom/tencent/mm/c/b/g$b;->act:Z
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -193,17 +193,17 @@
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpIxLWWXLn1UOQo09hWH5jsc"
+    const-string/jumbo v0, "MicroMsg.RecorderUtil"
 
     const-string/jumbo v1, "load library failed!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 160
-    sput-boolean v5, Lcom/tencent/mm/c/b/g$b;->aqZ:Z
+    sput-boolean v5, Lcom/tencent/mm/c/b/g$b;->acs:Z
 
     .line 161
-    sput-boolean v5, Lcom/tencent/mm/c/b/g$b;->ara:Z
+    sput-boolean v5, Lcom/tencent/mm/c/b/g$b;->act:Z
 
     goto :goto_0
 
@@ -228,12 +228,12 @@
     .line 151
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/tencent/mm/c/b/g$b;->aqZ:Z
+    sput-boolean v0, Lcom/tencent/mm/c/b/g$b;->acs:Z
 
     .line 152
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/tencent/mm/c/b/g$b;->ara:Z
+    sput-boolean v0, Lcom/tencent/mm/c/b/g$b;->act:Z
 
     goto :goto_0
 
@@ -252,12 +252,12 @@
     .line 155
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/tencent/mm/c/b/g$b;->aqZ:Z
+    sput-boolean v0, Lcom/tencent/mm/c/b/g$b;->acs:Z
 
     .line 156
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/tencent/mm/c/b/g$b;->ara:Z
+    sput-boolean v0, Lcom/tencent/mm/c/b/g$b;->act:Z
     :try_end_1
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -274,12 +274,12 @@
     return-void
 .end method
 
-.method public static lS()Z
+.method public static kd()Z
     .locals 1
 
     .prologue
     .line 173
-    sget-boolean v0, Lcom/tencent/mm/c/b/g$b;->ara:Z
+    sget-boolean v0, Lcom/tencent/mm/c/b/g$b;->act:Z
 
     return v0
 .end method

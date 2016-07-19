@@ -3,7 +3,7 @@ package com.tencent.mm.plugin.sight.decode.ui;
 import android.view.View;
 import android.view.View.OnClickListener;
 import com.tencent.mm.pluginsdk.ui.tools.f;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 public final class VideoPlayView$6
   implements View.OnClickListener
@@ -12,22 +12,22 @@ public final class VideoPlayView$6
   
   public final void onClick(View paramView)
   {
-    VideoPlayView.m(gzd).removeCallbacks(VideoPlayView.l(gzd));
-    VideoPlayView.m(gzd).postDelayed(VideoPlayView.l(gzd), 3000L);
-    if (VideoPlayView.a(gzd).isPlaying())
+    VideoPlayView.m(gFG).removeCallbacks(VideoPlayView.l(gFG));
+    VideoPlayView.m(gFG).postDelayed(VideoPlayView.l(gFG), 3000L);
+    if (VideoPlayView.a(gFG).isPlaying())
     {
-      VideoPlayView.n(gzd);
-      if (VideoPlayView.c(gzd) != null) {
-        VideoPlayView.c(gzd).setIsPlay(false);
+      VideoPlayView.n(gFG);
+      if (VideoPlayView.c(gFG) != null) {
+        VideoPlayView.c(gFG).eu(false);
       }
     }
     do
     {
       return;
-      VideoPlayView.a(gzd, false);
-      VideoPlayView.a(gzd).g(VideoPlayView.o(gzd));
-    } while (VideoPlayView.c(gzd) == null);
-    VideoPlayView.c(gzd).setIsPlay(true);
+      VideoPlayView.a(gFG, false);
+      VideoPlayView.a(gFG).j(VideoPlayView.o(gFG));
+    } while (VideoPlayView.c(gFG) == null);
+    VideoPlayView.c(gFG).eu(true);
   }
 }
 

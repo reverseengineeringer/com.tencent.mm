@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/av;->ad(Landroid/view/View;)Z
+    value = Lcom/tencent/mm/plugin/sns/ui/av;->onCreate()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,24 +18,16 @@
 
 
 # instance fields
-.field final synthetic cqb:Landroid/view/View;
-
-.field final synthetic hmC:Landroid/view/View;
-
-.field final synthetic hmD:Lcom/tencent/mm/plugin/sns/ui/av;
+.field final synthetic hBw:Lcom/tencent/mm/plugin/sns/ui/av;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/av;Landroid/view/View;Landroid/view/View;)V
+.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/av;)V
     .locals 0
 
     .prologue
-    .line 137
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/av$1;->hmD:Lcom/tencent/mm/plugin/sns/ui/av;
-
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/av$1;->cqb:Landroid/view/View;
-
-    iput-object p3, p0, Lcom/tencent/mm/plugin/sns/ui/av$1;->hmC:Landroid/view/View;
+    .line 162
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/av$1;->hBw:Lcom/tencent/mm/plugin/sns/ui/av;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,18 +37,40 @@
 
 # virtual methods
 .method public final run()V
-    .locals 3
+    .locals 2
 
     .prologue
-    .line 141
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av$1;->hmD:Lcom/tencent/mm/plugin/sns/ui/av;
+    .line 165
+    new-instance v0, Landroid/util/DisplayMetrics;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av$1;->cqb:Landroid/view/View;
+    invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/av$1;->hmC:Landroid/view/View;
+    .line 166
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/av$1;->hBw:Lcom/tencent/mm/plugin/sns/ui/av;
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/plugin/sns/ui/av;->a(Lcom/tencent/mm/plugin/sns/ui/av;Landroid/view/View;Landroid/view/View;)V
+    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/ui/av;->a(Lcom/tencent/mm/plugin/sns/ui/av;)Landroid/app/Activity;
 
-    .line 142
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
+
+    .line 167
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBz()Lcom/tencent/mm/plugin/sns/i/p;
+
+    iget v1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    invoke-static {v1, v0}, Lcom/tencent/mm/plugin/sns/i/p;->bm(II)V
+
+    .line 168
     return-void
 .end method

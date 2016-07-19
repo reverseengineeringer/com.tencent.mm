@@ -18,20 +18,16 @@
 
 
 # instance fields
-.field final synthetic kpx:Lcom/tencent/mm/ui/j;
-
-.field final synthetic val$url:Ljava/lang/String;
+.field final synthetic kOB:Lcom/tencent/mm/ui/j;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/j;Ljava/lang/String;)V
+.method constructor <init>(Lcom/tencent/mm/ui/j;)V
     .locals 0
 
     .prologue
-    .line 220
-    iput-object p1, p0, Lcom/tencent/mm/ui/j$6;->kpx:Lcom/tencent/mm/ui/j;
-
-    iput-object p2, p0, Lcom/tencent/mm/ui/j$6;->val$url:Ljava/lang/String;
+    .line 205
+    iput-object p1, p0, Lcom/tencent/mm/ui/j$6;->kOB:Lcom/tencent/mm/ui/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,40 +37,37 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 225
-    iget-object v0, p0, Lcom/tencent/mm/ui/j$6;->val$url:Ljava/lang/String;
+    .line 210
+    new-instance v0, Lcom/tencent/mm/e/a/u;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/u;-><init>()V
 
-    .line 226
-    new-instance v0, Landroid/content/Intent;
+    .line 211
+    iget-object v1, v0, Lcom/tencent/mm/e/a/u;->aet:Lcom/tencent/mm/e/a/u$a;
 
-    const-string/jumbo v1, "android.intent.action.VIEW"
+    const/4 v2, 0x1
 
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    iput v2, v1, Lcom/tencent/mm/e/a/u$a;->type:I
 
-    .line 227
-    iget-object v1, p0, Lcom/tencent/mm/ui/j$6;->val$url:Ljava/lang/String;
+    .line 212
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
-    move-result-object v1
+    .line 213
+    iget-object v0, p0, Lcom/tencent/mm/ui/j$6;->kOB:Lcom/tencent/mm/ui/j;
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+    invoke-static {v0}, Lcom/tencent/mm/ui/j;->b(Lcom/tencent/mm/ui/j;)Landroid/view/View;
 
-    .line 228
-    iget-object v1, p0, Lcom/tencent/mm/ui/j$6;->kpx:Lcom/tencent/mm/ui/j;
+    move-result-object v0
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/j;->c(Lcom/tencent/mm/ui/j;)Landroid/content/Context;
+    const/16 v1, 0x8
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    .line 231
-    :cond_0
+    .line 214
     return-void
 .end method

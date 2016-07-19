@@ -7,7 +7,7 @@ final class f$1
   
   public final void run()
   {
-    bQ.execPendingActions();
+    ce.execPendingActions();
   }
 }
 

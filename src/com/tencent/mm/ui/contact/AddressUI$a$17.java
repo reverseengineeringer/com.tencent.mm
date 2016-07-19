@@ -2,16 +2,16 @@ package com.tencent.mm.ui.contact;
 
 import android.view.View;
 import android.widget.ListView;
-import com.tencent.mm.ui.base.MMSlideDelView.g;
+import com.tencent.mm.ui.base.MMSlideDelView.c;
 
 final class AddressUI$a$17
-  implements MMSlideDelView.g
+  implements MMSlideDelView.c
 {
   AddressUI$a$17(AddressUI.a parama) {}
   
-  public final void j(View paramView, int paramInt)
+  public final int I(View paramView)
   {
-    AddressUI.a.c(liu).performItemClick(paramView, paramInt, 0L);
+    return AddressUI.a.c(lIF).getPositionForView(paramView);
   }
 }
 

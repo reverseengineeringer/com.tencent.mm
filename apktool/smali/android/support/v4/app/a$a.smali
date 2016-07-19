@@ -12,3 +12,8 @@
     accessFlags = 0x609
     name = "a"
 .end annotation
+
+
+# virtual methods
+.method public abstract onRequestPermissionsResult(I[Ljava/lang/String;[I)V
+.end method

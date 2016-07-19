@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hly:Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3;
+.field final synthetic hBB:Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 154
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3$1;->hly:Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3$1;->hBB:Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,24 +41,24 @@
 
     .prologue
     .line 158
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3$1;->hly:Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3$1;->hBB:Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3;->hlx:Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3;->hBA:Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hbK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hqA:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->aBV()I
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->aEV()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 159
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3$1;->hly:Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3$1;->hBB:Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3;->hlx:Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3;->hBA:Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->aCN()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->aFS()V
 
     .line 161
     :cond_0

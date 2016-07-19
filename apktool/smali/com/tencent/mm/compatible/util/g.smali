@@ -9,11 +9,11 @@
 
     .prologue
     .line 35
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/compatible/d/j;->bsk:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/d/j;->bgn:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -31,9 +31,9 @@
     :cond_0
     new-instance v0, Ljava/io/File;
 
-    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/compatible/d/j;->bsk:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/compatible/d/j;->bgn:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -45,11 +45,11 @@
 
     .prologue
     .line 18
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/compatible/d/j;->bsi:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/d/j;->bgl:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -67,9 +67,9 @@
     :cond_0
     new-instance v0, Ljava/io/File;
 
-    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/compatible/d/j;->bsi:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/compatible/d/j;->bgl:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -84,11 +84,11 @@
 
     .prologue
     .line 27
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/compatible/d/j;->bsj:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/d/j;->bgm:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -106,9 +106,9 @@
     :cond_0
     new-instance v0, Ljava/io/File;
 
-    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/compatible/d/j;->bsj:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/compatible/d/j;->bgm:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -120,11 +120,11 @@
 
     .prologue
     .line 59
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/compatible/d/j;->bsm:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/d/j;->bgp:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -140,14 +140,14 @@
     return-object v0
 
     :cond_0
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/compatible/d/j;->bsm:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/d/j;->bgp:Ljava/lang/String;
 
     goto :goto_0
 .end method
 
-.method public static oW()Z
+.method public static no()Z
     .locals 3
 
     .prologue

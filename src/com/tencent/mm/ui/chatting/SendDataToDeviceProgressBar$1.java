@@ -7,7 +7,7 @@ final class SendDataToDeviceProgressBar$1
   
   public final void run()
   {
-    ldw.invalidate();
+    lDM.invalidate();
   }
 }
 

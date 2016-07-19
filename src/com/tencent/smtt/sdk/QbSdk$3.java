@@ -1,39 +1,37 @@
 package com.tencent.smtt.sdk;
 
+import android.content.Context;
+import android.os.Handler;
+
 final class QbSdk$3
-  implements n
+  extends Thread
 {
-  public final void onDownloadFinish(int paramInt)
-  {
-    k.lSz = false;
-    if (QbSdk.bll() != null) {
-      QbSdk.bll().onDownloadFinish(paramInt);
-    }
-    if (QbSdk.mTbsListenerDebug != null) {
-      QbSdk.mTbsListenerDebug.onDownloadFinish(paramInt);
-    }
-  }
+  QbSdk$3(Context paramContext, Handler paramHandler) {}
   
-  public final void onDownloadProgress(int paramInt)
+  public final void run()
   {
-    if (QbSdk.mTbsListenerDebug != null) {
-      QbSdk.mTbsListenerDebug.onDownloadProgress(paramInt);
+    if (m.brX().ff(val$context) == 0) {
+      m.brX().s(val$context, true);
     }
-    if (QbSdk.bll() != null) {
-      QbSdk.bll().onDownloadProgress(paramInt);
+    d locald = d.jb(true);
+    locald.o(val$context, true);
+    if (q.fr(val$context))
+    {
+      if (!q.fx(val$context.getApplicationContext())) {
+        k.p(val$context, false);
+      }
+      if ((!WebView.mSysWebviewCreated) && (!QbSdk.mtd)) {
+        QbSdk.msX = false;
+      }
     }
-  }
-  
-  public final void onInstallFinish(int paramInt)
-  {
-    QbSdk.setTBSInstallingStatus(false);
-    k.lSz = false;
-    if (QbSdk.bll() != null) {
-      QbSdk.bll().onInstallFinish(paramInt);
+    boolean bool = locald.brr();
+    mtm.sendEmptyMessage(3);
+    if (!bool)
+    {
+      mtm.sendEmptyMessage(2);
+      return;
     }
-    if (QbSdk.mTbsListenerDebug != null) {
-      QbSdk.mTbsListenerDebug.onInstallFinish(paramInt);
-    }
+    mtm.sendEmptyMessage(1);
   }
 }
 

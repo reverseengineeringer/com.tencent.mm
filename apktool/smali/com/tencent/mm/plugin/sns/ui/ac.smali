@@ -3,667 +3,205 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/mm/plugin/sns/ui/ac$a;
-    }
-.end annotation
-
-
 # instance fields
-.field cWk:Lcom/tencent/mm/ui/MMActivity;
+.field gXB:J
 
-.field private duI:Landroid/view/ViewGroup;
+.field hnV:J
 
-.field gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
+.field hnW:I
 
-.field private gzm:Lcom/tencent/mm/plugin/sight/draft/ui/a;
+.field limitSeq:Ljava/lang/String;
 
-.field haL:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
+.field position:I
 
-.field haM:Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;
-
-.field haN:Landroid/view/ViewGroup;
-
-.field haO:Landroid/graphics/drawable/TransitionDrawable;
-
-.field haP:Z
-
-.field haQ:Z
-
-.field haR:Landroid/widget/ImageView;
-
-.field haS:Landroid/widget/TextView;
-
-.field haT:Lcom/tencent/mm/plugin/sns/ui/ac$a;
-
-.field private haU:Landroid/view/animation/TranslateAnimation;
-
-.field private haV:Landroid/view/animation/TranslateAnimation;
+.field respMinSeq:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;Landroid/view/ViewGroup;Lcom/tencent/mm/ui/MMActivity;Lcom/tencent/mm/plugin/sns/ui/ac$a;)V
-    .locals 9
+.method public constructor <init>()V
+    .locals 4
 
     .prologue
-    .line 63
+    const-wide/16 v2, 0x0
+
+    const/4 v1, 0x0
+
+    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 203
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/ac$4;
+    .line 11
+    iput-wide v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->hnV:J
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/ac$4;-><init>(Lcom/tencent/mm/plugin/sns/ui/ac;)V
+    .line 50
+    const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->gzm:Lcom/tencent/mm/plugin/sight/draft/ui/a;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->limitSeq:Ljava/lang/String;
 
-    .line 64
-    iput-object p3, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->cWk:Lcom/tencent/mm/ui/MMActivity;
+    .line 51
+    const-string/jumbo v0, ""
 
-    .line 65
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->duI:Landroid/view/ViewGroup;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->respMinSeq:Ljava/lang/String;
 
-    .line 66
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haN:Landroid/view/ViewGroup;
+    .line 52
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->position:I
 
-    .line 67
-    iput-object p4, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haT:Lcom/tencent/mm/plugin/sns/ui/ac$a;
+    .line 53
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->hnW:I
 
-    .line 68
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->cWk:Lcom/tencent/mm/ui/MMActivity;
+    .line 55
+    iput-wide v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->gXB:J
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/MMActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0404ba
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/drawable/TransitionDrawable;
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haO:Landroid/graphics/drawable/TransitionDrawable;
-
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haL:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->cWk:Lcom/tencent/mm/ui/MMActivity;
-
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v0
-
-    const v1, 0x7f0a04d6
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->duI:Landroid/view/ViewGroup;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haL:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haL:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
-
-    const v1, 0x7f070f04
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haM:Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haM:Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->duI:Landroid/view/ViewGroup;
-
-    invoke-virtual {v1}, Landroid/view/ViewGroup;->getTop()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gV(I)V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haM:Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->a(FZ)V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haL:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haM:Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->setSightIconView(Landroid/view/View;)V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haL:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
-
-    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/ac$1;
-
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/ac$1;-><init>(Lcom/tencent/mm/plugin/sns/ui/ac;)V
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->setIMainSightViewCallback(Lcom/tencent/mm/plugin/sight/encode/ui/b;)V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->duI:Landroid/view/ViewGroup;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haL:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haL:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->cWk:Lcom/tencent/mm/ui/MMActivity;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->a(Lcom/tencent/mm/ui/MMFragmentActivity;)V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haL:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->setIsForSns(Z)V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haL:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->setVisibility(I)V
-
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->cWk:Lcom/tencent/mm/ui/MMActivity;
-
-    iget-object v0, v0, Landroid/support/v7/app/ActionBarActivity;->iF:Landroid/support/v7/app/a;
-
-    invoke-virtual {v0}, Landroid/support/v7/app/a;->aP()Landroid/support/v7/app/ActionBar;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haO:Landroid/graphics/drawable/TransitionDrawable;
-
-    invoke-virtual {v0, v1}, Landroid/support/v7/app/ActionBar;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    new-instance v0, Landroid/view/animation/TranslateAnimation;
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x1
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x1
-
-    const/high16 v8, 0x3f800000    # 1.0f
-
-    invoke-direct/range {v0 .. v8}, Landroid/view/animation/TranslateAnimation;-><init>(IFIFIFIF)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haU:Landroid/view/animation/TranslateAnimation;
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haU:Landroid/view/animation/TranslateAnimation;
-
-    const-wide/16 v1, 0xe6
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haU:Landroid/view/animation/TranslateAnimation;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/animation/TranslateAnimation;->setRepeatCount(I)V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haU:Landroid/view/animation/TranslateAnimation;
-
-    new-instance v1, Landroid/view/animation/DecelerateInterpolator;
-
-    const/high16 v2, 0x3fc00000    # 1.5f
-
-    invoke-direct {v1, v2}, Landroid/view/animation/DecelerateInterpolator;-><init>(F)V
-
-    invoke-virtual {v0, v1}, Landroid/view/animation/TranslateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haU:Landroid/view/animation/TranslateAnimation;
-
-    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/ac$2;
-
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/ac$2;-><init>(Lcom/tencent/mm/plugin/sns/ui/ac;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/animation/TranslateAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
-
-    new-instance v0, Landroid/view/animation/TranslateAnimation;
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x1
-
-    const/high16 v6, 0x3f800000    # 1.0f
-
-    const/4 v7, 0x1
-
-    const/4 v8, 0x0
-
-    invoke-direct/range {v0 .. v8}, Landroid/view/animation/TranslateAnimation;-><init>(IFIFIFIF)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haV:Landroid/view/animation/TranslateAnimation;
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haV:Landroid/view/animation/TranslateAnimation;
-
-    const-wide/16 v1, 0xe6
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haV:Landroid/view/animation/TranslateAnimation;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/animation/TranslateAnimation;->setRepeatCount(I)V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haV:Landroid/view/animation/TranslateAnimation;
-
-    new-instance v1, Landroid/view/animation/DecelerateInterpolator;
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    invoke-direct {v1, v2}, Landroid/view/animation/DecelerateInterpolator;-><init>(F)V
-
-    invoke-virtual {v0, v1}, Landroid/view/animation/TranslateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haV:Landroid/view/animation/TranslateAnimation;
-
-    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/ac$3;
-
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/ac$3;-><init>(Lcom/tencent/mm/plugin/sns/ui/ac;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/animation/TranslateAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
-
-    .line 70
+    .line 48
     return-void
-.end method
-
-.method private eX(Z)V
-    .locals 1
-
-    .prologue
-    .line 253
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->cWk:Lcom/tencent/mm/ui/MMActivity;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqo:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
-
-    .line 254
-    if-nez v0, :cond_0
-
-    .line 258
-    :goto_0
-    return-void
-
-    .line 257
-    :cond_0
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->setEnableGesture(Z)V
-
-    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final aBk()V
-    .locals 5
-
-    .prologue
-    const/4 v4, 0x1
-
-    const/4 v3, 0x0
-
-    .line 324
-    invoke-direct {p0, v3}, Lcom/tencent/mm/plugin/sns/ui/ac;->eX(Z)V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haL:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
-
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->setVisibility(I)V
-
-    invoke-static {}, Lcom/tencent/mm/an/j;->Eb()Lcom/tencent/mm/an/h;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/an/h;->DS()I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haL:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->gzm:Lcom/tencent/mm/plugin/sight/draft/ui/a;
-
-    iget-object v2, v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
-
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->setSightDraftCallback(Lcom/tencent/mm/plugin/sight/draft/ui/a;)V
-
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
-
-    invoke-virtual {v1, v3}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->setVisibility(I)V
-
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
-
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->awf()V
-
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
-
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->awe()V
-
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
-
-    const v2, 0x7f0b0c79
-
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->setTipsResId(I)V
-
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->cWk:Lcom/tencent/mm/ui/MMActivity;
-
-    iget-object v0, v0, Landroid/support/v7/app/ActionBarActivity;->iF:Landroid/support/v7/app/a;
-
-    invoke-virtual {v0}, Landroid/support/v7/app/a;->aP()Landroid/support/v7/app/ActionBar;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->cWk:Lcom/tencent/mm/ui/MMActivity;
-
-    invoke-static {v1}, Lcom/tencent/mm/ui/p;->ee(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v1
-
-    const v2, 0x7f0a04ef
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/support/v7/app/ActionBar;->setCustomView(Landroid/view/View;)V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->cWk:Lcom/tencent/mm/ui/MMActivity;
-
-    iget-object v0, v0, Landroid/support/v7/app/ActionBarActivity;->iF:Landroid/support/v7/app/a;
-
-    invoke-virtual {v0}, Landroid/support/v7/app/a;->aP()Landroid/support/v7/app/ActionBar;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/support/v7/app/ActionBar;->getCustomView()Landroid/view/View;
-
-    move-result-object v1
-
-    const v0, 0x7f070f41
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haR:Landroid/widget/ImageView;
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haR:Landroid/widget/ImageView;
-
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setTag(Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haR:Landroid/widget/ImageView;
-
-    new-instance v2, Lcom/tencent/mm/plugin/sns/ui/ac$5;
-
-    invoke-direct {v2, p0}, Lcom/tencent/mm/plugin/sns/ui/ac$5;-><init>(Lcom/tencent/mm/plugin/sns/ui/ac;)V
-
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f070f43
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haS:Landroid/widget/TextView;
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haS:Landroid/widget/TextView;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haS:Landroid/widget/TextView;
-
-    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/ac$6;
-
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/ac$6;-><init>(Lcom/tencent/mm/plugin/sns/ui/ac;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haQ:Z
-
-    :goto_0
-    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haP:Z
-
-    .line 325
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haM:Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->duI:Landroid/view/ViewGroup;
-
-    invoke-virtual {v1}, Landroid/view/ViewGroup;->getTop()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gV(I)V
-
-    .line 326
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haN:Landroid/view/ViewGroup;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haU:Landroid/view/animation/TranslateAnimation;
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->startAnimation(Landroid/view/animation/Animation;)V
-
-    .line 327
-    return-void
-
-    .line 324
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haL:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->awO()V
-
-    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haQ:Z
-
-    goto :goto_0
-.end method
-
-.method public final aBl()Z
-    .locals 4
+.method public final aEl()Z
+    .locals 10
 
     .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 340
-    iget-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haQ:Z
+    .line 30
+    iget-wide v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->hnV:J
 
-    if-eqz v2, :cond_0
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/be;->av(J)J
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
+    move-result-wide v2
 
-    if-eqz v2, :cond_0
+    .line 31
+    const-string/jumbo v4, "MicroMsg.ResumeSnsControl"
 
-    .line 341
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
+    const-string/jumbo v5, "resume time %d"
 
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->awg()Z
+    new-array v6, v1, [Ljava/lang/Object;
 
-    .line 353
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v7
+
+    aput-object v7, v6, v0
+
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 34
+    const-string/jumbo v4, "MicroMsg.ResumeSnsControl"
+
+    const-string/jumbo v5, "lastSnsTime %s limitSeq %s respMinSeq %s timeLastId %s position %s topy %s"
+
+    const/4 v6, 0x6
+
+    new-array v6, v6, [Ljava/lang/Object;
+
+    iget-wide v8, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->hnV:J
+
+    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v7
+
+    aput-object v7, v6, v0
+
+    iget-object v7, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->limitSeq:Ljava/lang/String;
+
+    aput-object v7, v6, v1
+
+    const/4 v7, 0x2
+
+    iget-object v8, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->respMinSeq:Ljava/lang/String;
+
+    aput-object v8, v6, v7
+
+    const/4 v7, 0x3
+
+    iget-wide v8, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->gXB:J
+
+    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v8
+
+    aput-object v8, v6, v7
+
+    const/4 v7, 0x4
+
+    iget v8, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->position:I
+
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    aput-object v8, v6, v7
+
+    const/4 v7, 0x5
+
+    iget v8, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->hnW:I
+
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    aput-object v8, v6, v7
+
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 36
+    const-wide/32 v4, 0x2bf20
+
+    cmp-long v2, v2, v4
+
+    if-gez v2, :cond_0
+
+    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->position:I
+
+    if-lez v2, :cond_0
+
+    .line 37
+    const-string/jumbo v2, "MicroMsg.ResumeSnsControl"
+
+    const-string/jumbo v3, "timeLastId is %d "
+
+    new-array v4, v1, [Ljava/lang/Object;
+
+    iget-wide v6, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->gXB:J
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    aput-object v5, v4, v0
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 38
+    iget-wide v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->gXB:J
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_1
+
+    .line 44
+    :cond_0
     :goto_0
     return v0
 
-    .line 344
-    :cond_0
-    iget-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haP:Z
-
-    if-eqz v2, :cond_1
-
-    .line 345
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haU:Landroid/view/animation/TranslateAnimation;
-
-    invoke-virtual {v2}, Landroid/view/animation/TranslateAnimation;->cancel()V
-
-    .line 346
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haV:Landroid/view/animation/TranslateAnimation;
-
-    invoke-virtual {v2}, Landroid/view/animation/TranslateAnimation;->cancel()V
-
-    .line 347
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haN:Landroid/view/ViewGroup;
-
-    invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->setVisibility(I)V
-
-    .line 348
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haL:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
-
-    const/16 v3, 0x8
-
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->setVisibility(I)V
-
-    .line 349
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haO:Landroid/graphics/drawable/TransitionDrawable;
-
-    invoke-virtual {v2, v0}, Landroid/graphics/drawable/TransitionDrawable;->reverseTransition(I)V
-
-    .line 350
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haP:Z
-
-    .line 351
-    invoke-direct {p0, v1}, Lcom/tencent/mm/plugin/sns/ui/ac;->eX(Z)V
-
+    .line 41
     :cond_1
-    move v0, v1
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->getSnsServer()Lcom/tencent/mm/plugin/sns/e/ak$a;
 
-    .line 353
-    goto :goto_0
-.end method
+    move-result-object v0
 
-.method public final clean()V
-    .locals 1
+    iget-wide v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->gXB:J
 
-    .prologue
-    .line 357
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haL:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
+    const/4 v4, -0x1
 
-    if-eqz v0, :cond_0
-
-    .line 358
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haL:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->Qo()V
-
-    .line 360
-    :cond_0
-    return-void
-.end method
-
-.method public final eY(Z)Z
-    .locals 4
-
-    .prologue
-    const/16 v3, 0x8
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    .line 330
-    iget-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haQ:Z
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
-
-    invoke-virtual {v2, p1}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->eH(Z)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 336
-    :goto_0
-    return v0
-
-    .line 334
-    :cond_0
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
-
-    invoke-virtual {v2}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->clearCache()V
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
-
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->setVisibility(I)V
-
-    :cond_1
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haP:Z
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haL:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
-
-    invoke-virtual {v2, v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->n(ZZ)V
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haL:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
-
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->setVisibility(I)V
-
-    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/ac;->eX(Z)V
-
-    .line 335
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haN:Landroid/view/ViewGroup;
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/ac;->haV:Landroid/view/animation/TranslateAnimation;
-
-    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->startAnimation(Landroid/view/animation/Animation;)V
+    invoke-virtual {v0, v2, v3, v4}, Lcom/tencent/mm/plugin/sns/e/ak$a;->p(JI)V
 
     move v0, v1
 
-    .line 336
+    .line 42
     goto :goto_0
 .end method

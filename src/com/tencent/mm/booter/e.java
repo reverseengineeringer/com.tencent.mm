@@ -6,23 +6,23 @@ import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import com.tencent.mm.network.z;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class e
 {
-  NetworkInfo bmF = null;
-  WifiInfo bmG = null;
+  NetworkInfo bal = null;
+  WifiInfo bam = null;
   
-  final boolean mQ()
+  final boolean ld()
   {
     try
     {
       Object localObject = (ConnectivityManager)z.getContext().getSystemService("connectivity");
       if (localObject == null)
       {
-        u.w("!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI=", "can't get ConnectivityManager");
-        bmF = null;
-        bmG = null;
+        v.w("MicroMsg.NetworkChangeMgr", "can't get ConnectivityManager");
+        bal = null;
+        bam = null;
         return false;
       }
       try
@@ -30,9 +30,9 @@ public final class e
         localObject = ((ConnectivityManager)localObject).getActiveNetworkInfo();
         if (localObject == null)
         {
-          u.w("!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI=", "ActiveNetwork is null, has no network");
-          bmF = null;
-          bmG = null;
+          v.w("MicroMsg.NetworkChangeMgr", "ActiveNetwork is null, has no network");
+          bal = null;
+          bam = null;
           return false;
         }
       }
@@ -40,7 +40,7 @@ public final class e
       {
         for (;;)
         {
-          u.e("!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI=", "getActiveNetworkInfo failed.");
+          v.e("MicroMsg.NetworkChangeMgr", "getActiveNetworkInfo failed.");
           localNetworkInfo = null;
         }
       }
@@ -64,33 +64,33 @@ public final class e
     if (i != 0)
     {
       localWifiInfo = ((WifiManager)z.getContext().getSystemService("wifi")).getConnectionInfo();
-      if ((localWifiInfo != null) && (bmG != null) && (bmG.getBSSID().equals(localWifiInfo.getBSSID())) && (bmG.getSSID().equals(localWifiInfo.getSSID())) && (bmG.getNetworkId() == localWifiInfo.getNetworkId()))
+      if ((localWifiInfo != null) && (bam != null) && (bam.getBSSID().equals(localWifiInfo.getBSSID())) && (bam.getSSID().equals(localWifiInfo.getSSID())) && (bam.getNetworkId() == localWifiInfo.getNetworkId()))
       {
-        u.w("!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI=", "Same Wifi, do not NetworkChanged");
+        v.w("MicroMsg.NetworkChangeMgr", "Same Wifi, do not NetworkChanged");
         return false;
       }
-      u.d("!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI=", "New Wifi Info:%s", new Object[] { localWifiInfo });
-      u.d("!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI=", "OldWifi Info:%s", new Object[] { bmG });
+      v.d("MicroMsg.NetworkChangeMgr", "New Wifi Info:%s", new Object[] { localWifiInfo });
+      v.d("MicroMsg.NetworkChangeMgr", "OldWifi Info:%s", new Object[] { bam });
       if (i == 0)
       {
-        u.d("!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI=", "New NetworkInfo:%s", new Object[] { localNetworkInfo });
-        if (bmF != null) {
-          u.d("!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI=", "Old NetworkInfo:%s", new Object[] { bmF });
+        v.d("MicroMsg.NetworkChangeMgr", "New NetworkInfo:%s", new Object[] { localNetworkInfo });
+        if (bal != null) {
+          v.d("MicroMsg.NetworkChangeMgr", "Old NetworkInfo:%s", new Object[] { bal });
         }
       }
-      bmF = localNetworkInfo;
-      bmG = localWifiInfo;
+      bal = localNetworkInfo;
+      bam = localWifiInfo;
     }
     else
     {
-      if ((bmF != null) && (bmF.getExtraInfo() != null) && (localNetworkInfo.getExtraInfo() != null) && (bmF.getExtraInfo().equals(localNetworkInfo.getExtraInfo())) && (bmF.getSubtype() == localNetworkInfo.getSubtype()) && (bmF.getType() == localNetworkInfo.getType()))
+      if ((bal != null) && (bal.getExtraInfo() != null) && (localNetworkInfo.getExtraInfo() != null) && (bal.getExtraInfo().equals(localNetworkInfo.getExtraInfo())) && (bal.getSubtype() == localNetworkInfo.getSubtype()) && (bal.getType() == localNetworkInfo.getType()))
       {
-        u.w("!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI=", "Same Network, do not NetworkChanged");
+        v.w("MicroMsg.NetworkChangeMgr", "Same Network, do not NetworkChanged");
         return false;
       }
-      if ((bmF != null) && (bmF.getExtraInfo() == null) && (localNetworkInfo.getExtraInfo() == null) && (bmF.getSubtype() == localNetworkInfo.getSubtype()) && (bmF.getType() == localNetworkInfo.getType()))
+      if ((bal != null) && (bal.getExtraInfo() == null) && (localNetworkInfo.getExtraInfo() == null) && (bal.getSubtype() == localNetworkInfo.getSubtype()) && (bal.getType() == localNetworkInfo.getType()))
       {
-        u.w("!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI=", "Same Network, do not NetworkChanged");
+        v.w("MicroMsg.NetworkChangeMgr", "Same Network, do not NetworkChanged");
         return false;
       }
     }

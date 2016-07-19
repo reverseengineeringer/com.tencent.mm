@@ -3,19 +3,19 @@ package com.tencent.mm.plugin.sight.draft.ui;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.an.f;
+import com.tencent.mm.aq.j;
 import com.tencent.mm.plugin.sight.decode.a.a;
 
 final class b$e
 {
-  TextView cMz;
-  View cTx;
-  f cfv;
-  ImageView dVm;
-  View gzA;
-  ImageView gzB;
-  View gzy;
-  a gzz;
+  TextView cJv;
+  View cQS;
+  j caH;
+  ImageView dXt;
+  View gGa;
+  a gGb;
+  View gGc;
+  ImageView gGd;
 }
 
 /* Location:

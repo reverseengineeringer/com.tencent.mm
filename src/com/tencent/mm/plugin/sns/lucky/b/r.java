@@ -4,10 +4,10 @@ import java.util.LinkedList;
 
 public final class r
 {
-  private static r gIM = null;
-  private static String gIh = "";
-  StringBuffer cuM = new StringBuffer();
-  LinkedList gIN = new LinkedList();
+  private static String gPm = "";
+  private static r gQn = null;
+  StringBuffer cqq = new StringBuffer();
+  LinkedList<q> gQo = new LinkedList();
 }
 
 /* Location:

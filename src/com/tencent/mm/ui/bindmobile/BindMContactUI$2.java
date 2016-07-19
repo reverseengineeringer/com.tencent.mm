@@ -2,13 +2,13 @@ package com.tencent.mm.ui.bindmobile;
 
 import android.widget.EditText;
 import com.tencent.mm.modelsimple.c;
-import com.tencent.mm.sdk.platformtools.ab.a;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.ad.a;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class BindMContactUI$2
-  implements ab.a
+  implements ad.a
 {
-  String daR;
+  String cZx;
   
   BindMContactUI$2(BindMContactUI paramBindMContactUI) {}
   
@@ -17,27 +17,27 @@ final class BindMContactUI$2
     return super.toString() + "|initView";
   }
   
-  public final boolean vd()
+  public final boolean vf()
   {
-    daR = c.v(kOD, BindMContactUI.c(kOD));
+    cZx = c.w(lnT, BindMContactUI.c(lnT));
     return true;
   }
   
-  public final boolean ve()
+  public final boolean vg()
   {
-    if (ay.kz(BindMContactUI.b(kOD).getText().trim()))
+    if (be.kf(BindMContactUI.b(lnT).getText().trim()))
     {
-      if (ay.kz(daR)) {
+      if (be.kf(cZx)) {
         break label75;
       }
-      BindMContactUI.b(kOD).setText(daR);
-      BindMContactUI.b(kOD).setSelection(daR.length());
+      BindMContactUI.b(lnT).setText(cZx);
+      BindMContactUI.b(lnT).setSelection(cZx.length());
     }
     for (;;)
     {
       return true;
       label75:
-      BindMContactUI.b(kOD).setText("");
+      BindMContactUI.b(lnT).setText("");
     }
   }
 }

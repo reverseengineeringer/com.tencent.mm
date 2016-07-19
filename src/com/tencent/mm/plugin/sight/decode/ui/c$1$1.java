@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.widget.ImageView;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.g;
 import java.io.File;
 
@@ -16,21 +16,21 @@ final class c$1$1
   
   public final void run()
   {
-    Object localObject = (ImageView)gyJ.gyI.findViewById(2131166462);
-    ((ImageView)localObject).setImageBitmap(fRQ);
+    Object localObject = (ImageView)gFi.gFh.findViewById(2131756835);
+    ((ImageView)localObject).setImageBitmap(gaT);
     ((ImageView)localObject).setVisibility(0);
     localObject = new Intent();
     ((Intent)localObject).setAction("android.intent.action.VIEW");
-    ((Intent)localObject).setDataAndType(Uri.fromFile(new File(fbI)), "video/*");
+    ((Intent)localObject).setDataAndType(Uri.fromFile(new File(fki)), "video/*");
     try
     {
-      gyJ.gyI.getContext().startActivity(Intent.createChooser((Intent)localObject, gyJ.gyI.getContext().getString(2131432531)));
+      gFi.gFh.getContext().startActivity(Intent.createChooser((Intent)localObject, gFi.gFh.getContext().getString(2131232712)));
       return;
     }
     catch (Exception localException)
     {
-      u.e("!44@/B4Tb64lLpKYc17gQ4E+i2zzIzCJ7JpqKkNH7lU5Rrk=", "startActivity fail, activity not found");
-      g.e(gyJ.gyI.getContext(), 2131432547, 2131432546);
+      v.e("MicroMsg.VideoPopupHelper", "startActivity fail, activity not found");
+      g.f(gFi.gFh.getContext(), 2131232633, 2131232634);
     }
   }
 }

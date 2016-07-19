@@ -1,52 +1,52 @@
 package com.tencent.mm.pluginsdk.model.app;
 
-import com.tencent.mm.d.b.bg;
-import com.tencent.mm.g.e;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.h.e;
+import com.tencent.mm.model.ah;
 import com.tencent.mm.model.ar;
-import com.tencent.mm.model.c;
 import com.tencent.mm.pluginsdk.i.ad;
 import com.tencent.mm.pluginsdk.i.ag;
-import com.tencent.mm.protocal.b;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.sdk.platformtools.f;
-import com.tencent.mm.sdk.platformtools.q;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.sdk.platformtools.r;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
 import java.util.Map;
 
 public final class a
 {
-  public String asL;
-  public String aut;
-  public long hrr;
-  public int iAN;
-  public long iAO;
+  public String agg;
+  public String desc;
+  public long hIB;
+  public int iXr;
+  public long iXs;
   public int size;
   public String url;
   
   public a(String paramString)
   {
-    Map localMap = q.J(paramString, "msg", null);
-    asL = ((String)localMap.get(".msg.appmsg.des"));
-    iAN = ay.getInt((String)localMap.get(".msg.alphainfo.clientVersion"), 0);
+    Map localMap = r.cr(paramString, "msg");
+    desc = ((String)localMap.get(".msg.appmsg.des"));
+    iXr = be.getInt((String)localMap.get(".msg.alphainfo.clientVersion"), 0);
     url = ((String)localMap.get(".msg.alphainfo.url"));
-    size = ay.getInt((String)localMap.get(".msg.alphainfo.size"), 0);
-    aut = ((String)localMap.get(".msg.alphainfo.md5"));
-    iAO = ay.getLong((String)localMap.get(".msg.alphainfo.maxAge"), 0L);
-    hrr = ay.getLong((String)localMap.get(".msg.alphainfo.expireTime"), 0L);
-    u.i("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "updateInfo, content:%s, clientVersion:%d, url:%s, size:%d, md5:%s, desc:%s, maxAge:%d, expireTime:%d", new Object[] { paramString, Integer.valueOf(iAN), url, Integer.valueOf(size), aut, asL, Long.valueOf(iAO), Long.valueOf(hrr) });
+    size = be.getInt((String)localMap.get(".msg.alphainfo.size"), 0);
+    agg = ((String)localMap.get(".msg.alphainfo.md5"));
+    iXs = be.getLong((String)localMap.get(".msg.alphainfo.maxAge"), 0L);
+    hIB = be.getLong((String)localMap.get(".msg.alphainfo.expireTime"), 0L);
+    v.i("MicroMsg.AlphaUpdateInfo", "updateInfo, content:%s, clientVersion:%d, url:%s, size:%d, md5:%s, desc:%s, maxAge:%d, expireTime:%d", new Object[] { paramString, Integer.valueOf(iXr), url, Integer.valueOf(size), agg, desc, Long.valueOf(iXs), Long.valueOf(hIB) });
   }
   
-  public static a aPv()
+  public static a aUd()
   {
-    Object localObject = (String)com.tencent.mm.model.ah.tD().rn().get(352273, "");
-    if (!ay.kz((String)localObject))
+    Object localObject = (String)ah.tE().ro().get(352273, "");
+    if (!be.kf((String)localObject))
     {
       localObject = new a((String)localObject);
-      if ((!((a)localObject).isValid()) || (((a)localObject).aPw()))
+      if ((!((a)localObject).isValid()) || (((a)localObject).aUe()))
       {
-        aPx();
+        aUf();
         return null;
       }
     }
@@ -57,87 +57,87 @@ public final class a
     return (a)localObject;
   }
   
-  private boolean aPw()
+  private boolean aUe()
   {
-    long l = ((Long)com.tencent.mm.model.ah.tD().rn().get(352274, Long.valueOf(System.currentTimeMillis()))).longValue();
-    if ((System.currentTimeMillis() - l > iAO) || (System.currentTimeMillis() > hrr)) {}
+    long l = ((Long)ah.tE().ro().get(352274, Long.valueOf(System.currentTimeMillis()))).longValue();
+    if ((System.currentTimeMillis() - l > iXs) || (System.currentTimeMillis() > hIB)) {}
     for (boolean bool = true;; bool = false)
     {
-      u.i("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "isExpired: %b", new Object[] { Boolean.valueOf(bool) });
+      v.i("MicroMsg.AlphaUpdateInfo", "isExpired: %b", new Object[] { Boolean.valueOf(bool) });
       return bool;
     }
   }
   
-  public static void aPx()
+  public static void aUf()
   {
-    com.tencent.mm.model.ah.tD().rn().set(352273, null);
-    com.tencent.mm.model.ah.tD().rn().set(352274, null);
+    ah.tE().ro().set(352273, null);
+    ah.tE().ro().set(352274, null);
   }
   
   private boolean isValid()
   {
-    if ((iAN > b.iUf) && (!ay.kz(url)) && (!ay.kz(aut)) && (!ay.kz(asL))) {}
+    if ((iXr > com.tencent.mm.protocal.c.jry) && (!be.kf(url)) && (!be.kf(agg)) && (!be.kf(desc))) {}
     for (boolean bool = true;; bool = false)
     {
-      u.i("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "isValid %b", new Object[] { Boolean.valueOf(bool) });
+      v.i("MicroMsg.AlphaUpdateInfo", "isValid %b", new Object[] { Boolean.valueOf(bool) });
       return bool;
     }
   }
   
-  public final void aPy()
+  public final void aUg()
   {
-    ag localag = new ag();
-    localag.v(ar.d("weixin", ay.FR()));
-    localag.setType(1);
-    localag.setContent(asL);
-    u.d("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", field_content);
-    localag.bl(0);
-    localag.setTalker("weixin");
-    localag.bk(3);
-    ar.e(localag);
-    u.i("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "insertUpdateTextMsg");
-    aPx();
+    ai localai = new ai();
+    localai.v(ar.d("weixin", be.Go()));
+    localai.setType(1);
+    localai.setContent(desc);
+    v.d("MicroMsg.AlphaUpdateInfo", field_content);
+    localai.bC(0);
+    localai.cr("weixin");
+    localai.bB(3);
+    ar.e(localai);
+    v.i("MicroMsg.AlphaUpdateInfo", "insertUpdateTextMsg");
+    aUf();
   }
   
-  public final void aPz()
+  public final void aUh()
   {
-    u.i("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "downloadInSilence.");
-    if ((!isValid()) || (aPw())) {
+    v.i("MicroMsg.AlphaUpdateInfo", "downloadInSilence.");
+    if ((!isValid()) || (aUe())) {
       return;
     }
     int i;
-    if (ay.Dr(com.tencent.mm.g.h.pS().getValue("SilentDownloadApkAtWiFi")) != 0) {
+    if (be.FG(com.tencent.mm.h.h.om().getValue("SilentDownloadApkAtWiFi")) != 0) {
       i = 0;
     }
     while (i == 0)
     {
-      aPy();
+      aUg();
       return;
-      if ((((Integer)com.tencent.mm.model.ah.tD().rn().get(7, Integer.valueOf(0))).intValue() & 0x1000000) == 0)
+      if ((((Integer)ah.tE().ro().get(7, Integer.valueOf(0))).intValue() & 0x1000000) == 0)
       {
         i = 1;
         label76:
-        if ((!com.tencent.mm.sdk.platformtools.ah.dB(y.getContext())) || (i == 0)) {
+        if ((!ak.dC(aa.getContext())) || (i == 0)) {
           break label117;
         }
       }
       label117:
       for (i = 1;; i = 0)
       {
-        if ((f.akG & 0x1) == 0) {
+        if ((f.Xz & 0x1) == 0) {
           break label122;
         }
-        u.d("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "channel pack, not silence download.");
+        v.d("MicroMsg.AlphaUpdateInfo", "channel pack, not silence download.");
         i = 0;
         break;
         i = 0;
         break label76;
       }
       label122:
-      u.d("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "not channel pack.");
+      v.d("MicroMsg.AlphaUpdateInfo", "not channel pack.");
     }
-    u.i("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "go to download, %s, %d, %s, %s", new Object[] { aut, Integer.valueOf(size), asL, url });
-    i.ag.aPc().c(aut, size, asL.replaceFirst("(\n)*<a.*</a>(\n)*", "\n"), url);
+    v.i("MicroMsg.AlphaUpdateInfo", "go to download, %s, %d, %s, %s", new Object[] { agg, Integer.valueOf(size), desc, url });
+    i.ag.aTE().c(agg, size, desc.replaceFirst("(\n)*<a.*</a>(\n)*", "\n"), url);
   }
 }
 

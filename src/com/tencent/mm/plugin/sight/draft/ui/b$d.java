@@ -1,6 +1,9 @@
 package com.tencent.mm.plugin.sight.draft.ui;
 
-public enum b$d {}
+public enum b$d
+{
+  private b$d() {}
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.plugin.sight.draft.ui.b.d

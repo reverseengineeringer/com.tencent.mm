@@ -3,75 +3,75 @@ package com.tencent.mm.modelsimple;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.network.c;
 import com.tencent.mm.network.o;
-import com.tencent.mm.platformtools.r;
-import com.tencent.mm.protocal.b.ee;
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.h.d;
-import com.tencent.mm.protocal.i;
-import com.tencent.mm.protocal.i.a;
-import com.tencent.mm.protocal.i.b;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.m;
+import com.tencent.mm.platformtools.q;
+import com.tencent.mm.protocal.b.eh;
+import com.tencent.mm.protocal.k.c;
+import com.tencent.mm.protocal.k.d;
+import com.tencent.mm.protocal.l;
+import com.tencent.mm.protocal.l.a;
+import com.tencent.mm.protocal.l.b;
 import com.tencent.mm.sdk.b.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.m;
 
 public final class f
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private d anM;
-  private o bGh = new a();
+  private d bkT;
+  private o bzs = new a();
   
   private f(boolean paramBoolean)
   {
-    i.a locala = (i.a)bGh.vA();
-    netType = i.cn(y.getContext());
+    l.a locala = (l.a)bzs.vC();
+    netType = l.ci(aa.getContext());
     if (paramBoolean) {}
     for (int i = 1;; i = 2)
     {
-      iUN = i;
+      jsk = i;
       return;
     }
   }
   
-  public static void bb(boolean paramBoolean)
+  public static void aH(boolean paramBoolean)
   {
-    if (!ah.rh()) {}
-    while ((ah.tE() == null) || (tEbFO == null) || (tEbFO.vW() == null)) {
+    if (!ah.rg()) {}
+    while ((ah.tF() == null) || (tFbyZ == null) || (tFbyZ.vY() == null)) {
       return;
     }
     if (paramBoolean)
     {
-      tEbFO.vW().aN(true);
-      ah.tE().d(new f(true));
+      tFbyZ.vY().as(true);
+      ah.tF().a(new f(true), 0);
       return;
     }
-    paramBoolean = dN(2);
-    tEbFO.vW().aN(paramBoolean);
-    f localf = new f(dN(1));
-    ah.tE().d(localf);
+    paramBoolean = eu(2);
+    tFbyZ.vY().as(paramBoolean);
+    f localf = new f(eu(1));
+    ah.tF().a(localf, 0);
   }
   
-  private static boolean dN(int paramInt)
+  private static boolean eu(int paramInt)
   {
     int i;
-    if (r.cnR != -1) {
-      i = r.cnR;
+    if (q.ciW != -1) {
+      i = q.ciW;
     }
     boolean bool;
     for (;;)
     {
       bool = b.foreground;
-      u.i("!32@/B4Tb64lLpK+IBX8XDgnvpR6SGBhLV6+", "somr DynamicConfig checkBit:%d TestMuteRoomEnable:%d muteRoomDisable:%d fg:%b", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(r.cnR), Integer.valueOf(i), Boolean.valueOf(bool) });
+      v.i("MicroMsg.NetSceneBgFg", "somr DynamicConfig checkBit:%d TestMuteRoomEnable:%d muteRoomDisable:%d fg:%b", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(q.ciW), Integer.valueOf(i), Boolean.valueOf(bool) });
       if ((i & paramInt) == 0) {
         break;
       }
       return true;
       try
       {
-        i = ay.getInt(com.tencent.mm.g.h.pS().getValue("MuteRoomDisable"), 0);
+        i = be.getInt(com.tencent.mm.h.h.om().getValue("MuteRoomDisable"), 0);
       }
       catch (Exception localException)
       {
@@ -83,14 +83,14 @@ public final class f
   
   public final int a(com.tencent.mm.network.e parame, d paramd)
   {
-    anM = paramd;
-    return a(parame, bGh, this);
+    bkT = paramd;
+    return a(parame, bzs, this);
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    u.d("!32@/B4Tb64lLpK+IBX8XDgnvpR6SGBhLV6+", " ret[%d]", new Object[] { Integer.valueOf(tXiUO.fmB) });
-    anM.a(paramInt2, paramInt3, paramString, this);
+    v.d("MicroMsg.NetSceneBgFg", " ret[%d]", new Object[] { Integer.valueOf(tYjsl.fvC) });
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()
@@ -99,10 +99,10 @@ public final class f
   }
   
   public static final class a
-    extends com.tencent.mm.r.h
+    extends com.tencent.mm.t.h
   {
-    private final i.a caO = new i.a();
-    private final i.b caP = new i.b();
+    private final l.a bUx = new l.a();
+    private final l.b bUy = new l.b();
     
     public final int getType()
     {
@@ -114,14 +114,14 @@ public final class f
       return null;
     }
     
-    protected final h.c tW()
+    protected final k.c tX()
     {
-      return caO;
+      return bUx;
     }
     
-    public final h.d tX()
+    public final k.d tY()
     {
-      return caP;
+      return bUy;
     }
   }
 }

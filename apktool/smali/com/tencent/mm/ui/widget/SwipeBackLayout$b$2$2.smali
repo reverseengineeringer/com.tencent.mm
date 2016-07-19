@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lGS:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2;
+.field final synthetic mig:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 452
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;->lGS:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2;
+    iput-object p1, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;->mig:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final biD()V
+.method public final boz()V
     .locals 0
 
     .prologue
@@ -52,11 +52,11 @@
 
     .prologue
     .line 461
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;->lGS:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;->mig:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2;->lGQ:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b;
+    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2;->mie:Lcom/tencent/mm/ui/widget/SwipeBackLayout$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b;->lGP:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
+    iget-object v0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b;->mid:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
 
     const/4 v1, 0x1
 
@@ -67,7 +67,7 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2$1;-><init>(Lcom/tencent/mm/ui/widget/SwipeBackLayout$b$2$2;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
     .line 477
     return-void

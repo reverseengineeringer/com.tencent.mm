@@ -17,17 +17,17 @@ final class CropImageNewUI$20$2
       return;
     case 0: 
       paramMenuItem = new Intent();
-      paramMenuItem.putExtra("CropImage_OutputPath", luv.luq.getIntent().getStringExtra("CropImage_OutputPath"));
+      paramMenuItem.putExtra("CropImage_OutputPath", lVx.lVs.getIntent().getStringExtra("CropImage_OutputPath"));
       paramMenuItem.putExtra("OP_CODE", 1);
-      luv.luq.setResult(-1, paramMenuItem);
-      luv.luq.finish();
+      lVx.lVs.setResult(-1, paramMenuItem);
+      lVx.lVs.finish();
       return;
     }
     paramMenuItem = new Intent();
-    paramMenuItem.putExtra("CropImage_OutputPath", luv.luq.getIntent().getStringExtra("CropImage_OutputPath"));
+    paramMenuItem.putExtra("CropImage_OutputPath", lVx.lVs.getIntent().getStringExtra("CropImage_OutputPath"));
     paramMenuItem.putExtra("OP_CODE", 2);
-    luv.luq.setResult(-1, paramMenuItem);
-    luv.luq.finish();
+    lVx.lVs.setResult(-1, paramMenuItem);
+    lVx.lVs.finish();
   }
 }
 

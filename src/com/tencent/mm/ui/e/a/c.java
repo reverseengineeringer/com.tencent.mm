@@ -1,95 +1,228 @@
 package com.tencent.mm.ui.e.a;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-import com.tencent.mm.modelsearch.f;
-import com.tencent.mm.sdk.platformtools.u;
+import android.os.Bundle;
+import android.text.TextUtils;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.smtt.sdk.CookieManager;
+import com.tencent.smtt.sdk.CookieSyncManager;
 
 public final class c
-  extends a
 {
-  public String ltn;
-  private b lto = new b();
-  private a ltp = new a();
+  protected static String lRr = "https://m.facebook.com/dialog/";
+  protected static String lRs = "https://graph.facebook.com/";
+  protected static String lRt = "https://api.facebook.com/restserver.php";
+  private String ekS;
+  private final long lRA = 86400000L;
+  private long lRu = 0L;
+  public long lRv = 0L;
+  private Activity lRw;
+  private String[] lRx;
+  private int lRy;
+  private a lRz;
+  public String lmh = null;
   
-  public c(int paramInt)
+  public c(String paramString)
   {
-    super(12, paramInt);
-    ltd = true;
+    ekS = paramString;
   }
   
-  public final a.b Le()
+  private void a(Activity paramActivity, String[] paramArrayOfString)
   {
-    return lto;
-  }
-  
-  public final void a(Context paramContext, a.a paramVarArgs)
-  {
-    int i = f.dG(ggB);
-    if (i < 0) {}
-    for (ltn = "";; ltn = paramContext.getResources().getString(2131431370, new Object[] { paramContext.getResources().getString(i) }))
+    Bundle localBundle = new Bundle();
+    if (paramArrayOfString.length > 0) {
+      localBundle.putString("scope", TextUtils.join(",", paramArrayOfString));
+    }
+    CookieSyncManager.createInstance(paramActivity);
+    a(paramActivity, "oauth", localBundle, new a()
     {
-      u.i("!56@/B4Tb64lLpKLxeMowbLUcFbyZnLcfOYf8yKXo2tSxp4ibz6xubZRvw==", "fillDataItem: tip=%s", new Object[] { ltn });
+      public final void a(b paramAnonymousb)
+      {
+        v.d("Facebook-authorize", "Login failed: " + paramAnonymousb);
+        c.a(c.this).a(paramAnonymousb);
+      }
+      
+      public final void a(d paramAnonymousd)
+      {
+        v.d("Facebook-authorize", "Login failed: " + paramAnonymousd);
+        c.a(c.this).a(paramAnonymousd);
+      }
+      
+      public final void i(Bundle paramAnonymousBundle)
+      {
+        CookieSyncManager.getInstance().sync();
+        JD(paramAnonymousBundle.getString("access_token"));
+        JE(paramAnonymousBundle.getString("expires_in"));
+        if (bnT())
+        {
+          v.d("Facebook-authorize", "Login Success! access_token=" + lmh + " expires=" + lRv);
+          c.a(c.this).i(paramAnonymousBundle);
+          return;
+        }
+        c.a(c.this).a(new d("Failed to receive access token."));
+      }
+      
+      public final void onCancel()
+      {
+        v.d("Facebook-authorize", "Login canceled");
+        c.a(c.this).onCancel();
+      }
+    });
+  }
+  
+  public final void JD(String paramString)
+  {
+    lmh = paramString;
+    lRu = System.currentTimeMillis();
+  }
+  
+  public final void JE(String paramString)
+  {
+    if (paramString != null) {
+      if (!paramString.equals("0")) {
+        break label21;
+      }
+    }
+    label21:
+    for (long l = 0L;; l = System.currentTimeMillis() + Long.parseLong(paramString) * 1000L)
+    {
+      lRv = l;
       return;
     }
   }
   
-  public final class a
-    extends a.a
+  public final String a(String paramString1, Bundle paramBundle, String paramString2)
   {
-    public View cMt;
-    public ImageView cNV;
-    public TextView fKK;
-    
-    public a()
-    {
-      super();
+    paramBundle.putString("format", "json");
+    if (bnT()) {
+      paramBundle.putString("access_token", lmh);
+    }
+    if (paramString1 != null) {}
+    for (paramString1 = lRs + paramString1;; paramString1 = lRt) {
+      return f.d(paramString1, paramString2, paramBundle);
     }
   }
   
-  public final class b
-    extends a.b
+  public final void a(Activity paramActivity, String[] paramArrayOfString, a parama)
   {
-    public b()
+    lRz = parama;
+    a(paramActivity, paramArrayOfString);
+  }
+  
+  public final void a(Context paramContext, String paramString, Bundle paramBundle, a parama)
+  {
+    String str = lRr + paramString;
+    paramBundle.putString("display", "touch");
+    paramBundle.putString("redirect_uri", "fbconnect://success");
+    if (paramString.equals("oauth"))
     {
-      super();
+      paramBundle.putString("type", "user_agent");
+      paramBundle.putString("client_id", ekS);
     }
+    for (;;)
+    {
+      if (bnT()) {
+        paramBundle.putString("access_token", lmh);
+      }
+      paramString = str + "?" + f.S(paramBundle);
+      if (paramContext.checkCallingOrSelfPermission("android.permission.INTERNET") == 0) {
+        break;
+      }
+      f.z(paramContext, "Error", "Application requires permission to access the Internet");
+      return;
+      paramBundle.putString("app_id", ekS);
+    }
+    new e(paramContext, paramString, parama).show();
+  }
+  
+  public final boolean bnT()
+  {
+    return (lmh != null) && ((lRv == 0L) || (System.currentTimeMillis() < lRv));
+  }
+  
+  public final void d(int paramInt1, int paramInt2, Intent paramIntent)
+  {
+    if (paramInt1 == lRy)
+    {
+      if (paramInt2 != -1) {
+        break label299;
+      }
+      str2 = paramIntent.getStringExtra("error");
+      str1 = str2;
+      if (str2 == null) {
+        str1 = paramIntent.getStringExtra("error_type");
+      }
+      if (str1 == null) {
+        break label201;
+      }
+      if ((!str1.equals("service_disabled")) && (!str1.equals("AndroidAuthKillSwitchException"))) {
+        break label83;
+      }
+      v.d("Facebook-authorize", "Hosted auth currently disabled. Retrying dialog auth...");
+      a(lRw, lRx);
+    }
+    label83:
+    label201:
+    label299:
+    while (paramInt2 != 0)
+    {
+      String str1;
+      return;
+      if ((str1.equals("access_denied")) || (str1.equals("OAuthAccessDeniedException")))
+      {
+        v.d("Facebook-authorize", "Login canceled by user.");
+        lRz.onCancel();
+        return;
+      }
+      String str2 = paramIntent.getStringExtra("error_description");
+      paramIntent = str1;
+      if (str2 != null) {
+        paramIntent = str1 + ":" + str2;
+      }
+      v.d("Facebook-authorize", "Login failed: " + paramIntent);
+      lRz.a(new d(paramIntent));
+      return;
+      JD(paramIntent.getStringExtra("access_token"));
+      JE(paramIntent.getStringExtra("expires_in"));
+      if (bnT())
+      {
+        v.d("Facebook-authorize", "Login Success! access_token=" + lmh + " expires=" + lRv);
+        lRz.i(paramIntent.getExtras());
+        return;
+      }
+      lRz.a(new d("Failed to receive access token."));
+      return;
+    }
+    if (paramIntent != null)
+    {
+      v.d("Facebook-authorize", "Login failed: " + paramIntent.getStringExtra("error"));
+      lRz.a(new b(paramIntent.getStringExtra("error"), paramIntent.getIntExtra("error_code", -1), paramIntent.getStringExtra("failing_url")));
+      return;
+    }
+    v.d("Facebook-authorize", "Login canceled by user.");
+    lRz.onCancel();
+  }
+  
+  public final String ez(Context paramContext)
+  {
+    CookieSyncManager.createInstance(paramContext);
+    CookieManager.getInstance().removeAllCookie();
+    JD(null);
+    lRv = 0L;
+    return null;
+  }
+  
+  public static abstract interface a
+  {
+    public abstract void a(b paramb);
     
-    public final View a(Context paramContext, ViewGroup paramViewGroup)
-    {
-      paramContext = LayoutInflater.from(paramContext).inflate(2131363034, paramViewGroup, false);
-      paramViewGroup = new c.a(c.this);
-      fKK = ((TextView)paramContext.findViewById(2131166160));
-      cNV = ((ImageView)paramContext.findViewById(2131165516));
-      cMt = paramContext.findViewById(2131166159);
-      paramContext.setTag(paramViewGroup);
-      return paramContext;
-    }
+    public abstract void a(d paramd);
     
-    public final void a(Context paramContext, a.a parama, a paramVarArgs)
-    {
-      paramContext = (c.a)parama;
-      parama = (c)paramVarArgs;
-      aN(cMt);
-      fKK.setText(ltn);
-      cNV.setImageResource(2130903387);
-    }
+    public abstract void i(Bundle paramBundle);
     
-    public final boolean a(Context paramContext, a paramVarArgs)
-    {
-      paramVarArgs = new Intent();
-      paramVarArgs.putExtra("detail_query", aEy);
-      paramVarArgs.putExtra("detail_type", ggB);
-      paramVarArgs.putExtra("Search_Scene", ggI);
-      com.tencent.mm.ar.c.c(paramContext, "search", ".ui.FTSDetailUI", paramVarArgs);
-      return true;
-    }
+    public abstract void onCancel();
   }
 }
 

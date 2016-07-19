@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic cBs:Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;
+.field final synthetic cym:Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 624
-    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$3;->cBs:Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;
+    .line 623
+    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$3;->cym:Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,16 +40,16 @@
     .locals 1
 
     .prologue
-    .line 628
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$3;->cBs:Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;
+    .line 627
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$3;->cym:Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->c(Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;)V
 
-    .line 629
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$3;->cBs:Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;
+    .line 628
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$3;->cym:Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->finish()V
 
-    .line 630
+    .line 629
     return-void
 .end method

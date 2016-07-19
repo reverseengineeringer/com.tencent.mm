@@ -3,7 +3,7 @@ package com.tencent.mm.ui.contact;
 import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 
 final class SelectContactUI$12
   implements View.OnClickListener
@@ -14,7 +14,7 @@ final class SelectContactUI$12
   {
     paramView = new Intent();
     paramView.putExtra("list_attr", 16384);
-    c.a(lmm, "brandservice", ".ui.BrandServiceIndexUI", paramView, 2);
+    c.a(lMB, "brandservice", ".ui.BrandServiceIndexUI", paramView, 2);
   }
 }
 

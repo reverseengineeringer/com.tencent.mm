@@ -18,17 +18,17 @@
 
 
 # instance fields
-.field final synthetic cmw:Ljava/lang/String;
+.field final synthetic chB:Ljava/lang/String;
 
-.field final synthetic dLN:Ljava/lang/String;
+.field final synthetic dNu:Ljava/lang/String;
 
-.field final synthetic dLO:Ljava/lang/String;
+.field final synthetic dNv:Ljava/lang/String;
 
-.field final synthetic dLP:Ljava/lang/String;
+.field final synthetic dNw:Ljava/lang/String;
 
-.field final synthetic dLQ:Ljava/lang/String;
+.field final synthetic dNx:Ljava/lang/String;
 
-.field final synthetic dLR:Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;
+.field final synthetic dNy:Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;
 
 
 # direct methods
@@ -36,18 +36,18 @@
     .locals 0
 
     .prologue
-    .line 171
-    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dLR:Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;
+    .line 178
+    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dNy:Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dLN:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dNu:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->cmw:Ljava/lang/String;
+    iput-object p3, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->chB:Ljava/lang/String;
 
-    iput-object p4, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dLO:Ljava/lang/String;
+    iput-object p4, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dNv:Ljava/lang/String;
 
-    iput-object p5, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dLP:Ljava/lang/String;
+    iput-object p5, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dNw:Ljava/lang/String;
 
-    iput-object p6, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dLQ:Ljava/lang/String;
+    iput-object p6, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dNx:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,99 +57,101 @@
 
 # virtual methods
 .method public final run()V
-    .locals 7
+    .locals 6
 
     .prologue
-    const/4 v6, 0x4
+    const/4 v3, 0x4
 
-    .line 175
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dLN:Ljava/lang/String;
+    .line 182
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dNu:Ljava/lang/String;
 
-    invoke-static {v0, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/be;->getInt(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 177
+    .line 184
     const/4 v0, 0x1
 
     if-ne v1, v0, :cond_1
 
-    .line 178
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dLR:Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;
+    .line 185
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dNy:Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->cmw:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->chB:Ljava/lang/String;
 
     invoke-static {v0, v2}, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;->a(Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;Ljava/lang/String;)V
 
-    .line 182
+    .line 189
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dLR:Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dNy:Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;->a(Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dLO:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dNv:Ljava/lang/String;
 
-    invoke-static {v2, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/be;->getInt(Ljava/lang/String;I)I
 
     move-result v2
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dLP:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dNw:Ljava/lang/String;
 
     const/16 v4, 0x3e80
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/be;->getInt(Ljava/lang/String;I)I
 
     move-result v3
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dLQ:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dNx:Ljava/lang/String;
 
     const/16 v5, 0x10
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/be;->getInt(Ljava/lang/String;I)I
 
     move-result v4
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->cmw:Ljava/lang/String;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->chB:Ljava/lang/String;
 
     invoke-static/range {v0 .. v5}, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;->a(Ljava/lang/String;IIIILjava/lang/String;)Z
 
     move-result v0
 
-    .line 187
+    .line 194
     if-nez v0, :cond_0
 
-    .line 188
-    const-string/jumbo v0, "!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH"
+    .line 195
+    const-string/jumbo v0, "MicroMsg.ext.ExtControlProviderVoiceControl"
 
     const-string/jumbo v1, "[voiceControl] !ok countDown"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 189
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dLR:Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;
+    .line 196
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dNy:Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;
 
-    invoke-static {v0, v6}, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;->a(Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;I)I
+    const/16 v1, 0xdb0
 
-    .line 190
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dLR:Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;
+    invoke-static {v0, v1}, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;->a(Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;I)I
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;->dLJ:Lcom/tencent/mm/pluginsdk/d/a/a;
+    .line 197
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl$1;->dNy:Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/ext/voicecontrol/ExtControlProviderVoiceControl;->dNq:Lcom/tencent/mm/pluginsdk/d/a/a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/d/a/a;->countDown()V
 
-    .line 192
+    .line 199
     :cond_0
     return-void
 
-    .line 180
+    .line 187
     :cond_1
-    const-string/jumbo v0, "!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH"
+    const-string/jumbo v0, "MicroMsg.ext.ExtControlProviderVoiceControl"
 
     const-string/jumbo v2, "[voiceControl] not pcm, don\'t run localVoiceControl"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

@@ -1,25 +1,25 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.adm;
-import com.tencent.mm.protocal.b.ck;
-import com.tencent.mm.protocal.b.yt;
+import com.tencent.mm.protocal.b.amb;
+import com.tencent.mm.protocal.b.dg;
+import com.tencent.mm.protocal.b.rs;
 
 public final class r$b
-  extends i.d
-  implements i.b
+  extends k.d
+  implements k.b
 {
-  public yt hhk = new yt();
+  public rs jsz = new rs();
+  
+  public final int D(byte[] paramArrayOfByte)
+  {
+    jsz = ((rs)new rs().au(paramArrayOfByte));
+    k.a(this, jsz.kfH);
+    return jsz.kfH.jxr;
+  }
   
   public final int getCmdId()
   {
-    return 1000000027;
-  }
-  
-  public final int z(byte[] paramArrayOfByte)
-  {
-    hhk = ((yt)new yt().x(paramArrayOfByte));
-    i.a(this, hhk.hLQ);
-    return hhk.hLQ.hkV;
+    return 1000000179;
   }
 }
 

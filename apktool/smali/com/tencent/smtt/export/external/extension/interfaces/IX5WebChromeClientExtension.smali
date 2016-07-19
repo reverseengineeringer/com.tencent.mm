@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebChromeClientExtension;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # static fields
@@ -40,9 +39,23 @@
 .end method
 
 .method public abstract onAllMetaDataFinished(Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;Ljava/util/HashMap;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;",
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 .end method
 
 .method public abstract onBackforwardFinished(I)V
+.end method
+
+.method public abstract onColorModeChanged(J)V
 .end method
 
 .method public abstract onHitTestResultFinished(Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$HitTestResult;)V
@@ -58,6 +71,20 @@
 .end method
 
 .method public abstract onPrepareX5ReadPageDataFinished(Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;Ljava/util/HashMap;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;",
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+.end method
+
+.method public abstract onPrintPage()V
 .end method
 
 .method public abstract onPromptNotScalable(Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;)V
@@ -66,10 +93,53 @@
 .method public abstract onPromptScaleSaved(Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;)V
 .end method
 
+.method public abstract onSavePassword(Landroid/webkit/ValueCallback;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Z
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/webkit/ValueCallback",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Z)Z"
+        }
+    .end annotation
+.end method
+
 .method public abstract onSavePassword(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLandroid/os/Message;)Z
 .end method
 
 .method public abstract onX5ReadModeAvailableChecked(Ljava/util/HashMap;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+.end method
+
+.method public abstract openFileChooser(Landroid/webkit/ValueCallback;Ljava/lang/String;Ljava/lang/String;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/webkit/ValueCallback",
+            "<[",
+            "Landroid/net/Uri;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
 .end method
 
 .method public abstract releaseWakeLock()V

@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field bAr:J
+.field btu:J
 
 
 # direct methods
@@ -18,14 +18,14 @@
     .line 15
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/model/s;->bAr:J
+    iput-wide v0, p0, Lcom/tencent/mm/model/s;->btu:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract cy(I)Z
+.method public abstract dd(I)Z
 .end method
 
 .method public abstract getTag()Ljava/lang/String;

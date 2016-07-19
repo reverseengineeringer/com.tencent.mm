@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic liv:Lcom/tencent/mm/ui/contact/b$a;
+.field final synthetic lIG:Lcom/tencent/mm/ui/contact/b$a;
 
-.field final synthetic liw:Lcom/tencent/mm/ui/contact/b;
+.field final synthetic lIH:Lcom/tencent/mm/ui/contact/b;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 63
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/b$1;->liw:Lcom/tencent/mm/ui/contact/b;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/b$1;->lIH:Lcom/tencent/mm/ui/contact/b;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/contact/b$1;->liv:Lcom/tencent/mm/ui/contact/b$a;
+    iput-object p2, p0, Lcom/tencent/mm/ui/contact/b$1;->lIG:Lcom/tencent/mm/ui/contact/b$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,9 +45,9 @@
 
     .prologue
     .line 67
-    sget-object v0, Lcom/tencent/mm/ui/contact/b$3;->lix:[I
+    sget-object v0, Lcom/tencent/mm/ui/contact/b$3;->lII:[I
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/b$1;->liv:Lcom/tencent/mm/ui/contact/b$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/b$1;->lIG:Lcom/tencent/mm/ui/contact/b$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/contact/b$a;->ordinal()I
 
@@ -58,7 +58,7 @@
     packed-switch v0, :pswitch_data_0
 
     .line 85
-    const-string/jumbo v0, "!56@/B4Tb64lLpIELL9O96QoKLI7tZ4uMi2P+X69o6YV7p+XdPoFV/Hyaw=="
+    const-string/jumbo v0, "MicroMsg.ChatroomContactEntranceView"
 
     const-string/jumbo v1, "[cpan] unknow type for click. type:%s"
 
@@ -68,11 +68,11 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/contact/b$1;->liv:Lcom/tencent/mm/ui/contact/b$a;
+    iget-object v4, p0, Lcom/tencent/mm/ui/contact/b$1;->lIG:Lcom/tencent/mm/ui/contact/b$a;
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 89
     :goto_0
@@ -85,7 +85,7 @@
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     .line 70
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/b$1;->liw:Lcom/tencent/mm/ui/contact/b;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/b$1;->lIH:Lcom/tencent/mm/ui/contact/b;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/contact/b;->a(Lcom/tencent/mm/ui/contact/b;)Landroid/content/Context;
 
@@ -96,7 +96,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
     .line 71
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/b$1;->liw:Lcom/tencent/mm/ui/contact/b;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/b$1;->lIH:Lcom/tencent/mm/ui/contact/b;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/contact/b;->a(Lcom/tencent/mm/ui/contact/b;)Landroid/content/Context;
 
@@ -113,7 +113,7 @@
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     .line 75
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/b$1;->liw:Lcom/tencent/mm/ui/contact/b;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/b$1;->lIH:Lcom/tencent/mm/ui/contact/b;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/contact/b;->a(Lcom/tencent/mm/ui/contact/b;)Landroid/content/Context;
 
@@ -123,7 +123,7 @@
 
     const-string/jumbo v3, ".ui.ContactLabelManagerUI"
 
-    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     goto :goto_0
 
@@ -134,7 +134,7 @@
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     .line 81
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/b$1;->liw:Lcom/tencent/mm/ui/contact/b;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/b$1;->lIH:Lcom/tencent/mm/ui/contact/b;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/contact/b;->a(Lcom/tencent/mm/ui/contact/b;)Landroid/content/Context;
 
@@ -144,7 +144,7 @@
 
     const-string/jumbo v3, ".ui.IPCallAddressUI"
 
-    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     goto :goto_0
 

@@ -7,14 +7,14 @@ final class SwipeBackLayout$b$2$1
 {
   SwipeBackLayout$b$2$1(SwipeBackLayout.b.2 param2) {}
   
-  public final void biD()
+  public final void boz()
   {
     onAnimationEnd();
   }
   
   public final void onAnimationEnd()
   {
-    SwipeBackLayout.b(lGS.lGQ.lGP, false);
+    SwipeBackLayout.b(mig.mie.mid, false);
   }
 }
 

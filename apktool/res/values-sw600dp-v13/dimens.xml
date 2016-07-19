@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="oa">56.0dip</dimen>
-    <dimen name="ob">4.0dip</dimen>
-    <dimen name="oc">18.0dip</dimen>
-    <dimen name="od">14.0dip</dimen>
-    <dimen name="oe">-3.0dip</dimen>
-    <dimen name="of">9.0dip</dimen>
-    <dimen name="oi">580.0dip</dimen>
+    <dimen name="q">56.0dip</dimen>
+    <dimen name="r">4.0dip</dimen>
+    <dimen name="s">9.0dip</dimen>
+    <dimen name="t">14.0dip</dimen>
+    <dimen name="u">-3.0dip</dimen>
+    <dimen name="v">18.0dip</dimen>
+    <dimen name="w">580.0dip</dimen>
 </resources>

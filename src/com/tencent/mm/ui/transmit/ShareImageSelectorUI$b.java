@@ -6,13 +6,13 @@ import com.tencent.mm.ui.MMImageView;
 
 final class ShareImageSelectorUI$b
 {
-  MMImageView dTv;
-  TextView lBH;
+  MMImageView dVD;
+  TextView mcz;
   
   public ShareImageSelectorUI$b(ShareImageSelectorUI paramShareImageSelectorUI, View paramView)
   {
-    dTv = ((MMImageView)paramView.findViewById(2131165528));
-    lBH = ((TextView)paramView.findViewById(2131165529));
+    dVD = ((MMImageView)paramView.findViewById(2131756476));
+    mcz = ((TextView)paramView.findViewById(2131758979));
   }
 }
 

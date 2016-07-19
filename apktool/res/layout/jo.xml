@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/d3" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/abf" android:paddingLeft="@dimen/i7" android:paddingRight="@dimen/i7" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.tencent.mm.ui.MMImageView android:id="@id/ie" android:layout_width="@dimen/hd" android:layout_height="@dimen/hd" android:layout_marginTop="@dimen/h6" />
+        <TextView android:ellipsize="end" android:id="@id/abg" android:layout_marginLeft="@dimen/cp" android:layout_marginTop="@dimen/iy" android:layout_marginRight="@dimen/cp" android:text="{name}" android:maxLines="2" style="@style/MMTextView" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/if" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/cp" android:layout_marginTop="@dimen/hf" android:layout_marginRight="@dimen/cp" android:layout_marginBottom="@dimen/ct">
+            <ProgressBar android:id="@id/ig" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="?android:attr/progressBarStyleHorizontal" />
+            <ImageView android:id="@id/ih" android:background="@drawable/kz" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/os" />
+        </LinearLayout>
+        <Button android:id="@id/abh" android:visibility="gone" android:layout_marginTop="@dimen/hf" android:layout_marginBottom="@dimen/ct" android:minWidth="220.0dip" android:text="@string/ac3" style="@style/MMSolidGreenLargeButton" />
+        <Button android:id="@id/abi" android:visibility="gone" android:layout_marginTop="@dimen/hf" android:layout_marginBottom="@dimen/ct" android:minWidth="220.0dip" android:text="@string/ac_" style="@style/MMSolidGreenLargeButton" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/abj" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:text="@string/ac7" style="@style/MMBriefText" />
+            <TextView android:id="@id/abk" android:layout_width="wrap_content" style="@style/MMBriefText" />
+        </LinearLayout>
+        <TextView android:id="@id/abl" android:visibility="gone" android:layout_width="wrap_content" android:layout_marginTop="@dimen/ct" android:text="@string/ac7" style="@style/MMBriefText" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/abm" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/abn" android:layout_width="@dimen/hd" android:layout_height="@dimen/hd" android:layout_marginTop="@dimen/h6" android:src="@raw/image_download_fail_icon" />
+        <TextView android:textSize="@dimen/i8" android:id="@id/abo" android:layout_width="wrap_content" android:layout_marginLeft="@dimen/iy" android:layout_marginTop="@dimen/ct" android:layout_marginRight="@dimen/iy" android:text="@string/aqk" style="@style/MMBriefText" />
+    </LinearLayout>
+</LinearLayout>

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/platformtools/k$a;
+.implements Lcom/tencent/mm/platformtools/j$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+.field final synthetic jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 424
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$6;->iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+    .line 422
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$6;->jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,8 +44,8 @@
 
     const/4 v0, 0x0
 
-    .line 429
-    const-string/jumbo v2, "!32@/B4Tb64lLpI8lfBMGe0Uu+gqtVk/eA4D"
+    .line 427
+    const-string/jumbo v2, "MicroMsg.ImageEngine"
 
     const-string/jumbo v3, "on get picture finish, notifyKey[%s], bitmap is null[%B]"
 
@@ -66,27 +66,27 @@
 
     aput-object v0, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 430
+    .line 428
     if-nez p2, :cond_1
 
-    .line 446
+    .line 444
     :goto_0
     return-void
 
-    .line 434
+    .line 432
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$6;->iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$6;->jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/g;->iSi:Lcom/tencent/mm/pluginsdk/ui/tools/g$c;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/g;->jpr:Lcom/tencent/mm/pluginsdk/ui/tools/g$c;
 
     invoke-virtual {v0, p1, p2}, Lcom/tencent/mm/pluginsdk/ui/tools/g$c;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 435
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$6;->iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+    .line 433
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$6;->jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/g;->iSg:Ljava/util/HashMap;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/g;->jpp:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -94,32 +94,32 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 436
+    .line 434
     if-eqz v0, :cond_2
 
-    .line 437
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$6;->iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+    .line 435
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$6;->jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/tools/g;->iSh:Ljava/util/HashMap;
+    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/tools/g;->jpq:Ljava/util/HashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 438
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$6;->iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+    .line 436
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$6;->jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/tools/g;->bQM:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/tools/g;->bpz:Lcom/tencent/mm/sdk/platformtools/ac;
 
     new-instance v2, Lcom/tencent/mm/pluginsdk/ui/tools/g$6$1;
 
     invoke-direct {v2, p0, v0, p2}, Lcom/tencent/mm/pluginsdk/ui/tools/g$6$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/g$6;Landroid/widget/ImageView;Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
-    .line 445
+    .line 443
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$6;->iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$6;->jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/g;->iSg:Ljava/util/HashMap;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/g;->jpp:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 

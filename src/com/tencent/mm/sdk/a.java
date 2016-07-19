@@ -2,10 +2,10 @@ package com.tencent.mm.sdk;
 
 public final class a
 {
-  public static String jUu = "wechatnetwork";
-  public static String jUv = "wechatxlog";
-  public static String jUw = "wechataccessory";
-  public static String jUx = "wechatmm";
+  public static String ktV = "wechatnetwork";
+  public static String ktW = "wechatxlog";
+  public static String ktX = "wechataccessory";
+  public static String ktY = "wechatmm";
 }
 
 /* Location:

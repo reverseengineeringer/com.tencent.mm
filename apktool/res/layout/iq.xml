@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/a9j" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ListView android:id="@id/a9k" android:background="@color/j3" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/MMList" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/a9l" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/NavPage">
+        <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:paddingBottom="@dimen/hf" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.4">
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/gn" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/he" android:text="@string/b_f" />
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/he" android:text="@string/b_e" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:paddingLeft="@dimen/i7" android:paddingRight="@dimen/i7" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.6">
+            <Button android:id="@id/a9m" android:text="@string/b_c" style="@style/MMSolidGreenLargeButton" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

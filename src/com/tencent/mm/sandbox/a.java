@@ -2,9 +2,9 @@ package com.tencent.mm.sandbox;
 
 public abstract interface a
 {
-  public abstract void jdMethod_do(long paramLong);
+  public abstract void dF(long paramLong);
   
-  public abstract void dp(long paramLong);
+  public abstract void dG(long paramLong);
 }
 
 /* Location:

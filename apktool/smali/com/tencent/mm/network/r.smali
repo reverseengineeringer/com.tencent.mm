@@ -17,93 +17,93 @@
 
 
 # instance fields
-.field bBg:[B
+.field bVa:I
 
-.field cbn:I
+.field bul:[B
 
-.field ciH:I
+.field cdY:I
 
-.field private ciI:J
+.field private cdZ:J
 
-.field private ciJ:J
+.field private cea:J
 
-.field private ciK:J
+.field private ceb:J
 
-.field private ciL:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+.field private cec:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
-.field public ciM:Lcom/tencent/mm/network/a;
+.field public ced:Lcom/tencent/mm/network/a;
 
-.field ciN:Lcom/tencent/mm/network/r$a;
+.field cee:Lcom/tencent/mm/network/r$a;
 
-.field ciO:Lcom/tencent/mm/network/r$b;
+.field cef:Lcom/tencent/mm/network/r$b;
 
-.field ciP:J
+.field ceg:J
 
-.field ciQ:I
+.field ceh:I
 
-.field private ciR:Lcom/tencent/mm/network/q;
+.field private cei:Lcom/tencent/mm/network/q;
 
-.field ciS:Lcom/tencent/mm/network/g;
+.field cej:Lcom/tencent/mm/network/g;
 
-.field handler:Lcom/tencent/mm/sdk/platformtools/aa;
+.field handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
 
 # direct methods
-.method public constructor <init>(Lcom/tencent/mm/sdk/platformtools/aa;)V
+.method public constructor <init>(Lcom/tencent/mm/sdk/platformtools/ac;)V
     .locals 4
 
     .prologue
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     .line 198
     invoke-direct {p0}, Lcom/tencent/mm/network/f$a;-><init>()V
 
     .line 58
-    iput v3, p0, Lcom/tencent/mm/network/r;->ciH:I
+    iput v1, p0, Lcom/tencent/mm/network/r;->cdY:I
 
     .line 59
-    iput-wide v1, p0, Lcom/tencent/mm/network/r;->ciI:J
+    iput-wide v2, p0, Lcom/tencent/mm/network/r;->cdZ:J
 
     .line 60
-    iput-wide v1, p0, Lcom/tencent/mm/network/r;->ciJ:J
+    iput-wide v2, p0, Lcom/tencent/mm/network/r;->cea:J
 
     .line 61
-    iput-wide v1, p0, Lcom/tencent/mm/network/r;->ciK:J
+    iput-wide v2, p0, Lcom/tencent/mm/network/r;->ceb:J
 
     .line 62
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/network/r;->ciL:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iput-object v0, p0, Lcom/tencent/mm/network/r;->cec:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     .line 68
-    iput-wide v1, p0, Lcom/tencent/mm/network/r;->ciP:J
+    iput-wide v2, p0, Lcom/tencent/mm/network/r;->ceg:J
 
     .line 70
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/network/r;->ciQ:I
+    iput v0, p0, Lcom/tencent/mm/network/r;->ceh:I
 
     .line 71
-    iput v3, p0, Lcom/tencent/mm/network/r;->cbn:I
+    iput v1, p0, Lcom/tencent/mm/network/r;->bVa:I
 
     .line 199
     if-nez p1, :cond_0
 
-    new-instance p1, Lcom/tencent/mm/sdk/platformtools/aa;
+    new-instance p1, Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-direct {p1}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {p1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
     :cond_0
-    iput-object p1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object p1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
     .line 200
     new-instance v0, Lcom/tencent/mm/network/a;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/network/a;-><init>(Lcom/tencent/mm/network/a$a;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    iput-object v0, p0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
     .line 202
     new-instance v0, Lcom/tencent/mm/jni/platformcomm/WakerLock;
@@ -114,25 +114,25 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/jni/platformcomm/WakerLock;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/network/r;->ciL:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iput-object v0, p0, Lcom/tencent/mm/network/r;->cec:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     .line 203
     new-instance v0, Lcom/tencent/mm/network/r$a;
 
-    iget-object v1, p0, Lcom/tencent/mm/network/r;->ciL:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iget-object v1, p0, Lcom/tencent/mm/network/r;->cec:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     invoke-direct {v0, p0, v1}, Lcom/tencent/mm/network/r$a;-><init>(Lcom/tencent/mm/network/r;Lcom/tencent/mm/jni/platformcomm/WakerLock;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/network/r;->ciN:Lcom/tencent/mm/network/r$a;
+    iput-object v0, p0, Lcom/tencent/mm/network/r;->cee:Lcom/tencent/mm/network/r$a;
 
     .line 204
     new-instance v0, Lcom/tencent/mm/network/r$b;
 
-    iget-object v1, p0, Lcom/tencent/mm/network/r;->ciL:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iget-object v1, p0, Lcom/tencent/mm/network/r;->cec:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     invoke-direct {v0, p0, v1}, Lcom/tencent/mm/network/r$b;-><init>(Lcom/tencent/mm/network/r;Lcom/tencent/mm/jni/platformcomm/WakerLock;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/network/r;->ciO:Lcom/tencent/mm/network/r$b;
+    iput-object v0, p0, Lcom/tencent/mm/network/r;->cef:Lcom/tencent/mm/network/r$b;
 
     .line 205
     return-void
@@ -147,7 +147,7 @@
     const/4 v1, 0x0
 
     .line 53
-    const-string/jumbo v2, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v2, "MicroMsg.AutoAuth"
 
     const-string/jumbo v3, "dkcgi sendImp rr.type:%d callback:%d"
 
@@ -175,7 +175,7 @@
 
     aput-object v5, v4, v0
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     invoke-interface {p1}, Lcom/tencent/mm/network/p;->getType()I
 
@@ -183,25 +183,25 @@
 
     sparse-switch v2, :sswitch_data_0
 
-    invoke-interface {p1}, Lcom/tencent/mm/network/p;->wf()Lcom/tencent/mm/protocal/e;
+    invoke-interface {p1}, Lcom/tencent/mm/network/p;->wh()Lcom/tencent/mm/protocal/g;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    iget-object v3, p0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/network/a;->rg()I
+    invoke-virtual {v3}, Lcom/tencent/mm/network/a;->rf()I
 
     move-result v3
 
-    invoke-interface {v2, v3}, Lcom/tencent/mm/protocal/e;->ba(I)V
+    invoke-interface {v2, v3}, Lcom/tencent/mm/protocal/g;->bq(I)V
 
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
+    invoke-static {}, Lcom/tencent/mm/network/z;->FD()Lcom/tencent/mm/network/y;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    iget-object v3, p0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
-    invoke-interface {p1}, Lcom/tencent/mm/network/p;->vB()Z
+    invoke-interface {p1}, Lcom/tencent/mm/network/p;->vD()Z
 
     move-result v4
 
@@ -214,11 +214,11 @@
 
     if-gez v0, :cond_0
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v1, "MicroMsg.AutoAuth"
 
     const-string/jumbo v2, "nonauth: in queue err"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_1
@@ -231,17 +231,17 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/network/a;-><init>(Lcom/tencent/mm/network/a$a;)V
 
-    invoke-interface {p1}, Lcom/tencent/mm/network/p;->wf()Lcom/tencent/mm/protocal/e;
+    invoke-interface {p1}, Lcom/tencent/mm/network/p;->wh()Lcom/tencent/mm/protocal/g;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/tencent/mm/protocal/e;->getUserName()Ljava/lang/String;
+    invoke-interface {v2}, Lcom/tencent/mm/protocal/g;->getUserName()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-interface {v0, v2}, Lcom/tencent/mm/network/c;->setUsername(Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
+    invoke-static {}, Lcom/tencent/mm/network/z;->FD()Lcom/tencent/mm/network/y;
 
     move-result-object v2
 
@@ -251,16 +251,16 @@
 
     if-gez v0, :cond_1
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v1, "MicroMsg.AutoAuth"
 
     const-string/jumbo v2, "register: net.send err"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
     :cond_1
-    const-string/jumbo v1, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v1, "MicroMsg.AutoAuth"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -276,16 +276,16 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
     :sswitch_1
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
+    invoke-static {}, Lcom/tencent/mm/network/z;->FD()Lcom/tencent/mm/network/y;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/network/y;->EV()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/network/y;->Fq()Z
 
     move-result v0
 
@@ -296,7 +296,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-interface {p1}, Lcom/tencent/mm/network/p;->wf()Lcom/tencent/mm/protocal/e;
+    invoke-interface {p1}, Lcom/tencent/mm/network/p;->wh()Lcom/tencent/mm/protocal/g;
 
     move-result-object v0
 
@@ -304,13 +304,13 @@
 
     invoke-direct {v2, p0}, Lcom/tencent/mm/network/a;-><init>(Lcom/tencent/mm/network/a$a;)V
 
-    invoke-interface {v0}, Lcom/tencent/mm/protocal/e;->getUserName()Ljava/lang/String;
+    invoke-interface {v0}, Lcom/tencent/mm/protocal/g;->getUserName()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-interface {v2, v0}, Lcom/tencent/mm/network/c;->setUsername(Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
+    invoke-static {}, Lcom/tencent/mm/network/z;->FD()Lcom/tencent/mm/network/y;
 
     move-result-object v0
 
@@ -320,16 +320,16 @@
 
     if-gez v0, :cond_3
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v1, "MicroMsg.AutoAuth"
 
     const-string/jumbo v2, "auth: net.send err"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
     :cond_3
-    const-string/jumbo v1, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v1, "MicroMsg.AutoAuth"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -345,7 +345,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -364,21 +364,21 @@
 .end method
 
 .method static synthetic a(Lcom/tencent/mm/network/r;)V
-    .locals 3
+    .locals 4
 
     .prologue
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     .line 53
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/network/r;->ciH:I
+    iput v0, p0, Lcom/tencent/mm/network/r;->cdY:I
 
-    iput-wide v1, p0, Lcom/tencent/mm/network/r;->ciI:J
+    iput-wide v2, p0, Lcom/tencent/mm/network/r;->cdZ:J
 
-    iput-wide v1, p0, Lcom/tencent/mm/network/r;->ciJ:J
+    iput-wide v2, p0, Lcom/tencent/mm/network/r;->cea:J
 
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
+    invoke-static {}, Lcom/tencent/mm/network/z;->FD()Lcom/tencent/mm/network/y;
 
     move-result-object v0
 
@@ -398,11 +398,11 @@
     const/4 v6, -0x1
 
     .line 53
-    const-string/jumbo v0, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v0, "MicroMsg.AutoAuth"
 
     const-string/jumbo v1, "dkcert doGetCert"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-wide/32 v0, 0xea60
 
@@ -410,7 +410,7 @@
 
     move-result-wide v2
 
-    iget-wide v4, p0, Lcom/tencent/mm/network/r;->ciP:J
+    iget-wide v4, p0, Lcom/tencent/mm/network/r;->ceg:J
 
     sub-long/2addr v2, v4
 
@@ -418,7 +418,7 @@
 
     if-ltz v0, :cond_1
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v0, "MicroMsg.AutoAuth"
 
     const-string/jumbo v1, "getcert lastGetCertSucTime=%d, curtime=%d"
 
@@ -426,9 +426,9 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget-wide v3, p0, Lcom/tencent/mm/network/r;->ciP:J
+    iget-wide v4, p0, Lcom/tencent/mm/network/r;->ceg:J
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
@@ -446,24 +446,24 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const-string/jumbo v0, ""
 
-    invoke-virtual {p0, v8, v6, v0}, Lcom/tencent/mm/network/r;->d(IILjava/lang/String;)V
+    invoke-virtual {p0, v8, v6, v0}, Lcom/tencent/mm/network/r;->c(IILjava/lang/String;)V
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
+    invoke-static {}, Lcom/tencent/mm/network/z;->FD()Lcom/tencent/mm/network/y;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/network/r;->ciO:Lcom/tencent/mm/network/r$b;
+    iget-object v1, p0, Lcom/tencent/mm/network/r;->cef:Lcom/tencent/mm/network/r$b;
 
-    iget-object v2, p0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    iget-object v2, p0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
     invoke-virtual {v0, p1, v1, v2, v7}, Lcom/tencent/mm/network/y;->a(Lcom/tencent/mm/network/p;Lcom/tencent/mm/network/k;Lcom/tencent/mm/network/c;I)I
 
@@ -473,7 +473,7 @@
 
     const-string/jumbo v0, ""
 
-    invoke-virtual {p0, v8, v6, v0}, Lcom/tencent/mm/network/r;->d(IILjava/lang/String;)V
+    invoke-virtual {p0, v8, v6, v0}, Lcom/tencent/mm/network/r;->c(IILjava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -485,7 +485,7 @@
     const/4 v4, 0x1
 
     .line 53
-    const-string/jumbo v0, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v0, "MicroMsg.AutoAuth"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -493,7 +493,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    iget-object v2, p0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -503,9 +503,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v0, "MicroMsg.AutoAuth"
 
     const-string/jumbo v1, "oreh doAutoAuth ticket:%s, login:%b"
 
@@ -517,9 +517,9 @@
 
     aput-object p2, v2, v3
 
-    iget-object v3, p0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    iget-object v3, p0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/network/a;->vS()Z
+    invoke-virtual {v3}, Lcom/tencent/mm/network/a;->vU()Z
 
     move-result v3
 
@@ -529,35 +529,35 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->appenderFlush()V
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->appenderFlush()V
 
-    iget-object v0, p0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    iget-object v0, p0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/network/a;->vS()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/network/y;->EV()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/network/a;->vU()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
+    invoke-static {}, Lcom/tencent/mm/network/z;->FD()Lcom/tencent/mm/network/y;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/network/r;->ciN:Lcom/tencent/mm/network/r$a;
+    invoke-virtual {v0}, Lcom/tencent/mm/network/y;->Fq()Z
 
-    iget-object v2, p0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {}, Lcom/tencent/mm/network/z;->FD()Lcom/tencent/mm/network/y;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/tencent/mm/network/r;->cee:Lcom/tencent/mm/network/r$a;
+
+    iget-object v2, p0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
     invoke-virtual {v0, p1, v1, v2, v4}, Lcom/tencent/mm/network/y;->a(Lcom/tencent/mm/network/p;Lcom/tencent/mm/network/k;Lcom/tencent/mm/network/c;I)I
 
@@ -571,680 +571,684 @@
 
     const-string/jumbo v2, ""
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/tencent/mm/network/r;->d(IILjava/lang/String;)V
+    invoke-virtual {p0, v0, v1, v2}, Lcom/tencent/mm/network/r;->c(IILjava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
 .method static d(Ljava/lang/String;Ljava/lang/String;I)Z
-    .locals 15
+    .locals 16
 
     .prologue
-    .line 971
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 974
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
-    move-result-object v1
+    move-result-object v2
 
-    const-string/jumbo v2, "auth_hold_prefs"
+    const-string/jumbo v3, "auth_hold_prefs"
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v2
+
+    .line 975
+    invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v2
+
+    const-string/jumbo v3, "auth_ishold"
+
+    invoke-interface {v2, v3}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 977
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const-string/jumbo v3, "auth_info_key_prefs"
+
+    const/4 v4, 0x4
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v9
+
+    .line 979
+    const-string/jumbo v2, "key_auth_info_prefs_created"
 
     const/4 v3, 0x0
 
-    invoke-virtual {v1, v2, v3}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v1
-
-    .line 972
-    invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "auth_ishold"
-
-    invoke-interface {v1, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 974
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "auth_info_key_prefs"
-
-    const/4 v3, 0x4
-
-    invoke-virtual {v1, v2, v3}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v8
-
-    .line 976
-    const-string/jumbo v1, "key_auth_info_prefs_created"
-
-    const/4 v2, 0x0
-
-    invoke-interface {v8, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v9
-
-    .line 977
-    const-string/jumbo v1, "key_auth_update_version"
-
-    const/4 v2, 0x0
-
-    invoke-interface {v8, v1, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v9, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v10
 
-    .line 978
-    const-string/jumbo v1, "_auth_uin"
+    .line 980
+    const-string/jumbo v2, "key_auth_update_version"
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    invoke-interface {v8, v1, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v9, v2, v3}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v11
 
-    .line 979
-    const-string/jumbo v1, "_auth_key"
+    .line 981
+    const-string/jumbo v2, "_auth_uin"
 
-    const-string/jumbo v2, ""
+    const/4 v3, 0x0
 
-    invoke-interface {v8, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v9, v2, v3}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
-    move-result-object v12
+    move-result v12
 
-    .line 980
-    const-string/jumbo v1, "server_id"
+    .line 982
+    const-string/jumbo v2, "_auth_key"
 
-    const-string/jumbo v2, ""
+    const-string/jumbo v3, ""
 
-    invoke-interface {v8, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v9, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v13
 
-    .line 982
-    invoke-interface {v8}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    .line 983
+    const-string/jumbo v2, "server_id"
+
+    const-string/jumbo v3, ""
+
+    invoke-interface {v9, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v14
 
-    .line 983
-    const-string/jumbo v1, "key_auth_info_prefs_created"
-
-    const/4 v2, 0x1
-
-    invoke-interface {v14, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    .line 984
-    const-string/jumbo v1, "key_auth_update_version"
-
-    sget v2, Lcom/tencent/mm/protocal/b;->iUf:I
-
-    invoke-interface {v14, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
     .line 985
-    const-string/jumbo v1, "_auth_uin"
+    invoke-interface {v9}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v15
+
+    .line 986
+    const-string/jumbo v2, "key_auth_info_prefs_created"
+
+    const/4 v3, 0x1
+
+    invoke-interface {v15, v2, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    .line 987
+    const-string/jumbo v2, "key_auth_update_version"
+
+    sget v3, Lcom/tencent/mm/protocal/c;->jry:I
+
+    invoke-interface {v15, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    .line 988
+    const-string/jumbo v2, "_auth_uin"
 
     move/from16 v0, p2
 
-    invoke-interface {v14, v1, v0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v15, v2, v0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 986
-    const-string/jumbo v1, "_auth_key"
+    .line 989
+    const-string/jumbo v2, "_auth_key"
 
-    invoke-interface {v14, v1, p0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    move-object/from16 v0, p0
 
-    .line 987
-    const-string/jumbo v1, "server_id"
+    invoke-interface {v15, v2, v0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 990
+    const-string/jumbo v2, "server_id"
 
     move-object/from16 v0, p1
 
-    invoke-interface {v14, v1, v0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    .line 988
-    invoke-interface {v14}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    move-result v1
-
-    .line 989
-    if-nez v1, :cond_0
-
-    .line 990
-    const-string/jumbo v1, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
-
-    const-string/jumbo v2, "summerauth save aak & id commit failed 1th!"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v15, v2, v0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     .line 991
-    sget-object v1, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
-
-    const-wide/16 v1, 0x94
-
-    const-wide/16 v3, 0x24
-
-    const-wide/16 v5, 0x1
-
-    const/4 v7, 0x0
-
-    invoke-static/range {v1 .. v7}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
-
-    .line 992
-    invoke-interface {v14}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    move-result v1
-
-    .line 993
-    if-nez v1, :cond_0
-
-    .line 994
-    const-string/jumbo v1, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
-
-    const-string/jumbo v2, "summerauth save aak & id commit failed 2nd!"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 995
-    sget-object v1, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
-
-    const-wide/16 v1, 0x94
-
-    const-wide/16 v3, 0x25
-
-    const-wide/16 v5, 0x1
-
-    const/4 v7, 0x0
-
-    invoke-static/range {v1 .. v7}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
-
-    .line 996
-    const-string/jumbo v1, "key_auth_info_prefs_created"
-
-    const/4 v2, 0x0
-
-    invoke-interface {v8, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    .line 997
-    const-string/jumbo v2, "key_auth_update_version"
-
-    const/4 v3, 0x0
-
-    invoke-interface {v8, v2, v3}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v15}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     move-result v2
 
+    .line 992
+    if-nez v2, :cond_0
+
+    .line 993
+    const-string/jumbo v2, "MicroMsg.AutoAuth"
+
+    const-string/jumbo v3, "summerauth save aak & id commit failed 1th!"
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 994
+    sget-object v2, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
+
+    const-wide/16 v2, 0x94
+
+    const-wide/16 v4, 0x24
+
+    const-wide/16 v6, 0x1
+
+    const/4 v8, 0x0
+
+    invoke-static/range {v2 .. v8}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
+
+    .line 995
+    invoke-interface {v15}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    move-result v2
+
+    .line 996
+    if-nez v2, :cond_0
+
+    .line 997
+    const-string/jumbo v2, "MicroMsg.AutoAuth"
+
+    const-string/jumbo v3, "summerauth save aak & id commit failed 2nd!"
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
     .line 998
-    const-string/jumbo v3, "_auth_uin"
+    sget-object v2, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
+
+    const-wide/16 v2, 0x94
+
+    const-wide/16 v4, 0x25
+
+    const-wide/16 v6, 0x1
+
+    const/4 v8, 0x0
+
+    invoke-static/range {v2 .. v8}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
+
+    .line 999
+    const-string/jumbo v2, "key_auth_info_prefs_created"
+
+    const/4 v3, 0x0
+
+    invoke-interface {v9, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v2
+
+    .line 1000
+    const-string/jumbo v3, "key_auth_update_version"
 
     const/4 v4, 0x0
 
-    invoke-interface {v8, v3, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v9, v3, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 999
-    const-string/jumbo v4, "_auth_key"
+    .line 1001
+    const-string/jumbo v4, "_auth_uin"
 
-    const-string/jumbo v5, ""
+    const/4 v5, 0x0
 
-    invoke-interface {v8, v4, v5}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v9, v4, v5}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
-    move-result-object v4
+    move-result v4
 
-    .line 1000
-    const-string/jumbo v5, "server_id"
+    .line 1002
+    const-string/jumbo v5, "_auth_key"
 
     const-string/jumbo v6, ""
 
-    invoke-interface {v8, v5, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v9, v5, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1001
-    const-string/jumbo v6, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    .line 1003
+    const-string/jumbo v6, "server_id"
 
-    const-string/jumbo v7, "summerauth save aak & id commit failed 2th so ret false old vs new vs input create[%b, %b, %b] version[%d, %d, %d], uin[%d, %d, %d], aak[%s, %s, %s], cookie[%s, %s, %s]"
+    const-string/jumbo v7, ""
 
-    const/16 v8, 0xf
+    invoke-interface {v9, v6, v7}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    new-array v8, v8, [Ljava/lang/Object;
+    move-result-object v6
 
-    const/4 v14, 0x0
+    .line 1004
+    const-string/jumbo v7, "MicroMsg.AutoAuth"
 
-    invoke-static {v9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const-string/jumbo v8, "summerauth save aak & id commit failed 2th so ret false old vs new vs input create[%b, %b, %b] version[%d, %d, %d], uin[%d, %d, %d], aak[%s, %s, %s], cookie[%s, %s, %s]"
 
-    move-result-object v9
+    const/16 v9, 0xf
 
-    aput-object v9, v8, v14
+    new-array v9, v9, [Ljava/lang/Object;
 
-    const/4 v9, 0x1
+    const/4 v15, 0x0
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v10}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v1
+    move-result-object v10
 
-    aput-object v1, v8, v9
+    aput-object v10, v9, v15
 
-    const/4 v1, 0x2
+    const/4 v10, 0x1
 
-    const/4 v9, 0x1
-
-    invoke-static {v9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v9
-
-    aput-object v9, v8, v1
-
-    const/4 v1, 0x3
-
-    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    aput-object v9, v8, v1
-
-    const/4 v1, 0x4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
-    aput-object v2, v8, v1
+    aput-object v2, v9, v10
 
-    const/4 v1, 0x5
+    const/4 v2, 0x2
 
-    sget v2, Lcom/tencent/mm/protocal/b;->iUf:I
+    const/4 v10, 0x1
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v10}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v2
+    move-result-object v10
 
-    aput-object v2, v8, v1
+    aput-object v10, v9, v2
 
-    const/4 v1, 0x6
+    const/4 v2, 0x3
 
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v10
 
-    aput-object v2, v8, v1
+    aput-object v10, v9, v2
 
-    const/4 v1, 0x7
+    const/4 v2, 0x4
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v3
 
-    aput-object v2, v8, v1
+    aput-object v3, v9, v2
 
-    const/16 v1, 0x8
+    const/4 v2, 0x5
+
+    sget v3, Lcom/tencent/mm/protocal/c;->jry:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v9, v2
+
+    const/4 v2, 0x6
+
+    invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v9, v2
+
+    const/4 v2, 0x7
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v9, v2
+
+    const/16 v2, 0x8
 
     invoke-static/range {p2 .. p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v3
 
-    aput-object v2, v8, v1
+    aput-object v3, v9, v2
 
-    const/16 v1, 0x9
+    const/16 v2, 0x9
 
-    aput-object v12, v8, v1
+    aput-object v13, v9, v2
 
-    const/16 v1, 0xa
+    const/16 v2, 0xa
 
-    aput-object v4, v8, v1
+    aput-object v5, v9, v2
 
-    const/16 v1, 0xb
+    const/16 v2, 0xb
 
-    aput-object p0, v8, v1
+    aput-object p0, v9, v2
 
-    const/16 v1, 0xc
+    const/16 v2, 0xc
 
-    aput-object v13, v8, v1
+    aput-object v14, v9, v2
 
-    const/16 v1, 0xd
+    const/16 v2, 0xd
 
-    aput-object v5, v8, v1
+    aput-object v6, v9, v2
 
-    const/16 v1, 0xe
+    const/16 v2, 0xe
 
-    aput-object p1, v8, v1
+    aput-object p1, v9, v2
 
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v7, v8, v9}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1004
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->appenderFlush()V
-
-    .line 1005
-    const/4 v1, 0x0
-
-    .line 1025
-    :goto_0
-    return v1
+    .line 1007
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->appenderFlush()V
 
     .line 1008
-    :cond_0
-    const-string/jumbo v1, "key_auth_info_prefs_created"
-
     const/4 v2, 0x0
 
-    invoke-interface {v8, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    .line 1028
+    :goto_0
+    return v2
 
-    move-result v1
-
-    .line 1009
-    const-string/jumbo v2, "key_auth_update_version"
+    .line 1011
+    :cond_0
+    const-string/jumbo v2, "key_auth_info_prefs_created"
 
     const/4 v3, 0x0
 
-    invoke-interface {v8, v2, v3}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v9, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
 
-    .line 1010
-    const-string/jumbo v3, "_auth_uin"
+    .line 1012
+    const-string/jumbo v3, "key_auth_update_version"
 
     const/4 v4, 0x0
 
-    invoke-interface {v8, v3, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v9, v3, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 1011
-    const-string/jumbo v4, "_auth_key"
+    .line 1013
+    const-string/jumbo v4, "_auth_uin"
 
-    const-string/jumbo v5, ""
+    const/4 v5, 0x0
 
-    invoke-interface {v8, v4, v5}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v9, v4, v5}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
-    move-result-object v4
+    move-result v4
 
-    .line 1012
-    const-string/jumbo v5, "server_id"
+    .line 1014
+    const-string/jumbo v5, "_auth_key"
 
     const-string/jumbo v6, ""
 
-    invoke-interface {v8, v5, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v9, v5, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1014
-    if-eqz v1, :cond_1
+    .line 1015
+    const-string/jumbo v6, "server_id"
 
-    sget v6, Lcom/tencent/mm/protocal/b;->iUf:I
+    const-string/jumbo v7, ""
 
-    if-ne v2, v6, :cond_1
+    invoke-interface {v9, v6, v7}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    .line 1017
+    if-eqz v2, :cond_1
+
+    sget v7, Lcom/tencent/mm/protocal/c;->jry:I
+
+    if-ne v3, v7, :cond_1
 
     move/from16 v0, p2
 
-    if-ne v3, v0, :cond_1
+    if-ne v4, v0, :cond_1
 
-    invoke-virtual {v4, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_1
-
-    move-object/from16 v0, p1
+    move-object/from16 v0, p0
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v7
 
-    if-nez v6, :cond_2
+    if-eqz v7, :cond_1
 
-    .line 1015
+    move-object/from16 v0, p1
+
+    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_2
+
+    .line 1018
     :cond_1
-    const-string/jumbo v6, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v7, "MicroMsg.AutoAuth"
 
-    const-string/jumbo v7, "summerauth save aak & id commit failed check not equal so ret false old vs new vs input create[%b, %b, %b] version[%d, %d, %d], uin[%d, %d, %d], aak[%s, %s, %s], cookie[%s, %s, %s]"
+    const-string/jumbo v8, "summerauth save aak & id commit failed check not equal so ret false old vs new vs input create[%b, %b, %b] version[%d, %d, %d], uin[%d, %d, %d], aak[%s, %s, %s], cookie[%s, %s, %s]"
 
-    const/16 v8, 0xf
+    const/16 v9, 0xf
 
-    new-array v8, v8, [Ljava/lang/Object;
+    new-array v9, v9, [Ljava/lang/Object;
 
-    const/4 v14, 0x0
+    const/4 v15, 0x0
 
-    invoke-static {v9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v10}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v9
+    move-result-object v10
 
-    aput-object v9, v8, v14
+    aput-object v10, v9, v15
 
-    const/4 v9, 0x1
+    const/4 v10, 0x1
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    aput-object v1, v8, v9
-
-    const/4 v1, 0x2
-
-    const/4 v9, 0x1
-
-    invoke-static {v9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v9
-
-    aput-object v9, v8, v1
-
-    const/4 v1, 0x3
-
-    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    aput-object v9, v8, v1
-
-    const/4 v1, 0x4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
-    aput-object v2, v8, v1
+    aput-object v2, v9, v10
 
-    const/4 v1, 0x5
+    const/4 v2, 0x2
 
-    sget v2, Lcom/tencent/mm/protocal/b;->iUf:I
+    const/4 v10, 0x1
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v10}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v2
+    move-result-object v10
 
-    aput-object v2, v8, v1
+    aput-object v10, v9, v2
 
-    const/4 v1, 0x6
+    const/4 v2, 0x3
 
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v10
 
-    aput-object v2, v8, v1
+    aput-object v10, v9, v2
 
-    const/4 v1, 0x7
+    const/4 v2, 0x4
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v3
 
-    aput-object v2, v8, v1
+    aput-object v3, v9, v2
 
-    const/16 v1, 0x8
+    const/4 v2, 0x5
+
+    sget v3, Lcom/tencent/mm/protocal/c;->jry:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v9, v2
+
+    const/4 v2, 0x6
+
+    invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v9, v2
+
+    const/4 v2, 0x7
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v9, v2
+
+    const/16 v2, 0x8
 
     invoke-static/range {p2 .. p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v3
 
-    aput-object v2, v8, v1
+    aput-object v3, v9, v2
 
-    const/16 v1, 0x9
+    const/16 v2, 0x9
 
-    aput-object v12, v8, v1
+    aput-object v13, v9, v2
 
-    const/16 v1, 0xa
+    const/16 v2, 0xa
 
-    aput-object v4, v8, v1
+    aput-object v5, v9, v2
 
-    const/16 v1, 0xb
+    const/16 v2, 0xb
 
-    aput-object p0, v8, v1
+    aput-object p0, v9, v2
 
-    const/16 v1, 0xc
+    const/16 v2, 0xc
 
-    aput-object v13, v8, v1
+    aput-object v14, v9, v2
 
-    const/16 v1, 0xd
+    const/16 v2, 0xd
 
-    aput-object v5, v8, v1
+    aput-object v6, v9, v2
 
-    const/16 v1, 0xe
+    const/16 v2, 0xe
 
-    aput-object p1, v8, v1
+    aput-object p1, v9, v2
 
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v7, v8, v9}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1018
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->appenderFlush()V
+    .line 1021
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->appenderFlush()V
 
-    .line 1019
-    const/4 v1, 0x0
+    .line 1022
+    const/4 v2, 0x0
 
     goto/16 :goto_0
 
-    .line 1021
+    .line 1024
     :cond_2
-    const-string/jumbo v6, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v7, "MicroMsg.AutoAuth"
 
-    const-string/jumbo v7, "summerauth save aak & id ok old vs new vs input[%b, %b, %b] version[%d, %d, %d], uin[%d, %d, %d], aak[%s, %s, %s], cookie[%s, %s, %s]"
+    const-string/jumbo v8, "summerauth save aak & id ok old vs new vs input[%b, %b, %b] version[%d, %d, %d], uin[%d, %d, %d], aak[%s, %s, %s], cookie[%s, %s, %s]"
 
-    const/16 v8, 0xf
+    const/16 v9, 0xf
 
-    new-array v8, v8, [Ljava/lang/Object;
+    new-array v9, v9, [Ljava/lang/Object;
 
-    const/4 v14, 0x0
+    const/4 v15, 0x0
 
-    invoke-static {v9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v10}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v9
+    move-result-object v10
 
-    aput-object v9, v8, v14
+    aput-object v10, v9, v15
 
-    const/4 v9, 0x1
+    const/4 v10, 0x1
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    aput-object v1, v8, v9
-
-    const/4 v1, 0x2
-
-    const/4 v9, 0x1
-
-    invoke-static {v9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v9
-
-    aput-object v9, v8, v1
-
-    const/4 v1, 0x3
-
-    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    aput-object v9, v8, v1
-
-    const/4 v1, 0x4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
-    aput-object v2, v8, v1
+    aput-object v2, v9, v10
 
-    const/4 v1, 0x5
+    const/4 v2, 0x2
 
-    sget v2, Lcom/tencent/mm/protocal/b;->iUf:I
+    const/4 v10, 0x1
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v10}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v2
+    move-result-object v10
 
-    aput-object v2, v8, v1
+    aput-object v10, v9, v2
 
-    const/4 v1, 0x6
+    const/4 v2, 0x3
 
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v10
 
-    aput-object v2, v8, v1
+    aput-object v10, v9, v2
 
-    const/4 v1, 0x7
+    const/4 v2, 0x4
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v3
 
-    aput-object v2, v8, v1
+    aput-object v3, v9, v2
 
-    const/16 v1, 0x8
+    const/4 v2, 0x5
+
+    sget v3, Lcom/tencent/mm/protocal/c;->jry:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v9, v2
+
+    const/4 v2, 0x6
+
+    invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v9, v2
+
+    const/4 v2, 0x7
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v9, v2
+
+    const/16 v2, 0x8
 
     invoke-static/range {p2 .. p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v3
 
-    aput-object v2, v8, v1
+    aput-object v3, v9, v2
 
-    const/16 v1, 0x9
+    const/16 v2, 0x9
 
-    aput-object v12, v8, v1
+    aput-object v13, v9, v2
 
-    const/16 v1, 0xa
+    const/16 v2, 0xa
 
-    aput-object v4, v8, v1
+    aput-object v5, v9, v2
 
-    const/16 v1, 0xb
+    const/16 v2, 0xb
 
-    aput-object p0, v8, v1
+    aput-object p0, v9, v2
 
-    const/16 v1, 0xc
+    const/16 v2, 0xc
 
-    aput-object v13, v8, v1
+    aput-object v14, v9, v2
 
-    const/16 v1, 0xd
+    const/16 v2, 0xd
 
-    aput-object v5, v8, v1
+    aput-object v6, v9, v2
 
-    const/16 v1, 0xe
+    const/16 v2, 0xe
 
-    aput-object p1, v8, v1
+    aput-object p1, v9, v2
 
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v7, v8, v9}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1024
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->appenderFlush()V
+    .line 1027
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->appenderFlush()V
 
-    .line 1025
-    const/4 v1, 0x1
+    .line 1028
+    const/4 v2, 0x1
 
     goto/16 :goto_0
 .end method
 
-.method static synthetic ef(I)V
+.method static synthetic eO(I)V
     .locals 7
 
     .prologue
     const/4 v0, 0x0
 
     .line 53
-    const-string/jumbo v1, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v1, "MicroMsg.AutoAuth"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1260,11 +1264,11 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     if-gez p0, :cond_1
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v0, "MicroMsg.AutoAuth"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1280,18 +1284,18 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
+    invoke-static {}, Lcom/tencent/mm/network/z;->FD()Lcom/tencent/mm/network/y;
 
     move-result-object v1
 
-    const-string/jumbo v2, "!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g="
+    const-string/jumbo v2, "MicroMsg.MMNativeNetTaskAdapter"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1307,7 +1311,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     if-ltz p0, :cond_0
 
@@ -1315,22 +1319,22 @@
 
     if-ge p0, v2, :cond_0
 
-    iget-object v2, v1, Lcom/tencent/mm/network/y;->cjG:[Lcom/tencent/mm/network/y$a;
+    iget-object v2, v1, Lcom/tencent/mm/network/y;->ceX:[Lcom/tencent/mm/network/y$a;
 
     monitor-enter v2
 
     :try_start_0
-    iget-object v3, v1, Lcom/tencent/mm/network/y;->cjG:[Lcom/tencent/mm/network/y$a;
+    iget-object v3, v1, Lcom/tencent/mm/network/y;->ceX:[Lcom/tencent/mm/network/y$a;
 
     aget-object v3, v3, p0
 
     if-eqz v3, :cond_2
 
-    iget-object v0, v1, Lcom/tencent/mm/network/y;->cjG:[Lcom/tencent/mm/network/y$a;
+    iget-object v0, v1, Lcom/tencent/mm/network/y;->ceX:[Lcom/tencent/mm/network/y$a;
 
     aget-object v0, v0, p0
 
-    iget-object v0, v0, Lcom/tencent/mm/network/y$a;->cjK:Lcom/tencent/mm/network/p;
+    iget-object v0, v0, Lcom/tencent/mm/network/y$a;->cfb:Lcom/tencent/mm/network/p;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -1346,12 +1350,12 @@
     invoke-static {v0}, Lcom/tencent/mm/network/Java2C;->stopTask(I)V
 
     :cond_3
-    iget-object v2, v1, Lcom/tencent/mm/network/y;->cjG:[Lcom/tencent/mm/network/y$a;
+    iget-object v2, v1, Lcom/tencent/mm/network/y;->ceX:[Lcom/tencent/mm/network/y$a;
 
     monitor-enter v2
 
     :try_start_1
-    iget-object v0, v1, Lcom/tencent/mm/network/y;->cjG:[Lcom/tencent/mm/network/y$a;
+    iget-object v0, v1, Lcom/tencent/mm/network/y;->ceX:[Lcom/tencent/mm/network/y$a;
 
     aget-object v0, v0, p0
     :try_end_1
@@ -1360,7 +1364,7 @@
     if-eqz v0, :cond_4
 
     :try_start_2
-    const-string/jumbo v0, "!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g="
+    const-string/jumbo v0, "MicroMsg.MMNativeNetTaskAdapter"
 
     const-string/jumbo v3, "mmcgi stopTask outQueue: netId:%d hash:%d type:%d"
 
@@ -1378,11 +1382,11 @@
 
     const/4 v5, 0x1
 
-    iget-object v6, v1, Lcom/tencent/mm/network/y;->cjG:[Lcom/tencent/mm/network/y$a;
+    iget-object v6, v1, Lcom/tencent/mm/network/y;->ceX:[Lcom/tencent/mm/network/y$a;
 
     aget-object v6, v6, p0
 
-    iget-object v6, v6, Lcom/tencent/mm/network/y$a;->cjK:Lcom/tencent/mm/network/p;
+    iget-object v6, v6, Lcom/tencent/mm/network/y$a;->cfb:Lcom/tencent/mm/network/p;
 
     invoke-interface {v6}, Lcom/tencent/mm/network/p;->getType()I
 
@@ -1396,13 +1400,13 @@
 
     const/4 v5, 0x2
 
-    iget-object v6, v1, Lcom/tencent/mm/network/y;->cjG:[Lcom/tencent/mm/network/y$a;
+    iget-object v6, v1, Lcom/tencent/mm/network/y;->ceX:[Lcom/tencent/mm/network/y$a;
 
     aget-object v6, v6, p0
 
-    iget-object v6, v6, Lcom/tencent/mm/network/y$a;->cjK:Lcom/tencent/mm/network/p;
+    iget-object v6, v6, Lcom/tencent/mm/network/y$a;->cfb:Lcom/tencent/mm/network/p;
 
-    invoke-interface {v6}, Lcom/tencent/mm/network/p;->vF()I
+    invoke-interface {v6}, Lcom/tencent/mm/network/p;->vI()I
 
     move-result v6
 
@@ -1412,9 +1416,9 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v0, v1, Lcom/tencent/mm/network/y;->cjG:[Lcom/tencent/mm/network/y$a;
+    iget-object v0, v1, Lcom/tencent/mm/network/y;->ceX:[Lcom/tencent/mm/network/y$a;
 
     const/4 v1, 0x0
 
@@ -1453,7 +1457,7 @@
     move-exception v0
 
     :try_start_5
-    const-string/jumbo v1, "!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g="
+    const-string/jumbo v1, "MicroMsg.MMNativeNetTaskAdapter"
 
     const-string/jumbo v3, "exception:%s"
 
@@ -1463,13 +1467,13 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v4, v5
 
-    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
@@ -1478,28 +1482,28 @@
 
 
 # virtual methods
-.method public final bridge synthetic EJ()Lcom/tencent/mm/network/d;
+.method public final bridge synthetic Fe()Lcom/tencent/mm/network/d;
     .locals 1
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    iget-object v0, p0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
     return-object v0
 .end method
 
-.method public final EK()V
+.method public final Ff()V
     .locals 4
 
     .prologue
     .line 776
-    iget-object v0, p0, Lcom/tencent/mm/network/r;->ciL:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iget-object v0, p0, Lcom/tencent/mm/network/r;->cec:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    const-string/jumbo v3, "MMAutoAuth.forceUpdateHostCache"
+    const-string/jumbo v1, "MMAutoAuth.forceUpdateHostCache"
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
+    invoke-virtual {v0, v2, v3, v1}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
 
     .line 777
     new-instance v0, Lcom/tencent/mm/network/r$11;
@@ -1513,27 +1517,27 @@
     invoke-direct {v0, p0, v1}, Lcom/tencent/mm/network/r$11;-><init>(Lcom/tencent/mm/network/r;Ljava/lang/Object;)V
 
     .line 784
-    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/at;->b(Lcom/tencent/mm/sdk/platformtools/aa;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/az;->b(Lcom/tencent/mm/sdk/platformtools/ac;)Ljava/lang/Object;
 
     .line 785
     return-void
 .end method
 
-.method public final EL()Lcom/tencent/mm/network/h;
+.method public final Fg()Lcom/tencent/mm/network/h;
     .locals 1
 
     .prologue
     .line 809
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fd()Lcom/tencent/mm/network/ab;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fz()Lcom/tencent/mm/network/ab;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final EP()Z
+.method public final Fk()Z
     .locals 8
 
     .prologue
@@ -1548,7 +1552,7 @@
 
     move-result-wide v4
 
-    iget-wide v6, p0, Lcom/tencent/mm/network/r;->ciJ:J
+    iget-wide v6, p0, Lcom/tencent/mm/network/r;->cea:J
 
     sub-long/2addr v4, v6
 
@@ -1557,7 +1561,7 @@
     if-ltz v2, :cond_0
 
     .line 428
-    const-string/jumbo v2, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v2, "MicroMsg.AutoAuth"
 
     const-string/jumbo v3, "auto limit lastSessionTimeout=%d, curtime=%d"
 
@@ -1565,9 +1569,9 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    iget-wide v5, p0, Lcom/tencent/mm/network/r;->ciJ:J
+    iget-wide v6, p0, Lcom/tencent/mm/network/r;->cea:J
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
 
@@ -1575,15 +1579,15 @@
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 434
     :goto_0
@@ -1595,16 +1599,16 @@
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/tencent/mm/network/r;->ciJ:J
+    iput-wide v2, p0, Lcom/tencent/mm/network/r;->cea:J
 
     .line 433
-    iget-object v2, p0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    iget-object v2, p0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
     new-array v0, v0, [B
 
-    iget-object v3, p0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    iget-object v3, p0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/network/a;->rg()I
+    invoke-virtual {v3}, Lcom/tencent/mm/network/a;->rf()I
 
     move-result v3
 
@@ -1616,42 +1620,42 @@
     goto :goto_0
 .end method
 
-.method public final EQ()[B
+.method public final Fl()[B
     .locals 6
 
     .prologue
     const/4 v0, 0x0
 
-    .line 1042
-    iget-object v1, p0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    .line 1045
+    iget-object v1, p0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/network/a;->vS()Z
+    invoke-virtual {v1}, Lcom/tencent/mm/network/a;->vU()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 1059
+    .line 1062
     :goto_0
     return-object v0
 
-    .line 1045
+    .line 1048
     :cond_0
-    new-instance v2, Lcom/tencent/mm/protocal/x$a;
+    new-instance v2, Lcom/tencent/mm/protocal/aa$a;
 
-    invoke-direct {v2}, Lcom/tencent/mm/protocal/x$a;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/protocal/aa$a;-><init>()V
 
-    .line 1046
-    iget-object v1, p0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    .line 1049
+    iget-object v1, p0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/network/a;->rg()I
+    invoke-virtual {v1}, Lcom/tencent/mm/network/a;->rf()I
 
     move-result v1
 
-    iput v1, v2, Lcom/tencent/mm/protocal/x$a;->uin:I
+    iput v1, v2, Lcom/tencent/mm/protocal/aa$a;->uin:I
 
-    .line 1047
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 1050
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -1663,7 +1667,7 @@
 
     move-result-object v1
 
-    .line 1048
+    .line 1051
     const-string/jumbo v3, "notify_sync_key_keybuf"
 
     const-string/jumbo v4, ""
@@ -1672,55 +1676,55 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kA(Ljava/lang/String;)[B
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->lj(Ljava/lang/String;)[B
 
     move-result-object v1
 
-    .line 1049
-    iput-object v1, v2, Lcom/tencent/mm/protocal/x$a;->bVi:[B
+    .line 1052
+    iput-object v1, v2, Lcom/tencent/mm/protocal/aa$a;->bOJ:[B
 
-    .line 1050
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 1053
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/protocal/i;->cn(Landroid/content/Context;)I
+    invoke-static {v1}, Lcom/tencent/mm/protocal/l;->ci(Landroid/content/Context;)I
 
     move-result v1
 
-    iput v1, v2, Lcom/tencent/mm/protocal/x$a;->netType:I
-
-    .line 1051
-    invoke-static {}, Lcom/tencent/mm/protocal/i;->aTs()I
-
-    move-result v1
-
-    iput v1, v2, Lcom/tencent/mm/protocal/x$a;->iUN:I
+    iput v1, v2, Lcom/tencent/mm/protocal/aa$a;->netType:I
 
     .line 1054
+    invoke-static {}, Lcom/tencent/mm/protocal/l;->aYp()I
+
+    move-result v1
+
+    iput v1, v2, Lcom/tencent/mm/protocal/aa$a;->jsk:I
+
+    .line 1057
     :try_start_0
-    invoke-virtual {v2}, Lcom/tencent/mm/protocal/x$a;->tY()[B
+    invoke-virtual {v2}, Lcom/tencent/mm/protocal/aa$a;->tZ()[B
 
     move-result-object v1
 
-    .line 1055
-    iget-object v2, v2, Lcom/tencent/mm/protocal/x$a;->bBg:[B
+    .line 1058
+    iget-object v2, v2, Lcom/tencent/mm/protocal/aa$a;->bul:[B
 
-    iput-object v2, p0, Lcom/tencent/mm/network/r;->bBg:[B
+    iput-object v2, p0, Lcom/tencent/mm/network/r;->bul:[B
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-object v0, v1
 
-    .line 1056
+    .line 1059
     goto :goto_0
 
-    .line 1057
+    .line 1060
     :catch_0
     move-exception v1
 
-    .line 1058
-    const-string/jumbo v2, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    .line 1061
+    const-string/jumbo v2, "MicroMsg.AutoAuth"
 
     const-string/jumbo v3, "exception:%s"
 
@@ -1730,38 +1734,38 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v1
 
     aput-object v1, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method public final ER()Z
+.method public final Fm()Z
     .locals 2
 
     .prologue
     const/4 v0, 0x0
 
-    .line 1152
-    iget-object v1, p0, Lcom/tencent/mm/network/r;->ciR:Lcom/tencent/mm/network/q;
+    .line 1155
+    iget-object v1, p0, Lcom/tencent/mm/network/r;->cei:Lcom/tencent/mm/network/q;
 
     if-nez v1, :cond_0
 
-    .line 1158
+    .line 1161
     :goto_0
     return v0
 
-    .line 1156
+    .line 1159
     :cond_0
     :try_start_0
-    iget-object v1, p0, Lcom/tencent/mm/network/r;->ciR:Lcom/tencent/mm/network/q;
+    iget-object v1, p0, Lcom/tencent/mm/network/r;->cei:Lcom/tencent/mm/network/q;
 
-    invoke-interface {v1}, Lcom/tencent/mm/network/q;->ks()Z
+    invoke-interface {v1}, Lcom/tencent/mm/network/q;->iV()Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1769,7 +1773,7 @@
 
     goto :goto_0
 
-    .line 1158
+    .line 1161
     :catch_0
     move-exception v1
 
@@ -1784,13 +1788,13 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/network/r;->ciL:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iget-object v0, p0, Lcom/tencent/mm/network/r;->cec:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    const-string/jumbo v3, "MMAutoAuth.send"
+    const-string/jumbo v1, "MMAutoAuth.send"
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
+    invoke-virtual {v0, v2, v3, v1}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
 
     .line 287
     new-instance v0, Lcom/tencent/mm/network/r$6;
@@ -1804,9 +1808,9 @@
     invoke-direct {v0, p0, v1, p1, p2}, Lcom/tencent/mm/network/r$6;-><init>(Lcom/tencent/mm/network/r;Ljava/lang/Integer;Lcom/tencent/mm/network/p;Lcom/tencent/mm/network/k;)V
 
     .line 303
-    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/at;->b(Lcom/tencent/mm/sdk/platformtools/aa;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/az;->b(Lcom/tencent/mm/sdk/platformtools/ac;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1833,10 +1837,19 @@
 
 .method public final a(ZLjava/util/List;)I
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(Z",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)I"
+        }
+    .end annotation
 
     .prologue
-    .line 1074
-    invoke-static {p2, p1}, Lcom/tencent/mm/network/Java2C;->a(Ljava/util/List;Z)I
+    .line 1077
+    invoke-static {p2, p1}, Lcom/tencent/mm/network/Java2C;->b(Ljava/util/List;Z)I
 
     move-result v0
 
@@ -1847,16 +1860,16 @@
     .locals 6
 
     .prologue
-    .line 1102
-    iget-object v0, p0, Lcom/tencent/mm/network/r;->ciL:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    .line 1105
+    iget-object v0, p0, Lcom/tencent/mm/network/r;->cec:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    const-string/jumbo v3, "MMAutoAuth.logUtil"
+    const-string/jumbo v1, "MMAutoAuth.logUtil"
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
+    invoke-virtual {v0, v2, v3, v1}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
 
-    .line 1103
+    .line 1106
     new-instance v0, Lcom/tencent/mm/network/r$4;
 
     move-object v1, p0
@@ -1871,12 +1884,12 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/network/r$4;-><init>(Lcom/tencent/mm/network/r;IILjava/lang/String;Z)V
 
-    .line 1122
-    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 1125
+    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/at;->b(Lcom/tencent/mm/sdk/platformtools/aa;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/az;->b(Lcom/tencent/mm/sdk/platformtools/ac;)Ljava/lang/Object;
 
-    .line 1123
+    .line 1126
     return-void
 .end method
 
@@ -1885,11 +1898,11 @@
 
     .prologue
     .line 804
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fc()Lcom/tencent/mm/network/aa;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fy()Lcom/tencent/mm/network/aa;
 
     move-result-object v0
 
-    iput-object p1, v0, Lcom/tencent/mm/network/aa;->cjW:Lcom/tencent/mm/network/a/b;
+    iput-object p1, v0, Lcom/tencent/mm/network/aa;->cfo:Lcom/tencent/mm/network/a/b;
 
     .line 805
     return-void
@@ -1899,10 +1912,10 @@
     .locals 0
 
     .prologue
-    .line 1166
-    iput-object p1, p0, Lcom/tencent/mm/network/r;->ciS:Lcom/tencent/mm/network/g;
+    .line 1169
+    iput-object p1, p0, Lcom/tencent/mm/network/r;->cej:Lcom/tencent/mm/network/g;
 
-    .line 1167
+    .line 1170
     return-void
 .end method
 
@@ -1910,14 +1923,14 @@
     .locals 1
 
     .prologue
-    .line 1142
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fk()Lcom/tencent/mm/network/u;
+    .line 1145
+    invoke-static {}, Lcom/tencent/mm/network/z;->FG()Lcom/tencent/mm/network/u;
 
     move-result-object v0
 
-    iput-object p1, v0, Lcom/tencent/mm/network/u;->cjy:Lcom/tencent/mm/network/n;
+    iput-object p1, v0, Lcom/tencent/mm/network/u;->ceP:Lcom/tencent/mm/network/n;
 
-    .line 1143
+    .line 1146
     return-void
 .end method
 
@@ -1925,12 +1938,12 @@
     .locals 1
 
     .prologue
-    .line 1032
-    iget-object v0, p0, Lcom/tencent/mm/network/r;->ciN:Lcom/tencent/mm/network/r$a;
+    .line 1035
+    iget-object v0, p0, Lcom/tencent/mm/network/r;->cee:Lcom/tencent/mm/network/r$a;
 
     invoke-interface {p1, v0, p2, p3}, Lcom/tencent/mm/network/p;->a(Lcom/tencent/mm/network/i;II)V
 
-    .line 1033
+    .line 1036
     return-void
 .end method
 
@@ -1938,25 +1951,25 @@
     .locals 0
 
     .prologue
-    .line 1148
-    iput-object p1, p0, Lcom/tencent/mm/network/r;->ciR:Lcom/tencent/mm/network/q;
+    .line 1151
+    iput-object p1, p0, Lcom/tencent/mm/network/r;->cei:Lcom/tencent/mm/network/q;
 
-    .line 1149
+    .line 1152
     return-void
 .end method
 
-.method public final a(Lcom/tencent/mm/protocal/y;)V
+.method public final a(Lcom/tencent/mm/protocal/ab;)V
     .locals 1
 
     .prologue
-    .line 1039
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
+    .line 1042
+    invoke-static {}, Lcom/tencent/mm/network/z;->FD()Lcom/tencent/mm/network/y;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/network/y;->EW()I
+    invoke-virtual {v0}, Lcom/tencent/mm/network/y;->Fs()I
 
-    .line 1040
+    .line 1043
     return-void
 .end method
 
@@ -1965,26 +1978,26 @@
 
     .prologue
     .line 678
-    iget-object v0, p0, Lcom/tencent/mm/network/r;->ciL:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iget-object v0, p0, Lcom/tencent/mm/network/r;->cec:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    const-string/jumbo v3, "MMAutoAuth.setIDCHostInfo"
+    const-string/jumbo v1, "MMAutoAuth.setIDCHostInfo"
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
+    invoke-virtual {v0, v2, v3, v1}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
 
     .line 683
-    invoke-static {p3}, Lcom/tencent/mm/protocal/k;->Bj(Ljava/lang/String;)Ljava/util/List;
+    invoke-static {p3}, Lcom/tencent/mm/protocal/n;->Du(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
 
     .line 684
-    invoke-static {p2}, Lcom/tencent/mm/protocal/k;->Bj(Ljava/lang/String;)Ljava/util/List;
+    invoke-static {p2}, Lcom/tencent/mm/protocal/n;->Du(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v2
 
     .line 686
-    const-string/jumbo v3, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v3, "MicroMsg.AutoAuth"
 
     const-string/jumbo v4, "dkidc setIDCHostInfo short:[%s][%s](%d) long:[%s][%s](%d) reset:%s"
 
@@ -2041,7 +2054,7 @@
     :goto_0
     aput-object v0, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 690
     new-instance v3, Ljava/util/HashMap;
@@ -2064,10 +2077,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/protocal/k;
+    check-cast v0, Lcom/tencent/mm/protocal/n;
 
     .line 692
-    iget-object v1, v0, Lcom/tencent/mm/protocal/k;->host:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/protocal/n;->host:Ljava/lang/String;
 
     invoke-interface {v3, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2084,13 +2097,13 @@
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 695
-    iget-object v5, v0, Lcom/tencent/mm/protocal/k;->host:Ljava/lang/String;
+    iget-object v5, v0, Lcom/tencent/mm/protocal/n;->host:Ljava/lang/String;
 
     invoke-interface {v3, v5, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 697
     :cond_0
-    iget-object v0, v0, Lcom/tencent/mm/protocal/k;->eJa:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/n;->eQP:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -2124,10 +2137,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/protocal/k;
+    check-cast v0, Lcom/tencent/mm/protocal/n;
 
     .line 702
-    iget-object v1, v0, Lcom/tencent/mm/protocal/k;->host:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/protocal/n;->host:Ljava/lang/String;
 
     invoke-interface {v4, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2144,13 +2157,13 @@
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 705
-    iget-object v5, v0, Lcom/tencent/mm/protocal/k;->host:Ljava/lang/String;
+    iget-object v5, v0, Lcom/tencent/mm/protocal/n;->host:Ljava/lang/String;
 
     invoke-interface {v4, v5, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 707
     :cond_3
-    iget-object v0, v0, Lcom/tencent/mm/protocal/k;->eJa:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/n;->eQP:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -2177,15 +2190,15 @@
     invoke-direct/range {v0 .. v7}, Lcom/tencent/mm/network/r$8;-><init>(Lcom/tencent/mm/network/r;Ljava/lang/Object;Ljava/util/Map;Ljava/util/Map;[I[IZ)V
 
     .line 733
-    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/at;->b(Lcom/tencent/mm/sdk/platformtools/aa;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/az;->b(Lcom/tencent/mm/sdk/platformtools/ac;)Ljava/lang/Object;
 
     .line 734
     return-void
 .end method
 
-.method public final aO(Z)V
+.method public final at(Z)V
     .locals 2
 
     .prologue
@@ -2201,25 +2214,25 @@
     invoke-direct {v0, p0, v1, p1}, Lcom/tencent/mm/network/r$7;-><init>(Lcom/tencent/mm/network/r;Ljava/lang/Object;Z)V
 
     .line 672
-    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/at;->b(Lcom/tencent/mm/sdk/platformtools/aa;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/az;->b(Lcom/tencent/mm/sdk/platformtools/ac;)Ljava/lang/Object;
 
     .line 673
     return-void
 .end method
 
-.method public final aP(Z)V
+.method public final au(Z)V
     .locals 3
 
     .prologue
-    .line 1194
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 1197
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
     if-nez v0, :cond_0
 
-    .line 1195
-    const-string/jumbo v0, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    .line 1198
+    const-string/jumbo v0, "MicroMsg.AutoAuth"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2235,208 +2248,88 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1206
+    .line 1209
     :goto_0
     return-void
 
-    .line 1199
+    .line 1202
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 1200
-    new-instance v0, Lcom/tencent/mm/d/a/ad;
+    .line 1203
+    new-instance v0, Lcom/tencent/mm/e/a/ae;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/ad;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/ae;-><init>()V
 
-    .line 1201
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 1204
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     goto :goto_0
 
-    .line 1203
+    .line 1206
     :cond_1
-    new-instance v0, Lcom/tencent/mm/d/a/ew;
+    new-instance v0, Lcom/tencent/mm/e/a/fc;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/ew;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/fc;-><init>()V
 
-    .line 1204
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 1207
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     goto :goto_0
 .end method
 
-.method public final aQ(Z)V
+.method public final av(Z)V
     .locals 1
 
     .prologue
-    .line 1215
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 1218
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->dS(Landroid/content/Context;)Ljava/util/Locale;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->dT(Landroid/content/Context;)Ljava/util/Locale;
 
-    .line 1216
+    .line 1219
     return-void
 .end method
 
-.method public final c(Ljava/lang/String;Ljava/util/List;)I
-    .locals 1
+.method public final aw(Z)V
+    .locals 5
 
     .prologue
-    .line 1069
-    invoke-static {p1, p2}, Lcom/tencent/mm/network/Java2C;->c(Ljava/lang/String;Ljava/util/List;)I
+    .line 1223
+    const-string/jumbo v0, "MicroMsg.AutoAuth"
 
-    move-result v0
+    const-string/jumbo v1, "summer setMMTLS enable[%b]"
 
-    return v0
-.end method
-
-.method public final c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 7
-
-    .prologue
-    .line 738
-    iget-object v0, p0, Lcom/tencent/mm/network/r;->ciL:Lcom/tencent/mm/jni/platformcomm/WakerLock;
-
-    const-wide/16 v1, 0x3e8
-
-    const-string/jumbo v3, "MMAutoAuth.setFixedHost"
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
-
-    .line 739
-    const-string/jumbo v0, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
-
-    const-string/jumbo v1, "dkidc setFixedHost debug short:%s:%s long:%s:%d"
-
-    const/4 v2, 0x4
+    const/4 v2, 0x1
 
     new-array v2, v2, [Ljava/lang/Object;
 
     const/4 v3, 0x0
 
-    aput-object p1, v2, v3
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    const/4 v3, 0x1
+    move-result-object v4
 
-    aput-object p2, v2, v3
+    aput-object v4, v2, v3
 
-    const/4 v3, 0x2
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    aput-object p3, v2, v3
+    .line 1224
+    invoke-static {p1}, Lcom/tencent/mm/network/Java2C;->setMmtlsCtrlInfo(Z)V
 
-    const/4 v3, 0x3
-
-    aput-object p4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 740
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 741
-    :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
-
-    const-string/jumbo v1, "dkidc setFixedHost FAILED ! check assist"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 753
-    :goto_0
-    return-void
-
-    .line 744
-    :cond_1
-    new-instance v0, Lcom/tencent/mm/network/r$9;
-
-    const/4 v1, -0x1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object v1, p0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    move-object v6, p4
-
-    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/network/r$9;-><init>(Lcom/tencent/mm/network/r;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 752
-    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/at;->b(Lcom/tencent/mm/sdk/platformtools/aa;)Ljava/lang/Object;
-
-    goto :goto_0
-.end method
-
-.method public final cancel(I)V
-    .locals 7
-
-    .prologue
-    .line 220
-    iget-object v0, p0, Lcom/tencent/mm/network/r;->ciL:Lcom/tencent/mm/jni/platformcomm/WakerLock;
-
-    const-wide/16 v1, 0x3e8
-
-    const-string/jumbo v3, "MMAutoAuth.cancel,%d"
-
-    const/4 v4, 0x1
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    const/4 v5, 0x0
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    aput-object v6, v4, v5
-
-    invoke-static {v3, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
-
-    .line 221
-    new-instance v0, Lcom/tencent/mm/network/r$1;
-
-    invoke-direct {v0, p0, p1}, Lcom/tencent/mm/network/r$1;-><init>(Lcom/tencent/mm/network/r;I)V
-
-    .line 234
-    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/at;->b(Lcom/tencent/mm/sdk/platformtools/aa;)Ljava/lang/Object;
-
-    .line 235
+    .line 1225
     return-void
 .end method
 
-.method final d(IILjava/lang/String;)V
+.method final c(IILjava/lang/String;)V
     .locals 10
 
     .prologue
@@ -2446,8 +2339,8 @@
 
     const/4 v8, 0x4
 
-    .line 897
-    const-string/jumbo v0, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    .line 900
+    const-string/jumbo v0, "MicroMsg.AutoAuth"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2485,7 +2378,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->aVJ()Lcom/tencent/mm/sdk/platformtools/ad;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->baX()Lcom/tencent/mm/sdk/platformtools/af;
 
     move-result-object v2
 
@@ -2497,25 +2390,25 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 900
+    .line 903
     if-ne p1, v8, :cond_3
 
     const/16 v0, -0x6a
 
     if-ne p2, v0, :cond_3
 
-    .line 901
-    const-string/jumbo v0, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    .line 904
+    const-string/jumbo v0, "MicroMsg.AutoAuth"
 
     const-string/jumbo v1, "summerauth handleAutoAuthFail autoauth should not be return MM_ERR_BLOCK_BY_SPAM trans to MM_ERR_AUTH_ANOTHERPLACE"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v9
 
-    .line 904
+    .line 907
     :goto_0
     const/4 v1, 0x5
 
@@ -2525,18 +2418,18 @@
 
     if-ne p2, v1, :cond_0
 
-    .line 905
-    const-string/jumbo v0, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    .line 908
+    const-string/jumbo v0, "MicroMsg.AutoAuth"
 
     const-string/jumbo v1, "summerauth handleAutoAuthFail autoauth should not be return MM_ERR_SESSIONTIMEOUT trans to MM_ERR_PASSWORD"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 907
+    .line 910
     const/4 v7, -0x3
 
-    .line 908
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 911
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0x94
 
@@ -2544,21 +2437,21 @@
 
     const-wide/16 v4, 0x1
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
     move v0, v7
 
     move p1, v8
 
-    .line 911
+    .line 914
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
+    invoke-static {}, Lcom/tencent/mm/network/z;->FD()Lcom/tencent/mm/network/y;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1, v0, p3}, Lcom/tencent/mm/network/y;->e(IILjava/lang/String;)V
+    invoke-virtual {v1, p1, v0, p3}, Lcom/tencent/mm/network/y;->d(IILjava/lang/String;)V
 
-    .line 912
+    .line 915
     if-ne p1, v8, :cond_2
 
     if-eq v0, v9, :cond_1
@@ -2571,9 +2464,9 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 915
+    .line 918
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -2583,7 +2476,7 @@
 
     move-result-object v0
 
-    .line 917
+    .line 920
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -2598,10 +2491,10 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 920
+    .line 923
     invoke-virtual {p0}, Lcom/tencent/mm/network/r;->reset()V
 
-    .line 922
+    .line 925
     :cond_2
     return-void
 
@@ -2611,16 +2504,160 @@
     goto :goto_0
 .end method
 
-.method public final f(I[B)I
-    .locals 1
+.method public final c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 7
 
     .prologue
-    .line 1097
-    invoke-static {}, Lcom/tencent/mm/network/ad;->Fn()Lcom/tencent/mm/network/ad;
+    .line 738
+    iget-object v0, p0, Lcom/tencent/mm/network/r;->cec:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
-    move-result-object v0
+    const-wide/16 v2, 0x3e8
 
-    invoke-virtual {v0, p1, p2}, Lcom/tencent/mm/network/ad;->h(I[B)I
+    const-string/jumbo v1, "MMAutoAuth.setFixedHost"
+
+    invoke-virtual {v0, v2, v3, v1}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
+
+    .line 739
+    const-string/jumbo v0, "MicroMsg.AutoAuth"
+
+    const-string/jumbo v1, "dkidc setFixedHost debug short:%s:%s long:%s:%s"
+
+    const/4 v2, 0x4
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p1, v2, v3
+
+    const/4 v3, 0x1
+
+    aput-object p2, v2, v3
+
+    const/4 v3, 0x2
+
+    aput-object p3, v2, v3
+
+    const/4 v3, 0x3
+
+    aput-object p4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 740
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 741
+    :cond_0
+    const-string/jumbo v0, "MicroMsg.AutoAuth"
+
+    const-string/jumbo v1, "dkidc setFixedHost FAILED ! check assist"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 753
+    :goto_0
+    return-void
+
+    .line 744
+    :cond_1
+    new-instance v0, Lcom/tencent/mm/network/r$9;
+
+    const/4 v1, -0x1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    move-object v1, p0
+
+    move-object v3, p1
+
+    move-object v4, p2
+
+    move-object v5, p3
+
+    move-object v6, p4
+
+    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/network/r$9;-><init>(Lcom/tencent/mm/network/r;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 752
+    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/az;->b(Lcom/tencent/mm/sdk/platformtools/ac;)Ljava/lang/Object;
+
+    goto :goto_0
+.end method
+
+.method public final cancel(I)V
+    .locals 7
+
+    .prologue
+    .line 220
+    iget-object v0, p0, Lcom/tencent/mm/network/r;->cec:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+
+    const-wide/16 v2, 0x3e8
+
+    const-string/jumbo v1, "MMAutoAuth.cancel,%d"
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    invoke-static {v1, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v2, v3, v1}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
+
+    .line 221
+    new-instance v0, Lcom/tencent/mm/network/r$1;
+
+    invoke-direct {v0, p0, p1}, Lcom/tencent/mm/network/r$1;-><init>(Lcom/tencent/mm/network/r;I)V
+
+    .line 234
+    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/az;->b(Lcom/tencent/mm/sdk/platformtools/ac;)Ljava/lang/Object;
+
+    .line 235
+    return-void
+.end method
+
+.method public final d(Ljava/lang/String;Ljava/util/List;)I
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)I"
+        }
+    .end annotation
+
+    .prologue
+    .line 1072
+    invoke-static {p1, p2}, Lcom/tencent/mm/network/Java2C;->d(Ljava/lang/String;Ljava/util/List;)I
 
     move-result v0
 
@@ -2641,6 +2678,22 @@
     return-void
 .end method
 
+.method public final g(I[B)I
+    .locals 1
+
+    .prologue
+    .line 1100
+    invoke-static {}, Lcom/tencent/mm/network/ad;->FJ()Lcom/tencent/mm/network/ad;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Lcom/tencent/mm/network/ad;->h(I[B)I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public final getIPsString(Z)[Ljava/lang/String;
     .locals 1
 
@@ -2657,7 +2710,7 @@
     .locals 1
 
     .prologue
-    .line 1079
+    .line 1082
     invoke-static {}, Lcom/tencent/mm/network/Java2C;->getIspId()Ljava/lang/String;
 
     move-result-object v0
@@ -2677,18 +2730,18 @@
     return-object v0
 .end method
 
-.method public final gg(Ljava/lang/String;)V
+.method public final gt(Ljava/lang/String;)V
     .locals 4
 
     .prologue
     .line 790
-    iget-object v0, p0, Lcom/tencent/mm/network/r;->ciL:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iget-object v0, p0, Lcom/tencent/mm/network/r;->cec:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    const-string/jumbo v3, "MMAutoAuth.ipxxStatistics"
+    const-string/jumbo v1, "MMAutoAuth.ipxxStatistics"
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
+    invoke-virtual {v0, v2, v3, v1}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
 
     .line 791
     new-instance v0, Lcom/tencent/mm/network/r$12;
@@ -2696,20 +2749,20 @@
     invoke-direct {v0, p0, p1}, Lcom/tencent/mm/network/r$12;-><init>(Lcom/tencent/mm/network/r;Ljava/lang/String;)V
 
     .line 799
-    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/at;->b(Lcom/tencent/mm/sdk/platformtools/aa;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/az;->b(Lcom/tencent/mm/sdk/platformtools/ac;)Ljava/lang/Object;
 
     .line 800
     return-void
 .end method
 
-.method public final gh(Ljava/lang/String;)V
+.method public final gu(Ljava/lang/String;)V
     .locals 4
 
     .prologue
-    .line 1188
-    const-string/jumbo v0, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    .line 1191
+    const-string/jumbo v0, "MicroMsg.AutoAuth"
 
     const-string/jumbo v1, "killPush %s"
 
@@ -2721,9 +2774,9 @@
 
     aput-object p1, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1189
+    .line 1192
     return-void
 .end method
 
@@ -2731,10 +2784,10 @@
     .locals 0
 
     .prologue
-    .line 1132
+    .line 1135
     invoke-static {}, Lcom/tencent/mm/network/Java2C;->keepSignalling()V
 
-    .line 1133
+    .line 1136
     return-void
 .end method
 
@@ -2753,41 +2806,41 @@
     .line 827
     const/16 v2, 0x2711
 
-    sget v3, Lcom/tencent/mm/platformtools/r;->cnl:I
+    sget v3, Lcom/tencent/mm/platformtools/q;->ciq:I
 
     if-ne v2, v3, :cond_0
 
-    sget v2, Lcom/tencent/mm/platformtools/r;->cnm:I
+    sget v2, Lcom/tencent/mm/platformtools/q;->cir:I
 
     if-lez v2, :cond_0
 
     .line 828
-    sput v1, Lcom/tencent/mm/platformtools/r;->cnm:I
+    sput v1, Lcom/tencent/mm/platformtools/q;->cir:I
 
     .line 829
-    invoke-virtual {p0}, Lcom/tencent/mm/network/r;->EP()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/network/r;->Fk()Z
 
     .line 832
     :cond_0
-    iget-object v2, p0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    iget-object v2, p0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
-    invoke-virtual {v2}, Lcom/tencent/mm/network/a;->vS()Z
+    invoke-virtual {v2}, Lcom/tencent/mm/network/a;->vU()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 892
+    .line 895
     :goto_0
     return v0
 
     .line 835
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
+    invoke-static {}, Lcom/tencent/mm/network/z;->FD()Lcom/tencent/mm/network/y;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/network/y;->EV()Z
+    invoke-virtual {v2}, Lcom/tencent/mm/network/y;->Fq()Z
 
     move-result v2
 
@@ -2800,16 +2853,16 @@
 
     .line 838
     :cond_2
-    iget v2, p0, Lcom/tencent/mm/network/r;->ciQ:I
+    iget v2, p0, Lcom/tencent/mm/network/r;->ceh:I
 
     if-eq v2, v4, :cond_3
 
     .line 839
-    const-string/jumbo v0, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v0, "MicroMsg.AutoAuth"
 
     const-string/jumbo v2, "auto limit now is getting cert"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -2825,7 +2878,7 @@
     .line 844
     const-wide/32 v4, 0xea60
 
-    iget-wide v6, p0, Lcom/tencent/mm/network/r;->ciI:J
+    iget-wide v6, p0, Lcom/tencent/mm/network/r;->cdZ:J
 
     sub-long v6, v2, v6
 
@@ -2833,14 +2886,14 @@
 
     if-ltz v4, :cond_4
 
-    iget-wide v4, p0, Lcom/tencent/mm/network/r;->ciI:J
+    iget-wide v4, p0, Lcom/tencent/mm/network/r;->cdZ:J
 
     cmp-long v4, v4, v8
 
     if-lez v4, :cond_4
 
     .line 845
-    const-string/jumbo v4, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v4, "MicroMsg.AutoAuth"
 
     const-string/jumbo v5, "auto limit lastAutoAuthtime=%d, curtime=%d"
 
@@ -2848,9 +2901,9 @@
 
     new-array v6, v6, [Ljava/lang/Object;
 
-    iget-wide v7, p0, Lcom/tencent/mm/network/r;->ciI:J
+    iget-wide v8, p0, Lcom/tencent/mm/network/r;->cdZ:J
 
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v7
 
@@ -2862,7 +2915,7 @@
 
     aput-object v2, v6, v0
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -2871,7 +2924,7 @@
 
     .line 849
     :cond_4
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -2888,10 +2941,21 @@
 
     move-result v4
 
-    if-eqz v4, :cond_5
+    if-eqz v4, :cond_6
 
     .line 851
-    const-string/jumbo v2, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    invoke-static {}, Lcom/tencent/mm/network/z;->FD()Lcom/tencent/mm/network/y;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/tencent/mm/network/y;->Fr()Z
+
+    move-result v2
+
+    if-nez v2, :cond_5
+
+    .line 852
+    const-string/jumbo v2, "MicroMsg.AutoAuth"
 
     const-string/jumbo v3, "sendImp hit push hold, pid:%d"
 
@@ -2907,10 +2971,10 @@
 
     aput-object v4, v0, v1
 
-    invoke-static {v2, v3, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 853
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fe()Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 854
+    invoke-static {}, Lcom/tencent/mm/network/z;->FA()Lcom/tencent/mm/sdk/platformtools/ac;
 
     move-result-object v0
 
@@ -2918,82 +2982,83 @@
 
     invoke-direct {v2, p0}, Lcom/tencent/mm/network/r$2;-><init>(Lcom/tencent/mm/network/r;)V
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
+    :cond_5
     move v0, v1
 
-    .line 868
+    .line 871
     goto/16 :goto_0
 
-    .line 873
-    :cond_5
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
+    .line 876
+    :cond_6
+    invoke-static {}, Lcom/tencent/mm/network/z;->FD()Lcom/tencent/mm/network/y;
 
     move-result-object v4
 
-    invoke-virtual {p0}, Lcom/tencent/mm/network/r;->ER()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/network/r;->Fm()Z
 
     move-result v5
 
-    invoke-virtual {v4, v5}, Lcom/tencent/mm/network/y;->bf(Z)Lcom/tencent/mm/network/p;
+    invoke-virtual {v4, v5}, Lcom/tencent/mm/network/y;->aN(Z)Lcom/tencent/mm/network/p;
 
     move-result-object v4
 
-    .line 874
-    if-eqz v4, :cond_7
+    .line 877
+    if-eqz v4, :cond_8
 
-    .line 876
+    .line 879
     :try_start_0
     instance-of v5, v4, Lcom/tencent/mm/network/p$a;
 
-    if-eqz v5, :cond_8
+    if-eqz v5, :cond_9
 
-    .line 877
+    .line 880
     const-wide/16 v4, 0x7530
 
-    iget-wide v6, p0, Lcom/tencent/mm/network/r;->ciK:J
+    iget-wide v6, p0, Lcom/tencent/mm/network/r;->ceb:J
 
     sub-long/2addr v2, v6
 
     cmp-long v2, v4, v2
 
-    if-ltz v2, :cond_6
+    if-ltz v2, :cond_7
 
-    iget-wide v2, p0, Lcom/tencent/mm/network/r;->ciK:J
+    iget-wide v2, p0, Lcom/tencent/mm/network/r;->ceb:J
 
     cmp-long v2, v2, v8
 
-    if-lez v2, :cond_6
+    if-lez v2, :cond_7
 
-    .line 878
-    const-string/jumbo v2, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    .line 881
+    const-string/jumbo v2, "MicroMsg.AutoAuth"
 
     const-string/jumbo v3, "session time out in push_notify mode, but hit limit"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
-    .line 879
+    .line 882
     goto/16 :goto_0
 
-    .line 881
-    :cond_6
-    const-string/jumbo v2, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    .line 884
+    :cond_7
+    const-string/jumbo v2, "MicroMsg.AutoAuth"
 
     const-string/jumbo v3, "session time out in push_notify mode, send broast to mm"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 882
+    .line 885
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/tencent/mm/network/r;->ciK:J
+    iput-wide v2, p0, Lcom/tencent/mm/network/r;->ceb:J
 
-    .line 883
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fi()Lcom/tencent/mm/network/x;
+    .line 886
+    invoke-static {}, Lcom/tencent/mm/network/z;->FE()Lcom/tencent/mm/network/x;
 
     move-result-object v2
 
@@ -3005,22 +3070,22 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/tencent/mm/network/x;->onNotify(II[B)V
 
-    :cond_7
+    :cond_8
     :goto_1
     move v0, v1
 
-    .line 892
+    .line 895
     goto/16 :goto_0
 
-    .line 885
-    :cond_8
+    .line 888
+    :cond_9
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/tencent/mm/network/r;->ciI:J
+    iput-wide v2, p0, Lcom/tencent/mm/network/r;->cdZ:J
 
-    .line 886
+    .line 889
     const/4 v2, 0x3
 
     const/4 v3, 0x3
@@ -3031,24 +3096,24 @@
 
     goto :goto_1
 
-    .line 888
+    .line 891
     :catch_0
     move-exception v2
 
-    .line 889
-    const-string/jumbo v3, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    .line 892
+    const-string/jumbo v3, "MicroMsg.AutoAuth"
 
     const-string/jumbo v4, "exception:%s"
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v2
 
     aput-object v2, v0, v1
 
-    invoke-static {v3, v4, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 .end method
@@ -3057,10 +3122,10 @@
     .locals 0
 
     .prologue
-    .line 1183
+    .line 1186
     invoke-static {p1}, Lcom/tencent/mm/network/Java2C;->reportFailIp(Ljava/lang/String;)V
 
-    .line 1184
+    .line 1187
     return-void
 .end method
 
@@ -3069,13 +3134,13 @@
 
     .prologue
     .line 265
-    iget-object v0, p0, Lcom/tencent/mm/network/r;->ciL:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iget-object v0, p0, Lcom/tencent/mm/network/r;->cec:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    const-string/jumbo v3, "MMAutoAuth.reset"
+    const-string/jumbo v1, "MMAutoAuth.reset"
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
+    invoke-virtual {v0, v2, v3, v1}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
 
     .line 266
     new-instance v0, Lcom/tencent/mm/network/r$5;
@@ -3083,9 +3148,9 @@
     invoke-direct {v0, p0}, Lcom/tencent/mm/network/r$5;-><init>(Lcom/tencent/mm/network/r;)V
 
     .line 274
-    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/at;->b(Lcom/tencent/mm/sdk/platformtools/aa;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/az;->b(Lcom/tencent/mm/sdk/platformtools/ac;)Ljava/lang/Object;
 
     .line 275
     return-void
@@ -3095,26 +3160,26 @@
     .locals 4
 
     .prologue
-    .line 1084
-    iget-object v0, p0, Lcom/tencent/mm/network/r;->ciL:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    .line 1087
+    iget-object v0, p0, Lcom/tencent/mm/network/r;->cec:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    const-string/jumbo v3, "MMAutoAuth.setHostInfo"
+    const-string/jumbo v1, "MMAutoAuth.setHostInfo"
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
+    invoke-virtual {v0, v2, v3, v1}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
 
-    .line 1085
+    .line 1088
     new-instance v0, Lcom/tencent/mm/network/r$3;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/tencent/mm/network/r$3;-><init>(Lcom/tencent/mm/network/r;[Ljava/lang/String;[Ljava/lang/String;[I)V
 
-    .line 1092
-    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 1095
+    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/at;->b(Lcom/tencent/mm/sdk/platformtools/aa;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/az;->b(Lcom/tencent/mm/sdk/platformtools/ac;)Ljava/lang/Object;
 
-    .line 1093
+    .line 1096
     return-void
 .end method
 
@@ -3123,24 +3188,24 @@
 
     .prologue
     .line 758
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 759
-    const-string/jumbo v0, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v0, "MicroMsg.AutoAuth"
 
     const-string/jumbo v1, "setNewDnsDebugHost FAILED ! check assist"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 772
     :goto_0
@@ -3153,21 +3218,21 @@
     invoke-direct {v0, p0, p1, p2}, Lcom/tencent/mm/network/r$10;-><init>(Lcom/tencent/mm/network/r;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 770
-    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v1, p0, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/at;->b(Lcom/tencent/mm/sdk/platformtools/aa;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/az;->b(Lcom/tencent/mm/sdk/platformtools/ac;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
 
 .method public final setSignallingStrategy(JJ)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 1127
+    .line 1130
     invoke-static {p1, p2, p3, p4}, Lcom/tencent/mm/network/Java2C;->setSignallingStrategy(JJ)V
 
-    .line 1128
+    .line 1131
     return-void
 .end method
 
@@ -3175,19 +3240,19 @@
     .locals 0
 
     .prologue
-    .line 1137
+    .line 1140
     invoke-static {}, Lcom/tencent/mm/network/Java2C;->stopSignalling()V
 
-    .line 1138
+    .line 1141
     return-void
 .end method
 
-.method public final vM()Z
+.method public final vO()Z
     .locals 2
 
     .prologue
     .line 248
-    iget v0, p0, Lcom/tencent/mm/network/r;->ciH:I
+    iget v0, p0, Lcom/tencent/mm/network/r;->cdY:I
 
     const/4 v1, 0x5
 
@@ -3204,33 +3269,33 @@
     goto :goto_0
 .end method
 
-.method public final bridge synthetic vW()Lcom/tencent/mm/network/c;
+.method public final bridge synthetic vY()Lcom/tencent/mm/network/c;
     .locals 1
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    iget-object v0, p0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
     return-object v0
 .end method
 
-.method public final vX()Lcom/tencent/mm/network/h;
+.method public final vZ()Lcom/tencent/mm/network/h;
     .locals 1
 
     .prologue
-    .line 1210
+    .line 1213
     const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public final vY()V
+.method public final wa()V
     .locals 0
 
     .prologue
-    .line 1220
+    .line 1229
     invoke-static {}, Lcom/tencent/mm/network/Java2C;->makesureLongLinkConnect()V
 
-    .line 1221
+    .line 1230
     return-void
 .end method

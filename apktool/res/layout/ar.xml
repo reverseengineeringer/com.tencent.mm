@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:background="@color/ow" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:id="@id/hn" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.tencent.mm.pluginsdk.ui.emoji.PreViewEmojiView android:id="@id/ho" style="@style/EmojiCommonStyle" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingBottom="80.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textColor="@color/ak" android:id="@id/hp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+        <ProgressBar android:id="@id/hq" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" style="?android:attr/progressBarStyleHorizontal" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingBottom="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textColor="@color/ow" android:id="@id/hr" android:background="@drawable/a8" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.chat;
 
 public abstract interface h$a
 {
-  public abstract int getYFromBottom();
+  public abstract int aWW();
 }
 
 /* Location:

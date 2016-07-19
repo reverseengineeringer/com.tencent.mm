@@ -1,9 +1,10 @@
 package com.tencent.mm.plugin.gif;
 
 import com.tencent.mm.a.f.a;
+import java.lang.ref.WeakReference;
 
 final class b$1
-  implements f.a
+  implements f.a<String, WeakReference<a>>
 {
   b$1(b paramb) {}
 }

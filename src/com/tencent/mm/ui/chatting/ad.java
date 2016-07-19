@@ -6,102 +6,150 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import com.tencent.mm.ar.c;
-import com.tencent.mm.d.b.bg;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.model.ah;
 import com.tencent.mm.model.ar;
-import com.tencent.mm.n.a.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.p.a.a;
+import com.tencent.mm.sdk.platformtools.au;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.r;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.aj;
 import com.tencent.mm.ui.j;
 import com.tencent.mm.ui.o;
+import java.util.Map;
 
 final class ad
-  extends aa.c
+  extends ab.b
 {
-  private ChattingUI.a kTe;
+  private ChattingUI.a ltl;
+  private final int ltm = 1;
   
   public ad()
   {
-    super(64);
+    super(63);
   }
   
   public final View a(LayoutInflater paramLayoutInflater, View paramView)
   {
     Object localObject;
-    if ((paramView != null) && (paramView.getTag() != null) && ((paramView.getTag() instanceof d)))
+    if ((paramView != null) && (paramView.getTag() != null) && ((paramView.getTag() instanceof e)))
     {
       localObject = paramView;
-      if (getTagtype == eLV) {}
+      if (getTagtype == cTv) {}
     }
     else
     {
-      localObject = new ax(paramLayoutInflater, 2131361895);
-      ((View)localObject).setTag(new d(eLV).av((View)localObject));
+      localObject = new ay(paramLayoutInflater, 2130903283);
+      ((View)localObject).setTag(new e(cTv).az((View)localObject));
     }
     return (View)localObject;
   }
   
-  public final void a(aa.a parama, int paramInt, ChattingUI.a parama1, ag paramag, String paramString)
+  public final void a(ab.a parama, int paramInt, ChattingUI.a parama1, ai paramai, String paramString)
   {
-    kTe = parama1;
+    ltl = parama1;
     paramString = field_content;
     if (paramString != null) {}
-    for (paramString = a.a.B(paramString, field_reserved);; paramString = null)
+    for (paramString = a.a.y(paramString, field_reserved);; paramString = null)
     {
-      d locald = (d)parama;
+      e locale = (e)parama;
       if (paramString != null) {
         if (field_isSend != 1) {
           break label124;
         }
       }
       label124:
-      for (paramString = byE;; paramString = byF)
+      for (paramString = brw;; paramString = brx)
       {
-        kQv.setText(paramString);
-        kTa.setOnClickListener(kSE.kVs);
-        kTa.setOnLongClickListener(kSE.kVu);
-        parama1 = new dg(paramag, kTe.kAy, paramInt, null, 0, (byte)0);
-        kTa.setTag(parama1);
+        lql.setText(paramString);
+        lth.setOnClickListener(lsL.lvy);
+        lth.setOnLongClickListener(lsL.lvA);
+        parama1 = new dh(paramai, ltl.kZE, paramInt, null, 0, (byte)0);
+        lth.setTag(parama1);
         return;
       }
     }
   }
   
-  public final boolean a(ContextMenu paramContextMenu, View paramView, ag paramag)
+  public final boolean a(ContextMenu paramContextMenu, View paramView, ai paramai)
   {
-    paramContextMenu.add(getTagposition, 100, 0, kTe.getString(2131427849));
+    paramContextMenu.add(getTagposition, 100, 0, ltl.getString(2131231700));
     return false;
   }
   
-  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ag paramag)
+  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ai paramai)
   {
     switch (paramMenuItem.getItemId())
     {
     default: 
       return false;
     }
-    ar.E(field_msgId);
+    ar.H(field_msgId);
     return true;
   }
   
-  public final boolean a(View paramView, ChattingUI.a parama, ag paramag)
+  public final boolean a(View paramView, ChattingUI.a parama, ai paramai)
   {
     paramView = field_content;
     if (paramView != null)
     {
-      paramView = a.a.B(paramView, field_reserved);
-      if (!ay.kz(byJ))
+      paramView = a.a.y(paramView, field_reserved);
+      if (!be.kf(brB))
       {
-        paramag = new Intent();
-        paramag.putExtra("key_native_url", byJ);
-        paramag.putExtra("key_image_id", byM);
-        paramag.putExtra("key_image_aes_key", byN);
-        paramag.putExtra("key_image_length", byO);
-        paramag.putExtra("key_username", parama.getTalkerUserName());
-        c.c(koJ.kpc, "luckymoney", ".ui.LuckyMoneyNewYearReceiveUI", paramag);
+        if (brC != 1) {
+          break label123;
+        }
+        v.d("MicroMsg.ChattingItemAppMsgC2CNewYearFrom", "onItemClick hasplay, skip");
+        paramai = new Intent();
+        paramai.putExtra("key_native_url", brB);
+        paramai.putExtra("key_username", parama.bjO());
+        paramai.putExtra("key_image_id", brE);
+        paramai.putExtra("key_image_aes_key", brF);
+        paramai.putExtra("key_image_length", brG);
+        com.tencent.mm.av.c.c(kNN.kOg, "luckymoney", ".ui.LuckyMoneyNewYearReceiveUI", paramai);
       }
     }
     return true;
+    label123:
+    v.d("MicroMsg.ChattingItemAppMsgC2CNewYearFrom", "onItemClick play egg emoj");
+    Intent localIntent = new Intent();
+    localIntent.putExtra("key_native_url", brB);
+    localIntent.putExtra("key_username", parama.bjO());
+    localIntent.putExtra("key_image_id", brE);
+    localIntent.putExtra("key_image_aes_key", brF);
+    localIntent.putExtra("key_image_length", brG);
+    com.tencent.mm.av.c.c(kNN.kOg, "luckymoney", ".ui.LuckyMoneyNewYearReceiveUI", localIntent);
+    brC = 1;
+    paramai.setContent(a.a.b(paramView));
+    if ((paramai == null) || (!paramai.bcn())) {}
+    for (;;)
+    {
+      ah.tE().rt().a(field_msgId, paramai);
+      return true;
+      try
+      {
+        parama = field_content;
+        int i = parama.indexOf("<msg>");
+        paramView = parama;
+        if (i > 0)
+        {
+          paramView = parama;
+          if (i < parama.length()) {
+            paramView = parama.substring(i).trim();
+          }
+        }
+        paramView = r.cr(paramView, "msg");
+        if ((paramView != null) && (paramView.size() > 0)) {
+          paramai.ct(au.P(paramView));
+        }
+      }
+      catch (Exception paramView)
+      {
+        v.e("MicroMsg.ChattingItemAppMsgC2CNewYearFrom", paramView.getMessage());
+      }
+    }
   }
 }
 

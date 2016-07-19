@@ -4,9 +4,9 @@ public enum o$a
 {
   int value;
   
-  private o$a(int paramInt1)
+  private o$a(int paramInt)
   {
-    value = paramInt1;
+    value = paramInt;
   }
 }
 

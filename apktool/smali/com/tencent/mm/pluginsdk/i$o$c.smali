@@ -15,31 +15,31 @@
 
 
 # virtual methods
-.method public abstract L(Landroid/app/Activity;)V
+.method public abstract G(Landroid/app/Activity;)V
 .end method
 
-.method public abstract U(Landroid/view/View;)V
+.method public abstract V(Landroid/view/View;)V
 .end method
 
-.method public abstract a(Lcom/tencent/mm/protocal/b/add;Landroid/view/View;ILcom/tencent/mm/storage/i$a;)Landroid/graphics/Bitmap;
+.method public abstract a(Lcom/tencent/mm/protocal/b/adw;Landroid/view/View;ILcom/tencent/mm/storage/z;)Landroid/graphics/Bitmap;
 .end method
 
-.method public abstract ayA()V
+.method public abstract aBa()V
 .end method
 
-.method public abstract b(Lcom/tencent/mm/protocal/b/add;Landroid/view/View;ILcom/tencent/mm/storage/i$a;)V
+.method public abstract b(Lcom/tencent/mm/protocal/b/adw;Landroid/view/View;ILcom/tencent/mm/storage/z;)V
 .end method
 
-.method public abstract c(Lcom/tencent/mm/protocal/b/add;Landroid/view/View;ILcom/tencent/mm/storage/i$a;)V
+.method public abstract c(Lcom/tencent/mm/protocal/b/adw;Landroid/view/View;ILcom/tencent/mm/storage/z;)V
 .end method
 
 .method public abstract pause()V
 .end method
 
-.method public abstract r(Lcom/tencent/mm/protocal/b/add;)Landroid/graphics/Bitmap;
+.method public abstract r(Lcom/tencent/mm/protocal/b/adw;)Landroid/graphics/Bitmap;
 .end method
 
-.method public abstract s(Lcom/tencent/mm/protocal/b/add;)Ljava/lang/String;
+.method public abstract s(Lcom/tencent/mm/protocal/b/adw;)Ljava/lang/String;
 .end method
 
 .method public abstract start()V

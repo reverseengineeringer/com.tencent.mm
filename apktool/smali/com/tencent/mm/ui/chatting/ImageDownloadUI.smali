@@ -3,32 +3,32 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/r/d;
-.implements Lcom/tencent/mm/r/e;
+.implements Lcom/tencent/mm/t/d;
+.implements Lcom/tencent/mm/t/e;
 
 
 # instance fields
-.field private avg:J
+.field private agU:J
 
-.field private bQd:J
+.field private bJA:J
 
-.field private bQg:I
+.field private bJD:I
 
-.field private fHA:Landroid/widget/TextView;
+.field private fQA:Landroid/widget/TextView;
 
-.field private fHB:Landroid/widget/TextView;
+.field private fQB:Landroid/widget/TextView;
 
-.field private fHC:Landroid/widget/TextView;
+.field private fQC:Landroid/widget/TextView;
 
-.field private fHD:Landroid/widget/TextView;
+.field private fQD:Landroid/widget/TextView;
 
-.field private fHF:Lcom/tencent/mm/ab/d;
+.field private fQF:Lcom/tencent/mm/ae/d;
 
-.field private fHG:Lcom/tencent/mm/ab/j;
+.field private fQG:Lcom/tencent/mm/ae/j;
 
-.field private fHz:Landroid/widget/ProgressBar;
+.field private fQz:Landroid/widget/ProgressBar;
 
-.field private lcl:Landroid/widget/ImageView;
+.field private lCC:Landroid/widget/ImageView;
 
 .field private username:Ljava/lang/String;
 
@@ -44,43 +44,43 @@
     invoke-direct {p0}, Lcom/tencent/mm/ui/MMActivity;-><init>()V
 
     .line 40
-    iput-wide v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->avg:J
+    iput-wide v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->agU:J
 
     .line 41
-    iput-wide v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bQd:J
+    iput-wide v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bJA:J
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/ui/chatting/ImageDownloadUI;)Lcom/tencent/mm/ab/j;
+.method static synthetic a(Lcom/tencent/mm/ui/chatting/ImageDownloadUI;)Lcom/tencent/mm/ae/j;
     .locals 1
 
     .prologue
     .line 30
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHG:Lcom/tencent/mm/ab/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQG:Lcom/tencent/mm/ae/j;
 
     return-object v0
 .end method
 
-.method private jO(I)V
+.method private lb(I)V
     .locals 7
 
     .prologue
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    const/4 v5, 0x1
+    const/4 v6, 0x1
 
     .line 135
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHz:Landroid/widget/ProgressBar;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQz:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0, p1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
     .line 137
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHA:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQA:Landroid/widget/TextView;
 
-    const v1, 0x7f0b00c0
+    const v1, 0x7f08085e
 
-    new-array v2, v5, [Ljava/lang/Object;
+    new-array v2, v6, [Ljava/lang/Object;
 
     const/4 v3, 0x0
 
@@ -97,7 +97,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 139
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHz:Landroid/widget/ProgressBar;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQz:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0}, Landroid/widget/ProgressBar;->getMax()I
 
@@ -111,42 +111,42 @@
 
     .line 144
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/ab/n;->Ao()Lcom/tencent/mm/ab/f;
+    invoke-static {}, Lcom/tencent/mm/ae/n;->Ay()Lcom/tencent/mm/ae/f;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHG:Lcom/tencent/mm/ab/j;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQG:Lcom/tencent/mm/ae/j;
 
-    iget-wide v1, v1, Lcom/tencent/mm/ab/j;->bRt:J
+    iget-wide v2, v1, Lcom/tencent/mm/ae/j;->bKP:J
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ab/f;->a(Ljava/lang/Long;)Lcom/tencent/mm/ab/d;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ae/f;->a(Ljava/lang/Long;)Lcom/tencent/mm/ae/d;
 
     move-result-object v1
 
     .line 145
-    iget-object v0, v1, Lcom/tencent/mm/ab/d;->bQe:Ljava/lang/String;
+    iget-object v0, v1, Lcom/tencent/mm/ae/d;->bJB:Ljava/lang/String;
 
     .line 146
-    iget v2, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bQg:I
+    iget v2, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bJD:I
 
-    if-ne v2, v5, :cond_1
+    if-ne v2, v6, :cond_1
 
     .line 147
-    invoke-static {v1}, Lcom/tencent/mm/ab/e;->c(Lcom/tencent/mm/ab/d;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/ae/e;->c(Lcom/tencent/mm/ae/d;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 153
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/ab/n;->Ao()Lcom/tencent/mm/ab/f;
+    invoke-static {}, Lcom/tencent/mm/ae/n;->Ay()Lcom/tencent/mm/ae/f;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0, v6, v6}, Lcom/tencent/mm/ab/f;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v0, v5, v5}, Lcom/tencent/mm/ae/f;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -160,18 +160,18 @@
 
     if-nez v1, :cond_2
 
-    invoke-static {v0}, Lcom/tencent/mm/a/e;->ax(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/a/e;->aB(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
     :cond_2
-    const-string/jumbo v0, "!24@aCqboZt8TBBxdzAJlMmkPg=="
+    const-string/jumbo v0, "ImageDownloadUI"
 
     const-string/jumbo v1, "showImg : imgPath is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -184,9 +184,9 @@
 
     const-string/jumbo v2, "key_message_id"
 
-    iget-wide v3, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->avg:J
+    iget-wide v4, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->agU:J
 
-    invoke-virtual {v1, v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+    invoke-virtual {v1, v2, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
     const-string/jumbo v2, "key_image_path"
 
@@ -194,13 +194,13 @@
 
     const-string/jumbo v0, "key_compress_type"
 
-    iget v2, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bQg:I
+    iget v2, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bJD:I
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string/jumbo v0, "key_favorite"
 
-    invoke-virtual {v1, v0, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    invoke-virtual {v1, v0, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->finish()V
 
@@ -209,14 +209,14 @@
 
 
 # virtual methods
-.method protected final Gb()V
+.method protected final Gy()V
     .locals 3
 
     .prologue
     const/16 v2, 0x8
 
     .line 101
-    const v0, 0x7f070214
+    const v0, 0x7f100aff
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->findViewById(I)Landroid/view/View;
 
@@ -224,10 +224,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHA:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQA:Landroid/widget/TextView;
 
     .line 102
-    const v0, 0x7f070215
+    const v0, 0x7f101124
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->findViewById(I)Landroid/view/View;
 
@@ -235,10 +235,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHB:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQB:Landroid/widget/TextView;
 
     .line 103
-    const v0, 0x7f070216
+    const v0, 0x7f101125
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->findViewById(I)Landroid/view/View;
 
@@ -246,10 +246,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHC:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQC:Landroid/widget/TextView;
 
     .line 104
-    const v0, 0x7f070217
+    const v0, 0x7f101126
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->findViewById(I)Landroid/view/View;
 
@@ -257,10 +257,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHD:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQD:Landroid/widget/TextView;
 
     .line 105
-    const v0, 0x7f070212
+    const v0, 0x7f101122
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->findViewById(I)Landroid/view/View;
 
@@ -268,34 +268,34 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->lcl:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->lCC:Landroid/widget/ImageView;
 
     .line 106
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->lcl:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->lCC:Landroid/widget/ImageView;
 
-    const v1, 0x7f03022b
+    const v1, 0x7f0700d2
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 107
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHA:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQA:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 108
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHB:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQB:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 109
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHC:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQC:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 110
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHD:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQD:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -307,7 +307,7 @@
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 121
-    const v0, 0x7f070213
+    const v0, 0x7f101123
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->findViewById(I)Landroid/view/View;
 
@@ -315,20 +315,20 @@
 
     check-cast v0, Landroid/widget/ProgressBar;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHz:Landroid/widget/ProgressBar;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQz:Landroid/widget/ProgressBar;
 
     .line 122
     return-void
 .end method
 
-.method public final a(IILcom/tencent/mm/r/j;)V
+.method public final a(IILcom/tencent/mm/t/j;)V
     .locals 4
 
     .prologue
     const/4 v1, 0x0
 
     .line 126
-    const-string/jumbo v0, "!24@aCqboZt8TBBxdzAJlMmkPg=="
+    const-string/jumbo v0, "ImageDownloadUI"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -354,10 +354,10 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 127
-    invoke-virtual {p3}, Lcom/tencent/mm/r/j;->getType()I
+    invoke-virtual {p3}, Lcom/tencent/mm/t/j;->getType()I
 
     move-result v0
 
@@ -381,7 +381,7 @@
     move-result v0
 
     .line 130
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->jO(I)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->lb(I)V
 
     .line 132
     :cond_0
@@ -394,12 +394,299 @@
     goto :goto_0
 .end method
 
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+.method protected final getLayoutId()I
+    .locals 1
+
+    .prologue
+    .line 79
+    const v0, 0x7f0305e5
+
+    return v0
+.end method
+
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 9
+
+    .prologue
+    const/4 v8, 0x0
+
+    const-wide/16 v4, 0x0
+
+    .line 45
+    invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
+
+    .line 46
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "img_msg_id"
+
+    invoke-virtual {v0, v1, v4, v5}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->agU:J
+
+    .line 47
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "img_server_id"
+
+    invoke-virtual {v0, v1, v4, v5}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bJA:J
+
+    .line 48
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "img_download_compress_type"
+
+    invoke-virtual {v0, v1, v8}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bJD:I
+
+    .line 49
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "img_download_username"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->username:Ljava/lang/String;
+
+    .line 51
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->Gy()V
+
+    .line 53
+    iget-wide v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->agU:J
+
+    cmp-long v0, v0, v4
+
+    if-lez v0, :cond_0
+
+    .line 54
+    invoke-static {}, Lcom/tencent/mm/ae/n;->Ay()Lcom/tencent/mm/ae/f;
+
+    move-result-object v0
+
+    iget-wide v2, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->agU:J
+
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/ae/f;->ae(J)Lcom/tencent/mm/ae/d;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQF:Lcom/tencent/mm/ae/d;
+
+    .line 57
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQF:Lcom/tencent/mm/ae/d;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQF:Lcom/tencent/mm/ae/d;
+
+    iget-wide v0, v0, Lcom/tencent/mm/ae/d;->bJz:J
+
+    cmp-long v0, v0, v4
+
+    if-gtz v0, :cond_2
+
+    :cond_1
+    iget-wide v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bJA:J
+
+    cmp-long v0, v0, v4
+
+    if-lez v0, :cond_2
+
+    .line 58
+    invoke-static {}, Lcom/tencent/mm/ae/n;->Ay()Lcom/tencent/mm/ae/f;
+
+    move-result-object v0
+
+    iget-wide v2, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bJA:J
+
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/ae/f;->ad(J)Lcom/tencent/mm/ae/d;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQF:Lcom/tencent/mm/ae/d;
+
+    .line 61
+    :cond_2
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQF:Lcom/tencent/mm/ae/d;
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQF:Lcom/tencent/mm/ae/d;
+
+    iget-wide v0, v0, Lcom/tencent/mm/ae/d;->bJz:J
+
+    cmp-long v0, v0, v4
+
+    if-gtz v0, :cond_4
+
+    .line 62
+    :cond_3
+    const-string/jumbo v0, "ImageDownloadUI"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "onCreate : on such imginfo, with msgLocalId = "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v2, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->agU:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v2, ", or msgSvrId = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-wide v2, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bJA:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 75
+    :goto_0
+    return-void
+
+    .line 69
+    :cond_4
+    iget-wide v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->agU:J
+
+    cmp-long v0, v0, v4
+
+    if-gtz v0, :cond_5
+
+    iget-wide v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bJA:J
+
+    cmp-long v0, v0, v4
+
+    if-lez v0, :cond_5
+
+    .line 70
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/aj;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->username:Ljava/lang/String;
+
+    iget-wide v2, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bJA:J
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/storage/aj;->C(Ljava/lang/String;J)Lcom/tencent/mm/storage/ai;
+
+    move-result-object v0
+
+    .line 71
+    iget-wide v0, v0, Lcom/tencent/mm/e/b/bj;->field_msgId:J
+
+    iput-wide v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->agU:J
+
+    .line 74
+    :cond_5
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQF:Lcom/tencent/mm/ae/d;
+
+    iget-wide v2, v0, Lcom/tencent/mm/ae/d;->bJz:J
+
+    iget-wide v4, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->agU:J
+
+    iget v6, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bJD:I
+
+    new-instance v1, Lcom/tencent/mm/ae/j;
+
+    move-object v7, p0
+
+    invoke-direct/range {v1 .. v7}, Lcom/tencent/mm/ae/j;-><init>(JJILcom/tencent/mm/t/e;)V
+
+    iput-object v1, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQG:Lcom/tencent/mm/ae/j;
+
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQG:Lcom/tencent/mm/ae/j;
+
+    invoke-virtual {v0, v1, v8}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
+
+    goto :goto_0
+.end method
+
+.method protected onPause()V
+    .locals 2
+
+    .prologue
+    .line 89
+    invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onPause()V
+
+    .line 90
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
+
+    move-result-object v0
+
+    const/16 v1, 0x6d
+
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
+
+    .line 91
+    return-void
+.end method
+
+.method protected onResume()V
+    .locals 2
+
+    .prologue
+    .line 95
+    invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onResume()V
+
+    .line 96
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
+
+    move-result-object v0
+
+    const/16 v1, 0x6d
+
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
+
+    .line 97
+    return-void
+.end method
+
+.method public onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
     .locals 3
 
     .prologue
     .line 182
-    invoke-virtual {p4}, Lcom/tencent/mm/r/j;->getType()I
+    invoke-virtual {p4}, Lcom/tencent/mm/t/j;->getType()I
 
     move-result v0
 
@@ -418,19 +705,19 @@
     if-nez p2, :cond_1
 
     .line 188
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHz:Landroid/widget/ProgressBar;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fQz:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0}, Landroid/widget/ProgressBar;->getMax()I
 
     move-result v0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->jO(I)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->lb(I)V
 
     goto :goto_0
 
     .line 192
     :cond_1
-    const-string/jumbo v0, "!24@aCqboZt8TBBxdzAJlMmkPg=="
+    const-string/jumbo v0, "ImageDownloadUI"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -456,10 +743,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 193
-    const v0, 0x7f0b0617
+    const v0, 0x7f0809fe
 
     const/4 v1, 0x1
 
@@ -470,291 +757,4 @@
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
     goto :goto_0
-.end method
-
-.method protected final getLayoutId()I
-    .locals 1
-
-    .prologue
-    .line 79
-    const v0, 0x7f0a00bd
-
-    return v0
-.end method
-
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 7
-
-    .prologue
-    const-wide/16 v3, 0x0
-
-    .line 45
-    invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
-
-    .line 46
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "img_msg_id"
-
-    invoke-virtual {v0, v1, v3, v4}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->avg:J
-
-    .line 47
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "img_server_id"
-
-    invoke-virtual {v0, v1, v3, v4}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bQd:J
-
-    .line 48
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "img_download_compress_type"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bQg:I
-
-    .line 49
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "img_download_username"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->username:Ljava/lang/String;
-
-    .line 51
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->Gb()V
-
-    .line 53
-    iget-wide v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->avg:J
-
-    cmp-long v0, v0, v3
-
-    if-lez v0, :cond_0
-
-    .line 54
-    invoke-static {}, Lcom/tencent/mm/ab/n;->Ao()Lcom/tencent/mm/ab/f;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->avg:J
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ab/f;->Z(J)Lcom/tencent/mm/ab/d;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHF:Lcom/tencent/mm/ab/d;
-
-    .line 57
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHF:Lcom/tencent/mm/ab/d;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHF:Lcom/tencent/mm/ab/d;
-
-    iget-wide v0, v0, Lcom/tencent/mm/ab/d;->bQc:J
-
-    cmp-long v0, v0, v3
-
-    if-gtz v0, :cond_2
-
-    :cond_1
-    iget-wide v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bQd:J
-
-    cmp-long v0, v0, v3
-
-    if-lez v0, :cond_2
-
-    .line 58
-    invoke-static {}, Lcom/tencent/mm/ab/n;->Ao()Lcom/tencent/mm/ab/f;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bQd:J
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ab/f;->Y(J)Lcom/tencent/mm/ab/d;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHF:Lcom/tencent/mm/ab/d;
-
-    .line 61
-    :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHF:Lcom/tencent/mm/ab/d;
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHF:Lcom/tencent/mm/ab/d;
-
-    iget-wide v0, v0, Lcom/tencent/mm/ab/d;->bQc:J
-
-    cmp-long v0, v0, v3
-
-    if-gtz v0, :cond_4
-
-    .line 62
-    :cond_3
-    const-string/jumbo v0, "!24@aCqboZt8TBBxdzAJlMmkPg=="
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, "onCreate : on such imginfo, with msgLocalId = "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v2, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->avg:J
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string/jumbo v2, ", or msgSvrId = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-wide v2, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bQd:J
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 75
-    :goto_0
-    return-void
-
-    .line 69
-    :cond_4
-    iget-wide v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->avg:J
-
-    cmp-long v0, v0, v3
-
-    if-gtz v0, :cond_5
-
-    iget-wide v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bQd:J
-
-    cmp-long v0, v0, v3
-
-    if-lez v0, :cond_5
-
-    .line 70
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rs()Lcom/tencent/mm/storage/ah;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->username:Ljava/lang/String;
-
-    iget-wide v2, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bQd:J
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/storage/ah;->x(Ljava/lang/String;J)Lcom/tencent/mm/storage/ag;
-
-    move-result-object v0
-
-    .line 71
-    iget-wide v0, v0, Lcom/tencent/mm/d/b/bg;->field_msgId:J
-
-    iput-wide v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->avg:J
-
-    .line 74
-    :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHF:Lcom/tencent/mm/ab/d;
-
-    iget-wide v1, v0, Lcom/tencent/mm/ab/d;->bQc:J
-
-    iget-wide v3, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->avg:J
-
-    iget v5, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->bQg:I
-
-    new-instance v0, Lcom/tencent/mm/ab/j;
-
-    move-object v6, p0
-
-    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/ab/j;-><init>(JJILcom/tencent/mm/r/e;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHG:Lcom/tencent/mm/ab/j;
-
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->fHG:Lcom/tencent/mm/ab/j;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
-
-    goto :goto_0
-.end method
-
-.method protected onPause()V
-    .locals 2
-
-    .prologue
-    .line 89
-    invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onPause()V
-
-    .line 90
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
-
-    move-result-object v0
-
-    const/16 v1, 0x6d
-
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
-
-    .line 91
-    return-void
-.end method
-
-.method protected onResume()V
-    .locals 2
-
-    .prologue
-    .line 95
-    invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onResume()V
-
-    .line 96
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
-
-    move-result-object v0
-
-    const/16 v1, 0x6d
-
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
-
-    .line 97
-    return-void
 .end method

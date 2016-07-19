@@ -10,47 +10,47 @@
 
 
 # instance fields
-.field private cTk:Landroid/widget/BaseAdapter;
+.field private cQB:Landroid/widget/BaseAdapter;
 
 .field private dividerHeight:I
 
-.field private kFm:Z
+.field public lYO:Landroid/content/DialogInterface$OnCancelListener;
 
-.field private kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+.field private lYP:Landroid/widget/PopupWindow$OnDismissListener;
 
-.field private kRU:I
+.field private lYQ:Z
 
-.field public lxZ:Landroid/content/DialogInterface$OnCancelListener;
+.field public lYR:Z
 
-.field private lya:Landroid/widget/PopupWindow$OnDismissListener;
+.field public lYS:Landroid/view/View;
 
-.field private lyb:Z
+.field public lYT:I
 
-.field public lyc:Z
+.field private lYU:I
 
-.field public lyd:Landroid/view/View;
+.field private lYV:I
 
-.field public lye:I
+.field private lYW:I
 
-.field private lyf:I
+.field private lYX:F
 
-.field private lyg:I
+.field private lYY:F
 
-.field private lyh:I
+.field private leq:Z
 
-.field public lyi:F
+.field private lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-.field public lyj:F
+.field private lrW:I
 
 .field protected mContext:Landroid/content/Context;
 
-.field private mH:I
+.field private mX:I
 
-.field private mI:Landroid/view/View;
+.field private mY:Landroid/view/View;
 
-.field private mK:Landroid/view/ViewTreeObserver;
+.field private na:Landroid/view/ViewTreeObserver;
 
-.field private mM:Landroid/view/ViewGroup;
+.field private nc:Landroid/view/ViewGroup;
 
 
 # direct methods
@@ -66,35 +66,35 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 49
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/tools/s;->kFm:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/tools/s;->leq:Z
 
     .line 50
-    const v0, 0x7f060194
+    const v0, 0x7f0c008d
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/s;->kRU:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/s;->lrW:I
 
     .line 52
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/tools/s;->lyb:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/tools/s;->lYQ:Z
 
     .line 54
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/s;->lyc:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/s;->lYR:Z
 
     .line 284
-    iput v3, p0, Lcom/tencent/mm/ui/tools/s;->lyf:I
+    iput v3, p0, Lcom/tencent/mm/ui/tools/s;->lYU:I
 
     .line 285
-    iput v3, p0, Lcom/tencent/mm/ui/tools/s;->lyg:I
+    iput v3, p0, Lcom/tencent/mm/ui/tools/s;->lYV:I
 
     .line 286
-    iput v3, p0, Lcom/tencent/mm/ui/tools/s;->lyh:I
+    iput v3, p0, Lcom/tencent/mm/ui/tools/s;->lYW:I
 
     .line 288
-    iput v1, p0, Lcom/tencent/mm/ui/tools/s;->lyi:F
+    iput v1, p0, Lcom/tencent/mm/ui/tools/s;->lYX:F
 
     .line 289
-    iput v1, p0, Lcom/tencent/mm/ui/tools/s;->lyj:F
+    iput v1, p0, Lcom/tencent/mm/ui/tools/s;->lYY:F
 
     .line 61
     iput-object p1, p0, Lcom/tencent/mm/ui/tools/s;->mContext:Landroid/content/Context;
@@ -115,7 +115,7 @@
 
     div-int/lit8 v0, v0, 0x5
 
-    const v2, 0x7f05023d
+    const v2, 0x7f0b0016
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -125,7 +125,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/s;->mH:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/s;->mX:I
 
     .line 67
     iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->mContext:Landroid/content/Context;
@@ -161,7 +161,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/s;->mI:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/s;->mY:Landroid/view/View;
 
     .line 76
     :cond_0
@@ -177,7 +177,7 @@
     iput v0, p0, Lcom/tencent/mm/ui/tools/s;->dividerHeight:I
 
     .line 77
-    const v0, 0x7f0501db
+    const v0, 0x7f0b0152
 
     invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -185,16 +185,16 @@
 
     mul-int/lit8 v0, v0, 0x2
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/s;->lyf:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/s;->lYU:I
 
     .line 78
-    const v0, 0x7f0501e4
+    const v0, 0x7f0b0177
 
     invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/s;->lyg:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/s;->lYV:I
 
     .line 79
     iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->mContext:Landroid/content/Context;
@@ -205,26 +205,26 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/s;->lyh:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/s;->lYW:I
 
     .line 80
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/s;->Li()Landroid/widget/BaseAdapter;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/s;->Mc()Landroid/widget/BaseAdapter;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/s;->cTk:Landroid/widget/BaseAdapter;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/s;->cQB:Landroid/widget/BaseAdapter;
 
     .line 82
     return-void
 
     .line 72
     :cond_1
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/s;->mI:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/s;->mY:Landroid/view/View;
 
     goto :goto_0
 .end method
 
-.method private a(Landroid/widget/ListAdapter;)I
+.method private b(Landroid/widget/ListAdapter;)I
     .locals 10
 
     .prologue
@@ -272,7 +272,7 @@
 
     .line 200
     :goto_1
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/s;->mM:Landroid/view/ViewGroup;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/s;->nc:Landroid/view/ViewGroup;
 
     if-nez v3, :cond_0
 
@@ -283,11 +283,11 @@
 
     invoke-direct {v3, v9}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    iput-object v3, p0, Lcom/tencent/mm/ui/tools/s;->mM:Landroid/view/ViewGroup;
+    iput-object v3, p0, Lcom/tencent/mm/ui/tools/s;->nc:Landroid/view/ViewGroup;
 
     .line 203
     :cond_0
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/s;->mM:Landroid/view/ViewGroup;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/s;->nc:Landroid/view/ViewGroup;
 
     invoke-interface {p1, v4, v1, v3}, Landroid/widget/ListAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
@@ -326,7 +326,7 @@
     goto :goto_1
 .end method
 
-.method private biO()Z
+.method private boK()Z
     .locals 2
 
     .prologue
@@ -363,7 +363,7 @@
 
 
 # virtual methods
-.method public abstract Li()Landroid/widget/BaseAdapter;
+.method public abstract Mc()Landroid/widget/BaseAdapter;
 .end method
 
 .method public bH()Z
@@ -394,7 +394,7 @@
 
     check-cast v0, Landroid/support/v7/app/ActionBarActivity;
 
-    iget-object v0, v0, Landroid/support/v7/app/ActionBarActivity;->iF:Landroid/support/v7/app/a;
+    iget-object v0, v0, Landroid/support/v7/app/ActionBarActivity;->iW:Landroid/support/v7/app/a;
 
     invoke-virtual {v0}, Landroid/support/v7/app/a;->aP()Landroid/support/v7/app/ActionBar;
 
@@ -411,7 +411,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f0501db
+    const v5, 0x7f0b0152
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -502,18 +502,18 @@
 
     .line 123
     :goto_1
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/s;->biO()Z
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/s;->boK()Z
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/s;->lyb:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/s;->lYQ:Z
 
     .line 125
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     if-eqz v1, :cond_0
 
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/tools/s;->lyc:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/tools/s;->lYR:Z
 
     if-ne v2, v1, :cond_1
 
@@ -527,33 +527,33 @@
 
     invoke-direct {v1, v4, v5, v3}, Lcom/tencent/mm/ui/base/MMListPopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iput-object v1, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     .line 129
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     invoke-virtual {v1, p0}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->setOnDismissListener(Landroid/widget/PopupWindow$OnDismissListener;)V
 
     .line 130
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    iput-object p0, v1, Lcom/tencent/mm/ui/base/MMListPopupWindow;->qa:Landroid/widget/AdapterView$OnItemClickListener;
+    iput-object p0, v1, Lcom/tencent/mm/ui/base/MMListPopupWindow;->qo:Landroid/widget/AdapterView$OnItemClickListener;
 
     .line 132
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/s;->cTk:Landroid/widget/BaseAdapter;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/s;->cQB:Landroid/widget/BaseAdapter;
 
     invoke-virtual {v1, v4}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 133
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->ce()V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->cg()V
 
     .line 135
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     iget-object v4, p0, Lcom/tencent/mm/ui/tools/s;->mContext:Landroid/content/Context;
 
@@ -561,7 +561,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f040708
+    const v5, 0x7f02059f
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -570,31 +570,31 @@
     invoke-virtual {v1, v4}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 137
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    iget v4, p0, Lcom/tencent/mm/ui/tools/s;->kRU:I
+    iget v4, p0, Lcom/tencent/mm/ui/tools/s;->lrW:I
 
     invoke-virtual {v1, v4}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->setAnimationStyle(I)V
 
     .line 138
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    iput v3, v1, Lcom/tencent/mm/ui/base/MMListPopupWindow;->pP:I
+    iput v3, v1, Lcom/tencent/mm/ui/base/MMListPopupWindow;->qd:I
 
     .line 139
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/s;->mI:Landroid/view/View;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/s;->mY:Landroid/view/View;
 
-    iput-object v4, v1, Lcom/tencent/mm/ui/base/MMListPopupWindow;->pY:Landroid/view/View;
+    iput-object v4, v1, Lcom/tencent/mm/ui/base/MMListPopupWindow;->qm:Landroid/view/View;
 
     .line 141
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->mI:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->mY:Landroid/view/View;
 
     if-eqz v1, :cond_2
 
     .line 142
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->mK:Landroid/view/ViewTreeObserver;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->na:Landroid/view/ViewTreeObserver;
 
     if-nez v1, :cond_a
 
@@ -602,16 +602,16 @@
 
     .line 143
     :goto_2
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/s;->mI:Landroid/view/View;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/s;->mY:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/tencent/mm/ui/tools/s;->mK:Landroid/view/ViewTreeObserver;
+    iput-object v4, p0, Lcom/tencent/mm/ui/tools/s;->na:Landroid/view/ViewTreeObserver;
 
     .line 144
-    const-string/jumbo v4, "!44@/B4Tb64lLpKI+vIdmlsJaOm1vKkKLfRfkU+VQyH8HM8="
+    const-string/jumbo v4, "MicroMsg.SubMenuHelperBase"
 
     const-string/jumbo v5, "tryshow addGlobalListener:%b"
 
@@ -623,39 +623,39 @@
 
     aput-object v7, v6, v3
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 145
     if-eqz v1, :cond_2
 
     .line 146
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->mK:Landroid/view/ViewTreeObserver;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->na:Landroid/view/ViewTreeObserver;
 
     invoke-virtual {v1, p0}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
     .line 150
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->setVerticalOffset(I)V
 
     .line 151
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/tools/s;->kFm:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/tools/s;->leq:Z
 
-    iput-boolean v1, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->kFm:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->leq:Z
 
     .line 152
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->cTk:Landroid/widget/BaseAdapter;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->cQB:Landroid/widget/BaseAdapter;
 
-    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/tools/s;->a(Landroid/widget/ListAdapter;)I
+    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/tools/s;->b(Landroid/widget/ListAdapter;)I
 
     move-result v1
 
-    iget v4, p0, Lcom/tencent/mm/ui/tools/s;->mH:I
+    iget v4, p0, Lcom/tencent/mm/ui/tools/s;->mX:I
 
     invoke-static {v1, v4}, Ljava/lang/Math;->min(II)I
 
@@ -664,18 +664,18 @@
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->setContentWidth(I)V
 
     .line 154
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->cf()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->ch()V
 
     .line 155
-    iget v0, p0, Lcom/tencent/mm/ui/tools/s;->lyi:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/s;->lYX:F
 
     cmpl-float v0, v0, v8
 
     if-eqz v0, :cond_3
 
-    iget v0, p0, Lcom/tencent/mm/ui/tools/s;->lyj:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/s;->lYY:F
 
     cmpl-float v0, v0, v8
 
@@ -757,7 +757,7 @@
     :goto_4
     if-eqz v1, :cond_c
 
-    iget v0, p0, Lcom/tencent/mm/ui/tools/s;->lyj:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/s;->lYY:F
 
     int-to-float v1, v4
 
@@ -766,7 +766,7 @@
     float-to-int v0, v0
 
     :goto_5
-    const-string/jumbo v1, "!44@/B4Tb64lLpKI+vIdmlsJaOm1vKkKLfRfkU+VQyH8HM8="
+    const-string/jumbo v1, "MicroMsg.SubMenuHelperBase"
 
     const-string/jumbo v6, "menuHeightPercentPort(%f), menuHeightPercentLand(%f), frameHeight(%d), decorViewHeight(%d), menuHeight(%d)"
 
@@ -774,7 +774,7 @@
 
     new-array v7, v7, [Ljava/lang/Object;
 
-    iget v8, p0, Lcom/tencent/mm/ui/tools/s;->lyi:F
+    iget v8, p0, Lcom/tencent/mm/ui/tools/s;->lYX:F
 
     invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -782,7 +782,7 @@
 
     aput-object v8, v7, v3
 
-    iget v8, p0, Lcom/tencent/mm/ui/tools/s;->lyj:F
+    iget v8, p0, Lcom/tencent/mm/ui/tools/s;->lYY:F
 
     invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -816,9 +816,9 @@
 
     aput-object v5, v7, v4
 
-    invoke-static {v1, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget v1, p0, Lcom/tencent/mm/ui/tools/s;->lyg:I
+    iget v1, p0, Lcom/tencent/mm/ui/tools/s;->lYV:I
 
     div-int/2addr v0, v1
 
@@ -830,27 +830,27 @@
 
     if-lez v0, :cond_e
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->cTk:Landroid/widget/BaseAdapter;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->cQB:Landroid/widget/BaseAdapter;
 
     if-eqz v1, :cond_e
 
-    iget v1, p0, Lcom/tencent/mm/ui/tools/s;->lyg:I
+    iget v1, p0, Lcom/tencent/mm/ui/tools/s;->lYV:I
 
     mul-int/2addr v1, v0
 
-    iget v4, p0, Lcom/tencent/mm/ui/tools/s;->lyf:I
+    iget v4, p0, Lcom/tencent/mm/ui/tools/s;->lYU:I
 
     add-int/2addr v1, v4
 
     if-eqz v1, :cond_d
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/s;->cTk:Landroid/widget/BaseAdapter;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/s;->cQB:Landroid/widget/BaseAdapter;
 
     invoke-virtual {v4}, Landroid/widget/BaseAdapter;->getCount()I
 
     move-result v4
 
-    iget v5, p0, Lcom/tencent/mm/ui/tools/s;->lyg:I
+    iget v5, p0, Lcom/tencent/mm/ui/tools/s;->lYV:I
 
     mul-int/2addr v4, v5
 
@@ -858,38 +858,38 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    iget v1, p0, Lcom/tencent/mm/ui/tools/s;->lyg:I
+    iget v1, p0, Lcom/tencent/mm/ui/tools/s;->lYV:I
 
     mul-int/2addr v0, v1
 
-    iget v1, p0, Lcom/tencent/mm/ui/tools/s;->lyf:I
+    iget v1, p0, Lcom/tencent/mm/ui/tools/s;->lYU:I
 
     add-int/2addr v0, v1
 
-    iget v1, p0, Lcom/tencent/mm/ui/tools/s;->lyh:I
+    iget v1, p0, Lcom/tencent/mm/ui/tools/s;->lYW:I
 
     add-int/2addr v0, v1
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    iput v0, v1, Lcom/tencent/mm/ui/base/MMListPopupWindow;->pN:I
+    iput v0, v1, Lcom/tencent/mm/ui/base/MMListPopupWindow;->qb:I
 
     .line 156
     :cond_3
     :goto_6
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     if-eqz v0, :cond_6
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lyd:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lYS:Landroid/view/View;
 
     if-eqz v0, :cond_6
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->lyd:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->lYS:Landroid/view/View;
 
-    iget-object v4, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->cWm:Lcom/tencent/mm/ui/base/o;
+    iget-object v4, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->cUC:Lcom/tencent/mm/ui/base/o;
 
     invoke-virtual {v4}, Lcom/tencent/mm/ui/base/o;->isShowing()Z
 
@@ -897,39 +897,39 @@
 
     if-eqz v4, :cond_4
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->bcE()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->bib()V
 
     :cond_4
-    iput-object v1, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->pV:Landroid/view/View;
+    iput-object v1, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->qj:Landroid/view/View;
 
     if-eqz v4, :cond_5
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->show()V
 
     :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    iget v1, p0, Lcom/tencent/mm/ui/tools/s;->lye:I
+    iget v1, p0, Lcom/tencent/mm/ui/tools/s;->lYT:I
 
-    iput v1, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->pW:I
+    iput v1, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->qk:I
 
     .line 157
     :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->show()V
 
     .line 158
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->kFh:Lcom/tencent/mm/ui/base/MMListPopupWindow$a;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->lek:Lcom/tencent/mm/ui/base/MMListPopupWindow$a;
 
     invoke-virtual {v0, p0}, Landroid/widget/ListView;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
     .line 160
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->kFh:Lcom/tencent/mm/ui/base/MMListPopupWindow$a;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->lek:Lcom/tencent/mm/ui/base/MMListPopupWindow$a;
 
     new-instance v1, Landroid/graphics/drawable/ColorDrawable;
 
@@ -939,7 +939,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f08018a
+    const v5, 0x7f0f0211
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -950,23 +950,23 @@
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setSelector(Landroid/graphics/drawable/Drawable;)V
 
     .line 161
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->kFh:Lcom/tencent/mm/ui/base/MMListPopupWindow$a;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->lek:Lcom/tencent/mm/ui/base/MMListPopupWindow$a;
 
     invoke-virtual {v0, v3}, Landroid/widget/ListView;->setDividerHeight(I)V
 
     .line 163
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->kFh:Lcom/tencent/mm/ui/base/MMListPopupWindow$a;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->lek:Lcom/tencent/mm/ui/base/MMListPopupWindow$a;
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setVerticalScrollBarEnabled(Z)V
 
     .line 164
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->kFh:Lcom/tencent/mm/ui/base/MMListPopupWindow$a;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->lek:Lcom/tencent/mm/ui/base/MMListPopupWindow$a;
 
     invoke-virtual {v0, v3}, Landroid/widget/ListView;->setHorizontalScrollBarEnabled(Z)V
 
@@ -1033,7 +1033,7 @@
     goto/16 :goto_3
 
     :cond_c
-    iget v0, p0, Lcom/tencent/mm/ui/tools/s;->lyi:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/s;->lYX:F
 
     int-to-float v1, v4
 
@@ -1044,7 +1044,7 @@
     goto/16 :goto_5
 
     :cond_d
-    const-string/jumbo v0, "!44@/B4Tb64lLpKI+vIdmlsJaOm1vKkKLfRfkU+VQyH8HM8="
+    const-string/jumbo v0, "MicroMsg.SubMenuHelperBase"
 
     const-string/jumbo v4, "[cpan] menuheight:%d,listHeight:%d"
 
@@ -1056,13 +1056,13 @@
 
     aput-object v1, v5, v3
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->cTk:Landroid/widget/BaseAdapter;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/s;->cQB:Landroid/widget/BaseAdapter;
 
     invoke-virtual {v1}, Landroid/widget/BaseAdapter;->getCount()I
 
     move-result v1
 
-    iget v6, p0, Lcom/tencent/mm/ui/tools/s;->lyg:I
+    iget v6, p0, Lcom/tencent/mm/ui/tools/s;->lYV:I
 
     mul-int/2addr v1, v6
 
@@ -1072,16 +1072,16 @@
 
     aput-object v1, v5, v2
 
-    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_6
 
     :cond_e
-    const-string/jumbo v0, "!44@/B4Tb64lLpKI+vIdmlsJaOm1vKkKLfRfkU+VQyH8HM8="
+    const-string/jumbo v0, "MicroMsg.SubMenuHelperBase"
 
     const-string/jumbo v1, "[cpan] setpopuHeight error."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_6
 
@@ -1096,6 +1096,24 @@
     goto/16 :goto_1
 .end method
 
+.method public final boL()V
+    .locals 1
+
+    .prologue
+    .line 295
+    const v0, 0x3f266666    # 0.65f
+
+    iput v0, p0, Lcom/tencent/mm/ui/tools/s;->lYX:F
+
+    .line 296
+    const/high16 v0, 0x3f400000    # 0.75f
+
+    iput v0, p0, Lcom/tencent/mm/ui/tools/s;->lYY:F
+
+    .line 297
+    return-void
+.end method
+
 .method public final dismiss()V
     .locals 1
 
@@ -1108,7 +1126,7 @@
     if-eqz v0, :cond_0
 
     .line 180
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->dismiss()V
 
@@ -1117,20 +1135,20 @@
     return-void
 .end method
 
-.method public final ih(Z)V
+.method public final iP(Z)V
     .locals 1
 
     .prologue
     .line 85
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/tools/s;->kFm:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/tools/s;->leq:Z
 
     .line 86
     if-eqz p1, :cond_0
 
     .line 87
-    const v0, 0x7f060196
+    const v0, 0x7f0c0063
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/s;->kRU:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/s;->lrW:I
 
     .line 91
     :goto_0
@@ -1138,9 +1156,9 @@
 
     .line 89
     :cond_0
-    const v0, 0x7f060194
+    const v0, 0x7f0c008d
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/s;->kRU:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/s;->lrW:I
 
     goto :goto_0
 .end method
@@ -1150,13 +1168,13 @@
 
     .prologue
     .line 233
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->cWm:Lcom/tencent/mm/ui/base/o;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->cUC:Lcom/tencent/mm/ui/base/o;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/o;->isShowing()Z
 
@@ -1182,15 +1200,15 @@
     const/4 v1, 0x0
 
     .line 212
-    iput-object v1, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iput-object v1, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     .line 213
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->mK:Landroid/view/ViewTreeObserver;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->na:Landroid/view/ViewTreeObserver;
 
     if-eqz v0, :cond_1
 
     .line 214
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->mK:Landroid/view/ViewTreeObserver;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->na:Landroid/view/ViewTreeObserver;
 
     invoke-virtual {v0}, Landroid/view/ViewTreeObserver;->isAlive()Z
 
@@ -1199,42 +1217,42 @@
     if-nez v0, :cond_0
 
     .line 215
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->mI:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->mY:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/s;->mK:Landroid/view/ViewTreeObserver;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/s;->na:Landroid/view/ViewTreeObserver;
 
     .line 217
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->mK:Landroid/view/ViewTreeObserver;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->na:Landroid/view/ViewTreeObserver;
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
     .line 218
-    iput-object v1, p0, Lcom/tencent/mm/ui/tools/s;->mK:Landroid/view/ViewTreeObserver;
+    iput-object v1, p0, Lcom/tencent/mm/ui/tools/s;->na:Landroid/view/ViewTreeObserver;
 
     .line 220
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lxZ:Landroid/content/DialogInterface$OnCancelListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lYO:Landroid/content/DialogInterface$OnCancelListener;
 
     if-eqz v0, :cond_2
 
     .line 221
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lxZ:Landroid/content/DialogInterface$OnCancelListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lYO:Landroid/content/DialogInterface$OnCancelListener;
 
     invoke-interface {v0, v1}, Landroid/content/DialogInterface$OnCancelListener;->onCancel(Landroid/content/DialogInterface;)V
 
     .line 223
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lya:Landroid/widget/PopupWindow$OnDismissListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lYP:Landroid/widget/PopupWindow$OnDismissListener;
 
     if-eqz v0, :cond_3
 
     .line 224
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lya:Landroid/widget/PopupWindow$OnDismissListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lYP:Landroid/widget/PopupWindow$OnDismissListener;
 
     invoke-interface {v0}, Landroid/widget/PopupWindow$OnDismissListener;->onDismiss()V
 
@@ -1248,7 +1266,7 @@
 
     .prologue
     .line 238
-    const-string/jumbo v0, "!44@/B4Tb64lLpKI+vIdmlsJaOm1vKkKLfRfkU+VQyH8HM8="
+    const-string/jumbo v0, "MicroMsg.SubMenuHelperBase"
 
     const-string/jumbo v1, "onGlobalLayout showing:%b, anchorshown:%b"
 
@@ -1270,7 +1288,7 @@
 
     const/4 v3, 0x1
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/s;->mI:Landroid/view/View;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/s;->mY:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->isShown()Z
 
@@ -1282,7 +1300,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 239
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/s;->isShowing()Z
@@ -1292,7 +1310,7 @@
     if-eqz v0, :cond_1
 
     .line 240
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->mI:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->mY:Landroid/view/View;
 
     .line 241
     if-eqz v0, :cond_0
@@ -1321,16 +1339,16 @@
     if-eqz v0, :cond_1
 
     .line 245
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/s;->lyb:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/s;->lYQ:Z
 
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/s;->biO()Z
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/s;->boK()Z
 
     move-result v1
 
     if-eq v0, v1, :cond_1
 
     .line 246
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->kRT:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/s;->lrV:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->dismiss()V
 
@@ -1339,6 +1357,15 @@
 
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
     .line 281
@@ -1355,11 +1382,11 @@
     const/4 v0, 0x1
 
     .line 270
-    const-string/jumbo v1, "!44@/B4Tb64lLpKI+vIdmlsJaOm1vKkKLfRfkU+VQyH8HM8="
+    const-string/jumbo v1, "MicroMsg.SubMenuHelperBase"
 
     const-string/jumbo v2, "onKey"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 271
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I

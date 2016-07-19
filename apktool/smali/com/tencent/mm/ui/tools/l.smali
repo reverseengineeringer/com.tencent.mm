@@ -17,17 +17,17 @@
 # instance fields
 .field private final context:Landroid/content/Context;
 
-.field public final lwi:Landroid/view/GestureDetector;
+.field public final lWU:Landroid/view/GestureDetector;
 
-.field public lwj:Lcom/tencent/mm/ui/tools/l$a;
+.field public lWV:Lcom/tencent/mm/ui/tools/l$a;
 
-.field private final lwk:I
+.field private final lWW:I
 
-.field private final lwl:I
+.field private final lWX:I
 
-.field private final lwm:F
+.field private final lWY:F
 
-.field private final lwn:F
+.field private final lWZ:F
 
 
 # direct methods
@@ -48,7 +48,7 @@
 
     invoke-direct {v0, v1, p0}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/l;->lwi:Landroid/view/GestureDetector;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/l;->lWU:Landroid/view/GestureDetector;
 
     .line 40
     invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
@@ -60,14 +60,14 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/tencent/mm/ui/tools/l;->lwk:I
+    iput v1, p0, Lcom/tencent/mm/ui/tools/l;->lWW:I
 
     .line 42
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity()I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/l;->lwl:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/l;->lWX:I
 
     .line 43
     const/high16 v0, 0x428c0000    # 70.0f
@@ -78,7 +78,7 @@
 
     int-to-float v0, v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/l;->lwm:F
+    iput v0, p0, Lcom/tencent/mm/ui/tools/l;->lWY:F
 
     .line 44
     const/high16 v0, 0x42480000    # 50.0f
@@ -89,7 +89,7 @@
 
     int-to-float v0, v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/l;->lwn:F
+    iput v0, p0, Lcom/tencent/mm/ui/tools/l;->lWZ:F
 
     .line 45
     return-void
@@ -120,7 +120,7 @@
     const/4 v0, 0x1
 
     .line 114
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/l;->lwj:Lcom/tencent/mm/ui/tools/l$a;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/l;->lWV:Lcom/tencent/mm/ui/tools/l$a;
 
     if-nez v2, :cond_0
 
@@ -130,7 +130,7 @@
 
     .line 117
     :cond_0
-    const-string/jumbo v2, "!44@/B4Tb64lLpLtADHeupmcR9RkE1hpp/4l1le5KqFDqOc="
+    const-string/jumbo v2, "MicroMsg.MMGestureGallery"
 
     const-string/jumbo v3, "lastX:%f, curX:%f, lastY:%f, curY:%f, vX:%f, vY:%f"
 
@@ -198,7 +198,7 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 118
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
@@ -231,7 +231,7 @@
     move-result v3
 
     .line 120
-    iget v4, p0, Lcom/tencent/mm/ui/tools/l;->lwn:F
+    iget v4, p0, Lcom/tencent/mm/ui/tools/l;->lWZ:F
 
     cmpg-float v4, v2, v4
 
@@ -241,22 +241,22 @@
 
     if-lez v4, :cond_1
 
-    iget v4, p0, Lcom/tencent/mm/ui/tools/l;->lwm:F
+    iget v4, p0, Lcom/tencent/mm/ui/tools/l;->lWY:F
 
     cmpl-float v4, v3, v4
 
     if-lez v4, :cond_1
 
     .line 121
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/l;->lwj:Lcom/tencent/mm/ui/tools/l$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/l;->lWV:Lcom/tencent/mm/ui/tools/l$a;
 
-    invoke-interface {v1}, Lcom/tencent/mm/ui/tools/l$a;->bgf()V
+    invoke-interface {v1}, Lcom/tencent/mm/ui/tools/l$a;->blP()V
 
     goto :goto_0
 
     .line 125
     :cond_1
-    iget v4, p0, Lcom/tencent/mm/ui/tools/l;->lwn:F
+    iget v4, p0, Lcom/tencent/mm/ui/tools/l;->lWZ:F
 
     cmpg-float v2, v2, v4
 
@@ -266,7 +266,7 @@
 
     if-gez v2, :cond_2
 
-    iget v2, p0, Lcom/tencent/mm/ui/tools/l;->lwm:F
+    iget v2, p0, Lcom/tencent/mm/ui/tools/l;->lWY:F
 
     neg-float v2, v2
 
@@ -275,15 +275,15 @@
     if-gez v2, :cond_2
 
     .line 126
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/l;->lwj:Lcom/tencent/mm/ui/tools/l$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/l;->lWV:Lcom/tencent/mm/ui/tools/l$a;
 
-    invoke-interface {v1}, Lcom/tencent/mm/ui/tools/l$a;->bgg()V
+    invoke-interface {v1}, Lcom/tencent/mm/ui/tools/l$a;->blQ()V
 
     goto/16 :goto_0
 
     .line 130
     :cond_2
-    iget v2, p0, Lcom/tencent/mm/ui/tools/l;->lwn:F
+    iget v2, p0, Lcom/tencent/mm/ui/tools/l;->lWZ:F
 
     cmpg-float v2, v3, v2
 
@@ -294,15 +294,15 @@
     if-lez v2, :cond_3
 
     .line 131
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/l;->lwj:Lcom/tencent/mm/ui/tools/l$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/l;->lWV:Lcom/tencent/mm/ui/tools/l$a;
 
-    invoke-interface {v1}, Lcom/tencent/mm/ui/tools/l$a;->bgh()V
+    invoke-interface {v1}, Lcom/tencent/mm/ui/tools/l$a;->blR()V
 
     goto/16 :goto_0
 
     .line 135
     :cond_3
-    iget v2, p0, Lcom/tencent/mm/ui/tools/l;->lwn:F
+    iget v2, p0, Lcom/tencent/mm/ui/tools/l;->lWZ:F
 
     cmpg-float v2, v3, v2
 
@@ -313,9 +313,9 @@
     if-gez v2, :cond_4
 
     .line 136
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/l;->lwj:Lcom/tencent/mm/ui/tools/l$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/l;->lWV:Lcom/tencent/mm/ui/tools/l$a;
 
-    invoke-interface {v1}, Lcom/tencent/mm/ui/tools/l$a;->bge()V
+    invoke-interface {v1}, Lcom/tencent/mm/ui/tools/l$a;->blO()V
 
     goto/16 :goto_0
 

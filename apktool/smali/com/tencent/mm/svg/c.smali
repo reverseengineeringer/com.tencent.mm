@@ -87,31 +87,31 @@
     return-object p0
 .end method
 
-.method public static d(Landroid/os/Looper;)[F
+.method public static c(Landroid/os/Looper;)[F
     .locals 1
 
     .prologue
     .line 52
-    invoke-static {p0}, Lcom/tencent/mm/svg/b;->d(Landroid/os/Looper;)[F
+    invoke-static {p0}, Lcom/tencent/mm/svg/b;->c(Landroid/os/Looper;)[F
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static e(Landroid/os/Looper;)Landroid/graphics/Matrix;
+.method public static d(Landroid/os/Looper;)Landroid/graphics/Matrix;
     .locals 1
 
     .prologue
     .line 56
-    invoke-static {p0}, Lcom/tencent/mm/svg/b;->e(Landroid/os/Looper;)Landroid/graphics/Matrix;
+    invoke-static {p0}, Lcom/tencent/mm/svg/b;->d(Landroid/os/Looper;)Landroid/graphics/Matrix;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static g(Landroid/os/Looper;)V
+.method public static f(Landroid/os/Looper;)V
     .locals 0
 
     .prologue
@@ -119,14 +119,14 @@
     if-eqz p0, :cond_0
 
     .line 27
-    invoke-static {p0}, Lcom/tencent/mm/svg/b;->c(Landroid/os/Looper;)V
+    invoke-static {p0}, Lcom/tencent/mm/svg/b;->b(Landroid/os/Looper;)V
 
     .line 29
     :cond_0
     return-void
 .end method
 
-.method public static h(Landroid/os/Looper;)Landroid/graphics/Paint;
+.method public static g(Landroid/os/Looper;)Landroid/graphics/Paint;
     .locals 1
 
     .prologue
@@ -140,12 +140,12 @@
     return-object v0
 .end method
 
-.method public static i(Landroid/os/Looper;)Landroid/graphics/Path;
+.method public static h(Landroid/os/Looper;)Landroid/graphics/Path;
     .locals 1
 
     .prologue
     .line 60
-    invoke-static {p0}, Lcom/tencent/mm/svg/b;->f(Landroid/os/Looper;)Landroid/graphics/Path;
+    invoke-static {p0}, Lcom/tencent/mm/svg/b;->e(Landroid/os/Looper;)Landroid/graphics/Path;
 
     move-result-object v0
 
@@ -154,5 +154,5 @@
 
 
 # virtual methods
-.method public varargs abstract h(I[Ljava/lang/Object;)I
+.method public varargs abstract i(I[Ljava/lang/Object;)I
 .end method

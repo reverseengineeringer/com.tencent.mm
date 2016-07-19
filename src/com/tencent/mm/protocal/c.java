@@ -1,42 +1,42 @@
 package com.tencent.mm.protocal;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
-import com.tencent.mm.sdk.platformtools.u;
+import android.os.Build;
+import android.os.Build.VERSION;
 
 public final class c
+  extends e
 {
-  public static boolean cX(Context paramContext)
+  public static String boS = "android-" + Build.VERSION.SDK_INT;
+  public static boolean jrA = aYd();
+  public static int jrB = 5;
+  public static final byte[] jrC = null;
+  public static final byte[] jrD = null;
+  public static final byte[] jrE = null;
+  public static final String jrr = Build.BRAND;
+  public static final String jrs = Build.MODEL + Build.CPU_ABI;
+  public static String jrt = "android-" + Build.VERSION.SDK_INT;
+  public static final String jru = "android-" + Build.MANUFACTURER;
+  public static String jrv = Build.VERSION.SDK_INT;
+  public static final String jrw = Build.MANUFACTURER + "-" + Build.MODEL;
+  public static long jrx = 0L;
+  public static int jry = Integer.decode("0x26031641").intValue();
+  public static boolean jrz = aYe();
+  
+  private static boolean aYd()
   {
-    if (paramContext == null)
-    {
-      u.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "getShutDownWxStatus context == null");
-      return false;
-    }
-    return paramContext.getSharedPreferences("system_config_prefs_showdown", 4).getBoolean("shut_down_weixin", false);
+    return ((jry & 0xFF) >= 32) && ((jry & 0xFF) <= 47);
   }
   
-  public static void h(Context paramContext, boolean paramBoolean)
+  private static boolean aYe()
   {
-    if (paramContext == null)
-    {
-      u.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "editFullExitStatus context == null");
-      return;
-    }
-    paramContext.getSharedPreferences("system_config_prefs", 4).edit().putBoolean("settings_fully_exit", paramBoolean).commit();
-    u.i("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "editFullExitStatus to " + paramBoolean);
+    return ((jry & 0xFF) >= 0) && ((jry & 0xFF) <= 31);
   }
   
-  public static void i(Context paramContext, boolean paramBoolean)
+  public static void qE(int paramInt)
   {
-    if (paramContext == null)
-    {
-      u.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "editShutDownWxStatus context == null");
-      return;
-    }
-    paramContext.getSharedPreferences("system_config_prefs_showdown", 4).edit().putBoolean("shut_down_weixin", paramBoolean).commit();
-    u.i("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "editShutDownWxStatus to " + paramBoolean);
+    jry = paramInt;
+    jrz = aYe();
+    jrA = aYd();
   }
 }
 

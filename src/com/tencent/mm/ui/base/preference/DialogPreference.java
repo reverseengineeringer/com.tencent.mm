@@ -17,10 +17,10 @@ import java.util.HashMap;
 public final class DialogPreference
   extends Preference
 {
-  private h apf;
-  public Preference.a kKX;
-  private final d kKZ;
-  a kLa;
+  private h fTL;
+  public Preference.a lkm;
+  private final d lko;
+  a lkp;
   
   public DialogPreference(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -30,30 +30,30 @@ public final class DialogPreference
   public DialogPreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    kKZ = new d(paramContext);
-    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.ChoicePreference, paramInt, 0);
+    lko = new d(paramContext);
+    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.Wr, paramInt, 0);
     paramInt = paramAttributeSet.getResourceId(0, -1);
     if (paramInt != -1) {
-      kKZ.kKV = paramContext.getResources().getStringArray(paramInt);
+      lko.lkk = paramContext.getResources().getStringArray(paramInt);
     }
-    kKZ.kKW = paramAttributeSet.getTextArray(1);
+    lko.lkl = paramAttributeSet.getTextArray(1);
     paramAttributeSet.recycle();
-    kKZ.bdo();
+    lko.biV();
   }
   
   public final void a(Preference.a parama)
   {
-    kKX = parama;
+    lkm = parama;
   }
   
   public final String getValue()
   {
-    return kKZ.value;
+    return lko.value;
   }
   
   public final void onBindView(View paramView)
   {
-    c localc = (c)kKZ.blS.get(kKZ.value);
+    c localc = (c)lko.aZy.get(lko.value);
     if (localc != null) {
       setSummary(text);
     }
@@ -62,47 +62,47 @@ public final class DialogPreference
   
   public final void setValue(String paramString)
   {
-    kKZ.value = paramString;
-    paramString = (c)kKZ.blS.get(paramString);
+    lko.value = paramString;
+    paramString = (c)lko.aZy.get(paramString);
     if (paramString == null)
     {
-      kKZ.ftM = -1;
+      lko.fCR = -1;
       return;
     }
-    kKZ.ftM = id;
+    lko.fCR = id;
   }
   
   protected final void showDialog()
   {
-    ListView localListView = (ListView)View.inflate(mContext, 2131363225, null);
+    ListView localListView = (ListView)View.inflate(mContext, 2130903971, null);
     localListView.setOnItemClickListener(new AdapterView.OnItemClickListener()
     {
-      public final void onItemClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+      public final void onItemClick(AdapterView<?> paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
       {
         if (DialogPreference.a(DialogPreference.this) != null) {
           DialogPreference.a(DialogPreference.this).dismiss();
         }
-        setValue((String)bkKW[paramAnonymousInt]);
+        setValue((String)blkl[paramAnonymousInt]);
         if (DialogPreference.c(DialogPreference.this) != null) {
-          DialogPreference.c(DialogPreference.this).bdp();
+          DialogPreference.c(DialogPreference.this).biW();
         }
         if (DialogPreference.d(DialogPreference.this) != null) {
           DialogPreference.d(DialogPreference.this).a(DialogPreference.this, getValue());
         }
       }
     });
-    localListView.setAdapter(kKZ);
+    localListView.setAdapter(lko);
     h.a locala = new h.a(mContext);
-    locala.Gy(getTitle().toString());
-    locala.aq(localListView);
-    apf = locala.bcu();
-    apf.show();
-    g.a(mContext, apf);
+    locala.IM(getTitle().toString());
+    locala.au(localListView);
+    fTL = locala.bhJ();
+    fTL.show();
+    g.a(mContext, fTL);
   }
   
   public static abstract interface a
   {
-    public abstract void bdp();
+    public abstract void biW();
   }
 }
 

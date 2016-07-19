@@ -2,18 +2,18 @@ package com.tencent.mm.pluginsdk;
 
 public final class i$ai
 {
-  public static i.o.h iyZ;
-  public static i.o.c iza;
-  public static i.o.b izb;
-  public static i.o.a izc;
-  public static i.o.g izd;
-  public static i.o.f ize;
-  public static i.o.e izf;
-  public static i.o.d izg;
+  public static i.o.f iVA;
+  public static i.o.e iVB;
+  public static i.o.d iVC;
+  public static i.o.h iVv;
+  public static i.o.c iVw;
+  public static i.o.b iVx;
+  public static i.o.a iVy;
+  public static i.o.g iVz;
   
-  public static i.o.d aPd()
+  public static i.o.d aTF()
   {
-    return izg;
+    return iVC;
   }
 }
 

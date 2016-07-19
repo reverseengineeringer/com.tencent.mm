@@ -13,11 +13,29 @@
 
 
 # instance fields
-.field ley:Ljava/util/ArrayList;
+.field lEK:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/storage/ai;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field lgc:Z
+.field lGp:Z
 
-.field lgd:Ljava/util/ArrayList;
+.field lGq:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/ui/chatting/gallery/g$b;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -33,19 +51,19 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->ley:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lEK:Ljava/util/ArrayList;
 
     .line 20
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lgc:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lGp:Z
 
     .line 33
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lgd:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lGq:Ljava/util/ArrayList;
 
     .line 34
     return-void
@@ -61,12 +79,12 @@
     return-void
 .end method
 
-.method private bgz()V
+.method private bmh()V
     .locals 2
 
     .prologue
     .line 113
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lgd:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lGq:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -86,7 +104,7 @@
     check-cast v0, Lcom/tencent/mm/ui/chatting/gallery/g$b;
 
     .line 114
-    invoke-interface {v0}, Lcom/tencent/mm/ui/chatting/gallery/g$b;->bgx()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/chatting/gallery/g$b;->bmg()V
 
     goto :goto_0
 
@@ -95,12 +113,12 @@
     return-void
 .end method
 
-.method private dR(J)Lcom/tencent/mm/storage/ag;
-    .locals 4
+.method private eh(J)Lcom/tencent/mm/storage/ai;
+    .locals 5
 
     .prologue
     .line 49
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->ley:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lEK:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -117,10 +135,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/storage/ag;
+    check-cast v0, Lcom/tencent/mm/storage/ai;
 
     .line 50
-    iget-wide v2, v0, Lcom/tencent/mm/d/b/bg;->field_msgId:J
+    iget-wide v2, v0, Lcom/tencent/mm/e/b/bj;->field_msgId:J
 
     cmp-long v2, v2, p1
 
@@ -138,8 +156,8 @@
 
 
 # virtual methods
-.method public final au(Lcom/tencent/mm/storage/ag;)Z
-    .locals 7
+.method public final aA(Lcom/tencent/mm/storage/ai;)Z
+    .locals 8
 
     .prologue
     const/4 v1, 0x0
@@ -155,7 +173,7 @@
 
     .line 96
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->ley:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lEK:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -172,14 +190,14 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/storage/ag;
+    check-cast v0, Lcom/tencent/mm/storage/ai;
 
     .line 97
-    iget-wide v3, v0, Lcom/tencent/mm/d/b/bg;->field_msgId:J
+    iget-wide v4, v0, Lcom/tencent/mm/e/b/bj;->field_msgId:J
 
-    iget-wide v5, p1, Lcom/tencent/mm/d/b/bg;->field_msgId:J
+    iget-wide v6, p1, Lcom/tencent/mm/e/b/bj;->field_msgId:J
 
-    cmp-long v0, v3, v5
+    cmp-long v0, v4, v6
 
     if-nez v0, :cond_1
 
@@ -195,100 +213,117 @@
     goto :goto_0
 .end method
 
-.method public final av(Lcom/tencent/mm/storage/ag;)V
+.method public final ay(Lcom/tencent/mm/storage/ai;)V
     .locals 6
 
     .prologue
-    const/4 v2, 0x1
+    .line 37
+    if-nez p1, :cond_0
 
-    const/4 v5, 0x0
-
-    .line 105
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/chatting/gallery/g;->au(Lcom/tencent/mm/storage/ag;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 106
-    if-eqz p1, :cond_0
-
-    const-string/jumbo v0, "!56@/B4Tb64lLpJSmuQVFTi9B0qzdVHmRlgPIsgQj+GKLsI+3e3UaRdNsA=="
-
-    const-string/jumbo v1, "remove : %s"
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    iget-wide v3, p1, Lcom/tencent/mm/d/b/bg;->field_msgId:J
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    aput-object v3, v2, v5
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->ley:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->ley:Ljava/util/ArrayList;
-
-    iget-wide v1, p1, Lcom/tencent/mm/d/b/bg;->field_msgId:J
-
-    invoke-direct {p0, v1, v2}, Lcom/tencent/mm/ui/chatting/gallery/g;->dR(J)Lcom/tencent/mm/storage/ag;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/gallery/g;->bgz()V
-
-    .line 110
-    :cond_0
+    .line 46
     :goto_0
     return-void
 
-    .line 108
-    :cond_1
-    if-eqz p1, :cond_0
-
-    const-string/jumbo v0, "!56@/B4Tb64lLpJSmuQVFTi9B0qzdVHmRlgPIsgQj+GKLsI+3e3UaRdNsA=="
+    .line 40
+    :cond_0
+    const-string/jumbo v0, "MicroMsg.ImageGallerySelectedHandle"
 
     const-string/jumbo v1, "add : %s"
 
+    const/4 v2, 0x1
+
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget-wide v3, p1, Lcom/tencent/mm/d/b/bg;->field_msgId:J
+    const/4 v3, 0x0
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-wide v4, p1, Lcom/tencent/mm/e/b/bj;->field_msgId:J
 
-    move-result-object v3
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    aput-object v3, v2, v5
+    move-result-object v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    aput-object v4, v2, v3
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->ley:Ljava/util/ArrayList;
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 41
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lEK:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->ley:Ljava/util/ArrayList;
+    .line 42
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lEK:Ljava/util/ArrayList;
 
-    iget-wide v1, p1, Lcom/tencent/mm/d/b/bg;->field_msgId:J
+    iget-wide v2, p1, Lcom/tencent/mm/e/b/bj;->field_msgId:J
 
-    invoke-direct {p0, v1, v2}, Lcom/tencent/mm/ui/chatting/gallery/g;->dR(J)Lcom/tencent/mm/storage/ag;
+    invoke-direct {p0, v2, v3}, Lcom/tencent/mm/ui/chatting/gallery/g;->eh(J)Lcom/tencent/mm/storage/ai;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->ley:Ljava/util/ArrayList;
+    .line 43
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lEK:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/gallery/g;->bgz()V
+    .line 45
+    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/gallery/g;->bmh()V
+
+    goto :goto_0
+.end method
+
+.method public final az(Lcom/tencent/mm/storage/ai;)V
+    .locals 6
+
+    .prologue
+    .line 58
+    if-nez p1, :cond_0
+
+    .line 65
+    :goto_0
+    return-void
+
+    .line 61
+    :cond_0
+    const-string/jumbo v0, "MicroMsg.ImageGallerySelectedHandle"
+
+    const-string/jumbo v1, "remove : %s"
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    iget-wide v4, p1, Lcom/tencent/mm/e/b/bj;->field_msgId:J
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 62
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lEK:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    .line 63
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lEK:Ljava/util/ArrayList;
+
+    iget-wide v2, p1, Lcom/tencent/mm/e/b/bj;->field_msgId:J
+
+    invoke-direct {p0, v2, v3}, Lcom/tencent/mm/ui/chatting/gallery/g;->eh(J)Lcom/tencent/mm/storage/ai;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    .line 64
+    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/gallery/g;->bmh()V
 
     goto :goto_0
 .end method
@@ -298,19 +333,19 @@
 
     .prologue
     .line 68
-    const-string/jumbo v0, "!56@/B4Tb64lLpJSmuQVFTi9B0qzdVHmRlgPIsgQj+GKLsI+3e3UaRdNsA=="
+    const-string/jumbo v0, "MicroMsg.ImageGallerySelectedHandle"
 
     const-string/jumbo v1, "clear.."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 69
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->ley:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lEK:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     .line 70
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lgd:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lGq:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -343,7 +378,7 @@
 
     .prologue
     .line 74
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lgd:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lGq:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
@@ -353,7 +388,7 @@
     .line 76
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lgc:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/gallery/g;->lGp:Z
 
     .line 77
     return-void

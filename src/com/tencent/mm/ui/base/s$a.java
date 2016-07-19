@@ -7,33 +7,33 @@ import android.widget.Toast;
 
 final class s$a
 {
-  private static Toast kHP = null;
-  public static int kHQ = 0;
+  private static Toast lgR = null;
+  public static int lgS = 0;
   
-  public static void L(Context paramContext, int paramInt)
+  public static void Q(Context paramContext, int paramInt)
   {
     paramContext = paramContext.getApplicationContext();
-    if (kHQ != paramInt)
+    if (lgS != paramInt)
     {
-      kHP = null;
-      kHQ = paramInt;
+      lgR = null;
+      lgS = paramInt;
     }
-    if (kHP == null) {
-      kHP = Toast.makeText(paramContext, "", 1);
+    if (lgR == null) {
+      lgR = Toast.makeText(paramContext, "", 1);
     }
-    paramContext = View.inflate(paramContext, 2131363282, null);
+    paramContext = View.inflate(paramContext, 2130904293, null);
     if (paramInt == 1) {
-      ((TextView)paramContext.findViewById(2131169520)).setText(2131431018);
+      ((TextView)paramContext.findViewById(2131758812)).setText(2131233819);
     }
     for (;;)
     {
-      kHP.setView(paramContext);
-      kHP.show();
+      lgR.setView(paramContext);
+      lgR.show();
       return;
       if (paramInt == 3) {
-        ((TextView)paramContext.findViewById(2131169520)).setText(2131431019);
+        ((TextView)paramContext.findViewById(2131758812)).setText(2131233820);
       } else {
-        ((TextView)paramContext.findViewById(2131169520)).setText(2131431020);
+        ((TextView)paramContext.findViewById(2131758812)).setText(2131233821);
       }
     }
   }

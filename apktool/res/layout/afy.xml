@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/WalletBody"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hi" android:layout_marginRight="@dimen/hi" android:layout_marginBottom="@dimen/ct" android:text="@string/dgy" />
+    <ListView android:id="@id/cqt" android:background="@color/ow" android:paddingLeft="@dimen/hi" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@color/m2" android:dividerHeight="@dimen/dz" style="@style/MMList" />
+</LinearLayout>

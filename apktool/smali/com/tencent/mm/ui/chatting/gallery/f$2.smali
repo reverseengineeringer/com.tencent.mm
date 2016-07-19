@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/gallery/f;->aak()V
+    value = Lcom/tencent/mm/ui/chatting/gallery/f;->acE()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -13,9 +13,15 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic lga:Lcom/tencent/mm/ui/chatting/gallery/f;
+.field final synthetic lGn:Lcom/tencent/mm/ui/chatting/gallery/f;
 
 
 # direct methods
@@ -24,7 +30,7 @@
 
     .prologue
     .line 45
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/f$2;->lga:Lcom/tencent/mm/ui/chatting/gallery/f;
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/f$2;->lGn:Lcom/tencent/mm/ui/chatting/gallery/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # annotations
@@ -111,6 +110,9 @@
 .end method
 
 .method public abstract getMinimumLogicalFontSize()I
+.end method
+
+.method public abstract getMixedContentMode()I
 .end method
 
 .method public abstract getNavDump()Z
@@ -318,6 +320,9 @@
 .end method
 
 .method public abstract setUserAgent(Ljava/lang/String;)V
+.end method
+
+.method public abstract setUserAgent(Ljava/lang/String;Z)V
 .end method
 
 .method public abstract setUserAgentString(Ljava/lang/String;)V

@@ -1,9 +1,10 @@
 package com.tencent.mm.compatible.util;
 
+import com.tencent.mm.sdk.platformtools.at.a;
 import java.util.Comparator;
 
 final class d$1
-  implements Comparator
+  implements Comparator<at.a>
 {}
 
 /* Location:

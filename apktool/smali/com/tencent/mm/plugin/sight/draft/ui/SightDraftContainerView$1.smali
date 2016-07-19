@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gzG:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
+.field final synthetic gGi:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 62
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView$1;->gzG:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView$1;->gGi:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 66
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView$1;->gzG:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView$1;->gGi:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->awg()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->ayE()Z
 
     .line 67
     const/4 v0, 0x0

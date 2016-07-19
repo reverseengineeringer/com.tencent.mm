@@ -6,7 +6,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import com.tencent.mm.booter.notification.queue.b;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.Iterator;
 
 public class NotificationDeleteReceive
@@ -18,7 +18,7 @@ public class NotificationDeleteReceive
     try
     {
       i = paramIntent.getIntExtra("com.tencent.notification.id.key", -1);
-      u.d("!56@/B4Tb64lLpKR3MWtFvfaIAekODdD9J/RcHA/L9jjKKKq6MqTNTuiGw==", "receive: %d", new Object[] { Integer.valueOf(i) });
+      v.d("MicroMsg.Notification.Delete.Receive", "receive: %d", new Object[] { Integer.valueOf(i) });
       if (i == -1) {
         return;
       }
@@ -29,7 +29,7 @@ public class NotificationDeleteReceive
       {
         i = -1;
       }
-      paramIntent = b.nw().iterator();
+      paramIntent = b.lK().iterator();
     }
     do
     {
@@ -42,19 +42,22 @@ public class NotificationDeleteReceive
     {
       if (paramContext == null)
       {
-        u.w("!56@/B4Tb64lLpKR3MWtFvfaIAekODdD9J/RcHA/L9jjKKKq6MqTNTuiGw==", "receive delete notification: %d, but no item in queue", new Object[] { Integer.valueOf(i) });
+        v.w("MicroMsg.Notification.Delete.Receive", "receive delete notification: %d, but no item in queue", new Object[] { Integer.valueOf(i) });
         return;
       }
-      if (bnT != null) {}
+      if (bbR != null) {}
       try
       {
-        bnT.send();
-        b.nw().remove(i);
+        bbR.send();
+        b.lK().remove(i);
         return;
       }
       catch (PendingIntent.CanceledException paramContext)
       {
-        for (;;) {}
+        for (;;)
+        {
+          v.printErrStackTrace("MicroMsg.NotificationItem", paramContext, "Delete intent send Exception?", new Object[0]);
+        }
       }
       paramContext = null;
     }

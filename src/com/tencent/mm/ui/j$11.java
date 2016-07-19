@@ -1,20 +1,16 @@
 package com.tencent.mm.ui;
 
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
-import android.view.Window;
+import android.view.View;
+import android.view.View.OnLongClickListener;
 
 final class j$11
-  implements Runnable
+  implements View.OnLongClickListener
 {
-  j$11(j paramj) {}
+  j$11(j paramj, j.a parama) {}
   
-  public final void run()
+  public final boolean onLongClick(View paramView)
   {
-    j.i(kpx).getWindow().setFlags(1024, 1024);
-    if (j.j(kpx) != null) {
-      j.j(kpx).hide();
-    }
+    return j.a(kOB, paramView, kOG);
   }
 }
 

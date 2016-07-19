@@ -7,12 +7,11 @@ import android.graphics.Picture;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Drawable.ConstantState;
 import android.os.Build.VERSION;
-import com.tencent.mm.svg.d.d;
 
 public final class c
   extends b
 {
-  private a kii;
+  private a kIG;
   
   public c(Picture paramPicture, int paramInt) {}
   
@@ -20,102 +19,100 @@ public final class c
   {
     int i = 1;
     int j = 0;
-    long l1 = com.tencent.mm.svg.d.b.aZc();
-    label272:
-    label351:
-    label378:
-    label452:
-    label489:
-    label515:
-    label517:
+    long l1 = com.tencent.mm.svg.c.b.bet();
+    label250:
+    label327:
+    label354:
+    label428:
+    label465:
+    label480:
+    label482:
     for (;;)
     {
       long l2;
       try
       {
         if (!paramCanvas.isHardwareAccelerated()) {
-          break label378;
+          break label354;
         }
-        if (kii.kij == null)
+        if (kIG.kIH == null)
         {
-          com.tencent.mm.svg.d.c.e("!44@/B4Tb64lLpKIEXtxUku6vKosak8nJizyX34PhwEPK2o=", "Must not go here! %s", new Object[] { Integer.valueOf(khZ) });
-          if (kii.kik == null) {
-            break label515;
+          com.tencent.mm.svg.c.c.e("MicroMsg.SVGPictureDrawable", "Must not go here! %s", new Object[] { Integer.valueOf(kIz) });
+          if (kIG.kII == null) {
+            break label480;
           }
-          if (!kii.kik.isRecycled()) {
-            break label351;
+          if (!kIG.kII.isRecycled()) {
+            break label327;
           }
-          break label515;
-          if (kic == null) {
-            kic = a.f(this);
+          break label480;
+          if (kIC == null) {
+            kIC = a.g(this);
           }
-          a.b(kic, kib);
+          a.b(kIC, kIB);
           if (i != 0) {
-            break label489;
+            break label465;
           }
           if ((!paramCanvas.isHardwareAccelerated()) || (Build.VERSION.SDK_INT >= 16)) {
-            break label452;
+            break label428;
           }
-          com.tencent.mm.svg.d.c.i("!44@/B4Tb64lLpKIEXtxUku6vKosak8nJizyX34PhwEPK2o=", "Skip this draw.", new Object[0]);
+          com.tencent.mm.svg.c.c.i("MicroMsg.SVGPictureDrawable", "Skip this draw.", new Object[0]);
           return;
         }
         l2 = System.nanoTime();
-        if ((kii.kik != null) && (!kii.kik.isRecycled())) {
+        if ((kIG.kII != null) && (!kIG.kII.isRecycled())) {
           continue;
         }
         if ((getIntrinsicWidth() > 2048) || (getIntrinsicHeight() > 2048))
         {
-          com.tencent.mm.svg.d.c.e("!44@/B4Tb64lLpKIEXtxUku6vKosak8nJizyX34PhwEPK2o=", "This drawable is too big. %s", new Object[] { Integer.valueOf(khZ) });
+          com.tencent.mm.svg.c.c.e("MicroMsg.SVGPictureDrawable", "This drawable is too big. %s", new Object[] { Integer.valueOf(kIz) });
           continue;
         }
         if (getIntrinsicWidth() <= 0) {
-          break label272;
+          break label250;
         }
       }
       finally
       {
-        khY = com.tencent.mm.svg.d.b.dJ(l1);
-        d.y(khZ, khY);
-        b(paramCanvas);
+        kIy = com.tencent.mm.svg.c.b.ea(l1);
+        c(paramCanvas);
       }
       if (getIntrinsicHeight() <= 0)
       {
-        com.tencent.mm.svg.d.c.e("!44@/B4Tb64lLpKIEXtxUku6vKosak8nJizyX34PhwEPK2o=", "width and height must > 0.", new Object[0]);
+        com.tencent.mm.svg.c.c.e("MicroMsg.SVGPictureDrawable", "width and height must > 0.", new Object[0]);
       }
       else
       {
         Object localObject2 = Bitmap.createBitmap(getIntrinsicWidth(), getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
         Canvas localCanvas = new Canvas((Bitmap)localObject2);
-        kii.kij.draw(localCanvas);
-        kii.kik = ((Bitmap)localObject2);
-        d.dK(com.tencent.mm.svg.d.b.dJ(l2));
-        b(localCanvas);
+        kIG.kIH.draw(localCanvas);
+        kIG.kII = ((Bitmap)localObject2);
+        com.tencent.mm.svg.c.b.ea(l2);
+        c(localCanvas);
         continue;
-        aYT();
-        paramCanvas.drawBitmap(kii.kik, null, ewu, kib);
-        break label517;
+        bem();
+        paramCanvas.drawBitmap(kIG.kII, null, eCN, kIB);
+        break label482;
         i = j;
-        if (kii.kik != null)
+        if (kIG.kII != null)
         {
           i = j;
-          if (!kii.kik.isRecycled())
+          if (!kIG.kII.isRecycled())
           {
-            com.tencent.mm.svg.d.c.i("!44@/B4Tb64lLpKIEXtxUku6vKosak8nJizyX34PhwEPK2o=", "recycle bitmap:%s", new Object[] { kii.kik.toString() });
-            kii.kik.recycle();
-            kii.kik = null;
+            com.tencent.mm.svg.c.c.i("MicroMsg.SVGPictureDrawable", "recycle bitmap:%s", new Object[] { kIG.kII.toString() });
+            kIG.kII.recycle();
+            kIG.kII = null;
             i = j;
             continue;
-            localObject2 = kii.kij;
+            localObject2 = kIG.kIH;
             if (localObject2 != null)
             {
-              aYT();
+              bem();
               paramCanvas.save();
-              paramCanvas.drawPicture((Picture)localObject2, ewu);
+              paramCanvas.drawPicture((Picture)localObject2, eCN);
               paramCanvas.restore();
             }
-            khY = com.tencent.mm.svg.d.b.dJ(l1);
-            d.y(khZ, khY);
-            b(paramCanvas);
+            kIy = com.tencent.mm.svg.c.b.ea(l1);
+            c(paramCanvas);
             return;
             i = 0;
           }
@@ -132,14 +129,14 @@ public final class c
   public static final class a
     extends Drawable.ConstantState
   {
-    protected int hAC;
-    protected Picture kij;
-    protected Bitmap kik;
+    protected int hSw;
+    protected Picture kIH;
+    protected Bitmap kII;
     
     public a(Picture paramPicture, int paramInt)
     {
-      kij = paramPicture;
-      hAC = paramInt;
+      kIH = paramPicture;
+      hSw = paramInt;
     }
     
     public final int getChangingConfigurations()
@@ -149,7 +146,7 @@ public final class c
     
     public final Drawable newDrawable()
     {
-      return new c(kij, hAC);
+      return new c(kIH, hSw);
     }
   }
 }

@@ -15,18 +15,20 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.tencent.mm.d.b.bg;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import com.tencent.mm.model.h;
 import com.tencent.mm.model.i;
-import com.tencent.mm.n.a.a;
-import com.tencent.mm.pluginsdk.h.n;
+import com.tencent.mm.p.a.a;
+import com.tencent.mm.pluginsdk.i.n;
 import com.tencent.mm.pluginsdk.model.o;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag;
-import com.tencent.mm.storage.ah.a;
-import com.tencent.mm.storage.ah.c;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.aj;
+import com.tencent.mm.storage.aj.a;
+import com.tencent.mm.storage.aj.c;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.MMImageView;
 import java.util.ArrayList;
@@ -37,19 +39,19 @@ import junit.framework.Assert;
 
 public class AppAttachFileListUI
   extends MMActivity
-  implements ah.a
+  implements aj.a
 {
-  private AdapterView.OnItemClickListener dcP = new AdapterView.OnItemClickListener()
+  private AdapterView.OnItemClickListener dbs = new AdapterView.OnItemClickListener()
   {
-    public final void onItemClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+    public final void onItemClick(AdapterView<?> paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
     {
       paramAnonymousAdapterView = new Intent(AppAttachFileListUI.this, AppAttachDownloadUI.class);
-      paramAnonymousAdapterView.putExtra("app_msg_id", agetaFR.field_msgId);
+      paramAnonymousAdapterView.putExtra("app_msg_id", agetarX.field_msgId);
       paramAnonymousAdapterView.setFlags(67108864);
       startActivity(paramAnonymousAdapterView);
     }
   };
-  private AbsListView.OnScrollListener dcR = new AbsListView.OnScrollListener()
+  private AbsListView.OnScrollListener dbu = new AbsListView.OnScrollListener()
   {
     public final void onScroll(AbsListView paramAnonymousAbsListView, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
     
@@ -57,86 +59,86 @@ public class AppAttachFileListUI
     {
       if ((paramAnonymousInt == 0) && (!AppAttachFileListUI.b(AppAttachFileListUI.this)) && (AppAttachFileListUI.c(AppAttachFileListUI.this)) && (paramAnonymousAbsListView.getLastVisiblePosition() == AppAttachFileListUI.d(AppAttachFileListUI.this).getCount()))
       {
-        u.d("!44@/B4Tb64lLpKndQxFPEClvZ8VNQkxuaR5yXnPRtm8QDc=", "need to add item");
+        v.d("MicroMsg.AppAttachFileListUI", "need to add item");
         paramAnonymousInt = AppAttachFileListUI.e(AppAttachFileListUI.this);
         new AppAttachFileListUI.a(AppAttachFileListUI.this, (byte)0).execute(new Integer[] { Integer.valueOf(paramAnonymousInt), Integer.valueOf(20) });
         AppAttachFileListUI.f(AppAttachFileListUI.this);
       }
     }
   };
-  private ArrayList kQb;
-  private HashSet kQc;
-  private ListView kQd;
-  private b kQe;
-  private boolean kQf = true;
-  private boolean kQg = false;
-  private View kQh;
-  private int kQi;
+  private ArrayList<c> lpQ;
+  private HashSet<Long> lpR;
+  private ListView lpS;
+  private b lpT;
+  private boolean lpU = true;
+  private boolean lpV = false;
+  private View lpW;
+  private int lpX;
   
-  private c G(ag paramag)
+  private c J(ai paramai)
   {
-    a.a locala = a.a.dz(field_content);
+    a.a locala = a.a.dI(field_content);
     if (locala == null) {
       return null;
     }
     c localc = new c((byte)0);
-    aFR = paramag;
-    kQk = locala;
+    arX = paramai;
+    lpZ = locala;
     return localc;
   }
   
-  private void bJ(List paramList)
+  private void bU(List<ai> paramList)
   {
     if (paramList.size() < 20)
     {
-      kQf = false;
-      kQd.removeFooterView(kQh);
+      lpU = false;
+      lpS.removeFooterView(lpW);
     }
     Iterator localIterator = paramList.iterator();
     while (localIterator.hasNext())
     {
-      ag localag = (ag)localIterator.next();
-      c localc = G(localag);
-      if ((localc != null) && (kQk.type == 6) && (kQc.add(Long.valueOf(field_msgId)))) {
-        kQb.add(localc);
+      ai localai = (ai)localIterator.next();
+      c localc = J(localai);
+      if ((localc != null) && (lpZ.type == 6) && (lpR.add(Long.valueOf(field_msgId)))) {
+        lpQ.add(localc);
       }
     }
-    u.d("!44@/B4Tb64lLpKndQxFPEClvZ8VNQkxuaR5yXnPRtm8QDc=", "append file item list size %d, current total size is %d", new Object[] { Integer.valueOf(paramList.size()), Integer.valueOf(kQb.size()) });
+    v.d("MicroMsg.AppAttachFileListUI", "append file item list size %d, current total size is %d", new Object[] { Integer.valueOf(paramList.size()), Integer.valueOf(lpQ.size()) });
   }
   
-  public final void a(com.tencent.mm.storage.ah paramah, ah.c paramc)
+  public final void a(aj paramaj, aj.c paramc)
   {
-    if ("insert".equals(kgp))
+    if ("insert".equals(kGO))
     {
-      u.d("!44@/B4Tb64lLpKndQxFPEClvZ8VNQkxuaR5yXnPRtm8QDc=", "reveive a msg");
-      int i = kgq.size() - 1;
+      v.d("MicroMsg.AppAttachFileListUI", "reveive a msg");
+      int i = kGP.size() - 1;
       while (i >= 0)
       {
-        paramah = (ag)kgq.get(i);
-        if (paramah.aWU())
+        paramaj = (ai)kGP.get(i);
+        if (paramaj.bcn())
         {
-          paramah = G(paramah);
-          if ((paramah != null) && (kQk.type == 6)) {
-            kQb.add(0, paramah);
+          paramaj = J(paramaj);
+          if ((paramaj != null) && (lpZ.type == 6)) {
+            lpQ.add(0, paramaj);
           }
         }
         i -= 1;
       }
-      if (kQe != null) {
-        kQe.notifyDataSetChanged();
+      if (lpT != null) {
+        lpT.notifyDataSetChanged();
       }
     }
   }
   
   protected final int getLayoutId()
   {
-    return 2131361864;
+    return 2130903090;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    qb(2131428910);
+    rR(2131232731);
     b(new MenuItem.OnMenuItemClickListener()
     {
       public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
@@ -145,26 +147,26 @@ public class AppAttachFileListUI
         return true;
       }
     });
-    kQd = ((ListView)findViewById(2131165520));
-    kQh = getLayoutInflater().inflate(2131361829, null);
-    kQd.addFooterView(kQh);
-    kQh.setVisibility(8);
-    kQb = new ArrayList();
-    kQc = new HashSet();
-    paramBundle = h.sc();
-    paramBundle = com.tencent.mm.model.ah.tD().rs().x(paramBundle, 0, 20);
-    kQi += 20;
-    bJ(paramBundle);
-    kQe = new b((byte)0);
-    kQd.setAdapter(kQe);
-    kQd.setOnItemClickListener(dcP);
-    kQd.setOnScrollListener(dcR);
-    com.tencent.mm.model.ah.tD().rs().a(this, getMainLooper());
+    lpS = ((ListView)findViewById(2131755294));
+    lpW = getLayoutInflater().inflate(2130903088, null);
+    lpS.addFooterView(lpW);
+    lpW.setVisibility(8);
+    lpQ = new ArrayList();
+    lpR = new HashSet();
+    paramBundle = h.se();
+    paramBundle = ah.tE().rt().z(paramBundle, 0, 20);
+    lpX += 20;
+    bU(paramBundle);
+    lpT = new b((byte)0);
+    lpS.setAdapter(lpT);
+    lpS.setOnItemClickListener(dbs);
+    lpS.setOnScrollListener(dbu);
+    ah.tE().rt().a(this, getMainLooper());
   }
   
   protected void onDestroy()
   {
-    com.tencent.mm.model.ah.tD().rs().a(this);
+    ah.tE().rt().a(this);
     super.onDestroy();
   }
   
@@ -174,7 +176,7 @@ public class AppAttachFileListUI
   }
   
   private final class a
-    extends AsyncTask
+    extends AsyncTask<Integer, Integer, List<ai>>
   {
     private a() {}
   }
@@ -204,27 +206,27 @@ public class AppAttachFileListUI
       AppAttachFileListUI.c localc;
       if (paramView == null)
       {
-        paramView = getLayoutInflater().inflate(2131361931, paramViewGroup, false);
+        paramView = getLayoutInflater().inflate(2130903089, paramViewGroup, false);
         Assert.assertNotNull(paramView);
         paramViewGroup = new AppAttachFileListUI.d(AppAttachFileListUI.this, (byte)0);
-        kQl = ((MMImageView)paramView.findViewById(2131165636));
-        kQm = ((TextView)paramView.findViewById(2131165637));
-        kQn = ((TextView)paramView.findViewById(2131165639));
-        kQo = ((TextView)paramView.findViewById(2131165638));
+        lqa = ((MMImageView)paramView.findViewById(2131755290));
+        lqb = ((TextView)paramView.findViewById(2131755291));
+        lqc = ((TextView)paramView.findViewById(2131755293));
+        lqd = ((TextView)paramView.findViewById(2131755292));
         paramView.setTag(paramViewGroup);
         Assert.assertNotNull(paramViewGroup);
         localc = (AppAttachFileListUI.c)AppAttachFileListUI.a(AppAttachFileListUI.this).get(paramInt);
-        kQm.setText(kQk.title);
-        if (aFR.field_isSend != 1) {
+        lqb.setText(lpZ.title);
+        if (arX.field_isSend != 1) {
           break label234;
         }
       }
       label234:
-      for (String str = "自己";; str = i.dY(kQk.bxn))
+      for (String str = "自己";; str = i.ej(lpZ.asv))
       {
-        kQn.setText(String.format("大小：%s，来自：%s", new Object[] { ay.al(kQk.aor), str }));
-        kQo.setText(n.b(AppAttachFileListUI.this, aFR.field_createTime, true));
-        kQl.setImageResource(o.zI(kQk.aos));
+        lqc.setText(String.format("大小：%s，来自：%s", new Object[] { be.as(lpZ.bpX), str }));
+        lqd.setText(n.c(AppAttachFileListUI.this, arX.field_createTime, true));
+        lqa.setImageResource(o.BE(lpZ.bpY));
         return paramView;
         paramViewGroup = (AppAttachFileListUI.d)paramView.getTag();
         break;
@@ -234,18 +236,18 @@ public class AppAttachFileListUI
   
   private final class c
   {
-    public ag aFR;
-    public a.a kQk;
+    public ai arX;
+    public a.a lpZ;
     
     private c() {}
   }
   
   private final class d
   {
-    public MMImageView kQl;
-    public TextView kQm;
-    public TextView kQn;
-    public TextView kQo;
+    public MMImageView lqa;
+    public TextView lqb;
+    public TextView lqc;
+    public TextView lqd;
     
     private d() {}
   }

@@ -10,7 +10,7 @@ final class InviteFacebookFriendsUI$10$1$2
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    coV.coU.coP.finish();
+    ckj.cki.ckd.finish();
   }
 }
 

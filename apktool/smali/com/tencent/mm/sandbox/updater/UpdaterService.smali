@@ -22,19 +22,29 @@
 
 
 # static fields
-.field private static jUo:Lcom/tencent/mm/sandbox/updater/UpdaterService;
+.field private static ktP:Lcom/tencent/mm/sandbox/updater/UpdaterService;
 
-.field static final jUq:J
+.field static final ktR:J
 
 
 # instance fields
-.field private bWL:Z
+.field private bQo:Z
 
-.field jUp:Ljava/util/Map;
+.field ktQ:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Integer;",
+            "Lcom/tencent/mm/sandbox/updater/a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private jUr:Lcom/tencent/mm/sdk/platformtools/af;
+.field private ktS:Lcom/tencent/mm/sdk/platformtools/ah;
 
-.field private jUs:Lcom/tencent/mm/sandbox/updater/UpdaterService$a;
+.field private ktT:Lcom/tencent/mm/sandbox/updater/UpdaterService$a;
 
 
 # direct methods
@@ -42,17 +52,17 @@
     .locals 2
 
     .prologue
-    .line 34
+    .line 33
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUo:Lcom/tencent/mm/sandbox/updater/UpdaterService;
+    sput-object v0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktP:Lcom/tencent/mm/sandbox/updater/UpdaterService;
 
-    .line 46
+    .line 45
     const-wide/32 v0, 0x1b7740
 
-    sput-wide v0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUq:J
+    sput-wide v0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktR:J
 
-    .line 48
+    .line 47
     return-void
 .end method
 
@@ -60,23 +70,23 @@
     .locals 3
 
     .prologue
-    .line 30
+    .line 29
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 36
+    .line 35
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUp:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktQ:Ljava/util/Map;
 
-    .line 40
+    .line 39
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->bWL:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->bQo:Z
 
-    .line 60
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/af;
+    .line 59
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ah;
 
     new-instance v1, Lcom/tencent/mm/sandbox/updater/UpdaterService$1;
 
@@ -84,14 +94,14 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;-><init>(Lcom/tencent/mm/sdk/platformtools/af$a;Z)V
+    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/ah;-><init>(Lcom/tencent/mm/sdk/platformtools/ah$a;Z)V
 
-    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUr:Lcom/tencent/mm/sdk/platformtools/af;
+    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktS:Lcom/tencent/mm/sdk/platformtools/ah;
 
-    .line 70
+    .line 69
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUs:Lcom/tencent/mm/sandbox/updater/UpdaterService$a;
+    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktT:Lcom/tencent/mm/sandbox/updater/UpdaterService$a;
 
     .line 232
     return-void
@@ -101,56 +111,56 @@
     .locals 1
 
     .prologue
-    .line 30
-    invoke-direct {p0}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->aUm()Z
+    .line 29
+    invoke-direct {p0}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->aZl()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public static aUk()V
+.method public static aZj()V
     .locals 2
 
     .prologue
-    .line 54
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7"
+    .line 53
+    const-string/jumbo v0, "MicroMsg.UpdaterService"
 
     const-string/jumbo v1, "UpdaterService stopInstance()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 55
-    sget-object v0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUo:Lcom/tencent/mm/sandbox/updater/UpdaterService;
+    .line 54
+    sget-object v0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktP:Lcom/tencent/mm/sandbox/updater/UpdaterService;
 
     if-eqz v0, :cond_0
 
-    .line 56
-    sget-object v0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUo:Lcom/tencent/mm/sandbox/updater/UpdaterService;
+    .line 55
+    sget-object v0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktP:Lcom/tencent/mm/sandbox/updater/UpdaterService;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->aUm()Z
+    invoke-direct {v0}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->aZl()Z
 
-    .line 58
+    .line 57
     :cond_0
     return-void
 .end method
 
-.method public static aUl()Lcom/tencent/mm/sandbox/updater/UpdaterService;
+.method public static aZk()Lcom/tencent/mm/sandbox/updater/UpdaterService;
     .locals 1
 
     .prologue
-    .line 73
-    sget-object v0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUo:Lcom/tencent/mm/sandbox/updater/UpdaterService;
+    .line 72
+    sget-object v0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktP:Lcom/tencent/mm/sandbox/updater/UpdaterService;
 
     return-object v0
 .end method
 
-.method private aUm()Z
-    .locals 3
+.method private aZl()Z
+    .locals 4
 
     .prologue
     .line 209
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUp:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktQ:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->size()I
 
@@ -159,7 +169,7 @@
     if-lez v0, :cond_1
 
     .line 210
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUp:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktQ:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
 
@@ -190,11 +200,11 @@
     if-eqz v0, :cond_0
 
     .line 212
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7"
+    const-string/jumbo v0, "MicroMsg.UpdaterService"
 
     const-string/jumbo v1, "checkAndTryStopSelf, dont stop, some download mgr still busy"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 213
     const/4 v0, 0x0
@@ -205,20 +215,20 @@
 
     .line 218
     :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7"
+    const-string/jumbo v0, "MicroMsg.UpdaterService"
 
     const-string/jumbo v1, "checkAndTryStopSelf, UpdaterService killed self"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 221
     new-instance v0, Lcom/tencent/mm/sandbox/updater/UpdaterService$2;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/sandbox/updater/UpdaterService$2;-><init>(Lcom/tencent/mm/sandbox/updater/UpdaterService;)V
 
-    const-wide/16 v1, 0x2710
+    const-wide/16 v2, 0x2710
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/ab;->e(Ljava/lang/Runnable;J)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ad;->e(Ljava/lang/Runnable;J)V
 
     .line 229
     const/4 v0, 0x1
@@ -226,7 +236,7 @@
     goto :goto_0
 .end method
 
-.method private h(Landroid/content/Intent;)V
+.method private i(Landroid/content/Intent;)V
     .locals 7
 
     .prologue
@@ -251,7 +261,7 @@
     move-result v0
 
     .line 196
-    const-string/jumbo v1, "!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7"
+    const-string/jumbo v1, "MicroMsg.UpdaterService"
 
     const-string/jumbo v2, "handleCommand, downloadType = %d"
 
@@ -263,10 +273,10 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 198
-    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUp:Ljava/util/Map;
+    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktQ:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -282,12 +292,12 @@
     if-eqz v0, :cond_0
 
     .line 200
-    invoke-interface {v0, p1}, Lcom/tencent/mm/sandbox/updater/a;->H(Landroid/content/Intent;)Z
+    invoke-interface {v0, p1}, Lcom/tencent/mm/sandbox/updater/a;->M(Landroid/content/Intent;)Z
 
     move-result v0
 
     .line 201
-    const-string/jumbo v1, "!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7"
+    const-string/jumbo v1, "MicroMsg.UpdaterService"
 
     const-string/jumbo v2, "handleCommand ret = %b"
 
@@ -299,13 +309,13 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 202
     if-nez v0, :cond_0
 
     .line 203
-    invoke-direct {p0}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->aUm()Z
+    invoke-direct {p0}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->aZl()Z
 
     goto :goto_0
 .end method
@@ -323,31 +333,31 @@
 .end method
 
 .method public onCreate()V
-    .locals 3
+    .locals 4
 
     .prologue
-    .line 88
+    .line 87
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
-    .line 90
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7"
+    .line 89
+    const-string/jumbo v0, "MicroMsg.UpdaterService"
 
     const-string/jumbo v1, "onCreate"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 92
+    .line 91
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    invoke-static {v0, p0}, Lcom/tencent/mm/sandbox/c;->c(ILjava/lang/Object;)V
+    invoke-static {v0, p0}, Lcom/tencent/mm/sandbox/c;->f(ILjava/lang/Object;)V
 
-    .line 94
-    sput-object p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUo:Lcom/tencent/mm/sandbox/updater/UpdaterService;
+    .line 93
+    sput-object p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktP:Lcom/tencent/mm/sandbox/updater/UpdaterService;
 
-    .line 97
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUp:Ljava/util/Map;
+    .line 96
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktQ:Ljava/util/Map;
 
     const/4 v1, 0x0
 
@@ -355,12 +365,12 @@
 
     move-result-object v1
 
-    sget-object v2, Lcom/tencent/mm/sandbox/updater/i$a;->jUn:Lcom/tencent/mm/sandbox/updater/i;
+    sget-object v2, Lcom/tencent/mm/sandbox/updater/i$a;->ktO:Lcom/tencent/mm/sandbox/updater/i;
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 98
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUp:Ljava/util/Map;
+    .line 97
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktQ:Ljava/util/Map;
 
     const/4 v1, 0x1
 
@@ -368,21 +378,36 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcom/tencent/mm/sandbox/updater/d;->aTW()Lcom/tencent/mm/sandbox/updater/d;
+    invoke-static {}, Lcom/tencent/mm/sandbox/updater/d;->aYT()Lcom/tencent/mm/sandbox/updater/d;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 98
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktQ:Ljava/util/Map;
+
+    const/4 v1, 0x2
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-static {}, Lcom/tencent/mm/sandbox/updater/d;->aYT()Lcom/tencent/mm/sandbox/updater/d;
 
     move-result-object v2
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 100
-    invoke-static {p0}, Lcom/tencent/mm/ui/MMActivity;->dS(Landroid/content/Context;)Ljava/util/Locale;
+    invoke-static {p0}, Lcom/tencent/mm/ui/MMActivity;->dT(Landroid/content/Context;)Ljava/util/Locale;
 
     .line 102
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUr:Lcom/tencent/mm/sdk/platformtools/af;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktS:Lcom/tencent/mm/sdk/platformtools/ah;
 
-    sget-wide v1, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUq:J
+    sget-wide v2, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktR:J
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;->ds(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ah;->dJ(J)V
 
     .line 104
     new-instance v0, Landroid/content/IntentFilter;
@@ -397,9 +422,9 @@
 
     invoke-direct {v1}, Lcom/tencent/mm/sandbox/updater/UpdaterService$a;-><init>()V
 
-    iput-object v1, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUs:Lcom/tencent/mm/sandbox/updater/UpdaterService$a;
+    iput-object v1, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktT:Lcom/tencent/mm/sandbox/updater/UpdaterService$a;
 
-    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUs:Lcom/tencent/mm/sandbox/updater/UpdaterService$a;
+    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktT:Lcom/tencent/mm/sandbox/updater/UpdaterService$a;
 
     invoke-virtual {p0, v1, v0}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -412,30 +437,30 @@
 
     .prologue
     .line 161
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7"
+    const-string/jumbo v0, "MicroMsg.UpdaterService"
 
     const-string/jumbo v1, "onDestroy"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 163
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUr:Lcom/tencent/mm/sdk/platformtools/af;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktS:Lcom/tencent/mm/sdk/platformtools/ah;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/af;->aUF()V
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ah;->aZJ()V
 
     .line 165
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUs:Lcom/tencent/mm/sandbox/updater/UpdaterService$a;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktT:Lcom/tencent/mm/sandbox/updater/UpdaterService$a;
 
     if-eqz v0, :cond_0
 
     .line 166
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUs:Lcom/tencent/mm/sandbox/updater/UpdaterService$a;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktT:Lcom/tencent/mm/sandbox/updater/UpdaterService$a;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 169
     :cond_0
-    iget-boolean v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->bWL:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->bQo:Z
 
     if-eqz v0, :cond_1
 
@@ -446,7 +471,7 @@
 
     .line 173
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUp:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktQ:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
 
@@ -476,21 +501,21 @@
 
     .line 177
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUp:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktQ:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     .line 179
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUo:Lcom/tencent/mm/sandbox/updater/UpdaterService;
+    sput-object v0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->ktP:Lcom/tencent/mm/sandbox/updater/UpdaterService;
 
     .line 180
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    invoke-static {v0, p0}, Lcom/tencent/mm/sandbox/c;->d(ILjava/lang/Object;)V
+    invoke-static {v0, p0}, Lcom/tencent/mm/sandbox/c;->g(ILjava/lang/Object;)V
 
     .line 182
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
@@ -504,7 +529,7 @@
 
     .prologue
     .line 118
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7"
+    const-string/jumbo v0, "MicroMsg.UpdaterService"
 
     const-string/jumbo v1, "onStart intent = %s"
 
@@ -516,10 +541,10 @@
 
     aput-object p1, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 119
-    invoke-direct {p0, p1}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->h(Landroid/content/Intent;)V
+    invoke-direct {p0, p1}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->i(Landroid/content/Intent;)V
 
     .line 120
     return-void
@@ -534,7 +559,7 @@
     const/4 v4, 0x0
 
     .line 124
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7"
+    const-string/jumbo v0, "MicroMsg.UpdaterService"
 
     const-string/jumbo v1, "onStartCommand intent = %s"
 
@@ -542,7 +567,7 @@
 
     aput-object p1, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 126
     if-eqz p1, :cond_0
@@ -558,11 +583,11 @@
     if-eqz v0, :cond_1
 
     .line 129
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7"
+    const-string/jumbo v0, "MicroMsg.UpdaterService"
 
     const-string/jumbo v1, "runServiceInForground"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Landroid/content/Intent;
 
@@ -612,12 +637,12 @@
 
     invoke-virtual {p0, v4, v0}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->startForeground(ILandroid/app/Notification;)V
 
-    iput-boolean v5, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->bWL:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->bQo:Z
 
     .line 140
     :cond_0
     :goto_0
-    invoke-direct {p0, p1}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->h(Landroid/content/Intent;)V
+    invoke-direct {p0, p1}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->i(Landroid/content/Intent;)V
 
     .line 143
     const/4 v0, 0x2
@@ -632,7 +657,7 @@
 
     if-ge v0, v1, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->bWL:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->bQo:Z
 
     if-nez v0, :cond_0
 
@@ -647,7 +672,7 @@
     invoke-virtual {p0, v1, v0}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->startForeground(ILandroid/app/Notification;)V
 
     .line 135
-    iput-boolean v5, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->bWL:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->bQo:Z
 
     goto :goto_0
 .end method

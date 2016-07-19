@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic cqb:Landroid/view/View;
+.field final synthetic clo:Landroid/view/View;
 
-.field final synthetic iIg:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
+.field final synthetic jfd:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 1072
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$10;->iIg:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$10;->jfd:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$10;->cqb:Landroid/view/View;
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$10;->clo:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,24 +45,24 @@
 
     .prologue
     .line 1076
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$10;->iIg:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$10;->jfd:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
     if-eqz v0, :cond_0
 
     .line 1077
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$10;->iIg:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$10;->jfd:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
     const/4 v1, 0x1
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$10;->cqb:Landroid/view/View;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$10;->clo:Landroid/view/View;
 
-    invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->ah(Landroid/view/View;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->ak(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$10;->cqb:Landroid/view/View;
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$10;->clo:Landroid/view/View;
 
-    invoke-static {v3}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->ai(Landroid/view/View;)I
+    invoke-static {v3}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->al(Landroid/view/View;)I
 
     move-result v3
 

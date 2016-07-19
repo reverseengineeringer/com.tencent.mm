@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/cn;->at(Landroid/view/View;)Z
+    value = Lcom/tencent/mm/ui/chatting/cn;->g(Lcom/tencent/mm/aq/q;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,20 @@
 
 
 # instance fields
-.field final synthetic kWm:Lcom/tencent/mm/ui/chatting/cn;
+.field final synthetic lwl:Lcom/tencent/mm/ui/chatting/cn;
+
+.field final synthetic lwm:Lcom/tencent/mm/aq/q;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/chatting/cn;)V
+.method constructor <init>(Lcom/tencent/mm/ui/chatting/cn;Lcom/tencent/mm/aq/q;)V
     .locals 0
 
     .prologue
-    .line 1615
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/cn$6;->kWm:Lcom/tencent/mm/ui/chatting/cn;
+    .line 840
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/cn$6;->lwl:Lcom/tencent/mm/ui/chatting/cn;
+
+    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/cn$6;->lwm:Lcom/tencent/mm/aq/q;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,35 +40,27 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 4
 
     .prologue
-    .line 1617
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/cn$6;->kWm:Lcom/tencent/mm/ui/chatting/cn;
+    .line 844
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/cn$6;->lwl:Lcom/tencent/mm/ui/chatting/cn;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/cn;->cWm:Lcom/tencent/mm/ui/base/o;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/cn$6;->lwm:Lcom/tencent/mm/aq/q;
 
-    if-eqz v0, :cond_0
+    iget v1, v1, Lcom/tencent/mm/aq/q;->cbm:I
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/cn$6;->kWm:Lcom/tencent/mm/ui/chatting/cn;
+    int-to-long v2, v1
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/cn;->cWm:Lcom/tencent/mm/ui/base/o;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/cn$6;->lwm:Lcom/tencent/mm/aq/q;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/o;->isShowing()Z
+    invoke-virtual {v1}, Lcom/tencent/mm/aq/q;->getFileName()Ljava/lang/String;
 
-    move-result v0
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    invoke-static {v0, v2, v3, v1}, Lcom/tencent/mm/ui/chatting/cn;->a(Lcom/tencent/mm/ui/chatting/cn;JLjava/lang/String;)V
 
-    .line 1618
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/cn$6;->kWm:Lcom/tencent/mm/ui/chatting/cn;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/cn;->cWm:Lcom/tencent/mm/ui/base/o;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/o;->dismiss()V
-
-    .line 1620
-    :cond_0
+    .line 845
     return-void
 .end method

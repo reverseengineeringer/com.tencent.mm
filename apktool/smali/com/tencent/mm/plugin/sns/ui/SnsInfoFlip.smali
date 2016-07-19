@@ -14,215 +14,352 @@
 .end annotation
 
 
+# static fields
+.field private static bqm:I
+
+.field private static bqn:I
+
+
 # instance fields
+.field clW:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/plugin/sns/g/b;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private context:Landroid/content/Context;
 
-.field cqJ:Ljava/util/List;
+.field gOG:Lcom/tencent/mm/storage/z;
 
-.field private gHB:Lcom/tencent/mm/storage/i$a;
+.field gOv:Z
 
-.field gHq:Z
+.field private handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-.field private handler:Lcom/tencent/mm/sdk/platformtools/aa;
+.field hqC:Z
 
-.field private hbM:Z
+.field private hqH:Lcom/tencent/mm/ui/tools/h;
 
-.field private heA:Z
+.field private htA:Z
 
-.field private heB:Z
+.field htB:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$c;
 
-.field private heC:F
+.field private htC:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/plugin/sns/i/k;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field heD:Lcom/tencent/mm/ui/base/MMPageControlView;
+.field htD:I
 
-.field private heE:Ljava/lang/Runnable;
+.field htE:Ljava/util/HashSet;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private heF:Ljava/lang/String;
+.field public htF:I
 
-.field private heG:I
+.field public htG:I
 
-.field private heH:Z
+.field private htH:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field heI:J
+.field htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
-.field private heJ:Ljava/util/HashSet;
+.field htc:Landroid/widget/Gallery;
 
-.field private heK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$c;
+.field private htd:Z
 
-.field private heL:Ljava/util/HashMap;
+.field hte:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field heM:I
+.field htf:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private heN:Ljava/util/HashSet;
+.field htg:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public heO:I
+.field hth:Z
 
-.field public heP:I
+.field hti:Z
 
-.field private heQ:Ljava/util/HashMap;
+.field htj:Z
 
-.field hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+.field htk:Z
 
-.field heq:Landroid/widget/Gallery;
+.field htl:Z
 
-.field private her:Z
+.field private htm:Z
 
-.field hes:Ljava/util/HashMap;
+.field private htn:Z
 
-.field het:Ljava/util/HashMap;
+.field private hto:F
 
-.field heu:Ljava/util/HashMap;
+.field htp:Lcom/tencent/mm/ui/base/MMPageControlView;
 
-.field private hev:Z
+.field htq:Ljava/lang/Runnable;
 
-.field private hew:Z
+.field private htr:Ljava/lang/String;
 
-.field private hex:Z
+.field private hts:I
 
-.field private hey:Z
+.field htt:I
 
-.field private hez:Z
+.field private htu:Z
+
+.field htv:J
+
+.field private htw:Ljava/util/HashSet;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private htx:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private hty:I
+
+.field private htz:I
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 117
+    sput v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->bqn:I
+
+    .line 118
+    sput v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->bqm:I
+
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 4
 
     .prologue
-    const/4 v3, -0x1
-
     const/4 v1, 0x1
+
+    const/4 v3, -0x1
 
     const/4 v2, 0x0
 
-    .line 148
+    .line 168
     invoke-direct {p0, p1}, Lcom/tencent/mm/plugin/sns/ui/FlipView;-><init>(Landroid/content/Context;)V
 
-    .line 62
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gHq:Z
+    .line 69
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gOv:Z
 
-    .line 63
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->her:Z
+    .line 70
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htd:Z
 
-    .line 64
+    .line 71
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hes:Ljava/util/HashMap;
-
-    .line 65
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->het:Ljava/util/HashMap;
-
-    .line 66
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heu:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hte:Ljava/util/HashMap;
 
     .line 72
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hev:Z
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htf:Ljava/util/HashMap;
 
     .line 73
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hew:Z
+    new-instance v0, Ljava/util/HashMap;
 
-    .line 74
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hex:Z
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 75
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hey:Z
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htg:Ljava/util/HashMap;
 
     .line 76
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hez:Z
+    sget-object v0, Lcom/tencent/mm/storage/z;->kFU:Lcom/tencent/mm/storage/z;
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gOG:Lcom/tencent/mm/storage/z;
 
     .line 79
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heA:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hth:Z
+
+    .line 80
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hti:Z
+
+    .line 81
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htj:Z
 
     .line 82
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heB:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htk:Z
 
-    .line 84
+    .line 83
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htl:Z
+
+    .line 86
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htm:Z
+
+    .line 89
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htn:Z
+
+    .line 91
     const/high16 v0, 0x3f800000    # 1.0f
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heC:F
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hto:F
 
-    .line 88
+    .line 95
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heE:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htq:Ljava/lang/Runnable;
 
-    .line 90
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 97
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    .line 92
+    .line 99
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heF:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htr:Ljava/lang/String;
 
-    .line 94
-    iput v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heG:I
+    .line 101
+    iput v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hts:I
 
-    .line 96
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heH:Z
+    .line 103
+    iput v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htt:I
 
-    .line 98
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hbM:Z
+    .line 105
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htu:Z
 
-    .line 100
+    .line 107
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hqC:Z
+
+    .line 109
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heI:J
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htv:J
 
-    .line 102
+    .line 111
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heJ:Ljava/util/HashSet;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htw:Ljava/util/HashSet;
 
-    .line 347
+    .line 119
+    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hty:I
+
+    .line 120
+    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htz:I
+
+    .line 122
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htA:Z
+
+    .line 373
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heL:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htC:Ljava/util/HashMap;
 
-    .line 348
-    iput v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heM:I
+    .line 374
+    iput v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htD:I
 
-    .line 1195
+    .line 1307
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heN:Ljava/util/HashSet;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htE:Ljava/util/HashSet;
 
-    .line 1196
-    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heO:I
+    .line 1308
+    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htF:I
 
-    .line 1197
-    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heP:I
+    .line 1309
+    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htG:I
 
-    .line 1273
+    .line 1385
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heQ:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htH:Ljava/util/HashMap;
 
-    .line 149
+    .line 169
     invoke-direct {p0, p1}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->init(Landroid/content/Context;)V
 
-    .line 150
+    .line 170
     return-void
 .end method
 
@@ -230,149 +367,196 @@
     .locals 4
 
     .prologue
-    const/4 v3, -0x1
-
     const/4 v1, 0x1
+
+    const/4 v3, -0x1
 
     const/4 v2, 0x0
 
-    .line 143
+    .line 163
     invoke-direct {p0, p1, p2}, Lcom/tencent/mm/plugin/sns/ui/FlipView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 62
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gHq:Z
+    .line 69
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gOv:Z
 
-    .line 63
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->her:Z
+    .line 70
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htd:Z
 
-    .line 64
+    .line 71
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hes:Ljava/util/HashMap;
-
-    .line 65
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->het:Ljava/util/HashMap;
-
-    .line 66
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heu:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hte:Ljava/util/HashMap;
 
     .line 72
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hev:Z
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htf:Ljava/util/HashMap;
 
     .line 73
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hew:Z
+    new-instance v0, Ljava/util/HashMap;
 
-    .line 74
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hex:Z
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 75
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hey:Z
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htg:Ljava/util/HashMap;
 
     .line 76
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hez:Z
+    sget-object v0, Lcom/tencent/mm/storage/z;->kFU:Lcom/tencent/mm/storage/z;
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gOG:Lcom/tencent/mm/storage/z;
 
     .line 79
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heA:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hth:Z
+
+    .line 80
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hti:Z
+
+    .line 81
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htj:Z
 
     .line 82
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heB:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htk:Z
 
-    .line 84
+    .line 83
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htl:Z
+
+    .line 86
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htm:Z
+
+    .line 89
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htn:Z
+
+    .line 91
     const/high16 v0, 0x3f800000    # 1.0f
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heC:F
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hto:F
 
-    .line 88
+    .line 95
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heE:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htq:Ljava/lang/Runnable;
 
-    .line 90
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 97
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    .line 92
+    .line 99
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heF:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htr:Ljava/lang/String;
 
-    .line 94
-    iput v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heG:I
+    .line 101
+    iput v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hts:I
 
-    .line 96
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heH:Z
+    .line 103
+    iput v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htt:I
 
-    .line 98
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hbM:Z
+    .line 105
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htu:Z
 
-    .line 100
+    .line 107
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hqC:Z
+
+    .line 109
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heI:J
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htv:J
 
-    .line 102
+    .line 111
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heJ:Ljava/util/HashSet;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htw:Ljava/util/HashSet;
 
-    .line 347
+    .line 119
+    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hty:I
+
+    .line 120
+    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htz:I
+
+    .line 122
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htA:Z
+
+    .line 373
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heL:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htC:Ljava/util/HashMap;
 
-    .line 348
-    iput v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heM:I
+    .line 374
+    iput v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htD:I
 
-    .line 1195
+    .line 1307
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heN:Ljava/util/HashSet;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htE:Ljava/util/HashSet;
 
-    .line 1196
-    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heO:I
+    .line 1308
+    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htF:I
 
-    .line 1197
-    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heP:I
+    .line 1309
+    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htG:I
 
-    .line 1273
+    .line 1385
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heQ:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htH:Ljava/util/HashMap;
 
-    .line 144
+    .line 164
     invoke-direct {p0, p1}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->init(Landroid/content/Context;)V
 
-    .line 145
+    .line 165
     return-void
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;Lcom/tencent/mm/protocal/b/add;ILjava/lang/String;)V
+.method static synthetic Qp()I
+    .locals 1
+
+    .prologue
+    .line 64
+    sget v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->bqn:I
+
+    return v0
+.end method
+
+.method static synthetic a(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;I)I
     .locals 0
 
     .prologue
-    .line 57
-    invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->a(Lcom/tencent/mm/protocal/b/add;ILjava/lang/String;)V
+    .line 64
+    iput p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hty:I
+
+    return p1
+.end method
+
+.method static synthetic a(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;Lcom/tencent/mm/ui/tools/h;)Lcom/tencent/mm/ui/tools/h;
+    .locals 0
+
+    .prologue
+    .line 64
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hqH:Lcom/tencent/mm/ui/tools/h;
+
+    return-object p1
+.end method
+
+.method static synthetic a(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;Lcom/tencent/mm/protocal/b/adw;ILjava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 64
+    invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->a(Lcom/tencent/mm/protocal/b/adw;ILjava/lang/String;)V
 
     return-void
 .end method
@@ -381,8 +565,8 @@
     .locals 4
 
     .prologue
-    .line 57
-    const-string/jumbo v0, "!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed"
+    .line 64
+    const-string/jumbo v0, "MicroMsg.SnsInfoFlip"
 
     const-string/jumbo v1, "recordLoadStart, bigPicId:%s"
 
@@ -394,9 +578,9 @@
 
     aput-object p1, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heQ:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htH:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -412,9 +596,9 @@
 
     move-result v1
 
-    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gPV:I
+    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gXU:I
 
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->getReportNetworkType()I
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->aEX()I
 
     move-result v1
 
@@ -422,83 +606,96 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heU:J
+    iput-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htL:J
 
-    iput-object p1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heW:Ljava/lang/String;
+    iput-object p1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htN:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heQ:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htH:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed"
+    const-string/jumbo v0, "MicroMsg.SnsInfoFlip"
 
     const-string/jumbo v1, "recordLoadStart, put to map"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method private a(Lcom/tencent/mm/protocal/b/add;ILjava/lang/String;)V
-    .locals 9
+.method private a(Lcom/tencent/mm/protocal/b/adw;ILjava/lang/String;)V
+    .locals 12
 
     .prologue
-    .line 350
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    const/4 v11, 0x2
+
+    const-wide/16 v2, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v10, 0x1
+
+    .line 376
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     instance-of v0, v0, Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     if-nez v0, :cond_4
 
-    .line 351
+    .line 377
     :cond_0
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$c;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htB:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$c;
 
     if-eqz v0, :cond_1
 
-    .line 352
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$c;
+    .line 378
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htB:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$c;
 
-    invoke-interface {v0, p2}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$c;->mc(I)V
+    invoke-interface {v0, p2}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$c;->nu(I)V
 
-    .line 354
+    .line 380
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heG:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hts:I
 
-    const/4 v1, -0x1
+    const/4 v4, -0x1
 
-    if-ne v0, v1, :cond_2
+    if-ne v0, v4, :cond_2
 
-    .line 355
-    iput p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heG:I
+    .line 381
+    iput p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hts:I
 
-    .line 357
+    .line 383
     :cond_2
-    iget-object v5, p1, Lcom/tencent/mm/protocal/b/add;->iXW:Ljava/lang/String;
+    iput v10, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htt:I
 
-    .line 358
-    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    .line 384
+    iget-object v7, p1, Lcom/tencent/mm/protocal/b/adw;->jvB:Ljava/lang/String;
+
+    .line 385
+    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_8
 
-    .line 359
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    .line 386
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->getCount()I
 
     move-result v0
 
-    .line 360
+    .line 387
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -523,83 +720,75 @@
 
     move-result-object v0
 
-    .line 361
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gXN:Lcom/tencent/mm/plugin/sns/ui/o$a;
+    .line 388
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hkZ:Lcom/tencent/mm/plugin/sns/ui/q$a;
 
     const/4 v2, 0x0
 
-    invoke-interface {v1, v0, v2}, Lcom/tencent/mm/plugin/sns/ui/o$a;->by(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v0, v2}, Lcom/tencent/mm/plugin/sns/ui/q$a;->bJ(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 438
+    .line 466
     :cond_3
     :goto_1
     return-void
 
-    .line 350
+    .line 376
     :cond_4
-    const/4 v0, 0x0
+    iget-object v0, p1, Lcom/tencent/mm/protocal/b/adw;->jYj:Lcom/tencent/mm/protocal/b/ady;
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_16
 
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/add;->jzw:Lcom/tencent/mm/protocal/b/adf;
+    iget-object v0, p1, Lcom/tencent/mm/protocal/b/adw;->jYj:Lcom/tencent/mm/protocal/b/ady;
 
-    if-eqz v2, :cond_5
+    iget v0, v0, Lcom/tencent/mm/protocal/b/ady;->jYM:F
 
-    iget-object v0, p1, Lcom/tencent/mm/protocal/b/add;->jzw:Lcom/tencent/mm/protocal/b/adf;
+    iget-object v4, p1, Lcom/tencent/mm/protocal/b/adw;->jYj:Lcom/tencent/mm/protocal/b/ady;
 
-    iget v0, v0, Lcom/tencent/mm/protocal/b/adf;->jzZ:F
+    iget v4, v4, Lcom/tencent/mm/protocal/b/ady;->jYL:F
 
-    iget-object v1, p1, Lcom/tencent/mm/protocal/b/add;->jzw:Lcom/tencent/mm/protocal/b/adf;
+    :goto_2
+    cmpg-float v5, v0, v6
 
-    iget v1, v1, Lcom/tencent/mm/protocal/b/adf;->jzY:F
+    if-lez v5, :cond_5
+
+    cmpg-float v5, v4, v6
+
+    if-gtz v5, :cond_15
 
     :cond_5
-    const/4 v2, 0x0
+    iget-object v0, p1, Lcom/tencent/mm/protocal/b/adw;->jvB:Ljava/lang/String;
 
-    cmpg-float v2, v0, v2
+    const-string/jumbo v4, "Locall_path"
 
-    if-lez v2, :cond_6
-
-    const/4 v2, 0x0
-
-    cmpg-float v2, v1, v2
-
-    if-gtz v2, :cond_16
-
-    :cond_6
-    iget-object v0, p1, Lcom/tencent/mm/protocal/b/add;->iXW:Ljava/lang/String;
-
-    const-string/jumbo v1, "Locall_path"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {v0, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_6
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayV()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBw()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v4
 
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/add;->iXW:Ljava/lang/String;
+    iget-object v5, p1, Lcom/tencent/mm/protocal/b/adw;->jvB:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/plugin/sns/d/am;->bp(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v5}, Lcom/tencent/mm/plugin/sns/e/al;->bx(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-static {p1}, Lcom/tencent/mm/plugin/sns/data/h;->l(Lcom/tencent/mm/protocal/b/add;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/plugin/sns/data/i;->l(Lcom/tencent/mm/protocal/b/adw;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -607,98 +796,92 @@
 
     move-result-object v0
 
-    :goto_2
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/d;->CB(Ljava/lang/String;)Landroid/graphics/BitmapFactory$Options;
+    :goto_3
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/d;->EO(Ljava/lang/String;)Landroid/graphics/BitmapFactory$Options;
 
-    move-result-object v1
+    move-result-object v4
 
-    if-eqz v1, :cond_0
+    if-eqz v4, :cond_0
 
-    iget v0, v1, Landroid/graphics/BitmapFactory$Options;->outHeight:I
+    iget v0, v4, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
     int-to-float v0, v0
 
-    iget v1, v1, Landroid/graphics/BitmapFactory$Options;->outWidth:I
+    iget v4, v4, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    int-to-float v1, v1
+    int-to-float v4, v4
 
-    move v2, v1
+    move v5, v4
 
-    move v1, v0
+    move v4, v0
 
-    :goto_3
-    const/4 v0, 0x0
-
-    cmpg-float v0, v1, v0
+    :goto_4
+    cmpg-float v0, v4, v6
 
     if-lez v0, :cond_0
 
-    const/4 v0, 0x0
-
-    cmpg-float v0, v2, v0
+    cmpg-float v0, v5, v6
 
     if-lez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     check-cast v0, Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    iget-boolean v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hez:Z
+    iget-boolean v6, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htl:Z
 
-    if-eqz v3, :cond_8
+    if-eqz v6, :cond_7
 
-    float-to-double v2, v2
+    float-to-double v6, v5
 
-    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
+    const-wide/high16 v8, 0x3ff0000000000000L    # 1.0
 
-    mul-double/2addr v2, v4
+    mul-double/2addr v6, v8
 
-    const-wide/high16 v4, 0x4000000000000000L    # 2.0
+    const-wide/high16 v8, 0x4000000000000000L    # 2.0
 
-    float-to-double v6, v1
+    float-to-double v4, v4
 
-    mul-double/2addr v4, v6
+    mul-double/2addr v4, v8
 
-    cmpl-double v1, v2, v4
+    cmpl-double v4, v6, v4
 
-    if-lez v1, :cond_8
+    if-lez v4, :cond_7
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed"
+    const-string/jumbo v4, "MicroMsg.SnsInfoFlip"
 
-    const-string/jumbo v2, "set on fling true"
+    const-string/jumbo v5, "set on fling true"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwC:Z
+    iput-boolean v10, v0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lXo:Z
 
     goto/16 :goto_0
 
-    :cond_7
+    :cond_6
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayV()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBw()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v4
 
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/add;->iXW:Ljava/lang/String;
+    iget-object v5, p1, Lcom/tencent/mm/protocal/b/adw;->jvB:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/plugin/sns/d/am;->bp(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v5}, Lcom/tencent/mm/plugin/sns/e/al;->bx(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-static {p1}, Lcom/tencent/mm/plugin/sns/data/h;->b(Lcom/tencent/mm/protocal/b/add;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/plugin/sns/data/i;->b(Lcom/tencent/mm/protocal/b/adw;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -706,144 +889,138 @@
 
     move-result-object v0
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_8
-    const-string/jumbo v1, "!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed"
+    :cond_7
+    const-string/jumbo v4, "MicroMsg.SnsInfoFlip"
 
-    const-string/jumbo v2, "set on fling false"
+    const-string/jumbo v5, "set on fling false"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwC:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lXo:Z
 
     goto/16 :goto_0
 
-    .line 364
-    :cond_9
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heL:Ljava/util/HashMap;
+    .line 391
+    :cond_8
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htC:Ljava/util/HashMap;
 
     invoke-virtual {v0, p3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/plugin/sns/h/k;
+    check-cast v0, Lcom/tencent/mm/plugin/sns/i/k;
 
-    .line 365
-    if-nez v0, :cond_a
+    .line 392
+    if-nez v0, :cond_9
 
-    .line 366
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azi()Lcom/tencent/mm/plugin/sns/h/l;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p3}, Lcom/tencent/mm/plugin/sns/h/l;->vo(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/h/k;
+    .line 393
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBI()Lcom/tencent/mm/plugin/sns/i/l;
 
     move-result-object v0
 
-    .line 367
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heL:Ljava/util/HashMap;
+    invoke-virtual {v0, p3}, Lcom/tencent/mm/plugin/sns/i/l;->wA(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/i/k;
 
-    invoke-virtual {v1, p3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
-    :cond_a
-    move-object v4, v0
+    .line 394
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htC:Ljava/util/HashMap;
 
-    .line 370
-    if-eqz v4, :cond_3
+    invoke-virtual {v4, p3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 373
-    iget v0, p1, Lcom/tencent/mm/protocal/b/add;->dzC:I
+    :cond_9
+    move-object v6, v0
 
-    const/4 v1, 0x2
+    .line 397
+    if-eqz v6, :cond_3
 
-    if-ne v0, v1, :cond_10
+    .line 400
+    iget v0, p1, Lcom/tencent/mm/protocal/b/adw;->Type:I
 
-    .line 374
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    if-ne v0, v11, :cond_10
+
+    .line 401
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     instance-of v0, v0, Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_a
 
-    .line 375
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    .line 402
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     check-cast v0, Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    const/4 v1, 0x0
+    iput-boolean v1, v0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lXn:Z
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->setLoadQuit(Z)V
-
-    .line 377
-    :cond_b
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ZP()Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 404
+    :cond_a
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->acj()Lcom/tencent/mm/sdk/platformtools/ac;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$3;
+    new-instance v4, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$3;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$3;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)V
+    invoke-direct {v4, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$3;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v4}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
-    .line 395
-    :goto_4
-    const-string/jumbo v0, "!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed"
+    .line 422
+    :goto_5
+    const-string/jumbo v0, "MicroMsg.SnsInfoFlip"
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v2, "onItemSelected  "
+    const-string/jumbo v5, "onItemSelected  "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v4
 
-    const-string/jumbo v2, " localId "
+    const-string/jumbo v5, " localId "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v4
 
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v4
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v4
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 397
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heM:I
+    .line 424
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htD:I
 
     if-eq v0, p2, :cond_d
 
-    .line 398
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hes:Ljava/util/HashMap;
+    .line 425
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hte:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v4
 
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v4}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_12
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hes:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hte:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v4
 
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -853,69 +1030,69 @@
 
     move-result v0
 
-    .line 399
-    :goto_5
+    .line 426
+    :goto_6
     add-int/lit8 v0, v0, 0x1
 
-    .line 400
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hes:Ljava/util/HashMap;
+    .line 427
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hte:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v5
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v4, v5, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 401
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->het:Ljava/util/HashMap;
+    .line 428
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htf:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v4
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gq()J
 
-    move-result-wide v2
+    move-result-wide v8
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v2
+    move-result-object v5
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 402
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heM:I
+    .line 429
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htD:I
 
     if-ltz v0, :cond_c
 
-    .line 403
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->het:Ljava/util/HashMap;
+    .line 430
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htf:Ljava/util/HashMap;
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heM:I
+    iget v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htD:I
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v4
 
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v4}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_13
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->het:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htf:Ljava/util/HashMap;
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heM:I
+    iget v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htD:I
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v4
 
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -923,59 +1100,53 @@
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v0
+    move-result-wide v4
 
-    move-wide v2, v0
-
-    .line 404
-    :goto_6
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, v2, v0
+    .line 431
+    :goto_7
+    cmp-long v0, v4, v2
 
     if-lez v0, :cond_c
 
-    .line 405
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->het:Ljava/util/HashMap;
+    .line 432
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htf:Ljava/util/HashMap;
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heM:I
+    iget v8, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htD:I
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v8
 
-    const-wide/16 v6, 0x0
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result-object v9
 
-    move-result-object v6
+    invoke-virtual {v0, v8, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 433
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htg:Ljava/util/HashMap;
 
-    .line 406
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heu:Ljava/util/HashMap;
+    iget v8, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htD:I
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heM:I
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v8
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v8}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_14
+    if-eqz v0, :cond_b
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heu:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htg:Ljava/util/HashMap;
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heM:I
+    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htD:I
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -983,272 +1154,260 @@
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v0
-
-    .line 407
-    :goto_7
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->ao(J)J
-
     move-result-wide v2
 
-    .line 408
-    add-long/2addr v0, v2
+    .line 434
+    :cond_b
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/be;->av(J)J
 
-    .line 409
-    iget-object v6, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heu:Ljava/util/HashMap;
+    move-result-wide v4
 
-    iget v7, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heM:I
+    .line 435
+    add-long/2addr v2, v4
 
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 436
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htg:Ljava/util/HashMap;
 
-    move-result-object v7
+    iget v8, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htD:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
 
-    invoke-virtual {v6, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    .line 410
-    const-string/jumbo v6, "!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed"
+    move-result-object v9
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v8, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string/jumbo v8, "lastSelectPosition "
+    .line 437
+    const-string/jumbo v0, "MicroMsg.SnsInfoFlip"
 
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    iget v8, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heM:I
+    const-string/jumbo v9, "lastSelectPosition "
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v7
+    iget v9, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htD:I
 
-    const-string/jumbo v8, " curtime "
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v8
 
-    move-result-object v7
+    const-string/jumbo v9, " curtime "
 
-    invoke-virtual {v7, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v8
 
-    const-string/jumbo v1, " passtime "
+    invoke-virtual {v8, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    move-result-object v0
+    const-string/jumbo v3, " passtime "
 
-    long-to-double v1, v2
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-wide v7, 0x408f400000000000L    # 1000.0
+    move-result-object v2
 
-    div-double/2addr v1, v7
+    long-to-double v4, v4
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    const-wide v8, 0x408f400000000000L    # 1000.0
 
-    move-result-object v0
+    div-double/2addr v4, v8
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-static {v6, v0}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 413
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 440
     :cond_c
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hbM:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hqC:Z
 
     if-eqz v0, :cond_d
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     if-eqz v0, :cond_d
 
-    .line 414
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    .line 441
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heM:I
+    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htD:I
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->getItem(I)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->getItem(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/plugin/sns/f/b;
+    check-cast v0, Lcom/tencent/mm/plugin/sns/g/b;
 
-    .line 415
+    .line 442
     if-eqz v0, :cond_d
 
-    .line 416
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/f/b;->aHW:Lcom/tencent/mm/protocal/b/add;
+    .line 443
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/g/b;->aus:Lcom/tencent/mm/protocal/b/adw;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/add;->iXW:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/adw;->jvB:Ljava/lang/String;
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed"
+    const-string/jumbo v2, "MicroMsg.SnsInfoFlip"
 
-    const-string/jumbo v2, "recordMediaScollOver, bigPicId:%s"
+    const-string/jumbo v3, "recordMediaScollOver, bigPicId:%s"
 
-    const/4 v3, 0x1
+    new-array v4, v10, [Ljava/lang/Object;
 
-    new-array v3, v3, [Ljava/lang/Object;
+    aput-object v0, v4, v1
 
-    const/4 v6, 0x0
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    aput-object v0, v3, v6
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htH:Ljava/util/HashMap;
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-virtual {v2, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heQ:Ljava/util/HashMap;
+    move-result v2
 
-    invoke-virtual {v1, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+    if-eqz v2, :cond_d
 
-    move-result v1
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htH:Ljava/util/HashMap;
 
-    if-eqz v1, :cond_d
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heQ:Ljava/util/HashMap;
-
-    invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;
 
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->getReportNetworkType()I
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->aEX()I
 
-    move-result v1
+    move-result v2
 
-    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->networkType:I
+    iput v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->networkType:I
 
-    iget-wide v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heV:J
+    iget-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htM:J
 
-    const-wide/16 v6, -0x1
+    const-wide/16 v4, -0x1
 
-    cmp-long v1, v1, v6
+    cmp-long v2, v2, v4
 
-    if-eqz v1, :cond_15
+    if-eqz v2, :cond_14
 
-    const/4 v1, 0x1
+    iput v10, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htK:I
 
-    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heT:I
+    iget-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htM:J
 
-    iget-wide v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heV:J
+    iget-wide v4, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htL:J
 
-    iget-wide v6, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heU:J
+    sub-long/2addr v2, v4
 
-    sub-long/2addr v1, v6
+    iput-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gXT:J
 
-    iput-wide v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gPU:J
+    const-string/jumbo v2, "MicroMsg.SnsInfoFlip"
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed"
+    const-string/jumbo v3, "recordMediaScollOver, load success, costTime:%d"
 
-    const-string/jumbo v2, "recordMediaScollOver, load success, costTime:%d"
+    new-array v4, v10, [Ljava/lang/Object;
 
-    const/4 v3, 0x1
+    iget-wide v8, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gXT:J
 
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v6, 0x0
-
-    iget-wide v7, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gPU:J
-
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    aput-object v0, v3, v6
+    aput-object v0, v4, v1
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 422
+    .line 449
     :cond_d
     :goto_8
-    iput p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heM:I
+    iput p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htD:I
 
-    .line 424
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gXM:Lcom/tencent/mm/plugin/sns/ui/q;
+    .line 451
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hkY:Lcom/tencent/mm/plugin/sns/ui/s;
 
     if-eqz v0, :cond_e
 
-    .line 425
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gXM:Lcom/tencent/mm/plugin/sns/ui/q;
+    .line 452
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hkY:Lcom/tencent/mm/plugin/sns/ui/s;
 
-    invoke-interface {v0, p3}, Lcom/tencent/mm/plugin/sns/ui/q;->vN(Ljava/lang/String;)V
+    invoke-interface {v0, p3}, Lcom/tencent/mm/plugin/sns/ui/s;->xa(Ljava/lang/String;)V
 
-    .line 427
+    .line 454
     :cond_e
-    iget v0, v4, Lcom/tencent/mm/plugin/sns/h/k;->field_createTime:I
+    iget v0, v6, Lcom/tencent/mm/plugin/sns/i/k;->field_createTime:I
 
-    .line 428
-    invoke-virtual {v4}, Lcom/tencent/mm/plugin/sns/h/k;->azR()Lcom/tencent/mm/protocal/b/atp;
+    .line 455
+    invoke-virtual {v6}, Lcom/tencent/mm/plugin/sns/i/k;->aCD()Lcom/tencent/mm/protocal/b/auf;
 
     move-result-object v1
 
-    .line 430
+    .line 457
     iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->context:Landroid/content/Context;
 
-    int-to-long v3, v0
+    int-to-long v4, v0
 
-    const-wide/16 v6, 0x3e8
+    const-wide/16 v8, 0x3e8
 
-    mul-long/2addr v3, v6
+    mul-long/2addr v4, v8
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/plugin/sns/ui/ao;->i(Landroid/content/Context;J)Ljava/lang/String;
+    invoke-static {v2, v4, v5}, Lcom/tencent/mm/plugin/sns/ui/at;->i(Landroid/content/Context;J)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 431
+    .line 458
     const/4 v0, 0x0
 
-    .line 432
+    .line 459
     if-eqz v1, :cond_f
 
-    iget-object v3, v1, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    iget-object v3, v1, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
     if-eqz v3, :cond_f
 
-    iget-object v3, v1, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    iget-object v3, v1, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget-object v3, v3, Lcom/tencent/mm/protocal/b/iv;->jhw:Ljava/util/LinkedList;
+    iget-object v3, v3, Lcom/tencent/mm/protocal/b/je;->jFv:Ljava/util/LinkedList;
 
     invoke-virtual {v3}, Ljava/util/LinkedList;->size()I
 
     move-result v3
 
-    const/4 v4, 0x1
+    if-le v3, v10, :cond_f
 
-    if-le v3, v4, :cond_f
+    .line 460
+    iget-object v0, v1, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    .line 433
-    iget-object v0, v1, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
-
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/iv;->jhw:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/je;->jFv:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
     move-result v0
 
-    .line 434
+    .line 461
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v5, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->c(Ljava/lang/String;Lcom/tencent/mm/protocal/b/atp;)I
+    invoke-static {v7, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->c(Ljava/lang/String;Lcom/tencent/mm/protocal/b/auf;)I
 
-    move-result v1
+    move-result v4
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v3
 
-    const-string/jumbo v3, " / "
+    const-string/jumbo v4, " / "
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1256,136 +1415,134 @@
 
     move-result-object v0
 
-    .line 436
+    .line 462
+    invoke-static {v7, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->c(Ljava/lang/String;Lcom/tencent/mm/protocal/b/auf;)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htt:I
+
+    .line 464
     :cond_f
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gXN:Lcom/tencent/mm/plugin/sns/ui/o$a;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hkZ:Lcom/tencent/mm/plugin/sns/ui/q$a;
 
-    invoke-interface {v1, v2, v0}, Lcom/tencent/mm/plugin/sns/ui/o$a;->by(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v2, v0}, Lcom/tencent/mm/plugin/sns/ui/q$a;->bJ(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 437
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gXN:Lcom/tencent/mm/plugin/sns/ui/o$a;
+    .line 465
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hkZ:Lcom/tencent/mm/plugin/sns/ui/q$a;
 
-    invoke-interface {v0, p3, p2}, Lcom/tencent/mm/plugin/sns/ui/o$a;->ao(Ljava/lang/String;I)V
+    invoke-interface {v0, p3, p2}, Lcom/tencent/mm/plugin/sns/ui/q$a;->aq(Ljava/lang/String;I)V
 
     goto/16 :goto_1
 
-    .line 384
+    .line 411
     :cond_10
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     instance-of v0, v0, Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     if-eqz v0, :cond_11
 
-    .line 385
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    .line 412
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     check-cast v0, Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    const/4 v1, 0x1
+    iput-boolean v10, v0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lXn:Z
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->setLoadQuit(Z)V
-
-    .line 387
+    .line 414
     :cond_11
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ZP()Lcom/tencent/mm/sdk/platformtools/aa;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->acj()Lcom/tencent/mm/sdk/platformtools/ac;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$4;
+    new-instance v4, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$4;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$4;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)V
+    invoke-direct {v4, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$4;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
-
-    goto/16 :goto_4
-
-    .line 398
-    :cond_12
-    const/4 v0, 0x0
+    invoke-virtual {v0, v4}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
     goto/16 :goto_5
 
-    .line 403
-    :cond_13
-    const-wide/16 v0, 0x0
+    :cond_12
+    move v0, v1
 
-    move-wide v2, v0
-
+    .line 425
     goto/16 :goto_6
 
-    .line 406
-    :cond_14
-    const-wide/16 v0, 0x0
+    :cond_13
+    move-wide v4, v2
 
+    .line 430
     goto/16 :goto_7
 
-    .line 416
-    :cond_15
-    const/4 v1, 0x2
-
-    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heT:I
+    .line 443
+    :cond_14
+    iput v11, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htK:I
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heV:J
+    iput-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htM:J
 
-    iget-wide v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heV:J
+    iget-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htM:J
 
-    iget-wide v6, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heU:J
+    iget-wide v4, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htL:J
 
-    sub-long/2addr v1, v6
+    sub-long/2addr v2, v4
 
-    iput-wide v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gPU:J
+    iput-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gXT:J
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed"
+    const-string/jumbo v2, "MicroMsg.SnsInfoFlip"
 
-    const-string/jumbo v2, "recordMediaScollOver, load failed, costTime:%d"
+    const-string/jumbo v3, "recordMediaScollOver, load failed, costTime:%d"
 
-    const/4 v3, 0x1
+    new-array v4, v10, [Ljava/lang/Object;
 
-    new-array v3, v3, [Ljava/lang/Object;
+    iget-wide v8, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gXT:J
 
-    const/4 v6, 0x0
-
-    iget-wide v7, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gPU:J
-
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    aput-object v0, v3, v6
+    aput-object v0, v4, v1
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_8
 
+    :cond_15
+    move v5, v4
+
+    move v4, v0
+
+    goto/16 :goto_4
+
     :cond_16
-    move v2, v1
+    move v0, v6
 
-    move v1, v0
+    move v4, v6
 
-    goto/16 :goto_3
+    goto/16 :goto_2
 .end method
 
 .method static synthetic a(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Z
     .locals 1
 
     .prologue
-    .line 57
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hex:Z
+    .line 64
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htj:Z
 
     return v0
 .end method
 
-.method private aBS()V
+.method private aES()V
     .locals 5
 
     .prologue
-    .line 1060
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    .line 1160
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     invoke-virtual {v0}, Landroid/widget/Gallery;->getSelectedItem()Ljava/lang/Object;
 
@@ -1393,29 +1550,29 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     if-nez v0, :cond_1
 
-    .line 1073
+    .line 1173
     :cond_0
     :goto_0
     return-void
 
-    .line 1063
+    .line 1163
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     invoke-virtual {v0}, Landroid/widget/Gallery;->getSelectedItemPosition()I
 
     move-result v1
 
-    .line 1064
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hev:Z
+    .line 1164
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hth:Z
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->getCount()I
 
@@ -1425,60 +1582,60 @@
 
     if-le v0, v2, :cond_2
 
-    .line 1065
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heD:Lcom/tencent/mm/ui/base/MMPageControlView;
+    .line 1165
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htp:Lcom/tencent/mm/ui/base/MMPageControlView;
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/base/MMPageControlView;->setVisibility(I)V
 
-    .line 1066
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heD:Lcom/tencent/mm/ui/base/MMPageControlView;
+    .line 1166
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htp:Lcom/tencent/mm/ui/base/MMPageControlView;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/MMPageControlView;->setPage(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/MMPageControlView;->sE(I)V
 
-    .line 1068
+    .line 1168
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     invoke-virtual {v0}, Landroid/widget/Gallery;->getSelectedItem()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/plugin/sns/f/b;
+    check-cast v0, Lcom/tencent/mm/plugin/sns/g/b;
 
-    iget-object v2, v0, Lcom/tencent/mm/plugin/sns/f/b;->aHW:Lcom/tencent/mm/protocal/b/add;
+    iget-object v2, v0, Lcom/tencent/mm/plugin/sns/g/b;->aus:Lcom/tencent/mm/protocal/b/adw;
 
-    .line 1069
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heN:Ljava/util/HashSet;
+    .line 1169
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htE:Ljava/util/HashSet;
 
-    iget-object v3, v2, Lcom/tencent/mm/protocal/b/add;->iXW:Ljava/lang/String;
+    iget-object v3, v2, Lcom/tencent/mm/protocal/b/adw;->jvB:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1070
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    .line 1170
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     invoke-virtual {v0}, Landroid/widget/Gallery;->getSelectedItem()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/plugin/sns/f/b;
+    check-cast v0, Lcom/tencent/mm/plugin/sns/g/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/f/b;->gSz:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/g/b;->haC:Ljava/lang/String;
 
-    .line 1071
-    iget-object v3, v2, Lcom/tencent/mm/protocal/b/add;->iXW:Ljava/lang/String;
+    .line 1171
+    iget-object v3, v2, Lcom/tencent/mm/protocal/b/adw;->jvB:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heF:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htr:Ljava/lang/String;
 
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_3
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heF:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htr:Ljava/lang/String;
 
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1489,36 +1646,125 @@
     :cond_3
     const-string/jumbo v3, ""
 
-    iput-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heF:Ljava/lang/String;
+    iput-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htr:Ljava/lang/String;
 
-    .line 1072
+    .line 1172
     :cond_4
-    invoke-direct {p0, v2, v1, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->a(Lcom/tencent/mm/protocal/b/add;ILjava/lang/String;)V
+    invoke-direct {p0, v2, v1, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->a(Lcom/tencent/mm/protocal/b/adw;ILjava/lang/String;)V
 
     goto :goto_0
+.end method
+
+.method private static aEX()I
+    .locals 2
+
+    .prologue
+    .line 1442
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    .line 1443
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ak;->dy(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 1444
+    const/4 v0, 0x1
+
+    .line 1452
+    :goto_0
+    return v0
+
+    .line 1445
+    :cond_0
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ak;->dB(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 1446
+    const/4 v0, 0x2
+
+    goto :goto_0
+
+    .line 1447
+    :cond_1
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ak;->dz(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 1448
+    const/4 v0, 0x3
+
+    goto :goto_0
+
+    .line 1449
+    :cond_2
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ak;->dC(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 1450
+    const/4 v0, 0x4
+
+    goto :goto_0
+
+    .line 1452
+    :cond_3
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method static synthetic aEZ()I
+    .locals 1
+
+    .prologue
+    .line 64
+    sget v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->bqm:I
+
+    return v0
+.end method
+
+.method static synthetic b(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;I)I
+    .locals 0
+
+    .prologue
+    .line 64
+    iput p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htz:I
+
+    return p1
 .end method
 
 .method static synthetic b(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Z
     .locals 1
 
     .prologue
-    .line 57
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hey:Z
+    .line 64
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htk:Z
 
     return v0
 .end method
 
-.method private static c(Ljava/lang/String;Lcom/tencent/mm/protocal/b/atp;)I
+.method private static c(Ljava/lang/String;Lcom/tencent/mm/protocal/b/auf;)I
     .locals 4
 
     .prologue
     const/4 v2, 0x0
 
-    .line 301
-    .line 302
-    iget-object v0, p1, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    .line 327
+    .line 328
+    iget-object v0, p1, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/iv;->jhw:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/je;->jFv:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
@@ -1537,13 +1783,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/add;
+    check-cast v0, Lcom/tencent/mm/protocal/b/adw;
 
-    .line 303
+    .line 329
     add-int/lit8 v1, v1, 0x1
 
-    .line 304
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/add;->iXW:Ljava/lang/String;
+    .line 330
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/adw;->jvB:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1551,7 +1797,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 308
+    .line 334
     :goto_0
     return v1
 
@@ -1561,12 +1807,12 @@
     goto :goto_0
 .end method
 
-.method static synthetic c(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Lcom/tencent/mm/sdk/platformtools/aa;
+.method static synthetic c(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Lcom/tencent/mm/sdk/platformtools/ac;
     .locals 1
 
     .prologue
-    .line 57
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 64
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
     return-object v0
 .end method
@@ -1575,8 +1821,8 @@
     .locals 1
 
     .prologue
-    .line 57
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    .line 64
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     return-object v0
 .end method
@@ -1585,8 +1831,8 @@
     .locals 1
 
     .prologue
-    .line 57
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hev:Z
+    .line 64
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hth:Z
 
     return v0
 .end method
@@ -1595,8 +1841,8 @@
     .locals 1
 
     .prologue
-    .line 57
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heD:Lcom/tencent/mm/ui/base/MMPageControlView;
+    .line 64
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htp:Lcom/tencent/mm/ui/base/MMPageControlView;
 
     return-object v0
 .end method
@@ -1605,97 +1851,28 @@
     .locals 1
 
     .prologue
-    .line 57
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->her:Z
+    .line 64
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htd:Z
 
     return v0
-.end method
-
-.method private getReportNetworkType()I
-    .locals 2
-
-    .prologue
-    .line 1329
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    .line 1330
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ah;->dx(Landroid/content/Context;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 1331
-    const/4 v0, 0x1
-
-    .line 1339
-    :goto_0
-    return v0
-
-    .line 1332
-    :cond_0
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ah;->dA(Landroid/content/Context;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 1333
-    const/4 v0, 0x2
-
-    goto :goto_0
-
-    .line 1334
-    :cond_1
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ah;->dy(Landroid/content/Context;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 1335
-    const/4 v0, 0x3
-
-    goto :goto_0
-
-    .line 1336
-    :cond_2
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ah;->dB(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 1337
-    const/4 v0, 0x4
-
-    goto :goto_0
-
-    .line 1339
-    :cond_3
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 .method static synthetic h(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Ljava/util/List;
     .locals 1
 
     .prologue
-    .line 57
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->cqJ:Ljava/util/List;
+    .line 64
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->clW:Ljava/util/List;
 
     return-object v0
 .end method
 
-.method static synthetic i(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Lcom/tencent/mm/storage/i$a;
+.method static synthetic i(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Lcom/tencent/mm/storage/z;
     .locals 1
 
     .prologue
-    .line 57
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gHB:Lcom/tencent/mm/storage/i$a;
+    .line 64
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gOG:Lcom/tencent/mm/storage/z;
 
     return-object v0
 .end method
@@ -1704,62 +1881,62 @@
     .locals 5
 
     .prologue
-    const v4, 0x7f070dd5
+    const v4, 0x7f101039
 
-    const v3, 0x7f070dd4
+    const v3, 0x7f101038
 
     const/4 v2, 0x0
 
-    .line 157
+    .line 181
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heI:J
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htv:J
 
-    .line 158
+    .line 182
     iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->context:Landroid/content/Context;
 
-    .line 159
-    const v0, 0x7f0a0453
+    .line 183
+    const v0, 0x7f030574
 
     invoke-static {p1, v0, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
-    .line 160
-    invoke-static {}, Lcom/tencent/mm/ui/base/f;->aDK()Z
+    .line 184
+    invoke-static {}, Lcom/tencent/mm/ui/base/f;->aHm()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 161
+    .line 185
     invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 162
+    .line 186
     invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/Gallery;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
-    .line 168
+    .line 192
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     instance-of v0, v0, Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     if-eqz v0, :cond_0
 
-    .line 169
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    .line 193
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     check-cast v0, Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
@@ -1767,10 +1944,10 @@
 
     invoke-direct {v1, p0, p1}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;Landroid/content/Context;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->setSingleClickOverListener(Lcom/tencent/mm/ui/tools/MMGestureGallery$e;)V
+    iput-object v1, v0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lXk:Lcom/tencent/mm/ui/tools/MMGestureGallery$e;
 
-    .line 199
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    .line 223
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     check-cast v0, Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
@@ -1778,11 +1955,11 @@
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$2;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->setScrollLeftRightListener(Lcom/tencent/mm/ui/tools/MMGestureGallery$d;)V
+    iput-object v1, v0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lXm:Lcom/tencent/mm/ui/tools/MMGestureGallery$d;
 
-    .line 211
+    .line 235
     :cond_0
-    const v0, 0x7f070dd6
+    const v0, 0x7f10103a
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->findViewById(I)Landroid/view/View;
 
@@ -1790,19 +1967,26 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/MMPageControlView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heD:Lcom/tencent/mm/ui/base/MMPageControlView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htp:Lcom/tencent/mm/ui/base/MMPageControlView;
 
-    .line 212
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heD:Lcom/tencent/mm/ui/base/MMPageControlView;
+    .line 236
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htp:Lcom/tencent/mm/ui/base/MMPageControlView;
 
-    const v1, 0x7f0a0446
+    const v1, 0x7f0305b8
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/MMPageControlView;->setIndicatorLayoutRes(I)V
+    iput v1, v0, Lcom/tencent/mm/ui/base/MMPageControlView;->leC:I
 
-    .line 213
+    .line 238
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htx:Ljava/util/Map;
+
+    .line 239
     return-void
 
-    .line 164
+    .line 188
     :cond_1
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1810,14 +1994,14 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 165
+    .line 189
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/Gallery;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     goto :goto_0
 .end method
@@ -1826,8 +2010,8 @@
     .locals 1
 
     .prologue
-    .line 57
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hbM:Z
+    .line 64
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hqC:Z
 
     return v0
 .end method
@@ -1836,8 +2020,8 @@
     .locals 1
 
     .prologue
-    .line 57
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heF:Ljava/lang/String;
+    .line 64
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htr:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -1846,8 +2030,8 @@
     .locals 1
 
     .prologue
-    .line 57
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    .line 64
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     return-object v0
 .end method
@@ -1856,8 +2040,8 @@
     .locals 1
 
     .prologue
-    .line 57
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heM:I
+    .line 64
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htD:I
 
     return v0
 .end method
@@ -1866,18 +2050,38 @@
     .locals 1
 
     .prologue
-    .line 57
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heJ:Ljava/util/HashSet;
+    .line 64
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htw:Ljava/util/HashSet;
 
     return-object v0
+.end method
+
+.method static synthetic nr(I)I
+    .locals 0
+
+    .prologue
+    .line 64
+    sput p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->bqn:I
+
+    return p0
+.end method
+
+.method static synthetic ns(I)I
+    .locals 0
+
+    .prologue
+    .line 64
+    sput p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->bqm:I
+
+    return p0
 .end method
 
 .method static synthetic o(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)I
     .locals 1
 
     .prologue
-    .line 57
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heG:I
+    .line 64
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hts:I
 
     return v0
 .end method
@@ -1886,8 +2090,8 @@
     .locals 1
 
     .prologue
-    .line 57
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heH:Z
+    .line 64
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htA:Z
 
     return v0
 .end method
@@ -1896,52 +2100,104 @@
     .locals 1
 
     .prologue
-    .line 57
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hez:Z
+    .line 64
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htu:Z
 
     return v0
 .end method
 
-.method static synthetic r(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Ljava/lang/Runnable;
+.method static synthetic r(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Z
     .locals 1
 
     .prologue
-    .line 57
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heE:Ljava/lang/Runnable;
+    .line 64
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htl:Z
+
+    return v0
+.end method
+
+.method static synthetic s(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Ljava/util/Map;
+    .locals 1
+
+    .prologue
+    .line 64
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htx:Ljava/util/Map;
+
+    return-object v0
+.end method
+
+.method static synthetic t(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)I
+    .locals 1
+
+    .prologue
+    .line 64
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htz:I
+
+    return v0
+.end method
+
+.method static synthetic u(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)I
+    .locals 1
+
+    .prologue
+    .line 64
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hty:I
+
+    return v0
+.end method
+
+.method static synthetic v(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Lcom/tencent/mm/ui/tools/h;
+    .locals 1
+
+    .prologue
+    .line 64
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hqH:Lcom/tencent/mm/ui/tools/h;
+
+    return-object v0
+.end method
+
+.method static synthetic w(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Ljava/lang/Runnable;
+    .locals 1
+
+    .prologue
+    .line 64
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htq:Ljava/lang/Runnable;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final R(Ljava/lang/String;Z)V
+.method public final X(Ljava/lang/String;Z)V
     .locals 5
 
     .prologue
+    const/4 v4, 0x1
+
     const/4 v3, 0x0
 
-    .line 1226
+    .line 1338
     if-nez p2, :cond_0
 
-    .line 1227
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    .line 1339
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     invoke-virtual {v0}, Landroid/widget/Gallery;->getSelectedItem()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/plugin/sns/f/b;
+    check-cast v0, Lcom/tencent/mm/plugin/sns/g/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/f/b;->aHW:Lcom/tencent/mm/protocal/b/add;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/g/b;->aus:Lcom/tencent/mm/protocal/b/adw;
 
-    .line 1228
+    .line 1340
     if-eqz v0, :cond_0
 
-    iget-object v1, v0, Lcom/tencent/mm/protocal/b/add;->iXW:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/protocal/b/adw;->jvB:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/add;->iXW:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/adw;->jvB:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1949,12 +2205,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1229
+    .line 1341
     iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->context:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->context:Landroid/content/Context;
 
-    const v2, 0x7f0b163c
+    const v2, 0x7f081252
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1966,24 +2222,24 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 1230
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heF:Ljava/lang/String;
+    .line 1342
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htr:Ljava/lang/String;
 
-    .line 1233
+    .line 1345
     :cond_0
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heP:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htG:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heP:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htG:I
 
-    .line 1234
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hbM:Z
+    .line 1346
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hqC:Z
 
     if-eqz v0, :cond_1
 
-    .line 1235
-    const-string/jumbo v0, "!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed"
+    .line 1347
+    const-string/jumbo v0, "MicroMsg.SnsInfoFlip"
 
     const-string/jumbo v1, "recordLoadEnd, bigPicId:%s, suceess:%b"
 
@@ -1993,19 +2249,17 @@
 
     aput-object p1, v2, v3
 
-    const/4 v3, 0x1
-
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v4
+    move-result-object v3
 
-    aput-object v4, v2, v3
+    aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     if-eqz p2, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heQ:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htH:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -2013,7 +2267,7 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heQ:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htH:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2023,44 +2277,52 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heV:J
+    iput-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htM:J
 
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->getReportNetworkType()I
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->aEX()I
 
     move-result v1
 
     iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->networkType:I
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed"
+    const-string/jumbo v0, "MicroMsg.SnsInfoFlip"
 
     const-string/jumbo v1, "recordLoadEnd, update map"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1237
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htx:Ljava/util/Map;
+
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 1349
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     if-eqz v0, :cond_2
 
-    .line 1238
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    .line 1350
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->notifyDataSetChanged()V
 
-    .line 1240
+    .line 1352
     :cond_2
     return-void
 .end method
 
-.method public final S(Ljava/lang/String;Z)V
+.method public final Y(Ljava/lang/String;Z)V
     .locals 3
 
     .prologue
-    .line 1243
-    const-string/jumbo v0, "!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed"
+    .line 1355
+    const-string/jumbo v0, "MicroMsg.SnsInfoFlip"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2086,30 +2348,30 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1244
+    .line 1356
     if-nez p2, :cond_0
 
-    .line 1245
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    .line 1357
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     invoke-virtual {v0}, Landroid/widget/Gallery;->getSelectedItem()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/plugin/sns/f/b;
+    check-cast v0, Lcom/tencent/mm/plugin/sns/g/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/f/b;->aHW:Lcom/tencent/mm/protocal/b/add;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/g/b;->aus:Lcom/tencent/mm/protocal/b/adw;
 
-    .line 1246
+    .line 1358
     if-eqz v0, :cond_0
 
-    iget-object v1, v0, Lcom/tencent/mm/protocal/b/add;->iXW:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/protocal/b/adw;->jvB:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/add;->iXW:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/adw;->jvB:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2117,12 +2379,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1247
+    .line 1359
     iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->context:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->context:Landroid/content/Context;
 
-    const v2, 0x7f0b163d
+    const v2, 0x7f081253
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2136,45 +2398,59 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 1248
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heF:Ljava/lang/String;
+    .line 1360
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htr:Ljava/lang/String;
 
-    .line 1251
+    .line 1363
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     if-eqz v0, :cond_1
 
-    .line 1252
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    .line 1364
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->notifyDataSetChanged()V
 
-    .line 1254
+    .line 1366
     :cond_1
     return-void
 .end method
 
-.method public final a(Ljava/util/List;Ljava/lang/String;ILcom/tencent/mm/plugin/sns/ui/q;Lcom/tencent/mm/plugin/sns/ui/o$a;)V
+.method public final a(Ljava/util/List;Ljava/lang/String;ILcom/tencent/mm/plugin/sns/ui/s;Lcom/tencent/mm/plugin/sns/ui/q$a;)V
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/plugin/sns/g/b;",
+            ">;",
+            "Ljava/lang/String;",
+            "I",
+            "Lcom/tencent/mm/plugin/sns/ui/s;",
+            "Lcom/tencent/mm/plugin/sns/ui/q$a;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 512
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->aze()Lcom/tencent/mm/plugin/sns/d/b;
+    .line 540
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBE()Lcom/tencent/mm/plugin/sns/e/b;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sns/d/b;->a(Lcom/tencent/mm/plugin/sns/d/b$b;)V
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sns/e/b;->a(Lcom/tencent/mm/plugin/sns/e/b$b;)V
 
-    .line 513
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->cqJ:Ljava/util/List;
+    .line 541
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->clW:Ljava/util/List;
 
-    .line 514
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->cqJ:Ljava/util/List;
+    .line 542
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->clW:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -2185,37 +2461,37 @@
     move v0, v1
 
     :goto_0
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heH:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htu:Z
 
-    .line 515
-    invoke-static {p2}, Lcom/tencent/mm/plugin/sns/d/ai;->uI(Ljava/lang/String;)Z
+    .line 543
+    invoke-static {p2}, Lcom/tencent/mm/plugin/sns/e/ah;->vO(Ljava/lang/String;)Z
 
-    .line 516
-    iput-object p4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gXM:Lcom/tencent/mm/plugin/sns/ui/q;
+    .line 544
+    iput-object p4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hkY:Lcom/tencent/mm/plugin/sns/ui/s;
 
-    .line 517
-    iput-object p5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gXN:Lcom/tencent/mm/plugin/sns/ui/o$a;
+    .line 545
+    iput-object p5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hkZ:Lcom/tencent/mm/plugin/sns/ui/q$a;
 
-    .line 518
+    .line 546
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->context:Landroid/content/Context;
 
     invoke-direct {v0, p0, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
-    .line 519
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    .line 547
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     invoke-virtual {v0, v3}, Landroid/widget/Gallery;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
-    .line 521
+    .line 549
     if-ltz p3, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->cqJ:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->clW:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -2223,40 +2499,40 @@
 
     if-ge p3, v0, :cond_0
 
-    .line 522
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    .line 550
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     invoke-virtual {v0, p3}, Landroid/widget/Gallery;->setSelection(I)V
 
-    .line 523
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heB:Z
+    .line 551
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htn:Z
 
     if-eqz v0, :cond_0
 
-    .line 524
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heB:Z
+    .line 552
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htn:Z
 
-    .line 525
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->cqJ:Ljava/util/List;
+    .line 553
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->clW:Ljava/util/List;
 
     invoke-interface {v0, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/plugin/sns/f/b;
+    check-cast v0, Lcom/tencent/mm/plugin/sns/g/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/f/b;->aHW:Lcom/tencent/mm/protocal/b/add;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/g/b;->aus:Lcom/tencent/mm/protocal/b/adw;
 
-    .line 526
+    .line 554
     if-eqz v0, :cond_4
 
-    iget-object v3, v0, Lcom/tencent/mm/protocal/b/add;->jzw:Lcom/tencent/mm/protocal/b/adf;
+    iget-object v3, v0, Lcom/tencent/mm/protocal/b/adw;->jYj:Lcom/tencent/mm/protocal/b/ady;
 
     if-eqz v3, :cond_4
 
-    iget-object v3, v0, Lcom/tencent/mm/protocal/b/add;->jzw:Lcom/tencent/mm/protocal/b/adf;
+    iget-object v3, v0, Lcom/tencent/mm/protocal/b/adw;->jYj:Lcom/tencent/mm/protocal/b/ady;
 
-    iget v3, v3, Lcom/tencent/mm/protocal/b/adf;->jzZ:F
+    iget v3, v3, Lcom/tencent/mm/protocal/b/ady;->jYM:F
 
     const/4 v4, 0x0
 
@@ -2264,28 +2540,28 @@
 
     if-lez v3, :cond_4
 
-    .line 530
-    iget-object v3, v0, Lcom/tencent/mm/protocal/b/add;->jzw:Lcom/tencent/mm/protocal/b/adf;
+    .line 558
+    iget-object v3, v0, Lcom/tencent/mm/protocal/b/adw;->jYj:Lcom/tencent/mm/protocal/b/ady;
 
-    iget v3, v3, Lcom/tencent/mm/protocal/b/adf;->jzY:F
+    iget v3, v3, Lcom/tencent/mm/protocal/b/ady;->jYL:F
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/add;->jzw:Lcom/tencent/mm/protocal/b/adf;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/adw;->jYj:Lcom/tencent/mm/protocal/b/ady;
 
-    iget v0, v0, Lcom/tencent/mm/protocal/b/adf;->jzZ:F
+    iget v0, v0, Lcom/tencent/mm/protocal/b/ady;->jYM:F
 
     div-float v0, v3, v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heC:F
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hto:F
 
-    .line 537
+    .line 565
     :cond_0
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     invoke-virtual {v0, v2}, Landroid/widget/Gallery;->setFadingEdgeLength(I)V
 
-    .line 539
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    .line 567
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     new-instance v3, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$5;
 
@@ -2293,13 +2569,13 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/Gallery;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
-    .line 563
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->her:Z
+    .line 591
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htd:Z
 
     if-eqz v0, :cond_1
 
-    .line 564
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    .line 592
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     new-instance v3, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$6;
 
@@ -2307,13 +2583,13 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/Gallery;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
 
-    .line 583
+    .line 611
     :cond_1
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hev:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hth:Z
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->getCount()I
 
@@ -2321,131 +2597,284 @@
 
     if-le v0, v1, :cond_2
 
-    .line 584
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heD:Lcom/tencent/mm/ui/base/MMPageControlView;
+    .line 612
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htp:Lcom/tencent/mm/ui/base/MMPageControlView;
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/base/MMPageControlView;->setVisibility(I)V
 
-    .line 585
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heD:Lcom/tencent/mm/ui/base/MMPageControlView;
+    .line 613
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htp:Lcom/tencent/mm/ui/base/MMPageControlView;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->getCount()I
 
     move-result v1
 
-    invoke-virtual {v0, v1, p3}, Lcom/tencent/mm/ui/base/MMPageControlView;->bM(II)V
+    invoke-virtual {v0, v1, p3}, Lcom/tencent/mm/ui/base/MMPageControlView;->bS(II)V
 
-    .line 588
+    .line 616
     :cond_2
     return-void
 
     :cond_3
     move v0, v2
 
-    .line 514
+    .line 542
     goto/16 :goto_0
 
-    .line 532
+    .line 560
     :cond_4
     const/high16 v0, 0x3f800000    # 1.0f
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heC:F
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hto:F
 
     goto :goto_1
 .end method
 
-.method public final aBT()V
-    .locals 2
+.method public final aDR()J
+    .locals 4
 
     .prologue
-    .line 1077
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    const-wide/16 v2, 0x0
 
-    if-eqz v0, :cond_0
+    .line 1142
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
-    .line 1078
-    const-string/jumbo v0, "!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed"
-
-    const-string/jumbo v1, "onRefresh "
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1079
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->notifyDataSetChanged()V
-
-    .line 1081
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->aBS()V
-
-    .line 1083
-    :cond_0
-    return-void
-.end method
-
-.method public final aBU()V
-    .locals 2
-
-    .prologue
-    .line 1117
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->aze()Lcom/tencent/mm/plugin/sns/d/b;
+    invoke-virtual {v0}, Landroid/widget/Gallery;->getSelectedItem()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sns/d/b;->b(Lcom/tencent/mm/plugin/sns/d/b$b;)V
+    check-cast v0, Lcom/tencent/mm/plugin/sns/g/b;
 
-    .line 1120
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    .line 1144
+    if-nez v0, :cond_0
 
-    const/4 v1, 0x1
+    const-string/jumbo v0, ""
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->fd(Z)V
+    .line 1146
+    :goto_0
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
-    .line 1121
-    return-void
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    .line 1147
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBI()Lcom/tencent/mm/plugin/sns/i/l;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sns/i/l;->wA(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/i/k;
+
+    move-result-object v0
+
+    .line 1148
+    if-nez v0, :cond_1
+
+    move-wide v0, v2
+
+    .line 1151
+    :goto_1
+    return-wide v0
+
+    .line 1144
+    :cond_0
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/g/b;->haC:Ljava/lang/String;
+
+    goto :goto_0
+
+    .line 1148
+    :cond_1
+    iget-wide v0, v0, Lcom/tencent/mm/plugin/sns/i/k;->field_snsId:J
+
+    goto :goto_1
+
+    :cond_2
+    move-wide v0, v2
+
+    .line 1151
+    goto :goto_1
 .end method
 
-.method public final aBV()I
+.method public final aDS()Z
+    .locals 1
+
+    .prologue
+    .line 177
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hqC:Z
+
+    return v0
+.end method
+
+.method public final aDT()Lcom/tencent/mm/protocal/b/adw;
     .locals 2
 
     .prologue
-    .line 1147
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    .line 1298
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 1148
-    const/4 v0, -0x1
-
-    .line 1156
-    :goto_0
-    return v0
-
-    .line 1150
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    .line 1299
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     invoke-virtual {v0}, Landroid/widget/Gallery;->getSelectedItemPosition()I
 
     move-result v0
 
-    .line 1151
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->cqJ:Ljava/util/List;
+    .line 1300
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->clW:Ljava/util/List;
 
-    invoke-interface {v1, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+    if-eqz v1, :cond_0
 
-    .line 1152
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->clW:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_0
+
+    .line 1301
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->clW:Ljava/util/List;
+
+    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/plugin/sns/g/b;
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/g/b;->aus:Lcom/tencent/mm/protocal/b/adw;
+
+    .line 1304
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final aER()Lcom/tencent/mm/plugin/sns/g/b;
+    .locals 1
+
+    .prologue
+    .line 298
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
+
+    if-nez v0, :cond_0
+
+    .line 299
+    const/4 v0, 0x0
+
+    .line 301
+    :goto_0
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
+
+    invoke-virtual {v0}, Landroid/widget/Gallery;->getSelectedItem()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/plugin/sns/g/b;
+
+    goto :goto_0
+.end method
+
+.method public final aET()V
+    .locals 2
+
+    .prologue
+    .line 1177
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+
+    if-eqz v0, :cond_0
+
+    .line 1178
+    const-string/jumbo v0, "MicroMsg.SnsInfoFlip"
+
+    const-string/jumbo v1, "onRefresh "
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1179
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->notifyDataSetChanged()V
 
-    .line 1155
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->aBS()V
+    .line 1181
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->aES()V
 
-    .line 1156
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    .line 1183
+    :cond_0
+    return-void
+.end method
+
+.method public final aEU()V
+    .locals 2
+
+    .prologue
+    .line 1229
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBE()Lcom/tencent/mm/plugin/sns/e/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sns/e/b;->b(Lcom/tencent/mm/plugin/sns/e/b$b;)V
+
+    .line 1232
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->fm(Z)V
+
+    .line 1233
+    return-void
+.end method
+
+.method public final aEV()I
+    .locals 2
+
+    .prologue
+    .line 1259
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
+
+    if-nez v0, :cond_0
+
+    .line 1260
+    const/4 v0, -0x1
+
+    .line 1268
+    :goto_0
+    return v0
+
+    .line 1262
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
+
+    invoke-virtual {v0}, Landroid/widget/Gallery;->getSelectedItemPosition()I
+
+    move-result v0
+
+    .line 1263
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->clW:Ljava/util/List;
+
+    invoke-interface {v1, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+
+    .line 1264
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->notifyDataSetChanged()V
+
+    .line 1267
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->aES()V
+
+    .line 1268
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->getCount()I
 
@@ -2454,22 +2883,91 @@
     goto :goto_0
 .end method
 
-.method public final aBW()V
-    .locals 12
+.method public final aEW()I
+    .locals 4
 
     .prologue
-    const/4 v11, 0x4
+    const/4 v0, 0x0
 
-    const/4 v10, 0x3
+    .line 1321
+    .line 1322
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->clW:Ljava/util/List;
 
-    const/4 v9, 0x0
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    const/4 v8, 0x2
+    move-result-object v3
 
-    const/4 v7, 0x1
+    move v1, v0
 
-    .line 1343
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heQ:Ljava/util/HashMap;
+    move v2, v0
+
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/plugin/sns/g/b;
+
+    .line 1323
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/g/b;->aus:Lcom/tencent/mm/protocal/b/adw;
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/e/g;->D(Lcom/tencent/mm/protocal/b/adw;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 1324
+    invoke-static {v0}, Lcom/tencent/mm/modelsfs/FileOp;->aB(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 1325
+    add-int/lit8 v2, v2, 0x1
+
+    .line 1327
+    :cond_0
+    add-int/lit8 v0, v1, 0x1
+
+    .line 1328
+    const/16 v1, 0x9
+
+    if-le v0, v1, :cond_2
+
+    .line 1329
+    :cond_1
+    return v2
+
+    :cond_2
+    move v1, v0
+
+    goto :goto_0
+.end method
+
+.method public final aEY()V
+    .locals 13
+
+    .prologue
+    const/4 v12, 0x4
+
+    const/4 v11, 0x3
+
+    const/4 v10, 0x0
+
+    const/4 v9, 0x2
+
+    const/4 v8, 0x1
+
+    .line 1456
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htH:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
@@ -2493,45 +2991,21 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;
 
-    .line 1344
-    iget v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heT:I
+    .line 1457
+    iget v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htK:I
 
     const/4 v3, -0x1
 
     if-eq v2, v3, :cond_1
 
-    .line 1345
-    sget-object v2, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 1458
+    sget-object v2, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v3, 0x2d51
 
-    new-array v4, v11, [Ljava/lang/Object;
+    new-array v4, v12, [Ljava/lang/Object;
 
-    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gPV:I
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v4, v9
-
-    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heT:I
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v4, v7
-
-    iget-wide v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gPU:J
-
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v5
-
-    aput-object v5, v4, v8
-
-    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->networkType:I
+    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gXU:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2539,38 +3013,62 @@
 
     aput-object v5, v4, v10
 
-    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
-
-    .line 1347
-    const-string/jumbo v2, "!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed"
-
-    const-string/jumbo v3, "report big pic load, picNum:%d, loadResult:%d, loadCostTime:%d, networkType:%d"
-
-    new-array v4, v11, [Ljava/lang/Object;
-
-    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gPV:I
+    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htK:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v4, v8
+
+    iget-wide v6, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gXT:J
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
 
     aput-object v5, v4, v9
 
-    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heT:I
+    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->networkType:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    aput-object v5, v4, v7
+    aput-object v5, v4, v11
 
-    iget-wide v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gPU:J
+    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    .line 1460
+    const-string/jumbo v2, "MicroMsg.SnsInfoFlip"
+
+    const-string/jumbo v3, "report big pic load, picNum:%d, loadResult:%d, loadCostTime:%d, networkType:%d"
+
+    new-array v4, v12, [Ljava/lang/Object;
+
+    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gXU:I
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v4, v10
+
+    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htK:I
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
     aput-object v5, v4, v8
+
+    iget-wide v6, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gXT:J
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    aput-object v5, v4, v9
 
     iget v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->networkType:I
 
@@ -2578,15 +3076,15 @@
 
     move-result-object v0
 
-    aput-object v0, v4, v10
+    aput-object v0, v4, v11
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 1350
+    .line 1463
     :cond_1
-    iget-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heU:J
+    iget-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htL:J
 
     const-wide/16 v4, -0x1
 
@@ -2594,8 +3092,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 1351
-    iget-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heV:J
+    .line 1464
+    iget-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htM:J
 
     const-wide/16 v4, -0x1
 
@@ -2603,51 +3101,27 @@
 
     if-eqz v2, :cond_2
 
-    .line 1352
-    iput v7, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heT:I
+    .line 1465
+    iput v8, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htK:I
 
-    .line 1357
+    .line 1470
     :goto_1
-    iget-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heV:J
+    iget-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htM:J
 
-    iget-wide v4, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heU:J
+    iget-wide v4, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htL:J
 
     sub-long/2addr v2, v4
 
-    iput-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gPU:J
+    iput-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gXT:J
 
-    .line 1358
-    sget-object v2, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 1471
+    sget-object v2, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v3, 0x2d51
 
-    new-array v4, v11, [Ljava/lang/Object;
+    new-array v4, v12, [Ljava/lang/Object;
 
-    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gPV:I
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v4, v9
-
-    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heT:I
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v4, v7
-
-    iget-wide v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gPU:J
-
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v5
-
-    aput-object v5, v4, v8
-
-    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->networkType:I
+    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gXU:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2655,38 +3129,62 @@
 
     aput-object v5, v4, v10
 
-    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
-
-    .line 1360
-    const-string/jumbo v2, "!32@/B4Tb64lLpKmGiGWu3jIxWc0TZIDNjed"
-
-    const-string/jumbo v3, "report big pic load, picNum:%d, loadResult:%d, loadCostTime:%d, networkType:%d"
-
-    new-array v4, v11, [Ljava/lang/Object;
-
-    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gPV:I
+    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htK:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v4, v8
+
+    iget-wide v6, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gXT:J
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
 
     aput-object v5, v4, v9
 
-    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heT:I
+    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->networkType:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    aput-object v5, v4, v7
+    aput-object v5, v4, v11
 
-    iget-wide v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gPU:J
+    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    .line 1473
+    const-string/jumbo v2, "MicroMsg.SnsInfoFlip"
+
+    const-string/jumbo v3, "report big pic load, picNum:%d, loadResult:%d, loadCostTime:%d, networkType:%d"
+
+    new-array v4, v12, [Ljava/lang/Object;
+
+    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gXU:I
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v4, v10
+
+    iget v5, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htK:I
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
     aput-object v5, v4, v8
+
+    iget-wide v6, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gXT:J
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    aput-object v5, v4, v9
 
     iget v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->networkType:I
 
@@ -2694,102 +3192,52 @@
 
     move-result-object v0
 
-    aput-object v0, v4, v10
+    aput-object v0, v4, v11
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
-    .line 1354
+    .line 1467
     :cond_2
-    iput v8, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heT:I
+    iput v9, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htK:I
 
-    .line 1355
+    .line 1468
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    iput-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heV:J
+    iput-wide v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htM:J
 
     goto :goto_1
 
-    .line 1366
+    .line 1479
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heQ:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htH:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 1367
+    .line 1480
     return-void
 .end method
 
-.method public getCntMedia()Lcom/tencent/mm/protocal/b/add;
-    .locals 2
-
-    .prologue
-    .line 1186
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
-
-    if-eqz v0, :cond_0
-
-    .line 1187
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
-
-    invoke-virtual {v0}, Landroid/widget/Gallery;->getSelectedItemPosition()I
-
-    move-result v0
-
-    .line 1188
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->cqJ:Ljava/util/List;
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->cqJ:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_0
-
-    .line 1189
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->cqJ:Ljava/util/List;
-
-    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/plugin/sns/f/b;
-
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/f/b;->aHW:Lcom/tencent/mm/protocal/b/add;
-
-    .line 1192
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public getCount()I
+.method public final getCount()I
     .locals 1
 
     .prologue
-    .line 1178
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    .line 1290
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     if-eqz v0, :cond_0
 
-    .line 1179
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    .line 1291
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->getCount()I
 
     move-result v0
 
-    .line 1181
+    .line 1293
     :goto_0
     return v0
 
@@ -2799,488 +3247,79 @@
     goto :goto_0
 .end method
 
-.method public getFlipList()Ljava/util/List;
+.method public final getPosition()I
     .locals 1
 
     .prologue
-    .line 1257
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->cqJ:Ljava/util/List;
+    .line 1156
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htt:I
 
-    return-object v0
+    return v0
 .end method
 
-.method public getGallery()Landroid/widget/Gallery;
+.method public final nq(I)V
+    .locals 0
+
+    .prologue
+    .line 289
+    iput p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->infoType:I
+
+    .line 290
+    return-void
+.end method
+
+.method protected onLayout(ZIIII)V
     .locals 1
 
     .prologue
-    .line 1102
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
-
-    return-object v0
-.end method
-
-.method public getNumOfFileExist()I
-    .locals 4
-
-    .prologue
+    .line 1208
     const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htA:Z
 
     .line 1209
+    invoke-super/range {p0 .. p5}, Lcom/tencent/mm/plugin/sns/ui/FlipView;->onLayout(ZIIII)V
+
     .line 1210
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->cqJ:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    move v1, v0
-
-    move v2, v0
-
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/plugin/sns/f/b;
-
-    .line 1211
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
-
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/f/b;->aHW:Lcom/tencent/mm/protocal/b/add;
-
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/d/g;->D(Lcom/tencent/mm/protocal/b/add;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 1212
-    invoke-static {v0}, Lcom/tencent/mm/modelsfs/FileOp;->ax(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 1213
-    add-int/lit8 v2, v2, 0x1
-
-    .line 1215
-    :cond_0
-    add-int/lit8 v0, v1, 0x1
-
-    .line 1216
-    const/16 v1, 0x9
-
-    if-le v0, v1, :cond_2
-
-    .line 1217
-    :cond_1
-    return v2
-
-    :cond_2
-    move v1, v0
-
-    goto :goto_0
+    return-void
 .end method
 
-.method public getPosition()I
+.method protected onMeasure(II)V
     .locals 1
 
     .prologue
-    .line 1056
-    const/4 v0, 0x0
+    .line 1202
+    const/4 v0, 0x1
 
-    return v0
-.end method
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htA:Z
 
-.method public getSelectCount()I
-    .locals 1
+    .line 1203
+    invoke-super {p0, p1, p2}, Lcom/tencent/mm/plugin/sns/ui/FlipView;->onMeasure(II)V
 
-    .prologue
-    .line 1200
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heN:Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->size()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getSelectId()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 290
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
-
-    if-nez v0, :cond_0
-
-    .line 291
-    const-string/jumbo v0, ""
-
-    .line 297
-    :goto_0
-    return-object v0
-
-    .line 293
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
-
-    invoke-virtual {v0}, Landroid/widget/Gallery;->getSelectedItem()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/plugin/sns/f/b;
-
-    .line 294
-    if-nez v0, :cond_1
-
-    .line 295
-    const-string/jumbo v0, ""
-
-    goto :goto_0
-
-    .line 297
-    :cond_1
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/f/b;->gSz:Ljava/lang/String;
-
-    goto :goto_0
-.end method
-
-.method public getSelectItem()Lcom/tencent/mm/plugin/sns/f/b;
-    .locals 1
-
-    .prologue
-    .line 272
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
-
-    if-nez v0, :cond_0
-
-    .line 273
-    const/4 v0, 0x0
-
-    .line 275
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
-
-    invoke-virtual {v0}, Landroid/widget/Gallery;->getSelectedItem()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/plugin/sns/f/b;
-
-    goto :goto_0
-.end method
-
-.method public getSelectedMediaId()Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 279
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
-
-    if-nez v0, :cond_0
-
-    move-object v0, v1
-
-    .line 286
-    :goto_0
-    return-object v0
-
-    .line 282
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
-
-    invoke-virtual {v0}, Landroid/widget/Gallery;->getSelectedItem()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/plugin/sns/f/b;
-
-    .line 283
-    if-nez v0, :cond_1
-
-    move-object v0, v1
-
-    .line 284
-    goto :goto_0
-
-    .line 286
-    :cond_1
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/f/b;->aHW:Lcom/tencent/mm/protocal/b/add;
-
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/add;->iXW:Ljava/lang/String;
-
-    goto :goto_0
-.end method
-
-.method public getSnsId()J
-    .locals 4
-
-    .prologue
-    const-wide/16 v1, 0x0
-
-    .line 1042
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
-
-    invoke-virtual {v0}, Landroid/widget/Gallery;->getSelectedItem()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/plugin/sns/f/b;
-
-    .line 1044
-    if-nez v0, :cond_0
-
-    const-string/jumbo v0, ""
-
-    .line 1046
-    :goto_0
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    .line 1047
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azi()Lcom/tencent/mm/plugin/sns/h/l;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Lcom/tencent/mm/plugin/sns/h/l;->vo(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/h/k;
-
-    move-result-object v0
-
-    .line 1048
-    if-nez v0, :cond_1
-
-    move-wide v0, v1
-
-    .line 1051
-    :goto_1
-    return-wide v0
-
-    .line 1044
-    :cond_0
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/f/b;->gSz:Ljava/lang/String;
-
-    goto :goto_0
-
-    .line 1048
-    :cond_1
-    iget-wide v0, v0, Lcom/tencent/mm/plugin/sns/h/k;->field_snsId:J
-
-    goto :goto_1
-
-    :cond_2
-    move-wide v0, v1
-
-    .line 1051
-    goto :goto_1
-.end method
-
-.method public getWidthModHeight()F
-    .locals 1
-
-    .prologue
-    .line 135
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heC:F
-
-    return v0
-.end method
-
-.method public gettotalSuccDownload()I
-    .locals 1
-
-    .prologue
     .line 1204
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heP:I
-
-    return v0
+    return-void
 .end method
 
 .method protected final onPause()V
     .locals 2
 
     .prologue
-    .line 1087
+    .line 1187
     invoke-super {p0}, Lcom/tencent/mm/plugin/sns/ui/FlipView;->onPause()V
 
-    .line 1088
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    .line 1188
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     if-eqz v0, :cond_0
 
-    .line 1089
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hep:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    .line 1189
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htb:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->fd(Z)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->fm(Z)V
 
-    .line 1091
+    .line 1191
     :cond_0
-    return-void
-.end method
-
-.method public setDoubleClick(Z)V
-    .locals 0
-
-    .prologue
-    .line 247
-    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hew:Z
-
-    .line 248
-    return-void
-.end method
-
-.method public setEnableHorLongBmpMode(Z)V
-    .locals 0
-
-    .prologue
-    .line 268
-    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hez:Z
-
-    .line 269
-    return-void
-.end method
-
-.method public setFromScene(Lcom/tencent/mm/storage/i$a;)V
-    .locals 0
-
-    .prologue
-    .line 118
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gHB:Lcom/tencent/mm/storage/i$a;
-
-    .line 119
-    return-void
-.end method
-
-.method public setInfoType(I)V
-    .locals 0
-
-    .prologue
-    .line 263
-    iput p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->infoType:I
-
-    .line 264
-    return-void
-.end method
-
-.method public setIsAd(Z)V
-    .locals 0
-
-    .prologue
-    .line 122
-    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gHq:Z
-
-    .line 123
-    return-void
-.end method
-
-.method public setIsFromMainTimeline(Z)V
-    .locals 0
-
-    .prologue
-    .line 153
-    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hbM:Z
-
-    .line 154
-    return-void
-.end method
-
-.method public setItems(Ljava/util/List;)V
-    .locals 0
-
-    .prologue
-    .line 130
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->cqJ:Ljava/util/List;
-
-    .line 131
-    return-void
-.end method
-
-.method public setOnDeleteAllAction(Ljava/lang/Runnable;)V
-    .locals 0
-
-    .prologue
-    .line 126
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heE:Ljava/lang/Runnable;
-
-    .line 127
-    return-void
-.end method
-
-.method public setOnPageSelectListener(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$c;)V
-    .locals 0
-
-    .prologue
-    .line 139
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$c;
-
-    .line 140
-    return-void
-.end method
-
-.method public setOreitaion(Z)V
-    .locals 0
-
-    .prologue
-    .line 224
-    return-void
-.end method
-
-.method public setShowLongClickMenu(Z)V
-    .locals 0
-
-    .prologue
-    .line 259
-    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->her:Z
-
-    .line 260
-    return-void
-.end method
-
-.method public setShowPageControl(Z)V
-    .locals 0
-
-    .prologue
-    .line 227
-    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hev:Z
-
-    .line 228
-    return-void
-.end method
-
-.method public setShowTitle(Z)V
-    .locals 0
-
-    .prologue
-    .line 251
-    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hey:Z
-
-    .line 252
-    return-void
-.end method
-
-.method public setTouchFinish(Z)V
-    .locals 0
-
-    .prologue
-    .line 255
-    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hex:Z
-
-    .line 256
     return-void
 .end method

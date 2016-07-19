@@ -1,17 +1,25 @@
 package com.tencent.mm.platformtools;
 
 import android.os.Build.VERSION;
+import android.widget.ListView;
 
 public final class a$b
 {
-  public static int kq(String paramString)
+  public static void a(ListView paramListView)
   {
-    if (!a.clN) {}
-    while ((Build.VERSION.SDK_INT < 5) || (!a.clN)) {
-      return 0;
+    if (Build.VERSION.SDK_INT >= 8)
+    {
+      new o();
+      if (paramListView.getFirstVisiblePosition() > 10) {
+        paramListView.setSelection(10);
+      }
+      if (Build.VERSION.SDK_INT >= 8) {
+        paramListView.smoothScrollToPosition(0);
+      }
+      return;
     }
-    new d();
-    return d.kq(paramString);
+    new n();
+    paramListView.setSelection(0);
   }
 }
 

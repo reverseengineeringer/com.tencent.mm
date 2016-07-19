@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/RegByFacebookSetPwdUI;->q(IILjava/lang/String;)Z
+    value = Lcom/tencent/mm/ui/account/RegByFacebookSetPwdUI;->o(IILjava/lang/String;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kup:Lcom/tencent/mm/ui/account/RegByFacebookSetPwdUI;
+.field final synthetic kTw:Lcom/tencent/mm/ui/account/RegByFacebookSetPwdUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 99
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByFacebookSetPwdUI$1;->kup:Lcom/tencent/mm/ui/account/RegByFacebookSetPwdUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByFacebookSetPwdUI$1;->kTw:Lcom/tencent/mm/ui/account/RegByFacebookSetPwdUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 103
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByFacebookSetPwdUI$1;->kup:Lcom/tencent/mm/ui/account/RegByFacebookSetPwdUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByFacebookSetPwdUI$1;->kTw:Lcom/tencent/mm/ui/account/RegByFacebookSetPwdUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/account/RegByFacebookSetPwdUI;->finish()V
 

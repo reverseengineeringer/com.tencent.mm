@@ -11,96 +11,96 @@ import java.util.Set;
 
 public final class s
 {
-  private int ciG;
-  public HttpURLConnection cjv;
-  private Map cjw = null;
+  private int cdX;
+  public HttpURLConnection ceM;
+  private Map<String, List<String>> ceN = null;
   private URL url;
   
   public s(URL paramURL, int paramInt)
   {
     url = paramURL;
-    ciG = paramInt;
-    cjv = ((HttpURLConnection)url.openConnection());
-    if (1 == ciG) {
-      cjv.setInstanceFollowRedirects(false);
+    cdX = paramInt;
+    ceM = ((HttpURLConnection)url.openConnection());
+    if (1 == cdX) {
+      ceM.setInstanceFollowRedirects(false);
     }
   }
   
-  public final void ET()
+  public final void Fo()
   {
-    cjv.setDoInput(true);
+    ceM.setDoInput(true);
   }
   
-  public final void EU()
+  public final void Fp()
   {
-    cjv.setDoOutput(true);
+    ceM.setDoOutput(true);
   }
   
   public final void connect()
   {
-    if ((1 == ciG) && (cjw == null)) {
-      cjw = cjv.getRequestProperties();
+    if ((1 == cdX) && (ceN == null)) {
+      ceN = ceM.getRequestProperties();
     }
-    cjv.connect();
+    ceM.connect();
   }
   
   public final String getHeaderField(String paramString)
   {
-    if ((1 == ciG) && (cjw == null)) {
-      cjw = cjv.getRequestProperties();
+    if ((1 == cdX) && (ceN == null)) {
+      ceN = ceM.getRequestProperties();
     }
-    return cjv.getHeaderField(paramString);
+    return ceM.getHeaderField(paramString);
   }
   
-  public final Map getHeaderFields()
+  public final Map<String, List<String>> getHeaderFields()
   {
-    if ((1 == ciG) && (cjw == null)) {
-      cjw = cjv.getRequestProperties();
+    if ((1 == cdX) && (ceN == null)) {
+      ceN = ceM.getRequestProperties();
     }
-    return cjv.getHeaderFields();
+    return ceM.getHeaderFields();
   }
   
   public final InputStream getInputStream()
   {
-    if (1 == ciG)
+    if (1 == cdX)
     {
-      if (cjw == null) {
-        cjw = cjv.getRequestProperties();
+      if (ceN == null) {
+        ceN = ceM.getRequestProperties();
       }
       getResponseCode();
     }
-    return cjv.getInputStream();
+    return ceM.getInputStream();
   }
   
   public final OutputStream getOutputStream()
   {
-    if (1 == ciG)
+    if (1 == cdX)
     {
-      if (cjw == null) {
-        cjw = cjv.getRequestProperties();
+      if (ceN == null) {
+        ceN = ceM.getRequestProperties();
       }
       getResponseCode();
     }
-    return cjv.getOutputStream();
+    return ceM.getOutputStream();
   }
   
   public final String getRequestProperty(String paramString)
   {
-    return cjv.getRequestProperty(paramString);
+    return ceM.getRequestProperty(paramString);
   }
   
   public final int getResponseCode()
   {
     for (;;)
     {
-      if ((1 == ciG) && (cjw == null)) {
-        cjw = cjv.getRequestProperties();
+      if ((1 == cdX) && (ceN == null)) {
+        ceN = ceM.getRequestProperties();
       }
-      int i = cjv.getResponseCode();
+      int i = ceM.getResponseCode();
       Object localObject;
-      if ((1 == ciG) && (302 == i))
+      if ((1 == cdX) && (302 == i))
       {
-        localObject = cjv.getHeaderField("Location");
+        localObject = ceM.getHeaderField("Location");
         if (localObject != null) {}
       }
       else
@@ -108,64 +108,64 @@ public final class s
         return i;
       }
       url = new URL(url, (String)localObject);
-      cjv = ((HttpURLConnection)url.openConnection());
-      cjv.setInstanceFollowRedirects(false);
-      if (cjw != null)
+      ceM = ((HttpURLConnection)url.openConnection());
+      ceM.setInstanceFollowRedirects(false);
+      if (ceN != null)
       {
-        localObject = cjw.keySet().iterator();
+        localObject = ceN.keySet().iterator();
         while (((Iterator)localObject).hasNext())
         {
           String str = (String)((Iterator)localObject).next();
           if ((!str.equals("Host")) && (!str.equals("X-Online-Host")))
           {
-            List localList = (List)cjw.get(str);
+            List localList = (List)ceN.get(str);
             i = 0;
             while (i < localList.size())
             {
-              cjv.setRequestProperty(str, (String)localList.get(i));
+              ceM.setRequestProperty(str, (String)localList.get(i));
               i += 1;
             }
           }
         }
       }
-      cjv.setRequestProperty("Host", url.getHost());
-      cjv.setRequestProperty("X-Online-Host", url.getHost());
+      ceM.setRequestProperty("Host", url.getHost());
+      ceM.setRequestProperty("X-Online-Host", url.getHost());
     }
   }
   
-  public final void kk(String paramString)
+  public final void kU(String paramString)
   {
-    cjv.setRequestProperty("Referer", paramString);
+    ceM.setRequestProperty("Referer", paramString);
   }
   
   public final void setConnectTimeout(int paramInt)
   {
-    cjv.setConnectTimeout(paramInt);
+    ceM.setConnectTimeout(paramInt);
   }
   
   public final void setReadTimeout(int paramInt)
   {
-    cjv.setReadTimeout(paramInt);
+    ceM.setReadTimeout(paramInt);
   }
   
   public final void setRequestMethod(String paramString)
   {
-    cjv.setRequestMethod(paramString);
+    ceM.setRequestMethod(paramString);
   }
   
   public final void setRequestProperty(String paramString1, String paramString2)
   {
-    cjv.setRequestProperty(paramString1, paramString2);
+    ceM.setRequestProperty(paramString1, paramString2);
   }
   
   public final void setUseCaches(boolean paramBoolean)
   {
-    cjv.setUseCaches(paramBoolean);
+    ceM.setUseCaches(paramBoolean);
   }
   
   public final String toString()
   {
-    return cjv.toString();
+    return ceM.toString();
   }
 }
 

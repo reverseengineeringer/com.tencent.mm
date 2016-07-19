@@ -16,13 +16,23 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;",
+        ">;"
+    }
+.end annotation
+
 
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 183
+    .line 208
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +44,7 @@
     .locals 2
 
     .prologue
-    .line 183
+    .line 208
     new-instance v0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;
 
     const/4 v1, 0x0
@@ -48,7 +58,7 @@
     .locals 1
 
     .prologue
-    .line 183
+    .line 208
     new-array v0, p1, [Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;
 
     return-object v0

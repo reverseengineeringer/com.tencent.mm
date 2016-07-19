@@ -2,7 +2,7 @@ package com.tencent.mm.booter;
 
 import android.os.MessageQueue.IdleHandler;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.ad;
 
 final class NotifyReceiver$a$2
   implements MessageQueue.IdleHandler
@@ -11,8 +11,8 @@ final class NotifyReceiver$a$2
   
   public final boolean queueIdle()
   {
-    NotifyReceiver.a locala = bmP;
-    ah.tv().r(new NotifyReceiver.a.4(locala));
+    NotifyReceiver.a locala = bav;
+    ah.tw().t(new NotifyReceiver.a.4(locala));
     return false;
   }
 }

@@ -1,291 +1,162 @@
 package ct;
 
-import android.os.Handler;
-import android.os.HandlerThread;
-import android.os.Looper;
-import android.os.Message;
-import android.telephony.CellLocation;
-import android.telephony.PhoneStateListener;
-import android.telephony.ServiceState;
-import android.telephony.SignalStrength;
-import android.telephony.TelephonyManager;
-import android.telephony.gsm.GsmCellLocation;
+import android.location.Location;
+import java.util.LinkedList;
 
 public final class bt
-  extends PhoneStateListener
 {
-  volatile boolean a;
-  private final bj b;
-  private CellLocation c = null;
-  private SignalStrength d = null;
-  private ServiceState e = null;
-  private long f;
-  private HandlerThread g;
-  private Handler h;
+  private static bt a = new bt();
+  private a b = a.a;
+  private LinkedList<ce> c = new LinkedList();
   
-  public bt(bj parambj)
+  public static bt a()
   {
-    b = parambj;
+    return a;
   }
   
-  private void a(int paramInt)
+  public final int a(ce paramce)
   {
-    TelephonyManager localTelephonyManager = b.a();
-    try
+    if (paramce != null)
     {
-      localTelephonyManager.listen(this, paramInt);
-      return;
-    }
-    catch (Exception localException)
-    {
-      b.a.a("TxCellProvider", "listenCellState: failed! flags=" + paramInt, localException);
-    }
-  }
-  
-  private boolean a(CellLocation paramCellLocation)
-  {
-    if (paramCellLocation == null) {
-      return false;
-    }
-    try
-    {
-      GsmCellLocation localGsmCellLocation = (GsmCellLocation)paramCellLocation;
-      if (localGsmCellLocation.getCid() == 0)
+      try
       {
-        int i = localGsmCellLocation.getLac();
-        if (i == 0) {
-          return false;
+        while (c.size() > 9) {
+          c.remove(0);
+        }
+        if (c.size() <= 0) {
+          break label136;
         }
       }
+      finally {}
+      for (;;)
+      {
+        ce localce = (ce)c.getFirst();
+        long l1 = b;
+        long l2 = b;
+        double d = b.a.a(a.getLatitude(), a.getLongitude(), a.getLatitude(), a.getLongitude());
+        if ((l1 - l2 <= 180000L) || (d <= 500.0D)) {
+          break;
+        }
+        c.remove(0);
+      }
+      label136:
+      paramce = new ce(paramce);
+      c.add(paramce);
     }
-    catch (ClassCastException localClassCastException)
-    {
-      if (cv.a(paramCellLocation) < 0) {
-        return false;
-      }
-      if (cv.a(c, paramCellLocation)) {
-        return false;
-      }
-      paramCellLocation = ci.a(b, paramCellLocation, null);
-      if (paramCellLocation == null) {}
-      for (boolean bool = true; bool; bool = cv.a(paramCellLocation)) {
-        return true;
-      }
-    }
-    return false;
+    int i = c.size();
+    return i;
   }
   
-  private void c()
+  public final long b()
   {
-    if (!a) {}
     for (;;)
     {
-      return;
-      if (c != null)
+      double d1;
+      long l;
+      double d2;
+      try
       {
-        long l = System.currentTimeMillis();
-        if (l - f > 2000L) {}
-        for (int i = 1; i != 0; i = 0)
+        int i;
+        Object localObject3;
+        if (c.size() < 2)
         {
-          f = l;
-          ci localci = ci.a(b, c, d);
-          try
-          {
-            if ((h != null) && (localci != null))
-            {
-              b localb = new b(b);
-              localb.a(localci);
-              h.post(localb);
-            }
-            return;
+          d1 = 0.0D;
+          if (c.size() < 2) {
+            continue;
           }
-          finally {}
+          int j = c.size();
+          l = 0L;
+          d2 = 0.0D;
+          i = 1;
+          if (i < j)
+          {
+            localObject1 = (ce)c.get(i);
+            localObject3 = (ce)c.get(i - 1);
+            double d3 = b.a.a(a.getLatitude(), a.getLongitude(), a.getLatitude(), a.getLongitude());
+            l = b - b + l;
+            d2 += d3;
+            i += 1;
+            continue;
+          }
+        }
+        else
+        {
+          i = c.size() - 1;
+          localObject1 = (ce)c.get(i);
+          localObject3 = (ce)c.get(i - 1);
+          if (b == b) {
+            break label477;
+          }
+          l = b - b;
+          d1 = b.a.a(a.getLatitude(), a.getLongitude(), a.getLatitude(), a.getLongitude()) / l * 1000.0D;
+          continue;
+        }
+        if (l > 0L)
+        {
+          d2 = d2 / l * 1000.0D;
+          if (c.size() < 2)
+          {
+            l = 0L;
+            i = c.size();
+            if (i >= 2) {
+              continue;
+            }
+            b = a.a;
+            localObject1 = b;
+            localObject3 = a.c;
+            if (localObject1 != localObject3) {
+              break label469;
+            }
+            l = 90000L;
+            return l;
+          }
+        }
+        else
+        {
+          d2 = 0.0D;
+          continue;
+        }
+        Object localObject1 = (ce)c.getFirst();
+        l = c.getLast()).b - b;
+        continue;
+        if ((i > 6) && (d1 < 3.0D) && (d2 < 6.0D))
+        {
+          b = a.c;
+          continue;
+        }
+        if (l <= 60000L) {
+          break label459;
         }
       }
-    }
-  }
-  
-  public final void a()
-  {
-    if (a) {
-      return;
-    }
-    a = true;
-    g = new HandlerThread("worker");
-    g.start();
-    h = new a(g.getLooper(), (byte)0);
-    h.sendEmptyMessageDelayed(0, 3000L);
-    CellLocation localCellLocation = cv.b(b);
-    if (a(localCellLocation))
-    {
-      ci localci = ci.a(b, localCellLocation, null);
-      if (localci != null)
+      finally {}
+      if ((d1 < 3.0D) && (d2 < 3.0D))
       {
-        c = localCellLocation;
-        b.c(localci);
+        b = a.c;
+      }
+      else
+      {
+        label459:
+        b = a.b;
+        continue;
+        label469:
+        l = 30000L;
+        continue;
+        label477:
+        l = 500L;
       }
     }
-    a(273);
-    b.a.a("TxCellProvider", "startup: state=[start]");
   }
   
-  public final void b()
+  static enum a
   {
-    if (!a) {
-      return;
-    }
-    a = false;
-    a(0);
-    try
+    static
     {
-      if (h != null)
-      {
-        h.removeCallbacksAndMessages(null);
-        h = null;
-      }
-      g.quit();
-      g = null;
-      c = null;
-      d = null;
-      e = null;
-      f = 0L;
-      b.a.a("TxCellProvider", 4, "shutdown: state=[shutdown]");
-      return;
-    }
-    finally {}
-  }
-  
-  public final void onCellLocationChanged(CellLocation paramCellLocation)
-  {
-    super.onCellLocationChanged(paramCellLocation);
-    if (a(paramCellLocation))
-    {
-      c = paramCellLocation;
-      c();
-      return;
-    }
-    b.a.b("TxCellProvider", "onCellLocationChanged: illegal cell or same cell " + paramCellLocation);
-  }
-  
-  public final void onServiceStateChanged(ServiceState paramServiceState)
-  {
-    int j = 1;
-    super.onServiceStateChanged(paramServiceState);
-    if (paramServiceState == null) {}
-    do
-    {
-      ServiceState localServiceState;
-      do
-      {
-        return;
-        localServiceState = e;
-      } while ((localServiceState != null) && (localServiceState.getState() == paramServiceState.getState()));
-      e = paramServiceState;
-    } while (!a);
-    int i;
-    boolean bool;
-    if (e != null) {
-      if (e.getState() == 0)
-      {
-        i = 1;
-        paramServiceState = b.a();
-        bool = cv.a(b.a);
-        if (paramServiceState == null) {
-          break label171;
-        }
-        if (paramServiceState.getSimState() != 5) {
-          break label166;
-        }
-      }
-    }
-    for (;;)
-    {
-      if ((bool) || (j == 0)) {
-        i = 0;
-      }
-      paramServiceState = new Message();
-      what = 12999;
-      arg1 = 12003;
-      arg2 = i;
-      b.c(paramServiceState);
-      return;
-      if (e.getState() == 1)
-      {
-        i = 0;
-        break;
-      }
-      i = -1;
-      break;
-      label166:
-      j = 0;
-      continue;
-      label171:
-      j = 0;
-    }
-  }
-  
-  public final void onSignalStrengthsChanged(SignalStrength paramSignalStrength)
-  {
-    super.onSignalStrengthsChanged(paramSignalStrength);
-    if (paramSignalStrength == null) {}
-    SignalStrength localSignalStrength;
-    int i;
-    do
-    {
-      return;
-      localSignalStrength = d;
-      i = b.h().b;
-    } while ((localSignalStrength != null) && (!cv.a(i, localSignalStrength, paramSignalStrength)));
-    d = paramSignalStrength;
-    c();
-  }
-  
-  final class a
-    extends Handler
-  {
-    private a(Looper paramLooper)
-    {
-      super();
+      a locala = a;
+      locala = b;
+      locala = c;
     }
     
-    public final void handleMessage(Message paramMessage)
-    {
-      super.handleMessage(paramMessage);
-      if (!a) {
-        return;
-      }
-      sendEmptyMessageDelayed(0, 20000L);
-      paramMessage = cv.b(bt.a(bt.this));
-      bt.a(bt.this, paramMessage);
-    }
-  }
-  
-  static final class b
-    implements Runnable
-  {
-    private bj a;
-    private ci b;
-    
-    public b(bj parambj)
-    {
-      a = parambj;
-    }
-    
-    public final void a(ci paramci)
-    {
-      b = paramci;
-    }
-    
-    public final void run()
-    {
-      bj localbj = a;
-      ci localci = b;
-      if (localci != null)
-      {
-        localci.a(cv.c(localbj));
-        localbj.c(localci);
-      }
-    }
+    private a() {}
   }
 }
 

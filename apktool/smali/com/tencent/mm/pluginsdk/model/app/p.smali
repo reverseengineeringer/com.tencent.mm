@@ -4,7 +4,367 @@
 
 
 # direct methods
-.method public static H(Landroid/os/Bundle;)V
+.method public static BR(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 198
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 199
+    :cond_0
+    const-string/jumbo v0, "MicroMsg.AppUtil"
+
+    const-string/jumbo v1, "getDbSignature, svrSign is null"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 200
+    const/4 v0, 0x0
+
+    .line 203
+    :goto_0
+    return-object v0
+
+    :cond_1
+    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/model/app/p;->BS(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method private static BS(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 327
+    new-instance v0, Ljava/lang/StringBuffer;
+
+    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
+
+    .line 328
+    invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    .line 329
+    const-string/jumbo v1, "mMHc ItnStR"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    .line 330
+    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tencent/mm/a/g;->j([B)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static BT(Ljava/lang/String;)V
+    .locals 5
+
+    .prologue
+    .line 429
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 430
+    const-string/jumbo v0, "MicroMsg.AppUtil"
+
+    const-string/jumbo v1, "appid is null"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 448
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 433
+    :cond_1
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZQ()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 434
+    if-eqz v0, :cond_0
+
+    .line 435
+    const-string/jumbo v1, "key_app_ids_registion_while_not_login"
+
+    const-string/jumbo v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 436
+    invoke-virtual {v1, p0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    .line 437
+    const-string/jumbo v0, "MicroMsg.AppUtil"
+
+    const-string/jumbo v2, "this app has been saved : %s in %s"
+
+    const/4 v3, 0x2
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    aput-object p0, v3, v4
+
+    const/4 v4, 0x1
+
+    aput-object v1, v3, v4
+
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 440
+    :cond_2
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 441
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 442
+    const-string/jumbo v3, "|"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 443
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 444
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 445
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v2, "key_app_ids_registion_while_not_login"
+
+    invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    goto :goto_0
+.end method
+
+.method public static BU(Ljava/lang/String;)Ljava/lang/String;
+    .locals 9
+
+    .prologue
+    const/4 v0, 0x0
+
+    const/4 v8, 0x1
+
+    const/4 v7, 0x0
+
+    .line 515
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 527
+    :goto_0
+    return-object v0
+
+    .line 518
+    :cond_0
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    .line 520
+    const/4 v2, 0x0
+
+    :try_start_0
+    invoke-virtual {v1, p0, v2}, Landroid/content/pm/PackageManager;->getPackageArchiveInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object v1
+
+    .line 521
+    const-string/jumbo v2, "MicroMsg.AppUtil"
+
+    const-string/jumbo v3, "get package name from archive filepath  :%s, package name is : %s"
+
+    const/4 v4, 0x2
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    aput-object p0, v4, v5
+
+    const/4 v5, 0x1
+
+    iget-object v6, v1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+
+    aput-object v6, v4, v5
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 522
+    iget-object v0, v1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 523
+    :catch_0
+    move-exception v1
+
+    .line 524
+    const-string/jumbo v2, "MicroMsg.AppUtil"
+
+    const-string/jumbo v3, "get package name from archive file path, failed : %s"
+
+    new-array v4, v8, [Ljava/lang/Object;
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    aput-object v1, v4, v7
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
+.end method
+
+.method public static BV(Ljava/lang/String;)I
+    .locals 8
+
+    .prologue
+    const/4 v7, 0x1
+
+    const/4 v0, 0x0
+
+    .line 532
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 544
+    :goto_0
+    return v0
+
+    .line 535
+    :cond_0
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    .line 537
+    const/4 v2, 0x0
+
+    :try_start_0
+    invoke-virtual {v1, p0, v2}, Landroid/content/pm/PackageManager;->getPackageArchiveInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object v1
+
+    .line 538
+    const-string/jumbo v2, "MicroMsg.AppUtil"
+
+    const-string/jumbo v3, "get package version code from archive filepath  :%s, package version code is : %d"
+
+    const/4 v4, 0x2
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    aput-object p0, v4, v5
+
+    const/4 v5, 0x1
+
+    iget v6, v1, Landroid/content/pm/PackageInfo;->versionCode:I
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 539
+    iget v0, v1, Landroid/content/pm/PackageInfo;->versionCode:I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 540
+    :catch_0
+    move-exception v1
+
+    .line 541
+    const-string/jumbo v2, "MicroMsg.AppUtil"
+
+    const-string/jumbo v3, "get package version code from archive file path, failed : %s"
+
+    new-array v4, v7, [Ljava/lang/Object;
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    aput-object v1, v4, v0
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
+.end method
+
+.method public static N(Landroid/os/Bundle;)V
     .locals 2
 
     .prologue
@@ -19,7 +379,7 @@
     return-void
 .end method
 
-.method public static I(Landroid/os/Bundle;)V
+.method public static O(Landroid/os/Bundle;)V
     .locals 2
 
     .prologue
@@ -49,11 +409,11 @@
 
     .line 79
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v0, "MicroMsg.AppUtil"
 
     const-string/jumbo v1, "buildRedirectUrl fail, invalid arguments"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 80
     const/4 v0, 0x0
@@ -124,7 +484,7 @@
 
     .line 100
     :cond_3
-    const-string/jumbo v3, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v3, "MicroMsg.AppUtil"
 
     const-string/jumbo v4, "buildRedirectUrl, sharpStr = %s, paramStr = %s, srcUrl = %s"
 
@@ -144,7 +504,7 @@
 
     aput-object p0, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 103
     new-instance v5, Ljava/util/LinkedHashMap;
@@ -152,7 +512,7 @@
     invoke-direct {v5}, Ljava/util/LinkedHashMap;-><init>()V
 
     .line 104
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -185,7 +545,7 @@
     aget-object v3, v6, v4
 
     .line 108
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -199,7 +559,7 @@
     move-result v8
 
     .line 110
-    const-string/jumbo v2, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v2, "MicroMsg.AppUtil"
 
     const-string/jumbo v9, "buildRedirectUrl, equalIdx = %d"
 
@@ -215,7 +575,7 @@
 
     aput-object v12, v10, v11
 
-    invoke-static {v2, v9, v10}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v9, v10}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 113
     if-ltz v8, :cond_6
@@ -287,7 +647,7 @@
     invoke-interface {v5, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 129
-    const-string/jumbo v0, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v0, "MicroMsg.AppUtil"
 
     const-string/jumbo v2, "buildRedirectUrl, pMap size = %d"
 
@@ -307,7 +667,7 @@
 
     aput-object v6, v3, v4
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 132
     new-instance v2, Ljava/lang/StringBuilder;
@@ -393,7 +753,7 @@
     move-result-object v0
 
     .line 144
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -418,7 +778,7 @@
 
     .line 148
     :cond_b
-    const-string/jumbo v1, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v1, "MicroMsg.AppUtil"
 
     const-string/jumbo v2, "buildRedirectUrl, ret url = %s"
 
@@ -430,17 +790,17 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 .end method
 
-.method public static aI(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+.method public static aH(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
     .prologue
     .line 181
-    invoke-static {p0, p1}, Lcom/tencent/mm/pluginsdk/model/app/p;->aJ(Landroid/content/Context;Ljava/lang/String;)[Landroid/content/pm/Signature;
+    invoke-static {p0, p1}, Lcom/tencent/mm/pluginsdk/model/app/p;->aI(Landroid/content/Context;Ljava/lang/String;)[Landroid/content/pm/Signature;
 
     move-result-object v0
 
@@ -453,11 +813,11 @@
 
     .line 183
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v0, "MicroMsg.AppUtil"
 
     const-string/jumbo v1, "signs is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 184
     const/4 v0, 0x0
@@ -476,19 +836,19 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/a/g;->j([B)Ljava/lang/String;
 
     move-result-object v0
 
     .line 188
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/model/app/p;->zV(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/model/app/p;->BS(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method public static aJ(Landroid/content/Context;Ljava/lang/String;)[Landroid/content/pm/Signature;
+.method public static aI(Landroid/content/Context;Ljava/lang/String;)[Landroid/content/pm/Signature;
     .locals 4
 
     .prologue
@@ -505,11 +865,11 @@
 
     .line 305
     :cond_0
-    const-string/jumbo v1, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v1, "MicroMsg.AppUtil"
 
     const-string/jumbo v2, "getSignature, packageName is null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 323
     :goto_0
@@ -535,7 +895,7 @@
     if-nez v1, :cond_2
 
     .line 319
-    const-string/jumbo v1, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v1, "MicroMsg.AppUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -551,7 +911,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -559,11 +919,11 @@
     :catch_0
     move-exception v1
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v1, "MicroMsg.AppUtil"
 
     const-string/jumbo v2, "NameNotFoundException"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -574,7 +934,7 @@
     goto :goto_0
 .end method
 
-.method public static aK(Landroid/content/Context;Ljava/lang/String;)Z
+.method public static aJ(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 7
 
     .prologue
@@ -602,14 +962,14 @@
     .line 354
     const-string/jumbo v4, "com.android.vending"
 
-    invoke-static {p0, v4}, Lcom/tencent/mm/pluginsdk/model/app/p;->as(Landroid/content/Context;Ljava/lang/String;)Landroid/content/pm/PackageInfo;
+    invoke-static {p0, v4}, Lcom/tencent/mm/pluginsdk/model/app/p;->ar(Landroid/content/Context;Ljava/lang/String;)Landroid/content/pm/PackageInfo;
 
     move-result-object v4
 
     if-eqz v4, :cond_0
 
     .line 355
-    const-string/jumbo v4, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v4, "MicroMsg.AppUtil"
 
     const-string/jumbo v5, "installAppWithGP, gp is installed, url = %s"
 
@@ -617,7 +977,7 @@
 
     aput-object p1, v6, v1
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 356
     const-string/jumbo v4, "com.android.vending"
@@ -637,7 +997,7 @@
 
     .line 358
     :cond_0
-    const-string/jumbo v4, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v4, "MicroMsg.AppUtil"
 
     const-string/jumbo v5, "installAppWithGP, gp is not installed, url = %s"
 
@@ -645,7 +1005,7 @@
 
     aput-object p1, v6, v1
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -654,7 +1014,7 @@
     move-exception v3
 
     .line 365
-    const-string/jumbo v4, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v4, "MicroMsg.AppUtil"
 
     const-string/jumbo v5, "installAppWithGP first, ex = %s"
 
@@ -666,7 +1026,7 @@
 
     aput-object v3, v6, v1
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 369
     :try_start_1
@@ -693,7 +1053,7 @@
     move-exception v2
 
     .line 374
-    const-string/jumbo v3, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v3, "MicroMsg.AppUtil"
 
     const-string/jumbo v4, "installAppWithGP second, ex = %s"
 
@@ -705,7 +1065,7 @@
 
     aput-object v2, v0, v1
 
-    invoke-static {v3, v4, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -713,25 +1073,25 @@
     goto :goto_1
 .end method
 
-.method public static aPL()V
+.method public static aUt()V
     .locals 2
 
     .prologue
     .line 468
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/model/app/al;->iCd:Lcom/tencent/mm/pluginsdk/model/app/al;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/model/app/an;->iYN:Lcom/tencent/mm/pluginsdk/model/app/an;
 
     .line 469
     const-wide/16 v0, -0x1
 
-    sput-wide v0, Lcom/tencent/mm/pluginsdk/model/app/al;->iCe:J
+    sput-wide v0, Lcom/tencent/mm/pluginsdk/model/app/an;->iYO:J
 
     .line 470
     return-void
 .end method
 
-.method public static as(Landroid/content/Context;Ljava/lang/String;)Landroid/content/pm/PackageInfo;
+.method public static ar(Landroid/content/Context;Ljava/lang/String;)Landroid/content/pm/PackageInfo;
     .locals 4
 
     .prologue
@@ -748,11 +1108,11 @@
 
     .line 161
     :cond_0
-    const-string/jumbo v1, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v1, "MicroMsg.AppUtil"
 
     const-string/jumbo v2, "getPackageInfo, packageName is null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 172
     :goto_0
@@ -780,7 +1140,7 @@
     move-exception v1
 
     .line 170
-    const-string/jumbo v1, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v1, "MicroMsg.AppUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -796,7 +1156,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -813,7 +1173,7 @@
     invoke-virtual {p0, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 297
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -838,21 +1198,21 @@
     const/4 v0, 0x1
 
     .line 388
-    const-string/jumbo v2, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v2, "MicroMsg.AppUtil"
 
     const-string/jumbo v3, "check the signature of the Application."
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 389
     if-nez p0, :cond_0
 
     .line 390
-    const-string/jumbo v1, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v1, "MicroMsg.AppUtil"
 
     const-string/jumbo v2, "context is null."
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 421
     :goto_0
@@ -863,11 +1223,11 @@
     if-nez p1, :cond_1
 
     .line 394
-    const-string/jumbo v1, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v1, "MicroMsg.AppUtil"
 
     const-string/jumbo v2, "appInfo is null."
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -875,18 +1235,18 @@
     :cond_1
     iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/app/f;->field_packageName:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
     .line 398
-    const-string/jumbo v1, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v1, "MicroMsg.AppUtil"
 
     const-string/jumbo v2, "packageName is null."
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -894,14 +1254,14 @@
     :cond_2
     iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/app/f;->field_signature:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
     .line 403
-    const-string/jumbo v2, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v2, "MicroMsg.AppUtil"
 
     const-string/jumbo v3, "app.field_signature is null. app.field_packageName is %s"
 
@@ -911,7 +1271,7 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -919,7 +1279,7 @@
     :cond_3
     iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/app/f;->field_packageName:Ljava/lang/String;
 
-    invoke-static {p0, v2}, Lcom/tencent/mm/pluginsdk/model/app/p;->aJ(Landroid/content/Context;Ljava/lang/String;)[Landroid/content/pm/Signature;
+    invoke-static {p0, v2}, Lcom/tencent/mm/pluginsdk/model/app/p;->aI(Landroid/content/Context;Ljava/lang/String;)[Landroid/content/pm/Signature;
 
     move-result-object v3
 
@@ -932,11 +1292,11 @@
 
     .line 408
     :cond_4
-    const-string/jumbo v0, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v0, "MicroMsg.AppUtil"
 
     const-string/jumbo v2, "apk signatures is null"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -959,11 +1319,11 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
+    invoke-static {v5}, Lcom/tencent/mm/a/g;->j([B)Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/tencent/mm/pluginsdk/model/app/p;->zV(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5}, Lcom/tencent/mm/pluginsdk/model/app/p;->BS(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -977,7 +1337,7 @@
     if-eqz v5, :cond_6
 
     .line 415
-    const-string/jumbo v2, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v2, "MicroMsg.AppUtil"
 
     const-string/jumbo v3, "app_name : %s ,signature : %s"
 
@@ -993,7 +1353,7 @@
 
     aput-object v1, v4, v0
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -1005,7 +1365,7 @@
 
     .line 420
     :cond_7
-    const-string/jumbo v2, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v2, "MicroMsg.AppUtil"
 
     const-string/jumbo v3, "signature is diff.(app_name:%s)"
 
@@ -1015,7 +1375,7 @@
 
     aput-object v4, v0, v1
 
-    invoke-static {v2, v3, v0}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v0}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -1032,7 +1392,7 @@
     const/4 v1, 0x0
 
     .line 230
-    sget-object v3, Lcom/tencent/mm/pluginsdk/i$a;->iyG:Lcom/tencent/mm/pluginsdk/i$r;
+    sget-object v3, Lcom/tencent/mm/pluginsdk/i$a;->iVc:Lcom/tencent/mm/pluginsdk/i$r;
 
     .line 232
     if-eqz p2, :cond_0
@@ -1045,11 +1405,11 @@
 
     .line 233
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v0, "MicroMsg.AppUtil"
 
     const-string/jumbo v2, "isAppValid, packageName is null"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 234
     invoke-interface {v3, p1}, Lcom/tencent/mm/pluginsdk/i$r;->f(Lcom/tencent/mm/pluginsdk/model/app/f;)V
@@ -1065,11 +1425,11 @@
     if-nez p1, :cond_2
 
     .line 239
-    const-string/jumbo v1, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v1, "MicroMsg.AppUtil"
 
     const-string/jumbo v2, "app does not exist"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1089,11 +1449,11 @@
 
     .line 244
     :cond_3
-    const-string/jumbo v0, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v0, "MicroMsg.AppUtil"
 
     const-string/jumbo v2, "isAppValid fail, local packageName is null"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 245
     invoke-interface {v3, p1}, Lcom/tencent/mm/pluginsdk/i$r;->f(Lcom/tencent/mm/pluginsdk/model/app/f;)V
@@ -1119,11 +1479,11 @@
 
     .line 250
     :cond_5
-    const-string/jumbo v0, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v0, "MicroMsg.AppUtil"
 
     const-string/jumbo v2, "isAppValid fail, local signature is null"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 251
     invoke-interface {v3, p1}, Lcom/tencent/mm/pluginsdk/i$r;->f(Lcom/tencent/mm/pluginsdk/model/app/f;)V
@@ -1135,7 +1495,7 @@
 
     .line 255
     :cond_6
-    invoke-static {p0, p2}, Lcom/tencent/mm/pluginsdk/model/app/p;->aJ(Landroid/content/Context;Ljava/lang/String;)[Landroid/content/pm/Signature;
+    invoke-static {p0, p2}, Lcom/tencent/mm/pluginsdk/model/app/p;->aI(Landroid/content/Context;Ljava/lang/String;)[Landroid/content/pm/Signature;
 
     move-result-object v4
 
@@ -1148,11 +1508,11 @@
 
     .line 257
     :cond_7
-    const-string/jumbo v0, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v0, "MicroMsg.AppUtil"
 
     const-string/jumbo v2, "isAppValid, apk signatures is null"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 258
     invoke-interface {v3, p1}, Lcom/tencent/mm/pluginsdk/i$r;->f(Lcom/tencent/mm/pluginsdk/model/app/f;)V
@@ -1173,7 +1533,7 @@
     if-nez v2, :cond_9
 
     .line 263
-    const-string/jumbo v2, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v2, "MicroMsg.AppUtil"
 
     const-string/jumbo v4, "isAppValid, packageName is diff, src:%s,local:%s"
 
@@ -1187,7 +1547,7 @@
 
     aput-object p2, v5, v0
 
-    invoke-static {v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 264
     invoke-interface {v3, p1}, Lcom/tencent/mm/pluginsdk/i$r;->f(Lcom/tencent/mm/pluginsdk/model/app/f;)V
@@ -1199,7 +1559,7 @@
 
     .line 267
     :cond_9
-    const-string/jumbo v2, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v2, "MicroMsg.AppUtil"
 
     const-string/jumbo v5, "server signatures:%s"
 
@@ -1209,7 +1569,7 @@
 
     aput-object v7, v6, v1
 
-    invoke-static {v2, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 268
     array-length v5, v4
@@ -1226,16 +1586,16 @@
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
+    invoke-static {v6}, Lcom/tencent/mm/a/g;->j([B)Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/tencent/mm/pluginsdk/model/app/p;->zV(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v6}, Lcom/tencent/mm/pluginsdk/model/app/p;->BS(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
     .line 270
-    const-string/jumbo v7, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v7, "MicroMsg.AppUtil"
 
     const-string/jumbo v8, "local signatures:%s"
 
@@ -1243,7 +1603,7 @@
 
     aput-object v6, v9, v1
 
-    invoke-static {v7, v8, v9}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v7, v8, v9}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 271
     iget-object v7, p1, Lcom/tencent/mm/pluginsdk/model/app/f;->field_signature:Ljava/lang/String;
@@ -1271,11 +1631,11 @@
 
     .line 277
     :cond_b
-    const-string/jumbo v0, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v0, "MicroMsg.AppUtil"
 
     const-string/jumbo v2, "isAppValid, signature is diff"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 278
     invoke-interface {v3, p1}, Lcom/tencent/mm/pluginsdk/i$r;->f(Lcom/tencent/mm/pluginsdk/model/app/f;)V
@@ -1324,7 +1684,7 @@
     move-exception v0
 
     .line 340
-    const-string/jumbo v1, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v1, "MicroMsg.AppUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1358,7 +1718,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 341
     const/4 v0, 0x0
@@ -1366,7 +1726,7 @@
     goto :goto_0
 .end method
 
-.method public static e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.method public static d(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
     .prologue
@@ -1391,11 +1751,11 @@
 
     .line 41
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v0, "MicroMsg.AppUtil"
 
     const-string/jumbo v1, "buildSourceUrl fail, invalid arguments"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 42
     const/4 v0, 0x0
@@ -1406,7 +1766,7 @@
 
     .line 45
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1414,7 +1774,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/t;->d(Landroid/content/SharedPreferences;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Landroid/content/SharedPreferences;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1434,7 +1794,7 @@
     .line 54
     :cond_3
     :goto_1
-    const v1, 0x7f0b0683
+    const v1, 0x7f080d51
 
     const/4 v2, 0x5
 
@@ -1444,7 +1804,7 @@
 
     const/4 v3, 0x1
 
-    sget v4, Lcom/tencent/mm/protocal/b;->iUf:I
+    sget v4, Lcom/tencent/mm/protocal/c;->jry:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1458,7 +1818,7 @@
 
     const/4 v0, 0x3
 
-    sget-object v3, Lcom/tencent/mm/protocal/b;->bwR:Ljava/lang/String;
+    sget-object v3, Lcom/tencent/mm/protocal/c;->boS:Ljava/lang/String;
 
     aput-object v3, v2, v0
 
@@ -1488,12 +1848,12 @@
     goto :goto_1
 .end method
 
-.method public static m(Landroid/content/Context;Ljava/lang/String;)Z
+.method public static n(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 1
 
     .prologue
     .line 156
-    invoke-static {p0, p1}, Lcom/tencent/mm/pluginsdk/model/app/p;->as(Landroid/content/Context;Ljava/lang/String;)Landroid/content/pm/PackageInfo;
+    invoke-static {p0, p1}, Lcom/tencent/mm/pluginsdk/model/app/p;->ar(Landroid/content/Context;Ljava/lang/String;)Landroid/content/pm/PackageInfo;
 
     move-result-object v0
 
@@ -1510,7 +1870,7 @@
     goto :goto_0
 .end method
 
-.method public static r(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.method public static s(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 6
 
     .prologue
@@ -1533,11 +1893,11 @@
 
     .line 60
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v0, "MicroMsg.AppUtil"
 
     const-string/jumbo v1, "buildUnistallUrl fail, invalid arguments"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 61
     const/4 v0, 0x0
@@ -1548,7 +1908,7 @@
 
     .line 64
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1556,7 +1916,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/t;->d(Landroid/content/SharedPreferences;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Landroid/content/SharedPreferences;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1576,7 +1936,7 @@
     .line 73
     :cond_3
     :goto_1
-    const v1, 0x7f0b0684
+    const v1, 0x7f080d52
 
     const/4 v2, 0x6
 
@@ -1586,7 +1946,7 @@
 
     const/4 v3, 0x1
 
-    sget v4, Lcom/tencent/mm/protocal/b;->iUf:I
+    sget v4, Lcom/tencent/mm/protocal/c;->jry:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1600,7 +1960,7 @@
 
     const/4 v0, 0x3
 
-    sget-object v3, Lcom/tencent/mm/protocal/b;->bwR:Ljava/lang/String;
+    sget-object v3, Lcom/tencent/mm/protocal/c;->boS:Ljava/lang/String;
 
     aput-object v3, v2, v0
 
@@ -1636,273 +1996,4 @@
     const-string/jumbo v0, "en_US"
 
     goto :goto_1
-.end method
-
-.method public static zU(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    .line 198
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 199
-    :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
-
-    const-string/jumbo v1, "getDbSignature, svrSign is null"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 200
-    const/4 v0, 0x0
-
-    .line 203
-    :goto_0
-    return-object v0
-
-    :cond_1
-    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/model/app/p;->zV(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method private static zV(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    .line 327
-    new-instance v0, Ljava/lang/StringBuffer;
-
-    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
-
-    .line 328
-    invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    .line 329
-    const-string/jumbo v1, "mMHc ItnStR"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    .line 330
-    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static zW(Ljava/lang/String;)V
-    .locals 5
-
-    .prologue
-    .line 429
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 430
-    const-string/jumbo v0, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
-
-    const-string/jumbo v1, "appid is null"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 448
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 433
-    :cond_1
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUM()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 434
-    if-eqz v0, :cond_0
-
-    .line 435
-    const-string/jumbo v1, "key_app_ids_registion_while_not_login"
-
-    const-string/jumbo v2, ""
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 436
-    invoke-virtual {v1, p0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    .line 437
-    const-string/jumbo v0, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
-
-    const-string/jumbo v2, "this app has been saved : %s in %s"
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v4, 0x0
-
-    aput-object p0, v3, v4
-
-    const/4 v4, 0x1
-
-    aput-object v1, v3, v4
-
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    .line 440
-    :cond_2
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    .line 441
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 442
-    const-string/jumbo v3, "|"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 443
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 444
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 445
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string/jumbo v2, "key_app_ids_registion_while_not_login"
-
-    invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    goto :goto_0
-.end method
-
-.method public static zX(Ljava/lang/String;)Ljava/lang/String;
-    .locals 9
-
-    .prologue
-    const/4 v0, 0x0
-
-    const/4 v8, 0x1
-
-    const/4 v7, 0x0
-
-    .line 515
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 527
-    :goto_0
-    return-object v0
-
-    .line 518
-    :cond_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v1
-
-    .line 520
-    const/4 v2, 0x0
-
-    :try_start_0
-    invoke-virtual {v1, p0, v2}, Landroid/content/pm/PackageManager;->getPackageArchiveInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
-
-    move-result-object v1
-
-    .line 521
-    const-string/jumbo v2, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
-
-    const-string/jumbo v3, "get package name from archive filepath  :%s, package name is : %s"
-
-    const/4 v4, 0x2
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    const/4 v5, 0x0
-
-    aput-object p0, v4, v5
-
-    const/4 v5, 0x1
-
-    iget-object v6, v1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
-
-    aput-object v6, v4, v5
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 522
-    iget-object v0, v1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    .line 523
-    :catch_0
-    move-exception v1
-
-    .line 524
-    const-string/jumbo v2, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
-
-    const-string/jumbo v3, "get package name from archive file path, failed : %s"
-
-    new-array v4, v8, [Ljava/lang/Object;
-
-    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    aput-object v1, v4, v7
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
 .end method

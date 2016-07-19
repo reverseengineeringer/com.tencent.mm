@@ -4,8 +4,9 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.EditText;
-import com.tencent.mm.r.m;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.t.m;
+import com.tencent.mm.u.b;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.h;
 
@@ -16,39 +17,26 @@ final class StartUnbindQQ$2
   
   public final void onClick(View paramView)
   {
-    if (StartUnbindQQ.a(kPF) == null)
+    if (StartUnbindQQ.a(loT) == null)
     {
-      StartUnbindQQ.a(kPF, g.a(kPF, null, StartUnbindQQ.b(kPF), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+      StartUnbindQQ.a(loT, g.a(loT, loT.getString(2131234939), null, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
       {
         public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
         {
-          StartUnbindQQ.a(kPF, StartUnbindQQ.c(kPF).getText().toString());
-          StartUnbindQQ.c(kPF).setText("");
-          StartUnbindQQ.c(kPF).clearFocus();
-          kPF.hideVKB(StartUnbindQQ.c(kPF));
-          if ((StartUnbindQQ.d(kPF) == null) || (StartUnbindQQ.d(kPF).equals("")))
-          {
-            g.a(kPF, 2131427536, 2131430877, null);
-            return;
-          }
-          paramAnonymousDialogInterface = new com.tencent.mm.modelsimple.ah(5, StartUnbindQQ.d(kPF), "", "", "", false);
-          com.tencent.mm.model.ah.tE().d(paramAnonymousDialogInterface);
-          paramAnonymousDialogInterface = kPF;
-          StartUnbindQQ localStartUnbindQQ = kPF;
-          kPF.getString(2131430877);
-          StartUnbindQQ.a(paramAnonymousDialogInterface, g.a(localStartUnbindQQ, kPF.getString(2131428241), true, null));
+          paramAnonymousDialogInterface = new b("");
+          ah.tF().a(paramAnonymousDialogInterface, 0);
+          paramAnonymousDialogInterface = loT;
+          StartUnbindQQ localStartUnbindQQ = loT;
+          loT.getString(2131231028);
+          StartUnbindQQ.a(paramAnonymousDialogInterface, g.a(localStartUnbindQQ, loT.getString(2131234940), true, null));
         }
       }, new DialogInterface.OnClickListener()
       {
-        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
-        {
-          StartUnbindQQ.c(kPF).setText("");
-          StartUnbindQQ.a(kPF).dismiss();
-        }
+        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
       }));
       return;
     }
-    StartUnbindQQ.a(kPF).show();
+    StartUnbindQQ.a(loT).show();
   }
 }
 

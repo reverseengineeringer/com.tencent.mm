@@ -1,16 +1,13 @@
 package com.tencent.mm.ui.transmit;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-
 final class MsgRetransmitUI$5
-  implements DialogInterface.OnClickListener
+  implements a.a
 {
   MsgRetransmitUI$5(MsgRetransmitUI paramMsgRetransmitUI) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final void bph()
   {
-    lAT.finish();
+    mbK.finish();
   }
 }
 

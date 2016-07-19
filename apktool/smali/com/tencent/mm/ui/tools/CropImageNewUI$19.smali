@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/tools/CropImageNewUI;->Gb()V
+    value = Lcom/tencent/mm/ui/tools/CropImageNewUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic luq:Lcom/tencent/mm/ui/tools/CropImageNewUI;
+.field final synthetic lVs:Lcom/tencent/mm/ui/tools/CropImageNewUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 328
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$19;->luq:Lcom/tencent/mm/ui/tools/CropImageNewUI;
+    .line 330
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$19;->lVs:Lcom/tencent/mm/ui/tools/CropImageNewUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,12 +40,12 @@
     .locals 1
 
     .prologue
-    .line 332
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$19;->luq:Lcom/tencent/mm/ui/tools/CropImageNewUI;
+    .line 334
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$19;->lVs:Lcom/tencent/mm/ui/tools/CropImageNewUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/CropImageNewUI;->finish()V
 
-    .line 333
+    .line 335
     const/4 v0, 0x1
 
     return v0

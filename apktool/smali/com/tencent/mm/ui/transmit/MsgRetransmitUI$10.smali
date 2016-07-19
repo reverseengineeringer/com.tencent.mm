@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnCancelListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;->HJ(Ljava/lang/String;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,16 @@
 
 
 # instance fields
-.field final synthetic lAT:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
-
-.field final synthetic laH:Lcom/tencent/mm/pluginsdk/model/h;
+.field final synthetic mbK:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;Lcom/tencent/mm/pluginsdk/model/h;)V
+.method constructor <init>(Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;)V
     .locals 0
 
     .prologue
-    .line 783
-    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$10;->lAT:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
-
-    iput-object p2, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$10;->laH:Lcom/tencent/mm/pluginsdk/model/h;
+    .line 667
+    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$10;->mbK:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,27 +36,29 @@
 
 
 # virtual methods
-.method public final onCancel(Landroid/content/DialogInterface;)V
-    .locals 2
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 1
 
     .prologue
-    .line 786
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$10;->laH:Lcom/tencent/mm/pluginsdk/model/h;
+    .line 671
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$10;->mbK:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/model/h;->aPo()V
+    invoke-static {v0}, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;->b(Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;)Lcom/tencent/mm/ui/base/h;
 
-    .line 787
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$10;->lAT:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
+    move-result-object v0
 
-    const/4 v1, 0x1
+    if-eqz v0, :cond_0
 
-    iput-boolean v1, v0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;->lAS:Z
+    .line 672
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$10;->mbK:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
 
-    .line 788
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$10;->lAT:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
+    invoke-static {v0}, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;->b(Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;)Lcom/tencent/mm/ui/base/h;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;->finish()V
+    move-result-object v0
 
-    .line 789
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->cancel()V
+
+    .line 674
+    :cond_0
     return-void
 .end method

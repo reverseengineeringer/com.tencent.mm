@@ -7,7 +7,7 @@ final class CropImageNewUI$21
   
   public final void run()
   {
-    CropImageNewUI.a(luq);
+    CropImageNewUI.a(lVs);
   }
 }
 

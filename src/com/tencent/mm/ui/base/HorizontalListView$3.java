@@ -15,21 +15,21 @@ final class HorizontalListView$3
   
   public final boolean onDown(MotionEvent paramMotionEvent)
   {
-    return kCs.bcq();
+    return lby.bhF();
   }
   
   public final boolean onFling(MotionEvent paramMotionEvent1, MotionEvent paramMotionEvent2, float paramFloat1, float paramFloat2)
   {
-    return kCs.E(paramFloat1);
+    return lby.C(paramFloat1);
   }
   
   public final boolean onScroll(MotionEvent arg1, MotionEvent paramMotionEvent2, float paramFloat1, float paramFloat2)
   {
-    synchronized (kCs)
+    synchronized (lby)
     {
-      paramMotionEvent2 = kCs;
-      kCj += (int)paramFloat1;
-      kCs.requestLayout();
+      paramMotionEvent2 = lby;
+      lbp += (int)paramFloat1;
+      lby.requestLayout();
       return true;
     }
   }
@@ -40,20 +40,20 @@ final class HorizontalListView$3
     int i = 0;
     for (;;)
     {
-      if (i < kCs.getChildCount())
+      if (i < lby.getChildCount())
       {
-        View localView = kCs.getChildAt(i);
+        View localView = lby.getChildAt(i);
         int j = localView.getLeft();
         int k = localView.getRight();
         localRect.set(j, localView.getTop(), k, localView.getBottom());
         if (!localRect.contains((int)paramMotionEvent.getX(), (int)paramMotionEvent.getY())) {
           break label207;
         }
-        if (HorizontalListView.c(kCs) != null) {
-          HorizontalListView.c(kCs).onItemClick(kCs, localView, HorizontalListView.d(kCs) + 1 + i, kCs.pL.getItemId(HorizontalListView.d(kCs) + 1 + i));
+        if (HorizontalListView.c(lby) != null) {
+          HorizontalListView.c(lby).onItemClick(lby, localView, HorizontalListView.d(lby) + 1 + i, lby.pZ.getItemId(HorizontalListView.d(lby) + 1 + i));
         }
-        if (HorizontalListView.e(kCs) != null) {
-          HorizontalListView.e(kCs).onItemSelected(kCs, localView, HorizontalListView.d(kCs) + 1 + i, kCs.pL.getItemId(HorizontalListView.d(kCs) + 1 + i));
+        if (HorizontalListView.e(lby) != null) {
+          HorizontalListView.e(lby).onItemSelected(lby, localView, HorizontalListView.d(lby) + 1 + i, lby.pZ.getItemId(HorizontalListView.d(lby) + 1 + i));
         }
       }
       return true;

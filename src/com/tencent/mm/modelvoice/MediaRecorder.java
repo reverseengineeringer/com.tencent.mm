@@ -4,7 +4,7 @@ import com.tencent.mm.pointers.PByteArray;
 
 public class MediaRecorder
 {
-  public static final int[] cgD = { 13, 14, 16, 18, 20, 21, 27, 32 };
+  public static final int[] cbS = { 13, 14, 16, 18, 20, 21, 27, 32 };
   
   public static native int SilkDecInit(int paramInt1, byte[] paramArrayOfByte, int paramInt2);
   

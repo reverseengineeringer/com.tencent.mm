@@ -4,13 +4,13 @@
 
 
 # static fields
-.field public static fTL:Z
+.field public static gdf:Z
 
-.field public static fTM:Z
+.field public static gdg:Z
 
-.field public static fTN:Z
+.field public static gdh:Z
 
-.field public static fTO:Z
+.field public static gdi:Z
 
 
 # direct methods
@@ -20,39 +20,39 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 6
+    .line 8
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/tencent/mm/plugin/report/a/c;->fTL:Z
-
-    .line 10
-    sput-boolean v1, Lcom/tencent/mm/plugin/report/a/c;->fTM:Z
-
-    .line 11
-    sput-boolean v1, Lcom/tencent/mm/plugin/report/a/c;->fTN:Z
+    sput-boolean v0, Lcom/tencent/mm/plugin/report/a/c;->gdf:Z
 
     .line 12
-    sput-boolean v1, Lcom/tencent/mm/plugin/report/a/c;->fTO:Z
+    sput-boolean v1, Lcom/tencent/mm/plugin/report/a/c;->gdg:Z
+
+    .line 13
+    sput-boolean v1, Lcom/tencent/mm/plugin/report/a/c;->gdh:Z
+
+    .line 14
+    sput-boolean v1, Lcom/tencent/mm/plugin/report/a/c;->gdi:Z
 
     return-void
 .end method
 
-.method public static a(ZZZZ)V
+.method public static b(ZZZZ)V
     .locals 0
 
     .prologue
-    .line 15
-    sput-boolean p0, Lcom/tencent/mm/plugin/report/a/c;->fTL:Z
-
-    .line 16
-    sput-boolean p1, Lcom/tencent/mm/plugin/report/a/c;->fTM:Z
-
     .line 17
-    sput-boolean p2, Lcom/tencent/mm/plugin/report/a/c;->fTN:Z
+    sput-boolean p0, Lcom/tencent/mm/plugin/report/a/c;->gdf:Z
 
     .line 18
-    sput-boolean p3, Lcom/tencent/mm/plugin/report/a/c;->fTO:Z
+    sput-boolean p1, Lcom/tencent/mm/plugin/report/a/c;->gdg:Z
 
     .line 19
+    sput-boolean p2, Lcom/tencent/mm/plugin/report/a/c;->gdh:Z
+
+    .line 20
+    sput-boolean p3, Lcom/tencent/mm/plugin/report/a/c;->gdi:Z
+
+    .line 21
     return-void
 .end method

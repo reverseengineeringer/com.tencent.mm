@@ -4,19 +4,19 @@
 
 
 # instance fields
-.field public gGQ:I
+.field public gNr:I
 
-.field public gHi:I
+.field public gOn:I
 
-.field public gHj:I
+.field public gOo:I
 
-.field public gHk:I
+.field public gOp:I
 
-.field public gHl:I
+.field public gOq:I
 
-.field public gHm:I
+.field public gOr:I
 
-.field public gHn:J
+.field public gOs:J
 
 
 # direct methods
@@ -30,27 +30,27 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 7
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/a/a/a/a;->gHi:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/a/a/a/a;->gOn:I
 
     .line 8
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/a/a/a/a;->gHj:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/a/a/a/a;->gOo:I
 
     .line 9
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/a/a/a/a;->gHk:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/a/a/a/a;->gOp:I
 
     .line 10
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/a/a/a/a;->gHl:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/a/a/a/a;->gOq:I
 
     .line 11
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/a/a/a/a;->gHm:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/a/a/a/a;->gOr:I
 
     .line 12
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/a/a/a/a;->gGQ:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/a/a/a/a;->gNr:I
 
     .line 14
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/a/a/a/a;->gHn:J
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/a/a/a/a;->gOs:J
 
     return-void
 .end method

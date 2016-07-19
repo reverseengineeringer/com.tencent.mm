@@ -6,66 +6,66 @@ import android.view.View;
 final class DragSortListView$d
   implements Runnable
 {
-  private boolean lEq;
-  private long lEr;
-  private long lEs;
-  private int lEt;
-  private float lEu;
-  private long lEv;
-  int lEw;
-  private float lEx;
-  boolean lEy = false;
+  private boolean mfg;
+  private long mfh;
+  private long mfi;
+  private int mfj;
+  private float mfk;
+  private long mfl;
+  int mfm;
+  private float mfn;
+  boolean mfo = false;
   
   public DragSortListView$d(DragSortListView paramDragSortListView) {}
   
-  public final void bjF()
+  public final void bpD()
   {
-    lEn.removeCallbacks(this);
-    lEy = false;
+    mfd.removeCallbacks(this);
+    mfo = false;
   }
   
   public final void run()
   {
-    if (lEq)
+    if (mfg)
     {
-      lEy = false;
+      mfo = false;
       return;
     }
-    int j = lEn.getFirstVisiblePosition();
-    int i = lEn.getLastVisiblePosition();
-    int m = lEn.getCount();
-    int k = lEn.getPaddingTop();
-    int n = lEn.getHeight() - k - lEn.getPaddingBottom();
-    int i1 = Math.min(DragSortListView.f(lEn), DragSortListView.s(lEn) + DragSortListView.d(lEn));
-    int i2 = Math.max(DragSortListView.f(lEn), DragSortListView.s(lEn) - DragSortListView.d(lEn));
+    int j = mfd.getFirstVisiblePosition();
+    int i = mfd.getLastVisiblePosition();
+    int m = mfd.getCount();
+    int k = mfd.getPaddingTop();
+    int n = mfd.getHeight() - k - mfd.getPaddingBottom();
+    int i1 = Math.min(DragSortListView.f(mfd), DragSortListView.s(mfd) + DragSortListView.d(mfd));
+    int i2 = Math.max(DragSortListView.f(mfd), DragSortListView.s(mfd) - DragSortListView.d(mfd));
     View localView;
-    if (lEw == 0)
+    if (mfm == 0)
     {
-      localView = lEn.getChildAt(0);
+      localView = mfd.getChildAt(0);
       if (localView == null)
       {
-        lEy = false;
+        mfo = false;
         return;
       }
       if ((j == 0) && (localView.getTop() == k))
       {
-        lEy = false;
+        mfo = false;
         return;
       }
-      lEx = DragSortListView.v(lEn).G((DragSortListView.t(lEn) - i2) / DragSortListView.u(lEn));
-      lEs = SystemClock.uptimeMillis();
-      lEu = ((float)(lEs - lEr));
-      lEt = Math.round(lEx * lEu);
-      if (lEt < 0) {
+      mfn = DragSortListView.v(mfd).F((DragSortListView.t(mfd) - i2) / DragSortListView.u(mfd));
+      mfi = SystemClock.uptimeMillis();
+      mfk = ((float)(mfi - mfh));
+      mfj = Math.round(mfn * mfk);
+      if (mfj < 0) {
         break label461;
       }
-      lEt = Math.min(n, lEt);
+      mfj = Math.min(n, mfj);
       i = j;
     }
     for (;;)
     {
-      localView = lEn.getChildAt(i - j);
-      m = localView.getTop() + lEt;
+      localView = mfd.getChildAt(i - j);
+      m = localView.getTop() + mfj;
       j = m;
       if (i == 0)
       {
@@ -74,43 +74,43 @@ final class DragSortListView$d
           j = k;
         }
       }
-      DragSortListView.a(lEn, true);
-      lEn.setSelectionFromTop(i, j - k);
-      lEn.layoutChildren();
-      lEn.invalidate();
-      DragSortListView.a(lEn, false);
-      DragSortListView.c(lEn, i, localView);
-      lEr = lEs;
-      lEn.post(this);
+      DragSortListView.a(mfd, true);
+      mfd.setSelectionFromTop(i, j - k);
+      mfd.layoutChildren();
+      mfd.invalidate();
+      DragSortListView.a(mfd, false);
+      DragSortListView.c(mfd, i, localView);
+      mfh = mfi;
+      mfd.post(this);
       return;
-      localView = lEn.getChildAt(i - j);
+      localView = mfd.getChildAt(i - j);
       if (localView == null)
       {
-        lEy = false;
+        mfo = false;
         return;
       }
       if ((i == m - 1) && (localView.getBottom() <= n + k))
       {
-        lEy = false;
+        mfo = false;
         return;
       }
-      lEx = (-DragSortListView.v(lEn).G((i1 - DragSortListView.w(lEn)) / DragSortListView.x(lEn)));
+      mfn = (-DragSortListView.v(mfd).F((i1 - DragSortListView.w(mfd)) / DragSortListView.x(mfd)));
       break;
       label461:
-      lEt = Math.max(-n, lEt);
+      mfj = Math.max(-n, mfj);
     }
   }
   
-  public final void sg(int paramInt)
+  public final void uk(int paramInt)
   {
-    if (!lEy)
+    if (!mfo)
     {
-      lEq = false;
-      lEy = true;
-      lEv = SystemClock.uptimeMillis();
-      lEr = lEv;
-      lEw = paramInt;
-      lEn.post(this);
+      mfg = false;
+      mfo = true;
+      mfl = SystemClock.uptimeMillis();
+      mfh = mfl;
+      mfm = paramInt;
+      mfd.post(this);
     }
   }
 }

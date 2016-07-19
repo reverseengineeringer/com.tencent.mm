@@ -15,21 +15,21 @@
 
 
 # instance fields
-.field public cHk:Landroid/widget/TextView;
+.field public cEo:Landroid/widget/TextView;
 
-.field public cHn:Landroid/widget/ImageView;
+.field public cEr:Landroid/widget/ImageView;
 
-.field public czS:Landroid/widget/ImageView;
+.field public cTv:I
 
-.field public eLV:I
+.field public cui:Landroid/widget/ImageView;
 
-.field public gzB:Landroid/widget/ImageView;
+.field public gGd:Landroid/widget/ImageView;
 
-.field public iJb:Landroid/widget/TextView;
+.field public jfX:Landroid/widget/TextView;
 
-.field public iJc:Landroid/widget/ImageView;
+.field public jfY:Landroid/widget/ImageView;
 
-.field final synthetic iJd:Lcom/tencent/mm/pluginsdk/ui/applet/e;
+.field final synthetic jfZ:Lcom/tencent/mm/pluginsdk/ui/applet/e;
 
 
 # direct methods
@@ -38,7 +38,7 @@
 
     .prologue
     .line 783
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/e$b;->iJd:Lcom/tencent/mm/pluginsdk/ui/applet/e;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/e$b;->jfZ:Lcom/tencent/mm/pluginsdk/ui/applet/e;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

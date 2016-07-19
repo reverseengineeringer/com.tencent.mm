@@ -6,7 +6,7 @@ import android.content.DialogInterface.OnClickListener;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelfriend.u;
 import com.tencent.mm.plugin.a.b;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.base.g;
 
 final class RegByMobileRegAIOUI$10
@@ -16,17 +16,17 @@ final class RegByMobileRegAIOUI$10
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramDialogInterface = kuT;
-    RegByMobileRegAIOUI localRegByMobileRegAIOUI = kuT;
-    kuT.getString(2131430877);
-    RegByMobileRegAIOUI.a(paramDialogInterface, g.a(localRegByMobileRegAIOUI, kuT.getString(2131427730), true, new DialogInterface.OnCancelListener()
+    paramDialogInterface = kUa;
+    RegByMobileRegAIOUI localRegByMobileRegAIOUI = kUa;
+    kUa.getString(2131231028);
+    RegByMobileRegAIOUI.a(paramDialogInterface, g.a(localRegByMobileRegAIOUI, kUa.getString(2131234382), true, new DialogInterface.OnCancelListener()
     {
       public final void onCancel(DialogInterface paramAnonymousDialogInterface) {}
     }));
-    paramDialogInterface = new u(RegByMobileRegAIOUI.g(kuT) + RegByMobileRegAIOUI.h(kuT), 14, "", 0, "");
-    ah.tE().d(paramDialogInterface);
-    b.kC("RE200_250");
-    RegByMobileRegAIOUI.q(kuT);
+    paramDialogInterface = new u(RegByMobileRegAIOUI.g(kUa) + RegByMobileRegAIOUI.h(kUa), 14, "", 0, "");
+    ah.tF().a(paramDialogInterface, 0);
+    b.ll("RE200_250");
+    RegByMobileRegAIOUI.q(kUa);
   }
 }
 

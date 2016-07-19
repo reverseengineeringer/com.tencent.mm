@@ -7,7 +7,7 @@ final class C2Java$3
 {
   public final void run()
   {
-    z.Fi().onNotify(0, 24, n.aG(7));
+    z.FE().onNotify(0, 24, n.aY(7));
   }
 }
 

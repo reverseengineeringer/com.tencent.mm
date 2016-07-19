@@ -2,7 +2,7 @@ package com.tencent.mm.network;
 
 public abstract interface ad$a
 {
-  public abstract int C(byte[] paramArrayOfByte);
+  public abstract int FK();
 }
 
 /* Location:

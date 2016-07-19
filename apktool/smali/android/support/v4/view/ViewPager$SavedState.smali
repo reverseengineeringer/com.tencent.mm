@@ -16,12 +16,21 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Landroid/support/v4/view/ViewPager$SavedState;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field gI:Landroid/os/Parcelable;
+.field hd:Landroid/os/Parcelable;
 
-.field gJ:Ljava/lang/ClassLoader;
+.field he:Ljava/lang/ClassLoader;
 
 .field position:I
 
@@ -88,10 +97,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v4/view/ViewPager$SavedState;->gI:Landroid/os/Parcelable;
+    iput-object v0, p0, Landroid/support/v4/view/ViewPager$SavedState;->hd:Landroid/os/Parcelable;
 
     .line 1256
-    iput-object p2, p0, Landroid/support/v4/view/ViewPager$SavedState;->gJ:Ljava/lang/ClassLoader;
+    iput-object p2, p0, Landroid/support/v4/view/ViewPager$SavedState;->he:Ljava/lang/ClassLoader;
 
     .line 1257
     return-void
@@ -171,7 +180,7 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 1227
-    iget-object v0, p0, Landroid/support/v4/view/ViewPager$SavedState;->gI:Landroid/os/Parcelable;
+    iget-object v0, p0, Landroid/support/v4/view/ViewPager$SavedState;->hd:Landroid/os/Parcelable;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 

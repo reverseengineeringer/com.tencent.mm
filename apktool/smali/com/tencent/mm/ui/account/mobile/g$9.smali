@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic kyB:[I
+.field static final synthetic kXI:[I
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 80
-    invoke-static {}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->bci()[I
+    invoke-static {}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->bhu()[I
 
     move-result-object v0
 
@@ -32,12 +32,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/tencent/mm/ui/account/mobile/g$9;->kyB:[I
+    sput-object v0, Lcom/tencent/mm/ui/account/mobile/g$9;->kXI:[I
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/ui/account/mobile/g$9;->kyB:[I
+    sget-object v0, Lcom/tencent/mm/ui/account/mobile/g$9;->kXI:[I
 
-    sget v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kzi:I
+    sget v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kYp:I
 
     add-int/lit8 v1, v1, -0x1
 
@@ -49,9 +49,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/tencent/mm/ui/account/mobile/g$9;->kyB:[I
+    sget-object v0, Lcom/tencent/mm/ui/account/mobile/g$9;->kXI:[I
 
-    sget v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kzj:I
+    sget v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kYq:I
 
     add-int/lit8 v1, v1, -0x1
 
@@ -63,9 +63,9 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/tencent/mm/ui/account/mobile/g$9;->kyB:[I
+    sget-object v0, Lcom/tencent/mm/ui/account/mobile/g$9;->kXI:[I
 
-    sget v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kzk:I
+    sget v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kYr:I
 
     add-int/lit8 v1, v1, -0x1
 
@@ -77,9 +77,9 @@
 
     :goto_2
     :try_start_3
-    sget-object v0, Lcom/tencent/mm/ui/account/mobile/g$9;->kyB:[I
+    sget-object v0, Lcom/tencent/mm/ui/account/mobile/g$9;->kXI:[I
 
-    sget v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kzl:I
+    sget v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kYs:I
 
     add-int/lit8 v1, v1, -0x1
 

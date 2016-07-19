@@ -2,40 +2,40 @@ package com.tencent.mm.model;
 
 import com.tencent.mm.compatible.util.d;
 import com.tencent.mm.compatible.util.e;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.sdk.platformtools.j;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class c$b
   implements Runnable
 {
-  String aFT;
-  String bzM;
+  String arZ;
+  String bsP;
   
   public c$b(String paramString1, String paramString2)
   {
-    aFT = paramString1;
-    bzM = paramString2;
+    arZ = paramString1;
+    bsP = paramString2;
   }
   
   public final void run()
   {
-    if ((ay.kz(aFT)) || (ay.kz(bzM))) {}
+    if ((be.kf(arZ)) || (be.kf(bsP))) {}
     do
     {
       return;
-      u.d("!32@/B4Tb64lLpIaKqQrIg/z8CiDfdaO9WDN", "MoveDataFiles :" + aFT + " to :" + bzM);
-    } while ((!e.oW()) || (!bzM.substring(0, d.bxd.length()).equals(d.bxd)));
-    j.i(aFT + "image/", bzM + "image/", true);
-    j.i(aFT + "image2/", bzM + "image2/", true);
-    j.i(aFT + "avatar/", bzM + "avatar/", true);
-    j.i(aFT + "video/", bzM + "video/", true);
-    j.i(aFT + "voice/", bzM + "voice/", true);
-    j.i(aFT + "voice2/", bzM + "voice2/", true);
-    j.i(aFT + "package/", bzM + "package/", true);
-    j.i(aFT + "emoji/", bzM + "emoji/", true);
-    j.i(aFT + "mailapp/", bzM + "mailapp/", true);
-    j.i(aFT + "brandicon/", bzM + "brandicon/", true);
+      v.d("MicroMsg.AccountStorage", "MoveDataFiles :" + arZ + " to :" + bsP);
+    } while ((!e.no()) || (!bsP.substring(0, d.bpf.length()).equals(d.bpf)));
+    j.l(arZ + "image/", bsP + "image/", true);
+    j.l(arZ + "image2/", bsP + "image2/", true);
+    j.l(arZ + "avatar/", bsP + "avatar/", true);
+    j.l(arZ + "video/", bsP + "video/", true);
+    j.l(arZ + "voice/", bsP + "voice/", true);
+    j.l(arZ + "voice2/", bsP + "voice2/", true);
+    j.l(arZ + "package/", bsP + "package/", true);
+    j.l(arZ + "emoji/", bsP + "emoji/", true);
+    j.l(arZ + "mailapp/", bsP + "mailapp/", true);
+    j.l(arZ + "brandicon/", bsP + "brandicon/", true);
   }
 }
 

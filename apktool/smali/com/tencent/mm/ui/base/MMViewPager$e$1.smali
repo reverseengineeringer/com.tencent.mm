@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kIl:Lcom/tencent/mm/ui/base/MMViewPager$e;
+.field final synthetic lhy:Lcom/tencent/mm/ui/base/MMViewPager$e;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 76
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->kIl:Lcom/tencent/mm/ui/base/MMViewPager$e;
+    .line 260
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->lhy:Lcom/tencent/mm/ui/base/MMViewPager$e;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,19 +37,19 @@
 
 # virtual methods
 .method public final run()V
-    .locals 6
+    .locals 8
 
     .prologue
-    const/4 v5, 0x1
+    const/4 v4, 0x1
 
-    const/high16 v4, 0x40000000    # 2.0f
+    const/4 v7, 0x0
 
-    const/4 v1, 0x0
+    const/high16 v6, 0x40000000    # 2.0f
 
-    .line 81
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->kIl:Lcom/tencent/mm/ui/base/MMViewPager$e;
+    .line 265
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->lhy:Lcom/tencent/mm/ui/base/MMViewPager$e;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMViewPager$e;->kIi:Lcom/tencent/mm/ui/base/MMViewPager;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMViewPager$e;->lhv:Lcom/tencent/mm/ui/base/MMViewPager;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->a(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
@@ -59,26 +59,17 @@
 
     move-result-object v0
 
-    .line 82
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->kIl:Lcom/tencent/mm/ui/base/MMViewPager$e;
+    .line 266
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->lhy:Lcom/tencent/mm/ui/base/MMViewPager$e;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/base/MMViewPager$e;->kIk:[F
+    iget-object v1, v1, Lcom/tencent/mm/ui/base/MMViewPager$e;->lhx:[F
 
-    invoke-virtual {v0, v2}, Landroid/graphics/Matrix;->getValues([F)V
+    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->getValues([F)V
 
-    .line 84
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->kIl:Lcom/tencent/mm/ui/base/MMViewPager$e;
+    .line 268
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->lhy:Lcom/tencent/mm/ui/base/MMViewPager$e;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMViewPager$e;->kIk:[F
-
-    const/4 v2, 0x2
-
-    aget v2, v0, v2
-
-    .line 86
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->kIl:Lcom/tencent/mm/ui/base/MMViewPager$e;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMViewPager$e;->kIi:Lcom/tencent/mm/ui/base/MMViewPager;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMViewPager$e;->lhv:Lcom/tencent/mm/ui/base/MMViewPager;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->a(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
@@ -88,112 +79,155 @@
 
     move-result v0
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->kIl:Lcom/tencent/mm/ui/base/MMViewPager$e;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->lhy:Lcom/tencent/mm/ui/base/MMViewPager$e;
 
-    iget-object v3, v3, Lcom/tencent/mm/ui/base/MMViewPager$e;->kIi:Lcom/tencent/mm/ui/base/MMViewPager;
+    iget-object v1, v1, Lcom/tencent/mm/ui/base/MMViewPager$e;->lhv:Lcom/tencent/mm/ui/base/MMViewPager;
 
-    invoke-static {v3}, Lcom/tencent/mm/ui/base/MMViewPager;->a(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    invoke-static {v1}, Lcom/tencent/mm/ui/base/MMViewPager;->a(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v3}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getImageWidth()I
+    iget v1, v1, Lcom/tencent/mm/ui/base/MultiTouchImageView;->imageHeight:I
+
+    int-to-float v1, v1
+
+    mul-float/2addr v1, v0
+
+    .line 270
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->lhy:Lcom/tencent/mm/ui/base/MMViewPager$e;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMViewPager$e;->lhx:[F
+
+    const/4 v2, 0x5
+
+    aget v0, v0, v2
+
+    add-float v2, v0, v1
+
+    .line 272
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->lhy:Lcom/tencent/mm/ui/base/MMViewPager$e;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMViewPager$e;->lhv:Lcom/tencent/mm/ui/base/MMViewPager;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->d(Lcom/tencent/mm/ui/base/MMViewPager;)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    .line 274
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->lhy:Lcom/tencent/mm/ui/base/MMViewPager$e;
+
+    iget-object v3, v3, Lcom/tencent/mm/ui/base/MMViewPager$e;->lhv:Lcom/tencent/mm/ui/base/MMViewPager;
+
+    invoke-static {v3}, Lcom/tencent/mm/ui/base/MMViewPager;->d(Lcom/tencent/mm/ui/base/MMViewPager;)I
 
     move-result v3
 
     int-to-float v3, v3
 
-    mul-float/2addr v0, v3
+    cmpg-float v3, v1, v3
 
-    .line 90
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->kIl:Lcom/tencent/mm/ui/base/MMViewPager$e;
+    if-gez v3, :cond_0
 
-    iget-object v3, v3, Lcom/tencent/mm/ui/base/MMViewPager$e;->kIi:Lcom/tencent/mm/ui/base/MMViewPager;
+    .line 275
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->lhy:Lcom/tencent/mm/ui/base/MMViewPager$e;
 
-    invoke-static {v3}, Lcom/tencent/mm/ui/base/MMViewPager;->b(Lcom/tencent/mm/ui/base/MMViewPager;)I
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMViewPager$e;->lhv:Lcom/tencent/mm/ui/base/MMViewPager;
 
-    move-result v3
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->d(Lcom/tencent/mm/ui/base/MMViewPager;)I
 
-    int-to-float v3, v3
+    move-result v0
 
-    cmpg-float v3, v0, v3
+    int-to-float v0, v0
 
-    if-gez v3, :cond_2
+    div-float/2addr v0, v6
 
-    .line 91
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->kIl:Lcom/tencent/mm/ui/base/MMViewPager$e;
+    div-float/2addr v1, v6
 
-    iget-object v3, v3, Lcom/tencent/mm/ui/base/MMViewPager$e;->kIi:Lcom/tencent/mm/ui/base/MMViewPager;
+    add-float/2addr v0, v1
 
-    invoke-static {v3}, Lcom/tencent/mm/ui/base/MMViewPager;->b(Lcom/tencent/mm/ui/base/MMViewPager;)I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    div-float/2addr v3, v4
-
-    div-float/2addr v0, v4
-
-    sub-float v0, v3, v0
-
-    .line 94
-    :goto_0
+    .line 278
+    :cond_0
     sub-float/2addr v0, v2
 
-    .line 96
-    cmpl-float v2, v0, v1
+    .line 280
+    cmpg-float v1, v0, v7
 
-    if-ltz v2, :cond_0
+    if-gtz v1, :cond_1
 
-    .line 97
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->kIl:Lcom/tencent/mm/ui/base/MMViewPager$e;
+    .line 282
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->lhy:Lcom/tencent/mm/ui/base/MMViewPager$e;
 
-    iput-boolean v5, v2, Lcom/tencent/mm/ui/base/MMViewPager$e;->kIj:Z
+    iput-boolean v4, v1, Lcom/tencent/mm/ui/base/MMViewPager$e;->lhw:Z
 
-    .line 107
-    :goto_1
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->kIl:Lcom/tencent/mm/ui/base/MMViewPager$e;
+    .line 292
+    :goto_0
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->lhy:Lcom/tencent/mm/ui/base/MMViewPager$e;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/base/MMViewPager$e;->kIi:Lcom/tencent/mm/ui/base/MMViewPager;
+    iget-object v1, v1, Lcom/tencent/mm/ui/base/MMViewPager$e;->lhv:Lcom/tencent/mm/ui/base/MMViewPager;
 
-    invoke-static {v2}, Lcom/tencent/mm/ui/base/MMViewPager;->a(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    invoke-static {v1}, Lcom/tencent/mm/ui/base/MMViewPager;->a(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2, v0, v1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
+    invoke-virtual {v1, v7, v0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->p(FF)V
 
-    .line 111
+    .line 295
     return-void
 
-    .line 98
-    :cond_0
+    .line 283
+    :cond_1
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
-    move-result v2
+    move-result v1
 
-    const/high16 v3, 0x40a00000    # 5.0f
+    const/high16 v2, 0x40a00000    # 5.0f
 
-    cmpg-float v2, v2, v3
+    cmpg-float v1, v1, v2
 
-    if-gtz v2, :cond_1
+    if-gtz v1, :cond_2
 
-    .line 100
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->kIl:Lcom/tencent/mm/ui/base/MMViewPager$e;
+    .line 285
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager$e$1;->lhy:Lcom/tencent/mm/ui/base/MMViewPager$e;
 
-    iput-boolean v5, v2, Lcom/tencent/mm/ui/base/MMViewPager$e;->kIj:Z
+    iput-boolean v4, v1, Lcom/tencent/mm/ui/base/MMViewPager$e;->lhw:Z
 
-    goto :goto_1
+    goto :goto_0
 
-    .line 104
-    :cond_1
-    const/high16 v2, 0x40800000    # 4.0f
-
-    div-float/2addr v0, v2
-
-    goto :goto_1
-
+    .line 288
     :cond_2
-    move v0, v1
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v1
+
+    float-to-double v2, v1
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    float-to-double v0, v0
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v0
+
+    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
+
+    sub-double/2addr v0, v4
+
+    const-wide/high16 v4, 0x4000000000000000L    # 2.0
+
+    invoke-static {v0, v1, v4, v5}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v0
+
+    sub-double v0, v2, v0
+
+    double-to-float v0, v0
+
+    mul-float/2addr v0, v6
 
     goto :goto_0
 .end method

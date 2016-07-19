@@ -2,7 +2,7 @@ package com.tencent.mm.ui.contact;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.platformtools.s;
 
 final class ContactRemarkInfoModUI$19
   implements View.OnClickListener
@@ -11,10 +11,10 @@ final class ContactRemarkInfoModUI$19
   
   public final void onClick(View paramView)
   {
-    if ((t.kz(ContactRemarkInfoModUI.m(ljV))) || (ContactRemarkInfoModUI.p(ljV)))
+    if ((s.kf(ContactRemarkInfoModUI.m(lKg))) || (ContactRemarkInfoModUI.p(lKg)))
     {
-      ContactRemarkInfoModUI.a(ljV, false);
-      ContactRemarkInfoModUI.k(ljV);
+      ContactRemarkInfoModUI.a(lKg, false);
+      ContactRemarkInfoModUI.k(lKg);
     }
   }
 }

@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic lrN:Ljava/util/HashMap;
+.field final synthetic lSr:Ljava/util/HashMap;
 
-.field final synthetic lrP:Lcom/tencent/mm/ui/friend/InviteFriendUI$1;
+.field final synthetic lSt:Lcom/tencent/mm/ui/friend/InviteFriendUI$1;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 281
-    iput-object p1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$3;->lrP:Lcom/tencent/mm/ui/friend/InviteFriendUI$1;
+    iput-object p1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$3;->lSt:Lcom/tencent/mm/ui/friend/InviteFriendUI$1;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$3;->lrN:Ljava/util/HashMap;
+    iput-object p2, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$3;->lSr:Ljava/util/HashMap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
 
     .prologue
     .line 285
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$3;->lrN:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$3;->lSr:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 

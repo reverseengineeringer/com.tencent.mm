@@ -1,57 +1,75 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.d.a.jh;
-import com.tencent.mm.model.ar;
-import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.am.a;
-import com.tencent.mm.ui.base.p;
+import android.content.Context;
+import android.content.res.Resources;
+import android.text.TextPaint;
+import android.util.DisplayMetrics;
+import com.tencent.mm.az.a;
+import com.tencent.mm.v.m.b.b.a;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
 
-final class t$a
-  implements am.a
+public final class t$a
 {
-  private Set kSe;
-  private p kSf;
-  private dl kSg;
+  private static DisplayMetrics lsa = null;
   
-  public t$a(Set paramSet, p paramp, dl paramdl)
+  public static a a(Context paramContext, TextPaint paramTextPaint, List<m.b.b.a> paramList, int paramInt)
   {
-    kSe = paramSet;
-    kSf = paramp;
-    kSg = paramdl;
-  }
-  
-  public final boolean vd()
-  {
-    Object localObject = kSe;
-    LinkedList localLinkedList = new LinkedList();
-    localObject = ((Set)localObject).iterator();
-    while (((Iterator)localObject).hasNext())
-    {
-      Long localLong = (Long)((Iterator)localObject).next();
-      localLinkedList.add(localLong);
-      jh localjh = new jh();
-      aFM.type = 3;
-      aFM.avg = localLong.longValue();
-      a.jUF.j(localjh);
+    a locala = new a();
+    if (lsa == null) {
+      lsa = paramContext.getResources().getDisplayMetrics();
     }
-    ar.n(localLinkedList);
-    return true;
-  }
-  
-  public final boolean ve()
-  {
-    if (kSf != null)
+    DisplayMetrics localDisplayMetrics = lsa;
+    paramList = paramList.iterator();
+    float f1 = 0.0F;
+    if (paramList.hasNext())
     {
-      kSf.dismiss();
-      if (kSg != null) {
-        kSg.rd(dl.a.lcC);
+      float f2 = paramTextPaint.measureText(nextname);
+      if (f1 >= f2) {
+        break label225;
+      }
+      f1 = f2;
+    }
+    label225:
+    for (;;)
+    {
+      break;
+      int i = (int)f1;
+      i = a.fromDPToPix(paramContext, 30) * 2 + i;
+      int j = a.fromDPToPix(paramContext, 95);
+      if (i < j) {
+        i = j;
+      }
+      for (;;)
+      {
+        if (paramInt - i / 2 < 0)
+        {
+          lsb = 0;
+          lsc = (widthPixels - (i + 0));
+          return locala;
+        }
+        if (widthPixels - (i / 2 + paramInt) < 0)
+        {
+          lsb = (widthPixels - (i + 0));
+          lsc = 0;
+          return locala;
+        }
+        lsb = (paramInt - i / 2);
+        lsc = (widthPixels - (i / 2 + paramInt));
+        return locala;
       }
     }
-    return true;
+  }
+  
+  public static final class a
+  {
+    public int lsb;
+    public int lsc;
+    
+    public final String toString()
+    {
+      return " marginLeft:" + lsb + " marginRight:" + lsc;
+    }
   }
 }
 

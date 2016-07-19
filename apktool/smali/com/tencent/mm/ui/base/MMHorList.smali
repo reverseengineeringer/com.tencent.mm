@@ -10,53 +10,71 @@
     }
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroid/widget/AdapterView",
+        "<",
+        "Landroid/widget/ListAdapter;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field private fgb:Z
+.field public fpa:Z
 
-.field private kEK:Lcom/tencent/mm/ui/base/MMHorList$a;
+.field public ldN:Lcom/tencent/mm/ui/base/MMHorList$a;
 
-.field private kEL:I
+.field private ldO:I
 
-.field private kEM:I
+.field private ldP:I
 
-.field private kEN:I
+.field public ldQ:I
 
-.field private kEO:I
+.field private ldR:I
 
-.field private kEP:I
+.field private ldS:I
 
-.field private kEQ:Ljava/util/Queue;
+.field private ldT:Ljava/util/Queue;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Queue",
+            "<",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private kER:Z
+.field private ldU:Z
 
-.field private kES:Z
+.field private ldV:Z
 
-.field protected kET:Landroid/widget/Scroller;
+.field protected ldW:Landroid/widget/Scroller;
 
-.field private kEU:Landroid/view/GestureDetector;
+.field private ldX:Landroid/view/GestureDetector;
 
-.field private kEV:Landroid/widget/AdapterView$OnItemSelectedListener;
+.field private ldY:Landroid/widget/AdapterView$OnItemSelectedListener;
 
-.field private kEW:Landroid/widget/AdapterView$OnItemClickListener;
+.field private ldZ:Landroid/widget/AdapterView$OnItemClickListener;
 
-.field private kEX:Landroid/widget/ListAdapter;
+.field private lea:Landroid/widget/ListAdapter;
 
-.field private kEY:Ljava/lang/Runnable;
+.field private leb:Ljava/lang/Runnable;
 
-.field private kEZ:Z
+.field public lec:Z
 
-.field private kFa:Z
+.field public led:Z
 
-.field private kFb:I
+.field public lee:I
 
-.field private kFc:I
+.field private lef:I
 
-.field private kFd:Z
+.field private leg:Z
 
-.field private kFe:Landroid/database/DataSetObserver;
+.field private leh:Landroid/database/DataSetObserver;
 
-.field private kFf:Landroid/view/GestureDetector$OnGestureListener;
+.field private lei:Landroid/view/GestureDetector$OnGestureListener;
 
 .field private offset:I
 
@@ -74,59 +92,59 @@
     .line 43
     const/high16 v0, 0x20000000
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEP:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldS:I
 
     .line 44
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEQ:Ljava/util/Queue;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldT:Ljava/util/Queue;
 
     .line 45
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kER:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldU:Z
 
     .line 46
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kES:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldV:Z
 
     .line 53
     new-instance v0, Lcom/tencent/mm/ui/base/MMHorList$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/MMHorList$1;-><init>(Lcom/tencent/mm/ui/base/MMHorList;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEY:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->leb:Ljava/lang/Runnable;
 
     .line 61
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEZ:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->lec:Z
 
     .line 62
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFa:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->led:Z
 
     .line 63
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFb:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->lee:I
 
     .line 64
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFc:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->lef:I
 
     .line 357
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->fgb:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->fpa:Z
 
     .line 403
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFd:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->leg:Z
 
     .line 442
     new-instance v0, Lcom/tencent/mm/ui/base/MMHorList$2;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/MMHorList$2;-><init>(Lcom/tencent/mm/ui/base/MMHorList;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFe:Landroid/database/DataSetObserver;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->leh:Landroid/database/DataSetObserver;
 
     .line 467
     new-instance v0, Lcom/tencent/mm/ui/base/MMHorList$3;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/MMHorList$3;-><init>(Lcom/tencent/mm/ui/base/MMHorList;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFf:Landroid/view/GestureDetector$OnGestureListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->lei:Landroid/view/GestureDetector$OnGestureListener;
 
     .line 118
     invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMHorList;->init()V
@@ -147,59 +165,59 @@
     .line 43
     const/high16 v0, 0x20000000
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEP:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldS:I
 
     .line 44
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEQ:Ljava/util/Queue;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldT:Ljava/util/Queue;
 
     .line 45
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kER:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldU:Z
 
     .line 46
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kES:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldV:Z
 
     .line 53
     new-instance v0, Lcom/tencent/mm/ui/base/MMHorList$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/MMHorList$1;-><init>(Lcom/tencent/mm/ui/base/MMHorList;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEY:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->leb:Ljava/lang/Runnable;
 
     .line 61
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEZ:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->lec:Z
 
     .line 62
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFa:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->led:Z
 
     .line 63
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFb:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->lee:I
 
     .line 64
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFc:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->lef:I
 
     .line 357
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->fgb:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->fpa:Z
 
     .line 403
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFd:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->leg:Z
 
     .line 442
     new-instance v0, Lcom/tencent/mm/ui/base/MMHorList$2;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/MMHorList$2;-><init>(Lcom/tencent/mm/ui/base/MMHorList;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFe:Landroid/database/DataSetObserver;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->leh:Landroid/database/DataSetObserver;
 
     .line 467
     new-instance v0, Lcom/tencent/mm/ui/base/MMHorList$3;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/MMHorList$3;-><init>(Lcom/tencent/mm/ui/base/MMHorList;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFf:Landroid/view/GestureDetector$OnGestureListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->lei:Landroid/view/GestureDetector$OnGestureListener;
 
     .line 103
     invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMHorList;->init()V
@@ -213,11 +231,11 @@
 
     .prologue
     .line 21
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEO:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldR:I
 
     add-int/2addr v0, p1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEO:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldR:I
 
     return v0
 .end method
@@ -229,7 +247,7 @@
     .line 21
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kER:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldU:Z
 
     return v0
 .end method
@@ -244,12 +262,30 @@
     return-void
 .end method
 
+.method private bia()I
+    .locals 2
+
+    .prologue
+    .line 146
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->lea:Landroid/widget/ListAdapter;
+
+    invoke-interface {v0}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v0
+
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->lee:I
+
+    mul-int/2addr v0, v1
+
+    return v0
+.end method
+
 .method static synthetic c(Lcom/tencent/mm/ui/base/MMHorList;)Landroid/widget/AdapterView$OnItemClickListener;
     .locals 1
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEW:Landroid/widget/AdapterView$OnItemClickListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldZ:Landroid/widget/AdapterView$OnItemClickListener;
 
     return-object v0
 .end method
@@ -259,7 +295,7 @@
 
     .prologue
     .line 21
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEL:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldO:I
 
     return v0
 .end method
@@ -269,7 +305,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEX:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->lea:Landroid/widget/ListAdapter;
 
     return-object v0
 .end method
@@ -279,27 +315,9 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEV:Landroid/widget/AdapterView$OnItemSelectedListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldY:Landroid/widget/AdapterView$OnItemSelectedListener;
 
     return-object v0
-.end method
-
-.method private getChildViewTotalWidth()I
-    .locals 2
-
-    .prologue
-    .line 146
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEX:Landroid/widget/ListAdapter;
-
-    invoke-interface {v0}, Landroid/widget/ListAdapter;->getCount()I
-
-    move-result v0
-
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFb:I
-
-    mul-int/2addr v0, v1
-
-    return v0
 .end method
 
 .method private init()V
@@ -317,32 +335,32 @@
 
     invoke-direct {v0, v1}, Landroid/widget/Scroller;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kET:Landroid/widget/Scroller;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldW:Landroid/widget/Scroller;
 
     .line 89
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEL:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldO:I
 
     .line 90
-    iput v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEM:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldP:I
 
     .line 91
     iput v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->offset:I
 
     .line 92
-    iput v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEN:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldQ:I
 
     .line 93
-    iput v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEO:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldR:I
 
     .line 94
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kER:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldU:Z
 
     .line 95
     const/high16 v0, 0x20000000
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEP:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldS:I
 
     .line 96
     new-instance v0, Landroid/view/GestureDetector;
@@ -351,11 +369,11 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFf:Landroid/view/GestureDetector$OnGestureListener;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->lei:Landroid/view/GestureDetector$OnGestureListener;
 
     invoke-direct {v0, v1, v2}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEU:Landroid/view/GestureDetector;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldX:Landroid/view/GestureDetector;
 
     .line 99
     return-void
@@ -389,7 +407,7 @@
     const/high16 v2, -0x80000000
 
     .line 294
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/base/MMHorList;->kES:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldV:Z
 
     .line 295
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -433,22 +451,22 @@
 
 
 # virtual methods
-.method protected final E(F)Z
+.method protected final C(F)Z
     .locals 9
 
     .prologue
     const/4 v2, 0x0
 
     .line 437
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kET:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldW:Landroid/widget/Scroller;
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEO:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldR:I
 
     neg-float v3, p1
 
     float-to-int v3, v3
 
-    iget v6, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEP:I
+    iget v6, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldS:I
 
     move v4, v2
 
@@ -469,14 +487,14 @@
     return v0
 .end method
 
-.method protected final bcq()Z
+.method protected final bhF()Z
     .locals 2
 
     .prologue
     const/4 v1, 0x1
 
     .line 399
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kET:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldW:Landroid/widget/Scroller;
 
     invoke-virtual {v0, v1}, Landroid/widget/Scroller;->forceFinished(Z)V
 
@@ -493,7 +511,7 @@
     const/4 v5, 0x0
 
     .line 360
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEU:Landroid/view/GestureDetector;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldX:Landroid/view/GestureDetector;
 
     invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -507,17 +525,17 @@
     if-nez v1, :cond_1
 
     .line 363
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/base/MMHorList;->fgb:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/base/MMHorList;->fpa:Z
 
     .line 364
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEK:Lcom/tencent/mm/ui/base/MMHorList$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldN:Lcom/tencent/mm/ui/base/MMHorList$a;
 
     if-eqz v1, :cond_0
 
     .line 365
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEK:Lcom/tencent/mm/ui/base/MMHorList$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldN:Lcom/tencent/mm/ui/base/MMHorList$a;
 
-    invoke-interface {v1}, Lcom/tencent/mm/ui/base/MMHorList$a;->aEI()V
+    invoke-interface {v1}, Lcom/tencent/mm/ui/base/MMHorList$a;->aIk()V
 
     .line 395
     :cond_0
@@ -542,12 +560,12 @@
 
     .line 369
     :cond_2
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFa:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->led:Z
 
     if-eqz v1, :cond_3
 
     .line 370
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMHorList;->getChildViewTotalWidth()I
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMHorList;->bia()I
 
     move-result v1
 
@@ -558,21 +576,21 @@
     if-le v1, v2, :cond_5
 
     .line 371
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEN:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldQ:I
 
     if-gez v1, :cond_4
 
     .line 372
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kET:Landroid/widget/Scroller;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldW:Landroid/widget/Scroller;
 
     invoke-virtual {v1, v3}, Landroid/widget/Scroller;->forceFinished(Z)V
 
     .line 373
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kET:Landroid/widget/Scroller;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldW:Landroid/widget/Scroller;
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEN:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldQ:I
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEN:I
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldQ:I
 
     rsub-int/lit8 v3, v3, 0x0
 
@@ -584,41 +602,41 @@
     .line 389
     :cond_3
     :goto_1
-    iput-boolean v5, p0, Lcom/tencent/mm/ui/base/MMHorList;->fgb:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/ui/base/MMHorList;->fpa:Z
 
     .line 390
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEK:Lcom/tencent/mm/ui/base/MMHorList$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldN:Lcom/tencent/mm/ui/base/MMHorList$a;
 
     if-eqz v1, :cond_0
 
     .line 391
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEK:Lcom/tencent/mm/ui/base/MMHorList$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldN:Lcom/tencent/mm/ui/base/MMHorList$a;
 
-    invoke-interface {v1}, Lcom/tencent/mm/ui/base/MMHorList$a;->aEJ()V
+    invoke-interface {v1}, Lcom/tencent/mm/ui/base/MMHorList$a;->aIl()V
 
     goto :goto_0
 
     .line 375
     :cond_4
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEN:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldQ:I
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEP:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldS:I
 
     if-le v1, v2, :cond_3
 
     .line 376
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kET:Landroid/widget/Scroller;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldW:Landroid/widget/Scroller;
 
     invoke-virtual {v1, v3}, Landroid/widget/Scroller;->forceFinished(Z)V
 
     .line 377
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kET:Landroid/widget/Scroller;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldW:Landroid/widget/Scroller;
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEN:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldQ:I
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEP:I
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldS:I
 
-    iget v4, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEN:I
+    iget v4, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldQ:I
 
     sub-int/2addr v3, v4
 
@@ -631,25 +649,25 @@
 
     .line 381
     :cond_5
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEN:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldQ:I
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFc:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->lef:I
 
     mul-int/lit8 v2, v2, -0x1
 
     if-eq v1, v2, :cond_3
 
     .line 382
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kET:Landroid/widget/Scroller;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldW:Landroid/widget/Scroller;
 
     invoke-virtual {v1, v3}, Landroid/widget/Scroller;->forceFinished(Z)V
 
     .line 383
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kET:Landroid/widget/Scroller;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldW:Landroid/widget/Scroller;
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEN:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldQ:I
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEN:I
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldQ:I
 
     rsub-int/lit8 v3, v3, 0x0
 
@@ -666,41 +684,9 @@
 
     .prologue
     .line 21
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMHorList;->getAdapter()Landroid/widget/ListAdapter;
-
-    move-result-object v0
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->lea:Landroid/widget/ListAdapter;
 
     return-object v0
-.end method
-
-.method public getAdapter()Landroid/widget/ListAdapter;
-    .locals 1
-
-    .prologue
-    .line 128
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEX:Landroid/widget/ListAdapter;
-
-    return-object v0
-.end method
-
-.method public getCurrentPosition()I
-    .locals 1
-
-    .prologue
-    .line 420
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEN:I
-
-    return v0
-.end method
-
-.method public getIsTouching()Z
-    .locals 1
-
-    .prologue
-    .line 424
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->fgb:Z
-
-    return v0
 .end method
 
 .method public getSelectedView()Landroid/view/View;
@@ -725,7 +711,7 @@
     invoke-super/range {p0 .. p5}, Landroid/widget/AdapterView;->onLayout(ZIIII)V
 
     .line 152
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEX:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->lea:Landroid/widget/ListAdapter;
 
     if-nez v0, :cond_1
 
@@ -736,15 +722,15 @@
 
     .line 156
     :cond_1
-    iput-boolean v5, p0, Lcom/tencent/mm/ui/base/MMHorList;->kES:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldV:Z
 
     .line 157
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kER:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldU:Z
 
     if-eqz v0, :cond_3
 
     .line 158
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEN:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldQ:I
 
     .line 159
     invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMHorList;->init()V
@@ -753,10 +739,10 @@
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMHorList;->removeAllViewsInLayout()V
 
     .line 161
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEO:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldR:I
 
     .line 163
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEZ:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->lec:Z
 
     if-eqz v0, :cond_2
 
@@ -765,7 +751,7 @@
 
     move-result v0
 
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMHorList;->getChildViewTotalWidth()I
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMHorList;->bia()I
 
     move-result v2
 
@@ -777,20 +763,20 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFc:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->lef:I
 
     .line 165
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFc:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->lef:I
 
     iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->offset:I
 
     .line 168
     :cond_2
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kER:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldU:Z
 
     .line 171
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kET:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldW:Landroid/widget/Scroller;
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->computeScrollOffset()Z
 
@@ -799,23 +785,23 @@
     if-eqz v0, :cond_4
 
     .line 172
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kET:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldW:Landroid/widget/Scroller;
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->getCurrX()I
 
     move-result v0
 
     .line 173
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEO:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldR:I
 
     .line 176
     :cond_4
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFa:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->led:Z
 
     if-eqz v0, :cond_9
 
     .line 177
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMHorList;->getChildViewTotalWidth()I
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMHorList;->bia()I
 
     move-result v0
 
@@ -827,7 +813,7 @@
     if-le v0, v2, :cond_7
 
     .line 179
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEO:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldR:I
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMHorList;->getWidth()I
 
@@ -846,18 +832,18 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEO:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldR:I
 
     .line 181
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kET:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldW:Landroid/widget/Scroller;
 
     invoke-virtual {v0, v5}, Landroid/widget/Scroller;->forceFinished(Z)V
 
     .line 184
     :cond_5
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEO:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldR:I
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEP:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldS:I
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMHorList;->getWidth()I
 
@@ -868,7 +854,7 @@
     if-le v0, v2, :cond_6
 
     .line 185
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEP:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldS:I
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMHorList;->getWidth()I
 
@@ -878,19 +864,19 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEO:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldR:I
 
     .line 186
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kET:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldW:Landroid/widget/Scroller;
 
     invoke-virtual {v0, v5}, Landroid/widget/Scroller;->forceFinished(Z)V
 
     .line 211
     :cond_6
     :goto_1
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEN:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldQ:I
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEO:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldR:I
 
     sub-int v3, v0, v2
 
@@ -920,29 +906,29 @@
 
     iput v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->offset:I
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEQ:Ljava/util/Queue;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldT:Ljava/util/Queue;
 
     invoke-interface {v2, v0}, Ljava/util/Queue;->offer(Ljava/lang/Object;)Z
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMHorList;->removeViewInLayout(Landroid/view/View;)V
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEL:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldO:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEL:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldO:I
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/base/MMHorList;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-boolean v5, p0, Lcom/tencent/mm/ui/base/MMHorList;->kES:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldV:Z
 
     goto :goto_2
 
     .line 189
     :cond_7
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEO:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldR:I
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMHorList;->getWidth()I
 
@@ -950,7 +936,7 @@
 
     mul-int/lit8 v2, v2, -0x1
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFc:I
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMHorList;->lef:I
 
     add-int/2addr v2, v3
 
@@ -963,28 +949,28 @@
 
     mul-int/lit8 v0, v0, -0x1
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFc:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->lef:I
 
     add-int/2addr v0, v2
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEO:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldR:I
 
     .line 191
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kET:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldW:Landroid/widget/Scroller;
 
     invoke-virtual {v0, v5}, Landroid/widget/Scroller;->forceFinished(Z)V
 
     .line 194
     :cond_8
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEO:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldR:I
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMHorList;->getWidth()I
 
     move-result v2
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFc:I
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMHorList;->lef:I
 
     sub-int/2addr v2, v3
 
@@ -995,16 +981,16 @@
 
     move-result v0
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFc:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->lef:I
 
     sub-int/2addr v0, v2
 
     add-int/lit8 v0, v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEO:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldR:I
 
     .line 196
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kET:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldW:Landroid/widget/Scroller;
 
     invoke-virtual {v0, v5}, Landroid/widget/Scroller;->forceFinished(Z)V
 
@@ -1012,33 +998,33 @@
 
     .line 200
     :cond_9
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEO:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldR:I
 
     if-gez v0, :cond_a
 
     .line 201
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEO:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldR:I
 
     .line 202
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kET:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldW:Landroid/widget/Scroller;
 
     invoke-virtual {v0, v5}, Landroid/widget/Scroller;->forceFinished(Z)V
 
     .line 205
     :cond_a
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEO:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldR:I
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEP:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldS:I
 
     if-le v0, v2, :cond_6
 
     .line 206
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEP:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldS:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEO:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldR:I
 
     .line 207
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kET:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldW:Landroid/widget/Scroller;
 
     invoke-virtual {v0, v5}, Landroid/widget/Scroller;->forceFinished(Z)V
 
@@ -1071,17 +1057,17 @@
 
     if-lt v2, v4, :cond_c
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEQ:Ljava/util/Queue;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldT:Ljava/util/Queue;
 
     invoke-interface {v2, v0}, Ljava/util/Queue;->offer(Ljava/lang/Object;)Z
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMHorList;->removeViewInLayout(Landroid/view/View;)V
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEM:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldP:I
 
     add-int/lit8 v0, v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEM:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldP:I
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMHorList;->getChildCount()I
 
@@ -1093,7 +1079,7 @@
 
     move-result-object v0
 
-    iput-boolean v5, p0, Lcom/tencent/mm/ui/base/MMHorList;->kES:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldV:Z
 
     goto :goto_3
 
@@ -1127,9 +1113,9 @@
 
     if-ge v0, v4, :cond_e
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEM:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldP:I
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEX:Landroid/widget/ListAdapter;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMHorList;->lea:Landroid/widget/ListAdapter;
 
     invoke-interface {v4}, Landroid/widget/ListAdapter;->getCount()I
 
@@ -1137,11 +1123,11 @@
 
     if-ge v0, v4, :cond_e
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEX:Landroid/widget/ListAdapter;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMHorList;->lea:Landroid/widget/ListAdapter;
 
-    iget v5, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEM:I
+    iget v5, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldP:I
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEQ:Ljava/util/Queue;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldT:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->poll()Ljava/lang/Object;
 
@@ -1163,9 +1149,9 @@
 
     add-int/2addr v0, v2
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEM:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldP:I
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEX:Landroid/widget/ListAdapter;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMHorList;->lea:Landroid/widget/ListAdapter;
 
     invoke-interface {v4}, Landroid/widget/ListAdapter;->getCount()I
 
@@ -1175,7 +1161,7 @@
 
     if-ne v2, v4, :cond_d
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEN:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldQ:I
 
     add-int/2addr v2, v0
 
@@ -1185,14 +1171,14 @@
 
     sub-int/2addr v2, v4
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEP:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldS:I
 
     :cond_d
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEM:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldP:I
 
     add-int/lit8 v2, v2, 0x1
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEM:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldP:I
 
     move v2, v0
 
@@ -1217,15 +1203,15 @@
 
     if-lez v0, :cond_f
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEL:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldO:I
 
     if-ltz v0, :cond_f
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEX:Landroid/widget/ListAdapter;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMHorList;->lea:Landroid/widget/ListAdapter;
 
-    iget v5, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEL:I
+    iget v5, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldO:I
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEQ:Ljava/util/Queue;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldT:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->poll()Ljava/lang/Object;
 
@@ -1245,11 +1231,11 @@
 
     sub-int v0, v2, v0
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEL:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldO:I
 
     add-int/lit8 v2, v2, -0x1
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEL:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldO:I
 
     iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->offset:I
 
@@ -1273,7 +1259,7 @@
 
     if-lez v0, :cond_10
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kES:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldV:Z
 
     if-eqz v0, :cond_10
 
@@ -1320,12 +1306,12 @@
 
     .line 218
     :cond_10
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEO:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldR:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEN:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldQ:I
 
     .line 220
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kET:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldW:Landroid/widget/Scroller;
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->isFinished()Z
 
@@ -1334,7 +1320,7 @@
     if-nez v0, :cond_11
 
     .line 221
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEY:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->leb:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMHorList;->post(Ljava/lang/Runnable;)Z
 
@@ -1342,21 +1328,21 @@
 
     .line 223
     :cond_11
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEK:Lcom/tencent/mm/ui/base/MMHorList$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldN:Lcom/tencent/mm/ui/base/MMHorList$a;
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFd:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->leg:Z
 
     if-eqz v0, :cond_0
 
     .line 224
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEK:Lcom/tencent/mm/ui/base/MMHorList$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldN:Lcom/tencent/mm/ui/base/MMHorList$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/base/MMHorList$a;->ahf()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/base/MMHorList$a;->ajK()V
 
     .line 225
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFd:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->leg:Z
 
     goto/16 :goto_0
 
@@ -1376,11 +1362,11 @@
 
     .prologue
     .line 344
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEX:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->lea:Landroid/widget/ListAdapter;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEX:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->lea:Landroid/widget/ListAdapter;
 
     invoke-interface {v0}, Landroid/widget/ListAdapter;->getCount()I
 
@@ -1433,7 +1419,7 @@
     return v0
 .end method
 
-.method public final qG(I)V
+.method public final sD(I)V
     .locals 5
 
     .prologue
@@ -1442,23 +1428,23 @@
     const/4 v3, 0x0
 
     .line 413
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kET:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldW:Landroid/widget/Scroller;
 
     invoke-virtual {v0, v4}, Landroid/widget/Scroller;->forceFinished(Z)V
 
     .line 414
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kET:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldW:Landroid/widget/Scroller;
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEN:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldQ:I
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEN:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldQ:I
 
     sub-int v2, p1, v2
 
     invoke-virtual {v0, v1, v3, v2, v3}, Landroid/widget/Scroller;->startScroll(IIII)V
 
     .line 415
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFd:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/base/MMHorList;->leg:Z
 
     .line 416
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMHorList;->requestLayout()V
@@ -1479,23 +1465,23 @@
     return-void
 .end method
 
-.method public setAdapter(Landroid/widget/ListAdapter;)V
+.method public final setAdapter(Landroid/widget/ListAdapter;)V
     .locals 1
 
     .prologue
     .line 133
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEX:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->lea:Landroid/widget/ListAdapter;
 
     if-nez v0, :cond_0
 
     .line 138
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFe:Landroid/database/DataSetObserver;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList;->leh:Landroid/database/DataSetObserver;
 
     invoke-interface {p1, v0}, Landroid/widget/ListAdapter;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
     .line 140
     :cond_0
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEX:Landroid/widget/ListAdapter;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMHorList;->lea:Landroid/widget/ListAdapter;
 
     .line 141
     invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMHorList;->reset()V
@@ -1504,45 +1490,12 @@
     return-void
 .end method
 
-.method public setCenterInParent(Z)V
-    .locals 0
-
-    .prologue
-    .line 71
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEZ:Z
-
-    .line 72
-    return-void
-.end method
-
-.method public setHorListLitener(Lcom/tencent/mm/ui/base/MMHorList$a;)V
-    .locals 0
-
-    .prologue
-    .line 35
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEK:Lcom/tencent/mm/ui/base/MMHorList$a;
-
-    .line 36
-    return-void
-.end method
-
-.method public setItemWidth(I)V
-    .locals 0
-
-    .prologue
-    .line 84
-    iput p1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFb:I
-
-    .line 85
-    return-void
-.end method
-
 .method public setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
     .locals 0
 
     .prologue
     .line 113
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEW:Landroid/widget/AdapterView$OnItemClickListener;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldZ:Landroid/widget/AdapterView$OnItemClickListener;
 
     .line 114
     return-void
@@ -1553,20 +1506,9 @@
 
     .prologue
     .line 108
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kEV:Landroid/widget/AdapterView$OnItemSelectedListener;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMHorList;->ldY:Landroid/widget/AdapterView$OnItemSelectedListener;
 
     .line 109
-    return-void
-.end method
-
-.method public setOverScrollEnabled(Z)V
-    .locals 0
-
-    .prologue
-    .line 80
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/MMHorList;->kFa:Z
-
-    .line 81
     return-void
 .end method
 

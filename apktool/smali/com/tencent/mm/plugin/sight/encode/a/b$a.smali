@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract awu()V
+.method public abstract ayT()V
 .end method
 
 .method public abstract onError()V

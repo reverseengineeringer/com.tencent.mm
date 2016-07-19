@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private ckr:Ljava/net/InetAddress;
+.field private cfJ:Ljava/net/InetAddress;
 
 .field private port:I
 
@@ -20,7 +20,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 26
-    iput-object p1, p0, Lcom/tencent/mm/network/a/c;->ckr:Ljava/net/InetAddress;
+    iput-object p1, p0, Lcom/tencent/mm/network/a/c;->cfJ:Ljava/net/InetAddress;
 
     .line 27
     iput p2, p0, Lcom/tencent/mm/network/a/c;->port:I
@@ -32,7 +32,7 @@
     return-void
 .end method
 
-.method public static kl(Ljava/lang/String;)Lcom/tencent/mm/network/a/c;
+.method public static kV(Ljava/lang/String;)Lcom/tencent/mm/network/a/c;
     .locals 7
 
     .prologue
@@ -73,7 +73,7 @@
     :try_start_0
     aget-object v2, v1, v2
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/o;->CJ(Ljava/lang/String;)Ljava/net/InetAddress;
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/p;->EW(Ljava/lang/String;)Ljava/net/InetAddress;
 
     move-result-object v2
 
@@ -111,19 +111,19 @@
     move-exception v1
 
     .line 84
-    const-string/jumbo v2, "!32@/B4Tb64lLpIJHjSdjj7mIt5a6vKEglja"
+    const-string/jumbo v2, "MicroMsg.InAddress"
 
     const-string/jumbo v3, "exception:%s"
 
     new-array v4, v6, [Ljava/lang/Object;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v1
 
     aput-object v1, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -154,7 +154,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Lcom/tencent/mm/network/a/c;->ckr:Ljava/net/InetAddress;
+    iget-object v2, p0, Lcom/tencent/mm/network/a/c;->cfJ:Ljava/net/InetAddress;
 
     invoke-virtual {v2}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 

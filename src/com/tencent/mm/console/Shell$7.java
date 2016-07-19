@@ -1,17 +1,16 @@
 package com.tencent.mm.console;
 
 import android.content.Intent;
-import com.tencent.mm.platformtools.r;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.platformtools.q;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class Shell$7
   implements Shell.a
 {
-  public final void i(Intent paramIntent)
+  public final void j(Intent paramIntent)
   {
-    r.cnp = paramIntent.getStringExtra("acc");
-    r.cnq = paramIntent.getStringExtra("pass");
-    u.w("!24@/B4Tb64lLpLOIdMtS2bKaA==", "dkwt shell [%s %s]", new Object[] { r.cnp, r.cnq });
+    q.cit = paramIntent.getStringExtra("errmsg");
+    v.w("MicroMsg.Shell", "tiger set tigerIDCErrMsg =%s", new Object[] { q.cit });
   }
 }
 

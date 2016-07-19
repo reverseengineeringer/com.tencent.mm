@@ -1,207 +1,132 @@
 package com.tencent.mm.plugin.accountsync.model;
 
-import android.content.ContentResolver;
-import android.content.Context;
-import android.content.Intent;
-import android.database.Cursor;
-import android.net.Uri;
-import android.provider.ContactsContract.Data;
-import android.provider.ContactsContract.RawContacts;
-import android.widget.Toast;
-import com.tencent.mm.a.n;
-import com.tencent.mm.a.e;
-import com.tencent.mm.aj.c;
-import com.tencent.mm.d.a.jq;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.modelfriend.ay;
-import com.tencent.mm.modelfriend.g;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.q;
+import android.os.Message;
+import com.tencent.mm.e.a.ha;
+import com.tencent.mm.modelfriend.a.b;
+import com.tencent.mm.modelfriend.b;
+import com.tencent.mm.modelfriend.x;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.j;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public final class a
+  implements com.tencent.mm.t.d
 {
-  public static abstract interface a
+  a.b bEH = new a.b()
   {
-    public abstract int aX(Context paramContext);
+    public final void aA(boolean paramAnonymousBoolean)
+    {
+      v.i("MicroMsg.ContactsAutoSyncLogic ", "performSync end, succ:%b", new Object[] { Boolean.valueOf(paramAnonymousBoolean) });
+      if (!paramAnonymousBoolean) {
+        return;
+      }
+      if (com.tencent.mm.modelfriend.m.yX().size() > 0)
+      {
+        v.i("MicroMsg.ContactsAutoSyncLogic ", "start to upload mobile list");
+        com.tencent.mm.model.ah.tF().a(133, a.this);
+        System.currentTimeMillis();
+        localObject = new com.tencent.mm.modelfriend.ac(com.tencent.mm.modelfriend.m.yX(), com.tencent.mm.modelfriend.m.yW());
+        com.tencent.mm.model.ah.tF().a((j)localObject, 0);
+        return;
+      }
+      v.i("MicroMsg.ContactsAutoSyncLogic ", "update mobile friend list");
+      Object localObject = (String[])cjG.toArray(new String[0]);
+      cjG.clear();
+      ArrayList localArrayList = new ArrayList();
+      int j = localObject.length;
+      int i = 0;
+      if (i < j)
+      {
+        String str = localObject[i];
+        b localb = com.tencent.mm.modelfriend.ah.zD().hI(str);
+        if ((localb != null) && (!be.kf(localb.yB())))
+        {
+          localArrayList.add(localb.yB());
+          v.i("MicroMsg.ContactsAutoSyncLogic ", "find mobile %s username %s", new Object[] { localb.yB(), str });
+        }
+        for (;;)
+        {
+          i += 1;
+          break;
+          v.i("MicroMsg.ContactsAutoSyncLogic ", "not find mobile username %s", new Object[] { str });
+        }
+      }
+      com.tencent.mm.model.ah.tF().a(32, a.this);
+      if (localArrayList.size() == 0)
+      {
+        v.i("MicroMsg.ContactsAutoSyncLogic ", "sync mobile list is zero");
+        localObject = new x();
+        com.tencent.mm.model.ah.tF().a((j)localObject, 0);
+        return;
+      }
+      v.i("MicroMsg.ContactsAutoSyncLogic ", "sync mobile list is %d", new Object[] { Integer.valueOf(localArrayList.size()) });
+      localObject = new x(localArrayList, null);
+      com.tencent.mm.model.ah.tF().a((j)localObject, 0);
+    }
+  };
+  boolean bVC = false;
+  Set<String> cjG = Collections.synchronizedSet(new HashSet());
+  public com.tencent.mm.sdk.c.c cjH = new com.tencent.mm.sdk.c.c() {};
+  com.tencent.mm.sdk.platformtools.ac cjI = new com.tencent.mm.sdk.platformtools.ac()
+  {
+    public final void handleMessage(Message paramAnonymousMessage)
+    {
+      switch (what)
+      {
+      default: 
+        return;
+      }
+      bVC = true;
+      boolean bool = com.tencent.mm.modelfriend.a.a(bEH);
+      if (!bool) {
+        bVC = false;
+      }
+      v.i("MicroMsg.ContactsAutoSyncLogic ", "sync result %b", new Object[] { Boolean.valueOf(bool) });
+    }
+  };
+  
+  public a()
+  {
+    com.tencent.mm.sdk.c.a.kug.d(cjH);
   }
   
-  public static final class b
-    implements a.a
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    private String bXn;
-    private int toScene;
-    private Uri uri;
-    
-    public b(int paramInt, String paramString, Uri paramUri)
+    if (paramj.getType() == 133)
     {
-      toScene = paramInt;
-      bXn = paramString;
-      uri = paramUri;
+      com.tencent.mm.model.ah.tF().b(133, this);
+      if ((paramInt1 == 0) && (paramInt2 == 0)) {
+        break label127;
+      }
+      v.e("MicroMsg.ContactsAutoSyncLogic ", "MMFunc_UploadMContact onSceneEnd: errType = " + paramInt1 + ", errCode = " + paramInt2);
+      bVC = false;
     }
-    
-    private int b(Context paramContext, String paramString1, String paramString2, String paramString3)
+    for (;;)
     {
-      Object localObject = ay.yB().gw(paramString1);
-      if (paramContext == null) {
-        t.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "null context");
-      }
-      do
+      if (paramj.getType() == 32)
       {
-        return 1;
-        if (localObject == null)
-        {
-          t.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "this user is not my friend");
-          return 1;
+        bVC = false;
+        com.tencent.mm.model.ah.tF().b(32, this);
+        if ((paramInt1 == 0) && (paramInt2 == 0)) {
+          break;
         }
-        localObject = ((g)localObject).getUsername();
-        if (bn.iW((String)localObject))
-        {
-          t.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "get username failed, phonenum md5 is " + paramString1);
-          return 1;
-        }
-        if (ax.tl().ri().yI((String)localObject))
-        {
-          com.tencent.mm.plugin.report.service.j.eJZ.f(11157, new Object[] { Integer.valueOf(toScene) });
-          switch (toScene)
-          {
-          default: 
-            return 1;
-          case 1: 
-            paramString1 = new Intent();
-            paramString1.putExtra("Chat_User", (String)localObject);
-            paramString1.putExtra("finish_direct", true);
-            paramString1.addFlags(67108864);
-            com.tencent.mm.plugin.a.a.bWW.e(paramString1, paramContext);
-            return 0;
-          case 3: 
-            paramString1 = new jq();
-            aGJ.axE = 5;
-            aGJ.aqX = ((String)localObject);
-            aGJ.context = paramContext;
-            aGJ.aGM = 3;
-            com.tencent.mm.sdk.c.a.hXQ.g(paramString1);
-            return 0;
-          case 4: 
-            paramString1 = new jq();
-            aGJ.axE = 5;
-            aGJ.aqX = ((String)localObject);
-            aGJ.context = paramContext;
-            aGJ.aGM = 2;
-            com.tencent.mm.sdk.c.a.hXQ.g(paramString1);
-            return 0;
-          }
-          paramString1 = new Intent();
-          paramString1.putExtra("sns_userName", (String)localObject);
-          paramString1.addFlags(67108864);
-          c.c(paramContext, "sns", ".ui.SnsUserUI", paramString1);
-          return 0;
-        }
-      } while ((bn.iW(paramString3)) || (bn.iW(paramString2)));
-      Toast.makeText(paramContext, paramContext.getString(a.n.contact_sync_chat_not_friend), 1).show();
-      paramContext.getContentResolver().delete(ContactsContract.Data.CONTENT_URI, "_id = ?", new String[] { paramString2 });
-      paramContext.getContentResolver().delete(ContactsContract.RawContacts.CONTENT_URI, "contact_id = ? AND account_type = ?", new String[] { paramString3, "com.tencent.mm.account" });
-      return 1;
+        v.e("MicroMsg.ContactsAutoSyncLogic ", "rtGETMFRIEND onSceneEnd: errType = " + paramInt1 + ", errCode = " + paramInt2);
+      }
+      return;
+      label127:
+      com.tencent.mm.model.ah.tF().a(32, this);
+      paramString = (com.tencent.mm.modelfriend.ac)paramj;
+      paramString = new x(bGr, bGs);
+      com.tencent.mm.model.ah.tF().a(paramString, 0);
     }
-    
-    public final int aX(Context paramContext)
-    {
-      if (paramContext == null)
-      {
-        t.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "null context");
-        return 1;
-      }
-      if ((!ax.tq()) || (ax.tu()))
-      {
-        t.d("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "not login, start bind login");
-        return 3;
-      }
-      if (bn.iW((String)ax.tl().rf().get(6, "")))
-      {
-        t.d("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "not bind mobile, start bind mobie");
-        return 2;
-      }
-      String str1;
-      Object localObject1;
-      if (uri != null)
-      {
-        Cursor localCursor = paramContext.getContentResolver().query(uri, new String[] { "contact_id", "_id", "data4" }, null, null, null);
-        if (localCursor == null)
-        {
-          t.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "query database err");
-          return 1;
-        }
-        if (!localCursor.moveToFirst())
-        {
-          t.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "query database err, move to first fail");
-          localCursor.close();
-          return 1;
-        }
-        int i = localCursor.getColumnIndex("data4");
-        if (i == -1)
-        {
-          t.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "no data4 segment exist");
-          localCursor.close();
-          return 1;
-        }
-        Object localObject2 = "";
-        str1 = "";
-        localObject1 = str1;
-        try
-        {
-          String str2 = localCursor.getString(i);
-          localObject1 = str1;
-          localObject2 = str2;
-          i = localCursor.getColumnIndex("contact_id");
-          String str3;
-          if (i >= 0)
-          {
-            localObject1 = str1;
-            localObject2 = str2;
-            str1 = localCursor.getString(i);
-            localObject1 = str1;
-            localObject2 = str2;
-            i = localCursor.getColumnIndex("_id");
-            if (i < 0) {
-              break label318;
-            }
-            localObject1 = str1;
-            localObject2 = str2;
-            str3 = localCursor.getString(i);
-          }
-          label318:
-          for (localObject1 = str3;; localObject1 = "")
-          {
-            localCursor.close();
-            if (!bn.iW(str2)) {
-              break label398;
-            }
-            t.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "null friendmobile");
-            return 1;
-            str1 = "";
-            break;
-          }
-          return b(paramContext, str2, (String)localObject1, str1);
-        }
-        catch (Exception paramContext)
-        {
-          t.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "match error, %s\n%s", new Object[] { paramContext.getMessage(), bn.a(paramContext) });
-          t.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "result friendMobileMd5 %s contact_id %s data_id %s", new Object[] { localObject2, localObject1, "" });
-          return 1;
-        }
-        finally
-        {
-          localCursor.close();
-        }
-      }
-      label398:
-      if (!bn.iW(bXn)) {
-        return b(paramContext, e.n(com.tencent.mm.pluginsdk.a.oV(bXn).getBytes()), null, null);
-      }
-      t.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "uri is null and the phone num is null");
-      return 1;
-    }
+    v.i("MicroMsg.ContactsAutoSyncLogic ", "update All Contact");
+    com.tencent.mm.modelsimple.d.aT(aa.getContext());
   }
 }
 

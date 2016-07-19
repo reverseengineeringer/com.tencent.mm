@@ -8,7 +8,6 @@
     value = {
         Landroid/support/v7/app/ActionBar$a;,
         Landroid/support/v7/app/ActionBar$LayoutParams;,
-        Landroid/support/v7/app/ActionBar$c;,
         Landroid/support/v7/app/ActionBar$b;
     }
 .end annotation
@@ -28,6 +27,9 @@
 
 
 # virtual methods
+.method public abstract aI()V
+.end method
+
 .method public abstract aJ()V
 .end method
 
@@ -78,9 +80,6 @@
 .end method
 
 .method public abstract setDisplayOptions(I)V
-.end method
-
-.method public abstract setDisplayShowTitleEnabled(Z)V
 .end method
 
 .method public setHomeButtonEnabled(Z)V

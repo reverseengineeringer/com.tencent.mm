@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.applet;
 
 public abstract interface f$b
 {
-  public abstract boolean fK(int paramInt);
+  public abstract boolean gB(int paramInt);
 }
 
 /* Location:

@@ -10,9 +10,9 @@ final class i$5
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    iJp.onStop();
-    if (iJp.iJm != null) {
-      iJp.iJm.bK(false);
+    jgl.onStop();
+    if (jgl.jgi != null) {
+      jgl.jgi.bz(false);
     }
   }
 }

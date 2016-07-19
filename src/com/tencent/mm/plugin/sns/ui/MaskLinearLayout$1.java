@@ -7,9 +7,9 @@ final class MaskLinearLayout$1
   
   public final void run()
   {
-    gZw.setPressed(false);
-    MaskLinearLayout.a(gZw);
-    gZw.invalidate();
+    hmO.setPressed(false);
+    MaskLinearLayout.a(hmO);
+    hmO.invalidate();
   }
 }
 

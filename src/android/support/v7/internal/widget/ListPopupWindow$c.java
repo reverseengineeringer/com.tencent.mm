@@ -10,14 +10,14 @@ final class ListPopupWindow$c
   
   public final void onChanged()
   {
-    if (qi.pK.isShowing()) {
-      qi.show();
+    if (qw.pY.isShowing()) {
+      qw.show();
     }
   }
   
   public final void onInvalidated()
   {
-    qi.dismiss();
+    qw.dismiss();
   }
 }
 

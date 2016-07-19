@@ -2,13 +2,13 @@ package com.tencent.mm.modelsearch;
 
 import android.database.Cursor;
 import android.util.SparseArray;
-import com.tencent.mm.az.g;
+import com.tencent.mm.bc.g;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ad;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -19,24 +19,24 @@ import java.util.List;
 
 public final class m
 {
-  private static f bZB = new f();
+  private static f bTk = new f();
   
-  public static void BW()
+  public static void Cd()
   {
-    f localf = bZB;
-    Object localObject = bZH.iterator();
+    f localf = bTk;
+    Object localObject = bTq.iterator();
     while (((Iterator)localObject).hasNext()) {
       ((k)((Iterator)localObject).next()).destroy();
     }
-    bZH.clear();
-    u.i("!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz", "Destroy Native Logic");
+    bTq.clear();
+    v.i("MicroMsg.FTS.IFTSPlugin", "Destroy Native Logic");
     int i = 0;
     for (;;)
     {
-      if (i < bZI.size())
+      if (i < bTr.size())
       {
-        int j = bZI.keyAt(i);
-        localObject = (l)bZI.get(j);
+        int j = bTr.keyAt(i);
+        localObject = (l)bTr.get(j);
         try
         {
           ((l)localObject).destroy();
@@ -46,58 +46,58 @@ public final class m
         {
           for (;;)
           {
-            u.e("!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz", "Destroy Native Logic name=%s \nexception=%s", new Object[] { ((l)localObject).getName(), ay.b(localException) });
+            v.e("MicroMsg.FTS.IFTSPlugin", "Destroy Native Logic name=%s \nexception=%s", new Object[] { ((l)localObject).getName(), be.f(localException) });
           }
         }
       }
     }
-    bZI.clear();
-    bZF = null;
-    bZG = null;
+    bTr.clear();
+    bTo = null;
+    bTp = null;
   }
   
-  public static j BX()
+  public static j Ce()
   {
-    return bZBbZF;
+    return bTkbTo;
   }
   
-  public static o BY()
+  public static o Cf()
   {
-    return bZBbZG;
+    return bTkbTp;
   }
   
-  public static boolean BZ()
+  public static boolean Cg()
   {
-    f localf = bZB;
-    return (bZF != null) && (bZG != null);
+    f localf = bTk;
+    return (bTo != null) && (bTp != null);
   }
   
-  private static boolean Ca()
+  private static boolean Ch()
   {
-    if (BZ())
+    if (Cg())
     {
-      if (!bZBbZG.Ce())
+      if (!bTkbTp.Cl())
       {
-        bZBbZG.start();
-        u.w("!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz", "start fts task daemon on IFTSPlugin");
+        bTkbTp.start();
+        v.w("MicroMsg.FTS.IFTSPlugin", "start fts task daemon on IFTSPlugin");
       }
       return true;
     }
-    u.e("!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz", "FTSContext is not ready %s", new Object[] { ay.aVJ().toString() });
+    v.e("MicroMsg.FTS.IFTSPlugin", "FTSContext is not ready %s", new Object[] { be.baX().toString() });
     return false;
   }
   
-  public static void Cb()
+  public static void Ci()
   {
-    f localf = bZB;
-    u.i("!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz", "Create Native Logic");
+    f localf = bTk;
+    v.i("MicroMsg.FTS.IFTSPlugin", "Create Native Logic");
     int i = 0;
     for (;;)
     {
-      if (i < bZI.size())
+      if (i < bTr.size())
       {
-        int j = bZI.keyAt(i);
-        l locall = (l)bZI.get(j);
+        int j = bTr.keyAt(i);
+        l locall = (l)bTr.get(j);
         try
         {
           locall.create();
@@ -107,263 +107,263 @@ public final class m
         {
           for (;;)
           {
-            u.e("!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz", "Create Native Logic name=%s \nexception=%s", new Object[] { locall.getName(), ay.b(localException) });
+            v.e("MicroMsg.FTS.IFTSPlugin", "Create Native Logic name=%s \nexception=%s", new Object[] { locall.getName(), be.f(localException) });
           }
         }
       }
     }
   }
   
-  public static LinkedList Cc()
+  public static LinkedList<k> Cj()
   {
-    return bZBbZH;
+    return bTkbTq;
   }
   
-  public static k a(String paramString, int paramInt, j paramj, aa paramaa, HashSet paramHashSet)
+  public static k a(String paramString, int paramInt, j paramj, ac paramac, HashSet<String> paramHashSet)
   {
-    if (!Ca())
+    if (!Ch())
     {
-      paramString = new e(-2, paramString, new HashSet(), paramj, paramaa);
+      paramString = new e(-2, paramString, new HashSet(), paramj, paramac);
       com.tencent.mm.sdk.i.e.a(paramString, "FTSExceptionHandler");
       return paramString;
     }
-    if (bZBbZI.indexOfKey(3) >= 0) {
-      return ((l)bZBbZI.get(3)).b(i.a(paramString, paramInt, paramHashSet, paramj, paramaa));
+    if (bTkbTr.indexOfKey(3) >= 0) {
+      return ((l)bTkbTr.get(3)).b(i.a(paramString, paramInt, paramHashSet, paramj, paramac));
     }
-    u.e("!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz", "Not Found Message Logic, LogicArraySize=%d", new Object[] { Integer.valueOf(bZBbZI.size()) });
-    paramString = new e(-3, paramString, new HashSet(), paramj, paramaa);
+    v.e("MicroMsg.FTS.IFTSPlugin", "Not Found Message Logic, LogicArraySize=%d", new Object[] { Integer.valueOf(bTkbTr.size()) });
+    paramString = new e(-3, paramString, new HashSet(), paramj, paramac);
     com.tencent.mm.sdk.i.e.a(paramString, "FTSExceptionHandler");
     return paramString;
   }
   
-  public static k a(String paramString, j paramj, aa paramaa, HashSet paramHashSet)
+  public static k a(String paramString, j paramj, ac paramac, HashSet<String> paramHashSet)
   {
-    if (!Ca())
+    if (!Ch())
     {
-      paramString = new e(-2, paramString, new HashSet(), paramj, paramaa);
+      paramString = new e(-2, paramString, new HashSet(), paramj, paramac);
       com.tencent.mm.sdk.i.e.a(paramString, "FTSExceptionHandler");
       return paramString;
     }
-    if (bZBbZI.indexOfKey(5) >= 0) {
-      return ((l)bZBbZI.get(5)).b(i.a(paramString, 0, paramHashSet, paramj, paramaa));
+    if (bTkbTr.indexOfKey(5) >= 0) {
+      return ((l)bTkbTr.get(5)).b(i.a(paramString, 0, paramHashSet, paramj, paramac));
     }
-    u.e("!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz", "Not Found Game Logic, LogicArraySize=%d", new Object[] { Integer.valueOf(bZBbZI.size()) });
-    paramString = new e(-3, paramString, new HashSet(), paramj, paramaa);
+    v.e("MicroMsg.FTS.IFTSPlugin", "Not Found Game Logic, LogicArraySize=%d", new Object[] { Integer.valueOf(bTkbTr.size()) });
+    paramString = new e(-3, paramString, new HashSet(), paramj, paramac);
     com.tencent.mm.sdk.i.e.a(paramString, "FTSExceptionHandler");
     return paramString;
   }
   
-  public static k a(String paramString1, String paramString2, Comparator paramComparator, j paramj, aa paramaa)
+  public static k a(String paramString1, String paramString2, Comparator<g> paramComparator, j paramj, ac paramac)
   {
-    if (!Ca())
+    if (!Ch())
     {
-      paramString1 = new e(-2, paramString1, new HashSet(), paramj, paramaa);
+      paramString1 = new e(-2, paramString1, new HashSet(), paramj, paramac);
       com.tencent.mm.sdk.i.e.a(paramString1, "FTSExceptionHandler");
       return paramString1;
     }
-    if (bZBbZI.indexOfKey(3) >= 0) {
-      return ((l)bZBbZI.get(3)).e(i.a(paramString1, paramString2, null, null, 0, null, paramComparator, paramj, paramaa));
+    if (bTkbTr.indexOfKey(3) >= 0) {
+      return ((l)bTkbTr.get(3)).e(i.a(paramString1, paramString2, null, null, 0, null, paramComparator, paramj, paramac));
     }
-    u.e("!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz", "Not Found Message Logic, LogicArraySize=%d", new Object[] { Integer.valueOf(bZBbZI.size()) });
-    paramString1 = new e(-3, paramString1, new HashSet(), paramj, paramaa);
+    v.e("MicroMsg.FTS.IFTSPlugin", "Not Found Message Logic, LogicArraySize=%d", new Object[] { Integer.valueOf(bTkbTr.size()) });
+    paramString1 = new e(-3, paramString1, new HashSet(), paramj, paramac);
     com.tencent.mm.sdk.i.e.a(paramString1, "FTSExceptionHandler");
     return paramString1;
   }
   
-  public static k a(String paramString, HashSet paramHashSet, j paramj, aa paramaa)
+  public static k a(String paramString, HashSet<String> paramHashSet, j paramj, ac paramac)
   {
-    if (!Ca())
+    if (!Ch())
     {
-      paramString = new e(-2, paramString, new HashSet(), paramj, paramaa);
+      paramString = new e(-2, paramString, new HashSet(), paramj, paramac);
       com.tencent.mm.sdk.i.e.a(paramString, "FTSExceptionHandler");
       return paramString;
     }
-    if (bZBbZI.indexOfKey(2) >= 0) {
-      return ((l)bZBbZI.get(2)).d(i.a(paramString, null, null, null, 3, paramHashSet, null, paramj, paramaa));
+    if (bTkbTr.indexOfKey(2) >= 0) {
+      return ((l)bTkbTr.get(2)).d(i.a(paramString, null, null, null, 3, paramHashSet, null, paramj, paramac));
     }
-    u.e("!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz", "Not Found Contact Logic, LogicArraySize=%d", new Object[] { Integer.valueOf(bZBbZI.size()) });
+    v.e("MicroMsg.FTS.IFTSPlugin", "Not Found Contact Logic, LogicArraySize=%d", new Object[] { Integer.valueOf(bTkbTr.size()) });
     return null;
   }
   
-  public static k a(String paramString, int[] paramArrayOfInt, int paramInt, Comparator paramComparator, j paramj, aa paramaa)
+  public static k a(String paramString, int[] paramArrayOfInt, int paramInt, Comparator<g> paramComparator, j paramj, ac paramac)
   {
-    return a(paramString, paramArrayOfInt, null, paramInt, new HashSet(), paramComparator, paramj, paramaa);
+    return a(paramString, paramArrayOfInt, null, paramInt, new HashSet(), paramComparator, paramj, paramac);
   }
   
-  public static k a(String paramString, int[] paramArrayOfInt, int paramInt, Comparator paramComparator, j paramj, aa paramaa, HashSet paramHashSet)
+  public static k a(String paramString, int[] paramArrayOfInt, int paramInt, Comparator<g> paramComparator, j paramj, ac paramac, HashSet<String> paramHashSet)
   {
-    return a(paramString, paramArrayOfInt, null, paramInt, paramHashSet, paramComparator, paramj, paramaa);
+    return a(paramString, paramArrayOfInt, null, paramInt, paramHashSet, paramComparator, paramj, paramac);
   }
   
-  public static k a(String paramString, int[] paramArrayOfInt, j paramj, aa paramaa, int paramInt)
+  public static k a(String paramString, int[] paramArrayOfInt, j paramj, ac paramac, int paramInt)
   {
-    if (!Ca())
+    if (!Ch())
     {
-      paramString = new e(-2, paramString, new HashSet(), paramj, paramaa);
+      paramString = new e(-2, paramString, new HashSet(), paramj, paramac);
       com.tencent.mm.sdk.i.e.a(paramString, "FTSExceptionHandler");
       return paramString;
     }
-    if (bZBbZI.indexOfKey(1) >= 0)
+    if (bTkbTr.indexOfKey(1) >= 0)
     {
-      l locall = (l)bZBbZI.get(1);
+      l locall = (l)bTkbTr.get(1);
       i locali = new i();
-      aEy = paramString;
-      bZU = paramArrayOfInt;
-      bYu = 3;
-      bYr = paramj;
-      handler = paramaa;
-      asc = paramInt;
+      aqC = paramString;
+      bTD = paramArrayOfInt;
+      bSd = 3;
+      bSa = paramj;
+      handler = paramac;
+      scene = paramInt;
       return locall.a(locali);
     }
-    u.e("!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz", "Not Found TopHits Logic, LogicArraySize=%d", new Object[] { Integer.valueOf(bZBbZI.size()) });
-    paramString = new e(-3, paramString, new HashSet(), paramj, paramaa);
+    v.e("MicroMsg.FTS.IFTSPlugin", "Not Found TopHits Logic, LogicArraySize=%d", new Object[] { Integer.valueOf(bTkbTr.size()) });
+    paramString = new e(-3, paramString, new HashSet(), paramj, paramac);
     com.tencent.mm.sdk.i.e.a(paramString, "FTSExceptionHandler");
     return paramString;
   }
   
-  public static k a(String paramString, int[] paramArrayOfInt, HashSet paramHashSet, Comparator paramComparator, j paramj, aa paramaa)
+  public static k a(String paramString, int[] paramArrayOfInt, HashSet<String> paramHashSet, Comparator<g> paramComparator, j paramj, ac paramac)
   {
-    if (!Ca())
+    if (!Ch())
     {
-      paramString = new e(-2, paramString, new HashSet(), paramj, paramaa);
+      paramString = new e(-2, paramString, new HashSet(), paramj, paramac);
       com.tencent.mm.sdk.i.e.a(paramString, "FTSExceptionHandler");
       return paramString;
     }
-    if (bZBbZI.indexOfKey(2) >= 0) {
-      return ((l)bZBbZI.get(2)).c(i.b(paramString, paramArrayOfInt, null, 3, paramHashSet, paramComparator, paramj, paramaa));
+    if (bTkbTr.indexOfKey(2) >= 0) {
+      return ((l)bTkbTr.get(2)).c(i.b(paramString, paramArrayOfInt, null, 3, paramHashSet, paramComparator, paramj, paramac));
     }
-    u.e("!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz", "Not Found Contact Logic, LogicArraySize=%d", new Object[] { Integer.valueOf(bZBbZI.size()) });
+    v.e("MicroMsg.FTS.IFTSPlugin", "Not Found Contact Logic, LogicArraySize=%d", new Object[] { Integer.valueOf(bTkbTr.size()) });
     return null;
   }
   
-  private static k a(String paramString, int[] paramArrayOfInt1, int[] paramArrayOfInt2, int paramInt, HashSet paramHashSet, Comparator paramComparator, j paramj, aa paramaa)
+  private static k a(String paramString, int[] paramArrayOfInt1, int[] paramArrayOfInt2, int paramInt, HashSet<String> paramHashSet, Comparator<g> paramComparator, j paramj, ac paramac)
   {
-    if (!Ca())
+    if (!Ch())
     {
-      paramString = new e(-2, paramString, new HashSet(), paramj, paramaa);
+      paramString = new e(-2, paramString, new HashSet(), paramj, paramac);
       com.tencent.mm.sdk.i.e.a(paramString, "FTSExceptionHandler");
       return paramString;
     }
-    if (bZBbZI.indexOfKey(2) >= 0) {
-      return ((l)bZBbZI.get(2)).b(i.b(paramString, paramArrayOfInt1, paramArrayOfInt2, paramInt, paramHashSet, paramComparator, paramj, paramaa));
+    if (bTkbTr.indexOfKey(2) >= 0) {
+      return ((l)bTkbTr.get(2)).b(i.b(paramString, paramArrayOfInt1, paramArrayOfInt2, paramInt, paramHashSet, paramComparator, paramj, paramac));
     }
-    u.e("!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz", "Not Found Contact Logic, LogicArraySize=%d", new Object[] { Integer.valueOf(bZBbZI.size()) });
+    v.e("MicroMsg.FTS.IFTSPlugin", "Not Found Contact Logic, LogicArraySize=%d", new Object[] { Integer.valueOf(bTkbTr.size()) });
     return null;
   }
   
-  public static k a(String paramString, int[] paramArrayOfInt1, int[] paramArrayOfInt2, Comparator paramComparator, j paramj, aa paramaa)
+  public static k a(String paramString, int[] paramArrayOfInt1, int[] paramArrayOfInt2, Comparator<g> paramComparator, j paramj, ac paramac)
   {
-    return a(paramString, paramArrayOfInt1, paramArrayOfInt2, 0, new HashSet(), paramComparator, paramj, paramaa);
+    return a(paramString, paramArrayOfInt1, paramArrayOfInt2, 0, new HashSet(), paramComparator, paramj, paramac);
   }
   
   public static void a(int paramInt, l paraml)
   {
-    f localf = bZB;
-    if (bZI.indexOfKey(paramInt) >= 0) {
-      u.w("!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz", "Aready Exist Logic, type=%d, name=%s", new Object[] { Integer.valueOf(paramInt), paraml.getName() });
+    f localf = bTk;
+    if (bTr.indexOfKey(paramInt) >= 0) {
+      v.w("MicroMsg.FTS.IFTSPlugin", "Aready Exist Logic, type=%d, name=%s", new Object[] { Integer.valueOf(paramInt), paraml.getName() });
     }
     for (;;)
     {
-      bZI.put(paramInt, paraml);
+      bTr.put(paramInt, paraml);
       return;
-      u.i("!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz", "Register Logic type=%d, name=%s", new Object[] { Integer.valueOf(paramInt), paraml.getName() });
+      v.i("MicroMsg.FTS.IFTSPlugin", "Register Logic type=%d, name=%s", new Object[] { Integer.valueOf(paramInt), paraml.getName() });
     }
   }
   
   public static void a(j paramj, o paramo)
   {
-    f localf = bZB;
+    f localf = bTk;
     if ((paramj != null) && (paramo != null))
     {
-      bZF = paramj;
-      bZG = paramo;
+      bTo = paramj;
+      bTp = paramo;
     }
   }
   
   public static void a(k paramk)
   {
-    f localf = bZB;
-    bZH.add(paramk);
-    Collections.sort(bZH);
+    f localf = bTk;
+    bTq.add(paramk);
+    Collections.sort(bTq);
   }
   
   public static void a(k paramk)
   {
-    if (!Ca()) {}
+    if (!Ch()) {}
     while (!(paramk instanceof o.a)) {
       return;
     }
-    bZBbZG.a((o.a)paramk);
+    bTkbTp.a((o.a)paramk);
   }
   
-  public static k b(String paramString, j paramj, aa paramaa, HashSet paramHashSet)
+  public static k b(String paramString, j paramj, ac paramac, HashSet<String> paramHashSet)
   {
-    if (!Ca())
+    if (!Ch())
     {
-      paramString = new e(-2, paramString, new HashSet(), paramj, paramaa);
+      paramString = new e(-2, paramString, new HashSet(), paramj, paramac);
       com.tencent.mm.sdk.i.e.a(paramString, "FTSExceptionHandler");
       return paramString;
     }
-    if (bZBbZI.indexOfKey(6) >= 0) {
-      return ((l)bZBbZI.get(6)).b(i.a(paramString, 0, paramHashSet, paramj, paramaa));
+    if (bTkbTr.indexOfKey(6) >= 0) {
+      return ((l)bTkbTr.get(6)).b(i.a(paramString, 0, paramHashSet, paramj, paramac));
     }
-    u.e("!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz", "Not Found Favorite Logic, LogicArraySize=%d", new Object[] { Integer.valueOf(bZBbZI.size()) });
-    paramString = new e(-3, paramString, new HashSet(), paramj, paramaa);
+    v.e("MicroMsg.FTS.IFTSPlugin", "Not Found Favorite Logic, LogicArraySize=%d", new Object[] { Integer.valueOf(bTkbTr.size()) });
+    paramString = new e(-3, paramString, new HashSet(), paramj, paramac);
     com.tencent.mm.sdk.i.e.a(paramString, "FTSExceptionHandler");
     return paramString;
   }
   
   public static void b(String paramString, g paramg, int paramInt)
   {
-    if ((Ca()) && (bZBbZI.indexOfKey(1) >= 0)) {
-      ((l)bZBbZI.get(1)).a(paramString, paramg, paramInt);
+    if ((Ch()) && (bTkbTr.indexOfKey(1) >= 0)) {
+      ((l)bTkbTr.get(1)).a(paramString, paramg, paramInt);
     }
   }
   
-  public static k c(String paramString, j paramj, aa paramaa, HashSet paramHashSet)
+  public static k c(String paramString, j paramj, ac paramac, HashSet<String> paramHashSet)
   {
-    if (!Ca())
+    if (!Ch())
     {
-      paramString = new e(-2, paramString, new HashSet(), paramj, paramaa);
+      paramString = new e(-2, paramString, new HashSet(), paramj, paramac);
       com.tencent.mm.sdk.i.e.a(paramString, "FTSExceptionHandler");
       return paramString;
     }
-    if (bZBbZI.indexOfKey(4) >= 0) {
-      return ((l)bZBbZI.get(4)).b(i.a(paramString, 0, paramHashSet, paramj, paramaa));
+    if (bTkbTr.indexOfKey(4) >= 0) {
+      return ((l)bTkbTr.get(4)).b(i.a(paramString, 0, paramHashSet, paramj, paramac));
     }
-    u.e("!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz", "Not Found Feature Logic, LogicArraySize=%d", new Object[] { Integer.valueOf(bZBbZI.size()) });
-    paramString = new e(-3, paramString, new HashSet(), paramj, paramaa);
+    v.e("MicroMsg.FTS.IFTSPlugin", "Not Found Feature Logic, LogicArraySize=%d", new Object[] { Integer.valueOf(bTkbTr.size()) });
+    paramString = new e(-3, paramString, new HashSet(), paramj, paramac);
     com.tencent.mm.sdk.i.e.a(paramString, "FTSExceptionHandler");
     return paramString;
   }
   
-  public static void dK(int paramInt)
+  public static void er(int paramInt)
   {
-    f localf = bZB;
+    f localf = bTk;
     l locall;
-    if (bZI.indexOfKey(paramInt) >= 0) {
-      locall = (l)bZI.get(paramInt);
+    if (bTr.indexOfKey(paramInt) >= 0) {
+      locall = (l)bTr.get(paramInt);
     }
     try
     {
       locall.destroy();
-      bZI.remove(paramInt);
+      bTr.remove(paramInt);
       return;
     }
     catch (Exception localException)
     {
       for (;;)
       {
-        u.e("!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz", "Destroy Native Logic name=%s \nexception=%s", new Object[] { locall.getName(), ay.b(localException) });
+        v.e("MicroMsg.FTS.IFTSPlugin", "Destroy Native Logic name=%s \nexception=%s", new Object[] { locall.getName(), be.f(localException) });
       }
     }
   }
   
-  public static void dL(int paramInt)
+  public static void es(int paramInt)
   {
-    f localf = bZB;
+    f localf = bTk;
     Object localObject = null;
-    Iterator localIterator = bZH.iterator();
+    Iterator localIterator = bTq.iterator();
     if (localIterator.hasNext())
     {
       k localk = (k)localIterator.next();
@@ -379,17 +379,17 @@ public final class m
       if (localObject != null)
       {
         ((k)localObject).destroy();
-        bZH.remove(localObject);
+        bTq.remove(localObject);
       }
       return;
     }
   }
   
-  public static k dM(int paramInt)
+  public static k et(int paramInt)
   {
-    Object localObject2 = bZB;
+    Object localObject2 = bTk;
     Object localObject1 = null;
-    Iterator localIterator = bZH.iterator();
+    Iterator localIterator = bTq.iterator();
     if (localIterator.hasNext())
     {
       localObject2 = (k)localIterator.next();
@@ -407,22 +407,22 @@ public final class m
   }
   
   public static final class a
-    implements Comparator
+    implements Comparator<m.g>
   {
-    private HashMap bZC = null;
-    private g bZD = null;
-    private String[] bZE = null;
+    private HashMap<String, Long> bTl = null;
+    private g bTm = null;
+    private String[] bTn = null;
     
-    private Long iC(String paramString)
+    private Long iT(String paramString)
     {
       Cursor localCursor;
-      if (bZC == null)
+      if (bTl == null)
       {
-        bZC = new HashMap();
-        bZD = tDbzA;
-        bZE = new String[1];
-        bZE[0] = paramString;
-        localCursor = bZD.rawQuery("SELECT conversationTime FROM rconversation WHERE username=?;", bZE);
+        bTl = new HashMap();
+        bTm = tEbsy;
+        bTn = new String[1];
+        bTn[0] = paramString;
+        localCursor = bTm.rawQuery("SELECT conversationTime FROM rconversation WHERE username=?;", bTn);
         if (!localCursor.moveToFirst()) {
           break label113;
         }
@@ -431,9 +431,9 @@ public final class m
       for (Long localLong = Long.valueOf(localCursor.getLong(0));; localLong = Long.valueOf(0L))
       {
         localCursor.close();
-        bZC.put(paramString, localLong);
+        bTl.put(paramString, localLong);
         return localLong;
-        localLong = (Long)bZC.get(paramString);
+        localLong = (Long)bTl.get(paramString);
         if (localLong == null) {
           break;
         }
@@ -443,52 +443,52 @@ public final class m
   }
   
   public static final class b
-    implements Comparator
+    implements Comparator<m.g>
   {}
   
   public static final class c
-    implements Comparator
+    implements Comparator<m.g>
   {}
   
   public static final class d
-    implements Comparator
+    implements Comparator<m.g>
   {}
   
   public static final class e
-    implements Comparator
+    implements Comparator<m.g>
   {}
   
   public static final class f
   {
-    j bZF;
-    o bZG;
-    LinkedList bZH = new LinkedList();
-    SparseArray bZI = new SparseArray();
+    j bTo;
+    o bTp;
+    LinkedList<k> bTq = new LinkedList();
+    SparseArray<l> bTr = new SparseArray();
   }
   
   public static class g
   {
-    public int bZJ;
-    public long bZK;
-    public String bZL;
-    public String[] bZM = null;
-    public int[] bZN = null;
-    public List[] bZO = null;
+    public int bTs;
+    public long bTt;
+    public String bTu;
+    public String[] bTv = null;
+    public int[] bTw = null;
+    public List<a>[] bTx = null;
     public String content;
     public long timestamp;
     public int type;
     public Object userData = null;
     
-    public final a Cd()
+    public final a Ck()
     {
-      return (a)bZO[0].get(0);
+      return (a)bTx[0].get(0);
     }
     
     public static final class a
     {
-      public int bZP = -1;
-      public int bZQ = -1;
-      public int bZR = -1;
+      public int bTA = -1;
+      public int bTy = -1;
+      public int bTz = -1;
       public int end;
       public int start;
       
@@ -507,18 +507,18 @@ public final class m
   
   public static final class h
   {
-    public int bZJ;
-    public int bZS;
-    public int bZT;
+    public int bTB;
+    public int bTC;
+    public int bTs;
     public String content;
     public int end;
     public int start;
     
     public h(int paramInt1, int paramInt2, int paramInt3, String paramString, int paramInt4, int paramInt5)
     {
-      bZS = paramInt1;
-      bZT = paramInt2;
-      bZJ = paramInt3;
+      bTB = paramInt1;
+      bTC = paramInt2;
+      bTs = paramInt3;
       content = paramString;
       start = paramInt4;
       end = paramInt5;
@@ -527,48 +527,48 @@ public final class m
   
   public static final class i
   {
-    public String aEy;
-    public String apb;
-    public int asc;
-    public m.j bYr;
-    public HashSet bYt;
-    public int bYu;
-    public int[] bZU;
-    public int[] bZV;
-    public Comparator bZW;
-    public aa handler;
+    public String ajT;
+    public String aqC;
+    public m.j bSa;
+    public HashSet<String> bSc;
+    public int bSd;
+    public int[] bTD;
+    public int[] bTE;
+    public Comparator<m.g> bTF;
+    public ac handler;
+    public int scene;
     
-    public static i a(String paramString, int paramInt, HashSet paramHashSet, m.j paramj, aa paramaa)
+    public static i a(String paramString, int paramInt, HashSet<String> paramHashSet, m.j paramj, ac paramac)
     {
-      return a(paramString, null, null, null, paramInt, paramHashSet, null, paramj, paramaa);
+      return a(paramString, null, null, null, paramInt, paramHashSet, null, paramj, paramac);
     }
     
-    public static i a(String paramString1, String paramString2, int[] paramArrayOfInt1, int[] paramArrayOfInt2, int paramInt, HashSet paramHashSet, Comparator paramComparator, m.j paramj, aa paramaa)
+    public static i a(String paramString1, String paramString2, int[] paramArrayOfInt1, int[] paramArrayOfInt2, int paramInt, HashSet<String> paramHashSet, Comparator<m.g> paramComparator, m.j paramj, ac paramac)
     {
       i locali = new i();
-      aEy = paramString1;
-      apb = paramString2;
-      bZU = paramArrayOfInt1;
-      bZV = paramArrayOfInt2;
-      bYu = paramInt;
-      bYt = paramHashSet;
-      bZW = paramComparator;
-      bYr = paramj;
-      handler = paramaa;
+      aqC = paramString1;
+      ajT = paramString2;
+      bTD = paramArrayOfInt1;
+      bTE = paramArrayOfInt2;
+      bSd = paramInt;
+      bSc = paramHashSet;
+      bTF = paramComparator;
+      bSa = paramj;
+      handler = paramac;
       return locali;
     }
     
-    public static i b(String paramString, int[] paramArrayOfInt1, int[] paramArrayOfInt2, int paramInt, HashSet paramHashSet, Comparator paramComparator, m.j paramj, aa paramaa)
+    public static i b(String paramString, int[] paramArrayOfInt1, int[] paramArrayOfInt2, int paramInt, HashSet<String> paramHashSet, Comparator<m.g> paramComparator, m.j paramj, ac paramac)
     {
-      return a(paramString, null, paramArrayOfInt1, paramArrayOfInt2, paramInt, paramHashSet, paramComparator, paramj, paramaa);
+      return a(paramString, null, paramArrayOfInt1, paramArrayOfInt2, paramInt, paramHashSet, paramComparator, paramj, paramac);
     }
   }
   
   public static abstract interface j
   {
-    public abstract void a(m.k paramk, List paramList, HashSet paramHashSet, String[] paramArrayOfString, String paramString);
+    public abstract void a(m.k paramk, List<m.g> paramList, HashSet<String> paramHashSet, String[] paramArrayOfString, String paramString);
     
-    public abstract void iD(String paramString);
+    public abstract void iU(String paramString);
   }
   
   public static abstract class k {}

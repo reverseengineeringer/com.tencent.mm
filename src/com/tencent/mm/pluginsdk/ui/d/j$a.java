@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.d;
 
 public abstract interface j$a
 {
-  public abstract void ao(Object paramObject);
+  public abstract void aH(Object paramObject);
 }
 
 /* Location:

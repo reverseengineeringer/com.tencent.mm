@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic bBf:Lcom/tencent/mm/model/ah;
+.field final synthetic buk:Lcom/tencent/mm/model/ah;
 
 
 # direct methods
@@ -23,8 +23,8 @@
     .locals 0
 
     .prologue
-    .line 156
-    iput-object p1, p0, Lcom/tencent/mm/model/ah$1;->bBf:Lcom/tencent/mm/model/ah;
+    .line 157
+    iput-object p1, p0, Lcom/tencent/mm/model/ah$1;->buk:Lcom/tencent/mm/model/ah;
 
     invoke-direct {p0}, Lcom/tencent/mm/network/m$a;-><init>()V
 
@@ -33,12 +33,12 @@
 
 
 # virtual methods
-.method public final aK(I)V
+.method public final bc(I)V
     .locals 2
 
     .prologue
-    .line 160
-    iget-object v0, p0, Lcom/tencent/mm/model/ah$1;->bBf:Lcom/tencent/mm/model/ah;
+    .line 161
+    iget-object v0, p0, Lcom/tencent/mm/model/ah$1;->buk:Lcom/tencent/mm/model/ah;
 
     invoke-static {v0}, Lcom/tencent/mm/model/ah;->a(Lcom/tencent/mm/model/ah;)Ljava/util/HashSet;
 
@@ -61,12 +61,12 @@
 
     check-cast v0, Lcom/tencent/mm/network/m;
 
-    .line 161
-    invoke-interface {v0, p1}, Lcom/tencent/mm/network/m;->aK(I)V
+    .line 162
+    invoke-interface {v0, p1}, Lcom/tencent/mm/network/m;->bc(I)V
 
     goto :goto_0
 
-    .line 163
+    .line 164
     :cond_0
     return-void
 .end method

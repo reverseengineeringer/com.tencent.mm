@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnLongClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
@@ -18,20 +18,24 @@
 
 
 # instance fields
-.field final synthetic kpC:Lcom/tencent/mm/ui/j$a;
+.field final synthetic kOB:Lcom/tencent/mm/ui/j;
 
-.field final synthetic kpx:Lcom/tencent/mm/ui/j;
+.field final synthetic kOF:Landroid/view/MenuItem;
+
+.field final synthetic kOG:Lcom/tencent/mm/ui/j$a;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/j;Lcom/tencent/mm/ui/j$a;)V
+.method constructor <init>(Lcom/tencent/mm/ui/j;Landroid/view/MenuItem;Lcom/tencent/mm/ui/j$a;)V
     .locals 0
 
     .prologue
-    .line 860
-    iput-object p1, p0, Lcom/tencent/mm/ui/j$10;->kpx:Lcom/tencent/mm/ui/j;
+    .line 851
+    iput-object p1, p0, Lcom/tencent/mm/ui/j$10;->kOB:Lcom/tencent/mm/ui/j;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/j$10;->kpC:Lcom/tencent/mm/ui/j$a;
+    iput-object p2, p0, Lcom/tencent/mm/ui/j$10;->kOF:Landroid/view/MenuItem;
+
+    iput-object p3, p0, Lcom/tencent/mm/ui/j$10;->kOG:Lcom/tencent/mm/ui/j$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,18 +44,19 @@
 
 
 # virtual methods
-.method public final onLongClick(Landroid/view/View;)Z
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 864
-    iget-object v0, p0, Lcom/tencent/mm/ui/j$10;->kpx:Lcom/tencent/mm/ui/j;
+    .line 855
+    iget-object v0, p0, Lcom/tencent/mm/ui/j$10;->kOB:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/j$10;->kpC:Lcom/tencent/mm/ui/j$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/j$10;->kOF:Landroid/view/MenuItem;
 
-    invoke-static {v0, p1, v1}, Lcom/tencent/mm/ui/j;->a(Lcom/tencent/mm/ui/j;Landroid/view/View;Lcom/tencent/mm/ui/j$a;)Z
+    iget-object v2, p0, Lcom/tencent/mm/ui/j$10;->kOG:Lcom/tencent/mm/ui/j$a;
 
-    move-result v0
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/j;->a(Lcom/tencent/mm/ui/j;Landroid/view/MenuItem;Lcom/tencent/mm/ui/j$a;)V
 
-    return v0
+    .line 856
+    return-void
 .end method

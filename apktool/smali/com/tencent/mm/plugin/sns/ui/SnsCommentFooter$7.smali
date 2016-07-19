@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->setOnCommentLikedImp$632a1e7b(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$b;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+.field final synthetic hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-.field final synthetic hdK:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$b;
+.field final synthetic hsx:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$b;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 597
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7;->hdK:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$b;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7;->hsx:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,13 +53,13 @@
     const/high16 v6, 0x3f000000    # 0.5f
 
     .line 600
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->j(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;)Landroid/widget/ImageView;
 
     move-result-object v0
 
-    const v3, 0x7f040519
+    const v3, 0x7f020216
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -77,14 +77,14 @@
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFIFIF)V
 
     .line 603
-    const-wide/16 v1, 0x190
+    const-wide/16 v2, 0x190
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
+    invoke-virtual {v0, v2, v3}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
     .line 604
-    const-wide/16 v1, 0x64
+    const-wide/16 v2, 0x64
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/ScaleAnimation;->setStartOffset(J)V
+    invoke-virtual {v0, v2, v3}, Landroid/view/animation/ScaleAnimation;->setStartOffset(J)V
 
     .line 605
     const/4 v1, 0x0
@@ -92,7 +92,7 @@
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setRepeatCount(I)V
 
     .line 606
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->j(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;)Landroid/widget/ImageView;
 
@@ -108,9 +108,9 @@
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     .line 621
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7;->hdK:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7;->hsx:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$b;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$b;->aBM()V
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$b;->aEI()V
 
     .line 622
     return-void

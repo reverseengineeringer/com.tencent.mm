@@ -1,37 +1,22 @@
 package com.tencent.mm.ui;
 
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.tencent.mm.sdk.platformtools.ak;
 
 final class LauncherUI$26
-  implements Animation.AnimationListener
+  implements DialogInterface.OnClickListener
 {
-  LauncherUI$26(LauncherUI paramLauncherUI) {}
+  LauncherUI$26(LauncherUI paramLauncherUI, int paramInt) {}
   
-  public final void onAnimationEnd(Animation paramAnimation)
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ah.tv().aUY();
-    ab.pq(0);
-    if (LauncherUI.B(knl))
+    try
     {
-      u.i("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "start  setAppTagUnreadNow");
-      knl.bai();
+      ak.J(kMs, coh);
+      return;
     }
-    LauncherUI.t(knl);
-    u.i("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "klem pop out onAnimationEnd");
-  }
-  
-  public final void onAnimationRepeat(Animation paramAnimation) {}
-  
-  public final void onAnimationStart(Animation paramAnimation)
-  {
-    ah.tv().aUV();
-    ab.pq(-8);
-    u.i("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "klem pop out onAnimationStart");
-    LauncherUI.c(knl, true);
+    catch (Exception paramDialogInterface) {}
   }
 }
 

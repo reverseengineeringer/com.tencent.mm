@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.base;
 
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class MultiTouchImageView$1
   implements Runnable
@@ -10,12 +10,12 @@ final class MultiTouchImageView$1
   public final void run()
   {
     long l = System.currentTimeMillis();
-    float f1 = Math.min(kIY, (float)(l - bRf));
-    float f2 = kIZ;
-    float f3 = kJa;
-    kJd.c(f2 + f3 * f1, kJb, kJc);
-    if (f1 < kIY) {
-      kJd.mHandler.post(this);
+    float f1 = Math.min(lio, (float)(l - bjD));
+    float f2 = lip;
+    float f3 = liq;
+    lit.c(f2 + f3 * f1, lir, lis);
+    if (f1 < lio) {
+      lit.mHandler.post(this);
     }
   }
 }

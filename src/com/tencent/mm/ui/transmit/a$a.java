@@ -2,7 +2,7 @@ package com.tencent.mm.ui.transmit;
 
 public abstract interface a$a
 {
-  public abstract void bjj();
+  public abstract void bph();
 }
 
 /* Location:

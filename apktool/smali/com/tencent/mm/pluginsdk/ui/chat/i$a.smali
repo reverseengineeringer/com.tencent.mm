@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract AI(Ljava/lang/String;)V
+.method public abstract CO(Ljava/lang/String;)V
 .end method

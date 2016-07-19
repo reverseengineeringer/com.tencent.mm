@@ -1,6 +1,6 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SnsMsgUI$4$1
   implements Runnable
@@ -9,11 +9,11 @@ final class SnsMsgUI$4$1
   
   public final void run()
   {
-    synchronized (SnsMsgUI.d(hfV.hfU))
+    synchronized (SnsMsgUI.d(huM.huL))
     {
-      u.v("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "comment notify");
-      SnsMsgUI.l(hfV.hfU);
-      SnsMsgUI.d(hfV.hfU).a(null, null);
+      v.v("MicroMsg.SnsMsgUI", "comment notify");
+      SnsMsgUI.l(huM.huL);
+      SnsMsgUI.d(huM.huL).a(null, null);
       return;
     }
   }

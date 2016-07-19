@@ -1,37 +1,56 @@
 package com.tencent.mm.t;
 
-import com.tencent.mm.modelgeo.a.a;
-import com.tencent.mm.modelstat.g;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import android.content.SharedPreferences;
+import android.os.RemoteException;
+import com.tencent.mm.model.ai;
+import com.tencent.mm.network.i;
+import com.tencent.mm.network.o;
+import com.tencent.mm.network.p;
+import com.tencent.mm.protocal.c;
+import com.tencent.mm.protocal.i.c;
+import com.tencent.mm.protocal.i.c.a;
+import com.tencent.mm.protocal.i.g;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class r$2
-  implements a.a
+  implements Runnable
 {
-  long lastReportTime = 0L;
+  r$2(r paramr, i parami, int paramInt1, int paramInt2) {}
   
-  r$2(r paramr) {}
-  
-  public final boolean a(boolean paramBoolean, float paramFloat1, float paramFloat2, int paramInt, double paramDouble1, double paramDouble2)
+  public final void run()
   {
-    if (!paramBoolean) {
-      return true;
-    }
-    u.i("!32@/B4Tb64lLpL9SB0DqhCSWgFPYrICdb5Q", "LBSManager notify. lat:%f, lng:%f", new Object[] { Float.valueOf(paramFloat2), Float.valueOf(paramFloat1) });
-    if (ay.FR() >= lastReportTime + bJi.bJf)
+    int i = ai.tV().getInt("key_auth_update_version", 0);
+    v.d("MicroMsg.RemoteReqResp", "summerauth updateVersion:%d, clientVersion:%d WLOGIN_BUG_VERSION:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(c.jry), Integer.valueOf(637665332) });
+    if (i <= 637665332)
     {
-      r.a(bJi.ajh, 11, 0, paramFloat2, paramFloat1, (int)paramDouble2);
-      lastReportTime = ay.FR();
+      i = 701;
+      if (((r.a(bzG).getType() != 702) && (r.a(bzG).getType() != 701)) || (abzG).tY()).jrX != 2)) {
+        break label244;
+      }
     }
-    if (bJi.bJc == 2) {
-      bJi.xs();
-    }
-    if (!bJi.bJg)
+    label244:
+    for (int j = 1;; j = 0)
     {
-      bJi.bJg = true;
-      g.a(2013, paramFloat1, paramFloat2, (int)paramDouble2);
+      v.d("MicroMsg.RemoteReqResp", "summerauth dealWithAutoAuth old type:%d new auth type:%d, reqFlag:%d", new Object[] { Integer.valueOf(r.a(bzG).getType()), Integer.valueOf(i), Integer.valueOf(j) });
+      Object localObject = i.c.a.jrR.N(i, j);
+      if (localObject == null) {}
+      for (localObject = null;; localObject = new r((o)localObject, bzG.handler))
+      {
+        try
+        {
+          bzH.a((p)localObject, bzI, bzJ, "");
+          return;
+        }
+        catch (RemoteException localRemoteException)
+        {
+          v.e("MicroMsg.RemoteReqResp", "exception:%s", new Object[] { be.f(localRemoteException) });
+          return;
+        }
+        i = 702;
+        break;
+      }
     }
-    return true;
   }
 }
 

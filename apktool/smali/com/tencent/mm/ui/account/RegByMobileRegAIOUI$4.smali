@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/ab$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ad$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field daR:Ljava/lang/String;
+.field cZx:Ljava/lang/String;
 
-.field final synthetic kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+.field final synthetic kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
 
 # direct methods
@@ -28,8 +28,8 @@
     .locals 0
 
     .prologue
-    .line 570
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$4;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 571
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$4;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,7 +42,7 @@
     .locals 2
 
     .prologue
-    .line 588
+    .line 589
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -68,41 +68,41 @@
     return-object v0
 .end method
 
-.method public final vd()Z
+.method public final vf()Z
     .locals 2
 
     .prologue
-    .line 582
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$4;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 583
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$4;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$4;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$4;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->j(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/modelsimple/c;->v(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/modelsimple/c;->w(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$4;->daR:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$4;->cZx:Ljava/lang/String;
 
-    .line 583
+    .line 584
     const/4 v0, 0x1
 
     return v0
 .end method
 
-.method public final ve()Z
+.method public final vg()Z
     .locals 2
 
     .prologue
-    .line 575
+    .line 576
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$4;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$4;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->f(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Landroid/widget/EditText;
 
@@ -124,22 +124,22 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 576
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$4;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 577
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$4;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->f(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Landroid/widget/EditText;
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$4;->daR:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$4;->cZx:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -150,15 +150,15 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 577
+    .line 578
     :cond_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 576
+    .line 577
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$4;->daR:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$4;->cZx:Ljava/lang/String;
 
     goto :goto_0
 .end method

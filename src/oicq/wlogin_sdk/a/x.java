@@ -5,7 +5,7 @@ public final class x
 {
   public x()
   {
-    mbE = 289;
+    mNI = 289;
   }
 }
 

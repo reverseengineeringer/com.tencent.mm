@@ -1,29 +1,52 @@
 package com.tencent.mm.ui.conversation;
 
-import android.app.ProgressDialog;
+import android.database.Cursor;
+import com.tencent.mm.model.ah;
 import com.tencent.mm.model.ar.a;
-import com.tencent.mm.t.aj;
-import com.tencent.mm.t.c;
-import com.tencent.mm.t.e;
+import com.tencent.mm.sdk.h.d;
+import com.tencent.mm.storage.s;
+import com.tencent.mm.ui.base.p;
+import com.tencent.mm.v.an;
+import com.tencent.mm.v.e;
 
 final class BizChatConversationUI$a$6
   implements ar.a
 {
-  BizChatConversationUI$a$6(BizChatConversationUI.a parama, ProgressDialog paramProgressDialog, long paramLong) {}
+  BizChatConversationUI$a$6(BizChatConversationUI.a parama, long paramLong) {}
   
-  public final void uh()
+  public final void ui()
   {
-    if (cYO != null)
+    int i = 0;
+    int j = 0;
+    if (BizChatConversationUI.a.p(lOo) != null)
     {
-      aj.xH().L(bBJ);
-      aj.xI().L(bBJ);
-      cYO.dismiss();
+      an.xJ().Q(buR);
+      an.xK().Q(buR);
+      Object localObject = an.xK();
+      String str = BizChatConversationUI.a.a(lOo);
+      StringBuilder localStringBuilder = new StringBuilder();
+      localStringBuilder.append("select count(*) from BizChatConversation");
+      localStringBuilder.append(" where brandUserName = '").append(str).append("' ");
+      str = localStringBuilder.toString();
+      localObject = bkP.rawQuery(str, null);
+      if (localObject != null)
+      {
+        i = j;
+        if (((Cursor)localObject).moveToFirst()) {
+          i = ((Cursor)localObject).getInt(0);
+        }
+        ((Cursor)localObject).close();
+      }
+      if (i <= 0) {
+        ah.tE().ru().GM(BizChatConversationUI.a.a(lOo));
+      }
+      BizChatConversationUI.a.p(lOo).dismiss();
     }
   }
   
-  public final boolean ui()
+  public final boolean uj()
   {
-    return BizChatConversationUI.a.i(lnN);
+    return BizChatConversationUI.a.o(lOo);
   }
 }
 

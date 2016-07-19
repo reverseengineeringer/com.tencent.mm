@@ -3,18 +3,29 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<E:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
 # static fields
-.field public static final en:Ljava/lang/Object;
+.field public static final eI:Ljava/lang/Object;
 
 
 # instance fields
-.field public eo:Z
+.field public eJ:Z
 
-.field public ep:[I
+.field public eK:[I
 
-.field public eq:[Ljava/lang/Object;
+.field public eL:[Ljava/lang/Object;
 
-.field public mSize:I
+.field public eM:I
 
 
 # direct methods
@@ -27,7 +38,7 @@
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Landroid/support/v4/c/c;->en:Ljava/lang/Object;
+    sput-object v0, Landroid/support/v4/c/c;->eI:Ljava/lang/Object;
 
     return-void
 .end method
@@ -55,27 +66,27 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 25
-    iput-boolean v2, p0, Landroid/support/v4/c/c;->eo:Z
+    iput-boolean v2, p0, Landroid/support/v4/c/c;->eJ:Z
 
     .line 40
     const/16 v0, 0xa
 
-    invoke-static {v0}, Landroid/support/v4/c/c;->m(I)I
+    invoke-static {v0}, Landroid/support/v4/c/c;->n(I)I
 
     move-result v0
 
     .line 42
     new-array v1, v0, [I
 
-    iput-object v1, p0, Landroid/support/v4/c/c;->ep:[I
+    iput-object v1, p0, Landroid/support/v4/c/c;->eK:[I
 
     .line 43
     new-array v0, v0, [Ljava/lang/Object;
 
-    iput-object v0, p0, Landroid/support/v4/c/c;->eq:[Ljava/lang/Object;
+    iput-object v0, p0, Landroid/support/v4/c/c;->eL:[Ljava/lang/Object;
 
     .line 44
-    iput v2, p0, Landroid/support/v4/c/c;->mSize:I
+    iput v2, p0, Landroid/support/v4/c/c;->eM:I
 
     .line 45
     return-void
@@ -158,13 +169,13 @@
     const/4 v2, 0x0
 
     .line 116
-    iget v3, p0, Landroid/support/v4/c/c;->mSize:I
+    iget v3, p0, Landroid/support/v4/c/c;->eM:I
 
     .line 118
-    iget-object v4, p0, Landroid/support/v4/c/c;->ep:[I
+    iget-object v4, p0, Landroid/support/v4/c/c;->eK:[I
 
     .line 119
-    iget-object v5, p0, Landroid/support/v4/c/c;->eq:[Ljava/lang/Object;
+    iget-object v5, p0, Landroid/support/v4/c/c;->eL:[Ljava/lang/Object;
 
     move v1, v2
 
@@ -178,7 +189,7 @@
     aget-object v6, v5, v1
 
     .line 124
-    sget-object v7, Landroid/support/v4/c/c;->en:Ljava/lang/Object;
+    sget-object v7, Landroid/support/v4/c/c;->eI:Ljava/lang/Object;
 
     if-eq v6, v7, :cond_1
 
@@ -205,16 +216,16 @@
 
     .line 134
     :cond_2
-    iput-boolean v2, p0, Landroid/support/v4/c/c;->eo:Z
+    iput-boolean v2, p0, Landroid/support/v4/c/c;->eJ:Z
 
     .line 135
-    iput v0, p0, Landroid/support/v4/c/c;->mSize:I
+    iput v0, p0, Landroid/support/v4/c/c;->eM:I
 
     .line 138
     return-void
 .end method
 
-.method private static m(I)I
+.method private static n(I)I
     .locals 4
 
     .prologue
@@ -260,10 +271,10 @@
     const/4 v1, 0x0
 
     .line 280
-    iget v2, p0, Landroid/support/v4/c/c;->mSize:I
+    iget v2, p0, Landroid/support/v4/c/c;->eM:I
 
     .line 281
-    iget-object v3, p0, Landroid/support/v4/c/c;->eq:[Ljava/lang/Object;
+    iget-object v3, p0, Landroid/support/v4/c/c;->eL:[Ljava/lang/Object;
 
     move v0, v1
 
@@ -283,10 +294,10 @@
 
     .line 287
     :cond_0
-    iput v1, p0, Landroid/support/v4/c/c;->mSize:I
+    iput v1, p0, Landroid/support/v4/c/c;->eM:I
 
     .line 288
-    iput-boolean v1, p0, Landroid/support/v4/c/c;->eo:Z
+    iput-boolean v1, p0, Landroid/support/v4/c/c;->eJ:Z
 
     .line 289
     return-void
@@ -294,12 +305,17 @@
 
 .method public final get(I)Ljava/lang/Object;
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)TE;"
+        }
+    .end annotation
 
     .prologue
     .line 52
-    iget-object v0, p0, Landroid/support/v4/c/c;->ep:[I
+    iget-object v0, p0, Landroid/support/v4/c/c;->eK:[I
 
-    iget v1, p0, Landroid/support/v4/c/c;->mSize:I
+    iget v1, p0, Landroid/support/v4/c/c;->eM:I
 
     invoke-static {v0, v1, p1}, Landroid/support/v4/c/c;->a([III)I
 
@@ -307,11 +323,11 @@
 
     if-ltz v0, :cond_0
 
-    iget-object v1, p0, Landroid/support/v4/c/c;->eq:[Ljava/lang/Object;
+    iget-object v1, p0, Landroid/support/v4/c/c;->eL:[Ljava/lang/Object;
 
     aget-object v1, v1, v0
 
-    sget-object v2, Landroid/support/v4/c/c;->en:Ljava/lang/Object;
+    sget-object v2, Landroid/support/v4/c/c;->eI:Ljava/lang/Object;
 
     if-ne v1, v2, :cond_1
 
@@ -322,7 +338,7 @@
     return-object v0
 
     :cond_1
-    iget-object v1, p0, Landroid/support/v4/c/c;->eq:[Ljava/lang/Object;
+    iget-object v1, p0, Landroid/support/v4/c/c;->eL:[Ljava/lang/Object;
 
     aget-object v0, v1, v0
 
@@ -334,7 +350,7 @@
 
     .prologue
     .line 249
-    iget-boolean v0, p0, Landroid/support/v4/c/c;->eo:Z
+    iget-boolean v0, p0, Landroid/support/v4/c/c;->eJ:Z
 
     if-eqz v0, :cond_0
 
@@ -343,9 +359,9 @@
 
     .line 253
     :cond_0
-    iget-object v0, p0, Landroid/support/v4/c/c;->ep:[I
+    iget-object v0, p0, Landroid/support/v4/c/c;->eK:[I
 
-    iget v1, p0, Landroid/support/v4/c/c;->mSize:I
+    iget v1, p0, Landroid/support/v4/c/c;->eM:I
 
     invoke-static {v0, v1, p1}, Landroid/support/v4/c/c;->a([III)I
 
@@ -359,7 +375,7 @@
 
     .prologue
     .line 210
-    iget-boolean v0, p0, Landroid/support/v4/c/c;->eo:Z
+    iget-boolean v0, p0, Landroid/support/v4/c/c;->eJ:Z
 
     if-eqz v0, :cond_0
 
@@ -368,7 +384,7 @@
 
     .line 214
     :cond_0
-    iget-object v0, p0, Landroid/support/v4/c/c;->ep:[I
+    iget-object v0, p0, Landroid/support/v4/c/c;->eK:[I
 
     aget v0, v0, p1
 
@@ -377,14 +393,19 @@
 
 .method public final put(ILjava/lang/Object;)V
     .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(ITE;)V"
+        }
+    .end annotation
 
     .prologue
     const/4 v5, 0x0
 
     .line 146
-    iget-object v0, p0, Landroid/support/v4/c/c;->ep:[I
+    iget-object v0, p0, Landroid/support/v4/c/c;->eK:[I
 
-    iget v1, p0, Landroid/support/v4/c/c;->mSize:I
+    iget v1, p0, Landroid/support/v4/c/c;->eM:I
 
     invoke-static {v0, v1, p1}, Landroid/support/v4/c/c;->a([III)I
 
@@ -394,7 +415,7 @@
     if-ltz v0, :cond_0
 
     .line 149
-    iget-object v1, p0, Landroid/support/v4/c/c;->eq:[Ljava/lang/Object;
+    iget-object v1, p0, Landroid/support/v4/c/c;->eL:[Ljava/lang/Object;
 
     aput-object p2, v1, v0
 
@@ -407,25 +428,25 @@
     xor-int/lit8 v0, v0, -0x1
 
     .line 153
-    iget v1, p0, Landroid/support/v4/c/c;->mSize:I
+    iget v1, p0, Landroid/support/v4/c/c;->eM:I
 
     if-ge v0, v1, :cond_1
 
-    iget-object v1, p0, Landroid/support/v4/c/c;->eq:[Ljava/lang/Object;
+    iget-object v1, p0, Landroid/support/v4/c/c;->eL:[Ljava/lang/Object;
 
     aget-object v1, v1, v0
 
-    sget-object v2, Landroid/support/v4/c/c;->en:Ljava/lang/Object;
+    sget-object v2, Landroid/support/v4/c/c;->eI:Ljava/lang/Object;
 
     if-ne v1, v2, :cond_1
 
     .line 154
-    iget-object v1, p0, Landroid/support/v4/c/c;->ep:[I
+    iget-object v1, p0, Landroid/support/v4/c/c;->eK:[I
 
     aput p1, v1, v0
 
     .line 155
-    iget-object v1, p0, Landroid/support/v4/c/c;->eq:[Ljava/lang/Object;
+    iget-object v1, p0, Landroid/support/v4/c/c;->eL:[Ljava/lang/Object;
 
     aput-object p2, v1, v0
 
@@ -433,13 +454,13 @@
 
     .line 159
     :cond_1
-    iget-boolean v1, p0, Landroid/support/v4/c/c;->eo:Z
+    iget-boolean v1, p0, Landroid/support/v4/c/c;->eJ:Z
 
     if-eqz v1, :cond_2
 
-    iget v1, p0, Landroid/support/v4/c/c;->mSize:I
+    iget v1, p0, Landroid/support/v4/c/c;->eM:I
 
-    iget-object v2, p0, Landroid/support/v4/c/c;->ep:[I
+    iget-object v2, p0, Landroid/support/v4/c/c;->eK:[I
 
     array-length v2, v2
 
@@ -449,9 +470,9 @@
     invoke-direct {p0}, Landroid/support/v4/c/c;->gc()V
 
     .line 163
-    iget-object v0, p0, Landroid/support/v4/c/c;->ep:[I
+    iget-object v0, p0, Landroid/support/v4/c/c;->eK:[I
 
-    iget v1, p0, Landroid/support/v4/c/c;->mSize:I
+    iget v1, p0, Landroid/support/v4/c/c;->eM:I
 
     invoke-static {v0, v1, p1}, Landroid/support/v4/c/c;->a([III)I
 
@@ -461,20 +482,20 @@
 
     .line 166
     :cond_2
-    iget v1, p0, Landroid/support/v4/c/c;->mSize:I
+    iget v1, p0, Landroid/support/v4/c/c;->eM:I
 
-    iget-object v2, p0, Landroid/support/v4/c/c;->ep:[I
+    iget-object v2, p0, Landroid/support/v4/c/c;->eK:[I
 
     array-length v2, v2
 
     if-lt v1, v2, :cond_3
 
     .line 167
-    iget v1, p0, Landroid/support/v4/c/c;->mSize:I
+    iget v1, p0, Landroid/support/v4/c/c;->eM:I
 
     add-int/lit8 v1, v1, 0x1
 
-    invoke-static {v1}, Landroid/support/v4/c/c;->m(I)I
+    invoke-static {v1}, Landroid/support/v4/c/c;->n(I)I
 
     move-result v1
 
@@ -485,58 +506,58 @@
     new-array v1, v1, [Ljava/lang/Object;
 
     .line 173
-    iget-object v3, p0, Landroid/support/v4/c/c;->ep:[I
+    iget-object v3, p0, Landroid/support/v4/c/c;->eK:[I
 
-    iget-object v4, p0, Landroid/support/v4/c/c;->ep:[I
+    iget-object v4, p0, Landroid/support/v4/c/c;->eK:[I
 
     array-length v4, v4
 
     invoke-static {v3, v5, v2, v5, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 174
-    iget-object v3, p0, Landroid/support/v4/c/c;->eq:[Ljava/lang/Object;
+    iget-object v3, p0, Landroid/support/v4/c/c;->eL:[Ljava/lang/Object;
 
-    iget-object v4, p0, Landroid/support/v4/c/c;->eq:[Ljava/lang/Object;
+    iget-object v4, p0, Landroid/support/v4/c/c;->eL:[Ljava/lang/Object;
 
     array-length v4, v4
 
     invoke-static {v3, v5, v1, v5, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 176
-    iput-object v2, p0, Landroid/support/v4/c/c;->ep:[I
+    iput-object v2, p0, Landroid/support/v4/c/c;->eK:[I
 
     .line 177
-    iput-object v1, p0, Landroid/support/v4/c/c;->eq:[Ljava/lang/Object;
+    iput-object v1, p0, Landroid/support/v4/c/c;->eL:[Ljava/lang/Object;
 
     .line 180
     :cond_3
-    iget v1, p0, Landroid/support/v4/c/c;->mSize:I
+    iget v1, p0, Landroid/support/v4/c/c;->eM:I
 
     sub-int/2addr v1, v0
 
     if-eqz v1, :cond_4
 
     .line 182
-    iget-object v1, p0, Landroid/support/v4/c/c;->ep:[I
+    iget-object v1, p0, Landroid/support/v4/c/c;->eK:[I
 
-    iget-object v2, p0, Landroid/support/v4/c/c;->ep:[I
+    iget-object v2, p0, Landroid/support/v4/c/c;->eK:[I
 
     add-int/lit8 v3, v0, 0x1
 
-    iget v4, p0, Landroid/support/v4/c/c;->mSize:I
+    iget v4, p0, Landroid/support/v4/c/c;->eM:I
 
     sub-int/2addr v4, v0
 
     invoke-static {v1, v0, v2, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 183
-    iget-object v1, p0, Landroid/support/v4/c/c;->eq:[Ljava/lang/Object;
+    iget-object v1, p0, Landroid/support/v4/c/c;->eL:[Ljava/lang/Object;
 
-    iget-object v2, p0, Landroid/support/v4/c/c;->eq:[Ljava/lang/Object;
+    iget-object v2, p0, Landroid/support/v4/c/c;->eL:[Ljava/lang/Object;
 
     add-int/lit8 v3, v0, 0x1
 
-    iget v4, p0, Landroid/support/v4/c/c;->mSize:I
+    iget v4, p0, Landroid/support/v4/c/c;->eM:I
 
     sub-int/2addr v4, v0
 
@@ -544,21 +565,21 @@
 
     .line 186
     :cond_4
-    iget-object v1, p0, Landroid/support/v4/c/c;->ep:[I
+    iget-object v1, p0, Landroid/support/v4/c/c;->eK:[I
 
     aput p1, v1, v0
 
     .line 187
-    iget-object v1, p0, Landroid/support/v4/c/c;->eq:[Ljava/lang/Object;
+    iget-object v1, p0, Landroid/support/v4/c/c;->eL:[Ljava/lang/Object;
 
     aput-object p2, v1, v0
 
     .line 188
-    iget v0, p0, Landroid/support/v4/c/c;->mSize:I
+    iget v0, p0, Landroid/support/v4/c/c;->eM:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Landroid/support/v4/c/c;->mSize:I
+    iput v0, p0, Landroid/support/v4/c/c;->eM:I
 
     goto/16 :goto_0
 .end method
@@ -568,25 +589,25 @@
 
     .prologue
     .line 94
-    iget-object v0, p0, Landroid/support/v4/c/c;->eq:[Ljava/lang/Object;
+    iget-object v0, p0, Landroid/support/v4/c/c;->eL:[Ljava/lang/Object;
 
     aget-object v0, v0, p1
 
-    sget-object v1, Landroid/support/v4/c/c;->en:Ljava/lang/Object;
+    sget-object v1, Landroid/support/v4/c/c;->eI:Ljava/lang/Object;
 
     if-eq v0, v1, :cond_0
 
     .line 95
-    iget-object v0, p0, Landroid/support/v4/c/c;->eq:[Ljava/lang/Object;
+    iget-object v0, p0, Landroid/support/v4/c/c;->eL:[Ljava/lang/Object;
 
-    sget-object v1, Landroid/support/v4/c/c;->en:Ljava/lang/Object;
+    sget-object v1, Landroid/support/v4/c/c;->eI:Ljava/lang/Object;
 
     aput-object v1, v0, p1
 
     .line 96
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroid/support/v4/c/c;->eo:Z
+    iput-boolean v0, p0, Landroid/support/v4/c/c;->eJ:Z
 
     .line 98
     :cond_0
@@ -598,7 +619,7 @@
 
     .prologue
     .line 197
-    iget-boolean v0, p0, Landroid/support/v4/c/c;->eo:Z
+    iget-boolean v0, p0, Landroid/support/v4/c/c;->eJ:Z
 
     if-eqz v0, :cond_0
 
@@ -607,17 +628,22 @@
 
     .line 201
     :cond_0
-    iget v0, p0, Landroid/support/v4/c/c;->mSize:I
+    iget v0, p0, Landroid/support/v4/c/c;->eM:I
 
     return v0
 .end method
 
 .method public final valueAt(I)Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)TE;"
+        }
+    .end annotation
 
     .prologue
     .line 223
-    iget-boolean v0, p0, Landroid/support/v4/c/c;->eo:Z
+    iget-boolean v0, p0, Landroid/support/v4/c/c;->eJ:Z
 
     if-eqz v0, :cond_0
 
@@ -626,7 +652,7 @@
 
     .line 227
     :cond_0
-    iget-object v0, p0, Landroid/support/v4/c/c;->eq:[Ljava/lang/Object;
+    iget-object v0, p0, Landroid/support/v4/c/c;->eL:[Ljava/lang/Object;
 
     aget-object v0, v0, p1
 

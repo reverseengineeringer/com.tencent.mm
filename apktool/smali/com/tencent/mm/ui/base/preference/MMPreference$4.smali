@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kLM:Lcom/tencent/mm/ui/base/preference/MMPreference;
+.field final synthetic llb:Lcom/tencent/mm/ui/base/preference/MMPreference;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 249
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$4;->kLM:Lcom/tencent/mm/ui/base/preference/MMPreference;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$4;->llb:Lcom/tencent/mm/ui/base/preference/MMPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -54,7 +54,7 @@
     if-ne v0, p2, :cond_0
 
     .line 254
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$4;->kLM:Lcom/tencent/mm/ui/base/preference/MMPreference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$4;->llb:Lcom/tencent/mm/ui/base/preference/MMPreference;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/preference/MMPreference;->getCurrentFocus()Landroid/view/View;
 

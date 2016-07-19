@@ -1,7 +1,7 @@
 package com.tencent.mm.ui.tools;
 
 public final class i$a
-  extends Enum
+  extends Enum<a>
 {}
 
 /* Location:

@@ -12,8 +12,8 @@ final class ShareImageRedirectUI$1
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    Toast.makeText(lxO, 2131428857, 1).show();
-    lxO.finish();
+    Toast.makeText(lYD, 2131235324, 1).show();
+    lYD.finish();
     return false;
   }
 }

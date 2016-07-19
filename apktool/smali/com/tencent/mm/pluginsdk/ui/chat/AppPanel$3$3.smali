@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iKj:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$3;
+.field final synthetic jhf:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$3;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1031
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$3$3;->iKj:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$3;
+    .line 1064
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$3$3;->jhf:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,37 +40,37 @@
     .locals 3
 
     .prologue
-    .line 1034
-    new-instance v0, Lcom/tencent/mm/d/a/mt;
+    .line 1067
+    new-instance v0, Lcom/tencent/mm/e/a/ng;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/mt;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/ng;-><init>()V
 
-    .line 1035
-    iget-object v1, v0, Lcom/tencent/mm/d/a/mt;->aJb:Lcom/tencent/mm/d/a/mt$a;
+    .line 1068
+    iget-object v1, v0, Lcom/tencent/mm/e/a/ng;->avv:Lcom/tencent/mm/e/a/ng$a;
 
     const/4 v2, 0x1
 
-    iput-boolean v2, v1, Lcom/tencent/mm/d/a/mt$a;->aJe:Z
+    iput-boolean v2, v1, Lcom/tencent/mm/e/a/ng$a;->avy:Z
 
-    .line 1036
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 1069
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
-    .line 1038
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$3$3;->iKj:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$3;
+    .line 1071
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$3$3;->jhf:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$3;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$3;->iKi:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$3;->jhe:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->k(Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;)Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$a;->ais()V
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$a;->akZ()V
 
-    .line 1039
+    .line 1072
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 1040
+    .line 1073
     return-void
 .end method

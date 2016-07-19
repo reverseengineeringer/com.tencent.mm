@@ -3,124 +3,91 @@
 .source "SourceFile"
 
 
-# static fields
-.field private static bth:Lcom/tencent/mm/compatible/d/u;
+# instance fields
+.field public bhi:Z
+
+.field public bhj:I
+
+.field public bhk:I
+
+.field public bhl:I
+
+.field public bhm:I
+
+.field public bhn:I
+
+.field public bho:I
+
+.field public bhp:I
+
+.field public bhq:I
+
+.field public bhr:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .prologue
-    .line 25
-    const/4 v0, 0x0
+    .line 15
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/compatible/d/u;->bth:Lcom/tencent/mm/compatible/d/u;
+    .line 16
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/u;->reset()V
 
+    .line 17
     return-void
 .end method
 
-.method public static oN()I
-    .locals 4
+
+# virtual methods
+.method public final reset()V
+    .locals 3
 
     .prologue
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    .line 83
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 20
+    iput-boolean v2, p0, Lcom/tencent/mm/compatible/d/u;->bhi:Z
 
-    move-result-object v0
+    .line 21
+    const/16 v0, 0xe0
 
-    .line 84
-    const-string/jumbo v3, "connectivity"
+    iput v0, p0, Lcom/tencent/mm/compatible/d/u;->bhk:I
 
-    invoke-virtual {v0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    .line 22
+    const/16 v0, 0x120
 
-    move-result-object v0
+    iput v0, p0, Lcom/tencent/mm/compatible/d/u;->bhj:I
 
-    check-cast v0, Landroid/net/ConnectivityManager;
+    .line 23
+    const/16 v0, 0xa
 
-    .line 85
-    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+    iput v0, p0, Lcom/tencent/mm/compatible/d/u;->bhl:I
 
-    move-result-object v0
+    .line 24
+    const v0, 0x2dc6c0
 
-    .line 87
-    if-nez v0, :cond_0
+    iput v0, p0, Lcom/tencent/mm/compatible/d/u;->bhm:I
 
-    move v0, v1
+    .line 25
+    iput v1, p0, Lcom/tencent/mm/compatible/d/u;->bhn:I
 
-    .line 116
-    :goto_0
-    return v0
+    .line 26
+    iput v1, p0, Lcom/tencent/mm/compatible/d/u;->bho:I
 
-    .line 90
-    :cond_0
-    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getSubtype()I
+    .line 27
+    iput v1, p0, Lcom/tencent/mm/compatible/d/u;->bhp:I
 
-    move-result v3
+    .line 28
+    iput v2, p0, Lcom/tencent/mm/compatible/d/u;->bhq:I
 
-    .line 91
-    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getType()I
+    .line 29
+    iput v1, p0, Lcom/tencent/mm/compatible/d/u;->bhr:I
 
-    move-result v0
-
-    if-ne v0, v2, :cond_1
-
-    move v0, v2
-
-    .line 92
-    goto :goto_0
-
-    .line 94
-    :cond_1
-    packed-switch v3, :pswitch_data_0
-
-    :pswitch_0
-    move v0, v1
-
-    .line 116
-    goto :goto_0
-
-    .line 98
-    :pswitch_1
-    const/4 v0, 0x4
-
-    goto :goto_0
-
-    .line 106
-    :pswitch_2
-    const/4 v0, 0x3
-
-    goto :goto_0
-
-    .line 113
-    :pswitch_3
-    const/4 v0, 0x2
-
-    goto :goto_0
-
-    .line 94
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_3
-        :pswitch_3
-        :pswitch_2
-        :pswitch_2
-        :pswitch_2
-        :pswitch_2
-        :pswitch_3
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_0
-        :pswitch_2
-    .end packed-switch
+    .line 30
+    return-void
 .end method

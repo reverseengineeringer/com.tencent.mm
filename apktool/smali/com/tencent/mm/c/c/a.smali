@@ -15,8 +15,8 @@
 .method public abstract a(Lcom/tencent/mm/c/b/g$a;I)I
 .end method
 
-.method public abstract br(Ljava/lang/String;)Z
+.method public abstract bk(Ljava/lang/String;)Z
 .end method
 
-.method public abstract lU()V
+.method public abstract kk()V
 .end method

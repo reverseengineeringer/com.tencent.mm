@@ -3,8 +3,19 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/h/f",
+        "<",
+        "Lcom/tencent/mm/p/a;",
+        ">;"
+    }
+.end annotation
+
+
 # static fields
-.field public static final aoY:[Ljava/lang/String;
+.field public static final bkN:[Ljava/lang/String;
 
 
 # direct methods
@@ -19,7 +30,7 @@
 
     const/4 v1, 0x0
 
-    sget-object v2, Lcom/tencent/mm/n/a;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    sget-object v2, Lcom/tencent/mm/p/a;->bjR:Lcom/tencent/mm/sdk/h/c$a;
 
     const-string/jumbo v3, "AppMessage"
 
@@ -29,7 +40,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/model/app/k;->aoY:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/model/app/k;->bkN:[Ljava/lang/String;
 
     return-void
 .end method
@@ -39,7 +50,7 @@
 
     .prologue
     .line 13
-    sget-object v0, Lcom/tencent/mm/n/a;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    sget-object v0, Lcom/tencent/mm/p/a;->bjR:Lcom/tencent/mm/sdk/h/c$a;
 
     const-string/jumbo v1, "AppMessage"
 
@@ -53,17 +64,17 @@
 
 
 # virtual methods
-.method public final cT(J)Lcom/tencent/mm/n/a;
-    .locals 2
+.method public final dk(J)Lcom/tencent/mm/p/a;
+    .locals 3
 
     .prologue
     .line 19
-    new-instance v0, Lcom/tencent/mm/n/a;
+    new-instance v0, Lcom/tencent/mm/p/a;
 
-    invoke-direct {v0}, Lcom/tencent/mm/n/a;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/p/a;-><init>()V
 
     .line 20
-    iput-wide p1, v0, Lcom/tencent/mm/n/a;->field_msgId:J
+    iput-wide p1, v0, Lcom/tencent/mm/p/a;->field_msgId:J
 
     .line 21
     const/4 v1, 0x0

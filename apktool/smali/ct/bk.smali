@@ -1,213 +1,126 @@
-.class public final Lct/bk;
+.class public abstract Lct/bk;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lct/bj;
+.field private a:Ljava/lang/String;
 
-.field public b:I
+.field private b:Ljava/lang/String;
 
-.field c:Ljava/lang/String;
-
-.field d:Ljava/lang/String;
-
-.field public e:Ljava/lang/String;
-
-.field f:Ljava/lang/String;
-
-.field public g:Ljava/lang/String;
-
-.field public h:Ljava/lang/String;
-
-.field public i:Ljava/lang/String;
-
-.field public j:Ljava/lang/String;
-
-.field public k:I
-
-.field public l:I
-
-.field public m:J
-
-.field public n:Ljava/lang/String;
-
-.field o:Ljava/lang/String;
-
-.field p:Ljava/lang/String;
-
-.field public q:Ljava/lang/String;
-
-.field public r:Z
-
-.field public s:Z
-
-.field public t:Z
+.field private c:Z
 
 
 # direct methods
-.method constructor <init>(Lct/bj;)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
     .prologue
-    const/4 v1, 0x1
-
-    .line 90
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
-    const-string/jumbo v0, "4.4.8"
+    .line 12
+    iput-object p1, p0, Lct/bk;->a:Ljava/lang/String;
 
-    iput-object v0, p0, Lct/bk;->o:Ljava/lang/String;
+    .line 13
+    iput-object p2, p0, Lct/bk;->b:Ljava/lang/String;
 
-    .line 72
-    const-string/jumbo v0, "151203"
+    .line 14
+    const/4 v0, 0x1
 
-    iput-object v0, p0, Lct/bk;->p:Ljava/lang/String;
+    iput-boolean v0, p0, Lct/bk;->c:Z
 
-    .line 73
-    const-string/jumbo v0, "4.4.8"
-
-    iput-object v0, p0, Lct/bk;->q:Ljava/lang/String;
-
-    .line 80
-    iput-boolean v1, p0, Lct/bk;->r:Z
-
-    .line 84
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lct/bk;->s:Z
-
-    .line 88
-    iput-boolean v1, p0, Lct/bk;->t:Z
-
-    .line 91
-    iput-object p1, p0, Lct/bk;->a:Lct/bj;
-
-    .line 92
+    .line 15
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
+.method public a()V
+    .locals 0
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lct/bk;->c:Ljava/lang/String;
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 104
-    const-string/jumbo v0, "0123456789ABCDEF"
-
-    .line 106
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lct/bk;->c:Ljava/lang/String;
-
-    goto :goto_0
+    .line 46
+    return-void
 .end method
 
-.method public final b()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 114
-    iget-object v0, p0, Lct/bk;->d:Ljava/lang/String;
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 115
-    const-string/jumbo v0, "0123456789ABCDEF"
-
-    .line 117
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lct/bk;->d:Ljava/lang/String;
-
-    goto :goto_0
+.method protected abstract a(Landroid/os/Bundle;)Z
 .end method
 
-.method public final c()Ljava/lang/String;
+.method public final b(Landroid/os/Bundle;)Z
     .locals 1
 
     .prologue
-    .line 133
-    iget-object v0, p0, Lct/bk;->f:Ljava/lang/String;
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 134
-    const-string/jumbo v0, "0123456789ABCDEF"
-
-    .line 136
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lct/bk;->f:Ljava/lang/String;
-
-    goto :goto_0
-.end method
-
-.method public final d()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 311
-    iget-object v0, p0, Lct/bk;->o:Ljava/lang/String;
+    .line 31
+    iget-boolean v0, p0, Lct/bk;->c:Z
 
     if-nez v0, :cond_0
 
-    .line 312
-    const-string/jumbo v0, "None"
+    .line 32
+    const/4 v0, 0x0
 
-    .line 314
+    .line 34
     :goto_0
-    return-object v0
+    return v0
 
     :cond_0
-    iget-object v0, p0, Lct/bk;->o:Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lct/bk;->a(Landroid/os/Bundle;)Z
+
+    move-result v0
 
     goto :goto_0
 .end method
 
-.method public final e()Ljava/lang/String;
-    .locals 1
+.method public toString()Ljava/lang/String;
+    .locals 2
 
     .prologue
-    .line 322
-    iget-object v0, p0, Lct/bk;->p:Ljava/lang/String;
+    .line 50
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-nez v0, :cond_0
+    const-string/jumbo v1, "[name="
 
-    .line 323
-    const-string/jumbo v0, "None"
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 325
-    :goto_0
+    iget-object v1, p0, Lct/bk;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, ",desc="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lct/bk;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, ",enabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-boolean v1, p0, Lct/bk;->c:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
     return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lct/bk;->p:Ljava/lang/String;
-
-    goto :goto_0
 .end method

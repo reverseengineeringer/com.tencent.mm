@@ -7,8 +7,8 @@ final class h$2
   
   public final void run()
   {
-    h.c(gHh);
-    gHh.axx();
+    h.c(gNI);
+    gNI.azZ();
   }
 }
 

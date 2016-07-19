@@ -3,7 +3,7 @@ package android.support.v4.view;
 import android.view.KeyEvent;
 
 class f$a
-  implements f.d
+  implements f.c
 {
   private static int b(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5)
   {

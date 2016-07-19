@@ -2,7 +2,7 @@ package com.tencent.mm.sandbox.updater;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class AppInstallerUI$4
   implements DialogInterface.OnClickListener
@@ -11,16 +11,16 @@ final class AppInstallerUI$4
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    u.d("!32@/B4Tb64lLpK4dsObr+ZXlbJd1YO/EjJD", "install dialog had been canceled");
-    if ((AppInstallerUI.e(jSU) != null) && (AppInstallerUI.e(jSU).isShowing())) {
-      AppInstallerUI.e(jSU).dismiss();
+    v.d("MicroMsg.AppInstallerUI", "install dialog had been canceled");
+    if ((AppInstallerUI.e(kso) != null) && (AppInstallerUI.e(kso).isShowing())) {
+      AppInstallerUI.e(kso).dismiss();
     }
-    i.a.jUn.L(2, true);
-    if (AppInstallerUI.b(jSU) == 2) {
-      h.D(jSU, 4);
+    i.a.ktO.L(2, true);
+    if (AppInstallerUI.b(kso) == 2) {
+      h.H(kso, 4);
     }
-    h.aUa();
-    AppInstallerUI.d(jSU);
+    h.aYZ();
+    AppInstallerUI.d(kso);
   }
 }
 

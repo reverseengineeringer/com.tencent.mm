@@ -9,7 +9,7 @@ final class f$5
   
   public final void a(ProgressDialog paramProgressDialog)
   {
-    kyz.kyy.coM = paramProgressDialog;
+    kXG.kXF.cka = paramProgressDialog;
   }
 }
 

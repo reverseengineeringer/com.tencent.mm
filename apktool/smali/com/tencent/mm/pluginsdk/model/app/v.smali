@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field public dyc:Lcom/tencent/mm/r/a;
+.field public dzw:Lcom/tencent/mm/t/a;
 
 
 # direct methods
@@ -23,10 +23,10 @@
 
 
 # virtual methods
-.method public abstract abk()[B
+.method public abstract adE()[B
 .end method
 
-.method public abstract af([B)V
+.method public abstract an([B)V
 .end method
 
 .method public abstract getType()I

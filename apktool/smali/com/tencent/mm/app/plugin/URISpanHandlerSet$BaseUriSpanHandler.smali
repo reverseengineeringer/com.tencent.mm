@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+.field final synthetic ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
 
 # direct methods
@@ -23,12 +23,12 @@
     .locals 0
 
     .prologue
-    .line 120
-    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BaseUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 119
+    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BaseUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 121
+    .line 120
     return-void
 .end method
 
@@ -40,8 +40,8 @@
 .method abstract a(Ljava/lang/String;ZLcom/tencent/mm/pluginsdk/l;Landroid/os/Bundle;)Z
 .end method
 
-.method abstract bb(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
+.method abstract bg(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
 .end method
 
-.method abstract lg()[I
+.method abstract jH()[I
 .end method

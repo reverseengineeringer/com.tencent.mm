@@ -12,11 +12,11 @@
 
 
 # instance fields
-.field private gxe:Ljava/lang/String;
+.field public eM:I
 
-.field private iML:Lcom/tencent/mm/pluginsdk/ui/c/a$a;
+.field private gDC:Ljava/lang/String;
 
-.field public mSize:I
+.field private jjQ:Lcom/tencent/mm/pluginsdk/ui/c/a$a;
 
 
 # direct methods
@@ -30,16 +30,16 @@
     .line 23
     const/high16 v0, 0x6400000
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->mSize:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->eM:I
 
     .line 33
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->gxe:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->gDC:Ljava/lang/String;
 
     .line 34
     return-void
 .end method
 
-.method public static AK(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/c/a;
+.method public static CQ(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/c/a;
     .locals 1
 
     .prologue
@@ -53,19 +53,19 @@
 
 
 # virtual methods
-.method public final aSp()I
+.method public final aXi()I
     .locals 1
 
     .prologue
     .line 52
-    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/c/a;->aSq()I
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/c/a;->aXj()I
 
     move-result v0
 
     return v0
 .end method
 
-.method protected final aSq()I
+.method protected final aXj()I
     .locals 9
 
     .prologue
@@ -74,33 +74,33 @@
     const/4 v8, 0x1
 
     .line 57
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->gxe:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->gDC:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 58
-    const-string/jumbo v0, "!44@/B4Tb64lLpKN1sQ+P5w+hi17h4teZKb0JWAkVqFiAao="
+    const-string/jumbo v0, "MicroMsg.VideoBoundaryCheck"
 
     const-string/jumbo v1, "dz[check video but path is null or nil]"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 69
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ah;->dx(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ak;->dy(Landroid/content/Context;)Z
 
     move-result v4
 
     .line 70
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->gxe:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->gDC:Ljava/lang/String;
 
     const/16 v1, 0x294
 
@@ -123,7 +123,7 @@
     move-result v0
 
     .line 76
-    const-string/jumbo v1, "!44@/B4Tb64lLpKN1sQ+P5w+hi17h4teZKb0JWAkVqFiAao="
+    const-string/jumbo v1, "MicroMsg.VideoBoundaryCheck"
 
     const-string/jumbo v2, "check should remuxing, ret %d"
 
@@ -135,13 +135,13 @@
 
     aput-object v4, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 77
     packed-switch v0, :pswitch_data_0
 
     .line 94
-    const-string/jumbo v1, "!44@/B4Tb64lLpKN1sQ+P5w+hi17h4teZKb0JWAkVqFiAao="
+    const-string/jumbo v1, "MicroMsg.VideoBoundaryCheck"
 
     const-string/jumbo v2, "unknown check type %d"
 
@@ -153,7 +153,7 @@
 
     aput-object v0, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v8
 
@@ -163,12 +163,12 @@
 
     .line 70
     :cond_1
-    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->mSize:I
+    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->eM:I
 
     goto :goto_0
 
     :cond_2
-    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->mSize:I
+    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->eM:I
 
     int-to-double v4, v4
 
@@ -206,21 +206,21 @@
     .end packed-switch
 .end method
 
-.method protected final aSr()V
+.method protected final aXk()V
     .locals 2
 
     .prologue
     .line 101
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->iML:Lcom/tencent/mm/pluginsdk/ui/c/a$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->jjQ:Lcom/tencent/mm/pluginsdk/ui/c/a$a;
 
     if-nez v0, :cond_0
 
     .line 102
-    const-string/jumbo v0, "!44@/B4Tb64lLpKN1sQ+P5w+hi17h4teZKb0JWAkVqFiAao="
+    const-string/jumbo v0, "MicroMsg.VideoBoundaryCheck"
 
     const-string/jumbo v1, "dz[callback is null]"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 107
     :goto_0
@@ -228,7 +228,7 @@
 
     .line 105
     :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/c/a;->aSq()I
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/c/a;->aXj()I
 
     goto :goto_0
 .end method

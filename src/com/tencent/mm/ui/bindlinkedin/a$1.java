@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.bindlinkedin;
 
-import com.tencent.mm.platformtools.j;
+import com.tencent.mm.platformtools.i;
 import com.tencent.mm.pluginsdk.ui.tools.d;
 import com.tencent.mm.pluginsdk.ui.tools.g;
 
@@ -12,7 +12,7 @@ final class a$1
     super(10);
   }
   
-  protected final j b(String paramString1, String paramString2, int paramInt1, int paramInt2)
+  protected final i b(String paramString1, String paramString2, int paramInt1, int paramInt2)
   {
     return new d(paramString1, paramString2, paramInt1, paramInt2);
   }

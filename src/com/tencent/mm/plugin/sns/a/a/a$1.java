@@ -7,8 +7,8 @@ final class a$1
   
   public final void run()
   {
-    if (!gGs.gFK) {
-      gGs.axv();
+    if (!gMU.gMm) {
+      gMU.azX();
     }
   }
 }

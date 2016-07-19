@@ -14,12 +14,12 @@ final class c
   public final ActionBar aO()
   {
     aU();
-    return new f(iG, iG);
+    return new f(iX, iX);
   }
   
   final void onCreate(Bundle paramBundle)
   {
-    iG.getWindow().requestFeature(10);
+    iX.getWindow().requestFeature(10);
     super.onCreate(paramBundle);
   }
 }

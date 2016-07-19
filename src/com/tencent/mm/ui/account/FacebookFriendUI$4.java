@@ -14,10 +14,10 @@ final class FacebookFriendUI$4
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramDialogInterface = new Intent(ksr.koJ.kpc, FacebookAuthUI.class);
+    paramDialogInterface = new Intent(kRz.kNN.kOg, FacebookAuthUI.class);
     paramDialogInterface.putExtra("is_force_unbind", true);
-    ksr.koJ.kpc.startActivity(paramDialogInterface);
-    ksr.finish();
+    kRz.kNN.kOg.startActivity(paramDialogInterface);
+    kRz.finish();
   }
 }
 

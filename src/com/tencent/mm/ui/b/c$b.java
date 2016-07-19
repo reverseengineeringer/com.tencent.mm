@@ -15,90 +15,103 @@ import java.lang.ref.WeakReference;
 public final class c$b
   extends ActionMode
 {
-  public c.a kzv = null;
+  public c.a kYC = null;
   
   public c$b(c paramc, ActionMode.Callback paramCallback)
   {
-    kzv = new c.a(paramc, new c.c(paramCallback));
-    kzv.kzr = this;
+    kYC = new c.a(paramc, new c.c(paramCallback));
+    kYC.kYy = this;
   }
   
   public final void finish()
   {
-    kzv.finish();
+    kYC.finish();
   }
   
   public final View getCustomView()
   {
-    c.a locala = kzv;
-    if (kzt != null) {
-      return (View)kzt.get();
+    c.a locala = kYC;
+    if (kYA != null) {
+      return (View)kYA.get();
     }
     return null;
   }
   
   public final Menu getMenu()
   {
-    return kzv.iO;
+    return kYC.jf;
   }
   
   public final MenuInflater getMenuInflater()
   {
-    return new android.support.v7.internal.view.c(kzv.kzu.getThemedContext());
+    return new android.support.v7.internal.view.c(kYC.kYB.getThemedContext());
   }
   
   public final CharSequence getSubtitle()
   {
-    return kzv.kzu.je.getSubtitle();
+    return kYC.kYB.jv.nG;
   }
   
   public final CharSequence getTitle()
   {
-    return kzv.kzu.je.getTitle();
+    return kYC.kYB.jv.kD;
   }
   
   public final void invalidate()
   {
-    kzv.invalidate();
+    kYC.invalidate();
   }
   
   public final boolean isTitleOptional()
   {
-    return kzv.kzu.je.nx;
+    return kYC.kYB.jv.nN;
   }
   
   public final void setCustomView(View paramView)
   {
-    c.a locala = kzv;
-    kzu.je.setCustomView(paramView);
-    kzt = new WeakReference(paramView);
+    c.a locala = kYC;
+    ActionBarContextView localActionBarContextView = kYB.jv;
+    if (nI != null) {
+      localActionBarContextView.removeView(nI);
+    }
+    nI = paramView;
+    if (nJ != null)
+    {
+      localActionBarContextView.removeView(nJ);
+      nJ = null;
+    }
+    if (paramView != null) {
+      localActionBarContextView.addView(paramView);
+    }
+    localActionBarContextView.requestLayout();
+    kYA = new WeakReference(paramView);
   }
   
   public final void setSubtitle(int paramInt)
   {
-    c.a locala = kzv;
-    locala.setSubtitle(kzu.mContext.getResources().getString(paramInt));
+    c.a locala = kYC;
+    locala.setSubtitle(kYB.mContext.getResources().getString(paramInt));
   }
   
   public final void setSubtitle(CharSequence paramCharSequence)
   {
-    kzv.setSubtitle(paramCharSequence);
+    kYC.setSubtitle(paramCharSequence);
   }
   
   public final void setTitle(int paramInt)
   {
-    c.a locala = kzv;
-    locala.setTitle(kzu.mContext.getResources().getString(paramInt));
+    c.a locala = kYC;
+    locala.setTitle(kYB.mContext.getResources().getString(paramInt));
   }
   
   public final void setTitle(CharSequence paramCharSequence)
   {
-    kzv.setTitle(paramCharSequence);
+    kYC.setTitle(paramCharSequence);
   }
   
   public final void setTitleOptionalHint(boolean paramBoolean)
   {
-    kzv.setTitleOptionalHint(paramBoolean);
+    kYC.setTitleOptionalHint(paramBoolean);
   }
 }
 

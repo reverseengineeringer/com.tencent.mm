@@ -10,7 +10,7 @@ final class DisasterUI$2
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    lvn.finish();
+    lWp.finish();
     return true;
   }
 }

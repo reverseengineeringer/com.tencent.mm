@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">%1$s ને Android Wear એપ્લિકેશન માટેના અપડેટની જરૂર છે.</string>
+    <string name="b">જ્યાં સુધી તમે Android Wear એપ્લિકેશનને અપડેટ કરશો નહીં ત્યાં સુધી %1$s શરૂ થશે નહીં.</string>
+    <string name="c">Android Wear અપડેટ કરો</string>
+    <string name="d">%1$s ને એક કે વધુ Google Play સેવાઓની જરૂર છે કે જે હાલમાં ઉપલબ્ધ નથી. કૃપા કરીને સહાયતા માટે વિકાસકર્તાનો સંપર્ક કરો.</string>
+    <string name="e">Google Play સેવાઓ સક્ષમ કરો</string>
+    <string name="f">તમે Google Play સેવાઓ સક્ષમ કરશો નહીં ત્યાં સુધી %1$s કાર્ય કરશે નહી.</string>
+    <string name="g">Google Play સેવાઓ સક્ષમ કરો</string>
+    <string name="h">%1$s દ્વારા વિનંતી કરી</string>
+    <string name="i">Google Play સેવાઓ મેળવો</string>
+    <string name="j">%1$s Google Play સેવાઓ વગર ચાલશે નહીં, જે તમારા ફોનમાંથી ખૂટે છે.</string>
+    <string name="k">%1$s Google Play સેવાઓ વગર ચાલશે નહીં, જે તમારા ટેબ્લેટમાંથી ખૂટે છે.</string>
+    <string name="l">Google Play સેવાઓ મેળવો</string>
+    <string name="m">ઉલ્લેખિત એકાઉન્ટ આ ઉપકરણ પર અસ્તિત્વમાં નથી. કૃપા કરીને એક અલગ એકાઉન્ટ પસંદ કરો.</string>
+    <string name="n">અમાન્ય એકાઉન્ટ</string>
+    <string name="o">એક એપ્લિકેશનને Google Play સેવાઓ સક્ષમ કરવાની જરૂર છે.</string>
+    <string name="p">ડેટા કનેક્શનને Google Play સેવાઓ સાથે કનેક્ટ થવાની જરૂર છે.</string>
+    <string name="q">નેટવર્ક ભૂલ</string>
+    <string name="r">એક એપ્લિકેશનને Google Play સેવાઓ અપડેટ કરવાની જરૂર છે.</string>
+    <string name="s">Google Play સેવાઓની ભૂલ</string>
+    <string name="t">ઉલ્લેખિત એકાઉન્ટમાં સાઇન ઇન કરવામાં ભૂલ. કૃપા કરીને એક અલગ એકાઉન્ટ પસંદ કરો.</string>
+    <string name="u">સાઇન ઇન નિષ્ફળ થયું</string>
+    <string name="v">Google Play સેવાઓમાં અજાણી સમસ્યા આવી.</string>
+    <string name="w">%1$s Google Play સેવાઓ પર આધાર રાખે છે, જે તમારા ઉપકરણ દ્વારા સમર્થિત નથી. સહાયતા માટે નિર્માતાનો સંપર્ક કરો.</string>
+    <string name="x">Google Play સેવાઓ</string>
+    <string name="y">અપડેટ કરો</string>
+    <string name="z">તમે Google Play સેવાઓ અપડેટ કરશો નહીં ત્યાં સુધી %1$s શરૂ થશે નહીં.</string>
+    <string name="a0">Google Play સેવાઓ અપડેટ કરો</string>
+    <string name="a1">%1$s, Google Play સેવાઓ વગર શરૂ થશે નહીં, જે વર્તમાનમાં અપડેટ થઈ રહી છે.</string>
+    <string name="a2">Google Play સેવાઓ અપડેટ થઈ રહી છે</string>
+    <string name="a3">ફોન પર ખોલો</string>
+    <string name="a4">સાઇન ઇન કરો</string>
+    <string name="a5">Google માં સાઇન ઇન કરો</string>
+</resources>

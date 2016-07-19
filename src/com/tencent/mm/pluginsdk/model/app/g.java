@@ -16,10 +16,10 @@ import com.tencent.mm.sdk.a.a;
 import com.tencent.mm.sdk.a.a.a;
 import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
 import com.tencent.mm.sdk.modelmsg.d.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,25 +27,56 @@ import java.util.Map;
 
 public final class g
 {
+  public static boolean BH(String paramString)
+  {
+    if (be.kf(paramString)) {}
+    f localf;
+    do
+    {
+      return false;
+      localf = ar(paramString, true);
+      if (localf == null)
+      {
+        v.w("MicroMsg.AppInfoLogic", "app is null, appId = " + paramString);
+        return false;
+      }
+      if (field_authFlag == 0) {
+        return true;
+      }
+    } while ((field_authFlag & 0x2) <= 0);
+    return true;
+  }
+  
+  public static boolean BI(String paramString)
+  {
+    if (be.kf(paramString)) {}
+    do
+    {
+      return false;
+      paramString = ar(paramString, true);
+    } while ((paramString == null) || (be.kf(field_appId)) || ((field_appInfoFlag & 0x8) <= 0));
+    return true;
+  }
+  
   public static d.a a(Context paramContext, String paramString1, WXMediaMessage paramWXMediaMessage, String paramString2)
   {
-    u.d("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "request pkg = " + paramString1 + ", openId = " + paramString2);
+    v.d("MicroMsg.AppInfoLogic", "request pkg = " + paramString1 + ", openId = " + paramString2);
     d.a locala = new d.a();
     if (paramContext == null) {
       return locala;
     }
-    jUS = paramWXMediaMessage;
-    iBD = com.tencent.mm.a.g.m(ay.FS().getBytes());
-    cAU = paramString2;
-    bXM = t.d(paramContext.getSharedPreferences(y.aUK(), 0));
-    bNO = ((String)ah.tD().rn().get(274436, null));
+    kuy = paramWXMediaMessage;
+    iYn = com.tencent.mm.a.g.j(be.Gp().getBytes());
+    cxP = paramString2;
+    bRs = u.d(paramContext.getSharedPreferences(aa.aZO(), 0));
+    bHk = ((String)ah.tE().ro().get(274436, null));
     paramWXMediaMessage = new Bundle();
-    locala.l(paramWXMediaMessage);
-    p.H(paramWXMediaMessage);
-    p.I(paramWXMediaMessage);
+    locala.n(paramWXMediaMessage);
+    p.N(paramWXMediaMessage);
+    p.O(paramWXMediaMessage);
     paramString2 = new a.a();
-    jUy = paramString1;
-    jUA = paramWXMediaMessage;
+    ktZ = paramString1;
+    kub = paramWXMediaMessage;
     a.a(paramContext, paramString2);
     return locala;
   }
@@ -53,64 +84,79 @@ public final class g
   public static String a(Context paramContext, f paramf, String paramString)
   {
     if ((paramContext == null) || (paramf == null)) {}
-    label107:
-    label148:
-    label174:
-    label180:
+    label105:
+    label129:
+    label170:
+    label178:
+    label186:
+    label192:
     for (;;)
     {
       return paramString;
-      String str2 = cP(paramContext);
-      String str1 = null;
-      if (str2.equalsIgnoreCase("zh_CN")) {
-        str1 = field_appName;
+      String str = cN(paramContext);
+      Object localObject = null;
+      if (str.equalsIgnoreCase("zh_CN")) {
+        localObject = field_appName;
       }
-      if (str2.equalsIgnoreCase("en"))
+      if (str.equalsIgnoreCase("en"))
       {
-        if (ay.kz(field_appName_en)) {
-          str1 = field_appName;
+        if (be.kf(field_appName_en)) {
+          localObject = field_appName;
         }
       }
       else
       {
-        if ((str2.equalsIgnoreCase("zh_TW")) || (str2.equalsIgnoreCase("zh_HK")))
+        if (!str.equalsIgnoreCase("zh_TW"))
         {
-          if ((!"wx6fa7e3bab7e15415".equals(field_appId)) || (!str2.equalsIgnoreCase("zh_TW"))) {
-            break label148;
-          }
-          str1 = paramContext.getString(2131430640);
+          paramContext = (Context)localObject;
+          if (!str.equalsIgnoreCase("zh_HK")) {}
         }
-        paramContext = str1;
-        if (ay.kz(str1)) {
-          if (!ay.kz(field_appName_en)) {
-            break label174;
+        else
+        {
+          if (str.equalsIgnoreCase("zh_HK"))
+          {
+            if (!be.kf(field_appName_hk)) {
+              break label170;
+            }
+            localObject = field_appName_tw;
+          }
+          paramContext = (Context)localObject;
+          if (be.kf((String)localObject))
+          {
+            if (!be.kf(field_appName_tw)) {
+              break label178;
+            }
+            paramContext = field_appName;
+          }
+        }
+        localObject = paramContext;
+        if (be.kf(paramContext)) {
+          if (!be.kf(field_appName_en)) {
+            break label186;
           }
         }
       }
-      for (paramContext = field_appName;; paramContext = field_appName_en)
+      for (localObject = field_appName;; localObject = field_appName_en)
       {
-        if (ay.kz(paramContext)) {
-          break label180;
+        if (be.kf((String)localObject)) {
+          break label192;
         }
-        return paramContext;
-        str1 = field_appName_en;
+        return (String)localObject;
+        localObject = field_appName_en;
         break;
-        if (ay.kz(field_appName_tw))
-        {
-          str1 = field_appName;
-          break label107;
-        }
-        str1 = field_appName_tw;
-        break label107;
+        localObject = field_appName_hk;
+        break label105;
+        paramContext = field_appName_tw;
+        break label129;
       }
     }
   }
   
-  public static List a(Context paramContext, boolean paramBoolean, int paramInt)
+  public static List<f> a(Context paramContext, boolean paramBoolean, int paramInt)
   {
     Object localObject1 = new ArrayList();
-    if (i.a.iyG == null) {
-      u.e("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "getISubCorePluginBase() == null");
+    if (i.a.iVc == null) {
+      v.e("MicroMsg.AppInfoLogic", "getISubCorePluginBase() == null");
     }
     List localList;
     Object localObject2;
@@ -118,8 +164,8 @@ public final class g
     {
       do
       {
-        return (List)localObject1;
-        localList = bA(1, paramInt);
+        return (List<f>)localObject1;
+        localList = bF(1, paramInt);
         localObject2 = null;
         if (paramBoolean)
         {
@@ -128,25 +174,25 @@ public final class g
         }
         localObject1 = localList;
       } while (localObject2 == null);
-      localObject2 = i.a.iyG.k((int[])localObject2);
+      localObject2 = i.a.iVc.k((int[])localObject2);
       localObject1 = localList;
     } while (localObject2 == null);
     while (((Cursor)localObject2).moveToNext())
     {
       localObject1 = new f();
-      ((f)localObject1).c((Cursor)localObject2);
+      ((f)localObject1).b((Cursor)localObject2);
       if (field_status == 1)
       {
-        if (m(paramContext, field_appId))
+        if (n(paramContext, field_appId))
         {
-          if (!ay.kz(field_signature)) {
+          if (!be.kf(field_signature)) {
             localList.add(localObject1);
           }
         }
         else
         {
           field_status = 4;
-          i.a.iyG.e((f)localObject1);
+          i.a.iVc.e((f)localObject1);
         }
       }
       else if (field_signature != null) {
@@ -161,31 +207,45 @@ public final class g
   {
     if (paramf == null)
     {
-      u.w("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "app is null");
+      v.w("MicroMsg.AppInfoLogic", "app is null");
       return false;
     }
     if ((field_packageName == null) || (field_packageName.length() == 0))
     {
-      u.w("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "field_packageName is null");
+      v.w("MicroMsg.AppInfoLogic", "field_packageName is null");
       return false;
     }
-    return p.m(paramContext, field_packageName);
+    return p.n(paramContext, field_packageName);
   }
   
-  public static f aF(String paramString, int paramInt)
+  public static boolean a(f paramf, int paramInt)
+  {
+    if ((paramf == null) || (be.kf(field_appId))) {
+      return false;
+    }
+    if ((field_appInfoFlag & paramInt) > 0) {}
+    for (boolean bool = true;; bool = false)
+    {
+      v.i("MicroMsg.AppInfoLogic", "isAppHasFlag, appid = %s, flag = %s, ret = %b", new Object[] { field_appId, Integer.valueOf(paramInt), Boolean.valueOf(bool) });
+      v.i("MicroMsg.AppInfoLogic", "appInfoFlag = " + field_appInfoFlag);
+      return bool;
+    }
+  }
+  
+  public static f aP(String paramString, int paramInt)
   {
     Object localObject = null;
     if ((paramString == null) || (paramString.length() == 0))
     {
-      u.e("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "getAppInfo, appId is null");
+      v.e("MicroMsg.AppInfoLogic", "getAppInfo, appId is null");
       return (f)localObject;
     }
-    if (i.a.iyG == null)
+    if (i.a.iVc == null)
     {
-      u.e("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "getISubCorePluginBase() == null");
+      v.e("MicroMsg.AppInfoLogic", "getISubCorePluginBase() == null");
       return null;
     }
-    f localf = i.a.iyG.zw(paramString);
+    f localf = i.a.iVc.Bs(paramString);
     if ((localf == null) || (field_appVersion < paramInt)) {}
     for (paramInt = 1;; paramInt = 0)
     {
@@ -193,59 +253,54 @@ public final class g
       if (paramInt == 0) {
         break;
       }
-      i.a.iyG.zx(paramString);
+      i.a.iVc.Bt(paramString);
       return localf;
     }
   }
   
-  public static boolean aPF()
+  public static void aUn()
   {
-    return new ArrayList().size() != 0;
-  }
-  
-  public static void aPG()
-  {
-    SharedPreferences localSharedPreferences = y.aUM();
+    SharedPreferences localSharedPreferences = aa.aZQ();
     if (localSharedPreferences != null) {
       localSharedPreferences.edit().putString("key_app_ids_registion_while_not_login", "").commit();
     }
   }
   
-  public static boolean aT(String paramString)
+  public static boolean aY(String paramString)
   {
     return (paramString != null) && (paramString.trim().length() != 0) && (!paramString.equals("weixinfile")) && (!paramString.equals("invalid_appname"));
   }
   
-  public static boolean aU(String paramString)
+  public static boolean aZ(String paramString)
   {
-    if (ay.kz(paramString)) {
+    if (be.kf(paramString)) {
       return false;
     }
-    f localf = ai(paramString, false);
+    f localf = ar(paramString, false);
     if (localf == null)
     {
-      u.w("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "app is null, appId = " + paramString);
+      v.w("MicroMsg.AppInfoLogic", "app is null, appId = " + paramString);
       return false;
     }
-    return localf.aPB();
+    return localf.aUj();
   }
   
-  public static f ai(String paramString, boolean paramBoolean)
+  public static f ar(String paramString, boolean paramBoolean)
   {
     Object localObject = null;
     if ((paramString == null) || (paramString.length() == 0)) {
-      u.e("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "getAppInfo, appId is null");
+      v.e("MicroMsg.AppInfoLogic", "getAppInfo, appId is null");
     }
     f localf;
     do
     {
       return (f)localObject;
-      if (i.a.iyG == null)
+      if (i.a.iVc == null)
       {
-        u.e("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "getISubCorePluginBase() == null");
+        v.e("MicroMsg.AppInfoLogic", "getISubCorePluginBase() == null");
         return null;
       }
-      localf = i.a.iyG.zw(paramString);
+      localf = i.a.iVc.Bs(paramString);
       localObject = localf;
     } while (!paramBoolean);
     if ((localf == null) || (field_appName == null) || (field_appName.length() == 0)) {}
@@ -255,7 +310,7 @@ public final class g
       if (i == 0) {
         break;
       }
-      i.a.iyG.zx(paramString);
+      i.a.iVc.Bt(paramString);
       return localf;
     }
   }
@@ -263,7 +318,7 @@ public final class g
   public static Bitmap b(String paramString, int paramInt, float paramFloat)
   {
     if ((paramString == null) || (paramString.length() == 0)) {
-      u.e("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "getAppIcon, appId is null");
+      v.e("MicroMsg.AppInfoLogic", "getAppIcon, appId is null");
     }
     Bitmap localBitmap;
     do
@@ -275,49 +330,100 @@ public final class g
           do
           {
             return null;
-          } while (!ah.rh());
-          if (ah.tD().isSDCardAvailable()) {
+          } while (!ah.rg());
+          if (ah.tE().isSDCardAvailable()) {
             break;
           }
-        } while ((y.getContext() == null) || (y.getContext().getResources() == null));
+        } while ((aa.getContext() == null) || (aa.getContext().getResources() == null));
         switch (paramInt)
         {
         case 2: 
         default: 
-          u.e("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "getAppIcon, unknown iconType = " + paramInt);
+          v.e("MicroMsg.AppInfoLogic", "getAppIcon, unknown iconType = " + paramInt);
           return null;
         }
-        paramString = BitmapFactory.decodeResource(y.getContext().getResources(), 2130970629);
+        paramString = BitmapFactory.decodeResource(aa.getContext().getResources(), 2130839307);
       } while ((paramString == null) || (paramString.isRecycled()));
       return paramString;
-      localBitmap = i.a.iyG.a(paramString, paramInt, paramFloat);
+      localBitmap = i.a.iVc.a(paramString, paramInt, paramFloat);
       if (localBitmap == null)
       {
-        u.w("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "getAppIcon, bm does not exist or has been recycled");
-        i.a.iyG.aD(paramString, paramInt);
+        v.w("MicroMsg.AppInfoLogic", "getAppIcon, bm does not exist or has been recycled");
+        i.a.iVc.aK(paramString, paramInt);
         return null;
       }
     } while (localBitmap.isRecycled());
     return localBitmap;
   }
   
-  private static List bA(int paramInt1, int paramInt2)
+  public static List<f> b(Context paramContext, long paramLong, boolean paramBoolean)
   {
     ArrayList localArrayList = new ArrayList();
-    if (i.a.iyG == null) {
-      u.e("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "getServiceByAppInfoFlagAndShowFlag, getISubCorePluginBase() == null");
+    Object localObject1 = al.aUA();
+    Object localObject2 = new StringBuilder(256);
+    ((StringBuilder)localObject2).append("select * from AppInfo");
+    ((StringBuilder)localObject2).append(" where ");
+    ((StringBuilder)localObject2).append(" ( appSupportContentType & ").append(paramLong).append(" ) != 0");
+    ((StringBuilder)localObject2).append(" and  ( svrAppSupportContentType & ").append(paramLong).append(" ) != 0");
+    ((StringBuilder)localObject2).append(" and  ( appInfoFlag & ").append(8192).append(" ) != 0");
+    ((StringBuilder)localObject2).append(" and status != 4");
+    if (!paramBoolean) {
+      ((StringBuilder)localObject2).append(" and  ( appInfoFlag & ").append(16384).append(" ) == 0");
+    }
+    v.v("MicroMsg.AppInfoStorage", "getAppInfoByContentFlag sql %s", new Object[] { ((StringBuilder)localObject2).toString() });
+    localObject2 = ((i)localObject1).rawQuery(((StringBuilder)localObject2).toString(), new String[0]);
+    localObject1 = localObject2;
+    if (localObject2 == null)
+    {
+      v.e("MicroMsg.AppInfoStorage", "getAppByStatus : cursor is null");
+      localObject1 = null;
+    }
+    if (localObject1 == null) {
+      return localArrayList;
+    }
+    while (((Cursor)localObject1).moveToNext())
+    {
+      localObject2 = new f();
+      ((f)localObject2).b((Cursor)localObject1);
+      if (field_status == 1)
+      {
+        if (n(paramContext, field_appId))
+        {
+          if (!be.kf(field_signature)) {
+            localArrayList.add(localObject2);
+          }
+        }
+        else
+        {
+          field_status = 4;
+          i.a.iVc.e((f)localObject2);
+        }
+      }
+      else if (field_signature != null) {
+        localArrayList.add(localObject2);
+      }
+    }
+    ((Cursor)localObject1).close();
+    return localArrayList;
+  }
+  
+  private static List<f> bF(int paramInt1, int paramInt2)
+  {
+    ArrayList localArrayList = new ArrayList();
+    if (i.a.iVc == null) {
+      v.e("MicroMsg.AppInfoLogic", "getServiceByAppInfoFlagAndShowFlag, getISubCorePluginBase() == null");
     }
     Cursor localCursor;
     do
     {
       return localArrayList;
-      localCursor = i.a.iyG.bz(1, paramInt2);
+      localCursor = i.a.iVc.bE(1, paramInt2);
     } while (localCursor == null);
     while (localCursor.moveToNext())
     {
       f localf = new f();
-      localf.c(localCursor);
-      if (!ay.kz(field_openId)) {
+      localf.b(localCursor);
+      if (!be.kf(field_openId)) {
         localArrayList.add(localf);
       }
     }
@@ -325,34 +431,34 @@ public final class g
     return localArrayList;
   }
   
-  public static List cO(Context paramContext)
+  public static List<f> cM(Context paramContext)
   {
     ArrayList localArrayList = new ArrayList();
-    if (i.a.iyG == null) {
-      u.e("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "getISubCorePluginBase() == null");
+    if (i.a.iVc == null) {
+      v.e("MicroMsg.AppInfoLogic", "getISubCorePluginBase() == null");
     }
     Cursor localCursor;
     do
     {
       return localArrayList;
-      localCursor = i.a.iyG.nX(5);
+      localCursor = i.a.iVc.pB(5);
     } while (localCursor == null);
     while (localCursor.moveToNext())
     {
       f localf = new f();
-      localf.c(localCursor);
+      localf.b(localCursor);
       if (field_status == 1)
       {
-        if (m(paramContext, field_appId))
+        if (n(paramContext, field_appId))
         {
-          if (!ay.kz(field_signature)) {
+          if (!be.kf(field_signature)) {
             localArrayList.add(localf);
           }
         }
         else
         {
           field_status = 4;
-          i.a.iyG.e(localf);
+          i.a.iVc.e(localf);
         }
       }
       else if (field_signature != null) {
@@ -363,9 +469,9 @@ public final class g
     return localArrayList;
   }
   
-  public static String cP(Context paramContext)
+  public static String cN(Context paramContext)
   {
-    String str = t.d(paramContext.getSharedPreferences(y.aUK(), 0));
+    String str = u.d(paramContext.getSharedPreferences(aa.aZO(), 0));
     if ((str != null) && (str.length() != 0))
     {
       paramContext = str;
@@ -380,7 +486,7 @@ public final class g
   
   public static boolean h(f paramf)
   {
-    if ((paramf == null) || (ay.kz(field_appId))) {}
+    if ((paramf == null) || (be.kf(field_appId))) {}
     while ((field_appInfoFlag & 0x1) <= 0) {
       return false;
     }
@@ -396,22 +502,31 @@ public final class g
     return false;
   }
   
+  public static boolean j(Context paramContext, long paramLong)
+  {
+    boolean bool = true;
+    if (b(paramContext, paramLong, true).size() == 0) {
+      bool = false;
+    }
+    return bool;
+  }
+  
   public static boolean j(f paramf)
   {
-    if ((paramf == null) || (ay.kz(field_appId))) {
+    if ((paramf == null) || (be.kf(field_appId))) {
       return false;
     }
     if ((field_appInfoFlag & 0x40) > 0) {}
     for (boolean bool = true;; bool = false)
     {
-      u.v("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "canReadMMMsg, appid = %s, ret = %b", new Object[] { field_appId, Boolean.valueOf(bool) });
+      v.v("MicroMsg.AppInfoLogic", "canReadMMMsg, appid = %s, ret = %b", new Object[] { field_appId, Boolean.valueOf(bool) });
       return bool;
     }
   }
   
   public static boolean k(f paramf)
   {
-    if ((paramf == null) || (ay.kz(field_appId))) {
+    if ((paramf == null) || (be.kf(field_appId))) {
       return false;
     }
     int i;
@@ -445,61 +560,28 @@ public final class g
     return false;
   }
   
-  public static String l(Context paramContext, String paramString)
+  public static String m(Context paramContext, String paramString)
   {
-    return a(paramContext, ai(paramString, true), null);
+    return a(paramContext, ar(paramString, true), null);
   }
   
-  public static boolean m(Context paramContext, String paramString)
+  public static boolean n(Context paramContext, String paramString)
   {
     if ((paramContext == null) || (paramString == null) || (paramString.length() == 0))
     {
-      u.e("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "isAppInstalled, invalid arguments");
+      v.e("MicroMsg.AppInfoLogic", "isAppInstalled, invalid arguments");
       return false;
     }
-    return a(paramContext, ai(paramString, true));
+    return a(paramContext, ar(paramString, true));
   }
   
-  public static boolean of(int paramInt)
+  public static boolean u(Context paramContext, int paramInt)
   {
-    Long localLong = b.a.zp(String.valueOf(paramInt));
+    Long localLong = b.a.Bl(String.valueOf(paramInt));
     if (localLong == null) {}
-    do
-    {
+    while (b(paramContext, localLong.longValue(), true).size() == 0) {
       return false;
-      localLong.longValue();
-    } while (new ArrayList().size() == 0);
-    return true;
-  }
-  
-  public static boolean zL(String paramString)
-  {
-    if (ay.kz(paramString)) {}
-    f localf;
-    do
-    {
-      return false;
-      localf = ai(paramString, true);
-      if (localf == null)
-      {
-        u.w("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "app is null, appId = " + paramString);
-        return false;
-      }
-      if (field_authFlag == 0) {
-        return true;
-      }
-    } while ((field_authFlag & 0x2) <= 0);
-    return true;
-  }
-  
-  public static boolean zM(String paramString)
-  {
-    if (ay.kz(paramString)) {}
-    do
-    {
-      return false;
-      paramString = ai(paramString, true);
-    } while ((paramString == null) || (ay.kz(field_appId)) || ((field_appInfoFlag & 0x8) <= 0));
+    }
     return true;
   }
 }

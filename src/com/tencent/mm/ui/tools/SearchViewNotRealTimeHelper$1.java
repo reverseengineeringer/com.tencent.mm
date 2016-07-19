@@ -14,12 +14,12 @@ final class SearchViewNotRealTimeHelper$1
   {
     if ((paramEditable == null) || (paramEditable.length() <= 0))
     {
-      SearchViewNotRealTimeHelper.a(lxN).setVisibility(8);
-      SearchViewNotRealTimeHelper.b(lxN).setEnabled(false);
+      SearchViewNotRealTimeHelper.a(lYC).setVisibility(8);
+      SearchViewNotRealTimeHelper.b(lYC).setEnabled(false);
       return;
     }
-    SearchViewNotRealTimeHelper.a(lxN).setVisibility(0);
-    SearchViewNotRealTimeHelper.b(lxN).setEnabled(true);
+    SearchViewNotRealTimeHelper.a(lYC).setVisibility(0);
+    SearchViewNotRealTimeHelper.b(lYC).setEnabled(true);
   }
   
   public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}

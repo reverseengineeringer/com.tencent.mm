@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bBI:Lcom/tencent/mm/model/ar$1;
+.field final synthetic buQ:Lcom/tencent/mm/model/ar$1;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 303
-    iput-object p1, p0, Lcom/tencent/mm/model/ar$1$1;->bBI:Lcom/tencent/mm/model/ar$1;
+    .line 338
+    iput-object p1, p0, Lcom/tencent/mm/model/ar$1$1;->buQ:Lcom/tencent/mm/model/ar$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,21 +40,21 @@
     .locals 1
 
     .prologue
-    .line 307
-    iget-object v0, p0, Lcom/tencent/mm/model/ar$1$1;->bBI:Lcom/tencent/mm/model/ar$1;
+    .line 342
+    iget-object v0, p0, Lcom/tencent/mm/model/ar$1$1;->buQ:Lcom/tencent/mm/model/ar$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/model/ar$1;->bBH:Lcom/tencent/mm/model/ar$a;
+    iget-object v0, v0, Lcom/tencent/mm/model/ar$1;->buP:Lcom/tencent/mm/model/ar$a;
 
     if-eqz v0, :cond_0
 
-    .line 308
-    iget-object v0, p0, Lcom/tencent/mm/model/ar$1$1;->bBI:Lcom/tencent/mm/model/ar$1;
+    .line 343
+    iget-object v0, p0, Lcom/tencent/mm/model/ar$1$1;->buQ:Lcom/tencent/mm/model/ar$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/model/ar$1;->bBH:Lcom/tencent/mm/model/ar$a;
+    iget-object v0, v0, Lcom/tencent/mm/model/ar$1;->buP:Lcom/tencent/mm/model/ar$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/model/ar$a;->uh()V
+    invoke-interface {v0}, Lcom/tencent/mm/model/ar$a;->ui()V
 
-    .line 311
+    .line 345
     :cond_0
     return-void
 .end method

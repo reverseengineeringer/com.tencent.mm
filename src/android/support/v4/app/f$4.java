@@ -10,10 +10,10 @@ final class f$4
   
   public final void onAnimationEnd(Animation paramAnimation)
   {
-    if (bT.mAnimatingAway != null)
+    if (ch.aB != null)
     {
-      bT.mAnimatingAway = null;
-      bQ.a(bT, bT.mStateAfterAnimating, 0, 0, false);
+      ch.aB = null;
+      ce.a(ch, ch.aC, 0, 0, false);
     }
   }
   

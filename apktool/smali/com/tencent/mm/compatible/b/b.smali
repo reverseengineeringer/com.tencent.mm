@@ -12,7 +12,7 @@
 
 
 # direct methods
-.method public static nJ()Lcom/tencent/mm/compatible/b/b$a;
+.method public static lX()Lcom/tencent/mm/compatible/b/b$a;
     .locals 8
 
     .prologue
@@ -21,11 +21,11 @@
     const/4 v1, 0x0
 
     .line 20
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v3
 
@@ -34,9 +34,9 @@
     move-result-object v3
 
     .line 22
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->bpP:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->bdP:I
 
     if-ne v0, v2, :cond_1
 
@@ -75,9 +75,9 @@
 
     new-array v6, v6, [Ljava/lang/Object;
 
-    sget-object v7, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v7, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v7, v7, Lcom/tencent/mm/compatible/d/a;->bpP:I
+    iget v7, v7, Lcom/tencent/mm/compatible/d/a;->bdP:I
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -105,7 +105,7 @@
 
     aput-object v2, v6, v1
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 30
     const-string/jumbo v1, "settings_voicerecorder_mode"
@@ -117,7 +117,7 @@
     if-eqz v0, :cond_2
 
     .line 31
-    sget-object v0, Lcom/tencent/mm/compatible/b/b$a;->bpn:Lcom/tencent/mm/compatible/b/b$a;
+    sget-object v0, Lcom/tencent/mm/compatible/b/b$a;->bdm:Lcom/tencent/mm/compatible/b/b$a;
 
     .line 33
     :goto_1
@@ -131,7 +131,7 @@
 
     .line 33
     :cond_2
-    sget-object v0, Lcom/tencent/mm/compatible/b/b$a;->bpo:Lcom/tencent/mm/compatible/b/b$a;
+    sget-object v0, Lcom/tencent/mm/compatible/b/b$a;->bdn:Lcom/tencent/mm/compatible/b/b$a;
 
     goto :goto_1
 .end method

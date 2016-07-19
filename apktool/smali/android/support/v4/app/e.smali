@@ -17,10 +17,19 @@
 
 
 # virtual methods
-.method public abstract H()Landroid/support/v4/app/h;
+.method public abstract G()Landroid/support/v4/app/h;
 .end method
 
-.method public abstract I()Ljava/util/List;
+.method public abstract H()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Landroid/support/v4/app/Fragment;",
+            ">;"
+        }
+    .end annotation
 .end method
 
 .method public abstract a(Landroid/os/Bundle;Ljava/lang/String;)Landroid/support/v4/app/Fragment;
@@ -29,7 +38,7 @@
 .method public abstract a(Landroid/os/Bundle;Ljava/lang/String;Landroid/support/v4/app/Fragment;)V
 .end method
 
-.method public abstract e(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/Fragment$SavedState;
+.method public abstract d(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/Fragment$SavedState;
 .end method
 
 .method public abstract executePendingTransactions()Z

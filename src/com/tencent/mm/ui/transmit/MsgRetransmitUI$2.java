@@ -1,16 +1,21 @@
 package com.tencent.mm.ui.transmit;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
+import android.app.ProgressDialog;
+import com.tencent.mm.pluginsdk.model.h.a;
 
 final class MsgRetransmitUI$2
-  implements DialogInterface.OnCancelListener
+  implements h.a
 {
-  MsgRetransmitUI$2(MsgRetransmitUI paramMsgRetransmitUI, MsgRetransmitUI.a parama) {}
+  MsgRetransmitUI$2(MsgRetransmitUI paramMsgRetransmitUI) {}
   
-  public final void onCancel(DialogInterface paramDialogInterface)
+  public final void aTX()
   {
-    ldz.lAV = true;
+    if (MsgRetransmitUI.f(mbK) != null)
+    {
+      MsgRetransmitUI.f(mbK).dismiss();
+      MsgRetransmitUI.g(mbK);
+    }
+    mbK.finish();
   }
 }
 

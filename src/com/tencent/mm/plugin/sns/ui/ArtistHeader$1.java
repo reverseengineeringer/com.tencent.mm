@@ -14,25 +14,25 @@ final class ArtistHeader$1
   
   public final void onClick(View paramView)
   {
-    if ((ArtistHeader.a(gWd) != null) && (ArtistHeader.a(gWd).isShowing())) {}
-    while (ArtistHeader.b(gWd) == null) {
+    if ((ArtistHeader.a(hjz) != null) && (ArtistHeader.a(hjz).isShowing())) {}
+    while (ArtistHeader.b(hjz) == null) {
       return;
     }
-    paramView = LayoutInflater.from(gWd.getContext()).inflate(2131363189, null);
-    ArtistHeader.a(gWd, new i(gWd.getContext(), 2131099662));
+    paramView = LayoutInflater.from(hjz.getContext()).inflate(2130904556, null);
+    ArtistHeader.a(hjz, new i(hjz.getContext(), 2131493482));
     paramView.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
-        ArtistHeader.a(gWd).dismiss();
+        ArtistHeader.a(hjz).dismiss();
       }
     });
-    ArtistHeader.a(gWd).setCanceledOnTouchOutside(true);
-    ArtistHeader.a(gWd).setContentView(paramView);
-    ArtistHeader.a(gWd).show();
-    ArtistHeader.a(gWd, (ImageView)paramView.findViewById(2131169428));
-    ArtistHeader.a(gWd, (ProgressBar)paramView.findViewById(2131169430));
-    ArtistHeader.a(gWd, paramView.findViewById(2131169429));
+    ArtistHeader.a(hjz).setCanceledOnTouchOutside(true);
+    ArtistHeader.a(hjz).setContentView(paramView);
+    ArtistHeader.a(hjz).show();
+    ArtistHeader.a(hjz, (ImageView)paramView.findViewById(2131759416));
+    ArtistHeader.a(hjz, (ProgressBar)paramView.findViewById(2131759418));
+    ArtistHeader.a(hjz, paramView.findViewById(2131759417));
   }
 }
 

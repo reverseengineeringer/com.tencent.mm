@@ -8,7 +8,7 @@ import java.io.Serializable;
 public class WloginSigInfo
   implements Parcelable, Serializable
 {
-  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+  public static final Parcelable.Creator<WloginSigInfo> CREATOR = new Parcelable.Creator() {};
   private static final long serialVersionUID = 1L;
   public long _A2_expire_time = 0L;
   public byte[] _D2;

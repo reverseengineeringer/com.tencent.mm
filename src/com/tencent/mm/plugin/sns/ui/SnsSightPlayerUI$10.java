@@ -12,8 +12,8 @@ final class SnsSightPlayerUI$10
   
   public final boolean onPreDraw()
   {
-    his.gyR.getViewTreeObserver().removeOnPreDrawListener(this);
-    his.hbV.a(his.gyR, SnsSightPlayerUI.l(his), null);
+    hxh.gFr.getViewTreeObserver().removeOnPreDrawListener(this);
+    hxh.hqH.a(hxh.gFr, SnsSightPlayerUI.l(hxh), null);
     return true;
   }
 }

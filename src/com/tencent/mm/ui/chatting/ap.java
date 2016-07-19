@@ -1,149 +1,233 @@
 package com.tencent.mm.ui.chatting;
 
-import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import android.text.ClipboardManager;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.ag.b.e;
-import com.tencent.mm.d.b.bg;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.i.a;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.ar;
-import com.tencent.mm.n.a.a;
-import com.tencent.mm.pluginsdk.model.app.f;
-import com.tencent.mm.pluginsdk.model.app.g;
+import com.tencent.mm.model.h;
+import com.tencent.mm.p.a.a;
+import com.tencent.mm.platformtools.s;
 import com.tencent.mm.pluginsdk.ui.d.e;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.q;
+import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.o;
-import com.tencent.mm.ui.transmit.MsgRetransmitUI;
 
 final class ap
-  extends aa.b
+  extends ab.c
 {
-  private ChattingUI.a kTe;
+  private ChattingUI.a ltl;
   
   public ap()
   {
-    super(22);
+    super(54);
   }
   
   public final View a(LayoutInflater paramLayoutInflater, View paramView)
   {
     Object localObject;
-    if ((paramView != null) && (paramView.getTag() != null) && ((paramView.getTag() instanceof k)))
+    if ((paramView != null) && (paramView.getTag() != null) && ((paramView.getTag() instanceof j)))
     {
       localObject = paramView;
-      if (getTagtype == eLV) {}
+      if (getTagtype == cTv) {}
     }
     else
     {
-      localObject = new ax(paramLayoutInflater, 2131361970);
-      ((View)localObject).setTag(new j(eLV).aA((View)localObject));
+      localObject = new ay(paramLayoutInflater, 2130903318);
+      ((View)localObject).setTag(new j(cTv).aD((View)localObject));
     }
     return (View)localObject;
   }
   
-  public final void a(aa.a parama, int paramInt, ChattingUI.a parama1, ag paramag, String paramString)
+  public final void a(ab.a parama, int paramInt, ChattingUI.a parama1, ai paramai, String paramString)
   {
-    kTe = parama1;
+    ltl = parama1;
     j localj = (j)parama;
-    paramString = field_content;
-    parama = paramString;
-    if (kSI)
-    {
-      int i = field_content.indexOf(':');
-      parama = paramString;
-      if (i != -1) {
-        parama = field_content.substring(i + 1);
-      }
-    }
+    parama = field_content;
     if (parama != null) {}
-    for (parama = a.a.B(parama, field_reserved);; parama = null)
+    for (parama = a.a.y(parama, field_reserved);; parama = null)
     {
-      f localf;
-      if ((parama != null) && (type == 1))
+      if (parama != null)
       {
-        localf = g.ai(appId, true);
-        if ((localf != null) && (field_appName != null) && (field_appName.trim().length() > 0)) {
-          break label355;
+        lqy.setSingleLine(true);
+        switch (brd)
+        {
+        case 2: 
+        default: 
+          lqx.setImageResource(2131165286);
+          lqy.setSingleLine(false);
+          lqy.setMaxLines(2);
+          lqz.setText(null);
+          lqy.setText(description);
         }
-        paramString = appName;
-        if ((appId == null) || (appId.length() <= 0) || (!g.aT(paramString))) {
-          break label365;
-        }
-        dVa.setText(parama1.getString(2131427970, new Object[] { g.a(koJ.kpc, localf, paramString) }));
-        dVa.setVisibility(0);
-        a(parama1, dVa, appId);
-        a(parama1, dVa, appId);
-        label226:
-        if ((bcE == null) || (bcE.length() <= 0)) {
-          break label378;
-        }
-        b(parama1, kQE, dg.Hb(bcE));
-        kQE.setVisibility(0);
       }
       for (;;)
       {
-        dVy.setText(title);
-        e.a(dVy, 1);
-        dVy.setTag(new dg(paramag, kAy, paramInt, null, 0, (byte)0));
-        dVy.setOnClickListener(kSE.kVs);
-        if (ah.tD().isSDCardAvailable()) {
-          dVy.setOnLongClickListener(kSE.kVu);
-        }
+        lth.setOnClickListener(lsL.lvy);
+        lth.setOnLongClickListener(lsL.lvA);
+        parama = new dh(paramai, ltl.kZE, paramInt, null, 0, (byte)0);
+        lth.setTag(parama);
         return;
-        label355:
-        paramString = field_appName;
-        break;
-        label365:
-        dVa.setVisibility(8);
-        break label226;
-        label378:
-        kQE.setVisibility(8);
+        paramString = ah.tE().rr().GC(field_talker);
+        if (paramString != null)
+        {
+          paramString = paramString.pc();
+          label218:
+          if (!s.kf(brL)) {
+            break label311;
+          }
+          paramString = parama1.getString(2131231679, new Object[] { s.li(paramString) });
+          lqy.setText(e.a(kNN.kOg, paramString, lqy.getTextSize()));
+        }
+        for (;;)
+        {
+          lqz.setText(bre);
+          lqx.setImageResource(2131165286);
+          break;
+          paramString = field_talker;
+          break label218;
+          label311:
+          paramString = e.a(kNN.kOg, brL);
+          lqy.setText(paramString);
+        }
+        lqy.setText(2131231675);
+        lqz.setText(bre);
+        lqx.setImageResource(2131165287);
+        continue;
+        lqy.setText(2131231681);
+        lqz.setText(bre);
+        lqx.setImageResource(2131165288);
       }
     }
   }
   
-  public final boolean a(ContextMenu paramContextMenu, View paramView, ag paramag)
+  public final boolean a(ContextMenu paramContextMenu, View paramView, ai paramai)
   {
     int i = getTagposition;
-    paramContextMenu.add(i, 111, 0, kTe.getString(2131427822));
-    if (com.tencent.mm.ar.c.yf("favorite")) {
-      paramContextMenu.add(i, 116, 0, kTe.getString(2131431054));
+    String str = field_content;
+    paramView = null;
+    if (str != null) {
+      paramView = a.a.y(str, field_reserved);
     }
-    if (!kTe.bfD()) {
-      paramContextMenu.add(i, 100, 0, kTe.getString(2131427849));
+    if (paramView != null)
+    {
+      paramContextMenu.add(i, 100, 0, ltl.getString(2131231700));
+      if (brd == 1) {
+        paramContextMenu.add(i, 103, 0, ltl.getString(2131234503));
+      }
+    }
+    return false;
+  }
+  
+  public final boolean a(final MenuItem paramMenuItem, final ChattingUI.a parama, final ai paramai)
+  {
+    switch (paramMenuItem.getItemId())
+    {
+    case 101: 
+    case 102: 
+    default: 
+      return false;
+    case 100: 
+      ar.H(field_msgId);
+      return true;
+    }
+    final String str = field_content;
+    paramMenuItem = null;
+    if (str != null) {
+      paramMenuItem = a.a.y(str, field_reserved);
+    }
+    if (paramMenuItem != null)
+    {
+      str = brf;
+      paramai = field_talker;
+      final int i = brh;
+      final int j = brj;
+      paramMenuItem = brk;
+      g.b(kNN.kOg, parama.getString(2131234457), parama.getString(2131231000), parama.getString(2131234503), parama.getString(2131230873), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+      {
+        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+        {
+          paramAnonymousDialogInterface = new Intent();
+          paramAnonymousDialogInterface.putExtra("transaction_id", str);
+          paramAnonymousDialogInterface.putExtra("receiver_name", paramai);
+          paramAnonymousDialogInterface.putExtra("resend_msg_from_flag", 2);
+          paramAnonymousDialogInterface.putExtra("invalid_time", i);
+          paramAnonymousDialogInterface.putExtra("total_fee", j);
+          paramAnonymousDialogInterface.putExtra("fee_type", paramMenuItem);
+          if (h.sr())
+          {
+            com.tencent.mm.av.c.c(parama.y(), "wallet_payu", ".remittance.ui.PayURemittanceResendMsgUI", paramAnonymousDialogInterface);
+            return;
+          }
+          com.tencent.mm.av.c.c(parama.y(), "remittance", ".ui.RemittanceResendMsgUI", paramAnonymousDialogInterface);
+        }
+      }, new DialogInterface.OnClickListener()
+      {
+        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
+      });
     }
     return true;
   }
   
-  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ag paramag)
+  public final boolean a(View paramView, ChattingUI.a parama, ai paramai)
   {
-    switch (paramMenuItem.getItemId())
-    {
-    default: 
-      return false;
-    case 100: 
-      ar.E(field_msgId);
-      ah.tD().rp().b(new b.e(field_talker, field_msgSvrId));
-      return false;
-    case 102: 
-      ((ClipboardManager)koJ.kpc.getSystemService("clipboard")).setText(parama.ba(dzbafield_content, field_isSend)).title, field_isSend));
-      return false;
+    Object localObject = field_content;
+    paramView = null;
+    if (localObject != null) {
+      paramView = a.a.y((String)localObject, field_reserved);
     }
-    paramMenuItem = new Intent(koJ.kpc, MsgRetransmitUI.class);
-    paramMenuItem.putExtra("Retr_Msg_content", parama.ba(field_content, field_isSend));
-    paramMenuItem.putExtra("Retr_Msg_Type", 2);
-    paramMenuItem.putExtra("Retr_Msg_Id", field_msgId);
-    parama.startActivity(paramMenuItem);
-    return false;
-  }
-  
-  public final boolean a(View paramView, ChattingUI.a parama, ag paramag)
-  {
+    if (paramView != null)
+    {
+      localObject = new Intent();
+      ((Intent)localObject).putExtra("sender_name", field_talker);
+      switch (brd)
+      {
+      case 2: 
+      default: 
+        v.d("MicroMsg.ChattingItemAppMsgRemittanceTo", "Unrecognized type, probably version to low & check update!");
+        s.bg(kNN.kOg);
+        return true;
+      case 1: 
+        ((Intent)localObject).putExtra("invalid_time", brh);
+        ((Intent)localObject).putExtra("is_sender", true);
+        ((Intent)localObject).putExtra("appmsg_type", brd);
+        ((Intent)localObject).putExtra("transfer_id", brg);
+        ((Intent)localObject).putExtra("transaction_id", brf);
+        ((Intent)localObject).putExtra("effective_date", bri);
+        ((Intent)localObject).putExtra("total_fee", brj);
+        ((Intent)localObject).putExtra("fee_type", brk);
+        if (h.sr())
+        {
+          com.tencent.mm.av.c.a(parama, "wallet_payu", ".remittance.ui.PayURemittanceDetailUI", (Intent)localObject, 221);
+          return true;
+        }
+        com.tencent.mm.av.c.a(parama, "remittance", ".ui.RemittanceDetailUI", (Intent)localObject, 221);
+        return true;
+      }
+      ((Intent)localObject).putExtra("appmsg_type", brd);
+      ((Intent)localObject).putExtra("transfer_id", brg);
+      ((Intent)localObject).putExtra("transaction_id", brf);
+      ((Intent)localObject).putExtra("effective_date", bri);
+      ((Intent)localObject).putExtra("total_fee", brj);
+      ((Intent)localObject).putExtra("fee_type", brk);
+      if (h.sr())
+      {
+        com.tencent.mm.av.c.c(kNN.kOg, "wallet_payu", ".remittance.ui.PayURemittanceDetailUI", (Intent)localObject);
+        return true;
+      }
+      com.tencent.mm.av.c.c(kNN.kOg, "remittance", ".ui.RemittanceDetailUI", (Intent)localObject);
+      return true;
+    }
     return false;
   }
 }

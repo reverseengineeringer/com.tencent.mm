@@ -15,11 +15,11 @@
 
 
 # virtual methods
-.method public abstract Hc(Ljava/lang/String;)Landroid/graphics/Bitmap;
+.method public abstract Jr(Ljava/lang/String;)Landroid/graphics/Bitmap;
 .end method
 
 .method public abstract c(Landroid/widget/ImageView;Landroid/graphics/Bitmap;)V
 .end method
 
-.method public abstract rE(I)Landroid/graphics/Bitmap;
+.method public abstract tG(I)Landroid/graphics/Bitmap;
 .end method

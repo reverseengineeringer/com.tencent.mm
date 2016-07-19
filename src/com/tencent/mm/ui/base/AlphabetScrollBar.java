@@ -11,16 +11,16 @@ public class AlphabetScrollBar
     super(paramContext, paramAttributeSet);
   }
   
-  public void Ld()
+  public void LX()
   {
-    eEz = new String[] { "↑", "☆", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "#" };
-    eEx = 1.3F;
-    eEy = 79;
+    eKO = new String[] { "↑", "☆", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "#" };
+    eKM = 1.3F;
+    eKN = 79;
   }
   
-  protected int getToastLayoutId()
+  protected final int agD()
   {
-    return 2131363184;
+    return 2130904370;
   }
 }
 

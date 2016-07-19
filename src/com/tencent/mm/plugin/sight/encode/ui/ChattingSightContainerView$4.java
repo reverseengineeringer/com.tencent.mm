@@ -11,7 +11,7 @@ final class ChattingSightContainerView$4
   
   public final void onClick(View paramView)
   {
-    ChattingSightContainerView.b(gBF).awi();
+    ChattingSightContainerView.b(gIh).ayG();
   }
 }
 

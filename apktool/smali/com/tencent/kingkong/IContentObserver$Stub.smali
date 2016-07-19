@@ -34,7 +34,7 @@
     .locals 1
 
     .prologue
-    .line 16
+    .line 17
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     .line 18
@@ -42,6 +42,7 @@
 
     invoke-virtual {p0, p0, v0}, Lcom/tencent/kingkong/IContentObserver$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
+    .line 19
     return-void
 .end method
 

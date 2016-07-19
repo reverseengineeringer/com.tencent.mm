@@ -3,7 +3,7 @@ package com.tencent.mm.ui.chatting;
 import android.os.Parcelable.Creator;
 
 final class QQMailHistoryExporter$ImageSpanData$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<QQMailHistoryExporter.ImageSpanData>
 {}
 
 /* Location:

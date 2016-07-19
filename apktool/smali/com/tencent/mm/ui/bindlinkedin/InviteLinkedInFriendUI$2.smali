@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->Gb()V
+    value = Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+.field final synthetic lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 85
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
     const/4 v5, 0x0
 
     .line 87
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->a(Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;)Landroid/widget/EditText;
 
@@ -67,7 +67,7 @@
 
     if-lez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->b(Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;)Landroid/widget/EditText;
 
@@ -92,17 +92,17 @@
     if-lez v0, :cond_0
 
     .line 88
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
-    new-instance v1, Lcom/tencent/mm/ad/b;
+    new-instance v1, Lcom/tencent/mm/ag/b;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->c(Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;)Ljava/lang/String;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
     invoke-static {v3}, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->a(Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;)Landroid/widget/EditText;
 
@@ -116,7 +116,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+    iget-object v4, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
     invoke-static {v4}, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->b(Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;)Landroid/widget/EditText;
 
@@ -130,31 +130,31 @@
 
     move-result-object v4
 
-    invoke-direct {v1, v2, v3, v4}, Lcom/tencent/mm/ad/b;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lcom/tencent/mm/ag/b;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->a(Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;Lcom/tencent/mm/ad/b;)Lcom/tencent/mm/ad/b;
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->a(Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;Lcom/tencent/mm/ag/b;)Lcom/tencent/mm/ag/b;
 
     .line 89
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->d(Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;)Lcom/tencent/mm/ad/b;
+    invoke-static {v1}, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->d(Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;)Lcom/tencent/mm/ag/b;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    invoke-virtual {v0, v1, v5}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
     .line 90
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;->lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
-    const v3, 0x7f0b0ebd
+    const v3, 0x7f080ad7
 
     invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->getString(I)Ljava/lang/String;
 

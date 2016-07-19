@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">%1$sకి Android వేర్ అనువర్తనాన్ని నవీకరించడం అవసరం.</string>
+    <string name="b">మీరు Android వేర్ అనువర్తనాన్ని నవీకరిస్తే మినహా %1$s అమలు కాదు.</string>
+    <string name="c">Android Wearని నవీకరించండి</string>
+    <string name="d">%1$sకి ప్రస్తుతం అందుబాటులో లేని ఒకటి లేదా అంతకంటే ఎక్కువ Google Play సేవలు అవసరం. దయచేసి సహాయం కోసం డెవలపర్‌ను సంప్రదించండి.</string>
+    <string name="e">Google Play సేవలను ప్రారంభించు</string>
+    <string name="f">మీరు Google Play సేవలను ప్రారంభిస్తే మినహా %1$s పని చేయదు.</string>
+    <string name="g">Google Play సేవలను ప్రారంభించు</string>
+    <string name="h">%1$s ద్వారా అభ్యర్థించబడింది</string>
+    <string name="i">Google Play సేవలను పొందండి</string>
+    <string name="j">%1$s Google Play సేవలు లేకుండా అమలు కాదు, ఆ సేవలు మీ ఫోన్‌లో లేవు.</string>
+    <string name="k">%1$s Google Play సేవలు లేకుండా అమలు కాదు, ఆ సేవలు మీ టాబ్లెట్‌లో లేవు.</string>
+    <string name="l">Google Play సేవలను పొందండి</string>
+    <string name="m">పేర్కొన్న ఖాతా ఈ పరికరంలో లేదు. దయచేసి వేరొక ఖాతాను ఎంచుకోండి.</string>
+    <string name="n">చెల్లని ఖాతా</string>
+    <string name="o">ఒక అనువర్తనానికి Google Play సేవలు ప్రారంభించబడాలి.</string>
+    <string name="p">Google Play సేవలకు కనెక్ట్ చేయడానికి డేటా కనెక్షన్ అవసరం.</string>
+    <string name="q">నెట్‌వర్క్ లోపం</string>
+    <string name="r">ఒక అనువర్తనానికి Google Play సేవలు నవీకరించబడటం అవసరం.</string>
+    <string name="s">Google Play సేవల లోపం</string>
+    <string name="t">పేర్కొన్న ఖాతాలో సైన్ ఇన్ చేయడంలో లోపం. దయచేసి వేరే ఖాతాను ఎంచుకోండి.</string>
+    <string name="u">సైన్ ఇన్ విఫలమైంది</string>
+    <string name="v">Google Play సేవలతో తెలియని సమస్య.</string>
+    <string name="w">%1$s మీ పరికరంలో మద్దతు లేని Google Play సేవలపై ఆధారపడుతుంది. సహాయం కోసం తయారీదారుని సంప్రదించండి.</string>
+    <string name="x">Google Play సేవలు</string>
+    <string name="y">నవీకరించు</string>
+    <string name="z">మీరు Google Play సేవలను నవీకరిస్తే మినహా %1$s అమలు కాదు.</string>
+    <string name="a0">Google Play సేవలను నవీకరించండి</string>
+    <string name="a1">%1$s Google Play సేవలు లేకుండా అమలు కాదు, ఆ సేవలు ప్రస్తుతం నవీకరించబడుతున్నాయి.</string>
+    <string name="a2">Google Play సేవలు నవీకరించబడుతున్నాయి</string>
+    <string name="a3">ఫోన్‌లో తెరవండి</string>
+    <string name="a4">సైన్ ఇన్ చేయి</string>
+    <string name="a5">Googleతో సైన్ ఇన్ చేయి</string>
+</resources>

@@ -5,37 +5,37 @@ import android.content.pm.ResolveInfo;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.plugin.report.service.g;
 
 final class AppChooserUI$1
   implements AdapterView.OnItemClickListener
 {
   AppChooserUI$1(AppChooserUI paramAppChooserUI) {}
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    if (AppChooserUI.a(iRi) != null)
+    if (AppChooserUI.a(jos) != null)
     {
-      AppChooserUI.a(iRi, AppChooserUI.a(iRi).oM(paramInt));
-      AppChooserUI.a(iRi).notifyDataSetChanged();
-      if ((AppChooserUI.b(iRi) != null) && (AppChooserUI.b(iRi).isShowing()))
+      AppChooserUI.a(jos, AppChooserUI.a(jos).qz(paramInt));
+      AppChooserUI.a(jos).notifyDataSetChanged();
+      if ((AppChooserUI.b(jos) != null) && (AppChooserUI.b(jos).isShowing()))
       {
-        if ((AppChooserUI.c(iRi) == null) || (!ciRi).iRp) || ((ciRi).iRs) && ((ciRi).iRq) || (AppChooserUI.d(iRi) >= AppChooserUI.e(iRi))))) {
+        if ((AppChooserUI.c(jos) == null) || (!cjos).joz) || ((cjos).eEy) && ((cjos).joA) || (AppChooserUI.d(jos) >= AppChooserUI.e(jos))))) {
           break label249;
         }
-        AppChooserUI.b(iRi).gB(false);
+        AppChooserUI.b(jos).gZ(false);
       }
     }
     for (;;)
     {
-      if (((AppChooserUI.f(iRi) == 6) || (AppChooserUI.g(iRi) == 2)) && (AppChooserUI.c(iRi) != null) && (ciRi).iRm != null))
+      if (((AppChooserUI.f(jos) == 6) || (AppChooserUI.g(jos) == 2)) && (AppChooserUI.c(jos) != null) && (cjos).jow != null))
       {
-        AppChooserUI.a(iRi, ciRi).iRm.activityInfo.packageName, false);
-        h.fUJ.g(12809, new Object[] { Integer.valueOf(4), ciRi).iRm.activityInfo.packageName });
+        AppChooserUI.a(jos, cjos).jow.activityInfo.packageName, false);
+        g.gdY.h(12809, new Object[] { Integer.valueOf(4), cjos).jow.activityInfo.packageName });
       }
       return;
       label249:
-      AppChooserUI.b(iRi).gB(true);
+      AppChooserUI.b(jos).gZ(true);
     }
   }
 }

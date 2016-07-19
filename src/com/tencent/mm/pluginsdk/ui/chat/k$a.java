@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.chat;
 
 public final class k$a
 {
-  public String iMs;
+  public String jjp;
   public String username;
 }
 

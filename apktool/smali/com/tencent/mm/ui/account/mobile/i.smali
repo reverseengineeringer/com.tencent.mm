@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/r/d;
+.implements Lcom/tencent/mm/t/d;
 .implements Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$b;
 
 
@@ -16,15 +16,15 @@
 
 
 # instance fields
-.field ccq:Ljava/lang/String;
+.field bWf:Ljava/lang/String;
 
-.field ksM:Lcom/tencent/mm/ui/account/mobile/a;
+.field kRU:Lcom/tencent/mm/ui/account/mobile/a;
 
-.field private kyC:Z
+.field kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-.field kyG:Ljava/lang/String;
+.field private kXJ:Z
 
-.field kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+.field kXN:Ljava/lang/String;
 
 
 # direct methods
@@ -38,24 +38,35 @@
     .line 58
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/mobile/i;->ksM:Lcom/tencent/mm/ui/account/mobile/a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/mobile/i;->kRU:Lcom/tencent/mm/ui/account/mobile/a;
 
     .line 59
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/account/mobile/i;->kyC:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/account/mobile/i;->kXJ:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+.method public final a(Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;)V
+    .locals 0
+
+    .prologue
+    .line 63
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+
+    .line 64
+    return-void
+.end method
+
+.method public final onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
     .locals 23
 
     .prologue
     .line 207
-    const-string/jumbo v3, "!44@/B4Tb64lLpKNhhU94SG29uszzGqinD/vUtNV6SLJGOM="
+    const-string/jumbo v3, "MicroMsg.MobileVerifyRegLogic"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -97,38 +108,38 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 209
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v3, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->coM:Landroid/app/ProgressDialog;
+    iget-object v3, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->cka:Landroid/app/ProgressDialog;
 
     if-eqz v3, :cond_0
 
     .line 210
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v3, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->coM:Landroid/app/ProgressDialog;
+    iget-object v3, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->cka:Landroid/app/ProgressDialog;
 
     invoke-virtual {v3}, Landroid/app/ProgressDialog;->dismiss()V
 
     .line 211
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     const/4 v4, 0x0
 
-    iput-object v4, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->coM:Landroid/app/ProgressDialog;
+    iput-object v4, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->cka:Landroid/app/ProgressDialog;
 
     .line 214
     :cond_0
-    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/r/j;->getType()I
+    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/t/j;->getType()I
 
     move-result v3
 
@@ -137,7 +148,7 @@
     if-ne v3, v4, :cond_3
 
     .line 215
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v3
 
@@ -145,7 +156,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v3, v4, v0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v3, v4, v0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
     .line 216
     if-nez p1, :cond_1
@@ -156,13 +167,13 @@
     :cond_1
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     move-object/from16 v0, p0
 
-    iget-boolean v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyC:Z
+    iget-boolean v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXJ:Z
 
-    invoke-virtual {v3, v4}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->hr(Z)V
+    invoke-virtual {v3, v4}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->hP(Z)V
 
     .line 762
     :cond_2
@@ -171,7 +182,7 @@
 
     .line 223
     :cond_3
-    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/r/j;->getType()I
+    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/t/j;->getType()I
 
     move-result v3
 
@@ -181,12 +192,12 @@
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->ksM:Lcom/tencent/mm/ui/account/mobile/a;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kRU:Lcom/tencent/mm/ui/account/mobile/a;
 
     if-eqz v3, :cond_5
 
     .line 224
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v3
 
@@ -194,16 +205,16 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v3, v4, v0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v3, v4, v0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
     .line 225
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->ksM:Lcom/tencent/mm/ui/account/mobile/a;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kRU:Lcom/tencent/mm/ui/account/mobile/a;
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     move/from16 v5, p1
 
@@ -213,7 +224,7 @@
 
     move-object/from16 v8, p4
 
-    invoke-virtual/range {v3 .. v8}, Lcom/tencent/mm/ui/account/mobile/a;->a(Lcom/tencent/mm/ui/MMActivity;IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    invoke-virtual/range {v3 .. v8}, Lcom/tencent/mm/ui/account/mobile/a;->a(Lcom/tencent/mm/ui/MMActivity;IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 
     .line 229
     if-nez p1, :cond_2
@@ -223,24 +234,24 @@
     .line 231
     move-object/from16 v0, p4
 
-    instance-of v3, v0, Lcom/tencent/mm/modelsimple/t;
+    instance-of v3, v0, Lcom/tencent/mm/modelsimple/r;
 
     if-eqz v3, :cond_4
 
     .line 232
-    check-cast p4, Lcom/tencent/mm/modelsimple/t;
+    check-cast p4, Lcom/tencent/mm/modelsimple/r;
 
-    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/modelsimple/t;->CD()Z
+    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/modelsimple/r;->CQ()Z
 
     move-result v3
 
     move-object/from16 v0, p0
 
-    iput-boolean v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyC:Z
+    iput-boolean v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXJ:Z
 
     .line 234
     :cond_4
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v3
 
@@ -248,44 +259,46 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v3, v4, v0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v3, v4, v0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
     .line 235
-    new-instance v3, Lcom/tencent/mm/modelsimple/u;
+    new-instance v3, Lcom/tencent/mm/modelsimple/s;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, v4}, Lcom/tencent/mm/modelsimple/u;-><init>(I)V
+    invoke-direct {v3, v4}, Lcom/tencent/mm/modelsimple/s;-><init>(I)V
 
     .line 236
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v4
 
-    invoke-virtual {v4, v3}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    const/4 v5, 0x0
+
+    invoke-virtual {v4, v3, v5}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
     .line 237
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v6, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    const v7, 0x7f0b0ddd
+    const v7, 0x7f080134
 
     invoke-virtual {v6, v7}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->getString(I)Ljava/lang/String;
 
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v6, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    const v7, 0x7f0b0389
+    const v7, 0x7f0810d3
 
     invoke-virtual {v6, v7}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->getString(I)Ljava/lang/String;
 
@@ -297,19 +310,19 @@
 
     move-object/from16 v0, p0
 
-    invoke-direct {v8, v0, v3}, Lcom/tencent/mm/ui/account/mobile/i$12;-><init>(Lcom/tencent/mm/ui/account/mobile/i;Lcom/tencent/mm/modelsimple/u;)V
+    invoke-direct {v8, v0, v3}, Lcom/tencent/mm/ui/account/mobile/i$12;-><init>(Lcom/tencent/mm/ui/account/mobile/i;Lcom/tencent/mm/modelsimple/s;)V
 
     invoke-static {v5, v6, v7, v8}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;ZLandroid/content/DialogInterface$OnCancelListener;)Lcom/tencent/mm/ui/base/p;
 
     move-result-object v3
 
-    iput-object v3, v4, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->coM:Landroid/app/ProgressDialog;
+    iput-object v3, v4, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->cka:Landroid/app/ProgressDialog;
 
     goto/16 :goto_0
 
     .line 248
     :cond_5
-    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/r/j;->getType()I
+    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/t/j;->getType()I
 
     move-result v3
 
@@ -318,7 +331,7 @@
     if-ne v3, v4, :cond_d
 
     .line 249
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v3
 
@@ -326,14 +339,14 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v3, v4, v0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v3, v4, v0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
     move-object/from16 v3, p4
 
     .line 250
     check-cast v3, Lcom/tencent/mm/modelfriend/u;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/modelfriend/u;->va()I
+    invoke-virtual {v3}, Lcom/tencent/mm/modelfriend/u;->vc()I
 
     move-result v3
 
@@ -355,9 +368,9 @@
     .line 258
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v3, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kyW:Ljava/lang/Boolean;
+    iget-object v3, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kYd:Ljava/lang/Boolean;
 
     invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -368,15 +381,15 @@
     .line 259
     check-cast p4, Lcom/tencent/mm/modelfriend/u;
 
-    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/modelfriend/u;->yN()Ljava/lang/String;
+    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/modelfriend/u;->za()Ljava/lang/String;
 
     move-result-object v3
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyG:Ljava/lang/String;
+    iput-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXN:Ljava/lang/String;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v3
 
@@ -384,23 +397,23 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v3, v4, v0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v3, v4, v0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
-    new-instance v3, Lcom/tencent/mm/modelsimple/v;
+    new-instance v3, Lcom/tencent/mm/modelsimple/t;
 
     const-string/jumbo v4, ""
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v5, v5, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->dWv:Ljava/lang/String;
+    iget-object v5, v5, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->dYE:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v6, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v6, v6, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->aji:Ljava/lang/String;
+    iget-object v6, v6, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->UY:Ljava/lang/String;
 
     const/4 v7, 0x0
 
@@ -408,9 +421,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v9, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v9, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v9, v9, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->aBH:Ljava/lang/String;
+    iget-object v9, v9, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->anZ:Ljava/lang/String;
 
     const-string/jumbo v10, ""
 
@@ -418,13 +431,13 @@
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyG:Ljava/lang/String;
+    iget-object v12, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXN:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v13, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget v13, v13, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->cbB:I
+    iget v13, v13, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->bVp:I
 
     const-string/jumbo v14, ""
 
@@ -436,13 +449,13 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     move-object/from16 v18, v0
 
     move-object/from16 v0, v18
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kyV:Ljava/lang/Boolean;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kYc:Ljava/lang/Boolean;
 
     move-object/from16 v18, v0
 
@@ -450,35 +463,37 @@
 
     move-result v18
 
-    invoke-direct/range {v3 .. v18}, Lcom/tencent/mm/modelsimple/v;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
+    invoke-direct/range {v3 .. v18}, Lcom/tencent/mm/modelsimple/t;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v4
 
-    invoke-virtual {v4, v3}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    const/4 v5, 0x0
+
+    invoke-virtual {v4, v3, v5}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v6, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    const v7, 0x7f0b0ddd
+    const v7, 0x7f080134
 
     invoke-virtual {v6, v7}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->getString(I)Ljava/lang/String;
 
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v6, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    const v7, 0x7f0b011f
+    const v7, 0x7f080e82
 
     invoke-virtual {v6, v7}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->getString(I)Ljava/lang/String;
 
@@ -490,13 +505,13 @@
 
     move-object/from16 v0, p0
 
-    invoke-direct {v8, v0, v3}, Lcom/tencent/mm/ui/account/mobile/i$7;-><init>(Lcom/tencent/mm/ui/account/mobile/i;Lcom/tencent/mm/modelsimple/v;)V
+    invoke-direct {v8, v0, v3}, Lcom/tencent/mm/ui/account/mobile/i$7;-><init>(Lcom/tencent/mm/ui/account/mobile/i;Lcom/tencent/mm/modelsimple/t;)V
 
     invoke-static {v5, v6, v7, v8}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;ZLandroid/content/DialogInterface$OnCancelListener;)Lcom/tencent/mm/ui/base/p;
 
     move-result-object v3
 
-    iput-object v3, v4, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->coM:Landroid/app/ProgressDialog;
+    iput-object v3, v4, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->cka:Landroid/app/ProgressDialog;
 
     goto/16 :goto_0
 
@@ -511,7 +526,7 @@
     .line 262
     check-cast v3, Lcom/tencent/mm/modelfriend/u;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/modelfriend/u;->yN()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/tencent/mm/modelfriend/u;->za()Ljava/lang/String;
 
     move-result-object v3
 
@@ -525,9 +540,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v5, v5, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->aBH:Ljava/lang/String;
+    iget-object v5, v5, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->anZ:Ljava/lang/String;
 
     invoke-virtual {v4, v3, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -543,7 +558,7 @@
 
     check-cast p4, Lcom/tencent/mm/modelfriend/u;
 
-    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/modelfriend/u;->yQ()I
+    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/modelfriend/u;->zd()I
 
     move-result v5
 
@@ -552,7 +567,7 @@
     .line 267
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     const-class v5, Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
@@ -561,22 +576,22 @@
     .line 268
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     invoke-virtual {v3, v4}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->startActivity(Landroid/content/Intent;)V
 
     .line 270
-    sget v3, Lcom/tencent/mm/plugin/accountsync/a/c$a;->con:I
+    sget v3, Lcom/tencent/mm/plugin/accountsync/a/c$a;->cjB:I
 
-    invoke-static {v3}, Lcom/tencent/mm/plugin/accountsync/a/c;->eo(I)V
+    invoke-static {v3}, Lcom/tencent/mm/plugin/accountsync/a/c;->fa(I)V
 
     .line 272
     const-string/jumbo v3, "R200_900_phone"
 
-    invoke-static {v3}, Lcom/tencent/mm/plugin/a/b;->kC(Ljava/lang/String;)V
+    invoke-static {v3}, Lcom/tencent/mm/plugin/a/b;->ll(Ljava/lang/String;)V
 
     .line 274
-    invoke-static {}, Lcom/tencent/mm/model/aw;->uB()Lcom/tencent/mm/model/aw;
+    invoke-static {}, Lcom/tencent/mm/model/aw;->uD()Lcom/tencent/mm/model/aw;
 
     .line 275
     const-string/jumbo v3, "RE200_300"
@@ -588,7 +603,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->ty()Ljava/lang/String;
 
     move-result-object v6
 
@@ -630,7 +645,7 @@
 
     move-result-object v5
 
-    invoke-static {v3}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
+    invoke-static {v3}, Lcom/tencent/mm/model/ah;->fq(Ljava/lang/String;)I
 
     move-result v3
 
@@ -661,7 +676,7 @@
     if-ne v0, v3, :cond_9
 
     .line 290
-    invoke-static/range {p3 .. p3}, Lcom/tencent/mm/e/a;->cV(Ljava/lang/String;)Lcom/tencent/mm/e/a;
+    invoke-static/range {p3 .. p3}, Lcom/tencent/mm/f/a;->dc(Ljava/lang/String;)Lcom/tencent/mm/f/a;
 
     move-result-object v3
 
@@ -671,7 +686,7 @@
     .line 292
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     new-instance v5, Lcom/tencent/mm/ui/account/mobile/i$13;
 
@@ -679,7 +694,7 @@
 
     move-object/from16 v1, p4
 
-    invoke-direct {v5, v0, v1}, Lcom/tencent/mm/ui/account/mobile/i$13;-><init>(Lcom/tencent/mm/ui/account/mobile/i;Lcom/tencent/mm/r/j;)V
+    invoke-direct {v5, v0, v1}, Lcom/tencent/mm/ui/account/mobile/i$13;-><init>(Lcom/tencent/mm/ui/account/mobile/i;Lcom/tencent/mm/t/j;)V
 
     new-instance v6, Lcom/tencent/mm/ui/account/mobile/i$14;
 
@@ -687,7 +702,7 @@
 
     invoke-direct {v6, v0}, Lcom/tencent/mm/ui/account/mobile/i$14;-><init>(Lcom/tencent/mm/ui/account/mobile/i;)V
 
-    invoke-virtual {v3, v4, v5, v6}, Lcom/tencent/mm/e/a;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Z
+    invoke-virtual {v3, v4, v5, v6}, Lcom/tencent/mm/f/a;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Z
 
     goto/16 :goto_0
 
@@ -695,13 +710,13 @@
     :cond_8
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    const v5, 0x7f0b054c
+    const v5, 0x7f08020d
 
     invoke-virtual {v4, v5}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->getString(I)Ljava/lang/String;
 
@@ -715,7 +730,7 @@
 
     move-object/from16 v1, p4
 
-    invoke-direct {v6, v0, v1}, Lcom/tencent/mm/ui/account/mobile/i$15;-><init>(Lcom/tencent/mm/ui/account/mobile/i;Lcom/tencent/mm/r/j;)V
+    invoke-direct {v6, v0, v1}, Lcom/tencent/mm/ui/account/mobile/i$15;-><init>(Lcom/tencent/mm/ui/account/mobile/i;Lcom/tencent/mm/t/j;)V
 
     new-instance v7, Lcom/tencent/mm/ui/account/mobile/i$16;
 
@@ -740,7 +755,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     const-class v5, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
 
@@ -753,7 +768,7 @@
 
     check-cast v3, Lcom/tencent/mm/modelfriend/u;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/modelfriend/u;->yN()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/tencent/mm/modelfriend/u;->za()Ljava/lang/String;
 
     move-result-object v3
 
@@ -764,9 +779,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v5, v5, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->aBH:Ljava/lang/String;
+    iget-object v5, v5, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->anZ:Ljava/lang/String;
 
     invoke-virtual {v4, v3, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -777,7 +792,7 @@
 
     check-cast v3, Lcom/tencent/mm/modelfriend/u;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/modelfriend/u;->yQ()I
+    invoke-virtual {v3}, Lcom/tencent/mm/modelfriend/u;->zd()I
 
     move-result v3
 
@@ -803,7 +818,7 @@
 
     check-cast v3, Lcom/tencent/mm/modelfriend/u;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/modelfriend/u;->yM()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/tencent/mm/modelfriend/u;->yZ()Ljava/lang/String;
 
     move-result-object v3
 
@@ -816,7 +831,7 @@
 
     check-cast v3, Lcom/tencent/mm/modelfriend/u;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/modelfriend/u;->yX()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/tencent/mm/modelfriend/u;->zk()Ljava/lang/String;
 
     move-result-object v3
 
@@ -827,7 +842,7 @@
 
     check-cast p4, Lcom/tencent/mm/modelfriend/u;
 
-    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/modelfriend/u;->yW()Ljava/lang/String;
+    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/modelfriend/u;->zj()Ljava/lang/String;
 
     move-result-object v5
 
@@ -836,9 +851,9 @@
     .line 343
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v3, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kyW:Ljava/lang/Boolean;
+    iget-object v3, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kYd:Ljava/lang/Boolean;
 
     invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -851,9 +866,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v5, v5, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->aji:Ljava/lang/String;
+    iget-object v5, v5, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->UY:Ljava/lang/String;
 
     invoke-virtual {v4, v3, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -862,9 +877,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v5, v5, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->dWv:Ljava/lang/String;
+    iget-object v5, v5, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->dYE:Ljava/lang/String;
 
     invoke-virtual {v4, v3, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -873,9 +888,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v5, v5, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kyV:Ljava/lang/Boolean;
+    iget-object v5, v5, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kYc:Ljava/lang/Boolean;
 
     invoke-virtual {v4, v3, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
@@ -883,17 +898,17 @@
     :cond_a
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     invoke-virtual {v3, v4}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->startActivity(Landroid/content/Intent;)V
 
     .line 351
     const-string/jumbo v3, "R200_600"
 
-    invoke-static {v3}, Lcom/tencent/mm/plugin/a/b;->kC(Ljava/lang/String;)V
+    invoke-static {v3}, Lcom/tencent/mm/plugin/a/b;->ll(Ljava/lang/String;)V
 
     .line 354
-    invoke-static {}, Lcom/tencent/mm/model/aw;->uB()Lcom/tencent/mm/model/aw;
+    invoke-static {}, Lcom/tencent/mm/model/aw;->uD()Lcom/tencent/mm/model/aw;
 
     .line 355
     const-string/jumbo v3, "RE200_300"
@@ -905,7 +920,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->ty()Ljava/lang/String;
 
     move-result-object v6
 
@@ -947,7 +962,7 @@
 
     move-result-object v5
 
-    invoke-static {v3}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
+    invoke-static {v3}, Lcom/tencent/mm/model/ah;->fq(Ljava/lang/String;)I
 
     move-result v3
 
@@ -978,7 +993,7 @@
     if-ne v0, v3, :cond_19
 
     .line 453
-    invoke-static/range {p3 .. p3}, Lcom/tencent/mm/e/a;->cV(Ljava/lang/String;)Lcom/tencent/mm/e/a;
+    invoke-static/range {p3 .. p3}, Lcom/tencent/mm/f/a;->dc(Ljava/lang/String;)Lcom/tencent/mm/f/a;
 
     move-result-object v3
 
@@ -988,13 +1003,13 @@
     .line 455
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     const/4 v5, 0x0
 
     const/4 v6, 0x0
 
-    invoke-virtual {v3, v4, v5, v6}, Lcom/tencent/mm/e/a;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Z
+    invoke-virtual {v3, v4, v5, v6}, Lcom/tencent/mm/f/a;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Z
 
     goto/16 :goto_0
 
@@ -1002,19 +1017,19 @@
     :cond_c
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    const v4, 0x7f0b0541
+    const v4, 0x7f080249
 
-    const v5, 0x7f0b053f
+    const v5, 0x7f08024f
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/ui/base/g;->f(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
     goto/16 :goto_0
 
     .line 461
     :cond_d
-    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/r/j;->getType()I
+    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/t/j;->getType()I
 
     move-result v3
 
@@ -1045,59 +1060,59 @@
     :cond_e
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v8, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kyV:Ljava/lang/Boolean;
+    iget-object v8, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kYc:Ljava/lang/Boolean;
 
     .line 469
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v5, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->dWv:Ljava/lang/String;
+    iget-object v5, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->dYE:Ljava/lang/String;
 
     .line 470
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v6, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->aji:Ljava/lang/String;
+    iget-object v6, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->UY:Ljava/lang/String;
 
     .line 471
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v3, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kqh:Lcom/tencent/mm/ui/applet/SecurityImage;
+    iget-object v3, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kPm:Lcom/tencent/mm/ui/applet/SecurityImage;
 
     if-nez v3, :cond_f
 
     .line 472
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     move-object/from16 v19, v0
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v15, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     const/16 v18, 0x0
 
     move-object/from16 v3, p4
 
-    check-cast v3, Lcom/tencent/mm/modelsimple/v;
+    check-cast v3, Lcom/tencent/mm/modelsimple/t;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/modelsimple/v;->za()[B
+    invoke-virtual {v3}, Lcom/tencent/mm/modelsimple/t;->zn()[B
 
     move-result-object v20
 
     move-object/from16 v3, p4
 
-    check-cast v3, Lcom/tencent/mm/modelsimple/v;
+    check-cast v3, Lcom/tencent/mm/modelsimple/t;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/modelsimple/v;->zb()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/tencent/mm/modelsimple/t;->zo()Ljava/lang/String;
 
     move-result-object v21
 
@@ -1109,7 +1124,7 @@
 
     move-object/from16 v7, p4
 
-    invoke-direct/range {v3 .. v8}, Lcom/tencent/mm/ui/account/mobile/i$2;-><init>(Lcom/tencent/mm/ui/account/mobile/i;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/r/j;Ljava/lang/Boolean;)V
+    invoke-direct/range {v3 .. v8}, Lcom/tencent/mm/ui/account/mobile/i$2;-><init>(Lcom/tencent/mm/ui/account/mobile/i;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/t/j;Ljava/lang/Boolean;)V
 
     const/16 v16, 0x0
 
@@ -1133,7 +1148,7 @@
 
     move-object v14, v8
 
-    invoke-direct/range {v9 .. v14}, Lcom/tencent/mm/ui/account/mobile/i$4;-><init>(Lcom/tencent/mm/ui/account/mobile/i;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/r/j;Ljava/lang/Boolean;)V
+    invoke-direct/range {v9 .. v14}, Lcom/tencent/mm/ui/account/mobile/i$4;-><init>(Lcom/tencent/mm/ui/account/mobile/i;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/t/j;Ljava/lang/Boolean;)V
 
     move-object v10, v15
 
@@ -1155,7 +1170,7 @@
 
     move-object/from16 v0, v19
 
-    iput-object v3, v0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kqh:Lcom/tencent/mm/ui/applet/SecurityImage;
+    iput-object v3, v0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kPm:Lcom/tencent/mm/ui/applet/SecurityImage;
 
     goto/16 :goto_0
 
@@ -1163,23 +1178,23 @@
     :cond_f
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v4, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kqh:Lcom/tencent/mm/ui/applet/SecurityImage;
+    iget-object v4, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kPm:Lcom/tencent/mm/ui/applet/SecurityImage;
 
     const/4 v5, 0x0
 
     move-object/from16 v3, p4
 
-    check-cast v3, Lcom/tencent/mm/modelsimple/v;
+    check-cast v3, Lcom/tencent/mm/modelsimple/t;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/modelsimple/v;->za()[B
+    invoke-virtual {v3}, Lcom/tencent/mm/modelsimple/t;->zn()[B
 
     move-result-object v3
 
-    check-cast p4, Lcom/tencent/mm/modelsimple/v;
+    check-cast p4, Lcom/tencent/mm/modelsimple/t;
 
-    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/modelsimple/v;->zb()Ljava/lang/String;
+    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/modelsimple/t;->zo()Ljava/lang/String;
 
     move-result-object v6
 
@@ -1198,50 +1213,50 @@
     .line 526
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v15, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->aBH:Ljava/lang/String;
+    iget-object v15, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->anZ:Ljava/lang/String;
 
     .line 527
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v5, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kyV:Ljava/lang/Boolean;
+    iget-object v5, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kYc:Ljava/lang/Boolean;
 
     move-object/from16 v3, p4
 
     .line 528
-    check-cast v3, Lcom/tencent/mm/modelsimple/v;
+    check-cast v3, Lcom/tencent/mm/modelsimple/t;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/modelsimple/v;->yU()I
+    invoke-virtual {v3}, Lcom/tencent/mm/modelsimple/t;->zh()I
 
     move-result v6
 
     move-object/from16 v3, p4
 
     .line 532
-    check-cast v3, Lcom/tencent/mm/modelsimple/v;
+    check-cast v3, Lcom/tencent/mm/modelsimple/t;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/modelsimple/v;->CF()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/tencent/mm/modelsimple/t;->CS()Ljava/lang/String;
 
     move-result-object v16
 
     move-object/from16 v3, p4
 
     .line 533
-    check-cast v3, Lcom/tencent/mm/modelsimple/v;
+    check-cast v3, Lcom/tencent/mm/modelsimple/t;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/modelsimple/v;->CG()I
+    invoke-virtual {v3}, Lcom/tencent/mm/modelsimple/t;->CT()I
 
     move-result v11
 
     move-object/from16 v3, p4
 
     .line 534
-    check-cast v3, Lcom/tencent/mm/modelsimple/v;
+    check-cast v3, Lcom/tencent/mm/modelsimple/t;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/modelsimple/v;->CH()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/tencent/mm/modelsimple/t;->CU()Ljava/lang/String;
 
     move-result-object v7
 
@@ -1257,9 +1272,7 @@
     .line 538
     const-string/jumbo v3, "wording"
 
-    const/4 v8, 0x0
-
-    invoke-static {v7, v3, v8}, Lcom/tencent/mm/sdk/platformtools/q;->J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {v7, v3}, Lcom/tencent/mm/sdk/platformtools/r;->cr(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v8
 
@@ -1276,7 +1289,7 @@
     check-cast v3, Ljava/lang/String;
 
     .line 541
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v9
 
@@ -1300,7 +1313,7 @@
     check-cast v3, Ljava/lang/String;
 
     .line 554
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v9
 
@@ -1319,7 +1332,7 @@
     check-cast v3, Ljava/lang/String;
 
     .line 558
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v8
 
@@ -1331,7 +1344,7 @@
 
     .line 564
     :goto_2
-    const-string/jumbo v3, "!44@/B4Tb64lLpKNhhU94SG29uszzGqinD/vUtNV6SLJGOM="
+    const-string/jumbo v3, "MicroMsg.MobileVerifyRegLogic"
 
     const-string/jumbo v4, "hasSetAvatar , %s"
 
@@ -1343,10 +1356,10 @@
 
     aput-object v5, v8, v12
 
-    invoke-static {v3, v4, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v8}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 565
-    const-string/jumbo v3, "!44@/B4Tb64lLpKNhhU94SG29uszzGqinD/vUtNV6SLJGOM="
+    const-string/jumbo v3, "MicroMsg.MobileVerifyRegLogic"
 
     const-string/jumbo v4, "styleId , %s"
 
@@ -1362,10 +1375,10 @@
 
     aput-object v6, v8, v12
 
-    invoke-static {v3, v4, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v8}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 566
-    const-string/jumbo v3, "!44@/B4Tb64lLpKNhhU94SG29uszzGqinD/vUtNV6SLJGOM="
+    const-string/jumbo v3, "MicroMsg.MobileVerifyRegLogic"
 
     const-string/jumbo v4, "nextStep , %s"
 
@@ -1377,10 +1390,10 @@
 
     aput-object v16, v6, v8
 
-    invoke-static {v3, v4, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 567
-    const-string/jumbo v3, "!44@/B4Tb64lLpKNhhU94SG29uszzGqinD/vUtNV6SLJGOM="
+    const-string/jumbo v3, "MicroMsg.MobileVerifyRegLogic"
 
     const-string/jumbo v4, "nextStyle , %s"
 
@@ -1396,10 +1409,10 @@
 
     aput-object v12, v6, v8
 
-    invoke-static {v3, v4, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 568
-    const-string/jumbo v3, "!44@/B4Tb64lLpKNhhU94SG29uszzGqinD/vUtNV6SLJGOM="
+    const-string/jumbo v3, "MicroMsg.MobileVerifyRegLogic"
 
     const-string/jumbo v4, "mShowStyleContactUploadWordings , %s"
 
@@ -1411,7 +1424,7 @@
 
     aput-object v7, v6, v8
 
-    invoke-static {v3, v4, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 573
     invoke-static {}, Lcom/tencent/mm/model/ah;->unhold()V
@@ -1419,7 +1432,7 @@
     .line 574
     const/4 v3, 0x1
 
-    invoke-static {v3}, Lcom/tencent/mm/model/ah;->aJ(Z)V
+    invoke-static {v3}, Lcom/tencent/mm/model/ah;->ao(Z)V
 
     .line 575
     invoke-virtual {v5}, Ljava/lang/Boolean;->booleanValue()Z
@@ -1433,7 +1446,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v4, Lcom/tencent/mm/compatible/util/d;->bur:Ljava/lang/String;
+    sget-object v4, Lcom/tencent/mm/compatible/util/d;->biR:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1454,7 +1467,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v4, Lcom/tencent/mm/compatible/util/d;->bur:Ljava/lang/String;
+    sget-object v4, Lcom/tencent/mm/compatible/util/d;->biR:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1482,7 +1495,7 @@
     invoke-virtual {v4, v5}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     .line 579
-    invoke-static {v8}, Lcom/tencent/mm/loader/stub/b;->deleteFile(Ljava/lang/String;)Z
+    invoke-static {v8}, Lcom/tencent/mm/a/e;->deleteFile(Ljava/lang/String;)Z
 
     .line 580
     const/16 v4, 0x60
@@ -1500,13 +1513,13 @@
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v5, Lcom/tencent/mm/compatible/util/d;->bur:Ljava/lang/String;
+    sget-object v5, Lcom/tencent/mm/compatible/util/d;->biR:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1539,7 +1552,7 @@
 
     move/from16 v8, v17
 
-    invoke-direct/range {v3 .. v11}, Lcom/tencent/mm/ui/account/mobile/i$5;-><init>(Lcom/tencent/mm/ui/account/mobile/i;Lcom/tencent/mm/r/j;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;I)V
+    invoke-direct/range {v3 .. v11}, Lcom/tencent/mm/ui/account/mobile/i$5;-><init>(Lcom/tencent/mm/ui/account/mobile/i;Lcom/tencent/mm/t/j;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;I)V
 
     new-instance v12, Lcom/tencent/mm/ui/account/mobile/i$6;
 
@@ -1553,7 +1566,7 @@
 
     move/from16 v20, v11
 
-    invoke-direct/range {v12 .. v20}, Lcom/tencent/mm/ui/account/mobile/i$6;-><init>(Lcom/tencent/mm/ui/account/mobile/i;Lcom/tencent/mm/r/j;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;I)V
+    invoke-direct/range {v12 .. v20}, Lcom/tencent/mm/ui/account/mobile/i$6;-><init>(Lcom/tencent/mm/ui/account/mobile/i;Lcom/tencent/mm/t/j;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;I)V
 
     move-object/from16 v0, v21
 
@@ -1562,7 +1575,7 @@
     .line 738
     :cond_13
     :goto_3
-    invoke-static/range {p3 .. p3}, Lcom/tencent/mm/e/a;->cV(Ljava/lang/String;)Lcom/tencent/mm/e/a;
+    invoke-static/range {p3 .. p3}, Lcom/tencent/mm/f/a;->dc(Ljava/lang/String;)Lcom/tencent/mm/f/a;
 
     move-result-object v3
 
@@ -1572,19 +1585,19 @@
     .line 740
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     const/4 v5, 0x0
 
     const/4 v6, 0x0
 
-    invoke-virtual {v3, v4, v5, v6}, Lcom/tencent/mm/e/a;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Z
+    invoke-virtual {v3, v4, v5, v6}, Lcom/tencent/mm/f/a;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Z
 
     goto/16 :goto_0
 
     .line 544
     :cond_14
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->Dr(Ljava/lang/String;)I
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/be;->FG(Ljava/lang/String;)I
 
     move-result v3
 
@@ -1611,22 +1624,22 @@
     move-object/from16 v3, p4
 
     .line 687
-    check-cast v3, Lcom/tencent/mm/modelsimple/v;
+    check-cast v3, Lcom/tencent/mm/modelsimple/t;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/modelsimple/v;->CE()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/tencent/mm/modelsimple/t;->CR()Ljava/lang/String;
 
     move-result-object v3
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->ccq:Ljava/lang/String;
+    iput-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->bWf:Ljava/lang/String;
 
     .line 688
-    sget-object v3, Lcom/tencent/mm/model/ag;->bAw:Lcom/tencent/mm/model/ag;
+    sget-object v3, Lcom/tencent/mm/model/ag;->btA:Lcom/tencent/mm/model/ag;
 
     const-string/jumbo v4, "login_user_name"
 
-    invoke-virtual {v3, v4, v15}, Lcom/tencent/mm/model/ag;->H(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v3, v4, v15}, Lcom/tencent/mm/model/ag;->E(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 703
     if-eqz v16, :cond_18
@@ -1644,7 +1657,7 @@
     .line 704
     const-string/jumbo v3, "R300_100_phone"
 
-    invoke-static {v3}, Lcom/tencent/mm/plugin/a/b;->kC(Ljava/lang/String;)V
+    invoke-static {v3}, Lcom/tencent/mm/plugin/a/b;->ll(Ljava/lang/String;)V
 
     .line 705
     if-nez v17, :cond_17
@@ -1654,7 +1667,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     const-class v5, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
 
@@ -1671,7 +1684,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->ccq:Ljava/lang/String;
+    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->bWf:Ljava/lang/String;
 
     invoke-virtual {v3, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -1688,13 +1701,13 @@
     invoke-virtual {v3, v4, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 717
-    sget-object v4, Lcom/tencent/mm/plugin/a/a;->coa:Lcom/tencent/mm/pluginsdk/g;
+    sget-object v4, Lcom/tencent/mm/plugin/a/a;->cjo:Lcom/tencent/mm/pluginsdk/g;
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    invoke-interface {v4, v5}, Lcom/tencent/mm/pluginsdk/g;->ak(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-interface {v4, v5}, Lcom/tencent/mm/pluginsdk/g;->ag(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v4
 
@@ -1713,14 +1726,14 @@
     .line 720
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v5, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     invoke-static {v5, v3, v4}, Lcom/tencent/mm/ui/MMWizardActivity;->b(Landroid/content/Context;Landroid/content/Intent;Landroid/content/Intent;)V
 
     .line 721
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     invoke-virtual {v3}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->finish()V
 
@@ -1732,7 +1745,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     const-class v5, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
@@ -1752,13 +1765,13 @@
 
     .line 723
     :cond_18
-    sget-object v3, Lcom/tencent/mm/plugin/a/a;->coa:Lcom/tencent/mm/pluginsdk/g;
+    sget-object v3, Lcom/tencent/mm/plugin/a/a;->cjo:Lcom/tencent/mm/pluginsdk/g;
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    invoke-interface {v3, v4}, Lcom/tencent/mm/pluginsdk/g;->ak(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-interface {v3, v4}, Lcom/tencent/mm/pluginsdk/g;->ag(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v3
 
@@ -1777,7 +1790,7 @@
     .line 726
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     invoke-virtual {v4, v3}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->startActivity(Landroid/content/Intent;)V
 
@@ -1786,7 +1799,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->ty()Ljava/lang/String;
 
     move-result-object v4
 
@@ -1802,7 +1815,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1824,7 +1837,7 @@
 
     const-string/jumbo v4, "R200_900_phone"
 
-    invoke-static {v4}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
+    invoke-static {v4}, Lcom/tencent/mm/model/ah;->fq(Ljava/lang/String;)I
 
     move-result v4
 
@@ -1842,12 +1855,12 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/tencent/mm/plugin/a/b;->kD(Ljava/lang/String;)V
+    invoke-static {v3}, Lcom/tencent/mm/plugin/a/b;->lm(Ljava/lang/String;)V
 
     .line 730
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     invoke-virtual {v3}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->finish()V
 
@@ -1857,7 +1870,7 @@
     :cond_19
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     move/from16 v0, p1
 
@@ -1865,14 +1878,14 @@
 
     move-object/from16 v2, p3
 
-    invoke-virtual {v3, v0, v1, v2}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->m(IILjava/lang/String;)Z
+    invoke-virtual {v3, v0, v1, v2}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->k(IILjava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_2
 
     .line 749
-    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/r/j;->getType()I
+    invoke-virtual/range {p4 .. p4}, Lcom/tencent/mm/t/j;->getType()I
 
     move-result v3
 
@@ -1881,7 +1894,7 @@
     if-ne v3, v4, :cond_1a
 
     .line 750
-    invoke-static/range {p3 .. p3}, Lcom/tencent/mm/e/a;->cV(Ljava/lang/String;)Lcom/tencent/mm/e/a;
+    invoke-static/range {p3 .. p3}, Lcom/tencent/mm/f/a;->dc(Ljava/lang/String;)Lcom/tencent/mm/f/a;
 
     move-result-object v3
 
@@ -1891,13 +1904,13 @@
     .line 752
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     const/4 v5, 0x0
 
     const/4 v6, 0x0
 
-    invoke-virtual {v3, v4, v5, v6}, Lcom/tencent/mm/e/a;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Z
+    invoke-virtual {v3, v4, v5, v6}, Lcom/tencent/mm/f/a;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Z
 
     move-result v3
 
@@ -1913,13 +1926,13 @@
     :cond_1b
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v4, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    const v5, 0x7f0b0508
+    const v5, 0x7f080248
 
     const/4 v6, 0x2
 
@@ -1966,22 +1979,11 @@
     goto/16 :goto_2
 .end method
 
-.method public final a(Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;)V
-    .locals 0
-
-    .prologue
-    .line 63
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
-
-    .line 64
-    return-void
-.end method
-
-.method public final qq(I)Z
+.method public final si(I)Z
     .locals 8
 
     .prologue
-    const v6, 0x7f0b0506
+    const v6, 0x7f080134
 
     const/16 v2, 0xf
 
@@ -1992,7 +1994,7 @@
     const/4 v4, 0x0
 
     .line 94
-    sget-object v0, Lcom/tencent/mm/ui/account/mobile/i$8;->kyB:[I
+    sget-object v0, Lcom/tencent/mm/ui/account/mobile/i$8;->kXI:[I
 
     add-int/lit8 v1, p1, -0x1
 
@@ -2006,11 +2008,11 @@
 
     .line 96
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    const v2, 0x7f0b0189
+    const v2, 0x7f080c3e
 
     invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->getString(I)Ljava/lang/String;
 
@@ -2018,17 +2020,17 @@
 
     const-string/jumbo v2, ""
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    const v4, 0x7f0b018b
+    const v4, 0x7f080c3f
 
     invoke-virtual {v3, v4}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v4, p0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    const v5, 0x7f0b018a
+    const v5, 0x7f080c40
 
     invoke-virtual {v4, v5}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->getString(I)Ljava/lang/String;
 
@@ -2042,7 +2044,7 @@
 
     invoke-direct {v6, p0}, Lcom/tencent/mm/ui/account/mobile/i$10;-><init>(Lcom/tencent/mm/ui/account/mobile/i;)V
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/ui/base/g;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
     move v4, v7
 
@@ -2051,21 +2053,21 @@
 
     .line 99
     :pswitch_1
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v3, p0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
     new-instance v0, Lcom/tencent/mm/modelfriend/u;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->aBH:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->anZ:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v3, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kxy:Landroid/widget/EditText;
+    iget-object v3, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kWF:Landroid/widget/EditText;
 
     invoke-virtual {v3}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -2083,25 +2085,25 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelfriend/u;-><init>(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    invoke-virtual {v1, v0, v4}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
-
-    const v5, 0x7f0b0ddd
-
-    invoke-virtual {v3, v5}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->getString(I)Ljava/lang/String;
-
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     invoke-virtual {v3, v6}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->getString(I)Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+
+    const v5, 0x7f080244
+
+    invoke-virtual {v3, v5}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -2113,7 +2115,7 @@
 
     move-result-object v0
 
-    iput-object v0, v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->coM:Landroid/app/ProgressDialog;
+    iput-object v0, v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->cka:Landroid/app/ProgressDialog;
 
     goto :goto_0
 
@@ -2123,7 +2125,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->ty()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2157,7 +2159,7 @@
 
     const-string/jumbo v1, "R200_400"
 
-    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fq(Ljava/lang/String;)I
 
     move-result v1
 
@@ -2175,25 +2177,25 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kD(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->lm(Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/tencent/mm/model/aw;->uB()Lcom/tencent/mm/model/aw;
+    invoke-static {}, Lcom/tencent/mm/model/aw;->uD()Lcom/tencent/mm/model/aw;
 
     const-string/jumbo v0, "RE200_250"
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kB(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->lk(Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v3, p0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
     new-instance v0, Lcom/tencent/mm/modelfriend/u;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->aBH:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->anZ:Ljava/lang/String;
 
     const/16 v2, 0xe
 
@@ -2203,15 +2205,15 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelfriend/u;-><init>(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    invoke-virtual {v1, v0, v4}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
-    sget v0, Lcom/tencent/mm/plugin/accountsync/a/c$a;->com:I
+    sget v0, Lcom/tencent/mm/plugin/accountsync/a/c$a;->cjA:I
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/accountsync/a/c;->eo(I)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/accountsync/a/c;->fa(I)V
 
     goto/16 :goto_0
 
@@ -2221,7 +2223,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->ty()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2255,7 +2257,7 @@
 
     const-string/jumbo v1, "R200_350_auto"
 
-    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fq(Ljava/lang/String;)I
 
     move-result v1
 
@@ -2273,23 +2275,23 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kD(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->lm(Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v3, p0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
     new-instance v0, Lcom/tencent/mm/modelfriend/u;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->aBH:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->anZ:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v3, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kxy:Landroid/widget/EditText;
+    iget-object v3, v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kWF:Landroid/widget/EditText;
 
     invoke-virtual {v3}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -2307,25 +2309,25 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelfriend/u;-><init>(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    invoke-virtual {v1, v0, v4}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
-
-    const v5, 0x7f0b0ddd
-
-    invoke-virtual {v3, v5}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->getString(I)Ljava/lang/String;
-
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     invoke-virtual {v3, v6}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->getString(I)Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+
+    const v5, 0x7f080244
+
+    invoke-virtual {v3, v5}, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -2337,7 +2339,7 @@
 
     move-result-object v0
 
-    iput-object v0, v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->coM:Landroid/app/ProgressDialog;
+    iput-object v0, v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->cka:Landroid/app/ProgressDialog;
 
     goto/16 :goto_0
 
@@ -2356,7 +2358,7 @@
 
     .prologue
     .line 68
-    invoke-static {}, Lcom/tencent/mm/model/aw;->uB()Lcom/tencent/mm/model/aw;
+    invoke-static {}, Lcom/tencent/mm/model/aw;->uD()Lcom/tencent/mm/model/aw;
 
     .line 69
     const/4 v0, 0x1
@@ -2365,7 +2367,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->ty()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2399,7 +2401,7 @@
 
     const-string/jumbo v2, "RE200_300"
 
-    invoke-static {v2}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/tencent/mm/model/ah;->fq(Ljava/lang/String;)I
 
     move-result v2
 
@@ -2422,7 +2424,7 @@
     .line 80
     const-string/jumbo v0, "RE200_300"
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kB(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->lk(Ljava/lang/String;)V
 
     .line 83
     return-void

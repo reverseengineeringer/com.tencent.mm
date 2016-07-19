@@ -1,53 +1,18 @@
 package com.tencent.mm.app.plugin.b;
 
 import com.tencent.mm.c.b.h;
-import com.tencent.mm.d.a.do;
-import com.tencent.mm.d.a.do.a;
-import com.tencent.mm.d.a.do.b;
-import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.e.a.ds;
 import com.tencent.mm.sdk.c.c;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
 
 public final class a$e
-  extends c
+  extends c<ds>
 {
-  String anC = "";
-  h anD;
+  String aaq = "";
+  h aar;
   
   public a$e()
   {
-    super(0);
-  }
-  
-  public final boolean a(b paramb)
-  {
-    if (!(paramb instanceof do))
-    {
-      u.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
-      return false;
-    }
-    paramb = (do)paramb;
-    if (axq.op == 1)
-    {
-      if (anD == null) {
-        anD = new h(y.getContext(), false);
-      }
-      axr.atR = anD.bl(axq.username);
-      anC = anD.getFileName();
-      u.d("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "data.op = [%s], ret = [%s]", new Object[] { Integer.valueOf(axq.op), Boolean.valueOf(axr.atR) });
-    }
-    for (;;)
-    {
-      return true;
-      if ((axq.op == 2) && (anD != null))
-      {
-        axr.anC = anC;
-        axr.atR = anD.lv();
-        u.d("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "data.op = [%s], fileName = [%s], ret = [%s]", new Object[] { Integer.valueOf(axq.op), anC, Boolean.valueOf(axr.atR) });
-        anC = "";
-      }
-    }
+    kum = ds.class.getName().hashCode();
   }
 }
 

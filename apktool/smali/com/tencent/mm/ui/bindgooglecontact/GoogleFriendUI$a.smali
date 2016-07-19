@@ -13,17 +13,26 @@
     name = "a"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;",
+        ">;"
+    }
+.end annotation
+
 
 # static fields
-.field public static final enum kNm:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
+.field public static final enum lmB:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
 
-.field public static final enum kNn:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
+.field public static final enum lmC:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
 
-.field public static final enum kNo:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
+.field public static final enum lmD:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
 
-.field public static final enum kNp:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
+.field public static final enum lmE:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
 
-.field private static final synthetic kNq:[Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
+.field private static final synthetic lmF:[Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
 
 
 # direct methods
@@ -46,7 +55,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->kNm:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
+    sput-object v0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->lmB:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
 
     new-instance v0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
 
@@ -54,7 +63,7 @@
 
     invoke-direct {v0, v1, v3}, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->kNn:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
+    sput-object v0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->lmC:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
 
     new-instance v0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
 
@@ -62,7 +71,7 @@
 
     invoke-direct {v0, v1, v4}, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->kNo:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
+    sput-object v0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->lmD:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
 
     new-instance v0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
 
@@ -70,36 +79,41 @@
 
     invoke-direct {v0, v1, v5}, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->kNp:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
+    sput-object v0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->lmE:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
 
     .line 77
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
 
-    sget-object v1, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->kNm:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
+    sget-object v1, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->lmB:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->kNn:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
+    sget-object v1, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->lmC:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->kNo:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
+    sget-object v1, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->lmD:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->kNp:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
+    sget-object v1, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->lmE:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
 
     aput-object v1, v0, v5
 
-    sput-object v0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->kNq:[Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
+    sput-object v0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->lmF:[Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .prologue
     .line 77
@@ -129,7 +143,7 @@
 
     .prologue
     .line 77
-    sget-object v0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->kNq:[Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
+    sget-object v0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->lmF:[Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;
 
     invoke-virtual {v0}, [Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$a;->clone()Ljava/lang/Object;
 

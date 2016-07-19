@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.base;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class MMGridPaper$3
   implements Runnable
@@ -9,8 +9,8 @@ final class MMGridPaper$3
   
   public final void run()
   {
-    u.w("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "post do setDotView");
-    MMGridPaper.a(kEx);
+    v.w("MicroMsg.MMGridPaper", "post do setDotView");
+    MMGridPaper.a(ldA);
   }
 }
 

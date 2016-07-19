@@ -2,8 +2,8 @@ package com.tencent.mm.pluginsdk.ui.chat;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.o;
 
 final class l$1
@@ -13,14 +13,14 @@ final class l$1
   
   public final void onClick(View paramView)
   {
-    u.d("!56@/B4Tb64lLpIUhDmLVZ6YSYNmGC1A559IOpziKnLhSwba9W2PlYV7+A==", "onClick send emoji...");
-    if ((iMB.dmd != null) && (iMB.iMy != null) && (iMB.iLg != null))
+    v.d("MicroMsg.emoji.SuggestEmoticonBubble", "onClick send emoji...");
+    if ((jjy.dlK != null) && (jjy.jjv != null) && (jjy.jid != null))
     {
-      iMB.iMy.i(iMB.dmd);
-      iMB.iLg.clear();
-      h.fUJ.g(10994, new Object[] { Integer.valueOf(1), iMB.iMz });
+      jjy.jjv.i(jjy.dlK);
+      jjy.jid.clear();
+      g.gdY.h(10994, new Object[] { Integer.valueOf(1), jjy.jjw });
     }
-    iMB.iMv.dismiss();
+    jjy.jjs.dismiss();
   }
 }
 

@@ -7,17 +7,19 @@
 
 
 # instance fields
-.field public fqJ:Landroid/widget/ListView;
+.field public fzP:Landroid/widget/ListView;
 
-.field public lxp:I
+.field public lYd:J
 
-.field public lxq:I
+.field public lYe:I
 
-.field public lxr:I
+.field public lYf:I
 
-.field private final lxs:I
+.field public lYg:I
 
-.field public lxt:I
+.field private final lYh:I
+
+.field public lYi:I
 
 .field public mMode:I
 
@@ -27,14 +29,21 @@
     .locals 5
 
     .prologue
-    .line 38
+    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/q;->fqJ:Landroid/widget/ListView;
+    .line 23
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    .line 40
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fqJ:Landroid/widget/ListView;
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/tencent/mm/ui/tools/q;->lYd:J
+
+    .line 41
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/q;->fzP:Landroid/widget/ListView;
+
+    .line 42
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fzP:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->getContext()Landroid/content/Context;
 
@@ -48,10 +57,10 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/q;->lxs:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/q;->lYh:I
 
-    .line 41
-    const-string/jumbo v0, "!32@iOyfoi8XI67ruB4wZuF6zGtNP9BrJE60"
+    .line 43
+    const-string/jumbo v0, "ScrollerRunnable"
 
     const-string/jumbo v1, "mExtraScroll: %d"
 
@@ -61,7 +70,7 @@
 
     const/4 v3, 0x0
 
-    iget v4, p0, Lcom/tencent/mm/ui/tools/q;->lxs:I
+    iget v4, p0, Lcom/tencent/mm/ui/tools/q;->lYh:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -69,9 +78,9 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 42
+    .line 44
     return-void
 .end method
 
@@ -87,33 +96,51 @@
 
     const/4 v5, 0x0
 
-    .line 78
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fqJ:Landroid/widget/ListView;
+    .line 81
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lcom/tencent/mm/ui/tools/q;->lYd:J
+
+    sub-long/2addr v0, v2
+
+    const-wide/16 v2, 0x2710
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_1
+
+    .line 160
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 85
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fzP:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->getHeight()I
 
     move-result v0
 
-    .line 79
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/q;->fqJ:Landroid/widget/ListView;
+    .line 86
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/q;->fzP:Landroid/widget/ListView;
 
     invoke-virtual {v1}, Landroid/widget/ListView;->getFirstVisiblePosition()I
 
     move-result v1
 
-    .line 81
+    .line 88
     iget v2, p0, Lcom/tencent/mm/ui/tools/q;->mMode:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 153
-    :cond_0
-    :goto_0
-    return-void
+    goto :goto_0
 
-    .line 83
+    .line 90
     :pswitch_0
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/q;->fqJ:Landroid/widget/ListView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/q;->fzP:Landroid/widget/ListView;
 
     invoke-virtual {v2}, Landroid/widget/ListView;->getChildCount()I
 
@@ -121,62 +148,62 @@
 
     add-int/lit8 v2, v2, -0x1
 
-    .line 84
+    .line 91
     add-int/2addr v1, v2
 
-    .line 86
+    .line 93
     if-ltz v2, :cond_0
 
-    .line 90
-    iget v3, p0, Lcom/tencent/mm/ui/tools/q;->lxq:I
+    .line 97
+    iget v3, p0, Lcom/tencent/mm/ui/tools/q;->lYf:I
 
-    if-ne v1, v3, :cond_1
+    if-ne v1, v3, :cond_2
 
-    .line 92
-    iget v3, p0, Lcom/tencent/mm/ui/tools/q;->lxt:I
+    .line 99
+    iget v3, p0, Lcom/tencent/mm/ui/tools/q;->lYi:I
 
-    if-le v3, v6, :cond_2
+    if-le v3, v6, :cond_3
 
-    .line 93
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/q;->fqJ:Landroid/widget/ListView;
+    .line 100
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/q;->fzP:Landroid/widget/ListView;
 
-    iget v4, p0, Lcom/tencent/mm/ui/tools/q;->lxp:I
+    iget v4, p0, Lcom/tencent/mm/ui/tools/q;->lYe:I
 
     invoke-virtual {v3, v4}, Landroid/widget/ListView;->setSelection(I)V
 
-    .line 94
-    const-string/jumbo v3, "!32@iOyfoi8XI67ruB4wZuF6zGtNP9BrJE60"
+    .line 101
+    const-string/jumbo v3, "ScrollerRunnable"
 
     const-string/jumbo v4, "dz:try scroll at same item more than 10, direct seletion"
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 103
-    :cond_1
-    iput v5, p0, Lcom/tencent/mm/ui/tools/q;->lxt:I
+    .line 110
+    :cond_2
+    iput v5, p0, Lcom/tencent/mm/ui/tools/q;->lYi:I
 
-    .line 104
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/q;->fqJ:Landroid/widget/ListView;
+    .line 111
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/q;->fzP:Landroid/widget/ListView;
 
     invoke-virtual {v3, v2}, Landroid/widget/ListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 105
+    .line 112
     invoke-virtual {v2}, Landroid/view/View;->getHeight()I
 
     move-result v3
 
-    .line 106
+    .line 113
     invoke-virtual {v2}, Landroid/view/View;->getTop()I
 
     move-result v2
 
-    .line 107
+    .line 114
     sub-int v2, v0, v2
 
-    .line 108
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fqJ:Landroid/widget/ListView;
+    .line 115
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fzP:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->getCount()I
 
@@ -184,52 +211,52 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    if-ge v1, v0, :cond_3
+    if-ge v1, v0, :cond_4
 
-    iget v0, p0, Lcom/tencent/mm/ui/tools/q;->lxs:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/q;->lYh:I
 
-    .line 110
+    .line 117
     :goto_1
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/q;->fqJ:Landroid/widget/ListView;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/q;->fzP:Landroid/widget/ListView;
 
     sub-int v2, v3, v2
 
     add-int/2addr v0, v2
 
-    iget v2, p0, Lcom/tencent/mm/ui/tools/q;->lxr:I
+    iget v2, p0, Lcom/tencent/mm/ui/tools/q;->lYg:I
 
     invoke-virtual {v4, v0, v2}, Landroid/widget/ListView;->smoothScrollBy(II)V
 
-    .line 113
-    iput v1, p0, Lcom/tencent/mm/ui/tools/q;->lxq:I
+    .line 120
+    iput v1, p0, Lcom/tencent/mm/ui/tools/q;->lYf:I
 
-    .line 114
-    iget v0, p0, Lcom/tencent/mm/ui/tools/q;->lxp:I
+    .line 121
+    iget v0, p0, Lcom/tencent/mm/ui/tools/q;->lYe:I
 
     if-ge v1, v0, :cond_0
 
-    .line 115
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fqJ:Landroid/widget/ListView;
+    .line 122
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fzP:Landroid/widget/ListView;
 
     invoke-virtual {v0, p0}, Landroid/widget/ListView;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
-    .line 96
-    :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fqJ:Landroid/widget/ListView;
+    .line 103
+    :cond_3
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fzP:Landroid/widget/ListView;
 
     invoke-virtual {v0, p0}, Landroid/widget/ListView;->post(Ljava/lang/Runnable;)Z
 
-    .line 97
-    iget v0, p0, Lcom/tencent/mm/ui/tools/q;->lxt:I
+    .line 104
+    iget v0, p0, Lcom/tencent/mm/ui/tools/q;->lYi:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/q;->lxt:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/q;->lYi:I
 
-    .line 98
-    const-string/jumbo v0, "!32@iOyfoi8XI67ruB4wZuF6zGtNP9BrJE60"
+    .line 105
+    const-string/jumbo v0, "ScrollerRunnable"
 
     const-string/jumbo v2, "dz:try scroll lastpos = %d"
 
@@ -241,13 +268,13 @@
 
     aput-object v1, v3, v5
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 108
-    :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fqJ:Landroid/widget/ListView;
+    .line 115
+    :cond_4
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fzP:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->getPaddingBottom()I
 
@@ -255,95 +282,95 @@
 
     goto :goto_1
 
-    .line 121
+    .line 128
     :pswitch_1
-    iget v0, p0, Lcom/tencent/mm/ui/tools/q;->lxq:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/q;->lYf:I
 
-    if-ne v1, v0, :cond_4
+    if-ne v1, v0, :cond_5
 
-    .line 123
-    iget v0, p0, Lcom/tencent/mm/ui/tools/q;->lxt:I
+    .line 130
+    iget v0, p0, Lcom/tencent/mm/ui/tools/q;->lYi:I
 
-    if-le v0, v6, :cond_5
+    if-le v0, v6, :cond_6
 
-    .line 124
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fqJ:Landroid/widget/ListView;
+    .line 131
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fzP:Landroid/widget/ListView;
 
-    iget v2, p0, Lcom/tencent/mm/ui/tools/q;->lxp:I
+    iget v2, p0, Lcom/tencent/mm/ui/tools/q;->lYe:I
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setSelection(I)V
 
-    .line 125
-    const-string/jumbo v0, "!32@iOyfoi8XI67ruB4wZuF6zGtNP9BrJE60"
+    .line 132
+    const-string/jumbo v0, "ScrollerRunnable"
 
     const-string/jumbo v2, "dz:try scroll at same item more than 10, direct seletion"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 133
-    :cond_4
-    iput v5, p0, Lcom/tencent/mm/ui/tools/q;->lxt:I
+    .line 140
+    :cond_5
+    iput v5, p0, Lcom/tencent/mm/ui/tools/q;->lYi:I
 
-    .line 134
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fqJ:Landroid/widget/ListView;
+    .line 141
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fzP:Landroid/widget/ListView;
 
     invoke-virtual {v0, v5}, Landroid/widget/ListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 135
+    .line 142
     if-eqz v0, :cond_0
 
-    .line 138
+    .line 145
     invoke-virtual {v0}, Landroid/view/View;->getTop()I
 
     move-result v2
 
-    .line 139
-    if-lez v1, :cond_6
+    .line 146
+    if-lez v1, :cond_7
 
-    iget v0, p0, Lcom/tencent/mm/ui/tools/q;->lxs:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/q;->lYh:I
 
-    .line 141
+    .line 148
     :goto_2
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/q;->fqJ:Landroid/widget/ListView;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/q;->fzP:Landroid/widget/ListView;
 
     sub-int v0, v2, v0
 
-    iget v2, p0, Lcom/tencent/mm/ui/tools/q;->lxr:I
+    iget v2, p0, Lcom/tencent/mm/ui/tools/q;->lYg:I
 
     invoke-virtual {v3, v0, v2}, Landroid/widget/ListView;->smoothScrollBy(II)V
 
-    .line 142
-    iput v1, p0, Lcom/tencent/mm/ui/tools/q;->lxq:I
+    .line 149
+    iput v1, p0, Lcom/tencent/mm/ui/tools/q;->lYf:I
 
-    .line 144
-    iget v0, p0, Lcom/tencent/mm/ui/tools/q;->lxp:I
+    .line 151
+    iget v0, p0, Lcom/tencent/mm/ui/tools/q;->lYe:I
 
     if-le v1, v0, :cond_0
 
-    .line 145
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fqJ:Landroid/widget/ListView;
+    .line 152
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fzP:Landroid/widget/ListView;
 
     invoke-virtual {v0, p0}, Landroid/widget/ListView;->post(Ljava/lang/Runnable;)Z
 
     goto/16 :goto_0
 
-    .line 127
-    :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fqJ:Landroid/widget/ListView;
+    .line 134
+    :cond_6
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fzP:Landroid/widget/ListView;
 
     invoke-virtual {v0, p0}, Landroid/widget/ListView;->post(Ljava/lang/Runnable;)Z
 
-    .line 128
-    iget v0, p0, Lcom/tencent/mm/ui/tools/q;->lxt:I
+    .line 135
+    iget v0, p0, Lcom/tencent/mm/ui/tools/q;->lYi:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/q;->lxt:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/q;->lYi:I
 
-    .line 129
-    const-string/jumbo v0, "!32@iOyfoi8XI67ruB4wZuF6zGtNP9BrJE60"
+    .line 136
+    const-string/jumbo v0, "ScrollerRunnable"
 
     const-string/jumbo v2, "dz:try scroll firstPos = %d"
 
@@ -355,13 +382,13 @@
 
     aput-object v1, v3, v5
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
-    .line 139
-    :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fqJ:Landroid/widget/ListView;
+    .line 146
+    :cond_7
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/q;->fzP:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->getPaddingTop()I
 
@@ -369,7 +396,9 @@
 
     goto :goto_2
 
-    .line 81
+    .line 88
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

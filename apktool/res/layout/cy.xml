@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/q0" android:background="@color/ow" android:layout_width="fill_parent" android:layout_height="111.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/q1" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/q2" android:layout_width="@dimen/kk" android:layout_height="@dimen/kk" android:layout_marginLeft="@dimen/hr" android:src="@drawable/amw" android:scaleType="fitCenter" />
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hb" android:layout_marginRight="@dimen/cp" android:layout_weight="1.0">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/j_">
+                    <TextView android:textSize="@dimen/ja" android:textColor="@color/bj" android:ellipsize="end" android:id="@id/q3" android:singleLine="true" style="@style/CardIndexCardTitle" />
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/q4" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/cp" android:src="@drawable/afj" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j_">
+                    <TextView android:textSize="@dimen/dx" android:textColor="@color/bj" android:ellipsize="end" android:id="@id/q5" android:text="供电分局了解" android:singleLine="true" style="@style/CardIndexCardTitle" />
+                    <TextView android:textSize="@dimen/ja" android:textColor="@color/g8" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/q6" android:visibility="gone" android:layout_marginLeft="@dimen/cp" android:singleLine="true" style="@style/CardIndexCardTitle" />
+                    <TextView android:textSize="@dimen/jf" android:textColor="@color/g8" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/q7" android:background="#ffeaeaea" android:paddingLeft="@dimen/hr" android:paddingTop="@dimen/j_" android:paddingRight="@dimen/hr" android:paddingBottom="@dimen/j_" android:visibility="gone" android:layout_marginLeft="@dimen/cp" android:singleLine="true" style="@style/CardIndexCardTitle" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="@dimen/ja" android:textColor="@color/g8" android:ellipsize="end" android:gravity="left" android:id="@id/q8" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="82.0dip" android:layout_marginTop="@dimen/hj" android:layout_marginRight="@dimen/cp" android:singleLine="true" style="@style/CardIndexSubtitle" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/dx" android:ellipsize="end" android:gravity="center" android:id="@id/q9" android:layout_marginLeft="@dimen/i7" android:layout_marginRight="@dimen/hb" android:maxLines="2" android:layout_centerInParent="true" style="@style/CardIndexCardTitle" />
+    <ImageView android:id="@id/q_" android:background="@drawable/qk" android:layout_width="fill_parent" android:layout_height="111.0dip" />
+    <View android:background="@drawable/dw" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_alignParentBottom="true" android:layerType="software" />
+</RelativeLayout>

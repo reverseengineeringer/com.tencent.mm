@@ -6,7 +6,7 @@ public abstract interface i$x
 {
   public abstract void m(String paramString, Bitmap paramBitmap);
   
-  public abstract Bitmap qq(String paramString);
+  public abstract Bitmap rG(String paramString);
 }
 
 /* Location:

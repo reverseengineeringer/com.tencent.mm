@@ -11,7 +11,7 @@ final class SnsStrangerCommentDetailUI$1
   
   public final void onClick(View paramView)
   {
-    BackwardSupportUtil.c.a(SnsStrangerCommentDetailUI.a(hiQ));
+    BackwardSupportUtil.c.a(SnsStrangerCommentDetailUI.a(hxF));
   }
 }
 

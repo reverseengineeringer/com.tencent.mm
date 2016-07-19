@@ -3,27 +3,27 @@ package ct;
 final class b$c
   implements Runnable
 {
-  private bj a;
-  private ci b;
+  private bg a;
+  private cd b;
   
-  public b$c(bj parambj)
+  public b$c(bg parambg)
   {
-    a = parambj;
+    a = parambg;
   }
   
-  public final void a(ci paramci)
+  public final void a(cd paramcd)
   {
-    b = paramci;
+    b = paramcd;
   }
   
   public final void run()
   {
-    bj localbj = a;
-    ci localci = b;
-    if (localci != null)
+    bg localbg = a;
+    cd localcd = b;
+    if (localcd != null)
     {
-      localci.a(cv.c(localbj));
-      localbj.c(localci);
+      localcd.a(cq.c(localbg));
+      localbg.c(localcd);
     }
   }
 }

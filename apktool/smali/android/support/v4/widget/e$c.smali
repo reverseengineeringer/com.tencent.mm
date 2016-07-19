@@ -1,4 +1,4 @@
-.class Landroid/support/v4/widget/e$c;
+.class final Landroid/support/v4/widget/e$c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 143
+    .line 145
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
     .locals 1
 
     .prologue
-    .line 151
+    .line 154
     check-cast p1, Landroid/widget/OverScroller;
 
     invoke-virtual {p1}, Landroid/widget/OverScroller;->isFinished()Z
@@ -48,7 +48,7 @@
     .locals 1
 
     .prologue
-    .line 156
+    .line 159
     check-cast p1, Landroid/widget/OverScroller;
 
     invoke-virtual {p1}, Landroid/widget/OverScroller;->getCurrX()I
@@ -62,7 +62,7 @@
     .locals 1
 
     .prologue
-    .line 161
+    .line 164
     check-cast p1, Landroid/widget/OverScroller;
 
     invoke-virtual {p1}, Landroid/widget/OverScroller;->getCurrY()I
@@ -76,7 +76,7 @@
     .locals 1
 
     .prologue
-    .line 171
+    .line 170
     check-cast p1, Landroid/widget/OverScroller;
 
     invoke-virtual {p1}, Landroid/widget/OverScroller;->computeScrollOffset()Z
@@ -90,12 +90,12 @@
     .locals 0
 
     .prologue
-    .line 201
+    .line 199
     check-cast p1, Landroid/widget/OverScroller;
 
     invoke-virtual {p1}, Landroid/widget/OverScroller;->abortAnimation()V
 
-    .line 202
+    .line 200
     return-void
 .end method
 
@@ -103,7 +103,7 @@
     .locals 1
 
     .prologue
-    .line 222
+    .line 220
     check-cast p1, Landroid/widget/OverScroller;
 
     invoke-virtual {p1}, Landroid/widget/OverScroller;->getFinalX()I
@@ -117,7 +117,7 @@
     .locals 1
 
     .prologue
-    .line 227
+    .line 225
     check-cast p1, Landroid/widget/OverScroller;
 
     invoke-virtual {p1}, Landroid/widget/OverScroller;->getFinalY()I
@@ -131,7 +131,7 @@
     .locals 6
 
     .prologue
-    .line 182
+    .line 181
     move-object v0, p1
 
     check-cast v0, Landroid/widget/OverScroller;
@@ -148,7 +148,7 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/OverScroller;->startScroll(IIIII)V
 
-    .line 183
+    .line 182
     return-void
 .end method
 
@@ -156,7 +156,7 @@
     .locals 1
 
     .prologue
-    .line 146
+    .line 148
     if-eqz p2, :cond_0
 
     new-instance v0, Landroid/widget/OverScroller;

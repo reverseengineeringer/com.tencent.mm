@@ -1,47 +1,65 @@
 package com.tencent.mm.protocal.b;
 
+import a.a.a.b;
 import java.util.LinkedList;
 
 public final class ael
-  extends adm
+  extends com.tencent.mm.ax.a
 {
-  public LinkedList hMs = new LinkedList();
-  public long hof;
+  public amj jZe;
+  public amj juF;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hLQ != null)
-      {
-        paramVarArgs.bN(1, hLQ.kS());
-        hLQ.a(paramVarArgs);
+      if (juF == null) {
+        throw new b("Not all required fields were included: ChatRoomName");
       }
-      paramVarArgs.r(2, hof);
-      paramVarArgs.d(3, 8, hMs);
+      if (jZe == null) {
+        throw new b("Not all required fields were included: ChatRoomTopic");
+      }
+      if (juF != null)
+      {
+        paramVarArgs.cx(1, juF.iO());
+        juF.a(paramVarArgs);
+      }
+      if (jZe != null)
+      {
+        paramVarArgs.cx(2, jZe.iO());
+        jZe.a(paramVarArgs);
+      }
       return 0;
     }
     if (paramInt == 1) {
-      if (hLQ == null) {
-        break label441;
+      if (juF == null) {
+        break label486;
       }
     }
-    label441:
-    for (paramInt = a.a.a.a.bJ(1, hLQ.kS()) + 0;; paramInt = 0)
+    label486:
+    for (paramInt = a.a.a.a.cv(1, juF.iO()) + 0;; paramInt = 0)
     {
-      return paramInt + a.a.a.a.q(2, hof) + a.a.a.a.c(3, 8, hMs);
+      int i = paramInt;
+      if (jZe != null) {
+        i = paramInt + a.a.a.a.cv(2, jZe.iO());
+      }
+      return i;
       if (paramInt == 2)
       {
-        paramVarArgs = (byte[])paramVarArgs[0];
-        hMs.clear();
-        paramVarArgs = new a.a.a.a.a(paramVarArgs, hfZ);
-        for (paramInt = adm.a(paramVarArgs); paramInt > 0; paramInt = adm.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bve();
           }
         }
-        break;
+        if (juF == null) {
+          throw new b("Not all required fields were included: ChatRoomName");
+        }
+        if (jZe != null) {
+          break;
+        }
+        throw new b("Not all required fields were included: ChatRoomTopic");
       }
       if (paramInt == 3)
       {
@@ -55,32 +73,29 @@ public final class ael
         default: 
           return -1;
         case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).pL(paramInt);
+          paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
           i = paramVarArgs.size();
           paramInt = 0;
           while (paramInt < i)
           {
             localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new ck();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, hfZ);
-            for (bool = true; bool; bool = ((ck)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.al.a)localObject1, adm.a((a.a.a.a.a)localObject2))) {}
-            hLQ = ((ck)localObject1);
+            localObject1 = new amj();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+            for (bool = true; bool; bool = ((amj)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, com.tencent.mm.ax.a.a((a.a.a.a.a)localObject2))) {}
+            juF = ((amj)localObject1);
             paramInt += 1;
           }
-        case 2: 
-          hof = jMD.aVq();
-          return 0;
         }
-        paramVarArgs = ((a.a.a.a.a)localObject1).pL(paramInt);
-        int i = paramVarArgs.size();
+        paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+        i = paramVarArgs.size();
         paramInt = 0;
         while (paramInt < i)
         {
           localObject2 = (byte[])paramVarArgs.get(paramInt);
-          localObject1 = new eq();
-          localObject2 = new a.a.a.a.a((byte[])localObject2, hfZ);
-          for (bool = true; bool; bool = ((eq)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.al.a)localObject1, adm.a((a.a.a.a.a)localObject2))) {}
-          hMs.add(localObject1);
+          localObject1 = new amj();
+          localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+          for (bool = true; bool; bool = ((amj)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, com.tencent.mm.ax.a.a((a.a.a.a.a)localObject2))) {}
+          jZe = ((amj)localObject1);
           paramInt += 1;
         }
         break;

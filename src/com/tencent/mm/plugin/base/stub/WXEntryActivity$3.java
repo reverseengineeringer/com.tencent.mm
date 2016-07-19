@@ -10,8 +10,8 @@ final class WXEntryActivity$3
   
   public final void onClick(View paramView)
   {
-    WXEntryActivity.c(cBs);
-    cBs.finish();
+    WXEntryActivity.c(cym);
+    cym.finish();
   }
 }
 

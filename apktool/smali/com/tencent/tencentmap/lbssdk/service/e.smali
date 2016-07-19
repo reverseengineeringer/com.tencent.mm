@@ -15,7 +15,7 @@
 .method public static native b(II[D)D
 .end method
 
-.method public static native o([B)I
+.method public static native o([BI)I
 .end method
 
 .method public static native r(DII)D

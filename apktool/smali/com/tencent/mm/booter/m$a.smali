@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field bng:I
+.field baN:I
 
-.field bnh:I
+.field baO:I
 
-.field bni:I
+.field baP:I
 
-.field bnj:I
+.field baQ:I
 
-.field bnk:I
+.field baR:I
 
 
 # direct methods
@@ -37,14 +37,14 @@
     .line 152
     const/4 v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/booter/m$a;->bnh:I
+    iput v0, p0, Lcom/tencent/mm/booter/m$a;->baO:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final cH(Ljava/lang/String;)Z
+.method public final cN(Ljava/lang/String;)Z
     .locals 5
 
     .prologue
@@ -70,11 +70,11 @@
 
     .line 160
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpIUGQfqwvb6Vvq1+gSmGxdU"
+    const-string/jumbo v0, "MicroMsg.ProcessReport"
 
     const-string/jumbo v2, "error format"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -93,7 +93,7 @@
 
     move-result v3
 
-    iput v3, p0, Lcom/tencent/mm/booter/m$a;->bng:I
+    iput v3, p0, Lcom/tencent/mm/booter/m$a;->baN:I
 
     .line 165
     const/4 v3, 0x1
@@ -104,7 +104,7 @@
 
     move-result v3
 
-    iput v3, p0, Lcom/tencent/mm/booter/m$a;->bnh:I
+    iput v3, p0, Lcom/tencent/mm/booter/m$a;->baO:I
 
     .line 166
     const/4 v3, 0x2
@@ -115,7 +115,7 @@
 
     move-result v3
 
-    iput v3, p0, Lcom/tencent/mm/booter/m$a;->bni:I
+    iput v3, p0, Lcom/tencent/mm/booter/m$a;->baP:I
 
     .line 167
     const/4 v3, 0x3
@@ -126,7 +126,7 @@
 
     move-result v3
 
-    iput v3, p0, Lcom/tencent/mm/booter/m$a;->bnj:I
+    iput v3, p0, Lcom/tencent/mm/booter/m$a;->baQ:I
 
     .line 168
     const/4 v3, 0x4
@@ -137,7 +137,7 @@
 
     move-result v2
 
-    iput v2, p0, Lcom/tencent/mm/booter/m$a;->bnk:I
+    iput v2, p0, Lcom/tencent/mm/booter/m$a;->baR:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -147,11 +147,11 @@
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpIUGQfqwvb6Vvq1+gSmGxdU"
+    const-string/jumbo v0, "MicroMsg.ProcessReport"
 
     const-string/jumbo v2, "ParseFrom parse failed"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -172,7 +172,7 @@
 
     const/4 v2, 0x0
 
-    iget v3, p0, Lcom/tencent/mm/booter/m$a;->bng:I
+    iget v3, p0, Lcom/tencent/mm/booter/m$a;->baN:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -182,7 +182,7 @@
 
     const/4 v2, 0x1
 
-    iget v3, p0, Lcom/tencent/mm/booter/m$a;->bnh:I
+    iget v3, p0, Lcom/tencent/mm/booter/m$a;->baO:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -192,7 +192,7 @@
 
     const/4 v2, 0x2
 
-    iget v3, p0, Lcom/tencent/mm/booter/m$a;->bni:I
+    iget v3, p0, Lcom/tencent/mm/booter/m$a;->baP:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -202,7 +202,7 @@
 
     const/4 v2, 0x3
 
-    iget v3, p0, Lcom/tencent/mm/booter/m$a;->bnj:I
+    iget v3, p0, Lcom/tencent/mm/booter/m$a;->baQ:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -212,7 +212,7 @@
 
     const/4 v2, 0x4
 
-    iget v3, p0, Lcom/tencent/mm/booter/m$a;->bnk:I
+    iget v3, p0, Lcom/tencent/mm/booter/m$a;->baR:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

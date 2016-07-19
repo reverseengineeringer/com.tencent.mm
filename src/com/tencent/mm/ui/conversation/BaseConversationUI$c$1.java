@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.conversation;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.chatting.ChattingUI.a;
 
 final class BaseConversationUI$c$1
@@ -11,14 +11,14 @@ final class BaseConversationUI$c$1
   public final void run()
   {
     boolean bool = true;
-    if (BaseConversationUI.d(lnv.lnn) == null) {}
+    if (BaseConversationUI.d(lNQ.lNH) == null) {}
     for (;;)
     {
-      u.d("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "on select image ActivityResult. after creat chattingUI, chatting fragment is null? %B", new Object[] { Boolean.valueOf(bool) });
-      if (BaseConversationUI.d(lnv.lnn) != null)
+      v.d("MicroMsg.BaseConversationUI", "on select image ActivityResult. after creat chattingUI, chatting fragment is null? %B", new Object[] { Boolean.valueOf(bool) });
+      if (BaseConversationUI.d(lNQ.lNH) != null)
       {
-        u.d("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "on select image ActivityResult. do post activity result");
-        BaseConversationUI.d(lnv.lnn).onActivityResult(lnv.auo & 0xFFFF, lnv.arU, lnv.aup);
+        v.d("MicroMsg.BaseConversationUI", "on select image ActivityResult. do post activity result");
+        BaseConversationUI.d(lNQ.lNH).onActivityResult(lNQ.agb & 0xFFFF, lNQ.adJ, lNQ.agc);
       }
       return;
       bool = false;

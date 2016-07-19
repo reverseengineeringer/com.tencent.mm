@@ -7,10 +7,10 @@ final class d$1
   
   public final void run()
   {
-    if ((lfM.lel == null) || (lfM.lel.lem == null)) {
+    if ((lFZ.lEy == null) || (lFZ.lEy.lEz == null)) {
       return;
     }
-    lfM.lel.lem.rG(bMq);
+    lFZ.lEy.lEz.tI(bFK);
   }
 }
 

@@ -8,21 +8,21 @@ final class b$b$1
 {
   b$b$1(b.b paramb, b paramb1) {}
   
-  public final boolean at()
+  public final boolean as()
   {
-    return b.at();
+    return b.as();
   }
   
-  public final List au()
+  public final List<Object> at()
   {
-    b.au();
+    b.at();
     new ArrayList();
     throw new NullPointerException();
   }
   
-  public final Object av()
+  public final Object au()
   {
-    b.as();
+    b.ar();
     return null;
   }
 }

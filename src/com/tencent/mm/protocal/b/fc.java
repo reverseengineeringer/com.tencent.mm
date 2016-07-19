@@ -1,45 +1,43 @@
 package com.tencent.mm.protocal.b;
 
 public final class fc
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public String cRi;
-  public int iAC;
-  public String jcB;
+  public String gdI;
+  public String jAa;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (jcB != null) {
-        paramVarArgs.d(1, jcB);
+      if (jAa != null) {
+        paramVarArgs.e(1, jAa);
       }
-      if (cRi != null) {
-        paramVarArgs.d(2, cRi);
+      if (gdI != null) {
+        paramVarArgs.e(2, gdI);
       }
-      paramVarArgs.ci(3, iAC);
       return 0;
     }
     if (paramInt == 1) {
-      if (jcB == null) {
-        break label269;
+      if (jAa == null) {
+        break label234;
       }
     }
-    label269:
-    for (paramInt = a.a.a.b.b.a.e(1, jcB) + 0;; paramInt = 0)
+    label234:
+    for (paramInt = a.a.a.b.b.a.f(1, jAa) + 0;; paramInt = 0)
     {
       int i = paramInt;
-      if (cRi != null) {
-        i = paramInt + a.a.a.b.b.a.e(2, cRi);
+      if (gdI != null) {
+        i = paramInt + a.a.a.b.b.a.f(2, gdI);
       }
-      return i + a.a.a.a.cg(3, iAC);
+      return i;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
         break;
@@ -53,13 +51,10 @@ public final class fc
         default: 
           return -1;
         case 1: 
-          jcB = maU.readString();
-          return 0;
-        case 2: 
-          cRi = maU.readString();
+          jAa = mMY.readString();
           return 0;
         }
-        iAC = maU.jC();
+        gdI = mMY.readString();
         return 0;
       }
       return -1;

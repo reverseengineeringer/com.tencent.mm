@@ -3,7 +3,7 @@ package android.support.v7.internal.widget;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.PopupWindow;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class ListPopupWindow$d
   implements AbsListView.OnScrollListener
@@ -14,10 +14,10 @@ final class ListPopupWindow$d
   
   public final void onScrollStateChanged(AbsListView paramAbsListView, int paramInt)
   {
-    if ((paramInt == 1) && (!qi.isInputMethodNotNeeded()) && (ListPopupWindow.b(qi).getContentView() != null))
+    if ((paramInt == 1) && (!qw.isInputMethodNotNeeded()) && (ListPopupWindow.b(qw).getContentView() != null))
     {
-      ListPopupWindow.d(qi).removeCallbacks(ListPopupWindow.c(qi));
-      ListPopupWindow.c(qi).run();
+      ListPopupWindow.d(qw).removeCallbacks(ListPopupWindow.c(qw));
+      ListPopupWindow.c(qw).run();
     }
   }
 }

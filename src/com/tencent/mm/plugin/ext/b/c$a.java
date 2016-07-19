@@ -1,19 +1,19 @@
 package com.tencent.mm.plugin.ext.b;
 
-import com.tencent.mm.protocal.b.ami;
-import com.tencent.mm.protocal.b.amk;
+import com.tencent.mm.protocal.b.amt;
+import com.tencent.mm.protocal.b.amv;
 
 final class c$a
 {
-  String ajh = "";
-  amk dKC = null;
-  ami dKD = null;
+  String UX = "";
+  amv dMd = null;
+  amt dMe = null;
   
-  public c$a(c paramc, String paramString, amk paramamk, ami paramami)
+  public c$a(c paramc, String paramString, amv paramamv, amt paramamt)
   {
-    ajh = paramString;
-    dKC = paramamk;
-    dKD = paramami;
+    UX = paramString;
+    dMd = paramamv;
+    dMe = paramamt;
   }
 }
 

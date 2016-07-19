@@ -15,9 +15,9 @@
 
 
 # static fields
-.field private static kHP:Landroid/widget/Toast;
+.field private static lgR:Landroid/widget/Toast;
 
-.field public static kHQ:I
+.field public static lgS:I
 
 
 # direct methods
@@ -28,17 +28,17 @@
     .line 418
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/ui/base/s$a;->kHP:Landroid/widget/Toast;
+    sput-object v0, Lcom/tencent/mm/ui/base/s$a;->lgR:Landroid/widget/Toast;
 
     .line 419
     const/4 v0, 0x0
 
-    sput v0, Lcom/tencent/mm/ui/base/s$a;->kHQ:I
+    sput v0, Lcom/tencent/mm/ui/base/s$a;->lgS:I
 
     return-void
 .end method
 
-.method public static L(Landroid/content/Context;I)V
+.method public static Q(Landroid/content/Context;I)V
     .locals 5
 
     .prologue
@@ -46,7 +46,7 @@
 
     const/4 v3, 0x1
 
-    const v2, 0x7f0710f0
+    const v2, 0x7f100edc
 
     .line 427
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -54,19 +54,19 @@
     move-result-object v0
 
     .line 429
-    sget v1, Lcom/tencent/mm/ui/base/s$a;->kHQ:I
+    sget v1, Lcom/tencent/mm/ui/base/s$a;->lgS:I
 
     if-eq v1, p1, :cond_0
 
     .line 430
-    sput-object v4, Lcom/tencent/mm/ui/base/s$a;->kHP:Landroid/widget/Toast;
+    sput-object v4, Lcom/tencent/mm/ui/base/s$a;->lgR:Landroid/widget/Toast;
 
     .line 431
-    sput p1, Lcom/tencent/mm/ui/base/s$a;->kHQ:I
+    sput p1, Lcom/tencent/mm/ui/base/s$a;->lgS:I
 
     .line 433
     :cond_0
-    sget-object v1, Lcom/tencent/mm/ui/base/s$a;->kHP:Landroid/widget/Toast;
+    sget-object v1, Lcom/tencent/mm/ui/base/s$a;->lgR:Landroid/widget/Toast;
 
     if-nez v1, :cond_1
 
@@ -77,11 +77,11 @@
 
     move-result-object v1
 
-    sput-object v1, Lcom/tencent/mm/ui/base/s$a;->kHP:Landroid/widget/Toast;
+    sput-object v1, Lcom/tencent/mm/ui/base/s$a;->lgR:Landroid/widget/Toast;
 
     .line 436
     :cond_1
-    const v1, 0x7f0a05d2
+    const v1, 0x7f0304e5
 
     invoke-static {v0, v1, v4}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -97,18 +97,18 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v2, 0x7f0b0e6a
+    const v2, 0x7f080c1b
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
     .line 444
     :goto_0
-    sget-object v0, Lcom/tencent/mm/ui/base/s$a;->kHP:Landroid/widget/Toast;
+    sget-object v0, Lcom/tencent/mm/ui/base/s$a;->lgR:Landroid/widget/Toast;
 
     invoke-virtual {v0, v1}, Landroid/widget/Toast;->setView(Landroid/view/View;)V
 
     .line 445
-    sget-object v0, Lcom/tencent/mm/ui/base/s$a;->kHP:Landroid/widget/Toast;
+    sget-object v0, Lcom/tencent/mm/ui/base/s$a;->lgR:Landroid/widget/Toast;
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
@@ -128,7 +128,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v2, 0x7f0b0e6b
+    const v2, 0x7f080c1c
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -142,7 +142,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v2, 0x7f0b0e6c
+    const v2, 0x7f080c1d
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 

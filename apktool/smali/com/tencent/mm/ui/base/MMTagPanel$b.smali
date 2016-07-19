@@ -18,9 +18,18 @@
 
 
 # instance fields
-.field final synthetic kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+.field final synthetic lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
-.field kHt:Ljava/util/List;
+.field lgv:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field mark:I
 
@@ -31,7 +40,7 @@
 
     .prologue
     .line 327
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,7 +49,7 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->kHt:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->lgv:Ljava/util/List;
 
     return-void
 .end method
@@ -52,7 +61,7 @@
 
     .prologue
     .line 334
-    const-string/jumbo v0, "!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA"
+    const-string/jumbo v0, "MicroMsg.MMTagPanel"
 
     const-string/jumbo v1, "on create tag filter, %s [%d, %d) %s [%d, %d), maxlength[%B]"
 
@@ -102,7 +111,7 @@
 
     const/4 v3, 0x6
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     invoke-static {v4}, Lcom/tencent/mm/ui/base/MMTagPanel;->h(Lcom/tencent/mm/ui/base/MMTagPanel;)Z
 
@@ -114,7 +123,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 335
     const/4 v0, -0x1
@@ -122,7 +131,7 @@
     iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->mark:I
 
     .line 336
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->kHt:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->lgv:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
@@ -137,7 +146,7 @@
     invoke-static {p1, p2, p3, v1, v0}, Landroid/text/TextUtils;->getChars(Ljava/lang/CharSequence;II[CI)V
 
     .line 339
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->i(Lcom/tencent/mm/ui/base/MMTagPanel;)Z
 
@@ -213,7 +222,7 @@
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     .line 353
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     new-instance v3, Lcom/tencent/mm/ui/base/MMTagPanel$b$1;
 
@@ -284,7 +293,7 @@
     if-ne v2, v3, :cond_6
 
     .line 388
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->kHt:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->lgv:Ljava/util/List;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -336,7 +345,7 @@
 
     .line 391
     :cond_6
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->kHt:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->lgv:Ljava/util/List;
 
     iget v3, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->mark:I
 
@@ -358,7 +367,7 @@
 
     .line 398
     :cond_7
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->kHt:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->lgv:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -373,7 +382,7 @@
 
     .line 401
     :cond_8
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->e(Lcom/tencent/mm/ui/base/MMTagPanel;)Lcom/tencent/mm/ui/base/MMTagPanel$a;
 
@@ -382,7 +391,7 @@
     if-eqz v0, :cond_a
 
     .line 402
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->kHt:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->lgv:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -410,7 +419,7 @@
     if-lez v2, :cond_9
 
     .line 405
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     new-instance v3, Lcom/tencent/mm/ui/base/MMTagPanel$b$2;
 
@@ -444,7 +453,7 @@
 
     .line 425
     :goto_6
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     new-instance v2, Lcom/tencent/mm/ui/base/MMTagPanel$b$3;
 

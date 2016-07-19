@@ -2,7 +2,7 @@ package com.tencent.mm.ui.tools;
 
 public abstract interface f$a
 {
-  public abstract void pV();
+  public abstract void op();
 }
 
 /* Location:

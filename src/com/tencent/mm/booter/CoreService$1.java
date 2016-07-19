@@ -1,20 +1,20 @@
 package com.tencent.mm.booter;
 
-import com.tencent.mm.sdk.platformtools.w.b;
+import com.tencent.mm.sdk.platformtools.y.b;
 
 final class CoreService$1
-  implements w.b
+  implements y.b
 {
   CoreService$1(CoreService paramCoreService) {}
   
   public final void cancel()
   {
-    MMReceivers.AlarmReceiver.aq(blP.getApplicationContext());
+    MMReceivers.AlarmReceiver.an(aZu.getApplicationContext());
   }
   
   public final void prepare()
   {
-    MMReceivers.AlarmReceiver.ap(blP.getApplicationContext());
+    MMReceivers.AlarmReceiver.am(aZu.getApplicationContext());
   }
 }
 

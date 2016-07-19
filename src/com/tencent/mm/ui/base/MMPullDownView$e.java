@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 public abstract interface MMPullDownView$e
 {
-  public abstract void QR();
+  public abstract void Sg();
 }
 
 /* Location:

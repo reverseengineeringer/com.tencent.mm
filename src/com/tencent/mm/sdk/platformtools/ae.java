@@ -1,178 +1,142 @@
 package com.tencent.mm.sdk.platformtools;
 
-import android.os.Process;
-import com.tencent.mm.sdk.b.a;
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import java.util.HashMap;
-import java.util.Map;
+import android.os.Debug;
+import android.os.Handler;
+import android.os.Handler.Callback;
+import android.os.Looper;
+import android.os.Message;
+import android.os.SystemClock;
 import junit.framework.Assert;
 
-public final class ae
-  implements Thread.UncaughtExceptionHandler
+final class ae
+  extends Handler
+  implements ai.a
 {
-  private static ae jVR = null;
-  private c jVS = null;
-  private a jVT = null;
-  public a jVU = null;
-  public Map jVV = new HashMap();
-  private Thread.UncaughtExceptionHandler jVW = null;
-  private boolean jVX = false;
+  private Looper kvH = getLooper();
+  private Handler.Callback kvI;
+  a kvJ;
+  private String toStringResult = null;
   
-  private ae()
+  ae(Handler.Callback paramCallback, a parama)
   {
-    Thread.setDefaultUncaughtExceptionHandler(this);
+    super(paramCallback);
+    kvI = paramCallback;
+    kvJ = parama;
   }
   
-  private static String CU(String paramString)
+  ae(Looper paramLooper, Handler.Callback paramCallback, a parama)
   {
-    if (paramString == null) {
-      paramString = null;
+    super(paramLooper, paramCallback);
+    kvI = paramCallback;
+    kvJ = parama;
+  }
+  
+  ae(Looper paramLooper, a parama)
+  {
+    super(paramLooper);
+    kvJ = parama;
+  }
+  
+  ae(a parama)
+  {
+    kvJ = parama;
+  }
+  
+  public final void a(Runnable paramRunnable, ai paramai)
+  {
+    if (kvJ != null) {
+      kvJ.onTaskRunEnd(paramRunnable, paramai);
     }
-    label66:
-    for (;;)
+  }
+  
+  public final void a(Runnable paramRunnable, Thread paramThread, long paramLong1, long paramLong2, float paramFloat)
+  {
+    if (kvJ != null) {
+      kvJ.onLog(null, paramRunnable, paramThread, paramLong1, paramLong2, paramFloat);
+    }
+  }
+  
+  public final void dispatchMessage(Message paramMessage)
+  {
+    if ((paramMessage.getCallback() != null) || (kvI != null)) {
+      super.dispatchMessage(paramMessage);
+    }
+    long l1;
+    long l2;
+    do
     {
-      return paramString;
-      char[] arrayOfChar = paramString.toCharArray();
-      if (arrayOfChar == null) {
-        return null;
-      }
-      int i = 0;
-      if (i < arrayOfChar.length) {
-        if (arrayOfChar[i] > '') {
-          arrayOfChar[i] = '\000';
-        }
-      }
-      for (int j = 1;; j = 0)
-      {
-        if (j == 0) {
-          break label66;
-        }
-        return new String(arrayOfChar, 0, i);
-        i += 1;
+      return;
+      l1 = System.currentTimeMillis();
+      l2 = Debug.threadCpuTimeNanos();
+      handleMessage(paramMessage);
+    } while (kvJ == null);
+    kvJ.onLog(paramMessage, null, kvH.getThread(), System.currentTimeMillis() - l1, Debug.threadCpuTimeNanos() - l2, -1.0F);
+  }
+  
+  public final void handleMessage(Message paramMessage)
+  {
+    if (kvJ != null) {
+      kvJ.handleMessage(paramMessage);
+    }
+  }
+  
+  public final boolean sendMessageAtTime(Message paramMessage, long paramLong)
+  {
+    if (paramMessage != null) {}
+    Runnable localRunnable;
+    for (boolean bool = true;; bool = false)
+    {
+      Assert.assertTrue("msg is null", bool);
+      localRunnable = paramMessage.getCallback();
+      if (localRunnable != null) {
         break;
       }
+      return super.sendMessageAtTime(paramMessage, paramLong);
+    }
+    long l = paramLong - SystemClock.uptimeMillis();
+    if (paramMessage.getTarget() == null) {}
+    for (Object localObject = this;; localObject = paramMessage.getTarget())
+    {
+      localObject = new ai(kvH.getThread(), (Handler)localObject, localRunnable, obj, this);
+      if (l > 0L) {
+        kwc = l;
+      }
+      Message localMessage = Message.obtain(paramMessage.getTarget(), (Runnable)localObject);
+      what = what;
+      arg1 = arg1;
+      arg2 = arg2;
+      obj = obj;
+      replyTo = replyTo;
+      localMessage.setData(paramMessage.getData());
+      paramMessage.recycle();
+      if (kvJ != null) {
+        kvJ.onTaskAdded(localRunnable, (ai)localObject);
+      }
+      bool = super.sendMessageAtTime(localMessage, paramLong);
+      if ((!bool) && (kvJ != null)) {
+        kvJ.onTaskRunEnd(localRunnable, (ai)localObject);
+      }
+      return bool;
     }
   }
   
-  public static void a(a parama)
+  public final String toString()
   {
-    try
-    {
-      if (jVR == null) {
-        jVR = new ae();
-      }
-      jVRjVT = parama;
-      return;
+    if (toStringResult == null) {
+      toStringResult = ("MMInnerHandler{listener = " + kvJ + "}");
     }
-    finally {}
-  }
-  
-  public static void a(a parama)
-  {
-    try
-    {
-      if (jVR == null) {
-        jVR = new ae();
-      }
-      jVRjVU = parama;
-      return;
-    }
-    finally {}
-  }
-  
-  public static void a(c paramc)
-  {
-    try
-    {
-      if (jVR == null) {
-        jVR = new ae();
-      }
-      jVRjVS = paramc;
-      return;
-    }
-    finally {}
-  }
-  
-  public static void a(String paramString, b paramb)
-  {
-    try
-    {
-      if (jVR == null) {
-        jVR = new ae();
-      }
-      jVRjVV.put(paramString, paramb);
-      return;
-    }
-    finally {}
-  }
-  
-  public static void j(String paramString1, String paramString2, boolean paramBoolean)
-  {
-    try
-    {
-      a(paramString1, new b()
-      {
-        public final String aVd()
-        {
-          return "subinfo=" + jVY;
-        }
-      });
-      Assert.assertTrue(paramString1, paramBoolean);
-      return;
-    }
-    finally
-    {
-      paramString1 = finally;
-      throw paramString1;
-    }
-  }
-  
-  public final void uncaughtException(Thread paramThread, Throwable paramThrowable)
-  {
-    if (jVX) {
-      return;
-    }
-    jVX = true;
-    try
-    {
-      ByteArrayOutputStream localByteArrayOutputStream = new ByteArrayOutputStream();
-      PrintStream localPrintStream = new PrintStream(localByteArrayOutputStream);
-      for (paramThread = paramThrowable; paramThread.getCause() != null; paramThread = paramThread.getCause()) {}
-      paramThread.printStackTrace(localPrintStream);
-      paramThread = CU(localByteArrayOutputStream.toString());
-      if ((jVT != null) && (paramThread != null)) {
-        jVT.fg(paramThread);
-      }
-      if ((jVS != null) && (paramThread != null))
-      {
-        jVS.a(this, paramThread, paramThrowable);
-        jVU.kt();
-      }
-      localByteArrayOutputStream.close();
-      u.appenderClose();
-    }
-    catch (Exception paramThread)
-    {
-      for (;;) {}
-    }
-    Process.killProcess(Process.myPid());
-    System.exit(0);
+    return toStringResult;
   }
   
   public static abstract interface a
   {
-    public abstract void kt();
-  }
-  
-  public static abstract interface b
-  {
-    public abstract String aVd();
-  }
-  
-  public static abstract interface c
-  {
-    public abstract void a(ae paramae, String paramString, Throwable paramThrowable);
+    public abstract void handleMessage(Message paramMessage);
+    
+    public abstract void onLog(Message paramMessage, Runnable paramRunnable, Thread paramThread, long paramLong1, long paramLong2, float paramFloat);
+    
+    public abstract void onTaskAdded(Runnable paramRunnable, ai paramai);
+    
+    public abstract void onTaskRunEnd(Runnable paramRunnable, ai paramai);
   }
 }
 

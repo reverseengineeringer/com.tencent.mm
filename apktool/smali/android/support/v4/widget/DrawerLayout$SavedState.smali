@@ -16,14 +16,23 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Landroid/support/v4/widget/DrawerLayout$SavedState;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field hA:I
+.field hR:I
 
-.field hy:I
+.field hS:I
 
-.field hz:I
+.field hT:I
 
 
 # direct methods
@@ -51,20 +60,20 @@
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
     .line 1283
-    iput v0, p0, Landroid/support/v4/widget/DrawerLayout$SavedState;->hy:I
+    iput v0, p0, Landroid/support/v4/widget/DrawerLayout$SavedState;->hR:I
 
     .line 1284
-    iput v0, p0, Landroid/support/v4/widget/DrawerLayout$SavedState;->hz:I
+    iput v0, p0, Landroid/support/v4/widget/DrawerLayout$SavedState;->hS:I
 
     .line 1285
-    iput v0, p0, Landroid/support/v4/widget/DrawerLayout$SavedState;->hA:I
+    iput v0, p0, Landroid/support/v4/widget/DrawerLayout$SavedState;->hT:I
 
     .line 1289
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    iput v0, p0, Landroid/support/v4/widget/DrawerLayout$SavedState;->hy:I
+    iput v0, p0, Landroid/support/v4/widget/DrawerLayout$SavedState;->hR:I
 
     .line 1290
     return-void
@@ -80,13 +89,13 @@
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
     .line 1283
-    iput v0, p0, Landroid/support/v4/widget/DrawerLayout$SavedState;->hy:I
+    iput v0, p0, Landroid/support/v4/widget/DrawerLayout$SavedState;->hR:I
 
     .line 1284
-    iput v0, p0, Landroid/support/v4/widget/DrawerLayout$SavedState;->hz:I
+    iput v0, p0, Landroid/support/v4/widget/DrawerLayout$SavedState;->hS:I
 
     .line 1285
-    iput v0, p0, Landroid/support/v4/widget/DrawerLayout$SavedState;->hA:I
+    iput v0, p0, Landroid/support/v4/widget/DrawerLayout$SavedState;->hT:I
 
     .line 1294
     return-void
@@ -102,7 +111,7 @@
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
     .line 1299
-    iget v0, p0, Landroid/support/v4/widget/DrawerLayout$SavedState;->hy:I
+    iget v0, p0, Landroid/support/v4/widget/DrawerLayout$SavedState;->hR:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 

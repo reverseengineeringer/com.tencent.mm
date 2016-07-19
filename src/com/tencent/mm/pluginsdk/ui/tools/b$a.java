@@ -6,15 +6,15 @@ import java.util.List;
 
 final class b$a
 {
-  List hss = new ArrayList();
+  List<String> hKe = new ArrayList();
   
-  final String aSM()
+  final String aXF()
   {
-    if ((hss == null) || (hss.size() == 0)) {
+    if ((hKe == null) || (hKe.size() == 0)) {
       return "";
     }
     StringBuffer localStringBuffer = new StringBuffer();
-    Iterator localIterator = hss.iterator();
+    Iterator localIterator = hKe.iterator();
     while (localIterator.hasNext())
     {
       localStringBuffer.append((String)localIterator.next());
@@ -23,9 +23,9 @@ final class b$a
     return localStringBuffer.toString();
   }
   
-  final void sN(String paramString)
+  final void up(String paramString)
   {
-    hss = new ArrayList();
+    hKe = new ArrayList();
     if ((paramString == null) || (paramString.length() == 0)) {}
     for (;;)
     {
@@ -36,7 +36,7 @@ final class b$a
       while (i < j)
       {
         Object localObject = paramString[i];
-        hss.add(localObject);
+        hKe.add(localObject);
         i += 1;
       }
     }

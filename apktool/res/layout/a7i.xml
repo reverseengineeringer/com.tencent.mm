@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingTop="@dimen/i7" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/c30" android:background="@color/j3" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/MMList" />
+    <com.tencent.mm.pluginsdk.ui.MultiSelectContactView android:id="@id/c2x" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ImageView android:id="@id/b4f" android:background="@drawable/aht" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/c2x" />
+</RelativeLayout>

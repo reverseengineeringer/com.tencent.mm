@@ -8,45 +8,45 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 public class e
-  implements DragSortListView.i
+  implements DragSortListView.h
 {
-  private ListView cUz;
-  private ImageView dvk;
-  private Bitmap lGy;
-  int lGz = -16777216;
+  private ListView cSm;
+  private ImageView dvD;
+  private Bitmap mhM;
+  int mhN = -16777216;
   
   public e(ListView paramListView)
   {
-    cUz = paramListView;
+    cSm = paramListView;
   }
   
-  public final void aP(View paramView)
+  public final void aU(View paramView)
   {
     ((ImageView)paramView).setImageDrawable(null);
-    lGy.recycle();
-    lGy = null;
+    mhM.recycle();
+    mhM = null;
   }
   
   public void b(Point paramPoint) {}
   
-  public final View sh(int paramInt)
+  public final View ul(int paramInt)
   {
-    View localView = cUz.getChildAt(cUz.getHeaderViewsCount() + paramInt - cUz.getFirstVisiblePosition());
+    View localView = cSm.getChildAt(cSm.getHeaderViewsCount() + paramInt - cSm.getFirstVisiblePosition());
     if (localView == null) {
       return null;
     }
     localView.setPressed(false);
     localView.setDrawingCacheEnabled(true);
-    lGy = Bitmap.createBitmap(localView.getDrawingCache());
+    mhM = Bitmap.createBitmap(localView.getDrawingCache());
     localView.setDrawingCacheEnabled(false);
-    if (dvk == null) {
-      dvk = new ImageView(cUz.getContext());
+    if (dvD == null) {
+      dvD = new ImageView(cSm.getContext());
     }
-    dvk.setBackgroundColor(lGz);
-    dvk.setPadding(0, 0, 0, 0);
-    dvk.setImageBitmap(lGy);
-    dvk.setLayoutParams(new ViewGroup.LayoutParams(localView.getWidth(), localView.getHeight()));
-    return dvk;
+    dvD.setBackgroundColor(mhN);
+    dvD.setPadding(0, 0, 0, 0);
+    dvD.setImageBitmap(mhM);
+    dvD.setLayoutParams(new ViewGroup.LayoutParams(localView.getWidth(), localView.getHeight()));
+    return dvD;
   }
 }
 

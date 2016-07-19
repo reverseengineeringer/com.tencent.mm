@@ -4,46 +4,64 @@ import android.os.Looper;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-final class a
+final class a<T>
 {
-  private HashMap khI = new HashMap();
-  private LinkedList khJ = new LinkedList();
+  private HashMap<Looper, LinkedList<T>> kIi = new HashMap();
+  private LinkedList<T> kIj = new LinkedList();
+  
+  protected final void a(Looper paramLooper)
+  {
+    try
+    {
+      if (kIi.containsKey(paramLooper))
+      {
+        paramLooper = (LinkedList)kIi.remove(paramLooper);
+        kIj.addAll(paramLooper);
+      }
+      return;
+    }
+    finally
+    {
+      paramLooper = finally;
+      throw paramLooper;
+    }
+  }
   
   /* Error */
-  protected final void a(Looper paramLooper, Object paramObject)
+  protected final void a(Looper paramLooper, T paramT)
   {
     // Byte code:
     //   0: aload_0
     //   1: monitorenter
     //   2: aload_0
-    //   3: getfield 17	com/tencent/mm/svg/a:khI	Ljava/util/HashMap;
+    //   3: getfield 20	com/tencent/mm/svg/a:kIi	Ljava/util/HashMap;
     //   6: aload_1
-    //   7: invokevirtual 29	java/util/HashMap:containsKey	(Ljava/lang/Object;)Z
+    //   7: invokevirtual 32	java/util/HashMap:containsKey	(Ljava/lang/Object;)Z
     //   10: ifne +32 -> 42
-    //   13: new 19	java/util/LinkedList
+    //   13: new 22	java/util/LinkedList
     //   16: dup
-    //   17: invokespecial 20	java/util/LinkedList:<init>	()V
+    //   17: invokespecial 23	java/util/LinkedList:<init>	()V
     //   20: astore_3
     //   21: aload_0
-    //   22: getfield 17	com/tencent/mm/svg/a:khI	Ljava/util/HashMap;
+    //   22: getfield 20	com/tencent/mm/svg/a:kIi	Ljava/util/HashMap;
     //   25: aload_1
     //   26: aload_3
-    //   27: invokevirtual 33	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    //   27: invokevirtual 45	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     //   30: pop
     //   31: aload_3
     //   32: astore_1
     //   33: aload_1
     //   34: aload_2
-    //   35: invokevirtual 36	java/util/LinkedList:add	(Ljava/lang/Object;)Z
+    //   35: invokevirtual 48	java/util/LinkedList:add	(Ljava/lang/Object;)Z
     //   38: pop
     //   39: aload_0
     //   40: monitorexit
     //   41: return
     //   42: aload_0
-    //   43: getfield 17	com/tencent/mm/svg/a:khI	Ljava/util/HashMap;
+    //   43: getfield 20	com/tencent/mm/svg/a:kIi	Ljava/util/HashMap;
     //   46: aload_1
-    //   47: invokevirtual 40	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
-    //   50: checkcast 19	java/util/LinkedList
+    //   47: invokevirtual 51	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
+    //   50: checkcast 22	java/util/LinkedList
     //   53: astore_1
     //   54: goto -21 -> 33
     //   57: astore_1
@@ -55,7 +73,7 @@ final class a
     //   start	length	slot	name	signature
     //   0	62	0	this	a
     //   0	62	1	paramLooper	Looper
-    //   0	62	2	paramObject	Object
+    //   0	62	2	paramT	T
     //   20	12	3	localLinkedList	LinkedList
     // Exception table:
     //   from	to	target	type
@@ -64,38 +82,20 @@ final class a
     //   42	54	57	finally
   }
   
-  protected final Object aYQ()
+  protected final T bej()
   {
     Object localObject1 = null;
     try
     {
-      if (khJ.size() != 0) {
-        localObject1 = khJ.poll();
+      if (kIj.size() != 0) {
+        localObject1 = kIj.poll();
       }
-      return localObject1;
+      return (T)localObject1;
     }
     finally
     {
       localObject2 = finally;
       throw ((Throwable)localObject2);
-    }
-  }
-  
-  protected final void b(Looper paramLooper)
-  {
-    try
-    {
-      if (khI.containsKey(paramLooper))
-      {
-        paramLooper = (LinkedList)khI.remove(paramLooper);
-        khJ.addAll(paramLooper);
-      }
-      return;
-    }
-    finally
-    {
-      paramLooper = finally;
-      throw paramLooper;
     }
   }
 }

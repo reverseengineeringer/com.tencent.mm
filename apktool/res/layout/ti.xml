@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/lf" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/b0k" android:background="@color/n8" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/b0l" />
+    <ListView android:id="@id/b0l" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/MMList" />
+    <FrameLayout android:id="@id/b0m" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="30.0dip" android:layout_marginTop="148.0dip" android:layout_marginRight="30.0dip">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="214.0dip" android:layout_height="wrap_content" android:src="@raw/ipcall_welcome" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+            <TextView android:textSize="14.0sp" android:textColor="#ffb2b2b2" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/b6l" android:singleLine="false" android:lineSpacingExtra="7.0sp" />
+        </LinearLayout>
+    </FrameLayout>
+    <ImageButton android:id="@id/b0n" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/ak" android:layout_marginBottom="@dimen/aj" android:src="@drawable/a0" android:scaleType="fitXY" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

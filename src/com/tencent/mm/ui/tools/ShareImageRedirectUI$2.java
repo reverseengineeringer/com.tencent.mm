@@ -11,8 +11,8 @@ final class ShareImageRedirectUI$2
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    lxO.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
-    lxO.finish();
+    lYD.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
+    lYD.finish();
   }
 }
 

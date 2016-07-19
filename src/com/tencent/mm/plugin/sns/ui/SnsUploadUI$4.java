@@ -11,7 +11,7 @@ final class SnsUploadUI$4
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    hlY.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
+    hCb.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
     paramDialogInterface.dismiss();
   }
 }

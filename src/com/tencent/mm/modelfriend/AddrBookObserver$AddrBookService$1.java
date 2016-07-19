@@ -1,27 +1,27 @@
 package com.tencent.mm.modelfriend;
 
 import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class AddrBookObserver$AddrBookService$1
   implements a.b
 {
   AddrBookObserver$AddrBookService$1(AddrBookObserver.AddrBookService paramAddrBookService) {}
   
-  public final void aU(boolean paramBoolean)
+  public final void aA(boolean paramBoolean)
   {
     if (!paramBoolean)
     {
-      u.v("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "onSyncEnd not sync succ, do not upload");
-      bLo.stopSelf();
-      AddrBookObserver.AddrBookService.bLk = false;
+      v.v("MicroMsg.AddrBookObserver", "onSyncEnd not sync succ, do not upload");
+      bEI.stopSelf();
+      AddrBookObserver.AddrBookService.bEE = false;
       return;
     }
     System.currentTimeMillis();
-    ac localac = new ac(m.yK(), m.yJ());
-    ah.tE().d(localac);
-    bLo.stopSelf();
-    AddrBookObserver.AddrBookService.bLk = false;
+    ac localac = new ac(m.yX(), m.yW());
+    ah.tF().a(localac, 0);
+    bEI.stopSelf();
+    AddrBookObserver.AddrBookService.bEE = false;
   }
 }
 

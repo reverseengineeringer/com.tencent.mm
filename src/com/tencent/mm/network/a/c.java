@@ -1,24 +1,24 @@
 package com.tencent.mm.network.a;
 
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.o;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.p;
+import com.tencent.mm.sdk.platformtools.v;
 import java.net.InetAddress;
 
 public final class c
 {
-  private InetAddress ckr;
+  private InetAddress cfJ;
   private int port;
   private int type;
   
   private c(InetAddress paramInetAddress, int paramInt1, int paramInt2)
   {
-    ckr = paramInetAddress;
+    cfJ = paramInetAddress;
     port = paramInt1;
     type = paramInt2;
   }
   
-  public static c kl(String paramString)
+  public static c kV(String paramString)
   {
     if (paramString == null) {}
     do
@@ -28,12 +28,12 @@ public final class c
     } while ((paramString == null) || (paramString.length != 3));
     try
     {
-      paramString = new c(o.CJ(paramString[0]), Integer.parseInt(paramString[1]), Integer.parseInt(paramString[2]));
+      paramString = new c(p.EW(paramString[0]), Integer.parseInt(paramString[1]), Integer.parseInt(paramString[2]));
       return paramString;
     }
     catch (Exception paramString)
     {
-      u.e("!32@/B4Tb64lLpIJHjSdjj7mIt5a6vKEglja", "exception:%s", new Object[] { ay.b(paramString) });
+      v.e("MicroMsg.InAddress", "exception:%s", new Object[] { be.f(paramString) });
     }
     return null;
   }
@@ -46,7 +46,7 @@ public final class c
     }
     for (;;)
     {
-      return ckr.getHostAddress() + ":" + port + "(" + str + ")";
+      return cfJ.getHostAddress() + ":" + port + "(" + str + ")";
       if (type == 3) {
         str = "svrdns";
       } else if (type == 4) {

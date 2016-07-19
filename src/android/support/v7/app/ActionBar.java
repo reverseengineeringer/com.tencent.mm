@@ -10,6 +10,8 @@ import com.tencent.mm.R.b;
 
 public abstract class ActionBar
 {
+  public abstract void aI();
+  
   public abstract void aJ();
   
   public abstract void aK();
@@ -43,8 +45,6 @@ public abstract class ActionBar
   
   public abstract void setDisplayOptions(int paramInt);
   
-  public abstract void setDisplayShowTitleEnabled(boolean paramBoolean);
-  
   public void setHomeButtonEnabled(boolean paramBoolean) {}
   
   public abstract void setLogo(Drawable paramDrawable);
@@ -70,7 +70,7 @@ public abstract class ActionBar
     public LayoutParams(Context paramContext, AttributeSet paramAttributeSet)
     {
       super(paramAttributeSet);
-      paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.ActionBarLayout);
+      paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.Wg);
       gravity = paramContext.getInt(0, -1);
       paramContext.recycle();
     }
@@ -78,9 +78,7 @@ public abstract class ActionBar
   
   static abstract interface a {}
   
-  public static abstract interface b {}
-  
-  public static abstract class c
+  public static abstract class b
   {
     public abstract CharSequence getContentDescription();
     

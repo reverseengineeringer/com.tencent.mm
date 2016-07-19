@@ -1,16 +1,24 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 
 final class SnsTimeLineUI$36
-  implements DialogInterface.OnClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
   SnsTimeLineUI$36(SnsTimeLineUI paramSnsTimeLineUI) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramDialogInterface.dismiss();
+    if ((SnsTimeLineUI.E(hzE) != null) && (EhzE).hog))
+    {
+      SnsTimeLineUI.E(hzE).fh(true);
+      SnsTimeLineUI.F(hzE);
+      return true;
+    }
+    hzE.aiI();
+    hzE.finish();
+    return false;
   }
 }
 

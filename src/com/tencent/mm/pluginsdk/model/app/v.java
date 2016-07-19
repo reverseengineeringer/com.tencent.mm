@@ -1,16 +1,16 @@
 package com.tencent.mm.pluginsdk.model.app;
 
 import com.tencent.mm.network.j;
-import com.tencent.mm.r.a;
+import com.tencent.mm.t.a;
 
 public abstract class v
   implements j
 {
-  public a dyc;
+  public a dzw;
   
-  public abstract byte[] abk();
+  public abstract byte[] adE();
   
-  public abstract void af(byte[] paramArrayOfByte);
+  public abstract void an(byte[] paramArrayOfByte);
   
   public abstract int getType();
 }

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/aj/c$a;
+.implements Lcom/tencent/mm/am/c$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+.field final synthetic lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 556
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$6;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$6;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,12 +36,12 @@
 
 
 # virtual methods
-.method public final ba(Z)V
+.method public final aG(Z)V
     .locals 2
 
     .prologue
     .line 559
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$6;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$6;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->w(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;)Landroid/widget/ImageView;
 

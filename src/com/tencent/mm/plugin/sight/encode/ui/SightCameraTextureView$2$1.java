@@ -10,11 +10,11 @@ final class SightCameraTextureView$2$1
   
   public final void run()
   {
-    SightCameraTextureView.a(gEb.gEa).setLayoutParams(gDT);
-    if (gEb.gEa.gEk != null) {
-      gEb.gEa.gEk.awD();
+    SightCameraTextureView.a(gKB.gKA).setLayoutParams(gKt);
+    if (gKB.gKA.gKL != null) {
+      gKB.gKA.gKL.azc();
     }
-    gEb.gEa.n(gEb.gEa.getMeasuredWidth() / 2, gEb.gEa.getMeasuredHeight() / 2);
+    gKB.gKA.m(gKB.gKA.getMeasuredWidth() / 2, gKB.gKA.getMeasuredHeight() / 2);
   }
 }
 

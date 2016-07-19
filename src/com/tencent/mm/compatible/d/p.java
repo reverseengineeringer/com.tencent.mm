@@ -10,9 +10,9 @@ import android.os.Build.VERSION;
 import android.provider.Settings.Secure;
 import android.telephony.TelephonyManager;
 import com.tencent.mm.a.g;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileFilter;
@@ -25,19 +25,53 @@ import java.util.regex.Pattern;
 
 public final class p
 {
-  public static n bsJ = new n();
-  public static b bsK = new b();
-  public static a bsL = new a();
-  public static t bsM = new t();
-  public static x bsN = new x();
-  public static s bsO = new s();
-  private static int bsP = -1;
-  public static j bsQ = new j();
-  public static o bsR = new o();
-  public static v bsS = new v();
-  private static String bsT = null;
+  public static n bgN = new n();
+  public static b bgO = new b();
+  public static a bgP = new a();
+  public static u bgQ = new u();
+  public static z bgR = new z();
+  public static s bgS = new s();
+  public static t bgT = new t();
+  public static x bgU = new x();
+  private static int bgV = -1;
+  public static j bgW = new j();
+  public static o bgX = new o();
+  public static w bgY = new w();
+  private static String bgZ = null;
   
-  public static String aw(Context paramContext)
+  public static String at(Context paramContext)
+  {
+    try
+    {
+      v.i("MicroMsg.DeviceInfo", "lm: getManufacturer CurrentLanguage is %s", new Object[] { com.tencent.mm.sdk.platformtools.u.jdMethod_do(paramContext) });
+      if ((bgT == null) || (bgTbhg == null) || (bgTbhg.size() == 0))
+      {
+        v.i("MicroMsg.DeviceInfo", "lm: getManufacturer return is %s", new Object[] { Build.MANUFACTURER });
+        return Build.MANUFACTURER;
+      }
+      String str = (String)bgTbhg.get(".manufacturerName." + com.tencent.mm.sdk.platformtools.u.jdMethod_do(paramContext));
+      v.i("MicroMsg.DeviceInfo", "lm: getManufacturer is %s", new Object[] { str });
+      paramContext = str;
+      if (be.kf(str))
+      {
+        str = (String)bgTbhg.get(".manufacturerName.en");
+        v.i("MicroMsg.DeviceInfo", "lm: getManufacturer is %s", new Object[] { str });
+        paramContext = str;
+        if (be.kf(str))
+        {
+          paramContext = Build.MANUFACTURER;
+          return paramContext;
+        }
+      }
+    }
+    catch (Exception paramContext)
+    {
+      paramContext = Build.MANUFACTURER;
+    }
+    return paramContext;
+  }
+  
+  public static String au(Context paramContext)
   {
     try
     {
@@ -46,38 +80,45 @@ public final class p
     }
     catch (Exception paramContext)
     {
-      u.printErrStackTrace("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", paramContext, "getMobileSPType", new Object[0]);
+      v.printErrStackTrace("MicroMsg.DeviceInfo", paramContext, "getMobileSPType", new Object[0]);
     }
     return "";
   }
   
-  public static void da(String paramString)
+  public static void dh(String paramString)
   {
+    v.i("MicroMsg.DeviceInfo", "update deviceInfo %s", new Object[] { paramString });
     if ((paramString == null) || (paramString.length() <= 0)) {}
     do
     {
       do
       {
         return;
-      } while (paramString.hashCode() == bsP);
-      bsP = paramString.hashCode();
-      bsJ.reset();
-      bsK.reset();
-      bsL.reset();
-      bsQ.reset();
-      bsM.reset();
-      bsN.reset();
-      bsS.reset();
-      bsObsW = 0;
+      } while (paramString.hashCode() == bgV);
+      bgV = paramString.hashCode();
+      bgN.reset();
+      bgO.reset();
+      bgP.reset();
+      bgW.reset();
+      bgQ.reset();
+      bgR.reset();
+      bgY.reset();
+      Object localObject = bgS;
+      bhc = 0;
+      bhd = 0;
+      localObject = bgT;
+      bhf = "";
+      bhg = null;
+      bgUavj = false;
       new q();
-    } while (!q.a(paramString, bsJ, bsK, bsL, bsQ, bsM, bsN, bsS, bsO));
-    u.d("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", "steve: mCameraInfo.mNeedEnhance = " + bsKbrr);
+    } while (!q.a(paramString, bgN, bgO, bgP, bgW, bgQ, bgR, bgY, bgS, bgT, bgU));
+    v.d("MicroMsg.DeviceInfo", "steve: mCameraInfo.mNeedEnhance = " + bgObfr);
   }
   
   public static String getAndroidId()
   {
-    String str = Settings.Secure.getString(y.getContext().getContentResolver(), "android_id");
-    u.i("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", "androidid:[%s]", new Object[] { str });
+    String str = Settings.Secure.getString(aa.getContext().getContentResolver(), "android_id");
+    v.i("MicroMsg.DeviceInfo", "androidid:[%s]", new Object[] { str });
     return str;
   }
   
@@ -101,7 +142,7 @@ public final class p
     }
     catch (SecurityException paramContext)
     {
-      u.e("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", "getDeviceId failed, security exception");
+      v.e("MicroMsg.DeviceInfo", "getDeviceId failed, security exception");
       return null;
     }
     catch (Exception paramContext)
@@ -112,24 +153,96 @@ public final class p
   
   public static String getSimCountryIso()
   {
-    Object localObject = (TelephonyManager)y.getContext().getSystemService("phone");
+    Object localObject = (TelephonyManager)aa.getContext().getSystemService("phone");
     if (localObject != null)
     {
       localObject = ((TelephonyManager)localObject).getSimCountryIso();
-      u.i("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", "get isoCode:[%s]", new Object[] { localObject });
+      v.i("MicroMsg.DeviceInfo", "get isoCode:[%s]", new Object[] { localObject });
       return (String)localObject;
     }
     return null;
   }
   
-  private static String oA()
+  public static String mM()
   {
-    String str1 = ay.dL(y.getContext());
+    Object localObject = (String)k.my().get(258);
+    if (localObject != null) {
+      return (String)localObject;
+    }
+    String str = getDeviceID(aa.getContext());
+    localObject = str;
+    if (str == null) {
+      localObject = "1234567890ABCDEF";
+    }
+    k.my().set(258, localObject);
+    return (String)localObject;
+  }
+  
+  public static String mN()
+  {
+    StringBuilder localStringBuilder;
+    String str;
+    if (bgZ == null)
+    {
+      localStringBuilder = new StringBuilder();
+      localStringBuilder.append(Settings.Secure.getString(aa.getContext().getContentResolver(), "android_id"));
+      str = (String)k.my().get(256);
+      if (str == null) {
+        break label161;
+      }
+      localStringBuilder.append(str);
+      str = (String)k.my().get(259);
+      if (str == null) {
+        break label178;
+      }
+      v.d("MicroMsg.DeviceInfo", "getHardWareId from file " + str);
+    }
+    for (;;)
+    {
+      localStringBuilder.append(str);
+      str = localStringBuilder.toString();
+      bgZ = "A" + g.j(str.getBytes()).substring(0, 15);
+      v.w("MicroMsg.DeviceInfo", "guid:%s, dev=%s", new Object[] { bgZ, str });
+      return bgZ;
+      label161:
+      str = mQ();
+      k.my().set(256, str);
+      break;
+      label178:
+      str = Build.MANUFACTURER + Build.MODEL + m.mF();
+      k.my().set(259, str);
+      v.d("MicroMsg.DeviceInfo", "getHardWareId " + str);
+    }
+  }
+  
+  public static String mO()
+  {
+    Object localObject = (WifiManager)aa.getContext().getSystemService("wifi");
+    if (localObject == null) {}
+    for (localObject = null; localObject != null; localObject = ((WifiManager)localObject).getConnectionInfo()) {
+      return ((WifiInfo)localObject).getMacAddress();
+    }
+    return null;
+  }
+  
+  public static String mP()
+  {
+    String str = null;
+    BluetoothAdapter localBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+    if (localBluetoothAdapter != null) {
+      str = localBluetoothAdapter.getAddress();
+    }
+    return str;
+  }
+  
+  private static String mQ()
+  {
+    String str1 = be.dM(aa.getContext());
     String str2;
     if ((str1 != null) && (str1.length() > 0))
     {
       str2 = ("A" + str1 + "123456789ABCDEF").substring(0, 15);
-      u.w("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", "generated deviceId=" + str2);
+      v.w("MicroMsg.DeviceInfo", "generated deviceId=" + str2);
       return str2;
     }
     Random localRandom = new Random();
@@ -147,42 +260,42 @@ public final class p
     }
   }
   
-  public static String oB()
+  public static String mR()
   {
     return Build.MODEL;
   }
   
   /* Error */
-  public static String[] oC()
+  public static String[] mS()
   {
     // Byte code:
     //   0: iconst_2
-    //   1: anewarray 117	java/lang/String
+    //   1: anewarray 154	java/lang/String
     //   4: astore_3
     //   5: aload_3
     //   6: iconst_0
-    //   7: ldc 113
+    //   7: ldc -70
     //   9: aastore
     //   10: aload_3
     //   11: iconst_1
-    //   12: ldc_w 261
+    //   12: ldc_w 391
     //   15: aastore
     //   16: aconst_null
     //   17: astore_2
-    //   18: new 263	java/io/BufferedReader
+    //   18: new 393	java/io/BufferedReader
     //   21: dup
-    //   22: new 265	java/io/FileReader
+    //   22: new 395	java/io/FileReader
     //   25: dup
-    //   26: ldc_w 267
-    //   29: invokespecial 268	java/io/FileReader:<init>	(Ljava/lang/String;)V
+    //   26: ldc_w 397
+    //   29: invokespecial 398	java/io/FileReader:<init>	(Ljava/lang/String;)V
     //   32: sipush 8192
-    //   35: invokespecial 271	java/io/BufferedReader:<init>	(Ljava/io/Reader;I)V
+    //   35: invokespecial 401	java/io/BufferedReader:<init>	(Ljava/io/Reader;I)V
     //   38: astore_1
     //   39: aload_1
-    //   40: invokevirtual 274	java/io/BufferedReader:readLine	()Ljava/lang/String;
-    //   43: invokestatic 278	com/tencent/mm/sdk/platformtools/ay:ky	(Ljava/lang/String;)Ljava/lang/String;
-    //   46: ldc_w 280
-    //   49: invokevirtual 284	java/lang/String:split	(Ljava/lang/String;)[Ljava/lang/String;
+    //   40: invokevirtual 404	java/io/BufferedReader:readLine	()Ljava/lang/String;
+    //   43: invokestatic 408	com/tencent/mm/sdk/platformtools/be:li	(Ljava/lang/String;)Ljava/lang/String;
+    //   46: ldc_w 410
+    //   49: invokevirtual 414	java/lang/String:split	(Ljava/lang/String;)[Ljava/lang/String;
     //   52: astore_2
     //   53: iconst_2
     //   54: istore_0
@@ -192,20 +305,20 @@ public final class p
     //   58: if_icmpge +41 -> 99
     //   61: aload_3
     //   62: iconst_0
-    //   63: new 144	java/lang/StringBuilder
+    //   63: new 135	java/lang/StringBuilder
     //   66: dup
-    //   67: invokespecial 242	java/lang/StringBuilder:<init>	()V
+    //   67: invokespecial 295	java/lang/StringBuilder:<init>	()V
     //   70: aload_3
     //   71: iconst_0
     //   72: aaload
-    //   73: invokevirtual 217	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   73: invokevirtual 144	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   76: aload_2
     //   77: iload_0
     //   78: aaload
-    //   79: invokevirtual 217	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   82: ldc_w 286
-    //   85: invokevirtual 217	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   88: invokevirtual 158	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   79: invokevirtual 144	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   82: ldc_w 416
+    //   85: invokevirtual 144	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   88: invokevirtual 148	java/lang/StringBuilder:toString	()Ljava/lang/String;
     //   91: aastore
     //   92: iload_0
     //   93: iconst_1
@@ -215,15 +328,15 @@ public final class p
     //   99: aload_3
     //   100: iconst_1
     //   101: aload_1
-    //   102: invokevirtual 274	java/io/BufferedReader:readLine	()Ljava/lang/String;
-    //   105: invokestatic 278	com/tencent/mm/sdk/platformtools/ay:ky	(Ljava/lang/String;)Ljava/lang/String;
-    //   108: ldc_w 280
-    //   111: invokevirtual 284	java/lang/String:split	(Ljava/lang/String;)[Ljava/lang/String;
+    //   102: invokevirtual 404	java/io/BufferedReader:readLine	()Ljava/lang/String;
+    //   105: invokestatic 408	com/tencent/mm/sdk/platformtools/be:li	(Ljava/lang/String;)Ljava/lang/String;
+    //   108: ldc_w 410
+    //   111: invokevirtual 414	java/lang/String:split	(Ljava/lang/String;)[Ljava/lang/String;
     //   114: iconst_2
     //   115: aaload
     //   116: aastore
     //   117: aload_1
-    //   118: invokevirtual 289	java/io/BufferedReader:close	()V
+    //   118: invokevirtual 419	java/io/BufferedReader:close	()V
     //   121: aload_3
     //   122: areturn
     //   123: astore_1
@@ -232,7 +345,7 @@ public final class p
     //   126: aload_1
     //   127: ifnull -6 -> 121
     //   130: aload_1
-    //   131: invokevirtual 289	java/io/BufferedReader:close	()V
+    //   131: invokevirtual 419	java/io/BufferedReader:close	()V
     //   134: aload_3
     //   135: areturn
     //   136: astore_1
@@ -242,7 +355,7 @@ public final class p
     //   140: aload_2
     //   141: ifnull +7 -> 148
     //   144: aload_2
-    //   145: invokevirtual 289	java/io/BufferedReader:close	()V
+    //   145: invokevirtual 419	java/io/BufferedReader:close	()V
     //   148: aload_1
     //   149: athrow
     //   150: astore_1
@@ -289,7 +402,7 @@ public final class p
     //   99	117	165	java/io/IOException
   }
   
-  public static String oD()
+  public static String mT()
   {
     Object localObject2 = null;
     try
@@ -303,18 +416,18 @@ public final class p
           localObject1 = localBluetoothAdapter.getAddress();
         }
       }
-      localObject1 = ay.ky((String)localObject1);
+      localObject1 = be.li((String)localObject1);
       return (String)localObject1;
     }
     catch (Exception localException)
     {
-      u.e("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", "getBlueToothAddress failed: %s", new Object[] { ay.b(localException) });
+      v.e("MicroMsg.DeviceInfo", "getBlueToothAddress failed: %s", new Object[] { be.f(localException) });
     }
     return "";
   }
   
   @SuppressLint({"NewApi"})
-  public static String oE()
+  public static String mU()
   {
     for (Object localObject = null;; localObject = str)
     {
@@ -329,7 +442,7 @@ public final class p
       catch (IncompatibleClassChangeError localIncompatibleClassChangeError)
       {
         String str;
-        u.printErrStackTrace("MicroMsg.Crash", localIncompatibleClassChangeError, "May cause dvmFindCatchBlock crash!", new Object[0]);
+        v.printErrStackTrace("MicroMsg.Crash", localIncompatibleClassChangeError, "May cause dvmFindCatchBlock crash!", new Object[0]);
         throw ((IncompatibleClassChangeError)new IncompatibleClassChangeError("May cause dvmFindCatchBlock crash!").initCause(localIncompatibleClassChangeError));
       }
       catch (Throwable localThrowable)
@@ -337,55 +450,55 @@ public final class p
         label21:
         for (;;) {}
       }
-      return ay.ky((String)localObject);
+      return be.li((String)localObject);
       str = Build.RADIO;
     }
   }
   
-  public static String oF()
+  public static String mV()
   {
     return Build.VERSION.RELEASE;
   }
   
-  public static String oG()
+  public static String mW()
   {
     try
     {
-      String str = ay.ky(((TelephonyManager)y.getContext().getSystemService("phone")).getSubscriberId());
+      String str = be.li(((TelephonyManager)aa.getContext().getSystemService("phone")).getSubscriberId());
       return str;
     }
     catch (Exception localException)
     {
-      u.printErrStackTrace("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", localException, "getPhoneIMSI", new Object[0]);
+      v.printErrStackTrace("MicroMsg.DeviceInfo", localException, "getPhoneIMSI", new Object[0]);
     }
     return "";
   }
   
-  public static String oH()
+  public static String mX()
   {
     try
     {
-      String str = ay.ky(((TelephonyManager)y.getContext().getSystemService("phone")).getSimSerialNumber());
+      String str = be.li(((TelephonyManager)aa.getContext().getSystemService("phone")).getSimSerialNumber());
       return str;
     }
     catch (Exception localException)
     {
-      u.printErrStackTrace("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", localException, "getPhoneICCID", new Object[0]);
+      v.printErrStackTrace("MicroMsg.DeviceInfo", localException, "getPhoneICCID", new Object[0]);
     }
     return "";
   }
   
   @SuppressLint({"NewApi"})
-  public static String oI()
+  public static String mY()
   {
     String str = null;
     if (Build.VERSION.SDK_INT >= 9) {
       str = Build.SERIAL;
     }
-    return ay.ky(str);
+    return be.li(str);
   }
   
-  public static Map oJ()
+  public static Map<String, String> mZ()
   {
     HashMap localHashMap = new HashMap();
     try
@@ -412,7 +525,7 @@ public final class p
     return localHashMap;
   }
   
-  public static int oK()
+  public static int na()
   {
     try
     {
@@ -423,81 +536,9 @@ public final class p
     return 1;
   }
   
-  public static String oL()
+  public static String nb()
   {
     return "android-" + Build.MODEL + "-" + Build.VERSION.SDK_INT;
-  }
-  
-  public static String ow()
-  {
-    Object localObject = (String)k.oi().get(258);
-    if (localObject != null) {
-      return (String)localObject;
-    }
-    String str = getDeviceID(y.getContext());
-    localObject = str;
-    if (str == null) {
-      localObject = "1234567890ABCDEF";
-    }
-    k.oi().set(258, localObject);
-    return (String)localObject;
-  }
-  
-  public static String ox()
-  {
-    StringBuilder localStringBuilder;
-    String str;
-    if (bsT == null)
-    {
-      localStringBuilder = new StringBuilder();
-      localStringBuilder.append(Settings.Secure.getString(y.getContext().getContentResolver(), "android_id"));
-      str = (String)k.oi().get(256);
-      if (str == null) {
-        break label160;
-      }
-      localStringBuilder.append(str);
-      str = (String)k.oi().get(259);
-      if (str == null) {
-        break label177;
-      }
-      u.d("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", "getHardWareId from file " + str);
-    }
-    for (;;)
-    {
-      localStringBuilder.append(str);
-      str = localStringBuilder.toString();
-      bsT = "A" + g.m(str.getBytes()).substring(0, 15);
-      u.w("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", "guid:%s, dev=%s", new Object[] { bsT, str });
-      return bsT;
-      label160:
-      str = oA();
-      k.oi().set(256, str);
-      break;
-      label177:
-      str = Build.MANUFACTURER + Build.MODEL + m.op();
-      k.oi().set(259, str);
-      u.d("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", "getHardWareId " + str);
-    }
-  }
-  
-  public static String oy()
-  {
-    Object localObject = (WifiManager)y.getContext().getSystemService("wifi");
-    if (localObject == null) {}
-    for (localObject = null; localObject != null; localObject = ((WifiManager)localObject).getConnectionInfo()) {
-      return ((WifiInfo)localObject).getMacAddress();
-    }
-    return null;
-  }
-  
-  public static String oz()
-  {
-    String str = null;
-    BluetoothAdapter localBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-    if (localBluetoothAdapter != null) {
-      str = localBluetoothAdapter.getAddress();
-    }
-    return str;
   }
   
   final class a

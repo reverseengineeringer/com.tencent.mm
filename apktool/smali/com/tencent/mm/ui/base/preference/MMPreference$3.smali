@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kLM:Lcom/tencent/mm/ui/base/preference/MMPreference;
+.field final synthetic llb:Lcom/tencent/mm/ui/base/preference/MMPreference;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 231
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$3;->kLM:Lcom/tencent/mm/ui/base/preference/MMPreference;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$3;->llb:Lcom/tencent/mm/ui/base/preference/MMPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,12 +38,21 @@
 # virtual methods
 .method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
     .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)Z"
+        }
+    .end annotation
 
     .prologue
     const/4 v5, 0x0
 
     .line 235
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$3;->kLM:Lcom/tencent/mm/ui/base/preference/MMPreference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$3;->llb:Lcom/tencent/mm/ui/base/preference/MMPreference;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/preference/MMPreference;->e(Lcom/tencent/mm/ui/base/preference/MMPreference;)Landroid/widget/ListView;
 
@@ -61,7 +70,7 @@
 
     .line 238
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$3;->kLM:Lcom/tencent/mm/ui/base/preference/MMPreference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$3;->llb:Lcom/tencent/mm/ui/base/preference/MMPreference;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/preference/MMPreference;->e(Lcom/tencent/mm/ui/base/preference/MMPreference;)Landroid/widget/ListView;
 
@@ -74,7 +83,7 @@
     sub-int v0, p3, v0
 
     .line 239
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$3;->kLM:Lcom/tencent/mm/ui/base/preference/MMPreference;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$3;->llb:Lcom/tencent/mm/ui/base/preference/MMPreference;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/base/preference/MMPreference;->d(Lcom/tencent/mm/ui/base/preference/MMPreference;)Lcom/tencent/mm/ui/base/preference/h;
 
@@ -87,7 +96,7 @@
     if-lt v0, v1, :cond_1
 
     .line 240
-    const-string/jumbo v1, "!44@/B4Tb64lLpI7WPWuV/POwea5Zt4GP9FSxYknwdWPxmk="
+    const-string/jumbo v1, "MicroMsg.mmui.MMPreference"
 
     const-string/jumbo v2, "itemlongclick, outofindex, %d, %d"
 
@@ -103,7 +112,7 @@
 
     const/4 v0, 0x1
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$3;->kLM:Lcom/tencent/mm/ui/base/preference/MMPreference;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$3;->llb:Lcom/tencent/mm/ui/base/preference/MMPreference;
 
     invoke-static {v4}, Lcom/tencent/mm/ui/base/preference/MMPreference;->d(Lcom/tencent/mm/ui/base/preference/MMPreference;)Lcom/tencent/mm/ui/base/preference/h;
 
@@ -119,13 +128,13 @@
 
     aput-object v4, v3, v0
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 243
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$3;->kLM:Lcom/tencent/mm/ui/base/preference/MMPreference;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$3;->llb:Lcom/tencent/mm/ui/base/preference/MMPreference;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/base/preference/MMPreference;->d(Lcom/tencent/mm/ui/base/preference/MMPreference;)Lcom/tencent/mm/ui/base/preference/h;
 

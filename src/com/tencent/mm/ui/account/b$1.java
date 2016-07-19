@@ -5,8 +5,8 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.applet.SecurityImage;
 import com.tencent.mm.ui.base.g;
 
@@ -17,15 +17,15 @@ final class b$1
   
   public final void onClick(final DialogInterface paramDialogInterface, int paramInt)
   {
-    paramDialogInterface = krJ.d(krJ.krH, krJ.kqh.getSecImgCode());
-    ah.tE().d(paramDialogInterface);
-    Context localContext = krI;
-    krI.getString(2131430877);
-    g.a(localContext, krI.getString(2131427765), true, new DialogInterface.OnCancelListener()
+    paramDialogInterface = kQR.a(kQR.kQQ, kQR.kPm.bhw());
+    ah.tF().a(paramDialogInterface, 0);
+    Context localContext = iXp;
+    iXp.getString(2131231028);
+    g.a(localContext, iXp.getString(2131233543), true, new DialogInterface.OnCancelListener()
     {
       public final void onCancel(DialogInterface paramAnonymousDialogInterface)
       {
-        ah.tE().c(paramDialogInterface);
+        ah.tF().c(paramDialogInterface);
       }
     });
   }

@@ -10,11 +10,11 @@ final class SightCameraSurfaceView$1$1
   
   public final void run()
   {
-    SightCameraSurfaceView.b(gDU.gDS).setLayoutParams(gDT);
-    if (gDU.gDS.gEk != null) {
-      gDU.gDS.gEk.awD();
+    SightCameraSurfaceView.b(gKu.gKs).setLayoutParams(gKt);
+    if (gKu.gKs.gKL != null) {
+      gKu.gKs.gKL.azc();
     }
-    gDU.gDS.n(gDU.gDS.getMeasuredWidth() / 2, gDU.gDS.getMeasuredHeight() / 2);
+    gKu.gKs.m(gKu.gKs.getMeasuredWidth() / 2, gKu.gKs.getMeasuredHeight() / 2);
   }
 }
 

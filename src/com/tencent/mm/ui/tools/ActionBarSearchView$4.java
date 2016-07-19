@@ -10,8 +10,8 @@ final class ActionBarSearchView$4
   
   public final void onClick(View paramView)
   {
-    if (ActionBarSearchView.e(ltH) != null) {
-      ActionBarSearchView.e(ltH).bil();
+    if (ActionBarSearchView.f(lUJ) != null) {
+      ActionBarSearchView.f(lUJ).boi();
     }
   }
 }

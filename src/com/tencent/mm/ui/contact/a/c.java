@@ -1,7 +1,7 @@
 package com.tencent.mm.ui.contact.a;
 
 import android.content.Context;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.i;
 import com.tencent.mm.pluginsdk.ui.d.e;
@@ -11,28 +11,28 @@ import com.tencent.mm.storage.q;
 public final class c
   extends f
 {
-  private boolean lmU;
+  private boolean lNp;
   
   public c(int paramInt)
   {
     super(paramInt);
   }
   
-  public final void er(Context paramContext)
+  public final void eu(Context paramContext)
   {
-    k localk = cId;
-    if (!lmU)
+    k localk = cFh;
+    if (!lNp)
     {
-      localk = ah.tD().rq().Ep(username);
-      cId = localk;
-      lmU = true;
+      localk = ah.tE().rr().GD(username);
+      cFh = localk;
+      lNp = true;
     }
     if (localk == null)
     {
-      cKS = "";
+      cHV = "";
       return;
     }
-    cKS = e.a(paramContext, i.d(localk), com.tencent.mm.aw.a.z(paramContext, 2131034564));
+    cHV = e.a(paramContext, i.d(localk), com.tencent.mm.az.a.D(paramContext, 2131427667));
     username = field_username;
   }
 }

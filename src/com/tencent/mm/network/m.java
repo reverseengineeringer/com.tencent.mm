@@ -8,7 +8,7 @@ import android.os.Parcel;
 public abstract interface m
   extends IInterface
 {
-  public abstract void aK(int paramInt);
+  public abstract void bc(int paramInt);
   
   public static abstract class a
     extends Binder
@@ -19,7 +19,7 @@ public abstract interface m
       attachInterface(this, "com.tencent.mm.network.IOnNetworkChange_AIDL");
     }
     
-    public static m aa(IBinder paramIBinder)
+    public static m C(IBinder paramIBinder)
     {
       if (paramIBinder == null) {
         return null;
@@ -47,7 +47,7 @@ public abstract interface m
         return true;
       }
       paramParcel1.enforceInterface("com.tencent.mm.network.IOnNetworkChange_AIDL");
-      aK(paramParcel1.readInt());
+      bc(paramParcel1.readInt());
       paramParcel2.writeNoException();
       return true;
     }
@@ -62,7 +62,12 @@ public abstract interface m
         mRemote = paramIBinder;
       }
       
-      public final void aK(int paramInt)
+      public final IBinder asBinder()
+      {
+        return mRemote;
+      }
+      
+      public final void bc(int paramInt)
       {
         Parcel localParcel1 = Parcel.obtain();
         Parcel localParcel2 = Parcel.obtain();
@@ -79,11 +84,6 @@ public abstract interface m
           localParcel2.recycle();
           localParcel1.recycle();
         }
-      }
-      
-      public final IBinder asBinder()
-      {
-        return mRemote;
       }
     }
   }

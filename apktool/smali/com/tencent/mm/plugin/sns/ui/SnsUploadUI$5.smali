@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+.field final synthetic hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1023
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$5;->hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+    .line 1053
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$5;->hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,9 +40,9 @@
     .locals 0
 
     .prologue
-    .line 1027
+    .line 1057
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 1028
+    .line 1058
     return-void
 .end method

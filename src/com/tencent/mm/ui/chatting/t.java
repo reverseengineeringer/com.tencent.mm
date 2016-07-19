@@ -1,82 +1,252 @@
 package com.tencent.mm.ui.chatting;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
-import com.tencent.mm.d.a.jh;
-import com.tencent.mm.model.ar;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.am;
-import com.tencent.mm.sdk.platformtools.am.a;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.base.g;
-import com.tencent.mm.ui.base.p;
+import android.content.res.Resources;
+import android.graphics.drawable.ColorDrawable;
+import android.text.TextPaint;
+import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.MeasureSpec;
+import android.view.View.OnKeyListener;
+import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.BaseAdapter;
+import android.widget.FrameLayout;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.PopupWindow.OnDismissListener;
+import android.widget.TextView;
+import com.tencent.mm.az.a;
+import com.tencent.mm.pluginsdk.ui.d.e;
+import com.tencent.mm.ui.base.MMListPopupWindow;
+import com.tencent.mm.ui.base.o;
+import com.tencent.mm.v.m.b.b.a;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
 
 public final class t
+  implements View.OnKeyListener, AdapterView.OnItemClickListener, PopupWindow.OnDismissListener
 {
-  public static void a(Context paramContext, Set paramSet, dl paramdl)
+  private int height;
+  private LayoutInflater ib;
+  AdapterView.OnItemClickListener lrS = null;
+  private ViewGroup lrT = null;
+  private b lrU = null;
+  private MMListPopupWindow lrV;
+  private int lrW = 2131493376;
+  private int lrX;
+  m.b.b.a lrY = null;
+  private boolean lrZ = true;
+  private Context mContext = null;
+  private int mCount;
+  
+  public t(Context paramContext, ViewGroup paramViewGroup)
   {
-    if (paramContext == null)
-    {
-      u.w("!44@/B4Tb64lLpKwUcOR+EdWcuVetlyqrLmXeAKxqz/PXGE=", "do delete msg fail, context is null");
-      return;
-    }
-    if ((paramSet == null) || (paramSet.isEmpty()))
-    {
-      u.w("!44@/B4Tb64lLpKwUcOR+EdWcuVetlyqrLmXeAKxqz/PXGE=", "do delete msg fail, select ids is empty");
-      return;
-    }
-    paramContext.getString(2131430877);
-    paramContext = g.a(paramContext, paramContext.getString(2131427912), false, null);
-    cp.kWq.c(new a(paramSet, paramContext, paramdl));
-    h.fUJ.g(10811, new Object[] { Integer.valueOf(4), Integer.valueOf(paramSet.size()) });
+    mContext = paramContext;
+    lrT = paramViewGroup;
+    ib = ((LayoutInflater)paramContext.getSystemService("layout_inflater"));
+    bjG();
+    lrU = new b((byte)0);
   }
   
-  private static final class a
-    implements am.a
+  private int b(ListAdapter paramListAdapter)
   {
-    private Set kSe;
-    private p kSf;
-    private dl kSg;
-    
-    public a(Set paramSet, p paramp, dl paramdl)
+    int n = View.MeasureSpec.makeMeasureSpec(0, 0);
+    int i1 = View.MeasureSpec.makeMeasureSpec(0, 0);
+    int i2 = paramListAdapter.getCount();
+    int j = 0;
+    int i = 0;
+    View localView = null;
+    int k = 0;
+    if (j < i2)
     {
-      kSe = paramSet;
-      kSf = paramp;
-      kSg = paramdl;
-    }
-    
-    public final boolean vd()
-    {
-      Object localObject = kSe;
-      LinkedList localLinkedList = new LinkedList();
-      localObject = ((Set)localObject).iterator();
-      while (((Iterator)localObject).hasNext())
-      {
-        Long localLong = (Long)((Iterator)localObject).next();
-        localLinkedList.add(localLong);
-        jh localjh = new jh();
-        aFM.type = 3;
-        aFM.avg = localLong.longValue();
-        a.jUF.j(localjh);
+      int m = paramListAdapter.getItemViewType(j);
+      if (m == i) {
+        break label127;
       }
-      ar.n(localLinkedList);
+      localView = null;
+      i = m;
+    }
+    label127:
+    for (;;)
+    {
+      if (lrT == null) {
+        lrT = new FrameLayout(mContext);
+      }
+      localView = paramListAdapter.getView(j, localView, lrT);
+      localView.measure(n, i1);
+      k = Math.max(k, localView.getMeasuredWidth());
+      j += 1;
+      break;
+      return k;
+    }
+  }
+  
+  @SuppressLint({"WrongCall"})
+  public final boolean a(m.b.b.a parama, int paramInt1, int paramInt2, boolean paramBoolean)
+  {
+    if ((!isShowing()) && (parama != null) && (bBJ != null) && (bBJ.size() > 0))
+    {
+      if ((lrY == null) || (lrY.id != id) || (!lrY.DF.equals(DF)) || (lrZ))
+      {
+        lrZ = false;
+        lrY = parama;
+        mCount = bBJ.size();
+        lrU.notifyDataSetChanged();
+      }
+      height = ((WindowManager)mContext.getSystemService("window")).getDefaultDisplay().getHeight();
+      TextView localTextView = (TextView)((LayoutInflater)mContext.getSystemService("layout_inflater")).inflate(2130903263, null);
+      parama = a.a(mContext, localTextView.getPaint(), bBJ, paramInt1);
+      lrX = (paramInt2 - lrU.getCount() * mContext.getResources().getDimensionPixelSize(2131427703) - mContext.getResources().getDimensionPixelSize(2131427576));
+      new StringBuilder("showPointY=").append(paramInt2).append("verticalOffset=").append(lrX);
+      lrV = new MMListPopupWindow(mContext, null, 0);
+      lrV.setOnDismissListener(this);
+      lrV.qo = lrS;
+      lrV.setAdapter(lrU);
+      lrV.cg();
+      lrV.setBackgroundDrawable(mContext.getResources().getDrawable(2130839417));
+      lrV.setAnimationStyle(lrW);
+      lrV.qd = lsc;
+      lrV.setVerticalOffset(lrX);
+      lrV.qm = lrT;
+      lrV.setContentWidth(b(lrU));
+      lrV.ch();
+      lrV.show();
+      lrV.lek.setOnKeyListener(this);
+      lrV.lek.setDivider(new ColorDrawable(mContext.getResources().getColor(2131689978)));
+      lrV.lek.setSelector(mContext.getResources().getDrawable(2130838021));
+      lrV.lek.setDividerHeight(1);
+      lrV.lek.setVerticalScrollBarEnabled(false);
+      lrV.lek.setHorizontalScrollBarEnabled(false);
       return true;
     }
-    
-    public final boolean ve()
+    return false;
+  }
+  
+  public final boolean bjG()
+  {
+    if (isShowing())
     {
-      if (kSf != null)
+      lrV.dismiss();
+      return true;
+    }
+    return false;
+  }
+  
+  public final boolean isShowing()
+  {
+    return (lrV != null) && (lrV.cUC.isShowing());
+  }
+  
+  public final void onDismiss() {}
+  
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong) {}
+  
+  public final boolean onKey(View paramView, int paramInt, KeyEvent paramKeyEvent)
+  {
+    return false;
+  }
+  
+  public static final class a
+  {
+    private static DisplayMetrics lsa = null;
+    
+    public static a a(Context paramContext, TextPaint paramTextPaint, List<m.b.b.a> paramList, int paramInt)
+    {
+      a locala = new a();
+      if (lsa == null) {
+        lsa = paramContext.getResources().getDisplayMetrics();
+      }
+      DisplayMetrics localDisplayMetrics = lsa;
+      paramList = paramList.iterator();
+      float f1 = 0.0F;
+      if (paramList.hasNext())
       {
-        kSf.dismiss();
-        if (kSg != null) {
-          kSg.rd(dl.a.lcC);
+        float f2 = paramTextPaint.measureText(nextname);
+        if (f1 >= f2) {
+          break label225;
+        }
+        f1 = f2;
+      }
+      label225:
+      for (;;)
+      {
+        break;
+        int i = (int)f1;
+        i = a.fromDPToPix(paramContext, 30) * 2 + i;
+        int j = a.fromDPToPix(paramContext, 95);
+        if (i < j) {
+          i = j;
+        }
+        for (;;)
+        {
+          if (paramInt - i / 2 < 0)
+          {
+            lsb = 0;
+            lsc = (widthPixels - (i + 0));
+            return locala;
+          }
+          if (widthPixels - (i / 2 + paramInt) < 0)
+          {
+            lsb = (widthPixels - (i + 0));
+            lsc = 0;
+            return locala;
+          }
+          lsb = (paramInt - i / 2);
+          lsc = (widthPixels - (i / 2 + paramInt));
+          return locala;
         }
       }
-      return true;
+    }
+    
+    public static final class a
+    {
+      public int lsb;
+      public int lsc;
+      
+      public final String toString()
+      {
+        return " marginLeft:" + lsb + " marginRight:" + lsc;
+      }
+    }
+  }
+  
+  private final class b
+    extends BaseAdapter
+  {
+    private b() {}
+    
+    private m.b.b.a ta(int paramInt)
+    {
+      return (m.b.b.a)bbBJ.get(paramInt);
+    }
+    
+    public final int getCount()
+    {
+      return t.a(t.this);
+    }
+    
+    public final long getItemId(int paramInt)
+    {
+      return paramInt;
+    }
+    
+    public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
+    {
+      if (paramView == null) {}
+      for (paramView = (TextView)t.c(t.this).inflate(2130903263, paramViewGroup, false);; paramView = (TextView)paramView)
+      {
+        paramViewGroup = ta(paramInt);
+        paramView.setTag(paramViewGroup);
+        paramView.setText(e.a(t.d(t.this), name));
+        return paramView;
+      }
     }
   }
 }

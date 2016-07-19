@@ -10,9 +10,9 @@ final class SnsSightUploadSayFooter$3
   
   public final void run()
   {
-    SnsSightUploadSayFooter.b(hiw).performClick();
-    SnsSightUploadSayFooter.b(hiw).requestFocus();
-    SnsSightUploadSayFooter.c(hiw).apz();
+    SnsSightUploadSayFooter.b(hxl).performClick();
+    SnsSightUploadSayFooter.b(hxl).requestFocus();
+    SnsSightUploadSayFooter.c(hxl).asv();
   }
 }
 

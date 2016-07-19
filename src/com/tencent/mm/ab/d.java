@@ -1,297 +1,75 @@
 package com.tencent.mm.ab;
 
-import android.content.ContentValues;
-import android.database.Cursor;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.bc.g.b;
+import com.tencent.mm.model.ae;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.bc;
+import com.tencent.mm.plugin.subapp.a;
+import com.tencent.mm.sdk.platformtools.v;
+import java.util.HashMap;
 
-public final class d
+public class d
+  implements ae
 {
-  public int aou = -2;
-  int awK;
-  public int bEp;
-  private boolean bQA;
-  boolean bQB;
-  private boolean bQC;
-  private boolean bQD;
-  private boolean bQE;
-  public long bQc;
-  public long bQd;
-  public String bQe = "";
-  public String bQf = "";
-  int bQg;
-  private String bQh = "";
-  int bQi;
-  public long bQj;
-  int bQk;
-  public int bQl = 0;
-  public String bQm = "";
-  int bQn = 1;
-  private boolean bQo;
-  private boolean bQp;
-  private boolean bQq;
-  private boolean bQr;
-  private boolean bQs;
-  private boolean bQt;
-  private boolean bQu;
-  private boolean bQv;
-  private boolean bQw;
-  private boolean bQx;
-  private boolean bQy;
-  boolean bQz;
-  int bcL = 0;
-  public int offset;
-  public int status;
+  private static HashMap<Integer, g.b> aZa;
+  private b bIx;
+  private c bIy;
   
-  public final void W(long paramLong)
+  static
   {
-    bQj = paramLong;
-    bQv = true;
-  }
-  
-  public final void X(long paramLong)
-  {
-    bQc = paramLong;
-    bQo = true;
-  }
-  
-  public final void bk(int paramInt)
-  {
-    status = paramInt;
-    bQw = true;
-  }
-  
-  public final void c(Cursor paramCursor)
-  {
-    bQc = paramCursor.getInt(0);
-    bQd = paramCursor.getLong(1);
-    offset = paramCursor.getInt(2);
-    bEp = paramCursor.getInt(3);
-    bQe = paramCursor.getString(4);
-    bQf = paramCursor.getString(5);
-    bQi = paramCursor.getInt(6);
-    bQj = paramCursor.getInt(7);
-    status = paramCursor.getInt(8);
-    bQk = paramCursor.getInt(9);
-    bQl = paramCursor.getInt(10);
-    awK = paramCursor.getInt(11);
-    bQm = paramCursor.getString(12);
-    bcL = paramCursor.getInt(14);
-    bQn = paramCursor.getInt(15);
-    bQh = paramCursor.getString(16);
-    bQg = paramCursor.getInt(17);
-  }
-  
-  public final void dk(int paramInt)
-  {
-    bQk = paramInt;
-    bQx = true;
-  }
-  
-  public final void dl(int paramInt)
-  {
-    bQi = paramInt;
-    bQu = true;
-  }
-  
-  public final void dm(int paramInt)
-  {
-    bEp = paramInt;
-    bQr = true;
-  }
-  
-  public final void dn(int paramInt)
-  {
-    bQl = paramInt;
-    bQy = true;
-  }
-  
-  public final void jdMethod_do(int paramInt)
-  {
-    if (bQn != paramInt) {
-      bQC = true;
-    }
-    bQn = paramInt;
-  }
-  
-  public final void dp(int paramInt)
-  {
-    bQg = paramInt;
-    bQE = true;
-  }
-  
-  public final void hG(String paramString)
-  {
-    bQh = paramString;
-    bQD = true;
-  }
-  
-  public final void hH(String paramString)
-  {
-    bQe = paramString;
-    bQs = true;
-  }
-  
-  public final void hI(String paramString)
-  {
-    bQf = paramString;
-    bQt = true;
-  }
-  
-  public final void hJ(String paramString)
-  {
-    if (((bQm == null) && (paramString != null)) || ((bQm != null) && (!bQm.equals(paramString)))) {
-      bQA = true;
-    }
-    bQm = paramString;
-  }
-  
-  public final ContentValues lX()
-  {
-    ContentValues localContentValues = new ContentValues();
-    if (bQo) {
-      localContentValues.put("id", Long.valueOf(bQc));
-    }
-    if (bQp) {
-      localContentValues.put("msgSvrId", Long.valueOf(bQd));
-    }
-    if (bQq) {
-      localContentValues.put("offset", Integer.valueOf(offset));
-    }
-    if (bQr) {
-      localContentValues.put("totalLen", Integer.valueOf(bEp));
-    }
-    if (bQs) {
-      localContentValues.put("bigImgPath", bQe);
-    }
-    if (bQt) {
-      localContentValues.put("thumbImgPath", bQf);
-    }
-    if (bQu) {
-      localContentValues.put("createtime", Integer.valueOf(bQi));
-    }
-    if (bQv) {
-      localContentValues.put("msglocalid", Long.valueOf(bQj));
-    }
-    if (bQw) {
-      localContentValues.put("status", Integer.valueOf(status));
-    }
-    if (bQx) {
-      localContentValues.put("nettimes", Integer.valueOf(bQk));
-    }
-    if (bQy) {
-      localContentValues.put("reserved1", Integer.valueOf(bQl));
-    }
-    if (bQz) {
-      localContentValues.put("reserved2", Integer.valueOf(awK));
-    }
-    if (bQA) {
-      localContentValues.put("reserved3", bQm);
-    }
-    if (bQB) {
-      localContentValues.put("hashdthumb", Integer.valueOf(bcL));
-    }
-    if (bQC) {
-      if (offset >= bEp) {
-        break label348;
-      }
-    }
-    label348:
-    for (int i = 0;; i = 1)
+    HashMap localHashMap = new HashMap();
+    aZa = localHashMap;
+    localHashMap.put(Integer.valueOf("GETCONTACTINFO_TABLE".hashCode()), new g.b()
     {
-      localContentValues.put("iscomplete", Integer.valueOf(i));
-      if (bQD) {
-        localContentValues.put("origImgMD5", bQh);
+      public final String[] kE()
+      {
+        return b.bkN;
       }
-      if (bQE) {
-        localContentValues.put("compressType", Integer.valueOf(bQg));
-      }
-      return localContentValues;
-    }
+    });
   }
   
-  public final long mj()
+  private static d zX()
   {
-    return bQd;
-  }
-  
-  public final void setOffset(int paramInt)
-  {
-    int i = 0;
-    if (offset != paramInt) {
-      bQq = true;
-    }
-    offset = paramInt;
-    u.e("MicroMsg.Imgfo", "set offset : %d  id:%d total:%d", new Object[] { Integer.valueOf(paramInt), Long.valueOf(bQj), Integer.valueOf(bEp) });
-    if (paramInt < bEp) {}
-    for (paramInt = i;; paramInt = 1)
+    a locala = (a)ah.tl().fH("plugin.subapp");
+    d locald2 = (d)locala.xu(d.class.getName());
+    d locald1 = locald2;
+    if (locald2 == null)
     {
-      jdMethod_do(paramInt);
-      return;
+      locald1 = new d();
+      locala.b(d.class.getName(), locald1);
     }
+    return locald1;
   }
   
-  public final void u(long paramLong)
+  public static b zY()
   {
-    if (bQd != paramLong) {
-      bQp = true;
+    if (tEuin == 0) {
+      throw new com.tencent.mm.model.b();
     }
-    bQd = paramLong;
+    if (zXbIx == null) {
+      zXbIx = new b(tEbsy);
+    }
+    return zXbIx;
   }
   
-  public final long zS()
+  public final void aj(boolean paramBoolean)
   {
-    return bQj;
+    if (bIy == null) {
+      bIy = new c();
+    }
+    com.tencent.mm.model.z.a.btv = bIy;
+    v.d("SubCoreGetContact", "summergetcontac onAccountPostReset setGetContact[%s]", new Object[] { bIy });
   }
   
-  public final long zT()
-  {
-    return bQc;
-  }
+  public final void ak(boolean paramBoolean) {}
   
-  public final String zU()
-  {
-    return bQe;
-  }
+  public final void cu(int paramInt) {}
   
-  public final String zV()
-  {
-    return bQf;
-  }
+  public final void ok() {}
   
-  public final boolean zW()
+  public final HashMap<Integer, g.b> ol()
   {
-    return (bEp != 0) && (bEp == offset);
-  }
-  
-  public final boolean zX()
-  {
-    return bQl > 0;
-  }
-  
-  public final String zY()
-  {
-    return bQm;
-  }
-  
-  public final void zZ()
-  {
-    bQo = false;
-    bQp = false;
-    bQq = false;
-    bQr = false;
-    bQs = false;
-    bQt = false;
-    bQu = false;
-    bQv = false;
-    bQw = false;
-    bQx = false;
-    bQy = false;
-    bQz = false;
-    bQA = false;
-    bQB = false;
-    bQC = false;
-    bQD = false;
-    bQE = false;
+    return aZa;
   }
 }
 

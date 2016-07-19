@@ -1,17 +1,14 @@
 package com.tencent.mm.ui;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
+import com.tencent.mm.e.a.bf;
+import com.tencent.mm.sdk.c.c;
 
 final class LauncherUI$50
-  implements DialogInterface.OnClickListener
+  extends c<bf>
 {
-  LauncherUI$50(LauncherUI paramLauncherUI) {}
-  
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  LauncherUI$50(LauncherUI paramLauncherUI)
   {
-    knl.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
+    kum = bf.class.getName().hashCode();
   }
 }
 

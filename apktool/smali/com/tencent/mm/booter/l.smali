@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static bnd:J
+.field private static baK:J
 
 
 # direct methods
@@ -15,59 +15,61 @@
     .line 10
     const-wide/32 v0, 0x5265c00
 
-    sput-wide v0, Lcom/tencent/mm/booter/l;->bnd:J
+    sput-wide v0, Lcom/tencent/mm/booter/l;->baK:J
 
     return-void
 .end method
 
 .method public static run()V
-    .locals 6
+    .locals 8
 
     .prologue
     const/4 v1, 0x1
 
+    const/4 v2, 0x0
+
     .line 13
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
-    const v2, 0x14018
+    const v3, 0x14018
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v3, v4}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Long;
 
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/t;->c(Ljava/lang/Long;)J
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/s;->c(Ljava/lang/Long;)J
 
-    move-result-wide v2
+    move-result-wide v4
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v2
+    move-result-wide v4
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/platformtools/t;->am(J)J
+    invoke-static {v4, v5}, Lcom/tencent/mm/platformtools/s;->at(J)J
 
-    move-result-wide v2
+    move-result-wide v4
 
-    const-wide/16 v4, 0x3e8
+    const-wide/16 v6, 0x3e8
 
-    mul-long/2addr v2, v4
+    mul-long/2addr v4, v6
 
-    sget-wide v4, Lcom/tencent/mm/booter/l;->bnd:J
+    sget-wide v6, Lcom/tencent/mm/booter/l;->baK:J
 
-    cmp-long v0, v2, v4
+    cmp-long v0, v4, v6
 
     if-lez v0, :cond_1
 
@@ -77,57 +79,57 @@
     if-eqz v0, :cond_0
 
     .line 14
-    invoke-static {}, Lcom/tencent/mm/al/c;->Dd()Lcom/tencent/mm/al/c;
+    invoke-static {}, Lcom/tencent/mm/ao/c;->Dn()Lcom/tencent/mm/ao/c;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/al/c;->De()V
+    invoke-static {}, Lcom/tencent/mm/ao/c;->Do()V
 
-    iget-boolean v2, v0, Lcom/tencent/mm/al/c;->bXC:Z
+    iget-boolean v3, v0, Lcom/tencent/mm/ao/c;->bRi:Z
 
-    if-nez v2, :cond_0
+    if-nez v3, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->isSDCardAvailable()Z
+    invoke-virtual {v3}, Lcom/tencent/mm/model/c;->isSDCardAvailable()Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_0
+    if-eqz v3, :cond_0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/al/c;->release()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ao/c;->release()V
 
-    iput-boolean v1, v0, Lcom/tencent/mm/al/c;->bXC:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/ao/c;->bRi:Z
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
-    const/16 v2, 0x9f
+    const/16 v3, 0x9f
 
-    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v1, v3, v0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
-    new-instance v0, Lcom/tencent/mm/ah/k;
+    new-instance v0, Lcom/tencent/mm/ak/k;
 
     const/16 v1, 0x9
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/ah/k;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/ak/k;-><init>(I)V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
     .line 16
     :cond_0
     return-void
 
-    .line 13
     :cond_1
-    const/4 v0, 0x0
+    move v0, v2
 
+    .line 13
     goto :goto_0
 .end method

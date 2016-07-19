@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto">
+    <PreferenceSmallCategory />
+    <com.tencent.mm.ui.friend.FriendSnsPreference android:title="@string/cp4" android:key="album_dyna_photo_ui_title" />
+    <PreferenceSmallCategory />
+    <NormalIconPreference android:title="@string/aqy" android:icon="@raw/find_more_friend_scan" android:key="find_friends_by_qrcode" />
+    <NormalIconPreference android:title="@string/clb" android:icon="@raw/find_more_friend_shake" android:key="find_friends_by_shake" />
+    <PreferenceSmallCategory />
+    <NormalIconPreference android:title="@string/bnr" android:icon="@raw/find_more_friend_near_icon" android:key="find_friends_by_near" />
+    <NormalIconPreference android:title="@string/qk" android:icon="@raw/find_more_friend_bottle" android:key="voice_bottle" />
+    <PreferenceSmallCategory />
+    <NormalIconPreference android:key="jd_market_entrance" />
+    <NormalIconPreference android:title="@string/b0w" android:icon="@raw/userguide_gamecenter_icon" android:key="more_tab_game_recommend" />
+    <NormalIconPreference android:title="@string/aft" android:icon="@raw/find_more_emji" android:key="settings_emoji_store" />
+    <PreferenceSmallCategory />
+    <NormalIconPreference android:title="@string/b7b" android:icon="@raw/find_more_friend_ipcall" android:key="ip_call_entrance" />
+</PreferenceScreen>

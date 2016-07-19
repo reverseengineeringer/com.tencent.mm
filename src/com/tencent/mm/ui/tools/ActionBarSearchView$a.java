@@ -2,7 +2,7 @@ package com.tencent.mm.ui.tools;
 
 public abstract interface ActionBarSearchView$a
 {
-  public abstract void bil();
+  public abstract void boi();
 }
 
 /* Location:

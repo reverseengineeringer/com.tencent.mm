@@ -1,16 +1,19 @@
 package com.tencent.mm.sdk.platformtools;
 
-final class ba
-  implements aj.a
+import java.util.HashMap;
+
+public final class ba
 {
-  ba(az paramaz) {}
+  private static final HashMap<String, String> kyp = new HashMap();
   
-  public final boolean lO()
+  public static String getProperty(String paramString)
   {
-    long l = System.currentTimeMillis();
-    iaN.eK(false);
-    t.i("!32@/B4Tb64lLpKVcgwO/AJ6cRDJPmRljB7e", "summer timer onTimerExpired e appendAll takes: " + (System.currentTimeMillis() - l) + " ms");
-    return false;
+    return (String)kyp.get(paramString);
+  }
+  
+  public static void setProperty(String paramString1, String paramString2)
+  {
+    kyp.put(paramString1, paramString2);
   }
 }
 

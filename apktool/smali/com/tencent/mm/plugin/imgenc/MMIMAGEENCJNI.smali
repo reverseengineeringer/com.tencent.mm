@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "!24@MlsgdbJvd2EgUxIUKgxiZA=="
+.field public static final TAG:Ljava/lang/String; = "MMIMAGEENCJNI"
 
 
 # direct methods

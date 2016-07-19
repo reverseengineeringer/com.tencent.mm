@@ -4,20 +4,20 @@
 
 
 # virtual methods
-.method public abstract Ct(Ljava/lang/String;)V
-.end method
-
-.method public abstract J(II)V
+.method public abstract L(II)V
 .end method
 
 .method public abstract a(Lcom/tencent/mm/sandbox/monitor/c;)V
 .end method
 
-.method public abstract aTT()V
+.method public abstract aAB()V
 .end method
 
-.method public abstract aTU()V
+.method public abstract aYQ()V
 .end method
 
-.method public abstract ayb()V
+.method public abstract aYR()V
+.end method
+
+.method public abstract wt(Ljava/lang/String;)V
 .end method

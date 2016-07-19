@@ -3,7 +3,7 @@ package com.tencent.mm.sandbox.updater;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import com.tencent.mm.sandbox.monitor.c;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class AppUpdaterUI$12
   implements DialogInterface.OnClickListener
@@ -12,14 +12,14 @@ final class AppUpdaterUI$12
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    u.d("!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/", "click download button");
-    AppUpdaterUI.a(jTb, 11);
-    if (jTe != null) {
-      jTe.deleteTempFile();
+    v.d("MicroMsg.AppUpdaterUI", "click download button");
+    AppUpdaterUI.a(ksv, 11);
+    if (ksy != null) {
+      ksy.deleteTempFile();
     }
-    paramDialogInterface = AppUpdaterUI.e(jTb);
-    jUg = true;
-    paramDialogInterface.aUg();
+    paramDialogInterface = AppUpdaterUI.e(ksv);
+    ktF = true;
+    paramDialogInterface.aZf();
   }
 }
 

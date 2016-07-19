@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic krj:Lcom/tencent/mm/ui/SingleChatInfoUI;
+.field final synthetic kQq:Lcom/tencent/mm/ui/SingleChatInfoUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 75
-    iput-object p1, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$1;->krj:Lcom/tencent/mm/ui/SingleChatInfoUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/SingleChatInfoUI$1;->kQq:Lcom/tencent/mm/ui/SingleChatInfoUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

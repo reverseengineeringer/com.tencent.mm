@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sns.ui;
 
 public abstract interface TestTimeForSns$a
 {
-  public abstract void kw();
+  public abstract void iZ();
 }
 
 /* Location:

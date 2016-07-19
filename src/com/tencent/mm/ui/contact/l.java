@@ -8,11 +8,11 @@ public abstract interface l
 {
   public abstract boolean a(a parama);
   
+  public abstract ListView azv();
+  
   public abstract boolean b(a parama);
   
   public abstract Activity getActivity();
-  
-  public abstract ListView getContentLV();
 }
 
 /* Location:

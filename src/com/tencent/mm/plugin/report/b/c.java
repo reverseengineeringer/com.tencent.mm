@@ -3,93 +3,97 @@ package com.tencent.mm.plugin.report.b;
 import com.tencent.c.a.a.f;
 import com.tencent.c.a.a.i;
 import com.tencent.mm.compatible.d.p;
-import com.tencent.mm.protocal.b.aji;
-import com.tencent.mm.protocal.b.ajj;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.t;
-import com.tencent.mm.r.t.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.protocal.b.ajv;
+import com.tencent.mm.protocal.b.ajw;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.h;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.t;
+import com.tencent.mm.t.t.a;
 
 public final class c
 {
-  private static i fTQ = i.Q(y.getContext());
-  private static int fTR = 2;
+  private static i gdk = i.M(aa.getContext());
+  private static int gdl = 2;
   
-  public static String aqo()
+  public static String atq()
   {
     try
     {
       i.a(new f()
       {
-        public final void aq(String paramAnonymousString)
+        public final void au(String paramAnonymousString)
         {
-          u.i("!32@/B4Tb64lLpKISRvsDhywQKz8I7hoCJH1", "QueryMid onDispatch2WXServer req:%s limit:%d", new Object[] { paramAnonymousString, Integer.valueOf(c.aa()) });
-          if (c.kF() <= 0)
+          v.i("MicroMsg.MidHelper", "QueryMid onDispatch2WXServer req:%s limit:%d", new Object[] { paramAnonymousString, Integer.valueOf(c.gdl) });
+          if (c.jf() <= 0)
           {
-            u.e("!32@/B4Tb64lLpKISRvsDhywQKz8I7hoCJH1", "THE FUCKING querymid do too much! :%d", new Object[] { Integer.valueOf(c.aa()) });
+            v.e("MicroMsg.MidHelper", "THE FUCKING querymid do too much! :%d", new Object[] { Integer.valueOf(c.gdl) });
             return;
           }
           Object localObject = new a.a();
-          bFa = new aji();
-          bFb = new ajj();
+          byl = new ajv();
+          bym = new ajw();
           uri = "/cgi-bin/micromsg-bin/querymid";
-          bEY = 684;
-          localObject = ((a.a)localObject).vy();
-          bEW.bFf).jFF = paramAnonymousString;
-          bEW.bFf).eiL = 1;
+          byj = 684;
+          localObject = ((a.a)localObject).vA();
+          byh.byq).keb = paramAnonymousString;
+          byh.byq).emN = 1;
           t.a((a)localObject, new t.a()
           {
             public final int a(int paramAnonymous2Int1, int paramAnonymous2Int2, String paramAnonymous2String, a paramAnonymous2a, j paramAnonymous2j)
             {
-              u.i("!32@/B4Tb64lLpKISRvsDhywQKz8I7hoCJH1", "onGYNetEnd errType:%d errCode:%d msg:%s", new Object[] { Integer.valueOf(paramAnonymous2Int1), Integer.valueOf(paramAnonymous2Int2), paramAnonymous2String });
+              v.i("MicroMsg.MidHelper", "onGYNetEnd errType:%d errCode:%d msg:%s", new Object[] { Integer.valueOf(paramAnonymous2Int1), Integer.valueOf(paramAnonymous2Int2), paramAnonymous2String });
               return 0;
             }
           }, true);
         }
       });
-      String str = fTQ.kc();
-      u.i("!32@/B4Tb64lLpKISRvsDhywQKz8I7hoCJH1", "QueryMid try Get Now getMid:%s getLocalMid:%s", new Object[] { str, fTQ.kd() });
+      String str = gdk.iD();
+      v.i("MicroMsg.MidHelper", "QueryMid try Get Now getMid:%s getLocalMid:%s", new Object[] { str, gdk.iE() });
       return str;
     }
     catch (Exception localException)
     {
-      u.e("!32@/B4Tb64lLpKISRvsDhywQKz8I7hoCJH1", "QueryMid Error e:%s", new Object[] { ay.b(localException) });
+      v.e("MicroMsg.MidHelper", "QueryMid Error e:%s", new Object[] { be.f(localException) });
     }
     return "";
   }
   
-  public static int l(int paramInt1, int paramInt2, String paramString)
+  public static int j(int paramInt1, int paramInt2, String paramString)
   {
     int i = 0;
-    if (!com.tencent.mm.model.ah.rh())
+    if (!ah.rg())
     {
-      u.i("!32@/B4Tb64lLpKISRvsDhywQKz8I7hoCJH1", "checkReportMid acc not ready");
+      v.i("MicroMsg.MidHelper", "checkReportMid acc not ready");
       i = -1;
     }
     long l;
     do
     {
       return i;
-      l = ay.FR();
-    } while ((paramInt1 == 3) && (ay.a((Long)com.tencent.mm.model.ah.tD().rn().get(331778, null), 0L) >= l));
-    if (com.tencent.mm.sdk.platformtools.ah.dx(y.getContext())) {
+      l = be.Go();
+    } while ((paramInt1 == 3) && (be.a((Long)ah.tE().ro().get(331778, null), 0L) >= l));
+    if (ak.dy(aa.getContext())) {
       i = 1;
     }
     for (;;)
     {
-      String str = aqo();
-      u.i("!32@/B4Tb64lLpKISRvsDhywQKz8I7hoCJH1", "querymid checkReportMid moment:%d mid[%s]", new Object[] { Integer.valueOf(paramInt1), str });
-      com.tencent.mm.plugin.report.service.h.fUJ.g(11402, new Object[] { str, Integer.valueOf(paramInt1), Integer.valueOf(i), p.ox(), Integer.valueOf(paramInt2), paramString, com.tencent.mm.sdk.platformtools.ah.dv(y.getContext()), Integer.valueOf(0), p.getDeviceID(y.getContext()) });
-      com.tencent.mm.model.ah.tD().rn().set(331778, Long.valueOf(259200L + l));
+      String str = atq();
+      v.i("MicroMsg.MidHelper", "querymid checkReportMid moment:%d mid[%s]", new Object[] { Integer.valueOf(paramInt1), str });
+      g.gdY.h(11402, new Object[] { str, Integer.valueOf(paramInt1), Integer.valueOf(i), p.mN(), Integer.valueOf(paramInt2), paramString, ak.dw(aa.getContext()), Integer.valueOf(0), p.getDeviceID(aa.getContext()) });
+      ah.tE().ro().set(331778, Long.valueOf(259200L + l));
       return 0;
-      if (com.tencent.mm.sdk.platformtools.ah.dB(y.getContext())) {
+      if (ak.dC(aa.getContext())) {
         i = 3;
-      } else if (com.tencent.mm.sdk.platformtools.ah.dA(y.getContext())) {
+      } else if (ak.dB(aa.getContext())) {
         i = 2;
       } else {
         i = 0;
@@ -98,24 +102,24 @@ public final class c
   }
   
   /* Error */
-  public static void sI(String paramString)
+  public static void uk(String paramString)
   {
     // Byte code:
-    //   0: getstatic 28	com/tencent/mm/plugin/report/b/c:fTQ	Lcom/tencent/c/a/a/i;
+    //   0: getstatic 28	com/tencent/mm/plugin/report/b/c:gdk	Lcom/tencent/c/a/a/i;
     //   3: astore_1
     //   4: getstatic 172	com/tencent/c/a/a/i:mContext	Landroid/content/Context;
     //   7: ifnull +68 -> 75
     //   10: invokestatic 177	java/lang/System:currentTimeMillis	()J
-    //   13: putstatic 181	com/tencent/c/a/a/i:ajV	J
+    //   13: putstatic 181	com/tencent/c/a/a/i:VO	J
     //   16: ldc2_w 182
-    //   19: putstatic 188	com/tencent/c/a/a/n:akg	J
+    //   19: putstatic 188	com/tencent/c/a/a/n:VZ	J
     //   22: getstatic 172	com/tencent/c/a/a/i:mContext	Landroid/content/Context;
     //   25: invokestatic 194	android/preference/PreferenceManager:getDefaultSharedPreferences	(Landroid/content/Context;)Landroid/content/SharedPreferences;
     //   28: invokeinterface 200 1 0
     //   33: astore_2
     //   34: aload_2
     //   35: ldc -54
-    //   37: getstatic 181	com/tencent/c/a/a/i:ajV	J
+    //   37: getstatic 181	com/tencent/c/a/a/i:VO	J
     //   40: invokeinterface 208 4 0
     //   45: pop
     //   46: aload_2
@@ -137,10 +141,10 @@ public final class c
     //   80: anewarray 4	java/lang/Object
     //   83: dup
     //   84: iconst_0
-    //   85: getstatic 28	com/tencent/mm/plugin/report/b/c:fTQ	Lcom/tencent/c/a/a/i;
-    //   88: invokevirtual 54	com/tencent/c/a/a/i:kd	()Ljava/lang/String;
+    //   85: getstatic 28	com/tencent/mm/plugin/report/b/c:gdk	Lcom/tencent/c/a/a/i;
+    //   88: invokevirtual 54	com/tencent/c/a/a/i:iE	()Ljava/lang/String;
     //   91: aastore
-    //   92: invokestatic 60	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   92: invokestatic 60	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   95: return
     //   96: astore_0
     //   97: ldc 49
@@ -150,9 +154,9 @@ public final class c
     //   105: dup
     //   106: iconst_0
     //   107: aload_0
-    //   108: invokestatic 68	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   108: invokestatic 68	com/tencent/mm/sdk/platformtools/be:f	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   111: aastore
-    //   112: invokestatic 71	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   112: invokestatic 71	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   115: return
     //   116: astore_2
     //   117: goto -64 -> 53

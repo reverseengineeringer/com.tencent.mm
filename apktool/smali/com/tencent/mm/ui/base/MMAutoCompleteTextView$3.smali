@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kCY:Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;
+.field final synthetic lcd:Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 75
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView$3;->kCY:Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView$3;->lcd:Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView$3;->kCY:Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView$3;->lcd:Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->b(Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;)V
 

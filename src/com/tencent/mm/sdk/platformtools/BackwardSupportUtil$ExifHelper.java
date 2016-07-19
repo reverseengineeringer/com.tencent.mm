@@ -1,123 +1,67 @@
 package com.tencent.mm.sdk.platformtools;
 
-import android.media.ExifInterface;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
 import com.tencent.mm.a.e;
-import java.io.IOException;
+import com.tencent.mm.compatible.util.Exif;
+import com.tencent.mm.compatible.util.Exif.a;
 
 public final class BackwardSupportUtil$ExifHelper
 {
-  public static LatLongData CA(String paramString)
+  public static int EM(String paramString)
   {
-    if (!BackwardSupportUtil.clN) {}
-    for (;;)
+    if (be.kf(paramString))
     {
-      return null;
-      if (ay.kz(paramString))
-      {
-        u.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "filepath is null or nil");
-        return null;
-      }
-      if (!e.ax(paramString))
-      {
-        u.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "file not exist:[%s]", new Object[] { paramString });
-        return null;
-      }
-      try
-      {
-        paramString = new ExifInterface(paramString);
-        if (paramString == null) {
-          continue;
-        }
-        float[] arrayOfFloat = new float[2];
-        if (!paramString.getLatLong(arrayOfFloat)) {
-          continue;
-        }
-        paramString = new LatLongData();
-        aBn = arrayOfFloat[0];
-        bRR = arrayOfFloat[1];
-        u.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "exif info, latitude:%f, longtitude:%f", new Object[] { Float.valueOf(aBn), Float.valueOf(bRR) });
-        return paramString;
-      }
-      catch (IOException paramString)
-      {
-        for (;;)
-        {
-          u.e("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "cannot read exif" + paramString);
-          paramString = null;
-        }
-      }
+      v.d("MicroMsg.SDK.BackwardSupportUtil", "filepath is null or nil");
+      return 0;
     }
+    if (!e.aB(paramString))
+    {
+      v.d("MicroMsg.SDK.BackwardSupportUtil", "file not exist:[%s]", new Object[] { paramString });
+      return 0;
+    }
+    return Exif.fromFile(paramString).getOrientationInDegree();
   }
   
-  public static int kq(String paramString)
+  public static LatLongData EN(String paramString)
   {
-    if (!BackwardSupportUtil.clN) {}
-    for (;;)
-    {
-      return 0;
-      if (ay.kz(paramString))
-      {
-        u.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "filepath is null or nil");
-        return 0;
-      }
-      if (!e.ax(paramString))
-      {
-        u.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "file not exist:[%s]", new Object[] { paramString });
-        return 0;
-      }
-      try
-      {
-        paramString = new ExifInterface(paramString);
-        if (paramString != null)
-        {
-          int i = paramString.getAttributeInt("Orientation", -1);
-          if (i != -1) {
-            switch (i)
-            {
-            case 4: 
-            case 5: 
-            case 7: 
-            default: 
-              return 0;
-            case 3: 
-              return 180;
-            }
-          }
-        }
-      }
-      catch (IOException paramString)
-      {
-        for (;;)
-        {
-          u.e("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "cannot read exif" + paramString);
-          paramString = null;
-        }
-        return 90;
-      }
+    if (be.kf(paramString)) {
+      v.d("MicroMsg.SDK.BackwardSupportUtil", "filepath is null or nil");
     }
-    return 270;
+    do
+    {
+      return null;
+      if (!e.aB(paramString))
+      {
+        v.d("MicroMsg.SDK.BackwardSupportUtil", "file not exist:[%s]", new Object[] { paramString });
+        return null;
+      }
+      paramString = Exif.fromFile(paramString).getLocation();
+    } while (paramString == null);
+    LatLongData localLatLongData = new LatLongData();
+    anF = ((float)latitude);
+    bLq = ((float)longitude);
+    return localLatLongData;
   }
   
   public static class LatLongData
     implements Parcelable
   {
-    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
-    public float aBn;
-    public float bRR;
+    public static final Parcelable.Creator<LatLongData> CREATOR = new Parcelable.Creator() {};
+    public float anF;
+    public float bLq;
     
     public LatLongData()
     {
-      aBn = 0.0F;
-      bRR = 0.0F;
+      anF = 0.0F;
+      bLq = 0.0F;
     }
     
     public LatLongData(float paramFloat1, float paramFloat2)
     {
-      aBn = paramFloat1;
-      bRR = paramFloat2;
+      anF = paramFloat1;
+      bLq = paramFloat2;
     }
     
     public int describeContents()
@@ -132,19 +76,19 @@ public final class BackwardSupportUtil$ExifHelper
       {
         return false;
         paramObject = (LatLongData)paramObject;
-      } while ((Math.abs(aBn - aBn) >= 1.0E-6F) || (Math.abs(bRR - bRR) >= 1.0E-6F));
+      } while ((Math.abs(anF - anF) >= 1.0E-6F) || (Math.abs(bLq - bLq) >= 1.0E-6F));
       return true;
     }
     
     public int hashCode()
     {
-      return (int)(aBn * 10000.0F) + (int)(bRR * 10000.0F);
+      return (int)(anF * 10000.0F) + (int)(bLq * 10000.0F);
     }
     
     public void writeToParcel(Parcel paramParcel, int paramInt)
     {
-      paramParcel.writeFloat(aBn);
-      paramParcel.writeFloat(bRR);
+      paramParcel.writeFloat(anF);
+      paramParcel.writeFloat(bLq);
     }
   }
 }

@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/ui/chatting/cp;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/ui/chatting/cp;->onLongClick(Landroid/view/View;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kWv:Lcom/tencent/mm/ui/chatting/cp;
+.field final synthetic lwv:Lcom/tencent/mm/ui/chatting/cp;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 105
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/cp$1;->kWv:Lcom/tencent/mm/ui/chatting/cp;
+    .line 1465
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/cp$1;->lwv:Lcom/tencent/mm/ui/chatting/cp;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,85 +36,21 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final run()V
+    .locals 2
 
     .prologue
-    .line 110
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/cp$1;->kWv:Lcom/tencent/mm/ui/chatting/cp;
+    .line 1469
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/cp$1;->lwv:Lcom/tencent/mm/ui/chatting/cp;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/cp;->a(Lcom/tencent/mm/ui/chatting/cp;)Lcom/tencent/mm/ui/chatting/cl;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/cp;->a(Lcom/tencent/mm/ui/chatting/cp;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Long;
+    const/4 v1, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    iput-boolean v1, v0, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->lzf:Z
 
-    move-result-wide v2
-
-    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/ui/chatting/cl;->dL(J)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 111
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/cp$1;->kWv:Lcom/tencent/mm/ui/chatting/cp;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/cp;->a(Lcom/tencent/mm/ui/chatting/cp;)Lcom/tencent/mm/ui/chatting/cl;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/cl;->kVR:Ljava/util/TreeSet;
-
-    invoke-virtual {v0}, Ljava/util/TreeSet;->size()I
-
-    move-result v0
-
-    .line 113
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/cp$1;->kWv:Lcom/tencent/mm/ui/chatting/cp;
-
-    invoke-static {v1}, Lcom/tencent/mm/ui/chatting/cp;->b(Lcom/tencent/mm/ui/chatting/cp;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->bft()V
-
-    .line 114
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/cp$1;->kWv:Lcom/tencent/mm/ui/chatting/cp;
-
-    invoke-static {v1}, Lcom/tencent/mm/ui/chatting/cp;->c(Lcom/tencent/mm/ui/chatting/cp;)Lcom/tencent/mm/ui/tools/r;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/r;->biK()V
-
-    .line 115
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/cp$1;->kWv:Lcom/tencent/mm/ui/chatting/cp;
-
-    invoke-static {v1}, Lcom/tencent/mm/ui/chatting/cp;->d(Lcom/tencent/mm/ui/chatting/cp;)Lcom/tencent/mm/ui/chatting/ChattingFooterMoreBtnBar;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/chatting/ChattingFooterMoreBtnBar;->setVisibility(I)V
-
-    .line 116
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/cp$1;->kWv:Lcom/tencent/mm/ui/chatting/cp;
-
-    invoke-static {v1}, Lcom/tencent/mm/ui/chatting/cp;->d(Lcom/tencent/mm/ui/chatting/cp;)Lcom/tencent/mm/ui/chatting/ChattingFooterMoreBtnBar;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/chatting/ChattingFooterMoreBtnBar;->ra(I)V
-
-    .line 118
-    :cond_0
+    .line 1470
     return-void
 .end method

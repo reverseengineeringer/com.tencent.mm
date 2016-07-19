@@ -6,26 +6,26 @@ import android.hardware.Camera;
 import android.hardware.Camera.CameraInfo;
 import android.view.Display;
 import android.view.WindowManager;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class e
   implements c.a
 {
   @TargetApi(8)
-  public static c.a.a bQ(int paramInt)
+  public static c.a.a ci(int paramInt)
   {
     c.a.a locala = new c.a.a();
     try
     {
-      brz = Camera.open();
-      brw = 90;
-      if (brz == null) {
+      bfz = Camera.open();
+      bfw = 90;
+      if (bfz == null) {
         return null;
       }
       Camera.CameraInfo localCameraInfo = new Camera.CameraInfo();
       Camera.getCameraInfo(paramInt, localCameraInfo);
-      switch (((WindowManager)y.getContext().getSystemService("window")).getDefaultDisplay().getRotation())
+      switch (((WindowManager)aa.getContext().getSystemService("window")).getDefaultDisplay().getRotation())
       {
       default: 
         paramInt = 0;
@@ -35,8 +35,8 @@ final class e
       }
       for (int i = (360 - (orientation + paramInt) % 360) % 360;; i = (orientation - paramInt + 360) % 360)
       {
-        u.d("!56@/B4Tb64lLpIbGsIG/EE4YQGJaCS7uTujueZslqbeEbJCOE2zf0rmow==", "CameraUtilImpl22, open camera, info.orientation: %d, degrees: %d, result:%d", new Object[] { Integer.valueOf(orientation), Integer.valueOf(paramInt), Integer.valueOf(i) });
-        brz.setDisplayOrientation(i);
+        v.d("MicroMsg.CameraUtil.CameraUtilImpl22", "CameraUtilImpl22, open camera, info.orientation: %d, degrees: %d, result:%d", new Object[] { Integer.valueOf(orientation), Integer.valueOf(paramInt), Integer.valueOf(i) });
+        bfz.setDisplayOrientation(i);
         return locala;
         paramInt = 0;
         break;

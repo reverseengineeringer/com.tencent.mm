@@ -11,11 +11,11 @@ final class LauncherUI$c$1
   
   public final void run()
   {
-    if ((cqF == 1) || (LauncherUI.C(knG.knl) == 1)) {
-      ah.tD().rn().set(143618, Integer.valueOf(0));
+    if ((clS == 1) || (LauncherUI.B(kMM.kMs) == 1)) {
+      ah.tE().ro().set(143618, Integer.valueOf(0));
     }
-    knG.knl.bH(LauncherUI.C(knG.knl), LauncherUI.b(knG.knl));
-    knG.knl.pU(cqF);
+    kMM.kMs.bM(LauncherUI.B(kMM.kMs), LauncherUI.b(kMM.kMs));
+    kMM.kMs.rJ(clS);
   }
 }
 

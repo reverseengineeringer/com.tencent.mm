@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic kOV:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
+.field final synthetic lol:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
-.field final synthetic kOW:Lcom/tencent/mm/ui/base/h;
+.field final synthetic lom:Lcom/tencent/mm/ui/base/h;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 254
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$7;->kOV:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$7;->lol:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$7;->kOW:Lcom/tencent/mm/ui/base/h;
+    iput-object p2, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$7;->lom:Lcom/tencent/mm/ui/base/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
 
     .prologue
     .line 258
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$7;->kOW:Lcom/tencent/mm/ui/base/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$7;->lom:Lcom/tencent/mm/ui/base/h;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->getWindow()Landroid/view/Window;
 
@@ -62,7 +62,7 @@
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
     .line 259
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$7;->kOW:Lcom/tencent/mm/ui/base/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$7;->lom:Lcom/tencent/mm/ui/base/h;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->getWindow()Landroid/view/Window;
 
@@ -77,7 +77,7 @@
     move-result v1
 
     .line 260
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$7;->kOW:Lcom/tencent/mm/ui/base/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$7;->lom:Lcom/tencent/mm/ui/base/h;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->getWindow()Landroid/view/Window;
 
@@ -92,9 +92,9 @@
     move-result v2
 
     .line 262
-    iget-object v3, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$7;->kOV:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$7;->lol:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$7;->kOW:Lcom/tencent/mm/ui/base/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$7;->lom:Lcom/tencent/mm/ui/base/h;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->getWindow()Landroid/view/Window;
 
@@ -122,7 +122,7 @@
 
     .line 267
     :goto_0
-    const-string/jumbo v1, "!44@/B4Tb64lLpIaEkywMHoqABQUhRrFI+cbSM7Lgi4eEq8="
+    const-string/jumbo v1, "MicroMsg.FindMContactAlertUI"
 
     const-string/jumbo v3, "dialog width: %s height: %s"
 
@@ -146,10 +146,10 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 269
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$7;->kOV:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$7;->lol:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
     invoke-static {v1, v0, v2}, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;->a(Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;II)V
 

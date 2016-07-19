@@ -25,7 +25,7 @@ final class i$a
     {
       try
       {
-        i.pd();
+        i.nv();
         i = j;
         Throwable localThrowable = paramThrowable;
         if (i != 0) {

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/modelvoice/s;->EA()V
+    value = Lcom/tencent/mm/modelvoice/s;->EV()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic chO:Lcom/tencent/mm/modelvoice/s;
+.field final synthetic cdf:Lcom/tencent/mm/modelvoice/s;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 52
-    iput-object p1, p0, Lcom/tencent/mm/modelvoice/s$1;->chO:Lcom/tencent/mm/modelvoice/s;
+    iput-object p1, p0, Lcom/tencent/mm/modelvoice/s$1;->cdf:Lcom/tencent/mm/modelvoice/s;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,30 +41,30 @@
 
     .prologue
     .line 56
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/s$1;->chO:Lcom/tencent/mm/modelvoice/s;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/s$1;->cdf:Lcom/tencent/mm/modelvoice/s;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelvoice/s;->chl:Lcom/tencent/mm/modelvoice/d$a;
+    iget-object v0, v0, Lcom/tencent/mm/modelvoice/s;->ccC:Lcom/tencent/mm/modelvoice/d$a;
 
     if-eqz v0, :cond_0
 
     .line 57
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/s$1;->chO:Lcom/tencent/mm/modelvoice/s;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/s$1;->cdf:Lcom/tencent/mm/modelvoice/s;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelvoice/s;->chl:Lcom/tencent/mm/modelvoice/d$a;
+    iget-object v0, v0, Lcom/tencent/mm/modelvoice/s;->ccC:Lcom/tencent/mm/modelvoice/d$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/modelvoice/d$a;->lG()V
+    invoke-interface {v0}, Lcom/tencent/mm/modelvoice/d$a;->jQ()V
 
     .line 60
     :cond_0
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/s$1;->chO:Lcom/tencent/mm/modelvoice/s;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/s$1;->cdf:Lcom/tencent/mm/modelvoice/s;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelvoice/s;->blY:Landroid/media/MediaPlayer;
+    iget-object v0, v0, Lcom/tencent/mm/modelvoice/s;->aZE:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
     .line 61
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/s$1;->chO:Lcom/tencent/mm/modelvoice/s;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/s$1;->cdf:Lcom/tencent/mm/modelvoice/s;
 
     const/4 v1, 0x0
 
@@ -81,7 +81,7 @@
     move-exception v0
 
     .line 63
-    const-string/jumbo v1, "!24@40VYnhE9NJIehP//35gXMQ=="
+    const-string/jumbo v1, "VoicePlayer"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -89,9 +89,9 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/tencent/mm/modelvoice/s$1;->chO:Lcom/tencent/mm/modelvoice/s;
+    iget-object v3, p0, Lcom/tencent/mm/modelvoice/s$1;->cdf:Lcom/tencent/mm/modelvoice/s;
 
-    iget-object v3, v3, Lcom/tencent/mm/modelvoice/s;->anC:Ljava/lang/String;
+    iget-object v3, v3, Lcom/tencent/mm/modelvoice/s;->aaq:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -121,7 +121,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

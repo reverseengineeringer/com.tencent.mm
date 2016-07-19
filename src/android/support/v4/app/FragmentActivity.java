@@ -20,8 +20,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import com.tencent.mm.compatible.h.a;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.compatible.i.a;
+import com.tencent.mm.sdk.platformtools.ac;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -31,21 +31,25 @@ import java.util.HashMap;
 public class FragmentActivity
   extends Activity
 {
-  public final f bb = new f();
-  final d bc = new d()
+  boolean aM;
+  boolean bb;
+  k bk;
+  boolean bl;
+  boolean bm;
+  public final f bp = new f();
+  final d bq = new d()
   {
     public final View findViewById(int paramAnonymousInt)
     {
       return FragmentActivity.this.findViewById(paramAnonymousInt);
     }
   };
-  boolean bd;
-  boolean be;
-  boolean bf;
-  boolean bg;
-  HashMap bh;
-  boolean mCheckedForLoaderManager;
-  final aa mHandler = new aa()
+  boolean br;
+  boolean bt;
+  boolean bu;
+  boolean bv;
+  HashMap<String, k> bw;
+  final ac mHandler = new ac()
   {
     public final void handleMessage(Message paramAnonymousMessage)
     {
@@ -57,18 +61,14 @@ public class FragmentActivity
         do
         {
           return;
-        } while (!be);
-        i(false);
+        } while (!bt);
+        h(false);
         return;
       }
-      bb.dispatchResume();
-      bb.execPendingActions();
+      bp.dispatchResume();
+      bp.execPendingActions();
     }
   };
-  k mLoaderManager;
-  boolean mLoadersStarted;
-  boolean mResumed;
-  boolean mRetaining;
   
   private void a(String paramString, PrintWriter paramPrintWriter, View paramView)
   {
@@ -254,32 +254,32 @@ public class FragmentActivity
     }
   }
   
-  public void G()
+  public void F()
   {
     if (Build.VERSION.SDK_INT >= 11)
     {
       invalidateOptionsMenu();
       return;
     }
-    bg = true;
+    bv = true;
   }
   
   final k a(String paramString, boolean paramBoolean1, boolean paramBoolean2)
   {
-    if (bh == null) {
-      bh = new HashMap();
+    if (bw == null) {
+      bw = new HashMap();
     }
-    k localk = (k)bh.get(paramString);
+    k localk = (k)bw.get(paramString);
     if (localk == null)
     {
       if (paramBoolean2)
       {
         localk = new k(paramString, this, paramBoolean1);
-        bh.put(paramString, localk);
+        bw.put(paramString, localk);
       }
       return localk;
     }
-    mActivity = this;
+    aS = this;
     return localk;
   }
   
@@ -306,25 +306,25 @@ public class FragmentActivity
     String str = paramString + "  ";
     paramPrintWriter.print(str);
     paramPrintWriter.print("mCreated=");
-    paramPrintWriter.print(bd);
+    paramPrintWriter.print(br);
     paramPrintWriter.print("mResumed=");
-    paramPrintWriter.print(mResumed);
+    paramPrintWriter.print(aM);
     paramPrintWriter.print(" mStopped=");
-    paramPrintWriter.print(be);
+    paramPrintWriter.print(bt);
     paramPrintWriter.print(" mReallyStopped=");
-    paramPrintWriter.println(bf);
+    paramPrintWriter.println(bu);
     paramPrintWriter.print(str);
     paramPrintWriter.print("mLoadersStarted=");
-    paramPrintWriter.println(mLoadersStarted);
-    if (mLoaderManager != null)
+    paramPrintWriter.println(bl);
+    if (bk != null)
     {
       paramPrintWriter.print(paramString);
       paramPrintWriter.print("Loader Manager ");
-      paramPrintWriter.print(Integer.toHexString(System.identityHashCode(mLoaderManager)));
+      paramPrintWriter.print(Integer.toHexString(System.identityHashCode(bk)));
       paramPrintWriter.println(":");
-      mLoaderManager.dump(paramString + "  ", paramFileDescriptor, paramPrintWriter, paramArrayOfString);
+      bk.dump(paramString + "  ", paramFileDescriptor, paramPrintWriter, paramArrayOfString);
     }
-    bb.dump(paramString, paramFileDescriptor, paramPrintWriter, paramArrayOfString);
+    bp.dump(paramString, paramFileDescriptor, paramPrintWriter, paramArrayOfString);
     paramPrintWriter.print(paramString);
     paramPrintWriter.println("View Hierarchy:");
     a(paramString + "  ", paramPrintWriter, getWindow().getDecorView());
@@ -332,58 +332,58 @@ public class FragmentActivity
   
   final void g(String paramString)
   {
-    if (bh != null)
+    if (bw != null)
     {
-      k localk = (k)bh.get(paramString);
-      if ((localk != null) && (!mRetaining))
+      k localk = (k)bw.get(paramString);
+      if ((localk != null) && (!bb))
       {
-        localk.U();
-        bh.remove(paramString);
+        localk.T();
+        bw.remove(paramString);
       }
     }
   }
   
-  final void i(boolean paramBoolean)
+  final void h(boolean paramBoolean)
   {
-    if (!bf)
+    if (!bu)
     {
-      bf = true;
-      mRetaining = paramBoolean;
+      bu = true;
+      bb = paramBoolean;
       mHandler.removeMessages(1);
-      if (mLoadersStarted)
+      if (bl)
       {
-        mLoadersStarted = false;
-        if (mLoaderManager != null)
+        bl = false;
+        if (bk != null)
         {
-          if (mRetaining) {
+          if (bb) {
             break label67;
           }
-          mLoaderManager.Q();
+          bk.P();
         }
       }
     }
     for (;;)
     {
-      bb.h(2);
+      bp.h(2);
       return;
       label67:
-      mLoaderManager.R();
+      bk.Q();
     }
   }
   
   public void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
   {
-    bb.bF = false;
+    bp.bT = false;
     int i = paramInt1 >> 16;
     if (i != 0)
     {
       i -= 1;
-      if ((bb.bu == null) || (i < 0) || (i >= bb.bu.size()))
+      if ((bp.bI == null) || (i < 0) || (i >= bp.bI.size()))
       {
         new StringBuilder("Activity result fragment index out of range: 0x").append(Integer.toHexString(paramInt1));
         return;
       }
-      Fragment localFragment = (Fragment)bb.bu.get(i);
+      Fragment localFragment = (Fragment)bp.bI.get(i);
       if (localFragment == null)
       {
         new StringBuilder("Activity result no fragment exists for index: 0x").append(Integer.toHexString(paramInt1));
@@ -397,10 +397,10 @@ public class FragmentActivity
   
   public void onBackPressed()
   {
-    f localf = bb;
-    localf.K();
+    f localf = bp;
+    localf.J();
     localf.execPendingActions();
-    if (!localf.e(-1, 0)) {
+    if (!localf.c(-1, 0)) {
       finish();
     }
   }
@@ -408,35 +408,35 @@ public class FragmentActivity
   public void onConfigurationChanged(Configuration paramConfiguration)
   {
     super.onConfigurationChanged(paramConfiguration);
-    bb.dispatchConfigurationChanged(paramConfiguration);
+    bp.dispatchConfigurationChanged(paramConfiguration);
   }
   
   public void onCreate(Bundle paramBundle)
   {
-    bb.a(this, bc, null);
+    bp.a(this, bq, null);
     if (getLayoutInflater().getFactory() == null) {
       getLayoutInflater().setFactory(this);
     }
     super.onCreate(paramBundle);
     b localb = (b)getLastNonConfigurationInstance();
     if (localb != null) {
-      bh = bo;
+      bw = bD;
     }
     Parcelable localParcelable;
     f localf;
     if (paramBundle != null)
     {
       localParcelable = paramBundle.getParcelable("android:support:fragments");
-      localf = bb;
+      localf = bp;
       if (localb == null) {
         break label101;
       }
     }
     label101:
-    for (paramBundle = bn;; paramBundle = null)
+    for (paramBundle = bC;; paramBundle = null)
     {
       localf.a(localParcelable, paramBundle);
-      bb.dispatchCreate();
+      bp.dispatchCreate();
       return;
     }
   }
@@ -446,7 +446,7 @@ public class FragmentActivity
     if (paramInt == 0)
     {
       boolean bool1 = super.onCreatePanelMenu(paramInt, paramMenu);
-      boolean bool2 = bb.dispatchCreateOptionsMenu(paramMenu, getMenuInflater());
+      boolean bool2 = bp.dispatchCreateOptionsMenu(paramMenu, getMenuInflater());
       if (Build.VERSION.SDK_INT >= 11) {
         return bool1 | bool2;
       }
@@ -462,7 +462,7 @@ public class FragmentActivity
       return super.onCreateView(paramString, paramContext, paramAttributeSet);
     }
     paramString = paramAttributeSet.getAttributeValue(null, "class");
-    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, a.bj);
+    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, a.by);
     String str1 = paramString;
     if (paramString == null) {
       str1 = paramContext.getString(0);
@@ -472,19 +472,19 @@ public class FragmentActivity
     paramContext.recycle();
     paramContext = (Context)localObject;
     if (j != -1) {
-      paramContext = bb.f(j);
+      paramContext = bp.f(j);
     }
     paramString = paramContext;
     if (paramContext == null)
     {
       paramString = paramContext;
       if (str2 != null) {
-        paramString = bb.h(str2);
+        paramString = bp.h(str2);
       }
     }
     paramContext = paramString;
     if (paramString == null) {
-      paramContext = bb.f(0);
+      paramContext = bp.f(0);
     }
     if (f.DEBUG) {
       new StringBuilder("onCreateView: id=0x").append(Integer.toHexString(j)).append(" fname=").append(str1).append(" existing=").append(paramContext);
@@ -492,18 +492,19 @@ public class FragmentActivity
     int i;
     if (paramContext == null)
     {
-      paramString = Fragment.instantiate(this, str1);
-      mFromLayout = true;
+      paramString = Fragment.b(this, str1);
+      aN = true;
       if (j != 0)
       {
         i = j;
-        mFragmentId = i;
-        mContainerId = 0;
-        mTag = str2;
-        mInLayout = true;
-        mFragmentManager = bb;
-        paramString.onInflate(this, paramAttributeSet, mSavedFragmentState);
-        bb.a(paramString, true);
+        aV = i;
+        aW = 0;
+        aX = str2;
+        aO = true;
+        aR = bp;
+        paramContext = aD;
+        be = true;
+        bp.a(paramString, true);
       }
     }
     for (;;)
@@ -514,14 +515,16 @@ public class FragmentActivity
       throw new IllegalStateException("Fragment " + str1 + " did not create a view.");
       i = 0;
       break;
-      if (mInLayout) {
+      if (aO) {
         throw new IllegalArgumentException(paramAttributeSet.getPositionDescription() + ": Duplicate id 0x" + Integer.toHexString(j) + ", tag " + str2 + ", or parent id 0x" + Integer.toHexString(0) + " with another fragment for " + str1);
       }
-      mInLayout = true;
-      if (!mRetaining) {
-        paramContext.onInflate(this, paramAttributeSet, mSavedFragmentState);
+      aO = true;
+      if (!bb)
+      {
+        paramString = aD;
+        be = true;
       }
-      bb.g(paramContext);
+      bp.f(paramContext);
       paramString = paramContext;
     }
     label414:
@@ -537,10 +540,10 @@ public class FragmentActivity
   public void onDestroy()
   {
     super.onDestroy();
-    i(false);
-    bb.dispatchDestroy();
-    if (mLoaderManager != null) {
-      mLoaderManager.U();
+    h(false);
+    bp.dispatchDestroy();
+    if (bk != null) {
+      bk.T();
     }
   }
   
@@ -557,7 +560,7 @@ public class FragmentActivity
   public void onLowMemory()
   {
     super.onLowMemory();
-    bb.dispatchLowMemory();
+    bp.dispatchLowMemory();
   }
   
   public boolean onMenuItemSelected(int paramInt, MenuItem paramMenuItem)
@@ -573,15 +576,15 @@ public class FragmentActivity
     default: 
       return false;
     case 0: 
-      return bb.dispatchOptionsItemSelected(paramMenuItem);
+      return bp.dispatchOptionsItemSelected(paramMenuItem);
     }
-    return bb.dispatchContextItemSelected(paramMenuItem);
+    return bp.dispatchContextItemSelected(paramMenuItem);
   }
   
   public void onNewIntent(Intent paramIntent)
   {
     super.onNewIntent(paramIntent);
-    bb.bF = false;
+    bp.bT = false;
   }
   
   public void onPanelClosed(int paramInt, Menu paramMenu)
@@ -593,41 +596,41 @@ public class FragmentActivity
     {
       super.onPanelClosed(paramInt, paramMenu);
       return;
-      bb.dispatchOptionsMenuClosed(paramMenu);
+      bp.dispatchOptionsMenuClosed(paramMenu);
     }
   }
   
   public void onPause()
   {
     super.onPause();
-    mResumed = false;
+    aM = false;
     if (mHandler.hasMessages(2))
     {
       mHandler.removeMessages(2);
-      bb.dispatchResume();
+      bp.dispatchResume();
     }
-    bb.h(4);
+    bp.h(4);
   }
   
   public void onPostResume()
   {
     super.onPostResume();
     mHandler.removeMessages(2);
-    bb.dispatchResume();
-    bb.execPendingActions();
+    bp.dispatchResume();
+    bp.execPendingActions();
   }
   
   public boolean onPreparePanel(int paramInt, View paramView, Menu paramMenu)
   {
     if ((paramInt == 0) && (paramMenu != null))
     {
-      if (bg)
+      if (bv)
       {
-        bg = false;
+        bv = false;
         paramMenu.clear();
         onCreatePanelMenu(paramInt, paramMenu);
       }
-      return super.onPreparePanel(paramInt, paramView, paramMenu) | bb.dispatchPrepareOptionsMenu(paramMenu);
+      return super.onPreparePanel(paramInt, paramView, paramMenu) | bp.dispatchPrepareOptionsMenu(paramMenu);
     }
     return super.onPreparePanel(paramInt, paramView, paramMenu);
   }
@@ -636,50 +639,50 @@ public class FragmentActivity
   {
     super.onResume();
     mHandler.sendEmptyMessage(2);
-    mResumed = true;
-    bb.execPendingActions();
+    aM = true;
+    bp.execPendingActions();
   }
   
   public final Object onRetainNonConfigurationInstance()
   {
     int k = 0;
-    if (be) {
-      i(true);
+    if (bt) {
+      h(true);
     }
-    f localf = bb;
+    f localf = bp;
     int i;
     Object localObject2;
     Object localObject3;
     int j;
-    if (bu != null)
+    if (bI != null)
     {
       i = 0;
       localObject1 = null;
       localObject2 = localObject1;
-      if (i < bu.size())
+      if (i < bI.size())
       {
-        Fragment localFragment = (Fragment)bu.get(i);
+        Fragment localFragment = (Fragment)bI.get(i);
         localObject3 = localObject1;
         if (localFragment != null)
         {
           localObject3 = localObject1;
-          if (mRetainInstance)
+          if (ba)
           {
             localObject2 = localObject1;
             if (localObject1 == null) {
               localObject2 = new ArrayList();
             }
             ((ArrayList)localObject2).add(localFragment);
-            mRetaining = true;
-            if (mTarget == null) {
+            bb = true;
+            if (aH == null) {
               break label180;
             }
           }
         }
         label180:
-        for (j = mTarget.mIndex;; j = -1)
+        for (j = aH.mIndex;; j = -1)
         {
-          mTargetIndex = j;
+          aI = j;
           localObject3 = localObject2;
           if (f.DEBUG)
           {
@@ -696,25 +699,25 @@ public class FragmentActivity
     {
       localObject2 = null;
     }
-    if (bh != null)
+    if (bw != null)
     {
-      localObject1 = new k[bh.size()];
-      bh.values().toArray((Object[])localObject1);
+      localObject1 = new k[bw.size()];
+      bw.values().toArray((Object[])localObject1);
       i = 0;
       j = k;
       k = i;
       if (j < localObject1.length)
       {
         localObject3 = localObject1[j];
-        if (mRetaining) {
+        if (bb) {
           i = 1;
         }
         for (;;)
         {
           j += 1;
           break;
-          ((k)localObject3).U();
-          bh.remove(mWho);
+          ((k)localObject3).T();
+          bw.remove(aF);
         }
       }
     }
@@ -726,18 +729,18 @@ public class FragmentActivity
       return null;
     }
     Object localObject1 = new b();
-    bk = null;
-    bl = null;
-    bm = null;
-    bn = ((ArrayList)localObject2);
-    bo = bh;
+    bz = null;
+    bA = null;
+    bB = null;
+    bC = ((ArrayList)localObject2);
+    bD = bw;
     return localObject1;
   }
   
   public void onSaveInstanceState(Bundle paramBundle)
   {
     super.onSaveInstanceState(paramBundle);
-    Parcelable localParcelable = bb.saveAllState();
+    Parcelable localParcelable = bp.saveAllState();
     if (localParcelable != null) {
       paramBundle.putParcelable("android:support:fragments", localParcelable);
     }
@@ -746,35 +749,35 @@ public class FragmentActivity
   public void onStart()
   {
     super.onStart();
-    be = false;
-    bf = false;
+    bt = false;
+    bu = false;
     mHandler.removeMessages(1);
-    if (!bd)
+    if (!br)
     {
-      bd = true;
-      bb.dispatchActivityCreated();
+      br = true;
+      bp.dispatchActivityCreated();
     }
-    bb.bF = false;
-    bb.execPendingActions();
+    bp.bT = false;
+    bp.execPendingActions();
     k[] arrayOfk;
     int i;
-    if (!mLoadersStarted)
+    if (!bl)
     {
-      mLoadersStarted = true;
-      if (mLoaderManager != null)
+      bl = true;
+      if (bk != null)
       {
-        mLoaderManager.P();
-        mCheckedForLoaderManager = true;
+        bk.O();
+        bm = true;
       }
     }
     else
     {
-      bb.dispatchStart();
-      if (bh == null) {
+      bp.dispatchStart();
+      if (bw == null) {
         return;
       }
-      arrayOfk = new k[bh.size()];
-      bh.values().toArray(arrayOfk);
+      arrayOfk = new k[bw.size()];
+      bw.values().toArray(arrayOfk);
       i = 0;
     }
     for (;;)
@@ -783,46 +786,46 @@ public class FragmentActivity
         return;
       }
       k localk = arrayOfk[i];
-      if (mRetaining)
+      if (bb)
       {
         if (k.DEBUG) {
           new StringBuilder("Finished Retaining in ").append(localk);
         }
-        mRetaining = false;
-        int j = cm.size() - 1;
+        bb = false;
+        int j = cA.size() - 1;
         for (;;)
         {
           if (j >= 0)
           {
-            k.a locala = (k.a)cm.valueAt(j);
-            if (mRetaining)
+            k.a locala = (k.a)cA.valueAt(j);
+            if (bb)
             {
               if (k.DEBUG) {
                 new StringBuilder("  Finished Retaining: ").append(locala);
               }
-              mRetaining = false;
-              if ((mStarted != cu) && (!mStarted)) {
+              bb = false;
+              if ((cC != cK) && (!cC)) {
                 locala.stop();
               }
             }
-            if ((mStarted) && (cs) && (!cv)) {
-              locala.b(cr, mData);
+            if ((cC) && (cI) && (!cL)) {
+              locala.c(cH, mData);
             }
             j -= 1;
             continue;
-            if (mCheckedForLoaderManager) {
+            if (bm) {
               break;
             }
-            mLoaderManager = a(null, mLoadersStarted, false);
-            if ((mLoaderManager == null) || (mLoaderManager.mStarted)) {
+            bk = a(null, bl, false);
+            if ((bk == null) || (bk.cC)) {
               break;
             }
-            mLoaderManager.P();
+            bk.O();
             break;
           }
         }
       }
-      localk.T();
+      localk.S();
       i += 1;
     }
   }
@@ -830,9 +833,9 @@ public class FragmentActivity
   public void onStop()
   {
     super.onStop();
-    be = true;
+    bt = true;
     mHandler.sendEmptyMessage(1);
-    bb.dispatchStop();
+    bp.dispatchStop();
   }
   
   public void startActivityForResult(Intent paramIntent, int paramInt)
@@ -845,16 +848,16 @@ public class FragmentActivity
   
   static final class a
   {
-    public static final int[] bj = { 16842755, 16842960, 16842961 };
+    public static final int[] by = { 16842755, 16842960, 16842961 };
   }
   
   static final class b
   {
-    Object bk;
-    Object bl;
-    HashMap bm;
-    ArrayList bn;
-    HashMap bo;
+    Object bA;
+    HashMap<String, Object> bB;
+    ArrayList<Fragment> bC;
+    HashMap<String, k> bD;
+    Object bz;
   }
 }
 

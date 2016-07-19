@@ -6,9 +6,9 @@
 # instance fields
 .field private context:Landroid/content/Context;
 
-.field public dlQ:Landroid/graphics/Bitmap;
+.field public dlx:Landroid/graphics/Bitmap;
 
-.field public lrA:Ljava/lang/String;
+.field public lSe:Ljava/lang/String;
 
 
 # direct methods
@@ -35,10 +35,10 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/ui/base/preference/IconPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 26
-    iput-object v0, p0, Lcom/tencent/mm/ui/friend/FriendSnsPreference;->lrA:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/friend/FriendSnsPreference;->lSe:Ljava/lang/String;
 
     .line 27
-    iput-object v0, p0, Lcom/tencent/mm/ui/friend/FriendSnsPreference;->dlQ:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/tencent/mm/ui/friend/FriendSnsPreference;->dlx:Landroid/graphics/Bitmap;
 
     .line 44
     iput-object p1, p0, Lcom/tencent/mm/ui/friend/FriendSnsPreference;->context:Landroid/content/Context;
@@ -57,16 +57,16 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/base/preference/IconPreference;->onBindView(Landroid/view/View;)V
 
     .line 120
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FriendSnsPreference;->lrA:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FriendSnsPreference;->lSe:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
     .line 121
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FriendSnsPreference;->dlV:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FriendSnsPreference;->dlC:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/friend/FriendSnsPreference;->lrA:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/friend/FriendSnsPreference;->lSe:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/a$b;->b(Landroid/widget/ImageView;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/a$b;->a(Landroid/widget/ImageView;Ljava/lang/String;)V
 
     .line 124
     :cond_0

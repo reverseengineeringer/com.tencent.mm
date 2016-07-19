@@ -12,8 +12,8 @@ final class d$3
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    d.a(kxT, kxT.kxM.ksR + kxT.kxM.fvR);
-    b.kD(ah.tx() + "," + getClass().getName() + ",L200_300," + ah.fd("L200_300") + ",2");
+    d.a(kXa, kXa.kWT.kRZ + kXa.kWT.fEW);
+    b.lm(ah.ty() + "," + getClass().getName() + ",L200_300," + ah.fq("L200_300") + ",2");
   }
 }
 

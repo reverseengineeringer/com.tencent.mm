@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/ui/widget/DragSortListView$f;
-.super Ljava/lang/Object;
+.super Lcom/tencent/mm/ui/widget/DragSortListView$m;
 .source "SourceFile"
 
 
@@ -15,268 +15,346 @@
 
 
 # instance fields
-.field em:Ljava/lang/StringBuilder;
+.field final synthetic mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-.field lEA:I
+.field private mfs:I
 
-.field lEB:I
+.field private mft:I
 
-.field lEC:Z
+.field private mfu:F
 
-.field final synthetic lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
-
-.field lEz:Ljava/io/File;
+.field private mfv:F
 
 
 # direct methods
-.method public constructor <init>(Lcom/tencent/mm/ui/widget/DragSortListView;)V
-    .locals 3
+.method public constructor <init>(Lcom/tencent/mm/ui/widget/DragSortListView;I)V
+    .locals 1
 
     .prologue
-    const/4 v1, 0x0
+    .line 1199
+    iput-object p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    .line 2912
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    .line 1200
+    const/high16 v0, 0x3f000000    # 0.5f
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, v0, p2}, Lcom/tencent/mm/ui/widget/DragSortListView$m;-><init>(Lcom/tencent/mm/ui/widget/DragSortListView;FI)V
 
-    .line 2903
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 1201
+    return-void
+.end method
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+.method private bpE()I
+    .locals 4
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    .prologue
+    .line 1213
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    .line 2907
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEA:I
-
-    .line 2908
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEB:I
-
-    .line 2910
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEC:Z
-
-    .line 2913
-    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
-
-    move-result-object v0
-
-    .line 2914
-    new-instance v1, Ljava/io/File;
-
-    const-string/jumbo v2, "dslv_state.txt"
-
-    invoke-direct {v1, v0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
-
-    iput-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEz:Ljava/io/File;
-
-    .line 2916
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEz:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getFirstVisiblePosition()I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    .line 1214
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    .line 2918
-    :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEz:Ljava/io/File;
+    invoke-static {v1}, Lcom/tencent/mm/ui/widget/DragSortListView;->j(Lcom/tencent/mm/ui/widget/DragSortListView;)I
 
-    invoke-virtual {v0}, Ljava/io/File;->createNewFile()Z
+    move-result v1
 
-    .line 2919
-    const-string/jumbo v0, "mobeta"
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    const-string/jumbo v1, "file created"
+    invoke-virtual {v2}, Lcom/tencent/mm/ui/widget/DragSortListView;->getDividerHeight()I
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result v2
 
-    .line 2926
-    :cond_0
+    add-int/2addr v1, v2
+
+    div-int/lit8 v1, v1, 0x2
+
+    .line 1215
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
+
+    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfs:I
+
+    sub-int v0, v3, v0
+
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v2
+
+    .line 1216
+    const/4 v0, -0x1
+
+    .line 1217
+    if-eqz v2, :cond_2
+
+    .line 1218
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfs:I
+
+    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mft:I
+
+    if-ne v0, v3, :cond_0
+
+    .line 1219
+    invoke-virtual {v2}, Landroid/view/View;->getTop()I
+
+    move-result v0
+
+    .line 1232
     :goto_0
-    return-void
+    return v0
 
-    .line 2920
-    :catch_0
-    move-exception v0
+    .line 1220
+    :cond_0
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfs:I
 
-    .line 2921
-    const-string/jumbo v1, "mobeta"
+    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mft:I
 
-    const-string/jumbo v2, "Could not create dslv_state.txt"
+    if-ge v0, v3, :cond_1
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    .line 1222
+    invoke-virtual {v2}, Landroid/view/View;->getTop()I
 
-    .line 2922
-    const-string/jumbo v1, "mobeta"
+    move-result v0
 
-    invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+    sub-int/2addr v0, v1
 
-    move-result-object v0
+    goto :goto_0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 1225
+    :cond_1
+    invoke-virtual {v2}, Landroid/view/View;->getBottom()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
+
+    invoke-static {v1}, Lcom/tencent/mm/ui/widget/DragSortListView;->k(Lcom/tencent/mm/ui/widget/DragSortListView;)I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    goto :goto_0
+
+    .line 1229
+    :cond_2
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$m;->lmv:Z
 
     goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final flush()V
+.method public final G(F)V
     .locals 5
 
     .prologue
-    const/4 v0, 0x0
+    .line 1237
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView$f;->bpE()I
 
-    .line 2984
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEC:Z
+    move-result v0
 
-    if-nez v1, :cond_1
+    .line 1238
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    .line 3012
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/widget/DragSortListView;->getPaddingLeft()I
+
+    move-result v1
+
+    .line 1239
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
+
+    invoke-static {v2}, Lcom/tencent/mm/ui/widget/DragSortListView;->e(Lcom/tencent/mm/ui/widget/DragSortListView;)Landroid/graphics/Point;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/graphics/Point;->y:I
+
+    sub-int/2addr v2, v0
+
+    int-to-float v2, v2
+
+    .line 1240
+    iget-object v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
+
+    invoke-static {v3}, Lcom/tencent/mm/ui/widget/DragSortListView;->e(Lcom/tencent/mm/ui/widget/DragSortListView;)Landroid/graphics/Point;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/graphics/Point;->x:I
+
+    sub-int v1, v3, v1
+
+    int-to-float v1, v1
+
+    .line 1241
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    sub-float/2addr v3, p1
+
+    .line 1242
+    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfu:F
+
+    div-float/2addr v2, v4
+
+    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
+
+    move-result v2
+
+    cmpg-float v2, v3, v2
+
+    if-ltz v2, :cond_0
+
+    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfv:F
+
+    div-float/2addr v1, v2
+
+    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
+
+    move-result v1
+
+    cmpg-float v1, v3, v1
+
+    if-gez v1, :cond_1
+
+    .line 1243
     :cond_0
-    :goto_0
-    return-void
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    .line 2989
-    :cond_1
-    const/4 v1, 0x0
-
-    .line 2991
-    const/4 v2, 0x1
-
-    .line 2992
-    :try_start_0
-    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEB:I
-
-    if-nez v3, :cond_2
-
-    move v2, v0
-
-    .line 2995
-    :cond_2
-    new-instance v0, Ljava/io/FileWriter;
-
-    iget-object v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEz:Ljava/io/File;
-
-    invoke-direct {v0, v3, v2}, Ljava/io/FileWriter;-><init>(Ljava/io/File;Z)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 2997
-    :try_start_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/ui/widget/DragSortListView;->e(Lcom/tencent/mm/ui/widget/DragSortListView;)Landroid/graphics/Point;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
+    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfu:F
 
-    .line 2998
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    mul-float/2addr v2, v3
 
-    const/4 v2, 0x0
+    float-to-int v2, v2
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    add-int/2addr v0, v2
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
+    iput v0, v1, Landroid/graphics/Point;->y:I
 
-    move-result v3
+    .line 1244
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->e(Lcom/tencent/mm/ui/widget/DragSortListView;)Landroid/graphics/Point;
 
-    .line 3000
-    invoke-virtual {v0}, Ljava/io/FileWriter;->flush()V
+    move-result-object v0
 
-    .line 3002
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEB:I
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    add-int/lit8 v1, v1, 0x1
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/widget/DragSortListView;->getPaddingLeft()I
 
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEB:I
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    move-result v1
 
-    .line 3007
-    :try_start_2
-    invoke-virtual {v0}, Ljava/io/FileWriter;->close()V
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfv:F
 
-    goto :goto_0
+    mul-float/2addr v2, v3
 
-    .line 3011
-    :catch_0
-    move-exception v0
+    float-to-int v2, v2
 
-    goto :goto_0
+    add-int/2addr v1, v2
 
-    :catch_1
-    move-exception v0
+    iput v1, v0, Landroid/graphics/Point;->x:I
 
-    move-object v0, v1
+    .line 1245
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    .line 3007
-    :goto_1
-    if-eqz v0, :cond_0
+    invoke-static {v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->g(Lcom/tencent/mm/ui/widget/DragSortListView;)V
 
-    .line 3008
-    :try_start_3
-    invoke-virtual {v0}, Ljava/io/FileWriter;->close()V
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
+    .line 1247
+    :cond_1
+    return-void
+.end method
 
-    goto :goto_0
+.method public final onStart()V
+    .locals 2
 
-    .line 3011
-    :catch_2
-    move-exception v0
+    .prologue
+    .line 1205
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    goto :goto_0
+    invoke-static {v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->h(Lcom/tencent/mm/ui/widget/DragSortListView;)I
 
-    .line 3006
-    :catchall_0
-    move-exception v0
+    move-result v0
 
-    .line 3007
-    :goto_2
-    if-eqz v1, :cond_3
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfs:I
 
-    .line 3008
-    :try_start_4
-    invoke-virtual {v1}, Ljava/io/FileWriter;->close()V
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
+    .line 1206
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    .line 3011
-    :cond_3
-    :goto_3
-    throw v0
+    invoke-static {v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->i(Lcom/tencent/mm/ui/widget/DragSortListView;)I
 
-    :catch_3
-    move-exception v1
+    move-result v0
 
-    goto :goto_3
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mft:I
 
-    .line 3006
-    :catchall_1
-    move-exception v1
+    .line 1207
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    move-object v4, v1
+    const/4 v1, 0x2
 
-    move-object v1, v0
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/widget/DragSortListView;->b(Lcom/tencent/mm/ui/widget/DragSortListView;I)I
 
-    move-object v0, v4
+    .line 1208
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    goto :goto_2
+    invoke-static {v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->e(Lcom/tencent/mm/ui/widget/DragSortListView;)Landroid/graphics/Point;
 
-    :catch_4
-    move-exception v1
+    move-result-object v0
 
-    goto :goto_1
+    iget v0, v0, Landroid/graphics/Point;->y:I
+
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView$f;->bpE()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    int-to-float v0, v0
+
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfu:F
+
+    .line 1209
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->e(Lcom/tencent/mm/ui/widget/DragSortListView;)Landroid/graphics/Point;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/graphics/Point;->x:I
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
+
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/widget/DragSortListView;->getPaddingLeft()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    int-to-float v0, v0
+
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfv:F
+
+    .line 1210
+    return-void
+.end method
+
+.method public final onStop()V
+    .locals 1
+
+    .prologue
+    .line 1251
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$f;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->l(Lcom/tencent/mm/ui/widget/DragSortListView;)V
+
+    .line 1252
+    return-void
 .end method

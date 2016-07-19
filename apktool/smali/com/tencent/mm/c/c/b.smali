@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public arA:Ljava/lang/String;
+.field public adi:Ljava/lang/String;
 
-.field arB:Ljava/io/DataOutputStream;
+.field adj:Ljava/io/DataOutputStream;
 
-.field arC:I
+.field adk:I
 
 
 # direct methods
@@ -20,7 +20,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 32
-    iput-object p1, p0, Lcom/tencent/mm/c/c/b;->arA:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/c/c/b;->adi:Ljava/lang/String;
 
     .line 33
     new-instance v0, Ljava/io/File;
@@ -44,7 +44,7 @@
 
     invoke-direct {v1, v2}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    iput-object v1, p0, Lcom/tencent/mm/c/c/b;->arB:Ljava/io/DataOutputStream;
+    iput-object v1, p0, Lcom/tencent/mm/c/c/b;->adj:Ljava/io/DataOutputStream;
 
     .line 38
     const/16 v0, 0x2c
@@ -128,10 +128,10 @@
     .line 54
     const/16 v1, 0x2c
 
-    iput v1, p0, Lcom/tencent/mm/c/c/b;->arC:I
+    iput v1, p0, Lcom/tencent/mm/c/c/b;->adk:I
 
     .line 55
-    iget-object v1, p0, Lcom/tencent/mm/c/c/b;->arB:Ljava/io/DataOutputStream;
+    iget-object v1, p0, Lcom/tencent/mm/c/c/b;->adj:Ljava/io/DataOutputStream;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
@@ -150,7 +150,7 @@
     move-exception v0
 
     .line 57
-    const-string/jumbo v1, "!32@/B4Tb64lLpKpZHW/L14GFGPrC+e0fvOZ"
+    const-string/jumbo v1, "MicroMsg.PcmWriter"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -170,7 +170,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -184,7 +184,7 @@
     const/4 v0, 0x0
 
     .line 67
-    iget-object v1, p0, Lcom/tencent/mm/c/c/b;->arB:Ljava/io/DataOutputStream;
+    iget-object v1, p0, Lcom/tencent/mm/c/c/b;->adj:Ljava/io/DataOutputStream;
 
     if-nez v1, :cond_0
 
@@ -195,18 +195,18 @@
     .line 72
     :cond_0
     :try_start_0
-    iget-object v1, p0, Lcom/tencent/mm/c/c/b;->arB:Ljava/io/DataOutputStream;
+    iget-object v1, p0, Lcom/tencent/mm/c/c/b;->adj:Ljava/io/DataOutputStream;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, p1, v2, p2}, Ljava/io/DataOutputStream;->write([BII)V
 
     .line 73
-    iget v1, p0, Lcom/tencent/mm/c/c/b;->arC:I
+    iget v1, p0, Lcom/tencent/mm/c/c/b;->adk:I
 
     add-int/2addr v1, p2
 
-    iput v1, p0, Lcom/tencent/mm/c/c/b;->arC:I
+    iput v1, p0, Lcom/tencent/mm/c/c/b;->adk:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -220,7 +220,7 @@
     move-exception v1
 
     .line 75
-    const-string/jumbo v2, "!32@/B4Tb64lLpKpZHW/L14GFGPrC+e0fvOZ"
+    const-string/jumbo v2, "MicroMsg.PcmWriter"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -240,18 +240,18 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public final lV()V
+.method public final kl()V
     .locals 5
 
     .prologue
     .line 83
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/c/c/b;->arB:Ljava/io/DataOutputStream;
+    iget-object v0, p0, Lcom/tencent/mm/c/c/b;->adj:Ljava/io/DataOutputStream;
 
     invoke-virtual {v0}, Ljava/io/DataOutputStream;->close()V
     :try_end_0
@@ -265,7 +265,7 @@
     :try_start_1
     new-instance v0, Ljava/io/RandomAccessFile;
 
-    iget-object v2, p0, Lcom/tencent/mm/c/c/b;->arA:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/c/c/b;->adi:Ljava/lang/String;
 
     const-string/jumbo v3, "rw"
 
@@ -276,10 +276,10 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 91
-    const-wide/16 v1, 0x4
+    const-wide/16 v2, 0x4
 
     :try_start_2
-    invoke-virtual {v0, v1, v2}, Ljava/io/RandomAccessFile;->seek(J)V
+    invoke-virtual {v0, v2, v3}, Ljava/io/RandomAccessFile;->seek(J)V
 
     .line 94
     const/4 v1, 0x4
@@ -294,7 +294,7 @@
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
     .line 96
-    iget v2, p0, Lcom/tencent/mm/c/c/b;->arC:I
+    iget v2, p0, Lcom/tencent/mm/c/c/b;->adk:I
 
     add-int/lit8 v2, v2, -0x8
 
@@ -311,7 +311,7 @@
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
     .line 102
-    iget v2, p0, Lcom/tencent/mm/c/c/b;->arC:I
+    iget v2, p0, Lcom/tencent/mm/c/c/b;->adk:I
 
     add-int/lit8 v2, v2, -0x2a
 
@@ -349,7 +349,7 @@
     move-exception v0
 
     .line 85
-    const-string/jumbo v1, "!32@/B4Tb64lLpKpZHW/L14GFGPrC+e0fvOZ"
+    const-string/jumbo v1, "MicroMsg.PcmWriter"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -369,7 +369,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 

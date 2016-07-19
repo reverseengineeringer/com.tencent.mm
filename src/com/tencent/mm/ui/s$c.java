@@ -2,14 +2,14 @@ package com.tencent.mm.ui;
 
 public final class s$c
 {
-  int aCK = 0;
-  boolean krd = false;
-  boolean kre = false;
-  s.d krf;
+  int apd = 0;
+  boolean kQk = false;
+  boolean kQl = false;
+  s.d kQm;
   
   public s$c(s.d paramd)
   {
-    krf = paramd;
+    kQm = paramd;
   }
 }
 

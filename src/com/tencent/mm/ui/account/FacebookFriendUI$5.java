@@ -9,25 +9,25 @@ final class FacebookFriendUI$5
 {
   FacebookFriendUI$5(FacebookFriendUI paramFacebookFriendUI, TextView paramTextView) {}
   
-  public final void Gh()
+  public final void GE()
   {
-    if ((h.sC()) && (FacebookFriendUI.a(ksr)))
+    if ((h.sE()) && (FacebookFriendUI.a(kRz)))
     {
-      if (FacebookFriendUI.b(ksr).getCount() != 0) {
+      if (FacebookFriendUI.b(kRz).getCount() != 0) {
         break label46;
       }
-      coQ.setVisibility(0);
+      cke.setVisibility(0);
     }
     for (;;)
     {
-      FacebookFriendUI.c(ksr);
+      FacebookFriendUI.c(kRz);
       return;
       label46:
-      coQ.setVisibility(8);
+      cke.setVisibility(8);
     }
   }
   
-  public final void Gi() {}
+  public final void GF() {}
 }
 
 /* Location:

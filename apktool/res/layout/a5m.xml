@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/RecordListItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView style="@style/RecordListItemAvatar" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/record_listitem_header" />
+        <ImageView android:id="@id/by8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@raw/fav_list_img_default" android:scaleType="centerInside" android:adjustViewBounds="true" android:maxWidth="260.0dip" style="@style/FavRecordContent" />
+        <ImageView android:layout_width="fill_parent" android:layout_height="1.0px" style="@style/RecordListItemEndDivider" />
+    </LinearLayout>
+    <ProgressBar android:id="@id/by9" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleHorizontal" />
+</LinearLayout>

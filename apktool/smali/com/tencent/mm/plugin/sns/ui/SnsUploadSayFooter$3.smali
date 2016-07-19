@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hlP:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+.field final synthetic hBQ:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 119
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter$3;->hlP:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter$3;->hBQ:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 123
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter$3;->hlP:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter$3;->hBQ:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->b(Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;)V
 

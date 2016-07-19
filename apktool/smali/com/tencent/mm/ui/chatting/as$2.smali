@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic fRJ:Lcom/tencent/mm/storage/ag;
+.field final synthetic gaM:Lcom/tencent/mm/storage/ai;
 
-.field final synthetic kTB:Lcom/tencent/mm/ui/chatting/as;
+.field final synthetic ltG:Lcom/tencent/mm/ui/chatting/as;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/chatting/as;Lcom/tencent/mm/storage/ag;)V
+.method constructor <init>(Lcom/tencent/mm/ui/chatting/as;Lcom/tencent/mm/storage/ai;)V
     .locals 0
 
     .prologue
-    .line 581
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/as$2;->kTB:Lcom/tencent/mm/ui/chatting/as;
+    .line 2239
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/as$2;->ltG:Lcom/tencent/mm/ui/chatting/as;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/as$2;->fRJ:Lcom/tencent/mm/storage/ag;
+    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/as$2;->gaM:Lcom/tencent/mm/storage/ai;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,28 +41,21 @@
 
 # virtual methods
 .method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 586
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/as$2;->fRJ:Lcom/tencent/mm/storage/ag;
+    .line 2257
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/as$2;->gaM:Lcom/tencent/mm/storage/ai;
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/model/app/l;->y(Lcom/tencent/mm/storage/ag;)V
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ds;->B(Lcom/tencent/mm/storage/ai;)V
 
-    .line 587
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/as$2;->fRJ:Lcom/tencent/mm/storage/ag;
+    .line 2258
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/as$2;->ltG:Lcom/tencent/mm/ui/chatting/as;
 
-    iget-wide v0, v0, Lcom/tencent/mm/d/b/bg;->field_msgId:J
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/as;->ltl:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/model/ar;->E(J)I
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->blj()V
 
-    .line 588
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/as$2;->kTB:Lcom/tencent/mm/ui/chatting/as;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/as;->kTe:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->bfz()V
-
-    .line 589
+    .line 2259
     return-void
 .end method

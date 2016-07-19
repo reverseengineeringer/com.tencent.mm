@@ -7,19 +7,19 @@ import android.widget.TextView;
 
 final class AppChooserUI$b
 {
-  ImageView esD;
-  TextView esE;
-  TextView esG;
-  TextView iRk;
-  RadioButton iRl;
+  ImageView exW;
+  TextView exX;
+  TextView exZ;
+  TextView jou;
+  RadioButton jov;
   
   public AppChooserUI$b(AppChooserUI paramAppChooserUI, View paramView)
   {
-    esD = ((ImageView)paramView.findViewById(2131169035));
-    esE = ((TextView)paramView.findViewById(2131167381));
-    esG = ((TextView)paramView.findViewById(2131169036));
-    iRk = ((TextView)paramView.findViewById(2131169037));
-    iRl = ((RadioButton)paramView.findViewById(2131169038));
+    exW = ((ImageView)paramView.findViewById(2131755302));
+    exX = ((TextView)paramView.findViewById(2131755303));
+    exZ = ((TextView)paramView.findViewById(2131755304));
+    jou = ((TextView)paramView.findViewById(2131755305));
+    jov = ((RadioButton)paramView.findViewById(2131755306));
   }
 }
 

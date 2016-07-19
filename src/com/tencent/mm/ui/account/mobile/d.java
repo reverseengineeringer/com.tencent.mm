@@ -9,50 +9,57 @@ import android.content.SharedPreferences;
 import android.widget.Button;
 import android.widget.Toast;
 import com.tencent.mm.model.ah;
+import com.tencent.mm.modelfriend.u;
 import com.tencent.mm.plugin.a.b;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ai;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.al;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.applet.SecurityImage;
 import com.tencent.mm.ui.base.MMFormMobileInputView;
-import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.p;
 
 public final class d
-  implements com.tencent.mm.r.d, MobileInputUI.b
+  implements com.tencent.mm.t.d, MobileInputUI.b
 {
-  private SecurityImage kqh = null;
-  private a ksM = null;
-  MobileInputUI kxM;
+  private SecurityImage kPm = null;
+  private a kRU = null;
+  MobileInputUI kWT;
   
-  private void Gu(String paramString)
+  private void IJ(String paramString)
   {
-    MobileInputUI localMobileInputUI1 = kxM;
-    MobileInputUI localMobileInputUI2 = kxM;
-    kxM.getString(2131430877);
-    ksQ = g.a(localMobileInputUI2, kxM.getString(2131427730), true, new DialogInterface.OnCancelListener()
+    MobileInputUI localMobileInputUI1 = kWT;
+    MobileInputUI localMobileInputUI2 = kWT;
+    kWT.getString(2131231028);
+    kRY = com.tencent.mm.ui.base.g.a(localMobileInputUI2, kWT.getString(2131234382), true, new DialogInterface.OnCancelListener()
     {
       public final void onCancel(DialogInterface paramAnonymousDialogInterface) {}
     });
-    paramString = new com.tencent.mm.modelfriend.u(paramString, 16, "", 0, "");
-    ah.tE().d(paramString);
+    paramString = new u(paramString, 16, "", 0, "");
+    ah.tF().a(paramString, 0);
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public final void a(MobileInputUI paramMobileInputUI)
   {
-    com.tencent.mm.sdk.platformtools.u.i("!44@/B4Tb64lLpKsMp00pgLFBmZKkAE77UfTgxohSwLgerQ=", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
-    if (kxM.ksQ != null)
+    kWT = paramMobileInputUI;
+    paramMobileInputUI.rR(2131233850);
+    kTF.setVisibility(8);
+  }
+  
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
+  {
+    v.i("MicroMsg.MobileInputLoginLogic", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
+    if (kWT.kRY != null)
     {
-      kxM.ksQ.dismiss();
-      kxM.ksQ = null;
+      kWT.kRY.dismiss();
+      kWT.kRY = null;
     }
-    if ((paramj.getType() == 701) && (ksM != null))
+    if ((paramj.getType() == 701) && (kRU != null))
     {
-      ksM.ktX = kxM.ktX;
-      ksM.a(kxM, paramInt1, paramInt2, paramString, paramj);
+      kRU.kTe = kWT.kTe;
+      kRU.a(kWT, paramInt1, paramInt2, paramString, paramj);
     }
     do
     {
@@ -61,145 +68,138 @@ public final class d
         return;
         if (paramj.getType() == 145)
         {
-          int i = ((com.tencent.mm.modelfriend.u)paramj).va();
+          int i = ((u)paramj).vc();
           if (i == 13)
           {
             if (paramInt2 == -41)
             {
-              paramString = com.tencent.mm.e.a.cV(paramString);
+              paramString = com.tencent.mm.f.a.dc(paramString);
               if (paramString != null)
               {
-                paramString.a(kxM, null, null);
+                paramString.a(kWT, null, null);
                 return;
               }
-              g.e(kxM, 2131427663, 2131427662);
+              com.tencent.mm.ui.base.g.f(kWT, 2131234394, 2131234395);
               return;
             }
             if (paramInt2 == -35)
             {
-              kxM.ksR = kxM.kus.getCountryCode();
-              kxM.fvR = kxM.kus.getMobileNumber();
-              paramString = kxM.ksR + kxM.fvR;
-              kxM.age();
-              Gu(paramString);
+              kWT.kRZ = kWT.kTz.getCountryCode();
+              kWT.fEW = kWT.kTz.bhO();
+              paramString = kWT.kRZ + kWT.fEW;
+              kWT.aiI();
+              IJ(paramString);
               return;
             }
             if (paramInt2 == -1)
             {
-              Toast.makeText(kxM, kxM.getString(2131427482, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
+              Toast.makeText(kWT, kWT.getString(2131232828, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
               return;
             }
             if (paramInt2 == -34)
             {
-              g.y(kxM, kxM.getString(2131428663), "");
+              com.tencent.mm.ui.base.g.b(kWT, kWT.getString(2131231262), "", true);
               return;
             }
-            paramj = ((com.tencent.mm.modelfriend.u)paramj).yP();
-            if (!ay.kz(paramj)) {
-              kxM.fvR = paramj.trim();
+            paramj = ((u)paramj).zc();
+            if (!be.kf(paramj)) {
+              kWT.fEW = paramj.trim();
             }
-            kxM.fvR = ai.CX(kxM.fvR);
-            b.kD(ah.tx() + "," + getClass().getName() + ",L200_300," + ah.fd("L200_300") + ",1");
-            paramString = com.tencent.mm.e.a.cV(paramString);
+            kWT.fEW = al.Fl(kWT.fEW);
+            b.lm(ah.ty() + "," + getClass().getName() + ",L200_300," + ah.fq("L200_300") + ",1");
+            paramString = com.tencent.mm.f.a.dc(paramString);
             if (paramString != null)
             {
-              paramString.a(kxM, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+              paramString.a(kWT, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
               {
                 public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
                 {
-                  d.a(d.this, kxM.ksR + kxM.fvR);
-                  b.kD(ah.tx() + "," + getClass().getName() + ",L200_300," + ah.fd("L200_300") + ",2");
+                  d.a(d.this, kWT.kRZ + kWT.fEW);
+                  b.lm(ah.ty() + "," + getClass().getName() + ",L200_300," + ah.fq("L200_300") + ",2");
                 }
               }, new DialogInterface.OnClickListener()
               {
                 public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
                 {
-                  b.kD(ah.tx() + "," + getClass().getName() + ",L200_300," + ah.fd("L200_300") + ",2");
+                  b.lm(ah.ty() + "," + getClass().getName() + ",L200_300," + ah.fq("L200_300") + ",2");
                 }
               });
               return;
             }
-            Gu(kxM.ksR + kxM.fvR);
+            IJ(kWT.kRZ + kWT.fEW);
             return;
           }
           if (i == 16)
           {
             if (paramInt2 == -41)
             {
-              g.e(kxM, 2131427663, 2131427662);
+              com.tencent.mm.ui.base.g.f(kWT, 2131234394, 2131234395);
               return;
             }
             if (paramInt2 == -75)
             {
-              g.y(kxM, kxM.getString(2131427770), "");
+              com.tencent.mm.ui.base.g.b(kWT, kWT.getString(2131230860), "", true);
               return;
             }
-            b.kC("L3");
-            b.kD(ah.tx() + "," + getClass().getName() + ",L3," + ah.fd("L3") + ",1");
+            b.ll("L3");
+            b.lm(ah.ty() + "," + getClass().getName() + ",L3," + ah.fq("L3") + ",1");
             Object localObject = new Intent();
             ((Intent)localObject).putExtra("mobile_verify_purpose", 1);
-            ((Intent)localObject).putExtra("bindmcontact_mobile", kxM.ksR + " " + kxM.kus.getMobileNumber());
-            ((Intent)localObject).putExtra("bindmcontact_shortmobile", kxM.fvR);
-            ((Intent)localObject).putExtra("country_name", kxM.bUu);
-            ((Intent)localObject).putExtra("couttry_code", kxM.aJD);
-            ((Intent)localObject).putExtra("mobileverify_countdownsec", ((com.tencent.mm.modelfriend.u)paramj).yR());
-            ((Intent)localObject).putExtra("mobileverify_countdownstyle", ((com.tencent.mm.modelfriend.u)paramj).yS());
-            ((Intent)localObject).putExtra("mobileverify_fb", ((com.tencent.mm.modelfriend.u)paramj).yT());
-            ((Intent)localObject).putExtra("from_deep_link", kxM.ktX);
-            ((Intent)localObject).setClass(kxM, MobileVerifyUI.class);
-            kxM.startActivity((Intent)localObject);
-            if (kxM.ktX)
+            ((Intent)localObject).putExtra("bindmcontact_mobile", kWT.kRZ + " " + kWT.kTz.bhO());
+            ((Intent)localObject).putExtra("bindmcontact_shortmobile", kWT.fEW);
+            ((Intent)localObject).putExtra("country_name", kWT.bNV);
+            ((Intent)localObject).putExtra("couttry_code", kWT.avX);
+            ((Intent)localObject).putExtra("mobileverify_countdownsec", ((u)paramj).ze());
+            ((Intent)localObject).putExtra("mobileverify_countdownstyle", ((u)paramj).zf());
+            ((Intent)localObject).putExtra("mobileverify_fb", ((u)paramj).zg());
+            ((Intent)localObject).putExtra("from_deep_link", kWT.kTe);
+            ((Intent)localObject).setClass(kWT, MobileVerifyUI.class);
+            kWT.startActivity((Intent)localObject);
+            if (kWT.kTe)
             {
-              localObject = y.getContext().getSharedPreferences("randomid_prefs", 4).getString("randomID", "");
-              h.fUJ.g(11930, new Object[] { localObject, Integer.valueOf(5) });
+              localObject = aa.getContext().getSharedPreferences("randomid_prefs", 4).getString("randomID", "");
+              com.tencent.mm.plugin.report.service.g.gdY.h(11930, new Object[] { localObject, Integer.valueOf(5) });
             }
           }
         }
       } while (paramj.getType() != 701);
-      paramString = com.tencent.mm.e.a.cV(paramString);
-    } while ((paramString == null) || (!paramString.a(kxM, null, null)));
+      paramString = com.tencent.mm.f.a.dc(paramString);
+    } while ((paramString == null) || (!paramString.a(kWT, null, null)));
   }
   
-  public final void a(MobileInputUI paramMobileInputUI)
+  public final void sh(int paramInt)
   {
-    kxM = paramMobileInputUI;
-    paramMobileInputUI.qb(2131427696);
-    kuy.setVisibility(8);
-  }
-  
-  public final void qp(int paramInt)
-  {
-    switch (5.kxO[(paramInt - 1)])
+    switch (5.kWV[(paramInt - 1)])
     {
     default: 
       return;
     }
-    Object localObject = kxM.ksR + kxM.fvR;
-    kxM.age();
-    MobileInputUI localMobileInputUI1 = kxM;
-    MobileInputUI localMobileInputUI2 = kxM;
-    kxM.getString(2131430877);
-    ksQ = g.a(localMobileInputUI2, kxM.getString(2131427730), true, new DialogInterface.OnCancelListener()
+    Object localObject = kWT.kRZ + kWT.fEW;
+    kWT.aiI();
+    MobileInputUI localMobileInputUI1 = kWT;
+    MobileInputUI localMobileInputUI2 = kWT;
+    kWT.getString(2131231028);
+    kRY = com.tencent.mm.ui.base.g.a(localMobileInputUI2, kWT.getString(2131234382), true, new DialogInterface.OnCancelListener()
     {
       public final void onCancel(DialogInterface paramAnonymousDialogInterface) {}
     });
-    localObject = new com.tencent.mm.modelfriend.u((String)localObject, 13, "", 0, "");
-    ah.tE().d((j)localObject);
+    localObject = new u((String)localObject, 13, "", 0, "");
+    ah.tF().a((j)localObject, 0);
   }
   
   public final void start()
   {
-    ah.tE().a(701, this);
-    ah.tE().a(145, this);
-    b.b(true, ah.tx() + "," + getClass().getName() + ",L200_100," + ah.fd("L200_100") + ",1");
-    b.kB("L200_100");
+    ah.tF().a(701, this);
+    ah.tF().a(145, this);
+    b.b(true, ah.ty() + "," + getClass().getName() + ",L200_100," + ah.fq("L200_100") + ",1");
+    b.lk("L200_100");
   }
   
   public final void stop()
   {
-    ah.tE().b(701, this);
-    ah.tE().b(145, this);
-    b.b(false, ah.tx() + "," + getClass().getName() + ",L200_100," + ah.fd("L200_100") + ",2");
+    ah.tF().b(701, this);
+    ah.tF().b(145, this);
+    b.b(false, ah.ty() + "," + getClass().getName() + ",L200_100," + ah.fq("L200_100") + ",2");
   }
 }
 

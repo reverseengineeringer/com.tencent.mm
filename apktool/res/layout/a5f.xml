@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <RelativeLayout android:orientation="vertical" android:id="@id/bxm" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/ot" android:gravity="center_horizontal" android:id="@id/bxn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/dfr" android:layout_centerVertical="true" />
+            <View android:id="@id/bxo" android:background="@color/ov" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:id="@id/bxp" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/oj" android:gravity="center_horizontal" android:id="@id/bxq" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/dfs" android:layout_centerVertical="true" />
+            <View android:id="@id/bxr" android:background="@color/ov" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:background="@color/m2" android:layout_width="fill_parent" android:layout_height="@dimen/dy" />
+    <RelativeLayout android:id="@id/bxs" android:layout_width="fill_parent" android:layout_height="400.0dip">
+        <TextView android:textSize="@dimen/i8" android:textColor="@color/gn" android:id="@id/bxt" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dfh" android:layout_centerInParent="true" />
+        <ListView android:id="@id/bxu" android:background="@null" android:focusable="true" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/o2" android:transcriptMode="disabled" android:cacheColorHint="@android:color/transparent" android:divider="@color/m2" android:dividerHeight="@dimen/dz" android:headerDividersEnabled="true" style="@style/NavPage" />
+        <ListView android:id="@id/bxv" android:background="@null" android:focusable="true" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/o2" android:transcriptMode="disabled" android:cacheColorHint="@android:color/transparent" android:divider="@color/m2" android:dividerHeight="@dimen/dz" android:headerDividersEnabled="true" style="@style/NavPage" />
+    </RelativeLayout>
+</LinearLayout>

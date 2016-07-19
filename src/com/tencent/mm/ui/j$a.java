@@ -1,21 +1,23 @@
 package com.tencent.mm.ui;
 
+import android.graphics.drawable.Drawable;
 import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
 import android.view.View.OnLongClickListener;
 
 public final class j$a
 {
-  boolean asK = true;
-  boolean aur = true;
-  View.OnLongClickListener dTW;
-  MenuItem.OnMenuItemClickListener fVg;
-  int kpD = -1;
-  int kpE;
-  View kpF;
-  View kpG;
-  int kpH = j.b.kpI;
+  boolean age = true;
+  View.OnLongClickListener dWe;
+  MenuItem.OnMenuItemClickListener gez;
+  int kOH = -1;
+  int kOI;
+  Drawable kOJ;
+  View kOK;
+  View kOL;
+  int kOM = j.b.kON;
   String text;
+  boolean visible = true;
 }
 
 /* Location:

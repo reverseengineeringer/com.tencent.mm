@@ -1,49 +1,49 @@
 package com.tencent.mm.modelsimple;
 
-import com.tencent.mm.at.b;
+import com.tencent.mm.ax.b;
 import com.tencent.mm.network.e;
 import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b.kb;
-import com.tencent.mm.protocal.b.kc;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.d;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.km;
+import com.tencent.mm.protocal.b.kn;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.d;
 
 public final class i
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private d anM;
-  private final a anN;
+  private final a bkQ;
+  private d bkT;
   
   public i(String paramString)
   {
-    u.i("!44@/B4Tb64lLpK+IBX8XDgnvtALlcFxU4v/WrC6GpcQofE=", "NetSceneDelTempSession %s", new Object[] { paramString });
+    v.i("MicroMsg.NetSceneDelTempSession", "NetSceneDelTempSession %s", new Object[] { paramString });
     Object localObject = new a.a();
-    bFa = new kb();
-    bFb = new kc();
+    byl = new km();
+    bym = new kn();
     uri = "/cgi-bin/mmbiz-bin/usrmsg/deltempsession";
-    bEY = 1067;
-    bFc = 0;
-    bFd = 0;
-    anN = ((a.a)localObject).vy();
-    localObject = (kb)anN.bEW.bFf;
-    iYR = paramString;
-    jia = b.aH(new byte[0]);
+    byj = 1067;
+    byn = 0;
+    byo = 0;
+    bkQ = ((a.a)localObject).vA();
+    localObject = (km)bkQ.byh.byq;
+    jzX = paramString;
+    jGg = b.aO(new byte[0]);
   }
   
   public final int a(e parame, d paramd)
   {
-    anM = paramd;
-    return a(parame, anN, this);
+    bkT = paramd;
+    return a(parame, bkQ, this);
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    u.i("!44@/B4Tb64lLpK+IBX8XDgnvtALlcFxU4v/WrC6GpcQofE=", "onGYNetEnd: %d, %d, %s", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString });
-    anM.a(paramInt2, paramInt3, paramString, this);
+    v.i("MicroMsg.NetSceneDelTempSession", "onGYNetEnd: %d, %d, %s", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString });
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()

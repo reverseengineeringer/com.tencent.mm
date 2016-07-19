@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->avw()V
+    value = Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->azm()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic dFW:Ljava/lang/String;
+.field final synthetic cJR:Ljava/lang/String;
 
-.field final synthetic gCA:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
+.field final synthetic gJb:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 962
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$7;->gCA:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$7;->gJb:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$7;->dFW:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$7;->cJR:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,15 +45,15 @@
 
     .prologue
     .line 966
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$7;->gCA:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$7;->gJb:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->u(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)Lcom/tencent/mm/plugin/sight/encode/ui/b;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$7;->dFW:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$7;->cJR:Ljava/lang/String;
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/b;->tY(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/b;->ve(Ljava/lang/String;)V
 
     .line 967
     return-void

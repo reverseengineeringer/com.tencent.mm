@@ -11,7 +11,7 @@
 
 
 # instance fields
-.field public ajf:Lcom/qq/wx/voice/embed/recognizer/e;
+.field public UV:Lcom/qq/wx/voice/embed/recognizer/e;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     invoke-direct {v0}, Lcom/qq/wx/voice/embed/recognizer/e;-><init>()V
 
-    iput-object v0, p0, Lcom/qq/wx/voice/embed/recognizer/b;->ajf:Lcom/qq/wx/voice/embed/recognizer/e;
+    iput-object v0, p0, Lcom/qq/wx/voice/embed/recognizer/b;->UV:Lcom/qq/wx/voice/embed/recognizer/e;
 
     return-void
 .end method

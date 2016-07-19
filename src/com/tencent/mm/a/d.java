@@ -8,8 +8,8 @@ import javax.crypto.spec.IvParameterSpec;
 
 public final class d
 {
-  private Cipher aks;
-  private Cipher akt;
+  private Cipher Xl;
+  private Cipher Xm;
   
   public d(String paramString)
   {
@@ -18,21 +18,21 @@ public final class d
       paramString = new DESKeySpec(paramString.getBytes("UTF8"));
       paramString = SecretKeyFactory.getInstance("DES").generateSecret(paramString);
       IvParameterSpec localIvParameterSpec = new IvParameterSpec("manifest".getBytes("UTF8"));
-      aks = Cipher.getInstance("DES/CBC/PKCS5Padding");
-      aks.init(1, paramString, localIvParameterSpec);
-      akt = Cipher.getInstance("DES/CBC/PKCS5Padding");
-      akt.init(2, paramString, localIvParameterSpec);
+      Xl = Cipher.getInstance("DES/CBC/PKCS5Padding");
+      Xl.init(1, paramString, localIvParameterSpec);
+      Xm = Cipher.getInstance("DES/CBC/PKCS5Padding");
+      Xm.init(2, paramString, localIvParameterSpec);
       return;
     }
     catch (Exception paramString) {}
   }
   
-  public final String av(String paramString)
+  public final String az(String paramString)
   {
     try
     {
       Object localObject = Base64.decode(paramString, 0);
-      localObject = new String(akt.doFinal((byte[])localObject), "UTF8");
+      localObject = new String(Xm.doFinal((byte[])localObject), "UTF8");
       return (String)localObject;
     }
     catch (Exception localException)

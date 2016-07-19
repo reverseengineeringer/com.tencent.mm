@@ -1,46 +1,46 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.protocal.b.aeo;
+import com.tencent.mm.protocal.b.afj;
 
 public abstract interface u
 {
-  public abstract u a(String paramString1, String paramString2, aeo paramaeo);
+  public abstract u a(String paramString1, String paramString2, afj paramafj);
   
   public abstract void a(v paramv);
   
   public abstract void b(v paramv);
   
-  public abstract u cD(String paramString);
-  
-  public abstract boolean g(String paramString1, String paramString2, String paramString3);
+  public abstract u cI(String paramString);
   
   public abstract String getMediaId();
   
   public abstract String getTitle();
   
-  public abstract boolean mA();
+  public abstract boolean i(String paramString1, String paramString2, String paramString3);
   
-  public abstract aeo mF();
+  public abstract String kB();
   
-  public abstract u mG();
+  public abstract int kJ();
   
-  public abstract int mI();
+  public abstract String kK();
   
-  public abstract String mJ();
+  public abstract int kL();
   
-  public abstract u mK();
+  public abstract String kM();
   
-  public abstract u mL();
+  public abstract boolean kN();
   
-  public abstract String mn();
+  public abstract afj kS();
   
-  public abstract int mw();
+  public abstract u kT();
   
-  public abstract String mx();
+  public abstract int kV();
   
-  public abstract int my();
+  public abstract String kW();
   
-  public abstract String mz();
+  public abstract u kX();
+  
+  public abstract u kY();
   
   public abstract void release();
 }

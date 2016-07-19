@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/LoginIndepPass;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/account/LoginIndepPass;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ktE:Lcom/tencent/mm/ui/account/LoginIndepPass;
+.field final synthetic kSL:Lcom/tencent/mm/ui/account/LoginIndepPass;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 420
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$2;->ktE:Lcom/tencent/mm/ui/account/LoginIndepPass;
+    .line 398
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$2;->kSL:Lcom/tencent/mm/ui/account/LoginIndepPass;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,16 +40,16 @@
     .locals 3
 
     .prologue
-    .line 424
+    .line 402
     if-nez p1, :cond_0
 
-    .line 428
+    .line 406
     :goto_0
     return-void
 
-    .line 427
+    .line 405
     :cond_0
-    invoke-interface {p1}, Lcom/tencent/mm/network/e;->vW()Lcom/tencent/mm/network/c;
+    invoke-interface {p1}, Lcom/tencent/mm/network/e;->vY()Lcom/tencent/mm/network/c;
 
     move-result-object v0
 
@@ -57,7 +57,7 @@
 
     new-array v1, v1, [B
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 

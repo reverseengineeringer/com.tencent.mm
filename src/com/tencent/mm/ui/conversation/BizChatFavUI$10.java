@@ -1,23 +1,17 @@
 package com.tencent.mm.ui.conversation;
 
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.t.c.a;
-import com.tencent.mm.t.c.a.b;
+import android.view.View;
+import android.widget.ListView;
+import com.tencent.mm.ui.base.MMSlideDelView.c;
 
 final class BizChatFavUI$10
-  implements c.a
+  implements MMSlideDelView.c
 {
   BizChatFavUI$10(BizChatFavUI paramBizChatFavUI) {}
   
-  public final void a(c.a.b paramb)
+  public final int I(View paramView)
   {
-    if ((paramb != null) && (bHc != null) && (BizChatFavUI.JT().equals(bHc.field_brandUserName)))
-    {
-      u.i("!32@/B4Tb64lLpKy3Chyc6XXOebcOF43B0Yg", "bizChatExtension bizChatConv change");
-      if (lnW.klz) {
-        BizChatFavUI.a(lnW).Gk();
-      }
-    }
+    return BizChatFavUI.e(lOv).getPositionForView(paramView);
   }
 }
 

@@ -1,28 +1,28 @@
 package com.tencent.mm.pluginsdk.model;
 
 import android.os.FileObserver;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class s
   extends FileObserver
 {
-  private String gjM;
-  private a iAM;
+  private String guh;
+  private a iXm;
   
   public s(String paramString, a parama)
   {
     super(paramString);
-    u.i("!44@/B4Tb64lLpK9WkebJFLOT+TjSV+I1/x0ls94CDmXe4Y=", "observer  " + paramString);
-    iAM = parama;
+    v.i("MicroMsg.ScreenshotObserver", "observer  " + paramString);
+    iXm = parama;
   }
   
   public final void onEvent(int paramInt, String paramString)
   {
-    if ((paramString != null) && (paramInt == 8) && ((gjM == null) || (!paramString.equalsIgnoreCase(gjM))))
+    if ((paramString != null) && (paramInt == 8) && ((guh == null) || (!paramString.equalsIgnoreCase(guh))))
     {
-      gjM = paramString;
-      iAM.aBG();
-      u.i("!44@/B4Tb64lLpK9WkebJFLOT+TjSV+I1/x0ls94CDmXe4Y=", "Send event to listener. " + paramString);
+      guh = paramString;
+      iXm.aEC();
+      v.i("MicroMsg.ScreenshotObserver", "Send event to listener. " + paramString);
     }
   }
   
@@ -38,7 +38,7 @@ public final class s
   
   public static abstract interface a
   {
-    public abstract void aBG();
+    public abstract void aEC();
   }
 }
 

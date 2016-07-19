@@ -5,8 +5,8 @@ import com.tencent.smtt.export.external.interfaces.IX5WebHistoryItem;
 
 public class WebHistoryItem
 {
-  private IX5WebHistoryItem lTI = null;
-  private android.webkit.WebHistoryItem lTJ = null;
+  private IX5WebHistoryItem mvE = null;
+  private android.webkit.WebHistoryItem mvF = null;
   
   static WebHistoryItem a(android.webkit.WebHistoryItem paramWebHistoryItem)
   {
@@ -14,7 +14,7 @@ public class WebHistoryItem
       return null;
     }
     WebHistoryItem localWebHistoryItem = new WebHistoryItem();
-    lTJ = paramWebHistoryItem;
+    mvF = paramWebHistoryItem;
     return localWebHistoryItem;
   }
   
@@ -24,40 +24,40 @@ public class WebHistoryItem
       return null;
     }
     WebHistoryItem localWebHistoryItem = new WebHistoryItem();
-    lTI = paramIX5WebHistoryItem;
+    mvE = paramIX5WebHistoryItem;
     return localWebHistoryItem;
   }
   
   public Bitmap getFavicon()
   {
-    if (lTI != null) {
-      return lTI.getFavicon();
+    if (mvE != null) {
+      return mvE.getFavicon();
     }
-    return lTJ.getFavicon();
+    return mvF.getFavicon();
   }
   
   public String getOriginalUrl()
   {
-    if (lTI != null) {
-      return lTI.getOriginalUrl();
+    if (mvE != null) {
+      return mvE.getOriginalUrl();
     }
-    return lTJ.getOriginalUrl();
+    return mvF.getOriginalUrl();
   }
   
   public String getTitle()
   {
-    if (lTI != null) {
-      return lTI.getTitle();
+    if (mvE != null) {
+      return mvE.getTitle();
     }
-    return lTJ.getTitle();
+    return mvF.getTitle();
   }
   
   public String getUrl()
   {
-    if (lTI != null) {
-      return lTI.getUrl();
+    if (mvE != null) {
+      return mvE.getUrl();
     }
-    return lTJ.getUrl();
+    return mvF.getUrl();
   }
 }
 

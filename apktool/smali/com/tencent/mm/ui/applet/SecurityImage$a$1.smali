@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic kzP:Lcom/tencent/mm/ui/applet/SecurityImage;
+.field final synthetic iGf:Landroid/content/DialogInterface$OnClickListener;
 
-.field final synthetic kzQ:Landroid/content/DialogInterface$OnClickListener;
+.field final synthetic kYW:Lcom/tencent/mm/ui/applet/SecurityImage;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 186
-    iput-object p1, p0, Lcom/tencent/mm/ui/applet/SecurityImage$a$1;->kzP:Lcom/tencent/mm/ui/applet/SecurityImage;
+    iput-object p1, p0, Lcom/tencent/mm/ui/applet/SecurityImage$a$1;->kYW:Lcom/tencent/mm/ui/applet/SecurityImage;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/applet/SecurityImage$a$1;->kzQ:Landroid/content/DialogInterface$OnClickListener;
+    iput-object p2, p0, Lcom/tencent/mm/ui/applet/SecurityImage$a$1;->iGf:Landroid/content/DialogInterface$OnClickListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
 
     .prologue
     .line 190
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/SecurityImage$a$1;->kzQ:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/SecurityImage$a$1;->iGf:Landroid/content/DialogInterface$OnClickListener;
 
     invoke-interface {v0, p1, p2}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 

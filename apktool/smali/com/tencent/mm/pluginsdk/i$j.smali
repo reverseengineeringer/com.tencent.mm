@@ -15,11 +15,11 @@
 
 
 # virtual methods
-.method public abstract ai(Landroid/content/Context;)V
+.method public abstract a(Landroid/content/Context;Z)V
 .end method
 
-.method public abstract b(Landroid/content/Context;Z)V
+.method public abstract ae(Landroid/content/Context;)V
 .end method
 
-.method public abstract lb()Z
+.method public abstract jC()Z
 .end method

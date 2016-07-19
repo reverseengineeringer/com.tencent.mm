@@ -8,14 +8,14 @@ import android.view.View.BaseSavedState;
 class AbsSpinnerICS$SavedState
   extends View.BaseSavedState
 {
-  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
-  long nj;
+  public static final Parcelable.Creator<SavedState> CREATOR = new Parcelable.Creator() {};
+  long nz;
   int position;
   
   private AbsSpinnerICS$SavedState(Parcel paramParcel)
   {
     super(paramParcel);
-    nj = paramParcel.readLong();
+    nz = paramParcel.readLong();
     position = paramParcel.readInt();
   }
   
@@ -26,13 +26,13 @@ class AbsSpinnerICS$SavedState
   
   public String toString()
   {
-    return "AbsSpinner.SavedState{" + Integer.toHexString(System.identityHashCode(this)) + " selectedId=" + nj + " position=" + position + "}";
+    return "AbsSpinner.SavedState{" + Integer.toHexString(System.identityHashCode(this)) + " selectedId=" + nz + " position=" + position + "}";
   }
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
     super.writeToParcel(paramParcel, paramInt);
-    paramParcel.writeLong(nj);
+    paramParcel.writeLong(nz);
     paramParcel.writeInt(position);
   }
 }

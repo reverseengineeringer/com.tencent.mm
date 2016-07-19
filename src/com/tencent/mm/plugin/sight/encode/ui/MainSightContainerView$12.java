@@ -1,25 +1,28 @@
 package com.tencent.mm.plugin.sight.encode.ui;
 
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.sdk.c.a;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class MainSightContainerView$12
-  implements af.a
+  implements ah.a
 {
   MainSightContainerView$12(MainSightContainerView paramMainSightContainerView) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    u.i("!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI=", "ashutest::start record");
-    gCA.awN();
-    MainSightContainerView.a(gCA, false);
-    MainSightContainerView.b(gCA).setStopCallback(MainSightContainerView.a(gCA));
-    MainSightContainerView.b(gCA).adB();
-    if (MainSightContainerView.c(gCA)) {}
+    v.i("MicroMsg.MainSightContainerView", "ashutest::start record");
+    MainSightContainerView localMainSightContainerView = gJb;
+    a.kug.e(gIU);
+    a.kug.d(gIU);
+    MainSightContainerView.a(gJb, false);
+    MainSightContainerView.b(gJb).n(MainSightContainerView.a(gJb));
+    MainSightContainerView.b(gJb).agf();
+    if (MainSightContainerView.c(gJb)) {}
     for (int i = 3;; i = 1)
     {
-      h.fUJ.g(11443, new Object[] { Integer.valueOf(i), Integer.valueOf(2), Integer.valueOf(0) });
+      g.gdY.h(11443, new Object[] { Integer.valueOf(i), Integer.valueOf(2), Integer.valueOf(0) });
       return false;
     }
   }

@@ -1,41 +1,18 @@
 package com.tencent.mm.plugin.sns.abtest;
 
-import com.tencent.mm.d.a.en;
-import com.tencent.mm.d.a.en.a;
-import com.tencent.mm.sdk.c.b;
-import com.tencent.mm.sdk.c.c;
-import com.tencent.mm.sdk.platformtools.u;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.tencent.mm.plugin.sns.i.k;
 
 final class a$3
-  extends c
+  implements View.OnClickListener
 {
-  a$3()
+  public final void onClick(View paramView)
   {
-    super(0);
-  }
-  
-  public final boolean a(b paramb)
-  {
-    if ((paramb instanceof en))
+    if ((paramView.getTag() instanceof k))
     {
-      paramb = (en)paramb;
-      boolean bool = azj.azk;
-      long l = azj.azl;
-      u.d("!56@/B4Tb64lLpJS/0D3j3Gd1bS+8gYCT1QlPdFvFKO+xQxizYRF9hcI0A==", "notInterestFinishEventListener callback, isNotInterest:%b, sndId:%d", new Object[] { Boolean.valueOf(bool), Long.valueOf(l) });
-      if ((l != 0L) && (a.axn() != 0L) && (l == a.axn()))
-      {
-        if (!bool) {
-          break label89;
-        }
-        a.lj(2);
-      }
-    }
-    for (;;)
-    {
-      a.uW();
-      return false;
-      label89:
-      a.lj(1);
+      k localk = (k)paramView.getTag();
+      a.a(paramView, paramView.getContext(), localk);
     }
   }
 }

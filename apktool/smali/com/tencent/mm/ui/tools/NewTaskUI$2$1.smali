@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic ktw:Lcom/tencent/mm/modelsimple/t;
+.field final synthetic kSE:Lcom/tencent/mm/modelsimple/r;
 
-.field final synthetic lxm:Lcom/tencent/mm/ui/tools/NewTaskUI$2;
+.field final synthetic lYa:Lcom/tencent/mm/ui/tools/NewTaskUI$2;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/tools/NewTaskUI$2;Lcom/tencent/mm/modelsimple/t;)V
+.method constructor <init>(Lcom/tencent/mm/ui/tools/NewTaskUI$2;Lcom/tencent/mm/modelsimple/r;)V
     .locals 0
 
     .prologue
-    .line 127
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2$1;->lxm:Lcom/tencent/mm/ui/tools/NewTaskUI$2;
+    .line 126
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2$1;->lYa:Lcom/tencent/mm/ui/tools/NewTaskUI$2;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2$1;->ktw:Lcom/tencent/mm/modelsimple/t;
+    iput-object p2, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2$1;->kSE:Lcom/tencent/mm/modelsimple/r;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,15 +44,15 @@
     .locals 2
 
     .prologue
-    .line 131
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 130
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2$1;->ktw:Lcom/tencent/mm/modelsimple/t;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2$1;->kSE:Lcom/tencent/mm/modelsimple/r;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
-    .line 132
+    .line 131
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/performance/d/a$c;
+.implements Lcom/tencent/mm/performance/b/a$a;
 
 
 # annotations
@@ -18,20 +18,16 @@
 
 
 # instance fields
-.field final synthetic clx:Lcom/tencent/mm/performance/wxperformancetool/d;
-
-.field final synthetic val$context:Landroid/content/Context;
+.field final synthetic cgB:Lcom/tencent/mm/performance/wxperformancetool/d;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/performance/wxperformancetool/d;Landroid/content/Context;)V
+.method constructor <init>(Lcom/tencent/mm/performance/wxperformancetool/d;)V
     .locals 0
 
     .prologue
-    .line 72
-    iput-object p1, p0, Lcom/tencent/mm/performance/wxperformancetool/d$2;->clx:Lcom/tencent/mm/performance/wxperformancetool/d;
-
-    iput-object p2, p0, Lcom/tencent/mm/performance/wxperformancetool/d$2;->val$context:Landroid/content/Context;
+    .line 114
+    iput-object p1, p0, Lcom/tencent/mm/performance/wxperformancetool/d$2;->cgB:Lcom/tencent/mm/performance/wxperformancetool/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,154 +36,143 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/ref/WeakReference;Z)V
-    .locals 6
+.method public final a(JJJ)V
+    .locals 3
 
     .prologue
-    .line 76
-    invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    .line 120
+    const-string/jumbo v0, "MicroMsg.WxPerformace"
 
-    move-result-object v0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 77
-    if-nez v0, :cond_1
+    const-string/jumbo v2, "onMemoryDangerLow percentage:"
 
-    .line 97
-    :cond_0
-    :goto_0
-    return-void
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 79
-    :cond_1
-    const-string/jumbo v1, "!32@/B4Tb64lLpJDy+XtaqVVAmxMdLX9z03q"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v3, "memoryleak==="
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/Class;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string/jumbo v3, "   "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 80
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    const-class v2, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
+    const-string/jumbo v2, " max:"
 
-    invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v1
+    move-result-object v1
 
-    if-nez v1, :cond_0
+    invoke-virtual {v1, p3, p4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 83
-    new-instance v1, Landroid/content/Intent;
+    move-result-object v1
 
-    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
+    const-string/jumbo v2, " used:"
 
-    .line 84
-    if-eqz p2, :cond_2
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 85
-    const-string/jumbo v2, "tag"
+    move-result-object v1
 
-    const-string/jumbo v3, "activity:"
+    invoke-virtual {v1, p5, p6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    move-result-object v1
 
-    .line 89
-    :goto_1
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-wide v2
+    move-result-object v1
 
-    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v2
+    .line 122
+    return-void
+.end method
 
-    .line 90
-    const-string/jumbo v3, "key"
+.method public final b(JJJ)V
+    .locals 3
 
-    invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    .prologue
+    .line 128
+    const-string/jumbo v0, "MicroMsg.WxPerformace"
 
-    .line 91
-    sget-object v3, Lcom/tencent/mm/performance/wxperformancetool/d;->clv:Ljava/util/HashMap;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string/jumbo v2, "onMemoryDangerMiddle percentage:"
 
-    .line 93
-    const-string/jumbo v2, "class"
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string/jumbo v3, "%s"
+    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/4 v4, 0x1
+    move-result-object v1
 
-    new-array v4, v4, [Ljava/lang/Object;
+    const-string/jumbo v2, " max:"
 
-    const/4 v5, 0x0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    aput-object v0, v4, v5
+    move-result-object v1
 
-    invoke-static {v3, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, p3, p4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    const-string/jumbo v2, " used:"
 
-    .line 94
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/d$2;->val$context:Landroid/content/Context;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-class v2, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
+    move-result-object v1
 
-    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+    invoke-virtual {v1, p5, p6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 95
-    const/high16 v0, 0x10000000
+    move-result-object v1
 
-    invoke-virtual {v1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 96
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/d$2;->val$context:Landroid/content/Context;
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
+    .line 130
+    return-void
+.end method
 
-    .line 87
-    :cond_2
-    const-string/jumbo v2, "tag"
+.method public final c(JJJ)V
+    .locals 3
 
-    const-string/jumbo v3, "object:"
+    .prologue
+    .line 136
+    const-string/jumbo v0, "MicroMsg.WxPerformace"
 
-    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    const-string/jumbo v2, "onMemoryDangerHigh percentage:"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v2, " max:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p3, p4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v2, " used:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p5, p6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 138
+    return-void
 .end method

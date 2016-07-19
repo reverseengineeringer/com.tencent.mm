@@ -11,8 +11,8 @@ final class c$10
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (iIg != null) {
-      iIg.a(true, c.ah(cqb), c.ai(cqb));
+    if (jfd != null) {
+      jfd.a(true, c.ak(clo), c.al(clo));
     }
   }
 }

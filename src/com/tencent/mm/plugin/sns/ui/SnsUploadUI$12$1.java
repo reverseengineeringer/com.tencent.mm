@@ -12,11 +12,11 @@ final class SnsUploadUI$12$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (SnsUploadUI.g(hmb.hlY) != null) {
-      SnsUploadUI.g(hmb.hlY).dP(10);
+    if (SnsUploadUI.g(hCe.hCb) != null) {
+      SnsUploadUI.g(hCe.hCb).ew(10);
     }
-    hmb.hlY.setResult(0, new Intent());
-    hmb.hlY.finish();
+    hCe.hCb.setResult(0, new Intent());
+    hCe.hCb.finish();
   }
 }
 

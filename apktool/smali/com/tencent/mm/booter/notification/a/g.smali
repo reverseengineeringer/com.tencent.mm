@@ -4,35 +4,35 @@
 
 
 # instance fields
-.field public boA:I
+.field public bcA:I
 
-.field public boB:I
+.field public bcB:I
 
-.field public boC:I
+.field public bcC:Z
 
-.field public boD:Z
+.field private bcD:I
 
-.field private boE:I
+.field private bcE:I
 
-.field private boF:I
+.field public bcF:Z
 
-.field public boG:Z
+.field public bcG:Z
 
-.field public boH:Z
+.field public bcs:Lcom/tencent/mm/booter/notification/a/b;
 
-.field public bot:Lcom/tencent/mm/booter/notification/a/b;
+.field public bct:Lcom/tencent/mm/booter/notification/a/c;
 
-.field public bou:Lcom/tencent/mm/booter/notification/a/c;
+.field public bcu:Lcom/tencent/mm/booter/notification/a/d;
 
-.field public bov:Lcom/tencent/mm/booter/notification/a/d;
+.field public bcv:Lcom/tencent/mm/booter/notification/a/h;
 
-.field public bow:Lcom/tencent/mm/booter/notification/a/h;
+.field public bcw:Lcom/tencent/mm/booter/notification/a/f;
 
-.field public box:Lcom/tencent/mm/booter/notification/a/f;
+.field public bcx:Lcom/tencent/mm/booter/notification/a/a;
 
-.field public boy:Lcom/tencent/mm/booter/notification/a/a;
+.field public bcy:I
 
-.field public boz:I
+.field public bcz:I
 
 .field public mContext:Landroid/content/Context;
 
@@ -48,10 +48,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 46
-    iput v0, p0, Lcom/tencent/mm/booter/notification/a/g;->boE:I
+    iput v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bcD:I
 
     .line 47
-    iput v0, p0, Lcom/tencent/mm/booter/notification/a/g;->boF:I
+    iput v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bcE:I
 
     .line 53
     iput-object p1, p0, Lcom/tencent/mm/booter/notification/a/g;->mContext:Landroid/content/Context;
@@ -61,44 +61,44 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/booter/notification/a/b;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bot:Lcom/tencent/mm/booter/notification/a/b;
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bcs:Lcom/tencent/mm/booter/notification/a/b;
 
     new-instance v0, Lcom/tencent/mm/booter/notification/a/c;
 
     invoke-direct {v0}, Lcom/tencent/mm/booter/notification/a/c;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bou:Lcom/tencent/mm/booter/notification/a/c;
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bct:Lcom/tencent/mm/booter/notification/a/c;
 
     new-instance v0, Lcom/tencent/mm/booter/notification/a/d;
 
     invoke-direct {v0}, Lcom/tencent/mm/booter/notification/a/d;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bov:Lcom/tencent/mm/booter/notification/a/d;
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bcu:Lcom/tencent/mm/booter/notification/a/d;
 
     new-instance v0, Lcom/tencent/mm/booter/notification/a/h;
 
     invoke-direct {v0}, Lcom/tencent/mm/booter/notification/a/h;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bow:Lcom/tencent/mm/booter/notification/a/h;
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bcv:Lcom/tencent/mm/booter/notification/a/h;
 
     new-instance v0, Lcom/tencent/mm/booter/notification/a/a;
 
     invoke-direct {v0}, Lcom/tencent/mm/booter/notification/a/a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->boy:Lcom/tencent/mm/booter/notification/a/a;
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bcx:Lcom/tencent/mm/booter/notification/a/a;
 
-    invoke-static {}, Lcom/tencent/mm/booter/notification/a/f$a;->nG()Lcom/tencent/mm/booter/notification/a/f;
+    invoke-static {}, Lcom/tencent/mm/booter/notification/a/f$a;->lU()Lcom/tencent/mm/booter/notification/a/f;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->box:Lcom/tencent/mm/booter/notification/a/f;
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bcw:Lcom/tencent/mm/booter/notification/a/f;
 
     .line 55
     return-void
 .end method
 
 .method public static a([J)Ljava/lang/String;
-    .locals 7
+    .locals 8
 
     .prologue
     const/4 v2, 0x0
@@ -126,7 +126,7 @@
     :goto_1
     if-ge v1, v4, :cond_2
 
-    aget-wide v5, p0, v1
+    aget-wide v6, p0, v1
 
     .line 355
     new-instance v3, Ljava/lang/StringBuilder;
@@ -137,7 +137,7 @@
 
     move-result-object v0
 
-    invoke-static {v5, v6}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    invoke-static {v6, v7}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v3
 

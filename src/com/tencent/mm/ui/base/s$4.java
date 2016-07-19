@@ -1,17 +1,16 @@
 package com.tencent.mm.ui.base;
 
-import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 final class s$4
-  extends aa
+  implements View.OnClickListener
 {
   s$4(o paramo) {}
   
-  public final void handleMessage(Message paramMessage)
+  public final void onClick(View paramView)
   {
-    kHO.dismiss();
-    super.handleMessage(paramMessage);
+    lgQ.dismiss();
   }
 }
 

@@ -7,24 +7,24 @@ import android.view.MenuInflater;
 
 public abstract class a
 {
-  private ActionBar iH;
-  public MenuInflater iI;
-  public final Activity jx;
-  public ActionMode kzn = null;
+  private ActionBar iY;
+  public MenuInflater iZ;
+  public final Activity jO;
+  public ActionMode kYu = null;
   
   public a(Activity paramActivity)
   {
-    jx = paramActivity;
+    jO = paramActivity;
   }
   
   abstract ActionBar aO();
   
   public final ActionBar aP()
   {
-    if (iH == null) {
-      iH = aO();
+    if (iY == null) {
+      iY = aO();
     }
-    return iH;
+    return iY;
   }
 }
 

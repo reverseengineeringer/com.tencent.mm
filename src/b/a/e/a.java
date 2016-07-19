@@ -13,83 +13,83 @@ import java.util.Set;
 public final class a
   implements b
 {
-  private b.a.d.a mek;
-  private b.a.a.a.b mel;
+  private b.a.d.a mQo;
+  private b.a.a.a.b mQp;
   
   public a(b.a.a.a.b paramb, b.a.d.a parama)
   {
-    mel = paramb;
-    mek = parama;
+    mQp = paramb;
+    mQo = parama;
   }
   
   private void a(b.a.d.c paramc, i parami)
   {
-    paramc.cR("oauth_timestamp", new b.a.f.d().boR());
-    paramc.cR("oauth_nonce", new b.a.f.d().getNonce());
-    paramc.cR("oauth_consumer_key", mek.mdB);
-    paramc.cR("oauth_signature_method", new b.a.f.a().boQ());
-    paramc.cR("oauth_version", "1.0");
-    if (mek.jwt != null) {}
+    paramc.de("oauth_timestamp", new b.a.f.d().bvP());
+    paramc.de("oauth_nonce", new b.a.f.d().getNonce());
+    paramc.de("oauth_consumer_key", mQo.mPF);
+    paramc.de("oauth_signature_method", new b.a.f.a().bvO());
+    paramc.de("oauth_version", "1.0");
+    if (mQo.jVb != null) {}
     for (int i = 1;; i = 0)
     {
       if (i != 0) {
-        paramc.cR("scope", mek.jwt);
+        paramc.de("scope", mQo.jVb);
       }
-      mek.oa("generating signature...");
+      mQo.pk("generating signature...");
       String str = new b.a.c.c().a(paramc);
-      parami = new b.a.f.a().Q(str, mek.mdC, jzR);
-      mek.oa("base string is: " + str);
-      mek.oa("signature is: " + parami);
-      paramc.cR("oauth_signature", parami);
-      mek.oa("appended additional OAuth parameters: " + b.a.g.b.T(mdK));
+      parami = new b.a.f.a().S(str, mQo.mPG, jYE);
+      mQo.pk("base string is: " + str);
+      mQo.pk("signature is: " + parami);
+      paramc.de("oauth_signature", parami);
+      mQo.pk("appended additional OAuth parameters: " + b.a.g.b.T(mPO));
       return;
     }
   }
   
   private void b(b.a.d.c paramc)
   {
-    switch (boP()[mek.mdF.ordinal()])
+    switch (bvN()[mQo.mPJ.ordinal()])
     {
     }
     for (;;)
     {
       return;
-      mek.oa("using Http Header signature");
+      mQo.pk("using Http Header signature");
       paramc.addHeader("Authorization", new e().a(paramc));
       return;
-      mek.oa("using Querystring signature");
-      Iterator localIterator = mdK.entrySet().iterator();
+      mQo.pk("using Querystring signature");
+      Iterator localIterator = mPO.entrySet().iterator();
       while (localIterator.hasNext())
       {
         Map.Entry localEntry = (Map.Entry)localIterator.next();
-        paramc.cS((String)localEntry.getKey(), (String)localEntry.getValue());
+        paramc.df((String)localEntry.getKey(), (String)localEntry.getValue());
       }
     }
   }
   
   public final i a(i parami, k paramk)
   {
-    mek.oa("obtaining access token from " + mel.boE());
-    b.a.d.c localc = new b.a.d.c(j.mec, mel.boE());
-    localc.cR("oauth_token", token);
-    localc.cR("oauth_verifier", value);
-    mek.oa("setting token to: " + parami + " and verifier to: " + paramk);
+    mQo.pk("obtaining access token from " + mQp.bvC());
+    b.a.d.c localc = new b.a.d.c(j.mQg, mQp.bvC());
+    localc.de("oauth_token", token);
+    localc.de("oauth_verifier", value);
+    mQo.pk("setting token to: " + parami + " and verifier to: " + paramk);
     a(localc, parami);
     b(localc);
-    parami = localc.boJ();
-    return new b.a.c.g().IO(parami.getBody());
+    parami = localc.bvH();
+    return new b.a.c.g().Lp(parami.getBody());
   }
   
   public final void a(i parami, b.a.d.c paramc)
   {
-    mek.oa("signing request: " + paramc.boH());
-    if (("".equals(token)) && ("".equals(jzR))) {}
+    mQo.pk("signing request: " + paramc.bvF());
+    if (("".equals(token)) && ("".equals(jYE))) {}
     for (int i = 1;; i = 0)
     {
       if (i == 0) {
-        paramc.cR("oauth_token", token);
+        paramc.de("oauth_token", token);
       }
-      mek.oa("setting token to: " + parami);
+      mQo.pk("setting token to: " + parami);
       a(paramc, parami);
       b(paramc);
       return;
@@ -98,23 +98,23 @@ public final class a
   
   public final String b(i parami)
   {
-    return mel.b(parami);
+    return mQp.b(parami);
   }
   
-  public final i boO()
+  public final i bvM()
   {
-    mek.oa("obtaining request token from " + mel.boD());
-    Object localObject = new b.a.d.c(j.mec, mel.boD());
-    mek.oa("setting oauth_callback to " + mek.mdD);
-    ((b.a.d.c)localObject).cR("oauth_callback", mek.mdD);
-    a((b.a.d.c)localObject, b.a.d.b.mdJ);
+    mQo.pk("obtaining request token from " + mQp.bvB());
+    Object localObject = new b.a.d.c(j.mQg, mQp.bvB());
+    mQo.pk("setting oauth_callback to " + mQo.mPH);
+    ((b.a.d.c)localObject).de("oauth_callback", mQo.mPH);
+    a((b.a.d.c)localObject, b.a.d.b.mPN);
     b((b.a.d.c)localObject);
-    mek.oa("sending request...");
-    localObject = ((b.a.d.c)localObject).boJ();
+    mQo.pk("sending request...");
+    localObject = ((b.a.d.c)localObject).bvH();
     String str = ((b.a.d.g)localObject).getBody();
-    mek.oa("response status code: " + cwi);
-    mek.oa("response body: " + str);
-    return new b.a.c.g().IO(str);
+    mQo.pk("response status code: " + crO);
+    mQo.pk("response body: " + str);
+    return new b.a.c.g().Lp(str);
   }
 }
 

@@ -4,11 +4,20 @@
 
 
 # static fields
-.field private static final bom:Ljava/util/Set;
+.field private static final bck:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public bon:Z
+.field public bcl:Z
 
 
 # direct methods
@@ -22,21 +31,21 @@
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     .line 47
-    sput-object v0, Lcom/tencent/mm/booter/notification/a/e;->bom:Ljava/util/Set;
+    sput-object v0, Lcom/tencent/mm/booter/notification/a/e;->bck:Ljava/util/Set;
 
     const-string/jumbo v1, "readerapp"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 48
-    sget-object v0, Lcom/tencent/mm/booter/notification/a/e;->bom:Ljava/util/Set;
+    sget-object v0, Lcom/tencent/mm/booter/notification/a/e;->bck:Ljava/util/Set;
 
     const-string/jumbo v1, "blogapp"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 49
-    sget-object v0, Lcom/tencent/mm/booter/notification/a/e;->bom:Ljava/util/Set;
+    sget-object v0, Lcom/tencent/mm/booter/notification/a/e;->bck:Ljava/util/Set;
 
     const-string/jumbo v1, "newsapp"
 
@@ -56,7 +65,7 @@
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;Lcom/tencent/mm/storage/ag;)Z
+.method public static a(Ljava/lang/String;Lcom/tencent/mm/storage/ai;)Z
     .locals 6
 
     .prologue
@@ -65,13 +74,13 @@
     const/4 v2, 0x0
 
     .line 339
-    invoke-static {p0}, Lcom/tencent/mm/g/g;->do(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/h/g;->dv(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1}, Lcom/tencent/mm/g/g;->c(Lcom/tencent/mm/storage/ag;)Z
+    invoke-static {p1}, Lcom/tencent/mm/h/g;->c(Lcom/tencent/mm/storage/ai;)Z
 
     move-result v0
 
@@ -81,7 +90,7 @@
 
     .line 340
     :goto_0
-    const-string/jumbo v3, "!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA=="
+    const-string/jumbo v3, "MicroMsg.Notification.Silent.Handle"
 
     const-string/jumbo v4, "check is NOT Must Mute: %B"
 
@@ -96,7 +105,7 @@
 
     aput-object v1, v5, v2
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 341
     return v0
@@ -192,89 +201,7 @@
     goto :goto_0
 .end method
 
-.method public static bI(I)Z
-    .locals 6
-
-    .prologue
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    .line 331
-    and-int/lit8 v0, p0, 0x2
-
-    if-eqz v0, :cond_0
-
-    move v0, v1
-
-    .line 332
-    :goto_0
-    const-string/jumbo v3, "!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA=="
-
-    const-string/jumbo v4, "check is Service Request Sound: %B"
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v5
-
-    aput-object v5, v1, v2
-
-    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 333
-    return v0
-
-    :cond_0
-    move v0, v2
-
-    .line 331
-    goto :goto_0
-.end method
-
-.method public static bJ(I)Z
-    .locals 6
-
-    .prologue
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    .line 415
-    and-int/lit8 v0, p0, 0x2
-
-    if-eqz v0, :cond_0
-
-    move v0, v1
-
-    .line 417
-    :goto_0
-    const-string/jumbo v3, "!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA=="
-
-    const-string/jumbo v4, "check is Service Request Shake: %B"
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v5
-
-    aput-object v5, v1, v2
-
-    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 419
-    return v0
-
-    :cond_0
-    move v0, v2
-
-    .line 415
-    goto :goto_0
-.end method
-
-.method public static cP(Ljava/lang/String;)Z
+.method public static cW(Ljava/lang/String;)Z
     .locals 2
 
     .prologue
@@ -293,18 +220,18 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/z;->CS(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->Ff(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 94
-    const-string/jumbo v0, "!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA=="
+    const-string/jumbo v0, "MicroMsg.Notification.Silent.Handle"
 
     const-string/jumbo v1, "check is Sound NOT Lock: FALSE"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 95
     const/4 v0, 0x1
@@ -315,11 +242,11 @@
 
     .line 98
     :cond_0
-    const-string/jumbo v0, "!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA=="
+    const-string/jumbo v0, "MicroMsg.Notification.Silent.Handle"
 
     const-string/jumbo v1, "check is Sound NOT Lock: TRUE"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 99
     const/4 v0, 0x0
@@ -327,7 +254,7 @@
     goto :goto_0
 .end method
 
-.method public static cQ(Ljava/lang/String;)Z
+.method public static cX(Ljava/lang/String;)Z
     .locals 6
 
     .prologue
@@ -336,14 +263,14 @@
     const/4 v1, 0x0
 
     .line 306
-    sget-object v2, Lcom/tencent/mm/booter/notification/a/e;->bom:Ljava/util/Set;
+    sget-object v2, Lcom/tencent/mm/booter/notification/a/e;->bck:Ljava/util/Set;
 
     invoke-interface {v2, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v2
 
     .line 307
-    const-string/jumbo v3, "!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA=="
+    const-string/jumbo v3, "MicroMsg.Notification.Silent.Handle"
 
     const-string/jumbo v4, "check is NOT Siler User: %B"
 
@@ -358,7 +285,7 @@
 
     aput-object v0, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 308
     return v2
@@ -370,7 +297,89 @@
     goto :goto_0
 .end method
 
-.method public static j(ILjava/lang/String;)Z
+.method public static ca(I)Z
+    .locals 6
+
+    .prologue
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 331
+    and-int/lit8 v0, p0, 0x2
+
+    if-eqz v0, :cond_0
+
+    move v0, v1
+
+    .line 332
+    :goto_0
+    const-string/jumbo v3, "MicroMsg.Notification.Silent.Handle"
+
+    const-string/jumbo v4, "check is Service Request Sound: %B"
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v5
+
+    aput-object v5, v1, v2
+
+    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 333
+    return v0
+
+    :cond_0
+    move v0, v2
+
+    .line 331
+    goto :goto_0
+.end method
+
+.method public static cb(I)Z
+    .locals 6
+
+    .prologue
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 415
+    and-int/lit8 v0, p0, 0x2
+
+    if-eqz v0, :cond_0
+
+    move v0, v1
+
+    .line 417
+    :goto_0
+    const-string/jumbo v3, "MicroMsg.Notification.Silent.Handle"
+
+    const-string/jumbo v4, "check is Service Request Shake: %B"
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v5
+
+    aput-object v5, v1, v2
+
+    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 419
+    return v0
+
+    :cond_0
+    move v0, v2
+
+    .line 415
+    goto :goto_0
+.end method
+
+.method public static k(ILjava/lang/String;)Z
     .locals 6
 
     .prologue
@@ -378,27 +387,27 @@
 
     .line 371
     .line 375
-    invoke-static {p0}, Lcom/tencent/mm/g/g;->cb(I)Z
+    invoke-static {p0}, Lcom/tencent/mm/h/g;->ct(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 376
-    invoke-static {p1}, Lcom/tencent/mm/g/g;->dj(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/h/g;->dq(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 380
-    invoke-static {}, Lcom/tencent/mm/g/g;->pP()Z
+    invoke-static {}, Lcom/tencent/mm/h/g;->oh()Z
 
     move-result v0
 
     .line 391
     :goto_0
-    const-string/jumbo v2, "!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA=="
+    const-string/jumbo v2, "MicroMsg.Notification.Silent.Handle"
 
     const-string/jumbo v3, "check is Voip Need Sound: %B"
 
@@ -412,21 +421,21 @@
 
     aput-object v5, v1, v4
 
-    invoke-static {v2, v3, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 392
     return v0
 
     .line 384
     :cond_0
-    invoke-static {p1}, Lcom/tencent/mm/g/g;->dk(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/h/g;->dr(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 385
-    invoke-static {}, Lcom/tencent/mm/g/g;->pQ()Z
+    invoke-static {}, Lcom/tencent/mm/h/g;->oi()Z
 
     move-result v0
 
@@ -438,7 +447,7 @@
     goto :goto_0
 .end method
 
-.method public static nB()Z
+.method public static lP()Z
     .locals 2
 
     .prologue
@@ -455,18 +464,18 @@
 
     iget v0, v0, Landroid/text/format/Time;->minute:I
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/network/aa;->ab(II)Z
+    invoke-static {v1, v0}, Lcom/tencent/mm/network/aa;->ae(II)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 315
-    const-string/jumbo v0, "!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA=="
+    const-string/jumbo v0, "MicroMsg.Notification.Silent.Handle"
 
     const-string/jumbo v1, "no shake & sound notification during background deactive time"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 316
     const/4 v0, 0x1
@@ -481,17 +490,17 @@
     goto :goto_0
 .end method
 
-.method public static nC()Z
+.method public static lQ()Z
     .locals 6
 
     .prologue
     .line 324
-    invoke-static {}, Lcom/tencent/mm/g/g;->pj()Z
+    invoke-static {}, Lcom/tencent/mm/h/g;->nB()Z
 
     move-result v0
 
     .line 325
-    const-string/jumbo v1, "!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA=="
+    const-string/jumbo v1, "MicroMsg.Notification.Silent.Handle"
 
     const-string/jumbo v2, "check is Sound Mode: %B"
 
@@ -507,13 +516,13 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 326
     return v0
 .end method
 
-.method public static nD()Z
+.method public static lR()Z
     .locals 6
 
     .prologue
@@ -523,32 +532,32 @@
 
     .line 350
     :try_start_0
-    new-instance v0, Lcom/tencent/mm/d/a/nv;
+    new-instance v0, Lcom/tencent/mm/e/a/oi;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/nv;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/oi;-><init>()V
 
     .line 351
-    iget-object v3, v0, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
+    iget-object v3, v0, Lcom/tencent/mm/e/a/oi;->awy:Lcom/tencent/mm/e/a/oi$a;
 
     const/4 v4, 0x2
 
-    iput v4, v3, Lcom/tencent/mm/d/a/nv$a;->axL:I
+    iput v4, v3, Lcom/tencent/mm/e/a/oi$a;->ajS:I
 
     .line 352
-    sget-object v3, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v3, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v3, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v3, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 353
-    iget-object v0, v0, Lcom/tencent/mm/d/a/nv;->aKf:Lcom/tencent/mm/d/a/nv$b;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/oi;->awz:Lcom/tencent/mm/e/a/oi$b;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/d/a/nv$b;->aKi:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/e/a/oi$b;->awC:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 355
     :goto_0
-    const-string/jumbo v3, "!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA=="
+    const-string/jumbo v3, "MicroMsg.Notification.Silent.Handle"
 
     const-string/jumbo v4, "check is Voip NOT Calling: %B"
 
@@ -563,7 +572,7 @@
 
     aput-object v2, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 359
     return v0
@@ -582,19 +591,19 @@
     goto :goto_1
 .end method
 
-.method public static nE()Z
+.method public static lS()Z
     .locals 7
 
     .prologue
     const/4 v1, 0x0
 
     .line 398
-    invoke-static {}, Lcom/tencent/mm/g/g;->pl()Z
+    invoke-static {}, Lcom/tencent/mm/h/g;->nD()Z
 
     move-result v0
 
     .line 399
-    invoke-static {}, Lcom/tencent/mm/booter/notification/a/e;->nF()I
+    invoke-static {}, Lcom/tencent/mm/booter/notification/a/e;->lT()I
 
     move-result v2
 
@@ -605,7 +614,7 @@
 
     .line 404
     :cond_0
-    const-string/jumbo v3, "!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA=="
+    const-string/jumbo v3, "MicroMsg.Notification.Silent.Handle"
 
     const-string/jumbo v4, "check is Shake Mode: %B, System AudioManager Mode: %d"
 
@@ -627,18 +636,18 @@
 
     aput-object v2, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 405
     return v0
 .end method
 
-.method public static nF()I
+.method public static lT()I
     .locals 2
 
     .prologue
     .line 409
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 

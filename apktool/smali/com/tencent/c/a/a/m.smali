@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field private akc:I
+.field private VV:I
 
-.field private akd:Lorg/json/JSONObject;
+.field private VW:Lorg/json/JSONObject;
 
 .field protected context:Landroid/content/Context;
 
@@ -27,10 +27,10 @@
     .line 23
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/c/a/a/m;->akc:I
+    iput v0, p0, Lcom/tencent/c/a/a/m;->VV:I
 
     .line 24
-    iput-object v1, p0, Lcom/tencent/c/a/a/m;->akd:Lorg/json/JSONObject;
+    iput-object v1, p0, Lcom/tencent/c/a/a/m;->VW:Lorg/json/JSONObject;
 
     .line 27
     iput-object p1, p0, Lcom/tencent/c/a/a/m;->context:Landroid/content/Context;
@@ -46,10 +46,10 @@
 
     long-to-int v0, v0
 
-    iput v0, p0, Lcom/tencent/c/a/a/m;->akc:I
+    iput v0, p0, Lcom/tencent/c/a/a/m;->VV:I
 
     .line 29
-    iput-object p2, p0, Lcom/tencent/c/a/a/m;->akd:Lorg/json/JSONObject;
+    iput-object p2, p0, Lcom/tencent/c/a/a/m;->VW:Lorg/json/JSONObject;
 
     .line 30
     return-void
@@ -57,7 +57,7 @@
 
 
 # virtual methods
-.method final kf()Lorg/json/JSONObject;
+.method final iG()Lorg/json/JSONObject;
     .locals 7
 
     .prologue
@@ -84,14 +84,14 @@
     .line 41
     const-string/jumbo v1, "ts"
 
-    iget v2, p0, Lcom/tencent/c/a/a/m;->akc:I
+    iget v2, p0, Lcom/tencent/c/a/a/m;->VV:I
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     .line 42
     const-string/jumbo v1, "si"
 
-    iget v2, p0, Lcom/tencent/c/a/a/m;->akc:I
+    iget v2, p0, Lcom/tencent/c/a/a/m;->VV:I
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
@@ -100,7 +100,7 @@
 
     iget-object v2, p0, Lcom/tencent/c/a/a/m;->context:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/tencent/c/a/a/s;->U(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/c/a/a/s;->Q(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -111,7 +111,7 @@
 
     iget-object v2, p0, Lcom/tencent/c/a/a/m;->context:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/tencent/c/a/a/s;->V(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/c/a/a/s;->R(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -120,16 +120,16 @@
     .line 45
     iget-object v1, p0, Lcom/tencent/c/a/a/m;->context:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/tencent/c/a/a/i;->Q(Landroid/content/Context;)Lcom/tencent/c/a/a/i;
+    invoke-static {v1}, Lcom/tencent/c/a/a/i;->M(Landroid/content/Context;)Lcom/tencent/c/a/a/i;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/c/a/a/i;->kd()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/tencent/c/a/a/i;->iE()Ljava/lang/String;
 
     move-result-object v1
 
     .line 46
-    invoke-static {v1}, Lcom/tencent/c/a/a/s;->at(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/c/a/a/s;->ax(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -156,17 +156,17 @@
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
-    sget-object v3, Lcom/tencent/c/a/a/b;->ajA:Lcom/tencent/c/a/a/b$a;
+    sget-object v3, Lcom/tencent/c/a/a/b;->Vs:Lcom/tencent/c/a/a/b$a;
 
     if-eqz v3, :cond_3
 
-    sget-object v3, Lcom/tencent/c/a/a/b;->ajA:Lcom/tencent/c/a/a/b$a;
+    sget-object v3, Lcom/tencent/c/a/a/b;->Vs:Lcom/tencent/c/a/a/b$a;
 
     const-string/jumbo v4, "sr"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
-    iget-object v6, v3, Lcom/tencent/c/a/a/b$a;->ajF:Landroid/util/DisplayMetrics;
+    iget-object v6, v3, Lcom/tencent/c/a/a/b$a;->Vx:Landroid/util/DisplayMetrics;
 
     iget v6, v6, Landroid/util/DisplayMetrics;->widthPixels:I
 
@@ -182,7 +182,7 @@
 
     move-result-object v5
 
-    iget-object v6, v3, Lcom/tencent/c/a/a/b$a;->ajF:Landroid/util/DisplayMetrics;
+    iget-object v6, v3, Lcom/tencent/c/a/a/b$a;->Vx:Landroid/util/DisplayMetrics;
 
     iget v6, v6, Landroid/util/DisplayMetrics;->heightPixels:I
 
@@ -198,31 +198,31 @@
 
     const-string/jumbo v4, "av"
 
-    iget-object v5, v3, Lcom/tencent/c/a/a/b$a;->ajD:Ljava/lang/String;
+    iget-object v5, v3, Lcom/tencent/c/a/a/b$a;->Vv:Ljava/lang/String;
 
     invoke-static {v2, v4, v5}, Lcom/tencent/c/a/a/s;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v4, "ch"
 
-    iget-object v5, v3, Lcom/tencent/c/a/a/b$a;->ajJ:Ljava/lang/String;
+    iget-object v5, v3, Lcom/tencent/c/a/a/b$a;->VB:Ljava/lang/String;
 
     invoke-static {v2, v4, v5}, Lcom/tencent/c/a/a/s;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v4, "mf"
 
-    iget-object v5, v3, Lcom/tencent/c/a/a/b$a;->ajH:Ljava/lang/String;
+    iget-object v5, v3, Lcom/tencent/c/a/a/b$a;->Vz:Ljava/lang/String;
 
     invoke-static {v2, v4, v5}, Lcom/tencent/c/a/a/s;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v4, "sv"
 
-    iget-object v5, v3, Lcom/tencent/c/a/a/b$a;->ajE:Ljava/lang/String;
+    iget-object v5, v3, Lcom/tencent/c/a/a/b$a;->Vw:Ljava/lang/String;
 
     invoke-static {v2, v4, v5}, Lcom/tencent/c/a/a/s;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v4, "ov"
 
-    iget v5, v3, Lcom/tencent/c/a/a/b$a;->ajG:I
+    iget v5, v3, Lcom/tencent/c/a/a/b$a;->Vy:I
 
     invoke-static {v5}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -238,13 +238,13 @@
 
     const-string/jumbo v4, "op"
 
-    iget-object v5, v3, Lcom/tencent/c/a/a/b$a;->ajK:Ljava/lang/String;
+    iget-object v5, v3, Lcom/tencent/c/a/a/b$a;->VC:Ljava/lang/String;
 
     invoke-static {v2, v4, v5}, Lcom/tencent/c/a/a/s;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v4, "lg"
 
-    iget-object v5, v3, Lcom/tencent/c/a/a/b$a;->ajI:Ljava/lang/String;
+    iget-object v5, v3, Lcom/tencent/c/a/a/b$a;->VA:Ljava/lang/String;
 
     invoke-static {v2, v4, v5}, Lcom/tencent/c/a/a/s;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -260,20 +260,20 @@
 
     invoke-static {v2, v4, v5}, Lcom/tencent/c/a/a/s;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
-    iget v4, v3, Lcom/tencent/c/a/a/b$a;->Ro:I
+    iget v4, v3, Lcom/tencent/c/a/a/b$a;->VE:I
 
     if-eqz v4, :cond_0
 
     const-string/jumbo v4, "jb"
 
-    iget v5, v3, Lcom/tencent/c/a/a/b$a;->Ro:I
+    iget v5, v3, Lcom/tencent/c/a/a/b$a;->VE:I
 
     invoke-virtual {v2, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     :cond_0
     const-string/jumbo v4, "sd"
 
-    iget-object v5, v3, Lcom/tencent/c/a/a/b$a;->ajL:Ljava/lang/String;
+    iget-object v5, v3, Lcom/tencent/c/a/a/b$a;->VD:Ljava/lang/String;
 
     invoke-static {v2, v4, v5}, Lcom/tencent/c/a/a/s;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -285,7 +285,7 @@
 
     iget-object v4, v3, Lcom/tencent/c/a/a/b$a;->ctx:Landroid/content/Context;
 
-    invoke-static {v4}, Lcom/tencent/c/a/a/s;->T(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/tencent/c/a/a/s;->P(Landroid/content/Context;)Z
 
     move-result v4
 
@@ -299,7 +299,7 @@
 
     iget-object v6, v3, Lcom/tencent/c/a/a/b$a;->ctx:Landroid/content/Context;
 
-    invoke-static {v6}, Lcom/tencent/c/a/a/s;->X(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v6}, Lcom/tencent/c/a/a/s;->T(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -309,7 +309,7 @@
 
     iget-object v6, v3, Lcom/tencent/c/a/a/b$a;->ctx:Landroid/content/Context;
 
-    invoke-static {v6}, Lcom/tencent/c/a/a/s;->Y(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v6}, Lcom/tencent/c/a/a/s;->U(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -332,7 +332,7 @@
     :cond_1
     iget-object v4, v3, Lcom/tencent/c/a/a/b$a;->ctx:Landroid/content/Context;
 
-    invoke-static {v4}, Lcom/tencent/c/a/a/s;->Z(Landroid/content/Context;)Lorg/json/JSONArray;
+    invoke-static {v4}, Lcom/tencent/c/a/a/s;->V(Landroid/content/Context;)Lorg/json/JSONArray;
 
     move-result-object v4
 
@@ -355,13 +355,13 @@
     :cond_2
     const-string/jumbo v4, "ram"
 
-    iget-object v5, v3, Lcom/tencent/c/a/a/b$a;->ajM:Ljava/lang/String;
+    iget-object v5, v3, Lcom/tencent/c/a/a/b$a;->VF:Ljava/lang/String;
 
     invoke-static {v2, v4, v5}, Lcom/tencent/c/a/a/s;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v4, "rom"
 
-    iget-object v5, v3, Lcom/tencent/c/a/a/b$a;->ajN:Ljava/lang/String;
+    iget-object v5, v3, Lcom/tencent/c/a/a/b$a;->VG:Ljava/lang/String;
 
     invoke-static {v2, v4, v5}, Lcom/tencent/c/a/a/s;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -374,17 +374,17 @@
     :cond_3
     const-string/jumbo v3, "cn"
 
-    iget-object v4, v1, Lcom/tencent/c/a/a/b;->ajC:Ljava/lang/String;
+    iget-object v4, v1, Lcom/tencent/c/a/a/b;->Vu:Ljava/lang/String;
 
     invoke-static {v2, v3, v4}, Lcom/tencent/c/a/a/s;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v3, v1, Lcom/tencent/c/a/a/b;->ajB:Ljava/lang/Integer;
+    iget-object v3, v1, Lcom/tencent/c/a/a/b;->Vt:Ljava/lang/Integer;
 
     if-eqz v3, :cond_4
 
     const-string/jumbo v3, "tn"
 
-    iget-object v1, v1, Lcom/tencent/c/a/a/b;->ajB:Ljava/lang/Integer;
+    iget-object v1, v1, Lcom/tencent/c/a/a/b;->Vt:Ljava/lang/Integer;
 
     invoke-virtual {v2, v3, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
@@ -398,14 +398,14 @@
     .line 53
     :goto_1
     :try_start_2
-    iget-object v1, p0, Lcom/tencent/c/a/a/m;->akd:Lorg/json/JSONObject;
+    iget-object v1, p0, Lcom/tencent/c/a/a/m;->VW:Lorg/json/JSONObject;
 
     if-eqz v1, :cond_5
 
     .line 54
     const-string/jumbo v1, "ext"
 
-    iget-object v2, p0, Lcom/tencent/c/a/a/m;->akd:Lorg/json/JSONObject;
+    iget-object v2, p0, Lcom/tencent/c/a/a/m;->VW:Lorg/json/JSONObject;
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 

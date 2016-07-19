@@ -1,78 +1,27 @@
 package com.tencent.mm.ui.transmit;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
-import android.content.DialogInterface.OnClickListener;
-import android.widget.Toast;
-import com.tencent.mm.ab.d;
-import com.tencent.mm.ab.f;
-import com.tencent.mm.ab.k;
-import com.tencent.mm.ab.n;
-import com.tencent.mm.model.c;
-import com.tencent.mm.modelsfs.FileOp;
-import com.tencent.mm.r.m;
-import com.tencent.mm.ui.base.h;
+import com.tencent.mm.p.a.a;
+import com.tencent.mm.pluginsdk.model.app.l;
+import com.tencent.mm.pluginsdk.model.app.y.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.base.g;
 
 final class MsgRetransmitUI$8
-  implements DialogInterface.OnCancelListener
+  implements y.a
 {
-  MsgRetransmitUI$8(MsgRetransmitUI paramMsgRetransmitUI) {}
+  MsgRetransmitUI$8(MsgRetransmitUI paramMsgRetransmitUI, a.a parama1, a.a parama2, String paramString, byte[] paramArrayOfByte) {}
   
-  public final void onCancel(DialogInterface paramDialogInterface)
+  public final void a(String paramString1, String paramString2, String paramString3, long paramLong)
   {
-    com.tencent.mm.ui.base.g.a(lAT, 2131428885, 2131430877, 2131430901, 2131430902, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+    v.i("MicroMsg.MsgRetransmitUI", "summerbig CheckBigFile callback new md5[%s], aesKey[%s], signature[%s], old aeskey[%s]", new Object[] { paramString1, be.FO(paramString2), be.FO(paramString3), be.FO(lrc.bqo) });
+    if (!be.kf(paramString3))
     {
-      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
-      {
-        f localf;
-        d locald;
-        if (MsgRetransmitUI.d(lAT) != null)
-        {
-          paramAnonymousInt = (int)dlAT).bRt;
-          paramAnonymousDialogInterface = n.Ao().dq(paramAnonymousInt);
-          if (paramAnonymousDialogInterface != null)
-          {
-            localf = n.Ao();
-            locald = localf.dq(paramAnonymousInt);
-            if ((locald != null) && (bQc == paramAnonymousInt)) {
-              break label124;
-            }
-          }
-        }
-        for (;;)
-        {
-          com.tencent.mm.model.ah.tD().rs().dC(bQj);
-          com.tencent.mm.model.ah.tE().c(MsgRetransmitUI.d(lAT));
-          Toast.makeText(lAT, 2131428884, 1).show();
-          lAT.finish();
-          return;
-          label124:
-          FileOp.deleteFile(localf.j(bQe, "", ""));
-          FileOp.deleteFile(localf.j(bQf, "", ""));
-          FileOp.deleteFile(localf.j(bQf, "", "") + "hd");
-          bCw.delete("ImgInfo2", "id=?", new String[] { String.valueOf(paramAnonymousInt) });
-          if (locald.zX())
-          {
-            locald = localf.dq(bQl);
-            if (locald != null)
-            {
-              FileOp.deleteFile(localf.j(bQe, "", ""));
-              FileOp.deleteFile(localf.j(bQf, "", ""));
-              FileOp.deleteFile(localf.j(bQf, "", "") + "hd");
-              bCw.delete("ImgInfo2", "id=?", new String[] { bQc });
-            }
-          }
-        }
-      }
-    }, new DialogInterface.OnClickListener()
-    {
-      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
-      {
-        if (MsgRetransmitUI.a(lAT) != null) {
-          MsgRetransmitUI.a(lAT).show();
-        }
-      }
-    });
+      l.a(mbL, lrc.appId, lrc.appName, ZD, "", mbM, MsgRetransmitUI.a(mbK), paramString3);
+      return;
+    }
+    g.b(mbK, mbK.getString(2131232138), "", true);
+    mbK.finish();
   }
 }
 

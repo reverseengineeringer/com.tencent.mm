@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field mE:Landroid/view/ActionProvider$VisibilityListener;
+.field mU:Landroid/view/ActionProvider$VisibilityListener;
 
-.field final synthetic mF:Landroid/support/v7/internal/view/menu/j;
+.field final synthetic mV:Landroid/support/v7/internal/view/menu/j;
 
 
 # direct methods
@@ -29,7 +29,7 @@
 
     .prologue
     .line 38
-    iput-object p1, p0, Landroid/support/v7/internal/view/menu/j$a;->mF:Landroid/support/v7/internal/view/menu/j;
+    iput-object p1, p0, Landroid/support/v7/internal/view/menu/j$a;->mV:Landroid/support/v7/internal/view/menu/j;
 
     .line 39
     invoke-direct {p0, p1, p2}, Landroid/support/v7/internal/view/menu/i$a;-><init>(Landroid/support/v7/internal/view/menu/i;Landroid/support/v4/view/d;)V
@@ -55,7 +55,7 @@
 
     .prologue
     .line 44
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/j$a;->mz:Landroid/support/v4/view/d;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/j$a;->mP:Landroid/support/v4/view/d;
 
     invoke-virtual {v0}, Landroid/support/v4/view/d;->onCreateActionView()Landroid/view/View;
 
@@ -87,10 +87,10 @@
 
     .prologue
     .line 65
-    iput-object p1, p0, Landroid/support/v7/internal/view/menu/j$a;->mE:Landroid/view/ActionProvider$VisibilityListener;
+    iput-object p1, p0, Landroid/support/v7/internal/view/menu/j$a;->mU:Landroid/view/ActionProvider$VisibilityListener;
 
     .line 66
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/j$a;->mz:Landroid/support/v4/view/d;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/j$a;->mP:Landroid/support/v4/view/d;
 
     if-eqz p1, :cond_0
 

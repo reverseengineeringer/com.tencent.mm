@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hpo:Lcom/tencent/mm/plugin/sns/ui/c/b;
+.field final synthetic hFM:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 969
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/c/b$5;->hpo:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    .line 1126
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/c/b$5;->hFM:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,11 +40,11 @@
     .locals 1
 
     .prologue
-    .line 972
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/c/b$5;->hpo:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    .line 1129
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/c/b$5;->hFM:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/plugin/sns/ui/c/b;->ab(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/plugin/sns/ui/c/b;->aa(Landroid/view/View;)V
 
-    .line 1007
+    .line 1145
     return-void
 .end method

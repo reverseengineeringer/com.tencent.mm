@@ -16,65 +16,30 @@ import android.view.Display;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import com.tencent.mm.aw.a;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.az.a;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class h
 {
-  private static int buA = -1;
-  private static int buB = -1;
-  private static int bux = -1;
-  private static int buy = -1;
-  private static boolean buz = false;
+  private static int biX = -1;
+  private static int biY = -1;
+  private static boolean biZ = false;
+  private static int bja = -1;
+  private static int bjb = -1;
   
-  public static final int aA(Context paramContext)
-  {
-    if (!buz)
-    {
-      if (buA > 0) {
-        return buA;
-      }
-      if (!aD(paramContext)) {
-        return 1140;
-      }
-      int i = a.fromDPToPix(paramContext, 380);
-      buA = i;
-      return i;
-    }
-    return aB(paramContext);
-  }
-  
-  public static final int aB(Context paramContext)
-  {
-    if (buB > 0) {
-      return buB;
-    }
-    if (!aD(paramContext)) {
-      return buB * 3;
-    }
-    int i = a.fromDPToPix(paramContext, 230);
-    buB = i;
-    return i;
-  }
-  
-  public static final int aC(Context paramContext)
-  {
-    return c(paramContext, -1);
-  }
-  
-  private static final boolean aD(Context paramContext)
+  private static final boolean aA(Context paramContext)
   {
     Context localContext = paramContext;
     if (paramContext == null) {
-      localContext = y.getContext();
+      localContext = aa.getContext();
     }
     return localContext != null;
   }
   
-  public static boolean aE(Context paramContext)
+  public static boolean aB(Context paramContext)
   {
-    paramContext = aF(paramContext);
+    paramContext = aC(paramContext);
     if (paramContext[0] < paramContext[1]) {}
     for (int i = 1; i == 1; i = 2) {
       return true;
@@ -82,10 +47,10 @@ public final class h
     return false;
   }
   
-  private static int[] aF(Context paramContext)
+  private static int[] aC(Context paramContext)
   {
     if (paramContext == null) {
-      paramContext = y.getContext();
+      paramContext = aa.getContext();
     }
     for (;;)
     {
@@ -105,52 +70,87 @@ public final class h
     }
   }
   
-  public static final int az(Context paramContext)
+  public static final int aw(Context paramContext)
   {
-    if (!buz)
+    if (!biZ)
     {
-      if (bux > 0) {
-        return bux;
+      if (biX > 0) {
+        return biX;
       }
-      if (!buz)
+      if (!biZ)
       {
-        if (!aD(paramContext)) {
-          return y.aUM().getInt("com.tencent.mm.compatible.util.keybord.height", 690);
+        if (!aA(paramContext)) {
+          return aa.aZQ().getInt("com.tencent.mm.compatible.util.keybord.height", 690);
         }
-        int i = y.aUM().getInt("com.tencent.mm.compatible.util.keybord.height", a.fromDPToPix(paramContext, 230));
-        bux = i;
+        int i = aa.aZQ().getInt("com.tencent.mm.compatible.util.keybord.height", a.fromDPToPix(paramContext, 230));
+        biX = i;
         return i;
       }
-      return aB(paramContext);
+      return ay(paramContext);
     }
-    return aB(paramContext);
+    return ay(paramContext);
   }
   
-  public static final boolean b(Context paramContext, int paramInt)
+  public static final int ax(Context paramContext)
   {
-    if (bux == paramInt) {
+    if (!biZ)
+    {
+      if (bja > 0) {
+        return bja;
+      }
+      if (!aA(paramContext)) {
+        return 1140;
+      }
+      int i = a.fromDPToPix(paramContext, 380);
+      bja = i;
+      return i;
+    }
+    return ay(paramContext);
+  }
+  
+  public static final int ay(Context paramContext)
+  {
+    if (bjb > 0) {
+      return bjb;
+    }
+    if (!aA(paramContext)) {
+      return bjb * 3;
+    }
+    int i = a.fromDPToPix(paramContext, 230);
+    bjb = i;
+    return i;
+  }
+  
+  public static final int az(Context paramContext)
+  {
+    return e(paramContext, -1);
+  }
+  
+  public static final boolean d(Context paramContext, int paramInt)
+  {
+    if (biX == paramInt) {
       return true;
     }
-    if (!aD(paramContext)) {
+    if (!aA(paramContext)) {
       return false;
     }
     if (paramInt < 0) {
       return false;
     }
-    bux = paramInt;
-    u.d("!32@/B4Tb64lLpKpI+tgWEEQMW53kLRAnwLT", "save keybord: %d", new Object[] { Integer.valueOf(paramInt) });
-    return y.aUM().edit().putInt("com.tencent.mm.compatible.util.keybord.height", paramInt).commit();
+    biX = paramInt;
+    v.d("MicroMsg.KeyBordUtil", "save keybord: %d", new Object[] { Integer.valueOf(paramInt) });
+    return aa.aZQ().edit().putInt("com.tencent.mm.compatible.util.keybord.height", paramInt).commit();
   }
   
-  public static final int c(Context paramContext, int paramInt)
+  public static final int e(Context paramContext, int paramInt)
   {
-    int k = aB(paramContext);
+    int k = ay(paramContext);
     int i;
     int j;
-    if (!aE(paramContext))
+    if (!aB(paramContext))
     {
       i = (int)(k / 1.5D);
-      j = aF(paramContext)[0];
+      j = aC(paramContext)[0];
       paramInt = i;
       if (i > j / 2) {
         paramInt = j / 2;
@@ -161,9 +161,9 @@ public final class h
       return paramInt;
       i = paramInt;
       if (paramInt <= 0) {
-        i = az(paramContext);
+        i = aw(paramContext);
       }
-      j = aA(paramContext);
+      j = ax(paramContext);
       paramInt = j;
     } while (i > j);
     if (i < k) {
@@ -173,7 +173,7 @@ public final class h
   }
   
   @TargetApi(11)
-  public static final void i(Activity paramActivity)
+  public static final void e(Activity paramActivity)
   {
     if (paramActivity == null) {}
     Object localObject;
@@ -193,7 +193,7 @@ public final class h
     int i = paramActivity.getActionBar().getHeight();
     for (;;)
     {
-      buy = getResourcesgetDisplayMetricsheightPixels - i - j;
+      biY = getResourcesgetDisplayMetricsheightPixels - i - j;
       return;
       if (paramActivity.getTheme().resolveAttribute(16843499, (TypedValue)localObject, true)) {
         i = TypedValue.complexToDimensionPixelSize(data, paramActivity.getResources().getDisplayMetrics());
@@ -201,14 +201,14 @@ public final class h
     }
   }
   
-  public static void pb()
+  public static void nt()
   {
-    buz = false;
+    biZ = false;
   }
   
-  public static final int pc()
+  public static final int nu()
   {
-    return buy;
+    return biY;
   }
 }
 

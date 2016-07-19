@@ -1,339 +1,566 @@
 package com.tencent.mm.ui.chatting;
 
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
-import com.tencent.mm.d.a.jh;
-import com.tencent.mm.d.a.jh.b;
-import com.tencent.mm.d.b.bg;
-import com.tencent.mm.model.c;
+import android.database.Cursor;
+import com.tencent.mm.ae.e;
+import com.tencent.mm.aq.q;
+import com.tencent.mm.aq.r;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.ar;
 import com.tencent.mm.model.i;
-import com.tencent.mm.model.k;
 import com.tencent.mm.model.k.a;
-import com.tencent.mm.n.a.a;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.protocal.a.a.b;
-import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.am;
-import com.tencent.mm.sdk.platformtools.am.a;
-import com.tencent.mm.storage.ag;
-import com.tencent.mm.storage.ag.b;
-import com.tencent.mm.ui.base.g;
-import com.tencent.mm.ui.transmit.MsgRetransmitUI;
+import com.tencent.mm.modelsfs.FileOp;
+import com.tencent.mm.p.a.a;
+import com.tencent.mm.pluginsdk.i.a;
+import com.tencent.mm.pluginsdk.i.f;
+import com.tencent.mm.pluginsdk.i.l;
+import com.tencent.mm.pluginsdk.model.app.al;
+import com.tencent.mm.pluginsdk.model.app.b;
+import com.tencent.mm.pluginsdk.model.app.g;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.j;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.w;
+import com.tencent.mm.v.an;
+import com.tencent.mm.v.m;
+import com.tencent.mm.v.m.b;
+import com.tencent.mm.v.m.b.b.b;
+import com.tencent.mm.v.o;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
 public final class v
 {
-  private static a kSh = new a((byte)0);
-  
-  public static void a(final Context paramContext, List paramList, final boolean paramBoolean, final String paramString, final dl paramdl)
+  public static boolean L(ai paramai)
   {
-    
-    if (paramContext == null)
-    {
-      com.tencent.mm.sdk.platformtools.u.w("!56@/B4Tb64lLpKwUcOR+EdWcuVetlyqrLmXNIwXR+/wPCUtE4pSafxclQ==", "do retransmit fail, context is null");
-      return;
+    if (paramai == null) {
+      com.tencent.mm.sdk.platformtools.v.w("MicroMsg.ChattingEditModeLogic", "check is store emoji error, msg is null");
     }
-    if ((paramList == null) || (paramList.isEmpty()))
+    com.tencent.mm.storage.a.c localc;
+    do
     {
-      com.tencent.mm.sdk.platformtools.u.w("!56@/B4Tb64lLpKwUcOR+EdWcuVetlyqrLmXNIwXR+/wPCUtE4pSafxclQ==", "do retransmit fail, select item empty");
-      return;
+      return true;
+      localc = i.a.aTv().nz(field_imgPath);
+      if ((localc != null) && ((field_catalog == com.tencent.mm.storage.a.c.kHn) || ((!be.kf(field_groupId)) && (i.a.aTv().nD(field_groupId))))) {
+        return false;
+      }
+    } while (((localc != null) && (localc.bdR())) || ((paramai.bcE()) && (localc == null)));
+    return false;
+  }
+  
+  public static boolean M(ai paramai)
+  {
+    if (paramai == null)
+    {
+      com.tencent.mm.sdk.platformtools.v.w("MicroMsg.ChattingEditModeLogic", "check is game msg error, msg is null");
+      return true;
     }
-    int j;
-    if ((paramList == null) || (paramList.isEmpty()))
+    if (field_isSend == 0) {}
+    for (paramai = ar.fy(field_content);; paramai = field_content)
     {
-      com.tencent.mm.sdk.platformtools.u.w("!44@/B4Tb64lLpKwUcOR+EdWcuVetlyqrLmX9VxAHtgfWqs=", "check contain invalid send to friend msg error, select item empty");
-      j = 0;
+      paramai = a.a.dI(paramai);
+      if (paramai != null) {
+        break;
+      }
+      com.tencent.mm.sdk.platformtools.v.w("MicroMsg.ChattingEditModeLogic", "parse app message content fail");
+      return false;
     }
-    Object localObject;
-    for (;;)
+    paramai = g.ar(appId, false);
+    return (paramai != null) && (paramai.aUj());
+  }
+  
+  public static boolean N(ai paramai)
+  {
+    return field_type == 419430449;
+  }
+  
+  public static boolean O(ai paramai)
+  {
+    return (field_type == 436207665) || (field_type == 469762097);
+  }
+  
+  public static boolean P(ai paramai)
+  {
+    if (paramai != null)
     {
-      if (j == 0)
-      {
-        g.a(paramContext, paramContext.getString(2131427914), "", paramContext.getString(2131427822), paramContext.getString(2131430884), new DialogInterface.OnClickListener()
-        {
-          public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
-          {
-            paramAnonymousDialogInterface = kSi;
-            if ((paramAnonymousDialogInterface == null) || (paramAnonymousDialogInterface.isEmpty())) {
-              com.tencent.mm.sdk.platformtools.u.w("!44@/B4Tb64lLpKwUcOR+EdWcuVetlyqrLmX9VxAHtgfWqs=", "check contain only invalid send to friend msg error, select item empty");
-            }
-            label25:
-            for (paramAnonymousInt = 1;; paramAnonymousInt = 0)
-            {
-              if (paramAnonymousInt == 0) {
-                break label152;
-              }
-              com.tencent.mm.sdk.platformtools.u.w("!56@/B4Tb64lLpKwUcOR+EdWcuVetlyqrLmXNIwXR+/wPCUtE4pSafxclQ==", "only contain invalid msg, exit long click mode");
-              if (paramdl != null)
-              {
-                paramAnonymousDialogInterface = paramdl;
-                paramAnonymousInt = dl.a.lcD;
-                paramAnonymousDialogInterface.beD();
-              }
-              return;
-              paramAnonymousDialogInterface = paramAnonymousDialogInterface.iterator();
-              if (!paramAnonymousDialogInterface.hasNext()) {
-                break label25;
-              }
-              ag localag = (ag)paramAnonymousDialogInterface.next();
-              if ((localag.aWW()) || (u.I(localag)) || (u.J(localag)) || (u.K(localag)) || (field_type == -1879048186) || (u.M(localag)) || (u.L(localag)) || (field_type == 318767153)) {
-                break;
-              }
-            }
-            label152:
-            v.c(paramContext, kSi, paramBoolean, paramString, paramdl);
-          }
-        }, null);
-        return;
-        Iterator localIterator = paramList.iterator();
-        int i = 1;
-        j = i;
-        if (localIterator.hasNext())
-        {
-          localObject = (ag)localIterator.next();
-          if ((!((ag)localObject).aWW()) && (!u.I((ag)localObject)) && (!u.J((ag)localObject)) && (!u.K((ag)localObject)) && (field_type != -1879048186) && (!u.M((ag)localObject)) && (!u.L((ag)localObject)))
-          {
-            if (localObject == null) {
-              break;
-            }
-            a.a locala = a.a.dz(field_content);
-            if ((locala == null) || (type != 19)) {
-              break;
-            }
-            j = 1;
-            label232:
-            if (j == 0)
-            {
-              if (localObject == null) {
-                break label320;
-              }
-              locala = a.a.dz(field_content);
-              if ((locala == null) || (type != 24)) {
-                break label320;
-              }
-              j = 1;
-              label270:
-              if ((j == 0) && (field_type != 318767153))
-              {
-                if (((ag)localObject).aXd()) {
-                  break label326;
-                }
-                j = 0;
-                label296:
-                if (j == 0) {
-                  break label397;
-                }
-              }
-            }
-          }
-          localIterator.remove();
-          i = 0;
-        }
+      paramai = a.a.dI(field_content);
+      if (paramai != null) {
+        break label18;
       }
     }
-    label320:
-    label326:
-    label397:
+    label18:
+    while ((type != 6) && (type != 5) && (type != 19)) {
+      return false;
+    }
+    return true;
+  }
+  
+  static boolean Q(ai paramai)
+  {
+    if (paramai != null)
+    {
+      paramai = a.a.dI(field_content);
+      if ((paramai != null) && (type == 16)) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  public static void a(Context paramContext, String paramString, ai paramai)
+  {
+    if (!a(paramContext, paramString, paramai, "emoji")) {
+      return;
+    }
+    String str2 = Hcfield_content).agg;
+    String str1;
+    if (str2 != null)
+    {
+      str1 = str2;
+      if (!str2.endsWith("-1")) {}
+    }
+    else
+    {
+      str1 = field_imgPath;
+    }
+    if (str1 == null)
+    {
+      com.tencent.mm.sdk.platformtools.v.w("MicroMsg.ChattingEditModeLogic", "showAcceptEmojiConnector: filePath is null");
+      return;
+    }
+    i.a.aTv().j(paramContext, paramString, str1);
+  }
+  
+  public static void a(Context paramContext, String paramString, ai paramai, boolean paramBoolean)
+  {
+    if (!a(paramContext, paramString, paramai, "text")) {
+      return;
+    }
+    String str = j(field_content, field_isSend, paramBoolean);
+    paramContext = str;
+    if (paramai.bcM())
+    {
+      paramContext = j(field_transContent, field_isSend, paramBoolean);
+      paramContext = str + "\n\n" + paramContext;
+    }
+    if ((paramContext == null) || (paramContext.equals("")))
+    {
+      com.tencent.mm.sdk.platformtools.v.e("MicroMsg.ChattingEditModeLogic", "Transfer text erro: content null");
+      return;
+    }
+    i.a.aTx().s(paramString, paramContext, i.eW(paramString));
+  }
+  
+  static boolean a(Context paramContext, String paramString1, ai paramai, String paramString2)
+  {
+    if (paramContext == null)
+    {
+      com.tencent.mm.sdk.platformtools.v.w("MicroMsg.ChattingEditModeLogic", "send %s fail, context is null", new Object[] { paramString2 });
+      return false;
+    }
+    if (be.kf(paramString1))
+    {
+      com.tencent.mm.sdk.platformtools.v.w("MicroMsg.ChattingEditModeLogic", "send %s fail, username is null", new Object[] { paramString2 });
+      return false;
+    }
+    if (paramai == null)
+    {
+      com.tencent.mm.sdk.platformtools.v.w("MicroMsg.ChattingEditModeLogic", "send %s fail, msg is null", new Object[] { paramString2 });
+      return false;
+    }
+    return true;
+  }
+  
+  public static void b(Context paramContext, String paramString, ai paramai)
+  {
+    if (!a(paramContext, paramString, paramai, "image")) {}
+    label173:
+    for (;;)
+    {
+      return;
+      Object localObject = null;
+      if (field_msgId > 0L) {
+        localObject = com.tencent.mm.ae.n.Ay().ae(field_msgId);
+      }
+      if (((localObject == null) || (bJz <= 0L)) && (field_msgSvrId > 0L)) {}
+      for (paramai = com.tencent.mm.ae.n.Ay().ad(field_msgSvrId);; paramai = (ai)localObject)
+      {
+        if (paramai == null) {
+          break label173;
+        }
+        int j = 0;
+        int i = j;
+        if (paramai.Ah())
+        {
+          i = j;
+          if (!abJB.startsWith("SERVERID://")) {
+            i = 1;
+          }
+        }
+        localObject = com.tencent.mm.ae.n.Ay().l(e.c(paramai), "", "");
+        String str = com.tencent.mm.ae.n.Ay().l(bJC, "th_", "");
+        if (be.kf((String)localObject)) {
+          break;
+        }
+        i.a.aTx().a(paramContext, paramString, (String)localObject, i, bJJ, str);
+        return;
+      }
+    }
+  }
+  
+  public static void b(Context paramContext, String paramString, ai paramai, boolean paramBoolean)
+  {
+    if (!a(paramContext, paramString, paramai, "appmsg")) {}
+    do
+    {
+      return;
+      if (paramContext == null)
+      {
+        com.tencent.mm.sdk.platformtools.v.w("MicroMsg.ChattingEditModeLogic", "getReaderAppMsgContent: context is null");
+        return;
+      }
+      if (paramai == null)
+      {
+        com.tencent.mm.sdk.platformtools.v.w("MicroMsg.ChattingEditModeLogic", "getReaderAppMsgContent: msg is null");
+        return;
+      }
+    } while (!ah.tE().isSDCardAvailable());
+    paramContext = com.tencent.mm.ae.n.Ay().r(field_imgPath, false);
+    if ((!com.tencent.mm.platformtools.s.kf(paramContext)) && (!paramContext.endsWith("hd")) && (FileOp.aB(paramContext + "hd"))) {
+      paramContext = paramContext + "hd";
+    }
+    for (;;)
+    {
+      Object localObject1;
+      Object localObject2;
+      try
+      {
+        localObject1 = a.a.dL(field_content);
+        localObject2 = brW;
+        if ((localObject2 == null) || (((List)localObject2).size() <= 0))
+        {
+          if ((paramai != null) && ((paramai.bcn()) || (paramai.bco())))
+          {
+            localObject1 = com.tencent.mm.model.k.fh(field_msgSvrId);
+            localObject1 = com.tencent.mm.model.k.sV().ff((String)localObject1);
+            ((k.a)localObject1).l("prePublishId", "msg_" + field_msgSvrId);
+            ((k.a)localObject1).l("preUsername", ab.a(paramai, paramBoolean, false));
+            ((k.a)localObject1).l("preChatName", field_talker);
+            ((k.a)localObject1).l("preMsgIndex", Integer.valueOf(0));
+            ((k.a)localObject1).l("sendAppMsgScene", Integer.valueOf(1));
+            com.tencent.mm.modelstat.k.a("adExtStr", (k.a)localObject1, paramai);
+          }
+          i.a.aTx().b(paramString, be.tD(paramContext), be.FF(field_content));
+          return;
+        }
+      }
+      catch (Exception paramContext)
+      {
+        com.tencent.mm.sdk.platformtools.v.e("MicroMsg.ChattingEditModeLogic", "send app msg error : %s", new Object[] { paramContext.getLocalizedMessage() });
+        return;
+      }
+      paramai = ((List)localObject2).iterator();
+      while (paramai.hasNext())
+      {
+        localObject2 = (com.tencent.mm.p.d)paramai.next();
+        a.a locala = new a.a();
+        title = title;
+        description = bsb;
+        bai = "view";
+        type = 5;
+        url = url;
+        atA = atA;
+        atB = atB;
+        aQi = aQi;
+        thumburl = brZ;
+        localObject2 = a.a.b(locala);
+        i.a.aTx().b(paramString, be.tD(paramContext), be.FF((String)localObject2));
+      }
+      break;
+    }
+  }
+  
+  public static boolean bV(List<ai> paramList)
+  {
+    if ((paramList == null) || (paramList.isEmpty()))
+    {
+      com.tencent.mm.sdk.platformtools.v.w("MicroMsg.ChattingEditModeLogic", "check contain invalid send to brand msg error, selected item empty");
+      return true;
+    }
+    paramList = paramList.iterator();
+    while (paramList.hasNext())
+    {
+      ai localai = (ai)paramList.next();
+      if ((localai.bcp()) || (L(localai)) || (localai.bcy()) || (M(localai)) || (N(localai)) || (field_type == -1879048186) || (Q(localai)) || (O(localai))) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  public static int bW(List<ai> paramList)
+  {
+    if (paramList == null)
+    {
+      com.tencent.mm.sdk.platformtools.v.w("MicroMsg.ChattingEditModeLogic", "get invalid send to friend msg num error, select item empty");
+      return 0;
+    }
+    paramList = paramList.iterator();
+    int i = 0;
+    if (paramList.hasNext())
+    {
+      ai localai = (ai)paramList.next();
+      if ((!localai.bcp()) && (!L(localai)) && (!localai.bcz()) && (!M(localai)) && (!N(localai)) && (!O(localai))) {
+        break label93;
+      }
+      i += 1;
+    }
+    label93:
     for (;;)
     {
       break;
-      j = 0;
-      break label232;
-      j = 0;
-      break label270;
-      localObject = com.tencent.mm.model.ah.tD().rs().Fj(field_content);
-      if ((localObject == null) || (com.tencent.mm.sdk.platformtools.ay.kz(hmX)))
-      {
-        j = 1;
-        break label296;
-      }
-      if (i.ea(hmX))
-      {
-        j = 0;
-        break label296;
-      }
-      j = 1;
-      break label296;
-      b(paramContext, paramList, paramBoolean, paramString, paramdl);
-      return;
+      return i;
     }
   }
   
-  private static void b(Context paramContext, List paramList, boolean paramBoolean, String paramString, dl paramdl)
+  public static boolean bX(List<ai> paramList)
   {
-    if (u.bM(paramList))
+    if (paramList == null)
     {
-      g.a(paramContext, paramContext.getString(2131427931), "", paramContext.getString(2131427932), new DialogInterface.OnClickListener()
-      {
-        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
-        {
-          if (kSj != null)
-          {
-            paramAnonymousDialogInterface = kSj;
-            paramAnonymousInt = dl.a.lcD;
-            paramAnonymousDialogInterface.beF();
-          }
-        }
-      });
-      return;
+      com.tencent.mm.sdk.platformtools.v.w("MicroMsg.ChattingEditModeLogic", "check contain undownload file, select item empty");
+      return false;
     }
-    if (u.bL(paramList))
-    {
-      g.a(paramContext, paramContext.getString(2131427929), "", new DialogInterface.OnClickListener()
-      {
-        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
-        {
-          if (kSj != null)
-          {
-            paramAnonymousDialogInterface = kSj;
-            paramAnonymousInt = dl.a.lcD;
-            paramAnonymousDialogInterface.beF();
-          }
-        }
-      }, null);
-      return;
-    }
-    kShkSn = new LinkedList(paramList);
-    kShkAy = paramBoolean;
-    kShkSg = paramdl;
-    kShaFT = paramString;
-    Intent localIntent = new Intent(paramContext, MsgRetransmitUI.class);
-    if (paramList.size() == 1)
-    {
-      ag localag = (ag)paramList.get(0);
-      if ((localag != null) && ((localag.aWU()) || (localag.aWV())))
-      {
-        String str = k.eV(field_msgSvrId);
-        k.a locala = k.sW().eT(str);
-        locala.e("prePublishId", "msg_" + field_msgSvrId);
-        locala.e("preUsername", aa.a(localag, paramBoolean, false));
-        locala.e("preChatName", field_talker);
-        locala.e("preMsgIndex", Integer.valueOf(0));
-        locala.e("sendAppMsgScene", Integer.valueOf(1));
-        localIntent.putExtra("reportSessionId", str);
-      }
-    }
-    localIntent.putExtra("Retr_show_success_tips", true);
-    if (((paramdl != null) && (paramdl.beG())) || (paramList.size() == 1) || (i.ea(paramString)) || (i.eJ(paramString))) {
-      localIntent.putExtra("Retr_Msg_Type", 12);
-    }
+    Iterator localIterator = paramList.iterator();
+    label298:
+    label299:
     for (;;)
     {
-      paramContext.startActivity(localIntent);
-      return;
-      localIntent.putExtra("Retr_Msg_Type", 13);
-      localIntent.putExtra("Retr_Multi_Msg_List_from", paramString);
-    }
-  }
-  
-  public static jh bb(Context paramContext, String paramString)
-  {
-    jh localjh = new jh();
-    aFM.type = 6;
-    aFM.aFS = kShkSn;
-    aFM.ayw = paramString;
-    aFM.aFT = kShaFT;
-    aFM.context = paramContext;
-    a.jUF.j(localjh);
-    kShaFz = aFN.aFz;
-    kShkSo = aFN.aFV;
-    return localjh;
-  }
-  
-  public static void beb()
-  {
-    kShkSn = null;
-    kShkAy = false;
-    kShkSg = null;
-    kShaFT = null;
-    kShaFz = null;
-    kShkSo = null;
-  }
-  
-  public static void h(Context paramContext, String paramString, boolean paramBoolean)
-  {
-    jh localjh = new jh();
-    aFM.type = 5;
-    aFM.aFS = kShkSn;
-    aFM.ayw = paramString;
-    aFM.aFT = kShaFT;
-    aFM.context = paramContext;
-    aFM.aFz = kShaFz;
-    aFM.aFV = kShkSo;
-    a.jUF.j(localjh);
-    if (kShkSn != null) {
-      h.fUJ.g(10811, new Object[] { Integer.valueOf(8), Integer.valueOf(kShkSn.size()), Integer.valueOf(kShkSn.size() - u.bK(kShkSn)) });
-    }
-    if ((paramBoolean) && (kShkSg != null)) {
-      kShkSg.rd(dl.a.lcD);
-    }
-  }
-  
-  public static void i(Context paramContext, final String paramString, final boolean paramBoolean)
-  {
-    if (paramContext == null)
-    {
-      com.tencent.mm.sdk.platformtools.u.w("!56@/B4Tb64lLpKwUcOR+EdWcuVetlyqrLmXNIwXR+/wPCUtE4pSafxclQ==", "do try retransmit fail, context is null");
-      return;
-    }
-    if (com.tencent.mm.sdk.platformtools.ay.kz(paramString))
-    {
-      com.tencent.mm.sdk.platformtools.u.w("!56@/B4Tb64lLpKwUcOR+EdWcuVetlyqrLmXNIwXR+/wPCUtE4pSafxclQ==", "do try retransmit fail, username is empty");
-      return;
-    }
-    if ((kShkSn == null) || (kShkSn.isEmpty()))
-    {
-      com.tencent.mm.sdk.platformtools.u.w("!56@/B4Tb64lLpKwUcOR+EdWcuVetlyqrLmXNIwXR+/wPCUtE4pSafxclQ==", "do try retransmit fail, select items empty");
-      return;
-    }
-    com.tencent.mm.sdk.platformtools.u.v("!56@/B4Tb64lLpKwUcOR+EdWcuVetlyqrLmXNIwXR+/wPCUtE4pSafxclQ==", "post to do job, send to %s", new Object[] { paramString });
-    cp.kWq.c(new am.a()
-    {
-      public final boolean vd()
+      ai localai;
+      if (localIterator.hasNext())
       {
-        Iterator localIterator = beckSn.iterator();
-        while (localIterator.hasNext())
+        localai = (ai)localIterator.next();
+        if (localai.bcx())
         {
-          ag localag = (ag)localIterator.next();
-          v.d(val$context, paramString, localag, beckAy);
+          paramList = null;
+          if (field_msgId > 0L) {
+            paramList = com.tencent.mm.ae.n.Ay().ae(field_msgId);
+          }
+          if (((paramList != null) && (bJz > 0L)) || (field_msgSvrId <= 0L)) {
+            break label298;
+          }
+          paramList = com.tencent.mm.ae.n.Ay().ad(field_msgSvrId);
+        }
+      }
+      for (;;)
+      {
+        if ((paramList == null) || ((offset >= bxA) && (bxA != 0))) {
+          break label299;
         }
         return true;
-      }
-      
-      public final boolean ve()
-      {
-        if (beckSn != null) {
-          h.fUJ.g(10811, new Object[] { Integer.valueOf(5), Integer.valueOf(beckSn.size()), Integer.valueOf(beckSn.size() - u.bK(beckSn)) });
-        }
-        if (paramBoolean)
+        if (localai.bcB())
         {
-          if (dxj != null)
+          paramList = com.tencent.mm.aq.n.Es().km(field_imgPath);
+          if ((paramList == null) || (status == 199) || (status == 199)) {
+            break;
+          }
+          return true;
+        }
+        if (localai.bcn())
+        {
+          paramList = a.a.y(field_content, field_content);
+          if (paramList == null) {
+            return true;
+          }
+          switch (type)
           {
-            com.tencent.mm.sdk.platformtools.u.v("!56@/B4Tb64lLpKwUcOR+EdWcuVetlyqrLmXNIwXR+/wPCUtE4pSafxclQ==", "call back is not null, do call back");
-            dxj.run();
+          default: 
+            break;
+          case 6: 
+            paramList = al.Jk().BG(bpZ);
+            if (paramList == null) {
+              return true;
+            }
+            if (new File(field_fileFullPath).exists()) {
+              break;
+            }
+            return true;
           }
-          if (beckSg != null) {
-            beckSg.rd(dl.a.lcD);
-          }
-          v.beb();
+        }
+        if (!localai.bcC()) {
+          break;
+        }
+        paramList = com.tencent.mm.aq.s.kC(field_imgPath);
+        if ((paramList == null) || (status == 199) || (status == 199)) {
+          break;
         }
         return true;
+        return false;
       }
-    });
+    }
   }
   
-  private static final class a
+  public static boolean bY(List<ai> paramList)
   {
-    String aFT;
-    com.tencent.mm.d.a.ay aFz;
-    boolean kAy;
-    dl kSg;
-    List kSn;
-    b kSo;
+    if ((paramList == null) || (paramList.isEmpty())) {
+      return false;
+    }
+    paramList = paramList.iterator();
+    while (paramList.hasNext())
+    {
+      ai localai = (ai)paramList.next();
+      if ((localai.bcB()) && (com.tencent.mm.pluginsdk.model.h.BB(field_imgPath))) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  public static boolean bZ(List<ai> paramList)
+  {
+    if ((paramList == null) || (paramList.isEmpty())) {
+      return false;
+    }
+    paramList = paramList.iterator();
+    while (paramList.hasNext()) {
+      if (((ai)paramList.next()).bcC()) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  public static List<String> bjH()
+  {
+    Object localObject1 = an.xH().dC(25);
+    Object localObject2 = an.xH();
+    Object localObject3 = new ArrayList();
+    Object localObject4 = new StringBuilder();
+    ((StringBuilder)localObject4).append("select rcontact.username");
+    ((StringBuilder)localObject4).append(" from rcontact, bizinfo");
+    ((StringBuilder)localObject4).append(" where rcontact.username").append(" = bizinfo.username");
+    ((StringBuilder)localObject4).append(" and (rcontact.verifyFlag").append(" & ").append(com.tencent.mm.storage.k.bbE()).append(") != 0 ");
+    ((StringBuilder)localObject4).append(" and (rcontact.type").append(" & 1) != 0 ");
+    ((StringBuilder)localObject4).append(" and bizinfo.type").append(" = 3");
+    ((StringBuilder)localObject4).append(" and (bizinfo.bitFlag").append(" & 1) != 0 ");
+    ((StringBuilder)localObject4).append(" order by ");
+    ((StringBuilder)localObject4).append(com.tencent.mm.v.n.xg());
+    localObject4 = ((StringBuilder)localObject4).toString();
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.BizInfoStorage", "getEnterpriseFatherBizLst sql %s", new Object[] { localObject4 });
+    localObject2 = ((com.tencent.mm.v.n)localObject2).rawQuery((String)localObject4, new String[0]);
+    if (localObject2 != null)
+    {
+      if (((Cursor)localObject2).moveToFirst()) {
+        do
+        {
+          ((ArrayList)localObject3).add(((Cursor)localObject2).getString(0));
+        } while (((Cursor)localObject2).moveToNext());
+      }
+      ((Cursor)localObject2).close();
+    }
+    localObject2 = new HashMap();
+    localObject3 = ((List)localObject3).iterator();
+    String str;
+    while (((Iterator)localObject3).hasNext())
+    {
+      localObject4 = (String)((Iterator)localObject3).next();
+      str = hiaxxebBM;
+      if (!be.kf(str)) {
+        ((HashMap)localObject2).put(str, localObject4);
+      }
+    }
+    localObject3 = new LinkedList();
+    localObject4 = new LinkedList();
+    localObject1 = ((List)localObject1).iterator();
+    while (((Iterator)localObject1).hasNext())
+    {
+      str = (String)((Iterator)localObject1).next();
+      if (o.hk(str))
+      {
+        if (o.hp(str))
+        {
+          str = hifield_enterpriseFather;
+          if (!((List)localObject4).contains(str))
+          {
+            ((List)localObject4).add(str);
+            str = (String)((HashMap)localObject2).get(str);
+            if (!be.kf(str)) {
+              ((List)localObject4).add(str);
+            }
+          }
+        }
+      }
+      else {
+        ((List)localObject3).add(str);
+      }
+    }
+    localObject1 = ((HashMap)localObject2).values().iterator();
+    while (((Iterator)localObject1).hasNext())
+    {
+      localObject2 = (String)((Iterator)localObject1).next();
+      if ((!be.kf((String)localObject2)) && (!((List)localObject4).contains(localObject2))) {
+        ((List)localObject4).add(localObject2);
+      }
+    }
+    ((List)localObject3).addAll((Collection)localObject4);
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.ChattingEditModeLogic", "get selected accept list, size %d", new Object[] { Integer.valueOf(((List)localObject3).size()) });
+    return (List<String>)localObject3;
+  }
+  
+  public static void c(Context paramContext, String paramString, ai paramai)
+  {
+    if (!a(paramContext, paramString, paramai, "video")) {
+      return;
+    }
+    paramContext = com.tencent.mm.aq.s.kC(field_imgPath);
+    String str1 = field_imgPath;
+    int i = cbp;
+    int j = cbl;
+    paramContext = paramContext.EC();
+    int k = field_type;
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.ChattingEditModeLogic", "copy video fileName %s userName %s export %d videoLength", new Object[] { str1, paramString, Integer.valueOf(i), Integer.valueOf(j) });
+    paramai = r.ko(com.tencent.mm.model.h.se());
+    com.tencent.mm.aq.n.Es();
+    String str2 = r.kp(str1);
+    String str3 = r.kp(paramai);
+    str1 = r.kq(str1);
+    String str4 = r.kq(paramai);
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.ChattingEditModeLogic", "copy video: srcFullPath[%s] destFullPath[%s] srcThumbPath[%s] destThumbPath[%s]", new Object[] { str2, str3, str1, str4 });
+    j.l(str2, str3, false);
+    j.l(str1, str4, false);
+    com.tencent.mm.aq.s.a(paramai, j, paramString, null, i, paramContext, k);
+    com.tencent.mm.aq.s.kx(paramai);
+  }
+  
+  public static void c(Context paramContext, String paramString, ai paramai, boolean paramBoolean)
+  {
+    if (!a(paramContext, paramString, paramai, "location")) {
+      return;
+    }
+    paramContext = j(field_content, field_isSend, paramBoolean);
+    i.a.aTx().s(paramString, paramContext, 48);
+  }
+  
+  public static String j(String paramString, int paramInt, boolean paramBoolean)
+  {
+    String str = paramString;
+    if (paramBoolean)
+    {
+      str = paramString;
+      if (paramString != null)
+      {
+        str = paramString;
+        if (paramInt == 0) {
+          str = ar.fy(paramString);
+        }
+      }
+    }
+    return str;
   }
 }
 

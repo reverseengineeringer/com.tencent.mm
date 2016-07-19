@@ -11,7 +11,7 @@ final class ExtControlProviderSNS$2$1
   
   public final void a(e parame)
   {
-    dLz.dKP.countDown();
+    dNg.dMy.countDown();
   }
 }
 

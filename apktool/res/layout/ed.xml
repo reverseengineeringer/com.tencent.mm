@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/r4" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/ws" android:background="@drawable/dl" android:paddingLeft="@dimen/hb" android:paddingTop="@dimen/hi" android:paddingRight="@dimen/hb" android:paddingBottom="@dimen/hi" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/i6" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/cu" android:textColor="@color/ak" android:ellipsize="end" android:gravity="left" android:id="@id/wt" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/h3" android:gravity="right" android:id="@id/wu" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="80.0dip" android:singleLine="true" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/h4" android:textColor="@color/h3" android:ellipsize="end" android:id="@id/wv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/cp" android:maxLines="3" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/ww" android:background="@drawable/dl" android:layout_width="60.0dip" android:layout_height="fill_parent" android:minHeight="@dimen/i6">
+        <TextView android:background="#ffc5c5c5" android:layout_width="2.0px" android:layout_height="45.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/wx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/c6" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

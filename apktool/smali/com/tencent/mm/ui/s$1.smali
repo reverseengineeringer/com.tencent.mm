@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic krb:Lcom/tencent/mm/ui/s;
+.field final synthetic kQi:Lcom/tencent/mm/ui/s;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 433
-    iput-object p1, p0, Lcom/tencent/mm/ui/s$1;->krb:Lcom/tencent/mm/ui/s;
+    .line 434
+    iput-object p1, p0, Lcom/tencent/mm/ui/s$1;->kQi:Lcom/tencent/mm/ui/s;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,35 +40,35 @@
     .locals 3
 
     .prologue
-    .line 436
-    new-instance v0, Lcom/tencent/mm/d/a/mt;
-
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/mt;-><init>()V
-
     .line 437
-    iget-object v1, v0, Lcom/tencent/mm/d/a/mt;->aJb:Lcom/tencent/mm/d/a/mt$a;
+    new-instance v0, Lcom/tencent/mm/e/a/ng;
+
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/ng;-><init>()V
+
+    .line 438
+    iget-object v1, v0, Lcom/tencent/mm/e/a/ng;->avv:Lcom/tencent/mm/e/a/ng$a;
 
     const/4 v2, 0x1
 
-    iput-boolean v2, v1, Lcom/tencent/mm/d/a/mt$a;->aJe:Z
+    iput-boolean v2, v1, Lcom/tencent/mm/e/a/ng$a;->avy:Z
 
-    .line 438
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 439
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
-    .line 440
-    iget-object v0, p0, Lcom/tencent/mm/ui/s$1;->krb:Lcom/tencent/mm/ui/s;
+    .line 441
+    iget-object v0, p0, Lcom/tencent/mm/ui/s$1;->kQi:Lcom/tencent/mm/ui/s;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/s;->c(Lcom/tencent/mm/ui/s;)Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->eq(Landroid/content/Context;)V
-
-    .line 441
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    invoke-static {v0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->et(Landroid/content/Context;)V
 
     .line 442
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
+    .line 443
     return-void
 .end method

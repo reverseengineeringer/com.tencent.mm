@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic cqF:I
+.field final synthetic clS:I
 
-.field final synthetic knG:Lcom/tencent/mm/ui/LauncherUI$c;
+.field final synthetic kMM:Lcom/tencent/mm/ui/LauncherUI$c;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 3846
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$c$1;->knG:Lcom/tencent/mm/ui/LauncherUI$c;
+    .line 3640
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$c$1;->kMM:Lcom/tencent/mm/ui/LauncherUI$c;
 
-    iput p2, p0, Lcom/tencent/mm/ui/LauncherUI$c$1;->cqF:I
+    iput p2, p0, Lcom/tencent/mm/ui/LauncherUI$c$1;->clS:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,28 +46,28 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 3850
-    iget v0, p0, Lcom/tencent/mm/ui/LauncherUI$c$1;->cqF:I
+    .line 3644
+    iget v0, p0, Lcom/tencent/mm/ui/LauncherUI$c$1;->clS:I
 
     if-eq v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c$1;->knG:Lcom/tencent/mm/ui/LauncherUI$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c$1;->kMM:Lcom/tencent/mm/ui/LauncherUI$c;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->C(Lcom/tencent/mm/ui/LauncherUI;)I
+    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->B(Lcom/tencent/mm/ui/LauncherUI;)I
 
     move-result v0
 
     if-ne v0, v1, :cond_1
 
-    .line 3851
+    .line 3645
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -81,39 +81,39 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
-    .line 3853
+    .line 3647
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c$1;->knG:Lcom/tencent/mm/ui/LauncherUI$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c$1;->kMM:Lcom/tencent/mm/ui/LauncherUI$c;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUI$c$1;->knG:Lcom/tencent/mm/ui/LauncherUI$c;
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUI$c$1;->kMM:Lcom/tencent/mm/ui/LauncherUI$c;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    iget-object v1, v1, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/LauncherUI;->C(Lcom/tencent/mm/ui/LauncherUI;)I
+    invoke-static {v1}, Lcom/tencent/mm/ui/LauncherUI;->B(Lcom/tencent/mm/ui/LauncherUI;)I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/LauncherUI$c$1;->knG:Lcom/tencent/mm/ui/LauncherUI$c;
+    iget-object v2, p0, Lcom/tencent/mm/ui/LauncherUI$c$1;->kMM:Lcom/tencent/mm/ui/LauncherUI$c;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    iget-object v2, v2, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/LauncherUI;->b(Lcom/tencent/mm/ui/LauncherUI;)I
 
     move-result v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/LauncherUI;->bH(II)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/LauncherUI;->bM(II)V
 
-    .line 3854
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c$1;->knG:Lcom/tencent/mm/ui/LauncherUI$c;
+    .line 3648
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c$1;->kMM:Lcom/tencent/mm/ui/LauncherUI$c;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    iget v1, p0, Lcom/tencent/mm/ui/LauncherUI$c$1;->cqF:I
+    iget v1, p0, Lcom/tencent/mm/ui/LauncherUI$c$1;->clS:I
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->pU(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->rJ(I)V
 
-    .line 3855
+    .line 3649
     return-void
 .end method

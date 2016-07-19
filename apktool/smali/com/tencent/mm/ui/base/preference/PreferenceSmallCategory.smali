@@ -38,7 +38,7 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/ui/base/preference/PreferenceCategory;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 21
-    const v0, 0x7f0a0579
+    const v0, 0x7f0303dd
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/preference/PreferenceSmallCategory;->setLayoutResource(I)V
 

@@ -4,27 +4,27 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.Button;
 import android.widget.CheckBox;
-import com.tencent.mm.sdk.platformtools.ai;
+import com.tencent.mm.sdk.platformtools.al;
 import com.tencent.mm.ui.base.MMFormMobileInputView;
 
 final class MobileInputUI$1
   implements TextWatcher
 {
-  private ai eCG = new ai();
+  private al eJd = new al();
   
   MobileInputUI$1(MobileInputUI paramMobileInputUI) {}
   
   public final void afterTextChanged(Editable paramEditable)
   {
-    paramEditable = kyc.kus.getMobileNumber();
-    if ((paramEditable != null) && (paramEditable.length() > 0) && (kyc.ksP) && ((!MobileInputUI.b(kyc)) || (kyc.iOx.isChecked())))
+    paramEditable = kXj.kTz.bhO();
+    if ((paramEditable != null) && (paramEditable.length() > 0) && (kXj.kRX) && ((!MobileInputUI.b(kXj)) || (kXj.jlE.isChecked())))
     {
-      kyc.bC(true);
-      kyc.kuy.setEnabled(true);
+      kXj.bp(true);
+      kXj.kTF.setEnabled(true);
       return;
     }
-    kyc.bC(false);
-    kyc.kuy.setEnabled(false);
+    kXj.bp(false);
+    kXj.kTF.setEnabled(false);
   }
   
   public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}

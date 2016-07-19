@@ -1,5 +1,5 @@
 .class public final Landroid/support/v4/app/p$c;
-.super Landroid/support/v4/app/p$p;
+.super Landroid/support/v4/app/p$o;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field cG:Ljava/lang/CharSequence;
+.field cW:Ljava/lang/CharSequence;
 
 
 # direct methods
@@ -23,9 +23,9 @@
     .locals 0
 
     .prologue
-    .line 1640
-    invoke-direct {p0}, Landroid/support/v4/app/p$p;-><init>()V
+    .line 1631
+    invoke-direct {p0}, Landroid/support/v4/app/p$o;-><init>()V
 
-    .line 1641
+    .line 1632
     return-void
 .end method

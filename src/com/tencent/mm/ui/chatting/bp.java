@@ -5,22 +5,26 @@ import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
-import com.tencent.mm.an.j;
-import com.tencent.mm.an.m;
-import com.tencent.mm.an.o;
-import com.tencent.mm.d.b.bg;
+import com.tencent.mm.aq.n;
+import com.tencent.mm.aq.q;
+import com.tencent.mm.aq.r;
+import com.tencent.mm.e.a.bz;
+import com.tencent.mm.e.a.bz.b;
+import com.tencent.mm.e.b.bj;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.sdk.c.a;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.v.o;
 
 final class bp
-  extends aa
+  extends ab
 {
-  private ChattingUI.a kTe;
+  private ChattingUI.a ltl;
   
   public bp()
   {
-    super(56);
+    super(55);
   }
   
   public final View a(LayoutInflater paramLayoutInflater, View paramView)
@@ -29,70 +33,57 @@ final class bp
     if ((paramView != null) && (paramView.getTag() != null))
     {
       localObject = paramView;
-      if (getTagtype == eLV) {}
+      if (getTagtype == cTv) {}
     }
     else
     {
-      localObject = new ax(paramLayoutInflater, 2131361837);
-      ((View)localObject).setTag(new du(eLV).e((View)localObject, false));
+      localObject = new ay(paramLayoutInflater, 2130903297);
+      ((View)localObject).setTag(new dv(cTv).f((View)localObject, true));
     }
     return (View)localObject;
   }
   
-  public final void a(aa.a parama, int paramInt, ChattingUI.a parama1, ag paramag, String paramString)
+  public final void a(ab.a parama, int paramInt, ChattingUI.a parama1, ai paramai, String paramString)
   {
-    kTe = parama1;
-    parama = (du)parama;
-    du.a(parama, paramag, false, paramInt, parama1, 2130970382);
-    if (bes())
-    {
-      paramString = o.jV(field_imgPath);
-      if ((paramString == null) || (status != 199) || (!a(kSE, field_msgId))) {
-        break label84;
-      }
-      if (kQC != null) {
-        kQC.setVisibility(0);
-      }
-    }
-    label84:
-    while (kQC == null) {
-      return;
-    }
-    kQC.setVisibility(8);
+    ltl = parama1;
+    parama1.b(paramai, dv.a((dv)parama, paramai, true, paramInt, parama1, 2130837947));
   }
   
-  public final boolean a(ContextMenu paramContextMenu, View paramView, ag paramag)
+  public final boolean a(ContextMenu paramContextMenu, View paramView, ai paramai)
   {
-    if (ah.tD().isSDCardAvailable())
+    if (ah.tE().isSDCardAvailable())
     {
       int i = getTagposition;
-      m localm = j.Ea().jJ(field_imgPath);
-      if ((localm != null) && ((status == 199) || (status == 199)))
+      Object localObject = n.Es().km(field_imgPath);
+      if ((localObject != null) && ((status == 199) || (status == 199)))
       {
-        paramContextMenu.add(i, 107, 0, paramView.getContext().getString(2131427822));
-        if (com.tencent.mm.ar.c.yf("favorite")) {
-          paramContextMenu.add(i, 116, 0, paramView.getContext().getString(2131431054));
+        paramContextMenu.add(i, 107, 0, paramView.getContext().getString(2131234525));
+        if (com.tencent.mm.av.c.zM("favorite")) {
+          paramContextMenu.add(i, 116, 0, paramView.getContext().getString(2131234160));
         }
-        if ((!paramag.aWV()) && (paramag.aXh()) && (ber()) && ((status == 199) || (status == 199) || (bcK == 1)) && (GJ(field_talker))) {
-          paramContextMenu.add(i, 123, 0, paramView.getContext().getString(2131427860));
+        localObject = new bz();
+        ahe.agU = field_msgId;
+        a.kug.y((b)localObject);
+        if (ahf.agF) {
+          paramContextMenu.add(i, 128, 0, paramView.getContext().getString(2131231704));
         }
-        if ((com.tencent.mm.t.n.xi()) && (!kTe.bfD())) {
-          paramContextMenu.add(i, 114, 0, paramView.getContext().getString(2131427998));
+        if ((o.xm()) && (!ltl.bln())) {
+          paramContextMenu.add(i, 114, 0, paramView.getContext().getString(2131231696));
         }
       }
-      if (!kTe.bfD()) {
-        paramContextMenu.add(i, 100, 0, paramView.getContext().getString(2131427852));
+      if (!ltl.bln()) {
+        paramContextMenu.add(i, 100, 0, paramView.getContext().getString(2131231701));
       }
     }
     return true;
   }
   
-  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ag paramag)
+  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ai paramai)
   {
     return false;
   }
   
-  public final boolean a(View paramView, ChattingUI.a parama, ag paramag)
+  public final boolean a(View paramView, ChattingUI.a parama, ai paramai)
   {
     return false;
   }

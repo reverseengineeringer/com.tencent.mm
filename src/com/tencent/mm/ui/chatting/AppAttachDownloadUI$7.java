@@ -10,8 +10,8 @@ final class AppAttachDownloadUI$7
   
   public final void onClick(View paramView)
   {
-    AppAttachDownloadUI.o(kQa);
-    AppAttachDownloadUI.p(kQa);
+    AppAttachDownloadUI.p(lpP);
+    AppAttachDownloadUI.q(lpP);
   }
 }
 

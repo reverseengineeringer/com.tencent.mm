@@ -1,31 +1,14 @@
 package com.tencent.mm.app;
 
-import android.content.Intent;
-import com.tencent.mm.d.a.mh;
-import com.tencent.mm.d.a.mh.a;
-import com.tencent.mm.sdk.c.b;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.e.a.gm;
+import com.tencent.mm.sdk.c.c;
 
 final class WorkerProfile$7
-  extends com.tencent.mm.sdk.c.c
+  extends c<gm>
 {
   WorkerProfile$7(WorkerProfile paramWorkerProfile)
   {
-    super(0);
-  }
-  
-  public final boolean a(b paramb)
-  {
-    Object localObject = (mh)paramb;
-    paramb = aIF.context;
-    localObject = aIF.aIG;
-    if ((paramb == null) || (ay.kz((String)localObject))) {
-      return false;
-    }
-    Intent localIntent = new Intent();
-    localIntent.putExtra("rawUrl", (String)localObject);
-    com.tencent.mm.ar.c.c(paramb, "webview", ".ui.tools.WebViewUI", localIntent);
-    return false;
+    kum = gm.class.getName().hashCode();
   }
 }
 

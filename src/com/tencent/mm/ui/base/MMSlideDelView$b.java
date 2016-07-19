@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.base;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class MMSlideDelView$b
   implements Runnable
@@ -9,8 +9,8 @@ final class MMSlideDelView$b
   
   public final void run()
   {
-    u.v("!32@/B4Tb64lLpKjyuEDzIt3EXrdyszrp4wg", "checkfortap");
-    kGQ.setPressed(true);
+    v.v("MicroMsg.MMSlideDelView", "checkfortap");
+    lfS.setPressed(true);
   }
 }
 

@@ -1,76 +1,76 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.d.b.be;
+import com.tencent.mm.e.b.bh;
 import com.tencent.mm.sdk.h.c.a;
 import java.lang.reflect.Field;
 import java.util.Map;
 
 public final class s
-  extends be
+  extends bh
 {
-  protected static c.a aot;
+  protected static c.a bjR;
   
   static
   {
     c.a locala = new c.a();
-    ceD = new Field[12];
-    blR = new String[13];
+    bZI = new Field[12];
+    aZx = new String[13];
     StringBuilder localStringBuilder = new StringBuilder();
-    blR[0] = "wechatId";
-    jYx.put("wechatId", "TEXT");
+    aZx[0] = "wechatId";
+    kyU.put("wechatId", "TEXT");
     localStringBuilder.append(" wechatId TEXT");
     localStringBuilder.append(", ");
-    blR[1] = "linkedInId";
-    jYx.put("linkedInId", "TEXT");
+    aZx[1] = "linkedInId";
+    kyU.put("linkedInId", "TEXT");
     localStringBuilder.append(" linkedInId TEXT");
     localStringBuilder.append(", ");
-    blR[2] = "name";
-    jYx.put("name", "TEXT");
+    aZx[2] = "name";
+    kyU.put("name", "TEXT");
     localStringBuilder.append(" name TEXT");
     localStringBuilder.append(", ");
-    blR[3] = "position";
-    jYx.put("position", "TEXT");
+    aZx[3] = "position";
+    kyU.put("position", "TEXT");
     localStringBuilder.append(" position TEXT");
     localStringBuilder.append(", ");
-    blR[4] = "picUrl";
-    jYx.put("picUrl", "TEXT");
+    aZx[4] = "picUrl";
+    kyU.put("picUrl", "TEXT");
     localStringBuilder.append(" picUrl TEXT");
     localStringBuilder.append(", ");
-    blR[5] = "wechatUsername";
-    jYx.put("wechatUsername", "TEXT");
+    aZx[5] = "wechatUsername";
+    kyU.put("wechatUsername", "TEXT");
     localStringBuilder.append(" wechatUsername TEXT");
     localStringBuilder.append(", ");
-    blR[6] = "wechatSmallHead";
-    jYx.put("wechatSmallHead", "TEXT");
+    aZx[6] = "wechatSmallHead";
+    kyU.put("wechatSmallHead", "TEXT");
     localStringBuilder.append(" wechatSmallHead TEXT");
     localStringBuilder.append(", ");
-    blR[7] = "wechatBigHead";
-    jYx.put("wechatBigHead", "TEXT");
+    aZx[7] = "wechatBigHead";
+    kyU.put("wechatBigHead", "TEXT");
     localStringBuilder.append(" wechatBigHead TEXT");
     localStringBuilder.append(", ");
-    blR[8] = "linkedInProfileUrl";
-    jYx.put("linkedInProfileUrl", "TEXT");
+    aZx[8] = "linkedInProfileUrl";
+    kyU.put("linkedInProfileUrl", "TEXT");
     localStringBuilder.append(" linkedInProfileUrl TEXT");
     localStringBuilder.append(", ");
-    blR[9] = "status";
-    jYx.put("status", "INTEGER");
+    aZx[9] = "status";
+    kyU.put("status", "INTEGER");
     localStringBuilder.append(" status INTEGER");
     localStringBuilder.append(", ");
-    blR[10] = "userOpStatus";
-    jYx.put("userOpStatus", "INTEGER default '0' ");
+    aZx[10] = "userOpStatus";
+    kyU.put("userOpStatus", "INTEGER default '0' ");
     localStringBuilder.append(" userOpStatus INTEGER default '0' ");
     localStringBuilder.append(", ");
-    blR[11] = "nickname";
-    jYx.put("nickname", "TEXT");
+    aZx[11] = "nickname";
+    kyU.put("nickname", "TEXT");
     localStringBuilder.append(" nickname TEXT");
-    blR[12] = "rowid";
-    jYy = localStringBuilder.toString();
-    aot = locala;
+    aZx[12] = "rowid";
+    kyV = localStringBuilder.toString();
+    bjR = locala;
   }
   
-  protected final c.a ls()
+  protected final c.a ou()
   {
-    return aot;
+    return bjR;
   }
   
   public final String toString()

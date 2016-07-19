@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 33
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +30,7 @@
 
 
 # virtual methods
-.method public final i(Landroid/content/Intent;)V
+.method public final j(Landroid/content/Intent;)V
     .locals 7
 
     .prologue
@@ -38,33 +38,33 @@
 
     const/4 v6, 0x0
 
-    .line 37
+    .line 39
     const-string/jumbo v0, "type"
 
     invoke-virtual {p1, v0, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 38
+    .line 40
     const-string/jumbo v1, "error"
 
     invoke-virtual {p1, v1, v6}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 39
+    .line 41
     if-eq v0, v2, :cond_0
 
     if-nez v1, :cond_1
 
-    .line 44
+    .line 46
     :cond_0
     :goto_0
     return-void
 
-    .line 42
+    .line 44
     :cond_1
-    const-string/jumbo v2, "!24@/B4Tb64lLpLOIdMtS2bKaA=="
+    const-string/jumbo v2, "MicroMsg.Shell"
 
     const-string/jumbo v3, "kiro set Test.pushNextErrorRet(type=%d, err=%d)"
 
@@ -86,10 +86,10 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 43
-    invoke-static {v0, v1}, Lcom/tencent/mm/platformtools/r;->ac(II)V
+    .line 45
+    invoke-static {v0, v1}, Lcom/tencent/mm/platformtools/q;->ah(II)V
 
     goto :goto_0
 .end method

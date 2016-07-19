@@ -8,34 +8,34 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.aw.a;
-import com.tencent.mm.az.g;
+import com.tencent.mm.az.a;
+import com.tencent.mm.bc.g;
 import com.tencent.mm.model.c;
 import com.tencent.mm.modelfriend.h;
 import com.tencent.mm.pluginsdk.ui.d.e;
-import com.tencent.mm.q.b;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.s.b;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.storage.q;
 import com.tencent.mm.ui.i.a;
 
 @Deprecated
 final class d
-  extends com.tencent.mm.ui.i
+  extends com.tencent.mm.ui.i<h>
 {
-  private int[] bMl;
-  private String coW;
-  a ksl;
+  private int[] bFF;
+  private String ckk;
+  a kRt;
   
   public d(Context paramContext, i.a parama)
   {
     super(paramContext, new h());
-    koC = parama;
+    kNG = parama;
   }
   
-  public final void Gk()
+  public final void GH()
   {
-    com.tencent.mm.modelfriend.i locali = com.tencent.mm.modelfriend.ah.zr();
-    String str = coW;
+    com.tencent.mm.modelfriend.i locali = com.tencent.mm.modelfriend.ah.zE();
+    String str = ckk;
     StringBuilder localStringBuilder = new StringBuilder();
     if ((str != null) && (str.length() > 0))
     {
@@ -44,17 +44,17 @@ final class d
       localStringBuilder.append("facebookfriend.nickname like '%" + str + "%' or ");
       localStringBuilder.append("facebookfriend.username like '%" + str + "%' ) ");
     }
-    setCursor(bCw.rawQuery("select facebookfriend.fbid,facebookfriend.fbname,facebookfriend.fbimgkey,facebookfriend.status,facebookfriend.username,facebookfriend.nickname,facebookfriend.nicknamepyinitial,facebookfriend.nicknamequanpin,facebookfriend.sex,facebookfriend.personalcard,facebookfriend.province,facebookfriend.city,facebookfriend.signature,facebookfriend.alias,facebookfriend.type,facebookfriend.email from facebookfriend  " + localStringBuilder.toString() + " order by  case when status = 100 then 0  when status = 102 then 3  when status = 101 then 1 else 2 end  , nicknamepyinitial", null));
-    bMl = new int[getCount()];
-    if ((ksl != null) && (coW != null)) {
-      ksl.qm(getCursor().getCount());
+    setCursor(bvG.rawQuery("select facebookfriend.fbid,facebookfriend.fbname,facebookfriend.fbimgkey,facebookfriend.status,facebookfriend.username,facebookfriend.nickname,facebookfriend.nicknamepyinitial,facebookfriend.nicknamequanpin,facebookfriend.sex,facebookfriend.personalcard,facebookfriend.province,facebookfriend.city,facebookfriend.signature,facebookfriend.alias,facebookfriend.type,facebookfriend.email from facebookfriend  " + localStringBuilder.toString() + " order by  case when status = 100 then 0  when status = 102 then 3  when status = 101 then 1 else 2 end  , nicknamepyinitial", null));
+    bFF = new int[getCount()];
+    if ((kRt != null) && (ckk != null)) {
+      kRt.se(getCursor().getCount());
     }
     super.notifyDataSetChanged();
   }
   
-  protected final void Gl()
+  protected final void GI()
   {
-    Gk();
+    GH();
   }
   
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
@@ -63,80 +63,80 @@ final class d
     if (paramView == null)
     {
       paramViewGroup = new b();
-      paramView = View.inflate(context, 2131362457, null);
-      coY = ((ImageView)paramView.findViewById(2131167114));
-      bMs = ((TextView)paramView.findViewById(2131167115));
-      bMt = ((TextView)paramView.findViewById(2131167141));
-      ksm = ((TextView)paramView.findViewById(2131167139));
-      ksn = ((TextView)paramView.findViewById(2131167140));
-      kso = ((ImageView)paramView.findViewById(2131167142));
+      paramView = View.inflate(context, 2130903548, null);
+      ckm = ((ImageView)paramView.findViewById(2131756733));
+      bFM = ((TextView)paramView.findViewById(2131756734));
+      bFN = ((TextView)paramView.findViewById(2131756737));
+      kRu = ((TextView)paramView.findViewById(2131756735));
+      kRv = ((TextView)paramView.findViewById(2131756736));
+      kRw = ((ImageView)paramView.findViewById(2131756738));
       paramView.setTag(paramViewGroup);
-      bMs.setText(e.a(context, ((h)localObject).yw(), bMs.getTextSize()));
-      ksn.setVisibility(8);
-      kso.setVisibility(0);
-      switch (bMl[paramInt])
+      bFM.setText(e.a(context, ((h)localObject).yI(), bFM.getTextSize()));
+      kRv.setVisibility(8);
+      kRw.setVisibility(0);
+      switch (bFF[paramInt])
       {
       }
     }
     for (;;)
     {
-      localObject = b.fK(aSw);
+      localObject = b.fX(aFf);
       if (localObject != null) {
         break label434;
       }
-      coY.setImageDrawable(a.y(context, 2130903473));
+      ckm.setImageDrawable(a.C(context, 2131165359));
       return paramView;
       paramViewGroup = (b)paramView.getTag();
       break;
-      ksm.setVisibility(8);
-      bMt.setVisibility(0);
-      bMt.setText(2131428827);
-      bMt.setTextColor(context.getResources().getColor(2131231098));
+      kRu.setVisibility(8);
+      bFN.setVisibility(0);
+      bFN.setText(2131232965);
+      bFN.setTextColor(context.getResources().getColor(2131689501));
       continue;
-      if ((status != 102) && (!com.tencent.mm.model.ah.tD().rq().El(((h)localObject).getUsername())))
+      if ((status != 102) && (!com.tencent.mm.model.ah.tE().rr().Gz(((h)localObject).getUsername())))
       {
-        bMt.setVisibility(8);
-        ksm.setVisibility(0);
+        bFN.setVisibility(8);
+        kRu.setVisibility(0);
       }
       else if (status == 102)
       {
-        bMt.setVisibility(8);
-        ksm.setVisibility(8);
-        kso.setVisibility(8);
+        bFN.setVisibility(8);
+        kRu.setVisibility(8);
+        kRw.setVisibility(8);
       }
       else
       {
-        bMt.setVisibility(0);
-        bMt.setText(2131428826);
-        bMt.setTextColor(context.getResources().getColor(2131231097));
-        ksm.setVisibility(8);
+        bFN.setVisibility(0);
+        bFN.setText(2131232961);
+        bFN.setTextColor(context.getResources().getColor(2131689500));
+        kRu.setVisibility(8);
       }
     }
     label434:
-    coY.setImageBitmap((Bitmap)localObject);
+    ckm.setImageBitmap((Bitmap)localObject);
     return paramView;
   }
   
-  public final void pH(String paramString)
+  public final void qY(String paramString)
   {
-    coW = ay.kx(paramString.trim());
-    adW();
-    Gk();
+    ckk = be.lh(paramString.trim());
+    closeCursor();
+    GH();
   }
   
   public static abstract interface a
   {
-    public abstract void qm(int paramInt);
+    public abstract void se(int paramInt);
   }
   
   static final class b
   {
-    TextView bMs;
-    TextView bMt;
-    ImageView coY;
-    TextView ksm;
-    TextView ksn;
-    ImageView kso;
+    TextView bFM;
+    TextView bFN;
+    ImageView ckm;
+    TextView kRu;
+    TextView kRv;
+    ImageView kRw;
   }
 }
 

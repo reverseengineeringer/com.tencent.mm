@@ -4,13 +4,13 @@ abstract interface l
 {
   public abstract long a(d paramd);
   
-  public abstract int cG(long paramLong);
+  public abstract int cV(long paramLong);
   
-  public abstract e cH(long paramLong);
+  public abstract e cW(long paramLong);
   
-  public abstract boolean cI(long paramLong);
+  public abstract boolean cX(long paramLong);
   
-  public abstract boolean cJ(long paramLong);
+  public abstract boolean cY(long paramLong);
 }
 
 /* Location:

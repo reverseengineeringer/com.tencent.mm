@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field private kFz:Landroid/view/View$OnTouchListener;
+.field private leD:Landroid/view/View$OnTouchListener;
 
 .field private mContext:Landroid/content/Context;
 
@@ -102,7 +102,7 @@
 
     .prologue
     .line 16
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/o;->kFz:Landroid/view/View$OnTouchListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/o;->leD:Landroid/view/View$OnTouchListener;
 
     return-object v0
 .end method
@@ -128,7 +128,7 @@
     move-exception v0
 
     .line 50
-    const-string/jumbo v1, "!32@/B4Tb64lLpLKmnl4Jnfl+pqhp+Z26Rpq"
+    const-string/jumbo v1, "MicroMsg.MMPopupWindow"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -148,7 +148,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -234,7 +234,7 @@
 
     .line 114
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -382,7 +382,7 @@
 
     .prologue
     .line 151
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/o;->kFz:Landroid/view/View$OnTouchListener;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/o;->leD:Landroid/view/View$OnTouchListener;
 
     .line 152
     return-void

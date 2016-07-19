@@ -5,12 +5,12 @@ import java.io.Serializable;
 final class c$a
   implements Serializable
 {
-  public String ajh;
-  public int bnF;
+  public String UX;
+  public int bbD;
   
   public final String toString()
   {
-    return "[" + ajh + "(" + bnF + ")]";
+    return "[" + UX + "(" + bbD + ")]";
   }
 }
 

@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic gkw:Landroid/widget/LinearLayout;
+.field final synthetic guR:Landroid/widget/LinearLayout;
 
-.field final synthetic kCD:Lcom/tencent/mm/ui/base/g$a;
+.field final synthetic lbI:Lcom/tencent/mm/ui/base/g$a;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 688
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/g$14;->gkw:Landroid/widget/LinearLayout;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/g$14;->guR:Landroid/widget/LinearLayout;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/base/g$14;->kCD:Lcom/tencent/mm/ui/base/g$a;
+    iput-object p2, p0, Lcom/tencent/mm/ui/base/g$14;->lbI:Lcom/tencent/mm/ui/base/g$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,7 +50,7 @@
     move v1, v2
 
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$14;->gkw:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$14;->guR:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -59,7 +59,7 @@
     if-ge v1, v0, :cond_1
 
     .line 693
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$14;->gkw:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$14;->guR:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
@@ -72,12 +72,12 @@
 
     move-result v3
 
-    const v4, 0x7f070186
+    const v4, 0x7f100728
 
     if-eq v3, v4, :cond_0
 
     .line 695
-    const v3, 0x7f030224
+    const v3, 0x7f070262
 
     invoke-virtual {v0, v3, v2, v2, v2}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
@@ -95,7 +95,7 @@
     .line 699
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0301b6
+    const v1, 0x7f07025f
 
     invoke-virtual {v0, v1, v2, v2, v2}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 

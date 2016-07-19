@@ -1,16 +1,18 @@
 package com.tencent.mm.ui;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-
 final class LauncherUI$47
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
   LauncherUI$47(LauncherUI paramLauncherUI) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final void run()
   {
-    paramDialogInterface.dismiss();
+    kMs.F();
+  }
+  
+  public final String toString()
+  {
+    return super.toString() + "|supportInvalidateOptionsMenu";
   }
 }
 

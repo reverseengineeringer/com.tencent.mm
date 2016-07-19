@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kxQ:Lcom/tencent/mm/ui/account/mobile/c;
+.field final synthetic kWX:Lcom/tencent/mm/ui/account/mobile/c;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 132
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/c$7;->kxQ:Lcom/tencent/mm/ui/account/mobile/c;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/c$7;->kWX:Lcom/tencent/mm/ui/account/mobile/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,13 +41,13 @@
 
     .prologue
     .line 136
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/c$7;->kxQ:Lcom/tencent/mm/ui/account/mobile/c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/c$7;->kWX:Lcom/tencent/mm/ui/account/mobile/c;
 
-    invoke-static {}, Lcom/tencent/mm/ui/account/f;->bbE()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/ui/account/f;->bgQ()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {}, Lcom/tencent/mm/ui/account/f;->bbF()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/ui/account/f;->bgR()Ljava/lang/String;
 
     move-result-object v2
 

@@ -5,45 +5,45 @@ import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import com.tencent.mm.network.e;
 import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b.acc;
-import com.tencent.mm.protocal.b.adl;
-import com.tencent.mm.protocal.b.avz;
-import com.tencent.mm.protocal.b.awa;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j.b;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.acr;
+import com.tencent.mm.protocal.b.aee;
+import com.tencent.mm.protocal.b.awp;
+import com.tencent.mm.protocal.b.awq;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j.b;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
 public final class ac
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private d anM;
-  private int axL;
-  public final List bMX;
-  public final List bMY;
-  private final String bMZ = (String)ah.tD().rn().get(6, null);
-  private int bNa = 0;
-  private int bNb = 0;
+  private int ajS;
+  public final List<String> bGr;
+  public final List<String> bGs;
+  private final String bGt = (String)ah.tE().ro().get(6, null);
+  private int bGu = 0;
+  private int bGv = 0;
+  private d bkT;
   
-  public ac(List paramList1, List paramList2)
+  public ac(List<String> paramList1, List<String> paramList2)
   {
-    bMX = paramList1;
-    bMY = paramList2;
-    axL = 1;
+    bGr = paramList1;
+    bGs = paramList2;
+    ajS = 1;
   }
   
-  private static List x(List paramList)
+  private static List<String> C(List<acr> paramList)
   {
     ArrayList localArrayList = new ArrayList();
     if ((paramList == null) || (paramList.size() == 0))
     {
-      u.i("!44@/B4Tb64lLpK+IBX8XDgnvlGPgu9QXEXWOtU+5CktrO0=", "the req emai list is empty");
+      v.i("MicroMsg.NetSceneUploadMContact", "the req emai list is empty");
       return localArrayList;
     }
     paramList = paramList.iterator();
@@ -53,17 +53,17 @@ public final class ac
     return localArrayList;
   }
   
-  private static List y(List paramList)
+  private static List<String> D(List<aee> paramList)
   {
     ArrayList localArrayList = new ArrayList();
     if ((paramList == null) || (paramList.size() == 0))
     {
-      u.i("!44@/B4Tb64lLpK+IBX8XDgnvlGPgu9QXEXWOtU+5CktrO0=", "the req mobile list is empty");
+      v.i("MicroMsg.NetSceneUploadMContact", "the req mobile list is empty");
       return localArrayList;
     }
     paramList = paramList.iterator();
     while (paramList.hasNext()) {
-      localArrayList.add(g.m(com.tencent.mm.pluginsdk.a.sy(nextv).getBytes()));
+      localArrayList.add(g.j(com.tencent.mm.pluginsdk.a.tY(nextv).getBytes()));
     }
     return localArrayList;
   }
@@ -71,24 +71,24 @@ public final class ac
   public final int a(e parame, d paramd)
   {
     int m = 0;
-    anM = paramd;
-    if (((bMX == null) || (bMX.size() == 0)) && ((bMY == null) || (bMY.size() == 0)))
+    bkT = paramd;
+    if (((bGr == null) || (bGr.size() == 0)) && ((bGs == null) || (bGs.size() == 0)))
     {
-      u.i("!44@/B4Tb64lLpK+IBX8XDgnvlGPgu9QXEXWOtU+5CktrO0=", "listMobile or listEmile is null or zero");
+      v.i("MicroMsg.NetSceneUploadMContact", "listMobile or listEmile is null or zero");
       return -1;
     }
     paramd = new a.a();
-    bFa = new avz();
-    bFb = new awa();
+    byl = new awp();
+    bym = new awq();
     uri = "/cgi-bin/micromsg-bin/uploadmcontact";
-    bEY = 133;
-    bFc = 0;
-    bFd = 0;
-    paramd = paramd.vy();
-    avz localavz = (avz)bEW.bFf;
-    jbq = bMZ;
-    eiB = com.tencent.mm.model.h.sc();
-    iZE = axL;
+    byj = 133;
+    byn = 0;
+    byo = 0;
+    paramd = paramd.vA();
+    awp localawp = (awp)byh.byq;
+    jyW = bGt;
+    emC = com.tencent.mm.model.h.se();
+    jxj = ajS;
     int i = 200;
     Object localObject1 = new LinkedList();
     LinkedList localLinkedList = new LinkedList();
@@ -102,114 +102,114 @@ public final class ac
         }
         int j = i;
         Object localObject2;
-        if (bMX != null)
+        if (bGr != null)
         {
           j = i;
-          if (bNa < bMX.size())
+          if (bGu < bGr.size())
           {
-            if (bMX.get(bNa) != null)
+            if (bGr.get(bGu) != null)
             {
-              localObject2 = new adl();
-              v = ((String)bMX.get(bNa));
+              localObject2 = new aee();
+              v = ((String)bGr.get(bGu));
               ((LinkedList)localObject1).add(localObject2);
             }
-            bNa += 1;
+            bGu += 1;
             j = i - 1;
           }
         }
         k = j;
-        if (bMY != null)
+        if (bGs != null)
         {
           k = j;
-          if (bNb < bMY.size())
+          if (bGv < bGs.size())
           {
-            if (bMY.get(bNb) != null)
+            if (bGs.get(bGv) != null)
             {
-              localObject2 = new acc();
-              v = ((String)bMY.get(bNb));
+              localObject2 = new acr();
+              v = ((String)bGs.get(bGv));
               localLinkedList.add(localObject2);
             }
-            bNb += 1;
+            bGv += 1;
             k = j - 1;
           }
         }
-        if (bMY == null) {
+        if (bGs == null) {
           break;
         }
         i = k;
-      } while (bNb < bMY.size());
-      if (bMX == null) {
+      } while (bGv < bGs.size());
+      if (bGr == null) {
         break;
       }
       i = k;
-    } while (bNa < bMX.size());
+    } while (bGu < bGr.size());
     label428:
-    jxQ = ((LinkedList)localObject1);
-    jNM = ((LinkedList)localObject1).size();
-    jNO = localLinkedList;
-    jNN = localLinkedList.size();
+    jWw = ((LinkedList)localObject1);
+    kmA = ((LinkedList)localObject1).size();
+    kmC = localLinkedList;
+    kmB = localLinkedList.size();
     localObject1 = new StringBuilder("doscene in:[");
-    if (bMY == null)
+    if (bGs == null)
     {
       i = 0;
       localObject1 = ((StringBuilder)localObject1).append(i).append(",");
-      if (bMX != null) {
+      if (bGr != null) {
         break label601;
       }
     }
     label601:
-    for (i = m;; i = bMX.size())
+    for (i = m;; i = bGr.size())
     {
-      u.v("!44@/B4Tb64lLpK+IBX8XDgnvlGPgu9QXEXWOtU+5CktrO0=", i + "] index:[" + bNb + "," + bNa + "] req:[" + jNO.size() + "," + jxQ.size() + "]");
+      v.v("MicroMsg.NetSceneUploadMContact", i + "] index:[" + bGv + "," + bGu + "] req:[" + kmC.size() + "," + jWw.size() + "]");
       return a(parame, paramd, this);
-      i = bMY.size();
+      i = bGs.size();
       break;
     }
   }
   
   protected final int a(o paramo)
   {
-    paramo = (avz)bEW.bFf;
-    int i = jNO.size() + jxQ.size();
+    paramo = (awp)byh.byq;
+    int i = kmC.size() + jWw.size();
     if ((i == 0) || (i > 200))
     {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvlGPgu9QXEXWOtU+5CktrO0=", "security checked failed : exceed max send count");
-      return j.b.bFJ;
+      v.e("MicroMsg.NetSceneUploadMContact", "security checked failed : exceed max send count");
+      return j.b.byU;
     }
-    if ((jbq == null) || (jbq.length() <= 0))
+    if ((jyW == null) || (jyW.length() <= 0))
     {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvlGPgu9QXEXWOtU+5CktrO0=", "security checked failed : moblie null");
-      return j.b.bFJ;
+      v.e("MicroMsg.NetSceneUploadMContact", "security checked failed : moblie null");
+      return j.b.byU;
     }
-    if ((eiB == null) || (eiB.length() <= 0))
+    if ((emC == null) || (emC.length() <= 0))
     {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvlGPgu9QXEXWOtU+5CktrO0=", "security checked failed : username null");
-      return j.b.bFJ;
+      v.e("MicroMsg.NetSceneUploadMContact", "security checked failed : username null");
+      return j.b.byU;
     }
-    return j.b.bFI;
+    return j.b.byT;
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    u.i("!44@/B4Tb64lLpK+IBX8XDgnvlGPgu9QXEXWOtU+5CktrO0=", "onSceneEnd: errType = " + paramInt2 + " errCode = " + paramInt3 + " errMsg = " + paramString);
+    v.i("MicroMsg.NetSceneUploadMContact", "onSceneEnd: errType = " + paramInt2 + " errCode = " + paramInt3 + " errMsg = " + paramString);
     if ((paramInt2 != 0) || (paramInt3 != 0))
     {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvlGPgu9QXEXWOtU+5CktrO0=", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3);
-      anM.a(paramInt2, paramInt3, paramString, this);
+      v.e("MicroMsg.NetSceneUploadMContact", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3);
+      bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
     }
     do
     {
       return;
-      paramo = (avz)bEW.bFf;
-      m.v(x(jNO));
-      m.v(y(jxQ));
-      if (((bMY == null) || (bNb >= bMY.size())) && ((bMX == null) || (bNa >= bMX.size())))
+      paramo = (awp)byh.byq;
+      m.A(C(kmC));
+      m.A(D(jWw));
+      if (((bGs == null) || (bGv >= bGs.size())) && ((bGr == null) || (bGu >= bGr.size())))
       {
-        anM.a(paramInt2, paramInt3, paramString, this);
+        bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
         return;
       }
-    } while (a(bFs, anM) >= 0);
-    anM.a(paramInt2, paramInt3, paramString, this);
+    } while (a(byD, bkT) >= 0);
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()
@@ -217,9 +217,14 @@ public final class ac
     return 133;
   }
   
-  protected final int lk()
+  protected final int px()
   {
     return 10;
+  }
+  
+  public final boolean vE()
+  {
+    return true;
   }
 }
 

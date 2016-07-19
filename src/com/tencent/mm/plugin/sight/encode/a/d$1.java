@@ -2,10 +2,10 @@ package com.tencent.mm.plugin.sight.encode.a;
 
 import android.os.Looper;
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class d$1
-  extends aa
+  extends ac
 {
   d$1(d paramd, Looper paramLooper)
   {
@@ -14,10 +14,10 @@ final class d$1
   
   public final void handleMessage(Message paramMessage)
   {
-    if (gAq.gzV != null)
+    if (gGS.gGx != null)
     {
-      gAq.gzV.awm();
-      gAq.gzV = null;
+      gGS.gGx.ayK();
+      gGS.gGx = null;
     }
   }
 }

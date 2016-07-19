@@ -27,18 +27,18 @@
     .locals 1
 
     .prologue
-    .line 78
+    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
+    .line 87
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DecodeResultLogger;->mDecoderTag:Ljava/lang/String;
 
-    .line 79
+    .line 90
     invoke-virtual {p0}, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DecodeResultLogger;->clear()V
 
-    .line 80
+    .line 91
     return-void
 .end method
 
@@ -46,7 +46,7 @@
     .locals 1
 
     .prologue
-    .line 71
+    .line 82
     iget v0, p0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DecodeResultLogger;->mDecodeResultCode:I
 
     return v0
@@ -56,7 +56,7 @@
     .locals 0
 
     .prologue
-    .line 71
+    .line 82
     iput p1, p0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DecodeResultLogger;->mDecodeResultCode:I
 
     return p1
@@ -66,7 +66,7 @@
     .locals 0
 
     .prologue
-    .line 71
+    .line 82
     iput-boolean p1, p0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DecodeResultLogger;->mIsDecodeByMMDecoder:Z
 
     return p1
@@ -76,7 +76,7 @@
     .locals 1
 
     .prologue
-    .line 71
+    .line 82
     iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DecodeResultLogger;->mDecoderTag:Ljava/lang/String;
 
     return-object v0
@@ -86,13 +86,13 @@
     .locals 1
 
     .prologue
-    .line 85
+    .line 96
     iput p1, p0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DecodeResultLogger;->mDecodeResultCode:I
 
-    .line 86
+    .line 97
     iput-boolean p2, p0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DecodeResultLogger;->mIsDecodeByMMDecoder:Z
 
-    .line 87
+    .line 98
     if-eqz p3, :cond_0
 
     invoke-virtual {p3}, Ljava/lang/String;->length()I
@@ -107,7 +107,7 @@
     :cond_1
     iput-object p3, p0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DecodeResultLogger;->mDecoderTag:Ljava/lang/String;
 
-    .line 88
+    .line 99
     return-void
 .end method
 
@@ -119,18 +119,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 107
+    .line 118
     iput v0, p0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DecodeResultLogger;->mDecodeResultCode:I
 
-    .line 108
+    .line 119
     iput-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DecodeResultLogger;->mIsDecodeByMMDecoder:Z
 
-    .line 109
+    .line 120
     const-string/jumbo v0, "System"
 
     iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DecodeResultLogger;->mDecoderTag:Ljava/lang/String;
 
-    .line 110
+    .line 121
     return-void
 .end method
 
@@ -138,7 +138,7 @@
     .locals 1
 
     .prologue
-    .line 91
+    .line 102
     iget v0, p0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DecodeResultLogger;->mDecodeResultCode:I
 
     return v0
@@ -148,7 +148,7 @@
     .locals 1
 
     .prologue
-    .line 103
+    .line 114
     iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DecodeResultLogger;->mDecoderTag:Ljava/lang/String;
 
     return-object v0
@@ -158,7 +158,7 @@
     .locals 1
 
     .prologue
-    .line 99
+    .line 110
     iget-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DecodeResultLogger;->mIsDecodeByMMDecoder:Z
 
     return v0
@@ -168,10 +168,10 @@
     .locals 0
 
     .prologue
-    .line 95
+    .line 106
     iput p1, p0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DecodeResultLogger;->mDecodeResultCode:I
 
-    .line 96
+    .line 107
     return-void
 .end method
 
@@ -179,10 +179,10 @@
     .locals 5
 
     .prologue
-    .line 113
+    .line 124
     const-string/jumbo v0, "-"
 
-    .line 131
+    .line 142
     const-string/jumbo v1, "%d,%b,%s,%s"
 
     const/4 v2, 0x4
@@ -230,7 +230,7 @@
     .locals 4
 
     .prologue
-    .line 136
+    .line 147
     const-string/jumbo v0, "{%d,%b,%s}"
 
     const/4 v1, 0x3

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hlL:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+.field final synthetic hBN:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 515
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$3;->hlL:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$3;->hBN:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -58,7 +58,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 523
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$3;->hlL:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$3;->hBN:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
     invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->getContext()Landroid/content/Context;
 
@@ -68,7 +68,7 @@
 
     const/16 v3, 0x8
 
-    invoke-static {v1, v2, v0, v3}, Lcom/tencent/mm/ar/c;->a(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;I)V
+    invoke-static {v1, v2, v0, v3}, Lcom/tencent/mm/av/c;->a(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;I)V
 
     .line 524
     return-void

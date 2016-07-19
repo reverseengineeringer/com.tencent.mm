@@ -17,18 +17,38 @@
 # instance fields
 .field private context:Landroid/content/Context;
 
-.field private hcs:Lcom/tencent/mm/storage/q;
+.field private hre:Lcom/tencent/mm/storage/q;
 
-.field private lmA:Ljava/util/Map;
+.field private lMQ:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Integer;",
+            "Lcom/tencent/mm/i/a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private lmB:Landroid/content/res/ColorStateList;
+.field private lMR:Landroid/content/res/ColorStateList;
 
-.field private lmC:Landroid/content/res/ColorStateList;
+.field private lMS:Landroid/content/res/ColorStateList;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/util/List;)V
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
     const/4 v1, 0x0
@@ -44,29 +64,29 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->lmA:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->lMQ:Ljava/util/Map;
 
     .line 189
-    iput-object v1, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->hcs:Lcom/tencent/mm/storage/q;
+    iput-object v1, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->hre:Lcom/tencent/mm/storage/q;
 
     .line 194
     iput-object p1, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->context:Landroid/content/Context;
 
     .line 195
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->lmA:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->lMQ:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     .line 196
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->hcs:Lcom/tencent/mm/storage/q;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->hre:Lcom/tencent/mm/storage/q;
 
     .line 197
     const/4 v0, 0x0
@@ -92,15 +112,15 @@
     check-cast v0, Ljava/lang/String;
 
     .line 199
-    new-instance v3, Lcom/tencent/mm/h/a;
+    new-instance v3, Lcom/tencent/mm/i/a;
 
-    invoke-direct {v3}, Lcom/tencent/mm/h/a;-><init>()V
+    invoke-direct {v3}, Lcom/tencent/mm/i/a;-><init>()V
 
     .line 200
-    invoke-virtual {v3, v0}, Lcom/tencent/mm/h/a;->setUsername(Ljava/lang/String;)V
+    invoke-virtual {v3, v0}, Lcom/tencent/mm/i/a;->setUsername(Ljava/lang/String;)V
 
     .line 201
-    iget-object v4, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->lmA:Ljava/util/Map;
+    iget-object v4, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->lMQ:Ljava/util/Map;
 
     add-int/lit8 v0, v1, 0x1
 
@@ -122,7 +142,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080218
+    const v1, 0x7f0f025c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
 
@@ -133,7 +153,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f080213
+    const v2, 0x7f0f025d
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
 
@@ -148,7 +168,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->lmB:Landroid/content/res/ColorStateList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->lMR:Landroid/content/res/ColorStateList;
 
     .line 208
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -159,7 +179,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->lmC:Landroid/content/res/ColorStateList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->lMS:Landroid/content/res/ColorStateList;
     :try_end_0
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -188,7 +208,7 @@
 
     .prologue
     .line 219
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->lmA:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->lMQ:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->size()I
 
@@ -214,7 +234,7 @@
 
     .line 227
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->lmA:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->lMQ:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -224,19 +244,19 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/h/a;
+    check-cast v0, Lcom/tencent/mm/i/a;
 
     .line 228
-    iget v1, v0, Lcom/tencent/mm/d/b/p;->field_showHead:I
+    iget v1, v0, Lcom/tencent/mm/e/b/p;->field_showHead:I
 
     if-nez v1, :cond_0
 
     .line 229
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->hcs:Lcom/tencent/mm/storage/q;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->hre:Lcom/tencent/mm/storage/q;
 
-    iget-object v2, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/q;->Ep(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/q;->GD(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
 
     move-result-object v1
 
@@ -244,7 +264,7 @@
     if-eqz v1, :cond_0
 
     .line 231
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->lmA:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->lMQ:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -282,7 +302,7 @@
     .line 249
     iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->context:Landroid/content/Context;
 
-    const v1, 0x7f0a05ae
+    const v1, 0x7f03015d
 
     const/4 v2, 0x0
 
@@ -296,7 +316,7 @@
     invoke-direct {v1, v5}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;-><init>(B)V
 
     .line 251
-    const v0, 0x7f07003f
+    const v0, 0x7f100101
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -304,10 +324,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v1, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->czT:Landroid/widget/TextView;
+    iput-object v0, v1, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->cwP:Landroid/widget/TextView;
 
     .line 252
-    const v0, 0x7f0700c0
+    const v0, 0x7f100104
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -315,10 +335,10 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/MaskLayout;
 
-    iput-object v0, v1, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->dbN:Lcom/tencent/mm/ui/base/MaskLayout;
+    iput-object v0, v1, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->dat:Lcom/tencent/mm/ui/base/MaskLayout;
 
     .line 253
-    const v0, 0x7f0700c2
+    const v0, 0x7f10010b
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -326,10 +346,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v1, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->czU:Landroid/widget/TextView;
+    iput-object v0, v1, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->cwQ:Landroid/widget/TextView;
 
     .line 254
-    const v0, 0x7f0700f2
+    const v0, 0x7f10010c
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -337,7 +357,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v1, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->lmE:Landroid/widget/TextView;
+    iput-object v0, v1, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->lMU:Landroid/widget/TextView;
 
     .line 256
     invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
@@ -353,65 +373,63 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/h/a;
+    check-cast v0, Lcom/tencent/mm/i/a;
 
     .line 264
-    iget-object v1, v2, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->czT:Landroid/widget/TextView;
+    iget-object v1, v2, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->cwP:Landroid/widget/TextView;
 
     invoke-virtual {v1, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 267
-    iget-object v3, v2, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->czU:Landroid/widget/TextView;
+    iget-object v3, v2, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->cwQ:Landroid/widget/TextView;
 
-    iget-object v1, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/model/i;->eI(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/model/i;->eU(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->lmB:Landroid/content/res/ColorStateList;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->lMR:Landroid/content/res/ColorStateList;
 
     :goto_1
     invoke-virtual {v3, v1}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
     .line 269
-    iget-object v1, v2, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->dbN:Lcom/tencent/mm/ui/base/MaskLayout;
+    iget-object v1, v2, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->dat:Lcom/tencent/mm/ui/base/MaskLayout;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/base/MaskLayout;->getContentView()Landroid/view/View;
-
-    move-result-object v1
+    iget-object v1, v1, Lcom/tencent/mm/ui/base/MaskLayout;->view:Landroid/view/View;
 
     check-cast v1, Landroid/widget/ImageView;
 
     .line 272
-    iget-object v3, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v3, v0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     const/4 v4, 0x1
 
     invoke-static {v1, v3, v4}, Lcom/tencent/mm/pluginsdk/ui/a$b;->b(Landroid/widget/ImageView;Ljava/lang/String;Z)V
 
     .line 274
-    iget-object v1, v2, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->lmE:Landroid/widget/TextView;
+    iget-object v1, v2, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->lMU:Landroid/widget/TextView;
 
     invoke-virtual {v1, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 275
-    iget-object v1, v2, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->dbN:Lcom/tencent/mm/ui/base/MaskLayout;
+    iget-object v1, v2, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->dat:Lcom/tencent/mm/ui/base/MaskLayout;
 
     invoke-virtual {v1, v5}, Lcom/tencent/mm/ui/base/MaskLayout;->setVisibility(I)V
 
     .line 287
-    iget-object v1, v2, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->czU:Landroid/widget/TextView;
+    iget-object v1, v2, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->cwQ:Landroid/widget/TextView;
 
     iget-object v3, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->context:Landroid/content/Context;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/h/a;->qz()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/i/a;->pc()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v4, v2, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->czU:Landroid/widget/TextView;
+    iget-object v4, v2, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->cwQ:Landroid/widget/TextView;
 
     invoke-virtual {v4}, Landroid/widget/TextView;->getTextSize()F
 
@@ -424,7 +442,7 @@
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 288
-    iget-object v0, v2, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->czU:Landroid/widget/TextView;
+    iget-object v0, v2, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$c;->cwQ:Landroid/widget/TextView;
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -445,7 +463,7 @@
 
     .line 267
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->lmC:Landroid/content/res/ColorStateList;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->lMS:Landroid/content/res/ColorStateList;
 
     goto :goto_1
 .end method

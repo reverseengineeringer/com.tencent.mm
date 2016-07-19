@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/j3" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bzs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:src="@raw/remittance_received" />
+    <TextView android:textSize="18.0dip" android:textColor="@color/ot" android:id="@id/bzt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hb" android:text="@string/dbm" android:includeFontPadding="false" />
+    <TextView android:textSize="14.0dip" android:textColor="@color/kh" android:id="@id/bzu" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:includeFontPadding="false" />
+    <TextView android:textSize="50.0dip" android:textColor="@color/ak" android:id="@id/bzv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:includeFontPadding="false" />
+    <LinearLayout android:orientation="vertical" android:id="@id/bzw" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/i7" android:layout_marginTop="25.0dip" android:layout_marginRight="@dimen/i7" android:layout_marginBottom="8.0dip">
+        <TextView android:background="#ffd8d8d8" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <TextView android:textSize="15.0dip" android:textColor="@color/gn" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@id/bzx" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="49.0dip" android:includeFontPadding="false" />
+        <TextView android:background="#ffd8d8d8" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/bzy" android:paddingLeft="@dimen/hb" android:paddingRight="@dimen/hb" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:layout_marginBottom="8.0dip">
+        <View android:background="@color/hf" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/bzz" android:paddingTop="@dimen/hb" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/kh" android:id="@id/c00" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/a2z" android:includeFontPadding="false" />
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/kh" android:ellipsize="end" android:gravity="right" android:id="@id/c01" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxEms="15" android:singleLine="true" android:includeFontPadding="false" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View android:background="@color/hf" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/hb" />
+    </LinearLayout>
+    <Button android:id="@id/c02" android:layout_width="fill_parent" android:layout_marginLeft="@dimen/i7" android:layout_marginTop="24.0dip" android:layout_marginRight="@dimen/i7" android:text="@string/d5r" style="@style/MMSolidGreenLargeButton" />
+</LinearLayout>

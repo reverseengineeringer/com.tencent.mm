@@ -10,7 +10,7 @@ final class SearchConversationResultUI$2
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    lCp.finish();
+    mdg.finish();
     return true;
   }
 }

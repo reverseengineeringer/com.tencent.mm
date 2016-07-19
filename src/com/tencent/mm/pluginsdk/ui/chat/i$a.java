@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.chat;
 
 public abstract interface i$a
 {
-  public abstract void AI(String paramString);
+  public abstract void CO(String paramString);
 }
 
 /* Location:

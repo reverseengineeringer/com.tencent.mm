@@ -1,22 +1,15 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.d.a.lg;
-import com.tencent.mm.pluginsdk.c.a;
-import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.e.a.bf;
+import com.tencent.mm.sdk.c.c;
 
 final class f$10
-  extends a
+  extends c<bf>
 {
   f$10(f paramf)
   {
-    super(0);
-  }
-  
-  public final void g(b paramb)
-  {
-    if ((paramb instanceof lg)) {
-      f.c(klo);
-    }
+    super(1);
+    kum = bf.class.getName().hashCode();
   }
 }
 

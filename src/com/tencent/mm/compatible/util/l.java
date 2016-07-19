@@ -4,11 +4,11 @@ import android.os.Build;
 import android.os.Build.VERSION;
 import com.tencent.mm.compatible.d.j;
 import com.tencent.mm.compatible.d.p;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 public final class l
 {
-  public static String df(String paramString)
+  public static String dm(String paramString)
   {
     if (paramString == null) {}
     do
@@ -18,13 +18,13 @@ public final class l
         do
         {
           return paramString;
-        } while ((bsQbrO == 2) || (bsQbrZ == 1));
-        if (bsQbrO != 1) {
+        } while ((bgWbfP == 2) || (bgWbga == 1));
+        if (bgWbfP != 1) {
           break;
         }
       } while (!paramString.toString().contains("\n"));
       return paramString.toString().replace("\n", " ");
-    } while ((Build.VERSION.SDK_INT != 16) || (!paramString.toString().contains("\n")) || (ay.ad(Build.MANUFACTURER, "").toLowerCase().indexOf("meizu".toLowerCase()) >= 0));
+    } while ((Build.VERSION.SDK_INT != 16) || (!paramString.toString().contains("\n")) || (be.ab(Build.MANUFACTURER, "").toLowerCase().indexOf("meizu".toLowerCase()) >= 0));
     return paramString.toString().replace("\n", " ");
   }
 }

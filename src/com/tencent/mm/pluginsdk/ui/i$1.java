@@ -6,8 +6,8 @@ import android.content.DialogInterface.OnClickListener;
 import android.util.Base64;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.h;
 
 final class i$1
@@ -18,26 +18,26 @@ final class i$1
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     paramDialogInterface = val$context;
-    String str2 = cjl;
-    String str1 = bGb;
+    String str2 = ceC;
+    String str1 = bzm;
     if (paramDialogInterface == null)
     {
-      u.w("!44@mGXR/vVzLfNQboDSwDDOvfffvGyAww6NFolKGe+wF9E=", "reportViaWap: context is null");
+      v.w("Micromsg.NetworkErrAlert", "reportViaWap: context is null");
       return;
     }
     if (str2 == null) {
-      u.w("!44@mGXR/vVzLfNQboDSwDDOvfffvGyAww6NFolKGe+wF9E=", "reportViaWap: ip is null");
+      v.w("Micromsg.NetworkErrAlert", "reportViaWap: ip is null");
     }
     if (str1 == null) {
-      u.w("!44@mGXR/vVzLfNQboDSwDDOvfffvGyAww6NFolKGe+wF9E=", "reportViaWap: errMsg is null");
+      v.w("Micromsg.NetworkErrAlert", "reportViaWap: errMsg is null");
     }
-    String str3 = (String)ah.tD().rn().get(2, null);
+    String str3 = (String)ah.tE().ro().get(2, null);
     str3 = "http://w.mail.qq.com/cgi-bin/mmfeedback?t=mmfeedback&f=xhtml" + "&u=" + Base64.encodeToString(str3.getBytes(), 8);
-    str2 = str3 + "&i=" + Base64.encodeToString(ay.ad(str2, "").getBytes(), 8);
-    str1 = str2 + "&e=" + Base64.encodeToString(ay.ad(str1, "").getBytes(), 8);
+    str2 = str3 + "&i=" + Base64.encodeToString(be.ab(str2, "").getBytes(), 8);
+    str1 = str2 + "&e=" + Base64.encodeToString(be.ab(str1, "").getBytes(), 8);
     str1 = str1 + "&autologin=n";
-    u.d("!44@mGXR/vVzLfNQboDSwDDOvfffvGyAww6NFolKGe+wF9E=", "upload error to " + str1);
-    ay.C(paramDialogInterface, str1);
+    v.d("Micromsg.NetworkErrAlert", "upload error to " + str1);
+    be.D(paramDialogInterface, str1);
   }
 }
 

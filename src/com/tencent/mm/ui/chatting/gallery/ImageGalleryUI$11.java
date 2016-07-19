@@ -7,9 +7,9 @@ final class ImageGalleryUI$11
 {
   ImageGalleryUI$11(ImageGalleryUI paramImageGalleryUI) {}
   
-  public final void ahv()
+  public final void akd()
   {
-    ImageGalleryUI.a(lgM, true);
+    ImageGalleryUI.a(lGY, true);
   }
 }
 

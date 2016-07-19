@@ -1,8 +1,8 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SnsStrangerCommentDetailUI$7$1
   implements Runnable
@@ -11,13 +11,13 @@ final class SnsStrangerCommentDetailUI$7$1
   
   public final void run()
   {
-    u.v("!56@/B4Tb64lLpKq4kzQEmWfvWlP1B6VxlvUA5NJce3mTcriiJ7E+LoT7Q==", "comment notify");
-    SnsStrangerCommentDetailUI.d(hiR.hiQ).a(null, null);
-    if (SnsStrangerCommentDetailUI.e(hiR.hiQ))
+    v.v("MicroMsg.SnsStrangerCommentDetailUI", "comment notify");
+    SnsStrangerCommentDetailUI.d(hxG.hxF).a(null, null);
+    if (SnsStrangerCommentDetailUI.e(hxG.hxF))
     {
-      SnsStrangerCommentDetailUI.a(hiR.hiQ, false);
-      SnsStrangerCommentDetailUI localSnsStrangerCommentDetailUI = hiR.hiQ;
-      ad.ZP().postDelayed(new SnsStrangerCommentDetailUI.8(localSnsStrangerCommentDetailUI), 10L);
+      SnsStrangerCommentDetailUI.a(hxG.hxF, false);
+      SnsStrangerCommentDetailUI localSnsStrangerCommentDetailUI = hxG.hxF;
+      ad.acj().postDelayed(new SnsStrangerCommentDetailUI.8(localSnsStrangerCommentDetailUI), 10L);
     }
   }
 }

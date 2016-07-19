@@ -13,7 +13,7 @@ public class CursorWindow
   extends SQLiteClosable
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR;
+  public static final Parcelable.Creator<CursorWindow> CREATOR;
   private static final String STATS_TAG = "MicroMsg.kkdb.CursorWindowStats";
   private static int sCursorWindowSize;
   private static final SparseIntArray sWindowToPidMap;
@@ -144,52 +144,47 @@ public class CursorWindow
     for (;;)
     {
       int j;
-      int i;
+      int n;
       synchronized (sWindowToPidMap)
       {
         j = sWindowToPidMap.size();
-        if (j == 0) {
-          return "";
+        if (j != 0) {
+          break label274;
         }
-        i = 0;
-        int m;
-        if (i >= j)
-        {
-          m = localSparseIntArray.size();
-          i = 0;
-          j = 0;
-          if (i >= m)
-          {
-            if (localStringBuilder.length() <= 980) {
-              break label266;
-            }
-            ??? = localStringBuilder.substring(0, 980);
-            return "# Open Cursors=" + j + (String)???;
-          }
-        }
-        else
+        return "";
+        if (i < j)
         {
           m = sWindowToPidMap.valueAt(i);
           localSparseIntArray.put(m, localSparseIntArray.get(m) + 1);
           i += 1;
+          continue;
+        }
+        int m = localSparseIntArray.size();
+        i = 0;
+        j = 0;
+        if (i >= m) {
+          break label220;
+        }
+        localStringBuilder.append(" (# cursors opened by ");
+        n = localSparseIntArray.keyAt(i);
+        if (n == k)
+        {
+          localStringBuilder.append("this proc=");
+          n = localSparseIntArray.get(n);
+          localStringBuilder.append(n + ")");
+          j += n;
+          i += 1;
         }
       }
-      ((StringBuilder)localObject2).append(" (# cursors opened by ");
-      int n = localSparseIntArray.keyAt(i);
-      if (n == k) {
-        ((StringBuilder)localObject2).append("this proc=");
+      ((StringBuilder)localObject2).append("pid " + n + "=");
+      continue;
+      label220:
+      if (((StringBuilder)localObject2).length() > 980) {}
+      for (??? = ((StringBuilder)localObject2).substring(0, 980);; ??? = ((StringBuilder)localObject2).toString()) {
+        return "# Open Cursors=" + j + (String)???;
       }
-      for (;;)
-      {
-        n = localSparseIntArray.get(n);
-        ((StringBuilder)localObject2).append(n + ")");
-        j += n;
-        i += 1;
-        break;
-        ((StringBuilder)localObject2).append("pid " + n + "=");
-      }
-      label266:
-      ??? = ((StringBuilder)localObject2).toString();
+      label274:
+      int i = 0;
     }
   }
   

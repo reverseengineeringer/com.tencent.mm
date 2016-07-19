@@ -7,9 +7,18 @@
 
 
 # instance fields
-.field public kFt:Ljava/util/List;
+.field public lex:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Landroid/view/MenuItem;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public lW:Ljava/lang/CharSequence;
+.field public mm:Ljava/lang/CharSequence;
 
 
 # direct methods
@@ -25,7 +34,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/l;->kFt:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/l;->lex:Ljava/util/List;
 
     .line 25
     return-void
@@ -51,7 +60,7 @@
     invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/base/m;->setIcon(I)Landroid/view/MenuItem;
 
     .line 97
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/l;->kFt:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/l;->lex:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -74,7 +83,7 @@
     invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/m;->setTitle(I)Landroid/view/MenuItem;
 
     .line 59
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/l;->kFt:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/l;->lex:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -95,7 +104,7 @@
     invoke-virtual {v0, p4}, Lcom/tencent/mm/ui/base/m;->setTitle(I)Landroid/view/MenuItem;
 
     .line 43
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/l;->kFt:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/l;->lex:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -116,7 +125,7 @@
     invoke-virtual {v0, p4}, Lcom/tencent/mm/ui/base/m;->setTitle(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
 
     .line 51
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/l;->kFt:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/l;->lex:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -139,7 +148,7 @@
     invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/m;->setTitle(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
 
     .line 67
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/l;->kFt:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/l;->lex:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -212,7 +221,7 @@
     invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/m;->setTitle(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
 
     .line 89
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/l;->kFt:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/l;->lex:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -220,7 +229,7 @@
     return-object v0
 .end method
 
-.method public final bL(II)Landroid/view/MenuItem;
+.method public final bR(II)Landroid/view/MenuItem;
     .locals 2
 
     .prologue
@@ -235,7 +244,7 @@
     invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/m;->setTitle(I)Landroid/view/MenuItem;
 
     .line 82
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/l;->kFt:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/l;->lex:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -243,12 +252,12 @@
     return-object v0
 .end method
 
-.method public final bcJ()Z
+.method public final big()Z
     .locals 1
 
     .prologue
     .line 36
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/l;->kFt:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/l;->lex:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -274,7 +283,7 @@
     const/4 v3, 0x0
 
     .line 147
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/l;->kFt:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/l;->lex:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -298,7 +307,7 @@
     .line 148
     check-cast v1, Lcom/tencent/mm/ui/base/m;
 
-    iput-object v3, v1, Lcom/tencent/mm/ui/base/m;->kFw:Landroid/view/ContextMenu$ContextMenuInfo;
+    iput-object v3, v1, Lcom/tencent/mm/ui/base/m;->leA:Landroid/view/ContextMenu$ContextMenuInfo;
 
     .line 149
     check-cast v0, Lcom/tencent/mm/ui/base/m;
@@ -309,12 +318,12 @@
 
     .line 151
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/l;->kFt:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/l;->lex:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     .line 152
-    iput-object v3, p0, Lcom/tencent/mm/ui/base/l;->lW:Ljava/lang/CharSequence;
+    iput-object v3, p0, Lcom/tencent/mm/ui/base/l;->mm:Ljava/lang/CharSequence;
 
     .line 153
     return-void
@@ -341,7 +350,7 @@
 
     .prologue
     .line 175
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/l;->kFt:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/l;->lex:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -382,7 +391,7 @@
 
     .prologue
     .line 190
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/l;->kFt:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/l;->lex:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -497,7 +506,7 @@
     if-lez p1, :cond_0
 
     .line 219
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -527,7 +536,7 @@
 
     .line 229
     :cond_0
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/l;->lW:Ljava/lang/CharSequence;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/l;->mm:Ljava/lang/CharSequence;
 
     goto :goto_0
 .end method
@@ -553,7 +562,7 @@
 
     .prologue
     .line 185
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/l;->kFt:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/l;->lex:Ljava/util/List;
 
     if-nez v0, :cond_0
 
@@ -563,7 +572,7 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/l;->kFt:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/l;->lex:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -572,7 +581,7 @@
     goto :goto_0
 .end method
 
-.method public final u(III)Landroid/view/MenuItem;
+.method public final y(III)Landroid/view/MenuItem;
     .locals 2
 
     .prologue
@@ -590,7 +599,7 @@
     invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/base/m;->setIcon(I)Landroid/view/MenuItem;
 
     .line 75
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/l;->kFt:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/l;->lex:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 

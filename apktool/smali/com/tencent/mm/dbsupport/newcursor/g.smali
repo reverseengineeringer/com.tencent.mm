@@ -4,19 +4,19 @@
 
 
 # direct methods
-.method public static qI()V
+.method public static pm()V
     .locals 10
 
     .prologue
     const-wide/16 v0, 0x0
 
-    .line 20
+    .line 19
     :try_start_0
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
     move-result-object v2
 
-    .line 21
+    .line 20
     new-instance v6, Landroid/os/StatFs;
 
     invoke-virtual {v2}, Ljava/io/File;->getPath()Ljava/lang/String;
@@ -25,7 +25,7 @@
 
     invoke-direct {v6, v2}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
 
-    .line 22
+    .line 21
     invoke-virtual {v6}, Landroid/os/StatFs;->getAvailableBlocks()I
 
     move-result v2
@@ -42,7 +42,7 @@
 
     mul-long/2addr v2, v4
 
-    .line 23
+    .line 22
     :try_start_1
     invoke-virtual {v6}, Landroid/os/StatFs;->getBlockCount()I
 
@@ -54,16 +54,16 @@
 
     move-result v7
 
-    int-to-long v7, v7
+    int-to-long v8, v7
 
-    mul-long/2addr v4, v7
+    mul-long/2addr v4, v8
 
-    .line 24
+    .line 23
     invoke-virtual {v6}, Landroid/os/StatFs;->getFreeBlocks()I
 
     move-result v7
 
-    int-to-long v7, v7
+    int-to-long v8, v7
 
     invoke-virtual {v6}, Landroid/os/StatFs;->getBlockSize()I
     :try_end_1
@@ -73,9 +73,9 @@
 
     int-to-long v0, v0
 
-    mul-long/2addr v0, v7
+    mul-long/2addr v0, v8
 
-    .line 29
+    .line 28
     :goto_0
     const-string/jumbo v6, "MicroMsg.RomStat"
 
@@ -111,16 +111,16 @@
 
     invoke-static {v6, v7, v8}, Lcom/tencent/kingkong/support/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 31
+    .line 30
     return-void
 
-    .line 26
+    .line 25
     :catch_0
     move-exception v2
 
     move-wide v2, v0
 
-    .line 27
+    .line 26
     :goto_1
     const-string/jumbo v4, "MicroMsg.RomStat"
 
@@ -132,7 +132,7 @@
 
     goto :goto_0
 
-    .line 26
+    .line 25
     :catch_1
     move-exception v4
 

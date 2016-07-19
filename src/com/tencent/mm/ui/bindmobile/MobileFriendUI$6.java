@@ -4,7 +4,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.platformtools.m;
+import com.tencent.mm.platformtools.l;
 import com.tencent.mm.storage.h;
 
 final class MobileFriendUI$6
@@ -14,9 +14,9 @@ final class MobileFriendUI$6
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ah.tD().rn().set(12322, Boolean.valueOf(false));
-    m.d(false, true);
-    kPt.finish();
+    ah.tE().ro().set(12322, Boolean.valueOf(false));
+    l.d(false, true);
+    loJ.finish();
   }
 }
 

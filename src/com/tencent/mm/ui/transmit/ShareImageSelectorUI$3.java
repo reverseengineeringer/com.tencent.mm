@@ -10,7 +10,7 @@ final class ShareImageSelectorUI$3
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    ShareImageSelectorUI.b(lBC);
+    ShareImageSelectorUI.b(mcu);
     return false;
   }
 }

@@ -2,11 +2,11 @@ package com.qq.wx.voice.embed.recognizer;
 
 public final class b
 {
-  public e ajf = new e();
+  public e UV = new e();
   
   private static final class a
   {
-    public static b ajg = new b();
+    public static b UW = new b();
   }
 }
 

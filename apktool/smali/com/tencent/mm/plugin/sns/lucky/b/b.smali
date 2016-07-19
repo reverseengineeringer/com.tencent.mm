@@ -4,12 +4,12 @@
 
 
 # direct methods
-.method public static be(II)V
+.method public static bi(II)V
     .locals 7
 
     .prologue
     .line 181
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     int-to-long v0, p0
 
@@ -19,18 +19,18 @@
 
     const/4 v6, 0x1
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
     .line 182
     return-void
 .end method
 
-.method public static lp(I)V
+.method public static id(I)V
     .locals 7
 
     .prologue
     .line 177
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0x10e
 
@@ -40,7 +40,7 @@
 
     const/4 v6, 0x1
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
     .line 178
     return-void

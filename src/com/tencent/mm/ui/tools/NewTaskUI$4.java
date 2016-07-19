@@ -10,7 +10,7 @@ final class NewTaskUI$4
   
   public final void onDismiss(DialogInterface paramDialogInterface)
   {
-    NewTaskUI.c(lxl);
+    NewTaskUI.c(lXZ);
   }
 }
 

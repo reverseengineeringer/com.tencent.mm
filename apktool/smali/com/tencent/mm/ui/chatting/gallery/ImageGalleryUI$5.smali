@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic bMq:I
+.field final synthetic bFK:I
 
-.field final synthetic lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+.field final synthetic lGY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 1417
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$5;->lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    .line 1451
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$5;->lGY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
-    iput p2, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$5;->bMq:I
+    iput p2, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$5;->bFK:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,8 +44,8 @@
     .locals 2
 
     .prologue
-    .line 1421
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$5;->lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    .line 1455
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$5;->lGY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->e(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;)Lcom/tencent/mm/ui/chatting/gallery/b;
 
@@ -53,21 +53,21 @@
 
     if-nez v0, :cond_0
 
-    .line 1425
+    .line 1459
     :goto_0
     return-void
 
-    .line 1424
+    .line 1458
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$5;->lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$5;->lGY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->e(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;)Lcom/tencent/mm/ui/chatting/gallery/b;
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$5;->bMq:I
+    iget v1, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$5;->bFK:I
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/b;->let:Lcom/tencent/mm/ui/chatting/gallery/i;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/b;->lEF:Lcom/tencent/mm/ui/chatting/gallery/i;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/chatting/gallery/i;->pause(I)V
 

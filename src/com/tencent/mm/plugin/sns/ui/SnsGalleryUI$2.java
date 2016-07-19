@@ -10,7 +10,7 @@ final class SnsGalleryUI$2
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    hea.hbH.aAZ();
+    hsL.hqx.aDU();
     return true;
   }
 }

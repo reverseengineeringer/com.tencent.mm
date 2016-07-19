@@ -13,9 +13,18 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/p;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic lpt:Lcom/tencent/mm/ui/conversation/d;
+.field final synthetic lPJ:Lcom/tencent/mm/ui/conversation/d;
 
 
 # direct methods
@@ -24,27 +33,36 @@
 
     .prologue
     .line 169
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/d$1;->lpt:Lcom/tencent/mm/ui/conversation/d;
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/d$1;->lPJ:Lcom/tencent/mm/ui/conversation/d;
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/p;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/ui/conversation/d$1;->kum:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
+.method public final bridge synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 1
 
     .prologue
-    .line 176
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/d$1;->lpt:Lcom/tencent/mm/ui/conversation/d;
+    .line 169
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/d$1;->lPJ:Lcom/tencent/mm/ui/conversation/d;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/conversation/d;->a(Lcom/tencent/mm/ui/conversation/d;)Z
 
-    .line 183
     const/4 v0, 0x0
 
     return v0

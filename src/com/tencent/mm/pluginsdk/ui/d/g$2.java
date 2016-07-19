@@ -9,18 +9,18 @@ final class g$2
 {
   g$2(DialogInterface.OnDismissListener paramOnDismissListener, String paramString, Context paramContext) {}
   
-  public final void eu(int paramInt)
+  public final void fg(int paramInt)
   {
-    if (iPL != null) {
-      iPL.onDismiss(null);
+    if (jmS != null) {
+      jmS.onDismiss(null);
     }
-    String str = iPM.replace(" ", "").replace("#", "@");
+    String str = jmT.replace(" ", "").replace("#", "@");
     switch (paramInt)
     {
     default: 
       return;
     }
-    g.aQ(val$context, str);
+    g.aO(val$context, str);
   }
 }
 

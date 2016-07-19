@@ -3,7 +3,7 @@ package com.tencent.mm.ui.contact;
 import android.content.Intent;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class GroupCardSelectUI$3
   implements MenuItem.OnMenuItemClickListener
@@ -13,9 +13,9 @@ final class GroupCardSelectUI$3
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
     paramMenuItem = new Intent();
-    paramMenuItem.putExtra("Select_Conv_User", ay.b(GroupCardSelectUI.e(lkC), ","));
-    lkC.setResult(-1, paramMenuItem);
-    lkC.finish();
+    paramMenuItem.putExtra("Select_Conv_User", be.b(GroupCardSelectUI.e(lKN), ","));
+    lKN.setResult(-1, paramMenuItem);
+    lKN.finish();
     return true;
   }
 }

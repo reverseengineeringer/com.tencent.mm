@@ -8,12 +8,30 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Lcom/tencent/mm/plugin/report/service/GroupIDKeyDataInfo;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field fUg:Ljava/util/ArrayList;
+.field gdv:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public fUh:Z
+.field public gdw:Z
 
 
 # direct methods
@@ -45,10 +63,10 @@
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v1, p0, Lcom/tencent/mm/plugin/report/service/GroupIDKeyDataInfo;->fUg:Ljava/util/ArrayList;
+    iput-object v1, p0, Lcom/tencent/mm/plugin/report/service/GroupIDKeyDataInfo;->gdv:Ljava/util/ArrayList;
 
     .line 127
-    iget-object v1, p0, Lcom/tencent/mm/plugin/report/service/GroupIDKeyDataInfo;->fUg:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/report/service/GroupIDKeyDataInfo;->gdv:Ljava/util/ArrayList;
 
     sget-object v2, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -62,7 +80,7 @@
     if-ne v1, v0, :cond_0
 
     :goto_0
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/report/service/GroupIDKeyDataInfo;->fUh:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/report/service/GroupIDKeyDataInfo;->gdw:Z
 
     .line 129
     return-void
@@ -76,6 +94,15 @@
 
 .method constructor <init>(Ljava/util/ArrayList;Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;",
+            ">;Z)V"
+        }
+    .end annotation
 
     .prologue
     .line 110
@@ -86,13 +113,13 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/GroupIDKeyDataInfo;->fUg:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/report/service/GroupIDKeyDataInfo;->gdv:Ljava/util/ArrayList;
 
     .line 111
-    iput-object p1, p0, Lcom/tencent/mm/plugin/report/service/GroupIDKeyDataInfo;->fUg:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/report/service/GroupIDKeyDataInfo;->gdv:Ljava/util/ArrayList;
 
     .line 112
-    iput-boolean p2, p0, Lcom/tencent/mm/plugin/report/service/GroupIDKeyDataInfo;->fUh:Z
+    iput-boolean p2, p0, Lcom/tencent/mm/plugin/report/service/GroupIDKeyDataInfo;->gdw:Z
 
     .line 113
     return-void
@@ -115,12 +142,12 @@
 
     .prologue
     .line 122
-    iget-object v0, p0, Lcom/tencent/mm/plugin/report/service/GroupIDKeyDataInfo;->fUg:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/report/service/GroupIDKeyDataInfo;->gdv:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
     .line 123
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/report/service/GroupIDKeyDataInfo;->fUh:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/report/service/GroupIDKeyDataInfo;->gdw:Z
 
     if-eqz v0, :cond_0
 

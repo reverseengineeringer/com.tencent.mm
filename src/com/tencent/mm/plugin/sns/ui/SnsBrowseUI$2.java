@@ -3,8 +3,8 @@ package com.tencent.mm.plugin.sns.ui;
 import android.graphics.BitmapFactory.Options;
 import android.view.ViewTreeObserver;
 import android.view.ViewTreeObserver.OnPreDrawListener;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.g;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.g;
 import com.tencent.mm.sdk.platformtools.d;
 import com.tencent.mm.ui.tools.h;
 
@@ -15,23 +15,23 @@ final class SnsBrowseUI$2
   
   public final boolean onPreDraw()
   {
-    hbY.hbK.getViewTreeObserver().removeOnPreDrawListener(this);
-    SnsBrowseUI.a(hbY, hbY.hbK.getWidth());
-    SnsBrowseUI.b(hbY, hbY.hbK.getHeight());
-    ad.azg();
-    Object localObject = g.D(hbY.hbK.getCntMedia());
+    hqK.hqA.getViewTreeObserver().removeOnPreDrawListener(this);
+    SnsBrowseUI.a(hqK, hqK.hqA.getWidth());
+    SnsBrowseUI.b(hqK, hqK.hqA.getHeight());
+    ad.aBG();
+    Object localObject = g.D(hqK.hqA.aDT());
     if (localObject != null)
     {
-      localObject = d.CB((String)localObject);
-      SnsBrowseUI localSnsBrowseUI = hbY;
-      float f = SnsBrowseUI.b(hbY) / outWidth;
+      localObject = d.EO((String)localObject);
+      SnsBrowseUI localSnsBrowseUI = hqK;
+      float f = SnsBrowseUI.b(hqK) / outWidth;
       SnsBrowseUI.b(localSnsBrowseUI, (int)(outHeight * f));
-      if (SnsBrowseUI.c(hbY) > hbY.hbK.getHeight()) {
-        SnsBrowseUI.b(hbY, hbY.hbK.getHeight());
+      if (SnsBrowseUI.c(hqK) > hqK.hqA.getHeight()) {
+        SnsBrowseUI.b(hqK, hqK.hqA.getHeight());
       }
     }
-    hbY.hbV.bU(SnsBrowseUI.b(hbY), SnsBrowseUI.c(hbY));
-    hbY.hbV.a(hbY.hbK, SnsBrowseUI.d(hbY), null);
+    hqK.hqH.cb(SnsBrowseUI.b(hqK), SnsBrowseUI.c(hqK));
+    hqK.hqH.a(hqK.hqA, SnsBrowseUI.d(hqK), null);
     return true;
   }
 }

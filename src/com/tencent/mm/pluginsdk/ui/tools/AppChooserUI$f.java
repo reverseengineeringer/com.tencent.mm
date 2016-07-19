@@ -1,7 +1,7 @@
 package com.tencent.mm.pluginsdk.ui.tools;
 
 public final class AppChooserUI$f
-  extends Enum
+  extends Enum<f>
 {}
 
 /* Location:

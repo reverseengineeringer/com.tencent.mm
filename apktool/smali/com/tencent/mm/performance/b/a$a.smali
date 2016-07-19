@@ -15,5 +15,11 @@
 
 
 # virtual methods
-.method public abstract b(Landroid/os/Looper;JIZLjava/lang/String;)V
+.method public abstract a(JJJ)V
+.end method
+
+.method public abstract b(JJJ)V
+.end method
+
+.method public abstract c(JJJ)V
 .end method

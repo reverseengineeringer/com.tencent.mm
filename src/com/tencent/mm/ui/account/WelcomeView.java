@@ -22,7 +22,7 @@ public abstract class WelcomeView
     super(paramContext, paramAttributeSet);
   }
   
-  public final void ao(View paramView)
+  public final void as(View paramView)
   {
     AlphaAnimation localAlphaAnimation = new AlphaAnimation(0.0F, 1.0F);
     localAlphaAnimation.setInterpolator(new LinearInterpolator());
@@ -38,7 +38,7 @@ public abstract class WelcomeView
     paramView.startAnimation(localAlphaAnimation);
   }
   
-  public abstract void bca();
+  public abstract void bhm();
   
   public abstract void onResume();
 }

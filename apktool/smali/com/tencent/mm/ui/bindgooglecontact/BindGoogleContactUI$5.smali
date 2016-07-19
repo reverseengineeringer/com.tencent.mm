@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kMQ:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
+.field final synthetic lmf:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 375
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$5;->kMQ:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
+    .line 381
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$5;->lmf:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,16 +37,33 @@
 
 # virtual methods
 .method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 378
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$5;->kMQ:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
+    .line 384
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
-    sget v1, Lcom/tencent/mm/aa/a;->bPh:I
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->a(Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;I)V
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
-    .line 379
+    move-result-object v0
+
+    const v1, 0x33009
+
+    const/4 v2, 0x1
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
+
+    .line 385
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$5;->lmf:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->finish()V
+
+    .line 386
     return-void
 .end method

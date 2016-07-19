@@ -13,11 +13,11 @@ import android.widget.LinearLayout;
 public class LoadingMoreView
   extends LinearLayout
 {
-  private ImageView aAF;
-  protected LinearLayout cSi;
-  protected LinearLayout cSj;
+  private ImageView amO;
+  protected LinearLayout cPS;
+  protected LinearLayout cPT;
   private Context context;
-  protected LinearLayout gZk;
+  protected LinearLayout hmw;
   
   public LoadingMoreView(Context paramContext)
   {
@@ -35,32 +35,32 @@ public class LoadingMoreView
   
   private void init()
   {
-    Object localObject = LayoutInflater.from(context).inflate(2131362869, this, true);
-    aAF = ((ImageView)findViewById(2131167451));
-    cSi = ((LinearLayout)((View)localObject).findViewById(2131165957));
-    cSj = ((LinearLayout)((View)localObject).findViewById(2131167452));
-    gZk = ((LinearLayout)((View)localObject).findViewById(2131168642));
-    cSi.setVisibility(0);
-    cSj.setVisibility(8);
-    gZk.setVisibility(8);
+    Object localObject = LayoutInflater.from(context).inflate(2130904464, this, true);
+    amO = ((ImageView)findViewById(2131755824));
+    cPS = ((LinearLayout)((View)localObject).findViewById(2131755823));
+    cPT = ((LinearLayout)((View)localObject).findViewById(2131755825));
+    hmw = ((LinearLayout)((View)localObject).findViewById(2131759215));
+    cPS.setVisibility(0);
+    cPT.setVisibility(8);
+    hmw.setVisibility(8);
     localObject = new RotateAnimation(0.0F, 359.0F, 1, 0.5F, 1, 0.5F);
     ((Animation)localObject).setDuration(1000L);
     ((Animation)localObject).setRepeatCount(-1);
     ((Animation)localObject).setInterpolator(new LinearInterpolator());
-    aAF.startAnimation((Animation)localObject);
+    amO.startAnimation((Animation)localObject);
   }
   
-  public final void eW(boolean paramBoolean)
+  public final void ff(boolean paramBoolean)
   {
-    cSi.setVisibility(8);
+    cPS.setVisibility(8);
     if (paramBoolean)
     {
-      gZk.setVisibility(0);
-      cSj.setVisibility(8);
+      hmw.setVisibility(0);
+      cPT.setVisibility(8);
       return;
     }
-    cSj.setVisibility(0);
-    gZk.setVisibility(8);
+    cPT.setVisibility(0);
+    hmw.setVisibility(8);
   }
 }
 

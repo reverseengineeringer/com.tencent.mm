@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/pluginsdk/ui/applet/i;->e(Ljava/util/LinkedList;Ljava/util/LinkedList;)V
+    value = Lcom/tencent/mm/pluginsdk/ui/applet/i;->d(Ljava/util/LinkedList;Ljava/util/LinkedList;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iJp:Lcom/tencent/mm/pluginsdk/ui/applet/i;
+.field final synthetic jgl:Lcom/tencent/mm/pluginsdk/ui/applet/i;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 245
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/i$1;->iJp:Lcom/tencent/mm/pluginsdk/ui/applet/i;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/i$1;->jgl:Lcom/tencent/mm/pluginsdk/ui/applet/i;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -55,16 +55,16 @@
 
     .line 266
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/i$1;->iJp:Lcom/tencent/mm/pluginsdk/ui/applet/i;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/i$1;->jgl:Lcom/tencent/mm/pluginsdk/ui/applet/i;
 
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/i;->fKL:Landroid/widget/TextView;
+    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/i;->fTO:Landroid/widget/TextView;
 
     if-eqz v1, :cond_1
 
     .line 267
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/i$1;->iJp:Lcom/tencent/mm/pluginsdk/ui/applet/i;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/i$1;->jgl:Lcom/tencent/mm/pluginsdk/ui/applet/i;
 
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/i;->fKL:Landroid/widget/TextView;
+    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/i;->fTO:Landroid/widget/TextView;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 

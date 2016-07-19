@@ -1,20 +1,32 @@
 package com.tencent.mm.app;
 
-import com.tencent.mm.model.ah;
-import com.tencent.mm.plugin.report.b.d;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.u;
+import android.content.Context;
+import com.tencent.mm.i.a.a;
+import java.util.HashMap;
+import java.util.Map;
 
 final class WorkerProfile$21
-  implements Runnable
+  implements a.a
 {
-  WorkerProfile$21(WorkerProfile paramWorkerProfile, int paramInt, byte[] paramArrayOfByte) {}
+  final Map<String, Integer> Zx = new HashMap();
+  final Map<String, Integer> map = new HashMap();
   
-  public final void run()
+  WorkerProfile$21(Context paramContext) {}
+  
+  public final String bd(String paramString)
   {
-    u.e("!32@/B4Tb64lLpKJUHFjVVLDtjoRkfkHVaSq", "channel:" + amJ);
-    d locald = new d(amK, amJ);
-    ah.tE().d(locald);
+    if (map.containsKey(paramString)) {
+      return val$context.getString(((Integer)map.get(paramString)).intValue());
+    }
+    return null;
+  }
+  
+  public final String be(String paramString)
+  {
+    if (Zx.containsKey(paramString)) {
+      return val$context.getString(((Integer)Zx.get(paramString)).intValue());
+    }
+    return null;
   }
 }
 

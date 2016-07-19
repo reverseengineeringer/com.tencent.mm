@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gFE:Lcom/tencent/mm/plugin/sns/abtest/b;
+.field final synthetic gMg:Lcom/tencent/mm/plugin/sns/abtest/b;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 145
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/abtest/b$5;->gFE:Lcom/tencent/mm/plugin/sns/abtest/b;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/abtest/b$5;->gMg:Lcom/tencent/mm/plugin/sns/abtest/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,14 +45,14 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/abtest/b$5$1;-><init>(Lcom/tencent/mm/plugin/sns/abtest/b$5;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
     .line 160
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b$5;->gFE:Lcom/tencent/mm/plugin/sns/abtest/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b$5;->gMg:Lcom/tencent/mm/plugin/sns/abtest/b;
 
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFC:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/abtest/b;->gMe:Z
 
     .line 161
     return-void
@@ -71,11 +71,11 @@
 
     .prologue
     .line 148
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b$5;->gFE:Lcom/tencent/mm/plugin/sns/abtest/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b$5;->gMg:Lcom/tencent/mm/plugin/sns/abtest/b;
 
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/abtest/b;->gFC:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/abtest/b;->gMe:Z
 
     .line 149
     return-void

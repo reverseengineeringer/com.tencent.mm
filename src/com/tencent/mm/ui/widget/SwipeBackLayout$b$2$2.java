@@ -1,7 +1,7 @@
 package com.tencent.mm.ui.widget;
 
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.tools.k.a;
 
 final class SwipeBackLayout$b$2$2
@@ -9,25 +9,25 @@ final class SwipeBackLayout$b$2$2
 {
   SwipeBackLayout$b$2$2(SwipeBackLayout.b.2 param2) {}
   
-  public final void biD()
+  public final void boz()
   {
     onAnimationEnd();
   }
   
   public final void onAnimationEnd()
   {
-    SwipeBackLayout.a(lGS.lGQ.lGP, true);
-    ab.j(new Runnable()
+    SwipeBackLayout.a(mig.mie.mid, true);
+    ad.k(new Runnable()
     {
       public final void run()
       {
-        if (SwipeBackLayout.g(lGS.lGQ.lGP) != null)
+        if (SwipeBackLayout.g(mig.mie.mid) != null)
         {
-          SwipeBackLayout.g(lGS.lGQ.lGP).aNg();
-          u.d("!44@/B4Tb64lLpK0aWizdgE60RZj+63liLyIPH/0AOVXUq4=", "ashutest:: on onSwipeBack");
+          SwipeBackLayout.g(mig.mie.mid).aEs();
+          v.d("MicroMsg.SwipeBackLayout", "ashutest:: on onSwipeBack");
         }
-        f.I(1.0F);
-        SwipeBackLayout.b(lGS.lGQ.lGP, false);
+        f.H(1.0F);
+        SwipeBackLayout.b(mig.mie.mid, false);
       }
     });
   }

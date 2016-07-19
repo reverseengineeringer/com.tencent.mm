@@ -13,7 +13,7 @@ final class LoginIndepPass$10
   {
     if ((66 == paramInt) && (paramKeyEvent.getAction() == 0))
     {
-      LoginIndepPass.a(ktE);
+      LoginIndepPass.a(kSL);
       return true;
     }
     return false;

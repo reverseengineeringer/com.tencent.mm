@@ -2,21 +2,21 @@ package com.tencent.mm.plugin.sns.a.a;
 
 final class f$a
 {
-  public String aIr;
-  public String cbR;
-  public long cbS;
-  public int eLV;
+  public String auL;
+  public String bVG;
+  public long bVH;
+  public int cTv;
   public int position;
   public long time;
   
   public f$a(long paramLong1, String paramString1, int paramInt1, String paramString2, int paramInt2, long paramLong2)
   {
     time = paramLong1;
-    aIr = paramString1;
+    auL = paramString1;
     position = paramInt1;
-    cbR = paramString2;
-    cbS = paramLong2;
-    eLV = paramInt2;
+    bVG = paramString2;
+    bVH = paramLong2;
+    cTv = paramInt2;
   }
 }
 

@@ -4,8 +4,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import com.tencent.mm.compatible.d.r;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class MMReceivers$ExdeviceProcessReceiver
   extends BroadcastReceiver
@@ -13,9 +13,9 @@ public class MMReceivers$ExdeviceProcessReceiver
   public void onReceive(Context paramContext, Intent paramIntent)
   {
     long l = System.currentTimeMillis();
-    u.i("!56@/B4Tb64lLpLiQ7OrT4MAaceQRK/W0iihqAiu47he09l2tvBb7e03Xw==", "[hakon][Step] onReceive, save rebootTime = %s", new Object[] { Long.valueOf(l) });
-    y.aUO();
-    r.j(205, l);
+    v.i("MicroMsg.ExdeviceProcessReceiver", "[hakon][Step] onReceive, save rebootTime = %s", new Object[] { Long.valueOf(l) });
+    aa.aZS();
+    r.h(205, l);
   }
 }
 

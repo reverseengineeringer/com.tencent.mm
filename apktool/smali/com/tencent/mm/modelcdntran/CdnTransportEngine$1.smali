@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/af$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ah$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bKv:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
+.field final synthetic bDP:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 68
-    iput-object p1, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$1;->bKv:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
+    .line 73
+    iput-object p1, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$1;->bDP:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final lj()Z
+.method public final jK()Z
     .locals 6
 
     .prologue
@@ -44,8 +44,8 @@
 
     const/4 v0, 0x0
 
-    .line 72
-    iget-object v2, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$1;->bKv:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
+    .line 77
+    iget-object v2, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$1;->bDP:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
 
     invoke-static {v2}, Lcom/tencent/mm/modelcdntran/CdnTransportEngine;->a(Lcom/tencent/mm/modelcdntran/CdnTransportEngine;)I
 
@@ -53,7 +53,7 @@
 
     if-nez v2, :cond_0
 
-    iget-object v2, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$1;->bKv:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
+    iget-object v2, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$1;->bDP:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
 
     invoke-static {v2}, Lcom/tencent/mm/modelcdntran/CdnTransportEngine;->b(Lcom/tencent/mm/modelcdntran/CdnTransportEngine;)I
 
@@ -61,13 +61,13 @@
 
     if-nez v2, :cond_0
 
-    .line 79
+    .line 84
     :goto_0
     return v0
 
-    .line 75
+    .line 80
     :cond_0
-    const-string/jumbo v2, "!44@/B4Tb64lLpIOAjTgD1JTqYyjqbRxHUgGUCewsAH7DnA="
+    const-string/jumbo v2, "MicroMsg.CdnTransportEngine"
 
     const-string/jumbo v3, "CdnDataFlowStat id:%s send:%d recv:%d"
 
@@ -75,7 +75,7 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    iget-object v5, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$1;->bKv:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
+    iget-object v5, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$1;->bDP:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
 
     invoke-static {v5}, Lcom/tencent/mm/modelcdntran/CdnTransportEngine;->c(Lcom/tencent/mm/modelcdntran/CdnTransportEngine;)Ljava/lang/String;
 
@@ -83,7 +83,7 @@
 
     aput-object v5, v4, v0
 
-    iget-object v0, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$1;->bKv:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
+    iget-object v0, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$1;->bDP:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
 
     invoke-static {v0}, Lcom/tencent/mm/modelcdntran/CdnTransportEngine;->a(Lcom/tencent/mm/modelcdntran/CdnTransportEngine;)I
 
@@ -97,7 +97,7 @@
 
     const/4 v0, 0x2
 
-    iget-object v5, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$1;->bKv:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
+    iget-object v5, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$1;->bDP:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
 
     invoke-static {v5}, Lcom/tencent/mm/modelcdntran/CdnTransportEngine;->b(Lcom/tencent/mm/modelcdntran/CdnTransportEngine;)I
 
@@ -109,37 +109,37 @@
 
     aput-object v5, v4, v0
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 76
-    sget-object v0, Lcom/tencent/mm/model/z$a;->bAt:Lcom/tencent/mm/model/z$e;
+    .line 81
+    sget-object v0, Lcom/tencent/mm/model/z$a;->btw:Lcom/tencent/mm/model/z$f;
 
-    iget-object v2, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$1;->bKv:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
+    iget-object v2, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$1;->bDP:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
 
     invoke-static {v2}, Lcom/tencent/mm/modelcdntran/CdnTransportEngine;->b(Lcom/tencent/mm/modelcdntran/CdnTransportEngine;)I
 
     move-result v2
 
-    iget-object v3, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$1;->bKv:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
+    iget-object v3, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$1;->bDP:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
 
     invoke-static {v3}, Lcom/tencent/mm/modelcdntran/CdnTransportEngine;->a(Lcom/tencent/mm/modelcdntran/CdnTransportEngine;)I
 
     move-result v3
 
-    invoke-interface {v0, v2, v3}, Lcom/tencent/mm/model/z$e;->K(II)V
+    invoke-interface {v0, v2, v3}, Lcom/tencent/mm/model/z$f;->M(II)V
 
-    .line 77
-    iget-object v0, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$1;->bKv:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
+    .line 82
+    iget-object v0, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$1;->bDP:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
 
     invoke-static {v0}, Lcom/tencent/mm/modelcdntran/CdnTransportEngine;->d(Lcom/tencent/mm/modelcdntran/CdnTransportEngine;)I
 
-    .line 78
-    iget-object v0, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$1;->bKv:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
+    .line 83
+    iget-object v0, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$1;->bDP:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
 
     invoke-static {v0}, Lcom/tencent/mm/modelcdntran/CdnTransportEngine;->e(Lcom/tencent/mm/modelcdntran/CdnTransportEngine;)I
 
     move v0, v1
 
-    .line 79
+    .line 84
     goto :goto_0
 .end method

@@ -1,39 +1,33 @@
 package com.tencent.mm.app.plugin.a;
 
 import com.tencent.mm.compatible.d.r.a;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.g;
 import com.tencent.mm.storage.j;
 
 public final class b
   implements r.a
 {
-  private g ans = new g(j.bxa + "stepcounter.cfg");
+  private g aag = new g(j.bpc + "stepcounter.cfg");
   
   public b()
   {
-    u.i("!56@/B4Tb64lLpIRP68/fkv68wdny70logrGavHhEc8vXRtXDiMB7ipI9A==", "new DefaultCfgAccessibleImpl.");
+    v.i("MicroMsg.DefaultCfgAccessibleImpl", "new DefaultCfgAccessibleImpl.");
   }
   
   public final void A(int paramInt1, int paramInt2)
   {
-    u.d("!56@/B4Tb64lLpIRP68/fkv68wdny70logrGavHhEc8vXRtXDiMB7ipI9A==", "setInt(%s, %s), process : %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), y.aQC() });
-    ans.set(paramInt1, Integer.valueOf(paramInt2));
-  }
-  
-  public final void g(int paramInt, String paramString)
-  {
-    u.d("!56@/B4Tb64lLpIRP68/fkv68wdny70logrGavHhEc8vXRtXDiMB7ipI9A==", "setString(%s, %s), process : %s", new Object[] { Integer.valueOf(paramInt), paramString, y.aQC() });
-    ans.set(paramInt, paramString);
+    v.d("MicroMsg.DefaultCfgAccessibleImpl", "setInt(%s, %s), process : %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), aa.aVm() });
+    aag.set(paramInt1, Integer.valueOf(paramInt2));
   }
   
   public final int getInt(int paramInt1, int paramInt2)
   {
-    u.d("!56@/B4Tb64lLpIRP68/fkv68wdny70logrGavHhEc8vXRtXDiMB7ipI9A==", "getInt(%s, %s), process : %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), y.aQC() });
+    v.d("MicroMsg.DefaultCfgAccessibleImpl", "getInt(%s, %s), process : %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), aa.aVm() });
     try
     {
-      paramInt1 = ans.getInt(paramInt1, paramInt2);
+      paramInt1 = aag.getInt(paramInt1, paramInt2);
       return paramInt1;
     }
     catch (Exception localException) {}
@@ -42,10 +36,10 @@ public final class b
   
   public final long getLong(int paramInt, long paramLong)
   {
-    u.d("!56@/B4Tb64lLpIRP68/fkv68wdny70logrGavHhEc8vXRtXDiMB7ipI9A==", "getLong(%s, %s), process : %s", new Object[] { Integer.valueOf(paramInt), Long.valueOf(paramLong), y.aQC() });
+    v.d("MicroMsg.DefaultCfgAccessibleImpl", "getLong(%s, %s), process : %s", new Object[] { Integer.valueOf(paramInt), Long.valueOf(paramLong), aa.aVm() });
     try
     {
-      long l = ans.getLong(paramInt, paramLong);
+      long l = aag.getLong(paramInt, paramLong);
       return l;
     }
     catch (Exception localException) {}
@@ -54,20 +48,26 @@ public final class b
   
   public final String getString(int paramInt, String paramString)
   {
-    u.d("!56@/B4Tb64lLpIRP68/fkv68wdny70logrGavHhEc8vXRtXDiMB7ipI9A==", "getString(%s, %s), process : %s", new Object[] { Integer.valueOf(paramInt), paramString, y.aQC() });
+    v.d("MicroMsg.DefaultCfgAccessibleImpl", "getString(%s, %s), process : %s", new Object[] { Integer.valueOf(paramInt), paramString, aa.aVm() });
     try
     {
-      String str = (String)ans.get(paramInt, paramString);
+      String str = (String)aag.get(paramInt, paramString);
       return str;
     }
     catch (Exception localException) {}
     return paramString;
   }
   
-  public final void j(int paramInt, long paramLong)
+  public final void h(int paramInt, long paramLong)
   {
-    u.d("!56@/B4Tb64lLpIRP68/fkv68wdny70logrGavHhEc8vXRtXDiMB7ipI9A==", "setLong(%s, %s), process : %s", new Object[] { Integer.valueOf(paramInt), Long.valueOf(paramLong), y.aQC() });
-    ans.setLong(paramInt, paramLong);
+    v.d("MicroMsg.DefaultCfgAccessibleImpl", "setLong(%s, %s), process : %s", new Object[] { Integer.valueOf(paramInt), Long.valueOf(paramLong), aa.aVm() });
+    aag.setLong(paramInt, paramLong);
+  }
+  
+  public final void h(int paramInt, String paramString)
+  {
+    v.d("MicroMsg.DefaultCfgAccessibleImpl", "setString(%s, %s), process : %s", new Object[] { Integer.valueOf(paramInt), paramString, aa.aVm() });
+    aag.set(paramInt, paramString);
   }
 }
 

@@ -18,54 +18,54 @@ import com.tencent.mm.ui.p;
 public final class n
   extends s
 {
-  private LayoutInflater hI;
-  private boolean hbI = true;
-  public n.c hle;
-  public n.d hlf;
-  private l hlg;
-  public com.tencent.mm.ui.base.n.a lwM;
-  public n.b lwN;
-  private a lwR;
+  public n.c hoS;
+  public n.d hoT;
+  private l hoU;
+  private boolean hqy = true;
+  private LayoutInflater ib;
+  public n.b lXA;
+  private a lXE;
+  public com.tencent.mm.ui.base.n.a lXz;
   
   public n(Context paramContext)
   {
     super(paramContext);
-    hI = p.ee(paramContext);
-    hlg = new l();
+    ib = p.ef(paramContext);
+    hoU = new l();
   }
   
-  protected final BaseAdapter Li()
+  protected final BaseAdapter Mc()
   {
-    if (lwR == null) {
-      lwR = new a((byte)0);
+    if (lXE == null) {
+      lXE = new a((byte)0);
     }
-    return lwR;
+    return lXE;
   }
   
   public final boolean bH()
   {
-    if (hle != null) {
-      hle.a(hlg);
+    if (hoS != null) {
+      hoS.a(hoU);
     }
-    if ((hlg.lW != null) && (hlg.lW.length() > 0)) {}
+    if ((hoU.mm != null) && (hoU.mm.length() > 0)) {}
     for (boolean bool = true;; bool = false)
     {
-      hbI = bool;
+      hqy = bool;
       return super.bH();
     }
   }
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    if ((hbI) && (paramInt == 0)) {
+    if ((hqy) && (paramInt == 0)) {
       return;
     }
     int i = paramInt;
-    if (hbI) {
+    if (hqy) {
       i = paramInt - 1;
     }
-    if (hlf != null) {
-      hlf.d(hlg.getItem(i), i);
+    if (hoT != null) {
+      hoT.d(hoU.getItem(i), i);
     }
     dismiss();
   }
@@ -114,16 +114,16 @@ public final class n
       {
         if (paramView == null)
         {
-          localObject = n.c(n.this).inflate(2131363182, paramViewGroup, false);
+          localObject = n.c(n.this).inflate(2130904064, paramViewGroup, false);
           paramView = new a((byte)0);
-          cVH = ((TextView)((View)localObject).findViewById(2131165460));
-          fAr = ((ImageView)((View)localObject).findViewById(2131166684));
+          cTU = ((TextView)((View)localObject).findViewById(2131755172));
+          fJv = ((ImageView)((View)localObject).findViewById(2131755171));
           ((View)localObject).setTag(paramView);
           paramViewGroup = paramView;
         }
         for (;;)
         {
-          cVH.setText(n.f(n.this));
+          cTU.setText(n.f(n.this));
           return (View)localObject;
           paramViewGroup = (a)paramView.getTag();
           localObject = paramView;
@@ -135,45 +135,45 @@ public final class n
       }
       if (paramView == null)
       {
-        paramView = n.c(n.this).inflate(2131363271, paramViewGroup, false);
+        paramView = n.c(n.this).inflate(2130904063, paramViewGroup, false);
         paramViewGroup = new a((byte)0);
-        cVH = ((TextView)paramView.findViewById(2131165460));
-        fAr = ((ImageView)paramView.findViewById(2131166684));
-        iHc = paramView.findViewById(2131166057);
+        cTU = ((TextView)paramView.findViewById(2131755172));
+        fJv = ((ImageView)paramView.findViewById(2131755171));
+        jdX = paramView.findViewById(2131756548);
         paramView.setTag(paramViewGroup);
         localObject = n.b(n.this).getItem(i);
-        cVH.setText(((MenuItem)localObject).getTitle());
+        cTU.setText(((MenuItem)localObject).getTitle());
         if (((MenuItem)localObject).getIcon() == null) {
           break label326;
         }
-        fAr.setVisibility(0);
-        fAr.setImageDrawable(((MenuItem)localObject).getIcon());
+        fJv.setVisibility(0);
+        fJv.setImageDrawable(((MenuItem)localObject).getIcon());
       }
       for (;;)
       {
         if (n.e(n.this) != null) {
-          n.e(n.this).a(cVH, (MenuItem)localObject);
+          n.e(n.this).a(cTU, (MenuItem)localObject);
         }
         if (i != n.b(n.this).size() - 1) {
           break label377;
         }
-        iHc.setBackgroundResource(2130970274);
+        jdX.setBackgroundResource(2130839419);
         return paramView;
         paramViewGroup = (a)paramView.getTag();
         break;
         label326:
         if (n.d(n.this) != null)
         {
-          fAr.setVisibility(0);
-          n.d(n.this).a(fAr, (MenuItem)localObject);
+          fJv.setVisibility(0);
+          n.d(n.this).a(fJv, (MenuItem)localObject);
         }
         else
         {
-          fAr.setVisibility(8);
+          fJv.setVisibility(8);
         }
       }
       label377:
-      iHc.setBackgroundResource(2130970248);
+      jdX.setBackgroundResource(2130839418);
       return paramView;
     }
     
@@ -187,9 +187,9 @@ public final class n
     
     private final class a
     {
-      TextView cVH;
-      ImageView fAr;
-      View iHc;
+      TextView cTU;
+      ImageView fJv;
+      View jdX;
       
       private a() {}
     }

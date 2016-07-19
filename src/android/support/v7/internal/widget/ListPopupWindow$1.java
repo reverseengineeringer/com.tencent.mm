@@ -9,9 +9,9 @@ final class ListPopupWindow$1
   
   public final void run()
   {
-    View localView = qi.pY;
+    View localView = qw.qm;
     if ((localView != null) && (localView.getWindowToken() != null)) {
-      qi.show();
+      qw.show();
     }
   }
 }

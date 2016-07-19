@@ -5,82 +5,82 @@ import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.Message;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class c
   implements a
 {
-  private MediaRecorder gzT;
-  private int gzU;
-  a.a gzV;
-  private aa gzW = new aa(tvjVF.getLooper())
+  private MediaRecorder gGv;
+  private int gGw;
+  a.a gGx;
+  private ac gGy = new ac(twkvy.getLooper())
   {
     public final void handleMessage(Message paramAnonymousMessage)
     {
-      if (gzV != null)
+      if (gGx != null)
       {
-        gzV.awm();
-        gzV = null;
+        gGx.ayK();
+        gGx = null;
       }
     }
   };
   
-  public final int R(int paramInt, String paramString)
+  public final int Z(int paramInt, String paramString)
   {
-    u.i("!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHGUBS64GKWMWw=", "sight aac encoder init, bufID[%d] tempPath[%s], sampleRate[%d]", new Object[] { Integer.valueOf(paramInt), paramString, Integer.valueOf(com.tencent.mm.plugin.sight.base.a.gwR) });
-    gzU = paramInt;
-    gzT = new MediaRecorder();
+    v.i("MicroMsg.SightAACEncoder", "sight aac encoder init, bufID[%d] tempPath[%s], sampleRate[%d]", new Object[] { Integer.valueOf(paramInt), paramString, Integer.valueOf(com.tencent.mm.plugin.sight.base.a.axP()) });
+    gGw = paramInt;
+    gGv = new MediaRecorder();
     try
     {
-      gzT.setAudioSource(5);
-      gzT.setOutputFormat(2);
-      gzT.setAudioEncoder(3);
-      gzT.setAudioChannels(1);
-      gzT.setAudioEncodingBitRate(com.tencent.mm.plugin.sight.base.a.gwS);
-      gzT.setAudioSamplingRate(com.tencent.mm.plugin.sight.base.a.gwR);
-      gzT.setOutputFile(paramString);
+      gGv.setAudioSource(5);
+      gGv.setOutputFormat(2);
+      gGv.setAudioEncoder(3);
+      gGv.setAudioChannels(1);
+      gGv.setAudioEncodingBitRate(com.tencent.mm.plugin.sight.base.a.axQ());
+      gGv.setAudioSamplingRate(com.tencent.mm.plugin.sight.base.a.axP());
+      gGv.setOutputFile(paramString);
       return 0;
     }
     catch (Exception localException)
     {
       for (;;)
       {
-        u.printErrStackTrace("!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHGUBS64GKWMWw=", localException, "Set Audio Source CAMCORDER FAIL", new Object[] { "" });
-        gzT.setAudioSource(1);
+        v.printErrStackTrace("MicroMsg.SightAACEncoder", localException, "Set Audio Source CAMCORDER FAIL", new Object[] { "" });
+        gGv.setAudioSource(1);
       }
     }
   }
   
   public final int a(a.a parama)
   {
-    gzV = parama;
+    gGx = parama;
     try
     {
-      if (gzT != null)
+      if (gGv != null)
       {
-        gzT.prepare();
-        gzT.start();
+        gGv.prepare();
+        gGv.start();
       }
       return 0;
     }
     catch (Exception parama)
     {
-      u.printErrStackTrace("!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHGUBS64GKWMWw=", parama, "start record aac.mp4 error:%s", new Object[] { parama.getMessage() });
+      v.printErrStackTrace("MicroMsg.SightAACEncoder", parama, "start record aac.mp4 error:%s", new Object[] { parama.getMessage() });
       return -1;
     }
     finally
     {
-      gzW.sendEmptyMessage(0);
+      gGy.sendEmptyMessage(0);
     }
   }
   
   public final int a(a.b paramb)
   {
-    if (gzT == null) {
+    if (gGv == null) {
       if (paramb != null) {
-        paramb.awn();
+        paramb.ayL();
       }
     }
     for (;;)
@@ -88,29 +88,29 @@ public final class c
       return 0;
       try
       {
-        gzT.stop();
-        gzT.release();
-        gzT = null;
+        gGv.stop();
+        gGv.release();
+        gGv = null;
         if (paramb != null)
         {
-          paramb.awn();
+          paramb.ayL();
           return 0;
         }
       }
       catch (Exception paramb)
       {
-        u.printErrStackTrace("!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHGUBS64GKWMWw=", paramb, "stop record aac.mp4 error:%s", new Object[] { paramb.getMessage() });
+        v.printErrStackTrace("MicroMsg.SightAACEncoder", paramb, "stop record aac.mp4 error:%s", new Object[] { paramb.getMessage() });
       }
     }
     return -1;
   }
   
-  public final int awk()
+  public final int ayI()
   {
-    return gzU;
+    return gGw;
   }
   
-  public final void awl() {}
+  public final void ayJ() {}
 }
 
 /* Location:

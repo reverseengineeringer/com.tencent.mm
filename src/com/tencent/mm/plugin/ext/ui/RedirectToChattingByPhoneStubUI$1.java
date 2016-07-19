@@ -7,7 +7,7 @@ final class RedirectToChattingByPhoneStubUI$1
   
   public final void run()
   {
-    dLE.VC();
+    dNl.Xk();
   }
 }
 

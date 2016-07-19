@@ -4,7 +4,7 @@ import android.os.Process;
 import com.tencent.mm.booter.notification.f;
 import com.tencent.mm.booter.notification.f.a;
 import com.tencent.mm.jni.platformcomm.WakerLock;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class NotifyReceiver$a$3
   implements Runnable
@@ -13,17 +13,17 @@ final class NotifyReceiver$a$3
   
   public final void run()
   {
-    u.i("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "checkKillPorcess, canKillProcess :%b", new Object[] { Boolean.valueOf(NotifyReceiver.mZ()) });
-    synchronized (NotifyReceiver.mT())
+    v.i("MicroMsg.NotifyReceiver", "checkKillPorcess, canKillProcess :%b", new Object[] { Boolean.valueOf(NotifyReceiver.lm()) });
+    synchronized (NotifyReceiver.lg())
     {
-      if (NotifyReceiver.mU() != null) {
-        NotifyReceiver.mU().unLock();
+      if (NotifyReceiver.lh() != null) {
+        NotifyReceiver.lh().unLock();
       }
       NotifyReceiver.a(null);
-      if (NotifyReceiver.mZ())
+      if (NotifyReceiver.lm())
       {
-        f.a.nv().i(-1, null);
-        u.appenderFlushSync();
+        f.a.lJ().j(-1, null);
+        v.appenderFlushSync();
         Process.killProcess(Process.myPid());
       }
       return;

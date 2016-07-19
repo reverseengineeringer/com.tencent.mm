@@ -1,22 +1,76 @@
 .class public final Lcom/tencent/mm/storage/t;
-.super Lcom/tencent/mm/at/a;
+.super Lcom/tencent/mm/ax/a;
 .source "SourceFile"
 
 
 # instance fields
-.field public kff:I
+.field public kFm:I
 
-.field public kfg:Ljava/util/LinkedList;
+.field public kFn:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public kfh:Ljava/util/LinkedList;
+.field public kFo:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public kfi:Ljava/util/LinkedList;
+.field public kFp:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public kfj:Ljava/util/LinkedList;
+.field public kFq:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList",
+            "<",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public kfk:Ljava/util/LinkedList;
+.field public kFr:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList",
+            "<",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public kfl:Ljava/util/LinkedList;
+.field public kFs:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList",
+            "<",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -25,49 +79,49 @@
 
     .prologue
     .line 11
-    invoke-direct {p0}, Lcom/tencent/mm/at/a;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/ax/a;-><init>()V
 
     .line 13
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/storage/t;->kfg:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/storage/t;->kFn:Ljava/util/LinkedList;
 
     .line 14
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/storage/t;->kfh:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/storage/t;->kFo:Ljava/util/LinkedList;
 
     .line 15
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/storage/t;->kfi:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/storage/t;->kFp:Ljava/util/LinkedList;
 
     .line 16
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/storage/t;->kfj:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/storage/t;->kFq:Ljava/util/LinkedList;
 
     .line 17
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/storage/t;->kfk:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/storage/t;->kFr:Ljava/util/LinkedList;
 
     .line 18
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/storage/t;->kfl:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/storage/t;->kFs:Ljava/util/LinkedList;
 
     return-void
 .end method
@@ -97,45 +151,45 @@
     check-cast v0, La/a/a/c/a;
 
     .line 23
-    iget v1, p0, Lcom/tencent/mm/storage/t;->kff:I
+    iget v1, p0, Lcom/tencent/mm/storage/t;->kFm:I
 
-    invoke-virtual {v0, v2, v1}, La/a/a/c/a;->ci(II)V
+    invoke-virtual {v0, v2, v1}, La/a/a/c/a;->cw(II)V
 
     .line 24
-    iget-object v1, p0, Lcom/tencent/mm/storage/t;->kfg:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/storage/t;->kFn:Ljava/util/LinkedList;
 
     invoke-virtual {v0, v5, v5, v1}, La/a/a/c/a;->d(IILjava/util/LinkedList;)V
 
     .line 25
-    iget-object v1, p0, Lcom/tencent/mm/storage/t;->kfh:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/storage/t;->kFo:Ljava/util/LinkedList;
 
     invoke-virtual {v0, v6, v5, v1}, La/a/a/c/a;->d(IILjava/util/LinkedList;)V
 
     .line 26
     const/4 v1, 0x4
 
-    iget-object v2, p0, Lcom/tencent/mm/storage/t;->kfi:Ljava/util/LinkedList;
+    iget-object v2, p0, Lcom/tencent/mm/storage/t;->kFp:Ljava/util/LinkedList;
 
     invoke-virtual {v0, v1, v5, v2}, La/a/a/c/a;->d(IILjava/util/LinkedList;)V
 
     .line 27
     const/4 v1, 0x5
 
-    iget-object v2, p0, Lcom/tencent/mm/storage/t;->kfj:Ljava/util/LinkedList;
+    iget-object v2, p0, Lcom/tencent/mm/storage/t;->kFq:Ljava/util/LinkedList;
 
     invoke-virtual {v0, v1, v6, v2}, La/a/a/c/a;->d(IILjava/util/LinkedList;)V
 
     .line 28
     const/4 v1, 0x6
 
-    iget-object v2, p0, Lcom/tencent/mm/storage/t;->kfk:Ljava/util/LinkedList;
+    iget-object v2, p0, Lcom/tencent/mm/storage/t;->kFr:Ljava/util/LinkedList;
 
     invoke-virtual {v0, v1, v6, v2}, La/a/a/c/a;->d(IILjava/util/LinkedList;)V
 
     .line 29
     const/4 v1, 0x7
 
-    iget-object v2, p0, Lcom/tencent/mm/storage/t;->kfl:Ljava/util/LinkedList;
+    iget-object v2, p0, Lcom/tencent/mm/storage/t;->kFs:Ljava/util/LinkedList;
 
     invoke-virtual {v0, v1, v6, v2}, La/a/a/c/a;->d(IILjava/util/LinkedList;)V
 
@@ -150,16 +204,16 @@
     if-ne p1, v2, :cond_1
 
     .line 33
-    iget v0, p0, Lcom/tencent/mm/storage/t;->kff:I
+    iget v0, p0, Lcom/tencent/mm/storage/t;->kFm:I
 
-    invoke-static {v2, v0}, La/a/a/a;->cg(II)I
+    invoke-static {v2, v0}, La/a/a/a;->cu(II)I
 
     move-result v0
 
     add-int/lit8 v0, v0, 0x0
 
     .line 35
-    iget-object v1, p0, Lcom/tencent/mm/storage/t;->kfg:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/storage/t;->kFn:Ljava/util/LinkedList;
 
     invoke-static {v5, v5, v1}, La/a/a/a;->c(IILjava/util/LinkedList;)I
 
@@ -168,7 +222,7 @@
     add-int/2addr v0, v1
 
     .line 36
-    iget-object v1, p0, Lcom/tencent/mm/storage/t;->kfh:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/storage/t;->kFo:Ljava/util/LinkedList;
 
     invoke-static {v6, v5, v1}, La/a/a/a;->c(IILjava/util/LinkedList;)I
 
@@ -179,7 +233,7 @@
     .line 37
     const/4 v1, 0x4
 
-    iget-object v2, p0, Lcom/tencent/mm/storage/t;->kfi:Ljava/util/LinkedList;
+    iget-object v2, p0, Lcom/tencent/mm/storage/t;->kFp:Ljava/util/LinkedList;
 
     invoke-static {v1, v5, v2}, La/a/a/a;->c(IILjava/util/LinkedList;)I
 
@@ -190,7 +244,7 @@
     .line 38
     const/4 v1, 0x5
 
-    iget-object v2, p0, Lcom/tencent/mm/storage/t;->kfj:Ljava/util/LinkedList;
+    iget-object v2, p0, Lcom/tencent/mm/storage/t;->kFq:Ljava/util/LinkedList;
 
     invoke-static {v1, v6, v2}, La/a/a/a;->c(IILjava/util/LinkedList;)I
 
@@ -201,7 +255,7 @@
     .line 39
     const/4 v1, 0x6
 
-    iget-object v2, p0, Lcom/tencent/mm/storage/t;->kfk:Ljava/util/LinkedList;
+    iget-object v2, p0, Lcom/tencent/mm/storage/t;->kFr:Ljava/util/LinkedList;
 
     invoke-static {v1, v6, v2}, La/a/a/a;->c(IILjava/util/LinkedList;)I
 
@@ -212,7 +266,7 @@
     .line 40
     const/4 v1, 0x7
 
-    iget-object v2, p0, Lcom/tencent/mm/storage/t;->kfl:Ljava/util/LinkedList;
+    iget-object v2, p0, Lcom/tencent/mm/storage/t;->kFs:Ljava/util/LinkedList;
 
     invoke-static {v1, v6, v2}, La/a/a/a;->c(IILjava/util/LinkedList;)I
 
@@ -235,44 +289,44 @@
     check-cast v0, [B
 
     .line 45
-    iget-object v1, p0, Lcom/tencent/mm/storage/t;->kfg:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/storage/t;->kFn:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->clear()V
 
     .line 46
-    iget-object v1, p0, Lcom/tencent/mm/storage/t;->kfh:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/storage/t;->kFo:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->clear()V
 
     .line 47
-    iget-object v1, p0, Lcom/tencent/mm/storage/t;->kfi:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/storage/t;->kFp:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->clear()V
 
     .line 48
-    iget-object v1, p0, Lcom/tencent/mm/storage/t;->kfj:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/storage/t;->kFq:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->clear()V
 
     .line 49
-    iget-object v1, p0, Lcom/tencent/mm/storage/t;->kfk:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/storage/t;->kFr:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->clear()V
 
     .line 50
-    iget-object v1, p0, Lcom/tencent/mm/storage/t;->kfl:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/storage/t;->kFs:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->clear()V
 
     .line 51
     new-instance v1, La/a/a/a/a;
 
-    sget-object v2, Lcom/tencent/mm/storage/t;->iTR:La/a/a/a/a/b;
+    sget-object v2, Lcom/tencent/mm/storage/t;->jrk:La/a/a/a/a/b;
 
     invoke-direct {v1, v0, v2}, La/a/a/a/a;-><init>([BLa/a/a/a/a/b;)V
 
     .line 52
-    invoke-static {v1}, Lcom/tencent/mm/at/a;->a(La/a/a/a/a;)I
+    invoke-static {v1}, Lcom/tencent/mm/ax/a;->a(La/a/a/a/a;)I
 
     move-result v0
 
@@ -281,18 +335,18 @@
     if-lez v0, :cond_3
 
     .line 55
-    invoke-super {p0, v1, p0, v0}, Lcom/tencent/mm/at/a;->a(La/a/a/a/a;Lcom/tencent/mm/at/a;I)Z
+    invoke-super {p0, v1, p0, v0}, Lcom/tencent/mm/ax/a;->a(La/a/a/a/a;Lcom/tencent/mm/ax/a;I)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
     .line 56
-    invoke-virtual {v1}, La/a/a/a/a;->bog()V
+    invoke-virtual {v1}, La/a/a/a/a;->bve()V
 
     .line 58
     :cond_2
-    invoke-static {v1}, Lcom/tencent/mm/at/a;->a(La/a/a/a/a;)I
+    invoke-static {v1}, Lcom/tencent/mm/ax/a;->a(La/a/a/a/a;)I
 
     move-result v0
 
@@ -337,13 +391,13 @@
 
     .line 69
     :pswitch_0
-    iget-object v0, v0, La/a/a/a/a;->maU:La/a/a/b/a/a;
+    iget-object v0, v0, La/a/a/a/a;->mMY:La/a/a/b/a/a;
 
-    invoke-virtual {v0}, La/a/a/b/a/a;->jC()I
+    invoke-virtual {v0}, La/a/a/b/a/a;->id()I
 
     move-result v0
 
-    iput v0, v1, Lcom/tencent/mm/storage/t;->kff:I
+    iput v0, v1, Lcom/tencent/mm/storage/t;->kFm:I
 
     move v0, v3
 
@@ -352,11 +406,11 @@
 
     .line 73
     :pswitch_1
-    iget-object v1, v1, Lcom/tencent/mm/storage/t;->kfg:Ljava/util/LinkedList;
+    iget-object v1, v1, Lcom/tencent/mm/storage/t;->kFn:Ljava/util/LinkedList;
 
-    iget-object v0, v0, La/a/a/a/a;->maU:La/a/a/b/a/a;
+    iget-object v0, v0, La/a/a/a/a;->mMY:La/a/a/b/a/a;
 
-    invoke-virtual {v0}, La/a/a/b/a/a;->jC()I
+    invoke-virtual {v0}, La/a/a/b/a/a;->id()I
 
     move-result v0
 
@@ -373,11 +427,11 @@
 
     .line 77
     :pswitch_2
-    iget-object v1, v1, Lcom/tencent/mm/storage/t;->kfh:Ljava/util/LinkedList;
+    iget-object v1, v1, Lcom/tencent/mm/storage/t;->kFo:Ljava/util/LinkedList;
 
-    iget-object v0, v0, La/a/a/a/a;->maU:La/a/a/b/a/a;
+    iget-object v0, v0, La/a/a/a/a;->mMY:La/a/a/b/a/a;
 
-    invoke-virtual {v0}, La/a/a/b/a/a;->jC()I
+    invoke-virtual {v0}, La/a/a/b/a/a;->id()I
 
     move-result v0
 
@@ -394,11 +448,11 @@
 
     .line 81
     :pswitch_3
-    iget-object v1, v1, Lcom/tencent/mm/storage/t;->kfi:Ljava/util/LinkedList;
+    iget-object v1, v1, Lcom/tencent/mm/storage/t;->kFp:Ljava/util/LinkedList;
 
-    iget-object v0, v0, La/a/a/a/a;->maU:La/a/a/b/a/a;
+    iget-object v0, v0, La/a/a/a/a;->mMY:La/a/a/b/a/a;
 
-    invoke-virtual {v0}, La/a/a/b/a/a;->jC()I
+    invoke-virtual {v0}, La/a/a/b/a/a;->id()I
 
     move-result v0
 
@@ -415,11 +469,11 @@
 
     .line 85
     :pswitch_4
-    iget-object v1, v1, Lcom/tencent/mm/storage/t;->kfj:Ljava/util/LinkedList;
+    iget-object v1, v1, Lcom/tencent/mm/storage/t;->kFq:Ljava/util/LinkedList;
 
-    iget-object v0, v0, La/a/a/a/a;->maU:La/a/a/b/a/a;
+    iget-object v0, v0, La/a/a/a/a;->mMY:La/a/a/b/a/a;
 
-    invoke-virtual {v0}, La/a/a/b/a/a;->jD()J
+    invoke-virtual {v0}, La/a/a/b/a/a;->ie()J
 
     move-result-wide v4
 
@@ -436,11 +490,11 @@
 
     .line 89
     :pswitch_5
-    iget-object v1, v1, Lcom/tencent/mm/storage/t;->kfk:Ljava/util/LinkedList;
+    iget-object v1, v1, Lcom/tencent/mm/storage/t;->kFr:Ljava/util/LinkedList;
 
-    iget-object v0, v0, La/a/a/a/a;->maU:La/a/a/b/a/a;
+    iget-object v0, v0, La/a/a/a/a;->mMY:La/a/a/b/a/a;
 
-    invoke-virtual {v0}, La/a/a/b/a/a;->jD()J
+    invoke-virtual {v0}, La/a/a/b/a/a;->ie()J
 
     move-result-wide v4
 
@@ -457,11 +511,11 @@
 
     .line 93
     :pswitch_6
-    iget-object v1, v1, Lcom/tencent/mm/storage/t;->kfl:Ljava/util/LinkedList;
+    iget-object v1, v1, Lcom/tencent/mm/storage/t;->kFs:Ljava/util/LinkedList;
 
-    iget-object v0, v0, La/a/a/a/a;->maU:La/a/a/b/a/a;
+    iget-object v0, v0, La/a/a/a/a;->mMY:La/a/a/b/a/a;
 
-    invoke-virtual {v0}, La/a/a/b/a/a;->jD()J
+    invoke-virtual {v0}, La/a/a/b/a/a;->ie()J
 
     move-result-wide v4
 

@@ -4,7 +4,7 @@ import android.content.Context;
 
 public abstract interface i$s
 {
-  public abstract i.n aj(Context paramContext, String paramString);
+  public abstract i.n am(Context paramContext, String paramString);
 }
 
 /* Location:

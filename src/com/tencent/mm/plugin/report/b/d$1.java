@@ -9,7 +9,7 @@ final class d$1
   
   public final void run()
   {
-    KVReportJni.KVReportJava2C.ackKvStrategy(3, -1, null, fTV.chp);
+    KVReportJni.KVReportJava2C.ackKvStrategy(3, -1, null, gdp.ccG);
   }
 }
 

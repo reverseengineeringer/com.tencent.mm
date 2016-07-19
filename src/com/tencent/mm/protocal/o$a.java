@@ -1,32 +1,95 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.alx;
-import com.tencent.mm.protocal.b.rg;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.a.c;
+import com.tencent.mm.pointers.PByteArray;
+import com.tencent.mm.sdk.platformtools.v;
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
 
 public final class o$a
-  extends h.c
-  implements h.a
+  extends k.c
+  implements k.a
 {
-  public rg iVb = new rg();
+  public int ajS = 0;
+  public int aqQ = 0;
+  public int bVQ = 0;
+  public String jss = "";
+  public byte[] jst = new byte[0];
+  
+  private byte[] aR(byte[] paramArrayOfByte)
+  {
+    if (paramArrayOfByte == null) {
+      return null;
+    }
+    ByteArrayOutputStream localByteArrayOutputStream = new ByteArrayOutputStream();
+    try
+    {
+      DataOutputStream localDataOutputStream = new DataOutputStream(localByteArrayOutputStream);
+      localDataOutputStream.writeByte(ajS);
+      localDataOutputStream.writeByte(aqQ);
+      localDataOutputStream.write(paramArrayOfByte);
+      localDataOutputStream.close();
+      return localByteArrayOutputStream.toByteArray();
+    }
+    catch (IOException paramArrayOfByte)
+    {
+      for (;;)
+      {
+        v.e("MicroMsg.MMDirectSend", "direct merge all failed, err=" + paramArrayOfByte.getMessage());
+      }
+    }
+  }
+  
+  private byte[] aYq()
+  {
+    ByteArrayOutputStream localByteArrayOutputStream = new ByteArrayOutputStream();
+    try
+    {
+      DataOutputStream localDataOutputStream = new DataOutputStream(localByteArrayOutputStream);
+      localDataOutputStream.writeInt(bVQ);
+      localDataOutputStream.writeShort(jss.getBytes().length);
+      localDataOutputStream.write(jss.getBytes());
+      localDataOutputStream.writeShort(jst.length);
+      localDataOutputStream.write(jst);
+      localDataOutputStream.close();
+      return localByteArrayOutputStream.toByteArray();
+    }
+    catch (IOException localIOException)
+    {
+      for (;;)
+      {
+        v.e("MicroMsg.MMDirectSend", "direct merge tail failed, err=" + localIOException.getMessage());
+      }
+    }
+  }
+  
+  public final boolean aAi()
+  {
+    return true;
+  }
   
   public final int getCmdId()
   {
-    return 179;
+    return 8;
   }
   
-  public final byte[] tY()
+  public final byte[] tZ()
   {
-    iUJ = z.aTx();
-    iVb.jbx = new alx().aO(ay.aVA());
-    iVb.jqg = aTviAC;
-    iVb.jGS = h.a(this);
-    return iVb.toByteArray();
+    byte[] arrayOfByte = aYq();
+    PByteArray localPByteArray = new PByteArray();
+    c.a(localPByteArray, arrayOfByte, o.Dv(jse));
+    return aR(value);
   }
   
-  public final int tZ()
+  public final int ua()
   {
-    return 381;
+    return 10;
+  }
+  
+  public final boolean wg()
+  {
+    return false;
   }
 }
 

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+.field final synthetic jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
 .field final synthetic val$context:Landroid/content/Context;
 
@@ -29,7 +29,7 @@
 
     .prologue
     .line 543
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$23;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$23;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
     iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$23;->val$context:Landroid/content/Context;
 
@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public final AI(Ljava/lang/String;)V
+.method public final CO(Ljava/lang/String;)V
     .locals 6
 
     .prologue
@@ -62,7 +62,7 @@
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 551
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$23;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$23;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->d(Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;)Ljava/lang/String;
 
@@ -73,7 +73,7 @@
     .line 552
     const-string/jumbo v2, "GalleryUI_FromUser"
 
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$23;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$23;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
     invoke-static {v3}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->d(Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;)Ljava/lang/String;
 
@@ -83,7 +83,7 @@
 
     .line 555
     :cond_0
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$23;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$23;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->e(Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;)Ljava/lang/String;
 
@@ -94,7 +94,7 @@
     .line 556
     const-string/jumbo v2, "GalleryUI_ToUser"
 
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$23;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$23;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
     invoke-static {v3}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->e(Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;)Ljava/lang/String;
 
@@ -131,7 +131,7 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 565
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$23;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$23;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->f(Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;)Lcom/tencent/mm/ui/o;
 
@@ -140,7 +140,7 @@
     if-eqz v1, :cond_2
 
     .line 566
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$23;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$23;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->f(Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;)Lcom/tencent/mm/ui/o;
 
@@ -150,7 +150,7 @@
 
     const-string/jumbo v3, ".ui.GalleryEntryUI"
 
-    invoke-static {v1, v2, v3, v0, v5}, Lcom/tencent/mm/ar/c;->a(Landroid/support/v4/app/Fragment;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
+    invoke-static {v1, v2, v3, v0, v5}, Lcom/tencent/mm/av/c;->a(Landroid/support/v4/app/Fragment;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
 
     .line 570
     :goto_0
@@ -164,7 +164,7 @@
 
     const-string/jumbo v3, ".ui.GalleryEntryUI"
 
-    invoke-static {v1, v2, v3, v0, v5}, Lcom/tencent/mm/ar/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
+    invoke-static {v1, v2, v3, v0, v5}, Lcom/tencent/mm/av/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
 
     goto :goto_0
 .end method

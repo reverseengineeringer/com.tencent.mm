@@ -2,10 +2,10 @@ package com.tencent.mm.ui;
 
 import android.os.Looper;
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class f$1
-  extends aa
+  extends ac
 {
   f$1(f paramf, Looper paramLooper)
   {
@@ -20,8 +20,8 @@ final class f$1
     do
     {
       return;
-    } while (f.a(klo) == null);
-    f.b(klo);
+    } while (f.a(kKO) == null);
+    f.b(kKO);
   }
 }
 

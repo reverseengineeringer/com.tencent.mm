@@ -16,19 +16,19 @@ public class SightLocationWidget
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  protected int getLayoutResource()
+  protected final int aEb()
   {
-    return 2131362839;
+    return 2131165832;
   }
   
-  protected int getNormalStateImageResource()
+  protected final int aEc()
   {
-    return 2130903570;
+    return 2131165833;
   }
   
-  protected int getSelectedStateImageResource()
+  protected final int getLayoutResource()
   {
-    return 2130903446;
+    return 2130904385;
   }
 }
 

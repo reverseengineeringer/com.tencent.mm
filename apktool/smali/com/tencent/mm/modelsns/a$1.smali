@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/modelsns/a;->CV()Z
+    value = Lcom/tencent/mm/modelsns/a;->Dg()Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ccj:Lcom/tencent/mm/modelsns/a;
+.field final synthetic bVY:Lcom/tencent/mm/modelsns/a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 306
-    iput-object p1, p0, Lcom/tencent/mm/modelsns/a$1;->ccj:Lcom/tencent/mm/modelsns/a;
+    .line 298
+    iput-object p1, p0, Lcom/tencent/mm/modelsns/a$1;->bVY:Lcom/tencent/mm/modelsns/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,11 +40,11 @@
     .locals 1
 
     .prologue
-    .line 309
-    iget-object v0, p0, Lcom/tencent/mm/modelsns/a$1;->ccj:Lcom/tencent/mm/modelsns/a;
+    .line 301
+    iget-object v0, p0, Lcom/tencent/mm/modelsns/a$1;->bVY:Lcom/tencent/mm/modelsns/a;
 
     invoke-static {v0}, Lcom/tencent/mm/modelsns/a;->a(Lcom/tencent/mm/modelsns/a;)V
 
-    .line 310
+    .line 302
     return-void
 .end method

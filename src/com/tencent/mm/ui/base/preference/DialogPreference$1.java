@@ -10,17 +10,17 @@ final class DialogPreference$1
 {
   DialogPreference$1(DialogPreference paramDialogPreference) {}
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    if (DialogPreference.a(kLb) != null) {
-      DialogPreference.a(kLb).dismiss();
+    if (DialogPreference.a(lkq) != null) {
+      DialogPreference.a(lkq).dismiss();
     }
-    kLb.setValue((String)bkLb).kKW[paramInt]);
-    if (DialogPreference.c(kLb) != null) {
-      DialogPreference.c(kLb).bdp();
+    lkq.setValue((String)blkq).lkl[paramInt]);
+    if (DialogPreference.c(lkq) != null) {
+      DialogPreference.c(lkq).biW();
     }
-    if (DialogPreference.d(kLb) != null) {
-      DialogPreference.d(kLb).a(kLb, kLb.getValue());
+    if (DialogPreference.d(lkq) != null) {
+      DialogPreference.d(lkq).a(lkq, lkq.getValue());
     }
   }
 }

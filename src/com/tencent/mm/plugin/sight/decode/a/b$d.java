@@ -10,10 +10,10 @@ final class b$d
   
   public final void run()
   {
-    if (b.l(gxL).get() == null) {
+    if (b.l(gEj).get() == null) {
       return;
     }
-    ((View)b.l(gxL).get()).startAnimation(b.m(gxL));
+    ((View)b.l(gEj).get()).startAnimation(b.m(gEj));
   }
 }
 

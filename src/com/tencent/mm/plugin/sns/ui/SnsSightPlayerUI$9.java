@@ -7,7 +7,7 @@ final class SnsSightPlayerUI$9
   
   public final void run()
   {
-    his.finish();
+    hxh.finish();
   }
 }
 

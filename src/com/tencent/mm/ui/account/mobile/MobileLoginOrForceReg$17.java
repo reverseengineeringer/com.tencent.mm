@@ -3,17 +3,17 @@ package com.tencent.mm.ui.account.mobile;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.modelsimple.u;
-import com.tencent.mm.r.m;
+import com.tencent.mm.modelsimple.s;
+import com.tencent.mm.t.m;
 
 final class MobileLoginOrForceReg$17
   implements DialogInterface.OnCancelListener
 {
-  MobileLoginOrForceReg$17(MobileLoginOrForceReg paramMobileLoginOrForceReg, u paramu) {}
+  MobileLoginOrForceReg$17(MobileLoginOrForceReg paramMobileLoginOrForceReg, s params) {}
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    ah.tE().c(kyw);
+    ah.tF().c(kXD);
   }
 }
 

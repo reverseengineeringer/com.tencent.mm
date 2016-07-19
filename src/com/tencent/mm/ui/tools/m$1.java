@@ -5,7 +5,7 @@ import android.view.View.OnCreateContextMenuListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemLongClickListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.l;
 import java.util.Iterator;
 import java.util.List;
@@ -15,17 +15,17 @@ final class m$1
 {
   m$1(m paramm, View.OnCreateContextMenuListener paramOnCreateContextMenuListener) {}
   
-  public final boolean onItemLongClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final boolean onItemLongClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    m.a(lwP).clear();
-    u.v("!44@/B4Tb64lLpLsoKMPiL0xLC429fVkFuxXeqosDHFYUTE=", "registerForContextMenu AbsListView long click");
+    m.a(lXC).clear();
+    v.v("MicroMsg.MMSubMenuHelper", "registerForContextMenu AbsListView long click");
     paramAdapterView = new AdapterView.AdapterContextMenuInfo(paramView, paramInt, paramLong);
-    lwO.onCreateContextMenu(m.a(lwP), paramView, paramAdapterView);
-    paramView = alwP).kFt.iterator();
+    lXB.onCreateContextMenu(m.a(lXC), paramView, paramAdapterView);
+    paramView = alXC).lex.iterator();
     while (paramView.hasNext()) {
-      nextkFw = paramAdapterView;
+      nextleA = paramAdapterView;
     }
-    lwP.biF();
+    lXC.boB();
     return true;
   }
 }

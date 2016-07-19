@@ -13,28 +13,29 @@ import com.jg.JgMethodChecked;
 import com.tencent.mm.compatible.d.k;
 import com.tencent.mm.compatible.d.p;
 import com.tencent.mm.compatible.util.e;
-import com.tencent.mm.sdk.platformtools.ak;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.an;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
 public final class d
 {
-  private static boolean bpw = false;
-  public static boolean bpx = false;
-  private static boolean bpy = false;
-  private static boolean bpz = false;
-  private final Set aod = new HashSet();
-  public int bpA = 0;
-  public final AudioManager bpu;
-  private int bpv = -1;
+  private static boolean bdv = false;
+  public static boolean bdw = false;
+  private static boolean bdx = false;
+  private static boolean bdy = false;
+  private final Set<a> bdA = new HashSet();
+  public final AudioManager bdt;
+  private int bdu = -1;
+  public int bdz = 0;
   
   @JgMethodChecked(author=20, fComment="checked", lastDate="20140429", reviewer=20, vComment={com.jg.EType.RECEIVERCHECK})
   public d(Context paramContext)
   {
-    bpu = ((AudioManager)paramContext.getSystemService("audio"));
-    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "init dkbt %s", new Object[] { nQ() });
+    bdt = ((AudioManager)paramContext.getSystemService("audio"));
+    v.d("MicroMsg.MMAudioManager", "init dkbt %s", new Object[] { mg() });
     paramContext.registerReceiver(new BroadcastReceiver()new IntentFilter
     {
       public final void onReceive(Context paramAnonymousContext, Intent paramAnonymousIntent)
@@ -43,32 +44,32 @@ public final class d
           return;
         }
         paramAnonymousContext = paramAnonymousIntent.getAction();
-        d.aw(paramAnonymousIntent.getBooleanExtra("existing", false));
-        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt onReceive action[" + paramAnonymousContext + "] existing:" + d.nV());
+        d.Z(paramAnonymousIntent.getBooleanExtra("existing", false));
+        v.d("MicroMsg.MMAudioManager", "dkbt onReceive action[" + paramAnonymousContext + "] existing:" + d.ml());
       }
     }, new IntentFilter("com.htc.accessory.action.CONNECTION_EXISTING"));
     paramContext.registerReceiver(new BroadcastReceiver()new IntentFilter
     {
       public final void onReceive(Context paramAnonymousContext, Intent paramAnonymousIntent)
       {
-        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt onReceive action[ BluetoothDevice.ACTION_ACL_CONNECTED ] ");
-        d.ax(true);
-        bN(3);
+        v.d("MicroMsg.MMAudioManager", "dkbt onReceive action[ BluetoothDevice.ACTION_ACL_CONNECTED ] ");
+        d.aa(true);
+        cf(3);
       }
     }, new IntentFilter("android.bluetooth.device.action.ACL_CONNECTED"));
     paramContext.registerReceiver(new BroadcastReceiver()new IntentFilter
     {
       public final void onReceive(Context paramAnonymousContext, Intent paramAnonymousIntent)
       {
-        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt onReceive action[ BluetoothDevice.ACTION_ACL_DISCONNECTED ] ");
-        d.ax(false);
-        if (bsQbrA == 1) {
+        v.d("MicroMsg.MMAudioManager", "dkbt onReceive action[ BluetoothDevice.ACTION_ACL_DISCONNECTED ] ");
+        d.aa(false);
+        if (bgWbfB == 1) {
           com.tencent.mm.compatible.c.a.a(d.a(d.this));
         }
-        bN(4);
+        cf(4);
       }
     }, new IntentFilter("android.bluetooth.device.action.ACL_DISCONNECTED"));
-    if (e.bU(11)) {
+    if (e.cm(11)) {
       paramContext.registerReceiver(new BroadcastReceiver()new IntentFilter
       {
         public final void onReceive(Context paramAnonymousContext, Intent paramAnonymousIntent)
@@ -80,26 +81,26 @@ public final class d
             return;
             paramAnonymousContext = paramAnonymousIntent.getAction();
             i = paramAnonymousIntent.getIntExtra("android.bluetooth.profile.extra.STATE", -1);
-            u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt onReceive action[" + paramAnonymousContext + "] state:" + i);
+            v.d("MicroMsg.MMAudioManager", "dkbt onReceive action[" + paramAnonymousContext + "] state:" + i);
             if (i == 2)
             {
-              d.ax(true);
-              bN(3);
+              d.aa(true);
+              cf(3);
               return;
             }
           } while (i != 0);
-          d.ax(false);
-          if (bsQbrA == 1) {
+          d.aa(false);
+          if (bgWbfB == 1) {
             com.tencent.mm.compatible.c.a.a(d.a(d.this));
           }
-          bN(4);
+          cf(4);
         }
       }, new IntentFilter("android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED"));
     }
   }
   
   @TargetApi(14)
-  private static boolean nO()
+  private static boolean md()
   {
     boolean bool = true;
     try
@@ -111,8 +112,8 @@ public final class d
         }
         return true;
       }
-      if (!bpw) {
-        if (bsQbrL == 1)
+      if (!bdv) {
+        if (bgWbfM == 1)
         {
           bool = BluetoothAdapter.getDefaultAdapter().isEnabled();
           return bool;
@@ -121,7 +122,7 @@ public final class d
     }
     catch (Exception localException)
     {
-      u.e("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt exception in isConnectDevice()");
+      v.e("MicroMsg.MMAudioManager", "dkbt exception in isConnectDevice()");
       bool = false;
     }
     return bool;
@@ -129,33 +130,39 @@ public final class d
     return false;
   }
   
-  public static boolean nP()
+  public static int me()
   {
-    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt isBluetoothCanUse existing:" + bpy + " , isUseHTCAccessory = " + bpz);
-    if ((bpy) && (!bpz)) {
+    ((AudioManager)aa.getContext().getSystemService("audio")).isBluetoothScoOn();
+    return 0;
+  }
+  
+  public static boolean mf()
+  {
+    v.d("MicroMsg.MMAudioManager", "dkbt isBluetoothCanUse existing:" + bdx + " , isUseHTCAccessory = " + bdy);
+    if ((bdx) && (!bdy)) {
       return false;
     }
-    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt isACLConnected:" + bpw);
-    if (!nO())
+    v.d("MicroMsg.MMAudioManager", "dkbt isACLConnected:" + bdv);
+    if (!md())
     {
-      u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt isACLConnected =  " + bpw + " , isConnectHeadset() = " + nO());
+      v.d("MicroMsg.MMAudioManager", "dkbt isACLConnected =  " + bdv + " , isConnectHeadset() = " + md());
       return false;
     }
     Object localObject = BluetoothAdapter.getDefaultAdapter();
     if (localObject == null)
     {
-      u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt BluetoothAdapter.getDefaultAdapter() == null");
+      v.d("MicroMsg.MMAudioManager", "dkbt BluetoothAdapter.getDefaultAdapter() == null");
       return false;
     }
     if (!((BluetoothAdapter)localObject).isEnabled())
     {
-      u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt !adp.isEnabled()");
+      v.d("MicroMsg.MMAudioManager", "dkbt !adp.isEnabled()");
       return false;
     }
     localObject = ((BluetoothAdapter)localObject).getBondedDevices();
     if ((localObject == null) || (((Set)localObject).size() == 0))
     {
-      u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt setDev == null || setDev.size() == 0");
+      v.d("MicroMsg.MMAudioManager", "dkbt setDev == null || setDev.size() == 0");
       return false;
     }
     localObject = ((Set)localObject).iterator();
@@ -169,86 +176,79 @@ public final class d
     {
       if (i == 0)
       {
-        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt hasBond == false");
+        v.d("MicroMsg.MMAudioManager", "dkbt hasBond == false");
         return false;
       }
       return true;
     }
   }
   
-  private void nT()
+  private void mj()
   {
-    if (bpu != null)
+    if (bdt != null)
     {
-      int i = bpu.getMode();
-      boolean bool = bpu.isSpeakerphoneOn();
-      Object localObject1 = k.oi().bR(98305);
-      Object localObject2 = k.oi().bR(94209);
+      int i = bdt.getMode();
+      boolean bool = bdt.isSpeakerphoneOn();
+      Object localObject1 = k.my().cj(98305);
+      Object localObject2 = k.my().cj(94209);
       if (localObject1 == null)
       {
-        k.oi().set(98305, Boolean.valueOf(bool));
-        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "storeAudioConfig spearkeron " + bool);
+        k.my().set(98305, Boolean.valueOf(bool));
+        v.d("MicroMsg.MMAudioManager", "storeAudioConfig spearkeron " + bool);
       }
       if (localObject2 == null)
       {
-        k.oi().set(94209, Integer.valueOf(i));
-        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "storeAudioConfig inmode " + i);
+        k.my().set(94209, Integer.valueOf(i));
+        v.d("MicroMsg.MMAudioManager", "storeAudioConfig inmode " + i);
       }
     }
   }
   
-  public final void a(a parama)
-  {
-    if (parama != null) {
-      aod.add(parama);
-    }
-  }
-  
-  public final int au(boolean paramBoolean)
+  public final int X(boolean paramBoolean)
   {
     if (paramBoolean) {}
-    for (int i = 3; nN(); i = 0) {
+    for (int i = 3; mc(); i = 0) {
       return 0;
     }
     return i;
   }
   
   @TargetApi(11)
-  public final boolean av(boolean paramBoolean)
+  public final boolean Y(boolean paramBoolean)
   {
     int i = 3;
     int k = 0;
     int j = 0;
-    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "IPCall dkbt shiftSpeaker:%b -> %b  %s", new Object[] { Boolean.valueOf(nR()), Boolean.valueOf(paramBoolean), nQ() });
+    v.d("MicroMsg.MMAudioManager", "IPCall dkbt shiftSpeaker:%b -> %b  %s", new Object[] { Boolean.valueOf(mh()), Boolean.valueOf(paramBoolean), mg() });
     boolean bool;
-    if (ak.aKi)
+    if (an.awC)
     {
-      u.v("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "shiftSpeaker return when calling blue:%d", new Object[] { Integer.valueOf(bpv) });
+      v.v("MicroMsg.MMAudioManager", "shiftSpeaker return when calling blue:%d", new Object[] { Integer.valueOf(bdu) });
       bool = false;
       return bool;
     }
-    if (bpx)
+    if (bdw)
     {
-      bpu.setMode(0);
+      bdt.setMode(0);
       return false;
     }
-    nT();
-    if (bsLbqF)
+    mj();
+    if (bgPbeF)
     {
       if (paramBoolean)
       {
         if (Build.VERSION.SDK_INT < 11) {}
         for (i = j;; i = 3)
         {
-          if (bsLbqG >= 0) {
-            i = bsLbqG;
+          if (bgPbeG >= 0) {
+            i = bgPbeG;
           }
-          u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "IPCall doShiftSpeaker useSpeakerMode:" + i);
-          if (i != bpu.getMode()) {
+          v.d("MicroMsg.MMAudioManager", "IPCall doShiftSpeaker useSpeakerMode:" + i);
+          if (i != bdt.getMode()) {
             setMode(i);
           }
           bool = paramBoolean;
-          if (bpu.isSpeakerphoneOn()) {
+          if (bdt.isSpeakerphoneOn()) {
             break;
           }
           setSpeakerphoneOn(true);
@@ -257,45 +257,45 @@ public final class d
       }
       if (Build.VERSION.SDK_INT < 11)
       {
-        if (bsQbrL != 1) {
+        if (bgWbfM != 1) {
           break label728;
         }
-        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "doShiftSpeaker htc usePhoneMode : 0");
+        v.d("MicroMsg.MMAudioManager", "doShiftSpeaker htc usePhoneMode : 0");
       }
     }
     label723:
     label728:
     for (i = 0;; i = 2)
     {
-      if (bsLbqH >= 0) {
-        i = bsLbqH;
+      if (bgPbeH >= 0) {
+        i = bgPbeH;
       }
-      u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "IPCall doShiftSpeaker usePhoneMode:" + i);
-      if (i != bpu.getMode()) {
+      v.d("MicroMsg.MMAudioManager", "IPCall doShiftSpeaker usePhoneMode:" + i);
+      if (i != bdt.getMode()) {
         setMode(i);
       }
       bool = paramBoolean;
-      if (!bpu.isSpeakerphoneOn()) {
+      if (!bdt.isSpeakerphoneOn()) {
         break;
       }
       setSpeakerphoneOn(false);
       return paramBoolean;
-      if (bsLbpH)
+      if (bgPbdH)
       {
-        if (p.bsL.nW())
+        if (p.bgP.mm())
         {
-          if (bsLbpJ >= 0) {
-            setMode(bsLbpJ);
+          if (bgPbdJ >= 0) {
+            setMode(bgPbdJ);
           }
           for (;;)
           {
             bool = paramBoolean;
-            if (bsLbpL <= 0) {
+            if (bgPbdL <= 0) {
               break;
             }
             setSpeakerphoneOn(paramBoolean);
             return paramBoolean;
-            if (bsLbpK >= 0) {
+            if (bgPbdK >= 0) {
               if (paramBoolean) {
                 setMode(0);
               } else {
@@ -304,28 +304,28 @@ public final class d
             }
           }
         }
-        if (p.bsL.nX())
+        if (p.bgP.mn())
         {
           if (paramBoolean)
           {
-            if (p.bsL.oa()) {
+            if (p.bgP.mq()) {
               setSpeakerphoneOn(true);
             }
             bool = paramBoolean;
-            if (p.bsL.nZ() < 0) {
+            if (p.bgP.mp() < 0) {
               break;
             }
-            setMode(p.bsL.nZ());
+            setMode(p.bgP.mp());
             return paramBoolean;
           }
-          if (p.bsL.oc()) {
+          if (p.bgP.ms()) {
             setSpeakerphoneOn(false);
           }
           bool = paramBoolean;
-          if (p.bsL.ob() < 0) {
+          if (p.bgP.mr() < 0) {
             break;
           }
-          setMode(p.bsL.ob());
+          setMode(p.bgP.mr());
           return paramBoolean;
         }
       }
@@ -334,15 +334,15 @@ public final class d
         if (Build.VERSION.SDK_INT < 11) {}
         for (i = k;; i = 3)
         {
-          if (bsLbqg >= 0) {
-            i = bsLbqg;
+          if (bgPbeg >= 0) {
+            i = bgPbeg;
           }
-          u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "IPCall doShiftSpeaker useSpeakerMode:" + i);
-          if (i != bpu.getMode()) {
+          v.d("MicroMsg.MMAudioManager", "IPCall doShiftSpeaker useSpeakerMode:" + i);
+          if (i != bdt.getMode()) {
             setMode(i);
           }
           bool = paramBoolean;
-          if (bpu.isSpeakerphoneOn()) {
+          if (bdt.isSpeakerphoneOn()) {
             break;
           }
           setSpeakerphoneOn(true);
@@ -351,10 +351,10 @@ public final class d
       }
       if (Build.VERSION.SDK_INT < 11)
       {
-        if (bsQbrL != 1) {
+        if (bgWbfM != 1) {
           break label723;
         }
-        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "doShiftSpeaker htc usePhoneMode : 0");
+        v.d("MicroMsg.MMAudioManager", "doShiftSpeaker htc usePhoneMode : 0");
       }
       for (i = 0;; i = 2)
       {
@@ -362,23 +362,23 @@ public final class d
         if (Build.VERSION.SDK_INT >= 11)
         {
           j = i;
-          if (com.tencent.mm.compatible.util.j.nu())
+          if (com.tencent.mm.compatible.util.j.lI())
           {
             j = i;
-            if (2 == bsQbrM) {
+            if (2 == bgWbfN) {
               j = 2;
             }
           }
         }
-        if (bsLbqh >= 0) {
-          j = bsLbqh;
+        if (bgPbeh >= 0) {
+          j = bgPbeh;
         }
-        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "IPCall doShiftSpeaker usePhoneMode:" + j);
-        if (j != bpu.getMode()) {
+        v.d("MicroMsg.MMAudioManager", "IPCall doShiftSpeaker usePhoneMode:" + j);
+        if (j != bdt.getMode()) {
           setMode(j);
         }
         bool = paramBoolean;
-        if (!bpu.isSpeakerphoneOn()) {
+        if (!bdt.isSpeakerphoneOn()) {
           break;
         }
         setSpeakerphoneOn(false);
@@ -387,24 +387,31 @@ public final class d
     }
   }
   
-  public final void b(a parama)
+  public final void a(a parama)
   {
     if (parama != null) {
-      aod.remove(parama);
+      bdA.add(parama);
     }
   }
   
-  public final boolean b(boolean paramBoolean, int paramInt)
+  public final boolean a(boolean paramBoolean, int paramInt)
   {
-    int i = bpu.getStreamMaxVolume(paramInt);
-    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "maxVolumn:" + i);
+    int i = bdt.getStreamMaxVolume(paramInt);
+    v.d("MicroMsg.MMAudioManager", "maxVolumn:" + i);
     i /= 3;
-    int j = bpu.getStreamVolume(paramInt);
+    int j = bdt.getStreamVolume(paramInt);
     if (j < i) {
-      bpu.setStreamVolume(paramInt, i, 0);
+      bdt.setStreamVolume(paramInt, i, 0);
     }
-    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "StreamType:" + paramInt + "  current:" + j);
+    v.d("MicroMsg.MMAudioManager", "StreamType:" + paramInt + "  current:" + j);
     return b(paramBoolean, true);
+  }
+  
+  public final void b(a parama)
+  {
+    if (parama != null) {
+      bdA.remove(parama);
+    }
   }
   
   @TargetApi(11)
@@ -413,11 +420,11 @@ public final class d
     int i = 1;
     int k = 0;
     int j = 0;
-    int m = bpu.getMode();
-    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt shiftSpeaker:%b -> %b  %s", new Object[] { Boolean.valueOf(nR()), Boolean.valueOf(paramBoolean1), nQ() });
-    if (ak.aKi)
+    int m = bdt.getMode();
+    v.d("MicroMsg.MMAudioManager", "dkbt shiftSpeaker:%b -> %b  %s", new Object[] { Boolean.valueOf(mh()), Boolean.valueOf(paramBoolean1), mg() });
+    if (an.awC)
     {
-      u.v("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "shiftSpeaker return when calling Mode:%d blue:%d", new Object[] { Integer.valueOf(m), Integer.valueOf(bpv) });
+      v.v("MicroMsg.MMAudioManager", "shiftSpeaker return when calling Mode:%d blue:%d", new Object[] { Integer.valueOf(m), Integer.valueOf(bdu) });
       paramBoolean2 = false;
     }
     do
@@ -425,32 +432,32 @@ public final class d
       do
       {
         return paramBoolean2;
-        if ((nN()) || (bpx))
+        if ((mc()) || (bdw))
         {
-          bpu.setMode(0);
+          bdt.setMode(0);
           return false;
         }
-        nT();
+        mj();
         if (!paramBoolean2) {
           break label295;
         }
-        if (!bsLbpH) {
+        if (!bgPbdH) {
           break label532;
         }
-        if (p.bsL.nW())
+        if (p.bgP.mm())
         {
-          if (bsLbpJ >= 0) {
-            setMode(bsLbpJ);
+          if (bgPbdJ >= 0) {
+            setMode(bgPbdJ);
           }
           for (;;)
           {
             paramBoolean2 = paramBoolean1;
-            if (bsLbpL <= 0) {
+            if (bgPbdL <= 0) {
               break;
             }
             setSpeakerphoneOn(paramBoolean1);
             return paramBoolean1;
-            if (bsLbpK >= 0) {
+            if (bgPbdK >= 0) {
               if (paramBoolean1) {
                 setMode(0);
               } else {
@@ -459,36 +466,36 @@ public final class d
             }
           }
         }
-        if (!p.bsL.nX()) {
+        if (!p.bgP.mn()) {
           break label532;
         }
         if (!paramBoolean1) {
           break;
         }
-        if (p.bsL.oa()) {
+        if (p.bgP.mq()) {
           setSpeakerphoneOn(true);
         }
         paramBoolean2 = paramBoolean1;
-      } while (p.bsL.nZ() < 0);
-      setMode(p.bsL.nZ());
+      } while (p.bgP.mp() < 0);
+      setMode(p.bgP.mp());
       return paramBoolean1;
-      if (p.bsL.oc()) {
+      if (p.bgP.ms()) {
         setSpeakerphoneOn(false);
       }
       paramBoolean2 = paramBoolean1;
-    } while (p.bsL.ob() < 0);
-    setMode(p.bsL.ob());
+    } while (p.bgP.mr() < 0);
+    setMode(p.bgP.mr());
     return paramBoolean1;
     label295:
-    if ((bsLbpH) && (p.bsL.nY()))
+    if ((bgPbdH) && (p.bgP.mo()))
     {
       if (paramBoolean1)
       {
-        localObject = p.bsL;
+        localObject = p.bgP;
         i = j;
-        if (((com.tencent.mm.compatible.d.a)localObject).nY())
+        if (((com.tencent.mm.compatible.d.a)localObject).mo())
         {
-          k = bpN & 0x10;
+          k = bdN & 0x10;
           localObject = new StringBuilder("enableSpeaker ");
           if (k <= 0) {
             break label419;
@@ -497,7 +504,7 @@ public final class d
         label419:
         for (paramBoolean2 = true;; paramBoolean2 = false)
         {
-          u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", paramBoolean2);
+          v.d("VoipAudioInfo", paramBoolean2);
           i = j;
           if (k > 0) {
             i = 1;
@@ -506,23 +513,23 @@ public final class d
             setSpeakerphoneOn(true);
           }
           paramBoolean2 = paramBoolean1;
-          if (p.bsL.od() < 0) {
+          if (p.bgP.mt() < 0) {
             break;
           }
-          setMode(p.bsL.od());
+          setMode(p.bgP.mt());
           return paramBoolean1;
         }
       }
-      Object localObject = p.bsL;
-      if (((com.tencent.mm.compatible.d.a)localObject).nY())
+      Object localObject = p.bgP;
+      if (((com.tencent.mm.compatible.d.a)localObject).mo())
       {
-        j = bpN & 0x1;
+        j = bdN & 0x1;
         localObject = new StringBuilder("disableSpeaker ");
         if (j > 0)
         {
           paramBoolean2 = true;
           label465:
-          u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", paramBoolean2);
+          v.d("VoipAudioInfo", paramBoolean2);
           if (j <= 0) {
             break label522;
           }
@@ -534,10 +541,10 @@ public final class d
           setSpeakerphoneOn(false);
         }
         paramBoolean2 = paramBoolean1;
-        if (p.bsL.oe() < 0) {
+        if (p.bgP.mu() < 0) {
           break;
         }
-        setMode(p.bsL.oe());
+        setMode(p.bgP.mu());
         return paramBoolean1;
         paramBoolean2 = false;
         break label465;
@@ -556,25 +563,25 @@ public final class d
         {
           i = k;
           label551:
-          if (bsLbqg >= 0) {
-            i = bsLbqg;
+          if (bgPbeg >= 0) {
+            i = bgPbeg;
           }
-          u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "voip doShiftSpeaker useSpeakerMode:" + i);
-          if (i != bpu.getMode()) {
+          v.d("MicroMsg.MMAudioManager", "voip doShiftSpeaker useSpeakerMode:" + i);
+          if (i != bdt.getMode()) {
             setMode(i);
           }
-          if (i != bpu.getMode())
+          if (i != bdt.getMode())
           {
-            if (bpA != 0) {
+            if (bdz != 0) {
               break label652;
             }
-            bpA = 1;
+            bdz = 1;
           }
         }
         for (;;)
         {
           paramBoolean2 = paramBoolean1;
-          if (bpu.isSpeakerphoneOn()) {
+          if (bdt.isSpeakerphoneOn()) {
             break;
           }
           setSpeakerphoneOn(true);
@@ -582,17 +589,17 @@ public final class d
           i = 3;
           break label551;
           label652:
-          if (bpA == 2) {
-            bpA = 3;
+          if (bdz == 2) {
+            bdz = 3;
           }
         }
       }
       if (Build.VERSION.SDK_INT < 11)
       {
-        if (bsQbrL != 1) {
+        if (bgWbfM != 1) {
           break label943;
         }
-        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "doShiftSpeaker htc usePhoneMode : 0");
+        v.d("MicroMsg.MMAudioManager", "doShiftSpeaker htc usePhoneMode : 0");
         i = 0;
       }
     }
@@ -603,32 +610,32 @@ public final class d
       if (Build.VERSION.SDK_INT >= 11)
       {
         j = i;
-        if (com.tencent.mm.compatible.util.j.nu())
+        if (com.tencent.mm.compatible.util.j.lI())
         {
           j = i;
-          if (2 == bsQbrM) {
+          if (2 == bgWbfN) {
             j = 2;
           }
         }
       }
-      if (bsLbqh >= 0) {
-        j = bsLbqh;
+      if (bgPbeh >= 0) {
+        j = bgPbeh;
       }
-      u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "voip doShiftSpeaker usePhoneMode:" + j);
-      if (j != bpu.getMode()) {
+      v.d("MicroMsg.MMAudioManager", "voip doShiftSpeaker usePhoneMode:" + j);
+      if (j != bdt.getMode()) {
         setMode(j);
       }
-      if (j != bpu.getMode())
+      if (j != bdt.getMode())
       {
-        if (bpA != 0) {
+        if (bdz != 0) {
           break label848;
         }
-        bpA = 2;
+        bdz = 2;
       }
       for (;;)
       {
         paramBoolean2 = paramBoolean1;
-        if (!bpu.isSpeakerphoneOn()) {
+        if (!bdt.isSpeakerphoneOn()) {
           break;
         }
         setSpeakerphoneOn(false);
@@ -636,13 +643,13 @@ public final class d
         i = 3;
         break label706;
         label848:
-        if (bpA == 1) {
-          bpA = 3;
+        if (bdz == 1) {
+          bdz = 3;
         }
       }
       setSpeakerphoneOn(paramBoolean1);
       paramBoolean2 = paramBoolean1;
-      if (nR() == paramBoolean1) {
+      if (mh() == paramBoolean1) {
         break;
       }
       if (paramBoolean1)
@@ -650,7 +657,7 @@ public final class d
         setMode(0);
         return paramBoolean1;
       }
-      if ((Build.VERSION.SDK_INT >= 11) && (com.tencent.mm.compatible.util.j.nu()) && (2 != bsQbrM))
+      if ((Build.VERSION.SDK_INT >= 11) && (com.tencent.mm.compatible.util.j.lI()) && (2 != bgWbfN))
       {
         setMode(3);
         return paramBoolean1;
@@ -667,66 +674,73 @@ public final class d
     }
   }
   
-  public final void bN(int paramInt)
+  public final void cf(int paramInt)
   {
-    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "notify, new status: %d, current status: %d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(bpv) });
-    if (bpv != paramInt)
+    v.d("MicroMsg.MMAudioManager", "notify, new status: %d, current status: %d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(bdu) });
+    if (bdu != paramInt)
     {
-      bpv = paramInt;
-      Iterator localIterator = aod.iterator();
+      bdu = paramInt;
+      Iterator localIterator = bdA.iterator();
       while (localIterator.hasNext()) {
-        ((a)localIterator.next()).aO(paramInt);
+        ((a)localIterator.next()).be(paramInt);
       }
     }
   }
   
-  public final void bO(int paramInt)
+  public final void cg(int paramInt)
   {
-    if (bpu != null) {
-      bpu.adjustStreamVolume(paramInt, 1, 5);
+    if (bdt != null) {
+      bdt.adjustStreamVolume(paramInt, 1, 5);
     }
   }
   
-  public final void bP(int paramInt)
+  public final void ch(int paramInt)
   {
-    if (bpu != null) {
-      bpu.adjustStreamVolume(paramInt, -1, 5);
+    if (bdt != null) {
+      bdt.adjustStreamVolume(paramInt, -1, 5);
     }
   }
   
-  public final int nL()
+  public final void lZ()
+  {
+    v.d("MicroMsg.MMAudioManager", "dkbt bluetoothStopped %s", new Object[] { mg() });
+    bdw = false;
+    cf(2);
+  }
+  
+  public final int ma()
   {
     int i = 1;
-    if (!nP())
+    if (!mf())
     {
       i = -1;
       return i;
     }
-    bpv = -1;
-    u.h("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt begin tryStartBluetooth %s", new Object[] { nQ() });
-    AudioManager localAudioManager = bpu;
+    bdu = -1;
+    v.h("MicroMsg.MMAudioManager", "dkbt begin tryStartBluetooth %s", new Object[] { mg() });
+    AudioManager localAudioManager = bdt;
     boolean bool;
     if (!localAudioManager.isBluetoothScoAvailableOffCall()) {
       bool = false;
     }
     for (;;)
     {
-      u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt end tryStartBluetooth %s ret:%s", new Object[] { nQ(), Boolean.valueOf(bool) });
-      u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt  tryStartBluetooth " + nQ() + " ret:" + bool);
-      if (nN()) {
+      v.d("MicroMsg.MMAudioManager", "dkbt end tryStartBluetooth %s ret:%s", new Object[] { mg(), Boolean.valueOf(bool) });
+      v.d("MicroMsg.MMAudioManager", "dkbt  tryStartBluetooth " + mg() + " ret:" + bool);
+      if (mc()) {
         break;
       }
       return 0;
-      if (ak.aKi)
+      if (an.awC)
       {
         bool = false;
       }
       else
       {
-        if ((bsQbrC == 1) || (bsQbrC == -1)) {
+        if ((bgWbfD == 1) || (bgWbfD == -1)) {
           localAudioManager.startBluetoothSco();
         }
-        if ((bsQbrD == 1) || (bsQbrC == -1)) {
+        if ((bgWbfE == 1) || (bgWbfD == -1)) {
           localAudioManager.setBluetoothScoOn(true);
         }
         bool = true;
@@ -734,59 +748,60 @@ public final class d
     }
   }
   
-  public final void nM()
+  public final void mb()
   {
-    u.h("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt begin stopBluetooth %s", new Object[] { nQ() });
-    com.tencent.mm.compatible.c.a.a(bpu);
-    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt end stopBluetooth %s", new Object[] { nQ() });
+    v.h("MicroMsg.MMAudioManager", "dkbt begin stopBluetooth %s", new Object[] { mg() });
+    com.tencent.mm.compatible.c.a.a(bdt);
+    v.d("MicroMsg.MMAudioManager", "dkbt end stopBluetooth %s", new Object[] { mg() });
   }
   
-  public final boolean nN()
+  public final boolean mc()
   {
-    return (bpu.isBluetoothScoOn()) || (bpx);
+    return (bdt.isBluetoothScoOn()) || (bdw);
   }
   
-  public final String nQ()
+  public final String mg()
   {
-    return "mode:" + bpu.getMode() + " isSpeakerphoneOn:" + bpu.isSpeakerphoneOn() + " isBluetoothOn:" + nN() + " btStatus:" + bpv;
+    return "mode:" + bdt.getMode() + " isSpeakerphoneOn:" + bdt.isSpeakerphoneOn() + " isBluetoothOn:" + mc() + " btStatus:" + bdu;
   }
   
-  public final boolean nR()
+  public final boolean mh()
   {
-    return bpu.getMode() == 0;
+    return bdt.getMode() == 0;
   }
   
-  public final boolean nS()
+  public final boolean mi()
   {
-    if (bpu != null) {
-      return bpu.isWiredHeadsetOn();
+    if (bdt != null) {
+      return bdt.isWiredHeadsetOn();
     }
     return false;
   }
   
-  public final void nU()
+  @Deprecated
+  public final void mk()
   {
     Object localObject2;
-    if (bpu != null)
+    if (bdt != null)
     {
-      Object localObject1 = k.oi().bR(98305);
-      localObject2 = k.oi().bR(94209);
+      Object localObject1 = k.my().cj(98305);
+      localObject2 = k.my().cj(94209);
       if (localObject1 != null)
       {
-        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "resumeAudioConfig spearkeron: " + localObject1);
+        v.d("MicroMsg.MMAudioManager", "resumeAudioConfig spearkeron: " + localObject1);
         setSpeakerphoneOn(((Boolean)localObject1).booleanValue());
-        k.oi().set(98305, null);
+        k.my().set(98305, null);
       }
       if (localObject2 == null) {}
     }
     try
     {
-      u.i("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "resumeAudioConfig oinmode: " + localObject2 + ",inmode:0");
+      v.i("MicroMsg.MMAudioManager", "resumeAudioConfig oinmode: " + localObject2 + ",inmode:0");
       i = Integer.parseInt(String.valueOf(localObject2));
       if ((i >= -1) && (i < 4))
       {
         setMode(i);
-        k.oi().set(94209, null);
+        k.my().set(94209, null);
         return;
       }
     }
@@ -803,26 +818,26 @@ public final class d
   
   public final void setMode(int paramInt)
   {
-    if (bpu != null)
+    if (bdt != null)
     {
-      u.i("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "set mode from %d to %d", new Object[] { Integer.valueOf(bpu.getMode()), Integer.valueOf(paramInt) });
-      bpu.setMode(paramInt);
+      v.i("MicroMsg.MMAudioManager", "set mode from %d to %d", new Object[] { Integer.valueOf(bdt.getMode()), Integer.valueOf(paramInt) });
+      bdt.setMode(paramInt);
     }
   }
   
   public final void setSpeakerphoneOn(boolean paramBoolean)
   {
-    u.h("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "setSpeakerphoneOn, on: " + paramBoolean, new Object[0]);
-    if (bpu != null)
+    v.h("MicroMsg.MMAudioManager", "setSpeakerphoneOn, on: " + paramBoolean, new Object[0]);
+    if (bdt != null)
     {
-      u.i("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "setSpeakerphoneOn on: " + paramBoolean);
-      bpu.setSpeakerphoneOn(paramBoolean);
+      v.i("MicroMsg.MMAudioManager", "setSpeakerphoneOn on: " + paramBoolean);
+      bdt.setSpeakerphoneOn(paramBoolean);
     }
   }
   
   public static abstract interface a
   {
-    public abstract void aO(int paramInt);
+    public abstract void be(int paramInt);
   }
 }
 

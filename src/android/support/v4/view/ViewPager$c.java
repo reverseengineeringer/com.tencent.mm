@@ -12,21 +12,21 @@ final class ViewPager$c
 {
   ViewPager$c(ViewPager paramViewPager) {}
   
-  private boolean ar()
+  private boolean aq()
   {
-    return (ViewPager.b(gA) != null) && (ViewPager.b(gA).getCount() > 1);
+    return (ViewPager.b(gV) != null) && (ViewPager.b(gV).getCount() > 1);
   }
   
   public final void a(View paramView, android.support.v4.view.a.a parama)
   {
     super.a(paramView, parama);
     parama.setClassName(ViewPager.class.getName());
-    boolean bool = ar();
-    android.support.v4.view.a.a.gK.f(gL, bool);
-    if (gA.canScrollHorizontally(1)) {
+    boolean bool = aq();
+    android.support.v4.view.a.a.hf.f(hg, bool);
+    if (gV.canScrollHorizontally(1)) {
       parama.addAction(4096);
     }
-    if (gA.canScrollHorizontally(-1)) {
+    if (gV.canScrollHorizontally(-1)) {
       parama.addAction(8192);
     }
   }
@@ -35,17 +35,17 @@ final class ViewPager$c
   {
     super.onInitializeAccessibilityEvent(paramView, paramAccessibilityEvent);
     paramAccessibilityEvent.setClassName(ViewPager.class.getName());
-    paramView = d.aw();
-    boolean bool = ar();
-    d.gR.f(gS, bool);
-    if ((paramAccessibilityEvent.getEventType() == 4096) && (ViewPager.b(gA) != null))
+    paramView = d.av();
+    boolean bool = aq();
+    d.hm.f(hn, bool);
+    if ((paramAccessibilityEvent.getEventType() == 4096) && (ViewPager.b(gV) != null))
     {
-      int i = ViewPager.b(gA).getCount();
-      d.gR.e(gS, i);
-      i = ViewPager.c(gA);
-      d.gR.d(gS, i);
-      i = ViewPager.c(gA);
-      d.gR.f(gS, i);
+      int i = ViewPager.b(gV).getCount();
+      d.hm.e(hn, i);
+      i = ViewPager.c(gV);
+      d.hm.d(hn, i);
+      i = ViewPager.c(gV);
+      d.hm.f(hn, i);
     }
   }
   
@@ -59,16 +59,16 @@ final class ViewPager$c
     default: 
       return false;
     case 4096: 
-      if (gA.canScrollHorizontally(1))
+      if (gV.canScrollHorizontally(1))
       {
-        gA.setCurrentItem(ViewPager.c(gA) + 1);
+        gV.s(ViewPager.c(gV) + 1);
         return true;
       }
       return false;
     }
-    if (gA.canScrollHorizontally(-1))
+    if (gV.canScrollHorizontally(-1))
     {
-      gA.setCurrentItem(ViewPager.c(gA) - 1);
+      gV.s(ViewPager.c(gV) - 1);
       return true;
     }
     return false;

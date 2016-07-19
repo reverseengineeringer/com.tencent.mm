@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field public brt:I
+.field public bft:I
 
-.field public bru:I
+.field public bfu:I
 
-.field public brv:I
+.field public bfv:I
 
-.field public brw:I
+.field public bfw:I
 
-.field public brx:I
+.field public bfx:I
 
-.field final synthetic bry:Lcom/tencent/mm/compatible/d/b;
+.field final synthetic bfy:Lcom/tencent/mm/compatible/d/b;
 
 .field public height:I
 
@@ -38,7 +38,7 @@
 
     .prologue
     .line 113
-    iput-object p1, p0, Lcom/tencent/mm/compatible/d/b$a;->bry:Lcom/tencent/mm/compatible/d/b;
+    iput-object p1, p0, Lcom/tencent/mm/compatible/d/b$a;->bfy:Lcom/tencent/mm/compatible/d/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,31 +48,33 @@
 
 # virtual methods
 .method public final reset()V
-    .locals 1
+    .locals 2
 
     .prologue
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
     .line 146
-    iput v0, p0, Lcom/tencent/mm/compatible/d/b$a;->brt:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/b$a;->bft:I
 
     .line 147
-    iput v0, p0, Lcom/tencent/mm/compatible/d/b$a;->bru:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/b$a;->bfu:I
 
     .line 148
-    iput v0, p0, Lcom/tencent/mm/compatible/d/b$a;->brv:I
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/tencent/mm/compatible/d/b$a;->bfv:I
 
     .line 149
-    iput v0, p0, Lcom/tencent/mm/compatible/d/b$a;->brw:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/b$a;->bfw:I
 
     .line 150
-    iput v0, p0, Lcom/tencent/mm/compatible/d/b$a;->brx:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/b$a;->bfx:I
 
     .line 151
-    iput v0, p0, Lcom/tencent/mm/compatible/d/b$a;->width:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/b$a;->width:I
 
     .line 152
-    iput v0, p0, Lcom/tencent/mm/compatible/d/b$a;->height:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/b$a;->height:I
 
     .line 153
     return-void

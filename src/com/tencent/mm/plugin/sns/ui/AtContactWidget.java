@@ -11,8 +11,8 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.p;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -21,14 +21,14 @@ import java.util.List;
 public class AtContactWidget
   extends LinearLayout
 {
-  private View cMt;
-  private Activity eRr;
-  private ImageView gWs;
-  private TextView gWt;
-  private PreviewContactView gWu;
-  SnsUploadConfigView gWv;
-  private List gWw = new LinkedList();
-  private boolean gWx = false;
+  private View cJf;
+  private Activity eZl;
+  private ImageView hjR;
+  private TextView hjS;
+  private PreviewContactView hjT;
+  SnsUploadConfigView hjU;
+  private List<String> hjV = new LinkedList();
+  private boolean hjW = false;
   
   public AtContactWidget(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -43,24 +43,24 @@ public class AtContactWidget
     init(paramContext);
   }
   
-  private void aAQ()
+  private void aDH()
   {
-    if (gWw.size() > 0)
+    if (hjV.size() > 0)
     {
-      gWs.setImageResource(getWithDrawableId());
+      hjR.setImageResource(aDI());
       return;
     }
-    gWs.setImageResource(getWithEmptyDrawableId());
+    hjR.setImageResource(aDJ());
   }
   
   private void init(Context paramContext)
   {
-    eRr = ((Activity)paramContext);
-    cMt = p.ee(paramContext).inflate(getLayoutResource(), this);
-    gWu = ((PreviewContactView)cMt.findViewById(2131168669));
-    gWs = ((ImageView)cMt.findViewById(2131168524));
-    gWt = ((TextView)cMt.findViewById(2131168525));
-    cMt.setOnClickListener(new View.OnClickListener()
+    eZl = ((Activity)paramContext);
+    cJf = p.ef(paramContext).inflate(getLayoutResource(), this);
+    hjT = ((PreviewContactView)cJf.findViewById(2131755338));
+    hjR = ((ImageView)cJf.findViewById(2131755336));
+    hjS = ((TextView)cJf.findViewById(2131758994));
+    cJf.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
@@ -69,132 +69,89 @@ public class AtContactWidget
     });
   }
   
-  public final boolean A(Intent paramIntent)
+  public final boolean E(Intent paramIntent)
   {
     paramIntent = paramIntent.getStringExtra("Select_Contact");
     new LinkedList();
     if ((paramIntent == null) || (paramIntent.equals(""))) {}
-    for (paramIntent = new LinkedList();; paramIntent = ay.h(paramIntent.split(",")))
+    for (paramIntent = new LinkedList();; paramIntent = be.g(paramIntent.split(",")))
     {
-      if (gWw == null) {
-        gWw = new LinkedList();
+      if (hjV == null) {
+        hjV = new LinkedList();
       }
-      gWw.clear();
+      hjV.clear();
       paramIntent = paramIntent.iterator();
       while (paramIntent.hasNext())
       {
         String str = (String)paramIntent.next();
-        if (!gWw.contains(str)) {
-          gWw.add(str);
+        if (!hjV.contains(str)) {
+          hjV.add(str);
         }
       }
     }
-    if (gWu != null) {
-      gWu.setList(gWw);
+    if (hjT != null) {
+      hjT.bf(hjV);
     }
-    if (gWx)
+    if (hjW)
     {
-      u.d("!32@/B4Tb64lLpJOOR0IitmaXivUELpXEdej", "withList count " + gWw.size());
-      if ((!gWx) || (gWt == null) || (gWw.size() <= 0)) {
+      v.d("MicroMsg.AtContactWiget", "withList count " + hjV.size());
+      if ((!hjW) || (hjS == null) || (hjV.size() <= 0)) {
         break label279;
       }
-      gWt.setVisibility(0);
-      if (gWw.size() >= 100) {
+      hjS.setVisibility(0);
+      if (hjV.size() >= 100) {
         break label266;
       }
-      gWt.setText(gWw.size());
+      hjS.setText(hjV.size());
     }
     for (;;)
     {
-      aAQ();
+      aDH();
       return true;
       label266:
-      gWt.setText(2131431112);
+      hjS.setText(2131235738);
       continue;
       label279:
-      gWt.setVisibility(8);
+      hjS.setVisibility(8);
     }
   }
   
-  public final void aAP()
+  public final List<String> aDF()
   {
-    if (gWw == null) {
-      gWw = new LinkedList();
+    if (hjV == null) {
+      hjV = new LinkedList();
     }
-    gWw.clear();
-    if (gWu != null) {
-      gWu.setList(gWw);
+    return hjV;
+  }
+  
+  public final void aDG()
+  {
+    if (hjV == null) {
+      hjV = new LinkedList();
     }
-    aAQ();
-    if (gWt != null) {
-      gWt.setVisibility(8);
+    hjV.clear();
+    if (hjT != null) {
+      hjT.bf(hjV);
+    }
+    aDH();
+    if (hjS != null) {
+      hjS.setVisibility(8);
     }
   }
   
-  public List getAtList()
+  protected int aDI()
   {
-    if (gWw == null) {
-      gWw = new LinkedList();
-    }
-    return gWw;
+    return 2131165851;
+  }
+  
+  protected int aDJ()
+  {
+    return 2131165850;
   }
   
   protected int getLayoutResource()
   {
-    return 2131362879;
-  }
-  
-  protected int getWithDrawableId()
-  {
-    return 2130903274;
-  }
-  
-  protected int getWithEmptyDrawableId()
-  {
-    return 2130903296;
-  }
-  
-  public void setShowAtList(boolean paramBoolean)
-  {
-    PreviewContactView localPreviewContactView;
-    if (gWu != null)
-    {
-      localPreviewContactView = gWu;
-      if (!paramBoolean) {
-        break label24;
-      }
-    }
-    label24:
-    for (int i = 0;; i = 8)
-    {
-      localPreviewContactView.setVisibility(i);
-      return;
-    }
-  }
-  
-  public void setShowAtNum(boolean paramBoolean)
-  {
-    gWx = paramBoolean;
-  }
-  
-  public void setShowAtTips(boolean paramBoolean)
-  {
-    TextView localTextView;
-    if (cMt != null)
-    {
-      localTextView = (TextView)cMt.findViewById(2131168668);
-      if (localTextView != null) {
-        if (!paramBoolean) {
-          break label37;
-        }
-      }
-    }
-    label37:
-    for (int i = 0;; i = 8)
-    {
-      localTextView.setVisibility(i);
-      return;
-    }
+    return 2130903103;
   }
 }
 

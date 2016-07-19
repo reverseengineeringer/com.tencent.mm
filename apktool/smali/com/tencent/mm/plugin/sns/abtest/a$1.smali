@@ -13,50 +13,65 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/lw;",
+        ">;"
+    }
+.end annotation
+
 
 # direct methods
 .method constructor <init>()V
     .locals 1
 
     .prologue
-    .line 54
-    const/4 v0, 0x0
+    .line 55
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/lw;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/abtest/a$1;->kum:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
-    .locals 11
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
+    .locals 12
 
     .prologue
-    const-wide/16 v9, 0x0
+    const-wide/16 v10, 0x0
 
     const/4 v8, 0x0
 
-    .line 57
-    instance-of v0, p1, Lcom/tencent/mm/d/a/ln;
+    .line 55
+    check-cast p1, Lcom/tencent/mm/e/a/lw;
+
+    instance-of v0, p1, Lcom/tencent/mm/e/a/lw;
 
     if-eqz v0, :cond_0
 
-    .line 58
-    check-cast p1, Lcom/tencent/mm/d/a/ln;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/lw;->aum:Lcom/tencent/mm/e/a/lw$a;
 
-    .line 59
-    iget-object v0, p1, Lcom/tencent/mm/d/a/ln;->aHT:Lcom/tencent/mm/d/a/ln$a;
+    iget-boolean v0, v0, Lcom/tencent/mm/e/a/lw$a;->aun:Z
 
-    iget-boolean v0, v0, Lcom/tencent/mm/d/a/ln$a;->aHU:Z
+    iget-object v1, p1, Lcom/tencent/mm/e/a/lw;->aum:Lcom/tencent/mm/e/a/lw$a;
 
-    .line 60
-    iget-object v1, p1, Lcom/tencent/mm/d/a/ln;->aHT:Lcom/tencent/mm/d/a/ln$a;
+    iget-wide v2, v1, Lcom/tencent/mm/e/a/lw$a;->aln:J
 
-    iget-wide v1, v1, Lcom/tencent/mm/d/a/ln$a;->azl:J
-
-    .line 61
-    const-string/jumbo v3, "!56@/B4Tb64lLpJS/0D3j3Gd1bS+8gYCT1QlPdFvFKO+xQxizYRF9hcI0A=="
+    const-string/jumbo v1, "MicroMsg.NotInteresetABTestManager"
 
     const-string/jumbo v4, "blockUserEventListener callback, isBlock:%b, snsInfoSvrId:%b"
 
@@ -72,56 +87,50 @@
 
     const/4 v6, 0x1
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v7
 
     aput-object v7, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 62
-    cmp-long v3, v1, v9
+    cmp-long v1, v2, v10
 
-    if-eqz v3, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/abtest/a;->axn()J
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/abtest/a;->azP()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    cmp-long v3, v3, v9
+    cmp-long v1, v4, v10
 
-    if-eqz v3, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/abtest/a;->axn()J
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/abtest/a;->azP()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    cmp-long v1, v3, v1
+    cmp-long v1, v4, v2
 
     if-nez v1, :cond_0
 
-    .line 63
     if-eqz v0, :cond_1
 
-    .line 64
     const/4 v0, 0x4
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/abtest/a;->lj(I)I
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/abtest/a;->ms(I)I
 
-    .line 68
     :goto_0
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/abtest/a;->uW()V
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/abtest/a;->uY()V
 
-    .line 71
     :cond_0
     return v8
 
-    .line 66
     :cond_1
     const/4 v0, 0x3
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/abtest/a;->lj(I)I
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/abtest/a;->ms(I)I
 
     goto :goto_0
 .end method

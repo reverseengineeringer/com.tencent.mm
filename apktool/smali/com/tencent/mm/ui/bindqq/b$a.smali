@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract bdF()V
+.method public abstract bjm()V
 .end method
 
-.method public abstract r(IILjava/lang/String;)Z
+.method public abstract p(IILjava/lang/String;)Z
 .end method

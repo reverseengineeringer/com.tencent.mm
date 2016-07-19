@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:id="@id/c3t" android:layout_marginLeft="18.0dip" android:layout_marginRight="18.0dip" android:hint="@string/b5i" android:inputType="textPassword" style="@style/MMLineEditText" />
+</LinearLayout>

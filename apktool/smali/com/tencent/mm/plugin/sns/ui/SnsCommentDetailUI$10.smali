@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->Gb()V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+.field final synthetic hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1063
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$10;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    .line 1088
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$10;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,7 +40,7 @@
     .locals 0
 
     .prologue
-    .line 1067
+    .line 1092
     return-void
 .end method
 
@@ -48,17 +48,17 @@
     .locals 1
 
     .prologue
-    .line 1071
+    .line 1096
     const/4 v0, 0x1
 
     if-ne p2, v0, :cond_0
 
-    .line 1072
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$10;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    .line 1097
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$10;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->age()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aiI()V
 
-    .line 1074
+    .line 1099
     :cond_0
     return-void
 .end method

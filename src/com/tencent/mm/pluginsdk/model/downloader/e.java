@@ -2,9 +2,9 @@ package com.tencent.mm.pluginsdk.model.downloader;
 
 public final class e
 {
-  public String aut = "";
-  public long azd = 0L;
-  public long aze = 0L;
+  public String agg = "";
+  public long alf = 0L;
+  public long alg = 0L;
   public long id = -1L;
   public String path = "";
   public int status = 0;

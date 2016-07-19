@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/g3" android:paddingLeft="@dimen/cy" android:paddingRight="@dimen/co" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/MMFullLineItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/nu" android:layout_width="fill_parent" android:layout_height="@dimen/dn">
+        <com.tencent.mm.ui.base.MaskLayout android:id="@id/nv" android:layout_width="@dimen/dl" android:layout_height="@dimen/dl" android:layout_marginRight="@dimen/cp">
+            <ImageView android:id="@id/g6" android:layout_width="@dimen/dk" android:layout_height="@dimen/dk" android:src="@raw/default_avatar" android:layout_centerVertical="true" />
+            <TextView android:id="@id/g7" android:visibility="gone" android:layout_marginTop="@dimen/i9" android:layout_marginRight="@dimen/cp" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/UnreadDotStyle" />
+        </com.tencent.mm.ui.base.MaskLayout>
+        <TextView android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cd" android:singleLine="true" android:layout_weight="1.0" style="@style/MMFontTitleInList" />
+    </LinearLayout>
+</LinearLayout>

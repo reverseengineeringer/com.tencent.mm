@@ -40,7 +40,7 @@
     return-void
 .end method
 
-.method public static X(Landroid/os/IBinder;)Lcom/tencent/mm/network/f;
+.method public static z(Landroid/os/IBinder;)Lcom/tencent/mm/network/f;
     .locals 2
 
     .prologue
@@ -106,7 +106,7 @@
     .line 38
     sparse-switch p1, :sswitch_data_0
 
-    .line 379
+    .line 388
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v10
@@ -133,7 +133,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/network/p$a;->ab(Landroid/os/IBinder;)Lcom/tencent/mm/network/p;
+    invoke-static {v1}, Lcom/tencent/mm/network/p$a;->D(Landroid/os/IBinder;)Lcom/tencent/mm/network/p;
 
     move-result-object v1
 
@@ -209,7 +209,7 @@
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 69
-    invoke-virtual {p0}, Lcom/tencent/mm/network/f$a;->EJ()Lcom/tencent/mm/network/d;
+    invoke-virtual {p0}, Lcom/tencent/mm/network/f$a;->Fe()Lcom/tencent/mm/network/d;
 
     move-result-object v1
 
@@ -257,7 +257,7 @@
 
     .line 86
     :goto_2
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/network/f$a;->a(Lcom/tencent/mm/protocal/y;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/network/f$a;->a(Lcom/tencent/mm/protocal/ab;)V
 
     .line 87
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -274,18 +274,18 @@
 
     if-eqz v0, :cond_4
 
-    instance-of v2, v0, Lcom/tencent/mm/protocal/y;
+    instance-of v2, v0, Lcom/tencent/mm/protocal/ab;
 
     if-eqz v2, :cond_4
 
-    check-cast v0, Lcom/tencent/mm/protocal/y;
+    check-cast v0, Lcom/tencent/mm/protocal/ab;
 
     goto :goto_2
 
     :cond_4
-    new-instance v0, Lcom/tencent/mm/protocal/y$a$a;
+    new-instance v0, Lcom/tencent/mm/protocal/ab$a$a;
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/protocal/y$a$a;-><init>(Landroid/os/IBinder;)V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/protocal/ab$a$a;-><init>(Landroid/os/IBinder;)V
 
     goto :goto_2
 
@@ -420,7 +420,7 @@
 
     .line 138
     :cond_7
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/network/f$a;->aO(Z)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/network/f$a;->at(Z)V
 
     .line 139
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -492,7 +492,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 171
-    invoke-virtual {p0}, Lcom/tencent/mm/network/f$a;->EK()V
+    invoke-virtual {p0}, Lcom/tencent/mm/network/f$a;->Ff()V
 
     .line 172
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -506,7 +506,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 178
-    invoke-virtual {p0}, Lcom/tencent/mm/network/f$a;->vM()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/network/f$a;->vO()Z
 
     move-result v0
 
@@ -582,7 +582,7 @@
     move-result-object v0
 
     .line 197
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/network/f$a;->gg(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/network/f$a;->gt(Ljava/lang/String;)V
 
     .line 198
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -596,7 +596,7 @@
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 204
-    invoke-virtual {p0}, Lcom/tencent/mm/network/f$a;->EL()Lcom/tencent/mm/network/h;
+    invoke-virtual {p0}, Lcom/tencent/mm/network/f$a;->Fg()Lcom/tencent/mm/network/h;
 
     move-result-object v1
 
@@ -632,7 +632,7 @@
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 216
-    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/network/f$a;->c(Ljava/lang/String;Ljava/util/List;)I
+    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/network/f$a;->d(Ljava/lang/String;Ljava/util/List;)I
 
     move-result v0
 
@@ -778,7 +778,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 275
-    invoke-virtual {p0}, Lcom/tencent/mm/network/f$a;->vY()V
+    invoke-virtual {p0}, Lcom/tencent/mm/network/f$a;->wa()V
 
     .line 276
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -821,7 +821,7 @@
     move-result-object v1
 
     .line 294
-    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/network/f$a;->f(I[B)I
+    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/network/f$a;->g(I[B)I
 
     move-result v0
 
@@ -1038,7 +1038,7 @@
     move-result-object v0
 
     .line 356
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/network/f$a;->gh(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/network/f$a;->gu(Ljava/lang/String;)V
 
     .line 357
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -1062,7 +1062,7 @@
 
     .line 365
     :cond_14
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/network/f$a;->aP(Z)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/network/f$a;->au(Z)V
 
     .line 366
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -1086,16 +1086,38 @@
 
     .line 374
     :cond_15
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/network/f$a;->aQ(Z)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/network/f$a;->av(Z)V
 
     .line 375
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 38
-    nop
+    .line 380
+    :sswitch_22
+    const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 382
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    if-eqz v0, :cond_16
+
+    move v1, v10
+
+    .line 383
+    :cond_16
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/network/f$a;->aw(Z)V
+
+    .line 384
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    .line 38
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
@@ -1131,6 +1153,7 @@
         0x1f -> :sswitch_1f
         0x20 -> :sswitch_20
         0x21 -> :sswitch_21
+        0x22 -> :sswitch_22
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

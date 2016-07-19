@@ -10,7 +10,7 @@ final class VerifyQQUI$5
   
   public final void onDismiss(DialogInterface paramDialogInterface)
   {
-    VerifyQQUI.h(kPK);
+    VerifyQQUI.h(loZ);
   }
 }
 

@@ -1,309 +1,93 @@
 package com.tencent.mm.pluginsdk.model.app;
 
+import com.tencent.mm.model.h;
+import com.tencent.mm.modelcdntran.CdnTransportEngine;
 import com.tencent.mm.network.o;
-import com.tencent.mm.pluginsdk.ui.tools.b;
-import com.tencent.mm.protocal.b.afx;
-import com.tencent.mm.protocal.b.pl;
-import com.tencent.mm.protocal.b.pm;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.a.c;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.hr;
+import com.tencent.mm.protocal.b.hs;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.a.c;
+import com.tencent.mm.t.d;
 
 public final class y
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private static final String[] iBn = { "wxf109da3e26cf89f1", "wxc56bba830743541e", "wx41dd4f6ef137bd0b" };
-  private d anM;
-  private a anN;
-  final String appId;
-  private final int cbf;
+  private a bkQ;
+  private d bkT;
+  private final a iXN;
   
-  public y(String paramString)
+  public y(com.tencent.mm.p.a.a parama, String paramString1, String paramString2, a parama1)
   {
-    appId = paramString;
-    cbf = 3;
-    paramString = new a.a();
-    bFa = new pl();
-    bFb = new pm();
-    uri = "/cgi-bin/micromsg-bin/getappinfo";
-    bEY = 231;
-    bFc = 0;
-    bFd = 0;
-    anN = paramString.vy();
+    Object localObject = new com.tencent.mm.t.a.a();
+    byl = new hr();
+    bym = new hs();
+    uri = "/cgi-bin/micromsg-bin/checkbigfileupload";
+    byj = 727;
+    byn = 0;
+    byo = 0;
+    bkQ = ((com.tencent.mm.t.a.a)localObject).vA();
+    localObject = (hr)bkQ.byh.byq;
+    if (parama != null)
+    {
+      jDJ = bqo;
+      jDK = bqc;
+      jDM = title;
+      jDL = bpY;
+    }
+    for (jDI = bpX;; jDI = com.tencent.mm.a.e.aA(paramString1))
+    {
+      jwl = CdnTransportEngine.bDu;
+      eph = paramString2;
+      epi = h.se();
+      iXN = parama1;
+      v.i("MicroMsg.NetSceneCheckBigFileUpload", "summerbig NetSceneCheckBigFileUpload content[%s], aesKey[%s] md5[%s] FileName[%s] FileSize[%d] FileExt[%s] talker[%s], fromUserName[%s], stack[%s]", new Object[] { parama, jDJ, jDK, jDM, Long.valueOf(jDI), jDL, eph, epi, be.baX() });
+      return;
+      jDJ = com.tencent.mm.modelcdntran.e.ya().nativeGenerateAesKey();
+      jDK = com.tencent.mm.modelcdntran.e.ya().nativeGetFileMD5(paramString1);
+      jDM = com.tencent.mm.a.e.aD(paramString1);
+      jDL = com.tencent.mm.a.e.aC(paramString1);
+    }
   }
   
   public final int a(com.tencent.mm.network.e parame, d paramd)
   {
-    anM = paramd;
-    if ((appId == null) || (appId.length() == 0))
-    {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvsh3Y8SF4w5FcPc8RULIHPI=", "doScene fail, appId is null");
-      return -1;
-    }
-    paramd = (pl)anN.bEW.bFf;
-    ehX = appId;
-    jkn = cbf;
-    return a(parame, anN, this);
-  }
-  
-  protected final int a(o paramo)
-  {
-    return j.b.bFI;
+    bkT = paramd;
+    return a(parame, bkQ, this);
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvsh3Y8SF4w5FcPc8RULIHPI=", "errType = " + paramInt2 + ", errCode = " + paramInt3);
-    if ((paramInt2 == 4) && (paramInt3 == 64525))
-    {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvsh3Y8SF4w5FcPc8RULIHPI=", "errType = " + paramInt2 + ", errCode = " + paramInt3 + ", appinfo does not exist");
-      aj.aPR();
-      paramo = i.aPK();
-      field_appId = appId;
-      aj.aPR().b(paramo);
-      anM.a(paramInt2, paramInt3, paramString, this);
-      return;
-    }
+    v.d("MicroMsg.NetSceneCheckBigFileUpload", "summerbig onGYNetEnd [%d, %d, %s]", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString });
     if ((paramInt2 != 0) || (paramInt3 != 0))
     {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvsh3Y8SF4w5FcPc8RULIHPI=", "errType = " + paramInt2 + ", errCode = " + paramInt3);
-      anM.a(paramInt2, paramInt3, paramString, this);
+      v.e("MicroMsg.NetSceneCheckBigFileUpload", "summerbig onGYNetEnd errType = " + paramInt2 + ", errCode = " + paramInt3);
+      bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
+      if (iXN != null) {
+        iXN.a("", "", "", 0L);
+      }
+    }
+    do
+    {
       return;
-    }
-    Object localObject1 = (pm)bEX.bFf;
-    paramArrayOfByte = jpn.iWA;
-    Object localObject2 = jpn;
-    if (localObject2 == null)
-    {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvsh3Y8SF4w5FcPc8RULIHPI=", "convertToAppInfo : openAppInfo is null");
-      paramo = null;
-    }
-    while (paramo == null)
-    {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvsh3Y8SF4w5FcPc8RULIHPI=", "onGYNetEnd : info is null");
-      anM.a(3, -1, paramString, this);
-      return;
-      paramo = new f();
-      field_appId = ehX;
-      field_appName = fpS;
-      field_appDiscription = jDl;
-      field_appIconUrl = iWy;
-      field_appStoreUrl = jDm;
-      field_appVersion = jcl;
-      field_appWatermarkUrl = jDn;
-      field_packageName = iWA;
-      field_signature = p.zU(jck);
-      field_appName_en = jDo;
-      field_appName_tw = jDq;
-      field_appDiscription_en = jDp;
-      field_appDiscription_tw = jDr;
-      field_appInfoFlag = eif;
-      u.d("!44@/B4Tb64lLpK+IBX8XDgnvsh3Y8SF4w5FcPc8RULIHPI=", "appid = %s, appInfoFlag = %s", new Object[] { field_appId, Integer.valueOf(field_appInfoFlag) });
-    }
-    field_appType = iYT;
-    localObject2 = jpn;
-    localObject1 = iWA;
-    localObject2 = jck;
-    if ((localObject1 == null) || (((String)localObject1).length() == 0) || (localObject2 == null) || (((String)localObject2).length() == 0)) {}
-    for (paramInt1 = 1;; paramInt1 = 0)
-    {
-      if ((paramInt1 != 0) || (paramo.aPB()))
-      {
-        u.e("!44@/B4Tb64lLpK+IBX8XDgnvsh3Y8SF4w5FcPc8RULIHPI=", "no android app, packageName = " + paramArrayOfByte);
-        b.AS(appId);
-      }
-      if (field_appId != null) {
-        break;
-      }
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvsh3Y8SF4w5FcPc8RULIHPI=", "onGYNetEnd : info.appId is null");
-      anM.a(3, -1, paramString, this);
-      return;
-    }
-    if (!field_appId.equals(appId))
-    {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvsh3Y8SF4w5FcPc8RULIHPI=", "onGYNetEnd : appId is different");
-      anM.a(3, -1, paramString, this);
-      return;
-    }
-    paramArrayOfByte = aj.aPR();
-    localObject1 = paramArrayOfByte.zP(appId);
-    if ((localObject1 == null) || (field_appId == null) || (field_appId.length() == 0))
-    {
-      if (paramInt1 != 0)
-      {
-        paramInt1 = 3;
-        field_status = paramInt1;
-        field_modifyTime = System.currentTimeMillis();
-        if (field_appId != null) {
-          paramInt1 = 0;
-        }
-      }
-      for (;;)
-      {
-        if (paramInt1 < iBn.length)
-        {
-          if (field_appId.equals(iBn[paramInt1])) {
-            field_status = -1;
-          }
-        }
-        else
-        {
-          if (paramArrayOfByte.m(paramo)) {
-            break label754;
-          }
-          u.e("!44@/B4Tb64lLpK+IBX8XDgnvsh3Y8SF4w5FcPc8RULIHPI=", "onGYNetEnd : insert fail");
-          anM.a(3, -1, paramString, this);
-          return;
-          paramInt1 = 4;
-          break;
-        }
-        paramInt1 += 1;
-      }
-      label754:
-      aj.aPP().aE(appId, 1);
-      aj.aPP().aE(appId, 2);
-      aj.aPP().aE(appId, 3);
-      aj.aPP().aE(appId, 4);
-      aj.aPP().aE(appId, 5);
-    }
-    label894:
-    label983:
-    label990:
-    label1195:
-    label1427:
-    for (;;)
-    {
-      if (ay.kz(field_openId))
-      {
-        u.d("!44@/B4Tb64lLpK+IBX8XDgnvsh3Y8SF4w5FcPc8RULIHPI=", "onGYNetEnd, openId is null, trigger getAppSetting, appId = " + field_appId);
-        aj.aPV().zT(field_appId);
-      }
-      anM.a(paramInt2, paramInt3, paramString, this);
-      return;
-      if (paramInt1 != 0)
-      {
-        paramInt1 = 3;
-        field_status = paramInt1;
-        if (field_appId != null)
-        {
-          paramInt1 = 0;
-          if (paramInt1 < iBn.length)
-          {
-            if (!field_appId.equals(iBn[paramInt1])) {
-              break label983;
-            }
-            field_status = -1;
-          }
-        }
-        if (localObject1 != null) {
-          break label990;
-        }
-        u.e("!44@/B4Tb64lLpK+IBX8XDgnvsh3Y8SF4w5FcPc8RULIHPI=", "merge failed, some appinfo is null");
-      }
-      for (;;)
-      {
-        if (paramArrayOfByte.a(paramo, new String[0])) {
-          break label1195;
-        }
-        u.e("!44@/B4Tb64lLpK+IBX8XDgnvsh3Y8SF4w5FcPc8RULIHPI=", "onGYNetEnd : update fail");
-        anM.a(3, -1, paramString, this);
-        return;
-        paramInt1 = field_status;
-        break;
-        paramInt1 += 1;
-        break label894;
-        if (((f)localObject1).aPC())
-        {
-          if (!ay.kz(field_appIconUrl)) {
-            field_appIconUrl = field_appIconUrl;
-          }
-          if (!ay.kz(field_appName)) {
-            field_appName = field_appName;
-          }
-          if (!ay.kz(field_appName_en)) {
-            field_appName_en = field_appName_en;
-          }
-          if (!ay.kz(field_appName_tw)) {
-            field_appName_tw = field_appName_tw;
-          }
-        }
-        if ((ay.kz(field_appId)) || (ay.kz(field_appId)))
-        {
-          u.e("!44@/B4Tb64lLpK+IBX8XDgnvsh3Y8SF4w5FcPc8RULIHPI=", "merge failed, some appid is null");
-        }
-        else if (!field_appId.equalsIgnoreCase(field_appId))
-        {
-          u.e("!44@/B4Tb64lLpK+IBX8XDgnvsh3Y8SF4w5FcPc8RULIHPI=", "merge failed, appis is different");
-        }
-        else
-        {
-          field_openId = field_openId;
-          field_authFlag = field_authFlag;
-          paramo.bs(aNR);
-          paramo.bt(aNS);
-          paramo.bu(aNT);
-        }
-      }
-      if ((localObject1 == null) || (field_appIconUrl == null) || (field_appIconUrl.length() == 0)) {
-        paramInt1 = 1;
-      }
-      for (;;)
-      {
-        if (paramInt1 == 0) {
-          break label1427;
-        }
-        aj.aPP().aE(appId, 1);
-        aj.aPP().aE(appId, 2);
-        aj.aPP().aE(appId, 3);
-        aj.aPP().aE(appId, 4);
-        aj.aPP().aE(appId, 5);
-        break;
-        if (!ay.kz(aOl))
-        {
-          if (ay.kz(aOl))
-          {
-            paramInt1 = 1;
-            continue;
-          }
-          if (!aOl.equals(aOl))
-          {
-            paramInt1 = 1;
-            continue;
-          }
-        }
-        if (!ay.kz(aOm))
-        {
-          if (ay.kz(aOm))
-          {
-            paramInt1 = 1;
-            continue;
-          }
-          if (!aOm.equals(aOm))
-          {
-            paramInt1 = 1;
-            continue;
-          }
-        }
-        if ((field_appIconUrl == null) || (field_appIconUrl.length() == 0)) {
-          paramInt1 = 0;
-        } else if (!field_appIconUrl.equals(field_appIconUrl)) {
-          paramInt1 = 1;
-        } else {
-          paramInt1 = 0;
-        }
-      }
-    }
+      bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
+      paramString = (hr)byh.byq;
+      paramo = (hs)byi.byq;
+    } while (iXN == null);
+    iXN.a(jDK, jDJ, bFj, jDI);
   }
   
   public final int getType()
   {
-    return 231;
+    return 727;
+  }
+  
+  public static abstract interface a
+  {
+    public abstract void a(String paramString1, String paramString2, String paramString3, long paramLong);
   }
 }
 

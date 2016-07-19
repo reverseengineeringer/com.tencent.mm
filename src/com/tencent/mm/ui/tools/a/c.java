@@ -2,8 +2,8 @@ package com.tencent.mm.ui.tools.a;
 
 import android.text.InputFilter;
 import android.widget.EditText;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.tools.i;
 import com.tencent.mm.ui.tools.i.a;
 import java.lang.ref.WeakReference;
@@ -12,20 +12,20 @@ import java.util.ArrayList;
 public final class c
   extends a
 {
-  private String eut;
-  private int lwd;
-  public boolean lzG = true;
-  private WeakReference lzH;
-  private int lzI;
-  private int lzJ;
-  private ArrayList lzK;
-  private a lzL;
+  private String eAL;
+  public int lWP;
+  private ArrayList<InputFilter> maA;
+  private a maB;
+  public boolean mav = true;
+  private WeakReference<EditText> maw;
+  private int may;
+  private int maz;
   
-  private c(WeakReference paramWeakReference)
+  private c(WeakReference<EditText> paramWeakReference)
   {
-    lzH = paramWeakReference;
-    lwd = i.a.lwf;
-    lzG = false;
+    maw = paramWeakReference;
+    lWP = i.a.lWR;
+    mav = false;
   }
   
   public static c a(EditText paramEditText)
@@ -35,91 +35,91 @@ public final class c
   
   public final void a(a parama)
   {
-    lzL = parama;
-    aSr();
+    maB = parama;
+    aXk();
   }
   
-  protected final int aSq()
+  protected final int aXj()
   {
-    if (ay.kz(eut))
+    if (be.kf(eAL))
     {
-      if (lzH == null) {
+      if (maw == null) {
         return 1;
       }
-      eut = ((EditText)lzH.get()).getText().toString().trim();
+      eAL = ((EditText)maw.get()).getText().toString().trim();
     }
-    int j = i.bh(eut, lwd);
+    int j = i.bt(eAL, lWP);
     if (j < 0) {}
     for (int i = 1; i != 0; i = 0)
     {
-      u.w("!44@/B4Tb64lLpKBZnNdUECN7wNhKDGLpubl8879tKhUKk0=", "you are crazy =.=!that is 2 GB character!");
+      v.w("MicroMsg.InputTextBoundaryCheck", "you are crazy =.=!that is 2 GB character!");
       return 2;
     }
-    if (j < lzJ) {
+    if (j < maz) {
       return 1;
     }
-    if (j > lzI) {
+    if (j > may) {
       return 2;
     }
     return 0;
   }
   
-  protected final void aSr()
+  protected final void aXk()
   {
     Object localObject;
-    if (!lzG)
+    if (!mav)
     {
-      if (lzH == null)
+      if (maw == null)
       {
-        u.w("!44@/B4Tb64lLpKBZnNdUECN7wNhKDGLpubl8879tKhUKk0=", "edit text view is null");
+        v.w("MicroMsg.InputTextBoundaryCheck", "edit text view is null");
         return;
       }
-      if (!ay.bq(lzK)) {
+      if (!be.bz(maA)) {
         break label123;
       }
-      localObject = new i(lzI, lwd);
-      ((EditText)lzH.get()).setFilters(new InputFilter[] { localObject });
+      localObject = new i(may, lWP);
+      ((EditText)maw.get()).setFilters(new InputFilter[] { localObject });
     }
-    while (lzL != null) {
-      switch (aSq())
+    while (maB != null) {
+      switch (aXj())
       {
       default: 
         return;
       case 0: 
-        lzL.mm(eut);
+        maB.ng(eAL);
         return;
         label123:
-        lzK.add(new i(lzI, lwd));
-        localObject = (InputFilter[])lzK.toArray(new InputFilter[lzK.size()]);
-        ((EditText)lzH.get()).setFilters((InputFilter[])localObject);
+        maA.add(new i(may, lWP));
+        localObject = (InputFilter[])maA.toArray(new InputFilter[maA.size()]);
+        ((EditText)maw.get()).setFilters((InputFilter[])localObject);
       }
     }
-    lzL.Om();
+    maB.Px();
     return;
-    lzL.On();
+    maB.Py();
   }
   
-  public final c bV(int paramInt1, int paramInt2)
+  public final c cc(int paramInt1, int paramInt2)
   {
-    lzJ = paramInt1;
-    lzI = paramInt2;
+    maz = paramInt1;
+    may = paramInt2;
     return this;
   }
   
-  public final c rZ(int paramInt)
+  public final c ud(int paramInt)
   {
-    lzJ = 0;
-    lzI = paramInt;
+    maz = 0;
+    may = paramInt;
     return this;
   }
   
   public static abstract interface a
   {
-    public abstract void Om();
+    public abstract void Px();
     
-    public abstract void On();
+    public abstract void Py();
     
-    public abstract void mm(String paramString);
+    public abstract void ng(String paramString);
   }
 }
 

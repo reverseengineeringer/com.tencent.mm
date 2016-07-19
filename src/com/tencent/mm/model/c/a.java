@@ -1,7 +1,7 @@
 package com.tencent.mm.model.c;
 
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.ByteArrayInputStream;
 import java.io.StringWriter;
 import java.util.HashMap;
@@ -24,7 +24,7 @@ import org.xml.sax.InputSource;
 
 public final class a
 {
-  private static DocumentBuilder bDv = null;
+  private static DocumentBuilder bwF = null;
   
   private static String a(Node paramNode)
   {
@@ -40,19 +40,19 @@ public final class a
     {
       for (;;)
       {
-        u.e("!32@/B4Tb64lLpKZuCI4Wj/Pn5/LBXB0XSLU", "nodeToString: %s", new Object[] { paramNode.getMessage() });
+        v.e("MicroMsg.ABTestParser", "nodeToString: %s", new Object[] { paramNode.getMessage() });
       }
     }
   }
   
-  public static List fE(String paramString)
+  public static List<com.tencent.mm.storage.a> fR(String paramString)
   {
-    u.v("!32@/B4Tb64lLpKZuCI4Wj/Pn5/LBXB0XSLU", "ABTest msg content: %s", new Object[] { paramString });
+    v.v("MicroMsg.ABTestParser", "ABTest msg content: %s", new Object[] { paramString });
     LinkedList localLinkedList = new LinkedList();
-    Object localObject1 = fG(paramString);
+    Object localObject1 = fT(paramString);
     if (localObject1 == null)
     {
-      u.e("!32@/B4Tb64lLpKZuCI4Wj/Pn5/LBXB0XSLU", "Msg parsing failed, msg: %s", new Object[] { paramString });
+      v.e("MicroMsg.ABTestParser", "Msg parsing failed, msg: %s", new Object[] { paramString });
       return localLinkedList;
     }
     localObject1 = ((Element)localObject1).getChildNodes();
@@ -105,22 +105,22 @@ public final class a
               paramString = null;
               break;
             }
-            field_sequence = ay.getLong(((NodeList)localObject2).item(0).getTextContent(), 0L);
+            field_sequence = be.getLong(((NodeList)localObject2).item(0).getTextContent(), 0L);
           }
           catch (Exception paramString)
           {
-            u.e("!32@/B4Tb64lLpKZuCI4Wj/Pn5/LBXB0XSLU", paramString.getMessage());
+            v.e("MicroMsg.ABTestParser", paramString.getMessage());
           }
           label290:
           Object localObject2 = localElement.getElementsByTagName("prioritylevel");
           if (((NodeList)localObject2).getLength() > 0)
           {
-            field_prioritylevel = ay.getInt(((NodeList)localObject2).item(0).getTextContent(), 1);
+            field_prioritylevel = be.getInt(((NodeList)localObject2).item(0).getTextContent(), 0);
             label353:
             localObject2 = localElement.getElementsByTagName("starttime");
             if (((NodeList)localObject2).getLength() > 0)
             {
-              field_startTime = ay.getLong(((NodeList)localObject2).item(0).getTextContent(), 0L);
+              field_startTime = be.getLong(((NodeList)localObject2).item(0).getTextContent(), 0L);
               if (field_startTime != 0L) {}
             }
             else
@@ -130,7 +130,7 @@ public final class a
             localObject2 = localElement.getElementsByTagName("endtime");
             if (((NodeList)localObject2).getLength() > 0)
             {
-              field_endTime = ay.getLong(((NodeList)localObject2).item(0).getTextContent(), 0L);
+              field_endTime = be.getLong(((NodeList)localObject2).item(0).getTextContent(), 0L);
               if (field_endTime != 0L) {}
             }
             else
@@ -139,7 +139,7 @@ public final class a
             }
             localObject2 = localElement.getElementsByTagName("noreport");
             if (((NodeList)localObject2).getLength() > 0) {
-              if (ay.getInt(((NodeList)localObject2).item(0).getTextContent(), 0) != 0) {
+              if (be.getInt(((NodeList)localObject2).item(0).getTextContent(), 0) != 0) {
                 break label541;
               }
             }
@@ -150,7 +150,7 @@ public final class a
             field_needReport = bool;
             field_rawXML = a(localElement);
             break;
-            field_prioritylevel = 1;
+            field_prioritylevel = 0;
             break label353;
           }
         }
@@ -164,13 +164,13 @@ public final class a
     }
   }
   
-  public static Map fF(String paramString)
+  public static Map<String, String> fS(String paramString)
   {
     HashMap localHashMap = new HashMap();
-    Object localObject1 = fG(paramString);
+    Object localObject1 = fT(paramString);
     if (localObject1 == null)
     {
-      u.e("!32@/B4Tb64lLpKZuCI4Wj/Pn5/LBXB0XSLU", "Raw XML string parsing failed, xml: %s", new Object[] { paramString });
+      v.e("MicroMsg.ABTestParser", "Raw XML string parsing failed, xml: %s", new Object[] { paramString });
       return localHashMap;
     }
     paramString = ((Element)localObject1).getElementsByTagName("args");
@@ -195,13 +195,13 @@ public final class a
     return localHashMap;
   }
   
-  private static Element fG(String paramString)
+  private static Element fT(String paramString)
   {
     try
     {
       InputSource localInputSource = new InputSource(new ByteArrayInputStream(paramString.getBytes()));
-      if (bDv != null) {
-        paramString = bDv;
+      if (bwF != null) {
+        paramString = bwF;
       }
       for (;;)
       {
@@ -209,13 +209,13 @@ public final class a
         paramString.normalize();
         return paramString.getDocumentElement();
         paramString = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-        bDv = paramString;
+        bwF = paramString;
       }
       return null;
     }
     catch (Exception paramString)
     {
-      u.e("!32@/B4Tb64lLpKZuCI4Wj/Pn5/LBXB0XSLU", paramString.toString());
+      v.e("MicroMsg.ABTestParser", paramString.toString());
     }
   }
 }

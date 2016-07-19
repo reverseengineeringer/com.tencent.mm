@@ -11,24 +11,24 @@ import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.View.MeasureSpec;
 import android.widget.TextView;
-import com.tencent.mm.aw.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.az.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.Iterator;
 import java.util.LinkedList;
 
 public class CustomFitTextView
   extends TextView
 {
-  private Paint luX;
-  private String luY;
-  private Rect luZ = new Rect();
-  private LinkedList lva = new LinkedList();
-  public int lvb;
-  private Drawable lvc;
-  public boolean lvd;
-  private boolean lve = true;
-  private int lvf = 0;
+  private Paint lVZ;
+  private String lWa;
+  private Rect lWb = new Rect();
+  private LinkedList<String> lWc = new LinkedList();
+  public int lWd;
+  private Drawable lWe;
+  public boolean lWf;
+  private boolean lWg = true;
+  private int lWh = 0;
   public int maxLines;
   
   public CustomFitTextView(Context paramContext, AttributeSet paramAttributeSet)
@@ -41,12 +41,12 @@ public class CustomFitTextView
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  private void HA(String paramString)
+  private void JQ(String paramString)
   {
-    if ((lva == null) || (paramString == null) || ("".equals(paramString))) {
+    if ((lWc == null) || (paramString == null) || ("".equals(paramString))) {
       return;
     }
-    lva.add(paramString);
+    lWc.add(paramString);
   }
   
   private int a(String paramString, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
@@ -74,7 +74,7 @@ public class CustomFitTextView
     }
     paramInt2 = Math.min(j, i) - 1;
     paramInt1 = paramInt2;
-    while ((paramInt1 >= 0) && (ay.f(paramString.charAt(paramInt1)))) {
+    while ((paramInt1 >= 0) && (be.h(paramString.charAt(paramInt1)))) {
       paramInt1 -= 1;
     }
     if ((paramInt1 < 0) || (paramInt1 == paramInt2)) {
@@ -83,21 +83,30 @@ public class CustomFitTextView
     return paramInt1 + 1;
   }
   
-  private boolean bf(String paramString, int paramInt)
+  private int boy()
+  {
+    Paint.FontMetrics localFontMetrics = getPaint().getFontMetrics();
+    float f1 = lWc.size();
+    float f2 = bottom;
+    float f3 = top;
+    return (int)((leading + (f2 - f3)) * f1 + getPaddingTop() + getPaddingBottom()) + Math.max(0, lWc.size() - 1) * lWh;
+  }
+  
+  private boolean br(String paramString, int paramInt)
   {
     int k;
     int n;
     int i1;
     int i;
-    if ((lve) && (paramInt > 0) && (paramString != null) && (!"".equals(paramString)))
+    if ((lWg) && (paramInt > 0) && (paramString != null) && (!"".equals(paramString)))
     {
-      lva.clear();
+      lWc.clear();
       k = 0;
       n = paramString.length();
       i1 = paramInt - getPaddingLeft() - getPaddingRight();
-      if (lvd)
+      if (lWf)
       {
-        paramInt = lvc.getIntrinsicWidth();
+        paramInt = lWe.getIntrinsicWidth();
         float f = getPaint().measureText(paramString, 0, n);
         f = paramInt + f;
         i = maxLines;
@@ -114,7 +123,7 @@ public class CustomFitTextView
       int j = 0;
       if (j < i) {
         if (j == i - 1) {
-          HA(paramString.substring(k, a(paramString, k, n, paramInt, i1)).trim());
+          JQ(paramString.substring(k, a(paramString, k, n, paramInt, i1)).trim());
         }
       }
       for (;;)
@@ -124,10 +133,10 @@ public class CustomFitTextView
         paramInt = 0;
         break;
         int m = a(paramString, k, n, 0, i1);
-        HA(paramString.substring(k, m).trim());
+        JQ(paramString.substring(k, m).trim());
         if (m >= n)
         {
-          u.w("!44@/B4Tb64lLpJOk4QDbWrMa+lh3fOOuJPEBieCQF4yBy8=", "not match last line, but match text length end");
+          v.w("MicroMsg.CustomFitTextView", "not match last line, but match text length end");
           return true;
           return false;
         }
@@ -136,41 +145,32 @@ public class CustomFitTextView
     }
   }
   
-  private int biC()
-  {
-    Paint.FontMetrics localFontMetrics = getPaint().getFontMetrics();
-    float f1 = lva.size();
-    float f2 = bottom;
-    float f3 = top;
-    return (int)((leading + (f2 - f3)) * f1 + getPaddingTop() + getPaddingBottom()) + Math.max(0, lva.size() - 1) * lvf;
-  }
-  
   public final void a(String paramString, int paramInt1, boolean paramBoolean, int paramInt2, int paramInt3)
   {
     maxLines = paramInt1;
-    luY = paramString;
-    if (luY == null)
+    lWa = paramString;
+    if (lWa == null)
     {
-      u.w("!44@/B4Tb64lLpJOk4QDbWrMa+lh3fOOuJPEBieCQF4yBy8=", "ori text is null");
-      luY = "";
+      v.w("MicroMsg.CustomFitTextView", "ori text is null");
+      lWa = "";
     }
     if (maxLines <= 0)
     {
-      u.w("!44@/B4Tb64lLpJOk4QDbWrMa+lh3fOOuJPEBieCQF4yBy8=", "maxLines is invalid");
+      v.w("MicroMsg.CustomFitTextView", "maxLines is invalid");
       maxLines = 2;
     }
-    lvf = getResources().getDimensionPixelSize(2131034576);
-    lvd = paramBoolean;
-    lvb = paramInt2;
-    if (lvd) {
-      lvc = getResources().getDrawable(lvb);
+    lWh = getResources().getDimensionPixelSize(2131427463);
+    lWf = paramBoolean;
+    lWd = paramInt2;
+    if (lWf) {
+      lWe = getResources().getDrawable(lWd);
     }
-    luX = new Paint();
-    luX.set(getPaint());
-    luX.setAntiAlias(true);
-    luX.setColor(paramInt3);
-    bf(luY, getWidth());
-    setHeight(Math.max(biC(), a.fromDPToPix(getContext(), 32)));
+    lVZ = new Paint();
+    lVZ.set(getPaint());
+    lVZ.setAntiAlias(true);
+    lVZ.setColor(paramInt3);
+    br(lWa, getWidth());
+    setHeight(Math.max(boy(), a.fromDPToPix(getContext(), 32)));
   }
   
   public final void b(String paramString, int paramInt1, boolean paramBoolean, int paramInt2)
@@ -180,7 +180,7 @@ public class CustomFitTextView
   
   protected void onDraw(Canvas paramCanvas)
   {
-    if (!lve) {}
+    if (!lWg) {}
     Paint.FontMetrics localFontMetrics;
     float f2;
     float f1;
@@ -189,26 +189,26 @@ public class CustomFitTextView
       do
       {
         return;
-      } while ((luY == null) || ("".equals(luY)) || (lva.size() == 0));
+      } while ((lWa == null) || ("".equals(lWa)) || (lWc.size() == 0));
       localFontMetrics = getPaint().getFontMetrics();
       f2 = descent - ascent;
       float f3 = getPaddingLeft();
       f1 = getPaddingTop();
-      Iterator localIterator = lva.iterator();
+      Iterator localIterator = lWc.iterator();
       while (localIterator.hasNext())
       {
         String str = (String)localIterator.next();
         f1 = leading + f2 + f1;
-        paramCanvas.drawText(str, f3, f1, luX);
+        paramCanvas.drawText(str, f3, f1, lVZ);
       }
-    } while (!lvd);
-    getPaint().getTextBounds((String)lva.getLast(), 0, ((String)lva.getLast()).length(), luZ);
-    int i = getPaddingLeft() + luZ.right;
-    int j = lvc.getIntrinsicWidth();
+    } while (!lWf);
+    getPaint().getTextBounds((String)lWc.getLast(), 0, ((String)lWc.getLast()).length(), lWb);
+    int i = getPaddingLeft() + lWb.right;
+    int j = lWe.getIntrinsicWidth();
     int k = (int)(f1 - f2 - leading);
-    int m = lvc.getIntrinsicHeight();
-    lvc.setBounds(i, k, j + i, m + k);
-    lvc.draw(paramCanvas);
+    int m = lWe.getIntrinsicHeight();
+    lWe.setBounds(i, k, j + i, m + k);
+    lWe.draw(paramCanvas);
   }
   
   protected void onMeasure(int paramInt1, int paramInt2)
@@ -217,8 +217,8 @@ public class CustomFitTextView
     int i = View.MeasureSpec.getSize(paramInt1);
     paramInt2 = a.fromDPToPix(getContext(), 32);
     paramInt1 = paramInt2;
-    if (bf(luY, i)) {
-      paramInt1 = Math.max(biC(), paramInt2);
+    if (br(lWa, i)) {
+      paramInt1 = Math.max(boy(), paramInt2);
     }
     setMeasuredDimension(i, paramInt1);
   }
@@ -228,9 +228,9 @@ public class CustomFitTextView
     if ((paramInt1 != paramInt3) || (paramInt2 != paramInt4)) {}
     for (boolean bool = true;; bool = false)
     {
-      lve = bool;
-      if (lve) {
-        bf(luY, paramInt1);
+      lWg = bool;
+      if (lWg) {
+        br(lWa, paramInt1);
       }
       return;
     }

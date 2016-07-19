@@ -9,7 +9,7 @@ final class ChatroomContactUI$5$1
   
   public final void run()
   {
-    ChatroomContactUI.b(ljh.ljg).setSelection(0);
+    ChatroomContactUI.b(lJs.lJr).setSelection(0);
   }
 }
 

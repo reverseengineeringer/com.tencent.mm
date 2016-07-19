@@ -2,23 +2,23 @@ package com.tencent.mm.model;
 
 import com.tencent.mm.network.b.a;
 import com.tencent.mm.network.e;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 
 final class ah$12
   implements b.a
 {
-  public final e tT()
+  public final e tU()
   {
     try
     {
-      e locale = gtObFO;
+      e locale = gtPbyZ;
       return locale;
     }
     catch (Throwable localThrowable)
     {
-      u.e("!24@/B4Tb64lLpKk+n5Gbwo3Rw==", "%s", new Object[] { ay.b(localThrowable) });
+      v.e("MicroMsg.MMCore", "%s", new Object[] { be.f(localThrowable) });
     }
     return null;
   }

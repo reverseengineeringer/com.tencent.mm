@@ -1,126 +1,284 @@
 package ct;
 
-import android.location.GpsSatellite;
-import android.location.GpsStatus;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Looper;
+import android.os.Message;
+import android.telephony.CellLocation;
+import android.telephony.PhoneStateListener;
+import android.telephony.ServiceState;
+import android.telephony.SignalStrength;
+import android.telephony.TelephonyManager;
+import android.telephony.gsm.GsmCellLocation;
 
-public class bq
+public final class bq
+  extends PhoneStateListener
 {
-  private static bq g = null;
-  private ArrayList a = new ArrayList();
-  private float b = 0.0F;
-  private float c = 0.0F;
-  private float d = 100.0F;
-  private boolean e = false;
-  private boolean f = false;
+  volatile boolean a;
+  private final bg b;
+  private CellLocation c = null;
+  private SignalStrength d = null;
+  private ServiceState e = null;
+  private long f;
+  private HandlerThread g;
+  private Handler h;
   
-  public static bq a()
+  public bq(bg parambg)
   {
-    if (g == null) {}
+    b = parambg;
+  }
+  
+  private void a(int paramInt)
+  {
+    TelephonyManager localTelephonyManager = b.a();
     try
     {
-      if (g == null) {
-        g = new bq();
+      localTelephonyManager.listen(this, paramInt);
+      return;
+    }
+    catch (Exception localException) {}
+  }
+  
+  private boolean a(CellLocation paramCellLocation)
+  {
+    if (paramCellLocation == null) {
+      return false;
+    }
+    try
+    {
+      GsmCellLocation localGsmCellLocation = (GsmCellLocation)paramCellLocation;
+      if (localGsmCellLocation.getCid() == 0)
+      {
+        int i = localGsmCellLocation.getLac();
+        if (i == 0) {
+          return false;
+        }
       }
-      return g;
+    }
+    catch (ClassCastException localClassCastException)
+    {
+      if (cq.a(paramCellLocation) < 0) {
+        return false;
+      }
+      if (cq.a(c, paramCellLocation)) {
+        return false;
+      }
+      paramCellLocation = cd.a(b, paramCellLocation, null);
+      if (paramCellLocation == null) {}
+      for (boolean bool = true; bool; bool = cq.a(paramCellLocation)) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  private void c()
+  {
+    if (!a) {}
+    for (;;)
+    {
+      return;
+      if (c != null)
+      {
+        long l = System.currentTimeMillis();
+        if (l - f > 2000L) {}
+        for (int i = 1; i != 0; i = 0)
+        {
+          f = l;
+          cd localcd = cd.a(b, c, d);
+          try
+          {
+            if ((h != null) && (localcd != null))
+            {
+              b localb = new b(b);
+              localb.a(localcd);
+              h.post(localb);
+            }
+            return;
+          }
+          finally {}
+        }
+      }
+    }
+  }
+  
+  public final void a()
+  {
+    if (a) {
+      return;
+    }
+    a = true;
+    g = new HandlerThread("worker");
+    g.start();
+    h = new a(g.getLooper(), (byte)0);
+    h.sendEmptyMessageDelayed(0, 3000L);
+    CellLocation localCellLocation = cq.b(b);
+    if (a(localCellLocation))
+    {
+      cd localcd = cd.a(b, localCellLocation, null);
+      if (localcd != null)
+      {
+        c = localCellLocation;
+        b.c(localcd);
+      }
+    }
+    a(273);
+  }
+  
+  public final void b()
+  {
+    if (!a) {
+      return;
+    }
+    a = false;
+    a(0);
+    try
+    {
+      if (h != null)
+      {
+        h.removeCallbacksAndMessages(null);
+        h = null;
+      }
+      g.quit();
+      g = null;
+      c = null;
+      d = null;
+      e = null;
+      f = 0L;
+      return;
     }
     finally {}
   }
   
-  public final boolean a(GpsStatus paramGpsStatus)
+  public final void onCellLocationChanged(CellLocation paramCellLocation)
   {
-    int j = paramGpsStatus.getMaxSatellites();
-    Object localObject1 = paramGpsStatus.getSatellites().iterator();
-    a.clear();
-    paramGpsStatus = new StringBuilder();
-    int i = 0;
-    Object localObject2;
-    while ((((Iterator)localObject1).hasNext()) && (i <= j))
+    super.onCellLocationChanged(paramCellLocation);
+    if (a(paramCellLocation))
     {
-      localObject2 = (GpsSatellite)((Iterator)localObject1).next();
-      i += 1;
-      a.add(Float.valueOf(((GpsSatellite)localObject2).getSnr()));
+      c = paramCellLocation;
+      c();
+      return;
     }
-    paramGpsStatus.append(i + "颗卫星,");
-    float f1;
-    if (a.size() >= 5)
+    new StringBuilder("onCellLocationChanged: illegal cell or same cell ").append(paramCellLocation);
+  }
+  
+  public final void onServiceStateChanged(ServiceState paramServiceState)
+  {
+    int j = 1;
+    super.onServiceStateChanged(paramServiceState);
+    if (paramServiceState == null) {}
+    do
     {
-      localObject1 = new float[a.size()];
-      i = 0;
-      while (i < localObject1.length)
+      ServiceState localServiceState;
+      do
       {
-        localObject1[i] = ((Float)a.get(i)).floatValue();
-        i += 1;
-      }
-      Arrays.sort((float[])localObject1);
-      localObject2 = new float[5];
-      f1 = 0.0F;
-      i = 0;
-      while (i < 5)
+        return;
+        localServiceState = e;
+      } while ((localServiceState != null) && (localServiceState.getState() == paramServiceState.getState()));
+      e = paramServiceState;
+    } while (!a);
+    int i;
+    boolean bool;
+    if (e != null) {
+      if (e.getState() == 0)
       {
-        localObject2[i] = localObject1[(localObject1.length - 1 - i)];
-        f1 += localObject2[i];
-        i += 1;
+        i = 1;
+        paramServiceState = b.a();
+        bool = cq.a(b.a);
+        if (paramServiceState == null) {
+          break label171;
+        }
+        if (paramServiceState.getSimState() != 5) {
+          break label166;
+        }
       }
-      f1 /= 5.0F;
-      paramGpsStatus.append("\n");
-      paramGpsStatus.append("绝对判断：");
-      if (localObject2[0] <= 35.0F) {
-        break label562;
-      }
-      e = true;
-      paramGpsStatus.append("室外|");
-      if (f1 < 22.0F)
-      {
-        paramGpsStatus.append("室内|");
-        e = false;
-      }
-      paramGpsStatus.append("avg" + f1);
-      paramGpsStatus.append("avg'" + (f1 - b));
-      paramGpsStatus.append("avgMax" + c);
-      paramGpsStatus.append("avgMin" + d);
-      paramGpsStatus.append(e);
-      paramGpsStatus.append("\n");
-      if (c < f1) {
-        c = f1;
-      }
-      if (d > f1) {
-        d = f1;
-      }
-      b = f1;
-      paramGpsStatus.append("相对判断：");
-      if (f1 - b > 3.0F) {
-        paramGpsStatus.append("信号增强");
-      }
-      if (b - f1 > 2.0F)
-      {
-        paramGpsStatus.append("信号衰弱");
-        f = false;
-      }
-      if (f1 <= (c + d) / 2.0F) {
-        break label584;
-      }
-      f = true;
     }
     for (;;)
     {
-      if (e != f) {
-        paramGpsStatus.append("\n冲突" + e + "|" + f);
+      if ((bool) || (j == 0)) {
+        i = 0;
       }
-      paramGpsStatus.append("\n最终结果" + f);
-      return f;
-      label562:
-      if (f1 <= 30.0F) {
+      paramServiceState = new Message();
+      what = 12999;
+      arg1 = 12003;
+      arg2 = i;
+      b.c(paramServiceState);
+      return;
+      if (e.getState() == 1)
+      {
+        i = 0;
         break;
       }
-      e = true;
-      paramGpsStatus.append("室外|");
+      i = -1;
       break;
-      label584:
-      if (f1 < 22.0F) {
-        f = false;
+      label166:
+      j = 0;
+      continue;
+      label171:
+      j = 0;
+    }
+  }
+  
+  public final void onSignalStrengthsChanged(SignalStrength paramSignalStrength)
+  {
+    super.onSignalStrengthsChanged(paramSignalStrength);
+    if (paramSignalStrength == null) {}
+    SignalStrength localSignalStrength;
+    int i;
+    do
+    {
+      return;
+      localSignalStrength = d;
+      i = b.g().b;
+    } while ((localSignalStrength != null) && (!cq.a(i, localSignalStrength, paramSignalStrength)));
+    d = paramSignalStrength;
+    c();
+  }
+  
+  final class a
+    extends Handler
+  {
+    private a(Looper paramLooper)
+    {
+      super();
+    }
+    
+    public final void handleMessage(Message paramMessage)
+    {
+      super.handleMessage(paramMessage);
+      if (!a) {
+        return;
+      }
+      sendEmptyMessageDelayed(0, 20000L);
+      paramMessage = cq.b(bq.a(bq.this));
+      bq.a(bq.this, paramMessage);
+    }
+  }
+  
+  static final class b
+    implements Runnable
+  {
+    private bg a;
+    private cd b;
+    
+    public b(bg parambg)
+    {
+      a = parambg;
+    }
+    
+    public final void a(cd paramcd)
+    {
+      b = paramcd;
+    }
+    
+    public final void run()
+    {
+      bg localbg = a;
+      cd localcd = b;
+      if (localcd != null)
+      {
+        localcd.a(cq.c(localbg));
+        localbg.c(localcd);
       }
     }
   }

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic cBs:Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;
+.field final synthetic cym:Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 447
-    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$2;->cBs:Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;
+    .line 446
+    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$2;->cym:Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,16 +40,16 @@
     .locals 1
 
     .prologue
-    .line 450
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$2;->cBs:Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;
+    .line 449
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$2;->cym:Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->b(Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;)V
 
-    .line 451
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$2;->cBs:Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;
+    .line 450
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$2;->cym:Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->finish()V
 
-    .line 452
+    .line 451
     return-void
 .end method

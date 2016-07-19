@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static jvx:F
+.field private static krw:F
 
 
 # direct methods
@@ -15,7 +15,7 @@
     .line 74
     const/4 v0, 0x0
 
-    sput v0, Lcom/tencent/mm/ui/t;->jvx:F
+    sput v0, Lcom/tencent/mm/ui/t;->krw:F
 
     return-void
 .end method
@@ -25,7 +25,7 @@
 
     .prologue
     .line 86
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v0
 
@@ -49,18 +49,18 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 91
-    sput p1, Lcom/tencent/mm/ui/t;->jvx:F
+    sput p1, Lcom/tencent/mm/ui/t;->krw:F
 
     .line 92
     return-void
 .end method
 
-.method public static cY(Landroid/content/Context;)F
+.method public static cW(Landroid/content/Context;)F
     .locals 3
 
     .prologue
     .line 78
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v0
 
@@ -80,7 +80,7 @@
     move-result v0
 
     .line 82
-    sput v0, Lcom/tencent/mm/ui/t;->jvx:F
+    sput v0, Lcom/tencent/mm/ui/t;->krw:F
 
     return v0
 .end method

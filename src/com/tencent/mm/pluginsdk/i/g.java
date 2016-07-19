@@ -1,18 +1,49 @@
 package com.tencent.mm.pluginsdk.i;
 
-import android.hardware.Camera;
-import android.hardware.Camera.AutoFocusCallback;
-import com.tencent.mm.sdk.platformtools.t;
+import android.app.Activity;
+import android.widget.Toast;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.j;
 
-final class g
-  implements Camera.AutoFocusCallback
+public final class g
+  extends b
 {
-  g(f paramf) {}
-  
-  public final void onAutoFocus(boolean paramBoolean, Camera paramCamera)
+  public g(Activity paramActivity)
   {
-    t.d("!32@/B4Tb64lLpKmqc5B3umJiVhkChryBljJ", "auto focus callback");
-    f.a(gOy);
+    super(paramActivity);
+  }
+  
+  public final boolean b(o paramo)
+  {
+    v.d("MicroMsg.ErrorConfirmProcessor", "handleOpenUrl");
+    Toast.makeText(aeH, content, 0).show();
+    return true;
+  }
+  
+  public final boolean c(o paramo)
+  {
+    v.d("MicroMsg.ErrorConfirmProcessor", "handleIgnore");
+    Toast.makeText(aeH, content, 0).show();
+    return true;
+  }
+  
+  public final boolean d(o paramo)
+  {
+    v.d("MicroMsg.ErrorConfirmProcessor", "handleFalseLast");
+    Toast.makeText(aeH, content, 0).show();
+    return true;
+  }
+  
+  public final boolean e(o paramo)
+  {
+    v.d("MicroMsg.ErrorConfirmProcessor", "handleFalseCancel");
+    Toast.makeText(aeH, content, 0).show();
+    return true;
+  }
+  
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
+  {
+    v.i("MicroMsg.ErrorConfirmProcessor", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
   }
 }
 

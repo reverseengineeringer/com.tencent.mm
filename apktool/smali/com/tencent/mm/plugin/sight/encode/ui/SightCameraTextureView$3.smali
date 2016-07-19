@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->axb()V
+    value = Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->azA()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gEa:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
+.field final synthetic gKA:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 192
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$3;->gEa:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$3;->gKA:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 196
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$3;->gEa:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$3;->gKA:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gEc:Lcom/tencent/mm/plugin/sight/encode/ui/f;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gKC:Lcom/tencent/mm/plugin/sight/encode/ui/f;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/f;->awZ()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/f;->azy()V
 
     .line 197
     return-void

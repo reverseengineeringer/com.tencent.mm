@@ -9,7 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.j;
 import java.util.ArrayList;
@@ -18,8 +18,8 @@ import java.util.List;
 final class AppChooserUI$a
   extends BaseAdapter
 {
-  List dfX = new ArrayList();
-  int iRj = AppChooserUI.f.iRz;
+  List<AppChooserUI.c> deZ = new ArrayList();
+  int jot = AppChooserUI.f.joI;
   
   public AppChooserUI$a(AppChooserUI paramAppChooserUI)
   {
@@ -28,10 +28,10 @@ final class AppChooserUI$a
   
   public final int getCount()
   {
-    if (dfX == null) {
+    if (deZ == null) {
       return 0;
     }
-    return dfX.size();
+    return deZ.size();
   }
   
   public final long getItemId(int paramInt)
@@ -46,52 +46,52 @@ final class AppChooserUI$a
     boolean bool;
     if ((paramView == null) || (paramView.getTag() == null))
     {
-      paramView = LayoutInflater.from(iRi.koJ.kpc).inflate(2131363031, null);
-      paramViewGroup = new AppChooserUI.b(iRi, paramView);
+      paramView = LayoutInflater.from(jos.kNN.kOg).inflate(2130903092, null);
+      paramViewGroup = new AppChooserUI.b(jos, paramView);
       paramView.setTag(paramViewGroup);
-      localc1 = oM(paramInt);
-      if (iRo == null) {
-        new AppChooserUI.d(iRi).execute(new AppChooserUI.c[] { localc1 });
+      localc1 = qz(paramInt);
+      if (joy == null) {
+        new AppChooserUI.d(jos).execute(new AppChooserUI.c[] { localc1 });
       }
-      esD.setImageDrawable(iRo);
-      esE.setText(iRn);
-      if ((localc1 == null) || ((iRp) && (!iRq) && ((!iRp) || (!iRs) || (AppChooserUI.d(iRi) < AppChooserUI.e(iRi)))) || (iRr)) {
+      exW.setImageDrawable(joy);
+      exX.setText(jox);
+      if ((localc1 == null) || ((joz) && (!joA) && ((!joz) || (!eEy) || (AppChooserUI.d(jos) < AppChooserUI.e(jos)))) || (joB)) {
         break label417;
       }
-      iRk.setVisibility(8);
-      iRl.setVisibility(0);
-      Object localObject = iRl;
-      AppChooserUI.c localc2 = AppChooserUI.c(iRi);
+      jou.setVisibility(8);
+      jov.setVisibility(0);
+      Object localObject = jov;
+      AppChooserUI.c localc2 = AppChooserUI.c(jos);
       if (!(localc2 instanceof AppChooserUI.c)) {
         break label411;
       }
       localc2 = (AppChooserUI.c)localc2;
-      if (((iRm == null) || (iRm == null) || (!iRm.activityInfo.packageName.equals(iRm.activityInfo.packageName))) && ((!iRp) || (!iRp))) {
+      if (((jow == null) || (jow == null) || (!jow.activityInfo.packageName.equals(jow.activityInfo.packageName))) && ((!joz) || (!joz))) {
         break label411;
       }
       bool = true;
       label287:
       ((RadioButton)localObject).setChecked(bool);
       label294:
-      if (!iRp) {
+      if (!joz) {
         break label598;
       }
-      if (AppChooserUI.f(iRi) != 4) {
+      if (AppChooserUI.f(jos) != 4) {
         break label578;
       }
-      esG.setText(2131429472);
+      exZ.setText(2131234240);
       label322:
-      localObject = esG;
+      localObject = exZ;
       paramInt = i;
-      if (ay.kz(AppChooserUI.l(iRi))) {
+      if (be.kf(AppChooserUI.l(jos))) {
         paramInt = 8;
       }
       ((TextView)localObject).setVisibility(paramInt);
     }
     for (;;)
     {
-      if ((AppChooserUI.f(iRi) != 6) && (AppChooserUI.c(iRi) != null) && (AppChooserUI.c(iRi).equals(localc1))) {
-        iRl.setChecked(true);
+      if ((AppChooserUI.f(jos) != 6) && (AppChooserUI.c(jos) != null) && (AppChooserUI.c(jos).equals(localc1))) {
+        jov.setChecked(true);
       }
       return paramView;
       paramViewGroup = (AppChooserUI.b)paramView.getTag();
@@ -100,53 +100,53 @@ final class AppChooserUI$a
       bool = false;
       break label287;
       label417:
-      iRk.setVisibility(0);
-      iRl.setVisibility(8);
-      iRk.setOnClickListener(AppChooserUI.k(iRi));
-      if (iRj == AppChooserUI.f.iRz)
+      jou.setVisibility(0);
+      jov.setVisibility(8);
+      jou.setOnClickListener(AppChooserUI.k(jos));
+      if (jot == AppChooserUI.f.joI)
       {
-        if (iRr) {
-          iRk.setText(2131430952);
+        if (joB) {
+          jou.setText(2131230963);
         }
         for (;;)
         {
-          iRk.setEnabled(true);
+          jou.setEnabled(true);
           break;
-          iRk.setText(2131430948);
+          jou.setText(2131230888);
         }
       }
-      if (iRj == AppChooserUI.f.iRA)
+      if (jot == AppChooserUI.f.joJ)
       {
-        iRk.setText(2131430949);
-        iRk.setEnabled(false);
+        jou.setText(2131230894);
+        jou.setEnabled(false);
         break label294;
       }
-      if (iRj != AppChooserUI.f.iRB) {
+      if (jot != AppChooserUI.f.joK) {
         break label294;
       }
-      if (iRr) {
-        iRk.setText(2131430954);
+      if (joB) {
+        jou.setText(2131231030);
       }
       for (;;)
       {
-        iRk.setEnabled(true);
+        jou.setEnabled(true);
         break;
-        iRk.setText(2131430953);
+        jou.setText(2131231029);
       }
       label578:
-      esG.setText(ay.ky(AppChooserUI.l(iRi)));
+      exZ.setText(be.li(AppChooserUI.l(jos)));
       break label322;
       label598:
-      esG.setVisibility(8);
+      exZ.setVisibility(8);
     }
   }
   
-  public final AppChooserUI.c oM(int paramInt)
+  public final AppChooserUI.c qz(int paramInt)
   {
-    if (dfX == null) {
+    if (deZ == null) {
       return null;
     }
-    return (AppChooserUI.c)dfX.get(paramInt);
+    return (AppChooserUI.c)deZ.get(paramInt);
   }
 }
 

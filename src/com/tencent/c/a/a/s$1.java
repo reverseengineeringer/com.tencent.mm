@@ -1,9 +1,10 @@
 package com.tencent.c.a.a;
 
+import android.net.wifi.ScanResult;
 import java.util.Comparator;
 
 final class s$1
-  implements Comparator
+  implements Comparator<ScanResult>
 {}
 
 /* Location:

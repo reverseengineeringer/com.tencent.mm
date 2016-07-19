@@ -7,7 +7,7 @@ final class h$1
   
   public final void run()
   {
-    iGM.invalidateSelf();
+    jdH.invalidateSelf();
   }
 }
 

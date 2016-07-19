@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+.field final synthetic lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 158
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    .line 164
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,19 +40,19 @@
     .locals 8
 
     .prologue
-    const/4 v6, 0x0
-
-    const/4 v5, 0x1
-
     const/4 v7, 0x0
 
-    .line 162
+    const/4 v6, 0x1
+
+    const/4 v5, 0x0
+
+    .line 168
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 163
-    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    .line 169
+    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->a(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)Lcom/tencent/mm/ui/tools/TestTimeForChatting;
 
@@ -60,12 +60,12 @@
 
     if-nez v2, :cond_0
 
-    .line 164
-    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
+    .line 170
+    invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 166
+    .line 172
     new-instance v3, Landroid/content/Intent;
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
@@ -76,31 +76,31 @@
 
     move-result-object v2
 
-    .line 167
-    iget-object v3, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    .line 173
+    iget-object v3, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-static {v3, v2}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->a(Lcom/tencent/mm/ui/conversation/BaseConversationUI;Landroid/content/Intent;)V
 
-    .line 168
-    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    .line 174
+    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->d(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     move-result-object v2
 
-    iput-boolean v5, v2, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->ePD:Z
+    iput-boolean v6, v2, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->eXw:Z
 
-    .line 169
-    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    .line 175
+    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->d(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->bfc()V
+    invoke-virtual {v2}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->bkL()V
 
-    .line 171
-    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    .line 177
+    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->a(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)Lcom/tencent/mm/ui/tools/TestTimeForChatting;
 
@@ -110,17 +110,17 @@
 
     invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/tools/TestTimeForChatting;->setVisibility(I)V
 
-    .line 173
-    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    .line 179
+    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->d(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     move-result-object v2
 
-    iput-boolean v5, v2, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->kqn:Z
+    iput-boolean v6, v2, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->kPs:Z
 
-    .line 174
-    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    .line 180
+    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->d(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
@@ -128,61 +128,61 @@
 
     invoke-virtual {v2}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->onPause()V
 
-    .line 176
-    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
-
-    invoke-static {v2}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->d(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->beZ()V
-
-    .line 177
-    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
-
-    invoke-static {v2}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->d(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
-
-    move-result-object v2
-
-    iput-boolean v7, v2, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->bWL:Z
-
-    .line 178
-    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
-
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->bhB()V
-
     .line 182
-    :cond_0
-    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
-    invoke-static {v2, v6}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->a(Lcom/tencent/mm/ui/conversation/BaseConversationUI;Landroid/view/View;)Landroid/view/View;
+    invoke-static {v2}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->d(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->bkH()V
 
     .line 183
-    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
-    invoke-static {v2, v6}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->b(Lcom/tencent/mm/ui/conversation/BaseConversationUI;Landroid/view/View;)Landroid/view/View;
+    invoke-static {v2}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->d(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+
+    move-result-object v2
+
+    iput-boolean v5, v2, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->bQo:Z
 
     .line 184
-    const-string/jumbo v2, "!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4="
+    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+
+    invoke-virtual {v2}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->bnr()V
+
+    .line 188
+    :cond_0
+    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+
+    invoke-static {v2, v7}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->a(Lcom/tencent/mm/ui/conversation/BaseConversationUI;Landroid/view/View;)Landroid/view/View;
+
+    .line 189
+    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$2;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+
+    invoke-static {v2, v7}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->b(Lcom/tencent/mm/ui/conversation/BaseConversationUI;Landroid/view/View;)Landroid/view/View;
+
+    .line 190
+    const-string/jumbo v2, "MicroMsg.BaseConversationUI"
 
     const-string/jumbo v3, "prepare chattingUI logic use %dms"
 
-    new-array v4, v5, [Ljava/lang/Object;
+    new-array v4, v6, [Ljava/lang/Object;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    sub-long v0, v5, v0
+    sub-long v0, v6, v0
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    aput-object v0, v4, v7
+    aput-object v0, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 185
-    return v7
+    .line 191
+    return v5
 .end method

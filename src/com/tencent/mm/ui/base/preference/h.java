@@ -5,8 +5,8 @@ import android.content.SharedPreferences;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -17,25 +17,25 @@ public class h
   extends BaseAdapter
   implements f
 {
-  private final SharedPreferences bxg;
+  private final SharedPreferences bpi;
   private final Context context;
-  private Preference.a kKX;
-  private final j kLR;
-  private final LinkedList kLS = new LinkedList();
-  private final HashMap kLT = new HashMap();
-  private final HashSet kLU = new HashSet();
-  private final LinkedList kLV = new LinkedList();
-  private final HashMap kLW = new HashMap();
-  private final HashMap kLX = new HashMap();
-  private int[] kLY = new int[0];
-  private boolean kLZ = false;
-  private boolean kMa = false;
+  private Preference.a lkm;
+  private final j llg;
+  private final LinkedList<String> llh = new LinkedList();
+  private final HashMap<String, Preference> lli = new HashMap();
+  private final HashSet<String> llj = new HashSet();
+  private final LinkedList<String> llk = new LinkedList();
+  private final HashMap<String, Integer> lll = new HashMap();
+  private final HashMap<String, String> llm = new HashMap();
+  private int[] lln = new int[0];
+  private boolean llo = false;
+  private boolean llp = false;
   
   public h(Context paramContext, SharedPreferences paramSharedPreferences)
   {
-    kLR = new j(paramContext);
+    llg = new j(paramContext);
     context = paramContext;
-    bxg = paramSharedPreferences;
+    bpi = paramSharedPreferences;
   }
   
   private static void a(Preference paramPreference, SharedPreferences paramSharedPreferences)
@@ -44,23 +44,23 @@ public class h
     if ((paramPreference instanceof CheckBoxPreference))
     {
       localObject = (CheckBoxPreference)paramPreference;
-      if (kMo) {
-        kKS = paramSharedPreferences.getBoolean(cln, ((CheckBoxPreference)paramPreference).isChecked());
+      if (llD) {
+        lkh = paramSharedPreferences.getBoolean(cgq, ((CheckBoxPreference)paramPreference).isChecked());
       }
     }
     if ((paramPreference instanceof DialogPreference))
     {
       localObject = (DialogPreference)paramPreference;
-      if (kMo) {
-        ((DialogPreference)localObject).setValue(paramSharedPreferences.getString(cln, null));
+      if (llD) {
+        ((DialogPreference)localObject).setValue(paramSharedPreferences.getString(cgq, null));
       }
     }
     if ((paramPreference instanceof EditPreference))
     {
       localObject = (EditPreference)paramPreference;
-      if (kMo)
+      if (llD)
       {
-        value = paramSharedPreferences.getString(cln, null);
+        value = paramSharedPreferences.getString(cgq, null);
         ((EditPreference)localObject).setSummary(value);
       }
     }
@@ -69,34 +69,34 @@ public class h
   private void b(Preference paramPreference, int paramInt)
   {
     String str = d(paramPreference);
-    kLT.put(str, paramPreference);
-    LinkedList localLinkedList = kLS;
+    lli.put(str, paramPreference);
+    LinkedList localLinkedList = llh;
     int i = paramInt;
     if (paramInt == -1) {
-      i = kLS.size();
+      i = llh.size();
     }
     localLinkedList.add(i, str);
-    if ((!kLW.containsKey(c(paramPreference))) && (!kMa)) {
-      kLW.put(c(paramPreference), Integer.valueOf(kLW.size()));
+    if ((!lll.containsKey(c(paramPreference))) && (!llp)) {
+      lll.put(c(paramPreference), Integer.valueOf(lll.size()));
     }
-    if (kMp != null) {
-      kLX.put(kMp + "|" + cln, cln);
+    if (llE != null) {
+      llm.put(llE + "|" + cgq, cgq);
     }
   }
   
-  private void bdr()
+  private void biY()
   {
     HashSet localHashSet = new HashSet();
     int i = 0;
-    if (i < kLV.size())
+    if (i < llk.size())
     {
-      Preference localPreference1 = (Preference)kLT.get(kLV.get(i));
-      if (((localPreference1 instanceof PreferenceCategory)) && (ay.kz(cln)) && (i != 0))
+      Preference localPreference1 = (Preference)lli.get(llk.get(i));
+      if (((localPreference1 instanceof PreferenceCategory)) && (be.kf(cgq)) && (i != 0))
       {
-        Preference localPreference2 = (Preference)kLT.get(kLV.get(i - 1));
+        Preference localPreference2 = (Preference)lli.get(llk.get(i - 1));
         if ((localPreference2 instanceof PreferenceCategory))
         {
-          if ((!ay.kz(cln)) || ((localPreference2.getTitle() != null) && (localPreference2.getTitle().toString().trim().length() > 0))) {
+          if ((!be.kf(cgq)) || ((localPreference2.getTitle() != null) && (localPreference2.getTitle().toString().trim().length() > 0))) {
             break label148;
           }
           localHashSet.add(d(localPreference2));
@@ -107,48 +107,48 @@ public class h
         i += 1;
         break;
         label148:
-        if ((ay.kz(cln)) && ((localPreference1.getTitle() == null) || (localPreference1.getTitle().toString().trim().length() <= 0))) {
+        if ((be.kf(cgq)) && ((localPreference1.getTitle() == null) || (localPreference1.getTitle().toString().trim().length() <= 0))) {
           localHashSet.add(d(localPreference1));
         }
       }
     }
-    kLV.removeAll(localHashSet);
+    llk.removeAll(localHashSet);
   }
   
   private static String c(Preference paramPreference)
   {
-    return paramPreference.getClass().getName() + "L" + kMt + "W" + kMu;
+    return paramPreference.getClass().getName() + "L" + llI + "W" + llJ;
   }
   
   private static String d(Preference paramPreference)
   {
-    if ((cln != null) && (cln.length() > 0)) {
-      return cln;
+    if ((cgq != null) && (cgq.length() > 0)) {
+      return cgq;
     }
     return "_anonymous_pref@" + paramPreference.hashCode();
   }
   
-  private static boolean qS(int paramInt)
+  private static boolean sU(int paramInt)
   {
-    return (paramInt == 2131363286) || (paramInt == 2131363172) || (paramInt == 2131363222);
+    return (paramInt == 2130903981) || (paramInt == 2130904053) || (paramInt == 2130904054);
   }
   
-  public final Preference GB(String paramString)
+  public final Preference IR(String paramString)
   {
-    return (Preference)kLT.get(paramString);
+    return (Preference)lli.get(paramString);
   }
   
-  public final boolean GC(String paramString)
+  public final boolean IS(String paramString)
   {
-    return b(GB(paramString));
+    return b(IR(paramString));
   }
   
-  public final int GD(String paramString)
+  public final int IT(String paramString)
   {
-    if (kLV == null) {
+    if (llk == null) {
       return -1;
     }
-    return kLV.indexOf(paramString);
+    return llk.indexOf(paramString);
   }
   
   public final void a(Preference paramPreference)
@@ -159,8 +159,22 @@ public class h
   public final void a(Preference paramPreference, int paramInt)
   {
     b(paramPreference, paramInt);
-    if (!kLZ) {
+    if (!llo) {
       notifyDataSetChanged();
+    }
+  }
+  
+  public final void aD(String paramString, boolean paramBoolean)
+  {
+    if (paramBoolean) {
+      if (!llj.contains(paramString)) {
+        llj.add(paramString);
+      }
+    }
+    while (llj.remove(paramString))
+    {
+      notifyDataSetChanged();
+      return;
     }
   }
   
@@ -170,32 +184,32 @@ public class h
     // Byte code:
     //   0: aload_0
     //   1: iconst_1
-    //   2: putfield 58	com/tencent/mm/ui/base/preference/h:kLZ	Z
+    //   2: putfield 63	com/tencent/mm/ui/base/preference/h:llo	Z
     //   5: aload_0
-    //   6: getfield 67	com/tencent/mm/ui/base/preference/h:kLR	Lcom/tencent/mm/ui/base/preference/j;
+    //   6: getfield 72	com/tencent/mm/ui/base/preference/h:llg	Lcom/tencent/mm/ui/base/preference/j;
     //   9: astore 4
     //   11: aload 4
-    //   13: getfield 274	com/tencent/mm/ui/base/preference/j:mContext	Landroid/content/Context;
-    //   16: invokevirtual 280	android/content/Context:getResources	()Landroid/content/res/Resources;
+    //   13: getfield 288	com/tencent/mm/ui/base/preference/j:mContext	Landroid/content/Context;
+    //   16: invokevirtual 294	android/content/Context:getResources	()Landroid/content/res/Resources;
     //   19: iload_1
-    //   20: invokevirtual 286	android/content/res/Resources:getXml	(I)Landroid/content/res/XmlResourceParser;
+    //   20: invokevirtual 300	android/content/res/Resources:getXml	(I)Landroid/content/res/XmlResourceParser;
     //   23: astore_2
     //   24: aload 4
-    //   26: getfield 290	com/tencent/mm/ui/base/preference/j:kMe	[Ljava/lang/Object;
+    //   26: getfield 304	com/tencent/mm/ui/base/preference/j:llt	[Ljava/lang/Object;
     //   29: astore_3
     //   30: aload_3
     //   31: monitorenter
     //   32: aload_2
-    //   33: invokestatic 296	android/util/Xml:asAttributeSet	(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
+    //   33: invokestatic 310	android/util/Xml:asAttributeSet	(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
     //   36: astore 5
     //   38: aload 4
-    //   40: getfield 290	com/tencent/mm/ui/base/preference/j:kMe	[Ljava/lang/Object;
+    //   40: getfield 304	com/tencent/mm/ui/base/preference/j:llt	[Ljava/lang/Object;
     //   43: iconst_0
     //   44: aload 4
-    //   46: getfield 274	com/tencent/mm/ui/base/preference/j:mContext	Landroid/content/Context;
+    //   46: getfield 288	com/tencent/mm/ui/base/preference/j:mContext	Landroid/content/Context;
     //   49: aastore
     //   50: aload_2
-    //   51: invokeinterface 301 1 0
+    //   51: invokeinterface 315 1 0
     //   56: istore_1
     //   57: iload_1
     //   58: iconst_2
@@ -204,24 +218,24 @@ public class h
     //   63: iconst_1
     //   64: if_icmpeq +13 -> 77
     //   67: aload_2
-    //   68: invokeinterface 301 1 0
+    //   68: invokeinterface 315 1 0
     //   73: istore_1
     //   74: goto -17 -> 57
     //   77: iload_1
     //   78: iconst_2
     //   79: if_icmpeq +57 -> 136
-    //   82: new 267	android/view/InflateException
+    //   82: new 281	android/view/InflateException
     //   85: dup
-    //   86: new 154	java/lang/StringBuilder
+    //   86: new 159	java/lang/StringBuilder
     //   89: dup
-    //   90: invokespecial 155	java/lang/StringBuilder:<init>	()V
+    //   90: invokespecial 160	java/lang/StringBuilder:<init>	()V
     //   93: aload_2
-    //   94: invokeinterface 304 1 0
-    //   99: invokevirtual 159	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   102: ldc_w 306
-    //   105: invokevirtual 159	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   108: invokevirtual 165	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   111: invokespecial 307	android/view/InflateException:<init>	(Ljava/lang/String;)V
+    //   94: invokeinterface 318 1 0
+    //   99: invokevirtual 164	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   102: ldc_w 320
+    //   105: invokevirtual 164	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   108: invokevirtual 170	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   111: invokespecial 321	android/view/InflateException:<init>	(Ljava/lang/String;)V
     //   114: athrow
     //   115: astore 4
     //   117: aload 4
@@ -233,63 +247,63 @@ public class h
     //   126: athrow
     //   127: astore_3
     //   128: aload_2
-    //   129: invokeinterface 312 1 0
+    //   129: invokeinterface 326 1 0
     //   134: aload_3
     //   135: athrow
     //   136: aload 4
     //   138: aload_2
-    //   139: invokeinterface 313 1 0
+    //   139: invokeinterface 327 1 0
     //   144: aload 5
-    //   146: invokevirtual 316	com/tencent/mm/ui/base/preference/j:a	(Ljava/lang/String;Landroid/util/AttributeSet;)Lcom/tencent/mm/ui/base/preference/Preference;
+    //   146: invokevirtual 330	com/tencent/mm/ui/base/preference/j:a	(Ljava/lang/String;Landroid/util/AttributeSet;)Lcom/tencent/mm/ui/base/preference/Preference;
     //   149: pop
     //   150: aload 4
     //   152: aload_2
     //   153: aload_0
     //   154: aload 5
-    //   156: invokevirtual 319	com/tencent/mm/ui/base/preference/j:a	(Lorg/xmlpull/v1/XmlPullParser;Lcom/tencent/mm/ui/base/preference/f;Landroid/util/AttributeSet;)V
+    //   156: invokevirtual 333	com/tencent/mm/ui/base/preference/j:a	(Lorg/xmlpull/v1/XmlPullParser;Lcom/tencent/mm/ui/base/preference/f;Landroid/util/AttributeSet;)V
     //   159: aload_3
     //   160: monitorexit
     //   161: aload_2
-    //   162: invokeinterface 312 1 0
+    //   162: invokeinterface 326 1 0
     //   167: aload_0
     //   168: iconst_0
-    //   169: putfield 58	com/tencent/mm/ui/base/preference/h:kLZ	Z
+    //   169: putfield 63	com/tencent/mm/ui/base/preference/h:llo	Z
     //   172: aload_0
-    //   173: invokevirtual 263	com/tencent/mm/ui/base/preference/h:notifyDataSetChanged	()V
+    //   173: invokevirtual 268	com/tencent/mm/ui/base/preference/h:notifyDataSetChanged	()V
     //   176: return
     //   177: astore 4
-    //   179: new 267	android/view/InflateException
+    //   179: new 281	android/view/InflateException
     //   182: dup
     //   183: aload 4
-    //   185: invokevirtual 322	org/xmlpull/v1/XmlPullParserException:getMessage	()Ljava/lang/String;
-    //   188: invokespecial 307	android/view/InflateException:<init>	(Ljava/lang/String;)V
+    //   185: invokevirtual 336	org/xmlpull/v1/XmlPullParserException:getMessage	()Ljava/lang/String;
+    //   188: invokespecial 321	android/view/InflateException:<init>	(Ljava/lang/String;)V
     //   191: astore 5
     //   193: aload 5
     //   195: aload 4
-    //   197: invokevirtual 326	android/view/InflateException:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    //   197: invokevirtual 340	android/view/InflateException:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
     //   200: pop
     //   201: aload 5
     //   203: athrow
     //   204: astore 4
-    //   206: new 267	android/view/InflateException
+    //   206: new 281	android/view/InflateException
     //   209: dup
-    //   210: new 154	java/lang/StringBuilder
+    //   210: new 159	java/lang/StringBuilder
     //   213: dup
-    //   214: invokespecial 155	java/lang/StringBuilder:<init>	()V
+    //   214: invokespecial 160	java/lang/StringBuilder:<init>	()V
     //   217: aload_2
-    //   218: invokeinterface 304 1 0
-    //   223: invokevirtual 159	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   226: ldc_w 328
-    //   229: invokevirtual 159	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   218: invokeinterface 318 1 0
+    //   223: invokevirtual 164	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   226: ldc_w 342
+    //   229: invokevirtual 164	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   232: aload 4
-    //   234: invokevirtual 329	java/io/IOException:getMessage	()Ljava/lang/String;
-    //   237: invokevirtual 159	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   240: invokevirtual 165	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   243: invokespecial 307	android/view/InflateException:<init>	(Ljava/lang/String;)V
+    //   234: invokevirtual 343	java/io/IOException:getMessage	()Ljava/lang/String;
+    //   237: invokevirtual 164	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   240: invokevirtual 170	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   243: invokespecial 321	android/view/InflateException:<init>	(Ljava/lang/String;)V
     //   246: astore 5
     //   248: aload 5
     //   250: aload 4
-    //   252: invokevirtual 326	android/view/InflateException:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    //   252: invokevirtual 340	android/view/InflateException:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
     //   255: pop
     //   256: aload 5
     //   258: athrow
@@ -333,23 +347,9 @@ public class h
     //   136	159	204	java/io/IOException
   }
   
-  public final void at(String paramString, boolean paramBoolean)
-  {
-    if (paramBoolean) {
-      if (!kLU.contains(paramString)) {
-        kLU.add(paramString);
-      }
-    }
-    while (kLU.remove(paramString))
-    {
-      notifyDataSetChanged();
-      return;
-    }
-  }
-  
   public final void b(Preference.a parama)
   {
-    kKX = parama;
+    lkm = parama;
     notifyDataSetChanged();
   }
   
@@ -359,21 +359,21 @@ public class h
       return false;
     }
     String str = d(paramPreference);
-    kLS.remove(str);
-    kLT.remove(str);
-    kLU.remove(cln);
+    llh.remove(str);
+    lli.remove(str);
+    llj.remove(cgq);
     notifyDataSetChanged();
     return true;
   }
   
   public int getCount()
   {
-    return kLV.size();
+    return llk.size();
   }
   
   public Object getItem(int paramInt)
   {
-    return kLT.get(kLV.get(paramInt));
+    return lli.get(llk.get(paramInt));
   }
   
   public long getItemId(int paramInt)
@@ -383,8 +383,8 @@ public class h
   
   public int getItemViewType(int paramInt)
   {
-    Object localObject = (Preference)kLT.get(kLV.get(paramInt));
-    localObject = (Integer)kLW.get(c((Preference)localObject));
+    Object localObject = (Preference)lli.get(llk.get(paramInt));
+    localObject = (Integer)lll.get(c((Preference)localObject));
     if (localObject == null) {
       return -1;
     }
@@ -393,19 +393,19 @@ public class h
   
   public View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
-    Object localObject = (Preference)kLT.get(kLV.get(paramInt));
+    Object localObject = (Preference)lli.get(llk.get(paramInt));
     if ((localObject instanceof CheckBoxPreference)) {
-      ((Preference)localObject).a(kKX);
+      ((Preference)localObject).a(lkm);
     }
-    if (!kLW.containsKey(c((Preference)localObject))) {
+    if (!lll.containsKey(c((Preference)localObject))) {
       paramView = null;
     }
     paramView = ((Preference)localObject).getView(paramView, paramViewGroup);
-    int i7 = kLY[paramInt];
-    paramViewGroup = paramView.findViewById(2131165377);
+    int i7 = lln[paramInt];
+    paramViewGroup = paramView.findViewById(2131755262);
     if (paramViewGroup == null)
     {
-      u.d("!44@/B4Tb64lLpL7nV+aKji0O5oZqg+g/M2CVC2enFN9hcI=", "find content view error");
+      v.d("MicroMsg.MMPreferenceAdapter", "find content view error");
       return paramView;
     }
     localObject = paramView.findViewById(16908312);
@@ -427,7 +427,7 @@ public class h
       n = paramViewGroup.getPaddingRight();
       i1 = paramViewGroup.getPaddingTop();
       i2 = paramViewGroup.getPaddingBottom();
-      j = 2130970340;
+      j = 2130839242;
       i3 = paramView.getPaddingLeft();
       i4 = paramView.getPaddingRight();
       i5 = paramView.getPaddingTop();
@@ -435,11 +435,11 @@ public class h
       if ((i7 & 0x8) == 0) {
         break label296;
       }
-      if ((paramInt != kLV.size() - 1) && ((paramInt != kLV.size() - 2) || (!(getItem(kLV.size() - 1) instanceof PreferenceCategory)))) {
+      if ((paramInt != llk.size() - 1) && ((paramInt != llk.size() - 2) || (!(getItem(llk.size() - 1) instanceof PreferenceCategory)))) {
         break label275;
       }
-      paramInt = 2130970239;
-      i = 2131231100;
+      paramInt = 2130838813;
+      i = 2131690049;
     }
     for (;;)
     {
@@ -454,10 +454,10 @@ public class h
       label275:
       if ((i7 & 0x2) != 0)
       {
-        paramInt = 2130970239;
+        paramInt = 2130838813;
         break;
       }
-      paramInt = 2130970221;
+      paramInt = 2130838556;
       break;
       label296:
       if ((i7 & 0x10) == 0)
@@ -468,7 +468,7 @@ public class h
       }
       else
       {
-        paramInt = 2130970221;
+        paramInt = 2130838556;
         i = j;
       }
     }
@@ -476,71 +476,71 @@ public class h
   
   public int getViewTypeCount()
   {
-    if (!kMa) {
-      kMa = true;
+    if (!llp) {
+      llp = true;
     }
-    return Math.max(1, kLW.size());
+    return Math.max(1, lll.size());
   }
   
   public final int indexOf(String paramString)
   {
-    return kLS.indexOf(paramString);
+    return llh.indexOf(paramString);
   }
   
   public void notifyDataSetChanged()
   {
     int i = 0;
-    kLV.clear();
-    Object localObject = kLS.iterator();
+    llk.clear();
+    Object localObject = llh.iterator();
     while (((Iterator)localObject).hasNext())
     {
       String str = (String)((Iterator)localObject).next();
-      if (!kLU.contains(str)) {
-        if (kLT.get(str) == null) {
-          u.e("!44@/B4Tb64lLpL7nV+aKji0O5oZqg+g/M2CVC2enFN9hcI=", "not found pref by key " + str);
+      if (!llj.contains(str)) {
+        if (lli.get(str) == null) {
+          v.e("MicroMsg.MMPreferenceAdapter", "not found pref by key " + str);
         } else {
-          kLV.add(str);
+          llk.add(str);
         }
       }
     }
-    if ((!kLV.isEmpty()) && (qS(kLT.get(kLV.get(0))).kMt))) {
+    if ((!llk.isEmpty()) && (sU(lli.get(llk.get(0))).llI))) {
       b(new PreferenceSmallCategory(context), 0);
     }
-    bdr();
-    kLY = new int[kLV.size()];
-    if (kLY.length <= 0) {
+    biY();
+    lln = new int[llk.size()];
+    if (lln.length <= 0) {
       return;
     }
-    if (kLY.length == 1)
+    if (lln.length == 1)
     {
-      i = kLT.get(kLV.get(0))).kMt;
-      localObject = (Preference)kLT.get(kLV.get(0));
-      if (qS(i)) {
+      i = lli.get(llk.get(0))).llI;
+      localObject = (Preference)lli.get(llk.get(0));
+      if (sU(i)) {
         if ((localObject instanceof CheckBoxPreference))
         {
-          localObject = kLY;
+          localObject = lln;
           localObject[0] |= 0x8;
         }
       }
       for (;;)
       {
-        a((Preference)kLT.get(kLV.get(0)), bxg);
+        a((Preference)lli.get(llk.get(0)), bpi);
         super.notifyDataSetChanged();
         return;
-        kLY[0] = 3;
+        lln[0] = 3;
         continue;
-        kLY[0] = 4;
+        lln[0] = 4;
       }
     }
-    if (i < kLV.size())
+    if (i < llk.size())
     {
-      a((Preference)kLT.get(kLV.get(i)), bxg);
-      localObject = (Preference)kLT.get(kLV.get(i));
-      int j = kMt;
-      if (qS(j)) {
+      a((Preference)lli.get(llk.get(i)), bpi);
+      localObject = (Preference)lli.get(llk.get(i));
+      int j = llI;
+      if (sU(j)) {
         if ((localObject instanceof CheckBoxPreference))
         {
-          localObject = kLY;
+          localObject = lln;
           localObject[i] |= 0x8;
         }
       }
@@ -550,37 +550,37 @@ public class h
         break;
         if (i == 0)
         {
-          localObject = kLY;
+          localObject = lln;
           localObject[i] |= 0x1;
         }
         else
         {
-          if (i == kLV.size() - 1)
+          if (i == llk.size() - 1)
           {
-            localObject = kLY;
+            localObject = lln;
             localObject[i] |= 0x2;
           }
-          j = kLT.get(kLV.get(i - 1))).kMt;
-          if ((j != 2131363286) || (j == 2131363172) || (j == 2131363222))
+          j = lli.get(llk.get(i - 1))).llI;
+          if ((j != 2130903981) || (j == 2130904053) || (j == 2130904054))
           {
-            localObject = kLY;
+            localObject = lln;
             localObject[i] |= 0x1;
             continue;
-            if (j == 2131363247)
+            if (j == 2130904035)
             {
               if (i == 0)
               {
-                localObject = kLY;
+                localObject = lln;
                 localObject[i] |= 0x4;
               }
               else
               {
-                localObject = kLY;
+                localObject = lln;
                 localObject[i] |= 0x10;
-                j = kLT.get(kLV.get(i - 1))).kMt;
-                if ((j == 2131363286) || (j == 2131363172) || (j == 2131363222))
+                j = lli.get(llk.get(i - 1))).llI;
+                if ((j == 2130903981) || (j == 2130904053) || (j == 2130904054))
                 {
-                  localObject = kLY;
+                  localObject = lln;
                   j = i - 1;
                   localObject[j] |= 0x2;
                 }
@@ -588,14 +588,14 @@ public class h
             }
             else
             {
-              localObject = kLY;
+              localObject = lln;
               localObject[i] |= 0x4;
               if (i != 0)
               {
-                j = kLT.get(kLV.get(i - 1))).kMt;
-                if ((qS(j)) || (j == 2131363247))
+                j = lli.get(llk.get(i - 1))).llI;
+                if ((sU(j)) || (j == 2130904035))
                 {
-                  localObject = kLY;
+                  localObject = lln;
                   j = i - 1;
                   localObject[j] |= 0x2;
                 }
@@ -610,10 +610,10 @@ public class h
   
   public final void removeAll()
   {
-    kLV.clear();
-    kLT.clear();
-    kLS.clear();
-    kLU.clear();
+    llk.clear();
+    lli.clear();
+    llh.clear();
+    llj.clear();
     notifyDataSetChanged();
   }
 }

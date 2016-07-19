@@ -4,9 +4,9 @@ public abstract interface m$a
 {
   public abstract void a(h paramh);
   
-  public abstract boolean bc();
+  public abstract h bc();
   
-  public abstract h getItemData();
+  public abstract boolean bd();
 }
 
 /* Location:

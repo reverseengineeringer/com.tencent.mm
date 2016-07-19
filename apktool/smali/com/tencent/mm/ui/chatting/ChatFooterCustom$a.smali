@@ -13,71 +13,105 @@
     name = "a"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/ix;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic kRP:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
+.field final synthetic lrR:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
 
 
 # direct methods
-.method public constructor <init>(Lcom/tencent/mm/ui/chatting/ChatFooterCustom;)V
+.method private constructor <init>(Lcom/tencent/mm/ui/chatting/ChatFooterCustom;)V
     .locals 1
 
     .prologue
-    .line 844
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$a;->kRP:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
+    .line 843
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$a;->lrR:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
 
-    .line 845
-    const/4 v0, 0x0
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/ix;
 
-    .line 846
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$a;->kum:I
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcom/tencent/mm/ui/chatting/ChatFooterCustom;B)V
+    .locals 1
+
+    .prologue
+    .line 843
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$a;-><init>(Lcom/tencent/mm/ui/chatting/ChatFooterCustom;)V
+
+    const-class v0, Lcom/tencent/mm/e/a/ix;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$a;->kum:I
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 2
 
     .prologue
-    .line 850
-    check-cast p1, Lcom/tencent/mm/d/a/is;
+    .line 843
+    check-cast p1, Lcom/tencent/mm/e/a/ix;
 
-    .line 851
-    iget-object v0, p1, Lcom/tencent/mm/d/a/is;->aEK:Lcom/tencent/mm/d/a/is$a;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/ix;->aqO:Lcom/tencent/mm/e/a/ix$a;
 
-    iget v0, v0, Lcom/tencent/mm/d/a/is$a;->aou:I
+    iget v0, v0, Lcom/tencent/mm/e/a/ix$a;->aqQ:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 858
     :goto_0
     const/4 v0, 0x0
 
     return v0
 
-    .line 853
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$a;->kRP:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$a;->lrR:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
 
     const/16 v1, 0x3ed
 
-    invoke-virtual {v0, v1, p1}, Lcom/tencent/mm/ui/chatting/ChatFooterCustom;->e(ILjava/lang/Object;)Z
+    invoke-virtual {v0, v1, p1}, Lcom/tencent/mm/ui/chatting/ChatFooterCustom;->h(ILjava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 857
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$a;->kRP:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$a;->lrR:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
 
     const/16 v1, 0x3ee
 
-    invoke-virtual {v0, v1, p1}, Lcom/tencent/mm/ui/chatting/ChatFooterCustom;->e(ILjava/lang/Object;)Z
+    invoke-virtual {v0, v1, p1}, Lcom/tencent/mm/ui/chatting/ChatFooterCustom;->h(ILjava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 851
     nop
 
     :pswitch_data_0

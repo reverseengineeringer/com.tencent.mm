@@ -2,19 +2,16 @@ package com.tencent.mm.ui.bindgooglecontact;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.model.c;
-import com.tencent.mm.storage.h;
+import com.tencent.mm.ad.a;
 
 final class BindGoogleContactUI$4
   implements DialogInterface.OnClickListener
 {
-  BindGoogleContactUI$4(BindGoogleContactUI paramBindGoogleContactUI) {}
+  BindGoogleContactUI$4(BindGoogleContactUI paramBindGoogleContactUI, String paramString) {}
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ah.tD().rn().set(208905, Boolean.valueOf(true));
-    kMQ.finish();
+    BindGoogleContactUI.a(lmf, lmg, a.bIB);
   }
 }
 

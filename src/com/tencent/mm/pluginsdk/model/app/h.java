@@ -2,14 +2,11 @@ package com.tencent.mm.pluginsdk.model.app;
 
 import android.content.Context;
 import android.os.Looper;
-import com.tencent.mm.model.ah;
 import com.tencent.mm.model.z.b;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -17,192 +14,193 @@ import java.util.List;
 import java.util.Map;
 
 public final class h
-  implements z.b, s, com.tencent.mm.r.d
+  implements z.b, s, com.tencent.mm.t.d
 {
-  private List gmw = null;
-  private List iAP = null;
-  Map iAQ = null;
-  private af iAR = new af(Looper.getMainLooper(), new af.a()
+  private List<String> gwR = null;
+  private List<String> iXt = null;
+  Map<String, Integer> iXu = null;
+  private com.tencent.mm.sdk.platformtools.ah iXv = new com.tencent.mm.sdk.platformtools.ah(Looper.getMainLooper(), new ah.a()
   {
-    public final boolean lj()
+    public final boolean jK()
     {
-      iAQ.clear();
+      iXu.clear();
       return false;
     }
   }, false);
-  private List iAT = new ArrayList();
-  private List iAU = new ArrayList();
-  private volatile boolean iAV = false;
+  private List<String> iXx = new ArrayList();
+  private List<String> iXy = new ArrayList();
+  private volatile boolean iXz = false;
   
   public h()
   {
-    iAR.ds(600000L);
-    ah.tE().a(231, this);
-    aj.abv().a(7, this);
+    iXv.dJ(600000L);
+    com.tencent.mm.model.ah.tF().a(231, this);
+    al.adP().a(7, this);
   }
   
-  private void aPH()
+  private boolean BK(String paramString)
+  {
+    if (paramString == null)
+    {
+      com.tencent.mm.sdk.platformtools.v.e("MicroMsg.AppInfoService", "increaseCounter fail, appId is null");
+      return false;
+    }
+    Integer localInteger = Integer.valueOf(be.b((Integer)iXu.get(paramString), 0));
+    if (localInteger.intValue() >= 5)
+    {
+      com.tencent.mm.sdk.platformtools.v.e("MicroMsg.AppInfoService", "increaseCounter fail, has reached the max try count");
+      return false;
+    }
+    iXu.put(paramString, Integer.valueOf(localInteger.intValue() + 1));
+    return true;
+  }
+  
+  private void aUo()
   {
     int i = 20;
-    if (iAV)
+    if (iXz)
     {
-      u.d("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", " batch get appinfo doing now");
+      com.tencent.mm.sdk.platformtools.v.d("MicroMsg.AppInfoService", " batch get appinfo doing now");
       return;
     }
-    if ((iAT == null) || (iAT.isEmpty()))
+    if ((iXx == null) || (iXx.isEmpty()))
     {
-      u.d("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "batchwaitinglist is empty, no need to doscene");
+      com.tencent.mm.sdk.platformtools.v.d("MicroMsg.AppInfoService", "batchwaitinglist is empty, no need to doscene");
       return;
     }
-    int j = iAT.size();
+    int j = iXx.size();
     if (j > 20) {}
     for (;;)
     {
-      iAU.addAll(iAT.subList(0, i));
-      if ((iAU == null) || (iAU.isEmpty())) {
+      iXy.addAll(iXx.subList(0, i));
+      if ((iXy == null) || (iXy.isEmpty())) {
         break;
       }
-      iAV = true;
-      w localw = new w(7, new z(iAU));
-      ah.tE().d(localw);
+      iXz = true;
+      w localw = new w(7, new ab(iXy));
+      com.tencent.mm.model.ah.tF().a(localw, 0);
       return;
       i = j;
     }
   }
   
-  private void kW(String paramString)
+  private void lH(String paramString)
   {
     for (;;)
     {
       try
       {
-        if ((!ay.kz(paramString)) && (!iAT.contains(paramString)))
+        if ((!be.kf(paramString)) && (!iXx.contains(paramString)))
         {
-          if (!zO(paramString))
+          if (!BK(paramString))
           {
-            u.e("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "this app has reach the max retry count, appid is %s", new Object[] { paramString });
+            com.tencent.mm.sdk.platformtools.v.e("MicroMsg.AppInfoService", "this app has reach the max retry count, appid is %s", new Object[] { paramString });
             return;
           }
-          u.i("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "add appid:[%s]", new Object[] { paramString });
-          iAT.add(paramString);
+          com.tencent.mm.sdk.platformtools.v.i("MicroMsg.AppInfoService", "add appid:[%s]", new Object[] { paramString });
+          iXx.add(paramString);
           continue;
         }
       }
       finally {}
       tmp90_87[0] = paramString;
-      u.i("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "should not add this appid:[%s], it is already runing", tmp90_87);
+      com.tencent.mm.sdk.platformtools.v.i("MicroMsg.AppInfoService", "should not add this appid:[%s], it is already runing", tmp90_87);
     }
   }
   
-  private boolean zO(String paramString)
+  public final void BJ(String paramString)
   {
-    if (paramString == null)
+    if ((paramString == null) || (paramString.length() == 0))
     {
-      u.e("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "increaseCounter fail, appId is null");
-      return false;
+      com.tencent.mm.sdk.platformtools.v.e("MicroMsg.AppInfoService", "push fail, appId is null");
+      return;
     }
-    Integer localInteger = Integer.valueOf(ay.b((Integer)iAQ.get(paramString), 0));
-    if (localInteger.intValue() >= 5)
-    {
-      u.e("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "increaseCounter fail, has reached the max try count");
-      return false;
-    }
-    iAQ.put(paramString, Integer.valueOf(localInteger.intValue() + 1));
-    return true;
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.AppInfoService", "push appid : " + paramString);
+    lH(paramString);
+    aUo();
   }
   
-  public final void Q(LinkedList paramLinkedList)
+  public final void U(LinkedList<String> paramLinkedList)
   {
     if ((paramLinkedList == null) || (paramLinkedList.size() == 0))
     {
-      u.e("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "batch push appinfo err: null or nil applist");
+      com.tencent.mm.sdk.platformtools.v.e("MicroMsg.AppInfoService", "batch push appinfo err: null or nil applist");
       return;
     }
     paramLinkedList = paramLinkedList.iterator();
     while (paramLinkedList.hasNext()) {
-      kW((String)paramLinkedList.next());
+      lH((String)paramLinkedList.next());
     }
-    aPH();
+    aUo();
   }
   
   public final void a(int paramInt1, int paramInt2, String paramString, v paramv)
   {
     if (paramv.getType() != 7)
     {
-      u.d("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "not the getappinfolist scene, ignore");
+      com.tencent.mm.sdk.platformtools.v.d("MicroMsg.AppInfoService", "not the getappinfolist scene, ignore");
       return;
     }
-    if ((iAU != null) && (!iAU.isEmpty()))
+    if ((iXy != null) && (!iXy.isEmpty()))
     {
-      iAT.removeAll(iAU);
-      iAU.clear();
+      iXx.removeAll(iXy);
+      iXy.clear();
     }
-    iAV = false;
-    aPH();
+    iXz = false;
+    aUo();
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public final String m(Context paramContext, String paramString)
+  {
+    return g.m(paramContext, paramString);
+  }
+  
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
   {
     paramInt1 = paramj.getType();
     switch (paramInt1)
     {
     default: 
-      u.e("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "error type: " + paramInt1);
+      com.tencent.mm.sdk.platformtools.v.e("MicroMsg.AppInfoService", "error type: " + paramInt1);
     case 231: 
       do
       {
         return;
         paramString = appId;
-        if (iAP.contains(paramString)) {
-          iAP.remove(paramString);
+        if (iXt.contains(paramString)) {
+          iXt.remove(paramString);
         }
-      } while (gmw.size() <= 0);
-      paramString = (String)gmw.remove(0);
+      } while (gwR.size() <= 0);
+      paramString = (String)gwR.remove(0);
       if ((paramString == null) || (paramString.length() == 0))
       {
-        u.e("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "startDownload fail, appId is null");
+        com.tencent.mm.sdk.platformtools.v.e("MicroMsg.AppInfoService", "startDownload fail, appId is null");
         paramInt1 = 0;
       }
       while (paramInt1 != 0)
       {
-        iAP.add(paramString);
+        iXt.add(paramString);
         return;
-        if (!zO(paramString))
+        if (!BK(paramString))
         {
-          u.e("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "increaseCounter fail");
+          com.tencent.mm.sdk.platformtools.v.e("MicroMsg.AppInfoService", "increaseCounter fail");
           paramInt1 = 0;
         }
         else
         {
-          paramj = new y(paramString);
-          ah.tE().d(paramj);
+          paramj = new aa(paramString);
+          com.tencent.mm.model.ah.tF().a(paramj, 0);
           paramInt1 = 1;
         }
       }
     }
-    if ((iAU != null) && (!iAU.isEmpty()))
+    if ((iXy != null) && (!iXy.isEmpty()))
     {
-      iAT.removeAll(iAU);
-      iAU.clear();
+      iXx.removeAll(iXy);
+      iXy.clear();
     }
-    iAV = false;
-    aPH();
-  }
-  
-  public final String l(Context paramContext, String paramString)
-  {
-    return g.l(paramContext, paramString);
-  }
-  
-  public final void zN(String paramString)
-  {
-    if ((paramString == null) || (paramString.length() == 0))
-    {
-      u.e("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "push fail, appId is null");
-      return;
-    }
-    kW(paramString);
-    aPH();
+    iXz = false;
+    aUo();
   }
 }
 

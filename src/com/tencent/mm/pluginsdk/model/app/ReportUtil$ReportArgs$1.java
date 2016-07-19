@@ -3,7 +3,7 @@ package com.tencent.mm.pluginsdk.model.app;
 import android.os.Parcelable.Creator;
 
 final class ReportUtil$ReportArgs$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<ReportUtil.ReportArgs>
 {}
 
 /* Location:

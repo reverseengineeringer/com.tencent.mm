@@ -5,7 +5,7 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.view.Window;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.h;
 
 final class FindMContactAlertUI$7
@@ -15,17 +15,17 @@ final class FindMContactAlertUI$7
   
   public final void onGlobalLayout()
   {
-    kOW.getWindow().getDecorView().getViewTreeObserver().removeGlobalOnLayoutListener(this);
-    int i = kOW.getWindow().getDecorView().getMeasuredWidth();
-    int j = kOW.getWindow().getDecorView().getMeasuredHeight();
-    View localView = FindMContactAlertUI.a(kOV, (ViewGroup)kOW.getWindow().getDecorView());
+    lom.getWindow().getDecorView().getViewTreeObserver().removeGlobalOnLayoutListener(this);
+    int i = lom.getWindow().getDecorView().getMeasuredWidth();
+    int j = lom.getWindow().getDecorView().getMeasuredHeight();
+    View localView = FindMContactAlertUI.a(lol, (ViewGroup)lom.getWindow().getDecorView());
     if (localView != null) {
       i = localView.getMeasuredWidth() * 2;
     }
     for (;;)
     {
-      u.d("!44@/B4Tb64lLpIaEkywMHoqABQUhRrFI+cbSM7Lgi4eEq8=", "dialog width: %s height: %s", new Object[] { Integer.valueOf(i), Integer.valueOf(j) });
-      FindMContactAlertUI.a(kOV, i, j);
+      v.d("MicroMsg.FindMContactAlertUI", "dialog width: %s height: %s", new Object[] { Integer.valueOf(i), Integer.valueOf(j) });
+      FindMContactAlertUI.a(lol, i, j);
       return;
     }
   }

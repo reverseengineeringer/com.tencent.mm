@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->bcg()V
+    value = Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->bhs()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic kzc:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+.field final synthetic kYj:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 261
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$1;->kzc:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$1;->kYj:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
 
@@ -38,9 +38,9 @@
 
     .prologue
     .line 264
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$1;->kzc:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$1;->kYj:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kyN:Landroid/widget/TextView;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kXU:Landroid/widget/TextView;
 
     new-instance v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$1$1;
 

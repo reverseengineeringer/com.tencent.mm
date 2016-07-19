@@ -2,7 +2,7 @@ package com.tencent.mm.ui.chatting;
 
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class AppAttachFileListUI$3
   implements AbsListView.OnScrollListener
@@ -13,12 +13,12 @@ final class AppAttachFileListUI$3
   
   public final void onScrollStateChanged(AbsListView paramAbsListView, int paramInt)
   {
-    if ((paramInt == 0) && (!AppAttachFileListUI.b(kQj)) && (AppAttachFileListUI.c(kQj)) && (paramAbsListView.getLastVisiblePosition() == AppAttachFileListUI.d(kQj).getCount()))
+    if ((paramInt == 0) && (!AppAttachFileListUI.b(lpY)) && (AppAttachFileListUI.c(lpY)) && (paramAbsListView.getLastVisiblePosition() == AppAttachFileListUI.d(lpY).getCount()))
     {
-      u.d("!44@/B4Tb64lLpKndQxFPEClvZ8VNQkxuaR5yXnPRtm8QDc=", "need to add item");
-      paramInt = AppAttachFileListUI.e(kQj);
-      new AppAttachFileListUI.a(kQj, (byte)0).execute(new Integer[] { Integer.valueOf(paramInt), Integer.valueOf(20) });
-      AppAttachFileListUI.f(kQj);
+      v.d("MicroMsg.AppAttachFileListUI", "need to add item");
+      paramInt = AppAttachFileListUI.e(lpY);
+      new AppAttachFileListUI.a(lpY, (byte)0).execute(new Integer[] { Integer.valueOf(paramInt), Integer.valueOf(20) });
+      AppAttachFileListUI.f(lpY);
     }
   }
 }

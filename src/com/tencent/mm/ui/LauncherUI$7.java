@@ -1,35 +1,22 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.model.ah;
-import com.tencent.mm.model.c;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.sdk.h.j;
-import com.tencent.mm.sdk.h.j.b;
-import com.tencent.mm.sdk.platformtools.u;
+import android.content.Intent;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class LauncherUI$7
-  implements j.b
+  implements Runnable
 {
   LauncherUI$7(LauncherUI paramLauncherUI) {}
   
-  public final void a(int paramInt, j paramj, Object paramObject)
+  public final void run()
   {
-    int i = t.Y(paramObject);
-    u.d("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "onNotifyChange event:%d obj:%d stg:%s", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(i), paramj });
-    if ((paramj != ah.tD().rn()) || (i <= 0)) {
-      u.e("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "onNotifyChange error obj:%d stg:%s", new Object[] { Integer.valueOf(i), paramj });
-    }
-    do
-    {
-      return;
-      knl.baj();
-      if (i == 143618)
-      {
-        LauncherUI.l(knl);
-        return;
-      }
-    } while ((i != 204817) && (i != 204820));
-    LauncherUI.k(knl);
+    v.d("MicroMsg.LauncherUI", "onMainTabCreate, send refresh broadcast");
+    kMs.sendBroadcast(new Intent("com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP"));
+  }
+  
+  public final String toString()
+  {
+    return super.toString() + "|sendBroadcast";
   }
 }
 

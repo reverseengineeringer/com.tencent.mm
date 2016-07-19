@@ -3,7 +3,7 @@ package com.tencent.mm.ui.base;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.ui.tools.i;
 
 final class MMTagPanel$7
@@ -13,29 +13,29 @@ final class MMTagPanel$7
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    if (MMTagPanel.g(kHq))
+    if (MMTagPanel.g(lgs))
     {
-      paramMotionEvent = kHq.getEditText();
-      if (!ay.kz(paramMotionEvent))
+      paramMotionEvent = lgs.bit();
+      if (!be.kf(paramMotionEvent))
       {
         paramView = paramMotionEvent;
-        if (kHr != null)
+        if (lgt != null)
         {
           paramView = paramMotionEvent;
-          if (i.HB(paramMotionEvent) > kHr.kHx)
+          if (i.JR(paramMotionEvent) > lgt.lgz)
           {
-            int i = kHr.kHx - i.HC(paramMotionEvent);
+            int i = lgt.lgz - i.JS(paramMotionEvent);
             paramView = paramMotionEvent;
             if (i <= paramMotionEvent.length()) {
               paramView = paramMotionEvent.substring(0, i);
             }
           }
         }
-        kHq.ar(paramView, true);
-        if (MMTagPanel.e(kHq) != null) {
-          MMTagPanel.e(kHq).ni(paramView);
+        lgs.aB(paramView, true);
+        if (MMTagPanel.e(lgs) != null) {
+          MMTagPanel.e(lgs).oq(paramView);
         }
-        kHq.bcT();
+        lgs.biu();
       }
     }
     return false;

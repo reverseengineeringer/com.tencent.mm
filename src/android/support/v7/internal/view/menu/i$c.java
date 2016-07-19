@@ -5,7 +5,7 @@ import android.view.MenuItem;
 import android.view.MenuItem.OnActionExpandListener;
 
 final class i$c
-  extends d
+  extends d<g.e>
   implements MenuItem.OnActionExpandListener
 {
   i$c(i parami, g.e parame)
@@ -15,16 +15,16 @@ final class i$c
   
   public final boolean onMenuItemActionCollapse(MenuItem paramMenuItem)
   {
-    g.e locale = (g.e)lr;
-    mA.f(paramMenuItem);
-    return locale.ag();
+    g.e locale = (g.e)lI;
+    mQ.f(paramMenuItem);
+    return locale.ae();
   }
   
   public final boolean onMenuItemActionExpand(MenuItem paramMenuItem)
   {
-    g.e locale = (g.e)lr;
-    mA.f(paramMenuItem);
-    return locale.af();
+    g.e locale = (g.e)lI;
+    mQ.f(paramMenuItem);
+    return locale.ad();
   }
 }
 

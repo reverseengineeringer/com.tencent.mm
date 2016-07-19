@@ -1,214 +1,174 @@
 package com.tencent.mm.sdk.platformtools;
 
-import java.nio.ByteBuffer;
+import java.io.StringReader;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserFactory;
 
 public final class r
 {
-  private ByteBuffer jVl;
-  private boolean jVm;
+  private static boolean kuU = false;
+  private static ThreadLocal<XmlPullParser> kuV = new ThreadLocal();
   
-  private int pn(int paramInt)
+  public static Map<String, String> EX(String paramString)
   {
-    if (jVl.limit() - jVl.position() > paramInt) {
-      return 0;
+    if ((paramString == null) || (paramString.length() <= 0)) {
+      paramString = null;
     }
-    ByteBuffer localByteBuffer = ByteBuffer.allocate(jVl.limit() + 4096);
-    localByteBuffer.put(jVl.array(), 0, jVl.position());
-    jVl = localByteBuffer;
-    return 0;
-  }
-  
-  public final int CL(String paramString)
-  {
-    if (!jVm) {
-      throw new Exception("Buffer For Parse");
-    }
-    byte[] arrayOfByte = null;
-    if (paramString != null) {
-      arrayOfByte = paramString.getBytes();
-    }
-    paramString = arrayOfByte;
-    if (arrayOfByte == null) {
-      paramString = new byte[0];
-    }
-    if (paramString.length > 2048) {
-      throw new Exception("Buffer String Length Error");
-    }
-    pn(paramString.length + 2);
-    jVl.putShort((short)paramString.length);
-    if (paramString.length > 0) {
-      jVl.put(paramString);
-    }
-    return 0;
-  }
-  
-  public final int aS(byte[] paramArrayOfByte)
-  {
-    int i;
-    if ((paramArrayOfByte == null) || (paramArrayOfByte.length == 0)) {
-      i = -1;
-    }
-    while (i != 0)
+    HashMap localHashMap;
+    do
     {
-      jVl = null;
-      return -1;
-      if (paramArrayOfByte[0] != 123) {
-        i = -2;
-      } else if (paramArrayOfByte[(paramArrayOfByte.length - 1)] != 125) {
-        i = -3;
-      } else {
-        i = 0;
+      return paramString;
+      localHashMap = new HashMap();
+      paramString = paramString.split("\n");
+      int j = paramString.length;
+      int i = 0;
+      while (i < j)
+      {
+        Object localObject1 = paramString[i];
+        if ((localObject1 != null) && (((String)localObject1).length() > 0))
+        {
+          Object localObject2 = ((String)localObject1).trim().split("=", 2);
+          if ((localObject2 != null) && (localObject2.length >= 2))
+          {
+            localObject1 = localObject2[0];
+            localObject2 = localObject2[1];
+            if ((localObject1 != null) && (((String)localObject1).length() > 0) && (((String)localObject1).matches("^[a-zA-Z0-9_.]*"))) {
+              localHashMap.put(localObject1, localObject2);
+            }
+          }
+        }
+        i += 1;
+      }
+      paramString = localHashMap;
+    } while (!kuU);
+    O(localHashMap);
+    return localHashMap;
+  }
+  
+  private static void O(Map<String, String> paramMap)
+  {
+    if (paramMap.size() <= 0) {
+      v.v("MicroMsg.SDK.KVConfig", "empty values");
+    }
+    for (;;)
+    {
+      return;
+      paramMap = paramMap.entrySet().iterator();
+      while (paramMap.hasNext())
+      {
+        Map.Entry localEntry = (Map.Entry)paramMap.next();
+        v.v("MicroMsg.SDK.KVConfig", "key=" + (String)localEntry.getKey() + " value=" + (String)localEntry.getValue());
       }
     }
-    jVl = ByteBuffer.wrap(paramArrayOfByte);
-    jVl.position(1);
-    jVm = false;
-    return 0;
   }
   
-  public final int aT(byte[] paramArrayOfByte)
+  public static Map<String, String> cr(String paramString1, String paramString2)
   {
-    if (!jVm) {
-      throw new Exception("Buffer For Parse");
-    }
-    byte[] arrayOfByte = null;
-    if (paramArrayOfByte != null) {
-      arrayOfByte = paramArrayOfByte;
-    }
-    paramArrayOfByte = arrayOfByte;
-    if (arrayOfByte == null) {
-      paramArrayOfByte = new byte[0];
-    }
-    if (paramArrayOfByte.length > 2048) {
-      throw new Exception("Buffer String Length Error");
-    }
-    pn(paramArrayOfByte.length + 2);
-    jVl.putShort((short)paramArrayOfByte.length);
-    if (paramArrayOfByte.length > 0) {
-      jVl.put(paramArrayOfByte);
-    }
-    return 0;
-  }
-  
-  public final void aUt()
-  {
-    if (jVm) {
-      throw new Exception("Buffer For Build");
-    }
-    int i = jVl.getShort();
-    if (i > 2048)
+    if (paramString1 == null) {}
+    for (int i = -1; i < 0; i = paramString1.indexOf("<" + paramString2))
     {
-      jVl = null;
-      throw new Exception("Buffer String Length Error");
+      v.e("MicroMsg.SDK.KVConfig", "can not find the tag <%s>", new Object[] { paramString2 });
+      return null;
     }
-    if (i == 0) {
-      return;
+    String str = paramString1;
+    if (i > 0) {
+      str = paramString1.substring(i);
     }
-    jVl.position(i + jVl.position());
-  }
-  
-  public final boolean aUu()
-  {
-    return jVl.limit() - jVl.position() <= 1;
-  }
-  
-  public final int aUv()
-  {
-    jVl = ByteBuffer.allocate(4096);
-    jVl.put((byte)123);
-    jVm = true;
-    return 0;
-  }
-  
-  public final byte[] aUw()
-  {
-    if (!jVm) {
-      throw new Exception("Buffer For Parse");
-    }
-    pn(1);
-    jVl.put((byte)125);
-    byte[] arrayOfByte = new byte[jVl.position()];
-    System.arraycopy(jVl.array(), 0, arrayOfByte, 0, arrayOfByte.length);
-    return arrayOfByte;
-  }
-  
-  public final int dq(long paramLong)
-  {
-    if (!jVm) {
-      throw new Exception("Buffer For Parse");
-    }
-    pn(8);
-    jVl.putLong(paramLong);
-    return 0;
-  }
-  
-  public final byte[] getBuffer()
-  {
-    if (jVm) {
-      throw new Exception("Buffer For Build");
-    }
-    int i = jVl.getShort();
-    if (i > 2048)
+    try
     {
-      jVl = null;
-      throw new Exception("Buffer String Length Error");
+      paramString1 = new a(str, paramString2).aZw();
+      return paramString1;
     }
-    if (i == 0) {
-      return new byte[0];
-    }
-    byte[] arrayOfByte = new byte[i];
-    jVl.get(arrayOfByte, 0, i);
-    return arrayOfByte;
-  }
-  
-  public final int getInt()
-  {
-    if (jVm) {
-      throw new Exception("Buffer For Build");
-    }
-    return jVl.getInt();
-  }
-  
-  public final long getLong()
-  {
-    if (jVm) {
-      throw new Exception("Buffer For Build");
-    }
-    return jVl.getLong();
-  }
-  
-  public final String getString()
-  {
-    if (jVm) {
-      throw new Exception("Buffer For Build");
-    }
-    int i = jVl.getShort();
-    if (i > 2048)
+    catch (Exception paramString1)
     {
-      jVl = null;
-      throw new Exception("Buffer String Length Error");
+      v.printErrStackTrace("MicroMsg.SDK.KVConfig", paramString1, "[ %s ]", new Object[] { str });
     }
-    if (i == 0) {
-      return "";
-    }
-    byte[] arrayOfByte = new byte[i];
-    jVl.get(arrayOfByte, 0, i);
-    return new String(arrayOfByte, "UTF-8");
+    return null;
   }
   
-  public final void pm(int paramInt)
+  public static final class a
   {
-    jVl.position(jVl.position() + paramInt);
-  }
-  
-  public final int po(int paramInt)
-  {
-    if (!jVm) {
-      throw new Exception("Buffer For Parse");
+    private XmlPullParser kuW;
+    private String kuX;
+    private StringBuilder kuY = new StringBuilder();
+    private Map<String, String> kuZ;
+    private Map<Integer, Integer> kva;
+    
+    public a(String paramString1, String paramString2)
+    {
+      kuX = paramString2;
+      paramString2 = (XmlPullParser)r.aZv().get();
+      kuW = paramString2;
+      if (paramString2 == null)
+      {
+        paramString2 = r.aZv();
+        XmlPullParser localXmlPullParser = XmlPullParserFactory.newInstance().newPullParser();
+        kuW = localXmlPullParser;
+        paramString2.set(localXmlPullParser);
+      }
+      kuW.setInput(new StringReader(paramString1));
+      kva = new HashMap();
+      kuZ = new HashMap();
     }
-    pn(4);
-    jVl.putInt(paramInt);
-    return 0;
+    
+    public final Map<String, String> aZw()
+    {
+      int i = kuW.getEventType();
+      for (;;)
+      {
+        if (i != 1)
+        {
+          i = kuW.next();
+          String str;
+          if (i == 2)
+          {
+            kuY.append('.').append(kuW.getName());
+            str = kuY.toString();
+            int j = str.hashCode();
+            Integer localInteger = (Integer)kva.get(Integer.valueOf(j));
+            if (localInteger != null)
+            {
+              localInteger = Integer.valueOf(localInteger.intValue() + 1);
+              kuY.append(localInteger);
+              kva.put(Integer.valueOf(j), localInteger);
+              str = str + localInteger;
+            }
+            for (;;)
+            {
+              kuZ.put(str, "");
+              j = 0;
+              while (j < kuW.getAttributeCount())
+              {
+                kuZ.put(str + ".$" + kuW.getAttributeName(j), kuW.getAttributeValue(j));
+                j += 1;
+              }
+              kva.put(Integer.valueOf(j), Integer.valueOf(0));
+            }
+          }
+          else if (i == 4)
+          {
+            str = kuW.getText();
+            if (str != null) {
+              kuZ.put(kuY.toString(), str);
+            }
+          }
+          else if (i == 3)
+          {
+            kuY = kuY.delete(kuY.lastIndexOf("."), kuY.length());
+            if (kuY.length() != 0) {}
+          }
+        }
+        else
+        {
+          return kuZ;
+        }
+      }
+    }
   }
 }
 

@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private final aiH:I
+.field private final Ux:I
 
 .field private final buffer:[B
 
@@ -30,13 +30,31 @@
     .line 63
     add-int/lit8 v0, p3, 0x0
 
-    iput v0, p0, La/a/a/b/b/a;->aiH:I
+    iput v0, p0, La/a/a/b/b/a;->Ux:I
 
     .line 64
     return-void
 .end method
 
-.method public static aA(I)I
+.method public static aQ(I)I
+    .locals 1
+
+    .prologue
+    .line 315
+    const/4 v0, 0x0
+
+    invoke-static {p0, v0}, La/a/a/b/a;->x(II)I
+
+    move-result v0
+
+    invoke-static {v0}, La/a/a/b/b/a;->aS(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static aS(I)I
     .locals 1
 
     .prologue
@@ -96,25 +114,7 @@
     goto :goto_0
 .end method
 
-.method public static ay(I)I
-    .locals 1
-
-    .prologue
-    .line 315
-    const/4 v0, 0x0
-
-    invoke-static {p0, v0}, La/a/a/b/a;->x(II)I
-
-    move-result v0
-
-    invoke-static {v0}, La/a/a/b/b/a;->aA(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static e(ILjava/lang/String;)I
+.method public static f(ILjava/lang/String;)I
     .locals 3
 
     .prologue
@@ -138,13 +138,13 @@
     move-result-object v0
 
     .line 221
-    invoke-static {p0}, La/a/a/b/b/a;->ay(I)I
+    invoke-static {p0}, La/a/a/b/b/a;->aQ(I)I
 
     move-result v1
 
     array-length v2, v0
 
-    invoke-static {v2}, La/a/a/b/b/a;->aA(I)I
+    invoke-static {v2}, La/a/a/b/b/a;->aS(I)I
 
     move-result v2
 
@@ -173,7 +173,7 @@
 
 
 # virtual methods
-.method public final ax(I)V
+.method public final aP(I)V
     .locals 4
 
     .prologue
@@ -194,7 +194,7 @@
     return-void
 .end method
 
-.method public final az(I)V
+.method public final aR(I)V
     .locals 1
 
     .prologue
@@ -205,7 +205,7 @@
     if-nez v0, :cond_0
 
     .line 325
-    invoke-virtual {p0, p1}, La/a/a/b/b/a;->ax(I)V
+    invoke-virtual {p0, p1}, La/a/a/b/b/a;->aP(I)V
 
     .line 326
     return-void
@@ -216,7 +216,7 @@
 
     or-int/lit16 v0, v0, 0x80
 
-    invoke-virtual {p0, v0}, La/a/a/b/b/a;->ax(I)V
+    invoke-virtual {p0, v0}, La/a/a/b/b/a;->aP(I)V
 
     .line 329
     ushr-int/lit8 p1, p1, 0x7
@@ -225,50 +225,7 @@
     goto :goto_0
 .end method
 
-.method public final k(J)V
-    .locals 4
-
-    .prologue
-    .line 354
-    :goto_0
-    const-wide/16 v0, -0x80
-
-    and-long/2addr v0, p1
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_0
-
-    .line 355
-    long-to-int v0, p1
-
-    invoke-virtual {p0, v0}, La/a/a/b/b/a;->ax(I)V
-
-    .line 356
-    return-void
-
-    .line 358
-    :cond_0
-    long-to-int v0, p1
-
-    and-int/lit8 v0, v0, 0x7f
-
-    or-int/lit16 v0, v0, 0x80
-
-    invoke-virtual {p0, v0}, La/a/a/b/b/a;->ax(I)V
-
-    .line 359
-    const/4 v0, 0x7
-
-    ushr-long/2addr p1, v0
-
-    .line 353
-    goto :goto_0
-.end method
-
-.method public final l([B)V
+.method public final i([B)V
     .locals 5
 
     .prologue
@@ -288,7 +245,7 @@
 
     if-eqz p1, :cond_0
 
-    iget v1, p0, La/a/a/b/b/a;->aiH:I
+    iget v1, p0, La/a/a/b/b/a;->Ux:I
 
     iget v2, p0, La/a/a/b/b/a;->position:I
 
@@ -311,7 +268,7 @@
     goto :goto_0
 
     :cond_2
-    iget v1, p0, La/a/a/b/b/a;->aiH:I
+    iget v1, p0, La/a/a/b/b/a;->Ux:I
 
     iget v2, p0, La/a/a/b/b/a;->position:I
 
@@ -327,11 +284,11 @@
 
     sub-int/2addr v0, v1
 
-    iget v1, p0, La/a/a/b/b/a;->aiH:I
+    iget v1, p0, La/a/a/b/b/a;->Ux:I
 
     iput v1, p0, La/a/a/b/b/a;->position:I
 
-    iget v1, p0, La/a/a/b/b/a;->aiH:I
+    iget v1, p0, La/a/a/b/b/a;->Ux:I
 
     if-gt v0, v1, :cond_0
 
@@ -344,6 +301,49 @@
     goto :goto_0
 .end method
 
+.method public final l(J)V
+    .locals 5
+
+    .prologue
+    .line 354
+    :goto_0
+    const-wide/16 v0, -0x80
+
+    and-long/2addr v0, p1
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    .line 355
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, La/a/a/b/b/a;->aP(I)V
+
+    .line 356
+    return-void
+
+    .line 358
+    :cond_0
+    long-to-int v0, p1
+
+    and-int/lit8 v0, v0, 0x7f
+
+    or-int/lit16 v0, v0, 0x80
+
+    invoke-virtual {p0, v0}, La/a/a/b/b/a;->aP(I)V
+
+    .line 359
+    const/4 v0, 0x7
+
+    ushr-long/2addr p1, v0
+
+    .line 353
+    goto :goto_0
+.end method
+
 .method public final w(II)V
     .locals 1
 
@@ -353,7 +353,7 @@
 
     move-result v0
 
-    invoke-virtual {p0, v0}, La/a/a/b/b/a;->az(I)V
+    invoke-virtual {p0, v0}, La/a/a/b/b/a;->aR(I)V
 
     .line 311
     return-void

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+.field final synthetic lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 881
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$13;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$13;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 884
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$13;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$13;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->finish()V
 

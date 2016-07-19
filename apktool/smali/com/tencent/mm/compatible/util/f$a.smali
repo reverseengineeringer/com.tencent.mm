@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public buw:J
+.field public biW:J
 
 
 # direct methods
@@ -31,7 +31,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/compatible/util/f$a;->buw:J
+    iput-wide v0, p0, Lcom/tencent/mm/compatible/util/f$a;->biW:J
 
     .line 54
     return-void
@@ -39,7 +39,7 @@
 
 
 # virtual methods
-.method public final pa()J
+.method public final ns()J
     .locals 4
 
     .prologue
@@ -48,7 +48,7 @@
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lcom/tencent/mm/compatible/util/f$a;->buw:J
+    iget-wide v2, p0, Lcom/tencent/mm/compatible/util/f$a;->biW:J
 
     sub-long/2addr v0, v2
 

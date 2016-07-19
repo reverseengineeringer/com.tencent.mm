@@ -6,17 +6,11 @@ import android.content.DialogInterface.OnClickListener;
 final class ChattingUI$a$25
   implements DialogInterface.OnClickListener
 {
-  ChattingUI$a$25(ChattingUI.a parama, boolean paramBoolean) {}
+  ChattingUI$a$25(ChattingUI.a parama) {}
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ChattingUI.a locala = laF;
-    if (laM) {}
-    for (paramDialogInterface = "fromBanner";; paramDialogInterface = "fromPluginTalk")
-    {
-      locala.GY(paramDialogInterface);
-      return;
-    }
+    paramDialogInterface.dismiss();
   }
 }
 

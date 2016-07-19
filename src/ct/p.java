@@ -1,51 +1,69 @@
 package ct;
 
-import android.util.SparseArray;
-import java.util.concurrent.ScheduledExecutorService;
+import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 
-public abstract class p
+public final class p
 {
-  private static p a;
+  private static Context a = null;
+  private static String b = "";
+  private static String c = "null";
+  private static int d = 0;
+  private static String e = "";
+  private static String f = "";
+  private static String g = "1.4.3.0104";
   
-  public static p a()
+  public static Context a()
   {
-    try
-    {
-      if (a == null) {
-        a = new a();
-      }
-      p localp = a;
-      return localp;
-    }
-    finally {}
+    return a;
   }
   
-  public abstract void a(Runnable paramRunnable);
-  
-  static final class a
-    extends p
+  public static void a(Context paramContext, String paramString1, String paramString2, String paramString3)
   {
-    private ScheduledExecutorService a = null;
-    
-    public a()
+    a = paramContext.getApplicationContext();
+    b = paramString1;
+    e = paramString3;
+    f = paramString2;
+    g = "1.4.3.0104";
+    try
     {
-      new SparseArray();
+      paramContext = paramContext.getPackageManager().getPackageInfo(paramContext.getPackageName(), 0);
+      c = versionName;
+      d = versionCode;
+      return;
     }
-    
-    public final void a(Runnable paramRunnable)
-    {
-      if (paramRunnable == null) {}
-      for (;;)
-      {
-        try
-        {
-          bc.d("AsyncTaskHandlerAbs", "task runner should not be null");
-          return;
-        }
-        finally {}
-        a.execute(paramRunnable);
-      }
-    }
+    catch (Throwable paramContext) {}
+  }
+  
+  public static String b()
+  {
+    return b;
+  }
+  
+  public static String c()
+  {
+    return c;
+  }
+  
+  public static int d()
+  {
+    return d;
+  }
+  
+  public static String e()
+  {
+    return e;
+  }
+  
+  public static String f()
+  {
+    return g;
+  }
+  
+  public static String g()
+  {
+    return f;
   }
 }
 

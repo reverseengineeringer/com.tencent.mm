@@ -8,12 +8,12 @@ final class SnsAddressUI$3
 {
   SnsAddressUI$3(SnsAddressUI paramSnsAddressUI) {}
   
-  public final void rc(String paramString)
+  public final void sz(String paramString)
   {
     if (paramString != null)
     {
-      SnsAddressUI.a(lms).remove(paramString);
-      SnsAddressUI.b(lms);
+      SnsAddressUI.a(lMI).remove(paramString);
+      SnsAddressUI.b(lMI);
     }
   }
 }

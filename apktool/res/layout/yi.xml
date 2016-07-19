@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.pluginsdk.ui.musicplayer.LyricView android:id="@id/bi2" android:background="@color/nl" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bi3" />
+    <TextView android:textSize="18.0sp" android:textColor="#ff676c6f" android:gravity="center" android:id="@id/bi4" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/dm1" android:layout_above="@id/bi3" />
+    <ImageView android:id="@id/bi5" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/abx" android:scaleType="fitXY" android:layout_above="@id/bi3" />
+    <View android:id="@id/bi3" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_alignParentBottom="true" />
+    <View android:id="@id/bi6" android:background="@drawable/a5p" android:layout_width="fill_parent" android:layout_height="96.0dip" android:layout_alignParentBottom="true" />
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/bi7" android:layout_width="fill_parent" android:layout_height="120.0dip" android:layout_alignParentBottom="true">
+        <RelativeLayout android:layout_width="120.0dip" android:layout_height="120.0dip" android:layout_marginBottom="5.0dip">
+            <View android:background="@drawable/tj" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.tencent.mm.pluginsdk.ui.applet.CdnImageView android:id="@id/bi8" android:layout_width="90.0dip" android:layout_height="90.0dip" android:scaleType="centerCrop" android:layout_centerInParent="true" />
+            <View android:background="@drawable/ti" android:layout_width="90.0dip" android:layout_height="90.0dip" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="90.0dip" android:layout_marginBottom="18.0dip" android:layout_weight="1.0">
+            <com.tencent.mm.pluginsdk.ui.musicplayer.AutoSizeTextView android:textSize="18.0dip" android:textColor="#ffb4b4b4" android:id="@id/bi9" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="3.0dip" style="@style/MusicPlayer" />
+            <com.tencent.mm.pluginsdk.ui.musicplayer.AutoSizeTextView android:id="@id/bi_" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/MusicPlayer" />
+            <com.tencent.mm.pluginsdk.ui.musicplayer.AutoSizeTextView android:id="@id/bia" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/MusicPlayer" />
+        </LinearLayout>
+        <ImageView android:id="@id/bib" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14.0dip" android:layout_marginBottom="18.0dip" android:src="@drawable/a5q" />
+    </LinearLayout>
+</RelativeLayout>

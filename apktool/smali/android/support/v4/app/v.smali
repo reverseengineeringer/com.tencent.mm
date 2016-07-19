@@ -7,11 +7,10 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/v4/app/v$a;,
-        Landroid/support/v4/app/v$f;,
-        Landroid/support/v4/app/v$i;,
-        Landroid/support/v4/app/v$g;,
-        Landroid/support/v4/app/v$h;,
         Landroid/support/v4/app/v$e;,
+        Landroid/support/v4/app/v$h;,
+        Landroid/support/v4/app/v$f;,
+        Landroid/support/v4/app/v$g;,
         Landroid/support/v4/app/v$d;,
         Landroid/support/v4/app/v$c;,
         Landroid/support/v4/app/v$b;
@@ -20,23 +19,32 @@
 
 
 # static fields
-.field private static final dC:I
+.field private static final dS:I
 
-.field private static final dD:Ljava/lang/Object;
+.field private static final dT:Ljava/lang/Object;
 
-.field private static dE:Ljava/lang/String;
+.field private static dU:Ljava/lang/String;
 
-.field private static dF:Ljava/util/Set;
+.field private static dV:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private static dH:Landroid/support/v4/app/v$h;
+.field private static dX:Landroid/support/v4/app/v$g;
 
-.field public static final dI:Landroid/support/v4/app/v$b;
+.field public static final dY:Landroid/support/v4/app/v$b;
 
 .field private static final sLock:Ljava/lang/Object;
 
 
 # instance fields
-.field public final dG:Landroid/app/NotificationManager;
+.field public final dW:Landroid/app/NotificationManager;
 
 .field public final mContext:Landroid/content/Context;
 
@@ -51,14 +59,14 @@
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Landroid/support/v4/app/v;->dD:Ljava/lang/Object;
+    sput-object v0, Landroid/support/v4/app/v;->dT:Ljava/lang/Object;
 
     .line 92
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    sput-object v0, Landroid/support/v4/app/v;->dF:Ljava/util/Set;
+    sput-object v0, Landroid/support/v4/app/v;->dV:Ljava/util/Set;
 
     .line 97
     new-instance v0, Ljava/lang/Object;
@@ -67,57 +75,40 @@
 
     sput-object v0, Landroid/support/v4/app/v;->sLock:Ljava/lang/Object;
 
-    .line 165
+    .line 162
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0xe
 
     if-lt v0, v1, :cond_0
 
-    .line 166
-    new-instance v0, Landroid/support/v4/app/v$e;
-
-    invoke-direct {v0}, Landroid/support/v4/app/v$e;-><init>()V
-
-    sput-object v0, Landroid/support/v4/app/v;->dI:Landroid/support/v4/app/v$b;
-
-    .line 172
-    :goto_0
-    sget-object v0, Landroid/support/v4/app/v;->dI:Landroid/support/v4/app/v$b;
-
-    invoke-interface {v0}, Landroid/support/v4/app/v$b;->ab()I
-
-    move-result v0
-
-    sput v0, Landroid/support/v4/app/v;->dC:I
-
-    .line 173
-    return-void
-
-    .line 167
-    :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/4 v1, 0x5
-
-    if-lt v0, v1, :cond_1
-
-    .line 168
+    .line 163
     new-instance v0, Landroid/support/v4/app/v$d;
 
     invoke-direct {v0}, Landroid/support/v4/app/v$d;-><init>()V
 
-    sput-object v0, Landroid/support/v4/app/v;->dI:Landroid/support/v4/app/v$b;
+    sput-object v0, Landroid/support/v4/app/v;->dY:Landroid/support/v4/app/v$b;
 
-    goto :goto_0
+    .line 167
+    :goto_0
+    sget-object v0, Landroid/support/v4/app/v;->dY:Landroid/support/v4/app/v$b;
 
-    .line 170
-    :cond_1
+    invoke-interface {v0}, Landroid/support/v4/app/v$b;->Z()I
+
+    move-result v0
+
+    sput v0, Landroid/support/v4/app/v;->dS:I
+
+    .line 168
+    return-void
+
+    .line 165
+    :cond_0
     new-instance v0, Landroid/support/v4/app/v$c;
 
     invoke-direct {v0}, Landroid/support/v4/app/v$c;-><init>()V
 
-    sput-object v0, Landroid/support/v4/app/v;->dI:Landroid/support/v4/app/v$b;
+    sput-object v0, Landroid/support/v4/app/v;->dY:Landroid/support/v4/app/v$b;
 
     goto :goto_0
 .end method
@@ -143,23 +134,23 @@
 
     check-cast v0, Landroid/app/NotificationManager;
 
-    iput-object v0, p0, Landroid/support/v4/app/v;->dG:Landroid/app/NotificationManager;
+    iput-object v0, p0, Landroid/support/v4/app/v;->dW:Landroid/app/NotificationManager;
 
     .line 110
     return-void
 .end method
 
-.method static synthetic aa()I
+.method static synthetic access$000()I
     .locals 1
 
     .prologue
     .line 54
-    sget v0, Landroid/support/v4/app/v;->dC:I
+    sget v0, Landroid/support/v4/app/v;->dS:I
 
     return v0
 .end method
 
-.method public static i(Landroid/content/Context;)Landroid/support/v4/app/v;
+.method public static g(Landroid/content/Context;)Landroid/support/v4/app/v;
     .locals 1
 
     .prologue
@@ -171,11 +162,22 @@
     return-object v0
 .end method
 
-.method public static j(Landroid/content/Context;)Ljava/util/Set;
+.method public static h(Landroid/content/Context;)Ljava/util/Set;
     .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            ")",
+            "Ljava/util/Set",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 233
+    .line 228
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -186,10 +188,10 @@
 
     move-result-object v1
 
-    .line 237
+    .line 232
     if-eqz v1, :cond_2
 
-    sget-object v0, Landroid/support/v4/app/v;->dE:Ljava/lang/String;
+    sget-object v0, Landroid/support/v4/app/v;->dU:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -197,21 +199,21 @@
 
     if-nez v0, :cond_2
 
-    .line 239
+    .line 234
     const-string/jumbo v0, ":"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 240
+    .line 235
     new-instance v3, Ljava/util/HashSet;
 
     array-length v0, v2
 
     invoke-direct {v3, v0}, Ljava/util/HashSet;-><init>(I)V
 
-    .line 241
+    .line 236
     array-length v4, v2
 
     const/4 v0, 0x0
@@ -221,52 +223,52 @@
 
     aget-object v5, v2, v0
 
-    .line 242
+    .line 237
     invoke-static {v5}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v5
 
-    .line 243
+    .line 238
     if-eqz v5, :cond_0
 
-    .line 244
+    .line 239
     invoke-virtual {v5}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v3, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 241
+    .line 236
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 247
+    .line 242
     :cond_1
-    sget-object v2, Landroid/support/v4/app/v;->dD:Ljava/lang/Object;
+    sget-object v2, Landroid/support/v4/app/v;->dT:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 248
+    .line 243
     :try_start_0
-    sput-object v3, Landroid/support/v4/app/v;->dF:Ljava/util/Set;
+    sput-object v3, Landroid/support/v4/app/v;->dV:Ljava/util/Set;
 
-    .line 249
-    sput-object v1, Landroid/support/v4/app/v;->dE:Ljava/lang/String;
+    .line 244
+    sput-object v1, Landroid/support/v4/app/v;->dU:Ljava/lang/String;
 
-    .line 250
+    .line 245
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 252
+    .line 247
     :cond_2
-    sget-object v0, Landroid/support/v4/app/v;->dF:Ljava/util/Set;
+    sget-object v0, Landroid/support/v4/app/v;->dV:Ljava/util/Set;
 
     return-object v0
 
-    .line 250
+    .line 245
     :catchall_0
     move-exception v0
 
@@ -280,23 +282,23 @@
 
 
 # virtual methods
-.method public final a(Landroid/support/v4/app/v$i;)V
+.method public final a(Landroid/support/v4/app/v$h;)V
     .locals 3
 
     .prologue
-    .line 267
+    .line 262
     sget-object v1, Landroid/support/v4/app/v;->sLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 268
+    .line 263
     :try_start_0
-    sget-object v0, Landroid/support/v4/app/v;->dH:Landroid/support/v4/app/v$h;
+    sget-object v0, Landroid/support/v4/app/v;->dX:Landroid/support/v4/app/v$g;
 
     if-nez v0, :cond_0
 
-    .line 269
-    new-instance v0, Landroid/support/v4/app/v$h;
+    .line 264
+    new-instance v0, Landroid/support/v4/app/v$g;
 
     iget-object v2, p0, Landroid/support/v4/app/v;->mContext:Landroid/content/Context;
 
@@ -304,20 +306,20 @@
 
     move-result-object v2
 
-    invoke-direct {v0, v2}, Landroid/support/v4/app/v$h;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v2}, Landroid/support/v4/app/v$g;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Landroid/support/v4/app/v;->dH:Landroid/support/v4/app/v$h;
+    sput-object v0, Landroid/support/v4/app/v;->dX:Landroid/support/v4/app/v$g;
 
-    .line 271
+    .line 266
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 272
-    sget-object v0, Landroid/support/v4/app/v;->dH:Landroid/support/v4/app/v$h;
+    .line 267
+    sget-object v0, Landroid/support/v4/app/v;->dX:Landroid/support/v4/app/v$g;
 
-    iget-object v0, v0, Landroid/support/v4/app/v$h;->mHandler:Landroid/os/Handler;
+    iget-object v0, v0, Landroid/support/v4/app/v$g;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
@@ -327,10 +329,10 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 273
+    .line 268
     return-void
 
-    .line 271
+    .line 266
     :catchall_0
     move-exception v0
 

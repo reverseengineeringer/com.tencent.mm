@@ -9,8 +9,8 @@ final class BizContactEntranceView$3$1
   
   public final void run()
   {
-    TextView localTextView = BizContactEntranceView.c(ljb.liY);
-    if ((BizContactEntranceView.b(ljb.liY)) && (liZ > lja)) {}
+    TextView localTextView = BizContactEntranceView.c(lJm.lJj);
+    if ((BizContactEntranceView.b(lJm.lJj)) && (lJk > lJl)) {}
     for (int i = 0;; i = 4)
     {
       localTextView.setVisibility(i);

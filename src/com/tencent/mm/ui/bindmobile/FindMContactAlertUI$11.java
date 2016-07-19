@@ -4,13 +4,13 @@ import android.app.ProgressDialog;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelfriend.aa;
 import com.tencent.mm.pluginsdk.a;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ab.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad.a;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 import java.util.List;
 
 final class FindMContactAlertUI$11
-  implements ab.a
+  implements ad.a
 {
   FindMContactAlertUI$11(FindMContactAlertUI paramFindMContactAlertUI) {}
   
@@ -19,16 +19,16 @@ final class FindMContactAlertUI$11
     return super.toString() + "|doUpload";
   }
   
-  public final boolean vd()
+  public final boolean vf()
   {
     try
     {
-      FindMContactAlertUI.a(kOV, a.cE(kOV));
+      FindMContactAlertUI.a(lol, a.cA(lol));
       StringBuilder localStringBuilder = new StringBuilder("tigerreg mobileList size ");
-      if (FindMContactAlertUI.k(kOV) == null) {}
-      for (int i = 0;; i = FindMContactAlertUI.k(kOV).size())
+      if (FindMContactAlertUI.k(lol) == null) {}
+      for (int i = 0;; i = FindMContactAlertUI.k(lol).size())
       {
-        u.d("!44@/B4Tb64lLpIaEkywMHoqABQUhRrFI+cbSM7Lgi4eEq8=", i);
+        v.d("MicroMsg.FindMContactAlertUI", i);
         break;
       }
       return true;
@@ -36,23 +36,21 @@ final class FindMContactAlertUI$11
     catch (Exception localException) {}
   }
   
-  public final boolean ve()
+  public final boolean vg()
   {
-    if ((FindMContactAlertUI.k(kOV) != null) && (FindMContactAlertUI.k(kOV).size() != 0))
+    if ((FindMContactAlertUI.k(lol) != null) && (FindMContactAlertUI.k(lol).size() != 0))
     {
-      FindMContactAlertUI.a(kOV, new aa(FindMContactAlertUI.a(kOV), FindMContactAlertUI.k(kOV)));
-      ah.tE().d(FindMContactAlertUI.l(kOV));
-    }
-    for (;;)
-    {
+      FindMContactAlertUI.a(lol, new aa(FindMContactAlertUI.a(lol), FindMContactAlertUI.k(lol)));
+      ah.tF().a(FindMContactAlertUI.l(lol), 0);
       return false;
-      if (FindMContactAlertUI.f(kOV) != null)
-      {
-        FindMContactAlertUI.f(kOV).dismiss();
-        FindMContactAlertUI.g(kOV);
-      }
-      FindMContactAlertUI.d(kOV);
     }
+    if (FindMContactAlertUI.f(lol) != null)
+    {
+      FindMContactAlertUI.f(lol).dismiss();
+      FindMContactAlertUI.g(lol);
+    }
+    FindMContactAlertUI.d(lol);
+    return false;
   }
 }
 

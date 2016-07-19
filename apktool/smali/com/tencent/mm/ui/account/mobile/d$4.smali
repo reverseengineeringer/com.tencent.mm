@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/mobile/d;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/account/mobile/d;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kxT:Lcom/tencent/mm/ui/account/mobile/d;
+.field final synthetic kXa:Lcom/tencent/mm/ui/account/mobile/d;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 221
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/d$4;->kxT:Lcom/tencent/mm/ui/account/mobile/d;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/d$4;->kXa:Lcom/tencent/mm/ui/account/mobile/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->ty()Ljava/lang/String;
 
     move-result-object v1
 
@@ -79,7 +79,7 @@
 
     const-string/jumbo v1, "L200_300"
 
-    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fq(Ljava/lang/String;)I
 
     move-result v1
 
@@ -97,7 +97,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kD(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->lm(Ljava/lang/String;)V
 
     .line 230
     return-void

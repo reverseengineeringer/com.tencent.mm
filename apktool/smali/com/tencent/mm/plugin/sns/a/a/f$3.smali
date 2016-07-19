@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic gGI:J
+.field final synthetic gNk:J
 
-.field final synthetic gGJ:Lcom/tencent/mm/plugin/sns/a/a/f;
+.field final synthetic gNl:Lcom/tencent/mm/plugin/sns/a/a/f;
 
-.field final synthetic gGM:J
+.field final synthetic gNn:J
 
 
 # direct methods
@@ -30,12 +30,12 @@
     .locals 0
 
     .prologue
-    .line 213
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/a/a/f$3;->gGJ:Lcom/tencent/mm/plugin/sns/a/a/f;
+    .line 218
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/a/a/f$3;->gNl:Lcom/tencent/mm/plugin/sns/a/a/f;
 
-    iput-wide p2, p0, Lcom/tencent/mm/plugin/sns/a/a/f$3;->gGI:J
+    iput-wide p2, p0, Lcom/tencent/mm/plugin/sns/a/a/f$3;->gNk:J
 
-    iput-wide p4, p0, Lcom/tencent/mm/plugin/sns/a/a/f$3;->gGM:J
+    iput-wide p4, p0, Lcom/tencent/mm/plugin/sns/a/a/f$3;->gNn:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,43 +48,43 @@
     .locals 5
 
     .prologue
-    .line 216
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/f$3;->gGJ:Lcom/tencent/mm/plugin/sns/a/a/f;
+    .line 221
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/f$3;->gNl:Lcom/tencent/mm/plugin/sns/a/a/f;
 
-    iget-wide v1, p0, Lcom/tencent/mm/plugin/sns/a/a/f$3;->gGI:J
+    iget-wide v2, p0, Lcom/tencent/mm/plugin/sns/a/a/f$3;->gNk:J
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/sns/a/a/f;->bU(J)Z
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/plugin/sns/a/a/f;->ck(J)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 217
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/f$3;->gGJ:Lcom/tencent/mm/plugin/sns/a/a/f;
+    .line 222
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/f$3;->gNl:Lcom/tencent/mm/plugin/sns/a/a/f;
 
-    iget-wide v1, p0, Lcom/tencent/mm/plugin/sns/a/a/f$3;->gGM:J
+    iget-wide v2, p0, Lcom/tencent/mm/plugin/sns/a/a/f$3;->gNn:J
 
-    iget-object v3, v0, Lcom/tencent/mm/plugin/sns/a/a/f;->gGy:Ljava/util/HashSet;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/a/a/f;->gNa:Ljava/util/HashSet;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v1
 
-    if-nez v3, :cond_0
+    if-nez v1, :cond_0
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/a/a/f;->gGy:Ljava/util/HashSet;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/a/a/f;->gNa:Ljava/util/HashSet;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 219
+    .line 224
     :cond_0
     return-void
 .end method

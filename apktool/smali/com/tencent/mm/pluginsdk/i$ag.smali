@@ -15,9 +15,9 @@
 
 
 # static fields
-.field private static iyW:Lcom/tencent/mm/pluginsdk/i$ad;
+.field private static iVs:Lcom/tencent/mm/pluginsdk/i$ad;
 
-.field public static iyX:Z
+.field public static iVt:Z
 
 
 # direct methods
@@ -25,10 +25,10 @@
     .locals 1
 
     .prologue
-    .line 1070
+    .line 1067
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/tencent/mm/pluginsdk/i$ag;->iyX:Z
+    sput-boolean v0, Lcom/tencent/mm/pluginsdk/i$ag;->iVt:Z
 
     return-void
 .end method
@@ -37,19 +37,19 @@
     .locals 0
 
     .prologue
-    .line 1073
-    sput-object p0, Lcom/tencent/mm/pluginsdk/i$ag;->iyW:Lcom/tencent/mm/pluginsdk/i$ad;
+    .line 1070
+    sput-object p0, Lcom/tencent/mm/pluginsdk/i$ag;->iVs:Lcom/tencent/mm/pluginsdk/i$ad;
 
-    .line 1074
+    .line 1071
     return-void
 .end method
 
-.method public static aPc()Lcom/tencent/mm/pluginsdk/i$ad;
+.method public static aTE()Lcom/tencent/mm/pluginsdk/i$ad;
     .locals 1
 
     .prologue
-    .line 1077
-    sget-object v0, Lcom/tencent/mm/pluginsdk/i$ag;->iyW:Lcom/tencent/mm/pluginsdk/i$ad;
+    .line 1074
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$ag;->iVs:Lcom/tencent/mm/pluginsdk/i$ad;
 
     return-object v0
 .end method

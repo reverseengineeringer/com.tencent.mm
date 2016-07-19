@@ -9,7 +9,7 @@
 # static fields
 .field private static final LENGTH_LIMIT:I = 0x2800
 
-.field private static final TAG:Ljava/lang/String; = "!44@/B4Tb64lLpJzNFkXfnMUR98Xd/IsQLrYLUyRWBhcjoc="
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.SDK.WXVideoObject"
 
 
 # instance fields
@@ -67,11 +67,11 @@
 
     .line 68
     :cond_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpJzNFkXfnMUR98Xd/IsQLrYLUyRWBhcjoc="
+    const-string/jumbo v1, "MicroMsg.SDK.WXVideoObject"
 
     const-string/jumbo v2, "both arguments are null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 82
     :goto_0
@@ -92,11 +92,11 @@
     if-le v1, v2, :cond_3
 
     .line 73
-    const-string/jumbo v1, "!44@/B4Tb64lLpJzNFkXfnMUR98Xd/IsQLrYLUyRWBhcjoc="
+    const-string/jumbo v1, "MicroMsg.SDK.WXVideoObject"
 
     const-string/jumbo v2, "checkArgs fail, videoUrl is too long"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -115,11 +115,11 @@
     if-le v1, v2, :cond_4
 
     .line 78
-    const-string/jumbo v1, "!44@/B4Tb64lLpJzNFkXfnMUR98Xd/IsQLrYLUyRWBhcjoc="
+    const-string/jumbo v1, "MicroMsg.SDK.WXVideoObject"
 
     const-string/jumbo v2, "checkArgs fail, videoLowBandUrl is too long"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 

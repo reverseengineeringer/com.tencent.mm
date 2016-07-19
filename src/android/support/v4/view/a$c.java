@@ -37,7 +37,7 @@ final class a$c
       {
         paramAnonymousView = a.d(paramAnonymousView);
         if (paramAnonymousView != null) {
-          return gN;
+          return hi;
         }
         return null;
       }

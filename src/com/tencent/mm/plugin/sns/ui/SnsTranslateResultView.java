@@ -13,67 +13,74 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.tencent.mm.aw.a;
+import com.tencent.mm.az.a;
 import com.tencent.mm.compatible.util.c;
-import com.tencent.mm.plugin.sns.d.an;
-import com.tencent.mm.plugin.sns.d.an.b;
+import com.tencent.mm.plugin.sns.e.am;
+import com.tencent.mm.plugin.sns.e.am.b;
 import com.tencent.mm.pluginsdk.ui.d.e;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.ui.tools.k;
 
 public class SnsTranslateResultView
   extends LinearLayout
 {
-  private static final int hlp = Color.parseColor("#19000000");
-  private Drawable bTR;
-  private TextView gbf;
-  private TextView hln;
-  private View hlo;
-  private int hlq = -1;
-  private float hlr = -1.0F;
-  private int hls = -1;
+  private static final int hBh = Color.parseColor("#19000000");
+  private Drawable bNs;
+  public TextView glg;
+  private TextView hBf;
+  public View hBg;
+  private int hBi = -1;
+  private float hBj = -1.0F;
+  private int hBk = -1;
   
   public SnsTranslateResultView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    LayoutInflater.from(getContext()).inflate(2131362823, this);
-    hln = ((TextView)findViewById(2131168534));
-    gbf = ((TextView)findViewById(2131168535));
-    hlo = findViewById(2131168533);
-    bTR = getResources().getDrawable(2130969845);
-    bTR.setBounds(0, 0, (int)(gbf.getTextSize() * 0.8F), (int)(gbf.getTextSize() * 0.8F));
-    bTR.setColorFilter(hlp, PorterDuff.Mode.SRC_IN);
+    LayoutInflater.from(getContext()).inflate(2130904537, this);
+    hBf = ((TextView)findViewById(2131759372));
+    glg = ((TextView)findViewById(2131759373));
+    hBg = findViewById(2131759371);
+    bNs = getResources().getDrawable(2130839398);
+    bNs.setBounds(0, 0, (int)(glg.getTextSize() * 0.8F), (int)(glg.getTextSize() * 0.8F));
+    bNs.setColorFilter(hBh, PorterDuff.Mode.SRC_IN);
+  }
+  
+  public final void A(float paramFloat)
+  {
+    glg.setTextSize(0, paramFloat);
+    hBj = paramFloat;
+    hBk = 0;
   }
   
   @TargetApi(11)
-  public final void a(final an.b paramb, int paramInt, String paramString1, String paramString2, boolean paramBoolean)
+  public final void a(final am.b paramb, int paramInt, String paramString1, String paramString2, boolean paramBoolean)
   {
-    hlq = paramInt;
-    if ((hlr == -1.0F) && (hls == -1)) {
-      if (hlq == 2)
+    hBi = paramInt;
+    if ((hBj == -1.0F) && (hBk == -1)) {
+      if (hBi == 2)
       {
-        gbf.setTextSize(1, 14.0F * a.cY(getContext()));
-        if (hlq != 2) {
+        glg.setTextSize(1, 14.0F * a.cW(getContext()));
+        if (hBi != 2) {
           break label213;
         }
-        gbf.setTextColor(getContext().getResources().getColor(2131231005));
+        glg.setTextColor(getContext().getResources().getColor(2131689970));
         label76:
-        if (ay.kz(paramString1)) {
+        if (be.kf(paramString1)) {
           break label243;
         }
-        gbf.setText(paramString1);
-        e.a(gbf, 2);
+        glg.setText(paramString1);
+        e.b(glg, 2);
         label100:
-        gbf.setCompoundDrawables(null, null, null, null);
-        if ((paramBoolean) && (c.bU(11))) {
-          k.a(gbf, new Animator.AnimatorListener()
+        glg.setCompoundDrawables(null, null, null, null);
+        if ((paramBoolean) && (c.cm(11))) {
+          k.a(glg, new Animator.AnimatorListener()
           {
             public final void onAnimationCancel(Animator paramAnonymousAnimator) {}
             
             public final void onAnimationEnd(Animator paramAnonymousAnimator)
             {
               if (paramb != null) {
-                an.a(paramb);
+                am.a(paramb);
               }
             }
             
@@ -82,71 +89,54 @@ public class SnsTranslateResultView
             public final void onAnimationStart(Animator paramAnonymousAnimator) {}
           });
         }
-        if (ay.kz(paramString2)) {
+        if (be.kf(paramString2)) {
           break label255;
         }
-        hln.setText(paramString2);
+        hBf.setText(paramString2);
       }
     }
     for (;;)
     {
-      hln.setVisibility(0);
+      hBf.setVisibility(0);
       return;
-      if (hlq != 1) {
+      if (hBi != 1) {
         break;
       }
-      gbf.setTextSize(1, 15.0F * a.cY(getContext()));
+      glg.setTextSize(1, 15.0F * a.cW(getContext()));
       break;
-      gbf.setTextSize(hls, hlr);
+      glg.setTextSize(hBk, hBj);
       break;
       label213:
-      if (hlq != 1) {
+      if (hBi != 1) {
         break label76;
       }
-      gbf.setTextColor(getContext().getResources().getColor(2131231004));
+      glg.setTextColor(getContext().getResources().getColor(2131689972));
       break label76;
       label243:
-      gbf.setText(2131433225);
+      glg.setText(2131235594);
       break label100;
       label255:
-      hln.setText(2131429628);
+      hBf.setText(2131231778);
     }
   }
   
-  public TextView getResultTextView()
+  public final void nA(int paramInt)
   {
-    return gbf;
+    glg.setCompoundDrawables(bNs, null, null, null);
+    glg.setCompoundDrawablePadding(a.fromDPToPix(getContext(), 3));
+    glg.setText(2131235596);
+    k.a(glg, null);
+    hBf.setVisibility(4);
+    hBi = paramInt;
+    glg.setTextSize(0, hBf.getTextSize());
+    glg.setTextColor(getContext().getResources().getColor(2131689971));
   }
   
-  public View getSplitlineView()
+  public final void z(float paramFloat)
   {
-    return hlo;
-  }
-  
-  public final void mi(int paramInt)
-  {
-    gbf.setCompoundDrawables(bTR, null, null, null);
-    gbf.setCompoundDrawablePadding(a.fromDPToPix(getContext(), 3));
-    gbf.setText(2131433226);
-    k.a(gbf, null);
-    hln.setVisibility(4);
-    hlq = paramInt;
-    gbf.setTextSize(0, hln.getTextSize());
-    gbf.setTextColor(getContext().getResources().getColor(2131231006));
-  }
-  
-  public void setResultTextSize(float paramFloat)
-  {
-    gbf.setTextSize(0, paramFloat);
-    hlr = paramFloat;
-    hls = 0;
-  }
-  
-  public final void setResultTextSize$255e752(float paramFloat)
-  {
-    gbf.setTextSize(1, paramFloat);
-    hlr = paramFloat;
-    hls = 1;
+    glg.setTextSize(1, paramFloat);
+    hBj = paramFloat;
+    hBk = 1;
   }
 }
 

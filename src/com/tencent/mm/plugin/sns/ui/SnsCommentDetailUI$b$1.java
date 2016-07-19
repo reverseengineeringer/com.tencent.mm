@@ -10,7 +10,7 @@ final class SnsCommentDetailUI$b$1
   
   public final void run()
   {
-    SnsCommentDetailUI.d(hds.hda).setSelection(SnsCommentDetailUI.d(hds.hda).getHeaderViewsCount() + hds.hdq.size() - 1);
+    SnsCommentDetailUI.d(hsf.hrN).setSelection(SnsCommentDetailUI.d(hsf.hrN).getHeaderViewsCount() + hsf.hsd.size() - 1);
   }
 }
 

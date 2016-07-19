@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->n(Ljava/lang/Runnable;)V
+    value = Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->o(Ljava/lang/Runnable;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic gEp:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+.field final synthetic gKQ:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-.field final synthetic gEq:Ljava/lang/Runnable;
+.field final synthetic gKR:Ljava/lang/Runnable;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 352
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$4;->gEp:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    .line 359
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$4;->gKQ:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$4;->gEq:Ljava/lang/Runnable;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$4;->gKR:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,16 +44,16 @@
     .locals 2
 
     .prologue
-    .line 355
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$4;->gEp:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    .line 362
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$4;->gKQ:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->gEd:Lcom/tencent/mm/plugin/sight/encode/a/b;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->gKD:Lcom/tencent/mm/plugin/sight/encode/a/b;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$4;->gEq:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$4;->gKR:Ljava/lang/Runnable;
 
     invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/a/b;->m(Ljava/lang/Runnable;)V
 
-    .line 356
+    .line 363
     return-void
 .end method
 
@@ -61,7 +61,7 @@
     .locals 2
 
     .prologue
-    .line 360
+    .line 367
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

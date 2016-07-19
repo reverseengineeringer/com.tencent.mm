@@ -8,13 +8,13 @@ import android.util.Base64;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.ab.n;
+import com.tencent.mm.ae.n;
 import com.tencent.mm.plugin.sight.base.c;
 import com.tencent.mm.pluginsdk.ui.tools.f.a;
 import com.tencent.mm.sdk.b.b;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.j;
 import java.io.File;
@@ -24,37 +24,30 @@ final class SnsSightPlayerUI$5
 {
   SnsSightPlayerUI$5(SnsSightPlayerUI paramSnsSightPlayerUI) {}
   
-  public final void Xq()
+  public final void Zb()
   {
-    u.d("!44@/B4Tb64lLpLAQNo3yhYAsqDk1iee7Bh2S7FW+l6OQsk=", com.tencent.mm.compatible.util.f.oY() + " onPrepared");
-    SnsSightPlayerUI.a(his, true);
+    v.d("MicroMsg.SnsSightPlayerUI", com.tencent.mm.compatible.util.f.nq() + " onPrepared");
+    SnsSightPlayerUI.a(hxh, true);
   }
   
-  public final int aA(int paramInt1, int paramInt2)
+  public final void aE(int paramInt1, int paramInt2)
   {
-    return 0;
-  }
-  
-  public final void aB(int paramInt1, int paramInt2) {}
-  
-  public final void az(int paramInt1, int paramInt2)
-  {
-    u.e("!44@/B4Tb64lLpLAQNo3yhYAsqDk1iee7Bh2S7FW+l6OQsk=", "on play video error, what %d extra %d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
-    SnsSightPlayerUI.f(his).stop();
-    if (SnsSightPlayerUI.g(his)) {
+    v.e("MicroMsg.SnsSightPlayerUI", "on play video error, what %d extra %d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    SnsSightPlayerUI.f(hxh).stop();
+    if (SnsSightPlayerUI.g(hxh)) {
       return;
     }
-    SnsSightPlayerUI.h(his);
-    b.q(Base64.encodeToString((c.avE() + "[SnsSightPlayerUI] on play video error, what " + paramInt1 + " extra " + paramInt2 + ", path=" + ay.ad(SnsSightPlayerUI.b(his), "")).getBytes(), 2), "FullScreenPlaySight");
-    final String str = SnsSightPlayerUI.b(his);
-    ab.j(new Runnable()
+    SnsSightPlayerUI.h(hxh);
+    b.o(Base64.encodeToString((c.axV() + "[SnsSightPlayerUI] on play video error, what " + paramInt1 + " extra " + paramInt2 + ", path=" + be.ab(SnsSightPlayerUI.c(hxh), "")).getBytes(), 2), "FullScreenPlaySight");
+    final String str = SnsSightPlayerUI.c(hxh);
+    ad.k(new Runnable()
     {
       public final void run()
       {
-        Object localObject = (ImageView)his.findViewById(2131166462);
+        Object localObject = (ImageView)hxh.findViewById(2131756835);
         if (localObject != null)
         {
-          ((ImageView)localObject).setImageBitmap(fRQ);
+          ((ImageView)localObject).setImageBitmap(gaT);
           ((ImageView)localObject).setVisibility(0);
         }
         localObject = new Intent();
@@ -62,35 +55,42 @@ final class SnsSightPlayerUI$5
         ((Intent)localObject).setDataAndType(Uri.fromFile(new File(str)), "video/*");
         try
         {
-          his.koJ.kpc.startActivity(Intent.createChooser((Intent)localObject, his.koJ.kpc.getString(2131432531)));
+          hxh.kNN.kOg.startActivity(Intent.createChooser((Intent)localObject, hxh.kNN.kOg.getString(2131232712)));
           return;
         }
         catch (Exception localException)
         {
-          u.e("!44@/B4Tb64lLpLAQNo3yhYAsqDk1iee7Bh2S7FW+l6OQsk=", "startActivity fail, activity not found");
-          com.tencent.mm.ui.base.g.e(his.koJ.kpc, 2131432547, 2131432546);
+          v.e("MicroMsg.SnsSightPlayerUI", "startActivity fail, activity not found");
+          com.tencent.mm.ui.base.g.f(hxh.kNN.kOg, 2131232633, 2131232634);
         }
       }
     });
   }
   
-  public final void lG()
+  public final int aF(int paramInt1, int paramInt2)
   {
-    u.d("!44@/B4Tb64lLpLAQNo3yhYAsqDk1iee7Bh2S7FW+l6OQsk=", "on completion");
-    if (!SnsSightPlayerUI.i(his)) {
-      SnsSightPlayerUI.j(his).post(new Runnable()
+    return 0;
+  }
+  
+  public final void aG(int paramInt1, int paramInt2) {}
+  
+  public final void jQ()
+  {
+    v.d("MicroMsg.SnsSightPlayerUI", "on completion");
+    if (!SnsSightPlayerUI.i(hxh)) {
+      SnsSightPlayerUI.j(hxh).post(new Runnable()
       {
         public final void run()
         {
-          SnsSightPlayerUI.j(his).setVisibility(0);
-          SnsSightPlayerUI.j(his).startAnimation(AnimationUtils.loadAnimation(his.koJ.kpc, 2130837575));
+          SnsSightPlayerUI.j(hxh).setVisibility(0);
+          SnsSightPlayerUI.j(hxh).startAnimation(AnimationUtils.loadAnimation(hxh.kNN.kOg, 2130968612));
         }
       });
     }
-    SnsSightPlayerUI.f(his).setLoop(true);
-    com.tencent.mm.plugin.sns.a.a.a.a locala = khis).gGR;
-    gHi += 1;
-    SnsSightPlayerUI.a(his, false);
+    SnsSightPlayerUI.f(hxh).ew(true);
+    com.tencent.mm.plugin.sns.a.a.a.a locala = khxh).gNs;
+    gOn += 1;
+    SnsSightPlayerUI.a(hxh, false);
   }
 }
 

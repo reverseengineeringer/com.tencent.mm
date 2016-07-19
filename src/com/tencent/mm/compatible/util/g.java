@@ -4,45 +4,45 @@ import android.annotation.TargetApi;
 import android.os.Environment;
 import com.tencent.mm.compatible.d.j;
 import com.tencent.mm.compatible.d.p;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import java.io.File;
 
 public final class g
 {
   public static File getDataDirectory()
   {
-    if (ay.kz(bsQbsk)) {
+    if (be.kf(bgWbgn)) {
       return Environment.getDataDirectory();
     }
-    return new File(bsQbsk);
+    return new File(bgWbgn);
   }
   
   public static File getExternalStorageDirectory()
   {
-    if (ay.kz(bsQbsi)) {
+    if (be.kf(bgWbgl)) {
       return Environment.getExternalStorageDirectory();
     }
-    return new File(bsQbsi);
+    return new File(bgWbgl);
   }
   
   @TargetApi(8)
   public static File getExternalStoragePublicDirectory(String paramString)
   {
-    if (ay.kz(bsQbsj)) {
+    if (be.kf(bgWbgm)) {
       return Environment.getExternalStoragePublicDirectory(paramString);
     }
-    return new File(bsQbsj);
+    return new File(bgWbgm);
   }
   
   public static String getExternalStorageState()
   {
-    if (ay.kz(bsQbsm)) {
+    if (be.kf(bgWbgp)) {
       return Environment.getExternalStorageState();
     }
-    return bsQbsm;
+    return bgWbgp;
   }
   
-  public static boolean oW()
+  public static boolean no()
   {
     boolean bool2 = false;
     boolean bool1 = bool2;

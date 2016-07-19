@@ -8,10 +8,10 @@ import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.TextView;
 import android.widget.TextView.BufferType;
-import com.tencent.mm.plugin.sns.h.k;
 import com.tencent.mm.plugin.sns.ui.b.a.b;
+import com.tencent.mm.plugin.sns.ui.widget.SnsPostDescPreloadTextView;
 import com.tencent.mm.pluginsdk.ui.d.e;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import java.util.List;
 
 public class AsyncNormalTextView
@@ -19,12 +19,10 @@ public class AsyncNormalTextView
 {
   public String content;
   private Context context;
-  public String gHs;
-  public k gPk;
-  public an gRM;
-  private a.b gWo;
-  public int gWp = 0;
-  SpannableStringBuilder gWq;
+  public aq gZP;
+  private a.b hjK;
+  public int hjL = 0;
+  public as hjM;
   
   public AsyncNormalTextView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -32,9 +30,54 @@ public class AsyncNormalTextView
     context = paramContext;
   }
   
-  public String getContent()
+  public final void c(a.b paramb)
   {
-    return content;
+    hjK = paramb;
+    if (!be.kf(content))
+    {
+      System.currentTimeMillis();
+      setVisibility(0);
+      if (hjL != 1) {
+        break label213;
+      }
+      if (content.length() <= 100) {
+        break label205;
+      }
+      paramb = content.substring(0, 100) + "...";
+      content = paramb;
+      paramb = new SpannableStringBuilder(e.a(context, content, hky.getTextSize()));
+      a(hjL, paramb, TextView.BufferType.NORMAL, gZP.hkE, hjM.hlg, hjM.hAl, gZP, content, hjM.hjO);
+    }
+    for (;;)
+    {
+      paramb = new an(hjM.hAl, false, false, 1);
+      hky.setTag(paramb);
+      if (hkz != null) {
+        hkz.setTag(paramb);
+      }
+      hkA.setTag(hjK);
+      return;
+      label205:
+      paramb = content;
+      break;
+      label213:
+      if ((content.length() < 400) || (hjM.hjO))
+      {
+        paramb = null;
+        if (hjM != null) {
+          paramb = hjM.hAj;
+        }
+        Object localObject = paramb;
+        if (paramb == null) {
+          localObject = new SpannableStringBuilder(e.a(context, content, hky.getTextSize()));
+        }
+        a(hjL, (CharSequence)localObject, TextView.BufferType.SPANNABLE, gZP.hkE, hjM.hlg, hjM.hAl, gZP, content, hjM.hjO);
+      }
+      else
+      {
+        a(hjL, content, TextView.BufferType.NORMAL, gZP.hkE, hjM.hlg, hjM.hAl, gZP, content, hjM.hjO);
+      }
+    }
   }
   
   @TargetApi(14)
@@ -58,49 +101,6 @@ public class AsyncNormalTextView
   {
     super.onPopulateAccessibilityEvent(paramAccessibilityEvent);
     paramAccessibilityEvent.getText().add(content);
-  }
-  
-  public void setShow(a.b paramb)
-  {
-    gWo = paramb;
-    if (!ay.kz(content))
-    {
-      System.currentTimeMillis();
-      setVisibility(0);
-      if (gWp != 1) {
-        break label203;
-      }
-      if (content.length() <= 100) {
-        break label195;
-      }
-      paramb = content.substring(0, 100) + "...";
-      content = paramb;
-      paramb = new SpannableStringBuilder(e.a(context, content, gXm.getTextSize()));
-      a(gWp, paramb, TextView.BufferType.NORMAL, gRM.gXs, gPk, gRM, content, gWo.gHq);
-    }
-    for (;;)
-    {
-      paramb = new aj(gPk.aAf(), false, false, 1);
-      gXm.setTag(paramb);
-      if (gXn != null) {
-        gXn.setTag(paramb);
-      }
-      gXo.setTag(gWo);
-      return;
-      label195:
-      paramb = content;
-      break;
-      label203:
-      if ((content.length() < 400) || (gWo.gHq))
-      {
-        gWq = new SpannableStringBuilder(e.a(context, content, gXm.getTextSize()));
-        a(gWp, gWq, TextView.BufferType.SPANNABLE, gRM.gXs, gPk, gRM, content, gWo.gHq);
-      }
-      else
-      {
-        a(gWp, content, TextView.BufferType.NORMAL, gRM.gXs, gPk, gRM, content, gWo.gHq);
-      }
-    }
   }
 }
 

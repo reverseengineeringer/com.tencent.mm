@@ -4,226 +4,284 @@
 
 
 # direct methods
-.method public static a(Landroid/app/Activity;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Z
-    .locals 6
+.method public static Bx(Ljava/lang/String;)Landroid/os/Bundle;
+    .locals 9
 
     .prologue
-    const/4 v1, 0x0
-
-    const/4 v0, 0x1
-
-    .line 58
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v3, 0x17
-
-    if-ge v2, v3, :cond_1
-
-    const-string/jumbo v2, "MNC"
-
-    sget-object v3, Landroid/os/Build$VERSION;->CODENAME:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    .line 98
-    :cond_0
-    :goto_0
-    return v0
-
-    .line 62
-    :cond_1
-    :try_start_0
-    invoke-static {p0, p1}, Landroid/support/v4/content/a;->b(Landroid/content/Context;Ljava/lang/String;)I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v2
-
-    .line 69
-    if-eqz v2, :cond_0
-
-    .line 73
-    invoke-static {p4}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    .line 74
-    new-instance v0, Lcom/tencent/mm/pluginsdk/g/a$1;
-
-    invoke-direct {v0, p0, p1, p2}, Lcom/tencent/mm/pluginsdk/g/a$1;-><init>(Landroid/app/Activity;Ljava/lang/String;I)V
-
-    invoke-static {p0, p4, p3, v1, v0}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ZLandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
-
-    :goto_1
-    move v0, v1
-
-    .line 98
-    goto :goto_0
-
-    .line 65
-    :catch_0
-    move-exception v2
-
-    .line 66
-    const-string/jumbo v3, "!44@/B4Tb64lLpKRWbkIOVEIGWRz/ZgL8rDZ506X222/Mts="
-
-    const-string/jumbo v4, "check mpermission exception:%s."
-
-    new-array v5, v0, [Ljava/lang/Object;
-
-    aput-object v2, v5, v1
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    .line 83
-    :cond_2
-    new-array v0, v0, [Ljava/lang/String;
-
-    aput-object p1, v0, v1
-
-    invoke-static {p0, v0, p2}, Landroid/support/v4/app/a;->a(Landroid/app/Activity;[Ljava/lang/String;I)V
-
-    goto :goto_1
-.end method
-
-.method public static aL(Landroid/content/Context;Ljava/lang/String;)Z
-    .locals 5
-
-    .prologue
-    const/4 v2, 0x1
+    const/4 v8, 0x1
 
     const/4 v1, 0x0
 
-    .line 102
-    :try_start_0
-    invoke-static {p0, p1}, Landroid/support/v4/content/a;->b(Landroid/content/Context;Ljava/lang/String;)I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .line 48
+    new-instance v2, Landroid/os/Bundle;
 
-    move-result v3
+    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    .line 110
+    .line 50
+    const-string/jumbo v0, "key_scene"
+
+    invoke-virtual {v2, v0, v8}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    .line 51
+    const-string/jumbo v0, "&"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 52
     if-eqz v3, :cond_0
 
-    move v0, v1
+    array-length v0, v3
 
-    .line 134
-    :goto_0
-    return v0
+    if-nez v0, :cond_1
 
-    .line 105
-    :catch_0
-    move-exception v0
-
-    .line 106
-    const-string/jumbo v3, "!44@/B4Tb64lLpKRWbkIOVEIGWRz/ZgL8rDZ506X222/Mts="
-
-    const-string/jumbo v4, "check mpermission exception:%s."
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    aput-object v0, v2, v1
-
-    invoke-static {v3, v4, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    move v0, v1
-
-    .line 107
-    goto :goto_0
-
-    .line 114
+    .line 53
     :cond_0
-    const/4 v0, 0x0
+    const-string/jumbo v0, "MicroMsg.MallManager"
 
-    .line 115
-    const-string/jumbo v4, "android.permission.READ_CONTACTS"
+    const-string/jumbo v1, "getWapPayBundle arrKeys == null || arrKeys.length == 0"
 
-    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result v4
+    move-object v0, v2
 
-    if-eqz v4, :cond_2
+    .line 85
+    :goto_0
+    return-object v0
 
-    .line 116
-    const-string/jumbo v0, "android.permission.WRITE_CONTACTS"
-
-    .line 121
+    .line 57
     :cond_1
+    new-instance v4, Ljava/util/HashMap;
+
+    invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
+
+    move v0, v1
+
+    .line 58
     :goto_1
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    array-length v5, v3
 
-    move-result v4
+    if-ge v0, v5, :cond_3
 
-    if-nez v4, :cond_4
+    .line 59
+    aget-object v5, v3, v0
 
-    .line 123
-    :try_start_1
-    invoke-static {p0, v0}, Landroid/support/v4/content/a;->b(Landroid/content/Context;Ljava/lang/String;)I
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    .line 60
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v0
+    move-result v6
 
-    .line 130
-    :goto_2
-    if-nez v0, :cond_3
+    if-nez v6, :cond_2
 
-    move v0, v2
+    .line 61
+    const-string/jumbo v6, "="
 
-    .line 131
-    goto :goto_0
+    invoke-virtual {v5, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    .line 117
+    move-result-object v5
+
+    .line 64
+    if-eqz v5, :cond_2
+
+    array-length v6, v5
+
+    const/4 v7, 0x2
+
+    if-ne v6, v7, :cond_2
+
+    .line 65
+    aget-object v6, v5, v1
+
+    aget-object v5, v5, v8
+
+    invoke-virtual {v4, v6, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 58
     :cond_2
-    const-string/jumbo v4, "android.permission.WRITE_CONTACTS"
-
-    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    .line 118
-    const-string/jumbo v0, "android.permission.READ_CONTACTS"
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 124
-    :catch_1
-    move-exception v0
-
-    .line 125
-    const-string/jumbo v3, "!44@/B4Tb64lLpKRWbkIOVEIGWRz/ZgL8rDZ506X222/Mts="
-
-    const-string/jumbo v4, "check mpermission otherPermisson exception:%s."
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    aput-object v0, v2, v1
-
-    invoke-static {v3, v4, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    move v0, v1
-
-    .line 126
-    goto :goto_0
-
+    .line 72
     :cond_3
-    move v0, v1
+    const-string/jumbo v0, "_wxapi_payreq_appid"
 
-    .line 134
-    goto :goto_0
+    const-string/jumbo v1, "appid"
 
-    :cond_4
-    move v0, v3
+    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/g/a;->c(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
 
-    goto :goto_2
+    move-result-object v1
+
+    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 73
+    const-string/jumbo v0, "_wxapi_payreq_partnerid"
+
+    const-string/jumbo v1, "partnerid"
+
+    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/g/a;->c(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 74
+    const-string/jumbo v0, "_wxapi_payreq_prepayid"
+
+    const-string/jumbo v1, "prepayid"
+
+    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/g/a;->c(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 75
+    const-string/jumbo v0, "_wxapi_payreq_noncestr"
+
+    const-string/jumbo v1, "noncestr"
+
+    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/g/a;->c(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 76
+    const-string/jumbo v0, "_wxapi_payreq_timestamp"
+
+    const-string/jumbo v1, "timestamp"
+
+    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/g/a;->c(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 77
+    const-string/jumbo v0, "_wxapi_payreq_packagevalue"
+
+    const-string/jumbo v1, "package"
+
+    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/g/a;->c(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 78
+    const-string/jumbo v0, "_wxapi_payreq_sign"
+
+    const-string/jumbo v1, "sign"
+
+    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/g/a;->c(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 79
+    const-string/jumbo v0, "_wxapi_payreq_sign_type"
+
+    const-string/jumbo v1, "signtype"
+
+    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/g/a;->c(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 80
+    const-string/jumbo v0, "_wxapi_payreq_extdata"
+
+    const-string/jumbo v1, "extdata"
+
+    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/g/a;->c(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 83
+    const-string/jumbo v0, "_wxapi_payoptions_callback_classname"
+
+    const-string/jumbo v1, ""
+
+    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 84
+    const-string/jumbo v0, "_wxapi_payoptions_callback_flags"
+
+    const/4 v1, -0x1
+
+    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    move-object v0, v2
+
+    .line 85
+    goto/16 :goto_0
+.end method
+
+.method private static c(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;)",
+            "Ljava/lang/String;"
+        }
+    .end annotation
+
+    .prologue
+    .line 89
+    invoke-virtual {p1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 90
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 91
+    const-string/jumbo v0, "MicroMsg.MallManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "getWapPayKey key: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v2, " value is empty"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 92
+    const-string/jumbo v0, ""
+
+    .line 94
+    :cond_0
+    return-object v0
 .end method

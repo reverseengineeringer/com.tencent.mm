@@ -1,21 +1,18 @@
 package com.tencent.mm.ui.transmit;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import com.tencent.mm.pluginsdk.ui.applet.c.a;
 
 final class SelectConversationUI$5
-  implements c.a
+  implements DialogInterface.OnClickListener
 {
   SelectConversationUI$5(SelectConversationUI paramSelectConversationUI, Intent paramIntent) {}
   
-  public final void a(boolean paramBoolean, String paramString, int paramInt)
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    lBq.age();
-    if (paramBoolean)
-    {
-      lBq.setResult(-1, val$intent);
-      lBq.finish();
-    }
+    mci.setResult(-1, val$intent);
+    mci.finish();
   }
 }
 

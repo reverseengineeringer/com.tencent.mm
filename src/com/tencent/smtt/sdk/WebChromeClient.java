@@ -1,14 +1,18 @@
 package com.tencent.smtt.sdk;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Message;
 import android.view.View;
 import android.webkit.WebChromeClient.FileChooserParams;
+import com.tencent.smtt.export.external.DexLoader;
 import com.tencent.smtt.export.external.interfaces.ConsoleMessage;
 import com.tencent.smtt.export.external.interfaces.GeolocationPermissionsCallback;
 import com.tencent.smtt.export.external.interfaces.IX5WebChromeClient.CustomViewCallback;
 import com.tencent.smtt.export.external.interfaces.JsPromptResult;
 import com.tencent.smtt.export.external.interfaces.JsResult;
+import com.tencent.smtt.utils.n;
 
 public class WebChromeClient
 {
@@ -22,7 +26,7 @@ public class WebChromeClient
     return null;
   }
   
-  public void getVisitedHistory(u paramu) {}
+  public void getVisitedHistory(u<String[]> paramu) {}
   
   public void onCloseWindow(WebView paramWebView) {}
   
@@ -94,14 +98,59 @@ public class WebChromeClient
   
   public void onShowCustomView(View paramView, IX5WebChromeClient.CustomViewCallback paramCustomViewCallback) {}
   
-  public boolean onShowFileChooser(WebView paramWebView, u paramu, WebChromeClient.FileChooserParams paramFileChooserParams)
+  public boolean onShowFileChooser(WebView paramWebView, u<Uri[]> paramu, a parama)
   {
     return false;
   }
   
-  public void openFileChooser(u paramu, String paramString1, String paramString2)
+  public void openFileChooser(u<Uri> paramu, String paramString1, String paramString2)
   {
     paramu.onReceiveValue(null);
+  }
+  
+  public static abstract class a
+    extends WebChromeClient.FileChooserParams
+  {
+    public static final int MODE_OPEN = 0;
+    public static final int MODE_OPEN_FOLDER = 2;
+    public static final int MODE_OPEN_MULTIPLE = 1;
+    public static final int MODE_SAVE = 3;
+    
+    public static Uri[] parseResult(int paramInt, Intent paramIntent)
+    {
+      try
+      {
+        d locald = d.jb(false);
+        if ((locald != null) && (locald.brr()))
+        {
+          paramIntent = brqmvz.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "parseFileChooserResult", new Class[] { Integer.TYPE, Intent.class }, new Object[] { Integer.valueOf(paramInt), paramIntent });
+          if (paramIntent == null) {
+            return null;
+          }
+          return (Uri[])paramIntent;
+        }
+        paramIntent = n.a(Class.forName("com.android.webview.chromium.FileChooserParamsAdapter"), "parseFileChooserResult", new Class[] { Integer.TYPE, Intent.class }, new Object[] { Integer.valueOf(paramInt), paramIntent });
+        if (paramIntent == null) {
+          return null;
+        }
+        paramIntent = (Uri[])paramIntent;
+        return paramIntent;
+      }
+      catch (Exception paramIntent) {}
+      return null;
+    }
+    
+    public abstract Intent createIntent();
+    
+    public abstract String[] getAcceptTypes();
+    
+    public abstract String getFilenameHint();
+    
+    public abstract int getMode();
+    
+    public abstract CharSequence getTitle();
+    
+    public abstract boolean isCaptureEnabled();
   }
 }
 

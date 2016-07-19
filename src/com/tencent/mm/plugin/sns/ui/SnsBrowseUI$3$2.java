@@ -7,8 +7,8 @@ final class SnsBrowseUI$3$2
   
   public final void run()
   {
-    hbZ.hbY.finish();
-    hbZ.hbY.overridePendingTransition(0, 0);
+    hqL.hqK.finish();
+    hqL.hqK.overridePendingTransition(0, 0);
   }
 }
 

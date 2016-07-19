@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/a7h" android:background="@color/l6" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/hi" android:paddingBottom="@dimen/hi" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/PopupBgWithoutShadow">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="@dimen/hi" android:paddingRight="@dimen/hi" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/hb" android:layout_marginBottom="@dimen/j8" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@raw/dialogs_successful" />
+            <TextView android:textSize="@dimen/dx" android:textColor="@color/j_" android:id="@id/a7f" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j8" android:text="@string/a44" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center|right" android:orientation="vertical" android:paddingLeft="@dimen/hi" android:paddingRight="@dimen/hi" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hb">
+            <Button android:textSize="@dimen/i8" android:textColor="@color/ot" android:id="@id/a7b" android:background="@drawable/a5" android:paddingLeft="@dimen/ct" android:paddingRight="@dimen/ct" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/j4" android:text="@string/a3z" />
+            <Button android:textSize="@dimen/i8" android:textColor="@color/ot" android:id="@id/a7o" android:background="@drawable/a5" android:paddingLeft="@dimen/ct" android:paddingRight="@dimen/ct" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j8" android:minHeight="@dimen/j4" android:text="@string/a3z" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

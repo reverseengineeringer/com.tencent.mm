@@ -1,6 +1,7 @@
 package com.tencent.mm.plugin.sns.ui;
 
 import android.graphics.Rect;
+import android.os.Build.VERSION;
 import android.widget.Gallery;
 import com.tencent.mm.ui.tools.h.a;
 
@@ -9,10 +10,10 @@ final class SnsBrowseUI$4
 {
   SnsBrowseUI$4(SnsBrowseUI paramSnsBrowseUI) {}
   
-  public final void j(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+  public final void i(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
-    if (hbY.hbK.getGallery() != null) {
-      hbY.hbK.getGallery().setClipBounds(new Rect(paramInt1, paramInt2, paramInt3, paramInt4));
+    if ((hqK.hqA.htc != null) && (Build.VERSION.SDK_INT >= 18)) {
+      hqK.hqA.htc.setClipBounds(new Rect(paramInt1, paramInt2, paramInt3, paramInt4));
     }
   }
 }

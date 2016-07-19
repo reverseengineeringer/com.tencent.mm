@@ -17,16 +17,16 @@
 
 
 # virtual methods
-.method protected final FB()V
+.method protected final FX()V
     .locals 5
 
     .prologue
     .line 23
     iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/a;->context:Landroid/content/Context;
 
-    const v1, 0x7f0b068d
+    const v1, 0x7f080952
 
-    const v2, 0x7f0b0ddd
+    const v2, 0x7f080134
 
     const/4 v3, 0x0
 

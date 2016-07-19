@@ -5,50 +5,50 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.ab.a.a.c;
-import com.tencent.mm.ab.a.a.c.a;
-import com.tencent.mm.ab.n;
+import com.tencent.mm.ae.a.a.c;
+import com.tencent.mm.ae.a.a.c.a;
+import com.tencent.mm.ae.n;
 import com.tencent.mm.pluginsdk.ui.d.e;
-import com.tencent.mm.t.aj;
-import com.tencent.mm.t.f;
-import com.tencent.mm.t.j;
-import com.tencent.mm.t.k;
 import com.tencent.mm.ui.base.MaskLayout;
 import com.tencent.mm.ui.i;
+import com.tencent.mm.v.an;
+import com.tencent.mm.v.f;
+import com.tencent.mm.v.k;
+import com.tencent.mm.v.l;
 import java.util.List;
 
 final class AtSomeoneInBizChatUI$a
-  extends i
+  extends i<k>
 {
-  private com.tencent.mm.t.d cYG;
-  private List cvM;
-  String dbI;
-  private c iIX = null;
-  private String[] kRe;
+  private com.tencent.mm.v.d cXq;
+  private List<String> crs;
+  String dao;
+  private c jfT = null;
+  private String[] lrh;
   
-  public AtSomeoneInBizChatUI$a(Context paramContext, j paramj, com.tencent.mm.t.d paramd, String[] paramArrayOfString, List paramList)
+  public AtSomeoneInBizChatUI$a(Context paramContext, k paramk, com.tencent.mm.v.d paramd, String[] paramArrayOfString, List<String> paramList)
   {
-    super(paramContext, paramj);
-    cYG = paramd;
-    kRe = paramArrayOfString;
-    cvM = paramList;
+    super(paramContext, paramk);
+    cXq = paramd;
+    lrh = paramArrayOfString;
+    crs = paramList;
     paramContext = new c.a();
-    bTG = f.gu(cYG.field_brandUserName);
-    bTD = true;
-    bTV = true;
-    bTO = 2130903473;
-    iIX = paramContext.AA();
+    bNf = f.gM(cXq.field_brandUserName);
+    bNc = true;
+    bNw = true;
+    bNp = 2131165359;
+    jfT = paramContext.AM();
   }
   
-  public final void Gk()
+  public final void GH()
   {
-    k localk = aj.xJ();
-    Object localObject2 = kRe;
-    Object localObject1 = dbI;
-    List localList = cvM;
+    l locall = an.xL();
+    Object localObject2 = lrh;
+    Object localObject1 = dao;
+    List localList = crs;
     StringBuilder localStringBuilder = new StringBuilder();
     localStringBuilder.append("select *  from BizChatUserInfo where ");
-    localObject2 = localStringBuilder.append(k.a((String[])localObject2, localList));
+    localObject2 = localStringBuilder.append(l.a((String[])localObject2, localList));
     if ((localObject1 == null) || (((String)localObject1).equals(""))) {}
     for (localObject1 = "";; localObject1 = " and (" + "userName like '%" + (String)localObject1 + "%' )")
     {
@@ -60,37 +60,37 @@ final class AtSomeoneInBizChatUI$a
       ((StringBuffer)localObject2).append(" upper(BizChatUserInfo.userNamePY) asc, ");
       ((StringBuffer)localObject2).append(" upper(BizChatUserInfo.userName) asc ");
       ((StringBuilder)localObject1).append(((StringBuffer)localObject2).toString());
-      setCursor(aoX.rawQuery(localStringBuilder.toString(), null));
+      setCursor(bkP.rawQuery(localStringBuilder.toString(), null));
       super.notifyDataSetChanged();
       return;
     }
   }
   
-  protected final void Gl()
+  protected final void GI()
   {
-    adW();
-    Gk();
+    closeCursor();
+    GH();
   }
   
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
     if (paramView == null)
     {
-      paramView = View.inflate(context, 2131361938, null);
+      paramView = View.inflate(context, 2130903104, null);
       paramViewGroup = new AtSomeoneInBizChatUI.b((byte)0);
-      dbN = ((MaskLayout)paramView.findViewById(2131165651));
-      czU = ((TextView)paramView.findViewById(2131165652));
+      dat = ((MaskLayout)paramView.findViewById(2131755340));
+      cwQ = ((TextView)paramView.findViewById(2131755341));
       paramView.setTag(paramViewGroup);
     }
     for (;;)
     {
-      Object localObject = (j)getItem(paramInt);
-      czU.setTextColor(com.tencent.mm.aw.a.x(context, 2131231256));
-      ImageView localImageView = (ImageView)dbN.getContentView();
-      n.As().a(field_headImageUrl, localImageView, iIX);
-      dbN.setMaskDrawable(null);
-      localObject = AtSomeoneInBizChatUI.a(cYG, field_userId);
-      czU.setText(e.a(context, (CharSequence)localObject, czU.getTextSize()));
+      Object localObject = (k)getItem(paramInt);
+      cwQ.setTextColor(com.tencent.mm.az.a.B(context, 2131690076));
+      ImageView localImageView = (ImageView)dat.view;
+      n.AC().a(field_headImageUrl, localImageView, jfT);
+      dat.biG();
+      localObject = AtSomeoneInBizChatUI.a(cXq, field_userId);
+      cwQ.setText(e.a(context, (CharSequence)localObject, cwQ.getTextSize()));
       return paramView;
       paramViewGroup = (AtSomeoneInBizChatUI.b)paramView.getTag();
     }

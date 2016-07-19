@@ -9,47 +9,49 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
+import com.tencent.mm.e.a.w;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.b;
-import com.tencent.mm.plugin.sns.h.k;
-import com.tencent.mm.plugin.sns.h.l;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.m;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.b;
+import com.tencent.mm.plugin.sns.i.k;
+import com.tencent.mm.plugin.sns.i.l;
 import com.tencent.mm.sdk.c.a;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.tools.MMGestureGallery;
-import com.tencent.mm.ui.tools.MMGestureGallery.h;
+import com.tencent.mm.ui.tools.MMGestureGallery.k;
 
 public abstract class SnsBaseGalleryUI
   extends MMActivity
-  implements o.a
+  implements q.a
 {
-  private boolean cHc = true;
-  private LinearLayout hbE;
-  n hbF;
-  private LinearLayout hbG;
-  o hbH;
-  private boolean hbI = true;
-  private TextView hbJ = null;
-  protected SnsInfoFlip hbK;
+  private boolean cEg = true;
+  protected SnsInfoFlip hqA;
+  private LinearLayout hqu;
+  p hqv;
+  private LinearLayout hqw;
+  q hqx;
+  private boolean hqy = true;
+  private TextView hqz = null;
   
-  public void Kk()
+  public void KU()
   {
     int j = 8;
     boolean bool = false;
-    if (!hbI) {
+    if (!hqy) {
       return;
     }
-    n localn;
-    if (cHc)
+    p localp;
+    if (cEg)
     {
       i = 8;
-      qa(i);
-      if (hbF != null)
+      rP(i);
+      if (hqv != null)
       {
-        localn = hbF;
-        if (!cHc) {
+        localp = hqv;
+        if (!cEg) {
           break label76;
         }
       }
@@ -57,129 +59,131 @@ public abstract class SnsBaseGalleryUI
     label76:
     for (int i = j;; i = 0)
     {
-      localn.setVisibility(i);
-      if (!cHc) {
+      localp.setVisibility(i);
+      if (!cEg) {
         bool = true;
       }
-      cHc = bool;
+      cEg = bool;
       return;
       i = 0;
       break;
     }
   }
   
-  public final void aBa()
+  public final void aDV()
   {
-    cHc = false;
-    qa(8);
-    if (hbF != null) {
-      hbF.setVisibility(8);
+    cEg = false;
+    rP(8);
+    if (hqv != null) {
+      hqv.setVisibility(8);
     }
   }
   
-  public void addView(View paramView)
+  public final void addView(View paramView)
   {
     LinearLayout.LayoutParams localLayoutParams = new LinearLayout.LayoutParams(-1, -1);
-    hbE.addView(paramView, localLayoutParams);
+    hqu.addView(paramView, localLayoutParams);
   }
   
-  public void an(String paramString, int paramInt) {}
+  public void ap(String paramString, int paramInt) {}
   
-  public void ao(String paramString, int paramInt)
+  public void aq(String paramString, int paramInt)
   {
-    if ((!hbI) || (ad.ayQ())) {
+    if ((!hqy) || (ad.aBr())) {
       return;
     }
-    paramString = ad.azi().vo(paramString);
+    paramString = ad.aBI().wA(paramString);
     if ((paramString == null) || (field_snsId == 0L))
     {
-      bC(false);
+      bp(false);
       return;
     }
-    bC(true);
+    bp(true);
   }
   
-  public final void by(String paramString1, String paramString2)
+  public final void bJ(String paramString1, String paramString2)
   {
-    if (!hbI) {
+    if (!hqy) {
       return;
     }
-    Gj(paramString1);
-    Gk(paramString2);
+    Ah(paramString1);
+    Iy(paramString2);
   }
   
   protected int getLayoutId()
   {
-    return 2131362870;
+    return 2130904432;
   }
   
   @SuppressLint({"ResourceAsColor"})
   public final void h(boolean paramBoolean, int paramInt)
   {
-    hbF = new n(this, paramInt, paramBoolean);
-    hbF.setBackgroundColor(2131231114);
+    hqv = new p(this, paramInt, paramBoolean);
+    hqv.setBackgroundColor(2131690001);
     LinearLayout.LayoutParams localLayoutParams = new LinearLayout.LayoutParams(-1, -2);
-    hbF.getBackground().setAlpha(50);
-    hbG.addView(hbF, localLayoutParams);
+    hqv.getBackground().setAlpha(50);
+    hqw.addView(hqv, localLayoutParams);
     paramInt = getIntent().getIntExtra("sns_source", 0);
-    hbF.setSnsSource(paramInt);
+    hqv.ajx = paramInt;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    ad.aze().A(3, true);
-    hbE = ((LinearLayout)findViewById(2131168643));
-    hbG = ((LinearLayout)findViewById(2131165377));
-    hbH = new o(this, this);
-    paramBundle = hbH;
-    com.tencent.mm.sdk.platformtools.u.i("!44@/B4Tb64lLpJyoB/CpFAzzXWZ6uUTwC1a4W384ikaiis=", "onAttach");
-    ah.tE().a(218, paramBundle);
-    a.jUF.b("RecogQBarOfImageFileResult", gXY);
-    a.jUF.b("NotifyDealQBarStrResult", gXZ);
+    ad.aBE().A(3, true);
+    hqu = ((LinearLayout)findViewById(2131759081));
+    hqw = ((LinearLayout)findViewById(2131755262));
+    hqx = new q(this, this);
+    paramBundle = hqx;
+    v.i("MicroMsg.GalleryTitleManager", "onAttach");
+    ah.tF().a(218, paramBundle);
+    a.kug.d(hlk);
+    a.kug.d(hll);
   }
   
   public void onDestroy()
   {
     super.onDestroy();
     Object localObject;
-    if (hbH != null)
+    if (hqx != null)
     {
-      localObject = hbH;
-      com.tencent.mm.sdk.platformtools.u.i("!44@/B4Tb64lLpJyoB/CpFAzzXWZ6uUTwC1a4W384ikaiis=", "onDetch");
-      ah.tE().b(218, (d)localObject);
-      a.jUF.c("RecogQBarOfImageFileResult", gXY);
-      a.jUF.c("NotifyDealQBarStrResult", gXZ);
+      localObject = hqx;
+      v.i("MicroMsg.GalleryTitleManager", "onDetch");
+      ah.tF().b(218, (d)localObject);
+      a.kug.e(hlk);
+      a.kug.e(hll);
     }
-    if (hbK != null)
+    if (hqA != null)
     {
-      localObject = hbK;
-      if ((heq != null) && ((heq instanceof MMGestureGallery)))
+      localObject = hqA;
+      if ((htc != null) && ((htc instanceof MMGestureGallery)))
       {
-        localObject = (MMGestureGallery)heq;
-        lwq.release();
-        lwr.release();
-        lwp.release();
+        localObject = (MMGestureGallery)htc;
+        lXc.release();
+        lXd.release();
+        lXb.release();
       }
-      hbK.onDestroy();
+      hqA.onDestroy();
     }
   }
   
   protected void onPause()
   {
-    if (hbK != null) {
-      hbK.onPause();
+    if (hqA != null) {
+      hqA.onPause();
     }
-    if (hbH != null)
+    if (hqx != null)
     {
-      o localo = hbH;
-      if (gXW != null)
+      q localq = hqx;
+      if (hli != null)
       {
-        com.tencent.mm.d.a.u localu = new com.tencent.mm.d.a.u();
-        asV.asX = ((Activity)context);
-        asV.asW = gXW;
-        a.jUF.j(localu);
-        gXW = null;
+        w localw = new w();
+        aeF.aeH = ((Activity)context);
+        aeF.aeG = hli;
+        a.kug.y(localw);
+        hli = null;
+        afK = 0;
+        afJ = 0;
       }
     }
     super.onPause();
@@ -188,8 +192,8 @@ public abstract class SnsBaseGalleryUI
   public void onResume()
   {
     super.onResume();
-    if (hbF != null) {
-      hbF.refresh();
+    if (hqv != null) {
+      hqv.refresh();
     }
   }
 }

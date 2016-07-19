@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kFn:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+.field final synthetic ler:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 951
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$2;->kFn:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$2;->ler:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,6 +38,15 @@
 # virtual methods
 .method public final onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
     .line 955
@@ -46,7 +55,7 @@
     if-eq p3, v0, :cond_0
 
     .line 956
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$2;->kFn:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$2;->ler:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->a(Lcom/tencent/mm/ui/base/MMListPopupWindow;)Lcom/tencent/mm/ui/base/MMListPopupWindow$a;
 
@@ -67,6 +76,13 @@
 
 .method public final onNothingSelected(Landroid/widget/AdapterView;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;)V"
+        }
+    .end annotation
 
     .prologue
     .line 965

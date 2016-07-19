@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/af$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ah$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/accountsync/a/c;->eo(I)V
+    value = Lcom/tencent/mm/plugin/accountsync/a/c;->fa(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,23 +30,25 @@
 
 
 # virtual methods
-.method public final lj()Z
+.method public final jK()Z
     .locals 3
 
     .prologue
     const/4 v2, 0x1
 
     .line 92
-    invoke-static {}, Lcom/tencent/mm/plugin/accountsync/a/c;->kE()I
+    invoke-static {}, Lcom/tencent/mm/plugin/accountsync/a/c;->je()I
 
     .line 93
-    invoke-static {}, Lcom/tencent/mm/plugin/accountsync/a/c;->aa()I
+    # getter for: Lcom/tencent/mm/plugin/accountsync/a/c;->caB:I
+    invoke-static {}, Lcom/tencent/mm/plugin/accountsync/a/c;->access$000()I
 
     move-result v0
 
     if-eq v0, v2, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/plugin/accountsync/a/c;->aa()I
+    # getter for: Lcom/tencent/mm/plugin/accountsync/a/c;->caB:I
+    invoke-static {}, Lcom/tencent/mm/plugin/accountsync/a/c;->access$000()I
 
     move-result v0
 
@@ -54,7 +56,8 @@
 
     if-eq v0, v1, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/plugin/accountsync/a/c;->aa()I
+    # getter for: Lcom/tencent/mm/plugin/accountsync/a/c;->caB:I
+    invoke-static {}, Lcom/tencent/mm/plugin/accountsync/a/c;->access$000()I
 
     move-result v0
 
@@ -64,11 +67,11 @@
 
     .line 94
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->kU()Lcom/tencent/mm/model/y;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->jv()Lcom/tencent/mm/model/y;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/model/y;->nn()Z
+    invoke-interface {v0}, Lcom/tencent/mm/model/y;->lB()Z
 
     .line 96
     :cond_1

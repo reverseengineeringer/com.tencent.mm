@@ -2,13 +2,15 @@ package com.tencent.mm.ui.contact;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import com.tencent.mm.ab.k;
-import com.tencent.mm.d.b.bg;
+import com.tencent.mm.ae.k;
+import com.tencent.mm.e.b.bj;
 import com.tencent.mm.model.ah;
+import com.tencent.mm.model.h;
 import com.tencent.mm.model.i;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -19,32 +21,32 @@ final class SelectContactUI$16
   
   public final void run()
   {
-    String str = com.tencent.mm.model.h.sc();
-    Iterator localIterator = lmq.iterator();
+    String str = h.se();
+    Iterator localIterator = lMF.iterator();
     int i = 0;
     Object localObject1 = null;
     if (localIterator.hasNext())
     {
       Object localObject2 = (String)localIterator.next();
-      u.d("!44@/B4Tb64lLpJQGo7VtHU/gqcqIvwmEmrSejrKUoictEE=", "toSend, %s", new Object[] { localObject2 });
-      if (i.dn((String)localObject2)) {}
+      v.d("MicroMsg.SelectContactUI", "toSend, %s", new Object[] { localObject2 });
+      if (i.du((String)localObject2)) {}
       for (int j = 1;; j = 0)
       {
-        localObject2 = new k(4, str, (String)localObject2, lmm.getIntent().getStringExtra("shareImagePath"), 0, null, 0, "", (String)localObject1, true, 2130970382);
-        ah.tE().d((j)localObject2);
-        if (ask != null) {
-          localObject1 = ask.field_imgPath;
+        localObject2 = new k(4, str, (String)localObject2, lMB.getIntent().getStringExtra("shareImagePath"), 0, null, 0, "", (String)localObject1, true, 2130837950);
+        ah.tF().a((j)localObject2, 0);
+        if (aec != null) {
+          localObject1 = aec.field_imgPath;
         }
         i += j;
         break;
       }
     }
-    SelectContactUI.e(lmm).dismiss();
+    SelectContactUI.e(lMB).dismiss();
     localObject1 = new Intent();
-    ((Intent)localObject1).putStringArrayListExtra("Select_Contact", lmq);
-    lmm.setResult(-1, (Intent)localObject1);
-    com.tencent.mm.plugin.report.service.h.fUJ.g(11048, new Object[] { Integer.valueOf(1), Integer.valueOf(lmq.size() - i), Integer.valueOf(i) });
-    lmm.finish();
+    ((Intent)localObject1).putStringArrayListExtra("Select_Contact", lMF);
+    lMB.setResult(-1, (Intent)localObject1);
+    g.gdY.h(11048, new Object[] { Integer.valueOf(1), Integer.valueOf(lMF.size() - i), Integer.valueOf(i) });
+    lMB.finish();
   }
 }
 

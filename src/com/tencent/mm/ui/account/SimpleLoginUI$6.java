@@ -10,7 +10,7 @@ final class SimpleLoginUI$6
   
   public final void onClick(View paramView)
   {
-    SimpleLoginUI.a(kwL);
+    SimpleLoginUI.a(kVS);
   }
 }
 

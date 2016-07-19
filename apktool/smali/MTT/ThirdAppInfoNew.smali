@@ -1,6 +1,5 @@
 .class public final LMTT/ThirdAppInfoNew;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Cloneable;
@@ -10,6 +9,8 @@
 .field public iCoreType:I
 
 .field public iPv:J
+
+.field public sAndroidID:Ljava/lang/String;
 
 .field public sAppName:Ljava/lang/String;
 
@@ -36,70 +37,59 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     const-string/jumbo v0, ""
 
     iput-object v0, p0, LMTT/ThirdAppInfoNew;->sAppName:Ljava/lang/String;
 
-    .line 15
     const-string/jumbo v0, ""
 
     iput-object v0, p0, LMTT/ThirdAppInfoNew;->sTime:Ljava/lang/String;
 
-    .line 17
     const-string/jumbo v0, ""
 
     iput-object v0, p0, LMTT/ThirdAppInfoNew;->sQua2:Ljava/lang/String;
 
-    .line 19
     const-string/jumbo v0, ""
 
     iput-object v0, p0, LMTT/ThirdAppInfoNew;->sLc:Ljava/lang/String;
 
-    .line 21
     const-string/jumbo v0, ""
 
     iput-object v0, p0, LMTT/ThirdAppInfoNew;->sGuid:Ljava/lang/String;
 
-    .line 23
     const-string/jumbo v0, ""
 
     iput-object v0, p0, LMTT/ThirdAppInfoNew;->sImei:Ljava/lang/String;
 
-    .line 25
     const-string/jumbo v0, ""
 
     iput-object v0, p0, LMTT/ThirdAppInfoNew;->sImsi:Ljava/lang/String;
 
-    .line 27
     const-string/jumbo v0, ""
 
     iput-object v0, p0, LMTT/ThirdAppInfoNew;->sMac:Ljava/lang/String;
 
-    .line 29
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, LMTT/ThirdAppInfoNew;->iPv:J
 
-    .line 31
     const/4 v0, 0x0
 
     iput v0, p0, LMTT/ThirdAppInfoNew;->iCoreType:I
 
-    .line 33
     const-string/jumbo v0, ""
 
     iput-object v0, p0, LMTT/ThirdAppInfoNew;->sAppVersionName:Ljava/lang/String;
 
-    .line 35
     const-string/jumbo v0, ""
 
     iput-object v0, p0, LMTT/ThirdAppInfoNew;->sAppSignature:Ljava/lang/String;
 
-    .line 39
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, LMTT/ThirdAppInfoNew;->sAndroidID:Ljava/lang/String;
+
     return-void
 .end method

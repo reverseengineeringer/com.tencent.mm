@@ -55,7 +55,6 @@
 
     sput-object v0, Lcom/tencent/kingkong/support/Log;->logImp:Lcom/tencent/kingkong/support/Log$LogImp;
 
-    .line 11
     return-void
 .end method
 
@@ -66,14 +65,15 @@
     .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 26
     return-void
 .end method
 
-.method static synthetic access$0()I
+.method static synthetic access$000()I
     .locals 1
 
     .prologue
-    .line 24
+    .line 11
     sget v0, Lcom/tencent/kingkong/support/Log;->level:I
 
     return v0
@@ -551,15 +551,15 @@
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string/jumbo v1, "  "
 
-    const-string/jumbo v0, "  "
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

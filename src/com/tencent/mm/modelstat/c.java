@@ -1,92 +1,143 @@
 package com.tencent.mm.modelstat;
 
-import android.database.Cursor;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import com.tencent.mm.platformtools.q;
+import com.tencent.mm.sdk.h.a;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import java.io.File;
 
 public final class c
 {
-  private static final String cdM;
-  int aou = -2;
-  public int cdA = 0;
-  public int cdB = 0;
-  public int cdC = 0;
-  public int cdD = 0;
-  public int cdE = 0;
-  public int cdF = 0;
-  public int cdG = 0;
-  public int cdH = 0;
-  public int cdI = 0;
-  public int cdJ = 0;
-  public int cdK = 0;
-  public int cdL = 0;
-  public int cdj = 0;
-  public int cdk = 0;
-  public int cdl = 0;
-  public int cdm = 0;
-  public int cdn = 0;
-  public int cdo = 0;
-  public int cdp = 0;
-  public int cdq = 0;
-  public int cdr = 0;
-  public int cds = 0;
-  public int cdt = 0;
-  public int cdu = 0;
-  public int cdv = 0;
-  public int cdw = 0;
-  public int cdx = 0;
-  public int cdy = 0;
-  public int cdz = 0;
-  public int id = 0;
+  private final String asd;
+  private a bYd = null;
   
-  static
+  public c(String paramString)
   {
-    StringBuilder localStringBuilder = new StringBuilder();
-    localStringBuilder.append("NetStatInfo:");
-    localStringBuilder.append("[mobile in=%dB/%dB/%dB, out=%dB/%dB/%dB]");
-    localStringBuilder.append("[wifi in=%dB/%dB/%dB, out=%dB/%dB/%dB]");
-    localStringBuilder.append("[text in=%d/%dB, out=%d/%dB]");
-    localStringBuilder.append("[image in=%d/%dB, out=%d/%dB]");
-    localStringBuilder.append("[voice in=%d/%dB, out=%d/%dB]");
-    localStringBuilder.append("[video in=%d/%dB, out=%d/%dB]");
-    cdM = localStringBuilder.toString();
+    asd = paramString;
   }
   
-  public final void c(Cursor paramCursor)
+  public final a DB()
   {
-    id = paramCursor.getInt(0);
-    cdj = paramCursor.getInt(1);
-    cdk = paramCursor.getInt(2);
-    cdl = paramCursor.getInt(3);
-    cdm = paramCursor.getInt(4);
-    cdn = paramCursor.getInt(5);
-    cdo = paramCursor.getInt(6);
-    cdp = paramCursor.getInt(7);
-    cdq = paramCursor.getInt(8);
-    cdr = paramCursor.getInt(9);
-    cds = paramCursor.getInt(10);
-    cdt = paramCursor.getInt(11);
-    cdu = paramCursor.getInt(12);
-    cdv = paramCursor.getInt(13);
-    cdw = paramCursor.getInt(14);
-    cdx = paramCursor.getInt(15);
-    cdy = paramCursor.getInt(16);
-    cdz = paramCursor.getInt(17);
-    cdA = paramCursor.getInt(18);
-    cdB = paramCursor.getInt(19);
-    cdC = paramCursor.getInt(20);
-    cdD = paramCursor.getInt(21);
-    cdE = paramCursor.getInt(22);
-    cdF = paramCursor.getInt(23);
-    cdG = paramCursor.getInt(24);
-    cdH = paramCursor.getInt(25);
-    cdI = paramCursor.getInt(26);
-    cdJ = paramCursor.getInt(27);
-    cdK = paramCursor.getInt(28);
-    cdL = paramCursor.getInt(29);
+    a locala = null;
+    if (bYd != null) {
+      return bYd;
+    }
+    String str = asd + "mobileinfo.ini";
+    Object localObject2 = new File(str);
+    if (!((File)localObject2).exists())
+    {
+      v.i("MicroMsg.MobileInfoStorage ReportDataFlow", "readConfig file not exist :%s", new Object[] { str });
+      localObject1 = null;
+    }
+    Object localObject3;
+    for (;;)
+    {
+      bYd = ((a)localObject1);
+      if ((bYd == null) || (bYd.bYf)) {
+        break;
+      }
+      v.v("MicroMsg.MobileInfoStorage ReportDataFlow", "checkInfo mobile info cache Read file succ.");
+      return bYd;
+      localObject3 = new a(str);
+      localObject1 = new a();
+      bYe = be.f(((a)localObject3).FU("ispCode"));
+      ispName = ((a)localObject3).getValue("ispName");
+      afj = be.f(((a)localObject3).FU("subType"));
+      extraInfo = ((a)localObject3).getValue("extraInfo");
+      long l2 = ((File)localObject2).lastModified();
+      long l1 = l2;
+      if (10011 == q.ciq)
+      {
+        l1 = l2;
+        if (q.cir > 0)
+        {
+          l1 = be.Gp() - q.cir;
+          v.w("MicroMsg.MobileInfoStorage ReportDataFlow", "readConfig DK_TEST_MOBILEINFOFILE_MODTIME val:%d lm:%d", new Object[] { Integer.valueOf(q.cir), Long.valueOf(l1) });
+          q.cir = 0;
+        }
+      }
+      if ((l1 > 0L) && (be.au(l1) > 259200000L))
+      {
+        v.w("MicroMsg.MobileInfoStorage ReportDataFlow", "readConfig  diff:%d file:%s cache expired remove!", new Object[] { Long.valueOf(be.au(l1)), str });
+        bYf = true;
+      }
+      v.i("MicroMsg.MobileInfoStorage ReportDataFlow", "readConfig MobileInfo subType:%d ispCode:%d ispName:%s extraInfo:%s expired:%b", new Object[] { Integer.valueOf(afj), Integer.valueOf(bYe), ispName, extraInfo, Boolean.valueOf(bYf) });
+    }
+    localObject2 = aa.getContext();
+    if (localObject2 == null)
+    {
+      v.e("MicroMsg.MobileInfoStorage ReportDataFlow", "readInfoBySystem MMApplicationContext is null");
+      localObject1 = locala;
+    }
+    while (localObject1 == null)
+    {
+      v.v("MicroMsg.MobileInfoStorage ReportDataFlow", "readInfoBySystem failed , use old.");
+      return bYd;
+      localObject1 = (ConnectivityManager)((Context)localObject2).getSystemService("connectivity");
+      if (localObject1 == null)
+      {
+        v.e("MicroMsg.MobileInfoStorage ReportDataFlow", "readInfoBySystem ConnectivityManager is null");
+        localObject1 = locala;
+      }
+      else
+      {
+        localObject3 = ((ConnectivityManager)localObject1).getActiveNetworkInfo();
+        if (localObject3 == null)
+        {
+          v.e("MicroMsg.MobileInfoStorage ReportDataFlow", "readInfoBySystem getActiveNetworkInfo is null");
+          localObject1 = locala;
+        }
+        else if (((NetworkInfo)localObject3).getType() == 1)
+        {
+          v.e("MicroMsg.MobileInfoStorage ReportDataFlow", "readInfoBySystem net type is wifi");
+          localObject1 = locala;
+        }
+        else
+        {
+          localObject1 = new a();
+          afj = ((NetworkInfo)localObject3).getSubtype();
+          bYe = ak.dv((Context)localObject2);
+          ispName = ak.dw((Context)localObject2);
+          extraInfo = ((NetworkInfo)localObject3).getExtraInfo();
+          v.i("MicroMsg.MobileInfoStorage ReportDataFlow", "readInfoBySystem subType:%d ispCode:%d ispName:%s extraInfo:%s", new Object[] { Integer.valueOf(afj), Integer.valueOf(bYe), ispName, extraInfo });
+        }
+      }
+    }
+    bYd = ((a)localObject1);
+    Object localObject1 = bYd;
+    if (localObject1 == null) {
+      v.e("MicroMsg.MobileInfoStorage ReportDataFlow", "saveConfig info is null");
+    }
+    for (;;)
+    {
+      return bYd;
+      if (be.kf(str))
+      {
+        v.e("MicroMsg.MobileInfoStorage ReportDataFlow", "saveConfig path is null");
+      }
+      else
+      {
+        locala = new a(str);
+        locala.aW("ispCode", bYe);
+        locala.cv("ispName", ispName);
+        locala.aW("subType", afj);
+        locala.cv("extraInfo", extraInfo);
+      }
+    }
   }
   
-  public final String toString()
+  public static final class a
   {
-    return String.format(cdM, new Object[] { Integer.valueOf(cds), Integer.valueOf(cdI), Integer.valueOf(cdu), Integer.valueOf(cdE), Integer.valueOf(cdK), Integer.valueOf(cdG), Integer.valueOf(cdt), Integer.valueOf(cdJ), Integer.valueOf(cdv), Integer.valueOf(cdF), Integer.valueOf(cdL), Integer.valueOf(cdH), Integer.valueOf(cdk), Integer.valueOf(cdl), Integer.valueOf(cdw), Integer.valueOf(cdx), Integer.valueOf(cdm), Integer.valueOf(cdn), Integer.valueOf(cdy), Integer.valueOf(cdz), Integer.valueOf(cdo), Integer.valueOf(cdp), Integer.valueOf(cdA), Integer.valueOf(cdB), Integer.valueOf(cdq), Integer.valueOf(cdr), Integer.valueOf(cdC), Integer.valueOf(cdD) });
+    public int afj = 0;
+    public int bYe = 0;
+    boolean bYf = false;
+    public String extraInfo = "";
+    public String ispName = "";
   }
 }
 

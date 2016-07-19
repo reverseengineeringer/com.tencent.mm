@@ -1,89 +1,76 @@
 package com.tencent.mm.ah;
 
-import android.content.ContentValues;
-import android.database.Cursor;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnClickListener;
+import android.widget.Toast;
+import com.tencent.mm.e.a.hb;
+import com.tencent.mm.e.a.hb.b;
+import com.tencent.mm.pluginsdk.i.a;
+import com.tencent.mm.pluginsdk.i.aa;
+import com.tencent.mm.pluginsdk.i.u;
+import com.tencent.mm.ui.base.h;
+import com.tencent.mm.ui.base.h.a;
 
 public final class a
 {
-  int aou = -1;
-  private String bEs = "";
-  private String bEt = "";
-  private int bEu = 0;
-  private int bEv = 0;
-  public int bXB = 0;
-  private String path = "";
-  public String username = "";
-  
-  public final void c(Cursor paramCursor)
+  public static boolean Bl()
   {
-    username = paramCursor.getString(0);
-    bXB = paramCursor.getInt(1);
-    path = paramCursor.getString(2);
-    bEs = paramCursor.getString(3);
-    bEt = paramCursor.getString(4);
-    bEu = paramCursor.getInt(5);
-    bEv = paramCursor.getInt(6);
+    hb localhb = new hb();
+    aoa.action = 1;
+    com.tencent.mm.sdk.c.a.kug.y(localhb);
+    return aob.aoc;
   }
   
-  public final String getUsername()
+  public static boolean Bm()
   {
-    if (username == null) {
-      return "";
-    }
-    return username;
+    return (i.a.iUZ != null) && (i.a.iUZ.aHT());
   }
   
-  public final ContentValues lX()
+  public static boolean Bn()
   {
-    ContentValues localContentValues = new ContentValues();
-    if ((aou & 0x1) != 0) {
-      localContentValues.put("username", getUsername());
-    }
-    if ((aou & 0x2) != 0) {
-      localContentValues.put("bgflag", Integer.valueOf(bXB));
-    }
-    if ((aou & 0x4) != 0)
+    return (i.a.iVj != null) && (i.a.iVj.ahV());
+  }
+  
+  public static h a(Context paramContext, int paramInt, Runnable paramRunnable)
+  {
+    paramContext = new h.a(paramContext);
+    paramContext.ss(2131231028);
+    paramContext.su(paramInt);
+    paramContext.b(2131233918, new DialogInterface.OnClickListener()
     {
-      if (path == null)
+      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
-        str = "";
-        localContentValues.put("path", str);
-      }
-    }
-    else
-    {
-      if ((aou & 0x8) != 0)
-      {
-        if (bEs != null) {
-          break label185;
-        }
-        str = "";
-        label95:
-        localContentValues.put("reserved1", str);
-      }
-      if ((aou & 0x10) != 0) {
-        if (bEt != null) {
-          break label193;
+        if (bQw != null) {
+          bQw.run();
         }
       }
-    }
-    label185:
-    label193:
-    for (String str = "";; str = bEt)
+    });
+    paramContext.hU(true);
+    paramContext.c(new DialogInterface.OnCancelListener()
     {
-      localContentValues.put("reserved2", str);
-      if ((aou & 0x20) != 0) {
-        localContentValues.put("reserved3", Integer.valueOf(bEu));
+      public final void onCancel(DialogInterface paramAnonymousDialogInterface)
+      {
+        if (bQw != null) {
+          bQw.run();
+        }
       }
-      if ((aou & 0x40) != 0) {
-        localContentValues.put("reserved4", Integer.valueOf(bEv));
-      }
-      return localContentValues;
-      str = path;
-      break;
-      str = bEs;
-      break label95;
+    });
+    paramContext = paramContext.bhJ();
+    paramContext.show();
+    return paramContext;
+  }
+  
+  public static boolean aN(Context paramContext)
+  {
+    boolean bool = false;
+    if (Bl())
+    {
+      Toast.makeText(paramContext, 2131233922, 0).show();
+      bool = true;
     }
+    return bool;
   }
 }
 

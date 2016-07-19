@@ -2,16 +2,16 @@ package com.tencent.mm.plugin.accountsync.a;
 
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.y;
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah.a;
 
 final class c$1
-  implements af.a
+  implements ah.a
 {
-  public final boolean lj()
+  public final boolean jK()
   {
-    c.kE();
-    if ((c.aa() == 1) || (c.aa() == 16) || (c.aa() % 96 == 0)) {
-      ah.kU().nn();
+    c.je();
+    if ((c.access$000() == 1) || (c.access$000() == 16) || (c.access$000() % 96 == 0)) {
+      ah.jv().lB();
     }
     return true;
   }

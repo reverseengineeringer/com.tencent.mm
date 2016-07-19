@@ -7,7 +7,7 @@ final class j$4
   
   public final void run()
   {
-    kpx.G();
+    kOB.F();
   }
 }
 

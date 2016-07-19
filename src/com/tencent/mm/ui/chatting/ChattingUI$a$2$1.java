@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.j;
 import com.tencent.mm.ui.o;
@@ -12,22 +12,22 @@ final class ChattingUI$a$2$1
   
   public final void run()
   {
-    if (iqr == 0)
+    if (iLT == 0)
     {
-      laG.laF.a(ay.Ds(czN), ChattingTranslateView.a.kXP);
-      ChattingUI.a.a(laG.laF, ay.Ds(czN));
+      lAZ.lAY.a(be.FH(cwK), ChattingTranslateView.a.lyf);
+      ChattingUI.a.a(lAZ.lAY, be.FH(cwK));
       return;
     }
-    if (iqr == 3) {
-      g.ba(laG.laF.koJ.kpc, laG.laF.getString(2131429626));
+    if (iLT == 3) {
+      g.aZ(lAZ.lAY.kNN.kOg, lAZ.lAY.getString(2131231782));
     }
     for (;;)
     {
-      laG.laF.a(ay.Ds(czN), ChattingTranslateView.a.kXN);
-      laG.laF.kSE.notifyDataSetChanged();
+      lAZ.lAY.a(be.FH(cwK), ChattingTranslateView.a.lyd);
+      lAZ.lAY.lsL.notifyDataSetChanged();
       return;
-      if (iqr != 5) {
-        g.ba(laG.laF.koJ.kpc, laG.laF.getString(2131429627));
+      if (iLT != 5) {
+        g.aZ(lAZ.lAY.kNN.kOg, lAZ.lAY.getString(2131231777));
       }
     }
   }

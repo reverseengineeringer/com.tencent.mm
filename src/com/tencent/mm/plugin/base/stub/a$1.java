@@ -13,11 +13,11 @@ final class a$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramDialogInterface = i.a.iyK;
+    paramDialogInterface = i.a.iVg;
     if (paramDialogInterface != null) {
-      paramDialogInterface.v(cAQ.cAU, h.sf(), cAQ.appId);
+      paramDialogInterface.y(cxL.cxP, h.sh(), cxL.appId);
     }
-    cAQ.cAV.bq(false);
+    cxL.cxQ.aY(false);
   }
 }
 

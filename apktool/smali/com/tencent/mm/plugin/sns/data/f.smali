@@ -4,33 +4,46 @@
 
 
 # instance fields
-.field private cQa:Z
+.field public DF:Ljava/lang/String;
 
-.field private gHC:Ljava/nio/ByteBuffer;
+.field public aus:Lcom/tencent/mm/protocal/b/adw;
 
-.field public mediaId:Ljava/lang/String;
+.field public gOG:Lcom/tencent/mm/storage/z;
 
 .field public requestType:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
+
+    .prologue
+    .line 13
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 15
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/tencent/mm/protocal/b/adw;ILjava/lang/String;Lcom/tencent/mm/storage/z;)V
+    .locals 0
 
     .prologue
     .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/data/f;->gHC:Ljava/nio/ByteBuffer;
-
-    .line 8
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/data/f;->cQa:Z
-
     .line 18
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/data/f;->aus:Lcom/tencent/mm/protocal/b/adw;
+
+    .line 19
+    iput p2, p0, Lcom/tencent/mm/plugin/sns/data/f;->requestType:I
+
+    .line 20
+    iput-object p4, p0, Lcom/tencent/mm/plugin/sns/data/f;->gOG:Lcom/tencent/mm/storage/z;
+
+    .line 21
+    iput-object p3, p0, Lcom/tencent/mm/plugin/sns/data/f;->DF:Ljava/lang/String;
+
+    .line 22
     return-void
 .end method

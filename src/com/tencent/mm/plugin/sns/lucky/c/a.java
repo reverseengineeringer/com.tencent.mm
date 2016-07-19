@@ -1,12 +1,22 @@
 package com.tencent.mm.plugin.sns.lucky.c;
 
+import com.tencent.mm.plugin.sns.i.k;
+import com.tencent.mm.plugin.sns.lucky.b.w;
+import com.tencent.mm.protocal.b.auf;
+
 public final class a
 {
-  public static void b(int paramInt1, String paramString, int paramInt2)
+  public static void a(int paramInt, k paramk)
   {
-    long l = System.currentTimeMillis();
-    com.tencent.mm.plugin.report.service.a locala = com.tencent.mm.plugin.report.service.a.fUb;
-    com.tencent.mm.plugin.report.service.a.g(12993, new Object[] { Long.valueOf(l), Integer.valueOf(paramInt1), paramString, Integer.valueOf(paramInt2) });
+    if (paramk == null) {
+      return;
+    }
+    String str = aCDjvB;
+    if (paramInt == 2) {
+      w.h(paramk);
+    }
+    w.j(paramk);
+    System.currentTimeMillis();
   }
 }
 

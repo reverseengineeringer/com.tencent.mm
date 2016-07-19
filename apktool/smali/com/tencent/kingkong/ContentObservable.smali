@@ -3,6 +3,17 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/kingkong/Observable",
+        "<",
+        "Lcom/tencent/kingkong/ContentObserver;",
+        ">;"
+    }
+.end annotation
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0
@@ -54,15 +65,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_2
 
-    .line 67
-    monitor-exit v1
-
-    return-void
-
-    .line 68
-    :cond_1
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -70,7 +74,7 @@
     check-cast v0, Lcom/tencent/kingkong/ContentObserver;
 
     .line 69
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_1
 
     invoke-virtual {v0}, Lcom/tencent/kingkong/ContentObserver;->deliverSelfNotifications()Z
 
@@ -79,12 +83,12 @@
     if-eqz v3, :cond_0
 
     .line 70
-    :cond_2
+    :cond_1
     invoke-virtual {v0, p1, p2}, Lcom/tencent/kingkong/ContentObserver;->dispatchChanges(ZLandroid/net/Uri;)V
 
     goto :goto_0
 
-    .line 67
+    .line 73
     :catchall_0
     move-exception v0
 
@@ -93,6 +97,14 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
+
+    :cond_2
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    return-void
 .end method
 
 .method public notifyChange(Z)V
@@ -119,15 +131,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 85
-    monitor-exit v1
-
-    return-void
-
-    .line 86
-    :cond_0
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -141,7 +146,7 @@
 
     goto :goto_0
 
-    .line 85
+    .line 89
     :catchall_0
     move-exception v0
 
@@ -150,6 +155,14 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
+
+    :cond_0
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    return-void
 .end method
 
 .method public registerObserver(Lcom/tencent/kingkong/ContentObserver;)V
@@ -167,7 +180,7 @@
     .locals 0
 
     .prologue
-    .line 1
+    .line 26
     check-cast p1, Lcom/tencent/kingkong/ContentObserver;
 
     invoke-virtual {p0, p1}, Lcom/tencent/kingkong/ContentObservable;->registerObserver(Lcom/tencent/kingkong/ContentObserver;)V

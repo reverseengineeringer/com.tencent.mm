@@ -4,7 +4,7 @@ import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.h.a;
+import com.tencent.mm.i.a;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import com.tencent.mm.model.i;
@@ -37,33 +37,33 @@ class URISpanHandlerSet$EnterRoomUriSpanHandler
       if ((i >= 0) && (i < paramString.trim().length() - 1))
       {
         paramString = paramString.trim().substring(i + 1);
-        if (i.dn(paramString))
+        if (i.du(paramString))
         {
-          paraml = ah.tD().rq().Ep(paramString);
-          if ((paraml == null) || ((int)bvi == 0))
+          paraml = ah.tE().rr().GD(paramString);
+          if ((paraml == null) || ((int)bjS == 0))
           {
             paraml = new k();
             paraml.setUsername(paramString);
-            ah.tD().rq().M(paraml);
+            ah.tE().rr().M(paraml);
           }
         }
-        paramString = new Intent(URISpanHandlerSet.a(ang), ChattingUI.class).putExtra("Chat_User", paramString).putExtra("Chat_Mode", 1);
-        if ((URISpanHandlerSet.a(ang) instanceof Service)) {
+        paramString = new Intent(URISpanHandlerSet.a(ZU), ChattingUI.class).putExtra("Chat_User", paramString).putExtra("Chat_Mode", 1);
+        if ((URISpanHandlerSet.a(ZU) instanceof Service)) {
           paramString.addFlags(268435456);
         }
-        URISpanHandlerSet.a(ang).startActivity(paramString);
+        URISpanHandlerSet.a(ZU).startActivity(paramString);
         return true;
       }
     }
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[0];
   }

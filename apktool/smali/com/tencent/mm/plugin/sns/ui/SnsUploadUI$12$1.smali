@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hmb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12;
+.field final synthetic hCe:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 505
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12$1;->hmb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12;
+    .line 524
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12$1;->hCe:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,10 +40,10 @@
     .locals 3
 
     .prologue
-    .line 509
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12$1;->hmb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12;
+    .line 528
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12$1;->hCe:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12;->hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12;->hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->g(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Lcom/tencent/mm/modelsns/SnsAdClick;
 
@@ -51,10 +51,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 510
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12$1;->hmb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12;
+    .line 529
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12$1;->hCe:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12;->hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12;->hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->g(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Lcom/tencent/mm/modelsns/SnsAdClick;
 
@@ -62,13 +62,13 @@
 
     const/16 v1, 0xa
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelsns/SnsAdClick;->dP(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelsns/SnsAdClick;->ew(I)V
 
-    .line 512
+    .line 531
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12$1;->hmb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12$1;->hCe:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12;->hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12;->hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
     const/4 v1, 0x0
 
@@ -78,13 +78,13 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->setResult(ILandroid/content/Intent;)V
 
-    .line 513
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12$1;->hmb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12;
+    .line 532
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12$1;->hCe:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12;->hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$12;->hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->finish()V
 
-    .line 514
+    .line 533
     return-void
 .end method

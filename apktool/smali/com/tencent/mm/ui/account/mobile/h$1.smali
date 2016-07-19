@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic kxH:Lcom/tencent/mm/modelfriend/v;
+.field final synthetic kWO:Lcom/tencent/mm/modelfriend/v;
 
-.field final synthetic kyF:Lcom/tencent/mm/ui/account/mobile/h;
+.field final synthetic kXM:Lcom/tencent/mm/ui/account/mobile/h;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 98
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/h$1;->kyF:Lcom/tencent/mm/ui/account/mobile/h;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/h$1;->kXM:Lcom/tencent/mm/ui/account/mobile/h;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/mobile/h$1;->kxH:Lcom/tencent/mm/modelfriend/v;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/mobile/h$1;->kWO:Lcom/tencent/mm/modelfriend/v;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,24 +45,24 @@
 
     .prologue
     .line 102
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/h$1;->kxH:Lcom/tencent/mm/modelfriend/v;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/h$1;->kWO:Lcom/tencent/mm/modelfriend/v;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
     .line 103
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0x84
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/mobile/h$1;->kyF:Lcom/tencent/mm/ui/account/mobile/h;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/mobile/h$1;->kXM:Lcom/tencent/mm/ui/account/mobile/h;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
     .line 104
     return-void

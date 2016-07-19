@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract ax()Ljava/lang/Object;
+.method public abstract aw()Ljava/lang/Object;
 .end method
 
 .method public abstract d(Ljava/lang/Object;I)V

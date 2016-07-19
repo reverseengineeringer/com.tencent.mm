@@ -79,11 +79,11 @@
 
     .prologue
     .line 68
-    const-string/jumbo v0, "!56@/B4Tb64lLpIaKqQrIg/z8GkVquS3edhX8D5+aGLT9JA8DpSq5rbbyw=="
+    const-string/jumbo v0, "MicroMsg.AccountAuthenticatorService"
 
     const-string/jumbo v1, "confirmCredentials"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 69
     const/4 v0, 0x0
@@ -96,11 +96,11 @@
 
     .prologue
     .line 74
-    const-string/jumbo v0, "!56@/B4Tb64lLpIaKqQrIg/z8GkVquS3edhX8D5+aGLT9JA8DpSq5rbbyw=="
+    const-string/jumbo v0, "MicroMsg.AccountAuthenticatorService"
 
     const-string/jumbo v1, "editProperties"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 75
     const/4 v0, 0x0
@@ -113,11 +113,11 @@
 
     .prologue
     .line 80
-    const-string/jumbo v0, "!56@/B4Tb64lLpIaKqQrIg/z8GkVquS3edhX8D5+aGLT9JA8DpSq5rbbyw=="
+    const-string/jumbo v0, "MicroMsg.AccountAuthenticatorService"
 
     const-string/jumbo v1, "getAuthToken"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 81
     const/4 v0, 0x0
@@ -130,11 +130,11 @@
 
     .prologue
     .line 86
-    const-string/jumbo v0, "!56@/B4Tb64lLpIaKqQrIg/z8GkVquS3edhX8D5+aGLT9JA8DpSq5rbbyw=="
+    const-string/jumbo v0, "MicroMsg.AccountAuthenticatorService"
 
     const-string/jumbo v1, "getAuthTokenLabel"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 87
     const/4 v0, 0x0
@@ -147,7 +147,7 @@
 
     .prologue
     .line 92
-    const-string/jumbo v0, "!56@/B4Tb64lLpIaKqQrIg/z8GkVquS3edhX8D5+aGLT9JA8DpSq5rbbyw=="
+    const-string/jumbo v0, "MicroMsg.AccountAuthenticatorService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -163,7 +163,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 93
     const/4 v0, 0x0
@@ -176,11 +176,11 @@
 
     .prologue
     .line 98
-    const-string/jumbo v0, "!56@/B4Tb64lLpIaKqQrIg/z8GkVquS3edhX8D5+aGLT9JA8DpSq5rbbyw=="
+    const-string/jumbo v0, "MicroMsg.AccountAuthenticatorService"
 
     const-string/jumbo v1, "updateCredentials"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 99
     const/4 v0, 0x0

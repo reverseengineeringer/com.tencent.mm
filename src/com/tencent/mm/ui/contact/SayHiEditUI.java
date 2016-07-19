@@ -8,18 +8,18 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import android.widget.EditText;
 import android.widget.Toast;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.platformtools.s;
 import com.tencent.mm.pluginsdk.model.l;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.j.b;
 import com.tencent.mm.ui.tools.a.c;
+import com.tencent.mm.ui.widget.MMEditText;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -27,39 +27,39 @@ public class SayHiEditUI
   extends MMActivity
   implements d
 {
-  private ProgressDialog coM = null;
-  private EditText fyY;
+  private ProgressDialog cka = null;
+  private MMEditText lMg;
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    fyY = ((EditText)findViewById(2131165703));
-    c.a(fyY).rZ(100).a(null);
+    lMg = ((MMEditText)findViewById(2131758763));
+    c.a(lMg).ud(100).a(null);
     final String str = getIntent().getStringExtra("Contact_User");
     final int i = getIntent().getIntExtra("Contact_Scene", 18);
-    a(0, getString(2131430879), new MenuItem.OnMenuItemClickListener()
+    a(0, getString(2131231010), new MenuItem.OnMenuItemClickListener()
     {
       public final boolean onMenuItemClick(final MenuItem paramAnonymousMenuItem)
       {
-        age();
+        aiI();
         paramAnonymousMenuItem = new LinkedList();
         paramAnonymousMenuItem.add(str);
         Object localObject = new LinkedList();
         ((LinkedList)localObject).add(Integer.valueOf(i));
         paramAnonymousMenuItem = new l(2, paramAnonymousMenuItem, (List)localObject, SayHiEditUI.a(SayHiEditUI.this), "");
-        ah.tE().d(paramAnonymousMenuItem);
+        ah.tF().a(paramAnonymousMenuItem, 0);
         localObject = SayHiEditUI.this;
-        ActionBarActivity localActionBarActivity = koJ.kpc;
-        getString(2131430877);
-        SayHiEditUI.a((SayHiEditUI)localObject, g.a(localActionBarActivity, getString(2131431087), true, new DialogInterface.OnCancelListener()
+        ActionBarActivity localActionBarActivity = kNN.kOg;
+        getString(2131231028);
+        SayHiEditUI.a((SayHiEditUI)localObject, g.a(localActionBarActivity, getString(2131234901), true, new DialogInterface.OnCancelListener()
         {
           public final void onCancel(DialogInterface paramAnonymous2DialogInterface)
           {
-            ah.tE().c(paramAnonymousMenuItem);
+            ah.tF().c(paramAnonymousMenuItem);
           }
         }));
         return false;
       }
-    }, j.b.kpJ);
+    }, j.b.kOO);
     b(new MenuItem.OnMenuItemClickListener()
     {
       public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
@@ -70,67 +70,67 @@ public class SayHiEditUI
     });
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
+  protected final int getLayoutId()
+  {
+    return 2130904272;
+  }
+  
+  public void onCreate(Bundle paramBundle)
+  {
+    super.onCreate(paramBundle);
+    ah.tF().a(30, this);
+    rR(2131233987);
+    Gy();
+  }
+  
+  public void onDestroy()
+  {
+    ah.tF().b(30, this);
+    super.onDestroy();
+  }
+  
+  public void onSceneEnd(int paramInt1, int paramInt2, String paramString, com.tencent.mm.t.j paramj)
   {
     int i = 1;
-    u.i("!32@/B4Tb64lLpLV0em2rB59lAbnFb3mbD93", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
+    v.i("MicroMsg.SayHiEditUI", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
     try
     {
-      if (coM == null) {
+      if (cka == null) {
         break label179;
       }
-      coM.dismiss();
-      coM = null;
+      cka.dismiss();
+      cka = null;
     }
     catch (Exception paramString)
     {
-      u.e("!32@/B4Tb64lLpLV0em2rB59lAbnFb3mbD93", "exception in onSceneEnd : " + paramString.getMessage());
+      v.e("MicroMsg.SayHiEditUI", "exception in onSceneEnd : " + paramString.getMessage());
       return;
     }
-    Toast.makeText(this, 2131431163, 0).show();
+    Toast.makeText(this, 2131233988, 0).show();
     break label219;
-    Toast.makeText(this, 2131431164, 0).show();
+    Toast.makeText(this, 2131233991, 0).show();
     label179:
     label219:
     while (i == 0)
     {
       if ((paramInt1 == 0) && (paramInt2 == 0))
       {
-        g.ba(this, getString(2131431071));
+        g.aZ(this, getString(2131231863));
         finish();
         return;
       }
-      if ((paramInt1 == 4) && (paramInt2 == -24) && (!t.kz(paramString)))
+      if ((paramInt1 == 4) && (paramInt2 == -24) && (!s.kf(paramString)))
       {
         Toast.makeText(this, paramString, 1).show();
         return;
       }
-      Toast.makeText(this, 2131431165, 0).show();
+      Toast.makeText(this, 2131233989, 0).show();
       return;
       switch (paramInt2)
       {
       }
       i = 0;
     }
-  }
-  
-  protected final int getLayoutId()
-  {
-    return 2131361972;
-  }
-  
-  public void onCreate(Bundle paramBundle)
-  {
-    super.onCreate(paramBundle);
-    ah.tE().a(30, this);
-    qb(2131431162);
-    Gb();
-  }
-  
-  public void onDestroy()
-  {
-    ah.tE().b(30, this);
-    super.onDestroy();
   }
 }
 

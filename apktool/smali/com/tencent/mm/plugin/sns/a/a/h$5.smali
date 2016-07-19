@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gHh:Lcom/tencent/mm/plugin/sns/a/a/h;
+.field final synthetic gNI:Lcom/tencent/mm/plugin/sns/a/a/h;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 271
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/a/a/h$5;->gHh:Lcom/tencent/mm/plugin/sns/a/a/h;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/a/a/h$5;->gNI:Lcom/tencent/mm/plugin/sns/a/a/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 274
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/h$5;->gHh:Lcom/tencent/mm/plugin/sns/a/a/h;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/h$5;->gNI:Lcom/tencent/mm/plugin/sns/a/a/h;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/a/a/h;->d(Lcom/tencent/mm/plugin/sns/a/a/h;)V
 

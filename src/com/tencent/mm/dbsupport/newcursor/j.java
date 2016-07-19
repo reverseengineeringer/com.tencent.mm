@@ -17,14 +17,14 @@ public final class j
   extends AbstractCursor
   implements e
 {
-  private final l bvA;
-  private int bvB = 3000;
-  public a bvC;
-  private boolean bvD;
-  private b bvE;
-  d bvF;
-  private boolean bvG;
-  private Map mColumnNameMap;
+  private final l bkt;
+  private int bku = 3000;
+  public a bkv;
+  private boolean bkw;
+  private b<a> bkx;
+  d bky;
+  private boolean bkz;
+  private Map<String, Integer> mColumnNameMap;
   private final String[] mColumns;
   private int mCount = -1;
   private final SQLiteCursorDriver mDriver;
@@ -36,101 +36,73 @@ public final class j
     mDriver = paramSQLiteCursorDriver;
     mEditTable = paramString;
     mColumnNameMap = null;
-    bvA = paraml;
+    bkt = paraml;
     mColumns = paraml.getColumnNames();
     mRowIdColumnIndex = DatabaseUtils.findRowIdColumnIndex(mColumns);
   }
   
-  private int cm(int paramInt)
+  private int cM(int paramInt)
   {
-    if ((bvE == null) && (bvD))
+    if ((bkx == null) && (bkw))
     {
-      bvE = new b()
+      bkx = new b()
       {
-        public final ArrayList d(ArrayList paramAnonymousArrayList)
+        public final ArrayList<a> e(ArrayList<Object> paramAnonymousArrayList)
         {
           j localj = j.this;
-          if (bvC != null) {
-            return bvC.d(paramAnonymousArrayList);
+          if (bkv != null) {
+            return bkv.e(paramAnonymousArrayList);
           }
           return null;
         }
         
-        public final a qD()
+        public final a ph()
         {
           j localj = j.this;
-          if (bvC != null) {
-            return bvC.qD();
+          if (bkv != null) {
+            return bkv.ph();
           }
           return null;
         }
       };
-      bvE.mStartPos = paramInt;
+      bkx.mStartPos = paramInt;
     }
     for (;;)
     {
-      return bvA.a(bvE, paramInt, bvB, bvF);
-      qL();
+      return bkt.a(bkx, paramInt, bku, bky);
+      pp();
     }
   }
   
-  private void qL()
+  private void pp()
   {
-    if (bvF == null) {
-      bvF = new d(mColumns, (byte)0);
+    if (bky == null) {
+      bky = new d(mColumns, (byte)0);
     }
-  }
-  
-  public final boolean T(Object paramObject)
-  {
-    if (!bvD) {}
-    while (bvE == null) {
-      return false;
-    }
-    return bvE.T(paramObject);
-  }
-  
-  public final a V(Object paramObject)
-  {
-    if (!bvD) {
-      Log.e("MicroMsg.kkdb.SQLiteNewCursor", "newcursor getItemByKey error " + paramObject);
-    }
-    b localb;
-    do
-    {
-      return null;
-      if (bvE == null)
-      {
-        Log.e("MicroMsg.kkdb.SQLiteNewCursor", "newcursor error getItemByKey window is null");
-        return null;
-      }
-      localb = bvE;
-    } while (bvo == null);
-    return (a)bvo.get(paramObject);
   }
   
   public final void a(a parama)
   {
-    bvC = parama;
+    bkv = parama;
   }
   
   public final boolean a(Object paramObject, a parama)
   {
-    if ((bvD) && (bvE != null))
+    if ((bkw) && (bkx != null))
     {
-      if ((!bvG) && ((paramObject instanceof Object[])) && (bvE.T(paramObject)))
+      if ((!bkz) && ((paramObject instanceof Object[])) && (bkx.ae(paramObject)))
       {
         mCount -= ((Object[])paramObject).length;
-        bvB -= ((Object[])paramObject).length;
+        bku -= ((Object[])paramObject).length;
       }
-      localb = bvE;
+      localb = bkx;
       if (parama != null)
       {
         Log.i("MicroMsg.kkdb.CursorDataWindow", "newcursor cursor update Memory key : " + paramObject + "values : " + parama);
-        bvo.put(paramObject, parama);
+        bkh.put(paramObject, parama);
       }
     }
-    while (bvD)
+    while (bkw)
     {
       b localb;
       return false;
@@ -139,71 +111,100 @@ public final class j
         paramObject = (Object[])paramObject;
         int j = paramObject.length;
         int i = 0;
-        for (;;)
+        while (i < j)
         {
-          if (i >= j)
-          {
-            localb.b((Object[])paramObject);
-            return false;
-          }
           parama = paramObject[i];
-          bvo.remove(parama);
+          bkh.remove(parama);
           i += 1;
         }
+        localb.c((Object[])paramObject);
+        return false;
       }
-      if (bvp == null) {
-        bvp = new ArrayList();
+      if (bki == null) {
+        bki = new ArrayList();
       }
-      if (!bvp.contains(paramObject))
+      if (!bki.contains(paramObject))
       {
-        bvp.add(paramObject);
+        bki.add(paramObject);
         Log.i("MicroMsg.kkdb.CursorDataWindow", "newcursor cursor clearData : " + paramObject);
       }
-      bvo.remove(paramObject);
+      bkh.remove(paramObject);
       return false;
     }
-    paramObject = bvF;
+    paramObject = bky;
     mPos = 0;
-    bvr.clear();
+    bkk.clear();
     return false;
   }
   
-  public final void aG(boolean paramBoolean)
+  public final boolean ae(Object paramObject)
   {
-    bvD = paramBoolean;
+    if (!bkw) {}
+    while (bkx == null) {
+      return false;
+    }
+    return bkx.ae(paramObject);
   }
   
-  protected final void checkPosition()
+  public final a ag(Object paramObject)
   {
-    super.checkPosition();
+    if (!bkw) {
+      Log.e("MicroMsg.kkdb.SQLiteNewCursor", "newcursor getItemByKey error " + paramObject);
+    }
+    b localb;
+    do
+    {
+      return null;
+      if (bkx == null)
+      {
+        Log.e("MicroMsg.kkdb.SQLiteNewCursor", "newcursor error getItemByKey window is null");
+        return null;
+      }
+      localb = bkx;
+    } while (bkh == null);
+    return (a)bkh.get(paramObject);
   }
   
-  public final a cj(int paramInt)
+  public final void al(boolean paramBoolean)
+  {
+    bkw = paramBoolean;
+  }
+  
+  public final a cJ(int paramInt)
   {
     Object localObject1 = null;
     b localb;
-    int i;
-    if (bvE != null)
+    if (bkx != null)
     {
-      localb = bvE;
-      if (!localb.ci(paramInt)) {
+      localb = bkx;
+      if (!localb.cI(paramInt)) {
         break label207;
       }
-      Object localObject2 = bvm.get(paramInt);
-      locala = (a)bvo.get(localObject2);
+      Object localObject2 = bkf.get(paramInt);
+      a locala = (a)bkh.get(localObject2);
       localObject1 = locala;
       if (locala == null)
       {
-        if (bvp.size() != 0)
+        if (bki.size() != 0)
         {
-          localObject1 = localb.d(bvp);
-          i = 0;
-          if (i < ((ArrayList)localObject1).size()) {
-            break label157;
+          localObject1 = localb.e(bki);
+          int i = 0;
+          if (i < ((ArrayList)localObject1).size())
+          {
+            locala = (a)((ArrayList)localObject1).get(i);
+            if (locala != null) {
+              bkh.put(locala.getKey(), locala);
+            }
+            for (;;)
+            {
+              i += 1;
+              break;
+              Log.e("MicroMsg.kkdb.CursorDataWindow", "newcursor obj is null");
+            }
           }
-          bvp.clear();
+          bki.clear();
         }
-        locala = (a)bvo.get(localObject2);
+        locala = (a)bkh.get(localObject2);
         localObject1 = locala;
         if (locala == null)
         {
@@ -213,45 +214,39 @@ public final class j
       }
     }
     return (a)localObject1;
-    label157:
-    a locala = (a)((ArrayList)localObject1).get(i);
-    if (locala != null) {
-      bvo.put(locala.getKey(), locala);
-    }
-    for (;;)
-    {
-      i += 1;
-      break;
-      Log.e("MicroMsg.kkdb.CursorDataWindow", "newcursor obj is null");
-    }
     label207:
-    Log.e("MicroMsg.kkdb.CursorDataWindow", "newcursor cursor getItem error: pos " + paramInt + " loaded num :" + bvm.size());
+    Log.e("MicroMsg.kkdb.CursorDataWindow", "newcursor cursor getItem error: pos " + paramInt + " loaded num :" + bkf.size());
     return null;
   }
   
-  public final void ck(int paramInt)
+  public final void cK(int paramInt)
   {
     if ((paramInt <= 15000) && (paramInt >= 2000)) {
-      bvB = paramInt;
+      bku = paramInt;
     }
   }
   
-  public final boolean cl(int paramInt)
+  public final boolean cL(int paramInt)
   {
-    if (!bvD) {}
+    if (!bkw) {}
     b localb;
     do
     {
       do
       {
         return false;
-        localb = bvE;
+        localb = bkx;
       } while (paramInt > 50);
-      if (bvn < 10) {
+      if (bkg < 10) {
         return true;
       }
-    } while (paramInt / bvn >= 0.1D);
+    } while (paramInt / bkg >= 0.1D);
     return true;
+  }
+  
+  protected final void checkPosition()
+  {
+    super.checkPosition();
   }
   
   public final void close()
@@ -259,7 +254,7 @@ public final class j
     super.close();
     try
     {
-      bvA.close();
+      bkt.close();
       mDriver.cursorClosed();
       return;
     }
@@ -274,11 +269,11 @@ public final class j
     mDriver.cursorDeactivated();
   }
   
-  public final void finalize()
+  protected final void finalize()
   {
     try
     {
-      if (bvE != null) {
+      if (bkx != null) {
         close();
       }
       return;
@@ -291,46 +286,38 @@ public final class j
   
   public final byte[] getBlob(int paramInt)
   {
-    if (!bvD) {
-      return bvF.getBlob(paramInt);
+    if (!bkw) {
+      return bky.getBlob(paramInt);
     }
     return null;
   }
   
   public final int getColumnIndex(String paramString)
   {
-    Object localObject;
-    int j;
-    HashMap localHashMap;
-    int i;
     if (mColumnNameMap == null)
     {
       localObject = mColumns;
-      j = localObject.length;
-      localHashMap = new HashMap(j, 1.0F);
+      int j = localObject.length;
+      HashMap localHashMap = new HashMap(j, 1.0F);
       i = 0;
-    }
-    for (;;)
-    {
-      if (i >= j)
+      while (i < j)
       {
-        mColumnNameMap = localHashMap;
-        i = paramString.lastIndexOf('.');
-        localObject = paramString;
-        if (i != -1)
-        {
-          localObject = new Exception();
-          Log.e("MicroMsg.kkdb.SQLiteNewCursor", "requesting column name with table name -- " + paramString, new Object[] { localObject });
-          localObject = paramString.substring(i + 1);
-        }
-        paramString = (Integer)mColumnNameMap.get(localObject);
-        if (paramString == null) {
-          break;
-        }
-        return paramString.intValue();
+        localHashMap.put(localObject[i], Integer.valueOf(i));
+        i += 1;
       }
-      localHashMap.put(localObject[i], Integer.valueOf(i));
-      i += 1;
+      mColumnNameMap = localHashMap;
+    }
+    int i = paramString.lastIndexOf('.');
+    Object localObject = paramString;
+    if (i != -1)
+    {
+      localObject = new Exception();
+      Log.e("MicroMsg.kkdb.SQLiteNewCursor", "requesting column name with table name -- " + paramString, new Object[] { localObject });
+      localObject = paramString.substring(i + 1);
+    }
+    paramString = (Integer)mColumnNameMap.get(localObject);
+    if (paramString != null) {
+      return paramString.intValue();
     }
     return -1;
   }
@@ -345,24 +332,24 @@ public final class j
     boolean bool2 = false;
     if (mCount == -1)
     {
-      mCount = cm(0);
-      if (bvE != null)
+      mCount = cM(0);
+      if (bkx != null)
       {
         boolean bool1 = bool2;
         if (mCount != -1)
         {
           bool1 = bool2;
-          if (mCount == bvE.bvm.size()) {
+          if (mCount == bkx.bkf.size()) {
             bool1 = true;
           }
         }
-        bvG = bool1;
+        bkz = bool1;
       }
     }
-    if (bvD)
+    if (bkw)
     {
-      if (bvG) {
-        return bvE.bvm.size();
+      if (bkz) {
+        return bkx.bkf.size();
       }
       return mCount;
     }
@@ -371,101 +358,101 @@ public final class j
   
   public final double getDouble(int paramInt)
   {
-    if (!bvD) {
-      return bvF.getDouble(paramInt);
+    if (!bkw) {
+      return bky.getDouble(paramInt);
     }
     return 0.0D;
   }
   
   public final float getFloat(int paramInt)
   {
-    if (!bvD) {
-      return bvF.getFloat(paramInt);
+    if (!bkw) {
+      return bky.getFloat(paramInt);
     }
     return 0.0F;
   }
   
   public final int getInt(int paramInt)
   {
-    if (!bvD) {
-      return bvF.getInt(paramInt);
+    if (!bkw) {
+      return bky.getInt(paramInt);
     }
     return 0;
   }
   
   public final long getLong(int paramInt)
   {
-    if (!bvD) {
-      return bvF.getLong(paramInt);
+    if (!bkw) {
+      return bky.getLong(paramInt);
     }
     return 0L;
   }
   
   public final short getShort(int paramInt)
   {
-    if (!bvD) {
-      return bvF.getShort(paramInt);
+    if (!bkw) {
+      return bky.getShort(paramInt);
     }
     return 0;
   }
   
   public final String getString(int paramInt)
   {
-    if (!bvD) {
-      return bvF.getString(paramInt);
+    if (!bkw) {
+      return bky.getString(paramInt);
     }
     return null;
   }
   
   public final boolean isNull(int paramInt)
   {
-    if (!bvD) {
-      return bvF.isNull(paramInt);
+    if (!bkw) {
+      return bky.isNull(paramInt);
     }
     return false;
   }
   
   public final boolean onMove(int paramInt1, int paramInt2)
   {
-    if (bvD)
+    if (bkw)
     {
-      if ((bvE == null) || (!bvE.ci(paramInt2))) {
-        cm(paramInt2 / bvB * bvB);
+      if ((bkx == null) || (!bkx.cI(paramInt2))) {
+        cM(paramInt2 / bku * bku);
       }
       return true;
     }
-    if (bvF == null) {
-      qL();
+    if (bky == null) {
+      pp();
     }
-    d locald = bvF;
-    paramInt1 = paramInt2 / bvs;
-    if (bvr.indexOfKey(paramInt1) >= 0)
+    d locald = bky;
+    paramInt1 = paramInt2 / bkl;
+    if (bkk.indexOfKey(paramInt1) >= 0)
     {
-      int i = bvs;
+      int i = bkl;
       int j = columnCount;
-      if (((Object[])bvr.get(paramInt1))[(paramInt2 % i * j)] == null) {}
+      if (((Object[])bkk.get(paramInt1))[(paramInt2 % i * j)] == null) {}
     }
     for (paramInt1 = 1;; paramInt1 = 0)
     {
       if (paramInt1 == 0) {
-        cm(paramInt2 / bvB * bvB);
+        cM(paramInt2 / bku * bku);
       }
-      bvF.moveToPosition(paramInt2);
+      bky.moveToPosition(paramInt2);
       return true;
     }
   }
   
-  public final boolean qG()
+  public final boolean pk()
   {
-    return bvG;
+    return bkz;
   }
   
-  public final SparseArray[] qH()
+  public final SparseArray<Object>[] pl()
   {
-    if (!bvD) {
+    if (!bkw) {
       return null;
     }
-    return new SparseArray[] { bvE.bvm };
+    return new SparseArray[] { bkx.bkf };
   }
   
   public final void registerContentObserver(ContentObserver paramContentObserver) {}
@@ -479,13 +466,13 @@ public final class j
     }
     try
     {
-      if (!bvA.getDatabase().isOpen()) {
+      if (!bkt.getDatabase().isOpen()) {
         return false;
       }
     }
     finally {}
-    if (bvE != null) {
-      bvE.qE();
+    if (bkx != null) {
+      bkx.pi();
     }
     mPos = -1;
     mCount = -1;
@@ -508,9 +495,9 @@ public final class j
   
   public static abstract interface a
   {
-    public abstract ArrayList d(ArrayList paramArrayList);
+    public abstract ArrayList<a> e(ArrayList<Object> paramArrayList);
     
-    public abstract a qD();
+    public abstract a ph();
   }
 }
 

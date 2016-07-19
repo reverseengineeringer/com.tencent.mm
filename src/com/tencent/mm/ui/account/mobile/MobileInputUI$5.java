@@ -10,7 +10,7 @@ final class MobileInputUI$5
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    MobileInputUI.d(kyc);
+    MobileInputUI.d(kXj);
     return true;
   }
 }

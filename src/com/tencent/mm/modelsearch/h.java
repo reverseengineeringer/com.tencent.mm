@@ -1,26 +1,70 @@
 package com.tencent.mm.modelsearch;
 
 import com.tencent.mm.plugin.report.service.KVReportJni.IDKeyDataInfo;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.ArrayList;
 
 public final class h
 {
+  public static final int aa(int paramInt1, int paramInt2)
+  {
+    if ((paramInt1 == 131072) || (paramInt1 == 131076)) {
+      switch (paramInt2)
+      {
+      }
+    }
+    do
+    {
+      return 0;
+      return 1;
+      return 2;
+      return 3;
+      return 4;
+      return 5;
+      return 6;
+      return 7;
+      return 8;
+      return 10;
+      return 9;
+      return 16;
+      if (paramInt1 == 131075)
+      {
+        switch (paramInt2)
+        {
+        default: 
+          return 0;
+        case 1: 
+        case 5: 
+          return 12;
+        case 2: 
+        case 6: 
+          return 13;
+        case 3: 
+        case 7: 
+          return 14;
+        }
+        return 11;
+      }
+    } while (paramInt1 != 65536);
+    return 17;
+  }
+  
   public static void b(String paramString, boolean paramBoolean, int paramInt1, int paramInt2)
   {
     if (paramInt2 == 0)
     {
       if (paramBoolean)
       {
-        com.tencent.mm.plugin.report.service.h.fUJ.g(11062, new Object[] { paramString, Integer.valueOf(3), Integer.valueOf(1) });
+        g.gdY.h(11062, new Object[] { paramString, Integer.valueOf(3), Integer.valueOf(1) });
         return;
       }
       if (paramInt1 > 0)
       {
-        com.tencent.mm.plugin.report.service.h.fUJ.g(11062, new Object[] { paramString, Integer.valueOf(2), Integer.valueOf(1) });
+        g.gdY.h(11062, new Object[] { paramString, Integer.valueOf(2), Integer.valueOf(1) });
         return;
       }
-      com.tencent.mm.plugin.report.service.h.fUJ.g(11062, new Object[] { paramString, Integer.valueOf(1), Integer.valueOf(1) });
+      g.gdY.h(11062, new Object[] { paramString, Integer.valueOf(1), Integer.valueOf(1) });
       return;
     }
     switch (paramInt2)
@@ -30,7 +74,7 @@ public final class h
     }
     while (paramBoolean)
     {
-      com.tencent.mm.plugin.report.service.h.fUJ.g(11062, new Object[] { paramString, Integer.valueOf(3), Integer.valueOf(paramInt2) });
+      g.gdY.h(11062, new Object[] { paramString, Integer.valueOf(3), Integer.valueOf(paramInt2) });
       return;
       paramInt2 = 2;
       continue;
@@ -44,13 +88,13 @@ public final class h
     }
     if (paramInt1 > 0)
     {
-      com.tencent.mm.plugin.report.service.h.fUJ.g(11062, new Object[] { paramString, Integer.valueOf(2), Integer.valueOf(paramInt2) });
+      g.gdY.h(11062, new Object[] { paramString, Integer.valueOf(2), Integer.valueOf(paramInt2) });
       return;
     }
-    com.tencent.mm.plugin.report.service.h.fUJ.g(11062, new Object[] { paramString, Integer.valueOf(1), Integer.valueOf(paramInt2) });
+    g.gdY.h(11062, new Object[] { paramString, Integer.valueOf(1), Integer.valueOf(paramInt2) });
   }
   
-  public static void dH(int paramInt)
+  public static void en(int paramInt)
   {
     Object localObject = new KVReportJni.IDKeyDataInfo();
     ((KVReportJni.IDKeyDataInfo)localObject).SetID(146);
@@ -73,8 +117,8 @@ public final class h
     }
     for (;;)
     {
-      localObject = com.tencent.mm.plugin.report.service.h.fUJ;
-      com.tencent.mm.plugin.report.service.h.d(localArrayList, false);
+      localObject = g.gdY;
+      g.d(localArrayList, false);
       return;
       localObject = new KVReportJni.IDKeyDataInfo();
       ((KVReportJni.IDKeyDataInfo)localObject).SetID(146);
@@ -84,9 +128,9 @@ public final class h
     }
   }
   
-  public static void m(int paramInt, long paramLong)
+  public static void k(int paramInt, long paramLong)
   {
-    u.v("!44@/B4Tb64lLpKLxeMowbLUcAFldVd3xo5jMHEnkiX3cRU=", "reportIDKey: type=%d time=%d", new Object[] { Integer.valueOf(paramInt), Long.valueOf(paramLong) });
+    v.v("MicroMsg.FTS.FTSReportLogic", "reportIDKey: type=%d time=%d", new Object[] { Integer.valueOf(paramInt), Long.valueOf(paramLong) });
     switch (paramInt)
     {
     default: 
@@ -103,16 +147,16 @@ public final class h
     ArrayList localArrayList = new ArrayList();
     localArrayList.add(localObject);
     localArrayList.add(localIDKeyDataInfo);
-    localObject = com.tencent.mm.plugin.report.service.h.fUJ;
-    com.tencent.mm.plugin.report.service.h.d(localArrayList, false);
+    localObject = g.gdY;
+    g.d(localArrayList, false);
   }
   
-  public static void n(int paramInt, long paramLong)
+  public static void l(int paramInt, long paramLong)
   {
     if (paramInt > 0)
     {
       int i = (paramInt - 1) * 2 + 1;
-      u.v("!44@/B4Tb64lLpKLxeMowbLUcAFldVd3xo5jMHEnkiX3cRU=", "reportIDKeySearchTime: reportKey=%d taskId=%d", new Object[] { Integer.valueOf(i), Integer.valueOf(paramInt) });
+      v.v("MicroMsg.FTS.FTSReportLogic", "reportIDKeySearchTime: reportKey=%d taskId=%d", new Object[] { Integer.valueOf(i), Integer.valueOf(paramInt) });
       ArrayList localArrayList = new ArrayList();
       Object localObject = new KVReportJni.IDKeyDataInfo();
       ((KVReportJni.IDKeyDataInfo)localObject).SetID(149);
@@ -124,8 +168,8 @@ public final class h
       ((KVReportJni.IDKeyDataInfo)localObject).SetKey(i + 1);
       ((KVReportJni.IDKeyDataInfo)localObject).SetValue(1);
       localArrayList.add(localObject);
-      localObject = com.tencent.mm.plugin.report.service.h.fUJ;
-      com.tencent.mm.plugin.report.service.h.d(localArrayList, false);
+      localObject = g.gdY;
+      g.d(localArrayList, false);
     }
   }
 }

@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.Map;
 
 final class FTSUtils$1
-  implements Comparator
+  implements Comparator<m.g>
 {
   FTSUtils$1(Map paramMap) {}
 }

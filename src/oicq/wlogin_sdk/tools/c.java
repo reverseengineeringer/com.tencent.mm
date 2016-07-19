@@ -74,7 +74,7 @@ public final class c
     return ((int)paramLong1 >>> (int)(32L - paramLong6) | i << j) + paramLong2;
   }
   
-  public static byte[] IL(String paramString)
+  public static byte[] Lm(String paramString)
   {
     try
     {
@@ -100,7 +100,7 @@ public final class c
     return i;
   }
   
-  public static byte[] bu(byte[] paramArrayOfByte)
+  public static byte[] bC(byte[] paramArrayOfByte)
   {
     return new c().getMD5(paramArrayOfByte);
   }

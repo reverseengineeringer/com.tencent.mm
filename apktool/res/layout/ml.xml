@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/g3" android:layout_width="fill_parent" android:layout_height="@dimen/ej"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/ac4" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false" android:weightSum="1.0">
+        <RelativeLayout android:id="@id/aia" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <RelativeLayout android:id="@id/aib" style="@style/ExdeviceRankLayout">
+                <TextView android:id="@id/aic" style="@style/ExdeviceRankTextView" />
+            </RelativeLayout>
+            <ImageView android:id="@id/aid" android:layout_toRightOf="@id/aib" style="@style/ExdeviceRankUserIcon" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/ExdeviceRankUserInfoLayout">
+            <RelativeLayout android:id="@id/aie" android:paddingLeft="13.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/aif" android:layout_centerVertical="true">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/ah7" android:layout_alignParentLeft="true" android:layout_centerInParent="true" android:layout_centerVertical="true" style="@style/ExdeviceRankUserNameLayout">
+                    <com.tencent.mm.ui.base.NoMeasuredTextView android:id="@id/aig" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentLeft="true" style="@style/ExdeviceRankUserName" />
+                    <TextView android:id="@id/aih" android:visibility="visible" android:layout_height="wrap_content" android:layout_below="@id/aig" android:layout_alignParentLeft="true" android:layout_centerInParent="false" style="@style/ExdeviceRankUserNameBelowMyRanking" />
+                </RelativeLayout>
+                <TextView android:id="@id/ah7" android:layout_marginBottom="@dimen/cp" android:layout_alignParentRight="true" style="@style/ExdeviceRankUserScore" />
+            </RelativeLayout>
+            <com.tencent.mm.plugin.exdevice.ui.ExdeviceLikeView android:id="@id/aif" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="13.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="2.0px" android:layout_alignParentBottom="true">
+        <View android:id="@id/aii" android:background="@color/e3" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    </LinearLayout>
+</RelativeLayout>

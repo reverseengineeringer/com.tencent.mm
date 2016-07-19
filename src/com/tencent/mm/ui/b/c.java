@@ -29,18 +29,18 @@ import java.util.ArrayList;
 public final class c
   extends ActionBar
 {
-  private Context iZ;
-  private ActionBarContainer jb;
-  private ViewGroup jc;
-  ActionBarView jd;
-  public ActionBarContextView je;
-  private ActionBarContainer jf;
-  private ArrayList jj = new ArrayList();
-  boolean jn;
-  boolean jo;
-  private boolean jp;
-  private boolean jq = true;
-  public a kzq;
+  private ArrayList<Object> jA = new ArrayList();
+  boolean jE;
+  boolean jF;
+  private boolean jG;
+  private boolean jH = true;
+  private Context jq;
+  private ActionBarContainer js;
+  private ViewGroup jt;
+  ActionBarView ju;
+  public ActionBarContextView jv;
+  private ActionBarContainer jw;
+  public a kYx;
   Context mContext;
   
   public c(Activity paramActivity, ViewGroup paramViewGroup)
@@ -48,52 +48,52 @@ public final class c
     mContext = paramActivity;
     if (paramViewGroup != null)
     {
-      jd = ((ActionBarView)paramViewGroup.findViewById(2131169502));
-      jb = ((ActionBarContainer)paramViewGroup.findViewById(2131169501));
-      jc = ((ViewGroup)paramViewGroup.findViewById(2131169543));
-      jf = ((ActionBarContainer)paramViewGroup.findViewById(2131169537));
+      ju = ((ActionBarView)paramViewGroup.findViewById(2131755209));
+      js = ((ActionBarContainer)paramViewGroup.findViewById(2131755208));
+      jt = ((ViewGroup)paramViewGroup.findViewById(2131755162));
+      jw = ((ActionBarContainer)paramViewGroup.findViewById(2131755160));
     }
-    for (je = ((ActionBarContextView)paramViewGroup.findViewById(2131169503));; je = ((ActionBarContextView)paramActivity.findViewById(2131169503)))
+    for (jv = ((ActionBarContextView)paramViewGroup.findViewById(2131755210));; jv = ((ActionBarContextView)paramActivity.findViewById(2131755210)))
     {
-      jb.setActionBarView(jd);
-      if (jc == null) {
-        jc = jb;
+      js.jd = ju;
+      if (jt == null) {
+        jt = js;
       }
-      if ((jd != null) && (je != null) && (jb != null)) {
+      if ((ju != null) && (jv != null) && (js != null)) {
         break;
       }
       throw new IllegalStateException(getClass().getSimpleName() + " can only be used with a compatible window decor layout");
-      jd = ((ActionBarView)paramActivity.findViewById(2131169502));
-      jb = ((ActionBarContainer)paramActivity.findViewById(2131169501));
-      jc = ((ViewGroup)paramActivity.findViewById(2131169543));
-      jf = ((ActionBarContainer)paramActivity.findViewById(2131169537));
+      ju = ((ActionBarView)paramActivity.findViewById(2131755209));
+      js = ((ActionBarContainer)paramActivity.findViewById(2131755208));
+      jt = ((ViewGroup)paramActivity.findViewById(2131755162));
+      jw = ((ActionBarContainer)paramActivity.findViewById(2131755160));
     }
-    jd.setContextView(je);
-    if ((jd.getDisplayOptions() & 0x4) != 0) {}
+    ju.jv = jv;
+    if ((ju.nU & 0x4) != 0) {}
     for (int i = 1;; i = 0)
     {
-      if ((android.support.v7.internal.view.a.m(mContext).aZ()) || (i != 0)) {
+      if ((android.support.v7.internal.view.a.k(mContext).aZ()) || (i != 0)) {
         bool = true;
       }
       setHomeButtonEnabled(bool);
       paramActivity = paramActivity.getTitle();
-      jd.setTitle(paramActivity);
+      ju.setTitle(paramActivity);
       return;
     }
   }
   
   private void aW()
   {
-    if (c(jn, jo, jp)) {
-      if (!jq)
+    if (b(jE, jF, jG)) {
+      if (!jH)
       {
-        jq = true;
-        jc.clearAnimation();
-        if (jc.getVisibility() != 0)
+        jH = true;
+        jt.clearAnimation();
+        if (jt.getVisibility() != 0)
         {
-          jc.setVisibility(0);
-          if ((jf != null) && (jf.getVisibility() != 0)) {
-            jf.setVisibility(0);
+          jt.setVisibility(0);
+          if ((jw != null) && (jw.getVisibility() != 0)) {
+            jw.setVisibility(0);
           }
         }
       }
@@ -105,16 +105,16 @@ public final class c
         do
         {
           return;
-        } while (!jq);
-        jq = false;
-        jc.clearAnimation();
-      } while (jc.getVisibility() == 8);
-      jc.setVisibility(8);
-    } while ((jf == null) || (jf.getVisibility() == 8));
-    jf.setVisibility(8);
+        } while (!jH);
+        jH = false;
+        jt.clearAnimation();
+      } while (jt.getVisibility() == 8);
+      jt.setVisibility(8);
+    } while ((jw == null) || (jw.getVisibility() == 8));
+    jw.setVisibility(8);
   }
   
-  static boolean c(boolean paramBoolean1, boolean paramBoolean2, boolean paramBoolean3)
+  static boolean b(boolean paramBoolean1, boolean paramBoolean2, boolean paramBoolean3)
   {
     if (paramBoolean3) {}
     while ((!paramBoolean1) && (!paramBoolean2)) {
@@ -125,23 +125,28 @@ public final class c
   
   private void setDisplayOptions(int paramInt1, int paramInt2)
   {
-    int i = jd.getDisplayOptions();
-    jd.setDisplayOptions(i & (paramInt2 ^ 0xFFFFFFFF) | paramInt1 & paramInt2);
+    int i = ju.nU;
+    ju.setDisplayOptions(i & (paramInt2 ^ 0xFFFFFFFF) | paramInt1 & paramInt2);
+  }
+  
+  public final void aI()
+  {
+    setCustomView(LayoutInflater.from(getThemedContext()).inflate(2130903070, ju, false));
   }
   
   public final void aJ()
   {
-    setCustomView(LayoutInflater.from(getThemedContext()).inflate(2131363238, jd, false));
+    ju.setIcon(2130839751);
   }
   
   public final void aK()
   {
-    jd.setIcon(2130968578);
+    setDisplayOptions(0, 2);
   }
   
   public final void aL()
   {
-    setDisplayOptions(0, 2);
+    setDisplayOptions(0, 8);
   }
   
   public final void aM()
@@ -151,70 +156,61 @@ public final class c
   
   public final View getCustomView()
   {
-    return jd.getCustomNavigationView();
+    return ju.ob;
   }
   
   public final int getDisplayOptions()
   {
-    return jd.getDisplayOptions();
+    return ju.nU;
   }
   
   public final int getHeight()
   {
-    return jb.getHeight();
+    return js.getHeight();
   }
   
   public final Context getThemedContext()
   {
     int i;
-    if (iZ == null)
+    if (jq == null)
     {
       TypedValue localTypedValue = new TypedValue();
-      mContext.getTheme().resolveAttribute(2130772115, localTypedValue, true);
+      mContext.getTheme().resolveAttribute(2130771976, localTypedValue, true);
       i = resourceId;
       if (i == 0) {
         break label60;
       }
     }
     label60:
-    for (iZ = new ContextThemeWrapper(mContext, i);; iZ = mContext) {
-      return iZ;
+    for (jq = new ContextThemeWrapper(mContext, i);; jq = mContext) {
+      return jq;
     }
   }
   
   public final CharSequence getTitle()
   {
-    return jd.getTitle();
+    return ju.kD;
   }
   
-  public final void hide()
-  {
-    if (!jn)
-    {
-      jn = true;
-      aW();
-    }
-  }
-  
-  public final void hs(boolean paramBoolean)
+  public final void hQ(boolean paramBoolean)
   {
     int j = 0;
     Object localObject;
     if (paramBoolean)
     {
-      if (!jp)
+      if (!jG)
       {
-        jp = true;
+        jG = true;
         aW();
       }
-      localObject = jd;
+      localObject = ju;
       if (!paramBoolean) {
         break label78;
       }
       i = 4;
       label34:
-      ((ActionBarView)localObject).C(i);
-      localObject = je;
+      ((ActionBarView)localObject).I(i);
+      localObject = jv;
       if (!paramBoolean) {
         break label83;
       }
@@ -223,12 +219,12 @@ public final class c
     label83:
     for (int i = j;; i = 8)
     {
-      ((ActionBarContextView)localObject).C(i);
+      ((ActionBarContextView)localObject).I(i);
       return;
-      if (!jp) {
+      if (!jG) {
         break;
       }
-      jp = false;
+      jG = false;
       aW();
       break;
       i = 0;
@@ -236,19 +232,28 @@ public final class c
     }
   }
   
+  public final void hide()
+  {
+    if (!jE)
+    {
+      jE = true;
+      aW();
+    }
+  }
+  
   public final boolean isShowing()
   {
-    return jq;
+    return jH;
   }
   
   public final void setBackgroundDrawable(Drawable paramDrawable)
   {
-    jb.setPrimaryBackground(paramDrawable);
+    js.b(paramDrawable);
   }
   
   public final void setCustomView(View paramView)
   {
-    jd.setCustomNavigationView(paramView);
+    ju.F(paramView);
   }
   
   public final void setDisplayHomeAsUpEnabled(boolean paramBoolean)
@@ -263,34 +268,24 @@ public final class c
   
   public final void setDisplayOptions(int paramInt)
   {
-    jd.setDisplayOptions(paramInt);
-  }
-  
-  public final void setDisplayShowTitleEnabled(boolean paramBoolean)
-  {
-    if (paramBoolean) {}
-    for (int i = 8;; i = 0)
-    {
-      setDisplayOptions(i, 8);
-      return;
-    }
+    ju.setDisplayOptions(paramInt);
   }
   
   public final void setHomeButtonEnabled(boolean paramBoolean)
   {
-    jd.setHomeButtonEnabled(paramBoolean);
+    ju.setHomeButtonEnabled(paramBoolean);
   }
   
   public final void setLogo(Drawable paramDrawable)
   {
-    jd.setLogo(paramDrawable);
+    ju.setLogo(paramDrawable);
   }
   
   public final void show()
   {
-    if (jn)
+    if (jE)
     {
-      jn = false;
+      jE = false;
       aW();
     }
   }
@@ -299,99 +294,107 @@ public final class c
     extends android.support.v7.a.a
     implements f.a
   {
-    f iO;
-    protected ActionMode kzr = null;
-    private a.a kzs;
-    WeakReference kzt;
+    f jf;
+    WeakReference<View> kYA;
+    protected ActionMode kYy = null;
+    private a.a kYz;
     
     public a(a.a parama)
     {
-      kzs = parama;
+      kYz = parama;
       this$1 = new f(getThemedContext());
-      lU = 1;
-      iO = c.this;
-      iO.a(this);
+      mk = 1;
+      jf = c.this;
+      jf.a(this);
     }
     
     public final void a(f paramf)
     {
-      if (kzs == null) {
+      if (kYz == null) {
         return;
       }
       invalidate();
-      je.showOverflowMenu();
+      jv.showOverflowMenu();
     }
     
-    public final boolean bcj()
+    public final boolean bhv()
     {
-      iO.br();
+      jf.br();
       try
       {
-        boolean bool = kzs.a(this, iO);
+        boolean bool = kYz.a(this, jf);
         return bool;
       }
       finally
       {
-        iO.bs();
+        jf.bs();
       }
     }
     
     public final boolean d(MenuItem paramMenuItem)
     {
-      if (kzs != null) {
-        return kzs.a(this, paramMenuItem);
+      if (kYz != null) {
+        return kYz.a(this, paramMenuItem);
       }
       return false;
     }
     
     public final void finish()
     {
-      if (kzq != this) {
+      if (kYx != this) {
         return;
       }
-      if (c.c(jn, jo, false)) {
-        kzs.b(this);
+      if (c.b(jE, jF, false)) {
+        kYz.b(this);
       }
-      kzs = null;
-      hs(false);
-      je.bM();
-      jd.sendAccessibilityEvent(32);
-      kzq = null;
+      kYz = null;
+      hQ(false);
+      jv.bN();
+      ju.sendAccessibilityEvent(32);
+      kYx = null;
     }
     
     public final Menu getMenu()
     {
-      return iO;
+      return jf;
     }
     
     public final void invalidate()
     {
-      iO.br();
+      jf.br();
       try
       {
-        kzs.b(this, iO);
+        kYz.b(this, jf);
         return;
       }
       finally
       {
-        iO.bs();
+        jf.bs();
       }
     }
     
     public final void setSubtitle(CharSequence paramCharSequence)
     {
-      je.setSubtitle(paramCharSequence);
+      ActionBarContextView localActionBarContextView = jv;
+      nG = paramCharSequence;
+      localActionBarContextView.bM();
     }
     
     public final void setTitle(CharSequence paramCharSequence)
     {
-      je.setTitle(paramCharSequence);
+      ActionBarContextView localActionBarContextView = jv;
+      kD = paramCharSequence;
+      localActionBarContextView.bM();
     }
     
     public final void setTitleOptionalHint(boolean paramBoolean)
     {
       super.setTitleOptionalHint(paramBoolean);
-      je.setTitleOptional(paramBoolean);
+      ActionBarContextView localActionBarContextView = jv;
+      if (paramBoolean != nN) {
+        localActionBarContextView.requestLayout();
+      }
+      nN = paramBoolean;
     }
   }
   
@@ -399,90 +402,103 @@ public final class c
   public final class b
     extends ActionMode
   {
-    public c.a kzv = null;
+    public c.a kYC = null;
     
     public b(ActionMode.Callback paramCallback)
     {
-      kzv = new c.a(c.this, new c.c(paramCallback));
-      kzv.kzr = this;
+      kYC = new c.a(c.this, new c.c(paramCallback));
+      kYC.kYy = this;
     }
     
     public final void finish()
     {
-      kzv.finish();
+      kYC.finish();
     }
     
     public final View getCustomView()
     {
-      c.a locala = kzv;
-      if (kzt != null) {
-        return (View)kzt.get();
+      c.a locala = kYC;
+      if (kYA != null) {
+        return (View)kYA.get();
       }
       return null;
     }
     
     public final Menu getMenu()
     {
-      return kzv.iO;
+      return kYC.jf;
     }
     
     public final MenuInflater getMenuInflater()
     {
-      return new android.support.v7.internal.view.c(kzv.kzu.getThemedContext());
+      return new android.support.v7.internal.view.c(kYC.kYB.getThemedContext());
     }
     
     public final CharSequence getSubtitle()
     {
-      return kzv.kzu.je.getSubtitle();
+      return kYC.kYB.jv.nG;
     }
     
     public final CharSequence getTitle()
     {
-      return kzv.kzu.je.getTitle();
+      return kYC.kYB.jv.kD;
     }
     
     public final void invalidate()
     {
-      kzv.invalidate();
+      kYC.invalidate();
     }
     
     public final boolean isTitleOptional()
     {
-      return kzv.kzu.je.nx;
+      return kYC.kYB.jv.nN;
     }
     
     public final void setCustomView(View paramView)
     {
-      c.a locala = kzv;
-      kzu.je.setCustomView(paramView);
-      kzt = new WeakReference(paramView);
+      c.a locala = kYC;
+      ActionBarContextView localActionBarContextView = kYB.jv;
+      if (nI != null) {
+        localActionBarContextView.removeView(nI);
+      }
+      nI = paramView;
+      if (nJ != null)
+      {
+        localActionBarContextView.removeView(nJ);
+        nJ = null;
+      }
+      if (paramView != null) {
+        localActionBarContextView.addView(paramView);
+      }
+      localActionBarContextView.requestLayout();
+      kYA = new WeakReference(paramView);
     }
     
     public final void setSubtitle(int paramInt)
     {
-      c.a locala = kzv;
-      locala.setSubtitle(kzu.mContext.getResources().getString(paramInt));
+      c.a locala = kYC;
+      locala.setSubtitle(kYB.mContext.getResources().getString(paramInt));
     }
     
     public final void setSubtitle(CharSequence paramCharSequence)
     {
-      kzv.setSubtitle(paramCharSequence);
+      kYC.setSubtitle(paramCharSequence);
     }
     
     public final void setTitle(int paramInt)
     {
-      c.a locala = kzv;
-      locala.setTitle(kzu.mContext.getResources().getString(paramInt));
+      c.a locala = kYC;
+      locala.setTitle(kYB.mContext.getResources().getString(paramInt));
     }
     
     public final void setTitle(CharSequence paramCharSequence)
     {
-      kzv.setTitle(paramCharSequence);
+      kYC.setTitle(paramCharSequence);
     }
     
     public final void setTitleOptionalHint(boolean paramBoolean)
     {
-      kzv.setTitleOptionalHint(paramBoolean);
+      kYC.setTitleOptionalHint(paramBoolean);
     }
   }
   
@@ -490,35 +506,35 @@ public final class c
   static final class c
     implements a.a
   {
-    ActionMode.Callback kzw = null;
+    ActionMode.Callback kYD = null;
     
     public c(ActionMode.Callback paramCallback)
     {
-      kzw = paramCallback;
+      kYD = paramCallback;
     }
     
     @TargetApi(11)
     public final boolean a(android.support.v7.a.a parama, Menu paramMenu)
     {
-      return kzw.onCreateActionMode(kzr, paramMenu);
+      return kYD.onCreateActionMode(kYy, paramMenu);
     }
     
     @TargetApi(11)
     public final boolean a(android.support.v7.a.a parama, MenuItem paramMenuItem)
     {
-      return kzw.onActionItemClicked(kzr, paramMenuItem);
+      return kYD.onActionItemClicked(kYy, paramMenuItem);
     }
     
     @TargetApi(11)
     public final void b(android.support.v7.a.a parama)
     {
-      kzw.onDestroyActionMode(kzr);
+      kYD.onDestroyActionMode(kYy);
     }
     
     @TargetApi(11)
     public final boolean b(android.support.v7.a.a parama, Menu paramMenu)
     {
-      return kzw.onPrepareActionMode(kzr, paramMenu);
+      return kYD.onPrepareActionMode(kYy, paramMenu);
     }
   }
 }

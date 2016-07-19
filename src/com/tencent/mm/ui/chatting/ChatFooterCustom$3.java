@@ -12,18 +12,18 @@ final class ChatFooterCustom$3
   
   public final void onClick(View paramView)
   {
-    ChatFooterCustom.d(kRP).bdZ();
+    ChatFooterCustom.d(lrR).bjG();
     paramView = (ImageView)paramView;
     int i;
     int j;
     if (paramView.getTag() == null)
     {
       paramView.setTag(new Object());
-      paramView.setImageResource(2130968600);
+      paramView.setImageResource(2130838822);
       i = 0;
-      if (i < ChatFooterCustom.e(kRP))
+      if (i < ChatFooterCustom.e(lrR))
       {
-        paramView = ChatFooterCustom.f(kRP).getChildAt(i);
+        paramView = ChatFooterCustom.f(lrR).getChildAt(i);
         if (i >= 3) {}
         for (j = 0;; j = 8)
         {
@@ -36,11 +36,11 @@ final class ChatFooterCustom$3
     else
     {
       paramView.setTag(null);
-      paramView.setImageResource(2130968608);
+      paramView.setImageResource(2130838821);
       i = 0;
-      if (i < ChatFooterCustom.e(kRP))
+      if (i < ChatFooterCustom.e(lrR))
       {
-        paramView = ChatFooterCustom.f(kRP).getChildAt(i);
+        paramView = ChatFooterCustom.f(lrR).getChildAt(i);
         if (i < 3) {}
         for (j = 0;; j = 8)
         {

@@ -3,71 +3,81 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/mj;",
+        ">;"
+    }
+.end annotation
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
     .prologue
-    .line 14
-    const/4 v0, 0x0
+    .line 11
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/mj;
 
-    .line 15
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/i;->kum:I
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
-    .locals 4
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
+    .locals 3
 
     .prologue
-    .line 19
-    instance-of v0, p1, Lcom/tencent/mm/d/a/mc;
-
-    if-nez v0, :cond_0
-
-    .line 20
-    const-string/jumbo v0, "!56@/B4Tb64lLpKrJ2fjbPylzl2RuIjlbbyyokWbETEjkyLOsX52eEiS7A=="
-
-    const-string/jumbo v1, "mismatched event"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 21
     const/4 v0, 0x0
 
-    .line 25
+    .line 11
+    check-cast p1, Lcom/tencent/mm/e/a/mj;
+
+    instance-of v1, p1, Lcom/tencent/mm/e/a/mj;
+
+    if-nez v1, :cond_0
+
+    const-string/jumbo v1, "MicroMsg.SnsSyncListener"
+
+    const-string/jumbo v2, "mismatched event"
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+
     :goto_0
     return v0
 
-    .line 23
     :cond_0
-    check-cast p1, Lcom/tencent/mm/d/a/mc;
+    const-string/jumbo v1, "MicroMsg.SnsSyncListener"
 
-    .line 24
-    iget-object v0, p1, Lcom/tencent/mm/d/a/mc;->aIq:Lcom/tencent/mm/d/a/mc$b;
+    const-string/jumbo v2, "NetSceneSnsSync"
 
-    iget-object v1, p1, Lcom/tencent/mm/d/a/mc;->aIp:Lcom/tencent/mm/d/a/mc$a;
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, v1, Lcom/tencent/mm/d/a/mc$a;->aIs:Lcom/tencent/mm/d/a/ay;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
-    iget-object v2, p1, Lcom/tencent/mm/d/a/mc;->aIp:Lcom/tencent/mm/d/a/mc$a;
+    move-result-object v1
 
-    iget-object v2, v2, Lcom/tencent/mm/d/a/mc$a;->url:Ljava/lang/String;
+    new-instance v2, Lcom/tencent/mm/plugin/sns/e/r;
 
-    iget-object v3, p1, Lcom/tencent/mm/d/a/mc;->aIp:Lcom/tencent/mm/d/a/mc$a;
+    invoke-direct {v2}, Lcom/tencent/mm/plugin/sns/e/r;-><init>()V
 
-    iget-object v3, v3, Lcom/tencent/mm/d/a/mc$a;->aIr:Ljava/lang/String;
+    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/plugin/sns/i/a;->a(Lcom/tencent/mm/d/a/ay;Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v1
-
-    iput-boolean v1, v0, Lcom/tencent/mm/d/a/mc$b;->atR:Z
-
-    .line 25
     const/4 v0, 0x1
 
     goto :goto_0

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->bjo()V
+    value = Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->bpl()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lBC:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;
+.field final synthetic mcu:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 258
-    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$6;->lBC:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;
+    .line 259
+    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$6;->mcu:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,42 +36,42 @@
 
 
 # virtual methods
-.method public final eu(I)V
+.method public final fg(I)V
     .locals 1
 
     .prologue
-    .line 261
+    .line 262
     packed-switch p1, :pswitch_data_0
 
-    .line 270
+    .line 271
     :goto_0
     return-void
 
-    .line 263
+    .line 264
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$6;->lBC:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$6;->mcu:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->d(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
 
     goto :goto_0
 
-    .line 266
+    .line 267
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$6;->lBC:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$6;->mcu:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->e(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
 
     goto :goto_0
 
-    .line 269
+    .line 270
     :pswitch_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$6;->lBC:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$6;->mcu:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->f(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
 
     goto :goto_0
 
-    .line 261
+    .line 262
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

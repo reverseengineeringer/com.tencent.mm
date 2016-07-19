@@ -7,8 +7,8 @@ final class ImageGalleryUI$14$2
   
   public final void run()
   {
-    lgQ.lgM.finish();
-    lgQ.lgM.overridePendingTransition(0, 0);
+    lHc.lGY.finish();
+    lHc.lGY.overridePendingTransition(0, 0);
   }
 }
 

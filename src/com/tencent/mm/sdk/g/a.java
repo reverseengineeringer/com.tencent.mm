@@ -1,72 +1,72 @@
 package com.tencent.mm.sdk.g;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.p;
+import com.tencent.mm.sdk.platformtools.q;
 
 public final class a
   extends com.tencent.mm.sdk.e.a
 {
-  public String aEf;
-  public String aEg;
-  public String aEh;
-  public String aEi;
   public String appId;
-  public String dZG;
-  public String ibV;
-  public a ibZ;
-  public String jUT;
-  public String jUU;
+  public String aqj;
+  public String aqk;
+  public String aql;
+  public String aqm;
+  public String ecY;
+  public String ivT;
+  public a ivX;
+  public String kuA;
+  public String kuz;
   
   public final int getType()
   {
     return 5;
   }
   
-  public final void l(Bundle paramBundle)
+  public final void n(Bundle paramBundle)
   {
-    super.l(paramBundle);
+    super.n(paramBundle);
     paramBundle.putString("_wxapi_payreq_appid", appId);
-    paramBundle.putString("_wxapi_payreq_partnerid", aEf);
-    paramBundle.putString("_wxapi_payreq_prepayid", ibV);
-    paramBundle.putString("_wxapi_payreq_noncestr", aEh);
-    paramBundle.putString("_wxapi_payreq_timestamp", aEi);
-    paramBundle.putString("_wxapi_payreq_packagevalue", jUT);
-    paramBundle.putString("_wxapi_payreq_sign", dZG);
-    paramBundle.putString("_wxapi_payreq_extdata", jUU);
-    paramBundle.putString("_wxapi_payreq_sign_type", aEg);
-    if (ibZ != null)
+    paramBundle.putString("_wxapi_payreq_partnerid", aqj);
+    paramBundle.putString("_wxapi_payreq_prepayid", ivT);
+    paramBundle.putString("_wxapi_payreq_noncestr", aql);
+    paramBundle.putString("_wxapi_payreq_timestamp", aqm);
+    paramBundle.putString("_wxapi_payreq_packagevalue", kuz);
+    paramBundle.putString("_wxapi_payreq_sign", ecY);
+    paramBundle.putString("_wxapi_payreq_extdata", kuA);
+    paramBundle.putString("_wxapi_payreq_sign_type", aqk);
+    if (ivX != null)
     {
-      a locala = ibZ;
-      paramBundle.putString("_wxapi_payoptions_callback_classname", jUV);
-      paramBundle.putInt("_wxapi_payoptions_callback_flags", jUW);
+      a locala = ivX;
+      paramBundle.putString("_wxapi_payoptions_callback_classname", kuB);
+      paramBundle.putInt("_wxapi_payoptions_callback_flags", kuC);
     }
   }
   
-  public final void m(Bundle paramBundle)
+  public final void o(Bundle paramBundle)
   {
-    super.m(paramBundle);
-    appId = p.c(paramBundle, "_wxapi_payreq_appid");
-    aEf = p.c(paramBundle, "_wxapi_payreq_partnerid");
-    ibV = p.c(paramBundle, "_wxapi_payreq_prepayid");
-    aEh = p.c(paramBundle, "_wxapi_payreq_noncestr");
-    aEi = p.c(paramBundle, "_wxapi_payreq_timestamp");
-    jUT = p.c(paramBundle, "_wxapi_payreq_packagevalue");
-    dZG = p.c(paramBundle, "_wxapi_payreq_sign");
-    jUU = p.c(paramBundle, "_wxapi_payreq_extdata");
-    aEg = p.c(paramBundle, "_wxapi_payreq_sign_type");
-    ibZ = new a();
-    ibZ.m(paramBundle);
+    super.o(paramBundle);
+    appId = q.c(paramBundle, "_wxapi_payreq_appid");
+    aqj = q.c(paramBundle, "_wxapi_payreq_partnerid");
+    ivT = q.c(paramBundle, "_wxapi_payreq_prepayid");
+    aql = q.c(paramBundle, "_wxapi_payreq_noncestr");
+    aqm = q.c(paramBundle, "_wxapi_payreq_timestamp");
+    kuz = q.c(paramBundle, "_wxapi_payreq_packagevalue");
+    ecY = q.c(paramBundle, "_wxapi_payreq_sign");
+    kuA = q.c(paramBundle, "_wxapi_payreq_extdata");
+    aqk = q.c(paramBundle, "_wxapi_payreq_sign_type");
+    ivX = new a();
+    ivX.o(paramBundle);
   }
   
   public static final class a
   {
-    public String jUV;
-    public int jUW = -1;
+    public String kuB;
+    public int kuC = -1;
     
-    public final void m(Bundle paramBundle)
+    public final void o(Bundle paramBundle)
     {
-      jUV = p.c(paramBundle, "_wxapi_payoptions_callback_classname");
-      jUW = p.a(paramBundle, "_wxapi_payoptions_callback_flags", -1);
+      kuB = q.c(paramBundle, "_wxapi_payoptions_callback_classname");
+      kuC = q.a(paramBundle, "_wxapi_payoptions_callback_flags", -1);
     }
   }
 }

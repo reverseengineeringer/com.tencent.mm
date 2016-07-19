@@ -3,43 +3,31 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lcom/tencent/mm/ui/e$a;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/conversation/f;->l(Landroid/content/Context;Z)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/ui/conversation/f;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic lqA:Landroid/content/SharedPreferences;
-
-.field final synthetic lqB:Z
-
-.field final synthetic lqC:I
-
-.field final synthetic lqD:I
+.field final synthetic lQP:Lcom/tencent/mm/ui/conversation/f;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/SharedPreferences;ZII)V
+.method constructor <init>(Lcom/tencent/mm/ui/conversation/f;)V
     .locals 0
 
     .prologue
-    .line 171
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/f$4;->lqA:Landroid/content/SharedPreferences;
-
-    iput-boolean p2, p0, Lcom/tencent/mm/ui/conversation/f$4;->lqB:Z
-
-    iput p3, p0, Lcom/tencent/mm/ui/conversation/f$4;->lqC:I
-
-    iput p4, p0, Lcom/tencent/mm/ui/conversation/f$4;->lqD:I
+    .line 864
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/f$4;->lQP:Lcom/tencent/mm/ui/conversation/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,153 +36,147 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 8
+.method public final GE()V
+    .locals 6
 
     .prologue
-    const/16 v7, 0x2bd0
+    const/4 v5, 0x0
 
-    const/4 v6, 0x2
+    .line 886
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/f$4;->lQP:Lcom/tencent/mm/ui/conversation/f;
 
-    const/4 v5, 0x3
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/f;->n(Lcom/tencent/mm/ui/conversation/f;)V
 
-    const/4 v4, 0x1
+    .line 888
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/f$4;->lQP:Lcom/tencent/mm/ui/conversation/f;
 
-    const/4 v3, 0x0
-
-    .line 173
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/f$4;->lqA:Landroid/content/SharedPreferences;
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/f;->e(Lcom/tencent/mm/ui/conversation/f;)Lcom/tencent/mm/ui/conversation/d;
 
     move-result-object v0
 
-    const-string/jumbo v1, "show_rating_flag"
+    if-eqz v0, :cond_0
 
-    const/4 v2, 0x4
+    .line 889
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/f$4;->lQP:Lcom/tencent/mm/ui/conversation/f;
 
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 174
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/conversation/f$4;->lqB:Z
-
-    if-eqz v0, :cond_1
-
-    .line 175
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/f$4;->lqA:Landroid/content/SharedPreferences;
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/f;->e(Lcom/tencent/mm/ui/conversation/f;)Lcom/tencent/mm/ui/conversation/d;
 
     move-result-object v0
 
-    const-string/jumbo v1, "show_rating_again"
+    iget-object v1, v0, Lcom/tencent/mm/ui/conversation/d;->lNW:Ljava/util/HashMap;
 
-    invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    if-eqz v1, :cond_0
 
-    move-result-object v0
+    iget-object v1, v0, Lcom/tencent/mm/ui/conversation/d;->lPC:Ljava/util/HashSet;
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    if-eqz v1, :cond_0
 
-    .line 176
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    iget-object v1, v0, Lcom/tencent/mm/ui/conversation/d;->lPC:Ljava/util/HashSet;
 
-    new-array v1, v5, [Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/util/HashSet;->isEmpty()Z
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result v1
 
-    move-result-object v2
+    if-eqz v1, :cond_1
 
-    aput-object v2, v1, v3
-
-    iget v2, p0, Lcom/tencent/mm/ui/conversation/f$4;->lqC:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    aput-object v2, v1, v4
-
-    iget v2, p0, Lcom/tencent/mm/ui/conversation/f$4;->lqD:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    aput-object v2, v1, v6
-
-    invoke-virtual {v0, v7, v1}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
-
-    .line 182
-    :goto_0
-    if-eqz p1, :cond_0
-
-    .line 183
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
-
-    .line 185
+    .line 892
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/ui/conversation/f;->bhW()Lcom/tencent/mm/ui/base/h;
+    :goto_0
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/f$4;->lQP:Lcom/tencent/mm/ui/conversation/f;
 
-    .line 186
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/f;->c(Lcom/tencent/mm/ui/conversation/f;)Landroid/widget/ListView;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/tencent/mm/ui/conversation/f$4$1;
+
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/conversation/f$4$1;-><init>(Lcom/tencent/mm/ui/conversation/f$4;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/ListView;->post(Ljava/lang/Runnable;)Z
+
+    .line 901
     return-void
 
-    .line 178
+    .line 889
     :cond_1
-    const-string/jumbo v0, "!56@/B4Tb64lLpKfk9dhVjv2t13FMeWGyuWHyNH8f+koYe5udsWe+5WrMg=="
+    iget-boolean v1, v0, Lcom/tencent/mm/ui/conversation/d;->lPD:Z
 
-    const-string/jumbo v1, "[oneliang]need to show rating dialog again."
+    if-eqz v1, :cond_3
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v1, v0, Lcom/tencent/mm/ui/conversation/d;->lNW:Ljava/util/HashMap;
 
-    .line 179
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/f$4;->lqA:Landroid/content/SharedPreferences;
+    invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    iput-boolean v5, v0, Lcom/tencent/mm/ui/conversation/d;->lPD:Z
 
-    move-result-object v0
+    :cond_2
+    iget-object v0, v0, Lcom/tencent/mm/ui/conversation/d;->lPC:Ljava/util/HashSet;
 
-    const-string/jumbo v1, "show_rating_again"
-
-    invoke-interface {v0, v1, v4}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 180
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
-
-    new-array v1, v5, [Ljava/lang/Object;
-
-    const/4 v2, 0x6
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    aput-object v2, v1, v3
-
-    iget v2, p0, Lcom/tencent/mm/ui/conversation/f$4;->lqC:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    aput-object v2, v1, v4
-
-    iget v2, p0, Lcom/tencent/mm/ui/conversation/f$4;->lqD:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    aput-object v2, v1, v6
-
-    invoke-virtual {v0, v7, v1}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
     goto :goto_0
+
+    :cond_3
+    const-string/jumbo v1, "MicroMsg.ConversationWithCacheAdapter"
+
+    const-string/jumbo v2, "dealWithConversationEvents size %d"
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    iget-object v4, v0, Lcom/tencent/mm/ui/conversation/d;->lPC:Ljava/util/HashSet;
+
+    invoke-virtual {v4}, Ljava/util/HashSet;->size()I
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v3, v5
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v1, v0, Lcom/tencent/mm/ui/conversation/d;->lPC:Ljava/util/HashSet;
+
+    invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, v0, Lcom/tencent/mm/ui/conversation/d;->lNW:Ljava/util/HashMap;
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_1
+.end method
+
+.method public final GF()V
+    .locals 1
+
+    .prologue
+    .line 879
+    const/16 v0, 0xc
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/report/service/f;->lr(I)V
+
+    .line 880
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/f$4;->lQP:Lcom/tencent/mm/ui/conversation/f;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/f;->m(Lcom/tencent/mm/ui/conversation/f;)V
+
+    .line 881
+    return-void
 .end method

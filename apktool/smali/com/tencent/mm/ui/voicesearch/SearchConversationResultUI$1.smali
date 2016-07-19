@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI;->Gb()V
+    value = Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lCp:Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI;
+.field final synthetic mdg:Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 56
-    iput-object p1, p0, Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI$1;->lCp:Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI$1;->mdg:Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final Gh()V
+.method public final GE()V
     .locals 0
 
     .prologue
@@ -44,7 +44,7 @@
     return-void
 .end method
 
-.method public final Gi()V
+.method public final GF()V
     .locals 0
 
     .prologue

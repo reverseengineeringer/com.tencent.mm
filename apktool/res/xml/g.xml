@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wearableApp package="com.tencent.mm">
+    <versionCode>5</versionCode>
+    <versionName>2.0</versionName>
+    <rawPathResId>android_wear_micro_apk</rawPathResId>
+</wearableApp>

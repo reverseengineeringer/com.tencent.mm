@@ -6,69 +6,69 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.tencent.mm.aw.a;
+import com.tencent.mm.az.a;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.preference.Preference;
 
 public final class SnsArtistPreference
   extends Preference
 {
-  private MMActivity arW;
-  private String dlN = "";
-  private int dlO = -1;
-  private int dlP = 8;
-  private TextView hbC = null;
-  String hbD = "";
+  private MMActivity adL;
+  private String dlu = "";
+  private int dlv = -1;
+  private int dlw = 8;
+  private TextView hqs = null;
+  String hqt = "";
   private String mTitle = "";
   
   public SnsArtistPreference(Context paramContext, AttributeSet paramAttributeSet)
   {
     this(paramContext, paramAttributeSet, 0);
-    arW = ((MMActivity)paramContext);
+    adL = ((MMActivity)paramContext);
   }
   
   public SnsArtistPreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    arW = ((MMActivity)paramContext);
-    setLayoutResource(2131363286);
-    setWidgetLayoutResource(2131363236);
+    adL = ((MMActivity)paramContext);
+    setLayoutResource(2130903981);
+    setWidgetLayoutResource(2130904051);
   }
   
-  public final void aBA()
+  public final void aEx()
   {
-    if ((hbC != null) && (hbD != null) && (!hbD.equals("")) && (arW != null))
+    if ((hqs != null) && (hqt != null) && (!hqt.equals("")) && (adL != null))
     {
-      String str = arW.getString(2131433084, new Object[] { hbD });
-      hbC.setText(str);
+      String str = adL.getString(2131235137, new Object[] { hqt });
+      hqs.setText(str);
     }
   }
   
   protected final void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    hbC = ((TextView)paramView.findViewById(2131169479));
-    ((TextView)paramView.findViewById(2131168995)).setText(mTitle);
-    paramView = (TextView)paramView.findViewById(2131166876);
+    hqs = ((TextView)paramView.findViewById(2131758078));
+    ((TextView)paramView.findViewById(2131758077)).setText(mTitle);
+    paramView = (TextView)paramView.findViewById(2131758079);
     if (paramView != null)
     {
-      paramView.setVisibility(dlP);
-      paramView.setText(dlN);
-      if (dlO != -1) {
-        paramView.setBackgroundDrawable(a.y(arW, dlO));
+      paramView.setVisibility(dlw);
+      paramView.setText(dlu);
+      if (dlv != -1) {
+        paramView.setBackgroundDrawable(a.C(adL, dlv));
       }
     }
-    aBA();
+    aEx();
   }
   
   protected final View onCreateView(ViewGroup paramViewGroup)
   {
     paramViewGroup = super.onCreateView(paramViewGroup);
     LayoutInflater localLayoutInflater = (LayoutInflater)mContext.getSystemService("layout_inflater");
-    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131165377);
+    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131755262);
     localViewGroup.removeAllViews();
-    mTitle = arW.getString(2131433080);
-    localLayoutInflater.inflate(2131363255, localViewGroup);
+    mTitle = adL.getString(2131235138);
+    localLayoutInflater.inflate(2130903983, localViewGroup);
     return paramViewGroup;
   }
 }

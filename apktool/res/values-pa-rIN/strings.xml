@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">%1$s ਨੂੰ Android ਵੀਅਰ ਐਪ ਦੇ ਇੱਕ ਅਪਡੇਟ ਦੀ ਲੋੜ ਹੈ।</string>
+    <string name="b">%1$s ਨਹੀਂ ਚੱਲੇਗਾ ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ Android ਵੀਅਰ ਐਪ ਨੂੰ ਅਪਡੇਟ ਨਹੀਂ ਕਰਦੇ।</string>
+    <string name="c">Android ਵੀਅਰ ਨੂੰ ਅਪਡੇਟ ਕਰੋ</string>
+    <string name="d">%1$s ਲਈ ਇੱਕ ਜਾਂ ਵੱਧ Google Play ਸੇਵਾਵਾਂ ਦੀ ਲੋੜ ਹੈ, ਜੋ ਇਸ ਵੇਲੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਸਹਾਇਤਾ ਲਈ ਵਿਕਾਸਕਾਰ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।</string>
+    <string name="e">Google Play ਸੇਵਾਵਾਂ ਨੂੰ ਸਮਰੱਥ ਬਣਾਓ</string>
+    <string name="f">%1$s ਕੰਮ ਨਹੀਂ ਕਰੇਗਾ ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ Google Play ਸੇਵਾਵਾਂ ਨੂੰ ਸਮਰੱਥ ਨਹੀਂ ਬਣਾਉਂਦੇ।</string>
+    <string name="g">Google Play ਸੇਵਾਵਾਂ ਨੂੰ ਸਮਰੱਥ ਬਣਾਓ</string>
+    <string name="h">%1$s ਵੱਲੋਂ ਬੇਨਤੀ ਕੀਤੀ</string>
+    <string name="i">Google Play ਸੇਵਾਵਾਂ ਪ੍ਰਾਪਤ ਕਰੋ</string>
+    <string name="j">%1$s Google Play ਸੇਵਾਵਾਂ ਤੋਂ ਬਿਨਾਂ ਨਹੀਂ ਚੱਲੇਗਾ, ਜੋ ਤੁਹਾਡੇ ਫੋਨ ਤੇ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੋ ਰਹੀਆਂ ਹਨ।</string>
+    <string name="k">%1$s Google Play ਸੇਵਾਵਾਂ ਤੋਂ ਬਿਨਾਂ ਨਹੀਂ ਚੱਲੇਗਾ, ਜੋ ਤੁਹਾਡੇ ਟੈਬਲੇਟ ਤੇ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੋ ਰਹੀਆਂ ਹਨ।</string>
+    <string name="l">Google Play ਸੇਵਾਵਾਂ ਪ੍ਰਾਪਤ ਕਰੋ</string>
+    <string name="m">ਨਿਰਦਿਸ਼ਟ ਖਾਤਾ ਇਸ ਡਿਵਾਈਸ ਤੇ ਮੌਜੂਦ ਨਹੀਂ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਵੱਖਰਾ ਖਾਤਾ ਚੁਣੋ।</string>
+    <string name="n">ਅਪ੍ਰਮਾਣਿਕ ਖਾਤਾ</string>
+    <string name="o">ਇੱਕ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਸਮਰੱਥ ਬਣਾਉਣ ਲਈ Google Play ਸੇਵਾਵਾਂ ਦੀ ਲੋੜ ਹੈ।</string>
+    <string name="p">Google Play ਸੇਵਾਵਾਂ ਨਾਲ ਕਨੈਕਟ ਕਰਨ ਲਈ ਇੱਕ ਡਾਟਾ ਕਨੈਕਸ਼ਨ ਦੀ ਲੋੜ ਹੈ।</string>
+    <string name="q">ਨੈਟਵਰਕ ਅਸ਼ੁੱਧੀ</string>
+    <string name="r">ਇੱਕ ਐਪਲੀਕੇਸ਼ਨ ਲਈ Google Play ਸੇਵਾਵਾਂ ਦੇ ਇੱਕ ਅਪਡੇਟ ਦੀ ਲੋੜ ਹੈ।</string>
+    <string name="s">Google Play ਸੇਵਾਵਾਂ ਅਸ਼ੁੱਧੀ</string>
+    <string name="t">ਨਿਰਦਿਸ਼ਟ ਖਾਤਾ ਸਾਈਨ ਇਨ ਕਰਨ ਵਿੱਚ ਅਸ਼ੁੱਧੀ। ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਵੱਖਰਾ ਖਾਤਾ ਚੁਣੋ।</string>
+    <string name="u">ਸਾਈਨ ਇਨ ਅਸਫਲ ਹੋਇਆ</string>
+    <string name="v">Google Play ਸੇਵਾਵਾਂ ਨਾਲ ਅਗਿਆਤ ਸਮੱਸਿਆ।</string>
+    <string name="w">"%1$s Google Play ਸੇਵਾਵਾਂ 'ਤੇ ਭਰੋਸਾ ਕਰਦੀ ਹੈ, ਜੋ ਤੁਹਾਡੀ ਡਿਵਾਈਸ ਵੱਲੋਂ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ। ਸਹਾਇਤਾ ਲਈ ਨਿਰਮਾਤਾ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।"</string>
+    <string name="x">Google Play ਸੇਵਾਵਾਂ</string>
+    <string name="y">ਅਪਡੇਟ</string>
+    <string name="z">%1$s ਨਹੀਂ ਚੱਲੇਗਾ ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ Google Play ਸੇਵਾਵਾਂ ਨੂੰ ਅਪਡੇਟ ਨਹੀਂ ਕਰਦੇ।</string>
+    <string name="a0">Google Play ਸੇਵਾਵਾਂ ਅਪਡੇਟ ਕਰੋ</string>
+    <string name="a1">%1$s Google Play ਸੇਵਾਵਾਂ ਤੋਂ ਬਿਨਾਂ ਨਹੀਂ ਚੱਲੇਗਾ, ਜੋ ਵਰਤਮਾਨ ਵਿੱਚ ਅਪਡੇਟ ਹੋ ਰਹੀਆਂ ਹਨ।</string>
+    <string name="a2">Google Play ਸੇਵਾਵਾਂ ਅਪਡੇਟ ਹੋ ਰਹੀਆਂ ਹਨ</string>
+    <string name="a3">ਫੋਨ ਤੇ ਖੋਲ੍ਹੋ</string>
+    <string name="a4">ਸਾਈਨ ਇਨ ਕਰੋ</string>
+    <string name="a5">Google ਨਾਲ ਸਾਈਨ ਇਨ ਕਰੋ</string>
+</resources>

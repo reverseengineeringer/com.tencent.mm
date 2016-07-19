@@ -1,329 +1,351 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.plugin.sns.d.ai;
-import com.tencent.mm.plugin.sns.data.h;
-import com.tencent.mm.plugin.sns.h.k;
-import com.tencent.mm.protocal.b.atp;
-import com.tencent.mm.protocal.b.iv;
-import com.tencent.mm.sdk.platformtools.u;
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.model.i;
+import com.tencent.mm.pluginsdk.i.a;
+import com.tencent.mm.pluginsdk.i.e;
+import com.tencent.mm.pluginsdk.ui.d.e;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.h;
+import com.tencent.mm.ui.base.AnimatedExpandableListView.a;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.LinkedList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 public final class al
-  extends b
+  extends AnimatedExpandableListView.a
 {
-  private String ajh = "";
-  private boolean axx = false;
-  private String dLx = "";
-  List eEr = new ArrayList();
-  private Comparator gLK = new Comparator() {};
-  private int gVE = 0;
-  private int gVF = 0;
-  private boolean hhQ = false;
-  private b hhR;
-  private a hhS;
+  public static int[] hua = { 2131235468, 2131235466, 2131235462, 2131235455 };
+  public static int[] huu = { 2131235469, 2131235467, 2131235463, 2131235456 };
+  ArrayList<String> huv;
+  public int huw = 0;
+  public boolean hux = false;
+  public ArrayList<String> huy = new ArrayList();
+  public ArrayList<String> huz = new ArrayList();
+  private LayoutInflater ib;
+  private Context mContext;
+  public int style;
   
-  public al(b paramb, String paramString, boolean paramBoolean)
+  public al(Context paramContext)
   {
-    hhR = paramb;
-    ajh = paramString;
-    axx = paramBoolean;
+    mContext = paramContext;
+    ib = ((LayoutInflater)paramContext.getSystemService("layout_inflater"));
   }
   
-  private void c(boolean paramBoolean, List paramList)
+  private static List<String> aFg()
   {
-    hhS = new a();
-    HashMap localHashMap1 = new HashMap();
-    HashMap localHashMap2 = new HashMap();
-    HashMap localHashMap3 = new HashMap();
-    long l = System.currentTimeMillis();
-    Object localObject;
-    if ((paramBoolean) && (axx))
-    {
-      localObject = new k((byte)0);
-      field_snsId = 0L;
-      gUC = -1;
-      ((k)localObject).dl((int)(System.currentTimeMillis() / 1000L));
-      paramList.add(0, localObject);
+    String str = (String)ah.tE().ro().get(335875, null);
+    v.d("MicroMsg.Sns.AnimatedExpandableListAdapter", "dz:getTopFive : %s", new Object[] { str });
+    if (be.kf(str)) {
+      return null;
     }
-    int i3 = paramList.size();
-    u.d("!32@/B4Tb64lLpLH7UyEiAASA2uAtPErK+ua", "initFixType " + i3);
-    int i1 = 0;
-    int j = 0;
-    int n = 0;
-    int m = 0;
-    if (n < i3)
-    {
-      localObject = hhS;
-      hhV = -1;
-      hif = -1;
-      hhU = -1;
-      hhZ = "";
-      hia = "";
-      hib = "";
-      hie = false;
-      hhW = false;
-      hig = false;
-      hih = -1;
-      hhX = -1;
-      hic = -1;
-      hid = 0;
-      hhY = 0;
-      hii = 0;
-      int i;
-      label261:
-      int i2;
-      if ((axx) && (n == 0))
-      {
-        i = 1;
-        localHashMap1.put(Integer.valueOf(m), Integer.valueOf(j));
-        localHashMap2.put(Integer.valueOf(m), Integer.valueOf(i));
-        i2 = j + i;
-        localHashMap3.put(Integer.valueOf(m), Integer.valueOf(i1));
-        if ((!axx) || (n != 0)) {
-          break label1035;
-        }
-        j = 0;
+    return be.g(str.split(","));
+  }
+  
+  private boolean ac(int paramInt, String paramString)
+  {
+    if (paramInt == 1) {
+      return g(huy, paramString);
+    }
+    return g(huz, paramString);
+  }
+  
+  private static boolean g(List<String> paramList, String paramString)
+  {
+    paramList = paramList.iterator();
+    while (paramList.hasNext()) {
+      if (((String)paramList.next()).equals(paramString)) {
+        return true;
       }
-      for (;;)
+    }
+    return false;
+  }
+  
+  public static void xg(String paramString)
+  {
+    v.d("MicroMsg.Sns.AnimatedExpandableListAdapter", "recordTopFive : %s", new Object[] { paramString });
+    if (aFg() != null)
+    {
+      ArrayList localArrayList = new ArrayList(aFg());
+      if (!g(localArrayList, paramString))
       {
-        i1 += j;
-        n += i;
-        m += 1;
-        j = i2;
-        break;
-        atp localatp;
-        if (n + 1 < i3)
+        if (localArrayList.size() == 5) {
+          localArrayList.remove(4);
+        }
+        localArrayList.add(0, paramString);
+        paramString = be.b(localArrayList, ",");
+        ah.tE().ro().set(335875, paramString);
+      }
+      return;
+    }
+    ah.tE().ro().set(335875, paramString);
+  }
+  
+  public final void I(ArrayList<String> paramArrayList)
+  {
+    Object localObject2 = aFg();
+    Object localObject1 = new ArrayList();
+    if ((localObject2 != null) && (paramArrayList != null))
+    {
+      localObject2 = ((List)localObject2).iterator();
+      while (((Iterator)localObject2).hasNext())
+      {
+        String str = (String)((Iterator)localObject2).next();
+        if (g(paramArrayList, str))
         {
-          localObject = (k)paramList.get(n + 1);
-          hhS.hhV = field_head;
-          localatp = ((k)localObject).azR();
-          hhS.hhZ = jMu;
-          hhS.hhW = ai.B(field_localPrivate, axx);
-          hhS.hhX = field_type;
-          if (jMx != null) {
-            hhS.hhY = jMx.jhw.size();
+          paramArrayList.remove(str);
+          ((ArrayList)localObject1).add(str);
+        }
+      }
+      paramArrayList.addAll(0, (Collection)localObject1);
+      localObject1 = be.b((List)localObject1, ",");
+      ah.tE().ro().set(335875, localObject1);
+    }
+    huv = paramArrayList;
+  }
+  
+  public final View a(int paramInt1, int paramInt2, View paramView)
+  {
+    a locala;
+    if (paramView == null) {
+      if (style == 1)
+      {
+        paramView = ib.inflate(2130904439, null);
+        locala = new a((byte)0);
+        titleView = ((TextView)paramView.findViewById(2131759166));
+        eXR = ((TextView)paramView.findViewById(2131759167));
+        huA = ((TextView)paramView.findViewById(2131759168));
+        dlC = ((ImageView)paramView.findViewById(2131759169));
+        paramView.setTag(locala);
+        label96:
+        if (paramInt2 != huv.size()) {
+          break label174;
+        }
+        titleView.setVisibility(8);
+        eXR.setVisibility(8);
+        dlC.setVisibility(8);
+        huA.setVisibility(0);
+      }
+    }
+    label174:
+    String str;
+    label437:
+    label511:
+    do
+    {
+      do
+      {
+        return paramView;
+        paramView = ib.inflate(2130904438, null);
+        break;
+        locala = (a)paramView.getTag();
+        break label96;
+        titleView.setVisibility(0);
+        eXR.setVisibility(0);
+        dlC.setVisibility(0);
+        huA.setVisibility(8);
+        str = (String)huv.get(paramInt2);
+        titleView.setText(e.a(mContext, str));
+        TextView localTextView = eXR;
+        Object localObject1 = i.a.aTy().rx(str);
+        Object localObject2 = i.a.aTy().rA((String)localObject1);
+        if ((localObject2 == null) || (((List)localObject2).size() == 0)) {}
+        for (localObject1 = "";; localObject1 = e.a(mContext, (CharSequence)localObject1))
+        {
+          localTextView.setText((CharSequence)localObject1);
+          dlC.setVisibility(0);
+          if (style != 1) {
+            break label511;
           }
+          if (paramInt1 != 2) {
+            break label437;
+          }
+          if (!ac(1, str)) {
+            break;
+          }
+          dlC.setImageResource(2131165836);
+          return paramView;
+          localObject1 = new ArrayList(((List)localObject2).size());
+          localObject2 = ((List)localObject2).iterator();
+          while (((Iterator)localObject2).hasNext()) {
+            ((ArrayList)localObject1).add(i.ej((String)((Iterator)localObject2).next()));
+          }
+          localObject1 = be.b((List)localObject1, ",");
+        }
+        dlC.setImageResource(2131165838);
+        return paramView;
+      } while (paramInt1 != 3);
+      if (huw != paramInt1) {
+        dlC.setImageResource(2131165839);
+      }
+      while (ac(2, str))
+      {
+        dlC.setImageResource(2131165837);
+        return paramView;
+        dlC.setImageResource(2131165837);
+      }
+      dlC.setImageResource(2131165839);
+      return paramView;
+      if (paramInt1 == 2)
+      {
+        if (ac(1, str))
+        {
+          dlC.setImageResource(2131165267);
+          return paramView;
+        }
+        dlC.setImageResource(2131165269);
+        return paramView;
+      }
+    } while (paramInt1 != 3);
+    if (ac(2, str))
+    {
+      dlC.setImageResource(2131165268);
+      return paramView;
+    }
+    dlC.setImageResource(2131165269);
+    return paramView;
+  }
+  
+  public final Object getChild(int paramInt1, int paramInt2)
+  {
+    return huv.get(paramInt2);
+  }
+  
+  public final long getChildId(int paramInt1, int paramInt2)
+  {
+    return 0L;
+  }
+  
+  public final Object getGroup(int paramInt)
+  {
+    return null;
+  }
+  
+  public final int getGroupCount()
+  {
+    return 4;
+  }
+  
+  public final long getGroupId(int paramInt)
+  {
+    return 0L;
+  }
+  
+  public final View getGroupView(int paramInt, boolean paramBoolean, View paramView, ViewGroup paramViewGroup)
+  {
+    if ((paramView == null) || (!(paramView.getTag() instanceof a))) {
+      if (style == 1)
+      {
+        paramView = ib.inflate(2130904441, null);
+        paramViewGroup = new a((byte)0);
+        titleView = ((TextView)paramView.findViewById(2131759166));
+        dlC = ((ImageView)paramView.findViewById(2131759169));
+        eXR = ((TextView)paramView.findViewById(2131759167));
+        paramView.setTag(paramViewGroup);
+        label93:
+        titleView.setText(hua[paramInt]);
+        eXR.setText(huu[paramInt]);
+        switch (paramInt)
+        {
+        }
+      }
+    }
+    for (;;)
+    {
+      paramViewGroup = paramView;
+      if (hux)
+      {
+        paramViewGroup = paramView;
+        if (paramInt == 1)
+        {
+          paramViewGroup = new View(mContext);
+          paramViewGroup.setVisibility(8);
+        }
+      }
+      return paramViewGroup;
+      paramView = ib.inflate(2130904440, null);
+      break;
+      paramViewGroup = (a)paramView.getTag();
+      break label93;
+      if (huw != paramInt)
+      {
+        dlC.setImageResource(2131165794);
+      }
+      else
+      {
+        dlC.setImageResource(2131165791);
+        dlC.setContentDescription(mContext.getString(2131234857));
+        continue;
+        if (huw != paramInt)
+        {
+          dlC.setImageResource(2131165794);
         }
         else
         {
-          label473:
-          if (n + 2 < i3)
+          dlC.setImageResource(2131165791);
+          dlC.setContentDescription(mContext.getString(2131234857));
+          continue;
+          if (style == 1)
           {
-            localObject = (k)paramList.get(n + 2);
-            hhS.hif = field_head;
-            localatp = ((k)localObject).azR();
-            hhS.hia = jMu;
-            hhS.hig = ai.B(field_localPrivate, axx);
-            hhS.hih = field_type;
-            if (jMx == null) {
-              break label723;
+            if (huw != paramInt)
+            {
+              dlC.setImageResource(2131165794);
             }
-            hhS.hii = jMx.jhw.size();
+            else
+            {
+              dlC.setImageResource(2131165792);
+              dlC.setContentDescription(mContext.getString(2131234857));
+            }
           }
-          label585:
-          localObject = (k)paramList.get(n);
-          hhS.hhU = field_head;
-          localatp = ((k)localObject).azR();
-          hhS.hib = jMu;
-          hhS.hic = field_type;
-          hhS.hie = ai.B(field_localPrivate, axx);
-          if (jMx == null) {
-            break label734;
+          else if (huw != paramInt)
+          {
+            dlC.setImageResource(2131165794);
           }
-          hhS.hid = jMx.jhw.size();
-          label686:
-          localObject = hhS;
-          if (hic != 2) {
-            break label745;
-          }
-          i = 1;
-        }
-        for (;;)
-        {
-          if (i == 0) {
-            break label907;
-          }
-          i = 1;
-          break;
-          hhS.hhY = 0;
-          break label473;
-          label723:
-          hhS.hii = 0;
-          break label585;
-          label734:
-          hhS.hid = 0;
-          break label686;
-          label745:
-          if (hhV == -1) {
-            i = 1;
-          } else if (hic != hhX) {
-            i = 1;
-          } else if (a.mf(hic)) {
-            i = 1;
-          } else if (a.mf(hhX)) {
-            i = 1;
-          } else if ((hid > 1) || (hhY > 1)) {
-            i = 1;
-          } else if ((hib != null) && (!hib.equals(""))) {
-            i = 1;
-          } else if ((hhZ != null) && (!hhZ.equals(""))) {
-            i = 1;
-          } else if (hhU != hhV) {
-            i = 1;
-          } else {
-            i = 0;
-          }
-        }
-        label907:
-        localObject = hhS;
-        if (hif == -1) {
-          i = 1;
-        }
-        for (;;)
-        {
-          if (i == 0) {
-            break label1030;
-          }
-          i = 2;
-          break;
-          if (hhX != hih) {
-            i = 1;
-          } else if (a.mf(hih)) {
-            i = 1;
-          } else if (hii > 1) {
-            i = 1;
-          } else if ((hia != null) && (!hia.equals(""))) {
-            i = 1;
-          } else if (hhV != hif) {
-            i = 1;
-          } else {
-            i = 0;
-          }
-        }
-        label1030:
-        i = 3;
-        break label261;
-        label1035:
-        int k = 0;
-        j = k;
-        if (i > 0)
-        {
-          j = k;
-          if (hhS.hic == 1) {
-            j = 1;
-          }
-        }
-        k = j;
-        if (i >= 2)
-        {
-          k = j;
-          if (hhS.hhX == 1) {
-            k = j + 1;
-          }
-        }
-        j = k;
-        if (i >= 3)
-        {
-          j = k;
-          if (hhS.hih == 1) {
-            j = k + 1;
+          else
+          {
+            dlC.setImageResource(2131165793);
+            dlC.setContentDescription(mContext.getString(2131234857));
           }
         }
       }
     }
-    gVE = m;
-    gVF = paramList.size();
-    u.d("!32@/B4Tb64lLpLH7UyEiAASA2uAtPErK+ua", "icount " + gVE);
-    eEr = paramList;
-    h.p("SnsphotoAdapter initFixType ", l);
-    hhR.a(eEr, localHashMap1, localHashMap2, localHashMap3, gVF, gVE);
   }
   
-  public final List aAL()
+  public final boolean hasStableIds()
   {
-    u.d("!32@/B4Tb64lLpLH7UyEiAASA2uAtPErK+ua", "loadData " + Thread.currentThread().getId());
-    return ai.a(ajh, axx, dLx, hhQ);
+    return false;
   }
   
-  public final void aCn()
+  public final boolean isChildSelectable(int paramInt1, int paramInt2)
   {
-    Collections.sort(eEr, gLK);
+    return true;
   }
   
-  final void aCo()
+  public final int nv(int paramInt)
   {
-    c(false, eEr);
-  }
-  
-  public final void aY(List paramList)
-  {
-    if (hhR != null)
-    {
-      if (paramList != null) {
-        c(true, paramList);
-      }
-      hhR.aCm();
+    if ((paramInt > 1) && (huv != null)) {
+      return huv.size() + 1;
     }
+    return 0;
   }
   
-  public final void c(String paramString, boolean paramBoolean1, boolean paramBoolean2)
+  private final class a
   {
-    u.d("!32@/B4Tb64lLpLH7UyEiAASA2uAtPErK+ua", "limitSeq " + paramString);
-    dLx = paramString;
-    hhQ = paramBoolean1;
-    eV(paramBoolean2);
-  }
-  
-  final class a
-  {
-    public int hhU = -1;
-    public int hhV = -1;
-    public boolean hhW = false;
-    public int hhX = -1;
-    int hhY = 0;
-    public String hhZ = "";
-    public String hia = "";
-    public String hib = "";
-    public int hic = -1;
-    int hid = 0;
-    public boolean hie = false;
-    public int hif = -1;
-    public boolean hig = false;
-    public int hih = -1;
-    int hii = 0;
+    ImageView dlC;
+    TextView eXR;
+    TextView huA;
+    TextView titleView;
     
-    a() {}
-    
-    public static boolean mf(int paramInt)
-    {
-      switch (paramInt)
-      {
-      case 9: 
-      case 10: 
-      case 11: 
-      case 12: 
-      case 13: 
-      case 14: 
-      case 16: 
-      case 17: 
-      default: 
-        return false;
-      }
-      return true;
-    }
-  }
-  
-  public static abstract interface b
-  {
-    public abstract void a(List paramList, Map paramMap1, Map paramMap2, Map paramMap3, int paramInt1, int paramInt2);
-    
-    public abstract void aCm();
+    private a() {}
   }
 }
 

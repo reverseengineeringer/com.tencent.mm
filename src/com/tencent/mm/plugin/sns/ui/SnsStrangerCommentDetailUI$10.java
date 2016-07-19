@@ -1,7 +1,7 @@
 package com.tencent.mm.plugin.sns.ui;
 
 import android.widget.ListView;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SnsStrangerCommentDetailUI$10
   implements Runnable
@@ -10,8 +10,8 @@ final class SnsStrangerCommentDetailUI$10
   
   public final void run()
   {
-    SnsStrangerCommentDetailUI.a(hiQ, SnsStrangerCommentDetailUI.a(hiQ).getBottom());
-    u.d("!56@/B4Tb64lLpKq4kzQEmWfvWlP1B6VxlvUA5NJce3mTcriiJ7E+LoT7Q==", "listOriginalBottom: " + SnsStrangerCommentDetailUI.g(hiQ));
+    SnsStrangerCommentDetailUI.a(hxF, SnsStrangerCommentDetailUI.a(hxF).getBottom());
+    v.d("MicroMsg.SnsStrangerCommentDetailUI", "listOriginalBottom: " + SnsStrangerCommentDetailUI.g(hxF));
   }
 }
 

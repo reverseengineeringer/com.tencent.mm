@@ -1,101 +1,64 @@
 package com.tencent.mm.protocal.b;
 
-import a.a.a.b;
 import java.util.LinkedList;
 
 public final class rg
-  extends ali
+  extends alt
 {
-  public alx jbx;
-  public int jqg;
-  
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (jbx == null) {
-        throw new b("Not all required fields were included: RandomEncryKey");
-      }
-      if (jGS != null)
+      if (kfq != null)
       {
-        paramVarArgs.cj(1, jGS.kn());
-        jGS.a(paramVarArgs);
+        paramVarArgs.cx(1, kfq.iO());
+        kfq.a(paramVarArgs);
       }
-      if (jbx != null)
-      {
-        paramVarArgs.cj(2, jbx.kn());
-        jbx.a(paramVarArgs);
-      }
-      paramVarArgs.ci(3, jqg);
       return 0;
     }
     if (paramInt == 1) {
-      if (jGS == null) {
-        break label489;
+      if (kfq == null) {
+        break label273;
       }
     }
-    label489:
-    for (paramInt = a.a.a.a.ch(1, jGS.kn()) + 0;; paramInt = 0)
+    label273:
+    for (paramInt = a.a.a.a.cv(1, kfq.iO()) + 0;; paramInt = 0)
     {
-      int i = paramInt;
-      if (jbx != null) {
-        i = paramInt + a.a.a.a.ch(2, jbx.kn());
-      }
-      return i + a.a.a.a.cg(3, jqg);
+      return paramInt;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = ali.a(paramVarArgs); paramInt > 0; paramInt = ali.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = alt.a(paramVarArgs); paramInt > 0; paramInt = alt.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
-        if (jbx != null) {
-          break;
-        }
-        throw new b("Not all required fields were included: RandomEncryKey");
+        break;
       }
       if (paramInt == 3)
       {
         Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
         rg localrg = (rg)paramVarArgs[1];
         paramInt = ((Integer)paramVarArgs[2]).intValue();
-        Object localObject2;
-        boolean bool;
         switch (paramInt)
         {
         default: 
           return -1;
-        case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-          i = paramVarArgs.size();
-          paramInt = 0;
-          while (paramInt < i)
-          {
-            localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new dc();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-            for (bool = true; bool; bool = ((dc)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, ali.a((a.a.a.a.a)localObject2))) {}
-            jGS = ((dc)localObject1);
-            paramInt += 1;
-          }
-        case 2: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-          i = paramVarArgs.size();
-          paramInt = 0;
-          while (paramInt < i)
-          {
-            localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new alx();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-            for (bool = true; bool; bool = ((alx)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, ali.a((a.a.a.a.a)localObject2))) {}
-            jbx = ((alx)localObject1);
-            paramInt += 1;
-          }
         }
-        jqg = maU.jC();
-        return 0;
+        paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+        int i = paramVarArgs.size();
+        paramInt = 0;
+        while (paramInt < i)
+        {
+          Object localObject2 = (byte[])paramVarArgs.get(paramInt);
+          localObject1 = new df();
+          localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+          for (boolean bool = true; bool; bool = ((df)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, alt.a((a.a.a.a.a)localObject2))) {}
+          kfq = ((df)localObject1);
+          paramInt += 1;
+        }
+        break;
       }
       return -1;
     }

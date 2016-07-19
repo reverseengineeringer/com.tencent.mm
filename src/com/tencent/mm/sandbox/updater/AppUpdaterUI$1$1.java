@@ -4,7 +4,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.net.Uri;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class AppUpdaterUI$1$1
   implements DialogInterface.OnClickListener
@@ -13,10 +13,10 @@ final class AppUpdaterUI$1$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    u.d("!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/", "go to WebView");
+    v.d("MicroMsg.AppUpdaterUI", "go to WebView");
     paramDialogInterface = new Intent("android.intent.action.VIEW", Uri.parse("https://weixin.qq.com/m"));
     paramDialogInterface.addFlags(268435456);
-    jTc.jTb.startActivity(paramDialogInterface);
+    ksw.ksv.startActivity(paramDialogInterface);
   }
 }
 

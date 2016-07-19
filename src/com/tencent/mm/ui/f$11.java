@@ -1,23 +1,19 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.d.a.lc;
+import com.tencent.mm.e.a.fb;
+import com.tencent.mm.pluginsdk.c.a;
 import com.tencent.mm.sdk.c.b;
-import com.tencent.mm.sdk.c.c;
 
 final class f$11
-  extends c
+  extends a
 {
-  f$11(f paramf)
-  {
-    super(0);
-  }
+  f$11(f paramf) {}
   
-  public final boolean a(b paramb)
+  public final void v(b paramb)
   {
-    if ((paramb instanceof lc)) {
-      f.c(klo);
+    if ((paramb instanceof fb)) {
+      f.e(kKO);
     }
-    return false;
   }
 }
 

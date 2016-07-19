@@ -12,8 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.g.c;
 import com.tencent.mm.ui.base.k;
 import java.util.List;
@@ -23,19 +22,20 @@ final class g$5
 {
   g$5(String paramString, List paramList, Context paramContext, k paramk, DialogInterface.OnDismissListener paramOnDismissListener, int paramInt, Bundle paramBundle) {}
   
-  public final void onItemClick(AdapterView paramAdapterView, final View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, final View paramView, int paramInt, long paramLong)
   {
-    paramView = eGo.replace(" ", "").replace("(", "").replace(")", "").replace("-", "");
-    paramAdapterView = (String)dRQ.get(paramInt);
-    u.i("!44@/B4Tb64lLpJ721CYNoMrI4TNb+IdX5kijxTVE+9ur/c=", paramAdapterView);
-    if (val$context.getString(2131427979).equals(paramAdapterView))
+    paramView = eOc.replace(" ", "").replace("(", "").replace(")", "").replace("-", "");
+    paramAdapterView = (String)dTY.get(paramInt);
+    v.i("MicroMsg.MailPhoneMenuHelper", paramAdapterView);
+    if (val$context.getString(2131231735).equals(paramAdapterView))
     {
       paramAdapterView = new Intent("android.intent.action.DIAL", Uri.parse("tel:" + paramView));
+      paramAdapterView.addFlags(268435456);
       val$context.startActivity(paramAdapterView);
-      h.fUJ.O(10112, "1");
-      iPN.dismiss();
-      if (iPL != null) {
-        iPL.onDismiss(null);
+      com.tencent.mm.plugin.report.service.g.gdY.X(10112, "1");
+      jmU.dismiss();
+      if (jmS != null) {
+        jmS.onDismiss(null);
       }
     }
     do
@@ -45,38 +45,38 @@ final class g$5
         do
         {
           return;
-          if (!val$context.getString(2131427980).equals(paramAdapterView)) {
+          if (!val$context.getString(2131231736).equals(paramAdapterView)) {
             break;
           }
-          h.fUJ.g(12766, new Object[] { Integer.valueOf(1) });
+          com.tencent.mm.plugin.report.service.g.gdY.h(12059, new Object[] { Integer.valueOf(0), Integer.valueOf(0), Integer.valueOf(0), Integer.valueOf(0), Integer.valueOf(0) });
           paramAdapterView = new Intent();
           paramAdapterView.putExtra("IPCallTalkUI_phoneNumber", paramView);
-          com.tencent.mm.ar.c.c(val$context, "ipcall", ".ui.IPCallTalkUI", paramAdapterView);
-          iPN.dismiss();
-        } while (iPL == null);
-        iPL.onDismiss(null);
+          com.tencent.mm.av.c.c(val$context, "ipcall", ".ui.IPCallTalkUI", paramAdapterView);
+          jmU.dismiss();
+        } while (jmS == null);
+        jmS.onDismiss(null);
         return;
-        if (val$context.getString(2131427977).equals(paramAdapterView))
+        if (val$context.getString(2131231727).equals(paramAdapterView))
         {
-          if ((g.aSI()) && (g.aSJ())) {
-            paramAdapterView = val$context.getResources().getStringArray(2131558401);
+          if ((g.aXB()) && (g.aXC())) {
+            paramAdapterView = val$context.getResources().getStringArray(2131296275);
           }
           for (;;)
           {
-            val$context.getResources().getString(2131427975);
-            com.tencent.mm.ui.base.g.a(val$context, eGo, paramAdapterView, "", new g.c()new DialogInterface.OnCancelListener
+            val$context.getResources().getString(2131231733);
+            com.tencent.mm.ui.base.g.a(val$context, eOc, paramAdapterView, "", new g.c()new DialogInterface.OnCancelListener
             {
-              public final void eu(int paramAnonymousInt)
+              public final void fg(int paramAnonymousInt)
               {
-                if (iPL != null) {
-                  iPL.onDismiss(null);
+                if (jmS != null) {
+                  jmS.onDismiss(null);
                 }
                 switch (paramAnonymousInt)
                 {
                 default: 
                   return;
                 case 0: 
-                  if (g.aSI())
+                  if (g.aXB())
                   {
                     Context localContext = val$context;
                     String str = paramView;
@@ -84,66 +84,66 @@ final class g$5
                     localIntent.setType("vnd.android.cursor.dir/contact");
                     localIntent.putExtra("phone", str);
                     localContext.startActivity(localIntent);
-                    h.fUJ.O(10113, "1");
+                    com.tencent.mm.plugin.report.service.g.gdY.X(10113, "1");
                     return;
                   }
-                  g.aR(val$context, paramView);
-                  h.fUJ.O(10114, "1");
+                  g.aP(val$context, paramView);
+                  com.tencent.mm.plugin.report.service.g.gdY.X(10114, "1");
                   return;
                 }
-                g.aR(val$context, paramView);
-                h.fUJ.O(10114, "1");
+                g.aP(val$context, paramView);
+                com.tencent.mm.plugin.report.service.g.gdY.X(10114, "1");
               }
             }, new DialogInterface.OnCancelListener()
             {
               public final void onCancel(DialogInterface paramAnonymousDialogInterface)
               {
-                if (iPL != null) {
-                  iPL.onDismiss(null);
+                if (jmS != null) {
+                  jmS.onDismiss(null);
                 }
               }
             });
-            iPN.dismiss();
+            jmU.dismiss();
             return;
-            if (g.aSI())
+            if (g.aXB())
             {
               paramAdapterView = new String[1];
-              paramAdapterView[0] = val$context.getResources().getString(2131427981);
+              paramAdapterView[0] = val$context.getResources().getString(2131231726);
             }
             else
             {
               paramAdapterView = new String[1];
-              paramAdapterView[0] = val$context.getResources().getString(2131427982);
+              paramAdapterView[0] = val$context.getResources().getString(2131231734);
             }
           }
         }
-        if (val$context.getString(2131427983).equals(paramAdapterView))
+        if (val$context.getString(2131231729).equals(paramAdapterView))
         {
-          com.tencent.mm.pluginsdk.h.c.a(val$context, paramView, paramView);
-          h.fUJ.O(10115, "1");
-          if (iPL != null) {
-            iPL.onDismiss(null);
+          com.tencent.mm.pluginsdk.i.c.a(val$context, paramView, paramView);
+          com.tencent.mm.plugin.report.service.g.gdY.X(10115, "1");
+          if (jmS != null) {
+            jmS.onDismiss(null);
           }
-          iPN.dismiss();
+          jmU.dismiss();
           return;
         }
-        if (val$context.getString(2131427986).equals(paramAdapterView))
+        if (val$context.getString(2131231731).equals(paramAdapterView))
         {
-          u.d("!44@/B4Tb64lLpJ721CYNoMrI4TNb+IdX5kijxTVE+9ur/c=", "hy: button should consume this action");
+          v.d("MicroMsg.MailPhoneMenuHelper", "hy: button should consume this action");
           return;
         }
-        if (!g.iPK.equals(paramAdapterView)) {
+        if (!g.jmR.equals(paramAdapterView)) {
           break;
         }
-        g.a((Activity)val$context, eGo, iPO);
-        iPN.dismiss();
-      } while (iPL == null);
-      iPL.onDismiss(null);
+        g.a((Activity)val$context, eOc, jmV);
+        jmU.dismiss();
+      } while (jmS == null);
+      jmS.onDismiss(null);
       return;
-      u.e("!44@/B4Tb64lLpJ721CYNoMrI4TNb+IdX5kijxTVE+9ur/c=", "hy: error phone item clicked. should not happen");
-      iPN.dismiss();
-    } while (iPL == null);
-    iPL.onDismiss(null);
+      v.e("MicroMsg.MailPhoneMenuHelper", "hy: error phone item clicked. should not happen");
+      jmU.dismiss();
+    } while (jmS == null);
+    jmS.onDismiss(null);
   }
 }
 

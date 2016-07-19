@@ -1,20 +1,14 @@
 package com.tencent.mm.ui.conversation;
 
-import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.e.a.p;
 import com.tencent.mm.sdk.c.c;
 
 final class d$1
-  extends c
+  extends c<p>
 {
   d$1(d paramd)
   {
-    super(0);
-  }
-  
-  public final boolean a(b paramb)
-  {
-    d.a(lpt);
-    return false;
+    kum = p.class.getName().hashCode();
   }
 }
 

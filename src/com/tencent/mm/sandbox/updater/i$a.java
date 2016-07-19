@@ -2,7 +2,7 @@ package com.tencent.mm.sandbox.updater;
 
 final class i$a
 {
-  public static final i jUn = new i((byte)0);
+  public static final i ktO = new i((byte)0);
 }
 
 /* Location:

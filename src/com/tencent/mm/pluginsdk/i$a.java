@@ -4,69 +4,69 @@ import com.tencent.mm.pluginsdk.a.a;
 import com.tencent.mm.pluginsdk.a.b;
 import com.tencent.mm.pluginsdk.a.c;
 import com.tencent.mm.pluginsdk.a.d;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class i$a
 {
-  public static i.u iyD;
-  public static i.v iyE;
-  public static i.j iyF;
-  public static i.r iyG;
-  public static i.f iyH;
-  public static i.m iyI;
-  public static i.d iyJ;
-  public static i.p iyK;
-  public static i.l iyL;
-  public static i.y iyM;
-  public static i.aa iyN;
-  public static i.x iyO;
-  public static i.e iyP;
-  public static i.ae iyQ;
-  public static i.k iyR;
-  public static i.c iyS;
-  public static i.g iyT;
-  public static i.b iyU;
-  public static i.i iyV;
+  public static i.u iUZ;
+  public static i.v iVa;
+  public static i.j iVb;
+  public static i.r iVc;
+  public static i.f iVd;
+  public static i.m iVe;
+  public static i.d iVf;
+  public static i.p iVg;
+  public static i.l iVh;
+  public static i.y iVi;
+  public static i.aa iVj;
+  public static i.x iVk;
+  public static i.e iVl;
+  public static i.ae iVm;
+  public static i.k iVn;
+  public static i.c iVo;
+  public static i.g iVp;
+  public static i.b iVq;
+  public static i.i iVr;
   
-  public static i.m aOS()
+  public static i.m aTu()
   {
-    if (iyI == null)
+    if (iVe == null)
     {
-      u.w("!44@/B4Tb64lLpKhdb2ZkhnNAZZun1WKwwb6seYTmHcGL2c=", "get shake mgr is null, new default");
-      iyI = new d();
+      v.w("MicroMsg.IPluginEvent.Factory", "get shake mgr is null, new default");
+      iVe = new d();
     }
-    return iyI;
+    return iVe;
   }
   
-  public static i.f aOT()
+  public static i.f aTv()
   {
-    if (iyH == null)
+    if (iVd == null)
     {
-      u.w("!44@/B4Tb64lLpKhdb2ZkhnNAZZun1WKwwb6seYTmHcGL2c=", "get emoji mgr is null, new default");
-      iyH = new b();
+      v.w("MicroMsg.IPluginEvent.Factory", "get emoji mgr is null, new default");
+      iVd = new b();
     }
-    return iyH;
+    return iVd;
   }
   
-  public static i.p aOU()
+  public static i.p aTw()
   {
-    return iyK;
+    return iVg;
   }
   
-  public static i.l aOV()
+  public static i.l aTx()
   {
-    if (iyL == null) {
-      iyL = new c();
+    if (iVh == null) {
+      iVh = new c();
     }
-    return iyL;
+    return iVh;
   }
   
-  public static i.e aOW()
+  public static i.e aTy()
   {
-    if (iyP == null) {
-      iyP = new a();
+    if (iVl == null) {
+      iVl = new a();
     }
-    return iyP;
+    return iVl;
   }
 }
 

@@ -17,7 +17,7 @@
 # instance fields
 .field public classname:Ljava/lang/String;
 
-.field public iAE:Ljava/lang/String;
+.field public iXe:Ljava/lang/String;
 
 
 # direct methods
@@ -36,7 +36,7 @@
     .line 622
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/o$b;->iAE:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/o$b;->iXe:Ljava/lang/String;
 
     return-void
 .end method

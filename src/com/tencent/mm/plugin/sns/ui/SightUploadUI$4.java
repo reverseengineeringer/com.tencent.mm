@@ -2,8 +2,9 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.g.b;
-import com.tencent.mm.ui.base.g;
+import com.tencent.mm.h.b;
+import com.tencent.mm.pointers.PInt;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.ui.tools.a.c;
 import com.tencent.mm.ui.tools.a.c.a;
 
@@ -14,25 +15,47 @@ final class SightUploadUI$4
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if (hbd.isFinishing()) {
+    if (hoE.isFinishing()) {
       return false;
     }
-    SightUploadUI.a(hbd, SightUploadUI.a(hbd).getText().toString());
-    final int i = SightUploadUI.a(hbd).getPasterLen();
-    paramMenuItem = c.a(SightUploadUI.a(hbd)).rZ(b.ps());
-    lzG = true;
+    SightUploadUI.a(hoE, SightUploadUI.a(hoE).getText().toString());
+    final int i = ahoE).hsG;
+    paramMenuItem = c.a(SightUploadUI.a(hoE)).ud(b.nK());
+    mav = true;
     paramMenuItem.a(new c.a()
     {
-      public final void Om() {}
+      public final void Px() {}
       
-      public final void On()
+      public final void Py()
       {
-        g.e(hbd, 2131433035, 2131433034);
+        com.tencent.mm.ui.base.g.f(hoE, 2131235601, 2131235602);
       }
       
-      public final void mm(String paramAnonymousString)
+      public final void ng(String paramAnonymousString)
       {
-        SightUploadUI.g(hbd).a(SightUploadUI.b(hbd), 0, null, SightUploadUI.c(hbd), null, SightUploadUI.d(hbd).getLocation(), i, SightUploadUI.e(hbd), SightUploadUI.f(hbd));
+        paramAnonymousString = new PInt();
+        SightUploadUI.g(hoE).a(SightUploadUI.b(hoE), 0, null, SightUploadUI.c(hoE), null, dhoE).hxk.aEd(), i, SightUploadUI.e(hoE), SightUploadUI.f(hoE), paramAnonymousString, "");
+        com.tencent.mm.plugin.report.service.g localg = com.tencent.mm.plugin.report.service.g.gdY;
+        long l1 = SightUploadUI.h(hoE);
+        long l2 = be.Go();
+        if (SightUploadUI.i(hoE))
+        {
+          i = 0;
+          localg.h(13303, new Object[] { Long.valueOf(l1), Long.valueOf(l2), Integer.valueOf(i), Integer.valueOf(value) });
+          l1 = SightUploadUI.h(hoE);
+          l2 = be.Go();
+          if (!SightUploadUI.i(hoE)) {
+            break label250;
+          }
+        }
+        label250:
+        for (int i = 0;; i = 1)
+        {
+          com.tencent.mm.sdk.platformtools.v.d("MicroMsg.SightUploadUI", "reprot timelinePostAction(13303), %d, %d, %d, %d", new Object[] { Long.valueOf(l1), Long.valueOf(l2), Integer.valueOf(i), Integer.valueOf(value) });
+          return;
+          i = 1;
+          break;
+        }
       }
     });
     return false;

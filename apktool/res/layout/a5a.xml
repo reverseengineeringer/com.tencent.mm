@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/ow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0" android:minHeight="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <AutoCompleteTextView android:textSize="@dimen/i8" android:textColor="@color/j_" android:layout_gravity="center|left" android:id="@id/fs" android:background="@null" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minWidth="130.0dip" android:minHeight="43.0dip" android:completionThreshold="1" android:dropDownSelector="@color/j3" android:layout_weight="1.0" android:dropDownWidth="fill_parent" android:dropDownHeight="wrap_content" android:dropDownHorizontalOffset="-20.0dip" android:dropDownVerticalOffset="-5.0dip" />
+    <TextView android:gravity="center|right" android:id="@id/bxg" android:paddingRight="5.0dip" android:focusable="false" android:visibility="gone" android:layout_width="120.0dip" android:layout_height="wrap_content" android:minWidth="120.0dip" android:minHeight="43.0dip" style="@style/MMFontTipInList" />
+    <ImageView android:layout_gravity="center|right" android:id="@id/ft" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/a7n" android:scaleType="centerInside" android:minHeight="26.0dip" />
+</LinearLayout>

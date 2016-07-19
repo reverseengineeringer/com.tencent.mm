@@ -1,20 +1,14 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.e.a.me;
+import com.tencent.mm.sdk.c.c;
 
 final class SnsTimeLineUI$2
-  implements Runnable
+  extends c<me>
 {
-  SnsTimeLineUI$2(SnsTimeLineUI paramSnsTimeLineUI) {}
-  
-  public final void run()
+  SnsTimeLineUI$2(SnsTimeLineUI paramSnsTimeLineUI)
   {
-    u.i("!32@/B4Tb64lLpIApwzsVfw/GSpHowATRrWf", "onResume go to playAnim " + SnsTimeLineUI.p(hkJ));
-    if (SnsTimeLineUI.p(hkJ))
-    {
-      SnsTimeLineUI.q(hkJ);
-      SnsTimeLineUI.r(hkJ).aCL();
-    }
+    kum = me.class.getName().hashCode();
   }
 }
 

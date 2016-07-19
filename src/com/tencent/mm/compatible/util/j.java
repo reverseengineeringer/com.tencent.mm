@@ -1,13 +1,13 @@
 package com.tencent.mm.compatible.util;
 
 import android.os.Build;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 public final class j
 {
-  public static boolean nu()
+  public static boolean lI()
   {
-    return ay.ad(Build.MANUFACTURER, "").toLowerCase().indexOf("samsung".toLowerCase()) >= 0;
+    return be.ab(Build.MANUFACTURER, "").toLowerCase().indexOf("samsung".toLowerCase()) >= 0;
   }
 }
 

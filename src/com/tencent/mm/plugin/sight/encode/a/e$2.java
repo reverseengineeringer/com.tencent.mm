@@ -1,35 +1,35 @@
 package com.tencent.mm.plugin.sight.encode.a;
 
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class e$2
   implements a.a
 {
   e$2(e parame, int paramInt) {}
   
-  public final void awm()
+  public final void ayK()
   {
-    u.i("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "ashutest::pcm ready");
-    if ((gAD.gAu != null) && (!gAD.gAu.gAL))
+    v.i("MicroMsg.SightCustomAsyncMediaRecorder", "ashutest::pcm ready");
+    if ((gHf.gGW != null) && (!gHf.gGW.gHn))
     {
-      u.e("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "ashutest::OnPcmReady, last encode thread[%s] status error!!! MUST NOT BE HERE", new Object[] { gAD.gAu });
-      gAD.kZ(gAD.gAu.gAF);
+      v.e("MicroMsg.SightCustomAsyncMediaRecorder", "ashutest::OnPcmReady, last encode thread[%s] status error!!! MUST NOT BE HERE", new Object[] { gHf.gGW });
+      gHf.mg(gHf.gGW.gHh);
     }
-    if (gAD.gAt.gAN != b.b.gzR)
+    if (gHf.gGV.gHp != b.b.gGt)
     {
-      u.w("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "ashutest::not MediaStatus.Initialized, maybe canceled by user");
+      v.w("MicroMsg.SightCustomAsyncMediaRecorder", "ashutest::not MediaStatus.Initialized, maybe canceled by user");
       return;
     }
-    if (gAD.gAr.awk() != gAE)
+    if (gHf.gGT.ayI() != gHg)
     {
-      u.w("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "ashutest::error bufferID, return!!!! %d vs %s", new Object[] { Integer.valueOf(gAD.gAr.awk()), Integer.valueOf(gAE) });
+      v.w("MicroMsg.SightCustomAsyncMediaRecorder", "ashutest::error bufferID, return!!!! %d vs %s", new Object[] { Integer.valueOf(gHf.gGT.ayI()), Integer.valueOf(gHg) });
       return;
     }
-    gAD.gAt.b(b.b.gzM);
-    gAD.gAu = new e.a(gAD, (byte)0);
-    gAD.gAu.gAF = gAE;
-    com.tencent.mm.sdk.i.e.a(gAD.gAu, "SightCustomAsyncMediaRecorder_encode_" + ay.FT());
+    gHf.gGV.b(b.b.gGo);
+    gHf.gGW = new e.a(gHf, (byte)0);
+    gHf.gGW.gHh = gHg;
+    com.tencent.mm.sdk.i.e.a(gHf.gGW, "SightCustomAsyncMediaRecorder_encode_" + be.Gq());
   }
 }
 

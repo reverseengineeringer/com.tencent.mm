@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 public abstract interface OnLayoutChangedLinearLayout$a
 {
-  public abstract void baH();
+  public abstract void bfV();
 }
 
 /* Location:

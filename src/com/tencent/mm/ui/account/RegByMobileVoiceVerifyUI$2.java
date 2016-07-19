@@ -11,7 +11,7 @@ final class RegByMobileVoiceVerifyUI$2
   
   public final void onClick(View paramView)
   {
-    kvq.startActivityForResult(new Intent(kvq, RegByMobileVoiceVerifySelectUI.class).putExtra("voice_verify_code", RegByMobileVoiceVerifyUI.a(kvq)), 10000);
+    kUx.startActivityForResult(new Intent(kUx, RegByMobileVoiceVerifySelectUI.class).putExtra("voice_verify_code", RegByMobileVoiceVerifyUI.a(kUx)), 10000);
   }
 }
 

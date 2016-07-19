@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field iW:Landroid/view/Menu;
+.field jn:Landroid/view/Menu;
 
 
 # direct methods
@@ -29,14 +29,28 @@
 
 
 # virtual methods
-.method public final G()V
+.method public final C(I)Z
+    .locals 1
+
+    .prologue
+    .line 127
+    iget-object v0, p0, Landroid/support/v7/app/d;->iX:Landroid/support/v7/app/ActionBarActivity;
+
+    invoke-virtual {v0, p1}, Landroid/support/v7/app/ActionBarActivity;->requestWindowFeature(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final F()V
     .locals 1
 
     .prologue
     .line 223
     const/4 v0, 0x0
 
-    iput-object v0, p0, Landroid/support/v7/app/d;->iW:Landroid/view/Menu;
+    iput-object v0, p0, Landroid/support/v7/app/d;->jn:Landroid/view/Menu;
 
     .line 224
     return-void
@@ -49,9 +63,9 @@
     .line 48
     new-instance v0, Landroid/support/v7/app/g;
 
-    iget-object v1, p0, Landroid/support/v7/app/d;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, p0, Landroid/support/v7/app/d;->iX:Landroid/support/v7/app/ActionBarActivity;
 
-    iget-object v2, p0, Landroid/support/v7/app/d;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v2, p0, Landroid/support/v7/app/d;->iX:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-direct {v0, v1, v2}, Landroid/support/v7/app/g;-><init>(Landroid/app/Activity;Landroid/support/v7/app/ActionBar$a;)V
 
@@ -81,7 +95,7 @@
 
     .prologue
     .line 122
-    iget-object v0, p0, Landroid/support/v7/app/d;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Landroid/support/v7/app/d;->iX:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v7/app/ActionBarActivity;->b(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -151,7 +165,7 @@
     if-eqz v0, :cond_0
 
     .line 55
-    iget-object v0, p0, Landroid/support/v7/app/d;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Landroid/support/v7/app/d;->iX:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0}, Landroid/support/v7/app/ActionBarActivity;->getWindow()Landroid/view/Window;
 
@@ -164,12 +178,12 @@
     invoke-super {p0, p1}, Landroid/support/v7/app/a;->onCreate(Landroid/os/Bundle;)V
 
     .line 61
-    iget-boolean v0, p0, Landroid/support/v7/app/d;->iJ:Z
+    iget-boolean v0, p0, Landroid/support/v7/app/d;->ja:Z
 
     if-eqz v0, :cond_1
 
     .line 64
-    iget-object v0, p0, Landroid/support/v7/app/d;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Landroid/support/v7/app/d;->iX:Landroid/support/v7/app/ActionBarActivity;
 
     const/16 v1, 0x8
 
@@ -177,12 +191,12 @@
 
     .line 66
     :cond_1
-    iget-boolean v0, p0, Landroid/support/v7/app/d;->iK:Z
+    iget-boolean v0, p0, Landroid/support/v7/app/d;->jb:Z
 
     if-eqz v0, :cond_2
 
     .line 67
-    iget-object v0, p0, Landroid/support/v7/app/d;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Landroid/support/v7/app/d;->iX:Landroid/support/v7/app/ActionBarActivity;
 
     const/16 v1, 0x9
 
@@ -190,7 +204,7 @@
 
     .line 85
     :cond_2
-    iget-object v0, p0, Landroid/support/v7/app/d;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Landroid/support/v7/app/d;->iX:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0}, Landroid/support/v7/app/ActionBarActivity;->getWindow()Landroid/view/Window;
 
@@ -224,7 +238,7 @@
 
     .line 139
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/app/d;->iW:Landroid/view/Menu;
+    iget-object v0, p0, Landroid/support/v7/app/d;->jn:Landroid/view/Menu;
 
     if-nez v0, :cond_1
 
@@ -233,13 +247,13 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v7/app/d;->iW:Landroid/view/Menu;
+    iput-object v0, p0, Landroid/support/v7/app/d;->jn:Landroid/view/Menu;
 
     .line 142
     :cond_1
-    iget-object v0, p0, Landroid/support/v7/app/d;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Landroid/support/v7/app/d;->iX:Landroid/support/v7/app/ActionBarActivity;
 
-    iget-object v1, p0, Landroid/support/v7/app/d;->iW:Landroid/view/Menu;
+    iget-object v1, p0, Landroid/support/v7/app/d;->jn:Landroid/view/Menu;
 
     invoke-virtual {v0, p1, v1}, Landroid/support/v7/app/ActionBarActivity;->a(ILandroid/view/Menu;)Z
 
@@ -250,7 +264,7 @@
     return v0
 
     :cond_2
-    iget-object v0, p0, Landroid/support/v7/app/d;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Landroid/support/v7/app/d;->iX:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v7/app/ActionBarActivity;->a(ILandroid/view/Menu;)Z
 
@@ -283,7 +297,7 @@
 
     .line 160
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/app/d;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Landroid/support/v7/app/d;->iX:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v7/app/ActionBarActivity;->a(ILandroid/view/MenuItem;)Z
 
@@ -313,9 +327,9 @@
 
     .line 150
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/app/d;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Landroid/support/v7/app/d;->iX:Landroid/support/v7/app/ActionBarActivity;
 
-    iget-object v1, p0, Landroid/support/v7/app/d;->iW:Landroid/view/Menu;
+    iget-object v1, p0, Landroid/support/v7/app/d;->jn:Landroid/view/Menu;
 
     invoke-virtual {v0, p1, p2, v1}, Landroid/support/v7/app/ActionBarActivity;->a(ILandroid/view/View;Landroid/view/Menu;)Z
 
@@ -326,7 +340,7 @@
     return v0
 
     :cond_1
-    iget-object v0, p0, Landroid/support/v7/app/d;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Landroid/support/v7/app/d;->iX:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/support/v7/app/ActionBarActivity;->a(ILandroid/view/View;Landroid/view/Menu;)Z
 
@@ -348,9 +362,9 @@
 
     .prologue
     .line 112
-    iget-object v0, p0, Landroid/support/v7/app/d;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Landroid/support/v7/app/d;->iX:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/app/ActionBarActivity;->x(I)V
+    invoke-virtual {v0, p1}, Landroid/support/v7/app/ActionBarActivity;->D(I)V
 
     .line 113
     return-void
@@ -361,7 +375,7 @@
 
     .prologue
     .line 107
-    iget-object v0, p0, Landroid/support/v7/app/d;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Landroid/support/v7/app/d;->iX:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0, p1}, Landroid/support/v7/app/ActionBarActivity;->D(Landroid/view/View;)V
 
@@ -374,26 +388,10 @@
 
     .prologue
     .line 117
-    iget-object v0, p0, Landroid/support/v7/app/d;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Landroid/support/v7/app/d;->iX:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v7/app/ActionBarActivity;->a(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 118
     return-void
-.end method
-
-.method public final y(I)Z
-    .locals 2
-
-    .prologue
-    .line 127
-    iget-object v0, p0, Landroid/support/v7/app/d;->iG:Landroid/support/v7/app/ActionBarActivity;
-
-    const/4 v1, 0x5
-
-    invoke-virtual {v0, v1}, Landroid/support/v7/app/ActionBarActivity;->requestWindowFeature(I)Z
-
-    move-result v0
-
-    return v0
 .end method

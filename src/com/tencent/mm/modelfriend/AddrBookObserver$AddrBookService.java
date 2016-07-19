@@ -6,34 +6,33 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.IBinder;
-import com.tencent.mm.d.a.fx;
+import com.tencent.mm.e.a.gh;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.modelsimple.d;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class AddrBookObserver$AddrBookService
   extends Service
 {
-  public static boolean bFv = false;
-  public static boolean bLk = false;
-  public static String bLm = "key_sync_session";
-  private a.b bLn = new a.b()
+  public static boolean bEE = false;
+  public static String bEG = "key_sync_session";
+  public static boolean byG = false;
+  private a.b bEH = new a.b()
   {
-    public final void aU(boolean paramAnonymousBoolean)
+    public final void aA(boolean paramAnonymousBoolean)
     {
       if (!paramAnonymousBoolean)
       {
-        u.v("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "onSyncEnd not sync succ, do not upload");
+        v.v("MicroMsg.AddrBookObserver", "onSyncEnd not sync succ, do not upload");
         stopSelf();
-        AddrBookObserver.AddrBookService.bLk = false;
+        AddrBookObserver.AddrBookService.bEE = false;
         return;
       }
       System.currentTimeMillis();
-      ac localac = new ac(m.yK(), m.yJ());
-      ah.tE().d(localac);
+      ac localac = new ac(m.yX(), m.yW());
+      ah.tF().a(localac, 0);
       stopSelf();
-      AddrBookObserver.AddrBookService.bLk = false;
+      AddrBookObserver.AddrBookService.bEE = false;
     }
   };
   
@@ -48,76 +47,79 @@ public class AddrBookObserver$AddrBookService
     if (paramIntent == null) {}
     for (boolean bool = true;; bool = false)
     {
-      u.i("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "service start intent:%b", new Object[] { Boolean.valueOf(bool) });
+      v.i("MicroMsg.AddrBookObserver", "service start intent:%b", new Object[] { Boolean.valueOf(bool) });
       if (paramIntent != null) {
         break;
       }
-      u.e("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "intent == null, stop service");
+      v.e("MicroMsg.AddrBookObserver", "intent == null, stop service");
       stopSelf();
       return 2;
     }
-    float f1 = paramIntent.getFloatExtra(bLm, -1.0F);
+    float f1 = paramIntent.getFloatExtra(bEG, -1.0F);
     if (f1 == -1.0F)
     {
-      u.e("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "onStartCommand session == -1, stop service");
+      v.e("MicroMsg.AddrBookObserver", "onStartCommand session == -1, stop service");
       stopSelf();
       return 2;
     }
-    paramIntent = y.getContext().getSharedPreferences(y.aUK(), 0);
-    float f2 = paramIntent.getFloat(bLm, 0.0F);
+    paramIntent = aa.getContext().getSharedPreferences(aa.aZO(), 0);
+    float f2 = paramIntent.getFloat(bEG, 0.0F);
     if (f2 == f1)
     {
-      u.d("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "onStartCommand session the same : %f", new Object[] { Float.valueOf(f2) });
+      v.d("MicroMsg.AddrBookObserver", "onStartCommand session the same : %f", new Object[] { Float.valueOf(f2) });
       stopSelf();
       return 2;
     }
-    paramIntent.edit().putFloat(bLm, f1).commit();
-    u.d("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "onStartCommand new session:%f", new Object[] { Float.valueOf(f1) });
-    if (bFv)
+    paramIntent.edit().putFloat(bEG, f1).commit();
+    v.d("MicroMsg.AddrBookObserver", "onStartCommand new session:%f", new Object[] { Float.valueOf(f1) });
+    if (byG)
     {
-      u.i("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "service canceled");
-      bFv = false;
+      v.i("MicroMsg.AddrBookObserver", "service canceled");
+      byG = false;
       stopSelf();
       return 2;
     }
-    if (ah.tg())
+    if (ah.th())
     {
-      u.e("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "[onStartCommand] getCode is null, stop service");
+      v.e("MicroMsg.AddrBookObserver", "[onStartCommand] getCode is null, stop service");
       stopSelf();
       return 2;
     }
-    ah.tJ();
+    ah.tK();
     try
     {
-      if (!ah.rh())
+      if (!ah.rg())
       {
-        u.i("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "account not ready, stop sync");
+        v.i("MicroMsg.AddrBookObserver", "account not ready, stop sync");
         stopSelf();
         return 2;
       }
     }
     catch (Exception paramIntent)
     {
-      u.e("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "AddrBookService onStart [%s]", new Object[] { paramIntent.getMessage() });
+      v.e("MicroMsg.AddrBookObserver", "AddrBookService onStart [%s]", new Object[] { paramIntent.getMessage() });
       stopSelf();
       return 2;
     }
-    paramIntent = new fx();
-    com.tencent.mm.sdk.c.a.jUF.j(paramIntent);
-    if ((m.yG()) && (!m.yC()))
+    if (com.tencent.mm.plugin.ipcall.d.afv())
     {
-      u.i("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "start sync");
-      if (!d.aZ(this))
+      paramIntent = new gh();
+      com.tencent.mm.sdk.c.a.kug.y(paramIntent);
+    }
+    if ((m.yT()) && (!m.yP()))
+    {
+      v.i("MicroMsg.AddrBookObserver", "start sync");
+      if (!com.tencent.mm.modelsimple.d.aV(this))
       {
-        bLk = true;
-        a.a(bLn);
+        bEE = true;
+        a.a(bEH);
         return 2;
       }
-      u.e("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "requestSync false, stop service");
+      v.e("MicroMsg.AddrBookObserver", "requestSync false, stop service");
       stopSelf();
       return 2;
     }
-    u.e("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "can not sync addr book now, stop service");
+    v.e("MicroMsg.AddrBookObserver", "can not sync addr book now, stop service");
     stopSelf();
     return 2;
   }

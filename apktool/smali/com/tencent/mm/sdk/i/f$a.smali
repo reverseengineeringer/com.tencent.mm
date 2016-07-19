@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract beforeExecute(Ljava/lang/Thread;Ljava/lang/Runnable;)V
+.method public abstract A(Ljava/lang/Runnable;)V
 .end method
 
-.method public abstract w(Ljava/lang/Runnable;)V
+.method public abstract beforeExecute(Ljava/lang/Thread;Ljava/lang/Runnable;)V
 .end method

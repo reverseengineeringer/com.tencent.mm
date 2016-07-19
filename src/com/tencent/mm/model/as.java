@@ -2,19 +2,19 @@ package com.tencent.mm.model;
 
 import com.tencent.mm.network.e;
 import com.tencent.mm.network.o;
-import com.tencent.mm.r.d;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
 
 public final class as
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private d anM;
-  private final a bBX;
-  private final String bBY;
-  private long bBZ;
+  private d bkT;
+  private final a bvh;
+  private final String bvi;
+  private long bvj;
   
   public as(a parama)
   {
@@ -23,17 +23,17 @@ public final class as
   
   public as(a parama, String paramString)
   {
-    u.i("!44@/B4Tb64lLpK+IBX8XDgnvr3T0yqJHb2jPIO3R3Mts1U=", "init LocalProxy task:%s [%s] ", new Object[] { paramString, ay.aVJ() });
-    bBX = parama;
-    bBY = paramString;
+    v.i("MicroMsg.NetSceneLocalProxy", "init LocalProxy task:%s [%s] ", new Object[] { paramString, be.baX() });
+    bvh = parama;
+    bvi = paramString;
   }
   
   public final int a(e parame, d paramd)
   {
     c(parame);
-    anM = paramd;
-    bBZ = ay.FT();
-    ah.tv().r(new Runnable()
+    bkT = paramd;
+    bvj = be.Gq();
+    ah.tw().t(new Runnable()
     {
       public final void run()
       {
@@ -50,12 +50,12 @@ public final class as
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    if (bBX != null)
+    if (bvh != null)
     {
-      u.d("!44@/B4Tb64lLpK+IBX8XDgnvr3T0yqJHb2jPIO3R3Mts1U=", "local proxy [%s] end, cost=%d", new Object[] { bBY, Long.valueOf(ay.ao(bBZ)) });
-      bBX.a(bFs);
+      v.d("MicroMsg.NetSceneLocalProxy", "local proxy [%s] end, cost=%d", new Object[] { bvi, Long.valueOf(be.av(bvj)) });
+      bvh.a(byD);
     }
-    anM.a(0, 0, null, this);
+    bkT.onSceneEnd(0, 0, null, this);
   }
   
   public final int getType()

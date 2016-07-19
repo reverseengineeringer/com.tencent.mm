@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic apr:Lcom/tencent/mm/c/a/a;
+.field final synthetic aaJ:Lcom/tencent/mm/c/a/a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 274
-    iput-object p1, p0, Lcom/tencent/mm/c/a/a$1;->apr:Lcom/tencent/mm/c/a/a;
+    .line 288
+    iput-object p1, p0, Lcom/tencent/mm/c/a/a$1;->aaJ:Lcom/tencent/mm/c/a/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,64 +42,64 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 278
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a$1;->apr:Lcom/tencent/mm/c/a/a;
-
-    iget-object v0, v0, Lcom/tencent/mm/c/a/a;->apl:Lcom/tencent/mm/compatible/util/a;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/util/a;->oV()Z
-
-    .line 279
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    .line 292
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/c/a/a$1;->apr:Lcom/tencent/mm/c/a/a;
+    iget-object v1, p0, Lcom/tencent/mm/c/a/a$1;->aaJ:Lcom/tencent/mm/c/a/a;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/compatible/b/d;->b(Lcom/tencent/mm/compatible/b/d$a;)V
 
-    .line 280
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a$1;->apr:Lcom/tencent/mm/c/a/a;
+    .line 293
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a$1;->aaJ:Lcom/tencent/mm/c/a/a;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/c/a/a;->apo:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/c/a/a;->aaG:Z
 
     if-eqz v0, :cond_0
 
-    .line 281
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    .line 294
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->nM()V
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->mb()V
 
-    .line 282
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a$1;->apr:Lcom/tencent/mm/c/a/a;
+    .line 295
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a$1;->aaJ:Lcom/tencent/mm/c/a/a;
 
-    iput-boolean v2, v0, Lcom/tencent/mm/c/a/a;->apo:Z
+    iput-boolean v2, v0, Lcom/tencent/mm/c/a/a;->aaG:Z
 
-    .line 284
+    .line 297
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
 
-    .line 285
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a$1;->apr:Lcom/tencent/mm/c/a/a;
+    .line 298
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a$1;->aaJ:Lcom/tencent/mm/c/a/a;
 
-    iget-object v0, v0, Lcom/tencent/mm/c/a/a;->app:Lcom/tencent/mm/r/f$b;
+    iget-object v0, v0, Lcom/tencent/mm/c/a/a;->aaD:Lcom/tencent/mm/compatible/util/a;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/util/a;->nn()Z
+
+    .line 299
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a$1;->aaJ:Lcom/tencent/mm/c/a/a;
+
+    iget-object v0, v0, Lcom/tencent/mm/c/a/a;->aaH:Lcom/tencent/mm/t/f$b;
 
     if-eqz v0, :cond_1
 
-    .line 286
+    .line 300
     new-instance v0, Lcom/tencent/mm/c/a/a$1$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/c/a/a$1$1;-><init>(Lcom/tencent/mm/c/a/a$1;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
-    .line 294
+    .line 308
     :cond_1
     return-void
 .end method

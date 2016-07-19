@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/m_" android:paddingLeft="@dimen/cy" android:paddingRight="9.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/bin" android:paddingTop="@dimen/j8" android:paddingBottom="@dimen/j8" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:id="@id/l4" android:layout_width="@dimen/cq" android:layout_height="@dimen/cq" android:layout_marginRight="@dimen/hb" android:src="@raw/default_avatar" />
+        <LinearLayout android:gravity="center|left" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/l4" android:layout_alignTop="@id/l4" android:layout_alignBottom="@id/l4" android:layout_centerVertical="true">
+            <com.tencent.mm.ui.base.NoMeasuredTextView android:id="@id/bl4" android:text="{nick}" style="@style/MMFontPreferenceLarge" />
+            <TextView android:id="@id/bl5" android:layout_marginTop="@dimen/j_" android:text="{user}" style="@style/MMFontPreferenceSmall" />
+        </LinearLayout>
+        <TextView android:id="@id/bj6" android:visibility="gone" android:layout_marginRight="2.0dip" android:text="100" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/UnreadDotStyle" />
+    </RelativeLayout>
+    <ImageView android:layout_gravity="center|right" android:id="@id/bl6" android:padding="@dimen/hb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/h2" android:contentDescription="@string/bc7" />
+</LinearLayout>

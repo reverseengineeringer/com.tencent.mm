@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/afi" android:background="@color/j3" style="@style/MMList" />
+    <TextView android:id="@id/afj" style="@style/MMFontEmptyMsgLarge" />
+    <TextView android:textColor="@color/j_" android:gravity="center_horizontal" android:layout_gravity="center_vertical" android:id="@id/cfk" android:paddingLeft="@dimen/hi" android:paddingTop="220.0dip" android:paddingRight="@dimen/hi" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="false" style="@style/MMFontEmptyMsgLarge" />
+</LinearLayout>

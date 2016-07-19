@@ -27,16 +27,17 @@ import android.widget.Toast;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.as;
 import com.tencent.mm.model.as.a;
-import com.tencent.mm.modelsimple.t;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.pluginsdk.h.o;
+import com.tencent.mm.modelsimple.r;
+import com.tencent.mm.platformtools.l;
+import com.tencent.mm.pluginsdk.i.o;
 import com.tencent.mm.pluginsdk.model.app.p;
 import com.tencent.mm.protocal.GeneralControlWrapper;
 import com.tencent.mm.protocal.JsapiPermissionWrapper;
 import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.applet.SecurityImage;
 import com.tencent.mm.ui.applet.SecurityImage.a;
@@ -44,25 +45,25 @@ import com.tencent.mm.ui.base.MMFormInputView;
 
 public class LoginUI
   extends MMActivity
-  implements com.tencent.mm.r.d
+  implements com.tencent.mm.t.d
 {
-  private String aIG = "";
-  private String avm = null;
-  private ProgressDialog coM = null;
-  private EditText dEk;
-  private String fVt;
-  private String fVw;
-  private int fjb = 0;
-  private SecurityImage kqh = null;
-  private EditText ktT;
-  private MMFormInputView ktU;
-  private MMFormInputView ktV;
-  private Button ktW;
-  private boolean ktX = false;
-  private f ktj = new f();
-  private String ktk;
-  private com.tencent.mm.pluginsdk.h.a ktp;
-  private TextWatcher rV = new TextWatcher()
+  private String ahd = null;
+  private String ava = "";
+  private ProgressDialog cka = null;
+  private EditText dFE;
+  private int frY = 0;
+  private String geM;
+  private String geP;
+  private SecurityImage kPm = null;
+  private f kSr = new f();
+  private String kSs;
+  private com.tencent.mm.pluginsdk.i.a kSx;
+  private EditText kTa;
+  private MMFormInputView kTb;
+  private MMFormInputView kTc;
+  private Button kTd;
+  private boolean kTe = false;
+  private TextWatcher si = new TextWatcher()
   {
     public final void afterTextChanged(Editable paramAnonymousEditable)
     {
@@ -76,15 +77,15 @@ public class LoginUI
   
   private void goBack()
   {
-    age();
-    com.tencent.mm.plugin.a.b.kC(fVw);
-    p.aPL();
+    aiI();
+    com.tencent.mm.plugin.a.b.ll(geP);
+    p.aUt();
     finish();
   }
   
-  private boolean m(int paramInt1, int paramInt2, String paramString)
+  private boolean k(int paramInt1, int paramInt2, String paramString)
   {
-    if (com.tencent.mm.plugin.a.a.cob.a(koJ.kpc, paramInt1, paramInt2, paramString)) {
+    if (com.tencent.mm.plugin.a.a.cjp.a(kNN.kOg, paramInt1, paramInt2, paramString)) {
       return true;
     }
     if (paramInt1 == 4) {}
@@ -92,53 +93,53 @@ public class LoginUI
     {
     default: 
       paramString = new o(paramInt1, paramInt2, paramString);
-      return ktp.a(this, paramString);
+      return kSx.a(this, paramString);
     case -1: 
-      if (ah.tE().vL() == 6)
+      if (ah.tF().vN() == 6)
       {
-        com.tencent.mm.ui.base.g.e(this, 2131427842, 2131427841);
+        com.tencent.mm.ui.base.g.f(this, 2131234009, 2131234008);
         return true;
       }
       return false;
     case -4: 
     case -3: 
-      com.tencent.mm.ui.base.g.e(this, 2131427748, 2131427766);
+      com.tencent.mm.ui.base.g.f(this, 2131232379, 2131233535);
       return true;
     case -9: 
-      com.tencent.mm.ui.base.g.e(this, 2131427767, 2131427766);
+      com.tencent.mm.ui.base.g.f(this, 2131233534, 2131233535);
       return true;
     case -72: 
-      com.tencent.mm.ui.base.g.e(koJ.kpc, 2131427612, 2131430877);
+      com.tencent.mm.ui.base.g.f(kNN.kOg, 2131234423, 2131231028);
       return true;
     case -75: 
-      com.tencent.mm.platformtools.m.bh(koJ.kpc);
+      l.be(kNN.kOg);
       return true;
     case -311: 
     case -310: 
     case -6: 
-      ah.tE().a(701, this);
-      if (kqh == null) {
-        kqh = SecurityImage.a.a(this, ktj.ktO, ktj.ktN, ktj.ktL, ktj.ktM, new DialogInterface.OnClickListener()
+      ah.tF().a(701, this);
+      if (kPm == null) {
+        kPm = SecurityImage.a.a(this, kSr.kSV, kSr.kSU, kSr.kSS, kSr.kST, new DialogInterface.OnClickListener()
         {
           public final void onClick(final DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
           {
             if (LoginUI.d(LoginUI.this) == null)
             {
-              u.e("!32@/B4Tb64lLpJTKkcMldEZqYg5eKm6NcjH", "secimg is null!");
+              v.e("MicroMsg.LoginUI", "secimg is null!");
               return;
             }
-            u.d("!32@/B4Tb64lLpJTKkcMldEZqYg5eKm6NcjH", "imgSid:" + ektL + " img len" + ektN.length + " " + com.tencent.mm.compatible.util.f.oZ());
-            paramAnonymousDialogInterface = new t(ecbh, ektJ, ektO, LoginUI.d(LoginUI.this).getSecImgCode(), LoginUI.d(LoginUI.this).getSecImgSid(), LoginUI.d(LoginUI.this).getSecImgEncryptKey(), 2, "", false, false);
-            ah.tE().d(paramAnonymousDialogInterface);
+            v.d("MicroMsg.LoginUI", "imgSid:" + ekSS + " img len" + ekSU.length + " " + com.tencent.mm.compatible.util.f.nr());
+            paramAnonymousDialogInterface = new r(ebUU, ekSQ, ekSV, LoginUI.d(LoginUI.this).bhw(), dkSS, dkST, 2, "", false, false);
+            ah.tF().a(paramAnonymousDialogInterface, 0);
             LoginUI localLoginUI1 = LoginUI.this;
             LoginUI localLoginUI2 = LoginUI.this;
-            getString(2131430877);
-            LoginUI.a(localLoginUI1, com.tencent.mm.ui.base.g.a(localLoginUI2, getString(2131427765), true, new DialogInterface.OnCancelListener()
+            getString(2131231028);
+            LoginUI.a(localLoginUI1, com.tencent.mm.ui.base.g.a(localLoginUI2, getString(2131233543), true, new DialogInterface.OnCancelListener()
             {
               public final void onCancel(DialogInterface paramAnonymous2DialogInterface)
               {
-                ah.tE().c(paramAnonymousDialogInterface);
-                ah.tE().b(701, LoginUI.this);
+                ah.tF().c(paramAnonymousDialogInterface);
+                ah.tF().b(701, LoginUI.this);
               }
             }));
           }
@@ -148,21 +149,21 @@ public class LoginUI
           {
             LoginUI.f(LoginUI.this);
           }
-        }, ktj);
+        }, kSr);
       }
       for (;;)
       {
         return true;
-        u.d("!32@/B4Tb64lLpJTKkcMldEZqYg5eKm6NcjH", "imgSid:" + ktj.ktL + " img len" + ktj.ktN.length + " " + com.tencent.mm.compatible.util.f.oZ());
-        kqh.a(ktj.ktO, ktj.ktN, ktj.ktL, ktj.ktM);
+        v.d("MicroMsg.LoginUI", "imgSid:" + kSr.kSS + " img len" + kSr.kSU.length + " " + com.tencent.mm.compatible.util.f.nr());
+        kPm.a(kSr.kSV, kSr.kSU, kSr.kSS, kSr.kST);
       }
     case -100: 
       ah.hold();
-      ActionBarActivity localActionBarActivity = koJ.kpc;
-      if (TextUtils.isEmpty(ah.tN())) {}
-      for (paramString = com.tencent.mm.aw.a.A(koJ.kpc, 2131427786);; paramString = ah.tN())
+      ActionBarActivity localActionBarActivity = kNN.kOg;
+      if (TextUtils.isEmpty(ah.tO())) {}
+      for (paramString = com.tencent.mm.az.a.E(kNN.kOg, 2131233708);; paramString = ah.tO())
       {
-        com.tencent.mm.ui.base.g.a(localActionBarActivity, paramString, koJ.kpc.getString(2131430877), new DialogInterface.OnClickListener()new DialogInterface.OnCancelListener
+        com.tencent.mm.ui.base.g.a(localActionBarActivity, paramString, kNN.kOg.getString(2131231028), new DialogInterface.OnClickListener()new DialogInterface.OnCancelListener
         {
           public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
           {
@@ -178,40 +179,40 @@ public class LoginUI
         return true;
       }
     case -205: 
-      f.a(ktj);
-      com.tencent.mm.plugin.a.b.kC("L600_100");
+      f.a(kSr);
+      com.tencent.mm.plugin.a.b.ll("L600_100");
       paramString = new Intent();
-      paramString.putExtra("auth_ticket", fVt);
-      paramString.putExtra("binded_mobile", ktk);
+      paramString.putExtra("auth_ticket", geM);
+      paramString.putExtra("binded_mobile", kSs);
       paramString.putExtra("from_source", 1);
-      com.tencent.mm.plugin.a.a.coa.f(this, paramString);
+      com.tencent.mm.plugin.a.a.cjo.f(this, paramString);
       return true;
     }
-    if (!ay.kz(aIG)) {
-      com.tencent.mm.platformtools.m.k(this, paramString, aIG);
+    if (!be.kf(ava)) {
+      l.i(this, paramString, ava);
     }
     return true;
   }
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    ktU = ((MMFormInputView)findViewById(2131167012));
-    ktV = ((MMFormInputView)findViewById(2131167014));
-    ktT = ktU.getContentEditText();
-    dEk = ktV.getContentEditText();
-    com.tencent.mm.ui.tools.a.c.a(dEk).rZ(16).a(null);
-    ktT.requestFocus();
-    ktW = ((Button)findViewById(2131167022));
-    ktW.setEnabled(false);
-    findViewById(2131167024).setOnClickListener(new View.OnClickListener()
+    kTb = ((MMFormInputView)findViewById(2131757530));
+    kTc = ((MMFormInputView)findViewById(2131757531));
+    kTa = kTb.fNQ;
+    dFE = kTc.fNQ;
+    com.tencent.mm.ui.tools.a.c.a(dFE).ud(16).a(null);
+    kTa.requestFocus();
+    kTd = ((Button)findViewById(2131757532));
+    kTd.setEnabled(false);
+    findViewById(2131757533).setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
-        e.b(koJ.kpc, false, 3);
+        e.b(kNN.kOg, false, 3);
       }
     });
-    boolean bool = com.tencent.mm.ac.b.AG();
-    Object localObject = findViewById(2131167065);
+    boolean bool = com.tencent.mm.af.b.AS();
+    Object localObject = findViewById(2131757534);
     if (!bool) {}
     for (int i = 8;; i = 0)
     {
@@ -231,19 +232,19 @@ public class LoginUI
           return true;
         }
       });
-      ktW.setOnClickListener(new View.OnClickListener()
+      kTd.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
           LoginUI.c(LoginUI.this);
         }
       });
-      fVt = getIntent().getStringExtra("auth_ticket");
-      if (!ay.kz(fVt))
+      geM = getIntent().getStringExtra("auth_ticket");
+      if (!be.kf(geM))
       {
-        ktT.setText(ay.ky(f.bbE()));
-        dEk.setText(ay.ky(f.bbF()));
-        new aa().postDelayed(new Runnable()
+        kTa.setText(be.li(f.bgQ()));
+        dFE.setText(be.li(f.bgR()));
+        new ac().postDelayed(new Runnable()
         {
           public final void run()
           {
@@ -251,9 +252,9 @@ public class LoginUI
           }
         }, 500L);
       }
-      ktT.addTextChangedListener(rV);
-      dEk.addTextChangedListener(rV);
-      dEk.setOnEditorActionListener(new TextView.OnEditorActionListener()
+      kTa.addTextChangedListener(si);
+      dFE.addTextChangedListener(si);
+      dFE.setOnEditorActionListener(new TextView.OnEditorActionListener()
       {
         public final boolean onEditorAction(TextView paramAnonymousTextView, int paramAnonymousInt, KeyEvent paramAnonymousKeyEvent)
         {
@@ -265,7 +266,7 @@ public class LoginUI
           return false;
         }
       });
-      dEk.setOnKeyListener(new View.OnKeyListener()
+      dFE.setOnKeyListener(new View.OnKeyListener()
       {
         public final boolean onKey(View paramAnonymousView, int paramAnonymousInt, KeyEvent paramAnonymousKeyEvent)
         {
@@ -277,174 +278,44 @@ public class LoginUI
           return false;
         }
       });
-      if (com.tencent.mm.sdk.platformtools.f.jVe) {
-        com.tencent.mm.plugin.a.a.cob.h(this);
+      if (com.tencent.mm.sdk.platformtools.f.kuK) {
+        com.tencent.mm.plugin.a.a.cjp.d(this);
       }
       localObject = getIntent().getStringExtra("login_username");
-      ktX = getIntent().getBooleanExtra("from_deep_link", false);
-      if (!ay.kz((String)localObject)) {
-        ktT.setText((CharSequence)localObject);
+      kTe = getIntent().getBooleanExtra("from_deep_link", false);
+      if (!be.kf((String)localObject)) {
+        kTa.setText((CharSequence)localObject);
       }
-      return;
-    }
-  }
-  
-  public final void a(int paramInt1, int paramInt2, String paramString, final com.tencent.mm.r.j paramj)
-  {
-    u.i("!32@/B4Tb64lLpJTKkcMldEZqYg5eKm6NcjH", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
-    if (coM != null)
-    {
-      coM.dismiss();
-      coM = null;
-    }
-    if (paramj.getType() != 701) {
-      return;
-    }
-    ah.tE().b(701, this);
-    aIG = ((t)paramj).Cx();
-    ktj.ktL = ((t)paramj).zb();
-    ktj.ktN = ((t)paramj).za();
-    ktj.ktM = ((t)paramj).Cy();
-    ktj.ktO = ((t)paramj).getSecCodeType();
-    if (paramInt2 == 65331)
-    {
-      fVt = ((t)paramj).yO();
-      ktk = ((t)paramj).Cz();
-    }
-    if ((paramInt1 == 4) && ((paramInt2 == -16) || (paramInt2 == -17))) {
-      ah.tE().d(new as(new as.a()
-      {
-        public final void a(com.tencent.mm.network.e paramAnonymouse)
-        {
-          if (paramAnonymouse == null) {
-            return;
-          }
-          paramAnonymouse = paramAnonymouse.vW();
-          int i = tDuin;
-          paramAnonymouse.i(new byte[0], i);
-        }
-      }));
-    }
-    for (int i = 1;; i = 0)
-    {
-      if ((i != 0) || ((paramInt1 == 0) && (paramInt2 == 0)))
-      {
-        ah.unhold();
-        com.tencent.mm.platformtools.m.kv(ktj.cbh);
-        com.tencent.mm.modelsimple.d.aV(this);
-        com.tencent.mm.platformtools.m.a(this, new Runnable()
-        {
-          public final void run()
-          {
-            u.d("!32@/B4Tb64lLpJTKkcMldEZqYg5eKm6NcjH", "onSceneEnd, in runnable");
-            Intent localIntent = com.tencent.mm.plugin.a.a.coa.ak(LoginUI.this);
-            localIntent.addFlags(67108864);
-            localIntent.putExtra("kstyle_show_bind_mobile_afterauth", ((t)paramj).CA());
-            localIntent.putExtra("kstyle_bind_wording", ((t)paramj).CB());
-            localIntent.putExtra("kstyle_bind_recommend_show", ((t)paramj).CC());
-            startActivity(localIntent);
-            finish();
-          }
-        }, false, 2);
-        com.tencent.mm.plugin.a.b.kD(ah.tx() + "," + getClass().getName() + ",R200_900_phone," + ah.fd("R200_900_phone") + ",4");
-        if (!ktX) {
-          break;
-        }
-        paramString = y.getContext().getSharedPreferences("randomid_prefs", 4).getString("randomID", "");
-        h.fUJ.g(11930, new Object[] { paramString, Integer.valueOf(4) });
-        return;
-      }
-      if (paramInt2 == -106)
-      {
-        com.tencent.mm.platformtools.m.B(this, paramString);
-        return;
-      }
-      if (paramInt2 == -30)
-      {
-        if (com.tencent.mm.protocal.b.iUg)
-        {
-          paramString = new Intent();
-          paramString.putExtra("rawUrl", aIG);
-          paramString.putExtra("showShare", false);
-          paramString.putExtra("show_bottom", false);
-          paramString.putExtra("needRedirect", false);
-          paramString.putExtra("neverGetA8Key", true);
-          paramString.putExtra("hardcode_jspermission", JsapiPermissionWrapper.iUp);
-          paramString.putExtra("hardcode_general_ctrl", GeneralControlWrapper.iUm);
-          com.tencent.mm.plugin.a.a.coa.j(paramString, this);
-          return;
-        }
-        com.tencent.mm.plugin.a.b.kD(ah.tx() + "," + getClass().getName() + ",R400_100_login," + ah.fd("R400_100_login") + ",1");
-        com.tencent.mm.ui.base.g.a(this, getString(2131427708), "", new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
-        {
-          public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
-          {
-            com.tencent.mm.plugin.a.b.kC("R400_100_login");
-            paramAnonymousDialogInterface = new Intent();
-            paramAnonymousDialogInterface.putExtra("regsetinfo_binduin", ecbh);
-            paramAnonymousDialogInterface.putExtra("regsetinfo_pwd", ektJ);
-            paramAnonymousDialogInterface.putExtra("regsetinfo_ismobile", 0);
-            paramAnonymousDialogInterface.putExtra("regsetinfo_ticket", LoginUI.h(LoginUI.this));
-            paramAnonymousDialogInterface.putExtra("regsetinfo_NextControl", ((t)paramj).yQ());
-            paramAnonymousDialogInterface.setClass(LoginUI.this, RegSetInfoUI.class);
-            koJ.kpc.startActivity(paramAnonymousDialogInterface);
-            com.tencent.mm.plugin.a.b.kD(ah.tx() + "," + getClass().getName() + ",R400_100_login," + ah.fd("R400_100_login") + ",2");
-          }
-        }, new DialogInterface.OnClickListener()
-        {
-          public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
-          {
-            com.tencent.mm.plugin.a.b.kD(ah.tx() + "," + getClass().getName() + ",R400_100_login," + ah.fd("R400_100_login") + ",2");
-          }
-        });
-        return;
-      }
-      if (m(paramInt1, paramInt2, paramString)) {
-        break;
-      }
-      if (paramInt2 == -5)
-      {
-        Toast.makeText(this, getString(2131427709), 0).show();
-        return;
-      }
-      if (paramj.getType() == 701)
-      {
-        paramString = com.tencent.mm.e.a.cV(paramString);
-        if ((paramString != null) && (paramString.a(this, null, null))) {
-          break;
-        }
-      }
-      Toast.makeText(this, getString(2131427482, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
       return;
     }
   }
   
   protected final int getLayoutId()
   {
-    return 2131362432;
+    return 2130903843;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    paramBundle = getString(2131427757);
-    if (com.tencent.mm.protocal.b.iUg) {
-      paramBundle = getString(2131431735) + getString(2131427771);
+    paramBundle = getString(2131233546);
+    if (com.tencent.mm.protocal.c.jrz) {
+      paramBundle = getString(2131230958) + getString(2131230858);
     }
-    fjb = getIntent().getIntExtra("login_type", 0);
-    Gj(paramBundle);
-    com.tencent.mm.plugin.a.a.cob.kL();
-    fVw = com.tencent.mm.plugin.a.b.FX();
-    Gb();
-    ktp = new com.tencent.mm.pluginsdk.h.a();
+    frY = getIntent().getIntExtra("login_type", 0);
+    Ah(paramBundle);
+    com.tencent.mm.plugin.a.a.cjp.jl();
+    geP = com.tencent.mm.plugin.a.b.Gu();
+    Gy();
+    kSx = new com.tencent.mm.pluginsdk.i.a();
   }
   
   public void onDestroy()
   {
-    if (ktp != null) {
-      ktp.close();
+    if (kSx != null) {
+      kSx.close();
     }
-    ah.tE().b(701, this);
+    ah.tF().b(701, this);
     super.onDestroy();
   }
   
@@ -461,28 +332,163 @@ public class LoginUI
   public void onPause()
   {
     super.onPause();
-    if (fjb == 0) {
-      com.tencent.mm.plugin.a.b.b(false, ah.tx() + "," + getClass().getName() + ",L100_100_logout," + ah.fd("L100_100_logout") + ",2");
+    if (frY == 0) {
+      com.tencent.mm.plugin.a.b.b(false, ah.ty() + "," + getClass().getName() + ",L100_100_logout," + ah.fq("L100_100_logout") + ",2");
     }
-    while (fjb != 1) {
+    while (frY != 1) {
       return;
     }
-    com.tencent.mm.plugin.a.b.b(false, ah.tx() + "," + getClass().getName() + ",L400_100_login," + ah.fd("L400_100_login") + ",2");
+    com.tencent.mm.plugin.a.b.b(false, ah.ty() + "," + getClass().getName() + ",L400_100_login," + ah.fq("L400_100_login") + ",2");
   }
   
   public void onResume()
   {
     super.onResume();
-    if (fjb == 0)
+    if (frY == 0)
     {
-      com.tencent.mm.plugin.a.b.b(true, ah.tx() + "," + getClass().getName() + ",L100_100_logout," + ah.fd("L100_100_logout") + ",1");
-      com.tencent.mm.plugin.a.b.kB("L100_100_logout");
+      com.tencent.mm.plugin.a.b.b(true, ah.ty() + "," + getClass().getName() + ",L100_100_logout," + ah.fq("L100_100_logout") + ",1");
+      com.tencent.mm.plugin.a.b.lk("L100_100_logout");
     }
-    while (fjb != 1) {
+    while (frY != 1) {
       return;
     }
-    com.tencent.mm.plugin.a.b.b(true, ah.tx() + "," + getClass().getName() + ",L400_100_login," + ah.fd("L400_100_login") + ",1");
-    com.tencent.mm.plugin.a.b.kB("L400_100_login");
+    com.tencent.mm.plugin.a.b.b(true, ah.ty() + "," + getClass().getName() + ",L400_100_login," + ah.fq("L400_100_login") + ",1");
+    com.tencent.mm.plugin.a.b.lk("L400_100_login");
+  }
+  
+  public void onSceneEnd(int paramInt1, int paramInt2, String paramString, final com.tencent.mm.t.j paramj)
+  {
+    v.i("MicroMsg.LoginUI", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
+    if (cka != null)
+    {
+      cka.dismiss();
+      cka = null;
+    }
+    if (paramj.getType() != 701) {
+      return;
+    }
+    ah.tF().b(701, this);
+    ava = ((r)paramj).CJ();
+    kSr.kSS = ((r)paramj).zo();
+    kSr.kSU = ((r)paramj).zn();
+    kSr.kST = ((r)paramj).CL();
+    kSr.kSV = ((r)paramj).CK();
+    if (paramInt2 == 65331)
+    {
+      geM = ((r)paramj).zb();
+      kSs = ((r)paramj).CM();
+    }
+    if ((paramInt1 == 4) && ((paramInt2 == -16) || (paramInt2 == -17))) {
+      ah.tF().a(new as(new as.a()
+      {
+        public final void a(com.tencent.mm.network.e paramAnonymouse)
+        {
+          if (paramAnonymouse == null) {
+            return;
+          }
+          paramAnonymouse = paramAnonymouse.vY();
+          int i = tEuin;
+          paramAnonymouse.i(new byte[0], i);
+        }
+      }), 0);
+    }
+    for (int i = 1;; i = 0)
+    {
+      if ((i != 0) || ((paramInt1 == 0) && (paramInt2 == 0)))
+      {
+        ah.unhold();
+        l.lf(kSr.bUU);
+        com.tencent.mm.modelsimple.d.aR(this);
+        l.a(this, new Runnable()
+        {
+          public final void run()
+          {
+            v.d("MicroMsg.LoginUI", "onSceneEnd, in runnable");
+            Intent localIntent = com.tencent.mm.plugin.a.a.cjo.ag(LoginUI.this);
+            localIntent.addFlags(67108864);
+            localIntent.putExtra("kstyle_show_bind_mobile_afterauth", ((r)paramj).CN());
+            localIntent.putExtra("kstyle_bind_wording", ((r)paramj).CO());
+            localIntent.putExtra("kstyle_bind_recommend_show", ((r)paramj).CP());
+            startActivity(localIntent);
+            finish();
+          }
+        }, false, 2);
+        com.tencent.mm.plugin.a.b.lm(ah.ty() + "," + getClass().getName() + ",R200_900_phone," + ah.fq("R200_900_phone") + ",4");
+        if (!kTe) {
+          break;
+        }
+        paramString = aa.getContext().getSharedPreferences("randomid_prefs", 4).getString("randomID", "");
+        com.tencent.mm.plugin.report.service.g.gdY.h(11930, new Object[] { paramString, Integer.valueOf(4) });
+        return;
+      }
+      if (paramInt2 == -106)
+      {
+        l.C(this, paramString);
+        return;
+      }
+      if (paramInt2 == 65319)
+      {
+        l.a(this, ((r)paramj).CI());
+        return;
+      }
+      if (paramInt2 == -30)
+      {
+        if (com.tencent.mm.protocal.c.jrz)
+        {
+          paramString = new Intent();
+          paramString.putExtra("rawUrl", ava);
+          paramString.putExtra("showShare", false);
+          paramString.putExtra("show_bottom", false);
+          paramString.putExtra("needRedirect", false);
+          paramString.putExtra("neverGetA8Key", true);
+          paramString.putExtra("hardcode_jspermission", JsapiPermissionWrapper.jrI);
+          paramString.putExtra("hardcode_general_ctrl", GeneralControlWrapper.jrF);
+          com.tencent.mm.plugin.a.a.cjo.j(paramString, this);
+          return;
+        }
+        com.tencent.mm.plugin.a.b.lm(ah.ty() + "," + getClass().getName() + ",R400_100_login," + ah.fq("R400_100_login") + ",1");
+        com.tencent.mm.ui.base.g.a(this, getString(2131233557), "", new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+        {
+          public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+          {
+            com.tencent.mm.plugin.a.b.ll("R400_100_login");
+            paramAnonymousDialogInterface = new Intent();
+            paramAnonymousDialogInterface.putExtra("regsetinfo_binduin", ebUU);
+            paramAnonymousDialogInterface.putExtra("regsetinfo_pwd", ekSQ);
+            paramAnonymousDialogInterface.putExtra("regsetinfo_ismobile", 0);
+            paramAnonymousDialogInterface.putExtra("regsetinfo_ticket", LoginUI.h(LoginUI.this));
+            paramAnonymousDialogInterface.putExtra("regsetinfo_NextControl", ((r)paramj).zd());
+            paramAnonymousDialogInterface.setClass(LoginUI.this, RegSetInfoUI.class);
+            kNN.kOg.startActivity(paramAnonymousDialogInterface);
+            com.tencent.mm.plugin.a.b.lm(ah.ty() + "," + getClass().getName() + ",R400_100_login," + ah.fq("R400_100_login") + ",2");
+          }
+        }, new DialogInterface.OnClickListener()
+        {
+          public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+          {
+            com.tencent.mm.plugin.a.b.lm(ah.ty() + "," + getClass().getName() + ",R400_100_login," + ah.fq("R400_100_login") + ",2");
+          }
+        });
+        return;
+      }
+      if (k(paramInt1, paramInt2, paramString)) {
+        break;
+      }
+      if (paramInt2 == -5)
+      {
+        Toast.makeText(this, getString(2131233547), 0).show();
+        return;
+      }
+      if (paramj.getType() == 701)
+      {
+        paramString = com.tencent.mm.f.a.dc(paramString);
+        if ((paramString != null) && (paramString.a(this, null, null))) {
+          break;
+        }
+      }
+      Toast.makeText(this, getString(2131232828, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
+      return;
+    }
   }
 }
 

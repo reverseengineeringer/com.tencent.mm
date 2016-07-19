@@ -10,7 +10,7 @@ final class MobileLoginOrForceReg$2
   
   public final void onDismiss(DialogInterface paramDialogInterface)
   {
-    MobileLoginOrForceReg.n(kyq);
+    MobileLoginOrForceReg.n(kXx);
   }
 }
 

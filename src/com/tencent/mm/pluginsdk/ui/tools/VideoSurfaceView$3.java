@@ -10,10 +10,10 @@ final class VideoSurfaceView$3
   
   public final void onCompletion(MediaPlayer paramMediaPlayer)
   {
-    if (VideoSurfaceView.e(iTc) != null)
+    if (VideoSurfaceView.e(jqo) != null)
     {
-      VideoSurfaceView.e(iTc).aA(VideoSurfaceView.g(iTc).getCurrentPosition(), VideoSurfaceView.g(iTc).getDuration());
-      VideoSurfaceView.e(iTc).lG();
+      VideoSurfaceView.e(jqo).aF(VideoSurfaceView.g(jqo).getCurrentPosition(), VideoSurfaceView.g(jqo).getDuration());
+      VideoSurfaceView.e(jqo).jQ();
     }
   }
 }

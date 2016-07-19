@@ -1,121 +1,111 @@
 package ct;
 
-import android.net.wifi.ScanResult;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import com.tencent.map.geolocation.TencentPoi;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-public final class cm
-  extends cl
+final class cm
+  implements TencentPoi
 {
-  public static final cm a = new cm(Collections.emptyList(), 0L);
-  private final List b;
-  private final long c;
+  private String a;
+  private String b;
+  private String c;
+  private double d;
+  private String e;
+  private double f;
+  private double g;
+  private String h;
   
-  public cm(List paramList, long paramLong)
+  public cm(TencentPoi paramTencentPoi)
   {
-    c = paramLong;
-    b = new ArrayList(paramList);
+    a = paramTencentPoi.getName();
+    b = paramTencentPoi.getAddress();
+    c = paramTencentPoi.getCatalog();
+    d = paramTencentPoi.getDistance();
+    e = paramTencentPoi.getUid();
+    f = paramTencentPoi.getLatitude();
+    g = paramTencentPoi.getLongitude();
+    h = paramTencentPoi.getDirection();
   }
   
-  public final List a()
+  public cm(JSONObject paramJSONObject)
   {
-    return Collections.unmodifiableList(b);
-  }
-  
-  public final boolean a(long paramLong1, long paramLong2)
-  {
-    return paramLong1 - c < paramLong2;
-  }
-  
-  public final boolean a(cm paramcm)
-  {
-    Object localObject2 = b;
-    Object localObject1 = b;
-    if ((localObject2 == null) || (localObject1 == null)) {}
-    label212:
-    label301:
-    label304:
-    for (;;)
+    try
     {
-      return false;
-      if ((((List)localObject2).size() != 0) && (((List)localObject1).size() != 0))
-      {
-        if ((localObject2 == null) || (localObject1 == null))
-        {
-          i = 0;
-          if (i != 0) {
-            break label301;
-          }
-        }
-        for (int i = 1;; i = 0)
-        {
-          if (i != 0) {
-            break label304;
-          }
-          return true;
-          int k = ((List)localObject2).size();
-          int m = ((List)localObject1).size();
-          if ((k == 0) && (m == 0))
-          {
-            i = 1;
-            break;
-          }
-          if ((k == 0) || (m == 0))
-          {
-            i = 0;
-            break;
-          }
-          if (b.a.a(localObject2, localObject1)) {
-            i = 0;
-          }
-          for (;;)
-          {
-            if ((i << 1 >= (k + m) * 0.5D) || (i >= 13))
-            {
-              i = 1;
-              break;
-              if ((((List)localObject2).size() == 0) || (((List)localObject1).size() == 0))
-              {
-                i = 0;
-              }
-              else
-              {
-                if (((List)localObject2).size() > ((List)localObject1).size()) {
-                  paramcm = (cm)localObject2;
-                }
-                for (;;)
-                {
-                  localObject1 = ((List)localObject1).iterator();
-                  int j = 0;
-                  for (;;)
-                  {
-                    i = j;
-                    if (!((Iterator)localObject1).hasNext()) {
-                      break;
-                    }
-                    localObject2 = (ScanResult)((Iterator)localObject1).next();
-                    Iterator localIterator = paramcm.iterator();
-                    if (localIterator.hasNext())
-                    {
-                      if (!nextBSSID.equals(BSSID)) {
-                        break label212;
-                      }
-                      j += 1;
-                    }
-                  }
-                  paramcm = (cm)localObject1;
-                  localObject1 = localObject2;
-                }
-              }
-            }
-          }
-          i = 0;
-          break;
-        }
+      a = paramJSONObject.getString("name");
+      b = paramJSONObject.getString("addr");
+      c = paramJSONObject.getString("catalog");
+      d = paramJSONObject.optDouble("dist");
+      e = paramJSONObject.getString("uid");
+      f = paramJSONObject.optDouble("latitude");
+      g = paramJSONObject.optDouble("longitude");
+      h = paramJSONObject.optString("direction", "");
+      if (Double.isNaN(f)) {
+        f = paramJSONObject.optDouble("pointy");
       }
+      if (Double.isNaN(g)) {
+        g = paramJSONObject.optDouble("pointx");
+      }
+      return;
     }
+    catch (JSONException paramJSONObject)
+    {
+      throw paramJSONObject;
+    }
+  }
+  
+  public final String getAddress()
+  {
+    return b;
+  }
+  
+  public final String getCatalog()
+  {
+    return c;
+  }
+  
+  public final String getDirection()
+  {
+    return h;
+  }
+  
+  public final double getDistance()
+  {
+    return d;
+  }
+  
+  public final double getLatitude()
+  {
+    return f;
+  }
+  
+  public final double getLongitude()
+  {
+    return g;
+  }
+  
+  public final String getName()
+  {
+    return a;
+  }
+  
+  public final String getUid()
+  {
+    return e;
+  }
+  
+  public final String toString()
+  {
+    StringBuilder localStringBuilder = new StringBuilder("PoiData{");
+    localStringBuilder.append("name=").append(a).append(",");
+    localStringBuilder.append("addr=").append(b).append(",");
+    localStringBuilder.append("catalog=").append(c).append(",");
+    localStringBuilder.append("dist=").append(d).append(",");
+    localStringBuilder.append("latitude=").append(f).append(",");
+    localStringBuilder.append("longitude=").append(g).append(",");
+    localStringBuilder.append("direction=").append(h).append(",");
+    localStringBuilder.append("}");
+    return localStringBuilder.toString();
   }
 }
 

@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/an/g$a;
+.implements Lcom/tencent/mm/aq/k$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2;->a(Lcom/tencent/mm/an/f;)V
+    value = Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2;->a(Lcom/tencent/mm/aq/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gBG:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2;
+.field final synthetic gIi:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 154
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2$1;->gBG:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2$1;->gIi:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,12 +36,12 @@
 
 
 # virtual methods
-.method public final ec(I)V
+.method public final eK(I)V
     .locals 5
 
     .prologue
     .line 158
-    const-string/jumbo v0, "!56@/B4Tb64lLpKwUcOR+EdWcqTX9DHwPoekDqTih72bviWMKwaxVrupIQ=="
+    const-string/jumbo v0, "MicroMsg.ChattingSightContainerView"
 
     const-string/jumbo v1, "send sight result %d"
 
@@ -57,35 +57,35 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 159
     packed-switch p1, :pswitch_data_0
 
     .line 163
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2$1;->gBG:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2$1;->gIi:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2;->gBF:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2;->gIh:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2$1;->gBG:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2$1;->gIi:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2;->gBF:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2;->gIh:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;
 
     invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0b0c78
+    const v2, 0x7f081219
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/g;->ba(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/g;->aZ(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
 
     .line 166
     :pswitch_0

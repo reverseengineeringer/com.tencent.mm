@@ -2,15 +2,15 @@ package com.tencent.mm.pluginsdk.ui.tools;
 
 public abstract interface f$a
 {
-  public abstract void Xq();
+  public abstract void Zb();
   
-  public abstract int aA(int paramInt1, int paramInt2);
+  public abstract void aE(int paramInt1, int paramInt2);
   
-  public abstract void aB(int paramInt1, int paramInt2);
+  public abstract int aF(int paramInt1, int paramInt2);
   
-  public abstract void az(int paramInt1, int paramInt2);
+  public abstract void aG(int paramInt1, int paramInt2);
   
-  public abstract void lG();
+  public abstract void jQ();
 }
 
 /* Location:

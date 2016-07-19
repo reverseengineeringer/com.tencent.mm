@@ -2,48 +2,56 @@ package com.tencent.mm.modelsimple;
 
 import com.tencent.mm.network.e;
 import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b.aly;
-import com.tencent.mm.protocal.b.ant;
-import com.tencent.mm.protocal.b.anu;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.d;
+import com.tencent.mm.platformtools.m;
+import com.tencent.mm.protocal.b.ami;
+import com.tencent.mm.protocal.b.aot;
+import com.tencent.mm.protocal.b.aou;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.d;
 
 public final class ac
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private d anM;
-  private final a anN;
+  public final a bkQ;
+  private d bkT;
   
-  public ac(String paramString)
+  public ac(String paramString1, String paramString2, ami paramami)
   {
-    a.a locala = new a.a();
-    bFa = new ant();
-    bFb = new anu();
-    uri = "/cgi-bin/micromsg-bin/sendverifyemail";
-    bEY = 108;
-    bFc = 43;
-    bFd = 1000000043;
-    anN = locala.vy();
-    anN.bEW.bFf).jhS = new aly().Cr(paramString);
+    Object localObject = new a.a();
+    byl = new aot();
+    bym = new aou();
+    uri = "/cgi-bin/micromsg-bin/newsetpasswd";
+    byj = 383;
+    byn = 180;
+    byo = 1000000180;
+    bkQ = ((a.a)localObject).vA();
+    localObject = (aot)bkQ.byh.byq;
+    dAu = be.FA(paramString1);
+    jGI = paramString2;
+    jwD = paramami;
+    v.d("MicroMsg.NetSceneSetPwd", "summersetpwd md5:%s ticket:%s, authkey:%s", new Object[] { paramString1, paramString2, be.O(m.a(paramami)) });
   }
   
   public final int a(e parame, d paramd)
   {
-    anM = paramd;
-    return a(parame, anN, this);
+    bkT = paramd;
+    return a(parame, bkQ, this);
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    anM.a(paramInt2, paramInt3, paramString, this);
+    v.d("MicroMsg.NetSceneSetPwd", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3);
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()
   {
-    return 108;
+    return 383;
   }
 }
 

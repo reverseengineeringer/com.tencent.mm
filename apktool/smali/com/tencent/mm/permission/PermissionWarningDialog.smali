@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private clm:Lcom/tencent/mm/ui/base/h;
+.field private cgp:Lcom/tencent/mm/ui/base/h;
 
 
 # direct methods
@@ -18,12 +18,12 @@
     .line 28
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog;->clm:Lcom/tencent/mm/ui/base/h;
+    iput-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog;->cgp:Lcom/tencent/mm/ui/base/h;
 
     return-void
 .end method
 
-.method private FB()V
+.method private FX()V
     .locals 6
 
     .prologue
@@ -37,11 +37,11 @@
     if-nez v0, :cond_1
 
     .line 64
-    const-string/jumbo v0, "!56@/B4Tb64lLpL0qTj+UKAbT9E1G/8lWEUtG3edpBIBqfS1enk1zHm2kg=="
+    const-string/jumbo v0, "MicroMsg.PermissionWarningDialog"
 
     const-string/jumbo v1, "Intent is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 116
     :cond_0
@@ -62,11 +62,11 @@
     if-nez v0, :cond_2
 
     .line 70
-    const-string/jumbo v0, "!56@/B4Tb64lLpL0qTj+UKAbT9E1G/8lWEUtG3edpBIBqfS1enk1zHm2kg=="
+    const-string/jumbo v0, "MicroMsg.PermissionWarningDialog"
 
     const-string/jumbo v1, "invalid params"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -95,7 +95,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 79
     const-string/jumbo v2, "warning_content"
@@ -104,10 +104,10 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/base/h$a;->Gz(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/base/h$a;->IN(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 80
-    const v0, 0x7f0b08aa
+    const v0, 0x7f0800db
 
     new-instance v2, Lcom/tencent/mm/permission/PermissionWarningDialog$1;
 
@@ -116,19 +116,19 @@
     invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/ui/base/h$a;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 88
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog;->clm:Lcom/tencent/mm/ui/base/h;
+    iput-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog;->cgp:Lcom/tencent/mm/ui/base/h;
 
     .line 89
-    iget-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog;->clm:Lcom/tencent/mm/ui/base/h;
+    iget-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog;->cgp:Lcom/tencent/mm/ui/base/h;
 
     invoke-virtual {v0, v5}, Lcom/tencent/mm/ui/base/h;->setCanceledOnTouchOutside(Z)V
 
     .line 90
-    iget-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog;->clm:Lcom/tencent/mm/ui/base/h;
+    iget-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog;->cgp:Lcom/tencent/mm/ui/base/h;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->show()V
 
@@ -160,21 +160,21 @@
     move-result v0
 
     .line 95
-    const v3, 0x7f0b08b4
+    const v3, 0x7f080105
 
-    invoke-virtual {v1, v3}, Lcom/tencent/mm/ui/base/h$a;->qz(I)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v1, v3}, Lcom/tencent/mm/ui/base/h$a;->ss(I)Lcom/tencent/mm/ui/base/h$a;
 
     .line 96
-    const v3, 0x7f0b08b2
+    const v3, 0x7f080100
 
     invoke-virtual {p0, v3}, Lcom/tencent/mm/permission/PermissionWarningDialog;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Lcom/tencent/mm/ui/base/h$a;->Gz(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v1, v3}, Lcom/tencent/mm/ui/base/h$a;->IN(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 97
-    const v3, 0x7f0b0de4
+    const v3, 0x7f080099
 
     invoke-virtual {p0, v3}, Lcom/tencent/mm/permission/PermissionWarningDialog;->getString(I)Ljava/lang/String;
 
@@ -187,7 +187,7 @@
     invoke-virtual {v1, v3, v4}, Lcom/tencent/mm/ui/base/h$a;->b(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 104
-    const v3, 0x7f0b08b3
+    const v3, 0x7f0800fa
 
     invoke-virtual {p0, v3}, Lcom/tencent/mm/permission/PermissionWarningDialog;->getString(I)Ljava/lang/String;
 
@@ -200,19 +200,19 @@
     invoke-virtual {v1, v3, v4}, Lcom/tencent/mm/ui/base/h$a;->a(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 112
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog;->clm:Lcom/tencent/mm/ui/base/h;
+    iput-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog;->cgp:Lcom/tencent/mm/ui/base/h;
 
     .line 113
-    iget-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog;->clm:Lcom/tencent/mm/ui/base/h;
+    iget-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog;->cgp:Lcom/tencent/mm/ui/base/h;
 
     invoke-virtual {v0, v5}, Lcom/tencent/mm/ui/base/h;->setCanceledOnTouchOutside(Z)V
 
     .line 114
-    iget-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog;->clm:Lcom/tencent/mm/ui/base/h;
+    iget-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog;->cgp:Lcom/tencent/mm/ui/base/h;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->show()V
 
@@ -259,7 +259,7 @@
     return-void
 .end method
 
-.method public static j(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+.method public static h(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
     .prologue
@@ -314,7 +314,7 @@
     invoke-virtual {p0, v0}, Lcom/tencent/mm/permission/PermissionWarningDialog;->requestWindowFeature(I)Z
 
     .line 35
-    invoke-direct {p0}, Lcom/tencent/mm/permission/PermissionWarningDialog;->FB()V
+    invoke-direct {p0}, Lcom/tencent/mm/permission/PermissionWarningDialog;->FX()V
 
     .line 36
     return-void
@@ -331,23 +331,23 @@
     invoke-virtual {p0, p1}, Lcom/tencent/mm/permission/PermissionWarningDialog;->setIntent(Landroid/content/Intent;)V
 
     .line 49
-    iget-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog;->clm:Lcom/tencent/mm/ui/base/h;
+    iget-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog;->cgp:Lcom/tencent/mm/ui/base/h;
 
     if-eqz v0, :cond_0
 
     .line 50
-    iget-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog;->clm:Lcom/tencent/mm/ui/base/h;
+    iget-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog;->cgp:Lcom/tencent/mm/ui/base/h;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->dismiss()V
 
     .line 51
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog;->clm:Lcom/tencent/mm/ui/base/h;
+    iput-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog;->cgp:Lcom/tencent/mm/ui/base/h;
 
     .line 53
     :cond_0
-    invoke-direct {p0}, Lcom/tencent/mm/permission/PermissionWarningDialog;->FB()V
+    invoke-direct {p0}, Lcom/tencent/mm/permission/PermissionWarningDialog;->FX()V
 
     .line 54
     return-void

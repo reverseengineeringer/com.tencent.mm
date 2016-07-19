@@ -1,21 +1,20 @@
 package com.tencent.mm.ui.chatting;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.tencent.mm.ui.base.o;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.tencent.mm.e.a.bj;
+import com.tencent.mm.sdk.c.a;
 
 final class cn$3
-  implements View.OnClickListener
+  implements DialogInterface.OnClickListener
 {
   cn$3(cn paramcn) {}
   
-  public final void onClick(View paramView)
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((kWm.cWm != null) && (kWm.cWm.isShowing()))
-    {
-      cn.a(kWm);
-      kWm.cWm.dismiss();
-    }
+    paramDialogInterface = new bj();
+    agd.age = false;
+    a.kug.y(paramDialogInterface);
   }
 }
 

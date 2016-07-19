@@ -17,14 +17,14 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0458
+    const v1, 0x7f03032c
 
     invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v3
 
     .line 30
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUy()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aZC()Z
 
     move-result v0
 
@@ -37,7 +37,7 @@
 
     .line 36
     :goto_0
-    const v0, 0x7f070de0
+    const v0, 0x7f1009fc
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -46,7 +46,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 37
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v4
 
@@ -65,7 +65,7 @@
 
     .line 41
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUx()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aZB()Z
 
     move-result v1
 
@@ -80,7 +80,7 @@
     :cond_1
     new-instance v1, Landroid/app/Dialog;
 
-    const v0, 0x7f06019d
+    const v0, 0x7f0c026b
 
     invoke-direct {v1, p0, v0}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
 
@@ -98,7 +98,7 @@
     invoke-virtual {v1, v0}, Landroid/app/Dialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
     .line 60
-    const v0, 0x7f070de2
+    const v0, 0x7f1009fe
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -114,7 +114,7 @@
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 78
-    const v0, 0x7f070dde
+    const v0, 0x7f1009fa
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
     move-result v2
 
     .line 80
-    invoke-static {v0, v2, v2, v2, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->c(Landroid/view/View;IIII)V
+    invoke-static {v0, v2, v2, v2, v2}, Lcom/tencent/mm/sdk/platformtools/be;->c(Landroid/view/View;IIII)V
 
     .line 81
     new-instance v2, Lcom/tencent/mm/plugin/sns/lucky/ui/b$3;
@@ -143,7 +143,7 @@
 
     .line 32
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUz()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aZD()Z
 
     move-result v0
 

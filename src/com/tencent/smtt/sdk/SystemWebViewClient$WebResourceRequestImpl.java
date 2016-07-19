@@ -1,55 +1,46 @@
 package com.tencent.smtt.sdk;
 
 import android.net.Uri;
-import com.tencent.smtt.export.external.interfaces.WebResourceRequest;
 import java.util.Map;
 
-class SystemWebViewClient$WebResourceRequestImpl
-  implements WebResourceRequest
+class SystemWebViewClient$WebResourceRequestimpl
+  implements com.tencent.smtt.export.external.interfaces.WebResourceRequest
 {
-  private boolean hasUserGesture;
-  private boolean isMainFrame;
-  private String method;
-  private Map requestHeaders;
-  private String url;
+  android.webkit.WebResourceRequest mWebResourceRequest;
   
-  public SystemWebViewClient$WebResourceRequestImpl(SystemWebViewClient paramSystemWebViewClient, String paramString1, boolean paramBoolean1, boolean paramBoolean2, String paramString2, Map paramMap)
+  SystemWebViewClient$WebResourceRequestimpl(android.webkit.WebResourceRequest paramWebResourceRequest)
   {
-    url = paramString1;
-    isMainFrame = paramBoolean1;
-    hasUserGesture = paramBoolean2;
-    method = paramString2;
-    requestHeaders = paramMap;
+    mWebResourceRequest = paramWebResourceRequest;
   }
   
   public String getMethod()
   {
-    return method;
+    return mWebResourceRequest.getMethod();
   }
   
-  public Map getRequestHeaders()
+  public Map<String, String> getRequestHeaders()
   {
-    return requestHeaders;
+    return mWebResourceRequest.getRequestHeaders();
   }
   
   public Uri getUrl()
   {
-    return Uri.parse(url);
+    return mWebResourceRequest.getUrl();
   }
   
   public boolean hasGesture()
   {
-    return hasUserGesture;
+    return mWebResourceRequest.hasGesture();
   }
   
   public boolean isForMainFrame()
   {
-    return isMainFrame;
+    return mWebResourceRequest.isForMainFrame();
   }
 }
 
 /* Location:
- * Qualified Name:     com.tencent.smtt.sdk.SystemWebViewClient.WebResourceRequestImpl
+ * Qualified Name:     com.tencent.smtt.sdk.SystemWebViewClient.WebResourceRequestimpl
  * Java Class Version: 6 (50.0)
  * JD-Core Version:    0.7.1
  */

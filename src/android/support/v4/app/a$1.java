@@ -10,16 +10,17 @@ final class a$1
   
   public final void run()
   {
-    int[] arrayOfInt = new int[am.length];
-    PackageManager localPackageManager = an.getPackageManager();
-    String str = an.getPackageName();
-    int j = am.length;
+    int[] arrayOfInt = new int[N.length];
+    PackageManager localPackageManager = O.getPackageManager();
+    String str = O.getPackageName();
+    int j = N.length;
     int i = 0;
     while (i < j)
     {
-      arrayOfInt[i] = localPackageManager.checkPermission(am[i], str);
+      arrayOfInt[i] = localPackageManager.checkPermission(N[i], str);
       i += 1;
     }
+    ((a.a)O).onRequestPermissionsResult(P, N, arrayOfInt);
   }
 }
 

@@ -1,59 +1,56 @@
 package com.tencent.mm.console;
 
 import android.content.Context;
-import com.tencent.mm.d.a.fv;
+import com.tencent.mm.e.a.gc;
 import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.tinker.loader.a.e;
 
 public final class d
   extends b.a
 {
-  public final boolean aG(Context paramContext)
+  public final boolean aD(Context paramContext)
   {
-    if ("apply".equals(bvb[1])) {
-      if (bvb.length < 3)
+    if ("apply".equals(ajd[1])) {
+      if (ajd.length < 3)
       {
         paramContext = "/data/local/tmp/test.apk";
-        u.d("!44@/B4Tb64lLpJLD/TSzHAWHSg0mjVetlQM76FJFsOG0sU=", "hotpatch test from %s", new Object[] { paramContext });
-        localObject = new fv();
-        aAN.aAS = paramContext;
-        a.jUF.j((com.tencent.mm.sdk.c.b)localObject);
+        v.d("MicroMsg.CommandTestHotPatches", "hotpatch test from %s", new Object[] { paramContext });
+        localObject = new gc();
+        amW.anb = paramContext;
+        a.kug.y((b)localObject);
       }
     }
     do
     {
       return true;
-      paramContext = bvb[2];
+      paramContext = ajd[2];
       break;
-      if ("info".equals(bvb[1]))
+      if ("info".equals(ajd[1]))
       {
-        u.d("!44@/B4Tb64lLpJLD/TSzHAWHSg0mjVetlQM76FJFsOG0sU=", "hotpatch current class loader=%s", new Object[] { getClass().getClassLoader() });
+        v.d("MicroMsg.CommandTestHotPatches", "hotpatch current class loader=%s", new Object[] { getClass().getClassLoader() });
         return true;
       }
-      if ("clear".equals(bvb[1]))
+      if ("clear".equals(ajd[1]))
       {
-        u.d("!44@/B4Tb64lLpJLD/TSzHAWHSg0mjVetlQM76FJFsOG0sU=", "clear hotpatch");
-        paramContext = new fv();
-        aAN.atF = 1;
-        a.jUF.j(paramContext);
+        v.d("MicroMsg.CommandTestHotPatches", "clear hotpatch");
+        paramContext = new gc();
+        amW.afn = 1;
+        a.kug.y(paramContext);
         return true;
       }
-    } while (!"check".equals(bvb[1]));
-    String str = bvb[2];
-    Object localObject = str;
-    if (!str.startsWith("/")) {
-      localObject = "/data/data/com.tencent.mm/app_dex/" + str;
+    } while (!"check".equals(ajd[1]));
+    Object localObject = ajd[2];
+    paramContext = (Context)localObject;
+    if (!((String)localObject).startsWith("/")) {
+      paramContext = "/data/data/com.tencent.mm/app_dex/" + (String)localObject;
     }
-    u.i("!44@/B4Tb64lLpJLD/TSzHAWHSg0mjVetlQM76FJFsOG0sU=", "hotpatch check patch file %s", new Object[] { localObject });
-    u.i("!44@/B4Tb64lLpJLD/TSzHAWHSg0mjVetlQM76FJFsOG0sU=", "-------------------------------------------------------------------------------------");
-    paramContext = com.tencent.mm.compatible.loader.b.ax(paramContext);
-    if ((paramContext != null) && (paramContext.length == 3)) {
-      u.i("!44@/B4Tb64lLpJLD/TSzHAWHSg0mjVetlQM76FJFsOG0sU=", "hotpatch check patch info(%s, %s, %s)", new Object[] { paramContext[0], paramContext[1], paramContext[2] });
-    }
-    u.i("!44@/B4Tb64lLpJLD/TSzHAWHSg0mjVetlQM76FJFsOG0sU=", "-------------------------------------------------------------------------------------");
-    u.i("!44@/B4Tb64lLpJLD/TSzHAWHSg0mjVetlQM76FJFsOG0sU=", "hotpatch check signature, passed=%b", new Object[] { Boolean.valueOf(com.tencent.mm.compatible.loader.b.db((String)localObject)) });
-    u.i("!44@/B4Tb64lLpJLD/TSzHAWHSg0mjVetlQM76FJFsOG0sU=", "hotpatch check patch version, passed=%b", new Object[] { Boolean.valueOf(com.tencent.mm.compatible.loader.b.dc((String)localObject)) });
-    u.i("!44@/B4Tb64lLpJLD/TSzHAWHSg0mjVetlQM76FJFsOG0sU=", "-------------------------------------------------------------------------------------");
+    v.i("MicroMsg.CommandTestHotPatches", "hotpatch check patch file %s", new Object[] { paramContext });
+    v.i("MicroMsg.CommandTestHotPatches", "-------------------------------------------------------------------------------------");
+    v.i("MicroMsg.CommandTestHotPatches", "-------------------------------------------------------------------------------------");
+    v.i("MicroMsg.CommandTestHotPatches", "hotpatch check md5, passed=%b", new Object[] { Boolean.valueOf(e.KP(paramContext)) });
+    v.i("MicroMsg.CommandTestHotPatches", "-------------------------------------------------------------------------------------");
     return true;
   }
 }

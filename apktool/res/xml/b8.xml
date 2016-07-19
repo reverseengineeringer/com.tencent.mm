@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory />
+    <com.tencent.mm.plugin.setting.ui.setting.SettingsAboutMMHeaderPreference android:layout="@layout/a87" android:key="settings_about_mm_header" />
+    <PreferenceCategory />
+    <Preference android:layout="@layout/yk" android:title="@string/cet" android:key="settings_market_ratings" />
+    <IconPreference android:title="@string/cja" android:key="funtion_about_wechat" />
+    <IconPreference android:title="@string/ciq" android:key="settings_update" />
+    <IconPreference android:title="@string/ci3" android:key="settings_system_notice" />
+    <Preference android:layout="@layout/yk" android:title="@string/cdt" android:key="settings_feedback" />
+    <Preference android:layout="@layout/yk" android:title="@string/ch0" android:key="settings_report" />
+    <IconSummaryPreference android:title="@string/axi" android:key="funtion_update" />
+    <IconPreference android:title="@string/axh" android:key="funtion_check_update" />
+    <PreferenceCategory />
+    <com.tencent.mm.plugin.setting.ui.setting.SettingsAboutMMFooterPreference android:layout="@layout/a86" android:key="settings_about_mm_footer" />
+    <PreferenceCategory />
+</PreferenceScreen>

@@ -21,32 +21,28 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import com.tencent.mm.ag.b.a;
-import com.tencent.mm.d.a.nm;
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.modelmulti.l;
-import com.tencent.mm.modelmulti.n;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.aj.b.a;
+import com.tencent.mm.e.a.nz;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.modelmulti.o;
+import com.tencent.mm.platformtools.s;
 import com.tencent.mm.pluginsdk.i.a;
 import com.tencent.mm.pluginsdk.i.e;
 import com.tencent.mm.pluginsdk.ui.ProfileEditPhoneNumberView;
 import com.tencent.mm.pluginsdk.ui.ProfileEditPhoneNumberView.a;
-import com.tencent.mm.protocal.b.adu;
-import com.tencent.mm.protocal.b.aee;
-import com.tencent.mm.protocal.b.aho;
-import com.tencent.mm.protocal.b.ahp;
-import com.tencent.mm.r.m;
+import com.tencent.mm.protocal.b.aen;
+import com.tencent.mm.protocal.b.aex;
+import com.tencent.mm.protocal.b.aif;
+import com.tencent.mm.protocal.b.aig;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.ExifHelper;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.an;
-import com.tencent.mm.storage.ao;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ap;
+import com.tencent.mm.storage.aq;
 import com.tencent.mm.storage.q;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.MMClearEditText;
 import com.tencent.mm.ui.base.MMTagPanel;
-import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.g.c;
 import com.tencent.mm.ui.widget.MMEditText;
 import java.io.File;
@@ -57,58 +53,58 @@ import java.util.List;
 
 public class ContactRemarkInfoModUI
   extends MMActivity
-  implements com.tencent.mm.r.d
+  implements com.tencent.mm.t.d
 {
-  private String aSO;
-  private String ajj;
-  private String bYj;
-  private com.tencent.mm.storage.k cId;
-  private ProgressDialog cWw;
-  private String eIx;
-  private int fvF;
-  private String iPa;
-  private TextView ljA;
-  private View ljB;
-  private Button ljC;
-  private View ljD;
-  private String ljE;
-  private boolean ljF = false;
-  private boolean ljG = false;
-  private boolean ljH = false;
-  private boolean ljI = false;
-  private boolean ljJ = false;
-  private a ljK = new a((byte)0);
-  private MMTagPanel ljL;
-  private TextView ljM;
-  private ScrollView ljN;
-  private List ljO;
-  private ProfileEditPhoneNumberView ljP;
-  private String ljQ;
-  private String ljR;
-  private String ljS;
-  private com.tencent.mm.sdk.h.j.b ljT = new com.tencent.mm.sdk.h.j.b()
+  private String UZ;
+  private String aFx;
+  private String bRS;
+  private com.tencent.mm.storage.k cFh;
+  private ProgressDialog cUM;
+  private String eQm;
+  private int fEK;
+  private String jmh;
+  private MMClearEditText lJC;
+  private TextView lJD;
+  private MMEditText lJE;
+  private TextView lJF;
+  private TextView lJG;
+  private TextView lJH;
+  private TextView lJI;
+  private ImageView lJJ;
+  private ImageView lJK;
+  private TextView lJL;
+  private View lJM;
+  private Button lJN;
+  private View lJO;
+  private String lJP;
+  private boolean lJQ = false;
+  private boolean lJR = false;
+  private boolean lJS = false;
+  private boolean lJT = false;
+  private boolean lJU = false;
+  private a lJV = new a((byte)0);
+  private MMTagPanel lJW;
+  private TextView lJX;
+  private ScrollView lJY;
+  private List<String> lJZ;
+  private ProfileEditPhoneNumberView lKa;
+  private String lKb;
+  private String lKc;
+  private String lKd;
+  private com.tencent.mm.sdk.h.j.b lKe = new com.tencent.mm.sdk.h.j.b()
   {
     public final void a(int paramAnonymousInt, com.tencent.mm.sdk.h.j paramAnonymousj, Object paramAnonymousObject)
     {
-      u.d("!44@9DU/RFsdGl+78IVsLr7e0lB3zxHTejPIMP7oYqhJXgY=", "cpan onNotifyChange");
+      v.d("MiroMsg.ContactRemarkInfoModUI", "cpan onNotifyChange");
       ContactRemarkInfoModUI.d(ContactRemarkInfoModUI.this);
     }
   };
-  private boolean ljU = false;
-  private MMClearEditText ljr;
-  private TextView ljs;
-  private MMEditText ljt;
-  private TextView lju;
-  private TextView ljv;
-  private TextView ljw;
-  private TextView ljx;
-  private ImageView ljy;
-  private ImageView ljz;
+  private boolean lKf = false;
   private String username;
   
-  private void Hg(String paramString)
+  private void Jv(String paramString)
   {
-    if (t.kz(paramString)) {}
+    if (s.kf(paramString)) {}
     do
     {
       do
@@ -118,22 +114,22 @@ public class ContactRemarkInfoModUI
       } while (!paramString.exists());
       if (paramString.length() > 204800L)
       {
-        g.y(this, getString(2131428404), null);
+        com.tencent.mm.ui.base.g.b(this, getString(2131231903), null, true);
         return;
       }
-      float f = com.tencent.mm.aw.a.getDensity(this);
-      paramString = BackwardSupportUtil.b.b(ljE, f);
+      float f = com.tencent.mm.az.a.getDensity(this);
+      paramString = BackwardSupportUtil.b.b(lJP, f);
     } while (paramString == null);
-    ljw.setVisibility(8);
-    ljz.setVisibility(8);
-    ljy.setVisibility(0);
-    ljy.setImageBitmap(paramString);
-    ljF = true;
+    lJH.setVisibility(8);
+    lJK.setVisibility(8);
+    lJJ.setVisibility(0);
+    lJJ.setImageBitmap(paramString);
+    lJQ = true;
   }
   
-  private String Hh(String paramString)
+  private String Jw(String paramString)
   {
-    if (!com.tencent.mm.a.e.ax(paramString)) {
+    if (!com.tencent.mm.a.e.aB(paramString)) {
       paramString = null;
     }
     int i;
@@ -143,48 +139,48 @@ public class ContactRemarkInfoModUI
       do
       {
         return paramString;
-        i = BackwardSupportUtil.ExifHelper.kq(paramString);
+        i = BackwardSupportUtil.ExifHelper.EM(paramString);
         localObject = new StringBuilder();
-        com.tencent.mm.aj.c.BE();
-        localObject = com.tencent.mm.aj.c.it(username) + ".tmp";
+        com.tencent.mm.am.c.BI();
+        localObject = com.tencent.mm.am.c.iK(username) + ".tmp";
         if (!com.tencent.mm.sdk.platformtools.d.a(paramString, 960, 960, Bitmap.CompressFormat.JPEG, 70, (String)localObject))
         {
-          u.e("!44@9DU/RFsdGl+78IVsLr7e0lB3zxHTejPIMP7oYqhJXgY=", "createThumbNail big pic fail");
+          v.e("MiroMsg.ContactRemarkInfoModUI", "createThumbNail big pic fail");
           return null;
         }
         paramString = (String)localObject;
       } while (i == 0);
       paramString = (String)localObject;
     } while (com.tencent.mm.sdk.platformtools.d.a((String)localObject, i, Bitmap.CompressFormat.JPEG, 70, (String)localObject));
-    u.e("!44@9DU/RFsdGl+78IVsLr7e0lB3zxHTejPIMP7oYqhJXgY=", "rotate big pic fail");
+    v.e("MiroMsg.ContactRemarkInfoModUI", "rotate big pic fail");
     return null;
   }
   
-  private void Op()
+  private void PA()
   {
-    ProfileEditPhoneNumberView localProfileEditPhoneNumberView = ljP;
-    Object localObject = localProfileEditPhoneNumberView.getPhoneNumberList();
+    ProfileEditPhoneNumberView localProfileEditPhoneNumberView = lKa;
+    Object localObject = localProfileEditPhoneNumberView.aVO();
     boolean bool;
     if (((ArrayList)localObject).isEmpty())
     {
-      if (iHo == null) {
+      if (jej == null) {
         break label151;
       }
       bool = true;
     }
     for (;;)
     {
-      ljU = bool;
-      if ((!bhh()) && (!bhi()) && (!hW(false)) && (!ljU)) {
+      lKf = bool;
+      if ((!bmQ()) && (!bmR()) && (!iz(false)) && (!lKf)) {
         break;
       }
-      bC(true);
+      bp(true);
       return;
-      if (iHo == null)
+      if (jej == null)
       {
         bool = true;
       }
-      else if (((ArrayList)localObject).size() != iHo.length)
+      else if (((ArrayList)localObject).size() != jej.length)
       {
         bool = true;
       }
@@ -197,7 +193,7 @@ public class ContactRemarkInfoModUI
           if (!((Iterator)localObject).hasNext()) {
             break label151;
           }
-          if (!((String)((Iterator)localObject).next()).equals(iHo[i]))
+          if (!((String)((Iterator)localObject).next()).equals(jej[i]))
           {
             bool = true;
             break;
@@ -208,189 +204,189 @@ public class ContactRemarkInfoModUI
         bool = false;
       }
     }
-    bC(false);
+    bp(false);
   }
   
-  private void P(String paramString1, String paramString2, String paramString3)
+  private void R(String paramString1, String paramString2, String paramString3)
   {
-    com.tencent.mm.storage.k localk = com.tencent.mm.model.ah.tD().rq().Ep(username);
-    if ((localk != null) && ((int)bvi > 0) && (com.tencent.mm.h.a.ce(field_type)))
+    com.tencent.mm.storage.k localk = com.tencent.mm.model.ah.tE().rr().GD(username);
+    if ((localk != null) && ((int)bjS > 0) && (com.tencent.mm.i.a.cy(field_type)))
     {
-      cId.bF(paramString1);
-      cId.bX(paramString2);
-      cId.bY(paramString3);
-      cId.qw();
-      com.tencent.mm.model.ah.tD().rq().L(cId);
-      com.tencent.mm.sdk.c.a.jUF.j(new nm());
+      cFh.bA(paramString1);
+      cFh.bW(paramString2);
+      cFh.bX(paramString3);
+      cFh.oY();
+      com.tencent.mm.model.ah.tE().rr().L(cFh);
+      com.tencent.mm.sdk.c.a.kug.y(new nz());
     }
   }
   
-  private void bhc()
+  private void bmL()
   {
-    ljs.setFocusableInTouchMode(true);
-    ljs.requestFocus();
-    ljr.clearFocus();
-    ljt.clearFocus();
-    ljP.clearFocus();
-    age();
+    lJD.setFocusableInTouchMode(true);
+    lJD.requestFocus();
+    lJC.clearFocus();
+    lJE.clearFocus();
+    lKa.clearFocus();
+    aiI();
   }
   
-  private void bhd()
+  private void bmM()
   {
-    Bitmap localBitmap = com.tencent.mm.aj.c.BE().iw(username);
+    Bitmap localBitmap = com.tencent.mm.am.c.BI().iN(username);
     if (localBitmap != null)
     {
-      ljw.setVisibility(8);
-      ljz.setVisibility(8);
-      ljy.setVisibility(0);
-      ljy.setImageBitmap(localBitmap);
+      lJH.setVisibility(8);
+      lJK.setVisibility(8);
+      lJJ.setVisibility(0);
+      lJJ.setImageBitmap(localBitmap);
     }
-    ljF = true;
+    lJQ = true;
   }
   
-  private boolean bhe()
+  private boolean bmN()
   {
-    String str = ljr.getText().toString();
-    u.i("!44@9DU/RFsdGl+78IVsLr7e0lB3zxHTejPIMP7oYqhJXgY=", "Set New RemarkName : " + str + ", Report kvStat, addContactScene = " + fvF);
-    h.fUJ.g(10448, new Object[] { Integer.valueOf(fvF) });
-    switch (cId.awK)
+    String str = lJC.getText().toString();
+    v.i("MiroMsg.ContactRemarkInfoModUI", "Set New RemarkName : " + str + ", Report kvStat, addContactScene = " + fEK);
+    com.tencent.mm.plugin.report.service.g.gdY.h(10448, new Object[] { Integer.valueOf(fEK) });
+    switch (cFh.aiz)
     {
     }
     Object localObject;
     do
     {
-      an localan = com.tencent.mm.model.ah.tD().rr().FH(cId.field_username);
-      if (localan != null)
+      ap localap = com.tencent.mm.model.ah.tE().rs().HY(cFh.field_username);
+      if (localap != null)
       {
-        localObject = localan;
-        if (!t.kz(field_encryptUsername)) {}
+        localObject = localap;
+        if (!s.kf(field_encryptUsername)) {}
       }
       else
       {
-        localObject = localan;
-        if (!t.kz(cId.field_encryptUsername)) {
-          localObject = com.tencent.mm.model.ah.tD().rr().FH(cId.field_encryptUsername);
+        localObject = localap;
+        if (!s.kf(cFh.field_encryptUsername)) {
+          localObject = com.tencent.mm.model.ah.tE().rs().HY(cFh.field_encryptUsername);
         }
       }
-      if ((localObject != null) && (!t.kz(field_encryptUsername))) {
-        com.tencent.mm.model.ah.tD().rr().FI(field_encryptUsername);
+      if ((localObject != null) && (!s.kf(field_encryptUsername))) {
+        com.tencent.mm.model.ah.tE().rs().HZ(field_encryptUsername);
       }
-      if (hW(false)) {
+      if (iz(false)) {
         break;
       }
-      u.i("!44@9DU/RFsdGl+78IVsLr7e0lB3zxHTejPIMP7oYqhJXgY=", "remarkNameChanged", new Object[] { Boolean.valueOf(hW(false)) });
+      v.i("MiroMsg.ContactRemarkInfoModUI", "remarkNameChanged", new Object[] { Boolean.valueOf(iz(false)) });
       return false;
-      localObject = com.tencent.mm.modelfriend.ah.zq().hq(cId.field_username);
-    } while ((localObject == null) || (t.kz(((com.tencent.mm.modelfriend.b)localObject).yj())));
-    if (t.kz(str)) {
-      ((com.tencent.mm.modelfriend.b)localObject).ys();
+      localObject = com.tencent.mm.modelfriend.ah.zD().hI(cFh.field_username);
+    } while ((localObject == null) || (s.kf(((com.tencent.mm.modelfriend.b)localObject).yv())));
+    if (s.kf(str)) {
+      ((com.tencent.mm.modelfriend.b)localObject).yE();
     }
     for (;;)
     {
-      com.tencent.mm.modelfriend.ah.zq().a(((com.tencent.mm.modelfriend.b)localObject).yh(), (com.tencent.mm.modelfriend.b)localObject);
+      com.tencent.mm.modelfriend.ah.zD().a(((com.tencent.mm.modelfriend.b)localObject).yt(), (com.tencent.mm.modelfriend.b)localObject);
       break;
-      ((com.tencent.mm.modelfriend.b)localObject).yr();
+      ((com.tencent.mm.modelfriend.b)localObject).yD();
     }
-    ajj = str;
-    u.i("!44@9DU/RFsdGl+78IVsLr7e0lB3zxHTejPIMP7oYqhJXgY=", "usernamne %s operationSetRemark %s", new Object[] { cId.field_username, str });
-    com.tencent.mm.model.i.b(cId, str);
+    UZ = str;
+    v.i("MiroMsg.ContactRemarkInfoModUI", "usernamne %s operationSetRemark %s", new Object[] { cFh.field_username, str });
+    com.tencent.mm.model.i.b(cFh, str);
     return true;
   }
   
-  private boolean bhf()
+  private boolean bmO()
   {
-    if (!bhh()) {
+    if (!bmQ()) {
       return false;
     }
-    String str = ljt.getText().toString();
-    aSO = str;
-    adu localadu = new adu();
-    jAL = username;
-    eia = str;
-    com.tencent.mm.model.ah.tD().rp().b(new b.a(54, localadu));
+    String str = lJE.getText().toString();
+    aFx = str;
+    aen localaen = new aen();
+    jZy = username;
+    elX = str;
+    com.tencent.mm.model.ah.tE().rq().b(new b.a(54, localaen));
     return true;
   }
   
-  private void bhg()
+  private void bmP()
   {
-    if (!ljU) {}
+    if (!lKf) {}
     Object localObject3;
     do
     {
       return;
-      localObject2 = new aee();
-      jAL = username;
-      localObject3 = new ahp();
-      localObject1 = ljP.getPhoneNumberList();
-      fUi = ((ArrayList)localObject1).size();
-      jEu = new LinkedList();
+      localObject2 = new aex();
+      jZy = username;
+      localObject3 = new aig();
+      localObject1 = lKa.aVO();
+      cmq = ((ArrayList)localObject1).size();
+      kcX = new LinkedList();
       Iterator localIterator = ((ArrayList)localObject1).iterator();
       while (localIterator.hasNext())
       {
         String str = (String)localIterator.next();
-        aho localaho = new aho();
-        jEt = str;
-        jEu.add(localaho);
+        aif localaif = new aif();
+        kcW = str;
+        kcX.add(localaif);
       }
-      jAJ = ((ahp)localObject3);
-      com.tencent.mm.model.ah.tD().rp().b(new b.a(60, (com.tencent.mm.at.a)localObject2));
-      localObject2 = com.tencent.mm.model.ah.tD().rq().Ep(username);
-    } while ((localObject2 == null) || ((int)bvi <= 0) || (!com.tencent.mm.h.a.ce(field_type)));
+      jZw = ((aig)localObject3);
+      com.tencent.mm.model.ah.tE().rq().b(new b.a(60, (com.tencent.mm.ax.a)localObject2));
+      localObject2 = com.tencent.mm.model.ah.tE().rr().GD(username);
+    } while ((localObject2 == null) || ((int)bjS <= 0) || (!com.tencent.mm.i.a.cy(field_type)));
     Object localObject2 = ((ArrayList)localObject1).iterator();
     for (Object localObject1 = ""; ((Iterator)localObject2).hasNext(); localObject1 = (String)localObject1 + ",")
     {
       localObject3 = (String)((Iterator)localObject2).next();
       localObject1 = (String)localObject1 + (String)localObject3;
     }
-    cId.cc((String)localObject1);
-    com.tencent.mm.model.ah.tD().rq().L(cId);
+    cFh.cc((String)localObject1);
+    com.tencent.mm.model.ah.tE().rr().L(cFh);
   }
   
-  private boolean bhh()
+  private boolean bmQ()
   {
-    String str = ljt.getText().toString();
-    return ((aSO == null) || (!aSO.equals(str))) && ((!t.kz(aSO)) || (!t.kz(str)));
+    String str = lJE.getText().toString();
+    return ((aFx == null) || (!aFx.equals(str))) && ((!s.kf(aFx)) || (!s.kf(str)));
   }
   
-  private boolean bhi()
+  private boolean bmR()
   {
-    return (!t.kz(ljE)) || (ljJ);
+    return (!s.kf(lJP)) || (lJU);
   }
   
-  private void bhj()
+  private void bmS()
   {
-    ljJ = true;
-    ljz.setVisibility(8);
-    ljw.setVisibility(0);
-    ljy.setVisibility(8);
-    ljy.setImageBitmap(null);
-    Op();
+    lJU = true;
+    lJK.setVisibility(8);
+    lJH.setVisibility(0);
+    lJJ.setVisibility(8);
+    lJJ.setImageBitmap(null);
+    PA();
   }
   
-  private void bhk()
+  private void bmT()
   {
-    cId = com.tencent.mm.model.ah.tD().rq().Ep(username);
-    eIx = cId.field_contactLabelIds;
-    ljO = i.a.aOW().qj(eIx);
-    if (!t.kz(eIx))
+    cFh = com.tencent.mm.model.ah.tE().rr().GD(username);
+    eQm = cFh.field_contactLabelIds;
+    lJZ = i.a.aTy().rz(eQm);
+    if (!s.kf(eQm))
     {
-      ljL.setVisibility(0);
-      ljM.setVisibility(8);
-      ljL.a(ljO, ljO);
+      lJW.setVisibility(0);
+      lJX.setVisibility(8);
+      lJW.a(lJZ, lJZ);
       return;
     }
-    ljL.setVisibility(8);
-    ljM.setVisibility(0);
+    lJW.setVisibility(8);
+    lJX.setVisibility(0);
   }
   
   private void goBack()
   {
-    boolean bool1 = bhi();
-    boolean bool2 = hW(true);
-    boolean bool3 = bhh();
+    boolean bool1 = bmR();
+    boolean bool2 = iz(true);
+    boolean bool3 = bmQ();
     if ((bool1) || (bool2) || (bool3))
     {
-      g.a(this, getString(2131428381), null, getString(2131428382), getString(2131428383), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+      com.tencent.mm.ui.base.g.b(this, getString(2131232039), null, getString(2131232041), getString(2131232040), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
       {
         public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
         {
@@ -408,18 +404,18 @@ public class ContactRemarkInfoModUI
     finish();
   }
   
-  private boolean hW(boolean paramBoolean)
+  private boolean iz(boolean paramBoolean)
   {
-    String str = ljr.getText().toString();
+    String str = lJC.getText().toString();
     if (!paramBoolean) {
-      if (((ajj != null) && (ajj.equals(str))) || ((t.kz(ajj)) && (t.kz(str)))) {}
+      if (((UZ != null) && (UZ.equals(str))) || ((s.kf(UZ)) && (s.kf(str)))) {}
     }
     for (;;)
     {
       return true;
       return false;
-      if (((ajj == null) || (!ajj.equals(str))) && ((!t.kz(ajj)) || (!t.kz(str)))) {}
-      for (int i = 1; (i == 0) || ((str != null) && (str.equals(cId.field_nickname))); i = 0) {
+      if (((UZ == null) || (!UZ.equals(str))) && ((!s.kf(UZ)) || (!s.kf(str)))) {}
+      for (int i = 1; (i == 0) || ((str != null) && (str.equals(cFh.field_nickname))); i = 0) {
         return false;
       }
     }
@@ -427,86 +423,86 @@ public class ContactRemarkInfoModUI
   
   private void k(boolean paramBoolean, int paramInt)
   {
-    if (ljH)
+    if (lJS)
     {
-      lju.setVisibility(8);
-      if ((paramBoolean) && (t.kz(aSO)))
+      lJF.setVisibility(8);
+      if ((paramBoolean) && (s.kf(aFx)))
       {
-        ljv.setVisibility(0);
-        ljD.setVisibility(8);
+        lJG.setVisibility(0);
+        lJO.setVisibility(8);
       }
       for (;;)
       {
-        ljr.setVisibility(0);
+        lJC.setVisibility(0);
         return;
-        if (paramInt == 2131165332)
+        if (paramInt == 2131756375)
         {
-          ljv.setVisibility(8);
-          ljD.setVisibility(0);
+          lJG.setVisibility(8);
+          lJO.setVisibility(0);
         }
       }
     }
-    lju.setVisibility(0);
-    ljv.setVisibility(0);
-    ljr.setVisibility(8);
-    ljD.setVisibility(8);
+    lJF.setVisibility(0);
+    lJG.setVisibility(0);
+    lJC.setVisibility(8);
+    lJO.setVisibility(8);
   }
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    ljs = ((TextView)findViewById(2131165319));
-    lju = ((TextView)findViewById(2131165321));
-    ljv = ((TextView)findViewById(2131165332));
-    ljw = ((TextView)findViewById(2131165333));
-    ljr = ((MMClearEditText)findViewById(2131165320));
-    ljt = ((MMEditText)findViewById(2131165330));
-    ljy = ((ImageView)findViewById(2131165335));
-    ljz = ((ImageView)findViewById(2131165334));
-    ljx = ((TextView)findViewById(2131165331));
-    ljD = findViewById(2131165329);
-    ljP = ((ProfileEditPhoneNumberView)findViewById(2131165328));
-    ljP.dsm = cId;
-    final Object localObject = ljP;
-    String str1 = ljQ;
-    String str2 = ljR;
-    iHm = str1;
-    iHn = str2;
-    ((ProfileEditPhoneNumberView)localObject).ant();
-    ljP.iHr = new ProfileEditPhoneNumberView.a()
+    lJD = ((TextView)findViewById(2131756362));
+    lJF = ((TextView)findViewById(2131756364));
+    lJG = ((TextView)findViewById(2131756375));
+    lJH = ((TextView)findViewById(2131756376));
+    lJC = ((MMClearEditText)findViewById(2131756363));
+    lJE = ((MMEditText)findViewById(2131756373));
+    lJJ = ((ImageView)findViewById(2131756378));
+    lJK = ((ImageView)findViewById(2131756377));
+    lJI = ((TextView)findViewById(2131756374));
+    lJO = findViewById(2131756372);
+    lKa = ((ProfileEditPhoneNumberView)findViewById(2131756371));
+    lKa.dsC = cFh;
+    final Object localObject = lKa;
+    String str1 = lKb;
+    String str2 = lKc;
+    jeh = str1;
+    jei = str2;
+    ((ProfileEditPhoneNumberView)localObject).aqk();
+    lKa.jem = new ProfileEditPhoneNumberView.a()
     {
-      public final void KH()
+      public final void Lt()
       {
         ContactRemarkInfoModUI.b(ContactRemarkInfoModUI.this);
       }
       
-      public final void aRe()
+      public final void aVQ()
       {
         com.tencent.mm.model.i.p(ContactRemarkInfoModUI.e(ContactRemarkInfoModUI.this));
-        l.Be().dC(7);
+        com.tencent.mm.modelmulti.m.Bd().eh(7);
       }
     };
-    ljL = ((MMTagPanel)findViewById(2131165327));
-    ljL.setPanelClickable(false);
-    ljN = ((ScrollView)findViewById(2131165318));
-    ljM = ((TextView)findViewById(2131165326));
-    ljM.setText(2131428452);
-    ljL.setOnClickListener(ljK);
-    ljM.setOnClickListener(ljK);
-    qb(2131428413);
+    lJW = ((MMTagPanel)findViewById(2131756370));
+    lJW.fAD = false;
+    lJY = ((ScrollView)findViewById(2131756361));
+    lJX = ((TextView)findViewById(2131756369));
+    lJX.setText(2131233861);
+    lJW.setOnClickListener(lJV);
+    lJX.setOnClickListener(lJV);
+    rR(2131231990);
     label612:
     int i;
-    if (!t.kz(ajj))
+    if (!s.kf(UZ))
     {
-      ljr.setText(com.tencent.mm.pluginsdk.ui.d.e.a(this, t.ky(ajj), ljr.getTextSize()));
-      lju.setText(com.tencent.mm.pluginsdk.ui.d.e.a(this, t.ky(ajj), lju.getTextSize()));
-      localObject = com.tencent.mm.pluginsdk.ui.d.e.a(this, t.ky(aSO), ljv.getTextSize());
-      ljt.setText((CharSequence)localObject);
-      if (!t.kz(aSO))
+      lJC.setText(com.tencent.mm.pluginsdk.ui.d.e.a(this, s.li(UZ), lJC.getTextSize()));
+      lJF.setText(com.tencent.mm.pluginsdk.ui.d.e.a(this, s.li(UZ), lJF.getTextSize()));
+      localObject = com.tencent.mm.pluginsdk.ui.d.e.a(this, s.li(aFx), lJG.getTextSize());
+      lJE.setText((CharSequence)localObject);
+      if (!s.kf(aFx))
       {
-        ljv.setText(com.tencent.mm.pluginsdk.ui.d.e.a(this, t.ky(aSO), ljv.getTextSize()));
-        ljv.setTextColor(getResources().getColor(2131231135));
+        lJG.setText(com.tencent.mm.pluginsdk.ui.d.e.a(this, s.li(aFx), lJG.getTextSize()));
+        lJG.setTextColor(getResources().getColor(2131689841));
       }
-      lju.setOnClickListener(new View.OnClickListener()
+      lJF.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
@@ -514,10 +510,10 @@ public class ContactRemarkInfoModUI
           ContactRemarkInfoModUI.a(ContactRemarkInfoModUI.this, false, paramAnonymousView.getId());
           ContactRemarkInfoModUI.g(ContactRemarkInfoModUI.this).performClick();
           ContactRemarkInfoModUI.g(ContactRemarkInfoModUI.this).requestFocus();
-          apz();
+          asv();
         }
       });
-      ljv.setOnClickListener(new View.OnClickListener()
+      lJG.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
@@ -525,10 +521,10 @@ public class ContactRemarkInfoModUI
           ContactRemarkInfoModUI.a(ContactRemarkInfoModUI.this, false, paramAnonymousView.getId());
           ContactRemarkInfoModUI.h(ContactRemarkInfoModUI.this).performClick();
           ContactRemarkInfoModUI.h(ContactRemarkInfoModUI.this).requestFocus();
-          apz();
+          asv();
         }
       });
-      ljr.addTextChangedListener(new TextWatcher()
+      lJC.addTextChangedListener(new TextWatcher()
       {
         public final void afterTextChanged(Editable paramAnonymousEditable)
         {
@@ -539,32 +535,32 @@ public class ContactRemarkInfoModUI
         
         public final void onTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
       });
-      ljx.setText(com.tencent.mm.ui.tools.i.ai(800, ljt.getEditableText().toString()));
-      ljt.setOnFocusChangeListener(new View.OnFocusChangeListener()
+      lJI.setText(com.tencent.mm.ui.tools.i.as(800, lJE.getEditableText().toString()));
+      lJE.setOnFocusChangeListener(new View.OnFocusChangeListener()
       {
         public final void onFocusChange(View paramAnonymousView, boolean paramAnonymousBoolean)
         {
           if (!paramAnonymousBoolean)
           {
-            ContactRemarkInfoModUI.i(ContactRemarkInfoModUI.this).setBackgroundResource(2130970418);
+            ContactRemarkInfoModUI.i(ContactRemarkInfoModUI.this).setBackgroundResource(2130838515);
             return;
           }
-          ContactRemarkInfoModUI.i(ContactRemarkInfoModUI.this).setBackgroundResource(2130970444);
+          ContactRemarkInfoModUI.i(ContactRemarkInfoModUI.this).setBackgroundResource(2130838514);
         }
       });
-      ljt.addTextChangedListener(new b((byte)0));
-      if (t.kz(bYj)) {
+      lJE.addTextChangedListener(new b((byte)0));
+      if (s.kf(bRS)) {
         break label889;
       }
-      ljw.setVisibility(8);
-      ljy.setVisibility(0);
-      com.tencent.mm.aj.c.BE();
-      if (com.tencent.mm.aj.c.iu(username)) {
+      lJH.setVisibility(8);
+      lJJ.setVisibility(0);
+      com.tencent.mm.am.c.BI();
+      if (com.tencent.mm.am.c.iL(username)) {
         break label882;
       }
-      com.tencent.mm.aj.c.BE().a(username, bYj, new com.tencent.mm.aj.c.a()
+      com.tencent.mm.am.c.BI().a(username, bRS, new com.tencent.mm.am.c.a()
       {
-        public final void ba(final boolean paramAnonymousBoolean)
+        public final void aG(final boolean paramAnonymousBoolean)
         {
           ContactRemarkInfoModUI.w(ContactRemarkInfoModUI.this).post(new Runnable()
           {
@@ -572,7 +568,7 @@ public class ContactRemarkInfoModUI
             {
               if (!paramAnonymousBoolean)
               {
-                g.ba(ContactRemarkInfoModUI.this, getString(2131427526));
+                com.tencent.mm.ui.base.g.aZ(ContactRemarkInfoModUI.this, getString(2131230907));
                 ContactRemarkInfoModUI.u(ContactRemarkInfoModUI.this).setVisibility(0);
                 ContactRemarkInfoModUI.v(ContactRemarkInfoModUI.this).setVisibility(8);
                 ContactRemarkInfoModUI.w(ContactRemarkInfoModUI.this).setVisibility(8);
@@ -583,7 +579,7 @@ public class ContactRemarkInfoModUI
           });
         }
       });
-      ljy.setOnClickListener(new View.OnClickListener()
+      lJJ.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
@@ -593,10 +589,10 @@ public class ContactRemarkInfoModUI
           ContactRemarkInfoModUI.k(ContactRemarkInfoModUI.this);
           Intent localIntent = new Intent(ContactRemarkInfoModUI.this, ContactRemarkImagePreviewUI.class);
           localIntent.putExtra("Contact_User", ContactRemarkInfoModUI.l(ContactRemarkInfoModUI.this));
-          if ((!t.kz(ContactRemarkInfoModUI.m(ContactRemarkInfoModUI.this))) && (!ContactRemarkInfoModUI.n(ContactRemarkInfoModUI.this))) {
-            com.tencent.mm.aj.c.BE();
+          if ((!s.kf(ContactRemarkInfoModUI.m(ContactRemarkInfoModUI.this))) && (!ContactRemarkInfoModUI.n(ContactRemarkInfoModUI.this))) {
+            com.tencent.mm.am.c.BI();
           }
-          for (paramAnonymousView = com.tencent.mm.aj.c.it(ContactRemarkInfoModUI.l(ContactRemarkInfoModUI.this));; paramAnonymousView = ContactRemarkInfoModUI.o(ContactRemarkInfoModUI.this))
+          for (paramAnonymousView = com.tencent.mm.am.c.iK(ContactRemarkInfoModUI.l(ContactRemarkInfoModUI.this));; paramAnonymousView = ContactRemarkInfoModUI.o(ContactRemarkInfoModUI.this))
           {
             localIntent.putExtra("remark_image_path", paramAnonymousView);
             localIntent.putExtra("view_temp_remark_image", ContactRemarkInfoModUI.n(ContactRemarkInfoModUI.this));
@@ -605,35 +601,35 @@ public class ContactRemarkInfoModUI
           }
         }
       });
-      ljw.setOnClickListener(new View.OnClickListener()
+      lJH.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
-          if ((t.kz(ContactRemarkInfoModUI.m(ContactRemarkInfoModUI.this))) || (ContactRemarkInfoModUI.p(ContactRemarkInfoModUI.this)))
+          if ((s.kf(ContactRemarkInfoModUI.m(ContactRemarkInfoModUI.this))) || (ContactRemarkInfoModUI.p(ContactRemarkInfoModUI.this)))
           {
             ContactRemarkInfoModUI.a(ContactRemarkInfoModUI.this, false);
             ContactRemarkInfoModUI.k(ContactRemarkInfoModUI.this);
           }
         }
       });
-      localObject = com.tencent.mm.modelfriend.ah.zq().hq(cId.field_username);
-      if ((localObject != null) && (!t.kz(((com.tencent.mm.modelfriend.b)localObject).yj())) && (!((com.tencent.mm.modelfriend.b)localObject).yj().equals(ljr.getText().toString()))) {
+      localObject = com.tencent.mm.modelfriend.ah.zD().hI(cFh.field_username);
+      if ((localObject != null) && (!s.kf(((com.tencent.mm.modelfriend.b)localObject).yv())) && (!((com.tencent.mm.modelfriend.b)localObject).yv().equals(lJC.getText().toString()))) {
         break label909;
       }
       i = 0;
       label692:
-      if ((i == 0) && (fvF == 14) && (!t.kz(iPa)) && (!iPa.equals(ljr.getText().toString()))) {
+      if ((i == 0) && (fEK == 14) && (!s.kf(jmh)) && (!jmh.equals(lJC.getText().toString()))) {
         break label1002;
       }
       label735:
-      a(0, getString(2131430896), new MenuItem.OnMenuItemClickListener()
+      a(0, getString(2131230931), new MenuItem.OnMenuItemClickListener()
       {
         public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
         {
           ContactRemarkInfoModUI.q(ContactRemarkInfoModUI.this);
           return false;
         }
-      }, com.tencent.mm.ui.j.b.kpJ);
+      }, com.tencent.mm.ui.j.b.kOO);
       b(new MenuItem.OnMenuItemClickListener()
       {
         public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
@@ -642,14 +638,14 @@ public class ContactRemarkInfoModUI
           return true;
         }
       });
-      if (!t.kz(ajj)) {
+      if (!s.kf(UZ)) {
         break label1106;
       }
-      bC(true);
+      bp(true);
     }
     for (;;)
     {
-      ljz.setOnClickListener(new View.OnClickListener()
+      lJK.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
@@ -657,36 +653,36 @@ public class ContactRemarkInfoModUI
           ContactRemarkInfoModUI.k(ContactRemarkInfoModUI.this);
         }
       });
-      if (!ljI)
+      if (!lJT)
       {
-        ljH = true;
+        lJS = true;
         k(true, -1);
       }
-      bhc();
+      bmL();
       return;
-      ljr.setText(com.tencent.mm.pluginsdk.ui.d.e.a(this, t.ky(cId.qy()), ljr.getTextSize()));
-      lju.setText(com.tencent.mm.pluginsdk.ui.d.e.a(this, t.ky(cId.qy()), ljr.getTextSize()));
+      lJC.setText(com.tencent.mm.pluginsdk.ui.d.e.a(this, s.li(cFh.pb()), lJC.getTextSize()));
+      lJF.setText(com.tencent.mm.pluginsdk.ui.d.e.a(this, s.li(cFh.pb()), lJC.getTextSize()));
       break;
       label882:
-      bhd();
+      bmM();
       break label612;
       label889:
-      ljw.setVisibility(0);
-      ljy.setVisibility(8);
+      lJH.setVisibility(0);
+      lJJ.setVisibility(8);
       break label612;
       label909:
-      ljA = ((TextView)findViewById(2131165323));
-      ljB = findViewById(2131165322);
-      ljC = ((Button)findViewById(2131165324));
-      ljB.setVisibility(0);
-      ljA.setText(getString(2131428407, new Object[] { ((com.tencent.mm.modelfriend.b)localObject).yj() }));
-      ljC.setOnClickListener(new View.OnClickListener()
+      lJL = ((TextView)findViewById(2131756366));
+      lJM = findViewById(2131756365);
+      lJN = ((Button)findViewById(2131756367));
+      lJM.setVisibility(0);
+      lJL.setText(getString(2131232062, new Object[] { ((com.tencent.mm.modelfriend.b)localObject).yv() }));
+      lJN.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
           ContactRemarkInfoModUI.f(ContactRemarkInfoModUI.this);
           ContactRemarkInfoModUI.a(ContactRemarkInfoModUI.this, true, -1);
-          ContactRemarkInfoModUI.g(ContactRemarkInfoModUI.this).setText(localObject.yj());
+          ContactRemarkInfoModUI.g(ContactRemarkInfoModUI.this).setText(localObject.yv());
           ContactRemarkInfoModUI.g(ContactRemarkInfoModUI.this).setSelection(ContactRemarkInfoModUI.g(ContactRemarkInfoModUI.this).getText().length());
           ContactRemarkInfoModUI.z(ContactRemarkInfoModUI.this).setVisibility(8);
         }
@@ -694,84 +690,38 @@ public class ContactRemarkInfoModUI
       i = 1;
       break label692;
       label1002:
-      ljA = ((TextView)findViewById(2131165323));
-      ljB = findViewById(2131165322);
-      ljC = ((Button)findViewById(2131165324));
-      ljB.setVisibility(0);
-      ljA.setText(com.tencent.mm.pluginsdk.ui.d.e.a(this, t.ky(getString(2131428408, new Object[] { iPa })), ljA.getTextSize()));
-      ljC.setOnClickListener(new View.OnClickListener()
+      lJL = ((TextView)findViewById(2131756366));
+      lJM = findViewById(2131756365);
+      lJN = ((Button)findViewById(2131756367));
+      lJM.setVisibility(0);
+      lJL.setText(com.tencent.mm.pluginsdk.ui.d.e.a(this, s.li(getString(2131232061, new Object[] { jmh })), lJL.getTextSize()));
+      lJN.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
           ContactRemarkInfoModUI.f(ContactRemarkInfoModUI.this);
           ContactRemarkInfoModUI.a(ContactRemarkInfoModUI.this, true, -1);
-          ContactRemarkInfoModUI.g(ContactRemarkInfoModUI.this).setText(com.tencent.mm.pluginsdk.ui.d.e.a(ContactRemarkInfoModUI.this, t.ky(ContactRemarkInfoModUI.A(ContactRemarkInfoModUI.this)), ContactRemarkInfoModUI.g(ContactRemarkInfoModUI.this).getTextSize()));
+          ContactRemarkInfoModUI.g(ContactRemarkInfoModUI.this).setText(com.tencent.mm.pluginsdk.ui.d.e.a(ContactRemarkInfoModUI.this, s.li(ContactRemarkInfoModUI.A(ContactRemarkInfoModUI.this)), ContactRemarkInfoModUI.g(ContactRemarkInfoModUI.this).getTextSize()));
           ContactRemarkInfoModUI.g(ContactRemarkInfoModUI.this).setSelection(ContactRemarkInfoModUI.g(ContactRemarkInfoModUI.this).getText().length());
           ContactRemarkInfoModUI.z(ContactRemarkInfoModUI.this).setVisibility(8);
         }
       });
       break label735;
       label1106:
-      bC(false);
-    }
-  }
-  
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
-  {
-    u.i("!44@9DU/RFsdGl+78IVsLr7e0lB3zxHTejPIMP7oYqhJXgY=", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
-    if (cWw != null)
-    {
-      cWw.dismiss();
-      cWw = null;
-    }
-    if ((paramInt1 != 0) || (paramInt2 != 0))
-    {
-      g.y(this, getString(2131427527), null);
-      return;
-    }
-    if (paramj.getType() == 575)
-    {
-      paramString = new File(ljE);
-      if (paramString.exists())
-      {
-        com.tencent.mm.aj.c.BE();
-        paramString.renameTo(new File(com.tencent.mm.aj.c.it(username)));
-      }
-      paramString = bYj;
-      if (!t.kz(paramString)) {
-        bYj = paramString;
-      }
-    }
-    for (;;)
-    {
-      bhe();
-      bhf();
-      bhg();
-      P(ajj, aSO, bYj);
-      finish();
-      return;
-      if (paramj.getType() == 576)
-      {
-        ljE = null;
-        bYj = null;
-        ljF = false;
-        cId = com.tencent.mm.model.ah.tD().rq().Ep(username);
-        cId.bY("");
-        com.tencent.mm.model.ah.tD().rq().a(username, cId);
-      }
+      bp(false);
     }
   }
   
   protected final int getLayoutId()
   {
-    return 2131361815;
+    return 2130903399;
   }
   
   public void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
   {
-    u.i("!44@9DU/RFsdGl+78IVsLr7e0lB3zxHTejPIMP7oYqhJXgY=", "onAcvityResult requestCode:%d, resultCode:%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    v.i("MiroMsg.ContactRemarkInfoModUI", "onAcvityResult requestCode:%d, resultCode:%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
     if (paramIntent == null) {
-      u.e("!44@9DU/RFsdGl+78IVsLr7e0lB3zxHTejPIMP7oYqhJXgY=", "data shouldnot be null");
+      v.e("MiroMsg.ContactRemarkInfoModUI", "data shouldnot be null");
     }
     do
     {
@@ -785,60 +735,65 @@ public class ContactRemarkInfoModUI
           default: 
             return;
           case 100: 
-            paramIntent = com.tencent.mm.pluginsdk.ui.tools.k.a(getApplicationContext(), paramIntent, com.tencent.mm.model.ah.tD().rx());
+            paramIntent = com.tencent.mm.pluginsdk.ui.tools.k.a(getApplicationContext(), paramIntent, com.tencent.mm.model.ah.tE().rz());
           }
         } while (paramIntent == null);
-        ljE = Hh(paramIntent);
-        Hg(ljE);
-        ljG = true;
-        ljJ = false;
-        Op();
+        lJP = Jw(paramIntent);
+        Jv(lJP);
+        lJR = true;
+        lJU = false;
+        PA();
         return;
-        paramIntent = com.tencent.mm.ui.tools.a.b(getApplicationContext(), paramIntent, com.tencent.mm.model.ah.tD().rx());
+        paramIntent = com.tencent.mm.ui.tools.a.b(getApplicationContext(), paramIntent, com.tencent.mm.model.ah.tE().rz());
       } while (paramIntent == null);
-      ljE = Hh(paramIntent);
-      Hg(ljE);
-      ljG = true;
-      ljJ = false;
-      Op();
+      lJP = Jw(paramIntent);
+      Jv(lJP);
+      lJR = true;
+      lJU = false;
+      PA();
       return;
     } while (!paramIntent.getBooleanExtra("response_delete", false));
-    bhj();
+    bmS();
     return;
-    bC(paramIntent.getBooleanExtra("hasLableChange", false));
+    if ((iz(true)) || (bmQ()) || (bmR()) || (paramIntent.getBooleanExtra("hasLableChange", false)))
+    {
+      bp(true);
+      return;
+    }
+    bp(false);
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    com.tencent.mm.model.ah.tE().a(575, this);
-    com.tencent.mm.model.ah.tE().a(576, this);
-    fvF = getIntent().getIntExtra("Contact_Scene", 9);
-    iPa = getIntent().getStringExtra("Contact_RoomNickname");
-    ljI = getIntent().getBooleanExtra("view_mode", false);
-    ljS = getIntent().getStringExtra("contact_auto_app_phone_from_chatting");
-    ljQ = getIntent().getStringExtra("contact_phone_number_by_md5");
-    ljR = getIntent().getStringExtra("contact_phone_number_list");
+    com.tencent.mm.model.ah.tF().a(575, this);
+    com.tencent.mm.model.ah.tF().a(576, this);
+    fEK = getIntent().getIntExtra("Contact_Scene", 9);
+    jmh = getIntent().getStringExtra("Contact_RoomNickname");
+    lJT = getIntent().getBooleanExtra("view_mode", false);
+    lKd = getIntent().getStringExtra("contact_auto_app_phone_from_chatting");
+    lKb = getIntent().getStringExtra("contact_phone_number_by_md5");
+    lKc = getIntent().getStringExtra("contact_phone_number_list");
     username = getIntent().getStringExtra("Contact_User");
-    if (t.kz(username))
+    if (s.kf(username))
     {
       finish();
       return;
     }
-    cId = com.tencent.mm.model.ah.tD().rq().Ep(username);
-    ajj = cId.field_conRemark;
-    aSO = cId.aSO;
-    bYj = cId.aSP;
-    eIx = cId.field_contactLabelIds;
-    ljO = i.a.aOW().qj(eIx);
-    Gb();
-    Op();
+    cFh = com.tencent.mm.model.ah.tE().rr().GD(username);
+    UZ = cFh.field_conRemark;
+    aFx = cFh.aFx;
+    bRS = cFh.aFy;
+    eQm = cFh.field_contactLabelIds;
+    lJZ = i.a.aTy().rz(eQm);
+    Gy();
+    PA();
   }
   
   public void onDestroy()
   {
-    com.tencent.mm.model.ah.tE().b(575, this);
-    com.tencent.mm.model.ah.tE().b(576, this);
+    com.tencent.mm.model.ah.tF().b(575, this);
+    com.tencent.mm.model.ah.tF().b(576, this);
     super.onDestroy();
   }
   
@@ -854,15 +809,61 @@ public class ContactRemarkInfoModUI
   
   protected void onPause()
   {
-    com.tencent.mm.model.ah.tD().rq().b(ljT);
+    com.tencent.mm.model.ah.tE().rr().b(lKe);
     super.onPause();
   }
   
   public void onResume()
   {
     super.onResume();
-    com.tencent.mm.model.ah.tD().rq().a(ljT);
-    bhk();
+    com.tencent.mm.model.ah.tE().rr().a(lKe);
+    bmT();
+  }
+  
+  public void onSceneEnd(int paramInt1, int paramInt2, String paramString, com.tencent.mm.t.j paramj)
+  {
+    v.i("MiroMsg.ContactRemarkInfoModUI", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
+    if (cUM != null)
+    {
+      cUM.dismiss();
+      cUM = null;
+    }
+    if ((paramInt1 != 0) || (paramInt2 != 0))
+    {
+      com.tencent.mm.ui.base.g.b(this, getString(2131230906), null, true);
+      return;
+    }
+    if (paramj.getType() == 575)
+    {
+      paramString = new File(lJP);
+      if (paramString.exists())
+      {
+        com.tencent.mm.am.c.BI();
+        paramString.renameTo(new File(com.tencent.mm.am.c.iK(username)));
+      }
+      paramString = bRS;
+      if (!s.kf(paramString)) {
+        bRS = paramString;
+      }
+    }
+    for (;;)
+    {
+      bmN();
+      bmO();
+      bmP();
+      R(UZ, aFx, bRS);
+      finish();
+      return;
+      if (paramj.getType() == 576)
+      {
+        lJP = null;
+        bRS = null;
+        lJQ = false;
+        cFh = com.tencent.mm.model.ah.tE().rr().GD(username);
+        cFh.bX("");
+        com.tencent.mm.model.ah.tE().rr().a(username, cFh);
+      }
+    }
   }
   
   private final class a
@@ -879,19 +880,19 @@ public class ContactRemarkInfoModUI
   private final class b
     implements TextWatcher
   {
-    private int gjm = 800;
-    private String ljY = "";
+    private int gtH = 800;
+    private String lKj = "";
     
     private b() {}
     
     public final void afterTextChanged(Editable paramEditable)
     {
-      gjm = com.tencent.mm.ui.tools.i.ai(800, paramEditable.toString());
-      if (gjm < 0) {
-        gjm = 0;
+      gtH = com.tencent.mm.ui.tools.i.as(800, paramEditable.toString());
+      if (gtH < 0) {
+        gtH = 0;
       }
       if (ContactRemarkInfoModUI.a(ContactRemarkInfoModUI.this) != null) {
-        ContactRemarkInfoModUI.a(ContactRemarkInfoModUI.this).setText(gjm);
+        ContactRemarkInfoModUI.a(ContactRemarkInfoModUI.this).setText(gtH);
       }
       ContactRemarkInfoModUI.b(ContactRemarkInfoModUI.this);
     }

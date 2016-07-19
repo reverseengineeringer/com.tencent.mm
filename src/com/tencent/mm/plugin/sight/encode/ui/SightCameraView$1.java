@@ -2,32 +2,32 @@ package com.tencent.mm.plugin.sight.encode.ui;
 
 import com.tencent.mm.plugin.sight.encode.a.b;
 import com.tencent.mm.plugin.sight.encode.a.b.b;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SightCameraView$1
-  implements af.a
+  implements ah.a
 {
   SightCameraView$1(SightCameraView paramSightCameraView) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    float f = (float)gEp.gEd.awp() / 6500.0F;
-    if ((Float.compare(f, 0.0F) <= 0) && (System.currentTimeMillis() - SightCameraView.a(gEp) > 20000L))
+    float f = (float)gKQ.gKD.ayN() / gKQ.gKK;
+    if ((Float.compare(f, 0.0F) <= 0) && (System.currentTimeMillis() - SightCameraView.a(gKQ) > 20000L))
     {
-      u.e("!44@/B4Tb64lLpJusIoUV0UaqA9/77JaWY6wqEv+d4AfPg0=", "ERROR record duration, %dms !!!", new Object[] { Long.valueOf(20000L) });
-      gEp.awA();
+      v.e("MicroMsg.SightCameraView", "ERROR record duration, %dms !!!", new Object[] { Long.valueOf(20000L) });
+      gKQ.ayZ();
       return false;
     }
-    if ((Float.compare(f, 1.0F) > 0) && (gEp.gEd.awq() == b.b.gzM))
+    if ((Float.compare(f, 1.0F) > 0) && (gKQ.gKD.ayO() == b.b.gGo))
     {
-      gEp.gEd.awo();
-      SightCameraView.b(gEp);
+      gKQ.gKD.ayM();
+      SightCameraView.b(gKQ);
     }
     for (;;)
     {
       return true;
-      gEp.x(f);
+      gKQ.x(f);
     }
   }
 }

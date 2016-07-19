@@ -7,7 +7,7 @@ import java.util.Set;
 
 public final class b
 {
-  public static String T(Map paramMap)
+  public static <K, V> String T(Map<K, V> paramMap)
   {
     if (paramMap == null) {
       return "";

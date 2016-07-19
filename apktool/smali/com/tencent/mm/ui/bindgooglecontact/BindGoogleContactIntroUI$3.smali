@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;->Gb()V
+    value = Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kMI:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
+.field final synthetic llX:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 136
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$3;->kMI:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$3;->llX:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 140
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$3;->kMI:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$3;->llX:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;->finish()V
 

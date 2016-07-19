@@ -2,30 +2,30 @@ package com.tencent.mm.modelmulti;
 
 import com.tencent.mm.compatible.d.p;
 import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b;
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.h.d;
-import com.tencent.mm.protocal.t.a;
-import com.tencent.mm.protocal.t.b;
+import com.tencent.mm.protocal.c;
+import com.tencent.mm.protocal.k.c;
+import com.tencent.mm.protocal.k.d;
+import com.tencent.mm.protocal.w.a;
+import com.tencent.mm.protocal.w.b;
 
 public final class b$a
   implements o
 {
-  private final t.a bUR = new t.a();
-  private final t.b bUS;
-  private final boolean bUT;
+  private final w.a bOs = new w.a();
+  private final w.b bOt;
+  private final boolean bOu;
   int uin;
   
   public b$a()
   {
-    bUS = new t.b();
-    bUT = false;
+    bOt = new w.b();
+    bOu = false;
   }
   
-  public b$a(t.b paramb)
+  public b$a(w.b paramb)
   {
-    bUS = paramb;
-    bUT = true;
+    bOt = paramb;
+    bOu = true;
   }
   
   public final int getType()
@@ -38,26 +38,26 @@ public final class b$a
     return "/cgi-bin/micromsg-bin/newsync";
   }
   
-  public final h.d tX()
+  public final k.d tY()
   {
-    return bUS;
+    return bOt;
   }
   
-  public final h.c vA()
+  public final k.c vC()
   {
-    bUR.iUH = p.ox();
-    bUR.iUG = b.bwR;
-    bUR.iUF = b.iUf;
-    bUR.ba(uin);
-    return bUR;
+    bOs.jse = p.mN();
+    bOs.jsd = c.boS;
+    bOs.jsc = c.jry;
+    bOs.bq(uin);
+    return bOs;
   }
   
-  public final boolean vB()
+  public final boolean vD()
   {
     return false;
   }
   
-  public final int vx()
+  public final int vz()
   {
     return 0;
   }

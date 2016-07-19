@@ -15,11 +15,11 @@
 
 
 # virtual methods
-.method public abstract aOZ()I
+.method public abstract aTB()I
 .end method
 
-.method public abstract aPa()[Ljava/lang/String;
+.method public abstract aTC()[Ljava/lang/String;
 .end method
 
-.method public abstract aPb()Lcom/tencent/mm/protocal/b/we;
+.method public abstract aTD()Lcom/tencent/mm/protocal/b/wp;
 .end method

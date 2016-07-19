@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+.field final synthetic lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 390
-    iput-object p1, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$2;->lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$2;->lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

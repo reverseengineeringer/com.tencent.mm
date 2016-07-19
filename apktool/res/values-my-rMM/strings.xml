@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">Android Wear app အတွက် %1$s သည် အဆင့်မြှင့်မွမ်းမံမှုတစ်ခု လိုအပ်၏။</string>
+    <string name="b">"Android Wear app  အား အဆင့်မြှင့်မွမ်းမံထားခြင်းမရှိပါက %1$s သည် အလုပ်လုပ်မည် မဟုတ်ပါ။"</string>
+    <string name="c">အန်ဒရွိုက် ဆောင်စရာကို မွမ်းမံရန်</string>
+    <string name="d">%1$s သည် လက်ရှိအချိန်တွင် မရှိသေးသော Google Play ဝန်ဆောင်မှုများအား လိုအပ်သည်။ အကူအညီရယူရန်အတွက် ဆော့ဖ်ဝဲရေးသူအား ကျေးဇူးပြု၍ ဆက်သွယ်ပါ။</string>
+    <string name="e">Google ပလေး ၀န်ဆောင်မှုများ ဖွင့်ရန်</string>
+    <string name="f">Google Play ဝန်ဆောင်မှုများ မဖွင့်ထားပါက %1$s အလုပ်လုပ်မည် မဟုတ်ပါ။</string>
+    <string name="g">Google ပလေး ၀န်ဆောင်မှုများ ဖွင့်ရန်</string>
+    <string name="h">%1$s က တောင်းဆိုခဲ့သည်</string>
+    <string name="i">Google ပလေး ဝန်ဆောင်မှုများကို ရယူရန်</string>
+    <string name="j">သင့်ဖုန်းတွင် ပျောက်နေသော၊ Google Play ဝန်ဆောင်မှုများ မရှိပါက %1$s အလုပ်လုပ်မည် မဟုတ်ပါ။</string>
+    <string name="k">သင့်တက်ဘလက်တွင် ပျောက်နေသော၊ Google Play ဝန်ဆောင်မှုများ မရှိပါက %1$s အလုပ်လုပ်မည် မဟုတ်ပါ။</string>
+    <string name="l">Google ပလေး ဝန်ဆောင်မှုများကို ရယူပါ။</string>
+    <string name="m">ဤကိရိယာမှာ ဖေါ်ပြပါ အကောင့်မရှိပါ။ ကျေးဇူးပြု၍ အခြား အကောင့်ကို ရွေးပါ။</string>
+    <string name="n">မမှန်သည့် အကောင့်</string>
+    <string name="o">အပလီကေးှရင်း တစ်ခု အတွက် Google ပလေး ဝန်ဆောင်မှုကို ဖွင့်ပေးရန် လိုအပ်သည်။</string>
+    <string name="p">Google ပလေး ဝန်ဆောင်မှုများသို့ ဆက်သွယ်ရန် ဒေတာ ချိတ်ဆက်မှု လိုအပ်သည်။</string>
+    <string name="q">ကွန်ရက် အမှား</string>
+    <string name="r">အပလီကေးရှင်း တစ်ခု အတွက် Google ပလေး ဝန်ဆောင်မှုကို မွမ်းမံပေးရန် လိုသည်။</string>
+    <string name="s">Google ပလေး ဝန်ဆောင်မှုများ အမှား</string>
+    <string name="t">သတ်မှတ်ထားသောအကောင့်သို့ လက်မှတ်ထိုးဝင်ရောက်ရာတွင် မှားယွင်းနေပါသည်။ ကျေးဇူးပြု၍ အခြားအကောင့်တစ်ခုကို ရွေးချယ်ပါ။</string>
+    <string name="u">လက်မှတ်ထိုးဝင်ရောက်ခြင်း မအောင်မြင်ပါ</string>
+    <string name="v">Google ပလေး ဝန်ဆောင်မှုတွင် မသိရ ပြဿနာ ရှိနေသည်။</string>
+    <string name="w">%1$s သည် Google Play ဝန်ဆောင်မှုများပေါ်တွင် မူတည်နေပြီး၊ သင့် စက်ကိရိယာတွင် ပံ့ပိုးထားခြင်း မရှိပါ။ အကူအညီရရန်အတွက် ထုတ်လုပ်သူအား ဆက်သွယ်ပါ။</string>
+    <string name="x">Google ပလေး ဝန်ဆောင်မှုများ</string>
+    <string name="y">မွမ်းမံရန်</string>
+    <string name="z">Google Play ဝန်ဆောင်မှုများအား မွမ်းမံခြင်းမရှိပါက %1$s အလုပ်လုပ်မည် မဟုတ်ပါ။</string>
+    <string name="a0">Google ပလေး ၀န်ဆောင်မှုများကို မွမ်းမံရန်</string>
+    <string name="a1">လက်ရှိ အဆင့်မြှင့်မွမ်းမံနေသော၊ Google Play ဝန်ဆောင်မှုများ မရှိပါက %1$s အလုပ်လုပ်မည် မဟုတ်ပါ။</string>
+    <string name="a2">Google Play ဝန်ဆောင်မှုများ မွမ်းမံနေစဉ်</string>
+    <string name="a3">ဖုန်းထဲ ဖွင့်ရန်</string>
+    <string name="a4">လင်မှတ်ထိုး ဝင်</string>
+    <string name="a5">Google ဖြင့် လက်မှတ်ထို ဝင်</string>
+</resources>

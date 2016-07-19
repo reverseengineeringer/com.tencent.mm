@@ -1,341 +1,335 @@
-.class public final Lcom/tencent/mm/app/c;
+.class final Lcom/tencent/mm/app/c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/content/ServiceConnection;
+
 
 # static fields
-.field private static final akZ:Ljava/lang/String;
+.field private static XZ:Z
+
+
+# instance fields
+.field private Ya:Ljava/lang/Runnable;
+
+.field private lock:Ljava/lang/Object;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 20
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 33
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v1, Lcom/tencent/mm/storage/j;->bxa:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "channel_history.cfg"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/tencent/mm/app/c;->akZ:Ljava/lang/String;
+    sput-boolean v0, Lcom/tencent/mm/app/c;->XZ:Z
 
     return-void
 .end method
 
-.method public static ac(Landroid/content/Context;)V
-    .locals 9
+.method constructor <init>()V
+    .locals 1
 
     .prologue
-    const/4 v8, 0x1
+    .line 30
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v7, 0x0
+    .line 34
+    new-instance v0, Ljava/lang/Object;
 
-    .line 29
-    invoke-static {}, Lcom/tencent/mm/app/c;->kr()Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/app/c;->lock:Ljava/lang/Object;
+
+    .line 130
+    new-instance v0, Lcom/tencent/mm/app/c$3;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/app/c$3;-><init>(Lcom/tencent/mm/app/c;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/app/c;->Ya:Ljava/lang/Runnable;
+
+    return-void
+.end method
+
+.method private static aS(Ljava/lang/String;)I
+    .locals 10
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 174
+    new-instance v0, Ljava/io/File;
+
+    const-string/jumbo v1, "/proc"
+
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    .line 175
+    invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
+
+    move-result-object v5
+
+    .line 177
+    const/4 v1, -0x1
+
+    .line 178
+    array-length v6, v5
+
+    const/4 v0, 0x0
+
+    move v4, v0
+
+    move v0, v1
+
+    move-object v1, v2
+
+    :goto_0
+    if-ge v4, v6, :cond_0
+
+    aget-object v7, v5, v4
+
+    .line 180
+    :try_start_0
+    invoke-virtual {v7}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_2
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    .line 185
+    :try_start_1
+    new-instance v3, Ljava/util/Scanner;
 
-    .line 49
-    :cond_0
-    :goto_0
-    return-void
+    new-instance v8, Ljava/io/File;
 
-    .line 32
-    :cond_1
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/f;->dl(Landroid/content/Context;)V
+    const-string/jumbo v9, "cmdline"
 
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-direct {v8, v7, v9}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    move-result-object v0
+    invoke-direct {v3, v8}, Ljava/util/Scanner;-><init>(Ljava/io/File;)V
+    :try_end_1
+    .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    :try_start_0
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    .line 186
+    :try_start_2
+    invoke-virtual {v3}, Ljava/util/Scanner;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v3}, Ljava/util/Scanner;->nextLine()Ljava/lang/String;
 
     move-result-object v1
 
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
-
-    move-result-object v0
-
-    iget-object v0, v0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
-
-    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/tencent/mm/b/a;->aG(Ljava/lang/String;)Lcom/tencent/mm/b/a;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v1, v0, Lcom/tencent/mm/b/a;->aky:Lcom/tencent/mm/b/b;
-
-    if-eqz v1, :cond_2
-
-    const-string/jumbo v1, "!32@/B4Tb64lLpLpDbMz9L94032raVWsT3Rq"
-
-    const-string/jumbo v2, "apk external info not null"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, v0, Lcom/tencent/mm/b/a;->aky:Lcom/tencent/mm/b/b;
-
-    iget-boolean v1, v1, Lcom/tencent/mm/b/b;->akD:Z
-
-    if-eqz v1, :cond_2
-
-    iget-object v0, v0, Lcom/tencent/mm/b/a;->aky:Lcom/tencent/mm/b/b;
-
-    iget v0, v0, Lcom/tencent/mm/b/b;->akC:I
-
-    sput v0, Lcom/tencent/mm/sdk/platformtools/f;->akC:I
-
-    const-string/jumbo v0, "!32@/B4Tb64lLpLpDbMz9L94032raVWsT3Rq"
-
-    const-string/jumbo v1, "read channelId from apk external"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
-
-    .line 33
-    :cond_2
-    :goto_1
-    const/4 v2, 0x0
-
-    .line 36
-    :try_start_1
-    new-instance v1, Ljava/io/RandomAccessFile;
-
-    sget-object v0, Lcom/tencent/mm/app/c;->akZ:Ljava/lang/String;
-
-    const-string/jumbo v3, "rw"
-
-    invoke-direct {v1, v0, v3}, Ljava/io/RandomAccessFile;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_3
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 38
-    :try_start_2
-    const-string/jumbo v0, "%d\n"
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    sget v4, Lcom/tencent/mm/sdk/platformtools/f;->akC:I
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/io/RandomAccessFile;->write([B)V
+    invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
     :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_6
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 44
-    :try_start_3
-    invoke-virtual {v1}, Ljava/io/RandomAccessFile;->close()V
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    move-result v1
 
-    goto :goto_0
+    if-eqz v1, :cond_1
 
-    .line 46
-    :catch_0
-    move-exception v0
+    .line 191
+    invoke-virtual {v3}, Ljava/util/Scanner;->close()V
 
-    .line 47
-    const-string/jumbo v1, "!32@/B4Tb64lLpLpDbMz9L94032raVWsT3Rq"
+    .line 197
+    :cond_0
+    return v0
 
-    const-string/jumbo v2, "Close ChannelHistory History file failed."
-
-    new-array v3, v8, [Ljava/lang/Object;
-
-    const-string/jumbo v4, ""
-
-    aput-object v4, v3, v7
-
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    .line 32
-    :catch_1
-    move-exception v0
-
-    const-string/jumbo v0, "!32@/B4Tb64lLpLpDbMz9L94032raVWsT3Rq"
-
-    const-string/jumbo v1, "NameNotFoundException"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :catch_2
-    move-exception v0
-
-    const-string/jumbo v1, "!32@/B4Tb64lLpLpDbMz9L94032raVWsT3Rq"
-
-    const-string/jumbo v2, "Exception in initChannel, %s"
-
-    new-array v3, v8, [Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v3, v7
-
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    .line 39
-    :catch_3
-    move-exception v0
+    .line 191
+    :cond_1
+    invoke-virtual {v3}, Ljava/util/Scanner;->close()V
 
     move-object v1, v2
 
-    .line 40
+    .line 178
+    :cond_2
+    :goto_1
+    add-int/lit8 v3, v4, 0x1
+
+    move v4, v3
+
+    goto :goto_0
+
+    .line 191
+    :catch_0
+    move-exception v1
+
+    move-object v1, v3
+
     :goto_2
-    :try_start_4
-    const-string/jumbo v2, "!32@/B4Tb64lLpLpDbMz9L94032raVWsT3Rq"
+    if-eqz v1, :cond_2
 
-    const-string/jumbo v3, "Open ChannelHistory History file failed."
+    .line 192
+    invoke-virtual {v1}, Ljava/util/Scanner;->close()V
 
-    const/4 v4, 0x1
+    move-object v1, v2
 
-    new-array v4, v4, [Ljava/lang/Object;
+    .line 193
+    goto :goto_1
 
-    const/4 v5, 0x0
-
-    const-string/jumbo v6, ""
-
-    aput-object v6, v4, v5
-
-    invoke-static {v2, v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    .line 44
-    if-eqz v1, :cond_0
-
-    .line 45
-    :try_start_5
-    invoke-virtual {v1}, Ljava/io/RandomAccessFile;->close()V
-    :try_end_5
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_4
-
-    goto/16 :goto_0
-
-    .line 46
-    :catch_4
-    move-exception v0
-
-    .line 47
-    const-string/jumbo v1, "!32@/B4Tb64lLpLpDbMz9L94032raVWsT3Rq"
-
-    const-string/jumbo v2, "Close ChannelHistory History file failed."
-
-    new-array v3, v8, [Ljava/lang/Object;
-
-    const-string/jumbo v4, ""
-
-    aput-object v4, v3, v7
-
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto/16 :goto_0
-
-    .line 43
+    .line 191
     :catchall_0
     move-exception v0
 
-    move-object v1, v2
+    move-object v1, v3
 
-    .line 44
     :goto_3
     if-eqz v1, :cond_3
 
-    .line 45
-    :try_start_6
-    invoke-virtual {v1}, Ljava/io/RandomAccessFile;->close()V
-    :try_end_6
-    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_5
+    .line 192
+    invoke-virtual {v1}, Ljava/util/Scanner;->close()V
 
-    .line 48
+    .line 193
     :cond_3
-    :goto_4
     throw v0
 
-    .line 46
-    :catch_5
-    move-exception v1
-
-    .line 47
-    const-string/jumbo v2, "!32@/B4Tb64lLpLpDbMz9L94032raVWsT3Rq"
-
-    const-string/jumbo v3, "Close ChannelHistory History file failed."
-
-    new-array v4, v8, [Ljava/lang/Object;
-
-    const-string/jumbo v5, ""
-
-    aput-object v5, v4, v7
-
-    invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_4
-
-    .line 43
+    .line 191
     :catchall_1
     move-exception v0
 
     goto :goto_3
 
-    .line 39
-    :catch_6
-    move-exception v0
+    :catch_1
+    move-exception v3
 
     goto :goto_2
+
+    .line 182
+    :catch_2
+    move-exception v3
+
+    goto :goto_1
 .end method
 
-.method public static kq()V
+.method static synthetic aT(Ljava/lang/String;)I
+    .locals 1
+
+    .prologue
+    .line 30
+    invoke-static {p0}, Lcom/tencent/mm/app/c;->aS(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+
+# virtual methods
+.method public final Z(Landroid/content/Context;)V
+    .locals 4
+
+    .prologue
+    const/4 v3, 0x1
+
+    .line 107
+    const-string/jumbo v0, "noop"
+
+    invoke-static {p1, v0}, Lcom/tencent/mm/booter/b;->r(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 108
+    const-string/jumbo v0, "MicroMsg.CoreServiceConnection"
+
+    const-string/jumbo v1, "ensureServiceInstance return false"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 127
+    :goto_0
+    return-void
+
+    .line 112
+    :cond_0
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lcom/tencent/mm/booter/CoreService;
+
+    invoke-direct {v0, p1, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 113
+    const-string/jumbo v1, "MicroMsg.CoreServiceConnection"
+
+    const-string/jumbo v2, "prepare dispatcher / bind core service"
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 115
+    invoke-virtual {p1, v0, p0, v3}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 116
+    const-string/jumbo v0, "MicroMsg.CoreServiceConnection"
+
+    const-string/jumbo v1, "bindService failed, may be caused by some crashes"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 121
+    :cond_1
+    iget-object v1, p0, Lcom/tencent/mm/app/c;->lock:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    .line 122
+    :try_start_0
+    sget-boolean v0, Lcom/tencent/mm/app/c;->XZ:Z
+
+    if-nez v0, :cond_2
+
+    .line 123
+    const/4 v0, 0x1
+
+    sput-boolean v0, Lcom/tencent/mm/app/c;->XZ:Z
+
+    .line 124
+    const-string/jumbo v0, "MicroMsg.CoreServiceConnection"
+
+    const-string/jumbo v2, "ZombieWaker posted."
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 125
+    iget-object v0, p0, Lcom/tencent/mm/app/c;->Ya:Ljava/lang/Runnable;
+
+    const-wide/16 v2, 0x2710
+
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ad;->e(Ljava/lang/Runnable;J)V
+
+    .line 127
+    :cond_2
+    monitor-exit v1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 12
 
     .prologue
@@ -343,305 +337,237 @@
 
     const/4 v10, 0x0
 
-    .line 56
-    invoke-static {}, Lcom/tencent/mm/app/c;->kr()Z
+    .line 38
+    const-string/jumbo v0, "MicroMsg.CoreServiceConnection"
+
+    const-string/jumbo v1, "onServiceConnected "
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 41
+    iget-object v1, p0, Lcom/tencent/mm/app/c;->lock:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    .line 42
+    :try_start_0
+    iget-object v0, p0, Lcom/tencent/mm/app/c;->Ya:Ljava/lang/Runnable;
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->v(Ljava/lang/Runnable;)V
+
+    .line 43
+    const/4 v0, 0x0
+
+    sput-boolean v0, Lcom/tencent/mm/app/c;->XZ:Z
+
+    .line 44
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 46
+    if-nez p2, :cond_0
+
+    .line 47
+    const-string/jumbo v0, "WorkerProfile onServiceConnected binder == null"
+
+    invoke-static {v0, v10}, Ljunit/framework/Assert;->assertTrue(Ljava/lang/String;Z)V
+
+    .line 48
+    const-string/jumbo v0, "WorkerProfile onServiceConnected binder == null"
+
+    const-string/jumbo v1, "it will result in accInfo being null"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/b;->o(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 51
+    :cond_0
+    new-instance v7, Lcom/tencent/mm/t/o;
+
+    invoke-static {p2}, Lcom/tencent/mm/network/f$a;->z(Landroid/os/IBinder;)Lcom/tencent/mm/network/f;
+
+    move-result-object v0
+
+    invoke-direct {v7, v0}, Lcom/tencent/mm/t/o;-><init>(Lcom/tencent/mm/network/f;)V
+
+    .line 52
+    new-instance v0, Lcom/tencent/mm/app/c$1;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/app/c$1;-><init>(Lcom/tencent/mm/app/c;)V
+
+    :try_start_1
+    iget-object v1, v7, Lcom/tencent/mm/t/o;->bzp:Lcom/tencent/mm/network/f;
+
+    invoke-interface {v1, v0}, Lcom/tencent/mm/network/f;->a(Lcom/tencent/mm/network/q;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    .line 59
+    :goto_0
+    new-instance v0, Lcom/tencent/mm/app/c$2;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/app/c$2;-><init>(Lcom/tencent/mm/app/c;)V
+
+    :try_start_2
+    iget-object v1, v7, Lcom/tencent/mm/t/o;->bzp:Lcom/tencent/mm/network/f;
+
+    invoke-interface {v1, v0}, Lcom/tencent/mm/network/f;->a(Lcom/tencent/mm/network/g;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+
+    .line 77
+    :goto_1
+    invoke-static {v7}, Lcom/tencent/mm/model/ah;->b(Lcom/tencent/mm/network/e;)V
+
+    .line 79
+    invoke-static {}, Lcom/tencent/mm/model/a;->rd()Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_1
 
-    .line 57
-    const-string/jumbo v0, "!32@/B4Tb64lLpLpDbMz9L94032raVWsT3Rq"
+    :try_start_3
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
-    const-string/jumbo v1, "channel history file does not exit!"
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v8, v0, Lcom/tencent/mm/model/c;->bsE:Lcom/tencent/mm/model/a;
 
-    .line 121
-    :cond_0
-    :goto_0
-    return-void
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
-    .line 61
-    :cond_1
-    const/4 v2, 0x0
+    move-result-object v0
 
-    .line 64
-    :try_start_0
-    new-instance v1, Ljava/io/RandomAccessFile;
+    iget-object v0, v0, Lcom/tencent/mm/t/m;->byZ:Lcom/tencent/mm/network/e;
 
-    sget-object v0, Lcom/tencent/mm/app/c;->akZ:Ljava/lang/String;
+    invoke-interface {v0}, Lcom/tencent/mm/network/e;->vY()Lcom/tencent/mm/network/c;
 
-    const-string/jumbo v3, "rw"
+    move-result-object v9
 
-    invoke-direct {v1, v0, v3}, Ljava/io/RandomAccessFile;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gp()J
 
-    .line 65
-    :try_start_1
-    invoke-virtual {v1}, Ljava/io/RandomAccessFile;->length()J
+    move-result-wide v0
 
-    move-result-wide v3
+    if-nez v9, :cond_3
 
-    .line 66
-    const-string/jumbo v0, "!32@/B4Tb64lLpLpDbMz9L94032raVWsT3Rq"
+    const-string/jumbo v0, "MicroMsg.AccInfoCacheInWorker"
 
-    const-string/jumbo v2, "correctChannleIdBySource fileLen:%d  curChannelId:%d"
+    const-string/jumbo v1, "reuseToPush  accinfo == null"
 
-    const/4 v5, 0x2
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-array v5, v5, [Ljava/lang/Object;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
+
+    const-wide/16 v0, 0xe2
+
+    const-wide/16 v2, 0x6
+
+    const-wide/16 v4, 0x1
 
     const/4 v6, 0x0
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
+    :try_end_3
+    .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_2
 
-    move-result-object v7
+    .line 81
+    :cond_1
+    :goto_2
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
-    aput-object v7, v5, v6
+    move-result v0
 
-    const/4 v6, 0x1
+    if-eqz v0, :cond_2
 
-    sget v7, Lcom/tencent/mm/sdk/platformtools/f;->akC:I
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v0
 
-    move-result-object v7
+    if-eqz v0, :cond_2
 
-    aput-object v7, v5, v6
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
-    invoke-static {v0, v2, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    move-result-object v0
 
-    .line 68
-    const-wide/16 v5, 0x0
+    iget-object v0, v0, Lcom/tencent/mm/t/m;->byZ:Lcom/tencent/mm/network/e;
 
-    cmp-long v0, v3, v5
+    if-eqz v0, :cond_2
 
-    if-gtz v0, :cond_2
+    .line 82
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
-    .line 69
-    const-string/jumbo v0, "!32@/B4Tb64lLpLpDbMz9L94032raVWsT3Rq"
+    move-result-object v0
 
-    const-string/jumbo v2, "channel history file fileLen <= 0"
+    iget-object v0, v0, Lcom/tencent/mm/t/m;->byZ:Lcom/tencent/mm/network/e;
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_5
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    invoke-interface {v0, v11}, Lcom/tencent/mm/network/e;->au(Z)V
 
-    .line 116
-    :try_start_2
-    invoke-virtual {v1}, Ljava/io/RandomAccessFile;->close()V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .line 86
+    :cond_2
+    invoke-static {v7}, Lcom/tencent/mm/modelstat/l;->d(Lcom/tencent/mm/network/e;)V
 
-    goto :goto_0
+    .line 87
+    invoke-static {v7}, Lcom/tencent/mm/modelstat/l;->e(Lcom/tencent/mm/network/e;)V
 
-    .line 118
+    .line 91
+    return-void
+
+    .line 44
+    :catchall_0
+    move-exception v0
+
+    :try_start_4
+    monitor-exit v1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    throw v0
+
+    .line 52
     :catch_0
     move-exception v0
 
-    .line 119
-    const-string/jumbo v1, "!32@/B4Tb64lLpLpDbMz9L94032raVWsT3Rq"
+    const-string/jumbo v1, "MicroMsg.RDispatcher"
 
-    const-string/jumbo v2, "Close ChannelHistory History file failed."
+    const-string/jumbo v2, "exception:%s"
 
     new-array v3, v11, [Ljava/lang/Object;
 
-    const-string/jumbo v4, ""
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
-    aput-object v4, v3, v10
+    move-result-object v0
 
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    aput-object v0, v3, v10
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 72
-    :cond_2
-    :try_start_3
-    invoke-virtual {v1}, Ljava/io/RandomAccessFile;->readLine()Ljava/lang/String;
+    .line 59
+    :catch_1
+    move-exception v0
 
-    move-result-object v5
+    const-string/jumbo v1, "MicroMsg.RDispatcher"
 
-    .line 76
-    sget v6, Lcom/tencent/mm/sdk/platformtools/f;->akC:I
+    const-string/jumbo v2, "exception:%s"
 
-    .line 77
-    sget v2, Lcom/tencent/mm/sdk/platformtools/f;->akC:I
+    new-array v3, v11, [Ljava/lang/Object;
 
-    .line 79
-    sget v0, Lcom/tencent/mm/sdk/platformtools/f;->akC:I
-
-    sput v0, Lcom/tencent/mm/sdk/platformtools/f;->jUZ:I
-
-    .line 81
-    const-string/jumbo v0, ""
-
-    .line 82
-    invoke-static {v5}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_3
-
-    .line 83
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aput-object v0, v3, v10
 
-    move-result-object v0
-
-    const-string/jumbo v2, ","
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 84
-    invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v2
-
-    .line 85
-    sget v5, Lcom/tencent/mm/sdk/platformtools/f;->akC:I
-
-    if-eq v2, v5, :cond_3
-
-    .line 86
-    sput v2, Lcom/tencent/mm/sdk/platformtools/f;->jUZ:I
-
-    .line 87
-    const-string/jumbo v5, "!32@/B4Tb64lLpLpDbMz9L94032raVWsT3Rq"
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v8, "real correct final channelid: "
-
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    sget v8, Lcom/tencent/mm/sdk/platformtools/f;->akC:I
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v5, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 92
-    :cond_3
-    sget-boolean v5, Lcom/tencent/mm/sdk/platformtools/y;->jVC:Z
-
-    if-eqz v5, :cond_5
-
-    .line 95
-    :goto_1
-    invoke-virtual {v1}, Ljava/io/RandomAccessFile;->readLine()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v5}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_4
-
-    .line 97
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v2, ","
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 98
-    invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v2
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
-    .line 100
-    :cond_4
-    const-string/jumbo v5, "!32@/B4Tb64lLpLpDbMz9L94032raVWsT3Rq"
+    .line 79
+    :cond_3
+    :try_start_5
+    const-string/jumbo v2, "MicroMsg.AccInfoCacheInWorker"
 
-    const-string/jumbo v7, "channel list: %s"
-
-    const/4 v8, 0x1
-
-    new-array v8, v8, [Ljava/lang/Object;
-
-    const/4 v9, 0x0
-
-    aput-object v0, v8, v9
-
-    invoke-static {v5, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 102
-    if-eq v2, v6, :cond_5
-
-    .line 103
-    invoke-virtual {v1, v3, v4}, Ljava/io/RandomAccessFile;->seek(J)V
-
-    .line 104
-    const-string/jumbo v0, "%d\n"
-
-    const/4 v3, 0x1
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v4, 0x0
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v3, v4
-
-    invoke-static {v0, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/io/RandomAccessFile;->write([B)V
-
-    .line 105
-    const-string/jumbo v0, "!32@/B4Tb64lLpLpDbMz9L94032raVWsT3Rq"
-
-    const-string/jumbo v3, "channelid change from %d to %d"
+    const-string/jumbo v3, "reuseToPush islogin:%b cache:%s"
 
     const/4 v4, 0x2
 
@@ -649,178 +575,335 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {v9}, Lcom/tencent/mm/network/c;->vU()Z
 
-    move-result-object v2
+    move-result v6
 
-    aput-object v2, v4, v5
+    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    const/4 v2, 0x1
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v4, v2
-
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_5
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    .line 116
-    :cond_5
-    :try_start_4
-    invoke-virtual {v1}, Ljava/io/RandomAccessFile;->close()V
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
-
-    goto/16 :goto_0
-
-    .line 118
-    :catch_1
-    move-exception v0
-
-    .line 119
-    const-string/jumbo v1, "!32@/B4Tb64lLpLpDbMz9L94032raVWsT3Rq"
-
-    const-string/jumbo v2, "Close ChannelHistory History file failed."
-
-    new-array v3, v11, [Ljava/lang/Object;
-
-    const-string/jumbo v4, ""
-
-    aput-object v4, v3, v10
-
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto/16 :goto_0
-
-    .line 111
-    :catch_2
-    move-exception v0
-
-    move-object v1, v2
-
-    .line 112
-    :goto_2
-    :try_start_5
-    const-string/jumbo v2, "!32@/B4Tb64lLpLpDbMz9L94032raVWsT3Rq"
-
-    const-string/jumbo v3, "Open ChannelHistory History file failed."
-
-    const/4 v4, 0x1
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    const/4 v5, 0x0
-
-    const-string/jumbo v6, ""
+    move-result-object v6
 
     aput-object v6, v4, v5
 
-    invoke-static {v2, v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+    const/4 v5, 0x1
 
-    .line 116
-    if-eqz v1, :cond_0
+    invoke-virtual {v8}, Lcom/tencent/mm/model/a;->rc()I
 
-    .line 117
-    :try_start_6
-    invoke-virtual {v1}, Ljava/io/RandomAccessFile;->close()V
-    :try_end_6
-    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_3
+    move-result v6
 
-    goto/16 :goto_0
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 118
-    :catch_3
-    move-exception v0
+    move-result-object v6
 
-    .line 119
-    const-string/jumbo v1, "!32@/B4Tb64lLpLpDbMz9L94032raVWsT3Rq"
+    aput-object v6, v4, v5
 
-    const-string/jumbo v2, "Close ChannelHistory History file failed."
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    new-array v3, v11, [Ljava/lang/Object;
+    invoke-interface {v9}, Lcom/tencent/mm/network/c;->vU()Z
 
-    const-string/jumbo v4, ""
+    move-result v2
 
-    aput-object v4, v3, v10
+    if-eqz v2, :cond_6
 
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto/16 :goto_0
-
-    .line 115
-    :catchall_0
-    move-exception v0
-
-    move-object v1, v2
-
-    .line 116
-    :goto_3
-    if-eqz v1, :cond_6
-
-    .line 117
-    :try_start_7
-    invoke-virtual {v1}, Ljava/io/RandomAccessFile;->close()V
-    :try_end_7
-    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_4
-
-    .line 120
-    :cond_6
-    :goto_4
-    throw v0
-
-    .line 118
-    :catch_4
-    move-exception v1
-
-    .line 119
-    const-string/jumbo v2, "!32@/B4Tb64lLpLpDbMz9L94032raVWsT3Rq"
-
-    const-string/jumbo v3, "Close ChannelHistory History file failed."
-
-    new-array v4, v11, [Ljava/lang/Object;
-
-    const-string/jumbo v5, ""
-
-    aput-object v5, v4, v10
-
-    invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_4
-
-    .line 115
-    :catchall_1
-    move-exception v0
-
-    goto :goto_3
-
-    .line 111
-    :catch_5
-    move-exception v0
-
-    goto :goto_2
-.end method
-
-.method private static kr()Z
-    .locals 2
-
-    .prologue
-    .line 125
-    new-instance v0, Ljava/io/File;
-
-    sget-object v1, Lcom/tencent/mm/app/c;->akZ:Ljava/lang/String;
-
-    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    .line 126
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+    invoke-virtual {v8}, Lcom/tencent/mm/model/a;->rc()I
 
     move-result v0
 
-    return v0
+    if-lez v0, :cond_4
+
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
+
+    const-wide/16 v0, 0xe2
+
+    const-wide/16 v2, 0x7
+
+    const-wide/16 v4, 0x1
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
+
+    const-string/jumbo v0, "MicroMsg.AccInfoCacheInWorker"
+
+    const-string/jumbo v1, "reuseToPush  something Error! islogin && isCacheValid . Clean Cache Now !"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, v8, Lcom/tencent/mm/model/a;->bsd:[B
+
+    :goto_3
+    invoke-interface {v9}, Lcom/tencent/mm/network/c;->vX()[B
+
+    move-result-object v0
+
+    iput-object v0, v8, Lcom/tencent/mm/model/a;->bsd:[B
+
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
+
+    const-wide/16 v0, 0xe2
+
+    invoke-virtual {v8}, Lcom/tencent/mm/model/a;->rc()I
+
+    move-result v2
+
+    if-lez v2, :cond_5
+
+    const-wide/16 v2, 0x9
+
+    :goto_4
+    const-wide/16 v4, 0x1
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
+    :try_end_5
+    .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_2
+
+    goto/16 :goto_2
+
+    :catch_2
+    move-exception v0
+
+    const-string/jumbo v1, "MicroMsg.AccInfoCacheInWorker"
+
+    const-string/jumbo v2, "tryReuseToPush Exception:%s"
+
+    new-array v3, v11, [Ljava/lang/Object;
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v3, v10
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto/16 :goto_2
+
+    :cond_4
+    :try_start_6
+    const-string/jumbo v0, "MicroMsg.AccInfoCacheInWorker"
+
+    const-string/jumbo v1, "reuseToPush Here, DANGER! . HERE means worker just init , try set from push now!"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
+
+    const-wide/16 v0, 0xe2
+
+    const-wide/16 v2, 0x8
+
+    const-wide/16 v4, 0x1
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
+
+    goto :goto_3
+
+    :cond_5
+    const-wide/16 v2, 0xa
+
+    goto :goto_4
+
+    :cond_6
+    invoke-virtual {v8}, Lcom/tencent/mm/model/a;->rc()I
+
+    move-result v2
+
+    if-gtz v2, :cond_7
+
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
+
+    const-wide/16 v0, 0xe2
+
+    const-wide/16 v2, 0xb
+
+    const-wide/16 v4, 0x1
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
+
+    const-string/jumbo v0, "MicroMsg.AccInfoCacheInWorker"
+
+    const-string/jumbo v1, "reuseToPush something is null. give up %s"
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v8}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto/16 :goto_2
+
+    :cond_7
+    iget-object v2, v8, Lcom/tencent/mm/model/a;->bsd:[B
+
+    invoke-interface {v9, v2}, Lcom/tencent/mm/network/c;->F([B)I
+
+    move-result v2
+
+    const-string/jumbo v3, "MicroMsg.AccInfoCacheInWorker"
+
+    const-string/jumbo v4, "reuseToPush parseBuf ret:%s time:%s  cache:%s"
+
+    const/4 v5, 0x3
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    aput-object v9, v5, v6
+
+    const/4 v6, 0x1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->au(J)J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    aput-object v0, v5, v6
+
+    const/4 v0, 0x2
+
+    invoke-virtual {v8}, Lcom/tencent/mm/model/a;->rc()I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    aput-object v1, v5, v0
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    if-eqz v2, :cond_8
+
+    const-string/jumbo v0, "MicroMsg.AccInfoCacheInWorker"
+
+    const-string/jumbo v1, "reuseToPush parseBuf ret:%s"
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    invoke-static {v0, v1, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, v8, Lcom/tencent/mm/model/a;->bsd:[B
+
+    :goto_5
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
+
+    const-wide/16 v0, 0xe2
+
+    add-int/lit8 v2, v2, 0x14
+
+    int-to-long v2, v2
+
+    const-wide/16 v4, 0x1
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
+
+    goto/16 :goto_2
+
+    :cond_8
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, v8, Lcom/tencent/mm/model/a;->bse:J
+    :try_end_6
+    .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_2
+
+    goto :goto_5
+.end method
+
+.method public final onServiceDisconnected(Landroid/content/ComponentName;)V
+    .locals 2
+
+    .prologue
+    .line 95
+    const-string/jumbo v0, "MicroMsg.CoreServiceConnection"
+
+    const-string/jumbo v1, "onServiceDisconnected "
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 97
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tJ()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tN()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 98
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/t/m;->vP()V
+
+    .line 99
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/app/c;->Z(Landroid/content/Context;)V
+
+    .line 104
+    :goto_0
+    return-void
+
+    .line 101
+    :cond_0
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/t/m;->vQ()V
+
+    .line 102
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/t/m;->reset()V
+
+    goto :goto_0
 .end method

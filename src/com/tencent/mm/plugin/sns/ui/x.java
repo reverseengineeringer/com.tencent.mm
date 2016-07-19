@@ -1,134 +1,163 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.content.Intent;
-import android.os.Bundle;
+import android.text.Layout;
+import android.text.Spannable;
+import android.view.MotionEvent;
 import android.view.View;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.as;
-import com.tencent.mm.plugin.sns.d.at;
-import com.tencent.mm.plugin.sns.g.c;
-import com.tencent.mm.plugin.sns.g.e;
-import com.tencent.mm.protocal.b.aby;
-import com.tencent.mm.protocal.b.arp;
-import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
-import com.tencent.mm.sdk.modelmsg.c.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.ui.MMActivity;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import android.view.View.OnTouchListener;
+import android.widget.TextView;
+import com.tencent.mm.kiss.widget.textview.PLSysTextView;
+import com.tencent.mm.kiss.widget.textview.SysTextView;
+import com.tencent.mm.kiss.widget.textview.g;
+import com.tencent.mm.pluginsdk.ui.d.j;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class x
-  implements t
+  implements View.OnTouchListener
 {
-  private String appName = "";
-  private MMActivity arW;
-  private String dkU = "";
-  private com.tencent.mm.modelsns.a gXH = null;
-  private boolean gYW = false;
-  private boolean gYX = false;
-  private WXMediaMessage gYY = null;
-  private String gZA = "";
-  private boolean gZB = false;
+  private static j hmK;
+  private static TextView hmL;
   
-  public x(MMActivity paramMMActivity, boolean paramBoolean)
+  public static void aEh()
   {
-    arW = paramMMActivity;
-    gZB = paramBoolean;
+    if (hmK != null)
+    {
+      hmKjnm = false;
+      hmL.invalidate();
+      hmL = null;
+      hmK = null;
+    }
   }
   
-  public final boolean a(int paramInt1, int paramInt2, b.a.d.i parami, String paramString, List paramList1, aby paramaby, int paramInt3, boolean paramBoolean, List paramList2)
+  public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    if (arW.isFinishing()) {
-      return false;
-    }
-    at localat = new at(2);
-    if (paramInt3 > com.tencent.mm.plugin.sns.b.a.gHo) {
-      localat.lE(2);
-    }
-    LinkedList localLinkedList = new LinkedList();
-    if (paramList1 != null)
+    TextView localTextView = (TextView)paramView;
+    localTextView.getTag();
+    CharSequence localCharSequence = localTextView.getText();
+    Object localObject = localTextView.getLayout();
+    paramView = (View)localObject;
+    if (localObject == null)
     {
-      new LinkedList();
-      List localList = com.tencent.mm.model.i.sT();
-      paramList1 = paramList1.iterator();
-      while (paramList1.hasNext())
-      {
-        String str = (String)paramList1.next();
-        if (!localList.contains(str))
-        {
-          arp localarp = new arp();
-          eiB = str;
-          localLinkedList.add(localarp);
-        }
+      paramView = (View)localObject;
+      if ((localTextView instanceof SysTextView)) {
+        paramView = bon.qx();
       }
     }
-    if (paramBoolean) {
-      localat.lJ(1);
+    int i;
+    if (((localCharSequence instanceof Spannable)) && (paramView != null))
+    {
+      localObject = (Spannable)localCharSequence;
+      i = paramMotionEvent.getAction();
+      paramView = localTextView.getLayout();
+      if ((paramView != null) || (!(localTextView instanceof SysTextView))) {
+        break label562;
+      }
+      paramView = bon.qx();
     }
+    label500:
+    label547:
+    label555:
+    label562:
     for (;;)
     {
-      if (parami != null) {
-        localat.bs(token, jzR);
-      }
-      if (gYW) {
-        localat.lI(5);
-      }
-      if ((gYX) && (gYY != null))
+      localTextView.invalidate();
+      if ((i == 1) || (i == 0) || (i == 2))
       {
-        localat.uU(gYY.mediaTagName);
-        localat.C(dkU, gYY.messageExt, gYY.messageAction);
+        int j = (int)paramMotionEvent.getX();
+        i = (int)paramMotionEvent.getY();
+        int k;
+        if ((localTextView instanceof PLSysTextView))
+        {
+          if (j >= ((PLSysTextView)localTextView).qp())
+          {
+            k = paramView.getWidth();
+            if (j <= ((PLSysTextView)localTextView).qp() + k) {}
+          }
+          else
+          {
+            return false;
+          }
+          if (i >= ((PLSysTextView)localTextView).qq())
+          {
+            k = paramView.getHeight();
+            if (i <= ((PLSysTextView)localTextView).qq() + k) {}
+          }
+          else
+          {
+            return false;
+          }
+        }
+        else if ((localTextView instanceof TextView))
+        {
+          if ((j < localTextView.getTotalPaddingLeft()) || (j > paramView.getWidth() + localTextView.getTotalPaddingLeft())) {
+            return false;
+          }
+          if ((i < localTextView.getTotalPaddingTop()) || (i > paramView.getHeight() + localTextView.getTotalPaddingTop())) {
+            return false;
+          }
+        }
+        if ((localTextView instanceof PLSysTextView))
+        {
+          j -= ((PLSysTextView)localTextView).qp();
+          i -= ((PLSysTextView)localTextView).qq();
+          k = localTextView.getScrollX();
+          j = paramView.getOffsetForHorizontal(paramView.getLineForVertical(i + localTextView.getScrollY()), j + k);
+          i = paramMotionEvent.getAction();
+          paramView = (j[])((Spannable)localObject).getSpans(j, j, j.class);
+          j = paramView.length - 1;
+          v.d("MicroMsg.MMOnTouchListener", " action span Len: " + paramView.length);
+          localTextView.getLayout();
+          if (paramView.length == 0) {
+            break label547;
+          }
+          if (i != 1) {
+            break label500;
+          }
+          paramView[j].onClick(localTextView);
+          new ac().postDelayed(new Runnable()
+          {
+            public final void run() {}
+          }, 300L);
+          i = 1;
+        }
+        for (;;)
+        {
+          if (i == 0) {
+            break label555;
+          }
+          return true;
+          if ((localTextView instanceof TextView))
+          {
+            j -= localTextView.getTotalPaddingLeft();
+            i -= localTextView.getTotalPaddingTop();
+            break;
+          }
+          j -= localTextView.getPaddingLeft();
+          i -= localTextView.getPaddingTop();
+          break;
+          if ((i == 0) || (i == 2) || (i == 3))
+          {
+            aEh();
+            hmK = paramView[j];
+            hmL = localTextView;
+            jnm = true;
+            localTextView.invalidate();
+            i = 1;
+            continue;
+            aEh();
+          }
+          else
+          {
+            i = 0;
+          }
+        }
       }
-      localat.uT(paramString).a(paramaby).L(localLinkedList).lG(paramInt1).lH(paramInt2).aT(paramList2);
-      paramInt1 = localat.commit();
-      if (gXH != null)
-      {
-        gXH.dS(paramInt1);
-        c.gTZ.c(gXH);
-      }
-      arW.setResult(-1);
-      ad.azf().azE();
-      arW.finish();
-      return true;
-      localat.lJ(0);
+      aEh();
+      return false;
+      return false;
     }
   }
-  
-  public final boolean a(int paramInt, Intent paramIntent)
-  {
-    return false;
-  }
-  
-  public final boolean aAW()
-  {
-    return gZB;
-  }
-  
-  public final View aAX()
-  {
-    return null;
-  }
-  
-  public final boolean aAY()
-  {
-    return false;
-  }
-  
-  public final void n(Bundle paramBundle)
-  {
-    gXH = com.tencent.mm.modelsns.a.k(arW.getIntent());
-    gZA = arW.getIntent().getStringExtra("Kdescription");
-    dkU = ay.ad(arW.getIntent().getStringExtra("Ksnsupload_appid"), "");
-    appName = ay.ad(arW.getIntent().getStringExtra("Ksnsupload_appname"), "");
-    gYW = arW.getIntent().getBooleanExtra("KThrid_app", false);
-    gYX = arW.getIntent().getBooleanExtra("KSnsAction", false);
-    paramBundle = arW.getIntent().getBundleExtra("Ksnsupload_timeline");
-    if (paramBundle != null) {
-      gYY = c.ajUS;
-    }
-  }
-  
-  public final void o(Bundle paramBundle) {}
 }
 
 /* Location:

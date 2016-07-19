@@ -9,38 +9,38 @@ import android.widget.ListAdapter;
 final class d$a
   implements DialogInterface.OnClickListener, d.d
 {
-  private AlertDialog qY;
-  private ListAdapter qZ;
-  private CharSequence ra;
+  private AlertDialog rm;
+  private ListAdapter rn;
+  private CharSequence ro;
   
   private d$a(d paramd) {}
   
   public final void dismiss()
   {
-    qY.dismiss();
-    qY = null;
+    rm.dismiss();
+    rm = null;
   }
   
-  public final void g(CharSequence paramCharSequence)
+  public final void h(CharSequence paramCharSequence)
   {
-    ra = paramCharSequence;
+    ro = paramCharSequence;
   }
   
   public final boolean isShowing()
   {
-    if (qY != null) {
-      return qY.isShowing();
+    if (rm != null) {
+      return rm.isShowing();
     }
     return false;
   }
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    rc.setSelection(paramInt);
-    if (rc.po != null)
+    rp.setSelection(paramInt);
+    if (rp.pC != null)
     {
-      paramDialogInterface = rc;
-      qZ.getItemId(paramInt);
+      paramDialogInterface = rp;
+      rn.getItemId(paramInt);
       paramDialogInterface.h(null, paramInt);
     }
     dismiss();
@@ -48,16 +48,16 @@ final class d$a
   
   public final void setAdapter(ListAdapter paramListAdapter)
   {
-    qZ = paramListAdapter;
+    rn = paramListAdapter;
   }
   
   public final void show()
   {
-    AlertDialog.Builder localBuilder = new AlertDialog.Builder(rc.getContext());
-    if (ra != null) {
-      localBuilder.setTitle(ra);
+    AlertDialog.Builder localBuilder = new AlertDialog.Builder(rp.getContext());
+    if (ro != null) {
+      localBuilder.setTitle(ro);
     }
-    qY = localBuilder.setSingleChoiceItems(qZ, rc.pq, this).show();
+    rm = localBuilder.setSingleChoiceItems(rn, rp.pE, this).show();
   }
 }
 

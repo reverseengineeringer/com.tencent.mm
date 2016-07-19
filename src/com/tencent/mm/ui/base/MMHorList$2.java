@@ -9,16 +9,16 @@ final class MMHorList$2
   
   public final void onChanged()
   {
-    MMHorList.a(kFg);
-    kFg.invalidate();
-    kFg.requestLayout();
+    MMHorList.a(lej);
+    lej.invalidate();
+    lej.requestLayout();
   }
   
   public final void onInvalidated()
   {
-    MMHorList.b(kFg);
-    kFg.invalidate();
-    kFg.requestLayout();
+    MMHorList.b(lej);
+    lej.invalidate();
+    lej.requestLayout();
   }
 }
 

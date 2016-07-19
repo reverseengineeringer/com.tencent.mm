@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.text.Editable;
 import android.text.TextWatcher;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SnsEditText$1
   implements TextWatcher
@@ -14,13 +14,13 @@ final class SnsEditText$1
   public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
   {
     if (paramCharSequence != null) {
-      SnsEditText.c(hdZ, paramCharSequence.length());
+      SnsEditText.c(hsK, paramCharSequence.length());
     }
   }
   
   public final void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
   {
-    SnsEditText.a(hdZ, paramCharSequence.length());
+    SnsEditText.a(hsK, paramCharSequence.length());
     if (paramInt2 > 0) {
       return;
     }
@@ -28,14 +28,14 @@ final class SnsEditText$1
     {
       try
       {
-        if ((SnsEditText.a(hdZ) <= SnsEditText.b(hdZ)) || (paramInt3 <= 30)) {
+        if ((SnsEditText.a(hsK) <= SnsEditText.b(hsK)) || (paramInt3 <= 30)) {
           break;
         }
         paramCharSequence = paramCharSequence.toString().substring(paramInt1, paramInt1 + paramInt3);
         if ((paramCharSequence.indexOf("\n") >= 0) && (paramInt3 > 30))
         {
-          SnsEditText.b(hdZ, paramCharSequence.length());
-          u.d("!32@/B4Tb64lLpK78ssMyUxGWQLv4Av3wmU/", "parsterLen: %d %d", new Object[] { Integer.valueOf(paramCharSequence.length()), Integer.valueOf(SnsEditText.c(hdZ)) });
+          SnsEditText.b(hsK, paramCharSequence.length());
+          v.d("MicroMsg.SnsEditText", "parsterLen: %d %d", new Object[] { Integer.valueOf(paramCharSequence.length()), Integer.valueOf(SnsEditText.c(hsK)) });
           return;
         }
       }

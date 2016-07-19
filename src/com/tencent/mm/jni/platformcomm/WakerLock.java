@@ -3,25 +3,31 @@ package com.tencent.mm.jni.platformcomm;
 import android.content.Context;
 import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
+import com.tencent.mm.platformtools.s;
 import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.l;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class WakerLock
 {
-  private static final String TAG = "!32@/B4Tb64lLpLSCksk5w/QSxQTciH9sVsR";
+  private static final String TAG = "MicroMsg.WakerLock";
+  private static long lastChecktime = 0L;
+  private static Boolean shouldLock = null;
   private a autoUnlockCallback = null;
+  private Context context;
   private String mCreatePosStackLine = null;
-  private aa mHandler = null;
+  private ac mHandler = null;
   private Runnable mReleaser = new Runnable()
   {
     public final void run()
     {
       if (wakeLock.isHeld())
       {
-        u.w("!32@/B4Tb64lLpLSCksk5w/QSxQTciH9sVsR", "unlock by fucking handler! [%d,%d] @[%s]", new Object[] { Integer.valueOf(hashCode()), Integer.valueOf(wakeLock.hashCode()), mCreatePosStackLine });
+        v.w("MicroMsg.WakerLock", "unlock by fucking handler! [%d,%d] @[%s]", new Object[] { Integer.valueOf(hashCode()), Integer.valueOf(wakeLock.hashCode()), mCreatePosStackLine });
         unLock();
         if (autoUnlockCallback != null) {
-          autoUnlockCallback.qZ();
+          autoUnlockCallback.pO();
         }
       }
     }
@@ -32,14 +38,37 @@ public class WakerLock
   {
     wakeLock = ((PowerManager)paramContext.getSystemService("power")).newWakeLock(1, "WakerLock:" + hashCode());
     wakeLock.setReferenceCounted(false);
-    mHandler = new aa(paramContext.getMainLooper());
-    u.i("!32@/B4Tb64lLpLSCksk5w/QSxQTciH9sVsR", "init [%d,%d] @[%s]", new Object[] { Integer.valueOf(hashCode()), Integer.valueOf(wakeLock.hashCode()), mCreatePosStackLine });
+    mHandler = new ac(paramContext.getMainLooper());
+    context = paramContext;
+    v.i("MicroMsg.WakerLock", "init [%d,%d] @[%s]", new Object[] { Integer.valueOf(hashCode()), Integer.valueOf(wakeLock.hashCode()), mCreatePosStackLine });
   }
   
   public WakerLock(Context paramContext, a parama)
   {
     this(paramContext);
     autoUnlockCallback = parama;
+  }
+  
+  private static final boolean checkShouldLock()
+  {
+    boolean bool2;
+    boolean bool3;
+    if ((s.au(lastChecktime) > 10000L) || (shouldLock == null))
+    {
+      bool2 = l.dl(aa.getContext());
+      bool3 = l.dm(aa.getContext());
+      if ((bool2) || (bool3)) {
+        break label106;
+      }
+    }
+    label106:
+    for (boolean bool1 = true;; bool1 = false)
+    {
+      shouldLock = Boolean.valueOf(bool1);
+      v.i("MicroMsg.WakerLock", "checkShouldLock screen:%b chatging:%b res:%b checkTime:%d ", new Object[] { Boolean.valueOf(bool2), Boolean.valueOf(bool3), shouldLock, Long.valueOf(s.au(lastChecktime)) });
+      lastChecktime = s.Gp();
+      return shouldLock.booleanValue();
+    }
   }
   
   private String getCallerStack()
@@ -60,7 +89,7 @@ public class WakerLock
   
   protected void finalize()
   {
-    u.i("!32@/B4Tb64lLpLSCksk5w/QSxQTciH9sVsR", "finalize unlock [%d,%d] @[%s]", new Object[] { Integer.valueOf(hashCode()), Integer.valueOf(wakeLock.hashCode()), mCreatePosStackLine });
+    v.i("MicroMsg.WakerLock", "finalize unlock [%d,%d] @[%s]", new Object[] { Integer.valueOf(hashCode()), Integer.valueOf(wakeLock.hashCode()), mCreatePosStackLine });
     unLock();
     super.finalize();
   }
@@ -80,12 +109,12 @@ public class WakerLock
     try
     {
       boolean bool = wakeLock.isHeld();
-      u.i("!32@/B4Tb64lLpLSCksk5w/QSxQTciH9sVsR", "check is held [%d,%d] :%b caller:[%s] @[%s]", new Object[] { Integer.valueOf(hashCode()), Integer.valueOf(wakeLock.hashCode()), Boolean.valueOf(bool), getCallerStack(), getCreatePosStackLine() });
+      v.i("MicroMsg.WakerLock", "check is held [%d,%d] :%b caller:[%s] @[%s]", new Object[] { Integer.valueOf(hashCode()), Integer.valueOf(wakeLock.hashCode()), Boolean.valueOf(bool), getCallerStack(), getCreatePosStackLine() });
       return bool;
     }
     catch (Exception localException)
     {
-      u.printErrStackTrace("!32@/B4Tb64lLpLSCksk5w/QSxQTciH9sVsR", localException, "", new Object[] { "" });
+      v.printErrStackTrace("MicroMsg.WakerLock", localException, "", new Object[] { "" });
     }
     return false;
   }
@@ -102,43 +131,36 @@ public class WakerLock
   
   public void lock(long paramLong, String paramString)
   {
+    if (!checkShouldLock()) {
+      return;
+    }
     if (wakeLock.isHeld()) {
       unLock();
     }
     b.a(this, paramString);
-    u.i("!32@/B4Tb64lLpLSCksk5w/QSxQTciH9sVsR", "lock [%d,%d] traceMsg:[%s] @[%s] limit time:%d", new Object[] { Integer.valueOf(hashCode()), Integer.valueOf(wakeLock.hashCode()), paramString, getCreatePosStackLine(), Long.valueOf(paramLong) });
+    v.i("MicroMsg.WakerLock", "lock [%d,%d] traceMsg:[%s] @[%s] limit time:%d", new Object[] { Integer.valueOf(hashCode()), Integer.valueOf(wakeLock.hashCode()), paramString, getCreatePosStackLine(), Long.valueOf(paramLong) });
     try
     {
       wakeLock.acquire();
-      mHandler.postDelayed(mReleaser, paramLong);
-      return;
+      if (paramLong == -1L)
+      {
+        mHandler.removeCallbacks(mReleaser);
+        return;
+      }
     }
     catch (Exception paramString)
     {
       for (;;)
       {
-        u.printErrStackTrace("!32@/B4Tb64lLpLSCksk5w/QSxQTciH9sVsR", paramString, "", new Object[] { "" });
+        v.printErrStackTrace("MicroMsg.WakerLock", paramString, "", new Object[] { "" });
       }
+      mHandler.postDelayed(mReleaser, paramLong);
     }
   }
   
   public void lock(String paramString)
   {
-    if (!wakeLock.isHeld())
-    {
-      mHandler.removeCallbacks(mReleaser);
-      b.a(this, paramString);
-      u.i("!32@/B4Tb64lLpLSCksk5w/QSxQTciH9sVsR", "lock NO TIME LIMIT [%d,%d] traceMsg:[%s] @[%s]", new Object[] { Integer.valueOf(hashCode()), Integer.valueOf(wakeLock.hashCode()), paramString, getCreatePosStackLine() });
-    }
-    try
-    {
-      wakeLock.acquire();
-      return;
-    }
-    catch (Exception paramString)
-    {
-      u.printErrStackTrace("!32@/B4Tb64lLpLSCksk5w/QSxQTciH9sVsR", paramString, "", new Object[] { "" });
-    }
+    lock(-1L, paramString);
   }
   
   public void unLock()
@@ -147,7 +169,7 @@ public class WakerLock
     {
       mHandler.removeCallbacks(mReleaser);
       b.c(this);
-      u.i("!32@/B4Tb64lLpLSCksk5w/QSxQTciH9sVsR", "unlock [%d,%d] caller:[%s] @[%s]", new Object[] { Integer.valueOf(hashCode()), Integer.valueOf(wakeLock.hashCode()), getCallerStack(), getCreatePosStackLine() });
+      v.i("MicroMsg.WakerLock", "unlock [%d,%d] caller:[%s] @[%s]", new Object[] { Integer.valueOf(hashCode()), Integer.valueOf(wakeLock.hashCode()), getCallerStack(), getCreatePosStackLine() });
     }
     try
     {
@@ -156,13 +178,13 @@ public class WakerLock
     }
     catch (Exception localException)
     {
-      u.printErrStackTrace("!32@/B4Tb64lLpLSCksk5w/QSxQTciH9sVsR", localException, "", new Object[] { "" });
+      v.printErrStackTrace("MicroMsg.WakerLock", localException, "", new Object[] { "" });
     }
   }
   
   public static abstract interface a
   {
-    public abstract void qZ();
+    public abstract void pO();
   }
 }
 

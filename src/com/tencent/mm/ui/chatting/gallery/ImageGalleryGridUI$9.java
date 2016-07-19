@@ -2,24 +2,20 @@ package com.tencent.mm.ui.chatting.gallery;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.d.a.ay;
-import com.tencent.mm.d.a.ay.a;
-import com.tencent.mm.protocal.b.no;
-import java.util.LinkedList;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.chatting.u;
+import java.util.Set;
 
 final class ImageGalleryGridUI$9
   implements DialogInterface.OnClickListener
 {
-  ImageGalleryGridUI$9(ImageGalleryGridUI paramImageGalleryGridUI, ay paramay) {}
+  ImageGalleryGridUI$9(ImageGalleryGridUI paramImageGalleryGridUI, Set paramSet) {}
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((ivm.aud.type == 14) && (ivm.aud.auf.jmZ.size() == 0))
-    {
-      lfA.bgw();
-      return;
-    }
-    ImageGalleryGridUI.a(lfA, ivm);
+    v.i("MicroMsg.GalleryGridUI", "delete message");
+    u.a(lFM, lFR, lFM);
+    lFM.bmf();
   }
 }
 

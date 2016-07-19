@@ -11,11 +11,17 @@ import java.util.Map;
 public class MMPageControlView
   extends LinearLayout
 {
-  private ImageView ayh;
+  private ImageView akj;
   private Context context;
   private int count;
-  private int kFy = 2131363223;
-  private Map map = new HashMap();
+  public int leC = 2130904073;
+  private Map<Integer, ImageView> map = new HashMap();
+  
+  public MMPageControlView(Context paramContext)
+  {
+    super(paramContext);
+    context = paramContext;
+  }
   
   public MMPageControlView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -23,7 +29,13 @@ public class MMPageControlView
     context = paramContext;
   }
   
-  private void qH(int paramInt)
+  public final void bS(int paramInt1, int paramInt2)
+  {
+    count = paramInt1;
+    sE(paramInt2);
+  }
+  
+  public final void sE(int paramInt)
   {
     removeAllViews();
     if (paramInt >= count) {
@@ -34,51 +46,40 @@ public class MMPageControlView
     label20:
     if (i < j)
     {
+      akj = null;
       if (paramInt != i) {
-        break label137;
+        break label155;
       }
-      ayh = ((ImageView)map.get(Integer.valueOf(i)));
-      if (ayh == null)
+      if (map.size() > i) {
+        akj = ((ImageView)map.get(Integer.valueOf(i)));
+      }
+      if (akj == null)
       {
-        ayh = ((ImageView)View.inflate(context, kFy, null).findViewById(2131168123));
-        map.put(Integer.valueOf(i), ayh);
+        akj = ((ImageView)View.inflate(context, leC, null).findViewById(2131758151));
+        map.put(Integer.valueOf(i), akj);
       }
-      ayh.setSelected(true);
+      akj.setSelected(true);
     }
     for (;;)
     {
       if (i == 0) {
-        ayh.setPadding(0, 0, 0, 0);
+        akj.setPadding(0, 0, 0, 0);
       }
-      addView(ayh);
+      addView(akj);
       i += 1;
       break label20;
       break;
-      label137:
-      ayh = ((ImageView)map.get(Integer.valueOf(i)));
-      if (ayh == null)
-      {
-        ayh = ((ImageView)View.inflate(context, kFy, null).findViewById(2131168123));
-        map.put(Integer.valueOf(i), ayh);
+      label155:
+      if (map.size() > i) {
+        akj = ((ImageView)map.get(Integer.valueOf(i)));
       }
-      ayh.setSelected(false);
+      if (akj == null)
+      {
+        akj = ((ImageView)View.inflate(context, leC, null).findViewById(2131758151));
+        map.put(Integer.valueOf(i), akj);
+      }
+      akj.setSelected(false);
     }
-  }
-  
-  public final void bM(int paramInt1, int paramInt2)
-  {
-    count = paramInt1;
-    qH(paramInt2);
-  }
-  
-  public void setIndicatorLayoutRes(int paramInt)
-  {
-    kFy = paramInt;
-  }
-  
-  public void setPage(int paramInt)
-  {
-    qH(paramInt);
   }
 }
 

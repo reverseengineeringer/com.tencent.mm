@@ -3,43 +3,31 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ar/a;
+.implements Lcom/tencent/mm/sdk/platformtools/ah$a;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ar/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/ar/c;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic iTN:Ljava/lang/String;
-
-.field final synthetic iTO:Ljava/lang/String;
-
-.field final synthetic val$context:Landroid/content/Context;
-
-.field final synthetic val$intent:Landroid/content/Intent;
+.field final synthetic cdr:Lcom/tencent/mm/ar/c;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)V
+.method constructor <init>(Lcom/tencent/mm/ar/c;)V
     .locals 0
 
     .prologue
-    .line 50
-    iput-object p1, p0, Lcom/tencent/mm/ar/c$1;->val$intent:Landroid/content/Intent;
-
-    iput-object p2, p0, Lcom/tencent/mm/ar/c$1;->iTN:Ljava/lang/String;
-
-    iput-object p3, p0, Lcom/tencent/mm/ar/c$1;->iTO:Ljava/lang/String;
-
-    iput-object p4, p0, Lcom/tencent/mm/ar/c$1;->val$context:Landroid/content/Context;
+    .line 197
+    iput-object p1, p0, Lcom/tencent/mm/ar/c$1;->cdr:Lcom/tencent/mm/ar/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,103 +36,171 @@
 
 
 # virtual methods
-.method public final onDone()V
-    .locals 4
+.method public final jK()Z
+    .locals 6
 
     .prologue
-    .line 53
-    iget-object v0, p0, Lcom/tencent/mm/ar/c$1;->val$intent:Landroid/content/Intent;
+    const/4 v5, -0x1
+
+    .line 200
+    iget-object v0, p0, Lcom/tencent/mm/ar/c$1;->cdr:Lcom/tencent/mm/ar/c;
+
+    iget-object v0, v0, Lcom/tencent/mm/ar/c;->filename:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/tencent/mm/a/e;->aA(Ljava/lang/String;)I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    .line 201
+    const-string/jumbo v2, "MicroMsg.NetSceneVoiceInput"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {}, Lcom/tencent/mm/compatible/util/f;->nr()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string/jumbo v4, " onTimerExpired: file:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/tencent/mm/ar/c$1;->cdr:Lcom/tencent/mm/ar/c;
+
+    iget-object v4, v4, Lcom/tencent/mm/ar/c;->filename:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string/jumbo v4, " nowlen:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string/jumbo v4, " oldoff:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/tencent/mm/ar/c$1;->cdr:Lcom/tencent/mm/ar/c;
+
+    iget v4, v4, Lcom/tencent/mm/ar/c;->bWr:I
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string/jumbo v4, " isFin:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/tencent/mm/ar/c$1;->cdr:Lcom/tencent/mm/ar/c;
+
+    iget-boolean v4, v4, Lcom/tencent/mm/ar/c;->cbW:Z
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 204
+    iget-object v2, p0, Lcom/tencent/mm/ar/c$1;->cdr:Lcom/tencent/mm/ar/c;
+
+    iget v2, v2, Lcom/tencent/mm/ar/c;->bWr:I
+
+    int-to-long v2, v2
+
+    sub-long/2addr v0, v2
+
+    const-wide/16 v2, 0xce4
+
+    cmp-long v0, v0, v2
+
+    if-gez v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/mm/ar/c$1;->cdr:Lcom/tencent/mm/ar/c;
+
+    iget-boolean v0, v0, Lcom/tencent/mm/ar/c;->cbW:Z
 
     if-nez v0, :cond_0
 
-    new-instance v0, Landroid/content/Intent;
+    .line 205
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
-
-    .line 54
+    .line 213
     :goto_0
-    new-instance v1, Ljava/lang/StringBuilder;
+    return v0
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUJ()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string/jumbo v2, ".plugin."
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/tencent/mm/ar/c$1;->iTN:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 55
-    iget-object v2, p0, Lcom/tencent/mm/ar/c$1;->iTO:Ljava/lang/String;
-
-    const-string/jumbo v3, "."
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/tencent/mm/ar/c$1;->iTO:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 56
-    :goto_1
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 57
-    iget-object v1, p0, Lcom/tencent/mm/ar/c$1;->val$context:Landroid/content/Context;
-
-    invoke-static {v1, v0}, Lcom/tencent/mm/ui/MMWizardActivity;->v(Landroid/content/Context;Landroid/content/Intent;)V
-
-    .line 58
-    return-void
-
-    .line 53
+    .line 208
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ar/c$1;->val$intent:Landroid/content/Intent;
+    iget-object v0, p0, Lcom/tencent/mm/ar/c$1;->cdr:Lcom/tencent/mm/ar/c;
+
+    iget-object v1, p0, Lcom/tencent/mm/ar/c$1;->cdr:Lcom/tencent/mm/ar/c;
+
+    iget-object v1, v1, Lcom/tencent/mm/t/j;->byD:Lcom/tencent/mm/network/e;
+
+    iget-object v2, p0, Lcom/tencent/mm/ar/c$1;->cdr:Lcom/tencent/mm/ar/c;
+
+    iget-object v2, v2, Lcom/tencent/mm/ar/c;->bkT:Lcom/tencent/mm/t/d;
+
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ar/c;->a(Lcom/tencent/mm/network/e;Lcom/tencent/mm/t/d;)I
+
+    move-result v0
+
+    if-ne v0, v5, :cond_1
+
+    .line 209
+    iget-object v0, p0, Lcom/tencent/mm/ar/c$1;->cdr:Lcom/tencent/mm/ar/c;
+
+    invoke-static {}, Lcom/tencent/mm/compatible/util/f;->np()I
+
+    move-result v1
+
+    const v2, 0x9c40
+
+    add-int/2addr v1, v2
+
+    iput v1, v0, Lcom/tencent/mm/ar/c;->afx:I
+
+    .line 210
+    iget-object v0, p0, Lcom/tencent/mm/ar/c$1;->cdr:Lcom/tencent/mm/ar/c;
+
+    iget-object v0, v0, Lcom/tencent/mm/ar/c;->bkT:Lcom/tencent/mm/t/d;
+
+    const/4 v1, 0x3
+
+    const-string/jumbo v2, "doScene failed"
+
+    iget-object v3, p0, Lcom/tencent/mm/ar/c$1;->cdr:Lcom/tencent/mm/ar/c;
+
+    invoke-interface {v0, v1, v5, v2, v3}, Lcom/tencent/mm/t/d;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
+
+    .line 213
+    :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
-
-    .line 55
-    :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/ar/c$1;->iTO:Ljava/lang/String;
-
-    goto :goto_1
 .end method

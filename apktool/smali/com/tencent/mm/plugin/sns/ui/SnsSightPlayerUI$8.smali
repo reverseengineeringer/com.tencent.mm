@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+.field final synthetic hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 454
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$8;->his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+    .line 492
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$8;->hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,13 +40,13 @@
     .locals 2
 
     .prologue
-    .line 457
+    .line 495
     new-instance v1, Landroid/util/DisplayMetrics;
 
     invoke-direct {v1}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 458
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$8;->his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+    .line 496
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$8;->hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->getWindowManager()Landroid/view/WindowManager;
 
@@ -58,8 +58,8 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 459
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$8;->his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+    .line 497
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$8;->hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->f(Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;)Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
@@ -69,8 +69,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 460
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$8;->his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+    .line 498
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$8;->hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->f(Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;)Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
@@ -80,11 +80,11 @@
 
     iget v1, v1, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->setDrawableWidth(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->lY(I)V
 
-    .line 462
+    .line 500
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$8;->his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$8;->hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->f(Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;)Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
@@ -94,8 +94,8 @@
 
     invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
-    .line 463
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$8;->his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+    .line 501
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$8;->hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->f(Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;)Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
@@ -105,6 +105,6 @@
 
     invoke-virtual {v0}, Landroid/view/View;->postInvalidate()V
 
-    .line 464
+    .line 502
     return-void
 .end method

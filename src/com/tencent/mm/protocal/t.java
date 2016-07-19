@@ -1,47 +1,45 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.afa;
-import com.tencent.mm.protocal.b.afb;
+import com.tencent.mm.protocal.b.amb;
+import com.tencent.mm.protocal.b.ami;
+import com.tencent.mm.protocal.b.dg;
+import com.tencent.mm.protocal.b.we;
+import com.tencent.mm.protocal.b.wf;
+import com.tencent.mm.sdk.platformtools.be;
 
 public final class t
 {
   public static final class a
-    extends h.c
-    implements h.a
+    extends k.c
+    implements k.a
   {
-    public afa iVj = new afa();
+    public we jsB = new we();
     
-    public final int getCmdId()
+    public final byte[] tZ()
     {
-      return 121;
+      jsg = ac.aYs();
+      jsB.jzd = new ami().aV(be.baN());
+      jsB.kfq = k.a(this);
+      return jsB.toByteArray();
     }
     
-    public final byte[] tY()
+    public final int ua()
     {
-      return iVj.toByteArray();
-    }
-    
-    public final int tZ()
-    {
-      return 138;
+      return 429;
     }
   }
   
   public static final class b
-    extends h.d
-    implements h.b
+    extends k.d
+    implements k.b
   {
-    public afb iVk = new afb();
+    public wf jsC = new wf();
     
-    public final int getCmdId()
+    public final int D(byte[] paramArrayOfByte)
     {
-      return 1000000121;
-    }
-    
-    public final int y(byte[] paramArrayOfByte)
-    {
-      iVk = ((afb)new afb().am(paramArrayOfByte));
-      return iVk.iZL;
+      jsC = ((wf)new wf().au(paramArrayOfByte));
+      k.a(this, jsC.kfH);
+      return jsC.kfH.jxr;
     }
   }
 }

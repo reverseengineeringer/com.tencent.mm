@@ -2,7 +2,7 @@ package com.tencent.mm.ui.contact;
 
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
-import com.tencent.mm.ba.c;
+import com.tencent.mm.bd.c;
 
 final class AddressUI$a$7
   implements AbsListView.OnScrollListener
@@ -12,16 +12,16 @@ final class AddressUI$a$7
   public final void onScroll(AbsListView paramAbsListView, int paramInt1, int paramInt2, int paramInt3)
   {
     if (paramInt1 < 2) {}
-    while (AddressUI.a.j(liu)) {
+    while (AddressUI.a.j(lIF)) {
       return;
     }
-    AddressUI.a.k(liu);
+    AddressUI.a.k(lIF);
   }
   
   public final void onScrollStateChanged(AbsListView paramAbsListView, int paramInt)
   {
     if (paramInt == 2) {
-      c.aZg().aW(AddressUI.class.getName() + ".Listview", 4);
+      c.bex().bh(AddressUI.class.getName() + ".Listview", 4);
     }
   }
 }

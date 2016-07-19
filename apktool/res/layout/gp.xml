@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="right" style="@style/ChattingAppUIContent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="right" android:layout_gravity="right" android:orientation="horizontal" android:id="@id/a0s" android:background="@drawable/da" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.tencent.mm.ui.base.MMTextView android:id="@id/a0q" android:layout_marginLeft="5.0dip" android:maxWidth="180.0dip" style="@style/ChattingUIText" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/a0p" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginLeft="5.0dip" android:src="@raw/location_share_myself_icon" />
+    </LinearLayout>
+    <include layout="@layout/chatting_item_avatar_to" />
+</LinearLayout>

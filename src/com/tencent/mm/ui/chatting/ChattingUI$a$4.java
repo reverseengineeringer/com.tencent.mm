@@ -1,17 +1,40 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
+import android.app.Activity;
+import android.widget.Toast;
+import com.tencent.mm.aq.e.a;
+import com.tencent.mm.aq.s;
+import com.tencent.mm.ui.j;
+import com.tencent.mm.ui.o;
 
 final class ChattingUI$a$4
-  implements DialogInterface.OnClickListener
+  implements e.a
 {
-  ChattingUI$a$4(ChattingUI.a parama, Intent paramIntent) {}
+  ChattingUI$a$4(ChattingUI.a parama) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final void a(int paramInt1, String paramString1, String paramString2, int paramInt2)
   {
-    ChattingUI.a.a(laF, eYZ);
+    if (paramInt1 == -50002) {
+      Toast.makeText(lAY.kNN.kOg, lAY.kNN.kOg.getString(2131235816), 0).show();
+    }
+    for (;;)
+    {
+      if (ChattingUI.a.at(lAY) != null)
+      {
+        ChattingUI.a.at(lAY).dismiss();
+        ChattingUI.a.a(lAY, null);
+      }
+      return;
+      if (paramInt1 < 0)
+      {
+        Toast.makeText(lAY.kNN.kOg, lAY.kNN.kOg.getString(2131235815), 0).show();
+      }
+      else
+      {
+        s.b(paramString1, paramInt2, lAY.lrK.field_username, paramString2);
+        s.kx(paramString1);
+      }
+    }
   }
 }
 

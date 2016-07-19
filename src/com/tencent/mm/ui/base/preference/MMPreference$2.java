@@ -12,7 +12,7 @@ final class MMPreference$2
 {
   MMPreference$2(MMPreference paramMMPreference) {}
   
-  public final void onItemClick(final AdapterView paramAdapterView, final View paramView, int paramInt, long paramLong)
+  public final void onItemClick(final AdapterView<?> paramAdapterView, final View paramView, int paramInt, long paramLong)
   {
     paramAdapterView = (Preference)paramAdapterView.getAdapter().getItem(paramInt);
     if (paramAdapterView == null) {}
@@ -21,20 +21,20 @@ final class MMPreference$2
       do
       {
         return;
-      } while ((!paramAdapterView.isEnabled()) || (!kMm) || ((paramAdapterView instanceof CheckBoxPreference)));
+      } while ((!paramAdapterView.isEnabled()) || (!llB) || ((paramAdapterView instanceof CheckBoxPreference)));
       if ((paramAdapterView instanceof DialogPreference))
       {
         paramView = (DialogPreference)paramAdapterView;
         paramView.showDialog();
-        kLa = new DialogPreference.a()
+        lkp = new DialogPreference.a()
         {
-          public final void bdp()
+          public final void biW()
           {
-            MMPreference.c(kLM);
-            if (paramViewkMo) {
-              MMPreference.b(kLM).edit().putString(paramAdapterViewcln, paramView.getValue()).commit();
+            MMPreference.c(llb);
+            if (paramViewllD) {
+              MMPreference.b(llb).edit().putString(paramAdapterViewcgq, paramView.getValue()).commit();
             }
-            MMPreference.d(kLM).notifyDataSetChanged();
+            MMPreference.d(llb).notifyDataSetChanged();
           }
         };
       }
@@ -42,20 +42,20 @@ final class MMPreference$2
       {
         paramView = (EditPreference)paramAdapterView;
         paramView.showDialog();
-        kLc = new EditPreference.a()
+        lkr = new EditPreference.a()
         {
-          public final void bdp()
+          public final void biW()
           {
-            MMPreference.c(kLM);
-            if (paramViewkMo) {
-              MMPreference.b(kLM).edit().putString(paramAdapterViewcln, paramViewvalue).commit();
+            MMPreference.c(llb);
+            if (paramViewllD) {
+              MMPreference.b(llb).edit().putString(paramAdapterViewcgq, paramViewvalue).commit();
             }
-            MMPreference.d(kLM).notifyDataSetChanged();
+            MMPreference.d(llb).notifyDataSetChanged();
           }
         };
       }
-    } while (cln == null);
-    kLM.a(MMPreference.d(kLM), paramAdapterView);
+    } while (cgq == null);
+    llb.a(MMPreference.d(llb), paramAdapterView);
   }
 }
 

@@ -2,33 +2,17 @@ package android.support.v4.view;
 
 import android.view.MotionEvent;
 
-final class i$b
-  implements i.c
+abstract interface i$b
 {
-  public final int a(MotionEvent paramMotionEvent, int paramInt)
-  {
-    return paramMotionEvent.findPointerIndex(paramInt);
-  }
+  public abstract int a(MotionEvent paramMotionEvent, int paramInt);
   
-  public final int b(MotionEvent paramMotionEvent, int paramInt)
-  {
-    return paramMotionEvent.getPointerId(paramInt);
-  }
+  public abstract int b(MotionEvent paramMotionEvent, int paramInt);
   
-  public final float c(MotionEvent paramMotionEvent, int paramInt)
-  {
-    return paramMotionEvent.getX(paramInt);
-  }
+  public abstract float c(MotionEvent paramMotionEvent, int paramInt);
   
-  public final float d(MotionEvent paramMotionEvent, int paramInt)
-  {
-    return paramMotionEvent.getY(paramInt);
-  }
+  public abstract float d(MotionEvent paramMotionEvent, int paramInt);
   
-  public final int f(MotionEvent paramMotionEvent)
-  {
-    return paramMotionEvent.getPointerCount();
-  }
+  public abstract int f(MotionEvent paramMotionEvent);
 }
 
 /* Location:

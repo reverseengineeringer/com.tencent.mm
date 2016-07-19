@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="44.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/b64" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/anb" />
+    <com.tencent.mm.plugin.sns.lucky.view.SnsLuckyMoneyAutoScrollItem android:scrollbarStyle="insideOverlay" android:id="@id/cbe" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

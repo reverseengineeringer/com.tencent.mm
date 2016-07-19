@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" style="@style/FMessageUIContent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/a0s" android:background="@drawable/lj" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ChattingUIThumbnail">
+        <TextView android:textSize="@dimen/h4" android:id="@id/a1o" android:paddingLeft="15.0dip" android:paddingTop="10.0dip" android:paddingRight="4.0dip" android:paddingBottom="4.0dip" style="@style/ChattingUIFMessageText" />
+        <LinearLayout android:gravity="center_horizontal" android:paddingLeft="4.0dip" android:paddingRight="9.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@id/gu" android:background="@drawable/xr" android:layout_width="50.0dip" android:layout_height="50.0dip" />
+            <RelativeLayout android:gravity="center|left" android:layout_gravity="center" android:orientation="horizontal" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/ak" android:gravity="top" android:layout_gravity="center|left" android:id="@id/a1n" android:maxWidth="100.0dip" style="@style/ChattingUIFMessageText" />
+                    <TextView android:textSize="@dimen/ja" android:gravity="center" android:layout_gravity="left" android:id="@id/a1t" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                    <TextView android:textSize="@dimen/ja" android:gravity="center" android:layout_gravity="left" android:id="@id/gw" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout android:gravity="right" android:id="@id/a1u" android:background="@drawable/lg" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/a1v" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:layout_marginRight="3.0dip" android:src="@drawable/wy" android:layout_toLeftOf="@id/a1w" />
+            <TextView android:textSize="@dimen/ja" android:textColor="@color/g7" android:id="@id/a1w" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="1.0dip" android:text="@string/awt" android:layout_toLeftOf="@id/a1x" style="@style/ChattingUIFMessageText" />
+            <ImageView android:id="@id/a1x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:src="@raw/mm_submenu_normal" />
+            <View android:id="@id/a1y" android:layout_width="10.0dip" android:layout_height="4.0dip" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,19 +1,20 @@
 package com.tencent.mm.app;
 
-import com.tencent.mm.model.bd.b;
-import com.tencent.mm.platformtools.n;
-import com.tencent.mm.plugin.report.service.KVReportJni;
-import com.tencent.mm.protocal.b.aj;
-import com.tencent.mm.r.c.a;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.plugin.report.b.d;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 
 final class WorkerProfile$24
-  implements bd.b
+  implements Runnable
 {
-  WorkerProfile$24(WorkerProfile paramWorkerProfile) {}
+  WorkerProfile$24(WorkerProfile paramWorkerProfile, int paramInt, byte[] paramArrayOfByte) {}
   
-  public final void a(c.a parama)
+  public final void run()
   {
-    KVReportJni.parseKVPluginMsg(n.a(bFh.iXv));
+    v.e("MicroMsg.WorkerProfile", "channel:" + Zz);
+    d locald = new d(ZA, Zz);
+    ah.tF().a(locald, 0);
   }
 }
 

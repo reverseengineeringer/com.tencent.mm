@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/an8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="获取开通指纹支付证书" />
+    <Button android:id="@id/an9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="开通指纹支付" />
+    <Button android:id="@id/an_" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="关闭指纹支付" />
+    <TextView android:id="@id/ana" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <Button android:id="@id/anb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RSA加密解密算法验证" />
+    <Button android:id="@id/anc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="清除引导设置指纹flag" />
+    <Button android:id="@id/and" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="清除引导开通指纹支付flag" />
+</LinearLayout>

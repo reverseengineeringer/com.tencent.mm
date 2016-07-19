@@ -1,144 +1,146 @@
 package com.tencent.mm.plugin.sns.a.a;
 
 import android.view.View;
-import com.tencent.mm.protocal.b.aqi;
+import com.tencent.mm.protocal.b.aqt;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class a
 {
-  boolean cQa = false;
-  long cbS = 0L;
-  String cbT = "";
-  public int dII = 0;
-  public int fjb = 1;
-  boolean gFK = false;
-  public aqi gFL;
-  public View gFM;
-  public View gFN;
-  public int gFO = 0;
-  public int gFP = 0;
-  public int gFQ;
-  private View gFR;
-  private int gFS = 0;
-  private com.tencent.mm.plugin.sns.h.a gFT = null;
-  private String gFU = "";
-  int gFV = 55450;
-  private int gFW = 55450;
-  int gFX = 55450;
-  private int gFY = 55450;
-  long gFZ = 0L;
-  long gGa = 0L;
-  private int gGb = 55450;
-  private int gGc = 55450;
-  long gGd = 0L;
-  private int gGe = 55450;
-  private int gGf = 55450;
-  long gGg = 0L;
-  private int gGh = 55450;
-  private int gGi = 55450;
-  long gGj = 0L;
-  private int gGk = 55450;
-  private int gGl = 55450;
-  long gGm = 0L;
-  int gGn = 0;
-  int gGo = -1;
-  int gGp = -1;
-  int gGq = 0;
-  int gGr = 0;
+  long bVH = 0L;
+  public String bVI = "";
+  boolean cND = false;
+  public int dKh = 0;
+  public int frY = 1;
+  private int gMA = 55450;
+  long gMB = 0L;
+  long gMC = 0L;
+  private int gMD = 55450;
+  private int gME = 55450;
+  long gMF = 0L;
+  private int gMG = 55450;
+  private int gMH = 55450;
+  long gMI = 0L;
+  private int gMJ = 55450;
+  private int gMK = 55450;
+  long gML = 0L;
+  private int gMM = 55450;
+  private int gMN = 55450;
+  long gMO = 0L;
+  int gMP = 0;
+  int gMQ = -1;
+  int gMR = -1;
+  int gMS = 0;
+  int gMT = 0;
+  boolean gMm = false;
+  public aqt gMn;
+  public View gMo;
+  public View gMp;
+  public int gMq = 0;
+  public int gMr = 0;
+  public int gMs;
+  private View gMt;
+  private int gMu = 0;
+  private com.tencent.mm.plugin.sns.i.a gMv = null;
+  private String gMw = "";
+  int gMx = 55450;
+  private int gMy = 55450;
+  int gMz = 55450;
   int position = 0;
   
-  public a(com.tencent.mm.plugin.sns.h.a parama, long paramLong, View paramView1, int paramInt1, View paramView2, int paramInt2, int paramInt3, aqi paramaqi, int paramInt4)
+  public a(com.tencent.mm.plugin.sns.i.a parama, long paramLong, View paramView1, int paramInt1, View paramView2, int paramInt2, int paramInt3, aqt paramaqt, int paramInt4)
   {
     position = paramInt4;
-    gFM = paramView1;
-    gFL = paramaqi;
-    gFT = parama;
-    fjb = paramInt3;
+    gMo = paramView1;
+    gMn = paramaqt;
+    gMv = parama;
+    frY = paramInt3;
     if (parama == null)
     {
       paramView1 = "";
-      gFU = paramView1;
+      gMw = paramView1;
       if (parama != null) {
         break label322;
       }
     }
     label322:
-    for (parama = "";; parama = ay.ad(gRE, ""))
+    for (parama = "";; parama = be.ab(gZH, ""))
     {
-      cbT = parama;
-      cbS = paramLong;
-      gFQ = paramInt1;
-      gFR = paramView2;
-      gFS = paramInt2;
-      if (gFM != null) {
-        gFN = gFM.findViewById(2131168796);
+      bVI = parama;
+      bVH = paramLong;
+      gMs = paramInt1;
+      gMt = paramView2;
+      gMu = paramInt2;
+      if (gMo != null) {
+        gMp = gMo.findViewById(2131759258);
       }
-      Gb();
+      Gy();
       return;
-      paramView1 = ay.ad(gFU, "");
+      paramView1 = be.ab(gMw, "");
       break;
     }
   }
   
-  private void Gb()
+  private void Gy()
   {
-    if (dII == 0)
+    if (dKh == 0)
     {
-      BackwardSupportUtil.b.a(gFM.getContext(), 50.0F);
-      dII = gFM.getHeight();
-      if (gFN != null) {
-        gFO = gFN.getHeight();
+      BackwardSupportUtil.b.a(gMo.getContext(), 50.0F);
+      dKh = gMo.getHeight();
+      if (gMp != null) {
+        gMq = gMp.getHeight();
       }
-      if (dII != 0) {}
+      if (dKh != 0) {}
     }
     else
     {
       return;
     }
-    gFR.getTop();
-    int i = gFR.getBottom();
-    gFP = (dII / 2);
-    gFQ = (gFQ - i - gFS);
-    u.i("!32@/B4Tb64lLpKYLkEeAUxXbSmc9F1nPCWf", "viewHeight " + dII + " SCREEN_HEIGHT: " + gFQ + " abottom: " + i + " stHeight: " + gFS + " commentViewHeight:" + gFO);
+    int i = 0;
+    if (gMt != null) {
+      i = gMt.getBottom();
+    }
+    gMr = (dKh / 2);
+    gMs = (gMs - i - gMu);
+    v.i("MicroMsg.AdViewStatic", "viewHeight " + dKh + " SCREEN_HEIGHT: " + gMs + " abottom: " + i + " stHeight: " + gMu + " commentViewHeight:" + gMq);
   }
   
-  public final void axv()
+  public final void azX()
   {
     int j = 1;
-    if (gFM != null)
+    if (gMo != null)
     {
-      Gb();
-      if ((!cQa) && (dII > 0)) {}
+      Gy();
+      if ((!cND) && (dKh > 0)) {}
     }
     else
     {
       return;
     }
-    gFK = true;
-    int m = gFM.getTop();
-    int k = gFM.getBottom();
-    if ((gFV == 55450) && (gFW == 55450))
+    gMm = true;
+    int m = gMo.getTop();
+    int k = gMo.getBottom();
+    if ((gMx == 55450) && (gMy == 55450))
     {
-      gFV = m;
-      gFW = k;
+      gMx = m;
+      gMy = k;
     }
-    gFX = m;
-    gFY = k;
+    gMz = m;
+    gMA = k;
     int n;
     int i1;
     if (m < 0)
     {
-      n = m + dII;
-      i1 = dII - n;
-      if ((n < gFP) || (gGb != 55450)) {
+      n = m + dKh;
+      i1 = dKh - n;
+      if ((n < gMr) || (gMD != 55450)) {
         break label795;
       }
-      gGb = m;
-      gGc = k;
-      gGd = System.currentTimeMillis();
-      u.i("!32@/B4Tb64lLpKYLkEeAUxXbSmc9F1nPCWf", "up first touch half" + n + " top " + m + " viewhieght " + dII + " inscreenval: " + n + " outscreenval: " + i1);
+      gMD = m;
+      gME = k;
+      gMF = System.currentTimeMillis();
+      v.i("MicroMsg.AdViewStatic", "up first touch half" + n + " top " + m + " viewhieght " + dKh + " inscreenval: " + n + " outscreenval: " + i1);
     }
     label616:
     label646:
@@ -147,83 +149,83 @@ public final class a
     label795:
     for (int i = 0;; i = 1)
     {
-      if ((i1 >= gFP) && (gGe == 55450) && (i != 0) && (gGd > 0L))
+      if ((i1 >= gMr) && (gMG == 55450) && (i != 0) && (gMF > 0L))
       {
-        gGe = m;
-        gGf = k;
-        gGg = System.currentTimeMillis();
-        u.i("!32@/B4Tb64lLpKYLkEeAUxXbSmc9F1nPCWf", "down first touch half" + n + " bottom " + k + " viewhieght " + dII + " inscreenval: " + n + " outscreenval: " + i1);
+        gMG = m;
+        gMH = k;
+        gMI = System.currentTimeMillis();
+        v.i("MicroMsg.AdViewStatic", "down first touch half" + n + " bottom " + k + " viewhieght " + dKh + " inscreenval: " + n + " outscreenval: " + i1);
       }
-      if (k > gFQ)
+      if (k > gMs)
       {
-        n = k - gFQ;
-        i1 = dII - n;
+        n = k - gMs;
+        i1 = dKh - n;
         i = j;
-        if (i1 >= gFP)
+        if (i1 >= gMr)
         {
           i = j;
-          if (gGb == 55450)
+          if (gMD == 55450)
           {
-            gGb = m;
-            gGc = k;
-            gGd = System.currentTimeMillis();
-            u.i("!32@/B4Tb64lLpKYLkEeAUxXbSmc9F1nPCWf", "up first touch half" + n + " top " + m + " viewhieght " + dII + " inscreenval: " + i1 + " outscreenval: " + n);
+            gMD = m;
+            gME = k;
+            gMF = System.currentTimeMillis();
+            v.i("MicroMsg.AdViewStatic", "up first touch half" + n + " top " + m + " viewhieght " + dKh + " inscreenval: " + i1 + " outscreenval: " + n);
             i = 0;
           }
         }
-        if ((n >= gFP) && (gGe == 55450) && (i != 0) && (gGd > 0L))
+        if ((n >= gMr) && (gMG == 55450) && (i != 0) && (gMF > 0L))
         {
-          gGe = m;
-          gGf = k;
-          gGg = System.currentTimeMillis();
-          u.i("!32@/B4Tb64lLpKYLkEeAUxXbSmc9F1nPCWf", "down first touch half" + n + " bottom " + k + " viewhieght " + dII + " inscreenval: " + i1 + " outscreenval: " + n);
+          gMG = m;
+          gMH = k;
+          gMI = System.currentTimeMillis();
+          v.i("MicroMsg.AdViewStatic", "down first touch half" + n + " bottom " + k + " viewhieght " + dKh + " inscreenval: " + i1 + " outscreenval: " + n);
         }
       }
-      if ((m >= 0) && (k <= gFQ))
+      if ((m >= 0) && (k <= gMs))
       {
-        if (gGj == 0L)
+        if (gML == 0L)
         {
-          gGh = m;
-          gGi = k;
-          gGj = System.currentTimeMillis();
+          gMJ = m;
+          gMK = k;
+          gML = System.currentTimeMillis();
         }
         if (m >= 0) {
           break label779;
         }
         i = -m;
-        if ((gGo == -1) || (gGo > i)) {
-          gGo = i;
+        if ((gMQ == -1) || (gMQ > i)) {
+          gMQ = i;
         }
-        if (k <= gFQ) {
+        if (k <= gMs) {
           break label787;
         }
-        i = k - gFQ;
-        if ((gGp != -1) && (gGp <= i)) {}
+        i = k - gMs;
+        if ((gMR != -1) && (gMR <= i)) {}
       }
-      for (gGp = i;; gGp = 0)
+      for (gMR = i;; gMR = 0)
       {
-        j = dII;
+        j = dKh;
         i = j;
         if (m < 0) {
           i = j + m;
         }
         j = i;
-        if (k > gFQ) {
-          j = i - (k - gFQ);
+        if (k > gMs) {
+          j = i - (k - gMs);
         }
-        if ((gGn != -1) && (gGn >= j)) {
+        if ((gMP != -1) && (gMP >= j)) {
           break;
         }
-        gGn = j;
+        gMP = j;
         return;
-        if ((gGm != 0L) || (gGj == 0L)) {
+        if ((gMO != 0L) || (gML == 0L)) {
           break label616;
         }
-        gGk = m;
-        gGl = k;
-        gGm = System.currentTimeMillis();
+        gMM = m;
+        gMN = k;
+        gMO = System.currentTimeMillis();
         break label616;
-        gGo = 0;
+        gMQ = 0;
         break label646;
       }
     }

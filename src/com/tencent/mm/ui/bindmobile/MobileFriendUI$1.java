@@ -11,8 +11,8 @@ final class MobileFriendUI$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    kPt.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
-    kPt.finish();
+    loJ.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
+    loJ.finish();
   }
 }
 

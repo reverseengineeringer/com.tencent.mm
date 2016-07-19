@@ -4,25 +4,25 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class MMPreference$3
   implements AdapterView.OnItemLongClickListener
 {
   MMPreference$3(MMPreference paramMMPreference) {}
   
-  public final boolean onItemLongClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final boolean onItemLongClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    if (paramInt < MMPreference.e(kLM).getHeaderViewsCount()) {
+    if (paramInt < MMPreference.e(llb).getHeaderViewsCount()) {
       return false;
     }
-    paramInt -= MMPreference.e(kLM).getHeaderViewsCount();
-    if (paramInt >= MMPreference.d(kLM).getCount())
+    paramInt -= MMPreference.e(llb).getHeaderViewsCount();
+    if (paramInt >= MMPreference.d(llb).getCount())
     {
-      u.e("!44@/B4Tb64lLpI7WPWuV/POwea5Zt4GP9FSxYknwdWPxmk=", "itemlongclick, outofindex, %d, %d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(MMPreference.d(kLM).getCount()) });
+      v.e("MicroMsg.mmui.MMPreference", "itemlongclick, outofindex, %d, %d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(MMPreference.d(llb).getCount()) });
       return false;
     }
-    MMPreference.d(kLM).getItem(paramInt);
+    MMPreference.d(llb).getItem(paramInt);
     return false;
   }
 }

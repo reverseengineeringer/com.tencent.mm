@@ -12,10 +12,10 @@ final class v$1
   
   public final WindowInsets onApplyWindowInsets(View paramView, WindowInsets paramWindowInsets)
   {
-    paramView = (ViewGroup.MarginLayoutParams)kry.getLayoutParams();
-    v.n(leftMargin, topMargin, rightMargin, bottomMargin);
-    krz.setPadding(krz.getPaddingLeft(), krz.getPaddingTop(), rightMargin, bottomMargin);
-    return kry.onApplyWindowInsets(paramWindowInsets);
+    paramView = (ViewGroup.MarginLayoutParams)kQH.getLayoutParams();
+    v.m(leftMargin, topMargin, rightMargin, bottomMargin);
+    kQI.setPadding(kQI.getPaddingLeft(), kQI.getPaddingTop(), rightMargin, bottomMargin);
+    return kQH.onApplyWindowInsets(paramWindowInsets);
   }
 }
 

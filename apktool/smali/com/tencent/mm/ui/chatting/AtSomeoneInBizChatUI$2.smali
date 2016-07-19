@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;->Gb()V
+    value = Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kRd:Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;
+.field final synthetic lrg:Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 93
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI$2;->kRd:Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI$2;->lrg:Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final Gd()V
+.method public final GA()V
     .locals 0
 
     .prologue
@@ -44,7 +44,7 @@
     return-void
 .end method
 
-.method public final Ge()V
+.method public final GB()V
     .locals 0
 
     .prologue
@@ -52,7 +52,7 @@
     return-void
 .end method
 
-.method public final Gf()V
+.method public final GC()V
     .locals 0
 
     .prologue
@@ -60,7 +60,7 @@
     return-void
 .end method
 
-.method public final Gg()V
+.method public final GD()V
     .locals 0
 
     .prologue
@@ -68,7 +68,7 @@
     return-void
 .end method
 
-.method public final kE(Ljava/lang/String;)Z
+.method public final ln(Ljava/lang/String;)Z
     .locals 1
 
     .prologue
@@ -78,20 +78,20 @@
     return v0
 .end method
 
-.method public final kF(Ljava/lang/String;)V
+.method public final lo(Ljava/lang/String;)V
     .locals 2
 
     .prologue
     const/4 v1, 0x0
 
     .line 97
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI$2;->kRd:Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI$2;->lrg:Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;->a(Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI;)Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI$a;
 
     move-result-object v0
 
-    iput-object p1, v0, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI$a;->dbI:Ljava/lang/String;
+    iput-object p1, v0, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI$a;->dao:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v1}, Lcom/tencent/mm/ui/chatting/AtSomeoneInBizChatUI$a;->a(Ljava/lang/String;Lcom/tencent/mm/sdk/h/i;)V
 

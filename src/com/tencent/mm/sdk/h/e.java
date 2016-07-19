@@ -9,9 +9,9 @@ import java.lang.annotation.Target;
 @Target({java.lang.annotation.ElementType.FIELD})
 public @interface e
 {
-  String aVQ();
+  String bbd();
   
-  int aVR() default 0;
+  int bbe() default 0;
 }
 
 /* Location:

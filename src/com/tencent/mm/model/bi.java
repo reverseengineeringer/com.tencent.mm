@@ -4,11 +4,11 @@ import java.util.Map;
 
 public final class bi
 {
-  Map bDf;
+  Map<String, String> bwp;
   
-  public bi(Map paramMap)
+  public bi(Map<String, String> paramMap)
   {
-    bDf = paramMap;
+    bwp = paramMap;
   }
 }
 

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/emoji_reward_btn_bg" android:layout_width="90.0dip" android:layout_height="60.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/cn" android:textColor="@color/dm" android:gravity="center" android:id="@id/aef" android:visibility="gone" android:layout_width="90.0dip" android:layout_height="60.0dip" />
+</LinearLayout>

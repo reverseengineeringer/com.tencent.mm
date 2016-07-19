@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="left" android:id="@id/amu" android:background="#fff3f3f3" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/ow" android:id="@id/amx" android:background="@drawable/ar8" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/as4" style="@style/MMBriefText" />
+</RelativeLayout>

@@ -2,9 +2,9 @@ package com.tencent.mm.model;
 
 public abstract class s
 {
-  long bAr = 0L;
+  long btu = 0L;
   
-  public abstract boolean cy(int paramInt);
+  public abstract boolean dd(int paramInt);
   
   public abstract String getTag();
   

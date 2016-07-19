@@ -34,7 +34,7 @@
 
 
 # virtual methods
-.method abstract Z()Landroid/support/v4/app/y$a;
+.method abstract Y()Landroid/support/v4/app/y$a;
 .end method
 
 .method abstract getLatestTimestamp()J

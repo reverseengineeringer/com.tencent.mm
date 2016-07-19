@@ -2,18 +2,18 @@ package com.tencent.mm.ui.account;
 
 import android.text.Editable;
 import android.text.TextWatcher;
-import com.tencent.mm.sdk.platformtools.ai;
+import com.tencent.mm.sdk.platformtools.al;
 
 final class RegByMobileRegAIOUI$22
   implements TextWatcher
 {
-  private ai eCG = new ai();
+  private al eJd = new al();
   
   RegByMobileRegAIOUI$22(RegByMobileRegAIOUI paramRegByMobileRegAIOUI) {}
   
   public final void afterTextChanged(Editable paramEditable)
   {
-    RegByMobileRegAIOUI.b(kuT);
+    RegByMobileRegAIOUI.b(kUa);
   }
   
   public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}

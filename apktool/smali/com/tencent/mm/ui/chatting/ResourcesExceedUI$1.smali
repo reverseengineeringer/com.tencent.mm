@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->Gb()V
+    value = Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ldn:Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;
+.field final synthetic lDE:Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 29
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI$1;->ldn:Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI$1;->lDE:Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 33
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI$1;->ldn:Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI$1;->lDE:Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->finish()V
 

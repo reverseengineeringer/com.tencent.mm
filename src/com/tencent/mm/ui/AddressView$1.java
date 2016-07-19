@@ -3,7 +3,7 @@ package com.tencent.mm.ui;
 import android.support.v4.view.a.a.b;
 import android.view.View;
 import android.view.accessibility.AccessibilityEvent;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import java.util.List;
 
 final class AddressView$1
@@ -14,21 +14,21 @@ final class AddressView$1
   public final void a(View paramView, android.support.v4.view.a.a parama)
   {
     super.a(paramView, parama);
-    CharSequence localCharSequence = kjt.getContentDescription();
+    CharSequence localCharSequence = kJB.getContentDescription();
     paramView = localCharSequence;
-    if (ay.kz((String)localCharSequence)) {
-      paramView = kjt.nickName;
+    if (be.kf((String)localCharSequence)) {
+      paramView = kJB.nickName;
     }
-    android.support.v4.view.a.a.gK.d(gL, paramView);
+    android.support.v4.view.a.a.hf.d(hg, paramView);
   }
   
   public final void onPopulateAccessibilityEvent(View paramView, AccessibilityEvent paramAccessibilityEvent)
   {
     super.onPopulateAccessibilityEvent(paramView, paramAccessibilityEvent);
-    CharSequence localCharSequence = kjt.getContentDescription();
+    CharSequence localCharSequence = kJB.getContentDescription();
     paramView = localCharSequence;
-    if (ay.kz((String)localCharSequence)) {
-      paramView = kjt.nickName;
+    if (be.kf((String)localCharSequence)) {
+      paramView = kJB.nickName;
     }
     paramAccessibilityEvent.getText().add(paramView);
   }

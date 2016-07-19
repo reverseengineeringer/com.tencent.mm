@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gCA:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
+.field final synthetic gJb:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 458
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$14;->gCA:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$14;->gJb:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 462
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$14;->gCA:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$14;->gJb:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->d(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 

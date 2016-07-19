@@ -4,13 +4,15 @@ import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.ar.c;
-import com.tencent.mm.d.a.ay;
-import com.tencent.mm.d.a.ay.a;
-import com.tencent.mm.d.a.ay.b;
+import com.tencent.mm.av.c;
+import com.tencent.mm.e.a.bb;
+import com.tencent.mm.e.a.bb.a;
+import com.tencent.mm.e.a.bb.b;
+import com.tencent.mm.e.a.bz;
+import com.tencent.mm.e.a.bz.b;
 import com.tencent.mm.pluginsdk.model.d;
 import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.g.d;
@@ -27,59 +29,70 @@ final class ShowImageUI$2
   {
     paramMenuItem = new LinkedList();
     LinkedList localLinkedList = new LinkedList();
-    if ((ShowImageUI.a(lxX)) && (c.yf("favorite")))
+    if ((ShowImageUI.a(lYM)) && (c.zM("favorite")))
     {
       localLinkedList.add(Integer.valueOf(0));
-      paramMenuItem.add(lxX.getString(2131427828));
+      paramMenuItem.add(lYM.getString(2131234530));
       localLinkedList.add(Integer.valueOf(1));
-      paramMenuItem.add(lxX.getString(2131431054));
+      paramMenuItem.add(lYM.getString(2131234160));
       localLinkedList.add(Integer.valueOf(2));
-      paramMenuItem.add(lxX.getString(2131427823));
+      paramMenuItem.add(lYM.getString(2131234713));
     }
     for (;;)
     {
-      g.a(lxX, "", paramMenuItem, localLinkedList, "", false, new g.d()
+      bz localbz = new bz();
+      ahe.agU = lYM.getIntent().getLongExtra("key_message_id", -1L);
+      a.kug.y(localbz);
+      if (ahf.agF)
       {
-        public final void aq(int paramAnonymousInt1, int paramAnonymousInt2)
+        localLinkedList.add(Integer.valueOf(3));
+        paramMenuItem.add(lYM.getString(2131231704));
+      }
+      g.a(lYM, "", paramMenuItem, localLinkedList, "", false, new g.d()
+      {
+        public final void av(int paramAnonymousInt1, int paramAnonymousInt2)
         {
           switch (paramAnonymousInt2)
           {
           default: 
             return;
           case 0: 
-            ShowImageUI.b(lxX);
+            ShowImageUI.b(lYM);
             return;
           case 1: 
-            ShowImageUI localShowImageUI = lxX;
-            ay localay = new ay();
+            ShowImageUI localShowImageUI = lYM;
+            bb localbb = new bb();
             long l = localShowImageUI.getIntent().getLongExtra("key_message_id", -1L);
             if (-1L == l) {
-              u.w("!32@/B4Tb64lLpL/S4mvETx9l9B/T4NcFgMX", "msg id error, try fav simple data");
+              v.w("MicroMsg.ShowImageUI", "msg id error, try fav simple data");
             }
-            for (boolean bool = d.a(localay, localShowImageUI.getIntent().getIntExtra("key_favorite_source_type", 1), localShowImageUI.getIntent().getStringExtra("key_image_path"));; bool = d.a(localay, l))
+            for (boolean bool = d.a(localbb, localShowImageUI.getIntent().getIntExtra("key_favorite_source_type", 1), localShowImageUI.getIntent().getStringExtra("key_image_path"));; bool = d.a(localbb, l))
             {
               if (!bool) {
-                break label177;
+                break label181;
               }
-              a.jUF.j(localay);
-              if (aue.ret != 0) {
+              a.kug.y(localbb);
+              if (afR.ret != 0) {
                 break;
               }
-              g.ba(koJ.kpc, koJ.kpc.getString(2131431055));
+              g.aZ(kNN.kOg, kNN.kOg.getString(2131232638));
               return;
             }
-            label177:
-            g.e(koJ.kpc, aud.type, 0);
+            g.f(kNN.kOg, afQ.type, 0);
+            return;
+          case 2: 
+            label181:
+            ShowImageUI.c(lYM);
             return;
           }
-          ShowImageUI.c(lxX);
+          ShowImageUI.d(lYM);
         }
       });
       return true;
       localLinkedList.add(Integer.valueOf(0));
-      paramMenuItem.add(lxX.getString(2131427828));
+      paramMenuItem.add(lYM.getString(2131234530));
       localLinkedList.add(Integer.valueOf(2));
-      paramMenuItem.add(lxX.getString(2131427823));
+      paramMenuItem.add(lYM.getString(2131234713));
     }
   }
 }

@@ -1,16 +1,17 @@
 package com.tencent.mm.ui.conversation;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 
 final class BizConversationUI$a$7
-  implements DialogInterface.OnCancelListener
+  implements MenuItem.OnMenuItemClickListener
 {
   BizConversationUI$a$7(BizConversationUI.a parama) {}
   
-  public final void onCancel(DialogInterface paramDialogInterface)
+  public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    BizConversationUI.a.i(loi);
+    lOA.finish();
+    return true;
   }
 }
 

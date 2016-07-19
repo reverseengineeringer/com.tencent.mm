@@ -15,11 +15,20 @@
 
 
 # instance fields
-.field public btR:I
+.field public bhU:I
 
-.field public btS:Landroid/util/SparseArray;
+.field public bhV:Landroid/util/SparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/SparseArray",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public btT:Ljava/lang/String;
+.field public bhW:Ljava/lang/String;
 
 .field public model:Ljava/lang/String;
 
@@ -64,7 +73,7 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcom/tencent/mm/compatible/e/a$b;->btT:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/compatible/e/a$b;->bhW:Ljava/lang/String;
 
     aput-object v4, v2, v3
 
@@ -82,13 +91,13 @@
 
     const/4 v3, 0x3
 
-    iget-object v4, p0, Lcom/tencent/mm/compatible/e/a$b;->btS:Landroid/util/SparseArray;
+    iget-object v4, p0, Lcom/tencent/mm/compatible/e/a$b;->bhV:Landroid/util/SparseArray;
 
     aput-object v4, v2, v3
 
     const/4 v3, 0x4
 
-    iget v4, p0, Lcom/tencent/mm/compatible/e/a$b;->btR:I
+    iget v4, p0, Lcom/tencent/mm/compatible/e/a$b;->bhU:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

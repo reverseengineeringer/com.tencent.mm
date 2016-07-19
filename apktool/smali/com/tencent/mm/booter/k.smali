@@ -13,11 +13,11 @@
     const/4 v2, 0x0
 
     .line 26
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -31,23 +31,23 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/platformtools/t;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v0, v1}, Lcom/tencent/mm/platformtools/s;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v0
 
-    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yD()Lcom/tencent/mm/modelfriend/m$a;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yQ()Lcom/tencent/mm/modelfriend/m$a;
 
     move-result-object v1
 
-    sget-object v3, Lcom/tencent/mm/modelfriend/m$a;->bMB:Lcom/tencent/mm/modelfriend/m$a;
+    sget-object v3, Lcom/tencent/mm/modelfriend/m$a;->bFV:Lcom/tencent/mm/modelfriend/m$a;
 
     if-eq v1, v3, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yD()Lcom/tencent/mm/modelfriend/m$a;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yQ()Lcom/tencent/mm/modelfriend/m$a;
 
     move-result-object v1
 
-    sget-object v3, Lcom/tencent/mm/modelfriend/m$a;->bMC:Lcom/tencent/mm/modelfriend/m$a;
+    sget-object v3, Lcom/tencent/mm/modelfriend/m$a;->bFW:Lcom/tencent/mm/modelfriend/m$a;
 
     if-ne v1, v3, :cond_3
 
@@ -56,14 +56,14 @@
     if-eqz v0, :cond_5
 
     .line 27
-    const-string/jumbo v0, "!44@/B4Tb64lLpIuznxMDiXSbBa88WdSZ7LyM4ZtpZIq79Q="
+    const-string/jumbo v0, "MicroMsg.PostTaskUpdateCtRemark"
 
     const-string/jumbo v1, "collect addr userName"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 28
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zq()Lcom/tencent/mm/modelfriend/c;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zD()Lcom/tencent/mm/modelfriend/c;
 
     move-result-object v0
 
@@ -75,7 +75,7 @@
 
     const-string/jumbo v3, ""
 
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->kx(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/be;->lh(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -93,12 +93,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelfriend/c;->hs(Ljava/lang/String;)Ljava/util/List;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelfriend/c;->hK(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v3
 
     .line 31
-    const-string/jumbo v0, "!44@/B4Tb64lLpIuznxMDiXSbBa88WdSZ7LyM4ZtpZIq79Q="
+    const-string/jumbo v0, "MicroMsg.PostTaskUpdateCtRemark"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -118,7 +118,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move v1, v2
 
@@ -148,7 +148,7 @@
 
     check-cast v0, Lcom/tencent/mm/modelfriend/b;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/b;->yj()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/b;->yv()Ljava/lang/String;
 
     move-result-object v0
 
@@ -178,33 +178,33 @@
     if-nez v5, :cond_2
 
     .line 36
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v5}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v5
 
-    invoke-virtual {v5, v4}, Lcom/tencent/mm/storage/q;->Ep(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v5, v4}, Lcom/tencent/mm/storage/q;->GD(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
 
     move-result-object v5
 
     .line 39
-    iget v6, v5, Lcom/tencent/mm/d/b/p;->field_type:I
+    iget v6, v5, Lcom/tencent/mm/e/b/p;->field_type:I
 
-    invoke-static {v6}, Lcom/tencent/mm/h/a;->ce(I)Z
+    invoke-static {v6}, Lcom/tencent/mm/i/a;->cy(I)Z
 
     move-result v6
 
     if-eqz v6, :cond_2
 
     .line 40
-    iget-object v6, v5, Lcom/tencent/mm/d/b/p;->field_conRemark:Ljava/lang/String;
+    iget-object v6, v5, Lcom/tencent/mm/e/b/p;->field_conRemark:Ljava/lang/String;
 
     if-eqz v6, :cond_1
 
-    iget-object v6, v5, Lcom/tencent/mm/d/b/p;->field_conRemark:Ljava/lang/String;
+    iget-object v6, v5, Lcom/tencent/mm/e/b/p;->field_conRemark:Ljava/lang/String;
 
     const-string/jumbo v7, ""
 
@@ -216,7 +216,7 @@
 
     .line 43
     :cond_1
-    const-string/jumbo v6, "!44@/B4Tb64lLpIuznxMDiXSbBa88WdSZ7LyM4ZtpZIq79Q="
+    const-string/jumbo v6, "MicroMsg.PostTaskUpdateCtRemark"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -242,7 +242,7 @@
 
     move-result-object v4
 
-    invoke-static {v6, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 44
     invoke-static {v5, v0}, Lcom/tencent/mm/model/i;->b(Lcom/tencent/mm/storage/k;Ljava/lang/String;)V
@@ -263,11 +263,11 @@
 
     .line 48
     :cond_4
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -279,11 +279,11 @@
 
     .line 52
     :cond_5
-    const-string/jumbo v0, "!44@/B4Tb64lLpIuznxMDiXSbBa88WdSZ7LyM4ZtpZIq79Q="
+    const-string/jumbo v0, "MicroMsg.PostTaskUpdateCtRemark"
 
     const-string/jumbo v1, "update ct remark done"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 80
     return-void

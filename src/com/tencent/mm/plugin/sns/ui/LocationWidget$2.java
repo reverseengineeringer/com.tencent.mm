@@ -2,8 +2,8 @@ package com.tencent.mm.plugin.sns.ui;
 
 import com.tencent.mm.modelgeo.Addr;
 import com.tencent.mm.modelgeo.b.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class LocationWidget$2
   implements b.a
@@ -12,15 +12,15 @@ final class LocationWidget$2
   
   public final void b(Addr paramAddr)
   {
-    u.i("!32@/B4Tb64lLpIu6Y+BscdrxMP5NzODT+9I", "get info %s", new Object[] { paramAddr.toString() });
-    if (!LocationWidget.b(gZr)) {}
+    v.i("MicroMsg.LocationWidget", "get info %s", new Object[] { paramAddr.toString() });
+    if (!LocationWidget.b(hmJ)) {}
     do
     {
       return;
-      LocationWidget.c(gZr);
-    } while (!ay.kz(LocationWidget.d(gZr)));
-    LocationWidget.a(gZr, bNQ);
-    LocationWidget.c(gZr);
+      LocationWidget.c(hmJ);
+    } while (!be.kf(LocationWidget.d(hmJ)));
+    LocationWidget.a(hmJ, bHm);
+    LocationWidget.c(hmJ);
   }
 }
 

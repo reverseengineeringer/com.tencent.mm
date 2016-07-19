@@ -10,7 +10,7 @@ final class AppChooserUI$5
   
   public final void onDismiss(DialogInterface paramDialogInterface)
   {
-    iRi.finish();
+    jos.finish();
   }
 }
 

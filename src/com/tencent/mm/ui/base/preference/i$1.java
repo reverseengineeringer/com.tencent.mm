@@ -10,29 +10,29 @@ final class i$1
   
   public final boolean a(Preference paramPreference, Object paramObject)
   {
-    if ((!i.a(kMb)) && (paramPreference.isEnabled()) && (kMm))
+    if ((!i.a(llq)) && (paramPreference.isEnabled()) && (llB))
     {
-      i.a(kMb, true);
+      i.a(llq, true);
       if (!(paramPreference instanceof CheckBoxPreference)) {
         break label155;
       }
       paramObject = (CheckBoxPreference)paramPreference;
-      kKS = ((CheckBoxPreference)paramObject).isChecked();
-      if (kMo) {
-        i.b(kMb).edit().putBoolean(cln, ((CheckBoxPreference)paramObject).isChecked()).commit();
+      lkh = ((CheckBoxPreference)paramObject).isChecked();
+      if (llD) {
+        i.b(llq).edit().putBoolean(cgq, ((CheckBoxPreference)paramObject).isChecked()).commit();
       }
-      i.c(kMb);
+      i.c(llq);
     }
     label155:
     for (int i = 1;; i = 0)
     {
-      if (cln != null) {
-        kMb.a(i.d(kMb), paramPreference);
+      if (cgq != null) {
+        llq.a(i.d(llq), paramPreference);
       }
       if (i != 0) {
-        i.d(kMb).notifyDataSetChanged();
+        i.d(llq).notifyDataSetChanged();
       }
-      i.a(kMb, false);
+      i.a(llq, false);
       return i != 0;
     }
   }

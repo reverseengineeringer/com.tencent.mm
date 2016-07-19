@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingTop="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/WalletBody">
+        <TextView android:text="@string/d8z" style="@style/WalletElementTips" />
+        <CheckedTextView android:textAppearance="@style/i5" android:textColor="@android:color/black" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/cn5" android:background="@drawable/dl" android:paddingLeft="@dimen/hi" android:paddingRight="@dimen/hi" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checkMark="@drawable/nt" android:maxHeight="48.0dip" android:minHeight="48.0dip" android:text="@string/d_4" />
+        <CheckedTextView android:textAppearance="@style/i5" android:textColor="@android:color/black" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/cn6" android:background="@drawable/dl" android:paddingLeft="@dimen/hi" android:paddingRight="@dimen/hi" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checkMark="@drawable/nt" android:maxHeight="48.0dip" android:minHeight="48.0dip" android:text="@string/d9u" />
+        <TextView android:text="@string/d8x" style="@style/WalletElementTips" />
+        <com.tencent.mm.ui.base.MaxListView android:id="@id/cn7" android:background="@null" android:paddingLeft="@dimen/hi" android:paddingRight="@dimen/hi" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:divider="#00000000" android:dividerHeight="0.0dip" android:choiceMode="singleChoice" />
+        <TextView android:layout_marginTop="5.0dip" android:text="@string/d8y" style="@style/WalletElementTips" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tencent.mm.ui.applet.SecurityImage android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/MMBody">
+        <LinearLayout android:gravity="bottom" android:padding="5.0dip" style="@style/MMLine">
+            <FrameLayout android:background="#ff000000" android:padding="1.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="40.0dip">
+                <ImageView android:id="@id/c2s" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="150.0dip" android:maxHeight="80.0dip" android:minWidth="130.0dip" android:minHeight="53.0dip" />
+                <ProgressBar android:layout_gravity="center" android:id="@id/c2t" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/smallCustomProgressBar" />
+            </FrameLayout>
+            <View style="@style/MMSplit" />
+            <Button android:id="@id/c2u" android:minHeight="40.0dip" android:text="@string/i9" android:singleLine="true" style="@style/HyperText" />
+        </LinearLayout>
+        <View style="@style/MMSplit" />
+        <EditText android:textColor="@color/j_" android:id="@id/c2v" android:hint="@string/i_" style="@style/MMLineEditText" />
+    </LinearLayout>
+</com.tencent.mm.ui.applet.SecurityImage>

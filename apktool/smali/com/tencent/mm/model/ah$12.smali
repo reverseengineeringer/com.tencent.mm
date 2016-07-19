@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 652
+    .line 656
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,34 +30,34 @@
 
 
 # virtual methods
-.method public final tT()Lcom/tencent/mm/network/e;
+.method public final tU()Lcom/tencent/mm/network/e;
     .locals 5
 
     .prologue
-    .line 657
+    .line 661
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tO()Lcom/tencent/mm/model/ah;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tP()Lcom/tencent/mm/model/ah;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/model/ah;->g(Lcom/tencent/mm/model/ah;)Lcom/tencent/mm/r/m;
+    invoke-static {v0}, Lcom/tencent/mm/model/ah;->g(Lcom/tencent/mm/model/ah;)Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/r/m;->bFO:Lcom/tencent/mm/network/e;
+    iget-object v0, v0, Lcom/tencent/mm/t/m;->byZ:Lcom/tencent/mm/network/e;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 661
+    .line 665
     :goto_0
     return-object v0
 
-    .line 658
+    .line 662
     :catch_0
     move-exception v0
 
-    .line 659
-    const-string/jumbo v1, "!24@/B4Tb64lLpKk+n5Gbwo3Rw=="
+    .line 663
+    const-string/jumbo v1, "MicroMsg.MMCore"
 
     const-string/jumbo v2, "%s"
 
@@ -67,15 +67,15 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 661
+    .line 665
     const/4 v0, 0x0
 
     goto :goto_0

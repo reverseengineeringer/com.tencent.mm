@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field final synthetic mA:Landroid/support/v7/internal/view/menu/i;
+.field final mP:Landroid/support/v4/view/d;
 
-.field final mz:Landroid/support/v4/view/d;
+.field final synthetic mQ:Landroid/support/v7/internal/view/menu/i;
 
 
 # direct methods
@@ -26,7 +26,7 @@
 
     .prologue
     .line 376
-    iput-object p1, p0, Landroid/support/v7/internal/view/menu/i$a;->mA:Landroid/support/v7/internal/view/menu/i;
+    iput-object p1, p0, Landroid/support/v7/internal/view/menu/i$a;->mQ:Landroid/support/v7/internal/view/menu/i;
 
     .line 377
     iget-object v0, p2, Landroid/support/v4/view/d;->mContext:Landroid/content/Context;
@@ -34,7 +34,7 @@
     invoke-direct {p0, v0}, Landroid/view/ActionProvider;-><init>(Landroid/content/Context;)V
 
     .line 378
-    iput-object p2, p0, Landroid/support/v7/internal/view/menu/i$a;->mz:Landroid/support/v4/view/d;
+    iput-object p2, p0, Landroid/support/v7/internal/view/menu/i$a;->mP:Landroid/support/v4/view/d;
 
     .line 380
     invoke-static {p1}, Landroid/support/v7/internal/view/menu/i;->a(Landroid/support/v7/internal/view/menu/i;)Z
@@ -44,7 +44,7 @@
     if-eqz v0, :cond_0
 
     .line 381
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/i$a;->mz:Landroid/support/v4/view/d;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/i$a;->mP:Landroid/support/v4/view/d;
 
     new-instance v1, Landroid/support/v7/internal/view/menu/i$a$1;
 
@@ -74,7 +74,7 @@
 
     .prologue
     .line 394
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/i$a;->mA:Landroid/support/v7/internal/view/menu/i;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/i$a;->mQ:Landroid/support/v7/internal/view/menu/i;
 
     invoke-static {v0}, Landroid/support/v7/internal/view/menu/i;->a(Landroid/support/v7/internal/view/menu/i;)Z
 
@@ -83,13 +83,13 @@
     if-eqz v0, :cond_0
 
     .line 397
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/i$a;->mA:Landroid/support/v7/internal/view/menu/i;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/i$a;->mQ:Landroid/support/v7/internal/view/menu/i;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/i;->bG()Z
 
     .line 399
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/i$a;->mz:Landroid/support/v4/view/d;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/i$a;->mP:Landroid/support/v4/view/d;
 
     invoke-virtual {v0}, Landroid/support/v4/view/d;->onCreateActionView()Landroid/view/View;
 
@@ -113,7 +113,7 @@
 
     .prologue
     .line 414
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/i$a;->mA:Landroid/support/v7/internal/view/menu/i;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/i$a;->mQ:Landroid/support/v7/internal/view/menu/i;
 
     invoke-virtual {v0, p1}, Landroid/support/v7/internal/view/menu/i;->a(Landroid/view/SubMenu;)Landroid/view/SubMenu;
 

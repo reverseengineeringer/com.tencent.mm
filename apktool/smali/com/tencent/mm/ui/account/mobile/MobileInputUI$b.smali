@@ -18,7 +18,7 @@
 .method public abstract a(Lcom/tencent/mm/ui/account/mobile/MobileInputUI;)V
 .end method
 
-.method public abstract qp(I)V
+.method public abstract sh(I)V
 .end method
 
 .method public abstract start()V

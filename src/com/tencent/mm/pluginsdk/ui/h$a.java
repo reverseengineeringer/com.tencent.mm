@@ -8,11 +8,11 @@ public abstract interface h$a
   
   public abstract void a(h paramh);
   
-  public abstract Bitmap aL(String paramString);
+  public abstract Bitmap aQ(String paramString);
   
-  public abstract Bitmap aM(String paramString);
+  public abstract Bitmap aR(String paramString);
   
-  public abstract Bitmap kp();
+  public abstract Bitmap iS();
 }
 
 /* Location:

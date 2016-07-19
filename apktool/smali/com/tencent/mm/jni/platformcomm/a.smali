@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static bwp:J
+.field private static blC:J
 
 .field private static context:Landroid/content/Context;
 
@@ -17,7 +17,7 @@
     .line 13
     const-wide/16 v0, 0x2710
 
-    sput-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->bwp:J
+    sput-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->blC:J
 
     .line 14
     const/4 v0, 0x0
@@ -28,12 +28,12 @@
 .end method
 
 .method static synthetic a(Landroid/telephony/SignalStrength;)V
-    .locals 7
+    .locals 6
 
     .prologue
-    const-wide/16 v1, 0x64
+    const-wide/16 v2, 0x64
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
     .line 12
     invoke-virtual {p0}, Landroid/telephony/SignalStrength;->isGsm()Z
@@ -49,18 +49,18 @@
     :goto_0
     invoke-virtual {p0}, Landroid/telephony/SignalStrength;->isGsm()Z
 
-    move-result v5
+    move-result v1
 
-    if-eqz v5, :cond_1
+    if-eqz v1, :cond_1
 
-    const/16 v5, 0x63
+    const/16 v1, 0x63
 
-    if-ne v0, v5, :cond_1
+    if-ne v0, v1, :cond_1
 
-    move-wide v0, v3
+    move-wide v0, v4
 
     :goto_1
-    sput-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->bwp:J
+    sput-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->blC:J
 
     return-void
 
@@ -78,43 +78,43 @@
     :cond_1
     int-to-float v0, v0
 
-    const v5, 0x404e739d
+    const v1, 0x404e739d
 
-    mul-float/2addr v0, v5
+    mul-float/2addr v0, v1
 
-    float-to-long v5, v0
+    float-to-long v0, v0
 
-    sput-wide v5, Lcom/tencent/mm/jni/platformcomm/a;->bwp:J
+    sput-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->blC:J
 
-    cmp-long v0, v5, v1
+    cmp-long v0, v0, v2
 
     if-lez v0, :cond_2
 
-    move-wide v0, v1
+    move-wide v0, v2
 
     :goto_2
-    sput-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->bwp:J
+    sput-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->blC:J
 
-    cmp-long v0, v0, v3
+    cmp-long v0, v0, v4
 
     if-gez v0, :cond_3
 
-    move-wide v0, v3
+    move-wide v0, v4
 
     goto :goto_1
 
     :cond_2
-    sget-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->bwp:J
+    sget-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->blC:J
 
     goto :goto_2
 
     :cond_3
-    sget-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->bwp:J
+    sget-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->blC:J
 
     goto :goto_1
 .end method
 
-.method public static aI(Landroid/content/Context;)V
+.method public static aF(Landroid/content/Context;)V
     .locals 3
 
     .prologue
@@ -143,17 +143,17 @@
     return-void
 .end method
 
-.method public static qQ()J
+.method public static pF()J
     .locals 2
 
     .prologue
     .line 34
-    sget-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->bwp:J
+    sget-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->blC:J
 
     return-wide v0
 .end method
 
-.method public static qR()J
+.method public static pG()J
     .locals 5
 
     .prologue
@@ -194,7 +194,7 @@
     move-result v0
 
     .line 43
-    const-string/jumbo v2, "!44@/B4Tb64lLpJlhWc9y/UzPNzz3NdxTnJ/gIsDYHugT/w="
+    const-string/jumbo v2, "MicroMsg.NetworkSignalUtil"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -212,7 +212,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 44
     if-le v0, v1, :cond_0
@@ -237,11 +237,11 @@
 
     .line 48
     :cond_2
-    const-string/jumbo v0, "!44@/B4Tb64lLpJlhWc9y/UzPNzz3NdxTnJ/gIsDYHugT/w="
+    const-string/jumbo v0, "MicroMsg.NetworkSignalUtil"
 
     const-string/jumbo v1, "Can Not Get Wifi Signal"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 49
     const-wide/16 v0, 0x0

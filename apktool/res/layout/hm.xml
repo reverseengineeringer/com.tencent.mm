@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.ui.widget.FoursquareRelativeLayout android:background="#ff333333" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.tencent.mm.ui.MMImageView android:id="@id/a5c" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="center" />
+        <ImageView android:id="@id/a5d" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/as0" android:layout_alignParentBottom="true" />
+        <TextView android:ellipsize="middle" android:id="@id/a5e" android:background="#33ffffff" android:padding="2.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        <View android:id="@id/a5f" android:background="#7f000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:id="@id/a5g" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <CheckBox android:id="@id/l6" android:background="@drawable/ix" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hj" android:layout_marginRight="@dimen/hj" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    </com.tencent.mm.ui.widget.FoursquareRelativeLayout>
+</LinearLayout>

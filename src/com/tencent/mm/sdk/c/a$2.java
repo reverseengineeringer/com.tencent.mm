@@ -3,7 +3,7 @@ package com.tencent.mm.sdk.c;
 import java.util.Comparator;
 
 final class a$2
-  implements Comparator
+  implements Comparator<c>
 {
   a$2(a parama) {}
 }

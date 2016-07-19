@@ -1,15 +1,15 @@
 package com.tencent.mm.ui.widget;
 
-import android.graphics.Point;
-import android.view.View;
+import android.util.SparseIntArray;
+import java.util.ArrayList;
 
-public abstract interface DragSortListView$i
+final class DragSortListView$i
 {
-  public abstract void aP(View paramView);
+  SparseIntArray mfw = new SparseIntArray(3);
+  ArrayList<Integer> mfx = new ArrayList(3);
+  int mfy = 3;
   
-  public abstract void b(Point paramPoint);
-  
-  public abstract View sh(int paramInt);
+  public DragSortListView$i(DragSortListView paramDragSortListView) {}
 }
 
 /* Location:

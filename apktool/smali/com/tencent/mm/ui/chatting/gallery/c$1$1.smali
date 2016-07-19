@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lfb:Lcom/tencent/mm/ui/chatting/gallery/c$1;
+.field final synthetic lFn:Lcom/tencent/mm/ui/chatting/gallery/c$1;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 246
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/c$1$1;->lfb:Lcom/tencent/mm/ui/chatting/gallery/c$1;
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/c$1$1;->lFn:Lcom/tencent/mm/ui/chatting/gallery/c$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,15 +43,15 @@
     const/4 v3, 0x0
 
     .line 250
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/c$1$1;->lfb:Lcom/tencent/mm/ui/chatting/gallery/c$1;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/c$1$1;->lFn:Lcom/tencent/mm/ui/chatting/gallery/c$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/c$1;->leY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/c$1;->lFk:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/gallery/c$1$1;->lfb:Lcom/tencent/mm/ui/chatting/gallery/c$1;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/gallery/c$1$1;->lFn:Lcom/tencent/mm/ui/chatting/gallery/c$1;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/chatting/gallery/c$1;->leZ:Lcom/tencent/mm/ui/chatting/gallery/c$a;
+    iget-object v1, v1, Lcom/tencent/mm/ui/chatting/gallery/c$1;->lFl:Lcom/tencent/mm/ui/chatting/gallery/c$a;
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;->lfn:Ljava/lang/Boolean;
+    iget-object v2, v0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;->lFz:Ljava/lang/Boolean;
 
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -59,7 +59,7 @@
 
     if-nez v2, :cond_0
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/chatting/gallery/c$a;->iGr:Landroid/view/View;
+    iget-object v0, v1, Lcom/tencent/mm/ui/chatting/gallery/c$a;->jdm:Landroid/view/View;
 
     const/16 v1, 0x8
 
@@ -75,15 +75,15 @@
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;->lfn:Ljava/lang/Boolean;
+    iput-object v2, v0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;->lFz:Ljava/lang/Boolean;
 
-    invoke-static {}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;->bgt()Z
+    invoke-static {}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;->bmc()Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/chatting/gallery/c$a;->iGr:Landroid/view/View;
+    iget-object v0, v1, Lcom/tencent/mm/ui/chatting/gallery/c$a;->jdm:Landroid/view/View;
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
@@ -94,9 +94,9 @@
 
     invoke-direct {v2, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v2, v0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;->lfl:Ljava/lang/ref/WeakReference;
+    iput-object v2, v0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;->lFx:Ljava/lang/ref/WeakReference;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/chatting/gallery/c$a;->gpY:Landroid/widget/ImageView;
+    iget-object v1, v1, Lcom/tencent/mm/ui/chatting/gallery/c$a;->gAq:Landroid/widget/ImageView;
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 

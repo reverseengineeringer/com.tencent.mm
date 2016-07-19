@@ -7,14 +7,14 @@ final class r$6
 {
   r$6(r paramr, FragmentActivity paramFragmentActivity) {}
   
-  public final void biL()
+  public final void boH()
   {
-    lxI.a(lxJ);
+    lYx.d(lYy);
   }
   
   public final void collapseActionView()
   {
-    lxI.b(lxJ);
+    lYx.e(lYy);
   }
 }
 

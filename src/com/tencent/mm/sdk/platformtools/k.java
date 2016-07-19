@@ -13,8 +13,9 @@ public final class k
       do
       {
         return;
+        v.h("MicroMsg.ForceGpuUtil", "setLayerType, view: %s", new Object[] { Integer.valueOf(paramView.hashCode()) });
       } while (Build.VERSION.SDK_INT < 11);
-      new l();
+      new m();
     } while (paramView.getLayerType() == 1);
     paramView.setLayerType(1, null);
   }
@@ -27,7 +28,7 @@ public final class k
       return;
       if (Build.VERSION.SDK_INT >= 11)
       {
-        new l();
+        new m();
         if ((paramInt1 >= 2048) || (paramInt2 >= 2048)) {}
         for (paramInt1 = 1; paramView.getLayerType() != paramInt1; paramInt1 = 2)
         {

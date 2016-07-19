@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kPK:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
+.field final synthetic loZ:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 231
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$5;->kPK:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$5;->loZ:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 235
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$5;->kPK:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$5;->loZ:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindqq/VerifyQQUI;->h(Lcom/tencent/mm/ui/bindqq/VerifyQQUI;)Lcom/tencent/mm/ui/applet/SecurityImage;
 

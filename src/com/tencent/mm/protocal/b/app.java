@@ -1,66 +1,50 @@
 package com.tencent.mm.protocal.b;
 
-import java.util.LinkedList;
-
 public final class app
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public aly jJn;
+  public String url;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (jJn != null)
-      {
-        paramVarArgs.cj(1, jJn.kn());
-        jJn.a(paramVarArgs);
+      if (url != null) {
+        paramVarArgs.e(1, url);
       }
       return 0;
     }
     if (paramInt == 1) {
-      if (jJn == null) {
-        break label273;
+      if (url == null) {
+        break label174;
       }
     }
-    label273:
-    for (paramInt = a.a.a.a.ch(1, jJn.kn()) + 0;; paramInt = 0)
+    label174:
+    for (paramInt = a.a.a.b.b.a.f(1, url) + 0;; paramInt = 0)
     {
       return paramInt;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
         break;
       }
       if (paramInt == 3)
       {
-        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
         app localapp = (app)paramVarArgs[1];
-        paramInt = ((Integer)paramVarArgs[2]).intValue();
-        switch (paramInt)
+        switch (((Integer)paramVarArgs[2]).intValue())
         {
         default: 
           return -1;
         }
-        paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-        int i = paramVarArgs.size();
-        paramInt = 0;
-        while (paramInt < i)
-        {
-          Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-          localObject1 = new aly();
-          localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-          for (boolean bool = true; bool; bool = ((aly)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
-          jJn = ((aly)localObject1);
-          paramInt += 1;
-        }
-        break;
+        url = mMY.readString();
+        return 0;
       }
       return -1;
     }

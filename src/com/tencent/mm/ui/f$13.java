@@ -1,19 +1,14 @@
 package com.tencent.mm.ui;
 
-import android.content.ComponentName;
-import android.content.Intent;
+import com.tencent.mm.e.a.ll;
+import com.tencent.mm.sdk.c.c;
 
 final class f$13
-  implements Runnable
+  extends c<ll>
 {
-  f$13(f paramf) {}
-  
-  public final void run()
+  f$13(f paramf)
   {
-    Intent localIntent = new Intent();
-    localIntent.setComponent(new ComponentName(d.e.kjL, "com.tencent.mm.booter.MMReceivers$ToolsProcessReceiver"));
-    localIntent.putExtra("tools_process_action_code_key", "com.tencent.mm.intent.ACTION_START_TOOLS_PROCESS");
-    klo.sendBroadcast(localIntent);
+    kum = ll.class.getName().hashCode();
   }
 }
 

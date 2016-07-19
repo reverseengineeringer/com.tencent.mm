@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/a_m" android:layout_height="@dimen/i6" style="@style/MMListItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="@dimen/hz" android:layout_height="@dimen/hz" android:layout_marginLeft="3.0dip">
+        <ImageView android:id="@id/l4" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/a_o" android:layout_width="0.0dip" android:maxWidth="140.0dip" android:layout_weight="1.0" style="@style/MMFontTitleInList" />
+            <TextView android:textColor="@color/pq" android:gravity="right" android:layout_gravity="right" android:id="@id/a_p" android:paddingRight="4.0dip" android:minWidth="65.0dip" style="@style/MMFontTimeInList" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/aqf" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip">
+            <TextView android:ellipsize="end" android:gravity="center|left" android:id="@id/aqg" android:maxWidth="200.0dip" android:width="200.0dip" android:singleLine="true" style="@style/MMFontTipInList" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

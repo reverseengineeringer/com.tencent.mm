@@ -3,7 +3,7 @@ package com.tencent.mm.ui;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.widget.CheckBox;
-import com.tencent.mm.ap.a;
+import com.tencent.mm.at.a;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import com.tencent.mm.storage.h;
@@ -15,10 +15,10 @@ final class s$4
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (hGc != null)
+    if (hYb != null)
     {
-      paramDialogInterface = ah.tD().rn();
-      if (hGc.isChecked()) {
+      paramDialogInterface = ah.tE().ro();
+      if (hYb.isChecked()) {
         break label62;
       }
     }
@@ -26,11 +26,11 @@ final class s$4
     for (boolean bool = true;; bool = false)
     {
       paramDialogInterface.set(4104, Boolean.valueOf(bool));
-      paramDialogInterface = LauncherUI.bat();
+      paramDialogInterface = LauncherUI.bfJ();
       if (paramDialogInterface != null) {
-        paramDialogInterface.Gi("tab_find_friend");
+        paramDialogInterface.Ix("tab_find_friend");
       }
-      a.cC(s.c(krb));
+      a.cy(s.c(kQi));
       return;
     }
   }

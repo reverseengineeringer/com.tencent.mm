@@ -1,8 +1,18 @@
 package com.tencent.mm.ui.e.a;
 
-public abstract class a$a
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.MalformedURLException;
+
+public abstract interface a$a
 {
-  public a$a(a parama) {}
+  public abstract void IE(String paramString);
+  
+  public abstract void a(FileNotFoundException paramFileNotFoundException);
+  
+  public abstract void a(IOException paramIOException);
+  
+  public abstract void a(MalformedURLException paramMalformedURLException);
 }
 
 /* Location:

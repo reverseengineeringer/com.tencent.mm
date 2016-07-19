@@ -5,64 +5,64 @@ import java.lang.reflect.Field;
 import java.util.Map;
 
 public final class a
-  extends com.tencent.mm.d.b.a
+  extends com.tencent.mm.e.b.a
 {
-  protected static c.a aot;
-  private Map jZY = null;
+  protected static c.a bjR;
+  private Map<String, String> kAu = null;
   
   static
   {
     c.a locala = new c.a();
-    ceD = new Field[9];
-    blR = new String[10];
+    bZI = new Field[9];
+    aZx = new String[10];
     StringBuilder localStringBuilder = new StringBuilder();
-    blR[0] = "layerId";
-    jYx.put("layerId", "TEXT PRIMARY KEY ");
+    aZx[0] = "layerId";
+    kyU.put("layerId", "TEXT PRIMARY KEY ");
     localStringBuilder.append(" layerId TEXT PRIMARY KEY ");
     localStringBuilder.append(", ");
-    jYw = "layerId";
-    blR[1] = "business";
-    jYx.put("business", "TEXT");
+    kyT = "layerId";
+    aZx[1] = "business";
+    kyU.put("business", "TEXT");
     localStringBuilder.append(" business TEXT");
     localStringBuilder.append(", ");
-    blR[2] = "expId";
-    jYx.put("expId", "TEXT");
+    aZx[2] = "expId";
+    kyU.put("expId", "TEXT");
     localStringBuilder.append(" expId TEXT");
     localStringBuilder.append(", ");
-    blR[3] = "sequence";
-    jYx.put("sequence", "LONG");
+    aZx[3] = "sequence";
+    kyU.put("sequence", "LONG");
     localStringBuilder.append(" sequence LONG");
     localStringBuilder.append(", ");
-    blR[4] = "prioritylevel";
-    jYx.put("prioritylevel", "INTEGER default '0' ");
+    aZx[4] = "prioritylevel";
+    kyU.put("prioritylevel", "INTEGER default '0' ");
     localStringBuilder.append(" prioritylevel INTEGER default '0' ");
     localStringBuilder.append(", ");
-    blR[5] = "startTime";
-    jYx.put("startTime", "LONG");
+    aZx[5] = "startTime";
+    kyU.put("startTime", "LONG");
     localStringBuilder.append(" startTime LONG");
     localStringBuilder.append(", ");
-    blR[6] = "endTime";
-    jYx.put("endTime", "LONG");
+    aZx[6] = "endTime";
+    kyU.put("endTime", "LONG");
     localStringBuilder.append(" endTime LONG");
     localStringBuilder.append(", ");
-    blR[7] = "needReport";
-    jYx.put("needReport", "INTEGER");
+    aZx[7] = "needReport";
+    kyU.put("needReport", "INTEGER");
     localStringBuilder.append(" needReport INTEGER");
     localStringBuilder.append(", ");
-    blR[8] = "rawXML";
-    jYx.put("rawXML", "TEXT default '' ");
+    aZx[8] = "rawXML";
+    kyU.put("rawXML", "TEXT default '' ");
     localStringBuilder.append(" rawXML TEXT default '' ");
-    blR[9] = "rowid";
-    jYy = localStringBuilder.toString();
-    aot = locala;
+    aZx[9] = "rowid";
+    kyV = localStringBuilder.toString();
+    bjR = locala;
   }
   
-  public final Map aWf()
+  public final Map<String, String> bbr()
   {
-    if (jZY == null) {
-      jZY = com.tencent.mm.model.c.a.fF(field_rawXML);
+    if (kAu == null) {
+      kAu = com.tencent.mm.model.c.a.fS(field_rawXML);
     }
-    return jZY;
+    return kAu;
   }
   
   public final boolean isValid()
@@ -71,9 +71,9 @@ public final class a
     return (l > field_startTime) && (l < field_endTime);
   }
   
-  protected final c.a ls()
+  protected final c.a ou()
   {
-    return aot;
+    return bjR;
   }
 }
 

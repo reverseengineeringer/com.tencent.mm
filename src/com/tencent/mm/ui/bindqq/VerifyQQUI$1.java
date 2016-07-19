@@ -10,8 +10,8 @@ final class VerifyQQUI$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    kPK.age();
-    VerifyQQUI.a(kPK);
+    loZ.aiI();
+    VerifyQQUI.a(loZ);
     return true;
   }
 }

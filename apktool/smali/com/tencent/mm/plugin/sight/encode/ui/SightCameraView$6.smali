@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->axl()V
+    value = Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->azN()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gEp:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+.field final synthetic gKQ:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 432
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$6;->gEp:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    .line 439
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$6;->gKQ:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,32 +40,32 @@
     .locals 3
 
     .prologue
-    .line 435
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$6;->gEp:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    .line 442
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$6;->gKQ:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$6;->gEp:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$6;->gKQ:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
     invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f0b0c68
+    const v2, 0x7f0813e6
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/g;->ba(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/g;->aZ(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
 
-    .line 436
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$6;->gEp:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    .line 443
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$6;->gKQ:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->aqS()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->aui()V
 
-    .line 437
+    .line 444
     return-void
 .end method

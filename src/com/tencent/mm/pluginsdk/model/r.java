@@ -1,27 +1,29 @@
 package com.tencent.mm.pluginsdk.model;
 
 import android.os.Bundle;
-import com.tencent.mm.g.c;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.h.c;
+import com.tencent.mm.h.h;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.sdk.platformtools.be;
 
 public final class r
 {
-  private static volatile r iAG = null;
+  private static volatile r iXg = null;
   
-  public static r aPt()
+  public static r aTZ()
   {
-    if (iAG == null) {}
+    if (iXg == null) {}
     try
     {
-      if (iAG == null) {
-        iAG = new r();
+      if (iXg == null) {
+        iXg = new r();
       }
-      return iAG;
+      return iXg;
     }
     finally {}
   }
   
-  public static q l(int paramInt, Bundle paramBundle)
+  public static q m(int paramInt, Bundle paramBundle)
   {
     switch (paramInt)
     {
@@ -33,77 +35,77 @@ public final class r
     return new u();
   }
   
-  public static int oa(int paramInt)
+  public static int pG(int paramInt)
   {
     switch (paramInt)
     {
     default: 
       return 5;
     case 0: 
-      return ay.getInt(com.tencent.mm.g.h.pT().z("QQBroswer", "RecommendCount"), 5);
+      return be.getInt(h.on().u("QQBroswer", "RecommendCount"), 5);
     }
     return Integer.MAX_VALUE;
   }
   
-  public static void ob(int paramInt)
+  public static void pH(int paramInt)
   {
     switch (paramInt)
     {
     default: 
       return;
     case 0: 
-      com.tencent.mm.plugin.report.service.h.fUJ.g(10998, new Object[] { Integer.valueOf(0) });
+      g.gdY.h(10998, new Object[] { Integer.valueOf(0) });
       return;
     }
-    com.tencent.mm.plugin.report.service.h.fUJ.g(11091, new Object[] { Integer.valueOf(0) });
+    g.gdY.h(11091, new Object[] { Integer.valueOf(0) });
   }
   
-  public static void oc(int paramInt)
+  public static void pI(int paramInt)
   {
     switch (paramInt)
     {
     default: 
       return;
     case 0: 
-      com.tencent.mm.plugin.report.service.h.fUJ.g(10998, new Object[] { Integer.valueOf(1) });
+      g.gdY.h(10998, new Object[] { Integer.valueOf(1) });
       return;
     }
-    com.tencent.mm.plugin.report.service.h.fUJ.g(11091, new Object[] { Integer.valueOf(1) });
+    g.gdY.h(11091, new Object[] { Integer.valueOf(1) });
   }
   
-  public static void od(int paramInt)
+  public static void pJ(int paramInt)
   {
     switch (paramInt)
     {
     default: 
       return;
     case 0: 
-      com.tencent.mm.plugin.report.service.h.fUJ.g(10998, new Object[] { Integer.valueOf(3) });
+      g.gdY.h(10998, new Object[] { Integer.valueOf(3) });
       return;
     }
-    com.tencent.mm.plugin.report.service.h.fUJ.g(11091, new Object[] { Integer.valueOf(3) });
+    g.gdY.h(11091, new Object[] { Integer.valueOf(3) });
   }
   
-  public static void oe(int paramInt)
+  public static void pK(int paramInt)
   {
     switch (paramInt)
     {
     default: 
       return;
     case 0: 
-      com.tencent.mm.plugin.report.service.h.fUJ.g(10998, new Object[] { Integer.valueOf(2) });
+      g.gdY.h(10998, new Object[] { Integer.valueOf(2) });
       return;
     }
-    com.tencent.mm.plugin.report.service.h.fUJ.g(11091, new Object[] { Integer.valueOf(2) });
+    g.gdY.h(11091, new Object[] { Integer.valueOf(2) });
   }
   
   public static final class a
   {
-    public int iAH;
-    public int iAI;
-    public String iAJ;
-    public int iAK;
-    public String iAL;
+    public int iXh;
+    public int iXi;
+    public String iXj;
+    public int iXk;
+    public String iXl;
   }
 }
 

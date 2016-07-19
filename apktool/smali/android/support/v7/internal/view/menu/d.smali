@@ -3,13 +3,35 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
 # instance fields
-.field final lr:Ljava/lang/Object;
+.field final lI:Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "TT;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
 .method constructor <init>(Ljava/lang/Object;)V
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
 
     .prologue
     .line 23
@@ -29,7 +51,7 @@
 
     .line 27
     :cond_0
-    iput-object p1, p0, Landroid/support/v7/internal/view/menu/d;->lr:Ljava/lang/Object;
+    iput-object p1, p0, Landroid/support/v7/internal/view/menu/d;->lI:Ljava/lang/Object;
 
     .line 28
     return-void

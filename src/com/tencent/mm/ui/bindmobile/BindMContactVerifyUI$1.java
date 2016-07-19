@@ -2,7 +2,7 @@ package com.tencent.mm.ui.bindmobile;
 
 import android.text.InputFilter;
 import android.text.Spanned;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class BindMContactVerifyUI$1
   implements InputFilter
@@ -11,7 +11,7 @@ final class BindMContactVerifyUI$1
   
   public final CharSequence filter(CharSequence paramCharSequence, int paramInt1, int paramInt2, Spanned paramSpanned, int paramInt3, int paramInt4)
   {
-    return ay.v(paramCharSequence);
+    return be.E(paramCharSequence);
   }
 }
 

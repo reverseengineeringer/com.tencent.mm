@@ -1,132 +1,121 @@
 package com.tencent.mm.compatible.util;
 
 import android.content.Context;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.app.MMApplicationLifeCycle;
+import com.tencent.mm.compatible.d.y;
+import com.tencent.mm.loader.stub.BaseBuildInfo;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.tinker.loader.a.e;
+import com.tencent.tinker.loader.a.h;
+import com.tencent.tinker.loader.app.TinkerApplication;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.lang.ref.WeakReference;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 public final class i
 {
-  private static final HashMap mLoadedLibs = new HashMap();
+  private static String bjc = null;
+  private static boolean bjd = false;
+  private static HashMap<String, String> bje = null;
+  private static final HashMap<String, WeakReference<ClassLoader>> mLoadedLibs = new HashMap();
   
-  /* Error */
   private static boolean a(String paramString, ClassLoader paramClassLoader)
   {
-    // Byte code:
-    //   0: invokestatic 33	com/tencent/mm/loader/stub/BaseBuildInfo:rb	()Z
-    //   3: ifne +5 -> 8
-    //   6: iconst_0
-    //   7: ireturn
-    //   8: new 35	java/io/File
-    //   11: dup
-    //   12: invokestatic 41	com/tencent/mm/sdk/platformtools/y:getContext	()Landroid/content/Context;
-    //   15: ldc 43
-    //   17: iconst_0
-    //   18: invokevirtual 49	android/content/Context:getDir	(Ljava/lang/String;I)Ljava/io/File;
-    //   21: new 51	java/lang/StringBuilder
-    //   24: dup
-    //   25: ldc 53
-    //   27: invokespecial 56	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   30: aload_0
-    //   31: invokevirtual 60	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   34: ldc 62
-    //   36: invokevirtual 60	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   39: invokevirtual 66	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   42: invokespecial 69	java/io/File:<init>	(Ljava/io/File;Ljava/lang/String;)V
-    //   45: astore_2
-    //   46: aload_2
-    //   47: invokevirtual 72	java/io/File:exists	()Z
-    //   50: ifeq -44 -> 6
-    //   53: aload_2
-    //   54: invokevirtual 75	java/io/File:getAbsolutePath	()Ljava/lang/String;
-    //   57: aload_1
-    //   58: invokestatic 79	com/tencent/mm/compatible/util/i:reflectSystemLoad	(Ljava/lang/String;Ljava/lang/ClassLoader;)V
-    //   61: getstatic 18	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
-    //   64: astore_2
-    //   65: aload_2
-    //   66: monitorenter
-    //   67: getstatic 18	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
-    //   70: aload_0
-    //   71: new 81	java/lang/ref/WeakReference
-    //   74: dup
-    //   75: aload_1
-    //   76: invokespecial 84	java/lang/ref/WeakReference:<init>	(Ljava/lang/Object;)V
-    //   79: invokevirtual 88	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    //   82: pop
-    //   83: aload_2
-    //   84: monitorexit
-    //   85: iconst_1
-    //   86: ireturn
-    //   87: astore_1
-    //   88: aload_2
-    //   89: monitorexit
-    //   90: aload_1
-    //   91: athrow
-    //   92: astore_0
-    //   93: iconst_0
-    //   94: ireturn
-    //   95: astore_1
-    //   96: aload_1
-    //   97: invokevirtual 92	java/lang/reflect/InvocationTargetException:getCause	()Ljava/lang/Throwable;
-    //   100: instanceof 23
-    //   103: ifeq +10 -> 113
-    //   106: aload_1
-    //   107: invokevirtual 92	java/lang/reflect/InvocationTargetException:getCause	()Ljava/lang/Throwable;
-    //   110: pop
-    //   111: iconst_0
-    //   112: ireturn
-    //   113: new 23	java/lang/UnsatisfiedLinkError
-    //   116: dup
-    //   117: new 51	java/lang/StringBuilder
-    //   120: dup
-    //   121: ldc 94
-    //   123: invokespecial 56	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   126: aload_0
-    //   127: invokevirtual 60	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   130: invokevirtual 66	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   133: invokespecial 95	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
-    //   136: aload_1
-    //   137: invokevirtual 92	java/lang/reflect/InvocationTargetException:getCause	()Ljava/lang/Throwable;
-    //   140: invokevirtual 99	java/lang/UnsatisfiedLinkError:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-    //   143: checkcast 23	java/lang/UnsatisfiedLinkError
-    //   146: athrow
-    //   147: astore_1
-    //   148: new 23	java/lang/UnsatisfiedLinkError
-    //   151: dup
-    //   152: new 51	java/lang/StringBuilder
-    //   155: dup
-    //   156: ldc 101
-    //   158: invokespecial 56	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   161: aload_0
-    //   162: invokevirtual 60	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   165: invokevirtual 66	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   168: invokespecial 95	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
-    //   171: aload_1
-    //   172: invokevirtual 99	java/lang/UnsatisfiedLinkError:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-    //   175: checkcast 23	java/lang/UnsatisfiedLinkError
-    //   178: athrow
-    // Local variable table:
-    //   start	length	slot	name	signature
-    //   0	179	0	paramString	String
-    //   0	179	1	paramClassLoader	ClassLoader
-    // Exception table:
-    //   from	to	target	type
-    //   67	85	87	finally
-    //   88	90	87	finally
-    //   53	67	92	java/lang/UnsatisfiedLinkError
-    //   90	92	92	java/lang/UnsatisfiedLinkError
-    //   53	67	95	java/lang/reflect/InvocationTargetException
-    //   90	92	95	java/lang/reflect/InvocationTargetException
-    //   53	67	147	java/lang/Throwable
-    //   90	92	147	java/lang/Throwable
+    if (!BaseBuildInfo.qG()) {
+      return false;
+    }
+    Object localObject2;
+    if (!bjd)
+    {
+      localObject2 = MMApplicationLifeCycle.getTinkerApplication();
+      if (localObject2 == null) {
+        throw new RuntimeException("tinker application is null when try to load from patch libs");
+      }
+      bjd = true;
+      bje = ((TinkerApplication)localObject2).getLoadLibraryAndMd5();
+      ??? = ((TinkerApplication)localObject2).getCurrentVersion();
+      if (h.kf((String)???)) {
+        bjc = null;
+      }
+    }
+    else
+    {
+      if (!paramString.startsWith("lib")) {
+        break label317;
+      }
+      label68:
+      if (!paramString.endsWith(".so")) {
+        break label337;
+      }
+    }
+    String str2;
+    for (;;)
+    {
+      ??? = "lib/armeabi/" + paramString;
+      localObject2 = MMApplicationLifeCycle.getTinkerApplication();
+      if ((!((TinkerApplication)localObject2).isTinkerEnableForNativeLib()) || (bje == null)) {
+        break label480;
+      }
+      Iterator localIterator = bje.keySet().iterator();
+      for (;;)
+      {
+        if (!localIterator.hasNext()) {
+          break label480;
+        }
+        String str1 = (String)localIterator.next();
+        if (str1.equals(???))
+        {
+          str2 = bjc + "/" + str1;
+          File localFile = new File(str2);
+          if (localFile.exists())
+          {
+            if ((!((TinkerApplication)localObject2).getTinkerLoadVerifyFlag()) || (e.c(localFile, (String)bje.get(str1)))) {
+              break;
+            }
+            v.e("MicroMsg.LoadLibrary", "loadLibraryFromTinker md5mismatch fail: %s", new Object[] { str2 });
+          }
+        }
+      }
+      localObject2 = e.gg((Context)localObject2);
+      ??? = new File(((File)localObject2).getAbsolutePath() + "/" + e.KN((String)???));
+      bjc = ((File)???).getAbsolutePath() + "/lib";
+      break;
+      label317:
+      paramString = "lib" + paramString;
+      break label68;
+      label337:
+      paramString = paramString + ".so";
+    }
+    try
+    {
+      v.w("MicroMsg.LoadLibrary", "succ load from patch path: %s", new Object[] { str2 });
+      reflectSystemLoad(str2, paramClassLoader);
+      synchronized (mLoadedLibs)
+      {
+        mLoadedLibs.put(paramString, new WeakReference(paramClassLoader));
+        return true;
+      }
+      return false;
+    }
+    catch (InvocationTargetException paramClassLoader)
+    {
+      throw ((UnsatisfiedLinkError)new UnsatisfiedLinkError("Failed loading library: " + paramString).initCause(paramClassLoader.getCause()));
+    }
+    catch (Exception paramClassLoader)
+    {
+      throw ((UnsatisfiedLinkError)new UnsatisfiedLinkError("Failed loading library: " + paramString).initCause(paramClassLoader));
+    }
   }
   
   /* Error */
@@ -134,29 +123,29 @@ public final class i
   {
     // Byte code:
     //   0: aload_0
-    //   1: invokestatic 112	com/tencent/mm/sdk/platformtools/ay:kz	(Ljava/lang/String;)Z
+    //   1: invokestatic 207	com/tencent/mm/sdk/platformtools/be:kf	(Ljava/lang/String;)Z
     //   4: ifne +7 -> 11
     //   7: aload_1
-    //   8: ifnonnull +798 -> 806
+    //   8: ifnonnull +827 -> 835
     //   11: iconst_1
     //   12: istore_2
-    //   13: ldc 114
+    //   13: ldc -47
     //   15: iload_2
-    //   16: invokestatic 120	junit/framework/Assert:assertFalse	(Ljava/lang/String;Z)V
-    //   19: getstatic 18	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
+    //   16: invokestatic 215	junit/framework/Assert:assertFalse	(Ljava/lang/String;Z)V
+    //   19: getstatic 25	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
     //   22: astore 4
     //   24: aload 4
     //   26: monitorenter
-    //   27: getstatic 18	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
+    //   27: getstatic 25	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
     //   30: aload_0
-    //   31: invokevirtual 124	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
-    //   34: checkcast 81	java/lang/ref/WeakReference
+    //   31: invokevirtual 139	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
+    //   34: checkcast 179	java/lang/ref/WeakReference
     //   37: astore_3
     //   38: aload_3
-    //   39: ifnull +761 -> 800
+    //   39: ifnull +790 -> 829
     //   42: aload_3
-    //   43: invokevirtual 127	java/lang/ref/WeakReference:get	()Ljava/lang/Object;
-    //   46: checkcast 129	java/lang/ClassLoader
+    //   43: invokevirtual 217	java/lang/ref/WeakReference:get	()Ljava/lang/Object;
+    //   46: checkcast 219	java/lang/ClassLoader
     //   49: astore_3
     //   50: aload_3
     //   51: ifnull +47 -> 98
@@ -166,18 +155,18 @@ public final class i
     //   59: aload 4
     //   61: monitorexit
     //   62: return
-    //   63: new 23	java/lang/UnsatisfiedLinkError
+    //   63: new 188	java/lang/UnsatisfiedLinkError
     //   66: dup
-    //   67: new 51	java/lang/StringBuilder
+    //   67: new 87	java/lang/StringBuilder
     //   70: dup
-    //   71: ldc -125
-    //   73: invokespecial 56	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   71: ldc -35
+    //   73: invokespecial 90	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   76: aload_0
-    //   77: invokevirtual 60	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   80: ldc -123
-    //   82: invokevirtual 60	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   85: invokevirtual 66	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   88: invokespecial 95	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
+    //   77: invokevirtual 94	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   80: ldc -33
+    //   82: invokevirtual 94	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   85: invokevirtual 97	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   88: invokespecial 191	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
     //   91: athrow
     //   92: astore_0
     //   93: aload 4
@@ -186,378 +175,387 @@ public final class i
     //   97: athrow
     //   98: aload 4
     //   100: monitorexit
-    //   101: invokestatic 41	com/tencent/mm/sdk/platformtools/y:getContext	()Landroid/content/Context;
-    //   104: astore 5
-    //   106: aload 5
-    //   108: ifnull +9 -> 117
-    //   111: invokestatic 138	com/tencent/mm/sdk/b/b:aUo	()Z
-    //   114: ifeq +105 -> 219
-    //   117: aload_0
-    //   118: aload_1
-    //   119: invokestatic 141	com/tencent/mm/compatible/util/i:reflectSystemLoadlibrary	(Ljava/lang/String;Ljava/lang/ClassLoader;)V
-    //   122: getstatic 18	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
-    //   125: astore_3
-    //   126: aload_3
-    //   127: monitorenter
-    //   128: getstatic 18	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
-    //   131: aload_0
-    //   132: new 81	java/lang/ref/WeakReference
-    //   135: dup
-    //   136: aload_1
-    //   137: invokespecial 84	java/lang/ref/WeakReference:<init>	(Ljava/lang/Object;)V
-    //   140: invokevirtual 88	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    //   143: pop
-    //   144: aload_3
-    //   145: monitorexit
-    //   146: return
-    //   147: astore_1
-    //   148: aload_3
-    //   149: monitorexit
-    //   150: aload_1
-    //   151: athrow
-    //   152: astore_1
-    //   153: new 23	java/lang/UnsatisfiedLinkError
-    //   156: dup
-    //   157: new 51	java/lang/StringBuilder
-    //   160: dup
-    //   161: ldc -113
-    //   163: invokespecial 56	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   166: aload_0
-    //   167: invokevirtual 60	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   170: invokevirtual 66	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   173: invokespecial 95	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
-    //   176: aload_1
-    //   177: invokevirtual 92	java/lang/reflect/InvocationTargetException:getCause	()Ljava/lang/Throwable;
-    //   180: invokevirtual 99	java/lang/UnsatisfiedLinkError:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-    //   183: checkcast 23	java/lang/UnsatisfiedLinkError
-    //   186: athrow
-    //   187: astore_1
-    //   188: new 23	java/lang/UnsatisfiedLinkError
-    //   191: dup
-    //   192: new 51	java/lang/StringBuilder
-    //   195: dup
-    //   196: ldc -113
-    //   198: invokespecial 56	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   201: aload_0
-    //   202: invokevirtual 60	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   205: invokevirtual 66	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   208: invokespecial 95	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
-    //   211: aload_1
-    //   212: invokevirtual 99	java/lang/UnsatisfiedLinkError:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-    //   215: checkcast 23	java/lang/UnsatisfiedLinkError
-    //   218: athrow
-    //   219: aload_0
-    //   220: aload_1
-    //   221: invokestatic 145	com/tencent/mm/compatible/util/i:a	(Ljava/lang/String;Ljava/lang/ClassLoader;)Z
-    //   224: ifne +581 -> 805
-    //   227: new 35	java/io/File
-    //   230: dup
-    //   231: aload 5
-    //   233: ldc -109
-    //   235: iconst_0
-    //   236: invokevirtual 49	android/content/Context:getDir	(Ljava/lang/String;I)Ljava/io/File;
-    //   239: new 51	java/lang/StringBuilder
-    //   242: dup
-    //   243: ldc 53
-    //   245: invokespecial 56	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   248: aload_0
-    //   249: invokevirtual 60	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   252: ldc 62
-    //   254: invokevirtual 60	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   257: invokevirtual 66	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   260: invokespecial 69	java/io/File:<init>	(Ljava/io/File;Ljava/lang/String;)V
-    //   263: astore 6
-    //   265: aload 6
-    //   267: invokevirtual 150	java/io/File:isFile	()Z
-    //   270: ifeq +525 -> 795
-    //   273: aload 6
-    //   275: invokevirtual 75	java/io/File:getAbsolutePath	()Ljava/lang/String;
-    //   278: aload_1
-    //   279: invokestatic 79	com/tencent/mm/compatible/util/i:reflectSystemLoad	(Ljava/lang/String;Ljava/lang/ClassLoader;)V
-    //   282: getstatic 18	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
-    //   285: astore_3
-    //   286: aload_3
-    //   287: monitorenter
-    //   288: getstatic 18	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
-    //   291: aload_0
-    //   292: new 81	java/lang/ref/WeakReference
-    //   295: dup
-    //   296: aload_1
-    //   297: invokespecial 84	java/lang/ref/WeakReference:<init>	(Ljava/lang/Object;)V
-    //   300: invokevirtual 88	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    //   303: pop
-    //   304: aload_3
-    //   305: monitorexit
-    //   306: return
-    //   307: astore 4
-    //   309: aload_3
-    //   310: monitorexit
-    //   311: aload 4
-    //   313: athrow
-    //   314: astore_3
-    //   315: aload 6
-    //   317: invokevirtual 153	java/io/File:delete	()Z
-    //   320: pop
-    //   321: aload_0
-    //   322: aload_1
-    //   323: invokestatic 141	com/tencent/mm/compatible/util/i:reflectSystemLoadlibrary	(Ljava/lang/String;Ljava/lang/ClassLoader;)V
-    //   326: getstatic 18	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
-    //   329: astore 4
-    //   331: aload 4
-    //   333: monitorenter
-    //   334: getstatic 18	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
-    //   337: aload_0
-    //   338: new 81	java/lang/ref/WeakReference
-    //   341: dup
-    //   342: aload_1
-    //   343: invokespecial 84	java/lang/ref/WeakReference:<init>	(Ljava/lang/Object;)V
-    //   346: invokevirtual 88	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    //   349: pop
-    //   350: aload 4
-    //   352: monitorexit
-    //   353: return
-    //   354: astore 7
-    //   356: aload 4
-    //   358: monitorexit
-    //   359: aload 7
-    //   361: athrow
-    //   362: astore 4
-    //   364: aload_3
-    //   365: ifnonnull +427 -> 792
-    //   368: aload 4
-    //   370: astore_3
-    //   371: new 155	java/util/zip/ZipFile
-    //   374: dup
-    //   375: aload 5
-    //   377: invokevirtual 159	android/content/Context:getApplicationInfo	()Landroid/content/pm/ApplicationInfo;
-    //   380: getfield 165	android/content/pm/ApplicationInfo:sourceDir	Ljava/lang/String;
-    //   383: invokespecial 166	java/util/zip/ZipFile:<init>	(Ljava/lang/String;)V
-    //   386: astore 5
-    //   388: aload 5
-    //   390: astore 4
-    //   392: aload 5
-    //   394: aload_0
-    //   395: invokestatic 170	com/tencent/mm/compatible/util/i:generateAbiList	()Ljava/util/List;
-    //   398: aload 6
-    //   400: invokestatic 174	com/tencent/mm/compatible/util/i:extractLibrary	(Ljava/util/zip/ZipFile;Ljava/lang/String;Ljava/util/List;Ljava/io/File;)Z
-    //   403: ifne +253 -> 656
-    //   406: aload 5
-    //   408: astore 4
-    //   410: new 176	java/lang/RuntimeException
-    //   413: dup
-    //   414: new 51	java/lang/StringBuilder
-    //   417: dup
-    //   418: ldc -78
-    //   420: invokespecial 56	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   423: aload_0
-    //   424: invokevirtual 60	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   427: invokevirtual 66	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   430: invokespecial 179	java/lang/RuntimeException:<init>	(Ljava/lang/String;)V
-    //   433: athrow
-    //   434: astore_0
-    //   435: aload 5
-    //   437: astore 4
-    //   439: new 23	java/lang/UnsatisfiedLinkError
-    //   442: dup
-    //   443: ldc -75
-    //   445: invokespecial 95	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
-    //   448: aload_0
-    //   449: invokevirtual 99	java/lang/UnsatisfiedLinkError:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-    //   452: checkcast 23	java/lang/UnsatisfiedLinkError
+    //   101: ldc -109
+    //   103: new 87	java/lang/StringBuilder
+    //   106: dup
+    //   107: ldc -31
+    //   109: invokespecial 90	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   112: aload_0
+    //   113: invokevirtual 94	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   116: invokevirtual 97	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   119: invokestatic 229	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   122: aload_0
+    //   123: aload_1
+    //   124: invokestatic 231	com/tencent/mm/compatible/util/i:a	(Ljava/lang/String;Ljava/lang/ClassLoader;)Z
+    //   127: ifne +707 -> 834
+    //   130: invokestatic 237	com/tencent/mm/sdk/platformtools/aa:getContext	()Landroid/content/Context;
+    //   133: astore 5
+    //   135: aload 5
+    //   137: ifnull +9 -> 146
+    //   140: invokestatic 242	com/tencent/mm/sdk/b/b:aZo	()Z
+    //   143: ifeq +105 -> 248
+    //   146: aload_0
+    //   147: aload_1
+    //   148: invokestatic 245	com/tencent/mm/compatible/util/i:reflectSystemLoadlibrary	(Ljava/lang/String;Ljava/lang/ClassLoader;)V
+    //   151: getstatic 25	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
+    //   154: astore_3
+    //   155: aload_3
+    //   156: monitorenter
+    //   157: getstatic 25	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
+    //   160: aload_0
+    //   161: new 179	java/lang/ref/WeakReference
+    //   164: dup
+    //   165: aload_1
+    //   166: invokespecial 182	java/lang/ref/WeakReference:<init>	(Ljava/lang/Object;)V
+    //   169: invokevirtual 186	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    //   172: pop
+    //   173: aload_3
+    //   174: monitorexit
+    //   175: return
+    //   176: astore_1
+    //   177: aload_3
+    //   178: monitorexit
+    //   179: aload_1
+    //   180: athrow
+    //   181: astore_1
+    //   182: new 188	java/lang/UnsatisfiedLinkError
+    //   185: dup
+    //   186: new 87	java/lang/StringBuilder
+    //   189: dup
+    //   190: ldc -66
+    //   192: invokespecial 90	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   195: aload_0
+    //   196: invokevirtual 94	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   199: invokevirtual 97	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   202: invokespecial 191	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
+    //   205: aload_1
+    //   206: invokevirtual 195	java/lang/reflect/InvocationTargetException:getCause	()Ljava/lang/Throwable;
+    //   209: invokevirtual 199	java/lang/UnsatisfiedLinkError:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    //   212: checkcast 188	java/lang/UnsatisfiedLinkError
+    //   215: athrow
+    //   216: astore_1
+    //   217: new 188	java/lang/UnsatisfiedLinkError
+    //   220: dup
+    //   221: new 87	java/lang/StringBuilder
+    //   224: dup
+    //   225: ldc -66
+    //   227: invokespecial 90	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   230: aload_0
+    //   231: invokevirtual 94	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   234: invokevirtual 97	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   237: invokespecial 191	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
+    //   240: aload_1
+    //   241: invokevirtual 199	java/lang/UnsatisfiedLinkError:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    //   244: checkcast 188	java/lang/UnsatisfiedLinkError
+    //   247: athrow
+    //   248: new 128	java/io/File
+    //   251: dup
+    //   252: aload 5
+    //   254: ldc -9
+    //   256: iconst_0
+    //   257: invokevirtual 253	android/content/Context:getDir	(Ljava/lang/String;I)Ljava/io/File;
+    //   260: new 87	java/lang/StringBuilder
+    //   263: dup
+    //   264: ldc 75
+    //   266: invokespecial 90	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   269: aload_0
+    //   270: invokevirtual 94	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   273: ldc 82
+    //   275: invokevirtual 94	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   278: invokevirtual 97	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   281: invokespecial 256	java/io/File:<init>	(Ljava/io/File;Ljava/lang/String;)V
+    //   284: astore 6
+    //   286: aload 6
+    //   288: invokevirtual 259	java/io/File:isFile	()Z
+    //   291: ifeq +533 -> 824
+    //   294: aload 6
+    //   296: invokevirtual 162	java/io/File:getAbsolutePath	()Ljava/lang/String;
+    //   299: aload_1
+    //   300: invokestatic 177	com/tencent/mm/compatible/util/i:reflectSystemLoad	(Ljava/lang/String;Ljava/lang/ClassLoader;)V
+    //   303: getstatic 25	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
+    //   306: astore_3
+    //   307: aload_3
+    //   308: monitorenter
+    //   309: getstatic 25	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
+    //   312: aload_0
+    //   313: new 179	java/lang/ref/WeakReference
+    //   316: dup
+    //   317: aload_1
+    //   318: invokespecial 182	java/lang/ref/WeakReference:<init>	(Ljava/lang/Object;)V
+    //   321: invokevirtual 186	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    //   324: pop
+    //   325: aload_3
+    //   326: monitorexit
+    //   327: return
+    //   328: astore 4
+    //   330: aload_3
+    //   331: monitorexit
+    //   332: aload 4
+    //   334: athrow
+    //   335: astore_3
+    //   336: aload 6
+    //   338: invokevirtual 262	java/io/File:delete	()Z
+    //   341: pop
+    //   342: aload_0
+    //   343: aload_1
+    //   344: invokestatic 245	com/tencent/mm/compatible/util/i:reflectSystemLoadlibrary	(Ljava/lang/String;Ljava/lang/ClassLoader;)V
+    //   347: getstatic 25	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
+    //   350: astore 4
+    //   352: aload 4
+    //   354: monitorenter
+    //   355: getstatic 25	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
+    //   358: aload_0
+    //   359: new 179	java/lang/ref/WeakReference
+    //   362: dup
+    //   363: aload_1
+    //   364: invokespecial 182	java/lang/ref/WeakReference:<init>	(Ljava/lang/Object;)V
+    //   367: invokevirtual 186	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    //   370: pop
+    //   371: aload 4
+    //   373: monitorexit
+    //   374: return
+    //   375: astore 7
+    //   377: aload 4
+    //   379: monitorexit
+    //   380: aload 7
+    //   382: athrow
+    //   383: astore 4
+    //   385: aload_3
+    //   386: ifnonnull +435 -> 821
+    //   389: aload 4
+    //   391: astore_3
+    //   392: new 264	java/util/zip/ZipFile
+    //   395: dup
+    //   396: aload 5
+    //   398: invokevirtual 268	android/content/Context:getApplicationInfo	()Landroid/content/pm/ApplicationInfo;
+    //   401: getfield 273	android/content/pm/ApplicationInfo:sourceDir	Ljava/lang/String;
+    //   404: invokespecial 274	java/util/zip/ZipFile:<init>	(Ljava/lang/String;)V
+    //   407: astore 5
+    //   409: aload 5
+    //   411: astore 4
+    //   413: aload 5
+    //   415: aload_0
+    //   416: invokestatic 278	com/tencent/mm/compatible/util/i:generateAbiList	()Ljava/util/List;
+    //   419: aload 6
+    //   421: invokestatic 282	com/tencent/mm/compatible/util/i:extractLibrary	(Ljava/util/zip/ZipFile;Ljava/lang/String;Ljava/util/List;Ljava/io/File;)Z
+    //   424: ifne +259 -> 683
+    //   427: aload 5
+    //   429: astore 4
+    //   431: new 52	java/lang/RuntimeException
+    //   434: dup
+    //   435: new 87	java/lang/StringBuilder
+    //   438: dup
+    //   439: ldc_w 284
+    //   442: invokespecial 90	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   445: aload_0
+    //   446: invokevirtual 94	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   449: invokevirtual 97	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   452: invokespecial 57	java/lang/RuntimeException:<init>	(Ljava/lang/String;)V
     //   455: athrow
     //   456: astore_0
-    //   457: aload 4
-    //   459: ifnull +8 -> 467
-    //   462: aload 4
-    //   464: invokevirtual 184	java/util/zip/ZipFile:close	()V
-    //   467: aload_0
-    //   468: athrow
-    //   469: astore_3
-    //   470: aload_3
-    //   471: invokevirtual 92	java/lang/reflect/InvocationTargetException:getCause	()Ljava/lang/Throwable;
-    //   474: instanceof 23
-    //   477: ifeq +14 -> 491
-    //   480: aload_3
-    //   481: invokevirtual 92	java/lang/reflect/InvocationTargetException:getCause	()Ljava/lang/Throwable;
-    //   484: checkcast 23	java/lang/UnsatisfiedLinkError
-    //   487: astore_3
-    //   488: goto -173 -> 315
-    //   491: new 23	java/lang/UnsatisfiedLinkError
-    //   494: dup
-    //   495: new 51	java/lang/StringBuilder
-    //   498: dup
-    //   499: ldc -70
-    //   501: invokespecial 56	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   504: aload_0
-    //   505: invokevirtual 60	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   508: invokevirtual 66	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   511: invokespecial 95	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
-    //   514: aload_3
-    //   515: invokevirtual 92	java/lang/reflect/InvocationTargetException:getCause	()Ljava/lang/Throwable;
-    //   518: invokevirtual 99	java/lang/UnsatisfiedLinkError:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-    //   521: checkcast 23	java/lang/UnsatisfiedLinkError
-    //   524: athrow
-    //   525: astore_1
-    //   526: new 23	java/lang/UnsatisfiedLinkError
-    //   529: dup
-    //   530: new 51	java/lang/StringBuilder
-    //   533: dup
-    //   534: ldc -70
-    //   536: invokespecial 56	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   539: aload_0
-    //   540: invokevirtual 60	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   543: invokevirtual 66	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   546: invokespecial 95	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
-    //   549: aload_1
-    //   550: invokevirtual 99	java/lang/UnsatisfiedLinkError:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-    //   553: checkcast 23	java/lang/UnsatisfiedLinkError
-    //   556: athrow
-    //   557: astore 4
-    //   559: aload 4
-    //   561: invokevirtual 92	java/lang/reflect/InvocationTargetException:getCause	()Ljava/lang/Throwable;
-    //   564: instanceof 23
-    //   567: ifeq +19 -> 586
-    //   570: aload_3
-    //   571: ifnonnull +50 -> 621
-    //   574: aload 4
-    //   576: invokevirtual 92	java/lang/reflect/InvocationTargetException:getCause	()Ljava/lang/Throwable;
-    //   579: checkcast 23	java/lang/UnsatisfiedLinkError
-    //   582: astore_3
-    //   583: goto -212 -> 371
-    //   586: new 23	java/lang/UnsatisfiedLinkError
-    //   589: dup
-    //   590: new 51	java/lang/StringBuilder
-    //   593: dup
-    //   594: ldc -70
-    //   596: invokespecial 56	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   599: aload_0
-    //   600: invokevirtual 60	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   603: invokevirtual 66	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   606: invokespecial 95	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
-    //   609: aload 4
-    //   611: invokevirtual 92	java/lang/reflect/InvocationTargetException:getCause	()Ljava/lang/Throwable;
-    //   614: invokevirtual 99	java/lang/UnsatisfiedLinkError:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-    //   617: checkcast 23	java/lang/UnsatisfiedLinkError
-    //   620: athrow
-    //   621: goto -250 -> 371
-    //   624: astore_1
-    //   625: new 23	java/lang/UnsatisfiedLinkError
-    //   628: dup
-    //   629: new 51	java/lang/StringBuilder
-    //   632: dup
-    //   633: ldc -70
-    //   635: invokespecial 56	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   638: aload_0
-    //   639: invokevirtual 60	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   642: invokevirtual 66	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   645: invokespecial 95	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
-    //   648: aload_1
-    //   649: invokevirtual 99	java/lang/UnsatisfiedLinkError:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-    //   652: checkcast 23	java/lang/UnsatisfiedLinkError
-    //   655: athrow
-    //   656: aload 5
-    //   658: invokevirtual 184	java/util/zip/ZipFile:close	()V
-    //   661: aload 6
-    //   663: invokevirtual 75	java/io/File:getAbsolutePath	()Ljava/lang/String;
-    //   666: aload_1
-    //   667: invokestatic 79	com/tencent/mm/compatible/util/i:reflectSystemLoad	(Ljava/lang/String;Ljava/lang/ClassLoader;)V
-    //   670: getstatic 18	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
-    //   673: astore 4
-    //   675: aload 4
-    //   677: monitorenter
-    //   678: getstatic 18	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
-    //   681: aload_0
-    //   682: new 81	java/lang/ref/WeakReference
-    //   685: dup
-    //   686: aload_1
-    //   687: invokespecial 84	java/lang/ref/WeakReference:<init>	(Ljava/lang/Object;)V
-    //   690: invokevirtual 88	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    //   693: pop
-    //   694: aload 4
-    //   696: monitorexit
-    //   697: return
-    //   698: astore_1
-    //   699: aload 4
-    //   701: monitorexit
-    //   702: aload_1
-    //   703: athrow
-    //   704: astore_1
-    //   705: aload_3
-    //   706: ifnonnull +37 -> 743
-    //   709: new 23	java/lang/UnsatisfiedLinkError
+    //   457: aload 5
+    //   459: astore 4
+    //   461: new 188	java/lang/UnsatisfiedLinkError
+    //   464: dup
+    //   465: ldc_w 286
+    //   468: invokespecial 191	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
+    //   471: aload_0
+    //   472: invokevirtual 199	java/lang/UnsatisfiedLinkError:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    //   475: checkcast 188	java/lang/UnsatisfiedLinkError
+    //   478: athrow
+    //   479: astore_0
+    //   480: aload 4
+    //   482: ifnull +8 -> 490
+    //   485: aload 4
+    //   487: invokevirtual 289	java/util/zip/ZipFile:close	()V
+    //   490: aload_0
+    //   491: athrow
+    //   492: astore_3
+    //   493: aload_3
+    //   494: invokevirtual 195	java/lang/reflect/InvocationTargetException:getCause	()Ljava/lang/Throwable;
+    //   497: instanceof 188
+    //   500: ifeq +14 -> 514
+    //   503: aload_3
+    //   504: invokevirtual 195	java/lang/reflect/InvocationTargetException:getCause	()Ljava/lang/Throwable;
+    //   507: checkcast 188	java/lang/UnsatisfiedLinkError
+    //   510: astore_3
+    //   511: goto -175 -> 336
+    //   514: new 188	java/lang/UnsatisfiedLinkError
+    //   517: dup
+    //   518: new 87	java/lang/StringBuilder
+    //   521: dup
+    //   522: ldc_w 291
+    //   525: invokespecial 90	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   528: aload_0
+    //   529: invokevirtual 94	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   532: invokevirtual 97	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   535: invokespecial 191	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
+    //   538: aload_3
+    //   539: invokevirtual 195	java/lang/reflect/InvocationTargetException:getCause	()Ljava/lang/Throwable;
+    //   542: invokevirtual 199	java/lang/UnsatisfiedLinkError:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    //   545: checkcast 188	java/lang/UnsatisfiedLinkError
+    //   548: athrow
+    //   549: astore_1
+    //   550: new 188	java/lang/UnsatisfiedLinkError
+    //   553: dup
+    //   554: new 87	java/lang/StringBuilder
+    //   557: dup
+    //   558: ldc_w 291
+    //   561: invokespecial 90	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   564: aload_0
+    //   565: invokevirtual 94	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   568: invokevirtual 97	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   571: invokespecial 191	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
+    //   574: aload_1
+    //   575: invokevirtual 199	java/lang/UnsatisfiedLinkError:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    //   578: checkcast 188	java/lang/UnsatisfiedLinkError
+    //   581: athrow
+    //   582: astore 4
+    //   584: aload 4
+    //   586: invokevirtual 195	java/lang/reflect/InvocationTargetException:getCause	()Ljava/lang/Throwable;
+    //   589: instanceof 188
+    //   592: ifeq +19 -> 611
+    //   595: aload_3
+    //   596: ifnonnull +51 -> 647
+    //   599: aload 4
+    //   601: invokevirtual 195	java/lang/reflect/InvocationTargetException:getCause	()Ljava/lang/Throwable;
+    //   604: checkcast 188	java/lang/UnsatisfiedLinkError
+    //   607: astore_3
+    //   608: goto -216 -> 392
+    //   611: new 188	java/lang/UnsatisfiedLinkError
+    //   614: dup
+    //   615: new 87	java/lang/StringBuilder
+    //   618: dup
+    //   619: ldc_w 291
+    //   622: invokespecial 90	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   625: aload_0
+    //   626: invokevirtual 94	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   629: invokevirtual 97	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   632: invokespecial 191	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
+    //   635: aload 4
+    //   637: invokevirtual 195	java/lang/reflect/InvocationTargetException:getCause	()Ljava/lang/Throwable;
+    //   640: invokevirtual 199	java/lang/UnsatisfiedLinkError:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    //   643: checkcast 188	java/lang/UnsatisfiedLinkError
+    //   646: athrow
+    //   647: goto -255 -> 392
+    //   650: astore_1
+    //   651: new 188	java/lang/UnsatisfiedLinkError
+    //   654: dup
+    //   655: new 87	java/lang/StringBuilder
+    //   658: dup
+    //   659: ldc_w 291
+    //   662: invokespecial 90	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   665: aload_0
+    //   666: invokevirtual 94	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   669: invokevirtual 97	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   672: invokespecial 191	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
+    //   675: aload_1
+    //   676: invokevirtual 199	java/lang/UnsatisfiedLinkError:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    //   679: checkcast 188	java/lang/UnsatisfiedLinkError
+    //   682: athrow
+    //   683: aload 5
+    //   685: invokevirtual 289	java/util/zip/ZipFile:close	()V
+    //   688: aload 6
+    //   690: invokevirtual 162	java/io/File:getAbsolutePath	()Ljava/lang/String;
+    //   693: aload_1
+    //   694: invokestatic 177	com/tencent/mm/compatible/util/i:reflectSystemLoad	(Ljava/lang/String;Ljava/lang/ClassLoader;)V
+    //   697: getstatic 25	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
+    //   700: astore 4
+    //   702: aload 4
+    //   704: monitorenter
+    //   705: getstatic 25	com/tencent/mm/compatible/util/i:mLoadedLibs	Ljava/util/HashMap;
+    //   708: aload_0
+    //   709: new 179	java/lang/ref/WeakReference
     //   712: dup
-    //   713: new 51	java/lang/StringBuilder
-    //   716: dup
-    //   717: ldc -70
-    //   719: invokespecial 56	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   722: aload_0
-    //   723: invokevirtual 60	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   726: invokevirtual 66	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   729: invokespecial 95	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
-    //   732: aload_1
-    //   733: invokevirtual 92	java/lang/reflect/InvocationTargetException:getCause	()Ljava/lang/Throwable;
-    //   736: invokevirtual 99	java/lang/UnsatisfiedLinkError:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-    //   739: checkcast 23	java/lang/UnsatisfiedLinkError
-    //   742: athrow
-    //   743: aload_3
-    //   744: athrow
-    //   745: astore_0
-    //   746: aload_3
-    //   747: ifnonnull +20 -> 767
-    //   750: new 23	java/lang/UnsatisfiedLinkError
-    //   753: dup
-    //   754: ldc -75
-    //   756: invokespecial 95	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
-    //   759: aload_0
-    //   760: invokevirtual 99	java/lang/UnsatisfiedLinkError:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-    //   763: checkcast 23	java/lang/UnsatisfiedLinkError
-    //   766: athrow
-    //   767: aload_3
-    //   768: athrow
-    //   769: astore 4
-    //   771: goto -110 -> 661
-    //   774: astore_1
-    //   775: goto -308 -> 467
-    //   778: astore_0
-    //   779: aconst_null
-    //   780: astore 4
-    //   782: goto -325 -> 457
-    //   785: astore_0
-    //   786: aconst_null
-    //   787: astore 4
-    //   789: goto -350 -> 439
-    //   792: goto -421 -> 371
-    //   795: aconst_null
-    //   796: astore_3
-    //   797: goto -476 -> 321
-    //   800: aconst_null
-    //   801: astore_3
-    //   802: goto -752 -> 50
-    //   805: return
-    //   806: iconst_0
-    //   807: istore_2
-    //   808: goto -795 -> 13
+    //   713: aload_1
+    //   714: invokespecial 182	java/lang/ref/WeakReference:<init>	(Ljava/lang/Object;)V
+    //   717: invokevirtual 186	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    //   720: pop
+    //   721: aload 4
+    //   723: monitorexit
+    //   724: return
+    //   725: astore_1
+    //   726: aload 4
+    //   728: monitorexit
+    //   729: aload_1
+    //   730: athrow
+    //   731: astore_1
+    //   732: aload_3
+    //   733: ifnonnull +38 -> 771
+    //   736: new 188	java/lang/UnsatisfiedLinkError
+    //   739: dup
+    //   740: new 87	java/lang/StringBuilder
+    //   743: dup
+    //   744: ldc_w 291
+    //   747: invokespecial 90	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   750: aload_0
+    //   751: invokevirtual 94	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   754: invokevirtual 97	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   757: invokespecial 191	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
+    //   760: aload_1
+    //   761: invokevirtual 195	java/lang/reflect/InvocationTargetException:getCause	()Ljava/lang/Throwable;
+    //   764: invokevirtual 199	java/lang/UnsatisfiedLinkError:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    //   767: checkcast 188	java/lang/UnsatisfiedLinkError
+    //   770: athrow
+    //   771: aload_3
+    //   772: athrow
+    //   773: astore_0
+    //   774: aload_3
+    //   775: ifnonnull +21 -> 796
+    //   778: new 188	java/lang/UnsatisfiedLinkError
+    //   781: dup
+    //   782: ldc_w 286
+    //   785: invokespecial 191	java/lang/UnsatisfiedLinkError:<init>	(Ljava/lang/String;)V
+    //   788: aload_0
+    //   789: invokevirtual 199	java/lang/UnsatisfiedLinkError:initCause	(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    //   792: checkcast 188	java/lang/UnsatisfiedLinkError
+    //   795: athrow
+    //   796: aload_3
+    //   797: athrow
+    //   798: astore 4
+    //   800: goto -112 -> 688
+    //   803: astore_1
+    //   804: goto -314 -> 490
+    //   807: astore_0
+    //   808: aconst_null
+    //   809: astore 4
+    //   811: goto -331 -> 480
+    //   814: astore_0
+    //   815: aconst_null
+    //   816: astore 4
+    //   818: goto -357 -> 461
+    //   821: goto -429 -> 392
+    //   824: aconst_null
+    //   825: astore_3
+    //   826: goto -484 -> 342
+    //   829: aconst_null
+    //   830: astore_3
+    //   831: goto -781 -> 50
+    //   834: return
+    //   835: iconst_0
+    //   836: istore_2
+    //   837: goto -824 -> 13
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	811	0	paramString	String
-    //   0	811	1	paramClassLoader	ClassLoader
-    //   12	796	2	bool	boolean
-    //   37	273	3	localObject1	Object
-    //   314	51	3	localUnsatisfiedLinkError1	UnsatisfiedLinkError
-    //   370	1	3	localUnsatisfiedLinkError2	UnsatisfiedLinkError
-    //   469	12	3	localInvocationTargetException1	java.lang.reflect.InvocationTargetException
-    //   487	315	3	localUnsatisfiedLinkError3	UnsatisfiedLinkError
+    //   0	840	0	paramString	String
+    //   0	840	1	paramClassLoader	ClassLoader
+    //   12	825	2	bool	boolean
+    //   37	294	3	localObject1	Object
+    //   335	51	3	localUnsatisfiedLinkError1	UnsatisfiedLinkError
+    //   391	1	3	localUnsatisfiedLinkError2	UnsatisfiedLinkError
+    //   492	12	3	localInvocationTargetException1	InvocationTargetException
+    //   510	321	3	localUnsatisfiedLinkError3	UnsatisfiedLinkError
     //   22	77	4	localHashMap1	HashMap
-    //   307	5	4	localObject2	Object
-    //   329	28	4	localHashMap2	HashMap
-    //   362	7	4	localUnsatisfiedLinkError4	UnsatisfiedLinkError
-    //   390	73	4	localObject3	Object
-    //   557	53	4	localInvocationTargetException2	java.lang.reflect.InvocationTargetException
-    //   769	1	4	localIOException	java.io.IOException
-    //   780	8	4	localObject4	Object
-    //   104	553	5	localObject5	Object
-    //   263	399	6	localFile	File
-    //   354	6	7	localObject6	Object
+    //   328	5	4	localObject2	Object
+    //   350	28	4	localHashMap2	HashMap
+    //   383	7	4	localUnsatisfiedLinkError4	UnsatisfiedLinkError
+    //   411	75	4	localObject3	Object
+    //   582	54	4	localInvocationTargetException2	InvocationTargetException
+    //   798	1	4	localIOException	java.io.IOException
+    //   809	8	4	localObject4	Object
+    //   133	551	5	localObject5	Object
+    //   284	405	6	localFile	File
+    //   375	6	7	localObject6	Object
     // Exception table:
     //   from	to	target	type
     //   27	38	92	finally
@@ -566,46 +564,51 @@ public final class i
     //   63	92	92	finally
     //   93	96	92	finally
     //   98	101	92	finally
-    //   128	146	147	finally
-    //   148	150	147	finally
-    //   117	128	152	java/lang/reflect/InvocationTargetException
-    //   150	152	152	java/lang/reflect/InvocationTargetException
-    //   117	128	187	java/lang/Exception
-    //   150	152	187	java/lang/Exception
-    //   288	306	307	finally
-    //   309	311	307	finally
-    //   273	288	314	java/lang/UnsatisfiedLinkError
-    //   311	314	314	java/lang/UnsatisfiedLinkError
-    //   334	353	354	finally
-    //   356	359	354	finally
-    //   321	334	362	java/lang/UnsatisfiedLinkError
-    //   359	362	362	java/lang/UnsatisfiedLinkError
-    //   392	406	434	java/lang/Exception
-    //   410	434	434	java/lang/Exception
-    //   392	406	456	finally
-    //   410	434	456	finally
-    //   439	456	456	finally
-    //   273	288	469	java/lang/reflect/InvocationTargetException
-    //   311	314	469	java/lang/reflect/InvocationTargetException
-    //   273	288	525	java/lang/Throwable
-    //   311	314	525	java/lang/Throwable
-    //   321	334	557	java/lang/reflect/InvocationTargetException
-    //   359	362	557	java/lang/reflect/InvocationTargetException
-    //   321	334	624	java/lang/Throwable
-    //   359	362	624	java/lang/Throwable
-    //   678	697	698	finally
-    //   699	702	698	finally
-    //   661	678	704	java/lang/reflect/InvocationTargetException
-    //   702	704	704	java/lang/reflect/InvocationTargetException
-    //   661	678	745	java/lang/Exception
-    //   702	704	745	java/lang/Exception
-    //   656	661	769	java/io/IOException
-    //   462	467	774	java/io/IOException
-    //   371	388	778	finally
-    //   371	388	785	java/lang/Exception
+    //   157	175	176	finally
+    //   177	179	176	finally
+    //   146	157	181	java/lang/reflect/InvocationTargetException
+    //   179	181	181	java/lang/reflect/InvocationTargetException
+    //   146	157	216	java/lang/Exception
+    //   179	181	216	java/lang/Exception
+    //   309	327	328	finally
+    //   330	332	328	finally
+    //   294	309	335	java/lang/UnsatisfiedLinkError
+    //   332	335	335	java/lang/UnsatisfiedLinkError
+    //   355	374	375	finally
+    //   377	380	375	finally
+    //   342	355	383	java/lang/UnsatisfiedLinkError
+    //   380	383	383	java/lang/UnsatisfiedLinkError
+    //   413	427	456	java/lang/Exception
+    //   431	456	456	java/lang/Exception
+    //   413	427	479	finally
+    //   431	456	479	finally
+    //   461	479	479	finally
+    //   294	309	492	java/lang/reflect/InvocationTargetException
+    //   332	335	492	java/lang/reflect/InvocationTargetException
+    //   294	309	549	java/lang/Throwable
+    //   332	335	549	java/lang/Throwable
+    //   342	355	582	java/lang/reflect/InvocationTargetException
+    //   380	383	582	java/lang/reflect/InvocationTargetException
+    //   342	355	650	java/lang/Throwable
+    //   380	383	650	java/lang/Throwable
+    //   705	724	725	finally
+    //   726	729	725	finally
+    //   688	705	731	java/lang/reflect/InvocationTargetException
+    //   729	731	731	java/lang/reflect/InvocationTargetException
+    //   688	705	773	java/lang/Exception
+    //   729	731	773	java/lang/Exception
+    //   683	688	798	java/io/IOException
+    //   485	490	803	java/io/IOException
+    //   392	409	807	finally
+    //   392	409	814	java/lang/Exception
   }
   
-  public static String de(String paramString)
+  public static boolean dk(String paramString)
+  {
+    return mLoadedLibs.containsKey(paramString);
+  }
+  
+  public static String dl(String paramString)
   {
     try
     {
@@ -616,7 +619,7 @@ public final class i
       localObject3 = localObject1;
       if (localObject1 == null)
       {
-        paramString = new File(y.getContext().getDir("recover_lib", 0), "lib" + paramString + ".so");
+        paramString = new File(aa.getContext().getDir("recover_lib", 0), "lib" + paramString + ".so");
         localObject3 = localObject1;
         if (paramString.canRead()) {
           localObject3 = paramString.getAbsolutePath();
@@ -633,7 +636,7 @@ public final class i
     }
   }
   
-  private static boolean extractLibrary(ZipFile paramZipFile, String paramString, List paramList, File paramFile)
+  private static boolean extractLibrary(ZipFile paramZipFile, String paramString, List<String> paramList, File paramFile)
   {
     if (paramFile.isFile()) {
       return true;
@@ -673,17 +676,16 @@ public final class i
     return false;
   }
   
-  private static List generateAbiList()
+  private static List<String> generateAbiList()
   {
     ArrayList localArrayList = new ArrayList(3);
-    Object localObject = Class.forName("android.os.SystemProperties").getMethod("get", new Class[] { String.class });
-    String str = (String)((Method)localObject).invoke(null, new Object[] { "ro.product.cpu.abi" });
+    String str = y.get("ro.product.cpu.abi");
     if ((str != null) && (str.length() > 0)) {
       localArrayList.add(str);
     }
-    localObject = (String)((Method)localObject).invoke(null, new Object[] { "ro.product.cpu.abi2" });
-    if ((localObject != null) && (((String)localObject).length() > 0)) {
-      localArrayList.add(localObject);
+    str = y.get("ro.product.cpu.abi2");
+    if ((str != null) && (str.length() > 0)) {
+      localArrayList.add(str);
     }
     localArrayList.add("armeabi");
     return localArrayList;
@@ -735,7 +737,7 @@ public final class i
       {
         try
         {
-          i.pd();
+          i.nv();
           i = j;
           Throwable localThrowable = paramThrowable;
           if (i != 0) {

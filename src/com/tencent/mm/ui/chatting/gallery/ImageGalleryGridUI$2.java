@@ -1,17 +1,20 @@
 package com.tencent.mm.ui.chatting.gallery;
 
-import android.widget.GridView;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.tencent.mm.ui.MMActivity;
+import com.tencent.mm.ui.j;
+import java.util.List;
 
 final class ImageGalleryGridUI$2
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  ImageGalleryGridUI$2(ImageGalleryGridUI paramImageGalleryGridUI) {}
+  ImageGalleryGridUI$2(ImageGalleryGridUI paramImageGalleryGridUI, List paramList) {}
   
-  public final void run()
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((ImageGalleryGridUI.a(lfA) != null) && (ImageGalleryGridUI.a(lfA).getVisibility() != 0)) {
-      ImageGalleryGridUI.a(lfA).setVisibility(0);
-    }
+    b.c(lFM.kNN.kOg, lFN);
+    lFM.bmf();
   }
 }
 

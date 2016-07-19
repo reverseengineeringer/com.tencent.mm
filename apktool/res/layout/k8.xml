@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/j4" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="60.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/ad9" android:paddingLeft="@dimen/ly" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/ac3" android:paddingRight="@dimen/m3" android:layout_width="@dimen/lv" android:layout_height="@dimen/lv" android:layout_toRightOf="@id/ad9" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/ace" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/yh" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ac4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/ac5" android:layout_toRightOf="@id/ac3" android:layout_centerVertical="true">
+        <TextView android:textColor="@color/ak" android:id="@id/ac6" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/MMFontTitleInList" />
+        <TextView android:ellipsize="end" android:id="@id/ac7" android:paddingTop="@dimen/cp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/MMFontTipInList" />
+        <TextView android:id="@id/ad_" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/MMFontTipInList" />
+        <TextView android:textColor="@color/ha" android:id="@id/ada" android:visibility="gone" android:shadowColor="#a0ffffff" android:shadowDx="1.2" android:shadowDy="1.2" android:shadowRadius="1.2" style="@style/MMFontTipInList" />
+        <TextView android:id="@id/ac8" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/MMFontTipInList" />
+    </LinearLayout>
+    <FrameLayout android:gravity="center" android:id="@id/ac5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/lz" android:minWidth="@dimen/j3" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/ac9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:minWidth="@dimen/j3" android:minHeight="30.0dip">
+            <TextView android:textSize="@dimen/j2" android:textColor="@color/ha" android:gravity="center" android:id="@id/ac_" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:shadowRadius="1.2" />
+            <TextView android:textSize="12.0dip" android:textStyle="bold" android:textColor="@color/ha" android:gravity="center" android:id="@id/adb" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/aca" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ProgressBar android:gravity="center" android:layout_gravity="center" android:id="@id/acb" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/smallCustomProgressBar" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/acc" android:layout_width="@dimen/j3" android:layout_height="wrap_content">
+            <ProgressBar android:layout_gravity="center_vertical" android:id="@id/acd" android:layout_width="@dimen/j3" android:layout_height="wrap_content" style="?android:attr/progressBarStyleHorizontal" />
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

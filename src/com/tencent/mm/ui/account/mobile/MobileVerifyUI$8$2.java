@@ -19,26 +19,26 @@ final class MobileVerifyUI$8$2
     default: 
       return;
     case 0: 
-      MobileVerifyUI.g(kzh.kzc);
+      MobileVerifyUI.g(kYo.kYj);
       return;
     }
-    kzh.kzc.age();
-    if (MobileVerifyUI.f(kzh.kzc) == 2) {
-      b.kC("R200_500");
+    kYo.kYj.aiI();
+    if (MobileVerifyUI.f(kYo.kYj) == 2) {
+      b.ll("R200_500");
     }
     for (;;)
     {
-      paramMenuItem = new Intent(kzh.kzc, RegByMobileVoiceVerifyUI.class);
+      paramMenuItem = new Intent(kYo.kYj, RegByMobileVoiceVerifyUI.class);
       Bundle localBundle = new Bundle();
-      localBundle.putString("bindmcontact_mobile", kzh.kzc.aBH);
-      localBundle.putInt("voice_verify_type", MobileVerifyUI.h(kzh.kzc));
+      localBundle.putString("bindmcontact_mobile", kYo.kYj.anZ);
+      localBundle.putInt("voice_verify_type", MobileVerifyUI.h(kYo.kYj));
       paramMenuItem.putExtras(localBundle);
-      kzh.kzc.startActivity(paramMenuItem);
+      kYo.kYj.startActivity(paramMenuItem);
       return;
-      if (MobileVerifyUI.f(kzh.kzc) == 1) {
-        b.kC("L600_400");
-      } else if (MobileVerifyUI.f(kzh.kzc) == 3) {
-        b.kC("F200_300");
+      if (MobileVerifyUI.f(kYo.kYj) == 1) {
+        b.ll("L600_400");
+      } else if (MobileVerifyUI.f(kYo.kYj) == 3) {
+        b.ll("F200_300");
       }
     }
   }

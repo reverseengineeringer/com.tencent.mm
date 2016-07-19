@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 403
+    .line 401
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 403
+    .line 401
     invoke-direct {p0}, Lcom/tencent/mm/ui/SingleChatInfoUI$a;-><init>()V
 
     return-void
@@ -44,9 +44,9 @@
     .locals 0
 
     .prologue
-    .line 407
-    invoke-static {}, Lcom/tencent/mm/ui/SingleChatInfoUI;->bbu()Z
+    .line 405
+    invoke-static {}, Lcom/tencent/mm/ui/SingleChatInfoUI;->bgG()Z
 
-    .line 408
+    .line 406
     return-void
 .end method

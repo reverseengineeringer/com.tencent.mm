@@ -7,7 +7,7 @@ final class r$2
   
   public final void run()
   {
-    lxI.lxA.Gd();
+    lYx.lYp.GA();
   }
 }
 

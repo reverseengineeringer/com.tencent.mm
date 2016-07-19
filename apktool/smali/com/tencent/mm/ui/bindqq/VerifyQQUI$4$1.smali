@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic kPN:Lcom/tencent/mm/s/a;
+.field final synthetic lpc:Lcom/tencent/mm/u/a;
 
-.field final synthetic kPP:Lcom/tencent/mm/ui/bindqq/VerifyQQUI$4;
+.field final synthetic lpe:Lcom/tencent/mm/ui/bindqq/VerifyQQUI$4;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/bindqq/VerifyQQUI$4;Lcom/tencent/mm/s/a;)V
+.method constructor <init>(Lcom/tencent/mm/ui/bindqq/VerifyQQUI$4;Lcom/tencent/mm/u/a;)V
     .locals 0
 
     .prologue
     .line 222
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$4$1;->kPP:Lcom/tencent/mm/ui/bindqq/VerifyQQUI$4;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$4$1;->lpe:Lcom/tencent/mm/ui/bindqq/VerifyQQUI$4;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$4$1;->kPN:Lcom/tencent/mm/s/a;
+    iput-object p2, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$4$1;->lpc:Lcom/tencent/mm/u/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,13 +45,13 @@
 
     .prologue
     .line 226
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$4$1;->kPN:Lcom/tencent/mm/s/a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$4$1;->lpc:Lcom/tencent/mm/u/a;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
     .line 227
     return-void

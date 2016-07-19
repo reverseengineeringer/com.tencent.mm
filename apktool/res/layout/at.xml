@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.tencent.mm.ui.base.MMGridView android:gravity="center" android:id="@id/hv" android:paddingTop="@dimen/hb" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/jd" android:horizontalSpacing="@dimen/j8" android:verticalSpacing="@dimen/hb" android:stretchMode="columnWidth" android:columnWidth="90.0dip" android:numColumns="4" />
+        <TextView android:gravity="center" android:id="@id/hw" android:paddingTop="@dimen/hb" android:paddingBottom="@dimen/hb" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="false" style="@style/MMFontPreferenceSmall" />
+        <Button android:id="@id/hx" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="test" />
+    </LinearLayout>
+</LinearLayout>

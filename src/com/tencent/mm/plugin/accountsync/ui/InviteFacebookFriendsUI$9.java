@@ -11,7 +11,7 @@ final class InviteFacebookFriendsUI$9
   
   public final void onClick(View paramView)
   {
-    BackwardSupportUtil.c.a(InviteFacebookFriendsUI.b(coP));
+    BackwardSupportUtil.c.a(InviteFacebookFriendsUI.b(ckd));
   }
 }
 

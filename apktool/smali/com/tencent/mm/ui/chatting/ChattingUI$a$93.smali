@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.field final synthetic lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 4456
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$93;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 827
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$93;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,37 +36,15 @@
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 3
+.method public final run()V
+    .locals 1
 
     .prologue
-    const/4 v2, 0x0
+    .line 829
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$93;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    .line 4460
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$93;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->h(Lcom/tencent/mm/ui/chatting/ChattingUI$a;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->Z(Lcom/tencent/mm/ui/chatting/ChattingUI$a;)Z
-
-    .line 4461
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$93;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
-
-    iget-boolean v0, v0, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->kYO:Z
-
-    if-nez v0, :cond_0
-
-    .line 4470
-    :goto_0
-    return v2
-
-    .line 4469
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$93;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->faQ:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
-
-    const/4 v1, -0x1
-
-    invoke-virtual {v0, v2, v1, v2}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->h(IIZ)V
-
-    goto :goto_0
+    .line 830
+    return-void
 .end method

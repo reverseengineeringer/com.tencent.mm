@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field aJk:Z
+.field avE:Z
 
 
 # direct methods
@@ -18,7 +18,7 @@
     .line 23
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;->aJk:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;->avE:Z
 
     .line 31
     return-void
@@ -34,7 +34,7 @@
     .line 23
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;->aJk:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;->avE:Z
 
     .line 35
     return-void
@@ -42,6 +42,42 @@
 
 
 # virtual methods
+.method public final aXb()V
+    .locals 2
+
+    .prologue
+    .line 73
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;->avE:Z
+
+    .line 76
+    new-instance v0, Lcom/tencent/mm/e/a/ad;
+
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/ad;-><init>()V
+
+    .line 77
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
+
+    .line 78
+    iget-object v0, v0, Lcom/tencent/mm/e/a/ad;->afa:Lcom/tencent/mm/e/a/ad$a;
+
+    iget-boolean v0, v0, Lcom/tencent/mm/e/a/ad$a;->iz:Z
+
+    if-eqz v0, :cond_0
+
+    .line 79
+    const/16 v0, 0x8
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;->setVisibility(I)V
+
+    .line 81
+    :cond_0
+    return-void
+.end method
+
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 0
 
@@ -69,7 +105,7 @@
 
     .prologue
     .line 55
-    const-string/jumbo v0, "!44@/B4Tb64lLpJ/7uFBkt7iPHURADeQLT/9626gRaXeO4g="
+    const-string/jumbo v0, "MicroMsg.ChatFooterBottom"
 
     const-string/jumbo v1, "jacks onLayout change: %B, l:%d, t:%d, r:%d, b:%d"
 
@@ -117,7 +153,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 59
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
@@ -135,7 +171,7 @@
     const/4 v5, 0x0
 
     .line 44
-    const-string/jumbo v0, "!44@/B4Tb64lLpJ/7uFBkt7iPHURADeQLT/9626gRaXeO4g="
+    const-string/jumbo v0, "MicroMsg.ChatFooterBottom"
 
     const-string/jumbo v1, "jacks onMeasure  width:%d, height:%d, isHide: %B"
 
@@ -167,7 +203,7 @@
 
     const/4 v3, 0x2
 
-    iget-boolean v4, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;->aJk:Z
+    iget-boolean v4, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;->avE:Z
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -175,10 +211,10 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 45
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;->aJk:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;->avE:Z
 
     if-eqz v0, :cond_0
 
@@ -210,7 +246,7 @@
 
     .prologue
     .line 68
-    const-string/jumbo v0, "!44@/B4Tb64lLpJ/7uFBkt7iPHURADeQLT/9626gRaXeO4g="
+    const-string/jumbo v0, "MicroMsg.ChatFooterBottom"
 
     const-string/jumbo v1, "jacks onSizeChanged  w:%d, h:%d, oldw:%d, oldh:%d"
 
@@ -250,56 +286,13 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 69
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;->onSizeChanged(IIII)V
 
     .line 70
     return-void
-.end method
-
-.method public setIsHide(Z)V
-    .locals 2
-
-    .prologue
-    .line 73
-    iput-boolean p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;->aJk:Z
-
-    .line 76
-    new-instance v0, Lcom/tencent/mm/d/a/ac;
-
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/ac;-><init>()V
-
-    .line 77
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
-
-    .line 78
-    iget-object v0, v0, Lcom/tencent/mm/d/a/ac;->ats:Lcom/tencent/mm/d/a/ac$a;
-
-    iget-boolean v0, v0, Lcom/tencent/mm/d/a/ac$a;->ig:Z
-
-    if-eqz v0, :cond_0
-
-    .line 79
-    if-eqz p1, :cond_1
-
-    const/16 v0, 0x8
-
-    :goto_0
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;->setVisibility(I)V
-
-    .line 81
-    :cond_0
-    return-void
-
-    .line 79
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 .method public setVisibility(I)V
@@ -312,7 +305,7 @@
     .line 86
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;->aJk:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;->avE:Z
 
     .line 93
     :cond_0

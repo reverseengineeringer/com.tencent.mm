@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.chat;
 
 import com.tencent.mm.modelcdntran.CdnTransportEngine;
 import com.tencent.mm.modelcdntran.e;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class AppPanel$4
   implements Runnable
@@ -11,8 +11,8 @@ final class AppPanel$4
   
   public final void run()
   {
-    u.i("!32@/B4Tb64lLpIswCbzJzq2kbhBmMfFikWd", "preMakeConnection ret:%d", new Object[] { Integer.valueOf(e.xX().preMakeCDNConnection()) });
-    AppPanel.aRC();
+    v.i("MicroMsg.AppPanel", "preMakeConnection ret:%d", new Object[] { Integer.valueOf(e.ya().preMakeCDNConnection()) });
+    AppPanel.aWp();
   }
 }
 

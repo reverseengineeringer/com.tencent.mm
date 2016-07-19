@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+.field final synthetic kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 711
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,14 +36,14 @@
 
 
 # virtual methods
-.method public final eu(I)V
+.method public final fg(I)V
     .locals 4
 
     .prologue
     const/4 v3, 0x5
 
     .line 719
-    invoke-static {}, Lcom/tencent/mm/ac/b;->AG()Z
+    invoke-static {}, Lcom/tencent/mm/af/b;->AS()Z
 
     move-result v0
 
@@ -60,7 +60,7 @@
     :pswitch_0
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     const-class v2, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
@@ -72,7 +72,7 @@
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 724
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->startActivity(Landroid/content/Intent;)V
 
@@ -82,14 +82,14 @@
     :pswitch_1
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     const-class v2, Lcom/tencent/mm/ui/account/LoginUI;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 730
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->startActivity(Landroid/content/Intent;)V
 
@@ -99,14 +99,14 @@
     :pswitch_2
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     const-class v2, Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 736
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->startActivity(Landroid/content/Intent;)V
 
@@ -122,7 +122,7 @@
     :pswitch_3
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     const-class v2, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
@@ -134,7 +134,7 @@
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 748
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->startActivity(Landroid/content/Intent;)V
 
@@ -144,14 +144,14 @@
     :pswitch_4
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     const-class v2, Lcom/tencent/mm/ui/account/LoginUI;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 754
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$5;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->startActivity(Landroid/content/Intent;)V
 

@@ -10,7 +10,7 @@ final class RegByEmailUI$6
   
   public final void onCheckedChanged(CompoundButton paramCompoundButton, boolean paramBoolean)
   {
-    RegByEmailUI.b(kuo);
+    RegByEmailUI.b(kTv);
   }
 }
 

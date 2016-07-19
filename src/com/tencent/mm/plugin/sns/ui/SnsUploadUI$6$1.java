@@ -10,13 +10,13 @@ final class SnsUploadUI$6$1
   
   public final void run()
   {
-    SnsUploadSayFooter localSnsUploadSayFooter = SnsUploadUI.b(hlZ.hlY);
+    SnsUploadSayFooter localSnsUploadSayFooter = SnsUploadUI.b(hCc.hCb);
     localSnsUploadSayFooter.setVisibility(0);
-    if (eYL != null) {
-      eYL.setImageResource(2130969785);
+    if (fhf != null) {
+      fhf.setImageResource(2130839400);
     }
-    SnsUploadUI.b(hlZ.hlY).postInvalidate();
-    SnsUploadUI.c(hlZ.hlY).postInvalidate();
+    SnsUploadUI.b(hCc.hCb).postInvalidate();
+    SnsUploadUI.c(hCc.hCb).postInvalidate();
   }
 }
 

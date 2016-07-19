@@ -1,225 +1,64 @@
 package com.tencent.mm.sdk.platformtools;
 
-import android.os.HandlerThread;
-import android.os.Looper;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.Map.Entry;
-import java.util.Set;
+import android.content.Context;
+import android.telephony.PhoneStateListener;
+import android.telephony.TelephonyManager;
+import java.util.LinkedList;
+import java.util.List;
 
 public final class an
 {
-  public final af anF;
-  public volatile boolean anI = false;
-  protected Object bOa;
-  public final v eDv;
-  public final LinkedHashMap jXi = new LinkedHashMap();
-  private final c jXj;
-  public final af jXk;
-  private final long jXl;
-  private final long jXm;
-  private boolean jXn = true;
-  private final long threshold;
+  public static boolean awC;
+  private PhoneStateListener eOB;
+  private TelephonyManager kxo;
+  List<a> kxp = new LinkedList();
   
-  public an(c paramc, Looper paramLooper, int paramInt1, int paramInt2, long paramLong1, long paramLong2)
+  public final void a(a parama)
   {
-    if (paramc == null) {
-      throw new IllegalArgumentException("arg appender can not be null!");
+    kxp.add(parama);
+  }
+  
+  public final void dK(Context paramContext)
+  {
+    if (kxo == null) {
+      kxo = ((TelephonyManager)paramContext.getSystemService("phone"));
     }
-    if (paramLooper == null) {
-      throw new IllegalArgumentException("arg looper can not be null!");
-    }
-    if (paramInt1 <= 0) {
-      throw new IllegalArgumentException("arg size can not be <= 0!");
-    }
-    jXj = paramc;
-    eDv = new v(paramInt1);
-    long l;
-    if (paramInt2 > 0)
-    {
-      l = paramInt2;
-      threshold = l;
-      if (paramLong1 <= 0L) {
-        break label191;
-      }
-      label107:
-      jXl = paramLong1;
-      if (paramLong2 <= 0L) {
-        break label199;
-      }
-    }
-    for (;;)
-    {
-      jXm = paramLong2;
-      anF = new af(paramLooper, new af.a()
+    if (eOB == null) {
+      eOB = new PhoneStateListener()
       {
-        public final boolean lj()
+        public final void onCallStateChanged(int paramAnonymousInt, String paramAnonymousString)
         {
-          long l = System.currentTimeMillis();
-          gK(false);
-          u.i("!32@/B4Tb64lLpKVcgwO/AJ6cRDJPmRljB7e", "summer timer onTimerExpired e appendAll takes: " + (System.currentTimeMillis() - l) + " ms");
-          return false;
+          if (kxp.size() > 0)
+          {
+            an.a[] arrayOfa = new an.a[kxp.size()];
+            arrayOfa = (an.a[])kxp.toArray(arrayOfa);
+            int j = arrayOfa.length;
+            int i = 0;
+            while (i < j)
+            {
+              arrayOfa[i].bP(paramAnonymousInt);
+              i += 1;
+            }
+          }
+          super.onCallStateChanged(paramAnonymousInt, paramAnonymousString);
+          switch (paramAnonymousInt)
+          {
+          default: 
+            return;
+          case 0: 
+            an.awC = false;
+            return;
+          }
+          an.awC = true;
         }
-      }, false);
-      jXk = new af(ab"RWCache_timeoutChecker"jVF.getLooper(), new af.a()
-      {
-        public final boolean lj()
-        {
-          anI = true;
-          return false;
-        }
-      }, false);
-      return;
-      l = 40L;
-      break;
-      label191:
-      paramLong1 = 60000L;
-      break label107;
-      label199:
-      paramLong2 = 60000L;
+      };
     }
+    kxo.listen(eOB, 32);
   }
   
-  public final void gK(boolean paramBoolean)
+  public static abstract interface a
   {
-    u.i("!32@/B4Tb64lLpKVcgwO/AJ6cRDJPmRljB7e", "summer appendAll force: " + paramBoolean + " tid: " + Thread.currentThread().getId() + " holderMap size: " + jXi.size());
-    try
-    {
-      jXn = true;
-      if (jXi.isEmpty()) {
-        return;
-      }
-      if (!jXj.Dp()) {
-        return;
-      }
-    }
-    finally {}
-    Iterator localIterator = jXi.entrySet().iterator();
-    if (paramBoolean) {
-      while (localIterator.hasNext())
-      {
-        jXj.a(this, (b)((Map.Entry)localIterator.next()).getValue());
-        localIterator.remove();
-      }
-    }
-    anI = false;
-    jXk.ds(jXm);
-    while ((!anI) && (localIterator.hasNext()))
-    {
-      jXj.a(this, (b)((Map.Entry)localIterator.next()).getValue());
-      localIterator.remove();
-    }
-    jXk.aUF();
-    jXj.Dq();
-  }
-  
-  public final Object get(Object paramObject)
-  {
-    if (paramObject == null) {
-      throw new NullPointerException("key == null");
-    }
-    a locala = (a)eDv.get(paramObject);
-    if (locala != null) {
-      return jXp;
-    }
-    eDv.put(paramObject, new a(null));
-    return null;
-  }
-  
-  public final Object getTag()
-  {
-    return bOa;
-  }
-  
-  public final boolean i(Object paramObject1, Object paramObject2)
-  {
-    if (paramObject1 == null) {
-      throw new NullPointerException("key == null");
-    }
-    Object localObject = (a)eDv.get(paramObject1);
-    a locala = new a(paramObject2);
-    if (locala.equals(localObject)) {
-      return false;
-    }
-    eDv.put(paramObject1, locala);
-    localObject = new b();
-    iSE = paramObject1;
-    values = paramObject2;
-    int i;
-    if (paramObject2 == null)
-    {
-      i = 2;
-      jXq = i;
-    }
-    for (;;)
-    {
-      try
-      {
-        jXi.put(paramObject1, localObject);
-        if ((!jXn) || (jXi.size() <= threshold)) {
-          break label156;
-        }
-        anF.ds(0L);
-        jXn = false;
-        return true;
-      }
-      finally {}
-      i = 1;
-      break;
-      label156:
-      if (anF.aVf()) {
-        anF.ds(jXl);
-      }
-    }
-  }
-  
-  public final void setTag(Object paramObject)
-  {
-    bOa = paramObject;
-  }
-  
-  static final class a
-  {
-    final Object jXp;
-    
-    a(Object paramObject)
-    {
-      jXp = paramObject;
-    }
-    
-    public final boolean equals(Object paramObject)
-    {
-      if (paramObject == null) {}
-      do
-      {
-        do
-        {
-          return false;
-        } while (!(paramObject instanceof a));
-        paramObject = (a)paramObject;
-        if (jXp != null) {
-          break;
-        }
-      } while (jXp != null);
-      return true;
-      return jXp.equals(jXp);
-    }
-  }
-  
-  public static final class b
-  {
-    public Object iSE;
-    public int jXq;
-    public Object values;
-  }
-  
-  public static abstract interface c
-  {
-    public abstract boolean Dp();
-    
-    public abstract void Dq();
-    
-    public abstract void a(an paraman, an.b paramb);
+    public abstract void bP(int paramInt);
   }
 }
 

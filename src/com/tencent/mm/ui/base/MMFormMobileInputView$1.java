@@ -10,8 +10,8 @@ final class MMFormMobileInputView$1
   
   public final void onFocusChange(View paramView, boolean paramBoolean)
   {
-    if ((paramView == MMFormMobileInputView.a(kDT)) || (paramView == MMFormMobileInputView.b(kDT))) {
-      kDT.hy(paramBoolean);
+    if ((paramView == MMFormMobileInputView.a(lcX)) || (paramView == MMFormMobileInputView.b(lcX))) {
+      lcX.hW(paramBoolean);
     }
   }
 }

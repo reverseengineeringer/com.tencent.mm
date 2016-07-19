@@ -1,1078 +1,543 @@
 .class public final Lcom/tencent/mm/ba/a;
-.super Ljava/lang/Object;
+.super Landroid/content/res/Resources;
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/ba/a$a;
+    }
+.end annotation
+
+
 # static fields
-.field public static final kiO:Ljava/lang/String;
+.field private static krA:Ljava/lang/reflect/Method;
+
+.field private static krB:Ljava/lang/reflect/Method;
+
+
+# instance fields
+.field private krx:Lcom/tencent/mm/ba/e;
+
+.field private kry:Lcom/tencent/mm/ba/c;
+
+.field public krz:Landroid/content/res/Resources;
+
+.field private mb:Landroid/content/res/Resources;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 30
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    .line 362
+    sput-object v0, Lcom/tencent/mm/ba/a;->krA:Ljava/lang/reflect/Method;
 
-    invoke-static {}, Lcom/tencent/mm/compatible/util/g;->getExternalStorageDirectory()Ljava/io/File;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "/tencent/MicroMsg/memory/"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/tencent/mm/ba/a;->kiO:Ljava/lang/String;
+    .line 363
+    sput-object v0, Lcom/tencent/mm/ba/a;->krB:Ljava/lang/reflect/Method;
 
     return-void
 .end method
 
-.method public static Gc(Ljava/lang/String;)Ljava/lang/String;
-    .locals 9
-
-    .prologue
-    const/4 v8, 0x1
-
-    const/4 v7, 0x0
-
-    const/4 v0, 0x0
-
-    .line 179
-    invoke-static {}, Lcom/tencent/mm/ba/a;->aZd()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 218
-    :goto_0
-    return-object v0
-
-    .line 182
-    :cond_0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v1
-
-    .line 183
-    new-instance v3, Ljava/lang/StringBuffer;
-
-    invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
-
-    .line 184
-    sget-object v4, Lcom/tencent/mm/ba/a;->kiO:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    move-result-object v4
-
-    invoke-virtual {v4, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    move-result-object v4
-
-    const-string/jumbo v5, ".hprof"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    .line 186
-    invoke-virtual {v3}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 190
-    :try_start_0
-    invoke-static {}, Ljava/lang/System;->gc()V
-
-    .line 191
-    invoke-static {}, Ljava/lang/System;->gc()V
-
-    .line 192
-    invoke-static {v3}, Landroid/os/Debug;->dumpHprofData(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 200
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    const-string/jumbo v6, " hprof file has saved "
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v4, v5, v7}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/widget/Toast;->show()V
-
-    .line 202
-    const-string/jumbo v4, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
-
-    const-string/jumbo v5, "dump file %s, use time %d"
-
-    const/4 v6, 0x2
-
-    new-array v6, v6, [Ljava/lang/Object;
-
-    aput-object p0, v6, v7
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->an(J)J
-
-    move-result-wide v1
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    aput-object v1, v6, v8
-
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 205
-    new-instance v1, Ljava/io/File;
-
-    invoke-direct {v1, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    .line 206
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    .line 207
-    const-string/jumbo v1, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
-
-    const-string/jumbo v2, "Hprof dump file is not exist"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 196
-    :catch_0
-    move-exception v1
-
-    const-string/jumbo v1, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
-
-    const-string/jumbo v2, " dumpHprofFile IOException"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 211
-    :cond_1
-    invoke-static {v1, v8, v0}, Lcom/tencent/mm/a/p;->a(Ljava/io/File;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 214
-    if-nez v1, :cond_2
-
-    .line 215
-    const-string/jumbo v1, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
-
-    const-string/jumbo v2, "zip hprof file fail"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    :cond_2
-    move-object v0, v1
-
-    .line 218
-    goto/16 :goto_0
-.end method
-
-.method private static aZd()Z
-    .locals 2
-
-    .prologue
-    .line 53
-    invoke-static {}, Lcom/tencent/mm/compatible/util/g;->oW()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 54
-    const-string/jumbo v0, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
-
-    const-string/jumbo v1, "Hprof sdcard is invalid"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 55
-    const/4 v0, 0x0
-
-    .line 61
-    :goto_0
-    return v0
-
-    .line 57
-    :cond_0
-    new-instance v0, Ljava/io/File;
-
-    sget-object v1, Lcom/tencent/mm/ba/a;->kiO:Ljava/lang/String;
-
-    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    .line 58
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 59
-    invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
-
-    .line 61
-    :cond_1
-    const/4 v0, 0x1
-
-    goto :goto_0
-.end method
-
-.method public static aZe()V
-    .locals 7
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 225
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0xe
-
-    if-lt v0, v2, :cond_0
-
-    .line 226
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const-string/jumbo v2, "activity"
-
-    invoke-virtual {v0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/ActivityManager;
-
-    const-string/jumbo v2, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
-
-    const-string/jumbo v3, " wechat heap info "
-
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string/jumbo v2, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v4, " Runtime.totalMemory "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/Runtime;->totalMemory()J
-
-    move-result-wide v4
-
-    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string/jumbo v2, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v4, " Runtime.freeMemory "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/Runtime;->freeMemory()J
-
-    move-result-wide v4
-
-    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string/jumbo v2, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v4, " Runtime.maxMemory "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/Runtime;->maxMemory()J
-
-    move-result-wide v4
-
-    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string/jumbo v2, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v4, " Debug.nativeHeapSize "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Landroid/os/Debug;->getNativeHeapSize()J
-
-    move-result-wide v4
-
-    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string/jumbo v2, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v4, " Debug.nativeHeapAllocatedSize "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Landroid/os/Debug;->getNativeHeapAllocatedSize()J
-
-    move-result-wide v4
-
-    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [I
-
-    invoke-static {}, Landroid/os/Process;->myPid()I
-
-    move-result v3
-
-    aput v3, v2, v1
-
-    invoke-virtual {v0, v2}, Landroid/app/ActivityManager;->getProcessMemoryInfo([I)[Landroid/os/Debug$MemoryInfo;
-
-    move-result-object v2
-
-    array-length v3, v2
-
-    move v0, v1
-
-    :goto_0
-    if-ge v0, v3, :cond_1
-
-    aget-object v1, v2, v0
-
-    const-string/jumbo v4, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
-
-    const-string/jumbo v5, " wechat memory info"
-
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string/jumbo v4, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v6, " pidMemoryInfo.getTotalPrivateDirty(): "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Landroid/os/Debug$MemoryInfo;->getTotalPrivateDirty()I
-
-    move-result v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    const-string/jumbo v6, "\n"
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string/jumbo v4, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v6, " pidMemoryInfo.getTotalPss(): "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Landroid/os/Debug$MemoryInfo;->getTotalPss()I
-
-    move-result v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    const-string/jumbo v6, "\n"
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string/jumbo v4, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v6, " pidMemoryInfo.getTotalSharedDirty(): "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Landroid/os/Debug$MemoryInfo;->getTotalSharedDirty()I
-
-    move-result v1
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string/jumbo v5, "\n"
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v4, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    .line 228
-    :cond_0
-    invoke-static {}, Lcom/tencent/mm/ba/a;->aZf()V
-
-    .line 230
-    :cond_1
-    return-void
-.end method
-
-.method private static aZf()V
+.method private constructor <init>(Landroid/content/res/Resources;Lcom/tencent/mm/ba/e;Lcom/tencent/mm/ba/c;)V
     .locals 6
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    .line 233
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, "dumpsys meminfo "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Landroid/os/Process;->myPid()I
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 238
-    :try_start_0
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
-
-    move-result-object v3
-
-    .line 239
-    new-instance v2, Ljava/io/InputStreamReader;
-
-    invoke-virtual {v3}, Ljava/lang/Process;->getInputStream()Ljava/io/InputStream;
-
-    move-result-object v0
-
-    invoke-direct {v2, v0}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_8
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_2
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 240
-    :try_start_1
-    new-instance v0, Ljava/io/LineNumberReader;
-
-    invoke-direct {v0, v2}, Ljava/io/LineNumberReader;-><init>(Ljava/io/Reader;)V
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_9
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_5
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    .line 243
-    :goto_0
-    :try_start_2
-    invoke-virtual {v0}, Ljava/io/LineNumberReader;->readLine()Ljava/lang/String;
+    .line 40
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v1
 
-    if-eqz v1, :cond_2
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    .line 245
-    const-string/jumbo v4, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
+    move-result-object v2
 
-    invoke-static {v4, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v3
+
+    invoke-direct {p0, v1, v2, v3}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
+
+    .line 43
+    iput-object p1, p0, Lcom/tencent/mm/ba/a;->krz:Landroid/content/res/Resources;
+
+    .line 45
+    iput-object p2, p0, Lcom/tencent/mm/ba/a;->krx:Lcom/tencent/mm/ba/e;
+
+    .line 46
+    iput-object p1, p0, Lcom/tencent/mm/ba/a;->mb:Landroid/content/res/Resources;
+
+    .line 47
+    iput-object p3, p0, Lcom/tencent/mm/ba/a;->kry:Lcom/tencent/mm/ba/c;
+
+    .line 49
+    :try_start_0
+    const-string/jumbo v1, "android.content.res.MiuiResources"
+
+    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    const-string/jumbo v0, "MicroMsg.MMResources"
+
+    const-string/jumbo v2, "fuck LeiJun"
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string/jumbo v0, "sMiuiThemeEnabled"
+
+    invoke-virtual {v1, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_3
+
+    .line 50
+    :goto_0
+    new-instance v0, Lcom/tencent/mm/compatible/loader/c;
+
+    invoke-virtual {p0}, Lcom/tencent/mm/ba/a;->getAssets()Landroid/content/res/AssetManager;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "mThemeCookies"
+
+    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/compatible/loader/c;-><init>(Ljava/lang/Object;Ljava/lang/String;)V
+
+    :try_start_1
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/loader/c;->nf()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Lcom/tencent/mm/ba/a$a;
+
+    invoke-direct {v1}, Lcom/tencent/mm/ba/a$a;-><init>()V
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/compatible/loader/c;->set(Ljava/lang/Object;)V
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_1 .. :try_end_1} :catch_6
+    .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_5
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_4
+
+    .line 51
+    :cond_0
+    :goto_1
+    return-void
+
+    .line 49
+    :cond_1
+    :try_start_2
+    const-string/jumbo v2, "MicroMsg.MMResources"
+
+    const-string/jumbo v3, "some thing wrong. %s %s"
+
+    const/4 v4, 0x2
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    aput-object v1, v4, v5
+
+    const/4 v1, 0x1
+
+    aput-object v0, v4, v1
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
-    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_6
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/lang/IllegalAccessException; {:try_start_2 .. :try_end_2} :catch_2
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_3
 
     goto :goto_0
 
-    .line 255
     :catch_0
-    move-exception v1
+    move-exception v0
 
-    move-object v1, v2
+    const-string/jumbo v0, "MicroMsg.MMResources"
 
-    :goto_1
-    :try_start_3
-    const-string/jumbo v2, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
+    const-string/jumbo v1, "sMiuiThemeEnabled ClassNotFoundException"
 
-    const-string/jumbo v3, " dumpSysMeminfo IOException"
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_3
+    goto :goto_0
 
-    .line 262
-    if-eqz v0, :cond_0
-
-    .line 263
-    :try_start_4
-    invoke-virtual {v0}, Ljava/io/LineNumberReader;->close()V
-
-    .line 264
-    :cond_0
-    if-eqz v1, :cond_1
-
-    .line 265
-    invoke-virtual {v1}, Ljava/io/InputStreamReader;->close()V
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_7
-
-    .line 271
-    :cond_1
-    :goto_2
-    return-void
-
-    .line 249
-    :cond_2
-    :try_start_5
-    invoke-virtual {v3}, Ljava/lang/Process;->waitFor()I
-
-    .line 250
-    invoke-virtual {v3}, Ljava/lang/Process;->destroy()V
-    :try_end_5
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
-    .catch Ljava/lang/InterruptedException; {:try_start_5 .. :try_end_5} :catch_6
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
-
-    .line 262
-    :try_start_6
-    invoke-virtual {v0}, Ljava/io/LineNumberReader;->close()V
-
-    .line 264
-    invoke-virtual {v2}, Ljava/io/InputStreamReader;->close()V
-    :try_end_6
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_1
-
-    goto :goto_2
-
-    .line 271
     :catch_1
     move-exception v0
 
-    goto :goto_2
+    const-string/jumbo v0, "MicroMsg.MMResources"
 
-    .line 259
+    const-string/jumbo v1, "sMiuiThemeEnabled NoSuchFieldException"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
     :catch_2
     move-exception v0
 
-    move-object v2, v1
+    const-string/jumbo v0, "MicroMsg.MMResources"
 
-    :goto_3
-    :try_start_7
-    const-string/jumbo v0, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
+    const-string/jumbo v1, "sMiuiThemeEnabled IllegalAccessException"
 
-    const-string/jumbo v3, " dumpSysMeminfo InterruptedException"
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+    goto :goto_0
 
-    .line 262
-    if-eqz v1, :cond_3
-
-    .line 263
-    :try_start_8
-    invoke-virtual {v1}, Ljava/io/LineNumberReader;->close()V
-
-    .line 264
-    :cond_3
-    if-eqz v2, :cond_1
-
-    .line 265
-    invoke-virtual {v2}, Ljava/io/InputStreamReader;->close()V
-    :try_end_8
-    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_3
-
-    goto :goto_2
-
-    .line 271
     :catch_3
     move-exception v0
 
-    goto :goto_2
+    const-string/jumbo v0, "MicroMsg.MMResources"
 
-    .line 261
-    :catchall_0
-    move-exception v0
+    const-string/jumbo v1, "sMiuiThemeEnabled IllegalArgumentException"
 
-    move-object v2, v1
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 262
-    :goto_4
-    if-eqz v1, :cond_4
+    goto :goto_0
 
-    .line 263
-    :try_start_9
-    invoke-virtual {v1}, Ljava/io/LineNumberReader;->close()V
-
-    .line 264
-    :cond_4
-    if-eqz v2, :cond_5
-
-    .line 265
-    invoke-virtual {v2}, Ljava/io/InputStreamReader;->close()V
-    :try_end_9
-    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_4
-
-    .line 269
-    :cond_5
-    :goto_5
-    throw v0
-
+    .line 51
     :catch_4
-    move-exception v1
-
-    goto :goto_5
-
-    .line 261
-    :catchall_1
     move-exception v0
-
-    goto :goto_4
-
-    :catchall_2
-    move-exception v1
-
-    move-object v5, v1
-
-    move-object v1, v0
-
-    move-object v0, v5
-
-    goto :goto_4
-
-    :catchall_3
-    move-exception v2
-
-    move-object v5, v2
-
-    move-object v2, v1
-
-    move-object v1, v0
-
-    move-object v0, v5
-
-    goto :goto_4
-
-    .line 259
-    :catch_5
-    move-exception v0
-
-    goto :goto_3
-
-    :catch_6
-    move-exception v1
-
-    move-object v1, v0
-
-    goto :goto_3
-
-    .line 271
-    :catch_7
-    move-exception v0
-
-    goto :goto_2
-
-    .line 255
-    :catch_8
-    move-exception v0
-
-    move-object v0, v1
 
     goto :goto_1
 
-    :catch_9
+    .line 50
+    :catch_5
     move-exception v0
 
-    move-object v0, v1
+    goto :goto_1
 
-    move-object v1, v2
+    :catch_6
+    move-exception v0
 
     goto :goto_1
 .end method
 
-.method private static y(ZZ)Z
-    .locals 15
+.method public static a(Landroid/content/res/Resources;Landroid/content/Context;)Landroid/content/res/Resources;
+    .locals 3
 
     .prologue
-    .line 65
-    invoke-static {}, Lcom/tencent/mm/ba/a;->aZd()Z
+    .line 59
+    new-instance v0, Lcom/tencent/mm/ba/a;
 
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 66
-    const/4 v0, 0x0
-
-    .line 142
-    :cond_0
-    :goto_0
-    return v0
-
-    .line 68
-    :cond_1
-    new-instance v2, Ljava/io/File;
-
-    sget-object v0, Lcom/tencent/mm/ba/a;->kiO:Ljava/lang/String;
-
-    invoke-direct {v2, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    .line 69
-    invoke-virtual {v2}, Ljava/io/File;->listFiles()[Ljava/io/File;
-
-    move-result-object v3
-
-    .line 71
-    array-length v0, v3
-
-    if-nez v0, :cond_2
-
-    .line 72
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    .line 75
-    :cond_2
-    new-instance v4, Ljava/text/SimpleDateFormat;
-
-    const-string/jumbo v0, "yyyy_MM_dd_HH_mm_ss"
-
-    invoke-direct {v4, v0}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
-
-    .line 77
-    new-instance v0, Ljava/util/Date;
-
-    invoke-direct {v0}, Ljava/util/Date;-><init>()V
-
-    invoke-virtual {v0}, Ljava/util/Date;->getTime()J
-
-    move-result-wide v5
-
-    .line 78
-    const/4 v1, 0x1
-
-    .line 81
-    array-length v7, v3
-
-    const/4 v0, 0x0
-
-    move v14, v0
-
-    move v0, v1
-
-    move v1, v14
-
-    :goto_1
-    if-ge v1, v7, :cond_8
-
-    aget-object v8, v3, v1
-
-    .line 82
-    invoke-virtual {v8}, Ljava/io/File;->getName()Ljava/lang/String;
-
-    move-result-object v9
-
-    .line 83
-    const-string/jumbo v10, ".hprof"
-
-    invoke-virtual {v9, v10}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
-
-    move-result v10
-
-    .line 84
-    if-lez v10, :cond_4
-
-    .line 85
-    const/4 v11, 0x0
-
-    invoke-virtual {v9, v11, v10}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v9
-
-    .line 93
-    :try_start_0
-    invoke-virtual {v4, v9}, Ljava/text/SimpleDateFormat;->parse(Ljava/lang/String;)Ljava/util/Date;
-    :try_end_0
-    .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v9
-
-    .line 104
-    if-nez v9, :cond_5
-
-    .line 105
-    invoke-virtual {v8}, Ljava/io/File;->delete()Z
-
-    .line 128
-    :cond_3
-    :goto_2
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    .line 87
-    :cond_4
-    invoke-virtual {v8}, Ljava/io/File;->delete()Z
-
-    goto :goto_2
-
-    .line 99
-    :catch_0
-    move-exception v10
-
-    const-string/jumbo v10, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
-
-    const-string/jumbo v11, "hprofFileCheck parse date fail %s"
-
-    const/4 v12, 0x1
-
-    new-array v12, v12, [Ljava/lang/Object;
-
-    const/4 v13, 0x0
-
-    aput-object v9, v12, v13
-
-    invoke-static {v10, v11, v12}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 100
-    invoke-virtual {v8}, Ljava/io/File;->delete()Z
-
-    goto :goto_2
-
-    .line 109
-    :cond_5
-    invoke-virtual {v9}, Ljava/util/Date;->getTime()J
-
-    move-result-wide v9
-
-    .line 112
-    cmp-long v11, v9, v5
-
-    if-ltz v11, :cond_6
-
-    .line 113
-    invoke-virtual {v8}, Ljava/io/File;->delete()Z
-
-    goto :goto_2
-
-    .line 118
-    :cond_6
-    sub-long v9, v5, v9
-
-    const-wide/32 v11, 0x5265c00
-
-    div-long/2addr v9, v11
-
-    .line 123
-    const-wide/16 v11, 0x3
-
-    cmp-long v11, v9, v11
-
-    if-ltz v11, :cond_7
-
-    .line 124
-    invoke-virtual {v8}, Ljava/io/File;->delete()Z
-
-    goto :goto_2
-
-    .line 126
-    :cond_7
-    if-eqz p0, :cond_3
-
-    const-wide/16 v11, 0x1
-
-    cmp-long v8, v9, v11
-
-    if-gez v8, :cond_3
-
-    .line 127
-    const/4 v0, 0x0
-
-    goto :goto_2
-
-    .line 133
-    :cond_8
-    invoke-virtual {v2}, Ljava/io/File;->listFiles()[Ljava/io/File;
+    invoke-static {p1}, Lcom/tencent/mm/ba/e;->dc(Landroid/content/Context;)Lcom/tencent/mm/ba/e;
 
     move-result-object v1
 
-    .line 136
-    array-length v2, v1
+    new-instance v2, Lcom/tencent/mm/ba/c;
 
-    const/4 v3, 0x5
+    invoke-direct {v2}, Lcom/tencent/mm/ba/c;-><init>()V
 
-    if-le v2, v3, :cond_0
+    invoke-direct {v0, p0, v1, v2}, Lcom/tencent/mm/ba/a;-><init>(Landroid/content/res/Resources;Lcom/tencent/mm/ba/e;Lcom/tencent/mm/ba/c;)V
 
-    .line 137
-    if-eqz p1, :cond_9
+    return-object v0
+.end method
 
-    .line 138
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+.method private a(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
+    .locals 6
+
+    .prologue
+    const/4 v5, 0x0
+
+    .line 256
+    if-nez p1, :cond_1
+
+    .line 257
+    const-string/jumbo v0, "MicroMsg.MMResources"
+
+    const-string/jumbo v1, "Notice!!! drawable == null!!!"
+
+    new-array v2, v5, [Ljava/lang/Object;
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 260
+    :try_start_0
+    iget-object v0, p0, Lcom/tencent/mm/ba/a;->kry:Lcom/tencent/mm/ba/c;
+
+    iget-object v0, v0, Lcom/tencent/mm/ba/c;->krG:Lcom/tencent/mm/svg/b/a;
+
+    invoke-virtual {v0, p0, p2}, Lcom/tencent/mm/svg/b/a;->d(Landroid/content/res/Resources;I)Z
+
+    move-result v0
+
+    .line 261
+    if-eqz v0, :cond_0
+
+    .line 262
+    invoke-virtual {p0, p2}, Lcom/tencent/mm/ba/a;->getResourceName(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v2, "dump fail, hprof file size exceed"
+    .line 263
+    const-string/jumbo v1, "MicroMsg.MMResources"
 
-    const/4 v3, 0x0
+    const-string/jumbo v2, "resources name = %s, this resource %s"
 
-    invoke-static {v0, v2, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+    const/4 v3, 0x2
 
-    move-result-object v0
+    new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+    const/4 v4, 0x0
 
-    .line 139
-    :cond_9
-    const-string/jumbo v0, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
+    aput-object v0, v3, v4
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    const-string/jumbo v3, "hprofFileCheck hprofFileDir.length() too large "
+    aput-object p0, v3, v0
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    array-length v1, v1
+    .line 269
+    :cond_0
+    :goto_0
+    new-instance p1, Lcom/tencent/mm/svg/b/c;
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    new-instance v0, Landroid/graphics/Picture;
+
+    invoke-direct {v0}, Landroid/graphics/Picture;-><init>()V
+
+    invoke-direct {p1, v0, v5}, Lcom/tencent/mm/svg/b/c;-><init>(Landroid/graphics/Picture;I)V
+
+    .line 273
+    :cond_1
+    return-object p1
+
+    .line 265
+    :catch_0
+    move-exception v0
+
+    .line 266
+    const-string/jumbo v1, "MicroMsg.MMResources"
+
+    const-string/jumbo v2, "WTF"
+
+    new-array v3, v5, [Ljava/lang/Object;
+
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
+.end method
+
+.method private aYD()Z
+    .locals 1
+
+    .prologue
+    .line 63
+    iget-object v0, p0, Lcom/tencent/mm/ba/a;->krx:Lcom/tencent/mm/ba/e;
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/tencent/mm/ba/e;->aYD()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static b(Landroid/content/res/Resources;I)Landroid/graphics/drawable/Drawable;
+    .locals 9
+
+    .prologue
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v0, 0x1
+
+    .line 367
+    new-instance v3, Landroid/util/TypedValue;
+
+    invoke-direct {v3}, Landroid/util/TypedValue;-><init>()V
+
+    .line 369
+    invoke-virtual {p0, p1, v3, v0}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
+
+    .line 374
+    iget v4, v3, Landroid/util/TypedValue;->type:I
+
+    const/16 v5, 0x1c
+
+    if-lt v4, v5, :cond_6
+
+    iget v4, v3, Landroid/util/TypedValue;->type:I
+
+    const/16 v5, 0x1f
+
+    if-gt v4, v5, :cond_6
+
+    .line 379
+    :goto_0
+    if-eqz v0, :cond_5
+
+    .line 380
+    new-instance v0, Landroid/graphics/drawable/ColorDrawable;
+
+    iget v4, v3, Landroid/util/TypedValue;->data:I
+
+    invoke-direct {v0, v4}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+
+    .line 383
+    :goto_1
+    sget-object v4, Lcom/tencent/mm/ba/a;->krA:Ljava/lang/reflect/Method;
+
+    if-nez v4, :cond_0
+
+    .line 385
+    :try_start_0
+    const-class v4, Landroid/content/res/Resources;
+
+    const-string/jumbo v5, "loadXmlResourceParser"
+
+    const/4 v6, 0x4
+
+    new-array v6, v6, [Ljava/lang/Class;
+
+    const/4 v7, 0x0
+
+    const-class v8, Ljava/lang/String;
+
+    aput-object v8, v6, v7
+
+    const/4 v7, 0x1
+
+    sget-object v8, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v8, v6, v7
+
+    const/4 v7, 0x2
+
+    sget-object v8, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v8, v6, v7
+
+    const/4 v7, 0x3
+
+    const-class v8, Ljava/lang/String;
+
+    aput-object v8, v6, v7
+
+    invoke-virtual {v4, v5, v6}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v4
+
+    .line 386
+    sput-object v4, Lcom/tencent/mm/ba/a;->krA:Ljava/lang/reflect/Method;
+
+    const/4 v5, 0x1
+
+    invoke-virtual {v4, v5}, Ljava/lang/reflect/Method;->setAccessible(Z)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 393
+    :cond_0
+    sget-object v4, Lcom/tencent/mm/ba/a;->krB:Ljava/lang/reflect/Method;
+
+    if-nez v4, :cond_1
+
+    .line 395
+    :try_start_1
+    const-class v4, Landroid/content/res/AssetManager;
+
+    const-string/jumbo v5, "openNonAsset"
+
+    const/4 v6, 0x3
+
+    new-array v6, v6, [Ljava/lang/Class;
+
+    const/4 v7, 0x0
+
+    sget-object v8, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v8, v6, v7
+
+    const/4 v7, 0x1
+
+    const-class v8, Ljava/lang/String;
+
+    aput-object v8, v6, v7
+
+    const/4 v7, 0x2
+
+    sget-object v8, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v8, v6, v7
+
+    invoke-virtual {v4, v5, v6}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v4
+
+    .line 396
+    sput-object v4, Lcom/tencent/mm/ba/a;->krB:Ljava/lang/reflect/Method;
+
+    const/4 v5, 0x1
+
+    invoke-virtual {v4, v5}, Ljava/lang/reflect/Method;->setAccessible(Z)V
+    :try_end_1
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_1 .. :try_end_1} :catch_1
+
+    .line 405
+    :cond_1
+    if-nez v0, :cond_3
+
+    .line 406
+    iget-object v0, v3, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
+
+    if-nez v0, :cond_2
+
+    .line 407
+    new-instance v0, Landroid/content/res/Resources$NotFoundException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "Resource is not a Drawable (color or path): "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -1080,164 +545,787 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
 
-    .line 140
-    const/4 v0, 0x0
+    throw v0
+
+    .line 387
+    :catch_0
+    move-exception v0
+
+    .line 388
+    const-string/jumbo v3, "MicroMsg.MMResources"
+
+    const-string/jumbo v4, ""
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {v3, v0, v4, v2}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 448
+    :goto_2
+    return-object v1
+
+    .line 397
+    :catch_1
+    move-exception v0
+
+    .line 398
+    const-string/jumbo v3, "MicroMsg.MMResources"
+
+    const-string/jumbo v4, ""
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {v3, v0, v4, v2}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    .line 411
+    :cond_2
+    iget-object v0, v3, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 413
+    const-string/jumbo v0, ".xml"
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 416
+    :try_start_2
+    sget-object v0, Lcom/tencent/mm/ba/a;->krA:Ljava/lang/reflect/Method;
+
+    const/4 v1, 0x4
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    aput-object v2, v1, v4
+
+    const/4 v4, 0x1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v1, v4
+
+    const/4 v4, 0x2
+
+    iget v3, v3, Landroid/util/TypedValue;->assetCookie:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v1, v4
+
+    const/4 v3, 0x3
+
+    const-string/jumbo v4, "drawable"
+
+    aput-object v4, v1, v3
+
+    invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/res/XmlResourceParser;
+
+    .line 420
+    invoke-static {p0, v0}, Landroid/graphics/drawable/Drawable;->createFromXml(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    .line 421
+    invoke-interface {v0}, Landroid/content/res/XmlResourceParser;->close()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+
+    move-object v0, v1
+
+    :cond_3
+    :goto_3
+    move-object v1, v0
+
+    .line 448
+    goto :goto_2
+
+    .line 422
+    :catch_2
+    move-exception v0
+
+    .line 423
+    new-instance v1, Landroid/content/res/Resources$NotFoundException;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v4, "File "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string/jumbo v3, " from drawable resource ID #0x"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
+
+    .line 426
+    invoke-virtual {v1, v0}, Landroid/content/res/Resources$NotFoundException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    .line 427
+    throw v1
+
+    .line 434
+    :cond_4
+    :try_start_3
+    sget-object v0, Lcom/tencent/mm/ba/a;->krB:Ljava/lang/reflect/Method;
+
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
+
+    move-result-object v1
+
+    const/4 v4, 0x3
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    iget v6, v3, Landroid/util/TypedValue;->assetCookie:I
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    const/4 v5, 0x1
+
+    aput-object v2, v4, v5
+
+    const/4 v5, 0x2
+
+    const/4 v6, 0x2
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    invoke-virtual {v0, v1, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/io/InputStream;
+
+    .line 435
+    const/4 v1, 0x0
+
+    invoke-static {p0, v3, v0, v2, v1}, Landroid/graphics/drawable/Drawable;->createFromResourceStream(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    .line 437
+    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
+
+    move-object v0, v1
+
+    .line 444
+    goto :goto_3
+
+    .line 438
+    :catch_3
+    move-exception v0
+
+    .line 439
+    new-instance v1, Landroid/content/res/Resources$NotFoundException;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v4, "File "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string/jumbo v3, " from drawable resource ID #0x"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
+
+    .line 442
+    invoke-virtual {v1, v0}, Landroid/content/res/Resources$NotFoundException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    .line 443
+    throw v1
+
+    :cond_5
+    move-object v0, v1
+
+    goto/16 :goto_1
+
+    :cond_6
+    move v0, v2
 
     goto/16 :goto_0
 .end method
 
-.method public static z(ZZ)Ljava/lang/String;
-    .locals 8
+
+# virtual methods
+.method public final getDrawable(I)Landroid/graphics/drawable/Drawable;
+    .locals 2
 
     .prologue
-    const/4 v0, 0x0
+    .line 186
+    if-eqz p1, :cond_0
 
-    const/4 v7, 0x0
+    .line 188
+    iget-object v0, p0, Lcom/tencent/mm/ba/a;->kry:Lcom/tencent/mm/ba/c;
 
-    .line 150
-    invoke-static {p0, p1}, Lcom/tencent/mm/ba/a;->y(ZZ)Z
+    iget-object v1, p0, Lcom/tencent/mm/ba/a;->mb:Landroid/content/res/Resources;
 
-    move-result v1
+    invoke-virtual {v0, v1, p1}, Lcom/tencent/mm/ba/c;->c(Landroid/content/res/Resources;I)Landroid/graphics/drawable/Drawable;
 
-    if-nez v1, :cond_0
+    move-result-object v0
 
-    .line 175
+    .line 189
+    if-eqz v0, :cond_0
+
+    .line 196
     :goto_0
     return-object v0
 
-    .line 152
+    .line 194
     :cond_0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-super {p0, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
-    move-result-wide v2
+    move-result-object v0
+
+    .line 195
+    invoke-direct {p0, v0, p1}, Lcom/tencent/mm/ba/a;->a(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public final getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    .locals 2
+    .annotation build Landroid/annotation/TargetApi;
+        value = 0x15
+    .end annotation
+
+    .prologue
+    .line 209
+    if-eqz p1, :cond_0
+
+    .line 211
+    iget-object v0, p0, Lcom/tencent/mm/ba/a;->kry:Lcom/tencent/mm/ba/c;
+
+    iget-object v1, p0, Lcom/tencent/mm/ba/a;->mb:Landroid/content/res/Resources;
+
+    invoke-virtual {v0, v1, p1}, Lcom/tencent/mm/ba/c;->c(Landroid/content/res/Resources;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    .line 212
+    if-eqz v0, :cond_0
+
+    .line 219
+    :goto_0
+    return-object v0
+
+    .line 217
+    :cond_0
+    invoke-super {p0, p1, p2}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    .line 218
+    invoke-direct {p0, v0, p1}, Lcom/tencent/mm/ba/a;->a(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public final getDrawableForDensity(II)Landroid/graphics/drawable/Drawable;
+    .locals 2
+
+    .prologue
+    .line 225
+    if-eqz p1, :cond_0
+
+    .line 227
+    iget-object v0, p0, Lcom/tencent/mm/ba/a;->kry:Lcom/tencent/mm/ba/c;
+
+    iget-object v1, p0, Lcom/tencent/mm/ba/a;->mb:Landroid/content/res/Resources;
+
+    invoke-virtual {v0, v1, p1}, Lcom/tencent/mm/ba/c;->c(Landroid/content/res/Resources;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    .line 228
+    if-eqz v0, :cond_0
+
+    .line 235
+    :goto_0
+    return-object v0
+
+    .line 233
+    :cond_0
+    invoke-super {p0, p1, p2}, Landroid/content/res/Resources;->getDrawableForDensity(II)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    .line 234
+    invoke-direct {p0, v0, p1}, Lcom/tencent/mm/ba/a;->a(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public final getDrawableForDensity(IILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    .locals 2
+    .annotation build Landroid/annotation/TargetApi;
+        value = 0x16
+    .end annotation
+
+    .prologue
+    .line 242
+    if-eqz p1, :cond_0
+
+    .line 244
+    iget-object v0, p0, Lcom/tencent/mm/ba/a;->kry:Lcom/tencent/mm/ba/c;
+
+    iget-object v1, p0, Lcom/tencent/mm/ba/a;->mb:Landroid/content/res/Resources;
+
+    invoke-virtual {v0, v1, p1}, Lcom/tencent/mm/ba/c;->c(Landroid/content/res/Resources;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    .line 245
+    if-eqz v0, :cond_0
+
+    .line 252
+    :goto_0
+    return-object v0
+
+    .line 250
+    :cond_0
+    invoke-super {p0, p1, p2, p3}, Landroid/content/res/Resources;->getDrawableForDensity(IILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    .line 251
+    invoke-direct {p0, v0, p1}, Lcom/tencent/mm/ba/a;->a(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public final getQuantityString(II)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 120
+    invoke-direct {p0}, Lcom/tencent/mm/ba/a;->aYD()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 121
+    invoke-static {p1, p2}, Lcom/tencent/mm/ba/e;->getQuantityString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 123
+    if-eqz v0, :cond_0
+
+    .line 124
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 127
+    :goto_0
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ba/a;->mb:Landroid/content/res/Resources;
+
+    invoke-virtual {v0, p1, p2}, Landroid/content/res/Resources;->getQuantityString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public final varargs getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 133
+    invoke-direct {p0}, Lcom/tencent/mm/ba/a;->aYD()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 134
+    invoke-static {p1, p2, p3}, Lcom/tencent/mm/ba/e;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 136
+    if-eqz v0, :cond_0
+
+    .line 137
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 140
+    :goto_0
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ba/a;->mb:Landroid/content/res/Resources;
+
+    invoke-virtual {v0, p1, p2, p3}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public final getQuantityText(II)Ljava/lang/CharSequence;
+    .locals 1
+
+    .prologue
+    .line 146
+    invoke-direct {p0}, Lcom/tencent/mm/ba/a;->aYD()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 147
+    invoke-static {p1, p2}, Lcom/tencent/mm/ba/e;->getQuantityString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 149
+    if-eqz v0, :cond_0
+
+    .line 150
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     .line 153
-    new-instance v1, Ljava/text/SimpleDateFormat;
+    :goto_0
+    return-object v0
 
-    const-string/jumbo v4, "yyyy_MM_dd_HH_mm_ss"
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ba/a;->mb:Landroid/content/res/Resources;
 
-    invoke-direct {v1, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
-
-    .line 154
-    new-instance v4, Ljava/util/Date;
-
-    invoke-direct {v4}, Ljava/util/Date;-><init>()V
-
-    invoke-virtual {v1, v4}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 155
-    new-instance v1, Ljava/lang/StringBuffer;
-
-    invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
-
-    .line 156
-    sget-object v5, Lcom/tencent/mm/ba/a;->kiO:Ljava/lang/String;
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    move-result-object v5
-
-    const-string/jumbo v6, ".hprof"
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    .line 158
-    invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 162
-    :try_start_0
-    invoke-static {}, Ljava/lang/System;->gc()V
-
-    .line 163
-    invoke-static {}, Ljava/lang/System;->gc()V
-
-    .line 164
-    invoke-static {v1}, Landroid/os/Debug;->dumpHprofData(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 172
-    if-eqz p1, :cond_1
-
-    .line 173
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-virtual {v0, p1, p2}, Landroid/content/res/Resources;->getQuantityString(II)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    goto :goto_0
+.end method
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+.method public final getString(I)Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .prologue
+    .line 104
+    invoke-direct {p0}, Lcom/tencent/mm/ba/a;->aYD()Z
 
-    move-result-object v5
+    move-result v0
 
-    const-string/jumbo v6, " hprof file has saved "
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v0, v5, v7}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+    .line 105
+    invoke-static {p1}, Lcom/tencent/mm/ba/e;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+    .line 106
+    if-eqz v0, :cond_0
 
-    .line 174
-    :cond_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
+    .line 107
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    const-string/jumbo v5, "dump file %s, use time %d"
+    move-result-object v0
 
-    const/4 v6, 0x2
+    invoke-static {p1, v0}, Lcom/tencent/mm/ba/e;->a(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-    new-array v6, v6, [Ljava/lang/Object;
+    move-result-object v0
 
-    aput-object v4, v6, v7
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    const/4 v4, 0x1
+    move-result-object v0
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->an(J)J
+    .line 114
+    :goto_0
+    return-object v0
 
-    move-result-wide v2
+    .line 110
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ba/a;->mb:Landroid/content/res/Resources;
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v0
 
-    aput-object v2, v6, v4
+    invoke-static {p1, v0}, Lcom/tencent/mm/ba/e;->a(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-    invoke-static {v0, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    move-result-object v0
 
-    move-object v0, v1
+    .line 111
+    if-eqz v0, :cond_1
 
-    .line 175
+    .line 112
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
     goto :goto_0
 
-    .line 168
-    :catch_0
-    move-exception v1
+    .line 114
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/ba/a;->mb:Landroid/content/res/Resources;
 
-    const-string/jumbo v1, "!44@/B4Tb64lLpI67oPDTT86rGpV5UYBJBo2TPukf7fPbzI="
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    const-string/jumbo v2, " dumpHprofFile IOException"
+    move-result-object v0
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    goto :goto_0
+.end method
+
+.method public final getStringArray(I)[Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 158
+    invoke-direct {p0}, Lcom/tencent/mm/ba/a;->aYD()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 159
+    invoke-static {p1}, Lcom/tencent/mm/ba/e;->getStringArray(I)[Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 160
+    if-eqz v0, :cond_0
+
+    .line 164
+    :goto_0
+    return-object v0
+
+    :cond_0
+    invoke-super {p0, p1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public final getText(I)Ljava/lang/CharSequence;
+    .locals 1
+
+    .prologue
+    .line 73
+    invoke-direct {p0}, Lcom/tencent/mm/ba/a;->aYD()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 74
+    invoke-static {p1}, Lcom/tencent/mm/ba/e;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lcom/tencent/mm/ba/e;->a(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    .line 75
+    if-eqz v0, :cond_0
+
+    .line 83
+    :goto_0
+    return-object v0
+
+    .line 79
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ba/a;->mb:Landroid/content/res/Resources;
+
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lcom/tencent/mm/ba/e;->a(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    .line 80
+    if-eqz v0, :cond_1
+
+    .line 81
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 83
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/ba/a;->mb:Landroid/content/res/Resources;
+
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public final getText(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
+    .locals 1
+
+    .prologue
+    .line 89
+    invoke-direct {p0}, Lcom/tencent/mm/ba/a;->aYD()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 90
+    invoke-static {p1}, Lcom/tencent/mm/ba/e;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lcom/tencent/mm/ba/e;->a(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    .line 91
+    if-eqz v0, :cond_0
+
+    .line 99
+    :goto_0
+    return-object v0
+
+    .line 95
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ba/a;->mb:Landroid/content/res/Resources;
+
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lcom/tencent/mm/ba/e;->a(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    .line 96
+    if-eqz v0, :cond_1
+
+    .line 97
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 99
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/ba/a;->mb:Landroid/content/res/Resources;
+
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public final getTextArray(I)[Ljava/lang/CharSequence;
+    .locals 1
+
+    .prologue
+    .line 169
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/ba/a;->getStringArray(I)[Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 170
+    if-eqz v0, :cond_0
+
+    .line 174
+    :goto_0
+    return-object v0
+
+    :cond_0
+    invoke-super {p0, p1}, Landroid/content/res/Resources;->getTextArray(I)[Ljava/lang/CharSequence;
+
+    move-result-object v0
 
     goto :goto_0
 .end method

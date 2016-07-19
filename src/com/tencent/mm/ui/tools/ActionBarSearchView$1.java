@@ -3,7 +3,6 @@ package com.tencent.mm.ui.tools;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
-import com.tencent.mm.sdk.platformtools.u;
 import java.lang.ref.WeakReference;
 
 final class ActionBarSearchView$1
@@ -17,18 +16,18 @@ final class ActionBarSearchView$1
   
   public final void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
   {
-    ActionBarSearchView.a(ltH);
-    v localv = ActionBarSearchView.b(ltH);
+    ActionBarSearchView.a(lUJ);
+    v localv = ActionBarSearchView.b(lUJ);
     EditText localEditText;
     Object localObject;
-    if (lys)
+    if (lZg)
     {
-      localEditText = (EditText)lyq.get();
+      localEditText = (EditText)lZe.get();
       if (localEditText != null) {}
     }
-    else if (ActionBarSearchView.c(ltH) != null)
+    else if (ActionBarSearchView.c(lUJ) != null)
     {
-      localObject = ActionBarSearchView.c(ltH);
+      localObject = ActionBarSearchView.c(lUJ);
       if (paramCharSequence != null) {
         break label239;
       }
@@ -36,22 +35,22 @@ final class ActionBarSearchView$1
     label239:
     for (paramCharSequence = "";; paramCharSequence = paramCharSequence.toString())
     {
-      ((ActionBarSearchView.b)localObject).AD(paramCharSequence);
+      ((ActionBarSearchView.b)localObject).CE(paramCharSequence);
       return;
-      if (((paramCharSequence != null) && (paramCharSequence.toString() != null) && (paramCharSequence.toString().length() != 0)) || ((eut == null) || (eut.length() == 0) || ((eut != null) && (eut.equals(paramCharSequence.toString())))))
+      if (((paramCharSequence != null) && (paramCharSequence.toString() != null) && (paramCharSequence.toString().length() != 0)) || ((eAL == null) || (eAL.length() == 0) || ((eAL != null) && (eAL.equals(paramCharSequence.toString())))))
       {
-        u.d("!32@/B4Tb64lLpLUXKhJDsViwCev5STjmcrT", "text not change, new : %s, old : %s", new Object[] { paramCharSequence, eut });
+        com.tencent.mm.sdk.platformtools.v.d("MicroMsg.WordsChecker", "text not change, new : %s, old : %s", new Object[] { paramCharSequence, eAL });
         break;
       }
       if (paramCharSequence != null) {}
       for (localObject = paramCharSequence.toString();; localObject = "")
       {
-        eut = ((String)localObject);
-        lyp = v.i(eut, lyr);
-        if (!v.a(localEditText, lyr)) {
+        eAL = ((String)localObject);
+        lZd = v.h(eAL, lZf);
+        if (!v.a(localEditText, lZf)) {
           break;
         }
-        u.d("!32@/B4Tb64lLpLUXKhJDsViwCev5STjmcrT", "decorate text succ.");
+        com.tencent.mm.sdk.platformtools.v.d("MicroMsg.WordsChecker", "decorate text succ.");
         break;
       }
     }

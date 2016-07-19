@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+.field final synthetic huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 558
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$4;->hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+    .line 560
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$4;->huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,8 +40,8 @@
     .locals 2
 
     .prologue
-    .line 563
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ZP()Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 565
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->acj()Lcom/tencent/mm/sdk/platformtools/ac;
 
     move-result-object v0
 
@@ -49,8 +49,8 @@
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$4$1;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$4;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
-    .line 574
+    .line 576
     return-void
 .end method

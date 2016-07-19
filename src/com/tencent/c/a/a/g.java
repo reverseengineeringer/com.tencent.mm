@@ -5,29 +5,29 @@ import org.json.JSONObject;
 
 final class g
 {
-  String ajP = null;
-  String ajQ = null;
-  String ajR = "0";
-  long ajS = 0L;
+  String VI = null;
+  String VJ = null;
+  String VK = "0";
+  long VL = 0L;
   
-  static g ar(String paramString)
+  static g av(String paramString)
   {
     g localg = new g();
-    if (s.as(paramString)) {}
+    if (s.aw(paramString)) {}
     try
     {
       paramString = new JSONObject(paramString);
       if (!paramString.isNull("ui")) {
-        ajP = paramString.getString("ui");
+        VI = paramString.getString("ui");
       }
       if (!paramString.isNull("mc")) {
-        ajQ = paramString.getString("mc");
+        VJ = paramString.getString("mc");
       }
       if (!paramString.isNull("mid")) {
-        ajR = paramString.getString("mid");
+        VK = paramString.getString("mid");
       }
       if (!paramString.isNull("ts")) {
-        ajS = paramString.getLong("ts");
+        VL = paramString.getLong("ts");
       }
       return localg;
     }
@@ -35,15 +35,15 @@ final class g
     return localg;
   }
   
-  private JSONObject kb()
+  private JSONObject iC()
   {
     JSONObject localJSONObject = new JSONObject();
     try
     {
-      s.b(localJSONObject, "ui", ajP);
-      s.b(localJSONObject, "mc", ajQ);
-      s.b(localJSONObject, "mid", ajR);
-      localJSONObject.put("ts", ajS);
+      s.b(localJSONObject, "ui", VI);
+      s.b(localJSONObject, "mc", VJ);
+      s.b(localJSONObject, "mid", VK);
+      localJSONObject.put("ts", VL);
       return localJSONObject;
     }
     catch (JSONException localJSONException) {}
@@ -58,21 +58,21 @@ final class g
       do
       {
         return 1;
-        if ((!s.at(ajR)) || (!s.at(ajR))) {
+        if ((!s.ax(VK)) || (!s.ax(VK))) {
           break;
         }
-        if (ajR.equals(ajR)) {
+        if (VK.equals(VK)) {
           return 0;
         }
-      } while (ajS >= ajS);
+      } while (VL >= VL);
       return -1;
-    } while (s.at(ajR));
+    } while (s.ax(VK));
     return -1;
   }
   
   public final String toString()
   {
-    return kb().toString();
+    return iC().toString();
   }
 }
 

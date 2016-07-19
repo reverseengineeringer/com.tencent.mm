@@ -10,7 +10,7 @@ final class FindMContactIntroUI$4$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    FindMContactIntroUI.b(kPa.kOZ);
+    FindMContactIntroUI.b(loq.lop);
   }
 }
 

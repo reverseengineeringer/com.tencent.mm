@@ -1,22 +1,22 @@
 package com.tencent.mm.storage;
 
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class w
 {
-  public String aut = "-1";
-  public String cfR;
-  public boolean cfS;
-  public boolean kfo;
-  public String kfp = "";
+  public String agg = "-1";
+  public String cbd;
+  public boolean cbe;
+  public boolean kFv;
+  public String kFw = "";
   public long time;
   
-  private w(String paramString)
+  public w(String paramString)
   {
-    if (ay.kz(paramString))
+    if (be.kf(paramString))
     {
-      u.e("!44@/B4Tb64lLpKW6XSoHkFWUDGIRzi24Rmyw+IMteJ3XT4=", "EmojiContent parse failed. content is null.");
+      v.e("MicroMsg.emoji.EmojiContent", "EmojiContent parse failed. content is null.");
       return;
     }
     for (;;)
@@ -25,49 +25,49 @@ public final class w
       {
         if (paramString.endsWith("\n"))
         {
-          paramString = paramString.substring(0, paramString.length() - 1);
-          paramString = paramString.split(":", 6);
-          int i = j;
-          if (paramString.length == 4)
-          {
-            i = j;
-            if (k.Ec(paramString[0])) {
-              i = 1;
-            }
+          Object localObject = paramString.substring(0, paramString.length() - 1);
+          localObject = ((String)localObject).split(":", 6);
+          if ((localObject.length != 4) || (!k.eb(localObject[0]))) {
+            break label243;
           }
-          if (paramString.length > i) {
-            cfR = paramString[i];
+          i = 1;
+          if (localObject.length > i) {
+            cbd = localObject[i];
           }
-          if (paramString.length > i + 1) {
-            time = Long.parseLong(paramString[(i + 1)]);
+          if (localObject.length > i + 1) {
+            time = Long.parseLong(localObject[(i + 1)]);
           }
-          if (paramString.length > i + 2) {
-            cfS = paramString[(i + 2)].equals("1");
+          if (localObject.length > i + 2) {
+            cbe = localObject[(i + 2)].equals("1");
           }
-          if (paramString.length > i + 3) {
-            aut = paramString[(i + 3)];
+          if (localObject.length > i + 3) {
+            agg = localObject[(i + 3)];
           }
-          if (paramString.length > i + 4) {
-            kfp = paramString[(i + 4)].replace("*#*", ":");
+          if (localObject.length > i + 4) {
+            kFw = localObject[(i + 4)].replace("*#*", ":");
           }
-          if (paramString.length <= i + 5) {
+          if (localObject.length <= i + 5) {
             break;
           }
-          kfo = paramString[(i + 5)].equals("1");
+          kFv = localObject[(i + 5)].equals("1");
           return;
         }
       }
-      catch (Exception paramString)
+      catch (Exception localException)
       {
         time = 0L;
-        u.e("!44@/B4Tb64lLpKW6XSoHkFWUDGIRzi24Rmyw+IMteJ3XT4=", "EmojiContent parse failed.");
+        v.e("MicroMsg.emoji.EmojiContent", "EmojiContent parse failed. Content:%s Excpetion:%s", new Object[] { paramString, be.f(localException) });
         return;
       }
-      kfp = paramString.replace(":", "*#*");
+      kFw = paramString.replace(":", "*#*");
+      String str = paramString;
+      continue;
+      label243:
+      int i = 0;
     }
   }
   
-  public static w EO(String paramString)
+  public static w Hc(String paramString)
   {
     return new w(paramString);
   }
@@ -94,15 +94,15 @@ public final class w
     }
   }
   
-  public final String aWR()
+  public final String bcf()
   {
     int j = 1;
-    StringBuilder localStringBuilder = new StringBuilder().append(cfR).append(":").append(time).append(":");
-    if (cfS)
+    StringBuilder localStringBuilder = new StringBuilder().append(cbd).append(":").append(time).append(":");
+    if (cbe)
     {
       i = 1;
-      localStringBuilder = localStringBuilder.append(i).append(":").append(aut).append(":").append(kfp).append(":");
-      if (!kfo) {
+      localStringBuilder = localStringBuilder.append(i).append(":").append(agg).append(":").append(kFw).append(":");
+      if (!kFv) {
         break label106;
       }
     }

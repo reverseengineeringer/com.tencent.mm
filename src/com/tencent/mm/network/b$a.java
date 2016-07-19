@@ -2,7 +2,7 @@ package com.tencent.mm.network;
 
 public abstract interface b$a
 {
-  public abstract e tT();
+  public abstract e tU();
 }
 
 /* Location:

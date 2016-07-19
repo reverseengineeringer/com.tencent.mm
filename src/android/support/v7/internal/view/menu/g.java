@@ -16,75 +16,75 @@ import android.widget.ListAdapter;
 public class g
   implements DialogInterface.OnClickListener, DialogInterface.OnDismissListener, DialogInterface.OnKeyListener, l.a
 {
-  private f iO;
-  private AlertDialog mg;
-  e mh;
-  private l.a mi;
+  private f jf;
+  private AlertDialog mw;
+  e mx;
+  private l.a my;
   
   public g(f paramf)
   {
-    iO = paramf;
+    jf = paramf;
   }
   
   public final void a(f paramf, boolean paramBoolean)
   {
-    if ((paramBoolean) || (paramf == iO)) {
+    if ((paramBoolean) || (paramf == jf)) {
       dismiss();
     }
-    if (mi != null) {
-      mi.a(paramf, paramBoolean);
+    if (my != null) {
+      my.a(paramf, paramBoolean);
     }
   }
   
   public final boolean b(f paramf)
   {
-    if (mi != null) {
-      return mi.b(paramf);
+    if (my != null) {
+      return my.b(paramf);
     }
     return false;
   }
   
   public final void by()
   {
-    Object localObject = iO;
+    Object localObject = jf;
     AlertDialog.Builder localBuilder = new AlertDialog.Builder(mContext);
-    mh = new e(2131100199);
-    mh.ll = this;
-    iO.a(mh);
-    localBuilder.setAdapter(mh.getAdapter(), this);
-    View localView = lY;
+    mx = new e(2131493369);
+    mx.lC = this;
+    jf.a(mx);
+    localBuilder.setAdapter(mx.getAdapter(), this);
+    View localView = mo;
     if (localView != null) {
       localBuilder.setCustomTitle(localView);
     }
     for (;;)
     {
       localBuilder.setOnKeyListener(this);
-      mg = localBuilder.create();
-      mg.setOnDismissListener(this);
-      localObject = mg.getWindow().getAttributes();
+      mw = localBuilder.create();
+      mw.setOnDismissListener(this);
+      localObject = mw.getWindow().getAttributes();
       type = 1003;
       flags |= 0x20000;
-      mg.show();
+      mw.show();
       return;
-      localBuilder.setIcon(lX).setTitle(lW);
+      localBuilder.setIcon(mn).setTitle(mm);
     }
   }
   
   public final void dismiss()
   {
-    if (mg != null) {
-      mg.dismiss();
+    if (mw != null) {
+      mw.dismiss();
     }
   }
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    iO.c((h)mh.getAdapter().getItem(paramInt), 0);
+    jf.c((h)mx.getAdapter().getItem(paramInt), 0);
   }
   
   public void onDismiss(DialogInterface paramDialogInterface)
   {
-    mh.a(iO, true);
+    mx.a(jf, true);
   }
   
   public boolean onKey(DialogInterface paramDialogInterface, int paramInt, KeyEvent paramKeyEvent)
@@ -92,7 +92,7 @@ public class g
     if ((paramInt == 82) || (paramInt == 4)) {
       if ((paramKeyEvent.getAction() == 0) && (paramKeyEvent.getRepeatCount() == 0))
       {
-        paramDialogInterface = mg.getWindow();
+        paramDialogInterface = mw.getWindow();
         if (paramDialogInterface != null)
         {
           paramDialogInterface = paramDialogInterface.getDecorView();
@@ -109,7 +109,7 @@ public class g
       }
       else if ((paramKeyEvent.getAction() == 1) && (!paramKeyEvent.isCanceled()))
       {
-        Object localObject = mg.getWindow();
+        Object localObject = mw.getWindow();
         if (localObject != null)
         {
           localObject = ((Window)localObject).getDecorView();
@@ -118,7 +118,7 @@ public class g
             localObject = ((View)localObject).getKeyDispatcherState();
             if ((localObject != null) && (((KeyEvent.DispatcherState)localObject).isTracking(paramKeyEvent)))
             {
-              iO.r(true);
+              jf.q(true);
               paramDialogInterface.dismiss();
               return true;
             }
@@ -126,7 +126,7 @@ public class g
         }
       }
     }
-    return iO.performShortcut(paramInt, paramKeyEvent, 0);
+    return jf.performShortcut(paramInt, paramKeyEvent, 0);
   }
 }
 

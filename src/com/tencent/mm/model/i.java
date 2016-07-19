@@ -1,26 +1,26 @@
 package com.tencent.mm.model;
 
 import android.database.Cursor;
-import com.tencent.mm.ag.b.a;
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.d.b.t;
-import com.tencent.mm.h.a;
-import com.tencent.mm.protocal.b.adt;
-import com.tencent.mm.protocal.b.aeg;
-import com.tencent.mm.protocal.b.alx;
-import com.tencent.mm.protocal.b.aly;
+import com.tencent.mm.aj.b.a;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.e.b.t;
+import com.tencent.mm.i.a;
+import com.tencent.mm.protocal.b.aem;
+import com.tencent.mm.protocal.b.aez;
+import com.tencent.mm.protocal.b.ami;
+import com.tencent.mm.protocal.b.amj;
 import com.tencent.mm.sdk.h.d;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ak;
-import com.tencent.mm.storage.al;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.am;
+import com.tencent.mm.storage.an;
 import com.tencent.mm.storage.e;
 import com.tencent.mm.storage.f;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 import com.tencent.mm.storage.r;
 import com.tencent.mm.storage.s;
-import com.tencent.mm.t.n;
+import com.tencent.mm.v.o;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -31,36 +31,36 @@ import junit.framework.Assert;
 
 public final class i
 {
-  public static final String bAa = q.f("rconversation.username", new String[] { "@micromsg.qq.com" });
-  private static Set bAb = new HashSet();
-  public static final String[] bAc = { "qqmail", "fmessage", "tmessage", "qmessage", "qqsync", "floatbottle", "lbsapp", "shakeapp", "medianote", "qqfriend", "newsapp", "blogapp", "facebookapp", "masssendapp", "feedsapp", "voipapp", "cardpackage", "voicevoipapp", "voiceinputapp", "officialaccounts", "googlecontact", "linkedinplugin", "notifymessage" };
-  public static final String bzW = q.f("rconversation.username", new String[] { "@chatroom", "@micromsg.qq.com" });
-  public static final String bzX = q.f("rconversation.username", new String[] { "@t.qq.com" });
-  public static final String bzY = q.f("rconversation.username", new String[] { "@qqim" });
-  public static final String bzZ = q.f("rconversation.username", new String[] { "@chatroom_exclusive" });
+  public static final String bsZ = q.g("rconversation.username", new String[] { "@chatroom", "@micromsg.qq.com" });
+  public static final String bta = q.g("rconversation.username", new String[] { "@t.qq.com" });
+  public static final String btb = q.g("rconversation.username", new String[] { "@qqim" });
+  public static final String btc = q.g("rconversation.username", new String[] { "@chatroom_exclusive" });
+  public static final String btd = q.g("rconversation.username", new String[] { "@micromsg.qq.com" });
+  private static Set<String> bte = new HashSet();
+  public static final String[] btf = { "qqmail", "fmessage", "tmessage", "qmessage", "qqsync", "floatbottle", "lbsapp", "shakeapp", "medianote", "qqfriend", "newsapp", "blogapp", "facebookapp", "masssendapp", "feedsapp", "voipapp", "cardpackage", "voicevoipapp", "voiceinputapp", "officialaccounts", "googlecontact", "linkedinplugin", "notifymessage" };
   
-  public static String D(String paramString1, String paramString2)
+  public static String A(String paramString1, String paramString2)
   {
     Object localObject;
-    if (ay.kz(paramString2)) {
-      localObject = dY(paramString1);
+    if (be.kf(paramString2)) {
+      localObject = ej(paramString1);
     }
     String str;
     do
     {
       return (String)localObject;
-      str = dV(paramString1);
+      str = eg(paramString1);
       localObject = str;
-    } while (!ay.kz(str));
-    paramString2 = ah.tD().rw().DT(paramString2);
+    } while (!be.kf(str));
+    paramString2 = ah.tE().ry().Gi(paramString2);
     if (paramString2 == null) {}
-    for (paramString2 = null;; paramString2 = paramString2.dY(paramString1))
+    for (paramString2 = null;; paramString2 = paramString2.ej(paramString1))
     {
       localObject = paramString2;
-      if (!ay.kz(paramString2)) {
+      if (!be.kf(paramString2)) {
         break;
       }
-      return dY(paramString1);
+      return ej(paramString1);
     }
   }
   
@@ -70,15 +70,15 @@ public final class i
     do
     {
       return paramString;
-      if ((paramString.toLowerCase().endsWith("@chatroom")) && (ay.kz(field_nickname)))
+      if ((paramString.toLowerCase().endsWith("@chatroom")) && (be.kf(field_nickname)))
       {
-        String str = ah.tD().rw().dY(paramString);
-        if (!ay.kz(str)) {
+        String str = ah.tE().ry().ej(paramString);
+        if (!be.kf(str)) {
           return str;
         }
       }
-    } while ((paramk.qz() == null) || (paramk.qz().length() <= 0));
-    return paramk.qz();
+    } while ((paramk.pc() == null) || (paramk.pc().length() <= 0));
+    return paramk.pc();
   }
   
   public static String a(k paramk, String paramString, boolean paramBoolean)
@@ -87,44 +87,36 @@ public final class i
     do
     {
       return paramString;
-      if ((paramBoolean) && (ay.kz(field_nickname))) {
-        return ah.tD().rw().dY(paramString);
+      if ((paramBoolean) && (be.kf(field_nickname))) {
+        return ah.tE().ry().ej(paramString);
       }
-    } while ((paramk.qz() == null) || (paramk.qz().length() <= 0));
-    return paramk.qz();
+    } while ((paramk.pc() == null) || (paramk.pc().length() <= 0));
+    return paramk.pc();
   }
   
   public static boolean a(r paramr)
   {
     String str = field_username;
-    if (eI(str)) {}
-    do
-    {
-      do
-      {
-        return false;
-      } while ((eH(str)) || (ey(str)) || (ez(str)) || (field_conversationTime == -1L));
-      if (!ea(str)) {
-        break;
-      }
-    } while (!n.gT(str));
-    return true;
-    return true;
+    if (eU(str)) {}
+    while ((eT(str)) || (eK(str)) || (eL(str)) || (field_conversationTime == -1L)) {
+      return false;
+    }
+    return el(str);
   }
   
-  public static int[] a(String paramString1, String paramString2, List paramList, String paramString3)
+  public static int[] a(String paramString1, String paramString2, List<String> paramList, String paramString3)
   {
     int j = 0;
     long l = System.currentTimeMillis();
-    int[] arrayOfInt = ah.tD().rq().b(paramString1, paramString2, paramString3, paramList);
-    u.d("!44@/B4Tb64lLpLSOpQlr7qYXclEbAfS9M4zkqYuJPbwLXY=", "kevin MMCore.getAccStg().getContactStg().getShowHeadDistinct(" + (System.currentTimeMillis() - l));
+    int[] arrayOfInt = ah.tE().rr().b(paramString1, paramString2, paramString3, paramList);
+    v.d("MicroMsg.ContactStorageLogic", "kevin MMCore.getAccStg().getContactStg().getShowHeadDistinct(" + (System.currentTimeMillis() - l));
     if (arrayOfInt.length <= 0) {}
     do
     {
       return null;
       l = System.currentTimeMillis();
-      paramString1 = ah.tD().rq().c(paramString1, paramString2, paramString3, paramList);
-      u.d("!44@/B4Tb64lLpLSOpQlr7qYXclEbAfS9M4zkqYuJPbwLXY=", "kevin MMCore.getAccStg().getContactStg().getSectionNumByShowHead" + (System.currentTimeMillis() - l));
+      paramString1 = ah.tE().rr().c(paramString1, paramString2, paramString3, paramList);
+      v.d("MicroMsg.ContactStorageLogic", "kevin MMCore.getAccStg().getContactStg().getSectionNumByShowHead" + (System.currentTimeMillis() - l));
     } while (paramString1 == null);
     if (arrayOfInt.length == paramString1.length) {}
     for (boolean bool = true;; bool = false)
@@ -144,20 +136,20 @@ public final class i
     return paramString2;
   }
   
-  public static int[] a(String paramString1, String paramString2, List paramList, String[] paramArrayOfString)
+  public static int[] a(String paramString1, String paramString2, List<String> paramList, String[] paramArrayOfString)
   {
     int j = 0;
-    int[] arrayOfInt = ah.tD().rq().b(paramString1, paramString2, paramArrayOfString, paramList);
+    int[] arrayOfInt = ah.tE().rr().b(paramString1, paramString2, paramArrayOfString, paramList);
     if (arrayOfInt.length <= 0) {}
     int k;
     int i;
     do
     {
       return null;
-      q localq = ah.tD().rq();
-      paramString1 = "select count(*) from rcontact " + q.e(paramString1, paramString2, paramList) + q.C(paramArrayOfString);
+      q localq = ah.tE().rr();
+      paramString1 = "select count(*) from rcontact " + q.e(paramString1, paramString2, paramList) + q.D(paramArrayOfString);
       paramString1 = paramString1 + " group by showHead";
-      paramList = aoX.rawQuery(paramString1, null);
+      paramList = bkP.rawQuery(paramString1, null);
       if (paramList.getCount() > 0)
       {
         k = paramList.getCount();
@@ -195,11 +187,11 @@ public final class i
     return paramString2;
   }
   
-  public static String[] a(String paramString1, String paramString2, String paramString3, List paramList)
+  public static String[] a(String paramString1, String paramString2, String paramString3, List<String> paramList)
   {
     long l = System.currentTimeMillis();
-    paramString1 = ah.tD().rq().b(paramString1, paramString2, paramString3, paramList);
-    u.d("!44@/B4Tb64lLpLSOpQlr7qYXclEbAfS9M4zkqYuJPbwLXY=", "kevin MMCore.getAccStg().getContactStg().getShowSectionByShowHead" + (System.currentTimeMillis() - l));
+    paramString1 = ah.tE().rr().b(paramString1, paramString2, paramString3, paramList);
+    v.d("MicroMsg.ContactStorageLogic", "kevin MMCore.getAccStg().getContactStg().getShowSectionByShowHead" + (System.currentTimeMillis() - l));
     if (paramString1.length <= 0) {
       return null;
     }
@@ -237,11 +229,11 @@ public final class i
     return paramString2;
   }
   
-  public static String[] a(String paramString1, String paramString2, String[] paramArrayOfString, List paramList)
+  public static String[] a(String paramString1, String paramString2, String[] paramArrayOfString, List<String> paramList)
   {
     long l = System.currentTimeMillis();
-    paramString1 = ah.tD().rq().b(paramString1, paramString2, paramArrayOfString, paramList);
-    u.d("!44@/B4Tb64lLpLSOpQlr7qYXclEbAfS9M4zkqYuJPbwLXY=", "kevin MMCore.getAccStg().getContactStg().getShowSectionByShowHead" + (System.currentTimeMillis() - l));
+    paramString1 = ah.tE().rr().b(paramString1, paramString2, paramArrayOfString, paramList);
+    v.d("MicroMsg.ContactStorageLogic", "kevin MMCore.getAccStg().getContactStg().getShowSectionByShowHead" + (System.currentTimeMillis() - l));
     if (paramString1.length <= 0) {
       return null;
     }
@@ -281,170 +273,61 @@ public final class i
   
   public static void b(k paramk, String paramString)
   {
-    paramk = ah.tD().rq().Ep(field_username);
+    paramk = ah.tE().rr().GD(field_username);
     if ((paramk != null) && (paramString != null)) {}
     for (boolean bool = true;; bool = false)
     {
       Assert.assertTrue(bool);
-      paramk.bF(paramString);
+      paramk.bA(paramString);
       r(paramk);
       return;
     }
   }
   
-  public static void b(Set paramSet)
-  {
-    bAb = paramSet;
-  }
-  
   public static boolean b(r paramr)
   {
-    return !ey(field_username);
+    return !eK(field_username);
+  }
+  
+  public static void c(Set<String> paramSet)
+  {
+    bte = paramSet;
   }
   
   public static boolean c(k paramk)
   {
     if (paramk == null) {}
-    while ((!ay.ky(field_username).endsWith("@chatroom")) || (!a.ce(field_type))) {
+    while ((!be.li(field_username).endsWith("@chatroom")) || (!a.cy(field_type))) {
       return false;
     }
     return true;
   }
   
-  public static boolean cx(int paramInt)
-  {
-    return k.pD(paramInt);
-  }
-  
   public static String d(k paramk)
   {
-    Object localObject = dY(field_username);
-    if ((!dn(field_username)) || (!((String)localObject).equals(field_username))) {
+    Object localObject = ej(field_username);
+    if ((!du(field_username)) || (!((String)localObject).equals(field_username))) {
       return (String)localObject;
     }
-    localObject = ah.tD().rw().DW(field_username);
+    localObject = ah.tE().ry().Gl(field_username);
     if ((localObject != null) && (((List)localObject).size() > 0))
     {
       paramk = new ArrayList();
       localObject = ((List)localObject).iterator();
       while (((Iterator)localObject).hasNext()) {
-        paramk.add(dY((String)((Iterator)localObject).next()));
+        paramk.add(ej((String)((Iterator)localObject).next()));
       }
-      return "(" + ay.b(paramk, ", ") + ")";
+      return "(" + be.b(paramk, ", ") + ")";
     }
     return "";
   }
   
-  public static boolean dR(String paramString)
+  public static boolean dc(int paramInt)
   {
-    if ((paramString == null) || (paramString.length() <= 0)) {}
-    while ((paramString.contains("@")) && (!paramString.endsWith("@micromsg.qq.com"))) {
-      return false;
-    }
-    return true;
+    return k.rs(paramInt);
   }
   
-  public static boolean dS(String paramString)
-  {
-    if ((paramString == null) || (paramString.length() <= 0)) {
-      return false;
-    }
-    return paramString.endsWith("@lbsroom");
-  }
-  
-  public static boolean dT(String paramString)
-  {
-    if ((paramString == null) || (paramString.length() <= 0)) {}
-    do
-    {
-      do
-      {
-        return false;
-      } while (!paramString.endsWith("@chatroom"));
-      paramString = ah.tD().rq().Ep(paramString);
-    } while ((paramString == null) || (!a.ce(field_type)));
-    return true;
-  }
-  
-  public static boolean dU(String paramString)
-  {
-    if ((paramString == null) || (paramString.length() <= 0)) {
-      return false;
-    }
-    return paramString.endsWith("@stranger");
-  }
-  
-  public static String dV(String paramString)
-  {
-    paramString = ah.tD().rq().Ep(paramString);
-    if (paramString == null) {
-      return "";
-    }
-    if (!ay.kz(field_conRemark)) {
-      return field_conRemark;
-    }
-    return "";
-  }
-  
-  public static String dW(String paramString)
-  {
-    k localk = ah.tD().rq().Ep(paramString);
-    if (localk == null) {}
-    while (ay.kz(field_nickname)) {
-      return paramString;
-    }
-    return field_nickname;
-  }
-  
-  public static String dX(String paramString)
-  {
-    String str;
-    if ((paramString == null) || (paramString.length() <= 0)) {
-      str = "";
-    }
-    k localk;
-    do
-    {
-      do
-      {
-        do
-        {
-          return str;
-          localk = ah.tD().rq().Ep(paramString);
-          u.d("!44@/B4Tb64lLpLSOpQlr7qYXclEbAfS9M4zkqYuJPbwLXY=", "username: %s", new Object[] { paramString });
-          str = paramString;
-        } while (localk == null);
-        if ((paramString.toLowerCase().endsWith("@chatroom")) && (ay.kz(field_nickname)))
-        {
-          str = ah.tD().rw().dY(paramString);
-          if (!ay.kz(str)) {
-            return str;
-          }
-        }
-        str = paramString;
-      } while (localk.qy() == null);
-      str = paramString;
-    } while (localk.qy().length() <= 0);
-    return localk.qy();
-  }
-  
-  public static String dY(String paramString)
-  {
-    if ((paramString == null) || (paramString.length() <= 0)) {
-      return "";
-    }
-    return a(ah.tD().rq().Ep(paramString), paramString);
-  }
-  
-  public static boolean dZ(String paramString)
-  {
-    if ((paramString == null) || (paramString.length() <= 0)) {
-      return true;
-    }
-    return a.ce(tDrqEpfield_type);
-  }
-  
-  public static boolean dn(String paramString)
+  public static boolean du(String paramString)
   {
     if ((paramString == null) || (paramString.length() <= 0)) {
       return false;
@@ -460,10 +343,10 @@ public final class i
     {
       bool = true;
       Assert.assertTrue(bool);
-      localk2 = ah.tD().rq().Ep(field_username);
+      localk2 = ah.tE().rr().GD(field_username);
       localk1 = paramk;
       if (localk2 != null) {
-        if (!ay.kz(field_username)) {
+        if (!be.kf(field_username)) {
           break label56;
         }
       }
@@ -471,7 +354,7 @@ public final class i
     label56:
     for (k localk1 = paramk;; localk1 = localk2)
     {
-      localk1.qe();
+      localk1.oC();
       r(localk1);
       return;
       bool = false;
@@ -482,7 +365,7 @@ public final class i
   public static boolean eA(String paramString)
   {
     if (paramString != null) {
-      return paramString.equalsIgnoreCase("qqfriend");
+      return paramString.equalsIgnoreCase("medianote");
     }
     return false;
   }
@@ -490,20 +373,23 @@ public final class i
   public static boolean eB(String paramString)
   {
     if (paramString != null) {
-      return paramString.equalsIgnoreCase("googlecontact");
+      return paramString.equalsIgnoreCase("newsapp");
     }
     return false;
   }
   
   public static boolean eC(String paramString)
   {
-    return "filehelper".equalsIgnoreCase(paramString);
+    if (paramString != null) {
+      return paramString.equalsIgnoreCase("voipapp");
+    }
+    return false;
   }
   
   public static boolean eD(String paramString)
   {
     if (paramString != null) {
-      return paramString.equalsIgnoreCase("pc_share");
+      return paramString.equalsIgnoreCase("voicevoipapp");
     }
     return false;
   }
@@ -511,7 +397,7 @@ public final class i
   public static boolean eE(String paramString)
   {
     if (paramString != null) {
-      return paramString.equalsIgnoreCase("notifymessage");
+      return paramString.equalsIgnoreCase("voiceinputapp");
     }
     return false;
   }
@@ -519,30 +405,120 @@ public final class i
   public static boolean eF(String paramString)
   {
     if (paramString != null) {
-      return paramString.equalsIgnoreCase("notification_messages");
+      return paramString.equalsIgnoreCase("linkedinplugin");
     }
     return false;
   }
   
   public static boolean eG(String paramString)
   {
-    if (eH(paramString)) {}
-    while ((eI(paramString)) || (ey(paramString)) || (ez(paramString))) {
+    return eI(paramString);
+  }
+  
+  public static boolean eH(String paramString)
+  {
+    if (paramString != null) {
+      return paramString.equalsIgnoreCase("gh_43f2581f6fd6");
+    }
+    return false;
+  }
+  
+  public static boolean eI(String paramString)
+  {
+    if (paramString != null) {
+      return paramString.equalsIgnoreCase("gh_22b87fa7cb3c");
+    }
+    return false;
+  }
+  
+  public static boolean eJ(String paramString)
+  {
+    if (paramString != null) {
+      return paramString.equalsIgnoreCase("blogapp");
+    }
+    return false;
+  }
+  
+  public static boolean eK(String paramString)
+  {
+    if (paramString != null) {
+      return paramString.equalsIgnoreCase("officialaccounts");
+    }
+    return false;
+  }
+  
+  public static boolean eL(String paramString)
+  {
+    if (paramString != null) {
+      return paramString.equalsIgnoreCase("helper_entry");
+    }
+    return false;
+  }
+  
+  public static boolean eM(String paramString)
+  {
+    if (paramString != null) {
+      return paramString.equalsIgnoreCase("qqfriend");
+    }
+    return false;
+  }
+  
+  public static boolean eN(String paramString)
+  {
+    if (paramString != null) {
+      return paramString.equalsIgnoreCase("googlecontact");
+    }
+    return false;
+  }
+  
+  public static boolean eO(String paramString)
+  {
+    return "filehelper".equalsIgnoreCase(paramString);
+  }
+  
+  public static boolean eP(String paramString)
+  {
+    if (paramString != null) {
+      return paramString.equalsIgnoreCase("pc_share");
+    }
+    return false;
+  }
+  
+  public static boolean eQ(String paramString)
+  {
+    if (paramString != null) {
+      return paramString.equalsIgnoreCase("notifymessage");
+    }
+    return false;
+  }
+  
+  public static boolean eR(String paramString)
+  {
+    if (paramString != null) {
+      return paramString.equalsIgnoreCase("notification_messages");
+    }
+    return false;
+  }
+  
+  public static boolean eS(String paramString)
+  {
+    if (eT(paramString)) {}
+    while ((eU(paramString)) || (eK(paramString)) || (eL(paramString))) {
       return true;
     }
     return false;
   }
   
-  public static boolean eH(String paramString)
+  public static boolean eT(String paramString)
   {
-    String str = (String)ah.tD().rn().get(21, null);
+    String str = (String)ah.tE().ro().get(21, null);
     return ((str != null) && (str.equalsIgnoreCase(paramString))) || (paramString.equalsIgnoreCase("weixin"));
   }
   
-  public static boolean eI(String paramString)
+  public static boolean eU(String paramString)
   {
     boolean bool2 = false;
-    String[] arrayOfString = bAc;
+    String[] arrayOfString = btf;
     int j = arrayOfString.length;
     int i = 0;
     for (;;)
@@ -561,19 +537,19 @@ public final class i
     }
   }
   
-  public static boolean eJ(String paramString)
+  public static boolean eV(String paramString)
   {
-    if (eI(paramString)) {}
-    while ((k.Ea(paramString)) || (k.DY(paramString)) || (k.Ec(paramString))) {
+    if (eU(paramString)) {}
+    while ((k.Gp(paramString)) || (k.Gn(paramString)) || (k.eb(paramString))) {
       return true;
     }
     return false;
   }
   
-  public static int eK(String paramString)
+  public static int eW(String paramString)
   {
     boolean bool;
-    if (ay.ky(paramString).length() > 0)
+    if (be.li(paramString).length() > 0)
     {
       bool = true;
       Assert.assertTrue(bool);
@@ -588,19 +564,19 @@ public final class i
       return 1;
       bool = false;
       break;
-      if (k.DY(paramString)) {
+      if (k.Gn(paramString)) {
         return 11;
       }
-      if (k.Ea(paramString)) {
+      if (k.Gp(paramString)) {
         return 36;
       }
-    } while (!k.Ec(paramString));
+    } while (!k.eb(paramString));
     return 1;
   }
   
-  public static int eL(String paramString)
+  public static int eX(String paramString)
   {
-    if (ay.ky(paramString).length() > 0) {}
+    if (be.li(paramString).length() > 0) {}
     for (boolean bool = true;; bool = false)
     {
       Assert.assertTrue(bool);
@@ -610,13 +586,13 @@ public final class i
       }
       return 3;
     }
-    if (k.DY(paramString)) {
+    if (k.Gn(paramString)) {
       return 13;
     }
-    if (k.Ea(paramString)) {
+    if (k.Gp(paramString)) {
       return 39;
     }
-    if (k.Ec(paramString)) {
+    if (k.eb(paramString)) {
       return 3;
     }
     if (paramString.contains("@")) {
@@ -625,72 +601,203 @@ public final class i
     return 3;
   }
   
-  public static boolean eM(String paramString)
+  public static boolean eY(String paramString)
   {
     boolean bool = true;
-    if (tDrqEpaSC != 1) {
+    if (tErrGDaFl != 1) {
       bool = false;
     }
     return bool;
   }
   
-  public static boolean eN(String paramString)
+  public static boolean eZ(String paramString)
   {
-    paramString = ah.tD().rq().Ep(paramString);
-    return (paramString != null) && (paramString.qr());
+    paramString = ah.tE().rr().GD(paramString);
+    return (paramString != null) && (paramString.oU());
   }
   
-  public static boolean eO(String paramString)
+  public static boolean ea(String paramString)
   {
     if ((paramString == null) || (paramString.length() <= 0)) {}
-    while ((!paramString.startsWith("t.qq.com/")) && (!paramString.startsWith("http://t.qq.com/"))) {
+    while ((paramString.contains("@")) && (!paramString.endsWith("@micromsg.qq.com"))) {
       return false;
     }
     return true;
   }
   
-  public static String eP(String paramString)
+  public static boolean eb(String paramString)
   {
-    if (eO(paramString)) {
-      return paramString.replace("http://t.qq.com/", "").replace("t.qq.com/", "");
+    if ((paramString == null) || (paramString.length() <= 0)) {
+      return false;
+    }
+    return paramString.endsWith("@bottle");
+  }
+  
+  public static boolean ec(String paramString)
+  {
+    if ((paramString == null) || (paramString.length() <= 0)) {
+      return false;
+    }
+    return paramString.endsWith("@qqim");
+  }
+  
+  public static boolean ed(String paramString)
+  {
+    if ((paramString == null) || (paramString.length() <= 0)) {
+      return false;
+    }
+    return paramString.endsWith("@lbsroom");
+  }
+  
+  public static boolean ee(String paramString)
+  {
+    if ((paramString == null) || (paramString.length() <= 0)) {}
+    do
+    {
+      do
+      {
+        return false;
+      } while (!paramString.endsWith("@chatroom"));
+      paramString = ah.tE().rr().GD(paramString);
+    } while ((paramString == null) || (!a.cy(field_type)));
+    return true;
+  }
+  
+  public static boolean ef(String paramString)
+  {
+    if ((paramString == null) || (paramString.length() <= 0)) {
+      return false;
+    }
+    return paramString.endsWith("@stranger");
+  }
+  
+  public static String eg(String paramString)
+  {
+    paramString = ah.tE().rr().GD(paramString);
+    if (paramString == null) {
+      return "";
+    }
+    if (!be.kf(field_conRemark)) {
+      return field_conRemark;
     }
     return "";
   }
   
-  public static String eQ(String paramString)
+  public static String eh(String paramString)
   {
-    String str = paramString;
-    if (bAb.contains(paramString)) {
-      str = "";
+    k localk = ah.tE().rr().GD(paramString);
+    if (localk == null) {}
+    while (be.kf(field_nickname)) {
+      return paramString;
     }
-    return str;
+    return field_nickname;
   }
   
-  public static boolean ea(String paramString)
+  public static String ei(String paramString)
   {
-    if (ay.kz(paramString)) {}
+    String str;
+    if ((paramString == null) || (paramString.length() <= 0)) {
+      str = "";
+    }
+    k localk;
+    do
+    {
+      do
+      {
+        do
+        {
+          return str;
+          localk = ah.tE().rr().GD(paramString);
+          v.d("MicroMsg.ContactStorageLogic", "username: %s", new Object[] { paramString });
+          str = paramString;
+        } while (localk == null);
+        if ((paramString.toLowerCase().endsWith("@chatroom")) && (be.kf(field_nickname)))
+        {
+          str = ah.tE().ry().ej(paramString);
+          if (!be.kf(str)) {
+            return str;
+          }
+        }
+        str = paramString;
+      } while (localk.pb() == null);
+      str = paramString;
+    } while (localk.pb().length() <= 0);
+    return localk.pb();
+  }
+  
+  public static String ej(String paramString)
+  {
+    if ((paramString == null) || (paramString.length() <= 0)) {
+      return "";
+    }
+    return a(ah.tE().rr().GD(paramString), paramString);
+  }
+  
+  public static boolean ek(String paramString)
+  {
+    if ((paramString == null) || (paramString.length() <= 0)) {
+      return true;
+    }
+    return a.cy(tErrGDfield_type);
+  }
+  
+  public static boolean el(String paramString)
+  {
+    if (be.kf(paramString)) {}
     do
     {
       return false;
-      paramString = ah.tD().rq().Ep(paramString);
+      paramString = ah.tE().rr().GD(paramString);
     } while (paramString == null);
-    return k.pD(field_verifyFlag);
+    return k.rs(field_verifyFlag);
   }
   
-  public static void eb(String paramString)
+  public static void em(String paramString)
   {
-    if (ay.kz(paramString)) {}
+    if (!be.kf(paramString)) {}
+    Object localObject;
+    for (boolean bool = true;; bool = false)
+    {
+      Assert.assertTrue(bool);
+      localObject = ah.tE().rr().GD(paramString);
+      if ((localObject != null) && (!be.kf(field_username))) {
+        break;
+      }
+      return;
+    }
+    ((k)localObject).setType(field_type | 0x800);
+    r((k)localObject);
+    if ((ah.tE().ru().GO(paramString) == null) && (((k)localObject).bbC()) && (o.hj(paramString)))
+    {
+      if (ah.tE().ru().GO("officialaccounts") == null)
+      {
+        localObject = new r("officialaccounts");
+        ((r)localObject).wt();
+        ah.tE().ru().d((r)localObject);
+      }
+      localObject = new r(paramString);
+      ((r)localObject).p(System.currentTimeMillis());
+      ((r)localObject).cg("officialaccounts");
+      ah.tE().ru().d((r)localObject);
+      v.i("MicroMsg.ContactStorageLogic", "setPlacedTop username = " + paramString);
+    }
+    ah.tE().ru().GS(paramString);
+  }
+  
+  public static void en(String paramString)
+  {
+    if (be.kf(paramString)) {}
     k localk;
     do
     {
       return;
-      localk = ah.tD().rq().Ep(paramString);
+      localk = ah.tE().rr().GD(paramString);
     } while (localk == null);
-    localk.setType(0);
-    ah.tD().rq().a(paramString, localk);
+    localk.ow();
+    ah.tE().rr().a(paramString, localk);
   }
   
-  public static boolean ec(String paramString)
+  public static boolean eo(String paramString)
   {
     if (paramString != null) {
       return paramString.equalsIgnoreCase("qqmail");
@@ -698,7 +805,7 @@ public final class i
     return false;
   }
   
-  public static boolean ed(String paramString)
+  public static boolean ep(String paramString)
   {
     if (paramString != null) {
       return paramString.equalsIgnoreCase("fmessage");
@@ -706,7 +813,7 @@ public final class i
     return false;
   }
   
-  public static boolean ee(String paramString)
+  public static boolean eq(String paramString)
   {
     if (paramString != null) {
       return paramString.equalsIgnoreCase("tmessage");
@@ -714,7 +821,7 @@ public final class i
     return false;
   }
   
-  public static boolean ef(String paramString)
+  public static boolean er(String paramString)
   {
     if (paramString != null) {
       return paramString.equalsIgnoreCase("floatbottle");
@@ -722,7 +829,7 @@ public final class i
     return false;
   }
   
-  public static boolean eg(String paramString)
+  public static boolean es(String paramString)
   {
     if (paramString != null) {
       return paramString.equalsIgnoreCase("qmessage");
@@ -730,7 +837,7 @@ public final class i
     return false;
   }
   
-  public static boolean eh(String paramString)
+  public static boolean et(String paramString)
   {
     if (paramString != null) {
       return paramString.equalsIgnoreCase("facebookapp");
@@ -738,7 +845,7 @@ public final class i
     return false;
   }
   
-  public static boolean ei(String paramString)
+  public static boolean eu(String paramString)
   {
     if (paramString != null) {
       return paramString.equalsIgnoreCase("masssendapp");
@@ -746,7 +853,7 @@ public final class i
     return false;
   }
   
-  public static boolean ej(String paramString)
+  public static boolean ev(String paramString)
   {
     if (paramString != null) {
       return paramString.equalsIgnoreCase("feedsapp");
@@ -754,12 +861,12 @@ public final class i
     return false;
   }
   
-  public static boolean ek(String paramString)
+  public static boolean ew(String paramString)
   {
     return "qqsync".equalsIgnoreCase(paramString);
   }
   
-  public static boolean el(String paramString)
+  public static boolean ex(String paramString)
   {
     boolean bool2 = false;
     boolean bool1 = bool2;
@@ -777,7 +884,7 @@ public final class i
     return bool1;
   }
   
-  public static boolean em(String paramString)
+  public static boolean ey(String paramString)
   {
     if (paramString != null) {
       return paramString.equalsIgnoreCase("lbsapp");
@@ -785,103 +892,10 @@ public final class i
     return false;
   }
   
-  public static boolean en(String paramString)
-  {
-    if (paramString != null) {
-      return paramString.equalsIgnoreCase("shakeapp");
-    }
-    return false;
-  }
-  
-  public static boolean eo(String paramString)
-  {
-    if (paramString != null) {
-      return paramString.equalsIgnoreCase("medianote");
-    }
-    return false;
-  }
-  
-  public static boolean ep(String paramString)
-  {
-    if (paramString != null) {
-      return paramString.equalsIgnoreCase("newsapp");
-    }
-    return false;
-  }
-  
-  public static boolean eq(String paramString)
-  {
-    if (paramString != null) {
-      return paramString.equalsIgnoreCase("voipapp");
-    }
-    return false;
-  }
-  
-  public static boolean er(String paramString)
-  {
-    if (paramString != null) {
-      return paramString.equalsIgnoreCase("voicevoipapp");
-    }
-    return false;
-  }
-  
-  public static boolean es(String paramString)
-  {
-    if (paramString != null) {
-      return paramString.equalsIgnoreCase("voiceinputapp");
-    }
-    return false;
-  }
-  
-  public static boolean et(String paramString)
-  {
-    if (paramString != null) {
-      return paramString.equalsIgnoreCase("linkedinplugin");
-    }
-    return false;
-  }
-  
-  public static boolean eu(String paramString)
-  {
-    return ev(paramString);
-  }
-  
-  public static boolean ev(String paramString)
-  {
-    if (paramString != null) {
-      return paramString.equalsIgnoreCase("gh_22b87fa7cb3c");
-    }
-    return false;
-  }
-  
-  public static boolean ew(String paramString)
-  {
-    if (paramString != null) {
-      return paramString.equalsIgnoreCase("gh_43f2581f6fd6");
-    }
-    return false;
-  }
-  
-  public static boolean ex(String paramString)
-  {
-    if (paramString != null) {
-      return paramString.equalsIgnoreCase("blogapp");
-    }
-    return false;
-  }
-  
-  public static boolean ey(String paramString)
-  {
-    if (paramString != null) {
-      return paramString.equalsIgnoreCase("officialaccounts");
-    }
-    return false;
-  }
-  
   public static boolean ez(String paramString)
   {
     if (paramString != null) {
-      return paramString.equalsIgnoreCase("helper_entry");
+      return paramString.equalsIgnoreCase("shakeapp");
     }
     return false;
   }
@@ -894,10 +908,10 @@ public final class i
     {
       bool = true;
       Assert.assertTrue(bool);
-      localk2 = ah.tD().rq().Ep(field_username);
+      localk2 = ah.tE().rr().GD(field_username);
       localk1 = paramk;
       if (localk2 != null) {
-        if (!ay.kz(field_username)) {
+        if (!be.kf(field_username)) {
           break label56;
         }
       }
@@ -905,12 +919,38 @@ public final class i
     label56:
     for (k localk1 = paramk;; localk1 = localk2)
     {
-      localk1.qc();
+      localk1.oA();
       r(localk1);
       return;
       bool = false;
       break;
     }
+  }
+  
+  public static boolean fa(String paramString)
+  {
+    if ((paramString == null) || (paramString.length() <= 0)) {}
+    while ((!paramString.startsWith("t.qq.com/")) && (!paramString.startsWith("http://t.qq.com/"))) {
+      return false;
+    }
+    return true;
+  }
+  
+  public static String fb(String paramString)
+  {
+    if (fa(paramString)) {
+      return paramString.replace("http://t.qq.com/", "").replace("t.qq.com/", "");
+    }
+    return "";
+  }
+  
+  public static String fc(String paramString)
+  {
+    String str = paramString;
+    if (bte.contains(paramString)) {
+      str = "";
+    }
+    return str;
   }
   
   public static void g(k paramk)
@@ -919,41 +959,24 @@ public final class i
     for (boolean bool = true;; bool = false)
     {
       Assert.assertTrue(bool);
-      k localk2 = ah.tD().rq().Ep(field_username);
+      k localk2 = ah.tE().rr().GD(field_username);
       k localk1;
       if (localk2 != null)
       {
         localk1 = localk2;
-        if (!ay.kz(field_username)) {}
+        if (!be.kf(field_username)) {}
       }
       else
       {
         localk1 = paramk;
       }
-      localk1.qd();
+      localk1.oB();
       r(localk1);
-      paramk = ah.tD().rt().EA(field_username);
+      paramk = ah.tE().ru().GO(field_username);
       if ((paramk != null) && ("@blacklist".equals(field_parentRef))) {
-        ah.tD().rt().c(new String[] { field_username }, "");
+        ah.tE().ru().c(new String[] { field_username }, "");
       }
       return;
-    }
-  }
-  
-  public static void g(String paramString, boolean paramBoolean)
-  {
-    paramString = ah.tD().rq().Ep(paramString);
-    if ((paramString == null) || (ay.kz(field_username))) {
-      return;
-    }
-    if (paramBoolean) {
-      paramString.qi();
-    }
-    for (;;)
-    {
-      q(paramString);
-      return;
-      paramString.qj();
     }
   }
   
@@ -963,34 +986,123 @@ public final class i
     for (boolean bool = true;; bool = false)
     {
       Assert.assertTrue(bool);
-      k localk2 = ah.tD().rq().Ep(field_username);
+      k localk2 = ah.tE().rr().GD(field_username);
       k localk1;
       if (localk2 != null)
       {
         localk1 = localk2;
-        if (!ay.kz(field_username)) {}
+        if (!be.kf(field_username)) {}
       }
       else
       {
         localk1 = paramk;
       }
-      localk1.qi();
-      localk1.aT(paramk.pY());
+      localk1.oL();
+      localk1.bj(paramk.ov());
       q(localk1);
       return;
     }
   }
   
-  public static void h(String paramString, boolean paramBoolean)
+  public static void i(k paramk)
+  {
+    if (paramk != null) {}
+    for (boolean bool = true;; bool = false)
+    {
+      Assert.assertTrue(bool);
+      k localk2 = ah.tE().rr().GD(field_username);
+      k localk1;
+      if (localk2 != null)
+      {
+        localk1 = localk2;
+        if (!be.kf(field_username)) {}
+      }
+      else
+      {
+        localk1 = paramk;
+      }
+      localk1.oM();
+      localk1.bj(paramk.ov());
+      q(localk1);
+      return;
+    }
+  }
+  
+  public static void j(k paramk)
+  {
+    if (paramk != null) {}
+    for (boolean bool = true;; bool = false)
+    {
+      Assert.assertTrue(bool);
+      k localk2 = ah.tE().rr().GD(field_username);
+      k localk1;
+      if (localk2 != null)
+      {
+        localk1 = localk2;
+        if (!be.kf(field_username)) {}
+      }
+      else
+      {
+        localk1 = paramk;
+      }
+      localk1.oH();
+      localk1.bj(paramk.ov());
+      r(localk1);
+      return;
+    }
+  }
+  
+  public static void j(String paramString, boolean paramBoolean)
+  {
+    paramString = ah.tE().rr().GD(paramString);
+    if ((paramString == null) || (be.kf(field_username))) {
+      return;
+    }
+    if (paramBoolean) {
+      paramString.oL();
+    }
+    for (;;)
+    {
+      q(paramString);
+      return;
+      paramString.oM();
+    }
+  }
+  
+  public static void k(k paramk)
+  {
+    if (paramk != null) {}
+    for (boolean bool = true;; bool = false)
+    {
+      Assert.assertTrue(bool);
+      k localk2 = ah.tE().rr().GD(field_username);
+      k localk1;
+      if (localk2 != null)
+      {
+        localk1 = localk2;
+        if (!be.kf(field_username)) {}
+      }
+      else
+      {
+        localk1 = paramk;
+      }
+      localk1.oI();
+      localk1.bj(paramk.ov());
+      r(localk1);
+      return;
+    }
+  }
+  
+  public static void k(String paramString, boolean paramBoolean)
   {
     boolean bool;
     k localk;
-    if (!ay.kz(paramString))
+    if (!be.kf(paramString))
     {
       bool = true;
       Assert.assertTrue(bool);
-      localk = ah.tD().rq().Ep(paramString);
-      if ((localk != null) && (!ay.kz(field_username))) {
+      localk = ah.tE().rr().GD(paramString);
+      if ((localk != null) && (!be.kf(field_username))) {
         break label44;
       }
     }
@@ -1003,43 +1115,46 @@ public final class i
       localk.setType(field_type | 0x800);
       r(localk);
     } while (!paramBoolean);
-    ah.tD().rt().EE(paramString);
+    ah.tE().ru().GS(paramString);
   }
   
-  public static void i(k paramk)
-  {
-    if (paramk != null) {}
-    for (boolean bool = true;; bool = false)
-    {
-      Assert.assertTrue(bool);
-      k localk2 = ah.tD().rq().Ep(field_username);
-      k localk1;
-      if (localk2 != null)
-      {
-        localk1 = localk2;
-        if (!ay.kz(field_username)) {}
-      }
-      else
-      {
-        localk1 = paramk;
-      }
-      localk1.qj();
-      localk1.aT(paramk.pY());
-      q(localk1);
-      return;
-    }
-  }
-  
-  public static void i(String paramString, boolean paramBoolean)
+  public static void l(k paramk)
   {
     boolean bool;
-    k localk;
-    if (!ay.kz(paramString))
+    k localk2;
+    if (paramk != null)
     {
       bool = true;
       Assert.assertTrue(bool);
-      localk = ah.tD().rq().Ep(paramString);
-      if ((localk != null) && (!ay.kz(field_username))) {
+      localk2 = ah.tE().rr().GD(field_username);
+      localk1 = paramk;
+      if (localk2 != null) {
+        if (!be.kf(field_username)) {
+          break label56;
+        }
+      }
+    }
+    label56:
+    for (k localk1 = paramk;; localk1 = localk2)
+    {
+      localk1.oJ();
+      r(localk1);
+      return;
+      bool = false;
+      break;
+    }
+  }
+  
+  public static void l(String paramString, boolean paramBoolean)
+  {
+    boolean bool;
+    k localk;
+    if (!be.kf(paramString))
+    {
+      bool = true;
+      Assert.assertTrue(bool);
+      localk = ah.tE().rr().GD(paramString);
+      if ((localk != null) && (!be.kf(field_username))) {
         break label44;
       }
     }
@@ -1052,58 +1167,10 @@ public final class i
       localk.setType(field_type & 0xF7FF);
       r(localk);
     } while (!paramBoolean);
-    ah.tD().rt().EF(paramString);
+    ah.tE().ru().GT(paramString);
   }
   
-  public static void j(k paramk)
-  {
-    if (paramk != null) {}
-    for (boolean bool = true;; bool = false)
-    {
-      Assert.assertTrue(bool);
-      k localk2 = ah.tD().rq().Ep(field_username);
-      k localk1;
-      if (localk2 != null)
-      {
-        localk1 = localk2;
-        if (!ay.kz(field_username)) {}
-      }
-      else
-      {
-        localk1 = paramk;
-      }
-      localk1.setType(field_type | 0x40);
-      localk1.aT(paramk.pY());
-      r(localk1);
-      return;
-    }
-  }
-  
-  public static void k(k paramk)
-  {
-    if (paramk != null) {}
-    for (boolean bool = true;; bool = false)
-    {
-      Assert.assertTrue(bool);
-      k localk2 = ah.tD().rq().Ep(field_username);
-      k localk1;
-      if (localk2 != null)
-      {
-        localk1 = localk2;
-        if (!ay.kz(field_username)) {}
-      }
-      else
-      {
-        localk1 = paramk;
-      }
-      localk1.qh();
-      localk1.aT(paramk.pY());
-      r(localk1);
-      return;
-    }
-  }
-  
-  public static void l(k paramk)
+  public static void m(k paramk)
   {
     boolean bool;
     k localk2;
@@ -1111,18 +1178,18 @@ public final class i
     {
       bool = true;
       Assert.assertTrue(bool);
-      localk2 = ah.tD().rq().Ep(field_username);
+      localk2 = ah.tE().rr().GD(field_username);
       localk1 = paramk;
       if (localk2 != null) {
-        if (!ay.kz(field_username)) {
-          break label64;
+        if (!be.kf(field_username)) {
+          break label56;
         }
       }
     }
-    label64:
+    label56:
     for (k localk1 = paramk;; localk1 = localk2)
     {
-      localk1.setType(field_type | 0x200);
+      localk1.oK();
       r(localk1);
       return;
       bool = false;
@@ -1130,19 +1197,116 @@ public final class i
     }
   }
   
-  public static int[] l(List paramList)
+  public static void n(k paramk)
+  {
+    boolean bool2 = true;
+    if (paramk != null)
+    {
+      bool1 = true;
+      Assert.assertTrue("MicroMsg.ContactStorageLogic: user is null", bool1);
+      if ((int)bjS == 0) {
+        break label76;
+      }
+      bool1 = true;
+      label25:
+      Assert.assertTrue("MicroMsg.ContactStorageLogic: contactId == 0", bool1);
+      if (field_username.length() <= 0) {
+        break label81;
+      }
+    }
+    label76:
+    label81:
+    for (boolean bool1 = bool2;; bool1 = false)
+    {
+      Assert.assertTrue("MicroMsg.ContactStorageLogic: username length <= 0", bool1);
+      paramk.oy();
+      ah.tE().rr().a(field_username, paramk);
+      return;
+      bool1 = false;
+      break;
+      bool1 = false;
+      break label25;
+    }
+  }
+  
+  public static void o(k paramk)
+  {
+    boolean bool2 = true;
+    if (paramk != null)
+    {
+      bool1 = true;
+      Assert.assertTrue(bool1);
+      if ((int)bjS == 0) {
+        break label71;
+      }
+      bool1 = true;
+      label22:
+      Assert.assertTrue(bool1);
+      if (field_username.length() <= 0) {
+        break label76;
+      }
+    }
+    label71:
+    label76:
+    for (boolean bool1 = bool2;; bool1 = false)
+    {
+      Assert.assertTrue(bool1);
+      paramk.oy();
+      ah.tE().rr().a(field_username, paramk);
+      r(paramk);
+      return;
+      bool1 = false;
+      break;
+      bool1 = false;
+      break label22;
+    }
+  }
+  
+  public static void p(k paramk)
+  {
+    boolean bool2 = true;
+    if (paramk != null)
+    {
+      bool1 = true;
+      Assert.assertTrue(bool1);
+      if ((int)bjS == 0) {
+        break label56;
+      }
+      bool1 = true;
+      label22:
+      Assert.assertTrue(bool1);
+      if (field_username.length() <= 0) {
+        break label61;
+      }
+    }
+    label56:
+    label61:
+    for (boolean bool1 = bool2;; bool1 = false)
+    {
+      Assert.assertTrue(bool1);
+      paramk.oZ();
+      r(paramk);
+      return;
+      bool1 = false;
+      break;
+      bool1 = false;
+      break label22;
+    }
+  }
+  
+  public static int[] p(List<String> paramList)
   {
     int j = 0;
     long l = System.currentTimeMillis();
-    int[] arrayOfInt1 = ah.tD().rq().bF(paramList);
-    u.d("!44@/B4Tb64lLpLSOpQlr7qYXclEbAfS9M4zkqYuJPbwLXY=", "kevin MMCore.getAccStg().getContactStg().getShowHeadDistinct(" + (System.currentTimeMillis() - l));
+    int[] arrayOfInt1 = ah.tE().rr().bO(paramList);
+    v.d("MicroMsg.ContactStorageLogic", "kevin MMCore.getAccStg().getContactStg().getShowHeadDistinct(" + (System.currentTimeMillis() - l));
     if (arrayOfInt1.length <= 0) {}
     do
     {
       return null;
       l = System.currentTimeMillis();
-      paramList = ah.tD().rq().bG(paramList);
-      u.d("!44@/B4Tb64lLpLSOpQlr7qYXclEbAfS9M4zkqYuJPbwLXY=", "kevin MMCore.getAccStg().getContactStg().getSectionNumByShowHead" + (System.currentTimeMillis() - l));
+      paramList = ah.tE().rr().bP(paramList);
+      v.d("MicroMsg.ContactStorageLogic", "kevin MMCore.getAccStg().getContactStg().getSectionNumByShowHead" + (System.currentTimeMillis() - l));
     } while (paramList == null);
     if (arrayOfInt1.length == paramList.length) {}
     int[] arrayOfInt2;
@@ -1163,39 +1327,42 @@ public final class i
     return arrayOfInt2;
   }
   
-  public static void m(k paramk)
+  private static void q(k paramk)
   {
     boolean bool;
-    k localk2;
+    aez localaez;
     if (paramk != null)
     {
       bool = true;
       Assert.assertTrue(bool);
-      localk2 = ah.tD().rq().Ep(field_username);
-      localk1 = paramk;
-      if (localk2 != null) {
-        if (!ay.kz(field_username)) {
-          break label64;
-        }
+      if ((int)bjS == 0)
+      {
+        ah.tE().rr().N(paramk);
+        ah.tE().rr().GD(field_username);
+      }
+      ah.tE().rr().a(field_username, paramk);
+      localaez = new aez();
+      jZy = field_username;
+      if (!paramk.oW()) {
+        break label111;
       }
     }
-    label64:
-    for (k localk1 = paramk;; localk1 = localk2)
+    label111:
+    for (jZK = 1;; jZK = 2)
     {
-      localk1.setType(field_type & 0xFDFF);
-      r(localk1);
+      ah.tE().rq().b(new b.a(52, localaez));
       return;
       bool = false;
       break;
     }
   }
   
-  public static String[] m(List paramList)
+  public static String[] q(List<String> paramList)
   {
     int j = 0;
     long l = System.currentTimeMillis();
-    paramList = ah.tD().rq().bF(paramList);
-    u.d("!44@/B4Tb64lLpLSOpQlr7qYXclEbAfS9M4zkqYuJPbwLXY=", "kevin MMCore.getAccStg().getContactStg().getShowSectionByShowHead" + (System.currentTimeMillis() - l));
+    paramList = ah.tE().rr().bO(paramList);
+    v.d("MicroMsg.ContactStorageLogic", "kevin MMCore.getAccStg().getContactStg().getShowSectionByShowHead" + (System.currentTimeMillis() - l));
     if (paramList.length <= 0) {
       return null;
     }
@@ -1228,145 +1395,18 @@ public final class i
     return arrayOfString;
   }
   
-  public static void n(k paramk)
-  {
-    boolean bool2 = true;
-    if (paramk != null)
-    {
-      bool1 = true;
-      Assert.assertTrue("!44@/B4Tb64lLpLSOpQlr7qYXclEbAfS9M4zkqYuJPbwLXY=: user is null", bool1);
-      if ((int)bvi == 0) {
-        break label76;
-      }
-      bool1 = true;
-      label25:
-      Assert.assertTrue("!44@/B4Tb64lLpLSOpQlr7qYXclEbAfS9M4zkqYuJPbwLXY=: contactId == 0", bool1);
-      if (field_username.length() <= 0) {
-        break label81;
-      }
-    }
-    label76:
-    label81:
-    for (boolean bool1 = bool2;; bool1 = false)
-    {
-      Assert.assertTrue("!44@/B4Tb64lLpLSOpQlr7qYXclEbAfS9M4zkqYuJPbwLXY=: username length <= 0", bool1);
-      paramk.qa();
-      ah.tD().rq().a(field_username, paramk);
-      return;
-      bool1 = false;
-      break;
-      bool1 = false;
-      break label25;
-    }
-  }
-  
-  public static void o(k paramk)
-  {
-    boolean bool2 = true;
-    if (paramk != null)
-    {
-      bool1 = true;
-      Assert.assertTrue(bool1);
-      if ((int)bvi == 0) {
-        break label71;
-      }
-      bool1 = true;
-      label22:
-      Assert.assertTrue(bool1);
-      if (field_username.length() <= 0) {
-        break label76;
-      }
-    }
-    label71:
-    label76:
-    for (boolean bool1 = bool2;; bool1 = false)
-    {
-      Assert.assertTrue(bool1);
-      paramk.qa();
-      ah.tD().rq().a(field_username, paramk);
-      r(paramk);
-      return;
-      bool1 = false;
-      break;
-      bool1 = false;
-      break label22;
-    }
-  }
-  
-  public static void p(k paramk)
-  {
-    boolean bool2 = true;
-    if (paramk != null)
-    {
-      bool1 = true;
-      Assert.assertTrue(bool1);
-      if ((int)bvi == 0) {
-        break label64;
-      }
-      bool1 = true;
-      label22:
-      Assert.assertTrue(bool1);
-      if (field_username.length() <= 0) {
-        break label69;
-      }
-    }
-    label64:
-    label69:
-    for (boolean bool1 = bool2;; bool1 = false)
-    {
-      Assert.assertTrue(bool1);
-      paramk.setType(field_type | 0x8000);
-      r(paramk);
-      return;
-      bool1 = false;
-      break;
-      bool1 = false;
-      break label22;
-    }
-  }
-  
-  private static void q(k paramk)
-  {
-    boolean bool;
-    aeg localaeg;
-    if (paramk != null)
-    {
-      bool = true;
-      Assert.assertTrue(bool);
-      if ((int)bvi == 0)
-      {
-        ah.tD().rq().N(paramk);
-        ah.tD().rq().Ep(field_username);
-      }
-      ah.tD().rq().a(field_username, paramk);
-      localaeg = new aeg();
-      jAL = field_username;
-      if (!paramk.qt()) {
-        break label111;
-      }
-    }
-    label111:
-    for (jAX = 1;; jAX = 2)
-    {
-      ah.tD().rp().b(new b.a(52, localaeg));
-      return;
-      bool = false;
-      break;
-    }
-  }
-  
   public static void r(k paramk)
   {
     if (paramk != null) {}
     for (boolean bool = true;; bool = false)
     {
       Assert.assertTrue(bool);
-      if ((int)bvi == 0)
+      if ((int)bjS == 0)
       {
-        ah.tD().rq().N(paramk);
-        ah.tD().rq().Ep(field_username);
+        ah.tE().rr().N(paramk);
+        ah.tE().rr().GD(field_username);
       }
-      ah.tD().rq().a(field_username, paramk);
+      ah.tE().rr().a(field_username, paramk);
       s(paramk);
       return;
     }
@@ -1374,43 +1414,43 @@ public final class i
   
   public static void s(k paramk)
   {
-    u.i("!44@/B4Tb64lLpLSOpQlr7qYXclEbAfS9M4zkqYuJPbwLXY=", "oplog modContact user:%s remark:%s type:%d ", new Object[] { field_username, field_conRemark, Integer.valueOf(field_type) });
-    new adt();
-    adt localadt = new adt();
-    jhS = new aly().Cr(ay.ky(field_username));
-    jwg = new aly().Cr(ay.ky(field_nickname));
-    jhI = new aly().Cr(ay.ky(paramk.md()));
-    jhJ = new aly().Cr(ay.ky(paramk.me()));
-    bLM = aSu;
-    jhf = 36735;
-    jhg = field_type;
-    jAj = new aly().Cr(ay.ky(field_conRemark));
-    jAk = new aly().Cr(ay.ky(field_conRemarkPYShort));
-    jAl = new aly().Cr(ay.ky(field_conRemarkPYFull));
-    jhl = aSz;
-    jAs = new aly().Cr(ay.ky(field_domainList));
-    jhp = aSC;
-    bLQ = aSD;
-    bLP = ay.ky(aSE);
-    bLO = ay.ky(paramk.getCityCode());
-    bLN = ay.ky(paramk.aWt());
-    jxi = ay.ky(aSJ);
-    jxk = field_weiboFlag;
-    jAo = 0;
-    iXx = new alx();
-    bLV = ay.ky(paramk.getCountryCode());
-    jhU = field_contactLabelIds;
-    ah.tD().rp().b(new b.a(2, localadt));
+    v.i("MicroMsg.ContactStorageLogic", "oplog modContact user:%s remark:%s type:%d ", new Object[] { field_username, field_conRemark, Integer.valueOf(field_type) });
+    new aem();
+    aem localaem = new aem();
+    jFX = new amj().EF(be.li(field_username));
+    jUO = new amj().EF(be.li(field_nickname));
+    jFN = new amj().EF(be.li(paramk.kt()));
+    jFO = new amj().EF(be.li(paramk.ku()));
+    bFg = aFd;
+    jFe = 36735;
+    jFf = field_type;
+    jYW = new amj().EF(be.li(field_conRemark));
+    jYX = new amj().EF(be.li(field_conRemarkPYShort));
+    jYY = new amj().EF(be.li(field_conRemarkPYFull));
+    jFk = aFi;
+    jZf = new amj().EF(be.li(field_domainList));
+    jFo = aFl;
+    bFk = aFm;
+    bFj = be.li(aFn);
+    bFi = be.li(paramk.getCityCode());
+    bFh = be.li(paramk.bbG());
+    jVO = be.li(aFs);
+    jVQ = field_weiboFlag;
+    jZb = 0;
+    jvb = new ami();
+    bFp = be.li(paramk.getCountryCode());
+    jGa = field_contactLabelIds;
+    ah.tE().rq().b(new b.a(2, localaem));
   }
   
-  public static List sN()
+  public static List<String> sM()
   {
-    Object localObject1 = ah.tD().rq();
-    Object localObject2 = "select username from rcontact where " + q.aWE();
-    localObject1 = aoX.rawQuery((String)localObject2, null);
+    Object localObject1 = ah.tE().rr();
+    Object localObject2 = "select username from rcontact where " + q.bbS();
+    localObject1 = bkP.rawQuery((String)localObject2, null);
     localObject2 = new LinkedList();
     if (localObject1 == null) {
-      return (List)localObject2;
+      return (List<String>)localObject2;
     }
     if (((Cursor)localObject1).moveToFirst()) {
       do
@@ -1419,20 +1459,20 @@ public final class i
       } while (((Cursor)localObject1).moveToNext());
     }
     ((Cursor)localObject1).close();
-    return (List)localObject2;
+    return (List<String>)localObject2;
   }
   
-  public static List sO()
+  public static List<k> sN()
   {
     ArrayList localArrayList = new ArrayList();
-    Object localObject1 = ah.tD().rq();
-    Object localObject2 = "select * ,rowid from rcontact  where " + q.aWF();
-    localObject1 = aoX.rawQuery((String)localObject2, null);
+    Object localObject1 = ah.tE().rr();
+    Object localObject2 = "select * ,rowid from rcontact  where " + q.bbT();
+    localObject1 = bkP.rawQuery((String)localObject2, null);
     if (((Cursor)localObject1).moveToFirst()) {
       do
       {
         localObject2 = new k();
-        ((k)localObject2).c((Cursor)localObject1);
+        ((k)localObject2).b((Cursor)localObject1);
         localArrayList.add(localObject2);
       } while (((Cursor)localObject1).moveToNext());
     }
@@ -1440,42 +1480,42 @@ public final class i
     return localArrayList;
   }
   
-  public static boolean sP()
+  public static boolean sO()
   {
     return false;
   }
   
+  public static boolean sP()
+  {
+    if (!h.sK()) {}
+    am localam;
+    do
+    {
+      return false;
+      localam = ah.tE().rx().HT("@t.qq.com");
+    } while ((localam == null) || (be.kf(name)));
+    return true;
+  }
+  
   public static boolean sQ()
   {
-    if (!h.sI()) {}
-    ak localak;
+    if (!h.sK()) {}
+    am localam;
     do
     {
       return false;
-      localak = ah.tD().rv().FD("@t.qq.com");
-    } while ((localak == null) || (ay.kz(name)));
+      localam = ah.tE().rx().HT("@t.qq.com");
+    } while ((localam == null) || (be.li(name).length() == 0));
     return true;
   }
   
-  public static boolean sR()
-  {
-    if (!h.sI()) {}
-    ak localak;
-    do
-    {
-      return false;
-      localak = ah.tD().rv().FD("@t.qq.com");
-    } while ((localak == null) || (ay.ky(name).length() == 0));
-    return true;
-  }
-  
-  public static List sS()
+  public static List<k> sR()
   {
     LinkedList localLinkedList = new LinkedList();
-    Object localObject1 = ah.tD().rq();
-    Object localObject2 = "select * ,rowid from rcontact " + q.aWD() + " AND " + q.keY + " AND " + q.keX + q.aWC();
-    u.v("!32@/B4Tb64lLpLSOpQlr7qYXa3KX0iP+QzT", (String)localObject2);
-    localObject1 = aoX.rawQuery((String)localObject2, null);
+    Object localObject1 = ah.tE().rr();
+    Object localObject2 = "select * ,rowid from rcontact " + q.bbR() + " AND " + q.kFf + " AND " + q.kFe + q.bbQ();
+    v.v("MicroMsg.ContactStorage", (String)localObject2);
+    localObject1 = bkP.rawQuery((String)localObject2, null);
     if (((Cursor)localObject1).getCount() == 0)
     {
       ((Cursor)localObject1).close();
@@ -1485,21 +1525,21 @@ public final class i
     do
     {
       localObject2 = new k();
-      ((k)localObject2).c((Cursor)localObject1);
+      ((k)localObject2).b((Cursor)localObject1);
       localLinkedList.add(localObject2);
     } while (((Cursor)localObject1).moveToNext());
     ((Cursor)localObject1).close();
-    u.d("!44@/B4Tb64lLpLSOpQlr7qYXclEbAfS9M4zkqYuJPbwLXY=", "getFavourList size:  " + localLinkedList.size());
+    v.d("MicroMsg.ContactStorageLogic", "getFavourList size:  " + localLinkedList.size());
     return localLinkedList;
   }
   
-  public static List sT()
+  public static List<String> sS()
   {
     LinkedList localLinkedList = new LinkedList();
-    Object localObject1 = ah.tD().rq();
-    Object localObject2 = "select * ,rowid from rcontact " + q.aWD() + " AND type & 256" + " !=0 " + q.aWB();
-    u.v("!32@/B4Tb64lLpLSOpQlr7qYXa3KX0iP+QzT", (String)localObject2);
-    localObject1 = aoX.rawQuery((String)localObject2, null);
+    Object localObject1 = ah.tE().rr();
+    Object localObject2 = "select * ,rowid from rcontact " + q.bbR() + " AND type & 256" + " !=0 " + q.bbP();
+    v.v("MicroMsg.ContactStorage", (String)localObject2);
+    localObject1 = bkP.rawQuery((String)localObject2, null);
     if (((Cursor)localObject1).getCount() == 0)
     {
       ((Cursor)localObject1).close();
@@ -1509,17 +1549,17 @@ public final class i
     do
     {
       localObject2 = new k();
-      ((k)localObject2).c((Cursor)localObject1);
+      ((k)localObject2).b((Cursor)localObject1);
       localLinkedList.add(field_username);
     } while (((Cursor)localObject1).moveToNext());
     ((Cursor)localObject1).close();
-    u.d("!44@/B4Tb64lLpLSOpQlr7qYXclEbAfS9M4zkqYuJPbwLXY=", "getSnsBlackContactList size:  " + localLinkedList.size());
+    v.d("MicroMsg.ContactStorageLogic", "getSnsBlackContactList size:  " + localLinkedList.size());
     return localLinkedList;
   }
   
-  public static int sU()
+  public static int sT()
   {
-    return ah.tD().rq().b(bAc, new String[] { h.sc(), "weixin", "helper_entry", "filehelper" });
+    return ah.tE().rr().b(btf, new String[] { h.se(), "weixin", "helper_entry", "filehelper" });
   }
   
   public static boolean t(k paramk)

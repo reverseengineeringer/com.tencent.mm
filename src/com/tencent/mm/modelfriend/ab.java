@@ -2,58 +2,58 @@ package com.tencent.mm.modelfriend;
 
 import com.tencent.mm.network.e;
 import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b.aly;
-import com.tencent.mm.protocal.b.anr;
-import com.tencent.mm.protocal.b.ans;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.d;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.protocal.b.amj;
+import com.tencent.mm.protocal.b.aoc;
+import com.tencent.mm.protocal.b.aod;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.d;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
 public final class ab
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private d anM = null;
-  private final a anN;
+  private final a bkQ;
+  private d bkT = null;
   
-  public ab(String paramString, List paramList)
+  public ab(String paramString, List<String> paramList)
   {
     Object localObject = new a.a();
-    bFa = new anr();
-    bFb = new ans();
+    byl = new aoc();
+    bym = new aod();
     uri = "/cgi-bin/micromsg-bin/sendsmstomfriend";
-    bEY = 432;
-    bFc = 0;
-    bFd = 0;
-    anN = ((a.a)localObject).vy();
-    localObject = (anr)anN.bEW.bFf;
-    jiB = paramString;
-    jxQ = new LinkedList();
-    jxP = paramList.size();
+    byj = 432;
+    byn = 0;
+    byo = 0;
+    bkQ = ((a.a)localObject).vA();
+    localObject = (aoc)bkQ.byh.byq;
+    jGI = paramString;
+    jWw = new LinkedList();
+    jWv = paramList.size();
     paramString = paramList.iterator();
     while (paramString.hasNext())
     {
       paramList = (String)paramString.next();
-      if (!ay.kz(paramList)) {
-        jxQ.add(new aly().Cr(paramList));
+      if (!be.kf(paramList)) {
+        jWw.add(new amj().EF(paramList));
       }
     }
   }
   
   public final int a(e parame, d paramd)
   {
-    anM = paramd;
-    return a(parame, anN, this);
+    bkT = paramd;
+    return a(parame, bkQ, this);
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    anM.a(paramInt2, paramInt3, paramString, this);
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()

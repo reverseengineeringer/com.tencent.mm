@@ -1,97 +1,142 @@
 package com.tencent.mm.am;
 
-import com.tencent.mm.d.b.ac;
-import com.tencent.mm.sdk.h.c.a;
-import java.lang.reflect.Field;
-import java.util.Map;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.ami;
+import com.tencent.mm.protocal.b.awb;
+import com.tencent.mm.protocal.b.awc;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.k;
+import com.tencent.mm.storage.q;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.a.c;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j.b;
+import java.io.File;
 
 public final class b
-  extends ac
+  extends com.tencent.mm.t.j
+  implements com.tencent.mm.network.j
 {
-  protected static c.a aot;
+  private String anE;
+  public String bRS;
+  private com.tencent.mm.t.a bkQ;
+  private d bkT;
+  private int bxA;
+  private int bxB;
+  private String clientId;
+  private String username;
   
-  static
+  private b(String paramString)
   {
-    c.a locala = new c.a();
-    ceD = new Field[17];
-    blR = new String[18];
-    StringBuilder localStringBuilder = new StringBuilder();
-    blR[0] = "talker";
-    jYx.put("talker", "TEXT default '0'  PRIMARY KEY ");
-    localStringBuilder.append(" talker TEXT default '0'  PRIMARY KEY ");
-    localStringBuilder.append(", ");
-    jYw = "talker";
-    blR[1] = "encryptTalker";
-    jYx.put("encryptTalker", "TEXT default '' ");
-    localStringBuilder.append(" encryptTalker TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[2] = "displayName";
-    jYx.put("displayName", "TEXT default '' ");
-    localStringBuilder.append(" displayName TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[3] = "state";
-    jYx.put("state", "INTEGER default '0' ");
-    localStringBuilder.append(" state INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    blR[4] = "lastModifiedTime";
-    jYx.put("lastModifiedTime", "LONG default '0' ");
-    localStringBuilder.append(" lastModifiedTime LONG default '0' ");
-    localStringBuilder.append(", ");
-    blR[5] = "isNew";
-    jYx.put("isNew", "INTEGER default '0' ");
-    localStringBuilder.append(" isNew INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    blR[6] = "addScene";
-    jYx.put("addScene", "INTEGER default '0' ");
-    localStringBuilder.append(" addScene INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    blR[7] = "fmsgSysRowId";
-    jYx.put("fmsgSysRowId", "LONG default '0' ");
-    localStringBuilder.append(" fmsgSysRowId LONG default '0' ");
-    localStringBuilder.append(", ");
-    blR[8] = "fmsgIsSend";
-    jYx.put("fmsgIsSend", "INTEGER default '0' ");
-    localStringBuilder.append(" fmsgIsSend INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    blR[9] = "fmsgType";
-    jYx.put("fmsgType", "INTEGER default '0' ");
-    localStringBuilder.append(" fmsgType INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    blR[10] = "fmsgContent";
-    jYx.put("fmsgContent", "TEXT default '' ");
-    localStringBuilder.append(" fmsgContent TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[11] = "recvFmsgType";
-    jYx.put("recvFmsgType", "INTEGER default '0' ");
-    localStringBuilder.append(" recvFmsgType INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    blR[12] = "contentFromUsername";
-    jYx.put("contentFromUsername", "TEXT default '' ");
-    localStringBuilder.append(" contentFromUsername TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[13] = "contentNickname";
-    jYx.put("contentNickname", "TEXT default '' ");
-    localStringBuilder.append(" contentNickname TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[14] = "contentPhoneNumMD5";
-    jYx.put("contentPhoneNumMD5", "TEXT default '' ");
-    localStringBuilder.append(" contentPhoneNumMD5 TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[15] = "contentFullPhoneNumMD5";
-    jYx.put("contentFullPhoneNumMD5", "TEXT default '' ");
-    localStringBuilder.append(" contentFullPhoneNumMD5 TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[16] = "contentVerifyContent";
-    jYx.put("contentVerifyContent", "TEXT default '' ");
-    localStringBuilder.append(" contentVerifyContent TEXT default '' ");
-    blR[17] = "rowid";
-    jYy = localStringBuilder.toString();
-    aot = locala;
+    username = paramString;
+    bxA = 0;
+    bxB = 0;
+    clientId = (tEuin + System.currentTimeMillis());
   }
   
-  protected final c.a ls()
+  public b(String paramString1, String paramString2)
   {
-    return aot;
+    this(paramString1);
+    anE = paramString2;
+  }
+  
+  public final int a(com.tencent.mm.network.e parame, d paramd)
+  {
+    bkT = paramd;
+    if ((anE == null) || (anE.length() == 0))
+    {
+      v.e("MicroMsg.NetSceneUploadCardImg", "imgPath is null or length = 0");
+      return -1;
+    }
+    if (!com.tencent.mm.a.e.aB(anE))
+    {
+      v.e("MicroMsg.NetSceneUploadCardImg", "The img does not exist, imgPath = " + anE);
+      return -1;
+    }
+    if (bxA == 0) {
+      bxA = ((int)new File(anE).length());
+    }
+    paramd = new a.a();
+    byl = new awb();
+    bym = new awc();
+    uri = "/cgi-bin/micromsg-bin/uploadcardimg";
+    byj = 575;
+    byn = 0;
+    byo = 0;
+    bkQ = paramd.vA();
+    int i = Math.min(bxA - bxB, 32768);
+    paramd = com.tencent.mm.a.e.c(anE, bxB, i);
+    if (paramd == null)
+    {
+      v.e("MicroMsg.NetSceneUploadCardImg", "readFromFile error");
+      return -1;
+    }
+    v.i("MicroMsg.NetSceneUploadCardImg", "doScene uploadLen:%d, total: %d", new Object[] { Integer.valueOf(paramd.length), Integer.valueOf(bxA) });
+    awb localawb = (awb)bkQ.byh.byq;
+    jGj = username;
+    jwi = bxA;
+    jwj = bxB;
+    jxU = new ami().aV(paramd);
+    jwk = jxU.kfQ;
+    juO = clientId;
+    return a(parame, bkQ, this);
+  }
+  
+  protected final int a(o paramo)
+  {
+    if ((anE == null) || (anE.length() == 0)) {
+      return j.b.byU;
+    }
+    return j.b.byT;
+  }
+  
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
+  {
+    v.d("MicroMsg.NetSceneUploadCardImg", "onGYNetEnd:%s, %s", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3) });
+    if ((paramInt2 != 0) || (paramInt3 != 0))
+    {
+      v.e("MicroMsg.NetSceneUploadCardImg", "upload card img error");
+      bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
+      return;
+    }
+    paramo = (awc)byi.byq;
+    bRS = jZv;
+    bxB = jwj;
+    if (bxB < bxA)
+    {
+      if (a(byD, bkT) < 0)
+      {
+        v.e("MicroMsg.NetSceneUploadCardImg", "doScene again failed");
+        bkT.onSceneEnd(3, -1, "", this);
+      }
+      v.d("MicroMsg.NetSceneUploadCardImg", "doScene again");
+      return;
+    }
+    if (!be.kf(bRS))
+    {
+      paramo = ah.tE().rr().GD(username);
+      if ((paramo != null) && ((int)bjS > 0) && (com.tencent.mm.i.a.cy(field_type)))
+      {
+        paramo.bX(bRS);
+        ah.tE().rr().a(username, paramo);
+      }
+    }
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
+  }
+  
+  public final int getType()
+  {
+    return 575;
+  }
+  
+  protected final int px()
+  {
+    return 100;
   }
 }
 

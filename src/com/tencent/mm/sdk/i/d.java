@@ -6,12 +6,12 @@ import java.util.concurrent.atomic.AtomicInteger;
 final class d
   implements ThreadFactory
 {
-  private ThreadGroup bTi = new ThreadGroup("MM_THREAD_POOL_GROUP");
-  private final AtomicInteger jYO = new AtomicInteger(1);
+  private ThreadGroup bMH = new ThreadGroup("MM_THREAD_POOL_GROUP");
+  private final AtomicInteger kzl = new AtomicInteger(1);
   
   public final Thread newThread(Runnable paramRunnable)
   {
-    paramRunnable = new Thread(bTi, paramRunnable, "MM_Thread_Pool_Thread#" + jYO.getAndIncrement());
+    paramRunnable = new Thread(bMH, paramRunnable, "MM_Thread_Pool_Thread#" + kzl.getAndIncrement());
     if (paramRunnable.isDaemon()) {
       paramRunnable.setDaemon(false);
     }

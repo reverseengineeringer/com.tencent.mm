@@ -5,22 +5,22 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 final class a$a
-  extends com.tencent.mm.ui.e.a.a.a
+  extends com.tencent.mm.ui.f.a.a.a
 {
-  public TextView cNT;
-  public ImageView czS;
-  public TextView dVy;
-  public TextView hnm;
-  public LinearLayout hnn;
-  public ImageView hno;
-  public LinearLayout hnp;
-  public ImageView hnq;
-  public ImageView hnr;
-  public ImageView hns;
-  public ImageView hnt;
-  public ImageView hnu;
-  public TextView hnv;
-  public ImageView hnw;
+  public ImageView cui;
+  public TextView cuj;
+  public TextView dXF;
+  public TextView hDI;
+  public LinearLayout hDJ;
+  public ImageView hDK;
+  public LinearLayout hDL;
+  public ImageView hDM;
+  public ImageView hDN;
+  public ImageView hDO;
+  public ImageView hDP;
+  public ImageView hDQ;
+  public TextView hDR;
+  public ImageView hDS;
   
   private a$a(a parama)
   {

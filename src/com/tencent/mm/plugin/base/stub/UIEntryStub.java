@@ -8,9 +8,9 @@ import com.tencent.mm.model.ah;
 import com.tencent.mm.model.as;
 import com.tencent.mm.model.as.a;
 import com.tencent.mm.network.e;
-import com.tencent.mm.r.m;
 import com.tencent.mm.sdk.modelmsg.c.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.base.a;
 import com.tencent.mm.ui.transmit.SendAppMessageWrapperUI;
 
@@ -18,29 +18,29 @@ import com.tencent.mm.ui.transmit.SendAppMessageWrapperUI;
 public class UIEntryStub
   extends Activity
 {
-  private String cAX;
-  private int cAY;
-  private Intent cAZ;
+  private String cxS;
+  private int cxT;
+  private Intent cxU;
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    NotifyReceiver.mS();
+    NotifyReceiver.lf();
   }
   
   public void onNewIntent(Intent paramIntent)
   {
     super.onNewIntent(paramIntent);
-    cAZ = paramIntent;
+    cxU = paramIntent;
   }
   
   public void onResume()
   {
     super.onResume();
-    if (cAZ == null) {
-      cAZ = getIntent();
+    if (cxU == null) {
+      cxU = getIntent();
     }
-    ah.tE().d(new as(new as.a()
+    ah.tF().a(new as(new as.a()
     {
       public final void a(e paramAnonymouse)
       {
@@ -51,7 +51,7 @@ public class UIEntryStub
         }
         UIEntryStub.a(UIEntryStub.this, UIEntryStub.a(UIEntryStub.this).getExtras());
       }
-    }));
+    }), 0);
   }
 }
 

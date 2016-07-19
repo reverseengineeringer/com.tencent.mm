@@ -1,16 +1,8 @@
 package com.tencent.mm.ui.chatting;
 
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-final class eb
+public abstract interface eb
 {
-  ImageView cNV;
-  View dFN;
-  TextView dda;
-  TextView kXB;
-  SendDataToDeviceProgressBar ldT;
+  public abstract void iZ();
 }
 
 /* Location:

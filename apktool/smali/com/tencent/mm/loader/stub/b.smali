@@ -69,41 +69,6 @@
     goto :goto_2
 .end method
 
-.method public static deleteFile(Ljava/lang/String;)Z
-    .locals 3
-
-    .prologue
-    const/4 v0, 0x1
-
-    .line 57
-    if-nez p0, :cond_1
-
-    .line 65
-    :cond_0
-    :goto_0
-    return v0
-
-    .line 61
-    :cond_1
-    new-instance v1, Ljava/io/File;
-
-    invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    .line 62
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 63
-    invoke-virtual {v1}, Ljava/io/File;->delete()Z
-
-    move-result v0
-
-    goto :goto_0
-.end method
-
 .method public static final f(Ljava/io/File;)Z
     .locals 3
 

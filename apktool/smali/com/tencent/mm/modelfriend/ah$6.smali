@@ -13,9 +13,18 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/fp;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic bNM:Lcom/tencent/mm/modelfriend/ah;
+.field final synthetic bHi:Lcom/tencent/mm/modelfriend/ah;
 
 
 # direct methods
@@ -23,143 +32,65 @@
     .locals 1
 
     .prologue
-    .line 70
-    iput-object p1, p0, Lcom/tencent/mm/modelfriend/ah$6;->bNM:Lcom/tencent/mm/modelfriend/ah;
+    .line 56
+    iput-object p1, p0, Lcom/tencent/mm/modelfriend/ah$6;->bHi:Lcom/tencent/mm/modelfriend/ah;
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/fp;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/modelfriend/ah$6;->kum:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
-    .locals 5
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
+    .locals 4
 
     .prologue
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
-    .line 73
-    instance-of v0, p1, Lcom/tencent/mm/d/a/fd;
+    .line 56
+    check-cast p1, Lcom/tencent/mm/e/a/fp;
+
+    instance-of v0, p1, Lcom/tencent/mm/e/a/fp;
 
     if-eqz v0, :cond_0
 
-    .line 74
-    check-cast p1, Lcom/tencent/mm/d/a/fd;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/fp;->amq:Lcom/tencent/mm/e/a/fp$a;
 
-    .line 75
-    iget-object v0, p1, Lcom/tencent/mm/d/a/fd;->azT:Lcom/tencent/mm/d/a/fd$a;
+    iget v1, v0, Lcom/tencent/mm/e/a/fp$a;->scene:I
 
-    iget-object v0, v0, Lcom/tencent/mm/d/a/fd$a;->azV:Ljava/lang/String;
+    new-instance v2, Lcom/tencent/mm/modelfriend/x;
 
-    .line 76
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-direct {v2}, Lcom/tencent/mm/modelfriend/x;-><init>()V
 
-    move-result v1
+    iget-object v0, v2, Lcom/tencent/mm/modelfriend/x;->bkQ:Lcom/tencent/mm/t/a;
 
-    if-eqz v1, :cond_1
+    iget-object v0, v0, Lcom/tencent/mm/t/a;->byh:Lcom/tencent/mm/t/a$b;
 
-    .line 77
-    const-string/jumbo v0, "!32@/B4Tb64lLpIAhUt0Bg2QTmX1gbcykzY6"
+    iget-object v0, v0, Lcom/tencent/mm/t/a$b;->byq:Lcom/tencent/mm/ax/a;
 
-    const-string/jumbo v1, "hy: mobile number is null"
+    check-cast v0, Lcom/tencent/mm/protocal/b/ue;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    iput v1, v0, Lcom/tencent/mm/protocal/b/ue;->jtN:I
 
-    .line 85
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
+
     :cond_0
-    :goto_0
-    return v4
-
-    .line 80
-    :cond_1
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zq()Lcom/tencent/mm/modelfriend/c;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v3, "select addr_upload2.username from addr_upload2 where addr_upload2.moblie = "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, v1, Lcom/tencent/mm/modelfriend/c;->bCw:Lcom/tencent/mm/az/g;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/az/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/util/LinkedList;
-
-    invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
-
-    :goto_1
-    invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_2
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    .line 81
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    const-string/jumbo v0, ""
-
-    .line 82
-    :goto_2
-    const-string/jumbo v1, "!32@/B4Tb64lLpIAhUt0Bg2QTmX1gbcykzY6"
-
-    const-string/jumbo v2, "hy: username: %s"
-
-    const/4 v3, 0x1
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    aput-object v0, v3, v4
-
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 83
-    iget-object v1, p1, Lcom/tencent/mm/d/a/fd;->azU:Lcom/tencent/mm/d/a/fd$b;
-
-    iput-object v0, v1, Lcom/tencent/mm/d/a/fd$b;->ajh:Ljava/lang/String;
-
-    goto :goto_0
-
-    .line 81
-    :cond_3
-    invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    goto :goto_2
+    return v3
 .end method

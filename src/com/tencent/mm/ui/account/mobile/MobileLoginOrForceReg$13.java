@@ -13,20 +13,20 @@ final class MobileLoginOrForceReg$13
   
   public final void onClick(View paramView)
   {
-    if (MobileLoginOrForceReg.g(kyq) == null)
+    if (MobileLoginOrForceReg.g(kXx) == null)
     {
       paramView = new Intent();
-      b.kC("R200_900_phone");
-      paramView.putExtra("regsetinfo_ticket", MobileLoginOrForceReg.h(kyq));
-      paramView.putExtra("regsetinfo_user", MobileLoginOrForceReg.e(kyq));
+      b.ll("R200_900_phone");
+      paramView.putExtra("regsetinfo_ticket", MobileLoginOrForceReg.h(kXx));
+      paramView.putExtra("regsetinfo_user", MobileLoginOrForceReg.e(kXx));
       paramView.putExtra("regsetinfo_ismobile", 1);
       paramView.putExtra("regsetinfo_isForce", true);
-      paramView.putExtra("regsetinfo_NextControl", MobileLoginOrForceReg.i(kyq));
-      paramView.setClass(kyq, RegSetInfoUI.class);
-      kyq.startActivity(paramView);
+      paramView.putExtra("regsetinfo_NextControl", MobileLoginOrForceReg.i(kXx));
+      paramView.setClass(kXx, RegSetInfoUI.class);
+      kXx.startActivity(paramView);
       return;
     }
-    MobileLoginOrForceReg.j(kyq);
+    MobileLoginOrForceReg.j(kXx);
   }
 }
 

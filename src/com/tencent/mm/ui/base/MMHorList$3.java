@@ -15,18 +15,18 @@ final class MMHorList$3
   
   public final boolean onDown(MotionEvent paramMotionEvent)
   {
-    return kFg.bcq();
+    return lej.bhF();
   }
   
   public final boolean onFling(MotionEvent paramMotionEvent1, MotionEvent paramMotionEvent2, float paramFloat1, float paramFloat2)
   {
-    return kFg.E(paramFloat1);
+    return lej.C(paramFloat1);
   }
   
   public final boolean onScroll(MotionEvent paramMotionEvent1, MotionEvent paramMotionEvent2, float paramFloat1, float paramFloat2)
   {
-    MMHorList.a(kFg, (int)paramFloat1);
-    kFg.requestLayout();
+    MMHorList.a(lej, (int)paramFloat1);
+    lej.requestLayout();
     return true;
   }
   
@@ -36,20 +36,20 @@ final class MMHorList$3
     int i = 0;
     for (;;)
     {
-      if (i < kFg.getChildCount())
+      if (i < lej.getChildCount())
       {
-        View localView = kFg.getChildAt(i);
+        View localView = lej.getChildAt(i);
         int j = localView.getLeft();
         int k = localView.getRight();
         localRect.set(j, localView.getTop(), k, localView.getBottom());
         if (!localRect.contains((int)paramMotionEvent.getX(), (int)paramMotionEvent.getY())) {
           break label207;
         }
-        if (MMHorList.c(kFg) != null) {
-          MMHorList.c(kFg).onItemClick(kFg, localView, MMHorList.d(kFg) + 1 + i, MMHorList.e(kFg).getItemId(MMHorList.d(kFg) + 1 + i));
+        if (MMHorList.c(lej) != null) {
+          MMHorList.c(lej).onItemClick(lej, localView, MMHorList.d(lej) + 1 + i, MMHorList.e(lej).getItemId(MMHorList.d(lej) + 1 + i));
         }
-        if (MMHorList.f(kFg) != null) {
-          MMHorList.f(kFg).onItemSelected(kFg, localView, MMHorList.d(kFg) + 1 + i, MMHorList.e(kFg).getItemId(MMHorList.d(kFg) + 1 + i));
+        if (MMHorList.f(lej) != null) {
+          MMHorList.f(lej).onItemSelected(lej, localView, MMHorList.d(lej) + 1 + i, MMHorList.e(lej).getItemId(MMHorList.d(lej) + 1 + i));
         }
       }
       return true;

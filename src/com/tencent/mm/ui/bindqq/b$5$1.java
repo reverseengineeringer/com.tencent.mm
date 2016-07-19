@@ -2,17 +2,19 @@ package com.tencent.mm.ui.bindqq;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
-import com.tencent.mm.r.m;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.modelsimple.af;
+import com.tencent.mm.t.m;
 
 final class b$5$1
   implements DialogInterface.OnCancelListener
 {
-  b$5$1(b.5 param5, com.tencent.mm.modelsimple.ah paramah) {}
+  b$5$1(b.5 param5, af paramaf) {}
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    kPB.kPA.onDetach();
-    com.tencent.mm.model.ah.tE().c(gld);
+    loR.loQ.onDetach();
+    ah.tF().c(gvy);
   }
 }
 

@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field private rg:Z
+.field private rt:Z
 
 
 # direct methods
@@ -40,7 +40,7 @@
 
     .prologue
     .line 124
-    iput-boolean p1, p0, Landroid/support/v7/a/a;->rg:Z
+    iput-boolean p1, p0, Landroid/support/v7/a/a;->rt:Z
 
     .line 125
     return-void

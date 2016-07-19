@@ -11,9 +11,9 @@ import org.json.JSONObject;
 public final class n
   implements Runnable
 {
-  public static long akg = -1L;
-  private a ake = null;
-  int akf = 0;
+  public static long VZ = -1L;
+  private a VX = null;
+  int VY = 0;
   private Context mContext = null;
   private int mType = 0;
   
@@ -23,33 +23,33 @@ public final class n
     mType = paramInt;
   }
   
-  private void b(JSONObject paramJSONObject)
+  private void a(JSONObject paramJSONObject)
   {
-    if ((i.ajU == null) || (j.aka == 1)) {
+    if ((i.VN == null) || (j.VT == 1)) {
       return;
     }
-    if ((j.akb > 0) && (akf > j.akb))
+    if ((j.VU > 0) && (VY > j.VU))
     {
-      new StringBuilder("limit dispatch:").append(j.akb);
+      new StringBuilder("limit dispatch:").append(j.VU);
       return;
     }
-    paramJSONObject = new m(mContext, paramJSONObject).kf().toString();
-    i.ajU.aq("[" + paramJSONObject + "]");
-    akg = System.currentTimeMillis();
-    akf += 1;
+    paramJSONObject = new m(mContext, paramJSONObject).iG().toString();
+    i.VN.au("[" + paramJSONObject + "]");
+    VZ = System.currentTimeMillis();
+    VY += 1;
   }
   
-  private void kg()
+  private void iH()
   {
-    g localg1 = r.S(mContext).h(new ArrayList(Arrays.asList(new Integer[] { Integer.valueOf(1) })));
-    g localg2 = r.S(mContext).h(new ArrayList(Arrays.asList(new Integer[] { Integer.valueOf(2) })));
-    g localg3 = r.S(mContext).h(new ArrayList(Arrays.asList(new Integer[] { Integer.valueOf(4) })));
+    g localg1 = r.O(mContext).k(new ArrayList(Arrays.asList(new Integer[] { Integer.valueOf(1) })));
+    g localg2 = r.O(mContext).k(new ArrayList(Arrays.asList(new Integer[] { Integer.valueOf(2) })));
+    g localg3 = r.O(mContext).k(new ArrayList(Arrays.asList(new Integer[] { Integer.valueOf(4) })));
     if ((s.b(localg1, localg2)) && (s.b(localg1, localg3))) {
       return;
     }
     localg1 = s.a(s.a(localg1, localg2), s.a(localg1, localg3));
     new StringBuilder("local mid check failed, redress with mid:").append(localg1.toString());
-    r.S(mContext).b(localg1);
+    r.O(mContext).b(localg1);
   }
   
   public final void run()
@@ -63,42 +63,42 @@ public final class n
     for (;;)
     {
       return;
-      b(null);
+      a(null);
       return;
-      if (ake == null) {
-        ake = r.S(mContext).ki();
+      if (VX == null) {
+        VX = r.O(mContext).iJ();
       }
       long l1 = System.currentTimeMillis();
-      if (i.ajV <= 0L) {
-        i.ajV = PreferenceManager.getDefaultSharedPreferences(mContext).getLong("__MID_LAST_CHECK_TIME__", 0L);
+      if (i.VO <= 0L) {
+        i.VO = PreferenceManager.getDefaultSharedPreferences(mContext).getLong("__MID_LAST_CHECK_TIME__", 0L);
       }
-      long l2 = Math.abs(l1 - i.ajV);
-      new StringBuilder("check entity: ").append(ake.toString()).append(",duration:").append(l2);
-      if ((ake.ajw < 0) || (ake.ajw > 100)) {
-        ake.ajw = 3;
+      long l2 = Math.abs(l1 - i.VO);
+      new StringBuilder("check entity: ").append(VX.toString()).append(",duration:").append(l2);
+      if ((VX.Vn < 0) || (VX.Vn > 100)) {
+        VX.Vn = 3;
       }
-      long l3 = ake.ajw * e.ajO;
-      new StringBuilder("duration:").append(l2).append(",maxCheckDays:").append(l3).append(",mLastCheckTime:").append(i.ajV).append(",mCheckEntity:").append(ake);
+      long l3 = VX.Vn * e.VH;
+      new StringBuilder("duration:").append(l2).append(",maxCheckDays:").append(l3).append(",mLastCheckTime:").append(i.VO).append(",mCheckEntity:").append(VX);
       if (l2 < l3)
       {
-        if (l2 <= e.ajO) {
+        if (l2 <= e.VH) {
           continue;
         }
-        kg();
+        iH();
         return;
       }
-      kg();
+      iH();
       JSONObject localJSONObject = new JSONObject();
       try
       {
         localJSONObject.put("dur", l2);
         localJSONObject.put("md", l3);
-        localJSONObject.put("lct", i.ajV);
+        localJSONObject.put("lct", i.VO);
         localJSONObject.put("cur", l1);
-        if (akg > 0L) {
+        if (VZ > 0L) {
           continue;
         }
-        b(localJSONObject);
+        a(localJSONObject);
         return;
       }
       catch (JSONException localJSONException)

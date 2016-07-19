@@ -1,24 +1,21 @@
 package com.tencent.mm.ui;
 
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.view.View;
 import android.view.View.OnClickListener;
+import com.tencent.mm.e.a.u;
+import com.tencent.mm.sdk.c.a;
 
 final class j$6
   implements View.OnClickListener
 {
-  j$6(j paramj, String paramString) {}
+  j$6(j paramj) {}
   
   public final void onClick(View paramView)
   {
-    if (val$url != null)
-    {
-      paramView = new Intent("android.intent.action.VIEW");
-      paramView.setData(Uri.parse(val$url));
-      j.c(kpx).startActivity(paramView);
-    }
+    paramView = new u();
+    aet.type = 1;
+    a.kug.y(paramView);
+    j.b(kOB).setVisibility(8);
   }
 }
 

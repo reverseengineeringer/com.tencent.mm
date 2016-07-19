@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->a(Lcom/tencent/mm/plugin/sns/d/an$b;ILjava/lang/String;Ljava/lang/String;Z)V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->a(Lcom/tencent/mm/plugin/sns/e/am$b;ILjava/lang/String;Ljava/lang/String;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic hlt:Lcom/tencent/mm/plugin/sns/d/an$b;
+.field final synthetic hBl:Lcom/tencent/mm/plugin/sns/e/am$b;
 
-.field final synthetic hlu:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+.field final synthetic hBm:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;Lcom/tencent/mm/plugin/sns/d/an$b;)V
+.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;Lcom/tencent/mm/plugin/sns/e/am$b;)V
     .locals 0
 
     .prologue
     .line 134
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView$1;->hlu:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView$1;->hBm:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView$1;->hlt:Lcom/tencent/mm/plugin/sns/d/an$b;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView$1;->hBl:Lcom/tencent/mm/plugin/sns/e/am$b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,14 +53,14 @@
 
     .prologue
     .line 142
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView$1;->hlt:Lcom/tencent/mm/plugin/sns/d/an$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView$1;->hBl:Lcom/tencent/mm/plugin/sns/e/am$b;
 
     if-eqz v0, :cond_0
 
     .line 143
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView$1;->hlt:Lcom/tencent/mm/plugin/sns/d/an$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView$1;->hBl:Lcom/tencent/mm/plugin/sns/e/am$b;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/d/an;->a(Lcom/tencent/mm/plugin/sns/d/an$b;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/e/am;->a(Lcom/tencent/mm/plugin/sns/e/am$b;)V
 
     .line 145
     :cond_0

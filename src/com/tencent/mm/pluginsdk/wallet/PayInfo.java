@@ -8,67 +8,68 @@ import android.os.Parcelable.Creator;
 public class PayInfo
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
-  public String aCE;
-  public String aDT = "";
-  public String aEf;
-  public int aEm = 0;
-  public int aEn = -1;
+  public static final Parcelable.Creator<PayInfo> CREATOR = new Parcelable.Creator() {};
+  public String agl;
+  public int alL;
+  public String alN;
+  public String alO;
+  public String aoX;
+  public String apY = "";
   public String appId;
-  public String auy;
-  public int azD;
-  public String azF;
-  public String azG;
-  public int chp;
-  public String dWm;
-  public String ehC;
-  public boolean iTA = false;
-  public boolean iTB = true;
-  public String iTC;
-  public String iTD;
-  public Bundle iTE;
-  public int iTF = 0;
-  public int iTG = 0;
-  public int iTH;
-  public long iTI = 0L;
-  public int iTz = 0;
-  public String ibP;
+  public String aqj;
+  public int aqq = 0;
+  public int aqr = -1;
+  public int ccG;
+  public String dYv;
+  public String els;
+  public String ivM;
+  public int jqR = 0;
+  public boolean jqS = false;
+  public boolean jqT = true;
+  public String jqU;
+  public String jqV;
+  public Bundle jqW;
+  public int jqX = 0;
+  public int jqY = 0;
+  public int jqZ;
+  public long jra = 0L;
+  public int jrb = -1;
   
   public PayInfo() {}
   
   public PayInfo(Parcel paramParcel)
   {
-    aEm = paramParcel.readInt();
-    iTz = paramParcel.readInt();
-    dWm = paramParcel.readString();
-    ehC = paramParcel.readString();
+    aqq = paramParcel.readInt();
+    jqR = paramParcel.readInt();
+    dYv = paramParcel.readString();
+    els = paramParcel.readString();
     appId = paramParcel.readString();
-    ibP = paramParcel.readString();
-    aEf = paramParcel.readString();
-    iTC = paramParcel.readString();
-    auy = paramParcel.readString();
-    aCE = paramParcel.readString();
-    chp = paramParcel.readInt();
-    aEn = paramParcel.readInt();
+    ivM = paramParcel.readString();
+    aqj = paramParcel.readString();
+    jqU = paramParcel.readString();
+    agl = paramParcel.readString();
+    aoX = paramParcel.readString();
+    ccG = paramParcel.readInt();
+    aqr = paramParcel.readInt();
     if (paramParcel.readInt() == 1)
     {
       bool1 = true;
-      iTA = bool1;
+      jqS = bool1;
       if (paramParcel.readInt() != 1) {
-        break label240;
+        break label245;
       }
     }
-    label240:
+    label245:
     for (boolean bool1 = bool2;; bool1 = false)
     {
-      iTB = bool1;
-      iTE = paramParcel.readBundle();
-      iTF = paramParcel.readInt();
-      azF = paramParcel.readString();
-      azG = paramParcel.readString();
-      azD = paramParcel.readInt();
-      iTI = paramParcel.readLong();
-      aDT = paramParcel.readString();
+      jqT = bool1;
+      jqW = paramParcel.readBundle();
+      jqX = paramParcel.readInt();
+      alN = paramParcel.readString();
+      alO = paramParcel.readString();
+      alL = paramParcel.readInt();
+      jra = paramParcel.readLong();
+      apY = paramParcel.readString();
       return;
       bool1 = false;
       break;
@@ -82,29 +83,29 @@ public class PayInfo
   
   public String toString()
   {
-    return String.format("sense : %d, reqKey : %s, uuid : %s, appId : %s, appSource : %s, partnerId : %s, paySign : %s, productId : %s, soterAuth: %s", new Object[] { Integer.valueOf(aEm), dWm, ehC, appId, ibP, aEf, iTC, auy, aDT });
+    return String.format("sense : %d, reqKey : %s, uuid : %s, appId : %s, appSource : %s, partnerId : %s, paySign : %s, productId : %s, soterAuth: %s", new Object[] { Integer.valueOf(aqq), dYv, els, appId, ivM, aqj, jqU, agl, apY });
   }
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
     int i = 1;
-    paramParcel.writeInt(aEm);
-    paramParcel.writeInt(iTz);
-    paramParcel.writeString(dWm);
-    paramParcel.writeString(ehC);
+    paramParcel.writeInt(aqq);
+    paramParcel.writeInt(jqR);
+    paramParcel.writeString(dYv);
+    paramParcel.writeString(els);
     paramParcel.writeString(appId);
-    paramParcel.writeString(ibP);
-    paramParcel.writeString(aEf);
-    paramParcel.writeString(iTC);
-    paramParcel.writeString(auy);
-    paramParcel.writeString(aCE);
-    paramParcel.writeInt(chp);
-    paramParcel.writeInt(aEn);
-    if (iTA)
+    paramParcel.writeString(ivM);
+    paramParcel.writeString(aqj);
+    paramParcel.writeString(jqU);
+    paramParcel.writeString(agl);
+    paramParcel.writeString(aoX);
+    paramParcel.writeInt(ccG);
+    paramParcel.writeInt(aqr);
+    if (jqS)
     {
       paramInt = 1;
       paramParcel.writeInt(paramInt);
-      if (!iTB) {
+      if (!jqT) {
         break label188;
       }
     }
@@ -112,13 +113,13 @@ public class PayInfo
     for (paramInt = i;; paramInt = 0)
     {
       paramParcel.writeInt(paramInt);
-      paramParcel.writeBundle(iTE);
-      paramParcel.writeInt(iTF);
-      paramParcel.writeString(azF);
-      paramParcel.writeString(azG);
-      paramParcel.writeInt(azD);
-      paramParcel.writeLong(iTI);
-      paramParcel.writeString(aDT);
+      paramParcel.writeBundle(jqW);
+      paramParcel.writeInt(jqX);
+      paramParcel.writeString(alN);
+      paramParcel.writeString(alO);
+      paramParcel.writeInt(alL);
+      paramParcel.writeLong(jra);
+      paramParcel.writeString(apY);
       return;
       paramInt = 0;
       break;

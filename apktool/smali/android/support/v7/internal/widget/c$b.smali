@@ -16,4 +16,11 @@
 
 # virtual methods
 .method public abstract i(Landroid/view/View;I)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/view/View;",
+            "I)V"
+        }
+    .end annotation
 .end method

@@ -1,192 +1,134 @@
 package ct;
 
-import android.text.TextUtils;
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.CopyOnWriteArraySet;
 
 public final class f
-  implements a, o, Runnable
 {
-  public String a = null;
-  public String b = null;
-  public String c = null;
-  private Set d = null;
-  private BlockingQueue e = null;
-  private final r f;
+  public String a;
+  public String b;
+  public String c;
+  public int d;
+  public String e;
+  public String f;
+  public String g;
+  public ArrayList h;
+  public int i;
+  public int j;
+  public int k;
+  public String l;
+  public String m;
+  public s n;
+  public boolean o;
+  public int p;
+  public int q;
+  public int r;
+  public int s;
+  public int t;
   
-  public f(String paramString1, String paramString2, String paramString3)
+  public final g a()
   {
-    bc.a("AccessSchedulerImpl", "new AccessSchedulerImpl...");
-    a = paramString1;
-    b = paramString2;
-    c = paramString3;
-    d = new CopyOnWriteArraySet();
-    d.add("dispatcher.3g.qq.com");
-    e = new ArrayBlockingQueue(1);
-    f = s.a();
-    k.a().a(this);
-  }
-  
-  public final an a()
-  {
-    return ab.f;
-  }
-  
-  public final u.a a(String paramString)
-  {
-    if (d.contains(paramString))
+    long l1 = System.currentTimeMillis();
+    Object localObject1 = new be();
+    ay.b();
+    if (!ay.e())
     {
-      paramString = v.a().a(paramString);
-      if (paramString != null)
-      {
-        if (paramString.b()) {
-          bc.c("AccessSchedulerImpl", "iplist was expired");
-        }
-        return paramString;
-      }
-      bc.c("AccessSchedulerImpl", "getAccessIPListByDomainname... domain access info not found in db...");
-    }
-    for (;;)
-    {
+      k = -4;
+      l = "Network fail before schedule";
       return null;
-      bc.c("AccessSchedulerImpl", "getAccessIPListByDomainname...domain not registered. domain:" + paramString + ", registered domains:" + d);
     }
-  }
-  
-  public final void a(List paramList)
-  {
-    if (paramList == null) {}
-    for (;;)
+    f = ba.b(h.toString());
+    Object localObject2 = new HashMap();
+    ((Map)localObject2).put("imei", ba.a());
+    ((Map)localObject2).put("reqKey", f);
+    localObject2 = new ag(a, b, h, e, c, d, i, j, g, (Map)localObject2);
+    ((be)localObject1).b("#halley-proxy.HalleyDispatchService");
+    ((be)localObject1).a("srvDispatch");
+    ((be)localObject1).a("request", localObject2);
+    localObject1 = i.a((be)localObject1);
+    ((as)localObject1).b();
+    o = ay.e();
+    n = ((as)localObject1).e();
+    p = ((as)localObject1).h();
+    q = ((as)localObject1).f();
+    r = ((as)localObject1).i();
+    s = ((as)localObject1).g();
+    if ((((as)localObject1).c() == 0) && (((as)localObject1).a() != null))
     {
-      return;
-      paramList = paramList.iterator();
-      while (paramList.hasNext())
+      localObject1 = ((as)localObject1).a();
+      localObject2 = new ah();
+      try
       {
-        String str = (String)paramList.next();
-        d.add(str);
+        localObject1 = (ah)((be)localObject1).b("response", localObject2);
+        if (localObject1 == null)
+        {
+          k = -8;
+          l = "Response is Null";
+          return null;
+        }
       }
-    }
-  }
-  
-  public final void b()
-  {
-    bc.b("AccessSchedulerImpl", "onAccessSchedulerTriggered... try to addTask");
-    bc.b("AccessSchedulerImpl", "addTask...");
-    try
-    {
-      bc.a("AccessSchedulerImpl", "before add, queue size:" + e.size());
-      boolean bool = e.add(new j());
-      bc.a("AccessSchedulerImpl", "addTask ret:" + bool);
-      bc.a("AccessSchedulerImpl", "after add, queue size:" + e.size());
-      return;
-    }
-    catch (Throwable localThrowable)
-    {
-      for (;;)
+      catch (Exception localException)
       {
-        bc.a("AccessSchedulerImpl", "addTask exception...", localThrowable);
+        az.d();
+        k = -8;
+        m = localException.getClass().getSimpleName();
+        l = ba.a(localException);
+        return null;
       }
-    }
-  }
-  
-  public final void run()
-  {
-    bc.b("AccessSchedulerImpl", "AccessSchedulerImpl run start...");
-    try
-    {
-      v.a();
-      for (;;)
+      localObject2 = new g();
+      Object localObject3 = ay.a();
+      long l2 = System.currentTimeMillis();
+      if ((!((String)localObject3).equals("unkonwn")) && (((String)localObject3).equals(g)))
       {
-        bc.a("AccessSchedulerImpl", "try take a task...");
-        e.take();
-        bc.a("AccessSchedulerImpl", "task taked, try scheduler...");
-        bc.b("AccessSchedulerImpl", "scheduler...begin");
-        Object localObject2 = v.a();
-        Object localObject1 = bb.a();
-        if ((TextUtils.isEmpty((CharSequence)localObject1)) || (((String)localObject1).equals("unknown")))
+        localObject3 = a;
+        if ((localObject3 != null) && (((Map)localObject3).size() > 0))
         {
-          bc.c("AccessSchedulerStorageManager", "updateApnUserTime... failed with apnName:" + (String)localObject1);
-          localObject1 = "";
-        }
-        for (;;)
-        {
-          if (!TextUtils.isEmpty((CharSequence)localObject1)) {
-            break label141;
-          }
-          bc.c("AccessSchedulerImpl", "can not get current apn, do not scheduler");
-          break;
-          a.b((String)localObject1);
-          bc.b("AccessSchedulerStorageManager", "updateApnUseTime... apnName:" + (String)localObject1);
-        }
-        label141:
-        if (!i.a)
-        {
-          bc.b("AccessSchedulerImpl", "schedulerOn is off. return");
-        }
-        else if (!v.a().a(d))
-        {
-          bc.b("AccessSchedulerImpl", "scheduler...no need scheduler. return");
-        }
-        else
-        {
-          localObject1 = new g();
-          b = q.b();
-          c = q.c();
-          d = q.d();
-          a = q.f();
-          q.g();
-          e = q.e();
-          localObject2 = d;
-          h = new ArrayList();
-          h.addAll((Collection)localObject2);
-          g = bb.a();
-          i = bb.c();
-          j = bb.d();
-          bc.a("AccessSchedulerImpl", "request info:" + b + "," + c + "," + d + "," + a + "," + e + "," + h + "," + null + "," + i + "," + j);
-          localObject2 = ((g)localObject1).a();
-          if (localObject2 != null)
+          t localt = new t(g);
+          Iterator localIterator = ((Map)localObject3).keySet().iterator();
+          while (localIterator.hasNext())
           {
-            bc.b("AccessSchedulerImpl", "scheduler...response:" + new StringBuilder("accessInfo:").append(a).append(", sdkCfgInfo:").append(b).append(", sdkAccessInfo:").append(c).toString());
-            v.a().a(a);
-            b.a locala = b.a.a();
-            e locale = b;
-            if (locale != null)
+            Object localObject4 = (String)localIterator.next();
+            if (((Map)localObject3).get(localObject4) != null)
             {
-              bc.b("AccessSchedulerConfiguration", "updateSdkCfInfo...SdkCfgInfo:" + locale);
-              if ((a < 2000) || (a > 60000))
+              Object localObject5 = geta;
+              localObject4 = new t.a((String)localObject4, l2, a.get(localObject4)).b);
+              localObject5 = ((ArrayList)localObject5).iterator();
+              while (((Iterator)localObject5).hasNext())
               {
-                bc.c("AccessSchedulerConfiguration", "updateSdkCfInfo...connectTimeout:" + a + " is checked to 20s");
-                a = 20000;
+                String str = (String)((Iterator)localObject5).next();
+                s locals = new s();
+                if (locals.a(str)) {
+                  c.add(locals);
+                }
               }
-              if ((b < 2000) || (b > 60000))
-              {
-                bc.c("AccessSchedulerConfiguration", "updateSdkCfInfo...readTimeout:" + b + " is checked to 20s");
-                b = 20000;
-              }
-              b = locale;
-              b.b();
-            }
-            locala = b.a.a();
-            localObject2 = c;
-            if (localObject2 != null)
-            {
-              a = ((d)localObject2);
-              a.b();
+              localt.a((t.a)localObject4);
             }
           }
-          bc.b("AccessSchedulerImpl", "scheduler...end. apn:" + null + ", retCode:" + k + ",failInfo:" + l);
-          f.a((g)localObject1);
+          a = localt;
         }
       }
-      return;
+      for (;;)
+      {
+        if (c != null) {
+          b = new d(c);
+        }
+        if (b != null) {
+          c = new c(b);
+        }
+        t = ((int)(System.currentTimeMillis() - l1));
+        return (g)localObject2;
+        a = null;
+        k = -9;
+        l = ("req apn:" + g + ",current apn:" + (String)localObject3);
+      }
     }
-    catch (Throwable localThrowable) {}
+    k = localException.c();
+    m = localException.d();
+    return null;
   }
 }
 

@@ -1,8 +1,6 @@
 package com.tencent.mm.booter;
 
-import com.tencent.mm.model.v;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ah;
 import java.util.Iterator;
 import java.util.List;
 
@@ -13,17 +11,17 @@ final class d$4
   
   public final void run()
   {
-    Iterator localIterator = d.c(bmw).iterator();
+    Iterator localIterator = d.c(bac).iterator();
     while (localIterator.hasNext())
     {
-      v localv = (v)localIterator.next();
+      com.tencent.mm.model.v localv = (com.tencent.mm.model.v)localIterator.next();
       if (localv != null)
       {
-        u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "on resume call back: %s", new Object[] { localv.toString() });
+        com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "on resume call back: %s", new Object[] { localv.toString() });
         localv.onResume();
       }
     }
-    d.d(bmw).ds(50L);
+    d.d(bac).dJ(50L);
   }
 }
 

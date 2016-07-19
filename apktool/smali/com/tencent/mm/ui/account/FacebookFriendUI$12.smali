@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/FacebookFriendUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/FacebookFriendUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+.field final synthetic kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 296
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$12;->ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$12;->kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 299
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$12;->ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$12;->kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
     new-instance v1, Landroid/content/Intent;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$12;->ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$12;->kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
     const-class v3, Lcom/tencent/mm/ui/account/FacebookAuthUI;
 

@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private bvA:Lcom/tencent/mm/dbsupport/newcursor/l;
+.field private bkt:Lcom/tencent/mm/dbsupport/newcursor/l;
 
 .field private final mCancellationSignal:Lcom/tencent/kingkong/support/CancellationSignal;
 
@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 37
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 39
@@ -97,7 +97,7 @@
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 56
-    iput-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/i;->bvA:Lcom/tencent/mm/dbsupport/newcursor/l;
+    iput-object v1, p0, Lcom/tencent/mm/dbsupport/newcursor/i;->bkt:Lcom/tencent/mm/dbsupport/newcursor/l;
 
     .line 57
     return-object v0
@@ -118,7 +118,7 @@
 
     .prologue
     .line 65
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/i;->bvA:Lcom/tencent/mm/dbsupport/newcursor/l;
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/i;->bkt:Lcom/tencent/mm/dbsupport/newcursor/l;
 
     invoke-virtual {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/l;->bindAllArgsAsStrings([Ljava/lang/String;)V
 

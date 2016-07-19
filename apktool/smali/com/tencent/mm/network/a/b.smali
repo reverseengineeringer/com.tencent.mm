@@ -18,5 +18,5 @@
 .method public abstract a(IILjava/lang/String;ILjava/lang/String;Z)V
 .end method
 
-.method public abstract d(IIII)V
+.method public abstract b(IIII)V
 .end method

@@ -3,364 +3,409 @@
 .source "SourceFile"
 
 
-# static fields
-.field private static kiP:Z
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/ba/b$a;
+    }
+.end annotation
+
+
+# instance fields
+.field public cze:[B
+
+.field public krC:Landroid/util/SparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/SparseArray",
+            "<",
+            "Lcom/tencent/mm/ba/b$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method private constructor <init>(Landroid/util/SparseArray;[B)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/util/SparseArray",
+            "<",
+            "Lcom/tencent/mm/ba/b$a;",
+            ">;[B)V"
+        }
+    .end annotation
 
     .prologue
-    .line 19
+    .line 22
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 23
+    iput-object p1, p0, Lcom/tencent/mm/ba/b;->krC:Landroid/util/SparseArray;
+
+    .line 24
+    iput-object p2, p0, Lcom/tencent/mm/ba/b;->cze:[B
+
+    .line 25
+    return-void
+.end method
+
+.method public static a(Landroid/util/SparseArray;Ljava/io/InputStream;I)Lcom/tencent/mm/ba/b;
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/util/SparseArray",
+            "<",
+            "Lcom/tencent/mm/ba/b$a;",
+            ">;",
+            "Ljava/io/InputStream;",
+            "I)",
+            "Lcom/tencent/mm/ba/b;"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v4, 0x0
+
+    .line 29
+    :try_start_0
+    new-array v1, p2, [B
+
+    .line 31
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/tencent/mm/ba/b;->kiP:Z
+    array-length v2, v1
 
-    return-void
-.end method
-
-.method static synthetic aw(Z)Z
-    .locals 0
-
-    .prologue
-    .line 17
-    sput-boolean p0, Lcom/tencent/mm/ba/b;->kiP:Z
-
-    return p0
-.end method
-
-.method static synthetic il(Ljava/lang/String;)V
-    .locals 8
-
-    .prologue
-    const/4 v7, 0x0
-
-    const/4 v6, 0x1
-
-    .line 17
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-virtual {p1, v1, v0, v2}, Ljava/io/InputStream;->read([BII)I
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    .line 32
+    array-length v2, v1
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpI67oPDTT86rE/rkKVKjyGP17sNLUXP5EY="
+    if-eq v0, v2, :cond_0
 
-    const-string/jumbo v1, "Hprof error uploadPath %s "
+    .line 33
+    const-string/jumbo v0, "MicroMsg.language.PluralsCollection"
 
-    new-array v2, v6, [Ljava/lang/Object;
+    const-string/jumbo v2, "[cpan] newPluralsConllection failed. data length no equal."
 
-    aput-object p0, v2, v7
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
+    .line 35
     :cond_0
+    new-instance v0, Lcom/tencent/mm/ba/b;
+
+    invoke-direct {v0, p0, v1}, Lcom/tencent/mm/ba/b;-><init>(Landroid/util/SparseArray;[B)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 39
     :goto_0
-    return-void
+    return-object v0
 
-    :cond_1
-    invoke-static {}, Lcom/tencent/mm/compatible/util/g;->oW()Z
+    .line 36
+    :catch_0
+    move-exception v0
 
-    move-result v0
+    .line 37
+    const-string/jumbo v1, "MicroMsg.language.PluralsCollection"
 
-    if-nez v0, :cond_2
+    const-string/jumbo v2, "[cpan] newPluralsConllection failed:%s"
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpI67oPDTT86rE/rkKVKjyGP17sNLUXP5EY="
+    const/4 v3, 0x1
 
-    const-string/jumbo v1, "Hprof sdcard invalid."
+    new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v3, v4
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 39
+    const/4 v0, 0x0
 
     goto :goto_0
+.end method
 
+
+# virtual methods
+.method public final varargs getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
+    .locals 9
+
+    .prologue
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    .line 65
+    .line 67
+    :try_start_0
+    iget-object v0, p0, Lcom/tencent/mm/ba/b;->krC:Landroid/util/SparseArray;
+
+    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->indexOfKey(I)I
+
+    move-result v6
+
+    .line 68
+    if-gez v6, :cond_1
+
+    move-object v0, v4
+
+    .line 104
+    :cond_0
+    :goto_0
+    return-object v0
+
+    .line 73
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/ba/b;->krC:Landroid/util/SparseArray;
+
+    invoke-virtual {v0, v6}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/ba/b$a;
+
+    .line 74
+    iget-object v1, v0, Lcom/tencent/mm/ba/b$a;->krE:[I
+
+    array-length v7, v1
+
+    move v2, v5
+
+    move v3, v5
+
+    .line 76
+    :goto_1
+    if-ge v2, v7, :cond_2
+
+    .line 77
+    iget-object v1, v0, Lcom/tencent/mm/ba/b$a;->krE:[I
+
+    aget v1, v1, v2
+
+    if-ne v1, p2, :cond_7
+
+    move v1, v2
+
+    .line 76
+    :goto_2
+    add-int/lit8 v2, v2, 0x1
+
+    move v3, v1
+
+    goto :goto_1
+
+    .line 81
     :cond_2
-    new-instance v0, Ljava/io/File;
+    iget-object v1, p0, Lcom/tencent/mm/ba/b;->krC:Landroid/util/SparseArray;
 
-    invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
 
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+    move-result v1
+
+    add-int/lit8 v1, v1, -0x1
+
+    if-gt v6, v1, :cond_5
+
+    .line 82
+    add-int/lit8 v1, v7, -0x1
+
+    if-lt v3, v1, :cond_4
+
+    .line 83
+    iget-object v1, p0, Lcom/tencent/mm/ba/b;->krC:Landroid/util/SparseArray;
+
+    add-int/lit8 v2, v6, 0x1
+
+    invoke-virtual {v1, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/tencent/mm/ba/b$a;
+
+    .line 84
+    new-instance v2, Ljava/lang/String;
+
+    iget-object v6, p0, Lcom/tencent/mm/ba/b;->cze:[B
+
+    iget-object v7, v0, Lcom/tencent/mm/ba/b$a;->krF:[I
+
+    aget v7, v7, v3
+
+    iget-object v1, v1, Lcom/tencent/mm/ba/b$a;->krF:[I
+
+    const/4 v8, 0x0
+
+    aget v1, v1, v8
+
+    iget-object v0, v0, Lcom/tencent/mm/ba/b$a;->krF:[I
+
+    aget v0, v0, v3
+
+    sub-int v0, v1, v0
+
+    invoke-direct {v2, v6, v7, v0}, Ljava/lang/String;-><init>([BII)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v0, v2
+
+    .line 96
+    :goto_3
+    :try_start_1
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpI67oPDTT86rE/rkKVKjyGP17sNLUXP5EY="
+    if-eqz p3, :cond_0
 
-    const-string/jumbo v1, "Hprof upload file is not exist"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
+    .line 97
     :cond_3
-    const/4 v1, 0x0
-
-    invoke-static {v0, v6, v1}, Lcom/tencent/mm/a/p;->a(Ljava/io/File;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
-
-    new-instance v1, Ljava/io/File;
-
-    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ah;->dB(Landroid/content/Context;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    invoke-virtual {v1}, Ljava/io/File;->length()J
-
-    move-result-wide v2
-
-    const-wide/32 v4, 0x500000
-
-    cmp-long v2, v2, v4
-
-    if-lez v2, :cond_4
-
-    const-string/jumbo v0, "!44@/B4Tb64lLpI67oPDTT86rE/rkKVKjyGP17sNLUXP5EY="
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v3, "Hprof not wifi exceed max size, size "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Ljava/io/File;->length()J
-
-    move-result-wide v3
-
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
     goto :goto_0
 
+    .line 86
     :cond_4
-    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
+    :try_start_2
+    new-instance v1, Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/tencent/mm/ba/b;->cze:[B
+
+    iget-object v6, v0, Lcom/tencent/mm/ba/b$a;->krF:[I
+
+    aget v6, v6, v3
+
+    iget-object v7, v0, Lcom/tencent/mm/ba/b$a;->krF:[I
+
+    add-int/lit8 v8, v3, 0x1
+
+    aget v7, v7, v8
+
+    iget-object v0, v0, Lcom/tencent/mm/ba/b$a;->krF:[I
+
+    aget v0, v0, v3
+
+    sub-int v0, v7, v0
+
+    invoke-direct {v1, v2, v6, v0}, Ljava/lang/String;-><init>([BII)V
+
+    move-object v0, v1
+
+    goto :goto_3
+
+    .line 90
+    :cond_5
+    add-int/lit8 v1, v7, -0x1
+
+    if-lt v3, v1, :cond_6
+
+    .line 91
+    new-instance v1, Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/tencent/mm/ba/b;->cze:[B
+
+    iget-object v6, v0, Lcom/tencent/mm/ba/b$a;->krF:[I
+
+    aget v6, v6, v3
+
+    iget-object v7, p0, Lcom/tencent/mm/ba/b;->cze:[B
+
+    array-length v7, v7
+
+    iget-object v0, v0, Lcom/tencent/mm/ba/b$a;->krF:[I
+
+    aget v0, v0, v3
+
+    sub-int v0, v7, v0
+
+    invoke-direct {v1, v2, v6, v0}, Ljava/lang/String;-><init>([BII)V
+
+    move-object v0, v1
+
+    goto :goto_3
+
+    .line 93
+    :cond_6
+    new-instance v1, Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/tencent/mm/ba/b;->cze:[B
+
+    iget-object v6, v0, Lcom/tencent/mm/ba/b$a;->krF:[I
+
+    aget v6, v6, v3
+
+    iget-object v7, v0, Lcom/tencent/mm/ba/b$a;->krF:[I
+
+    add-int/lit8 v8, v3, 0x1
+
+    aget v7, v7, v8
+
+    iget-object v0, v0, Lcom/tencent/mm/ba/b$a;->krF:[I
+
+    aget v0, v0, v3
+
+    sub-int v0, v7, v0
+
+    invoke-direct {v1, v2, v6, v0}, Ljava/lang/String;-><init>([BII)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    move-object v0, v1
+
+    goto :goto_3
+
+    .line 100
+    :catch_0
+    move-exception v0
+
+    move-object v1, v0
+
+    move-object v0, v4
+
+    .line 101
+    :goto_4
+    const-string/jumbo v2, "MicroMsg.language.PluralsCollection"
+
+    const-string/jumbo v3, "[cpan] getString failed. %s"
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1, v6, v7}, Lcom/tencent/mm/platformtools/q;->a(Ljava/lang/String;Ljava/lang/String;ZZ)Z
+    aput-object v1, v4, v5
 
-    move-result v0
-
-    const-string/jumbo v1, "!44@/B4Tb64lLpI67oPDTT86rE/rkKVKjyGP17sNLUXP5EY="
-
-    const-string/jumbo v2, "Hprof upload : %b"
-
-    new-array v3, v6, [Ljava/lang/Object;
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v4
-
-    aput-object v4, v3, v7
-
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/io/File;
-
-    sget-object v1, Lcom/tencent/mm/ba/a;->kiO:Ljava/lang/String;
-
-    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v0}, Lcom/tencent/mm/a/e;->f(Ljava/io/File;)Z
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
-.end method
 
-.method static synthetic nV()Z
-    .locals 1
+    .line 100
+    :catch_1
+    move-exception v1
 
-    .prologue
-    .line 17
-    sget-boolean v0, Lcom/tencent/mm/ba/b;->kiP:Z
+    goto :goto_4
 
-    return v0
-.end method
+    :cond_7
+    move v1, v3
 
-.method public static pO(I)V
-    .locals 10
-
-    .prologue
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    .line 37
-    .line 41
-    packed-switch p0, :pswitch_data_0
-
-    move v0, v1
-
-    move v3, v1
-
-    move v4, v1
-
-    move v5, v1
-
-    .line 76
-    :goto_0
-    const-string/jumbo v6, "!44@/B4Tb64lLpI67oPDTT86rE/rkKVKjyGP17sNLUXP5EY="
-
-    const-string/jumbo v7, "hprof operate: dump:%b, checkWifi:%b, uploadSingal:%b,uploadAll:%b,"
-
-    const/4 v8, 0x4
-
-    new-array v8, v8, [Ljava/lang/Object;
-
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v9
-
-    aput-object v9, v8, v1
-
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    aput-object v1, v8, v2
-
-    const/4 v1, 0x2
-
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    aput-object v2, v8, v1
-
-    const/4 v1, 0x3
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    aput-object v2, v8, v1
-
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 78
-    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v1
-
-    .line 80
-    new-instance v2, Lcom/tencent/mm/ba/b$1;
-
-    invoke-direct {v2, v5, v4, v3, v0}, Lcom/tencent/mm/ba/b$1;-><init>(ZZZZ)V
-
-    invoke-interface {v1, v2}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
-
-    .line 112
-    return-void
-
-    .line 44
-    :pswitch_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpI67oPDTT86rE/rkKVKjyGP17sNLUXP5EY="
-
-    const-string/jumbo v3, "GC NOW."
-
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 45
-    invoke-static {}, Ljava/lang/System;->gc()V
-
-    move v0, v1
-
-    move v3, v1
-
-    move v4, v1
-
-    move v5, v1
-
-    .line 46
-    goto :goto_0
-
-    :pswitch_1
-    move v0, v1
-
-    move v3, v2
-
-    move v4, v1
-
-    move v5, v2
-
-    .line 51
-    goto :goto_0
-
-    :pswitch_2
-    move v0, v1
-
-    move v3, v2
-
-    move v4, v2
-
-    move v5, v2
-
-    .line 56
-    goto :goto_0
-
-    :pswitch_3
-    move v0, v1
-
-    move v3, v1
-
-    move v4, v1
-
-    move v5, v2
-
-    .line 59
-    goto :goto_0
-
-    :pswitch_4
-    move v0, v2
-
-    move v3, v1
-
-    move v4, v1
-
-    move v5, v1
-
-    .line 62
-    goto :goto_0
-
-    :pswitch_5
-    move v0, v2
-
-    move v3, v1
-
-    move v4, v2
-
-    move v5, v1
-
-    .line 65
-    goto :goto_0
-
-    .line 41
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-        :pswitch_0
-    .end packed-switch
+    goto/16 :goto_2
 .end method

@@ -5,10 +5,7 @@ import org.eclipse.jdt.annotation.NonNull;
 final class TencentExtraKeys$1
   implements TencentLog
 {
-  public final void println(String paramString1, int paramInt, @NonNull String paramString2)
-  {
-    if (paramInt == 4) {}
-  }
+  public final void println(String paramString1, int paramInt, @NonNull String paramString2) {}
 }
 
 /* Location:

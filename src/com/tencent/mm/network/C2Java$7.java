@@ -1,8 +1,8 @@
 package com.tencent.mm.network;
 
 import com.tencent.mm.network.a.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class C2Java$7
   implements Runnable
@@ -13,12 +13,12 @@ final class C2Java$7
   {
     try
     {
-      ciz.d(ciA, ciB, ciC, ciD);
+      cdQ.b(cdR, cdS, cdT, cdU);
       return;
     }
     catch (Throwable localThrowable)
     {
-      u.e("!12@sAoJwmn0ssk=", "reportFlowData :%s", new Object[] { ay.b(localThrowable) });
+      v.e("C2Java", "reportFlowData :%s", new Object[] { be.f(localThrowable) });
     }
   }
 }

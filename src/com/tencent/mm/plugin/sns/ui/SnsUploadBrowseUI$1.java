@@ -7,9 +7,9 @@ final class SnsUploadBrowseUI$1
 {
   SnsUploadBrowseUI$1(SnsUploadBrowseUI paramSnsUploadBrowseUI) {}
   
-  public final void mc(int paramInt)
+  public final void nu(int paramInt)
   {
-    SnsUploadBrowseUI.a(hlx).put(Integer.valueOf(paramInt), Boolean.valueOf(true));
+    SnsUploadBrowseUI.a(hBA).put(Integer.valueOf(paramInt), Boolean.valueOf(true));
   }
 }
 

@@ -4,43 +4,43 @@
 
 
 # instance fields
-.field goQ:Z
+.field gzi:Z
 
-.field public iFa:I
+.field iIl:Landroid/view/View;
 
-.field iRg:Landroid/content/DialogInterface$OnDismissListener;
+.field itT:Landroid/content/DialogInterface$OnCancelListener;
 
-.field ial:Landroid/content/DialogInterface$OnCancelListener;
+.field public jbV:I
 
-.field inG:Landroid/view/View;
+.field joq:Landroid/content/DialogInterface$OnDismissListener;
 
-.field kBA:Landroid/view/ViewGroup$LayoutParams;
+.field laA:Z
 
-.field kBB:Z
+.field laB:Landroid/content/DialogInterface$OnClickListener;
 
-.field kBo:Landroid/graphics/drawable/Drawable;
+.field laC:Landroid/content/DialogInterface$OnClickListener;
 
-.field kBp:Landroid/graphics/drawable/Drawable;
+.field laD:Landroid/view/View;
 
-.field kBq:Ljava/lang/CharSequence;
+.field laE:I
 
-.field kBr:Ljava/lang/CharSequence;
+.field public laF:I
 
-.field kBs:Ljava/lang/CharSequence;
+.field laG:Landroid/view/ViewGroup$LayoutParams;
 
-.field kBt:Ljava/lang/CharSequence;
+.field laH:Z
 
-.field kBu:Z
+.field lau:Landroid/graphics/drawable/Drawable;
 
-.field kBv:Landroid/content/DialogInterface$OnClickListener;
+.field lav:Landroid/graphics/drawable/Drawable;
 
-.field kBw:Landroid/content/DialogInterface$OnClickListener;
+.field law:Ljava/lang/CharSequence;
 
-.field kBx:Landroid/view/View;
+.field lax:Ljava/lang/CharSequence;
 
-.field kBy:I
+.field lay:Ljava/lang/CharSequence;
 
-.field public kBz:I
+.field laz:Ljava/lang/CharSequence;
 
 .field public maxLines:I
 
@@ -60,22 +60,22 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 666
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/c;->goQ:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/c;->gzi:Z
 
     .line 667
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/c;->kBu:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/c;->laA:Z
 
     .line 675
-    iput v0, p0, Lcom/tencent/mm/ui/base/c;->iFa:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/c;->jbV:I
 
     .line 676
-    iput v0, p0, Lcom/tencent/mm/ui/base/c;->kBz:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/c;->laF:I
 
     .line 677
     iput v0, p0, Lcom/tencent/mm/ui/base/c;->maxLines:I
 
     .line 679
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/c;->kBB:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/c;->laH:Z
 
     return-void
 .end method

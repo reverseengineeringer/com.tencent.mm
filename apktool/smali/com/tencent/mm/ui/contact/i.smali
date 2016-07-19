@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/t/m$a;
+.implements Lcom/tencent/mm/v/n$a;
 
 
 # annotations
@@ -17,13 +17,32 @@
 # instance fields
 .field private context:Landroid/content/Context;
 
-.field private dTe:Landroid/widget/LinearLayout;
+.field private dVm:Landroid/widget/LinearLayout;
 
-.field private lki:Ljava/util/List;
+.field private lKt:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private lkj:Ljava/util/Map;
+.field private lKu:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private lkk:Lcom/tencent/mm/ui/contact/i$a;
+.field private lKv:Lcom/tencent/mm/ui/contact/i$a;
 
 
 # direct methods
@@ -37,13 +56,13 @@
     .line 23
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/i;->dTe:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/i;->dVm:Landroid/widget/LinearLayout;
 
     .line 34
     iput-object p1, p0, Lcom/tencent/mm/ui/contact/i;->context:Landroid/content/Context;
 
     .line 35
-    iput-object p2, p0, Lcom/tencent/mm/ui/contact/i;->lkk:Lcom/tencent/mm/ui/contact/i$a;
+    iput-object p2, p0, Lcom/tencent/mm/ui/contact/i;->lKv:Lcom/tencent/mm/ui/contact/i$a;
 
     .line 36
     invoke-direct {p0}, Lcom/tencent/mm/ui/contact/i;->init()V
@@ -57,7 +76,7 @@
 
     .prologue
     .line 19
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lki:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lKt:Ljava/util/List;
 
     return-object v0
 .end method
@@ -67,7 +86,7 @@
 
     .prologue
     .line 19
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lkj:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lKu:Ljava/util/Map;
 
     return-object v0
 .end method
@@ -77,7 +96,7 @@
 
     .prologue
     .line 19
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->dTe:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->dVm:Landroid/widget/LinearLayout;
 
     return-object v0
 .end method
@@ -87,7 +106,7 @@
 
     .prologue
     .line 19
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lkk:Lcom/tencent/mm/ui/contact/i$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lKv:Lcom/tencent/mm/ui/contact/i$a;
 
     return-object v0
 .end method
@@ -111,7 +130,7 @@
     const/4 v1, 0x0
 
     .line 48
-    invoke-static {}, Lcom/tencent/mm/t/aj;->xF()Lcom/tencent/mm/t/m;
+    invoke-static {}, Lcom/tencent/mm/v/an;->xH()Lcom/tencent/mm/v/n;
 
     move-result-object v0
 
@@ -153,7 +172,7 @@
 
     move-result-object v4
 
-    invoke-static {}, Lcom/tencent/mm/storage/k;->aWr()I
+    invoke-static {}, Lcom/tencent/mm/storage/k;->bbE()I
 
     move-result v5
 
@@ -189,7 +208,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lcom/tencent/mm/t/m;->xd()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/v/n;->xg()Ljava/lang/String;
 
     move-result-object v4
 
@@ -199,7 +218,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "!32@/B4Tb64lLpJBvWFKDfNn3fDJZ/Q78pVI"
+    const-string/jumbo v4, "MicroMsg.BizInfoStorage"
 
     const-string/jumbo v5, "getEnterpriseFatherBizLst sql %s"
 
@@ -207,11 +226,11 @@
 
     aput-object v3, v6, v1
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     new-array v4, v1, [Ljava/lang/String;
 
-    invoke-virtual {v0, v3, v4}, Lcom/tencent/mm/t/m;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v0, v3, v4}, Lcom/tencent/mm/v/n;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
@@ -240,14 +259,14 @@
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     :cond_2
-    iput-object v2, p0, Lcom/tencent/mm/ui/contact/i;->lki:Ljava/util/List;
+    iput-object v2, p0, Lcom/tencent/mm/ui/contact/i;->lKt:Ljava/util/List;
 
     .line 50
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lki:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lKt:Ljava/util/List;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lki:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lKt:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -257,11 +276,11 @@
 
     .line 51
     :cond_3
-    const-string/jumbo v0, "!44@/B4Tb64lLpIXzeB5NZbbB0Dbk9yEMsmyuH6azdalesY="
+    const-string/jumbo v0, "MicroMsg.EnterpriseBizView"
 
     const-string/jumbo v1, "bizList is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 70
     :cond_4
@@ -269,13 +288,13 @@
 
     .line 54
     :cond_5
-    const-string/jumbo v0, "!44@/B4Tb64lLpIXzeB5NZbbB0Dbk9yEMsmyuH6azdalesY="
+    const-string/jumbo v0, "MicroMsg.EnterpriseBizView"
 
     const-string/jumbo v2, "biz list size = %s"
 
     new-array v3, v7, [Ljava/lang/Object;
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/contact/i;->lki:Ljava/util/List;
+    iget-object v4, p0, Lcom/tencent/mm/ui/contact/i;->lKt:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -287,17 +306,17 @@
 
     aput-object v4, v3, v1
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 55
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lkj:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lKu:Ljava/util/Map;
 
     .line 57
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->dTe:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->dVm:Landroid/widget/LinearLayout;
 
     if-nez v0, :cond_6
 
@@ -306,12 +325,12 @@
 
     move-result-object v0
 
-    const v2, 0x7f0a0088
+    const v2, 0x7f0301c0
 
     invoke-static {v0, v2, p0}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     .line 59
-    const v0, 0x7f0700a3
+    const v0, 0x7f1000fb
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/i;->findViewById(I)Landroid/view/View;
 
@@ -319,12 +338,12 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/i;->dTe:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/i;->dVm:Landroid/widget/LinearLayout;
 
     .line 61
     :cond_6
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lki:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lKt:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -333,7 +352,7 @@
     if-ge v1, v0, :cond_4
 
     .line 62
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lki:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lKt:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -351,17 +370,17 @@
     invoke-direct {v2, v3, v0}, Lcom/tencent/mm/ui/contact/j;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 64
-    iget-object v3, p0, Lcom/tencent/mm/ui/contact/i;->dTe:Landroid/widget/LinearLayout;
+    iget-object v3, p0, Lcom/tencent/mm/ui/contact/i;->dVm:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 65
-    iget-object v3, p0, Lcom/tencent/mm/ui/contact/i;->lkj:Ljava/util/Map;
+    iget-object v3, p0, Lcom/tencent/mm/ui/contact/i;->lKu:Ljava/util/Map;
 
     invoke-interface {v3, v0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 66
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lki:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lKt:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -372,13 +391,13 @@
     if-ne v1, v0, :cond_7
 
     .line 67
-    const v0, 0x7f070194
+    const v0, 0x7f10063e
 
     invoke-virtual {v2, v0}, Lcom/tencent/mm/ui/contact/j;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    const v2, 0x7f04067f
+    const v2, 0x7f02051d
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -393,12 +412,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/t/m$a$b;)V
+.method public final a(Lcom/tencent/mm/v/n$a$b;)V
     .locals 2
 
     .prologue
     .line 74
-    iget-object v0, p1, Lcom/tencent/mm/t/m$a$b;->bIZ:Lcom/tencent/mm/t/l;
+    iget-object v0, p1, Lcom/tencent/mm/v/n$a$b;->bCl:Lcom/tencent/mm/v/m;
 
     if-nez v0, :cond_0
 
@@ -408,20 +427,20 @@
 
     .line 77
     :cond_0
-    iget-object v0, p1, Lcom/tencent/mm/t/m$a$b;->bIZ:Lcom/tencent/mm/t/l;
+    iget-object v0, p1, Lcom/tencent/mm/v/n$a$b;->bCl:Lcom/tencent/mm/v/m;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/t/l;->wE()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/v/m;->wG()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 78
-    const-string/jumbo v0, "!44@/B4Tb64lLpIXzeB5NZbbB0Dbk9yEMsmyuH6azdalesY="
+    const-string/jumbo v0, "MicroMsg.EnterpriseBizView"
 
     const-string/jumbo v1, "onEvent, not enterprise father"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -429,19 +448,19 @@
     :cond_1
     new-instance v0, Lcom/tencent/mm/ui/contact/i$1;
 
-    invoke-direct {v0, p0, p1}, Lcom/tencent/mm/ui/contact/i$1;-><init>(Lcom/tencent/mm/ui/contact/i;Lcom/tencent/mm/t/m$a$b;)V
+    invoke-direct {v0, p0, p1}, Lcom/tencent/mm/ui/contact/i$1;-><init>(Lcom/tencent/mm/ui/contact/i;Lcom/tencent/mm/v/n$a$b;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
     goto :goto_0
 .end method
 
-.method public final getEnterpriseFriendCount()I
+.method public final bmU()I
     .locals 1
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lki:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lKt:Ljava/util/List;
 
     if-nez v0, :cond_0
 
@@ -453,7 +472,7 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lki:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/i;->lKt:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 

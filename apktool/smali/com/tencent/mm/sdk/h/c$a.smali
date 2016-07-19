@@ -15,15 +15,25 @@
 
 
 # instance fields
-.field public blR:[Ljava/lang/String;
+.field public aZx:[Ljava/lang/String;
 
-.field public ceD:[Ljava/lang/reflect/Field;
+.field public bZI:[Ljava/lang/reflect/Field;
 
-.field public jYw:Ljava/lang/String;
+.field public kyT:Ljava/lang/String;
 
-.field public jYx:Ljava/util/Map;
+.field public kyU:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public jYy:Ljava/lang/String;
+.field public kyV:Ljava/lang/String;
 
 
 # direct methods
@@ -39,7 +49,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     return-void
 .end method

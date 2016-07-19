@@ -2,8 +2,8 @@ package com.tencent.mm.pluginsdk.ui;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.ao.d;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ar.d;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class VoiceSearchLayout$1
   implements View.OnClickListener
@@ -12,28 +12,28 @@ public final class VoiceSearchLayout$1
   
   public final void onClick(View paramView)
   {
-    if (VoiceSearchLayout.a(iHM))
+    if (VoiceSearchLayout.a(jeJ))
     {
-      if (VoiceSearchLayout.b(iHM) == 0)
+      if (VoiceSearchLayout.b(jeJ) == 0)
       {
-        if (VoiceSearchLayout.c(iHM)) {
-          iHM.aRg();
+        if (VoiceSearchLayout.c(jeJ)) {
+          jeJ.aVS();
         }
         do
         {
           return;
-          paramView = iHM;
-          u.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "doStop");
-        } while (iHG == null);
-        paramView = iHG;
-        u.i("!32@/B4Tb64lLpJjyqE6YDnAp3o91K/Zm7/t", "stop");
+          paramView = jeJ;
+          v.d("MicroMsg.VoiceSearchLayout", "doStop");
+        } while (jeC == null);
+        paramView = jeC;
+        v.i("MicroMsg.SceneVoiceAddr", "stop");
         paramView.finish();
         return;
       }
-      iHM.aRg();
+      jeJ.aVS();
       return;
     }
-    iHM.or(VoiceSearchLayout.b(iHM));
+    jeJ.pW(VoiceSearchLayout.b(jeJ));
   }
 }
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->aBF()V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->aEu()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+.field final synthetic hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 692
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11;->his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+    .line 735
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11;->hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,18 +40,18 @@
     .locals 2
 
     .prologue
-    .line 700
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 743
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11$1;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11$1;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
-    .line 708
+    .line 751
     return-void
 .end method
 
@@ -59,6 +59,6 @@
     .locals 0
 
     .prologue
-    .line 696
+    .line 739
     return-void
 .end method

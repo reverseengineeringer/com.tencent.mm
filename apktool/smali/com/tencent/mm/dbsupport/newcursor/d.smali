@@ -12,11 +12,20 @@
 
 
 # instance fields
-.field public bvr:Landroid/util/SparseArray;
+.field public bkk:Landroid/util/SparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/SparseArray",
+            "<[",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public bvs:I
+.field public bkl:I
 
-.field public bvt:I
+.field public bkm:I
 
 .field public final columnCount:I
 
@@ -31,10 +40,10 @@
     .line 46
     invoke-direct {p0}, Lcom/tencent/kingkong/AbstractCursor;-><init>()V
 
-    .line 36
+    .line 35
     const/16 v0, 0xbb8
 
-    iput v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bvs:I
+    iput v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bkl:I
 
     .line 47
     iput-object p1, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->columnNames:[Ljava/lang/String;
@@ -49,7 +58,7 @@
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bvr:Landroid/util/SparseArray;
+    iput-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bkk:Landroid/util/SparseArray;
 
     .line 55
     return-void
@@ -59,10 +68,10 @@
     .locals 0
 
     .prologue
-    .line 64
+    .line 65
     invoke-direct {p0, p1}, Lcom/tencent/mm/dbsupport/newcursor/d;-><init>([Ljava/lang/String;)V
 
-    .line 65
+    .line 66
     return-void
 .end method
 
@@ -70,14 +79,14 @@
     .locals 3
 
     .prologue
-    .line 71
+    .line 72
     if-ltz p1, :cond_0
 
     iget v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->columnCount:I
 
     if-lt p1, v0, :cond_1
 
-    .line 72
+    .line 73
     :cond_0
     new-instance v0, Landroid/database/CursorIndexOutOfBoundsException;
 
@@ -87,7 +96,6 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 73
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -108,18 +116,17 @@
 
     move-result-object v1
 
-    .line 72
     invoke-direct {v0, v1}, Landroid/database/CursorIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 75
+    .line 76
     :cond_1
     iget v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->mPos:I
 
     if-gez v0, :cond_2
 
-    .line 76
+    .line 77
     new-instance v0, Landroid/database/CursorIndexOutOfBoundsException;
 
     const-string/jumbo v1, "Before first row."
@@ -128,15 +135,15 @@
 
     throw v0
 
-    .line 78
+    .line 79
     :cond_2
     iget v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->mPos:I
 
-    iget v1, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bvt:I
+    iget v1, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bkm:I
 
     if-lt v0, v1, :cond_3
 
-    .line 79
+    .line 80
     new-instance v0, Landroid/database/CursorIndexOutOfBoundsException;
 
     const-string/jumbo v1, "After last row."
@@ -145,18 +152,18 @@
 
     throw v0
 
-    .line 82
+    .line 83
     :cond_3
     iget v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->mPos:I
 
-    iget v1, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bvs:I
+    iget v1, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bkl:I
 
     div-int/2addr v0, v1
 
-    .line 83
+    .line 84
     iget v1, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->mPos:I
 
-    iget v2, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bvs:I
+    iget v2, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bkl:I
 
     rem-int/2addr v1, v2
 
@@ -164,8 +171,8 @@
 
     mul-int/2addr v1, v2
 
-    .line 84
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bvr:Landroid/util/SparseArray;
+    .line 85
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bkk:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -186,7 +193,7 @@
     .locals 0
 
     .prologue
-    .line 259
+    .line 265
     return-void
 .end method
 
@@ -194,21 +201,24 @@
     .locals 1
 
     .prologue
-    .line 233
+    .line 239
     invoke-direct {p0, p1}, Lcom/tencent/mm/dbsupport/newcursor/d;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 234
+    .line 240
     if-nez v0, :cond_0
 
+    .line 241
     const/4 v0, 0x0
 
-    .line 235
+    .line 242
     :goto_0
     return-object v0
 
     :cond_0
+    check-cast v0, [B
+
     check-cast v0, [B
 
     goto :goto_0
@@ -218,7 +228,7 @@
     .locals 1
 
     .prologue
-    .line 161
+    .line 157
     iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->columnNames:[Ljava/lang/String;
 
     return-object v0
@@ -228,8 +238,8 @@
     .locals 1
 
     .prologue
-    .line 156
-    iget v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bvt:I
+    .line 152
+    iget v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bkm:I
 
     return v0
 .end method
@@ -238,26 +248,28 @@
     .locals 2
 
     .prologue
-    .line 205
+    .line 210
     invoke-direct {p0, p1}, Lcom/tencent/mm/dbsupport/newcursor/d;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 206
+    .line 211
     if-nez v0, :cond_0
 
+    .line 212
     const-wide/16 v0, 0x0
 
-    .line 208
+    .line 215
     :goto_0
     return-wide v0
 
-    .line 207
+    .line 213
     :cond_0
     instance-of v1, v0, Ljava/lang/Number;
 
     if-eqz v1, :cond_1
 
+    .line 214
     check-cast v0, Ljava/lang/Number;
 
     invoke-virtual {v0}, Ljava/lang/Number;->doubleValue()D
@@ -266,7 +278,7 @@
 
     goto :goto_0
 
-    .line 208
+    .line 215
     :cond_1
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -283,26 +295,28 @@
     .locals 2
 
     .prologue
-    .line 197
+    .line 200
     invoke-direct {p0, p1}, Lcom/tencent/mm/dbsupport/newcursor/d;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 198
+    .line 201
     if-nez v0, :cond_0
 
+    .line 202
     const/4 v0, 0x0
 
-    .line 200
+    .line 205
     :goto_0
     return v0
 
-    .line 199
+    .line 203
     :cond_0
     instance-of v1, v0, Ljava/lang/Number;
 
     if-eqz v1, :cond_1
 
+    .line 204
     check-cast v0, Ljava/lang/Number;
 
     invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
@@ -311,7 +325,7 @@
 
     goto :goto_0
 
-    .line 200
+    .line 205
     :cond_1
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -328,17 +342,18 @@
     .locals 2
 
     .prologue
-    .line 181
+    .line 180
     invoke-direct {p0, p1}, Lcom/tencent/mm/dbsupport/newcursor/d;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 182
+    .line 181
     if-nez v0, :cond_0
 
+    .line 182
     const/4 v0, 0x0
 
-    .line 184
+    .line 185
     :goto_0
     return v0
 
@@ -348,6 +363,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 184
     check-cast v0, Ljava/lang/Number;
 
     invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
@@ -356,7 +372,7 @@
 
     goto :goto_0
 
-    .line 184
+    .line 185
     :cond_1
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -373,26 +389,28 @@
     .locals 2
 
     .prologue
-    .line 189
+    .line 190
     invoke-direct {p0, p1}, Lcom/tencent/mm/dbsupport/newcursor/d;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 190
+    .line 191
     if-nez v0, :cond_0
 
+    .line 192
     const-wide/16 v0, 0x0
 
-    .line 192
+    .line 195
     :goto_0
     return-wide v0
 
-    .line 191
+    .line 193
     :cond_0
     instance-of v1, v0, Ljava/lang/Number;
 
     if-eqz v1, :cond_1
 
+    .line 194
     check-cast v0, Ljava/lang/Number;
 
     invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
@@ -401,7 +419,7 @@
 
     goto :goto_0
 
-    .line 192
+    .line 195
     :cond_1
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -418,26 +436,28 @@
     .locals 2
 
     .prologue
-    .line 173
+    .line 170
     invoke-direct {p0, p1}, Lcom/tencent/mm/dbsupport/newcursor/d;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 174
+    .line 171
     if-nez v0, :cond_0
 
+    .line 172
     const/4 v0, 0x0
 
-    .line 176
+    .line 175
     :goto_0
     return v0
 
-    .line 175
+    .line 173
     :cond_0
     instance-of v1, v0, Ljava/lang/Number;
 
     if-eqz v1, :cond_1
 
+    .line 174
     check-cast v0, Ljava/lang/Number;
 
     invoke-virtual {v0}, Ljava/lang/Number;->shortValue()S
@@ -446,7 +466,7 @@
 
     goto :goto_0
 
-    .line 176
+    .line 175
     :cond_1
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -463,17 +483,18 @@
     .locals 1
 
     .prologue
-    .line 166
+    .line 162
     invoke-direct {p0, p1}, Lcom/tencent/mm/dbsupport/newcursor/d;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 167
+    .line 163
     if-nez v0, :cond_0
 
+    .line 164
     const/4 v0, 0x0
 
-    .line 168
+    .line 165
     :goto_0
     return-object v0
 
@@ -489,7 +510,7 @@
     .locals 1
 
     .prologue
-    .line 213
+    .line 220
     invoke-direct {p0, p1}, Lcom/tencent/mm/dbsupport/newcursor/d;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -511,7 +532,7 @@
     .locals 0
 
     .prologue
-    .line 264
+    .line 270
     return-void
 .end method
 
@@ -519,7 +540,7 @@
     .locals 0
 
     .prologue
-    .line 273
+    .line 279
     return-void
 .end method
 
@@ -527,7 +548,7 @@
     .locals 0
 
     .prologue
-    .line 268
+    .line 274
     return-void
 .end method
 
@@ -535,6 +556,6 @@
     .locals 0
 
     .prologue
-    .line 278
+    .line 284
     return-void
 .end method

@@ -4,15 +4,33 @@
 
 
 # instance fields
-.field private final bZ:Landroid/support/v4/app/e;
+.field private final cn:Landroid/support/v4/app/e;
 
-.field private ca:Landroid/support/v4/app/h;
+.field private co:Landroid/support/v4/app/h;
 
-.field private cb:Ljava/util/ArrayList;
+.field private cp:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/support/v4/app/Fragment$SavedState;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private cc:Ljava/util/ArrayList;
+.field private cq:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/support/v4/app/Fragment;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private cd:Landroid/support/v4/app/Fragment;
+.field private cr:Landroid/support/v4/app/Fragment;
 
 
 # direct methods
@@ -26,27 +44,27 @@
     invoke-direct {p0}, Landroid/support/v4/view/j;-><init>()V
 
     .line 69
-    iput-object v1, p0, Landroid/support/v4/app/g;->ca:Landroid/support/v4/app/h;
+    iput-object v1, p0, Landroid/support/v4/app/g;->co:Landroid/support/v4/app/h;
 
     .line 71
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v4/app/g;->cb:Ljava/util/ArrayList;
+    iput-object v0, p0, Landroid/support/v4/app/g;->cp:Ljava/util/ArrayList;
 
     .line 72
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v4/app/g;->cc:Ljava/util/ArrayList;
+    iput-object v0, p0, Landroid/support/v4/app/g;->cq:Ljava/util/ArrayList;
 
     .line 73
-    iput-object v1, p0, Landroid/support/v4/app/g;->cd:Landroid/support/v4/app/Fragment;
+    iput-object v1, p0, Landroid/support/v4/app/g;->cr:Landroid/support/v4/app/Fragment;
 
     .line 76
-    iput-object p1, p0, Landroid/support/v4/app/g;->bZ:Landroid/support/v4/app/e;
+    iput-object p1, p0, Landroid/support/v4/app/g;->cn:Landroid/support/v4/app/e;
 
     .line 77
     return-void
@@ -54,27 +72,27 @@
 
 
 # virtual methods
-.method public final M()V
+.method public final L()V
     .locals 1
 
     .prologue
     .line 160
-    iget-object v0, p0, Landroid/support/v4/app/g;->ca:Landroid/support/v4/app/h;
+    iget-object v0, p0, Landroid/support/v4/app/g;->co:Landroid/support/v4/app/h;
 
     if-eqz v0, :cond_0
 
     .line 161
-    iget-object v0, p0, Landroid/support/v4/app/g;->ca:Landroid/support/v4/app/h;
+    iget-object v0, p0, Landroid/support/v4/app/g;->co:Landroid/support/v4/app/h;
 
     invoke-virtual {v0}, Landroid/support/v4/app/h;->commitAllowingStateLoss()I
 
     .line 162
     const/4 v0, 0x0
 
-    iput-object v0, p0, Landroid/support/v4/app/g;->ca:Landroid/support/v4/app/h;
+    iput-object v0, p0, Landroid/support/v4/app/g;->co:Landroid/support/v4/app/h;
 
     .line 163
-    iget-object v0, p0, Landroid/support/v4/app/g;->bZ:Landroid/support/v4/app/e;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cn:Landroid/support/v4/app/e;
 
     invoke-virtual {v0}, Landroid/support/v4/app/e;->executePendingTransactions()Z
 
@@ -83,7 +101,7 @@
     return-void
 .end method
 
-.method public final N()Landroid/os/Parcelable;
+.method public final M()Landroid/os/Parcelable;
     .locals 5
 
     .prologue
@@ -91,7 +109,7 @@
     const/4 v0, 0x0
 
     .line 175
-    iget-object v1, p0, Landroid/support/v4/app/g;->cb:Ljava/util/ArrayList;
+    iget-object v1, p0, Landroid/support/v4/app/g;->cp:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -105,7 +123,7 @@
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 177
-    iget-object v1, p0, Landroid/support/v4/app/g;->cb:Ljava/util/ArrayList;
+    iget-object v1, p0, Landroid/support/v4/app/g;->cp:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -114,7 +132,7 @@
     new-array v1, v1, [Landroid/support/v4/app/Fragment$SavedState;
 
     .line 178
-    iget-object v2, p0, Landroid/support/v4/app/g;->cb:Ljava/util/ArrayList;
+    iget-object v2, p0, Landroid/support/v4/app/g;->cp:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
@@ -130,7 +148,7 @@
     move-object v2, v0
 
     :goto_0
-    iget-object v0, p0, Landroid/support/v4/app/g;->cc:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cq:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -139,7 +157,7 @@
     if-ge v1, v0, :cond_3
 
     .line 182
-    iget-object v0, p0, Landroid/support/v4/app/g;->cc:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cq:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -175,7 +193,7 @@
     move-result-object v3
 
     .line 188
-    iget-object v4, p0, Landroid/support/v4/app/g;->bZ:Landroid/support/v4/app/e;
+    iget-object v4, p0, Landroid/support/v4/app/g;->cn:Landroid/support/v4/app/e;
 
     invoke-virtual {v4, v2, v3, v0}, Landroid/support/v4/app/e;->a(Landroid/os/Bundle;Ljava/lang/String;Landroid/support/v4/app/Fragment;)V
 
@@ -193,13 +211,15 @@
 .end method
 
 .method public final a(Landroid/view/ViewGroup;I)Ljava/lang/Object;
-    .locals 4
+    .locals 5
 
     .prologue
-    const/4 v3, 0x0
+    const/4 v1, 0x0
+
+    const/4 v4, 0x0
 
     .line 94
-    iget-object v0, p0, Landroid/support/v4/app/g;->cc:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cq:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -208,7 +228,7 @@
     if-le v0, p2, :cond_0
 
     .line 95
-    iget-object v0, p0, Landroid/support/v4/app/g;->cc:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cq:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -225,36 +245,36 @@
 
     .line 101
     :cond_0
-    iget-object v0, p0, Landroid/support/v4/app/g;->ca:Landroid/support/v4/app/h;
+    iget-object v0, p0, Landroid/support/v4/app/g;->co:Landroid/support/v4/app/h;
 
     if-nez v0, :cond_1
 
     .line 102
-    iget-object v0, p0, Landroid/support/v4/app/g;->bZ:Landroid/support/v4/app/e;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cn:Landroid/support/v4/app/e;
 
-    invoke-virtual {v0}, Landroid/support/v4/app/e;->H()Landroid/support/v4/app/h;
+    invoke-virtual {v0}, Landroid/support/v4/app/e;->G()Landroid/support/v4/app/h;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v4/app/g;->ca:Landroid/support/v4/app/h;
+    iput-object v0, p0, Landroid/support/v4/app/g;->co:Landroid/support/v4/app/h;
 
     .line 105
     :cond_1
     invoke-virtual {p0, p2}, Landroid/support/v4/app/g;->j(I)Landroid/support/v4/app/Fragment;
 
-    move-result-object v1
+    move-result-object v2
 
     .line 107
-    iget-object v0, p0, Landroid/support/v4/app/g;->cb:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cp:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    if-le v0, p2, :cond_2
+    if-le v0, p2, :cond_3
 
     .line 108
-    iget-object v0, p0, Landroid/support/v4/app/g;->cb:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cp:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -263,53 +283,79 @@
     check-cast v0, Landroid/support/v4/app/Fragment$SavedState;
 
     .line 109
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     .line 110
-    invoke-virtual {v1, v0}, Landroid/support/v4/app/Fragment;->setInitialSavedState(Landroid/support/v4/app/Fragment$SavedState;)V
+    iget v3, v2, Landroid/support/v4/app/Fragment;->mIndex:I
+
+    if-ltz v3, :cond_2
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string/jumbo v1, "Fragment already active"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    if-eqz v0, :cond_4
+
+    iget-object v3, v0, Landroid/support/v4/app/Fragment$SavedState;->bo:Landroid/os/Bundle;
+
+    if-eqz v3, :cond_4
+
+    iget-object v0, v0, Landroid/support/v4/app/Fragment$SavedState;->bo:Landroid/os/Bundle;
+
+    :goto_1
+    iput-object v0, v2, Landroid/support/v4/app/Fragment;->aD:Landroid/os/Bundle;
 
     .line 113
-    :cond_2
-    :goto_1
-    iget-object v0, p0, Landroid/support/v4/app/g;->cc:Ljava/util/ArrayList;
+    :cond_3
+    :goto_2
+    iget-object v0, p0, Landroid/support/v4/app/g;->cq:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    if-gt v0, p2, :cond_3
+    if-gt v0, p2, :cond_5
 
     .line 114
-    iget-object v0, p0, Landroid/support/v4/app/g;->cc:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cq:Ljava/util/ArrayList;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    goto :goto_2
 
+    :cond_4
+    move-object v0, v1
+
+    .line 110
     goto :goto_1
 
     .line 116
-    :cond_3
-    invoke-virtual {v1, v3}, Landroid/support/v4/app/Fragment;->setMenuVisibility(Z)V
+    :cond_5
+    invoke-virtual {v2, v4}, Landroid/support/v4/app/Fragment;->setMenuVisibility(Z)V
 
     .line 117
-    invoke-virtual {v1, v3}, Landroid/support/v4/app/Fragment;->setUserVisibleHint(Z)V
+    invoke-virtual {v2, v4}, Landroid/support/v4/app/Fragment;->setUserVisibleHint(Z)V
 
     .line 118
-    iget-object v0, p0, Landroid/support/v4/app/g;->cc:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cq:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, p2, v1}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p2, v2}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     .line 119
-    iget-object v0, p0, Landroid/support/v4/app/g;->ca:Landroid/support/v4/app/h;
+    iget-object v0, p0, Landroid/support/v4/app/g;->co:Landroid/support/v4/app/h;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getId()I
 
-    move-result v2
+    move-result v1
 
-    invoke-virtual {v0, v2, v1}, Landroid/support/v4/app/h;->a(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/h;
+    invoke-virtual {v0, v1, v2}, Landroid/support/v4/app/h;->a(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/h;
 
-    move-object v0, v1
+    move-object v0, v2
 
     .line 121
     goto :goto_0
@@ -338,12 +384,12 @@
     move-result-object v3
 
     .line 200
-    iget-object v0, p0, Landroid/support/v4/app/g;->cb:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cp:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     .line 201
-    iget-object v0, p0, Landroid/support/v4/app/g;->cc:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cq:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
@@ -359,7 +405,7 @@
     if-ge v1, v0, :cond_0
 
     .line 204
-    iget-object v4, p0, Landroid/support/v4/app/g;->cb:Ljava/util/ArrayList;
+    iget-object v4, p0, Landroid/support/v4/app/g;->cp:Ljava/util/ArrayList;
 
     aget-object v0, v3, v1
 
@@ -420,7 +466,7 @@
     move-result v3
 
     .line 211
-    iget-object v4, p0, Landroid/support/v4/app/g;->bZ:Landroid/support/v4/app/e;
+    iget-object v4, p0, Landroid/support/v4/app/g;->cn:Landroid/support/v4/app/e;
 
     invoke-virtual {v4, p1, v0}, Landroid/support/v4/app/e;->a(Landroid/os/Bundle;Ljava/lang/String;)Landroid/support/v4/app/Fragment;
 
@@ -431,7 +477,7 @@
 
     .line 213
     :goto_2
-    iget-object v4, p0, Landroid/support/v4/app/g;->cc:Ljava/util/ArrayList;
+    iget-object v4, p0, Landroid/support/v4/app/g;->cq:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
@@ -440,7 +486,7 @@
     if-gt v4, v3, :cond_2
 
     .line 214
-    iget-object v4, p0, Landroid/support/v4/app/g;->cc:Ljava/util/ArrayList;
+    iget-object v4, p0, Landroid/support/v4/app/g;->cq:Ljava/util/ArrayList;
 
     const/4 v5, 0x0
 
@@ -453,7 +499,7 @@
     invoke-virtual {v0, v2}, Landroid/support/v4/app/Fragment;->setMenuVisibility(Z)V
 
     .line 217
-    iget-object v4, p0, Landroid/support/v4/app/g;->cc:Ljava/util/ArrayList;
+    iget-object v4, p0, Landroid/support/v4/app/g;->cq:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3, v0}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
@@ -474,23 +520,23 @@
     check-cast p3, Landroid/support/v4/app/Fragment;
 
     .line 128
-    iget-object v0, p0, Landroid/support/v4/app/g;->ca:Landroid/support/v4/app/h;
+    iget-object v0, p0, Landroid/support/v4/app/g;->co:Landroid/support/v4/app/h;
 
     if-nez v0, :cond_0
 
     .line 129
-    iget-object v0, p0, Landroid/support/v4/app/g;->bZ:Landroid/support/v4/app/e;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cn:Landroid/support/v4/app/e;
 
-    invoke-virtual {v0}, Landroid/support/v4/app/e;->H()Landroid/support/v4/app/h;
+    invoke-virtual {v0}, Landroid/support/v4/app/e;->G()Landroid/support/v4/app/h;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v4/app/g;->ca:Landroid/support/v4/app/h;
+    iput-object v0, p0, Landroid/support/v4/app/g;->co:Landroid/support/v4/app/h;
 
     .line 133
     :cond_0
     :goto_0
-    iget-object v0, p0, Landroid/support/v4/app/g;->cb:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cp:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -499,7 +545,7 @@
     if-gt v0, p2, :cond_1
 
     .line 134
-    iget-object v0, p0, Landroid/support/v4/app/g;->cb:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cp:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -507,25 +553,25 @@
 
     .line 136
     :cond_1
-    iget-object v0, p0, Landroid/support/v4/app/g;->cb:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cp:Ljava/util/ArrayList;
 
-    iget-object v1, p0, Landroid/support/v4/app/g;->bZ:Landroid/support/v4/app/e;
+    iget-object v1, p0, Landroid/support/v4/app/g;->cn:Landroid/support/v4/app/e;
 
-    invoke-virtual {v1, p3}, Landroid/support/v4/app/e;->e(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/Fragment$SavedState;
+    invoke-virtual {v1, p3}, Landroid/support/v4/app/e;->d(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/Fragment$SavedState;
 
     move-result-object v1
 
     invoke-virtual {v0, p2, v1}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     .line 137
-    iget-object v0, p0, Landroid/support/v4/app/g;->cc:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cq:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2, v2}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     .line 139
-    iget-object v0, p0, Landroid/support/v4/app/g;->ca:Landroid/support/v4/app/h;
+    iget-object v0, p0, Landroid/support/v4/app/g;->co:Landroid/support/v4/app/h;
 
-    invoke-virtual {v0, p3}, Landroid/support/v4/app/h;->b(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/h;
+    invoke-virtual {v0, p3}, Landroid/support/v4/app/h;->a(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/h;
 
     .line 140
     return-void
@@ -538,9 +584,7 @@
     .line 169
     check-cast p2, Landroid/support/v4/app/Fragment;
 
-    invoke-virtual {p2}, Landroid/support/v4/app/Fragment;->getView()Landroid/view/View;
-
-    move-result-object v0
+    iget-object v0, p2, Landroid/support/v4/app/Fragment;->mView:Landroid/view/View;
 
     if-ne v0, p1, :cond_0
 
@@ -567,22 +611,22 @@
     check-cast p1, Landroid/support/v4/app/Fragment;
 
     .line 145
-    iget-object v0, p0, Landroid/support/v4/app/g;->cd:Landroid/support/v4/app/Fragment;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cr:Landroid/support/v4/app/Fragment;
 
     if-eq p1, v0, :cond_2
 
     .line 146
-    iget-object v0, p0, Landroid/support/v4/app/g;->cd:Landroid/support/v4/app/Fragment;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cr:Landroid/support/v4/app/Fragment;
 
     if-eqz v0, :cond_0
 
     .line 147
-    iget-object v0, p0, Landroid/support/v4/app/g;->cd:Landroid/support/v4/app/Fragment;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cr:Landroid/support/v4/app/Fragment;
 
     invoke-virtual {v0, v1}, Landroid/support/v4/app/Fragment;->setMenuVisibility(Z)V
 
     .line 148
-    iget-object v0, p0, Landroid/support/v4/app/g;->cd:Landroid/support/v4/app/Fragment;
+    iget-object v0, p0, Landroid/support/v4/app/g;->cr:Landroid/support/v4/app/Fragment;
 
     invoke-virtual {v0, v1}, Landroid/support/v4/app/Fragment;->setUserVisibleHint(Z)V
 
@@ -598,7 +642,7 @@
 
     .line 154
     :cond_1
-    iput-object p1, p0, Landroid/support/v4/app/g;->cd:Landroid/support/v4/app/Fragment;
+    iput-object p1, p0, Landroid/support/v4/app/g;->cr:Landroid/support/v4/app/Fragment;
 
     .line 156
     :cond_2

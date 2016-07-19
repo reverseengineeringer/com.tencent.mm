@@ -3,17 +3,17 @@
 
 
 # instance fields
-.field public ajh:Ljava/lang/String;
+.field public UX:Ljava/lang/String;
 
-.field public aji:Ljava/lang/String;
+.field public UY:Ljava/lang/String;
 
-.field public ajj:Ljava/lang/String;
+.field public UZ:Ljava/lang/String;
 
-.field public ajk:Ljava/lang/String;
+.field public Va:Ljava/lang/String;
 
-.field public ajl:Ljava/lang/String;
+.field public Vb:Ljava/lang/String;
 
-.field public ajm:Ljava/lang/String;
+.field public Vc:Ljava/lang/String;
 
 
 # direct methods
@@ -22,11 +22,11 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/qq/wx/voice/embed/recognizer/d;->ajh:Ljava/lang/String;
+    iput-object p1, p0, Lcom/qq/wx/voice/embed/recognizer/d;->UX:Ljava/lang/String;
 
-    iput-object p2, p0, Lcom/qq/wx/voice/embed/recognizer/d;->aji:Ljava/lang/String;
+    iput-object p2, p0, Lcom/qq/wx/voice/embed/recognizer/d;->UY:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/qq/wx/voice/embed/recognizer/d;->ajj:Ljava/lang/String;
+    iput-object p3, p0, Lcom/qq/wx/voice/embed/recognizer/d;->UZ:Ljava/lang/String;
 
     return-void
 .end method

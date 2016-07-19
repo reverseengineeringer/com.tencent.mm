@@ -18,15 +18,15 @@
 
 
 # instance fields
-.field arU:I
+.field adJ:I
 
-.field auo:I
+.field agb:I
 
-.field aup:Landroid/content/Intent;
+.field agc:Landroid/content/Intent;
 
-.field knB:I
+.field kMI:I
 
-.field final synthetic lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+.field final synthetic lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
 
 # direct methods
@@ -34,15 +34,15 @@
     .locals 1
 
     .prologue
-    .line 726
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    .line 740
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 730
+    .line 744
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c;->knB:I
+    iput v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c;->kMI:I
 
     return-void
 .end method
@@ -51,7 +51,7 @@
     .locals 0
 
     .prologue
-    .line 726
+    .line 740
     invoke-direct {p0, p1}, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c;-><init>(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)V
 
     return-void
@@ -67,21 +67,21 @@
 
     const/4 v4, 0x0
 
-    .line 737
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    .line 751
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 738
-    const-string/jumbo v0, "!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4="
+    .line 752
+    const-string/jumbo v0, "MicroMsg.BaseConversationUI"
 
     const-string/jumbo v1, "on post select image job, acc has ready, retry count %d"
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget v3, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c;->knB:I
+    iget v3, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c;->kMI:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -89,12 +89,12 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 740
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    .line 754
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->m(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)Ljava/lang/String;
 
@@ -104,43 +104,43 @@
 
     invoke-virtual {v0, v1, v2, v4}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->a(Ljava/lang/String;Landroid/os/Bundle;Z)V
 
-    .line 741
+    .line 755
     new-instance v0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c$1;-><init>(Lcom/tencent/mm/ui/conversation/BaseConversationUI$c;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
-    .line 767
+    .line 781
     :goto_0
     return-void
 
-    .line 757
+    .line 771
     :cond_0
-    iget v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c;->knB:I
+    iget v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c;->kMI:I
 
     const/4 v1, 0x3
 
     if-lt v0, v1, :cond_1
 
-    .line 758
-    const-string/jumbo v0, "!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4="
+    .line 772
+    const-string/jumbo v0, "MicroMsg.BaseConversationUI"
 
     const-string/jumbo v1, "on post select image job, match max retry count"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 761
+    .line 775
     :cond_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4="
+    const-string/jumbo v0, "MicroMsg.BaseConversationUI"
 
     const-string/jumbo v1, "on post select image job, acc not ready, cur retry count %d"
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget v3, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c;->knB:I
+    iget v3, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c;->kMI:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -148,19 +148,19 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 763
-    iget v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c;->knB:I
+    .line 777
+    iget v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c;->kMI:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c;->knB:I
+    iput v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$c;->kMI:I
 
-    .line 764
+    .line 778
     const-wide/16 v0, 0x12c
 
-    invoke-static {p0, v0, v1}, Lcom/tencent/mm/sdk/platformtools/ab;->e(Ljava/lang/Runnable;J)V
+    invoke-static {p0, v0, v1}, Lcom/tencent/mm/sdk/platformtools/ad;->e(Ljava/lang/Runnable;J)V
 
     goto :goto_0
 .end method
@@ -169,7 +169,7 @@
     .locals 2
 
     .prologue
-    .line 771
+    .line 785
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.a;
 
 public abstract interface a
 {
-  public abstract void AE(String paramString);
+  public abstract void CF(String paramString);
 }
 
 /* Location:

@@ -9,7 +9,7 @@ final class SnsLuckyMoneyDetailUI$3
 {
   SnsLuckyMoneyDetailUI$3(SnsLuckyMoneyDetailUI paramSnsLuckyMoneyDetailUI) {}
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong) {}
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong) {}
 }
 
 /* Location:

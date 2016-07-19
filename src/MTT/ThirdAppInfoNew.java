@@ -5,6 +5,7 @@ public final class ThirdAppInfoNew
 {
   public int iCoreType = 0;
   public long iPv = 0L;
+  public String sAndroidID = "";
   public String sAppName = "";
   public String sAppSignature = "";
   public String sAppVersionName = "";

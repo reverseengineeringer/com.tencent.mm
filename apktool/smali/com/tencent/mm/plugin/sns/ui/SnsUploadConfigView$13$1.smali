@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hlO:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$13;
+.field final synthetic hBP:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$13;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 455
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$13$1;->hlO:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$13;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$13$1;->hBP:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$13;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

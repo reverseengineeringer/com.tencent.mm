@@ -3,15 +3,52 @@
 .source "SourceFile"
 
 
-# instance fields
-.field lp:Ljava/util/HashMap;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Landroid/support/v7/internal/view/menu/d",
+        "<TT;>;"
+    }
+.end annotation
 
-.field lq:Ljava/util/HashMap;
+
+# instance fields
+.field lG:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Landroid/view/MenuItem;",
+            "Landroid/support/v4/a/a/b;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field lH:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Landroid/view/SubMenu;",
+            "Landroid/view/SubMenu;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
 .method constructor <init>(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
 
     .prologue
     .line 33
@@ -31,7 +68,7 @@
     if-eqz p1, :cond_3
 
     .line 58
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/c;->lq:Ljava/util/HashMap;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/c;->lH:Ljava/util/HashMap;
 
     if-nez v0, :cond_0
 
@@ -40,11 +77,11 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v7/internal/view/menu/c;->lq:Ljava/util/HashMap;
+    iput-object v0, p0, Landroid/support/v7/internal/view/menu/c;->lH:Ljava/util/HashMap;
 
     .line 62
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/c;->lq:Ljava/util/HashMap;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/c;->lH:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -67,7 +104,7 @@
     invoke-direct {v0, p1}, Landroid/support/v7/internal/view/menu/q;-><init>(Landroid/view/SubMenu;)V
 
     .line 66
-    iget-object v1, p0, Landroid/support/v7/internal/view/menu/c;->lq:Ljava/util/HashMap;
+    iget-object v1, p0, Landroid/support/v7/internal/view/menu/c;->lH:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -99,7 +136,7 @@
     if-eqz p1, :cond_4
 
     .line 39
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/c;->lp:Ljava/util/HashMap;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/c;->lG:Ljava/util/HashMap;
 
     if-nez v0, :cond_0
 
@@ -108,11 +145,11 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v7/internal/view/menu/c;->lp:Ljava/util/HashMap;
+    iput-object v0, p0, Landroid/support/v7/internal/view/menu/c;->lG:Ljava/util/HashMap;
 
     .line 43
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/c;->lp:Ljava/util/HashMap;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/c;->lG:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -136,7 +173,7 @@
 
     .line 47
     :goto_0
-    iget-object v1, p0, Landroid/support/v7/internal/view/menu/c;->lp:Ljava/util/HashMap;
+    iget-object v1, p0, Landroid/support/v7/internal/view/menu/c;->lG:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

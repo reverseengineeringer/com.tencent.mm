@@ -12,9 +12,9 @@
 
 
 # static fields
-.field public static bxa:Ljava/lang/String;
+.field public static bpc:Ljava/lang/String;
 
-.field public static final kax:Ljava/lang/String;
+.field public static final kAH:Ljava/lang/String;
 
 
 # direct methods
@@ -22,17 +22,17 @@
     .locals 2
 
     .prologue
-    .line 989
-    sget-object v0, Lcom/tencent/mm/compatible/util/d;->bxa:Ljava/lang/String;
+    .line 1012
+    sget-object v0, Lcom/tencent/mm/compatible/util/d;->bpc:Ljava/lang/String;
 
-    sput-object v0, Lcom/tencent/mm/storage/j;->bxa:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/storage/j;->bpc:Ljava/lang/String;
 
-    .line 990
+    .line 1013
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -54,8 +54,8 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/storage/j;->kax:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/storage/j;->kAH:Ljava/lang/String;
 
-    .line 1128
+    .line 1154
     return-void
 .end method

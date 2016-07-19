@@ -2,10 +2,10 @@ package android.support.v4.view;
 
 final class ViewPager$b
 {
-  Object gB;
-  boolean gC;
-  float gD;
-  float gE;
+  Object gW;
+  boolean gX;
+  float gY;
+  float gZ;
   int position;
 }
 

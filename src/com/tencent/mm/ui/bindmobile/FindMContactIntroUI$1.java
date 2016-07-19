@@ -10,7 +10,7 @@ final class FindMContactIntroUI$1
   
   public final void onClick(View paramView)
   {
-    FindMContactIntroUI.a(kOZ);
+    FindMContactIntroUI.a(lop);
   }
 }
 

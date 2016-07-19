@@ -3,12 +3,10 @@ package com.tencent.mm.ui.conversation;
 import android.content.Intent;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.modelsearch.f;
-import com.tencent.mm.protocal.GeneralControlWrapper;
-import com.tencent.mm.protocal.JsapiPermissionWrapper;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class BizConversationUI$a$1
   implements MenuItem.OnMenuItemClickListener
@@ -17,26 +15,23 @@ final class BizConversationUI$a$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if (f.BO())
+    if (f.BT())
     {
-      paramMenuItem = new Intent();
-      paramMenuItem.putExtra("title", loi.getString(2131431399));
-      paramMenuItem.putExtra("searchbar_tips", loi.getString(2131431399));
-      paramMenuItem.putExtra("hardcode_jspermission", JsapiPermissionWrapper.iUp);
-      paramMenuItem.putExtra("hardcode_general_ctrl", GeneralControlWrapper.iUm);
-      paramMenuItem.putExtra("neverGetA8Key", true);
+      paramMenuItem = f.BV();
+      paramMenuItem.putExtra("title", lOA.getString(2131232979));
+      paramMenuItem.putExtra("searchbar_tips", lOA.getString(2131232979));
       paramMenuItem.putExtra("KRightBtn", true);
       paramMenuItem.putExtra("ftsneedkeyboard", true);
       paramMenuItem.putExtra("publishIdPrefix", "bs");
       paramMenuItem.putExtra("ftsType", 2);
       paramMenuItem.putExtra("ftsbizscene", 11);
-      paramMenuItem.putExtra("rawUrl", f.m(f.a(11, false, 2)));
+      paramMenuItem.putExtra("rawUrl", f.j(f.a(11, false, 2)));
       paramMenuItem.putExtra("key_load_js_without_delay", true);
       paramMenuItem.addFlags(67108864);
-      c.c(y.getContext(), "webview", ".ui.tools.fts.FTSSearchTabWebViewUI", paramMenuItem);
+      c.c(aa.getContext(), "webview", ".ui.tools.fts.FTSSearchTabWebViewUI", paramMenuItem);
       return true;
     }
-    u.e("!44@/B4Tb64lLpIMw+dFbL21OiX21bsyOnJqkPvIR1gSqXw=", "fts h5 template not avail");
+    v.e("MicroMsg.BizConversationUI", "fts h5 template not avail");
     return true;
   }
 }

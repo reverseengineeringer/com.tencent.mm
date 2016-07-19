@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.Window;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
 
 @com.tencent.mm.ui.base.a(3)
 public class MMBaseActivity
@@ -12,8 +12,8 @@ public class MMBaseActivity
 {
   public Resources getResources()
   {
-    if ((getAssets() != null) && (y.getResources() != null)) {
-      return y.getResources();
+    if ((getAssets() != null) && (aa.getResources() != null)) {
+      return aa.getResources();
     }
     return super.getResources();
   }
@@ -35,8 +35,8 @@ public class MMBaseActivity
   public void onDestroy()
   {
     super.onDestroy();
-    com.tencent.mm.sdk.platformtools.a.ak(getWindow().getDecorView());
-    com.tencent.mm.sdk.platformtools.a.dj(this);
+    com.tencent.mm.sdk.platformtools.a.an(getWindow().getDecorView());
+    com.tencent.mm.sdk.platformtools.a.dh(this);
   }
 }
 

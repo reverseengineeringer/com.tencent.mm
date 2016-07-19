@@ -2,9 +2,9 @@ package com.tencent.mm.ui.chatting.gallery;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
-import com.tencent.mm.d.a.v;
+import com.tencent.mm.e.a.x;
 import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class ImageGalleryUI$2
   implements DialogInterface.OnCancelListener
@@ -13,13 +13,14 @@ final class ImageGalleryUI$2
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    u.d("!32@/B4Tb64lLpJSmuQVFTi9B2JvKOm4MTV5", "cancel menu");
-    paramDialogInterface = new v();
-    asY.filePath = ImageGalleryUI.b(lgM);
-    a.jUF.j(paramDialogInterface);
-    ImageGalleryUI.n(lgM);
-    ImageGalleryUI.c(lgM);
-    ImageGalleryUI.a(lgM, null);
+    v.d("MicroMsg.ImageGalleryUI", "cancel menu");
+    paramDialogInterface = new x();
+    aeI.filePath = ImageGalleryUI.b(lGY);
+    a.kug.y(paramDialogInterface);
+    ImageGalleryUI.m(lGY);
+    ImageGalleryUI.c(lGY);
+    ImageGalleryUI.a(lGY, null);
+    ImageGalleryUI.a(lGY, ImageGalleryUI.b(lGY, 0));
   }
 }
 

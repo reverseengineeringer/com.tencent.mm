@@ -10,7 +10,7 @@ final class SnsSingleTextViewUI$4
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    hiD.finish();
+    hxs.finish();
     return true;
   }
 }

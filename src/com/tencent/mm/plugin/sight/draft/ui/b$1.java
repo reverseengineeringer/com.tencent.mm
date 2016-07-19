@@ -1,9 +1,9 @@
 package com.tencent.mm.plugin.sight.draft.ui;
 
 import android.graphics.Bitmap;
-import com.tencent.mm.an.f;
+import com.tencent.mm.aq.j;
 import com.tencent.mm.plugin.sight.decode.a.a;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -14,12 +14,12 @@ final class b$1
   
   public final void o(String paramString, Bitmap paramBitmap)
   {
-    Iterator localIterator = b.a(gzt).iterator();
+    Iterator localIterator = b.a(gFV).iterator();
     while (localIterator.hasNext())
     {
       b.e locale = (b.e)localIterator.next();
-      if ((cfv != null) && (ay.ad(paramString, "").equals(cfv.field_fileName))) {
-        gzz.setThumbBmp(paramBitmap);
+      if ((caH != null) && (be.ab(paramString, "").equals(caH.field_fileName))) {
+        gGb.o(paramBitmap);
       }
     }
   }

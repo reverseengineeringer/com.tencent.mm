@@ -9,8 +9,6 @@ abstract interface g$d
   
   public abstract MenuItem a(MenuItem paramMenuItem, View paramView);
   
-  public abstract View a(MenuItem paramMenuItem);
-  
   public abstract void a(MenuItem paramMenuItem, int paramInt);
   
   public abstract MenuItem b(MenuItem paramMenuItem, int paramInt);

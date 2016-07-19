@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->Gb()V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+.field final synthetic huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 170
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$6;->hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+    .line 172
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$6;->huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,16 +40,16 @@
     .locals 5
 
     .prologue
-    .line 175
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$6;->hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+    .line 177
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$6;->huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, v0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$6;->hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$6;->huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
-    const v2, 0x7f0b1666
+    const v2, 0x7f0812ae
 
     invoke-virtual {v1, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->getString(I)Ljava/lang/String;
 
@@ -65,7 +65,7 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
-    .line 187
+    .line 189
     const/4 v0, 0x1
 
     return v0

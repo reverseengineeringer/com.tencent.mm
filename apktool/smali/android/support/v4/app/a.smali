@@ -38,20 +38,20 @@
     if-eqz v0, :cond_0
 
     .line 224
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
     .line 225
     new-instance v1, Landroid/support/v4/app/a$1;
 
     invoke-direct {v1, p1, p0, p2}, Landroid/support/v4/app/a$1;-><init>([Ljava/lang/String;Landroid/app/Activity;I)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 .end method

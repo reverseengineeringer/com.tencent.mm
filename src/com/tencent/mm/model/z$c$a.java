@@ -2,7 +2,7 @@ package com.tencent.mm.model;
 
 public abstract interface z$c$a
 {
-  public abstract void f(String paramString, boolean paramBoolean);
+  public abstract void i(String paramString, boolean paramBoolean);
 }
 
 /* Location:

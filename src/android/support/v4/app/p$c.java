@@ -1,9 +1,9 @@
 package android.support.v4.app;
 
 public final class p$c
-  extends p.p
+  extends p.o
 {
-  CharSequence cG;
+  CharSequence cW;
 }
 
 /* Location:

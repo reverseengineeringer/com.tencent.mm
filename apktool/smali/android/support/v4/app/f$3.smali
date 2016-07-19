@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic bQ:Landroid/support/v4/app/f;
+.field final synthetic ce:Landroid/support/v4/app/f;
 
-.field final synthetic bR:I
+.field final synthetic cf:I
 
-.field final synthetic bS:I
+.field final synthetic cg:I
 
 
 # direct methods
@@ -31,13 +31,13 @@
 
     .prologue
     .line 512
-    iput-object p1, p0, Landroid/support/v4/app/f$3;->bQ:Landroid/support/v4/app/f;
+    iput-object p1, p0, Landroid/support/v4/app/f$3;->ce:Landroid/support/v4/app/f;
 
-    iput p2, p0, Landroid/support/v4/app/f$3;->bR:I
+    iput p2, p0, Landroid/support/v4/app/f$3;->cf:I
 
     const/4 v0, 0x1
 
-    iput v0, p0, Landroid/support/v4/app/f$3;->bS:I
+    iput v0, p0, Landroid/support/v4/app/f$3;->cg:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,17 +51,17 @@
 
     .prologue
     .line 514
-    iget-object v0, p0, Landroid/support/v4/app/f$3;->bQ:Landroid/support/v4/app/f;
+    iget-object v0, p0, Landroid/support/v4/app/f$3;->ce:Landroid/support/v4/app/f;
 
-    iget-object v1, p0, Landroid/support/v4/app/f$3;->bQ:Landroid/support/v4/app/f;
+    iget-object v1, p0, Landroid/support/v4/app/f$3;->ce:Landroid/support/v4/app/f;
 
-    iget-object v1, v1, Landroid/support/v4/app/f;->mActivity:Landroid/support/v4/app/FragmentActivity;
+    iget-object v1, v1, Landroid/support/v4/app/f;->aS:Landroid/support/v4/app/FragmentActivity;
 
-    iget v1, p0, Landroid/support/v4/app/f$3;->bR:I
+    iget v1, p0, Landroid/support/v4/app/f$3;->cf:I
 
-    iget v2, p0, Landroid/support/v4/app/f$3;->bS:I
+    iget v2, p0, Landroid/support/v4/app/f$3;->cg:I
 
-    invoke-virtual {v0, v1, v2}, Landroid/support/v4/app/f;->e(II)Z
+    invoke-virtual {v0, v1, v2}, Landroid/support/v4/app/f;->c(II)Z
 
     .line 515
     return-void

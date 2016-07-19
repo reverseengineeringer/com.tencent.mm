@@ -53,6 +53,15 @@
 .field private static sTencentLog:Lcom/tencent/map/geolocation/internal/TencentLog;
 
 .field private static sTencentLogs:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/map/geolocation/internal/TencentLog;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -352,6 +361,15 @@
 
 .method public static declared-synchronized getTencentLogs()Ljava/util/List;
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/map/geolocation/internal/TencentLog;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 406

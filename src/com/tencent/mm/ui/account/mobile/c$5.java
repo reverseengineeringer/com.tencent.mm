@@ -13,11 +13,11 @@ final class c$5
   
   public final void onClick(View paramView)
   {
-    paramView = kxP.ksI.getText().toString().trim();
-    kxP.ksR = kxP.kus.getCountryCode();
-    kxP.fvR = kxP.kus.getMobileNumber();
-    kxP.age();
-    e.g(kxP, paramView, kxP.ksR, kxP.fvR);
+    paramView = kWW.kRQ.getText().toString().trim();
+    kWW.kRZ = kWW.kTz.getCountryCode();
+    kWW.fEW = kWW.kTz.bhO();
+    kWW.aiI();
+    e.f(kWW, paramView, kWW.kRZ, kWW.fEW);
   }
 }
 

@@ -1,20 +1,20 @@
 package com.tencent.mm.ui.widget;
 
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.ArrayList;
 
 final class MMWebView$b
 {
-  ArrayList lFS = new ArrayList();
-  ArrayList lFT = new ArrayList();
+  ArrayList<Integer> mhg = new ArrayList();
+  ArrayList<Integer> mhh = new ArrayList();
   
-  public static b HP(String paramString)
+  public static b Ke(String paramString)
   {
     b localb = new b();
-    if (ay.kz(paramString))
+    if (be.kf(paramString))
     {
-      u.e("!56@/B4Tb64lLpLUa7oZpyRLqij3W7tXskNBXnuaPQThJwsm2AtcGko5rg==", "parse fail, section is null");
+      v.e("MicroMsg.MMWebView.SectionParser", "parse fail, section is null");
       return localb;
     }
     for (;;)
@@ -26,31 +26,31 @@ final class MMWebView$b
         if (paramString == null) {
           break;
         }
-        u.d("!56@/B4Tb64lLpLUa7oZpyRLqij3W7tXskNBXnuaPQThJwsm2AtcGko5rg==", "parse items array length = %d", new Object[] { Integer.valueOf(paramString.length) });
+        v.d("MicroMsg.MMWebView.SectionParser", "parse items array length = %d", new Object[] { Integer.valueOf(paramString.length) });
         int j = paramString.length;
         i = 0;
         if (i < j)
         {
           Object localObject = paramString[i];
-          if (!ay.kz((String)localObject))
+          if (!be.kf((String)localObject))
           {
             localObject = ((String)localObject).split(",");
             if ((localObject != null) && (localObject.length == 2))
             {
-              lFS.add(Integer.valueOf(ay.getInt(localObject[0], 0)));
-              lFT.add(Integer.valueOf(ay.getInt(localObject[1], 0)));
+              mhg.add(Integer.valueOf(be.getInt(localObject[0], 0)));
+              mhh.add(Integer.valueOf(be.getInt(localObject[1], 0)));
             }
           }
         }
         else
         {
-          u.d("!56@/B4Tb64lLpLUa7oZpyRLqij3W7tXskNBXnuaPQThJwsm2AtcGko5rg==", "parse items list size = %d", new Object[] { Integer.valueOf(lFS.size()) });
+          v.d("MicroMsg.MMWebView.SectionParser", "parse items list size = %d", new Object[] { Integer.valueOf(mhg.size()) });
           return localb;
         }
       }
       catch (Exception paramString)
       {
-        u.e("!56@/B4Tb64lLpLUa7oZpyRLqij3W7tXskNBXnuaPQThJwsm2AtcGko5rg==", "parse ex = %s", new Object[] { paramString.getMessage() });
+        v.e("MicroMsg.MMWebView.SectionParser", "parse ex = %s", new Object[] { paramString.getMessage() });
         return localb;
       }
       i += 1;

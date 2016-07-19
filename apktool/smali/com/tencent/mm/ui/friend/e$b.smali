@@ -15,21 +15,21 @@
 
 
 # instance fields
-.field bMs:Landroid/widget/TextView;
+.field bFM:Landroid/widget/TextView;
 
-.field coY:Landroid/widget/ImageView;
+.field ckm:Landroid/widget/ImageView;
 
-.field czd:Landroid/widget/ProgressBar;
+.field cwb:Landroid/widget/ProgressBar;
 
-.field eEo:Landroid/widget/TextView;
+.field eKo:Landroid/widget/TextView;
 
-.field kPi:I
+.field final synthetic lSB:Lcom/tencent/mm/ui/friend/e;
 
-.field kPj:Landroid/view/View;
+.field lSD:Ljava/lang/String;
 
-.field final synthetic lrX:Lcom/tencent/mm/ui/friend/e;
+.field loy:I
 
-.field lrZ:Ljava/lang/String;
+.field loz:Landroid/view/View;
 
 .field status:I
 
@@ -40,12 +40,12 @@
 
     .prologue
     .line 363
-    iput-object p1, p0, Lcom/tencent/mm/ui/friend/e$b;->lrX:Lcom/tencent/mm/ui/friend/e;
+    iput-object p1, p0, Lcom/tencent/mm/ui/friend/e$b;->lSB:Lcom/tencent/mm/ui/friend/e;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 364
-    const v0, 0x7f07078a
+    const v0, 0x7f1006bd
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -53,10 +53,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/friend/e$b;->coY:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/friend/e$b;->ckm:Landroid/widget/ImageView;
 
     .line 365
-    const v0, 0x7f07078b
+    const v0, 0x7f1006be
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -64,19 +64,19 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/friend/e$b;->bMs:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/friend/e$b;->bFM:Landroid/widget/TextView;
 
     .line 366
-    const v0, 0x7f071067
+    const v0, 0x7f100d95
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/friend/e$b;->kPj:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/friend/e$b;->loz:Landroid/view/View;
 
     .line 367
-    const v0, 0x7f071068
+    const v0, 0x7f100d96
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -84,10 +84,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/friend/e$b;->eEo:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/friend/e$b;->eKo:Landroid/widget/TextView;
 
     .line 368
-    const v0, 0x7f071069
+    const v0, 0x7f100d97
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -95,10 +95,10 @@
 
     check-cast v0, Landroid/widget/ProgressBar;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/friend/e$b;->czd:Landroid/widget/ProgressBar;
+    iput-object v0, p0, Lcom/tencent/mm/ui/friend/e$b;->cwb:Landroid/widget/ProgressBar;
 
     .line 369
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/e$b;->kPj:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/e$b;->loz:Landroid/view/View;
 
     new-instance v1, Lcom/tencent/mm/ui/friend/e$b$1;
 

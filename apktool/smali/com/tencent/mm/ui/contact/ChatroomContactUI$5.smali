@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/contact/ChatroomContactUI;->Gb()V
+    value = Lcom/tencent/mm/ui/contact/ChatroomContactUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ljg:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
+.field final synthetic lJr:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 473
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$5;->ljg:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
+    .line 476
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$5;->lJr:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,12 +36,12 @@
 
 
 # virtual methods
-.method public final gm(Z)V
+.method public final gL(Z)V
     .locals 4
 
     .prologue
-    .line 478
-    const-string/jumbo v0, "!44@/B4Tb64lLpIELL9O96QoKLI7tZ4uMi2P4SCBJbIGwmU="
+    .line 481
+    const-string/jumbo v0, "MicroMsg.ChatroomContactUI"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -57,13 +57,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 479
+    .line 482
     if-eqz p1, :cond_0
 
-    .line 480
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$5;->ljg:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
+    .line 483
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$5;->lJr:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ChatroomContactUI;->b(Lcom/tencent/mm/ui/contact/ChatroomContactUI;)Landroid/widget/ListView;
 
@@ -73,8 +73,8 @@
 
     move-result v0
 
-    .line 481
-    const-string/jumbo v1, "!44@/B4Tb64lLpIELL9O96QoKLI7tZ4uMi2P4SCBJbIGwmU="
+    .line 484
+    const-string/jumbo v1, "MicroMsg.ChatroomContactUI"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -90,13 +90,13 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 482
+    .line 485
     if-lez v0, :cond_0
 
-    .line 483
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$5;->ljg:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
+    .line 486
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$5;->lJr:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ChatroomContactUI;->b(Lcom/tencent/mm/ui/contact/ChatroomContactUI;)Landroid/widget/ListView;
 
@@ -108,7 +108,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->post(Ljava/lang/Runnable;)Z
 
-    .line 494
+    .line 497
     :cond_0
     return-void
 .end method

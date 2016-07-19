@@ -1,9 +1,10 @@
 package com.tencent.mm.ui.chatting;
 
+import android.os.Bundle;
 import com.tencent.mm.sdk.h.h;
 
 final class eg$1
-  extends h
+  extends h<dd, Bundle>
 {}
 
 /* Location:

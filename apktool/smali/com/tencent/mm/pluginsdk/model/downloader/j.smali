@@ -4,12 +4,12 @@
 
 
 # instance fields
-.field private bDz:Lcom/tencent/mm/sdk/c/c;
+.field private bwJ:Lcom/tencent/mm/sdk/c/c;
 
 
 # direct methods
 .method public constructor <init>(Lcom/tencent/mm/pluginsdk/model/downloader/a;)V
-    .locals 3
+    .locals 2
 
     .prologue
     .line 16
@@ -20,16 +20,14 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/model/downloader/j$1;-><init>(Lcom/tencent/mm/pluginsdk/model/downloader/j;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/j;->bDz:Lcom/tencent/mm/sdk/c/c;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/j;->bwJ:Lcom/tencent/mm/sdk/c/c;
 
     .line 17
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "FileDownloadCallback"
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/j;->bwJ:Lcom/tencent/mm/sdk/c/c;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/j;->bDz:Lcom/tencent/mm/sdk/c/c;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->d(Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 18
     return-void
@@ -42,131 +40,131 @@
 
     .prologue
     .line 22
-    new-instance v0, Lcom/tencent/mm/d/a/eh;
+    new-instance v0, Lcom/tencent/mm/e/a/el;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/eh;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/el;-><init>()V
 
     .line 23
-    iget-object v1, v0, Lcom/tencent/mm/d/a/eh;->ayO:Lcom/tencent/mm/d/a/eh$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/el;->akQ:Lcom/tencent/mm/e/a/el$a;
 
-    iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCq:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iZe:Ljava/lang/String;
 
-    iput-object v2, v1, Lcom/tencent/mm/d/a/eh$a;->ayQ:Ljava/lang/String;
+    iput-object v2, v1, Lcom/tencent/mm/e/a/el$a;->akS:Ljava/lang/String;
 
     .line 24
-    iget-object v1, v0, Lcom/tencent/mm/d/a/eh;->ayO:Lcom/tencent/mm/d/a/eh$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/el;->akQ:Lcom/tencent/mm/e/a/el$a;
 
     iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->mFileName:Ljava/lang/String;
 
-    iput-object v2, v1, Lcom/tencent/mm/d/a/eh$a;->anC:Ljava/lang/String;
+    iput-object v2, v1, Lcom/tencent/mm/e/a/el$a;->aaq:Ljava/lang/String;
 
     .line 25
-    iget-object v1, v0, Lcom/tencent/mm/d/a/eh;->ayO:Lcom/tencent/mm/d/a/eh$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/el;->akQ:Lcom/tencent/mm/e/a/el$a;
 
-    iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCr:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iZf:Ljava/lang/String;
 
-    iput-object v2, v1, Lcom/tencent/mm/d/a/eh$a;->ayR:Ljava/lang/String;
+    iput-object v2, v1, Lcom/tencent/mm/e/a/el$a;->akT:Ljava/lang/String;
 
     .line 26
-    iget-object v1, v0, Lcom/tencent/mm/d/a/eh;->ayO:Lcom/tencent/mm/d/a/eh$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/el;->akQ:Lcom/tencent/mm/e/a/el$a;
 
-    iget v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCs:I
+    iget v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iZg:I
 
-    iput v2, v1, Lcom/tencent/mm/d/a/eh$a;->ayS:I
+    iput v2, v1, Lcom/tencent/mm/e/a/el$a;->akU:I
 
     .line 27
-    iget-object v1, v0, Lcom/tencent/mm/d/a/eh;->ayO:Lcom/tencent/mm/d/a/eh$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/el;->akQ:Lcom/tencent/mm/e/a/el$a;
 
-    iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->ehh:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->ekS:Ljava/lang/String;
 
-    iput-object v2, v1, Lcom/tencent/mm/d/a/eh$a;->appId:Ljava/lang/String;
+    iput-object v2, v1, Lcom/tencent/mm/e/a/el$a;->appId:Ljava/lang/String;
 
     .line 28
-    iget-object v1, v0, Lcom/tencent/mm/d/a/eh;->ayO:Lcom/tencent/mm/d/a/eh$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/el;->akQ:Lcom/tencent/mm/e/a/el$a;
 
-    iget-boolean v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCt:Z
+    iget-boolean v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iZh:Z
 
-    iput-boolean v2, v1, Lcom/tencent/mm/d/a/eh$a;->ayT:Z
+    iput-boolean v2, v1, Lcom/tencent/mm/e/a/el$a;->akV:Z
 
     .line 29
-    iget-object v1, v0, Lcom/tencent/mm/d/a/eh;->ayO:Lcom/tencent/mm/d/a/eh$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/el;->akQ:Lcom/tencent/mm/e/a/el$a;
 
-    iget-boolean v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCu:Z
+    iget-boolean v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iZi:Z
 
-    iput-boolean v2, v1, Lcom/tencent/mm/d/a/eh$a;->ayU:Z
+    iput-boolean v2, v1, Lcom/tencent/mm/e/a/el$a;->akW:Z
 
     .line 30
-    iget-object v1, v0, Lcom/tencent/mm/d/a/eh;->ayO:Lcom/tencent/mm/d/a/eh$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/el;->akQ:Lcom/tencent/mm/e/a/el$a;
 
-    iget-boolean v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCv:Z
+    iget-boolean v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iZj:Z
 
-    iput-boolean v2, v1, Lcom/tencent/mm/d/a/eh$a;->ayV:Z
+    iput-boolean v2, v1, Lcom/tencent/mm/e/a/el$a;->akX:Z
 
     .line 31
-    iget-object v1, v0, Lcom/tencent/mm/d/a/eh;->ayO:Lcom/tencent/mm/d/a/eh$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/el;->akQ:Lcom/tencent/mm/e/a/el$a;
 
-    iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->elm:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->eqa:Ljava/lang/String;
 
-    iput-object v2, v1, Lcom/tencent/mm/d/a/eh$a;->packageName:Ljava/lang/String;
+    iput-object v2, v1, Lcom/tencent/mm/e/a/el$a;->packageName:Ljava/lang/String;
 
     .line 32
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 33
-    iget-object v0, v0, Lcom/tencent/mm/d/a/eh;->ayP:Lcom/tencent/mm/d/a/eh$b;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/el;->akR:Lcom/tencent/mm/e/a/el$b;
 
-    iget-wide v0, v0, Lcom/tencent/mm/d/a/eh$b;->ayW:J
+    iget-wide v0, v0, Lcom/tencent/mm/e/a/el$b;->akY:J
 
     return-wide v0
 .end method
 
-.method public final cG(J)I
-    .locals 2
+.method public final cV(J)I
+    .locals 3
 
     .prologue
     .line 38
-    new-instance v0, Lcom/tencent/mm/d/a/el;
+    new-instance v0, Lcom/tencent/mm/e/a/ep;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/el;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/ep;-><init>()V
 
     .line 39
-    iget-object v1, v0, Lcom/tencent/mm/d/a/el;->azf:Lcom/tencent/mm/d/a/el$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/ep;->alh:Lcom/tencent/mm/e/a/ep$a;
 
-    iput-wide p1, v1, Lcom/tencent/mm/d/a/el$a;->ayW:J
+    iput-wide p1, v1, Lcom/tencent/mm/e/a/ep$a;->akY:J
 
     .line 40
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 41
-    iget-object v0, v0, Lcom/tencent/mm/d/a/el;->azg:Lcom/tencent/mm/d/a/el$b;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/ep;->ali:Lcom/tencent/mm/e/a/ep$b;
 
-    iget v0, v0, Lcom/tencent/mm/d/a/el$b;->count:I
+    iget v0, v0, Lcom/tencent/mm/e/a/ep$b;->count:I
 
     return v0
 .end method
 
-.method public final cH(J)Lcom/tencent/mm/pluginsdk/model/downloader/e;
-    .locals 4
+.method public final cW(J)Lcom/tencent/mm/pluginsdk/model/downloader/e;
+    .locals 5
 
     .prologue
     .line 46
-    new-instance v0, Lcom/tencent/mm/d/a/ek;
+    new-instance v0, Lcom/tencent/mm/e/a/eo;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/ek;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/eo;-><init>()V
 
     .line 47
-    iget-object v1, v0, Lcom/tencent/mm/d/a/ek;->azb:Lcom/tencent/mm/d/a/ek$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/eo;->ald:Lcom/tencent/mm/e/a/eo$a;
 
-    iput-wide p1, v1, Lcom/tencent/mm/d/a/ek$a;->ayW:J
+    iput-wide p1, v1, Lcom/tencent/mm/e/a/eo$a;->akY:J
 
     .line 48
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 50
     new-instance v1, Lcom/tencent/mm/pluginsdk/model/downloader/e;
@@ -177,101 +175,101 @@
     iput-wide p1, v1, Lcom/tencent/mm/pluginsdk/model/downloader/e;->id:J
 
     .line 52
-    iget-object v2, v0, Lcom/tencent/mm/d/a/ek;->azc:Lcom/tencent/mm/d/a/ek$b;
+    iget-object v2, v0, Lcom/tencent/mm/e/a/eo;->ale:Lcom/tencent/mm/e/a/eo$b;
 
-    iget-object v2, v2, Lcom/tencent/mm/d/a/ek$b;->url:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/e/a/eo$b;->url:Ljava/lang/String;
 
     iput-object v2, v1, Lcom/tencent/mm/pluginsdk/model/downloader/e;->url:Ljava/lang/String;
 
     .line 53
-    iget-object v2, v0, Lcom/tencent/mm/d/a/ek;->azc:Lcom/tencent/mm/d/a/ek$b;
+    iget-object v2, v0, Lcom/tencent/mm/e/a/eo;->ale:Lcom/tencent/mm/e/a/eo$b;
 
-    iget v2, v2, Lcom/tencent/mm/d/a/ek$b;->status:I
+    iget v2, v2, Lcom/tencent/mm/e/a/eo$b;->status:I
 
     iput v2, v1, Lcom/tencent/mm/pluginsdk/model/downloader/e;->status:I
 
     .line 54
-    iget-object v2, v0, Lcom/tencent/mm/d/a/ek;->azc:Lcom/tencent/mm/d/a/ek$b;
+    iget-object v2, v0, Lcom/tencent/mm/e/a/eo;->ale:Lcom/tencent/mm/e/a/eo$b;
 
-    iget-object v2, v2, Lcom/tencent/mm/d/a/ek$b;->path:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/e/a/eo$b;->path:Ljava/lang/String;
 
     iput-object v2, v1, Lcom/tencent/mm/pluginsdk/model/downloader/e;->path:Ljava/lang/String;
 
     .line 55
-    iget-object v2, v0, Lcom/tencent/mm/d/a/ek;->azc:Lcom/tencent/mm/d/a/ek$b;
+    iget-object v2, v0, Lcom/tencent/mm/e/a/eo;->ale:Lcom/tencent/mm/e/a/eo$b;
 
-    iget-object v2, v2, Lcom/tencent/mm/d/a/ek$b;->aut:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/e/a/eo$b;->agg:Ljava/lang/String;
 
-    iput-object v2, v1, Lcom/tencent/mm/pluginsdk/model/downloader/e;->aut:Ljava/lang/String;
+    iput-object v2, v1, Lcom/tencent/mm/pluginsdk/model/downloader/e;->agg:Ljava/lang/String;
 
     .line 56
-    iget-object v2, v0, Lcom/tencent/mm/d/a/ek;->azc:Lcom/tencent/mm/d/a/ek$b;
+    iget-object v2, v0, Lcom/tencent/mm/e/a/eo;->ale:Lcom/tencent/mm/e/a/eo$b;
 
-    iget-wide v2, v2, Lcom/tencent/mm/d/a/ek$b;->azd:J
+    iget-wide v2, v2, Lcom/tencent/mm/e/a/eo$b;->alf:J
 
-    iput-wide v2, v1, Lcom/tencent/mm/pluginsdk/model/downloader/e;->azd:J
+    iput-wide v2, v1, Lcom/tencent/mm/pluginsdk/model/downloader/e;->alf:J
 
     .line 57
-    iget-object v0, v0, Lcom/tencent/mm/d/a/ek;->azc:Lcom/tencent/mm/d/a/ek$b;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/eo;->ale:Lcom/tencent/mm/e/a/eo$b;
 
-    iget-wide v2, v0, Lcom/tencent/mm/d/a/ek$b;->aze:J
+    iget-wide v2, v0, Lcom/tencent/mm/e/a/eo$b;->alg:J
 
-    iput-wide v2, v1, Lcom/tencent/mm/pluginsdk/model/downloader/e;->aze:J
+    iput-wide v2, v1, Lcom/tencent/mm/pluginsdk/model/downloader/e;->alg:J
 
     .line 58
     return-object v1
 .end method
 
-.method public final cI(J)Z
-    .locals 2
+.method public final cX(J)Z
+    .locals 3
 
     .prologue
     .line 63
-    new-instance v0, Lcom/tencent/mm/d/a/ej;
+    new-instance v0, Lcom/tencent/mm/e/a/en;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/ej;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/en;-><init>()V
 
     .line 64
-    iget-object v1, v0, Lcom/tencent/mm/d/a/ej;->ayZ:Lcom/tencent/mm/d/a/ej$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/en;->alb:Lcom/tencent/mm/e/a/en$a;
 
-    iput-wide p1, v1, Lcom/tencent/mm/d/a/ej$a;->ayW:J
+    iput-wide p1, v1, Lcom/tencent/mm/e/a/en$a;->akY:J
 
     .line 65
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 66
-    iget-object v0, v0, Lcom/tencent/mm/d/a/ej;->aza:Lcom/tencent/mm/d/a/ej$b;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/en;->alc:Lcom/tencent/mm/e/a/en$b;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/d/a/ej$b;->atf:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/e/a/en$b;->aeP:Z
 
     return v0
 .end method
 
-.method public final cJ(J)Z
-    .locals 2
+.method public final cY(J)Z
+    .locals 3
 
     .prologue
     .line 71
-    new-instance v0, Lcom/tencent/mm/d/a/em;
+    new-instance v0, Lcom/tencent/mm/e/a/eq;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/em;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/eq;-><init>()V
 
     .line 72
-    iget-object v1, v0, Lcom/tencent/mm/d/a/em;->azh:Lcom/tencent/mm/d/a/em$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/eq;->alj:Lcom/tencent/mm/e/a/eq$a;
 
-    iput-wide p1, v1, Lcom/tencent/mm/d/a/em$a;->ayW:J
+    iput-wide p1, v1, Lcom/tencent/mm/e/a/eq$a;->akY:J
 
     .line 73
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 74
-    iget-object v0, v0, Lcom/tencent/mm/d/a/em;->azi:Lcom/tencent/mm/d/a/em$b;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/eq;->alk:Lcom/tencent/mm/e/a/eq$b;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/d/a/em$b;->atf:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/e/a/eq$b;->aeP:Z
 
     return v0
 .end method

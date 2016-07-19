@@ -1,11 +1,11 @@
 .class public interface abstract Lcom/tencent/smtt/export/external/interfaces/IX5WebChromeClient;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/tencent/smtt/export/external/interfaces/IX5WebChromeClient$FileChooserParams;,
         Lcom/tencent/smtt/export/external/interfaces/IX5WebChromeClient$CustomViewCallback;
     }
 .end annotation
@@ -16,6 +16,15 @@
 .end method
 
 .method public abstract getVisitedHistory(Landroid/webkit/ValueCallback;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/webkit/ValueCallback",
+            "<[",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 .end method
 
 .method public abstract onCloseWindow(Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;)V
@@ -42,6 +51,19 @@
 .end method
 
 .method public abstract onGeolocationStartUpdating(Landroid/webkit/ValueCallback;Landroid/webkit/ValueCallback;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/webkit/ValueCallback",
+            "<",
+            "Landroid/location/Location;",
+            ">;",
+            "Landroid/webkit/ValueCallback",
+            "<",
+            "Landroid/os/Bundle;",
+            ">;)V"
+        }
+    .end annotation
 .end method
 
 .method public abstract onGeolocationStopUpdating()V
@@ -89,5 +111,32 @@
 .method public abstract onShowCustomView(Landroid/view/View;Lcom/tencent/smtt/export/external/interfaces/IX5WebChromeClient$CustomViewCallback;)V
 .end method
 
+.method public abstract onShowFileChooser(Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;Landroid/webkit/ValueCallback;Lcom/tencent/smtt/export/external/interfaces/IX5WebChromeClient$FileChooserParams;)Z
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;",
+            "Landroid/webkit/ValueCallback",
+            "<[",
+            "Landroid/net/Uri;",
+            ">;",
+            "Lcom/tencent/smtt/export/external/interfaces/IX5WebChromeClient$FileChooserParams;",
+            ")Z"
+        }
+    .end annotation
+.end method
+
 .method public abstract openFileChooser(Landroid/webkit/ValueCallback;Ljava/lang/String;Ljava/lang/String;Z)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/webkit/ValueCallback",
+            "<[",
+            "Landroid/net/Uri;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Z)V"
+        }
+    .end annotation
 .end method

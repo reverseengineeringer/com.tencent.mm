@@ -2,33 +2,33 @@ package com.tencent.mm.ui.account;
 
 import android.os.Message;
 import android.widget.ProgressBar;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import com.tencent.mm.ui.base.h;
 
 final class RegByMobileRegAIOUI$14
-  extends aa
+  extends ac
 {
   RegByMobileRegAIOUI$14(RegByMobileRegAIOUI paramRegByMobileRegAIOUI) {}
   
   public final void handleMessage(Message paramMessage)
   {
-    if (((RegByMobileRegAIOUI.r(kuT) != null) && (!RegByMobileRegAIOUI.r(kuT).isShowing())) || (RegByMobileRegAIOUI.s(kuT))) {}
+    if (((RegByMobileRegAIOUI.r(kUa) != null) && (!RegByMobileRegAIOUI.r(kUa).isShowing())) || (RegByMobileRegAIOUI.s(kUa))) {}
     do
     {
       return;
-      RegByMobileRegAIOUI.t(kuT);
-      RegByMobileRegAIOUI.v(kuT).setProgress(RegByMobileRegAIOUI.u(kuT));
-      if (RegByMobileRegAIOUI.u(kuT) < RegByMobileRegAIOUI.v(kuT).getMax())
+      RegByMobileRegAIOUI.t(kUa);
+      RegByMobileRegAIOUI.v(kUa).setProgress(RegByMobileRegAIOUI.u(kUa));
+      if (RegByMobileRegAIOUI.u(kUa) < RegByMobileRegAIOUI.v(kUa).getMax())
       {
         sendEmptyMessageDelayed(0, 10L);
         return;
       }
-      RegByMobileRegAIOUI.v(kuT).setIndeterminate(true);
-    } while (RegByMobileRegAIOUI.s(kuT));
-    if (RegByMobileRegAIOUI.r(kuT) != null) {
-      RegByMobileRegAIOUI.r(kuT).dismiss();
+      RegByMobileRegAIOUI.v(kUa).setIndeterminate(true);
+    } while (RegByMobileRegAIOUI.s(kUa));
+    if (RegByMobileRegAIOUI.r(kUa) != null) {
+      RegByMobileRegAIOUI.r(kUa).dismiss();
     }
-    RegByMobileRegAIOUI.w(kuT);
+    RegByMobileRegAIOUI.w(kUa);
   }
 }
 

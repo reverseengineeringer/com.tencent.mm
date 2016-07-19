@@ -1,136 +1,230 @@
 package com.tencent.mm.ui.chatting;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.content.pm.PackageManager;
+import android.content.res.Resources;
+import android.net.Uri;
+import android.os.Build.VERSION;
 import android.view.View;
-import android.view.ViewGroup;
+import android.view.View.OnClickListener;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.tencent.mm.az.g;
-import com.tencent.mm.d.b.bg;
-import com.tencent.mm.model.ar;
-import com.tencent.mm.model.c;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.pluginsdk.h.n;
-import com.tencent.mm.pluginsdk.ui.a.b;
-import com.tencent.mm.pluginsdk.ui.d.e;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.az.a;
+import com.tencent.mm.pluginsdk.model.app.p;
+import com.tencent.mm.pluginsdk.model.downloader.d.a;
+import com.tencent.mm.pluginsdk.ui.tools.i;
+import com.tencent.mm.pluginsdk.ui.tools.i.a;
+import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class cr
-  extends com.tencent.mm.ui.i
 {
-  private String apb;
-  private String bEJ;
-  private boolean kAy;
-  private String kWX;
-  a kWY;
-  
-  public cr(Context paramContext, ag paramag, String paramString1, String paramString2, boolean paramBoolean)
+  SharedPreferences bpi;
+  long dBX = -1L;
+  LinearLayout dvl = null;
+  String fRr;
+  String fRs;
+  String fRt;
+  ChatFooterCustom lwH;
+  FrameLayout lwI;
+  FrameLayout lwJ;
+  TextView lwK;
+  ImageView lwL;
+  a lwM = a.lwX;
+  int lwN = -1;
+  public boolean lwO;
+  String lwP = null;
+  String lwQ;
+  View.OnClickListener lwR = new View.OnClickListener()
   {
-    super(paramContext, paramag);
-    apb = paramString1;
-    bEJ = paramString2;
-    kAy = paramBoolean;
-  }
-  
-  private String P(ag paramag)
-  {
-    if (field_isSend == 1) {
-      return bEJ;
-    }
-    return apb;
-  }
-  
-  private CharSequence Q(ag paramag)
-  {
-    if (field_createTime == Long.MAX_VALUE) {
-      return "";
-    }
-    return n.b(context, field_createTime, true);
-  }
-  
-  public final void Gk()
-  {
-    com.tencent.mm.storage.ah localah = com.tencent.mm.model.ah.tD().rs();
-    String str1 = apb;
-    String str2 = kWX;
-    str1 = "SELECT * FROM " + localah.Fs(str1) + " WHERE" + localah.EU(str1) + "AND content LIKE '%" + str2 + "%' AND type = 1";
-    str1 = str1 + " ORDER BY createTime DESC";
-    setCursor(bCw.rawQuery(str1, null));
-    if ((kWY != null) && (!t.kz(kWX))) {
-      kWY.re(getCount());
-    }
-    super.notifyDataSetChanged();
-  }
-  
-  protected final void Gl()
-  {
-    adW();
-    Gk();
-  }
-  
-  public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
-  {
-    if (paramView == null)
+    public final void onClick(View paramAnonymousView)
     {
-      paramView = View.inflate(context, 2131361919, null);
-      paramViewGroup = new b((byte)0);
-      czS = ((ImageView)paramView.findViewById(2131165293));
-      cHk = ((TextView)paramView.findViewById(2131165296));
-      cHl = ((TextView)paramView.findViewById(2131165297));
-      kWZ = ((TextView)paramView.findViewById(2131165624));
-      paramView.setTag(paramViewGroup);
+      new Intent().putExtra("composeType", 1);
+      com.tencent.mm.av.c.v(mContext, "qqmail", ".ui.ComposeUI");
     }
+  };
+  View.OnClickListener lwS = new View.OnClickListener()
+  {
+    public final void onClick(View paramAnonymousView)
+    {
+      switch (cr.7.lwW[lwM.ordinal()])
+      {
+      }
+      do
+      {
+        return;
+        com.tencent.mm.plugin.report.service.g.gdY.h(11288, new Object[] { Integer.valueOf(6) });
+        paramAnonymousView = cr.this;
+        if (!ak.dt(mContext))
+        {
+          com.tencent.mm.ui.base.g.a(mContext, a.E(mContext, 2131231615), "", a.E(mContext, 2131231610), null);
+          return;
+        }
+        if (!ak.dC(mContext))
+        {
+          com.tencent.mm.ui.base.g.a(mContext, 2131231612, 0, 2131231608, 2131231607, new cr.3(paramAnonymousView), null);
+          return;
+        }
+        com.tencent.mm.ui.base.g.a(mContext, 2131231613, 0, 2131231608, 2131231607, new cr.4(paramAnonymousView), null);
+        return;
+        paramAnonymousView = cr.this;
+        v.i("MicroMsg.ChattingQQMailFooterHandler", "dz[cancelDownload]");
+        com.tencent.mm.pluginsdk.model.downloader.c.aUL().cV(dBX);
+        paramAnonymousView.bkp();
+        return;
+        com.tencent.mm.plugin.report.service.g.gdY.h(11288, new Object[] { Integer.valueOf(7) });
+        paramAnonymousView = cr.this;
+        v.i("MicroMsg.ChattingQQMailFooterHandler", "dz[installQQMail]");
+        be.i(lwP, mContext);
+        return;
+        com.tencent.mm.plugin.report.service.g.gdY.h(11288, new Object[] { Integer.valueOf(5) });
+        cr localcr = cr.this;
+        v.i("MicroMsg.ChattingQQMailFooterHandler", "dz[openQQMail]");
+        v.i("MicroMsg.ChattingQQMailFooterHandler", "mQQMailScheme = %s", new Object[] { lwQ });
+        if (be.kf(lwQ)) {
+          paramAnonymousView = mContext.getPackageManager().getLaunchIntentForPackage("com.tencent.androidqqmail");
+        }
+        for (;;)
+        {
+          v.i("MicroMsg.ChattingQQMailFooterHandler", "intent = %s", new Object[] { paramAnonymousView });
+          mContext.startActivity(paramAnonymousView);
+          return;
+          Intent localIntent = new Intent();
+          localIntent.setData(Uri.parse(lwQ));
+          localIntent.addFlags(268435456);
+          if (Build.VERSION.SDK_INT >= 11) {
+            localIntent.addFlags(32768);
+          }
+          paramAnonymousView = localIntent;
+          if (!be.n(mContext, localIntent)) {
+            paramAnonymousView = mContext.getPackageManager().getLaunchIntentForPackage("com.tencent.androidqqmail");
+          }
+        }
+      } while (!lwO);
+      cr.a(cr.this);
+    }
+  };
+  private i.a lwT = new i.a()
+  {
+    public final void aqV()
+    {
+      lwK.setText(2131231618);
+    }
+    
+    public final void kY(int paramAnonymousInt)
+    {
+      lwN = paramAnonymousInt;
+      bkq();
+    }
+  };
+  Context mContext;
+  
+  public cr(ChatFooterCustom paramChatFooterCustom)
+  {
+    mContext = paramChatFooterCustom.getContext();
+    lwH = paramChatFooterCustom;
+  }
+  
+  final void bko()
+  {
+    if (lwM == a.lxb)
+    {
+      lwL.setImageResource(2131165764);
+      return;
+    }
+    lwL.setImageResource(2131165765);
+  }
+  
+  public final void bkp()
+  {
     Object localObject;
+    if (p.n(mContext, "com.tencent.androidqqmail")) {
+      localObject = a.lxb;
+    }
     for (;;)
     {
-      localObject = (ag)getItem(paramInt);
-      if (localObject != null)
+      lwM = ((a)localObject);
+      bko();
+      v.i("MicroMsg.ChattingQQMailFooterHandler", "dz[initRightBtnTv: status:%s]", new Object[] { lwM.toString() });
+      switch (7.lwW[lwM.ordinal()])
       {
-        if ((!kAy) || (field_isSend != 0)) {
-          break;
-        }
-        String str1 = field_content;
-        String str2 = ar.fk(str1);
-        if (!t.kz(str2))
+      default: 
+        i.a(lwT);
+        return;
+        bpi = mContext.getSharedPreferences("QQMAIL", 4);
+        dBX = bpi.getLong("qqmail_downloadid", -1L);
+        if (dBX < 0L)
         {
-          a.b.b(czS, str2);
-          cHk.setText(e.a(context, com.tencent.mm.model.i.dY(str2), cHk.getTextSize()));
+          if (be.kf(fRr)) {
+            localObject = a.lxc;
+          } else {
+            localObject = a.lwY;
+          }
         }
-        cHl.setText(Q((ag)localObject));
-        localObject = ar.fl(str1);
-        kWZ.setText(e.a(context, (CharSequence)localObject, kWZ.getTextSize()));
+        else
+        {
+          localObject = com.tencent.mm.pluginsdk.model.downloader.c.aUL().cW(dBX);
+          int i = status;
+          lwP = path;
+          switch (i)
+          {
+          case 2: 
+          default: 
+            if (be.kf(fRr)) {
+              localObject = a.lxc;
+            }
+            break;
+          case 3: 
+            if (com.tencent.mm.a.e.aB(lwP)) {
+              localObject = a.lxa;
+            } else if (be.kf(fRr)) {
+              localObject = a.lxc;
+            } else {
+              localObject = a.lwY;
+            }
+            break;
+          case 1: 
+            localObject = a.lwZ;
+            continue;
+            localObject = a.lwY;
+          }
+        }
+        break;
       }
-      return paramView;
-      paramViewGroup = (b)paramView.getTag();
     }
-    a.b.b(czS, P((ag)localObject));
-    cHk.setText(e.a(context, com.tencent.mm.model.i.dY(P((ag)localObject)), cHk.getTextSize()));
-    cHl.setText(Q((ag)localObject));
-    kWZ.setText(e.a(context, field_content, kWZ.getTextSize()));
-    return paramView;
+    lwK.setText(2131231611);
+    return;
+    lwK.setText(2131231609);
+    return;
+    i.a(lwT);
   }
   
-  public final void pH(String paramString)
+  final void bkq()
   {
-    kWX = paramString;
-    if (!t.kz(kWX))
+    if (lwN == 0)
     {
-      adW();
-      Gk();
+      lwK.setText(2131231618);
+      return;
     }
+    if (lwN > 99)
+    {
+      lwK.setText(2131231617);
+      return;
+    }
+    lwK.setText(String.format(a.E(mContext, 2131231616), new Object[] { Integer.valueOf(lwN) }));
   }
   
-  public static abstract interface a
+  private static enum a
   {
-    public abstract void re(int paramInt);
-  }
-  
-  private static final class b
-  {
-    public TextView cHk;
-    public TextView cHl;
-    public ImageView czS;
-    public TextView kWZ;
+    private a() {}
   }
 }
 

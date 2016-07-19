@@ -1,10 +1,10 @@
 .class public final Lcom/tencent/mm/modelfriend/o;
-.super Lcom/tencent/mm/d/b/as;
+.super Lcom/tencent/mm/e/b/au;
 .source "SourceFile"
 
 
 # static fields
-.field protected static aot:Lcom/tencent/mm/sdk/h/c$a;
+.field protected static bjR:Lcom/tencent/mm/sdk/h/c$a;
 
 
 # direct methods
@@ -21,19 +21,19 @@
 
     new-array v1, v5, [Ljava/lang/reflect/Field;
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->ceD:[Ljava/lang/reflect/Field;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->bZI:[Ljava/lang/reflect/Field;
 
     const/16 v1, 0x11
 
     new-array v1, v1, [Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/4 v3, 0x0
 
@@ -41,7 +41,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "googleid"
 
@@ -57,7 +57,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/4 v3, 0x1
 
@@ -65,7 +65,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "googlename"
 
@@ -81,7 +81,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/4 v3, 0x2
 
@@ -89,7 +89,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "googlephotourl"
 
@@ -105,7 +105,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/4 v3, 0x3
 
@@ -113,7 +113,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "googlegmail"
 
@@ -129,7 +129,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/4 v3, 0x4
 
@@ -137,7 +137,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "username"
 
@@ -153,7 +153,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/4 v3, 0x5
 
@@ -161,7 +161,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "nickname"
 
@@ -177,7 +177,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/4 v3, 0x6
 
@@ -185,7 +185,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "nicknameqp"
 
@@ -201,7 +201,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/4 v3, 0x7
 
@@ -209,7 +209,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "usernamepy"
 
@@ -225,7 +225,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/16 v3, 0x8
 
@@ -233,7 +233,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "small_url"
 
@@ -249,7 +249,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/16 v3, 0x9
 
@@ -257,7 +257,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "big_url"
 
@@ -273,7 +273,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/16 v3, 0xa
 
@@ -281,7 +281,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "ret"
 
@@ -297,7 +297,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/16 v3, 0xb
 
@@ -305,7 +305,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "status"
 
@@ -321,7 +321,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/16 v3, 0xc
 
@@ -329,7 +329,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "googleitemid"
 
@@ -347,9 +347,9 @@
 
     const-string/jumbo v2, "googleitemid"
 
-    iput-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYw:Ljava/lang/String;
+    iput-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyT:Ljava/lang/String;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/16 v3, 0xd
 
@@ -357,7 +357,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "googlecgistatus"
 
@@ -373,7 +373,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/16 v3, 0xe
 
@@ -381,7 +381,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "contecttype"
 
@@ -397,7 +397,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/16 v3, 0xf
 
@@ -405,7 +405,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "googlenamepy"
 
@@ -417,7 +417,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const-string/jumbo v3, "rowid"
 
@@ -427,9 +427,9 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->jYy:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->kyV:Ljava/lang/String;
 
-    sput-object v0, Lcom/tencent/mm/modelfriend/o;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    sput-object v0, Lcom/tencent/mm/modelfriend/o;->bjR:Lcom/tencent/mm/sdk/h/c$a;
 
     return-void
 .end method
@@ -439,19 +439,19 @@
 
     .prologue
     .line 5
-    invoke-direct {p0}, Lcom/tencent/mm/d/b/as;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/e/b/au;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final ls()Lcom/tencent/mm/sdk/h/c$a;
+.method protected final ou()Lcom/tencent/mm/sdk/h/c$a;
     .locals 1
 
     .prologue
     .line 33
-    sget-object v0, Lcom/tencent/mm/modelfriend/o;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    sget-object v0, Lcom/tencent/mm/modelfriend/o;->bjR:Lcom/tencent/mm/sdk/h/c$a;
 
     return-object v0
 .end method

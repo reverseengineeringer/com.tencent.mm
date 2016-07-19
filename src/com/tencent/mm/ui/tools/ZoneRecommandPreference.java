@@ -7,19 +7,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.platformtools.s;
 import com.tencent.mm.storage.RegionCodeDecoder.Region;
 import com.tencent.mm.ui.base.preference.Preference;
 
 public class ZoneRecommandPreference
   extends Preference
 {
-  private TextView eEo;
-  RegionCodeDecoder.Region lyF;
-  RegionCodeDecoder.Region lyG;
-  RegionCodeDecoder.Region lyH;
-  private TextView lyI;
-  private ImageView lyJ;
+  private TextView eKo;
+  RegionCodeDecoder.Region lZt;
+  RegionCodeDecoder.Region lZu;
+  RegionCodeDecoder.Region lZv;
+  private TextView lZw;
+  private ImageView lZx;
   int status = 0;
   
   public ZoneRecommandPreference(Context paramContext)
@@ -35,12 +35,12 @@ public class ZoneRecommandPreference
   public ZoneRecommandPreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(2131363286);
+    setLayoutResource(2130903981);
   }
   
-  final void biR()
+  final void boO()
   {
-    if ((lyI == null) || (eEo == null)) {
+    if ((lZw == null) || (eKo == null)) {
       return;
     }
     switch (status)
@@ -48,77 +48,77 @@ public class ZoneRecommandPreference
     default: 
       return;
     case 0: 
-      lyI.setVisibility(8);
-      eEo.setVisibility(0);
-      eEo.setText(2131428308);
-      lyJ.setImageResource(2130903064);
+      lZw.setVisibility(8);
+      eKo.setVisibility(0);
+      eKo.setText(2131234945);
+      lZx.setImageResource(2131165514);
       setEnabled(false);
       setSelectable(false);
       return;
     case 2: 
-      lyI.setVisibility(8);
-      eEo.setVisibility(0);
-      eEo.setText(2131428309);
-      lyJ.setImageResource(2130903058);
+      lZw.setVisibility(8);
+      eKo.setVisibility(0);
+      eKo.setText(2131234942);
+      lZx.setImageResource(2131165513);
       setEnabled(false);
       setSelectable(false);
       return;
     }
-    lyI.setVisibility(0);
-    eEo.setVisibility(8);
-    lyJ.setImageResource(2130903064);
+    lZw.setVisibility(0);
+    eKo.setVisibility(8);
+    lZx.setImageResource(2131165514);
     Object localObject2 = "";
     Object localObject1 = localObject2;
-    if (lyF != null)
+    if (lZt != null)
     {
       localObject1 = localObject2;
-      if (!t.kz(lyF.getName())) {
-        localObject1 = "" + lyF.getName();
+      if (!s.kf(lZt.getName())) {
+        localObject1 = "" + lZt.getName();
       }
     }
     localObject2 = localObject1;
-    if (lyG != null)
+    if (lZu != null)
     {
       localObject2 = localObject1;
-      if (!t.kz(lyG.getName())) {
-        localObject2 = (String)localObject1 + " " + lyG.getName();
+      if (!s.kf(lZu.getName())) {
+        localObject2 = (String)localObject1 + " " + lZu.getName();
       }
     }
     localObject1 = localObject2;
-    if (lyH != null)
+    if (lZv != null)
     {
       localObject1 = localObject2;
-      if (!t.kz(lyH.getName())) {
-        localObject1 = (String)localObject2 + " " + lyH.getName();
+      if (!s.kf(lZv.getName())) {
+        localObject1 = (String)localObject2 + " " + lZv.getName();
       }
     }
-    lyI.setText((CharSequence)localObject1);
+    lZw.setText((CharSequence)localObject1);
     setEnabled(true);
     setSelectable(true);
   }
   
-  public final void biS()
+  public final void boP()
   {
     status = 2;
-    biR();
+    boO();
   }
   
   protected final void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    biR();
+    boO();
   }
   
   protected final View onCreateView(ViewGroup paramViewGroup)
   {
     paramViewGroup = super.onCreateView(paramViewGroup);
     LayoutInflater localLayoutInflater = (LayoutInflater)mContext.getSystemService("layout_inflater");
-    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131165377);
+    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131755262);
     localViewGroup.removeAllViews();
-    localLayoutInflater.inflate(2131361825, localViewGroup);
-    lyI = ((TextView)paramViewGroup.findViewById(2131165371));
-    eEo = ((TextView)paramViewGroup.findViewById(2131165372));
-    lyJ = ((ImageView)paramViewGroup.findViewById(2131165370));
+    localLayoutInflater.inflate(2130904022, localViewGroup);
+    lZw = ((TextView)paramViewGroup.findViewById(2131758118));
+    eKo = ((TextView)paramViewGroup.findViewById(2131758123));
+    lZx = ((ImageView)paramViewGroup.findViewById(2131758122));
     return paramViewGroup;
   }
 }

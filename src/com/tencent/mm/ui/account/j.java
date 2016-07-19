@@ -6,44 +6,44 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.net.Uri;
-import com.tencent.mm.pluginsdk.g.a;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.pluginsdk.h.a;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.regex.Pattern;
 
 public final class j
   extends ContentObserver
 {
   private final Context context;
-  private Pattern ffH = Pattern.compile("\\d{4,8}");
-  private ContentResolver hXb;
-  private final String[] hXg;
-  private final a kwO;
+  private Pattern fom = Pattern.compile("\\d{4,8}");
+  private ContentResolver iqI;
+  private final String[] iqN;
+  private final a kVV;
   
   public j(Context paramContext, a parama)
   {
-    super(aa.fetchFreeHandler());
+    super(ac.fetchFreeHandler());
     if ((paramContext == null) || (parama == null)) {
       throw new NullPointerException("SmsContentObserver Construction");
     }
     context = paramContext;
-    hXg = paramContext.getResources().getStringArray(2131558413);
-    kwO = parama;
+    iqN = paramContext.getResources().getStringArray(2131296304);
+    kVV = parama;
   }
   
-  public final void bbX()
+  public final void bhj()
   {
     context.getContentResolver().registerContentObserver(Uri.parse("content://sms/"), true, this);
   }
   
-  public final void bbY()
+  public final void bhk()
   {
     context.getContentResolver().unregisterContentObserver(this);
   }
   
   /* Error */
-  public final void bbZ()
+  public final void bhl()
   {
     // Byte code:
     //   0: aconst_null
@@ -55,19 +55,19 @@ public final class j
     //   11: aload_0
     //   12: getfield 47	com/tencent/mm/ui/account/j:context	Landroid/content/Context;
     //   15: invokevirtual 71	android/content/Context:getContentResolver	()Landroid/content/ContentResolver;
-    //   18: putfield 97	com/tencent/mm/ui/account/j:hXb	Landroid/content/ContentResolver;
+    //   18: putfield 97	com/tencent/mm/ui/account/j:iqI	Landroid/content/ContentResolver;
     //   21: ldc 99
     //   23: astore 6
     //   25: iconst_0
     //   26: istore_1
     //   27: iload_1
     //   28: aload_0
-    //   29: getfield 62	com/tencent/mm/ui/account/j:hXg	[Ljava/lang/String;
+    //   29: getfield 62	com/tencent/mm/ui/account/j:iqN	[Ljava/lang/String;
     //   32: arraylength
     //   33: if_icmpge +96 -> 129
     //   36: iload_1
     //   37: aload_0
-    //   38: getfield 62	com/tencent/mm/ui/account/j:hXg	[Ljava/lang/String;
+    //   38: getfield 62	com/tencent/mm/ui/account/j:iqN	[Ljava/lang/String;
     //   41: arraylength
     //   42: iconst_1
     //   43: isub
@@ -80,7 +80,7 @@ public final class j
     //   59: ldc 109
     //   61: invokevirtual 107	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   64: aload_0
-    //   65: getfield 62	com/tencent/mm/ui/account/j:hXg	[Ljava/lang/String;
+    //   65: getfield 62	com/tencent/mm/ui/account/j:iqN	[Ljava/lang/String;
     //   68: iload_1
     //   69: aaload
     //   70: invokevirtual 107	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -101,7 +101,7 @@ public final class j
     //   102: ldc 117
     //   104: invokevirtual 107	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   107: aload_0
-    //   108: getfield 62	com/tencent/mm/ui/account/j:hXg	[Ljava/lang/String;
+    //   108: getfield 62	com/tencent/mm/ui/account/j:iqN	[Ljava/lang/String;
     //   111: iload_1
     //   112: aaload
     //   113: invokevirtual 107	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -133,7 +133,7 @@ public final class j
     //   177: aload 6
     //   179: invokevirtual 107	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   182: invokevirtual 115	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   185: invokestatic 145	com/tencent/mm/sdk/platformtools/u:v	(Ljava/lang/String;Ljava/lang/String;)V
+    //   185: invokestatic 145	com/tencent/mm/sdk/platformtools/v:v	(Ljava/lang/String;Ljava/lang/String;)V
     //   188: aload 6
     //   190: ifnull +13 -> 203
     //   193: aload 6
@@ -142,7 +142,7 @@ public final class j
     //   200: ifeq +4 -> 204
     //   203: return
     //   204: aload_0
-    //   205: getfield 97	com/tencent/mm/ui/account/j:hXb	Landroid/content/ContentResolver;
+    //   205: getfield 97	com/tencent/mm/ui/account/j:iqI	Landroid/content/ContentResolver;
     //   208: aload 8
     //   210: iconst_3
     //   211: anewarray 149	java/lang/String
@@ -197,7 +197,7 @@ public final class j
     //   307: invokeinterface 189 2 0
     //   312: astore 8
     //   314: aload_0
-    //   315: getfield 38	com/tencent/mm/ui/account/j:ffH	Ljava/util/regex/Pattern;
+    //   315: getfield 38	com/tencent/mm/ui/account/j:fom	Ljava/util/regex/Pattern;
     //   318: aload 8
     //   320: invokevirtual 193	java/util/regex/Pattern:matcher	(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
     //   323: astore 8
@@ -208,7 +208,7 @@ public final class j
     //   335: invokevirtual 201	java/util/regex/Matcher:group	()Ljava/lang/String;
     //   338: astore 7
     //   340: aload_0
-    //   341: getfield 64	com/tencent/mm/ui/account/j:kwO	Lcom/tencent/mm/ui/account/j$a;
+    //   341: getfield 64	com/tencent/mm/ui/account/j:kVV	Lcom/tencent/mm/ui/account/j$a;
     //   344: aload 7
     //   346: invokeinterface 204 2 0
     //   351: aload 6
@@ -220,14 +220,14 @@ public final class j
     //   368: invokeinterface 210 1 0
     //   373: return
     //   374: aload_0
-    //   375: getfield 64	com/tencent/mm/ui/account/j:kwO	Lcom/tencent/mm/ui/account/j$a;
+    //   375: getfield 64	com/tencent/mm/ui/account/j:kVV	Lcom/tencent/mm/ui/account/j$a;
     //   378: invokeinterface 213 1 0
     //   383: goto -32 -> 351
     //   386: astore 7
     //   388: ldc -120
     //   390: aload 7
     //   392: invokevirtual 214	java/lang/Exception:toString	()Ljava/lang/String;
-    //   395: invokestatic 217	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   395: invokestatic 217	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   398: aload 6
     //   400: ifnull -197 -> 203
     //   403: aload 6
@@ -296,19 +296,19 @@ public final class j
     if ((context instanceof Activity))
     {
       paramBoolean = a.a((Activity)context, "android.permission.READ_SMS", 2048, "", "");
-      u.d("!44@/B4Tb64lLpL541hXrSnc37wqD5dP0OdT7d6yWSV5tro=", "summerper checkPermission checkSMS[%b], stack[%s], activity[%s]", new Object[] { Boolean.valueOf(paramBoolean), ay.aVJ(), context });
+      v.d("MicroMsg.SmsContentObserver", "summerper checkPermission checkSMS[%b], stack[%s], activity[%s]", new Object[] { Boolean.valueOf(paramBoolean), be.baX(), context });
       if (!paramBoolean) {
         return;
       }
     }
-    bbZ();
+    bhl();
   }
   
   public static abstract interface a
   {
-    public abstract void Gr(String paramString);
+    public abstract void IG(String paramString);
     
-    public abstract void bbK();
+    public abstract void bgW();
   }
 }
 

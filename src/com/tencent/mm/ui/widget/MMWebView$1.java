@@ -15,14 +15,14 @@ public final class MMWebView$1
     switch (paramMotionEvent.getAction() & 0xFF)
     {
     default: 
-      MMWebView.b(lFR).requestDisallowInterceptTouchEvent(true);
+      MMWebView.b(mhf).requestDisallowInterceptTouchEvent(true);
       return false;
     case 0: 
     case 2: 
-      MMWebView.b(lFR).requestDisallowInterceptTouchEvent(true);
+      MMWebView.b(mhf).requestDisallowInterceptTouchEvent(true);
       return false;
     }
-    MMWebView.b(lFR).requestDisallowInterceptTouchEvent(false);
+    MMWebView.b(mhf).requestDisallowInterceptTouchEvent(false);
     return false;
   }
 }

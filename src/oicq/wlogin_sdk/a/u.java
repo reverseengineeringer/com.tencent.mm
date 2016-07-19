@@ -5,7 +5,7 @@ public final class u
 {
   public u()
   {
-    mbE = 284;
+    mNI = 284;
   }
 }
 

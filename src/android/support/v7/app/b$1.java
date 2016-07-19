@@ -9,15 +9,15 @@ final class b$1
   
   public final void run()
   {
-    f localf = b.a(iV);
-    if ((iV.iG.a(0, localf)) && (iV.iG.a(0, null, localf))) {
-      b.a(iV, localf);
+    f localf = b.a(jm);
+    if ((jm.iX.a(0, localf)) && (jm.iX.a(0, null, localf))) {
+      b.a(jm, localf);
     }
     for (;;)
     {
-      b.b(iV);
+      b.b(jm);
       return;
-      b.a(iV, null);
+      b.a(jm, null);
     }
   }
 }

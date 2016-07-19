@@ -15,5 +15,10 @@
 
 
 # virtual methods
-.method public abstract aPr()V
+.method public abstract aTX()V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 .end method

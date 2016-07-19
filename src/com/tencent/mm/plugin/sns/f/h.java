@@ -1,90 +1,88 @@
 package com.tencent.mm.plugin.sns.f;
 
-import java.util.LinkedList;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public final class h
-  extends com.tencent.mm.at.a
 {
-  public LinkedList gSL = new LinkedList();
-  public j mfw;
+  public boolean agF = true;
+  public String eQW = "";
+  public String gZK = "";
+  public String gZL = "";
+  public String haA = "";
+  public int[] haB;
+  public int ham = 0;
+  public List<a> han = new ArrayList();
   
-  protected final int a(int paramInt, Object... paramVarArgs)
+  public final boolean aCq()
   {
-    if (paramInt == 0)
-    {
-      paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.d(1, 8, gSL);
-      if (mfw != null)
-      {
-        paramVarArgs.cj(2, mfw.kn());
-        mfw.a(paramVarArgs);
-      }
-      paramInt = 0;
+    return (agF) && (han != null) && (han.size() > 0);
+  }
+  
+  public final boolean c(String paramString1, String paramString2, Map<String, String> paramMap)
+  {
+    gZL = paramString1;
+    gZK = paramString2;
+    if (paramMap == null) {
+      return false;
     }
-    int i;
-    do
+    for (;;)
     {
-      return paramInt;
-      if (paramInt != 1) {
-        break;
+      int i;
+      try
+      {
+        han.clear();
+        eQW = be.ab((String)paramMap.get("language"), "");
+        haA = be.ab((String)paramMap.get("first_step_order"), "");
+        paramString2 = haA.split("\\|");
+        haB = new int[paramString2.length];
+        if (haB.length != 0) {
+          break label460;
+        }
+        agF = false;
       }
-      i = a.a.a.a.c(1, 8, gSL) + 0;
-      paramInt = i;
-    } while (mfw == null);
-    return i + a.a.a.a.ch(2, mfw.kn());
-    if (paramInt == 2)
-    {
-      paramVarArgs = (byte[])paramVarArgs[0];
-      gSL.clear();
-      paramVarArgs = new a.a.a.a.a(paramVarArgs, iTR);
-      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.bog();
+      catch (Exception paramString1)
+      {
+        int j;
+        int k;
+        v.printErrStackTrace("MicroMsg.SnsAdAbTestInfo", paramString1, "feed xml error ", new Object[0]);
+        return false;
+      }
+      if (i < paramString2.length)
+      {
+        haB[i] = be.FG(paramString2[i]);
+        if ((haB[i] <= 0) || (haB[i] > 3)) {
+          agF = false;
         }
       }
-      return 0;
-    }
-    if (paramInt == 3)
-    {
-      Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
-      h localh = (h)paramVarArgs[1];
-      paramInt = ((Integer)paramVarArgs[2]).intValue();
-      Object localObject2;
-      boolean bool;
-      switch (paramInt)
+      else
       {
-      default: 
-        return -1;
-      case 1: 
-        paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-        i = paramVarArgs.size();
-        paramInt = 0;
-        while (paramInt < i)
+        j = be.FG((String)paramMap.get("wording_count"));
+        k = be.FG((String)paramMap.get("expertype"));
+        i = 0;
+        if (i < j)
         {
-          localObject2 = (byte[])paramVarArgs.get(paramInt);
-          localObject1 = new g();
-          localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-          for (bool = true; bool; bool = ((g)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
-          gSL.add(localObject1);
-          paramInt += 1;
+          paramString2 = new a();
+          gZd = be.FG((String)paramMap.get(String.format("wording_%d_id", new Object[] { Integer.valueOf(i + 1) })));
+          gZe = be.ab((String)paramMap.get(String.format("wording_%d_zh_CN", new Object[] { Integer.valueOf(i + 1) })), "");
+          gZf = be.ab((String)paramMap.get(String.format("wording_%d_zh_TW", new Object[] { Integer.valueOf(i + 1) })), "");
+          gZg = be.ab((String)paramMap.get(String.format("wording_%d_en", new Object[] { Integer.valueOf(i + 1) })), "");
+          gZh = be.FG((String)paramMap.get(String.format("wording_%d_action_type", new Object[] { Integer.valueOf(i + 1) })));
+          han.add(paramString2);
+          i += 1;
+          continue;
         }
-        return 0;
+        v.i("MicroMsg.SnsAdAbTestInfo", "expertType " + k + " " + paramString1 + " " + haA);
+        return false;
+        label460:
+        i = 0;
+        continue;
       }
-      paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-      i = paramVarArgs.size();
-      paramInt = 0;
-      while (paramInt < i)
-      {
-        localObject2 = (byte[])paramVarArgs.get(paramInt);
-        localObject1 = new j();
-        localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-        for (bool = true; bool; bool = ((j)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
-        mfw = ((j)localObject1);
-        paramInt += 1;
-      }
-      return 0;
+      i += 1;
     }
-    return -1;
   }
 }
 

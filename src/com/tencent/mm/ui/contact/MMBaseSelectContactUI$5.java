@@ -8,23 +8,23 @@ final class MMBaseSelectContactUI$5
 {
   MMBaseSelectContactUI$5(MMBaseSelectContactUI paramMMBaseSelectContactUI) {}
   
-  public final void SQ()
+  public final void Uj()
   {
-    if (MMBaseSelectContactUI.d(lle) != null) {
-      MMBaseSelectContactUI.d(lle).clearFocus();
+    if (MMBaseSelectContactUI.d(lLr) != null) {
+      MMBaseSelectContactUI.d(lLr).clearFocus();
     }
-    if (MMBaseSelectContactUI.h(lle) != null)
+    if (MMBaseSelectContactUI.h(lLr) != null)
     {
-      MMBaseSelectContactUI.h(lle).clearFocus();
-      MMBaseSelectContactUI.h(lle).biK();
+      MMBaseSelectContactUI.h(lLr).clearFocus();
+      MMBaseSelectContactUI.h(lLr).boG();
     }
-    MMBaseSelectContactUI.i(lle).requestFocus();
-    MMBaseSelectContactUI.i(lle).setVisibility(8);
+    MMBaseSelectContactUI.i(lLr).requestFocus();
+    MMBaseSelectContactUI.i(lLr).setVisibility(8);
   }
   
-  public final void SR()
+  public final void Uk()
   {
-    lle.age();
+    lLr.aiI();
   }
 }
 

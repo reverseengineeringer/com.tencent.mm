@@ -2,7 +2,7 @@ package com.tencent.mm.ui.bindmobile;
 
 public abstract interface a$a
 {
-  public abstract void qm(int paramInt);
+  public abstract void se(int paramInt);
 }
 
 /* Location:

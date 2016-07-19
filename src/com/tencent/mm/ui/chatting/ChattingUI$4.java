@@ -11,7 +11,7 @@ final class ChattingUI$4
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    kXU.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
+    lyl.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
   }
 }
 

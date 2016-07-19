@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/FacebookFriendUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/FacebookFriendUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+.field final synthetic kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 315
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$3;->ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$3;->kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 319
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$3;->ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$3;->kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/FacebookFriendUI;->e(Lcom/tencent/mm/ui/account/FacebookFriendUI;)Landroid/widget/ListView;
 

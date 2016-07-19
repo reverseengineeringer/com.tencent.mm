@@ -2,145 +2,230 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
-import android.text.SpannableString;
-import android.text.style.ImageSpan;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.TextView;
-import com.tencent.mm.plugin.sns.h.a;
-import com.tencent.mm.plugin.sns.h.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import android.text.format.DateFormat;
+import java.util.ArrayList;
+import java.util.GregorianCalendar;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public final class at
 {
-  private String eJi;
-  public TextView hmk;
-  private TextView hml;
-  private View hmm;
-  public b hmn;
-  public a hmo;
-  private View view;
+  private static Map<String, List<String>> eAd = new HashMap();
+  private static Map<String, List<String>> eAe = new HashMap();
+  private static HashMap<Long, Long> eAf = new HashMap();
+  private static HashMap<Long, String> eAg = new HashMap();
   
-  public at(View paramView)
+  public static CharSequence a(Context paramContext, long paramLong, boolean paramBoolean)
   {
-    view = paramView;
-    eJi = t.dn(y.getContext());
-    u.i("!32@/B4Tb64lLpKrDzi69O5I2aiRTC3cMXc+", "adView init lan " + eJi);
-    hmk = ((TextView)view.findViewById(2131168536));
-    hml = ((TextView)view.findViewById(2131168537));
-    hmm = view.findViewById(2131168679);
-    paramView = " " + view.getResources().getString(2131433195) + " ";
-    hmk.setText(paramView);
-  }
-  
-  public final void a(View.OnClickListener paramOnClickListener1, View.OnClickListener paramOnClickListener2)
-  {
-    hml.setOnClickListener(paramOnClickListener1);
-    hmk.setOnClickListener(paramOnClickListener2);
-    if (hmm != null) {
-      hmm.setOnClickListener(paramOnClickListener2);
-    }
-  }
-  
-  public final void a(b paramb, a parama)
-  {
-    hmo = parama;
-    hmn = paramb;
-    Object localObject2 = "";
-    if (paramb != null) {
-      localObject2 = gUm;
-    }
-    Object localObject1 = localObject2;
-    if (parama != null)
-    {
-      localObject1 = localObject2;
-      if (gUe == 1) {
-        localObject1 = gUf;
-      }
-    }
-    localObject2 = hml.getContext();
-    parama = (a)localObject1;
-    if (ay.kz((String)localObject1)) {
-      parama = ((Context)localObject2).getString(2131433196);
-    }
-    int i = parama.length();
-    parama = new SpannableString(parama + "ad_");
-    localObject1 = ((Context)localObject2).getResources().getDrawable(2130903300);
-    ((Drawable)localObject1).setBounds(0, 0, (int)(hml.getTextSize() * 1.3D), (int)(hml.getTextSize() * 1.3D));
-    parama.setSpan(new ImageSpan((Drawable)localObject1, 0), i, i + 3, 33);
-    hml.setText(parama);
-    if (paramb != null)
-    {
-      parama = "";
-      if (!"zh_CN".equals(eJi)) {
-        break label223;
-      }
-      parama = gUt;
-    }
-    for (;;)
-    {
-      if (!ay.kz(parama)) {
-        hmk.setText(parama);
-      }
-      return;
-      label223:
-      if (("zh_TW".equals(eJi)) || ("zh_HK".equals(eJi))) {
-        parama = gUv;
-      } else if ("en".equals(eJi)) {
-        parama = gUu;
-      }
-    }
-  }
-  
-  public final String aCV()
-  {
-    if (hmo == null) {
+    GregorianCalendar localGregorianCalendar = new GregorianCalendar();
+    if (paramLong < 3600000L) {
       return "";
     }
-    if (hmo.gRE == null) {
-      return "";
+    localGregorianCalendar = new GregorianCalendar(localGregorianCalendar.get(1), localGregorianCalendar.get(2), localGregorianCalendar.get(5));
+    long l = paramLong - localGregorianCalendar.getTimeInMillis();
+    if ((l > 0L) && (l <= 86400000L) && (paramBoolean)) {
+      return paramContext.getString(2131232873);
     }
-    return hmo.gRE;
+    l = paramLong - localGregorianCalendar.getTimeInMillis() + 86400000L;
+    if ((l > 0L) && (l <= 86400000L) && (paramBoolean)) {
+      return paramContext.getString(2131232882);
+    }
+    new GregorianCalendar().setTimeInMillis(paramLong);
+    return DateFormat.format(paramContext.getString(2131232837), paramLong);
   }
   
-  public final int[] aCW()
+  private static String ad(Context paramContext, String paramString)
   {
-    int[] arrayOfInt = new int[2];
-    if (hmm != null)
+    int j = 0;
+    String[] arrayOfString = paramContext.getResources().getStringArray(2131296282);
+    paramContext = new ArrayList();
+    paramContext.add("");
+    int i = 0;
+    while (i < arrayOfString.length)
     {
-      hmm.getLocationInWindow(arrayOfInt);
-      arrayOfInt[0] += hmm.getMeasuredWidth();
+      paramContext.add(arrayOfString[i]);
+      i += 1;
     }
-    return arrayOfInt;
+    try
+    {
+      i = Integer.parseInt(paramString);
+      if (i >= paramContext.size()) {
+        return "";
+      }
+      return (String)paramContext.get(i);
+    }
+    catch (Exception paramString)
+    {
+      for (;;)
+      {
+        i = j;
+      }
+    }
   }
   
-  public final void h(Object paramObject1, Object paramObject2)
+  private static void ao(Context paramContext, String paramString)
   {
-    hml.setTag(paramObject1);
-    hmk.setTag(paramObject2);
-    if (hmm != null) {
-      hmm.setTag(paramObject2);
+    paramContext = paramContext.getResources().getStringArray(2131296282);
+    ArrayList localArrayList = new ArrayList();
+    localArrayList.add("");
+    int i = 0;
+    while (i < paramContext.length)
+    {
+      localArrayList.add(paramContext[i]);
+      i += 1;
+    }
+    eAe.put(paramString, localArrayList);
+  }
+  
+  public static void clean()
+  {
+    try
+    {
+      eAf.clear();
+      eAg.clear();
+      return;
+    }
+    finally
+    {
+      localObject = finally;
+      throw ((Throwable)localObject);
     }
   }
   
-  public final void setVisibility(int paramInt)
+  public static String e(Context paramContext, long paramLong)
   {
-    if ((hmn != null) && (hmn.gUl == 1)) {
-      hml.setVisibility(8);
-    }
     for (;;)
     {
-      hmk.setVisibility(paramInt);
-      if (hmm != null) {
-        hmm.setVisibility(paramInt);
+      GregorianCalendar localGregorianCalendar;
+      long l1;
+      int j;
+      int i;
+      try
+      {
+        localGregorianCalendar = new GregorianCalendar();
+        if (paramLong < 3600000L)
+        {
+          paramContext = "";
+          return paramContext;
+        }
+        l1 = localGregorianCalendar.getTimeInMillis();
+        if (eAf.containsKey(Long.valueOf(paramLong))) {
+          if (l1 - ((Long)eAf.get(Long.valueOf(paramLong))).longValue() < 60000L)
+          {
+            if (eAg.containsKey(Long.valueOf(paramLong))) {
+              paramContext = (String)eAg.get(Long.valueOf(paramLong));
+            }
+          }
+          else {
+            eAf.remove(Long.valueOf(paramLong));
+          }
+        }
+        if ((l1 - paramLong) / 3600000L == 0L)
+        {
+          j = (int)((l1 - paramLong) / 60000L);
+          i = j;
+          if (j <= 0) {
+            i = 1;
+          }
+          paramContext = paramContext.getResources().getQuantityString(2131361802, i, new Object[] { Integer.valueOf(i) });
+          eAg.put(Long.valueOf(paramLong), paramContext);
+          eAf.put(Long.valueOf(paramLong), Long.valueOf(l1));
+          continue;
+        }
+        localGregorianCalendar = new GregorianCalendar(localGregorianCalendar.get(1), localGregorianCalendar.get(2), localGregorianCalendar.get(5));
       }
-      return;
-      hml.setVisibility(paramInt);
+      finally {}
+      long l2 = paramLong - localGregorianCalendar.getTimeInMillis();
+      if ((l2 > 0L) && (l2 <= 86400000L))
+      {
+        j = (int)((l1 - paramLong) / 3600000L);
+        i = j;
+        if (j <= 0) {
+          i = 1;
+        }
+        paramContext = paramContext.getResources().getQuantityString(2131361801, i, new Object[] { Integer.valueOf(i) });
+        eAg.put(Long.valueOf(paramLong), paramContext);
+        eAf.put(Long.valueOf(paramLong), Long.valueOf(l1));
+      }
+      else
+      {
+        l2 = paramLong - localGregorianCalendar.getTimeInMillis() + 86400000L;
+        if ((l2 > 0L) && (l2 <= 86400000L))
+        {
+          paramContext = paramContext.getString(2131232882);
+          eAg.put(Long.valueOf(paramLong), paramContext);
+          eAf.put(Long.valueOf(paramLong), Long.valueOf(l1));
+        }
+        else
+        {
+          j = (int)((localGregorianCalendar.getTimeInMillis() + 86400000L - paramLong) / 86400000L);
+          i = j;
+          if (j <= 0) {
+            i = 1;
+          }
+          paramContext = paramContext.getResources().getQuantityString(2131361803, i, new Object[] { Integer.valueOf(i) });
+          eAg.put(Long.valueOf(paramLong), paramContext);
+          eAf.put(Long.valueOf(paramLong), Long.valueOf(l1));
+        }
+      }
     }
+  }
+  
+  private static CharSequence f(Context paramContext, long paramLong)
+  {
+    return DateFormat.format(paramContext.getString(2131232860), paramLong);
+  }
+  
+  public static String i(Context paramContext, long paramLong)
+  {
+    Object localObject1 = new GregorianCalendar();
+    Object localObject2 = new GregorianCalendar(((GregorianCalendar)localObject1).get(1), ((GregorianCalendar)localObject1).get(2), ((GregorianCalendar)localObject1).get(5));
+    localObject1 = (String)DateFormat.format(paramContext.getString(2131232836), paramLong);
+    if (((String)localObject1).indexOf("-") > 0)
+    {
+      localObject2 = localObject1.split("-")[0];
+      localObject1 = localObject1.split("-")[1];
+      localObject2 = ad(paramContext, (String)localObject2);
+      localObject1 = (String)localObject1 + " " + (String)localObject2 + " ";
+      return (String)localObject1 + " " + (String)f(paramContext, paramLong);
+    }
+    long l = paramLong - ((GregorianCalendar)localObject2).getTimeInMillis();
+    if ((l > 0L) && (l <= 86400000L)) {
+      return (String)f(paramContext, paramLong);
+    }
+    l = paramLong - ((GregorianCalendar)localObject2).getTimeInMillis() + 86400000L;
+    if ((l > 0L) && (l <= 86400000L)) {
+      return paramContext.getString(2131232882) + " " + (String)f(paramContext, paramLong);
+    }
+    return (String)localObject1 + " " + (String)f(paramContext, paramLong);
+  }
+  
+  public static String p(Context paramContext, String paramString1, String paramString2)
+  {
+    if (eAe.get(paramString2) == null) {
+      ao(paramContext, paramString2);
+    }
+    try
+    {
+      i = Integer.parseInt(paramString1);
+      paramString1 = (List)eAe.get(paramString2);
+      if ((i >= paramString1.size()) || (paramString1.get(i) == null) || (((String)paramString1.get(i)).equals(""))) {
+        ao(paramContext, paramString2);
+      }
+      paramContext = (List)eAe.get(paramString2);
+      if (i < paramContext.size()) {
+        return (String)paramContext.get(i);
+      }
+    }
+    catch (Exception paramString1)
+    {
+      for (;;)
+      {
+        int i = 0;
+      }
+    }
+    return "";
   }
 }
 

@@ -1,95 +1,94 @@
 package com.tencent.mm.modelsns;
 
 import com.tencent.mm.a.g;
-import com.tencent.mm.protocal.b.aby;
-import com.tencent.mm.protocal.b.add;
-import com.tencent.mm.protocal.b.adf;
-import com.tencent.mm.protocal.b.aqg;
-import com.tencent.mm.protocal.b.asj;
-import com.tencent.mm.protocal.b.atp;
-import com.tencent.mm.protocal.b.ax;
+import com.tencent.mm.protocal.b.acn;
+import com.tencent.mm.protocal.b.adw;
+import com.tencent.mm.protocal.b.ady;
+import com.tencent.mm.protocal.b.aqr;
+import com.tencent.mm.protocal.b.asz;
+import com.tencent.mm.protocal.b.auf;
 import com.tencent.mm.protocal.b.ba;
-import com.tencent.mm.protocal.b.bb;
-import com.tencent.mm.protocal.b.bc;
-import com.tencent.mm.protocal.b.iv;
+import com.tencent.mm.protocal.b.bd;
+import com.tencent.mm.protocal.b.bf;
+import com.tencent.mm.protocal.b.je;
 import com.tencent.mm.protocal.b.k;
 import com.tencent.mm.protocal.b.m;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.q;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.r;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.LinkedList;
 import java.util.Map;
 
 public final class d
 {
-  public static atp CZ()
+  public static auf Dj()
   {
-    atp localatp = new atp();
-    Object localObject = new iv();
-    jMw = new ba();
-    jMx = ((iv)localObject);
-    jzv = 0;
-    fpL = 0;
-    iXW = "";
-    localObject = new aby();
-    jer = 0.0F;
-    jeq = 0.0F;
-    jMv = ((aby)localObject);
-    return localatp;
+    auf localauf = new auf();
+    Object localObject = new je();
+    klh = new bd();
+    kli = ((je)localObject);
+    jYi = 0;
+    fyR = 0;
+    jvB = "";
+    localObject = new acn();
+    jCc = 0.0F;
+    jCb = 0.0F;
+    klg = ((acn)localObject);
+    hBY = "";
+    return localauf;
   }
   
-  public static add Da()
+  public static adw Dk()
   {
-    add localadd = new add();
-    eia = "";
-    jzv = 0;
-    return localadd;
+    adw localadw = new adw();
+    elX = "";
+    jYi = 0;
+    return localadw;
   }
   
-  public static add a(String paramString1, int paramInt1, String paramString2, String paramString3, int paramInt2, int paramInt3, int paramInt4, String paramString4, adf paramadf)
+  public static adw a(String paramString1, int paramInt1, String paramString2, String paramString3, int paramInt2, int paramInt3, int paramInt4, String paramString4, ady paramady)
   {
-    add localadd = new add();
-    iXW = io(paramString1);
-    dzC = paramInt1;
-    eia = io(paramString4);
-    eiq = io(paramString2);
-    jzs = paramInt2;
-    jzt = io(paramString3);
-    jzu = paramInt3;
-    jzv = paramInt4;
-    jzw = paramadf;
+    adw localadw = new adw();
+    jvB = iF(paramString1);
+    Type = paramInt1;
+    elX = iF(paramString4);
+    emu = iF(paramString2);
+    jYf = paramInt2;
+    jYg = iF(paramString3);
+    jYh = paramInt3;
+    jYi = paramInt4;
+    jYj = paramady;
     if (paramString2 == null) {}
     for (paramString1 = "".getBytes();; paramString1 = paramString2.getBytes())
     {
-      jzG = g.m(paramString1);
-      return localadd;
+      jYt = g.j(paramString1);
+      return localadw;
     }
   }
   
-  public static add a(String paramString1, int paramInt1, String paramString2, String paramString3, int paramInt2, int paramInt3, String paramString4)
+  public static adw a(String paramString1, int paramInt1, String paramString2, String paramString3, int paramInt2, int paramInt3, String paramString4)
   {
-    add localadd = new add();
-    iXW = paramString1;
-    dzC = paramInt1;
-    eiq = paramString2;
-    jzt = paramString3;
-    jzs = paramInt2;
-    jzu = paramInt3;
-    eia = paramString4;
-    paramString1 = new adf();
-    jzZ = 0.0F;
-    jzY = 0.0F;
-    jAa = 0.0F;
-    jzw = paramString1;
+    adw localadw = new adw();
+    jvB = paramString1;
+    Type = paramInt1;
+    emu = paramString2;
+    jYg = paramString3;
+    jYf = paramInt2;
+    jYh = paramInt3;
+    elX = paramString4;
+    paramString1 = new ady();
+    jYM = 0.0F;
+    jYL = 0.0F;
+    jYN = 0.0F;
+    jYj = paramString1;
     if (paramString2 == null) {}
     for (paramString1 = "".getBytes();; paramString1 = paramString2.getBytes())
     {
-      jzG = g.m(paramString1);
-      return localadd;
+      jYt = g.j(paramString1);
+      return localadw;
     }
   }
   
-  private static String io(String paramString)
+  private static String iF(String paramString)
   {
     String str = paramString;
     if (paramString == null) {
@@ -98,7 +97,7 @@ public final class d
     return str;
   }
   
-  private static int ip(String paramString)
+  private static int iG(String paramString)
   {
     int i = 0;
     try
@@ -109,13 +108,13 @@ public final class d
     catch (Exception localException)
     {
       while (paramString == null) {}
-      u.e("!32@/B4Tb64lLpKrDzi69O5I2bbhHWhPLLMu", "parserInt error " + paramString);
+      v.e("MicroMsg.TimeLineHelper", "parserInt error " + paramString);
     }
     return i;
     return 0;
   }
   
-  private static long ji(String paramString)
+  private static long jA(String paramString)
   {
     long l1 = 0L;
     try
@@ -126,13 +125,13 @@ public final class d
     catch (Exception localException)
     {
       while (paramString == null) {}
-      u.e("!32@/B4Tb64lLpKrDzi69O5I2bbhHWhPLLMu", "parserLong error " + paramString);
+      v.e("MicroMsg.TimeLineHelper", "parserLong error " + paramString);
     }
     return l1;
     return 0L;
   }
   
-  private static float jj(String paramString)
+  private static float jB(String paramString)
   {
     if (paramString == null) {}
     do
@@ -145,41 +144,42 @@ public final class d
       }
       catch (Exception localException) {}
     } while (paramString == null);
-    u.e("!32@/B4Tb64lLpKrDzi69O5I2bbhHWhPLLMu", "parseFloat error " + paramString);
+    v.e("MicroMsg.TimeLineHelper", "parseFloat error " + paramString);
     return 0.0F;
   }
   
-  public static atp jk(String paramString)
+  public static auf jC(String paramString)
   {
-    Map localMap = q.J(paramString, "TimelineObject", null);
-    atp localatp = CZ();
+    Map localMap = r.cr(paramString, "TimelineObject");
+    auf localauf = Dj();
     if (localMap != null)
     {
-      iXW = io((String)localMap.get(".TimelineObject.id"));
-      eiB = io((String)localMap.get(".TimelineObject.username"));
-      jzv = ip((String)localMap.get(".TimelineObject.private"));
-      fpL = ip((String)localMap.get(".TimelineObject.createTime"));
-      jMu = io((String)localMap.get(".TimelineObject.contentDesc"));
-      jMz = ip((String)localMap.get(".TimelineObject.contentDescShowType"));
-      jMA = ip((String)localMap.get(".TimelineObject.contentDescScene"));
-      paramString = new aby();
-      jeq = jj((String)localMap.get(".TimelineObject.location.$longitude"));
-      jer = jj((String)localMap.get(".TimelineObject.location.$latitude"));
-      bLO = io((String)localMap.get(".TimelineObject.location.$city"));
-      jxY = ip((String)localMap.get(".TimelineObject.location.$poiScale"));
-      jxW = io((String)localMap.get(".TimelineObject.location.$poiClassifyId"));
-      gZn = ip((String)localMap.get(".TimelineObject.location.$poiClassifyType"));
-      gZm = io((String)localMap.get(".TimelineObject.location.$poiAddress"));
-      eLJ = io((String)localMap.get(".TimelineObject.location.$poiName"));
-      jxZ = ip((String)localMap.get(".TimelineObject.location.$poiClickableStatus"));
-      jMv = paramString;
-      if (jMx == null) {
-        jMx = new iv();
+      jvB = iF((String)localMap.get(".TimelineObject.id"));
+      emC = iF((String)localMap.get(".TimelineObject.username"));
+      jYi = iG((String)localMap.get(".TimelineObject.private"));
+      fyR = iG((String)localMap.get(".TimelineObject.createTime"));
+      klf = iF((String)localMap.get(".TimelineObject.contentDesc"));
+      klk = iG((String)localMap.get(".TimelineObject.contentDescShowType"));
+      kll = iG((String)localMap.get(".TimelineObject.contentDescScene"));
+      hmg = iF((String)localMap.get(".TimelineObject.statExtStr"));
+      paramString = new acn();
+      jCb = jB((String)localMap.get(".TimelineObject.location.$longitude"));
+      jCc = jB((String)localMap.get(".TimelineObject.location.$latitude"));
+      bFi = iF((String)localMap.get(".TimelineObject.location.$city"));
+      jWE = iG((String)localMap.get(".TimelineObject.location.$poiScale"));
+      jWC = iF((String)localMap.get(".TimelineObject.location.$poiClassifyId"));
+      hmB = iG((String)localMap.get(".TimelineObject.location.$poiClassifyType"));
+      hmz = iF((String)localMap.get(".TimelineObject.location.$poiAddress"));
+      eTE = iF((String)localMap.get(".TimelineObject.location.$poiName"));
+      jWF = iG((String)localMap.get(".TimelineObject.location.$poiClickableStatus"));
+      klg = paramString;
+      if (kli == null) {
+        kli = new je();
       }
-      jMx.eia = io((String)localMap.get(".TimelineObject.ContentObject.description"));
-      jMx.jhv = ip((String)localMap.get(".TimelineObject.ContentObject.contentStyle"));
-      jMx.asP = io((String)localMap.get(".TimelineObject.ContentObject.title"));
-      jMx.eiq = io((String)localMap.get(".TimelineObject.ContentObject.contentUrl"));
+      kli.elX = iF((String)localMap.get(".TimelineObject.ContentObject.description"));
+      kli.jFu = iG((String)localMap.get(".TimelineObject.ContentObject.contentStyle"));
+      kli.aez = iF((String)localMap.get(".TimelineObject.ContentObject.title"));
+      kli.emu = iF((String)localMap.get(".TimelineObject.ContentObject.contentUrl"));
       int i = 0;
       String str17;
       String str16;
@@ -191,11 +191,9 @@ public final class d
       String str9;
       String str12;
       String str6;
-      String str5;
       Object localObject4;
       String str8;
       String str7;
-      String str4;
       if (i != 0)
       {
         str17 = ".TimelineObject.ContentObject.mediaList.media" + i + ".id";
@@ -220,25 +218,25 @@ public final class d
         str1 = ".TimelineObject.ContentObject.mediaList.media" + i + ".attachShareTitle";
         localObject1 = ".TimelineObject.ContentObject.mediaList.media" + i + ".enc";
         paramString = ".TimelineObject.ContentObject.mediaList.media" + i + ".enc.$key";
-        label1008:
+        label1028:
         String str18 = (String)localObject4 + ".size.$width";
         String str19 = (String)localObject4 + ".size.$height";
         localObject4 = (String)localObject4 + ".size.$totalSize";
         str18 = (String)localMap.get(str18);
         str19 = (String)localMap.get(str19);
         String str20 = (String)localMap.get(localObject4);
-        localObject4 = new adf();
-        jzZ = 0.0F;
-        jzY = 0.0F;
-        jAa = 0.0F;
+        localObject4 = new ady();
+        jYM = 0.0F;
+        jYL = 0.0F;
+        jYN = 0.0F;
         if (str18 != null) {
-          jzY = jj(str18);
+          jYL = jB(str18);
         }
         if (str19 != null) {
-          jzZ = jj(str19);
+          jYM = jB(str19);
         }
         if (str20 != null) {
-          jAa = jj(str20);
+          jYN = jB(str20);
         }
         str17 = (String)localMap.get(str17);
         str16 = (String)localMap.get(str16);
@@ -262,45 +260,45 @@ public final class d
         str18 = (String)localMap.get(localObject1);
         paramString = (String)localMap.get(paramString);
         if ((str16 == null) || (str17 == null)) {
-          break label1857;
+          break label1877;
         }
-        localObject1 = new add();
-        iXW = io(str17);
-        dzC = ip(str16);
-        asP = io(str15);
-        eia = io(str14);
-        eiq = io(str13);
-        jzs = ip(str10);
-        jzt = io(str11);
-        jzu = ip(str9);
-        jzv = ip(str12);
-        jzw = ((adf)localObject4);
-        jzx = io(str8);
-        jzy = ip(str7);
-        gXF = io(str5);
-        atB = ip(str6);
-        jzA = io(str4);
-        jzC = io(str3);
-        jzB = io(str2);
-        hmV = ip((String)localObject3);
-        jzD = io((String)localObject2);
-        jzE = io(str1);
-        jzF = ip(str18);
-        caj = ji(paramString);
-        if (eiq != null) {
-          break label1846;
+        localObject1 = new adw();
+        jvB = iF(str17);
+        Type = iG(str16);
+        aez = iF(str15);
+        elX = iF(str14);
+        emu = iF(str13);
+        jYf = iG(str10);
+        jYg = iF(str11);
+        jYh = iG(str9);
+        jYi = iG(str12);
+        jYj = ((ady)localObject4);
+        jYk = iF(str8);
+        jYl = iG(str7);
+        hkR = iF(str5);
+        afj = iG(str6);
+        jYn = iF(str4);
+        jYp = iF(str3);
+        jYo = iF(str2);
+        hDf = iG((String)localObject3);
+        jYq = iF((String)localObject2);
+        jYr = iF(str1);
+        jYs = iG(str18);
+        bTS = jA(paramString);
+        if (emu != null) {
+          break label1866;
         }
       }
-      label1846:
-      for (paramString = "".getBytes();; paramString = eiq.getBytes())
+      label1866:
+      for (paramString = "".getBytes();; paramString = emu.getBytes())
       {
-        jzG = g.m(paramString);
-        jMx.jhw.add(localObject1);
+        jYt = g.j(paramString);
+        kli.jFv.add(localObject1);
         i += 1;
         break;
-        str16 = ".TimelineObject.ContentObject.mediaList.media.type";
+        str14 = ".TimelineObject.ContentObject.mediaList.media.description";
         str5 = ".TimelineObject.ContentObject.mediaList.media.userData";
-        str15 = ".TimelineObject.ContentObject.mediaList.media.title";
+        str13 = ".TimelineObject.ContentObject.mediaList.media.url";
         paramString = ".TimelineObject.ContentObject.mediaList.media.enc.$key";
         localObject4 = ".TimelineObject.ContentObject.mediaList.media";
         localObject1 = ".TimelineObject.ContentObject.mediaList.media.enc";
@@ -308,103 +306,108 @@ public final class d
         str9 = ".TimelineObject.ContentObject.mediaList.media.thumb.$type";
         str4 = ".TimelineObject.ContentObject.mediaList.media.attachUrl";
         str10 = ".TimelineObject.ContentObject.mediaList.media.url.$type";
+        localObject2 = ".TimelineObject.ContentObject.mediaList.media.attachThumbUrl";
+        str15 = ".TimelineObject.ContentObject.mediaList.media.title";
         str3 = ".TimelineObject.ContentObject.mediaList.media.attachUrl.$md5";
-        str11 = ".TimelineObject.ContentObject.mediaList.media.thumb";
+        str17 = ".TimelineObject.ContentObject.mediaList.media.id";
+        localObject3 = ".TimelineObject.ContentObject.mediaList.media.videosize.$attachTotalTime";
+        str16 = ".TimelineObject.ContentObject.mediaList.media.type";
         str2 = ".TimelineObject.ContentObject.mediaList.media.url.$md5";
         str12 = ".TimelineObject.ContentObject.mediaList.media.private";
-        str14 = ".TimelineObject.ContentObject.mediaList.media.description";
+        str11 = ".TimelineObject.ContentObject.mediaList.media.thumb";
         str1 = ".TimelineObject.ContentObject.mediaList.media.attachShareTitle";
-        localObject3 = ".TimelineObject.ContentObject.mediaList.media.videosize.$attachTotalTime";
-        str13 = ".TimelineObject.ContentObject.mediaList.media.url";
-        localObject2 = ".TimelineObject.ContentObject.mediaList.media.attachThumbUrl";
-        str17 = ".TimelineObject.ContentObject.mediaList.media.id";
-        str8 = ".TimelineObject.ContentObject.mediaList.media.lowBandUrl";
         str7 = ".TimelineObject.ContentObject.mediaList.media.lowBandUrl.$type";
-        break label1008;
+        str8 = ".TimelineObject.ContentObject.mediaList.media.lowBandUrl";
+        break label1028;
       }
-      label1857:
-      paramString = new ba();
-      Object localObject1 = io((String)localMap.get(".TimelineObject.appInfo.id"));
-      String str1 = io((String)localMap.get(".TimelineObject.appInfo.version"));
-      Object localObject2 = io((String)localMap.get(".TimelineObject.appInfo.appName"));
-      Object localObject3 = io((String)localMap.get(".TimelineObject.appInfo.installUrl "));
-      String str2 = io((String)localMap.get(".TimelineObject.appInfo.fromUrl "));
-      iXW = ((String)localObject1);
-      fpS = ((String)localObject2);
-      iXX = ((String)localObject3);
-      iXY = str2;
-      crh = str1;
-      jMw = paramString;
-      paramString = new asj();
-      localObject1 = io((String)localMap.get(".TimelineObject.streamvideo.streamvideotitle"));
-      str1 = io((String)localMap.get(".TimelineObject.streamvideo.streamvideototaltime"));
-      localObject2 = io((String)localMap.get(".TimelineObject.streamvideo.streamvideourl"));
-      localObject3 = io((String)localMap.get(".TimelineObject.streamvideo.streamvideoweburl"));
-      str2 = io((String)localMap.get(".TimelineObject.streamvideo.streamvideowording"));
-      String str3 = io((String)localMap.get(".TimelineObject.streamvideo.streamvideothumburl"));
-      byU = ((String)localObject1);
-      byT = ay.Dr(str1);
-      byS = ((String)localObject2);
-      byW = ((String)localObject3);
-      byV = str2;
-      byX = str3;
-      jMC = paramString;
-      paramString = new aqg();
-      localObject1 = io((String)localMap.get(".TimelineObject.redEnvelopesInfo.sendId"));
-      str1 = io((String)localMap.get(".TimelineObject.redEnvelopesInfo.ticket"));
-      eRV = ((String)localObject1);
-      avm = str1;
+      label1877:
+      paramString = new bd();
+      Object localObject1 = iF((String)localMap.get(".TimelineObject.appInfo.id"));
+      String str1 = iF((String)localMap.get(".TimelineObject.appInfo.version"));
+      Object localObject2 = iF((String)localMap.get(".TimelineObject.appInfo.appName"));
+      Object localObject3 = iF((String)localMap.get(".TimelineObject.appInfo.installUrl "));
+      String str2 = iF((String)localMap.get(".TimelineObject.appInfo.fromUrl "));
+      jvB = ((String)localObject1);
+      fyY = ((String)localObject2);
+      jvC = ((String)localObject3);
+      jvD = str2;
+      cmJ = str1;
+      klh = paramString;
+      paramString = new asz();
+      localObject1 = iF((String)localMap.get(".TimelineObject.streamvideo.streamvideotitle"));
+      str1 = iF((String)localMap.get(".TimelineObject.streamvideo.streamvideototaltime"));
+      localObject2 = iF((String)localMap.get(".TimelineObject.streamvideo.streamvideourl"));
+      localObject3 = iF((String)localMap.get(".TimelineObject.streamvideo.streamvideoweburl"));
+      str2 = iF((String)localMap.get(".TimelineObject.streamvideo.streamvideowording"));
+      String str3 = iF((String)localMap.get(".TimelineObject.streamvideo.streamvideothumburl"));
+      String str4 = iF((String)localMap.get(".TimelineObject.streamvideo.streamvideoaduxinfo"));
+      String str5 = iF((String)localMap.get(".TimelineObject.streamvideo.streamvideopublishid"));
+      brO = ((String)localObject1);
+      brN = com.tencent.mm.sdk.platformtools.be.FG(str1);
+      brM = ((String)localObject2);
+      brQ = ((String)localObject3);
+      brP = str2;
+      brR = str3;
+      brS = str4;
+      brT = str5;
+      kln = paramString;
+      paramString = new aqr();
+      localObject1 = iF((String)localMap.get(".TimelineObject.redEnvelopesInfo.sendId"));
+      str1 = iF((String)localMap.get(".TimelineObject.redEnvelopesInfo.ticket"));
+      eZP = ((String)localObject1);
+      ahd = str1;
       paramString = new m();
-      i = ip((String)localMap.get(".TimelineObject.actionInfo.scene"));
-      localObject1 = io((String)localMap.get(".TimelineObject.actionInfo.appid"));
-      int j = ip((String)localMap.get(".TimelineObject.actionInfo.type"));
-      str1 = io((String)localMap.get(".TimelineObject.actionInfo.url"));
-      localObject2 = io((String)localMap.get(".TimelineObject.actionInfo.mediaTagName"));
-      localObject3 = io((String)localMap.get(".TimelineObject.actionInfo.wordingKey"));
-      iWn = ((String)localObject1);
-      iWm = i;
-      dzC = j;
-      eiq = str1;
-      iWo = ((String)localObject2);
-      iWp = ((String)localObject3);
+      i = iG((String)localMap.get(".TimelineObject.actionInfo.scene"));
+      localObject1 = iF((String)localMap.get(".TimelineObject.actionInfo.appid"));
+      int j = iG((String)localMap.get(".TimelineObject.actionInfo.type"));
+      str1 = iF((String)localMap.get(".TimelineObject.actionInfo.url"));
+      localObject2 = iF((String)localMap.get(".TimelineObject.actionInfo.mediaTagName"));
+      localObject3 = iF((String)localMap.get(".TimelineObject.actionInfo.wordingKey"));
+      jtO = ((String)localObject1);
+      jtN = i;
+      Type = j;
+      emu = str1;
+      jtP = ((String)localObject2);
+      jtQ = ((String)localObject3);
       localObject1 = new k();
-      str1 = io((String)localMap.get(".TimelineObject.actionInfo.appMsg.appid"));
-      localObject2 = io((String)localMap.get(".TimelineObject.actionInfo.appMsg.mediaTagName"));
-      localObject3 = io((String)localMap.get(".TimelineObject.actionInfo.appMsg.messageExt"));
-      str2 = io((String)localMap.get(".TimelineObject.actionInfo.appMsg.messageAction"));
-      iWi = str1;
-      iWj = ((String)localObject2);
-      iWk = ((String)localObject3);
-      iWl = str2;
-      iWq = ((k)localObject1);
-      i = ip((String)localMap.get(".TimelineObject.actionInfo.appActionScene.installedActionScene"));
-      j = ip((String)localMap.get(".TimelineObject.actionInfo.appActionScene.uninstalledActionScene"));
-      localObject1 = io((String)localMap.get(".TimelineObject.actionInfo.appJumpWordingKey.installedWordingKey"));
-      str1 = io((String)localMap.get(".TimelineObject.actionInfo.appJumpWordingKey.uninstalledWordingKey"));
-      iWr = io((String)localMap.get(".TimelineObject.actionInfo.newWordingKey"));
-      localObject2 = new ax();
-      iXS = i;
-      iXT = j;
-      localObject3 = new bc();
-      iYc = ((String)localObject1);
-      iYd = str1;
-      iWs = ((ax)localObject2);
-      iWt = ((bc)localObject3);
-      iWu = jl((String)localMap.get(".TimelineObject.actionInfo.installedWording"));
-      iWv = jl((String)localMap.get(".TimelineObject.actionInfo.uninstalledWording"));
-      gQy = paramString;
-      iHS = io((String)localMap.get(".TimelineObject.sourceUserName"));
-      iHT = io((String)localMap.get(".TimelineObject.sourceNickName"));
-      jMy = io((String)localMap.get(".TimelineObject.publicUserName"));
-      jMB = io((String)localMap.get(".TimelineObject.statisticsData"));
-      bxl = ip((String)localMap.get(".TimelineObject.contentattr"));
+      str1 = iF((String)localMap.get(".TimelineObject.actionInfo.appMsg.appid"));
+      localObject2 = iF((String)localMap.get(".TimelineObject.actionInfo.appMsg.mediaTagName"));
+      localObject3 = iF((String)localMap.get(".TimelineObject.actionInfo.appMsg.messageExt"));
+      str2 = iF((String)localMap.get(".TimelineObject.actionInfo.appMsg.messageAction"));
+      jtJ = str1;
+      jtK = ((String)localObject2);
+      jtL = ((String)localObject3);
+      jtM = str2;
+      jtR = ((k)localObject1);
+      i = iG((String)localMap.get(".TimelineObject.actionInfo.appActionScene.installedActionScene"));
+      j = iG((String)localMap.get(".TimelineObject.actionInfo.appActionScene.uninstalledActionScene"));
+      localObject1 = iF((String)localMap.get(".TimelineObject.actionInfo.appJumpWordingKey.installedWordingKey"));
+      str1 = iF((String)localMap.get(".TimelineObject.actionInfo.appJumpWordingKey.uninstalledWordingKey"));
+      jtS = iF((String)localMap.get(".TimelineObject.actionInfo.newWordingKey"));
+      localObject2 = new ba();
+      jvx = i;
+      jvy = j;
+      localObject3 = new bf();
+      jvH = ((String)localObject1);
+      jvI = str1;
+      jtT = ((ba)localObject2);
+      jtU = ((bf)localObject3);
+      jtV = jD((String)localMap.get(".TimelineObject.actionInfo.installedWording"));
+      jtW = jD((String)localMap.get(".TimelineObject.actionInfo.uninstalledWording"));
+      gYz = paramString;
+      jeP = iF((String)localMap.get(".TimelineObject.sourceUserName"));
+      jeQ = iF((String)localMap.get(".TimelineObject.sourceNickName"));
+      klj = iF((String)localMap.get(".TimelineObject.publicUserName"));
+      klm = iF((String)localMap.get(".TimelineObject.statisticsData"));
+      hBY = iF((String)localMap.get(".TimelineObject.canvasInfoXml"));
+      bqe = iG((String)localMap.get(".TimelineObject.contentattr"));
     }
-    return localatp;
+    return localauf;
   }
   
-  private static bb jl(String paramString)
+  private static com.tencent.mm.protocal.b.be jD(String paramString)
   {
-    if (ay.kz(paramString)) {
+    if (com.tencent.mm.sdk.platformtools.be.kf(paramString)) {
       return null;
     }
     Object localObject = new StringBuilder(paramString.length());
@@ -445,12 +448,12 @@ public final class d
       }
     }
     paramString = ((StringBuilder)localObject).toString();
-    paramString = q.J("<root>" + paramString + "</root>", "root", null);
-    localObject = new bb();
-    iXZ = io((String)paramString.get(".root.en"));
-    iYa = io((String)paramString.get(".root.zh-CN"));
-    iYb = io((String)paramString.get(".root.zh-TW"));
-    return (bb)localObject;
+    paramString = r.cr("<root>" + paramString + "</root>", "root");
+    localObject = new com.tencent.mm.protocal.b.be();
+    jvE = iF((String)paramString.get(".root.en"));
+    jvF = iF((String)paramString.get(".root.zh-CN"));
+    jvG = iF((String)paramString.get(".root.zh-TW"));
+    return (com.tencent.mm.protocal.b.be)localObject;
   }
 }
 

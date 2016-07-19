@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+.field final synthetic jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 691
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$4;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$4;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,14 +41,14 @@
 
     .prologue
     .line 694
-    new-instance v0, Lcom/tencent/mm/d/a/an;
+    new-instance v0, Lcom/tencent/mm/e/a/ao;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/an;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/ao;-><init>()V
 
     .line 695
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 696
     return-void

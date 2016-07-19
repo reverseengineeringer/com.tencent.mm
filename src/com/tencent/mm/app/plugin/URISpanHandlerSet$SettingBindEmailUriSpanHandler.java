@@ -22,9 +22,9 @@ class URISpanHandlerSet$SettingBindEmailUriSpanHandler
       if (paramb != null) {
         paramb.a(paramg);
       }
-      paramg = LauncherUI.bat();
+      paramg = LauncherUI.bfJ();
       if (paramg != null) {
-        paramg.Gi("tab_settings");
+        paramg.Ix("tab_settings");
       }
       return true;
     }
@@ -36,7 +36,7 @@ class URISpanHandlerSet$SettingBindEmailUriSpanHandler
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     if (paramString.trim().startsWith("weixin://setting/bindemail")) {
       return new g(paramString, 7, null);
@@ -44,7 +44,7 @@ class URISpanHandlerSet$SettingBindEmailUriSpanHandler
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 7 };
   }

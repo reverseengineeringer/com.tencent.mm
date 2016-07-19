@@ -11,59 +11,59 @@ import android.support.v4.app.e;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
 
 public abstract class g
   extends Fragment
 {
-  public boolean klA = false;
-  public boolean klz;
+  public boolean kLa;
+  public boolean kLb = false;
   
   public g()
   {
-    klz = false;
+    kLa = false;
   }
   
   public g(boolean paramBoolean)
   {
-    klz = paramBoolean;
+    kLa = paramBoolean;
   }
   
-  public final SharedPreferences Gg(String paramString)
+  public final SharedPreferences Iv(String paramString)
   {
-    return getActivity().getSharedPreferences(paramString, 0);
+    return y().getSharedPreferences(paramString, 0);
   }
   
-  public final long Gh(String paramString)
+  public final long Iw(String paramString)
   {
     long l = -1L;
-    if ((klz) && (getArguments() == null)) {
-      l = getActivity().getIntent().getLongExtra(paramString, -1L);
+    if ((kLa) && (aG == null)) {
+      l = y().getIntent().getLongExtra(paramString, -1L);
     }
-    while (getArguments() == null) {
+    while (aG == null) {
       return l;
     }
-    return getArguments().getLong(paramString, -1L);
+    return aG.getLong(paramString, -1L);
   }
   
-  public final Boolean aq(String paramString, boolean paramBoolean)
+  public final Boolean aA(String paramString, boolean paramBoolean)
   {
-    if ((klz) && (getArguments() == null)) {
-      return Boolean.valueOf(getActivity().getIntent().getBooleanExtra(paramString, paramBoolean));
+    if ((kLa) && (aG == null)) {
+      return Boolean.valueOf(y().getIntent().getBooleanExtra(paramString, paramBoolean));
     }
-    return Boolean.valueOf(getArguments().getBoolean(paramString, paramBoolean));
+    return Boolean.valueOf(aG.getBoolean(paramString, paramBoolean));
   }
   
-  public final void baf()
+  public final void bfx()
   {
-    if (klz) {
-      getActivity().setResult(-1);
+    if (kLa) {
+      y().setResult(-1);
     }
   }
   
   public final View findViewById(int paramInt)
   {
-    View localView2 = getView();
+    View localView2 = mView;
     View localView1 = null;
     if (localView2 != null) {
       localView1 = localView2.findViewById(paramInt);
@@ -71,39 +71,39 @@ public abstract class g
     if (localView1 != null) {
       return localView1;
     }
-    return getActivity().findViewById(paramInt);
+    return y().findViewById(paramInt);
   }
   
   public void finish()
   {
-    if (klz) {
-      getActivity().finish();
+    if (kLa) {
+      y().finish();
     }
-    while (getActivity() == null) {
+    while (y() == null) {
       return;
     }
-    getActivitybb.popBackStack();
+    ybp.popBackStack();
   }
   
   public final int getIntExtra(String paramString, int paramInt)
   {
     int i;
-    if ((klz) && (getArguments() == null)) {
-      i = getActivity().getIntent().getIntExtra(paramString, paramInt);
+    if ((kLa) && (aG == null)) {
+      i = y().getIntent().getIntExtra(paramString, paramInt);
     }
     do
     {
       return i;
       i = paramInt;
-    } while (getArguments() == null);
-    return getArguments().getInt(paramString, paramInt);
+    } while (aG == null);
+    return aG.getInt(paramString, paramInt);
   }
   
-  public Resources getResources()
+  public final Resources getResources()
   {
-    FragmentActivity localFragmentActivity = super.getActivity();
+    FragmentActivity localFragmentActivity = super.y();
     if (localFragmentActivity == null) {
-      return y.getContext().getResources();
+      return aa.getContext().getResources();
     }
     return localFragmentActivity.getResources();
   }
@@ -111,15 +111,15 @@ public abstract class g
   public final String getStringExtra(String paramString)
   {
     String str1 = null;
-    if (klz) {
-      str1 = getActivity().getIntent().getStringExtra(paramString);
+    if (kLa) {
+      str1 = y().getIntent().getStringExtra(paramString);
     }
     String str2 = str1;
     if (str1 == null)
     {
       str2 = str1;
-      if (getArguments() != null) {
-        str2 = super.getArguments().getString(paramString);
+      if (aG != null) {
+        str2 = aG.getString(paramString);
       }
     }
     return str2;
@@ -127,29 +127,29 @@ public abstract class g
   
   public final WindowManager getWindowManager()
   {
-    if (getActivity() != null) {
-      return getActivity().getWindowManager();
+    if (y() != null) {
+      return y().getWindowManager();
     }
     return null;
   }
   
   public final boolean isFinishing()
   {
-    if (getActivity() == null) {
+    if (y() == null) {
       return true;
     }
-    return getActivity().isFinishing();
+    return y().isFinishing();
   }
   
   public final boolean isShowing()
   {
-    return !klA;
+    return !kLb;
   }
   
   public void onDestroy()
   {
     super.onDestroy();
-    klA = true;
+    kLb = true;
   }
   
   public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
@@ -172,29 +172,29 @@ public abstract class g
   
   public final void overridePendingTransition(int paramInt1, int paramInt2)
   {
-    if (getActivity() != null) {
-      getActivity().overridePendingTransition(paramInt1, paramInt2);
+    if (y() != null) {
+      y().overridePendingTransition(paramInt1, paramInt2);
     }
   }
   
   public final void sendBroadcast(Intent paramIntent)
   {
-    getActivity().sendBroadcast(paramIntent);
+    y().sendBroadcast(paramIntent);
   }
   
   public final void setRequestedOrientation(int paramInt)
   {
-    if (getActivity() != null) {
-      getActivity().setRequestedOrientation(paramInt);
+    if (y() != null) {
+      y().setRequestedOrientation(paramInt);
     }
   }
   
   public void startActivity(Intent paramIntent)
   {
-    FragmentActivity localFragmentActivity = super.getActivity();
+    FragmentActivity localFragmentActivity = super.y();
     if (localFragmentActivity == null)
     {
-      y.getContext().startActivity(paramIntent);
+      aa.getContext().startActivity(paramIntent);
       return;
     }
     localFragmentActivity.a(this, paramIntent, -1);

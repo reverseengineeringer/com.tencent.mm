@@ -11,7 +11,7 @@ final class MMAppMgr$10
 {
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ah.tD().rn().set(65, Integer.valueOf(5));
+    ah.tE().ro().set(65, Integer.valueOf(5));
   }
 }
 

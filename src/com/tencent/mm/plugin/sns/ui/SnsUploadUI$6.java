@@ -2,8 +2,8 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.view.View;
 import android.widget.ImageButton;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.KeyboardLinearLayout.a;
 
 final class SnsUploadUI$6
@@ -11,39 +11,39 @@ final class SnsUploadUI$6
 {
   SnsUploadUI$6(SnsUploadUI paramSnsUploadUI) {}
   
-  public final void in(int paramInt)
+  public final void jv(int paramInt)
   {
     if (paramInt == -3)
     {
-      u.d("!32@/B4Tb64lLpJ9RADwjweyFoah/b/e2Uej", "KEYBOARD_STATE_SHOW");
-      new aa().postDelayed(new Runnable()
+      v.d("MicroMsg.SnsUploadUI", "KEYBOARD_STATE_SHOW");
+      new ac().postDelayed(new Runnable()
       {
         public final void run()
         {
-          SnsUploadSayFooter localSnsUploadSayFooter = SnsUploadUI.b(hlY);
+          SnsUploadSayFooter localSnsUploadSayFooter = SnsUploadUI.b(hCb);
           localSnsUploadSayFooter.setVisibility(0);
-          if (eYL != null) {
-            eYL.setImageResource(2130969785);
+          if (fhf != null) {
+            fhf.setImageResource(2130839400);
           }
-          SnsUploadUI.b(hlY).postInvalidate();
-          SnsUploadUI.c(hlY).postInvalidate();
+          SnsUploadUI.b(hCb).postInvalidate();
+          SnsUploadUI.c(hCb).postInvalidate();
         }
       }, 100L);
       return;
     }
-    new aa().postDelayed(new Runnable()
+    new ac().postDelayed(new Runnable()
     {
       public final void run()
       {
-        SnsUploadSayFooter localSnsUploadSayFooter = SnsUploadUI.b(hlY);
-        if (!localSnsUploadSayFooter.aCR()) {
+        SnsUploadSayFooter localSnsUploadSayFooter = SnsUploadUI.b(hCb);
+        if (!localSnsUploadSayFooter.aFY()) {
           localSnsUploadSayFooter.setVisibility(8);
         }
-        SnsUploadUI.b(hlY).postInvalidate();
-        SnsUploadUI.d(hlY).postInvalidate();
+        SnsUploadUI.b(hCb).postInvalidate();
+        SnsUploadUI.d(hCb).postInvalidate();
       }
     }, 200L);
-    u.d("!32@/B4Tb64lLpJ9RADwjweyFoah/b/e2Uej", "KEYBOARD_STATE_HIDE");
+    v.d("MicroMsg.SnsUploadUI", "KEYBOARD_STATE_HIDE");
   }
 }
 

@@ -10,9 +10,9 @@ final class SecurityImage$1
   
   public final void onClick(View paramView)
   {
-    SecurityImage.a(kzO);
-    if (SecurityImage.b(kzO) != null) {
-      SecurityImage.b(kzO).bby();
+    SecurityImage.a(kYV);
+    if (SecurityImage.b(kYV) != null) {
+      SecurityImage.b(kYV).bgK();
     }
   }
 }

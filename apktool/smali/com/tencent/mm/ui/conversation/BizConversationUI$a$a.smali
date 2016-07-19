@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private aEl:Ljava/lang/String;
+.field private aqp:Ljava/lang/String;
 
 
 # direct methods
@@ -23,36 +23,36 @@
     .locals 0
 
     .prologue
-    .line 628
+    .line 400
     invoke-direct {p0, p1, p3}, Lcom/tencent/mm/ui/conversation/c;-><init>(Landroid/content/Context;Lcom/tencent/mm/ui/i$a;)V
 
-    .line 629
-    iput-object p2, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$a;->aEl:Ljava/lang/String;
+    .line 401
+    iput-object p2, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$a;->aqp:Ljava/lang/String;
 
-    .line 630
+    .line 402
     return-void
 .end method
 
 
 # virtual methods
-.method public final Gk()V
+.method public final GH()V
     .locals 4
 
     .prologue
-    .line 634
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 406
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/s;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ru()Lcom/tencent/mm/storage/s;
 
     move-result-object v0
 
-    sget-object v1, Lcom/tencent/mm/model/i;->bzW:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/model/i;->bsZ:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$a;->cvM:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$a;->crs:Ljava/util/List;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$a;->aEl:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$a;->aqp:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/storage/s;->c(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;)Landroid/database/Cursor;
 
@@ -60,20 +60,20 @@
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$a;->setCursor(Landroid/database/Cursor;)V
 
-    .line 635
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$a;->koC:Lcom/tencent/mm/ui/i$a;
+    .line 407
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$a;->kNG:Lcom/tencent/mm/ui/i$a;
 
     if-eqz v0, :cond_0
 
-    .line 636
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$a;->koC:Lcom/tencent/mm/ui/i$a;
+    .line 408
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$a;->kNG:Lcom/tencent/mm/ui/i$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/i$a;->Gh()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/i$a;->GE()V
 
-    .line 638
+    .line 410
     :cond_0
     invoke-super {p0}, Lcom/tencent/mm/ui/conversation/c;->notifyDataSetChanged()V
 
-    .line 639
+    .line 411
     return-void
 .end method

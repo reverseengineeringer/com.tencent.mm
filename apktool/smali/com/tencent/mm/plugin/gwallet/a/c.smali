@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public exV:I
+.field public eEp:I
 
 .field mMessage:Ljava/lang/String;
 
@@ -18,7 +18,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 78
-    iput p1, p0, Lcom/tencent/mm/plugin/gwallet/a/c;->exV:I
+    iput p1, p0, Lcom/tencent/mm/plugin/gwallet/a/c;->eEp:I
 
     .line 79
     if-eqz p2, :cond_0
@@ -35,7 +35,7 @@
 
     .line 80
     :cond_0
-    invoke-static {p1}, Lcom/tencent/mm/plugin/gwallet/a/b;->hE(I)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/plugin/gwallet/a/b;->iK(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -61,7 +61,7 @@
 
     move-result-object v0
 
-    invoke-static {p1}, Lcom/tencent/mm/plugin/gwallet/a/b;->hE(I)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/plugin/gwallet/a/b;->iK(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -86,12 +86,12 @@
 
 
 # virtual methods
-.method public final isSuccess()Z
+.method public final ep()Z
     .locals 1
 
     .prologue
     .line 95
-    iget v0, p0, Lcom/tencent/mm/plugin/gwallet/a/c;->exV:I
+    iget v0, p0, Lcom/tencent/mm/plugin/gwallet/a/c;->eEp:I
 
     if-nez v0, :cond_0
 

@@ -9,33 +9,33 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.AsyncTask;
 import com.tencent.mm.sdk.platformtools.d;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.g;
 
 final class a$2
-  extends AsyncTask
+  extends AsyncTask<Integer, Integer, Integer>
 {
   private String filePath;
-  private ProgressDialog ltP;
-  private boolean ltQ;
+  private ProgressDialog lUR;
+  private boolean lUS;
   private Uri uri;
   
   a$2(Intent paramIntent1, Activity paramActivity, String paramString, a.a parama, Intent paramIntent2, int paramInt) {}
   
-  private Integer bis()
+  private Integer bop()
   {
     try
     {
       if (uri == null) {
         return null;
       }
-      Bitmap localBitmap = d.o(uri);
-      filePath = a.v(ltS, localBitmap);
+      Bitmap localBitmap = d.k(uri);
+      filePath = a.s(lUT, localBitmap);
       return null;
     }
     catch (Exception localException)
     {
-      u.printErrStackTrace("!44@/B4Tb64lLpL3WgZWB2MnffCdxn0I3bAMmtDdvU5PFPM=", localException, "doInBackground", new Object[0]);
+      v.printErrStackTrace("MicroMsg.AsyncObtainImage", localException, "doInBackground", new Object[0]);
     }
     return null;
   }
@@ -44,11 +44,11 @@ final class a$2
   {
     try
     {
-      uri = eYZ.getData();
-      ltQ = false;
-      Activity localActivity = ltV;
-      ltV.getString(2131430877);
-      ltP = g.a(localActivity, ltV.getString(2131431023), true, new DialogInterface.OnCancelListener()
+      uri = fhw.getData();
+      lUS = false;
+      Activity localActivity = lUW;
+      lUW.getString(2131231028);
+      lUR = g.a(localActivity, lUW.getString(2131230936), true, new DialogInterface.OnCancelListener()
       {
         public final void onCancel(DialogInterface paramAnonymousDialogInterface)
         {
@@ -59,7 +59,7 @@ final class a$2
     }
     catch (Exception localException)
     {
-      u.printErrStackTrace("!44@/B4Tb64lLpL3WgZWB2MnffCdxn0I3bAMmtDdvU5PFPM=", localException, "onPreExecute", new Object[0]);
+      v.printErrStackTrace("MicroMsg.AsyncObtainImage", localException, "onPreExecute", new Object[0]);
     }
   }
 }

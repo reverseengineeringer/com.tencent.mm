@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public cjx:Ljavax/net/ssl/HttpsURLConnection;
+.field public ceO:Ljavax/net/ssl/HttpsURLConnection;
 
 
 # direct methods
@@ -37,7 +37,7 @@
     .line 35
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/network/t;->cjx:Ljavax/net/ssl/HttpsURLConnection;
+    iput-object v0, p0, Lcom/tencent/mm/network/t;->ceO:Ljavax/net/ssl/HttpsURLConnection;
 
     .line 60
     :try_start_0
@@ -47,7 +47,7 @@
 
     check-cast v0, Ljavax/net/ssl/HttpsURLConnection;
 
-    iput-object v0, p0, Lcom/tencent/mm/network/t;->cjx:Ljavax/net/ssl/HttpsURLConnection;
+    iput-object v0, p0, Lcom/tencent/mm/network/t;->ceO:Ljavax/net/ssl/HttpsURLConnection;
     :try_end_0
     .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
@@ -62,7 +62,7 @@
     move-exception v0
 
     .line 63
-    const-string/jumbo v1, "!44@/B4Tb64lLpItFYLAoHJ8bg0Xl+6QlhW5VHbm1Z2uYrw="
+    const-string/jumbo v1, "MicroMsg.MMHttpsUrlConnection"
 
     const-string/jumbo v2, "MalformedURLException : %s"
 
@@ -74,22 +74,22 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 64
-    const-string/jumbo v1, "!44@/B4Tb64lLpItFYLAoHJ8bg0Xl+6QlhW5VHbm1Z2uYrw="
+    const-string/jumbo v1, "MicroMsg.MMHttpsUrlConnection"
 
     const-string/jumbo v2, "exception:%s"
 
     new-array v3, v6, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -98,7 +98,7 @@
     move-exception v0
 
     .line 66
-    const-string/jumbo v1, "!44@/B4Tb64lLpItFYLAoHJ8bg0Xl+6QlhW5VHbm1Z2uYrw="
+    const-string/jumbo v1, "MicroMsg.MMHttpsUrlConnection"
 
     const-string/jumbo v2, "IOException : %s"
 
@@ -110,22 +110,22 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 67
-    const-string/jumbo v1, "!44@/B4Tb64lLpItFYLAoHJ8bg0Xl+6QlhW5VHbm1Z2uYrw="
+    const-string/jumbo v1, "MicroMsg.MMHttpsUrlConnection"
 
     const-string/jumbo v2, "exception:%s"
 
     new-array v3, v6, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -134,7 +134,7 @@
     move-exception v0
 
     .line 69
-    const-string/jumbo v1, "!44@/B4Tb64lLpItFYLAoHJ8bg0Xl+6QlhW5VHbm1Z2uYrw="
+    const-string/jumbo v1, "MicroMsg.MMHttpsUrlConnection"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -154,22 +154,22 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 70
-    const-string/jumbo v1, "!44@/B4Tb64lLpItFYLAoHJ8bg0Xl+6QlhW5VHbm1Z2uYrw="
+    const-string/jumbo v1, "MicroMsg.MMHttpsUrlConnection"
 
     const-string/jumbo v2, "exception:%s"
 
     new-array v3, v6, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method

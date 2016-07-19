@@ -9,14 +9,14 @@ import android.view.View;
 class i$a
   extends ActionProvider
 {
-  final d mz;
+  final d mP;
   
   public i$a(final i parami, d paramd)
   {
     super(mContext);
-    mz = paramd;
+    mP = paramd;
     if (i.a(parami)) {
-      mz.a(new d.b() {});
+      mP.a(new d.b() {});
     }
   }
   
@@ -27,10 +27,10 @@ class i$a
   
   public View onCreateActionView()
   {
-    if (i.a(mA)) {
-      mA.bG();
+    if (i.a(mQ)) {
+      mQ.bG();
     }
-    return mz.onCreateActionView();
+    return mP.onCreateActionView();
   }
   
   public boolean onPerformDefaultAction()
@@ -40,7 +40,7 @@ class i$a
   
   public void onPrepareSubMenu(SubMenu paramSubMenu)
   {
-    mA.a(paramSubMenu);
+    mQ.a(paramSubMenu);
   }
 }
 

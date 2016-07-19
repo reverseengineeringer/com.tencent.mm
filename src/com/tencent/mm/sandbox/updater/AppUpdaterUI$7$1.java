@@ -5,7 +5,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.net.Uri;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
 
 final class AppUpdaterUI$7$1
   implements DialogInterface.OnClickListener
@@ -14,10 +14,10 @@ final class AppUpdaterUI$7$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramDialogInterface = new Intent("android.intent.action.VIEW", Uri.parse(ejTd.jTb).jTp[0]));
+    paramDialogInterface = new Intent("android.intent.action.VIEW", Uri.parse(eksx.ksv).ksJ[0]));
     paramDialogInterface.addFlags(268435456);
-    y.getContext().startActivity(paramDialogInterface);
-    AppUpdaterUI.f(jTd.jTb);
+    aa.getContext().startActivity(paramDialogInterface);
+    AppUpdaterUI.f(ksx.ksv);
   }
 }
 

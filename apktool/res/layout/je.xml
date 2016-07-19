@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/ow" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/hn" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.tencent.mm.pluginsdk.ui.emoji.MMEmojiView android:layout_gravity="center" android:id="@id/ho" android:adjustViewBounds="true" style="@style/EmojiCommonStyle" />
+    </LinearLayout>
+    <TextView android:textColor="@color/ow" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/hr" android:background="@drawable/a8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/hb" android:text="@string/bpo" />
+    <ImageView android:id="@id/aae" android:background="@drawable/dl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/i7" android:layout_marginRight="@dimen/i7" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/emoji_store_v2_designer_bar" />
+    <ListView android:gravity="center" android:id="@android:id/list" android:background="@color/nl" android:focusable="true" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@null" android:transcriptMode="disabled" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="0.0dip" />
+</LinearLayout>

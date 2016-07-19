@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lrt:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+.field final synthetic lRX:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 343
-    iput-object p1, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$13;->lrt:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$13;->lRX:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 348
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$13;->lrt:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$13;->lRX:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->k(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)Ljava/lang/String;
 
@@ -49,7 +49,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$13;->lrt:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$13;->lRX:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->k(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)Ljava/lang/String;
 
@@ -66,7 +66,7 @@
     .line 349
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$13;->lrt:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$13;->lRX:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
 
     const-class v2, Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
@@ -75,7 +75,7 @@
     .line 350
     const-string/jumbo v1, "regsetinfo_ticket"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$13;->lrt:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$13;->lRX:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->l(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)Ljava/lang/String;
 
@@ -86,7 +86,7 @@
     .line 351
     const-string/jumbo v1, "login_type"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$13;->lrt:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$13;->lRX:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->m(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)I
 
@@ -97,7 +97,7 @@
     .line 352
     const-string/jumbo v1, "regsetinfo_NextStyle"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$13;->lrt:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$13;->lRX:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->e(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)I
 
@@ -106,7 +106,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 353
-    iget-object v1, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$13;->lrt:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$13;->lRX:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
 
     invoke-static {v1, v0}, Lcom/tencent/mm/ui/MMWizardActivity;->v(Landroid/content/Context;Landroid/content/Intent;)V
 
@@ -116,7 +116,7 @@
 
     .line 355
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$13;->lrt:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$13;->lRX:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->n(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)V
 

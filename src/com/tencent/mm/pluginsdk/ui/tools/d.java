@@ -6,71 +6,76 @@ import android.graphics.BitmapFactory;
 import com.tencent.mm.a.g;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.platformtools.j;
-import com.tencent.mm.platformtools.j.a;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.platformtools.i;
+import com.tencent.mm.platformtools.i.a;
+import com.tencent.mm.sdk.platformtools.aa;
 
 public final class d
-  implements j
+  implements i
 {
-  private String dOl;
+  private String dPT;
   private int height;
   private String url;
   private int width;
   
   public d(String paramString1, String paramString2, int paramInt1, int paramInt2)
   {
-    dOl = paramString1;
+    dPT = paramString1;
     url = paramString2;
     width = paramInt1;
     height = paramInt2;
   }
   
-  public final String FF()
+  public final String Ga()
   {
-    return ah.tD().rx() + "/" + g.m(url.getBytes());
+    return ah.tE().rz() + "/" + g.j(url.getBytes());
   }
   
-  public final String FG()
+  public final String Gb()
   {
     return url;
   }
   
-  public final String FH()
+  public final String Gc()
   {
-    return dOl;
+    return dPT;
   }
   
-  public final boolean FI()
+  public final String Gd()
+  {
+    return dPT;
+  }
+  
+  public final boolean Ge()
   {
     return true;
   }
   
-  public final boolean FJ()
+  public final boolean Gf()
   {
     return false;
   }
   
-  public final Bitmap FK()
+  public final Bitmap Gg()
   {
-    return BitmapFactory.decodeResource(y.getContext().getResources(), 2130970518);
+    return BitmapFactory.decodeResource(aa.getContext().getResources(), 2130838925);
   }
   
-  public final void FL() {}
+  public final void Gh() {}
   
   /* Error */
-  public final Bitmap a(Bitmap paramBitmap, j.a parama)
+  public final Bitmap a(Bitmap paramBitmap, i.a parama)
   {
     // Byte code:
     //   0: aload_1
     //   1: astore_3
-    //   2: getstatic 102	com/tencent/mm/platformtools/j$a:clV	Lcom/tencent/mm/platformtools/j$a;
+    //   2: getstatic 103	com/tencent/mm/platformtools/i$a:cgY	Lcom/tencent/mm/platformtools/i$a;
     //   5: aload_2
     //   6: if_acmpne +163 -> 169
     //   9: aload_1
     //   10: astore_3
-    //   11: ldc 104
-    //   13: ldc 106
+    //   11: ldc 105
+    //   13: ldc 107
     //   15: iconst_1
     //   16: anewarray 4	java/lang/Object
     //   19: dup
@@ -78,7 +83,7 @@ public final class d
     //   21: aload_0
     //   22: getfield 21	com/tencent/mm/pluginsdk/ui/tools/d:url	Ljava/lang/String;
     //   25: aastore
-    //   26: invokestatic 112	com/tencent/mm/sdk/platformtools/u:v	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   26: invokestatic 113	com/tencent/mm/sdk/platformtools/v:v	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   29: aload_1
     //   30: astore_2
     //   31: aload_1
@@ -100,40 +105,40 @@ public final class d
     //   55: getfield 23	com/tencent/mm/pluginsdk/ui/tools/d:width	I
     //   58: aload_0
     //   59: getfield 25	com/tencent/mm/pluginsdk/ui/tools/d:height	I
-    //   62: invokestatic 118	com/tencent/mm/sdk/platformtools/d:c	(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
+    //   62: invokestatic 119	com/tencent/mm/sdk/platformtools/d:c	(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
     //   65: astore_2
     //   66: aload_2
     //   67: astore_3
-    //   68: new 120	java/io/File
+    //   68: new 121	java/io/File
     //   71: dup
     //   72: aload_0
-    //   73: invokevirtual 122	com/tencent/mm/pluginsdk/ui/tools/d:FF	()Ljava/lang/String;
-    //   76: invokespecial 125	java/io/File:<init>	(Ljava/lang/String;)V
+    //   73: invokevirtual 123	com/tencent/mm/pluginsdk/ui/tools/d:Ga	()Ljava/lang/String;
+    //   76: invokespecial 126	java/io/File:<init>	(Ljava/lang/String;)V
     //   79: astore_1
     //   80: aload_2
     //   81: astore_3
     //   82: aload_1
-    //   83: invokevirtual 128	java/io/File:createNewFile	()Z
+    //   83: invokevirtual 129	java/io/File:createNewFile	()Z
     //   86: pop
     //   87: aconst_null
     //   88: astore 4
-    //   90: new 130	java/io/FileOutputStream
+    //   90: new 131	java/io/FileOutputStream
     //   93: dup
     //   94: aload_1
-    //   95: invokespecial 133	java/io/FileOutputStream:<init>	(Ljava/io/File;)V
+    //   95: invokespecial 134	java/io/FileOutputStream:<init>	(Ljava/io/File;)V
     //   98: astore_1
     //   99: aload_2
-    //   100: getstatic 139	android/graphics/Bitmap$CompressFormat:PNG	Landroid/graphics/Bitmap$CompressFormat;
+    //   100: getstatic 140	android/graphics/Bitmap$CompressFormat:PNG	Landroid/graphics/Bitmap$CompressFormat;
     //   103: bipush 100
     //   105: aload_1
-    //   106: invokevirtual 145	android/graphics/Bitmap:compress	(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+    //   106: invokevirtual 146	android/graphics/Bitmap:compress	(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
     //   109: pop
     //   110: aload_1
-    //   111: invokevirtual 148	java/io/FileOutputStream:flush	()V
+    //   111: invokevirtual 149	java/io/FileOutputStream:flush	()V
     //   114: aload_2
     //   115: astore_3
     //   116: aload_1
-    //   117: invokevirtual 151	java/io/FileOutputStream:close	()V
+    //   117: invokevirtual 152	java/io/FileOutputStream:close	()V
     //   120: aload_2
     //   121: areturn
     //   122: aload_2
@@ -143,7 +148,7 @@ public final class d
     //   128: aload_2
     //   129: astore_3
     //   130: aload_1
-    //   131: invokevirtual 151	java/io/FileOutputStream:close	()V
+    //   131: invokevirtual 152	java/io/FileOutputStream:close	()V
     //   134: aload_2
     //   135: areturn
     //   136: aload 4
@@ -151,7 +156,7 @@ public final class d
     //   141: aload_2
     //   142: astore_3
     //   143: aload 4
-    //   145: invokevirtual 151	java/io/FileOutputStream:close	()V
+    //   145: invokevirtual 152	java/io/FileOutputStream:close	()V
     //   148: aload_2
     //   149: astore_3
     //   150: aload_1
@@ -181,7 +186,7 @@ public final class d
     //   start	length	slot	name	signature
     //   0	184	0	this	d
     //   0	184	1	paramBitmap	Bitmap
-    //   0	184	2	parama	j.a
+    //   0	184	2	parama	i.a
     //   1	159	3	localObject1	Object
     //   165	14	3	localFileNotFoundException	java.io.FileNotFoundException
     //   88	56	4	localObject2	Object
@@ -205,14 +210,9 @@ public final class d
     //   90	99	180	finally
   }
   
-  public final void a(j.a parama, String paramString) {}
+  public final void a(i.a parama, String paramString) {}
   
-  public final String getCacheKey()
-  {
-    return dOl;
-  }
-  
-  public final void v(String paramString, boolean paramBoolean) {}
+  public final void z(String paramString, boolean paramBoolean) {}
 }
 
 /* Location:

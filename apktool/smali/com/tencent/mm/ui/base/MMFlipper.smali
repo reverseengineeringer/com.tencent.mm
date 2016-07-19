@@ -14,39 +14,39 @@
 
 
 # instance fields
-.field private drs:I
+.field private drG:I
 
-.field private eY:I
+.field private eqo:Landroid/view/animation/Interpolator;
 
-.field private elA:Landroid/view/animation/Interpolator;
+.field private fv:I
 
-.field private fK:Landroid/widget/Scroller;
+.field private gA:Landroid/view/VelocityTracker;
 
-.field private gb:F
+.field private gg:Landroid/widget/Scroller;
 
-.field private gc:F
+.field private gx:F
 
-.field private ge:Landroid/view/VelocityTracker;
+.field private gy:F
 
-.field protected kCu:I
+.field protected lbA:I
 
-.field protected kCv:I
+.field protected lbB:I
 
-.field private kCx:Z
+.field public lbD:Z
 
-.field protected kDD:I
+.field protected lcI:I
 
-.field private kDE:I
+.field private lcJ:I
 
-.field private kDF:Z
+.field private lcK:Z
 
-.field private kDG:Lcom/tencent/mm/ui/base/MMFlipper$b;
+.field public lcL:Lcom/tencent/mm/ui/base/MMFlipper$b;
 
-.field private kDH:Lcom/tencent/mm/ui/base/MMFlipper$a;
+.field public lcM:Lcom/tencent/mm/ui/base/MMFlipper$a;
 
-.field kDI:I
+.field lcN:I
 
-.field kDJ:I
+.field lcO:I
 
 
 # direct methods
@@ -78,23 +78,23 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 35
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDE:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcJ:I
 
     .line 42
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->drs:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->drG:I
 
     .line 46
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDF:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcK:Z
 
     .line 51
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCx:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbD:Z
 
     .line 122
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDI:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcN:I
 
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDJ:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcO:I
 
     .line 79
     invoke-direct {p0, p1}, Lcom/tencent/mm/ui/base/MMFlipper;->init(Landroid/content/Context;)V
@@ -108,32 +108,32 @@
 
     .prologue
     .line 88
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMFlipper;->getInterpolator()Landroid/view/animation/Interpolator;
+    new-instance v0, Lcom/tencent/mm/ui/base/MMFlipper$c;
 
-    move-result-object v0
+    invoke-direct {v0}, Lcom/tencent/mm/ui/base/MMFlipper$c;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->elA:Landroid/view/animation/Interpolator;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->eqo:Landroid/view/animation/Interpolator;
 
     .line 89
     new-instance v0, Landroid/widget/Scroller;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->elA:Landroid/view/animation/Interpolator;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->eqo:Landroid/view/animation/Interpolator;
 
     invoke-direct {v0, p1, v1}, Landroid/widget/Scroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->fK:Landroid/widget/Scroller;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gg:Landroid/widget/Scroller;
 
     .line 90
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCv:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbB:I
 
     .line 91
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDE:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcJ:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCu:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbA:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDD:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcI:I
 
     .line 92
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMFlipper;->getContext()Landroid/content/Context;
@@ -148,13 +148,13 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->eY:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->fv:I
 
     .line 93
     return-void
 .end method
 
-.method private qw(I)V
+.method private so(I)V
     .locals 8
 
     .prologue
@@ -199,7 +199,7 @@
 
     sub-int v3, v0, v1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->fK:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gg:Landroid/widget/Scroller;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMFlipper;->getScrollX()I
 
@@ -221,7 +221,7 @@
 
     float-to-int v5, v5
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/aw/a;->B(Landroid/content/Context;I)I
+    invoke-static {v4, v5}, Lcom/tencent/mm/az/a;->F(Landroid/content/Context;I)I
 
     move-result v5
 
@@ -229,30 +229,30 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/Scroller;->startScroll(IIIII)V
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCu:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbA:I
 
     if-eq v0, v6, :cond_0
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDF:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcK:Z
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDD:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcI:I
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCu:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbA:I
 
     sub-int v1, v6, v1
 
     add-int/2addr v0, v1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDD:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcI:I
 
     :cond_0
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCu:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbA:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCv:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbB:I
 
-    iput v6, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCu:I
+    iput v6, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbA:I
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMFlipper;->invalidate()V
 
@@ -263,17 +263,48 @@
 
 
 # virtual methods
+.method public final bhN()I
+    .locals 5
+
+    .prologue
+    .line 220
+    const-string/jumbo v0, "MicroMsg.MMFlipper"
+
+    const-string/jumbo v1, "cur screen is %d"
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    iget v4, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbA:I
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 221
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbA:I
+
+    return v0
+.end method
+
 .method public computeScroll()V
     .locals 2
 
     .prologue
     .line 230
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->fK:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gg:Landroid/widget/Scroller;
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->getCurrX()I
 
     .line 231
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->fK:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gg:Landroid/widget/Scroller;
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->computeScrollOffset()Z
 
@@ -282,13 +313,13 @@
     if-eqz v0, :cond_1
 
     .line 232
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->fK:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gg:Landroid/widget/Scroller;
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->getCurrX()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->fK:Landroid/widget/Scroller;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gg:Landroid/widget/Scroller;
 
     invoke-virtual {v1}, Landroid/widget/Scroller;->getCurrY()I
 
@@ -306,71 +337,28 @@
 
     .line 234
     :cond_1
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDF:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcK:Z
 
     if-eqz v0, :cond_0
 
     .line 235
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDF:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcK:Z
 
     .line 236
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDG:Lcom/tencent/mm/ui/base/MMFlipper$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcL:Lcom/tencent/mm/ui/base/MMFlipper$b;
 
     if-eqz v0, :cond_0
 
     .line 237
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDG:Lcom/tencent/mm/ui/base/MMFlipper$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcL:Lcom/tencent/mm/ui/base/MMFlipper$b;
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDD:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcI:I
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/MMFlipper$b;->kk(I)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/MMFlipper$b;->lA(I)V
 
     goto :goto_0
-.end method
-
-.method public getCurScreen()I
-    .locals 5
-
-    .prologue
-    .line 220
-    const-string/jumbo v0, "!32@/B4Tb64lLpKU689CppO1CHt/InoddcC3"
-
-    const-string/jumbo v1, "cur screen is %d"
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    iget v4, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCu:I
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 221
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCu:I
-
-    return v0
-.end method
-
-.method protected getInterpolator()Landroid/view/animation/Interpolator;
-    .locals 1
-
-    .prologue
-    .line 84
-    new-instance v0, Lcom/tencent/mm/ui/base/MMFlipper$c;
-
-    invoke-direct {v0}, Lcom/tencent/mm/ui/base/MMFlipper$c;-><init>()V
-
-    return-object v0
 .end method
 
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
@@ -382,7 +370,7 @@
     const/4 v2, 0x1
 
     .line 310
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCx:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbD:Z
 
     if-nez v0, :cond_1
 
@@ -422,7 +410,7 @@
 
     if-ne v0, v3, :cond_3
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/MMFlipper;->drs:I
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMFlipper;->drG:I
 
     if-nez v3, :cond_0
 
@@ -442,7 +430,7 @@
 
     .line 349
     :goto_1
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->drs:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->drG:I
 
     if-nez v0, :cond_0
 
@@ -452,7 +440,7 @@
 
     .line 327
     :pswitch_0
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gb:F
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gx:F
 
     sub-float/2addr v0, v3
 
@@ -463,7 +451,7 @@
     float-to-int v0, v0
 
     .line 328
-    iget v3, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gc:F
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gy:F
 
     sub-float/2addr v3, v4
 
@@ -474,7 +462,7 @@
     float-to-int v3, v3
 
     .line 330
-    const-string/jumbo v4, "!32@/B4Tb64lLpKU689CppO1CHt/InoddcC3"
+    const-string/jumbo v4, "MicroMsg.MMFlipper"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -500,14 +488,14 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 332
-    iget v4, p0, Lcom/tencent/mm/ui/base/MMFlipper;->eY:I
+    iget v4, p0, Lcom/tencent/mm/ui/base/MMFlipper;->fv:I
 
     if-le v0, v4, :cond_4
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->eY:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->fv:I
 
     if-ge v3, v0, :cond_4
 
@@ -518,7 +506,7 @@
     if-eqz v0, :cond_5
 
     .line 334
-    iput v2, p0, Lcom/tencent/mm/ui/base/MMFlipper;->drs:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMFlipper;->drG:I
 
     goto :goto_1
 
@@ -530,19 +518,19 @@
 
     .line 336
     :cond_5
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->drs:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->drG:I
 
     goto :goto_1
 
     .line 341
     :pswitch_1
-    iput v3, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gb:F
+    iput v3, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gx:F
 
     .line 342
-    iput v4, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gc:F
+    iput v4, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gy:F
 
     .line 343
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->fK:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gg:Landroid/widget/Scroller;
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->isFinished()Z
 
@@ -553,7 +541,7 @@
     move v0, v1
 
     :goto_3
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->drs:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->drG:I
 
     goto :goto_1
 
@@ -564,7 +552,7 @@
 
     .line 348
     :pswitch_2
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->drs:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->drG:I
 
     goto :goto_1
 
@@ -581,169 +569,171 @@
 .end method
 
 .method protected onLayout(ZIIII)V
-    .locals 12
+    .locals 13
 
     .prologue
     .line 101
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gq()J
 
-    move-result-wide v3
+    move-result-wide v4
 
     .line 102
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     .line 103
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMFlipper;->getChildCount()I
 
-    move-result v5
+    move-result v6
 
     .line 105
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    move v11, v1
+    move v12, v2
 
-    move v1, v2
+    move v2, v3
 
-    move v2, v11
+    move v3, v12
 
     :goto_0
-    if-ge v2, v5, :cond_1
+    if-ge v3, v6, :cond_1
 
     .line 106
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/base/MMFlipper;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/tencent/mm/ui/base/MMFlipper;->getChildAt(I)Landroid/view/View;
 
-    move-result-object v6
+    move-result-object v7
 
     .line 107
-    invoke-virtual {v6}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {v7}, Landroid/view/View;->getVisibility()I
 
-    move-result v7
+    move-result v8
 
-    const/16 v8, 0x8
+    const/16 v9, 0x8
 
-    if-eq v7, v8, :cond_0
+    if-eq v8, v9, :cond_0
 
     .line 108
-    invoke-virtual {v6}, Landroid/view/View;->getMeasuredWidth()I
+    invoke-virtual {v7}, Landroid/view/View;->getMeasuredWidth()I
 
-    move-result v7
+    move-result v8
 
     .line 109
-    const-string/jumbo v8, "!32@/B4Tb64lLpKU689CppO1CHt/InoddcC3"
+    const-string/jumbo v9, "MicroMsg.MMFlipper"
 
-    new-instance v9, Ljava/lang/StringBuilder;
+    new-instance v10, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v10, "flipper onLayout childWidth:"
+    const-string/jumbo v11, "flipper onLayout childWidth:"
 
-    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v10, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v9
+    move-result-object v10
 
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v9
+    move-result-object v10
 
-    invoke-static {v8, v9}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v10}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 110
-    const/4 v8, 0x0
+    const/4 v9, 0x0
 
-    add-int v9, v1, v7
+    add-int v10, v2, v8
 
-    invoke-virtual {v6}, Landroid/view/View;->getMeasuredHeight()I
+    invoke-virtual {v7}, Landroid/view/View;->getMeasuredHeight()I
 
-    move-result v10
+    move-result v11
 
-    invoke-virtual {v6, v1, v8, v9, v10}, Landroid/view/View;->layout(IIII)V
+    invoke-virtual {v7, v2, v9, v10, v11}, Landroid/view/View;->layout(IIII)V
 
     .line 111
-    add-int/2addr v1, v7
+    add-int/2addr v2, v8
 
     .line 105
     :cond_0
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     .line 114
     :cond_1
-    const-string/jumbo v1, "!32@/B4Tb64lLpKU689CppO1CHt/InoddcC3"
+    const-string/jumbo v2, "MicroMsg.MMFlipper"
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v5, "use "
+    const-string/jumbo v6, "use "
 
-    invoke-direct {v2, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/ay;->ao(J)J
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/be;->av(J)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    const-string/jumbo v3, " ms, flipper onLayout changed:"
+    const-string/jumbo v4, " ms, flipper onLayout changed:"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    const-string/jumbo v3, " Left,Top,Right,Bottom:"
+    const-string/jumbo v4, " Left,Top,Right,Bottom:"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    const-string/jumbo v3, ","
+    const-string/jumbo v4, ","
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move/from16 v0, p3
 
-    move-result-object v2
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string/jumbo v3, ","
+    move-result-object v3
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string/jumbo v4, ","
 
-    move-result-object v2
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     move/from16 v0, p4
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    const-string/jumbo v3, ","
+    const-string/jumbo v4, ","
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
     move/from16 v0, p5
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 115
     return-void
@@ -756,7 +746,7 @@
     const/4 v1, 0x0
 
     .line 126
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gq()J
 
     move-result-wide v2
 
@@ -774,21 +764,21 @@
     move-result v0
 
     .line 137
-    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDH:Lcom/tencent/mm/ui/base/MMFlipper$a;
+    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcM:Lcom/tencent/mm/ui/base/MMFlipper$a;
 
     if-eqz v5, :cond_0
 
     .line 138
-    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDH:Lcom/tencent/mm/ui/base/MMFlipper$a;
+    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcM:Lcom/tencent/mm/ui/base/MMFlipper$a;
 
-    invoke-interface {v5, v4, v0}, Lcom/tencent/mm/ui/base/MMFlipper$a;->aT(II)V
+    invoke-interface {v5, v4, v0}, Lcom/tencent/mm/ui/base/MMFlipper$a;->bb(II)V
 
     .line 140
     :cond_0
-    iput v4, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDI:I
+    iput v4, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcN:I
 
     .line 141
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDJ:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcO:I
 
     .line 142
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMFlipper;->getChildCount()I
@@ -815,14 +805,14 @@
 
     .line 146
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCu:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbA:I
 
     mul-int/2addr v0, v4
 
     invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/ui/base/MMFlipper;->scrollTo(II)V
 
     .line 147
-    const-string/jumbo v0, "!32@/B4Tb64lLpKU689CppO1CHt/InoddcC3"
+    const-string/jumbo v0, "MicroMsg.MMFlipper"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -864,7 +854,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->ao(J)J
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/be;->av(J)J
 
     move-result-wide v2
 
@@ -876,7 +866,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 148
     return-void
@@ -910,7 +900,7 @@
 
     .line 248
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->ge:Landroid/view/VelocityTracker;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gA:Landroid/view/VelocityTracker;
 
     if-nez v1, :cond_1
 
@@ -919,11 +909,11 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->ge:Landroid/view/VelocityTracker;
+    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gA:Landroid/view/VelocityTracker;
 
     .line 251
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->ge:Landroid/view/VelocityTracker;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gA:Landroid/view/VelocityTracker;
 
     invoke-virtual {v1, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
@@ -947,7 +937,7 @@
 
     .line 260
     :pswitch_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->fK:Landroid/widget/Scroller;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gg:Landroid/widget/Scroller;
 
     invoke-virtual {v1}, Landroid/widget/Scroller;->isFinished()Z
 
@@ -956,26 +946,26 @@
     if-nez v1, :cond_2
 
     .line 261
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->fK:Landroid/widget/Scroller;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gg:Landroid/widget/Scroller;
 
     invoke-virtual {v1}, Landroid/widget/Scroller;->abortAnimation()V
 
     .line 263
     :cond_2
-    iput v2, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gb:F
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gx:F
 
     goto :goto_0
 
     .line 268
     :pswitch_1
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gb:F
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gx:F
 
     sub-float/2addr v1, v2
 
     float-to-int v1, v1
 
     .line 269
-    iput v2, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gb:F
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gx:F
 
     .line 271
     invoke-virtual {p0, v1, v5}, Lcom/tencent/mm/ui/base/MMFlipper;->scrollBy(II)V
@@ -984,7 +974,7 @@
 
     .line 277
     :pswitch_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->ge:Landroid/view/VelocityTracker;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gA:Landroid/view/VelocityTracker;
 
     .line 278
     const/16 v2, 0x3e8
@@ -1003,42 +993,42 @@
 
     if-le v1, v2, :cond_4
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCu:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbA:I
 
     if-lez v2, :cond_4
 
     .line 283
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCu:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbA:I
 
     add-int/lit8 v1, v1, -0x1
 
-    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/base/MMFlipper;->qw(I)V
+    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/base/MMFlipper;->so(I)V
 
     .line 290
     :goto_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->ge:Landroid/view/VelocityTracker;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gA:Landroid/view/VelocityTracker;
 
     if-eqz v1, :cond_3
 
     .line 291
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->ge:Landroid/view/VelocityTracker;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gA:Landroid/view/VelocityTracker;
 
     invoke-virtual {v1}, Landroid/view/VelocityTracker;->recycle()V
 
     .line 292
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->ge:Landroid/view/VelocityTracker;
+    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gA:Landroid/view/VelocityTracker;
 
     .line 295
     :cond_3
-    iput v5, p0, Lcom/tencent/mm/ui/base/MMFlipper;->drs:I
+    iput v5, p0, Lcom/tencent/mm/ui/base/MMFlipper;->drG:I
 
     .line 296
-    iput v4, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gb:F
+    iput v4, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gx:F
 
     .line 297
-    iput v4, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gc:F
+    iput v4, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gy:F
 
     goto :goto_0
 
@@ -1048,7 +1038,7 @@
 
     if-ge v1, v2, :cond_5
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCu:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbA:I
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMFlipper;->getChildCount()I
 
@@ -1059,11 +1049,11 @@
     if-ge v1, v2, :cond_5
 
     .line 286
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCu:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbA:I
 
     add-int/lit8 v1, v1, 0x1
 
-    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/base/MMFlipper;->qw(I)V
+    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/base/MMFlipper;->so(I)V
 
     goto :goto_1
 
@@ -1083,7 +1073,7 @@
 
     div-int v1, v2, v1
 
-    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/base/MMFlipper;->qw(I)V
+    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/base/MMFlipper;->so(I)V
 
     goto :goto_1
 
@@ -1099,111 +1089,18 @@
     .end packed-switch
 .end method
 
-.method public final qE(I)V
-    .locals 3
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 189
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMFlipper;->getChildCount()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    invoke-static {v2, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    .line 191
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDF:Z
-
-    .line 192
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->fK:Landroid/widget/Scroller;
-
-    invoke-virtual {v1}, Landroid/widget/Scroller;->isFinished()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 193
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->fK:Landroid/widget/Scroller;
-
-    invoke-virtual {v1}, Landroid/widget/Scroller;->abortAnimation()V
-
-    .line 195
-    :cond_0
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCu:I
-
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCv:I
-
-    .line 196
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCu:I
-
-    .line 197
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMFlipper;->getWidth()I
-
-    move-result v1
-
-    mul-int/2addr v0, v1
-
-    invoke-virtual {p0, v0, v2}, Lcom/tencent/mm/ui/base/MMFlipper;->scrollTo(II)V
-
-    .line 198
-    return-void
-.end method
-
-.method public final qF(I)V
+.method public final sA(I)V
     .locals 0
 
     .prologue
     .line 201
-    iput p1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDD:I
+    iput p1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcI:I
 
     .line 202
     return-void
 .end method
 
-.method public setOnMeasureListener(Lcom/tencent/mm/ui/base/MMFlipper$a;)V
-    .locals 0
-
-    .prologue
-    .line 157
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDH:Lcom/tencent/mm/ui/base/MMFlipper$a;
-
-    .line 158
-    return-void
-.end method
-
-.method public setOnScreenChangedListener(Lcom/tencent/mm/ui/base/MMFlipper$b;)V
-    .locals 0
-
-    .prologue
-    .line 161
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDG:Lcom/tencent/mm/ui/base/MMFlipper$b;
-
-    .line 162
-    return-void
-.end method
-
-.method public setScrollEnable(Z)V
-    .locals 0
-
-    .prologue
-    .line 363
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCx:Z
-
-    .line 364
-    return-void
-.end method
-
-.method public setToScreen(I)V
+.method public final sB(I)V
     .locals 3
 
     .prologue
@@ -1225,10 +1122,10 @@
     move-result v0
 
     .line 207
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDF:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcK:Z
 
     .line 208
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->fK:Landroid/widget/Scroller;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gg:Landroid/widget/Scroller;
 
     invoke-virtual {v1}, Landroid/widget/Scroller;->isFinished()Z
 
@@ -1237,31 +1134,31 @@
     if-nez v1, :cond_0
 
     .line 209
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->fK:Landroid/widget/Scroller;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gg:Landroid/widget/Scroller;
 
     invoke-virtual {v1}, Landroid/widget/Scroller;->abortAnimation()V
 
     .line 211
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDG:Lcom/tencent/mm/ui/base/MMFlipper$b;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcL:Lcom/tencent/mm/ui/base/MMFlipper$b;
 
     if-eqz v1, :cond_1
 
     .line 212
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDG:Lcom/tencent/mm/ui/base/MMFlipper$b;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcL:Lcom/tencent/mm/ui/base/MMFlipper$b;
 
-    invoke-interface {v1, v0}, Lcom/tencent/mm/ui/base/MMFlipper$b;->kk(I)V
+    invoke-interface {v1, v0}, Lcom/tencent/mm/ui/base/MMFlipper$b;->lA(I)V
 
     .line 214
     :cond_1
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCu:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbA:I
 
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCv:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbB:I
 
     .line 215
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kCu:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbA:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->kDD:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcI:I
 
     .line 216
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMFlipper;->getWidth()I
@@ -1273,5 +1170,65 @@
     invoke-virtual {p0, v0, v2}, Lcom/tencent/mm/ui/base/MMFlipper;->scrollTo(II)V
 
     .line 217
+    return-void
+.end method
+
+.method public final sz(I)V
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 189
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMFlipper;->getChildCount()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    invoke-static {v2, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    .line 191
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lcK:Z
+
+    .line 192
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gg:Landroid/widget/Scroller;
+
+    invoke-virtual {v1}, Landroid/widget/Scroller;->isFinished()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 193
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->gg:Landroid/widget/Scroller;
+
+    invoke-virtual {v1}, Landroid/widget/Scroller;->abortAnimation()V
+
+    .line 195
+    :cond_0
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbA:I
+
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbB:I
+
+    .line 196
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper;->lbA:I
+
+    .line 197
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMFlipper;->getWidth()I
+
+    move-result v1
+
+    mul-int/2addr v0, v1
+
+    invoke-virtual {p0, v0, v2}, Lcom/tencent/mm/ui/base/MMFlipper;->scrollTo(II)V
+
+    .line 198
     return-void
 .end method

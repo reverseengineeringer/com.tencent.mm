@@ -3,812 +3,533 @@
 .source "SourceFile"
 
 
-# static fields
-.field private static final cdM:Ljava/lang/String;
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/modelstat/c$a;
+    }
+.end annotation
 
 
 # instance fields
-.field aou:I
+.field private final asd:Ljava/lang/String;
 
-.field public cdA:I
-
-.field public cdB:I
-
-.field public cdC:I
-
-.field public cdD:I
-
-.field public cdE:I
-
-.field public cdF:I
-
-.field public cdG:I
-
-.field public cdH:I
-
-.field public cdI:I
-
-.field public cdJ:I
-
-.field public cdK:I
-
-.field public cdL:I
-
-.field public cdj:I
-
-.field public cdk:I
-
-.field public cdl:I
-
-.field public cdm:I
-
-.field public cdn:I
-
-.field public cdo:I
-
-.field public cdp:I
-
-.field public cdq:I
-
-.field public cdr:I
-
-.field public cds:I
-
-.field public cdt:I
-
-.field public cdu:I
-
-.field public cdv:I
-
-.field public cdw:I
-
-.field public cdx:I
-
-.field public cdy:I
-
-.field public cdz:I
-
-.field public id:I
+.field private bYd:Lcom/tencent/mm/modelstat/c$a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
     .prologue
-    .line 551
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    .line 552
-    const-string/jumbo v1, "NetStatInfo:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 553
-    const-string/jumbo v1, "[mobile in=%dB/%dB/%dB, out=%dB/%dB/%dB]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 554
-    const-string/jumbo v1, "[wifi in=%dB/%dB/%dB, out=%dB/%dB/%dB]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 555
-    const-string/jumbo v1, "[text in=%d/%dB, out=%d/%dB]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 556
-    const-string/jumbo v1, "[image in=%d/%dB, out=%d/%dB]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 557
-    const-string/jumbo v1, "[voice in=%d/%dB, out=%d/%dB]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 558
-    const-string/jumbo v1, "[video in=%d/%dB, out=%d/%dB]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 559
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/tencent/mm/modelstat/c;->cdM:Ljava/lang/String;
-
-    .line 560
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 2
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 142
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 107
-    const/4 v0, -0x2
+    .line 21
+    const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->aou:I
+    iput-object v0, p0, Lcom/tencent/mm/modelstat/c;->bYd:Lcom/tencent/mm/modelstat/c$a;
 
-    .line 109
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->id:I
+    .line 25
+    iput-object p1, p0, Lcom/tencent/mm/modelstat/c;->asd:Ljava/lang/String;
 
-    .line 110
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdj:I
-
-    .line 111
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdk:I
-
-    .line 112
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdl:I
-
-    .line 113
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdm:I
-
-    .line 114
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdn:I
-
-    .line 115
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdo:I
-
-    .line 116
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdp:I
-
-    .line 117
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdq:I
-
-    .line 118
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdr:I
-
-    .line 119
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cds:I
-
-    .line 120
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdt:I
-
-    .line 121
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdu:I
-
-    .line 122
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdv:I
-
-    .line 124
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdw:I
-
-    .line 125
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdx:I
-
-    .line 126
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdy:I
-
-    .line 127
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdz:I
-
-    .line 128
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdA:I
-
-    .line 129
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdB:I
-
-    .line 130
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdC:I
-
-    .line 131
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdD:I
-
-    .line 132
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdE:I
-
-    .line 133
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdF:I
-
-    .line 134
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdG:I
-
-    .line 135
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdH:I
-
-    .line 137
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdI:I
-
-    .line 138
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdJ:I
-
-    .line 139
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdK:I
-
-    .line 140
-    iput v1, p0, Lcom/tencent/mm/modelstat/c;->cdL:I
-
-    .line 144
+    .line 26
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Landroid/database/Cursor;)V
-    .locals 1
+.method public final DB()Lcom/tencent/mm/modelstat/c$a;
+    .locals 14
 
     .prologue
-    .line 306
-    const/4 v0, 0x0
+    const/4 v13, 0x3
 
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
+    const/4 v12, 0x2
 
-    move-result v0
+    const/4 v1, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->id:I
+    const/4 v11, 0x0
 
-    .line 307
-    const/4 v0, 0x1
+    const/4 v10, 0x1
 
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
+    .line 29
+    iget-object v0, p0, Lcom/tencent/mm/modelstat/c;->bYd:Lcom/tencent/mm/modelstat/c$a;
 
-    move-result v0
+    if-eqz v0, :cond_0
 
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdj:I
+    .line 30
+    iget-object v0, p0, Lcom/tencent/mm/modelstat/c;->bYd:Lcom/tencent/mm/modelstat/c$a;
 
-    .line 309
-    const/4 v0, 0x2
+    .line 46
+    :goto_0
+    return-object v0
 
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
+    .line 33
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result v0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdk:I
+    iget-object v2, p0, Lcom/tencent/mm/modelstat/c;->asd:Ljava/lang/String;
 
-    .line 310
-    const/4 v0, 0x3
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdl:I
-
-    .line 311
-    const/4 v0, 0x4
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdm:I
-
-    .line 312
-    const/4 v0, 0x5
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdn:I
-
-    .line 313
-    const/4 v0, 0x6
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdo:I
-
-    .line 314
-    const/4 v0, 0x7
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdp:I
-
-    .line 315
-    const/16 v0, 0x8
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdq:I
-
-    .line 316
-    const/16 v0, 0x9
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdr:I
-
-    .line 317
-    const/16 v0, 0xa
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cds:I
-
-    .line 318
-    const/16 v0, 0xb
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdt:I
-
-    .line 319
-    const/16 v0, 0xc
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdu:I
-
-    .line 320
-    const/16 v0, 0xd
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdv:I
-
-    .line 322
-    const/16 v0, 0xe
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdw:I
-
-    .line 323
-    const/16 v0, 0xf
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdx:I
-
-    .line 324
-    const/16 v0, 0x10
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdy:I
-
-    .line 325
-    const/16 v0, 0x11
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdz:I
-
-    .line 326
-    const/16 v0, 0x12
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdA:I
-
-    .line 327
-    const/16 v0, 0x13
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdB:I
-
-    .line 328
-    const/16 v0, 0x14
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdC:I
-
-    .line 329
-    const/16 v0, 0x15
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdD:I
-
-    .line 330
-    const/16 v0, 0x16
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdE:I
-
-    .line 331
-    const/16 v0, 0x17
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdF:I
-
-    .line 332
-    const/16 v0, 0x18
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdG:I
-
-    .line 333
-    const/16 v0, 0x19
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdH:I
-
-    .line 335
-    const/16 v0, 0x1a
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdI:I
-
-    .line 336
-    const/16 v0, 0x1b
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdJ:I
-
-    .line 337
-    const/16 v0, 0x1c
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdK:I
-
-    .line 338
-    const/16 v0, 0x1d
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/modelstat/c;->cdL:I
-
-    .line 339
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    .prologue
-    .line 564
-    sget-object v0, Lcom/tencent/mm/modelstat/c;->cdM:Ljava/lang/String;
-
-    const/16 v1, 0x1c
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cds:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/4 v2, 0x1
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdI:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/4 v2, 0x2
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdu:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/4 v2, 0x3
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdE:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/4 v2, 0x4
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdK:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/4 v2, 0x5
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdG:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/4 v2, 0x6
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdt:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/4 v2, 0x7
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdJ:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/16 v2, 0x8
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdv:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/16 v2, 0x9
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdF:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/16 v2, 0xa
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdL:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/16 v2, 0xb
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdH:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/16 v2, 0xc
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdk:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/16 v2, 0xd
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdl:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/16 v2, 0xe
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdw:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/16 v2, 0xf
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdx:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/16 v2, 0x10
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdm:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/16 v2, 0x11
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdn:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/16 v2, 0x12
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdy:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/16 v2, 0x13
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdz:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/16 v2, 0x14
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdo:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/16 v2, 0x15
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdp:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/16 v2, 0x16
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdA:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/16 v2, 0x17
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdB:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/16 v2, 0x18
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdq:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/16 v2, 0x19
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdr:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/16 v2, 0x1a
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdC:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/16 v2, 0x1b
-
-    iget v3, p0, Lcom/tencent/mm/modelstat/c;->cdD:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    return-object v0
+    const-string/jumbo v2, "mobileinfo.ini"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    .line 34
+    new-instance v2, Ljava/io/File;
+
+    invoke-direct {v2, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string/jumbo v0, "MicroMsg.MobileInfoStorage ReportDataFlow"
+
+    const-string/jumbo v2, "readConfig file not exist :%s"
+
+    new-array v3, v10, [Ljava/lang/Object;
+
+    aput-object v4, v3, v11
+
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    move-object v0, v1
+
+    :goto_1
+    iput-object v0, p0, Lcom/tencent/mm/modelstat/c;->bYd:Lcom/tencent/mm/modelstat/c$a;
+
+    .line 35
+    iget-object v0, p0, Lcom/tencent/mm/modelstat/c;->bYd:Lcom/tencent/mm/modelstat/c$a;
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/tencent/mm/modelstat/c;->bYd:Lcom/tencent/mm/modelstat/c$a;
+
+    iget-boolean v0, v0, Lcom/tencent/mm/modelstat/c$a;->bYf:Z
+
+    if-nez v0, :cond_4
+
+    .line 36
+    const-string/jumbo v0, "MicroMsg.MobileInfoStorage ReportDataFlow"
+
+    const-string/jumbo v1, "checkInfo mobile info cache Read file succ."
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 37
+    iget-object v0, p0, Lcom/tencent/mm/modelstat/c;->bYd:Lcom/tencent/mm/modelstat/c$a;
+
+    goto :goto_0
+
+    .line 34
+    :cond_1
+    new-instance v3, Lcom/tencent/mm/sdk/h/a;
+
+    invoke-direct {v3, v4}, Lcom/tencent/mm/sdk/h/a;-><init>(Ljava/lang/String;)V
+
+    new-instance v0, Lcom/tencent/mm/modelstat/c$a;
+
+    invoke-direct {v0}, Lcom/tencent/mm/modelstat/c$a;-><init>()V
+
+    const-string/jumbo v5, "ispCode"
+
+    invoke-virtual {v3, v5}, Lcom/tencent/mm/sdk/h/a;->FU(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-static {v5}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Integer;)I
+
+    move-result v5
+
+    iput v5, v0, Lcom/tencent/mm/modelstat/c$a;->bYe:I
+
+    const-string/jumbo v5, "ispName"
+
+    invoke-virtual {v3, v5}, Lcom/tencent/mm/sdk/h/a;->getValue(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    iput-object v5, v0, Lcom/tencent/mm/modelstat/c$a;->ispName:Ljava/lang/String;
+
+    const-string/jumbo v5, "subType"
+
+    invoke-virtual {v3, v5}, Lcom/tencent/mm/sdk/h/a;->FU(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-static {v5}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Integer;)I
+
+    move-result v5
+
+    iput v5, v0, Lcom/tencent/mm/modelstat/c$a;->afj:I
+
+    const-string/jumbo v5, "extraInfo"
+
+    invoke-virtual {v3, v5}, Lcom/tencent/mm/sdk/h/a;->getValue(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, v0, Lcom/tencent/mm/modelstat/c$a;->extraInfo:Ljava/lang/String;
+
+    invoke-virtual {v2}, Ljava/io/File;->lastModified()J
+
+    move-result-wide v2
+
+    const/16 v5, 0x271b
+
+    sget v6, Lcom/tencent/mm/platformtools/q;->ciq:I
+
+    if-ne v5, v6, :cond_2
+
+    sget v5, Lcom/tencent/mm/platformtools/q;->cir:I
+
+    if-lez v5, :cond_2
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gp()J
+
+    move-result-wide v2
+
+    sget v5, Lcom/tencent/mm/platformtools/q;->cir:I
+
+    int-to-long v6, v5
+
+    sub-long/2addr v2, v6
+
+    const-string/jumbo v5, "MicroMsg.MobileInfoStorage ReportDataFlow"
+
+    const-string/jumbo v6, "readConfig DK_TEST_MOBILEINFOFILE_MODTIME val:%d lm:%d"
+
+    new-array v7, v12, [Ljava/lang/Object;
+
+    sget v8, Lcom/tencent/mm/platformtools/q;->cir:I
+
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    aput-object v8, v7, v11
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v8
+
+    aput-object v8, v7, v10
+
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    sput v11, Lcom/tencent/mm/platformtools/q;->cir:I
+
+    :cond_2
+    const-wide/16 v6, 0x0
+
+    cmp-long v5, v2, v6
+
+    if-lez v5, :cond_3
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/be;->au(J)J
+
+    move-result-wide v6
+
+    const-wide/32 v8, 0xf731400
+
+    cmp-long v5, v6, v8
+
+    if-lez v5, :cond_3
+
+    const-string/jumbo v5, "MicroMsg.MobileInfoStorage ReportDataFlow"
+
+    const-string/jumbo v6, "readConfig  diff:%d file:%s cache expired remove!"
+
+    new-array v7, v12, [Ljava/lang/Object;
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/be;->au(J)J
+
+    move-result-wide v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    aput-object v2, v7, v11
+
+    aput-object v4, v7, v10
+
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iput-boolean v10, v0, Lcom/tencent/mm/modelstat/c$a;->bYf:Z
+
+    :cond_3
+    const-string/jumbo v2, "MicroMsg.MobileInfoStorage ReportDataFlow"
+
+    const-string/jumbo v3, "readConfig MobileInfo subType:%d ispCode:%d ispName:%s extraInfo:%s expired:%b"
+
+    const/4 v5, 0x5
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    iget v6, v0, Lcom/tencent/mm/modelstat/c$a;->afj:I
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    aput-object v6, v5, v11
+
+    iget v6, v0, Lcom/tencent/mm/modelstat/c$a;->bYe:I
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    aput-object v6, v5, v10
+
+    iget-object v6, v0, Lcom/tencent/mm/modelstat/c$a;->ispName:Ljava/lang/String;
+
+    aput-object v6, v5, v12
+
+    iget-object v6, v0, Lcom/tencent/mm/modelstat/c$a;->extraInfo:Ljava/lang/String;
+
+    aput-object v6, v5, v13
+
+    const/4 v6, 0x4
+
+    iget-boolean v7, v0, Lcom/tencent/mm/modelstat/c$a;->bYf:Z
+
+    invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v7
+
+    aput-object v7, v5, v6
+
+    invoke-static {v2, v3, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto/16 :goto_1
+
+    .line 39
+    :cond_4
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    if-nez v2, :cond_5
+
+    const-string/jumbo v0, "MicroMsg.MobileInfoStorage ReportDataFlow"
+
+    const-string/jumbo v2, "readInfoBySystem MMApplicationContext is null"
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 40
+    :goto_2
+    if-nez v1, :cond_9
+
+    .line 41
+    const-string/jumbo v0, "MicroMsg.MobileInfoStorage ReportDataFlow"
+
+    const-string/jumbo v1, "readInfoBySystem failed , use old."
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 42
+    iget-object v0, p0, Lcom/tencent/mm/modelstat/c;->bYd:Lcom/tencent/mm/modelstat/c$a;
+
+    goto/16 :goto_0
+
+    .line 39
+    :cond_5
+    const-string/jumbo v0, "connectivity"
+
+    invoke-virtual {v2, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/net/ConnectivityManager;
+
+    if-nez v0, :cond_6
+
+    const-string/jumbo v0, "MicroMsg.MobileInfoStorage ReportDataFlow"
+
+    const-string/jumbo v2, "readInfoBySystem ConnectivityManager is null"
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_6
+    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+
+    move-result-object v0
+
+    if-nez v0, :cond_7
+
+    const-string/jumbo v0, "MicroMsg.MobileInfoStorage ReportDataFlow"
+
+    const-string/jumbo v2, "readInfoBySystem getActiveNetworkInfo is null"
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_7
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getType()I
+
+    move-result v3
+
+    if-ne v3, v10, :cond_8
+
+    const-string/jumbo v0, "MicroMsg.MobileInfoStorage ReportDataFlow"
+
+    const-string/jumbo v2, "readInfoBySystem net type is wifi"
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_8
+    new-instance v1, Lcom/tencent/mm/modelstat/c$a;
+
+    invoke-direct {v1}, Lcom/tencent/mm/modelstat/c$a;-><init>()V
+
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getSubtype()I
+
+    move-result v3
+
+    iput v3, v1, Lcom/tencent/mm/modelstat/c$a;->afj:I
+
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ak;->dv(Landroid/content/Context;)I
+
+    move-result v3
+
+    iput v3, v1, Lcom/tencent/mm/modelstat/c$a;->bYe:I
+
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ak;->dw(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v2
+
+    iput-object v2, v1, Lcom/tencent/mm/modelstat/c$a;->ispName:Ljava/lang/String;
+
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getExtraInfo()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/tencent/mm/modelstat/c$a;->extraInfo:Ljava/lang/String;
+
+    const-string/jumbo v0, "MicroMsg.MobileInfoStorage ReportDataFlow"
+
+    const-string/jumbo v2, "readInfoBySystem subType:%d ispCode:%d ispName:%s extraInfo:%s"
+
+    const/4 v3, 0x4
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    iget v5, v1, Lcom/tencent/mm/modelstat/c$a;->afj:I
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v3, v11
+
+    iget v5, v1, Lcom/tencent/mm/modelstat/c$a;->bYe:I
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v3, v10
+
+    iget-object v5, v1, Lcom/tencent/mm/modelstat/c$a;->ispName:Ljava/lang/String;
+
+    aput-object v5, v3, v12
+
+    iget-object v5, v1, Lcom/tencent/mm/modelstat/c$a;->extraInfo:Ljava/lang/String;
+
+    aput-object v5, v3, v13
+
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto/16 :goto_2
+
+    .line 44
+    :cond_9
+    iput-object v1, p0, Lcom/tencent/mm/modelstat/c;->bYd:Lcom/tencent/mm/modelstat/c$a;
+
+    .line 45
+    iget-object v0, p0, Lcom/tencent/mm/modelstat/c;->bYd:Lcom/tencent/mm/modelstat/c$a;
+
+    if-nez v0, :cond_a
+
+    const-string/jumbo v0, "MicroMsg.MobileInfoStorage ReportDataFlow"
+
+    const-string/jumbo v1, "saveConfig info is null"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 46
+    :goto_3
+    iget-object v0, p0, Lcom/tencent/mm/modelstat/c;->bYd:Lcom/tencent/mm/modelstat/c$a;
+
+    goto/16 :goto_0
+
+    .line 45
+    :cond_a
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_b
+
+    const-string/jumbo v0, "MicroMsg.MobileInfoStorage ReportDataFlow"
+
+    const-string/jumbo v1, "saveConfig path is null"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_3
+
+    :cond_b
+    new-instance v1, Lcom/tencent/mm/sdk/h/a;
+
+    invoke-direct {v1, v4}, Lcom/tencent/mm/sdk/h/a;-><init>(Ljava/lang/String;)V
+
+    const-string/jumbo v2, "ispCode"
+
+    iget v3, v0, Lcom/tencent/mm/modelstat/c$a;->bYe:I
+
+    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/sdk/h/a;->aW(Ljava/lang/String;I)Z
+
+    const-string/jumbo v2, "ispName"
+
+    iget-object v3, v0, Lcom/tencent/mm/modelstat/c$a;->ispName:Ljava/lang/String;
+
+    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/sdk/h/a;->cv(Ljava/lang/String;Ljava/lang/String;)Z
+
+    const-string/jumbo v2, "subType"
+
+    iget v3, v0, Lcom/tencent/mm/modelstat/c$a;->afj:I
+
+    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/sdk/h/a;->aW(Ljava/lang/String;I)Z
+
+    const-string/jumbo v2, "extraInfo"
+
+    iget-object v0, v0, Lcom/tencent/mm/modelstat/c$a;->extraInfo:Ljava/lang/String;
+
+    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/sdk/h/a;->cv(Ljava/lang/String;Ljava/lang/String;)Z
+
+    goto :goto_3
 .end method

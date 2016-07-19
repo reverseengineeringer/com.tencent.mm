@@ -3,38 +3,38 @@ package com.tencent.mm.protocal.b;
 import java.util.LinkedList;
 
 public final class acp
-  extends adk
+  extends alt
 {
-  public int id;
+  public int jsU;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hLO != null)
+      if (kfq != null)
       {
-        paramVarArgs.bN(1, hLO.kS());
-        hLO.a(paramVarArgs);
+        paramVarArgs.cx(1, kfq.iO());
+        kfq.a(paramVarArgs);
       }
-      paramVarArgs.bM(2, id);
+      paramVarArgs.cw(2, jsU);
       return 0;
     }
     if (paramInt == 1) {
-      if (hLO == null) {
+      if (kfq == null) {
         break label308;
       }
     }
     label308:
-    for (paramInt = a.a.a.a.bJ(1, hLO.kS()) + 0;; paramInt = 0)
+    for (paramInt = a.a.a.a.cv(1, kfq.iO()) + 0;; paramInt = 0)
     {
-      return paramInt + a.a.a.a.bI(2, id);
+      return paramInt + a.a.a.a.cu(2, jsU);
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = adk.a(paramVarArgs); paramInt > 0; paramInt = adk.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = alt.a(paramVarArgs); paramInt > 0; paramInt = alt.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bve();
           }
         }
         break;
@@ -49,20 +49,20 @@ public final class acp
         default: 
           return -1;
         case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).pL(paramInt);
+          paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
           int i = paramVarArgs.size();
           paramInt = 0;
           while (paramInt < i)
           {
             Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new cj();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, hfZ);
-            for (boolean bool = true; bool; bool = ((cj)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.al.a)localObject1, adk.a((a.a.a.a.a)localObject2))) {}
-            hLO = ((cj)localObject1);
+            localObject1 = new df();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+            for (boolean bool = true; bool; bool = ((df)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, alt.a((a.a.a.a.a)localObject2))) {}
+            kfq = ((df)localObject1);
             paramInt += 1;
           }
         }
-        id = jMD.aVp();
+        jsU = mMY.id();
         return 0;
       }
       return -1;

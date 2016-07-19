@@ -1,150 +1,212 @@
 package com.tencent.mm.modelsimple;
 
-import com.tencent.mm.d.b.bg;
-import com.tencent.mm.model.ar;
+import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import com.tencent.mm.network.e;
 import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b.aig;
-import com.tencent.mm.protocal.b.mh;
-import com.tencent.mm.protocal.b.mi;
-import com.tencent.mm.protocal.b.ml;
-import com.tencent.mm.protocal.b.mm;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.d;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.platformtools.m;
+import com.tencent.mm.protocal.b.ami;
+import com.tencent.mm.protocal.b.amj;
+import com.tencent.mm.protocal.b.fu;
+import com.tencent.mm.protocal.b.ju;
+import com.tencent.mm.protocal.b.pk;
+import com.tencent.mm.protocal.b.pl;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.h;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.a.c;
+import com.tencent.mm.t.d;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.List;
 
 public final class l
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private d anM;
-  private final a bUv;
+  public final a bkQ;
+  private d bkT;
   
-  public l(int paramInt1, String paramString1, String paramString2, int paramInt2, String paramString3, String paramString4, long paramLong, String paramString5, long[] paramArrayOfLong, mi parammi, List paramList)
+  private l()
   {
     Object localObject = new a.a();
-    bFa = new ml();
-    bFb = new mm();
-    uri = "/cgi-bin/micromsg-bin/exposewithproof";
-    bEY = 661;
-    bUv = ((a.a)localObject).vy();
-    localObject = (ml)bUv.bEW.bFf;
-    iWm = paramInt1;
-    jkh = ay.ky(paramString1);
-    jki = paramInt2;
-    jkj = ay.ky(paramString3);
-    fCJ = paramString4;
-    if (paramLong != 0L)
-    {
-      paramString1 = new aig();
-      iXA = paramLong;
-      fsI = paramString5;
-      jkd = ay.ky(paramString2);
-      bpa.add(paramString1);
+    byl = new pk();
+    bym = new pl();
+    uri = "/cgi-bin/micromsg-bin/geta8key";
+    byj = 233;
+    byn = 155;
+    byo = 1000000155;
+    bkQ = ((a.a)localObject).vA();
+    localObject = (pk)bkQ.byh.byq;
+    String str1 = be.li((String)ah.tE().ro().get(46, null));
+    jwL = new ami().aV(be.lj(str1));
+    String str2 = be.li((String)ah.tE().ro().get(72, null));
+    jMQ = new ami().aV(be.lj(str2));
+    v.d("MicroMsg.NetSceneGetA8Key", "dkwt get a2=" + str1 + " newa2=" + str2);
+  }
+  
+  public l(int paramInt)
+  {
+    this();
+    pk localpk = (pk)bkQ.byh.byq;
+    jsU = 3;
+    jtN = 5;
+    jMO = paramInt;
+    v.d("MicroMsg.NetSceneGetA8Key", "dkwt geta8key friendQQNum:%d  a2key-len:%d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(jwL.kfQ) });
+  }
+  
+  public l(String paramString, int paramInt1, int paramInt2, int paramInt3)
+  {
+    this();
+    pk localpk = (pk)bkQ.byh.byq;
+    jsU = 2;
+    jMM = new amj().EF(paramString);
+    jtN = paramInt1;
+    emC = null;
+    jMR = 0;
+    jMU = paramInt2;
+    jMV = paramInt3;
+    v.d("MicroMsg.NetSceneGetA8Key", "get a8key reqUrl = " + paramString + ", username = " + null + ", scene = " + paramInt1 + ", reason = 0, codeType = " + paramInt2 + ", codeVersion = " + paramInt3);
+  }
+  
+  public l(String paramString1, String paramString2, int paramInt)
+  {
+    this();
+    pk localpk = (pk)bkQ.byh.byq;
+    jsU = 2;
+    jMM = new amj().EF(paramString1);
+    jtN = paramInt;
+    emC = paramString2;
+    jMR = 0;
+    v.d("MicroMsg.NetSceneGetA8Key", "get a8key reqUrl = " + paramString1 + ", username = " + paramString2 + ", scene = " + paramInt + ", reason = 0");
+  }
+  
+  public l(String paramString1, String paramString2, int paramInt1, int paramInt2, int paramInt3, String paramString3)
+  {
+    this();
+    pk localpk = (pk)bkQ.byh.byq;
+    jsU = 2;
+    jMM = new amj().EF(paramString1);
+    jtN = paramInt1;
+    emC = paramString2;
+    jMR = paramInt2;
+    juL = paramInt3;
+    jMT = paramString3;
+    v.i("MicroMsg.NetSceneGetA8Key", "get a8key reqUrl = %s, username = %s, scene = %d, reason = %d, flag = %d, netType = %s", new Object[] { paramString1, paramString2, Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString3 });
+  }
+  
+  public l(String paramString1, String paramString2, String paramString3)
+  {
+    this();
+    pk localpk = (pk)bkQ.byh.byq;
+    jsU = 1;
+    jMJ = new amj().EF(paramString1);
+    jMK = new amj().EF(paramString2);
+    jML = new amj().EF(paramString3);
+    v.d("MicroMsg.NetSceneGetA8Key", "get a8key appid=" + paramString1);
+  }
+  
+  public final ArrayList<byte[]> CA()
+  {
+    Object localObject = (pl)bkQ.byi.byq;
+    ArrayList localArrayList = new ArrayList();
+    if ((localObject == null) || (jNc == null)) {
+      return localArrayList;
     }
-    do
+    localObject = jNc.iterator();
+    while (((Iterator)localObject).hasNext())
     {
-      for (;;)
+      fu localfu = (fu)((Iterator)localObject).next();
+      try
       {
-        if (paramList != null) {
-          jkk.addAll(paramList);
-        }
-        u.i("!56@/B4Tb64lLpK+IBX8XDgnvk83Yrw+OAaM0+/MlLC0btPAhEWNLFBpbg==", "[oneliang][ExposeWithProof]scene:%d,exposetype:%s,msg list size:%s,img list size:%s", new Object[] { Integer.valueOf(iWm), Integer.valueOf(jki), Integer.valueOf(bpa.size()), Integer.valueOf(jkk.size()) });
-        return;
-        if (parammi == null) {
-          break;
-        }
-        paramString1 = bpa;
-        if (paramString1 != null)
-        {
-          paramString1 = paramString1.iterator();
-          while (paramString1.hasNext())
-          {
-            paramString2 = (mh)paramString1.next();
-            paramString3 = new aig();
-            jkd = jkd;
-            fsI = fsI;
-            iXA = iXA;
-            iXu = iXu;
-            jke = jke;
-            bpa.add(paramString3);
-            u.d("!56@/B4Tb64lLpK+IBX8XDgnvk83Yrw+OAaM0+/MlLC0btPAhEWNLFBpbg==", "[oneliang][ExposeWithProof]outside,MsgType:%s,NewMsgId:%s,Sender:%s", new Object[] { Integer.valueOf(iXu), Long.valueOf(iXA), jkd });
-          }
-        }
+        localArrayList.add(localfu.toByteArray());
       }
-    } while (paramArrayOfLong == null);
-    paramInt2 = paramArrayOfLong.length;
-    paramInt1 = 0;
-    label400:
-    if (paramInt1 < paramInt2)
-    {
-      paramLong = paramArrayOfLong[paramInt1];
-      paramString1 = new aig();
-      paramString3 = com.tencent.mm.model.ah.tD().rs().dz(Long.valueOf(paramLong).longValue());
-      iXA = field_msgSvrId;
-      if (!paramString3.aWU()) {
-        break label583;
+      catch (IOException localIOException)
+      {
+        v.e("MicroMsg.NetSceneGetA8Key", "exception:%s", new Object[] { be.f(localIOException) });
       }
-      iXu = 49;
-      label462:
-      if (!paramString3.aXf()) {
-        break label595;
-      }
-      fsI = field_content;
-      label479:
-      paramString4 = ar.fk(field_content);
-      if (!ay.kz(paramString4)) {
-        break label619;
-      }
-      if (field_isSend != 1) {
-        break label604;
-      }
-      jkd = ay.ky(paramString2);
     }
-    for (;;)
-    {
-      jke = ((int)(field_createTime / 1000L));
-      bpa.add(paramString1);
-      u.d("!56@/B4Tb64lLpK+IBX8XDgnvk83Yrw+OAaM0+/MlLC0btPAhEWNLFBpbg==", "[oneliang][ExposeWithProof]MsgType:%s,NewMsgId:%s,Sender:%s", new Object[] { Integer.valueOf(iXu), Long.valueOf(iXA), jkd });
-      paramInt1 += 1;
-      break label400;
-      break;
-      label583:
-      iXu = field_type;
-      break label462;
-      label595:
-      fsI = "";
-      break label479;
-      label604:
-      jkd = ay.ky(field_talker);
-      continue;
-      label619:
-      jkd = ay.ky(paramString4);
+    v.d("MicroMsg.NetSceneGetA8Key", "ScopeList size = %s", new Object[] { Integer.valueOf(localArrayList.size()) });
+    return localArrayList;
+  }
+  
+  public final long CB()
+  {
+    pl localpl = (pl)bkQ.byi.byq;
+    if (jNe != null) {
+      return jNe.jFW;
     }
+    return -1L;
+  }
+  
+  public final String Cv()
+  {
+    return bkQ.byi.byq).jMW;
+  }
+  
+  public final String Cw()
+  {
+    amj localamj = bkQ.byh.byq).jMM;
+    if (localamj != null) {
+      return kfU;
+    }
+    return null;
+  }
+  
+  public final int Cx()
+  {
+    return bkQ.byi.byq).jtb;
+  }
+  
+  public final byte[] Cy()
+  {
+    Object localObject = (pl)bkQ.byi.byq;
+    if (jNf == null) {
+      return null;
+    }
+    try
+    {
+      localObject = m.a(jNf);
+      return (byte[])localObject;
+    }
+    catch (Exception localException) {}
+    return null;
+  }
+  
+  public final String Cz()
+  {
+    return bkQ.byi.byq).jNa;
   }
   
   public final int a(e parame, d paramd)
   {
-    anM = paramd;
-    return a(parame, bUv, this);
+    bkT = paramd;
+    return a(parame, bkQ, this);
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    anM.a(paramInt2, paramInt3, paramString, this);
+    v.d("MicroMsg.NetSceneGetA8Key", "dkwt geta8key onGYNetEnd:[%d,%d] url:[%s]  a8key:[%s]", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), Cv(), bkQ.byi.byq).jMX });
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
+  }
+  
+  public final String getTitle()
+  {
+    return bkQ.byi.byq).aez;
   }
   
   public final int getType()
   {
-    return 661;
+    return 233;
+  }
+  
+  public final String kA()
+  {
+    return bkQ.byi.byq).fBO;
   }
 }
 

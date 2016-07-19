@@ -10,26 +10,26 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.tencent.mm.sdk.platformtools.d;
-import com.tencent.mm.sdk.platformtools.t;
 import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.IOException;
 import java.io.InputStream;
 
 final class FilterImageView$a
   extends BaseAdapter
 {
-  int ePW = 0;
+  int eXP = 0;
   
   FilterImageView$a(FilterImageView paramFilterImageView) {}
   
   public final int getCount()
   {
-    return FilterImageView.lvx.length;
+    return FilterImageView.lWz.length;
   }
   
   public final Object getItem(int paramInt)
   {
-    return FilterImageView.lvx[paramInt];
+    return FilterImageView.lWz[paramInt];
   }
   
   public final long getItemId(int paramInt)
@@ -43,54 +43,54 @@ final class FilterImageView$a
     Object localObject1;
     if ((paramView == null) || (!(paramView.getTag() instanceof a)))
     {
-      paramViewGroup = View.inflate(FilterImageView.b(lvy), 2131363205, null);
+      paramViewGroup = View.inflate(FilterImageView.b(lWA), 2130903599, null);
       localObject1 = new a();
-      cHA = ((TextView)paramViewGroup.findViewById(2131169442));
-      lvz = ((ImageView)paramViewGroup.findViewById(2131169441));
+      cEE = ((TextView)paramViewGroup.findViewById(2131756856));
+      lWB = ((ImageView)paramViewGroup.findViewById(2131756855));
       paramViewGroup.setTag(localObject1);
     }
     for (;;)
     {
-      Object localObject2 = cHA;
-      paramView = lvE;
-      String str = t.aUB();
+      Object localObject2 = cEE;
+      paramView = lWG;
+      String str = u.aZF();
       if (str.equals("zh_CN"))
       {
-        paramView = lfO;
+        paramView = lGb;
         label115:
         ((TextView)localObject2).setText(paramView);
       }
       try
       {
-        paramView = FilterImageView.b(lvy).getAssets().open("filter/" + aEZ);
-        lvA = d.decodeStream(paramView);
+        paramView = FilterImageView.b(lWA).getAssets().open("filter/" + are);
+        lWC = d.decodeStream(paramView);
         paramView.close();
-        lvz.setImageBitmap(lvA);
+        lWB.setImageBitmap(lWC);
         paramViewGroup.setLayoutParams(new ViewGroup.LayoutParams(-2, -2));
-        if (paramInt == ePW)
+        if (paramInt == eXP)
         {
-          paramViewGroup.findViewById(2131169441).setBackgroundResource(2130970508);
+          paramViewGroup.findViewById(2131756855).setBackgroundResource(2130837844);
           return paramViewGroup;
           localObject2 = (a)paramView.getTag();
           localObject1 = localObject2;
           paramViewGroup = paramView;
-          if (lvA == null) {
+          if (lWC == null) {
             continue;
           }
-          u.i("!32@/B4Tb64lLpLxetNgbG3pY/jjX49X0q4a", "recycle bitmap:%s", new Object[] { lvA.toString() });
-          lvA.recycle();
+          v.i("MicroMsg.FilterView", "recycle bitmap:%s", new Object[] { lWC.toString() });
+          lWC.recycle();
           localObject1 = localObject2;
           paramViewGroup = paramView;
           continue;
           if ((str.equals("zh_TW")) || (str.equals("zh_HK")))
           {
-            paramView = lvC;
+            paramView = lWE;
             break label115;
           }
-          paramView = lvD;
+          paramView = lWF;
           break label115;
         }
-        paramViewGroup.findViewById(2131169441).setBackgroundResource(2130970631);
+        paramViewGroup.findViewById(2131756855).setBackgroundResource(2130837845);
         return paramViewGroup;
       }
       catch (IOException paramView)
@@ -102,9 +102,9 @@ final class FilterImageView$a
   
   final class a
   {
-    TextView cHA;
-    Bitmap lvA;
-    ImageView lvz;
+    TextView cEE;
+    ImageView lWB;
+    Bitmap lWC;
     
     a() {}
   }

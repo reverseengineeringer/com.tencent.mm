@@ -5,39 +5,39 @@ import java.util.HashSet;
 
 public final class r
 {
-  public static final int llA = n(new int[] { 16, 1, 2, 4, 64, 4096 });
-  public static final int llB = n(new int[] { lly, 64, 16384, 4096 });
-  public static final int llC = n(new int[] { 16, 2, 16384, 4 });
-  public static final int llD = n(new int[] { lly, 16384, 64, 4096 });
-  public static final int llE = n(new int[] { lly, 16384, 64, 131072, 8192 });
-  public static final int llF = n(new int[] { 16, 32, 1, 4, 2, 64 });
-  public static final int llG = n(new int[] { llz, 131072 });
-  public static final int lly = n(new int[] { 256, 16, 1, 2, 4 });
-  public static final int llz = n(new int[] { 16, 1, 2, 4, 64, 16384 });
+  public static final int lLL = n(new int[] { 256, 16, 1, 2, 4 });
+  public static final int lLM = n(new int[] { 16, 1, 2, 4, 64, 16384 });
+  public static final int lLN = n(new int[] { 16, 1, 2, 4, 64, 4096 });
+  public static final int lLO = n(new int[] { lLL, 64, 16384, 4096 });
+  public static final int lLP = n(new int[] { 16, 2, 16384, 4 });
+  public static final int lLQ = n(new int[] { lLL, 16384, 64, 4096 });
+  public static final int lLR = n(new int[] { lLL, 16384, 64, 131072, 8192 });
+  public static final int lLS = n(new int[] { 16, 32, 1, 4, 2, 64 });
+  public static final int lLT = n(new int[] { lLM, 131072 });
   
-  public static boolean aW(int paramInt1, int paramInt2)
-  {
-    return (paramInt1 & paramInt2) > 0;
-  }
-  
-  public static int bR(int paramInt1, int paramInt2)
+  public static int bX(int paramInt1, int paramInt2)
   {
     return (paramInt2 ^ 0xFFFFFFFF) & paramInt1;
   }
   
-  public static HashSet bhu()
+  public static boolean be(int paramInt1, int paramInt2)
+  {
+    return (paramInt1 & paramInt2) > 0;
+  }
+  
+  public static HashSet<String> bnf()
   {
     HashSet localHashSet = new HashSet();
     localHashSet.add("weixin");
     return localHashSet;
   }
   
-  public static HashSet bhv()
+  public static HashSet<String> bng()
   {
     HashSet localHashSet = new HashSet();
     localHashSet.add("officialaccounts");
     localHashSet.add("newsapp");
-    String[] arrayOfString = i.bAc;
+    String[] arrayOfString = i.btf;
     int j = arrayOfString.length;
     int i = 0;
     while (i < j)
@@ -75,7 +75,7 @@ public final class r
     return localHashSet;
   }
   
-  public static void h(HashSet paramHashSet)
+  public static void g(HashSet<String> paramHashSet)
   {
     paramHashSet.remove("filehelper");
   }

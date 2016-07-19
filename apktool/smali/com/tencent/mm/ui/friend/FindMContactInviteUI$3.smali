@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+.field final synthetic lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 412
-    iput-object p1, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$3;->lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$3;->lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 415
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$3;->lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$3;->lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
     new-instance v1, Landroid/content/Intent;
 
@@ -52,12 +52,12 @@
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/friend/FindMContactInviteUI;->startActivity(Landroid/content/Intent;)V
 
     .line 416
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$3;->lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$3;->lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactInviteUI;->n(Lcom/tencent/mm/ui/friend/FindMContactInviteUI;)Z
 
     .line 417
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$3;->lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$3;->lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/friend/FindMContactInviteUI;->finish()V
 

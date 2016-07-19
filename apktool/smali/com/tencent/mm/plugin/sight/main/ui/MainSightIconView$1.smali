@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gEM:Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;
+.field final synthetic gLn:Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 132
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView$1;->gEM:Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView$1;->gLn:Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

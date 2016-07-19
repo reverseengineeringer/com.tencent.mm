@@ -1,93 +1,93 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.d.b.as;
+import com.tencent.mm.e.b.au;
 import com.tencent.mm.sdk.h.c.a;
 import java.lang.reflect.Field;
 import java.util.Map;
 
 public final class o
-  extends as
+  extends au
 {
-  protected static c.a aot;
+  protected static c.a bjR;
   
   static
   {
     c.a locala = new c.a();
-    ceD = new Field[16];
-    blR = new String[17];
+    bZI = new Field[16];
+    aZx = new String[17];
     StringBuilder localStringBuilder = new StringBuilder();
-    blR[0] = "googleid";
-    jYx.put("googleid", "TEXT");
+    aZx[0] = "googleid";
+    kyU.put("googleid", "TEXT");
     localStringBuilder.append(" googleid TEXT");
     localStringBuilder.append(", ");
-    blR[1] = "googlename";
-    jYx.put("googlename", "TEXT");
+    aZx[1] = "googlename";
+    kyU.put("googlename", "TEXT");
     localStringBuilder.append(" googlename TEXT");
     localStringBuilder.append(", ");
-    blR[2] = "googlephotourl";
-    jYx.put("googlephotourl", "TEXT");
+    aZx[2] = "googlephotourl";
+    kyU.put("googlephotourl", "TEXT");
     localStringBuilder.append(" googlephotourl TEXT");
     localStringBuilder.append(", ");
-    blR[3] = "googlegmail";
-    jYx.put("googlegmail", "TEXT");
+    aZx[3] = "googlegmail";
+    kyU.put("googlegmail", "TEXT");
     localStringBuilder.append(" googlegmail TEXT");
     localStringBuilder.append(", ");
-    blR[4] = "username";
-    jYx.put("username", "TEXT");
+    aZx[4] = "username";
+    kyU.put("username", "TEXT");
     localStringBuilder.append(" username TEXT");
     localStringBuilder.append(", ");
-    blR[5] = "nickname";
-    jYx.put("nickname", "TEXT");
+    aZx[5] = "nickname";
+    kyU.put("nickname", "TEXT");
     localStringBuilder.append(" nickname TEXT");
     localStringBuilder.append(", ");
-    blR[6] = "nicknameqp";
-    jYx.put("nicknameqp", "TEXT");
+    aZx[6] = "nicknameqp";
+    kyU.put("nicknameqp", "TEXT");
     localStringBuilder.append(" nicknameqp TEXT");
     localStringBuilder.append(", ");
-    blR[7] = "usernamepy";
-    jYx.put("usernamepy", "TEXT");
+    aZx[7] = "usernamepy";
+    kyU.put("usernamepy", "TEXT");
     localStringBuilder.append(" usernamepy TEXT");
     localStringBuilder.append(", ");
-    blR[8] = "small_url";
-    jYx.put("small_url", "TEXT");
+    aZx[8] = "small_url";
+    kyU.put("small_url", "TEXT");
     localStringBuilder.append(" small_url TEXT");
     localStringBuilder.append(", ");
-    blR[9] = "big_url";
-    jYx.put("big_url", "TEXT");
+    aZx[9] = "big_url";
+    kyU.put("big_url", "TEXT");
     localStringBuilder.append(" big_url TEXT");
     localStringBuilder.append(", ");
-    blR[10] = "ret";
-    jYx.put("ret", "INTEGER");
+    aZx[10] = "ret";
+    kyU.put("ret", "INTEGER");
     localStringBuilder.append(" ret INTEGER");
     localStringBuilder.append(", ");
-    blR[11] = "status";
-    jYx.put("status", "INTEGER");
+    aZx[11] = "status";
+    kyU.put("status", "INTEGER");
     localStringBuilder.append(" status INTEGER");
     localStringBuilder.append(", ");
-    blR[12] = "googleitemid";
-    jYx.put("googleitemid", "TEXT PRIMARY KEY ");
+    aZx[12] = "googleitemid";
+    kyU.put("googleitemid", "TEXT PRIMARY KEY ");
     localStringBuilder.append(" googleitemid TEXT PRIMARY KEY ");
     localStringBuilder.append(", ");
-    jYw = "googleitemid";
-    blR[13] = "googlecgistatus";
-    jYx.put("googlecgistatus", "INTEGER default '2' ");
+    kyT = "googleitemid";
+    aZx[13] = "googlecgistatus";
+    kyU.put("googlecgistatus", "INTEGER default '2' ");
     localStringBuilder.append(" googlecgistatus INTEGER default '2' ");
     localStringBuilder.append(", ");
-    blR[14] = "contecttype";
-    jYx.put("contecttype", "TEXT");
+    aZx[14] = "contecttype";
+    kyU.put("contecttype", "TEXT");
     localStringBuilder.append(" contecttype TEXT");
     localStringBuilder.append(", ");
-    blR[15] = "googlenamepy";
-    jYx.put("googlenamepy", "TEXT");
+    aZx[15] = "googlenamepy";
+    kyU.put("googlenamepy", "TEXT");
     localStringBuilder.append(" googlenamepy TEXT");
-    blR[16] = "rowid";
-    jYy = localStringBuilder.toString();
-    aot = locala;
+    aZx[16] = "rowid";
+    kyV = localStringBuilder.toString();
+    bjR = locala;
   }
   
-  protected final c.a ls()
+  protected final c.a ou()
   {
-    return aot;
+    return bjR;
   }
   
   public final String toString()

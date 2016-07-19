@@ -1,6 +1,6 @@
 package com.tencent.mm.pluginsdk.ui.applet;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class b$5
   implements c.a
@@ -9,8 +9,8 @@ final class b$5
   
   public final void a(boolean paramBoolean, String paramString, int paramInt)
   {
-    u.e("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "doAddContact fail, contact not biz");
-    iId.cd(-1);
+    v.e("MicroMsg.AddContactDialog", "doAddContact fail, contact not biz");
+    jfa.cx(-1);
   }
 }
 

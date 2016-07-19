@@ -25,53 +25,7 @@
     return-void
 .end method
 
-.method protected final jY()Z
-    .locals 2
-
-    .prologue
-    .line 35
-    iget-object v0, p0, Lcom/tencent/c/a/a/d;->context:Landroid/content/Context;
-
-    .line 36
-    const-string/jumbo v1, "android.permission.WRITE_EXTERNAL_STORAGE"
-
-    .line 35
-    invoke-static {v0, v1}, Lcom/tencent/c/a/a/s;->j(Landroid/content/Context;Ljava/lang/String;)Z
-
-    move-result v0
-
-    .line 36
-    if-eqz v0, :cond_0
-
-    .line 37
-    invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 38
-    const-string/jumbo v1, "mounted"
-
-    .line 37
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    .line 38
-    if-eqz v0, :cond_0
-
-    .line 35
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method protected final jZ()Ljava/lang/String;
+.method protected final iA()Ljava/lang/String;
     .locals 5
 
     .prologue
@@ -217,7 +171,7 @@
     throw v0
 .end method
 
-.method protected final ka()Lcom/tencent/c/a/a/a;
+.method protected final iB()Lcom/tencent/c/a/a/a;
     .locals 1
 
     .prologue
@@ -225,6 +179,52 @@
     const/4 v0, 0x0
 
     return-object v0
+.end method
+
+.method protected final iz()Z
+    .locals 2
+
+    .prologue
+    .line 35
+    iget-object v0, p0, Lcom/tencent/c/a/a/d;->context:Landroid/content/Context;
+
+    .line 36
+    const-string/jumbo v1, "android.permission.WRITE_EXTERNAL_STORAGE"
+
+    .line 35
+    invoke-static {v0, v1}, Lcom/tencent/c/a/a/s;->k(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v0
+
+    .line 36
+    if-eqz v0, :cond_0
+
+    .line 37
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 38
+    const-string/jumbo v1, "mounted"
+
+    .line 37
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    .line 38
+    if-eqz v0, :cond_0
+
+    .line 35
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method protected final write(Ljava/lang/String;)V
@@ -271,7 +271,7 @@
     move-result-object v0
 
     .line 75
-    invoke-static {v0}, Lcom/tencent/c/a/a/c;->ap(Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0}, Lcom/tencent/c/a/a/c;->at(Ljava/lang/String;)Ljava/io/File;
 
     .line 76
     new-instance v0, Ljava/io/File;

@@ -3,17 +3,21 @@ package com.tencent.mm.plugin.sns.ui;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.view.MenuItem;
-import com.tencent.mm.ar.c;
-import com.tencent.mm.d.a.au;
-import com.tencent.mm.d.a.ay;
-import com.tencent.mm.d.a.ay.a;
-import com.tencent.mm.d.a.ay.b;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.h.l;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.av.c;
+import com.tencent.mm.e.a.ax;
+import com.tencent.mm.e.a.bb;
+import com.tencent.mm.e.a.bb.a;
+import com.tencent.mm.e.a.bb.b;
+import com.tencent.mm.e.a.lu;
+import com.tencent.mm.plugin.sns.data.i;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.i.l;
+import com.tencent.mm.protocal.b.auf;
+import com.tencent.mm.protocal.b.je;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.n.d;
+import java.util.LinkedList;
 
 final class FlipView$4
   implements n.d
@@ -22,83 +26,126 @@ final class FlipView$4
   
   public final void d(MenuItem paramMenuItem, int paramInt)
   {
-    Object localObject = ad.azi().vo(gYc);
+    Object localObject = ad.aBI().wA(hlo);
     if (localObject == null) {
-      u.i("!32@/B4Tb64lLpIJOjQrXeIXCcYQ4tsc+vBx", "error beacause info null");
+      v.i("MicroMsg.FlipView", "error beacause info null");
     }
-    label254:
-    label274:
     do
     {
-      do
+      return;
+      switch (paramMenuItem.getItemId())
       {
-        do
+      default: 
+        return;
+      case 0: 
+        com.tencent.mm.pluginsdk.ui.tools.k.h(fki, FlipView.e(hlm));
+        return;
+      case 1: 
+        if (field_type != 15)
         {
-          return;
-          switch (paramMenuItem.getItemId())
+          paramMenuItem = new Intent();
+          paramMenuItem.putExtra("Retr_File_Name", fki);
+          paramMenuItem.putExtra("Retr_Compress_Type", 0);
+          paramMenuItem.putExtra("Retr_Msg_Type", 0);
+          if (localObject != null)
           {
-          default: 
-            return;
-          case 0: 
-            com.tencent.mm.pluginsdk.ui.tools.k.h(fbI, FlipView.e(gYa));
-            return;
-          case 1: 
-            if (field_type != 15)
-            {
-              paramMenuItem = new Intent();
-              paramMenuItem.putExtra("Retr_File_Name", fbI);
-              paramMenuItem.putExtra("Retr_Compress_Type", 0);
-              paramMenuItem.putExtra("Retr_Msg_Type", 0);
-              com.tencent.mm.plugin.sns.b.a.coa.l(paramMenuItem, FlipView.e(gYa));
-              return;
-            }
-            paramMenuItem = new Intent();
-            paramMenuItem.putExtra("Select_Conv_Type", 3);
-            paramMenuItem.putExtra("select_is_ret", true);
-            c.a(FlipView.e(gYa), ".ui.transmit.SelectConversationUI", paramMenuItem, 2);
-            return;
-          case 2: 
-            if (field_type == 15) {
-              break label274;
-            }
-            paramMenuItem = new ay();
-            if (!com.tencent.mm.plugin.sns.i.a.b(paramMenuItem, gYc, bKH)) {
-              break label254;
-            }
-            com.tencent.mm.sdk.c.a.jUF.j(paramMenuItem);
+            paramMenuItem.putExtra("Retr_FromMainTimeline", hlm.aDS());
+            paramMenuItem.putExtra("Retr_KSnsId", i.g((com.tencent.mm.plugin.sns.i.k)localObject));
           }
-        } while (aue.ret != 0);
-        com.tencent.mm.ui.base.g.ba(gYa.getContext(), FlipView.e(gYa).getString(2131431055));
+          com.tencent.mm.plugin.sns.b.a.cjo.l(paramMenuItem, FlipView.e(hlm));
+          return;
+        }
+        paramMenuItem = new Intent();
+        paramMenuItem.putExtra("Select_Conv_Type", 3);
+        paramMenuItem.putExtra("select_is_ret", true);
+        c.a(FlipView.e(hlm), ".ui.transmit.SelectConversationUI", paramMenuItem, 2);
         return;
-        com.tencent.mm.ui.base.g.e(gYa.getContext(), aud.type, 0);
+      case 2: 
+        if (field_type != 15)
+        {
+          paramMenuItem = new bb();
+          if (com.tencent.mm.plugin.sns.j.a.b(paramMenuItem, hlo, bEb))
+          {
+            com.tencent.mm.sdk.c.a.kug.y(paramMenuItem);
+            if (afR.ret == 0) {
+              com.tencent.mm.ui.snackbar.a.a(13, (Activity)FlipView.e(hlm), FlipView.e(hlm).getString(2131232638), FlipView.e(hlm).getString(2131232583), null);
+            }
+          }
+        }
+        while (hlm.aDS())
+        {
+          paramMenuItem = new lu();
+          aul.auk = i.g((com.tencent.mm.plugin.sns.i.k)localObject);
+          aul.agV = ((com.tencent.mm.plugin.sns.i.k)localObject).aCX();
+          com.tencent.mm.sdk.c.a.kug.y(paramMenuItem);
+          return;
+          com.tencent.mm.ui.base.g.f(hlm.getContext(), afQ.type, 0);
+          continue;
+          if (localObject == null) {
+            break;
+          }
+          paramMenuItem = new bb();
+          if (com.tencent.mm.plugin.sns.j.a.a(paramMenuItem, (com.tencent.mm.plugin.sns.i.k)localObject))
+          {
+            com.tencent.mm.sdk.c.a.kug.y(paramMenuItem);
+            if (afR.ret == 0) {
+              com.tencent.mm.ui.snackbar.a.a(14, (Activity)FlipView.e(hlm), FlipView.e(hlm).getString(2131232638), FlipView.e(hlm).getString(2131232583), null);
+            }
+          }
+          else
+          {
+            com.tencent.mm.ui.base.g.f(FlipView.e(hlm), afQ.type, 0);
+          }
+        }
+      case 3: 
+        localObject = new Intent();
+        ((Intent)localObject).putExtra("k_expose_msg_id", hlm.aDR());
+        paramMenuItem = ad.aBI().cM(hlm.aDR());
+        if (paramMenuItem == null) {}
+        for (paramMenuItem = "";; paramMenuItem = field_userName)
+        {
+          ((Intent)localObject).putExtra("k_username", paramMenuItem);
+          ((Intent)localObject).putExtra("showShare", false);
+          ((Intent)localObject).putExtra("rawUrl", "https://weixin110.qq.com/security/readtemplate?t=weixin_report/w_type&scene=33");
+          c.c(FlipView.e(hlm), "webview", ".ui.tools.WebViewUI", (Intent)localObject);
+          return;
+        }
+      case 4: 
+        v.i("MicroMsg.FlipView", "request deal QBAR string");
+        paramMenuItem = new ax();
+        afI.aeH = ((Activity)FlipView.e(hlm));
+        afI.aeG = FlipView.f(hlm);
+        afI.afJ = FlipView.g(hlm);
+        afI.afK = FlipView.h(hlm);
+        com.tencent.mm.sdk.c.a.kug.y(paramMenuItem);
         return;
-      } while (localObject == null);
-      paramMenuItem = new ay();
-      if (!com.tencent.mm.plugin.sns.i.a.a(paramMenuItem, (com.tencent.mm.plugin.sns.h.k)localObject)) {
+      }
+    } while (aCDkli.jFv.size() == 0);
+    paramMenuItem = new Intent();
+    if (field_type == 1)
+    {
+      paramInt = hlm.getPosition();
+      int i = aCDkli.jFv.size();
+      if ((i <= 1) || (paramInt <= 1) || (paramInt > i)) {
+        break label818;
+      }
+      paramInt -= 1;
+    }
+    for (;;)
+    {
+      localObject = FlipView.f(fki, FlipView.e(hlm));
+      if (localObject == null) {
         break;
       }
-      com.tencent.mm.sdk.c.a.jUF.j(paramMenuItem);
-    } while (aue.ret != 0);
-    com.tencent.mm.ui.base.g.ba(FlipView.e(gYa), FlipView.e(gYa).getResources().getString(2131431055));
-    return;
-    com.tencent.mm.ui.base.g.e(FlipView.e(gYa), aud.type, 0);
-    return;
-    localObject = new Intent();
-    ((Intent)localObject).putExtra("k_expose_msg_id", gYa.getSnsId());
-    ((Intent)localObject).putExtra("k_expose_scene", 33);
-    paramMenuItem = ad.azi().cx(gYa.getSnsId());
-    if (paramMenuItem == null) {}
-    for (paramMenuItem = "";; paramMenuItem = field_userName)
-    {
-      ((Intent)localObject).putExtra("k_username", paramMenuItem);
-      com.tencent.mm.plugin.sns.b.a.coa.c(FlipView.e(gYa), (Intent)localObject);
+      paramMenuItem.putExtra("sns_send_data_ui_image_path", (String)localObject);
+      paramMenuItem.putExtra("sns_send_data_ui_image_position", paramInt);
+      paramMenuItem.putExtra("sns_send_data_ui_activity", true);
+      paramMenuItem.putExtra("sns_local_id", hlo);
+      c.a(FlipView.e(hlm), ".ui.chatting.ChattingSendDataToDeviceUI", paramMenuItem);
       return;
+      label818:
+      paramInt = 0;
     }
-    u.i("!32@/B4Tb64lLpIJOjQrXeIXCcYQ4tsc+vBx", "request deal QBAR string");
-    paramMenuItem = new au();
-    atX.asX = ((Activity)FlipView.e(gYa));
-    atX.asW = FlipView.f(gYa);
-    com.tencent.mm.sdk.c.a.jUF.j(paramMenuItem);
   }
 }
 

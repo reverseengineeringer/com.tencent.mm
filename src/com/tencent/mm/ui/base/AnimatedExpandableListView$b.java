@@ -11,37 +11,37 @@ final class AnimatedExpandableListView$b
   extends View
 {
   int dividerHeight;
-  List kBL = new ArrayList();
-  int kBM;
-  Drawable krE;
+  Drawable kQN;
+  List<View> laR = new ArrayList();
+  int laS;
   
   public AnimatedExpandableListView$b(Context paramContext)
   {
     super(paramContext);
   }
   
-  public final void ap(View paramView)
+  public final void at(View paramView)
   {
     paramView.layout(0, 0, getWidth(), getHeight());
-    kBL.add(paramView);
+    laR.add(paramView);
   }
   
   public final void dispatchDraw(Canvas paramCanvas)
   {
     paramCanvas.save();
-    if (krE != null) {
-      krE.setBounds(0, 0, kBM, dividerHeight);
+    if (kQN != null) {
+      kQN.setBounds(0, 0, laS, dividerHeight);
     }
-    int j = kBL.size();
+    int j = laR.size();
     int i = 0;
     while (i < j)
     {
-      View localView = (View)kBL.get(i);
+      View localView = (View)laR.get(i);
       localView.draw(paramCanvas);
       paramCanvas.translate(0.0F, localView.getMeasuredHeight());
-      if (krE != null)
+      if (kQN != null)
       {
-        krE.draw(paramCanvas);
+        kQN.draw(paramCanvas);
         paramCanvas.translate(0.0F, dividerHeight);
       }
       i += 1;
@@ -52,11 +52,11 @@ final class AnimatedExpandableListView$b
   protected final void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
-    int j = kBL.size();
+    int j = laR.size();
     int i = 0;
     while (i < j)
     {
-      ((View)kBL.get(i)).layout(paramInt1, paramInt2, paramInt3, paramInt4);
+      ((View)laR.get(i)).layout(paramInt1, paramInt2, paramInt3, paramInt4);
       i += 1;
     }
   }

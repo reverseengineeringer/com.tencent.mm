@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public o(ILjava/lang/String;)V
+.method public p(ILjava/lang/String;)V
     .locals 0
 
     .prologue

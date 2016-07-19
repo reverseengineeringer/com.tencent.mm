@@ -2,11 +2,11 @@ package com.tencent.mm.pluginsdk.ui.tools;
 
 import android.os.Looper;
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import java.util.LinkedList;
 
 final class g$a$1
-  extends aa
+  extends ac
 {
   g$a$1(g.a parama, Looper paramLooper, g paramg)
   {
@@ -15,10 +15,10 @@ final class g$a$1
   
   public final void handleMessage(Message paramMessage)
   {
-    g.a locala = iSw;
+    g.a locala = jpF;
     paramMessage = obj;
-    if ((paramMessage != null) && (iSu.size() < iSt)) {
-      iSu.add(paramMessage);
+    if ((paramMessage != null) && (jpD.size() < jpC)) {
+      jpD.add(paramMessage);
     }
   }
 }

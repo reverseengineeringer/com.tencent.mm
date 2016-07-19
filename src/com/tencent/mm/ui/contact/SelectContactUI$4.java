@@ -3,11 +3,11 @@ package com.tencent.mm.ui.contact;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.widget.Toast;
-import com.tencent.mm.d.a.gv;
-import com.tencent.mm.d.a.gv.b;
+import com.tencent.mm.e.a.hg;
+import com.tencent.mm.e.a.hg.b;
 import com.tencent.mm.model.ar;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.n.a;
 import java.util.LinkedList;
@@ -24,10 +24,10 @@ final class SelectContactUI$4
   public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.sdk.c.b paramb)
   {
     Object localObject3;
-    if ((paramb instanceof gv))
+    if ((paramb instanceof hg))
     {
-      localObject3 = (gv)paramb;
-      if (SelectContactUI.f(lmm) != null) {
+      localObject3 = (hg)paramb;
+      if (SelectContactUI.f(lMB) != null) {
         break label26;
       }
     }
@@ -35,28 +35,28 @@ final class SelectContactUI$4
     do
     {
       return;
-      if (SelectContactUI.e(lmm) != null)
+      if (SelectContactUI.e(lMB) != null)
       {
-        SelectContactUI.e(lmm).dismiss();
-        SelectContactUI.g(lmm);
+        SelectContactUI.e(lMB).dismiss();
+        SelectContactUI.g(lMB);
       }
-      SelectContactUI.h(lmm);
-      SelectContactUI.d(lmm, false);
-      SelectContactUI.a(lmm, aCa.aCe);
-    } while ((!ay.bj(lmm)) || (n.a.b(lmm, paramInt1, paramInt2, paramString, 4)));
-    if ((paramInt1 != 0) || (paramInt2 != 0) || (ay.kz(SelectContactUI.i(lmm))))
+      SelectContactUI.h(lMB);
+      SelectContactUI.d(lMB, false);
+      SelectContactUI.a(lMB, aot.aox);
+    } while (n.a.a(lMB, paramInt1, paramInt2, paramString, 4));
+    if ((paramInt1 != 0) || (paramInt2 != 0) || (be.kf(SelectContactUI.i(lMB))))
     {
       Object localObject2 = "";
       paramString = "";
-      String str = y.getContext().getString(2131428879);
+      String str = aa.getContext().getString(2131231626);
       if (paramInt2 == -23)
       {
-        localObject2 = lmm.getString(2131432710);
-        paramString = lmm.getString(2131432708);
+        localObject2 = lMB.getString(2131234598);
+        paramString = lMB.getString(2131234597);
       }
-      paramb = aCa.aCi;
-      Object localObject1 = aCa.aCg;
-      if ((paramb != null) && (paramb.size() > 0) && ((paramb.size() == aCa.aCd) || ((localObject1 != null) && (((List)localObject1).size() > 0) && (aCa.aCd == paramb.size() + ((List)localObject1).size()))))
+      paramb = aot.aoB;
+      Object localObject1 = aot.aoz;
+      if ((paramb != null) && (paramb.size() > 0) && ((paramb.size() == aot.aow) || ((localObject1 != null) && (((List)localObject1).size() > 0) && (aot.aow == paramb.size() + ((List)localObject1).size()))))
       {
         paramString = new LinkedList();
         paramInt1 = 0;
@@ -65,10 +65,10 @@ final class SelectContactUI$4
           paramString.add(paramb.get(paramInt1));
           paramInt1 += 1;
         }
-        SelectContactUI.a(lmm, paramString, (List)localObject1);
+        SelectContactUI.a(lMB, paramString, (List)localObject1);
         return;
       }
-      List localList = aCa.aCg;
+      List localList = aot.aoz;
       paramb = paramString;
       localObject1 = localObject2;
       if (localList != null)
@@ -79,14 +79,14 @@ final class SelectContactUI$4
         {
           paramb = paramString;
           localObject1 = localObject2;
-          if (aCa.aCd == localList.size())
+          if (aot.aow == localList.size())
           {
-            localObject1 = lmm.getString(2131428875);
-            paramb = paramString + lmm.getString(2131427496, new Object[] { ay.b(SelectContactUI.bX(localList), str) });
+            localObject1 = lMB.getString(2131233469);
+            paramb = paramString + lMB.getString(2131232846, new Object[] { be.b(SelectContactUI.cm(localList), str) });
           }
         }
       }
-      localObject3 = aCa.aCf;
+      localObject3 = aot.aoy;
       localObject2 = paramb;
       paramString = (String)localObject1;
       if (localObject3 != null)
@@ -95,20 +95,20 @@ final class SelectContactUI$4
         paramString = (String)localObject1;
         if (((List)localObject3).size() > 0)
         {
-          paramString = lmm.getString(2131428875);
-          localObject2 = paramb + lmm.getString(2131427497, new Object[] { ay.b(SelectContactUI.bX((List)localObject3), str) });
+          paramString = lMB.getString(2131233469);
+          localObject2 = paramb + lMB.getString(2131232847, new Object[] { be.b(SelectContactUI.cm((List)localObject3), str) });
         }
       }
       if ((paramString != null) && (paramString.length() > 0))
       {
-        g.y(lmm, (String)localObject2, paramString);
+        g.b(lMB, (String)localObject2, paramString, true);
         return;
       }
-      Toast.makeText(lmm, lmm.getString(2131427486, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
+      Toast.makeText(lMB, lMB.getString(2131232835, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
       return;
     }
-    ar.a(SelectContactUI.i(lmm), aCa.aCj, lmm.getString(2131428877), false, "");
-    paramb = aCa.aCi;
+    ar.a(SelectContactUI.i(lMB), aot.aoC, lMB.getString(2131231624), false, "");
+    paramb = aot.aoB;
     if ((paramb != null) && (paramb.size() > 0))
     {
       paramString = new LinkedList();
@@ -118,10 +118,10 @@ final class SelectContactUI$4
         paramString.add(paramb.get(paramInt1));
         paramInt1 += 1;
       }
-      paramb = "weixin://findfriend/verifycontact/" + SelectContactUI.i(lmm) + "/";
-      ar.a(SelectContactUI.i(lmm), paramString, lmm.getString(2131428878), true, paramb);
+      paramb = "weixin://findfriend/verifycontact/" + SelectContactUI.i(lMB) + "/";
+      ar.a(SelectContactUI.i(lMB), paramString, lMB.getString(2131231625), true, paramb);
     }
-    SelectContactUI.b(lmm, ay.h(new String[] { SelectContactUI.i(lmm) }));
+    SelectContactUI.b(lMB, be.g(new String[] { SelectContactUI.i(lMB) }));
   }
 }
 

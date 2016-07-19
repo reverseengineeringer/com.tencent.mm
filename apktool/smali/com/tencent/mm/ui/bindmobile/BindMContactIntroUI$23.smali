@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;->Gb()V
+    value = Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic kOs:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
+.field final synthetic lnI:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
 
-.field final synthetic kOv:I
+.field final synthetic lnL:I
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 191
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23;->kOs:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23;->lnI:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
 
-    iput p2, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23;->kOv:I
+    iput p2, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23;->lnL:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,11 +47,11 @@
     .line 194
     new-instance v0, Lcom/tencent/mm/ui/tools/m;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23;->kOs:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23;->lnI:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, v1, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/ui/tools/m;-><init>(Landroid/content/Context;)V
 
@@ -60,17 +60,17 @@
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23$1;-><init>(Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23;)V
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/tools/m;->hle:Lcom/tencent/mm/ui/base/n$c;
+    iput-object v1, v0, Lcom/tencent/mm/ui/tools/m;->hoS:Lcom/tencent/mm/ui/base/n$c;
 
     .line 208
     new-instance v1, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23$2;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23$2;-><init>(Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23;)V
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/tools/m;->hlf:Lcom/tencent/mm/ui/base/n$d;
+    iput-object v1, v0, Lcom/tencent/mm/ui/tools/m;->hoT:Lcom/tencent/mm/ui/base/n$d;
 
     .line 225
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/m;->biF()Landroid/app/Dialog;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/m;->boB()Landroid/app/Dialog;
 
     .line 226
     const/4 v0, 0x0

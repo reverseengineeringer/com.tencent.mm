@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto" xmlns:mm="http://schemas.android.com/apk/res-auto"
+  xmlns:android1="http://schemas.android.com/apk/res/android">
+    <PreferenceSmallCategory />
+    <com.tencent.mm.pluginsdk.ui.preference.AccountInfoPreference mm:layout="@layout/a1b" mm:title="@string/cg4" mm:key="more_tab_setting_personal_info" />
+    <PreferenceSmallCategory />
+    <NormalIconPreference mm:title="@string/cff" mm:icon="@raw/more_my_album" mm:key="settings_my_album" />
+    <NormalIconPreference mm:title="@string/cex" mm:icon="@raw/more_my_favorite" mm:key="settings_mm_favorite" />
+    <PreferenceSmallCategory />
+    <NormalIconPreference mm:title="@string/cez" mm:icon="@raw/more_my_bank_card" mm:key="settings_mm_wallet" />
+    <NormalIconPreference mm:title="@string/cev" mm:icon="@raw/more_my_card" mm:key="settings_mm_cardpackage" />
+    <PreferenceSmallCategory />
+    <NormalIconPreference mm:title="@string/cdp" mm:icon="@raw/find_more_emji" mm:key="settings_emoji_store" />
+    <PreferenceSmallCategory />
+    <NormalIconPreference mm:title="@string/ci6" mm:icon="@raw/more_setting" mm:key="more_setting" />
+    <PreferenceCategory />
+</PreferenceScreen>

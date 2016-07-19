@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/b;->eV(Z)V
+    value = Lcom/tencent/mm/plugin/sns/ui/b;->Z(Landroid/view/View;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,24 @@
 
 
 # instance fields
-.field final synthetic gVy:Z
+.field final synthetic clo:Landroid/view/View;
 
-.field final synthetic gVz:Lcom/tencent/mm/plugin/sns/ui/b;
+.field final synthetic gZB:Landroid/view/View;
+
+.field final synthetic hiS:Lcom/tencent/mm/plugin/sns/ui/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/b;Z)V
+.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/b;Landroid/view/View;Landroid/view/View;)V
     .locals 0
 
     .prologue
-    .line 76
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/b$1;->gVz:Lcom/tencent/mm/plugin/sns/ui/b;
+    .line 166
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/b$1;->hiS:Lcom/tencent/mm/plugin/sns/ui/b;
 
-    iput-boolean p2, p0, Lcom/tencent/mm/plugin/sns/ui/b$1;->gVy:Z
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/b$1;->clo:Landroid/view/View;
+
+    iput-object p3, p0, Lcom/tencent/mm/plugin/sns/ui/b$1;->gZB:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,20 +48,15 @@
     .locals 3
 
     .prologue
-    .line 80
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/b$1;->gVz:Lcom/tencent/mm/plugin/sns/ui/b;
+    .line 170
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/b$1;->hiS:Lcom/tencent/mm/plugin/sns/ui/b;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/b;->aAL()Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/b$1;->clo:Landroid/view/View;
 
-    move-result-object v0
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/b$1;->gZB:Landroid/view/View;
 
-    .line 81
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/b$1;->gVz:Lcom/tencent/mm/plugin/sns/ui/b;
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/plugin/sns/ui/b;->a(Lcom/tencent/mm/plugin/sns/ui/b;Landroid/view/View;Landroid/view/View;)V
 
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/plugin/sns/ui/b;->b(ZLjava/util/List;)V
-
-    .line 82
+    .line 171
     return-void
 .end method

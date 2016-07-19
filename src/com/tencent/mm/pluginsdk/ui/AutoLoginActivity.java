@@ -2,10 +2,10 @@ package com.tencent.mm.pluginsdk.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.platformtools.p;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.q;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.a;
 
@@ -15,11 +15,11 @@ public abstract class AutoLoginActivity
 {
   public abstract void a(a parama, Intent paramIntent);
   
-  public boolean akx()
+  public boolean anm()
   {
-    if ((!ah.tI()) || (ah.tM()))
+    if ((!ah.tJ()) || (ah.tN()))
     {
-      u.w("!44@/B4Tb64lLpI/xOSY/Qa0zpFqn1CXTwg8ruffkMqdYiM=", "not login");
+      v.w("MicroMsg.AutoLoginActivity", "not login");
       Intent localIntent = new Intent(this, getClass());
       localIntent.putExtras(getIntent());
       localIntent.addFlags(67108864);
@@ -36,34 +36,34 @@ public abstract class AutoLoginActivity
     return -1;
   }
   
-  public abstract boolean m(Intent paramIntent);
+  public abstract boolean n(Intent paramIntent);
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    qa(8);
+    rP(8);
     paramBundle = getIntent();
     if (paramBundle == null)
     {
-      u.e("!44@/B4Tb64lLpI/xOSY/Qa0zpFqn1CXTwg8ruffkMqdYiM=", "onCreate intent is null");
+      v.e("MicroMsg.AutoLoginActivity", "onCreate intent is null");
       finish();
       return;
     }
-    c.aSY();
-    u.i("!44@/B4Tb64lLpI/xOSY/Qa0zpFqn1CXTwg8ruffkMqdYiM=", "onCreate, intent action = " + paramBundle.getAction());
-    if (!m(paramBundle))
+    c.aXR();
+    v.i("MicroMsg.AutoLoginActivity", "onCreate, intent action = " + paramBundle.getAction());
+    if (!n(paramBundle))
     {
-      u.e("!44@/B4Tb64lLpI/xOSY/Qa0zpFqn1CXTwg8ruffkMqdYiM=", "preLogin fail, no need to process");
+      v.e("MicroMsg.AutoLoginActivity", "preLogin fail, no need to process");
       return;
     }
-    if (akx())
+    if (anm())
     {
       finish();
-      u.w("!44@/B4Tb64lLpI/xOSY/Qa0zpFqn1CXTwg8ruffkMqdYiM=", "not login, go to SimpleLogin");
+      v.w("MicroMsg.AutoLoginActivity", "not login, go to SimpleLogin");
       return;
     }
-    ah.tJ();
-    a(a.iFR, paramBundle);
+    ah.tK();
+    a(a.jcM, paramBundle);
   }
   
   protected void onNewIntent(Intent paramIntent)
@@ -73,25 +73,28 @@ public abstract class AutoLoginActivity
     }
     super.onNewIntent(paramIntent);
     setIntent(paramIntent);
-    int i = p.a(paramIntent, "wizard_activity_result_code", 0);
-    u.d("!44@/B4Tb64lLpI/xOSY/Qa0zpFqn1CXTwg8ruffkMqdYiM=", "onNewIntent, resultCode = " + i);
+    int i = q.a(paramIntent, "wizard_activity_result_code", 0);
+    v.d("MicroMsg.AutoLoginActivity", "onNewIntent, resultCode = " + i);
     switch (i)
     {
     default: 
-      u.e("!44@/B4Tb64lLpI/xOSY/Qa0zpFqn1CXTwg8ruffkMqdYiM=", "onNewIntent, should not reach here, resultCode = " + i);
-      a(a.iFS, paramIntent);
+      v.e("MicroMsg.AutoLoginActivity", "onNewIntent, should not reach here, resultCode = " + i);
+      a(a.jcN, paramIntent);
       return;
     case -1: 
-      a(a.iFR, paramIntent);
+      a(a.jcM, paramIntent);
       return;
     case 0: 
-      akx();
+      anm();
       return;
     }
-    a(a.iFT, paramIntent);
+    a(a.jcO, paramIntent);
   }
   
-  public static enum a {}
+  public static enum a
+  {
+    private a() {}
+  }
 }
 
 /* Location:

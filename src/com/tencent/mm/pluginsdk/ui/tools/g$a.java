@@ -2,43 +2,43 @@ package com.tencent.mm.pluginsdk.ui.tools;
 
 import android.os.Looper;
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import java.util.LinkedList;
 
-abstract class g$a
+abstract class g$a<T>
 {
-  private aa handler;
-  final int iSt = Math.max(1, 16);
-  LinkedList iSu = new LinkedList();
+  private ac handler;
+  final int jpC = Math.max(1, 16);
+  LinkedList<T> jpD = new LinkedList();
   
   public g$a(final g paramg, int paramInt, Looper paramLooper)
   {
-    handler = new aa(paramLooper)
+    handler = new ac(paramLooper)
     {
       public final void handleMessage(Message paramAnonymousMessage)
       {
         g.a locala = g.a.this;
         paramAnonymousMessage = obj;
-        if ((paramAnonymousMessage != null) && (iSu.size() < iSt)) {
-          iSu.add(paramAnonymousMessage);
+        if ((paramAnonymousMessage != null) && (jpD.size() < jpC)) {
+          jpD.add(paramAnonymousMessage);
         }
       }
     };
   }
   
-  protected abstract Object aSP();
+  protected abstract T aXI();
   
-  public final Object aSQ()
+  public final T aXJ()
   {
-    if (iSu.isEmpty()) {
-      return aSP();
+    if (jpD.isEmpty()) {
+      return (T)aXI();
     }
-    return iSu.removeFirst();
+    return (T)jpD.removeFirst();
   }
   
-  public final void v(Object paramObject)
+  public final void v(T paramT)
   {
-    handler.sendMessage(handler.obtainMessage(1, paramObject));
+    handler.sendMessage(handler.obtainMessage(1, paramT));
   }
 }
 

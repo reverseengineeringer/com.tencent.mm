@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ui/base/n$d;
+.implements Lcom/tencent/mm/ui/i$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+.field final synthetic lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 645
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$9;->loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+    .line 230
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$9;->lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,38 +36,33 @@
 
 
 # virtual methods
-.method public final d(Landroid/view/MenuItem;I)V
+.method public final GE()V
     .locals 2
 
     .prologue
-    .line 649
-    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
+    .line 234
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$9;->lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
-    move-result v0
+    iget-object v1, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$9;->lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
-    packed-switch v0, :pswitch_data_0
-
-    .line 654
-    :goto_0
-    return-void
-
-    .line 651
-    :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$9;->loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$9;->loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
-
-    invoke-static {v1}, Lcom/tencent/mm/ui/conversation/BizConversationUI$a;->k(Lcom/tencent/mm/ui/conversation/BizConversationUI$a;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/ui/conversation/BizConversationUI$a;->b(Lcom/tencent/mm/ui/conversation/BizConversationUI$a;)Lcom/tencent/mm/ui/conversation/c;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/conversation/BizConversationUI$a;->b(Lcom/tencent/mm/ui/conversation/BizConversationUI$a;Ljava/lang/String;)V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/conversation/c;->getCount()I
 
-    goto :goto_0
+    move-result v1
 
-    .line 649
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/conversation/BizConversationUI$a;->a(Lcom/tencent/mm/ui/conversation/BizConversationUI$a;I)V
+
+    .line 235
+    return-void
+.end method
+
+.method public final GF()V
+    .locals 0
+
+    .prologue
+    .line 240
+    return-void
 .end method

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.ui.tools.SearchViewNotRealTimeHelper android:id="@id/a_j" android:paddingLeft="@dimen/hb" android:paddingTop="@dimen/hb" android:paddingRight="@dimen/j8" android:paddingBottom="@dimen/cp" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:gravity="left" android:paddingLeft="@dimen/hb" android:paddingRight="@dimen/hb" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/aa5" style="MMFontPreferenceLarge" />
+    <com.tencent.mm.ui.base.MMPullDownView android:id="@id/a_k" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/j8" android:layout_weight="1.0">
+        <com.tencent.mm.plugin.brandservice.ui.BizSearchResultItemContainer android:id="@id/nw" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.tencent.mm.ui.base.MMPullDownView>
+</LinearLayout>

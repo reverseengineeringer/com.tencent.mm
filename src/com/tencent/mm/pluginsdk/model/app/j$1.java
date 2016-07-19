@@ -1,103 +1,104 @@
 package com.tencent.mm.pluginsdk.model.app;
 
 import com.tencent.mm.a.e;
-import com.tencent.mm.ab.f;
-import com.tencent.mm.ab.n;
-import com.tencent.mm.d.b.bg;
+import com.tencent.mm.ae.f;
+import com.tencent.mm.ae.n;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.model.ah;
 import com.tencent.mm.model.i;
 import com.tencent.mm.modelcdntran.CdnTransportEngine;
 import com.tencent.mm.modelcdntran.f.a;
 import com.tencent.mm.modelcdntran.keep_ProgressInfo;
 import com.tencent.mm.modelcdntran.keep_SceneResult;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.aj;
 import java.io.ByteArrayOutputStream;
 
 final class j$1
   implements f.a
 {
-  j$1(j paramj, ag paramag, String paramString1, long paramLong1, int paramInt, String paramString2, boolean paramBoolean, long paramLong2, String paramString3) {}
+  j$1(j paramj, ai paramai, String paramString1, long paramLong1, int paramInt, String paramString2, boolean paramBoolean, long paramLong2, String paramString3) {}
   
-  public final int a(String paramString, int paramInt, keep_ProgressInfo paramkeep_ProgressInfo, keep_SceneResult paramkeep_SceneResult)
+  public final int a(String paramString, int paramInt, keep_ProgressInfo paramkeep_ProgressInfo, keep_SceneResult paramkeep_SceneResult, boolean paramBoolean)
   {
-    int i = 0;
     if (paramInt != 0)
     {
-      u.e("!44@/B4Tb64lLpJNEklygrV/uHRWMsvWL2iTy0xTOrIa8yo=", "getThumbByCdn start failed: msgid:%d startRet:%d thumbUrl:%s", new Object[] { Long.valueOf(bRe.field_msgSvrId), Integer.valueOf(paramInt), bRc });
-      h.fUJ.g(10421, new Object[] { Integer.valueOf(paramInt), Integer.valueOf(2), Long.valueOf(bRf), Long.valueOf(ay.FS()), Integer.valueOf(com.tencent.mm.modelcdntran.c.aL(y.getContext())), Integer.valueOf(CdnTransportEngine.bJY), Integer.valueOf(bRg), "" });
-    }
-    do
-    {
+      v.e("MicroMsg.AppMessageExtension", "getThumbByCdn start failed: msgid:%d startRet:%d thumbUrl:%s", new Object[] { Long.valueOf(bKB.field_msgSvrId), Integer.valueOf(paramInt), bKz });
+      g.gdY.h(10421, new Object[] { Integer.valueOf(paramInt), Integer.valueOf(2), Long.valueOf(bjD), Long.valueOf(be.Gp()), Integer.valueOf(com.tencent.mm.modelcdntran.c.aI(aa.getContext())), Integer.valueOf(CdnTransportEngine.bDq), Integer.valueOf(bKC), "" });
       return paramInt;
-      paramInt = i;
-    } while (paramkeep_SceneResult == null);
-    h localh;
-    label202:
+    }
+    if (paramkeep_SceneResult == null) {
+      return 0;
+    }
+    g localg;
+    label198:
     long l1;
     long l2;
+    int i;
     int j;
     int k;
     if (field_retCode != 0)
     {
-      u.e("!44@/B4Tb64lLpJNEklygrV/uHRWMsvWL2iTy0xTOrIa8yo=", "getThumbByCdn failed: msgid:%d sceneResult.field_retCode:%d thumbUrl:%s", new Object[] { Long.valueOf(bRe.field_msgSvrId), Integer.valueOf(field_retCode), bRc });
-      localh = h.fUJ;
+      v.e("MicroMsg.AppMessageExtension", "getThumbByCdn failed: msgid:%d sceneResult.field_retCode:%d thumbUrl:%s", new Object[] { Long.valueOf(bKB.field_msgSvrId), Integer.valueOf(field_retCode), bKz });
+      localg = g.gdY;
       if (paramkeep_SceneResult != null) {
-        break label541;
+        break label537;
       }
       paramInt = -1;
-      l1 = bRf;
-      l2 = ay.FS();
-      i = com.tencent.mm.modelcdntran.c.aL(y.getContext());
-      j = CdnTransportEngine.bJY;
-      k = bRg;
+      l1 = bjD;
+      l2 = be.Gp();
+      i = com.tencent.mm.modelcdntran.c.aI(aa.getContext());
+      j = CdnTransportEngine.bDq;
+      k = bKC;
       if (paramkeep_SceneResult != null) {
-        break label550;
+        break label546;
       }
       paramString = "";
-      label240:
+      label236:
       if (paramkeep_SceneResult != null) {
-        break label559;
+        break label555;
       }
     }
-    label541:
-    label550:
-    label559:
+    label537:
+    label546:
+    label555:
     for (paramkeep_ProgressInfo = "";; paramkeep_ProgressInfo = report_Part2)
     {
-      localh.g(10421, new Object[] { Integer.valueOf(paramInt), Integer.valueOf(2), Long.valueOf(l1), Long.valueOf(l2), Integer.valueOf(i), Integer.valueOf(j), Integer.valueOf(k), paramString, "", "", "", "", "", "", "", paramkeep_ProgressInfo });
-      n.Ao().Ep();
+      localg.h(10421, new Object[] { Integer.valueOf(paramInt), Integer.valueOf(2), Long.valueOf(l1), Long.valueOf(l2), Integer.valueOf(i), Integer.valueOf(j), Integer.valueOf(k), paramString, "", "", "", "", "", "", "", paramkeep_ProgressInfo });
+      n.Ay().EJ();
       return 0;
-      paramString = j.a(e.c(bRh, 0, -1), iAY);
-      if (!ay.kz(paramString))
+      paramString = j.a(e.c(bKD, 0, -1), iXD);
+      if (!be.kf(paramString))
       {
-        bRe.cn(paramString);
-        com.tencent.mm.model.ah.tD().rs().b(bRe.field_msgSvrId, bRe);
+        bKB.cs(paramString);
+        ah.tE().rt().b(bKB.field_msgSvrId, bKB);
       }
-      u.i("!44@/B4Tb64lLpJNEklygrV/uHRWMsvWL2iTy0xTOrIa8yo=", "getThumbByCdn finished msgid:%d talker:%s thumbUrl:%s path:%s", new Object[] { Long.valueOf(bRb), bBG, bRc, paramString });
-      paramString = h.fUJ;
-      h.b(198L, 16L, bRg, false);
-      paramString = h.fUJ;
-      h.b(198L, 17L, 1L, false);
-      paramString = h.fUJ;
-      if (i.dn(bBG)) {}
+      v.i("MicroMsg.AppMessageExtension", "getThumbByCdn finished msgid:%d talker:%s thumbUrl:%s path:%s", new Object[] { Long.valueOf(bKy), bjA, bKz, paramString });
+      paramString = g.gdY;
+      g.b(198L, 16L, bKC, false);
+      paramString = g.gdY;
+      g.b(198L, 17L, 1L, false);
+      paramString = g.gdY;
+      if (i.du(bjA)) {}
       for (l1 = 19L;; l1 = 18L)
       {
-        h.b(198L, l1, 1L, false);
+        g.b(198L, l1, 1L, false);
         break;
       }
       paramInt = field_retCode;
-      break label202;
+      break label198;
       paramString = field_transInfo;
-      break label240;
+      break label236;
     }
   }
   
   public final void a(String paramString, ByteArrayOutputStream paramByteArrayOutputStream) {}
   
-  public final byte[] i(String paramString, byte[] paramArrayOfByte)
+  public final byte[] h(String paramString, byte[] paramArrayOfByte)
   {
     return null;
   }

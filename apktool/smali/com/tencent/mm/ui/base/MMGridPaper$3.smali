@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/base/MMGridPaper;->bcA()V
+    value = Lcom/tencent/mm/ui/base/MMGridPaper;->bhW()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kEx:Lcom/tencent/mm/ui/base/MMGridPaper;
+.field final synthetic ldA:Lcom/tencent/mm/ui/base/MMGridPaper;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 243
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMGridPaper$3;->kEx:Lcom/tencent/mm/ui/base/MMGridPaper;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMGridPaper$3;->ldA:Lcom/tencent/mm/ui/base/MMGridPaper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,14 +41,14 @@
 
     .prologue
     .line 247
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv"
+    const-string/jumbo v0, "MicroMsg.MMGridPaper"
 
     const-string/jumbo v1, "post do setDotView"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 248
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaper$3;->kEx:Lcom/tencent/mm/ui/base/MMGridPaper;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaper$3;->ldA:Lcom/tencent/mm/ui/base/MMGridPaper;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMGridPaper;->a(Lcom/tencent/mm/ui/base/MMGridPaper;)V
 

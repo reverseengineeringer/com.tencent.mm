@@ -47,7 +47,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;)V
+.method synthetic constructor <init>(Lcom/tencent/kingkong/database/SQLiteConnectionPool$1;)V
     .locals 0
 
     .prologue

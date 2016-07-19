@@ -3,7 +3,7 @@ package com.tencent.mm.app.plugin;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.pluginsdk.l;
 import com.tencent.mm.pluginsdk.ui.applet.g;
 import com.tencent.mm.pluginsdk.ui.d.b;
@@ -26,7 +26,7 @@ class URISpanHandlerSet$SettingPluginLomoUriSpanHandler
       }
       paramg = new Intent();
       paramg.putExtra("Contact_User", "weibo");
-      c.c(URISpanHandlerSet.a(ang), "profile", ".ui.ContactInfoUI", paramg);
+      c.c(URISpanHandlerSet.a(ZU), "profile", ".ui.ContactInfoUI", paramg);
       return true;
     }
     return false;
@@ -38,16 +38,16 @@ class URISpanHandlerSet$SettingPluginLomoUriSpanHandler
     {
       paramString = new Intent();
       paramString.putExtra("Contact_User", "weibo");
-      if ((URISpanHandlerSet.a(ang) instanceof Service)) {
+      if ((URISpanHandlerSet.a(ZU) instanceof Service)) {
         paramString.addFlags(268435456);
       }
-      c.c(URISpanHandlerSet.a(ang), "profile", ".ui.ContactInfoUI", paramString);
+      c.c(URISpanHandlerSet.a(ZU), "profile", ".ui.ContactInfoUI", paramString);
       return true;
     }
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     if (paramString.trim().startsWith("weixin://setting/plugin/lomo")) {
       return new g(paramString, 12, null);
@@ -55,7 +55,7 @@ class URISpanHandlerSet$SettingPluginLomoUriSpanHandler
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 12 };
   }

@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field public bZJ:I
+.field public bTB:I
 
-.field public bZS:I
+.field public bTC:I
 
-.field public bZT:I
+.field public bTs:I
 
 .field public content:Ljava/lang/String;
 
@@ -37,13 +37,13 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 130
-    iput p1, p0, Lcom/tencent/mm/modelsearch/m$h;->bZS:I
+    iput p1, p0, Lcom/tencent/mm/modelsearch/m$h;->bTB:I
 
     .line 131
-    iput p2, p0, Lcom/tencent/mm/modelsearch/m$h;->bZT:I
+    iput p2, p0, Lcom/tencent/mm/modelsearch/m$h;->bTC:I
 
     .line 132
-    iput p3, p0, Lcom/tencent/mm/modelsearch/m$h;->bZJ:I
+    iput p3, p0, Lcom/tencent/mm/modelsearch/m$h;->bTs:I
 
     .line 133
     iput-object p4, p0, Lcom/tencent/mm/modelsearch/m$h;->content:Ljava/lang/String;

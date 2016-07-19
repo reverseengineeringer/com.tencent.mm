@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ciT:Lcom/tencent/mm/network/r;
+.field final synthetic cek:Lcom/tencent/mm/network/r;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 853
-    iput-object p1, p0, Lcom/tencent/mm/network/r$2;->ciT:Lcom/tencent/mm/network/r;
+    .line 854
+    iput-object p1, p0, Lcom/tencent/mm/network/r$2;->cek:Lcom/tencent/mm/network/r;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,11 +37,11 @@
 
 # virtual methods
 .method public final run()V
-    .locals 4
+    .locals 5
 
     .prologue
-    .line 863
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
+    .line 864
+    invoke-static {}, Lcom/tencent/mm/network/z;->FD()Lcom/tencent/mm/network/y;
 
     move-result-object v0
 
@@ -49,10 +49,26 @@
 
     const/16 v2, -0x64
 
-    const-string/jumbo v3, "hit push hold!!"
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/network/y;->e(IILjava/lang/String;)V
+    const-string/jumbo v4, "hit push hold!!"
 
-    .line 865
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->baX()Lcom/tencent/mm/sdk/platformtools/af;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/network/y;->d(IILjava/lang/String;)V
+
+    .line 867
     return-void
 .end method

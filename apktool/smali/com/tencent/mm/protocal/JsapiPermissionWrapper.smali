@@ -8,24 +8,51 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Lcom/tencent/mm/protocal/JsapiPermissionWrapper;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final iUp:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
+.field public static final jrI:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
 
-.field public static final iUq:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
+.field public static final jrJ:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
 
-.field public static final iUr:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
+.field public static final jrK:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
 
-.field public static final iUs:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
+.field public static final jrL:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
 
 
 # instance fields
-.field public iUt:[B
+.field public jrM:[B
 
-.field private iUu:I
+.field private jrN:I
 
-.field private iUv:Ljava/util/Set;
+.field private jrO:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private iUw:Ljava/util/Set;
+.field private jrP:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -40,7 +67,7 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;-><init>(I)V
 
-    sput-object v0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUp:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
+    sput-object v0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrI:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
 
     .line 26
     new-instance v0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
@@ -49,7 +76,7 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;-><init>(I)V
 
-    sput-object v0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUq:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
+    sput-object v0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrJ:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
 
     .line 27
     new-instance v0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
@@ -58,7 +85,7 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;-><init>(I)V
 
-    sput-object v0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUr:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
+    sput-object v0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrK:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
 
     .line 28
     new-instance v0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
@@ -67,7 +94,7 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;-><init>(I)V
 
-    sput-object v0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUs:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
+    sput-object v0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrL:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
 
     .line 172
     new-instance v0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper$1;
@@ -89,15 +116,15 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 31
-    iput-object v1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iput-object v1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     .line 34
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUu:I
+    iput v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrN:I
 
     .line 47
-    iput-object v1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iput-object v1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     .line 48
     return-void
@@ -115,18 +142,18 @@
     .line 31
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iput-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     .line 34
-    iput v1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUu:I
+    iput v1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrN:I
 
     .line 58
-    iput p1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUu:I
+    iput p1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrN:I
 
     .line 59
     new-array v0, v1, [B
 
-    iput-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iput-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     .line 60
     return-void
@@ -142,26 +169,26 @@
     .line 31
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iput-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     .line 34
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUu:I
+    iput v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrN:I
 
     .line 183
     invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iput-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     .line 184
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUu:I
+    iput v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrN:I
 
     .line 185
     invoke-virtual {p1}, Landroid/os/Parcel;->createIntArray()[I
@@ -201,18 +228,18 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 31
-    iput-object v1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iput-object v1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     .line 34
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUu:I
+    iput v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrN:I
 
     .line 50
     if-nez p1, :cond_0
 
     .line 51
-    iput-object v1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iput-object v1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     .line 55
     :goto_0
@@ -220,12 +247,12 @@
 
     .line 53
     :cond_0
-    iput-object p1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iput-object p1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     goto :goto_0
 .end method
 
-.method public static aTp()Z
+.method public static aYm()Z
     .locals 1
 
     .prologue
@@ -235,19 +262,19 @@
     return v0
 .end method
 
-.method private aTq()[I
+.method private aYn()[I
     .locals 6
 
     .prologue
     const/4 v2, 0x0
 
     .line 204
-    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUv:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrO:Ljava/util/Set;
 
     if-eqz v0, :cond_2
 
     .line 205
-    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUv:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrO:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
@@ -256,7 +283,7 @@
     new-array v4, v0, [I
 
     .line 207
-    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUv:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrO:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -313,19 +340,19 @@
     goto :goto_2
 .end method
 
-.method private aTr()[I
+.method private aYo()[I
     .locals 6
 
     .prologue
     const/4 v2, 0x0
 
     .line 234
-    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUw:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrP:Ljava/util/Set;
 
     if-eqz v0, :cond_2
 
     .line 235
-    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUw:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrP:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
@@ -334,7 +361,7 @@
     new-array v4, v0, [I
 
     .line 237
-    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUw:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrP:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -426,9 +453,9 @@
     check-cast p1, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
 
     .line 270
-    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
-    iget-object v3, p1, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iget-object v3, p1, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     if-ne v0, v3, :cond_2
 
@@ -439,19 +466,19 @@
 
     .line 273
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p1, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iget-object v0, p1, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     array-length v0, v0
 
-    iget-object v3, p1, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iget-object v3, p1, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     array-length v3, v3
 
@@ -461,18 +488,18 @@
 
     .line 276
     :goto_1
-    iget-object v3, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iget-object v3, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     array-length v3, v3
 
     if-ge v0, v3, :cond_3
 
     .line 277
-    iget-object v3, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iget-object v3, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     aget-byte v3, v3, v0
 
-    iget-object v4, p1, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iget-object v4, p1, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     aget-byte v4, v4, v0
 
@@ -490,52 +517,12 @@
     goto :goto_0
 .end method
 
-.method public final l(Landroid/os/Bundle;)V
-    .locals 2
-
-    .prologue
-    .line 190
-    const-string/jumbo v0, "jsapi_perm_wrapper_bytes"
-
-    iget-object v1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
-
-    .line 191
-    const-string/jumbo v0, "jsapi_perm_wrapper_hardcodePermission"
-
-    iget v1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUu:I
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    .line 192
-    const-string/jumbo v0, "jsapi_perm_wrapper_blacklist"
-
-    invoke-direct {p0}, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->aTq()[I
-
-    move-result-object v1
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putIntArray(Ljava/lang/String;[I)V
-
-    .line 193
-    const-string/jumbo v0, "jsapi_perm_wrapper_whitelist"
-
-    invoke-direct {p0}, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->aTr()[I
-
-    move-result-object v1
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putIntArray(Ljava/lang/String;[I)V
-
-    .line 194
-    return-void
-.end method
-
 .method public final l([I)V
     .locals 3
 
     .prologue
     .line 217
-    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUv:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrO:Ljava/util/Set;
 
     if-nez v0, :cond_0
 
@@ -544,7 +531,7 @@
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUv:Ljava/util/Set;
+    iput-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrO:Ljava/util/Set;
 
     .line 222
     :goto_0
@@ -563,7 +550,7 @@
     if-ge v0, v1, :cond_1
 
     .line 224
-    iget-object v1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUv:Ljava/util/Set;
+    iget-object v1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrO:Ljava/util/Set;
 
     aget v2, p1, v0
 
@@ -580,7 +567,7 @@
 
     .line 220
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUv:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrO:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
@@ -591,7 +578,108 @@
     return-void
 .end method
 
-.method public final m(Landroid/os/Bundle;)V
+.method public final m([I)V
+    .locals 3
+
+    .prologue
+    .line 247
+    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrP:Ljava/util/Set;
+
+    if-nez v0, :cond_0
+
+    .line 248
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrP:Ljava/util/Set;
+
+    .line 252
+    :goto_0
+    if-eqz p1, :cond_1
+
+    array-length v0, p1
+
+    if-lez v0, :cond_1
+
+    .line 253
+    const/4 v0, 0x0
+
+    :goto_1
+    array-length v1, p1
+
+    if-ge v0, v1, :cond_1
+
+    .line 254
+    iget-object v1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrP:Ljava/util/Set;
+
+    aget v2, p1, v0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    .line 253
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    .line 250
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrP:Ljava/util/Set;
+
+    invoke-interface {v0}, Ljava/util/Set;->clear()V
+
+    goto :goto_0
+
+    .line 257
+    :cond_1
+    return-void
+.end method
+
+.method public final n(Landroid/os/Bundle;)V
+    .locals 2
+
+    .prologue
+    .line 190
+    const-string/jumbo v0, "jsapi_perm_wrapper_bytes"
+
+    iget-object v1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
+
+    .line 191
+    const-string/jumbo v0, "jsapi_perm_wrapper_hardcodePermission"
+
+    iget v1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrN:I
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    .line 192
+    const-string/jumbo v0, "jsapi_perm_wrapper_blacklist"
+
+    invoke-direct {p0}, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->aYn()[I
+
+    move-result-object v1
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putIntArray(Ljava/lang/String;[I)V
+
+    .line 193
+    const-string/jumbo v0, "jsapi_perm_wrapper_whitelist"
+
+    invoke-direct {p0}, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->aYo()[I
+
+    move-result-object v1
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putIntArray(Ljava/lang/String;[I)V
+
+    .line 194
+    return-void
+.end method
+
+.method public final o(Landroid/os/Bundle;)V
     .locals 1
 
     .prologue
@@ -602,7 +690,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iput-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     .line 198
     const-string/jumbo v0, "jsapi_perm_wrapper_hardcodePermission"
@@ -611,7 +699,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUu:I
+    iput v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrN:I
 
     .line 199
     const-string/jumbo v0, "jsapi_perm_wrapper_blacklist"
@@ -635,68 +723,7 @@
     return-void
 .end method
 
-.method public final m([I)V
-    .locals 3
-
-    .prologue
-    .line 247
-    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUw:Ljava/util/Set;
-
-    if-nez v0, :cond_0
-
-    .line 248
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUw:Ljava/util/Set;
-
-    .line 252
-    :goto_0
-    if-eqz p1, :cond_1
-
-    array-length v0, p1
-
-    if-lez v0, :cond_1
-
-    .line 253
-    const/4 v0, 0x0
-
-    :goto_1
-    array-length v1, p1
-
-    if-ge v0, v1, :cond_1
-
-    .line 254
-    iget-object v1, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUw:Ljava/util/Set;
-
-    aget v2, p1, v0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    .line 253
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    .line 250
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUw:Ljava/util/Set;
-
-    invoke-interface {v0}, Ljava/util/Set;->clear()V
-
-    goto :goto_0
-
-    .line 257
-    :cond_1
-    return-void
-.end method
-
-.method public final oS(I)I
+.method public final qF(I)I
     .locals 7
 
     .prologue
@@ -711,11 +738,11 @@
     const/4 v0, 0x1
 
     .line 78
-    iget-object v2, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUw:Ljava/util/Set;
+    iget-object v2, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrP:Ljava/util/Set;
 
     if-eqz v2, :cond_1
 
-    iget-object v2, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUw:Ljava/util/Set;
+    iget-object v2, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrP:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -745,11 +772,11 @@
 
     .line 81
     :cond_2
-    iget-object v2, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUv:Ljava/util/Set;
+    iget-object v2, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrO:Ljava/util/Set;
 
     if-eqz v2, :cond_3
 
-    iget-object v2, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUv:Ljava/util/Set;
+    iget-object v2, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrO:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -779,7 +806,7 @@
 
     .line 84
     :cond_4
-    iget v2, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUu:I
+    iget v2, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrN:I
 
     if-ne v2, v0, :cond_6
 
@@ -790,7 +817,7 @@
 
     .line 87
     :cond_5
-    const-string/jumbo v2, "!44@/B4Tb64lLpJGrp3jueSX7a0O+uIaXB6eg8mTj+F44r0="
+    const-string/jumbo v2, "MicroMsg.JsapiPermissionWrapper"
 
     const-string/jumbo v3, "on reserved bytes control : %d"
 
@@ -802,7 +829,7 @@
 
     aput-object v4, v0, v1
 
-    invoke-static {v2, v3, v0}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v0}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -811,7 +838,7 @@
 
     .line 91
     :cond_6
-    iget v2, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUu:I
+    iget v2, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrN:I
 
     const/4 v3, 0x2
 
@@ -827,7 +854,7 @@
 
     .line 98
     :cond_7
-    iget v2, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUu:I
+    iget v2, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrN:I
 
     const/4 v3, 0x3
 
@@ -844,7 +871,7 @@
 
     .line 100
     :cond_8
-    const-string/jumbo v2, "!44@/B4Tb64lLpJGrp3jueSX7a0O+uIaXB6eg8mTj+F44r0="
+    const-string/jumbo v2, "MicroMsg.JsapiPermissionWrapper"
 
     const-string/jumbo v3, "on reserved bytes control : %d"
 
@@ -856,7 +883,7 @@
 
     aput-object v4, v0, v1
 
-    invoke-static {v2, v3, v0}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v0}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -865,7 +892,7 @@
 
     .line 105
     :cond_9
-    iget v2, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUu:I
+    iget v2, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrN:I
 
     const/4 v3, 0x4
 
@@ -878,7 +905,7 @@
 
     .line 107
     :cond_a
-    const-string/jumbo v2, "!44@/B4Tb64lLpJGrp3jueSX7a0O+uIaXB6eg8mTj+F44r0="
+    const-string/jumbo v2, "MicroMsg.JsapiPermissionWrapper"
 
     const-string/jumbo v3, "hy: on reserved bytes control : %d"
 
@@ -890,7 +917,7 @@
 
     aput-object v4, v0, v1
 
-    invoke-static {v2, v3, v0}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v0}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -906,13 +933,13 @@
     if-eq p1, v6, :cond_0
 
     .line 117
-    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     if-eqz v0, :cond_c
 
     if-ltz p1, :cond_c
 
-    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     array-length v0, v0
 
@@ -926,21 +953,21 @@
 
     .line 120
     :cond_d
-    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     aget-byte v0, v0, p1
 
     goto/16 :goto_1
 .end method
 
-.method public final oT(I)Z
+.method public final qG(I)Z
     .locals 2
 
     .prologue
     const/4 v0, 0x1
 
     .line 132
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->oS(I)I
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->qF(I)I
 
     move-result v1
 
@@ -957,13 +984,13 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 9
+    .locals 10
 
     .prologue
     const/4 v1, 0x0
 
     .line 146
-    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     if-nez v0, :cond_0
 
@@ -988,7 +1015,7 @@
     invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 151
-    iget-object v5, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iget-object v5, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     array-length v6, v5
 
@@ -1014,7 +1041,7 @@
     move-result-object v0
 
     .line 155
-    const-string/jumbo v4, "!44@/B4Tb64lLpJGrp3jueSX7a0O+uIaXB6eg8mTj+F44r0="
+    const-string/jumbo v4, "MicroMsg.JsapiPermissionWrapper"
 
     const-string/jumbo v5, "toString cost %s"
 
@@ -1024,9 +1051,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    sub-long v2, v7, v2
+    sub-long v2, v8, v2
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -1034,7 +1061,7 @@
 
     aput-object v2, v6, v1
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -1044,24 +1071,24 @@
 
     .prologue
     .line 166
-    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUt:[B
+    iget-object v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrM:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
     .line 167
-    iget v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUu:I
+    iget v0, p0, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->jrN:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 168
-    invoke-direct {p0}, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->aTq()[I
+    invoke-direct {p0}, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->aYn()[I
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeIntArray([I)V
 
     .line 169
-    invoke-direct {p0}, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->aTr()[I
+    invoke-direct {p0}, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->aYo()[I
 
     move-result-object v0
 

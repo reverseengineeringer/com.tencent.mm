@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic kPK:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
+.field final synthetic loZ:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 266
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$a;->kPK:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$a;->loZ:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
 
     invoke-direct {p0}, Lcom/tencent/mm/ui/applet/SecurityImage$b;-><init>()V
 
@@ -33,51 +33,53 @@
 
 
 # virtual methods
-.method public final bby()V
-    .locals 9
+.method public final bgK()V
+    .locals 10
 
     .prologue
     .line 270
-    new-instance v0, Lcom/tencent/mm/s/a;
+    new-instance v1, Lcom/tencent/mm/u/a;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$a;->kPK:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$a;->loZ:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/bindqq/VerifyQQUI;->b(Lcom/tencent/mm/ui/bindqq/VerifyQQUI;)J
+    invoke-static {v0}, Lcom/tencent/mm/ui/bindqq/VerifyQQUI;->b(Lcom/tencent/mm/ui/bindqq/VerifyQQUI;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$a;->kPK:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$a;->loZ:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
 
-    invoke-static {v3}, Lcom/tencent/mm/ui/bindqq/VerifyQQUI;->c(Lcom/tencent/mm/ui/bindqq/VerifyQQUI;)Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$a;->kPK:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
-
-    invoke-static {v4}, Lcom/tencent/mm/ui/bindqq/VerifyQQUI;->i(Lcom/tencent/mm/ui/bindqq/VerifyQQUI;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/ui/bindqq/VerifyQQUI;->c(Lcom/tencent/mm/ui/bindqq/VerifyQQUI;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-string/jumbo v5, ""
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$a;->loZ:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
 
-    iget-object v6, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$a;->kPK:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
+    invoke-static {v0}, Lcom/tencent/mm/ui/bindqq/VerifyQQUI;->i(Lcom/tencent/mm/ui/bindqq/VerifyQQUI;)Ljava/lang/String;
 
-    invoke-static {v6}, Lcom/tencent/mm/ui/bindqq/VerifyQQUI;->j(Lcom/tencent/mm/ui/bindqq/VerifyQQUI;)Ljava/lang/String;
+    move-result-object v5
 
-    move-result-object v6
+    const-string/jumbo v6, ""
 
-    const/4 v7, 0x2
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$a;->loZ:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
 
-    const/4 v8, 0x1
+    invoke-static {v0}, Lcom/tencent/mm/ui/bindqq/VerifyQQUI;->j(Lcom/tencent/mm/ui/bindqq/VerifyQQUI;)Ljava/lang/String;
 
-    invoke-direct/range {v0 .. v8}, Lcom/tencent/mm/s/a;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)V
+    move-result-object v7
+
+    const/4 v8, 0x2
+
+    const/4 v9, 0x1
+
+    invoke-direct/range {v1 .. v9}, Lcom/tencent/mm/u/a;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)V
 
     .line 271
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
     .line 272
     return-void

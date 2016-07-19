@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private cRI:Landroid/view/View;
+.field private cPr:Landroid/view/View;
 
-.field private kFG:Landroid/widget/TextView;
+.field private leK:Landroid/widget/TextView;
 
-.field public kFH:Landroid/widget/ProgressBar;
+.field public leL:Landroid/widget/ProgressBar;
 
 .field private mContext:Landroid/content/Context;
 
@@ -20,7 +20,7 @@
     .locals 3
 
     .prologue
-    const v0, 0x7f0a05a7
+    const v0, 0x7f0303fb
 
     .line 40
     invoke-direct {p0, p1, p2}, Lcom/tencent/mm/ui/base/q;-><init>(Landroid/content/Context;I)V
@@ -40,7 +40,7 @@
     :pswitch_0
     iget-object v1, p0, Lcom/tencent/mm/ui/base/p;->mContext:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/p;->ee(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {v1}, Lcom/tencent/mm/ui/p;->ef(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v1
 
@@ -50,11 +50,11 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/p;->cRI:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/p;->cPr:Landroid/view/View;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/p;->cRI:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/p;->cPr:Landroid/view/View;
 
-    const v1, 0x7f070185
+    const v1, 0x7f10021d
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -62,11 +62,11 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/p;->kFG:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/p;->leK:Landroid/widget/TextView;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/p;->cRI:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/p;->cPr:Landroid/view/View;
 
-    const v1, 0x7f070184
+    const v1, 0x7f10021c
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -74,7 +74,7 @@
 
     check-cast v0, Landroid/widget/ProgressBar;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/p;->kFH:Landroid/widget/ProgressBar;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/p;->leL:Landroid/widget/ProgressBar;
 
     const/4 v0, 0x1
 
@@ -85,7 +85,7 @@
 
     .line 43
     :pswitch_1
-    const v0, 0x7f0a05d7
+    const v0, 0x7f0303fc
 
     goto :goto_0
 
@@ -103,13 +103,13 @@
     .locals 2
 
     .prologue
-    const v0, 0x7f06019d
+    const v0, 0x7f0c026b
 
     .line 110
     packed-switch p3, :pswitch_data_0
 
     .line 121
-    const v0, 0x7f06019e
+    const v0, 0x7f0c026f
 
     .line 124
     :pswitch_0
@@ -180,7 +180,7 @@
     move-exception v0
 
     .line 155
-    const-string/jumbo v1, "!44@/B4Tb64lLpJDo00GMnWoAcVr9A609/EODCMtTr6hXKs="
+    const-string/jumbo v1, "MicroMsg.MMProgressDialog"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -200,7 +200,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -217,7 +217,7 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/base/q;->onCreate(Landroid/os/Bundle;)V
 
     .line 49
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/p;->cRI:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/p;->cPr:Landroid/view/View;
 
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
@@ -286,7 +286,7 @@
 
     .prologue
     .line 104
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/p;->kFG:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/p;->leK:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -313,7 +313,7 @@
     move-exception v0
 
     .line 146
-    const-string/jumbo v1, "!44@/B4Tb64lLpJDo00GMnWoAcVr9A609/EODCMtTr6hXKs="
+    const-string/jumbo v1, "MicroMsg.MMProgressDialog"
 
     const-string/jumbo v2, ""
 
@@ -321,7 +321,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method

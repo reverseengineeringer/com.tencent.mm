@@ -1,6 +1,5 @@
 .class public final Lcom/tencent/smtt/sdk/h;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # annotations
@@ -12,26 +11,24 @@
 
 
 # static fields
-.field private static lSi:Lcom/tencent/smtt/sdk/h;
+.field private static mtX:Lcom/tencent/smtt/sdk/h;
 
 
 # instance fields
-.field private lSf:Lcom/tencent/smtt/sdk/h$a;
+.field private mtU:Lcom/tencent/smtt/sdk/h$a;
 
-.field private lSg:Z
+.field private mtV:Z
 
-.field private final lSh:I
+.field private final mtW:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 29
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/smtt/sdk/h;->lSi:Lcom/tencent/smtt/sdk/h;
+    sput-object v0, Lcom/tencent/smtt/sdk/h;->mtX:Lcom/tencent/smtt/sdk/h;
 
     return-void
 .end method
@@ -39,44 +36,34 @@
 .method private constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/h;->lSf:Lcom/tencent/smtt/sdk/h$a;
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/h;->mtU:Lcom/tencent/smtt/sdk/h$a;
 
-    .line 27
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/smtt/sdk/h;->lSg:Z
+    iput-boolean v0, p0, Lcom/tencent/smtt/sdk/h;->mtV:Z
 
-    .line 28
     const/4 v0, 0x3
 
-    iput v0, p0, Lcom/tencent/smtt/sdk/h;->lSh:I
+    iput v0, p0, Lcom/tencent/smtt/sdk/h;->mtW:I
 
-    .line 30
     return-void
 .end method
 
 .method private static a(Ljava/io/FileOutputStream;)Ljava/nio/channels/FileLock;
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 233
     if-nez p0, :cond_1
 
-    .line 242
     :cond_0
     :goto_0
     return-object v0
 
-    .line 236
     :cond_1
     :try_start_0
     invoke-virtual {p0}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
@@ -87,7 +74,6 @@
 
     move-result-object v1
 
-    .line 237
     invoke-virtual {v1}, Ljava/nio/channels/FileLock;->isValid()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -98,7 +84,6 @@
 
     move-object v0, v1
 
-    .line 239
     goto :goto_0
 
     :catch_0
@@ -107,33 +92,27 @@
     goto :goto_0
 .end method
 
-.method private static bg(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
+.method private static bf(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 183
-    invoke-static {}, Lcom/tencent/smtt/sdk/m;->blT()Lcom/tencent/smtt/sdk/m;
+    invoke-static {}, Lcom/tencent/smtt/sdk/m;->brX()Lcom/tencent/smtt/sdk/m;
 
     invoke-static {p0}, Lcom/tencent/smtt/sdk/m;->fl(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v2
 
-    .line 184
     if-nez v2, :cond_0
 
-    .line 194
     :goto_0
     return-object v0
 
-    .line 185
     :cond_0
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v2, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 186
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -142,10 +121,8 @@
 
     move-object v0, v1
 
-    .line 188
     goto :goto_0
 
-    .line 191
     :cond_1
     :try_start_0
     invoke-virtual {v1}, Ljava/io/File;->createNewFile()Z
@@ -154,54 +131,44 @@
 
     move-object v0, v1
 
-    .line 192
     goto :goto_0
 
-    .line 194
     :catch_0
     move-exception v1
 
     goto :goto_0
 .end method
 
-.method public static bly()Lcom/tencent/smtt/sdk/h;
+.method public static brC()Lcom/tencent/smtt/sdk/h;
     .locals 1
 
-    .prologue
-    .line 33
-    sget-object v0, Lcom/tencent/smtt/sdk/h;->lSi:Lcom/tencent/smtt/sdk/h;
+    sget-object v0, Lcom/tencent/smtt/sdk/h;->mtX:Lcom/tencent/smtt/sdk/h;
 
     if-nez v0, :cond_0
 
-    .line 34
     new-instance v0, Lcom/tencent/smtt/sdk/h;
 
     invoke-direct {v0}, Lcom/tencent/smtt/sdk/h;-><init>()V
 
-    sput-object v0, Lcom/tencent/smtt/sdk/h;->lSi:Lcom/tencent/smtt/sdk/h;
+    sput-object v0, Lcom/tencent/smtt/sdk/h;->mtX:Lcom/tencent/smtt/sdk/h;
 
-    .line 37
     :cond_0
-    sget-object v0, Lcom/tencent/smtt/sdk/h;->lSi:Lcom/tencent/smtt/sdk/h;
+    sget-object v0, Lcom/tencent/smtt/sdk/h;->mtX:Lcom/tencent/smtt/sdk/h;
 
     return-object v0
 .end method
 
-.method private static eS(Landroid/content/Context;)Ljava/io/FileOutputStream;
+.method private static eU(Landroid/content/Context;)Ljava/io/FileOutputStream;
     .locals 2
 
-    .prologue
-    .line 210
     const-string/jumbo v0, "tbs_report_lock.txt"
 
-    invoke-static {p0, v0}, Lcom/tencent/smtt/sdk/h;->bg(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p0, v0}, Lcom/tencent/smtt/sdk/h;->bf(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v1
 
-    .line 211
     if-eqz v1, :cond_0
 
-    .line 213
     :try_start_0
     new-instance v0, Ljava/io/FileOutputStream;
 
@@ -209,7 +176,6 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 215
     :goto_0
     return-object v0
 
@@ -224,39 +190,33 @@
 
 
 # virtual methods
-.method final N(Landroid/content/Context;I)V
+.method final S(Landroid/content/Context;I)V
     .locals 2
 
-    .prologue
-    .line 139
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/tencent/smtt/sdk/h;->a(Landroid/content/Context;ILjava/lang/Throwable;)V
 
-    .line 140
     const-string/jumbo v0, "loaderror"
 
     invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/smtt/utils/TbsLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 141
     return-void
 .end method
 
 .method final a(Landroid/content/Context;ILjava/lang/Throwable;)V
     .locals 9
 
-    .prologue
     const/16 v6, 0x400
 
     const/4 v3, 0x1
 
     const/4 v4, 0x0
 
-    .line 154
     const/16 v0, 0x194
 
     if-eq p2, v0, :cond_0
@@ -270,18 +230,18 @@
     if-ne p2, v0, :cond_2
 
     :cond_0
-    iput-boolean v4, p0, Lcom/tencent/smtt/sdk/h;->lSg:Z
+    iput-boolean v4, p0, Lcom/tencent/smtt/sdk/h;->mtV:Z
 
     :goto_0
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/h;->lSg:Z
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/h;->mtV:Z
 
     if-ne v0, v3, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/h;->lSf:Lcom/tencent/smtt/sdk/h$a;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/h;->mtU:Lcom/tencent/smtt/sdk/h$a;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/h;->lSf:Lcom/tencent/smtt/sdk/h$a;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/h;->mtU:Lcom/tencent/smtt/sdk/h$a;
 
     invoke-virtual {v0}, Lcom/tencent/smtt/sdk/h$a;->empty()Z
 
@@ -289,24 +249,22 @@
 
     if-eqz v0, :cond_1
 
-    iput-boolean v4, p0, Lcom/tencent/smtt/sdk/h;->lSg:Z
+    iput-boolean v4, p0, Lcom/tencent/smtt/sdk/h;->mtV:Z
 
-    .line 155
     :cond_1
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/h;->lSg:Z
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/h;->mtV:Z
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_a
 
-    .line 157
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/h;->lSf:Lcom/tencent/smtt/sdk/h$a;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/h;->mtU:Lcom/tencent/smtt/sdk/h$a;
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_b
 
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/h;->lSf:Lcom/tencent/smtt/sdk/h$a;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/h;->mtU:Lcom/tencent/smtt/sdk/h$a;
 
-    iget v1, v0, Lcom/tencent/smtt/sdk/h$a;->lSn:I
+    iget v1, v0, Lcom/tencent/smtt/sdk/h$a;->muc:I
 
-    iget v2, v0, Lcom/tencent/smtt/sdk/h$a;->lSk:I
+    iget v2, v0, Lcom/tencent/smtt/sdk/h$a;->mtZ:I
 
     add-int/lit8 v2, v2, -0x1
 
@@ -320,64 +278,136 @@
 
     throw v0
 
-    .line 154
     :cond_2
-    iput-boolean v3, p0, Lcom/tencent/smtt/sdk/h;->lSg:Z
+    iput-boolean v3, p0, Lcom/tencent/smtt/sdk/h;->mtV:Z
 
     goto :goto_0
 
-    .line 157
     :cond_3
-    iget-object v1, v0, Lcom/tencent/smtt/sdk/h$a;->lSl:[I
+    iget-object v1, v0, Lcom/tencent/smtt/sdk/h$a;->mua:[I
 
-    iget v2, v0, Lcom/tencent/smtt/sdk/h$a;->lSn:I
+    iget v2, v0, Lcom/tencent/smtt/sdk/h$a;->muc:I
 
     add-int/lit8 v5, v2, 0x1
 
-    iput v5, v0, Lcom/tencent/smtt/sdk/h$a;->lSn:I
+    iput v5, v0, Lcom/tencent/smtt/sdk/h$a;->muc:I
 
     aput p2, v1, v2
 
-    .line 160
     :goto_1
-    if-eqz p3, :cond_4
+    if-eqz p3, :cond_6
 
-    .line 162
     invoke-static {p1}, Lcom/tencent/smtt/sdk/o;->fp(Landroid/content/Context;)Lcom/tencent/smtt/sdk/o;
 
     move-result-object v2
 
-    if-nez p3, :cond_a
+    if-eqz p3, :cond_f
 
-    const-string/jumbo v0, ""
+    iget-object v0, v2, Lcom/tencent/smtt/sdk/o;->mContext:Landroid/content/Context;
 
-    move-object v1, v2
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/q;->fr(Landroid/content/Context;)Z
 
-    :goto_2
-    iput-object v0, v1, Lcom/tencent/smtt/sdk/o;->lTe:Ljava/lang/String;
+    move-result v0
 
-    iget-object v0, v2, Lcom/tencent/smtt/sdk/o;->lTe:Ljava/lang/String;
+    if-nez v0, :cond_4
 
-    invoke-virtual {v2, p2, v0}, Lcom/tencent/smtt/sdk/o;->am(ILjava/lang/String;)V
+    const/16 v0, 0x136
 
-    .line 166
+    if-eq p2, v0, :cond_4
+
+    const/16 v0, 0x147
+
+    if-eq p2, v0, :cond_4
+
+    const/16 v0, 0x146
+
+    if-eq p2, v0, :cond_4
+
+    const/16 v0, 0x148
+
+    if-ne p2, v0, :cond_c
+
     :cond_4
-    const/16 v0, 0x195
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-ne p2, v0, :cond_8
+    const-string/jumbo v1, "msg: "
 
-    .line 168
-    invoke-static {p1}, Lcom/tencent/smtt/sdk/h;->eS(Landroid/content/Context;)Ljava/io/FileOutputStream;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
-    if-eqz v1, :cond_7
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "; err: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "; cause: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {p3}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-le v1, v6, :cond_5
+
+    invoke-virtual {v0, v4, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_5
+    iput-object v0, v2, Lcom/tencent/smtt/sdk/o;->muW:Ljava/lang/String;
+
+    :goto_2
+    iget-object v0, v2, Lcom/tencent/smtt/sdk/o;->muW:Ljava/lang/String;
+
+    invoke-virtual {v2, p2, v0}, Lcom/tencent/smtt/sdk/o;->aw(ILjava/lang/String;)V
+
+    :cond_6
+    const/16 v0, 0x195
+
+    if-ne p2, v0, :cond_a
+
+    invoke-static {p1}, Lcom/tencent/smtt/sdk/h;->eU(Landroid/content/Context;)Ljava/io/FileOutputStream;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_9
 
     invoke-static {v1}, Lcom/tencent/smtt/sdk/h;->a(Ljava/io/FileOutputStream;)Ljava/nio/channels/FileLock;
 
     move-result-object v2
 
-    if-eqz v2, :cond_7
+    if-eqz v2, :cond_9
 
     const-string/jumbo v0, "tbs_load_stat_flag"
 
@@ -387,7 +417,7 @@
 
     move-result-object v5
 
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/h;->lSf:Lcom/tencent/smtt/sdk/h$a;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/h;->mtU:Lcom/tencent/smtt/sdk/h$a;
 
     invoke-virtual {v0}, Lcom/tencent/smtt/sdk/h$a;->toString()Ljava/lang/String;
 
@@ -399,9 +429,11 @@
 
     move-result-object v7
 
-    invoke-static {}, Lcom/tencent/smtt/sdk/m;->blT()Lcom/tencent/smtt/sdk/m;
+    invoke-static {}, Lcom/tencent/smtt/sdk/m;->brX()Lcom/tencent/smtt/sdk/m;
 
-    invoke-static {p1}, Lcom/tencent/smtt/sdk/m;->fe(Landroid/content/Context;)I
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/m;->ff(Landroid/content/Context;)I
 
     move-result v0
 
@@ -431,12 +463,12 @@
 
     move-result v0
 
-    if-nez v0, :cond_c
+    if-nez v0, :cond_10
 
     move v0, v3
 
     :goto_3
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_7
 
     invoke-static {p1}, Lcom/tencent/smtt/sdk/o;->fp(Landroid/content/Context;)Lcom/tencent/smtt/sdk/o;
 
@@ -444,7 +476,7 @@
 
     const/16 v3, 0x12c
 
-    invoke-virtual {v0, v3, v6}, Lcom/tencent/smtt/sdk/o;->am(ILjava/lang/String;)V
+    invoke-virtual {v0, v3, v6}, Lcom/tencent/smtt/sdk/o;->aw(ILjava/lang/String;)V
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -470,44 +502,52 @@
 
     invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    :cond_5
-    if-eqz v2, :cond_6
+    :cond_7
+    if-eqz v2, :cond_8
 
     :try_start_0
     invoke-virtual {v2}, Ljava/nio/channels/FileLock;->release()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_6
+    :cond_8
     :goto_4
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_9
 
     :try_start_1
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 169
-    :cond_7
+    :cond_9
     :goto_5
-    invoke-virtual {p0}, Lcom/tencent/smtt/sdk/h;->blz()V
+    invoke-virtual {p0}, Lcom/tencent/smtt/sdk/h;->brD()V
 
-    .line 173
-    :cond_8
+    :cond_a
     return-void
 
-    .line 157
-    :cond_9
+    :cond_b
     new-instance v0, Lcom/tencent/smtt/sdk/h$a;
 
     invoke-direct {v0, p0, p2}, Lcom/tencent/smtt/sdk/h$a;-><init>(Lcom/tencent/smtt/sdk/h;I)V
 
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/h;->lSf:Lcom/tencent/smtt/sdk/h$a;
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/h;->mtU:Lcom/tencent/smtt/sdk/h$a;
 
     goto/16 :goto_1
 
-    .line 162
-    :cond_a
+    :cond_c
+    if-nez p3, :cond_d
+
+    const-string/jumbo v0, ""
+
+    move-object v1, v2
+
+    :goto_6
+    iput-object v0, v1, Lcom/tencent/smtt/sdk/o;->muW:Ljava/lang/String;
+
+    goto/16 :goto_2
+
+    :cond_d
     invoke-static {p3}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
@@ -516,7 +556,7 @@
 
     move-result v1
 
-    if-le v1, v6, :cond_b
+    if-le v1, v6, :cond_e
 
     invoke-virtual {v0, v4, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -524,20 +564,26 @@
 
     move-object v1, v2
 
-    goto/16 :goto_2
+    goto :goto_6
 
-    :cond_b
+    :cond_e
     move-object v1, v2
 
+    goto :goto_6
+
+    :cond_f
+    const-string/jumbo v0, "NULL"
+
+    iput-object v0, v2, Lcom/tencent/smtt/sdk/o;->muW:Ljava/lang/String;
+
     goto/16 :goto_2
 
-    .line 168
-    :cond_c
+    :cond_10
     invoke-virtual {v7, v8}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_d
+    if-nez v0, :cond_11
 
     move v0, v3
 
@@ -553,38 +599,33 @@
 
     goto :goto_5
 
-    :cond_d
+    :cond_11
     move v0, v4
 
     goto :goto_3
 .end method
 
-.method final blz()V
+.method final brD()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 45
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/h;->lSf:Lcom/tencent/smtt/sdk/h$a;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/h;->mtU:Lcom/tencent/smtt/sdk/h$a;
 
     if-eqz v0, :cond_0
 
-    .line 47
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/h;->lSf:Lcom/tencent/smtt/sdk/h$a;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/h;->mtU:Lcom/tencent/smtt/sdk/h$a;
 
-    iget-object v1, v0, Lcom/tencent/smtt/sdk/h$a;->lSl:[I
+    iget-object v1, v0, Lcom/tencent/smtt/sdk/h$a;->mua:[I
 
     invoke-static {v1, v2}, Ljava/util/Arrays;->fill([II)V
 
-    iput v2, v0, Lcom/tencent/smtt/sdk/h$a;->lSm:I
+    iput v2, v0, Lcom/tencent/smtt/sdk/h$a;->mub:I
 
-    iput v2, v0, Lcom/tencent/smtt/sdk/h$a;->lSn:I
+    iput v2, v0, Lcom/tencent/smtt/sdk/h$a;->muc:I
 
-    .line 50
     :cond_0
-    iput-boolean v2, p0, Lcom/tencent/smtt/sdk/h;->lSg:Z
+    iput-boolean v2, p0, Lcom/tencent/smtt/sdk/h;->mtV:Z
 
-    .line 52
     return-void
 .end method

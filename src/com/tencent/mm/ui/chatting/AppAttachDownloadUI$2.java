@@ -10,7 +10,7 @@ final class AppAttachDownloadUI$2
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    AppAttachDownloadUI.a(kQa, AppAttachDownloadUI.b(kQa));
+    AppAttachDownloadUI.a(lpP, AppAttachDownloadUI.b(lpP));
     return false;
   }
 }

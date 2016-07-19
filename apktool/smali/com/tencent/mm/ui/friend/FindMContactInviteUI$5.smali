@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/ab$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ad$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/friend/FindMContactInviteUI;->bhY()V
+    value = Lcom/tencent/mm/ui/friend/FindMContactInviteUI;->bnU()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+.field final synthetic lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 132
-    iput-object p1, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$5;->lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$5;->lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -66,17 +66,17 @@
     return-object v0
 .end method
 
-.method public final vd()Z
+.method public final vf()Z
     .locals 2
 
     .prologue
     .line 146
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$5;->lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$5;->lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$5;->lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$5;->lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
-    invoke-static {v1}, Lcom/tencent/mm/pluginsdk/a;->cE(Landroid/content/Context;)Ljava/util/List;
+    invoke-static {v1}, Lcom/tencent/mm/pluginsdk/a;->cA(Landroid/content/Context;)Ljava/util/List;
 
     move-result-object v1
 
@@ -86,28 +86,28 @@
 
     .line 148
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$5;->lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$5;->lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactInviteUI;->b(Lcom/tencent/mm/ui/friend/FindMContactInviteUI;)Lcom/tencent/mm/modelfriend/j;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$5;->lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$5;->lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/friend/FindMContactInviteUI;->c(Lcom/tencent/mm/ui/friend/FindMContactInviteUI;)Ljava/util/List;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/modelfriend/j;->bMj:Ljava/util/List;
+    iput-object v1, v0, Lcom/tencent/mm/modelfriend/j;->bFD:Ljava/util/List;
 
     .line 151
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$5;->lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$5;->lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactInviteUI;->b(Lcom/tencent/mm/ui/friend/FindMContactInviteUI;)Lcom/tencent/mm/modelfriend/j;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zw()Ljava/util/LinkedList;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zJ()Ljava/util/LinkedList;
 
     move-result-object v1
 
@@ -124,12 +124,12 @@
     goto :goto_0
 .end method
 
-.method public final ve()Z
+.method public final vg()Z
     .locals 2
 
     .prologue
     .line 135
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$5;->lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$5;->lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactInviteUI;->a(Lcom/tencent/mm/ui/friend/FindMContactInviteUI;)Landroid/app/ProgressDialog;
 
@@ -138,7 +138,7 @@
     if-eqz v0, :cond_0
 
     .line 136
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$5;->lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$5;->lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactInviteUI;->a(Lcom/tencent/mm/ui/friend/FindMContactInviteUI;)Landroid/app/ProgressDialog;
 
@@ -147,7 +147,7 @@
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
     .line 137
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$5;->lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$5;->lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
     const/4 v1, 0x0
 
@@ -155,7 +155,7 @@
 
     .line 139
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$5;->lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$5;->lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactInviteUI;->b(Lcom/tencent/mm/ui/friend/FindMContactInviteUI;)Lcom/tencent/mm/modelfriend/j;
 

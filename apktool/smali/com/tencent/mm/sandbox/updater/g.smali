@@ -3,46 +3,63 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/ob;",
+        ">;"
+    }
+.end annotation
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
     .prologue
-    .line 13
-    const/4 v0, 0x0
+    .line 10
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/ob;
 
-    .line 14
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/sandbox/updater/g;->kum:I
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 4
 
     .prologue
     const/4 v3, 0x0
 
-    .line 18
-    instance-of v0, p1, Lcom/tencent/mm/d/a/no;
+    .line 10
+    check-cast p1, Lcom/tencent/mm/e/a/ob;
+
+    instance-of v0, p1, Lcom/tencent/mm/e/a/ob;
 
     if-nez v0, :cond_1
 
-    .line 31
     :cond_0
     :goto_0
     return v3
 
-    .line 22
     :cond_1
-    check-cast p1, Lcom/tencent/mm/d/a/no;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/ob;->awm:Lcom/tencent/mm/e/a/ob$a;
 
-    .line 23
-    iget-object v0, p1, Lcom/tencent/mm/d/a/no;->aJS:Lcom/tencent/mm/d/a/no$a;
-
-    iget-object v0, v0, Lcom/tencent/mm/d/a/no$a;->context:Landroid/content/Context;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/ob$a;->context:Landroid/content/Context;
 
     const/4 v1, 0x0
 
@@ -50,13 +67,11 @@
 
     move-result-object v0
 
-    .line 24
     if-eqz v0, :cond_0
 
-    .line 29
-    iget-object v1, p1, Lcom/tencent/mm/d/a/no;->aJS:Lcom/tencent/mm/d/a/no$a;
+    iget-object v1, p1, Lcom/tencent/mm/e/a/ob;->awm:Lcom/tencent/mm/e/a/ob$a;
 
-    iget v1, v1, Lcom/tencent/mm/d/a/no$a;->type:I
+    iget v1, v1, Lcom/tencent/mm/e/a/ob$a;->type:I
 
     const/4 v2, 0x1
 

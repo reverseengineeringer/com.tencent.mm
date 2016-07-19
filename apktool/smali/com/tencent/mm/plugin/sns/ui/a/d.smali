@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/plugin/sns/ui/a/d;
-.super Lcom/tencent/mm/ui/e/a;
+.super Lcom/tencent/mm/ui/f/a;
 .source "SourceFile"
 
 
@@ -9,21 +9,21 @@
 
     .prologue
     .line 11
-    invoke-direct {p0}, Lcom/tencent/mm/ui/e/a;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/f/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Lcom/tencent/mm/ui/e/h$c;I)Lcom/tencent/mm/ui/e/h;
+.method public final a(Landroid/content/Context;Lcom/tencent/mm/ui/f/h$c;I)Lcom/tencent/mm/ui/f/h;
     .locals 1
 
     .prologue
     .line 15
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/a/e;
 
-    invoke-direct {v0, p1, p2, p3}, Lcom/tencent/mm/plugin/sns/ui/a/e;-><init>(Landroid/content/Context;Lcom/tencent/mm/ui/e/h$c;I)V
+    invoke-direct {v0, p1, p2, p3}, Lcom/tencent/mm/plugin/sns/ui/a/e;-><init>(Landroid/content/Context;Lcom/tencent/mm/ui/f/h$c;I)V
 
     .line 16
     return-object v0

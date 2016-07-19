@@ -13,31 +13,29 @@ public final class a
   extends e
   implements GestureDetector.OnGestureListener, View.OnTouchListener
 {
-  private int dpm;
-  private int eY;
-  private int lCI = 0;
-  boolean lCJ = true;
-  boolean lCK = false;
-  private boolean lCL = false;
-  private GestureDetector lCM;
-  private GestureDetector lCN;
-  private int lCO = -1;
-  private int lCP = -1;
-  private int lCQ = -1;
-  private int[] lCR = new int[2];
-  private int lCS;
-  private int lCT;
-  private int lCU;
-  private int lCV;
-  private boolean lCW = false;
-  private float lCX = 500.0F;
-  private int lCY;
-  private int lCZ;
-  private int lDa;
-  private boolean lDb;
-  private DragSortListView lDc;
-  private int lDd;
-  private GestureDetector.OnGestureListener lDe = new GestureDetector.SimpleOnGestureListener()
+  private int doT;
+  private int fv;
+  boolean mdA = false;
+  private boolean mdB = false;
+  private GestureDetector mdC;
+  private GestureDetector mdD;
+  private int mdE = -1;
+  private int mdF = -1;
+  private int mdG = -1;
+  private int[] mdH = new int[2];
+  private int mdI;
+  private int mdJ;
+  private int mdK;
+  private int mdL;
+  private boolean mdM = false;
+  private float mdN = 500.0F;
+  private int mdO;
+  private int mdP;
+  private int mdQ;
+  private boolean mdR;
+  private DragSortListView mdS;
+  private int mdT;
+  private GestureDetector.OnGestureListener mdU = new GestureDetector.SimpleOnGestureListener()
   {
     public final boolean onFling(MotionEvent paramAnonymousMotionEvent1, MotionEvent paramAnonymousMotionEvent2, float paramAnonymousFloat1, float paramAnonymousFloat2)
     {
@@ -49,7 +47,7 @@ public final class a
           break label81;
         }
         if (a.e(a.this) > -i) {
-          a.c(a.this).F(paramAnonymousFloat1);
+          a.c(a.this).E(paramAnonymousFloat1);
         }
       }
       for (;;)
@@ -58,86 +56,56 @@ public final class a
         return false;
         label81:
         if ((paramAnonymousFloat1 < -a.d(a.this)) && (a.e(a.this) < i)) {
-          a.c(a.this).F(paramAnonymousFloat1);
+          a.c(a.this).E(paramAnonymousFloat1);
         }
       }
     }
   };
+  private int mdy = 0;
+  boolean mdz = true;
   
   public a(DragSortListView paramDragSortListView, int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5)
   {
     super(paramDragSortListView);
-    lDc = paramDragSortListView;
-    lCM = new GestureDetector(paramDragSortListView.getContext(), this);
-    lCN = new GestureDetector(paramDragSortListView.getContext(), lDe);
-    lCN.setIsLongpressEnabled(false);
-    eY = ViewConfiguration.get(paramDragSortListView.getContext()).getScaledTouchSlop();
-    lCY = paramInt1;
-    lCZ = paramInt4;
-    lDa = paramInt5;
-    dpm = paramInt3;
-    lCI = paramInt2;
+    mdS = paramDragSortListView;
+    mdC = new GestureDetector(paramDragSortListView.getContext(), this);
+    mdD = new GestureDetector(paramDragSortListView.getContext(), mdU);
+    mdD.setIsLongpressEnabled(false);
+    fv = ViewConfiguration.get(paramDragSortListView.getContext()).getScaledTouchSlop();
+    mdO = paramInt1;
+    mdP = paramInt4;
+    mdQ = paramInt5;
+    doT = paramInt3;
+    mdy = paramInt2;
   }
   
-  private int g(MotionEvent paramMotionEvent, int paramInt)
-  {
-    int i = (int)paramMotionEvent.getX();
-    int j = (int)paramMotionEvent.getY();
-    i = lDc.pointToPosition(i, j);
-    j = lDc.getHeaderViewsCount();
-    int k = lDc.getFooterViewsCount();
-    int m = lDc.getCount();
-    if ((i != -1) && (i >= j) && (i < m - k))
-    {
-      View localView = lDc.getChildAt(i - lDc.getFirstVisiblePosition());
-      k = (int)paramMotionEvent.getRawX();
-      j = (int)paramMotionEvent.getRawY();
-      if (paramInt == 0) {}
-      for (paramMotionEvent = localView; paramMotionEvent != null; paramMotionEvent = localView.findViewById(paramInt))
-      {
-        paramMotionEvent.getLocationOnScreen(lCR);
-        if ((k <= lCR[0]) || (j <= lCR[1]) || (k >= lCR[0] + paramMotionEvent.getWidth())) {
-          break;
-        }
-        paramInt = lCR[1];
-        if (j >= paramMotionEvent.getHeight() + paramInt) {
-          break;
-        }
-        lCS = localView.getLeft();
-        lCT = localView.getTop();
-        return i;
-      }
-    }
-    return -1;
-  }
-  
-  private boolean w(int paramInt1, int paramInt2, int paramInt3)
+  private boolean A(int paramInt1, int paramInt2, int paramInt3)
   {
     boolean bool2 = false;
-    if ((lCJ) && (!lCL)) {}
+    if ((mdz) && (!mdB)) {}
     for (int i = 12;; i = 0)
     {
-      if ((lCK) && (lCL)) {
+      if ((mdA) && (mdB)) {
         i = i | 0x1 | 0x2;
       }
       for (;;)
       {
-        DragSortListView localDragSortListView = lDc;
-        paramInt1 -= lDc.getHeaderViewsCount();
+        DragSortListView localDragSortListView = mdS;
+        paramInt1 -= mdS.getHeaderViewsCount();
         boolean bool1 = bool2;
-        if (lDV)
+        if (meL)
         {
-          if (lDW != null) {
+          if (meM != null) {
             break label94;
           }
           bool1 = bool2;
         }
         for (;;)
         {
-          lCW = bool1;
-          return lCW;
+          mdM = bool1;
+          return mdM;
           label94:
-          View localView = lDW.sh(paramInt1);
+          View localView = meM.ul(paramInt1);
           bool1 = bool2;
           if (localView != null) {
             bool1 = localDragSortListView.a(paramInt1, localView, i, paramInt2, paramInt3);
@@ -147,30 +115,62 @@ public final class a
     }
   }
   
+  private int g(MotionEvent paramMotionEvent, int paramInt)
+  {
+    int i = (int)paramMotionEvent.getX();
+    int j = (int)paramMotionEvent.getY();
+    i = mdS.pointToPosition(i, j);
+    j = mdS.getHeaderViewsCount();
+    int k = mdS.getFooterViewsCount();
+    int m = mdS.getCount();
+    if ((i != -1) && (i >= j) && (i < m - k))
+    {
+      View localView = mdS.getChildAt(i - mdS.getFirstVisiblePosition());
+      k = (int)paramMotionEvent.getRawX();
+      j = (int)paramMotionEvent.getRawY();
+      if (paramInt == 0) {}
+      for (paramMotionEvent = localView; paramMotionEvent != null; paramMotionEvent = localView.findViewById(paramInt))
+      {
+        paramMotionEvent.getLocationOnScreen(mdH);
+        if ((k <= mdH[0]) || (j <= mdH[1]) || (k >= mdH[0] + paramMotionEvent.getWidth())) {
+          break;
+        }
+        paramInt = mdH[1];
+        if (j >= paramMotionEvent.getHeight() + paramInt) {
+          break;
+        }
+        mdI = localView.getLeft();
+        mdJ = localView.getTop();
+        return i;
+      }
+    }
+    return -1;
+  }
+  
   public final void b(Point paramPoint)
   {
-    if ((lCK) && (lCL)) {
-      lDd = x;
+    if ((mdA) && (mdB)) {
+      mdT = x;
     }
   }
   
   public final boolean onDown(MotionEvent paramMotionEvent)
   {
     int i = -1;
-    if ((lCK) && (dpm == 0)) {
-      lCQ = g(paramMotionEvent, lCZ);
+    if ((mdA) && (doT == 0)) {
+      mdG = g(paramMotionEvent, mdP);
     }
-    lCO = g(paramMotionEvent, lCY);
-    if ((lCO != -1) && (lCI == 0)) {
-      w(lCO, (int)paramMotionEvent.getX() - lCS, (int)paramMotionEvent.getY() - lCT);
+    mdE = g(paramMotionEvent, mdO);
+    if ((mdE != -1) && (mdy == 0)) {
+      A(mdE, (int)paramMotionEvent.getX() - mdI, (int)paramMotionEvent.getY() - mdJ);
     }
-    lCL = false;
-    lDb = true;
-    lDd = 0;
-    if (dpm == 1) {
-      i = g(paramMotionEvent, lDa);
+    mdB = false;
+    mdR = true;
+    mdT = 0;
+    if (doT == 1) {
+      i = g(paramMotionEvent, mdQ);
     }
-    lCP = i;
+    mdF = i;
     return true;
   }
   
@@ -181,10 +181,10 @@ public final class a
   
   public final void onLongPress(MotionEvent paramMotionEvent)
   {
-    if ((lCO != -1) && (lCI == 2))
+    if ((mdE != -1) && (mdy == 2))
     {
-      lDc.performHapticFeedback(0);
-      w(lCO, lCU - lCS, lCV - lCT);
+      mdS.performHapticFeedback(0);
+      A(mdE, mdK - mdI, mdL - mdJ);
     }
   }
   
@@ -194,17 +194,17 @@ public final class a
     int j = (int)paramMotionEvent1.getY();
     int k = (int)paramMotionEvent2.getX();
     int m = (int)paramMotionEvent2.getY();
-    int n = k - lCS;
-    int i1 = m - lCT;
-    if ((lDb) && (!lCW) && ((lCO != -1) || (lCP != -1)))
+    int n = k - mdI;
+    int i1 = m - mdJ;
+    if ((mdR) && (!mdM) && ((mdE != -1) || (mdF != -1)))
     {
-      if (lCO == -1) {
+      if (mdE == -1) {
         break label178;
       }
-      if ((lCI != 1) || (Math.abs(m - j) <= eY) || (!lCJ)) {
+      if ((mdy != 1) || (Math.abs(m - j) <= fv) || (!mdz)) {
         break label129;
       }
-      w(lCO, n, i1);
+      A(mdE, n, i1);
     }
     label129:
     label178:
@@ -215,19 +215,19 @@ public final class a
         do
         {
           return false;
-        } while ((lCI == 0) || (Math.abs(k - i) <= eY) || (!lCK));
-        lCL = true;
-        w(lCP, n, i1);
+        } while ((mdy == 0) || (Math.abs(k - i) <= fv) || (!mdA));
+        mdB = true;
+        A(mdF, n, i1);
         return false;
-      } while (lCP == -1);
-      if ((Math.abs(k - i) > eY) && (lCK))
+      } while (mdF == -1);
+      if ((Math.abs(k - i) > fv) && (mdA))
       {
-        lCL = true;
-        w(lCP, n, i1);
+        mdB = true;
+        A(mdF, n, i1);
         return false;
       }
-    } while (Math.abs(m - j) <= eY);
-    lDb = false;
+    } while (Math.abs(m - j) <= fv);
+    mdR = false;
     return false;
   }
   
@@ -235,25 +235,25 @@ public final class a
   
   public final boolean onSingleTapUp(MotionEvent paramMotionEvent)
   {
-    if ((lCK) && (dpm == 0) && (lCQ != -1))
+    if ((mdA) && (doT == 0) && (mdG != -1))
     {
-      paramMotionEvent = lDc;
-      int i = lCQ;
-      int j = lDc.getHeaderViewsCount();
-      lEj = false;
-      paramMotionEvent.e(i - j, 0.0F);
+      paramMotionEvent = mdS;
+      int i = mdG;
+      int j = mdS.getHeaderViewsCount();
+      meZ = false;
+      paramMotionEvent.d(i - j, 0.0F);
     }
     return true;
   }
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    if ((!lDc.lDz) || (lDc.lEl)) {
+    if ((!mdS.mep) || (mdS.mfb)) {
       return false;
     }
-    lCM.onTouchEvent(paramMotionEvent);
-    if ((lCK) && (lCW) && (dpm == 1)) {
-      lCN.onTouchEvent(paramMotionEvent);
+    mdC.onTouchEvent(paramMotionEvent);
+    if ((mdA) && (mdM) && (doT == 1)) {
+      mdD.onTouchEvent(paramMotionEvent);
     }
     switch (paramMotionEvent.getAction() & 0xFF)
     {
@@ -261,25 +261,25 @@ public final class a
     default: 
       return false;
     case 0: 
-      lCU = ((int)paramMotionEvent.getX());
-      lCV = ((int)paramMotionEvent.getY());
+      mdK = ((int)paramMotionEvent.getX());
+      mdL = ((int)paramMotionEvent.getY());
       return false;
     case 1: 
-      if ((lCK) && (lCL)) {
-        if (lDd < 0) {
+      if ((mdA) && (mdB)) {
+        if (mdT < 0) {
           break label182;
         }
       }
       break;
     }
     label182:
-    for (int i = lDd;; i = -lDd)
+    for (int i = mdT;; i = -mdT)
     {
-      if (i > lDc.getWidth() / 2) {
-        lDc.F(0.0F);
+      if (i > mdS.getWidth() / 2) {
+        mdS.E(0.0F);
       }
-      lCL = false;
-      lCW = false;
+      mdB = false;
+      mdM = false;
       return false;
     }
   }

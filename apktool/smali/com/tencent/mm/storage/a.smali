@@ -1,14 +1,24 @@
 .class public final Lcom/tencent/mm/storage/a;
-.super Lcom/tencent/mm/d/b/a;
+.super Lcom/tencent/mm/e/b/a;
 .source "SourceFile"
 
 
 # static fields
-.field protected static aot:Lcom/tencent/mm/sdk/h/c$a;
+.field protected static bjR:Lcom/tencent/mm/sdk/h/c$a;
 
 
 # instance fields
-.field private jZY:Ljava/util/Map;
+.field private kAu:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -25,19 +35,19 @@
 
     new-array v1, v5, [Ljava/lang/reflect/Field;
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->ceD:[Ljava/lang/reflect/Field;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->bZI:[Ljava/lang/reflect/Field;
 
     const/16 v1, 0xa
 
     new-array v1, v1, [Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/4 v3, 0x0
 
@@ -45,7 +55,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "layerId"
 
@@ -63,9 +73,9 @@
 
     const-string/jumbo v2, "layerId"
 
-    iput-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYw:Ljava/lang/String;
+    iput-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyT:Ljava/lang/String;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/4 v3, 0x1
 
@@ -73,7 +83,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "business"
 
@@ -89,7 +99,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/4 v3, 0x2
 
@@ -97,7 +107,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "expId"
 
@@ -113,7 +123,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/4 v3, 0x3
 
@@ -121,7 +131,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "sequence"
 
@@ -137,7 +147,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/4 v3, 0x4
 
@@ -145,7 +155,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "prioritylevel"
 
@@ -161,7 +171,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/4 v3, 0x5
 
@@ -169,7 +179,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "startTime"
 
@@ -185,7 +195,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/4 v3, 0x6
 
@@ -193,7 +203,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "endTime"
 
@@ -209,7 +219,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/4 v3, 0x7
 
@@ -217,7 +227,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "needReport"
 
@@ -233,7 +243,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const/16 v3, 0x8
 
@@ -241,7 +251,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
     const-string/jumbo v3, "rawXML"
 
@@ -253,7 +263,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
     const-string/jumbo v3, "rowid"
 
@@ -263,9 +273,9 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->jYy:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->kyV:Ljava/lang/String;
 
-    sput-object v0, Lcom/tencent/mm/storage/a;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    sput-object v0, Lcom/tencent/mm/storage/a;->bjR:Lcom/tencent/mm/sdk/h/c$a;
 
     return-void
 .end method
@@ -275,39 +285,49 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/d/b/a;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/e/b/a;-><init>()V
 
     .line 12
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/storage/a;->jZY:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/storage/a;->kAu:Ljava/util/Map;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final aWf()Ljava/util/Map;
+.method public final bbr()Ljava/util/Map;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 31
-    iget-object v0, p0, Lcom/tencent/mm/storage/a;->jZY:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/storage/a;->kAu:Ljava/util/Map;
 
     if-nez v0, :cond_0
 
     .line 32
     iget-object v0, p0, Lcom/tencent/mm/storage/a;->field_rawXML:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/model/c/a;->fF(Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {v0}, Lcom/tencent/mm/model/c/a;->fS(Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/storage/a;->jZY:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/storage/a;->kAu:Ljava/util/Map;
 
     .line 34
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/storage/a;->jZY:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/storage/a;->kAu:Ljava/util/Map;
 
     return-object v0
 .end method
@@ -349,12 +369,12 @@
     goto :goto_0
 .end method
 
-.method protected final ls()Lcom/tencent/mm/sdk/h/c$a;
+.method protected final ou()Lcom/tencent/mm/sdk/h/c$a;
     .locals 1
 
     .prologue
     .line 16
-    sget-object v0, Lcom/tencent/mm/storage/a;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    sget-object v0, Lcom/tencent/mm/storage/a;->bjR:Lcom/tencent/mm/sdk/h/c$a;
 
     return-object v0
 .end method

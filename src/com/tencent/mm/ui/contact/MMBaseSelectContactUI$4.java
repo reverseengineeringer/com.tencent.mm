@@ -6,7 +6,7 @@ import android.widget.AbsListView.OnScrollListener;
 import android.widget.ListView;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.storage.h;
 import com.tencent.mm.ui.base.o;
 import com.tencent.mm.ui.base.s;
@@ -18,11 +18,11 @@ final class MMBaseSelectContactUI$4
   
   public final void onScroll(AbsListView paramAbsListView, int paramInt1, int paramInt2, int paramInt3)
   {
-    if (MMBaseSelectContactUI.d(lle) != null)
+    if (MMBaseSelectContactUI.d(lLr) != null)
     {
-      paramAbsListView = MMBaseSelectContactUI.e(lle).getChildAt(MMBaseSelectContactUI.e(lle).getFirstVisiblePosition());
+      paramAbsListView = MMBaseSelectContactUI.e(lLr).getChildAt(MMBaseSelectContactUI.e(lLr).getFirstVisiblePosition());
       if ((paramAbsListView != null) && (paramAbsListView.getTop() == 0)) {
-        MMBaseSelectContactUI.f(lle).setVisibility(8);
+        MMBaseSelectContactUI.f(lLr).setVisibility(8);
       }
     }
     else
@@ -32,25 +32,25 @@ final class MMBaseSelectContactUI$4
       }
     }
     label74:
-    while (ay.d((Boolean)ah.tD().rn().get(12296, null)))
+    while (be.c((Boolean)ah.tE().ro().get(12296, null)))
     {
       return;
-      MMBaseSelectContactUI.f(lle).setVisibility(0);
+      MMBaseSelectContactUI.f(lLr).setVisibility(0);
       break;
     }
-    ah.tD().rn().set(12296, Boolean.valueOf(true));
-    if (MMBaseSelectContactUI.g(lle) != null) {
-      MMBaseSelectContactUI.g(lle).dismiss();
+    ah.tE().ro().set(12296, Boolean.valueOf(true));
+    if (MMBaseSelectContactUI.g(lLr) != null) {
+      MMBaseSelectContactUI.g(lLr).dismiss();
     }
-    MMBaseSelectContactUI.a(lle, s.a(lle, lle.getString(2131427794), 4000L));
+    MMBaseSelectContactUI.a(lLr, s.a(lLr, lLr.getString(2131233719), 4000L));
   }
   
   public final void onScrollStateChanged(AbsListView paramAbsListView, int paramInt)
   {
     if (paramInt != 0)
     {
-      lle.age();
-      lle.bht();
+      lLr.aiI();
+      lLr.bne();
     }
   }
 }

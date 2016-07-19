@@ -7,9 +7,9 @@ final class ImageGalleryUI$10
 {
   ImageGalleryUI$10(ImageGalleryUI paramImageGalleryUI) {}
   
-  public final void aap()
+  public final void YB()
   {
-    lgM.onBackPressed();
+    lGY.onBackPressed();
   }
 }
 

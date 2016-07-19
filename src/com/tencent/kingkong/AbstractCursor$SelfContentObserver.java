@@ -5,7 +5,7 @@ import java.lang.ref.WeakReference;
 public class AbstractCursor$SelfContentObserver
   extends ContentObserver
 {
-  WeakReference mCursor;
+  WeakReference<AbstractCursor> mCursor;
   
   public AbstractCursor$SelfContentObserver(AbstractCursor paramAbstractCursor)
   {

@@ -1,6 +1,9 @@
 .class final Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$1;
-.super Lcom/tencent/mm/sdk/c/c;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -15,37 +18,49 @@
 
 
 # instance fields
-.field final synthetic hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+.field final synthetic hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
 
 # direct methods
 .method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 173
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$1;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+    .line 191
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$1;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
-    .locals 1
+.method public final run()V
+    .locals 2
 
     .prologue
-    .line 177
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$1;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+    .line 195
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$1;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Lcom/tencent/mm/plugin/sns/ui/ar;
 
-    .line 178
-    const/4 v0, 0x0
+    move-result-object v0
 
-    return v0
+    .line 197
+    if-eqz v0, :cond_0
+
+    .line 198
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/ar;->mVending:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineVending;
+
+    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineVending;->addSize()V
+
+    .line 199
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/ar;->mVending:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineVending;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineVending;->notifyVendingDataChange()V
+
+    .line 201
+    :cond_0
+    return-void
 .end method

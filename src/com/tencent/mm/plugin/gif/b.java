@@ -6,29 +6,29 @@ import java.lang.ref.WeakReference;
 
 public class b
 {
-  private static b ewQ;
-  f ewR = new f(10);
-  f ewS = new f(10, new f.a() {});
+  private static b eDj;
+  public f<String, WeakReference<c>> eDk = new f(10);
+  f<String, WeakReference<a>> eDl = new f(10, new f.a() {});
   
   /* Error */
-  public static b acx()
+  public static b aeV()
   {
     // Byte code:
     //   0: ldc 2
     //   2: monitorenter
-    //   3: getstatic 35	com/tencent/mm/plugin/gif/b:ewQ	Lcom/tencent/mm/plugin/gif/b;
+    //   3: getstatic 37	com/tencent/mm/plugin/gif/b:eDj	Lcom/tencent/mm/plugin/gif/b;
     //   6: ifnonnull +25 -> 31
     //   9: ldc 2
     //   11: monitorenter
-    //   12: getstatic 35	com/tencent/mm/plugin/gif/b:ewQ	Lcom/tencent/mm/plugin/gif/b;
+    //   12: getstatic 37	com/tencent/mm/plugin/gif/b:eDj	Lcom/tencent/mm/plugin/gif/b;
     //   15: ifnonnull +13 -> 28
     //   18: new 2	com/tencent/mm/plugin/gif/b
     //   21: dup
-    //   22: invokespecial 36	com/tencent/mm/plugin/gif/b:<init>	()V
-    //   25: putstatic 35	com/tencent/mm/plugin/gif/b:ewQ	Lcom/tencent/mm/plugin/gif/b;
+    //   22: invokespecial 38	com/tencent/mm/plugin/gif/b:<init>	()V
+    //   25: putstatic 37	com/tencent/mm/plugin/gif/b:eDj	Lcom/tencent/mm/plugin/gif/b;
     //   28: ldc 2
     //   30: monitorexit
-    //   31: getstatic 35	com/tencent/mm/plugin/gif/b:ewQ	Lcom/tencent/mm/plugin/gif/b;
+    //   31: getstatic 37	com/tencent/mm/plugin/gif/b:eDj	Lcom/tencent/mm/plugin/gif/b;
     //   34: astore_0
     //   35: ldc 2
     //   37: monitorexit
@@ -59,7 +59,7 @@ public class b
     //   44	46	46	finally
   }
   
-  public final a o(String paramString, byte[] paramArrayOfByte)
+  public final a n(String paramString, byte[] paramArrayOfByte)
   {
     a locala2 = null;
     a locala1 = null;
@@ -69,28 +69,28 @@ public class b
     do
     {
       return paramString;
-      if (ewS.get(paramString) != null) {
-        locala2 = (a)((WeakReference)ewS.get(paramString)).get();
+      if (eDl.get(paramString) != null) {
+        locala2 = (a)((WeakReference)eDl.get(paramString)).get();
       }
       locala1 = locala2;
       if (locala2 == null)
       {
         locala1 = new a(paramArrayOfByte);
-        ewS.put(paramString, new WeakReference(locala1));
+        eDl.put(paramString, new WeakReference(locala1));
       }
       paramString = locala1;
     } while (locala1.isRunning());
-    ewo = false;
-    ewn = true;
-    com.tencent.mm.z.a.a(ewM, 300L);
+    eCH = false;
+    eCG = true;
+    com.tencent.mm.ac.a.a(eDf, 300L);
     return locala1;
   }
   
-  public final a pq(String paramString)
+  public final a qH(String paramString)
   {
     a locala = null;
-    if (ewS.get(paramString) != null) {
-      locala = (a)((WeakReference)ewS.get(paramString)).get();
+    if (eDl.get(paramString) != null) {
+      locala = (a)((WeakReference)eDl.get(paramString)).get();
     }
     return locala;
   }

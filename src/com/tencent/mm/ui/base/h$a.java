@@ -9,31 +9,31 @@ import android.view.View;
 
 public final class h$a
 {
-  public c kCW;
+  public c lcb;
   private Context mContext;
   
   public h$a(Context paramContext)
   {
     mContext = paramContext;
-    kCW = new c();
-    kCW.kBy = -1;
+    lcb = new c();
+    lcb.laE = -1;
   }
   
-  public final a GA(String paramString)
+  public final a IM(String paramString)
   {
-    kCW.kBr = paramString;
+    lcb.title = paramString;
     return this;
   }
   
-  public final a Gy(String paramString)
+  public final a IN(String paramString)
   {
-    kCW.title = paramString;
+    lcb.law = paramString;
     return this;
   }
   
-  public final a Gz(String paramString)
+  public final a IO(String paramString)
   {
-    kCW.kBq = paramString;
+    lcb.lax = paramString;
     return this;
   }
   
@@ -44,28 +44,28 @@ public final class h$a
   
   public final a a(DialogInterface.OnDismissListener paramOnDismissListener)
   {
-    kCW.iRg = paramOnDismissListener;
+    lcb.joq = paramOnDismissListener;
     return this;
   }
   
   public final a a(String paramString, DialogInterface.OnClickListener paramOnClickListener)
   {
-    kCW.kBs = paramString;
-    kCW.kBv = paramOnClickListener;
+    lcb.lay = paramString;
+    lcb.laB = paramOnClickListener;
     return this;
   }
   
   public final a a(String paramString, boolean paramBoolean, DialogInterface.OnClickListener paramOnClickListener)
   {
-    kCW.kBs = paramString;
-    kCW.kBv = paramOnClickListener;
-    kCW.kBB = paramBoolean;
+    lcb.lay = paramString;
+    lcb.laB = paramOnClickListener;
+    lcb.laH = paramBoolean;
     return this;
   }
   
-  public final a aq(View paramView)
+  public final a au(View paramView)
   {
-    kCW.inG = paramView;
+    lcb.iIl = paramView;
     return this;
   }
   
@@ -76,16 +76,16 @@ public final class h$a
   
   public final a b(String paramString, DialogInterface.OnClickListener paramOnClickListener)
   {
-    kCW.kBt = paramString;
-    kCW.kBw = paramOnClickListener;
+    lcb.laz = paramString;
+    lcb.laC = paramOnClickListener;
     return this;
   }
   
-  public final h bcu()
+  public final h bhJ()
   {
     h localh = new h(mContext);
-    localh.a(kCW);
-    localh.bcs();
+    localh.a(lcb);
+    localh.bhH();
     return localh;
   }
   
@@ -96,43 +96,43 @@ public final class h$a
   
   public final a c(DialogInterface.OnCancelListener paramOnCancelListener)
   {
-    kCW.ial = paramOnCancelListener;
+    lcb.itT = paramOnCancelListener;
     return this;
   }
   
-  public final a g(Drawable paramDrawable)
+  public final a h(Drawable paramDrawable)
   {
-    kCW.kBp = paramDrawable;
+    lcb.lav = paramDrawable;
     return this;
   }
   
-  public final a hw(boolean paramBoolean)
+  public final a hU(boolean paramBoolean)
   {
-    kCW.goQ = paramBoolean;
+    lcb.gzi = paramBoolean;
     return this;
   }
   
-  public final a hx(boolean paramBoolean)
+  public final a hV(boolean paramBoolean)
   {
-    kCW.kBu = paramBoolean;
+    lcb.laA = paramBoolean;
     return this;
   }
   
-  public final a qA(int paramInt)
+  public final a ss(int paramInt)
   {
-    kCW.kBq = mContext.getString(paramInt);
+    lcb.title = mContext.getString(paramInt);
     return this;
   }
   
-  public final a qB(int paramInt)
+  public final a st(int paramInt)
   {
-    kCW.kBr = mContext.getString(paramInt);
+    lcb.law = mContext.getString(paramInt);
     return this;
   }
   
-  public final a qz(int paramInt)
+  public final a su(int paramInt)
   {
-    kCW.title = mContext.getString(paramInt);
+    lcb.lax = mContext.getString(paramInt);
     return this;
   }
 }

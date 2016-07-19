@@ -11,17 +11,17 @@ import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.tencent.mm.plugin.sns.h.k;
+import com.tencent.mm.plugin.sns.i.k;
 import com.tencent.mm.ui.p;
 
 public class NotInterestMenu
   extends LinearLayout
 {
-  private static int[] gFh = { 2131433207, 2131433208, 2131433209 };
-  private k gER = null;
-  private ListView gFg;
-  private c gFi = null;
-  private b gFj = null;
+  private static int[] gLJ = { 2131235445, 2131235443, 2131235444 };
+  private ListView gLI;
+  c gLK = null;
+  b gLL = null;
+  k gLs = null;
   private Context mContext = null;
   
   public NotInterestMenu(Context paramContext)
@@ -40,15 +40,15 @@ public class NotInterestMenu
   
   private void init()
   {
-    p.ee(mContext).inflate(2131362914, this);
-    gFg = ((ListView)findViewById(2131168754));
-    gFg.setAdapter(new a());
-    gFg.setOnItemClickListener(new AdapterView.OnItemClickListener()
+    p.ef(mContext).inflate(2130904121, this);
+    gLI = ((ListView)findViewById(2131758301));
+    gLI.setAdapter(new a());
+    gLI.setOnItemClickListener(new AdapterView.OnItemClickListener()
     {
-      public final void onItemClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+      public final void onItemClick(AdapterView<?> paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
       {
         if (NotInterestMenu.a(NotInterestMenu.this) != null) {
-          NotInterestMenu.a(NotInterestMenu.this).axq();
+          NotInterestMenu.a(NotInterestMenu.this).azS();
         }
         if (NotInterestMenu.b(NotInterestMenu.this) != null) {}
         switch (paramAnonymousInt)
@@ -67,21 +67,6 @@ public class NotInterestMenu
     });
   }
   
-  public void setOnClickMenuListener(b paramb)
-  {
-    gFj = paramb;
-  }
-  
-  public void setOnSelectMenuItemListener(c paramc)
-  {
-    gFi = paramc;
-  }
-  
-  public void setSnsInfo(k paramk)
-  {
-    gER = paramk;
-  }
-  
   final class a
     extends BaseAdapter
   {
@@ -89,12 +74,12 @@ public class NotInterestMenu
     
     public final int getCount()
     {
-      return NotInterestMenu.axp().length;
+      return NotInterestMenu.azR().length;
     }
     
     public final Object getItem(int paramInt)
     {
-      return Integer.valueOf(NotInterestMenu.axp()[paramInt]);
+      return Integer.valueOf(NotInterestMenu.azR()[paramInt]);
     }
     
     public final long getItemId(int paramInt)
@@ -107,18 +92,18 @@ public class NotInterestMenu
       View localView = paramView;
       if (paramView == null)
       {
-        localView = p.ee(NotInterestMenu.d(NotInterestMenu.this)).inflate(2131362913, paramViewGroup, false);
+        localView = p.ef(NotInterestMenu.d(NotInterestMenu.this)).inflate(2130904122, paramViewGroup, false);
         paramView = new a();
-        gFl = ((TextView)localView.findViewById(2131168753));
+        gLN = ((TextView)localView.findViewById(2131758302));
         localView.setTag(paramView);
       }
-      getTaggFl.setText(NotInterestMenu.axp()[paramInt]);
+      getTaggLN.setText(NotInterestMenu.azR()[paramInt]);
       return localView;
     }
     
     final class a
     {
-      TextView gFl;
+      TextView gLN;
       
       a() {}
     }
@@ -126,7 +111,7 @@ public class NotInterestMenu
   
   public static abstract interface b
   {
-    public abstract void axq();
+    public abstract void azS();
   }
   
   public static abstract interface c

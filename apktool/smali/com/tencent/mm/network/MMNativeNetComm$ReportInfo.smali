@@ -234,7 +234,7 @@
 
 # virtual methods
 .method public toString()Ljava/lang/String;
-    .locals 7
+    .locals 8
 
     .prologue
     .line 102
@@ -246,9 +246,9 @@
 
     const/4 v2, 0x0
 
-    iget-wide v3, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->actionId:J
+    iget-wide v4, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->actionId:J
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
@@ -256,9 +256,9 @@
 
     const/4 v2, 0x1
 
-    iget-wide v3, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->rtType:J
+    iget-wide v4, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->rtType:J
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
@@ -266,9 +266,9 @@
 
     const/4 v2, 0x2
 
-    iget-wide v3, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->beginTime:J
+    iget-wide v4, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->beginTime:J
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
@@ -276,9 +276,9 @@
 
     const/4 v2, 0x3
 
-    iget-wide v3, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->endTime:J
+    iget-wide v4, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->endTime:J
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
@@ -286,13 +286,13 @@
 
     const/4 v2, 0x4
 
-    iget-wide v3, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->endTime:J
+    iget-wide v4, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->endTime:J
 
-    iget-wide v5, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->beginTime:J
+    iget-wide v6, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->beginTime:J
 
-    sub-long/2addr v3, v5
+    sub-long/2addr v4, v6
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
@@ -346,9 +346,9 @@
 
     const/16 v2, 0xa
 
-    iget-wide v3, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->sendSize:J
+    iget-wide v4, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->sendSize:J
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
@@ -356,9 +356,9 @@
 
     const/16 v2, 0xb
 
-    iget-wide v3, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->recvSize:J
+    iget-wide v4, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->recvSize:J
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
@@ -386,9 +386,9 @@
 
     const/16 v2, 0xe
 
-    iget-wide v3, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->netSignal:J
+    iget-wide v4, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->netSignal:J
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
@@ -406,9 +406,9 @@
 
     const/16 v2, 0x10
 
-    iget-wide v3, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->expand1:J
+    iget-wide v4, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->expand1:J
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
@@ -422,9 +422,9 @@
 
     const/16 v2, 0x12
 
-    iget-wide v3, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->expand2:J
+    iget-wide v4, p0, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->expand2:J
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 

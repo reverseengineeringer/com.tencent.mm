@@ -1,10 +1,10 @@
 package com.tencent.mm.booter;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class c$a
 {
-  public static Object h(int paramInt, String paramString)
+  public static Object i(int paramInt, String paramString)
   {
     String str = paramString;
     switch (paramInt)
@@ -17,7 +17,7 @@ public final class c$a
     case 6: 
       try
       {
-        u.e("!44@/B4Tb64lLpKDiUa1siRPtpv9pAip3uJwDid7q+sGdMU=", "unknown type");
+        v.e("MicroMsg.Debugger.Resolver", "unknown type");
       }
       catch (Exception paramString)
       {

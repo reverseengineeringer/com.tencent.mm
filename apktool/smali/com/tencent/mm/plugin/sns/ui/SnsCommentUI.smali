@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/r/d;
+.implements Lcom/tencent/mm/t/d;
 
 
 # annotations
@@ -13,19 +13,19 @@
 
 
 # instance fields
-.field private axy:I
+.field private ajx:I
 
-.field private coc:Lcom/tencent/mm/ui/base/p;
+.field private cjq:Lcom/tencent/mm/ui/base/p;
 
-.field private gHI:I
+.field private gON:I
 
-.field private hdM:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+.field private hsA:I
 
-.field private hdN:I
+.field private hsB:Z
 
-.field private hdO:Z
+.field private hsC:Z
 
-.field private hdP:Z
+.field private hsz:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
 
 # direct methods
@@ -41,16 +41,16 @@
     .line 50
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->coc:Lcom/tencent/mm/ui/base/p;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->cjq:Lcom/tencent/mm/ui/base/p;
 
     .line 52
-    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdN:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsA:I
 
     .line 54
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdO:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsB:Z
 
     .line 55
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdP:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsC:Z
 
     return-void
 .end method
@@ -60,7 +60,7 @@
 
     .prologue
     .line 44
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdN:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsA:I
 
     return v0
 .end method
@@ -72,21 +72,21 @@
     const/4 v4, 0x1
 
     .line 44
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azi()Lcom/tencent/mm/plugin/sns/h/l;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBI()Lcom/tencent/mm/plugin/sns/i/l;
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->gHI:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->gON:I
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/h/l;->lR(I)Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/i/l;->ne(I)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdO:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsB:Z
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/k;->aAk()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/k;->aCW()Z
 
     move-result v1
 
@@ -96,18 +96,18 @@
 
     const-string/jumbo v2, ""
 
-    iget v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->axy:I
+    iget v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->ajx:I
 
-    invoke-static {v0, v1, p1, v2, v3}, Lcom/tencent/mm/plugin/sns/d/al$a;->a(Lcom/tencent/mm/plugin/sns/h/k;ILjava/lang/String;Ljava/lang/String;I)Lcom/tencent/mm/protocal/b/apz;
+    invoke-static {v0, v1, p1, v2, v3}, Lcom/tencent/mm/plugin/sns/e/ak$a;->a(Lcom/tencent/mm/plugin/sns/i/k;ILjava/lang/String;Ljava/lang/String;I)Lcom/tencent/mm/protocal/b/aqk;
 
     :goto_0
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->age()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->aiI()V
 
-    const v0, 0x7f0b0ddd
+    const v0, 0x7f080134
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->getString(I)Ljava/lang/String;
 
-    const v0, 0x7f0b0de1
+    const v0, 0x7f080124
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->getString(I)Ljava/lang/String;
 
@@ -121,19 +121,19 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->coc:Lcom/tencent/mm/ui/base/p;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->cjq:Lcom/tencent/mm/ui/base/p;
 
     :cond_0
     return-void
 
     :cond_1
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/i/k;->field_userName:Ljava/lang/String;
 
     const/4 v2, 0x3
 
-    iget v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->axy:I
+    iget v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->ajx:I
 
-    invoke-static {v1, v2, p1, v0, v3}, Lcom/tencent/mm/plugin/sns/d/al$a;->a(Ljava/lang/String;ILjava/lang/String;Lcom/tencent/mm/plugin/sns/h/k;I)V
+    invoke-static {v1, v2, p1, v0, v3}, Lcom/tencent/mm/plugin/sns/e/ak$a;->a(Ljava/lang/String;ILjava/lang/String;Lcom/tencent/mm/plugin/sns/i/k;I)V
 
     goto :goto_0
 .end method
@@ -143,7 +143,7 @@
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdM:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsz:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     return-object v0
 .end method
@@ -161,28 +161,26 @@
 
     if-nez v0, :cond_1
 
-    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
 
-    new-instance v0, Lcom/tencent/mm/plugin/sns/d/at;
+    new-instance v0, Lcom/tencent/mm/plugin/sns/e/as;
 
-    invoke-direct {v0, v3}, Lcom/tencent/mm/plugin/sns/d/at;-><init>(I)V
+    invoke-direct {v0, v3}, Lcom/tencent/mm/plugin/sns/e/as;-><init>(I)V
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/plugin/sns/d/at;->uT(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/d/at;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/plugin/sns/e/as;->vZ(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/e/as;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdM:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsz:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->getPasterLen()I
+    iget v1, v1, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hsG:I
 
-    move-result v1
-
-    sget v2, Lcom/tencent/mm/plugin/sns/b/a;->gHo:I
+    sget v2, Lcom/tencent/mm/plugin/sns/b/a;->gOt:I
 
     if-le v1, v2, :cond_0
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/sns/d/at;->lE(I)Lcom/tencent/mm/plugin/sns/d/at;
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/sns/e/as;->mO(I)Lcom/tencent/mm/plugin/sns/e/as;
 
     :cond_0
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/d/at;->commit()I
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/as;->commit()I
 
     const/4 v0, -0x1
 
@@ -201,14 +199,14 @@
     .line 44
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdP:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsC:Z
 
     return v0
 .end method
 
 
 # virtual methods
-.method protected final Gb()V
+.method protected final Gy()V
     .locals 6
 
     .prologue
@@ -217,7 +215,7 @@
     const/4 v4, 0x0
 
     .line 140
-    const v0, 0x7f0700c1
+    const v0, 0x7f1000fe
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->findViewById(I)Landroid/view/View;
 
@@ -225,20 +223,20 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdM:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsz:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     .line 142
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdM:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsz:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/t;->cY(Landroid/content/Context;)F
+    invoke-static {v1}, Lcom/tencent/mm/ui/t;->cW(Landroid/content/Context;)F
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdM:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsz:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-virtual {v2}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->getTextSize()F
 
@@ -246,11 +244,11 @@
 
     mul-float/2addr v1, v2
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v2, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-static {v2}, Lcom/tencent/mm/aw/a;->getDensity(Landroid/content/Context;)F
+    invoke-static {v2}, Lcom/tencent/mm/az/a;->getDensity(Landroid/content/Context;)F
 
     move-result v2
 
@@ -259,7 +257,7 @@
     invoke-virtual {v0, v5, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->setTextSize(IF)V
 
     .line 145
-    const v0, 0x7f0b0ddf
+    const v0, 0x7f080122
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->getString(I)Ljava/lang/String;
 
@@ -269,19 +267,19 @@
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$2;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;)V
 
-    sget v2, Lcom/tencent/mm/ui/j$b;->kpJ:I
+    sget v2, Lcom/tencent/mm/ui/j$b;->kOO:I
 
     invoke-virtual {p0, v4, v0, v1, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->a(ILjava/lang/String;Landroid/view/MenuItem$OnMenuItemClickListener;I)V
 
     .line 221
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdN:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsA:I
 
     if-nez v0, :cond_1
 
     .line 222
-    const v0, 0x7f0b167d
+    const v0, 0x7f08124b
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->qb(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->rR(I)V
 
     .line 241
     :cond_0
@@ -293,7 +291,7 @@
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 253
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdM:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsz:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$4;
 
@@ -306,21 +304,21 @@
 
     .line 223
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdN:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsA:I
 
     if-ne v0, v5, :cond_3
 
     .line 224
-    const v0, 0x7f0b163e
+    const v0, 0x7f08131a
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->qb(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->rR(I)V
 
     .line 225
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -336,16 +334,16 @@
 
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 226
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -361,21 +359,21 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Integer;I)I
+    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/lang/Integer;I)I
 
     move-result v0
 
     .line 228
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdM:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsz:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->setPasterLen(I)V
+    iput v0, v2, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hsG:I
 
     .line 230
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdM:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsz:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     const-string/jumbo v2, ""
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -391,147 +389,33 @@
     if-lez v0, :cond_2
 
     .line 233
-    invoke-virtual {p0, v5}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->bC(Z)V
+    invoke-virtual {p0, v5}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->bp(Z)V
 
     goto :goto_0
 
     .line 235
     :cond_2
-    invoke-virtual {p0, v4}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->bC(Z)V
+    invoke-virtual {p0, v4}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->bp(Z)V
 
     goto :goto_0
 
     .line 237
     :cond_3
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdN:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsA:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_0
 
     .line 238
-    const v0, 0x7f0b1710
+    const v0, 0x7f08122f
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->qb(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->rR(I)V
 
     .line 239
-    invoke-virtual {p0, v4}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->bC(Z)V
+    invoke-virtual {p0, v4}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->bp(Z)V
 
     goto :goto_0
-.end method
-
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
-    .locals 3
-
-    .prologue
-    .line 289
-    const-string/jumbo v0, "!32@/B4Tb64lLpIPhXvycW2PJu41Xea6y1xl"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, "onSceneEnd: errType = "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string/jumbo v2, " errCode = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string/jumbo v2, " errMsg = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string/jumbo v2, " type = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p4}, Lcom/tencent/mm/r/j;->getType()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string/jumbo v2, " @"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 292
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->coc:Lcom/tencent/mm/ui/base/p;
-
-    if-eqz v0, :cond_0
-
-    .line 293
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->coc:Lcom/tencent/mm/ui/base/p;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/p;->dismiss()V
-
-    .line 300
-    :cond_0
-    invoke-virtual {p4}, Lcom/tencent/mm/r/j;->getType()I
-
-    move-result v0
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 307
-    :cond_1
-    :goto_0
-    return-void
-
-    .line 302
-    :pswitch_0
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdO:Z
-
-    if-eqz v0, :cond_1
-
-    .line 303
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->finish()V
-
-    goto :goto_0
-
-    .line 300
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0xd5
-        :pswitch_0
-    .end packed-switch
 .end method
 
 .method public finish()V
@@ -542,11 +426,11 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->finish()V
 
     .line 311
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdP:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsC:Z
 
     if-nez v0, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdN:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsA:I
 
     const/4 v1, 0x2
 
@@ -591,7 +475,7 @@
 
     const-string/jumbo v5, ""
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -608,7 +492,7 @@
 
     const-string/jumbo v6, ""
 
-    invoke-static {v5, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, v6}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -637,18 +521,18 @@
     move-result-wide v6
 
     .line 318
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azb()Lcom/tencent/mm/plugin/sns/e/g;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBB()Lcom/tencent/mm/plugin/sns/f/g;
 
     move-result-object v8
 
-    invoke-virtual {v8}, Lcom/tencent/mm/plugin/sns/e/g;->azO()Lcom/tencent/mm/plugin/sns/e/h;
+    invoke-virtual {v8}, Lcom/tencent/mm/plugin/sns/f/g;->aCp()Lcom/tencent/mm/plugin/sns/f/h;
 
     move-result-object v8
 
     .line 319
     if-eqz v8, :cond_0
 
-    invoke-virtual {v8}, Lcom/tencent/mm/plugin/sns/e/h;->azP()Z
+    invoke-virtual {v8}, Lcom/tencent/mm/plugin/sns/f/h;->aCq()Z
 
     move-result v9
 
@@ -661,13 +545,13 @@
 
     .line 322
     :cond_1
-    iget-object v9, v8, Lcom/tencent/mm/plugin/sns/e/h;->gRI:Ljava/lang/String;
+    iget-object v9, v8, Lcom/tencent/mm/plugin/sns/f/h;->gZL:Ljava/lang/String;
 
     .line 323
-    iget-object v8, v8, Lcom/tencent/mm/plugin/sns/e/h;->gRH:Ljava/lang/String;
+    iget-object v8, v8, Lcom/tencent/mm/plugin/sns/f/h;->gZK:Ljava/lang/String;
 
     .line 324
-    const-string/jumbo v10, "!32@/B4Tb64lLpIPhXvycW2PJu41Xea6y1xl"
+    const-string/jumbo v10, "MicroMsg.SnsCommentUI"
 
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -723,10 +607,10 @@
 
     move-result-object v11
 
-    invoke-static {v10, v11}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v10, v11}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 325
-    sget-object v10, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v10, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v11, 0x2ed4
 
@@ -756,7 +640,7 @@
 
     const/4 v8, 0x4
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/plugin/sns/data/h;->bX(J)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/plugin/sns/data/i;->cn(J)Ljava/lang/String;
 
     move-result-object v0
 
@@ -774,9 +658,9 @@
 
     const-wide/16 v4, 0x3e8
 
-    div-long v1, v2, v4
+    div-long/2addr v2, v4
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
@@ -784,17 +668,17 @@
 
     const/16 v0, 0x8
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    div-long v1, v6, v1
+    div-long v2, v6, v2
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
     aput-object v1, v12, v0
 
-    invoke-virtual {v10, v11, v12}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v10, v11, v12}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 .end method
@@ -804,7 +688,7 @@
 
     .prologue
     .line 284
-    const v0, 0x7f0a041b
+    const v0, 0x7f03056a
 
     return v0
 .end method
@@ -829,7 +713,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->gHI:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->gON:I
 
     .line 64
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->getIntent()Landroid/content/Intent;
@@ -842,7 +726,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdN:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsA:I
 
     .line 65
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->getIntent()Landroid/content/Intent;
@@ -855,19 +739,19 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->axy:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->ajx:I
 
     .line 66
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0xd5
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
     .line 67
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->Gb()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->Gy()V
 
     .line 70
     return-void
@@ -881,13 +765,13 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onDestroy()V
 
     .line 96
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0xd5
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
     .line 97
     return-void
@@ -903,7 +787,7 @@
     if-ne p1, v0, :cond_0
 
     .line 332
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->age()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->aiI()V
 
     .line 333
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->finish()V
@@ -933,12 +817,12 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onPause()V
 
     .line 75
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdM:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsz:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     if-eqz v0, :cond_0
 
     .line 76
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdM:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsz:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->getText()Landroid/text/Editable;
 
@@ -953,11 +837,11 @@
     move-result-object v0
 
     .line 77
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v1
 
@@ -966,26 +850,24 @@
     invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
     .line 78
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 79
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hdM:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsz:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->getPasterLen()I
-
-    move-result v1
+    iget v1, v1, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hsG:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1000,11 +882,11 @@
 
     .line 82
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -1027,8 +909,122 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onResume()V
 
     .line 90
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->apz()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->asv()V
 
     .line 91
     return-void
+.end method
+
+.method public onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
+    .locals 3
+
+    .prologue
+    .line 289
+    const-string/jumbo v0, "MicroMsg.SnsCommentUI"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "onSceneEnd: errType = "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v2, " errCode = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v2, " errMsg = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v2, " type = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p4}, Lcom/tencent/mm/t/j;->getType()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v2, " @"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 292
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->cjq:Lcom/tencent/mm/ui/base/p;
+
+    if-eqz v0, :cond_0
+
+    .line 293
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->cjq:Lcom/tencent/mm/ui/base/p;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/p;->dismiss()V
+
+    .line 300
+    :cond_0
+    invoke-virtual {p4}, Lcom/tencent/mm/t/j;->getType()I
+
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 307
+    :cond_1
+    :goto_0
+    return-void
+
+    .line 302
+    :pswitch_0
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->hsB:Z
+
+    if-eqz v0, :cond_1
+
+    .line 303
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->finish()V
+
+    goto :goto_0
+
+    .line 300
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0xd5
+        :pswitch_0
+    .end packed-switch
 .end method

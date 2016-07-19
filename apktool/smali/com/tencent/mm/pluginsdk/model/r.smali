@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static volatile iAG:Lcom/tencent/mm/pluginsdk/model/r;
+.field private static volatile iXg:Lcom/tencent/mm/pluginsdk/model/r;
 
 
 # direct methods
@@ -23,7 +23,7 @@
     .line 28
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/model/r;->iAG:Lcom/tencent/mm/pluginsdk/model/r;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/model/r;->iXg:Lcom/tencent/mm/pluginsdk/model/r;
 
     return-void
 .end method
@@ -39,12 +39,12 @@
     return-void
 .end method
 
-.method public static aPt()Lcom/tencent/mm/pluginsdk/model/r;
+.method public static aTZ()Lcom/tencent/mm/pluginsdk/model/r;
     .locals 2
 
     .prologue
     .line 35
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/r;->iAG:Lcom/tencent/mm/pluginsdk/model/r;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/r;->iXg:Lcom/tencent/mm/pluginsdk/model/r;
 
     if-nez v0, :cond_1
 
@@ -55,7 +55,7 @@
 
     .line 37
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/r;->iAG:Lcom/tencent/mm/pluginsdk/model/r;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/r;->iXg:Lcom/tencent/mm/pluginsdk/model/r;
 
     if-nez v0, :cond_0
 
@@ -64,7 +64,7 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/model/r;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/model/r;->iAG:Lcom/tencent/mm/pluginsdk/model/r;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/model/r;->iXg:Lcom/tencent/mm/pluginsdk/model/r;
 
     .line 40
     :cond_0
@@ -74,7 +74,7 @@
 
     .line 42
     :cond_1
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/r;->iAG:Lcom/tencent/mm/pluginsdk/model/r;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/r;->iXg:Lcom/tencent/mm/pluginsdk/model/r;
 
     return-object v0
 
@@ -90,7 +90,7 @@
     throw v0
 .end method
 
-.method public static l(ILandroid/os/Bundle;)Lcom/tencent/mm/pluginsdk/model/q;
+.method public static m(ILandroid/os/Bundle;)Lcom/tencent/mm/pluginsdk/model/q;
     .locals 1
 
     .prologue
@@ -131,7 +131,7 @@
     .end packed-switch
 .end method
 
-.method public static oa(I)I
+.method public static pG(I)I
     .locals 4
 
     .prologue
@@ -146,7 +146,7 @@
 
     .line 60
     :pswitch_0
-    invoke-static {}, Lcom/tencent/mm/g/h;->pT()Lcom/tencent/mm/g/c;
+    invoke-static {}, Lcom/tencent/mm/h/h;->on()Lcom/tencent/mm/h/c;
 
     move-result-object v1
 
@@ -154,11 +154,11 @@
 
     const-string/jumbo v3, "QQBroswer"
 
-    invoke-virtual {v1, v3, v2}, Lcom/tencent/mm/g/c;->z(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v3, v2}, Lcom/tencent/mm/h/c;->u(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/be;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
@@ -178,7 +178,7 @@
     .end packed-switch
 .end method
 
-.method public static ob(I)V
+.method public static pH(I)V
     .locals 5
 
     .prologue
@@ -195,7 +195,7 @@
 
     .line 74
     :pswitch_0
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v1, 0x2af6
 
@@ -207,13 +207,13 @@
 
     aput-object v3, v2, v4
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 77
     :pswitch_1
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v1, 0x2b53
 
@@ -225,7 +225,7 @@
 
     aput-object v3, v2, v4
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -237,7 +237,7 @@
     .end packed-switch
 .end method
 
-.method public static oc(I)V
+.method public static pI(I)V
     .locals 5
 
     .prologue
@@ -254,7 +254,7 @@
 
     .line 87
     :pswitch_0
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v1, 0x2af6
 
@@ -266,13 +266,13 @@
 
     aput-object v3, v2, v4
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 90
     :pswitch_1
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v1, 0x2b53
 
@@ -284,7 +284,7 @@
 
     aput-object v3, v2, v4
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -296,7 +296,7 @@
     .end packed-switch
 .end method
 
-.method public static od(I)V
+.method public static pJ(I)V
     .locals 5
 
     .prologue
@@ -315,7 +315,7 @@
 
     .line 100
     :pswitch_0
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v1, 0x2af6
 
@@ -327,13 +327,13 @@
 
     aput-object v3, v2, v4
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 103
     :pswitch_1
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v1, 0x2b53
 
@@ -345,7 +345,7 @@
 
     aput-object v3, v2, v4
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -359,7 +359,7 @@
     .end packed-switch
 .end method
 
-.method public static oe(I)V
+.method public static pK(I)V
     .locals 5
 
     .prologue
@@ -378,7 +378,7 @@
 
     .line 113
     :pswitch_0
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v1, 0x2af6
 
@@ -390,13 +390,13 @@
 
     aput-object v3, v2, v4
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 116
     :pswitch_1
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v1, 0x2b53
 
@@ -408,7 +408,7 @@
 
     aput-object v3, v2, v4
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto :goto_0
 

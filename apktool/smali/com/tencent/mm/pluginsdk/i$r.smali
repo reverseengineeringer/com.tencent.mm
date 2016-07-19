@@ -15,22 +15,37 @@
 
 
 # virtual methods
-.method public abstract P(Ljava/util/LinkedList;)V
+.method public abstract Bs(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/model/app/f;
+.end method
+
+.method public abstract Bt(Ljava/lang/String;)V
+.end method
+
+.method public abstract T(Ljava/util/LinkedList;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/LinkedList",
+            "<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 .end method
 
 .method public abstract a(Ljava/lang/String;IF)Landroid/graphics/Bitmap;
 .end method
 
-.method public abstract aD(Ljava/lang/String;I)V
+.method public abstract aK(Ljava/lang/String;I)V
 .end method
 
-.method public abstract aOX()Lcom/tencent/mm/pluginsdk/model/app/i;
+.method public abstract aTA()Landroid/database/Cursor;
 .end method
 
-.method public abstract aOY()Landroid/database/Cursor;
+.method public abstract aTz()Lcom/tencent/mm/pluginsdk/model/app/i;
 .end method
 
-.method public abstract bz(II)Landroid/database/Cursor;
+.method public abstract bE(II)Landroid/database/Cursor;
 .end method
 
 .method public abstract e(Lcom/tencent/mm/pluginsdk/model/app/f;)V
@@ -45,11 +60,5 @@
 .method public abstract k([I)Landroid/database/Cursor;
 .end method
 
-.method public abstract nX(I)Landroid/database/Cursor;
-.end method
-
-.method public abstract zw(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/model/app/f;
-.end method
-
-.method public abstract zx(Ljava/lang/String;)V
+.method public abstract pB(I)Landroid/database/Cursor;
 .end method

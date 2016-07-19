@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic cBa:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
+.field final synthetic cxV:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 75
-    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$1;->cBa:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$1;->cxV:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,7 +44,7 @@
     if-nez p1, :cond_0
 
     .line 80
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$1;->cBa:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$1;->cxV:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/base/stub/UIEntryStub;->finish()V
 
@@ -54,9 +54,9 @@
 
     .line 83
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$1;->cBa:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$1;->cxV:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$1;->cBa:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$1;->cxV:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/base/stub/UIEntryStub;->a(Lcom/tencent/mm/plugin/base/stub/UIEntryStub;)Landroid/content/Intent;
 

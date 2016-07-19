@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+.field final synthetic ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1306
-    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$EmotionStoreUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 1305
+    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$EmotionStoreUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-direct {p0, p1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BaseUriSpanHandler;-><init>(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)V
 
@@ -40,38 +40,38 @@
     .locals 4
 
     .prologue
-    .line 1334
+    .line 1333
     iget v0, p1, Lcom/tencent/mm/pluginsdk/ui/applet/g;->type:I
 
     const/16 v1, 0x1d
 
     if-ne v0, v1, :cond_1
 
-    .line 1335
+    .line 1334
     if-eqz p2, :cond_0
 
-    .line 1336
+    .line 1335
     invoke-interface {p2, p1}, Lcom/tencent/mm/pluginsdk/ui/d/b;->a(Lcom/tencent/mm/pluginsdk/ui/applet/g;)Ljava/lang/Object;
 
-    .line 1338
+    .line 1337
     :cond_0
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 1339
+    .line 1338
     const-string/jumbo v0, "download_entrance_scene"
 
     const/16 v2, 0x10
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1341
+    .line 1340
     const-string/jumbo v2, "extra_id"
 
     const-class v0, Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/tencent/mm/pluginsdk/ui/applet/g;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lcom/tencent/mm/pluginsdk/ui/applet/g;->d(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -79,15 +79,15 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1342
+    .line 1341
     const-string/jumbo v0, "preceding_scence"
 
     const/4 v2, 0x3
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1343
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$EmotionStoreUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 1342
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$EmotionStoreUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -97,12 +97,12 @@
 
     const-string/jumbo v3, ".ui.EmojiStoreDetailUI"
 
-    invoke-static {v0, v2, v3, v1}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {v0, v2, v3, v1}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
-    .line 1345
+    .line 1344
     const/4 v0, 0x1
 
-    .line 1350
+    .line 1349
     :goto_0
     return v0
 
@@ -116,17 +116,17 @@
     .locals 1
 
     .prologue
-    .line 1355
+    .line 1354
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method final bb(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
+.method final bg(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
     .locals 3
 
     .prologue
-    .line 1310
+    .line 1309
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -139,29 +139,29 @@
 
     if-eqz v0, :cond_1
 
-    .line 1311
+    .line 1310
     const-string/jumbo v0, "/"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 1312
+    .line 1311
     const-string/jumbo v0, ""
 
-    .line 1313
+    .line 1312
     const/4 v2, -0x1
 
     if-eq v1, v2, :cond_0
 
-    .line 1314
+    .line 1313
     add-int/lit8 v0, v1, 0x1
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1316
+    .line 1315
     :cond_0
     new-instance v1, Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
@@ -171,7 +171,7 @@
 
     move-object v0, v1
 
-    .line 1319
+    .line 1318
     :goto_0
     return-object v0
 
@@ -181,11 +181,11 @@
     goto :goto_0
 .end method
 
-.method final lg()[I
+.method final jH()[I
     .locals 3
 
     .prologue
-    .line 1329
+    .line 1328
     const/4 v0, 0x1
 
     new-array v0, v0, [I

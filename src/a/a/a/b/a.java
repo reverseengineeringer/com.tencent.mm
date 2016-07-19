@@ -2,15 +2,15 @@ package a.a.a.b;
 
 public final class a
 {
-  static final int maW = 16;
-  static final int maX = 26;
+  static final int mNa = 16;
+  static final int mNb = 26;
   
-  public static int aB(int paramInt)
+  public static int aT(int paramInt)
   {
     return paramInt & 0x7;
   }
   
-  public static int aC(int paramInt)
+  public static int aU(int paramInt)
   {
     return paramInt >>> 3;
   }

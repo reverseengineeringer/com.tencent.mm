@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:id="@id/g9" android:background="@drawable/t6" android:paddingTop="@dimen/hb" android:paddingBottom="@dimen/j_" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="A" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/ga" android:background="@drawable/dl" android:layout_width="fill_parent" android:layout_height="@dimen/j7">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:id="@id/gi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="111" android:singleLine="true" style="@style/MMFontTitleInList" />
+        </LinearLayout>
+        <TextView android:id="@id/ge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30.0dip" android:text="signature" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/ContactSignature" />
+    </LinearLayout>
+</LinearLayout>

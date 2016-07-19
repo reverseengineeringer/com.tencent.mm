@@ -1,65 +1,68 @@
 package com.tencent.mm.ak;
 
-import com.tencent.mm.network.j;
-import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b.er;
-import com.tencent.mm.protocal.b.es;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.d;
+import android.content.ContentValues;
+import android.database.Cursor;
+import com.tencent.mm.sdk.platformtools.be;
+import junit.framework.Assert;
 
 public final class b
-  extends e
-  implements j
+  extends com.tencent.mm.sdk.h.g
 {
-  private d anM;
-  private a anN;
+  public static final String[] bkN = { "CREATE TABLE IF NOT EXISTS chattingbginfo ( username text  PRIMARY KEY , bgflag int  , path text  , reserved1 text  , reserved2 text  , reserved3 int  , reserved4 int  ) " };
+  public com.tencent.mm.bc.g bvG;
   
-  public b(String paramString1, String paramString2)
+  public b(com.tencent.mm.bc.g paramg)
   {
-    Object localObject = new a.a();
-    bFa = new er();
-    bFb = new es();
-    uri = "/cgi-bin/micromsg-bin/bindsoterfingerprintlogin";
-    bEY = 246;
-    bFc = 0;
-    bFd = 0;
-    anN = ((a.a)localObject).vy();
-    localObject = (er)anN.bEW.bFf;
-    iWm = 246;
-    jbX = paramString2;
-    jbW = paramString1;
+    bvG = paramg;
   }
   
-  public final int a(com.tencent.mm.network.e parame, d paramd)
+  public final boolean a(a parama)
   {
-    anM = paramd;
-    return a(parame, anN, this);
-  }
-  
-  public final void b(int paramInt1, int paramInt2, String paramString, o paramo)
-  {
-    if (anM != null) {
-      anM.a(paramInt1, paramInt2, paramString, this);
+    aqQ = -1;
+    ContentValues localContentValues = parama.kn();
+    if ((int)bvG.insert("chattingbginfo", "username", localContentValues) != -1)
+    {
+      FX(parama.getUsername());
+      return true;
     }
+    return false;
   }
   
-  public final void c(int paramInt1, int paramInt2, String paramString)
+  public final boolean b(a parama)
   {
-    if (anM != null) {
-      anM.a(paramInt1, paramInt2, paramString, this);
+    if (parama != null) {}
+    for (boolean bool = true;; bool = false)
+    {
+      Assert.assertTrue(bool);
+      ContentValues localContentValues = parama.kn();
+      if (localContentValues.size() <= 0) {
+        break;
+      }
+      if (bvG.update("chattingbginfo", localContentValues, "username= ?", new String[] { parama.getUsername() }) <= 0) {
+        break;
+      }
+      FX(parama.getUsername());
+      return true;
     }
+    return false;
   }
   
-  public final int getType()
+  public final a iE(String paramString)
   {
-    return 246;
-  }
-  
-  public final d vI()
-  {
-    return anM;
+    Object localObject = null;
+    paramString = "select chattingbginfo.username,chattingbginfo.bgflag,chattingbginfo.path,chattingbginfo.reserved1,chattingbginfo.reserved2,chattingbginfo.reserved3,chattingbginfo.reserved4 from chattingbginfo   where chattingbginfo.username = \"" + be.lh(paramString) + "\"";
+    Cursor localCursor = bvG.rawQuery(paramString, null);
+    if (localCursor == null) {
+      return null;
+    }
+    paramString = (String)localObject;
+    if (localCursor.moveToFirst())
+    {
+      paramString = new a();
+      paramString.b(localCursor);
+    }
+    localCursor.close();
+    return paramString;
   }
 }
 

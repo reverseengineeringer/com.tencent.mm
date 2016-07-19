@@ -1,25 +1,15 @@
 package com.tencent.mm.plugin.sns.data;
 
-import com.tencent.mm.protocal.b.add;
-import java.util.LinkedList;
-import java.util.List;
+import com.tencent.mm.protocal.b.aqk;
+import java.util.concurrent.ConcurrentHashMap;
 
 public final class d
 {
-  public List eEr = new LinkedList();
-  public int gHA;
-  public String gHz;
+  public ConcurrentHashMap<String, CharSequence> gOD = new ConcurrentHashMap();
   
-  public d() {}
-  
-  public d(add paramadd)
+  public final void a(aqk paramaqk, CharSequence paramCharSequence)
   {
-    eEr.add(paramadd);
-  }
-  
-  public d(List paramList)
-  {
-    eEr = paramList;
+    gOD.put(khU + "-" + khX + "-" + fBO, paramCharSequence);
   }
 }
 

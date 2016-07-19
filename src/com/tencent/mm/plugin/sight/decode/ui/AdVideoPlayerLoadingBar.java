@@ -10,29 +10,29 @@ import android.widget.FrameLayout.LayoutParams;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class AdVideoPlayerLoadingBar
   extends RelativeLayout
   implements a
 {
-  private View cMt = null;
-  private boolean csJ = false;
-  private int dfq = 0;
-  private b gyb = null;
-  private ImageView gyc;
-  private ImageView gyd = null;
-  private ImageView gye = null;
-  private ImageView gyf = null;
-  private TextView gyg;
-  private TextView gyh;
-  private int gyi = 0;
-  private int gyj = 0;
-  private float gyk = 0.0F;
-  private int gyl = -1;
-  private int gym = -1;
-  private int gyn = -1;
-  private int gyo = -1;
+  private int bQx = 0;
+  private View cJf = null;
+  private boolean con = false;
+  private ImageView gEA = null;
+  private ImageView gEB = null;
+  private ImageView gEC = null;
+  private TextView gED;
+  private TextView gEE;
+  private int gEF = 0;
+  private int gEG = 0;
+  private float gEH = 0.0F;
+  private int gEI = -1;
+  private int gEJ = -1;
+  private int gEK = -1;
+  private int gEL = -1;
+  private b gEy = null;
+  private ImageView gEz;
   
   public AdVideoPlayerLoadingBar(Context paramContext)
   {
@@ -52,39 +52,32 @@ public class AdVideoPlayerLoadingBar
     init();
   }
   
-  private int getBarLen()
+  private int ayp()
   {
-    gyj = gyd.getWidth();
-    return gyj;
-  }
-  
-  private int getCurrentTimeByBarPoint()
-  {
-    int i = gyd.getLayoutParams()).leftMargin;
-    int j = gye.getPaddingLeft();
-    return (int)((gye.getLayoutParams()).leftMargin - (i - j)) * 1.0D / getBarLen() * gyi);
+    gEG = gEA.getWidth();
+    return gEG;
   }
   
   private void init()
   {
-    cMt = View.inflate(getContext(), 2131363025, this);
-    gyc = ((ImageView)cMt.findViewById(2131169009));
-    gyd = ((ImageView)cMt.findViewById(2131169008));
-    gye = ((ImageView)cMt.findViewById(2131169010));
-    gyf = ((ImageView)cMt.findViewById(2131169005));
-    gyg = ((TextView)cMt.findViewById(2131169006));
-    gyh = ((TextView)cMt.findViewById(2131169007));
-    gye.setOnTouchListener(new View.OnTouchListener()
+    cJf = View.inflate(getContext(), 2130904551, this);
+    gEz = ((ImageView)cJf.findViewById(2131759063));
+    gEA = ((ImageView)cJf.findViewById(2131759062));
+    gEB = ((ImageView)cJf.findViewById(2131759064));
+    gEC = ((ImageView)cJf.findViewById(2131759059));
+    gED = ((TextView)cJf.findViewById(2131759060));
+    gEE = ((TextView)cJf.findViewById(2131759061));
+    gEB.setOnTouchListener(new View.OnTouchListener()
     {
       public final boolean onTouch(View paramAnonymousView, MotionEvent paramAnonymousMotionEvent)
       {
         if (paramAnonymousMotionEvent.getAction() == 0)
         {
-          u.i("!44@/B4Tb64lLpKQpS0z/gOJ2VnP45Iw97kkoTXdd8xFzvg=", "ontouch down");
+          v.i("MicroMsg.VideoPlayerLoadingBar", "ontouch down");
           AdVideoPlayerLoadingBar.a(AdVideoPlayerLoadingBar.this, false);
           AdVideoPlayerLoadingBar.a(AdVideoPlayerLoadingBar.this, paramAnonymousMotionEvent.getX());
           if (AdVideoPlayerLoadingBar.a(AdVideoPlayerLoadingBar.this) != null) {
-            AdVideoPlayerLoadingBar.a(AdVideoPlayerLoadingBar.this).avV();
+            AdVideoPlayerLoadingBar.a(AdVideoPlayerLoadingBar.this).ays();
           }
         }
         do
@@ -105,7 +98,7 @@ public class AdVideoPlayerLoadingBar
               width = ((int)(i * 1.0D / AdVideoPlayerLoadingBar.e(AdVideoPlayerLoadingBar.this) * AdVideoPlayerLoadingBar.g(AdVideoPlayerLoadingBar.this)));
               AdVideoPlayerLoadingBar.f(AdVideoPlayerLoadingBar.this).setLayoutParams(paramAnonymousView);
             }
-            AdVideoPlayerLoadingBar.h(AdVideoPlayerLoadingBar.this).setText(AdVideoPlayerLoadingBar.kV(i / 60) + ":" + AdVideoPlayerLoadingBar.kV(i % 60));
+            AdVideoPlayerLoadingBar.h(AdVideoPlayerLoadingBar.this).setText(AdVideoPlayerLoadingBar.mc(i / 60) + ":" + AdVideoPlayerLoadingBar.mc(i % 60));
             AdVideoPlayerLoadingBar.a(AdVideoPlayerLoadingBar.this, true);
             return true;
           }
@@ -113,8 +106,8 @@ public class AdVideoPlayerLoadingBar
         int i = AdVideoPlayerLoadingBar.d(AdVideoPlayerLoadingBar.this);
         if (AdVideoPlayerLoadingBar.a(AdVideoPlayerLoadingBar.this) != null)
         {
-          u.i("!44@/B4Tb64lLpKQpS0z/gOJ2VnP45Iw97kkoTXdd8xFzvg=", "current time : " + i);
-          AdVideoPlayerLoadingBar.a(AdVideoPlayerLoadingBar.this).kW(i);
+          v.i("MicroMsg.VideoPlayerLoadingBar", "current time : " + i);
+          AdVideoPlayerLoadingBar.a(AdVideoPlayerLoadingBar.this).md(i);
         }
         AdVideoPlayerLoadingBar.a(AdVideoPlayerLoadingBar.this, false);
         return true;
@@ -122,7 +115,7 @@ public class AdVideoPlayerLoadingBar
     });
   }
   
-  public static String kV(int paramInt)
+  public static String mc(int paramInt)
   {
     if (paramInt < 10) {
       return "0" + paramInt;
@@ -130,89 +123,89 @@ public class AdVideoPlayerLoadingBar
     return String.valueOf(paramInt);
   }
   
-  public final void avT()
+  public final void a(b paramb)
   {
-    gyj = 0;
+    gEy = paramb;
   }
   
-  public final void avU()
+  public final int ayo()
   {
-    if (gyi == 0) {}
-    while ((csJ) || (gye == null) || (getBarLen() == 0)) {
+    return gEF;
+  }
+  
+  public final void ayq()
+  {
+    gEG = 0;
+  }
+  
+  public final void ayr()
+  {
+    if (gEF == 0) {}
+    while ((con) || (gEB == null) || (ayp() == 0)) {
       return;
     }
-    int i = (gye.getWidth() - gye.getPaddingLeft() - gye.getPaddingRight()) / 2;
-    gyg.setText(kV(dfq / 60) + ":" + kV(dfq % 60));
-    int j = gyd.getLayoutParams()).leftMargin;
-    int k = gye.getPaddingLeft();
-    FrameLayout.LayoutParams localLayoutParams = (FrameLayout.LayoutParams)gye.getLayoutParams();
-    leftMargin = (j - k + (int)(dfq * 1.0D / gyi * getBarLen()) - i);
-    gye.setLayoutParams(localLayoutParams);
-    localLayoutParams = (FrameLayout.LayoutParams)gyc.getLayoutParams();
-    width = ((int)(dfq * 1.0D / gyi * getBarLen()));
-    gyc.setLayoutParams(localLayoutParams);
+    int i = (gEB.getWidth() - gEB.getPaddingLeft() - gEB.getPaddingRight()) / 2;
+    gED.setText(mc(bQx / 60) + ":" + mc(bQx % 60));
+    int j = gEA.getLayoutParams()).leftMargin;
+    int k = gEB.getPaddingLeft();
+    FrameLayout.LayoutParams localLayoutParams = (FrameLayout.LayoutParams)gEB.getLayoutParams();
+    leftMargin = (j - k + (int)(bQx * 1.0D / gEF * ayp()) - i);
+    gEB.setLayoutParams(localLayoutParams);
+    localLayoutParams = (FrameLayout.LayoutParams)gEz.getLayoutParams();
+    width = ((int)(bQx * 1.0D / gEF * ayp()));
+    gEz.setLayoutParams(localLayoutParams);
   }
   
-  public int getVideoTotalTime()
+  public final void c(View.OnClickListener paramOnClickListener)
   {
-    return gyi;
+    gEC.setOnClickListener(paramOnClickListener);
   }
   
-  public final void kU(int paramInt)
-  {
-    dfq = paramInt;
-    avU();
-  }
-  
-  protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
-  {
-    super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
-    if ((paramInt1 != gyl) || (paramInt2 != gym) || (paramInt3 != gyn) || (paramInt4 != gyo)) {
-      avU();
-    }
-    gyl = paramInt1;
-    gym = paramInt2;
-    gyn = paramInt3;
-    gyo = paramInt4;
-  }
-  
-  public void setIplaySeekCallback(b paramb)
-  {
-    gyb = paramb;
-  }
-  
-  public void setIsPlay(boolean paramBoolean)
+  public final void eu(boolean paramBoolean)
   {
     if (paramBoolean)
     {
-      gyf.setImageResource(2130903395);
+      gEC.setImageResource(2131165570);
       return;
     }
-    gyf.setImageResource(2130903401);
+    gEC.setImageResource(2131165572);
   }
   
-  public void setOnPlayButtonClickListener(View.OnClickListener paramOnClickListener)
+  public final void ma(int paramInt)
   {
-    gyf.setOnClickListener(paramOnClickListener);
+    bQx = paramInt;
+    ayr();
   }
   
-  public void setVideoTotalTime(final int paramInt)
+  public final void mb(final int paramInt)
   {
-    if (gye.getWidth() == 0)
+    if (gEB.getWidth() == 0)
     {
       post(new Runnable()
       {
         public final void run()
         {
-          setVideoTotalTime(paramInt);
+          mb(paramInt);
         }
       });
       return;
     }
-    gyi = paramInt;
-    dfq = 0;
-    gyh.setText(kV(gyi / 60) + ":" + kV(gyi % 60));
-    avU();
+    gEF = paramInt;
+    bQx = 0;
+    gEE.setText(mc(gEF / 60) + ":" + mc(gEF % 60));
+    ayr();
+  }
+  
+  protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+  {
+    super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
+    if ((paramInt1 != gEI) || (paramInt2 != gEJ) || (paramInt3 != gEK) || (paramInt4 != gEL)) {
+      ayr();
+    }
+    gEI = paramInt1;
+    gEJ = paramInt2;
+    gEK = paramInt3;
+    gEL = paramInt4;
   }
 }
 

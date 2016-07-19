@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/MMBody"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <AutoCompleteTextView android:textSize="@dimen/i8" android:layout_gravity="center|left" android:id="@id/brk" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minWidth="120.0dip" android:completionThreshold="1" android:dropDownSelector="@color/j3" android:dropDownWidth="fill_parent" android:dropDownHeight="wrap_content" android:dropDownHorizontalOffset="-20.0dip" android:dropDownVerticalOffset="-5.0dip" style="@style/MMLineEditText" />
+</LinearLayout>

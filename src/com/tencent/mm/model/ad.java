@@ -2,7 +2,7 @@ package com.tencent.mm.model;
 
 public abstract interface ad
 {
-  public abstract void tf();
+  public abstract void tg();
 }
 
 /* Location:

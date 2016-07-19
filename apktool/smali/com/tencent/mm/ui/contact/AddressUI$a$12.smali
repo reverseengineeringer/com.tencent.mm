@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+.field final synthetic lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 262
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$12;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$12;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,14 +36,14 @@
 
 
 # virtual methods
-.method public final Gh()V
+.method public final GE()V
     .locals 2
 
     .prologue
     .line 266
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$12;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$12;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$12;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$12;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/contact/AddressUI$a;->a(Lcom/tencent/mm/ui/contact/AddressUI$a;)Lcom/tencent/mm/ui/contact/a;
 
@@ -54,19 +54,19 @@
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/AddressUI$a;->b(Lcom/tencent/mm/ui/contact/AddressUI$a;)V
 
     .line 267
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$12;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$12;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/AddressUI$a;->a(Lcom/tencent/mm/ui/contact/AddressUI$a;)Lcom/tencent/mm/ui/contact/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/a;->bgV()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/a;->bmD()V
 
     .line 268
     return-void
 .end method
 
-.method public final Gi()V
+.method public final GF()V
     .locals 0
 
     .prologue

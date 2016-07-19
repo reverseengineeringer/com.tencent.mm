@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/tools/CountryCodeUI;->Gb()V
+    value = Lcom/tencent/mm/ui/tools/CountryCodeUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic luc:Lcom/tencent/mm/ui/tools/CountryCodeUI;
+.field final synthetic lVe:Lcom/tencent/mm/ui/tools/CountryCodeUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 234
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$6;->luc:Lcom/tencent/mm/ui/tools/CountryCodeUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$6;->lVe:Lcom/tencent/mm/ui/tools/CountryCodeUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 238
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$6;->luc:Lcom/tencent/mm/ui/tools/CountryCodeUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$6;->lVe:Lcom/tencent/mm/ui/tools/CountryCodeUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/CountryCodeUI;->age()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/CountryCodeUI;->aiI()V
 
     .line 239
     new-instance v0, Landroid/content/Intent;
@@ -53,7 +53,7 @@
     .line 240
     const-string/jumbo v1, "country_name"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$6;->luc:Lcom/tencent/mm/ui/tools/CountryCodeUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$6;->lVe:Lcom/tencent/mm/ui/tools/CountryCodeUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/CountryCodeUI;->d(Lcom/tencent/mm/ui/tools/CountryCodeUI;)Ljava/lang/String;
 
@@ -64,7 +64,7 @@
     .line 241
     const-string/jumbo v1, "couttry_code"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$6;->luc:Lcom/tencent/mm/ui/tools/CountryCodeUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$6;->lVe:Lcom/tencent/mm/ui/tools/CountryCodeUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/CountryCodeUI;->e(Lcom/tencent/mm/ui/tools/CountryCodeUI;)Ljava/lang/String;
 
@@ -73,14 +73,14 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 242
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$6;->luc:Lcom/tencent/mm/ui/tools/CountryCodeUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$6;->lVe:Lcom/tencent/mm/ui/tools/CountryCodeUI;
 
     const/16 v2, 0x64
 
     invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/ui/tools/CountryCodeUI;->setResult(ILandroid/content/Intent;)V
 
     .line 243
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$6;->luc:Lcom/tencent/mm/ui/tools/CountryCodeUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$6;->lVe:Lcom/tencent/mm/ui/tools/CountryCodeUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/CountryCodeUI;->finish()V
 

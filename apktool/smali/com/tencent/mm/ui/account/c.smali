@@ -16,13 +16,31 @@
 
 
 # instance fields
-.field private fHl:Ljava/util/List;
+.field private fQl:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private fHn:Ljava/util/ArrayList;
+.field private fQn:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private krL:Lcom/tencent/mm/ui/account/c$a;
+.field private kQT:Lcom/tencent/mm/ui/account/c$a;
 
-.field private krM:Ljava/lang/String;
+.field private kQU:Ljava/lang/String;
 
 .field private mContext:Landroid/content/Context;
 
@@ -52,10 +70,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/c;->fHl:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/c;->fQl:Ljava/util/List;
 
     .line 34
-    iput-object p3, p0, Lcom/tencent/mm/ui/account/c;->krM:Ljava/lang/String;
+    iput-object p3, p0, Lcom/tencent/mm/ui/account/c;->kQU:Ljava/lang/String;
 
     .line 35
     return-void
@@ -66,7 +84,7 @@
 
     .prologue
     .line 17
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/c;->fHn:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/c;->fQn:Ljava/util/ArrayList;
 
     return-object v0
 .end method
@@ -76,7 +94,7 @@
 
     .prologue
     .line 17
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/c;->fHn:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/c;->fQn:Ljava/util/ArrayList;
 
     return-object p1
 .end method
@@ -86,7 +104,7 @@
 
     .prologue
     .line 17
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/c;->fHl:Ljava/util/List;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/c;->fQl:Ljava/util/List;
 
     return-object p1
 .end method
@@ -106,7 +124,7 @@
 
     .prologue
     .line 17
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/c;->fHl:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/c;->fQl:Ljava/util/List;
 
     return-object v0
 .end method
@@ -116,17 +134,17 @@
 
     .prologue
     .line 17
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/c;->krM:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/c;->kQU:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method private gB(I)Ljava/lang/String;
+.method private hy(I)Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/c;->fHl:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/c;->fQl:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -144,7 +162,7 @@
 
     .prologue
     .line 39
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/c;->fHl:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/c;->fQl:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -158,7 +176,7 @@
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/c;->krL:Lcom/tencent/mm/ui/account/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/c;->kQT:Lcom/tencent/mm/ui/account/c$a;
 
     if-nez v0, :cond_0
 
@@ -169,11 +187,11 @@
 
     invoke-direct {v0, p0, v1}, Lcom/tencent/mm/ui/account/c$a;-><init>(Lcom/tencent/mm/ui/account/c;B)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/c;->krL:Lcom/tencent/mm/ui/account/c$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/c;->kQT:Lcom/tencent/mm/ui/account/c$a;
 
     .line 82
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/c;->krL:Lcom/tencent/mm/ui/account/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/c;->kQT:Lcom/tencent/mm/ui/account/c$a;
 
     return-object v0
 .end method
@@ -183,7 +201,7 @@
 
     .prologue
     .line 17
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/account/c;->gB(I)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/account/c;->hy(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -210,7 +228,7 @@
     .line 56
     iget-object v0, p0, Lcom/tencent/mm/ui/account/c;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0a029c
+    const v1, 0x7f030046
 
     const/4 v2, 0x0
 
@@ -224,7 +242,7 @@
     invoke-direct {v1}, Lcom/tencent/mm/ui/account/c$b;-><init>()V
 
     .line 58
-    const v0, 0x7f0707a9
+    const v0, 0x7f10016c
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -232,7 +250,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v1, Lcom/tencent/mm/ui/account/c$b;->cHA:Landroid/widget/TextView;
+    iput-object v0, v1, Lcom/tencent/mm/ui/account/c$b;->cEE:Landroid/widget/TextView;
 
     .line 59
     invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
@@ -241,17 +259,17 @@
 
     .line 63
     :goto_0
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/account/c;->gB(I)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/account/c;->hy(I)Ljava/lang/String;
 
     move-result-object v1
 
     .line 65
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/c$b;->cHA:Landroid/widget/TextView;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/c$b;->cEE:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 72
-    const v0, 0x7f0406f2
+    const v0, 0x7f020237
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setBackgroundResource(I)V
 

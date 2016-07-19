@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iHi:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
+.field final synthetic jed:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 366
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$7;->iHi:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$7;->jed:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,13 +41,13 @@
 
     .prologue
     .line 371
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$7;->iHi:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$7;->jed:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->j(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;)Landroid/widget/HorizontalScrollView;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$7;->iHi:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$7;->jed:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->h(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;)Landroid/widget/LinearLayout;
 

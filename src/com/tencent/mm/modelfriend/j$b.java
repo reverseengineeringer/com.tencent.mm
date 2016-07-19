@@ -6,13 +6,13 @@ import android.widget.TextView;
 
 final class j$b
 {
-  ImageView bMr;
-  TextView bMs;
-  TextView bMt;
-  Button bMu;
-  Button bMv;
-  TextView bMw;
-  TextView bMx;
+  ImageView bFL;
+  TextView bFM;
+  TextView bFN;
+  Button bFO;
+  Button bFP;
+  TextView bFQ;
+  TextView bFR;
 }
 
 /* Location:

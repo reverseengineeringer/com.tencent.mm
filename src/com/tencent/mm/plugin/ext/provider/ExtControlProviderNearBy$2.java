@@ -9,10 +9,10 @@ final class ExtControlProviderNearBy$2
   
   public final void run()
   {
-    if (ExtControlProviderNearBy.a(dLv) == null) {
-      ExtControlProviderNearBy.a(dLv, c.zD());
+    if (ExtControlProviderNearBy.a(dNd) == null) {
+      ExtControlProviderNearBy.a(dNd, c.zQ());
     }
-    ExtControlProviderNearBy.a(dLv).b(ExtControlProviderNearBy.b(dLv));
+    ExtControlProviderNearBy.a(dNd).b(ExtControlProviderNearBy.b(dNd));
   }
 }
 

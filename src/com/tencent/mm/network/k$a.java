@@ -29,7 +29,7 @@ public abstract class k$a
       return true;
     }
     paramParcel1.enforceInterface("com.tencent.mm.network.IOnGYNetEnd_AIDL");
-    a(paramParcel1.readInt(), paramParcel1.readInt(), paramParcel1.readInt(), paramParcel1.readString(), p.a.ab(paramParcel1.readStrongBinder()), paramParcel1.createByteArray());
+    a(paramParcel1.readInt(), paramParcel1.readInt(), paramParcel1.readInt(), paramParcel1.readString(), p.a.D(paramParcel1.readStrongBinder()), paramParcel1.createByteArray());
     paramParcel2.writeNoException();
     return true;
   }

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iE:Landroid/support/v4/widget/f;
+.field final synthetic iV:Landroid/support/v4/widget/f;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 335
-    iput-object p1, p0, Landroid/support/v4/widget/f$2;->iE:Landroid/support/v4/widget/f;
+    iput-object p1, p0, Landroid/support/v4/widget/f$2;->iV:Landroid/support/v4/widget/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 337
-    iget-object v0, p0, Landroid/support/v4/widget/f$2;->iE:Landroid/support/v4/widget/f;
+    iget-object v0, p0, Landroid/support/v4/widget/f$2;->iV:Landroid/support/v4/widget/f;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/widget/f;->w(I)V
+    invoke-virtual {v0, v1}, Landroid/support/v4/widget/f;->B(I)V
 
     .line 338
     return-void

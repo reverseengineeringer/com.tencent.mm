@@ -3,10 +3,10 @@ package com.tencent.mm.pluginsdk.ui.applet;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import com.tencent.mm.pluginsdk.model.l;
-import com.tencent.mm.protocal.b.axg;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.j;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.axz;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.j;
 import java.util.List;
 
 final class a$3
@@ -16,14 +16,14 @@ final class a$3
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    u.d("!32@/B4Tb64lLpKN6K/THdLZybvP+afE3jBu", "dealwith verify relation out of date");
-    paramDialogInterface = (l)aoT;
-    if ((anN != null) && (anN.vA() != null)) {}
-    for (paramDialogInterface = anN.bEW.bFf).jPq;; paramDialogInterface = null)
+    v.d("MicroMsg.AddContact", "dealwith verify relation out of date");
+    paramDialogInterface = (l)acZ;
+    if ((bkQ != null) && (bkQ.vC() != null)) {}
+    for (paramDialogInterface = bkQ.byh.byq).koj;; paramDialogInterface = null)
     {
-      List localList = aoT).iAo;
+      List localList = acZ).iWO;
       if ((localList != null) && (localList.size() > 0)) {
-        iHY.a((String)localList.get(0), paramDialogInterface, false);
+        jeV.a((String)localList.get(0), paramDialogInterface, false);
       }
       return;
     }

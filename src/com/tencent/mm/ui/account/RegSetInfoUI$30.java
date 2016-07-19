@@ -10,7 +10,7 @@ final class RegSetInfoUI$30
   
   public final void onClick(View paramView)
   {
-    RegSetInfoUI.q(kwh);
+    RegSetInfoUI.q(kVo);
   }
 }
 

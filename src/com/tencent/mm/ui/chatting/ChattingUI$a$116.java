@@ -1,18 +1,14 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.ui.base.MMPullDownView;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 final class ChattingUI$a$116
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
   ChattingUI$a$116(ChattingUI.a parama) {}
   
-  public final void run()
-  {
-    ChattingUI.a.W(laF).setIsTopShowAll(false);
-    ChattingUI.a.W(laF).setTopViewVisible(true);
-    ChattingUI.a.W(laF).bcK();
-  }
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt) {}
 }
 
 /* Location:

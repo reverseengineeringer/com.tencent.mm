@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static nu()Z
+.method public static lI()Z
     .locals 2
 
     .prologue
@@ -13,7 +13,7 @@
 
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

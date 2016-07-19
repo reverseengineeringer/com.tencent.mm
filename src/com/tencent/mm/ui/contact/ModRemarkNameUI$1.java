@@ -8,15 +8,15 @@ final class ModRemarkNameUI$1
 {
   ModRemarkNameUI$1(ModRemarkNameUI paramModRemarkNameUI) {}
   
-  public final void aqD()
+  public final void atE()
   {
-    if (ModRemarkNameUI.a(llQ).getText().toString().trim().length() > 0) {
-      llQ.bC(true);
+    if (ModRemarkNameUI.a(lMe).getText().toString().trim().length() > 0) {
+      lMe.bp(true);
     }
-    while (ModRemarkNameUI.b(llQ) == 0) {
+    while (ModRemarkNameUI.b(lMe) == 0) {
       return;
     }
-    llQ.bC(false);
+    lMe.bp(false);
   }
 }
 

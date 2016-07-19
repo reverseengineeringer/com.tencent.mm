@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/animation/Animation$AnimationListener;
 
 
 # annotations
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic gVB:Z
+.field final synthetic gZD:Landroid/view/View;
 
-.field final synthetic gVz:Lcom/tencent/mm/plugin/sns/ui/b;
+.field final synthetic hiS:Lcom/tencent/mm/plugin/sns/ui/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/b;Z)V
+.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/b;Landroid/view/View;)V
     .locals 0
 
     .prologue
-    .line 103
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/b$3;->gVz:Lcom/tencent/mm/plugin/sns/ui/b;
+    .line 215
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/b$3;->hiS:Lcom/tencent/mm/plugin/sns/ui/b;
 
-    iput-boolean p2, p0, Lcom/tencent/mm/plugin/sns/ui/b$3;->gVB:Z
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/b$3;->gZD:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,35 +40,63 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
+    .locals 2
 
     .prologue
-    .line 107
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/b$3;->gVB:Z
+    .line 227
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/b$3;->gZD:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 108
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/b$3;->gVz:Lcom/tencent/mm/plugin/sns/ui/b;
+    .line 228
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/b$3;->gZD:Landroid/view/View;
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/b;->gVx:Ljava/util/List;
+    invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    .line 229
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/b$3;->gZD:Landroid/view/View;
 
-    move-result v1
+    const/16 v1, 0x8
 
-    const/4 v2, 0x1
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    if-le v1, v2, :cond_0
+    .line 230
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/b$3;->hiS:Lcom/tencent/mm/plugin/sns/ui/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/b;->gVx:Ljava/util/List;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/b;->aCn()Z
+
+    .line 232
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/b$3;->hiS:Lcom/tencent/mm/plugin/sns/ui/b;
 
     const/4 v1, 0x0
 
-    invoke-interface {v0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/b;->gZo:Z
 
-    .line 110
-    :cond_0
+    .line 233
+    return-void
+.end method
+
+.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
+    .locals 0
+
+    .prologue
+    .line 223
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/view/animation/Animation;)V
+    .locals 2
+
+    .prologue
+    .line 218
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/b$3;->hiS:Lcom/tencent/mm/plugin/sns/ui/b;
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/b;->gZo:Z
+
+    .line 219
     return-void
 .end method

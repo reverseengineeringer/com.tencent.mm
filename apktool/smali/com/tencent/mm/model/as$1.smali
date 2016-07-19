@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/model/as;->a(Lcom/tencent/mm/network/e;Lcom/tencent/mm/r/d;)I
+    value = Lcom/tencent/mm/model/as;->a(Lcom/tencent/mm/network/e;Lcom/tencent/mm/t/d;)I
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bCa:Lcom/tencent/mm/model/as;
+.field final synthetic bvk:Lcom/tencent/mm/model/as;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 50
-    iput-object p1, p0, Lcom/tencent/mm/model/as$1;->bCa:Lcom/tencent/mm/model/as;
+    iput-object p1, p0, Lcom/tencent/mm/model/as$1;->bvk:Lcom/tencent/mm/model/as;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
     const/4 v1, 0x0
 
     .line 54
-    iget-object v0, p0, Lcom/tencent/mm/model/as$1;->bCa:Lcom/tencent/mm/model/as;
+    iget-object v0, p0, Lcom/tencent/mm/model/as$1;->bvk:Lcom/tencent/mm/model/as;
 
     move v2, v1
 

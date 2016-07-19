@@ -9,9 +9,9 @@ import org.xmlpull.v1.XmlPullParser;
 
 public final class j
 {
-  private static HashMap kMd = new HashMap();
-  private static final Class[] kMf = { Context.class, AttributeSet.class };
-  final Object[] kMe = new Object[2];
+  private static HashMap<String, Constructor<?>> lls = new HashMap();
+  private static final Class<?>[] llu = { Context.class, AttributeSet.class };
+  final Object[] llt = new Object[2];
   final Context mContext;
   
   public j(Context paramContext)
@@ -21,7 +21,7 @@ public final class j
   
   private Preference a(String paramString1, String paramString2, AttributeSet paramAttributeSet)
   {
-    Object localObject1 = (Constructor)kMd.get(paramString1);
+    Object localObject1 = (Constructor)lls.get(paramString1);
     if (localObject1 == null) {}
     for (;;)
     {
@@ -31,7 +31,7 @@ public final class j
         if (paramString2 != null)
         {
           localObject2 = paramString2 + paramString1;
-          localObject2 = ((ClassLoader)localObject3).loadClass((String)localObject2).getConstructor(kMf);
+          localObject2 = ((ClassLoader)localObject3).loadClass((String)localObject2).getConstructor(llu);
           localObject1 = localObject2;
         }
       }
@@ -54,9 +54,9 @@ public final class j
       catch (Exception paramString2) {}
       try
       {
-        kMd.put(paramString1, localObject2);
+        lls.put(paramString1, localObject2);
         localObject1 = localObject2;
-        localObject3 = kMe;
+        localObject3 = llt;
         localObject3[1] = paramAttributeSet;
         localObject1 = localObject2;
         localObject2 = (Preference)((Constructor)localObject2).newInstance((Object[])localObject3);

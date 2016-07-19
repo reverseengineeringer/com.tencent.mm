@@ -13,28 +13,30 @@ import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
-import com.tencent.mm.aw.a;
-import com.tencent.mm.plugin.sns.d.ai;
-import com.tencent.mm.plugin.sns.h.k;
+import com.tencent.mm.az.a;
+import com.tencent.mm.plugin.sns.e.ah;
+import com.tencent.mm.plugin.sns.i.k;
 import com.tencent.mm.plugin.sns.lucky.b.w;
 import com.tencent.mm.plugin.sns.ui.SnsCommentDetailUI;
 import com.tencent.mm.plugin.sns.ui.TouchImageView;
 import com.tencent.mm.plugin.sns.ui.c.b;
+import com.tencent.mm.plugin.sns.ui.f;
 import com.tencent.mm.pluginsdk.ui.a.b;
-import com.tencent.mm.protocal.b.aqf;
-import com.tencent.mm.protocal.b.aqi;
-import com.tencent.mm.protocal.b.aqw;
+import com.tencent.mm.protocal.b.aqq;
+import com.tencent.mm.protocal.b.aqt;
+import com.tencent.mm.protocal.b.ari;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.wallet_core.ui.e;
 import java.util.LinkedList;
 
 public class SnsDetailLuckyHeader
   extends LinearLayout
 {
-  private View dmY = null;
-  private TextView gLA;
-  private LinearLayout gLB;
-  private LinearLayout gLC;
+  private View dmE = null;
+  private TextView gTf;
+  private LinearLayout gTg;
+  private LinearLayout gTh;
   
   public SnsDetailLuckyHeader(Context paramContext)
   {
@@ -56,18 +58,23 @@ public class SnsDetailLuckyHeader
   
   private void init()
   {
-    View localView = View.inflate(getContext(), 2131362935, this);
-    dmY = localView.findViewById(2131168554);
-    gLA = ((TextView)localView.findViewById(2131168555));
-    gLB = ((LinearLayout)localView.findViewById(2131168557));
-    gLC = getLinearSeparator();
+    Object localObject = View.inflate(getContext(), 2130903888, this);
+    dmE = ((View)localObject).findViewById(2131757791);
+    gTf = ((TextView)((View)localObject).findViewById(2131757792));
+    gTg = ((LinearLayout)((View)localObject).findViewById(2131757794));
+    BackwardSupportUtil.b.a(getContext(), 2.0F);
+    localObject = new AbsListView.LayoutParams(-1, 1);
+    LinearLayout localLinearLayout = new LinearLayout(getContext());
+    localLinearLayout.setBackgroundResource(2130839368);
+    localLinearLayout.setLayoutParams((ViewGroup.LayoutParams)localObject);
+    gTh = localLinearLayout;
   }
   
   public final void a(k paramk, b paramb)
   {
-    Object localObject2 = ai.l(paramk);
-    Object localObject1 = jKj;
-    if ((localObject1 == null) || (jKz.size() == 0)) {
+    Object localObject2 = ah.l(paramk);
+    Object localObject1 = kiG;
+    if ((localObject1 == null) || (kja.size() == 0)) {
       setVisibility(8);
     }
     boolean bool;
@@ -79,77 +86,77 @@ public class SnsDetailLuckyHeader
     {
       return;
       setVisibility(0);
-      double d = w.b(paramk, (aqi)localObject2);
-      localObject2 = getContext().getString(2131431621, new Object[] { Integer.valueOf(jKj.jKy), com.tencent.mm.wallet_core.ui.e.k(d * 1.0D / 100.0D) });
-      gLA.setText((CharSequence)localObject2);
-      dmY.setTag(paramk);
-      dmY.setOnClickListener(hpc);
-      paramk = jKz;
-      bool = jKz.isEmpty();
+      double d = w.b(paramk, (aqt)localObject2);
+      localObject2 = getContext().getString(2131235493, new Object[] { Integer.valueOf(kiG.kiZ), e.n(d * 1.0D / 100.0D) });
+      gTf.setText((CharSequence)localObject2);
+      dmE.setTag(paramk);
+      dmE.setOnClickListener(hFz);
+      paramk = kja;
+      bool = kja.isEmpty();
       k = BackwardSupportUtil.b.a(getContext(), 32.0F);
       m = BackwardSupportUtil.b.a(getContext(), 6.0F);
       i = BackwardSupportUtil.b.a(getContext(), 10.0F);
       j = BackwardSupportUtil.b.a(getContext(), 17.0F);
-    } while (gLB == null);
+    } while (gTg == null);
     int n = ((WindowManager)getContext().getSystemService("window")).getDefaultDisplay().getWidth();
-    float f = getResources().getDimension(2131034587);
-    u.d("!44@/B4Tb64lLpId/VVzjvPqzo9q+q0JLZmaF/QdRzzYbfE=", "guess size %d %f", new Object[] { Integer.valueOf(n), Float.valueOf(f) });
+    float f = getResources().getDimension(2131427666);
+    v.d("MicroMsg.SnsDetailLuckyHeader", "guess size %d %f", new Object[] { Integer.valueOf(n), Float.valueOf(f) });
     f = n - f * 2.0F;
     if (paramk.size() <= 0)
     {
-      if (gLB.getParent() != null) {
-        gLB.setVisibility(8);
+      if (gTg.getParent() != null) {
+        gTg.setVisibility(8);
       }
-      gLB.removeAllViews();
-      gLB.setVisibility(8);
-      paramk = gLB;
+      gTg.removeAllViews();
+      gTg.setVisibility(8);
+      paramk = gTg;
       i = 8;
     }
     for (;;)
     {
       paramk.setVisibility(i);
       return;
-      gLB.getParent();
-      gLB.removeAllViews();
-      gLB.setVisibility(0);
-      gLB.setPadding(0, m, 0, m);
+      gTg.getParent();
+      gTg.removeAllViews();
+      gTg.setVisibility(0);
+      gTg.setPadding(0, m, 0, m);
       localObject1 = new ImageView(getContext());
-      ((ImageView)localObject1).setImageResource(2130903286);
+      ((ImageView)localObject1).setImageResource(2131165498);
       ((ImageView)localObject1).setPadding(i, j, i, 0);
       localObject2 = new LinearLayout.LayoutParams(-2, -2);
       gravity = 49;
       ((ImageView)localObject1).setLayoutParams((ViewGroup.LayoutParams)localObject2);
       ((ImageView)localObject1).setClickable(false);
       ((ImageView)localObject1).setFocusable(false);
-      gLB.addView((View)localObject1);
-      n = a.fromDPToPix(getContext(), SnsCommentDetailUI.hcE);
+      gTg.addView((View)localObject1);
+      n = a.fromDPToPix(getContext(), SnsCommentDetailUI.hrq);
       j = (int)(f - n) / (m + k);
       i = j;
       if ((int)(f - n) % (m + k) > k) {
         i = j + 1;
       }
-      u.d("!44@/B4Tb64lLpId/VVzjvPqzo9q+q0JLZmaF/QdRzzYbfE=", "guess size %d", new Object[] { Integer.valueOf(i) });
-      localObject1 = new com.tencent.mm.plugin.sns.ui.e(getContext());
-      ((com.tencent.mm.plugin.sns.ui.e)localObject1).setLayoutParams(new LinearLayout.LayoutParams(-1, -2));
-      ((com.tencent.mm.plugin.sns.ui.e)localObject1).setLineMaxCounte(i);
+      v.d("MicroMsg.SnsDetailLuckyHeader", "guess size %d", new Object[] { Integer.valueOf(i) });
+      localObject1 = new f(getContext());
+      ((f)localObject1).setLayoutParams(new LinearLayout.LayoutParams(-1, -2));
+      hjY = i;
       i = 0;
       while (i < paramk.size())
       {
-        localObject2 = (aqf)paramk.get(i);
+        localObject2 = (aqq)paramk.get(i);
         TouchImageView localTouchImageView = new TouchImageView(getContext());
         localTouchImageView.setScaleType(ImageView.ScaleType.FIT_XY);
-        localTouchImageView.setImageResource(2130970022);
+        localTouchImageView.setImageResource(2130838352);
         LinearLayout.LayoutParams localLayoutParams = new LinearLayout.LayoutParams(k, k);
         localLayoutParams.setMargins(0, m, m, 0);
         localTouchImageView.setLayoutParams(localLayoutParams);
-        localTouchImageView.setTag(iYA);
-        a.b.b(localTouchImageView, iYA, true);
-        localTouchImageView.setOnClickListener(hoR);
-        ((com.tencent.mm.plugin.sns.ui.e)localObject1).addView(localTouchImageView);
+        localTouchImageView.setTag(jwf);
+        a.b.b(localTouchImageView, jwf, true);
+        localTouchImageView.setOnClickListener(hFo);
+        ((f)localObject1).addView(localTouchImageView);
         i += 1;
       }
-      gLB.addView((View)localObject1);
-      paramk = gLC;
+      gTg.addView((View)localObject1);
+      paramk = gTh;
       if (bool) {
         i = 8;
       } else {
@@ -158,21 +165,11 @@ public class SnsDetailLuckyHeader
     }
   }
   
-  public LinearLayout getLinearSeparator()
-  {
-    BackwardSupportUtil.b.a(getContext(), 2.0F);
-    AbsListView.LayoutParams localLayoutParams = new AbsListView.LayoutParams(-1, 1);
-    LinearLayout localLinearLayout = new LinearLayout(getContext());
-    localLinearLayout.setBackgroundResource(2130969775);
-    localLinearLayout.setLayoutParams(localLayoutParams);
-    return localLinearLayout;
-  }
-  
   public void setVisibility(int paramInt)
   {
     super.setVisibility(paramInt);
-    if (dmY != null) {
-      dmY.setVisibility(paramInt);
+    if (dmE != null) {
+      dmE.setVisibility(paramInt);
     }
   }
 }

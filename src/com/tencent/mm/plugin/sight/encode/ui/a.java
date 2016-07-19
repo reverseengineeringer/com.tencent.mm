@@ -2,23 +2,23 @@ package com.tencent.mm.plugin.sight.encode.ui;
 
 public abstract interface a
 {
-  public abstract void awF();
+  public abstract int aze();
   
-  public abstract void awG();
+  public abstract void azf();
   
-  public abstract void awH();
+  public abstract void azg();
   
-  public abstract void awI();
+  public abstract void azh();
   
-  public abstract boolean awJ();
+  public abstract void azi();
   
-  public abstract void eJ(boolean paramBoolean);
+  public abstract boolean azj();
   
-  public abstract int getViewHeight();
+  public abstract void eB(boolean paramBoolean);
   
-  public abstract boolean qr();
+  public abstract boolean oU();
   
-  public abstract void setCameraShadowAlpha(float paramFloat);
+  public abstract void u(float paramFloat);
 }
 
 /* Location:

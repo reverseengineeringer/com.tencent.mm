@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/pluginsdk/d;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    value = Lcom/tencent/mm/pluginsdk/d;->r(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic cBq:Landroid/app/ProgressDialog;
+.field final synthetic iUW:Landroid/app/ProgressDialog;
 
 .field final synthetic val$context:Landroid/content/Context;
 
@@ -28,8 +28,8 @@
     .locals 0
 
     .prologue
-    .line 1101
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/d$4;->cBq:Landroid/app/ProgressDialog;
+    .line 1114
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/d$4;->iUW:Landroid/app/ProgressDialog;
 
     iput-object p2, p0, Lcom/tencent/mm/pluginsdk/d$4;->val$context:Landroid/content/Context;
 
@@ -40,14 +40,14 @@
 
 
 # virtual methods
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;Z)V
+.method public final a(IILjava/lang/String;Lcom/tencent/mm/t/j;Z)V
     .locals 6
 
     .prologue
     const/4 v5, 0x0
 
-    .line 1103
-    const-string/jumbo v0, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
+    .line 1116
+    const-string/jumbo v0, "MicroMsg.DeepLinkHelper"
 
     const-string/jumbo v1, "DeepLinkHelper.DeepLinkCallback, %d, %d, %s, %b"
 
@@ -81,14 +81,14 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1104
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/d$4;->cBq:Landroid/app/ProgressDialog;
+    .line 1117
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/d$4;->iUW:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/d$4;->cBq:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/d$4;->iUW:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->isShowing()Z
 
@@ -96,12 +96,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1105
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/d$4;->cBq:Landroid/app/ProgressDialog;
+    .line 1118
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/d$4;->iUW:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 1107
+    .line 1120
     :cond_0
     if-eqz p4, :cond_1
 
@@ -109,25 +109,25 @@
 
     if-eqz p2, :cond_1
 
-    instance-of v0, p4, Lcom/tencent/mm/modelsimple/ag;
+    instance-of v0, p4, Lcom/tencent/mm/modelsimple/ae;
 
     if-eqz v0, :cond_1
 
-    .line 1108
-    check-cast p4, Lcom/tencent/mm/modelsimple/ag;
+    .line 1121
+    check-cast p4, Lcom/tencent/mm/modelsimple/ae;
 
-    invoke-virtual {p4}, Lcom/tencent/mm/modelsimple/ag;->CM()Lcom/tencent/mm/protocal/b/aub;
+    invoke-virtual {p4}, Lcom/tencent/mm/modelsimple/ae;->CZ()Lcom/tencent/mm/protocal/b/aur;
 
     move-result-object v0
 
-    .line 1109
+    .line 1122
     if-eqz v0, :cond_1
 
     iget-object v1, p0, Lcom/tencent/mm/pluginsdk/d$4;->val$context:Landroid/content/Context;
 
     if-eqz v1, :cond_1
 
-    .line 1110
+    .line 1123
     iget-object v1, p0, Lcom/tencent/mm/pluginsdk/d$4;->val$context:Landroid/content/Context;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -136,7 +136,7 @@
 
     iget-object v3, p0, Lcom/tencent/mm/pluginsdk/d$4;->val$context:Landroid/content/Context;
 
-    const v4, 0x7f0b0ddd
+    const v4, 0x7f080134
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -152,9 +152,9 @@
 
     move-result-object v2
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aub;->jMS:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aur;->klC:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->li(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -172,7 +172,7 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 1113
+    .line 1126
     :cond_1
     return-void
 .end method

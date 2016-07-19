@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;->Gb()V
+    value = Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+.field final synthetic loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 382
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$5;->kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$5;->loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,7 +49,7 @@
     const/4 v4, 0x1
 
     .line 389
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     new-array v1, v4, [Ljava/lang/Object;
 
@@ -59,10 +59,10 @@
 
     aput-object v2, v1, v5
 
-    invoke-virtual {v0, v3, v1}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v3, v1}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     .line 390
-    const-string/jumbo v0, "!32@/B4Tb64lLpLFDma4Qh7ELOVLkIWClC8Q"
+    const-string/jumbo v0, "MicroMsg.MobileFriendUI"
 
     const-string/jumbo v1, "[cpan] kv report logid:%d scene:%d"
 
@@ -82,14 +82,14 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 391
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -102,10 +102,10 @@
     invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
     .line 392
-    invoke-static {v4, v4}, Lcom/tencent/mm/platformtools/m;->d(ZZ)V
+    invoke-static {v4, v4}, Lcom/tencent/mm/platformtools/l;->d(ZZ)V
 
     .line 393
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$5;->kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$5;->loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;->h(Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;)V
 

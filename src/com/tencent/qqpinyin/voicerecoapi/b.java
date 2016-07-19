@@ -3,12 +3,12 @@ package com.tencent.qqpinyin.voicerecoapi;
 public final class b
   extends Exception
 {
-  private int cFW;
-  private String exo = "";
+  private int cCZ;
+  private String eDI = "";
   
   public b(int paramInt)
   {
-    cFW = paramInt;
+    cCZ = paramInt;
     String str;
     switch (paramInt)
     {
@@ -17,8 +17,8 @@ public final class b
     }
     for (;;)
     {
-      exo = str;
-      new StringBuilder("errorCode: ").append(cFW).append("\t msg: ").append(exo);
+      eDI = str;
+      new StringBuilder("errorCode: ").append(cCZ).append("\t msg: ").append(eDI);
       return;
       str = "speex engine error";
       continue;

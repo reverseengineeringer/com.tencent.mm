@@ -2,7 +2,7 @@ package com.tencent.mm.ui.contact;
 
 public abstract interface i$a
 {
-  public abstract void rL(int paramInt);
+  public abstract void tN(int paramInt);
 }
 
 /* Location:

@@ -2,21 +2,21 @@ package com.tencent.mm.lan_cs;
 
 public final class Client
 {
-  public static a bwN;
+  public static a boN;
   
   public static class C2Java
   {
     public static void onDisconnect(String paramString, int paramInt)
     {
-      if (Client.bwN != null) {
-        Client.bwN.ra();
+      if (Client.boN != null) {
+        Client.boN.qD();
       }
     }
     
     public static void onRecv(String paramString, int paramInt, byte[] paramArrayOfByte)
     {
-      if (Client.bwN != null) {
-        Client.bwN.onRecv(paramString, paramInt, paramArrayOfByte);
+      if (Client.boN != null) {
+        Client.boN.onRecv(paramString, paramInt, paramArrayOfByte);
       }
     }
   }
@@ -32,7 +32,7 @@ public final class Client
   {
     public abstract void onRecv(String paramString, int paramInt, byte[] paramArrayOfByte);
     
-    public abstract void ra();
+    public abstract void qD();
   }
 }
 

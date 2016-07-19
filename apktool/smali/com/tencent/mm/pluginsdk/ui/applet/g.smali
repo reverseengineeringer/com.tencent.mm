@@ -10,7 +10,7 @@
 
 .field public end:I
 
-.field public gZd:Ljava/lang/String;
+.field public hmp:Ljava/lang/String;
 
 .field public linkColor:I
 
@@ -44,8 +44,17 @@
 
 
 # virtual methods
-.method public final c(Ljava/lang/Class;)Ljava/lang/Object;
+.method public final d(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/Class",
+            "<TT;>;)TT;"
+        }
+    .end annotation
 
     .prologue
     .line 38
@@ -129,7 +138,7 @@
     .line 103
     iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/g;->url:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 

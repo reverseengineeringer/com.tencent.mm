@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/o3" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:layout_width="fill_parent" android:layout_height="54.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center|left" android:id="@id/cla" android:layout_width="@dimen/i5" android:layout_height="@dimen/i5" android:layout_marginLeft="@dimen/cp" android:scaleType="fitXY" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/cp" android:layout_weight="1.0">
+        <TextView android:textAppearance="@style/i5" android:textColor="@color/j_" android:ellipsize="marquee" android:id="@id/dq" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:ellipsize="marquee" android:id="@id/zr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" />
+    </LinearLayout>
+    <CheckedTextView android:gravity="center" android:layout_gravity="center|right" android:id="@id/bjq" android:background="@null" android:layout_width="wrap_content" android:layout_height="54.0dip" android:checkMark="@drawable/nt" />
+</LinearLayout>

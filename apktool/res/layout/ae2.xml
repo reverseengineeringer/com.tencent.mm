@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:minHeight="80.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/cl9" android:background="@drawable/atc" android:layout_width="fill_parent" android:layout_height="80.0dip" android:minHeight="80.0dip">
+        <ImageView android:id="@id/cl_" android:layout_width="217.0dip" android:layout_height="80.0dip" android:scaleType="fitXY" android:adjustViewBounds="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <ImageView android:id="@id/cla" android:layout_width="37.0dip" android:layout_height="37.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="6.0dip" android:src="@drawable/at5" android:layout_centerVertical="true" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="37.0dip" android:layout_toRightOf="@id/cla" android:layout_alignTop="@id/cla">
+            <TextView android:textSize="@dimen/i8" android:textColor="#ffe2e2e2" android:id="@id/clb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/d_r" />
+            <TextView android:textSize="@dimen/jc" android:textColor="#ffe2e2e2" android:id="@id/cli" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:text="@string/d_v" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/hg" android:textColor="@color/ow" android:id="@id/clk" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/i8" android:textColor="@color/p1" android:id="@id/cll" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:text="@string/d_x" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -3,7 +3,7 @@ package com.tencent.mm.ui.contact;
 import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 
 final class BizContactEntranceView$1
   implements View.OnClickListener

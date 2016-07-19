@@ -2,21 +2,33 @@ package com.tencent.mm.modelsearch;
 
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c.c;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.storage.a;
 import com.tencent.mm.storage.b;
 import java.util.Map;
 
 public final class d
 {
-  public static boolean ix(String paramString)
+  public static boolean BR()
   {
-    if (!ah.rh()) {
+    if (!ah.rg()) {
       return false;
     }
-    a locala = c.uZ().DN("100065");
+    a locala = c.vb().Gc("100087");
     if (locala.isValid()) {
-      return ay.getInt((String)locala.aWf().get(paramString), 0) > 0;
+      return be.getInt((String)locala.bbr().get("FTSHotArticle"), 0) > 0;
+    }
+    return false;
+  }
+  
+  public static boolean iO(String paramString)
+  {
+    if (!ah.rg()) {
+      return false;
+    }
+    a locala = c.vb().Gc("100065");
+    if (locala.isValid()) {
+      return be.getInt((String)locala.bbr().get(paramString), 0) > 0;
     }
     return false;
   }

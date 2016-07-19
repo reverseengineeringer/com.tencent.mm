@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:flowlayout="http://schemas.android.com/apk/res-auto">
+    <com.tencent.mm.ui.base.MMPullDownView android:orientation="vertical" android:id="@id/aew" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.tencent.mm.plugin.emoji.ui.v2.PreViewListGridView android:gravity="center" android:id="@id/aex" android:background="@color/nl" android:focusable="true" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/qk" android:transcriptMode="disabled" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="0.0dip" android:choiceMode="none" />
+    </com.tencent.mm.ui.base.MMPullDownView>
+    <com.tencent.mm.ui.contact.LabelContainerView android:orientation="vertical" android:id="@id/aey" android:background="#f7ffffff" android:paddingLeft="@dimen/i7" android:paddingTop="@dimen/cp" android:paddingRight="@dimen/i7" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/select_contact_label_header" />
+            <com.tencent.mm.ui.base.MMTagPanel android:id="@id/aez" android:paddingTop="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content" flowlayout:horizontalSpacing="@dimen/j8" flowlayout:verticalSpacing="@dimen/cp" />
+        </LinearLayout>
+    </com.tencent.mm.ui.contact.LabelContainerView>
+</FrameLayout>

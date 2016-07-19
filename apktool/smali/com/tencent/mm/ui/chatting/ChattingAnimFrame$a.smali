@@ -17,7 +17,7 @@
 # instance fields
 .field protected duration:I
 
-.field final synthetic kSc:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;
+.field final synthetic lse:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;
 
 .field targetView:Landroid/view/View;
 
@@ -28,7 +28,7 @@
 
     .prologue
     .line 537
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;->kSc:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;->lse:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;
 
     invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
 

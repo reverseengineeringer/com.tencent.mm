@@ -1,93 +1,69 @@
 package com.tencent.mm.storage;
 
-import com.tencent.mm.d.b.ak;
-import com.tencent.mm.sdk.h.c.a;
-import java.lang.reflect.Field;
-import java.util.Map;
-
 public final class z
-  extends ak
 {
-  protected static c.a aot;
+  public static final z kFM = new z("timeline");
+  public static final z kFN = new z("album_friend");
+  public static final z kFO = new z("album_self");
+  public static final z kFP = new z("album_stranger");
+  public static final z kFQ = new z("profile_friend");
+  public static final z kFR = new z("profile_stranger");
+  public static final z kFS = new z("comment");
+  public static final z kFT = new z("comment_detail");
+  public static final z kFU = new z("other");
+  public static final z kFV = new z("snssight");
+  public static final z kFW = new z("fts");
+  public int fxK = 0;
+  public String tag = "";
   
-  static
+  public z(String paramString)
   {
-    c.a locala = new c.a();
-    ceD = new Field[16];
-    blR = new String[17];
-    StringBuilder localStringBuilder = new StringBuilder();
-    blR[0] = "downloadId";
-    jYx.put("downloadId", "LONG default '-1'  PRIMARY KEY ");
-    localStringBuilder.append(" downloadId LONG default '-1'  PRIMARY KEY ");
-    localStringBuilder.append(", ");
-    jYw = "downloadId";
-    blR[1] = "downloadUrl";
-    jYx.put("downloadUrl", "TEXT default '' ");
-    localStringBuilder.append(" downloadUrl TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[2] = "fileName";
-    jYx.put("fileName", "TEXT default '' ");
-    localStringBuilder.append(" fileName TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[3] = "filePath";
-    jYx.put("filePath", "TEXT default '' ");
-    localStringBuilder.append(" filePath TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[4] = "fileType";
-    jYx.put("fileType", "INTEGER default '0' ");
-    localStringBuilder.append(" fileType INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    blR[5] = "status";
-    jYx.put("status", "INTEGER default '0' ");
-    localStringBuilder.append(" status INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    blR[6] = "md5";
-    jYx.put("md5", "TEXT default '' ");
-    localStringBuilder.append(" md5 TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[7] = "autoInstall";
-    jYx.put("autoInstall", "INTEGER default 'false' ");
-    localStringBuilder.append(" autoInstall INTEGER default 'false' ");
-    localStringBuilder.append(", ");
-    blR[8] = "showNotification";
-    jYx.put("showNotification", "INTEGER default 'false' ");
-    localStringBuilder.append(" showNotification INTEGER default 'false' ");
-    localStringBuilder.append(", ");
-    blR[9] = "sysDownloadId";
-    jYx.put("sysDownloadId", "LONG default '-1' ");
-    localStringBuilder.append(" sysDownloadId LONG default '-1' ");
-    localStringBuilder.append(", ");
-    blR[10] = "downloaderType";
-    jYx.put("downloaderType", "INTEGER default '0' ");
-    localStringBuilder.append(" downloaderType INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    blR[11] = "appId";
-    jYx.put("appId", "TEXT default '' ");
-    localStringBuilder.append(" appId TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[12] = "downloadUrlHashCode";
-    jYx.put("downloadUrlHashCode", "INTEGER default '0' ");
-    localStringBuilder.append(" downloadUrlHashCode INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    blR[13] = "packageName";
-    jYx.put("packageName", "TEXT default '' ");
-    localStringBuilder.append(" packageName TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[14] = "downloadedSize";
-    jYx.put("downloadedSize", "LONG default '0' ");
-    localStringBuilder.append(" downloadedSize LONG default '0' ");
-    localStringBuilder.append(", ");
-    blR[15] = "totalSize";
-    jYx.put("totalSize", "LONG default '0' ");
-    localStringBuilder.append(" totalSize LONG default '0' ");
-    blR[16] = "rowid";
-    jYy = localStringBuilder.toString();
-    aot = locala;
+    tag = paramString;
   }
   
-  protected final c.a ls()
+  public static z a(z paramz, int paramInt)
   {
-    return aot;
+    paramz = new z(tag);
+    fxK = paramInt;
+    return paramz;
+  }
+  
+  public static z bcg()
+  {
+    return new z("timeline");
+  }
+  
+  public static z bch()
+  {
+    return new z("album_friend");
+  }
+  
+  public static z bci()
+  {
+    return new z("album_self");
+  }
+  
+  public static z bcj()
+  {
+    return new z("album_stranger");
+  }
+  
+  public static z bck()
+  {
+    return new z("snssight");
+  }
+  
+  public final boolean equals(Object paramObject)
+  {
+    if ((paramObject instanceof z)) {
+      return tag.equals(tag);
+    }
+    return super.equals(paramObject);
+  }
+  
+  public final String toString()
+  {
+    return tag + "@" + fxK;
   }
 }
 

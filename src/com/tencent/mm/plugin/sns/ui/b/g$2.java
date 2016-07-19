@@ -2,19 +2,20 @@ package com.tencent.mm.plugin.sns.ui.b;
 
 import com.tencent.mm.plugin.sight.decode.a.b;
 import com.tencent.mm.plugin.sight.decode.a.b.e;
-import com.tencent.mm.plugin.sns.ui.an;
+import com.tencent.mm.plugin.sns.a.a.f;
+import com.tencent.mm.plugin.sns.ui.aq;
 
 final class g$2
   implements b.e
 {
-  g$2(g paramg, an paraman, a.b paramb) {}
+  g$2(g paramg, aq paramaq, long paramLong) {}
   
-  public final void a(b paramb, int paramInt)
+  public final void d(b paramb, int paramInt)
   {
-    if ((paramInt == -1) || (hoK == null) || (hoK.hjE == null) || (hoK.hjE.gWC == null)) {
+    if ((paramInt == -1) || (hFg == null) || (hFg.hyl == null) || (hFg.hyl.hka == null)) {
       return;
     }
-    hoK.hjE.gWC.bV(hoL.hnB);
+    hFg.hyl.hka.cl(hFh);
   }
 }
 

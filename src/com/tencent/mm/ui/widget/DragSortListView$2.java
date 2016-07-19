@@ -9,8 +9,8 @@ final class DragSortListView$2
   
   private void cancel()
   {
-    if (DragSortListView.b(lEn) == 4) {
-      lEn.bjw();
+    if (DragSortListView.b(mfd) == 4) {
+      mfd.bpu();
     }
   }
   

@@ -10,19 +10,19 @@ import java.util.Set;
 
 public final class e
 {
-  public final List mdL;
+  public final List<d> mPP;
   
   public e()
   {
-    mdL = new ArrayList();
+    mPP = new ArrayList();
   }
   
-  public e(List paramList)
+  public e(List<d> paramList)
   {
-    mdL = new ArrayList(paramList);
+    mPP = new ArrayList(paramList);
   }
   
-  public e(Map paramMap)
+  public e(Map<String, String> paramMap)
   {
     this();
     paramMap = paramMap.entrySet().iterator();
@@ -32,11 +32,11 @@ public final class e
         return;
       }
       Map.Entry localEntry = (Map.Entry)paramMap.next();
-      mdL.add(new d((String)localEntry.getKey(), (String)localEntry.getValue()));
+      mPP.add(new d((String)localEntry.getKey(), (String)localEntry.getValue()));
     }
   }
   
-  public final void IP(String paramString)
+  public final void Lq(String paramString)
   {
     String[] arrayOfString;
     int i;
@@ -56,7 +56,7 @@ public final class e
     if (paramString.length > 1) {}
     for (paramString = c.decode(paramString[1]);; paramString = "")
     {
-      mdL.add(new d(str, paramString));
+      mPP.add(new d(str, paramString));
       i += 1;
       break;
     }
@@ -64,23 +64,23 @@ public final class e
   
   public final void a(e parame)
   {
-    mdL.addAll(mdL);
+    mPP.addAll(mPP);
   }
   
-  public final String boM()
+  public final String bvK()
   {
-    if (mdL.size() == 0) {
+    if (mPP.size() == 0) {
       return "";
     }
     StringBuilder localStringBuilder = new StringBuilder();
-    Iterator localIterator = mdL.iterator();
+    Iterator localIterator = mPP.iterator();
     for (;;)
     {
       if (!localIterator.hasNext()) {
         return localStringBuilder.toString().substring(1);
       }
       d locald = (d)localIterator.next();
-      localStringBuilder.append('&').append(c.encode(buL).concat("=").concat(c.encode(value)));
+      localStringBuilder.append('&').append(c.encode(DF).concat("=").concat(c.encode(value)));
     }
   }
 }

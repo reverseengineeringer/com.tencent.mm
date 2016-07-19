@@ -1,23 +1,17 @@
 package com.tencent.mm.ui.chatting;
 
-import android.view.View;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import com.tencent.mm.ui.base.MMPullDownView.c;
+import com.tencent.mm.ui.base.MMPullDownView;
 
 final class ChattingUI$a$111
-  implements MMPullDownView.c
+  implements Runnable
 {
   ChattingUI$a$111(ChattingUI.a parama) {}
   
-  public final boolean Re()
+  public final void run()
   {
-    View localView = ChattingUI.a.e(laF).getChildAt(ChattingUI.a.e(laF).getChildCount() - 1);
-    if (localView == null) {}
-    while ((localView.getBottom() <= ChattingUI.a.e(laF).getHeight()) && (ChattingUI.a.e(laF).getLastVisiblePosition() == ChattingUI.a.e(laF).getAdapter().getCount() - 1)) {
-      return true;
-    }
-    return false;
+    ChattingUI.a.X(lAY).hY(false);
+    ChattingUI.a.X(lAY).ia(true);
+    ChattingUI.a.X(lAY).bih();
   }
 }
 

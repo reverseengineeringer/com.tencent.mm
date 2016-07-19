@@ -11,17 +11,26 @@
     }
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/ui/i",
+        "<",
+        "Lcom/tencent/mm/modelfriend/s;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
 .field private context:Landroid/content/Context;
 
-.field fQS:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+.field fZV:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
-.field private kNY:Ljava/lang/String;
+.field private kPO:Landroid/view/LayoutInflater;
 
-.field kNZ:Lcom/tencent/mm/ui/bindlinkedin/a$a;
+.field private lno:Ljava/lang/String;
 
-.field private kqJ:Landroid/view/LayoutInflater;
+.field lnp:Lcom/tencent/mm/ui/bindlinkedin/a$a;
 
 
 # direct methods
@@ -42,19 +51,19 @@
     iput-object v1, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->context:Landroid/content/Context;
 
     .line 26
-    iput-object v1, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->kNY:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->lno:Ljava/lang/String;
 
     .line 27
-    iput-object v1, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->kNZ:Lcom/tencent/mm/ui/bindlinkedin/a$a;
+    iput-object v1, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->lnp:Lcom/tencent/mm/ui/bindlinkedin/a$a;
 
     .line 28
-    iput-object v1, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->fQS:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+    iput-object v1, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->fZV:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
     .line 32
     iput-object p1, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->context:Landroid/content/Context;
 
     .line 33
-    iput-object p2, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->kNY:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->lno:Ljava/lang/String;
 
     .line 34
     iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->context:Landroid/content/Context;
@@ -63,14 +72,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->kqJ:Landroid/view/LayoutInflater;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->kPO:Landroid/view/LayoutInflater;
 
     .line 35
     new-instance v0, Lcom/tencent/mm/ui/bindlinkedin/a$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/bindlinkedin/a$1;-><init>(Lcom/tencent/mm/ui/bindlinkedin/a;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->fQS:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->fZV:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
     .line 41
     return-void
@@ -81,23 +90,23 @@
 
     .prologue
     .line 22
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->kNZ:Lcom/tencent/mm/ui/bindlinkedin/a$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->lnp:Lcom/tencent/mm/ui/bindlinkedin/a$a;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final Gk()V
+.method public final GH()V
     .locals 5
 
     .prologue
     .line 133
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zz()Lcom/tencent/mm/modelfriend/t;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zM()Lcom/tencent/mm/modelfriend/t;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->kNY:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->lno:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -115,7 +124,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/t;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/t;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -156,18 +165,18 @@
     return-void
 .end method
 
-.method protected final Gl()V
+.method protected final GI()V
     .locals 0
 
     .prologue
     .line 129
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindlinkedin/a;->Gk()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindlinkedin/a;->GH()V
 
     .line 130
     return-void
 .end method
 
-.method public final synthetic a(Ljava/lang/Object;Landroid/database/Cursor;)Ljava/lang/Object;
+.method public final synthetic convertFrom(Ljava/lang/Object;Landroid/database/Cursor;)Ljava/lang/Object;
     .locals 0
 
     .prologue
@@ -181,7 +190,7 @@
     invoke-direct {p1}, Lcom/tencent/mm/modelfriend/s;-><init>()V
 
     :cond_0
-    invoke-virtual {p1, p2}, Lcom/tencent/mm/modelfriend/s;->c(Landroid/database/Cursor;)V
+    invoke-virtual {p1, p2}, Lcom/tencent/mm/modelfriend/s;->b(Landroid/database/Cursor;)V
 
     return-object p1
 .end method
@@ -200,7 +209,7 @@
     .locals 8
 
     .prologue
-    const v7, 0x7f080187
+    const v7, 0x7f0f0126
 
     const/4 v6, 0x1
 
@@ -219,9 +228,9 @@
 
     .line 50
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->kqJ:Landroid/view/LayoutInflater;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->kPO:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0a0524
+    const v1, 0x7f030317
 
     invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -247,13 +256,13 @@
 
     check-cast v3, Lcom/tencent/mm/modelfriend/s;
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOc:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lns:Landroid/widget/TextView;
 
     iget-object v4, v3, Lcom/tencent/mm/modelfriend/s;->field_name:Ljava/lang/String;
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOd:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnt:Landroid/widget/TextView;
 
     iget-object v4, v3, Lcom/tencent/mm/modelfriend/s;->field_position:Ljava/lang/String;
 
@@ -278,33 +287,33 @@
 
     if-ne v0, v6, :cond_4
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
-    const v4, 0x7f0b05c7
+    const v4, 0x7f080acc
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(I)V
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
     invoke-virtual {v0, v7}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :cond_2
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->fQS:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a;->fZV:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOb:Landroid/widget/ImageView;
+    iget-object v1, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnr:Landroid/widget/ImageView;
 
     iget-object v3, v3, Lcom/tencent/mm/modelfriend/s;->field_picUrl:Ljava/lang/String;
 
-    const v4, 0x7f0301b1
+    const v4, 0x7f0700af
 
     move v6, v5
 
@@ -327,25 +336,25 @@
 
     .line 56
     :cond_4
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
-    const v4, 0x7f0b05d9
+    const v4, 0x7f0808c0
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(I)V
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
     const/4 v4, -0x1
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
-    const v4, 0x7f0406d0
+    const v4, 0x7f020138
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
     new-instance v4, Lcom/tencent/mm/ui/bindlinkedin/a$2;
 
@@ -360,44 +369,44 @@
 
     if-ne v0, v6, :cond_6
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
-    const v4, 0x7f0b05de
+    const v4, 0x7f0808c3
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(I)V
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
     invoke-virtual {v0, v7}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     goto :goto_1
 
     :cond_6
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
-    const v4, 0x7f0b05dd
+    const v4, 0x7f0808c2
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(I)V
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
     invoke-virtual {v0, v7}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
-    const v4, 0x7f040694
+    const v4, 0x7f020139
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
     new-instance v4, Lcom/tencent/mm/ui/bindlinkedin/a$3;
 
@@ -414,21 +423,21 @@
 
     if-ne v0, v4, :cond_2
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
-    const v4, 0x7f0b05da
+    const v4, 0x7f0808c1
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(I)V
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
     invoke-virtual {v0, v7}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

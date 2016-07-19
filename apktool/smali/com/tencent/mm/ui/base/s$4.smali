@@ -1,6 +1,9 @@
 .class final Lcom/tencent/mm/ui/base/s$4;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
@@ -15,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kHO:Lcom/tencent/mm/ui/base/o;
+.field final synthetic lgQ:Lcom/tencent/mm/ui/base/o;
 
 
 # direct methods
@@ -23,28 +26,25 @@
     .locals 0
 
     .prologue
-    .line 345
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/s$4;->kHO:Lcom/tencent/mm/ui/base/o;
+    .line 356
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/s$4;->lgQ:Lcom/tencent/mm/ui/base/o;
 
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
     .prologue
-    .line 349
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/s$4;->kHO:Lcom/tencent/mm/ui/base/o;
+    .line 360
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/s$4;->lgQ:Lcom/tencent/mm/ui/base/o;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/o;->dismiss()V
 
-    .line 350
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/platformtools/aa;->handleMessage(Landroid/os/Message;)V
-
-    .line 351
+    .line 361
     return-void
 .end method

@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk;
 
 import android.content.Context;
 import android.os.Bundle;
-import com.tencent.mm.d.a.ie;
+import com.tencent.mm.e.a.ij;
 import com.tencent.mm.pluginsdk.wallet.b;
 import com.tencent.mm.pluginsdk.wallet.f;
 import com.tencent.mm.pluginsdk.wallet.g;
@@ -10,47 +10,51 @@ import java.util.Map;
 
 public abstract interface i$g
 {
-  public abstract boolean XB();
+  public abstract void ZA();
   
-  public abstract boolean XC();
+  public abstract Map<String, String> ZB();
   
-  public abstract f XF();
+  public abstract g ZC();
   
-  public abstract boolean XG();
+  public abstract Map<String, String> ZD();
   
-  public abstract boolean XH();
+  public abstract boolean ZE();
   
-  public abstract void XI();
+  public abstract boolean Zm();
   
-  public abstract boolean XJ();
+  public abstract boolean Zn();
   
-  public abstract boolean XK();
+  public abstract boolean Zo();
   
-  public abstract void XL();
+  public abstract void Zq();
   
-  public abstract Map XM();
+  public abstract f Zs();
   
-  public abstract g XN();
+  public abstract boolean Zt();
   
-  public abstract Map XO();
+  public abstract boolean Zu();
   
-  public abstract boolean XP();
+  public abstract void Zv();
   
-  public abstract int a(b paramb, int paramInt);
+  public abstract boolean Zw();
   
-  public abstract void a(ie paramie, int paramInt);
+  public abstract boolean Zx();
   
-  public abstract void a(ie paramie, boolean paramBoolean);
+  public abstract void Zy();
+  
+  public abstract void Zz();
+  
+  public abstract int a(b paramb, int paramInt, boolean paramBoolean);
+  
+  public abstract void a(ij paramij, int paramInt);
+  
+  public abstract void a(ij paramij, int paramInt, String paramString);
   
   public abstract boolean a(boolean paramBoolean1, boolean paramBoolean2, Bundle paramBundle);
   
-  public abstract void abort();
+  public abstract void bu(Context paramContext);
   
-  public abstract void bB(Context paramContext);
-  
-  public abstract void bz(Context paramContext);
-  
-  public abstract void release();
+  public abstract void bw(Context paramContext);
 }
 
 /* Location:

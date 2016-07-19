@@ -6,10 +6,10 @@ import android.widget.TextView;
 
 final class GroupCardSelectUI$b
 {
-  ImageView bMr;
-  TextView eIN;
-  CheckBox ftO;
-  TextView lkD;
+  ImageView bFL;
+  TextView eQC;
+  CheckBox fCT;
+  TextView lKO;
   
   GroupCardSelectUI$b(GroupCardSelectUI paramGroupCardSelectUI) {}
 }

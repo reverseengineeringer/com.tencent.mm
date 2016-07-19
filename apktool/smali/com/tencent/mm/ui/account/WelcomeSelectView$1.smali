@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/WelcomeSelectView;->bw(Landroid/content/Context;)V
+    value = Lcom/tencent/mm/ui/account/WelcomeSelectView;->br(Landroid/content/Context;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kwS:Lcom/tencent/mm/ui/account/WelcomeSelectView;
+.field final synthetic kVZ:Lcom/tencent/mm/ui/account/WelcomeSelectView;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 105
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/WelcomeSelectView$1;->kwS:Lcom/tencent/mm/ui/account/WelcomeSelectView;
+    .line 108
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/WelcomeSelectView$1;->kVZ:Lcom/tencent/mm/ui/account/WelcomeSelectView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,25 +42,25 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 109
+    .line 112
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 110
+    .line 113
     const-string/jumbo v1, "not_auth_setting"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 111
+    .line 114
     const-string/jumbo v1, "from_login_history"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 112
-    sget-object v1, Lcom/tencent/mm/plugin/a/a;->coa:Lcom/tencent/mm/pluginsdk/g;
+    .line 115
+    sget-object v1, Lcom/tencent/mm/plugin/a/a;->cjo:Lcom/tencent/mm/pluginsdk/g;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/WelcomeSelectView$1;->kwS:Lcom/tencent/mm/ui/account/WelcomeSelectView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/WelcomeSelectView$1;->kVZ:Lcom/tencent/mm/ui/account/WelcomeSelectView;
 
     invoke-virtual {v2}, Lcom/tencent/mm/ui/account/WelcomeSelectView;->getContext()Landroid/content/Context;
 
@@ -68,6 +68,6 @@
 
     invoke-interface {v1, v0, v2}, Lcom/tencent/mm/pluginsdk/g;->s(Landroid/content/Intent;Landroid/content/Context;)V
 
-    .line 113
+    .line 116
     return-void
 .end method

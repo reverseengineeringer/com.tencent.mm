@@ -10,7 +10,7 @@ public final class MainSightForwardContainerView$1
   
   public final void onClick(View paramView)
   {
-    gCI.eO(true);
+    gJj.eH(true);
   }
 }
 

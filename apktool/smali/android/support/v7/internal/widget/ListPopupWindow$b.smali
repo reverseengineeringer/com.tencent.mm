@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic qi:Landroid/support/v7/internal/widget/ListPopupWindow;
+.field final synthetic qw:Landroid/support/v7/internal/widget/ListPopupWindow;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 1373
-    iput-object p1, p0, Landroid/support/v7/internal/widget/ListPopupWindow$b;->qi:Landroid/support/v7/internal/widget/ListPopupWindow;
+    iput-object p1, p0, Landroid/support/v7/internal/widget/ListPopupWindow$b;->qw:Landroid/support/v7/internal/widget/ListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,7 +51,7 @@
 
     .prologue
     .line 1376
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$b;->qi:Landroid/support/v7/internal/widget/ListPopupWindow;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$b;->qw:Landroid/support/v7/internal/widget/ListPopupWindow;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/widget/ListPopupWindow;->clearListSelection()V
 

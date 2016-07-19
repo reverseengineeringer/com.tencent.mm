@@ -4,61 +4,61 @@
 
 
 # instance fields
-.field private dIH:I
+.field private dKg:I
 
-.field private dII:I
+.field private dKh:I
 
-.field private gaU:F
+.field private gAg:Z
 
-.field private gpO:Z
+.field public gkV:F
 
-.field private hez:Z
+.field public htl:Z
 
-.field private imageHeight:I
+.field public imageHeight:I
 
-.field private imageWidth:I
+.field public imageWidth:I
 
-.field protected kIE:Landroid/graphics/Matrix;
+.field protected lhU:Landroid/graphics/Matrix;
 
-.field protected kIF:Landroid/graphics/Matrix;
+.field protected lhV:Landroid/graphics/Matrix;
 
-.field private final kIG:Landroid/graphics/Matrix;
+.field private final lhW:Landroid/graphics/Matrix;
 
-.field private final kIH:[F
+.field private final lhX:[F
 
-.field protected kII:Landroid/graphics/Bitmap;
+.field protected lhY:Landroid/graphics/Bitmap;
 
-.field kIJ:I
+.field lhZ:I
 
-.field kIK:I
+.field lia:I
 
-.field private kIL:F
+.field private lib:F
 
-.field private kIM:F
+.field private lic:F
 
-.field private kIN:F
+.field private lid:F
 
-.field private kIO:F
+.field private lie:F
 
-.field private kIP:F
+.field private lif:F
 
-.field private kIQ:F
+.field private lig:F
 
-.field private kIR:Z
+.field public lih:Z
 
-.field public kIS:Z
+.field public lii:Z
 
-.field public kIT:Z
+.field public lij:Z
 
-.field private kIU:F
+.field private lik:F
 
-.field private kIV:F
+.field private lil:F
 
-.field private kIW:F
+.field private lim:F
 
-.field kIX:F
+.field lin:F
 
-.field protected mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
+.field protected mHandler:Lcom/tencent/mm/sdk/platformtools/ac;
 
 
 # direct methods
@@ -80,94 +80,94 @@
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIE:Landroid/graphics/Matrix;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhU:Landroid/graphics/Matrix;
 
     .line 39
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIF:Landroid/graphics/Matrix;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhV:Landroid/graphics/Matrix;
 
     .line 43
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIG:Landroid/graphics/Matrix;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhW:Landroid/graphics/Matrix;
 
     .line 46
     const/16 v0, 0x9
 
     new-array v0, v0, [F
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIH:[F
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhX:[F
 
     .line 50
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kII:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhY:Landroid/graphics/Bitmap;
 
     .line 52
-    iput v3, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIJ:I
+    iput v3, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhZ:I
 
-    iput v3, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIK:I
+    iput v3, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lia:I
 
     .line 54
-    iput v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIL:F
+    iput v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lib:F
 
     .line 55
-    iput v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIM:F
+    iput v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lic:F
 
     .line 56
-    iput v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIN:F
+    iput v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lid:F
 
     .line 65
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gpO:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gAg:Z
 
     .line 67
     const/high16 v0, 0x40000000    # 2.0f
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIO:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lie:F
 
     .line 68
     const/high16 v0, 0x3f400000    # 0.75f
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIP:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lif:F
 
     .line 69
     const/high16 v0, 0x40400000    # 3.0f
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIQ:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lig:F
 
     .line 71
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIR:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lih:Z
 
     .line 72
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIS:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lii:Z
 
     .line 73
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIT:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lij:Z
 
     .line 74
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->hez:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->htl:Z
 
-    .line 308
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 311
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->mHandler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    .line 367
+    .line 382
     const/high16 v0, 0x3f800000    # 1.0f
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIW:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lim:F
 
-    .line 607
-    iput v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIX:F
+    .line 623
+    iput v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lin:F
 
     .line 139
     iput p3, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->imageHeight:I
@@ -213,94 +213,94 @@
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIE:Landroid/graphics/Matrix;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhU:Landroid/graphics/Matrix;
 
     .line 39
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIF:Landroid/graphics/Matrix;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhV:Landroid/graphics/Matrix;
 
     .line 43
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIG:Landroid/graphics/Matrix;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhW:Landroid/graphics/Matrix;
 
     .line 46
     const/16 v0, 0x9
 
     new-array v0, v0, [F
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIH:[F
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhX:[F
 
     .line 50
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kII:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhY:Landroid/graphics/Bitmap;
 
     .line 52
-    iput v3, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIJ:I
+    iput v3, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhZ:I
 
-    iput v3, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIK:I
+    iput v3, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lia:I
 
     .line 54
-    iput v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIL:F
+    iput v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lib:F
 
     .line 55
-    iput v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIM:F
+    iput v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lic:F
 
     .line 56
-    iput v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIN:F
+    iput v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lid:F
 
     .line 65
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gpO:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gAg:Z
 
     .line 67
     const/high16 v0, 0x40000000    # 2.0f
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIO:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lie:F
 
     .line 68
     const/high16 v0, 0x3f400000    # 0.75f
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIP:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lif:F
 
     .line 69
     const/high16 v0, 0x40400000    # 3.0f
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIQ:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lig:F
 
     .line 71
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIR:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lih:Z
 
     .line 72
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIS:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lii:Z
 
     .line 73
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIT:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lij:Z
 
     .line 74
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->hez:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->htl:Z
 
-    .line 308
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 311
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->mHandler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    .line 367
+    .line 382
     const/high16 v0, 0x3f800000    # 1.0f
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIW:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lim:F
 
-    .line 607
-    iput v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIX:F
+    .line 623
+    iput v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lin:F
 
     .line 150
     iput v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->imageHeight:I
@@ -315,18 +315,306 @@
     return-void
 .end method
 
-.method private bdg()V
-    .locals 5
+.method private F(ZZ)V
+    .locals 6
+
+    .prologue
+    const/high16 v5, 0x40000000    # 2.0f
+
+    const/4 v0, 0x0
+
+    .line 322
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhY:Landroid/graphics/Bitmap;
+
+    if-nez v1, :cond_0
+
+    .line 380
+    :goto_0
+    return-void
+
+    .line 326
+    :cond_0
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->biK()Landroid/graphics/Matrix;
+
+    move-result-object v1
+
+    .line 328
+    new-instance v2, Landroid/graphics/RectF;
+
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhY:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhY:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    invoke-direct {v2, v0, v0, v3, v4}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    .line 331
+    invoke-virtual {v1, v2}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
+
+    .line 333
+    invoke-virtual {v2}, Landroid/graphics/RectF;->height()F
+
+    move-result v1
+
+    .line 334
+    invoke-virtual {v2}, Landroid/graphics/RectF;->width()F
+
+    move-result v3
+
+    .line 338
+    if-eqz p2, :cond_4
+
+    .line 339
+    iget v4, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKh:I
+
+    int-to-float v4, v4
+
+    cmpg-float v4, v1, v4
+
+    if-gez v4, :cond_2
+
+    .line 340
+    iget v4, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKh:I
+
+    int-to-float v4, v4
+
+    sub-float v1, v4, v1
+
+    div-float/2addr v1, v5
+
+    iget v4, v2, Landroid/graphics/RectF;->top:F
+
+    sub-float/2addr v1, v4
+
+    .line 354
+    :goto_1
+    if-eqz p1, :cond_8
+
+    .line 355
+    iget v4, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKg:I
+
+    int-to-float v4, v4
+
+    cmpg-float v4, v3, v4
+
+    if-gez v4, :cond_6
+
+    .line 356
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKg:I
+
+    int-to-float v0, v0
+
+    sub-float/2addr v0, v3
+
+    div-float/2addr v0, v5
+
+    iget v3, v2, Landroid/graphics/RectF;->left:F
+
+    sub-float/2addr v0, v3
+
+    .line 372
+    :cond_1
+    :goto_2
+    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->p(FF)V
+
+    .line 373
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->biK()Landroid/graphics/Matrix;
+
+    move-result-object v0
+
+    .line 374
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
+
+    .line 375
+    invoke-virtual {v0, v2}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
+
+    .line 376
+    invoke-virtual {v2}, Landroid/graphics/RectF;->height()F
+
+    .line 377
+    invoke-virtual {v2}, Landroid/graphics/RectF;->width()F
+
+    goto :goto_0
+
+    .line 341
+    :cond_2
+    iget v1, v2, Landroid/graphics/RectF;->top:F
+
+    cmpl-float v1, v1, v0
+
+    if-lez v1, :cond_3
+
+    .line 342
+    iget v1, v2, Landroid/graphics/RectF;->top:F
+
+    neg-float v1, v1
+
+    goto :goto_1
+
+    .line 343
+    :cond_3
+    iget v1, v2, Landroid/graphics/RectF;->bottom:F
+
+    iget v4, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKh:I
+
+    int-to-float v4, v4
+
+    cmpg-float v1, v1, v4
+
+    if-gez v1, :cond_a
+
+    .line 344
+    iget v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKh:I
+
+    int-to-float v1, v1
+
+    iget v4, v2, Landroid/graphics/RectF;->bottom:F
+
+    sub-float/2addr v1, v4
+
+    goto :goto_1
+
+    .line 347
+    :cond_4
+    iget v1, v2, Landroid/graphics/RectF;->top:F
+
+    cmpl-float v1, v1, v0
+
+    if-lez v1, :cond_5
+
+    .line 348
+    iget v1, v2, Landroid/graphics/RectF;->top:F
+
+    neg-float v1, v1
+
+    goto :goto_1
+
+    .line 349
+    :cond_5
+    iget v1, v2, Landroid/graphics/RectF;->bottom:F
+
+    iget v4, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKh:I
+
+    int-to-float v4, v4
+
+    cmpg-float v1, v1, v4
+
+    if-gez v1, :cond_a
+
+    .line 350
+    iget v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKh:I
+
+    int-to-float v1, v1
+
+    iget v4, v2, Landroid/graphics/RectF;->bottom:F
+
+    sub-float/2addr v1, v4
+
+    goto :goto_1
+
+    .line 357
+    :cond_6
+    iget v3, v2, Landroid/graphics/RectF;->left:F
+
+    cmpl-float v3, v3, v0
+
+    if-lez v3, :cond_7
+
+    .line 358
+    iget v0, v2, Landroid/graphics/RectF;->left:F
+
+    neg-float v0, v0
+
+    goto :goto_2
+
+    .line 359
+    :cond_7
+    iget v3, v2, Landroid/graphics/RectF;->right:F
+
+    iget v4, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKg:I
+
+    int-to-float v4, v4
+
+    cmpg-float v3, v3, v4
+
+    if-gez v3, :cond_1
+
+    .line 360
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKg:I
+
+    int-to-float v0, v0
+
+    iget v3, v2, Landroid/graphics/RectF;->right:F
+
+    sub-float/2addr v0, v3
+
+    goto :goto_2
+
+    .line 363
+    :cond_8
+    iget v3, v2, Landroid/graphics/RectF;->left:F
+
+    cmpl-float v3, v3, v0
+
+    if-lez v3, :cond_9
+
+    .line 364
+    iget v0, v2, Landroid/graphics/RectF;->left:F
+
+    neg-float v0, v0
+
+    goto :goto_2
+
+    .line 365
+    :cond_9
+    iget v3, v2, Landroid/graphics/RectF;->right:F
+
+    iget v4, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKg:I
+
+    int-to-float v4, v4
+
+    cmpg-float v3, v3, v4
+
+    if-gez v3, :cond_1
+
+    .line 366
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKg:I
+
+    int-to-float v0, v0
+
+    iget v3, v2, Landroid/graphics/RectF;->right:F
+
+    sub-float/2addr v0, v3
+
+    goto :goto_2
+
+    :cond_a
+    move v1, v0
+
+    goto/16 :goto_1
+.end method
+
+.method private biJ()V
+    .locals 4
 
     .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    const/high16 v4, 0x3f800000    # 1.0f
-
     .line 243
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dIH:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKg:I
 
     int-to-float v0, v0
 
@@ -336,10 +624,10 @@
 
     div-float/2addr v0, v3
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIU:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lik:F
 
     .line 244
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dII:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKh:I
 
     int-to-float v0, v0
 
@@ -349,249 +637,154 @@
 
     div-float/2addr v0, v3
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIV:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lil:F
 
     .line 245
     iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->imageWidth:I
 
     iget v3, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->imageHeight:I
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/d;->af(II)Z
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/d;->ak(II)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIS:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lii:Z
 
     .line 246
     iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->imageWidth:I
 
     iget v3, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->imageHeight:I
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/d;->ae(II)Z
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/d;->aj(II)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lij:Z
 
     .line 248
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIS:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lii:Z
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_0
 
     iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->imageWidth:I
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dIH:I
+    iget v3, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKg:I
 
-    if-le v0, v3, :cond_3
+    if-le v0, v3, :cond_0
 
     move v0, v1
 
     :goto_0
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIS:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lii:Z
 
     .line 249
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIT:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lij:Z
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_1
 
     iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->imageHeight:I
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dII:I
+    iget v3, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKh:I
 
-    if-le v0, v3, :cond_4
+    if-le v0, v3, :cond_1
 
     :goto_1
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIT:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lij:Z
 
     .line 251
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->hez:Z
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lik:F
 
-    if-eqz v0, :cond_0
+    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gkV:F
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIS:Z
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIT:Z
-
-    if-eqz v0, :cond_5
-
-    .line 252
-    :cond_1
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIU:F
-
-    iget v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIV:F
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(FF)F
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gaU:F
-
-    .line 253
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gaU:F
-
-    cmpl-float v0, v0, v4
-
-    if-lez v0, :cond_2
-
-    .line 254
-    iput v4, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gaU:F
-
-    .line 264
-    :cond_2
-    :goto_2
+    .line 267
     return-void
 
-    :cond_3
+    :cond_0
     move v0, v2
 
     .line 248
     goto :goto_0
 
-    :cond_4
+    :cond_1
     move v1, v2
 
     .line 249
     goto :goto_1
+.end method
 
-    .line 258
-    :cond_5
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIU:F
+.method private biK()Landroid/graphics/Matrix;
+    .locals 2
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gaU:F
+    .prologue
+    .line 447
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhW:Landroid/graphics/Matrix;
 
-    goto :goto_2
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhU:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
+
+    .line 448
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhW:Landroid/graphics/Matrix;
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhV:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->postConcat(Landroid/graphics/Matrix;)Z
+
+    .line 449
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhW:Landroid/graphics/Matrix;
+
+    return-object v0
 .end method
 
 .method private d(FFF)V
     .locals 10
 
     .prologue
-    const/high16 v2, 0x43000000    # 128.0f
+    const/high16 v3, 0x43000000    # 128.0f
 
-    .line 519
+    .line 535
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScale()F
 
     move-result v0
 
     sub-float v0, p1, v0
 
-    div-float v6, v0, v2
+    div-float v7, v0, v3
 
-    .line 520
+    .line 536
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScale()F
 
-    move-result v5
+    move-result v6
 
-    .line 521
+    .line 537
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    .line 523
-    iget-object v9, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 539
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->mHandler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    new-instance v0, Lcom/tencent/mm/ui/base/MultiTouchImageView$1;
+    new-instance v1, Lcom/tencent/mm/ui/base/MultiTouchImageView$1;
 
-    move-object v1, p0
+    move-object v2, p0
 
-    move v7, p2
+    move v8, p2
 
-    move v8, p3
+    move v9, p3
 
-    invoke-direct/range {v0 .. v8}, Lcom/tencent/mm/ui/base/MultiTouchImageView$1;-><init>(Lcom/tencent/mm/ui/base/MultiTouchImageView;FJFFFF)V
+    invoke-direct/range {v1 .. v9}, Lcom/tencent/mm/ui/base/MultiTouchImageView$1;-><init>(Lcom/tencent/mm/ui/base/MultiTouchImageView;FJFFFF)V
 
-    invoke-virtual {v9, v0}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
-    .line 535
+    .line 551
     return-void
-.end method
-
-.method private getDoubleTabScale()F
-    .locals 3
-
-    .prologue
-    const v2, 0x3f333333    # 0.7f
-
-    .line 485
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScale()F
-
-    move-result v0
-
-    .line 486
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScaleWidth()F
-
-    move-result v1
-
-    mul-float/2addr v1, v2
-
-    cmpl-float v1, v1, v0
-
-    if-lez v1, :cond_1
-
-    .line 490
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScaleWidth()F
-
-    move-result v0
-
-    .line 501
-    :goto_0
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getMaxZoom()F
-
-    move-result v1
-
-    cmpl-float v1, v0, v1
-
-    if-lez v1, :cond_0
-
-    .line 502
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getMaxZoom()F
-
-    move-result v0
-
-    .line 505
-    :cond_0
-    return v0
-
-    .line 492
-    :cond_1
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScaleHeight()F
-
-    move-result v1
-
-    mul-float/2addr v1, v2
-
-    cmpl-float v0, v1, v0
-
-    if-lez v0, :cond_2
-
-    .line 494
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScaleHeight()F
-
-    move-result v0
-
-    goto :goto_0
-
-    .line 497
-    :cond_2
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScaleRate()F
-
-    move-result v0
-
-    iget v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIO:F
-
-    mul-float/2addr v0, v1
-
-    goto :goto_0
 .end method
 
 .method private init()V
     .locals 3
 
     .prologue
-    .line 370
+    .line 385
     const-string/jumbo v0, "dktest"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -600,7 +793,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dIH:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKg:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -612,7 +805,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dII:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKh:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -622,14 +815,14 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 371
+    .line 386
     sget-object v0, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 374
+    .line 389
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -650,24 +843,55 @@
 
     div-float/2addr v0, v1
 
-    .line 375
+    .line 390
     const/high16 v1, 0x3f800000    # 1.0f
 
     cmpl-float v1, v0, v1
 
     if-lez v1, :cond_0
 
-    .line 376
-    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIW:F
+    .line 391
+    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lim:F
 
-    .line 378
+    .line 393
     :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final bN(II)V
+.method public final D(F)V
+    .locals 2
+
+    .prologue
+    .line 106
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    invoke-static {p1, v0}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v0
+
+    if-gez v0, :cond_0
+
+    .line 107
+    const-string/jumbo v0, "MicroMsg.MultiTouchImageView"
+
+    const-string/jumbo v1, "max scale limit is less than 1.0, change nothing, return"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 111
+    :goto_0
+    return-void
+
+    .line 110
+    :cond_0
+    iput p1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lig:F
+
+    goto :goto_0
+.end method
+
+.method public final bT(II)V
     .locals 0
 
     .prologue
@@ -681,22 +905,22 @@
     return-void
 .end method
 
-.method public final bdf()V
+.method public final biI()V
     .locals 2
 
     .prologue
     const/4 v1, 0x0
 
     .line 217
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIF:Landroid/graphics/Matrix;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhV:Landroid/graphics/Matrix;
 
     invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
 
     .line 218
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->bdg()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->biJ()V
 
     .line 222
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gaU:F
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gkV:F
 
     invoke-virtual {p0, v0, v1, v1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->c(FFF)V
 
@@ -704,464 +928,318 @@
     return-void
 .end method
 
-.method public final bdh()V
-    .locals 2
-
-    .prologue
-    .line 459
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIR:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    iget v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIL:F
-
-    cmpl-float v0, v0, v1
-
-    if-nez v0, :cond_0
-
-    .line 460
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getDoubleTabScale()F
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIL:F
-
-    .line 462
-    :cond_0
-    return-void
-.end method
-
-.method public final c(FFF)V
-    .locals 8
+.method public final biL()V
+    .locals 4
 
     .prologue
     const/4 v2, 0x1
 
     const/4 v1, 0x0
 
-    const/high16 v7, 0x40000000    # 2.0f
-
-    const/4 v3, 0x0
-
-    .line 466
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScale()F
-
-    move-result v4
-
-    .line 467
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIR:Z
+    .line 470
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->htl:Z
 
     if-eqz v0, :cond_0
 
-    .line 468
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIL:F
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lii:Z
 
-    cmpl-float v0, v3, v0
+    if-nez v0, :cond_1
 
-    if-nez v0, :cond_4
-
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIQ:F
-
-    iget v5, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIW:F
-
-    mul-float/2addr v0, v5
+    :cond_0
+    move v0, v2
 
     :goto_0
-    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIM:F
+    iget-boolean v3, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lij:Z
+
+    if-nez v3, :cond_2
+
+    :goto_1
+    invoke-direct {p0, v0, v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->F(ZZ)V
+
+    .line 471
+    return-void
+
+    :cond_1
+    move v0, v1
 
     .line 470
+    goto :goto_0
+
+    :cond_2
+    move v2, v1
+
+    goto :goto_1
+.end method
+
+.method public final biM()V
+    .locals 2
+
+    .prologue
+    .line 474
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lih:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    iget v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lib:F
+
+    cmpl-float v0, v0, v1
+
+    if-nez v0, :cond_0
+
+    .line 475
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->biN()F
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lib:F
+
+    .line 477
     :cond_0
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIM:F
+    return-void
+.end method
+
+.method public final biN()F
+    .locals 3
+
+    .prologue
+    const v2, 0x3f333333    # 0.7f
+
+    .line 501
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gkV:F
+
+    .line 504
+    iget v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lik:F
+
+    mul-float/2addr v1, v2
+
+    cmpl-float v1, v1, v0
+
+    if-lez v1, :cond_1
+
+    .line 506
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lik:F
+
+    .line 517
+    :goto_0
+    iget v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lic:F
+
+    cmpl-float v1, v0, v1
+
+    if-lez v1, :cond_0
+
+    .line 518
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lic:F
+
+    .line 521
+    :cond_0
+    return v0
+
+    .line 508
+    :cond_1
+    iget v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lil:F
+
+    mul-float/2addr v1, v2
+
+    cmpl-float v0, v1, v0
+
+    if-lez v0, :cond_2
+
+    .line 510
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lil:F
+
+    goto :goto_0
+
+    .line 513
+    :cond_2
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gkV:F
+
+    iget v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lie:F
+
+    mul-float/2addr v0, v1
+
+    goto :goto_0
+.end method
+
+.method public final c(FFF)V
+    .locals 6
+
+    .prologue
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    .line 481
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScale()F
+
+    move-result v3
+
+    .line 482
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lih:Z
+
+    if-eqz v0, :cond_0
+
+    .line 483
+    const/4 v0, 0x0
+
+    iget v4, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lib:F
+
+    cmpl-float v0, v0, v4
+
+    if-nez v0, :cond_3
+
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lig:F
+
+    iget v4, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lim:F
+
+    mul-float/2addr v0, v4
+
+    :goto_0
+    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lic:F
+
+    .line 485
+    :cond_0
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lic:F
 
     cmpl-float v0, p1, v0
 
-    if-lez v0, :cond_5
+    if-lez v0, :cond_4
 
-    .line 471
-    iget p1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIM:F
+    .line 486
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lic:F
 
-    .line 475
+    iget v4, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lic:F
+
+    sub-float v4, p1, v4
+
+    const v5, 0x3e4ccccd    # 0.2f
+
+    mul-float/2addr v4, v5
+
+    add-float p1, v0, v4
+
+    .line 490
     :cond_1
     :goto_1
-    div-float v0, p1, v4
+    div-float v0, p1, v3
 
-    .line 478
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getImageViewMatrix()Landroid/graphics/Matrix;
+    .line 493
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->biK()Landroid/graphics/Matrix;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-virtual {p0, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
+    invoke-virtual {p0, v3}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    .line 479
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIF:Landroid/graphics/Matrix;
+    .line 494
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhV:Landroid/graphics/Matrix;
 
-    invoke-virtual {v4, v0, v0, p2, p3}, Landroid/graphics/Matrix;->postScale(FFFF)Z
+    invoke-virtual {v3, v0, v0, p2, p3}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 
-    .line 480
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->hez:Z
+    .line 495
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->htl:Z
 
     if-eqz v0, :cond_2
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIS:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lii:Z
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_5
 
     :cond_2
     move v0, v2
 
     :goto_2
-    iget-boolean v4, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIT:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lij:Z
 
-    if-nez v4, :cond_7
+    if-nez v3, :cond_6
 
     :goto_3
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kII:Landroid/graphics/Bitmap;
+    invoke-direct {p0, v0, v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->F(ZZ)V
 
-    if-eqz v1, :cond_3
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getImageViewMatrix()Landroid/graphics/Matrix;
-
-    move-result-object v1
-
-    new-instance v4, Landroid/graphics/RectF;
-
-    iget-object v5, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kII:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v5}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v5
-
-    int-to-float v5, v5
-
-    iget-object v6, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kII:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v6}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v6
-
-    int-to-float v6, v6
-
-    invoke-direct {v4, v3, v3, v5, v6}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    invoke-virtual {v1, v4}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
-
-    invoke-virtual {v4}, Landroid/graphics/RectF;->height()F
-
-    move-result v1
-
-    invoke-virtual {v4}, Landroid/graphics/RectF;->width()F
-
-    move-result v5
-
-    if-eqz v2, :cond_d
-
-    iget v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dII:I
-
-    int-to-float v2, v2
-
-    cmpg-float v2, v1, v2
-
-    if-gez v2, :cond_8
-
-    iget v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dII:I
-
-    int-to-float v2, v2
-
-    sub-float v1, v2, v1
-
-    div-float/2addr v1, v7
-
-    iget v2, v4, Landroid/graphics/RectF;->top:F
-
-    sub-float/2addr v1, v2
-
-    :goto_4
-    if-eqz v0, :cond_c
-
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dIH:I
-
-    int-to-float v0, v0
-
-    cmpg-float v0, v5, v0
-
-    if-gez v0, :cond_a
-
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dIH:I
-
-    int-to-float v0, v0
-
-    sub-float/2addr v0, v5
-
-    div-float/2addr v0, v7
-
-    iget v2, v4, Landroid/graphics/RectF;->left:F
-
-    sub-float/2addr v0, v2
-
-    :goto_5
-    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getImageViewMatrix()Landroid/graphics/Matrix;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
-
-    invoke-virtual {v0, v4}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
-
-    invoke-virtual {v4}, Landroid/graphics/RectF;->height()F
-
-    invoke-virtual {v4}, Landroid/graphics/RectF;->width()F
-
-    .line 482
-    :cond_3
+    .line 497
     return-void
 
-    .line 468
+    .line 483
+    :cond_3
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lib:F
+
+    goto :goto_0
+
+    .line 487
     :cond_4
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIL:F
-
-    goto/16 :goto_0
-
-    .line 472
-    :cond_5
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIN:F
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lid:F
 
     cmpg-float v0, p1, v0
 
     if-gez v0, :cond_1
 
-    .line 473
-    iget p1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIN:F
+    .line 488
+    iget p1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lid:F
 
-    goto/16 :goto_1
+    goto :goto_1
 
-    :cond_6
+    :cond_5
     move v0, v1
 
-    .line 480
+    .line 495
     goto :goto_2
 
-    :cond_7
+    :cond_6
     move v2, v1
 
     goto :goto_3
-
-    :cond_8
-    iget v1, v4, Landroid/graphics/RectF;->top:F
-
-    cmpl-float v1, v1, v3
-
-    if-lez v1, :cond_9
-
-    iget v1, v4, Landroid/graphics/RectF;->top:F
-
-    neg-float v1, v1
-
-    goto :goto_4
-
-    :cond_9
-    iget v1, v4, Landroid/graphics/RectF;->bottom:F
-
-    iget v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dII:I
-
-    int-to-float v2, v2
-
-    cmpg-float v1, v1, v2
-
-    if-gez v1, :cond_d
-
-    iget v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dII:I
-
-    int-to-float v1, v1
-
-    iget v2, v4, Landroid/graphics/RectF;->bottom:F
-
-    sub-float/2addr v1, v2
-
-    goto :goto_4
-
-    :cond_a
-    iget v0, v4, Landroid/graphics/RectF;->left:F
-
-    cmpl-float v0, v0, v3
-
-    if-lez v0, :cond_b
-
-    iget v0, v4, Landroid/graphics/RectF;->left:F
-
-    neg-float v0, v0
-
-    goto :goto_5
-
-    :cond_b
-    iget v0, v4, Landroid/graphics/RectF;->right:F
-
-    iget v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dIH:I
-
-    int-to-float v2, v2
-
-    cmpg-float v0, v0, v2
-
-    if-gez v0, :cond_c
-
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dIH:I
-
-    int-to-float v0, v0
-
-    iget v2, v4, Landroid/graphics/RectF;->right:F
-
-    sub-float/2addr v0, v2
-
-    goto :goto_5
-
-    :cond_c
-    move v0, v3
-
-    goto :goto_5
-
-    :cond_d
-    move v1, v3
-
-    goto :goto_4
 .end method
 
-.method public getImageHeight()I
-    .locals 1
-
-    .prologue
-    .line 279
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->imageHeight:I
-
-    return v0
-.end method
-
-.method protected getImageViewMatrix()Landroid/graphics/Matrix;
-    .locals 2
-
-    .prologue
-    .line 432
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIG:Landroid/graphics/Matrix;
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIE:Landroid/graphics/Matrix;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
-
-    .line 433
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIG:Landroid/graphics/Matrix;
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIF:Landroid/graphics/Matrix;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->postConcat(Landroid/graphics/Matrix;)Z
-
-    .line 434
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIG:Landroid/graphics/Matrix;
-
-    return-object v0
-.end method
-
-.method public getImageWidth()I
-    .locals 1
-
-    .prologue
-    .line 271
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->imageWidth:I
-
-    return v0
-.end method
-
-.method public getMaxZoom()F
-    .locals 1
-
-    .prologue
-    .line 98
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIM:F
-
-    return v0
-.end method
-
-.method public getMinZoom()F
-    .locals 1
-
-    .prologue
-    .line 102
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIN:F
-
-    return v0
-.end method
-
-.method public getRealWidth()F
-    .locals 2
-
-    .prologue
-    .line 578
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScale()F
-
-    move-result v0
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getImageWidth()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    mul-float/2addr v0, v1
-
-    return v0
-.end method
-
-.method public getScale()F
+.method public final getScale()F
     .locals 3
 
     .prologue
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 425
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIF:Landroid/graphics/Matrix;
+    .line 440
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhV:Landroid/graphics/Matrix;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIH:[F
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhX:[F
 
     invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->getValues([F)V
 
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->bdg()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->biJ()V
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIQ:F
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lig:F
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIW:F
-
-    mul-float/2addr v0, v1
-
-    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIM:F
-
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gaU:F
-
-    iget v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIP:F
+    iget v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lim:F
 
     mul-float/2addr v0, v1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIN:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lic:F
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIM:F
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gkV:F
+
+    iget v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lif:F
+
+    mul-float/2addr v0, v1
+
+    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lid:F
+
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lic:F
 
     cmpg-float v0, v0, v2
 
     if-gez v0, :cond_0
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIM:F
+    iput v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lic:F
 
     :cond_0
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIN:F
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lid:F
 
     cmpl-float v0, v0, v2
 
     if-lez v0, :cond_1
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIN:F
+    iput v2, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lid:F
 
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIH:[F
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhX:[F
 
     const/4 v1, 0x0
 
@@ -1170,49 +1248,39 @@
     return v0
 .end method
 
-.method public getScaleHeight()F
+.method public final n(FF)V
     .locals 1
 
     .prologue
-    .line 94
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIV:F
+    .line 230
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->biJ()V
 
-    return v0
-.end method
+    .line 231
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gkV:F
 
-.method public getScaleRate()F
-    .locals 1
+    invoke-direct {p0, v0, p1, p2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->d(FFF)V
 
-    .prologue
-    .line 267
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gaU:F
-
-    return v0
-.end method
-
-.method public getScaleWidth()F
-    .locals 1
-
-    .prologue
-    .line 90
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIU:F
-
-    return v0
+    .line 232
+    return-void
 .end method
 
 .method public final o(FF)V
     .locals 1
 
     .prologue
-    .line 230
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->bdg()V
+    .line 526
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->biN()F
 
-    .line 231
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gaU:F
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lib:F
+
+    .line 527
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lib:F
 
     invoke-direct {p0, v0, p1, p2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->d(FFF)V
 
-    .line 232
+    .line 528
     return-void
 .end method
 
@@ -1237,7 +1305,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gpO:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gAg:Z
 
     .line 239
     :cond_1
@@ -1249,11 +1317,11 @@
 
     .prologue
     .line 187
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kII:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhY:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kII:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhY:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
@@ -1262,11 +1330,11 @@
     if-eqz v0, :cond_0
 
     .line 188
-    const-string/jumbo v0, "!44@/B4Tb64lLpL5aiCbYmx2SjWrgSB3hTZ3a/79cTAOp88="
+    const-string/jumbo v0, "MicroMsg.MultiTouchImageView"
 
     const-string/jumbo v1, "this bitmap is recycled! draw nothing!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 201
     :goto_0
@@ -1283,7 +1351,7 @@
     .locals 1
 
     .prologue
-    .line 288
+    .line 291
     const/4 v0, 0x4
 
     if-ne p1, v0, :cond_1
@@ -1294,8 +1362,8 @@
 
     if-nez v0, :cond_1
 
-    .line 289
-    invoke-static {}, Lcom/tencent/mm/ui/base/f;->aDK()Z
+    .line 292
+    invoke-static {}, Lcom/tencent/mm/ui/base/f;->aHm()Z
 
     move-result v0
 
@@ -1307,11 +1375,11 @@
 
     invoke-virtual {p2}, Landroid/view/KeyEvent;->startTracking()V
 
-    .line 290
+    .line 293
     :cond_0
     const/4 v0, 0x1
 
-    .line 292
+    .line 295
     :goto_0
     return v0
 
@@ -1333,12 +1401,12 @@
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 297
+    .line 300
     const/4 v1, 0x4
 
     if-ne p1, v1, :cond_2
 
-    invoke-static {}, Lcom/tencent/mm/ui/base/f;->aDK()Z
+    invoke-static {}, Lcom/tencent/mm/ui/base/f;->aHm()Z
 
     move-result v1
 
@@ -1355,7 +1423,7 @@
     :goto_0
     if-eqz v1, :cond_2
 
-    invoke-static {}, Lcom/tencent/mm/ui/base/f;->aDK()Z
+    invoke-static {}, Lcom/tencent/mm/ui/base/f;->aHm()Z
 
     move-result v1
 
@@ -1372,7 +1440,7 @@
     :cond_0
     if-nez v0, :cond_2
 
-    .line 298
+    .line 301
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScale()F
 
     move-result v0
@@ -1381,14 +1449,14 @@
 
     if-lez v0, :cond_2
 
-    .line 301
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dIH:I
+    .line 304
+    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKg:I
 
     int-to-float v0, v0
 
     div-float/2addr v0, v3
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dII:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKh:I
 
     int-to-float v1, v1
 
@@ -1396,20 +1464,20 @@
 
     invoke-virtual {p0, v2, v0, v1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->c(FFF)V
 
-    .line 302
+    .line 305
     const/4 v0, 0x1
 
-    .line 305
+    .line 308
     :goto_1
     return v0
 
     :cond_1
     move v1, v0
 
-    .line 297
+    .line 300
     goto :goto_0
 
-    .line 305
+    .line 308
     :cond_2
     invoke-super {p0, p1, p2}, Landroid/widget/ImageView;->onKeyUp(ILandroid/view/KeyEvent;)Z
 
@@ -1430,31 +1498,31 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dIH:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKg:I
 
     .line 168
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dII:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->dKh:I
 
     .line 170
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gpO:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gAg:Z
 
     if-nez v0, :cond_0
 
     .line 171
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gpO:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gAg:Z
 
     .line 172
     invoke-direct {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->init()V
 
     .line 174
     :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->bdf()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->biI()V
 
     .line 176
     return-void
@@ -1464,81 +1532,19 @@
     .locals 1
 
     .prologue
-    .line 510
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getDoubleTabScale()F
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIL:F
-
-    .line 511
-    iget v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIL:F
-
-    invoke-direct {p0, v0, p1, p2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->d(FFF)V
-
-    .line 512
-    return-void
-.end method
-
-.method public final q(FF)V
-    .locals 1
-
-    .prologue
-    .line 603
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIF:Landroid/graphics/Matrix;
+    .line 619
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhV:Landroid/graphics/Matrix;
 
     invoke-virtual {v0, p1, p2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 604
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getImageViewMatrix()Landroid/graphics/Matrix;
+    .line 620
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->biK()Landroid/graphics/Matrix;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    .line 605
-    return-void
-.end method
-
-.method public setDoubleTabScaleLimit(F)V
-    .locals 2
-
-    .prologue
-    .line 126
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v0
-
-    if-gez v0, :cond_0
-
-    .line 127
-    const-string/jumbo v0, "!44@/B4Tb64lLpL5aiCbYmx2SjWrgSB3hTZ3a/79cTAOp88="
-
-    const-string/jumbo v1, "double tab scale limit is less than 0.0, change nothing, return"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 131
-    :goto_0
-    return-void
-
-    .line 130
-    :cond_0
-    iput p1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIO:F
-
-    goto :goto_0
-.end method
-
-.method public setEnableHorLongBmpMode(Z)V
-    .locals 0
-
-    .prologue
-    .line 515
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->hez:Z
-
-    .line 516
+    .line 621
     return-void
 .end method
 
@@ -1547,130 +1553,16 @@
 
     .prologue
     .line 180
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kII:Landroid/graphics/Bitmap;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lhY:Landroid/graphics/Bitmap;
 
     .line 181
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gpO:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gAg:Z
 
     .line 182
     invoke-super {p0, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 183
     return-void
-.end method
-
-.method public setImageHeight(I)V
-    .locals 0
-
-    .prologue
-    .line 283
-    iput p1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->imageHeight:I
-
-    .line 284
-    return-void
-.end method
-
-.method public setImageWidth(I)V
-    .locals 0
-
-    .prologue
-    .line 275
-    iput p1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->imageWidth:I
-
-    .line 276
-    return-void
-.end method
-
-.method public setMaxZoomDoubleTab(Z)V
-    .locals 0
-
-    .prologue
-    .line 134
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIR:Z
-
-    .line 135
-    return-void
-.end method
-
-.method public setMaxZoomLimit(F)V
-    .locals 2
-
-    .prologue
-    .line 106
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    invoke-static {p1, v0}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v0
-
-    if-gez v0, :cond_0
-
-    .line 107
-    const-string/jumbo v0, "!44@/B4Tb64lLpL5aiCbYmx2SjWrgSB3hTZ3a/79cTAOp88="
-
-    const-string/jumbo v1, "max scale limit is less than 1.0, change nothing, return"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 111
-    :goto_0
-    return-void
-
-    .line 110
-    :cond_0
-    iput p1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIQ:F
-
-    goto :goto_0
-.end method
-
-.method public setMinZoomLimit(F)V
-    .locals 2
-
-    .prologue
-    .line 114
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    invoke-static {p1, v0}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    .line 115
-    const-string/jumbo v0, "!44@/B4Tb64lLpL5aiCbYmx2SjWrgSB3hTZ3a/79cTAOp88="
-
-    const-string/jumbo v1, "min scale limit is greater than 1.0, change nothing, return"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 123
-    :goto_0
-    return-void
-
-    .line 118
-    :cond_0
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v0
-
-    if-gez v0, :cond_1
-
-    .line 119
-    const-string/jumbo v0, "!44@/B4Tb64lLpL5aiCbYmx2SjWrgSB3hTZ3a/79cTAOp88="
-
-    const-string/jumbo v1, "min scale limit is less than 0.0, change nothing, return"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 122
-    :cond_1
-    iput p1, p0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIP:F
-
-    goto :goto_0
 .end method

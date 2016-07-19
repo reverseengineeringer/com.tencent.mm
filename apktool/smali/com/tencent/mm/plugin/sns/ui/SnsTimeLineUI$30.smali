@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+.field final synthetic hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 535
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$30;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+    .line 1681
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$30;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,36 +40,11 @@
     .locals 1
 
     .prologue
-    .line 539
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$30;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+    .line 1685
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$30;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->b(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Lcom/tencent/mm/plugin/sns/ui/am;
+    invoke-static {v0}, Lcom/tencent/mm/compatible/util/h;->e(Landroid/app/Activity;)V
 
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    .line 547
-    :cond_0
-    :goto_0
+    .line 1687
     return-void
-
-    .line 542
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$30;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->m(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 544
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/d/g;->pause()V
-
-    goto :goto_0
 .end method

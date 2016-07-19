@@ -10,7 +10,7 @@ final class ActionMenuPresenter$e
   public final void a(f paramf, boolean paramBoolean)
   {
     if ((paramf instanceof p)) {
-      mP.r(false);
+      nf.q(false);
     }
   }
   
@@ -19,7 +19,7 @@ final class ActionMenuPresenter$e
     if (paramf == null) {
       return false;
     }
-    kU.kT = ((p)paramf).getItem().getItemId();
+    ll.lk = ((p)paramf).getItem().getItemId();
     return false;
   }
 }

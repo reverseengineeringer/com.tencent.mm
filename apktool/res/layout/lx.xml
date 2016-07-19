@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/ow" android:paddingLeft="@dimen/i7" android:paddingRight="@dimen/i7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+        <RelativeLayout android:background="@drawable/t5" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/a7p" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/ct">
+                <ImageView android:layout_gravity="center" android:id="@id/agm" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/yi" android:scaleType="fitXY" android:layout_centerInParent="true" android:contentDescription="@string/im" />
+            </RelativeLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/a7p" android:layout_alignTop="@id/a7p" android:layout_alignBottom="@id/a7p">
+                <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/i8" android:textColor="@color/j_" android:ellipsize="end" android:id="@id/afw" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="{nick_name}" android:singleLine="true" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/ja" android:textColor="#ff7d8cad" android:id="@id/agn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j8" android:text="@string/aj4" android:singleLine="true" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/ja" android:textColor="#ff7d8cad" android:ellipsize="end" android:id="@id/ago" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/aj6" android:singleLine="true" />
+                <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:ellipsize="end" android:id="@id/agp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/j9" android:ellipsize="end" android:id="@id/agq" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="5" android:singleLine="false" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

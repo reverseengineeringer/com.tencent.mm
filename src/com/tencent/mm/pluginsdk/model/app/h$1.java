@@ -1,16 +1,16 @@
 package com.tencent.mm.pluginsdk.model.app;
 
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah.a;
 import java.util.Map;
 
 final class h$1
-  implements af.a
+  implements ah.a
 {
   h$1(h paramh) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    iAW.iAQ.clear();
+    iXA.iXu.clear();
     return false;
   }
 }

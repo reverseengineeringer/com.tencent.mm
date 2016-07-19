@@ -1,7 +1,7 @@
 package com.tencent.mm.sdk.h;
 
 final class g$2
-  extends h
+  extends h<Object, String>
 {
   g$2(g paramg) {}
 }

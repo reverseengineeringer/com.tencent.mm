@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ab/a/c/i;
+.implements Lcom/tencent/mm/ae/a/c/i;
 
 
 # annotations
@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic leY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
+.field final synthetic lFk:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
 
-.field final synthetic leZ:Lcom/tencent/mm/ui/chatting/gallery/c$a;
+.field final synthetic lFl:Lcom/tencent/mm/ui/chatting/gallery/c$a;
 
-.field final synthetic lfa:Lcom/tencent/mm/ui/chatting/gallery/c;
+.field final synthetic lFm:Lcom/tencent/mm/ui/chatting/gallery/c;
 
 
 # direct methods
@@ -31,11 +31,11 @@
 
     .prologue
     .line 242
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/c$1;->lfa:Lcom/tencent/mm/ui/chatting/gallery/c;
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/c$1;->lFm:Lcom/tencent/mm/ui/chatting/gallery/c;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/gallery/c$1;->leY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
+    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/gallery/c$1;->lFk:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
 
-    iput-object p3, p0, Lcom/tencent/mm/ui/chatting/gallery/c$1;->leZ:Lcom/tencent/mm/ui/chatting/gallery/c$a;
+    iput-object p3, p0, Lcom/tencent/mm/ui/chatting/gallery/c$1;->lFl:Lcom/tencent/mm/ui/chatting/gallery/c$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,7 +53,7 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/chatting/gallery/c$1$1;-><init>(Lcom/tencent/mm/ui/chatting/gallery/c$1;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
     .line 253
     return-void

@@ -10,11 +10,11 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.model.k;
 import com.tencent.mm.model.k.a;
 import com.tencent.mm.pluginsdk.model.app.ReportUtil;
-import com.tencent.mm.pluginsdk.model.app.aj;
+import com.tencent.mm.pluginsdk.model.app.al;
 import com.tencent.mm.pluginsdk.model.app.f;
 import com.tencent.mm.pluginsdk.model.app.g;
 import com.tencent.mm.pluginsdk.model.app.i;
@@ -25,11 +25,11 @@ import com.tencent.mm.sdk.modelmsg.WXMusicObject;
 import com.tencent.mm.sdk.modelmsg.WXTextObject;
 import com.tencent.mm.sdk.modelmsg.WXVideoObject;
 import com.tencent.mm.sdk.modelmsg.WXWebpageObject;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ah;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.j;
 
@@ -37,10 +37,9 @@ import com.tencent.mm.ui.j;
 public class SendAppMessageWrapperUI
   extends MMActivity
 {
-  private String aJq = null;
-  private af anF = new af(new af.a()
+  private ah aat = new ah(new ah.a()
   {
-    public final boolean lj()
+    public final boolean jK()
     {
       boolean bool = false;
       if ((getWindow() == null) || (getWindow().getDecorView() == null) || (getWindow().getDecorView().getWindowToken() == null))
@@ -56,12 +55,13 @@ public class SendAppMessageWrapperUI
       return false;
     }
   }, true);
-  private int asc = 0;
-  private String ayw = null;
-  private int dQJ = 0;
-  private WXMediaMessage kXu = null;
-  private f lBt = null;
-  private boolean lBu = false;
+  private String aky = null;
+  private String avK = null;
+  private int dSO = 0;
+  private WXMediaMessage lxG = null;
+  private f mcl = null;
+  private boolean mcm = false;
+  private int scene = 0;
   
   private com.tencent.mm.pluginsdk.ui.applet.c.a a(final WXMediaMessage paramWXMediaMessage)
   {
@@ -79,7 +79,7 @@ public class SendAppMessageWrapperUI
     };
   }
   
-  protected final void Gb() {}
+  protected final void Gy() {}
   
   protected final int getLayoutId()
   {
@@ -89,7 +89,7 @@ public class SendAppMessageWrapperUI
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
   {
     super.onActivityResult(paramInt1, paramInt2, paramIntent);
-    u.i("!56@/B4Tb64lLpLiQ1shHpyNJ3BOzGypz4AHt4GloJ5fgMawRImFynvSXQ==", "requestCode " + paramInt1 + " resultCode " + paramInt2);
+    v.i("MicroMsg.SendAppMessageWrapperUI", "requestCode " + paramInt1 + " resultCode " + paramInt2);
     if ((paramInt1 == 1) && (paramIntent != null))
     {
       if (paramInt2 != -1) {
@@ -109,42 +109,42 @@ public class SendAppMessageWrapperUI
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    iF.aP().hide();
-    paramBundle = getSharedPreferences(y.aUK(), 0);
+    iW.aP().hide();
+    paramBundle = getSharedPreferences(aa.aZO(), 0);
     if (!paramBundle.getBoolean("settings_landscape_mode", false))
     {
-      u.d("!56@/B4Tb64lLpLiQ1shHpyNJ3BOzGypz4AHt4GloJ5fgMawRImFynvSXQ==", "change orientation");
-      lBu = true;
+      v.d("MicroMsg.SendAppMessageWrapperUI", "change orientation");
+      mcm = true;
       setRequestedOrientation(-1);
       paramBundle.edit().putBoolean("settings_landscape_mode", true).commit();
     }
     Object localObject3 = getIntent().getExtras();
     Object localObject2 = new com.tencent.mm.sdk.modelmsg.c.a((Bundle)localObject3);
-    ayw = ((Bundle)localObject3).getString("Select_Conv_User");
-    asc = ((Bundle)localObject3).getInt("SendAppMessageWrapper_Scene", 0);
+    aky = ((Bundle)localObject3).getString("Select_Conv_User");
+    scene = ((Bundle)localObject3).getInt("SendAppMessageWrapper_Scene", 0);
     Object localObject1 = ((Bundle)localObject3).getString("SendAppMessageWrapper_AppId");
     paramBundle = (Bundle)localObject1;
     if (localObject1 == null) {
       paramBundle = Uri.parse(((Bundle)localObject3).getString("_mmessage_content")).getQueryParameter("appid");
     }
-    lBt = new f();
-    lBt.field_appId = paramBundle;
-    aj.aPR().c(lBt, new String[0]);
+    mcl = new f();
+    mcl.field_appId = paramBundle;
+    al.aUA().c(mcl, new String[0]);
     int i;
-    if (lBt.field_appName == null)
+    if (mcl.field_appName == null)
     {
-      paramBundle = getString(2131431076);
-      aJq = getString(2131431075, new Object[] { paramBundle });
-      kXu = jUS;
-      u.v("!56@/B4Tb64lLpLiQ1shHpyNJ3BOzGypz4AHt4GloJ5fgMawRImFynvSXQ==", "onCreate, messageAction = %s, messageExt = %s", new Object[] { kXu.messageAction, kXu.messageExt });
-      if (asc != 1) {
-        break label1175;
+      paramBundle = getString(2131231867);
+      avK = getString(2131231865, new Object[] { paramBundle });
+      lxG = kuy;
+      v.v("MicroMsg.SendAppMessageWrapperUI", "onCreate, messageAction = %s, messageExt = %s", new Object[] { lxG.messageAction, lxG.messageExt });
+      if (scene != 1) {
+        break label1206;
       }
-      localObject1 = kXu;
-      localObject3 = lBt.field_appId;
-      Object localObject4 = lBt.field_appName;
-      u.d("!32@/B4Tb64lLpJOVlL8x781nzvuAH+bDIti", "appmsg.description " + description);
-      u.d("!32@/B4Tb64lLpJOVlL8x781nzvuAH+bDIti", "appmsg.title " + title);
+      localObject1 = lxG;
+      localObject3 = mcl.field_appId;
+      Object localObject4 = mcl.field_appName;
+      v.d("MicroMsg.ShareSnsImpl", "appmsg.description " + description);
+      v.d("MicroMsg.ShareSnsImpl", "appmsg.title " + title);
       localObject2 = mediaObject;
       switch (((WXMediaMessage.b)localObject2).type())
       {
@@ -153,19 +153,19 @@ public class SendAppMessageWrapperUI
         label406:
         paramBundle = new Intent();
         paramBundle.putExtra("KThrid_app", true);
-        u.d("!32@/B4Tb64lLpJOVlL8x781nzvuAH+bDIti", "TimeLineType " + i + " " + ((WXMediaMessage.b)localObject2).type());
+        v.d("MicroMsg.ShareSnsImpl", "TimeLineType " + i + " " + ((WXMediaMessage.b)localObject2).type());
         paramBundle.putExtra("Ksnsupload_appid", (String)localObject3);
         paramBundle.putExtra("Ksnsupload_appname", (String)localObject4);
         paramBundle.putExtra("KSnsAction", true);
         paramBundle.putExtra("need_result", true);
         localObject3 = new Bundle();
         localObject4 = new com.tencent.mm.sdk.modelmsg.c.a();
-        jUS = ((WXMediaMessage)localObject1);
-        ((com.tencent.mm.sdk.modelmsg.c.a)localObject4).l((Bundle)localObject3);
+        kuy = ((WXMediaMessage)localObject1);
+        ((com.tencent.mm.sdk.modelmsg.c.a)localObject4).n((Bundle)localObject3);
         paramBundle.putExtra("Ksnsupload_timeline", (Bundle)localObject3);
         if (i == -1)
         {
-          u.d("!32@/B4Tb64lLpJOVlL8x781nzvuAH+bDIti", "timeLineType is invalid");
+          v.d("MicroMsg.ShareSnsImpl", "timeLineType is invalid");
           paramBundle = null;
         }
         break;
@@ -174,10 +174,11 @@ public class SendAppMessageWrapperUI
     for (;;)
     {
       if (paramBundle != null) {
-        break label1059;
+        break label1051;
       }
+      finish();
       return;
-      paramBundle = g.a(koJ.kpc, lBt, null);
+      paramBundle = g.a(kNN.kOg, mcl, null);
       break;
       i = 2;
       break label406;
@@ -194,7 +195,7 @@ public class SendAppMessageWrapperUI
       switch (((WXMediaMessage.b)localObject2).type())
       {
       default: 
-        u.e("!32@/B4Tb64lLpJOVlL8x781nzvuAH+bDIti", "none type not support!");
+        v.e("MicroMsg.ShareSnsImpl", "none type not support!");
         paramBundle = null;
         break;
       case 1: 
@@ -203,82 +204,85 @@ public class SendAppMessageWrapperUI
         break;
       case 3: 
         localObject2 = (WXMusicObject)localObject2;
-        if (!ay.kz(musicUrl))
+        if (!be.kf(musicUrl))
         {
           localObject1 = musicUrl;
-          localObject3 = ay.ad((String)localObject1, "");
-          if (ay.kz(musicDataUrl)) {
-            break label837;
+          localObject3 = be.ab((String)localObject1, "");
+          if (be.kf(musicDataUrl)) {
+            break label841;
           }
           localObject1 = musicDataUrl;
-          ay.ad((String)localObject1, "");
-          if (ay.kz(musicLowBandDataUrl)) {
-            break label846;
+          be.ab((String)localObject1, "");
+          if (be.kf(musicLowBandDataUrl)) {
+            break label850;
           }
         }
         for (localObject1 = musicLowBandDataUrl;; localObject1 = musicLowBandUrl)
         {
-          ay.ad((String)localObject1, "");
+          be.ab((String)localObject1, "");
           paramBundle.putExtra("Ksnsupload_link", (String)localObject3);
           paramBundle.putExtra("Ksnsupload_title", "");
           paramBundle.putExtra("Ksnsupload_type", 2);
           paramBundle.putExtra("ksnsis_music", true);
           break;
           localObject1 = musicLowBandUrl;
-          break label727;
+          break label731;
           localObject1 = musicUrl;
-          break label753;
+          break label757;
         }
       case 2: 
         localObject1 = (WXImageObject)localObject2;
-        paramBundle.putExtra("Ksnsupload_imgbuf", imageData);
         paramBundle.putExtra("KBlockAdd", true);
         paramBundle.putExtra("Ksnsupload_type", 0);
         paramBundle.putExtra("sns_kemdia_path", imagePath);
         break;
       case 5: 
         paramBundle.putExtra("Ksnsupload_link", webpageUrl);
-        paramBundle.putExtra("Ksnsupload_title", ay.ad(title, ""));
+        paramBundle.putExtra("Ksnsupload_title", be.ab(title, ""));
         paramBundle.putExtra("Ksnsupload_imgbuf", thumbData);
         paramBundle.putExtra("Ksnsupload_type", 1);
         break;
       case 6: 
-        u.e("!32@/B4Tb64lLpJOVlL8x781nzvuAH+bDIti", "file is not support!");
+        v.e("MicroMsg.ShareSnsImpl", "file is not support!");
         paramBundle = null;
         break;
       case 4: 
         localObject1 = (WXVideoObject)localObject2;
-        if (!ay.kz(videoUrl)) {}
+        if (!be.kf(videoUrl)) {}
         for (localObject1 = videoUrl;; localObject1 = videoLowBandUrl)
         {
-          paramBundle.putExtra("Ksnsupload_link", ay.ad((String)localObject1, ""));
+          paramBundle.putExtra("Ksnsupload_link", be.ab((String)localObject1, ""));
           paramBundle.putExtra("Ksnsupload_title", "");
           paramBundle.putExtra("Ksnsupload_type", 1);
           paramBundle.putExtra("ksnsis_video", true);
           break;
         }
       case 7: 
-        label727:
-        label753:
-        label837:
-        label846:
+        label731:
+        label757:
+        label841:
+        label850:
         paramBundle = null;
       }
     }
-    label1059:
-    if (kXu.getType() == 5)
+    label1051:
+    if (lxG.getType() == 5)
     {
-      u.d("!56@/B4Tb64lLpLiQ1shHpyNJ3BOzGypz4AHt4GloJ5fgMawRImFynvSXQ==", "report(11954), to timeline, appId : %s", new Object[] { lBt.field_appId });
-      localObject1 = k.eV("app_" + lBt.field_appId);
-      k.sW().eT((String)localObject1).e("prePublishId", "app_" + lBt.field_appId);
+      v.d("MicroMsg.SendAppMessageWrapperUI", "report(11954), to timeline, appId : %s", new Object[] { mcl.field_appId });
+      localObject1 = k.fh("app_" + mcl.field_appId);
+      localObject2 = k.sV().ff((String)localObject1);
+      ((k.a)localObject2).l("prePublishId", "app_" + mcl.field_appId);
+      if ((lxG.mediaObject instanceof WXWebpageObject)) {
+        ((k.a)localObject2).l("url", lxG.mediaObject).webpageUrl);
+      }
     }
     for (;;)
     {
       paramBundle.putExtra("reportSessionId", (String)localObject1);
       c.a(this, "sns", ".ui.SnsUploadUI", paramBundle, 1);
       return;
-      label1175:
-      anF.ds(100L);
+      label1206:
+      aat.dJ(100L);
       return;
       localObject1 = null;
     }
@@ -287,10 +291,10 @@ public class SendAppMessageWrapperUI
   protected void onDestroy()
   {
     super.onDestroy();
-    if (lBu)
+    if (mcm)
     {
-      u.d("!56@/B4Tb64lLpLiQ1shHpyNJ3BOzGypz4AHt4GloJ5fgMawRImFynvSXQ==", "restore orientation");
-      SharedPreferences localSharedPreferences = getSharedPreferences(y.aUK(), 0);
+      v.d("MicroMsg.SendAppMessageWrapperUI", "restore orientation");
+      SharedPreferences localSharedPreferences = getSharedPreferences(aa.aZO(), 0);
       setRequestedOrientation(1);
       localSharedPreferences.edit().putBoolean("settings_landscape_mode", false).commit();
     }
@@ -298,7 +302,7 @@ public class SendAppMessageWrapperUI
   
   public boolean onTouchEvent(MotionEvent paramMotionEvent)
   {
-    age();
+    aiI();
     return super.onTouchEvent(paramMotionEvent);
   }
 }

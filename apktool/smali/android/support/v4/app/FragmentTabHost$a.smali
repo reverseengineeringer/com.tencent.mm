@@ -15,10 +15,17 @@
 
 
 # instance fields
-.field aJ:Landroid/support/v4/app/Fragment;
+.field ak:Landroid/support/v4/app/Fragment;
 
-.field final ck:Ljava/lang/Class;
+.field final cy:Ljava/lang/Class;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/Class",
+            "<*>;"
+        }
+    .end annotation
+.end field
 
-.field final cl:Landroid/os/Bundle;
+.field final cz:Landroid/os/Bundle;
 
 .field final tag:Ljava/lang/String;

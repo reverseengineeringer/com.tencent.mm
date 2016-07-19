@@ -1,49 +1,93 @@
 package com.tencent.mm.storage;
 
-import android.database.Cursor;
-import com.tencent.mm.sdk.h.d;
-import com.tencent.mm.sdk.h.f;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.e.b.ak;
+import com.tencent.mm.sdk.h.c.a;
+import java.lang.reflect.Field;
+import java.util.Map;
 
 public final class aa
-  extends f
+  extends ak
 {
-  public static final String[] aoY = { f.a(z.aot, "FileDownloadInfo"), "CREATE INDEX IF NOT EXISTS filedownloadinfo_appId  on FileDownloadInfo  (  appId )", "CREATE INDEX IF NOT EXISTS filedownloadinfo_status  on FileDownloadInfo  (  status )" };
+  protected static c.a bjR;
   
-  public aa(d paramd)
+  static
   {
-    super(paramd, z.aot, "FileDownloadInfo", null);
+    c.a locala = new c.a();
+    bZI = new Field[16];
+    aZx = new String[17];
+    StringBuilder localStringBuilder = new StringBuilder();
+    aZx[0] = "downloadId";
+    kyU.put("downloadId", "LONG default '-1'  PRIMARY KEY ");
+    localStringBuilder.append(" downloadId LONG default '-1'  PRIMARY KEY ");
+    localStringBuilder.append(", ");
+    kyT = "downloadId";
+    aZx[1] = "downloadUrl";
+    kyU.put("downloadUrl", "TEXT default '' ");
+    localStringBuilder.append(" downloadUrl TEXT default '' ");
+    localStringBuilder.append(", ");
+    aZx[2] = "fileName";
+    kyU.put("fileName", "TEXT default '' ");
+    localStringBuilder.append(" fileName TEXT default '' ");
+    localStringBuilder.append(", ");
+    aZx[3] = "filePath";
+    kyU.put("filePath", "TEXT default '' ");
+    localStringBuilder.append(" filePath TEXT default '' ");
+    localStringBuilder.append(", ");
+    aZx[4] = "fileType";
+    kyU.put("fileType", "INTEGER default '0' ");
+    localStringBuilder.append(" fileType INTEGER default '0' ");
+    localStringBuilder.append(", ");
+    aZx[5] = "status";
+    kyU.put("status", "INTEGER default '0' ");
+    localStringBuilder.append(" status INTEGER default '0' ");
+    localStringBuilder.append(", ");
+    aZx[6] = "md5";
+    kyU.put("md5", "TEXT default '' ");
+    localStringBuilder.append(" md5 TEXT default '' ");
+    localStringBuilder.append(", ");
+    aZx[7] = "autoInstall";
+    kyU.put("autoInstall", "INTEGER default 'false' ");
+    localStringBuilder.append(" autoInstall INTEGER default 'false' ");
+    localStringBuilder.append(", ");
+    aZx[8] = "showNotification";
+    kyU.put("showNotification", "INTEGER default 'false' ");
+    localStringBuilder.append(" showNotification INTEGER default 'false' ");
+    localStringBuilder.append(", ");
+    aZx[9] = "sysDownloadId";
+    kyU.put("sysDownloadId", "LONG default '-1' ");
+    localStringBuilder.append(" sysDownloadId LONG default '-1' ");
+    localStringBuilder.append(", ");
+    aZx[10] = "downloaderType";
+    kyU.put("downloaderType", "INTEGER default '0' ");
+    localStringBuilder.append(" downloaderType INTEGER default '0' ");
+    localStringBuilder.append(", ");
+    aZx[11] = "appId";
+    kyU.put("appId", "TEXT default '' ");
+    localStringBuilder.append(" appId TEXT default '' ");
+    localStringBuilder.append(", ");
+    aZx[12] = "downloadUrlHashCode";
+    kyU.put("downloadUrlHashCode", "INTEGER default '0' ");
+    localStringBuilder.append(" downloadUrlHashCode INTEGER default '0' ");
+    localStringBuilder.append(", ");
+    aZx[13] = "packageName";
+    kyU.put("packageName", "TEXT default '' ");
+    localStringBuilder.append(" packageName TEXT default '' ");
+    localStringBuilder.append(", ");
+    aZx[14] = "downloadedSize";
+    kyU.put("downloadedSize", "LONG default '0' ");
+    localStringBuilder.append(" downloadedSize LONG default '0' ");
+    localStringBuilder.append(", ");
+    aZx[15] = "totalSize";
+    kyU.put("totalSize", "LONG default '0' ");
+    localStringBuilder.append(" totalSize LONG default '0' ");
+    aZx[16] = "rowid";
+    kyV = localStringBuilder.toString();
+    bjR = locala;
   }
   
-  public final boolean aWS()
+  protected final c.a ou()
   {
-    return cj("FileDownloadInfo", "delete from FileDownloadInfo");
-  }
-  
-  public final z dx(long paramLong)
-  {
-    z localz1 = null;
-    z localz2 = null;
-    if (paramLong < 0L) {
-      u.e("!56@/B4Tb64lLpKVQlIh1YRBX94HnKLHqasj4QVB2Lzhv8UbwRqK+FziQw==", "download id is not avaiable");
-    }
-    Cursor localCursor;
-    do
-    {
-      do
-      {
-        return localz2;
-        localCursor = rawQuery("select * from FileDownloadInfo where downloadId=" + paramLong, new String[0]);
-      } while (localCursor == null);
-      if (localCursor.moveToFirst())
-      {
-        localz1 = new z();
-        localz1.c(localCursor);
-      }
-      localz2 = localz1;
-    } while (localCursor == null);
-    localCursor.close();
-    return localz1;
+    return bjR;
   }
 }
 

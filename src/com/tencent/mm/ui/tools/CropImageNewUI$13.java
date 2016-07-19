@@ -7,17 +7,17 @@ final class CropImageNewUI$13
 {
   CropImageNewUI$13(CropImageNewUI paramCropImageNewUI) {}
   
-  public final void eu(int paramInt)
+  public final void fg(int paramInt)
   {
     switch (paramInt)
     {
     default: 
       return;
     case 0: 
-      CropImageNewUI.s(luq);
+      CropImageNewUI.s(lVs);
       return;
     }
-    CropImageNewUI.t(luq);
+    CropImageNewUI.t(lVs);
   }
 }
 

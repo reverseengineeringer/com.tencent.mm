@@ -1,44 +1,45 @@
 package com.tencent.mm.booter;
 
-import com.tencent.mm.d.a.bx;
-import com.tencent.mm.d.a.by;
+import com.tencent.mm.e.a.ca;
+import com.tencent.mm.e.a.cb;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.protocal.b.qc;
-import com.tencent.mm.protocal.b.yq;
-import com.tencent.mm.protocal.b.ys;
-import com.tencent.mm.protocal.b.yv;
-import com.tencent.mm.r.a.c;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.protocal.b.qn;
+import com.tencent.mm.protocal.b.zf;
+import com.tencent.mm.protocal.b.zh;
+import com.tencent.mm.protocal.b.zk;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.j.a;
+import com.tencent.mm.t.a.c;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.m;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 final class j$2
-  implements af.a
+  implements ah.a
 {
-  public final boolean lj()
+  public final boolean jK()
   {
     try
     {
-      Boolean localBoolean = Boolean.valueOf(ay.a((Boolean)ah.tD().rn().a(j.a.kcW, null), false));
-      Object localObject2 = com.tencent.mm.g.h.pT().pD();
+      Boolean localBoolean = Boolean.valueOf(be.a((Boolean)ah.tE().ro().a(j.a.kDD, null), false));
+      Object localObject2 = com.tencent.mm.h.h.on().nV();
       if (localObject2 != null)
       {
         localObject2 = ((List)localObject2).iterator();
         while (((Iterator)localObject2).hasNext())
         {
           String str = (String)((Iterator)localObject2).next();
-          u.i("!56@/B4Tb64lLpIuznxMDiXSbEgePiuuHmafGRumF/EL+B1ZudK3WLjQDg==", "op=false,isInShakeUI:" + localBoolean + ",iBeacon = %s", new Object[] { str });
-          by localby = new by();
-          avr.avt = str;
-          avr.avq = false;
+          v.i("MicroMsg.PostTaskStartRangeForIBeacon", "op=false,isInShakeUI:" + localBoolean + ",iBeacon = %s", new Object[] { str });
+          cb localcb = new cb();
+          ahi.ahk = str;
+          ahi.ahh = false;
           if (!localBoolean.booleanValue()) {
-            com.tencent.mm.sdk.c.a.jUF.j(localby);
+            com.tencent.mm.sdk.c.a.kug.y(localcb);
           }
         }
       }
@@ -46,73 +47,73 @@ final class j$2
     }
     catch (Exception localException)
     {
-      u.e("!56@/B4Tb64lLpIuznxMDiXSbEgePiuuHmafGRumF/EL+B1ZudK3WLjQDg==", localException.getMessage());
+      v.e("MicroMsg.PostTaskStartRangeForIBeacon", localException.getMessage());
     }
-    final Object localObject1 = new ys();
-    latitude = j.ne();
-    longitude = j.nf();
-    long l = ay.a((Long)ah.tD().rn().a(j.a.kcN, null), 0L);
-    if ((j.ng().size() > 0) && (!j.nh().booleanValue()) && (j.ni().size() > 0))
+    final Object localObject1 = new zh();
+    latitude = j.ls();
+    longitude = j.lt();
+    long l = be.a((Long)ah.tE().ro().a(j.a.kDu, null), 0L);
+    if ((j.lu().size() > 0) && (!j.lv().booleanValue()) && (j.lw().size() > 0))
     {
-      j.b(Boolean.valueOf(true));
-      localObject1 = new com.tencent.mm.modelmulti.c(j.ni(), l, (ys)localObject1);
-      u.d("!56@/B4Tb64lLpIuznxMDiXSbEgePiuuHmafGRumF/EL+B1ZudK3WLjQDg==", "[shakezb]PostTaskStartRangeForIBeacon[kevinkma] shopId " + l + ",beaconInfos size " + j.ni().size() + ",info:" + j.ni().toString());
-      ah.tE().a(1708, new d()
+      j.a(Boolean.valueOf(true));
+      localObject1 = new com.tencent.mm.modelmulti.c(j.lw(), l, (zh)localObject1);
+      v.d("MicroMsg.PostTaskStartRangeForIBeacon", "[shakezb]PostTaskStartRangeForIBeacon[kevinkma] shopId " + l + ",beaconInfos size " + j.lw().size() + ",info:" + j.lw().toString());
+      ah.tF().a(1708, new d()
       {
-        public final void a(int paramAnonymousInt1, int paramAnonymousInt2, String paramAnonymousString, com.tencent.mm.r.j paramAnonymousj)
+        public final void onSceneEnd(int paramAnonymousInt1, int paramAnonymousInt2, String paramAnonymousString, com.tencent.mm.t.j paramAnonymousj)
         {
           if ((paramAnonymousInt1 == 0) && (paramAnonymousInt2 == 0))
           {
-            paramAnonymousj = (qc)localObject1bUv.bEX.bFf;
-            if (aKE == 0)
+            paramAnonymousj = (qn)localObject1bNW.byi.byq;
+            if (awY == 0)
             {
-              paramAnonymousString = jpB;
-              paramAnonymousj = jpD;
-              String str = title + "," + asL + "," + jvJ + "," + jvK + "," + ehC + "," + major + "," + minor;
-              String[] arrayOfString = ay.ad((String)ah.tD().rn().a(j.a.kcT, null), "").split(",");
+              paramAnonymousString = jNG;
+              paramAnonymousj = jNI;
+              String str = title + "," + desc + "," + jUw + "," + jUx + "," + els + "," + major + "," + minor;
+              String[] arrayOfString = be.ab((String)ah.tE().ro().a(j.a.kDA, null), "").split(",");
               paramAnonymousInt2 = arrayOfString.length;
               paramAnonymousString = Boolean.valueOf(false);
               paramAnonymousInt1 = 0;
               while (paramAnonymousInt1 < paramAnonymousInt2)
               {
-                if (arrayOfString[paramAnonymousInt1].equals(ehC + major + minor)) {
+                if (arrayOfString[paramAnonymousInt1].equals(els + major + minor)) {
                   paramAnonymousString = Boolean.valueOf(true);
                 }
                 paramAnonymousInt1 += 1;
               }
               if (!paramAnonymousString.booleanValue())
               {
-                com.tencent.mm.plugin.report.service.h.fUJ.g(12653, new Object[] { Integer.valueOf(1), Integer.valueOf(1) });
-                com.tencent.mm.plugin.report.service.h.fUJ.g(12653, new Object[] { Integer.valueOf(2), Integer.valueOf(1) });
-                ah.tD().rn().b(j.a.kcS, str);
+                g.gdY.h(12653, new Object[] { Integer.valueOf(1), Integer.valueOf(1) });
+                g.gdY.h(12653, new Object[] { Integer.valueOf(2), Integer.valueOf(1) });
+                ah.tE().ro().b(j.a.kDz, str);
               }
             }
           }
           for (;;)
           {
-            ah.tD().rl();
-            paramAnonymousString = new bx();
-            com.tencent.mm.sdk.c.a.jUF.j(paramAnonymousString);
-            j.b(Boolean.valueOf(false));
-            ah.tE().b(1708, this);
+            ah.tE().rm();
+            paramAnonymousString = new ca();
+            com.tencent.mm.sdk.c.a.kug.y(paramAnonymousString);
+            j.a(Boolean.valueOf(false));
+            ah.tF().b(1708, this);
             return;
-            ah.tD().rn().b(j.a.kcS, "");
+            ah.tE().ro().b(j.a.kDz, "");
             continue;
-            ah.tD().rn().b(j.a.kcS, "");
+            ah.tE().ro().b(j.a.kDz, "");
             continue;
-            ah.tD().rn().b(j.a.kcS, "");
+            ah.tE().ro().b(j.a.kDz, "");
           }
         }
       });
-      ah.tE().d((com.tencent.mm.r.j)localObject1);
+      ah.tF().a((com.tencent.mm.t.j)localObject1, 0);
     }
     for (;;)
     {
-      j.ng().clear();
-      j.ni().clear();
-      com.tencent.mm.sdk.c.a.jUF.c("ExDeviceIBeaconRangingResult", j.nj());
+      j.lu().clear();
+      j.lw().clear();
+      com.tencent.mm.sdk.c.a.kug.e(j.lx());
       return false;
-      ah.tD().rn().b(j.a.kcS, "");
+      ah.tE().ro().b(j.a.kDz, "");
     }
   }
 }

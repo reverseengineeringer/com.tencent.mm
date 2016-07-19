@@ -1,23 +1,11 @@
 package com.tencent.mm.platformtools;
 
-import android.os.Build.VERSION;
-import android.view.View;
-
 public final class f
 {
-  public static void H(View paramView)
-  {
-    if (paramView == null) {}
-    do
-    {
-      do
-      {
-        return;
-      } while (Build.VERSION.SDK_INT < 11);
-      new i();
-    } while (Build.VERSION.SDK_INT < 11);
-    paramView.setLayerType(1, null);
-  }
+  public final long cgR = 180000L;
+  public final int cgS = 3;
+  public long cgT = 0L;
+  public int cgU = cgS;
 }
 
 /* Location:

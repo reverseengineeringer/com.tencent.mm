@@ -36,7 +36,7 @@
     move-exception v0
 
     .line 25
-    const-string/jumbo v1, "!32@/B4Tb64lLpJ93Ympv7FhFV0Og0UsIWxy"
+    const-string/jumbo v1, "MicroMsg.MMDialog"
 
     const-string/jumbo v2, ""
 
@@ -44,7 +44,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -68,7 +68,7 @@
     move-exception v0
 
     .line 34
-    const-string/jumbo v1, "!32@/B4Tb64lLpJ93Ympv7FhFV0Og0UsIWxy"
+    const-string/jumbo v1, "MicroMsg.MMDialog"
 
     const-string/jumbo v2, ""
 
@@ -76,7 +76,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method

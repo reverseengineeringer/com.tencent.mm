@@ -9,17 +9,17 @@ final class SnsCommentFooter$6$1
 {
   SnsCommentFooter$6$1(SnsCommentFooter.6 param6) {}
   
-  public final void Om() {}
+  public final void Px() {}
   
-  public final void On()
+  public final void Py()
   {
-    g.e(SnsCommentFooter.d(hdJ.hdG), 2131433035, 2131433034);
+    g.f(SnsCommentFooter.d(hsw.hst), 2131235601, 2131235602);
   }
   
-  public final void mm(String paramString)
+  public final void ng(String paramString)
   {
-    hdJ.hdI.vM(SnsCommentFooter.a(hdJ.hdG).getText().toString());
-    SnsCommentFooter.a(hdJ.hdG).setText("");
+    hsw.hsv.wZ(SnsCommentFooter.a(hsw.hst).getText().toString());
+    SnsCommentFooter.a(hsw.hst).setText("");
   }
 }
 

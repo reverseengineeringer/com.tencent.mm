@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field public cAU:Ljava/lang/String;
+.field public cxP:Ljava/lang/String;
 
-.field public iBD:Ljava/lang/String;
+.field public iYn:Ljava/lang/String;
 
 
 # direct methods
@@ -25,7 +25,7 @@
 .method public abstract getType()I
 .end method
 
-.method public l(Landroid/os/Bundle;)V
+.method public n(Landroid/os/Bundle;)V
     .locals 2
 
     .prologue
@@ -41,14 +41,14 @@
     .line 45
     const-string/jumbo v0, "_wxapi_basereq_transaction"
 
-    iget-object v1, p0, Lcom/tencent/mm/sdk/e/a;->iBD:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/sdk/e/a;->iYn:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 46
     const-string/jumbo v0, "_wxapi_basereq_openid"
 
-    iget-object v1, p0, Lcom/tencent/mm/sdk/e/a;->cAU:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/sdk/e/a;->cxP:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -56,27 +56,27 @@
     return-void
 .end method
 
-.method public m(Landroid/os/Bundle;)V
+.method public o(Landroid/os/Bundle;)V
     .locals 1
 
     .prologue
     .line 58
     const-string/jumbo v0, "_wxapi_basereq_transaction"
 
-    invoke-static {p1, v0}, Lcom/tencent/mm/sdk/platformtools/p;->c(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lcom/tencent/mm/sdk/platformtools/q;->c(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/e/a;->iBD:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/e/a;->iYn:Ljava/lang/String;
 
     .line 59
     const-string/jumbo v0, "_wxapi_basereq_openid"
 
-    invoke-static {p1, v0}, Lcom/tencent/mm/sdk/platformtools/p;->c(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lcom/tencent/mm/sdk/platformtools/q;->c(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/e/a;->cAU:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/e/a;->cxP:Ljava/lang/String;
 
     .line 60
     return-void

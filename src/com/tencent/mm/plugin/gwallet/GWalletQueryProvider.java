@@ -12,10 +12,10 @@ import com.tencent.mm.plugin.gwallet.a.b;
 import com.tencent.mm.plugin.gwallet.a.b.a;
 import com.tencent.mm.plugin.gwallet.a.b.c;
 import com.tencent.mm.plugin.gwallet.a.c;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ab.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.ad.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.ArrayList;
 import java.util.Iterator;
 import org.json.JSONException;
@@ -24,14 +24,14 @@ import org.json.JSONObject;
 public class GWalletQueryProvider
   extends ContentProvider
 {
-  public static final String[] ec = { "_id", "product_id", "full_price", "product_state", "price_currency", "price_amount" };
-  private final String TAG = "!44@/B4Tb64lLpJlq3g3dssAoZZ5jyUwqm48qdJiAhkom5Q=";
-  private b exq = null;
-  private boolean exr;
-  private boolean exs;
-  private ArrayList ext;
-  private ArrayList exu;
-  private int exv;
+  public static final String[] es = { "_id", "product_id", "full_price", "product_state", "price_currency", "price_amount" };
+  private final String TAG = "MicroMsg.GWalletQueryProvider";
+  private b eDK = null;
+  private boolean eDL;
+  private boolean eDM;
+  private ArrayList<String> eDN;
+  private ArrayList<String> eDO;
+  private int eDP;
   private Context mContext = null;
   
   public int delete(Uri paramUri, String paramString, String[] paramArrayOfString)
@@ -51,7 +51,7 @@ public class GWalletQueryProvider
   
   public boolean onCreate()
   {
-    u.d("!44@/B4Tb64lLpJlq3g3dssAoZZ5jyUwqm48qdJiAhkom5Q=", "successfully loaded");
+    v.d("MicroMsg.GWalletQueryProvider", "successfully loaded");
     return true;
   }
   
@@ -59,36 +59,36 @@ public class GWalletQueryProvider
   {
     try
     {
-      u.d("!44@/B4Tb64lLpJlq3g3dssAoZZ5jyUwqm48qdJiAhkom5Q=", "Creating IAB helper.");
+      v.d("MicroMsg.GWalletQueryProvider", "Creating IAB helper.");
       if ((paramArrayOfString2 == null) || (paramArrayOfString2.length == 0))
       {
-        u.d("!44@/B4Tb64lLpJlq3g3dssAoZZ5jyUwqm48qdJiAhkom5Q=", "no product id selected or size is 0");
+        v.d("MicroMsg.GWalletQueryProvider", "no product id selected or size is 0");
         throw new IllegalArgumentException("no product id selected or size is 0");
       }
     }
     finally {}
     mContext = getContext();
-    exq = new b(mContext);
-    exr = true;
-    exs = false;
-    exu = new ArrayList();
+    eDK = new b(mContext);
+    eDL = true;
+    eDM = false;
+    eDO = new ArrayList();
     int j = paramArrayOfString2.length;
     int i = 0;
     while (i < j)
     {
       paramUri = paramArrayOfString2[i];
-      exu.add(paramUri);
+      eDO.add(paramUri);
       i += 1;
     }
-    u.d("!44@/B4Tb64lLpJlq3g3dssAoZZ5jyUwqm48qdJiAhkom5Q=", "Starting setup.");
-    exq.a(new b.a()
+    v.d("MicroMsg.GWalletQueryProvider", "Starting setup.");
+    eDK.a(new b.a()
     {
       public final void a(c paramAnonymousc)
       {
-        u.d("!44@/B4Tb64lLpJlq3g3dssAoZZ5jyUwqm48qdJiAhkom5Q=", "Setup finished.");
-        if (!paramAnonymousc.isSuccess())
+        v.d("MicroMsg.GWalletQueryProvider", "Setup finished.");
+        if (!paramAnonymousc.ep())
         {
-          u.e("!44@/B4Tb64lLpJlq3g3dssAoZZ5jyUwqm48qdJiAhkom5Q=", "Problem setting up in-app billing: " + paramAnonymousc);
+          v.e("MicroMsg.GWalletQueryProvider", "Problem setting up in-app billing: " + paramAnonymousc);
           GWalletQueryProvider.a(GWalletQueryProvider.this);
           if (GWalletQueryProvider.b(GWalletQueryProvider.this) != null) {
             GWalletQueryProvider.b(GWalletQueryProvider.this).dispose();
@@ -96,20 +96,20 @@ public class GWalletQueryProvider
           GWalletQueryProvider.c(GWalletQueryProvider.this);
           return;
         }
-        ah.tv().a(new ab.a()
+        ah.tw().a(new ad.a()
         {
           public final String toString()
           {
             return super.toString() + "|onIabSetupFinished";
           }
           
-          public final boolean vd()
+          public final boolean vf()
           {
             GWalletQueryProvider.d(GWalletQueryProvider.this);
             return true;
           }
           
-          public final boolean ve()
+          public final boolean vg()
           {
             if (GWalletQueryProvider.b(GWalletQueryProvider.this) != null) {
               GWalletQueryProvider.b(GWalletQueryProvider.this).dispose();
@@ -122,9 +122,9 @@ public class GWalletQueryProvider
     });
     long l = 0L;
     boolean bool;
-    while ((l <= 30000L) && (exr))
+    while ((l <= 30000L) && (eDL))
     {
-      bool = exs;
+      bool = eDM;
       if (bool) {
         break;
       }
@@ -135,14 +135,14 @@ public class GWalletQueryProvider
       }
       catch (InterruptedException paramUri)
       {
-        u.e("!44@/B4Tb64lLpJlq3g3dssAoZZ5jyUwqm48qdJiAhkom5Q=", paramUri.toString());
+        v.e("MicroMsg.GWalletQueryProvider", paramUri.toString());
       }
     }
-    if (!exr)
+    if (!eDL)
     {
-      u.d("!44@/B4Tb64lLpJlq3g3dssAoZZ5jyUwqm48qdJiAhkom5Q=", "unable to setup");
-      paramUri = new MatrixCursor(ec);
-      paramArrayOfString1 = exu.iterator();
+      v.d("MicroMsg.GWalletQueryProvider", "unable to setup");
+      paramUri = new MatrixCursor(es);
+      paramArrayOfString1 = eDO.iterator();
       while (paramArrayOfString1.hasNext()) {
         paramUri.addRow(new Object[] { Integer.valueOf(0), (String)paramArrayOfString1.next(), "", Integer.valueOf(10234), "", "" });
       }
@@ -150,22 +150,22 @@ public class GWalletQueryProvider
     }
     if (l > 30000L)
     {
-      u.d("!44@/B4Tb64lLpJlq3g3dssAoZZ5jyUwqm48qdJiAhkom5Q=", "time's out");
-      paramUri = new MatrixCursor(ec);
-      paramArrayOfString1 = exu.iterator();
+      v.d("MicroMsg.GWalletQueryProvider", "time's out");
+      paramUri = new MatrixCursor(es);
+      paramArrayOfString1 = eDO.iterator();
       while (paramArrayOfString1.hasNext()) {
         paramUri.addRow(new Object[] { Integer.valueOf(0), (String)paramArrayOfString1.next(), "", Integer.valueOf(10235), "", "" });
       }
       return paramUri;
     }
-    u.d("!44@/B4Tb64lLpJlq3g3dssAoZZ5jyUwqm48qdJiAhkom5Q=", "successfully queried!");
-    paramArrayOfString1 = new MatrixCursor(ec);
-    if (exv == 0)
+    v.d("MicroMsg.GWalletQueryProvider", "successfully queried!");
+    paramArrayOfString1 = new MatrixCursor(es);
+    if (eDP == 0)
     {
       i = 0;
-      if (ext != null)
+      if (eDN != null)
       {
-        paramString1 = ext.iterator();
+        paramString1 = eDN.iterator();
         i = 0;
         for (;;)
         {
@@ -173,7 +173,7 @@ public class GWalletQueryProvider
             break label786;
           }
           paramUri = (String)paramString1.next();
-          bool = ay.kz(paramUri);
+          bool = be.kf(paramUri);
           if (bool) {
             break label780;
           }
@@ -192,7 +192,7 @@ public class GWalletQueryProvider
             {
               Object localObject;
               paramArrayOfString1.addRow(new Object[] { Integer.valueOf(i), paramUri, paramArrayOfString2, Integer.valueOf(10232), paramString2, localObject });
-              exu.remove(paramUri);
+              eDO.remove(paramUri);
               i = j;
             }
             catch (JSONException paramUri)
@@ -205,7 +205,7 @@ public class GWalletQueryProvider
             paramUri = paramUri;
           }
         }
-        u.d("!44@/B4Tb64lLpJlq3g3dssAoZZ5jyUwqm48qdJiAhkom5Q=", paramUri.toString());
+        v.d("MicroMsg.GWalletQueryProvider", paramUri.toString());
         break label783;
       }
     }
@@ -214,13 +214,13 @@ public class GWalletQueryProvider
     label786:
     for (;;)
     {
-      paramUri = exu.iterator();
+      paramUri = eDO.iterator();
       while (paramUri.hasNext())
       {
         paramArrayOfString1.addRow(new Object[] { Integer.valueOf(i), (String)paramUri.next(), "", Integer.valueOf(10233), "", "" });
         i += 1;
         continue;
-        paramUri = exu.iterator();
+        paramUri = eDO.iterator();
         while (paramUri.hasNext()) {
           paramArrayOfString1.addRow(new Object[] { Integer.valueOf(0), (String)paramUri.next(), "", Integer.valueOf(10236), "", "" });
         }

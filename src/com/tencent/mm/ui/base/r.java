@@ -10,10 +10,10 @@ import android.os.StatFs;
 import android.util.StringBuilderPrinter;
 import com.tencent.mm.compatible.util.d;
 import com.tencent.mm.sdk.b.b;
+import com.tencent.mm.sdk.platformtools.aa;
 import com.tencent.mm.sdk.platformtools.e;
 import com.tencent.mm.sdk.platformtools.f;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -23,20 +23,20 @@ import java.util.Locale;
 final class r
   extends SurfaceTexture
 {
-  public SurfaceTexture kGX = null;
+  public SurfaceTexture lfZ = null;
   
   public r()
   {
     super(0);
   }
   
-  private static String bcS()
+  private static String bir()
   {
     StringBuilder localStringBuilder = new StringBuilder(256);
     StringBuilderPrinter localStringBuilderPrinter = new StringBuilderPrinter(localStringBuilder);
-    Object localObject2 = y.getContext();
-    localStringBuilderPrinter.println("#accinfo.revision=" + e.btx);
-    localStringBuilderPrinter.println("#accinfo.build=" + e.bwS + ":" + e.bwT + ":" + f.akC);
+    Object localObject2 = aa.getContext();
+    localStringBuilderPrinter.println("#accinfo.revision=" + e.boQ);
+    localStringBuilderPrinter.println("#accinfo.build=" + e.boT + ":" + e.boU + ":" + f.Xv);
     Object localObject3 = new StringBuilder("#accinfo.env=");
     Object localObject1;
     if (b.foreground) {
@@ -44,13 +44,13 @@ final class r
     }
     for (;;)
     {
-      localStringBuilderPrinter.println((String)localObject1 + ":" + Thread.currentThread().getName() + ":" + b.jUB);
+      localStringBuilderPrinter.println((String)localObject1 + ":" + Thread.currentThread().getName() + ":" + b.kuc);
       try
       {
         localObject1 = Environment.getDataDirectory();
         localObject3 = new StatFs(((File)localObject1).getPath());
-        StatFs localStatFs = new StatFs(d.bxc);
-        localObject1 = String.format("%dMB %s:%d:%d:%d %s:%d:%d:%d", new Object[] { Integer.valueOf(((ActivityManager)((Context)localObject2).getSystemService("activity")).getMemoryClass()), ((File)localObject1).getAbsolutePath(), Integer.valueOf(((StatFs)localObject3).getBlockSize()), Integer.valueOf(((StatFs)localObject3).getBlockCount()), Integer.valueOf(((StatFs)localObject3).getAvailableBlocks()), d.bxc, Integer.valueOf(localStatFs.getBlockSize()), Integer.valueOf(localStatFs.getBlockCount()), Integer.valueOf(localStatFs.getAvailableBlocks()) });
+        StatFs localStatFs = new StatFs(d.bpe);
+        localObject1 = String.format("%dMB %s:%d:%d:%d %s:%d:%d:%d", new Object[] { Integer.valueOf(((ActivityManager)((Context)localObject2).getSystemService("activity")).getMemoryClass()), ((File)localObject1).getAbsolutePath(), Integer.valueOf(((StatFs)localObject3).getBlockSize()), Integer.valueOf(((StatFs)localObject3).getBlockCount()), Integer.valueOf(((StatFs)localObject3).getAvailableBlocks()), d.bpe, Integer.valueOf(localStatFs.getBlockSize()), Integer.valueOf(localStatFs.getBlockCount()), Integer.valueOf(localStatFs.getAvailableBlocks()) });
         localStringBuilderPrinter.println("#accinfo.data=" + (String)localObject1);
         localObject1 = new Date();
         localObject2 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSZ", Locale.getDefault());
@@ -63,7 +63,7 @@ final class r
       {
         for (;;)
         {
-          u.e("!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak=", "check data size failed :%s", new Object[] { localException.getMessage() });
+          v.e("MicroMsg.MMSurfaceTextureWrap", "check data size failed :%s", new Object[] { localException.getMessage() });
           String str = "";
         }
       }
@@ -72,8 +72,8 @@ final class r
   
   public final void attachToGLContext(int paramInt)
   {
-    u.i("!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak=", "detect texture problem, attachToGLContext");
-    kGX.attachToGLContext(paramInt);
+    v.i("MicroMsg.MMSurfaceTextureWrap", "detect texture problem, attachToGLContext");
+    lfZ.attachToGLContext(paramInt);
   }
   
   /* Error */
@@ -82,9 +82,9 @@ final class r
     // Byte code:
     //   0: ldc -68
     //   2: ldc -35
-    //   4: invokestatic 208	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   4: invokestatic 208	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;)V
     //   7: aload_0
-    //   8: getfield 16	com/tencent/mm/ui/base/r:kGX	Landroid/graphics/SurfaceTexture;
+    //   8: getfield 16	com/tencent/mm/ui/base/r:lfZ	Landroid/graphics/SurfaceTexture;
     //   11: invokevirtual 223	android/graphics/SurfaceTexture:detachFromGLContext	()V
     //   14: iconst_0
     //   15: istore_2
@@ -101,7 +101,7 @@ final class r
     //   34: invokevirtual 237	java/lang/reflect/Method:setAccessible	(Z)V
     //   37: aload_3
     //   38: aload_0
-    //   39: getfield 16	com/tencent/mm/ui/base/r:kGX	Landroid/graphics/SurfaceTexture;
+    //   39: getfield 16	com/tencent/mm/ui/base/r:lfZ	Landroid/graphics/SurfaceTexture;
     //   42: iconst_0
     //   43: anewarray 120	java/lang/Object
     //   46: invokevirtual 241	java/lang/reflect/Method:invoke	(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -111,7 +111,7 @@ final class r
     //   56: new 23	java/lang/StringBuilder
     //   59: dup
     //   60: invokespecial 245	java/lang/StringBuilder:<init>	()V
-    //   63: invokestatic 247	com/tencent/mm/ui/base/r:bcS	()Ljava/lang/String;
+    //   63: invokestatic 247	com/tencent/mm/ui/base/r:bir	()Ljava/lang/String;
     //   66: invokevirtual 50	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   69: ldc -7
     //   71: invokevirtual 50	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -128,10 +128,10 @@ final class r
     //   95: iconst_2
     //   96: invokestatic 264	android/util/Base64:encodeToString	([BI)Ljava/lang/String;
     //   99: ldc_w 266
-    //   102: invokestatic 269	com/tencent/mm/sdk/b/b:q	(Ljava/lang/String;Ljava/lang/String;)V
+    //   102: invokestatic 269	com/tencent/mm/sdk/b/b:o	(Ljava/lang/String;Ljava/lang/String;)V
     //   105: ldc -68
     //   107: aload_3
-    //   108: invokestatic 272	com/tencent/mm/sdk/platformtools/u:w	(Ljava/lang/String;Ljava/lang/String;)V
+    //   108: invokestatic 272	com/tencent/mm/sdk/platformtools/v:w	(Ljava/lang/String;Ljava/lang/String;)V
     //   111: ldc -68
     //   113: ldc_w 274
     //   116: iconst_3
@@ -151,7 +151,7 @@ final class r
     //   136: iload_2
     //   137: invokestatic 279	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
     //   140: aastore
-    //   141: invokestatic 281	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   141: invokestatic 281	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   144: return
     //   145: astore_3
     //   146: ldc -68
@@ -163,7 +163,7 @@ final class r
     //   157: iconst_0
     //   158: ldc_w 285
     //   161: aastore
-    //   162: invokestatic 289	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   162: invokestatic 289	com/tencent/mm/sdk/platformtools/v:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   165: iconst_1
     //   166: istore_2
     //   167: goto -151 -> 16
@@ -177,11 +177,11 @@ final class r
     //   182: iconst_0
     //   183: ldc_w 291
     //   186: aastore
-    //   187: invokestatic 289	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   187: invokestatic 289	com/tencent/mm/sdk/platformtools/v:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   190: new 23	java/lang/StringBuilder
     //   193: dup
     //   194: invokespecial 245	java/lang/StringBuilder:<init>	()V
-    //   197: invokestatic 247	com/tencent/mm/ui/base/r:bcS	()Ljava/lang/String;
+    //   197: invokestatic 247	com/tencent/mm/ui/base/r:bir	()Ljava/lang/String;
     //   200: invokevirtual 50	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   203: ldc_w 293
     //   206: invokevirtual 50	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -196,10 +196,10 @@ final class r
     //   227: iconst_2
     //   228: invokestatic 264	android/util/Base64:encodeToString	([BI)Ljava/lang/String;
     //   231: ldc_w 266
-    //   234: invokestatic 269	com/tencent/mm/sdk/b/b:q	(Ljava/lang/String;Ljava/lang/String;)V
+    //   234: invokestatic 269	com/tencent/mm/sdk/b/b:o	(Ljava/lang/String;Ljava/lang/String;)V
     //   237: ldc -68
     //   239: aload_3
-    //   240: invokestatic 272	com/tencent/mm/sdk/platformtools/u:w	(Ljava/lang/String;Ljava/lang/String;)V
+    //   240: invokestatic 272	com/tencent/mm/sdk/platformtools/v:w	(Ljava/lang/String;Ljava/lang/String;)V
     //   243: ldc -68
     //   245: ldc_w 274
     //   248: iconst_3
@@ -219,7 +219,7 @@ final class r
     //   268: iload_2
     //   269: invokestatic 279	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
     //   272: aastore
-    //   273: invokestatic 281	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   273: invokestatic 281	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   276: return
     //   277: astore_3
     //   278: ldc -68
@@ -231,11 +231,11 @@ final class r
     //   289: iconst_0
     //   290: ldc_w 297
     //   293: aastore
-    //   294: invokestatic 289	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   294: invokestatic 289	com/tencent/mm/sdk/platformtools/v:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   297: new 23	java/lang/StringBuilder
     //   300: dup
     //   301: invokespecial 245	java/lang/StringBuilder:<init>	()V
-    //   304: invokestatic 247	com/tencent/mm/ui/base/r:bcS	()Ljava/lang/String;
+    //   304: invokestatic 247	com/tencent/mm/ui/base/r:bir	()Ljava/lang/String;
     //   307: invokevirtual 50	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   310: ldc_w 293
     //   313: invokevirtual 50	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -250,10 +250,10 @@ final class r
     //   334: iconst_2
     //   335: invokestatic 264	android/util/Base64:encodeToString	([BI)Ljava/lang/String;
     //   338: ldc_w 266
-    //   341: invokestatic 269	com/tencent/mm/sdk/b/b:q	(Ljava/lang/String;Ljava/lang/String;)V
+    //   341: invokestatic 269	com/tencent/mm/sdk/b/b:o	(Ljava/lang/String;Ljava/lang/String;)V
     //   344: ldc -68
     //   346: aload_3
-    //   347: invokestatic 272	com/tencent/mm/sdk/platformtools/u:w	(Ljava/lang/String;Ljava/lang/String;)V
+    //   347: invokestatic 272	com/tencent/mm/sdk/platformtools/v:w	(Ljava/lang/String;Ljava/lang/String;)V
     //   350: ldc -68
     //   352: ldc_w 274
     //   355: iconst_3
@@ -273,7 +273,7 @@ final class r
     //   375: iload_2
     //   376: invokestatic 279	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
     //   379: aastore
-    //   380: invokestatic 281	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   380: invokestatic 281	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   383: return
     //   384: astore_3
     //   385: ldc -68
@@ -285,11 +285,11 @@ final class r
     //   396: iconst_0
     //   397: ldc_w 299
     //   400: aastore
-    //   401: invokestatic 289	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   401: invokestatic 289	com/tencent/mm/sdk/platformtools/v:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   404: new 23	java/lang/StringBuilder
     //   407: dup
     //   408: invokespecial 245	java/lang/StringBuilder:<init>	()V
-    //   411: invokestatic 247	com/tencent/mm/ui/base/r:bcS	()Ljava/lang/String;
+    //   411: invokestatic 247	com/tencent/mm/ui/base/r:bir	()Ljava/lang/String;
     //   414: invokevirtual 50	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   417: ldc_w 293
     //   420: invokevirtual 50	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -304,10 +304,10 @@ final class r
     //   441: iconst_2
     //   442: invokestatic 264	android/util/Base64:encodeToString	([BI)Ljava/lang/String;
     //   445: ldc_w 266
-    //   448: invokestatic 269	com/tencent/mm/sdk/b/b:q	(Ljava/lang/String;Ljava/lang/String;)V
+    //   448: invokestatic 269	com/tencent/mm/sdk/b/b:o	(Ljava/lang/String;Ljava/lang/String;)V
     //   451: ldc -68
     //   453: aload_3
-    //   454: invokestatic 272	com/tencent/mm/sdk/platformtools/u:w	(Ljava/lang/String;Ljava/lang/String;)V
+    //   454: invokestatic 272	com/tencent/mm/sdk/platformtools/v:w	(Ljava/lang/String;Ljava/lang/String;)V
     //   457: ldc -68
     //   459: ldc_w 274
     //   462: iconst_3
@@ -327,7 +327,7 @@ final class r
     //   482: iload_2
     //   483: invokestatic 279	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
     //   486: aastore
-    //   487: invokestatic 281	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   487: invokestatic 281	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   490: return
     //   491: astore_3
     //   492: ldc -68
@@ -339,11 +339,11 @@ final class r
     //   503: iconst_0
     //   504: ldc_w 301
     //   507: aastore
-    //   508: invokestatic 289	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   508: invokestatic 289	com/tencent/mm/sdk/platformtools/v:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   511: new 23	java/lang/StringBuilder
     //   514: dup
     //   515: invokespecial 245	java/lang/StringBuilder:<init>	()V
-    //   518: invokestatic 247	com/tencent/mm/ui/base/r:bcS	()Ljava/lang/String;
+    //   518: invokestatic 247	com/tencent/mm/ui/base/r:bir	()Ljava/lang/String;
     //   521: invokevirtual 50	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   524: ldc_w 293
     //   527: invokevirtual 50	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -358,10 +358,10 @@ final class r
     //   548: iconst_2
     //   549: invokestatic 264	android/util/Base64:encodeToString	([BI)Ljava/lang/String;
     //   552: ldc_w 266
-    //   555: invokestatic 269	com/tencent/mm/sdk/b/b:q	(Ljava/lang/String;Ljava/lang/String;)V
+    //   555: invokestatic 269	com/tencent/mm/sdk/b/b:o	(Ljava/lang/String;Ljava/lang/String;)V
     //   558: ldc -68
     //   560: aload_3
-    //   561: invokestatic 272	com/tencent/mm/sdk/platformtools/u:w	(Ljava/lang/String;Ljava/lang/String;)V
+    //   561: invokestatic 272	com/tencent/mm/sdk/platformtools/v:w	(Ljava/lang/String;Ljava/lang/String;)V
     //   564: ldc -68
     //   566: ldc_w 274
     //   569: iconst_3
@@ -381,7 +381,7 @@ final class r
     //   589: iload_2
     //   590: invokestatic 279	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
     //   593: aastore
-    //   594: invokestatic 281	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   594: invokestatic 281	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   597: return
     //   598: astore_3
     //   599: ldc -68
@@ -393,11 +393,11 @@ final class r
     //   610: iconst_0
     //   611: ldc_w 303
     //   614: aastore
-    //   615: invokestatic 289	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   615: invokestatic 289	com/tencent/mm/sdk/platformtools/v:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   618: new 23	java/lang/StringBuilder
     //   621: dup
     //   622: invokespecial 245	java/lang/StringBuilder:<init>	()V
-    //   625: invokestatic 247	com/tencent/mm/ui/base/r:bcS	()Ljava/lang/String;
+    //   625: invokestatic 247	com/tencent/mm/ui/base/r:bir	()Ljava/lang/String;
     //   628: invokevirtual 50	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   631: ldc_w 293
     //   634: invokevirtual 50	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -412,10 +412,10 @@ final class r
     //   655: iconst_2
     //   656: invokestatic 264	android/util/Base64:encodeToString	([BI)Ljava/lang/String;
     //   659: ldc_w 266
-    //   662: invokestatic 269	com/tencent/mm/sdk/b/b:q	(Ljava/lang/String;Ljava/lang/String;)V
+    //   662: invokestatic 269	com/tencent/mm/sdk/b/b:o	(Ljava/lang/String;Ljava/lang/String;)V
     //   665: ldc -68
     //   667: aload_3
-    //   668: invokestatic 272	com/tencent/mm/sdk/platformtools/u:w	(Ljava/lang/String;Ljava/lang/String;)V
+    //   668: invokestatic 272	com/tencent/mm/sdk/platformtools/v:w	(Ljava/lang/String;Ljava/lang/String;)V
     //   671: ldc -68
     //   673: ldc_w 274
     //   676: iconst_3
@@ -435,13 +435,13 @@ final class r
     //   696: iload_2
     //   697: invokestatic 279	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
     //   700: aastore
-    //   701: invokestatic 281	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   701: invokestatic 281	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   704: return
     //   705: astore_3
     //   706: new 23	java/lang/StringBuilder
     //   709: dup
     //   710: invokespecial 245	java/lang/StringBuilder:<init>	()V
-    //   713: invokestatic 247	com/tencent/mm/ui/base/r:bcS	()Ljava/lang/String;
+    //   713: invokestatic 247	com/tencent/mm/ui/base/r:bir	()Ljava/lang/String;
     //   716: invokevirtual 50	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   719: ldc_w 293
     //   722: invokevirtual 50	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -456,10 +456,10 @@ final class r
     //   745: iconst_2
     //   746: invokestatic 264	android/util/Base64:encodeToString	([BI)Ljava/lang/String;
     //   749: ldc_w 266
-    //   752: invokestatic 269	com/tencent/mm/sdk/b/b:q	(Ljava/lang/String;Ljava/lang/String;)V
+    //   752: invokestatic 269	com/tencent/mm/sdk/b/b:o	(Ljava/lang/String;Ljava/lang/String;)V
     //   755: ldc -68
     //   757: aload 4
-    //   759: invokestatic 272	com/tencent/mm/sdk/platformtools/u:w	(Ljava/lang/String;Ljava/lang/String;)V
+    //   759: invokestatic 272	com/tencent/mm/sdk/platformtools/v:w	(Ljava/lang/String;Ljava/lang/String;)V
     //   762: ldc -68
     //   764: ldc_w 274
     //   767: iconst_3
@@ -479,7 +479,7 @@ final class r
     //   787: iload_2
     //   788: invokestatic 279	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
     //   791: aastore
-    //   792: invokestatic 281	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   792: invokestatic 281	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   795: aload_3
     //   796: athrow
     // Local variable table:
@@ -519,61 +519,61 @@ final class r
   
   public final boolean equals(Object paramObject)
   {
-    return kGX.equals(paramObject);
+    return lfZ.equals(paramObject);
   }
   
   public final long getTimestamp()
   {
-    u.i("!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak=", "detect texture problem, getTimestamp");
-    return kGX.getTimestamp();
+    v.i("MicroMsg.MMSurfaceTextureWrap", "detect texture problem, getTimestamp");
+    return lfZ.getTimestamp();
   }
   
   public final void getTransformMatrix(float[] paramArrayOfFloat)
   {
-    u.i("!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak=", "detect texture problem, getTransformMatrix");
-    kGX.getTransformMatrix(paramArrayOfFloat);
+    v.i("MicroMsg.MMSurfaceTextureWrap", "detect texture problem, getTransformMatrix");
+    lfZ.getTransformMatrix(paramArrayOfFloat);
   }
   
   public final int hashCode()
   {
-    return kGX.hashCode();
+    return lfZ.hashCode();
   }
   
   public final void release()
   {
     super.release();
-    u.i("!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak=", "detect texture problem, release");
-    kGX.release();
+    v.i("MicroMsg.MMSurfaceTextureWrap", "detect texture problem, release");
+    lfZ.release();
   }
   
   @TargetApi(19)
   public final void releaseTexImage()
   {
-    u.i("!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak=", "detect texture problem, releaseTexImage");
-    kGX.releaseTexImage();
+    v.i("MicroMsg.MMSurfaceTextureWrap", "detect texture problem, releaseTexImage");
+    lfZ.releaseTexImage();
   }
   
   public final void setDefaultBufferSize(int paramInt1, int paramInt2)
   {
-    u.i("!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak=", "detect texture problem, setDefaultBufferSize");
-    kGX.setDefaultBufferSize(paramInt1, paramInt2);
+    v.i("MicroMsg.MMSurfaceTextureWrap", "detect texture problem, setDefaultBufferSize");
+    lfZ.setDefaultBufferSize(paramInt1, paramInt2);
   }
   
   public final void setOnFrameAvailableListener(SurfaceTexture.OnFrameAvailableListener paramOnFrameAvailableListener)
   {
-    u.i("!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak=", "detect texture problem, setOnFrameAvailableListener");
-    kGX.setOnFrameAvailableListener(paramOnFrameAvailableListener);
+    v.i("MicroMsg.MMSurfaceTextureWrap", "detect texture problem, setOnFrameAvailableListener");
+    lfZ.setOnFrameAvailableListener(paramOnFrameAvailableListener);
   }
   
   public final String toString()
   {
-    return kGX.toString();
+    return lfZ.toString();
   }
   
   public final void updateTexImage()
   {
-    u.i("!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak=", "detect texture problem, updateTexImage");
-    kGX.updateTexImage();
+    v.i("MicroMsg.MMSurfaceTextureWrap", "detect texture problem, updateTexImage");
+    lfZ.updateTexImage();
   }
 }
 

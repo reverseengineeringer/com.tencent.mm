@@ -10,7 +10,7 @@ final class RegByEmailUI$7
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    RegByEmailUI.c(kuo);
+    RegByEmailUI.c(kTv);
     return true;
   }
 }

@@ -4,9 +4,9 @@
 
 
 # static fields
-.field public static final ckd:Ljava/lang/String;
+.field public static final cfv:Ljava/lang/String;
 
-.field private static cke:J
+.field private static cfw:J
 
 .field private static lastUpdateTime:J
 
@@ -21,7 +21,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/tencent/mm/compatible/util/d;->bxc:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/compatible/util/d;->bpe:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -37,7 +37,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/network/ac;->ckd:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/network/ac;->cfv:Ljava/lang/String;
 
     .line 28
     const-wide/16 v0, 0x0
@@ -45,7 +45,7 @@
     sput-wide v0, Lcom/tencent/mm/network/ac;->lastUpdateTime:J
 
     .line 29
-    invoke-static {}, Lcom/tencent/mm/network/ac;->Fl()J
+    invoke-static {}, Lcom/tencent/mm/network/ac;->FH()J
 
     move-result-wide v0
 
@@ -53,33 +53,33 @@
 
     div-long/2addr v0, v2
 
-    sput-wide v0, Lcom/tencent/mm/network/ac;->cke:J
+    sput-wide v0, Lcom/tencent/mm/network/ac;->cfw:J
 
     return-void
 .end method
 
-.method public static Fl()J
-    .locals 14
+.method public static FH()J
+    .locals 16
 
     .prologue
     const/4 v2, 0x1
 
-    const-wide/16 v12, 0xe10
+    const-wide/16 v14, 0xe10
 
-    const-wide/16 v10, 0x10e
+    const-wide/16 v12, 0x10e
 
-    const/4 v9, 0x0
+    const/4 v10, 0x0
 
-    const-wide/16 v7, 0x3e8
+    const-wide/16 v8, 0x3e8
 
     .line 32
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     const-string/jumbo v1, "noop_prefs"
 
-    invoke-virtual {v0, v1, v9}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {v0, v1, v10}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -94,7 +94,7 @@
     if-ne v2, v1, :cond_0
 
     .line 35
-    sput-wide v10, Lcom/tencent/mm/network/ac;->cke:J
+    sput-wide v12, Lcom/tencent/mm/network/ac;->cfw:J
 
     .line 36
     new-instance v0, Ljava/lang/StringBuilder;
@@ -103,14 +103,14 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-wide v1, Lcom/tencent/mm/network/ac;->cke:J
+    sget-wide v2, Lcom/tencent/mm/network/ac;->cfw:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     .line 37
-    sget-wide v0, Lcom/tencent/mm/network/ac;->cke:J
+    sget-wide v0, Lcom/tencent/mm/network/ac;->cfw:J
 
-    mul-long/2addr v0, v7
+    mul-long/2addr v0, v8
 
     .line 62
     :goto_0
@@ -125,7 +125,7 @@
     .line 40
     const-string/jumbo v1, "noop_min_interval"
 
-    invoke-interface {v0, v1, v10, v11}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+    invoke-interface {v0, v1, v12, v13}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v0
 
@@ -136,20 +136,20 @@
 
     if-ltz v2, :cond_1
 
-    cmp-long v2, v0, v12
+    cmp-long v2, v0, v14
 
     if-gtz v2, :cond_1
 
     .line 43
-    sput-wide v0, Lcom/tencent/mm/network/ac;->cke:J
+    sput-wide v0, Lcom/tencent/mm/network/ac;->cfw:J
 
-    mul-long/2addr v0, v7
+    mul-long/2addr v0, v8
 
     goto :goto_0
 
     .line 45
     :cond_1
-    sput-wide v10, Lcom/tencent/mm/network/ac;->cke:J
+    sput-wide v12, Lcom/tencent/mm/network/ac;->cfw:J
 
     .line 46
     new-instance v0, Ljava/lang/StringBuilder;
@@ -158,14 +158,14 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-wide v1, Lcom/tencent/mm/network/ac;->cke:J
+    sget-wide v2, Lcom/tencent/mm/network/ac;->cfw:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     .line 47
-    sget-wide v0, Lcom/tencent/mm/network/ac;->cke:J
+    sget-wide v0, Lcom/tencent/mm/network/ac;->cfw:J
 
-    mul-long/2addr v0, v7
+    mul-long/2addr v0, v8
 
     goto :goto_0
 
@@ -175,41 +175,41 @@
 
     move-result-wide v0
 
-    div-long/2addr v0, v7
+    div-long/2addr v0, v8
 
     .line 51
     sget-wide v2, Lcom/tencent/mm/network/ac;->lastUpdateTime:J
 
     sub-long v2, v0, v2
 
-    cmp-long v2, v2, v12
+    cmp-long v2, v2, v14
 
     if-lez v2, :cond_3
 
     .line 52
-    invoke-static {}, Lcom/tencent/mm/network/ac;->Fm()[J
+    invoke-static {}, Lcom/tencent/mm/network/ac;->FI()[J
 
     move-result-object v2
 
     .line 53
-    aget-wide v3, v2, v9
+    aget-wide v4, v2, v10
 
-    const-wide/16 v5, 0xb4
+    const-wide/16 v6, 0xb4
 
-    cmp-long v3, v3, v5
+    cmp-long v3, v4, v6
 
     if-ltz v3, :cond_4
 
-    aget-wide v3, v2, v9
+    aget-wide v4, v2, v10
 
-    cmp-long v3, v3, v12
+    cmp-long v3, v4, v14
 
     if-gtz v3, :cond_4
 
     .line 54
-    aget-wide v2, v2, v9
+    aget-wide v2, v2, v10
 
-    sput-wide v2, Lcom/tencent/mm/network/ac;->cke:J
+    sput-wide v2, Lcom/tencent/mm/network/ac;->cfw:J
 
     .line 58
     :goto_1
@@ -223,26 +223,26 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-wide v1, Lcom/tencent/mm/network/ac;->cke:J
+    sget-wide v2, Lcom/tencent/mm/network/ac;->cfw:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     .line 62
-    sget-wide v0, Lcom/tencent/mm/network/ac;->cke:J
+    sget-wide v0, Lcom/tencent/mm/network/ac;->cfw:J
 
-    mul-long/2addr v0, v7
+    mul-long/2addr v0, v8
 
     goto :goto_0
 
     .line 56
     :cond_4
-    sput-wide v10, Lcom/tencent/mm/network/ac;->cke:J
+    sput-wide v12, Lcom/tencent/mm/network/ac;->cfw:J
 
     goto :goto_1
 .end method
 
-.method private static Fm()[J
-    .locals 9
+.method private static FI()[J
+    .locals 10
 
     .prologue
     .line 143
@@ -255,7 +255,7 @@
     .line 144
     new-instance v1, Ljava/io/File;
 
-    sget-object v2, Lcom/tencent/mm/network/ac;->ckd:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/network/ac;->cfv:Ljava/lang/String;
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -295,19 +295,19 @@
     move-result v1
 
     .line 152
-    int-to-long v3, v1
+    int-to-long v4, v1
 
-    const-wide/16 v5, 0xb4
+    const-wide/16 v6, 0xb4
 
-    cmp-long v3, v3, v5
+    cmp-long v3, v4, v6
 
     if-ltz v3, :cond_2
 
-    int-to-long v3, v1
+    int-to-long v4, v1
 
-    const-wide/16 v5, 0xe10
+    const-wide/16 v6, 0xe10
 
-    cmp-long v3, v3, v5
+    cmp-long v3, v4, v6
 
     if-lez v3, :cond_3
 
@@ -346,17 +346,17 @@
     move-result v1
 
     .line 159
-    int-to-long v3, v1
+    int-to-long v4, v1
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    const-wide/16 v7, 0x3e8
+    const-wide/16 v8, 0x3e8
 
-    div-long/2addr v5, v7
+    div-long/2addr v6, v8
 
-    cmp-long v3, v3, v5
+    cmp-long v3, v4, v6
 
     if-lez v3, :cond_4
 
@@ -494,7 +494,7 @@
     .end array-data
 .end method
 
-.method public static f(JJ)V
+.method public static e(JJ)V
     .locals 10
 
     .prologue
@@ -538,7 +538,7 @@
     if-gtz v0, :cond_1
 
     .line 75
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -577,7 +577,7 @@
     if-gtz v0, :cond_2
 
     .line 82
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -634,7 +634,7 @@
 
     .line 91
     :cond_3
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -686,7 +686,7 @@
     :try_start_0
     new-instance v0, Ljava/io/File;
 
-    sget-object v1, Lcom/tencent/mm/network/ac;->ckd:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/network/ac;->cfv:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -698,16 +698,16 @@
     if-eqz v1, :cond_6
 
     .line 108
-    invoke-static {}, Lcom/tencent/mm/network/ac;->Fm()[J
+    invoke-static {}, Lcom/tencent/mm/network/ac;->FI()[J
 
     move-result-object v0
 
     .line 109
     const/4 v1, 0x1
 
-    aget-wide v1, v0, v1
+    aget-wide v2, v0, v1
 
-    cmp-long v1, v1, v4
+    cmp-long v1, v2, v4
 
     if-lez v1, :cond_4
 
@@ -728,7 +728,7 @@
     :try_start_1
     new-instance v0, Ljava/io/File;
 
-    sget-object v2, Lcom/tencent/mm/network/ac;->ckd:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/network/ac;->cfv:Ljava/lang/String;
 
     invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 

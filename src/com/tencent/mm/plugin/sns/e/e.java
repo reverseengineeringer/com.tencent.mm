@@ -1,23 +1,13 @@
 package com.tencent.mm.plugin.sns.e;
 
-import com.tencent.mm.model.c.c;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.a;
-import com.tencent.mm.storage.b;
+import com.tencent.mm.plugin.sns.ui.az;
+import com.tencent.mm.protocal.b.auf;
 
-public final class e
+public abstract interface e
 {
-  public static void vg(String paramString)
-  {
-    u.i("!44@/B4Tb64lLpJvKQ2zdTGvcr5PmCYgool5b7mWhhV1rG4=", "dump id " + paramString);
-    paramString = c.uZ().DN(paramString);
-    if (!paramString.isValid()) {
-      u.i("!44@/B4Tb64lLpJvKQ2zdTGvcr5PmCYgool5b7mWhhV1rG4=", "abtest is invalid");
-    }
-    if (paramString.aWf() != null) {
-      u.i("!44@/B4Tb64lLpJvKQ2zdTGvcr5PmCYgool5b7mWhhV1rG4=", "dump feed abtest " + field_rawXML);
-    }
-  }
+  public abstract void a(int paramInt, String paramString1, long paramLong, String paramString2, auf paramauf, boolean paramBoolean);
+  
+  public abstract void a(int paramInt, String paramString1, long paramLong, String paramString2, auf paramauf, boolean paramBoolean, az paramaz);
 }
 
 /* Location:

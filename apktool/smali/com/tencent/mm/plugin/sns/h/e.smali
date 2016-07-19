@@ -1,17 +1,33 @@
-.class public interface abstract Lcom/tencent/mm/plugin/sns/h/e;
-.super Ljava/lang/Object;
+.class public final Lcom/tencent/mm/plugin/sns/h/e;
+.super Lcom/tencent/mm/plugin/sns/h/f;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Lcom/tencent/mm/plugin/sns/h/i;)Z
+# static fields
+.field public static hdt:Lcom/tencent/mm/plugin/sns/h/f;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .prologue
+    .line 7
+    new-instance v0, Lcom/tencent/mm/plugin/sns/h/e;
+
+    invoke-direct {v0}, Lcom/tencent/mm/plugin/sns/h/e;-><init>()V
+
+    sput-object v0, Lcom/tencent/mm/plugin/sns/h/e;->hdt:Lcom/tencent/mm/plugin/sns/h/f;
+
+    return-void
 .end method
 
-.method public abstract azt()Z
-.end method
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract azu()Z
-.end method
+    .prologue
+    .line 6
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/h/f;-><init>()V
 
-.method public abstract uG(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/h/i;
+    return-void
 .end method

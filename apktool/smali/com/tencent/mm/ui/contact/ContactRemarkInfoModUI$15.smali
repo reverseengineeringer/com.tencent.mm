@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->Gb()V
+    value = Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+.field final synthetic lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 350
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$15;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$15;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,12 +41,12 @@
 
     .prologue
     .line 355
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$15;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$15;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->f(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;)Z
 
     .line 356
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$15;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$15;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     const/4 v1, 0x0
 
@@ -57,7 +57,7 @@
     invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->a(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;ZI)V
 
     .line 357
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$15;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$15;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->h(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;)Lcom/tencent/mm/ui/widget/MMEditText;
 
@@ -66,7 +66,7 @@
     invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/MMEditText;->performClick()Z
 
     .line 358
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$15;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$15;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->h(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;)Lcom/tencent/mm/ui/widget/MMEditText;
 
@@ -75,9 +75,9 @@
     invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/MMEditText;->requestFocus()Z
 
     .line 359
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$15;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$15;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->apz()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->asv()V
 
     .line 360
     return-void

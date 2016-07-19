@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">‏%1$s کو Android Wear ایپ کیلئے اپ ڈیٹ درکار ہے۔</string>
+    <string name="b">‏جب تک آپ Android Wear ایپ اپ ڈیٹ نہیں کر لیتے %1$s تب تک نہیں چلے گی۔</string>
+    <string name="c">‏Android Wear کو اپ ڈیٹ کریں</string>
+    <string name="d">‏%1$s کیلئے ایک یا مزید Google Play سروسز درکار ہیں جو فی الحال دستیاب نہیں ہے۔ براہ کرم مدد کیلئے ڈیولپر سے رابطہ کریں۔</string>
+    <string name="e">‏Google Play سروسز فعال کریں</string>
+    <string name="f">‏جب تک آپ Google Play سروسز فعال نہیں کر لیتے ہیں %1$s تب تک کام نہیں کرے گی۔</string>
+    <string name="g">‏Google Play سروسز فعال کریں</string>
+    <string name="h">%1$s کے ذریعے درخواست کی گئی</string>
+    <string name="i">‏Google Play سروسز حاصل کریں</string>
+    <string name="j">‏%1$s Google Play سروسز کے بغیر نہیں چلے گی، جو آپ کے فون سے غائب ہیں۔</string>
+    <string name="k">‏%1$s Google Play سروسز کے بغیر نہیں چلے گی، جو آپ کے ٹیبلیٹ سے غائب ہیں۔</string>
+    <string name="l">‏Google Play سروسز حاصل کریں</string>
+    <string name="m">متعین اکاؤنٹ اس آلہ پر موجود نہیں ہے۔ براہ کرم ایک مختلف اکاؤنٹ منتخب کریں۔</string>
+    <string name="n">غلط اکاؤنٹ</string>
+    <string name="o">‏ایک ایپلیکیشن کیلئے Google Play سروسز کا فعال ہونا ضروری ہے۔</string>
+    <string name="p">‏Google Play سروسز سے مربوط ہونے کیلئے ایک ڈیٹا کنکشن کی ضرورت ہے۔</string>
+    <string name="q">نیٹ ورک میں خرابی</string>
+    <string name="r">‏ایک ایپلیکیشن کیلئے Google Play سروسز کیلئے ایک اپ ڈیٹ ضروری ہے۔</string>
+    <string name="s">‏Google Play سروسز کی خرابی</string>
+    <string name="t">متعینہ اکاؤنٹ میں سائن ان کرنے میں خرابی آگئی۔ براہ کرم ایک مختلف اکاؤنٹ منتخب کریں۔</string>
+    <string name="u">سائن ان کرنا ناکام ہوگیا</string>
+    <string name="v">‏Google Play سروسز کے ساتھ نامعلوم مسئلہ۔</string>
+    <string name="w">‏%1$s Google Play سروسز پر انحصار کرتی ہے، جو آپ کے آلہ کی جانب سے تعاون یافتہ نہیں ہے۔ مدد کیلئے مینوفیکچرر سے رابطہ کریں۔</string>
+    <string name="x">‏Google Play سروسز</string>
+    <string name="y">اپ ڈیٹ کریں</string>
+    <string name="z">‏جب تک آپ Google Play سروسز اپ ڈیٹ نہیں کر لیتے ہیں %1$s تب تک نہیں چلے گی۔</string>
+    <string name="a0">‏Google Play سروسز اپ ڈیٹ کریں</string>
+    <string name="a1">‏%1$s Google Play سروسز کے بغیر نہیں چلے گی، جو فی الحال اپ ڈیٹ ہو رہی ہیں۔</string>
+    <string name="a2">‏Google Play سروسز اپ ڈیٹ ہو رہی ہیں</string>
+    <string name="a3">فون پر کھولیں</string>
+    <string name="a4">سائن ان کریں</string>
+    <string name="a5">‏Google کے ساتھ سائن ان کریں</string>
+</resources>

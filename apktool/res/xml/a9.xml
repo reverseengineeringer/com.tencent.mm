@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto">
+    <PreferenceSmallCategory />
+    <com.tencent.mm.pluginsdk.ui.preference.NormalUserHeaderPreference android:layout="@layout/ii" android:key="contact_info_header_normal" />
+    <PreferenceCategory />
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/yk" android:title="@string/a5l" android:key="contact_info_district" />
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/yk" android:title="@string/a9n" android:key="contact_info_signature" />
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/yk" android:title="@string/a_f" android:key="contact_info_source" />
+    <PreferenceCategory />
+    <com.tencent.mm.pluginsdk.ui.preference.SnsPreference android:layout="@layout/yk" android:title="@string/a9o" android:key="contact_info_sns" />
+    <PreferenceCategory />
+    <com.tencent.mm.plugin.profile.ui.NormalUserFooterPreference android:layout="@layout/if" android:key="contact_info_footer_normal" />
+    <PreferenceCategory />
+</PreferenceScreen>

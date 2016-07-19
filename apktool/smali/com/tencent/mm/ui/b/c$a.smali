@@ -18,15 +18,24 @@
 
 
 # instance fields
-.field iO:Landroid/support/v7/internal/view/menu/f;
+.field jf:Landroid/support/v7/internal/view/menu/f;
 
-.field protected kzr:Landroid/view/ActionMode;
+.field kYA:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private kzs:Landroid/support/v7/a/a$a;
+.field final synthetic kYB:Lcom/tencent/mm/ui/b/c;
 
-.field kzt:Ljava/lang/ref/WeakReference;
+.field protected kYy:Landroid/view/ActionMode;
 
-.field final synthetic kzu:Lcom/tencent/mm/ui/b/c;
+.field private kYz:Landroid/support/v7/a/a$a;
 
 
 # direct methods
@@ -35,17 +44,17 @@
 
     .prologue
     .line 776
-    iput-object p1, p0, Lcom/tencent/mm/ui/b/c$a;->kzu:Lcom/tencent/mm/ui/b/c;
+    iput-object p1, p0, Lcom/tencent/mm/ui/b/c$a;->kYB:Lcom/tencent/mm/ui/b/c;
 
     invoke-direct {p0}, Landroid/support/v7/a/a;-><init>()V
 
     .line 770
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kzr:Landroid/view/ActionMode;
+    iput-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kYy:Landroid/view/ActionMode;
 
     .line 777
-    iput-object p2, p0, Lcom/tencent/mm/ui/b/c$a;->kzs:Landroid/support/v7/a/a$a;
+    iput-object p2, p0, Lcom/tencent/mm/ui/b/c$a;->kYz:Landroid/support/v7/a/a$a;
 
     .line 778
     new-instance v0, Landroid/support/v7/internal/view/menu/f;
@@ -58,12 +67,12 @@
 
     const/4 v1, 0x1
 
-    iput v1, v0, Landroid/support/v7/internal/view/menu/f;->lU:I
+    iput v1, v0, Landroid/support/v7/internal/view/menu/f;->mk:I
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->iO:Landroid/support/v7/internal/view/menu/f;
+    iput-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->jf:Landroid/support/v7/internal/view/menu/f;
 
     .line 780
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->iO:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->jf:Landroid/support/v7/internal/view/menu/f;
 
     invoke-virtual {v0, p0}, Landroid/support/v7/internal/view/menu/f;->a(Landroid/support/v7/internal/view/menu/f$a;)V
 
@@ -78,7 +87,7 @@
 
     .prologue
     .line 903
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kzs:Landroid/support/v7/a/a$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kYz:Landroid/support/v7/a/a$a;
 
     if-nez v0, :cond_0
 
@@ -91,29 +100,29 @@
     invoke-virtual {p0}, Lcom/tencent/mm/ui/b/c$a;->invalidate()V
 
     .line 907
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kzu:Lcom/tencent/mm/ui/b/c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kYB:Lcom/tencent/mm/ui/b/c;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/b/c;->je:Landroid/support/v7/internal/widget/ActionBarContextView;
+    iget-object v0, v0, Lcom/tencent/mm/ui/b/c;->jv:Landroid/support/v7/internal/widget/ActionBarContextView;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/widget/ActionBarContextView;->showOverflowMenu()Z
 
     goto :goto_0
 .end method
 
-.method public final bcj()Z
+.method public final bhv()Z
     .locals 2
 
     .prologue
     .line 833
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->iO:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->jf:Landroid/support/v7/internal/view/menu/f;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/f;->br()V
 
     .line 835
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kzs:Landroid/support/v7/a/a$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kYz:Landroid/support/v7/a/a$a;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/b/c$a;->iO:Landroid/support/v7/internal/view/menu/f;
+    iget-object v1, p0, Lcom/tencent/mm/ui/b/c$a;->jf:Landroid/support/v7/internal/view/menu/f;
 
     invoke-interface {v0, p0, v1}, Landroid/support/v7/a/a$a;->a(Landroid/support/v7/a/a;Landroid/view/Menu;)Z
     :try_end_0
@@ -122,7 +131,7 @@
     move-result v0
 
     .line 837
-    iget-object v1, p0, Lcom/tencent/mm/ui/b/c$a;->iO:Landroid/support/v7/internal/view/menu/f;
+    iget-object v1, p0, Lcom/tencent/mm/ui/b/c$a;->jf:Landroid/support/v7/internal/view/menu/f;
 
     invoke-virtual {v1}, Landroid/support/v7/internal/view/menu/f;->bs()V
 
@@ -131,7 +140,7 @@
     :catchall_0
     move-exception v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/b/c$a;->iO:Landroid/support/v7/internal/view/menu/f;
+    iget-object v1, p0, Lcom/tencent/mm/ui/b/c$a;->jf:Landroid/support/v7/internal/view/menu/f;
 
     invoke-virtual {v1}, Landroid/support/v7/internal/view/menu/f;->bs()V
 
@@ -143,12 +152,12 @@
 
     .prologue
     .line 894
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kzs:Landroid/support/v7/a/a$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kYz:Landroid/support/v7/a/a$a;
 
     if-eqz v0, :cond_0
 
     .line 895
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kzs:Landroid/support/v7/a/a$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kYz:Landroid/support/v7/a/a$a;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v7/a/a$a;->a(Landroid/support/v7/a/a;Landroid/view/MenuItem;)Z
 
@@ -173,9 +182,9 @@
     const/4 v2, 0x0
 
     .line 795
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kzu:Lcom/tencent/mm/ui/b/c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kYB:Lcom/tencent/mm/ui/b/c;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/b/c;->kzq:Lcom/tencent/mm/ui/b/c$a;
+    iget-object v0, v0, Lcom/tencent/mm/ui/b/c;->kYx:Lcom/tencent/mm/ui/b/c$a;
 
     if-eq v0, p0, :cond_0
 
@@ -185,54 +194,54 @@
 
     .line 804
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kzu:Lcom/tencent/mm/ui/b/c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kYB:Lcom/tencent/mm/ui/b/c;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/ui/b/c;->jn:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/ui/b/c;->jE:Z
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/b/c$a;->kzu:Lcom/tencent/mm/ui/b/c;
+    iget-object v1, p0, Lcom/tencent/mm/ui/b/c$a;->kYB:Lcom/tencent/mm/ui/b/c;
 
-    iget-boolean v1, v1, Lcom/tencent/mm/ui/b/c;->jo:Z
+    iget-boolean v1, v1, Lcom/tencent/mm/ui/b/c;->jF:Z
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/b/c;->c(ZZZ)Z
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/b/c;->b(ZZZ)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 810
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kzs:Landroid/support/v7/a/a$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kYz:Landroid/support/v7/a/a$a;
 
     invoke-interface {v0, p0}, Landroid/support/v7/a/a$a;->b(Landroid/support/v7/a/a;)V
 
     .line 812
     :cond_1
-    iput-object v3, p0, Lcom/tencent/mm/ui/b/c$a;->kzs:Landroid/support/v7/a/a$a;
+    iput-object v3, p0, Lcom/tencent/mm/ui/b/c$a;->kYz:Landroid/support/v7/a/a$a;
 
     .line 813
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kzu:Lcom/tencent/mm/ui/b/c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kYB:Lcom/tencent/mm/ui/b/c;
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/b/c;->hs(Z)V
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/b/c;->hQ(Z)V
 
     .line 816
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kzu:Lcom/tencent/mm/ui/b/c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kYB:Lcom/tencent/mm/ui/b/c;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/b/c;->je:Landroid/support/v7/internal/widget/ActionBarContextView;
+    iget-object v0, v0, Lcom/tencent/mm/ui/b/c;->jv:Landroid/support/v7/internal/widget/ActionBarContextView;
 
-    invoke-virtual {v0}, Landroid/support/v7/internal/widget/ActionBarContextView;->bM()V
+    invoke-virtual {v0}, Landroid/support/v7/internal/widget/ActionBarContextView;->bN()V
 
     .line 817
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kzu:Lcom/tencent/mm/ui/b/c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kYB:Lcom/tencent/mm/ui/b/c;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/b/c;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, v0, Lcom/tencent/mm/ui/b/c;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
     const/16 v1, 0x20
 
     invoke-virtual {v0, v1}, Landroid/support/v7/internal/widget/ActionBarView;->sendAccessibilityEvent(I)V
 
     .line 819
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kzu:Lcom/tencent/mm/ui/b/c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kYB:Lcom/tencent/mm/ui/b/c;
 
-    iput-object v3, v0, Lcom/tencent/mm/ui/b/c;->kzq:Lcom/tencent/mm/ui/b/c$a;
+    iput-object v3, v0, Lcom/tencent/mm/ui/b/c;->kYx:Lcom/tencent/mm/ui/b/c$a;
 
     goto :goto_0
 .end method
@@ -242,7 +251,7 @@
 
     .prologue
     .line 790
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->iO:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->jf:Landroid/support/v7/internal/view/menu/f;
 
     return-object v0
 .end method
@@ -252,22 +261,22 @@
 
     .prologue
     .line 824
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->iO:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->jf:Landroid/support/v7/internal/view/menu/f;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/f;->br()V
 
     .line 826
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kzs:Landroid/support/v7/a/a$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kYz:Landroid/support/v7/a/a$a;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/b/c$a;->iO:Landroid/support/v7/internal/view/menu/f;
+    iget-object v1, p0, Lcom/tencent/mm/ui/b/c$a;->jf:Landroid/support/v7/internal/view/menu/f;
 
     invoke-interface {v0, p0, v1}, Landroid/support/v7/a/a$a;->b(Landroid/support/v7/a/a;Landroid/view/Menu;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 828
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->iO:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->jf:Landroid/support/v7/internal/view/menu/f;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/f;->bs()V
 
@@ -278,7 +287,7 @@
     :catchall_0
     move-exception v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/b/c$a;->iO:Landroid/support/v7/internal/view/menu/f;
+    iget-object v1, p0, Lcom/tencent/mm/ui/b/c$a;->jf:Landroid/support/v7/internal/view/menu/f;
 
     invoke-virtual {v1}, Landroid/support/v7/internal/view/menu/f;->bs()V
 
@@ -290,11 +299,13 @@
 
     .prologue
     .line 849
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kzu:Lcom/tencent/mm/ui/b/c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kYB:Lcom/tencent/mm/ui/b/c;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/b/c;->je:Landroid/support/v7/internal/widget/ActionBarContextView;
+    iget-object v0, v0, Lcom/tencent/mm/ui/b/c;->jv:Landroid/support/v7/internal/widget/ActionBarContextView;
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/internal/widget/ActionBarContextView;->setSubtitle(Ljava/lang/CharSequence;)V
+    iput-object p1, v0, Landroid/support/v7/internal/widget/ActionBarContextView;->nG:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0}, Landroid/support/v7/internal/widget/ActionBarContextView;->bM()V
 
     .line 850
     return-void
@@ -305,29 +316,38 @@
 
     .prologue
     .line 854
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kzu:Lcom/tencent/mm/ui/b/c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kYB:Lcom/tencent/mm/ui/b/c;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/b/c;->je:Landroid/support/v7/internal/widget/ActionBarContextView;
+    iget-object v0, v0, Lcom/tencent/mm/ui/b/c;->jv:Landroid/support/v7/internal/widget/ActionBarContextView;
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/internal/widget/ActionBarContextView;->setTitle(Ljava/lang/CharSequence;)V
+    iput-object p1, v0, Landroid/support/v7/internal/widget/ActionBarContextView;->kD:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0}, Landroid/support/v7/internal/widget/ActionBarContextView;->bM()V
 
     .line 855
     return-void
 .end method
 
 .method public final setTitleOptionalHint(Z)V
-    .locals 1
+    .locals 2
 
     .prologue
     .line 879
     invoke-super {p0, p1}, Landroid/support/v7/a/a;->setTitleOptionalHint(Z)V
 
     .line 880
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kzu:Lcom/tencent/mm/ui/b/c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$a;->kYB:Lcom/tencent/mm/ui/b/c;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/b/c;->je:Landroid/support/v7/internal/widget/ActionBarContextView;
+    iget-object v0, v0, Lcom/tencent/mm/ui/b/c;->jv:Landroid/support/v7/internal/widget/ActionBarContextView;
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/internal/widget/ActionBarContextView;->setTitleOptional(Z)V
+    iget-boolean v1, v0, Landroid/support/v7/internal/widget/ActionBarContextView;->nN:Z
+
+    if-eq p1, v1, :cond_0
+
+    invoke-virtual {v0}, Landroid/support/v7/internal/widget/ActionBarContextView;->requestLayout()V
+
+    :cond_0
+    iput-boolean p1, v0, Landroid/support/v7/internal/widget/ActionBarContextView;->nN:Z
 
     .line 881
     return-void

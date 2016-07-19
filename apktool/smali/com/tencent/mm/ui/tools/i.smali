@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private lwc:I
+.field private lWO:I
 
-.field private lwd:I
+.field private lWP:I
 
 
 # direct methods
@@ -29,23 +29,23 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 32
-    iput p1, p0, Lcom/tencent/mm/ui/tools/i;->lwc:I
+    iput p1, p0, Lcom/tencent/mm/ui/tools/i;->lWO:I
 
     .line 33
-    iput p2, p0, Lcom/tencent/mm/ui/tools/i;->lwd:I
+    iput p2, p0, Lcom/tencent/mm/ui/tools/i;->lWP:I
 
     .line 34
     return-void
 .end method
 
-.method public static HB(Ljava/lang/String;)I
+.method public static JR(Ljava/lang/String;)I
     .locals 5
 
     .prologue
     const/4 v0, 0x0
 
     .line 60
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -60,13 +60,13 @@
 
     move-result v1
 
-    invoke-static {p0}, Lcom/tencent/mm/ui/tools/i;->HC(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/tencent/mm/ui/tools/i;->JS(Ljava/lang/String;)I
 
     move-result v2
 
     add-int/2addr v2, v1
 
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -109,7 +109,7 @@
 
     move-result v0
 
-    invoke-static {p0}, Lcom/tencent/mm/ui/tools/i;->HC(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/tencent/mm/ui/tools/i;->JS(Ljava/lang/String;)I
 
     move-result v3
 
@@ -120,14 +120,14 @@
     goto :goto_1
 .end method
 
-.method public static HC(Ljava/lang/String;)I
+.method public static JS(Ljava/lang/String;)I
     .locals 5
 
     .prologue
     const/4 v1, 0x0
 
     .line 74
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -189,19 +189,19 @@
     goto :goto_0
 .end method
 
-.method public static ai(ILjava/lang/String;)I
+.method public static as(ILjava/lang/String;)I
     .locals 2
 
     .prologue
     .line 112
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUx()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aZB()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 113
-    invoke-static {p1}, Lcom/tencent/mm/ui/tools/i;->HB(Ljava/lang/String;)I
+    invoke-static {p1}, Lcom/tencent/mm/ui/tools/i;->JR(Ljava/lang/String;)I
 
     move-result v0
 
@@ -229,7 +229,7 @@
     return v0
 
     :cond_0
-    invoke-static {p1}, Lcom/tencent/mm/ui/tools/i;->HB(Ljava/lang/String;)I
+    invoke-static {p1}, Lcom/tencent/mm/ui/tools/i;->JR(Ljava/lang/String;)I
 
     move-result v0
 
@@ -238,19 +238,19 @@
     goto :goto_0
 .end method
 
-.method public static aj(ILjava/lang/String;)I
+.method public static at(ILjava/lang/String;)I
     .locals 2
 
     .prologue
     .line 129
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUx()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aZB()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 130
-    invoke-static {p1}, Lcom/tencent/mm/ui/tools/i;->HB(Ljava/lang/String;)I
+    invoke-static {p1}, Lcom/tencent/mm/ui/tools/i;->JR(Ljava/lang/String;)I
 
     move-result v0
 
@@ -278,7 +278,7 @@
     return v0
 
     :cond_0
-    invoke-static {p1}, Lcom/tencent/mm/ui/tools/i;->HB(Ljava/lang/String;)I
+    invoke-static {p1}, Lcom/tencent/mm/ui/tools/i;->JR(Ljava/lang/String;)I
 
     move-result v0
 
@@ -287,19 +287,19 @@
     goto :goto_0
 .end method
 
-.method public static bh(Ljava/lang/String;I)I
+.method public static bt(Ljava/lang/String;I)I
     .locals 2
 
     .prologue
     const/4 v0, 0x0
 
     .line 50
-    sget v1, Lcom/tencent/mm/ui/tools/i$a;->lwe:I
+    sget v1, Lcom/tencent/mm/ui/tools/i$a;->lWQ:I
 
     if-ne p1, v1, :cond_2
 
     .line 51
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -320,12 +320,12 @@
 
     .line 52
     :cond_2
-    sget v1, Lcom/tencent/mm/ui/tools/i$a;->lwf:I
+    sget v1, Lcom/tencent/mm/ui/tools/i$a;->lWR:I
 
     if-ne p1, v1, :cond_0
 
     .line 53
-    invoke-static {p0}, Lcom/tencent/mm/ui/tools/i;->HB(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/tencent/mm/ui/tools/i;->JR(Ljava/lang/String;)I
 
     move-result v0
 
@@ -343,9 +343,9 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/tools/i;->lwd:I
+    iget v1, p0, Lcom/tencent/mm/ui/tools/i;->lWP:I
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/tools/i;->bh(Ljava/lang/String;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/tools/i;->bt(Ljava/lang/String;I)I
 
     move-result v0
 
@@ -354,16 +354,16 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/tencent/mm/ui/tools/i;->lwd:I
+    iget v2, p0, Lcom/tencent/mm/ui/tools/i;->lWP:I
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/ui/tools/i;->bh(Ljava/lang/String;I)I
+    invoke-static {v1, v2}, Lcom/tencent/mm/ui/tools/i;->bt(Ljava/lang/String;I)I
 
     move-result v1
 
     .line 42
     add-int/2addr v0, v1
 
-    iget v1, p0, Lcom/tencent/mm/ui/tools/i;->lwc:I
+    iget v1, p0, Lcom/tencent/mm/ui/tools/i;->lWO:I
 
     if-le v0, v1, :cond_0
 

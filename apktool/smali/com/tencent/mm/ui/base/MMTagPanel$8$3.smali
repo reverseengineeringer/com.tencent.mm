@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic dSX:Landroid/view/View;
+.field final synthetic dVf:Landroid/view/View;
 
-.field final synthetic kHs:Lcom/tencent/mm/ui/base/MMTagPanel$8;
+.field final synthetic lgu:Lcom/tencent/mm/ui/base/MMTagPanel$8;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 668
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$8$3;->kHs:Lcom/tencent/mm/ui/base/MMTagPanel$8;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$8$3;->lgu:Lcom/tencent/mm/ui/base/MMTagPanel$8;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/base/MMTagPanel$8$3;->dSX:Landroid/view/View;
+    iput-object p2, p0, Lcom/tencent/mm/ui/base/MMTagPanel$8$3;->dVf:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,15 +45,15 @@
 
     .prologue
     .line 672
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$8$3;->kHs:Lcom/tencent/mm/ui/base/MMTagPanel$8;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$8$3;->lgu:Lcom/tencent/mm/ui/base/MMTagPanel$8;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMTagPanel$8;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMTagPanel$8;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->e(Lcom/tencent/mm/ui/base/MMTagPanel;)Lcom/tencent/mm/ui/base/MMTagPanel$a;
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$8$3;->dSX:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$8$3;->dVf:Landroid/view/View;
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -65,7 +65,7 @@
 
     move-result-object v0
 
-    invoke-interface {v1, v0}, Lcom/tencent/mm/ui/base/MMTagPanel$a;->ne(Ljava/lang/String;)V
+    invoke-interface {v1, v0}, Lcom/tencent/mm/ui/base/MMTagPanel$a;->om(Ljava/lang/String;)V
 
     .line 673
     return-void

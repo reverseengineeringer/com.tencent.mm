@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#fff6f6f8" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/i8" android:textColor="@color/gn" android:gravity="center_horizontal" android:id="@id/aq2" android:background="#f7ffffff" android:paddingTop="@dimen/hh" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ListView android:id="@id/aq3" android:background="#f7ffffff" android:focusable="false" android:visibility="gone" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:transcriptMode="disabled" style="@style/MMList" />
+        <RelativeLayout android:id="@id/aq4" android:background="#f7ffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/aqd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="60.0dip" android:layout_marginRight="30.0dip">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageButton android:layout_gravity="center_horizontal" android:background="@drawable/g1" android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/g2" android:onClick="onSearchTimeLineDetail" />
+                    <TextView android:textSize="@dimen/h4" android:textColor="#ff555555" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/c_c" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageButton android:layout_gravity="center_horizontal" android:background="@drawable/g1" android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/fz" android:onClick="onSearchArticleDetail" />
+                    <TextView android:textSize="@dimen/h4" android:textColor="#ff555555" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/c_8" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageButton android:layout_gravity="center_horizontal" android:background="@drawable/g1" android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/g0" android:onClick="onSearchBizContactDetail" />
+                    <TextView android:textSize="@dimen/h4" android:textColor="#ff555555" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/c_9" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/aqe" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="20.0dip" android:onClick="onClickSnsHotArticle">
+                <View android:background="#ffdfdfdf" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <ImageView android:gravity="center|left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@raw/fts_hot_article" />
+                    <TextView android:textSize="@dimen/h4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/cq3" />
+                </LinearLayout>
+                <View android:background="#ffdfdfdf" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/aq5" android:paddingTop="20.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ProgressBar android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/smallCustomProgressBar" />
+            <TextView android:textSize="14.0dip" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/ba_" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

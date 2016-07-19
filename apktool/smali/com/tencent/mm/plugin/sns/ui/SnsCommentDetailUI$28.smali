@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aBI()V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aEE()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+.field final synthetic hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 2338
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$28;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    .line 2492
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$28;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,15 +40,15 @@
     .locals 2
 
     .prologue
-    .line 2349
-    const-string/jumbo v0, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
+    .line 2503
+    const-string/jumbo v0, "MicroMsg.SnsCommentDetailUI"
 
     const-string/jumbo v1, "onAnimationEnd"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2350
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$28;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    .line 2504
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$28;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->v(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Landroid/view/View;
 
@@ -56,8 +56,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 2352
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$28;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    .line 2506
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$28;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->v(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Landroid/view/View;
 
@@ -65,8 +65,8 @@
 
     invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
 
-    .line 2353
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$28;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    .line 2507
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$28;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->v(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Landroid/view/View;
 
@@ -76,7 +76,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2355
+    .line 2509
     :cond_0
     return-void
 .end method
@@ -85,7 +85,7 @@
     .locals 0
 
     .prologue
-    .line 2345
+    .line 2499
     return-void
 .end method
 
@@ -93,6 +93,6 @@
     .locals 0
 
     .prologue
-    .line 2341
+    .line 2495
     return-void
 .end method

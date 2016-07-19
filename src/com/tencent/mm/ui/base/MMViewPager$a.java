@@ -2,13 +2,13 @@ package com.tencent.mm.ui.base;
 
 abstract class MMViewPager$a
 {
-  protected boolean kIj = false;
+  protected boolean lhw = false;
   
   public MMViewPager$a(MMViewPager paramMMViewPager) {}
   
-  public final boolean aPA()
+  public final boolean aUi()
   {
-    return kIj;
+    return lhw;
   }
   
   public abstract void play();

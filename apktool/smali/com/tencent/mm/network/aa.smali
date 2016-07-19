@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field public cjW:Lcom/tencent/mm/network/a/b;
+.field public cfo:Lcom/tencent/mm/network/a/b;
 
-.field public cjX:Z
+.field public cfp:Z
 
 
 # direct methods
@@ -20,18 +20,18 @@
     .line 15
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/network/aa;->cjW:Lcom/tencent/mm/network/a/b;
+    iput-object v0, p0, Lcom/tencent/mm/network/aa;->cfo:Lcom/tencent/mm/network/a/b;
 
     .line 16
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/network/aa;->cjX:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/network/aa;->cfp:Z
 
     .line 13
     return-void
 .end method
 
-.method public static ab(II)Z
+.method public static ae(II)Z
     .locals 7
 
     .prologue
@@ -40,7 +40,7 @@
     const/4 v0, 0x1
 
     .line 46
-    invoke-static {}, Lcom/tencent/mm/g/a;->pm()Z
+    invoke-static {}, Lcom/tencent/mm/h/a;->nE()Z
 
     move-result v2
 
@@ -54,22 +54,22 @@
 
     .line 50
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/g/a;->pn()I
+    invoke-static {}, Lcom/tencent/mm/h/a;->nF()I
 
     move-result v2
 
     .line 51
-    invoke-static {}, Lcom/tencent/mm/g/a;->pp()I
+    invoke-static {}, Lcom/tencent/mm/h/a;->nH()I
 
     move-result v3
 
     .line 52
-    invoke-static {}, Lcom/tencent/mm/g/a;->po()I
+    invoke-static {}, Lcom/tencent/mm/h/a;->nG()I
 
     move-result v4
 
     .line 53
-    invoke-static {}, Lcom/tencent/mm/g/a;->pq()I
+    invoke-static {}, Lcom/tencent/mm/h/a;->nI()I
 
     move-result v5
 
@@ -162,14 +162,14 @@
     goto :goto_0
 .end method
 
-.method public static bg(Landroid/content/Context;)Z
+.method public static bd(Landroid/content/Context;)Z
     .locals 1
 
     .prologue
     .line 38
     if-eqz p0, :cond_0
 
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ah;->dB(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ak;->dC(Landroid/content/Context;)Z
 
     move-result v0
 

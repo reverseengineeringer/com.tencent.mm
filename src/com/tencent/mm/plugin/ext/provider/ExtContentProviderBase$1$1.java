@@ -3,7 +3,7 @@ package com.tencent.mm.plugin.ext.provider;
 import com.tencent.mm.model.as.a;
 import com.tencent.mm.network.e;
 import com.tencent.mm.pluginsdk.d.a.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class ExtContentProviderBase$1$1
   implements as.a
@@ -12,8 +12,8 @@ final class ExtContentProviderBase$1$1
   
   public final void a(e parame)
   {
-    u.i("!44@/B4Tb64lLpKAQbqlkU5I8mZxJJ4JsPX28ihhHV6igVo=", "checkIsLogin() onSceneEnd()");
-    dKR.dKP.countDown();
+    v.i("MicroMsg.ExtContentProviderBase", "checkIsLogin() onSceneEnd()");
+    dMA.dMy.countDown();
   }
 }
 

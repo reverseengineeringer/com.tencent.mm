@@ -1,18 +1,18 @@
 package com.tencent.mm.ui;
 
 import com.tencent.mm.pluginsdk.model.app.f;
-import com.tencent.mm.ui.widget.DragSortListView.h;
+import com.tencent.mm.ui.widget.DragSortListView.g;
 
 final class Sort3rdAppUI$2
-  implements DragSortListView.h
+  implements DragSortListView.g
 {
   Sort3rdAppUI$2(Sort3rdAppUI paramSort3rdAppUI) {}
   
-  public final void at(int paramInt1, int paramInt2)
+  public final void ay(int paramInt1, int paramInt2)
   {
-    f localf = (f)Sort3rdAppUI.a(krn).getItem(paramInt1);
-    Sort3rdAppUI.a(krn).remove(localf);
-    Sort3rdAppUI.a(krn).insert(localf, paramInt2);
+    f localf = (f)Sort3rdAppUI.a(kQu).getItem(paramInt1);
+    Sort3rdAppUI.a(kQu).remove(localf);
+    Sort3rdAppUI.a(kQu).insert(localf, paramInt2);
   }
 }
 

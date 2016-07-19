@@ -1,19 +1,26 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.sdk.c.b;
-import com.tencent.mm.sdk.c.c;
+import android.content.Context;
+import android.content.res.Resources;
+import android.util.DisplayMetrics;
+import android.view.View;
+import com.tencent.mm.e.a.km;
+import com.tencent.mm.e.a.km.a;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.pluginsdk.i.a;
+import com.tencent.mm.pluginsdk.i.f;
+import com.tencent.mm.pluginsdk.ui.chat.c.1;
+import com.tencent.mm.pluginsdk.ui.emoji.PreViewEmojiView;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.base.o;
 
 final class ChattingUI$a$44
-  extends c
+  extends com.tencent.mm.sdk.c.c<km>
 {
   ChattingUI$a$44(ChattingUI.a parama)
   {
-    super(0);
-  }
-  
-  public final boolean a(b paramb)
-  {
-    return false;
+    kum = km.class.getName().hashCode();
   }
 }
 

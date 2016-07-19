@@ -2,13 +2,13 @@ package com.tencent.mm.model;
 
 public abstract interface d$a
 {
-  public abstract void mM();
+  public abstract void kZ();
   
-  public abstract void mN();
+  public abstract void la();
   
-  public abstract void mO();
+  public abstract void lb();
   
-  public abstract void mP();
+  public abstract void lc();
 }
 
 /* Location:

@@ -18,20 +18,16 @@
 
 
 # instance fields
-.field final synthetic cBq:Landroid/app/ProgressDialog;
-
-.field final synthetic cBr:Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;
+.field final synthetic cyl:Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;Landroid/app/ProgressDialog;)V
+.method constructor <init>(Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;)V
     .locals 0
 
     .prologue
-    .line 193
-    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$3;->cBr:Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;
-
-    iput-object p2, p0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$3;->cBq:Landroid/app/ProgressDialog;
+    .line 201
+    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$3;->cyl:Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,14 +36,14 @@
 
 
 # virtual methods
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;Z)V
+.method public final a(IILjava/lang/String;Lcom/tencent/mm/t/j;Z)V
     .locals 6
 
     .prologue
     const/4 v5, 0x0
 
-    .line 195
-    const-string/jumbo v0, "!56@/B4Tb64lLpKUD59tt9HYgnQK1gK8394TZ6LLy7AynRSs8Qq4562X/A=="
+    .line 203
+    const-string/jumbo v0, "MicroMsg.WXCustomSchemeEntryActivity"
 
     const-string/jumbo v1, "DeepLinkHelper.DeepLinkCallback, %d, %d, %s, %b"
 
@@ -81,66 +77,47 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 196
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$3;->cBq:Landroid/app/ProgressDialog;
+    .line 207
+    if-eqz p4, :cond_0
 
-    if-eqz v0, :cond_0
+    if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$3;->cBq:Landroid/app/ProgressDialog;
+    if-eqz p2, :cond_0
 
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->isShowing()Z
-
-    move-result v0
+    instance-of v0, p4, Lcom/tencent/mm/modelsimple/ae;
 
     if-eqz v0, :cond_0
 
-    .line 197
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$3;->cBq:Landroid/app/ProgressDialog;
+    .line 208
+    check-cast p4, Lcom/tencent/mm/modelsimple/ae;
 
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
-
-    .line 199
-    :cond_0
-    if-eqz p4, :cond_1
-
-    if-eqz p1, :cond_1
-
-    if-eqz p2, :cond_1
-
-    instance-of v0, p4, Lcom/tencent/mm/modelsimple/ag;
-
-    if-eqz v0, :cond_1
-
-    .line 200
-    check-cast p4, Lcom/tencent/mm/modelsimple/ag;
-
-    invoke-virtual {p4}, Lcom/tencent/mm/modelsimple/ag;->CM()Lcom/tencent/mm/protocal/b/aub;
+    invoke-virtual {p4}, Lcom/tencent/mm/modelsimple/ae;->CZ()Lcom/tencent/mm/protocal/b/aur;
 
     move-result-object v0
 
-    .line 201
-    if-eqz v0, :cond_1
+    .line 209
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$3;->cBr:Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$3;->cyl:Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;
 
     invoke-virtual {v1}, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;->isFinishing()Z
 
     move-result v1
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_0
 
-    .line 202
-    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$3;->cBr:Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;
+    .line 210
+    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$3;->cyl:Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$3;->cBr:Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$3;->cyl:Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;
 
-    const v4, 0x7f0b0ddd
+    const v4, 0x7f080134
 
     invoke-virtual {v3, v4}, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;->getString(I)Ljava/lang/String;
 
@@ -156,9 +133,9 @@
 
     move-result-object v2
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aub;->jMS:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aur;->klC:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->li(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -176,12 +153,12 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 206
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$3;->cBr:Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;
+    .line 214
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$3;->cyl:Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;->finish()V
 
-    .line 207
+    .line 215
     return-void
 .end method

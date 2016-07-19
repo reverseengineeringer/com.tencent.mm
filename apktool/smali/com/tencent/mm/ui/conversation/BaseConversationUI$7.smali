@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/conversation/BaseConversationUI;->ha(Z)V
+    value = Lcom/tencent/mm/ui/conversation/BaseConversationUI;->hB(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+.field final synthetic lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 635
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$7;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    .line 645
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$7;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,31 +40,31 @@
     .locals 2
 
     .prologue
-    .line 652
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/sdk/platformtools/ab;
+    .line 662
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tw()Lcom/tencent/mm/sdk/platformtools/ad;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->aUY()V
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->bac()V
 
-    .line 653
+    .line 663
     const/4 v0, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->pq(I)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->rh(I)V
 
-    .line 654
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$7;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    .line 664
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$7;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->e(Lcom/tencent/mm/ui/conversation/BaseConversationUI;)V
 
-    .line 655
-    const-string/jumbo v0, "!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4="
+    .line 665
+    const-string/jumbo v0, "MicroMsg.BaseConversationUI"
 
     const-string/jumbo v1, "klem pop out onAnimationEnd"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 656
+    .line 666
     return-void
 .end method
 
@@ -72,7 +72,7 @@
     .locals 0
 
     .prologue
-    .line 648
+    .line 658
     return-void
 .end method
 
@@ -80,32 +80,32 @@
     .locals 2
 
     .prologue
-    .line 639
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/sdk/platformtools/ab;
+    .line 649
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tw()Lcom/tencent/mm/sdk/platformtools/ad;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->aUV()V
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->aZZ()V
 
-    .line 640
+    .line 650
     const/4 v0, -0x8
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->pq(I)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->rh(I)V
 
-    .line 641
-    const-string/jumbo v0, "!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4="
+    .line 651
+    const-string/jumbo v0, "MicroMsg.BaseConversationUI"
 
     const-string/jumbo v1, "klem pop out onAnimationStart"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 642
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$7;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    .line 652
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$7;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->a(Lcom/tencent/mm/ui/conversation/BaseConversationUI;Z)V
 
-    .line 643
+    .line 653
     return-void
 .end method

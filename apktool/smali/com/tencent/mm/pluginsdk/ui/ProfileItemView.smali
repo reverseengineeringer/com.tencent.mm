@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public dsm:Lcom/tencent/mm/storage/k;
+.field public dsC:Lcom/tencent/mm/storage/k;
 
 
 # direct methods
@@ -33,7 +33,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/ProfileItemView;->getLayout()I
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/ProfileItemView;->aqj()I
 
     move-result v1
 
@@ -53,20 +53,20 @@
 
     .prologue
     .line 32
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/ProfileItemView;->dsm:Lcom/tencent/mm/storage/k;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/ProfileItemView;->dsC:Lcom/tencent/mm/storage/k;
 
     .line 33
-    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/ProfileItemView;->ant()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/ProfileItemView;->aqk()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public abstract ant()Z
+.method public abstract aqj()I
 .end method
 
-.method public abstract getLayout()I
+.method public abstract aqk()Z
 .end method
 
 .method public abstract init()V

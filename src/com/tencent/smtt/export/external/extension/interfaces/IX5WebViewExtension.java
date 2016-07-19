@@ -1,6 +1,7 @@
 package com.tencent.smtt.export.external.extension.interfaces;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
 import android.graphics.Point;
@@ -18,6 +19,12 @@ import com.tencent.smtt.export.external.interfaces.IX5WebViewClient;
 
 public abstract interface IX5WebViewExtension
 {
+  public static final int HANDLEVIEW_ALIGNMENT_CENTER = 1;
+  public static final int HANDLEVIEW_ALIGNMENT_RIGHT = 2;
+  public static final int HANDLEVIEW_POSITION_CENTER = 1;
+  public static final int HANDLEVIEW_POSITION_RIGHT = 2;
+  public static final int HANLDEVIEW_ALIGNMENT_LEFT = 0;
+  public static final int HANLDEVIEW_POSITION_LEFT = 0;
   public static final int OVER_SCROLL_ALWAYS = 0;
   public static final int OVER_SCROLL_IF_CONTENT_SCROLLS = 1;
   public static final int OVER_SCROLL_NEVER = 2;
@@ -40,6 +47,8 @@ public abstract interface IX5WebViewExtension
   
   public abstract void doFingerSearchIfNeed();
   
+  public abstract void doTranslateAction(int paramInt);
+  
   public abstract void documentAsText(Message paramMessage);
   
   public abstract void documentDumpRenderTree(Message paramMessage);
@@ -53,6 +62,8 @@ public abstract interface IX5WebViewExtension
   public abstract void enterSelectionMode(boolean paramBoolean);
   
   public abstract void exitPluginFullScreen();
+  
+  public abstract void focusAndPopupIM(String paramString);
   
   public abstract void forceSyncOffsetToCore();
   
@@ -128,6 +139,8 @@ public abstract interface IX5WebViewExtension
   
   public abstract void leaveSelectionMode();
   
+  public abstract boolean needSniff();
+  
   public abstract void onAppExit();
   
   public abstract void onFingerSearchResult(String paramString, int paramInt1, int paramInt2);
@@ -178,6 +191,8 @@ public abstract interface IX5WebViewExtension
   
   public abstract void sendResumeMsg(String paramString1, String paramString2, String paramString3, Message paramMessage);
   
+  public abstract void setAudioAutoPlayNotify(boolean paramBoolean);
+  
   public abstract void setBackFromSystem();
   
   public abstract void setDisableDrawingWhileLosingFocus(boolean paramBoolean);
@@ -185,6 +200,16 @@ public abstract interface IX5WebViewExtension
   public abstract void setDrawWithBuffer(boolean paramBoolean);
   
   public abstract void setEmbTitleView(View paramView, ViewGroup.LayoutParams paramLayoutParams);
+  
+  public abstract void setForceEnableZoom(boolean paramBoolean);
+  
+  public abstract void setHandleViewBitmap(Bitmap paramBitmap1, Bitmap paramBitmap2, int paramInt1, int paramInt2);
+  
+  public abstract void setHandleViewLineColor(int paramInt1, int paramInt2);
+  
+  public abstract void setHandleViewLineIsShowing(boolean paramBoolean, int paramInt);
+  
+  public abstract void setHandleViewSelectionColor(int paramInt1, int paramInt2);
   
   public abstract void setHorizontalScrollBarDrawable(Drawable paramDrawable);
   

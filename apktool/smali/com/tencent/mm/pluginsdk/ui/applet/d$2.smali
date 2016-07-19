@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iIA:Lcom/tencent/mm/pluginsdk/ui/applet/d;
+.field final synthetic jfx:Lcom/tencent/mm/pluginsdk/ui/applet/d;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 57
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/d$2;->iIA:Lcom/tencent/mm/pluginsdk/ui/applet/d;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/d$2;->jfx:Lcom/tencent/mm/pluginsdk/ui/applet/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,26 +36,26 @@
 
 
 # virtual methods
-.method public final fK(I)Z
+.method public final gB(I)Z
     .locals 4
 
     .prologue
     const/4 v3, 0x1
 
     .line 60
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/d$2;->iIA:Lcom/tencent/mm/pluginsdk/ui/applet/d;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/d$2;->jfx:Lcom/tencent/mm/pluginsdk/ui/applet/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/d;->iIp:Lcom/tencent/mm/pluginsdk/ui/applet/e;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/d;->jfm:Lcom/tencent/mm/pluginsdk/ui/applet/e;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/e;->iIK:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/e;->jfG:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/d$2;->iIA:Lcom/tencent/mm/pluginsdk/ui/applet/d;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/d$2;->jfx:Lcom/tencent/mm/pluginsdk/ui/applet/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/d;->iIp:Lcom/tencent/mm/pluginsdk/ui/applet/e;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/d;->jfm:Lcom/tencent/mm/pluginsdk/ui/applet/e;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/applet/e;->ov(I)Z
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/applet/e;->qb(I)Z
 
     move-result v0
 
@@ -68,18 +68,18 @@
 
     .line 63
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/d$2;->iIA:Lcom/tencent/mm/pluginsdk/ui/applet/d;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/d$2;->jfx:Lcom/tencent/mm/pluginsdk/ui/applet/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/d;->iIp:Lcom/tencent/mm/pluginsdk/ui/applet/e;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/d;->jfm:Lcom/tencent/mm/pluginsdk/ui/applet/e;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/applet/e;->ou(I)Z
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/applet/e;->qa(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 64
-    const-string/jumbo v0, "!44@/B4Tb64lLpLSOpQlr7qYXXzhEhFJKZisQQbc4kK5pDc="
+    const-string/jumbo v0, "MicroMsg.ContactListArchor"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -95,7 +95,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

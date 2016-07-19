@@ -8,64 +8,64 @@ import java.util.Map;
 
 final class b
 {
-  private static final Map boY = new HashMap();
-  private static final Map boZ = new HashMap();
-  private static final Map jYu = new HashMap();
+  private static final Map<Class<?>, Object> bcX = new HashMap();
+  private static final Map<Class<?>, Object> bcY = new HashMap();
+  private static final Map<Class<?>, String> kyR = new HashMap();
   
   static
   {
     try
     {
-      boY.put(byte[].class, new Object() {});
-      boY.put(Short.TYPE, new Object() {});
-      boY.put(Short.class, new Object() {});
-      boY.put(Boolean.TYPE, new Object() {});
-      boY.put(Boolean.class, new Object() {});
-      boY.put(Integer.TYPE, new Object() {});
-      boY.put(Integer.class, new Object() {});
-      boY.put(Float.TYPE, new Object() {});
-      boY.put(Float.class, new Object() {});
-      boY.put(Double.TYPE, new Object() {});
-      boY.put(Double.class, new Object() {});
-      boY.put(Long.TYPE, new Object() {});
-      boY.put(Long.class, new Object() {});
-      boY.put(String.class, new Object() {});
-      boZ.put(byte[].class, new Object() {});
-      boZ.put(Short.TYPE, new Object() {});
-      boZ.put(Short.class, new Object() {});
-      boZ.put(Boolean.TYPE, new Object() {});
-      boZ.put(Boolean.class, new Object() {});
-      boZ.put(Integer.TYPE, new Object() {});
-      boZ.put(Integer.class, new Object() {});
-      boZ.put(Float.TYPE, new Object() {});
-      boZ.put(Float.class, new Object() {});
-      boZ.put(Double.TYPE, new Object() {});
-      boZ.put(Double.class, new Object() {});
-      boZ.put(Long.TYPE, new Object() {});
-      boZ.put(Long.class, new Object() {});
-      boZ.put(String.class, new Object() {});
-      jYu.put(byte[].class, "BLOB");
-      jYu.put(Short.TYPE, "SHORT");
-      jYu.put(Short.class, "SHORT");
-      jYu.put(Boolean.TYPE, "INTEGER");
-      jYu.put(Boolean.class, "INTEGER");
-      jYu.put(Integer.TYPE, "INTEGER");
-      jYu.put(Integer.class, "INTEGER");
-      jYu.put(Float.TYPE, "FLOAT");
-      jYu.put(Float.class, "FLOAT");
-      jYu.put(Double.TYPE, "DOUBLE");
-      jYu.put(Double.class, "DOUBLE");
-      jYu.put(Long.TYPE, "LONG");
-      jYu.put(Long.class, "LONG");
-      jYu.put(String.class, "TEXT");
+      bcX.put(byte[].class, new Object() {});
+      bcX.put(Short.TYPE, new Object() {});
+      bcX.put(Short.class, new Object() {});
+      bcX.put(Boolean.TYPE, new Object() {});
+      bcX.put(Boolean.class, new Object() {});
+      bcX.put(Integer.TYPE, new Object() {});
+      bcX.put(Integer.class, new Object() {});
+      bcX.put(Float.TYPE, new Object() {});
+      bcX.put(Float.class, new Object() {});
+      bcX.put(Double.TYPE, new Object() {});
+      bcX.put(Double.class, new Object() {});
+      bcX.put(Long.TYPE, new Object() {});
+      bcX.put(Long.class, new Object() {});
+      bcX.put(String.class, new Object() {});
+      bcY.put(byte[].class, new Object() {});
+      bcY.put(Short.TYPE, new Object() {});
+      bcY.put(Short.class, new Object() {});
+      bcY.put(Boolean.TYPE, new Object() {});
+      bcY.put(Boolean.class, new Object() {});
+      bcY.put(Integer.TYPE, new Object() {});
+      bcY.put(Integer.class, new Object() {});
+      bcY.put(Float.TYPE, new Object() {});
+      bcY.put(Float.class, new Object() {});
+      bcY.put(Double.TYPE, new Object() {});
+      bcY.put(Double.class, new Object() {});
+      bcY.put(Long.TYPE, new Object() {});
+      bcY.put(Long.class, new Object() {});
+      bcY.put(String.class, new Object() {});
+      kyR.put(byte[].class, "BLOB");
+      kyR.put(Short.TYPE, "SHORT");
+      kyR.put(Short.class, "SHORT");
+      kyR.put(Boolean.TYPE, "INTEGER");
+      kyR.put(Boolean.class, "INTEGER");
+      kyR.put(Integer.TYPE, "INTEGER");
+      kyR.put(Integer.class, "INTEGER");
+      kyR.put(Float.TYPE, "FLOAT");
+      kyR.put(Float.class, "FLOAT");
+      kyR.put(Double.TYPE, "DOUBLE");
+      kyR.put(Double.class, "DOUBLE");
+      kyR.put(Long.TYPE, "LONG");
+      kyR.put(Long.class, "LONG");
+      kyR.put(String.class, "TEXT");
       return;
     }
     catch (Exception localException) {}
   }
   
-  public static String d(Class paramClass)
+  public static String f(Class<?> paramClass)
   {
-    return (String)jYu.get(paramClass);
+    return (String)kyR.get(paramClass);
   }
   
   public static void keep_getBlob(Field paramField, Object paramObject, ContentValues paramContentValues)

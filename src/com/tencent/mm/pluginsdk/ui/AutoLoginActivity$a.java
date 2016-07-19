@@ -1,6 +1,9 @@
 package com.tencent.mm.pluginsdk.ui;
 
-public enum AutoLoginActivity$a {}
+public enum AutoLoginActivity$a
+{
+  private AutoLoginActivity$a() {}
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.pluginsdk.ui.AutoLoginActivity.a

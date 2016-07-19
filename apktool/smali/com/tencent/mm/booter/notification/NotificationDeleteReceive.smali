@@ -44,7 +44,7 @@
 
     .line 45
     :goto_0
-    const-string/jumbo v0, "!56@/B4Tb64lLpKR3MWtFvfaIAekODdD9J/RcHA/L9jjKKKq6MqTNTuiGw=="
+    const-string/jumbo v0, "MicroMsg.Notification.Delete.Receive"
 
     const-string/jumbo v3, "receive: %d"
 
@@ -56,7 +56,7 @@
 
     aput-object v5, v4, v6
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 50
     if-ne v1, v2, :cond_0
@@ -74,7 +74,7 @@
 
     .line 54
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/booter/notification/queue/b;->nw()Lcom/tencent/mm/booter/notification/queue/b;
+    invoke-static {}, Lcom/tencent/mm/booter/notification/queue/b;->lK()Lcom/tencent/mm/booter/notification/queue/b;
 
     move-result-object v0
 
@@ -108,7 +108,7 @@
     if-nez v0, :cond_2
 
     .line 56
-    const-string/jumbo v0, "!56@/B4Tb64lLpKR3MWtFvfaIAekODdD9J/RcHA/L9jjKKKq6MqTNTuiGw=="
+    const-string/jumbo v0, "MicroMsg.Notification.Delete.Receive"
 
     const-string/jumbo v2, "receive delete notification: %d, but no item in queue"
 
@@ -120,18 +120,18 @@
 
     aput-object v1, v3, v6
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
     .line 60
     :cond_2
-    iget-object v2, v0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnT:Landroid/app/PendingIntent;
+    iget-object v2, v0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbR:Landroid/app/PendingIntent;
 
     if-eqz v2, :cond_3
 
     :try_start_1
-    iget-object v0, v0, Lcom/tencent/mm/booter/notification/NotificationItem;->bnT:Landroid/app/PendingIntent;
+    iget-object v0, v0, Lcom/tencent/mm/booter/notification/NotificationItem;->bbR:Landroid/app/PendingIntent;
 
     invoke-virtual {v0}, Landroid/app/PendingIntent;->send()V
     :try_end_1
@@ -140,7 +140,7 @@
     .line 62
     :cond_3
     :goto_3
-    invoke-static {}, Lcom/tencent/mm/booter/notification/queue/b;->nw()Lcom/tencent/mm/booter/notification/queue/b;
+    invoke-static {}, Lcom/tencent/mm/booter/notification/queue/b;->lK()Lcom/tencent/mm/booter/notification/queue/b;
 
     move-result-object v0
 
@@ -148,8 +148,17 @@
 
     goto :goto_1
 
+    .line 60
     :catch_1
     move-exception v0
+
+    const-string/jumbo v2, "MicroMsg.NotificationItem"
+
+    const-string/jumbo v3, "Delete intent send Exception?"
+
+    new-array v4, v6, [Ljava/lang/Object;
+
+    invoke-static {v2, v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_3
 

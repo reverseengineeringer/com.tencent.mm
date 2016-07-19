@@ -13,95 +13,136 @@
 
 
 # instance fields
-.field private aGg:Lcom/tencent/mm/modelsns/SnsAdClick;
+.field private asm:Lcom/tencent/mm/modelsns/SnsAdClick;
 
-.field private asL:Ljava/lang/String;
+.field private desc:Ljava/lang/String;
 
-.field private gLa:Ljava/lang/String;
+.field private gSF:Ljava/lang/String;
 
-.field private gLb:Ljava/util/ArrayList;
+.field private gSG:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private gLc:Z
+.field private gSH:Z
 
-.field private gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+.field private hBR:Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;
 
-.field private gZH:Z
+.field private hBS:Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
 
-.field private gZg:I
+.field private hBT:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
-.field private haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+.field private hBU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
-.field private hba:Lcom/tencent/mm/plugin/sns/ui/t;
+.field private hBV:Lcom/tencent/mm/ui/KeyboardLinearLayout;
 
-.field private hbb:Landroid/widget/LinearLayout;
+.field private hBW:Z
 
-.field private hlQ:Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;
+.field private hBX:Z
 
-.field private hlR:Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
+.field private hBY:Ljava/lang/String;
 
-.field private hlS:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+.field private hBZ:Landroid/widget/FrameLayout;
 
-.field private hlT:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+.field private hCa:J
 
-.field private hlU:Lcom/tencent/mm/ui/KeyboardLinearLayout;
+.field private hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
-.field private hlV:Z
+.field private hmZ:Z
 
-.field private hlW:Z
+.field private hms:I
 
-.field private hlX:Landroid/widget/FrameLayout;
+.field private hoA:Landroid/widget/LinearLayout;
+
+.field private hoC:Z
+
+.field private hoD:J
+
+.field private hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+
+.field private hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 3
+    .locals 6
 
     .prologue
+    const-wide/16 v4, 0x0
+
     const/4 v2, 0x0
 
     const/4 v1, 0x0
 
-    .line 69
+    .line 70
     invoke-direct {p0}, Lcom/tencent/mm/ui/MMActivity;-><init>()V
 
-    .line 96
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gZH:Z
-
     .line 97
-    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gZg:I
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hmZ:Z
+
+    .line 98
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hms:I
 
     .line 99
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoC:Z
 
-    .line 107
+    .line 100
+    iput-wide v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoD:J
+
+    .line 102
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
+
+    .line 110
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gLa:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gSF:Ljava/lang/String;
 
-    .line 109
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gLc:Z
-
-    .line 111
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlV:Z
-
-    .line 113
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlW:Z
+    .line 112
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gSH:Z
 
     .line 114
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->aGg:Lcom/tencent/mm/modelsns/SnsAdClick;
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBW:Z
 
-    .line 422
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlX:Landroid/widget/FrameLayout;
+    .line 116
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBX:Z
+
+    .line 117
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->asm:Lcom/tencent/mm/modelsns/SnsAdClick;
+
+    .line 120
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBY:Ljava/lang/String;
+
+    .line 439
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBZ:Landroid/widget/FrameLayout;
+
+    .line 443
+    iput-wide v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hCa:J
 
     return-void
+.end method
+
+.method static synthetic a(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;J)J
+    .locals 1
+
+    .prologue
+    .line 70
+    iput-wide p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hCa:J
+
+    return-wide p1
 .end method
 
 .method static synthetic a(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
     .locals 1
 
     .prologue
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     return-object v0
 .end method
@@ -110,39 +151,39 @@
     .locals 0
 
     .prologue
-    .line 69
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->asL:Ljava/lang/String;
+    .line 70
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->desc:Ljava/lang/String;
 
     return-object p1
 .end method
 
-.method private aCU()V
+.method private aGb()V
     .locals 1
 
     .prologue
-    .line 413
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    .line 430
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/t;->aAW()Z
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/v;->aDO()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 415
+    .line 432
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->bC(Z)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->bp(Z)V
 
-    .line 420
+    .line 437
     :goto_0
     return-void
 
-    .line 418
+    .line 435
     :cond_0
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->bC(Z)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->bp(Z)V
 
     goto :goto_0
 .end method
@@ -151,8 +192,8 @@
     .locals 1
 
     .prologue
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlT:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
     return-object v0
 .end method
@@ -161,10 +202,10 @@
     .locals 1
 
     .prologue
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->cMt:Landroid/view/View;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->cJf:Landroid/view/View;
 
     return-object v0
 .end method
@@ -173,20 +214,20 @@
     .locals 1
 
     .prologue
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->cMt:Landroid/view/View;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->cJf:Landroid/view/View;
 
     return-object v0
 .end method
 
-.method static synthetic e(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Lcom/tencent/mm/plugin/sns/ui/t;
+.method static synthetic e(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Lcom/tencent/mm/plugin/sns/ui/v;
     .locals 1
 
     .prologue
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
     return-object v0
 .end method
@@ -195,8 +236,8 @@
     .locals 1
 
     .prologue
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlX:Landroid/widget/FrameLayout;
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBZ:Landroid/widget/FrameLayout;
 
     return-object v0
 .end method
@@ -205,8 +246,8 @@
     .locals 1
 
     .prologue
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->aGg:Lcom/tencent/mm/modelsns/SnsAdClick;
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->asm:Lcom/tencent/mm/modelsns/SnsAdClick;
 
     return-object v0
 .end method
@@ -215,33 +256,33 @@
     .locals 2
 
     .prologue
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->requestFocus()Z
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9RADwjweyFoah/b/e2Uej"
+    const-string/jumbo v0, "MicroMsg.SnsUploadUI"
 
     const-string/jumbo v1, "request fouces"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlT:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->aCR()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->aFY()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlT:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->aCS()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->aFZ()V
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->cMt:Landroid/view/View;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->cJf:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->postInvalidate()V
 
@@ -252,123 +293,172 @@
     .locals 1
 
     .prologue
-    .line 69
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gZg:I
+    .line 70
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hms:I
 
     return v0
 .end method
 
-.method static synthetic j(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+.method static synthetic j(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)J
+    .locals 2
+
+    .prologue
+    .line 70
+    iget-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hCa:J
+
+    return-wide v0
+.end method
+
+.method static synthetic k(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
     .locals 1
 
     .prologue
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
     return-object v0
 .end method
 
-.method static synthetic k(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Z
+.method static synthetic l(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Z
     .locals 1
 
     .prologue
-    .line 69
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlV:Z
+    .line 70
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBW:Z
 
     return v0
 .end method
 
-.method static synthetic l(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
+.method static synthetic m(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
     .locals 1
 
     .prologue
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlR:Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBS:Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
 
     return-object v0
 .end method
 
-.method static synthetic m(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Ljava/lang/String;
+.method static synthetic n(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->asL:Ljava/lang/String;
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->desc:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic n(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;
+.method static synthetic o(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;
     .locals 1
 
     .prologue
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlQ:Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBR:Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;
 
     return-object v0
 .end method
 
-.method static synthetic o(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Z
+.method static synthetic p(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Z
     .locals 1
 
     .prologue
-    .line 69
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gLc:Z
+    .line 70
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gSH:Z
 
     return v0
 .end method
 
-.method static synthetic p(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Ljava/util/ArrayList;
+.method static synthetic q(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Ljava/util/ArrayList;
     .locals 1
 
     .prologue
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gLb:Ljava/util/ArrayList;
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gSG:Ljava/util/ArrayList;
 
     return-object v0
 .end method
 
-.method static synthetic q(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Ljava/lang/String;
+.method static synthetic r(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gLa:Ljava/lang/String;
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBY:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic r(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Z
+.method static synthetic s(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)J
+    .locals 2
+
+    .prologue
+    .line 70
+    iget-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoD:J
+
+    return-wide v0
+.end method
+
+.method static synthetic t(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Z
     .locals 1
 
     .prologue
-    .line 69
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlW:Z
+    .line 70
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoC:Z
+
+    return v0
+.end method
+
+.method static synthetic u(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gSF:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic v(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Z
+    .locals 1
+
+    .prologue
+    .line 70
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBX:Z
 
     return v0
 .end method
 
 
 # virtual methods
-.method public final aBe()Ljava/util/ArrayList;
+.method public final aEf()Ljava/util/ArrayList;
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/compatible/util/Exif$a;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 996
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    .line 1026
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    instance-of v0, v0, Lcom/tencent/mm/plugin/sns/ui/z;
+    instance-of v0, v0, Lcom/tencent/mm/plugin/sns/ui/aa;
 
     if-eqz v0, :cond_2
 
-    .line 997
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    .line 1027
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    check-cast v0, Lcom/tencent/mm/plugin/sns/ui/z;
+    check-cast v0, Lcom/tencent/mm/plugin/sns/ui/aa;
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/z;->gZF:Lcom/tencent/mm/plugin/sns/ui/z$b;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/aa;->hmX:Lcom/tencent/mm/plugin/sns/ui/aa$b;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/z$b;->gZS:Ljava/util/ArrayList;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/aa$b;->hnk:Ljava/util/ArrayList;
 
     new-instance v2, Ljava/util/ArrayList;
 
@@ -392,7 +482,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    iget-object v4, v0, Lcom/tencent/mm/plugin/sns/ui/z;->gZI:Ljava/util/Map;
+    iget-object v4, v0, Lcom/tencent/mm/plugin/sns/ui/aa;->hna:Ljava/util/Map;
 
     invoke-interface {v4, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -409,7 +499,7 @@
     :cond_1
     move-object v0, v2
 
-    .line 999
+    .line 1029
     :goto_1
     return-object v0
 
@@ -419,22 +509,22 @@
     goto :goto_1
 .end method
 
-.method public final aBf()Z
+.method public final aEg()Z
     .locals 1
 
     .prologue
-    .line 1004
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gZH:Z
+    .line 1034
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hmZ:Z
 
     return v0
 .end method
 
-.method protected final aCT()Z
+.method protected final aGa()Z
     .locals 1
 
     .prologue
-    .line 129
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    .line 134
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v0
 
@@ -445,8 +535,8 @@
     .locals 1
 
     .prologue
-    .line 982
-    const v0, 0x7f0a03f3
+    .line 1012
+    const v0, 0x7f0305b6
 
     return v0
 .end method
@@ -461,97 +551,97 @@
 
     const/4 v8, 0x0
 
-    .line 783
+    .line 813
     invoke-super {p0, p1, p2, p3}, Lcom/tencent/mm/ui/MMActivity;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 784
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    .line 814
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     if-eqz v0, :cond_0
 
-    .line 785
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    .line 815
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->clearFocus()V
 
-    .line 787
+    .line 817
     :cond_0
     const/4 v0, -0x1
 
     if-eq p2, v0, :cond_2
 
-    .line 928
+    .line 958
     :cond_1
     :goto_0
     return-void
 
-    .line 791
+    .line 821
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    invoke-interface {v0, p1, p3}, Lcom/tencent/mm/plugin/sns/ui/t;->a(ILandroid/content/Intent;)Z
+    invoke-interface {v0, p1, p3}, Lcom/tencent/mm/plugin/sns/ui/v;->a(ILandroid/content/Intent;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 792
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->aCU()V
+    .line 822
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->aGb()V
 
-    .line 798
+    .line 828
     :cond_3
     packed-switch p1, :pswitch_data_0
 
     :pswitch_0
     goto :goto_0
 
-    .line 823
+    .line 853
     :pswitch_1
     if-eqz p3, :cond_1
 
-    .line 826
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlS:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+    .line 856
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBT:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlQ:Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBR:Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;
 
     invoke-virtual {v0, p1, p2, p3, v1}, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->a(IILandroid/content/Intent;Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;)Z
 
-    .line 827
+    .line 857
     const-string/jumbo v0, "Ktag_range_index"
 
     invoke-virtual {p3, v0, v8}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 828
+    .line 858
     if-lt v1, v10, :cond_1
 
-    .line 829
+    .line 859
     const-string/jumbo v0, "Klabel_name_list"
 
     invoke-virtual {p3, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gLa:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gSF:Ljava/lang/String;
 
-    .line 830
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gLa:Ljava/lang/String;
+    .line 860
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gSF:Ljava/lang/String;
 
     if-nez v0, :cond_4
 
-    .line 831
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9RADwjweyFoah/b/e2Uej"
+    .line 861
+    const-string/jumbo v0, "MicroMsg.SnsUploadUI"
 
     const-string/jumbo v1, "dz : mLabelNameList by getIntent is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 834
+    .line 864
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gLa:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gSF:Ljava/lang/String;
 
     const-string/jumbo v2, ","
 
@@ -563,12 +653,12 @@
 
     move-result-object v0
 
-    .line 835
+    .line 865
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gLb:Ljava/util/ArrayList;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gSG:Ljava/util/ArrayList;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -591,19 +681,19 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aOW()Lcom/tencent/mm/pluginsdk/i$e;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aTy()Lcom/tencent/mm/pluginsdk/i$e;
 
     move-result-object v4
 
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aOW()Lcom/tencent/mm/pluginsdk/i$e;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aTy()Lcom/tencent/mm/pluginsdk/i$e;
 
     move-result-object v5
 
-    invoke-interface {v5, v0}, Lcom/tencent/mm/pluginsdk/i$e;->qh(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v5, v0}, Lcom/tencent/mm/pluginsdk/i$e;->rx(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v4, v0}, Lcom/tencent/mm/pluginsdk/i$e;->qk(Ljava/lang/String;)Ljava/util/List;
+    invoke-interface {v4, v0}, Lcom/tencent/mm/pluginsdk/i$e;->rA(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
@@ -616,22 +706,22 @@
     if-nez v4, :cond_7
 
     :cond_6
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9RADwjweyFoah/b/e2Uej"
+    const-string/jumbo v0, "MicroMsg.SnsUploadUI"
 
     const-string/jumbo v2, "dz: getContactNamesFromLabels,namelist get bu label is null"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 836
+    .line 866
     :goto_1
     if-ne v1, v10, :cond_9
 
-    .line 837
-    iput-boolean v8, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gLc:Z
+    .line 867
+    iput-boolean v8, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gSH:Z
 
     goto/16 :goto_0
 
-    .line 835
+    .line 865
     :cond_7
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -652,7 +742,7 @@
 
     invoke-virtual {v3, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    const-string/jumbo v5, "!32@/B4Tb64lLpJ9RADwjweyFoah/b/e2Uej"
+    const-string/jumbo v5, "MicroMsg.SnsUploadUI"
 
     const-string/jumbo v6, "dz:name : %s"
 
@@ -660,7 +750,7 @@
 
     aput-object v0, v7, v8
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_2
 
@@ -669,61 +759,61 @@
 
     invoke-direct {v0, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gLb:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gSG:Ljava/util/ArrayList;
 
     goto :goto_1
 
-    .line 839
+    .line 869
     :cond_9
-    iput-boolean v9, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gLc:Z
+    iput-boolean v9, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gSH:Z
 
     goto/16 :goto_0
 
-    .line 865
+    .line 895
     :pswitch_2
     if-eqz p3, :cond_1
 
-    .line 868
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlQ:Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;
+    .line 898
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBR:Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;
 
-    invoke-virtual {v0, p3}, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->A(Landroid/content/Intent;)Z
+    invoke-virtual {v0, p3}, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->E(Landroid/content/Intent;)Z
 
     goto/16 :goto_0
 
-    .line 910
+    .line 940
     :pswitch_3
     if-eqz p3, :cond_1
 
-    .line 913
+    .line 943
     const-string/jumbo v0, "bind_facebook_succ"
 
     invoke-virtual {p3, v0, v8}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    .line 915
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    .line 945
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
     if-eqz v0, :cond_1
 
-    iput-boolean v9, v1, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hlD:Z
+    iput-boolean v9, v1, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hBG:Z
 
-    invoke-virtual {v1, v9}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->setSyncFacebook(Z)V
+    invoke-virtual {v1, v9}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->fp(Z)V
 
     goto/16 :goto_0
 
-    .line 920
+    .line 950
     :pswitch_4
     if-eqz p3, :cond_1
 
-    .line 923
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlR:Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
+    .line 953
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBS:Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
 
-    invoke-virtual {v0, p3}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->A(Landroid/content/Intent;)Z
+    invoke-virtual {v0, p3}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->E(Landroid/content/Intent;)Z
 
     goto/16 :goto_0
 
-    .line 798
+    .line 828
     :pswitch_data_0
     .packed-switch 0x5
         :pswitch_1
@@ -739,9 +829,9 @@
     .locals 9
 
     .prologue
-    const v8, 0x7f070cd4
+    const v8, 0x7f1010ba
 
-    const v7, 0x7f070cd0
+    const v7, 0x7f1010b9
 
     const/16 v6, 0x8
 
@@ -749,41 +839,41 @@
 
     const/4 v2, 0x0
 
-    .line 134
+    .line 139
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 135
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    .line 140
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 136
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9RADwjweyFoah/b/e2Uej"
+    .line 141
+    const-string/jumbo v0, "MicroMsg.SnsUploadUI"
 
     const-string/jumbo v1, "onCreate acc not ready finish"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 137
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->appenderFlushSync()V
+    .line 142
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->appenderFlushSync()V
 
-    .line 138
+    .line 143
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->finish()V
 
-    .line 294
+    .line 311
     :cond_0
     :goto_0
     return-void
 
-    .line 141
+    .line 146
     :cond_1
     const-string/jumbo v0, ""
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->Gj(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->Ah(Ljava/lang/String;)V
 
-    .line 143
+    .line 148
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -802,7 +892,35 @@
 
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->setClassLoader(Ljava/lang/ClassLoader;)V
 
-    .line 146
+    .line 151
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string/jumbo v3, "KSnsPostManu"
+
+    invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoC:Z
+
+    .line 152
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string/jumbo v3, "KTouchCameraTime"
+
+    const-wide/16 v4, 0x0
+
+    invoke-virtual {v0, v3, v4, v5}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+
+    move-result-wide v4
+
+    iput-wide v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoD:J
+
+    .line 154
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -813,9 +931,9 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gZg:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hms:I
 
-    .line 148
+    .line 156
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -828,9 +946,9 @@
 
     check-cast v0, Lcom/tencent/mm/modelsns/SnsAdClick;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->aGg:Lcom/tencent/mm/modelsns/SnsAdClick;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->asm:Lcom/tencent/mm/modelsns/SnsAdClick;
 
-    .line 149
+    .line 157
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -841,9 +959,9 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gZH:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hmZ:Z
 
-    .line 150
+    .line 158
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -854,9 +972,9 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlV:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBW:Z
 
-    .line 151
+    .line 159
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -867,10 +985,23 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlW:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBX:Z
 
-    .line 152
-    const v0, 0x7f070cd1
+    .line 160
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string/jumbo v3, "Ksnsupload_canvas_info"
+
+    invoke-virtual {v0, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBY:Ljava/lang/String;
+
+    .line 161
+    const v0, 0x7f1009f8
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->findViewById(I)Landroid/view/View;
 
@@ -878,19 +1009,19 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v3, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v3, v3, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v3, v3, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-static {v3}, Lcom/tencent/mm/ui/t;->cY(Landroid/content/Context;)F
+    invoke-static {v3}, Lcom/tencent/mm/ui/t;->cW(Landroid/content/Context;)F
 
     move-result v3
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-virtual {v4}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->getTextSize()F
 
@@ -898,11 +1029,11 @@
 
     mul-float/2addr v3, v4
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v4, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v4, v4, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v4, v4, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-static {v4}, Lcom/tencent/mm/aw/a;->getDensity(Landroid/content/Context;)F
+    invoke-static {v4}, Lcom/tencent/mm/az/a;->getDensity(Landroid/content/Context;)F
 
     move-result v4
 
@@ -920,13 +1051,13 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_9
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->getIntent()Landroid/content/Intent;
 
@@ -942,7 +1073,7 @@
 
     :cond_2
     :goto_1
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gZg:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hms:I
 
     if-ne v0, v6, :cond_3
 
@@ -956,16 +1087,16 @@
 
     move-result-object v0
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-virtual {v3, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->setEnabled(Z)V
 
     :cond_3
-    const v0, 0x7f070369
+    const v0, 0x7f100604
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->findViewById(I)Landroid/view/View;
 
@@ -973,9 +1104,9 @@
 
     check-cast v0, Lcom/tencent/mm/ui/KeyboardLinearLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlU:Lcom/tencent/mm/ui/KeyboardLinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBV:Lcom/tencent/mm/ui/KeyboardLinearLayout;
 
-    const v0, 0x7f070cd7
+    const v0, 0x7f100ac9
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->findViewById(I)Landroid/view/View;
 
@@ -983,19 +1114,31 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlT:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlT:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->setMMEditText(Lcom/tencent/mm/ui/widget/MMEditText;)V
+    iput-object v3, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->gSZ:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlT:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+    new-instance v4, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter$1;
+
+    invoke-direct {v4, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter$1;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;)V
+
+    invoke-virtual {v3, v4}, Lcom/tencent/mm/ui/widget/MMEditText;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    new-instance v4, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter$2;
+
+    invoke-direct {v4, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter$2;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;)V
+
+    invoke-virtual {v3, v4}, Lcom/tencent/mm/ui/widget/MMEditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
     invoke-virtual {v0, v6}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->setVisibility(I)V
 
-    const v0, 0x7f070ccd
+    const v0, 0x7f100ae3
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->findViewById(I)Landroid/view/View;
 
@@ -1003,9 +1146,9 @@
 
     check-cast v0, Landroid/widget/FrameLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlX:Landroid/widget/FrameLayout;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBZ:Landroid/widget/FrameLayout;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlX:Landroid/widget/FrameLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBZ:Landroid/widget/FrameLayout;
 
     new-instance v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$9;
 
@@ -1013,7 +1156,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/FrameLayout;->post(Ljava/lang/Runnable;)Z
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     new-instance v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$10;
 
@@ -1021,7 +1164,7 @@
 
     invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     new-instance v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$11;
 
@@ -1029,7 +1172,7 @@
 
     invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    const v0, 0x7f070cce
+    const v0, 0x7f100ac5
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->findViewById(I)Landroid/view/View;
 
@@ -1037,11 +1180,13 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/WrapScollview;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/sns/ui/WrapScollview;->setContentView(Landroid/view/View;)V
+    iput-object v3, v0, Lcom/tencent/mm/plugin/sns/ui/WrapScollview;->cJf:Landroid/view/View;
 
-    const v0, 0x7f070cd6
+    iput-boolean v2, v0, Lcom/tencent/mm/plugin/sns/ui/WrapScollview;->hDA:Z
+
+    const v0, 0x7f1010bc
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->findViewById(I)Landroid/view/View;
 
@@ -1049,31 +1194,31 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
-    iget-object v0, v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hlI:Lcom/tencent/mm/protocal/b/aby;
-
-    const/high16 v4, -0x3b860000    # -1000.0f
-
-    iput v4, v0, Lcom/tencent/mm/protocal/b/aby;->jer:F
-
-    iget-object v0, v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hlI:Lcom/tencent/mm/protocal/b/aby;
+    iget-object v0, v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hBL:Lcom/tencent/mm/protocal/b/acn;
 
     const/high16 v4, -0x3b860000    # -1000.0f
 
-    iput v4, v0, Lcom/tencent/mm/protocal/b/aby;->jeq:F
+    iput v4, v0, Lcom/tencent/mm/protocal/b/acn;->jCc:F
 
-    iget-boolean v0, v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hhQ:Z
+    iget-object v0, v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hBL:Lcom/tencent/mm/protocal/b/acn;
+
+    const/high16 v4, -0x3b860000    # -1000.0f
+
+    iput v4, v0, Lcom/tencent/mm/protocal/b/acn;->jCb:F
+
+    iget-boolean v0, v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hwF:Z
 
     if-nez v0, :cond_5
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -1087,7 +1232,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->d(Ljava/lang/Integer;)I
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Integer;)I
 
     move-result v4
 
@@ -1098,7 +1243,7 @@
     move v0, v1
 
     :goto_2
-    iput-boolean v0, v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hlD:Z
+    iput-boolean v0, v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hBG:Z
 
     and-int/lit8 v0, v4, 0x8
 
@@ -1107,69 +1252,69 @@
     move v0, v1
 
     :goto_3
-    iput-boolean v0, v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hlE:Z
+    iput-boolean v0, v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hBH:Z
 
-    invoke-static {}, Lcom/tencent/mm/ac/b;->AL()Z
+    invoke-static {}, Lcom/tencent/mm/af/b;->AX()Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
-    iput-boolean v2, v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hlE:Z
+    iput-boolean v2, v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hBH:Z
 
     :cond_4
-    invoke-static {}, Lcom/tencent/mm/model/h;->sA()Z
+    invoke-static {}, Lcom/tencent/mm/model/h;->sC()Z
 
     move-result v0
 
     if-nez v0, :cond_5
 
-    iput-boolean v2, v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hlD:Z
+    iput-boolean v2, v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hBG:Z
 
     :cond_5
-    invoke-virtual {v3, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->setSyncFacebook(Z)V
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->fp(Z)V
 
-    invoke-virtual {v3}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->aCP()V
+    invoke-virtual {v3}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->aFU()V
 
-    invoke-virtual {v3}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->aCQ()V
+    invoke-virtual {v3}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->aFV()V
 
-    iget-boolean v0, v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hlE:Z
+    iget-boolean v0, v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hBH:Z
 
     if-eqz v0, :cond_6
 
-    iget-object v0, v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hlJ:Lcom/tencent/mm/ui/h/a;
+    iget-object v0, v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hBM:Lcom/tencent/mm/ui/i/a;
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/h/a;->a(Lcom/tencent/mm/ui/h/a$a;)V
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/i/a;->a(Lcom/tencent/mm/ui/i/a$a;)V
 
     :cond_6
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gZg:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hms:I
 
     if-eqz v0, :cond_7
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
-    iget-object v3, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hlz:Landroid/widget/ImageView;
-
-    invoke-virtual {v3, v6}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    iget-object v3, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hlA:Landroid/widget/ImageView;
+    iget-object v3, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hBC:Landroid/widget/ImageView;
 
     invoke-virtual {v3, v6}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hlB:Landroid/widget/ImageView;
+    iget-object v3, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hBD:Landroid/widget/ImageView;
+
+    invoke-virtual {v3, v6}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hBE:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v6}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :cond_7
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gZg:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hms:I
 
     const/16 v3, 0x9
 
     if-ne v0, v3, :cond_8
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hlB:Landroid/widget/ImageView;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->hBE:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
@@ -1180,7 +1325,7 @@
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
-    const v0, 0x7f0b0ddf
+    const v0, 0x7f080122
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->getString(I)Ljava/lang/String;
 
@@ -1190,11 +1335,11 @@
 
     invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$13;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)V
 
-    sget v4, Lcom/tencent/mm/ui/j$b;->kpJ:I
+    sget v4, Lcom/tencent/mm/ui/j$b;->kOO:I
 
     invoke-virtual {p0, v2, v0, v3, v4}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->a(ILjava/lang/String;Landroid/view/MenuItem$OnMenuItemClickListener;I)V
 
-    const v0, 0x7f070ccf
+    const v0, 0x7f100ac6
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->findViewById(I)Landroid/view/View;
 
@@ -1208,7 +1353,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    const v0, 0x7f070cd5
+    const v0, 0x7f1010bb
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->findViewById(I)Landroid/view/View;
 
@@ -1216,15 +1361,15 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlQ:Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBR:Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlQ:Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBR:Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
-    iput-object v3, v0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iput-object v3, v0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
-    const v0, 0x7f070cd3
+    const v0, 0x7f101087
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->findViewById(I)Landroid/view/View;
 
@@ -1232,33 +1377,35 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlR:Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBS:Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlR:Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBS:Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->setLocationWidgetListener(Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;)V
+    iput-object p0, v0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->hmG:Lcom/tencent/mm/plugin/sns/ui/LocationWidget$a;
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gZg:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hms:I
 
     packed-switch v0, :pswitch_data_0
 
     :goto_4
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlS:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBT:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
-    iput-object v3, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iput-object v3, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->age()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->aiI()V
 
-    .line 153
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9RADwjweyFoah/b/e2Uej"
+    .line 162
+    const-string/jumbo v0, "MicroMsg.SnsUploadUI"
 
-    const-string/jumbo v3, "share type %d"
+    const-string/jumbo v3, "share type %d, isManuSnsPost:%b"
 
-    new-array v4, v1, [Ljava/lang/Object;
+    const/4 v4, 0x2
 
-    iget v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gZg:I
+    new-array v4, v4, [Ljava/lang/Object;
+
+    iget v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hms:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1266,21 +1413,29 @@
 
     aput-object v5, v4, v2
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    iget-boolean v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoC:Z
 
-    .line 154
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gZg:I
+    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v5
+
+    aput-object v5, v4, v1
+
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 163
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hms:I
 
     packed-switch v0, :pswitch_data_1
 
-    .line 243
+    .line 260
     :goto_5
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    invoke-interface {v0, p1}, Lcom/tencent/mm/plugin/sns/ui/t;->n(Landroid/os/Bundle;)V
+    invoke-interface {v0, p1}, Lcom/tencent/mm/plugin/sns/ui/v;->p(Landroid/os/Bundle;)V
 
-    .line 244
-    const v0, 0x7f070cd2
+    .line 261
+    const v0, 0x7f100ae4
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->findViewById(I)Landroid/view/View;
 
@@ -1288,59 +1443,59 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hbb:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoA:Landroid/widget/LinearLayout;
 
-    .line 245
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    .line 262
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/t;->aAX()Landroid/view/View;
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/v;->aDP()Landroid/view/View;
 
     move-result-object v0
 
-    .line 246
+    .line 263
     if-eqz v0, :cond_c
 
-    .line 247
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hbb:Landroid/widget/LinearLayout;
+    .line 264
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoA:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 251
+    .line 268
     :goto_6
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->aCU()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->aGb()V
 
-    .line 254
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlU:Lcom/tencent/mm/ui/KeyboardLinearLayout;
+    .line 271
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBV:Lcom/tencent/mm/ui/KeyboardLinearLayout;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$6;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$6;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/KeyboardLinearLayout;->setOnkbdStateListener(Lcom/tencent/mm/ui/KeyboardLinearLayout$a;)V
+    iput-object v1, v0, Lcom/tencent/mm/ui/KeyboardLinearLayout;->kLf:Lcom/tencent/mm/ui/KeyboardLinearLayout$a;
 
-    .line 290
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gZg:I
+    .line 307
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hms:I
 
     if-nez v0, :cond_0
 
-    .line 291
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    .line 308
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    instance-of v0, v0, Lcom/tencent/mm/plugin/sns/ui/z;
+    instance-of v0, v0, Lcom/tencent/mm/plugin/sns/ui/aa;
 
     if-nez v0, :cond_d
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9RADwjweyFoah/b/e2Uej"
+    const-string/jumbo v0, "MicroMsg.SnsUploadUI"
 
     const-string/jumbo v1, "!(widget instanceof PicWidget)"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 152
+    .line 161
     :cond_9
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     if-eqz v0, :cond_2
 
@@ -1354,7 +1509,7 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-virtual {v3, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->setText(Ljava/lang/CharSequence;)V
 
@@ -1377,7 +1532,7 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlS:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBT:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
     invoke-virtual {p0, v7}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->findViewById(I)Landroid/view/View;
 
@@ -1394,7 +1549,7 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlS:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBT:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
     invoke-virtual {p0, v7}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->findViewById(I)Landroid/view/View;
 
@@ -1411,7 +1566,7 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlS:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBT:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
     invoke-virtual {p0, v7}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->findViewById(I)Landroid/view/View;
 
@@ -1419,157 +1574,187 @@
 
     invoke-virtual {v0, v6}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlQ:Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBR:Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;
 
     invoke-virtual {v0, v6}, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->setVisibility(I)V
 
     goto/16 :goto_4
 
-    .line 156
-    :pswitch_3
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/z;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/z;-><init>(Lcom/tencent/mm/ui/MMActivity;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
-
-    goto/16 :goto_5
-
-    .line 160
-    :pswitch_4
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/u;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/u;-><init>(Lcom/tencent/mm/ui/MMActivity;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
-
-    .line 161
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlS:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
-
-    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->haB:Z
-
-    goto/16 :goto_5
-
     .line 165
-    :pswitch_5
+    :pswitch_3
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/aa;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/aa;-><init>(Lcom/tencent/mm/ui/MMActivity;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
+
+    goto/16 :goto_5
+
+    .line 169
+    :pswitch_4
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/w;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/w;-><init>(Lcom/tencent/mm/ui/MMActivity;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    .line 167
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlS:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+    .line 170
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBT:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
-    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->haB:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnT:Z
 
     goto/16 :goto_5
 
-    .line 170
+    .line 174
+    :pswitch_5
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/y;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/y;-><init>(Lcom/tencent/mm/ui/MMActivity;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
+
+    .line 176
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBT:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnT:Z
+
+    goto/16 :goto_5
+
+    .line 179
     :pswitch_6
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/aa;
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/ab;
 
     const/16 v2, 0x9
 
-    invoke-direct {v0, p0, v2}, Lcom/tencent/mm/plugin/sns/ui/aa;-><init>(Lcom/tencent/mm/ui/MMActivity;I)V
+    invoke-direct {v0, p0, v2}, Lcom/tencent/mm/plugin/sns/ui/ab;-><init>(Lcom/tencent/mm/ui/MMActivity;I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    .line 172
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlS:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+    .line 181
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBT:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
-    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->haB:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnT:Z
 
     goto/16 :goto_5
 
-    .line 175
+    .line 184
     :pswitch_7
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/aa;
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/ab;
 
     const/16 v2, 0xc
 
-    invoke-direct {v0, p0, v2}, Lcom/tencent/mm/plugin/sns/ui/aa;-><init>(Lcom/tencent/mm/ui/MMActivity;I)V
+    invoke-direct {v0, p0, v2}, Lcom/tencent/mm/plugin/sns/ui/ab;-><init>(Lcom/tencent/mm/ui/MMActivity;I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    .line 177
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlS:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+    .line 186
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBT:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
-    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->haB:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnT:Z
 
     goto/16 :goto_5
 
-    .line 180
+    .line 189
     :pswitch_8
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/l;
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/m;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/l;-><init>(Lcom/tencent/mm/ui/MMActivity;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/m;-><init>(Lcom/tencent/mm/ui/MMActivity;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    .line 182
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlS:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+    .line 191
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBT:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
-    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->haB:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnT:Z
 
     goto/16 :goto_5
 
-    .line 185
+    .line 194
     :pswitch_9
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/k;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/k;-><init>(Lcom/tencent/mm/ui/MMActivity;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    .line 186
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlS:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+    .line 195
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBT:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
-    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->haB:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnT:Z
 
     goto/16 :goto_5
 
-    .line 189
+    .line 198
     :pswitch_a
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/aa;
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/n;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/n;-><init>(Lcom/tencent/mm/ui/MMActivity;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
+
+    .line 199
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBT:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnT:Z
+
+    goto/16 :goto_5
+
+    .line 202
+    :pswitch_b
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/l;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/l;-><init>(Lcom/tencent/mm/ui/MMActivity;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
+
+    .line 203
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBT:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnT:Z
+
+    goto/16 :goto_5
+
+    .line 206
+    :pswitch_c
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/ab;
 
     const/16 v2, 0xe
 
-    invoke-direct {v0, p0, v2}, Lcom/tencent/mm/plugin/sns/ui/aa;-><init>(Lcom/tencent/mm/ui/MMActivity;I)V
+    invoke-direct {v0, p0, v2}, Lcom/tencent/mm/plugin/sns/ui/ab;-><init>(Lcom/tencent/mm/ui/MMActivity;I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    .line 194
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlS:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+    .line 211
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBT:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
-    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->haB:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnT:Z
 
     goto/16 :goto_5
 
-    .line 197
-    :pswitch_b
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/aa;
+    .line 214
+    :pswitch_d
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/ab;
 
     const/16 v2, 0xd
 
-    invoke-direct {v0, p0, v2}, Lcom/tencent/mm/plugin/sns/ui/aa;-><init>(Lcom/tencent/mm/ui/MMActivity;I)V
+    invoke-direct {v0, p0, v2}, Lcom/tencent/mm/plugin/sns/ui/ab;-><init>(Lcom/tencent/mm/ui/MMActivity;I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    .line 199
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlS:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+    .line 216
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBT:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
-    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->haB:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnT:Z
 
     goto/16 :goto_5
 
-    .line 203
-    :pswitch_c
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 220
+    :pswitch_e
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -1585,16 +1770,16 @@
 
     const-string/jumbo v3, ""
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 204
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 221
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -1610,37 +1795,37 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Integer;I)I
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/lang/Integer;I)I
 
     move-result v0
 
-    .line 205
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    .line 222
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_f
 
-    .line 208
+    .line 225
     :goto_7
-    new-instance v2, Lcom/tencent/mm/plugin/sns/ui/x;
+    new-instance v2, Lcom/tencent/mm/plugin/sns/ui/z;
 
-    invoke-direct {v2, p0, v1}, Lcom/tencent/mm/plugin/sns/ui/x;-><init>(Lcom/tencent/mm/ui/MMActivity;Z)V
+    invoke-direct {v2, p0, v1}, Lcom/tencent/mm/plugin/sns/ui/z;-><init>(Lcom/tencent/mm/ui/MMActivity;Z)V
 
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    .line 209
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    .line 226
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->setPasterLen(I)V
+    iput v0, v1, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hsG:I
 
-    .line 210
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    .line 227
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->append(Ljava/lang/CharSequence;)V
 
-    .line 213
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    .line 230
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$1;
 
@@ -1650,30 +1835,30 @@
 
     goto/16 :goto_5
 
-    .line 237
-    :pswitch_d
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/as;
+    .line 254
+    :pswitch_f
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/ay;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/as;-><init>(Lcom/tencent/mm/ui/MMActivity;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/ay;-><init>(Lcom/tencent/mm/ui/MMActivity;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    .line 238
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlS:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+    .line 255
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBT:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
-    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->haB:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnT:Z
 
     goto/16 :goto_5
 
-    .line 249
+    .line 266
     :cond_c
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hbb:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoA:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v6}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     goto/16 :goto_6
 
-    .line 291
+    .line 308
     :cond_d
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -1681,11 +1866,11 @@
 
     if-ge v0, v1, :cond_e
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9RADwjweyFoah/b/e2Uej"
+    const-string/jumbo v0, "MicroMsg.SnsUploadUI"
 
     const-string/jumbo v1, "sdk not support dragdrop event"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -1703,9 +1888,7 @@
 
     goto :goto_7
 
-    .line 152
-    nop
-
+    .line 161
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -1720,9 +1903,11 @@
         :pswitch_0
         :pswitch_0
         :pswitch_1
+        :pswitch_0
+        :pswitch_0
     .end packed-switch
 
-    .line 154
+    .line 163
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_3
@@ -1730,13 +1915,15 @@
         :pswitch_5
         :pswitch_6
         :pswitch_8
-        :pswitch_a
-        :pswitch_7
-        :pswitch_b
-        :pswitch_d
         :pswitch_c
+        :pswitch_7
+        :pswitch_d
+        :pswitch_f
+        :pswitch_e
         :pswitch_9
         :pswitch_4
+        :pswitch_b
+        :pswitch_a
     .end packed-switch
 .end method
 
@@ -1744,52 +1931,52 @@
     .locals 2
 
     .prologue
-    .line 766
+    .line 796
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onDestroy()V
 
-    .line 767
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    .line 797
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
     if-eqz v0, :cond_0
 
-    .line 771
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    .line 801
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/t;->aAY()Z
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/v;->aDQ()Z
 
-    .line 773
+    .line 803
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlR:Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBS:Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
 
     if-eqz v0, :cond_1
 
-    .line 774
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlR:Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
+    .line 804
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBS:Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->stop()V
 
-    .line 776
+    .line 806
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlT:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
     if-eqz v0, :cond_2
 
-    .line 777
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlT:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+    .line 807
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->eYO:Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->fhi:Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;
 
     if-eqz v1, :cond_2
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->eYO:Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->fhi:Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;->RN()V
+    invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;->Th()V
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->eYO:Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->fhi:Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;
 
     invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;->destroy()V
 
-    .line 779
+    .line 809
     :cond_2
     return-void
 .end method
@@ -1802,7 +1989,7 @@
 
     const/4 v0, 0x1
 
-    .line 382
+    .line 399
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v1
@@ -1811,10 +1998,10 @@
 
     if-ne v1, v3, :cond_4
 
-    .line 384
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlT:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+    .line 401
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->aCR()Z
+    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->aFY()Z
 
     move-result v3
 
@@ -1832,42 +2019,42 @@
     :goto_0
     if-eqz v1, :cond_2
 
-    .line 385
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlT:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+    .line 402
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->aCS()V
+    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->aFZ()V
 
-    .line 409
+    .line 426
     :goto_1
     return v0
 
     :cond_1
     move v1, v2
 
-    .line 384
+    .line 401
     goto :goto_0
 
-    .line 387
+    .line 404
     :cond_2
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gZg:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hms:I
 
     const/16 v3, 0x9
 
     if-ne v1, v3, :cond_3
 
-    .line 388
+    .line 405
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
     invoke-virtual {p0, v2, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->setResult(ILandroid/content/Intent;)V
 
-    .line 389
+    .line 406
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->finish()V
 
     goto :goto_1
 
-    .line 393
+    .line 410
     :cond_3
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$8;
 
@@ -1877,7 +2064,7 @@
 
     goto :goto_1
 
-    .line 409
+    .line 426
     :cond_4
     invoke-super {p0, p1, p2}, Lcom/tencent/mm/ui/MMActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
@@ -1892,15 +2079,15 @@
     .prologue
     const/16 v3, 0x1d41
 
-    .line 736
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->gZg:I
+    .line 766
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hms:I
 
     const/16 v1, 0x9
 
     if-ne v0, v1, :cond_0
 
-    .line 737
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    .line 767
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->getText()Landroid/text/Editable;
 
@@ -1914,12 +2101,12 @@
 
     move-result-object v0
 
-    .line 738
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 768
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v1
 
@@ -1927,27 +2114,25 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
-    .line 739
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    .line 769
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 740
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 770
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->getPasterLen()I
-
-    move-result v1
+    iget v1, v1, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hsG:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1955,24 +2140,24 @@
 
     invoke-virtual {v0, v3, v1}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
-    .line 746
+    .line 776
     :cond_0
     :goto_0
-    invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->age()V
+    invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->aiI()V
 
-    .line 747
+    .line 777
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onPause()V
 
-    .line 748
+    .line 778
     return-void
 
-    .line 743
+    .line 773
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -1993,8 +2178,8 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1009
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9RADwjweyFoah/b/e2Uej"
+    .line 1039
+    const-string/jumbo v0, "MicroMsg.SnsUploadUI"
 
     const-string/jumbo v1, "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]"
 
@@ -2034,49 +2219,49 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1010
+    .line 1040
     packed-switch p1, :pswitch_data_0
 
-    .line 1033
+    .line 1063
     :goto_0
     return-void
 
-    .line 1012
+    .line 1042
     :pswitch_0
     aget v0, p3, v5
 
     if-nez v0, :cond_0
 
-    .line 1013
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlR:Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
+    .line 1043
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBS:Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aBb()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/LocationWidget;->aDZ()V
 
     goto :goto_0
 
-    .line 1015
+    .line 1045
     :cond_0
-    const v0, 0x7f0b08dc
+    const v0, 0x7f080d5a
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v0, 0x7f0b08d4
+    const v0, 0x7f080d62
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    const v0, 0x7f0b08d5
+    const v0, 0x7f080aa8
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v0, 0x7f0b0c09
+    const v0, 0x7f0802c3
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->getString(I)Ljava/lang/String;
 
@@ -2096,7 +2281,7 @@
 
     goto :goto_0
 
-    .line 1010
+    .line 1040
     :pswitch_data_0
     .packed-switch 0x400
         :pswitch_0
@@ -2107,11 +2292,11 @@
     .locals 2
 
     .prologue
-    .line 752
+    .line 782
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onResume()V
 
-    .line 753
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hlT:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+    .line 783
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hBU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$3;
 
@@ -2119,7 +2304,7 @@
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->post(Ljava/lang/Runnable;)Z
 
-    .line 762
+    .line 792
     return-void
 .end method
 
@@ -2127,15 +2312,15 @@
     .locals 2
 
     .prologue
-    .line 119
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    .line 124
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     if-eqz v0, :cond_0
 
-    .line 120
+    .line 125
     const-string/jumbo v0, "contentdesc"
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->getText()Landroid/text/Editable;
 
@@ -2147,20 +2332,20 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 122
+    .line 127
     :cond_0
     const-string/jumbo v0, "contentdesc"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 123
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    .line 128
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    invoke-interface {v0, p1}, Lcom/tencent/mm/plugin/sns/ui/t;->o(Landroid/os/Bundle;)V
+    invoke-interface {v0, p1}, Lcom/tencent/mm/plugin/sns/ui/v;->q(Landroid/os/Bundle;)V
 
-    .line 124
+    .line 129
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 125
+    .line 130
     return-void
 .end method

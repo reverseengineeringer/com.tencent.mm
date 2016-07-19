@@ -3,7 +3,7 @@ package com.tencent.mm.pluginsdk.ui.tools;
 import android.os.AsyncTask;
 
 final class AppChooserUI$d
-  extends AsyncTask
+  extends AsyncTask<AppChooserUI.c, Void, AppChooserUI.c>
 {
   AppChooserUI$d(AppChooserUI paramAppChooserUI) {}
 }

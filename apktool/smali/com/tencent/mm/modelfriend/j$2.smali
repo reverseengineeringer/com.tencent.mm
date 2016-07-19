@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bMp:Lcom/tencent/mm/modelfriend/j;
+.field final synthetic bFJ:Lcom/tencent/mm/modelfriend/j;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 257
-    iput-object p1, p0, Lcom/tencent/mm/modelfriend/j$2;->bMp:Lcom/tencent/mm/modelfriend/j;
+    iput-object p1, p0, Lcom/tencent/mm/modelfriend/j$2;->bFJ:Lcom/tencent/mm/modelfriend/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final dd(I)Ljava/lang/String;
+.method public final dI(I)Ljava/lang/String;
     .locals 3
 
     .prologue
@@ -45,7 +45,7 @@
     .line 261
     if-ltz p1, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/mm/modelfriend/j$2;->bMp:Lcom/tencent/mm/modelfriend/j;
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/j$2;->bFJ:Lcom/tencent/mm/modelfriend/j;
 
     invoke-virtual {v1}, Lcom/tencent/mm/modelfriend/j;->getCount()I
 
@@ -55,11 +55,11 @@
 
     .line 262
     :cond_0
-    const-string/jumbo v1, "!32@/B4Tb64lLpKtUZnUqFd8jYERHC2aCXs9"
+    const-string/jumbo v1, "MicroMsg.FriendAdapter"
 
     const-string/jumbo v2, "pos is invalid"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 267
     :cond_1
@@ -68,26 +68,26 @@
 
     .line 266
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/modelfriend/j$2;->bMp:Lcom/tencent/mm/modelfriend/j;
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/j$2;->bFJ:Lcom/tencent/mm/modelfriend/j;
 
-    invoke-virtual {v1, p1}, Lcom/tencent/mm/modelfriend/j;->dc(I)Lcom/tencent/mm/protocal/b/abu;
+    invoke-virtual {v1, p1}, Lcom/tencent/mm/modelfriend/j;->dH(I)Lcom/tencent/mm/protocal/b/acj;
 
     move-result-object v1
 
     .line 267
     if-eqz v1, :cond_1
 
-    iget-object v0, v1, Lcom/tencent/mm/protocal/b/abu;->eiB:Ljava/lang/String;
+    iget-object v0, v1, Lcom/tencent/mm/protocal/b/acj;->emC:Ljava/lang/String;
 
     goto :goto_0
 .end method
 
-.method public final yz()I
+.method public final yM()I
     .locals 1
 
     .prologue
     .line 272
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/j$2;->bMp:Lcom/tencent/mm/modelfriend/j;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/j$2;->bFJ:Lcom/tencent/mm/modelfriend/j;
 
     invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/j;->getCount()I
 

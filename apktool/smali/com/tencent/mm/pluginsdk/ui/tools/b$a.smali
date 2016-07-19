@@ -15,7 +15,16 @@
 
 
 # instance fields
-.field hss:Ljava/util/List;
+.field hKe:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -31,7 +40,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;->hss:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;->hKe:Ljava/util/List;
 
     return-void
 .end method
@@ -48,16 +57,16 @@
 
 
 # virtual methods
-.method final aSM()Ljava/lang/String;
+.method final aXF()Ljava/lang/String;
     .locals 3
 
     .prologue
     .line 92
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;->hss:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;->hKe:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;->hss:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;->hKe:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -80,7 +89,7 @@
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
     .line 97
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;->hss:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;->hKe:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -118,7 +127,7 @@
     goto :goto_0
 .end method
 
-.method final sN(Ljava/lang/String;)V
+.method final up(Ljava/lang/String;)V
     .locals 5
 
     .prologue
@@ -127,7 +136,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;->hss:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;->hKe:Ljava/util/List;
 
     .line 108
     if-eqz p1, :cond_0
@@ -161,7 +170,7 @@
     aget-object v3, v1, v0
 
     .line 114
-    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;->hss:Ljava/util/List;
+    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;->hKe:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 

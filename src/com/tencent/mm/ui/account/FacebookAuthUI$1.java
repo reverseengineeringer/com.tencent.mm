@@ -3,7 +3,7 @@ package com.tencent.mm.ui.account;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 
 final class FacebookAuthUI$1
   implements DialogInterface.OnCancelListener
@@ -12,8 +12,8 @@ final class FacebookAuthUI$1
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    if (FacebookAuthUI.a(ksk) != null) {
-      ah.tE().c(FacebookAuthUI.a(ksk));
+    if (FacebookAuthUI.a(kRs) != null) {
+      ah.tF().c(FacebookAuthUI.a(kRs));
     }
   }
 }

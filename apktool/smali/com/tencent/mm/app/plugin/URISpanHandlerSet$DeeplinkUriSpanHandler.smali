@@ -5,7 +5,7 @@
 
 # annotations
 .annotation runtime Lcom/tencent/mm/app/plugin/URISpanHandlerSet$a;
-    lh = .enum Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PRIORITY;->LOW:Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PRIORITY;
+    jI = .enum Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PRIORITY;->LOW:Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PRIORITY;
 .end annotation
 
 .annotation system Ldalvik/annotation/EnclosingClass;
@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field final synthetic ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+.field final synthetic ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
 
 # direct methods
@@ -27,8 +27,8 @@
     .locals 0
 
     .prologue
-    .line 1360
-    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 1359
+    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-direct {p0, p1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BaseUriSpanHandler;-><init>(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)V
 
@@ -41,9 +41,9 @@
     .locals 11
 
     .prologue
-    const v2, 0x7f0b0ddd
+    const v4, 0x7f0802c3
 
-    const v4, 0x7f0b0c09
+    const v2, 0x7f080134
 
     const/4 v1, 0x0
 
@@ -51,8 +51,8 @@
 
     const/4 v8, 0x1
 
-    .line 1388
-    const-string/jumbo v0, "!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4="
+    .line 1387
+    const-string/jumbo v0, "MicroMsg.URISpanHandlerSet"
 
     const-string/jumbo v3, "DeeplinkUriSpanHandler handleSpanClick %d, %s"
 
@@ -72,12 +72,12 @@
 
     aput-object v7, v5, v8
 
-    invoke-static {v0, v3, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1390
+    .line 1389
     if-eqz p2, :cond_8
 
-    .line 1391
+    .line 1390
     invoke-interface {p2, p1}, Lcom/tencent/mm/pluginsdk/ui/d/b;->a(Lcom/tencent/mm/pluginsdk/ui/applet/g;)Ljava/lang/Object;
 
     move-result-object v0
@@ -86,7 +86,7 @@
 
     move-object v7, v0
 
-    .line 1393
+    .line 1392
     :goto_0
     iget v0, p1, Lcom/tencent/mm/pluginsdk/ui/applet/g;->type:I
 
@@ -94,14 +94,14 @@
 
     if-ne v0, v3, :cond_7
 
-    .line 1395
+    .line 1394
     iget-object v0, p1, Lcom/tencent/mm/pluginsdk/ui/applet/g;->url:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->li(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 1396
+    .line 1395
     const-string/jumbo v0, "weixin://shieldBrandMsg/"
 
     invoke-virtual {v9, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -118,49 +118,49 @@
 
     if-eqz v0, :cond_5
 
-    .line 1397
+    .line 1396
     :cond_0
-    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1398
-    const-string/jumbo v0, "!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4="
+    .line 1397
+    const-string/jumbo v0, "MicroMsg.URISpanHandlerSet"
 
     const-string/jumbo v1, "DeeplinkUriSpanHandler username is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v8
 
-    .line 1436
+    .line 1435
     :goto_1
     return v0
 
-    .line 1402
+    .line 1401
     :cond_1
-    invoke-static {v7}, Lcom/tencent/mm/t/n;->gS(Ljava/lang/String;)Lcom/tencent/mm/t/l;
+    invoke-static {v7}, Lcom/tencent/mm/v/o;->hi(Ljava/lang/String;)Lcom/tencent/mm/v/m;
 
     move-result-object v10
 
-    .line 1403
+    .line 1402
     if-nez v10, :cond_2
 
-    .line 1404
-    const-string/jumbo v0, "!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4="
+    .line 1403
+    const-string/jumbo v0, "MicroMsg.URISpanHandlerSet"
 
     const-string/jumbo v1, "DeeplinkUriSpanHandler BizInfo is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v8
 
-    .line 1405
+    .line 1404
     goto :goto_1
 
-    .line 1407
+    .line 1406
     :cond_2
     const-string/jumbo v0, "weixin://shieldBrandMsg/"
 
@@ -170,20 +170,20 @@
 
     if-eqz v0, :cond_4
 
-    .line 1408
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 1407
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0b08be
+    const v1, 0x7f08135a
 
-    const v3, 0x7f0b08bf
+    const v3, 0x7f081359
 
     new-instance v5, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler$1;
 
-    invoke-direct {v5, p0, v10, v9, v7}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler$1;-><init>(Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler;Lcom/tencent/mm/t/l;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v5, p0, v10, v9, v7}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler$1;-><init>(Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler;Lcom/tencent/mm/v/m;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static/range {v0 .. v6}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;IIIILandroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
@@ -191,10 +191,10 @@
     :goto_2
     move v0, v8
 
-    .line 1434
+    .line 1433
     goto :goto_1
 
-    .line 1418
+    .line 1417
     :cond_4
     const-string/jumbo v0, "weixin://receiveBrandMsg/"
 
@@ -204,51 +204,51 @@
 
     if-eqz v0, :cond_3
 
-    .line 1419
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 1418
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0b08c0
+    const v1, 0x7f081358
 
-    const v3, 0x7f0b08c1
+    const v3, 0x7f081357
 
     new-instance v5, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler$2;
 
-    invoke-direct {v5, p0, v10, v9, v7}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler$2;-><init>(Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler;Lcom/tencent/mm/t/l;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v5, p0, v10, v9, v7}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler$2;-><init>(Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler;Lcom/tencent/mm/v/m;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static/range {v0 .. v6}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;IIIILandroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
     goto :goto_2
 
-    .line 1429
+    .line 1428
     :cond_5
     invoke-static {v9}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/d;->m(Landroid/net/Uri;)Z
+    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/d;->i(Landroid/net/Uri;)Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    .line 1430
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 1429
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0, v7, v9}, Lcom/tencent/mm/pluginsdk/d;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v7, v9}, Lcom/tencent/mm/pluginsdk/d;->r(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
-    .line 1432
+    .line 1431
     :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -269,7 +269,7 @@
     :cond_7
     move v0, v1
 
-    .line 1436
+    .line 1435
     goto :goto_1
 
     :cond_8
@@ -290,8 +290,8 @@
 
     const/4 v2, 0x0
 
-    .line 1441
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    .line 1440
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -299,9 +299,9 @@
 
     if-nez p4, :cond_4
 
-    .line 1442
+    .line 1441
     :cond_0
-    const-string/jumbo v3, "!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4="
+    const-string/jumbo v3, "MicroMsg.URISpanHandlerSet"
 
     const-string/jumbo v4, "url is null ? %b, paramsBundle is null ? %b"
 
@@ -329,9 +329,9 @@
 
     aput-object v0, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1470
+    .line 1469
     :cond_1
     :goto_2
     return v2
@@ -339,7 +339,7 @@
     :cond_2
     move v0, v2
 
-    .line 1442
+    .line 1441
     goto :goto_0
 
     :cond_3
@@ -347,27 +347,27 @@
 
     goto :goto_1
 
-    .line 1445
+    .line 1444
     :cond_4
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/d;->m(Landroid/net/Uri;)Z
+    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/d;->i(Landroid/net/Uri;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1446
+    .line 1445
     const-string/jumbo v0, "key_scene"
 
     invoke-virtual {p4, v0, v7}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 1447
-    const-string/jumbo v3, "!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4="
+    .line 1446
+    const-string/jumbo v3, "MicroMsg.URISpanHandlerSet"
 
     const-string/jumbo v4, "DeeplinkUriSpanHandler jump, %d, %s"
 
@@ -381,17 +381,17 @@
 
     aput-object p1, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1449
+    .line 1448
     if-ne v0, v7, :cond_5
 
-    .line 1450
+    .line 1449
     const/4 v0, 0x5
 
-    .line 1452
+    .line 1451
     :cond_5
-    iget-object v2, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v2, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v2}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -405,8 +405,8 @@
 
     move-result-object v2
 
-    .line 1453
-    iget-object v3, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 1452
+    iget-object v3, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$DeeplinkUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v3}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -420,18 +420,18 @@
 
     move v2, v1
 
-    .line 1468
+    .line 1467
     goto :goto_2
 .end method
 
-.method final bb(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
+.method final bg(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
     .locals 5
 
     .prologue
     const/4 v1, 0x0
 
-    .line 1364
-    const-string/jumbo v0, "!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4="
+    .line 1363
+    const-string/jumbo v0, "MicroMsg.URISpanHandlerSet"
 
     const-string/jumbo v2, "DeeplinkUriSpanHandler getHrefFromUrl %s"
 
@@ -443,9 +443,9 @@
 
     aput-object p1, v3, v4
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1369
+    .line 1368
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -462,14 +462,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 1370
+    .line 1369
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
     const/16 v2, 0x1e
 
     invoke-direct {v0, p1, v2, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/g;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 1373
+    .line 1372
     :goto_0
     return-object v0
 
@@ -479,11 +479,11 @@
     goto :goto_0
 .end method
 
-.method final lg()[I
+.method final jH()[I
     .locals 3
 
     .prologue
-    .line 1383
+    .line 1382
     const/4 v0, 0x1
 
     new-array v0, v0, [I

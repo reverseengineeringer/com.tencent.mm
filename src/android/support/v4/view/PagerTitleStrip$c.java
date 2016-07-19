@@ -5,7 +5,7 @@ import android.widget.TextView;
 final class PagerTitleStrip$c
   implements PagerTitleStrip.b
 {
-  public final void setSingleLineAllCaps(TextView paramTextView)
+  public final void a(TextView paramTextView)
   {
     paramTextView.setSingleLine();
   }

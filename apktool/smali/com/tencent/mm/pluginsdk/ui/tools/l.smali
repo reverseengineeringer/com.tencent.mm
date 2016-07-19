@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public ayS:I
+.field public akU:I
 
 .field public context:Landroid/content/Context;
 
@@ -32,7 +32,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 22
-    iput v7, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->ayS:I
+    iput v7, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->akU:I
 
     .line 27
     iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->context:Landroid/content/Context;
@@ -43,11 +43,11 @@
     .line 29
     if-nez p2, :cond_0
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpK2EJJwsKvUAXxao2NOZxz+"
+    const-string/jumbo v0, "MicroMsg.UriFileHelper"
 
     const-string/jumbo v1, "initFileTypeAndPath uri == null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 30
     :goto_0
@@ -59,11 +59,11 @@
 
     if-nez v0, :cond_1
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpK2EJJwsKvUAXxao2NOZxz+"
+    const-string/jumbo v0, "MicroMsg.UriFileHelper"
 
     const-string/jumbo v1, "initFileTypeAndPath context == null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -111,13 +111,13 @@
 
     if-nez v2, :cond_3
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpK2EJJwsKvUAXxao2NOZxz+"
+    const-string/jumbo v0, "MicroMsg.UriFileHelper"
 
     const-string/jumbo v1, "File is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput v7, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->ayS:I
+    iput v7, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->akU:I
 
     goto :goto_0
 
@@ -149,7 +149,7 @@
     if-lt v1, v2, :cond_6
 
     :cond_4
-    iput v8, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->ayS:I
+    iput v8, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->akU:I
 
     move-object v0, v6
 
@@ -161,7 +161,7 @@
     if-nez v1, :cond_e
 
     :cond_5
-    iput v7, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->ayS:I
+    iput v7, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->akU:I
 
     goto :goto_0
 
@@ -185,11 +185,11 @@
 
     if-nez v0, :cond_9
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpK2EJJwsKvUAXxao2NOZxz+"
+    const-string/jumbo v0, "MicroMsg.UriFileHelper"
 
     const-string/jumbo v1, "getFilePath context == null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_2
     iput-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->filePath:Ljava/lang/String;
@@ -220,11 +220,11 @@
 
     if-nez v0, :cond_a
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpK2EJJwsKvUAXxao2NOZxz+"
+    const-string/jumbo v0, "MicroMsg.UriFileHelper"
 
     const-string/jumbo v1, "getFilePath : fail, cursor is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -244,11 +244,11 @@
     :cond_b
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpK2EJJwsKvUAXxao2NOZxz+"
+    const-string/jumbo v0, "MicroMsg.UriFileHelper"
 
     const-string/jumbo v1, "getFilePath : fail, cursor getCount is 0 or moveToFirst fail"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -263,11 +263,11 @@
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpK2EJJwsKvUAXxao2NOZxz+"
+    const-string/jumbo v0, "MicroMsg.UriFileHelper"
 
     const-string/jumbo v1, "getFilePath : columnIdx is -1, column with columnName = _data does not exist"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -291,10 +291,10 @@
 
     const/4 v1, 0x3
 
-    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->ayS:I
+    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->akU:I
 
     :goto_3
-    const-string/jumbo v1, "!32@/B4Tb64lLpK2EJJwsKvUAXxao2NOZxz+"
+    const-string/jumbo v1, "MicroMsg.UriFileHelper"
 
     const-string/jumbo v2, "MimeType[%s], filePath = [%s], fileType = [%s], type = [%s], Uri[%s]"
 
@@ -308,7 +308,7 @@
 
     aput-object v4, v3, v8
 
-    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->ayS:I
+    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->akU:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -328,7 +328,7 @@
 
     aput-object v4, v3, v0
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
@@ -343,7 +343,7 @@
 
     const/4 v1, 0x4
 
-    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->ayS:I
+    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->akU:I
 
     goto :goto_3
 
@@ -358,7 +358,7 @@
 
     const/4 v1, 0x5
 
-    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->ayS:I
+    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->akU:I
 
     goto :goto_3
 
@@ -371,12 +371,12 @@
 
     if-eqz v1, :cond_12
 
-    iput v10, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->ayS:I
+    iput v10, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->akU:I
 
     goto :goto_3
 
     :cond_12
-    iput v8, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->ayS:I
+    iput v8, p0, Lcom/tencent/mm/pluginsdk/ui/tools/l;->akU:I
 
     goto :goto_3
 .end method

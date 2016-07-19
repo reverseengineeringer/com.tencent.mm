@@ -18,23 +18,23 @@
 .method public abstract a(Landroid/widget/ImageView;ILjava/lang/String;Ljava/lang/String;)V
 .end method
 
-.method public abstract atl()I
+.method public abstract awA()I
 .end method
 
-.method public abstract atm()I
+.method public abstract awB()V
 .end method
 
-.method public abstract atn()V
+.method public abstract awC()Z
 .end method
 
-.method public abstract ato()Z
+.method public abstract awD()V
 .end method
 
-.method public abstract atp()V
+.method public abstract awE()V
 .end method
 
-.method public abstract atq()V
+.method public abstract awz()I
 .end method
 
-.method public abstract tn(Ljava/lang/String;)Ljava/lang/String;
+.method public abstract uP(Ljava/lang/String;)Ljava/lang/String;
 .end method

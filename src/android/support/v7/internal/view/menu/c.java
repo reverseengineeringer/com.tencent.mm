@@ -6,32 +6,32 @@ import android.view.MenuItem;
 import android.view.SubMenu;
 import java.util.HashMap;
 
-abstract class c
-  extends d
+abstract class c<T>
+  extends d<T>
 {
-  HashMap lp;
-  HashMap lq;
+  HashMap<MenuItem, b> lG;
+  HashMap<SubMenu, SubMenu> lH;
   
-  c(Object paramObject)
+  c(T paramT)
   {
-    super(paramObject);
+    super(paramT);
   }
   
   final SubMenu a(SubMenu paramSubMenu)
   {
     if (paramSubMenu != null)
     {
-      if (lq == null) {
-        lq = new HashMap();
+      if (lH == null) {
+        lH = new HashMap();
       }
-      SubMenu localSubMenu = (SubMenu)lq.get(paramSubMenu);
+      SubMenu localSubMenu = (SubMenu)lH.get(paramSubMenu);
       Object localObject = localSubMenu;
       if (localSubMenu == null)
       {
         if (Build.VERSION.SDK_INT >= 14)
         {
           localObject = new q(paramSubMenu);
-          lq.put(paramSubMenu, localObject);
+          lH.put(paramSubMenu, localObject);
         }
       }
       else {
@@ -46,10 +46,10 @@ abstract class c
   {
     if (paramMenuItem != null)
     {
-      if (lp == null) {
-        lp = new HashMap();
+      if (lG == null) {
+        lG = new HashMap();
       }
-      b localb = (b)lp.get(paramMenuItem);
+      b localb = (b)lG.get(paramMenuItem);
       Object localObject = localb;
       if (localb == null) {
         if (Build.VERSION.SDK_INT < 16) {
@@ -58,7 +58,7 @@ abstract class c
       }
       for (localObject = new j(paramMenuItem);; localObject = new i(paramMenuItem))
       {
-        lp.put(paramMenuItem, localObject);
+        lG.put(paramMenuItem, localObject);
         return (b)localObject;
         label69:
         if (Build.VERSION.SDK_INT < 14) {

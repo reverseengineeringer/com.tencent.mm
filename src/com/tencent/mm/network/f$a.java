@@ -6,8 +6,8 @@ import android.os.IInterface;
 import android.os.Parcel;
 import com.tencent.mm.network.a.b;
 import com.tencent.mm.network.a.b.a.a;
-import com.tencent.mm.protocal.y;
-import com.tencent.mm.protocal.y.a.a;
+import com.tencent.mm.protocal.ab;
+import com.tencent.mm.protocal.ab.a.a;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +20,7 @@ public abstract class f$a
     attachInterface(this, "com.tencent.mm.network.IDispatcher_AIDL");
   }
   
-  public static f X(IBinder paramIBinder)
+  public static f z(IBinder paramIBinder)
   {
     if (paramIBinder == null) {
       return null;
@@ -54,6 +54,7 @@ public abstract class f$a
     boolean bool5 = false;
     boolean bool6 = false;
     boolean bool7 = false;
+    boolean bool8 = false;
     boolean bool1 = false;
     switch (paramInt1)
     {
@@ -64,7 +65,7 @@ public abstract class f$a
       return true;
     case 1: 
       paramParcel1.enforceInterface("com.tencent.mm.network.IDispatcher_AIDL");
-      localp = p.a.ab(paramParcel1.readStrongBinder());
+      localp = p.a.D(paramParcel1.readStrongBinder());
       paramParcel1 = paramParcel1.readStrongBinder();
       if (paramParcel1 == null) {
         paramParcel1 = (Parcel)localObject1;
@@ -89,7 +90,7 @@ public abstract class f$a
       return true;
     case 3: 
       paramParcel1.enforceInterface("com.tencent.mm.network.IDispatcher_AIDL");
-      localObject1 = EJ();
+      localObject1 = Fe();
       paramParcel2.writeNoException();
       paramParcel1 = localp;
       if (localObject1 != null) {
@@ -114,10 +115,10 @@ public abstract class f$a
         paramParcel2.writeNoException();
         return true;
         localObject1 = paramParcel1.queryLocalInterface("com.tencent.mm.protocal.MMSyncCheckCoder_AIDL");
-        if ((localObject1 != null) && ((localObject1 instanceof y))) {
-          paramParcel1 = (y)localObject1;
+        if ((localObject1 != null) && ((localObject1 instanceof ab))) {
+          paramParcel1 = (ab)localObject1;
         } else {
-          paramParcel1 = new y.a.a(paramParcel1);
+          paramParcel1 = new ab.a.a(paramParcel1);
         }
       }
     case 6: 
@@ -150,7 +151,7 @@ public abstract class f$a
       if (paramParcel1.readInt() != 0) {
         bool1 = true;
       }
-      aO(bool1);
+      at(bool1);
       paramParcel2.writeNoException();
       return true;
     case 10: 
@@ -165,12 +166,12 @@ public abstract class f$a
       return true;
     case 12: 
       paramParcel1.enforceInterface("com.tencent.mm.network.IDispatcher_AIDL");
-      EK();
+      Ff();
       paramParcel2.writeNoException();
       return true;
     case 13: 
       paramParcel1.enforceInterface("com.tencent.mm.network.IDispatcher_AIDL");
-      bool1 = vM();
+      bool1 = vO();
       paramParcel2.writeNoException();
       paramInt1 = i;
       if (bool1) {
@@ -198,12 +199,12 @@ public abstract class f$a
       }
     case 15: 
       paramParcel1.enforceInterface("com.tencent.mm.network.IDispatcher_AIDL");
-      gg(paramParcel1.readString());
+      gt(paramParcel1.readString());
       paramParcel2.writeNoException();
       return true;
     case 16: 
       paramParcel1.enforceInterface("com.tencent.mm.network.IDispatcher_AIDL");
-      localObject1 = EL();
+      localObject1 = Fg();
       paramParcel2.writeNoException();
       paramParcel1 = (Parcel)localObject4;
       if (localObject1 != null) {
@@ -215,7 +216,7 @@ public abstract class f$a
       paramParcel1.enforceInterface("com.tencent.mm.network.IDispatcher_AIDL");
       paramParcel1 = paramParcel1.readString();
       localObject1 = new ArrayList();
-      paramInt1 = c(paramParcel1, (List)localObject1);
+      paramInt1 = d(paramParcel1, (List)localObject1);
       paramParcel2.writeNoException();
       paramParcel2.writeInt(paramInt1);
       paramParcel2.writeStringList((List)localObject1);
@@ -256,7 +257,7 @@ public abstract class f$a
       return true;
     case 22: 
       paramParcel1.enforceInterface("com.tencent.mm.network.IDispatcher_AIDL");
-      vY();
+      wa();
       paramParcel2.writeNoException();
       return true;
     case 23: 
@@ -267,7 +268,7 @@ public abstract class f$a
       return true;
     case 24: 
       paramParcel1.enforceInterface("com.tencent.mm.network.IDispatcher_AIDL");
-      paramInt1 = f(paramParcel1.readInt(), paramParcel1.createByteArray());
+      paramInt1 = g(paramParcel1.readInt(), paramParcel1.createByteArray());
       paramParcel2.writeNoException();
       paramParcel2.writeInt(paramInt1);
       return true;
@@ -342,7 +343,7 @@ public abstract class f$a
       }
     case 31: 
       paramParcel1.enforceInterface("com.tencent.mm.network.IDispatcher_AIDL");
-      gh(paramParcel1.readString());
+      gu(paramParcel1.readString());
       paramParcel2.writeNoException();
       return true;
     case 32: 
@@ -351,16 +352,25 @@ public abstract class f$a
       if (paramParcel1.readInt() != 0) {
         bool1 = true;
       }
-      aP(bool1);
+      au(bool1);
+      paramParcel2.writeNoException();
+      return true;
+    case 33: 
+      paramParcel1.enforceInterface("com.tencent.mm.network.IDispatcher_AIDL");
+      bool1 = bool7;
+      if (paramParcel1.readInt() != 0) {
+        bool1 = true;
+      }
+      av(bool1);
       paramParcel2.writeNoException();
       return true;
     }
     paramParcel1.enforceInterface("com.tencent.mm.network.IDispatcher_AIDL");
-    bool1 = bool7;
+    bool1 = bool8;
     if (paramParcel1.readInt() != 0) {
       bool1 = true;
     }
-    aQ(bool1);
+    aw(bool1);
     paramParcel2.writeNoException();
     return true;
   }
@@ -375,7 +385,7 @@ public abstract class f$a
       mRemote = paramIBinder;
     }
     
-    public final d EJ()
+    public final d Fe()
     {
       Parcel localParcel1 = Parcel.obtain();
       Parcel localParcel2 = Parcel.obtain();
@@ -384,7 +394,7 @@ public abstract class f$a
         localParcel1.writeInterfaceToken("com.tencent.mm.network.IDispatcher_AIDL");
         mRemote.transact(3, localParcel1, localParcel2, 0);
         localParcel2.readException();
-        d locald = d.a.W(localParcel2.readStrongBinder());
+        d locald = d.a.y(localParcel2.readStrongBinder());
         return locald;
       }
       finally
@@ -394,7 +404,7 @@ public abstract class f$a
       }
     }
     
-    public final void EK()
+    public final void Ff()
     {
       Parcel localParcel1 = Parcel.obtain();
       Parcel localParcel2 = Parcel.obtain();
@@ -412,7 +422,7 @@ public abstract class f$a
       }
     }
     
-    public final h EL()
+    public final h Fg()
     {
       Parcel localParcel1 = Parcel.obtain();
       Parcel localParcel2 = Parcel.obtain();
@@ -421,7 +431,7 @@ public abstract class f$a
         localParcel1.writeInterfaceToken("com.tencent.mm.network.IDispatcher_AIDL");
         mRemote.transact(16, localParcel1, localParcel2, 0);
         localParcel2.readException();
-        h localh = h.a.Y(localParcel2.readStrongBinder());
+        h localh = h.a.A(localParcel2.readStrongBinder());
         return localh;
       }
       finally
@@ -509,7 +519,7 @@ public abstract class f$a
       //   51	84	101	finally
     }
     
-    public final int a(boolean paramBoolean, List paramList)
+    public final int a(boolean paramBoolean, List<String> paramList)
     {
       int i = 0;
       Parcel localParcel1 = Parcel.obtain();
@@ -575,7 +585,7 @@ public abstract class f$a
       //   14: aload_1
       //   15: ifnull +43 -> 58
       //   18: aload_1
-      //   19: invokeinterface 97 1 0
+      //   19: invokeinterface 99 1 0
       //   24: astore_1
       //   25: aload_2
       //   26: aload_1
@@ -632,7 +642,7 @@ public abstract class f$a
       //   14: aload_1
       //   15: ifnull +43 -> 58
       //   18: aload_1
-      //   19: invokeinterface 101 1 0
+      //   19: invokeinterface 103 1 0
       //   24: astore_1
       //   25: aload_2
       //   26: aload_1
@@ -689,7 +699,7 @@ public abstract class f$a
       //   14: aload_1
       //   15: ifnull +43 -> 58
       //   18: aload_1
-      //   19: invokeinterface 105 1 0
+      //   19: invokeinterface 107 1 0
       //   24: astore_1
       //   25: aload_2
       //   26: aload_1
@@ -746,7 +756,7 @@ public abstract class f$a
       //   14: aload_1
       //   15: ifnull +43 -> 58
       //   18: aload_1
-      //   19: invokeinterface 109 1 0
+      //   19: invokeinterface 111 1 0
       //   24: astore_1
       //   25: aload_2
       //   26: aload_1
@@ -790,7 +800,7 @@ public abstract class f$a
     }
     
     /* Error */
-    public final void a(y paramy)
+    public final void a(ab paramab)
     {
       // Byte code:
       //   0: invokestatic 27	android/os/Parcel:obtain	()Landroid/os/Parcel;
@@ -803,7 +813,7 @@ public abstract class f$a
       //   14: aload_1
       //   15: ifnull +42 -> 57
       //   18: aload_1
-      //   19: invokeinterface 113 1 0
+      //   19: invokeinterface 115 1 0
       //   24: astore_1
       //   25: aload_2
       //   26: aload_1
@@ -836,7 +846,7 @@ public abstract class f$a
       // Local variable table:
       //   start	length	slot	name	signature
       //   0	73	0	this	a
-      //   0	73	1	paramy	y
+      //   0	73	1	paramab	ab
       //   3	65	2	localParcel1	Parcel
       //   7	57	3	localParcel2	Parcel
       // Exception table:
@@ -877,7 +887,12 @@ public abstract class f$a
       }
     }
     
-    public final void aO(boolean paramBoolean)
+    public final IBinder asBinder()
+    {
+      return mRemote;
+    }
+    
+    public final void at(boolean paramBoolean)
     {
       int i = 0;
       Parcel localParcel1 = Parcel.obtain();
@@ -900,7 +915,7 @@ public abstract class f$a
       }
     }
     
-    public final void aP(boolean paramBoolean)
+    public final void au(boolean paramBoolean)
     {
       int i = 0;
       Parcel localParcel1 = Parcel.obtain();
@@ -923,7 +938,7 @@ public abstract class f$a
       }
     }
     
-    public final void aQ(boolean paramBoolean)
+    public final void av(boolean paramBoolean)
     {
       int i = 0;
       Parcel localParcel1 = Parcel.obtain();
@@ -946,24 +961,21 @@ public abstract class f$a
       }
     }
     
-    public final IBinder asBinder()
+    public final void aw(boolean paramBoolean)
     {
-      return mRemote;
-    }
-    
-    public final int c(String paramString, List paramList)
-    {
+      int i = 0;
       Parcel localParcel1 = Parcel.obtain();
       Parcel localParcel2 = Parcel.obtain();
       try
       {
         localParcel1.writeInterfaceToken("com.tencent.mm.network.IDispatcher_AIDL");
-        localParcel1.writeString(paramString);
-        mRemote.transact(17, localParcel1, localParcel2, 0);
+        if (paramBoolean) {
+          i = 1;
+        }
+        localParcel1.writeInt(i);
+        mRemote.transact(34, localParcel1, localParcel2, 0);
         localParcel2.readException();
-        int i = localParcel2.readInt();
-        localParcel2.readStringList(paramList);
-        return i;
+        return;
       }
       finally
       {
@@ -1013,7 +1025,28 @@ public abstract class f$a
       }
     }
     
-    public final int f(int paramInt, byte[] paramArrayOfByte)
+    public final int d(String paramString, List<String> paramList)
+    {
+      Parcel localParcel1 = Parcel.obtain();
+      Parcel localParcel2 = Parcel.obtain();
+      try
+      {
+        localParcel1.writeInterfaceToken("com.tencent.mm.network.IDispatcher_AIDL");
+        localParcel1.writeString(paramString);
+        mRemote.transact(17, localParcel1, localParcel2, 0);
+        localParcel2.readException();
+        int i = localParcel2.readInt();
+        localParcel2.readStringList(paramList);
+        return i;
+      }
+      finally
+      {
+        localParcel2.recycle();
+        localParcel1.recycle();
+      }
+    }
+    
+    public final int g(int paramInt, byte[] paramArrayOfByte)
     {
       Parcel localParcel1 = Parcel.obtain();
       Parcel localParcel2 = Parcel.obtain();
@@ -1096,7 +1129,7 @@ public abstract class f$a
       }
     }
     
-    public final void gg(String paramString)
+    public final void gt(String paramString)
     {
       Parcel localParcel1 = Parcel.obtain();
       Parcel localParcel2 = Parcel.obtain();
@@ -1115,7 +1148,7 @@ public abstract class f$a
       }
     }
     
-    public final void gh(String paramString)
+    public final void gu(String paramString)
     {
       Parcel localParcel1 = Parcel.obtain();
       Parcel localParcel2 = Parcel.obtain();
@@ -1268,7 +1301,7 @@ public abstract class f$a
       }
     }
     
-    public final boolean vM()
+    public final boolean vO()
     {
       boolean bool = false;
       Parcel localParcel1 = Parcel.obtain();
@@ -1291,7 +1324,7 @@ public abstract class f$a
       }
     }
     
-    public final void vY()
+    public final void wa()
     {
       Parcel localParcel1 = Parcel.obtain();
       Parcel localParcel2 = Parcel.obtain();

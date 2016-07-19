@@ -29,34 +29,34 @@ public abstract class c
     return paramArrayOfFloat;
   }
   
-  public static float[] d(Looper paramLooper)
+  public static float[] c(Looper paramLooper)
+  {
+    return b.c(paramLooper);
+  }
+  
+  public static Matrix d(Looper paramLooper)
   {
     return b.d(paramLooper);
   }
   
-  public static Matrix e(Looper paramLooper)
-  {
-    return b.e(paramLooper);
-  }
-  
-  public static void g(Looper paramLooper)
+  public static void f(Looper paramLooper)
   {
     if (paramLooper != null) {
-      b.c(paramLooper);
+      b.b(paramLooper);
     }
   }
   
-  public static Paint h(Looper paramLooper)
+  public static Paint g(Looper paramLooper)
   {
     return b.a(paramLooper, null);
   }
   
-  public static Path i(Looper paramLooper)
+  public static Path h(Looper paramLooper)
   {
-    return b.f(paramLooper);
+    return b.e(paramLooper);
   }
   
-  public abstract int h(int paramInt, Object... paramVarArgs);
+  public abstract int i(int paramInt, Object... paramVarArgs);
 }
 
 /* Location:

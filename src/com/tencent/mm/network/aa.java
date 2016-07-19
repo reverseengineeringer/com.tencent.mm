@@ -1,18 +1,18 @@
 package com.tencent.mm.network;
 
 import android.content.Context;
-import com.tencent.mm.g.a;
+import com.tencent.mm.h.a;
 import com.tencent.mm.network.a.b;
-import com.tencent.mm.sdk.platformtools.ah;
+import com.tencent.mm.sdk.platformtools.ak;
 
 public final class aa
 {
-  public b cjW = null;
-  public boolean cjX = false;
+  public b cfo = null;
+  public boolean cfp = false;
   
-  public static boolean ab(int paramInt1, int paramInt2)
+  public static boolean ae(int paramInt1, int paramInt2)
   {
-    if (a.pm()) {}
+    if (a.nE()) {}
     int i;
     int j;
     int k;
@@ -24,10 +24,10 @@ public final class aa
         do
         {
           return true;
-          i = a.pn();
-          j = a.pp();
-          k = a.po();
-          m = a.pq();
+          i = a.nF();
+          j = a.nH();
+          k = a.nG();
+          m = a.nI();
           if ((i == k) && (j == m)) {
             return false;
           }
@@ -45,9 +45,9 @@ public final class aa
     return false;
   }
   
-  public static boolean bg(Context paramContext)
+  public static boolean bd(Context paramContext)
   {
-    return (paramContext != null) && (ah.dB(paramContext));
+    return (paramContext != null) && (ak.dC(paramContext));
   }
 }
 

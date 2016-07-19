@@ -15,17 +15,26 @@
 
 
 # virtual methods
-.method public abstract aAB()Lcom/tencent/mm/az/g;
+.method public abstract aDq()Lcom/tencent/mm/bc/g;
 .end method
 
-.method public abstract aAC()Ljava/util/ArrayList;
+.method public abstract aDr()Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
 .end method
 
-.method public abstract cw(J)V
+.method public abstract cL(J)V
 .end method
 
-.method public abstract lQ(I)Z
+.method public abstract nd(I)Z
 .end method
 
-.method public abstract vA(Ljava/lang/String;)Landroid/database/Cursor;
+.method public abstract wM(Ljava/lang/String;)Landroid/database/Cursor;
 .end method

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/an1" android:paddingTop="4.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@android:style/TextAppearance.Material.Subhead" android:textSize="@dimen/i8" android:textColor="@color/gn" android:id="@id/an2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dnv" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+    <ImageView android:id="@id/an3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:src="@raw/fingerprint_icon" android:layout_below="@id/an2" android:layout_alignParentStart="true" />
+    <TextView android:textColor="@color/gl" android:gravity="center_vertical" android:id="@id/an4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dnw" android:layout_alignTop="@id/an3" android:layout_alignBottom="@id/an3" android:layout_marginStart="16.0dip" android:layout_toEndOf="@id/an3" style="@android:style/TextAppearance.Material.Body1" />
+</RelativeLayout>

@@ -10,7 +10,7 @@ final class LoginUI$3
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    LoginUI.g(ktY);
+    LoginUI.g(kTf);
   }
 }
 

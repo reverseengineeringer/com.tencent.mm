@@ -2,18 +2,19 @@ package com.tencent.mm.ui.account;
 
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
+import android.widget.EditText;
 import android.widget.ImageView;
 import com.tencent.mm.compatible.util.e;
 import com.tencent.mm.modelsimple.c;
-import com.tencent.mm.sdk.platformtools.ab.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.MMFormInputView;
 
 final class RegByMobileRegAIOUI$8
-  implements ab.a
+  implements ad.a
 {
-  String bNn;
+  String bGH;
   Bitmap bitmap;
   
   RegByMobileRegAIOUI$8(RegByMobileRegAIOUI paramRegByMobileRegAIOUI) {}
@@ -23,40 +24,48 @@ final class RegByMobileRegAIOUI$8
     return super.toString() + "|initView2";
   }
   
-  public final boolean vd()
+  public final boolean vf()
   {
-    bNn = c.aT(kuT);
-    bitmap = c.aU(kuT);
+    bGH = c.aP(kUa);
+    bitmap = c.aQ(kUa);
     if ((bitmap != null) && (!bitmap.isRecycled())) {}
     try
     {
-      com.tencent.mm.sdk.platformtools.d.a(bitmap, 100, Bitmap.CompressFormat.PNG, com.tencent.mm.compatible.util.d.bur + "temp.avatar", false);
+      com.tencent.mm.sdk.platformtools.d.a(bitmap, 100, Bitmap.CompressFormat.PNG, com.tencent.mm.compatible.util.d.biR + "temp.avatar", false);
       return true;
     }
     catch (Exception localException)
     {
       for (;;)
       {
-        u.e("!44@/B4Tb64lLpLrFBPJPItazeC2EyRjy73us9HlrmPyGsI=", "save avatar fail." + localException.getMessage());
+        v.e("MicroMsg.RegByMobileRegAIOUI", "save avatar fail." + localException.getMessage());
       }
     }
   }
   
-  public final boolean ve()
+  public final boolean vg()
   {
-    if ((!ay.kz(bNn)) && (ay.kz(RegByMobileRegAIOUI.i(kuT).getText().trim()))) {
-      RegByMobileRegAIOUI.i(kuT).setText(bNn);
-    }
-    if (!e.oW())
+    if ((!be.kf(bGH)) && (be.kf(RegByMobileRegAIOUI.i(kUa).getText().trim())))
     {
-      u.e("!44@/B4Tb64lLpLrFBPJPItazeC2EyRjy73us9HlrmPyGsI=", "SDcard is not available");
+      MMFormInputView localMMFormInputView = RegByMobileRegAIOUI.i(kUa);
+      String str = bGH;
+      if (fNQ == null) {
+        break label85;
+      }
+      fNQ.setText(str);
+    }
+    while (!e.no())
+    {
+      v.e("MicroMsg.RegByMobileRegAIOUI", "SDcard is not available");
       return false;
+      label85:
+      v.e("MicroMsg.MMFormInputView", "contentET is null!");
     }
-    if ((bitmap != null) && (!bitmap.isRecycled()) && (!RegByMobileRegAIOUI.m(kuT)))
+    if ((bitmap != null) && (!bitmap.isRecycled()) && (!RegByMobileRegAIOUI.m(kUa)))
     {
-      RegByMobileRegAIOUI.n(kuT).setImageBitmap(bitmap);
-      RegByMobileRegAIOUI.o(kuT).setVisibility(8);
-      RegByMobileRegAIOUI.p(kuT);
+      RegByMobileRegAIOUI.n(kUa).setImageBitmap(bitmap);
+      RegByMobileRegAIOUI.o(kUa).setVisibility(8);
+      RegByMobileRegAIOUI.p(kUa);
     }
     return true;
   }

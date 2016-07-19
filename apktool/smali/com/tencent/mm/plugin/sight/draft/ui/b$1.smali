@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic gzt:Lcom/tencent/mm/plugin/sight/draft/ui/b;
+.field final synthetic gFV:Lcom/tencent/mm/plugin/sight/draft/ui/b;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 60
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b$1;->gzt:Lcom/tencent/mm/plugin/sight/draft/ui/b;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b$1;->gFV:Lcom/tencent/mm/plugin/sight/draft/ui/b;
 
     invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/draft/ui/c;-><init>()V
 
@@ -38,7 +38,7 @@
 
     .prologue
     .line 64
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b$1;->gzt:Lcom/tencent/mm/plugin/sight/draft/ui/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b$1;->gFV:Lcom/tencent/mm/plugin/sight/draft/ui/b;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/draft/ui/b;->a(Lcom/tencent/mm/plugin/sight/draft/ui/b;)Ljava/util/Set;
 
@@ -62,20 +62,20 @@
     check-cast v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;
 
     .line 65
-    iget-object v2, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cfv:Lcom/tencent/mm/an/f;
+    iget-object v2, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->caH:Lcom/tencent/mm/aq/j;
 
     if-eqz v2, :cond_0
 
     .line 66
     const-string/jumbo v2, ""
 
-    invoke-static {p1, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v2}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    iget-object v3, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cfv:Lcom/tencent/mm/an/f;
+    iget-object v3, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->caH:Lcom/tencent/mm/aq/j;
 
-    iget-object v3, v3, Lcom/tencent/mm/an/f;->field_fileName:Ljava/lang/String;
+    iget-object v3, v3, Lcom/tencent/mm/aq/j;->field_fileName:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -84,9 +84,9 @@
     if-eqz v2, :cond_0
 
     .line 70
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzz:Lcom/tencent/mm/plugin/sight/decode/a/a;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gGb:Lcom/tencent/mm/plugin/sight/decode/a/a;
 
-    invoke-interface {v0, p2}, Lcom/tencent/mm/plugin/sight/decode/a/a;->setThumbBmp(Landroid/graphics/Bitmap;)V
+    invoke-interface {v0, p2}, Lcom/tencent/mm/plugin/sight/decode/a/a;->o(Landroid/graphics/Bitmap;)V
 
     .line 73
     :cond_1

@@ -1,6 +1,9 @@
 package com.tencent.mm.c.b;
 
-public enum b$b {}
+public enum b$b
+{
+  private b$b() {}
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.c.b.b.b

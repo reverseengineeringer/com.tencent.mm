@@ -1,6 +1,6 @@
 package com.tencent.mm.c.b;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class h$2
   implements Runnable
@@ -9,10 +9,10 @@ final class h$2
   
   public final void run()
   {
-    if (!ars.ark)
+    if (!acL.acD)
     {
-      u.d("!44@/B4Tb64lLpJjyqE6YDnApwOwHOAz5sGPSEN1mjztZrA=", "after start bluetooth, timeout to directly start record");
-      ars.lT();
+      v.d("MicroMsg.SceneVoice.Recorder", "after start bluetooth, timeout to directly start record");
+      acL.kh();
     }
   }
 }

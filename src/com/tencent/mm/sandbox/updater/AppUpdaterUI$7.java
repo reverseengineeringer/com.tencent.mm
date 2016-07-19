@@ -6,7 +6,7 @@ import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.net.Uri;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.h;
 
@@ -17,20 +17,20 @@ final class AppUpdaterUI$7
   
   public final void run()
   {
-    g.a(jTb, ejTb).asL, jTb.getString(2131430877), new DialogInterface.OnClickListener()
+    g.a(ksv, eksv).desc, ksv.getString(2131231028), new DialogInterface.OnClickListener()
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
-        paramAnonymousDialogInterface = new Intent("android.intent.action.VIEW", Uri.parse(ejTb).jTp[0]));
+        paramAnonymousDialogInterface = new Intent("android.intent.action.VIEW", Uri.parse(eksv).ksJ[0]));
         paramAnonymousDialogInterface.addFlags(268435456);
-        y.getContext().startActivity(paramAnonymousDialogInterface);
-        AppUpdaterUI.f(jTb);
+        aa.getContext().startActivity(paramAnonymousDialogInterface);
+        AppUpdaterUI.f(ksv);
       }
     }).setOnCancelListener(new DialogInterface.OnCancelListener()
     {
       public final void onCancel(DialogInterface paramAnonymousDialogInterface)
       {
-        AppUpdaterUI.f(jTb);
+        AppUpdaterUI.f(ksv);
       }
     });
   }

@@ -3,7 +3,7 @@ package com.tencent.mm.ui.account;
 import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.plugin.report.service.g;
 
 final class LoginVoiceUI$2
   implements View.OnClickListener
@@ -12,10 +12,10 @@ final class LoginVoiceUI$2
   
   public final void onClick(View paramView)
   {
-    h.fUJ.g(11557, new Object[] { Integer.valueOf(3) });
-    kub.finish();
-    paramView = new Intent(kub, LoginHistoryUI.class);
-    kub.startActivity(paramView);
+    g.gdY.h(11557, new Object[] { Integer.valueOf(3) });
+    kTi.finish();
+    paramView = new Intent(kTi, LoginHistoryUI.class);
+    kTi.startActivity(paramView);
   }
 }
 

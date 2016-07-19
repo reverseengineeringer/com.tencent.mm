@@ -1,8 +1,10 @@
 package com.tencent.mm.ui.base;
 
+import android.view.View;
+
 public abstract interface MMSlideDelView$f
 {
-  public abstract void Z(Object paramObject);
+  public abstract void j(View paramView, int paramInt);
 }
 
 /* Location:

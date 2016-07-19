@@ -4,10 +4,10 @@ import android.app.ProgressDialog;
 import com.tencent.mm.modelfriend.ah;
 import com.tencent.mm.modelfriend.j;
 import com.tencent.mm.pluginsdk.a;
-import com.tencent.mm.sdk.platformtools.ab.a;
+import com.tencent.mm.sdk.platformtools.ad.a;
 
 final class FindMContactInviteUI$5
-  implements ab.a
+  implements ad.a
 {
   FindMContactInviteUI$5(FindMContactInviteUI paramFindMContactInviteUI) {}
   
@@ -16,13 +16,13 @@ final class FindMContactInviteUI$5
     return super.toString() + "|listMFriendData";
   }
   
-  public final boolean vd()
+  public final boolean vf()
   {
     try
     {
-      FindMContactInviteUI.a(lrv, a.cE(lrv));
-      blrv).bMj = FindMContactInviteUI.c(lrv);
-      FindMContactInviteUI.b(lrv).e(ah.zw());
+      FindMContactInviteUI.a(lRZ, a.cA(lRZ));
+      blRZ).bFD = FindMContactInviteUI.c(lRZ);
+      FindMContactInviteUI.b(lRZ).e(ah.zJ());
       return true;
     }
     catch (Exception localException)
@@ -31,14 +31,14 @@ final class FindMContactInviteUI$5
     }
   }
   
-  public final boolean ve()
+  public final boolean vg()
   {
-    if (FindMContactInviteUI.a(lrv) != null)
+    if (FindMContactInviteUI.a(lRZ) != null)
     {
-      FindMContactInviteUI.a(lrv).dismiss();
-      FindMContactInviteUI.a(lrv, null);
+      FindMContactInviteUI.a(lRZ).dismiss();
+      FindMContactInviteUI.a(lRZ, null);
     }
-    FindMContactInviteUI.b(lrv).notifyDataSetChanged();
+    FindMContactInviteUI.b(lRZ).notifyDataSetChanged();
     return false;
   }
 }

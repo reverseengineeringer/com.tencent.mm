@@ -3,62 +3,62 @@ package com.tencent.mm.ui.contact;
 import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
-import com.tencent.mm.ar.c;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.av.c;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.chatting.ChattingUI;
 import com.tencent.mm.ui.contact.a.a;
 
 public class SelectSpecialContactUI
   extends MMBaseSelectContactUI
 {
-  private int dbS;
+  private int day;
   private String title;
   
-  protected final void Ou()
+  protected final n LP()
   {
-    super.Ou();
-    title = getIntent().getStringExtra("titile");
-    dbS = getIntent().getIntExtra("list_attr", 0);
+    return new w(this, getIntent().getStringExtra("filter_type"));
   }
   
-  protected final String afU()
-  {
-    return title;
-  }
-  
-  protected final boolean ahC()
-  {
-    return false;
-  }
-  
-  protected final n ahD()
-  {
-    return new v(this, getIntent().getStringExtra("filter_type"));
-  }
-  
-  protected final p ahE()
+  protected final p LQ()
   {
     return null;
   }
   
-  public void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  protected final boolean LS()
   {
-    paramAdapterView = bhp().rM(paramInt);
+    return false;
+  }
+  
+  protected final String LT()
+  {
+    return title;
+  }
+  
+  protected final void initData()
+  {
+    super.initData();
+    title = getIntent().getStringExtra("titile");
+    day = getIntent().getIntExtra("list_attr", 0);
+  }
+  
+  public void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
+  {
+    paramAdapterView = bmZ().tO(paramInt);
     if (paramAdapterView == null) {}
-    while (cId == null) {
+    while (cFh == null) {
       return;
     }
-    paramAdapterView = cId.field_username;
-    u.i("!44@/B4Tb64lLpLXgGazfMudjQwDSbIF5kbc960s6N0ug7g=", "ClickUser=%s", new Object[] { paramAdapterView });
+    paramAdapterView = cFh.field_username;
+    v.i("MicroMsg.SelectSpecialContactUI", "ClickUser=%s", new Object[] { paramAdapterView });
     paramView = new Intent();
-    if (r.aW(dbS, 16384))
+    if (r.be(day, 16384))
     {
       paramView.putExtra("Select_Contact", paramAdapterView);
       setResult(-1, paramView);
       finish();
       return;
     }
-    if (r.aW(dbS, 32768))
+    if (r.be(day, 32768))
     {
       paramView.putExtra("Contact_User", paramAdapterView);
       c.c(this, "profile", ".ui.ContactInfoUI", paramView);

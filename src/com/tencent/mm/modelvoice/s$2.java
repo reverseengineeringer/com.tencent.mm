@@ -2,7 +2,7 @@ package com.tencent.mm.modelvoice;
 
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnErrorListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class s$2
   implements MediaPlayer.OnErrorListener
@@ -11,20 +11,20 @@ final class s$2
   
   public final boolean onError(MediaPlayer paramMediaPlayer, int paramInt1, int paramInt2)
   {
-    if (chO.chm != null) {
-      chO.chm.onError();
+    if (cdf.ccD != null) {
+      cdf.ccD.onError();
     }
     try
     {
-      chO.blY.release();
-      chO.status = -1;
+      cdf.aZE.release();
+      cdf.status = -1;
       return false;
     }
     catch (Exception paramMediaPlayer)
     {
       for (;;)
       {
-        u.e("!24@40VYnhE9NJIehP//35gXMQ==", "setErrorListener File[" + chO.anC + "] ErrMsg[" + paramMediaPlayer.getStackTrace() + "]");
+        v.e("VoicePlayer", "setErrorListener File[" + cdf.aaq + "] ErrMsg[" + paramMediaPlayer.getStackTrace() + "]");
       }
     }
   }

@@ -3,8 +3,8 @@ package com.tencent.mm.c.a;
 import com.tencent.mm.compatible.b.d;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelvoice.d.b;
-import com.tencent.mm.r.f.b;
-import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.t.f.b;
 
 final class a$1
   implements d.b
@@ -13,20 +13,20 @@ final class a$1
   
   public final void onError()
   {
-    apr.apl.oV();
-    ah.tF().b(apr);
-    if (apr.apo)
+    ah.tG().b(aaJ);
+    if (aaJ.aaG)
     {
-      ah.tF().nM();
-      apr.apo = false;
+      ah.tG().mb();
+      aaJ.aaG = false;
     }
-    ah.tF().setMode(0);
-    if (apr.app != null) {
-      ab.j(new Runnable()
+    ah.tG().setMode(0);
+    aaJ.aaD.nn();
+    if (aaJ.aaH != null) {
+      ad.k(new Runnable()
       {
         public final void run()
         {
-          apr.app.onError();
+          aaJ.aaH.onError();
         }
       });
     }

@@ -4,29 +4,29 @@
 
 
 # virtual methods
-.method public abstract awF()V
+.method public abstract aze()I
 .end method
 
-.method public abstract awG()V
+.method public abstract azf()V
 .end method
 
-.method public abstract awH()V
+.method public abstract azg()V
 .end method
 
-.method public abstract awI()V
+.method public abstract azh()V
 .end method
 
-.method public abstract awJ()Z
+.method public abstract azi()V
 .end method
 
-.method public abstract eJ(Z)V
+.method public abstract azj()Z
 .end method
 
-.method public abstract getViewHeight()I
+.method public abstract eB(Z)V
 .end method
 
-.method public abstract qr()Z
+.method public abstract oU()Z
 .end method
 
-.method public abstract setCameraShadowAlpha(F)V
+.method public abstract u(F)V
 .end method

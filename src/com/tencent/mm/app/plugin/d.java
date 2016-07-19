@@ -5,8 +5,8 @@ import android.content.DialogInterface.OnDismissListener;
 import android.os.Bundle;
 import com.tencent.mm.pluginsdk.i.k;
 import com.tencent.mm.pluginsdk.ui.d.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -17,7 +17,7 @@ public final class d
 {
   private static String a(String paramString1, int paramInt1, int paramInt2, String paramString2)
   {
-    if ((ay.kz(paramString1)) || (ay.kz(paramString2)) || (paramInt1 >= paramInt2)) {
+    if ((be.kf(paramString1)) || (be.kf(paramString2)) || (paramInt1 >= paramInt2)) {
       return paramString1;
     }
     StringBuilder localStringBuilder = new StringBuilder();
@@ -32,15 +32,15 @@ public final class d
     }
     catch (Exception paramString1)
     {
-      u.e("!44@/B4Tb64lLpJlA7B6REc/zShVqjCVepSQzf0nXVT1zJU=", paramString1.getMessage());
+      v.e("MicroMsg.QrCodeURLHelper", paramString1.getMessage());
     }
     return "";
   }
   
   public final boolean a(Context paramContext, String paramString, DialogInterface.OnDismissListener paramOnDismissListener)
   {
-    u.d("!44@/B4Tb64lLpJlA7B6REc/zShVqjCVepSQzf0nXVT1zJU=", "tryHandleEvents, url:%s", new Object[] { paramString });
-    if (ay.kz(paramString)) {
+    v.d("MicroMsg.QrCodeURLHelper", "tryHandleEvents, url:%s", new Object[] { paramString });
+    if (be.kf(paramString)) {
       return false;
     }
     if (paramString.endsWith("@mailto@")) {
@@ -59,7 +59,7 @@ public final class d
     }
   }
   
-  public final boolean ba(String paramString)
+  public final boolean bf(String paramString)
   {
     if ((paramString == null) || (paramString.length() == 0)) {}
     while ((!paramString.endsWith("@mailto@")) && (!paramString.endsWith("@tel@"))) {
@@ -68,9 +68,9 @@ public final class d
     return true;
   }
   
-  public final String o(Context paramContext, String paramString)
+  public final String p(Context paramContext, String paramString)
   {
-    paramContext = a.aP(paramContext, paramString);
+    paramContext = a.aN(paramContext, paramString);
     if (paramContext.size() == 0) {
       return paramString;
     }
@@ -108,7 +108,7 @@ public final class d
     }
     for (;;)
     {
-      u.d("!44@/B4Tb64lLpJlA7B6REc/zShVqjCVepSQzf0nXVT1zJU=", "formatQRString, result:%s", new Object[] { paramString });
+      v.d("MicroMsg.QrCodeURLHelper", "formatQRString, result:%s", new Object[] { paramString });
       return paramString;
       str1 = "<a href=\"%s@tel@\">%s</a>";
       break label112;

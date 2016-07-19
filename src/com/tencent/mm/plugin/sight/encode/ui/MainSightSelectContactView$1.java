@@ -13,29 +13,29 @@ final class MainSightSelectContactView$1
   
   public final void run()
   {
-    if ((MainSightSelectContactView.a(gDm) == MainSightSelectContactView.b(gDm).getCount()) && (MainSightSelectContactView.c(gDm).getViewHeight() >= MainSightSelectContactView.d(gDm))) {}
+    if ((MainSightSelectContactView.a(gJN) == MainSightSelectContactView.b(gJN).getCount()) && (MainSightSelectContactView.c(gJN).aze() >= MainSightSelectContactView.d(gJN))) {}
     int i;
     label225:
     do
     {
       return;
-      if (MainSightSelectContactView.e(gDm) != null) {
-        MainSightSelectContactView.f(gDm).removeFooterView(MainSightSelectContactView.e(gDm));
+      if (MainSightSelectContactView.e(gJN) != null) {
+        MainSightSelectContactView.f(gJN).removeFooterView(MainSightSelectContactView.e(gJN));
       }
-      i = MainSightSelectContactView.d(gDm);
-      if ((MainSightSelectContactView.d(gDm) < 0) || (MainSightSelectContactView.d(gDm) > MainSightSelectContactView.c(gDm).getViewHeight())) {
-        i = MainSightSelectContactView.c(gDm).getViewHeight();
+      i = MainSightSelectContactView.d(gJN);
+      if ((MainSightSelectContactView.d(gJN) < 0) || (MainSightSelectContactView.d(gJN) > MainSightSelectContactView.c(gJN).aze())) {
+        i = MainSightSelectContactView.c(gJN).aze();
       }
-      MainSightSelectContactView.a(gDm, MainSightSelectContactView.b(gDm).getCount());
-      MainSightSelectContactView.b(gDm, i);
+      MainSightSelectContactView.a(gJN, MainSightSelectContactView.b(gJN).getCount());
+      MainSightSelectContactView.b(gJN, i);
       int j = 0;
       int k = 0;
       for (;;)
       {
-        if (j >= MainSightSelectContactView.b(gDm).getCount()) {
+        if (j >= MainSightSelectContactView.b(gJN).getCount()) {
           break label225;
         }
-        localObject = MainSightSelectContactView.b(gDm).getView(j, null, MainSightSelectContactView.f(gDm));
+        localObject = MainSightSelectContactView.b(gJN).getView(j, null, MainSightSelectContactView.f(gJN));
         ((View)localObject).measure(View.MeasureSpec.makeMeasureSpec(0, 0), View.MeasureSpec.makeMeasureSpec(0, 0));
         k += ((View)localObject).getMeasuredHeight();
         if (k >= i) {
@@ -45,11 +45,11 @@ final class MainSightSelectContactView$1
       }
       i -= k;
     } while (i <= 0);
-    MainSightSelectContactView.a(gDm, new View(gDm.getContext()));
+    MainSightSelectContactView.a(gJN, new View(gJN.getContext()));
     Object localObject = new AbsListView.LayoutParams(-1, i);
-    MainSightSelectContactView.e(gDm).setLayoutParams((ViewGroup.LayoutParams)localObject);
-    MainSightSelectContactView.e(gDm).setBackgroundResource(2131231101);
-    MainSightSelectContactView.f(gDm).addFooterView(MainSightSelectContactView.e(gDm));
+    MainSightSelectContactView.e(gJN).setLayoutParams((ViewGroup.LayoutParams)localObject);
+    MainSightSelectContactView.e(gJN).setBackgroundResource(2131689519);
+    MainSightSelectContactView.f(gJN).addFooterView(MainSightSelectContactView.e(gJN));
   }
 }
 

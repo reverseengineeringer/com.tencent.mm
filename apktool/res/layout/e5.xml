@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/t5" android:focusable="false" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="78.599976dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/w3" style="@style/CardSecondFieldLayout">
+        <TextView android:id="@id/w4" style="@style/CardSecondField1Text" />
+        <TextView android:id="@id/w5" style="@style/CardSecondField2Text" />
+    </LinearLayout>
+    <TextView android:layout_gravity="center_vertical" android:id="@id/w6" android:background="@color/c3" android:visibility="visible" android:layout_width="1.0px" android:layout_height="78.599976dip" />
+    <LinearLayout android:id="@id/w7" style="@style/CardSecondFieldLayout">
+        <TextView android:id="@id/w8" style="@style/CardSecondField1Text" />
+        <TextView android:id="@id/w9" style="@style/CardSecondField2Text" />
+    </LinearLayout>
+    <TextView android:layout_gravity="center_vertical" android:id="@id/w_" android:background="@color/c3" android:visibility="visible" android:layout_width="1.0px" android:layout_height="78.599976dip" />
+    <LinearLayout android:id="@id/wa" style="@style/CardSecondFieldLayout">
+        <TextView android:id="@id/wb" style="@style/CardSecondField1Text" />
+        <TextView android:id="@id/wc" style="@style/CardSecondField2Text" />
+    </LinearLayout>
+</LinearLayout>

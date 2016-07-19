@@ -4,49 +4,50 @@ import android.app.Activity;
 import android.hardware.Camera;
 import android.hardware.Camera.CameraInfo;
 import android.hardware.Camera.Parameters;
+import android.hardware.Camera.Size;
 import android.os.Build;
 import android.os.Build.VERSION;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.List;
 
 public final class c
 {
-  public static c.a.a a(Activity paramActivity, int paramInt)
-  {
-    if (bsKbri == 1)
-    {
-      u.d("!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1", "openCamera(), CameraUtilImpl20, cameraId = " + paramInt);
-      new d();
-      return d.oh();
-    }
-    if (bsKbra)
-    {
-      u.d("!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1", "openCamera(), CameraUtilImplConfig, cameraId = " + paramInt);
-      new h();
-      return h.bQ(paramInt);
-    }
-    if (Build.MODEL.equals("M9"))
-    {
-      new i();
-      return i.oh();
-    }
-    if (getNumberOfCameras() > 1)
-    {
-      u.d("!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1", "openCamera(), CameraUtilImpl23, cameraId = " + paramInt);
-      new f();
-      return f.a(paramActivity, paramInt);
-    }
-    new e();
-    return e.bQ(paramInt);
-  }
-  
-  public static List a(Camera.Parameters paramParameters)
+  public static List<Camera.Size> a(Camera.Parameters paramParameters)
   {
     new f();
     return paramParameters.getSupportedPreviewSizes();
   }
   
-  public static List b(Camera.Parameters paramParameters)
+  public static c.a.a b(Activity paramActivity, int paramInt)
+  {
+    if (bgObfi == 1)
+    {
+      v.d("MicroMsg.CameraUtil", "openCamera(), CameraUtilImpl20, cameraId = " + paramInt);
+      new d();
+      return d.mx();
+    }
+    if (bgObfa)
+    {
+      v.d("MicroMsg.CameraUtil", "openCamera(), CameraUtilImplConfig, cameraId = " + paramInt);
+      new h();
+      return h.ci(paramInt);
+    }
+    if (Build.MODEL.equals("M9"))
+    {
+      new i();
+      return i.mx();
+    }
+    if (getNumberOfCameras() > 1)
+    {
+      v.d("MicroMsg.CameraUtil", "openCamera(), CameraUtilImpl23, cameraId = " + paramInt);
+      new f();
+      return f.b(paramActivity, paramInt);
+    }
+    new e();
+    return e.ci(paramInt);
+  }
+  
+  public static List<Camera.Size> b(Camera.Parameters paramParameters)
   {
     if (Build.VERSION.SDK_INT >= 11)
     {
@@ -58,7 +59,7 @@ public final class c
   
   public static int getNumberOfCameras()
   {
-    if ((bsKbra) && (bsKbrg))
+    if ((bgObfa) && (bgObfg))
     {
       new h();
       return h.getNumberOfCameras();
@@ -67,9 +68,9 @@ public final class c
     return Camera.getNumberOfCameras();
   }
   
-  public static int of()
+  public static int mv()
   {
-    if (bsQbrW == 1) {
+    if (bgWbfX == 1) {
       return 0;
     }
     int j = Camera.getNumberOfCameras();
@@ -79,12 +80,12 @@ public final class c
     {
       Camera.getCameraInfo(i, localCameraInfo);
       if (facing == 0) {
-        u.d("!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1", "tigercam get bid %d", new Object[] { Integer.valueOf(i) });
+        v.d("MicroMsg.CameraUtil", "tigercam get bid %d", new Object[] { Integer.valueOf(i) });
       }
     }
     for (;;)
     {
-      u.d("!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1", "tigercam getBackCameraId %d", new Object[] { Integer.valueOf(i) });
+      v.d("MicroMsg.CameraUtil", "tigercam getBackCameraId %d", new Object[] { Integer.valueOf(i) });
       return i;
       i += 1;
       break;
@@ -92,9 +93,9 @@ public final class c
     }
   }
   
-  public static boolean og()
+  public static boolean mw()
   {
-    if (bsKbri == 1) {}
+    if (bgObfi == 1) {}
     while ((Build.VERSION.SDK_INT == 10) && (Build.MODEL.equals("GT-S5360"))) {
       return true;
     }
@@ -105,8 +106,8 @@ public final class c
   {
     public static final class a
     {
-      public int brw;
-      public Camera brz;
+      public int bfw;
+      public Camera bfz;
     }
   }
 }

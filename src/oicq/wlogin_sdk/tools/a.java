@@ -19,7 +19,7 @@ final class a
   byte[] prePlain;
   Random random = new Random();
   
-  private static long C(byte[] paramArrayOfByte, int paramInt)
+  private static long D(byte[] paramArrayOfByte, int paramInt)
   {
     long l = 0L;
     int i = paramInt;
@@ -38,12 +38,12 @@ final class a
     int i = 16;
     try
     {
-      long l2 = C(paramArrayOfByte, 0);
-      long l1 = C(paramArrayOfByte, 4);
-      long l4 = C(key, 0);
-      long l5 = C(key, 4);
-      long l6 = C(key, 8);
-      long l7 = C(key, 12);
+      long l2 = D(paramArrayOfByte, 0);
+      long l1 = D(paramArrayOfByte, 4);
+      long l4 = D(key, 0);
+      long l5 = D(key, 4);
+      long l6 = D(key, 8);
+      long l7 = D(key, 12);
       long l3 = 0L;
       for (;;)
       {
@@ -72,12 +72,12 @@ final class a
     paramInt = 16;
     try
     {
-      long l1 = C(paramArrayOfByte, 0);
-      long l3 = C(paramArrayOfByte, 4);
-      long l4 = C(key, 0);
-      long l5 = C(key, 4);
-      long l6 = C(key, 8);
-      long l7 = C(key, 12);
+      long l1 = D(paramArrayOfByte, 0);
+      long l3 = D(paramArrayOfByte, 4);
+      long l4 = D(key, 0);
+      long l5 = D(key, 4);
+      long l6 = D(key, 8);
+      long l7 = D(key, 12);
       long l2 = 3816266640L;
       for (;;)
       {

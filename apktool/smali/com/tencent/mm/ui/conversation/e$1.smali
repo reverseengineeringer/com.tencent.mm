@@ -1,6 +1,9 @@
 .class final Lcom/tencent/mm/ui/conversation/e$1;
-.super Lcom/tencent/mm/network/m$a;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcom/tencent/mm/sdk/platformtools/ah$a;
 
 
 # annotations
@@ -15,56 +18,45 @@
 
 
 # instance fields
-.field private final lql:Lcom/tencent/mm/sdk/platformtools/af;
-
-.field final synthetic lqm:Lcom/tencent/mm/ui/conversation/e;
+.field final synthetic lPY:Lcom/tencent/mm/ui/conversation/e;
 
 
 # direct methods
 .method constructor <init>(Lcom/tencent/mm/ui/conversation/e;)V
-    .locals 3
+    .locals 0
 
     .prologue
-    .line 234
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/e$1;->lqm:Lcom/tencent/mm/ui/conversation/e;
+    .line 1227
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/e$1;->lPY:Lcom/tencent/mm/ui/conversation/e;
 
-    invoke-direct {p0}, Lcom/tencent/mm/network/m$a;-><init>()V
-
-    .line 236
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/af;
-
-    new-instance v1, Lcom/tencent/mm/ui/conversation/e$1$1;
-
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/conversation/e$1$1;-><init>(Lcom/tencent/mm/ui/conversation/e$1;)V
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;-><init>(Lcom/tencent/mm/sdk/platformtools/af$a;Z)V
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/conversation/e$1;->lql:Lcom/tencent/mm/sdk/platformtools/af;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final aK(I)V
-    .locals 3
+.method public final jK()Z
+    .locals 1
 
     .prologue
-    .line 246
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/e$1;->lql:Lcom/tencent/mm/sdk/platformtools/af;
+    .line 1231
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/e$1;->lPY:Lcom/tencent/mm/ui/conversation/e;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/e;->d(Lcom/tencent/mm/ui/conversation/e;)Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 247
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/e$1;->lql:Lcom/tencent/mm/sdk/platformtools/af;
+    .line 1232
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/e$1;->lPY:Lcom/tencent/mm/ui/conversation/e;
 
-    const-wide/16 v1, 0xa
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/e;->e(Lcom/tencent/mm/ui/conversation/e;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;->ds(J)V
-
-    .line 249
+    .line 1234
     :cond_0
-    return-void
+    const/4 v0, 0x0
+
+    return v0
 .end method

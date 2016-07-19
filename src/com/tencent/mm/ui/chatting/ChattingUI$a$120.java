@@ -1,22 +1,16 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.d.a.de;
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.sdk.c.a;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 final class ChattingUI$a$120
-  implements DialogInterface.OnClickListener
+  implements View.OnClickListener
 {
-  ChattingUI$a$120(ChattingUI.a parama) {}
+  ChattingUI$a$120(ChattingUI.a parama, int paramInt) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final void onClick(View paramView)
   {
-    laF.bfv();
-    paramDialogInterface = new de();
-    awE.username = laF.kRI.field_username;
-    a.jUF.j(paramDialogInterface);
+    ChattingUI.a.c(lAY, bFK);
   }
 }
 

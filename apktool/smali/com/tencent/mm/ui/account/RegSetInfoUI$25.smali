@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/RegSetInfoUI;->aqG()V
+    value = Lcom/tencent/mm/ui/account/RegSetInfoUI;->atH()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+.field final synthetic kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 1176
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$25;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$25;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,12 +43,12 @@
     .line 1180
     const-string/jumbo v0, "R400_100_signup"
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kC(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->ll(Ljava/lang/String;)V
 
     .line 1181
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$25;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$25;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     const-class v2, Lcom/tencent/mm/ui/account/LoginUI;
 
@@ -60,12 +60,12 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 1183
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$25;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$25;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->startActivity(Landroid/content/Intent;)V
 
     .line 1184
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$25;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$25;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->finish()V
 

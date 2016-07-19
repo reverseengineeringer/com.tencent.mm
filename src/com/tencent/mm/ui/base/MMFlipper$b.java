@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 public abstract interface MMFlipper$b
 {
-  public abstract void kk(int paramInt);
+  public abstract void lA(int paramInt);
 }
 
 /* Location:

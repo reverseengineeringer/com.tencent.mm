@@ -1,14 +1,13 @@
 .class public interface abstract Lcom/tencent/smtt/sdk/n;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # virtual methods
-.method public abstract onDownloadFinish(I)V
+.method public abstract qW(I)V
 .end method
 
-.method public abstract onDownloadProgress(I)V
+.method public abstract qX(I)V
 .end method
 
-.method public abstract onInstallFinish(I)V
+.method public abstract qY(I)V
 .end method

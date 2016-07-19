@@ -1,24 +1,17 @@
 package com.tencent.mm.ui.conversation;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
-import com.tencent.mm.plugin.report.service.h;
+import android.view.View;
+import android.widget.ListView;
+import com.tencent.mm.ui.base.MMSlideDelView.f;
 
 final class f$6
-  implements DialogInterface.OnClickListener
+  implements MMSlideDelView.f
 {
-  f$6(SharedPreferences paramSharedPreferences, int paramInt1, int paramInt2) {}
+  f$6(f paramf) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final void j(View paramView, int paramInt)
   {
-    lqA.edit().putInt("show_rating_flag", 4).commit();
-    if (paramDialogInterface != null) {
-      paramDialogInterface.dismiss();
-    }
-    f.bhW();
-    h.fUJ.g(11216, new Object[] { Integer.valueOf(1), Integer.valueOf(lqC), Integer.valueOf(lqD) });
+    f.c(lQP).performItemClick(paramView, paramInt, 0L);
   }
 }
 

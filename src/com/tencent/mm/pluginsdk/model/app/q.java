@@ -3,12 +3,12 @@ package com.tencent.mm.pluginsdk.model.app;
 final class q
 {
   public String appId;
-  public int cbf;
+  public int bUR;
   
   public q(String paramString, int paramInt)
   {
     appId = paramString;
-    cbf = paramInt;
+    bUR = paramInt;
   }
   
   public final boolean equals(Object paramObject)
@@ -21,13 +21,13 @@ final class q
         return false;
       } while (!(paramObject instanceof q));
       paramObject = (q)paramObject;
-    } while ((!appId.equals(appId)) || (cbf != cbf));
+    } while ((!appId.equals(appId)) || (bUR != bUR));
     return true;
   }
   
   public final String toString()
   {
-    return appId + cbf;
+    return appId + bUR;
   }
 }
 

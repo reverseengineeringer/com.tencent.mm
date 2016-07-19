@@ -1,10 +1,16 @@
 package com.tencent.mm.plugin.sns.d;
 
-import java.util.Comparator;
+import com.tencent.mm.e.a.ma;
+import com.tencent.mm.sdk.c.c;
 
 final class a$1
-  implements Comparator
-{}
+  extends c<ma>
+{
+  a$1(a parama)
+  {
+    kum = ma.class.getName().hashCode();
+  }
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.plugin.sns.d.a.1

@@ -7,11 +7,11 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.os.Message;
 import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class b$1
-  extends aa
+  extends ac
 {
   b$1(b paramb, Looper paramLooper)
   {
@@ -21,25 +21,25 @@ final class b$1
   public final void handleMessage(Message paramMessage)
   {
     super.handleMessage(paramMessage);
-    y.getContext().getSharedPreferences("notify_prep", 0).edit().putBoolean("longNoopIntervalFlag", true).commit();
+    aa.getContext().getSharedPreferences("notify_prep", 0).edit().putBoolean("longNoopIntervalFlag", true).commit();
     String str1 = paramMessage.getData().getString("notification.show.talker");
     String str2 = paramMessage.getData().getString("notification.show.message.content");
     int i = paramMessage.getData().getInt("notification.show.message.type");
     int j = paramMessage.getData().getInt("notification.show.tipsflag");
-    u.i("!32@/B4Tb64lLpJmD2NiAVxmvhwfS3ubub4R", "notify need to deal: %s", new Object[] { str1 });
+    v.i("MicroMsg.MMNotification", "notify need to deal: %s", new Object[] { str1 });
     try
     {
       if (what == 1)
       {
-        b.a(bnB, str1, str2, i, j, true);
+        b.a(bbz, str1, str2, i, j, true);
         return;
       }
-      b.a(bnB, str1, str2, i, j, false);
+      b.a(bbz, str1, str2, i, j, false);
       return;
     }
     catch (Exception paramMessage)
     {
-      u.printErrStackTrace("!32@/B4Tb64lLpJmD2NiAVxmvhwfS3ubub4R", paramMessage, "showNotifiHandler", new Object[0]);
+      v.printErrStackTrace("MicroMsg.MMNotification", paramMessage, "showNotifiHandler", new Object[0]);
     }
   }
 }

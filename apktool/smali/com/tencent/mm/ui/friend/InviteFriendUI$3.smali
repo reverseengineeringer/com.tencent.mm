@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/friend/InviteFriendUI;->Gb()V
+    value = Lcom/tencent/mm/ui/friend/InviteFriendUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+.field final synthetic lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 404
-    iput-object p1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$3;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$3;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 408
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$3;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$3;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/friend/InviteFriendUI;->finish()V
 

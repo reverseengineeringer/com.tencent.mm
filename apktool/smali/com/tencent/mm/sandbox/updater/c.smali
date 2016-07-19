@@ -12,25 +12,25 @@
 
 
 # instance fields
-.field private akW:Ljava/lang/String;
+.field private XV:Ljava/lang/String;
 
-.field private bVa:Z
+.field private bOB:Z
 
-.field private hzJ:I
+.field private hRD:I
 
-.field private jTj:Lcom/tencent/mm/sandbox/b$a;
+.field private ksD:Lcom/tencent/mm/sandbox/b$a;
 
-.field private jTp:[Ljava/lang/String;
+.field private ksJ:[Ljava/lang/String;
 
-.field private jTq:Lcom/tencent/mm/sandbox/updater/c$a;
+.field private ksK:Lcom/tencent/mm/sandbox/updater/c$a;
 
-.field private jTr:Z
+.field private ksL:Z
 
-.field private jTs:Ljava/lang/String;
+.field private ksM:Ljava/lang/String;
 
-.field private jTt:Lcom/tencent/mm/sdk/platformtools/aa;
+.field private ksN:Lcom/tencent/mm/sdk/platformtools/ac;
 
-.field private jTu:Lcom/tencent/mm/sandbox/b$a;
+.field private ksO:Lcom/tencent/mm/sandbox/b$a;
 
 
 # direct methods
@@ -48,30 +48,30 @@
     .line 44
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jTq:Lcom/tencent/mm/sandbox/updater/c$a;
+    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksK:Lcom/tencent/mm/sandbox/updater/c$a;
 
     .line 46
-    iput v1, p0, Lcom/tencent/mm/sandbox/updater/c;->hzJ:I
+    iput v1, p0, Lcom/tencent/mm/sandbox/updater/c;->hRD:I
 
     .line 47
-    iput-boolean v1, p0, Lcom/tencent/mm/sandbox/updater/c;->jTr:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/sandbox/updater/c;->ksL:Z
 
     .line 51
-    iput-boolean v1, p0, Lcom/tencent/mm/sandbox/updater/c;->bVa:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/sandbox/updater/c;->bOB:Z
 
     .line 117
     new-instance v0, Lcom/tencent/mm/sandbox/updater/c$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/sandbox/updater/c$1;-><init>(Lcom/tencent/mm/sandbox/updater/c;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jTt:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksN:Lcom/tencent/mm/sdk/platformtools/ac;
 
     .line 193
     new-instance v0, Lcom/tencent/mm/sandbox/updater/c$3;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/sandbox/updater/c$3;-><init>(Lcom/tencent/mm/sandbox/updater/c;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jTu:Lcom/tencent/mm/sandbox/b$a;
+    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksO:Lcom/tencent/mm/sandbox/b$a;
 
     .line 61
     new-array v0, v2, [Ljava/lang/String;
@@ -79,16 +79,16 @@
     aput-object p4, v0, v1
 
     .line 63
-    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jTp:[Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksJ:[Ljava/lang/String;
 
     .line 64
-    iput-boolean v2, p0, Lcom/tencent/mm/sandbox/updater/c;->jTr:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/sandbox/updater/c;->ksL:Z
 
     .line 65
-    iput-object p5, p0, Lcom/tencent/mm/sandbox/updater/c;->akW:Ljava/lang/String;
+    iput-object p5, p0, Lcom/tencent/mm/sandbox/updater/c;->XV:Ljava/lang/String;
 
     .line 66
-    iput-object p6, p0, Lcom/tencent/mm/sandbox/updater/c;->jTs:Ljava/lang/String;
+    iput-object p6, p0, Lcom/tencent/mm/sandbox/updater/c;->ksM:Ljava/lang/String;
 
     .line 67
     return-void
@@ -106,53 +106,53 @@
     .line 44
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jTq:Lcom/tencent/mm/sandbox/updater/c$a;
+    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksK:Lcom/tencent/mm/sandbox/updater/c$a;
 
     .line 46
-    iput v1, p0, Lcom/tencent/mm/sandbox/updater/c;->hzJ:I
+    iput v1, p0, Lcom/tencent/mm/sandbox/updater/c;->hRD:I
 
     .line 47
-    iput-boolean v1, p0, Lcom/tencent/mm/sandbox/updater/c;->jTr:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/sandbox/updater/c;->ksL:Z
 
     .line 51
-    iput-boolean v1, p0, Lcom/tencent/mm/sandbox/updater/c;->bVa:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/sandbox/updater/c;->bOB:Z
 
     .line 117
     new-instance v0, Lcom/tencent/mm/sandbox/updater/c$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/sandbox/updater/c$1;-><init>(Lcom/tencent/mm/sandbox/updater/c;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jTt:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksN:Lcom/tencent/mm/sdk/platformtools/ac;
 
     .line 193
     new-instance v0, Lcom/tencent/mm/sandbox/updater/c$3;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/sandbox/updater/c$3;-><init>(Lcom/tencent/mm/sandbox/updater/c;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jTu:Lcom/tencent/mm/sandbox/b$a;
+    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksO:Lcom/tencent/mm/sandbox/b$a;
 
     .line 56
-    iput-object p4, p0, Lcom/tencent/mm/sandbox/updater/c;->jTp:[Ljava/lang/String;
+    iput-object p4, p0, Lcom/tencent/mm/sandbox/updater/c;->ksJ:[Ljava/lang/String;
 
     .line 57
     return-void
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/sandbox/updater/c;Lcom/tencent/mm/protocal/b/alq;)V
+.method static synthetic a(Lcom/tencent/mm/sandbox/updater/c;Lcom/tencent/mm/protocal/b/amb;)V
     .locals 2
 
     .prologue
     .line 38
     :try_start_0
-    const-string/jumbo v0, "!56@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkWxWU3EihDr6zrocW4g7iOg=="
+    const-string/jumbo v0, "MicroMsg.NetSceneGetUpdatePackFromCDN"
 
     const-string/jumbo v1, "in genNewAPKInNewThread()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Lcom/tencent/mm/sandbox/updater/c$2;
 
-    invoke-direct {v0, p0, p1}, Lcom/tencent/mm/sandbox/updater/c$2;-><init>(Lcom/tencent/mm/sandbox/updater/c;Lcom/tencent/mm/protocal/b/alq;)V
+    invoke-direct {v0, p0, p1}, Lcom/tencent/mm/sandbox/updater/c$2;-><init>(Lcom/tencent/mm/sandbox/updater/c;Lcom/tencent/mm/protocal/b/amb;)V
 
     const-string/jumbo v1, "NetSceneGetUpdatePackFromCDN_genApk"
 
@@ -166,11 +166,11 @@
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!56@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkWxWU3EihDr6zrocW4g7iOg=="
+    const-string/jumbo v0, "MicroMsg.NetSceneGetUpdatePackFromCDN"
 
     const-string/jumbo v1, "exception in genNewAPKInNewThread()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
@@ -186,9 +186,9 @@
 
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/c;->jTt:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/c;->ksN:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/platformtools/aa;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/platformtools/ac;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_0
 .end method
@@ -198,17 +198,17 @@
 
     .prologue
     .line 38
-    iget-boolean v0, p0, Lcom/tencent/mm/sandbox/updater/c;->bVa:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/sandbox/updater/c;->bOB:Z
 
     return v0
 .end method
 
-.method private aTV()I
+.method private aYS()I
     .locals 3
 
     .prologue
     .line 280
-    const-string/jumbo v0, "!56@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkWxWU3EihDr6zrocW4g7iOg=="
+    const-string/jumbo v0, "MicroMsg.NetSceneGetUpdatePackFromCDN"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -216,7 +216,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/sandbox/updater/c;->hzJ:I
+    iget v2, p0, Lcom/tencent/mm/sandbox/updater/c;->hRD:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -228,7 +228,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/tencent/mm/sandbox/updater/c;->hzJ:I
+    iget v2, p0, Lcom/tencent/mm/sandbox/updater/c;->hRD:I
 
     div-int/lit8 v2, v2, 0x5
 
@@ -240,10 +240,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 282
-    iget v0, p0, Lcom/tencent/mm/sandbox/updater/c;->hzJ:I
+    iget v0, p0, Lcom/tencent/mm/sandbox/updater/c;->hRD:I
 
     div-int/lit8 v0, v0, 0x5
 
@@ -255,7 +255,7 @@
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jTj:Lcom/tencent/mm/sandbox/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksD:Lcom/tencent/mm/sandbox/b$a;
 
     return-object v0
 .end method
@@ -265,17 +265,17 @@
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jTs:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksM:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic d(Lcom/tencent/mm/sandbox/updater/c;)Lcom/tencent/mm/sdk/platformtools/aa;
+.method static synthetic d(Lcom/tencent/mm/sandbox/updater/c;)Lcom/tencent/mm/sdk/platformtools/ac;
     .locals 1
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jTt:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksN:Lcom/tencent/mm/sdk/platformtools/ac;
 
     return-object v0
 .end method
@@ -285,11 +285,11 @@
 
     .prologue
     .line 38
-    iget v0, p0, Lcom/tencent/mm/sandbox/updater/c;->hzJ:I
+    iget v0, p0, Lcom/tencent/mm/sandbox/updater/c;->hRD:I
 
     add-int/lit8 v1, v0, 0x1
 
-    iput v1, p0, Lcom/tencent/mm/sandbox/updater/c;->hzJ:I
+    iput v1, p0, Lcom/tencent/mm/sandbox/updater/c;->hRD:I
 
     return v0
 .end method
@@ -299,7 +299,7 @@
 
     .prologue
     .line 38
-    iget v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jSM:I
+    iget v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksg:I
 
     return v0
 .end method
@@ -309,7 +309,7 @@
 
     .prologue
     .line 38
-    iget-boolean v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jTr:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksL:Z
 
     return v0
 .end method
@@ -319,7 +319,7 @@
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->akW:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->XV:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -329,7 +329,7 @@
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jSO:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksi:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -339,7 +339,7 @@
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jSO:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksi:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -349,7 +349,7 @@
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jSO:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksi:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -367,7 +367,7 @@
     const/4 v3, -0x1
 
     .line 71
-    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/c;->jTj:Lcom/tencent/mm/sandbox/b$a;
+    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/c;->ksD:Lcom/tencent/mm/sandbox/b$a;
 
     .line 73
     invoke-static {}, Lcom/tencent/mm/compatible/util/g;->getExternalStorageState()Ljava/lang/String;
@@ -383,14 +383,14 @@
     if-nez v0, :cond_0
 
     .line 74
-    const-string/jumbo v0, "!56@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkWxWU3EihDr6zrocW4g7iOg=="
+    const-string/jumbo v0, "MicroMsg.NetSceneGetUpdatePackFromCDN"
 
     const-string/jumbo v1, "SDCard not available."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 75
-    invoke-interface {p1, v3, v3, v4}, Lcom/tencent/mm/sandbox/b$a;->a(IILcom/tencent/mm/protocal/b/alq;)V
+    invoke-interface {p1, v3, v3, v4}, Lcom/tencent/mm/sandbox/b$a;->a(IILcom/tencent/mm/protocal/b/amb;)V
 
     .line 107
     :goto_0
@@ -398,35 +398,35 @@
 
     .line 79
     :cond_0
-    iget-boolean v0, p0, Lcom/tencent/mm/sandbox/updater/c;->bVa:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/sandbox/updater/c;->bOB:Z
 
     if-eqz v0, :cond_1
 
     .line 80
-    const-string/jumbo v0, "!56@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkWxWU3EihDr6zrocW4g7iOg=="
+    const-string/jumbo v0, "MicroMsg.NetSceneGetUpdatePackFromCDN"
 
     const-string/jumbo v1, "netscene had been canceled."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 81
-    invoke-interface {p1, v3, v3, v4}, Lcom/tencent/mm/sandbox/b$a;->a(IILcom/tencent/mm/protocal/b/alq;)V
+    invoke-interface {p1, v3, v3, v4}, Lcom/tencent/mm/sandbox/b$a;->a(IILcom/tencent/mm/protocal/b/amb;)V
 
     goto :goto_0
 
     .line 85
     :cond_1
-    invoke-virtual {p0}, Lcom/tencent/mm/sandbox/updater/c;->aTO()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/sandbox/updater/c;->aYL()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    invoke-direct {p0}, Lcom/tencent/mm/sandbox/updater/c;->aTV()I
+    invoke-direct {p0}, Lcom/tencent/mm/sandbox/updater/c;->aYS()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/c;->jTp:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/c;->ksJ:[Ljava/lang/String;
 
     array-length v1, v1
 
@@ -434,7 +434,7 @@
 
     .line 86
     :cond_2
-    const-string/jumbo v0, "!56@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkWxWU3EihDr6zrocW4g7iOg=="
+    const-string/jumbo v0, "MicroMsg.NetSceneGetUpdatePackFromCDN"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -442,7 +442,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/sandbox/updater/c;->jTp:[Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/sandbox/updater/c;->ksJ:[Ljava/lang/String;
 
     array-length v2, v2
 
@@ -454,27 +454,27 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 87
-    iget-boolean v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jTr:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksL:Z
 
     if-eqz v0, :cond_3
 
     .line 88
-    invoke-interface {p1, v5, v3, v4}, Lcom/tencent/mm/sandbox/b$a;->a(IILcom/tencent/mm/protocal/b/alq;)V
+    invoke-interface {p1, v5, v3, v4}, Lcom/tencent/mm/sandbox/b$a;->a(IILcom/tencent/mm/protocal/b/amb;)V
 
     goto :goto_0
 
     .line 90
     :cond_3
-    invoke-interface {p1, v3, v3, v4}, Lcom/tencent/mm/sandbox/b$a;->a(IILcom/tencent/mm/protocal/b/alq;)V
+    invoke-interface {p1, v3, v3, v4}, Lcom/tencent/mm/sandbox/b$a;->a(IILcom/tencent/mm/protocal/b/amb;)V
 
     goto :goto_0
 
     .line 95
     :cond_4
-    iget v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jSM:I
+    iget v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksg:I
 
     int-to-long v0, v0
 
@@ -485,27 +485,27 @@
     if-nez v0, :cond_6
 
     .line 96
-    const-string/jumbo v0, "!56@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkWxWU3EihDr6zrocW4g7iOg=="
+    const-string/jumbo v0, "MicroMsg.NetSceneGetUpdatePackFromCDN"
 
     const-string/jumbo v1, "SDCard full"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 97
-    iget-boolean v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jTr:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksL:Z
 
     if-eqz v0, :cond_5
 
     .line 98
     const/16 v0, 0xd
 
-    invoke-interface {p1, v0, v3, v4}, Lcom/tencent/mm/sandbox/b$a;->a(IILcom/tencent/mm/protocal/b/alq;)V
+    invoke-interface {p1, v0, v3, v4}, Lcom/tencent/mm/sandbox/b$a;->a(IILcom/tencent/mm/protocal/b/amb;)V
 
     goto :goto_0
 
     .line 100
     :cond_5
-    invoke-interface {p1, v3, v3, v4}, Lcom/tencent/mm/sandbox/b$a;->a(IILcom/tencent/mm/protocal/b/alq;)V
+    invoke-interface {p1, v3, v3, v4}, Lcom/tencent/mm/sandbox/b$a;->a(IILcom/tencent/mm/protocal/b/amb;)V
 
     goto :goto_0
 
@@ -513,32 +513,32 @@
     :cond_6
     new-instance v0, Lcom/tencent/mm/sandbox/updater/c$a;
 
-    iget v1, p0, Lcom/tencent/mm/sandbox/updater/c;->jSM:I
+    iget v1, p0, Lcom/tencent/mm/sandbox/updater/c;->ksg:I
 
-    invoke-virtual {p0}, Lcom/tencent/mm/sandbox/updater/c;->aTM()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/mm/sandbox/updater/c;->aYJ()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/a/e;->aw(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/tencent/mm/a/e;->aA(Ljava/lang/String;)I
 
     move-result v2
 
-    iget-object v3, p0, Lcom/tencent/mm/sandbox/updater/c;->jTu:Lcom/tencent/mm/sandbox/b$a;
+    iget-object v3, p0, Lcom/tencent/mm/sandbox/updater/c;->ksO:Lcom/tencent/mm/sandbox/b$a;
 
     invoke-direct {v0, p0, v1, v2, v3}, Lcom/tencent/mm/sandbox/updater/c$a;-><init>(Lcom/tencent/mm/sandbox/updater/c;IILcom/tencent/mm/sandbox/b$a;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jTq:Lcom/tencent/mm/sandbox/updater/c$a;
+    iput-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksK:Lcom/tencent/mm/sandbox/updater/c$a;
 
     .line 106
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jTq:Lcom/tencent/mm/sandbox/updater/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksK:Lcom/tencent/mm/sandbox/updater/c$a;
 
     new-array v1, v5, [Ljava/lang/String;
 
     const/4 v2, 0x0
 
-    iget-object v3, p0, Lcom/tencent/mm/sandbox/updater/c;->jTp:[Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/sandbox/updater/c;->ksJ:[Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/tencent/mm/sandbox/updater/c;->aTV()I
+    invoke-direct {p0}, Lcom/tencent/mm/sandbox/updater/c;->aYS()I
 
     move-result v4
 
@@ -551,12 +551,12 @@
     goto/16 :goto_0
 .end method
 
-.method protected final aTM()Ljava/lang/String;
+.method protected final aYJ()Ljava/lang/String;
     .locals 2
 
     .prologue
     .line 111
-    iget-boolean v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jTr:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksL:Z
 
     if-eqz v0, :cond_0
 
@@ -565,13 +565,13 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/tencent/mm/sandbox/updater/c;->jSK:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/sandbox/updater/c;->kse:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/c;->akW:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/c;->XV:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -592,19 +592,19 @@
     return-object v0
 
     :cond_0
-    invoke-super {p0}, Lcom/tencent/mm/sandbox/monitor/c;->aTM()Ljava/lang/String;
+    invoke-super {p0}, Lcom/tencent/mm/sandbox/monitor/c;->aYJ()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method public final aTN()Ljava/lang/String;
+.method public final aYK()Ljava/lang/String;
     .locals 2
 
     .prologue
     .line 263
-    iget-boolean v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jTr:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksL:Z
 
     if-eqz v0, :cond_0
 
@@ -613,13 +613,13 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/tencent/mm/sandbox/updater/c;->jSK:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/sandbox/updater/c;->kse:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/c;->jTs:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/c;->ksM:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -644,13 +644,13 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/tencent/mm/sandbox/updater/c;->jSK:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/sandbox/updater/c;->kse:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/c;->jSO:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/c;->ksi:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -676,21 +676,21 @@
     const/4 v2, 0x1
 
     .line 271
-    const-string/jumbo v0, "!56@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkWxWU3EihDr6zrocW4g7iOg=="
+    const-string/jumbo v0, "MicroMsg.NetSceneGetUpdatePackFromCDN"
 
     const-string/jumbo v1, "cancel netscene"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 272
-    iput-boolean v2, p0, Lcom/tencent/mm/sandbox/updater/c;->bVa:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/sandbox/updater/c;->bOB:Z
 
     .line 273
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jTq:Lcom/tencent/mm/sandbox/updater/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksK:Lcom/tencent/mm/sandbox/updater/c$a;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jTq:Lcom/tencent/mm/sandbox/updater/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksK:Lcom/tencent/mm/sandbox/updater/c$a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/sandbox/updater/c$a;->isCancelled()Z
 
@@ -699,7 +699,7 @@
     if-nez v0, :cond_0
 
     .line 274
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->jTq:Lcom/tencent/mm/sandbox/updater/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c;->ksK:Lcom/tencent/mm/sandbox/updater/c$a;
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/sandbox/updater/c$a;->cancel(Z)Z
 

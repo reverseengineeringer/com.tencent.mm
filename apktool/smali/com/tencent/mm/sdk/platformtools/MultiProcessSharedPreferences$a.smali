@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private jWw:Landroid/os/Bundle;
+.field private kwS:Landroid/os/Bundle;
 
 
 # direct methods
@@ -25,15 +25,15 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 664
+    .line 663
     new-array v0, v1, [Ljava/lang/String;
 
     invoke-direct {p0, v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;I)V
 
-    .line 665
-    iput-object p1, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$a;->jWw:Landroid/os/Bundle;
+    .line 664
+    iput-object p1, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$a;->kwS:Landroid/os/Bundle;
 
-    .line 666
+    .line 665
     return-void
 .end method
 
@@ -43,8 +43,8 @@
     .locals 1
 
     .prologue
-    .line 670
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$a;->jWw:Landroid/os/Bundle;
+    .line 669
+    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$a;->kwS:Landroid/os/Bundle;
 
     return-object v0
 .end method
@@ -53,11 +53,11 @@
     .locals 1
 
     .prologue
-    .line 675
-    iput-object p1, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$a;->jWw:Landroid/os/Bundle;
+    .line 674
+    iput-object p1, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$a;->kwS:Landroid/os/Bundle;
 
-    .line 676
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$a;->jWw:Landroid/os/Bundle;
+    .line 675
+    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$a;->kwS:Landroid/os/Bundle;
 
     return-object v0
 .end method

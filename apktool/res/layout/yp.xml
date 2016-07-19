@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@drawable/m_" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="3.0" android:minHeight="@dimen/ha"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ToggleButton android:id="@id/big" android:textOn="@string/c4k" android:textOff="@string/c4k" android:drawableTop="@drawable/cu" style="@style/ChatRoomSpecialCheckBox" />
+    <ToggleButton android:id="@id/bih" android:textOn="@string/c45" android:textOff="@string/c45" android:drawableTop="@drawable/cu" style="@style/ChatRoomSpecialCheckBox" />
+    <ToggleButton android:id="@id/bii" android:textOn="@string/c57" android:textOff="@string/c57" android:drawableTop="@drawable/cu" style="@style/ChatRoomSpecialCheckBox" />
+</LinearLayout>

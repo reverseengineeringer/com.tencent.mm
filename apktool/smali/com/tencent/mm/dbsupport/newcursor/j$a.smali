@@ -15,8 +15,21 @@
 
 
 # virtual methods
-.method public abstract d(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+.method public abstract e(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/Object;",
+            ">;)",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/dbsupport/newcursor/a;",
+            ">;"
+        }
+    .end annotation
 .end method
 
-.method public abstract qD()Lcom/tencent/mm/dbsupport/newcursor/a;
+.method public abstract ph()Lcom/tencent/mm/dbsupport/newcursor/a;
 .end method

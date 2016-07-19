@@ -7,22 +7,22 @@ import android.os.Parcelable.Creator;
 class KVReportDataInfo
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
-  public boolean fUh;
-  public long fUv;
-  public boolean fUw;
+  public static final Parcelable.Creator<KVReportDataInfo> CREATOR = new Parcelable.Creator() {};
+  public long gdK;
+  public boolean gdL;
+  public boolean gdw;
   public String value;
   
   public KVReportDataInfo() {}
   
   protected KVReportDataInfo(Parcel paramParcel)
   {
-    fUv = paramParcel.readLong();
+    gdK = paramParcel.readLong();
     value = paramParcel.readString();
     if (paramParcel.readInt() == 1)
     {
       bool1 = true;
-      fUw = bool1;
+      gdL = bool1;
       if (paramParcel.readInt() != 1) {
         break label58;
       }
@@ -30,7 +30,7 @@ class KVReportDataInfo
     label58:
     for (boolean bool1 = bool2;; bool1 = false)
     {
-      fUh = bool1;
+      gdw = bool1;
       return;
       bool1 = false;
       break;
@@ -45,13 +45,13 @@ class KVReportDataInfo
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
     int i = 1;
-    paramParcel.writeLong(fUv);
+    paramParcel.writeLong(gdK);
     paramParcel.writeString(value);
-    if (fUw)
+    if (gdL)
     {
       paramInt = 1;
       paramParcel.writeInt(paramInt);
-      if (!fUh) {
+      if (!gdw) {
         break label52;
       }
     }

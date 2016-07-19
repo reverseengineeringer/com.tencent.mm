@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/af$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ah$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic loD:Lcom/tencent/mm/ui/conversation/c;
+.field final synthetic lOT:Lcom/tencent/mm/ui/conversation/c;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 1274
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/c$1;->loD:Lcom/tencent/mm/ui/conversation/c;
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/c$1;->lOT:Lcom/tencent/mm/ui/conversation/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,12 +36,12 @@
 
 
 # virtual methods
-.method public final lj()Z
+.method public final jK()Z
     .locals 1
 
     .prologue
     .line 1278
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/c$1;->loD:Lcom/tencent/mm/ui/conversation/c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/c$1;->lOT:Lcom/tencent/mm/ui/conversation/c;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/conversation/c;->e(Lcom/tencent/mm/ui/conversation/c;)Z
 
@@ -50,7 +50,7 @@
     if-eqz v0, :cond_0
 
     .line 1279
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/c$1;->loD:Lcom/tencent/mm/ui/conversation/c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/c$1;->lOT:Lcom/tencent/mm/ui/conversation/c;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/conversation/c;->f(Lcom/tencent/mm/ui/conversation/c;)V
 

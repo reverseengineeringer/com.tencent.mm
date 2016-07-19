@@ -10,10 +10,10 @@ final class MMClearEditText$3
   
   public final void onFocusChange(View paramView, boolean paramBoolean)
   {
-    if (MMClearEditText.c(kDr) != null) {
-      MMClearEditText.c(kDr).onFocusChange(paramView, paramBoolean);
+    if (MMClearEditText.c(lcw) != null) {
+      MMClearEditText.c(lcw).onFocusChange(paramView, paramBoolean);
     }
-    MMClearEditText.b(kDr);
+    MMClearEditText.b(lcw);
   }
 }
 

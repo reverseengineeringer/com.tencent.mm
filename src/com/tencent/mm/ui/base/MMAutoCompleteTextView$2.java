@@ -14,7 +14,7 @@ final class MMAutoCompleteTextView$2
   
   public final void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
   {
-    MMAutoCompleteTextView.b(kCY);
+    MMAutoCompleteTextView.b(lcd);
   }
 }
 

@@ -6,11 +6,6 @@ import android.util.AttributeSet;
 public class MaskTextView
   extends SnsTextView
 {
-  public MaskTextView(Context paramContext)
-  {
-    this(paramContext, null);
-  }
-  
   public MaskTextView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);

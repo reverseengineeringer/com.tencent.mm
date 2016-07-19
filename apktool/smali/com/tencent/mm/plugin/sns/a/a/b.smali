@@ -4,11 +4,11 @@
 
 
 # virtual methods
-.method public abstract a(ILjava/lang/String;Ljava/lang/String;ZLandroid/view/View;JLcom/tencent/mm/plugin/sns/ui/at;Lcom/tencent/mm/protocal/b/aqi;I)V
+.method public abstract a(ILjava/lang/String;Ljava/lang/String;ZLandroid/view/View;JLcom/tencent/mm/plugin/sns/ui/az;Lcom/tencent/mm/protocal/b/aqt;I)V
 .end method
 
 .method public abstract clear()V
 .end method
 
-.method public abstract n(ILjava/lang/String;Ljava/lang/String;)V
+.method public abstract q(ILjava/lang/String;Ljava/lang/String;)V
 .end method

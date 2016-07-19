@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private eG:Landroid/support/v4/view/h$b;
+.field private fc:Landroid/support/v4/view/h$b;
 
 
 # direct methods
@@ -30,7 +30,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 55
-    iput-object p1, p0, Landroid/support/v4/view/h$a;->eG:Landroid/support/v4/view/h$b;
+    iput-object p1, p0, Landroid/support/v4/view/h$a;->fc:Landroid/support/v4/view/h$b;
 
     .line 56
     return-void
@@ -43,9 +43,9 @@
 
     .prologue
     .line 65
-    iget-object v0, p0, Landroid/support/v4/view/h$a;->eG:Landroid/support/v4/view/h$b;
+    iget-object v0, p0, Landroid/support/v4/view/h$a;->fc:Landroid/support/v4/view/h$b;
 
-    invoke-interface {v0}, Landroid/support/v4/view/h$b;->ag()Z
+    invoke-interface {v0}, Landroid/support/v4/view/h$b;->ae()Z
 
     move-result v0
 
@@ -57,9 +57,9 @@
 
     .prologue
     .line 60
-    iget-object v0, p0, Landroid/support/v4/view/h$a;->eG:Landroid/support/v4/view/h$b;
+    iget-object v0, p0, Landroid/support/v4/view/h$a;->fc:Landroid/support/v4/view/h$b;
 
-    invoke-interface {v0}, Landroid/support/v4/view/h$b;->af()Z
+    invoke-interface {v0}, Landroid/support/v4/view/h$b;->ad()Z
 
     move-result v0
 

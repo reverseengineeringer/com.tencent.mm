@@ -1,23 +1,13 @@
 package com.tencent.mm.plugin.sns.e;
 
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
-
 final class b$4
-  implements Animation.AnimationListener
+  implements Runnable
 {
   b$4(b paramb) {}
   
-  public final void onAnimationEnd(Animation paramAnimation)
+  public final void run()
   {
-    gRz.gRl = false;
-  }
-  
-  public final void onAnimationRepeat(Animation paramAnimation) {}
-  
-  public final void onAnimationStart(Animation paramAnimation)
-  {
-    gRz.gRl = true;
+    gTG.zW();
   }
 }
 

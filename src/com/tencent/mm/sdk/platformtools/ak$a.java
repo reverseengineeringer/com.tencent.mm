@@ -1,8 +1,29 @@
 package com.tencent.mm.sdk.platformtools;
 
-public abstract interface ak$a
+public final class ak$a
 {
-  public abstract void bx(int paramInt);
+  public String kwX;
+  public String kwY;
+  public String kwZ;
+  public String kxa;
+  public String kxb;
+  public String kxc;
+  public String kxd;
+  public String systemId;
+  public String type;
+  
+  public ak$a(String paramString1, String paramString2, String paramString3, String paramString4, String paramString5, String paramString6, String paramString7, String paramString8, String paramString9)
+  {
+    kwX = paramString1;
+    kwY = paramString2;
+    kwZ = paramString3;
+    type = paramString6;
+    kxa = paramString4;
+    kxb = paramString7;
+    kxc = paramString8;
+    systemId = paramString9;
+    kxd = paramString5;
+  }
 }
 
 /* Location:

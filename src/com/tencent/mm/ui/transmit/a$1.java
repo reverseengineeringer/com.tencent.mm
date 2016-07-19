@@ -10,7 +10,7 @@ final class a$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    lBs.lBr.bjj();
+    mck.mcj.bph();
   }
 }
 

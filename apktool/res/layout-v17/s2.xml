@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.plugin.game.ui.GameSignGiftView android:orientation="vertical" android:id="@id/ax5" android:background="@drawable/m_" android:paddingTop="@dimen/cy" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:gravity="center_vertical" android:paddingLeft="@dimen/cy" android:paddingRight="@dimen/cy" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/fr" android:id="@id/dq" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" />
+            <TextView android:textSize="@dimen/jc" android:textColor="@color/f_" android:gravity="center_vertical" android:id="@id/ax6" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <HorizontalScrollView android:id="@id/ax7" android:paddingLeft="@dimen/cy" android:paddingRight="@dimen/cy" android:paddingBottom="@dimen/cy" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hr" android:fillViewport="false" android:overScrollMode="never">
+                <LinearLayout android:orientation="horizontal" android:id="@id/ax8" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </HorizontalScrollView>
+            <RelativeLayout android:gravity="center_vertical" android:id="@id/ax9" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/ax_" android:layout_width="90.0dip" android:layout_height="60.0dip" android:src="@drawable/a01" android:scaleType="fitXY" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+                <ImageView android:id="@id/axa" android:layout_width="90.0dip" android:layout_height="60.0dip" android:src="@drawable/a02" android:scaleType="fitXY" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </FrameLayout>
+    </com.tencent.mm.plugin.game.ui.GameSignGiftView>
+    <ImageView android:layout_gravity="center" android:id="@id/arf" android:layout_width="fill_parent" android:layout_height="1.0px" android:src="@color/fc" />
+</LinearLayout>

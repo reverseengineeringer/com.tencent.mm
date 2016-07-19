@@ -1,7 +1,7 @@
 package com.tencent.mm.plugin.sns.ui;
 
 import com.tencent.mm.a.g;
-import com.tencent.mm.plugin.sns.d.ad;
+import com.tencent.mm.plugin.sns.e.ad;
 import com.tencent.mm.ui.tools.a.a;
 
 final class SettingSnsBackgroundUI$1
@@ -9,10 +9,10 @@ final class SettingSnsBackgroundUI$1
 {
   SettingSnsBackgroundUI$1(SettingSnsBackgroundUI paramSettingSnsBackgroundUI) {}
   
-  public final String vP(String paramString)
+  public final String xc(String paramString)
   {
-    paramString = g.m((haX.filePath + System.currentTimeMillis()).getBytes());
-    return ad.ayW() + paramString;
+    paramString = g.j((hoo.filePath + System.currentTimeMillis()).getBytes());
+    return ad.aBx() + paramString;
   }
 }
 

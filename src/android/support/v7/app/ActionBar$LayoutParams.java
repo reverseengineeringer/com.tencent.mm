@@ -25,7 +25,7 @@ public class ActionBar$LayoutParams
   public ActionBar$LayoutParams(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.ActionBarLayout);
+    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.Wg);
     gravity = paramContext.getInt(0, -1);
     paramContext.recycle();
   }

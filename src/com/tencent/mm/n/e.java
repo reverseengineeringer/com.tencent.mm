@@ -1,109 +1,130 @@
 package com.tencent.mm.n;
 
-import com.tencent.mm.d.b.bg;
-import com.tencent.mm.sdk.h.c.a;
-import java.lang.reflect.Field;
-import java.util.Map;
+import android.content.ContentValues;
+import android.database.Cursor;
+import com.tencent.mm.protocal.b.am;
+import com.tencent.mm.sdk.h.f;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import java.util.ArrayList;
+import java.util.List;
 
-public class e
-  extends bg
+public final class e
+  extends f<d>
 {
-  protected static c.a aot;
+  public static final String[] bkN = { f.a(d.bjR, "FunctionMsgItem") };
+  private static final String[] bkO = { "*", "rowid" };
+  private com.tencent.mm.sdk.h.d bkP;
   
-  static
+  public e(com.tencent.mm.sdk.h.d paramd)
   {
-    c.a locala = new c.a();
-    ceD = new Field[20];
-    blR = new String[21];
-    StringBuilder localStringBuilder = new StringBuilder();
-    blR[0] = "msgId";
-    jYx.put("msgId", "LONG PRIMARY KEY ");
-    localStringBuilder.append(" msgId LONG PRIMARY KEY ");
-    localStringBuilder.append(", ");
-    jYw = "msgId";
-    blR[1] = "msgSvrId";
-    jYx.put("msgSvrId", "LONG");
-    localStringBuilder.append(" msgSvrId LONG");
-    localStringBuilder.append(", ");
-    blR[2] = "type";
-    jYx.put("type", "INTEGER");
-    localStringBuilder.append(" type INTEGER");
-    localStringBuilder.append(", ");
-    blR[3] = "status";
-    jYx.put("status", "INTEGER");
-    localStringBuilder.append(" status INTEGER");
-    localStringBuilder.append(", ");
-    blR[4] = "isSend";
-    jYx.put("isSend", "INTEGER");
-    localStringBuilder.append(" isSend INTEGER");
-    localStringBuilder.append(", ");
-    blR[5] = "isShowTimer";
-    jYx.put("isShowTimer", "INTEGER");
-    localStringBuilder.append(" isShowTimer INTEGER");
-    localStringBuilder.append(", ");
-    blR[6] = "createTime";
-    jYx.put("createTime", "LONG");
-    localStringBuilder.append(" createTime LONG");
-    localStringBuilder.append(", ");
-    blR[7] = "talker";
-    jYx.put("talker", "TEXT");
-    localStringBuilder.append(" talker TEXT");
-    localStringBuilder.append(", ");
-    blR[8] = "content";
-    jYx.put("content", "TEXT default '' ");
-    localStringBuilder.append(" content TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[9] = "imgPath";
-    jYx.put("imgPath", "TEXT");
-    localStringBuilder.append(" imgPath TEXT");
-    localStringBuilder.append(", ");
-    blR[10] = "reserved";
-    jYx.put("reserved", "TEXT");
-    localStringBuilder.append(" reserved TEXT");
-    localStringBuilder.append(", ");
-    blR[11] = "lvbuffer";
-    jYx.put("lvbuffer", "BLOB");
-    localStringBuilder.append(" lvbuffer BLOB");
-    localStringBuilder.append(", ");
-    blR[12] = "talkerId";
-    jYx.put("talkerId", "INTEGER");
-    localStringBuilder.append(" talkerId INTEGER");
-    localStringBuilder.append(", ");
-    blR[13] = "transContent";
-    jYx.put("transContent", "TEXT default '' ");
-    localStringBuilder.append(" transContent TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[14] = "transBrandWording";
-    jYx.put("transBrandWording", "TEXT default '' ");
-    localStringBuilder.append(" transBrandWording TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[15] = "bizClientMsgId";
-    jYx.put("bizClientMsgId", "TEXT default '' ");
-    localStringBuilder.append(" bizClientMsgId TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[16] = "bizChatId";
-    jYx.put("bizChatId", "LONG default '-1' ");
-    localStringBuilder.append(" bizChatId LONG default '-1' ");
-    localStringBuilder.append(", ");
-    blR[17] = "bizChatUserId";
-    jYx.put("bizChatUserId", "TEXT default '' ");
-    localStringBuilder.append(" bizChatUserId TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[18] = "msgSeq";
-    jYx.put("msgSeq", "LONG");
-    localStringBuilder.append(" msgSeq LONG");
-    localStringBuilder.append(", ");
-    blR[19] = "flag";
-    jYx.put("flag", "INTEGER default '0' ");
-    localStringBuilder.append(" flag INTEGER default '0' ");
-    blR[20] = "rowid";
-    jYy = localStringBuilder.toString();
-    aot = locala;
+    super(paramd, d.bjR, "FunctionMsgItem", null);
+    bkP = paramd;
   }
   
-  protected final c.a ls()
+  public final void a(String paramString, d paramd)
   {
-    return aot;
+    v.i("MicroMsg.FunctionMsgStorage", "updateByFunctionMsgId, functionMsgId: %s", new Object[] { paramString });
+    d locald = dE(paramString);
+    if (locald != null) {}
+    try
+    {
+      boolean bool1;
+      if (field_addMsg == null)
+      {
+        bool1 = true;
+        if (field_addMsg != null) {
+          break label158;
+        }
+      }
+      label158:
+      for (boolean bool2 = true;; bool2 = false)
+      {
+        v.i("MicroMsg.FunctionMsgStorage", "updateByFunctionMsgId, functionMsgId: %s, newFunctionMsgItem.msgContent==null: %s,oldFunctionMsgItem.msgContent==null: %s", new Object[] { paramString, Boolean.valueOf(bool1), Boolean.valueOf(bool2) });
+        paramd = paramd.kn();
+        if ((paramd.get("addMsg") == null) && (field_addMsg != null)) {
+          paramd.put("addMsg", field_addMsg.toByteArray());
+        }
+        v.i("MicroMsg.FunctionMsgStorage", "updateByFunctionMsgId, ret: %s", new Object[] { Integer.valueOf(bkP.update("FunctionMsgItem", paramd, "functionmsgid=?", new String[] { paramString })) });
+        return;
+        bool1 = false;
+        break;
+      }
+      return;
+    }
+    catch (Exception paramString)
+    {
+      v.e("MicroMsg.FunctionMsgStorage", "updateByFunctionMsgId error: %s", new Object[] { paramString.getMessage() });
+    }
+  }
+  
+  public final d dE(String paramString)
+  {
+    if (be.kf(paramString)) {}
+    for (;;)
+    {
+      return null;
+      v.i("MicroMsg.FunctionMsgStorage", "getByFunctionMsgId, functionMsgId: %s", new Object[] { paramString });
+      paramString = bkP.query("FunctionMsgItem", bkO, "functionmsgid=?", new String[] { paramString }, null, null, null);
+      try
+      {
+        if ((paramString.moveToFirst()) && (!paramString.isAfterLast()))
+        {
+          d locald = new d();
+          locald.b(paramString);
+          return locald;
+        }
+        return null;
+      }
+      catch (Exception localException)
+      {
+        v.e("MicroMsg.FunctionMsgStorage", "getByFunctionMsgId error: %s", new Object[] { localException.getMessage() });
+        return null;
+      }
+      finally
+      {
+        if (paramString != null) {
+          paramString.close();
+        }
+      }
+    }
+  }
+  
+  public final List<d> pw()
+  {
+    Cursor localCursor = bkP.query("FunctionMsgItem", bkO, "status<?", new String[] { "2" }, null, null, null);
+    if (localCursor == null) {}
+    for (;;)
+    {
+      return null;
+      try
+      {
+        if (localCursor.moveToFirst())
+        {
+          ArrayList localArrayList = new ArrayList();
+          while (!localCursor.isAfterLast())
+          {
+            d locald = new d();
+            locald.b(localCursor);
+            localArrayList.add(locald);
+            localCursor.moveToNext();
+          }
+        }
+      }
+      catch (Exception localException)
+      {
+        v.e("MicroMsg.FunctionMsgStorage", "getAllNeedFetchFunctionMsg error: %s", new Object[] { localException.getMessage() });
+        return null;
+        return localException;
+        return null;
+      }
+      finally
+      {
+        if (localCursor != null) {
+          localCursor.close();
+        }
+      }
+    }
   }
 }
 

@@ -3,102 +3,108 @@ package com.tencent.mm.ui.tools;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.ListView;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class q
   implements Runnable
 {
-  public ListView fqJ;
-  public int lxp;
-  public int lxq;
-  public int lxr;
-  private final int lxs;
-  public int lxt;
+  public ListView fzP;
+  public long lYd = System.currentTimeMillis();
+  public int lYe;
+  public int lYf;
+  public int lYg;
+  private final int lYh;
+  public int lYi;
   public int mMode;
   
   public q(ListView paramListView)
   {
-    fqJ = paramListView;
-    lxs = ViewConfiguration.get(fqJ.getContext()).getScaledFadingEdgeLength();
-    u.d("!32@iOyfoi8XI67ruB4wZuF6zGtNP9BrJE60", "mExtraScroll: %d", new Object[] { Integer.valueOf(lxs) });
+    fzP = paramListView;
+    lYh = ViewConfiguration.get(fzP.getContext()).getScaledFadingEdgeLength();
+    v.d("ScrollerRunnable", "mExtraScroll: %d", new Object[] { Integer.valueOf(lYh) });
   }
   
   public final void run()
   {
-    int j = fqJ.getHeight();
-    int k = fqJ.getFirstVisiblePosition();
-    switch (mMode)
-    {
-    }
+    if (System.currentTimeMillis() - lYd > 10000L) {}
+    int k;
     View localView;
-    label226:
+    label242:
     do
     {
       do
       {
         return;
-        i = fqJ.getChildCount() - 1;
-        k += i;
+        j = fzP.getHeight();
+        k = fzP.getFirstVisiblePosition();
+        switch (mMode)
+        {
+        default: 
+          return;
+        case 1: 
+          i = fzP.getChildCount() - 1;
+          k += i;
+        }
       } while (i < 0);
       int m;
       int n;
-      if (k == lxq)
+      if (k == lYf)
       {
-        if (lxt > 20)
+        if (lYi > 20)
         {
-          fqJ.setSelection(lxp);
-          u.d("!32@iOyfoi8XI67ruB4wZuF6zGtNP9BrJE60", "dz:try scroll at same item more than 10, direct seletion");
+          fzP.setSelection(lYe);
+          v.d("ScrollerRunnable", "dz:try scroll at same item more than 10, direct seletion");
         }
       }
       else
       {
-        lxt = 0;
-        localView = fqJ.getChildAt(i);
+        lYi = 0;
+        localView = fzP.getChildAt(i);
         m = localView.getHeight();
         n = localView.getTop();
-        if (k >= fqJ.getCount() - 1) {
-          break label226;
+        if (k >= fzP.getCount() - 1) {
+          break label242;
         }
       }
-      for (i = lxs;; i = fqJ.getPaddingBottom())
+      for (i = lYh;; i = fzP.getPaddingBottom())
       {
-        fqJ.smoothScrollBy(i + (m - (j - n)), lxr);
-        lxq = k;
-        if (k >= lxp) {
+        fzP.smoothScrollBy(i + (m - (j - n)), lYg);
+        lYf = k;
+        if (k >= lYe) {
           break;
         }
-        fqJ.post(this);
+        fzP.post(this);
         return;
-        fqJ.post(this);
-        lxt += 1;
-        u.d("!32@iOyfoi8XI67ruB4wZuF6zGtNP9BrJE60", "dz:try scroll lastpos = %d", new Object[] { Integer.valueOf(k) });
+        fzP.post(this);
+        lYi += 1;
+        v.d("ScrollerRunnable", "dz:try scroll lastpos = %d", new Object[] { Integer.valueOf(k) });
         return;
       }
-      if (k == lxq)
+      if (k == lYf)
       {
-        if (lxt <= 20) {
+        if (lYi <= 20) {
           break;
         }
-        fqJ.setSelection(lxp);
-        u.d("!32@iOyfoi8XI67ruB4wZuF6zGtNP9BrJE60", "dz:try scroll at same item more than 10, direct seletion");
+        fzP.setSelection(lYe);
+        v.d("ScrollerRunnable", "dz:try scroll at same item more than 10, direct seletion");
       }
-      lxt = 0;
-      localView = fqJ.getChildAt(0);
+      lYi = 0;
+      localView = fzP.getChildAt(0);
     } while (localView == null);
-    j = localView.getTop();
+    int j = localView.getTop();
     if (k > 0) {}
-    for (int i = lxs;; i = fqJ.getPaddingTop())
+    for (int i = lYh;; i = fzP.getPaddingTop())
     {
-      fqJ.smoothScrollBy(j - i, lxr);
-      lxq = k;
-      if (k <= lxp) {
+      fzP.smoothScrollBy(j - i, lYg);
+      lYf = k;
+      if (k <= lYe) {
         break;
       }
-      fqJ.post(this);
+      fzP.post(this);
       return;
-      fqJ.post(this);
-      lxt += 1;
-      u.d("!32@iOyfoi8XI67ruB4wZuF6zGtNP9BrJE60", "dz:try scroll firstPos = %d", new Object[] { Integer.valueOf(k) });
+      fzP.post(this);
+      lYi += 1;
+      v.d("ScrollerRunnable", "dz:try scroll firstPos = %d", new Object[] { Integer.valueOf(k) });
       return;
     }
   }

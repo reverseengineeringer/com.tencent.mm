@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+.field final synthetic jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 809
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$5;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$5;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,12 +43,12 @@
     const/4 v2, 0x1
 
     .line 813
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$5;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$5;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->aRE()V
+    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->aWr()V
 
     .line 814
-    invoke-static {}, Lcom/tencent/mm/model/h;->sJ()Ljava/lang/Boolean;
+    invoke-static {}, Lcom/tencent/mm/model/h;->sL()Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -59,16 +59,16 @@
     if-eqz v0, :cond_0
 
     .line 815
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$5;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$5;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->iLf:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$b;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->jic:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$b;
 
     if-eqz v0, :cond_0
 
     .line 816
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$5;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$5;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->iLf:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$b;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->jic:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$b;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 

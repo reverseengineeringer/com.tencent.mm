@@ -69,7 +69,7 @@
     iput-object v0, v1, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
     .line 88
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/aj;->aPR()Lcom/tencent/mm/pluginsdk/model/app/i;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/al;->aUA()Lcom/tencent/mm/pluginsdk/model/app/i;
 
     move-result-object v0
 
@@ -87,7 +87,7 @@
     .line 91
     iget-object v2, v1, Lcom/tencent/mm/pluginsdk/model/app/f;->field_packageName:Ljava/lang/String;
 
-    iput-object v2, v0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cAX:Ljava/lang/String;
+    iput-object v2, v0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cxS:Ljava/lang/String;
 
     .line 92
     iput p1, v0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->errCode:I
@@ -97,16 +97,16 @@
 
     invoke-direct {v2}, Lcom/tencent/mm/sdk/modelmsg/c$a;-><init>()V
 
-    invoke-virtual {v2, p0}, Lcom/tencent/mm/sdk/modelmsg/c$a;->m(Landroid/os/Bundle;)V
+    invoke-virtual {v2, p0}, Lcom/tencent/mm/sdk/modelmsg/c$a;->o(Landroid/os/Bundle;)V
 
-    iget-object v2, v2, Lcom/tencent/mm/sdk/modelmsg/c$a;->iBD:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/sdk/modelmsg/c$a;->iYn:Ljava/lang/String;
 
-    iput-object v2, v0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->iBD:Ljava/lang/String;
+    iput-object v2, v0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->iYn:Ljava/lang/String;
 
     .line 94
     iget-object v1, v1, Lcom/tencent/mm/pluginsdk/model/app/f;->field_openId:Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cAU:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cxP:Ljava/lang/String;
 
     goto :goto_0
 .end method
@@ -126,14 +126,14 @@
     iput v1, v0, Lcom/tencent/mm/sdk/modelmsg/c$b;->errCode:I
 
     .line 58
-    iget-object v1, p1, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->iBD:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->iYn:Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/modelmsg/c$b;->iBD:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/modelmsg/c$b;->iYn:Ljava/lang/String;
 
     .line 59
-    iget-object v1, p1, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cAU:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cxP:Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/modelmsg/c$b;->cAU:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/modelmsg/c$b;->cxP:Ljava/lang/String;
 
     .line 61
     new-instance v1, Landroid/os/Bundle;
@@ -141,10 +141,10 @@
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     .line 62
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/modelmsg/c$b;->l(Landroid/os/Bundle;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/modelmsg/c$b;->n(Landroid/os/Bundle;)V
 
     .line 63
-    invoke-static {v1}, Lcom/tencent/mm/pluginsdk/model/app/p;->H(Landroid/os/Bundle;)V
+    invoke-static {v1}, Lcom/tencent/mm/pluginsdk/model/app/p;->N(Landroid/os/Bundle;)V
 
     .line 65
     new-instance v0, Lcom/tencent/mm/sdk/a/a$a;
@@ -152,12 +152,12 @@
     invoke-direct {v0}, Lcom/tencent/mm/sdk/a/a$a;-><init>()V
 
     .line 66
-    iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cAX:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cxS:Ljava/lang/String;
 
-    iput-object v2, v0, Lcom/tencent/mm/sdk/a/a$a;->jUy:Ljava/lang/String;
+    iput-object v2, v0, Lcom/tencent/mm/sdk/a/a$a;->ktZ:Ljava/lang/String;
 
     .line 67
-    iput-object v1, v0, Lcom/tencent/mm/sdk/a/a$a;->jUA:Landroid/os/Bundle;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/a/a$a;->kub:Landroid/os/Bundle;
 
     .line 68
     invoke-static {p0, v0}, Lcom/tencent/mm/sdk/a/a;->a(Landroid/content/Context;Lcom/tencent/mm/sdk/a/a$a;)Z

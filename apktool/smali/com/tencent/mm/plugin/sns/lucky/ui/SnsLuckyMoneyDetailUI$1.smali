@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field private eVC:Z
+.field private fdN:Z
 
-.field private eVD:Z
+.field private fdO:Z
 
-.field final synthetic gJM:Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;
+.field final synthetic gRm:Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;
 
 
 # direct methods
@@ -31,14 +31,14 @@
 
     .prologue
     .line 81
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;->gJM:Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;->gRm:Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 82
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;->eVC:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;->fdN:Z
 
     return-void
 .end method
@@ -56,7 +56,7 @@
     .line 101
     if-eqz p4, :cond_0
 
-    iget-boolean v2, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;->eVC:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;->fdN:Z
 
     if-nez v2, :cond_1
 
@@ -72,7 +72,7 @@
     .line 115
     :cond_2
     :goto_1
-    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;->eVD:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;->fdO:Z
 
     if-eq v1, v0, :cond_0
 
@@ -80,15 +80,15 @@
     if-eqz v0, :cond_4
 
     .line 117
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;->gJM:Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;->gRm:Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;->gJM:Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;->gRm:Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;
 
     invoke-virtual {v2}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f080120
+    const v3, 0x7f0f01e8
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -98,7 +98,7 @@
 
     .line 121
     :goto_2
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;->eVD:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;->fdO:Z
 
     goto :goto_0
 
@@ -130,7 +130,7 @@
 
     .line 119
     :cond_4
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;->gJM:Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;->gRm:Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->a(Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;)V
 
@@ -167,7 +167,7 @@
     :pswitch_0
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;->eVC:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;->fdN:Z
 
     goto :goto_0
 
@@ -175,7 +175,7 @@
     :pswitch_1
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;->eVC:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$1;->fdN:Z
 
     goto :goto_0
 

@@ -1,27 +1,27 @@
 package com.tencent.mm.ui.tools;
 
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class CropImageView$2
-  extends aa
+  extends ac
 {
   CropImageView$2(CropImageView paramCropImageView) {}
   
   public final void handleMessage(Message paramMessage)
   {
     if (what == 4653) {
-      if ((CropImageView.a(luU) != null) && (CropImageView.m(luU) != null))
+      if ((CropImageView.a(lVW) != null) && (CropImageView.m(lVW) != null))
       {
-        CropImageView.m(luU).cancel();
-        CropImageView.n(luU);
+        CropImageView.m(lVW).cancel();
+        CropImageView.n(lVW);
       }
     }
     for (;;)
     {
       super.handleMessage(paramMessage);
       return;
-      CropImageView.o(luU);
+      CropImageView.o(lVW);
     }
   }
 }

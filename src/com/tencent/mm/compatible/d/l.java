@@ -1,78 +1,78 @@
 package com.tencent.mm.compatible.d;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.IOException;
 import java.io.InputStream;
 
 public final class l
 {
-  static short bsx = 0;
-  static String bsy = null;
+  static int bgB = 0;
+  static String bgC = null;
   
-  public static short ok()
+  public static int mA()
   {
+    int m = 15;
     int i;
     int j;
     int k;
-    if (m.or())
+    if (m.mH())
     {
       i = 7;
       j = i;
-      if (bsJbsA)
+      if (bgNbgE)
       {
         j = i;
-        if (bsJbsC == 0)
+        if (bgNbgG == 0)
         {
-          u.d("!32@/B4Tb64lLpKXjvTgeeSheYNszmd2wFa1", "disable armv6 by server ");
+          v.d("MicroMsg.CpuChecker", "disable armv6 by server ");
           j = i & 0xFFFFFFFD;
         }
       }
       k = j;
-      if (bsJbsA)
+      if (bgNbgE)
       {
         k = j;
-        if (bsJbsB == 0)
+        if (bgNbgF == 0)
         {
-          u.d("!32@/B4Tb64lLpKXjvTgeeSheYNszmd2wFa1", "disable armv7 by server ");
+          v.d("MicroMsg.CpuChecker", "disable armv7 by server ");
           k = j & 0xFFFFFFFB;
         }
       }
-      i = m.ot();
-      if (i <= 4) {
-        break label179;
+      i = m.mJ();
+      if (i <= 16) {
+        break label174;
       }
-      j = 4;
-      label88:
-      i = Integer.parseInt(ol()) / 1000;
-      if (j <= 2) {
-        break label190;
+      j = 15;
+      label93:
+      i = Integer.parseInt(mB()) / 1000;
+      if (j <= 4) {
+        break label185;
       }
-      i *= 2;
+      i *= 4;
     }
-    label108:
-    label179:
-    label190:
-    label218:
+    label113:
+    label129:
+    label174:
+    label185:
+    label225:
+    label228:
     for (;;)
     {
-      int m = i / 100;
-      if (m > 30) {
+      int n = i / 100;
+      if (n > 30)
+      {
         i = 30;
+        if ((i > 5) || (j < 4)) {
+          break label225;
+        }
+        i = m;
       }
       for (;;)
       {
-        m = i;
-        if (i <= 5)
-        {
-          m = i;
-          if (j >= 4) {
-            m = 15;
-          }
-        }
-        short s = (short)((k + (j << 4) << 8) + m);
-        bsx = s;
-        return s;
-        if (m.os())
+        i = (k + (j << 4) << 8) + i;
+        bgB = i;
+        return i;
+        if (m.mI())
         {
           i = 3;
           break;
@@ -81,24 +81,31 @@ public final class l
         break;
         j = i;
         if (i > 0) {
-          break label88;
+          break label93;
         }
         j = 1;
-        break label88;
+        break label93;
+        if (j > 2)
+        {
+          i *= 2;
+          break label113;
+        }
         if (j <= 1) {
-          break label218;
+          break label228;
         }
         i = i * 3 >> 1;
-        break label108;
-        i = m;
-        if (m < 5) {
-          i = 5;
+        break label113;
+        i = n;
+        if (n >= 5) {
+          break label129;
         }
+        i = 5;
+        break label129;
       }
     }
   }
   
-  public static String ol()
+  public static String mB()
   {
     try
     {
@@ -122,7 +129,7 @@ public final class l
     }
   }
   
-  public static String om()
+  public static String mC()
   {
     try
     {
@@ -147,48 +154,48 @@ public final class l
   }
   
   /* Error */
-  public static String on()
+  public static String mD()
   {
     // Byte code:
-    //   0: new 136	java/io/FileReader
+    //   0: new 134	java/io/FileReader
     //   3: dup
-    //   4: ldc -118
-    //   6: invokespecial 141	java/io/FileReader:<init>	(Ljava/lang/String;)V
+    //   4: ldc -120
+    //   6: invokespecial 139	java/io/FileReader:<init>	(Ljava/lang/String;)V
     //   9: astore_2
-    //   10: new 143	java/io/BufferedReader
+    //   10: new 141	java/io/BufferedReader
     //   13: dup
     //   14: aload_2
-    //   15: invokespecial 146	java/io/BufferedReader:<init>	(Ljava/io/Reader;)V
+    //   15: invokespecial 144	java/io/BufferedReader:<init>	(Ljava/io/Reader;)V
     //   18: astore_1
     //   19: aload_1
-    //   20: invokevirtual 149	java/io/BufferedReader:readLine	()Ljava/lang/String;
+    //   20: invokevirtual 147	java/io/BufferedReader:readLine	()Ljava/lang/String;
     //   23: astore_0
     //   24: aload_1
-    //   25: invokevirtual 150	java/io/BufferedReader:close	()V
+    //   25: invokevirtual 148	java/io/BufferedReader:close	()V
     //   28: aload_2
-    //   29: invokevirtual 151	java/io/FileReader:close	()V
+    //   29: invokevirtual 149	java/io/FileReader:close	()V
     //   32: aload_0
-    //   33: invokevirtual 123	java/lang/String:length	()I
+    //   33: invokevirtual 121	java/lang/String:length	()I
     //   36: ifne +66 -> 102
-    //   39: ldc 125
+    //   39: ldc 123
     //   41: areturn
     //   42: astore_0
     //   43: aconst_null
     //   44: astore_0
     //   45: aconst_null
     //   46: astore_2
-    //   47: ldc 125
+    //   47: ldc 123
     //   49: astore_1
     //   50: aload_0
     //   51: ifnull +7 -> 58
     //   54: aload_0
-    //   55: invokevirtual 150	java/io/BufferedReader:close	()V
+    //   55: invokevirtual 148	java/io/BufferedReader:close	()V
     //   58: aload_1
     //   59: astore_0
     //   60: aload_2
     //   61: ifnull -29 -> 32
     //   64: aload_2
-    //   65: invokevirtual 151	java/io/FileReader:close	()V
+    //   65: invokevirtual 149	java/io/FileReader:close	()V
     //   68: aload_1
     //   69: astore_0
     //   70: goto -38 -> 32
@@ -204,15 +211,15 @@ public final class l
     //   84: aload_1
     //   85: ifnull +7 -> 92
     //   88: aload_1
-    //   89: invokevirtual 150	java/io/BufferedReader:close	()V
+    //   89: invokevirtual 148	java/io/BufferedReader:close	()V
     //   92: aload_2
     //   93: ifnull +7 -> 100
     //   96: aload_2
-    //   97: invokevirtual 151	java/io/FileReader:close	()V
+    //   97: invokevirtual 149	java/io/FileReader:close	()V
     //   100: aload_0
     //   101: athrow
     //   102: aload_0
-    //   103: invokevirtual 128	java/lang/String:trim	()Ljava/lang/String;
+    //   103: invokevirtual 126	java/lang/String:trim	()Ljava/lang/String;
     //   106: areturn
     //   107: astore_1
     //   108: goto -8 -> 100

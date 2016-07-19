@@ -1,18 +1,18 @@
 package com.tencent.mm.modelmulti;
 
-import com.tencent.mm.protocal.t.b;
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.protocal.w.b;
+import com.tencent.mm.sdk.platformtools.ah.a;
 
 final class b$1
-  implements af.a
+  implements ah.a
 {
-  b$1(b paramb, t.b paramb1) {}
+  b$1(b paramb, w.b paramb1) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    b.a(bUQ);
-    b.a locala = new b.a(bUP);
-    bUQ.a(-1, 0, 0, "", locala, null);
+    b.a(bOr);
+    b.a locala = new b.a(bOq);
+    bOr.a(-1, 0, 0, "", locala, null);
     return false;
   }
 }

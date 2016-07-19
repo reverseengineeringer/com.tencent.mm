@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic cUZ:Ljava/lang/String;
+.field final synthetic cVu:Ljava/lang/String;
 
-.field final synthetic iPP:Lcom/tencent/mm/pluginsdk/ui/d/g$5;
+.field final synthetic jmW:Lcom/tencent/mm/pluginsdk/ui/d/g$5;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 253
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$5$1;->iPP:Lcom/tencent/mm/pluginsdk/ui/d/g$5;
+    .line 255
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$5$1;->jmW:Lcom/tencent/mm/pluginsdk/ui/d/g$5;
 
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$5$1;->cUZ:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$5$1;->cVu:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,50 +40,50 @@
 
 
 # virtual methods
-.method public final eu(I)V
+.method public final fg(I)V
     .locals 4
 
     .prologue
     const/16 v2, 0x2782
 
-    .line 257
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$5$1;->iPP:Lcom/tencent/mm/pluginsdk/ui/d/g$5;
+    .line 259
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$5$1;->jmW:Lcom/tencent/mm/pluginsdk/ui/d/g$5;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/d/g$5;->iPL:Landroid/content/DialogInterface$OnDismissListener;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/d/g$5;->jmS:Landroid/content/DialogInterface$OnDismissListener;
 
     if-eqz v0, :cond_0
 
-    .line 258
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$5$1;->iPP:Lcom/tencent/mm/pluginsdk/ui/d/g$5;
+    .line 260
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$5$1;->jmW:Lcom/tencent/mm/pluginsdk/ui/d/g$5;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/d/g$5;->iPL:Landroid/content/DialogInterface$OnDismissListener;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/d/g$5;->jmS:Landroid/content/DialogInterface$OnDismissListener;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, v1}, Landroid/content/DialogInterface$OnDismissListener;->onDismiss(Landroid/content/DialogInterface;)V
 
-    .line 261
+    .line 263
     :cond_0
     packed-switch p1, :pswitch_data_0
 
-    .line 283
+    .line 285
     :goto_0
     return-void
 
-    .line 263
+    .line 265
     :pswitch_0
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/d/g;->aSI()Z
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/d/g;->aXB()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 264
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$5$1;->iPP:Lcom/tencent/mm/pluginsdk/ui/d/g$5;
+    .line 266
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$5$1;->jmW:Lcom/tencent/mm/pluginsdk/ui/d/g$5;
 
     iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/d/g$5;->val$context:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$5$1;->cUZ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$5$1;->cVu:Ljava/lang/String;
 
     new-instance v2, Landroid/content/Intent;
 
@@ -101,56 +101,56 @@
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 267
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 269
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v1, 0x2781
 
     const-string/jumbo v2, "1"
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->O(ILjava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/g;->X(ILjava/lang/String;)V
 
     goto :goto_0
 
-    .line 270
+    .line 272
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$5$1;->iPP:Lcom/tencent/mm/pluginsdk/ui/d/g$5;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$5$1;->jmW:Lcom/tencent/mm/pluginsdk/ui/d/g$5;
 
     iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/d/g$5;->val$context:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$5$1;->cUZ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$5$1;->cVu:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/d/g;->aR(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/d/g;->aP(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 273
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 275
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-string/jumbo v1, "1"
 
-    invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/plugin/report/service/h;->O(ILjava/lang/String;)V
+    invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/plugin/report/service/g;->X(ILjava/lang/String;)V
 
     goto :goto_0
 
-    .line 279
+    .line 281
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$5$1;->iPP:Lcom/tencent/mm/pluginsdk/ui/d/g$5;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$5$1;->jmW:Lcom/tencent/mm/pluginsdk/ui/d/g$5;
 
     iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/d/g$5;->val$context:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$5$1;->cUZ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$5$1;->cVu:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/d/g;->aR(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/d/g;->aP(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 282
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 284
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-string/jumbo v1, "1"
 
-    invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/plugin/report/service/h;->O(ILjava/lang/String;)V
+    invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/plugin/report/service/g;->X(ILjava/lang/String;)V
 
     goto :goto_0
 
-    .line 261
+    .line 263
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

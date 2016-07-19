@@ -1,249 +1,183 @@
 package com.tencent.mm.t;
 
-import com.tencent.mm.model.ah;
-import com.tencent.mm.protocal.b.aaj;
-import com.tencent.mm.protocal.b.aak;
-import com.tencent.mm.protocal.b.aam;
-import com.tencent.mm.protocal.b.bar;
-import com.tencent.mm.q.c;
-import com.tencent.mm.q.h;
-import com.tencent.mm.q.i;
-import com.tencent.mm.q.n;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Set;
+import android.os.Looper;
+import com.tencent.mm.network.k.a;
+import com.tencent.mm.network.o;
+import com.tencent.mm.platformtools.q;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class p
-  implements d
+  extends k.a
 {
-  Object bJa = new Object();
-  public LinkedList bJb = new LinkedList();
-  Set meu = new HashSet();
-  
-  private void b(LinkedList paramLinkedList)
+  private final j ags;
+  private final com.tencent.mm.network.e byD;
+  private final d byI;
+  private final long bzr = 330000L;
+  private o bzs;
+  private com.tencent.mm.network.j bzt;
+  private boolean bzu = false;
+  private boolean bzv = false;
+  Runnable bzw = new Runnable()
   {
-    for (;;)
+    public final void run()
     {
+      int k = 0;
+      int j = 0;
       int i;
-      synchronized (bJa)
+      if ((p.a(p.this)) || (p.b(p.this)))
       {
-        ArrayList localArrayList = new ArrayList(bJb);
-        i = 0;
-        if (i < localArrayList.size())
+        if (p.c(p.this) == null)
         {
-          a locala = (a)localArrayList.get(i);
-          if (locala != null) {
-            locala.c(paramLinkedList);
+          i = 0;
+          if (p.c(p.this) != null) {
+            break label86;
           }
         }
-        else
+        for (;;)
         {
+          v.e("MicroMsg.RemoteOnGYNetEnd", "time exceed But removeCallbacks failed hash:%d type:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(j) });
           return;
+          i = p.c(p.this).hashCode();
+          break;
+          label86:
+          j = p.c(p.this).getType();
         }
       }
-      i += 1;
-    }
-  }
-  
-  public final void Q(String paramString1, String paramString2)
-  {
-    if ((ay.kz(paramString1)) || (ay.kz(paramString2)))
-    {
-      u.e("!32@/B4Tb64lLpJBbihkRrOsSNxd6nihzana", "doKFGetDefaultList error args, %s, %s", new Object[] { paramString1, paramString2 });
-      return;
-    }
-    if (meu.contains(paramString2))
-    {
-      u.i("!32@/B4Tb64lLpJBbihkRrOsSNxd6nihzana", "doKFGetInfoList: same is running, %s", new Object[] { paramString2 });
-      return;
-    }
-    meu.add(paramString2);
-    Object localObject = new LinkedList();
-    ((LinkedList)localObject).add(paramString2);
-    localObject = new ae(paramString1, (LinkedList)localObject);
-    tag = paramString2;
-    ah.tE().d((j)localObject);
-    u.i("!32@/B4Tb64lLpJBbihkRrOsSNxd6nihzana", "doKFGetInfoList %s, %s, %d", new Object[] { paramString1, paramString2, Integer.valueOf(bJb.size()) });
-  }
-  
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
-  {
-    u.i("!32@/B4Tb64lLpJBbihkRrOsSNxd6nihzana", "onSceneEnd errType = %s, errCode = %s, errMsg = %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
-    if (paramj == null)
-    {
-      u.e("!32@/B4Tb64lLpJBbihkRrOsSNxd6nihzana", "scene == null");
-      b(null);
-    }
-    do
-    {
-      return;
-      if ((paramInt1 == 0) && (paramInt2 == 0)) {
+      final boolean bool1 = p.a(p.this);
+      final boolean bool2 = p.b(p.this);
+      if (p.c(p.this) == null)
+      {
+        i = 0;
+        if (p.c(p.this) != null) {
+          break label232;
+        }
+      }
+      label232:
+      for (j = k;; j = p.c(p.this).getType())
+      {
+        v.w("MicroMsg.RemoteOnGYNetEnd", "time exceed, force to callback hash:%d type:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(j) });
+        p.d(p.this);
+        com.tencent.mm.sdk.i.e.a(new Runnable()
+        {
+          public final void run()
+          {
+            int j = 0;
+            p.e(p.this).gu("push process's network haven't callback in 5.5min!!!! cancelStatus:" + bool1 + " hasCallbackStatus:" + bool2);
+            int i;
+            if (p.c(p.this) == null)
+            {
+              i = 0;
+              if (p.c(p.this) != null) {
+                break label119;
+              }
+            }
+            for (;;)
+            {
+              v.w("MicroMsg.RemoteOnGYNetEnd", "time exceed, force to callback . kill push fin. hash:%d type:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(j) });
+              return;
+              i = p.c(p.this).hashCode();
+              break;
+              label119:
+              j = p.c(p.this).getType();
+            }
+          }
+        }, "RemoteOnGYNetEnd_killPush");
+        p.g(p.this).a(-1, 3, -1, "time exceed, force to callback", p.f(p.this), null);
+        return;
+        i = p.c(p.this).hashCode();
         break;
       }
-      u.e("!32@/B4Tb64lLpJBbihkRrOsSNxd6nihzana", "scene.getType() = %s", new Object[] { Integer.valueOf(paramj.getType()) });
-      b(null);
-    } while (paramj.getType() != 675);
-    meu.remove(tag);
-    return;
-    u.i("!32@/B4Tb64lLpJBbihkRrOsSNxd6nihzana", "scene.getType() = %s", new Object[] { Integer.valueOf(paramj.getType()) });
-    i locali = n.vs();
-    LinkedList localLinkedList = new LinkedList();
-    paramString = null;
-    long l = System.currentTimeMillis();
-    Iterator localIterator;
-    bar localbar;
-    h localh;
-    if (paramj.getType() == 672)
-    {
-      if (((ad)paramj).xA() == null)
-      {
-        u.e("!32@/B4Tb64lLpJBbihkRrOsSNxd6nihzana", "resp is null, type = %s", new Object[] { Integer.valueOf(paramj.getType()) });
-        b(null);
-        return;
-      }
-      paramString = xAjwN;
-      if ((paramString == null) || (paramString.size() <= 0))
-      {
-        u.e("!32@/B4Tb64lLpJBbihkRrOsSNxd6nihzana", "empty workers");
-        b(null);
-        return;
-      }
-      localIterator = paramString.iterator();
-      while (localIterator.hasNext())
-      {
-        localbar = (bar)localIterator.next();
-        localLinkedList.add(new o(jRJ, bJp, job, jyd, 1, l));
-        if (locali != null)
-        {
-          localh = new h();
-          username = jRJ;
-          bEx = job;
-          localh.aK(false);
-          aSt = 3;
-          locali.a(localh);
-          n.vu().fR(jRJ);
-        }
-      }
     }
-    for (;;)
-    {
-      u.i("!32@/B4Tb64lLpJBbihkRrOsSNxd6nihzana", "insertOrUpdateBizKFs %d", new Object[] { Integer.valueOf(aj.xE().d(localLinkedList)) });
-      b(paramString);
-      return;
-      if (paramj.getType() == 675)
-      {
-        meu.remove(tag);
-        if (((ae)paramj).xB() == null)
-        {
-          u.e("!32@/B4Tb64lLpJBbihkRrOsSNxd6nihzana", "KFGetInfoList resp is null, type = %s", new Object[] { Integer.valueOf(paramj.getType()) });
-          b(null);
-          return;
-        }
-        paramString = xBjwN;
-        if ((paramString == null) || (paramString.size() <= 0))
-        {
-          u.e("!32@/B4Tb64lLpJBbihkRrOsSNxd6nihzana", "empty workers");
-          b(null);
-          return;
-        }
-        localIterator = paramString.iterator();
-        while (localIterator.hasNext())
-        {
-          localbar = (bar)localIterator.next();
-          u.i("!32@/B4Tb64lLpJBbihkRrOsSNxd6nihzana", "onScenEnd: workers=%s, tag=%s", new Object[] { jRJ, tag });
-          localLinkedList.add(new o(jRJ, bJp, job, jyd, bJq, l));
-          if (locali != null)
-          {
-            localh = new h();
-            username = jRJ;
-            bEx = job;
-            localh.aK(false);
-            aSt = 3;
-            locali.a(localh);
-            n.vu().fR(jRJ);
-          }
-        }
-      }
-      else if (paramj.getType() == 674)
-      {
-        if (((ac)paramj).xz() == null)
-        {
-          u.e("!32@/B4Tb64lLpJBbihkRrOsSNxd6nihzana", "resp is null, type = %s", new Object[] { Integer.valueOf(paramj.getType()) });
-          b(null);
-          return;
-        }
-        paramString = xzjwN;
-        if ((paramString == null) || (paramString.size() <= 0))
-        {
-          u.e("!32@/B4Tb64lLpJBbihkRrOsSNxd6nihzana", "empty workers");
-          b(null);
-          return;
-        }
-        localIterator = paramString.iterator();
-        while (localIterator.hasNext())
-        {
-          localbar = (bar)localIterator.next();
-          localLinkedList.add(new o(jRJ, bJp, job, jyd, 2, l));
-          if (locali != null)
-          {
-            localh = new h();
-            username = jRJ;
-            bEx = job;
-            localh.aK(false);
-            aSt = 3;
-            locali.a(localh);
-            n.vu().fR(jRJ);
-          }
-        }
-      }
-    }
-  }
+  };
+  final ac handler;
   
-  public final void a(a parama)
+  public p(o paramo, com.tencent.mm.network.j paramj, j paramj1, d paramd, com.tencent.mm.network.e parame)
   {
-    synchronized (bJa)
+    bzs = paramo;
+    bzt = paramj;
+    ags = paramj1;
+    byI = paramd;
+    if (Looper.myLooper() == null) {}
+    for (paramo = new ac(Looper.getMainLooper());; paramo = new ac())
     {
-      if (!bJb.contains(parama))
-      {
-        Iterator localIterator = bJb.iterator();
-        while (localIterator.hasNext())
-        {
-          a locala = (a)localIterator.next();
-          if ((parama != null) && (locala != null) && (ay.ky(parama.xr()).equals(ay.ky(locala.xr()))))
-          {
-            u.i("!32@/B4Tb64lLpJBbihkRrOsSNxd6nihzana", "the same callbacker %s, return", new Object[] { parama.xr() });
-            return;
-          }
-        }
-        bJb.add(parama);
-      }
+      handler = paramo;
+      byD = parame;
       return;
     }
   }
   
-  public final void b(a parama)
+  public final void a(final int paramInt1, final int paramInt2, final int paramInt3, final String paramString, com.tencent.mm.network.p paramp, final byte[] paramArrayOfByte)
   {
-    synchronized (bJa)
-    {
-      if (bJb.contains(parama)) {
-        bJb.remove(parama);
-      }
+    v.i("MicroMsg.RemoteOnGYNetEnd", "onGYNetEnd netId:%d, errType:%d, errCode:%d, isCancel:%b, hash[%d,%d]", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), Boolean.valueOf(bzu), Integer.valueOf(ags.hashCode()), Integer.valueOf(bzs.hashCode()) });
+    ags.byF = -1;
+    if (bzu) {}
+    while (bzv) {
       return;
     }
+    bzv = true;
+    handler.removeCallbacks(bzw);
+    handler.post(new Runnable()
+    {
+      public final void run()
+      {
+        if (p.a(p.this)) {
+          v.w("MicroMsg.RemoteOnGYNetEnd", "netId:%d has been canceled", new Object[] { Integer.valueOf(paramInt1) });
+        }
+        do
+        {
+          return;
+          int k = paramInt2;
+          int m = paramInt3;
+          int i = k;
+          int j = m;
+          if (10016 == q.ciq)
+          {
+            i = k;
+            j = m;
+            if (!be.kf(q.cis))
+            {
+              v.i("MicroMsg.RemoteOnGYNetEnd", "onGYNetEnd DK TEST SET : %s ", new Object[] { q.cis });
+              String[] arrayOfString = q.cis.split(",");
+              i = k;
+              j = m;
+              if (arrayOfString != null)
+              {
+                i = k;
+                j = m;
+                if (arrayOfString.length == 3)
+                {
+                  i = k;
+                  j = m;
+                  if (be.getInt(arrayOfString[0], -1) == p.c(p.this).getType())
+                  {
+                    k = be.getInt(arrayOfString[1], 0);
+                    j = be.getInt(arrayOfString[2], 0);
+                    i = k;
+                    if (k == 999)
+                    {
+                      v.w("MicroMsg.RemoteOnGYNetEnd", "onGYNetEnd DK TEST SET syncservice : %s  NOT  CALLBACK !!!", new Object[] { q.cis });
+                      return;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          v.i("MicroMsg.RemoteOnGYNetEnd", "onGYNetEnd after post to worker netId:%d, errType:%d, errCode:%d, isCancel:%b, hashcode:%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(i), Integer.valueOf(j), Boolean.valueOf(p.a(p.this)), Integer.valueOf(p.c(p.this).hashCode()) });
+          p.g(p.this).a(paramInt1, i, j, paramString, p.f(p.this), paramArrayOfByte);
+        } while ((!p.c(p.this).vG()) || (cbyJ));
+        v.e("MicroMsg.RemoteOnGYNetEnd", "the netscene hasn't call callback to onSceneEnd, type:%d", new Object[] { Integer.valueOf(p.c(p.this).getType()) });
+        v.appenderFlush();
+      }
+    });
   }
   
-  public static abstract interface a
+  public final void cancel()
   {
-    public abstract void c(LinkedList paramLinkedList);
-    
-    public abstract String xr();
+    bzu = true;
+    handler.removeCallbacks(bzw);
   }
 }
 

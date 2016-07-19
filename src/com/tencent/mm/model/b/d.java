@@ -4,9 +4,9 @@ public abstract interface d
 {
   public static abstract interface a
   {
-    public abstract void uR();
+    public abstract void uT();
     
-    public abstract void uS();
+    public abstract void uU();
   }
 }
 

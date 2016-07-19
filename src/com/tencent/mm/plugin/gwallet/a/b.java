@@ -9,8 +9,8 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
 import com.a.a.a.a.a;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -18,13 +18,13 @@ import org.json.JSONException;
 
 public final class b
 {
-  public com.a.a.a.a exD;
-  private ServiceConnection exE;
-  boolean exF = false;
-  public boolean exG = false;
-  public int exH;
-  public b exI;
-  public String exJ;
+  public com.a.a.a.a eDX;
+  private ServiceConnection eDY;
+  boolean eDZ = false;
+  public boolean eEa = false;
+  public int eEb;
+  public b eEc;
+  public String eEd;
   public Context mContext;
   
   public b(Context paramContext)
@@ -32,7 +32,7 @@ public final class b
     mContext = paramContext;
   }
   
-  public static String hE(int paramInt)
+  public static String iK(int paramInt)
   {
     String[] arrayOfString1 = "0:OK/1:User Canceled/2:Unknown/3:Billing Unavailable/4:Item unavailable/5:Developer Error/6:Error/7:Item Already Owned/8:Item not owned".split("/");
     String[] arrayOfString2 = "0:OK/-1001:Remote exception during initialization/-1002:Bad response received/-1003:Purchase signature verification failed/-1004:Send intent failed/-1005:User cancelled/-1006:Unknown purchase response/-1007:Missing token/-1008:Unknown error/-1009:Subscriptions not available/-1010:Invalid consumption attempt".split("/");
@@ -50,12 +50,12 @@ public final class b
     return arrayOfString1[paramInt];
   }
   
-  public static int j(Bundle paramBundle)
+  public static int l(Bundle paramBundle)
   {
     paramBundle = paramBundle.get("RESPONSE_CODE");
     if (paramBundle == null)
     {
-      u.d("!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68", "Bundle with null response code, assuming OK (known issue)");
+      v.d("MicroMsg.IabHelper", "Bundle with null response code, assuming OK (known issue)");
       return 0;
     }
     if ((paramBundle instanceof Integer)) {
@@ -64,57 +64,57 @@ public final class b
     if ((paramBundle instanceof Long)) {
       return (int)((Long)paramBundle).longValue();
     }
-    pu("Unexpected type for bundle response code.");
-    pu(paramBundle.getClass().getName());
+    qK("Unexpected type for bundle response code.");
+    qK(paramBundle.getClass().getName());
     throw new RuntimeException("Unexpected type for bundle response code: " + paramBundle.getClass().getName());
   }
   
-  public static void pu(String paramString)
+  public static void qK(String paramString)
   {
-    u.e("!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68", "In-app billing error: " + paramString);
+    v.e("MicroMsg.IabHelper", "In-app billing error: " + paramString);
   }
   
   public final void a(final a parama)
   {
-    if (exF) {
+    if (eDZ) {
       throw new IllegalStateException("IAB helper is already set up.");
     }
-    u.d("!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68", "Starting in-app billing setup.");
-    exE = new ServiceConnection()
+    v.d("MicroMsg.IabHelper", "Starting in-app billing setup.");
+    eDY = new ServiceConnection()
     {
       public final void onServiceConnected(ComponentName paramAnonymousComponentName, IBinder paramAnonymousIBinder)
       {
-        b.pv("Billing service connected.");
-        exD = a.a.b(paramAnonymousIBinder);
+        b.qL("Billing service connected.");
+        eDX = a.a.b(paramAnonymousIBinder);
         paramAnonymousComponentName = mContext.getPackageName();
         try
         {
-          b.pv("Checking for in-app billing 3 support.");
-          int i = exD.b(3, paramAnonymousComponentName, "inapp");
+          b.qL("Checking for in-app billing 3 support.");
+          int i = eDX.b(3, paramAnonymousComponentName, "inapp");
           if (i != 0)
           {
             if (parama != null) {
               parama.a(new c(i, "Error checking for billing v3 support."));
             }
-            exG = false;
+            eEa = false;
             return;
           }
-          b.pv("In-app billing version 3 supported for " + paramAnonymousComponentName);
-          i = exD.b(3, paramAnonymousComponentName, "subs");
+          b.qL("In-app billing version 3 supported for " + paramAnonymousComponentName);
+          i = eDX.b(3, paramAnonymousComponentName, "subs");
           if (i == 0)
           {
-            b.pv("Subscriptions AVAILABLE.");
-            exG = true;
+            b.qL("Subscriptions AVAILABLE.");
+            eEa = true;
           }
           for (;;)
           {
-            exF = true;
+            eDZ = true;
             if (parama == null) {
               break;
             }
             parama.a(new c(0, "Setup successful."));
             return;
-            b.pv("Subscriptions NOT AVAILABLE. Response: " + i);
+            b.qL("Subscriptions NOT AVAILABLE. Response: " + i);
           }
           return;
         }
@@ -128,27 +128,27 @@ public final class b
       
       public final void onServiceDisconnected(ComponentName paramAnonymousComponentName)
       {
-        b.pv("Billing service disconnected.");
-        exD = null;
+        b.qL("Billing service disconnected.");
+        eDX = null;
       }
     };
     Intent localIntent = new Intent("com.android.vending.billing.InAppBillingService.BIND");
     localIntent.setPackage("com.android.vending");
     if ((mContext != null) && (mContext.getPackageManager() != null) && (mContext.getPackageManager().queryIntentServices(localIntent, 0) != null) && (!mContext.getPackageManager().queryIntentServices(localIntent, 0).isEmpty()))
     {
-      mContext.bindService(localIntent, exE, 1);
+      mContext.bindService(localIntent, eDY, 1);
       return;
     }
     parama.a(new c(63535, "Google play not installed!"));
   }
   
-  public final boolean a(ArrayList paramArrayList, c paramc)
+  public final boolean a(ArrayList<String> paramArrayList, c paramc)
   {
-    pt("query details");
+    qJ("query details");
     Intent localIntent = new Intent();
     if ((paramArrayList == null) || (paramArrayList.size() == 0))
     {
-      u.e("!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68", "query list is empty!");
+      v.e("MicroMsg.IabHelper", "query list is empty!");
       paramArrayList = new c(5, "no query list or is empty");
       localIntent.putExtra("RESPONSE_CODE", 5);
       localIntent.putExtra("QUERY_DETAIL_INFO", new ArrayList());
@@ -157,34 +157,34 @@ public final class b
     }
     try
     {
-      u.d("!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68", "query detail list with the size is " + paramArrayList.size());
+      v.d("MicroMsg.IabHelper", "query detail list with the size is " + paramArrayList.size());
       Object localObject = new Bundle();
       ((Bundle)localObject).putStringArrayList("ITEM_ID_LIST", paramArrayList);
-      paramArrayList = exD.a(3, mContext.getPackageName(), "inapp", (Bundle)localObject);
-      int i = j(paramArrayList);
-      u.d("!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68", "detail response: " + String.valueOf(i));
+      paramArrayList = eDX.a(3, mContext.getPackageName(), "inapp", (Bundle)localObject);
+      int i = l(paramArrayList);
+      v.d("MicroMsg.IabHelper", "detail response: " + String.valueOf(i));
       if (i != 0)
       {
-        u.d("!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68", "cannot query details");
+        v.d("MicroMsg.IabHelper", "cannot query details");
         paramArrayList = new c(i, "cannot query details");
         localIntent.putExtra("RESPONSE_CODE", i);
         paramc.a(paramArrayList, localIntent);
         return true;
       }
       localObject = new c(i, "query list ok!");
-      u.d("!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68", "result code : " + i);
+      v.d("MicroMsg.IabHelper", "result code : " + i);
       localIntent.putExtra("RESPONSE_CODE", i);
       localIntent.putExtra("RESPONSE_QUERY_DETAIL_INFO", paramArrayList.getStringArrayList("DETAILS_LIST"));
       paramc.a((c)localObject, localIntent);
       paramArrayList = paramArrayList.getStringArrayList("DETAILS_LIST").iterator();
       while (paramArrayList.hasNext()) {
-        u.d("!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68", (String)paramArrayList.next());
+        v.d("MicroMsg.IabHelper", (String)paramArrayList.next());
       }
       return true;
     }
     catch (RemoteException paramArrayList)
     {
-      pu("RemoteException while launching query details ");
+      qK("RemoteException while launching query details ");
       paramArrayList = new c(64535, "Remote exception while starting purchase flow");
       localIntent.putExtra("RESPONSE_CODE", 6);
       localIntent.putExtra("QUERY_DETAIL_INFO", new ArrayList());
@@ -195,34 +195,34 @@ public final class b
   
   public final void dispose()
   {
-    u.d("!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68", "Disposing.");
-    exF = false;
-    if (exE != null) {
-      u.d("!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68", "Unbinding from service.");
+    v.d("MicroMsg.IabHelper", "Disposing.");
+    eDZ = false;
+    if (eDY != null) {
+      v.d("MicroMsg.IabHelper", "Unbinding from service.");
     }
     try
     {
       if (mContext != null) {
-        mContext.unbindService(exE);
+        mContext.unbindService(eDY);
       }
-      exE = null;
-      exD = null;
+      eDY = null;
+      eDX = null;
       return;
     }
     catch (IllegalArgumentException localIllegalArgumentException)
     {
       for (;;)
       {
-        u.e("!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68", localIllegalArgumentException.toString());
+        v.e("MicroMsg.IabHelper", localIllegalArgumentException.toString());
       }
     }
   }
   
-  public final void pt(String paramString)
+  public final void qJ(String paramString)
   {
-    if (!exF)
+    if (!eDZ)
     {
-      u.e("!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68", "Illegal state for operation (" + paramString + "): IAB helper is not set up.");
+      v.e("MicroMsg.IabHelper", "Illegal state for operation (" + paramString + "): IAB helper is not set up.");
       throw new IllegalStateException("IAB helper is not set up. Can't perform operation: " + paramString);
     }
   }

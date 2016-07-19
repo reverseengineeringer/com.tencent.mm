@@ -13,9 +13,19 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/h/h",
+        "<",
+        "Ljava/lang/Object;",
+        "Ljava/lang/String;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic jYD:Lcom/tencent/mm/sdk/h/g;
+.field final synthetic kza:Lcom/tencent/mm/sdk/h/g;
 
 
 # direct methods
@@ -24,7 +34,7 @@
 
     .prologue
     .line 46
-    iput-object p1, p0, Lcom/tencent/mm/sdk/h/g$2;->jYD:Lcom/tencent/mm/sdk/h/g;
+    iput-object p1, p0, Lcom/tencent/mm/sdk/h/g$2;->kza:Lcom/tencent/mm/sdk/h/g;
 
     invoke-direct {p0}, Lcom/tencent/mm/sdk/h/h;-><init>()V
 
@@ -33,7 +43,7 @@
 
 
 # virtual methods
-.method protected final bridge synthetic g(Ljava/lang/Object;Ljava/lang/Object;)V
+.method protected final bridge synthetic k(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
     .prologue

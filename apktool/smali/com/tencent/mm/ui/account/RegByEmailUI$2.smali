@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+.field final synthetic kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 246
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$2;->kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$2;->kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,21 +41,21 @@
 
     .prologue
     .line 250
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$2;->kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$2;->kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByEmailUI;->f(Lcom/tencent/mm/ui/account/RegByEmailUI;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kC(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->ll(Ljava/lang/String;)V
 
     .line 251
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$2;->kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$2;->kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/RegByEmailUI;->age()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/RegByEmailUI;->aiI()V
 
     .line 252
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$2;->kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$2;->kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/account/RegByEmailUI;->finish()V
 

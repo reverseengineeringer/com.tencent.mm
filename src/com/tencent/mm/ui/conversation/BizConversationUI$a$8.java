@@ -1,23 +1,17 @@
 package com.tencent.mm.ui.conversation;
 
-import android.app.ProgressDialog;
-import com.tencent.mm.model.ar.a;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.tencent.mm.platformtools.a.b;
 
 final class BizConversationUI$a$8
-  implements ar.a
+  implements View.OnClickListener
 {
-  BizConversationUI$a$8(BizConversationUI.a parama, ProgressDialog paramProgressDialog) {}
+  BizConversationUI$a$8(BizConversationUI.a parama) {}
   
-  public final void uh()
+  public final void onClick(View paramView)
   {
-    if (cYO != null) {
-      cYO.dismiss();
-    }
-  }
-  
-  public final boolean ui()
-  {
-    return BizConversationUI.a.j(loi);
+    a.b.a(BizConversationUI.a.a(lOA));
   }
 }
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tencent.mm.wallet_core.ui.CustomerScrollView android:background="@color/o_" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/jc" android:textColor="@color/ow" android:ellipsize="end" android:gravity="left" android:id="@id/a6f" android:background="#1a000000" android:paddingLeft="@dimen/i7" android:paddingTop="@dimen/i7" android:paddingRight="@dimen/i7" android:paddingBottom="@dimen/i7" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" />
+        <include android:id="@id/co2" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/wallet_offline_coin_purse_qrcode_layout" />
+    </LinearLayout>
+</com.tencent.mm.wallet_core.ui.CustomerScrollView>

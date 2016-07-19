@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+.field final synthetic jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 593
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$25;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$25;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,28 +41,28 @@
 
     .prologue
     .line 597
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$25;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$25;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->setToSendTextColor(Z)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->gV(Z)V
 
     .line 612
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$25;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$25;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->i(Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;)V
 
     .line 619
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$25;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$25;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->j(Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;)Lcom/tencent/mm/pluginsdk/ui/chat/b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/b;->aio()V
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/b;->akV()V
 
     .line 623
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$25;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$25;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->k(Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;)V
 

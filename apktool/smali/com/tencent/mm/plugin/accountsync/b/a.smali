@@ -4,11 +4,21 @@
 
 
 # static fields
-.field public static cop:Lcom/tencent/mm/plugin/accountsync/b/a;
+.field public static cjD:Lcom/tencent/mm/plugin/accountsync/b/a;
 
 
 # instance fields
-.field private coq:Ljava/util/Map;
+.field private cjE:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -21,7 +31,7 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/plugin/accountsync/b/a;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/plugin/accountsync/b/a;->cop:Lcom/tencent/mm/plugin/accountsync/b/a;
+    sput-object v0, Lcom/tencent/mm/plugin/accountsync/b/a;->cjD:Lcom/tencent/mm/plugin/accountsync/b/a;
 
     return-void
 .end method
@@ -38,8 +48,20 @@
 
 
 # virtual methods
-.method public final bm(Landroid/content/Context;)Ljava/util/Map;
+.method public final bh(Landroid/content/Context;)Ljava/util/Map;
     .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            ")",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     const/4 v4, 0x0
@@ -59,12 +81,12 @@
     move-result-object v0
 
     .line 28
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->g(Ljava/io/InputStream;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->k(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 29
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -80,9 +102,7 @@
     :cond_0
     const-string/jumbo v1, "config"
 
-    const/4 v3, 0x0
-
-    invoke-static {v0, v1, v3}, Lcom/tencent/mm/sdk/platformtools/q;->J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/r;->cr(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v5
 
@@ -97,11 +117,11 @@
 
     .line 34
     :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpJwOMBN3Ft5hVOpzvJV0XFH"
+    const-string/jumbo v0, "MicroMsg.EmailFormater"
 
     const-string/jumbo v1, "values null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v2
 
@@ -110,7 +130,7 @@
 
     .line 38
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/b/a;->coq:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/b/a;->cjE:Ljava/util/Map;
 
     if-nez v0, :cond_4
 
@@ -119,7 +139,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/accountsync/b/a;->coq:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/accountsync/b/a;->cjE:Ljava/util/Map;
 
     move v3, v4
 
@@ -204,20 +224,20 @@
     check-cast v1, Ljava/lang/String;
 
     .line 58
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v6
 
     if-nez v6, :cond_3
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v6
 
     if-nez v6, :cond_3
 
     .line 59
-    iget-object v6, p0, Lcom/tencent/mm/plugin/accountsync/b/a;->coq:Ljava/util/Map;
+    iget-object v6, p0, Lcom/tencent/mm/plugin/accountsync/b/a;->cjE:Ljava/util/Map;
 
     invoke-interface {v6, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -231,7 +251,7 @@
 
     .line 41
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/b/a;->coq:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/b/a;->cjE:Ljava/util/Map;
 
     goto/16 :goto_0
 
@@ -245,7 +265,7 @@
 
     .line 63
     :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/b/a;->coq:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/b/a;->cjE:Ljava/util/Map;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -256,7 +276,7 @@
     move-exception v0
 
     .line 66
-    const-string/jumbo v1, "!32@/B4Tb64lLpJwOMBN3Ft5hVOpzvJV0XFH"
+    const-string/jumbo v1, "MicroMsg.EmailFormater"
 
     const-string/jumbo v3, "parse email failed:[%s]"
 
@@ -270,7 +290,7 @@
 
     aput-object v0, v5, v4
 
-    invoke-static {v1, v3, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v3, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v2
 

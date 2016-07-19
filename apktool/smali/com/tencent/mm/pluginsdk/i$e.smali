@@ -18,41 +18,124 @@
 .method public abstract a(Lcom/tencent/mm/sdk/h/g$a;)V
 .end method
 
-.method public abstract aP(Ljava/lang/String;Ljava/lang/String;)V
+.method public abstract aX(Ljava/lang/String;Ljava/lang/String;)V
 .end method
 
-.method public abstract aeA()Ljava/util/List;
+.method public abstract ahd()V
 .end method
 
-.method public abstract aeC()Ljava/util/List;
+.method public abstract ahe()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 .end method
 
-.method public abstract aez()V
+.method public abstract ahg()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 .end method
 
-.method public abstract ag(Ljava/util/List;)Ljava/lang/String;
+.method public abstract ao(Ljava/util/List;)Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Ljava/lang/String;"
+        }
+    .end annotation
 .end method
 
-.method public abstract ah(Ljava/util/List;)V
+.method public abstract ap(Ljava/util/List;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 .end method
 
 .method public abstract b(Lcom/tencent/mm/sdk/h/g$a;)V
 .end method
 
 .method public abstract c(Ljava/util/List;Ljava/util/List;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 .end method
 
-.method public abstract qg(Ljava/lang/String;)Ljava/lang/String;
+.method public abstract rA(Ljava/lang/String;)Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 .end method
 
-.method public abstract qh(Ljava/lang/String;)Ljava/lang/String;
+.method public abstract rw(Ljava/lang/String;)Ljava/lang/String;
 .end method
 
-.method public abstract qi(Ljava/lang/String;)Ljava/util/List;
+.method public abstract rx(Ljava/lang/String;)Ljava/lang/String;
 .end method
 
-.method public abstract qj(Ljava/lang/String;)Ljava/util/List;
+.method public abstract ry(Ljava/lang/String;)Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 .end method
 
-.method public abstract qk(Ljava/lang/String;)Ljava/util/List;
+.method public abstract rz(Ljava/lang/String;)Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 .end method

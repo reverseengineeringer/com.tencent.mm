@@ -10,7 +10,7 @@ final class SnsUploadBrowseUI$2
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    hlx.aCN();
+    hBA.aFS();
     return true;
   }
 }

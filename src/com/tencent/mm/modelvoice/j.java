@@ -6,33 +6,49 @@ import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.media.MediaPlayer.OnErrorListener;
 import com.tencent.mm.compatible.d.p;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.qqpinyin.voicerecoapi.TRSpeexNative;
 import java.io.FileInputStream;
 
 public final class j
   implements d
 {
-  String anC = "";
-  com.tencent.mm.compatible.util.a apl;
-  String cgY = "";
-  String cgZ = "";
-  MediaPlayer.OnCompletionListener chg = new MediaPlayer.OnCompletionListener()
+  com.tencent.mm.compatible.util.a aaD;
+  String aaq = "";
+  AudioTrack ccB;
+  d.a ccC = null;
+  d.b ccD = null;
+  private int ccE = 2;
+  private int ccF = 16000;
+  private int ccG = 1;
+  private int ccH = 20;
+  private Runnable ccI;
+  com.tencent.qqpinyin.voicerecoapi.a ccJ = null;
+  private int ccK;
+  int ccL = 0;
+  boolean ccM = false;
+  byte[] ccN = new byte[com.tencent.qqpinyin.voicerecoapi.a.msx];
+  int ccO = 0;
+  FileInputStream ccP = null;
+  int ccQ = 314;
+  String ccp = "";
+  String ccq = "";
+  MediaPlayer.OnCompletionListener ccx = new MediaPlayer.OnCompletionListener()
   {
     public final void onCompletion(MediaPlayer paramAnonymousMediaPlayer)
     {
-      if (apl != null) {
-        apl.oV();
+      if (aaD != null) {
+        aaD.nn();
       }
       try
       {
         status = 0;
-        if (chk != null)
+        if (ccB != null)
         {
-          chk.stop();
-          chk.release();
-          chk = null;
+          ccB.stop();
+          ccB.release();
+          ccB = null;
         }
         try
         {
@@ -41,37 +57,37 @@ public final class j
         }
         catch (InterruptedException paramAnonymousMediaPlayer)
         {
-          u.e("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "exception:%s", new Object[] { ay.b(paramAnonymousMediaPlayer) });
+          v.e("MicroMsg.SpeexPlayer", "exception:%s", new Object[] { be.f(paramAnonymousMediaPlayer) });
           return;
         }
         return;
       }
       catch (Exception paramAnonymousMediaPlayer)
       {
-        u.e("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "exception:%s", new Object[] { ay.b(paramAnonymousMediaPlayer) });
-        u.e("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "setCompletion File[" + anC + "] ErrMsg[" + paramAnonymousMediaPlayer.getStackTrace() + "]");
+        v.e("MicroMsg.SpeexPlayer", "exception:%s", new Object[] { be.f(paramAnonymousMediaPlayer) });
+        v.e("MicroMsg.SpeexPlayer", "setCompletion File[" + aaq + "] ErrMsg[" + paramAnonymousMediaPlayer.getStackTrace() + "]");
       }
     }
   };
-  MediaPlayer.OnErrorListener chh = new MediaPlayer.OnErrorListener()
+  MediaPlayer.OnErrorListener ccy = new MediaPlayer.OnErrorListener()
   {
     public final boolean onError(MediaPlayer paramAnonymousMediaPlayer, int paramAnonymousInt1, int paramAnonymousInt2)
     {
-      u.d("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "onError");
-      if (apl != null) {
-        apl.oV();
+      v.d("MicroMsg.SpeexPlayer", "onError");
+      if (aaD != null) {
+        aaD.nn();
       }
-      if (chm != null) {
-        chm.onError();
+      if (ccD != null) {
+        ccD.onError();
       }
       try
       {
         status = -1;
-        if (chk != null)
+        if (ccB != null)
         {
-          chk.stop();
-          chk.release();
-          chk = null;
+          ccB.stop();
+          ccB.release();
+          ccB = null;
         }
         try
         {
@@ -80,56 +96,40 @@ public final class j
         }
         catch (InterruptedException paramAnonymousMediaPlayer)
         {
-          u.e("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "exception:%s", new Object[] { ay.b(paramAnonymousMediaPlayer) });
+          v.e("MicroMsg.SpeexPlayer", "exception:%s", new Object[] { be.f(paramAnonymousMediaPlayer) });
           return false;
         }
         return false;
       }
       catch (Exception paramAnonymousMediaPlayer)
       {
-        u.e("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "setErrorListener File[" + anC + "] ErrMsg[" + paramAnonymousMediaPlayer.getStackTrace() + "]");
+        v.e("MicroMsg.SpeexPlayer", "setErrorListener File[" + aaq + "] ErrMsg[" + paramAnonymousMediaPlayer.getStackTrace() + "]");
       }
     }
   };
-  AudioTrack chk;
-  d.a chl = null;
-  d.b chm = null;
-  private int chn = 2;
-  private int cho = 16000;
-  private int chp = 1;
-  private int chq = 20;
-  private Runnable chr;
-  com.tencent.qqpinyin.voicerecoapi.a chs = null;
-  private int cht;
-  int chu = 0;
-  boolean chv = false;
-  byte[] chw = new byte[com.tencent.qqpinyin.voicerecoapi.a.lQK];
-  int chx = 0;
-  FileInputStream chy = null;
-  int chz = 314;
   int status = 0;
   
   public j()
   {
-    com.tencent.qqpinyin.voicerecoapi.a locala = chs;
-    if (lQO != 0) {
+    com.tencent.qqpinyin.voicerecoapi.a locala = ccJ;
+    if (msB != 0) {
       i = -103;
     }
     for (;;)
     {
       if (i != 0) {
-        u.e("speex", "res: " + i);
+        v.e("speex", "res: " + i);
       }
       return;
-      int j = lQP.nativeTRSpeexDecodeInit();
+      int j = msC.nativeTRSpeexDecodeInit();
       if ((j == -1) || (j == -100) || (j == -101) || (j == -102))
       {
         i = j;
       }
       else
       {
-        lQO = j;
-        lQM = new byte[com.tencent.qqpinyin.voicerecoapi.a.lQK * 15];
+        msB = j;
+        msz = new byte[com.tencent.qqpinyin.voicerecoapi.a.msx * 15];
       }
     }
   }
@@ -137,13 +137,13 @@ public final class j
   public j(Context paramContext)
   {
     this();
-    apl = new com.tencent.mm.compatible.util.a(paramContext);
+    aaD = new com.tencent.mm.compatible.util.a(paramContext);
   }
   
-  private void be(boolean paramBoolean)
+  private void aM(boolean paramBoolean)
   {
     int j = 3;
-    if (!com.tencent.mm.a.e.ax(anC)) {
+    if (!com.tencent.mm.a.e.aB(aaq)) {
       return;
     }
     int i;
@@ -155,27 +155,27 @@ public final class j
     {
       try
       {
-        if (!bsLbpH) {
+        if (!bgPbdH) {
           break label289;
         }
-        p.bsL.dump();
-        if (bsLbpO != 1) {
+        p.bgP.dump();
+        if (bgPbdO != 1) {
           break label289;
         }
         i = j;
-        cht = AudioTrack.getMinBufferSize(cho, chn, 2);
-        if (chk != null)
+        ccK = AudioTrack.getMinBufferSize(ccF, ccE, 2);
+        if (ccB != null)
         {
-          chk.stop();
-          chk.release();
-          chk = null;
+          ccB.stop();
+          ccB.release();
+          ccB = null;
         }
-        chk = new AudioTrack(i, cho, chn, 2, cht * 8, 1);
-        chz = (cho / 1000 * chp * chq * 2);
-        if ((paramBoolean) && (apl != null)) {
-          apl.requestFocus();
+        ccB = new AudioTrack(i, ccF, ccE, 2, ccK * 8, 1);
+        ccQ = (ccF / 1000 * ccG * ccH * 2);
+        if ((paramBoolean) && (aaD != null)) {
+          aaD.requestFocus();
         }
-        AudioTrack localAudioTrack = chk;
+        AudioTrack localAudioTrack = ccB;
         if (localAudioTrack == null) {
           break;
         }
@@ -185,8 +185,8 @@ public final class j
       {
         try
         {
-          chk.play();
-          chr = new Runnable()
+          ccB.play();
+          ccI = new Runnable()
           {
             /* Error */
             public final void run()
@@ -195,53 +195,53 @@ public final class j
               //   0: bipush -16
               //   2: invokestatic 29	android/os/Process:setThreadPriority	(I)V
               //   5: aload_0
-              //   6: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
+              //   6: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
               //   9: new 31	java/io/FileInputStream
               //   12: dup
               //   13: aload_0
-              //   14: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   17: getfield 35	com/tencent/mm/modelvoice/j:anC	Ljava/lang/String;
+              //   14: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   17: getfield 35	com/tencent/mm/modelvoice/j:aaq	Ljava/lang/String;
               //   20: invokespecial 38	java/io/FileInputStream:<init>	(Ljava/lang/String;)V
-              //   23: putfield 42	com/tencent/mm/modelvoice/j:chy	Ljava/io/FileInputStream;
+              //   23: putfield 42	com/tencent/mm/modelvoice/j:ccP	Ljava/io/FileInputStream;
               //   26: aload_0
-              //   27: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
+              //   27: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
               //   30: getfield 46	com/tencent/mm/modelvoice/j:status	I
               //   33: iconst_1
               //   34: if_icmpeq +14 -> 48
               //   37: aload_0
-              //   38: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
+              //   38: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
               //   41: getfield 46	com/tencent/mm/modelvoice/j:status	I
               //   44: iconst_2
               //   45: if_icmpne +709 -> 754
               //   48: aload_0
-              //   49: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
+              //   49: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
               //   52: aload_0
-              //   53: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   56: getfield 42	com/tencent/mm/modelvoice/j:chy	Ljava/io/FileInputStream;
+              //   53: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   56: getfield 42	com/tencent/mm/modelvoice/j:ccP	Ljava/io/FileInputStream;
               //   59: aload_0
-              //   60: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   63: getfield 50	com/tencent/mm/modelvoice/j:chw	[B
+              //   60: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   63: getfield 50	com/tencent/mm/modelvoice/j:ccN	[B
               //   66: invokevirtual 54	java/io/FileInputStream:read	([B)I
-              //   69: putfield 57	com/tencent/mm/modelvoice/j:chx	I
+              //   69: putfield 57	com/tencent/mm/modelvoice/j:ccO	I
               //   72: aload_0
-              //   73: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   76: getfield 57	com/tencent/mm/modelvoice/j:chx	I
+              //   73: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   76: getfield 57	com/tencent/mm/modelvoice/j:ccO	I
               //   79: iconst_m1
               //   80: if_icmpeq +552 -> 632
               //   83: aload_0
-              //   84: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   87: getfield 61	com/tencent/mm/modelvoice/j:chs	Lcom/tencent/qqpinyin/voicerecoapi/a;
+              //   84: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   87: getfield 61	com/tencent/mm/modelvoice/j:ccJ	Lcom/tencent/qqpinyin/voicerecoapi/a;
               //   90: astore 4
               //   92: aload_0
-              //   93: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   96: getfield 50	com/tencent/mm/modelvoice/j:chw	[B
+              //   93: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   96: getfield 50	com/tencent/mm/modelvoice/j:ccN	[B
               //   99: astore_3
               //   100: aload_0
-              //   101: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   104: getfield 57	com/tencent/mm/modelvoice/j:chx	I
+              //   101: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   104: getfield 57	com/tencent/mm/modelvoice/j:ccO	I
               //   107: istore_1
               //   108: aload 4
-              //   110: getfield 66	com/tencent/qqpinyin/voicerecoapi/a:lQO	I
+              //   110: getfield 66	com/tencent/qqpinyin/voicerecoapi/a:msB	I
               //   113: ifne +194 -> 307
               //   116: new 68	com/tencent/qqpinyin/voicerecoapi/b
               //   119: dup
@@ -256,66 +256,66 @@ public final class j
               //   135: dup
               //   136: iconst_0
               //   137: aload_3
-              //   138: invokestatic 80	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
+              //   138: invokestatic 80	com/tencent/mm/sdk/platformtools/be:f	(Ljava/lang/Throwable;)Ljava/lang/String;
               //   141: aastore
-              //   142: invokestatic 86	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+              //   142: invokestatic 86	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
               //   145: aload_0
-              //   146: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   149: getfield 90	com/tencent/mm/modelvoice/j:chh	Landroid/media/MediaPlayer$OnErrorListener;
+              //   146: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   149: getfield 90	com/tencent/mm/modelvoice/j:ccy	Landroid/media/MediaPlayer$OnErrorListener;
               //   152: ifnull +19 -> 171
               //   155: aload_0
-              //   156: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   159: getfield 90	com/tencent/mm/modelvoice/j:chh	Landroid/media/MediaPlayer$OnErrorListener;
+              //   156: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   159: getfield 90	com/tencent/mm/modelvoice/j:ccy	Landroid/media/MediaPlayer$OnErrorListener;
               //   162: aconst_null
               //   163: iconst_0
               //   164: iconst_0
               //   165: invokeinterface 96 4 0
               //   170: pop
               //   171: aload_0
-              //   172: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
+              //   172: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
               //   175: iconst_0
               //   176: putfield 46	com/tencent/mm/modelvoice/j:status	I
               //   179: aload_0
-              //   180: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   183: getfield 42	com/tencent/mm/modelvoice/j:chy	Ljava/io/FileInputStream;
+              //   180: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   183: getfield 42	com/tencent/mm/modelvoice/j:ccP	Ljava/io/FileInputStream;
               //   186: ifnull +21 -> 207
               //   189: aload_0
-              //   190: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   193: getfield 42	com/tencent/mm/modelvoice/j:chy	Ljava/io/FileInputStream;
+              //   190: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   193: getfield 42	com/tencent/mm/modelvoice/j:ccP	Ljava/io/FileInputStream;
               //   196: invokevirtual 99	java/io/FileInputStream:close	()V
               //   199: aload_0
-              //   200: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
+              //   200: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
               //   203: aconst_null
-              //   204: putfield 42	com/tencent/mm/modelvoice/j:chy	Ljava/io/FileInputStream;
+              //   204: putfield 42	com/tencent/mm/modelvoice/j:ccP	Ljava/io/FileInputStream;
               //   207: aload_0
-              //   208: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   211: getfield 61	com/tencent/mm/modelvoice/j:chs	Lcom/tencent/qqpinyin/voicerecoapi/a;
+              //   208: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   211: getfield 61	com/tencent/mm/modelvoice/j:ccJ	Lcom/tencent/qqpinyin/voicerecoapi/a;
               //   214: astore_3
               //   215: aload_3
-              //   216: getfield 66	com/tencent/qqpinyin/voicerecoapi/a:lQO	I
+              //   216: getfield 66	com/tencent/qqpinyin/voicerecoapi/a:msB	I
               //   219: ifne +577 -> 796
               //   222: bipush -102
               //   224: istore_1
               //   225: aload_0
-              //   226: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
+              //   226: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
               //   229: getfield 46	com/tencent/mm/modelvoice/j:status	I
               //   232: iconst_3
               //   233: if_icmpeq +48 -> 281
               //   236: aload_0
-              //   237: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   240: getfield 103	com/tencent/mm/modelvoice/j:chl	Lcom/tencent/mm/modelvoice/d$a;
+              //   237: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   240: getfield 103	com/tencent/mm/modelvoice/j:ccC	Lcom/tencent/mm/modelvoice/d$a;
               //   243: ifnull +15 -> 258
               //   246: aload_0
-              //   247: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   250: getfield 103	com/tencent/mm/modelvoice/j:chl	Lcom/tencent/mm/modelvoice/d$a;
+              //   247: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   250: getfield 103	com/tencent/mm/modelvoice/j:ccC	Lcom/tencent/mm/modelvoice/d$a;
               //   253: invokeinterface 108 1 0
               //   258: aload_0
-              //   259: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   262: getfield 112	com/tencent/mm/modelvoice/j:chg	Landroid/media/MediaPlayer$OnCompletionListener;
+              //   259: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   262: getfield 112	com/tencent/mm/modelvoice/j:ccx	Landroid/media/MediaPlayer$OnCompletionListener;
               //   265: ifnull +16 -> 281
               //   268: aload_0
-              //   269: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   272: getfield 112	com/tencent/mm/modelvoice/j:chg	Landroid/media/MediaPlayer$OnCompletionListener;
+              //   269: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   272: getfield 112	com/tencent/mm/modelvoice/j:ccx	Landroid/media/MediaPlayer$OnCompletionListener;
               //   275: aconst_null
               //   276: invokeinterface 118 2 0
               //   281: iload_1
@@ -328,7 +328,7 @@ public final class j
               //   296: iload_1
               //   297: invokevirtual 127	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
               //   300: invokevirtual 131	java/lang/StringBuilder:toString	()Ljava/lang/String;
-              //   303: invokestatic 134	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+              //   303: invokestatic 134	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;)V
               //   306: return
               //   307: aload_3
               //   308: ifnull +8 -> 316
@@ -341,14 +341,14 @@ public final class j
               //   322: invokespecial 70	com/tencent/qqpinyin/voicerecoapi/b:<init>	(I)V
               //   325: athrow
               //   326: aload 4
-              //   328: getfield 138	com/tencent/qqpinyin/voicerecoapi/a:lQP	Lcom/tencent/qqpinyin/voicerecoapi/TRSpeexNative;
+              //   328: getfield 138	com/tencent/qqpinyin/voicerecoapi/a:msC	Lcom/tencent/qqpinyin/voicerecoapi/TRSpeexNative;
               //   331: aload 4
-              //   333: getfield 66	com/tencent/qqpinyin/voicerecoapi/a:lQO	I
+              //   333: getfield 66	com/tencent/qqpinyin/voicerecoapi/a:msB	I
               //   336: aload_3
               //   337: iconst_0
               //   338: iload_1
               //   339: aload 4
-              //   341: getfield 141	com/tencent/qqpinyin/voicerecoapi/a:lQM	[B
+              //   341: getfield 141	com/tencent/qqpinyin/voicerecoapi/a:msz	[B
               //   344: invokevirtual 147	com/tencent/qqpinyin/voicerecoapi/TRSpeexNative:nativeTRSpeexDecode	(I[BII[B)I
               //   347: istore_1
               //   348: iload_1
@@ -359,7 +359,7 @@ public final class j
               //   357: invokespecial 70	com/tencent/qqpinyin/voicerecoapi/b:<init>	(I)V
               //   360: athrow
               //   361: aload_0
-              //   362: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
+              //   362: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
               //   365: iconst_0
               //   366: putfield 46	com/tencent/mm/modelvoice/j:status	I
               //   369: goto -343 -> 26
@@ -367,7 +367,7 @@ public final class j
               //   373: newarray <illegal type>
               //   375: astore_3
               //   376: aload 4
-              //   378: getfield 141	com/tencent/qqpinyin/voicerecoapi/a:lQM	[B
+              //   378: getfield 141	com/tencent/qqpinyin/voicerecoapi/a:msz	[B
               //   381: iconst_0
               //   382: aload_3
               //   383: iconst_0
@@ -381,110 +381,110 @@ public final class j
               //   395: istore_2
               //   396: iload_1
               //   397: aload_0
-              //   398: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   401: getfield 156	com/tencent/mm/modelvoice/j:chz	I
+              //   398: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   401: getfield 156	com/tencent/mm/modelvoice/j:ccQ	I
               //   404: if_icmplt +96 -> 500
               //   407: aload_0
-              //   408: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
+              //   408: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
               //   411: getfield 46	com/tencent/mm/modelvoice/j:status	I
               //   414: iconst_1
               //   415: if_icmpne +85 -> 500
               //   418: aload_0
-              //   419: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   422: getfield 160	com/tencent/mm/modelvoice/j:chv	Z
+              //   419: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   422: getfield 160	com/tencent/mm/modelvoice/j:ccM	Z
               //   425: ifeq +12 -> 437
               //   428: ldc2_w 161
               //   431: invokestatic 168	java/lang/Thread:sleep	(J)V
               //   434: goto -38 -> 396
               //   437: aload_0
-              //   438: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   441: getfield 172	com/tencent/mm/modelvoice/j:chk	Landroid/media/AudioTrack;
+              //   438: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   441: getfield 172	com/tencent/mm/modelvoice/j:ccB	Landroid/media/AudioTrack;
               //   444: ifnull -48 -> 396
               //   447: aload_0
-              //   448: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   451: getfield 160	com/tencent/mm/modelvoice/j:chv	Z
+              //   448: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   451: getfield 160	com/tencent/mm/modelvoice/j:ccM	Z
               //   454: ifne -58 -> 396
               //   457: aload_0
-              //   458: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   461: getfield 172	com/tencent/mm/modelvoice/j:chk	Landroid/media/AudioTrack;
+              //   458: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   461: getfield 172	com/tencent/mm/modelvoice/j:ccB	Landroid/media/AudioTrack;
               //   464: aload_3
               //   465: iload_2
               //   466: aload_0
-              //   467: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   470: getfield 156	com/tencent/mm/modelvoice/j:chz	I
+              //   467: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   470: getfield 156	com/tencent/mm/modelvoice/j:ccQ	I
               //   473: invokevirtual 178	android/media/AudioTrack:write	([BII)I
               //   476: pop
               //   477: iload_2
               //   478: aload_0
-              //   479: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   482: getfield 156	com/tencent/mm/modelvoice/j:chz	I
+              //   479: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   482: getfield 156	com/tencent/mm/modelvoice/j:ccQ	I
               //   485: iadd
               //   486: istore_2
               //   487: iload_1
               //   488: aload_0
-              //   489: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   492: getfield 156	com/tencent/mm/modelvoice/j:chz	I
+              //   489: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   492: getfield 156	com/tencent/mm/modelvoice/j:ccQ	I
               //   495: isub
               //   496: istore_1
               //   497: goto -101 -> 396
               //   500: iload_1
               //   501: aload_0
-              //   502: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   505: getfield 156	com/tencent/mm/modelvoice/j:chz	I
+              //   502: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   505: getfield 156	com/tencent/mm/modelvoice/j:ccQ	I
               //   508: if_icmpge +31 -> 539
               //   511: iload_1
               //   512: ifle +27 -> 539
               //   515: aload_0
-              //   516: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   519: getfield 172	com/tencent/mm/modelvoice/j:chk	Landroid/media/AudioTrack;
+              //   516: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   519: getfield 172	com/tencent/mm/modelvoice/j:ccB	Landroid/media/AudioTrack;
               //   522: ifnull +17 -> 539
               //   525: aload_0
-              //   526: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   529: getfield 172	com/tencent/mm/modelvoice/j:chk	Landroid/media/AudioTrack;
+              //   526: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   529: getfield 172	com/tencent/mm/modelvoice/j:ccB	Landroid/media/AudioTrack;
               //   532: aload_3
               //   533: iload_2
               //   534: iload_1
               //   535: invokevirtual 178	android/media/AudioTrack:write	([BII)I
               //   538: pop
               //   539: aload_0
-              //   540: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
+              //   540: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
               //   543: getfield 46	com/tencent/mm/modelvoice/j:status	I
               //   546: iconst_2
               //   547: if_icmpne +151 -> 698
               //   550: aload_0
-              //   551: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   554: getfield 181	com/tencent/mm/modelvoice/j:cgZ	Ljava/lang/String;
+              //   551: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   554: getfield 181	com/tencent/mm/modelvoice/j:ccq	Ljava/lang/String;
               //   557: astore_3
               //   558: aload_3
               //   559: monitorenter
               //   560: ldc 72
               //   562: ldc -73
-              //   564: invokestatic 186	com/tencent/mm/sdk/platformtools/u:v	(Ljava/lang/String;Ljava/lang/String;)V
+              //   564: invokestatic 186	com/tencent/mm/sdk/platformtools/v:v	(Ljava/lang/String;Ljava/lang/String;)V
               //   567: aload_0
-              //   568: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   571: getfield 181	com/tencent/mm/modelvoice/j:cgZ	Ljava/lang/String;
+              //   568: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   571: getfield 181	com/tencent/mm/modelvoice/j:ccq	Ljava/lang/String;
               //   574: invokevirtual 189	java/lang/Object:notify	()V
               //   577: ldc 72
               //   579: ldc -65
-              //   581: invokestatic 186	com/tencent/mm/sdk/platformtools/u:v	(Ljava/lang/String;Ljava/lang/String;)V
+              //   581: invokestatic 186	com/tencent/mm/sdk/platformtools/v:v	(Ljava/lang/String;Ljava/lang/String;)V
               //   584: aload_3
               //   585: monitorexit
               //   586: aload_0
-              //   587: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   590: getfield 194	com/tencent/mm/modelvoice/j:cgY	Ljava/lang/String;
+              //   587: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   590: getfield 194	com/tencent/mm/modelvoice/j:ccp	Ljava/lang/String;
               //   593: astore_3
               //   594: aload_3
               //   595: monitorenter
               //   596: ldc 72
               //   598: ldc -60
-              //   600: invokestatic 186	com/tencent/mm/sdk/platformtools/u:v	(Ljava/lang/String;Ljava/lang/String;)V
+              //   600: invokestatic 186	com/tencent/mm/sdk/platformtools/v:v	(Ljava/lang/String;Ljava/lang/String;)V
               //   603: aload_0
-              //   604: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   607: getfield 194	com/tencent/mm/modelvoice/j:cgY	Ljava/lang/String;
+              //   604: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   607: getfield 194	com/tencent/mm/modelvoice/j:ccp	Ljava/lang/String;
               //   610: invokevirtual 199	java/lang/Object:wait	()V
               //   613: ldc 72
               //   615: ldc -55
-              //   617: invokestatic 186	com/tencent/mm/sdk/platformtools/u:v	(Ljava/lang/String;Ljava/lang/String;)V
+              //   617: invokestatic 186	com/tencent/mm/sdk/platformtools/v:v	(Ljava/lang/String;Ljava/lang/String;)V
               //   620: aload_3
               //   621: monitorexit
               //   622: goto -596 -> 26
@@ -494,7 +494,7 @@ public final class j
               //   629: aload 4
               //   631: athrow
               //   632: aload_0
-              //   633: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
+              //   633: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
               //   636: iconst_0
               //   637: putfield 46	com/tencent/mm/modelvoice/j:status	I
               //   640: goto -101 -> 539
@@ -506,9 +506,9 @@ public final class j
               //   653: dup
               //   654: iconst_0
               //   655: aload 4
-              //   657: invokestatic 80	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
+              //   657: invokestatic 80	com/tencent/mm/sdk/platformtools/be:f	(Ljava/lang/Throwable;)Ljava/lang/String;
               //   660: aastore
-              //   661: invokestatic 86	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+              //   661: invokestatic 86	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
               //   664: goto -80 -> 584
               //   667: astore 4
               //   669: aload_3
@@ -523,19 +523,19 @@ public final class j
               //   684: dup
               //   685: iconst_0
               //   686: aload 4
-              //   688: invokestatic 80	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
+              //   688: invokestatic 80	com/tencent/mm/sdk/platformtools/be:f	(Ljava/lang/Throwable;)Ljava/lang/String;
               //   691: aastore
-              //   692: invokestatic 86	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+              //   692: invokestatic 86	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
               //   695: goto -75 -> 620
               //   698: aload_0
-              //   699: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   702: getfield 181	com/tencent/mm/modelvoice/j:cgZ	Ljava/lang/String;
+              //   699: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   702: getfield 181	com/tencent/mm/modelvoice/j:ccq	Ljava/lang/String;
               //   705: astore_3
               //   706: aload_3
               //   707: monitorenter
               //   708: aload_0
-              //   709: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
-              //   712: getfield 181	com/tencent/mm/modelvoice/j:cgZ	Ljava/lang/String;
+              //   709: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
+              //   712: getfield 181	com/tencent/mm/modelvoice/j:ccq	Ljava/lang/String;
               //   715: invokevirtual 189	java/lang/Object:notify	()V
               //   718: aload_3
               //   719: monitorexit
@@ -553,12 +553,12 @@ public final class j
               //   740: dup
               //   741: iconst_0
               //   742: aload 4
-              //   744: invokestatic 80	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
+              //   744: invokestatic 80	com/tencent/mm/sdk/platformtools/be:f	(Ljava/lang/Throwable;)Ljava/lang/String;
               //   747: aastore
-              //   748: invokestatic 86	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+              //   748: invokestatic 86	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
               //   751: goto -33 -> 718
               //   754: aload_0
-              //   755: getfield 14	com/tencent/mm/modelvoice/j$3:chA	Lcom/tencent/mm/modelvoice/j;
+              //   755: getfield 14	com/tencent/mm/modelvoice/j$3:ccR	Lcom/tencent/mm/modelvoice/j;
               //   758: getfield 46	com/tencent/mm/modelvoice/j:status	I
               //   761: iconst_3
               //   762: if_icmpeq -583 -> 179
@@ -573,22 +573,22 @@ public final class j
               //   783: dup
               //   784: iconst_0
               //   785: aload_3
-              //   786: invokestatic 80	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
+              //   786: invokestatic 80	com/tencent/mm/sdk/platformtools/be:f	(Ljava/lang/Throwable;)Ljava/lang/String;
               //   789: aastore
-              //   790: invokestatic 86	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+              //   790: invokestatic 86	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
               //   793: goto -594 -> 199
               //   796: aload_3
               //   797: aconst_null
-              //   798: putfield 141	com/tencent/qqpinyin/voicerecoapi/a:lQM	[B
+              //   798: putfield 141	com/tencent/qqpinyin/voicerecoapi/a:msz	[B
               //   801: aload_3
-              //   802: getfield 138	com/tencent/qqpinyin/voicerecoapi/a:lQP	Lcom/tencent/qqpinyin/voicerecoapi/TRSpeexNative;
+              //   802: getfield 138	com/tencent/qqpinyin/voicerecoapi/a:msC	Lcom/tencent/qqpinyin/voicerecoapi/TRSpeexNative;
               //   805: aload_3
-              //   806: getfield 66	com/tencent/qqpinyin/voicerecoapi/a:lQO	I
+              //   806: getfield 66	com/tencent/qqpinyin/voicerecoapi/a:msB	I
               //   809: invokevirtual 207	com/tencent/qqpinyin/voicerecoapi/TRSpeexNative:nativeTRSpeexDecodeRelease	(I)I
               //   812: istore_1
               //   813: aload_3
               //   814: iconst_0
-              //   815: putfield 66	com/tencent/qqpinyin/voicerecoapi/a:lQO	I
+              //   815: putfield 66	com/tencent/qqpinyin/voicerecoapi/a:msB	I
               //   818: goto -593 -> 225
               //   821: iload_1
               //   822: ifne -450 -> 372
@@ -657,89 +657,79 @@ public final class j
               //   189	199	774	java/io/IOException
             }
           };
-          com.tencent.mm.sdk.i.e.a(chr, "SpeexPlayer_play");
+          com.tencent.mm.sdk.i.e.a(ccI, "SpeexPlayer_play");
           return;
         }
         catch (Exception localException2)
         {
-          u.e("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "audioTrack error:%s", new Object[] { localException2.getMessage() });
+          v.e("MicroMsg.SpeexPlayer", "audioTrack error:%s", new Object[] { localException2.getMessage() });
           return;
         }
         localException1 = localException1;
-        if (apl != null) {
-          apl.oV();
+        if (aaD != null) {
+          aaD.nn();
         }
-        u.e("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "playImp : fail, exception = " + localException1.getMessage());
-        u.e("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "exception:%s", new Object[] { ay.b(localException1) });
+        v.e("MicroMsg.SpeexPlayer", "playImp : fail, exception = " + localException1.getMessage());
+        v.e("MicroMsg.SpeexPlayer", "exception:%s", new Object[] { be.f(localException1) });
         return;
       }
     }
   }
   
-  private boolean t(String paramString, boolean paramBoolean)
+  private boolean x(String paramString, boolean paramBoolean)
   {
     if (status != 0)
     {
-      u.e("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "startPlay error status:" + status);
+      v.e("MicroMsg.SpeexPlayer", "startPlay error status:" + status);
       return false;
     }
     status = 1;
-    anC = paramString;
+    aaq = paramString;
     try
     {
-      be(paramBoolean);
+      aM(paramBoolean);
       return true;
     }
     catch (Exception paramString)
     {
       try
       {
-        be(true);
+        aM(true);
       }
       catch (Exception localException)
       {
-        u.e("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "startPlay File[" + anC + "] failed");
-        u.e("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "exception:%s", new Object[] { ay.b(paramString) });
+        v.e("MicroMsg.SpeexPlayer", "startPlay File[" + aaq + "] failed");
+        v.e("MicroMsg.SpeexPlayer", "exception:%s", new Object[] { be.f(paramString) });
         status = -1;
       }
     }
     return false;
   }
   
-  public final void a(d.a parama)
-  {
-    chl = parama;
-  }
-  
-  public final void a(d.b paramb)
-  {
-    chm = paramb;
-  }
-  
-  public final void ak(boolean paramBoolean)
+  public final void N(boolean paramBoolean)
   {
     int j = 3;
-    chv = true;
+    ccM = true;
     int i;
-    if (chp == 2)
+    if (ccG == 2)
     {
-      chn = 3;
-      cht = AudioTrack.getMinBufferSize(cho, chn, 2);
-      if (chk != null)
+      ccE = 3;
+      ccK = AudioTrack.getMinBufferSize(ccF, ccE, 2);
+      if (ccB != null)
       {
-        chk.stop();
-        chk.release();
-        chk = null;
+        ccB.stop();
+        ccB.release();
+        ccB = null;
       }
       if (!paramBoolean) {
         break label145;
       }
       i = 3;
-      if (!bsLbpH) {
+      if (!bgPbdH) {
         break label174;
       }
-      p.bsL.dump();
-      if (bsLbpO != 1) {
+      p.bgP.dump();
+      if (bgPbdO != 1) {
         break label174;
       }
       i = j;
@@ -748,13 +738,13 @@ public final class j
     label174:
     for (;;)
     {
-      chk = new AudioTrack(i, cho, chn, 2, cht * 8, 1);
+      ccB = new AudioTrack(i, ccF, ccE, 2, ccK * 8, 1);
       try
       {
-        chk.play();
-        chv = false;
+        ccB.play();
+        ccM = false;
         return;
-        chn = 2;
+        ccE = 2;
         break;
         i = 0;
       }
@@ -762,15 +752,25 @@ public final class j
       {
         for (;;)
         {
-          u.e("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "audioTrack error:%s", new Object[] { localException.getMessage() });
+          v.e("MicroMsg.SpeexPlayer", "audioTrack error:%s", new Object[] { localException.getMessage() });
         }
       }
     }
   }
   
+  public final void a(d.a parama)
+  {
+    ccC = parama;
+  }
+  
+  public final void a(d.b paramb)
+  {
+    ccD = paramb;
+  }
+  
   public final boolean c(String paramString, boolean paramBoolean, int paramInt)
   {
-    return t(paramString, paramBoolean);
+    return x(paramString, paramBoolean);
   }
   
   public final int getStatus()
@@ -783,53 +783,53 @@ public final class j
     return status == 1;
   }
   
-  public final boolean lB()
+  public final boolean jL()
   {
     if (status != 2) {
       return false;
     }
     status = 1;
-    synchronized (cgY)
+    synchronized (ccp)
     {
       try
       {
-        u.v("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "before mpause.notify");
-        cgY.notify();
-        u.v("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "after mpause.notify");
+        v.v("MicroMsg.SpeexPlayer", "before mpause.notify");
+        ccp.notify();
+        v.v("MicroMsg.SpeexPlayer", "after mpause.notify");
         return true;
       }
       catch (Exception localException)
       {
-        u.e("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "exception:%s", new Object[] { ay.b(localException) });
+        v.e("MicroMsg.SpeexPlayer", "exception:%s", new Object[] { be.f(localException) });
         return false;
       }
     }
   }
   
-  public final double lE()
+  public final double jO()
   {
     return 0.0D;
   }
   
-  public final boolean lv()
+  public final boolean jW()
   {
-    u.e("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "stop  status:" + status);
+    v.e("MicroMsg.SpeexPlayer", "stop  status:" + status);
     if ((status != 1) && (status != 2))
     {
-      u.e("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "stop  error status:" + status);
+      v.e("MicroMsg.SpeexPlayer", "stop  error status:" + status);
       return false;
     }
     status = 3;
-    synchronized (cgY)
+    synchronized (ccp)
     {
       try
       {
-        cgY.notify();
+        ccp.notify();
         return true;
       }
       catch (Exception localException)
       {
-        u.e("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "exception:%s", new Object[] { ay.b(localException) });
+        v.e("MicroMsg.SpeexPlayer", "exception:%s", new Object[] { be.f(localException) });
         return false;
       }
     }
@@ -841,27 +841,27 @@ public final class j
       return false;
     }
     status = 2;
-    synchronized (cgZ)
+    synchronized (ccq)
     {
       try
       {
-        u.v("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "before mOk.wait");
+        v.v("MicroMsg.SpeexPlayer", "before mOk.wait");
         long l = System.currentTimeMillis();
-        cgZ.wait();
-        u.v("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "after mOk.wait time:" + (System.currentTimeMillis() - l));
+        ccq.wait();
+        v.v("MicroMsg.SpeexPlayer", "after mOk.wait time:" + (System.currentTimeMillis() - l));
         return true;
       }
       catch (Exception localException)
       {
-        u.e("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "exception:%s", new Object[] { ay.b(localException) });
+        v.e("MicroMsg.SpeexPlayer", "exception:%s", new Object[] { be.f(localException) });
         return false;
       }
     }
   }
   
-  public final boolean s(String paramString, boolean paramBoolean)
+  public final boolean w(String paramString, boolean paramBoolean)
   {
-    return t(paramString, paramBoolean);
+    return x(paramString, paramBoolean);
   }
 }
 

@@ -13,10 +13,10 @@ final class FindMContactAddUI$9
   
   public final void onClick(View paramView)
   {
-    FindMContactAddUI.f(lrt).setVisibility(0);
-    FindMContactAddUI.g(lrt).setVisibility(8);
-    FindMContactAddUI.c(lrt).aV(false);
-    FindMContactAddUI.c(lrt).notifyDataSetChanged();
+    FindMContactAddUI.f(lRX).setVisibility(0);
+    FindMContactAddUI.g(lRX).setVisibility(8);
+    FindMContactAddUI.c(lRX).aB(false);
+    FindMContactAddUI.c(lRX).notifyDataSetChanged();
   }
 }
 

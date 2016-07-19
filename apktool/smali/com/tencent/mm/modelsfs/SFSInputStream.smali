@@ -4,14 +4,14 @@
 
 
 # instance fields
-.field private cam:J
+.field private bTV:J
 
 .field private mNativePtr:J
 
 
 # direct methods
 .method public constructor <init>(J)V
-    .locals 2
+    .locals 3
 
     .prologue
     .line 14
@@ -20,7 +20,7 @@
     .line 11
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->cam:J
+    iput-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->bTV:J
 
     .line 15
     iput-wide p1, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->mNativePtr:J
@@ -44,15 +44,15 @@
 
 # virtual methods
 .method public available()I
-    .locals 7
+    .locals 8
 
     .prologue
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
     .line 20
     iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->mNativePtr:J
 
-    cmp-long v0, v0, v5
+    cmp-long v0, v0, v6
 
     if-nez v0, :cond_0
 
@@ -74,7 +74,7 @@
     move-result-wide v0
 
     .line 24
-    cmp-long v2, v0, v5
+    cmp-long v2, v0, v6
 
     if-gez v2, :cond_1
 
@@ -94,12 +94,12 @@
 
     const/4 v4, 0x1
 
-    invoke-static {v2, v3, v5, v6, v4}, Lcom/tencent/mm/modelsfs/SFSInputStream;->nativeSeek(JJI)J
+    invoke-static {v2, v3, v6, v7, v4}, Lcom/tencent/mm/modelsfs/SFSInputStream;->nativeSeek(JJI)J
 
     move-result-wide v2
 
     .line 27
-    cmp-long v4, v2, v5
+    cmp-long v4, v2, v6
 
     if-gez v4, :cond_2
 
@@ -194,15 +194,15 @@
 .end method
 
 .method public mark(I)V
-    .locals 5
+    .locals 6
 
     .prologue
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
     .line 48
     iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->mNativePtr:J
 
-    cmp-long v0, v0, v3
+    cmp-long v0, v0, v4
 
     if-nez v0, :cond_0
 
@@ -216,11 +216,11 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v3, v4, v2}, Lcom/tencent/mm/modelsfs/SFSInputStream;->nativeSeek(JJI)J
+    invoke-static {v0, v1, v4, v5, v2}, Lcom/tencent/mm/modelsfs/SFSInputStream;->nativeSeek(JJI)J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->cam:J
+    iput-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->bTV:J
 
     goto :goto_0
 .end method
@@ -236,21 +236,21 @@
 .end method
 
 .method public read()I
-    .locals 7
+    .locals 8
 
     .prologue
-    const/4 v6, 0x1
+    const/4 v7, 0x1
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     const/4 v0, -0x1
 
     .line 66
-    iget-wide v1, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->mNativePtr:J
+    iget-wide v2, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->mNativePtr:J
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-nez v1, :cond_0
 
@@ -265,13 +265,13 @@
 
     .line 69
     :cond_0
-    new-array v1, v6, [B
+    new-array v1, v7, [B
 
     .line 73
     :cond_1
     iget-wide v2, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->mNativePtr:J
 
-    invoke-static {v2, v3, v1, v5, v6}, Lcom/tencent/mm/modelsfs/SFSInputStream;->nativeRead(J[BII)I
+    invoke-static {v2, v3, v1, v6, v7}, Lcom/tencent/mm/modelsfs/SFSInputStream;->nativeRead(J[BII)I
 
     move-result v2
 
@@ -285,23 +285,23 @@
     return v0
 
     :cond_2
-    aget-byte v0, v1, v5
+    aget-byte v0, v1, v6
 
     goto :goto_0
 .end method
 
 .method public read([BII)I
-    .locals 5
+    .locals 6
 
     .prologue
     const/4 v0, -0x1
 
     .line 81
-    iget-wide v1, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->mNativePtr:J
+    iget-wide v2, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->mNativePtr:J
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-nez v1, :cond_0
 
@@ -376,9 +376,9 @@
 
     .line 88
     :cond_2
-    iget-wide v1, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->mNativePtr:J
+    iget-wide v2, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->mNativePtr:J
 
-    invoke-static {v1, v2, p1, p2, p3}, Lcom/tencent/mm/modelsfs/SFSInputStream;->nativeRead(J[BII)I
+    invoke-static {v2, v3, p1, p2, p3}, Lcom/tencent/mm/modelsfs/SFSInputStream;->nativeRead(J[BII)I
 
     move-result v1
 
@@ -434,7 +434,7 @@
 
     .line 56
     :cond_0
-    iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->cam:J
+    iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->bTV:J
 
     cmp-long v0, v0, v2
 
@@ -453,7 +453,7 @@
     :cond_1
     iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->mNativePtr:J
 
-    iget-wide v2, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->cam:J
+    iget-wide v2, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->bTV:J
 
     const/4 v4, 0x0
 
@@ -462,7 +462,7 @@
     move-result-wide v0
 
     .line 60
-    iget-wide v2, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->cam:J
+    iget-wide v2, p0, Lcom/tencent/mm/modelsfs/SFSInputStream;->bTV:J
 
     cmp-long v0, v0, v2
 
@@ -483,10 +483,10 @@
 .end method
 
 .method public skip(J)J
-    .locals 7
+    .locals 9
 
     .prologue
-    const-wide/16 v5, -0x1
+    const-wide/16 v6, -0x1
 
     const/4 v4, 0x1
 
@@ -551,11 +551,11 @@
     move-result-wide v2
 
     .line 104
-    cmp-long v4, v0, v5
+    cmp-long v4, v0, v6
 
     if-eqz v4, :cond_2
 
-    cmp-long v4, v2, v5
+    cmp-long v4, v2, v6
 
     if-nez v4, :cond_3
 

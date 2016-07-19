@@ -2,61 +2,59 @@ package com.tencent.mm.pluginsdk.model;
 
 import com.tencent.mm.model.ah;
 import com.tencent.mm.pluginsdk.i.a;
-import com.tencent.mm.pluginsdk.model.app.aj;
+import com.tencent.mm.pluginsdk.model.app.al;
 import com.tencent.mm.pluginsdk.model.app.d;
 import com.tencent.mm.pluginsdk.model.app.s;
-import com.tencent.mm.pluginsdk.model.app.v;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.q;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.r;
 import java.util.Map;
 
 public final class g
   implements s
 {
-  public static boolean izT = false;
-  private static g izU;
-  public a izV;
+  public static boolean iWr = false;
+  private static g iWs;
+  public a iWt;
   
-  public static g aPm()
-  {
-    if (izU == null) {
-      izU = new g();
-    }
-    return izU;
-  }
-  
-  public static b zE(String paramString)
+  public static b BA(String paramString)
   {
     if (paramString == null) {
       return null;
     }
-    paramString = q.J(paramString, "PersonalAppSetting", null);
+    paramString = r.cr(paramString, "PersonalAppSetting");
     if (paramString == null) {
       return null;
     }
     paramString = (String)paramString.get(".PersonalAppSetting.OpenID");
-    if (ay.kz(paramString)) {
+    if (be.kf(paramString)) {
       return null;
     }
     b localb = new b();
-    izW = paramString;
+    iWu = paramString;
     return localb;
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, v paramv)
+  public static g aTS()
   {
-    if (!ah.rh()) {}
+    if (iWs == null) {
+      iWs = new g();
+    }
+    return iWs;
+  }
+  
+  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.pluginsdk.model.app.v paramv)
+  {
+    if (!ah.rg()) {}
     do
     {
       do
       {
         return;
-        u.d("!44@/B4Tb64lLpJGu9pVCGYwj1kfnqh0kP99yscgaJEQpZg=", "onSceneEnd errType=%s errCode=%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+        com.tencent.mm.sdk.platformtools.v.d("MicroMsg.GetUserInfoInAppLogic", "onSceneEnd errType=%s errCode=%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
         if (paramv == null)
         {
-          u.e("!44@/B4Tb64lLpJGu9pVCGYwj1kfnqh0kP99yscgaJEQpZg=", "scene == null");
+          com.tencent.mm.sdk.platformtools.v.e("MicroMsg.GetUserInfoInAppLogic", "scene == null");
           return;
         }
       } while ((paramInt1 != 0) || (paramInt2 != 0));
@@ -65,24 +63,24 @@ public final class g
       default: 
         return;
       }
-      if ((y.getContext() == null) || (i.a.iyG == null))
+      if ((aa.getContext() == null) || (i.a.iVc == null))
       {
-        u.e("!44@/B4Tb64lLpJGu9pVCGYwj1kfnqh0kP99yscgaJEQpZg=", "wrong environment");
+        com.tencent.mm.sdk.platformtools.v.e("MicroMsg.GetUserInfoInAppLogic", "wrong environment");
         return;
       }
-      u.e("!44@/B4Tb64lLpJGu9pVCGYwj1kfnqh0kP99yscgaJEQpZg=", "NetSceneGetUserInfoInApp come back", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+      com.tencent.mm.sdk.platformtools.v.e("MicroMsg.GetUserInfoInAppLogic", "NetSceneGetUserInfoInApp come back", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
       paramString = (j)paramv;
-    } while (izV == null);
-    izV.a(paramString);
+    } while (iWt == null);
+    iWt.a(paramString);
   }
   
-  public final void aPn()
+  public final void aTT()
   {
-    if (!ah.rh()) {
+    if (!ah.rg()) {
       return;
     }
-    aj.abv().a(14, this);
-    izT = true;
+    al.adP().a(14, this);
+    iWr = true;
   }
   
   public static abstract interface a
@@ -92,7 +90,7 @@ public final class g
   
   public static final class b
   {
-    public String izW;
+    public String iWu;
   }
 }
 

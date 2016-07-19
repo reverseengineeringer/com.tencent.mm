@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public mcU:I
+.field public mOY:I
 
 
 # direct methods
@@ -18,12 +18,12 @@
     .line 7
     const/4 v0, 0x0
 
-    iput v0, p0, Loicq/wlogin_sdk/a/ag;->mcU:I
+    iput v0, p0, Loicq/wlogin_sdk/a/ag;->mOY:I
 
     .line 10
     const/16 v0, 0x144
 
-    iput v0, p0, Loicq/wlogin_sdk/a/ag;->mbE:I
+    iput v0, p0, Loicq/wlogin_sdk/a/ag;->mNI:I
 
     .line 11
     return-void
@@ -94,7 +94,7 @@
     new-array v1, v1, [B
 
     .line 91
-    invoke-static {v1, v3, v0}, Loicq/wlogin_sdk/tools/util;->m([BII)V
+    invoke-static {v1, v3, v0}, Loicq/wlogin_sdk/tools/util;->o([BII)V
 
     .line 93
     if-eqz p1, :cond_6
@@ -157,23 +157,23 @@
     .line 115
     array-length v1, v0
 
-    iput v1, p0, Loicq/wlogin_sdk/a/ag;->mcU:I
+    iput v1, p0, Loicq/wlogin_sdk/a/ag;->mOY:I
 
     .line 117
-    iget v1, p0, Loicq/wlogin_sdk/a/ag;->mbE:I
+    iget v1, p0, Loicq/wlogin_sdk/a/ag;->mNI:I
 
-    invoke-super {p0, v1}, Loicq/wlogin_sdk/a/a;->sL(I)V
+    invoke-super {p0, v1}, Loicq/wlogin_sdk/a/a;->vE(I)V
 
     .line 118
     array-length v1, v0
 
-    invoke-super {p0, v0, v1}, Loicq/wlogin_sdk/a/a;->A([BI)V
+    invoke-super {p0, v0, v1}, Loicq/wlogin_sdk/a/a;->B([BI)V
 
     .line 119
-    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->bos()V
+    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->bvq()V
 
     .line 121
-    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->boo()[B
+    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->bvm()[B
 
     move-result-object v0
 

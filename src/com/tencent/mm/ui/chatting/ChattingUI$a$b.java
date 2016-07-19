@@ -2,7 +2,7 @@ package com.tencent.mm.ui.chatting;
 
 public abstract interface ChattingUI$a$b
 {
-  public abstract boolean bgd();
+  public abstract boolean blN();
 }
 
 /* Location:

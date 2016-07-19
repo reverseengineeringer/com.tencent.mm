@@ -1,33 +1,33 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.az.g.a;
-import com.tencent.mm.modelstat.e;
-import com.tencent.mm.sdk.platformtools.an;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.bc.g.a;
+import com.tencent.mm.modelstat.l;
+import com.tencent.mm.sdk.platformtools.ar;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class c$1
   implements g.a
 {
   c$1(c paramc) {}
   
-  public final void rY()
+  public final void sa()
   {
-    if (c.a(bzL) != null)
+    if (c.a(bsO) != null)
     {
-      u.i("!32@/B4Tb64lLpIaKqQrIg/z8CiDfdaO9WDN", "summer preCloseCallback userConfigStg: " + c.a(bzL));
-      c.a(bzL).gN(true);
+      v.i("MicroMsg.AccountStorage", "summer preCloseCallback userConfigStg: " + c.a(bsO));
+      c.a(bsO).hn(true);
     }
-    e locale = com.tencent.mm.modelstat.h.Dw();
-    if (locale != null)
+    com.tencent.mm.modelstat.h localh = l.DM();
+    if (localh != null)
     {
-      u.i("!32@/B4Tb64lLpIaKqQrIg/z8CiDfdaO9WDN", "summer preCloseCallback netStatStg: " + locale);
+      v.i("MicroMsg.AccountStorage", "summer preCloseCallback netStatStg: " + localh);
       long l = System.currentTimeMillis();
-      cdX.gK(true);
-      u.i("!32@/B4Tb64lLpKaLNAssnLXZm7wD8ibTC7s", "summer net appendAllToDisk end takes: " + (System.currentTimeMillis() - l) + " ms");
+      bYY.hk(true);
+      v.i("MicroMsg.NetStat", "summer net appendAllToDisk end takes: " + (System.currentTimeMillis() - l) + " ms");
     }
   }
   
-  public final void rZ() {}
+  public final void sb() {}
 }
 
 /* Location:

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom|center" android:orientation="vertical" android:id="@id/azl" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.ui.base.MultiTouchImageView android:id="@id/azo" android:visibility="gone" android:layout_width="150.0dip" android:layout_height="150.0dip" />
+    <ProgressBar android:id="@id/a29" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_marginBottom="3.0dip" style="?android:attr/progressBarStyleHorizontal" />
+    <TextView android:textSize="@dimen/i8" android:textColor="@color/ow" android:gravity="center" android:id="@id/azp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/b5h" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="20.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/i8" android:textColor="@color/ow" android:gravity="center" android:id="@id/ak8" android:background="@color/ak" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

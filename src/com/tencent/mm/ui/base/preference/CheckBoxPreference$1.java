@@ -7,9 +7,9 @@ final class CheckBoxPreference$1
 {
   CheckBoxPreference$1(CheckBoxPreference paramCheckBoxPreference) {}
   
-  public final void fg(boolean paramBoolean)
+  public final void ft(boolean paramBoolean)
   {
-    kKT.callChangeListener(Boolean.valueOf(paramBoolean));
+    lki.callChangeListener(Boolean.valueOf(paramBoolean));
   }
 }
 

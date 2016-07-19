@@ -4,33 +4,35 @@ import com.tencent.mm.pluginsdk.model.app.f;
 
 public abstract interface AppPanel$a
 {
-  public abstract void aiA();
+  public abstract void akY();
   
-  public abstract void aiB();
+  public abstract void akZ();
   
-  public abstract void aiC();
+  public abstract void ala();
   
-  public abstract void air();
+  public abstract void alb();
   
-  public abstract void ais();
+  public abstract void alc();
   
-  public abstract void ait();
+  public abstract void ald();
   
-  public abstract void aiu();
+  public abstract void ale();
   
-  public abstract void aiv();
+  public abstract void alf();
   
-  public abstract void aiw();
+  public abstract void alg();
   
-  public abstract void aix();
+  public abstract void alh();
   
-  public abstract void aiy();
+  public abstract void ali();
   
-  public abstract void aiz();
+  public abstract void alj();
+  
+  public abstract void alk();
   
   public abstract void c(f paramf);
   
-  public abstract void iy(int paramInt);
+  public abstract void jH(int paramInt);
 }
 
 /* Location:

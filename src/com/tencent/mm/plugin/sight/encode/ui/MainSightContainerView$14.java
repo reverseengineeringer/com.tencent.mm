@@ -7,7 +7,7 @@ final class MainSightContainerView$14
   
   public final void run()
   {
-    MainSightContainerView.d(gCA).show();
+    MainSightContainerView.d(gJb).show();
   }
 }
 

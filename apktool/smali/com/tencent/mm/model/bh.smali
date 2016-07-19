@@ -4,15 +4,24 @@
 
 
 # static fields
-.field public static bDb:Z
+.field public static bwl:Z
 
-.field private static bDe:Lcom/tencent/mm/model/bh;
+.field private static bwo:Lcom/tencent/mm/model/bh;
 
 
 # instance fields
-.field private bDc:Ljava/util/ArrayList;
+.field private bwm:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private bDd:Ljava/lang/String;
+.field private bwn:Ljava/lang/String;
 
 
 # direct methods
@@ -23,12 +32,12 @@
     .line 15
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/tencent/mm/model/bh;->bDb:Z
+    sput-boolean v0, Lcom/tencent/mm/model/bh;->bwl:Z
 
     .line 97
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/model/bh;->bDe:Lcom/tencent/mm/model/bh;
+    sput-object v0, Lcom/tencent/mm/model/bh;->bwo:Lcom/tencent/mm/model/bh;
 
     return-void
 .end method
@@ -51,12 +60,12 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/model/bh;->bDc:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/model/bh;->bwm:Ljava/util/ArrayList;
 
     .line 21
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/model/bh;->bDd:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/model/bh;->bwn:Ljava/lang/String;
 
     .line 24
     const/4 v2, 0x0
@@ -81,12 +90,12 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/model/bh;->bDd:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/model/bh;->bwn:Ljava/lang/String;
 
     .line 28
     new-instance v1, Ljava/io/RandomAccessFile;
 
-    iget-object v0, p0, Lcom/tencent/mm/model/bh;->bDd:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/model/bh;->bwn:Ljava/lang/String;
 
     const-string/jumbo v4, "rw"
 
@@ -102,7 +111,7 @@
     move-result-wide v4
 
     .line 30
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ4sdwg35RgOyD3VEZjijze"
+    const-string/jumbo v0, "MicroMsg.VersionHistory"
 
     const-string/jumbo v2, "init fileLen:%d isNewAcc:%b curVer:0x%x path:%s"
 
@@ -128,7 +137,7 @@
 
     const/4 v7, 0x2
 
-    sget v8, Lcom/tencent/mm/protocal/b;->iUf:I
+    sget v8, Lcom/tencent/mm/protocal/c;->jry:I
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -138,11 +147,11 @@
 
     const/4 v7, 0x3
 
-    iget-object v8, p0, Lcom/tencent/mm/model/bh;->bDd:Ljava/lang/String;
+    iget-object v8, p0, Lcom/tencent/mm/model/bh;->bwn:Ljava/lang/String;
 
     aput-object v8, v6, v7
 
-    invoke-static {v0, v2, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 32
     cmp-long v0, v4, v10
@@ -211,7 +220,7 @@
     invoke-virtual {v1, v2}, Ljava/io/RandomAccessFile;->write([B)V
 
     .line 41
-    iget-object v2, p0, Lcom/tencent/mm/model/bh;->bDc:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/tencent/mm/model/bh;->bwm:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -225,7 +234,7 @@
 
     const/4 v6, 0x0
 
-    sget v7, Lcom/tencent/mm/protocal/b;->iUf:I
+    sget v7, Lcom/tencent/mm/protocal/c;->jry:I
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -238,7 +247,7 @@
     move-result-object v0
 
     .line 59
-    iget-object v2, p0, Lcom/tencent/mm/model/bh;->bDc:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/tencent/mm/model/bh;->bwm:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -246,9 +255,9 @@
 
     if-eqz v2, :cond_2
 
-    iget-object v2, p0, Lcom/tencent/mm/model/bh;->bDc:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/tencent/mm/model/bh;->bwm:Ljava/util/ArrayList;
 
-    iget-object v6, p0, Lcom/tencent/mm/model/bh;->bDc:Ljava/util/ArrayList;
+    iget-object v6, p0, Lcom/tencent/mm/model/bh;->bwm:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
@@ -270,10 +279,10 @@
     :cond_2
     const/4 v2, 0x1
 
-    sput-boolean v2, Lcom/tencent/mm/model/bh;->bDb:Z
+    sput-boolean v2, Lcom/tencent/mm/model/bh;->bwl:Z
 
     .line 61
-    iget-object v2, p0, Lcom/tencent/mm/model/bh;->bDc:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/tencent/mm/model/bh;->bwm:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -313,7 +322,7 @@
 
     .line 67
     :goto_0
-    iget-object v4, p0, Lcom/tencent/mm/model/bh;->bDc:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/tencent/mm/model/bh;->bwm:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
@@ -330,7 +339,7 @@
 
     move-result-object v4
 
-    iget-object v0, p0, Lcom/tencent/mm/model/bh;->bDc:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/model/bh;->bwm:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -379,7 +388,7 @@
 
     const-string/jumbo v2, ""
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -393,7 +402,7 @@
     if-eq v2, v6, :cond_6
 
     .line 47
-    const-string/jumbo v2, "!32@/B4Tb64lLpJ4sdwg35RgOyD3VEZjijze"
+    const-string/jumbo v2, "MicroMsg.VersionHistory"
 
     const-string/jumbo v6, "Read ver history failed , line len:%d path:%s"
 
@@ -415,11 +424,11 @@
 
     const/4 v0, 0x1
 
-    iget-object v8, p0, Lcom/tencent/mm/model/bh;->bDd:Ljava/lang/String;
+    iget-object v8, p0, Lcom/tencent/mm/model/bh;->bwn:Ljava/lang/String;
 
     aput-object v8, v7, v0
 
-    invoke-static {v2, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -433,7 +442,7 @@
     .line 73
     :goto_2
     :try_start_2
-    const-string/jumbo v2, "!32@/B4Tb64lLpJ4sdwg35RgOyD3VEZjijze"
+    const-string/jumbo v2, "MicroMsg.VersionHistory"
 
     const-string/jumbo v4, "Open Version History file failed."
 
@@ -447,7 +456,7 @@
 
     aput-object v7, v5, v6
 
-    invoke-static {v2, v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -459,23 +468,23 @@
 
     .line 82
     :goto_3
-    sget-object v0, Lcom/tencent/mm/model/bh;->bDe:Lcom/tencent/mm/model/bh;
+    sget-object v0, Lcom/tencent/mm/model/bh;->bwo:Lcom/tencent/mm/model/bh;
 
     if-eqz v0, :cond_5
 
-    sget-object v0, Lcom/tencent/mm/model/bh;->bDe:Lcom/tencent/mm/model/bh;
+    sget-object v0, Lcom/tencent/mm/model/bh;->bwo:Lcom/tencent/mm/model/bh;
 
     if-eq v0, p0, :cond_5
 
-    sget-object v0, Lcom/tencent/mm/model/bh;->bDe:Lcom/tencent/mm/model/bh;
+    sget-object v0, Lcom/tencent/mm/model/bh;->bwo:Lcom/tencent/mm/model/bh;
 
-    iget-object v0, v0, Lcom/tencent/mm/model/bh;->bDc:Ljava/util/ArrayList;
+    iget-object v0, v0, Lcom/tencent/mm/model/bh;->bwm:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/model/bh;->bDc:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/model/bh;->bwm:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -500,7 +509,7 @@
     if-nez v2, :cond_7
 
     .line 51
-    const-string/jumbo v2, "!32@/B4Tb64lLpJ4sdwg35RgOyD3VEZjijze"
+    const-string/jumbo v2, "MicroMsg.VersionHistory"
 
     const-string/jumbo v6, "Read ver history failed , line:%s %s"
 
@@ -514,11 +523,11 @@
 
     const/4 v0, 0x1
 
-    iget-object v8, p0, Lcom/tencent/mm/model/bh;->bDd:Ljava/lang/String;
+    iget-object v8, p0, Lcom/tencent/mm/model/bh;->bwn:Ljava/lang/String;
 
     aput-object v8, v7, v0
 
-    invoke-static {v2, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
@@ -543,7 +552,7 @@
     .line 54
     :cond_7
     :try_start_6
-    iget-object v2, p0, Lcom/tencent/mm/model/bh;->bDc:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/tencent/mm/model/bh;->bwm:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -551,7 +560,7 @@
 
     .line 70
     :cond_8
-    const-string/jumbo v2, "!32@/B4Tb64lLpJ4sdwg35RgOyD3VEZjijze"
+    const-string/jumbo v2, "MicroMsg.VersionHistory"
 
     const-string/jumbo v4, "Read succ isupdate:%b ver:%s file:%s"
 
@@ -561,7 +570,7 @@
 
     const/4 v6, 0x0
 
-    sget-boolean v7, Lcom/tencent/mm/model/bh;->bDb:Z
+    sget-boolean v7, Lcom/tencent/mm/model/bh;->bwl:Z
 
     invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -575,11 +584,11 @@
 
     const/4 v0, 0x2
 
-    iget-object v6, p0, Lcom/tencent/mm/model/bh;->bDd:Ljava/lang/String;
+    iget-object v6, p0, Lcom/tencent/mm/model/bh;->bwn:Ljava/lang/String;
 
     aput-object v6, v5, v0
 
-    invoke-static {v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
@@ -597,7 +606,7 @@
     move-exception v0
 
     .line 78
-    const-string/jumbo v1, "!32@/B4Tb64lLpJ4sdwg35RgOyD3VEZjijze"
+    const-string/jumbo v1, "MicroMsg.VersionHistory"
 
     const-string/jumbo v2, "Close Version History file failed."
 
@@ -607,7 +616,7 @@
 
     aput-object v5, v4, v3
 
-    invoke-static {v1, v0, v2, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2, v4}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_3
 
@@ -616,7 +625,7 @@
     move-exception v0
 
     .line 78
-    const-string/jumbo v1, "!32@/B4Tb64lLpJ4sdwg35RgOyD3VEZjijze"
+    const-string/jumbo v1, "MicroMsg.VersionHistory"
 
     const-string/jumbo v2, "Close Version History file failed."
 
@@ -626,7 +635,7 @@
 
     aput-object v5, v4, v3
 
-    invoke-static {v1, v0, v2, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2, v4}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_3
 
@@ -635,7 +644,7 @@
     move-exception v1
 
     .line 78
-    const-string/jumbo v2, "!32@/B4Tb64lLpJ4sdwg35RgOyD3VEZjijze"
+    const-string/jumbo v2, "MicroMsg.VersionHistory"
 
     const-string/jumbo v4, "Close Version History file failed."
 
@@ -645,26 +654,26 @@
 
     aput-object v6, v5, v3
 
-    invoke-static {v2, v1, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_6
 
     .line 85
     :cond_9
-    sget-object v0, Lcom/tencent/mm/model/bh;->bDe:Lcom/tencent/mm/model/bh;
+    sget-object v0, Lcom/tencent/mm/model/bh;->bwo:Lcom/tencent/mm/model/bh;
 
-    iget-object v1, p0, Lcom/tencent/mm/model/bh;->bDc:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/model/bh;->bwm:Ljava/util/ArrayList;
 
-    iput-object v1, v0, Lcom/tencent/mm/model/bh;->bDc:Ljava/util/ArrayList;
+    iput-object v1, v0, Lcom/tencent/mm/model/bh;->bwm:Ljava/util/ArrayList;
 
     .line 86
-    iget-object v0, p0, Lcom/tencent/mm/model/bh;->bDd:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/model/bh;->bwn:Ljava/lang/String;
 
-    sget-object v1, Lcom/tencent/mm/model/bh;->bDe:Lcom/tencent/mm/model/bh;
+    sget-object v1, Lcom/tencent/mm/model/bh;->bwo:Lcom/tencent/mm/model/bh;
 
-    iget-object v1, v1, Lcom/tencent/mm/model/bh;->bDd:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/model/bh;->bwn:Ljava/lang/String;
 
-    invoke-static {v0, v1, v3}, Lcom/tencent/mm/sdk/platformtools/j;->i(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-static {v0, v1, v3}, Lcom/tencent/mm/sdk/platformtools/j;->l(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     goto/16 :goto_4
 
@@ -685,7 +694,7 @@
     goto/16 :goto_2
 .end method
 
-.method public static fv(Ljava/lang/String;)V
+.method public static fI(Ljava/lang/String;)V
     .locals 2
 
     .prologue
@@ -696,28 +705,28 @@
 
     invoke-direct {v0, p0, v1}, Lcom/tencent/mm/model/bh;-><init>(Ljava/lang/String;Z)V
 
-    sput-object v0, Lcom/tencent/mm/model/bh;->bDe:Lcom/tencent/mm/model/bh;
+    sput-object v0, Lcom/tencent/mm/model/bh;->bwo:Lcom/tencent/mm/model/bh;
 
     .line 101
     return-void
 .end method
 
-.method public static uL()Ljava/lang/String;
+.method public static uN()Ljava/lang/String;
     .locals 5
 
     .prologue
     .line 104
-    sget-object v0, Lcom/tencent/mm/model/bh;->bDe:Lcom/tencent/mm/model/bh;
+    sget-object v0, Lcom/tencent/mm/model/bh;->bwo:Lcom/tencent/mm/model/bh;
 
     if-eqz v0, :cond_1
 
-    sget-object v2, Lcom/tencent/mm/model/bh;->bDe:Lcom/tencent/mm/model/bh;
+    sget-object v2, Lcom/tencent/mm/model/bh;->bwo:Lcom/tencent/mm/model/bh;
 
     const-string/jumbo v1, ""
 
     const/4 v0, 0x4
 
-    iget-object v3, v2, Lcom/tencent/mm/model/bh;->bDc:Ljava/util/ArrayList;
+    iget-object v3, v2, Lcom/tencent/mm/model/bh;->bwm:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -735,7 +744,7 @@
     move-object v0, v4
 
     :goto_1
-    iget-object v3, v2, Lcom/tencent/mm/model/bh;->bDc:Ljava/util/ArrayList;
+    iget-object v3, v2, Lcom/tencent/mm/model/bh;->bwm:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -751,7 +760,7 @@
 
     move-result-object v3
 
-    iget-object v0, v2, Lcom/tencent/mm/model/bh;->bDc:Ljava/util/ArrayList;
+    iget-object v0, v2, Lcom/tencent/mm/model/bh;->bwm:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -778,7 +787,7 @@
     goto :goto_1
 
     :cond_0
-    iget-object v0, v2, Lcom/tencent/mm/model/bh;->bDc:Ljava/util/ArrayList;
+    iget-object v0, v2, Lcom/tencent/mm/model/bh;->bwm:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 

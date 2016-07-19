@@ -11,9 +11,9 @@ final class RegByEmailUI$2
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    b.kC(RegByEmailUI.f(kuo));
-    kuo.age();
-    kuo.finish();
+    b.ll(RegByEmailUI.f(kTv));
+    kTv.aiI();
+    kTv.finish();
   }
 }
 

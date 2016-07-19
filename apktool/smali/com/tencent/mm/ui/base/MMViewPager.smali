@@ -6,59 +6,84 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/tencent/mm/ui/base/MMViewPager$g;,
+        Lcom/tencent/mm/ui/base/MMViewPager$j;,
         Lcom/tencent/mm/ui/base/MMViewPager$c;,
         Lcom/tencent/mm/ui/base/MMViewPager$b;,
         Lcom/tencent/mm/ui/base/MMViewPager$d;,
         Lcom/tencent/mm/ui/base/MMViewPager$f;,
         Lcom/tencent/mm/ui/base/MMViewPager$e;,
+        Lcom/tencent/mm/ui/base/MMViewPager$i;,
+        Lcom/tencent/mm/ui/base/MMViewPager$h;,
+        Lcom/tencent/mm/ui/base/MMViewPager$g;,
         Lcom/tencent/mm/ui/base/MMViewPager$a;
     }
 .end annotation
 
 
 # instance fields
-.field private cJE:I
+.field private cGI:I
 
-.field private cJF:I
+.field private cGJ:I
 
-.field private dpl:Landroid/view/GestureDetector;
+.field private doS:Landroid/view/GestureDetector;
 
-.field private hIN:Landroid/view/View$OnTouchListener;
+.field private handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-.field private handler:Lcom/tencent/mm/sdk/platformtools/aa;
+.field private iaY:Landroid/view/View$OnTouchListener;
 
-.field private kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+.field private lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
-.field private kHT:Lcom/tencent/mm/ui/base/MMViewPager$g;
+.field private lgV:Lcom/tencent/mm/ui/base/MMViewPager$j;
 
-.field private kHU:Z
+.field private lgW:Z
 
-.field private kHV:Z
+.field private lgX:Z
 
-.field private kHW:Z
+.field private lgY:Z
 
-.field private kHX:Z
+.field private lgZ:Z
 
-.field private kHY:Z
+.field private lha:Z
 
-.field private kHZ:F
+.field private lhb:Z
 
-.field private kIa:F
+.field private lhc:Z
 
-.field private kIb:Lcom/tencent/mm/ui/base/MMViewPager$a;
+.field private lhd:Z
 
-.field private kIc:Lcom/tencent/mm/ui/base/MMViewPager$d;
+.field private lhe:Z
 
-.field private kId:Lcom/tencent/mm/ui/base/MMViewPager$b;
+.field private lhf:F
 
-.field private kIe:Landroid/support/v4/view/ViewPager$e;
+.field private lhg:F
 
-.field private kIf:F
+.field private lhh:Landroid/widget/OverScroller;
 
-.field private kIg:Landroid/view/MotionEvent;
+.field private lhi:I
 
-.field private kIh:J
+.field private lhj:I
+
+.field private lhk:Landroid/graphics/RectF;
+
+.field private lhl:I
+
+.field private lhm:Lcom/tencent/mm/ui/base/MMViewPager$a;
+
+.field public lhn:Lcom/tencent/mm/ui/base/MMViewPager$d;
+
+.field public lho:Lcom/tencent/mm/ui/base/MMViewPager$b;
+
+.field public lhp:Landroid/support/v4/view/ViewPager$e;
+
+.field private lhq:F
+
+.field private lhr:Landroid/view/MotionEvent;
+
+.field private lhs:J
+
+.field private final lht:I
+
+.field private final lhu:I
 
 
 # direct methods
@@ -68,67 +93,99 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 234
+    .line 460
     invoke-direct {p0, p1, p2}, Landroid/support/v4/view/ViewPager;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 31
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHU:Z
-
-    .line 33
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHV:Z
-
     .line 35
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHW:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgW:Z
 
     .line 37
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHX:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgX:Z
 
     .line 39
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHY:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgY:Z
 
-    .line 177
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 41
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgZ:Z
+
+    .line 43
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lha:Z
+
+    .line 45
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhb:Z
+
+    .line 47
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhc:Z
+
+    .line 49
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhd:Z
+
+    .line 51
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhe:Z
+
+    .line 59
+    new-instance v0, Landroid/graphics/RectF;
+
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    .line 61
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhl:I
+
+    .line 403
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    .line 223
+    .line 449
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIe:Landroid/support/v4/view/ViewPager$e;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhp:Landroid/support/v4/view/ViewPager$e;
 
-    .line 231
+    .line 457
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIf:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhq:F
 
-    .line 334
+    .line 565
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIh:J
+    iput-wide v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhs:J
 
-    .line 235
+    .line 1216
+    const/16 v0, 0x3c
+
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lht:I
+
+    .line 1217
+    const/16 v0, 0x1f4
+
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhu:I
+
+    .line 461
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMViewPager;->setStaticTransformationsEnabled(Z)V
 
-    .line 237
-    new-instance v0, Lcom/tencent/mm/ui/base/MMViewPager$g;
+    .line 463
+    new-instance v0, Lcom/tencent/mm/ui/base/MMViewPager$j;
 
     new-instance v1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v1, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/ui/base/MMViewPager$g;-><init>(Ljava/lang/ref/WeakReference;)V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/ui/base/MMViewPager$j;-><init>(Ljava/lang/ref/WeakReference;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHT:Lcom/tencent/mm/ui/base/MMViewPager$g;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgV:Lcom/tencent/mm/ui/base/MMViewPager$j;
 
-    .line 239
+    .line 465
     new-instance v0, Landroid/view/GestureDetector;
 
     new-instance v1, Lcom/tencent/mm/ui/base/MMViewPager$c;
@@ -137,23 +194,56 @@
 
     invoke-direct {v0, p1, v1}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->dpl:Landroid/view/GestureDetector;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->doS:Landroid/view/GestureDetector;
 
-    .line 241
+    .line 466
+    new-instance v0, Landroid/widget/OverScroller;
+
+    new-instance v1, Landroid/view/animation/DecelerateInterpolator;
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    invoke-direct {v1, v2}, Landroid/view/animation/DecelerateInterpolator;-><init>(F)V
+
+    invoke-direct {v0, p1, v1}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhh:Landroid/widget/OverScroller;
+
+    .line 467
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    .line 468
+    const v1, 0x453b8000    # 3000.0f
+
+    mul-float/2addr v0, v1
+
+    float-to-int v0, v0
+
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhl:I
+
+    .line 471
     new-instance v0, Lcom/tencent/mm/ui/base/MMViewPager$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/MMViewPager$1;-><init>(Lcom/tencent/mm/ui/base/MMViewPager;)V
 
-    invoke-super {p0, v0}, Landroid/support/v4/view/ViewPager;->setOnPageChangeListener(Landroid/support/v4/view/ViewPager$e;)V
+    invoke-super {p0, v0}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ViewPager$e;)V
 
-    .line 271
+    .line 501
     new-instance v0, Lcom/tencent/mm/ui/base/MMViewPager$2;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/MMViewPager$2;-><init>(Lcom/tencent/mm/ui/base/MMViewPager;)V
 
     invoke-super {p0, v0}, Landroid/support/v4/view/ViewPager;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 330
+    .line 561
     return-void
 .end method
 
@@ -161,58 +251,90 @@
     .locals 2
 
     .prologue
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    .line 206
+    .line 432
     invoke-direct {p0, p1, p2}, Landroid/support/v4/view/ViewPager;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 31
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHU:Z
-
-    .line 33
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHV:Z
-
     .line 35
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHW:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgW:Z
 
     .line 37
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHX:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgX:Z
 
     .line 39
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHY:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgY:Z
 
-    .line 177
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 41
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgZ:Z
+
+    .line 43
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lha:Z
+
+    .line 45
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhb:Z
+
+    .line 47
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhc:Z
+
+    .line 49
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhd:Z
+
+    .line 51
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhe:Z
+
+    .line 59
+    new-instance v0, Landroid/graphics/RectF;
+
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    .line 61
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhl:I
+
+    .line 403
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    .line 223
+    .line 449
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIe:Landroid/support/v4/view/ViewPager$e;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhp:Landroid/support/v4/view/ViewPager$e;
 
-    .line 231
+    .line 457
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIf:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhq:F
 
-    .line 334
+    .line 565
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIh:J
+    iput-wide v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhs:J
 
-    .line 207
+    .line 1216
+    const/16 v0, 0x3c
+
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lht:I
+
+    .line 1217
+    const/16 v0, 0x1f4
+
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhu:I
+
+    .line 433
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMViewPager;->setStaticTransformationsEnabled(Z)V
 
-    .line 208
+    .line 434
     return-void
 .end method
 
@@ -220,8 +342,8 @@
     .locals 0
 
     .prologue
-    .line 21
-    iput p1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIf:F
+    .line 25
+    iput p1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhq:F
 
     return p1
 .end method
@@ -230,8 +352,8 @@
     .locals 0
 
     .prologue
-    .line 21
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIg:Landroid/view/MotionEvent;
+    .line 25
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhr:Landroid/view/MotionEvent;
 
     return-object p1
 .end method
@@ -240,8 +362,8 @@
     .locals 1
 
     .prologue
-    .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    .line 25
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     return-object v0
 .end method
@@ -250,93 +372,160 @@
     .locals 0
 
     .prologue
-    .line 21
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    .line 25
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     return-object p1
 .end method
 
 .method private a(FFLandroid/view/View;F)Z
-    .locals 5
+    .locals 7
 
     .prologue
+    const v6, 0x3f333333    # 0.7f
+
+    const v5, 0x3e99999a    # 0.3f
+
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
     const/4 v4, 0x0
 
-    .line 570
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHW:Z
-
-    if-nez v2, :cond_0
-
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHV:Z
-
-    if-eqz v2, :cond_2
-
-    :cond_0
-    move v2, v1
-
-    :goto_0
-    if-eqz v2, :cond_7
-
-    .line 576
-    :cond_1
-    :goto_1
-    return v0
-
-    .line 570
-    :cond_2
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->getAdapter()Landroid/support/v4/view/j;
-
-    move-result-object v2
+    .line 945
+    iget-object v2, p0, Landroid/support/v4/view/ViewPager;->gb:Landroid/support/v4/view/j;
 
     invoke-virtual {v2, p3}, Landroid/support/v4/view/j;->e(Ljava/lang/Object;)I
 
     move-result v2
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->getAdapter()Landroid/support/v4/view/j;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/support/v4/view/j;->getCount()I
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->al()I
 
     move-result v3
 
-    add-int/lit8 v3, v3, -0x1
+    if-ne v2, v3, :cond_5
 
-    if-ne v2, v3, :cond_6
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lha:Z
 
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHY:Z
-
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_3
 
     cmpl-float v2, p4, v4
 
-    if-lez v2, :cond_3
+    if-lez v2, :cond_0
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
+
+    int-to-float v2, v2
+
+    cmpl-float v2, p2, v2
+
+    if-ltz v2, :cond_2
+
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     neg-float v3, p4
 
-    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
+    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->p(FF)V
+
+    :cond_0
+    move v2, v1
+
+    :goto_0
+    if-eqz v2, :cond_9
+
+    .line 951
+    :cond_1
+    :goto_1
+    return v0
+
+    .line 945
+    :cond_2
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
+
+    int-to-float v2, v2
+
+    mul-float/2addr v2, v6
+
+    cmpl-float v2, p2, v2
+
+    if-lez v2, :cond_0
+
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
+
+    int-to-float v2, v2
+
+    cmpg-float v2, p2, v2
+
+    if-gez v2, :cond_0
+
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+
+    mul-float v3, p4, v5
+
+    neg-float v3, v3
+
+    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->p(FF)V
 
     move v2, v0
 
     goto :goto_0
 
     :cond_3
+    cmpl-float v2, p4, v4
+
+    if-lez v2, :cond_5
+
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
+
+    int-to-float v2, v2
+
+    cmpg-float v2, p2, v2
+
+    if-gez v2, :cond_4
+
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lha:Z
+
+    :cond_4
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
+
+    int-to-float v2, v2
+
+    cmpl-float v2, p2, v2
+
+    if-ltz v2, :cond_7
+
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+
+    neg-float v3, p4
+
+    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->p(FF)V
+
+    :cond_5
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgY:Z
+
+    if-nez v2, :cond_6
+
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgX:Z
+
+    if-eqz v2, :cond_8
+
+    :cond_6
     move v2, v1
 
     goto :goto_0
 
-    :cond_4
-    cmpl-float v2, p4, v4
+    :cond_7
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
 
-    if-lez v2, :cond_6
+    int-to-float v2, v2
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
+    mul-float/2addr v2, v6
+
+    cmpl-float v2, p2, v2
+
+    if-lez v2, :cond_5
+
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
 
     int-to-float v2, v2
 
@@ -344,37 +533,62 @@
 
     if-gez v2, :cond_5
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHY:Z
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
-    :cond_5
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    mul-float v3, p4, v5
 
-    neg-float v3, p4
+    neg-float v3, v3
 
-    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
+    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->p(FF)V
 
     move v2, v0
 
     goto :goto_0
 
-    :cond_6
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHY:Z
+    :cond_8
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lha:Z
 
     move v2, v1
 
     goto :goto_0
 
-    .line 573
-    :cond_7
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHW:Z
+    .line 948
+    :cond_9
+    iget-object v2, p0, Landroid/support/v4/view/ViewPager;->gb:Landroid/support/v4/view/j;
 
-    if-nez v2, :cond_8
+    invoke-virtual {v2, p3}, Landroid/support/v4/view/j;->e(Ljava/lang/Object;)I
 
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHV:Z
+    move-result v2
 
-    if-eqz v2, :cond_9
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->ak()I
 
-    :cond_8
+    move-result v3
+
+    if-ne v2, v3, :cond_e
+
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgZ:Z
+
+    if-eqz v2, :cond_c
+
+    cmpg-float v2, p4, v4
+
+    if-gez v2, :cond_a
+
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v2, v2, Landroid/graphics/RectF;->left:F
+
+    cmpg-float v2, p1, v2
+
+    if-gtz v2, :cond_b
+
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+
+    neg-float v3, p4
+
+    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->p(FF)V
+
+    :cond_a
     move v2, v1
 
     :goto_2
@@ -382,79 +596,242 @@
 
     move v0, v1
 
-    .line 576
-    goto :goto_1
+    .line 951
+    goto/16 :goto_1
 
-    .line 573
-    :cond_9
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->getAdapter()Landroid/support/v4/view/j;
+    .line 948
+    :cond_b
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
 
-    move-result-object v2
+    iget v2, v2, Landroid/graphics/RectF;->left:F
 
-    invoke-virtual {v2, p3}, Landroid/support/v4/view/j;->e(Ljava/lang/Object;)I
+    cmpl-float v2, p1, v2
 
-    move-result v2
+    if-lez v2, :cond_a
 
-    if-nez v2, :cond_d
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
 
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHX:Z
+    int-to-float v2, v2
 
-    if-eqz v2, :cond_b
+    mul-float/2addr v2, v5
 
-    cmpg-float v2, p4, v4
+    cmpg-float v2, p1, v2
 
     if-gez v2, :cond_a
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
-    neg-float v3, p4
+    mul-float v3, p4, v5
 
-    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
+    neg-float v3, v3
+
+    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->p(FF)V
 
     move v2, v0
 
     goto :goto_2
 
-    :cond_a
+    :cond_c
+    cmpg-float v2, p4, v4
+
+    if-gez v2, :cond_e
+
+    cmpl-float v2, p1, v4
+
+    if-lez v2, :cond_d
+
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgZ:Z
+
+    :cond_d
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v2, v2, Landroid/graphics/RectF;->left:F
+
+    cmpg-float v2, p1, v2
+
+    if-gtz v2, :cond_10
+
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+
+    neg-float v3, p4
+
+    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->p(FF)V
+
+    :cond_e
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgY:Z
+
+    if-nez v2, :cond_f
+
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgX:Z
+
+    if-eqz v2, :cond_11
+
+    :cond_f
     move v2, v1
 
     goto :goto_2
 
-    :cond_b
-    cmpg-float v2, p4, v4
+    :cond_10
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
 
-    if-gez v2, :cond_d
+    iget v2, v2, Landroid/graphics/RectF;->left:F
 
-    cmpl-float v2, p1, v4
+    cmpl-float v2, p1, v2
 
-    if-lez v2, :cond_c
+    if-lez v2, :cond_e
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHX:Z
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
 
-    :cond_c
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    int-to-float v2, v2
 
-    neg-float v3, p4
+    mul-float/2addr v2, v5
 
-    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
+    cmpg-float v2, p1, v2
+
+    if-gez v2, :cond_e
+
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+
+    mul-float v3, p4, v5
+
+    neg-float v3, v3
+
+    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->p(FF)V
 
     move v2, v0
 
     goto :goto_2
 
-    :cond_d
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHX:Z
+    :cond_11
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgZ:Z
 
     move v2, v1
 
     goto :goto_2
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/ui/base/MMViewPager;Lcom/tencent/mm/ui/base/MultiTouchImageView;Landroid/view/MotionEvent;)Z
-    .locals 11
+.method private static a(Landroid/view/MotionEvent;Landroid/view/MotionEvent;)Z
+    .locals 2
 
     .prologue
-    .line 21
+    .line 1221
+    invoke-virtual {p0}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v0
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v1
+
+    sub-float/2addr v0, v1
+
+    const/4 v1, 0x0
+
+    cmpg-float v0, v0, v1
+
+    if-gez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method static synthetic a(Lcom/tencent/mm/ui/base/MMViewPager;Landroid/view/MotionEvent;Landroid/view/MotionEvent;F)Z
+    .locals 7
+
+    .prologue
+    const/4 v6, 0x0
+
+    const/4 v0, 0x0
+
+    .line 25
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v1
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v2
+
+    sub-float/2addr v1, v2
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v2
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v3
+
+    sub-float/2addr v2, v3
+
+    invoke-static {p1, p2}, Lcom/tencent/mm/ui/base/MMViewPager;->a(Landroid/view/MotionEvent;Landroid/view/MotionEvent;)Z
+
+    move-result v3
+
+    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
+
+    move-result v1
+
+    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
+
+    move-result v2
+
+    invoke-static {p3}, Ljava/lang/Math;->abs(F)F
+
+    move-result v4
+
+    const/high16 v5, 0x43fa0000    # 500.0f
+
+    cmpg-float v4, v4, v5
+
+    if-gtz v4, :cond_1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    const/high16 v4, 0x42700000    # 60.0f
+
+    cmpg-float v4, v1, v4
+
+    if-ltz v4, :cond_0
+
+    cmpg-float v1, v1, v2
+
+    if-ltz v1, :cond_0
+
+    if-eqz v3, :cond_2
+
+    const/16 v0, 0x15
+
+    invoke-virtual {p0, v0, v6}, Lcom/tencent/mm/ui/base/MMViewPager;->onKeyDown(ILandroid/view/KeyEvent;)Z
+
+    :goto_1
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    const/16 v0, 0x16
+
+    invoke-virtual {p0, v0, v6}, Lcom/tencent/mm/ui/base/MMViewPager;->onKeyDown(ILandroid/view/KeyEvent;)Z
+
+    goto :goto_1
+.end method
+
+.method static synthetic a(Lcom/tencent/mm/ui/base/MMViewPager;Lcom/tencent/mm/ui/base/MultiTouchImageView;Landroid/view/MotionEvent;)Z
+    .locals 12
+
+    .prologue
+    .line 25
     const/4 v0, 0x0
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
@@ -471,135 +848,241 @@
     return v0
 
     :pswitch_1
-    invoke-virtual {p1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->bdh()V
+    invoke-virtual {p1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->biM()V
 
     const/4 v1, 0x0
 
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHZ:F
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhf:F
 
     invoke-virtual {p1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScale()F
 
     move-result v1
 
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIa:F
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhg:F
 
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHU:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgW:Z
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIh:J
+    iput-wide v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhs:J
 
     goto :goto_0
 
     :pswitch_2
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHV:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgX:Z
 
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHW:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgY:Z
 
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHX:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhd:Z
 
-    if-eqz v1, :cond_1
+    if-nez v1, :cond_1
 
-    const/4 v1, 0x0
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhe:Z
 
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHX:Z
+    if-nez v1, :cond_1
 
-    new-instance v1, Lcom/tencent/mm/ui/base/MMViewPager$e;
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgZ:Z
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/MMViewPager$e;-><init>(Lcom/tencent/mm/ui/base/MMViewPager;)V
+    if-nez v1, :cond_1
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIb:Lcom/tencent/mm/ui/base/MMViewPager$a;
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lha:Z
 
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->bdb()V
+    if-eqz v1, :cond_4
 
     :cond_1
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHY:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhb:Z
 
-    if-eqz v1, :cond_2
+    if-nez v1, :cond_2
 
-    const/4 v1, 0x0
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhc:Z
 
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHY:Z
+    if-eqz v1, :cond_4
 
+    :cond_2
     new-instance v1, Lcom/tencent/mm/ui/base/MMViewPager$f;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/MMViewPager$f;-><init>(Lcom/tencent/mm/ui/base/MMViewPager;)V
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIb:Lcom/tencent/mm/ui/base/MMViewPager$a;
+    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhm:Lcom/tencent/mm/ui/base/MMViewPager$a;
 
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->bdb()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->biD()V
 
-    :cond_2
     const/4 v1, 0x0
 
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHZ:F
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhd:Z
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhe:Z
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgZ:Z
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lha:Z
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhb:Z
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhc:Z
+
+    :cond_3
+    :goto_1
+    const/4 v1, 0x0
+
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhf:F
 
     invoke-virtual {p1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScale()F
 
     move-result v1
 
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIa:F
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhg:F
 
     goto :goto_0
+
+    :cond_4
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgZ:Z
+
+    if-nez v1, :cond_5
+
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhd:Z
+
+    if-eqz v1, :cond_6
+
+    :cond_5
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgZ:Z
+
+    new-instance v1, Lcom/tencent/mm/ui/base/MMViewPager$g;
+
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/MMViewPager$g;-><init>(Lcom/tencent/mm/ui/base/MMViewPager;)V
+
+    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhm:Lcom/tencent/mm/ui/base/MMViewPager$a;
+
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->biD()V
+
+    :cond_6
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lha:Z
+
+    if-nez v1, :cond_7
+
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhe:Z
+
+    if-eqz v1, :cond_8
+
+    :cond_7
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lha:Z
+
+    new-instance v1, Lcom/tencent/mm/ui/base/MMViewPager$h;
+
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/MMViewPager$h;-><init>(Lcom/tencent/mm/ui/base/MMViewPager;)V
+
+    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhm:Lcom/tencent/mm/ui/base/MMViewPager$a;
+
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->biD()V
+
+    :cond_8
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhb:Z
+
+    if-eqz v1, :cond_9
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhb:Z
+
+    new-instance v1, Lcom/tencent/mm/ui/base/MMViewPager$i;
+
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/MMViewPager$i;-><init>(Lcom/tencent/mm/ui/base/MMViewPager;)V
+
+    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhm:Lcom/tencent/mm/ui/base/MMViewPager$a;
+
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->biD()V
+
+    :cond_9
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhc:Z
+
+    if-eqz v1, :cond_3
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhc:Z
+
+    new-instance v1, Lcom/tencent/mm/ui/base/MMViewPager$e;
+
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/MMViewPager$e;-><init>(Lcom/tencent/mm/ui/base/MMViewPager;)V
+
+    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhm:Lcom/tencent/mm/ui/base/MMViewPager$a;
+
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->biD()V
+
+    goto :goto_1
 
     :pswitch_3
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHZ:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhf:F
 
     invoke-virtual {p1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScale()F
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIa:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhg:F
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHU:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgW:Z
 
     const/4 v8, 0x1
 
-    iget-boolean v0, p0, Landroid/support/v4/view/ViewPager;->gj:Z
+    iget-boolean v0, p0, Landroid/support/v4/view/ViewPager;->gF:Z
 
-    if-nez v0, :cond_32
+    if-nez v0, :cond_56
 
-    iget-boolean v0, p0, Landroid/support/v4/view/ViewPager;->fX:Z
+    iget-boolean v0, p0, Landroid/support/v4/view/ViewPager;->gt:Z
 
-    if-nez v0, :cond_3
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Landroid/support/v4/view/ViewPager;->gj:Z
+    if-nez v0, :cond_a
 
     const/4 v0, 0x1
 
-    invoke-super {p0, v0}, Landroid/support/v4/view/ViewPager;->setScrollState(I)V
+    iput-boolean v0, p0, Landroid/support/v4/view/ViewPager;->gF:Z
+
+    const/4 v0, 0x1
+
+    invoke-super {p0, v0}, Landroid/support/v4/view/ViewPager;->r(I)V
 
     const/4 v0, 0x0
 
-    iput v0, p0, Landroid/support/v4/view/ViewPager;->gb:F
+    iput v0, p0, Landroid/support/v4/view/ViewPager;->gx:F
 
-    iput v0, p0, Landroid/support/v4/view/ViewPager;->eW:F
+    iput v0, p0, Landroid/support/v4/view/ViewPager;->ft:F
 
-    iget-object v0, p0, Landroid/support/v4/view/ViewPager;->ge:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Landroid/support/v4/view/ViewPager;->gA:Landroid/view/VelocityTracker;
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_b
 
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v4/view/ViewPager;->ge:Landroid/view/VelocityTracker;
+    iput-object v0, p0, Landroid/support/v4/view/ViewPager;->gA:Landroid/view/VelocityTracker;
 
-    :goto_1
+    :goto_2
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -618,50 +1101,105 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Landroid/support/v4/view/ViewPager;->ge:Landroid/view/VelocityTracker;
+    iget-object v3, p0, Landroid/support/v4/view/ViewPager;->gA:Landroid/view/VelocityTracker;
 
     invoke-virtual {v3, v2}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
     invoke-virtual {v2}, Landroid/view/MotionEvent;->recycle()V
 
-    iput-wide v0, p0, Landroid/support/v4/view/ViewPager;->gk:J
+    iput-wide v0, p0, Landroid/support/v4/view/ViewPager;->gG:J
 
-    :cond_3
+    :cond_a
     move v0, v8
 
     goto/16 :goto_0
 
-    :cond_4
-    iget-object v0, p0, Landroid/support/v4/view/ViewPager;->ge:Landroid/view/VelocityTracker;
+    :cond_b
+    iget-object v0, p0, Landroid/support/v4/view/ViewPager;->gA:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->clear()V
 
-    goto :goto_1
+    goto :goto_2
 
     :pswitch_4
     const/4 v1, 0x0
 
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHZ:F
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhf:F
 
     invoke-virtual {p1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScale()F
 
     move-result v1
 
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIa:F
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhg:F
 
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHU:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgW:Z
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIa:F
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhg:F
 
-    invoke-virtual {p1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScaleRate()F
-
-    move-result v2
+    iget v2, p1, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gkV:F
 
     cmpg-float v1, v1, v2
 
-    if-gez v1, :cond_0
+    if-gez v1, :cond_c
+
+    const/4 v1, 0x0
+
+    invoke-static {p2, v1}, Lcom/tencent/mm/ui/base/f;->e(Landroid/view/MotionEvent;I)F
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    invoke-static {p2, v2}, Lcom/tencent/mm/ui/base/f;->e(Landroid/view/MotionEvent;I)F
+
+    move-result v2
+
+    sub-float/2addr v1, v2
+
+    const/4 v2, 0x0
+
+    invoke-static {p2, v2}, Lcom/tencent/mm/ui/base/f;->f(Landroid/view/MotionEvent;I)F
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    invoke-static {p2, v3}, Lcom/tencent/mm/ui/base/f;->f(Landroid/view/MotionEvent;I)F
+
+    move-result v3
+
+    sub-float/2addr v2, v3
+
+    const/4 v3, 0x1
+
+    invoke-static {p2, v3}, Lcom/tencent/mm/ui/base/f;->e(Landroid/view/MotionEvent;I)F
+
+    move-result v3
+
+    add-float/2addr v1, v3
+
+    const/4 v3, 0x1
+
+    invoke-static {p2, v3}, Lcom/tencent/mm/ui/base/f;->f(Landroid/view/MotionEvent;I)F
+
+    move-result v3
+
+    add-float/2addr v2, v3
+
+    invoke-virtual {p1, v1, v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->n(FF)V
+
+    :cond_c
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhg:F
+
+    invoke-virtual {p1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->biN()F
+
+    move-result v2
+
+    cmpl-float v1, v1, v2
+
+    if-lez v1, :cond_0
 
     const/4 v1, 0x0
 
@@ -718,13 +1256,13 @@
 
     const/4 v2, 0x2
 
-    if-ne v1, v2, :cond_9
+    if-ne v1, v2, :cond_11
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIh:J
+    iget-wide v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhs:J
 
     sub-long/2addr v0, v2
 
@@ -732,29 +1270,29 @@
 
     cmp-long v0, v0, v2
 
-    if-lez v0, :cond_6
+    if-lez v0, :cond_e
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHW:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgY:Z
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_d
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHX:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgZ:Z
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_d
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHY:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lha:Z
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_e
 
-    :cond_5
+    :cond_d
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    :cond_6
+    :cond_e
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHU:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgW:Z
 
     const/4 v0, 0x0
 
@@ -798,32 +1336,32 @@
 
     double-to-float v2, v2
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHZ:F
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhf:F
 
     const/4 v4, 0x0
 
     cmpl-float v3, v3, v4
 
-    if-nez v3, :cond_8
+    if-nez v3, :cond_10
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHZ:F
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhf:F
 
-    :cond_7
-    :goto_2
+    :cond_f
+    :goto_3
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    :cond_8
-    iget v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHZ:F
+    :cond_10
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhf:F
 
     div-float/2addr v2, v3
 
-    iget-boolean v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHU:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgW:Z
 
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_f
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIa:F
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhg:F
 
     mul-float/2addr v2, v3
 
@@ -845,22 +1383,22 @@
 
     invoke-virtual {p1, v2, v0, v1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->c(FFF)V
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_9
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIg:Landroid/view/MotionEvent;
+    :cond_11
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhr:Landroid/view/MotionEvent;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIg:Landroid/view/MotionEvent;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhr:Landroid/view/MotionEvent;
 
     invoke-virtual {v1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1
 
-    if-eqz v1, :cond_a
+    if-eqz v1, :cond_12
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIg:Landroid/view/MotionEvent;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhr:Landroid/view/MotionEvent;
 
     invoke-virtual {v1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -868,9 +1406,9 @@
 
     const/4 v2, 0x2
 
-    if-eq v1, v2, :cond_a
+    if-eq v1, v2, :cond_12
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIg:Landroid/view/MotionEvent;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhr:Landroid/view/MotionEvent;
 
     invoke-virtual {v1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -878,9 +1416,9 @@
 
     const/4 v2, 0x5
 
-    if-eq v1, v2, :cond_a
+    if-eq v1, v2, :cond_12
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIg:Landroid/view/MotionEvent;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhr:Landroid/view/MotionEvent;
 
     invoke-virtual {v1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -890,8 +1428,8 @@
 
     if-ne v1, v2, :cond_0
 
-    :cond_a
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIg:Landroid/view/MotionEvent;
+    :cond_12
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhr:Landroid/view/MotionEvent;
 
     const/4 v1, 0x0
 
@@ -905,34 +1443,34 @@
 
     move-result v1
 
-    sub-float v1, v0, v1
+    sub-float v3, v0, v1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIg:Landroid/view/MotionEvent;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhr:Landroid/view/MotionEvent;
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/ui/base/f;->f(Landroid/view/MotionEvent;I)F
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/f;->f(Landroid/view/MotionEvent;I)F
 
     move-result v0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    invoke-static {p2, v2}, Lcom/tencent/mm/ui/base/f;->f(Landroid/view/MotionEvent;I)F
+    invoke-static {p2, v1}, Lcom/tencent/mm/ui/base/f;->f(Landroid/view/MotionEvent;I)F
 
-    move-result v2
+    move-result v1
 
-    sub-float v2, v0, v2
+    sub-float v1, v0, v1
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHU:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgW:Z
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_13
 
     const/4 v0, 0x1
 
-    :goto_3
+    :goto_4
     if-nez v0, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIg:Landroid/view/MotionEvent;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhr:Landroid/view/MotionEvent;
 
     const/4 v2, 0x0
 
@@ -940,7 +1478,7 @@
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIg:Landroid/view/MotionEvent;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhr:Landroid/view/MotionEvent;
 
     const/4 v3, 0x0
 
@@ -948,73 +1486,75 @@
 
     move-result v2
 
-    iput v1, p0, Landroid/support/v4/view/ViewPager;->gb:F
+    iput v1, p0, Landroid/support/v4/view/ViewPager;->gx:F
 
-    iput v2, p0, Landroid/support/v4/view/ViewPager;->gc:F
+    iput v2, p0, Landroid/support/v4/view/ViewPager;->gy:F
 
     goto/16 :goto_0
 
-    :cond_b
+    :cond_13
+    const/4 v0, 0x0
+
+    cmpl-float v0, v3, v0
+
+    if-nez v0, :cond_14
+
     const/4 v0, 0x0
 
     cmpl-float v0, v1, v0
 
-    if-nez v0, :cond_c
-
-    const/4 v0, 0x0
-
-    cmpl-float v0, v2, v0
-
-    if-nez v0, :cond_c
+    if-nez v0, :cond_14
 
     const/4 v0, 0x1
 
-    goto :goto_3
+    goto :goto_4
 
-    :cond_c
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->getSelectedView()Landroid/view/View;
+    :cond_14
+    iget v2, p0, Landroid/support/v4/view/ViewPager;->gc:I
+
+    iget-object v0, p0, Landroid/support/v4/view/ViewPager;->gb:Landroid/support/v4/view/j;
+
+    check-cast v0, Lcom/tencent/mm/ui/base/t;
+
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/base/t;->sG(I)Landroid/view/View;
 
     move-result-object v0
 
-    const/16 v3, 0x9
+    const/16 v2, 0x9
 
-    new-array v3, v3, [F
+    new-array v2, v2, [F
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     invoke-virtual {v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getImageMatrix()Landroid/graphics/Matrix;
 
     move-result-object v4
 
-    invoke-virtual {v4, v3}, Landroid/graphics/Matrix;->getValues([F)V
+    invoke-virtual {v4, v2}, Landroid/graphics/Matrix;->getValues([F)V
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     invoke-virtual {v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScale()F
 
     move-result v4
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
-    invoke-virtual {v5}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getImageWidth()I
-
-    move-result v5
+    iget v5, v5, Lcom/tencent/mm/ui/base/MultiTouchImageView;->imageWidth:I
 
     int-to-float v5, v5
 
     mul-float/2addr v4, v5
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     invoke-virtual {v5}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScale()F
 
     move-result v5
 
-    iget-object v6, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v6, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
-    invoke-virtual {v6}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getImageHeight()I
-
-    move-result v6
+    iget v6, v6, Lcom/tencent/mm/ui/base/MultiTouchImageView;->imageHeight:I
 
     int-to-float v6, v6
 
@@ -1022,174 +1562,29 @@
 
     const/4 v6, 0x2
 
-    aget v6, v3, v6
+    aget v6, v2, v6
 
     add-float v7, v6, v4
 
     const/4 v8, 0x5
 
-    aget v3, v3, v8
+    aget v8, v2, v8
 
-    add-float v8, v3, v5
+    add-float v9, v8, v5
 
-    float-to-int v9, v4
+    float-to-int v2, v4
 
-    iget v10, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
+    iget v10, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
 
-    if-gt v9, v10, :cond_13
+    if-gt v2, v10, :cond_1b
 
-    float-to-int v9, v5
+    float-to-int v2, v5
 
-    iget v10, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJF:I
+    iget v10, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
 
-    if-gt v9, v10, :cond_13
+    if-gt v2, v10, :cond_1b
 
-    invoke-direct {p0, v6, v7, v0, v1}, Lcom/tencent/mm/ui/base/MMViewPager;->a(FFLandroid/view/View;F)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_d
-
-    const/4 v0, 0x1
-
-    goto :goto_3
-
-    :cond_d
-    const/4 v0, 0x0
-
-    cmpl-float v0, v1, v0
-
-    if-lez v0, :cond_e
-
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
-
-    int-to-float v0, v0
-
-    cmpg-float v0, v7, v0
-
-    if-gtz v0, :cond_f
-
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->bdc()Z
-
-    move-result v0
-
-    goto :goto_3
-
-    :cond_e
-    const/4 v0, 0x0
-
-    cmpl-float v0, v6, v0
-
-    if-ltz v0, :cond_f
-
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->bdc()Z
-
-    move-result v0
-
-    goto/16 :goto_3
-
-    :cond_f
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHW:Z
-
-    if-nez v0, :cond_11
-
-    neg-float v0, v1
-
-    const/4 v2, 0x0
-
-    cmpg-float v2, v1, v2
-
-    if-gez v2, :cond_12
-
-    const/4 v2, 0x0
-
-    cmpg-float v2, v6, v2
-
-    if-gez v2, :cond_10
-
-    sub-float v1, v6, v1
-
-    const/4 v2, 0x0
-
-    cmpl-float v1, v1, v2
-
-    if-lez v1, :cond_10
-
-    neg-float v0, v6
-
-    :cond_10
-    :goto_4
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
-
-    :cond_11
-    const/4 v0, 0x1
-
-    goto/16 :goto_3
-
-    :cond_12
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
-
-    int-to-float v2, v2
-
-    cmpl-float v2, v7, v2
-
-    if-lez v2, :cond_10
-
-    sub-float v1, v7, v1
-
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
-
-    int-to-float v2, v2
-
-    cmpg-float v1, v1, v2
-
-    if-gez v1, :cond_10
-
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
-
-    int-to-float v0, v0
-
-    sub-float/2addr v0, v7
-
-    goto :goto_4
-
-    :cond_13
-    float-to-int v9, v4
-
-    iget v10, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
-
-    if-gt v9, v10, :cond_1b
-
-    float-to-int v9, v5
-
-    iget v10, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJF:I
-
-    if-le v9, v10, :cond_1b
-
-    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
-
-    move-result v4
-
-    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
-
-    move-result v5
-
-    cmpl-float v4, v4, v5
-
-    if-lez v4, :cond_14
-
-    invoke-direct {p0, v2, v3, v8}, Lcom/tencent/mm/ui/base/MMViewPager;->b(FFF)Z
-
-    move-result v0
-
-    goto/16 :goto_3
-
-    :cond_14
-    invoke-direct {p0, v6, v7, v0, v1}, Lcom/tencent/mm/ui/base/MMViewPager;->a(FFLandroid/view/View;F)Z
+    invoke-direct {p0, v6, v7, v0, v3}, Lcom/tencent/mm/ui/base/MMViewPager;->a(FFLandroid/view/View;F)Z
 
     move-result v0
 
@@ -1197,16 +1592,16 @@
 
     const/4 v0, 0x1
 
-    goto/16 :goto_3
+    goto :goto_4
 
     :cond_15
     const/4 v0, 0x0
 
-    cmpl-float v0, v1, v0
+    cmpl-float v0, v3, v0
 
     if-lez v0, :cond_16
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
 
     int-to-float v0, v0
 
@@ -1214,11 +1609,11 @@
 
     if-gtz v0, :cond_17
 
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->bdc()Z
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->biE()Z
 
     move-result v0
 
-    goto/16 :goto_3
+    goto :goto_4
 
     :cond_16
     const/4 v0, 0x0
@@ -1227,32 +1622,32 @@
 
     if-ltz v0, :cond_17
 
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->bdc()Z
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->biE()Z
 
     move-result v0
 
-    goto/16 :goto_3
+    goto/16 :goto_4
 
     :cond_17
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHW:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgY:Z
 
     if-nez v0, :cond_19
 
-    neg-float v0, v1
+    neg-float v0, v3
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    cmpg-float v2, v1, v2
+    cmpg-float v1, v3, v1
 
-    if-gez v2, :cond_1a
+    if-gez v1, :cond_1a
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    cmpg-float v2, v6, v2
+    cmpg-float v1, v6, v1
 
-    if-gez v2, :cond_18
+    if-gez v1, :cond_18
 
-    sub-float v1, v6, v1
+    sub-float v1, v6, v3
 
     const/4 v2, 0x0
 
@@ -1264,29 +1659,29 @@
 
     :cond_18
     :goto_5
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
+    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->p(FF)V
 
     :cond_19
     const/4 v0, 0x1
 
-    goto/16 :goto_3
+    goto/16 :goto_4
 
     :cond_1a
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
 
-    int-to-float v2, v2
+    int-to-float v1, v1
 
-    cmpl-float v2, v7, v2
+    cmpl-float v1, v7, v1
 
-    if-lez v2, :cond_18
+    if-lez v1, :cond_18
 
-    sub-float v1, v7, v1
+    sub-float v1, v7, v3
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
 
     int-to-float v2, v2
 
@@ -1294,7 +1689,7 @@
 
     if-gez v1, :cond_18
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
 
     int-to-float v0, v0
 
@@ -1303,446 +1698,1091 @@
     goto :goto_5
 
     :cond_1b
-    float-to-int v4, v4
+    float-to-int v2, v4
 
-    iget v9, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
+    iget v10, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
 
-    if-le v4, v9, :cond_25
+    if-gt v2, v10, :cond_2e
 
-    float-to-int v4, v5
+    float-to-int v2, v5
 
-    iget v5, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJF:I
+    iget v10, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
 
-    if-gt v4, v5, :cond_25
-
-    invoke-direct {p0, v6, v7, v0, v1}, Lcom/tencent/mm/ui/base/MMViewPager;->a(FFLandroid/view/View;F)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1c
-
-    const/4 v0, 0x1
-
-    goto/16 :goto_3
-
-    :cond_1c
-    const/4 v0, 0x0
-
-    cmpl-float v0, v1, v0
-
-    if-lez v0, :cond_1d
-
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
-
-    int-to-float v0, v0
-
-    cmpg-float v0, v7, v0
-
-    if-gtz v0, :cond_1e
-
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->bdc()Z
-
-    move-result v0
-
-    goto/16 :goto_3
-
-    :cond_1d
-    const/4 v0, 0x0
-
-    cmpl-float v0, v6, v0
-
-    if-ltz v0, :cond_1e
-
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->bdc()Z
-
-    move-result v0
-
-    goto/16 :goto_3
-
-    :cond_1e
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHW:Z
-
-    if-eqz v0, :cond_21
-
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIf:F
-
-    float-to-double v2, v0
-
-    const-wide v4, 0x3faeb851eb851eb8L    # 0.06
-
-    cmpg-double v0, v2, v4
-
-    if-gez v0, :cond_1f
-
-    const/4 v0, 0x0
-
-    cmpl-float v0, v1, v0
-
-    if-lez v0, :cond_1f
-
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
-
-    int-to-float v0, v0
-
-    cmpl-float v0, v7, v0
-
-    if-gtz v0, :cond_21
-
-    :cond_1f
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIf:F
-
-    float-to-double v2, v0
-
-    const-wide v4, 0x3fee147ae147ae14L    # 0.94
-
-    cmpl-double v0, v2, v4
-
-    if-gtz v0, :cond_20
-
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIf:F
-
-    const/4 v2, 0x0
-
-    cmpl-float v0, v0, v2
-
-    if-nez v0, :cond_24
-
-    :cond_20
-    const/4 v0, 0x0
-
-    cmpg-float v0, v1, v0
-
-    if-gez v0, :cond_24
-
-    const/4 v0, 0x0
-
-    cmpg-float v0, v6, v0
-
-    if-gez v0, :cond_24
-
-    :cond_21
-    neg-float v0, v1
-
-    const/4 v2, 0x0
-
-    cmpg-float v2, v1, v2
-
-    if-gez v2, :cond_23
-
-    const/4 v2, 0x0
-
-    cmpg-float v2, v6, v2
-
-    if-gez v2, :cond_22
-
-    sub-float v1, v6, v1
-
-    const/4 v2, 0x0
-
-    cmpl-float v1, v1, v2
-
-    if-lez v1, :cond_22
-
-    neg-float v0, v6
-
-    :cond_22
-    :goto_6
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
-
-    const/4 v0, 0x1
-
-    goto/16 :goto_3
-
-    :cond_23
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
-
-    int-to-float v2, v2
-
-    cmpl-float v2, v7, v2
-
-    if-lez v2, :cond_22
-
-    sub-float v1, v7, v1
-
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
-
-    int-to-float v2, v2
-
-    cmpg-float v1, v1, v2
-
-    if-gez v1, :cond_22
-
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
-
-    int-to-float v0, v0
-
-    sub-float/2addr v0, v7
-
-    goto :goto_6
-
-    :cond_24
-    const/4 v0, 0x0
-
-    goto/16 :goto_3
-
-    :cond_25
-    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
-
-    move-result v4
+    if-le v2, v10, :cond_2e
 
     invoke-static {v1}, Ljava/lang/Math;->abs(F)F
 
-    move-result v5
+    move-result v2
 
-    cmpl-float v4, v4, v5
+    invoke-static {v3}, Ljava/lang/Math;->abs(F)F
 
-    if-lez v4, :cond_26
+    move-result v4
 
-    invoke-direct {p0, v2, v3, v8}, Lcom/tencent/mm/ui/base/MMViewPager;->b(FFF)Z
+    cmpl-float v2, v2, v4
 
-    move-result v0
+    if-lez v2, :cond_27
 
-    goto/16 :goto_3
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgY:Z
 
-    :cond_26
-    invoke-direct {p0, v6, v7, v0, v1}, Lcom/tencent/mm/ui/base/MMViewPager;->a(FFLandroid/view/View;F)Z
+    if-nez v0, :cond_1c
 
-    move-result v0
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgZ:Z
 
-    if-eqz v0, :cond_27
+    if-nez v0, :cond_1c
 
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lha:Z
+
+    if-eqz v0, :cond_1d
+
+    :cond_1c
     const/4 v0, 0x1
 
-    goto/16 :goto_3
+    goto/16 :goto_4
 
-    :cond_27
-    const/4 v0, 0x0
+    :cond_1d
+    const/4 v0, 0x1
 
-    cmpl-float v0, v1, v0
-
-    if-lez v0, :cond_28
-
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
-
-    int-to-float v0, v0
-
-    cmpg-float v0, v7, v0
-
-    if-gtz v0, :cond_29
-
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->bdc()Z
-
-    move-result v0
-
-    goto/16 :goto_3
-
-    :cond_28
-    const/4 v0, 0x0
-
-    cmpl-float v0, v6, v0
-
-    if-ltz v0, :cond_29
-
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->bdc()Z
-
-    move-result v0
-
-    goto/16 :goto_3
-
-    :cond_29
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHW:Z
-
-    if-eqz v0, :cond_2c
-
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIf:F
-
-    float-to-double v4, v0
-
-    const-wide v9, 0x3faeb851eb851eb8L    # 0.06
-
-    cmpg-double v0, v4, v9
-
-    if-gez v0, :cond_2a
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgX:Z
 
     const/4 v0, 0x0
 
-    cmpl-float v0, v1, v0
-
-    if-lez v0, :cond_2a
-
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
-
-    int-to-float v0, v0
-
-    cmpl-float v0, v7, v0
-
-    if-gtz v0, :cond_2c
-
-    :cond_2a
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIf:F
-
-    float-to-double v4, v0
-
-    const-wide v9, 0x3fee147ae147ae14L    # 0.94
-
-    cmpl-double v0, v4, v9
-
-    if-gtz v0, :cond_2b
-
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIf:F
-
-    const/4 v4, 0x0
-
-    cmpl-float v0, v0, v4
-
-    if-nez v0, :cond_30
-
-    :cond_2b
-    const/4 v0, 0x0
-
-    cmpg-float v0, v1, v0
-
-    if-gez v0, :cond_30
-
-    const/4 v0, 0x0
-
-    cmpg-float v0, v6, v0
-
-    if-gez v0, :cond_30
-
-    :cond_2c
-    neg-float v0, v1
+    const/4 v2, 0x0
 
     const/4 v4, 0x0
 
     cmpg-float v4, v1, v4
 
-    if-gez v4, :cond_2e
+    if-gez v4, :cond_22
 
-    const/4 v4, 0x0
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
 
-    cmpg-float v4, v6, v4
+    iget v4, v4, Landroid/graphics/RectF;->top:F
 
-    if-gez v4, :cond_31
+    cmpl-float v4, v8, v4
 
-    sub-float v1, v6, v1
+    if-lez v4, :cond_1e
 
-    const/4 v4, 0x0
+    const/4 v4, 0x1
 
-    cmpl-float v1, v1, v4
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhb:Z
 
-    if-lez v1, :cond_31
+    :cond_1e
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
 
-    neg-float v0, v6
+    iget v4, v4, Landroid/graphics/RectF;->top:F
 
-    move v1, v0
+    cmpg-float v4, v8, v4
 
-    :goto_7
-    neg-float v0, v2
+    if-lez v4, :cond_1f
 
-    const/4 v4, 0x0
+    iget v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
 
-    cmpg-float v2, v2, v4
+    int-to-float v4, v4
 
-    if-gez v2, :cond_2f
+    cmpg-float v4, v9, v4
 
+    if-gez v4, :cond_21
+
+    :cond_1f
+    neg-float v1, v1
+
+    :goto_6
     const/4 v2, 0x0
 
     cmpg-float v2, v3, v2
 
-    if-gez v2, :cond_2d
+    if-gez v2, :cond_26
 
-    add-float v2, v3, v0
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
 
-    const/4 v4, 0x0
+    iget v2, v2, Landroid/graphics/RectF;->left:F
 
-    cmpl-float v2, v2, v4
+    cmpl-float v2, v6, v2
 
-    if-lez v2, :cond_2d
-
-    neg-float v0, v3
-
-    :cond_2d
-    :goto_8
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
-
-    invoke-virtual {v2, v1, v0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
+    if-lez v2, :cond_26
 
     const/4 v0, 0x1
 
-    goto/16 :goto_3
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhd:Z
 
-    :cond_2e
-    iget v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
+    const v0, 0x3e99999a    # 0.3f
+
+    mul-float/2addr v0, v3
+
+    neg-float v0, v0
+
+    :cond_20
+    :goto_7
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+
+    invoke-virtual {v2, v0, v1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->p(FF)V
+
+    const/4 v0, 0x1
+
+    goto/16 :goto_4
+
+    :cond_21
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v4, v4, Landroid/graphics/RectF;->top:F
+
+    cmpl-float v4, v8, v4
+
+    if-lez v4, :cond_55
+
+    iget v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
 
     int-to-float v4, v4
 
-    cmpl-float v4, v7, v4
+    const v5, 0x3e99999a    # 0.3f
 
-    if-lez v4, :cond_31
+    mul-float/2addr v4, v5
 
-    sub-float v1, v7, v1
+    cmpg-float v4, v8, v4
 
-    iget v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
+    if-gez v4, :cond_55
+
+    const v2, 0x3e99999a    # 0.3f
+
+    mul-float/2addr v1, v2
+
+    neg-float v1, v1
+
+    goto :goto_6
+
+    :cond_22
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v4, v4, Landroid/graphics/RectF;->bottom:F
+
+    cmpg-float v4, v9, v4
+
+    if-gez v4, :cond_23
+
+    const/4 v4, 0x1
+
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhc:Z
+
+    :cond_23
+    const/4 v4, 0x0
+
+    cmpl-float v4, v8, v4
+
+    if-gtz v4, :cond_24
+
+    iget v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
 
     int-to-float v4, v4
 
-    cmpg-float v1, v1, v4
+    cmpl-float v4, v9, v4
 
-    if-gez v1, :cond_31
+    if-ltz v4, :cond_25
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
+    :cond_24
+    neg-float v1, v1
+
+    goto :goto_6
+
+    :cond_25
+    iget v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
+
+    int-to-float v4, v4
+
+    const v5, 0x3f333333    # 0.7f
+
+    mul-float/2addr v4, v5
+
+    cmpl-float v4, v9, v4
+
+    if-lez v4, :cond_55
+
+    iget v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
+
+    int-to-float v4, v4
+
+    cmpg-float v4, v9, v4
+
+    if-gez v4, :cond_55
+
+    const v2, 0x3e99999a    # 0.3f
+
+    mul-float/2addr v1, v2
+
+    neg-float v1, v1
+
+    goto :goto_6
+
+    :cond_26
+    const/4 v2, 0x0
+
+    cmpl-float v2, v3, v2
+
+    if-lez v2, :cond_20
+
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v2, v2, Landroid/graphics/RectF;->right:F
+
+    cmpg-float v2, v7, v2
+
+    if-gez v2, :cond_20
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhe:Z
+
+    const v0, 0x3e99999a    # 0.3f
+
+    mul-float/2addr v0, v3
+
+    neg-float v0, v0
+
+    goto :goto_7
+
+    :cond_27
+    invoke-direct {p0, v6, v7, v0, v3}, Lcom/tencent/mm/ui/base/MMViewPager;->a(FFLandroid/view/View;F)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_28
+
+    const/4 v0, 0x1
+
+    goto/16 :goto_4
+
+    :cond_28
+    const/4 v0, 0x0
+
+    cmpl-float v0, v3, v0
+
+    if-lez v0, :cond_29
+
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
+
+    int-to-float v0, v0
+
+    cmpg-float v0, v7, v0
+
+    if-gtz v0, :cond_2a
+
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->biE()Z
+
+    move-result v0
+
+    goto/16 :goto_4
+
+    :cond_29
+    const/4 v0, 0x0
+
+    cmpl-float v0, v6, v0
+
+    if-ltz v0, :cond_2a
+
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->biE()Z
+
+    move-result v0
+
+    goto/16 :goto_4
+
+    :cond_2a
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgY:Z
+
+    if-nez v0, :cond_2c
+
+    neg-float v0, v3
+
+    const/4 v1, 0x0
+
+    cmpg-float v1, v3, v1
+
+    if-gez v1, :cond_2d
+
+    const/4 v1, 0x0
+
+    cmpg-float v1, v6, v1
+
+    if-gez v1, :cond_2b
+
+    sub-float v1, v6, v3
+
+    const/4 v2, 0x0
+
+    cmpl-float v1, v1, v2
+
+    if-lez v1, :cond_2b
+
+    neg-float v0, v6
+
+    :cond_2b
+    :goto_8
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->p(FF)V
+
+    :cond_2c
+    const/4 v0, 0x1
+
+    goto/16 :goto_4
+
+    :cond_2d
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
+
+    int-to-float v1, v1
+
+    cmpl-float v1, v7, v1
+
+    if-lez v1, :cond_2b
+
+    sub-float v1, v7, v3
+
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
+
+    int-to-float v2, v2
+
+    cmpg-float v1, v1, v2
+
+    if-gez v1, :cond_2b
+
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
 
     int-to-float v0, v0
 
     sub-float/2addr v0, v7
 
-    move v1, v0
+    goto :goto_8
 
-    goto :goto_7
+    :cond_2e
+    float-to-int v2, v4
+
+    iget v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
+
+    if-le v2, v4, :cond_38
+
+    float-to-int v2, v5
+
+    iget v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
+
+    if-gt v2, v4, :cond_38
+
+    invoke-direct {p0, v6, v7, v0, v3}, Lcom/tencent/mm/ui/base/MMViewPager;->a(FFLandroid/view/View;F)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2f
+
+    const/4 v0, 0x1
+
+    goto/16 :goto_4
 
     :cond_2f
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJF:I
+    const/4 v0, 0x0
+
+    cmpl-float v0, v3, v0
+
+    if-lez v0, :cond_30
+
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
+
+    int-to-float v0, v0
+
+    cmpg-float v0, v7, v0
+
+    if-gtz v0, :cond_31
+
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->biE()Z
+
+    move-result v0
+
+    goto/16 :goto_4
+
+    :cond_30
+    const/4 v0, 0x0
+
+    cmpl-float v0, v6, v0
+
+    if-ltz v0, :cond_31
+
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->biE()Z
+
+    move-result v0
+
+    goto/16 :goto_4
+
+    :cond_31
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgY:Z
+
+    if-eqz v0, :cond_34
+
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhq:F
+
+    float-to-double v0, v0
+
+    const-wide v4, 0x3faeb851eb851eb8L    # 0.06
+
+    cmpg-double v0, v0, v4
+
+    if-gez v0, :cond_32
+
+    const/4 v0, 0x0
+
+    cmpl-float v0, v3, v0
+
+    if-lez v0, :cond_32
+
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
+
+    int-to-float v0, v0
+
+    cmpl-float v0, v7, v0
+
+    if-gtz v0, :cond_34
+
+    :cond_32
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhq:F
+
+    float-to-double v0, v0
+
+    const-wide v4, 0x3fee147ae147ae14L    # 0.94
+
+    cmpl-double v0, v0, v4
+
+    if-gtz v0, :cond_33
+
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhq:F
+
+    const/4 v1, 0x0
+
+    cmpl-float v0, v0, v1
+
+    if-nez v0, :cond_37
+
+    :cond_33
+    const/4 v0, 0x0
+
+    cmpg-float v0, v3, v0
+
+    if-gez v0, :cond_37
+
+    const/4 v0, 0x0
+
+    cmpg-float v0, v6, v0
+
+    if-gez v0, :cond_37
+
+    :cond_34
+    neg-float v0, v3
+
+    const/4 v1, 0x0
+
+    cmpg-float v1, v3, v1
+
+    if-gez v1, :cond_36
+
+    const/4 v1, 0x0
+
+    cmpg-float v1, v6, v1
+
+    if-gez v1, :cond_35
+
+    sub-float v1, v6, v3
+
+    const/4 v2, 0x0
+
+    cmpl-float v1, v1, v2
+
+    if-lez v1, :cond_35
+
+    neg-float v0, v6
+
+    :cond_35
+    :goto_9
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->p(FF)V
+
+    const/4 v0, 0x1
+
+    goto/16 :goto_4
+
+    :cond_36
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
+
+    int-to-float v1, v1
+
+    cmpl-float v1, v7, v1
+
+    if-lez v1, :cond_35
+
+    sub-float v1, v7, v3
+
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
 
     int-to-float v2, v2
 
-    cmpl-float v2, v8, v2
+    cmpg-float v1, v1, v2
 
-    if-lez v2, :cond_2d
+    if-gez v1, :cond_35
 
-    add-float v2, v8, v0
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJF:I
+    int-to-float v0, v0
+
+    sub-float/2addr v0, v7
+
+    goto :goto_9
+
+    :cond_37
+    const/4 v0, 0x0
+
+    goto/16 :goto_4
+
+    :cond_38
+    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
+
+    move-result v2
+
+    invoke-static {v3}, Ljava/lang/Math;->abs(F)F
+
+    move-result v4
+
+    cmpl-float v2, v2, v4
+
+    if-lez v2, :cond_49
+
+    const/4 v2, 0x0
+
+    const/4 v0, 0x0
+
+    const/4 v4, 0x0
+
+    cmpl-float v4, v3, v4
+
+    if-eqz v4, :cond_3b
+
+    const/4 v4, 0x1
+
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgY:Z
+
+    const/4 v4, 0x0
+
+    cmpg-float v4, v3, v4
+
+    if-gez v4, :cond_40
+
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v4, v4, Landroid/graphics/RectF;->left:F
+
+    cmpl-float v4, v6, v4
+
+    if-lez v4, :cond_39
+
+    const/4 v4, 0x1
+
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhd:Z
+
+    :cond_39
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v4, v4, Landroid/graphics/RectF;->left:F
+
+    cmpg-float v4, v6, v4
+
+    if-lez v4, :cond_3a
+
+    iget v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
+
+    int-to-float v4, v4
+
+    cmpg-float v4, v7, v4
+
+    if-gez v4, :cond_3f
+
+    :cond_3a
+    move v2, v3
+
+    :cond_3b
+    :goto_a
+    const/4 v3, 0x0
+
+    cmpl-float v3, v1, v3
+
+    if-eqz v3, :cond_3e
+
+    const/4 v3, 0x1
+
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgX:Z
+
+    const/4 v3, 0x0
+
+    cmpg-float v3, v1, v3
+
+    if-gez v3, :cond_45
+
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v3, v3, Landroid/graphics/RectF;->top:F
+
+    cmpl-float v3, v8, v3
+
+    if-lez v3, :cond_3c
+
+    const/4 v3, 0x1
+
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhb:Z
+
+    :cond_3c
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v3, v3, Landroid/graphics/RectF;->top:F
+
+    cmpg-float v3, v8, v3
+
+    if-lez v3, :cond_3d
+
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
+
+    int-to-float v3, v3
+
+    cmpg-float v3, v9, v3
+
+    if-gez v3, :cond_44
+
+    :cond_3d
+    move v0, v1
+
+    :cond_3e
+    :goto_b
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+
+    neg-float v2, v2
+
+    neg-float v0, v0
+
+    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->p(FF)V
+
+    const/4 v0, 0x1
+
+    goto/16 :goto_4
+
+    :cond_3f
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v4, v4, Landroid/graphics/RectF;->left:F
+
+    cmpl-float v4, v6, v4
+
+    if-lez v4, :cond_3b
+
+    iget v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
+
+    int-to-float v4, v4
+
+    const v5, 0x3e99999a    # 0.3f
+
+    mul-float/2addr v4, v5
+
+    cmpg-float v4, v6, v4
+
+    if-gez v4, :cond_3b
+
+    const v2, 0x3e99999a    # 0.3f
+
+    mul-float/2addr v2, v3
+
+    goto :goto_a
+
+    :cond_40
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v4, v4, Landroid/graphics/RectF;->right:F
+
+    cmpg-float v4, v7, v4
+
+    if-gez v4, :cond_41
+
+    const/4 v4, 0x1
+
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhe:Z
+
+    :cond_41
+    const/4 v4, 0x0
+
+    cmpl-float v4, v6, v4
+
+    if-gtz v4, :cond_42
+
+    iget v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
+
+    int-to-float v4, v4
+
+    cmpl-float v4, v7, v4
+
+    if-ltz v4, :cond_43
+
+    :cond_42
+    move v2, v3
+
+    goto :goto_a
+
+    :cond_43
+    iget v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
+
+    int-to-float v4, v4
+
+    const v5, 0x3f333333    # 0.7f
+
+    mul-float/2addr v4, v5
+
+    cmpl-float v4, v7, v4
+
+    if-lez v4, :cond_3b
+
+    iget v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
+
+    int-to-float v4, v4
+
+    cmpg-float v4, v7, v4
+
+    if-gez v4, :cond_3b
+
+    const v2, 0x3e99999a    # 0.3f
+
+    mul-float/2addr v2, v3
+
+    goto :goto_a
+
+    :cond_44
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v3, v3, Landroid/graphics/RectF;->top:F
+
+    cmpl-float v3, v8, v3
+
+    if-lez v3, :cond_3e
+
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
+
+    int-to-float v3, v3
+
+    const v4, 0x3e99999a    # 0.3f
+
+    mul-float/2addr v3, v4
+
+    cmpg-float v3, v8, v3
+
+    if-gez v3, :cond_3e
+
+    const v0, 0x3e99999a    # 0.3f
+
+    mul-float/2addr v0, v1
+
+    goto :goto_b
+
+    :cond_45
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v3, v3, Landroid/graphics/RectF;->bottom:F
+
+    cmpg-float v3, v9, v3
+
+    if-gez v3, :cond_46
+
+    const/4 v3, 0x1
+
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhc:Z
+
+    :cond_46
+    const/4 v3, 0x0
+
+    cmpl-float v3, v8, v3
+
+    if-gtz v3, :cond_47
+
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
+
+    int-to-float v3, v3
+
+    cmpl-float v3, v9, v3
+
+    if-ltz v3, :cond_48
+
+    :cond_47
+    move v0, v1
+
+    goto/16 :goto_b
+
+    :cond_48
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
+
+    int-to-float v3, v3
+
+    const v4, 0x3f333333    # 0.7f
+
+    mul-float/2addr v3, v4
+
+    cmpl-float v3, v9, v3
+
+    if-lez v3, :cond_3e
+
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
+
+    int-to-float v3, v3
+
+    cmpg-float v3, v9, v3
+
+    if-gez v3, :cond_3e
+
+    const v0, 0x3e99999a    # 0.3f
+
+    mul-float/2addr v0, v1
+
+    goto/16 :goto_b
+
+    :cond_49
+    invoke-direct {p0, v6, v7, v0, v3}, Lcom/tencent/mm/ui/base/MMViewPager;->a(FFLandroid/view/View;F)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4a
+
+    const/4 v0, 0x1
+
+    goto/16 :goto_4
+
+    :cond_4a
+    const/4 v0, 0x0
+
+    cmpl-float v0, v3, v0
+
+    if-lez v0, :cond_4b
+
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
+
+    int-to-float v0, v0
+
+    cmpg-float v0, v7, v0
+
+    if-gtz v0, :cond_4c
+
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->biE()Z
+
+    move-result v0
+
+    goto/16 :goto_4
+
+    :cond_4b
+    const/4 v0, 0x0
+
+    cmpl-float v0, v6, v0
+
+    if-ltz v0, :cond_4c
+
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->biE()Z
+
+    move-result v0
+
+    goto/16 :goto_4
+
+    :cond_4c
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgY:Z
+
+    if-eqz v0, :cond_4f
+
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhq:F
+
+    float-to-double v4, v0
+
+    const-wide v10, 0x3faeb851eb851eb8L    # 0.06
+
+    cmpg-double v0, v4, v10
+
+    if-gez v0, :cond_4d
+
+    const/4 v0, 0x0
+
+    cmpl-float v0, v3, v0
+
+    if-lez v0, :cond_4d
+
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
+
+    int-to-float v0, v0
+
+    cmpl-float v0, v7, v0
+
+    if-gtz v0, :cond_4f
+
+    :cond_4d
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhq:F
+
+    float-to-double v4, v0
+
+    const-wide v10, 0x3fee147ae147ae14L    # 0.94
+
+    cmpl-double v0, v4, v10
+
+    if-gtz v0, :cond_4e
+
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhq:F
+
+    const/4 v2, 0x0
+
+    cmpl-float v0, v0, v2
+
+    if-nez v0, :cond_53
+
+    :cond_4e
+    const/4 v0, 0x0
+
+    cmpg-float v0, v3, v0
+
+    if-gez v0, :cond_53
+
+    const/4 v0, 0x0
+
+    cmpg-float v0, v6, v0
+
+    if-gez v0, :cond_53
+
+    :cond_4f
+    neg-float v0, v3
+
+    const/4 v2, 0x0
+
+    cmpg-float v2, v3, v2
+
+    if-gez v2, :cond_51
+
+    const/4 v2, 0x0
+
+    cmpg-float v2, v6, v2
+
+    if-gez v2, :cond_54
+
+    sub-float v2, v6, v3
+
+    const/4 v3, 0x0
+
+    cmpl-float v2, v2, v3
+
+    if-lez v2, :cond_54
+
+    neg-float v0, v6
+
+    move v2, v0
+
+    :goto_c
+    neg-float v0, v1
+
+    const/4 v3, 0x0
+
+    cmpg-float v1, v1, v3
+
+    if-gez v1, :cond_52
+
+    const/4 v1, 0x0
+
+    cmpg-float v1, v8, v1
+
+    if-gez v1, :cond_50
+
+    add-float v1, v8, v0
+
+    const/4 v3, 0x0
+
+    cmpl-float v1, v1, v3
+
+    if-lez v1, :cond_50
+
+    neg-float v0, v8
+
+    :cond_50
+    :goto_d
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+
+    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->p(FF)V
+
+    const/4 v0, 0x1
+
+    goto/16 :goto_4
+
+    :cond_51
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
+
+    int-to-float v2, v2
+
+    cmpl-float v2, v7, v2
+
+    if-lez v2, :cond_54
+
+    sub-float v2, v7, v3
+
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
 
     int-to-float v3, v3
 
     cmpg-float v2, v2, v3
 
-    if-gez v2, :cond_2d
+    if-gez v2, :cond_54
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJF:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
 
     int-to-float v0, v0
 
-    sub-float/2addr v0, v8
+    sub-float/2addr v0, v7
 
-    goto :goto_8
+    move v2, v0
 
-    :cond_30
+    goto :goto_c
+
+    :cond_52
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
+
+    int-to-float v1, v1
+
+    cmpl-float v1, v9, v1
+
+    if-lez v1, :cond_50
+
+    add-float v1, v9, v0
+
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
+
+    int-to-float v3, v3
+
+    cmpg-float v1, v1, v3
+
+    if-gez v1, :cond_50
+
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
+
+    int-to-float v0, v0
+
+    sub-float/2addr v0, v9
+
+    goto :goto_d
+
+    :cond_53
     const/4 v0, 0x0
 
-    goto/16 :goto_3
+    goto/16 :goto_4
 
-    :cond_31
-    move v1, v0
+    :cond_54
+    move v2, v0
 
-    goto :goto_7
+    goto :goto_c
 
-    :cond_32
+    :cond_55
+    move v1, v2
+
+    goto/16 :goto_6
+
+    :cond_56
     move v0, v8
 
     goto/16 :goto_0
@@ -1763,383 +2803,317 @@
     .locals 1
 
     .prologue
-    .line 21
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
+    .line 25
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
 
     return v0
 .end method
 
-.method private b(FFF)Z
-    .locals 5
+.method static synthetic b(Landroid/view/MotionEvent;Landroid/view/MotionEvent;)Z
+    .locals 1
 
     .prologue
-    const/4 v4, 0x1
+    .line 25
+    invoke-static {p0, p1}, Lcom/tencent/mm/ui/base/MMViewPager;->a(Landroid/view/MotionEvent;Landroid/view/MotionEvent;)Z
 
-    const/4 v3, 0x0
+    move-result v0
 
-    .line 455
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHW:Z
-
-    if-nez v0, :cond_0
-
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHX:Z
-
-    if-nez v0, :cond_0
-
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHY:Z
-
-    if-eqz v0, :cond_1
-
-    .line 485
-    :cond_0
-    :goto_0
-    return v4
-
-    .line 459
-    :cond_1
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHV:Z
-
-    .line 461
-    cmpg-float v0, p1, v3
-
-    if-gez v0, :cond_3
-
-    .line 465
-    cmpg-float v0, p2, v3
-
-    if-gez v0, :cond_0
-
-    .line 466
-    neg-float v0, p1
-
-    .line 467
-    sub-float v1, p2, p1
-
-    cmpl-float v1, v1, v3
-
-    if-lez v1, :cond_2
-
-    .line 468
-    neg-float v0, p2
-
-    .line 470
-    :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
-
-    invoke-virtual {v1, v3, v0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
-
-    goto :goto_0
-
-    .line 476
-    :cond_3
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJF:I
-
-    int-to-float v0, v0
-
-    cmpl-float v0, p3, v0
-
-    if-lez v0, :cond_0
-
-    .line 477
-    neg-float v0, p1
-
-    .line 478
-    sub-float v1, p3, p1
-
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJF:I
-
-    int-to-float v2, v2
-
-    cmpg-float v1, v1, v2
-
-    if-gez v1, :cond_4
-
-    .line 479
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJF:I
-
-    int-to-float v0, v0
-
-    sub-float/2addr v0, p3
-
-    .line 481
-    :cond_4
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
-
-    invoke-virtual {v1, v3, v0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
-
-    goto :goto_0
+    return v0
 .end method
 
-.method private bda()V
+.method private biC()V
     .locals 2
 
     .prologue
-    .line 212
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHT:Lcom/tencent/mm/ui/base/MMViewPager$g;
+    .line 438
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgV:Lcom/tencent/mm/ui/base/MMViewPager$j;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/MMViewPager$g;->removeMessages(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/MMViewPager$j;->removeMessages(I)V
 
-    .line 213
+    .line 439
     return-void
 .end method
 
-.method private bdb()V
+.method private biD()V
     .locals 4
 
     .prologue
     const-wide/16 v2, 0xf
 
-    .line 218
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->bda()V
+    .line 444
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->biC()V
 
-    .line 220
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHT:Lcom/tencent/mm/ui/base/MMViewPager$g;
+    .line 446
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgV:Lcom/tencent/mm/ui/base/MMViewPager$j;
 
-    iput-wide v2, v0, Lcom/tencent/mm/ui/base/MMViewPager$g;->kIo:J
+    iput-wide v2, v0, Lcom/tencent/mm/ui/base/MMViewPager$j;->lhE:J
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/ui/base/MMViewPager$g;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/ui/base/MMViewPager$j;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 221
+    .line 447
     return-void
 .end method
 
-.method private bdc()Z
+.method private biE()Z
     .locals 2
 
     .prologue
     const/4 v0, 0x1
 
-    .line 490
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHV:Z
+    .line 783
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgX:Z
 
     if-eqz v1, :cond_0
 
-    .line 496
+    .line 789
     :goto_0
     return v0
 
-    .line 494
+    .line 787
     :cond_0
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kHW:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgY:Z
 
-    .line 496
+    .line 789
     const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method static synthetic c(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/sdk/platformtools/aa;
+.method static synthetic c(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/sdk/platformtools/ac;
     .locals 1
 
     .prologue
-    .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 25
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
     return-object v0
 .end method
 
-.method static synthetic d(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/support/v4/view/ViewPager$e;
+.method static synthetic d(Lcom/tencent/mm/ui/base/MMViewPager;)I
     .locals 1
 
     .prologue
-    .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIe:Landroid/support/v4/view/ViewPager$e;
+    .line 25
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
 
-    return-object v0
-.end method
-
-.method static synthetic e(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/view/View$OnTouchListener;
-    .locals 1
-
-    .prologue
-    .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->hIN:Landroid/view/View$OnTouchListener;
-
-    return-object v0
-.end method
-
-.method static synthetic f(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
-    .locals 1
-
-    .prologue
-    .line 21
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->getSelectedMultiTouchImageView()Lcom/tencent/mm/ui/base/MultiTouchImageView;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method static synthetic g(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/view/GestureDetector;
-    .locals 1
-
-    .prologue
-    .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->dpl:Landroid/view/GestureDetector;
-
-    return-object v0
-.end method
-
-.method private getCurrentX()I
-    .locals 4
-
-    .prologue
-    .line 834
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->getAdapter()Landroid/support/v4/view/j;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    .line 835
-    const/4 v0, -0x1
-
-    .line 838
-    :goto_0
     return v0
-
-    :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->getScrollX()I
-
-    move-result v0
-
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->getAdapter()Landroid/support/v4/view/j;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/support/v4/view/j;->getCount()I
-
-    move-result v2
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->getCurrentItem()I
-
-    move-result v3
-
-    sub-int/2addr v2, v3
-
-    add-int/lit8 v2, v2, -0x1
-
-    mul-int/2addr v1, v2
-
-    sub-int/2addr v0, v1
-
-    goto :goto_0
 .end method
 
-.method private getSelectedMultiTouchImageView()Lcom/tencent/mm/ui/base/MultiTouchImageView;
+.method static synthetic e(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/support/v4/view/ViewPager$e;
+    .locals 1
+
+    .prologue
+    .line 25
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhp:Landroid/support/v4/view/ViewPager$e;
+
+    return-object v0
+.end method
+
+.method static synthetic f(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/view/View$OnTouchListener;
+    .locals 1
+
+    .prologue
+    .line 25
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->iaY:Landroid/view/View$OnTouchListener;
+
+    return-object v0
+.end method
+
+.method static synthetic g(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
     .locals 2
 
     .prologue
-    .line 590
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->getCurrentItem()I
+    .line 25
+    iget v1, p0, Landroid/support/v4/view/ViewPager;->gc:I
 
-    move-result v1
-
-    .line 591
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->getAdapter()Landroid/support/v4/view/j;
-
-    move-result-object v0
+    iget-object v0, p0, Landroid/support/v4/view/ViewPager;->gb:Landroid/support/v4/view/j;
 
     check-cast v0, Lcom/tencent/mm/ui/base/t;
 
-    .line 592
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/t;->hn(I)Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/t;->ir(I)Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method private getSelectedView()Landroid/view/View;
-    .locals 2
-
-    .prologue
-    .line 584
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->getCurrentItem()I
-
-    move-result v1
-
-    .line 585
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->getAdapter()Landroid/support/v4/view/j;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/ui/base/t;
-
-    .line 586
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/t;->qI(I)Landroid/view/View;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method static synthetic h(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/view/MotionEvent;
+.method static synthetic h(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/view/GestureDetector;
     .locals 1
 
     .prologue
-    .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIg:Landroid/view/MotionEvent;
+    .line 25
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->doS:Landroid/view/GestureDetector;
 
     return-object v0
 .end method
 
-.method static synthetic i(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/ui/base/MMViewPager$d;
+.method static synthetic i(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/view/MotionEvent;
     .locals 1
 
     .prologue
-    .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIc:Lcom/tencent/mm/ui/base/MMViewPager$d;
+    .line 25
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhr:Landroid/view/MotionEvent;
 
     return-object v0
 .end method
 
-.method static synthetic j(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/ui/base/MMViewPager$b;
+.method static synthetic j(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/ui/base/MMViewPager$d;
     .locals 1
 
     .prologue
-    .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kId:Lcom/tencent/mm/ui/base/MMViewPager$b;
+    .line 25
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhn:Lcom/tencent/mm/ui/base/MMViewPager$d;
 
     return-object v0
 .end method
 
-.method static synthetic k(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/ui/base/MMViewPager$a;
+.method static synthetic k(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/ui/base/MMViewPager$b;
     .locals 1
 
     .prologue
-    .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIb:Lcom/tencent/mm/ui/base/MMViewPager$a;
+    .line 25
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lho:Lcom/tencent/mm/ui/base/MMViewPager$b;
 
     return-object v0
 .end method
 
-.method static synthetic l(Lcom/tencent/mm/ui/base/MMViewPager;)V
+.method static synthetic l(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/graphics/RectF;
+    .locals 1
+
+    .prologue
+    .line 25
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    return-object v0
+.end method
+
+.method static synthetic m(Lcom/tencent/mm/ui/base/MMViewPager;)I
+    .locals 1
+
+    .prologue
+    .line 25
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhl:I
+
+    return v0
+.end method
+
+.method static synthetic n(Lcom/tencent/mm/ui/base/MMViewPager;)Landroid/widget/OverScroller;
+    .locals 1
+
+    .prologue
+    .line 25
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhh:Landroid/widget/OverScroller;
+
+    return-object v0
+.end method
+
+.method static synthetic o(Lcom/tencent/mm/ui/base/MMViewPager;)Z
+    .locals 1
+
+    .prologue
+    .line 25
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgW:Z
+
+    return v0
+.end method
+
+.method static synthetic p(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/ui/base/MMViewPager$a;
+    .locals 1
+
+    .prologue
+    .line 25
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhm:Lcom/tencent/mm/ui/base/MMViewPager$a;
+
+    return-object v0
+.end method
+
+.method static synthetic q(Lcom/tencent/mm/ui/base/MMViewPager;)V
     .locals 0
 
     .prologue
-    .line 21
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->bda()V
+    .line 25
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->biC()V
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final a(Landroid/support/v4/view/ViewPager$e;)V
+    .locals 0
+
+    .prologue
+    .line 452
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhp:Landroid/support/v4/view/ViewPager$e;
+
+    .line 453
+    return-void
+.end method
+
+.method public final a(Landroid/support/v4/view/j;)V
+    .locals 2
+
+    .prologue
+    .line 972
+    instance-of v0, p1, Lcom/tencent/mm/ui/base/t;
+
+    if-eqz v0, :cond_0
+
+    .line 973
+    invoke-super {p0, p1}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/j;)V
+
+    .line 974
+    return-void
+
+    .line 977
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string/jumbo v1, "must be MMViewPagerAdapter"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final ak()I
+    .locals 1
+
+    .prologue
+    .line 1574
+    iget-object v0, p0, Landroid/support/v4/view/ViewPager;->gb:Landroid/support/v4/view/j;
+
+    check-cast v0, Lcom/tencent/mm/ui/base/t;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/t;->ak()I
+
+    move-result v0
+
+    .line 1575
+    if-ltz v0, :cond_0
+
+    .line 1578
+    :goto_0
+    return v0
+
+    :cond_0
+    invoke-super {p0}, Landroid/support/v4/view/ViewPager;->ak()I
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
 .method public final al()I
     .locals 1
 
     .prologue
-    .line 1086
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->getAdapter()Landroid/support/v4/view/j;
-
-    move-result-object v0
+    .line 1584
+    iget-object v0, p0, Landroid/support/v4/view/ViewPager;->gb:Landroid/support/v4/view/j;
 
     check-cast v0, Lcom/tencent/mm/ui/base/t;
 
@@ -2147,10 +3121,10 @@
 
     move-result v0
 
-    .line 1087
+    .line 1585
     if-ltz v0, :cond_0
 
-    .line 1090
+    .line 1588
     :goto_0
     return v0
 
@@ -2162,51 +3136,389 @@
     goto :goto_0
 .end method
 
-.method public final am()I
-    .locals 1
+.method public computeScroll()V
+    .locals 11
 
     .prologue
-    .line 1096
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->getAdapter()Landroid/support/v4/view/j;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    .line 1276
+    invoke-super {p0}, Landroid/support/v4/view/ViewPager;->computeScroll()V
 
-    check-cast v0, Lcom/tencent/mm/ui/base/t;
+    .line 1280
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/t;->am()I
+    if-nez v0, :cond_1
 
-    move-result v0
-
-    .line 1097
-    if-ltz v0, :cond_0
-
-    .line 1100
-    :goto_0
-    return v0
-
+    .line 1343
     :cond_0
-    invoke-super {p0}, Landroid/support/v4/view/ViewPager;->am()I
+    :goto_0
+    return-void
+
+    .line 1286
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScale()F
 
     move-result v0
 
-    goto :goto_0
-.end method
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
-.method public getScreenWidth()I
-    .locals 1
+    iget v2, v2, Lcom/tencent/mm/ui/base/MultiTouchImageView;->imageWidth:I
 
-    .prologue
-    .line 900
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
+    int-to-float v2, v2
 
-    return v0
+    mul-float v3, v0, v2
+
+    .line 1287
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScale()F
+
+    move-result v0
+
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+
+    iget v2, v2, Lcom/tencent/mm/ui/base/MultiTouchImageView;->imageHeight:I
+
+    int-to-float v2, v2
+
+    mul-float v4, v0, v2
+
+    .line 1289
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhh:Landroid/widget/OverScroller;
+
+    invoke-virtual {v0}, Landroid/widget/OverScroller;->computeScrollOffset()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 1291
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhh:Landroid/widget/OverScroller;
+
+    invoke-virtual {v0}, Landroid/widget/OverScroller;->getCurrX()I
+
+    move-result v0
+
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhi:I
+
+    sub-int v2, v0, v2
+
+    .line 1292
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhh:Landroid/widget/OverScroller;
+
+    invoke-virtual {v0}, Landroid/widget/OverScroller;->getCurrY()I
+
+    move-result v0
+
+    iget v5, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhj:I
+
+    sub-int/2addr v0, v5
+
+    .line 1296
+    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhh:Landroid/widget/OverScroller;
+
+    invoke-virtual {v5}, Landroid/widget/OverScroller;->getCurrX()I
+
+    move-result v5
+
+    iput v5, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhi:I
+
+    .line 1297
+    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhh:Landroid/widget/OverScroller;
+
+    invoke-virtual {v5}, Landroid/widget/OverScroller;->getCurrY()I
+
+    move-result v5
+
+    iput v5, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhj:I
+
+    .line 1299
+    const/16 v5, 0x9
+
+    new-array v5, v5, [F
+
+    .line 1300
+    iget-object v6, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+
+    invoke-virtual {v6}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getImageMatrix()Landroid/graphics/Matrix;
+
+    move-result-object v6
+
+    .line 1301
+    invoke-virtual {v6, v5}, Landroid/graphics/Matrix;->getValues([F)V
+
+    .line 1302
+    const/4 v6, 0x2
+
+    aget v6, v5, v6
+
+    .line 1303
+    add-float/2addr v3, v6
+
+    .line 1304
+    const/4 v7, 0x5
+
+    aget v5, v5, v7
+
+    .line 1305
+    add-float v7, v5, v4
+
+    .line 1309
+    if-gez v2, :cond_2
+
+    int-to-float v8, v2
+
+    iget-object v9, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v9, v9, Landroid/graphics/RectF;->right:F
+
+    invoke-static {v3}, Ljava/lang/Math;->round(F)I
+
+    move-result v10
+
+    int-to-float v10, v10
+
+    sub-float/2addr v9, v10
+
+    cmpg-float v8, v8, v9
+
+    if-gez v8, :cond_2
+
+    .line 1310
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v2, v2, Landroid/graphics/RectF;->right:F
+
+    invoke-static {v3}, Ljava/lang/Math;->round(F)I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    sub-float/2addr v2, v8
+
+    float-to-int v2, v2
+
+    .line 1313
+    :cond_2
+    if-lez v2, :cond_3
+
+    int-to-float v8, v2
+
+    iget-object v9, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v9, v9, Landroid/graphics/RectF;->left:F
+
+    invoke-static {v6}, Ljava/lang/Math;->round(F)I
+
+    move-result v10
+
+    int-to-float v10, v10
+
+    sub-float/2addr v9, v10
+
+    cmpl-float v8, v8, v9
+
+    if-lez v8, :cond_3
+
+    .line 1314
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v2, v2, Landroid/graphics/RectF;->left:F
+
+    invoke-static {v6}, Ljava/lang/Math;->round(F)I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    sub-float/2addr v2, v8
+
+    float-to-int v2, v2
+
+    .line 1317
+    :cond_3
+    if-gez v0, :cond_4
+
+    int-to-float v8, v0
+
+    iget-object v9, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v9, v9, Landroid/graphics/RectF;->bottom:F
+
+    invoke-static {v7}, Ljava/lang/Math;->round(F)I
+
+    move-result v10
+
+    int-to-float v10, v10
+
+    sub-float/2addr v9, v10
+
+    cmpg-float v8, v8, v9
+
+    if-gez v8, :cond_4
+
+    .line 1318
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v0, v0, Landroid/graphics/RectF;->bottom:F
+
+    invoke-static {v7}, Ljava/lang/Math;->round(F)I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    sub-float/2addr v0, v8
+
+    float-to-int v0, v0
+
+    .line 1321
+    :cond_4
+    if-lez v0, :cond_5
+
+    int-to-float v8, v0
+
+    iget-object v9, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v9, v9, Landroid/graphics/RectF;->top:F
+
+    invoke-static {v5}, Ljava/lang/Math;->round(F)I
+
+    move-result v10
+
+    int-to-float v10, v10
+
+    sub-float/2addr v9, v10
+
+    cmpl-float v8, v8, v9
+
+    if-lez v8, :cond_5
+
+    .line 1322
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v0, v0, Landroid/graphics/RectF;->top:F
+
+    invoke-static {v5}, Ljava/lang/Math;->round(F)I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    sub-float/2addr v0, v8
+
+    float-to-int v0, v0
+
+    .line 1325
+    :cond_5
+    invoke-static {v6}, Ljava/lang/Math;->round(F)I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    iget-object v8, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v8, v8, Landroid/graphics/RectF;->left:F
+
+    cmpl-float v6, v6, v8
+
+    if-gez v6, :cond_6
+
+    invoke-static {v3}, Ljava/lang/Math;->round(F)I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    iget-object v6, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v6, v6, Landroid/graphics/RectF;->right:F
+
+    cmpg-float v3, v3, v6
+
+    if-gtz v3, :cond_8
+
+    :cond_6
+    move v2, v1
+
+    .line 1331
+    :cond_7
+    :goto_1
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
+
+    int-to-float v3, v3
+
+    cmpg-float v3, v4, v3
+
+    if-gez v3, :cond_a
+
+    .line 1338
+    :goto_2
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lgU:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+
+    int-to-float v2, v2
+
+    int-to-float v1, v1
+
+    invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->p(FF)V
+
+    .line 1339
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMViewPager;->postInvalidate()V
+
+    goto/16 :goto_0
+
+    .line 1327
+    :cond_8
+    invoke-static {v5}, Ljava/lang/Math;->round(F)I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v5, v5, Landroid/graphics/RectF;->top:F
+
+    cmpl-float v3, v3, v5
+
+    if-gez v3, :cond_9
+
+    invoke-static {v7}, Ljava/lang/Math;->round(F)I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v5, v5, Landroid/graphics/RectF;->bottom:F
+
+    cmpg-float v3, v3, v5
+
+    if-gtz v3, :cond_7
+
+    :cond_9
+    move v0, v1
+
+    .line 1328
+    goto :goto_1
+
+    :cond_a
+    move v1, v0
+
+    goto :goto_2
 .end method
 
 .method public isFocused()Z
     .locals 1
 
     .prologue
-    .line 1024
+    .line 1512
     const/4 v0, 0x1
 
     return v0
@@ -2216,39 +3528,54 @@
     .locals 0
 
     .prologue
-    .line 1004
+    .line 1492
     if-eqz p1, :cond_0
 
-    .line 1006
+    .line 1494
     invoke-super {p0, p1, p2, p3}, Landroid/support/v4/view/ViewPager;->onFocusChanged(ZILandroid/graphics/Rect;)V
 
-    .line 1009
+    .line 1497
     :cond_0
     return-void
 .end method
 
 .method protected onMeasure(II)V
-    .locals 1
+    .locals 4
 
     .prologue
-    .line 448
+    const/4 v3, 0x0
+
+    .line 726
     invoke-super {p0, p1, p2}, Landroid/support/v4/view/ViewPager;->onMeasure(II)V
 
-    .line 449
+    .line 727
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJE:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
 
-    .line 450
+    .line 728
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cJF:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
 
-    .line 451
+    .line 729
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager;->lhk:Landroid/graphics/RectF;
+
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGI:I
+
+    int-to-float v1, v1
+
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMViewPager;->cGJ:I
+
+    int-to-float v2, v2
+
+    invoke-virtual {v0, v3, v3, v1, v2}, Landroid/graphics/RectF;->set(FFFF)V
+
+    .line 730
     return-void
 .end method
 
@@ -2256,62 +3583,14 @@
     .locals 0
 
     .prologue
-    .line 1014
+    .line 1502
     if-eqz p1, :cond_0
 
-    .line 1016
+    .line 1504
     invoke-super {p0, p1}, Landroid/support/v4/view/ViewPager;->onWindowFocusChanged(Z)V
 
-    .line 1019
+    .line 1507
     :cond_0
-    return-void
-.end method
-
-.method public setAdapter(Landroid/support/v4/view/j;)V
-    .locals 2
-
-    .prologue
-    .line 597
-    instance-of v0, p1, Lcom/tencent/mm/ui/base/t;
-
-    if-eqz v0, :cond_0
-
-    .line 598
-    invoke-super {p0, p1}, Landroid/support/v4/view/ViewPager;->setAdapter(Landroid/support/v4/view/j;)V
-
-    .line 599
-    return-void
-
-    .line 602
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string/jumbo v1, "must be MMViewPagerAdapter"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public setLongClickOverListener(Lcom/tencent/mm/ui/base/MMViewPager$b;)V
-    .locals 0
-
-    .prologue
-    .line 197
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kId:Lcom/tencent/mm/ui/base/MMViewPager$b;
-
-    .line 198
-    return-void
-.end method
-
-.method public setOnPageChangeListener(Landroid/support/v4/view/ViewPager$e;)V
-    .locals 0
-
-    .prologue
-    .line 226
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIe:Landroid/support/v4/view/ViewPager$e;
-
-    .line 227
     return-void
 .end method
 
@@ -2319,20 +3598,9 @@
     .locals 0
 
     .prologue
-    .line 442
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->hIN:Landroid/view/View$OnTouchListener;
+    .line 720
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->iaY:Landroid/view/View$OnTouchListener;
 
-    .line 444
-    return-void
-.end method
-
-.method public setSingleClickOverListener(Lcom/tencent/mm/ui/base/MMViewPager$d;)V
-    .locals 0
-
-    .prologue
-    .line 193
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMViewPager;->kIc:Lcom/tencent/mm/ui/base/MMViewPager$d;
-
-    .line 194
+    .line 722
     return-void
 .end method

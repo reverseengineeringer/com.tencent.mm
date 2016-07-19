@@ -1,120 +1,73 @@
 package ct;
 
-import java.nio.ByteBuffer;
-import java.util.HashMap;
-import java.util.Set;
+import android.text.TextUtils;
 
 public final class bh
 {
-  private static HashMap e = null;
-  private HashMap a = new HashMap();
-  private be b = new be();
-  private String c = "GBK";
-  private bi d = new bi();
+  public final bg a;
+  public int b;
+  String c;
+  String d;
+  public String e;
+  String f;
+  public String g;
+  public String h;
+  public String i;
+  public String j;
+  public int k;
+  public int l;
+  public long m;
+  public String n;
+  String o = "4.5.9.3";
+  String p = "150314";
+  public String q = "4.5.9.3";
+  public boolean r = true;
+  public boolean s = false;
+  public boolean t = true;
   
-  public final void a(int paramInt)
+  bh(bg parambg)
   {
-    d.b = paramInt;
+    a = parambg;
   }
   
-  public final void a(String paramString)
+  public final String a()
   {
-    d.d = paramString;
+    if (TextUtils.isEmpty(c)) {
+      return "0123456789ABCDEF";
+    }
+    return c;
   }
   
-  public final void a(String paramString, Object paramObject)
+  public final String b()
   {
-    if (paramString == null) {
-      throw new IllegalArgumentException("put key can not is null");
+    if (TextUtils.isEmpty(d)) {
+      return "0123456789ABCDEF";
     }
-    if (paramObject == null) {
-      throw new IllegalArgumentException("put value can not is null");
-    }
-    if ((paramObject instanceof Set)) {
-      throw new IllegalArgumentException("can not support Set");
-    }
-    Object localObject = new bf();
-    ((bf)localObject).a(c);
-    ((bf)localObject).a(paramObject, 0);
-    paramObject = ((bf)localObject).a();
-    localObject = new byte[((ByteBuffer)paramObject).position()];
-    System.arraycopy(((ByteBuffer)paramObject).array(), 0, localObject, 0, localObject.length);
-    a.put(paramString, localObject);
+    return d;
   }
   
-  public final void a(byte[] paramArrayOfByte)
+  public final String c()
   {
-    if (paramArrayOfByte.length < 4) {
-      throw new IllegalArgumentException("decode package must include size head");
+    if (TextUtils.isEmpty(f)) {
+      return "0123456789ABCDEF";
     }
-    try
-    {
-      paramArrayOfByte = new be(paramArrayOfByte, (byte)0);
-      b = c;
-      d.a(paramArrayOfByte);
-      paramArrayOfByte = new be(d.e);
-      b = c;
-      if (e == null)
-      {
-        localHashMap = new HashMap();
-        e = localHashMap;
-        localHashMap.put("", new byte[0]);
-      }
-      HashMap localHashMap = e;
-      a = ((HashMap)paramArrayOfByte.a(new HashMap(), localHashMap, 0, false));
-      return;
-    }
-    catch (Exception paramArrayOfByte)
-    {
-      throw new RuntimeException(paramArrayOfByte);
-    }
+    return f;
   }
   
-  public final byte[] a()
+  public final String d()
   {
-    Object localObject2 = new bf(0);
-    ((bf)localObject2).a(c);
-    ((bf)localObject2).a(a, 0);
-    d.a = 3;
-    Object localObject1 = d;
-    localObject2 = ((bf)localObject2).a();
-    byte[] arrayOfByte = new byte[((ByteBuffer)localObject2).position()];
-    System.arraycopy(((ByteBuffer)localObject2).array(), 0, arrayOfByte, 0, arrayOfByte.length);
-    e = arrayOfByte;
-    localObject1 = new bf(0);
-    ((bf)localObject1).a(c);
-    d.a((bf)localObject1);
-    localObject2 = ((bf)localObject1).a();
-    localObject1 = new byte[((ByteBuffer)localObject2).position()];
-    System.arraycopy(((ByteBuffer)localObject2).array(), 0, localObject1, 0, localObject1.length);
-    int i = localObject1.length;
-    localObject2 = ByteBuffer.allocate(i + 4);
-    ((ByteBuffer)localObject2).putInt(i + 4).put((byte[])localObject1).flip();
-    return ((ByteBuffer)localObject2).array();
+    if (o == null) {
+      return "None";
+    }
+    return o;
   }
   
-  public final Object b(String paramString, Object paramObject)
+  public final String e()
   {
-    if (!a.containsKey(paramString)) {
-      return null;
+    if (p == null) {
+      return "None";
     }
-    paramString = (byte[])a.get(paramString);
-    try
-    {
-      b.a = ByteBuffer.wrap(paramString);
-      b.b = c;
-      paramString = b.a(paramObject, 0, true);
-      return paramString;
-    }
-    catch (Exception paramString)
-    {
-      throw new Exception(paramString);
-    }
-  }
-  
-  public final void b(String paramString)
-  {
-    d.c = paramString;
+    return p;
   }
 }
 

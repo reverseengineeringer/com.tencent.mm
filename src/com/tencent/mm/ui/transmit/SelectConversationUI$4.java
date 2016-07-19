@@ -1,26 +1,20 @@
 package com.tencent.mm.ui.transmit;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.content.Intent;
+import com.tencent.mm.pluginsdk.ui.applet.c.a;
 
 final class SelectConversationUI$4
-  implements View.OnClickListener
+  implements c.a
 {
-  SelectConversationUI$4(SelectConversationUI paramSelectConversationUI) {}
+  SelectConversationUI$4(SelectConversationUI paramSelectConversationUI, Intent paramIntent) {}
   
-  public final void onClick(View paramView)
+  public final void a(boolean paramBoolean, String paramString, int paramInt)
   {
-    if (SelectConversationUI.a(lBq))
+    if (paramBoolean)
     {
-      SelectConversationUI.b(lBq);
-      return;
+      mci.setResult(-1, val$intent);
+      mci.finish();
     }
-    if (SelectConversationUI.c(lBq))
-    {
-      SelectConversationUI.d(lBq);
-      return;
-    }
-    SelectConversationUI.e(lBq);
   }
 }
 

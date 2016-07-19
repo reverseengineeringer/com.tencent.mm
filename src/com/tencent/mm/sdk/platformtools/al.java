@@ -1,113 +1,275 @@
 package com.tencent.mm.sdk.platformtools;
 
-import android.content.Context;
-import android.content.res.AssetFileDescriptor;
-import android.content.res.AssetManager;
-import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnCompletionListener;
-import android.media.MediaPlayer.OnErrorListener;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public final class al
 {
-  public static void G(Context paramContext, int paramInt)
-  {
-    a(paramContext, paramInt, b.jWZ, false, null);
-  }
+  public static am kxe = null;
   
-  public static void a(Context paramContext, int paramInt, a parama)
+  public static String Fk(String paramString)
   {
-    a(paramContext, paramInt, b.jWZ, false, parama);
-  }
-  
-  public static void a(final Context paramContext, int paramInt, b paramb, boolean paramBoolean, final a parama)
-  {
-    if ((paramContext == null) || (paramb == null))
-    {
-      u.e("!32@/B4Tb64lLpLlVGlG0LwhNkUNSz1Jl26Q", "play Err context:%s pathId:%d speekeron:%s looping:%b listener:%s", new Object[] { paramContext, Integer.valueOf(paramInt), paramb, Boolean.valueOf(false), parama });
-      return;
+    if (be.kf(paramString)) {}
+    while (!be.FL(paramString).booleanValue()) {
+      return paramString;
     }
-    String str = paramContext.getString(paramInt);
-    MediaPlayer localMediaPlayer = new MediaPlayer();
-    if (paramb != b.jWZ) {
-      if (paramb != b.jXa) {
-        break label243;
+    new al();
+    String str1 = "86";
+    Object localObject = paramString;
+    if (paramString.startsWith("+"))
+    {
+      String str2 = paramString.replace("+", "");
+      paramString = cs(str2, null);
+      str1 = paramString;
+      localObject = str2;
+      if (paramString != null)
+      {
+        localObject = str2.substring(paramString.length());
+        str1 = paramString;
       }
     }
-    label243:
-    for (int i = 3;; i = 0)
+    return formatNumber(str1, (String)localObject);
+  }
+  
+  public static String Fl(String paramString)
+  {
+    if (be.kf(paramString)) {
+      return "";
+    }
+    return paramString.replaceAll("[\\.\\-\\ ]", "").trim();
+  }
+  
+  private static String M(String paramString1, String paramString2, String paramString3)
+  {
+    Pattern localPattern = Pattern.compile(paramString1);
+    paramString1 = "";
+    paramString3 = localPattern.matcher(paramString3);
+    if (paramString3.find()) {
+      paramString1 = paramString3.replaceAll(paramString2);
+    }
+    return paramString1;
+  }
+  
+  private static int aV(String paramString, int paramInt)
+  {
+    Pattern localPattern = Pattern.compile(paramString);
+    paramString = "1";
+    int i = 0;
+    while ((i < paramInt) && (!localPattern.matcher(paramString).find()))
     {
-      localMediaPlayer.setAudioStreamType(i);
-      u.i("!32@/B4Tb64lLpLlVGlG0LwhNkUNSz1Jl26Q", "play start mp:%d path:%s context:%s pathId:%d speakerOn:%s looping:%b listener:%s ", new Object[] { Integer.valueOf(localMediaPlayer.hashCode()), str, paramContext, Integer.valueOf(paramInt), paramb, Boolean.valueOf(false), parama });
-      try
+      paramString = paramString + "1";
+      i += 1;
+    }
+    return i + 1;
+  }
+  
+  public static String cs(String paramString1, String paramString2)
+  {
+    paramString1 = Fl(paramString1).replace("+", "");
+    if (kxe == null) {
+      kxe = new am();
+    }
+    int i;
+    if (be.kf(paramString2))
+    {
+      paramString2 = kxekxf.iterator();
+      do
       {
-        paramContext = paramContext.getAssets().openFd(str);
-        localMediaPlayer.setDataSource(paramContext.getFileDescriptor(), paramContext.getStartOffset(), paramContext.getLength());
-        localMediaPlayer.setLooping(false);
-        localMediaPlayer.prepare();
-        localMediaPlayer.start();
-        localMediaPlayer.setOnErrorListener(new MediaPlayer.OnErrorListener()
+        do
         {
-          public final boolean onError(MediaPlayer paramAnonymousMediaPlayer, int paramAnonymousInt1, int paramAnonymousInt2)
-          {
-            u.i("!32@/B4Tb64lLpLlVGlG0LwhNkUNSz1Jl26Q", "onError, what: %d, extra: %d", new Object[] { Integer.valueOf(paramAnonymousInt1), Integer.valueOf(paramAnonymousInt2) });
-            return false;
+          if (!paramString2.hasNext()) {
+            break;
           }
-        });
-        localMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener()
+          localObject = (am.a)paramString2.next();
+        } while (!paramString1.startsWith(kxh));
+        i = paramString1.length() - kxh.length();
+      } while ((i < kxi) || (i > kxj));
+      v.i("MicroMsg.PhoneFormater", "[extractCountryCode] countrycode:%s country isocode: %s country.minlen:%d country.maxlen:%d", new Object[] { kxh, kxg, Integer.valueOf(kxj), Integer.valueOf(kxj) });
+      return kxh;
+    }
+    Object localObject = kxekxf.iterator();
+    while (((Iterator)localObject).hasNext())
+    {
+      am.a locala = (am.a)((Iterator)localObject).next();
+      if (paramString1.startsWith(kxh))
+      {
+        i = paramString1.length() - kxh.length();
+        if ((i >= kxi) && (i <= kxj) && (paramString2.equalsIgnoreCase(kxg)))
         {
-          public final void onCompletion(MediaPlayer paramAnonymousMediaPlayer)
+          v.i("MicroMsg.PhoneFormater", "[extractCountryCode] countrycode:%s country isocode: %s country.minlen:%d country.maxlen:%d", new Object[] { kxh, kxg, Integer.valueOf(kxj), Integer.valueOf(kxj) });
+          return kxh;
+        }
+      }
+    }
+    return null;
+  }
+  
+  public static String formatNumber(String paramString1, String paramString2)
+  {
+    Object localObject;
+    if ((be.kf(paramString1)) || (be.kf(paramString2)))
+    {
+      localObject = paramString2;
+      return (String)localObject;
+    }
+    if (kxe == null) {
+      kxe = new am();
+    }
+    Iterator localIterator1 = kxekxf.iterator();
+    am.a locala;
+    String str;
+    int n;
+    int k;
+    label371:
+    label520:
+    do
+    {
+      StringBuffer localStringBuffer;
+      do
+      {
+        Iterator localIterator2;
+        while (!localIterator2.hasNext())
+        {
+          do
           {
-            int j = -1;
-            if (paramAnonymousMediaPlayer == null) {}
-            for (int i = -1;; i = paramAnonymousMediaPlayer.hashCode())
-            {
-              u.i("!32@/B4Tb64lLpLlVGlG0LwhNkUNSz1Jl26Q", "play completion mp:%d  path:%s", new Object[] { Integer.valueOf(i), dtx });
-              if (paramAnonymousMediaPlayer != null) {
-                paramAnonymousMediaPlayer.release();
-              }
-              try
-              {
-                paramContext.close();
-                if (parama != null) {
-                  parama.lG();
-                }
-                return;
-              }
-              catch (Exception localException)
-              {
-                if (paramAnonymousMediaPlayer != null) {
-                  break;
-                }
-              }
+            if (!localIterator1.hasNext()) {
+              break;
             }
-            for (i = j;; i = paramAnonymousMediaPlayer.hashCode())
-            {
-              u.e("!32@/B4Tb64lLpLlVGlG0LwhNkUNSz1Jl26Q", "play mp:%d fd close failed path:%s e:%s", new Object[] { Integer.valueOf(i), dtx, localException.getMessage() });
+            locala = (am.a)localIterator1.next();
+          } while ((kxh == null) || (!paramString1.trim().toLowerCase().equals(kxh.trim().toLowerCase())) || (kxk == null));
+          str = Fl(paramString2);
+          if (str != null)
+          {
+            localObject = str;
+            if (str.length() > kxi) {
               break;
             }
           }
-        });
-        return;
+          localIterator2 = kxk.iterator();
+        }
+        localObject = (am.b)localIterator2.next();
+        if (!be.kf(kxl)) {
+          break label520;
+        }
+        if (kxk.size() <= 1) {
+          break label371;
+        }
+        localStringBuffer = new StringBuffer();
+        localStringBuffer.append(str);
+        m = str.length();
+      } while (m > aV(kxn, kxj));
+      while (localStringBuffer.toString().length() < kxj) {
+        localStringBuffer.append("0");
       }
-      catch (Exception paramContext)
+      paramString1 = M(kxn, kxm, localStringBuffer.toString());
+      i = 0;
+      j = 0;
+      for (;;)
       {
-        u.e("!32@/B4Tb64lLpLlVGlG0LwhNkUNSz1Jl26Q", "play failed pathId:%d e:%s", new Object[] { Integer.valueOf(paramInt), paramContext.getMessage() });
-        return;
+        localObject = paramString1;
+        if (i >= paramString1.length()) {
+          break;
+        }
+        n = paramString1.charAt(i);
+        paramString2 = paramString1;
+        if (j >= m) {
+          paramString2 = paramString1.substring(0, i);
+        }
+        k = j;
+        if (n != 32)
+        {
+          k = j;
+          if (n != 45)
+          {
+            k = j;
+            if (n != 12290) {
+              k = j + 1;
+            }
+          }
+        }
+        i += 1;
+        j = k;
+        paramString1 = paramString2;
       }
+      paramString1 = new StringBuffer();
+      paramString1.append(str);
+      m = str.length();
+      while (paramString1.toString().length() < kxj) {
+        paramString1.append("0");
+      }
+      paramString1 = M(kxn, kxm, paramString1.toString());
+      i = 0;
+      j = 0;
+      while (i < paramString1.length())
+      {
+        n = paramString1.charAt(i);
+        paramString2 = paramString1;
+        if (j >= m) {
+          paramString2 = paramString1.substring(0, i);
+        }
+        k = j;
+        if (n != 32)
+        {
+          k = j;
+          if (n != 45)
+          {
+            k = j;
+            if (n != 12290) {
+              k = j + 1;
+            }
+          }
+        }
+        i += 1;
+        j = k;
+        paramString1 = paramString2;
+      }
+      return paramString1;
+    } while (!Pattern.compile(kxl).matcher(str).lookingAt());
+    paramString1 = new StringBuffer();
+    paramString1.append(str);
+    int m = str.length();
+    while (paramString1.toString().length() < kxj) {
+      paramString1.append(str.charAt(m - 1));
     }
+    paramString1 = M(kxn, kxm, paramString1.toString());
+    int i = 0;
+    int j = 0;
+    for (;;)
+    {
+      localObject = paramString1;
+      if (i >= paramString1.length()) {
+        break;
+      }
+      n = paramString1.charAt(i);
+      paramString2 = paramString1;
+      if (j >= m) {
+        paramString2 = paramString1.substring(0, i);
+      }
+      k = j;
+      if (n != 32)
+      {
+        k = j;
+        if (n != 45)
+        {
+          k = j;
+          if (n != 12290) {
+            k = j + 1;
+          }
+        }
+      }
+      i += 1;
+      j = k;
+      paramString1 = paramString2;
+    }
+    return paramString2;
   }
   
-  public static void a(Context paramContext, a parama)
+  public static String rn(String paramString)
   {
-    a(paramContext, 2131432259, b.jXa, false, parama);
+    return cs(paramString, null);
   }
-  
-  public static abstract interface a
-  {
-    public abstract void lG();
-  }
-  
-  private static enum b {}
 }
 
 /* Location:

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:id="@id/da" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/ez" android:layout_width="16.0dip" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/f0" android:background="@drawable/x" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/ct">
+        <ImageView android:id="@id/f1" android:background="@null" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/t" android:contentDescription="@string/db" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/ee" android:background="@color/w" android:layout_width="@dimen/dy" android:layout_height="@dimen/he" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@android:id/text1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/MMActionBar.TitleTextStyle" />
+        <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@android:id/text2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/MMActionBar.SubTitleTextStyle" />
+    </LinearLayout>
+</LinearLayout>

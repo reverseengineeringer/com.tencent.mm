@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/plugin/sns/ui/ac$a;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hme:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
+.field final synthetic hCj:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 191
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$9;->hme:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
+    .line 329
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$9;->hCj:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,28 +36,19 @@
 
 
 # virtual methods
-.method public final WT()V
-    .locals 1
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
-    .line 195
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$9;->hme:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->b(Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;)V
-
-    .line 196
-    return-void
-.end method
-
-.method public final aBm()V
-    .locals 1
-
-    .prologue
-    .line 200
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$9;->hme:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->c(Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;)V
-
-    .line 201
+    .line 333
     return-void
 .end method

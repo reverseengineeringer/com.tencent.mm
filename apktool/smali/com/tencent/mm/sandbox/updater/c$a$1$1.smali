@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic jTE:I
+.field final synthetic ksY:I
 
-.field final synthetic jTF:Lcom/tencent/mm/sandbox/updater/c$a$1;
+.field final synthetic ksZ:Lcom/tencent/mm/sandbox/updater/c$a$1;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 432
-    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/c$a$1$1;->jTF:Lcom/tencent/mm/sandbox/updater/c$a$1;
+    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/c$a$1$1;->ksZ:Lcom/tencent/mm/sandbox/updater/c$a$1;
 
-    iput p2, p0, Lcom/tencent/mm/sandbox/updater/c$a$1$1;->jTE:I
+    iput p2, p0, Lcom/tencent/mm/sandbox/updater/c$a$1$1;->ksY:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,21 +41,21 @@
 
 # virtual methods
 .method public final run()V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 436
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c$a$1$1;->jTF:Lcom/tencent/mm/sandbox/updater/c$a$1;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c$a$1$1;->ksZ:Lcom/tencent/mm/sandbox/updater/c$a$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/sandbox/updater/c$a$1;->jTD:Lcom/tencent/mm/sandbox/updater/c$a;
+    iget-object v0, v0, Lcom/tencent/mm/sandbox/updater/c$a$1;->ksX:Lcom/tencent/mm/sandbox/updater/c$a;
 
     invoke-static {v0}, Lcom/tencent/mm/sandbox/updater/c$a;->a(Lcom/tencent/mm/sandbox/updater/c$a;)I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/c$a$1$1;->jTF:Lcom/tencent/mm/sandbox/updater/c$a$1;
+    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/c$a$1$1;->ksZ:Lcom/tencent/mm/sandbox/updater/c$a$1;
 
-    iget-object v1, v1, Lcom/tencent/mm/sandbox/updater/c$a$1;->jTD:Lcom/tencent/mm/sandbox/updater/c$a;
+    iget-object v1, v1, Lcom/tencent/mm/sandbox/updater/c$a$1;->ksX:Lcom/tencent/mm/sandbox/updater/c$a;
 
     invoke-static {v1}, Lcom/tencent/mm/sandbox/updater/c$a;->b(Lcom/tencent/mm/sandbox/updater/c$a;)I
 
@@ -64,47 +64,47 @@
     if-gt v0, v1, :cond_0
 
     .line 437
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c$a$1$1;->jTF:Lcom/tencent/mm/sandbox/updater/c$a$1;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c$a$1$1;->ksZ:Lcom/tencent/mm/sandbox/updater/c$a$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/sandbox/updater/c$a$1;->jTD:Lcom/tencent/mm/sandbox/updater/c$a;
+    iget-object v0, v0, Lcom/tencent/mm/sandbox/updater/c$a$1;->ksX:Lcom/tencent/mm/sandbox/updater/c$a;
 
     invoke-static {v0}, Lcom/tencent/mm/sandbox/updater/c$a;->c(Lcom/tencent/mm/sandbox/updater/c$a;)Lcom/tencent/mm/sandbox/b$a;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/c$a$1$1;->jTF:Lcom/tencent/mm/sandbox/updater/c$a$1;
+    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/c$a$1$1;->ksZ:Lcom/tencent/mm/sandbox/updater/c$a$1;
 
-    iget-object v1, v1, Lcom/tencent/mm/sandbox/updater/c$a$1;->jTD:Lcom/tencent/mm/sandbox/updater/c$a;
+    iget-object v1, v1, Lcom/tencent/mm/sandbox/updater/c$a$1;->ksX:Lcom/tencent/mm/sandbox/updater/c$a;
 
     invoke-static {v1}, Lcom/tencent/mm/sandbox/updater/c$a;->b(Lcom/tencent/mm/sandbox/updater/c$a;)I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/sandbox/updater/c$a$1$1;->jTF:Lcom/tencent/mm/sandbox/updater/c$a$1;
+    iget-object v2, p0, Lcom/tencent/mm/sandbox/updater/c$a$1$1;->ksZ:Lcom/tencent/mm/sandbox/updater/c$a$1;
 
-    iget-object v2, v2, Lcom/tencent/mm/sandbox/updater/c$a$1;->jTD:Lcom/tencent/mm/sandbox/updater/c$a;
+    iget-object v2, v2, Lcom/tencent/mm/sandbox/updater/c$a$1;->ksX:Lcom/tencent/mm/sandbox/updater/c$a;
 
     invoke-static {v2}, Lcom/tencent/mm/sandbox/updater/c$a;->a(Lcom/tencent/mm/sandbox/updater/c$a;)I
 
     move-result v2
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/sandbox/b$a;->J(II)V
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/sandbox/b$a;->L(II)V
 
     .line 439
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c$a$1$1;->jTF:Lcom/tencent/mm/sandbox/updater/c$a$1;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/c$a$1$1;->ksZ:Lcom/tencent/mm/sandbox/updater/c$a$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/sandbox/updater/c$a$1;->jTD:Lcom/tencent/mm/sandbox/updater/c$a;
+    iget-object v0, v0, Lcom/tencent/mm/sandbox/updater/c$a$1;->ksX:Lcom/tencent/mm/sandbox/updater/c$a;
 
     invoke-static {v0}, Lcom/tencent/mm/sandbox/updater/c$a;->c(Lcom/tencent/mm/sandbox/updater/c$a;)Lcom/tencent/mm/sandbox/b$a;
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/sandbox/updater/c$a$1$1;->jTE:I
+    iget v1, p0, Lcom/tencent/mm/sandbox/updater/c$a$1$1;->ksY:I
 
-    int-to-long v1, v1
+    int-to-long v2, v1
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/sandbox/b$a;->dp(J)V
+    invoke-interface {v0, v2, v3}, Lcom/tencent/mm/sandbox/b$a;->dG(J)V
 
     .line 440
     return-void

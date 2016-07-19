@@ -4,23 +4,17 @@
 
 
 # virtual methods
-.method public abstract a(IILb/a/d/i;Ljava/lang/String;Ljava/util/List;Lcom/tencent/mm/protocal/b/aby;IZLjava/util/List;)Z
+.method public abstract aDX()V
 .end method
 
-.method public abstract a(ILandroid/content/Intent;)Z
+.method public abstract aDY()Lcom/tencent/mm/kiss/vending/Vending;
 .end method
 
-.method public abstract aAW()Z
+.method public abstract getCount()I
 .end method
 
-.method public abstract aAX()Landroid/view/View;
+.method public abstract ni(I)Lcom/tencent/mm/plugin/sns/i/k;
 .end method
 
-.method public abstract aAY()Z
-.end method
-
-.method public abstract n(Landroid/os/Bundle;)V
-.end method
-
-.method public abstract o(Landroid/os/Bundle;)V
+.method public abstract notifyDataSetChanged()V
 .end method

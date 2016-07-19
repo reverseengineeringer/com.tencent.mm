@@ -45,7 +45,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -66,11 +66,11 @@
     if-nez v0, :cond_2
 
     .line 32
-    const-string/jumbo v0, "!44@/B4Tb64lLpLVC0LaS5ZOdqJgxv4SheKzLnVhrVs2Idc="
+    const-string/jumbo v0, "MicroMsg.BluetoothReceiver"
 
     const-string/jumbo v1, "getDefaultAdapter == null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -91,11 +91,11 @@
 
     .line 37
     :cond_3
-    const-string/jumbo v0, "!44@/B4Tb64lLpLVC0LaS5ZOdqJgxv4SheKzLnVhrVs2Idc="
+    const-string/jumbo v0, "MicroMsg.BluetoothReceiver"
 
     const-string/jumbo v1, "getBondedDevices == null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -106,14 +106,14 @@
     move-result-object v0
 
     .line 42
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 45
-    const-string/jumbo v0, "!44@/B4Tb64lLpLVC0LaS5ZOdqJgxv4SheKzLnVhrVs2Idc="
+    const-string/jumbo v0, "MicroMsg.BluetoothReceiver"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -133,10 +133,10 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 53
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v0
 
@@ -156,7 +156,7 @@
 
     .line 65
     :goto_1
-    const-string/jumbo v2, "!44@/B4Tb64lLpLVC0LaS5ZOdqJgxv4SheKzLnVhrVs2Idc="
+    const-string/jumbo v2, "MicroMsg.BluetoothReceiver"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -188,11 +188,11 @@
 
     move-result-object v3
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/tencent/mm/compatible/b/d;->nN()Z
+    invoke-virtual {v4}, Lcom/tencent/mm/compatible/b/d;->mc()Z
 
     move-result v4
 
@@ -206,11 +206,11 @@
 
     move-result-object v3
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/tencent/mm/compatible/b/d;->nQ()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/tencent/mm/compatible/b/d;->mg()Ljava/lang/String;
 
     move-result-object v4
 
@@ -222,40 +222,40 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 67
     if-ne v0, v6, :cond_5
 
     .line 68
-    const-string/jumbo v0, "!44@/B4Tb64lLpLVC0LaS5ZOdqJgxv4SheKzLnVhrVs2Idc="
+    const-string/jumbo v0, "MicroMsg.BluetoothReceiver"
 
     const-string/jumbo v2, "sco connected!"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 69
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
-    const-string/jumbo v2, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    const-string/jumbo v2, "MicroMsg.MMAudioManager"
 
     const-string/jumbo v3, "dkbt bluetoothStartSucc %s"
 
     new-array v4, v6, [Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->nQ()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->mg()Ljava/lang/String;
 
     move-result-object v5
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    sput-boolean v6, Lcom/tencent/mm/compatible/b/d;->bpx:Z
+    sput-boolean v6, Lcom/tencent/mm/compatible/b/d;->bdw:Z
 
-    invoke-virtual {v0, v6}, Lcom/tencent/mm/compatible/b/d;->bN(I)V
+    invoke-virtual {v0, v6}, Lcom/tencent/mm/compatible/b/d;->cf(I)V
 
     goto/16 :goto_0
 
@@ -264,19 +264,19 @@
     move-exception v0
 
     .line 62
-    const-string/jumbo v2, "!44@/B4Tb64lLpLVC0LaS5ZOdqJgxv4SheKzLnVhrVs2Idc="
+    const-string/jumbo v2, "MicroMsg.BluetoothReceiver"
 
     const-string/jumbo v3, "%s"
 
     new-array v4, v6, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -287,51 +287,33 @@
     if-nez v0, :cond_0
 
     .line 71
-    const-string/jumbo v0, "!44@/B4Tb64lLpLVC0LaS5ZOdqJgxv4SheKzLnVhrVs2Idc="
+    const-string/jumbo v0, "MicroMsg.BluetoothReceiver"
 
-    const-string/jumbo v2, "sco disconnected!"
+    const-string/jumbo v1, "sco disconnected!"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 72
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->brA:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->bfB:I
 
     if-ne v0, v6, :cond_6
 
     .line 73
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->nM()V
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->mb()V
 
     .line 76
     :cond_6
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
-    const-string/jumbo v2, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
-
-    const-string/jumbo v3, "dkbt bluetoothStopped %s"
-
-    new-array v4, v6, [Ljava/lang/Object;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->nQ()Ljava/lang/String;
-
-    move-result-object v5
-
-    aput-object v5, v4, v1
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    sput-boolean v1, Lcom/tencent/mm/compatible/b/d;->bpx:Z
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/compatible/b/d;->bN(I)V
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->lZ()V
 
     goto/16 :goto_0
 .end method

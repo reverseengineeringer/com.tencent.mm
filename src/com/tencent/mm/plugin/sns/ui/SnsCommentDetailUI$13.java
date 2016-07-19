@@ -5,12 +5,12 @@ final class SnsCommentDetailUI$13
 {
   SnsCommentDetailUI$13(SnsCommentDetailUI paramSnsCommentDetailUI) {}
   
-  public final void awE()
+  public final void azd()
   {
-    if (chda).eYQ) {
+    if (chrN).fhk) {
       return;
     }
-    SnsCommentDetailUI.r(hda);
+    SnsCommentDetailUI.r(hrN);
   }
 }
 

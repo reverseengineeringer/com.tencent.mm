@@ -3,17 +3,17 @@ package com.tencent.mm.ui.account.mobile;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.modelsimple.t;
-import com.tencent.mm.r.m;
+import com.tencent.mm.modelsimple.r;
+import com.tencent.mm.t.m;
 
 final class g$4$1
   implements DialogInterface.OnCancelListener
 {
-  g$4$1(g.4 param4, t paramt) {}
+  g$4$1(g.4 param4, r paramr) {}
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    ah.tE().c(ktw);
+    ah.tF().c(kSE);
   }
 }
 

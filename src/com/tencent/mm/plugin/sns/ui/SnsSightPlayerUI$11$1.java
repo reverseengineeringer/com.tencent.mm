@@ -7,8 +7,8 @@ final class SnsSightPlayerUI$11$1
   
   public final void run()
   {
-    hiu.his.finish();
-    hiu.his.overridePendingTransition(0, 0);
+    hxj.hxh.finish();
+    hxj.hxh.overridePendingTransition(0, 0);
   }
 }
 

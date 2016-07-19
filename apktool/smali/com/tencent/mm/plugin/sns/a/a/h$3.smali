@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/a/a/h;->axy()V
+    value = Lcom/tencent/mm/plugin/sns/a/a/h;->aAa()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gHh:Lcom/tencent/mm/plugin/sns/a/a/h;
+.field final synthetic gNI:Lcom/tencent/mm/plugin/sns/a/a/h;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 159
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/a/a/h$3;->gHh:Lcom/tencent/mm/plugin/sns/a/a/h;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/a/a/h$3;->gNI:Lcom/tencent/mm/plugin/sns/a/a/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
 
     move-result-wide v0
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/a/a/h$3;->gHh:Lcom/tencent/mm/plugin/sns/a/a/h;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/a/a/h$3;->gNI:Lcom/tencent/mm/plugin/sns/a/a/h;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/sns/a/a/h;->b(Lcom/tencent/mm/plugin/sns/a/a/h;)J
 
@@ -59,13 +59,13 @@
 
     if-gez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/h$3;->gHh:Lcom/tencent/mm/plugin/sns/a/a/h;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/h$3;->gNI:Lcom/tencent/mm/plugin/sns/a/a/h;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/a/a/h;->a(Lcom/tencent/mm/plugin/sns/a/a/h;)Lcom/tencent/mm/protocal/b/aqh;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/a/a/h;->a(Lcom/tencent/mm/plugin/sns/a/a/h;)Lcom/tencent/mm/protocal/b/aqs;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqh;->iWW:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqs;->juA:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -77,21 +77,21 @@
 
     .line 163
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/h$3;->gHh:Lcom/tencent/mm/plugin/sns/a/a/h;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/h$3;->gNI:Lcom/tencent/mm/plugin/sns/a/a/h;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/a/a/h;->a(Lcom/tencent/mm/plugin/sns/a/a/h;)Lcom/tencent/mm/protocal/b/aqh;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/a/a/h;->a(Lcom/tencent/mm/plugin/sns/a/a/h;)Lcom/tencent/mm/protocal/b/aqs;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/h$3;->gHh:Lcom/tencent/mm/plugin/sns/a/a/h;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/h$3;->gNI:Lcom/tencent/mm/plugin/sns/a/a/h;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/a/a/h;->a(Lcom/tencent/mm/plugin/sns/a/a/h;)Lcom/tencent/mm/protocal/b/aqh;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/a/a/h;->a(Lcom/tencent/mm/plugin/sns/a/a/h;)Lcom/tencent/mm/protocal/b/aqs;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqh;->iWW:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqs;->juA:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -100,17 +100,17 @@
     if-lez v0, :cond_1
 
     .line 164
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/h$3;->gHh:Lcom/tencent/mm/plugin/sns/a/a/h;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/h$3;->gNI:Lcom/tencent/mm/plugin/sns/a/a/h;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/a/a/h;->d(Lcom/tencent/mm/plugin/sns/a/a/h;)V
 
     .line 166
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/h$3;->gHh:Lcom/tencent/mm/plugin/sns/a/a/h;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/h$3;->gNI:Lcom/tencent/mm/plugin/sns/a/a/h;
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/plugin/sns/a/a/h;->a(Lcom/tencent/mm/plugin/sns/a/a/h;J)J
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/plugin/sns/a/a/h;->a(Lcom/tencent/mm/plugin/sns/a/a/h;J)J
 
     .line 168
     :cond_2

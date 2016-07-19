@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnCancelListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->Rb()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kMQ:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
+.field final synthetic lmf:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 451
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$7;->kMQ:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
+    .line 396
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$7;->lmf:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,38 +36,20 @@
 
 
 # virtual methods
-.method public final onCancel(Landroid/content/DialogInterface;)V
-    .locals 2
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 1
 
     .prologue
-    .line 454
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$7;->kMQ:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
+    .line 400
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$7;->lmf:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->f(Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;)Z
+    invoke-static {v0}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->d(Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;)V
 
-    .line 455
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$7;->kMQ:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
+    .line 402
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$7;->lmf:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->g(Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;)Lcom/tencent/mm/aa/a;
+    invoke-static {v0}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->e(Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;)V
 
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 456
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$7;->kMQ:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
-
-    invoke-static {v1}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->g(Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;)Lcom/tencent/mm/aa/a;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
-
-    .line 458
-    :cond_0
+    .line 404
     return-void
 .end method

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0dip" android:textColor="@color/ot" android:layout_gravity="center_horizontal" android:id="@id/bkv" android:layout_width="wrap_content" android:layout_marginTop="@dimen/hb" android:text="@string/bk5" style="@style/MMLineLabel" />
+        <TextView android:textSize="16.0dip" android:layout_gravity="center_horizontal" android:id="@id/bkw" android:layout_width="wrap_content" android:layout_marginTop="6.0dip" android:text="@string/bk4" style="@style/MMLineLabel" />
+        <TextView android:textSize="28.0dip" android:textStyle="bold" android:textColor="#ff353535" android:layout_gravity="center_horizontal" android:id="@id/bkx" android:layout_width="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="10.0dip" style="@style/MMTitle" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="4.0dip">
+            <ProgressBar android:id="@id/bky" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/MMProgressTransparentHorizontal" />
+            <View android:layout_gravity="bottom" android:background="#ffd4d4d4" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        </FrameLayout>
+    </LinearLayout>
+    <ListView android:orientation="vertical" android:id="@id/bkz" android:background="@null" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

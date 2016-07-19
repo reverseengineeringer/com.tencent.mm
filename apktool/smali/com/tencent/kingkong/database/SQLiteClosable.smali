@@ -23,7 +23,6 @@
 
     iput v0, p0, Lcom/tencent/kingkong/database/SQLiteClosable;->mReferenceCount:I
 
-    .line 26
     return-void
 .end method
 
@@ -45,7 +44,6 @@
     .line 55
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    .line 56
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string/jumbo v2, "attempt to re-open an already-closed object: "
@@ -60,12 +58,11 @@
 
     move-result-object v1
 
-    .line 55
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 53
+    .line 59
     :catchall_0
     move-exception v0
 
@@ -84,7 +81,7 @@
 
     iput v0, p0, Lcom/tencent/kingkong/database/SQLiteClosable;->mReferenceCount:I
 
-    .line 53
+    .line 59
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -138,7 +135,7 @@
 
     const/4 v0, 0x1
 
-    .line 70
+    .line 72
     :goto_0
     monitor-exit p0
     :try_end_0
@@ -160,7 +157,7 @@
 
     goto :goto_0
 
-    .line 70
+    .line 72
     :catchall_0
     move-exception v0
 
@@ -193,7 +190,7 @@
 
     const/4 v0, 0x1
 
-    .line 88
+    .line 90
     :goto_0
     monitor-exit p0
     :try_end_0
@@ -215,7 +212,7 @@
 
     goto :goto_0
 
-    .line 88
+    .line 90
     :catchall_0
     move-exception v0
 

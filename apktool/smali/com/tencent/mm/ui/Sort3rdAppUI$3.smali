@@ -16,11 +16,21 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/tencent/mm/pluginsdk/model/app/f;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic krn:Lcom/tencent/mm/ui/Sort3rdAppUI;
+.field final synthetic kQu:Lcom/tencent/mm/ui/Sort3rdAppUI;
 
-.field final synthetic kro:Ljava/util/List;
+.field final synthetic kQv:Ljava/util/List;
 
 
 # direct methods
@@ -29,9 +39,9 @@
 
     .prologue
     .line 80
-    iput-object p1, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$3;->krn:Lcom/tencent/mm/ui/Sort3rdAppUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$3;->kQu:Lcom/tencent/mm/ui/Sort3rdAppUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$3;->kro:Ljava/util/List;
+    iput-object p2, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$3;->kQv:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,7 +59,7 @@
 
     check-cast p2, Lcom/tencent/mm/pluginsdk/model/app/f;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$3;->kro:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$3;->kQv:Ljava/util/List;
 
     iget-object v1, p2, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
@@ -57,7 +67,7 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$3;->kro:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$3;->kQv:Ljava/util/List;
 
     iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 

@@ -15,31 +15,31 @@ final class FindMContactAddUI$8
   
   public final void onClick(View paramView)
   {
-    b.kD(ah.tx() + "," + lrt.getClass().getName() + ",R300_300_AddAllButton," + ah.fd("R300_300_AddAllButton") + ",3");
-    if (FindMContactAddUI.e(lrt) == 2)
+    b.lm(ah.ty() + "," + lRX.getClass().getName() + ",R300_300_AddAllButton," + ah.fq("R300_300_AddAllButton") + ",3");
+    if (FindMContactAddUI.e(lRX) == 2)
     {
-      FindMContactAddUI.c(lrt).aV(true);
-      FindMContactAddUI.c(lrt).notifyDataSetChanged();
-      FindMContactAddUI.f(lrt).setVisibility(8);
-      if (FindMContactAddUI.g(lrt) != null) {
-        FindMContactAddUI.g(lrt).setVisibility(0);
+      FindMContactAddUI.c(lRX).aB(true);
+      FindMContactAddUI.c(lRX).notifyDataSetChanged();
+      FindMContactAddUI.f(lRX).setVisibility(8);
+      if (FindMContactAddUI.g(lRX) != null) {
+        FindMContactAddUI.g(lRX).setVisibility(0);
       }
     }
     do
     {
       return;
-      if (FindMContactAddUI.e(lrt) == 1)
+      if (FindMContactAddUI.e(lRX) == 1)
       {
-        FindMContactAddUI.c(lrt).aV(true);
-        FindMContactAddUI.c(lrt).notifyDataSetChanged();
-        FindMContactAddUI.i(lrt);
+        FindMContactAddUI.c(lRX).aB(true);
+        FindMContactAddUI.c(lRX).notifyDataSetChanged();
+        FindMContactAddUI.i(lRX);
         return;
       }
-      FindMContactAddUI.c(lrt).aV(true);
-      FindMContactAddUI.c(lrt).notifyDataSetChanged();
-      FindMContactAddUI.f(lrt).setVisibility(8);
-    } while (FindMContactAddUI.g(lrt) == null);
-    FindMContactAddUI.g(lrt).setVisibility(0);
+      FindMContactAddUI.c(lRX).aB(true);
+      FindMContactAddUI.c(lRX).notifyDataSetChanged();
+      FindMContactAddUI.f(lRX).setVisibility(8);
+    } while (FindMContactAddUI.g(lRX) == null);
+    FindMContactAddUI.g(lRX).setVisibility(0);
   }
 }
 

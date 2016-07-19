@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static kr(Ljava/lang/String;)Ljava/lang/String;
+.method public static la(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
     .prologue
@@ -50,7 +50,7 @@
     .line 17
     aget-char v4, v1, v0
 
-    invoke-static {v4}, Lcom/tencent/mm/platformtools/SpellMap;->c(C)Ljava/lang/String;
+    invoke-static {v4}, Lcom/tencent/mm/platformtools/SpellMap;->e(C)Ljava/lang/String;
 
     move-result-object v4
 
@@ -75,7 +75,7 @@
     goto :goto_0
 .end method
 
-.method public static ks(Ljava/lang/String;)Ljava/lang/String;
+.method public static lb(Ljava/lang/String;)Ljava/lang/String;
     .locals 7
 
     .prologue
@@ -132,7 +132,7 @@
     .line 59
     aget-char v5, v2, v0
 
-    invoke-static {v5}, Lcom/tencent/mm/platformtools/SpellMap;->c(C)Ljava/lang/String;
+    invoke-static {v5}, Lcom/tencent/mm/platformtools/SpellMap;->e(C)Ljava/lang/String;
 
     move-result-object v5
 

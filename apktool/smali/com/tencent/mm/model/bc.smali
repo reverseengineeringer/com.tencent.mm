@@ -4,15 +4,35 @@
 
 
 # static fields
-.field public static bCR:Lcom/tencent/mm/model/af;
+.field public static bwb:Lcom/tencent/mm/model/af;
 
 
 # instance fields
-.field private bCP:Ljava/util/Map;
+.field private bvZ:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/model/ae;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private bCQ:Ljava/util/Map;
+.field private bwa:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Lcom/tencent/mm/model/ae;",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private bCS:Ljava/lang/String;
+.field private bwc:Ljava/lang/String;
 
 
 # direct methods
@@ -28,19 +48,19 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bCP:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bvZ:Ljava/util/Map;
 
     .line 18
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bCQ:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bwa:Ljava/util/Map;
 
     .line 21
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bCS:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bwc:Ljava/lang/String;
 
     return-void
 .end method
@@ -55,9 +75,9 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bCS:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bwc:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -70,7 +90,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/tencent/mm/model/bc;->bCS:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/model/bc;->bwc:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -86,7 +106,7 @@
 
     .line 109
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bCP:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bvZ:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
@@ -108,7 +128,7 @@
     throw v0
 .end method
 
-.method public final declared-synchronized ai(Z)V
+.method public final declared-synchronized aj(Z)V
     .locals 10
 
     .prologue
@@ -116,17 +136,17 @@
     monitor-enter p0
 
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gp()J
 
     move-result-wide v2
 
     .line 59
     const-string/jumbo v0, "onAccountPostReset"
 
-    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bCS:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bwc:Ljava/lang/String;
 
     .line 60
-    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bCP:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bvZ:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -150,9 +170,9 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 61
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gp()J
 
-    move-result-wide v5
+    move-result-wide v6
 
     .line 62
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -161,14 +181,14 @@
 
     check-cast v1, Lcom/tencent/mm/model/ae;
 
-    invoke-interface {v1, p1}, Lcom/tencent/mm/model/ae;->ai(Z)V
+    invoke-interface {v1, p1}, Lcom/tencent/mm/model/ae;->aj(Z)V
 
     .line 63
-    iget-object v1, p0, Lcom/tencent/mm/model/bc;->bCQ:Ljava/util/Map;
+    iget-object v1, p0, Lcom/tencent/mm/model/bc;->bwa:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    move-result-object v7
+    move-result-object v5
 
     const/4 v8, 0x1
 
@@ -176,12 +196,12 @@
 
     move-result-object v8
 
-    invoke-interface {v1, v7, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v5, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 64
-    const-string/jumbo v1, "!44@/B4Tb64lLpJEjYGMBUKuW1yoncBJdLoyd26QMGhtE8w="
+    const-string/jumbo v1, "MicroMsg.MMCore.SubCoreMap"
 
-    const-string/jumbo v7, "onSubCoreAccountPostReset post:%s %d"
+    const-string/jumbo v5, "onSubCoreAccountPostReset post:%s %d"
 
     const/4 v8, 0x2
 
@@ -197,17 +217,17 @@
 
     const/4 v0, 0x1
 
-    invoke-static {v5, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->an(J)J
+    invoke-static {v6, v7}, Lcom/tencent/mm/sdk/platformtools/be;->au(J)J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v5
+    move-result-object v6
 
-    aput-object v5, v8, v0
+    aput-object v6, v8, v0
 
-    invoke-static {v1, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v5, v8}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -226,10 +246,10 @@
     :try_start_1
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bCS:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bwc:Ljava/lang/String;
 
     .line 67
-    const-string/jumbo v0, "!44@/B4Tb64lLpJEjYGMBUKuW1yoncBJdLoyd26QMGhtE8w="
+    const-string/jumbo v0, "MicroMsg.MMCore.SubCoreMap"
 
     const-string/jumbo v1, "onSubCoreAccountPostReset finish Count:%d time:%d"
 
@@ -239,7 +259,7 @@
 
     const/4 v5, 0x0
 
-    iget-object v6, p0, Lcom/tencent/mm/model/bc;->bCP:Ljava/util/Map;
+    iget-object v6, p0, Lcom/tencent/mm/model/bc;->bvZ:Ljava/util/Map;
 
     invoke-interface {v6}, Ljava/util/Map;->size()I
 
@@ -253,7 +273,7 @@
 
     const/4 v5, 0x1
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->an(J)J
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/be;->au(J)J
 
     move-result-wide v2
 
@@ -263,7 +283,7 @@
 
     aput-object v2, v4, v5
 
-    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -273,7 +293,7 @@
     return-void
 .end method
 
-.method public final declared-synchronized aj(Z)V
+.method public final declared-synchronized ak(Z)V
     .locals 10
 
     .prologue
@@ -281,17 +301,17 @@
     monitor-enter p0
 
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gp()J
 
     move-result-wide v2
 
     .line 45
     const-string/jumbo v0, "onSdcardMount"
 
-    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bCS:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bwc:Ljava/lang/String;
 
     .line 46
-    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bCP:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bvZ:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -316,7 +336,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 47
-    iget-object v1, p0, Lcom/tencent/mm/model/bc;->bCQ:Ljava/util/Map;
+    iget-object v1, p0, Lcom/tencent/mm/model/bc;->bwa:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -330,16 +350,16 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v1, v5}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v5}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 48
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gp()J
 
-    move-result-wide v5
+    move-result-wide v6
 
     .line 49
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -348,12 +368,12 @@
 
     check-cast v1, Lcom/tencent/mm/model/ae;
 
-    invoke-interface {v1, p1}, Lcom/tencent/mm/model/ae;->aj(Z)V
+    invoke-interface {v1, p1}, Lcom/tencent/mm/model/ae;->ak(Z)V
 
     .line 50
-    const-string/jumbo v1, "!44@/B4Tb64lLpJEjYGMBUKuW1yoncBJdLoyd26QMGhtE8w="
+    const-string/jumbo v1, "MicroMsg.MMCore.SubCoreMap"
 
-    const-string/jumbo v7, "onSdcardMount %s time:%d"
+    const-string/jumbo v5, "onSdcardMount %s time:%d"
 
     const/4 v8, 0x2
 
@@ -369,17 +389,17 @@
 
     const/4 v0, 0x1
 
-    invoke-static {v5, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->an(J)J
+    invoke-static {v6, v7}, Lcom/tencent/mm/sdk/platformtools/be;->au(J)J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v5
+    move-result-object v6
 
-    aput-object v5, v8, v0
+    aput-object v6, v8, v0
 
-    invoke-static {v1, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v5, v8}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -398,10 +418,10 @@
     :try_start_1
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bCS:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bwc:Ljava/lang/String;
 
     .line 54
-    const-string/jumbo v0, "!44@/B4Tb64lLpJEjYGMBUKuW1yoncBJdLoyd26QMGhtE8w="
+    const-string/jumbo v0, "MicroMsg.MMCore.SubCoreMap"
 
     const-string/jumbo v1, "onSubCoreSdcardMount finish Count:%d time:%d"
 
@@ -411,7 +431,7 @@
 
     const/4 v5, 0x0
 
-    iget-object v6, p0, Lcom/tencent/mm/model/bc;->bCP:Ljava/util/Map;
+    iget-object v6, p0, Lcom/tencent/mm/model/bc;->bvZ:Ljava/util/Map;
 
     invoke-interface {v6}, Ljava/util/Map;->size()I
 
@@ -425,7 +445,7 @@
 
     const/4 v5, 0x1
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->an(J)J
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/be;->au(J)J
 
     move-result-wide v2
 
@@ -435,7 +455,7 @@
 
     aput-object v2, v4, v5
 
-    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -445,7 +465,7 @@
     return-void
 .end method
 
-.method public final declared-synchronized cN(I)V
+.method public final declared-synchronized dt(I)V
     .locals 2
 
     .prologue
@@ -455,10 +475,10 @@
     :try_start_0
     const-string/jumbo v0, "clearSubCorePluginData"
 
-    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bCS:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bwc:Ljava/lang/String;
 
     .line 99
-    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bCP:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bvZ:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -488,7 +508,7 @@
 
     check-cast v0, Lcom/tencent/mm/model/ae;
 
-    invoke-interface {v0, p1}, Lcom/tencent/mm/model/ae;->aN(I)V
+    invoke-interface {v0, p1}, Lcom/tencent/mm/model/ae;->cu(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -507,7 +527,7 @@
     :try_start_1
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bCS:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bwc:Ljava/lang/String;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -517,12 +537,12 @@
     return-void
 .end method
 
-.method public final fu(Ljava/lang/String;)Lcom/tencent/mm/model/ae;
+.method public final fH(Ljava/lang/String;)Lcom/tencent/mm/model/ae;
     .locals 1
 
     .prologue
     .line 114
-    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bCP:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bvZ:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -533,7 +553,7 @@
     return-object v0
 .end method
 
-.method public final declared-synchronized uH()V
+.method public final declared-synchronized uJ()V
     .locals 5
 
     .prologue
@@ -541,16 +561,16 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bCS:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bwc:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 32
-    const-string/jumbo v0, "!44@/B4Tb64lLpJEjYGMBUKuW1yoncBJdLoyd26QMGhtE8w="
+    const-string/jumbo v0, "MicroMsg.MMCore.SubCoreMap"
 
     const-string/jumbo v1, "ERR: Looping:%s , failed to resetSubCore"
 
@@ -560,11 +580,11 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcom/tencent/mm/model/bc;->bCS:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/model/bc;->bwc:Ljava/lang/String;
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -578,31 +598,31 @@
     .line 35
     :cond_1
     :try_start_1
-    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bCP:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bvZ:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     .line 36
-    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bCQ:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bwa:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     .line 37
-    sget-object v0, Lcom/tencent/mm/model/bc;->bCR:Lcom/tencent/mm/model/af;
+    sget-object v0, Lcom/tencent/mm/model/bc;->bwb:Lcom/tencent/mm/model/af;
 
     if-eqz v0, :cond_0
 
     .line 38
-    sget-object v0, Lcom/tencent/mm/model/bc;->bCR:Lcom/tencent/mm/model/af;
+    sget-object v0, Lcom/tencent/mm/model/bc;->bwb:Lcom/tencent/mm/model/af;
 
-    invoke-interface {v0}, Lcom/tencent/mm/model/af;->kY()Ljava/util/Map;
+    invoke-interface {v0}, Lcom/tencent/mm/model/af;->jz()Ljava/util/Map;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bCP:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bvZ:Ljava/util/Map;
 
     .line 39
-    const-string/jumbo v0, "!44@/B4Tb64lLpJEjYGMBUKuW1yoncBJdLoyd26QMGhtE8w="
+    const-string/jumbo v0, "MicroMsg.MMCore.SubCoreMap"
 
     const-string/jumbo v1, "resetSubCore get sub core map from sub core factory. count:%d"
 
@@ -612,7 +632,7 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcom/tencent/mm/model/bc;->bCP:Ljava/util/Map;
+    iget-object v4, p0, Lcom/tencent/mm/model/bc;->bvZ:Ljava/util/Map;
 
     invoke-interface {v4}, Ljava/util/Map;->size()I
 
@@ -624,7 +644,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -639,7 +659,7 @@
     throw v0
 .end method
 
-.method public final declared-synchronized uI()V
+.method public final declared-synchronized uK()V
     .locals 11
 
     .prologue
@@ -647,17 +667,17 @@
     monitor-enter p0
 
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gp()J
 
     move-result-wide v2
 
     .line 72
     const-string/jumbo v0, "releaseSubCore"
 
-    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bCS:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bwc:Ljava/lang/String;
 
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bCP:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bvZ:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -682,7 +702,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 74
-    iget-object v1, p0, Lcom/tencent/mm/model/bc;->bCQ:Ljava/util/Map;
+    iget-object v1, p0, Lcom/tencent/mm/model/bc;->bwa:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -696,21 +716,21 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v1, v5}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v1, v5}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 75
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gp()J
 
-    move-result-wide v5
+    move-result-wide v6
 
     .line 76
-    const-string/jumbo v1, "!44@/B4Tb64lLpJEjYGMBUKuW1yoncBJdLoyd26QMGhtE8w="
+    const-string/jumbo v1, "MicroMsg.MMCore.SubCoreMap"
 
-    const-string/jumbo v7, "releaseSubCore release:%s begin..."
+    const-string/jumbo v5, "releaseSubCore release:%s begin..."
 
     const/4 v8, 0x1
 
@@ -724,7 +744,7 @@
 
     aput-object v10, v8, v9
 
-    invoke-static {v1, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v5, v8}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 77
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -733,12 +753,12 @@
 
     check-cast v1, Lcom/tencent/mm/model/ae;
 
-    invoke-interface {v1}, Lcom/tencent/mm/model/ae;->lp()V
+    invoke-interface {v1}, Lcom/tencent/mm/model/ae;->ok()V
 
     .line 78
-    const-string/jumbo v1, "!44@/B4Tb64lLpJEjYGMBUKuW1yoncBJdLoyd26QMGhtE8w="
+    const-string/jumbo v1, "MicroMsg.MMCore.SubCoreMap"
 
-    const-string/jumbo v7, "releaseSubCore release:%s %d"
+    const-string/jumbo v5, "releaseSubCore release:%s %d"
 
     const/4 v8, 0x2
 
@@ -754,17 +774,17 @@
 
     const/4 v0, 0x1
 
-    invoke-static {v5, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->an(J)J
+    invoke-static {v6, v7}, Lcom/tencent/mm/sdk/platformtools/be;->au(J)J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v5
+    move-result-object v6
 
-    aput-object v5, v8, v0
+    aput-object v6, v8, v0
 
-    invoke-static {v1, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v5, v8}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -783,10 +803,10 @@
     :try_start_1
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bCS:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bwc:Ljava/lang/String;
 
     .line 82
-    const-string/jumbo v0, "!44@/B4Tb64lLpJEjYGMBUKuW1yoncBJdLoyd26QMGhtE8w="
+    const-string/jumbo v0, "MicroMsg.MMCore.SubCoreMap"
 
     const-string/jumbo v1, "releaseSubCore finish Count:%d time:%d"
 
@@ -796,7 +816,7 @@
 
     const/4 v5, 0x0
 
-    iget-object v6, p0, Lcom/tencent/mm/model/bc;->bCP:Ljava/util/Map;
+    iget-object v6, p0, Lcom/tencent/mm/model/bc;->bvZ:Ljava/util/Map;
 
     invoke-interface {v6}, Ljava/util/Map;->size()I
 
@@ -810,7 +830,7 @@
 
     const/4 v5, 0x1
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->an(J)J
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/be;->au(J)J
 
     move-result-wide v2
 
@@ -820,7 +840,7 @@
 
     aput-object v2, v4, v5
 
-    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -830,8 +850,18 @@
     return-void
 .end method
 
-.method public final declared-synchronized uJ()Ljava/util/Map;
+.method public final declared-synchronized uL()Ljava/util/Map;
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Integer;",
+            "Lcom/tencent/mm/bc/g$b;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 86
@@ -840,7 +870,7 @@
     :try_start_0
     const-string/jumbo v0, "getSubCoreBaseDBFacotries"
 
-    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bCS:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bwc:Ljava/lang/String;
 
     .line 87
     new-instance v2, Ljava/util/HashMap;
@@ -848,7 +878,7 @@
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     .line 88
-    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bCP:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/model/bc;->bvZ:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -879,7 +909,7 @@
 
     check-cast v1, Lcom/tencent/mm/model/ae;
 
-    invoke-interface {v1}, Lcom/tencent/mm/model/ae;->lo()Ljava/util/HashMap;
+    invoke-interface {v1}, Lcom/tencent/mm/model/ae;->ol()Ljava/util/HashMap;
 
     move-result-object v1
 
@@ -892,7 +922,7 @@
 
     check-cast v0, Lcom/tencent/mm/model/ae;
 
-    invoke-interface {v0}, Lcom/tencent/mm/model/ae;->lo()Ljava/util/HashMap;
+    invoke-interface {v0}, Lcom/tencent/mm/model/ae;->ol()Ljava/util/HashMap;
 
     move-result-object v0
 
@@ -915,7 +945,7 @@
     :try_start_1
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bCS:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/model/bc;->bwc:Ljava/lang/String;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 

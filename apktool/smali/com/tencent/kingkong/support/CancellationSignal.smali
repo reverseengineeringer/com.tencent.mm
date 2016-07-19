@@ -6,8 +6,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/tencent/kingkong/support/CancellationSignal$OnCancelListener;,
-        Lcom/tencent/kingkong/support/CancellationSignal$Transport;
+        Lcom/tencent/kingkong/support/CancellationSignal$1;,
+        Lcom/tencent/kingkong/support/CancellationSignal$Transport;,
+        Lcom/tencent/kingkong/support/CancellationSignal$OnCancelListener;
     }
 .end annotation
 
@@ -43,7 +44,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/tencent/kingkong/support/CancellationSignal$Transport;-><init>(Lcom/tencent/kingkong/support/CancellationSignal$Transport;)V
+    invoke-direct {v0, v1}, Lcom/tencent/kingkong/support/CancellationSignal$Transport;-><init>(Lcom/tencent/kingkong/support/CancellationSignal$1;)V
 
     return-object v0
 .end method
@@ -80,13 +81,9 @@
     :goto_0
     iget-boolean v0, p0, Lcom/tencent/kingkong/support/CancellationSignal;->mCancelInProgress:Z
 
-    if-nez v0, :cond_0
-
-    .line 164
-    return-void
+    if-eqz v0, :cond_0
 
     .line 160
-    :cond_0
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->wait()V
     :try_end_0
@@ -94,10 +91,15 @@
 
     goto :goto_0
 
+    .line 162
     :catch_0
     move-exception v0
 
     goto :goto_0
+
+    .line 164
+    :cond_0
+    return-void
 .end method
 
 
@@ -118,7 +120,7 @@
     .line 69
     monitor-exit p0
 
-    .line 88
+    .line 91
     :goto_0
     return-void
 
@@ -139,7 +141,7 @@
     .line 74
     iget-object v1, p0, Lcom/tencent/kingkong/support/CancellationSignal;->mRemote:Lcom/tencent/kingkong/support/ICancellationSignal;
 
-    .line 67
+    .line 75
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
@@ -178,7 +180,7 @@
     .line 90
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 88
+    .line 91
     monitor-exit p0
 
     goto :goto_0
@@ -192,7 +194,7 @@
 
     throw v0
 
-    .line 67
+    .line 75
     :catchall_1
     move-exception v0
 
@@ -203,11 +205,10 @@
 
     throw v0
 
-    .line 87
+    .line 92
     :catchall_2
     move-exception v0
 
-    .line 88
     monitor-enter p0
 
     .line 89
@@ -219,15 +220,13 @@
     .line 90
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 88
+    .line 91
     monitor-exit p0
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 92
     throw v0
 
-    .line 88
     :catchall_3
     move-exception v0
 
@@ -238,7 +237,6 @@
 
     throw v0
 
-    .line 84
     :catch_0
     move-exception v0
 
@@ -260,7 +258,7 @@
 
     return v0
 
-    .line 44
+    .line 46
     :catchall_0
     move-exception v0
 
@@ -311,7 +309,7 @@
 
     goto :goto_0
 
-    .line 112
+    .line 122
     :catchall_0
     move-exception v0
 
@@ -373,7 +371,7 @@
 
     goto :goto_0
 
-    .line 140
+    .line 150
     :catchall_0
     move-exception v0
 

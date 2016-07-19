@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:scrollbars="none" style="@style/MMScroll">
+        <LinearLayout style="@style/MMBody">
+            <TextView android:gravity="center_horizontal" android:id="@id/n8" android:layout_marginBottom="@dimen/i7" android:text="@string/oz" style="@style/MMBriefText" />
+            <TextView android:gravity="center_horizontal" android:id="@id/n9" android:visibility="gone" android:layout_marginBottom="@dimen/i7" style="@style/MMLineLabel" />
+            <LinearLayout android:gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <EditText android:id="@id/n_" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/j8" android:layout_weight="1.0" android:inputType="phone" style="@style/MMLineEditText" />
+                <Button android:id="@id/na" android:layout_width="80.0dip" android:text="@string/ob" style="@style/MMSolidGreenSmallButton" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                <Button android:id="@id/m9" android:visibility="gone" android:layout_marginTop="10.0dip" android:text="@string/pa" style="@style/MMSolidWhiteSmallButton" />
+                <Button android:layout_gravity="center" android:id="@id/nb" android:visibility="gone" android:text="@string/c6u" style="@style/RegUIHyperText" />
+            </LinearLayout>
+            <TextView android:gravity="center_horizontal" android:id="@id/nc" android:visibility="gone" style="@style/MMBriefText" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/i9" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" style="@style/MMListItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.ui.base.MaskLayout android:id="@id/c35" android:layout_width="@dimen/i1" android:layout_height="@dimen/i1">
+        <ImageView android:id="@id/g6" android:layout_width="@dimen/hz" android:layout_height="@dimen/hz" android:src="@raw/default_avatar" android:layout_centerVertical="true" />
+    </com.tencent.mm.ui.base.MaskLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:ellipsize="end" android:gravity="center|left" android:id="@id/c36" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j_" android:text="{nick}" android:singleLine="true" style="@style/MMFontTitleInList" />
+        <TextView android:textSize="@dimen/h4" android:textColor="@color/kl" android:ellipsize="end" android:gravity="center|left" android:id="@id/c37" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j_" android:singleLine="true" style="@style/MMFontTitleInList" />
+    </LinearLayout>
+</LinearLayout>

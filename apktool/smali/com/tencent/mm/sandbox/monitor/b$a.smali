@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public iWI:Ljava/lang/String;
+.field public iAO:Ljava/lang/String;
 
-.field public jSD:Z
+.field public krX:Z
 
 .field public final platform:Ljava/lang/String;
 
@@ -30,7 +30,7 @@
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Z)V
-    .locals 2
+    .locals 3
 
     .prologue
     .line 32
@@ -41,7 +41,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/tencent/mm/protocal/b;->bwR:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/protocal/c;->boS:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -53,7 +53,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/protocal/b;->iUf:I
+    sget v1, Lcom/tencent/mm/protocal/c;->jry:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -87,15 +87,15 @@
     iput-wide p3, p0, Lcom/tencent/mm/sandbox/monitor/b$a;->timestamp:J
 
     .line 36
-    iput-object p5, p0, Lcom/tencent/mm/sandbox/monitor/b$a;->iWI:Ljava/lang/String;
+    iput-object p5, p0, Lcom/tencent/mm/sandbox/monitor/b$a;->iAO:Ljava/lang/String;
 
     .line 37
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/sandbox/monitor/b$a;->jSD:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/sandbox/monitor/b$a;->krX:Z
 
     .line 38
-    iput-boolean p6, p0, Lcom/tencent/mm/sandbox/monitor/b$a;->jSD:Z
+    iput-boolean p6, p0, Lcom/tencent/mm/sandbox/monitor/b$a;->krX:Z
 
     .line 39
     return-void
@@ -104,7 +104,7 @@
 
 # virtual methods
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     .prologue
     .line 43
@@ -148,9 +148,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/tencent/mm/sandbox/monitor/b$a;->timestamp:J
+    iget-wide v2, p0, Lcom/tencent/mm/sandbox/monitor/b$a;->timestamp:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -160,7 +160,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/sandbox/monitor/b$a;->iWI:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/sandbox/monitor/b$a;->iAO:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

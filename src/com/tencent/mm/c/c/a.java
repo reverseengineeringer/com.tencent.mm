@@ -6,13 +6,13 @@ public abstract interface a
 {
   public abstract int a(g.a parama, int paramInt);
   
-  public abstract boolean br(String paramString);
+  public abstract boolean bk(String paramString);
   
-  public abstract void lU();
+  public abstract void kk();
   
   public static final class a
   {
-    public long arz = 0L;
+    public long adh = 0L;
     public int count = 0;
   }
 }

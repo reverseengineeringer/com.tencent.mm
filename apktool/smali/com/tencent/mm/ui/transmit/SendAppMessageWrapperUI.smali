@@ -10,21 +10,21 @@
 
 
 # instance fields
-.field private aJq:Ljava/lang/String;
+.field private aat:Lcom/tencent/mm/sdk/platformtools/ah;
 
-.field private anF:Lcom/tencent/mm/sdk/platformtools/af;
+.field private aky:Ljava/lang/String;
 
-.field private asc:I
+.field private avK:Ljava/lang/String;
 
-.field private ayw:Ljava/lang/String;
+.field private dSO:I
 
-.field private dQJ:I
+.field private lxG:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
-.field private kXu:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+.field private mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
-.field private lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+.field private mcm:Z
 
-.field private lBu:Z
+.field private scene:I
 
 
 # direct methods
@@ -36,32 +36,32 @@
 
     const/4 v0, 0x0
 
-    .line 50
+    .line 51
     invoke-direct {p0}, Lcom/tencent/mm/ui/MMActivity;-><init>()V
 
-    .line 55
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aJq:Ljava/lang/String;
-
     .line 56
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->avK:Ljava/lang/String;
 
     .line 57
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->ayw:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     .line 58
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kXu:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aky:Ljava/lang/String;
 
     .line 59
-    iput v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->asc:I
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lxG:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
-    .line 61
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBu:Z
+    .line 60
+    iput v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->scene:I
 
-    .line 64
-    iput v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->dQJ:I
+    .line 62
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcm:Z
 
-    .line 66
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/af;
+    .line 65
+    iput v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->dSO:I
+
+    .line 67
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ah;
 
     new-instance v1, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$1;
 
@@ -69,9 +69,9 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;-><init>(Lcom/tencent/mm/sdk/platformtools/af$a;Z)V
+    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/ah;-><init>(Lcom/tencent/mm/sdk/platformtools/ah$a;Z)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->anF:Lcom/tencent/mm/sdk/platformtools/af;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aat:Lcom/tencent/mm/sdk/platformtools/ah;
 
     return-void
 .end method
@@ -80,8 +80,8 @@
     .locals 1
 
     .prologue
-    .line 50
-    iget v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->dQJ:I
+    .line 51
+    iget v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->dSO:I
 
     return v0
 .end method
@@ -90,7 +90,7 @@
     .locals 1
 
     .prologue
-    .line 370
+    .line 376
     new-instance v0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$2;
 
     invoke-direct {v0, p0, p1}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$2;-><init>(Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;)V
@@ -102,18 +102,50 @@
     .locals 10
 
     .prologue
+    const/4 v4, 0x2
+
     const/4 v7, 0x0
 
     const/4 v9, 0x1
 
     const/4 v8, 0x0
 
-    .line 50
-    iget v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->asc:I
+    .line 51
+    const-string/jumbo v0, "MicroMsg.SendAppMessageWrapperUI"
+
+    const-string/jumbo v1, "summerbig dealSucc msg[%s], text[%s], parsterLen[%d], scene[%d]"
+
+    const/4 v2, 0x4
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    aput-object p1, v2, v8
+
+    aput-object p2, v2, v9
+
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v4
+
+    const/4 v3, 0x3
+
+    iget v5, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->scene:I
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->scene:I
 
     if-nez v0, :cond_6
 
-    invoke-static {}, Lcom/tencent/mm/model/bb;->uE()Lcom/tencent/mm/model/bb;
+    invoke-static {}, Lcom/tencent/mm/model/bb;->uG()Lcom/tencent/mm/model/bb;
 
     move-result-object v0
 
@@ -127,7 +159,7 @@
 
     aput-object v3, v2, v8
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/model/bb;->b(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/model/bb;->c(I[Ljava/lang/Object;)V
 
     invoke-virtual {p1}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->getType()I
 
@@ -141,21 +173,21 @@
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "!56@/B4Tb64lLpLiQ1shHpyNJ3BOzGypz4AHt4GloJ5fgMawRImFynvSXQ=="
+    const-string/jumbo v0, "MicroMsg.SendAppMessageWrapperUI"
 
-    const-string/jumbo v1, "code should not reach here due to WXMediaMessage::checkArgs, sendEmoji Fail cause thumbData is null"
+    const-string/jumbo v1, "summerbig code should not reach here due to WXMediaMessage::checkArgs, sendEmoji Fail cause thumbData is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
 
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aOT()Lcom/tencent/mm/pluginsdk/i$f;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aTv()Lcom/tencent/mm/pluginsdk/i$f;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     iget-object v1, v1, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
@@ -165,11 +197,11 @@
 
     if-nez v5, :cond_2
 
-    const-string/jumbo v0, "!56@/B4Tb64lLpLiQ1shHpyNJ3BOzGypz4AHt4GloJ5fgMawRImFynvSXQ=="
+    const-string/jumbo v0, "MicroMsg.SendAppMessageWrapperUI"
 
-    const-string/jumbo v1, "sendEmoji Fail cause emojiconmd5 is null"
+    const-string/jumbo v1, "summerbig sendEmoji Fail cause emojiconmd5 is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -185,19 +217,19 @@
 
     if-ne v0, v1, :cond_8
 
-    const-string/jumbo v0, "!56@/B4Tb64lLpLiQ1shHpyNJ3BOzGypz4AHt4GloJ5fgMawRImFynvSXQ=="
+    const-string/jumbo v0, "MicroMsg.SendAppMessageWrapperUI"
 
     const-string/jumbo v1, "report(11954), appId : %s"
 
     new-array v2, v9, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     iget-object v3, v3, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
     aput-object v3, v2, v8
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -205,7 +237,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     iget-object v1, v1, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
@@ -217,15 +249,15 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/model/k;->eV(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/model/k;->fh(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {}, Lcom/tencent/mm/model/k;->sW()Lcom/tencent/mm/model/k;
+    invoke-static {}, Lcom/tencent/mm/model/k;->sV()Lcom/tencent/mm/model/k;
 
     move-result-object v0
 
-    invoke-virtual {v0, v6}, Lcom/tencent/mm/model/k;->eT(Ljava/lang/String;)Lcom/tencent/mm/model/k$a;
+    invoke-virtual {v0, v6}, Lcom/tencent/mm/model/k;->ff(Ljava/lang/String;)Lcom/tencent/mm/model/k$a;
 
     move-result-object v0
 
@@ -237,7 +269,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     iget-object v3, v3, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
@@ -249,26 +281,24 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/model/k$a;->e(Ljava/lang/String;Ljava/lang/Object;)Lcom/tencent/mm/model/k$a;
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/model/k$a;->l(Ljava/lang/String;Ljava/lang/Object;)Lcom/tencent/mm/model/k$a;
 
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     iget-object v1, v0, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     iget-object v2, v0, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appName:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->ayw:Ljava/lang/String;
-
-    const/4 v4, 0x2
+    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aky:Ljava/lang/String;
 
     move-object v0, p1
 
     invoke-static/range {v0 .. v6}, Lcom/tencent/mm/pluginsdk/model/app/l;->a(Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)I
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
@@ -283,7 +313,7 @@
     move-object v2, v7
 
     :goto_2
-    const v0, 0x7f0b0ea2
+    const v0, 0x7f08047a
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->getString(I)Ljava/lang/String;
 
@@ -297,9 +327,9 @@
 
     invoke-direct {v4, p0}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$4;-><init>(Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kNN:Lcom/tencent/mm/ui/j;
 
-    const v1, 0x7f0b0e9f
+    const v1, 0x7f080477
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->getString(I)Ljava/lang/String;
 
@@ -316,20 +346,20 @@
     if-nez v0, :cond_5
 
     :cond_3
-    const-string/jumbo v0, "!56@/B4Tb64lLpLiQ1shHpyNJ3BOzGypz4AHt4GloJ5fgMawRImFynvSXQ=="
+    const-string/jumbo v0, "MicroMsg.SendAppMessageWrapperUI"
 
-    const-string/jumbo v1, "dealSucc, text is empty"
+    const-string/jumbo v1, "summerbig dealSucc, text is empty"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     :cond_4
-    const v0, 0x7f0b0ea1
+    const v0, 0x7f080473
 
     new-array v1, v9, [Ljava/lang/Object;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     iget-object v2, v2, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appName:Ljava/lang/String;
 
@@ -342,11 +372,11 @@
     goto :goto_2
 
     :cond_5
-    const-string/jumbo v0, "!56@/B4Tb64lLpLiQ1shHpyNJ3BOzGypz4AHt4GloJ5fgMawRImFynvSXQ=="
+    const-string/jumbo v0, "MicroMsg.SendAppMessageWrapperUI"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v2, "dktext , send msg here:"
+    const-string/jumbo v2, "summerbig dktext , send msg here:"
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -358,40 +388,40 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Lcom/tencent/mm/modelmulti/h;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->ayw:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aky:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->ayw:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aky:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/tencent/mm/model/i;->eK(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/tencent/mm/model/i;->eW(Ljava/lang/String;)I
 
     move-result v2
 
     invoke-direct {v0, v1, p2, v2}, Lcom/tencent/mm/modelmulti/h;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    invoke-virtual {v1, v0, v8}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
     goto/16 :goto_0
 
     :cond_6
-    sget-object v0, Lcom/tencent/mm/pluginsdk/i$ai;->iyZ:Lcom/tencent/mm/pluginsdk/i$o$h;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$ai;->iVv:Lcom/tencent/mm/pluginsdk/i$o$h;
 
     if-eqz v0, :cond_7
 
-    sget-object v0, Lcom/tencent/mm/pluginsdk/i$ai;->iyZ:Lcom/tencent/mm/pluginsdk/i$o$h;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$ai;->iVv:Lcom/tencent/mm/pluginsdk/i$o$h;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     iget-object v3, v1, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     iget-object v4, v1, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appName:Ljava/lang/String;
 
@@ -403,9 +433,9 @@
 
     invoke-interface/range {v0 .. v5}, Lcom/tencent/mm/pluginsdk/i$o$h;->a(Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    sget-object v0, Lcom/tencent/mm/pluginsdk/i$ai;->iyZ:Lcom/tencent/mm/pluginsdk/i$o$h;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$ai;->iVv:Lcom/tencent/mm/pluginsdk/i$o$h;
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/i$o$h;->azE()V
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/i$o$h;->aCf()V
 
     :cond_7
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->getIntent()Landroid/content/Intent;
@@ -436,12 +466,12 @@
     .locals 1
 
     .prologue
-    .line 50
-    iget v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->dQJ:I
+    .line 51
+    iget v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->dSO:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->dQJ:I
+    iput v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->dSO:I
 
     return v0
 .end method
@@ -450,9 +480,9 @@
     .locals 13
 
     .prologue
-    const v11, 0x7f0b0e9c
+    const v11, 0x7f080478
 
-    const v1, 0x7f030295
+    const v1, 0x7f07003c
 
     const/16 v12, 0x8
 
@@ -460,23 +490,23 @@
 
     const/4 v5, 0x1
 
-    .line 50
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kXu:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    .line 51
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lxG:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     if-nez v0, :cond_1
 
-    const-string/jumbo v0, "!56@/B4Tb64lLpLiQ1shHpyNJ3BOzGypz4AHt4GloJ5fgMawRImFynvSXQ=="
+    const-string/jumbo v0, "MicroMsg.SendAppMessageWrapperUI"
 
     const-string/jumbo v1, "deal fail, WXMediaMessage is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kXu:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lxG:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     invoke-virtual {v0}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->getType()I
 
@@ -484,7 +514,7 @@
 
     packed-switch v0, :pswitch_data_0
 
-    const-string/jumbo v1, "!56@/B4Tb64lLpLiQ1shHpyNJ3BOzGypz4AHt4GloJ5fgMawRImFynvSXQ=="
+    const-string/jumbo v1, "MicroMsg.SendAppMessageWrapperUI"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -500,7 +530,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v5, v8
 
@@ -508,18 +538,18 @@
     :goto_1
     if-nez v5, :cond_0
 
-    const-string/jumbo v0, "!56@/B4Tb64lLpLiQ1shHpyNJ3BOzGypz4AHt4GloJ5fgMawRImFynvSXQ=="
+    const-string/jumbo v0, "MicroMsg.SendAppMessageWrapperUI"
 
     const-string/jumbo v1, "deal fail, result is false"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->finish()V
 
     goto :goto_0
 
     :pswitch_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kXu:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lxG:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     iget-object v0, v1, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->mediaObject:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$b;
 
@@ -538,11 +568,11 @@
     if-nez v0, :cond_5
 
     :cond_3
-    const-string/jumbo v0, "!56@/B4Tb64lLpLiQ1shHpyNJ3BOzGypz4AHt4GloJ5fgMawRImFynvSXQ=="
+    const-string/jumbo v0, "MicroMsg.SendAppMessageWrapperUI"
 
     const-string/jumbo v1, "dealText fail, text is empty"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_4
     move v5, v8
@@ -550,7 +580,7 @@
     goto :goto_1
 
     :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
@@ -565,7 +595,7 @@
     const-string/jumbo v0, ""
 
     :goto_2
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kNN:Lcom/tencent/mm/ui/j;
 
     iget-object v3, v1, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->description:Ljava/lang/String;
 
@@ -582,12 +612,12 @@
     goto :goto_1
 
     :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aJq:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->avK:Ljava/lang/String;
 
     goto :goto_2
 
     :pswitch_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kXu:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lxG:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     iget-object v0, v1, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->thumbData:[B
 
@@ -599,11 +629,11 @@
 
     if-lez v0, :cond_7
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kNN:Lcom/tencent/mm/ui/j;
 
     iget-object v2, v1, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->thumbData:[B
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aJq:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->avK:Ljava/lang/String;
 
     invoke-direct {p0, v1}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->a(Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;)Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
@@ -616,11 +646,11 @@
     :goto_3
     if-nez v0, :cond_9
 
-    const-string/jumbo v0, "!56@/B4Tb64lLpLiQ1shHpyNJ3BOzGypz4AHt4GloJ5fgMawRImFynvSXQ=="
+    const-string/jumbo v0, "MicroMsg.SendAppMessageWrapperUI"
 
     const-string/jumbo v1, "showDialogItem3 fail, invalid argument"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_4
     move v5, v8
@@ -642,11 +672,11 @@
 
     if-lez v2, :cond_8
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kNN:Lcom/tencent/mm/ui/j;
 
     iget-object v0, v0, Lcom/tencent/mm/sdk/modelmsg/WXImageObject;->imageData:[B
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aJq:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->avK:Ljava/lang/String;
 
     invoke-direct {p0, v1}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->a(Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;)Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
@@ -659,11 +689,11 @@
     goto :goto_3
 
     :cond_8
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kNN:Lcom/tencent/mm/ui/j;
 
     iget-object v0, v0, Lcom/tencent/mm/sdk/modelmsg/WXImageObject;->imagePath:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aJq:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->avK:Ljava/lang/String;
 
     invoke-direct {p0, v1}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->a(Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;)Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
@@ -681,7 +711,7 @@
     goto :goto_4
 
     :pswitch_2
-    iget-object v7, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kXu:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget-object v7, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lxG:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     iget-object v0, v7, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->thumbData:[B
 
@@ -693,7 +723,7 @@
 
     if-lez v0, :cond_a
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kNN:Lcom/tencent/mm/ui/j;
 
     iget-object v1, v7, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->thumbData:[B
 
@@ -701,7 +731,7 @@
 
     iget-object v3, v7, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->description:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aJq:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->avK:Ljava/lang/String;
 
     const/4 v6, 0x2
 
@@ -721,15 +751,15 @@
     goto/16 :goto_1
 
     :cond_a
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kNN:Lcom/tencent/mm/ui/j;
 
-    const v1, 0x7f030289
+    const v1, 0x7f07002d
 
     iget-object v2, v7, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->title:Ljava/lang/String;
 
     iget-object v3, v7, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->description:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aJq:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->avK:Ljava/lang/String;
 
     invoke-direct {p0, v7}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->a(Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;)Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
@@ -742,7 +772,7 @@
     goto :goto_5
 
     :pswitch_3
-    iget-object v6, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kXu:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget-object v6, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lxG:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     iget-object v0, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->thumbData:[B
 
@@ -754,7 +784,7 @@
 
     if-lez v0, :cond_b
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kNN:Lcom/tencent/mm/ui/j;
 
     iget-object v1, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->thumbData:[B
 
@@ -762,7 +792,7 @@
 
     iget-object v3, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->description:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aJq:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->avK:Ljava/lang/String;
 
     invoke-direct {p0, v6}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->a(Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;)Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
@@ -782,15 +812,15 @@
     goto/16 :goto_1
 
     :cond_b
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kNN:Lcom/tencent/mm/ui/j;
 
-    const v1, 0x7f030290
+    const v1, 0x7f070039
 
     iget-object v2, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->title:Ljava/lang/String;
 
     iget-object v3, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->description:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aJq:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->avK:Ljava/lang/String;
 
     invoke-direct {p0, v6}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->a(Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;)Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
@@ -803,9 +833,9 @@
     goto :goto_6
 
     :pswitch_4
-    iget-object v7, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kXu:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget-object v7, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lxG:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kNN:Lcom/tencent/mm/ui/j;
 
     iget-object v1, v7, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->title:Ljava/lang/String;
 
@@ -813,11 +843,11 @@
 
     iget-object v3, v7, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->description:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aJq:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->avK:Ljava/lang/String;
 
-    iget-object v6, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v6, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v6, v6, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v6, v6, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v6}, Landroid/support/v7/app/ActionBarActivity;->getResources()Landroid/content/res/Resources;
 
@@ -842,7 +872,7 @@
     goto/16 :goto_1
 
     :pswitch_5
-    iget-object v6, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kXu:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget-object v6, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lxG:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     iget-object v0, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->thumbData:[B
 
@@ -854,7 +884,7 @@
 
     if-lez v0, :cond_c
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kNN:Lcom/tencent/mm/ui/j;
 
     iget-object v1, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->thumbData:[B
 
@@ -862,7 +892,7 @@
 
     iget-object v3, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->description:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aJq:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->avK:Ljava/lang/String;
 
     invoke-direct {p0, v6}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->a(Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;)Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
@@ -882,11 +912,11 @@
     goto/16 :goto_1
 
     :cond_c
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
-    invoke-static {p0}, Lcom/tencent/mm/aw/a;->getDensity(Landroid/content/Context;)F
+    invoke-static {p0}, Lcom/tencent/mm/az/a;->getDensity(Landroid/content/Context;)F
 
     move-result v2
 
@@ -902,39 +932,39 @@
 
     if-nez v0, :cond_12
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kNN:Lcom/tencent/mm/ui/j;
 
     iget-object v3, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->title:Ljava/lang/String;
 
     iget-object v4, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->description:Ljava/lang/String;
 
-    iget-object v7, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aJq:Ljava/lang/String;
+    iget-object v7, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->avK:Ljava/lang/String;
 
     invoke-direct {p0, v6}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->a(Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;)Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
     move-result-object v0
 
-    iget-object v6, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v6, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v9, 0x7f0a05b5
+    const v9, 0x7f03014d
 
-    invoke-static {v6, v9}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->t(Landroid/content/Context;I)Landroid/view/View;
+    invoke-static {v6, v9}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->x(Landroid/content/Context;I)Landroid/view/View;
 
     move-result-object v6
 
     new-instance v9, Lcom/tencent/mm/ui/base/h$a;
 
-    iget-object v10, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v10, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-direct {v9, v10}, Lcom/tencent/mm/ui/base/h$a;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v9, v8}, Lcom/tencent/mm/ui/base/h$a;->hw(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v9, v8}, Lcom/tencent/mm/ui/base/h$a;->hU(Z)Lcom/tencent/mm/ui/base/h$a;
 
-    invoke-virtual {v9, v8}, Lcom/tencent/mm/ui/base/h$a;->hx(Z)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v9, v8}, Lcom/tencent/mm/ui/base/h$a;->hV(Z)Lcom/tencent/mm/ui/base/h$a;
 
-    invoke-static {v6, v5}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->c(Landroid/view/View;Z)V
+    invoke-static {v6, v5}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->d(Landroid/view/View;Z)V
 
-    iget-object v10, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v10, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v10}, Landroid/support/v7/app/ActionBarActivity;->getResources()Landroid/content/res/Resources;
 
@@ -946,7 +976,7 @@
 
     invoke-static {v1, v9, v0, v6, v10}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Lcom/tencent/mm/ui/j;Lcom/tencent/mm/ui/base/h$a;Lcom/tencent/mm/pluginsdk/ui/applet/c$a;Landroid/view/View;Ljava/lang/String;)V
 
-    const v0, 0x7f0710a8
+    const v0, 0x7f1004f1
 
     invoke-virtual {v6, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -954,7 +984,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iget-object v10, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v10, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getTextSize()F
 
@@ -966,7 +996,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f07108e
+    const v0, 0x7f1004eb
 
     invoke-virtual {v6, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -974,7 +1004,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getTextSize()F
 
@@ -986,7 +1016,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f07108f
+    const v0, 0x7f1004ec
 
     invoke-virtual {v6, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1006,7 +1036,7 @@
     invoke-virtual {v0, v12}, Landroid/widget/TextView;->setVisibility(I)V
 
     :goto_8
-    const v0, 0x7f07108d
+    const v0, 0x7f1004ea
 
     invoke-virtual {v6, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1025,19 +1055,19 @@
     if-eqz v1, :cond_11
 
     :cond_e
-    const-string/jumbo v1, "!44@/B4Tb64lLpKepPGwm75eZGp+z8yM8hRDu9y0dA4MRdc="
+    const-string/jumbo v1, "MicroMsg.MMConfirmDialog"
 
     const-string/jumbo v2, "showDialogItem4, thumbBmp is null or recycled"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0, v12}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :cond_f
     :goto_9
-    invoke-virtual {v9, v6}, Lcom/tencent/mm/ui/base/h$a;->aq(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v9, v6}, Lcom/tencent/mm/ui/base/h$a;->au(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
 
-    invoke-virtual {v9}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v9}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -1062,13 +1092,13 @@
     goto :goto_9
 
     :cond_12
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kNN:Lcom/tencent/mm/ui/j;
 
     iget-object v2, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->title:Ljava/lang/String;
 
     iget-object v3, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->description:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aJq:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->avK:Ljava/lang/String;
 
     invoke-direct {p0, v6}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->a(Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;)Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
@@ -1081,7 +1111,7 @@
     goto/16 :goto_7
 
     :pswitch_6
-    iget-object v6, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kXu:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget-object v6, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lxG:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     iget-object v0, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->thumbData:[B
 
@@ -1093,7 +1123,7 @@
 
     if-lez v0, :cond_13
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kNN:Lcom/tencent/mm/ui/j;
 
     iget-object v1, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->thumbData:[B
 
@@ -1121,9 +1151,9 @@
     goto/16 :goto_1
 
     :cond_13
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kNN:Lcom/tencent/mm/ui/j;
 
-    const v1, 0x7f030298
+    const v1, 0x7f07002b
 
     iget-object v2, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->title:Ljava/lang/String;
 
@@ -1142,7 +1172,7 @@
     goto :goto_a
 
     :pswitch_7
-    iget-object v6, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kXu:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget-object v6, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lxG:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     iget-object v0, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->thumbData:[B
 
@@ -1154,11 +1184,11 @@
 
     if-lez v0, :cond_14
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kNN:Lcom/tencent/mm/ui/j;
 
     iget-object v1, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->thumbData:[B
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aJq:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->avK:Ljava/lang/String;
 
     invoke-direct {p0, v6}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->a(Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;)Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
@@ -1176,13 +1206,13 @@
     goto/16 :goto_1
 
     :cond_14
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kNN:Lcom/tencent/mm/ui/j;
 
     iget-object v2, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->title:Ljava/lang/String;
 
     iget-object v3, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->description:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aJq:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->avK:Ljava/lang/String;
 
     invoke-direct {p0, v6}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->a(Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;)Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
@@ -1215,8 +1245,8 @@
     .prologue
     const/4 v3, -0x2
 
-    .line 50
-    iget v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->asc:I
+    .line 51
+    iget v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->scene:I
 
     if-nez v0, :cond_0
 
@@ -1269,11 +1299,11 @@
 
 
 # virtual methods
-.method protected final Gb()V
+.method protected final Gy()V
     .locals 0
 
     .prologue
-    .line 474
+    .line 481
     return-void
 .end method
 
@@ -1281,7 +1311,7 @@
     .locals 1
 
     .prologue
-    .line 478
+    .line 485
     const/4 v0, -0x1
 
     return v0
@@ -1291,11 +1321,11 @@
     .locals 3
 
     .prologue
-    .line 165
+    .line 171
     invoke-super {p0, p1, p2, p3}, Lcom/tencent/mm/ui/MMActivity;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 166
-    const-string/jumbo v0, "!56@/B4Tb64lLpLiQ1shHpyNJ3BOzGypz4AHt4GloJ5fgMawRImFynvSXQ=="
+    .line 172
+    const-string/jumbo v0, "MicroMsg.SendAppMessageWrapperUI"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1321,22 +1351,22 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 167
+    .line 173
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 168
+    .line 174
     if-eqz p3, :cond_0
 
-    .line 169
+    .line 175
     const/4 v0, -0x1
 
     if-ne p2, v0, :cond_1
 
-    .line 170
+    .line 176
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -1351,18 +1381,18 @@
 
     move-result-object v0
 
-    .line 171
+    .line 177
     invoke-static {p0, v0}, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil;->a(Landroid/content/Context;Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;)V
 
-    .line 176
+    .line 182
     :goto_0
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->finish()V
 
-    .line 178
+    .line 184
     :cond_0
     return-void
 
-    .line 173
+    .line 179
     :cond_1
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->getIntent()Landroid/content/Intent;
 
@@ -1378,7 +1408,7 @@
 
     move-result-object v0
 
-    .line 174
+    .line 180
     invoke-static {p0, v0}, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil;->a(Landroid/content/Context;Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;)V
 
     goto :goto_0
@@ -1398,11 +1428,11 @@
 
     const/4 v3, 0x1
 
-    .line 87
+    .line 88
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 88
-    iget-object v0, p0, Landroid/support/v7/app/ActionBarActivity;->iF:Landroid/support/v7/app/a;
+    .line 89
+    iget-object v0, p0, Landroid/support/v7/app/ActionBarActivity;->iW:Landroid/support/v7/app/a;
 
     invoke-virtual {v0}, Landroid/support/v7/app/a;->aP()Landroid/support/v7/app/ActionBar;
 
@@ -1410,8 +1440,8 @@
 
     invoke-virtual {v0}, Landroid/support/v7/app/ActionBar;->hide()V
 
-    .line 89
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    .line 90
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1419,7 +1449,7 @@
 
     move-result-object v0
 
-    .line 91
+    .line 92
     const-string/jumbo v1, "settings_landscape_mode"
 
     invoke-interface {v0, v1, v13}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
@@ -1428,20 +1458,20 @@
 
     if-nez v1, :cond_0
 
-    .line 92
-    const-string/jumbo v1, "!56@/B4Tb64lLpLiQ1shHpyNJ3BOzGypz4AHt4GloJ5fgMawRImFynvSXQ=="
+    .line 93
+    const-string/jumbo v1, "MicroMsg.SendAppMessageWrapperUI"
 
     const-string/jumbo v6, "change orientation"
 
-    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 93
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBu:Z
+    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 94
-    invoke-virtual {p0, v4}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->setRequestedOrientation(I)V
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcm:Z
 
     .line 95
+    invoke-virtual {p0, v4}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->setRequestedOrientation(I)V
+
+    .line 96
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -1454,7 +1484,7 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 98
+    .line 99
     :cond_0
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->getIntent()Landroid/content/Intent;
 
@@ -1464,98 +1494,98 @@
 
     move-result-object v1
 
-    .line 100
+    .line 101
     new-instance v6, Lcom/tencent/mm/sdk/modelmsg/c$a;
 
     invoke-direct {v6, v1}, Lcom/tencent/mm/sdk/modelmsg/c$a;-><init>(Landroid/os/Bundle;)V
 
-    .line 101
+    .line 102
     const-string/jumbo v0, "Select_Conv_User"
 
     invoke-virtual {v1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->ayw:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aky:Ljava/lang/String;
 
-    .line 108
+    .line 109
     const-string/jumbo v0, "SendAppMessageWrapper_Scene"
 
     invoke-virtual {v1, v0, v13}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->asc:I
+    iput v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->scene:I
 
-    .line 110
+    .line 111
     const-string/jumbo v0, "SendAppMessageWrapper_AppId"
 
     invoke-virtual {v1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 111
+    .line 112
     if-nez v0, :cond_1
 
-    .line 112
+    .line 113
     const-string/jumbo v0, "_mmessage_content"
 
     invoke-virtual {v1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 113
+    .line 114
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 114
+    .line 115
     const-string/jumbo v1, "appid"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 117
+    .line 118
     :cond_1
     new-instance v1, Lcom/tencent/mm/pluginsdk/model/app/f;
 
     invoke-direct {v1}, Lcom/tencent/mm/pluginsdk/model/app/f;-><init>()V
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iput-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
-    .line 118
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    .line 119
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     iput-object v0, v1, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
-    .line 119
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/aj;->aPR()Lcom/tencent/mm/pluginsdk/model/app/i;
+    .line 120
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/al;->aUA()Lcom/tencent/mm/pluginsdk/model/app/i;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     new-array v7, v13, [Ljava/lang/String;
 
     invoke-virtual {v0, v1, v7}, Lcom/tencent/mm/pluginsdk/model/app/i;->c(Lcom/tencent/mm/sdk/h/c;[Ljava/lang/String;)Z
 
-    .line 121
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    .line 122
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appName:Ljava/lang/String;
 
     if-nez v0, :cond_2
 
-    const v0, 0x7f0b0ea4
+    const v0, 0x7f08047b
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 122
+    .line 123
     :goto_0
-    const v1, 0x7f0b0ea3
+    const v1, 0x7f080479
 
     new-array v7, v3, [Ljava/lang/Object;
 
@@ -1565,51 +1595,51 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aJq:Ljava/lang/String;
-
-    .line 139
-    iget-object v0, v6, Lcom/tencent/mm/sdk/modelmsg/c$a;->jUS:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kXu:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->avK:Ljava/lang/String;
 
     .line 140
-    const-string/jumbo v0, "!56@/B4Tb64lLpLiQ1shHpyNJ3BOzGypz4AHt4GloJ5fgMawRImFynvSXQ=="
+    iget-object v0, v6, Lcom/tencent/mm/sdk/modelmsg/c$a;->kuy:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lxG:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+
+    .line 141
+    const-string/jumbo v0, "MicroMsg.SendAppMessageWrapperUI"
 
     const-string/jumbo v1, "onCreate, messageAction = %s, messageExt = %s"
 
     new-array v6, v2, [Ljava/lang/Object;
 
-    iget-object v7, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kXu:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget-object v7, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lxG:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     iget-object v7, v7, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->messageAction:Ljava/lang/String;
 
     aput-object v7, v6, v13
 
-    iget-object v7, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kXu:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget-object v7, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lxG:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     iget-object v7, v7, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->messageExt:Ljava/lang/String;
 
     aput-object v7, v6, v3
 
-    invoke-static {v0, v1, v6}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 141
-    iget v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->asc:I
-
-    if-ne v0, v3, :cond_9
+    invoke-static {v0, v1, v6}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 142
-    iget-object v7, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kXu:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->scene:I
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    if-ne v0, v3, :cond_a
+
+    .line 143
+    iget-object v7, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lxG:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     iget-object v8, v0, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     iget-object v9, v0, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appName:Ljava/lang/String;
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJOVlL8x781nzvuAH+bDIti"
+    const-string/jumbo v0, "MicroMsg.ShareSnsImpl"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1627,9 +1657,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJOVlL8x781nzvuAH+bDIti"
+    const-string/jumbo v0, "MicroMsg.ShareSnsImpl"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1647,7 +1677,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, v7, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->mediaObject:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$b;
 
@@ -1668,7 +1698,7 @@
 
     invoke-virtual {v6, v10, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    const-string/jumbo v10, "!32@/B4Tb64lLpJOVlL8x781nzvuAH+bDIti"
+    const-string/jumbo v10, "MicroMsg.ShareSnsImpl"
 
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -1698,7 +1728,7 @@
 
     move-result-object v11
 
-    invoke-static {v10, v11}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v10, v11}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v10, "Ksnsupload_appid"
 
@@ -1724,9 +1754,9 @@
 
     invoke-direct {v9}, Lcom/tencent/mm/sdk/modelmsg/c$a;-><init>()V
 
-    iput-object v7, v9, Lcom/tencent/mm/sdk/modelmsg/c$a;->jUS:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iput-object v7, v9, Lcom/tencent/mm/sdk/modelmsg/c$a;->kuy:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
-    invoke-virtual {v9, v8}, Lcom/tencent/mm/sdk/modelmsg/c$a;->l(Landroid/os/Bundle;)V
+    invoke-virtual {v9, v8}, Lcom/tencent/mm/sdk/modelmsg/c$a;->n(Landroid/os/Bundle;)V
 
     const-string/jumbo v9, "Ksnsupload_timeline"
 
@@ -1734,29 +1764,32 @@
 
     if-ne v1, v4, :cond_3
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJOVlL8x781nzvuAH+bDIti"
+    const-string/jumbo v0, "MicroMsg.ShareSnsImpl"
 
     const-string/jumbo v1, "timeLineType is invalid"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-object v1, v5
+    move-object v2, v5
 
-    .line 143
+    .line 144
     :goto_2
-    if-nez v1, :cond_8
+    if-nez v2, :cond_8
 
-    .line 161
+    .line 145
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->finish()V
+
+    .line 167
     :goto_3
     return-void
 
-    .line 121
+    .line 122
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     invoke-static {v0, v1, v5}, Lcom/tencent/mm/pluginsdk/model/app/g;->a(Landroid/content/Context;Lcom/tencent/mm/pluginsdk/model/app/f;Ljava/lang/String;)Ljava/lang/String;
 
@@ -1767,7 +1800,7 @@
     :pswitch_0
     move v1, v2
 
-    .line 142
+    .line 143
     goto :goto_1
 
     :pswitch_1
@@ -1783,7 +1816,7 @@
     :pswitch_3
     const/4 v1, 0x3
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :pswitch_4
     const/4 v1, 0x5
@@ -1802,13 +1835,13 @@
 
     packed-switch v1, :pswitch_data_1
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJOVlL8x781nzvuAH+bDIti"
+    const-string/jumbo v0, "MicroMsg.ShareSnsImpl"
 
     const-string/jumbo v1, "none type not support!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-object v1, v5
+    move-object v2, v5
 
     goto :goto_2
 
@@ -1827,7 +1860,7 @@
 
     invoke-virtual {v6, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    move-object v1, v6
+    move-object v2, v6
 
     goto :goto_2
 
@@ -1836,7 +1869,7 @@
 
     iget-object v1, v0, Lcom/tencent/mm/sdk/modelmsg/WXMusicObject;->musicUrl:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -1847,13 +1880,13 @@
     :goto_4
     const-string/jumbo v4, ""
 
-    invoke-static {v1, v4}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v4}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     iget-object v1, v0, Lcom/tencent/mm/sdk/modelmsg/WXMusicObject;->musicDataUrl:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -1864,11 +1897,11 @@
     :goto_5
     const-string/jumbo v7, ""
 
-    invoke-static {v1, v7}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v7}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     iget-object v1, v0, Lcom/tencent/mm/sdk/modelmsg/WXMusicObject;->musicLowBandDataUrl:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -1879,7 +1912,7 @@
     :goto_6
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     const-string/jumbo v0, "Ksnsupload_link"
 
@@ -1899,7 +1932,7 @@
 
     invoke-virtual {v6, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    move-object v1, v6
+    move-object v2, v6
 
     goto/16 :goto_2
 
@@ -1921,12 +1954,6 @@
     :pswitch_8
     check-cast v0, Lcom/tencent/mm/sdk/modelmsg/WXImageObject;
 
-    const-string/jumbo v1, "Ksnsupload_imgbuf"
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/modelmsg/WXImageObject;->imageData:[B
-
-    invoke-virtual {v6, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;
-
     const-string/jumbo v1, "KBlockAdd"
 
     invoke-virtual {v6, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
@@ -1941,7 +1968,7 @@
 
     invoke-virtual {v6, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    move-object v1, v6
+    move-object v2, v6
 
     goto/16 :goto_2
 
@@ -1960,7 +1987,7 @@
 
     const-string/jumbo v2, ""
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1976,18 +2003,18 @@
 
     invoke-virtual {v6, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    move-object v1, v6
+    move-object v2, v6
 
     goto/16 :goto_2
 
     :pswitch_a
-    const-string/jumbo v0, "!32@/B4Tb64lLpJOVlL8x781nzvuAH+bDIti"
+    const-string/jumbo v0, "MicroMsg.ShareSnsImpl"
 
     const-string/jumbo v1, "file is not support!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-object v1, v5
+    move-object v2, v5
 
     goto/16 :goto_2
 
@@ -1996,7 +2023,7 @@
 
     iget-object v1, v0, Lcom/tencent/mm/sdk/modelmsg/WXVideoObject;->videoUrl:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -2007,7 +2034,7 @@
     :goto_7
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2029,7 +2056,7 @@
 
     invoke-virtual {v6, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    move-object v1, v6
+    move-object v2, v6
 
     goto/16 :goto_2
 
@@ -2039,49 +2066,49 @@
     goto :goto_7
 
     :pswitch_c
-    move-object v1, v5
+    move-object v2, v5
 
     goto/16 :goto_2
 
-    .line 147
+    .line 149
     :cond_8
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->kXu:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lxG:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     invoke-virtual {v0}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->getType()I
 
     move-result v0
 
-    const/4 v2, 0x5
+    const/4 v1, 0x5
 
-    if-ne v0, v2, :cond_a
+    if-ne v0, v1, :cond_b
 
-    .line 148
-    const-string/jumbo v0, "!56@/B4Tb64lLpLiQ1shHpyNJ3BOzGypz4AHt4GloJ5fgMawRImFynvSXQ=="
+    .line 150
+    const-string/jumbo v0, "MicroMsg.SendAppMessageWrapperUI"
 
-    const-string/jumbo v2, "report(11954), to timeline, appId : %s"
+    const-string/jumbo v1, "report(11954), to timeline, appId : %s"
 
     new-array v4, v3, [Ljava/lang/Object;
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v5, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     iget-object v5, v5, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
     aput-object v5, v4, v13
 
-    invoke-static {v0, v2, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 149
+    .line 151
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v2, "app_"
+    const-string/jumbo v1, "app_"
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
-    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -2089,21 +2116,21 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/model/k;->eV(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/model/k;->fh(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 153
+    invoke-static {}, Lcom/tencent/mm/model/k;->sV()Lcom/tencent/mm/model/k;
 
     move-result-object v0
 
-    .line 151
-    invoke-static {}, Lcom/tencent/mm/model/k;->sW()Lcom/tencent/mm/model/k;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/model/k;->ff(Ljava/lang/String;)Lcom/tencent/mm/model/k$a;
 
-    move-result-object v2
+    move-result-object v4
 
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/model/k;->eT(Ljava/lang/String;)Lcom/tencent/mm/model/k$a;
-
-    move-result-object v2
-
-    .line 152
-    const-string/jumbo v4, "prePublishId"
+    .line 154
+    const-string/jumbo v0, "prePublishId"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2111,7 +2138,7 @@
 
     invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v6, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBt:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v6, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcl:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     iget-object v6, v6, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
@@ -2123,41 +2150,65 @@
 
     move-result-object v5
 
-    invoke-virtual {v2, v4, v5}, Lcom/tencent/mm/model/k$a;->e(Ljava/lang/String;Ljava/lang/Object;)Lcom/tencent/mm/model/k$a;
+    invoke-virtual {v4, v0, v5}, Lcom/tencent/mm/model/k$a;->l(Ljava/lang/String;Ljava/lang/Object;)Lcom/tencent/mm/model/k$a;
 
-    .line 154
-    :goto_8
-    const-string/jumbo v2, "reportSessionId"
+    .line 155
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lxG:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
-    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    iget-object v0, v0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->mediaObject:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$b;
+
+    instance-of v0, v0, Lcom/tencent/mm/sdk/modelmsg/WXWebpageObject;
+
+    if-eqz v0, :cond_9
 
     .line 156
-    const-string/jumbo v0, "sns"
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lxG:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
-    const-string/jumbo v2, ".ui.SnsUploadUI"
+    iget-object v0, v0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->mediaObject:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$b;
 
-    invoke-static {p0, v0, v2, v1, v3}, Lcom/tencent/mm/ar/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
+    check-cast v0, Lcom/tencent/mm/sdk/modelmsg/WXWebpageObject;
 
-    goto/16 :goto_3
+    .line 157
+    const-string/jumbo v5, "url"
+
+    iget-object v0, v0, Lcom/tencent/mm/sdk/modelmsg/WXWebpageObject;->webpageUrl:Ljava/lang/String;
+
+    invoke-virtual {v4, v5, v0}, Lcom/tencent/mm/model/k$a;->l(Ljava/lang/String;Ljava/lang/Object;)Lcom/tencent/mm/model/k$a;
+
+    :cond_9
+    move-object v0, v1
 
     .line 160
-    :cond_9
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->anF:Lcom/tencent/mm/sdk/platformtools/af;
+    :goto_8
+    const-string/jumbo v1, "reportSessionId"
 
-    const-wide/16 v1, 0x64
+    invoke-virtual {v2, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;->ds(J)V
+    .line 162
+    const-string/jumbo v0, "sns"
+
+    const-string/jumbo v1, ".ui.SnsUploadUI"
+
+    invoke-static {p0, v0, v1, v2, v3}, Lcom/tencent/mm/av/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
 
     goto/16 :goto_3
 
+    .line 166
     :cond_a
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aat:Lcom/tencent/mm/sdk/platformtools/ah;
+
+    const-wide/16 v2, 0x64
+
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ah;->dJ(J)V
+
+    goto/16 :goto_3
+
+    :cond_b
     move-object v0, v5
 
     goto :goto_8
 
-    .line 142
-    nop
-
+    .line 143
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -2187,23 +2238,23 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 182
+    .line 188
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onDestroy()V
 
-    .line 183
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->lBu:Z
+    .line 189
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->mcm:Z
 
     if-eqz v0, :cond_0
 
-    .line 184
-    const-string/jumbo v0, "!56@/B4Tb64lLpLiQ1shHpyNJ3BOzGypz4AHt4GloJ5fgMawRImFynvSXQ=="
+    .line 190
+    const-string/jumbo v0, "MicroMsg.SendAppMessageWrapperUI"
 
     const-string/jumbo v1, "restore orientation"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 185
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    .line 191
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v0
 
@@ -2211,12 +2262,12 @@
 
     move-result-object v0
 
-    .line 186
+    .line 192
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->setRequestedOrientation(I)V
 
-    .line 187
+    .line 193
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -2229,7 +2280,7 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 189
+    .line 195
     :cond_0
     return-void
 .end method
@@ -2238,10 +2289,10 @@
     .locals 1
 
     .prologue
-    .line 193
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->age()V
+    .line 199
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->aiI()V
 
-    .line 194
+    .line 200
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0

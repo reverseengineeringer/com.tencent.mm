@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic kPk:Lcom/tencent/mm/ui/bindmobile/b;
+.field final synthetic loA:Lcom/tencent/mm/ui/bindmobile/b;
 
-.field final synthetic kPl:Lcom/tencent/mm/ui/bindmobile/b$a;
+.field final synthetic loB:Lcom/tencent/mm/ui/bindmobile/b$a;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 304
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/b$a$1;->kPl:Lcom/tencent/mm/ui/bindmobile/b$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/b$a$1;->loB:Lcom/tencent/mm/ui/bindmobile/b$a;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/bindmobile/b$a$1;->kPk:Lcom/tencent/mm/ui/bindmobile/b;
+    iput-object p2, p0, Lcom/tencent/mm/ui/bindmobile/b$a$1;->loA:Lcom/tencent/mm/ui/bindmobile/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,9 +45,9 @@
 
     .prologue
     .line 308
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/b$a$1;->kPl:Lcom/tencent/mm/ui/bindmobile/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/b$a$1;->loB:Lcom/tencent/mm/ui/bindmobile/b$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/bindmobile/b$a;->kPg:Lcom/tencent/mm/ui/bindmobile/b;
+    iget-object v0, v0, Lcom/tencent/mm/ui/bindmobile/b$a;->low:Lcom/tencent/mm/ui/bindmobile/b;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindmobile/b;->b(Lcom/tencent/mm/ui/bindmobile/b;)Lcom/tencent/mm/ui/bindmobile/a$b;
 
@@ -56,23 +56,23 @@
     if-eqz v0, :cond_0
 
     .line 309
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/b$a$1;->kPl:Lcom/tencent/mm/ui/bindmobile/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/b$a$1;->loB:Lcom/tencent/mm/ui/bindmobile/b$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/bindmobile/b$a;->kPg:Lcom/tencent/mm/ui/bindmobile/b;
+    iget-object v0, v0, Lcom/tencent/mm/ui/bindmobile/b$a;->low:Lcom/tencent/mm/ui/bindmobile/b;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindmobile/b;->b(Lcom/tencent/mm/ui/bindmobile/b;)Lcom/tencent/mm/ui/bindmobile/a$b;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/b$a$1;->kPl:Lcom/tencent/mm/ui/bindmobile/b$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/b$a$1;->loB:Lcom/tencent/mm/ui/bindmobile/b$a;
 
-    iget v1, v1, Lcom/tencent/mm/ui/bindmobile/b$a;->kPi:I
+    iget v1, v1, Lcom/tencent/mm/ui/bindmobile/b$a;->loy:I
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/b$a$1;->kPl:Lcom/tencent/mm/ui/bindmobile/b$a;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/b$a$1;->loB:Lcom/tencent/mm/ui/bindmobile/b$a;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/bindmobile/b$a;->aut:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/ui/bindmobile/b$a;->agg:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/bindmobile/b$a$1;->kPl:Lcom/tencent/mm/ui/bindmobile/b$a;
+    iget-object v3, p0, Lcom/tencent/mm/ui/bindmobile/b$a$1;->loB:Lcom/tencent/mm/ui/bindmobile/b$a;
 
     iget v3, v3, Lcom/tencent/mm/ui/bindmobile/b$a;->status:I
 

@@ -2,30 +2,30 @@ package com.tencent.mm.sdk.h;
 
 public final class i
 {
-  String asJ;
-  public int jYK;
-  public g jYL;
+  String aev;
+  public int kzh;
+  public g kzi;
   public Object obj;
   
   public i()
   {
-    asJ = null;
-    jYL = null;
-    jYK = -1;
+    aev = null;
+    kzi = null;
+    kzh = -1;
     obj = null;
   }
   
   i(String paramString)
   {
-    asJ = paramString;
-    jYL = null;
-    jYK = -1;
+    aev = paramString;
+    kzi = null;
+    kzh = -1;
     obj = null;
   }
   
   public final String toString()
   {
-    return "MStorageEventData [event=" + asJ + ", eventId=" + jYK + ", stg=" + jYL + ", obj=" + obj + "]";
+    return "MStorageEventData [event=" + aev + ", eventId=" + kzh + ", stg=" + kzi + ", obj=" + obj + "]";
   }
 }
 

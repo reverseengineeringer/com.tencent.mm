@@ -5,7 +5,7 @@ import com.tencent.mm.modelfriend.af;
 import com.tencent.mm.modelfriend.ag;
 import com.tencent.mm.modelfriend.ah;
 import com.tencent.mm.pluginsdk.ui.applet.a.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class e$1$2
   implements a.a
@@ -14,26 +14,26 @@ final class e$1$2
   
   public final void a(boolean paramBoolean1, boolean paramBoolean2, String paramString1, String paramString2)
   {
-    u.i("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "cpan ok:%b hasSendVerify:%b  username:%s gitemId:%s", new Object[] { Boolean.valueOf(paramBoolean1), Boolean.valueOf(paramBoolean2), paramString1, paramString2 });
-    long l = new o(o.aF(paramString2)).longValue();
-    af localaf = ah.zv().V(l);
+    v.i("MicroMsg.QQFriendAdapter", "cpan ok:%b hasSendVerify:%b  username:%s gitemId:%s", new Object[] { Boolean.valueOf(paramBoolean1), Boolean.valueOf(paramBoolean2), paramString1, paramString2 });
+    long l = new o(o.aK(paramString2)).longValue();
+    af localaf = ah.zI().aa(l);
     if ((localaf != null) && (paramBoolean1)) {
       username = paramString1;
     }
     if (localaf != null)
     {
-      bEv = 2;
-      u.d("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "f :%s", new Object[] { localaf.toString() });
-      ah.zv().a(l, localaf);
-      lrY.lrX.Gk();
+      bxG = 2;
+      v.d("MicroMsg.QQFriendAdapter", "f :%s", new Object[] { localaf.toString() });
+      ah.zI().a(l, localaf);
+      lSC.lSB.GH();
     }
     for (;;)
     {
       if ((paramBoolean1) && (localaf != null)) {
-        e.Ht(paramString1);
+        e.JI(paramString1);
       }
       return;
-      u.w("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "cpan qq friend is null. qq:%s", new Object[] { paramString2 });
+      v.w("MicroMsg.QQFriendAdapter", "cpan qq friend is null. qq:%s", new Object[] { paramString2 });
     }
   }
 }

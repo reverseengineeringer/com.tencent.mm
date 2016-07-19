@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/storage/s$b;
+.implements Lcom/tencent/mm/pluginsdk/i$j;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/app/WorkerProfile;->kV()Lcom/tencent/mm/storage/s$b;
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/app/WorkerProfile;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic amC:Lcom/tencent/mm/app/WorkerProfile;
+.field final synthetic Zr:Lcom/tencent/mm/app/WorkerProfile;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 2041
-    iput-object p1, p0, Lcom/tencent/mm/app/WorkerProfile$20;->amC:Lcom/tencent/mm/app/WorkerProfile;
+    .line 1718
+    iput-object p1, p0, Lcom/tencent/mm/app/WorkerProfile$20;->Zr:Lcom/tencent/mm/app/WorkerProfile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,25 +36,38 @@
 
 
 # virtual methods
-.method public final a(ILjava/lang/String;Ljava/lang/String;ILandroid/content/Context;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 2049
-    invoke-static {p1, p2, p3, p4, p5}, Lcom/tencent/mm/booter/notification/a/h;->a(ILjava/lang/String;Ljava/lang/String;ILandroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final a(Lcom/tencent/mm/storage/ag;Lcom/tencent/mm/pointers/PString;Lcom/tencent/mm/pointers/PString;Lcom/tencent/mm/pointers/PInt;Z)V
+.method public final a(Landroid/content/Context;Z)V
     .locals 0
 
     .prologue
-    .line 2044
-    invoke-static {p1, p2, p3, p4, p5}, Lcom/tencent/mm/booter/notification/a/h;->b(Lcom/tencent/mm/storage/ag;Lcom/tencent/mm/pointers/PString;Lcom/tencent/mm/pointers/PString;Lcom/tencent/mm/pointers/PInt;Z)Ljava/lang/String;
+    .line 1732
+    invoke-static {p1, p2}, Lcom/tencent/mm/ui/MMAppMgr;->a(Landroid/content/Context;Z)V
 
-    .line 2045
+    .line 1733
     return-void
+.end method
+
+.method public final ae(Landroid/content/Context;)V
+    .locals 1
+
+    .prologue
+    .line 1721
+    const/4 v0, 0x1
+
+    invoke-static {p1, v0}, Lcom/tencent/mm/ui/MMAppMgr;->a(Landroid/content/Context;Z)V
+
+    .line 1722
+    return-void
+.end method
+
+.method public final jC()Z
+    .locals 1
+
+    .prologue
+    .line 1727
+    invoke-static {}, Lcom/tencent/mm/ui/MMAppMgr;->jC()Z
+
+    move-result v0
+
+    return v0
 .end method

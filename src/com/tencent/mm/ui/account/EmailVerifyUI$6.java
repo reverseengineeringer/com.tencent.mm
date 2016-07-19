@@ -2,8 +2,11 @@ package com.tencent.mm.ui.account;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.ui.base.MMAutoSwitchEditText;
 import com.tencent.mm.ui.base.MMAutoSwitchEditTextView;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 final class EmailVerifyUI$6
   implements MenuItem.OnMenuItemClickListener
@@ -12,14 +15,31 @@ final class EmailVerifyUI$6
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    EmailVerifyUI.b(ksd, EmailVerifyUI.e(ksd).getText());
-    if ((!ay.kz(EmailVerifyUI.f(ksd))) && (EmailVerifyUI.f(ksd).length() == 12)) {
-      EmailVerifyUI.a(ksd, EmailVerifyUI.f(ksd));
+    EmailVerifyUI localEmailVerifyUI = kRl;
+    Object localObject = EmailVerifyUI.e(kRl);
+    paramMenuItem = "";
+    localObject = lco.iterator();
+    if (((Iterator)localObject).hasNext())
+    {
+      MMAutoSwitchEditText localMMAutoSwitchEditText = (MMAutoSwitchEditText)((Iterator)localObject).next();
+      if (be.kf(localMMAutoSwitchEditText.getText().toString().trim())) {
+        break label154;
+      }
+      paramMenuItem = paramMenuItem + localMMAutoSwitchEditText.getText().toString().trim();
     }
+    label154:
     for (;;)
     {
-      return true;
-      ksd.bC(false);
+      break;
+      EmailVerifyUI.b(localEmailVerifyUI, paramMenuItem);
+      if ((!be.kf(EmailVerifyUI.f(kRl))) && (EmailVerifyUI.f(kRl).length() == 12)) {
+        EmailVerifyUI.a(kRl, EmailVerifyUI.f(kRl));
+      }
+      for (;;)
+      {
+        return true;
+        kRl.bp(false);
+      }
     }
   }
 }

@@ -1,7 +1,6 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.g;
+import com.tencent.mm.compatible.util.h;
 
 final class SnsTimeLineUI$30
   implements Runnable
@@ -10,11 +9,7 @@ final class SnsTimeLineUI$30
   
   public final void run()
   {
-    if (SnsTimeLineUI.b(hkJ) == null) {}
-    while (!SnsTimeLineUI.m(hkJ)) {
-      return;
-    }
-    ad.azg().pause();
+    h.e(hzE);
   }
 }
 

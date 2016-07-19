@@ -10,8 +10,8 @@ final class FacebookFriendUI$2
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    ksr.age();
-    ksr.finish();
+    kRz.aiI();
+    kRz.finish();
     return true;
   }
 }

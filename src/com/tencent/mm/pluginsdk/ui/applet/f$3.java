@@ -11,7 +11,7 @@ final class f$3
   
   public final void onClick(View paramView)
   {
-    iJk.iIw.ot(cqF);
+    jgg.jft.pZ(clS);
   }
 }
 

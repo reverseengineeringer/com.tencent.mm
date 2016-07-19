@@ -25,7 +25,7 @@
 
 
 # virtual methods
-.method public O()Z
+.method public N()Z
     .locals 1
 
     .prologue
@@ -36,13 +36,44 @@
 .end method
 
 .method public abstract a(ILandroid/support/v4/app/j$a;)Landroid/support/v4/content/c;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<D:",
+            "Ljava/lang/Object;",
+            ">(I",
+            "Landroid/support/v4/app/j$a",
+            "<TD;>;)",
+            "Landroid/support/v4/content/c",
+            "<TD;>;"
+        }
+    .end annotation
 .end method
 
 .method public abstract b(ILandroid/support/v4/app/j$a;)Landroid/support/v4/content/c;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<D:",
+            "Ljava/lang/Object;",
+            ">(I",
+            "Landroid/support/v4/app/j$a",
+            "<TD;>;)",
+            "Landroid/support/v4/content/c",
+            "<TD;>;"
+        }
+    .end annotation
 .end method
 
 .method public abstract destroyLoader(I)V
 .end method
 
 .method public abstract k(I)Landroid/support/v4/content/c;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<D:",
+            "Ljava/lang/Object;",
+            ">(I)",
+            "Landroid/support/v4/content/c",
+            "<TD;>;"
+        }
+    .end annotation
 .end method

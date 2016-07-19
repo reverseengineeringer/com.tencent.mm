@@ -8,52 +8,51 @@ import android.media.MediaPlayer.OnCompletionListener;
 import android.media.MediaPlayer.OnErrorListener;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
-import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
 import android.view.ViewGroup.LayoutParams;
 import com.tencent.mm.compatible.util.c;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.pluginsdk.l.a;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.pluginsdk.m.a;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class SightCameraSurfaceView
   extends SightCameraView
 {
-  private MediaPlayer gDN;
-  private SurfaceView gDO = null;
-  private SurfaceHolder gDP = null;
-  private boolean gDQ = false;
-  private SurfaceHolder.Callback gDR = new SurfaceHolder.Callback()
+  private boolean bme = false;
+  private MediaPlayer gKo;
+  private SurfaceView gKp = null;
+  private SurfaceHolder gKq = null;
+  private SurfaceHolder.Callback gKr = new SurfaceHolder.Callback()
   {
     public final void surfaceChanged(SurfaceHolder paramAnonymousSurfaceHolder, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3)
     {
-      u.d("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "surfaceChanged for:" + paramAnonymousInt1 + " w:" + paramAnonymousInt2 + " h:" + paramAnonymousInt3);
-      gEi = SightCameraView.b.gEs;
-      if ((getVisibility() == 0) && (gBY))
+      v.d("MicroMsg.SightCameraSurfaceView", "surfaceChanged for:" + paramAnonymousInt1 + " w:" + paramAnonymousInt2 + " h:" + paramAnonymousInt3);
+      gKI = SightCameraView.b.gKT;
+      if ((getVisibility() == 0) && (gIA))
       {
-        u.i("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "current view is visible, try preview camera");
-        axa();
+        v.i("MicroMsg.SightCameraSurfaceView", "current view is visible, try preview camera");
+        azz();
       }
-      u.d("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "surfaceChanged end");
+      v.d("MicroMsg.SightCameraSurfaceView", "surfaceChanged end");
     }
     
     public final void surfaceCreated(SurfaceHolder paramAnonymousSurfaceHolder)
     {
-      u.d("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "surfaceCreated");
-      gEi = SightCameraView.b.gEr;
+      v.d("MicroMsg.SightCameraSurfaceView", "surfaceCreated");
+      gKI = SightCameraView.b.gKS;
     }
     
     public final void surfaceDestroyed(SurfaceHolder paramAnonymousSurfaceHolder)
     {
-      u.d("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "surfaceDestroyed");
-      gEi = SightCameraView.b.gEt;
-      gEj = false;
-      axb();
-      u.d("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "surfaceDestroyed end");
+      v.d("MicroMsg.SightCameraSurfaceView", "surfaceDestroyed");
+      gKI = SightCameraView.b.gKU;
+      gKJ = false;
+      azA();
+      v.d("MicroMsg.SightCameraSurfaceView", "surfaceDestroyed end");
     }
   };
   
@@ -71,24 +70,24 @@ public class SightCameraSurfaceView
   {
     super(paramContext, paramAttributeSet, paramInt);
     long l = System.currentTimeMillis();
-    gDO = ((SurfaceView)findViewById(2131165477));
-    u.d("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "inflate view use %dms", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+    gKp = ((SurfaceView)findViewById(2131758986));
+    v.d("MicroMsg.SightCameraSurfaceView", "inflate view use %dms", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
     l = System.currentTimeMillis();
-    gDP = gDO.getHolder();
-    gDP.addCallback(gDR);
-    gDP.setType(3);
-    u.d("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "init surface holder use %dms", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+    gKq = gKp.getHolder();
+    gKq.addCallback(gKr);
+    gKq.setType(3);
+    v.d("MicroMsg.SightCameraSurfaceView", "init surface holder use %dms", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
   }
   
-  public final void Q(final String paramString, final boolean paramBoolean)
+  public final void W(final String paramString, final boolean paramBoolean)
   {
-    if (gDP == null)
+    if (gKq == null)
     {
-      u.w("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "play video fail, surface holder is null");
+      v.w("MicroMsg.SightCameraSurfaceView", "play video fail, surface holder is null");
       return;
     }
-    super.aqS();
-    ah.tv().r(new Runnable()
+    super.aui();
+    ah.tw().t(new Runnable()
     {
       public final void run()
       {
@@ -97,9 +96,9 @@ public class SightCameraSurfaceView
         {
           SightCameraSurfaceView.e(SightCameraSurfaceView.this).stop();
           SightCameraSurfaceView.e(SightCameraSurfaceView.this).release();
-          if (SightCameraView.b.gEt == gEi)
+          if (SightCameraView.b.gKU == gKI)
           {
-            u.e("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "play video %s Error, surfaceStatus is destory", new Object[] { paramString });
+            v.e("MicroMsg.SightCameraSurfaceView", "play video %s Error, surfaceStatus is destory", new Object[] { paramString });
             return;
           }
         }
@@ -107,7 +106,7 @@ public class SightCameraSurfaceView
         {
           for (;;)
           {
-            u.w("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "try to release mediaplayer error");
+            v.w("MicroMsg.SightCameraSurfaceView", "try to release mediaplayer error");
           }
         }
         for (;;)
@@ -119,15 +118,15 @@ public class SightCameraSurfaceView
             {
               public final void onCompletion(MediaPlayer paramAnonymous2MediaPlayer)
               {
-                u.i("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "complete playing %s ", new Object[] { gDV });
-                axj();
+                v.i("MicroMsg.SightCameraSurfaceView", "complete playing %s ", new Object[] { gKv });
+                azL();
               }
             });
             SightCameraSurfaceView.e(SightCameraSurfaceView.this).setOnErrorListener(new MediaPlayer.OnErrorListener()
             {
               public final boolean onError(MediaPlayer paramAnonymous2MediaPlayer, int paramAnonymous2Int1, int paramAnonymous2Int2)
               {
-                u.i("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "play %s error", new Object[] { gDV });
+                v.i("MicroMsg.SightCameraSurfaceView", "play %s error", new Object[] { gKv });
                 return false;
               }
             });
@@ -146,10 +145,10 @@ public class SightCameraSurfaceView
           }
           catch (Exception localException2)
           {
-            u.e("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "play %s, error: %s, %s", new Object[] { paramString, localException2.getMessage(), ay.b(localException2) });
+            v.e("MicroMsg.SightCameraSurfaceView", "play %s, error: %s, %s", new Object[] { paramString, localException2.getMessage(), be.f(localException2) });
             return;
           }
-          axi();
+          azK();
         }
       }
       
@@ -160,101 +159,14 @@ public class SightCameraSurfaceView
     });
   }
   
-  public final void awO()
+  protected final void azA()
   {
-    super.awO();
-    gDQ = false;
-  }
-  
-  protected final void axa()
-  {
-    u.i("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "try preview camera");
-    if (getVisibility() != 0)
-    {
-      u.w("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "error visibility");
-      return;
-    }
-    if (SightCameraView.b.gEs != gEi)
-    {
-      u.w("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "error surfaceStatus %s", new Object[] { gEi.toString() });
-      return;
-    }
-    axc();
-    ah.tv().r(new Runnable()
+    v.i("MicroMsg.SightCameraSurfaceView", "try close camera");
+    ah.tw().t(new Runnable()
     {
       public final void run()
       {
-        if ((getContext() instanceof Activity))
-        {
-          if (gEc.K((Activity)getContext()) != 0)
-          {
-            gEj = false;
-            axk();
-            return;
-          }
-          if (gEc.a(SightCameraSurfaceView.a(SightCameraSurfaceView.this)) != 0)
-          {
-            gEj = false;
-            axl();
-            return;
-          }
-          gEj = true;
-          u.d("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "preview camera ok");
-          final ViewGroup.LayoutParams localLayoutParams = SightCameraSurfaceView.b(SightCameraSurfaceView.this).getLayoutParams();
-          DisplayMetrics localDisplayMetrics = getResources().getDisplayMetrics();
-          int i;
-          int j;
-          if (c.bV(14))
-          {
-            i = gEc.gDs.iFm;
-            j = gEc.gDs.iFn;
-            u.i("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "below 4.0, resizeLayout priveview[%d, %d], dm[%d, %d]", new Object[] { Integer.valueOf(j), Integer.valueOf(i), Integer.valueOf(widthPixels), Integer.valueOf(heightPixels) });
-            width = widthPixels;
-          }
-          for (height = (widthPixels * i / j);; height = (width * i / j))
-          {
-            u.i("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "resizeLayout width:%d, height:%d", new Object[] { Integer.valueOf(width), Integer.valueOf(height) });
-            if (SightCameraSurfaceView.c(SightCameraSurfaceView.this)) {
-              break;
-            }
-            post(new Runnable()
-            {
-              public final void run()
-              {
-                SightCameraSurfaceView.b(SightCameraSurfaceView.this).setLayoutParams(localLayoutParams);
-                if (gEk != null) {
-                  gEk.awD();
-                }
-                n(getMeasuredWidth() / 2, getMeasuredHeight() / 2);
-              }
-            });
-            SightCameraSurfaceView.d(SightCameraSurfaceView.this);
-            return;
-            i = gEc.gDs.iFn;
-            j = gEc.gDs.iFm;
-            u.i("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "resizeLayout priveview[%d, %d], dm[%d, %d]", new Object[] { Integer.valueOf(j), Integer.valueOf(i), Integer.valueOf(widthPixels), Integer.valueOf(heightPixels) });
-            width = (widthPixels * j / gAy);
-          }
-        }
-        axk();
-        u.e("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "bug???");
-      }
-      
-      public final String toString()
-      {
-        return super.toString() + "|tryPreviewCamera";
-      }
-    });
-  }
-  
-  protected final void axb()
-  {
-    u.i("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "try close camera");
-    ah.tv().r(new Runnable()
-    {
-      public final void run()
-      {
-        gEc.awZ();
+        gKC.azy();
       }
       
       public final String toString()
@@ -264,20 +176,36 @@ public class SightCameraSurfaceView
     });
   }
   
-  public final void axc()
+  protected final int azB()
   {
-    if (gDN == null)
+    if (gKp != null) {
+      return gKp.getWidth();
+    }
+    return 0;
+  }
+  
+  protected final int azC()
+  {
+    if (gKp != null) {
+      return gKp.getHeight();
+    }
+    return 0;
+  }
+  
+  public final void azD()
+  {
+    if (gKo == null)
     {
-      u.w("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "mediaplayer is null, do nothing when stop play video");
+      v.w("MicroMsg.SightCameraSurfaceView", "mediaplayer is null, do nothing when stop play video");
       return;
     }
-    ah.tv().r(new Runnable()
+    ah.tw().t(new Runnable()
     {
       public final void run()
       {
         try
         {
-          axj();
+          azL();
           SightCameraSurfaceView.e(SightCameraSurfaceView.this).stop();
           SightCameraSurfaceView.e(SightCameraSurfaceView.this).release();
           SightCameraSurfaceView.a(SightCameraSurfaceView.this, null);
@@ -287,7 +215,7 @@ public class SightCameraSurfaceView
         {
           for (;;)
           {
-            u.w("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "stop play video error: %s, %s", new Object[] { localException.getMessage(), ay.b(localException) });
+            v.w("MicroMsg.SightCameraSurfaceView", "stop play video error: %s, %s", new Object[] { localException.getMessage(), be.f(localException) });
           }
         }
       }
@@ -299,68 +227,131 @@ public class SightCameraSurfaceView
     });
   }
   
-  protected Surface getPreviewSurface()
+  public final void azl()
   {
-    if (gDP != null) {
-      return gDP.getSurface();
-    }
-    return null;
+    super.azl();
+    bme = false;
   }
   
-  protected int getSurfaceHeight()
+  protected final void azz()
   {
-    if (gDO != null) {
-      return gDO.getHeight();
+    v.i("MicroMsg.SightCameraSurfaceView", "try preview camera");
+    if (getVisibility() != 0)
+    {
+      v.w("MicroMsg.SightCameraSurfaceView", "error visibility");
+      return;
     }
-    return 0;
+    if (SightCameraView.b.gKT != gKI)
+    {
+      v.w("MicroMsg.SightCameraSurfaceView", "error surfaceStatus %s", new Object[] { gKI.toString() });
+      return;
+    }
+    azD();
+    ah.tw().t(new Runnable()
+    {
+      public final void run()
+      {
+        if ((getContext() instanceof Activity))
+        {
+          if (gKC.F((Activity)getContext()) != 0)
+          {
+            gKJ = false;
+            azM();
+            return;
+          }
+          if (gKC.a(SightCameraSurfaceView.a(SightCameraSurfaceView.this)) != 0)
+          {
+            gKJ = false;
+            azN();
+            return;
+          }
+          gKJ = true;
+          v.d("MicroMsg.SightCameraSurfaceView", "preview camera ok");
+          final ViewGroup.LayoutParams localLayoutParams = SightCameraSurfaceView.b(SightCameraSurfaceView.this).getLayoutParams();
+          DisplayMetrics localDisplayMetrics = getResources().getDisplayMetrics();
+          int i;
+          int j;
+          if (c.cn(14))
+          {
+            i = gKC.gJT.jch;
+            j = gKC.gJT.jci;
+            v.i("MicroMsg.SightCameraSurfaceView", "below 4.0, resizeLayout priveview[%d, %d], dm[%d, %d]", new Object[] { Integer.valueOf(j), Integer.valueOf(i), Integer.valueOf(widthPixels), Integer.valueOf(heightPixels) });
+            width = widthPixels;
+          }
+          for (height = (widthPixels * i / j);; height = (width * i / j))
+          {
+            v.i("MicroMsg.SightCameraSurfaceView", "resizeLayout width:%d, height:%d", new Object[] { Integer.valueOf(width), Integer.valueOf(height) });
+            if (SightCameraSurfaceView.c(SightCameraSurfaceView.this)) {
+              break;
+            }
+            post(new Runnable()
+            {
+              public final void run()
+              {
+                SightCameraSurfaceView.b(SightCameraSurfaceView.this).setLayoutParams(localLayoutParams);
+                if (gKL != null) {
+                  gKL.azc();
+                }
+                m(getMeasuredWidth() / 2, getMeasuredHeight() / 2);
+              }
+            });
+            SightCameraSurfaceView.d(SightCameraSurfaceView.this);
+            return;
+            i = gKC.gJT.jci;
+            j = gKC.gJT.jch;
+            v.i("MicroMsg.SightCameraSurfaceView", "resizeLayout priveview[%d, %d], dm[%d, %d]", new Object[] { Integer.valueOf(j), Integer.valueOf(i), Integer.valueOf(widthPixels), Integer.valueOf(heightPixels) });
+            width = (widthPixels * j / gHa);
+          }
+        }
+        azM();
+        v.e("MicroMsg.SightCameraSurfaceView", "bug???");
+      }
+      
+      public final String toString()
+      {
+        return super.toString() + "|tryPreviewCamera";
+      }
+    });
   }
   
-  protected int getSurfaceWidth()
+  protected final void eD(boolean paramBoolean)
   {
-    if (gDO != null) {
-      return gDO.getWidth();
+    if ((gKo == null) || (!gKo.isPlaying())) {
+      return;
     }
-    return 0;
+    if (paramBoolean)
+    {
+      gKo.setVolume(0.0F, 0.0F);
+      return;
+    }
+    azK();
+    gKo.setVolume(1.0F, 1.0F);
   }
   
   public final boolean isPlaying()
   {
     try
     {
-      if (gDN == null) {
+      if (gKo == null) {
         return false;
       }
-      boolean bool = gDN.isPlaying();
+      boolean bool = gKo.isPlaying();
       return bool;
     }
     catch (Exception localException) {}
     return false;
   }
   
-  public void setFixPreviewRate(float paramFloat)
+  public final void v(float paramFloat)
   {
-    ViewGroup.LayoutParams localLayoutParams = gDO.getLayoutParams();
+    ViewGroup.LayoutParams localLayoutParams = gKp.getLayoutParams();
     DisplayMetrics localDisplayMetrics = getResources().getDisplayMetrics();
-    u.i("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "setFixPreviewRate [%f], dm[%d, %d]", new Object[] { Float.valueOf(paramFloat), Integer.valueOf(widthPixels), Integer.valueOf(heightPixels) });
+    v.i("MicroMsg.SightCameraSurfaceView", "setFixPreviewRate [%f], dm[%d, %d]", new Object[] { Float.valueOf(paramFloat), Integer.valueOf(widthPixels), Integer.valueOf(heightPixels) });
     width = widthPixels;
     height = ((int)(widthPixels / paramFloat));
-    u.i("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "setFixPreviewRate width:%d, height:%d", new Object[] { Integer.valueOf(width), Integer.valueOf(height) });
-    gDO.setLayoutParams(localLayoutParams);
-    super.setPreviewRate(paramFloat);
-  }
-  
-  protected void setIsMute(boolean paramBoolean)
-  {
-    if ((gDN == null) || (!gDN.isPlaying())) {
-      return;
-    }
-    if (paramBoolean)
-    {
-      gDN.setVolume(0.0F, 0.0F);
-      return;
-    }
-    axi();
-    gDN.setVolume(1.0F, 1.0F);
+    v.i("MicroMsg.SightCameraSurfaceView", "setFixPreviewRate width:%d, height:%d", new Object[] { Integer.valueOf(width), Integer.valueOf(height) });
+    gKp.setLayoutParams(localLayoutParams);
+    super.w(paramFloat);
   }
 }
 

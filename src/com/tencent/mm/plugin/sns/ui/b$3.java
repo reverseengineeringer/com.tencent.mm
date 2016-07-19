@@ -1,21 +1,30 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import java.util.List;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
 
 final class b$3
-  implements Runnable
+  implements Animation.AnimationListener
 {
-  b$3(b paramb, boolean paramBoolean) {}
+  b$3(b paramb, View paramView) {}
   
-  public final void run()
+  public final void onAnimationEnd(Animation paramAnimation)
   {
-    if (gVB)
+    if (gZD != null)
     {
-      b localb = gVz;
-      if (gVx.size() > 1) {
-        gVx.remove(0);
-      }
+      gZD.clearAnimation();
+      gZD.setVisibility(8);
+      hiS.aCn();
     }
+    hiS.gZo = false;
+  }
+  
+  public final void onAnimationRepeat(Animation paramAnimation) {}
+  
+  public final void onAnimationStart(Animation paramAnimation)
+  {
+    hiS.gZo = true;
   }
 }
 

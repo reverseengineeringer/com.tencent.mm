@@ -3,6 +3,9 @@ package com.tencent.smtt.export.external.extension.interfaces;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import com.tencent.smtt.export.external.interfaces.JsResult;
+import com.tencent.smtt.export.external.interfaces.WebResourceRequest;
+import com.tencent.smtt.export.external.interfaces.WebResourceResponse;
 
 public abstract interface IX5WebViewClientExtension
 {
@@ -18,6 +21,7 @@ public abstract interface IX5WebViewClientExtension
   public static final int FRAME_LOADTYPE_REPLACE = 8;
   public static final int FRAME_LOADTYPE_SAME = 6;
   public static final int FRAME_LOADTYPE_STANDARD = 0;
+  public static final int HTMLTYPE_JS_SCROLLTO = 1;
   
   public abstract void computeScroll(View paramView);
   
@@ -26,6 +30,8 @@ public abstract interface IX5WebViewClientExtension
   public abstract void handlePluginTag(String paramString1, String paramString2, boolean paramBoolean, String paramString3);
   
   public abstract void hideAddressBar();
+  
+  public abstract boolean notifyAutoAudioPlay(String paramString, JsResult paramJsResult);
   
   public abstract void onDoubleTapStart();
   
@@ -40,6 +46,8 @@ public abstract interface IX5WebViewClientExtension
   public abstract void onInputBoxTextChanged(IX5WebViewExtension paramIX5WebViewExtension, String paramString);
   
   public abstract boolean onInterceptTouchEvent(MotionEvent paramMotionEvent, View paramView);
+  
+  public abstract void onMetricsSavedCountReceived(String paramString1, boolean paramBoolean, long paramLong, String paramString2, int paramInt);
   
   public abstract Object onMiscCallBack(String paramString, Bundle paramBundle);
   
@@ -59,6 +67,10 @@ public abstract interface IX5WebViewClientExtension
   
   public abstract void onReportAdFilterInfo(int paramInt1, int paramInt2, String paramString, boolean paramBoolean);
   
+  public abstract void onReportHtmlInfo(int paramInt, String paramString);
+  
+  public abstract void onResponseReceived(WebResourceRequest paramWebResourceRequest, WebResourceResponse paramWebResourceResponse, int paramInt);
+  
   public abstract void onScrollChanged(int paramInt1, int paramInt2, int paramInt3, int paramInt4);
   
   public abstract void onScrollChanged(int paramInt1, int paramInt2, int paramInt3, int paramInt4, View paramView);
@@ -66,6 +78,8 @@ public abstract interface IX5WebViewClientExtension
   public abstract void onSetButtonStatus(boolean paramBoolean1, boolean paramBoolean2);
   
   public abstract void onShowListBox(String[] paramArrayOfString, int[] paramArrayOfInt1, int[] paramArrayOfInt2, int paramInt);
+  
+  public abstract boolean onShowLongClickPopupMenu();
   
   public abstract void onShowMutilListBox(String[] paramArrayOfString, int[] paramArrayOfInt1, int[] paramArrayOfInt2, int[] paramArrayOfInt3);
   
@@ -88,6 +102,8 @@ public abstract interface IX5WebViewClientExtension
   public abstract boolean overScrollBy(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5, int paramInt6, int paramInt7, int paramInt8, boolean paramBoolean, View paramView);
   
   public abstract boolean preShouldOverrideUrlLoading(IX5WebViewExtension paramIX5WebViewExtension, String paramString);
+  
+  public abstract void showTranslateBubble(int paramInt1, String paramString1, String paramString2, int paramInt2);
 }
 
 /* Location:

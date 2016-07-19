@@ -6,6 +6,18 @@
 # direct methods
 .method public static T(Ljava/util/Map;)Ljava/lang/String;
     .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<K:",
+            "Ljava/lang/Object;",
+            "V:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/util/Map",
+            "<TK;TV;>;)",
+            "Ljava/lang/String;"
+        }
+    .end annotation
 
     .prologue
     const/4 v7, 0x1

@@ -12,26 +12,24 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.n;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.s.d;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.h;
 import com.tencent.mm.storage.q;
-import com.tencent.mm.t.aj;
-import com.tencent.mm.t.m;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.MaskLayout;
+import com.tencent.mm.v.an;
 
 public class BizContactEntranceView
   extends RelativeLayout
 {
-  private View dfr = null;
-  private View liU;
-  private TextView liV;
-  private boolean liW = true;
-  private boolean liX;
+  private View deu = null;
+  private View lJf;
+  private TextView lJg;
+  private boolean lJh = true;
+  private boolean lJi;
   private Context mContext;
   
   public BizContactEntranceView(Context paramContext)
@@ -39,7 +37,7 @@ public class BizContactEntranceView
     super(paramContext);
     mContext = paramContext;
     init();
-    bha();
+    bmJ();
   }
   
   public BizContactEntranceView(Context paramContext, AttributeSet paramAttributeSet)
@@ -47,7 +45,7 @@ public class BizContactEntranceView
     super(paramContext, paramAttributeSet);
     mContext = paramContext;
     init();
-    bha();
+    bmJ();
   }
   
   public BizContactEntranceView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
@@ -55,51 +53,51 @@ public class BizContactEntranceView
     super(paramContext, paramAttributeSet, paramInt);
     mContext = paramContext;
     init();
-    bha();
+    bmJ();
   }
   
   private void init()
   {
-    liX = false;
-    View.inflate(getContext(), 2131361951, this);
-    dfr = findViewById(2131165347);
-    liU = dfr.findViewById(2131165679);
-    dfr.setOnClickListener(new View.OnClickListener()
+    lJi = false;
+    View.inflate(getContext(), 2130903157, this);
+    deu = findViewById(2131755259);
+    lJf = deu.findViewById(2131755545);
+    deu.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
         Intent localIntent = new Intent();
         localIntent.putExtra("intent_service_type", 251658241);
-        com.tencent.mm.ar.c.c(paramAnonymousView.getContext(), "brandservice", ".ui.BrandServiceIndexUI", localIntent);
+        com.tencent.mm.av.c.c(paramAnonymousView.getContext(), "brandservice", ".ui.BrandServiceIndexUI", localIntent);
       }
     });
-    liU.setOnTouchListener(new View.OnTouchListener()
+    lJf.setOnTouchListener(new View.OnTouchListener()
     {
       public final boolean onTouch(View paramAnonymousView, MotionEvent paramAnonymousMotionEvent)
       {
         if ((BizContactEntranceView.a(BizContactEntranceView.this) instanceof MMActivity)) {
-          ((MMActivity)BizContactEntranceView.a(BizContactEntranceView.this)).age();
+          ((MMActivity)BizContactEntranceView.a(BizContactEntranceView.this)).aiI();
         }
         return false;
       }
     });
-    MaskLayout localMaskLayout = (MaskLayout)liU.findViewById(2131165589);
-    ImageView localImageView = (ImageView)localMaskLayout.getContentView();
-    n.vb();
-    localImageView.setImageBitmap(d.fX("service_officialaccounts"));
-    liV = ((TextView)localMaskLayout.findViewById(2131165294));
+    MaskLayout localMaskLayout = (MaskLayout)lJf.findViewById(2131755546);
+    ImageView localImageView = (ImageView)view;
+    com.tencent.mm.s.n.vd();
+    localImageView.setImageBitmap(d.gk("service_officialaccounts"));
+    lJg = ((TextView)localMaskLayout.findViewById(2131755263));
   }
   
-  final void bha()
+  final void bmJ()
   {
     long l = System.currentTimeMillis();
-    int j = ah.tD().rq().aWA();
+    int j = ah.tE().rr().bbO();
     View localView;
     if (j > 0)
     {
-      liW = true;
-      localView = liU;
-      if (!liW) {
+      lJh = true;
+      localView = lJf;
+      if (!lJh) {
         break label114;
       }
     }
@@ -107,30 +105,30 @@ public class BizContactEntranceView
     for (int i = 0;; i = 8)
     {
       localView.setVisibility(i);
-      if (liW) {
-        ah.tv().r(new Runnable()
+      if (lJh) {
+        ah.tw().t(new Runnable()
         {
           public final void run()
           {
             final long l1 = 0L;
-            Object localObject1 = aj.xF();
+            Object localObject1 = an.xH();
             Object localObject2 = new StringBuilder();
             ((StringBuilder)localObject2).append("select updateTime from BizInfo").append(" where type = 1");
             ((StringBuilder)localObject2).append(" and status = 1").append(" ORDER BY updateTime DESC");
             localObject2 = ((StringBuilder)localObject2).toString();
-            u.i("!32@/B4Tb64lLpJBvWFKDfNn3fDJZ/Q78pVI", "getLastNewBizUpdateTime, sql %s", new Object[] { localObject2 });
-            localObject1 = ((m)localObject1).rawQuery((String)localObject2, new String[0]);
+            v.i("MicroMsg.BizInfoStorage", "getLastNewBizUpdateTime, sql %s", new Object[] { localObject2 });
+            localObject1 = ((com.tencent.mm.v.n)localObject1).rawQuery((String)localObject2, new String[0]);
             if (localObject1 == null) {}
             for (;;)
             {
-              long l2 = ay.av(ah.tD().rn().get(233473, null));
-              u.i("!44@/B4Tb64lLpJcZAIZpKXu2mTdFdAbI/Q60cydqQUhVTI=", "last updateTime %d, enterTime %d", new Object[] { Long.valueOf(l1), Long.valueOf(l2) });
-              ab.j(new Runnable()
+              long l2 = be.aQ(ah.tE().ro().get(233473, null));
+              v.i("MicroMsg.BizContactEntranceView", "last updateTime %d, enterTime %d", new Object[] { Long.valueOf(l1), Long.valueOf(l2) });
+              ad.k(new Runnable()
               {
                 public final void run()
                 {
                   TextView localTextView = BizContactEntranceView.c(BizContactEntranceView.this);
-                  if ((BizContactEntranceView.b(BizContactEntranceView.this)) && (l1 > lja)) {}
+                  if ((BizContactEntranceView.b(BizContactEntranceView.this)) && (l1 > lJl)) {}
                   for (int i = 0;; i = 4)
                   {
                     localTextView.setVisibility(i);
@@ -152,19 +150,19 @@ public class BizContactEntranceView
           }
         });
       }
-      u.i("!44@/B4Tb64lLpJcZAIZpKXu2mTdFdAbI/Q60cydqQUhVTI=", "biz contact Count %d, isEntranceShow %s, setStatus cost %d", new Object[] { Integer.valueOf(j), Boolean.valueOf(liW), Long.valueOf(System.currentTimeMillis() - l) });
+      v.i("MicroMsg.BizContactEntranceView", "biz contact Count %d, isEntranceShow %s, setStatus cost %d", new Object[] { Integer.valueOf(j), Boolean.valueOf(lJh), Long.valueOf(System.currentTimeMillis() - l) });
       return;
-      liW = false;
+      lJh = false;
       break;
     }
   }
   
-  public void setVisible(boolean paramBoolean)
+  public final void setVisible(boolean paramBoolean)
   {
     int i = 0;
-    u.i("!44@/B4Tb64lLpJcZAIZpKXu2mTdFdAbI/Q60cydqQUhVTI=", "setVisible visible = %s, isEntranceShow = %s", new Object[] { Boolean.valueOf(paramBoolean), Boolean.valueOf(liW) });
-    View localView = dfr;
-    if ((paramBoolean) && (liW)) {}
+    v.i("MicroMsg.BizContactEntranceView", "setVisible visible = %s, isEntranceShow = %s", new Object[] { Boolean.valueOf(paramBoolean), Boolean.valueOf(lJh) });
+    View localView = deu;
+    if ((paramBoolean) && (lJh)) {}
     for (;;)
     {
       localView.setVisibility(i);

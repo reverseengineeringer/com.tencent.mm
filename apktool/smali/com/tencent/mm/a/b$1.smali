@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic akq:Ljava/lang/String;
+.field final synthetic Xj:Ljava/lang/String;
 
-.field final synthetic akr:Lcom/tencent/mm/a/b;
+.field final synthetic Xk:Lcom/tencent/mm/a/b;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 42
-    iput-object p1, p0, Lcom/tencent/mm/a/b$1;->akr:Lcom/tencent/mm/a/b;
+    iput-object p1, p0, Lcom/tencent/mm/a/b$1;->Xk:Lcom/tencent/mm/a/b;
 
-    iput-object p2, p0, Lcom/tencent/mm/a/b$1;->akq:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/a/b$1;->Xj:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,7 +51,7 @@
     .line 46
     new-instance v0, Ljava/io/File;
 
-    iget-object v1, p0, Lcom/tencent/mm/a/b$1;->akq:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/a/b$1;->Xj:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -60,56 +60,20 @@
 
     move-result v1
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_0
 
     .line 48
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     .line 49
-    iget-object v3, p0, Lcom/tencent/mm/a/b$1;->akq:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/a/b$1;->Xj:Ljava/lang/String;
 
-    new-instance v4, Ljava/io/File;
-
-    invoke-direct {v4, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4}, Ljava/io/File;->getParentFile()Ljava/io/File;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/io/File;->exists()Z
-
-    move-result v5
-
-    if-nez v5, :cond_1
-
-    invoke-virtual {v4}, Ljava/io/File;->mkdirs()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    invoke-virtual {v4}, Ljava/io/File;->isDirectory()Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    :cond_0
-    const-string/jumbo v4, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
-
-    const-string/jumbo v5, "mkParentDir mkdir error. %s"
-
-    new-array v6, v9, [Ljava/lang/Object;
-
-    aput-object v3, v6, v8
-
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1}, Lcom/tencent/mm/a/e;->aG(Ljava/lang/String;)V
 
     .line 50
-    :cond_1
-    const-string/jumbo v3, "!44@/B4Tb64lLpKXBaxGdtxV+BEoZ2+3MD7CYjuHi5HpPHU="
+    const-string/jumbo v1, "MicroMsg.ConcurrentFileBuilder"
 
     const-string/jumbo v4, "make dir last %d "
 
@@ -119,20 +83,20 @@
 
     move-result-wide v6
 
-    sub-long v1, v6, v1
+    sub-long v2, v6, v2
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v1
+    move-result-object v2
 
-    aput-object v1, v5, v8
+    aput-object v2, v5, v8
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 51
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     .line 53
     :try_start_0
@@ -142,7 +106,7 @@
 
     .line 58
     :goto_0
-    const-string/jumbo v3, "!44@/B4Tb64lLpKXBaxGdtxV+BEoZ2+3MD7CYjuHi5HpPHU="
+    const-string/jumbo v1, "MicroMsg.ConcurrentFileBuilder"
 
     const-string/jumbo v4, "make file last %d "
 
@@ -152,19 +116,19 @@
 
     move-result-wide v6
 
-    sub-long v1, v6, v1
+    sub-long v2, v6, v2
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v1
+    move-result-object v2
 
-    aput-object v1, v5, v8
+    aput-object v2, v5, v8
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 60
-    :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/a/b$1;->akr:Lcom/tencent/mm/a/b;
+    :cond_0
+    iget-object v1, p0, Lcom/tencent/mm/a/b$1;->Xk:Lcom/tencent/mm/a/b;
 
     invoke-static {v1}, Lcom/tencent/mm/a/b;->a(Lcom/tencent/mm/a/b;)Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -174,12 +138,12 @@
 
     .line 62
     :try_start_1
-    iget-object v1, p0, Lcom/tencent/mm/a/b$1;->akr:Lcom/tencent/mm/a/b;
+    iget-object v1, p0, Lcom/tencent/mm/a/b$1;->Xk:Lcom/tencent/mm/a/b;
 
-    iput-object v0, v1, Lcom/tencent/mm/a/b;->akm:Ljava/io/File;
+    iput-object v0, v1, Lcom/tencent/mm/a/b;->Xf:Ljava/io/File;
 
     .line 63
-    iget-object v1, p0, Lcom/tencent/mm/a/b$1;->akr:Lcom/tencent/mm/a/b;
+    iget-object v1, p0, Lcom/tencent/mm/a/b$1;->Xk:Lcom/tencent/mm/a/b;
 
     invoke-static {v1}, Lcom/tencent/mm/a/b;->b(Lcom/tencent/mm/a/b;)Ljava/util/concurrent/locks/Condition;
 
@@ -188,7 +152,7 @@
     invoke-interface {v1}, Ljava/util/concurrent/locks/Condition;->signal()V
 
     .line 64
-    const-string/jumbo v1, "!44@/B4Tb64lLpKXBaxGdtxV+BEoZ2+3MD7CYjuHi5HpPHU="
+    const-string/jumbo v1, "MicroMsg.ConcurrentFileBuilder"
 
     const-string/jumbo v2, "notify file prepared %s"
 
@@ -204,12 +168,12 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 66
-    iget-object v0, p0, Lcom/tencent/mm/a/b$1;->akr:Lcom/tencent/mm/a/b;
+    iget-object v0, p0, Lcom/tencent/mm/a/b$1;->Xk:Lcom/tencent/mm/a/b;
 
     invoke-static {v0}, Lcom/tencent/mm/a/b;->a(Lcom/tencent/mm/a/b;)Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -222,16 +186,16 @@
 
     .line 54
     :catch_0
-    move-exception v3
+    move-exception v1
 
     .line 55
-    const-string/jumbo v4, "!44@/B4Tb64lLpKXBaxGdtxV+BEoZ2+3MD7CYjuHi5HpPHU="
+    const-string/jumbo v4, "MicroMsg.ConcurrentFileBuilder"
 
     const-string/jumbo v5, "createNewFile"
 
     new-array v6, v8, [Ljava/lang/Object;
 
-    invoke-static {v4, v3, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v1, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -239,7 +203,7 @@
     :catchall_0
     move-exception v0
 
-    iget-object v1, p0, Lcom/tencent/mm/a/b$1;->akr:Lcom/tencent/mm/a/b;
+    iget-object v1, p0, Lcom/tencent/mm/a/b$1;->Xk:Lcom/tencent/mm/a/b;
 
     invoke-static {v1}, Lcom/tencent/mm/a/b;->a(Lcom/tencent/mm/a/b;)Ljava/util/concurrent/locks/ReentrantLock;
 

@@ -11,7 +11,7 @@ final class ChatroomContactUI$4
   
   public final void onClick(View paramView)
   {
-    BackwardSupportUtil.c.a(ChatroomContactUI.b(ljg));
+    BackwardSupportUtil.c.a(ChatroomContactUI.b(lJr));
   }
 }
 

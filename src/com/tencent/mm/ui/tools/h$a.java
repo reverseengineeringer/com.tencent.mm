@@ -5,7 +5,7 @@ import android.annotation.TargetApi;
 @TargetApi(18)
 public abstract interface h$a
 {
-  public abstract void j(int paramInt1, int paramInt2, int paramInt3, int paramInt4);
+  public abstract void i(int paramInt1, int paramInt2, int paramInt3, int paramInt4);
 }
 
 /* Location:

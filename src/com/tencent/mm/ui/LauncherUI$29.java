@@ -2,6 +2,7 @@ package com.tencent.mm.ui;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 
 final class LauncherUI$29
   implements DialogInterface.OnClickListener
@@ -10,7 +11,12 @@ final class LauncherUI$29
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    LauncherUI.G(knl);
+    Intent localIntent = new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS");
+    localIntent.addFlags(268435456);
+    kMs.startActivity(localIntent);
+    paramDialogInterface.dismiss();
+    MMAppMgr.a(kMs, true);
+    kMs.finish();
   }
 }
 

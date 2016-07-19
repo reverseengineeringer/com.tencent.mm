@@ -8,21 +8,21 @@ import com.tencent.mm.ui.tools.i;
 final class ContactRemarkInfoModUI$b
   implements TextWatcher
 {
-  private int gjm = 800;
-  private String ljY = "";
+  private int gtH = 800;
+  private String lKj = "";
   
   private ContactRemarkInfoModUI$b(ContactRemarkInfoModUI paramContactRemarkInfoModUI) {}
   
   public final void afterTextChanged(Editable paramEditable)
   {
-    gjm = i.ai(800, paramEditable.toString());
-    if (gjm < 0) {
-      gjm = 0;
+    gtH = i.as(800, paramEditable.toString());
+    if (gtH < 0) {
+      gtH = 0;
     }
-    if (ContactRemarkInfoModUI.a(ljV) != null) {
-      ContactRemarkInfoModUI.a(ljV).setText(gjm);
+    if (ContactRemarkInfoModUI.a(lKg) != null) {
+      ContactRemarkInfoModUI.a(lKg).setText(gtH);
     }
-    ContactRemarkInfoModUI.b(ljV);
+    ContactRemarkInfoModUI.b(lKg);
   }
   
   public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}

@@ -4,19 +4,19 @@
 
 
 # virtual methods
-.method public abstract A([B)I
+.method public abstract F([B)I
 .end method
 
-.method public abstract aN(Z)V
+.method public abstract as(Z)V
 .end method
 
-.method public abstract ba(I)V
+.method public abstract bq(I)V
 .end method
 
-.method public abstract gf(Ljava/lang/String;)[B
+.method public abstract g(Ljava/lang/String;[B)V
 .end method
 
-.method public abstract h(Ljava/lang/String;[B)V
+.method public abstract gs(Ljava/lang/String;)[B
 .end method
 
 .method public abstract i([BI)V
@@ -25,19 +25,13 @@
 .method public abstract reset()V
 .end method
 
-.method public abstract rg()I
+.method public abstract rf()I
 .end method
 
 .method public abstract setUsername(Ljava/lang/String;)V
 .end method
 
-.method public abstract tq()[B
-.end method
-
-.method public abstract vR()[B
-.end method
-
-.method public abstract vS()Z
+.method public abstract tr()[B
 .end method
 
 .method public abstract vT()[B
@@ -47,4 +41,10 @@
 .end method
 
 .method public abstract vV()[B
+.end method
+
+.method public abstract vW()Z
+.end method
+
+.method public abstract vX()[B
 .end method

@@ -1,13 +1,13 @@
 package com.tencent.smtt.sdk;
 
 import android.content.Context;
-import com.tencent.smtt.a.r;
+import com.tencent.smtt.utils.TbsLog;
 import java.io.File;
 
 class TbsLinuxToolsJni
 {
-  private static boolean lSN = false;
-  private static boolean lSO = false;
+  private static boolean muF = false;
+  private static boolean muG = false;
   
   public TbsLinuxToolsJni(Context paramContext)
   {
@@ -15,10 +15,10 @@ class TbsLinuxToolsJni
     {
       try
       {
-        if (lSO) {
+        if (muG) {
           return;
         }
-        lSO = true;
+        muG = true;
       }
       finally {}
       try
@@ -30,29 +30,29 @@ class TbsLinuxToolsJni
         if (paramContext != null)
         {
           System.load(paramContext.getAbsolutePath() + File.separator + "liblinuxtoolsfortbssdk_jni.so");
-          lSN = true;
+          muF = true;
         }
         ChmodInner("/checkChmodeExists", "700");
       }
       catch (Throwable paramContext)
       {
-        lSN = false;
+        muF = false;
         continue;
       }
       return;
       label98:
-      m.blT();
-      paramContext = m.fj(paramContext);
+      m.brX();
+      paramContext = m.b(null, paramContext);
     }
   }
   
   private native int ChmodInner(String paramString1, String paramString2);
   
-  public final int cI(String paramString1, String paramString2)
+  public final int cW(String paramString1, String paramString2)
   {
-    if (!lSN)
+    if (!muF)
     {
-      r.l("TbsLinuxToolsJni", "jni not loaded!", true);
+      TbsLog.e("TbsLinuxToolsJni", "jni not loaded!", true);
       return -1;
     }
     return ChmodInner(paramString1, paramString2);

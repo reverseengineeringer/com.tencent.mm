@@ -5,11 +5,11 @@ import com.tencent.mm.pluginsdk.ui.ChatFooterPanel;
 
 public final class e
 {
-  public static a iMh;
+  public static a jje;
   
   public static abstract interface a
   {
-    public abstract ChatFooterPanel bs(Context paramContext);
+    public abstract ChatFooterPanel bo(Context paramContext);
   }
 }
 

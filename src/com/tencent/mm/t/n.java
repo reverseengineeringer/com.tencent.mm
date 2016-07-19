@@ -1,165 +1,246 @@
 package com.tencent.mm.t;
 
-import com.tencent.mm.ag.b.a;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.protocal.b.adn;
-import com.tencent.mm.sdk.platformtools.u;
-import java.util.List;
+import android.os.RemoteException;
+import com.tencent.mm.network.c;
+import com.tencent.mm.network.d;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class n
+  implements c
 {
-  public static void e(l paraml)
+  private final d bzo;
+  
+  public n(d paramd)
   {
-    if (paraml == null)
-    {
-      u.e("!44@/B4Tb64lLpJBvWFKDfNn3TOt6sWO3dCgZMiofh1P5do=", "updateBrandFlagForTempSession bizInfo is Null");
-      return;
-    }
-    adn localadn = new adn();
-    bMa = field_brandFlag;
-    eiB = field_username;
-    ah.tD().rp().b(new b.a(58, localadn));
-    u.i("!44@/B4Tb64lLpJBvWFKDfNn3TOt6sWO3dCgZMiofh1P5do=", "updateBrandFlagForTempSession ret = %b, BrandFlag = %b", new Object[] { Boolean.valueOf(aj.xF().a(paraml, new String[0])), Integer.valueOf(field_brandFlag) });
+    bzo = paramd;
   }
   
-  public static void f(l paraml)
+  private String getUsername()
   {
-    if (paraml != null)
+    try
     {
-      adn localadn = new adn();
-      bMa = field_brandFlag;
-      eiB = field_username;
-      ah.tD().rp().b(new b.a(47, localadn));
-      aj.xF().a(paraml, new String[0]);
+      String str = bzo.getUsername();
+      return str;
     }
-  }
-  
-  public static l gS(String paramString)
-  {
-    paramString = aj.xF().gK(paramString);
-    if (field_updateTime > 0L) {
-      return paramString;
+    catch (RemoteException localRemoteException)
+    {
+      v.e("MicroMsg.RAccInfo", "exception:%s", new Object[] { be.f(localRemoteException) });
     }
     return null;
   }
   
-  public static boolean gT(String paramString)
+  public final int F(byte[] paramArrayOfByte)
   {
-    paramString = gS(paramString);
-    if (paramString == null) {}
-    while (!paramString.wD()) {
-      return false;
+    try
+    {
+      int i = bzo.F(paramArrayOfByte);
+      return i;
+    }
+    catch (Exception paramArrayOfByte)
+    {
+      v.e("MicroMsg.RAccInfo", "AccInfoCacheInWorker parseBuf exception:%s", new Object[] { be.f(paramArrayOfByte) });
+    }
+    return -6;
+  }
+  
+  public final void as(boolean paramBoolean)
+  {
+    try
+    {
+      bzo.as(paramBoolean);
+      return;
+    }
+    catch (RemoteException localRemoteException)
+    {
+      v.e("MicroMsg.RAccInfo", "exception:%s", new Object[] { be.f(localRemoteException) });
+    }
+  }
+  
+  public final void bq(int paramInt)
+  {
+    try
+    {
+      bzo.bq(paramInt);
+      return;
+    }
+    catch (Exception localException)
+    {
+      v.e("MicroMsg.RAccInfo", "exception:%s", new Object[] { be.f(localException) });
+    }
+  }
+  
+  public final void g(String paramString, byte[] paramArrayOfByte)
+  {
+    try
+    {
+      bzo.g(paramString, paramArrayOfByte);
+      return;
+    }
+    catch (RemoteException paramString)
+    {
+      v.e("MicroMsg.RAccInfo", "exception:%s", new Object[] { be.f(paramString) });
+    }
+  }
+  
+  public final byte[] gs(String paramString)
+  {
+    try
+    {
+      paramString = bzo.gs(paramString);
+      return paramString;
+    }
+    catch (RemoteException paramString)
+    {
+      v.e("MicroMsg.RAccInfo", "exception:%s", new Object[] { be.f(paramString) });
+    }
+    return null;
+  }
+  
+  public final void i(byte[] paramArrayOfByte, int paramInt)
+  {
+    try
+    {
+      bzo.i(paramArrayOfByte, paramInt);
+      return;
+    }
+    catch (RemoteException paramArrayOfByte)
+    {
+      v.e("MicroMsg.RAccInfo", "exception:%s", new Object[] { be.f(paramArrayOfByte) });
+    }
+  }
+  
+  public final void reset()
+  {
+    try
+    {
+      bzo.reset();
+      return;
+    }
+    catch (RemoteException localRemoteException)
+    {
+      v.e("MicroMsg.RAccInfo", "exception:%s", new Object[] { be.f(localRemoteException) });
+    }
+  }
+  
+  public final int rf()
+  {
+    try
+    {
+      int i = bzo.rf();
+      return i;
+    }
+    catch (RemoteException localRemoteException)
+    {
+      v.e("MicroMsg.RAccInfo", "exception:%s", new Object[] { be.f(localRemoteException) });
+    }
+    return 0;
+  }
+  
+  public final void setUsername(String paramString)
+  {
+    try
+    {
+      bzo.setUsername(paramString);
+      return;
+    }
+    catch (RemoteException paramString)
+    {
+      v.e("MicroMsg.RAccInfo", "exception:%s", new Object[] { be.f(paramString) });
+    }
+  }
+  
+  public final String toString()
+  {
+    String str = "RAccInfo:\n" + "|-uin     =" + rf() + "\n";
+    str = str + "|-user    =" + getUsername() + "\n";
+    str = str + "|-session =" + tr() + "\n";
+    str = str + "|-ecdhkey =" + be.O(vV()) + "\n";
+    return str + "`-cookie  =" + be.O(vT());
+  }
+  
+  public final byte[] tr()
+  {
+    try
+    {
+      byte[] arrayOfByte = bzo.tr();
+      return arrayOfByte;
+    }
+    catch (RemoteException localRemoteException)
+    {
+      v.e("MicroMsg.RAccInfo", "exception:%s", new Object[] { be.f(localRemoteException) });
+    }
+    return null;
+  }
+  
+  public final byte[] vT()
+  {
+    try
+    {
+      byte[] arrayOfByte = bzo.vT();
+      return arrayOfByte;
+    }
+    catch (RemoteException localRemoteException)
+    {
+      v.e("MicroMsg.RAccInfo", "exception:%s", new Object[] { be.f(localRemoteException) });
+    }
+    return null;
+  }
+  
+  public final boolean vU()
+  {
+    try
+    {
+      boolean bool = bzo.vU();
+      return bool;
+    }
+    catch (Exception localException)
+    {
+      v.e("MicroMsg.RAccInfo", "exception:%s", new Object[] { be.f(localException) });
+    }
+    return false;
+  }
+  
+  public final byte[] vV()
+  {
+    try
+    {
+      byte[] arrayOfByte = bzo.vV();
+      return arrayOfByte;
+    }
+    catch (RemoteException localRemoteException)
+    {
+      v.e("MicroMsg.RAccInfo", "exception:%s", new Object[] { be.f(localRemoteException) });
+    }
+    return null;
+  }
+  
+  public final boolean vW()
+  {
+    try
+    {
+      boolean bool = bzo.vW();
+      return bool;
+    }
+    catch (RemoteException localRemoteException)
+    {
+      v.e("MicroMsg.RAccInfo", "exception:%s", new Object[] { be.f(localRemoteException) });
     }
     return true;
   }
   
-  public static boolean gU(String paramString)
+  public final byte[] vX()
   {
-    paramString = gS(paramString);
-    if (paramString == null) {}
-    while (!paramString.wF()) {
-      return false;
+    try
+    {
+      byte[] arrayOfByte = bzo.vX();
+      return arrayOfByte;
     }
-    return true;
-  }
-  
-  public static boolean gV(String paramString)
-  {
-    paramString = gS(paramString);
-    if (paramString == null) {}
-    while (!paramString.wE()) {
-      return false;
+    catch (Exception localException)
+    {
+      v.e("MicroMsg.RAccInfo", "AccInfoCacheInWorker getCacheBuffer exception:%s", new Object[] { be.f(localException) });
     }
-    return true;
-  }
-  
-  public static boolean gW(String paramString)
-  {
-    paramString = gS(paramString);
-    if (paramString == null) {}
-    while (!paramString.wG()) {
-      return false;
-    }
-    return true;
-  }
-  
-  public static boolean gX(String paramString)
-  {
-    paramString = gS(paramString);
-    if (paramString == null) {}
-    while (!paramString.wH()) {
-      return false;
-    }
-    return true;
-  }
-  
-  public static boolean gY(String paramString)
-  {
-    paramString = gS(paramString);
-    if (paramString == null) {
-      return false;
-    }
-    return paramString.wx();
-  }
-  
-  public static boolean xf()
-  {
-    return aj.xF().cX(1) > 0;
-  }
-  
-  public static List xg()
-  {
-    return aj.xF().cW(2);
-  }
-  
-  public static boolean xh()
-  {
-    return aj.xF().cX(4) > 0;
-  }
-  
-  public static boolean xi()
-  {
-    return aj.xF().cX(8) > 0;
-  }
-  
-  public static List xj()
-  {
-    return aj.xF().cW(16);
-  }
-  
-  public static boolean xk()
-  {
-    return aj.xF().cX(16) > 0;
-  }
-  
-  public static List xl()
-  {
-    return aj.xF().cW(32);
-  }
-  
-  public static boolean xm()
-  {
-    return aj.xF().cX(64) > 0;
-  }
-  
-  public static List xn()
-  {
-    return aj.xF().cW(128);
-  }
-  
-  public static boolean xo()
-  {
-    return aj.xF().cX(128) > 0;
-  }
-  
-  public static boolean xp()
-  {
-    return aj.xF().cX(256) > 0;
-  }
-  
-  public static boolean xq()
-  {
-    return aj.xF().cX(512) > 0;
+    return null;
   }
 }
 

@@ -8,13 +8,13 @@ final class MMPreference$2$2
 {
   MMPreference$2$2(MMPreference.2 param2, EditPreference paramEditPreference, Preference paramPreference) {}
   
-  public final void bdp()
+  public final void biW()
   {
-    MMPreference.c(kLP.kLM);
-    if (kLQ.kMo) {
-      MMPreference.b(kLP.kLM).edit().putString(kLO.cln, kLQ.value).commit();
+    MMPreference.c(lle.llb);
+    if (llf.llD) {
+      MMPreference.b(lle.llb).edit().putString(lld.cgq, llf.value).commit();
     }
-    MMPreference.d(kLP.kLM).notifyDataSetChanged();
+    MMPreference.d(lle.llb).notifyDataSetChanged();
   }
 }
 

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/r/g$a;
+.implements Lcom/tencent/mm/t/g$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ars:Lcom/tencent/mm/c/b/h;
+.field final synthetic acL:Lcom/tencent/mm/c/b/h;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 375
-    iput-object p1, p0, Lcom/tencent/mm/c/b/h$3;->ars:Lcom/tencent/mm/c/b/h;
+    .line 377
+    iput-object p1, p0, Lcom/tencent/mm/c/b/h$3;->acL:Lcom/tencent/mm/c/b/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,15 +40,15 @@
     .locals 3
 
     .prologue
-    .line 378
-    iget-object v0, p0, Lcom/tencent/mm/c/b/h$3;->ars:Lcom/tencent/mm/c/b/h;
+    .line 380
+    iget-object v0, p0, Lcom/tencent/mm/c/b/h$3;->acL:Lcom/tencent/mm/c/b/h;
 
-    iget-object v0, v0, Lcom/tencent/mm/c/b/h;->arc:Lcom/tencent/mm/compatible/util/a;
+    iget-object v0, v0, Lcom/tencent/mm/c/b/h;->acv:Lcom/tencent/mm/compatible/util/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/util/a;->oV()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/util/a;->nn()Z
 
-    .line 379
-    const-string/jumbo v0, "!44@/B4Tb64lLpJjyqE6YDnApwOwHOAz5sGPSEN1mjztZrA="
+    .line 381
+    const-string/jumbo v0, "MicroMsg.SceneVoice.Recorder"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -56,7 +56,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/c/b/h$3;->ars:Lcom/tencent/mm/c/b/h;
+    iget-object v2, p0, Lcom/tencent/mm/c/b/h$3;->acL:Lcom/tencent/mm/c/b/h;
 
     iget-object v2, v2, Lcom/tencent/mm/c/b/h;->mFileName:Ljava/lang/String;
 
@@ -68,30 +68,30 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 380
-    iget-object v0, p0, Lcom/tencent/mm/c/b/h$3;->ars:Lcom/tencent/mm/c/b/h;
+    .line 382
+    iget-object v0, p0, Lcom/tencent/mm/c/b/h$3;->acL:Lcom/tencent/mm/c/b/h;
 
     iget-object v0, v0, Lcom/tencent/mm/c/b/h;->mFileName:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/modelvoice/q;->bg(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/modelvoice/q;->kP(Ljava/lang/String;)Z
 
-    .line 381
-    iget-object v0, p0, Lcom/tencent/mm/c/b/h$3;->ars:Lcom/tencent/mm/c/b/h;
+    .line 383
+    iget-object v0, p0, Lcom/tencent/mm/c/b/h$3;->acL:Lcom/tencent/mm/c/b/h;
 
-    iget-object v0, v0, Lcom/tencent/mm/c/b/h;->arp:Lcom/tencent/mm/r/g$a;
+    iget-object v0, v0, Lcom/tencent/mm/c/b/h;->acI:Lcom/tencent/mm/t/g$a;
 
     if-eqz v0, :cond_0
 
-    .line 382
-    iget-object v0, p0, Lcom/tencent/mm/c/b/h$3;->ars:Lcom/tencent/mm/c/b/h;
-
-    iget-object v0, v0, Lcom/tencent/mm/c/b/h;->arp:Lcom/tencent/mm/r/g$a;
-
-    invoke-interface {v0}, Lcom/tencent/mm/r/g$a;->onError()V
-
     .line 384
+    iget-object v0, p0, Lcom/tencent/mm/c/b/h$3;->acL:Lcom/tencent/mm/c/b/h;
+
+    iget-object v0, v0, Lcom/tencent/mm/c/b/h;->acI:Lcom/tencent/mm/t/g$a;
+
+    invoke-interface {v0}, Lcom/tencent/mm/t/g$a;->onError()V
+
+    .line 386
     :cond_0
     return-void
 .end method

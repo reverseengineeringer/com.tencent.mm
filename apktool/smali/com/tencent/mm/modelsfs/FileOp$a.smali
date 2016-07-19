@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/modelsfs/FileOp;->iP(Ljava/lang/String;)Z
+    value = Lcom/tencent/mm/modelsfs/FileOp;->jg(Ljava/lang/String;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field car:Ljava/io/File;
+.field bUa:Ljava/io/File;
 
-.field cas:[Ljava/io/File;
+.field bUb:[Ljava/io/File;
 
 .field pos:I
 
@@ -31,12 +31,12 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 901
-    iput-object p1, p0, Lcom/tencent/mm/modelsfs/FileOp$a;->car:Ljava/io/File;
+    iput-object p1, p0, Lcom/tencent/mm/modelsfs/FileOp$a;->bUa:Ljava/io/File;
 
     .line 902
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsfs/FileOp$a;->cas:[Ljava/io/File;
+    iput-object v0, p0, Lcom/tencent/mm/modelsfs/FileOp$a;->bUb:[Ljava/io/File;
 
     .line 903
     const/4 v0, 0x0

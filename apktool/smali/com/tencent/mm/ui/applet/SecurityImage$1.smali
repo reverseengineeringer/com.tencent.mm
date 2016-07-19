@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kzO:Lcom/tencent/mm/ui/applet/SecurityImage;
+.field final synthetic kYV:Lcom/tencent/mm/ui/applet/SecurityImage;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 75
-    iput-object p1, p0, Lcom/tencent/mm/ui/applet/SecurityImage$1;->kzO:Lcom/tencent/mm/ui/applet/SecurityImage;
+    iput-object p1, p0, Lcom/tencent/mm/ui/applet/SecurityImage$1;->kYV:Lcom/tencent/mm/ui/applet/SecurityImage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,12 +41,12 @@
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/SecurityImage$1;->kzO:Lcom/tencent/mm/ui/applet/SecurityImage;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/SecurityImage$1;->kYV:Lcom/tencent/mm/ui/applet/SecurityImage;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/applet/SecurityImage;->a(Lcom/tencent/mm/ui/applet/SecurityImage;)V
 
     .line 80
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/SecurityImage$1;->kzO:Lcom/tencent/mm/ui/applet/SecurityImage;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/SecurityImage$1;->kYV:Lcom/tencent/mm/ui/applet/SecurityImage;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/applet/SecurityImage;->b(Lcom/tencent/mm/ui/applet/SecurityImage;)Lcom/tencent/mm/ui/applet/SecurityImage$b;
 
@@ -55,13 +55,13 @@
     if-eqz v0, :cond_0
 
     .line 81
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/SecurityImage$1;->kzO:Lcom/tencent/mm/ui/applet/SecurityImage;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/SecurityImage$1;->kYV:Lcom/tencent/mm/ui/applet/SecurityImage;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/applet/SecurityImage;->b(Lcom/tencent/mm/ui/applet/SecurityImage;)Lcom/tencent/mm/ui/applet/SecurityImage$b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/applet/SecurityImage$b;->bby()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/applet/SecurityImage$b;->bgK()V
 
     .line 83
     :cond_0

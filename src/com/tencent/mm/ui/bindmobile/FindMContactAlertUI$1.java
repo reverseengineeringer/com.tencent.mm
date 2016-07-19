@@ -17,16 +17,16 @@ final class FindMContactAlertUI$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ah.tD().rn().set(12322, Boolean.valueOf(true));
-    b.kC("R200_100");
+    ah.tE().ro().set(12322, Boolean.valueOf(true));
+    b.ll("R200_100");
     paramDialogInterface = new Intent();
     paramDialogInterface.putExtra("mobile_input_purpose", 4);
-    paramDialogInterface.putExtra("regsetinfo_ticket", FindMContactAlertUI.a(kOV));
-    paramDialogInterface.putExtra("regsetinfo_NextStep", FindMContactAlertUI.b(kOV));
-    paramDialogInterface.putExtra("regsetinfo_NextStyle", FindMContactAlertUI.c(kOV));
-    a.coa.a(kOV, paramDialogInterface);
-    b.kC("R300_300_phone");
-    b.b(false, ah.tx() + "," + kOV.getClass().getName() + ",R300_200_phone," + ah.fd("R300_200_phone") + ",2");
+    paramDialogInterface.putExtra("regsetinfo_ticket", FindMContactAlertUI.a(lol));
+    paramDialogInterface.putExtra("regsetinfo_NextStep", FindMContactAlertUI.b(lol));
+    paramDialogInterface.putExtra("regsetinfo_NextStyle", FindMContactAlertUI.c(lol));
+    a.cjo.a(lol, paramDialogInterface);
+    b.ll("R300_300_phone");
+    b.b(false, ah.ty() + "," + lol.getClass().getName() + ",R300_200_phone," + ah.fq("R300_200_phone") + ",2");
   }
 }
 

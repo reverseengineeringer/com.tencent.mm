@@ -2,23 +2,23 @@ package com.tencent.mm.a;
 
 public final class k
 {
-  public static byte[] d(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2)
+  public static byte[] b(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2)
   {
     if ((paramArrayOfByte1 == null) || (paramArrayOfByte2 == null)) {
       return null;
     }
-    return f(paramArrayOfByte1, paramArrayOfByte2);
+    return d(paramArrayOfByte1, paramArrayOfByte2);
   }
   
-  public static byte[] e(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2)
+  public static byte[] c(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2)
   {
     if ((paramArrayOfByte1 == null) || (paramArrayOfByte2 == null)) {
       return null;
     }
-    return f(paramArrayOfByte1, paramArrayOfByte2);
+    return d(paramArrayOfByte1, paramArrayOfByte2);
   }
   
-  private static byte[] f(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2)
+  private static byte[] d(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2)
   {
     int n = 0;
     byte[] arrayOfByte2 = new byte['Ā'];

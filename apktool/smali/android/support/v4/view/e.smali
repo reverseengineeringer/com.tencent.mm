@@ -14,7 +14,7 @@
 
 
 # static fields
-.field static final eB:Landroid/support/v4/view/e$a;
+.field static final eX:Landroid/support/v4/view/e$a;
 
 
 # direct methods
@@ -35,7 +35,7 @@
 
     invoke-direct {v0}, Landroid/support/v4/view/e$c;-><init>()V
 
-    sput-object v0, Landroid/support/v4/view/e;->eB:Landroid/support/v4/view/e$a;
+    sput-object v0, Landroid/support/v4/view/e;->eX:Landroid/support/v4/view/e$a;
 
     .line 95
     :goto_0
@@ -47,7 +47,7 @@
 
     invoke-direct {v0}, Landroid/support/v4/view/e$b;-><init>()V
 
-    sput-object v0, Landroid/support/v4/view/e;->eB:Landroid/support/v4/view/e$a;
+    sput-object v0, Landroid/support/v4/view/e;->eX:Landroid/support/v4/view/e$a;
 
     goto :goto_0
 .end method
@@ -57,7 +57,7 @@
 
     .prologue
     .line 201
-    sget-object v0, Landroid/support/v4/view/e;->eB:Landroid/support/v4/view/e$a;
+    sget-object v0, Landroid/support/v4/view/e;->eX:Landroid/support/v4/view/e$a;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/e$a;->getAbsoluteGravity(II)I
 

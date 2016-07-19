@@ -7,7 +7,7 @@ final class ListPopupWindow$b
   
   public final void run()
   {
-    qi.clearListSelection();
+    qw.clearListSelection();
   }
 }
 

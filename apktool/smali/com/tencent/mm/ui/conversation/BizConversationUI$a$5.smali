@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+.implements Lcom/tencent/mm/model/ar$a;
 
 
 # annotations
@@ -18,16 +18,20 @@
 
 
 # instance fields
-.field final synthetic loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+.field final synthetic cXy:Landroid/app/ProgressDialog;
+
+.field final synthetic lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/conversation/BizConversationUI$a;)V
+.method constructor <init>(Lcom/tencent/mm/ui/conversation/BizConversationUI$a;Landroid/app/ProgressDialog;)V
     .locals 0
 
     .prologue
-    .line 414
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$5;->loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+    .line 379
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$5;->lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+
+    iput-object p2, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$5;->cXy:Landroid/app/ProgressDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,40 +40,35 @@
 
 
 # virtual methods
-.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 2
+.method public final ui()V
+    .locals 1
 
     .prologue
-    .line 419
-    new-instance v0, Lcom/tencent/mm/ui/tools/n;
+    .line 388
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$5;->cXy:Landroid/app/ProgressDialog;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$5;->loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+    if-eqz v0, :cond_0
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
+    .line 389
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$5;->cXy:Landroid/app/ProgressDialog;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/ui/tools/n;-><init>(Landroid/content/Context;)V
+    .line 392
+    :cond_0
+    return-void
+.end method
 
-    .line 420
-    new-instance v1, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$5$1;
+.method public final uj()Z
+    .locals 1
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$5$1;-><init>(Lcom/tencent/mm/ui/conversation/BizConversationUI$a$5;)V
+    .prologue
+    .line 383
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$5;->lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/tools/n;->hle:Lcom/tencent/mm/ui/base/n$c;
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizConversationUI$a;->g(Lcom/tencent/mm/ui/conversation/BizConversationUI$a;)Z
 
-    .line 430
-    new-instance v1, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$5$2;
-
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$5$2;-><init>(Lcom/tencent/mm/ui/conversation/BizConversationUI$a$5;)V
-
-    iput-object v1, v0, Lcom/tencent/mm/ui/tools/n;->hlf:Lcom/tencent/mm/ui/base/n$d;
-
-    .line 463
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/n;->bH()Z
-
-    .line 464
-    const/4 v0, 0x0
+    move-result v0
 
     return v0
 .end method

@@ -12,10 +12,10 @@ final class RegByEmailUI$10
   
   public final boolean onEditorAction(TextView paramTextView, int paramInt, KeyEvent paramKeyEvent)
   {
-    if (((paramInt != 6) && (paramInt != 5)) || (!RegByEmailUI.d(kuo).isChecked())) {
+    if (((paramInt != 6) && (paramInt != 5)) || (!RegByEmailUI.d(kTv).isChecked())) {
       return false;
     }
-    RegByEmailUI.c(kuo);
+    RegByEmailUI.c(kTv);
     return true;
   }
 }

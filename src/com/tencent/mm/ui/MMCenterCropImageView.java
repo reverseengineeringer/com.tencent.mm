@@ -2,10 +2,10 @@ package com.tencent.mm.ui;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.ImageView;
+import com.tencent.mm.memory.ui.PictureView;
 
 public class MMCenterCropImageView
-  extends ImageView
+  extends PictureView
 {
   public MMCenterCropImageView(Context paramContext, AttributeSet paramAttributeSet)
   {

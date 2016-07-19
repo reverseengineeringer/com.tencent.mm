@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract aRm()V
+.method public abstract aVY()V
 .end method

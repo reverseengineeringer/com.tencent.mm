@@ -10,20 +10,20 @@ import android.view.accessibility.AccessibilityEvent;
 final class SlidingPaneLayout$a
   extends android.support.v4.view.a
 {
-  private final Rect ht = new Rect();
+  private final Rect hM = new Rect();
   
   SlidingPaneLayout$a(SlidingPaneLayout paramSlidingPaneLayout) {}
   
   private boolean w(View paramView)
   {
-    return ia.C(paramView);
+    return iu.C(paramView);
   }
   
   public final void a(View paramView, android.support.v4.view.a.a parama)
   {
     android.support.v4.view.a.a locala = android.support.v4.view.a.a.a(parama);
     super.a(paramView, locala);
-    Rect localRect = ht;
+    Rect localRect = hM;
     locala.getBoundsInParent(localRect);
     parama.setBoundsInParent(localRect);
     locala.getBoundsInScreen(localRect);
@@ -40,8 +40,8 @@ final class SlidingPaneLayout$a
     parama.setSelected(locala.isSelected());
     parama.setLongClickable(locala.isLongClickable());
     parama.addAction(locala.getActions());
-    int i = android.support.v4.view.a.a.gK.w(gL);
-    android.support.v4.view.a.a.gK.c(gL, i);
+    int i = android.support.v4.view.a.a.hf.w(hg);
+    android.support.v4.view.a.a.hf.c(hg, i);
     locala.recycle();
     parama.setClassName(SlidingPaneLayout.class.getName());
     parama.setSource(paramView);
@@ -49,11 +49,11 @@ final class SlidingPaneLayout$a
     if ((paramView instanceof View)) {
       parama.setParent((View)paramView);
     }
-    int j = ia.getChildCount();
+    int j = iu.getChildCount();
     i = 0;
     while (i < j)
     {
-      paramView = ia.getChildAt(i);
+      paramView = iu.getChildAt(i);
       if ((!w(paramView)) && (paramView.getVisibility() == 0))
       {
         m.i(paramView);

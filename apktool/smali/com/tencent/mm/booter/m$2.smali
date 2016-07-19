@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/booter/m;->nk()V
+    value = Lcom/tencent/mm/booter/m;->ly()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -37,12 +37,12 @@
     .line 113
     const-string/jumbo v0, "mm_proc_startup"
 
-    invoke-static {v0}, Lcom/tencent/mm/booter/m;->cG(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/booter/m;->cM(Ljava/lang/String;)V
 
     .line 114
     const-string/jumbo v0, "push_proc_startup"
 
-    invoke-static {v0}, Lcom/tencent/mm/booter/m;->cG(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/booter/m;->cM(Ljava/lang/String;)V
 
     .line 115
     return-void

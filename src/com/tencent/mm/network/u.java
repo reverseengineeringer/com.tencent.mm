@@ -2,7 +2,7 @@ package com.tencent.mm.network;
 
 public final class u
 {
-  public n cjy = null;
+  public n ceP = null;
 }
 
 /* Location:

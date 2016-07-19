@@ -1,11 +1,11 @@
 package com.tencent.mm.ui.base;
 
 public final class MaskLayout$a
-  extends Enum
+  extends Enum<a>
 {
-  public static int[] bde()
+  public static int[] biH()
   {
-    return (int[])kID.clone();
+    return (int[])lhT.clone();
   }
 }
 

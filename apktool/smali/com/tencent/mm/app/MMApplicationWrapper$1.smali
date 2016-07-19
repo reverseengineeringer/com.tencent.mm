@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/svg/d/c$a;
+.implements Lcom/tencent/mm/svg/c/c$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/app/MMApplicationWrapper;->a(Landroid/app/Application;)V
+    value = Lcom/tencent/mm/app/MMApplicationWrapper;->initSVGPreload(Landroid/app/Application;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 176
+    .line 206
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,10 +34,10 @@
     .locals 0
 
     .prologue
-    .line 194
-    invoke-static {p1, p2, p3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 224
+    invoke-static {p1, p2, p3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 195
+    .line 225
     return-void
 .end method
 
@@ -45,10 +45,10 @@
     .locals 0
 
     .prologue
-    .line 189
-    invoke-static {p1, p2, p3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 219
+    invoke-static {p1, p2, p3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 190
+    .line 220
     return-void
 .end method
 
@@ -56,10 +56,10 @@
     .locals 0
 
     .prologue
-    .line 184
-    invoke-static {p1, p2, p3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 214
+    invoke-static {p1, p2, p3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 185
+    .line 215
     return-void
 .end method
 
@@ -67,9 +67,9 @@
     .locals 0
 
     .prologue
-    .line 200
-    invoke-static {p1, p2, p3, p4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 230
+    invoke-static {p1, p2, p3, p4}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 201
+    .line 231
     return-void
 .end method

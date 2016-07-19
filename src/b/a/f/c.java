@@ -2,7 +2,7 @@ package b.a.f;
 
 public abstract interface c
 {
-  public abstract String boR();
+  public abstract String bvP();
   
   public abstract String getNonce();
 }

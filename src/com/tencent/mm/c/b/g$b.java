@@ -3,62 +3,62 @@ package com.tencent.mm.c.b;
 import android.os.Build;
 import com.tencent.mm.compatible.d.l;
 import com.tencent.mm.compatible.util.i;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class g$b
 {
-  private static boolean aqZ = false;
-  private static boolean ara = false;
+  private static boolean acs = false;
+  private static boolean act = false;
   
   static
   {
-    int i = l.ok();
-    u.i("!32@/B4Tb64lLpIxLWWXLn1UOQo09hWH5jsc", "abi: %s, abi2: %s, cpuFlag: %d", new Object[] { Build.CPU_ABI, Build.CPU_ABI2, Integer.valueOf(i) });
-    if ((!ay.kz(Build.CPU_ABI)) && (!Build.CPU_ABI.contains("armeabi")) && (!ay.kz(Build.CPU_ABI2)) && (!Build.CPU_ABI2.contains("armeabi")))
+    int i = l.mA();
+    v.i("MicroMsg.RecorderUtil", "abi: %s, abi2: %s, cpuFlag: %d", new Object[] { Build.CPU_ABI, Build.CPU_ABI2, Integer.valueOf(i) });
+    if ((!be.kf(Build.CPU_ABI)) && (!Build.CPU_ABI.contains("armeabi")) && (!be.kf(Build.CPU_ABI2)) && (!Build.CPU_ABI2.contains("armeabi")))
     {
-      u.i("!32@/B4Tb64lLpIxLWWXLn1UOQo09hWH5jsc", "don't contains armeabi");
+      v.i("MicroMsg.RecorderUtil", "don't contains armeabi");
       i.b("wechatvoicesilk_v5", g.class.getClassLoader());
-      aqZ = true;
-      ara = false;
+      acs = true;
+      act = false;
     }
     for (;;)
     {
-      u.i("!32@/B4Tb64lLpIxLWWXLn1UOQo09hWH5jsc", "finish load silk so, canUseSilkDecode: %b, canUseSilkEncode: %b", new Object[] { Boolean.valueOf(aqZ), Boolean.valueOf(ara) });
+      v.i("MicroMsg.RecorderUtil", "finish load silk so, canUseSilkDecode: %b, canUseSilkEncode: %b", new Object[] { Boolean.valueOf(acs), Boolean.valueOf(act) });
       return;
       if ((i & 0x400) != 0)
       {
         try
         {
           i.b("wechatvoicesilk_v7a", g.class.getClassLoader());
-          aqZ = true;
-          ara = true;
+          acs = true;
+          act = true;
         }
         catch (UnsatisfiedLinkError localUnsatisfiedLinkError)
         {
-          u.e("!32@/B4Tb64lLpIxLWWXLn1UOQo09hWH5jsc", "load library failed!");
-          aqZ = false;
-          ara = false;
+          v.e("MicroMsg.RecorderUtil", "load library failed!");
+          acs = false;
+          act = false;
         }
       }
       else if ((i & 0x200) != 0)
       {
         i.b("wechatvoicesilk", g.class.getClassLoader());
-        aqZ = true;
-        ara = true;
+        acs = true;
+        act = true;
       }
       else
       {
         i.b("wechatvoicesilk_v5", g.class.getClassLoader());
-        aqZ = true;
-        ara = false;
+        acs = true;
+        act = false;
       }
     }
   }
   
-  public static boolean lS()
+  public static boolean kd()
   {
-    return ara;
+    return act;
   }
 }
 

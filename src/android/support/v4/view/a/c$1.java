@@ -12,18 +12,18 @@ final class c$1
   
   public final AccessibilityNodeInfo createAccessibilityNodeInfo(int paramInt)
   {
-    gQ.av();
+    hl.au();
     return null;
   }
   
-  public final List findAccessibilityNodeInfosByText(String paramString, int paramInt)
+  public final List<AccessibilityNodeInfo> findAccessibilityNodeInfosByText(String paramString, int paramInt)
   {
-    return gQ.au();
+    return hl.at();
   }
   
   public final boolean performAction(int paramInt1, int paramInt2, Bundle paramBundle)
   {
-    return gQ.at();
+    return hl.as();
   }
 }
 

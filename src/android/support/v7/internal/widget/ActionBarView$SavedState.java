@@ -8,18 +8,18 @@ import android.view.View.BaseSavedState;
 class ActionBarView$SavedState
   extends View.BaseSavedState
 {
-  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
-  int oo;
-  boolean oq;
+  public static final Parcelable.Creator<SavedState> CREATOR = new Parcelable.Creator() {};
+  int oD;
+  boolean oE;
   
   private ActionBarView$SavedState(Parcel paramParcel)
   {
     super(paramParcel);
-    oo = paramParcel.readInt();
+    oD = paramParcel.readInt();
     if (paramParcel.readInt() != 0) {}
     for (boolean bool = true;; bool = false)
     {
-      oq = bool;
+      oE = bool;
       return;
     }
   }
@@ -32,8 +32,8 @@ class ActionBarView$SavedState
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
     super.writeToParcel(paramParcel, paramInt);
-    paramParcel.writeInt(oo);
-    if (oq) {}
+    paramParcel.writeInt(oD);
+    if (oE) {}
     for (paramInt = 1;; paramInt = 0)
     {
       paramParcel.writeInt(paramInt);

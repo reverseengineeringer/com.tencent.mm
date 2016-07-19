@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field ccm:Ljava/lang/StringBuffer;
+.field bWb:Ljava/lang/StringBuffer;
 
-.field ccn:Ljava/lang/StringBuffer;
+.field bWc:Ljava/lang/StringBuffer;
 
 
 # direct methods
@@ -22,33 +22,33 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsns/c;->ccm:Ljava/lang/StringBuffer;
+    iput-object v0, p0, Lcom/tencent/mm/modelsns/c;->bWb:Ljava/lang/StringBuffer;
 
     .line 8
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsns/c;->ccn:Ljava/lang/StringBuffer;
+    iput-object v0, p0, Lcom/tencent/mm/modelsns/c;->bWc:Ljava/lang/StringBuffer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final CY()Ljava/lang/String;
+.method public final Di()Ljava/lang/String;
     .locals 2
 
     .prologue
     .line 23
-    iget-object v0, p0, Lcom/tencent/mm/modelsns/c;->ccm:Ljava/lang/StringBuffer;
+    iget-object v0, p0, Lcom/tencent/mm/modelsns/c;->bWb:Ljava/lang/StringBuffer;
 
     const-string/jumbo v1, "--end--\n\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     .line 24
-    iget-object v0, p0, Lcom/tencent/mm/modelsns/c;->ccm:Ljava/lang/StringBuffer;
+    iget-object v0, p0, Lcom/tencent/mm/modelsns/c;->bWb:Ljava/lang/StringBuffer;
 
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -57,12 +57,12 @@
     return-object v0
 .end method
 
-.method public final f(Ljava/lang/String;Ljava/lang/Object;)V
+.method public final m(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 3
 
     .prologue
     .line 10
-    iget-object v0, p0, Lcom/tencent/mm/modelsns/c;->ccm:Ljava/lang/StringBuffer;
+    iget-object v0, p0, Lcom/tencent/mm/modelsns/c;->bWb:Ljava/lang/StringBuffer;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -95,7 +95,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     .line 11
-    iget-object v0, p0, Lcom/tencent/mm/modelsns/c;->ccn:Ljava/lang/StringBuffer;
+    iget-object v0, p0, Lcom/tencent/mm/modelsns/c;->bWc:Ljava/lang/StringBuffer;
 
     invoke-virtual {v0, p2}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
 
@@ -108,7 +108,7 @@
 
     .prologue
     .line 19
-    iget-object v0, p0, Lcom/tencent/mm/modelsns/c;->ccn:Ljava/lang/StringBuffer;
+    iget-object v0, p0, Lcom/tencent/mm/modelsns/c;->bWc:Ljava/lang/StringBuffer;
 
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 

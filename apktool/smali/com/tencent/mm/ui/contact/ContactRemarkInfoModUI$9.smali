@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+.field final synthetic lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 710
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$9;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$9;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,12 +41,12 @@
 
     .prologue
     .line 713
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$9;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$9;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->f(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;)Z
 
     .line 714
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$9;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$9;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     const/4 v1, 0x1
 
@@ -55,25 +55,25 @@
     invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->a(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;ZI)V
 
     .line 715
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$9;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$9;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->g(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;)Lcom/tencent/mm/ui/base/MMClearEditText;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$9;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$9;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$9;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$9;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->A(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/platformtools/t;->ky(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/platformtools/s;->li(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$9;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$9;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-static {v3}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->g(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;)Lcom/tencent/mm/ui/base/MMClearEditText;
 
@@ -90,13 +90,13 @@
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/MMClearEditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 716
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$9;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$9;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->g(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;)Lcom/tencent/mm/ui/base/MMClearEditText;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$9;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$9;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->g(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;)Lcom/tencent/mm/ui/base/MMClearEditText;
 
@@ -113,7 +113,7 @@
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/MMClearEditText;->setSelection(I)V
 
     .line 717
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$9;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$9;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->z(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;)Landroid/view/View;
 

@@ -2,24 +2,24 @@ package com.tencent.mm.plugin.sight.encode.a;
 
 public abstract interface a
 {
-  public abstract int R(int paramInt, String paramString);
+  public abstract int Z(int paramInt, String paramString);
   
   public abstract int a(a parama);
   
   public abstract int a(b paramb);
   
-  public abstract int awk();
+  public abstract int ayI();
   
-  public abstract void awl();
+  public abstract void ayJ();
   
   public static abstract interface a
   {
-    public abstract void awm();
+    public abstract void ayK();
   }
   
   public static abstract interface b
   {
-    public abstract void awn();
+    public abstract void ayL();
   }
 }
 

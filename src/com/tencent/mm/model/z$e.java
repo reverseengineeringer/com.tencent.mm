@@ -2,7 +2,7 @@ package com.tencent.mm.model;
 
 public abstract interface z$e
 {
-  public abstract void K(int paramInt1, int paramInt2);
+  public abstract void c(String paramString, long paramLong);
 }
 
 /* Location:

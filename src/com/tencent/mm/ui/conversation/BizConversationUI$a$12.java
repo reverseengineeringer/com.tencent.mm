@@ -1,17 +1,29 @@
 package com.tencent.mm.ui.conversation;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import com.tencent.mm.e.b.t;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.r;
 
 final class BizConversationUI$a$12
-  implements MenuItem.OnMenuItemClickListener
+  implements AdapterView.OnItemClickListener
 {
   BizConversationUI$a$12(BizConversationUI.a parama) {}
   
-  public final boolean onMenuItemClick(MenuItem paramMenuItem)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    loi.finish();
-    return true;
+    BizConversationUI.a.a(lOA, (r)BizConversationUI.a.b(lOA).getItem(paramInt));
+    BizConversationUI.a.a(lOA, clOA).field_username);
+    paramAdapterView = BizConversationUI.a.c(lOA);
+    if (paramAdapterView == null)
+    {
+      v.e("MicroMsg.BizConversationUI", "user should not be null. position:%d, size:%d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(BizConversationUI.a.b(lOA).getCount()) });
+      BizConversationUI.a.b(lOA).notifyDataSetChanged();
+      return;
+    }
+    lOA.lNO.a(field_username, null, true);
   }
 }
 

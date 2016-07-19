@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 883
+    .line 896
     iput-object p1, p0, Lcom/tencent/mm/pluginsdk/d$3;->val$intent:Landroid/content/Intent;
 
     iput-object p2, p0, Lcom/tencent/mm/pluginsdk/d$3;->val$context:Landroid/content/Context;
@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public final f(Ljava/lang/String;Z)V
+.method public final i(Ljava/lang/String;Z)V
     .locals 6
 
     .prologue
@@ -48,11 +48,11 @@
 
     const/4 v5, 0x0
 
-    .line 886
+    .line 899
     if-nez p2, :cond_0
 
-    .line 887
-    const-string/jumbo v0, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
+    .line 900
+    const-string/jumbo v0, "MicroMsg.DeepLinkHelper"
 
     const-string/jumbo v1, "getContact fail, %s"
 
@@ -60,13 +60,13 @@
 
     aput-object p1, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 901
+    .line 914
     :goto_0
     return-void
 
-    .line 891
+    .line 904
     :cond_0
     iget-object v0, p0, Lcom/tencent/mm/pluginsdk/d$3;->val$intent:Landroid/content/Intent;
 
@@ -74,13 +74,13 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 893
+    .line 906
     :try_start_0
     iget-object v0, p0, Lcom/tencent/mm/pluginsdk/d$3;->val$context:Landroid/content/Context;
 
     if-eqz v0, :cond_1
 
-    .line 894
+    .line 907
     iget-object v0, p0, Lcom/tencent/mm/pluginsdk/d$3;->val$context:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/tencent/mm/pluginsdk/d$3;->val$intent:Landroid/content/Intent;
@@ -91,12 +91,12 @@
 
     goto :goto_0
 
-    .line 898
+    .line 911
     :catch_0
     move-exception v0
 
-    .line 899
-    const-string/jumbo v1, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
+    .line 912
+    const-string/jumbo v1, "MicroMsg.DeepLinkHelper"
 
     const-string/jumbo v2, ""
 
@@ -106,14 +106,14 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 896
+    .line 909
     :cond_1
     :try_start_1
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 

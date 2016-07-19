@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/bch" android:background="@drawable/ik" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/bci" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/bcj" android:layout_width="37.0dip" android:layout_height="37.0dip" android:scaleType="fitXY" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <ImageView android:id="@id/bck" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginTop="27.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/h4" android:textColor="#ff666666" android:id="@id/bcl" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/bck" android:layout_centerHorizontal="true" style="@style/MMFontTitleInList" />
+        <TextView android:textSize="@dimen/jc" android:textColor="#ff999999" android:id="@id/bcm" android:paddingLeft="@dimen/j8" android:paddingTop="6.0dip" android:paddingRight="@dimen/j8" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/bcl" android:layout_centerHorizontal="true" style="@style/MMFontTitleInList" />
+    </RelativeLayout>
+    <ImageView android:id="@id/b1q" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.5dip" android:src="@drawable/rq" android:scaleType="fitXY" android:layout_alignParentTop="true" />
+    <ImageView android:id="@id/b2p" android:layout_width="fill_parent" android:layout_height="0.5dip" android:src="@drawable/rq" android:scaleType="fitXY" android:layout_alignParentBottom="true" />
+    <ImageView android:id="@id/bcn" android:visibility="gone" android:layout_width="0.5dip" android:layout_height="fill_parent" android:src="@drawable/rq" android:scaleType="fitXY" android:layout_above="@id/b2p" android:layout_below="@id/b1q" android:layout_alignParentLeft="true" />
+    <ImageView android:id="@id/bco" android:layout_width="0.5dip" android:layout_height="fill_parent" android:src="@drawable/rq" android:scaleType="fitXY" android:layout_above="@id/b2p" android:layout_below="@id/b1q" android:layout_alignParentRight="true" android:layout_alignWithParentIfMissing="true" />
+</RelativeLayout>

@@ -1,19 +1,16 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.res.Resources;
-import android.widget.TextView;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 final class ChattingSendDataToDeviceUI$8
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  ChattingSendDataToDeviceUI$8(ChattingSendDataToDeviceUI paramChattingSendDataToDeviceUI, eb parameb, ChattingSendDataToDeviceUI.c paramc) {}
+  ChattingSendDataToDeviceUI$8(ChattingSendDataToDeviceUI paramChattingSendDataToDeviceUI) {}
   
-  public final void run()
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    kXw.ldT.setVisibility(0);
-    kXw.kXB.setTextColor(kXv.getResources().getColor(2131231237));
-    kXw.kXB.setText(kXv.getText(2131427895));
-    kXx.awh = kXv.getResources().getString(2131427895);
+    paramDialogInterface.dismiss();
   }
 }
 

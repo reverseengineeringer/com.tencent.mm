@@ -4,11 +4,11 @@
 
 
 # static fields
-.field public static final aoY:[Ljava/lang/String;
+.field public static final bkN:[Ljava/lang/String;
 
 
 # instance fields
-.field public final bCw:Lcom/tencent/mm/az/g;
+.field public final bvG:Lcom/tencent/mm/bc/g;
 
 
 # direct methods
@@ -39,12 +39,12 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/modelfriend/ag;->aoY:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/modelfriend/ag;->bkN:[Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/tencent/mm/az/g;)V
+.method public constructor <init>(Lcom/tencent/mm/bc/g;)V
     .locals 0
 
     .prologue
@@ -52,7 +52,7 @@
     invoke-direct {p0}, Lcom/tencent/mm/sdk/h/j;-><init>()V
 
     .line 44
-    iput-object p1, p0, Lcom/tencent/mm/modelfriend/ag;->bCw:Lcom/tencent/mm/az/g;
+    iput-object p1, p0, Lcom/tencent/mm/modelfriend/ag;->bvG:Lcom/tencent/mm/bc/g;
 
     .line 45
     return-void
@@ -60,70 +60,6 @@
 
 
 # virtual methods
-.method public final V(J)Lcom/tencent/mm/modelfriend/af;
-    .locals 3
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 133
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, "select qqlist.qq,qqlist.wexinstatus,qqlist.groupid,qqlist.username,qqlist.nickname,qqlist.pyinitial,qqlist.quanpin,qqlist.qqnickname,qqlist.qqpyinitial,qqlist.qqquanpin,qqlist.qqremark,qqlist.qqremarkpyinitial,qqlist.qqremarkquanpin,qqlist.reserved1,qqlist.reserved2,qqlist.reserved3,qqlist.reserved4 from qqlist  where qqlist.qq = \""
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "\""
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 134
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ag;->bCw:Lcom/tencent/mm/az/g;
-
-    invoke-virtual {v2, v1, v0}, Lcom/tencent/mm/az/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    .line 135
-    if-nez v1, :cond_0
-
-    .line 144
-    :goto_0
-    return-object v0
-
-    .line 139
-    :cond_0
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    .line 140
-    new-instance v0, Lcom/tencent/mm/modelfriend/af;
-
-    invoke-direct {v0}, Lcom/tencent/mm/modelfriend/af;-><init>()V
-
-    .line 141
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelfriend/af;->c(Landroid/database/Cursor;)V
-
-    .line 143
-    :cond_1
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    goto :goto_0
-.end method
-
 .method public final a(JLcom/tencent/mm/modelfriend/af;)I
     .locals 7
 
@@ -131,7 +67,7 @@
     const/4 v0, 0x0
 
     .line 190
-    invoke-virtual {p3}, Lcom/tencent/mm/modelfriend/af;->zg()Landroid/content/ContentValues;
+    invoke-virtual {p3}, Lcom/tencent/mm/modelfriend/af;->zt()Landroid/content/ContentValues;
 
     move-result-object v1
 
@@ -143,7 +79,7 @@
     if-lez v2, :cond_0
 
     .line 193
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ag;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ag;->bvG:Lcom/tencent/mm/bc/g;
 
     const-string/jumbo v3, "qqlist"
 
@@ -159,7 +95,7 @@
 
     aput-object v6, v5, v0
 
-    invoke-virtual {v2, v3, v1, v4, v5}, Lcom/tencent/mm/az/g;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-virtual {v2, v3, v1, v4, v5}, Lcom/tencent/mm/bc/g;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v0
 
@@ -199,7 +135,7 @@
 
     .line 207
     :cond_1
-    const-string/jumbo v1, "!32@/B4Tb64lLpLDqTvM25JsITvy8IO+07dZ"
+    const-string/jumbo v1, "MicroMsg.QQListStorage"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -207,7 +143,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/tencent/mm/modelfriend/af;->zi()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/tencent/mm/modelfriend/af;->zv()Ljava/lang/String;
 
     move-result-object v3
 
@@ -219,28 +155,28 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 208
-    iput v5, p1, Lcom/tencent/mm/modelfriend/af;->aou:I
+    iput v5, p1, Lcom/tencent/mm/modelfriend/af;->aqQ:I
 
     .line 209
-    invoke-virtual {p1}, Lcom/tencent/mm/modelfriend/af;->zg()Landroid/content/ContentValues;
+    invoke-virtual {p1}, Lcom/tencent/mm/modelfriend/af;->zt()Landroid/content/ContentValues;
 
     move-result-object v1
 
     .line 210
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ag;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ag;->bvG:Lcom/tencent/mm/bc/g;
 
     const-string/jumbo v3, "qqlist"
 
     const-string/jumbo v4, "qq"
 
-    invoke-virtual {v2, v3, v4, v1}, Lcom/tencent/mm/az/g;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
+    invoke-virtual {v2, v3, v4, v1}, Lcom/tencent/mm/bc/g;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     .line 211
     if-eq v1, v5, :cond_0
@@ -252,7 +188,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-wide v2, p1, Lcom/tencent/mm/modelfriend/af;->bNk:J
+    iget-wide v2, p1, Lcom/tencent/mm/modelfriend/af;->bGE:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -270,12 +206,76 @@
     goto :goto_0
 .end method
 
+.method public final aa(J)Lcom/tencent/mm/modelfriend/af;
+    .locals 3
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 133
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "select qqlist.qq,qqlist.wexinstatus,qqlist.groupid,qqlist.username,qqlist.nickname,qqlist.pyinitial,qqlist.quanpin,qqlist.qqnickname,qqlist.qqpyinitial,qqlist.qqquanpin,qqlist.qqremark,qqlist.qqremarkpyinitial,qqlist.qqremarkquanpin,qqlist.reserved1,qqlist.reserved2,qqlist.reserved3,qqlist.reserved4 from qqlist  where qqlist.qq = \""
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "\""
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 134
+    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ag;->bvG:Lcom/tencent/mm/bc/g;
+
+    invoke-virtual {v2, v1, v0}, Lcom/tencent/mm/bc/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v1
+
+    .line 135
+    if-nez v1, :cond_0
+
+    .line 144
+    :goto_0
+    return-object v0
+
+    .line 139
+    :cond_0
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 140
+    new-instance v0, Lcom/tencent/mm/modelfriend/af;
+
+    invoke-direct {v0}, Lcom/tencent/mm/modelfriend/af;-><init>()V
+
+    .line 141
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelfriend/af;->b(Landroid/database/Cursor;)V
+
+    .line 143
+    :cond_1
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    goto :goto_0
+.end method
+
 .method public final b(ILjava/lang/String;Z)Landroid/database/Cursor;
     .locals 3
 
     .prologue
     .line 112
-    const-string/jumbo v0, "!32@/B4Tb64lLpLDqTvM25JsITvy8IO+07dZ"
+    const-string/jumbo v0, "MicroMsg.QQListStorage"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -301,7 +301,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 113
     new-instance v0, Ljava/lang/StringBuilder;
@@ -548,7 +548,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 129
-    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ag;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ag;->bvG:Lcom/tencent/mm/bc/g;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -556,7 +556,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/az/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/bc/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
@@ -601,7 +601,7 @@
     goto/16 :goto_0
 .end method
 
-.method public final di(I)Z
+.method public final dN(I)Z
     .locals 7
 
     .prologue
@@ -632,9 +632,9 @@
 
     .line 302
     :try_start_0
-    iget-object v5, p0, Lcom/tencent/mm/modelfriend/ag;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v5, p0, Lcom/tencent/mm/modelfriend/ag;->bvG:Lcom/tencent/mm/bc/g;
 
-    invoke-virtual {v5, v3, v4}, Lcom/tencent/mm/az/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v5, v3, v4}, Lcom/tencent/mm/bc/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v2
 
@@ -670,7 +670,7 @@
 
     .line 307
     :try_start_1
-    const-string/jumbo v3, "!32@/B4Tb64lLpLDqTvM25JsITvy8IO+07dZ"
+    const-string/jumbo v3, "MicroMsg.QQListStorage"
 
     const-string/jumbo v4, "[cpan] check qq list show head faild.:%s"
 
@@ -686,7 +686,7 @@
 
     aput-object v1, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -711,7 +711,7 @@
     throw v0
 .end method
 
-.method public final hC(Ljava/lang/String;)Lcom/tencent/mm/modelfriend/af;
+.method public final hU(Ljava/lang/String;)Lcom/tencent/mm/modelfriend/af;
     .locals 3
 
     .prologue
@@ -739,9 +739,9 @@
     move-result-object v1
 
     .line 149
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ag;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ag;->bvG:Lcom/tencent/mm/bc/g;
 
-    invoke-virtual {v2, v1, v0}, Lcom/tencent/mm/az/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v2, v1, v0}, Lcom/tencent/mm/bc/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
 
@@ -766,7 +766,7 @@
     invoke-direct {v0}, Lcom/tencent/mm/modelfriend/af;-><init>()V
 
     .line 156
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelfriend/af;->c(Landroid/database/Cursor;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelfriend/af;->b(Landroid/database/Cursor;)V
 
     .line 158
     :cond_1
@@ -800,9 +800,9 @@
 
     .line 108
     :goto_0
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ag;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ag;->bvG:Lcom/tencent/mm/bc/g;
 
-    invoke-virtual {v2, v0, v1}, Lcom/tencent/mm/az/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v2, v0, v1}, Lcom/tencent/mm/bc/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
@@ -836,7 +836,7 @@
     goto :goto_0
 .end method
 
-.method protected final yv()Z
+.method protected final yH()Z
     .locals 5
 
     .prologue
@@ -845,13 +845,13 @@
     const/4 v1, 0x0
 
     .line 282
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ag;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ag;->bvG:Lcom/tencent/mm/bc/g;
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ag;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ag;->bvG:Lcom/tencent/mm/bc/g;
 
-    invoke-virtual {v2}, Lcom/tencent/mm/az/g;->aVP()Z
+    invoke-virtual {v2}, Lcom/tencent/mm/bc/g;->bbc()Z
 
     move-result v2
 
@@ -859,13 +859,13 @@
 
     .line 283
     :cond_0
-    const-string/jumbo v2, "!32@/B4Tb64lLpLDqTvM25JsITvy8IO+07dZ"
+    const-string/jumbo v2, "MicroMsg.QQListStorage"
 
     const-string/jumbo v3, "shouldProcessEvent db is close :%s"
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/ag;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/ag;->bvG:Lcom/tencent/mm/bc/g;
 
     if-nez v0, :cond_2
 
@@ -874,7 +874,7 @@
     :goto_0
     aput-object v0, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -884,9 +884,9 @@
 
     .line 283
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/ag;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/ag;->bvG:Lcom/tencent/mm/bc/g;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/az/g;->aVP()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/bc/g;->bbc()Z
 
     move-result v0
 

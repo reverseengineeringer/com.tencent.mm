@@ -7,7 +7,7 @@ final class SelectContactUI$1$1
   
   public final void run()
   {
-    lmn.lmm.moveTaskToBack(true);
+    lMC.lMB.moveTaskToBack(true);
   }
 }
 

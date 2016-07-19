@@ -4,509 +4,313 @@
 
 
 # static fields
-.field public static cmA:Z
-
-.field public static cmB:Z
-
-.field public static cmC:Z
-
-.field public static cmD:Z
-
-.field public static cmE:Z
-
-.field public static cmF:Z
-
-.field public static cmG:Z
-
-.field public static cmH:Z
-
-.field public static cmI:Z
-
-.field public static cmJ:Z
-
-.field public static cmK:Z
-
-.field public static cmL:Ljava/lang/String;
-
-.field public static cmM:Z
-
-.field public static cmN:Z
-
-.field public static cmO:Z
-
-.field public static cmP:Z
-
-.field public static cmQ:I
-
-.field public static cmR:Z
-
-.field public static cmS:Z
-
-.field public static cmT:Z
-
-.field public static cmU:Ljava/lang/String;
-
-.field public static cmV:Ljava/lang/String;
-
-.field public static cmW:Z
-
-.field public static cmX:Z
-
-.field public static cmY:Z
-
-.field public static cmZ:Z
-
-.field public static cmz:Z
-
-.field public static cnA:Z
-
-.field public static cnB:Z
-
-.field public static cnC:I
-
-.field public static cnD:Z
-
-.field public static cnE:Z
-
-.field public static cnF:Z
-
-.field public static cnG:Z
-
-.field public static cnH:Z
-
-.field public static cnI:Z
-
-.field public static cnJ:I
-
-.field public static cnK:Z
-
-.field public static cnL:Z
-
-.field public static cnM:Z
-
-.field public static cnN:Ljava/lang/String;
-
-.field public static cnO:I
-
-.field public static cnP:Z
-
-.field public static cnQ:Z
-
-.field public static cnR:I
-
-.field public static cnS:Z
-
-.field public static cnT:Ljava/lang/String;
-
-.field private static cnU:Ljava/util/HashMap;
-
-.field public static cnV:Z
-
-.field public static cnW:Z
-
-.field public static cnX:Z
-
-.field public static cna:Z
-
-.field public static cnb:Z
-
-.field public static cnc:Z
-
-.field public static cnd:I
-
-.field public static cne:I
-
-.field public static cnf:Z
-
-.field public static cng:Ljava/lang/String;
-
-.field public static cnh:Ljava/lang/String;
-
-.field public static cni:Z
-
-.field public static cnj:Z
-
-.field public static cnk:I
-
-.field public static cnl:I
-
-.field public static cnm:I
-
-.field public static cnn:Ljava/lang/String;
-
-.field public static cno:Ljava/lang/String;
-
-.field public static cnp:Ljava/lang/String;
-
-.field public static cnq:Ljava/lang/String;
-
-.field public static cnr:Z
-
-.field public static cns:Z
-
-.field public static cnt:Z
-
-.field public static cnu:Ljava/lang/String;
-
-.field public static cnv:Ljava/lang/String;
-
-.field public static cnw:Ljava/lang/String;
-
-.field public static cnx:Ljava/lang/String;
-
-.field public static cny:Ljava/lang/String;
-
-.field public static cnz:Z
-
-.field public static lat:D
-
-.field public static lng:D
+.field private static final cjk:[J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 1
 
     .prologue
-    const-wide/16 v3, 0x0
+    .line 39
+    const/4 v0, 0x3
 
-    const/4 v2, 0x0
+    new-array v0, v0, [J
 
-    const/4 v1, 0x0
+    fill-array-data v0, :array_0
 
-    .line 13
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmz:Z
-
-    .line 14
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmA:Z
-
-    .line 15
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmB:Z
-
-    .line 16
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmC:Z
-
-    .line 17
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmD:Z
-
-    .line 18
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmE:Z
-
-    .line 20
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmF:Z
-
-    .line 22
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmG:Z
-
-    .line 23
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmH:Z
-
-    .line 25
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmI:Z
-
-    .line 27
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmJ:Z
-
-    .line 28
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmK:Z
-
-    .line 29
-    const-string/jumbo v0, ""
-
-    sput-object v0, Lcom/tencent/mm/platformtools/r;->cmL:Ljava/lang/String;
-
-    .line 30
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmM:Z
-
-    .line 32
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmN:Z
-
-    .line 33
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmO:Z
-
-    .line 34
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmP:Z
-
-    .line 35
-    sput v1, Lcom/tencent/mm/platformtools/r;->cmQ:I
-
-    .line 36
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmR:Z
-
-    .line 37
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmS:Z
-
-    .line 38
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmT:Z
-
-    .line 40
-    const-string/jumbo v0, ""
-
-    sput-object v0, Lcom/tencent/mm/platformtools/r;->cmU:Ljava/lang/String;
-
-    .line 41
-    const-string/jumbo v0, ""
-
-    sput-object v0, Lcom/tencent/mm/platformtools/r;->cmV:Ljava/lang/String;
-
-    .line 42
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmW:Z
-
-    .line 44
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmX:Z
-
-    .line 45
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmY:Z
-
-    .line 46
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cmZ:Z
-
-    .line 47
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cna:Z
-
-    .line 48
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnb:Z
-
-    .line 49
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnc:Z
-
-    .line 51
-    sput v1, Lcom/tencent/mm/platformtools/r;->cnd:I
-
-    .line 52
-    sput v1, Lcom/tencent/mm/platformtools/r;->cne:I
-
-    .line 54
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnf:Z
-
-    .line 56
-    sput-object v2, Lcom/tencent/mm/platformtools/r;->cng:Ljava/lang/String;
-
-    .line 57
-    sput-object v2, Lcom/tencent/mm/platformtools/r;->cnh:Ljava/lang/String;
-
-    .line 58
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cni:Z
-
-    .line 59
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnj:Z
-
-    .line 61
-    sput v1, Lcom/tencent/mm/platformtools/r;->cnk:I
-
-    .line 63
-    sput v1, Lcom/tencent/mm/platformtools/r;->cnl:I
-
-    .line 64
-    sput v1, Lcom/tencent/mm/platformtools/r;->cnm:I
-
-    .line 65
-    const-string/jumbo v0, ""
-
-    sput-object v0, Lcom/tencent/mm/platformtools/r;->cnn:Ljava/lang/String;
-
-    .line 67
-    const-string/jumbo v0, ""
-
-    sput-object v0, Lcom/tencent/mm/platformtools/r;->cno:Ljava/lang/String;
-
-    .line 68
-    sput-object v2, Lcom/tencent/mm/platformtools/r;->cnp:Ljava/lang/String;
-
-    .line 69
-    sput-object v2, Lcom/tencent/mm/platformtools/r;->cnq:Ljava/lang/String;
-
-    .line 71
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnr:Z
-
-    .line 73
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cns:Z
-
-    .line 74
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnt:Z
-
-    .line 76
-    sput-wide v3, Lcom/tencent/mm/platformtools/r;->lat:D
-
-    .line 77
-    sput-wide v3, Lcom/tencent/mm/platformtools/r;->lng:D
-
-    .line 79
-    const-string/jumbo v0, ""
-
-    sput-object v0, Lcom/tencent/mm/platformtools/r;->cnu:Ljava/lang/String;
-
-    .line 80
-    const-string/jumbo v0, ""
-
-    sput-object v0, Lcom/tencent/mm/platformtools/r;->cnv:Ljava/lang/String;
-
-    .line 81
-    const-string/jumbo v0, ""
-
-    sput-object v0, Lcom/tencent/mm/platformtools/r;->cnw:Ljava/lang/String;
-
-    .line 82
-    const-string/jumbo v0, ""
-
-    sput-object v0, Lcom/tencent/mm/platformtools/r;->cnx:Ljava/lang/String;
-
-    .line 83
-    const-string/jumbo v0, ""
-
-    sput-object v0, Lcom/tencent/mm/platformtools/r;->cny:Ljava/lang/String;
-
-    .line 84
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnz:Z
-
-    .line 85
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnA:Z
-
-    .line 86
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnB:Z
-
-    .line 89
-    sput v1, Lcom/tencent/mm/platformtools/r;->cnC:I
-
-    .line 90
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnD:Z
-
-    .line 92
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnE:Z
-
-    .line 93
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnF:Z
-
-    .line 94
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnG:Z
-
-    .line 95
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnH:Z
-
-    .line 97
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnI:Z
-
-    .line 98
-    const/16 v0, 0xbb8
-
-    sput v0, Lcom/tencent/mm/platformtools/r;->cnJ:I
-
-    .line 100
-    const/4 v0, 0x1
-
-    sput-boolean v0, Lcom/tencent/mm/platformtools/r;->cnK:Z
-
-    .line 101
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnL:Z
-
-    .line 104
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnM:Z
-
-    .line 105
-    const-string/jumbo v0, ""
-
-    sput-object v0, Lcom/tencent/mm/platformtools/r;->cnN:Ljava/lang/String;
-
-    .line 106
-    sput v1, Lcom/tencent/mm/platformtools/r;->cnO:I
-
-    .line 108
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnP:Z
-
-    .line 110
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnQ:Z
-
-    .line 112
-    const/4 v0, -0x1
-
-    sput v0, Lcom/tencent/mm/platformtools/r;->cnR:I
-
-    .line 114
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnS:Z
-
-    .line 116
-    const-string/jumbo v0, ""
-
-    sput-object v0, Lcom/tencent/mm/platformtools/r;->cnT:Ljava/lang/String;
-
-    .line 203
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    sput-object v0, Lcom/tencent/mm/platformtools/r;->cnU:Ljava/util/HashMap;
-
-    .line 246
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnV:Z
-
-    .line 247
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnW:Z
-
-    .line 248
-    sput-boolean v1, Lcom/tencent/mm/platformtools/r;->cnX:Z
+    sput-object v0, Lcom/tencent/mm/platformtools/r;->cjk:[J
 
     return-void
+
+    nop
+
+    :array_0
+    .array-data 8
+        0x0
+        0xf731400
+        0x240c8400
+    .end array-data
 .end method
 
-.method public static ac(II)V
-    .locals 4
+.method public static Gk()Ljava/lang/String;
+    .locals 3
 
     .prologue
-    .line 206
-    sget-object v1, Lcom/tencent/mm/platformtools/r;->cnU:Ljava/util/HashMap;
-
-    monitor-enter v1
-
-    .line 207
-    :try_start_0
-    sget-object v0, Lcom/tencent/mm/platformtools/r;->cnU:Ljava/util/HashMap;
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 25
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
+    const-string/jumbo v1, "update_config_prefs"
 
-    .line 208
-    if-nez v0, :cond_0
+    const/4 v2, 0x4
 
-    .line 209
-    new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
+    move-result-object v0
 
-    .line 210
-    sget-object v2, Lcom/tencent/mm/platformtools/r;->cnU:Ljava/util/HashMap;
+    .line 26
+    const-string/jumbo v1, "update_downloaded_pack_md5_key"
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v2, 0x0
 
-    move-result-object v3
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v2, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
-    .line 212
-    :cond_0
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return-object v0
+.end method
+
+.method public static Gl()I
+    .locals 3
+
+    .prologue
+    .line 35
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "update_config_prefs"
+
+    const/4 v2, 0x4
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 36
+    const-string/jumbo v1, "update_downloaded_pack_update_type"
+
+    const/4 v2, 0x3
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static Gm()Z
+    .locals 12
+
+    .prologue
+    const-wide/16 v10, 0x0
+
+    const/4 v9, 0x4
+
+    const/4 v1, 0x0
+
+    const/4 v0, 0x1
+
+    .line 48
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/ConcurrentLinkedQueue;->add(Ljava/lang/Object;)Z
+    const-string/jumbo v3, "update_config_prefs"
 
-    .line 213
-    monitor-exit v1
+    invoke-virtual {v2, v3, v9}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    return-void
+    move-result-object v2
 
-    :catchall_0
-    move-exception v0
+    .line 49
+    const-string/jumbo v3, "update_downloaded_cancel_ts"
 
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-interface {v2, v3, v10, v11}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
-    throw v0
+    move-result-wide v4
+
+    .line 50
+    const-string/jumbo v3, "update_downloaded_cancel_times"
+
+    invoke-interface {v2, v3, v1}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v2
+
+    .line 52
+    const-string/jumbo v3, "MicroMsg.UpdateUtil"
+
+    const-string/jumbo v6, "checkIgnoreDownloadedPack last: %s times: %s"
+
+    const/4 v7, 0x2
+
+    new-array v7, v7, [Ljava/lang/Object;
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v8
+
+    aput-object v8, v7, v1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    aput-object v8, v7, v0
+
+    invoke-static {v3, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 54
+    sget-object v3, Lcom/tencent/mm/platformtools/r;->cjk:[J
+
+    array-length v3, v3
+
+    add-int/lit8 v3, v3, -0x1
+
+    if-le v2, v3, :cond_1
+
+    .line 67
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 58
+    :cond_1
+    sget-object v3, Lcom/tencent/mm/platformtools/r;->cjk:[J
+
+    aget-wide v2, v3, v2
+
+    .line 60
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v6
+
+    sub-long/2addr v6, v4
+
+    cmp-long v2, v6, v2
+
+    if-lez v2, :cond_2
+
+    move v0, v1
+
+    .line 61
+    goto :goto_0
+
+    .line 62
+    :cond_2
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    sub-long/2addr v2, v4
+
+    cmp-long v1, v2, v10
+
+    if-gez v1, :cond_0
+
+    .line 63
+    const-string/jumbo v1, "MicroMsg.UpdateUtil"
+
+    const-string/jumbo v2, "user modify mobile time. we just remove the config."
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 64
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "update_config_prefs"
+
+    invoke-virtual {v1, v2, v9}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    const-string/jumbo v1, "MicroMsg.UpdateUtil"
+
+    const-string/jumbo v2, "clearUpdateConfigPrefs"
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+.end method
+
+.method public static Gn()Z
+    .locals 12
+
+    .prologue
+    const-wide/16 v10, 0x0
+
+    const/4 v1, 0x1
+
+    const/4 v0, 0x0
+
+    .line 76
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const-string/jumbo v3, "update_config_prefs"
+
+    const/4 v4, 0x4
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v2
+
+    .line 77
+    const-string/jumbo v3, "update_downloading_in_silence"
+
+    invoke-interface {v2, v3, v10, v11}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v4
+
+    .line 78
+    const-string/jumbo v3, "update_download_start_one_immediate"
+
+    invoke-interface {v2, v3, v0}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v2
+
+    .line 79
+    const-string/jumbo v3, "MicroMsg.UpdateUtil"
+
+    const-string/jumbo v6, "hasUnfinishDownloadingInSilence unfinish %s"
+
+    new-array v7, v1, [Ljava/lang/Object;
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v8
+
+    aput-object v8, v7, v0
+
+    invoke-static {v3, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 86
+    if-nez v2, :cond_0
+
+    cmp-long v2, v4, v10
+
+    if-eqz v2, :cond_1
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    sub-long/2addr v2, v4
+
+    const-wide/32 v4, 0x36ee80
+
+    cmp-long v2, v2, v4
+
+    if-lez v2, :cond_1
+
+    :cond_0
+    move v0, v1
+
+    .line 90
+    :cond_1
+    return v0
 .end method

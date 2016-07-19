@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lBs:Lcom/tencent/mm/ui/transmit/a;
+.field final synthetic mck:Lcom/tencent/mm/ui/transmit/a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 138
-    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/a$2;->lBs:Lcom/tencent/mm/ui/transmit/a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/a$2;->mck:Lcom/tencent/mm/ui/transmit/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,24 +41,24 @@
 
     .prologue
     .line 142
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/a$2;->lBs:Lcom/tencent/mm/ui/transmit/a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/a$2;->mck:Lcom/tencent/mm/ui/transmit/a;
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/transmit/a;->apf:Lcom/tencent/mm/ui/base/h;
+    iget-object v1, v0, Lcom/tencent/mm/ui/transmit/a;->fTL:Lcom/tencent/mm/ui/base/h;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/transmit/a;->apf:Lcom/tencent/mm/ui/base/h;
+    iget-object v1, v0, Lcom/tencent/mm/ui/transmit/a;->fTL:Lcom/tencent/mm/ui/base/h;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/base/h;->dismiss()V
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/transmit/a;->apf:Lcom/tencent/mm/ui/base/h;
+    iput-object v1, v0, Lcom/tencent/mm/ui/transmit/a;->fTL:Lcom/tencent/mm/ui/base/h;
 
     :cond_0
-    iget-object v0, v0, Lcom/tencent/mm/ui/transmit/a;->lBr:Lcom/tencent/mm/ui/transmit/a$a;
+    iget-object v0, v0, Lcom/tencent/mm/ui/transmit/a;->mcj:Lcom/tencent/mm/ui/transmit/a$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/transmit/a$a;->bjj()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/transmit/a$a;->bph()V
 
     .line 143
     return-void

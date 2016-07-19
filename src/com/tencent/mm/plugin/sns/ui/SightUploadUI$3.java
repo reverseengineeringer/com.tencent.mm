@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.d.a.lj;
+import com.tencent.mm.e.a.lp;
 import com.tencent.mm.sdk.c.a;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.g;
@@ -16,24 +16,24 @@ final class SightUploadUI$3
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = hbd.koJ.kpc;
-    String str = hbd.getString(2131430527);
+    paramMenuItem = hoE.kNN.kOg;
+    String str = hoE.getString(2131235362);
     g.c local1 = new g.c()
     {
-      public final void eu(int paramAnonymousInt)
+      public final void fg(int paramAnonymousInt)
       {
         switch (paramAnonymousInt)
         {
         default: 
           return;
         }
-        lj locallj = new lj();
-        aHJ.type = 0;
-        aHJ.aHO = true;
-        aHJ.aHL = true;
-        a.jUF.j(locallj);
-        hbd.age();
-        hbd.finish();
+        lp locallp = new lp();
+        atZ.type = 0;
+        atZ.aue = true;
+        atZ.aub = true;
+        a.kug.y(locallp);
+        hoE.aiI();
+        hoE.finish();
       }
     };
     g.a(paramMenuItem, null, new String[] { str }, null, local1);

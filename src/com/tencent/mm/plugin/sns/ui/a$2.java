@@ -1,23 +1,26 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
+import android.view.View;
+import com.tencent.mm.sdk.platformtools.v;
+import java.util.Iterator;
+import java.util.LinkedList;
 
 final class a$2
-  implements Animation.AnimationListener
+  implements Runnable
 {
-  a$2(a parama) {}
+  a$2(a parama, View paramView, LinkedList paramLinkedList) {}
   
-  public final void onAnimationEnd(Animation paramAnimation)
+  public final void run()
   {
-    gVw.gRl = false;
-  }
-  
-  public final void onAnimationRepeat(Animation paramAnimation) {}
-  
-  public final void onAnimationStart(Animation paramAnimation)
-  {
-    gVw.gRl = true;
+    if (hiH.hiD == hiH.hiy)
+    {
+      v.i("MicroMsg.ImagePreviewAnimation", "dancy enter Animation not Start!");
+      hiF.requestLayout();
+      Iterator localIterator = hiG.iterator();
+      while (localIterator.hasNext()) {
+        ((View)localIterator.next()).requestLayout();
+      }
+    }
   }
 }
 

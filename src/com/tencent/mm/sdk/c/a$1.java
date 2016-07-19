@@ -7,7 +7,7 @@ final class a$1
   
   public final void run()
   {
-    a.jUF.j(cQw);
+    a.kug.y(kui);
   }
 }
 

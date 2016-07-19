@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingLeft="@dimen/i7" android:paddingRight="@dimen/i7" android:layout_height="@dimen/i6" style="@style/MMListItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/l4" android:layout_width="@dimen/hz" android:layout_height="@dimen/hz" android:src="@raw/default_avatar" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/j8" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/a_o" android:layout_width="0.0dip" android:layout_weight="1.0" style="@style/MMFontTitleInList" />
+            <TextView android:textColor="@color/h_" android:gravity="right" android:id="@id/a_p" android:layout_width="wrap_content" android:minWidth="65.0dip" style="@style/MMFontTimeInList" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip">
+            <ImageView android:id="@id/cfl" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:ellipsize="end" android:id="@id/a_q" android:paddingRight="20.0dip" android:singleLine="true" android:layout_weight="1.0" style="@style/MMFontTipInList" />
+            <TextView android:textSize="10.0dip" android:gravity="center" android:id="@id/g7" android:background="@drawable/a_m" android:visibility="invisible" style="@style/MMFontTimeInList" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

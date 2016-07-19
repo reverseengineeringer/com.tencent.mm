@@ -114,7 +114,7 @@
     return v0
 .end method
 
-.method public final l(Landroid/content/Context;)Ljava/lang/Object;
+.method public final j(Landroid/content/Context;)Ljava/lang/Object;
     .locals 1
 
     .prologue

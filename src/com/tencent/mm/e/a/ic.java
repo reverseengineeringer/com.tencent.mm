@@ -1,0 +1,24 @@
+package com.tencent.mm.e.a;
+
+import com.tencent.mm.sdk.c.b;
+
+public final class ic
+  extends b
+{
+  public ic()
+  {
+    this((byte)0);
+  }
+  
+  private ic(byte paramByte)
+  {
+    kuk = false;
+    auX = null;
+  }
+}
+
+/* Location:
+ * Qualified Name:     com.tencent.mm.e.a.ic
+ * Java Class Version: 6 (50.0)
+ * JD-Core Version:    0.7.1
+ */

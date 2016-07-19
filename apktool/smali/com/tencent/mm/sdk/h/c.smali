@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field public jYv:J
+.field public kyS:J
 
 
 # direct methods
@@ -26,7 +26,7 @@
     .line 33
     const-wide/16 v0, -0x1
 
-    iput-wide v0, p0, Lcom/tencent/mm/sdk/h/c;->jYv:J
+    iput-wide v0, p0, Lcom/tencent/mm/sdk/h/c;->kyS:J
 
     return-void
 .end method
@@ -451,7 +451,7 @@
 
     aget-object v2, v3, v0
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -487,6 +487,18 @@
 
 .method private static b([Ljava/lang/reflect/Field;)Ljava/util/Map;
     .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([",
+            "Ljava/lang/reflect/Field;",
+            ")",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 102
@@ -510,7 +522,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/tencent/mm/sdk/h/b;->d(Ljava/lang/Class;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/tencent/mm/sdk/h/b;->f(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -518,7 +530,7 @@
     if-nez v3, :cond_1
 
     .line 108
-    const-string/jumbo v3, "!44@/B4Tb64lLpLLUFo2TM7uCbJuPRuarh9/GXNqcjNxYhM="
+    const-string/jumbo v3, "MicroMsg.SDK.IAutoDBItem"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -544,7 +556,7 @@
 
     move-result-object v2
 
-    invoke-static {v3, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 104
     :cond_0
@@ -560,7 +572,7 @@
     move-result-object v2
 
     .line 113
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v4
 
@@ -603,7 +615,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/h/b;->d(Ljava/lang/Class;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/h/b;->f(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -611,7 +623,7 @@
     if-nez v6, :cond_1
 
     .line 130
-    const-string/jumbo v0, "!44@/B4Tb64lLpLLUFo2TM7uCbJuPRuarh9/GXNqcjNxYhM="
+    const-string/jumbo v0, "MicroMsg.SDK.IAutoDBItem"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -637,7 +649,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 126
     :cond_0
@@ -655,7 +667,7 @@
     move-result-object v7
 
     .line 135
-    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -688,7 +700,7 @@
 
     check-cast v0, Lcom/tencent/mm/sdk/h/e;
 
-    invoke-interface {v0}, Lcom/tencent/mm/sdk/h/e;->aVQ()Ljava/lang/String;
+    invoke-interface {v0}, Lcom/tencent/mm/sdk/h/e;->bbd()Ljava/lang/String;
 
     move-result-object v0
 
@@ -715,7 +727,7 @@
 
     check-cast v0, Lcom/tencent/mm/sdk/h/e;
 
-    invoke-interface {v0}, Lcom/tencent/mm/sdk/h/e;->aVR()I
+    invoke-interface {v0}, Lcom/tencent/mm/sdk/h/e;->bbe()I
 
     move-result v0
 
@@ -802,8 +814,16 @@
     goto :goto_2
 .end method
 
-.method public static e(Ljava/lang/Class;)[Ljava/lang/reflect/Field;
+.method public static g(Ljava/lang/Class;)[Ljava/lang/reflect/Field;
     .locals 10
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class",
+            "<*>;)[",
+            "Ljava/lang/reflect/Field;"
+        }
+    .end annotation
 
     .prologue
     const/4 v4, 0x0
@@ -885,7 +905,7 @@
 
     check-cast v0, Lcom/tencent/mm/sdk/h/e;
 
-    invoke-interface {v0}, Lcom/tencent/mm/sdk/h/e;->aVR()I
+    invoke-interface {v0}, Lcom/tencent/mm/sdk/h/e;->bbe()I
 
     move-result v0
 
@@ -893,11 +913,11 @@
 
     if-ne v0, v2, :cond_0
 
-    iput-object v1, v5, Lcom/tencent/mm/sdk/h/c$a;->jYw:Ljava/lang/String;
+    iput-object v1, v5, Lcom/tencent/mm/sdk/h/c$a;->kyT:Ljava/lang/String;
 
     :cond_0
     :goto_2
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -950,45 +970,45 @@
 
     check-cast v0, [Ljava/lang/reflect/Field;
 
-    iput-object v0, v5, Lcom/tencent/mm/sdk/h/c$a;->ceD:[Ljava/lang/reflect/Field;
+    iput-object v0, v5, Lcom/tencent/mm/sdk/h/c$a;->bZI:[Ljava/lang/reflect/Field;
 
-    iget-object v0, v5, Lcom/tencent/mm/sdk/h/c$a;->ceD:[Ljava/lang/reflect/Field;
+    iget-object v0, v5, Lcom/tencent/mm/sdk/h/c$a;->bZI:[Ljava/lang/reflect/Field;
 
     invoke-static {v0}, Lcom/tencent/mm/sdk/h/c;->a([Ljava/lang/reflect/Field;)[Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, v5, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    iput-object v0, v5, Lcom/tencent/mm/sdk/h/c$a;->aZx:[Ljava/lang/String;
 
-    iget-object v0, v5, Lcom/tencent/mm/sdk/h/c$a;->ceD:[Ljava/lang/reflect/Field;
+    iget-object v0, v5, Lcom/tencent/mm/sdk/h/c$a;->bZI:[Ljava/lang/reflect/Field;
 
     invoke-static {v0}, Lcom/tencent/mm/sdk/h/c;->b([Ljava/lang/reflect/Field;)Ljava/util/Map;
 
     move-result-object v0
 
-    iput-object v0, v5, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    iput-object v0, v5, Lcom/tencent/mm/sdk/h/c$a;->kyU:Ljava/util/Map;
 
-    iget-object v0, v5, Lcom/tencent/mm/sdk/h/c$a;->ceD:[Ljava/lang/reflect/Field;
+    iget-object v0, v5, Lcom/tencent/mm/sdk/h/c$a;->bZI:[Ljava/lang/reflect/Field;
 
     invoke-static {v0}, Lcom/tencent/mm/sdk/h/c;->c([Ljava/lang/reflect/Field;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, v5, Lcom/tencent/mm/sdk/h/c$a;->jYy:Ljava/lang/String;
+    iput-object v0, v5, Lcom/tencent/mm/sdk/h/c$a;->kyV:Ljava/lang/String;
 
     .line 174
-    iget-object v0, v5, Lcom/tencent/mm/sdk/h/c$a;->ceD:[Ljava/lang/reflect/Field;
+    iget-object v0, v5, Lcom/tencent/mm/sdk/h/c$a;->bZI:[Ljava/lang/reflect/Field;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public abstract c(Landroid/database/Cursor;)V
+.method public abstract b(Landroid/database/Cursor;)V
 .end method
 
-.method public abstract lX()Landroid/content/ContentValues;
+.method public abstract kn()Landroid/content/ContentValues;
 .end method
 
-.method public abstract ls()Lcom/tencent/mm/sdk/h/c$a;
+.method public abstract ou()Lcom/tencent/mm/sdk/h/c$a;
 .end method

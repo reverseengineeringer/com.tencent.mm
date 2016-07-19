@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/n;->a(Landroid/app/Activity;IILandroid/content/Intent;Ljava/lang/String;)Lcom/tencent/mm/ui/base/h;
+    value = Lcom/tencent/mm/ui/n;->a(Landroid/app/Activity;IILandroid/content/Intent;Ljava/lang/String;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic cms:Landroid/app/Activity;
+.field final synthetic chx:Landroid/app/Activity;
 
-.field final synthetic kqi:Landroid/content/Intent;
+.field final synthetic kPn:Landroid/content/Intent;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 254
-    iput-object p1, p0, Lcom/tencent/mm/ui/n$8;->kqi:Landroid/content/Intent;
+    .line 189
+    iput-object p1, p0, Lcom/tencent/mm/ui/n$8;->kPn:Landroid/content/Intent;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/n$8;->cms:Landroid/app/Activity;
+    iput-object p2, p0, Lcom/tencent/mm/ui/n$8;->chx:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,44 +44,36 @@
     .locals 2
 
     .prologue
-    .line 258
-    iget-object v0, p0, Lcom/tencent/mm/ui/n$8;->kqi:Landroid/content/Intent;
+    .line 193
+    iget-object v0, p0, Lcom/tencent/mm/ui/n$8;->kPn:Landroid/content/Intent;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    .line 260
-    iget-object v0, p0, Lcom/tencent/mm/ui/n$8;->cms:Landroid/app/Activity;
-
-    instance-of v0, v0, Lcom/tencent/mm/ui/LauncherUI;
-
-    if-nez v0, :cond_0
-
-    .line 261
-    iget-object v0, p0, Lcom/tencent/mm/ui/n$8;->cms:Landroid/app/Activity;
+    .line 194
+    iget-object v0, p0, Lcom/tencent/mm/ui/n$8;->chx:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 263
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/n$8;->cms:Landroid/app/Activity;
+    .line 195
+    iget-object v0, p0, Lcom/tencent/mm/ui/n$8;->chx:Landroid/app/Activity;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/n$8;->kqi:Landroid/content/Intent;
+    iget-object v1, p0, Lcom/tencent/mm/ui/n$8;->kPn:Landroid/content/Intent;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 264
-    iget-object v0, p0, Lcom/tencent/mm/ui/n$8;->cms:Landroid/app/Activity;
+    .line 196
+    iget-object v0, p0, Lcom/tencent/mm/ui/n$8;->chx:Landroid/app/Activity;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/n$8;->kqi:Landroid/content/Intent;
+    iget-object v1, p0, Lcom/tencent/mm/ui/n$8;->kPn:Landroid/content/Intent;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/b;->w(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 265
-    iget-object v0, p0, Lcom/tencent/mm/ui/n$8;->cms:Landroid/app/Activity;
+    .line 197
+    iget-object v0, p0, Lcom/tencent/mm/ui/n$8;->chx:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/tencent/mm/modelsimple/d;->aW(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/tencent/mm/modelsimple/d;->aS(Landroid/content/Context;)Z
 
-    .line 267
-    :cond_1
+    .line 200
+    :cond_0
     return-void
 .end method

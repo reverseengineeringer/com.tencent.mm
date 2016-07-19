@@ -3,1089 +3,563 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static chE:Z
+
+.field public static chF:Z
+
+.field public static chG:Z
+
+.field public static chH:Z
+
+.field public static chI:Z
+
+.field public static chJ:Z
+
+.field public static chK:Z
+
+.field public static chL:Z
+
+.field public static chM:Z
+
+.field public static chN:Z
+
+.field public static chO:Z
+
+.field public static chP:Z
+
+.field public static chQ:Ljava/lang/String;
+
+.field public static chR:Z
+
+.field public static chS:Z
+
+.field public static chT:Z
+
+.field public static chU:Z
+
+.field public static chV:I
+
+.field public static chW:Z
+
+.field public static chX:Z
+
+.field public static chY:Z
+
+.field public static chZ:Ljava/lang/String;
+
+.field public static ciA:Ljava/lang/String;
+
+.field public static ciB:Ljava/lang/String;
+
+.field public static ciC:Ljava/lang/String;
+
+.field public static ciD:Ljava/lang/String;
+
+.field public static ciE:Z
+
+.field public static ciF:Z
+
+.field public static ciG:Z
+
+.field public static ciH:I
+
+.field public static ciI:Z
+
+.field public static ciJ:Z
+
+.field public static ciK:Z
+
+.field public static ciL:Z
+
+.field public static ciM:Z
+
+.field public static ciN:Z
+
+.field public static ciO:I
+
+.field public static ciP:Z
+
+.field public static ciQ:Z
+
+.field public static ciR:Z
+
+.field public static ciS:Ljava/lang/String;
+
+.field public static ciT:I
+
+.field public static ciU:Z
+
+.field public static ciV:Z
+
+.field public static ciW:I
+
+.field public static ciX:Z
+
+.field public static ciY:Ljava/lang/String;
+
+.field public static ciZ:Z
+
+.field public static cia:Ljava/lang/String;
+
+.field public static cib:Z
+
+.field public static cic:Z
+
+.field public static cid:Z
+
+.field public static cie:Z
+
+.field public static cif:Z
+
+.field public static cig:Z
+
+.field public static cih:Z
+
+.field public static cii:I
+
+.field public static cij:I
+
+.field public static cik:Z
+
+.field public static cil:Ljava/lang/String;
+
+.field public static cim:Ljava/lang/String;
+
+.field public static cin:Z
+
+.field public static cio:Z
+
+.field public static cip:I
+
+.field public static ciq:I
+
+.field public static cir:I
+
+.field public static cis:Ljava/lang/String;
+
+.field public static cit:Ljava/lang/String;
+
+.field public static ciu:Ljava/lang/String;
+
+.field public static civ:Ljava/lang/String;
+
+.field public static ciw:Z
+
+.field public static cix:Z
+
+.field public static ciy:Z
+
+.field public static ciz:Ljava/lang/String;
+
+.field public static cja:Z
+
+.field public static cjb:I
+
+.field public static cjc:I
+
+.field public static cjd:Z
+
+.field public static cje:Ljava/lang/String;
+
+.field public static cjf:Ljava/lang/String;
+
+.field private static cjg:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/util/concurrent/ConcurrentLinkedQueue",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field public static cjh:Z
+
+.field public static cji:Z
+
+.field public static cjj:Z
+
+.field public static lat:D
+
+.field public static lng:D
+
+
 # direct methods
-.method private static a(I[BI)Z
-    .locals 2
-
-    .prologue
-    .line 130
-    const v0, 0x1f400
-
-    add-int/lit8 v1, p2, 0x4
-
-    if-ge v0, v1, :cond_0
-
-    .line 131
-    const/4 v0, 0x0
-
-    .line 137
-    :goto_0
-    return v0
-
-    .line 133
-    :cond_0
-    shr-int/lit8 v0, p0, 0x18
-
-    and-int/lit16 v0, v0, 0xff
-
-    int-to-byte v0, v0
-
-    aput-byte v0, p1, p2
-
-    .line 134
-    add-int/lit8 v0, p2, 0x1
-
-    shr-int/lit8 v1, p0, 0x10
-
-    and-int/lit16 v1, v1, 0xff
-
-    int-to-byte v1, v1
-
-    aput-byte v1, p1, v0
-
-    .line 135
-    add-int/lit8 v0, p2, 0x2
-
-    shr-int/lit8 v1, p0, 0x8
-
-    and-int/lit16 v1, v1, 0xff
-
-    int-to-byte v1, v1
-
-    aput-byte v1, p1, v0
-
-    .line 136
-    add-int/lit8 v0, p2, 0x3
-
-    and-int/lit16 v1, p0, 0xff
-
-    int-to-byte v1, v1
-
-    aput-byte v1, p1, v0
-
-    .line 137
-    const/4 v0, 0x1
-
-    goto :goto_0
-.end method
-
-.method static a(Ljava/lang/String;Ljava/lang/String;ZI)Z
-    .locals 14
-
-    .prologue
-    .line 66
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 67
-    :cond_0
-    const-string/jumbo v1, "!44@/B4Tb64lLpK6yOMee/eotB6K2Auynr4VmZLtkzi/1aw="
-
-    const-string/jumbo v2, "uploadFile param err file:%s  user:%s"
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v4, 0x0
-
-    aput-object p0, v3, v4
-
-    const/4 v4, 0x1
-
-    aput-object p1, v3, v4
-
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 68
-    const/4 v1, 0x0
-
-    .line 125
-    :goto_0
-    return v1
-
-    .line 70
-    :cond_1
-    invoke-static {p0}, Lcom/tencent/mm/a/e;->aw(Ljava/lang/String;)I
-
-    move-result v4
-
-    .line 71
-    if-gtz v4, :cond_2
-
-    .line 72
-    const-string/jumbo v1, "!44@/B4Tb64lLpK6yOMee/eotB6K2Auynr4VmZLtkzi/1aw="
-
-    const-string/jumbo v2, "uploadFile err len file:%s len:%d"
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v5, 0x0
-
-    aput-object p0, v3, v5
-
-    const/4 v5, 0x1
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v3, v5
-
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 73
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    .line 75
-    :cond_2
-    const v1, 0x1f400
-
-    if-gt v4, v1, :cond_5
-
-    .line 76
-    const/4 v1, 0x0
-
-    const/4 v2, -0x1
-
-    invoke-static {p0, v1, v2}, Lcom/tencent/mm/a/e;->d(Ljava/lang/String;II)[B
-
-    move-result-object v1
-
-    .line 77
-    move/from16 v0, p3
-
-    invoke-static {v1, p0, p1, v0}, Lcom/tencent/mm/platformtools/q;->a([BLjava/lang/String;Ljava/lang/String;I)Z
-
-    move-result v2
-
-    .line 78
-    const-string/jumbo v3, "!44@/B4Tb64lLpK6yOMee/eotB6K2Auynr4VmZLtkzi/1aw="
-
-    const-string/jumbo v4, "uploadFile ret:%b size:%d file:%s"
-
-    const/4 v5, 0x3
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    const/4 v6, 0x0
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v7
-
-    aput-object v7, v5, v6
-
-    const/4 v6, 0x1
-
-    if-eqz v1, :cond_4
-
-    array-length v1, v1
-
-    :goto_1
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    aput-object v1, v5, v6
-
-    const/4 v1, 0x2
-
-    aput-object p0, v5, v1
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 79
-    if-eqz v2, :cond_3
-
-    if-eqz p2, :cond_3
-
-    .line 80
-    new-instance v1, Ljava/io/File;
-
-    invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v1}, Lcom/tencent/mm/a/e;->e(Ljava/io/File;)Z
-
-    :cond_3
-    move v1, v2
-
-    .line 83
-    goto :goto_0
-
-    .line 78
-    :cond_4
-    const/4 v1, -0x1
-
-    goto :goto_1
-
-    .line 85
-    :cond_5
-    const v1, 0x1f3f4
-
-    div-int v1, v4, v1
-
-    add-int/lit8 v5, v1, 0x1
-
-    .line 86
-    const v1, 0x1f400
-
-    new-array v6, v1, [B
-
-    .line 87
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
-
-    move-result-wide v1
-
-    long-to-int v7, v1
-
-    .line 88
-    const/4 v3, 0x0
-
-    .line 90
-    :try_start_0
-    new-instance v2, Ljava/io/FileInputStream;
-
-    invoke-direct {v2, p0}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 91
-    const/4 v1, 0x0
-
-    move v3, v1
-
-    :goto_2
-    if-ge v3, v5, :cond_8
-
-    .line 93
-    const/16 v1, 0xc
-
-    const v8, 0x1f3f4
-
-    :try_start_1
-    invoke-virtual {v2, v6, v1, v8}, Ljava/io/FileInputStream;->read([BII)I
-
-    move-result v8
-
-    .line 94
-    if-gez v8, :cond_6
-
-    .line 95
-    const-string/jumbo v1, "!44@/B4Tb64lLpK6yOMee/eotB6K2Auynr4VmZLtkzi/1aw="
-
-    const-string/jumbo v3, "uploadFile read failed file:%s"
-
-    const/4 v4, 0x1
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    const/4 v5, 0x0
-
-    aput-object p0, v4, v5
-
-    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_5
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    .line 96
-    :try_start_2
-    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
-
-    .line 123
-    :goto_3
-    const/4 v1, 0x0
-
-    goto/16 :goto_0
-
-    .line 98
-    :cond_6
-    const/4 v1, 0x0
-
-    :try_start_3
-    invoke-static {v7, v6, v1}, Lcom/tencent/mm/platformtools/q;->a(I[BI)Z
-
-    .line 99
-    const/4 v1, 0x4
-
-    invoke-static {v3, v6, v1}, Lcom/tencent/mm/platformtools/q;->a(I[BI)Z
-
-    .line 100
-    const/16 v1, 0x8
-
-    invoke-static {v8, v6, v1}, Lcom/tencent/mm/platformtools/q;->a(I[BI)Z
-
-    .line 102
-    const v1, 0x1f3f4
-
-    if-ge v8, v1, :cond_7
-
-    .line 103
-    add-int/lit8 v1, v8, 0xc
-
-    new-array v1, v1, [B
-
-    .line 104
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    array-length v11, v1
-
-    invoke-static {v6, v9, v1, v10, v11}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 105
-    move/from16 v0, p3
-
-    invoke-static {v1, p0, p1, v0}, Lcom/tencent/mm/platformtools/q;->a([BLjava/lang/String;Ljava/lang/String;I)Z
-
-    move-result v1
-
-    .line 109
-    :goto_4
-    const-string/jumbo v9, "!44@/B4Tb64lLpK6yOMee/eotB6K2Auynr4VmZLtkzi/1aw="
-
-    const-string/jumbo v10, "uploadFile idx:%d(%d) read:%d ret:%b size:%d file:%s"
-
-    const/4 v11, 0x6
-
-    new-array v11, v11, [Ljava/lang/Object;
-
-    const/4 v12, 0x0
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v13
-
-    aput-object v13, v11, v12
-
-    const/4 v12, 0x1
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v13
-
-    aput-object v13, v11, v12
-
-    const/4 v12, 0x2
-
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    aput-object v8, v11, v12
-
-    const/4 v8, 0x3
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    aput-object v1, v11, v8
-
-    const/4 v1, 0x4
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    aput-object v8, v11, v1
-
-    const/4 v1, 0x5
-
-    aput-object p0, v11, v1
-
-    invoke-static {v9, v10, v11}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 92
-    add-int/lit8 v1, v3, 0x1
-
-    move v3, v1
-
-    goto :goto_2
-
-    .line 107
-    :cond_7
-    move/from16 v0, p3
-
-    invoke-static {v6, p0, p1, v0}, Lcom/tencent/mm/platformtools/q;->a([BLjava/lang/String;Ljava/lang/String;I)Z
-
-    move-result v1
-
-    goto :goto_4
-
-    .line 111
-    :cond_8
-    if-eqz p2, :cond_9
-
-    .line 112
-    new-instance v1, Ljava/io/File;
-
-    invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v1}, Lcom/tencent/mm/a/e;->e(Ljava/io/File;)Z
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_5
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    .line 120
-    :cond_9
-    :try_start_4
-    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
-
-    .line 125
-    :goto_5
-    const/4 v1, 0x1
-
-    goto/16 :goto_0
-
-    .line 114
-    :catch_0
-    move-exception v1
-
-    move-object v2, v3
-
-    .line 115
-    :goto_6
-    :try_start_5
-    const-string/jumbo v3, "!44@/B4Tb64lLpK6yOMee/eotB6K2Auynr4VmZLtkzi/1aw="
-
-    const-string/jumbo v4, "exception:%s"
-
-    const/4 v5, 0x1
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    const/4 v6, 0x0
-
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object v1
-
-    aput-object v1, v5, v6
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 116
-    const-string/jumbo v1, "!44@/B4Tb64lLpK6yOMee/eotB6K2Auynr4VmZLtkzi/1aw="
-
-    const-string/jumbo v3, "uploadFile read except file:%s"
-
-    const/4 v4, 0x1
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    const/4 v5, 0x0
-
-    aput-object p0, v4, v5
-
-    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
-
-    .line 117
-    if-eqz v2, :cond_a
-
-    .line 121
-    :try_start_6
-    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
-    :try_end_6
-    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_3
-
-    .line 123
-    :cond_a
-    :goto_7
-    const/4 v1, 0x0
-
-    goto/16 :goto_0
-
-    .line 119
-    :catchall_0
-    move-exception v1
-
-    move-object v2, v3
-
-    .line 120
-    :goto_8
-    if-eqz v2, :cond_b
-
-    .line 121
-    :try_start_7
-    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
-    :try_end_7
-    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_4
-
-    .line 123
-    :cond_b
-    :goto_9
-    throw v1
-
-    :catch_1
-    move-exception v1
-
-    goto/16 :goto_3
-
-    .line 124
-    :catch_2
-    move-exception v1
-
-    goto :goto_5
-
-    :catch_3
-    move-exception v1
-
-    goto :goto_7
-
-    :catch_4
-    move-exception v2
-
-    goto :goto_9
-
-    .line 119
-    :catchall_1
-    move-exception v1
-
-    goto :goto_8
-
-    .line 114
-    :catch_5
-    move-exception v1
-
-    goto :goto_6
-.end method
-
-.method public static a(Ljava/lang/String;Ljava/lang/String;ZZ)Z
+.method static constructor <clinit>()V
     .locals 6
 
     .prologue
-    .line 61
-    const/4 v4, 0x1
+    const-wide/16 v4, 0x0
 
-    const/16 v5, 0x4e23
+    const/4 v2, 0x0
 
-    move-object v0, p0
+    const/4 v1, 0x0
 
-    move-object v1, p1
+    .line 13
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chE:Z
 
-    move v2, p2
+    .line 14
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chF:Z
 
-    move v3, p3
+    .line 15
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chG:Z
 
-    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/platformtools/q;->a(Ljava/lang/String;Ljava/lang/String;ZZII)Z
+    .line 16
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chH:Z
 
-    move-result v0
+    .line 17
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chI:Z
 
-    return v0
-.end method
+    .line 18
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chJ:Z
 
-.method public static a(Ljava/lang/String;Ljava/lang/String;ZZII)Z
-    .locals 2
+    .line 20
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chK:Z
 
-    .prologue
+    .line 22
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chL:Z
+
+    .line 23
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chM:Z
+
+    .line 25
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chN:Z
+
+    .line 27
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chO:Z
+
+    .line 28
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chP:Z
+
+    .line 29
+    const-string/jumbo v0, ""
+
+    sput-object v0, Lcom/tencent/mm/platformtools/q;->chQ:Ljava/lang/String;
+
+    .line 30
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chR:Z
+
+    .line 32
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chS:Z
+
+    .line 33
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chT:Z
+
+    .line 34
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chU:Z
+
+    .line 35
+    sput v1, Lcom/tencent/mm/platformtools/q;->chV:I
+
+    .line 36
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chW:Z
+
+    .line 37
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chX:Z
+
+    .line 38
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->chY:Z
+
+    .line 40
+    const-string/jumbo v0, ""
+
+    sput-object v0, Lcom/tencent/mm/platformtools/q;->chZ:Ljava/lang/String;
+
+    .line 41
+    const-string/jumbo v0, ""
+
+    sput-object v0, Lcom/tencent/mm/platformtools/q;->cia:Ljava/lang/String;
+
+    .line 42
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->cib:Z
+
+    .line 44
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->cic:Z
+
     .line 45
-    if-eqz p3, :cond_0
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->cid:Z
 
     .line 46
-    new-instance v0, Lcom/tencent/mm/platformtools/q$1;
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->cie:Z
 
-    invoke-direct {v0, p0, p1, p2, p5}, Lcom/tencent/mm/platformtools/q$1;-><init>(Ljava/lang/String;Ljava/lang/String;ZI)V
+    .line 47
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->cif:Z
 
-    const-string/jumbo v1, "StackReportUploader_uploadFileDirect"
+    .line 48
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->cig:Z
 
-    invoke-static {v0, v1, p4}, Lcom/tencent/mm/sdk/i/e;->b(Ljava/lang/Runnable;Ljava/lang/String;I)V
+    .line 49
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->cih:Z
 
-    .line 53
+    .line 51
+    sput v1, Lcom/tencent/mm/platformtools/q;->cii:I
+
+    .line 52
+    sput v1, Lcom/tencent/mm/platformtools/q;->cij:I
+
+    .line 54
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->cik:Z
+
+    .line 56
+    sput-object v2, Lcom/tencent/mm/platformtools/q;->cil:Ljava/lang/String;
+
+    .line 57
+    sput-object v2, Lcom/tencent/mm/platformtools/q;->cim:Ljava/lang/String;
+
+    .line 58
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->cin:Z
+
+    .line 59
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->cio:Z
+
+    .line 61
+    sput v1, Lcom/tencent/mm/platformtools/q;->cip:I
+
+    .line 63
+    sput v1, Lcom/tencent/mm/platformtools/q;->ciq:I
+
+    .line 64
+    sput v1, Lcom/tencent/mm/platformtools/q;->cir:I
+
+    .line 65
+    const-string/jumbo v0, ""
+
+    sput-object v0, Lcom/tencent/mm/platformtools/q;->cis:Ljava/lang/String;
+
+    .line 67
+    const-string/jumbo v0, ""
+
+    sput-object v0, Lcom/tencent/mm/platformtools/q;->cit:Ljava/lang/String;
+
+    .line 68
+    sput-object v2, Lcom/tencent/mm/platformtools/q;->ciu:Ljava/lang/String;
+
+    .line 69
+    sput-object v2, Lcom/tencent/mm/platformtools/q;->civ:Ljava/lang/String;
+
+    .line 71
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->ciw:Z
+
+    .line 73
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->cix:Z
+
+    .line 74
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->ciy:Z
+
+    .line 76
+    sput-wide v4, Lcom/tencent/mm/platformtools/q;->lat:D
+
+    .line 77
+    sput-wide v4, Lcom/tencent/mm/platformtools/q;->lng:D
+
+    .line 79
+    const-string/jumbo v0, ""
+
+    sput-object v0, Lcom/tencent/mm/platformtools/q;->ciz:Ljava/lang/String;
+
+    .line 80
+    const-string/jumbo v0, ""
+
+    sput-object v0, Lcom/tencent/mm/platformtools/q;->ciA:Ljava/lang/String;
+
+    .line 81
+    const-string/jumbo v0, ""
+
+    sput-object v0, Lcom/tencent/mm/platformtools/q;->ciB:Ljava/lang/String;
+
+    .line 82
+    const-string/jumbo v0, ""
+
+    sput-object v0, Lcom/tencent/mm/platformtools/q;->ciC:Ljava/lang/String;
+
+    .line 83
+    const-string/jumbo v0, ""
+
+    sput-object v0, Lcom/tencent/mm/platformtools/q;->ciD:Ljava/lang/String;
+
+    .line 84
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->ciE:Z
+
+    .line 85
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->ciF:Z
+
+    .line 86
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->ciG:Z
+
+    .line 89
+    sput v1, Lcom/tencent/mm/platformtools/q;->ciH:I
+
+    .line 90
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->ciI:Z
+
+    .line 92
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->ciJ:Z
+
+    .line 93
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->ciK:Z
+
+    .line 94
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->ciL:Z
+
+    .line 95
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->ciM:Z
+
+    .line 97
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->ciN:Z
+
+    .line 98
+    const/16 v0, 0xbb8
+
+    sput v0, Lcom/tencent/mm/platformtools/q;->ciO:I
+
+    .line 100
     const/4 v0, 0x1
 
-    .line 55
-    :goto_0
-    return v0
+    sput-boolean v0, Lcom/tencent/mm/platformtools/q;->ciP:Z
 
-    :cond_0
-    invoke-static {p0, p1, p2, p5}, Lcom/tencent/mm/platformtools/q;->a(Ljava/lang/String;Ljava/lang/String;ZI)Z
+    .line 101
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->ciQ:Z
 
-    move-result v0
+    .line 104
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->ciR:Z
 
-    goto :goto_0
+    .line 105
+    const-string/jumbo v0, ""
+
+    sput-object v0, Lcom/tencent/mm/platformtools/q;->ciS:Ljava/lang/String;
+
+    .line 106
+    sput v1, Lcom/tencent/mm/platformtools/q;->ciT:I
+
+    .line 108
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->ciU:Z
+
+    .line 110
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->ciV:Z
+
+    .line 112
+    const/4 v0, -0x1
+
+    sput v0, Lcom/tencent/mm/platformtools/q;->ciW:I
+
+    .line 114
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->ciX:Z
+
+    .line 116
+    const-string/jumbo v0, ""
+
+    sput-object v0, Lcom/tencent/mm/platformtools/q;->ciY:Ljava/lang/String;
+
+    .line 118
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->ciZ:Z
+
+    .line 119
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->cja:Z
+
+    .line 120
+    const/4 v0, 0x5
+
+    sput v0, Lcom/tencent/mm/platformtools/q;->cjb:I
+
+    .line 121
+    sput v1, Lcom/tencent/mm/platformtools/q;->cjc:I
+
+    .line 123
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->cjd:Z
+
+    .line 125
+    const-string/jumbo v0, ""
+
+    sput-object v0, Lcom/tencent/mm/platformtools/q;->cje:Ljava/lang/String;
+
+    .line 127
+    const-string/jumbo v0, ""
+
+    sput-object v0, Lcom/tencent/mm/platformtools/q;->cjf:Ljava/lang/String;
+
+    .line 214
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v0, Lcom/tencent/mm/platformtools/q;->cjg:Ljava/util/HashMap;
+
+    .line 258
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->cjh:Z
+
+    .line 259
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->cji:Z
+
+    .line 260
+    sput-boolean v1, Lcom/tencent/mm/platformtools/q;->cjj:Z
+
+    return-void
 .end method
 
-.method private static a([BLjava/lang/String;Ljava/lang/String;I)Z
-    .locals 9
+.method public static ah(II)V
+    .locals 4
 
     .prologue
-    const/4 v4, 0x2
+    .line 217
+    sget-object v1, Lcom/tencent/mm/platformtools/q;->cjg:Ljava/util/HashMap;
 
-    const/4 v1, 0x1
+    monitor-enter v1
 
-    const/4 v0, 0x0
-
-    .line 142
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->J([B)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 143
-    const-string/jumbo v2, "!44@/B4Tb64lLpK6yOMee/eotB6K2Auynr4VmZLtkzi/1aw="
-
-    const-string/jumbo v3, "read file failed:%s"
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    aput-object p1, v1, v0
-
-    invoke-static {v2, v3, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 215
-    :goto_0
-    return v0
-
-    .line 147
-    :cond_0
-    array-length v2, p0
-
-    const v3, 0x1f400
-
-    if-le v2, v3, :cond_1
-
-    .line 148
-    const-string/jumbo v2, "!44@/B4Tb64lLpK6yOMee/eotB6K2Auynr4VmZLtkzi/1aw="
-
-    const-string/jumbo v3, "file :%s data len error:%d"
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    aput-object p1, v4, v0
-
-    array-length v5, p0
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v4, v1
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    .line 152
-    :cond_1
-    array-length v2, p0
-
-    .line 153
-    const-string/jumbo v3, "weixin#$()%d%d"
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    sget v5, Lcom/tencent/mm/protocal/b;->iUf:I
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v4, v0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v4, v1
-
-    invoke-static {v3, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 154
-    invoke-virtual {v3}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v3
-
-    invoke-static {v3}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 156
-    invoke-static {p0}, Lcom/tencent/mm/a/q;->q([B)[B
-
-    move-result-object v4
-
-    .line 158
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ay;->J([B)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    .line 159
-    const-string/jumbo v2, "!44@/B4Tb64lLpK6yOMee/eotB6K2Auynr4VmZLtkzi/1aw="
-
-    const-string/jumbo v3, "zip data failed file:%s"
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    aput-object p1, v1, v0
-
-    invoke-static {v2, v3, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    .line 162
-    :cond_2
-    new-instance v5, Lcom/tencent/mm/pointers/PByteArray;
-
-    invoke-direct {v5}, Lcom/tencent/mm/pointers/PByteArray;-><init>()V
-
-    .line 164
-    invoke-virtual {v3}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v6
-
-    invoke-static {v5, v4, v6}, Lcom/tencent/mm/a/c;->a(Lcom/tencent/mm/pointers/PByteArray;[B[B)I
-
-    .line 165
-    iget-object v4, v5, Lcom/tencent/mm/pointers/PByteArray;->value:[B
-
-    .line 166
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ay;->J([B)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_3
-
-    .line 167
-    const-string/jumbo v5, "!44@/B4Tb64lLpK6yOMee/eotB6K2Auynr4VmZLtkzi/1aw="
-
-    const-string/jumbo v6, "encrypt data failed file:%s"
-
-    new-array v7, v1, [Ljava/lang/Object;
-
-    aput-object p1, v7, v0
-
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 171
-    :cond_3
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
-
-    move-result-object v5
-
-    const-string/jumbo v6, "system_config_prefs"
-
-    invoke-virtual {v5, v6, v0}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v5
-
-    .line 172
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v7, "http://"
-
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string/jumbo v7, "support.weixin.qq.com"
-
-    const-string/jumbo v8, "support.weixin.qq.com"
-
-    invoke-interface {v5, v7, v8}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 174
-    new-instance v6, Ljava/lang/StringBuffer;
-
-    invoke-direct {v6}, Ljava/lang/StringBuffer;-><init>()V
-
-    .line 175
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    const-string/jumbo v7, "/cgi-bin/mmsupport-bin/stackreport?version="
-
-    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    .line 176
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget v7, Lcom/tencent/mm/protocal/b;->iUf:I
-
-    invoke-static {v7}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    .line 177
-    const-string/jumbo v5, "&devicetype="
-
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    .line 178
-    sget-object v5, Lcom/tencent/mm/protocal/b;->bwR:Ljava/lang/String;
-
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    .line 179
-    const-string/jumbo v5, "&filelength="
-
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    .line 180
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
-
-    .line 181
-    const-string/jumbo v2, "&sum="
-
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    .line 182
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    .line 183
-    const-string/jumbo v2, "&reporttype="
-
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    .line 184
-    invoke-virtual {v6, p3}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
-
-    .line 185
-    const-string/jumbo v2, "&reportvalue="
-
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    .line 186
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
-
-    move-result-wide v7
-
-    invoke-virtual {v2, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string/jumbo v3, ".0.1"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    .line 187
-    if-eqz p2, :cond_4
-
-    const-string/jumbo v2, ""
-
-    invoke-virtual {p2, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    .line 188
-    const-string/jumbo v2, "&username="
-
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    .line 189
-    invoke-virtual {v6, p2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    .line 192
-    :cond_4
-    new-instance v2, Lorg/apache/http/impl/client/DefaultHttpClient;
-
-    invoke-direct {v2}, Lorg/apache/http/impl/client/DefaultHttpClient;-><init>()V
-
-    .line 193
-    new-instance v3, Lorg/apache/http/client/methods/HttpPost;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-direct {v3, v5}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
-
-    .line 194
+    .line 218
     :try_start_0
-    new-instance v5, Lorg/apache/http/entity/ByteArrayEntity;
+    sget-object v0, Lcom/tencent/mm/platformtools/q;->cjg:Ljava/util/HashMap;
 
-    invoke-direct {v5, v4}, Lorg/apache/http/entity/ByteArrayEntity;-><init>([B)V
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 197
-    const-string/jumbo v4, "binary/octet-stream"
+    move-result-object v2
 
-    invoke-virtual {v5, v4}, Lorg/apache/http/entity/ByteArrayEntity;->setContentType(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 198
-    invoke-virtual {v3, v5}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+    move-result-object v0
 
-    .line 199
-    invoke-interface {v2, v3}, Lorg/apache/http/client/HttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
+    check-cast v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    .line 219
+    if-nez v0, :cond_0
+
+    .line 220
+    new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
+
+    .line 221
+    sget-object v2, Lcom/tencent/mm/platformtools/q;->cjg:Ljava/util/HashMap;
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 223
+    :cond_0
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/ConcurrentLinkedQueue;->add(Ljava/lang/Object;)Z
+
+    .line 224
+    monitor-exit v1
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v2
-
-    .line 207
-    if-eqz v2, :cond_5
-
-    invoke-interface {v2}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
-
-    move-result-object v3
-
-    if-nez v3, :cond_6
-
-    .line 208
-    :cond_5
-    const-string/jumbo v1, "!44@/B4Tb64lLpK6yOMee/eotB6K2Auynr4VmZLtkzi/1aw="
-
-    const-string/jumbo v2, "execute http failed resp null"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    .line 201
-    :catch_0
-    move-exception v2
-
-    .line 202
-    const-string/jumbo v3, "!44@/B4Tb64lLpK6yOMee/eotB6K2Auynr4VmZLtkzi/1aw="
-
-    const-string/jumbo v4, "exception:%s"
-
-    new-array v5, v1, [Ljava/lang/Object;
-
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object v6
-
-    aput-object v6, v5, v0
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 203
-    const-string/jumbo v3, "!44@/B4Tb64lLpK6yOMee/eotB6K2Auynr4VmZLtkzi/1aw="
-
-    const-string/jumbo v4, "execute post failed msg:%s"
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    invoke-virtual {v2}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object v2
-
-    aput-object v2, v1, v0
-
-    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto/16 :goto_0
-
-    .line 211
-    :cond_6
-    invoke-interface {v2}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Lorg/apache/http/StatusLine;->getStatusCode()I
-
-    move-result v3
-
-    const/16 v4, 0xc8
-
-    if-eq v3, v4, :cond_7
-
-    .line 212
-    const-string/jumbo v3, "!44@/B4Tb64lLpK6yOMee/eotB6K2Auynr4VmZLtkzi/1aw="
-
-    const-string/jumbo v4, "error response code:%d "
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    invoke-interface {v2}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Lorg/apache/http/StatusLine;->getStatusCode()I
-
-    move-result v2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    aput-object v2, v1, v0
-
-    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto/16 :goto_0
-
-    :cond_7
-    move v0, v1
-
-    .line 215
-    goto/16 :goto_0
+    throw v0
 .end method

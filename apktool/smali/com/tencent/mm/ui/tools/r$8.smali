@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic an:Landroid/app/Activity;
+.field final synthetic O:Landroid/app/Activity;
 
-.field final synthetic lxI:Lcom/tencent/mm/ui/tools/r;
+.field final synthetic lYx:Lcom/tencent/mm/ui/tools/r;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 303
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/r$8;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 304
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/r$8;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/tools/r$8;->an:Landroid/app/Activity;
+    iput-object p2, p0, Lcom/tencent/mm/ui/tools/r$8;->O:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,33 +41,33 @@
 
 # virtual methods
 .method public final run()V
-    .locals 5
+    .locals 6
 
     .prologue
-    .line 307
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$8;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 308
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$8;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->dRe:Landroid/view/MenuItem;
+    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->dTj:Landroid/view/MenuItem;
 
     if-nez v0, :cond_1
 
-    .line 308
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$8;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 309
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$8;->lYx:Lcom/tencent/mm/ui/tools/r;
 
     iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "on post expand search menu, but item is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 337
+    .line 338
     :cond_0
     :goto_0
     return-void
 
-    .line 311
+    .line 312
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$8;->lxI:Lcom/tencent/mm/ui/tools/r;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$8;->lYx:Lcom/tencent/mm/ui/tools/r;
 
     iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->TAG:Ljava/lang/String;
 
@@ -79,9 +79,9 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/r$8;->lxI:Lcom/tencent/mm/ui/tools/r;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/r$8;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iget-boolean v4, v4, Lcom/tencent/mm/ui/tools/r;->lxv:Z
+    iget-boolean v4, v4, Lcom/tencent/mm/ui/tools/r;->lYk:Z
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -89,51 +89,51 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 312
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$8;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 313
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$8;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/ui/tools/r;->lxu:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/ui/tools/r;->lYj:Z
 
     if-eqz v0, :cond_3
 
-    .line 313
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$8;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 314
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$8;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/ui/tools/r;->lxv:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/ui/tools/r;->lYk:Z
 
     if-nez v0, :cond_2
 
-    .line 314
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$8;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 315
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$8;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->dRe:Landroid/view/MenuItem;
+    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->dTj:Landroid/view/MenuItem;
 
     invoke-static {v0}, Landroid/support/v4/view/g;->b(Landroid/view/MenuItem;)Z
 
-    .line 322
+    .line 323
     :cond_2
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$8;->lxI:Lcom/tencent/mm/ui/tools/r;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$8;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->dRe:Landroid/view/MenuItem;
+    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->dTj:Landroid/view/MenuItem;
 
     invoke-static {v0}, Landroid/support/v4/view/g;->a(Landroid/view/MenuItem;)Landroid/view/View;
 
     move-result-object v0
 
-    .line 323
+    .line 324
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/r$8;->lxI:Lcom/tencent/mm/ui/tools/r;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/r$8;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iget-boolean v1, v1, Lcom/tencent/mm/ui/tools/r;->lxv:Z
+    iget-boolean v1, v1, Lcom/tencent/mm/ui/tools/r;->lYk:Z
 
     if-eqz v1, :cond_0
 
-    .line 325
-    const v1, 0x7f0704d4
+    .line 326
+    const v1, 0x7f1000cf
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -141,42 +141,42 @@
 
     invoke-virtual {v1}, Landroid/view/View;->requestFocus()Z
 
-    .line 327
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/r$8;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 328
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/r$8;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iget-boolean v1, v1, Lcom/tencent/mm/ui/tools/r;->lxy:Z
+    iget-boolean v1, v1, Lcom/tencent/mm/ui/tools/r;->lYn:Z
 
     if-eqz v1, :cond_0
 
-    .line 328
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/r$8;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 329
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/r$8;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/tools/r;->bQM:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v1, v1, Lcom/tencent/mm/ui/tools/r;->bpz:Lcom/tencent/mm/sdk/platformtools/ac;
 
     new-instance v2, Lcom/tencent/mm/ui/tools/r$8$1;
 
     invoke-direct {v2, p0, v0}, Lcom/tencent/mm/ui/tools/r$8$1;-><init>(Lcom/tencent/mm/ui/tools/r$8;Landroid/view/View;)V
 
-    const-wide/16 v3, 0x80
+    const-wide/16 v4, 0x80
 
-    invoke-virtual {v1, v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/aa;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v1, v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/ac;->postDelayed(Ljava/lang/Runnable;J)Z
 
     goto :goto_0
 
-    .line 317
+    .line 318
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$8;->lxI:Lcom/tencent/mm/ui/tools/r;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$8;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->lxH:Lcom/tencent/mm/ui/tools/r$a;
+    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->lYw:Lcom/tencent/mm/ui/tools/r$a;
 
     if-eqz v0, :cond_2
 
-    .line 318
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$8;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 319
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$8;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->lxH:Lcom/tencent/mm/ui/tools/r$a;
+    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->lYw:Lcom/tencent/mm/ui/tools/r$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/r$a;->biL()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/r$a;->boH()V
 
     goto :goto_1
 .end method

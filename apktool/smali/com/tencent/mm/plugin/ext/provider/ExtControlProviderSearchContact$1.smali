@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic dKP:Lcom/tencent/mm/pluginsdk/d/a/a;
+.field final synthetic dMy:Lcom/tencent/mm/pluginsdk/d/a/a;
 
-.field final synthetic dLB:Landroid/database/Cursor;
+.field final synthetic dNi:Landroid/database/Cursor;
 
-.field final synthetic dLC:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact;
+.field final synthetic dNj:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact;
 
 
 # direct methods
@@ -31,11 +31,11 @@
 
     .prologue
     .line 98
-    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact$1;->dLC:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact$1;->dNj:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact$1;->dLB:Landroid/database/Cursor;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact$1;->dNi:Landroid/database/Cursor;
 
-    iput-object p3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact$1;->dKP:Lcom/tencent/mm/pluginsdk/d/a/a;
+    iput-object p3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact$1;->dMy:Lcom/tencent/mm/pluginsdk/d/a/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,18 +49,18 @@
 
     .prologue
     .line 101
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact$1;->dLC:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact$1;->dNj:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact$1;->dLB:Landroid/database/Cursor;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact$1;->dNi:Landroid/database/Cursor;
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact;->d(Landroid/database/Cursor;)Landroid/database/Cursor;
+    invoke-static {v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact;->c(Landroid/database/Cursor;)Landroid/database/Cursor;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact;->a(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact;Landroid/database/Cursor;)Landroid/database/Cursor;
 
     .line 102
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact$1;->dKP:Lcom/tencent/mm/pluginsdk/d/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSearchContact$1;->dMy:Lcom/tencent/mm/pluginsdk/d/a/a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/d/a/a;->countDown()V
 

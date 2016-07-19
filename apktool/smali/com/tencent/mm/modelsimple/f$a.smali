@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/modelsimple/f$a;
-.super Lcom/tencent/mm/r/h;
+.super Lcom/tencent/mm/t/h;
 .source "SourceFile"
 
 
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private final caO:Lcom/tencent/mm/protocal/i$a;
+.field private final bUx:Lcom/tencent/mm/protocal/l$a;
 
-.field private final caP:Lcom/tencent/mm/protocal/i$b;
+.field private final bUy:Lcom/tencent/mm/protocal/l$b;
 
 
 # direct methods
@@ -26,21 +26,21 @@
 
     .prologue
     .line 98
-    invoke-direct {p0}, Lcom/tencent/mm/r/h;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/t/h;-><init>()V
 
     .line 100
-    new-instance v0, Lcom/tencent/mm/protocal/i$a;
+    new-instance v0, Lcom/tencent/mm/protocal/l$a;
 
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/i$a;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/protocal/l$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsimple/f$a;->caO:Lcom/tencent/mm/protocal/i$a;
+    iput-object v0, p0, Lcom/tencent/mm/modelsimple/f$a;->bUx:Lcom/tencent/mm/protocal/l$a;
 
     .line 101
-    new-instance v0, Lcom/tencent/mm/protocal/i$b;
+    new-instance v0, Lcom/tencent/mm/protocal/l$b;
 
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/i$b;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/protocal/l$b;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsimple/f$a;->caP:Lcom/tencent/mm/protocal/i$b;
+    iput-object v0, p0, Lcom/tencent/mm/modelsimple/f$a;->bUy:Lcom/tencent/mm/protocal/l$b;
 
     return-void
 .end method
@@ -67,22 +67,22 @@
     return-object v0
 .end method
 
-.method protected final tW()Lcom/tencent/mm/protocal/h$c;
+.method protected final tX()Lcom/tencent/mm/protocal/k$c;
     .locals 1
 
     .prologue
     .line 105
-    iget-object v0, p0, Lcom/tencent/mm/modelsimple/f$a;->caO:Lcom/tencent/mm/protocal/i$a;
+    iget-object v0, p0, Lcom/tencent/mm/modelsimple/f$a;->bUx:Lcom/tencent/mm/protocal/l$a;
 
     return-object v0
 .end method
 
-.method public final tX()Lcom/tencent/mm/protocal/h$d;
+.method public final tY()Lcom/tencent/mm/protocal/k$d;
     .locals 1
 
     .prologue
     .line 110
-    iget-object v0, p0, Lcom/tencent/mm/modelsimple/f$a;->caP:Lcom/tencent/mm/protocal/i$b;
+    iget-object v0, p0, Lcom/tencent/mm/modelsimple/f$a;->bUy:Lcom/tencent/mm/protocal/l$b;
 
     return-object v0
 .end method

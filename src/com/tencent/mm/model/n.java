@@ -1,26 +1,26 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.storage.ad;
-import com.tencent.mm.storage.ak;
-import com.tencent.mm.storage.ak.a;
-import com.tencent.mm.storage.al;
+import com.tencent.mm.storage.ae;
+import com.tencent.mm.storage.am;
+import com.tencent.mm.storage.am.a;
+import com.tencent.mm.storage.an;
 
 public final class n
 {
-  public static ad F(String paramString1, String paramString2)
+  public static ae C(String paramString1, String paramString2)
   {
     if ((paramString1 == null) || (paramString1.length() <= 0)) {}
     for (;;)
     {
       return null;
-      ak localak = ah.tD().rv().FD(paramString1);
-      if (localak != null)
+      am localam = ah.tE().rx().HT(paramString1);
+      if (localam != null)
       {
-        if (kgA == 1) {}
+        if (kGZ == 1) {}
         for (int i = 1; i != 0; i = 0)
         {
           String str2 = name;
-          String str1 = kgz.FC("");
+          String str1 = kGY.HS("");
           paramString1 = "";
           if (str1 != null) {
             paramString1 = "" + str1.replace("@", "");
@@ -29,24 +29,24 @@ public final class n
           if (paramString2 != null) {
             str1 = paramString1 + paramString2;
           }
-          return new ad("@domain.android", str2, str1, kgz.FC(""), localak.PN(), true);
+          return new ae("@domain.android", str2, str1, kGY.HS(""), localam.Rc(), true);
         }
       }
     }
   }
   
-  public static ad eX(String paramString)
+  public static ae fj(String paramString)
   {
-    return new ad("@black.android", null, paramString, null, true, true);
+    return new ae("@black.android", null, paramString, null, true, true);
   }
   
-  public static ad eY(String paramString)
+  public static ae fk(String paramString)
   {
-    ak localak = ah.tD().rv().FD("@t.qq.com");
-    if (localak == null) {
+    am localam = ah.tE().rx().HT("@t.qq.com");
+    if (localam == null) {
       return null;
     }
-    return new ad("@t.qq.com", null, paramString, null, localak.PN(), localak.aXX());
+    return new ae("@t.qq.com", null, paramString, null, localam.Rc(), localam.bdp());
   }
 }
 

@@ -1,30 +1,52 @@
 package com.tencent.mm.svg.c;
 
-import android.content.res.Resources;
-import com.tencent.mm.sdk.platformtools.ab;
-
 public final class c
 {
-  private static int kiA = 0;
-  private static long kiB = 0L;
-  private static int kiC = 0;
-  private static long kiD = 0L;
-  private static int kiE = 0;
-  private static int kiF = 0;
-  private static long kiG = 0L;
-  private static long kiH = 0L;
-  private static ab kiI = new ab("SVG Resource Report @jacksgong");
-  private static Resources kiy = null;
-  private static long kiz = 0L;
+  private static a kIW = null;
   
-  public static void aYY() {}
-  
-  public static void b(Resources paramResources)
+  public static void b(a parama)
   {
-    kiy = paramResources;
+    kIW = parama;
   }
   
-  public static void kz() {}
+  public static void d(String paramString1, String paramString2, Object... paramVarArgs)
+  {
+    if (kIW != null) {
+      kIW.d(paramString1, paramString2, paramVarArgs);
+    }
+  }
+  
+  public static void e(String paramString1, String paramString2, Object... paramVarArgs)
+  {
+    if (kIW != null) {
+      kIW.e(paramString1, paramString2, paramVarArgs);
+    }
+  }
+  
+  public static void i(String paramString1, String paramString2, Object... paramVarArgs)
+  {
+    if (kIW != null) {
+      kIW.i(paramString1, paramString2, paramVarArgs);
+    }
+  }
+  
+  public static void printErrStackTrace(String paramString1, Throwable paramThrowable, String paramString2, Object... paramVarArgs)
+  {
+    if (kIW != null) {
+      kIW.printErrStackTrace(paramString1, paramThrowable, paramString2, paramVarArgs);
+    }
+  }
+  
+  public static abstract interface a
+  {
+    public abstract void d(String paramString1, String paramString2, Object... paramVarArgs);
+    
+    public abstract void e(String paramString1, String paramString2, Object... paramVarArgs);
+    
+    public abstract void i(String paramString1, String paramString2, Object... paramVarArgs);
+    
+    public abstract void printErrStackTrace(String paramString1, Throwable paramThrowable, String paramString2, Object... paramVarArgs);
+  }
 }
 
 /* Location:

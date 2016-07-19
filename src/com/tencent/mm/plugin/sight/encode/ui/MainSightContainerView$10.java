@@ -3,14 +3,14 @@ package com.tencent.mm.plugin.sight.encode.ui;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-final class MainSightContainerView$10
+public final class MainSightContainerView$10
   implements View.OnClickListener
 {
-  MainSightContainerView$10(MainSightContainerView paramMainSightContainerView) {}
+  public MainSightContainerView$10(MainSightContainerView paramMainSightContainerView) {}
   
   public final void onClick(View paramView)
   {
-    gCA.avw();
+    gJb.azm();
   }
 }
 

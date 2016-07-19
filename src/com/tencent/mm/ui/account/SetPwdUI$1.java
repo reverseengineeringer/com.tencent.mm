@@ -6,11 +6,11 @@ import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.base.g;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.h;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 
 final class SetPwdUI$1
   implements MenuItem.OnMenuItemClickListener
@@ -19,53 +19,53 @@ final class SetPwdUI$1
   
   public final boolean onMenuItemClick(final MenuItem paramMenuItem)
   {
-    SetPwdUI.a(kwz, kwz.bbH());
-    SetPwdUI.b(kwz, kwz.bbI());
-    if (ay.kz(SetPwdUI.a(kwz))) {}
+    SetPwdUI.a(kVG, kVG.bgT());
+    SetPwdUI.b(kVG, kVG.bgU());
+    if (be.kf(SetPwdUI.a(kVG))) {}
     do
     {
       return true;
-      if (!SetPwdUI.a(kwz).equals(SetPwdUI.b(kwz)))
+      if (!SetPwdUI.a(kVG).equals(SetPwdUI.b(kVG)))
       {
-        kwz.qn(SetPwdUI.a.kwB);
+        kVG.sf(SetPwdUI.a.kVI);
         return true;
       }
-      if (SetPwdUI.a(kwz).length() > 16)
+      if (SetPwdUI.a(kVG).length() > 16)
       {
-        kwz.qn(SetPwdUI.a.kwC);
+        kVG.sf(SetPwdUI.a.kVJ);
         return true;
       }
-      if (ay.Db(SetPwdUI.a(kwz)))
+      if (be.Fq(SetPwdUI.a(kVG)))
       {
-        g.e(kwz, 2131427743, 2131427653);
+        com.tencent.mm.ui.base.g.f(kVG, 2131234381, 2131234402);
         return true;
       }
-      if (!ay.Dg(SetPwdUI.a(kwz)))
+      if (!be.Fv(SetPwdUI.a(kVG)))
       {
-        if ((SetPwdUI.a(kwz).length() >= 8) && (SetPwdUI.a(kwz).length() < 16))
+        if ((SetPwdUI.a(kVG).length() >= 8) && (SetPwdUI.a(kVG).length() < 16))
         {
-          kwz.qn(SetPwdUI.a.kwE);
+          kVG.sf(SetPwdUI.a.kVL);
           return true;
         }
-        kwz.qn(SetPwdUI.a.kwD);
+        kVG.sf(SetPwdUI.a.kVK);
         return true;
       }
-      kwz.age();
-      if (ay.kz(kwz.avm)) {
-        kwz.avm = ((String)ah.tD().rn().get(77830, null));
+      kVG.aiI();
+      if (be.kf(kVG.ahd)) {
+        kVG.ahd = ((String)ah.tE().ro().get(77830, null));
       }
-      paramMenuItem = kwz.a(SetPwdUI.a(kwz), kwz.avm, kwz.kwy);
-      ah.tE().d(paramMenuItem);
-      SetPwdUI.a(kwz, kwz.a(kwz, kwz.getString(2131430877), kwz.getString(2131427607), new DialogInterface.OnCancelListener()
+      paramMenuItem = kVG.a(SetPwdUI.a(kVG), kVG.ahd, kVG.kVF);
+      ah.tF().a(paramMenuItem, 0);
+      SetPwdUI.a(kVG, kVG.a(kVG, kVG.getString(2131231028), kVG.getString(2131234348), new DialogInterface.OnCancelListener()
       {
         public final void onCancel(DialogInterface paramAnonymousDialogInterface)
         {
-          ah.tE().c(paramMenuItem);
+          ah.tF().c(paramMenuItem);
         }
       }));
-    } while ((!kwz.bbL()) || (kwz.goQ));
-    u.d("!32@/B4Tb64lLpLtIluUtTn2QG2YcQ4VEs+3", "cpan settpassword cancel 11868 0");
-    com.tencent.mm.plugin.report.service.h.fUJ.g(11868, new Object[] { Integer.valueOf(0) });
+    } while ((!kVG.bgX()) || (kVG.gzi));
+    v.d("MicroMsg.SetPwdUI", "cpan settpassword cancel 11868 0");
+    com.tencent.mm.plugin.report.service.g.gdY.h(11868, new Object[] { Integer.valueOf(0) });
     return true;
   }
 }

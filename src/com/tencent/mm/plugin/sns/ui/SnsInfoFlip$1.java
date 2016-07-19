@@ -1,7 +1,7 @@
 package com.tencent.mm.plugin.sns.ui;
 
 import android.content.Context;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.tools.MMGestureGallery.e;
 
@@ -10,24 +10,24 @@ final class SnsInfoFlip$1
 {
   SnsInfoFlip$1(SnsInfoFlip paramSnsInfoFlip, Context paramContext) {}
   
-  public final void aap()
+  public final void YB()
   {
     if ((val$context instanceof SnsBrowseUI))
     {
-      ((SnsBrowseUI)val$context).aBF();
+      ((SnsBrowseUI)val$context).aEu();
       return;
     }
-    if (SnsInfoFlip.a(heR))
+    if (SnsInfoFlip.a(htI))
     {
       ((MMActivity)val$context).finish();
       return;
     }
-    SnsInfoFlip.c(heR).post(new Runnable()
+    SnsInfoFlip.c(htI).post(new Runnable()
     {
       public final void run()
       {
-        if ((heR.gXN != null) && (SnsInfoFlip.b(heR))) {
-          heR.gXN.Kk();
+        if ((htI.hkZ != null) && (SnsInfoFlip.b(htI))) {
+          htI.hkZ.KU();
         }
       }
     });

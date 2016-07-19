@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic bDO:Ljava/lang/String;
+.field final synthetic bwZ:Ljava/lang/String;
 
-.field final synthetic lAT:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
+.field final synthetic mbK:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 304
-    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$1;->lAT:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
+    .line 325
+    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$1;->mbK:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$1;->bDO:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$1;->bwZ:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,20 +44,20 @@
     .locals 2
 
     .prologue
-    .line 307
-    const-string/jumbo v0, "!44@/B4Tb64lLpLWl/1sKbbnJDN+/k3QDAC+0iKsGdZGh9U="
+    .line 328
+    const-string/jumbo v0, "MicroMsg.MsgRetransmitUI"
 
     const-string/jumbo v1, "test before sendMutiImage"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 308
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$1;->lAT:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
+    .line 329
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$1;->mbK:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$1;->bDO:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$1;->bwZ:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;->a(Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;Ljava/lang/String;)V
 
-    .line 309
+    .line 330
     return-void
 .end method

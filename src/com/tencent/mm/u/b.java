@@ -1,64 +1,48 @@
 package com.tencent.mm.u;
 
-import android.database.Cursor;
-import com.tencent.mm.ar.g;
-import com.tencent.mm.model.ai;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.q;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.auz;
+import com.tencent.mm.protocal.b.ava;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.d;
 
 public final class b
-  extends ai
+  extends com.tencent.mm.t.j
+  implements com.tencent.mm.network.j
 {
-  public final boolean cx(int paramInt)
+  private a bkQ;
+  private d bkT;
+  
+  public b(String paramString)
   {
-    return (paramInt != 0) && (paramInt < 620757033);
+    a.a locala = new a.a();
+    byl = new auz();
+    bym = new ava();
+    uri = "/cgi-bin/micromsg-bin/unbindqq";
+    byj = 253;
+    byn = 0;
+    byo = 0;
+    bkQ = locala.vA();
+    bkQ.byh.byq).jGI = paramString;
   }
   
-  public final String getTag()
+  public final int a(e parame, d paramd)
   {
-    return "!64@/B4Tb64lLpJAUoyR9+C90MMU43lT9KAqJwf4F+scGXAfjuF7uSzMHMZUMVy1zvD2";
+    bkT = paramd;
+    return a(parame, bkQ, this);
   }
   
-  public final void transfer(int paramInt)
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    t.d("!64@/B4Tb64lLpJAUoyR9+C90MMU43lT9KAqJwf4F+scGXAfjuF7uSzMHMZUMVy1zvD2", "the previous version is %d", new Object[] { Integer.valueOf(paramInt) });
-    if ((paramInt != 0) && (paramInt < 620757033))
-    {
-      Object localObject1 = new LinkedList();
-      Object localObject2 = ax.tl().ri().d("@black.android", "", null);
-      Object localObject3;
-      if (localObject2 != null)
-      {
-        ((Cursor)localObject2).moveToFirst();
-        while (!((Cursor)localObject2).isAfterLast())
-        {
-          localObject3 = new com.tencent.mm.storage.k();
-          ((com.tencent.mm.storage.k)localObject3).c((Cursor)localObject2);
-          ((List)localObject1).add(field_username);
-          ((Cursor)localObject2).moveToNext();
-        }
-        ((Cursor)localObject2).close();
-      }
-      if (((List)localObject1).size() > 0)
-      {
-        localObject2 = new StringBuilder();
-        ((StringBuilder)localObject2).append("Update rconversation");
-        ((StringBuilder)localObject2).append(" set parentRef = '@blacklist").append("' where 1 != 1 ");
-        localObject1 = ((List)localObject1).iterator();
-        while (((Iterator)localObject1).hasNext())
-        {
-          localObject3 = (String)((Iterator)localObject1).next();
-          ((StringBuilder)localObject2).append(" or username = '").append((String)localObject3).append("'");
-        }
-        localObject1 = ((StringBuilder)localObject2).toString();
-        t.d("!64@/B4Tb64lLpJAUoyR9+C90MMU43lT9KAqJwf4F+scGXAfjuF7uSzMHMZUMVy1zvD2", "update sql: %s", new Object[] { localObject1 });
-        tlbnN.bx("rconversation", (String)localObject1);
-      }
-    }
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
+  }
+  
+  public final int getType()
+  {
+    return 253;
   }
 }
 

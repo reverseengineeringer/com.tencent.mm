@@ -11,21 +11,21 @@ final class MobileVerifyUI$1
   
   public final void run()
   {
-    kzc.kyN.post(new Runnable()
+    kYj.kXU.post(new Runnable()
     {
       public final void run()
       {
-        MobileVerifyUI.b(kzc);
-        if (MobileVerifyUI.c(kzc) >= 0L)
+        MobileVerifyUI.b(kYj);
+        if (MobileVerifyUI.c(kYj) >= 0L)
         {
-          kzc.kyN.setText(kzc.getResources().getQuantityString(2131755014, (int)MobileVerifyUI.c(kzc), new Object[] { Integer.valueOf((int)MobileVerifyUI.c(kzc)) }));
+          kYj.kXU.setText(kYj.getResources().getQuantityString(2131361811, (int)MobileVerifyUI.c(kYj), new Object[] { Integer.valueOf((int)MobileVerifyUI.c(kYj)) }));
           return;
         }
-        kzc.kyN.setVisibility(8);
-        kzc.kyM.setVisibility(0);
-        MobileVerifyUI.d(kzc);
-        kzc.kyM.setEnabled(true);
-        kzc.kyM.setText(kzc.getString(2131427716));
+        kYj.kXU.setVisibility(8);
+        kYj.kXT.setVisibility(0);
+        MobileVerifyUI.d(kYj);
+        kYj.kXT.setEnabled(true);
+        kYj.kXT.setText(kYj.getString(2131233857));
       }
     });
   }

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/w$b;
+.implements Lcom/tencent/mm/sdk/platformtools/y$b;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic blP:Lcom/tencent/mm/booter/CoreService;
+.field final synthetic aZu:Lcom/tencent/mm/booter/CoreService;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 78
-    iput-object p1, p0, Lcom/tencent/mm/booter/CoreService$1;->blP:Lcom/tencent/mm/booter/CoreService;
+    .line 77
+    iput-object p1, p0, Lcom/tencent/mm/booter/CoreService$1;->aZu:Lcom/tencent/mm/booter/CoreService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,16 +40,16 @@
     .locals 1
 
     .prologue
-    .line 87
-    iget-object v0, p0, Lcom/tencent/mm/booter/CoreService$1;->blP:Lcom/tencent/mm/booter/CoreService;
+    .line 86
+    iget-object v0, p0, Lcom/tencent/mm/booter/CoreService$1;->aZu:Lcom/tencent/mm/booter/CoreService;
 
     invoke-virtual {v0}, Lcom/tencent/mm/booter/CoreService;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/booter/MMReceivers$AlarmReceiver;->aq(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/tencent/mm/booter/MMReceivers$AlarmReceiver;->an(Landroid/content/Context;)V
 
-    .line 88
+    .line 87
     return-void
 .end method
 
@@ -57,15 +57,15 @@
     .locals 1
 
     .prologue
-    .line 82
-    iget-object v0, p0, Lcom/tencent/mm/booter/CoreService$1;->blP:Lcom/tencent/mm/booter/CoreService;
+    .line 81
+    iget-object v0, p0, Lcom/tencent/mm/booter/CoreService$1;->aZu:Lcom/tencent/mm/booter/CoreService;
 
     invoke-virtual {v0}, Lcom/tencent/mm/booter/CoreService;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/booter/MMReceivers$AlarmReceiver;->ap(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/tencent/mm/booter/MMReceivers$AlarmReceiver;->am(Landroid/content/Context;)V
 
-    .line 83
+    .line 82
     return-void
 .end method

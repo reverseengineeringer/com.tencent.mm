@@ -12,26 +12,53 @@
 
 
 # instance fields
-.field private eut:Ljava/lang/String;
+.field private eAL:Ljava/lang/String;
 
-.field private lwd:I
+.field public lWP:I
 
-.field public lzG:Z
+.field private maA:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/text/InputFilter;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private lzH:Ljava/lang/ref/WeakReference;
+.field private maB:Lcom/tencent/mm/ui/tools/a/c$a;
 
-.field private lzI:I
+.field public mav:Z
 
-.field private lzJ:I
+.field private maw:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Landroid/widget/EditText;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private lzK:Ljava/util/ArrayList;
+.field private may:I
 
-.field private lzL:Lcom/tencent/mm/ui/tools/a/c$a;
+.field private maz:I
 
 
 # direct methods
 .method private constructor <init>(Ljava/lang/ref/WeakReference;)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Landroid/widget/EditText;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
     .line 44
@@ -40,20 +67,20 @@
     .line 20
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/a/c;->lzG:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/a/c;->mav:Z
 
     .line 45
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/a/c;->lzH:Ljava/lang/ref/WeakReference;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/a/c;->maw:Ljava/lang/ref/WeakReference;
 
     .line 46
-    sget v0, Lcom/tencent/mm/ui/tools/i$a;->lwf:I
+    sget v0, Lcom/tencent/mm/ui/tools/i$a;->lWR:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/a/c;->lwd:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/a/c;->lWP:I
 
     .line 47
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/a/c;->lzG:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/a/c;->mav:Z
 
     .line 48
     return-void
@@ -82,16 +109,16 @@
 
     .prologue
     .line 111
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/a/c;->lzL:Lcom/tencent/mm/ui/tools/a/c$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/a/c;->maB:Lcom/tencent/mm/ui/tools/a/c$a;
 
     .line 112
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/a/c;->aSr()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/a/c;->aXk()V
 
     .line 113
     return-void
 .end method
 
-.method protected final aSq()I
+.method protected final aXj()I
     .locals 5
 
     .prologue
@@ -102,16 +129,16 @@
     const/4 v1, 0x1
 
     .line 121
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->eut:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->eAL:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 122
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->lzH:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->maw:Ljava/lang/ref/WeakReference;
 
     if-nez v0, :cond_0
 
@@ -123,7 +150,7 @@
 
     .line 125
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->lzH:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->maw:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -143,15 +170,15 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->eut:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->eAL:Ljava/lang/String;
 
     .line 127
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->eut:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->eAL:Ljava/lang/String;
 
-    iget v4, p0, Lcom/tencent/mm/ui/tools/a/c;->lwd:I
+    iget v4, p0, Lcom/tencent/mm/ui/tools/a/c;->lWP:I
 
-    invoke-static {v0, v4}, Lcom/tencent/mm/ui/tools/i;->bh(Ljava/lang/String;I)I
+    invoke-static {v0, v4}, Lcom/tencent/mm/ui/tools/i;->bt(Ljava/lang/String;I)I
 
     move-result v4
 
@@ -164,11 +191,11 @@
     if-eqz v0, :cond_3
 
     .line 129
-    const-string/jumbo v0, "!44@/B4Tb64lLpKBZnNdUECN7wNhKDGLpubl8879tKhUKk0="
+    const-string/jumbo v0, "MicroMsg.InputTextBoundaryCheck"
 
     const-string/jumbo v1, "you are crazy =.=!that is 2 GB character!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v2
 
@@ -183,7 +210,7 @@
 
     .line 131
     :cond_3
-    iget v0, p0, Lcom/tencent/mm/ui/tools/a/c;->lzJ:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/a/c;->maz:I
 
     if-ge v4, v0, :cond_4
 
@@ -194,7 +221,7 @@
 
     .line 133
     :cond_4
-    iget v0, p0, Lcom/tencent/mm/ui/tools/a/c;->lzI:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/a/c;->may:I
 
     if-le v4, v0, :cond_5
 
@@ -210,26 +237,26 @@
     goto :goto_0
 .end method
 
-.method protected final aSr()V
+.method protected final aXk()V
     .locals 5
 
     .prologue
     .line 142
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/a/c;->lzG:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/a/c;->mav:Z
 
     if-nez v0, :cond_2
 
     .line 143
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->lzH:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->maw:Ljava/lang/ref/WeakReference;
 
     if-nez v0, :cond_1
 
     .line 144
-    const-string/jumbo v0, "!44@/B4Tb64lLpKBZnNdUECN7wNhKDGLpubl8879tKhUKk0="
+    const-string/jumbo v0, "MicroMsg.InputTextBoundaryCheck"
 
     const-string/jumbo v1, "edit text view is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 172
     :cond_0
@@ -238,9 +265,9 @@
 
     .line 147
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->lzK:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->maA:Ljava/util/ArrayList;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->bq(Ljava/util/List;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->bz(Ljava/util/List;)Z
 
     move-result v0
 
@@ -255,16 +282,16 @@
 
     new-instance v2, Lcom/tencent/mm/ui/tools/i;
 
-    iget v3, p0, Lcom/tencent/mm/ui/tools/a/c;->lzI:I
+    iget v3, p0, Lcom/tencent/mm/ui/tools/a/c;->may:I
 
-    iget v4, p0, Lcom/tencent/mm/ui/tools/a/c;->lwd:I
+    iget v4, p0, Lcom/tencent/mm/ui/tools/a/c;->lWP:I
 
     invoke-direct {v2, v3, v4}, Lcom/tencent/mm/ui/tools/i;-><init>(II)V
 
     aput-object v2, v1, v0
 
     .line 149
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->lzH:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->maw:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -277,12 +304,12 @@
     .line 156
     :cond_2
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->lzL:Lcom/tencent/mm/ui/tools/a/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->maB:Lcom/tencent/mm/ui/tools/a/c$a;
 
     if-eqz v0, :cond_0
 
     .line 158
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/a/c;->aSq()I
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/a/c;->aXj()I
 
     move-result v0
 
@@ -292,32 +319,32 @@
 
     .line 160
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->lzL:Lcom/tencent/mm/ui/tools/a/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->maB:Lcom/tencent/mm/ui/tools/a/c$a;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/a/c;->eut:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/a/c;->eAL:Ljava/lang/String;
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/tools/a/c$a;->mm(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/tools/a/c$a;->ng(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 151
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->lzK:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->maA:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/tencent/mm/ui/tools/i;
 
-    iget v2, p0, Lcom/tencent/mm/ui/tools/a/c;->lzI:I
+    iget v2, p0, Lcom/tencent/mm/ui/tools/a/c;->may:I
 
-    iget v3, p0, Lcom/tencent/mm/ui/tools/a/c;->lwd:I
+    iget v3, p0, Lcom/tencent/mm/ui/tools/a/c;->lWP:I
 
     invoke-direct {v1, v2, v3}, Lcom/tencent/mm/ui/tools/i;-><init>(II)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 152
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->lzK:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->maA:Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/a/c;->lzK:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/a/c;->maA:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -332,7 +359,7 @@
     check-cast v0, [Landroid/text/InputFilter;
 
     .line 153
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/a/c;->lzH:Ljava/lang/ref/WeakReference;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/a/c;->maw:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -346,17 +373,17 @@
 
     .line 164
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->lzL:Lcom/tencent/mm/ui/tools/a/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->maB:Lcom/tencent/mm/ui/tools/a/c$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/a/c$a;->Om()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/a/c$a;->Px()V
 
     goto :goto_0
 
     .line 168
     :pswitch_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->lzL:Lcom/tencent/mm/ui/tools/a/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/c;->maB:Lcom/tencent/mm/ui/tools/a/c$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/a/c$a;->On()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/a/c$a;->Py()V
 
     goto :goto_0
 
@@ -369,31 +396,31 @@
     .end packed-switch
 .end method
 
-.method public final bV(II)Lcom/tencent/mm/ui/tools/a/c;
+.method public final cc(II)Lcom/tencent/mm/ui/tools/a/c;
     .locals 0
 
     .prologue
     .line 74
-    iput p1, p0, Lcom/tencent/mm/ui/tools/a/c;->lzJ:I
+    iput p1, p0, Lcom/tencent/mm/ui/tools/a/c;->maz:I
 
     .line 75
-    iput p2, p0, Lcom/tencent/mm/ui/tools/a/c;->lzI:I
+    iput p2, p0, Lcom/tencent/mm/ui/tools/a/c;->may:I
 
     .line 76
     return-object p0
 .end method
 
-.method public final rZ(I)Lcom/tencent/mm/ui/tools/a/c;
+.method public final ud(I)Lcom/tencent/mm/ui/tools/a/c;
     .locals 1
 
     .prologue
     .line 86
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/a/c;->lzJ:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/a/c;->maz:I
 
     .line 87
-    iput p1, p0, Lcom/tencent/mm/ui/tools/a/c;->lzI:I
+    iput p1, p0, Lcom/tencent/mm/ui/tools/a/c;->may:I
 
     .line 88
     return-object p0

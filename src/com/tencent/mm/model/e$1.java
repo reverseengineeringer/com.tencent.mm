@@ -1,17 +1,17 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.protocal.b.aj;
+import com.tencent.mm.protocal.b.am;
 import com.tencent.mm.storage.q;
 
 final class e$1
   implements z.c.a
 {
-  e$1(e parame, String paramString, aj paramaj, ar.b paramb) {}
+  e$1(e parame, String paramString, am paramam, ar.b paramb) {}
   
-  public final void f(String paramString, boolean paramBoolean)
+  public final void i(String paramString, boolean paramBoolean)
   {
-    paramString = ah.tD().rq().Ep(bzS);
-    e.a(bzT, bzU, paramString);
+    paramString = ah.tE().rr().GD(bsV);
+    e.a(bsW, bsX, paramString);
   }
 }
 

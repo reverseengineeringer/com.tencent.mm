@@ -1,7 +1,7 @@
 package com.tencent.mm.plugin.ext.provider;
 
-import com.tencent.mm.d.a.dr;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.e.a.dv;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.model.as.a;
 import com.tencent.mm.network.e;
 import com.tencent.mm.storage.k;
@@ -13,20 +13,20 @@ final class ExtControlProviderSNS$2
   
   public final void run()
   {
-    dr localdr = new dr();
-    axv.type = 1;
-    axv.username = cZS.field_username;
-    axv.axw = ExtControlProviderSNS.a(dLy);
-    axv.axx = ExtControlProviderSNS.b(dLy);
-    axv.axy = ExtControlProviderSNS.c(dLy);
-    axv.axz = new as.a()
+    dv localdv = new dv();
+    aju.type = 1;
+    aju.username = cYy.field_username;
+    aju.ajv = ExtControlProviderSNS.a(dNf);
+    aju.ajw = ExtControlProviderSNS.b(dNf);
+    aju.ajx = ExtControlProviderSNS.c(dNf);
+    aju.ajy = new as.a()
     {
       public final void a(e paramAnonymouse)
       {
-        dKP.countDown();
+        dMy.countDown();
       }
     };
-    com.tencent.mm.sdk.c.a.jUF.j(localdr);
+    com.tencent.mm.sdk.c.a.kug.y(localdv);
   }
 }
 

@@ -13,9 +13,9 @@ final class SnsLabelUI$6
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    SnsLabelUI.j(hfA);
-    i.a.aOW().ah(SnsLabelUI.b(hfA));
-    SnsLabelUI.a(hfA, g.a(hfA, hfA.getString(2131433178), false, null));
+    SnsLabelUI.j(hur);
+    i.a.aTy().ap(SnsLabelUI.b(hur));
+    SnsLabelUI.a(hur, g.a(hur, hur.getString(2131235464), false, null));
   }
 }
 

@@ -14,9 +14,9 @@ final class RegByMobileRegAIOUI$5
   public final void onClick(View paramView)
   {
     paramView = new Intent();
-    paramView.putExtra("country_name", RegByMobileRegAIOUI.k(kuT));
-    paramView.putExtra("couttry_code", RegByMobileRegAIOUI.j(kuT));
-    a.coa.b(paramView, kuT);
+    paramView.putExtra("country_name", RegByMobileRegAIOUI.k(kUa));
+    paramView.putExtra("couttry_code", RegByMobileRegAIOUI.j(kUa));
+    a.cjo.b(paramView, kUa);
   }
 }
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/e/b;->X(Landroid/view/View;)I
+    value = Lcom/tencent/mm/plugin/sns/e/b;->b(Lcom/tencent/mm/plugin/sns/e/b$b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,24 +18,20 @@
 
 
 # instance fields
-.field final synthetic cqb:Landroid/view/View;
+.field final synthetic gTF:Lcom/tencent/mm/plugin/sns/e/b$b;
 
-.field final synthetic gRy:Landroid/view/View;
-
-.field final synthetic gRz:Lcom/tencent/mm/plugin/sns/e/b;
+.field final synthetic gTG:Lcom/tencent/mm/plugin/sns/e/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/plugin/sns/e/b;Landroid/view/View;Landroid/view/View;)V
+.method constructor <init>(Lcom/tencent/mm/plugin/sns/e/b;Lcom/tencent/mm/plugin/sns/e/b$b;)V
     .locals 0
 
     .prologue
-    .line 407
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/e/b$2;->gRz:Lcom/tencent/mm/plugin/sns/e/b;
+    .line 324
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/e/b$2;->gTG:Lcom/tencent/mm/plugin/sns/e/b;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/e/b$2;->cqb:Landroid/view/View;
-
-    iput-object p3, p0, Lcom/tencent/mm/plugin/sns/e/b$2;->gRy:Landroid/view/View;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/e/b$2;->gTF:Lcom/tencent/mm/plugin/sns/e/b$b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,15 +44,32 @@
     .locals 3
 
     .prologue
-    .line 411
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/e/b$2;->gRz:Lcom/tencent/mm/plugin/sns/e/b;
+    .line 327
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/e/b$2;->gTG:Lcom/tencent/mm/plugin/sns/e/b;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/e/b$2;->cqb:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/e/b$2;->gTF:Lcom/tencent/mm/plugin/sns/e/b$b;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/e/b$2;->gRy:Landroid/view/View;
+    iget-object v2, v0, Lcom/tencent/mm/plugin/sns/e/b;->bdA:Ljava/util/Set;
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/plugin/sns/e/b;->a(Lcom/tencent/mm/plugin/sns/e/b;Landroid/view/View;Landroid/view/View;)V
+    invoke-interface {v2, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 412
+    sget v1, Lcom/tencent/mm/plugin/sns/e/b;->gTu:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    sput v1, Lcom/tencent/mm/plugin/sns/e/b;->gTu:I
+
+    if-gtz v1, :cond_0
+
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
+
+    move-result-object v1
+
+    const/16 v2, 0xd0
+
+    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
+
+    .line 328
+    :cond_0
     return-void
 .end method

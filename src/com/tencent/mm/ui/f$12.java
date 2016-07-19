@@ -1,32 +1,19 @@
 package com.tencent.mm.ui;
 
-import android.app.Activity;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import com.tencent.mm.ab.o.a;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.ui.base.preference.IconPreference;
+import com.tencent.mm.e.a.lm;
+import com.tencent.mm.pluginsdk.c.a;
+import com.tencent.mm.sdk.c.b;
 
 final class f$12
-  implements o.a
+  extends a
 {
   f$12(f paramf) {}
   
-  public final void f(final Bitmap paramBitmap)
+  public final void v(b paramb)
   {
-    ab.j(new Runnable()
-    {
-      public final void run()
-      {
-        IconPreference localIconPreference = (IconPreference)f.a(klo).GB("jd_market_entrance");
-        if (localIconPreference != null)
-        {
-          drawable = new BitmapDrawable(klo.koJ.kpc.getResources(), paramBitmap);
-          f.a(klo).notifyDataSetChanged();
-          f.f(klo);
-        }
-      }
-    });
+    if ((paramb instanceof lm)) {
+      f.c(kKO);
+    }
   }
 }
 

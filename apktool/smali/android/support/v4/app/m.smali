@@ -61,6 +61,15 @@
 # virtual methods
 .method protected final dispatchRestoreInstanceState(Landroid/util/SparseArray;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/util/SparseArray",
+            "<",
+            "Landroid/os/Parcelable;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
     .line 61
@@ -72,6 +81,15 @@
 
 .method protected final dispatchSaveInstanceState(Landroid/util/SparseArray;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/util/SparseArray",
+            "<",
+            "Landroid/os/Parcelable;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
     .line 53

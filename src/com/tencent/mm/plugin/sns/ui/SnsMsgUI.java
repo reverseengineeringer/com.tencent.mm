@@ -30,33 +30,34 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.platformtools.n;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.b;
-import com.tencent.mm.plugin.sns.d.b.b;
-import com.tencent.mm.plugin.sns.d.o;
 import com.tencent.mm.plugin.sns.data.SnsCmdList;
-import com.tencent.mm.plugin.sns.h.c;
-import com.tencent.mm.plugin.sns.h.l;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.b;
+import com.tencent.mm.plugin.sns.e.b.b;
+import com.tencent.mm.plugin.sns.e.o;
+import com.tencent.mm.plugin.sns.i.c;
+import com.tencent.mm.plugin.sns.i.l;
 import com.tencent.mm.pluginsdk.ui.a.b;
-import com.tencent.mm.protocal.b.add;
-import com.tencent.mm.protocal.b.apu;
-import com.tencent.mm.protocal.b.atp;
-import com.tencent.mm.protocal.b.iv;
-import com.tencent.mm.protocal.b.ye;
+import com.tencent.mm.protocal.b.adw;
+import com.tencent.mm.protocal.b.aqf;
+import com.tencent.mm.protocal.b.auf;
+import com.tencent.mm.protocal.b.je;
+import com.tencent.mm.protocal.b.yr;
 import com.tencent.mm.sdk.h.g.a;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.q;
+import com.tencent.mm.storage.z;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.MMImageView;
 import com.tencent.mm.ui.base.MMSlideDelView;
 import com.tencent.mm.ui.base.MMSlideDelView.c;
 import com.tencent.mm.ui.base.MMSlideDelView.d;
+import com.tencent.mm.ui.base.MMSlideDelView.e;
 import com.tencent.mm.ui.base.MMSlideDelView.f;
-import com.tencent.mm.ui.base.MMSlideDelView.g;
 import com.tencent.mm.ui.base.n.d;
+import com.tencent.mm.ui.i.a;
 import com.tencent.mm.ui.p;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -66,58 +67,58 @@ import java.util.Set;
 
 public class SnsMsgUI
   extends MMActivity
-  implements b.b, com.tencent.mm.r.d
+  implements b.b, com.tencent.mm.t.d
 {
-  private String bEJ;
-  private n.d cHv = new n.d()
+  private String bxU;
+  private n.d cEz = new n.d()
   {
     public final void d(MenuItem paramAnonymousMenuItem, int paramAnonymousInt)
     {
       SnsMsgUI.a(SnsMsgUI.this, SnsMsgUI.k(SnsMsgUI.this));
     }
   };
-  private View cVR;
-  private View cVS = null;
-  private boolean cVT = false;
-  private View fbv;
-  private int gUE;
-  private ListView gWB;
-  private af gWG;
-  private SnsCmdList gYA = new SnsCmdList();
-  private aa handler = ad.ZP();
-  private q hcs;
-  private a hfN;
-  private boolean hfO = false;
-  private boolean hfP = false;
-  private boolean hfQ = false;
-  private View.OnClickListener hfR = new View.OnClickListener()
+  private View cUh;
+  private View cUi = null;
+  private boolean cUj = false;
+  private ListView eLC;
+  private View eLE;
+  private ac handler = ad.acj();
+  private int hhw;
+  private aj hke;
+  private SnsCmdList hlM = new SnsCmdList();
+  private q hre;
+  private a huE;
+  private boolean huF = false;
+  private boolean huG = false;
+  private boolean huH = false;
+  private View.OnClickListener huI = new View.OnClickListener()
   {
     public final void onClick(View paramAnonymousView)
     {
-      if ((paramAnonymousView.getTag() instanceof ag))
+      if ((paramAnonymousView.getTag() instanceof ak))
       {
         SnsMsgUI.a(SnsMsgUI.this).a(paramAnonymousView, -1, null);
         return;
       }
-      if ((paramAnonymousView.getTag() instanceof com.tencent.mm.plugin.sns.h.g))
+      if ((paramAnonymousView.getTag() instanceof com.tencent.mm.plugin.sns.i.g))
       {
-        SnsMsgUI.a(SnsMsgUI.this, (com.tencent.mm.plugin.sns.h.g)paramAnonymousView.getTag());
+        SnsMsgUI.a(SnsMsgUI.this, (com.tencent.mm.plugin.sns.i.g)paramAnonymousView.getTag());
         return;
       }
-      u.w("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "v.getTag():" + paramAnonymousView.getTag());
+      v.w("MicroMsg.SnsMsgUI", "v.getTag():" + paramAnonymousView.getTag());
     }
   };
-  private g.a hfS = new g.a()
+  private g.a huJ = new g.a()
   {
     public final void a(String paramAnonymousString, com.tencent.mm.sdk.h.i paramAnonymousi)
     {
-      ad.ZP().post(new Runnable()
+      ad.acj().post(new Runnable()
       {
         public final void run()
         {
           synchronized (SnsMsgUI.d(SnsMsgUI.this))
           {
-            u.v("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "comment notify");
+            v.v("MicroMsg.SnsMsgUI", "comment notify");
             SnsMsgUI.l(SnsMsgUI.this);
             SnsMsgUI.d(SnsMsgUI.this).a(null, null);
             return;
@@ -126,7 +127,7 @@ public class SnsMsgUI
       });
     }
   };
-  Runnable hfT = new Runnable()
+  Runnable huK = new Runnable()
   {
     public final void run()
     {
@@ -142,57 +143,57 @@ public class SnsMsgUI
     }
   };
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    qb(2131433059);
-    a(0, getString(2131430892), new MenuItem.OnMenuItemClickListener()
+    rR(2131235508);
+    a(0, getString(2131230876), new MenuItem.OnMenuItemClickListener()
     {
       public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
       {
-        com.tencent.mm.ui.base.g.a(koJ.kpc, getString(2131433062), "", new DialogInterface.OnClickListener()
+        com.tencent.mm.ui.base.g.a(kNN.kOg, getString(2131235502), "", new DialogInterface.OnClickListener()
         {
           public final void onClick(DialogInterface paramAnonymous2DialogInterface, int paramAnonymous2Int)
           {
             SnsMsgUI.b(SnsMsgUI.this).setVisibility(8);
             SnsMsgUI.c(SnsMsgUI.this).setVisibility(0);
-            azlbCw.cj("SnsComment", "delete from SnsComment");
-            bC(false);
+            aBLbvG.cx("SnsComment", "delete from SnsComment");
+            bp(false);
           }
         }, null);
         return true;
       }
     });
-    gWG = new af(this);
-    fbv = findViewById(2131168665);
-    gWB = ((ListView)findViewById(2131168664));
-    cVR = p.ee(this).inflate(2131362833, null);
-    cVS = p.ee(this).inflate(2131363231, null);
-    u.d("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "autoLoad " + cVT);
-    if (cVT)
+    hke = new aj(this);
+    eLE = findViewById(2131759214);
+    eLC = ((ListView)findViewById(2131759213));
+    cUh = p.ef(this).inflate(2130904461, null);
+    cUi = p.ef(this).inflate(2130903964, null);
+    v.d("MicroMsg.SnsMsgUI", "autoLoad " + cUj);
+    if (cUj)
     {
-      gWB.addFooterView(cVS);
-      hfN = new a(this, new com.tencent.mm.plugin.sns.h.g());
-      hfN.setGetViewPositionCallback(new MMSlideDelView.c()
+      eLC.addFooterView(cUi);
+      huE = new a(this, new com.tencent.mm.plugin.sns.i.g());
+      huE.a(new MMSlideDelView.c()
       {
         public final int I(View paramAnonymousView)
         {
           return SnsMsgUI.b(SnsMsgUI.this).getPositionForView(paramAnonymousView);
         }
       });
-      hfN.setPerformItemClickListener(new MMSlideDelView.g()
+      huE.a(new MMSlideDelView.f()
       {
         public final void j(View paramAnonymousView, int paramAnonymousInt)
         {
           SnsMsgUI.b(SnsMsgUI.this).performItemClick(paramAnonymousView, paramAnonymousInt, 0L);
         }
       });
-      hfN.b(new MMSlideDelView.f()
+      huE.b(new MMSlideDelView.e()
       {
-        public final void Z(Object paramAnonymousObject)
+        public final void at(Object paramAnonymousObject)
         {
           if (paramAnonymousObject == null)
           {
-            u.e("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "onItemDel object null");
+            v.e("MicroMsg.SnsMsgUI", "onItemDel object null");
             return;
           }
           try
@@ -203,45 +204,45 @@ public class SnsMsgUI
           }
           catch (Exception paramAnonymousObject)
           {
-            u.e("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "onItemDel object not int");
+            v.e("MicroMsg.SnsMsgUI", "onItemDel object not int");
           }
         }
       });
-      hfN.koC = new com.tencent.mm.ui.i.a()
+      huE.kNG = new i.a()
       {
-        public final void Gh()
+        public final void GE()
         {
-          u.v("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "total count:" + dcyh + " unread:" + ad.azl().DE() + "  showcount:" + dcVV);
+          v.v("MicroMsg.SnsMsgUI", "total count:" + dcvf + " unread:" + ad.aBL().DV() + "  showcount:" + dcUl);
           if (SnsMsgUI.d(SnsMsgUI.this).getCount() == 0)
           {
             SnsMsgUI.b(SnsMsgUI.this).setVisibility(8);
             SnsMsgUI.c(SnsMsgUI.this).setVisibility(0);
-            bC(false);
+            bp(false);
           }
           for (;;)
           {
-            if (((SnsMsgUI.d(SnsMsgUI.this).Nv()) && (ad.azl().DE() == 0)) || (ad.azl().DE() == ad.azl().azW())) {
+            if (((SnsMsgUI.d(SnsMsgUI.this).OD()) && (ad.aBL().DV() == 0)) || (ad.aBL().DV() == ad.aBL().aCJ())) {
               SnsMsgUI.e(SnsMsgUI.this).setVisibility(8);
             }
             return;
             SnsMsgUI.b(SnsMsgUI.this).setVisibility(0);
             SnsMsgUI.c(SnsMsgUI.this).setVisibility(8);
-            bC(true);
+            bp(true);
           }
         }
         
-        public final void Gi() {}
+        public final void GF() {}
       };
-      gWB.setAdapter(hfN);
-      gWB.setOnItemClickListener(new AdapterView.OnItemClickListener()
+      eLC.setAdapter(huE);
+      eLC.setOnItemClickListener(new AdapterView.OnItemClickListener()
       {
-        public final void onItemClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+        public final void onItemClick(AdapterView<?> paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
         {
           if (paramAnonymousInt == SnsMsgUI.d(SnsMsgUI.this).getCount())
           {
             paramAnonymousInt = 1;
-            if (ad.azl().DE() > 0) {
-              ad.azl().Mb();
+            if (ad.aBL().DV() > 0) {
+              ad.aBL().Nj();
             }
             for (;;)
             {
@@ -250,40 +251,40 @@ public class SnsMsgUI
               {
                 if (SnsMsgUI.e(SnsMsgUI.this).getParent() != null)
                 {
-                  u.d("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "remove footer");
+                  v.d("MicroMsg.SnsMsgUI", "remove footer");
                   SnsMsgUI.b(SnsMsgUI.this).removeFooterView(SnsMsgUI.e(SnsMsgUI.this));
                 }
                 if ((SnsMsgUI.g(SnsMsgUI.this).getParent() == null) && (paramAnonymousInt > 0))
                 {
                   SnsMsgUI.b(SnsMsgUI.this).addFooterView(SnsMsgUI.g(SnsMsgUI.this));
-                  u.i("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "add mLoadingFooterView");
+                  v.i("MicroMsg.SnsMsgUI", "add mLoadingFooterView");
                 }
               }
               SnsMsgUI.h(SnsMsgUI.this);
               SnsMsgUI.e(SnsMsgUI.this).setVisibility(8);
               return;
-              paramAnonymousInt = SnsMsgUI.d(SnsMsgUI.this).Nw();
+              paramAnonymousInt = SnsMsgUI.d(SnsMsgUI.this).OE();
             }
           }
-          paramAnonymousAdapterView = (com.tencent.mm.plugin.sns.h.g)SnsMsgUI.d(SnsMsgUI.this).getItem(paramAnonymousInt);
+          paramAnonymousAdapterView = (com.tencent.mm.plugin.sns.i.g)SnsMsgUI.d(SnsMsgUI.this).getItem(paramAnonymousInt);
           SnsMsgUI.a(SnsMsgUI.this, paramAnonymousAdapterView);
         }
       });
       final com.tencent.mm.ui.tools.m localm = new com.tencent.mm.ui.tools.m(this);
-      gWB.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener()
+      eLC.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener()
       {
-        public final boolean onItemLongClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+        public final boolean onItemLongClick(AdapterView<?> paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
         {
           if (paramAnonymousInt < SnsMsgUI.b(SnsMsgUI.this).getHeaderViewsCount())
           {
-            u.w("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "on header view long click, ignore");
+            v.w("MicroMsg.SnsMsgUI", "on header view long click, ignore");
             return true;
           }
           localm.a(paramAnonymousView, paramAnonymousInt, paramAnonymousLong, SnsMsgUI.this, SnsMsgUI.i(SnsMsgUI.this));
           return true;
         }
       });
-      gWB.setOnScrollListener(new AbsListView.OnScrollListener()
+      eLC.setOnScrollListener(new AbsListView.OnScrollListener()
       {
         public final void onScroll(AbsListView paramAnonymousAbsListView, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
         
@@ -293,31 +294,31 @@ public class SnsMsgUI
           while (paramAnonymousAbsListView.getLastVisiblePosition() != paramAnonymousAbsListView.getCount() - 1) {
             return;
           }
-          if (ad.azl().DE() > 0) {
-            ad.azl().Mb();
+          if (ad.aBL().DV() > 0) {
+            ad.aBL().Nj();
           }
           for (;;)
           {
             SnsMsgUI.d(SnsMsgUI.this).a(null, null);
             return;
-            SnsMsgUI.d(SnsMsgUI.this).Nw();
+            SnsMsgUI.d(SnsMsgUI.this).OE();
           }
         }
       });
-      if (hfN.getCount() != 0) {
+      if (huE.getCount() != 0) {
         break label443;
       }
-      gWB.setVisibility(8);
-      fbv.setVisibility(0);
-      bC(false);
+      eLC.setVisibility(8);
+      eLE.setVisibility(0);
+      bp(false);
     }
     for (;;)
     {
-      if (((hfN.Nv()) && (ad.azl().DE() == 0)) || (ad.azl().DE() == ad.azl().azW())) {
-        cVR.setVisibility(8);
+      if (((huE.OD()) && (ad.aBL().DV() == 0)) || (ad.aBL().DV() == ad.aBL().aCJ())) {
+        cUh.setVisibility(8);
       }
-      if ((hfN.Nv()) && (cVT)) {
-        gWB.removeFooterView(cVS);
+      if ((huE.OD()) && (cUj)) {
+        eLC.removeFooterView(cUi);
       }
       b(new MenuItem.OnMenuItemClickListener()
       {
@@ -330,47 +331,32 @@ public class SnsMsgUI
           return true;
         }
       });
-      if ((hfN.Nv()) && (cVT)) {
-        gWB.removeFooterView(cVS);
+      if ((huE.OD()) && (cUj)) {
+        eLC.removeFooterView(cUi);
       }
       return;
-      gWB.addFooterView(cVR);
+      eLC.addFooterView(cUh);
       break;
       label443:
-      gWB.setVisibility(0);
-      fbv.setVisibility(8);
-      bC(true);
+      eLC.setVisibility(0);
+      eLE.setVisibility(8);
+      bp(true);
     }
   }
   
-  public final void R(String paramString, boolean paramBoolean) {}
+  public final void X(String paramString, boolean paramBoolean) {}
   
-  public final void S(String paramString, boolean paramBoolean) {}
+  public final void Y(String paramString, boolean paramBoolean) {}
   
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
-  {
-    if ((paramInt1 == 0) && (paramInt2 == 0) && ((paramj instanceof o)))
-    {
-      u.d("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "onSceneEnd errtype errcode");
-      if (!hfO) {}
-    }
-    else
-    {
-      return;
-    }
-    hfO = true;
-    handler.postDelayed(hfT, 500L);
-  }
-  
-  public final void axE() {}
+  public final void aAf() {}
   
   public boolean dispatchKeyEvent(KeyEvent paramKeyEvent)
   {
     if ((paramKeyEvent.getKeyCode() == 4) && (paramKeyEvent.getAction() == 0))
     {
-      u.d("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "dispatchKeyEvent");
+      v.d("MicroMsg.SnsMsgUI", "dispatchKeyEvent");
       paramKeyEvent = new Intent();
-      paramKeyEvent.putExtra("sns_cmd_list", gYA);
+      paramKeyEvent.putExtra("sns_cmd_list", hlM);
       setResult(-1, paramKeyEvent);
       finish();
       return true;
@@ -380,12 +366,12 @@ public class SnsMsgUI
   
   protected final int getLayoutId()
   {
-    return 2131362875;
+    return 2130904463;
   }
   
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
   {
-    u.i("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "onAcvityResult requestCode:" + paramInt1);
+    v.i("MicroMsg.SnsMsgUI", "onAcvityResult requestCode:" + paramInt1);
     if (paramInt2 != -1) {}
     do
     {
@@ -397,192 +383,217 @@ public class SnsMsgUI
       }
     } while (paramIntent == null);
     paramInt1 = paramIntent.getIntExtra("sns_gallery_op_id", 0);
-    gYA.ll(paramInt1);
+    hlM.mu(paramInt1);
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    ah.tE().a(210, this);
-    ah.tE().a(683, this);
-    bEJ = com.tencent.mm.model.h.sc();
-    hcs = ad.ayX();
-    hfP = getIntent().getBooleanExtra("sns_msg_force_show_all", false);
-    if (hfP) {
-      cVT = true;
+    ah.tF().a(210, this);
+    ah.tF().a(683, this);
+    bxU = com.tencent.mm.model.h.se();
+    hre = ad.aBy();
+    huG = getIntent().getBooleanExtra("sns_msg_force_show_all", false);
+    if (huG) {
+      cUj = true;
     }
-    ad.azl().c(hfS);
-    Gb();
+    ad.aBL().c(huJ);
+    Gy();
   }
   
   public void onCreateContextMenu(ContextMenu paramContextMenu, View paramView, ContextMenu.ContextMenuInfo paramContextMenuInfo)
   {
     paramContextMenuInfo = (AdapterView.AdapterContextMenuInfo)paramContextMenuInfo;
-    paramView = (com.tencent.mm.plugin.sns.h.g)hfN.getItem(position);
+    paramView = (com.tencent.mm.plugin.sns.i.g)huE.getItem(position);
     if (paramView == null) {
       return;
     }
-    gUE = gUE;
+    hhw = hhw;
     for (;;)
     {
       try
       {
-        paramView = (apu)new apu().am(field_curActionBuf);
+        paramView = (aqf)new aqf().au(field_curActionBuf);
         if (paramView != null)
         {
-          com.tencent.mm.storage.k localk = hcs.Ep(jFl);
+          com.tencent.mm.storage.k localk = hre.GD(kdN);
           if (localk == null) {
             continue;
           }
-          paramView = localk.qz();
-          paramContextMenu.setHeaderTitle(ay.ky(paramView));
+          paramView = localk.pc();
+          paramContextMenu.setHeaderTitle(be.li(paramView));
         }
       }
       catch (Exception paramView)
       {
         continue;
       }
-      paramContextMenu.add(position, 0, 0, getString(2131427849));
+      paramContextMenu.add(position, 0, 0, getString(2131231700));
       return;
-      if (!ay.kz(jJu)) {
-        paramView = jJu;
+      if (!be.kf(khR)) {
+        paramView = khR;
       } else {
-        paramView = jFl;
+        paramView = kdN;
       }
     }
   }
   
   public void onDestroy()
   {
-    u.d("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "msgui onDestroy");
-    ad.azl().Mb();
-    ah.tE().b(210, this);
-    ah.tE().b(683, this);
-    ad.azl().d(hfS);
-    hfN.adW();
-    ad.azg().L(this);
+    v.d("MicroMsg.SnsMsgUI", "msgui onDestroy");
+    ad.aBL().Nj();
+    ah.tF().b(210, this);
+    ah.tF().b(683, this);
+    ad.aBL().d(huJ);
+    huE.closeCursor();
+    ad.aBG().G(this);
     super.onDestroy();
   }
   
   public void onPause()
   {
-    ad.aze().b(this);
+    ad.aBE().b(this);
     super.onPause();
   }
   
   public void onResume()
   {
-    ad.aze().a(this);
+    ad.aBE().a(this);
     super.onResume();
   }
   
-  public final void ur(String paramString)
+  public void onSceneEnd(int paramInt1, int paramInt2, String paramString, com.tencent.mm.t.j paramj)
   {
-    hfN.notifyDataSetChanged();
+    if ((paramInt1 == 0) && (paramInt2 == 0) && ((paramj instanceof o)))
+    {
+      v.d("MicroMsg.SnsMsgUI", "onSceneEnd errtype errcode");
+      if (!huF) {}
+    }
+    else
+    {
+      return;
+    }
+    huF = true;
+    handler.postDelayed(huK, 500L);
+  }
+  
+  public final void vw(String paramString)
+  {
+    huE.notifyDataSetChanged();
   }
   
   final class a
-    extends com.tencent.mm.ui.i
+    extends com.tencent.mm.ui.i<com.tencent.mm.plugin.sns.i.g>
   {
-    protected MMSlideDelView.g cHf;
-    protected MMSlideDelView.c cHg;
-    protected MMSlideDelView.d cHi = new MMSlideDelView.d()
+    protected MMSlideDelView.f cEj;
+    protected MMSlideDelView.c cEk;
+    protected MMSlideDelView.d cEm = new MMSlideDelView.d()
     {
       public final void a(MMSlideDelView paramAnonymousMMSlideDelView, boolean paramAnonymousBoolean)
       {
         if (paramAnonymousBoolean)
         {
-          hfY.add(paramAnonymousMMSlideDelView);
+          eLI.add(paramAnonymousMMSlideDelView);
           return;
         }
-        hfY.remove(paramAnonymousMMSlideDelView);
+        eLI.remove(paramAnonymousMMSlideDelView);
       }
       
-      public final boolean aCe()
+      public final boolean agI()
       {
-        return hfY.size() > 0;
+        return eLI.size() > 0;
       }
       
-      public final void aCf()
+      public final void agJ()
       {
-        Iterator localIterator = hfY.iterator();
+        Iterator localIterator = eLI.iterator();
         while (localIterator.hasNext())
         {
           MMSlideDelView localMMSlideDelView = (MMSlideDelView)localIterator.next();
           if (localMMSlideDelView != null) {
-            localMMSlideDelView.bcR();
+            localMMSlideDelView.biq();
           }
         }
-        hfY.clear();
+        eLI.clear();
       }
       
-      public final void aCg()
+      public final void agK()
       {
-        Iterator localIterator = hfY.iterator();
+        Iterator localIterator = eLI.iterator();
         while (localIterator.hasNext())
         {
           MMSlideDelView localMMSlideDelView = (MMSlideDelView)localIterator.next();
           if (localMMSlideDelView != null) {
-            localMMSlideDelView.bcQ();
+            localMMSlideDelView.bip();
           }
         }
-        hfY.clear();
+        eLI.clear();
       }
     };
-    int cVV = 10;
-    int cyh = cVV;
-    protected MMSlideDelView.f hfX;
-    private Set hfY = new HashSet();
+    int cUl = 10;
+    int cvf = cUl;
+    private Set<MMSlideDelView> eLI = new HashSet();
+    protected MMSlideDelView.e huO;
     
-    public a(Context paramContext, com.tencent.mm.plugin.sns.h.g paramg)
+    public a(Context paramContext, com.tencent.mm.plugin.sns.i.g paramg)
     {
       super(paramg);
     }
     
-    public final void Gk()
+    public final void GH()
     {
-      if ((ad.azl().DE() > 0) && (!SnsMsgUI.m(SnsMsgUI.this))) {
-        setCursor(ad.azl().azV());
+      if ((ad.aBL().DV() > 0) && (!SnsMsgUI.m(SnsMsgUI.this))) {
+        setCursor(ad.aBL().aCI());
       }
       for (;;)
       {
         notifyDataSetChanged();
         return;
-        cyh = ad.azl().azW();
-        com.tencent.mm.plugin.sns.h.h localh = ad.azl();
-        int i = cVV;
-        String str = com.tencent.mm.plugin.sns.h.h.azU() + " where isSend = 0 order by createTime desc LIMIT " + i;
-        u.v("!44@/B4Tb64lLpIPhXvycW2PJmzDSXqt23O0kVkFVh55b9I=", "getCursor sql:" + str);
-        setCursor(bCw.rawQuery(str, null));
+        cvf = ad.aBL().aCJ();
+        com.tencent.mm.plugin.sns.i.h localh = ad.aBL();
+        int i = cUl;
+        String str = com.tencent.mm.plugin.sns.i.h.aCH() + " where isSend = 0 order by createTime desc LIMIT " + i;
+        v.v("MicroMsg.SnsCommentStorage", "getCursor sql:" + str);
+        setCursor(bvG.rawQuery(str, null));
       }
     }
     
-    protected final void Gl()
+    protected final void GI()
     {
-      adW();
-      Gk();
+      closeCursor();
+      GH();
     }
     
-    public final boolean Nv()
+    public final boolean OD()
     {
-      return cVV >= cyh;
+      return cUl >= cvf;
     }
     
-    public final int Nw()
+    public final int OE()
     {
-      if (Nv())
+      if (OD())
       {
         if (SnsMsgUI.g(SnsMsgUI.this).getParent() != null) {
           SnsMsgUI.b(SnsMsgUI.this).removeFooterView(SnsMsgUI.g(SnsMsgUI.this));
         }
         return 0;
       }
-      cVV += 10;
-      if (cVV <= cyh) {
+      cUl += 10;
+      if (cUl <= cvf) {
         return 10;
       }
-      cVV = cyh;
-      return cyh % 10;
+      cUl = cvf;
+      return cvf % 10;
+    }
+    
+    public final void a(MMSlideDelView.c paramc)
+    {
+      cEk = paramc;
+    }
+    
+    public final void a(MMSlideDelView.f paramf)
+    {
+      cEj = paramf;
     }
     
     public final void a(String paramString, com.tencent.mm.sdk.h.i parami)
@@ -599,9 +610,9 @@ public class SnsMsgUI
       }
     }
     
-    public final void b(MMSlideDelView.f paramf)
+    public final void b(MMSlideDelView.e parame)
     {
-      hfX = paramf;
+      huO = parame;
     }
     
     public final long getItemId(int paramInt)
@@ -611,42 +622,42 @@ public class SnsMsgUI
     
     public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
     {
-      com.tencent.mm.plugin.sns.h.g localg = (com.tencent.mm.plugin.sns.h.g)getItem(paramInt);
+      com.tencent.mm.plugin.sns.i.g localg = (com.tencent.mm.plugin.sns.i.g)getItem(paramInt);
       Object localObject1;
       a locala;
       if ((paramView == null) || (!(paramView.getTag() instanceof a)))
       {
-        localObject1 = (MMSlideDelView)p.ee(context).inflate(2131363264, null);
-        paramView = p.ee(context).inflate(2131362854, null);
+        localObject1 = (MMSlideDelView)p.ef(context).inflate(2130903139, null);
+        paramView = p.ef(context).inflate(2130904462, null);
         locala = new a();
-        hga = ((ImageView)paramView.findViewById(2131168603));
-        fya = ((TextView)paramView.findViewById(2131168604));
-        hgd = ((TextView)paramView.findViewById(2131168606));
-        hgc = ((ImageView)paramView.findViewById(2131168605));
-        dFw = ((TextView)paramView.findViewById(2131168607));
-        hge = ((MMImageView)paramView.findViewById(2131168608));
-        hgb = ((TextView)paramView.findViewById(2131168609));
-        hge.setOnClickListener(SnsMsgUI.n(SnsMsgUI.this));
-        cHp = ((MMSlideDelView)localObject1).findViewById(2131169499);
-        cHq = ((TextView)((MMSlideDelView)localObject1).findViewById(2131165428));
-        hgf = ((ImageView)paramView.findViewById(2131168583));
+        huQ = ((ImageView)paramView.findViewById(2131759205));
+        fHe = ((TextView)paramView.findViewById(2131759206));
+        huT = ((TextView)paramView.findViewById(2131759208));
+        huS = ((ImageView)paramView.findViewById(2131759207));
+        dGX = ((TextView)paramView.findViewById(2131759209));
+        huU = ((MMImageView)paramView.findViewById(2131759210));
+        huR = ((TextView)paramView.findViewById(2131759212));
+        huU.setOnClickListener(SnsMsgUI.n(SnsMsgUI.this));
+        cEt = ((MMSlideDelView)localObject1).findViewById(2131755472);
+        cEu = ((TextView)((MMSlideDelView)localObject1).findViewById(2131755278));
+        huV = ((ImageView)paramView.findViewById(2131759211));
         ((MMSlideDelView)localObject1).setView(paramView);
-        ((MMSlideDelView)localObject1).setPerformItemClickListener(cHf);
-        ((MMSlideDelView)localObject1).setGetViewPositionCallback(cHg);
-        ((MMSlideDelView)localObject1).setItemStatusCallBack(cHi);
-        ((MMSlideDelView)localObject1).setEnable(false);
+        cEj = cEj;
+        cEk = cEk;
+        cEm = cEm;
+        eLy = false;
         ((View)localObject1).setTag(locala);
-        hge.setTag(null);
-        gHt = field_snsID;
-        cHp.setTag(Integer.valueOf(gUE));
-        cHp.setOnClickListener(new View.OnClickListener()
+        huU.setTag(null);
+        gOx = field_snsID;
+        cEt.setTag(Integer.valueOf(hhw));
+        cEt.setOnClickListener(new View.OnClickListener()
         {
           public final void onClick(View paramAnonymousView)
           {
-            u.v("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "on delView clicked");
-            cHi.aCg();
-            if (hfX != null) {
-              hfX.Z(paramAnonymousView.getTag());
+            v.v("MicroMsg.SnsMsgUI", "on delView clicked");
+            cEm.agK();
+            if (huO != null) {
+              huO.at(paramAnonymousView.getTag());
             }
           }
         });
@@ -656,10 +667,10 @@ public class SnsMsgUI
         int j;
         try
         {
-          apu localapu = (apu)new apu().am(field_curActionBuf);
+          Object localObject2 = (aqf)new aqf().au(field_curActionBuf);
           try
           {
-            paramViewGroup = apuamfield_refActionBuf)).jFl;
+            paramViewGroup = aqfaufield_refActionBuf)).kdN;
           }
           catch (Exception paramView)
           {
@@ -667,28 +678,28 @@ public class SnsMsgUI
           }
           try
           {
-            if ((!ay.kz(paramViewGroup)) && (!paramViewGroup.equals(ad.ayN()))) {
+            if ((!be.kf(paramViewGroup)) && (!paramViewGroup.equals(ad.aBo()))) {
               continue;
             }
             paramViewGroup = "";
-            if (ay.kz(jFl)) {
+            if (be.kf(kdN)) {
               continue;
             }
-            a.b.b(hga, jFl);
-            paramView = SnsMsgUI.o(SnsMsgUI.this).Ep(jFl);
+            a.b.a(huQ, kdN);
+            paramView = SnsMsgUI.o(SnsMsgUI.this).GD(kdN);
             if (paramView == null) {
               continue;
             }
-            paramView = paramView.qz();
-            fya.setText(com.tencent.mm.pluginsdk.ui.d.e.a(SnsMsgUI.this, paramView, fya.getTextSize()));
-            paramView = ad.azi().cx(field_snsID);
+            paramView = paramView.pc();
+            fHe.setText(com.tencent.mm.pluginsdk.ui.d.e.a(SnsMsgUI.this, paramView, fHe.getTextSize()));
+            paramView = ad.aBI().cM(field_snsID);
             if ((paramView == null) || (field_type != 21)) {
               continue;
             }
-            fya.setTextColor(getResources().getColor(2131231240));
-            paramView = jFl;
-            localObject2 = fya;
-            j = iYh;
+            fHe.setTextColor(getResources().getColor(2131689963));
+            paramView = kdN;
+            localObject3 = fHe;
+            j = jvM;
             switch (field_type)
             {
             }
@@ -697,118 +708,116 @@ public class SnsMsgUI
           {
             paramView = paramViewGroup;
             continue;
-            paramInt = 0;
-            continue;
             i = 1;
             continue;
             continue;
           }
           if ((i != 0) && (!SnsMsgUI.p(SnsMsgUI.this).equals(paramView))) {
-            break label2487;
+            break label2470;
           }
-          ((TextView)localObject2).setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
-          Object localObject2 = hgd;
+          ((TextView)localObject3).setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
+          Object localObject3 = huT;
           long l = field_snsID;
           if ((field_commentflag & 0x1) <= 0) {
-            break label2559;
+            break label2543;
           }
           i = 1;
           if (i != 0)
           {
-            ((TextView)localObject2).setText(2131433069);
-            ((TextView)localObject2).setBackgroundColor(getResources().getColor(2131231002));
-            ((TextView)localObject2).setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
-            dFw.setText(ao.i(SnsMsgUI.this, fpL * 1000L));
+            ((TextView)localObject3).setText(2131235503);
+            ((TextView)localObject3).setBackgroundColor(getResources().getColor(2131689594));
+            ((TextView)localObject3).setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
+            dGX.setText(at.i(SnsMsgUI.this, fyR * 1000L));
             paramView = null;
-            if ((dzC != 7) && (dzC != 8)) {
+            if ((Type != 7) && (Type != 8)) {
               continue;
             }
-            paramViewGroup = ad.azj().cp(field_snsID);
+            paramViewGroup = ad.aBJ().cE(field_snsID);
             if (paramViewGroup == null) {
               continue;
             }
-            paramView = paramViewGroup.azS();
+            paramView = paramViewGroup.aCF();
             continue;
-            hge.setVisibility(8);
-            hgb.setVisibility(8);
-            hgf.setVisibility(8);
-            hge.setImageBitmap(null);
-            ad.azg().W(hge);
+            huU.setVisibility(8);
+            huR.setVisibility(8);
+            huV.setVisibility(8);
+            huU.setImageBitmap(null);
+            ad.aBG().X(huU);
             if (paramView == null) {
               continue;
             }
-            paramViewGroup = azRjMx.jhw;
+            paramViewGroup = aCDkli.jFv;
             if (field_type != 2) {
               continue;
             }
-            hge.setTag(null);
-            hgb.setVisibility(0);
-            paramView = com.tencent.mm.pluginsdk.ui.d.e.a(SnsMsgUI.this, azRjMu, hgb.getTextSize());
-            hgb.setText(paramView);
+            huU.setTag(null);
+            huR.setVisibility(0);
+            paramView = com.tencent.mm.pluginsdk.ui.d.e.a(SnsMsgUI.this, aCDklf, huR.getTextSize());
+            huR.setText(paramView);
             return (View)localObject1;
             locala = (a)paramView.getTag();
             localObject1 = paramView;
             break;
-            localObject2 = SnsMsgUI.o(SnsMsgUI.this).Ep(paramViewGroup);
+            localObject3 = SnsMsgUI.o(SnsMsgUI.this).GD(paramViewGroup);
             paramView = paramViewGroup;
-            if (localObject2 != null)
+            if (localObject3 != null)
             {
               paramView = paramViewGroup;
-              if (!ay.kz(((com.tencent.mm.h.a)localObject2).qz())) {
-                paramView = ((com.tencent.mm.h.a)localObject2).qz();
+              if (!be.kf(((com.tencent.mm.i.a)localObject3).pc())) {
+                paramView = ((com.tencent.mm.i.a)localObject3).pc();
               }
             }
             paramViewGroup = paramView;
             continue;
             paramViewGroup = paramView;
             continue;
-            u.e("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "action.getFromUsername() is null or Nil");
+            v.e("MicroMsg.SnsMsgUI", "action.getFromUsername() is null or Nil");
             continue;
-            if (!ay.kz(jJu))
+            if (!be.kf(khR))
             {
-              paramView = jJu;
+              paramView = khR;
               continue;
             }
-            paramView = jFl;
+            paramView = kdN;
             continue;
-            fya.setTextColor(getResources().getColor(2131231067));
+            fHe.setTextColor(getResources().getColor(2131689957));
             continue;
-            paramView = com.tencent.mm.aw.a.y(context, 2130969884);
-            ((TextView)localObject2).setCompoundDrawablesWithIntrinsicBounds(null, null, paramView, null);
+            paramView = com.tencent.mm.az.a.C(context, 2130839014);
+            ((TextView)localObject3).setCompoundDrawablesWithIntrinsicBounds(null, null, paramView, null);
             continue;
-            paramView = com.tencent.mm.aw.a.y(context, 2130969837);
+            paramView = com.tencent.mm.az.a.C(context, 2130839015);
             continue;
-            paramView = com.tencent.mm.aw.a.y(context, 2130969867);
+            paramView = com.tencent.mm.az.a.C(context, 2130839013);
             continue;
-            paramView = com.tencent.mm.aw.a.y(context, 2130969850);
+            paramView = com.tencent.mm.az.a.C(context, 2130839011);
             continue;
-            paramView = com.tencent.mm.aw.a.y(context, 2130969862);
+            paramView = com.tencent.mm.az.a.C(context, 2130839012);
             continue;
           }
-          ((TextView)localObject2).setTextColor(getResources().getColor(2131231101));
-          ((TextView)localObject2).setBackgroundDrawable(null);
-          ((TextView)localObject2).setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
-          ((TextView)localObject2).setText("");
-          ((TextView)localObject2).setCompoundDrawablePadding(0);
-          switch (dzC)
+          ((TextView)localObject3).setTextColor(getResources().getColor(2131689519));
+          ((TextView)localObject3).setBackgroundDrawable(null);
+          ((TextView)localObject3).setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
+          ((TextView)localObject3).setText("");
+          ((TextView)localObject3).setCompoundDrawablePadding(0);
+          switch (Type)
           {
           case 1: 
           case 5: 
-            paramViewGroup = ad.azi().cx(l);
+            paramViewGroup = ad.aBI().cM(l);
             if ((paramViewGroup != null) && (field_type == 7))
             {
-              ((TextView)localObject2).setText(getString(2131433071));
+              ((TextView)localObject3).setText(getString(2131235476));
               continue;
             }
-            paramView = com.tencent.mm.aw.a.y(context, 2130903285);
+            paramView = com.tencent.mm.az.a.C(context, 2131165496);
             if ((paramViewGroup != null) && (field_type == 21))
             {
-              paramView.setColorFilter(getResources().getColor(2131231014), PorterDuff.Mode.SRC_ATOP);
+              paramView.setColorFilter(getResources().getColor(2131689967), PorterDuff.Mode.SRC_ATOP);
               paramView.setBounds(0, 0, paramView.getIntrinsicWidth(), paramView.getIntrinsicHeight());
               paramViewGroup = new SpannableString(" ");
               paramViewGroup.setSpan(new ImageSpan(paramView), 0, 1, 18);
-              ((TextView)localObject2).setText(paramViewGroup);
-              ((TextView)localObject2).setContentDescription(koJ.kpc.getString(2131429656));
+              ((TextView)localObject3).setText(paramViewGroup);
+              ((TextView)localObject3).setContentDescription(kNN.kOg.getString(2131235427));
               continue;
             }
             paramView.clearColorFilter();
@@ -816,128 +825,121 @@ public class SnsMsgUI
           case 2: 
           case 3: 
             paramView = "";
-            if (!ay.kz(paramViewGroup)) {
-              paramView = context.getString(2131433058, new Object[] { paramViewGroup });
+            if (!be.kf(paramViewGroup)) {
+              paramView = context.getString(2131235507, new Object[] { paramViewGroup });
             }
-            paramView = paramView + fsI + " ";
-            ((TextView)localObject2).setText(com.tencent.mm.pluginsdk.ui.d.e.a(SnsMsgUI.this, paramView, ((TextView)localObject2).getTextSize()));
+            paramView = paramView + fBO + " ";
+            ((TextView)localObject3).setText(com.tencent.mm.pluginsdk.ui.d.e.a(SnsMsgUI.this, paramView, ((TextView)localObject3).getTextSize()));
             break;
           case 7: 
-            ((TextView)localObject2).setCompoundDrawablesWithIntrinsicBounds(com.tencent.mm.aw.a.y(context, 2130903285), null, null, null);
-            ((TextView)localObject2).setContentDescription(koJ.kpc.getString(2131429656));
+            ((TextView)localObject3).setCompoundDrawablesWithIntrinsicBounds(com.tencent.mm.az.a.C(context, 2131165496), null, null, null);
+            ((TextView)localObject3).setContentDescription(kNN.kOg.getString(2131235427));
             break;
           case 8: 
             paramView = "";
-            if (!ay.kz(paramViewGroup)) {
-              paramView = context.getString(2131433058, new Object[] { paramViewGroup });
+            if (!be.kf(paramViewGroup)) {
+              paramView = context.getString(2131235507, new Object[] { paramViewGroup });
             }
-            paramView = paramView + fsI + " ";
-            ((TextView)localObject2).setText(com.tencent.mm.pluginsdk.ui.d.e.a(SnsMsgUI.this, paramView, ((TextView)localObject2).getTextSize()));
+            paramView = paramView + fBO + " ";
+            ((TextView)localObject3).setText(com.tencent.mm.pluginsdk.ui.d.e.a(SnsMsgUI.this, paramView, ((TextView)localObject3).getTextSize()));
             break;
           case 4: 
-            ((TextView)localObject2).setText(getString(2131433056));
+            ((TextView)localObject3).setText(getString(2131235591));
             break;
           case 14: 
-            paramView = new ye();
-            u.i("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "curAction.HBBuffer " + jJB);
+            paramView = new yr();
+            v.i("MicroMsg.SnsMsgUI", "curAction.HBBuffer " + khY);
             try
             {
-              paramView.am(n.a(jJB));
-              u.i("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "hbbuffer  " + eRY);
-              paramViewGroup = SnsMsgUI.o(SnsMsgUI.this).Ep(jFl);
-              ((TextView)localObject2).setText(getString(2131431609, new Object[] { paramViewGroup.qz(), com.tencent.mm.wallet_core.ui.e.k(eRY / 100.0D) }));
+              paramView.au(com.tencent.mm.platformtools.m.a(khY));
+              v.i("MicroMsg.SnsMsgUI", "hbbuffer  " + axj);
+              paramViewGroup = SnsMsgUI.o(SnsMsgUI.this).GD(kdN);
+              ((TextView)localObject3).setText(getString(2131233567, new Object[] { paramViewGroup.pc(), com.tencent.mm.wallet_core.ui.e.n(axj / 100.0D) }));
             }
             catch (Exception paramViewGroup)
             {
-              u.e("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "parser hbbuffer " + paramViewGroup.getMessage());
+              v.e("MicroMsg.SnsMsgUI", "parser hbbuffer " + paramViewGroup.getMessage());
               continue;
             }
           case 13: 
-            paramViewGroup = new ye();
-            u.i("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "curAction.HBBuffer " + jJB);
+            paramViewGroup = new yr();
+            v.i("MicroMsg.SnsMsgUI", "curAction.HBBuffer " + khY);
             try
             {
-              paramViewGroup.am(n.a(jJB));
-              u.i("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "hbbuffer  " + eRY);
-              SnsMsgUI.o(SnsMsgUI.this).Ep(jFl);
+              paramViewGroup.au(com.tencent.mm.platformtools.m.a(khY));
+              v.i("MicroMsg.SnsMsgUI", "hbbuffer  " + axj);
+              SnsMsgUI.o(SnsMsgUI.this).GD(kdN);
               paramView = null;
-              if (eRY == 0L)
+              if (axj == 0L)
               {
                 SnsMsgUI.a(SnsMsgUI.this, true);
-                paramViewGroup = new SpannableString(getString(2131431608));
+                paramViewGroup = new SpannableString(getString(2131233570));
                 if (paramView != null)
                 {
                   paramView.setBounds(0, 0, paramView.getIntrinsicWidth(), paramView.getIntrinsicHeight());
                   com.tencent.mm.ui.widget.d locald = new com.tencent.mm.ui.widget.d(paramView);
-                  lEY = ((int)((paramView.getIntrinsicHeight() - ((TextView)localObject2).getTextSize() + com.tencent.mm.aw.a.fromDPToPix(SnsMsgUI.this, 2)) / 2.0F));
+                  mfN = ((int)((paramView.getIntrinsicHeight() - ((TextView)localObject3).getTextSize() + com.tencent.mm.az.a.fromDPToPix(SnsMsgUI.this, 2)) / 2.0F));
                   paramViewGroup.setSpan(locald, 0, 1, 33);
                 }
-                ((TextView)localObject2).setText(paramViewGroup);
+                ((TextView)localObject3).setText(paramViewGroup);
               }
             }
             catch (Exception paramView)
             {
-              u.e("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "parser hbbuffer " + paramView.getMessage());
+              v.e("MicroMsg.SnsMsgUI", "parser hbbuffer " + paramView.getMessage());
               continue;
               SnsMsgUI.a(SnsMsgUI.this, false);
-              paramViewGroup = new SpannableString(" " + getString(2131431607, new Object[] { com.tencent.mm.wallet_core.ui.e.k(eRY / 100.0D) }));
-              paramView = getResources().getDrawable(2130969762);
+              paramViewGroup = new SpannableString(" " + getString(2131233569, new Object[] { com.tencent.mm.wallet_core.ui.e.n(axj / 100.0D) }));
+              paramView = getResources().getDrawable(2130837633);
               continue;
             }
-            paramView = ad.azi().cx(field_snsID);
+            paramView = ad.aBI().cM(field_snsID);
             continue;
+            i = 0;
             if (paramViewGroup.size() > 0)
             {
-              paramViewGroup = ad.azg().a((add)paramViewGroup.get(0), hge, hashCode(), com.tencent.mm.storage.i.a.kar);
-              if (paramViewGroup == null)
-              {
-                j = field_type;
-                paramViewGroup = hge;
-                i = 0;
-              }
+              j = field_type;
+              localObject2 = huU;
+              i = -1;
             }
             switch (j)
             {
             case 2: 
-              if (i != 0) {
-                paramViewGroup.setImageResource(i);
-              }
+              ad.aBG().b((adw)paramViewGroup.get(0), huU, i, hashCode(), z.kFS);
               if (field_type == 15)
               {
-                hgf.setVisibility(0);
-                paramView = new com.tencent.mm.plugin.sns.h.g();
-                ad.azl().b(jYv, paramView);
-                hge.setTag(paramView);
-                paramInt = 1;
-                paramView = hge;
-                if (paramInt == 0) {
-                  break label2624;
+                huV.setVisibility(0);
+                paramView = new com.tencent.mm.plugin.sns.i.g();
+                ad.aBL().b(kyS, paramView);
+                huU.setTag(paramView);
+                i = 1;
+                paramView = huU;
+                if (i == 0) {
+                  break label2608;
                 }
                 paramInt = 0;
                 paramView.setVisibility(paramInt);
                 return (View)localObject1;
-                paramViewGroup.setImageDrawable(null);
+                ((MMImageView)localObject2).setImageDrawable(null);
               }
               break;
             case 8: 
-              paramViewGroup.setImageDrawable(null);
+              ((MMImageView)localObject2).setImageDrawable(null);
               continue;
-              hge.setImageBitmap(paramViewGroup);
-              continue;
-              paramViewGroup = new ag();
-              axC = paramView.aAl();
+              paramViewGroup = new ak();
+              ajJ = paramView.aCX();
               index = 0;
               paramView = new ArrayList();
-              paramView.add(hge);
-              heo = paramView;
+              paramView.add(huU);
+              hta = paramView;
               position = paramInt;
-              hge.setTag(paramViewGroup);
-              paramInt = 1;
+              huU.setTag(paramViewGroup);
+              i = 1;
               continue;
-              if ((dzC == 7) || (dzC == 8) || (!o.ca(field_snsID))) {
+              if ((Type == 7) || (Type == 8) || (!o.cq(field_snsID))) {
                 continue;
               }
-              ah.tE().d(new o(field_snsID));
+              ah.tF().a(new o(field_snsID), 0);
               return (View)localObject1;
               i = 1;
             }
@@ -954,57 +956,47 @@ public class SnsMsgUI
         continue;
         i = 0;
         continue;
-        label2487:
+        label2470:
         switch (j)
         {
         }
         continue;
-        label2559:
+        label2543:
         i = 0;
         continue;
         continue;
-        i = 2130903701;
+        i = 2131165244;
         continue;
-        i = 2130903689;
+        i = 2131165229;
         continue;
-        i = 2130903696;
+        i = 2131165241;
         continue;
-        i = 2130903701;
+        i = 2131165244;
         continue;
-        i = 2130903708;
+        i = 2131165228;
         continue;
-        i = 2130970839;
+        i = 2130837663;
         continue;
-        i = 2130970839;
+        i = 2130837663;
         continue;
-        label2624:
+        label2608:
         paramInt = 8;
       }
     }
     
-    public final void setGetViewPositionCallback(MMSlideDelView.c paramc)
-    {
-      cHg = paramc;
-    }
-    
-    public final void setPerformItemClickListener(MMSlideDelView.g paramg)
-    {
-      cHf = paramg;
-    }
-    
     final class a
     {
-      View cHp;
-      TextView cHq;
-      TextView dFw;
-      TextView fya;
-      long gHt;
-      ImageView hga;
-      TextView hgb;
-      ImageView hgc;
-      TextView hgd;
-      MMImageView hge;
-      ImageView hgf;
+      View cEt;
+      TextView cEu;
+      TextView dGX;
+      TextView fHe;
+      long gOx;
+      ImageView huQ;
+      TextView huR;
+      ImageView huS;
+      TextView huT;
+      MMImageView huU;
+      ImageView huV;
       
       a() {}
     }

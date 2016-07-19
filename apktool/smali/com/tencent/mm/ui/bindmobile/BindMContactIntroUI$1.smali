@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;->Gb()V
+    value = Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kOs:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
+.field final synthetic lnI:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 142
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$1;->kOs:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$1;->lnI:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 146
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$1;->kOs:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$1;->lnI:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;->a(Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;)V
 

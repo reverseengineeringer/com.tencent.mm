@@ -8,9 +8,9 @@
 
 
 # static fields
-.field private static final mdH:Ljava/util/regex/Pattern;
+.field private static final mPL:Ljava/util/regex/Pattern;
 
-.field private static final mdI:Ljava/util/regex/Pattern;
+.field private static final mPM:Ljava/util/regex/Pattern;
 
 
 # direct methods
@@ -25,7 +25,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lb/a/c/g;->mdH:Ljava/util/regex/Pattern;
+    sput-object v0, Lb/a/c/g;->mPL:Ljava/util/regex/Pattern;
 
     .line 19
     const-string/jumbo v0, "oauth_token_secret=([^&]*)"
@@ -34,7 +34,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lb/a/c/g;->mdI:Ljava/util/regex/Pattern;
+    sput-object v0, Lb/a/c/g;->mPM:Ljava/util/regex/Pattern;
 
     .line 16
     return-void
@@ -118,24 +118,24 @@
 
 
 # virtual methods
-.method public final IO(Ljava/lang/String;)Lb/a/d/i;
+.method public final Lp(Ljava/lang/String;)Lb/a/d/i;
     .locals 3
 
     .prologue
     .line 26
     const-string/jumbo v0, "Response body is incorrect. Can\'t extract a token from an empty string"
 
-    invoke-static {p1, v0}, Lb/a/g/d;->cT(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lb/a/g/d;->dg(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 27
-    sget-object v0, Lb/a/c/g;->mdH:Ljava/util/regex/Pattern;
+    sget-object v0, Lb/a/c/g;->mPL:Ljava/util/regex/Pattern;
 
     invoke-static {p1, v0}, Lb/a/c/g;->b(Ljava/lang/String;Ljava/util/regex/Pattern;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 28
-    sget-object v1, Lb/a/c/g;->mdI:Ljava/util/regex/Pattern;
+    sget-object v1, Lb/a/c/g;->mPM:Ljava/util/regex/Pattern;
 
     invoke-static {p1, v1}, Lb/a/c/g;->b(Ljava/lang/String;Ljava/util/regex/Pattern;)Ljava/lang/String;
 

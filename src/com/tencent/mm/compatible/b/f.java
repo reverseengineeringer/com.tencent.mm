@@ -3,20 +3,20 @@ package com.tencent.mm.compatible.b;
 import android.annotation.TargetApi;
 import android.media.AudioRecord;
 import android.media.audiofx.AutomaticGainControl;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class f
   implements e.a
 {
-  private AutomaticGainControl bpF = null;
+  private AutomaticGainControl bdF = null;
   
   @TargetApi(16)
   public f(AudioRecord paramAudioRecord)
   {
     boolean bool = AutomaticGainControl.isAvailable();
-    u.d("!44@/B4Tb64lLpLYS3DXP6UDjQVQTaMUfdr0rqi8WFW27Wc=", "available  " + bool);
+    v.d("MicroMsg.MMAutomaticGainControl", "available  " + bool);
     if (bool) {
-      bpF = AutomaticGainControl.create(paramAudioRecord.getAudioSessionId());
+      bdF = AutomaticGainControl.create(paramAudioRecord.getAudioSessionId());
     }
   }
   
@@ -27,16 +27,16 @@ public final class f
   }
   
   @TargetApi(16)
-  public final boolean nK()
+  public final boolean lY()
   {
-    if (bpF != null) {}
+    if (bdF != null) {}
     try
     {
-      int i = bpF.setEnabled(true);
+      int i = bdF.setEnabled(true);
       if (i == 0) {
         return true;
       }
-      u.d("!44@/B4Tb64lLpLYS3DXP6UDjQVQTaMUfdr0rqi8WFW27Wc=", "setEnabled failed " + i);
+      v.d("MicroMsg.MMAutomaticGainControl", "setEnabled failed " + i);
     }
     catch (Exception localException)
     {

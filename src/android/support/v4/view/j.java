@@ -8,11 +8,11 @@ import android.view.ViewGroup;
 
 public abstract class j
 {
-  private DataSetObservable eI = new DataSetObservable();
+  private DataSetObservable fe = new DataSetObservable();
   
-  public void M() {}
+  public void L() {}
   
-  public Parcelable N()
+  public Parcelable M()
   {
     return null;
   }
@@ -42,17 +42,17 @@ public abstract class j
   
   public void notifyDataSetChanged()
   {
-    eI.notifyChanged();
+    fe.notifyChanged();
   }
   
   public final void registerDataSetObserver(DataSetObserver paramDataSetObserver)
   {
-    eI.registerObserver(paramDataSetObserver);
+    fe.registerObserver(paramDataSetObserver);
   }
   
   public final void unregisterDataSetObserver(DataSetObserver paramDataSetObserver)
   {
-    eI.unregisterObserver(paramDataSetObserver);
+    fe.unregisterObserver(paramDataSetObserver);
   }
 }
 

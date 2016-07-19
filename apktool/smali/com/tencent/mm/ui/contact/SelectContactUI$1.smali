@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+.field final synthetic lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 163
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$1;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$1;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,23 +37,23 @@
 
 # virtual methods
 .method public final onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 4
+    .locals 5
 
     .prologue
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
     .line 166
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$1;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$1;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/SelectContactUI;->age()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/SelectContactUI;->aiI()V
 
     .line 167
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$1;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$1;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/SelectContactUI;->finish()V
 
     .line 168
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$1;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$1;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/SelectContactUI;->getIntent()Landroid/content/Intent;
 
@@ -61,7 +61,7 @@
 
     const-string/jumbo v1, "stay_in_wechat"
 
-    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -72,11 +72,11 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/contact/SelectContactUI$1$1;-><init>(Lcom/tencent/mm/ui/contact/SelectContactUI$1;)V
 
-    const-wide/16 v1, 0x50
+    const-wide/16 v2, 0x50
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/ab;->e(Ljava/lang/Runnable;J)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ad;->e(Ljava/lang/Runnable;J)V
 
     .line 176
     :cond_0
-    return v3
+    return v4
 .end method

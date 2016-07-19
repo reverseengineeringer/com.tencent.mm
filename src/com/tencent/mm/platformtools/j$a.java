@@ -1,6 +1,11 @@
 package com.tencent.mm.platformtools;
 
-public enum j$a {}
+import android.graphics.Bitmap;
+
+public abstract interface j$a
+{
+  public abstract void j(String paramString, Bitmap paramBitmap);
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.platformtools.j.a

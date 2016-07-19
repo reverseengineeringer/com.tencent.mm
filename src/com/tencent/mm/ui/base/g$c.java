@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 public abstract interface g$c
 {
-  public abstract void eu(int paramInt);
+  public abstract void fg(int paramInt);
 }
 
 /* Location:

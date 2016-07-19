@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+.field final synthetic lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 200
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$5;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$5;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
     const/4 v4, 0x0
 
     .line 204
-    const-string/jumbo v0, "!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA"
+    const-string/jumbo v0, "MicroMsg.MMTagPanel"
 
     const-string/jumbo v1, "on action %d, %s"
 
@@ -61,7 +61,7 @@
 
     aput-object p3, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 205
     return v4

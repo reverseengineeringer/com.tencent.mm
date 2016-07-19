@@ -7,9 +7,9 @@
 
 
 # static fields
-.field public static coa:Lcom/tencent/mm/pluginsdk/g;
+.field public static cjo:Lcom/tencent/mm/pluginsdk/g;
 
-.field private static cob:Lcom/tencent/mm/pluginsdk/f;
+.field private static cjp:Lcom/tencent/mm/pluginsdk/f;
 
 
 # direct methods
@@ -30,7 +30,7 @@
 
     .prologue
     .line 29
-    sput-object p1, Lcom/tencent/mm/plugin/ext/a;->cob:Lcom/tencent/mm/pluginsdk/f;
+    sput-object p1, Lcom/tencent/mm/plugin/ext/a;->cjp:Lcom/tencent/mm/pluginsdk/f;
 
     .line 30
     return-void
@@ -41,7 +41,7 @@
 
     .prologue
     .line 19
-    sput-object p1, Lcom/tencent/mm/plugin/ext/a;->coa:Lcom/tencent/mm/pluginsdk/g;
+    sput-object p1, Lcom/tencent/mm/plugin/ext/a;->cjo:Lcom/tencent/mm/pluginsdk/g;
 
     .line 20
     return-void

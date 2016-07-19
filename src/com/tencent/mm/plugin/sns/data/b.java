@@ -1,20 +1,20 @@
 package com.tencent.mm.plugin.sns.data;
 
-import com.tencent.mm.plugin.sns.ui.at;
+import com.tencent.mm.plugin.sns.ui.az;
 
 public final class b
 {
-  public at gHr;
-  public String gHs;
-  public long gHt;
+  public String agV;
+  public az gOw;
+  public long gOx;
   public int position;
   
-  public b(at paramat, int paramInt, String paramString, long paramLong)
+  public b(az paramaz, int paramInt, String paramString, long paramLong)
   {
-    gHr = paramat;
+    gOw = paramaz;
     position = paramInt;
-    gHs = paramString;
-    gHt = paramLong;
+    agV = paramString;
+    gOx = paramLong;
   }
 }
 

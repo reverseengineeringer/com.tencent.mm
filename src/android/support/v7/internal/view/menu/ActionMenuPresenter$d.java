@@ -9,14 +9,14 @@ final class ActionMenuPresenter$d
   public ActionMenuPresenter$d(ActionMenuPresenter paramActionMenuPresenter, Context paramContext, f paramf, View paramView)
   {
     super(paramContext, paramf, paramView, true);
-    mi = kS;
+    my = lj;
   }
   
   public final void onDismiss()
   {
     super.onDismiss();
-    kU.iO.close();
-    kU.kP = null;
+    ll.jf.close();
+    ll.lg = null;
   }
 }
 

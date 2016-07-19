@@ -3,26 +3,32 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/az/g$b;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/model/c;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/model/c;->K(II)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
+# instance fields
+.field final synthetic bsO:Lcom/tencent/mm/model/c;
+
+
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcom/tencent/mm/model/c;)V
     .locals 0
 
     .prologue
-    .line 1228
+    .line 734
+    iput-object p1, p0, Lcom/tencent/mm/model/c$17;->bsO:Lcom/tencent/mm/model/c;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,12 +36,15 @@
 
 
 # virtual methods
-.method public final lr()[Ljava/lang/String;
+.method public final run()V
     .locals 1
 
     .prologue
-    .line 1231
-    sget-object v0, Lcom/tencent/mm/ag/b;->aoY:[Ljava/lang/String;
+    .line 737
+    iget-object v0, p0, Lcom/tencent/mm/model/c$17;->bsO:Lcom/tencent/mm/model/c;
 
-    return-object v0
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rm()V
+
+    .line 739
+    return-void
 .end method

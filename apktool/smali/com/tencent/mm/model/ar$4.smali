@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic bBH:Lcom/tencent/mm/model/ar$a;
+.field final synthetic buP:Lcom/tencent/mm/model/ar$a;
 
-.field final synthetic bBM:Ljava/util/List;
+.field final synthetic buU:Ljava/util/List;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 522
-    iput-object p1, p0, Lcom/tencent/mm/model/ar$4;->bBM:Ljava/util/List;
+    .line 557
+    iput-object p1, p0, Lcom/tencent/mm/model/ar$4;->buU:Ljava/util/List;
 
-    iput-object p2, p0, Lcom/tencent/mm/model/ar$4;->bBH:Lcom/tencent/mm/model/ar$a;
+    iput-object p2, p0, Lcom/tencent/mm/model/ar$4;->buP:Lcom/tencent/mm/model/ar$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,8 +44,8 @@
     .locals 7
 
     .prologue
-    .line 526
-    iget-object v0, p0, Lcom/tencent/mm/model/ar$4;->bBM:Ljava/util/List;
+    .line 561
+    iget-object v0, p0, Lcom/tencent/mm/model/ar$4;->buU:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -65,30 +65,30 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 527
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 562
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rs()Lcom/tencent/mm/storage/ah;
+    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/aj;
 
     move-result-object v2
 
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/storage/ah;->Ff(Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/storage/aj;->Hw(Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v2
 
-    .line 528
+    .line 563
     if-eqz v2, :cond_0
 
-    .line 529
+    .line 564
     invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 532
+    .line 567
     :goto_1
     invoke-interface {v2}, Landroid/database/Cursor;->isAfterLast()Z
 
@@ -96,55 +96,55 @@
 
     if-nez v3, :cond_2
 
-    .line 533
-    iget-object v3, p0, Lcom/tencent/mm/model/ar$4;->bBH:Lcom/tencent/mm/model/ar$a;
+    .line 568
+    iget-object v3, p0, Lcom/tencent/mm/model/ar$4;->buP:Lcom/tencent/mm/model/ar$a;
 
     if-eqz v3, :cond_1
 
-    iget-object v3, p0, Lcom/tencent/mm/model/ar$4;->bBH:Lcom/tencent/mm/model/ar$a;
+    iget-object v3, p0, Lcom/tencent/mm/model/ar$4;->buP:Lcom/tencent/mm/model/ar$a;
 
-    invoke-interface {v3}, Lcom/tencent/mm/model/ar$a;->ui()Z
+    invoke-interface {v3}, Lcom/tencent/mm/model/ar$a;->uj()Z
 
     move-result v3
 
     if-nez v3, :cond_2
 
-    .line 534
+    .line 569
     :cond_1
-    new-instance v3, Lcom/tencent/mm/storage/ag;
+    new-instance v3, Lcom/tencent/mm/storage/ai;
 
-    invoke-direct {v3}, Lcom/tencent/mm/storage/ag;-><init>()V
+    invoke-direct {v3}, Lcom/tencent/mm/storage/ai;-><init>()V
 
-    .line 537
-    invoke-virtual {v3, v2}, Lcom/tencent/mm/storage/ag;->c(Landroid/database/Cursor;)V
+    .line 572
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/storage/ai;->b(Landroid/database/Cursor;)V
 
-    .line 538
-    invoke-static {v3}, Lcom/tencent/mm/model/ar;->f(Lcom/tencent/mm/storage/ag;)V
+    .line 573
+    invoke-static {v3}, Lcom/tencent/mm/model/ar;->f(Lcom/tencent/mm/storage/ai;)V
 
-    .line 539
+    .line 574
     invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
 
     goto :goto_1
 
-    .line 542
+    .line 577
     :cond_2
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    .line 543
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 578
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rs()Lcom/tencent/mm/storage/ah;
+    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/aj;
 
     move-result-object v2
 
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/storage/ah;->Fd(Ljava/lang/String;)I
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/storage/aj;->Hu(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 544
-    const-string/jumbo v3, "!44@/B4Tb64lLpLj7S4izLo0fBMWNYO9d/rc0VQyi6V1H5o="
+    .line 579
+    const-string/jumbo v3, "MicroMsg.MsgInfoStorageLogic"
 
     const-string/jumbo v4, "delete msgs %s, %d"
 
@@ -164,19 +164,19 @@
 
     aput-object v2, v5, v0
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 546
+    .line 581
     :cond_3
     new-instance v0, Lcom/tencent/mm/model/ar$4$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/model/ar$4$1;-><init>(Lcom/tencent/mm/model/ar$4;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
-    .line 555
+    .line 590
     return-void
 .end method
 
@@ -184,7 +184,7 @@
     .locals 2
 
     .prologue
-    .line 559
+    .line 594
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

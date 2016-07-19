@@ -167,6 +167,16 @@
 .end method
 
 .method private static native nativeList(JLjava/lang/String;Ljava/util/List;)I
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(J",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/modelsfs/SFSContext$FileEntry;",
+            ">;)I"
+        }
+    .end annotation
 .end method
 
 .method private static native nativeOpenRead(JLjava/lang/String;)J
@@ -198,55 +208,6 @@
 
 
 # virtual methods
-.method public final bo(Ljava/lang/String;)Z
-    .locals 4
-
-    .prologue
-    .line 291
-    iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSContext;->mNativePtr:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_0
-
-    .line 292
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string/jumbo v1, "Reuse already released SFSContext."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 293
-    :cond_0
-    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->iT(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 295
-    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->iV(Ljava/lang/String;)J
-
-    .line 296
-    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->iU(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 298
-    :cond_1
-    iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSContext;->mNativePtr:J
-
-    invoke-static {v0, v1, p1}, Lcom/tencent/mm/modelsfs/SFSContext;->nativeUnlink(JLjava/lang/String;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
 .method protected finalize()V
     .locals 4
 
@@ -271,7 +232,7 @@
     return-void
 .end method
 
-.method public final iI(Ljava/lang/String;)Ljava/io/OutputStream;
+.method public final iZ(Ljava/lang/String;)Ljava/io/OutputStream;
     .locals 7
 
     .prologue
@@ -295,19 +256,19 @@
 
     .line 245
     :cond_0
-    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->iT(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->jk(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
     .line 246
-    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->iV(Ljava/lang/String;)J
+    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->jm(Ljava/lang/String;)J
 
     move-result-wide v0
 
     .line 247
-    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->iU(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->jl(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -386,8 +347,19 @@
     goto :goto_0
 .end method
 
-.method public final iW(Ljava/lang/String;)Ljava/util/List;
+.method public final jn(Ljava/lang/String;)Ljava/util/List;
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/modelsfs/SFSContext$FileEntry;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 259
@@ -415,9 +387,9 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 262
-    iget-wide v1, p0, Lcom/tencent/mm/modelsfs/SFSContext;->mNativePtr:J
+    iget-wide v2, p0, Lcom/tencent/mm/modelsfs/SFSContext;->mNativePtr:J
 
-    invoke-static {v1, v2, p1, v0}, Lcom/tencent/mm/modelsfs/SFSContext;->nativeList(JLjava/lang/String;Ljava/util/List;)I
+    invoke-static {v2, v3, p1, v0}, Lcom/tencent/mm/modelsfs/SFSContext;->nativeList(JLjava/lang/String;Ljava/util/List;)I
 
     move-result v1
 
@@ -439,7 +411,7 @@
     return-object v0
 .end method
 
-.method public final iX(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/SFSContext$FileEntry;
+.method public final jo(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/SFSContext$FileEntry;
     .locals 4
 
     .prologue
@@ -463,17 +435,17 @@
 
     .line 282
     :cond_0
-    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->iT(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->jk(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 284
-    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->iV(Ljava/lang/String;)J
+    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->jm(Ljava/lang/String;)J
 
     .line 285
-    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->iU(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->jl(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -486,6 +458,55 @@
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final jp(Ljava/lang/String;)Z
+    .locals 4
+
+    .prologue
+    .line 291
+    iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSContext;->mNativePtr:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    .line 292
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string/jumbo v1, "Reuse already released SFSContext."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 293
+    :cond_0
+    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->jk(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 295
+    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->jm(Ljava/lang/String;)J
+
+    .line 296
+    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->jl(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 298
+    :cond_1
+    iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSContext;->mNativePtr:J
+
+    invoke-static {v0, v1, p1}, Lcom/tencent/mm/modelsfs/SFSContext;->nativeUnlink(JLjava/lang/String;)Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public final openRead(Ljava/lang/String;)Ljava/io/InputStream;
@@ -512,19 +533,19 @@
 
     .line 228
     :cond_0
-    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->iT(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->jk(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
     .line 229
-    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->iV(Ljava/lang/String;)J
+    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->jm(Ljava/lang/String;)J
 
     move-result-wide v0
 
     .line 230
-    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->iU(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->jl(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

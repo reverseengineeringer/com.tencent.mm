@@ -11,9 +11,9 @@ final class SnsAddressUI$2
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    lms.finish();
-    if (!lms.getIntent().getBooleanExtra("stay_in_wechat", true)) {
-      lms.moveTaskToBack(true);
+    lMI.finish();
+    if (!lMI.getIntent().getBooleanExtra("stay_in_wechat", true)) {
+      lMI.moveTaskToBack(true);
     }
     return true;
   }

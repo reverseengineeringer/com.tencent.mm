@@ -30,10 +30,9 @@
     .locals 0
 
     .prologue
-    .line 161
+    .line 158
     iput-object p1, p0, Lcom/tencent/kingkong/ContentObserver$NotificationRunnable;->this$0:Lcom/tencent/kingkong/ContentObserver;
 
-    .line 158
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 159
@@ -42,6 +41,7 @@
     .line 160
     iput-object p3, p0, Lcom/tencent/kingkong/ContentObserver$NotificationRunnable;->mUri:Landroid/net/Uri;
 
+    .line 161
     return-void
 .end method
 

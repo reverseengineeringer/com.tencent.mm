@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kpx:Lcom/tencent/mm/ui/j;
+.field final synthetic kOB:Lcom/tencent/mm/ui/j;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1056
-    iput-object p1, p0, Lcom/tencent/mm/ui/j$12;->kpx:Lcom/tencent/mm/ui/j;
+    .line 1051
+    iput-object p1, p0, Lcom/tencent/mm/ui/j$12;->kOB:Lcom/tencent/mm/ui/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,11 +37,26 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 1060
-    iget-object v0, p0, Lcom/tencent/mm/ui/j$12;->kpx:Lcom/tencent/mm/ui/j;
+    const/16 v1, 0x400
+
+    .line 1055
+    iget-object v0, p0, Lcom/tencent/mm/ui/j$12;->kOB:Lcom/tencent/mm/ui/j;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/j;->i(Lcom/tencent/mm/ui/j;)Landroid/support/v7/app/ActionBarActivity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/support/v7/app/ActionBarActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1, v1}, Landroid/view/Window;->setFlags(II)V
+
+    .line 1056
+    iget-object v0, p0, Lcom/tencent/mm/ui/j$12;->kOB:Lcom/tencent/mm/ui/j;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/j;->j(Lcom/tencent/mm/ui/j;)Landroid/support/v7/app/ActionBar;
 
@@ -49,16 +64,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 1061
-    iget-object v0, p0, Lcom/tencent/mm/ui/j$12;->kpx:Lcom/tencent/mm/ui/j;
+    .line 1057
+    iget-object v0, p0, Lcom/tencent/mm/ui/j$12;->kOB:Lcom/tencent/mm/ui/j;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/j;->j(Lcom/tencent/mm/ui/j;)Landroid/support/v7/app/ActionBar;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v7/app/ActionBar;->show()V
+    invoke-virtual {v0}, Landroid/support/v7/app/ActionBar;->hide()V
 
-    .line 1063
+    .line 1059
     :cond_0
     return-void
 .end method

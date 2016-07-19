@@ -14,12 +14,12 @@ final class NotInterestMenu$a
   
   public final int getCount()
   {
-    return NotInterestMenu.axp().length;
+    return NotInterestMenu.azR().length;
   }
   
   public final Object getItem(int paramInt)
   {
-    return Integer.valueOf(NotInterestMenu.axp()[paramInt]);
+    return Integer.valueOf(NotInterestMenu.azR()[paramInt]);
   }
   
   public final long getItemId(int paramInt)
@@ -32,18 +32,18 @@ final class NotInterestMenu$a
     View localView = paramView;
     if (paramView == null)
     {
-      localView = p.ee(NotInterestMenu.d(gFk)).inflate(2131362913, paramViewGroup, false);
+      localView = p.ef(NotInterestMenu.d(gLM)).inflate(2130904122, paramViewGroup, false);
       paramView = new a();
-      gFl = ((TextView)localView.findViewById(2131168753));
+      gLN = ((TextView)localView.findViewById(2131758302));
       localView.setTag(paramView);
     }
-    getTaggFl.setText(NotInterestMenu.axp()[paramInt]);
+    getTaggLN.setText(NotInterestMenu.azR()[paramInt]);
     return localView;
   }
   
   final class a
   {
-    TextView gFl;
+    TextView gLN;
     
     a() {}
   }

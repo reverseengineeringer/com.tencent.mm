@@ -1,12 +1,14 @@
 package com.tencent.mm.network;
 
 import com.tencent.mm.network.a.b;
-import com.tencent.mm.protocal.y;
+import com.tencent.mm.protocal.ab;
 import java.util.List;
 
 public abstract interface e
 {
   public abstract int a(p paramp, k paramk);
+  
+  public abstract int a(boolean paramBoolean, List<String> paramList);
   
   public abstract void a(int paramInt1, String paramString, int paramInt2, boolean paramBoolean);
   
@@ -14,21 +16,21 @@ public abstract interface e
   
   public abstract void a(n paramn);
   
-  public abstract void a(y paramy);
+  public abstract void a(ab paramab);
   
   public abstract void a(boolean paramBoolean, String paramString1, String paramString2, int[] paramArrayOfInt1, int[] paramArrayOfInt2, int paramInt1, int paramInt2, String paramString3, String paramString4);
   
-  public abstract void aO(boolean paramBoolean);
+  public abstract void at(boolean paramBoolean);
   
-  public abstract void aP(boolean paramBoolean);
+  public abstract void au(boolean paramBoolean);
   
-  public abstract void aQ(boolean paramBoolean);
+  public abstract void av(boolean paramBoolean);
   
-  public abstract int c(String paramString, List paramList);
+  public abstract void aw(boolean paramBoolean);
   
   public abstract void cancel(int paramInt);
   
-  public abstract int f(int paramInt, byte[] paramArrayOfByte);
+  public abstract int d(String paramString, List<String> paramList);
   
   public abstract String[] getIPsString(boolean paramBoolean);
   
@@ -36,9 +38,9 @@ public abstract interface e
   
   public abstract String getNetworkServerIp();
   
-  public abstract void gg(String paramString);
+  public abstract void gt(String paramString);
   
-  public abstract void gh(String paramString);
+  public abstract void gu(String paramString);
   
   public abstract void keepSignalling();
   
@@ -52,13 +54,13 @@ public abstract interface e
   
   public abstract void stopSignalling();
   
-  public abstract boolean vM();
+  public abstract boolean vO();
   
-  public abstract c vW();
+  public abstract c vY();
   
-  public abstract h vX();
+  public abstract h vZ();
   
-  public abstract void vY();
+  public abstract void wa();
 }
 
 /* Location:

@@ -4,10 +4,10 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.modelsimple.t;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.modelsimple.r;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.applet.SecurityImage;
 import com.tencent.mm.ui.base.g;
 
@@ -19,42 +19,42 @@ final class LoginHistoryUI$13
   public final void onClick(final DialogInterface paramDialogInterface, int paramInt)
   {
     int i = -1;
-    u.d("!32@/B4Tb64lLpKxsTbPEeLD3A+BAp2nPFbL", "imgSid:" + fktx).ktL + " img len" + fktx).ktN.length + " " + com.tencent.mm.compatible.util.f.oZ());
-    int j = aoU;
-    if (ktx.hAx == null)
+    v.d("MicroMsg.LoginHistoryUI", "imgSid:" + fkSF).kSS + " img len" + fkSF).kSU.length + " " + com.tencent.mm.compatible.util.f.nr());
+    int j = ada;
+    if (kSF.hSr == null)
     {
       paramInt = -1;
-      paramDialogInterface = ay.Dz(ktx.hAx);
-      if (fktx).ktJ != null) {
-        break label368;
+      paramDialogInterface = be.FO(kSF.hSr);
+      if (fkSF).kSQ != null) {
+        break label369;
       }
     }
     for (;;)
     {
-      u.d("!32@/B4Tb64lLpKxsTbPEeLD3A+BAp2nPFbL", "summervoice errType:%d, mAuthPwd len:%d content[%s] logindata.rawPsw len:%d content[%s]", new Object[] { Integer.valueOf(j), Integer.valueOf(paramInt), paramDialogInterface, Integer.valueOf(i), ay.Dz(fktx).ktJ) });
-      paramDialogInterface = new t(fktx).cbh, fktx).ktJ, fktx).ktO, LoginHistoryUI.i(ktx).getSecImgCode(), LoginHistoryUI.i(ktx).getSecImgSid(), LoginHistoryUI.i(ktx).getSecImgEncryptKey(), 0, "", false, false);
-      if ((ay.kz(fktx).ktJ)) && (!ay.kz(ktx.hAx)))
+      v.d("MicroMsg.LoginHistoryUI", "summervoice errType:%d, mAuthPwd len:%d content[%s] logindata.rawPsw len:%d content[%s]", new Object[] { Integer.valueOf(j), Integer.valueOf(paramInt), paramDialogInterface, Integer.valueOf(i), be.FO(fkSF).kSQ) });
+      paramDialogInterface = new r(fkSF).bUU, fkSF).kSQ, fkSF).kSV, LoginHistoryUI.i(kSF).bhw(), ikSF).kSS, ikSF).kST, 0, "", false, false);
+      if ((be.kf(fkSF).kSQ)) && (!be.kf(kSF.hSr)))
       {
-        u.i("!32@/B4Tb64lLpKxsTbPEeLD3A+BAp2nPFbL", "summervoice resetMd5BeforeDoSceneByVoice mAuthPwd:", new Object[] { ay.Dz(ktx.hAx) });
-        paramDialogInterface.jd(ktx.hAx);
+        v.i("MicroMsg.LoginHistoryUI", "summervoice resetMd5BeforeDoSceneByVoice mAuthPwd:", new Object[] { be.FO(kSF.hSr) });
+        paramDialogInterface.jv(kSF.hSr);
       }
-      ah.tE().d(paramDialogInterface);
-      LoginHistoryUI localLoginHistoryUI1 = ktx;
-      LoginHistoryUI localLoginHistoryUI2 = ktx;
-      ktx.getString(2131430877);
-      coM = g.a(localLoginHistoryUI2, ktx.getString(2131427765), true, new DialogInterface.OnCancelListener()
+      ah.tF().a(paramDialogInterface, 0);
+      LoginHistoryUI localLoginHistoryUI1 = kSF;
+      LoginHistoryUI localLoginHistoryUI2 = kSF;
+      kSF.getString(2131231028);
+      cka = g.a(localLoginHistoryUI2, kSF.getString(2131233543), true, new DialogInterface.OnCancelListener()
       {
         public final void onCancel(DialogInterface paramAnonymousDialogInterface)
         {
-          ah.tE().c(paramDialogInterface);
-          ah.tE().b(701, ktx);
+          ah.tF().c(paramDialogInterface);
+          ah.tF().b(701, kSF);
         }
       });
       return;
-      paramInt = ktx.hAx.length();
+      paramInt = kSF.hSr.length();
       break;
-      label368:
-      i = fktx).ktJ.length();
+      label369:
+      i = fkSF).kSQ.length();
     }
   }
 }

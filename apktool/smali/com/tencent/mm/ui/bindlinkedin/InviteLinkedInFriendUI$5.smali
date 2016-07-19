@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+.field final synthetic lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 173
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$5;->kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$5;->lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

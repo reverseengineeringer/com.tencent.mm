@@ -7,12 +7,12 @@ import com.tencent.mm.ui.base.MaskLayout;
 
 public final class b$a
 {
-  public TextView czT;
-  public TextView czU;
-  public CheckBox czW;
-  public MaskLayout dbN;
-  public ProgressBar lCz;
-  public TextView lmE;
+  public CheckBox cul;
+  public TextView cwP;
+  public TextView cwQ;
+  public MaskLayout dat;
+  public TextView lMU;
+  public ProgressBar mdp;
 }
 
 /* Location:

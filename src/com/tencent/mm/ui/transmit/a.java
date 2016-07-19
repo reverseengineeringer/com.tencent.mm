@@ -6,17 +6,17 @@ import com.tencent.mm.ui.base.h;
 
 public final class a
 {
-  h apf;
-  a lBr;
+  h fTL;
+  a mcj;
   
   a(a parama)
   {
-    lBr = parama;
+    mcj = parama;
   }
   
   public static abstract interface a
   {
-    public abstract void bjj();
+    public abstract void bph();
   }
 }
 

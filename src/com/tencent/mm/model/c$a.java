@@ -4,9 +4,9 @@ public abstract interface c$a
 {
   public abstract void a(c paramc, boolean paramBoolean);
   
-  public abstract void aj(boolean paramBoolean);
+  public abstract void ak(boolean paramBoolean);
   
-  public abstract void sa();
+  public abstract void sc();
 }
 
 /* Location:

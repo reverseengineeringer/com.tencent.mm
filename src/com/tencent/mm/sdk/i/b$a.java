@@ -3,12 +3,12 @@ package com.tencent.mm.sdk.i;
 final class b$a
   extends Thread
 {
-  private g jYQ;
+  private g kzn;
   
   b$a(ThreadGroup paramThreadGroup, g paramg, String paramString)
   {
     super(paramThreadGroup, paramg, paramString);
-    jYQ = paramg;
+    kzn = paramg;
   }
   
   public final void run()

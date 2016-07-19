@@ -7,14 +7,14 @@ import android.os.Parcelable.Creator;
 class ActionMenuPresenter$SavedState
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
-  public int kW;
+  public static final Parcelable.Creator<SavedState> CREATOR = new Parcelable.Creator() {};
+  public int ln;
   
   ActionMenuPresenter$SavedState() {}
   
   ActionMenuPresenter$SavedState(Parcel paramParcel)
   {
-    kW = paramParcel.readInt();
+    ln = paramParcel.readInt();
   }
   
   public int describeContents()
@@ -24,7 +24,7 @@ class ActionMenuPresenter$SavedState
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    paramParcel.writeInt(kW);
+    paramParcel.writeInt(ln);
   }
 }
 

@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public ayz:Ljava/lang/String;
+.field public akB:Ljava/lang/String;
 
-.field public edh:J
+.field public egI:J
 
-.field public iMi:J
+.field public jjf:J
 
-.field public iMj:Ljava/lang/String;
+.field public jjg:Ljava/lang/String;
 
 
 # direct methods

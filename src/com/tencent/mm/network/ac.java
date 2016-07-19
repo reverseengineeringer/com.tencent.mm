@@ -3,55 +3,55 @@ package com.tencent.mm.network;
 import android.content.Context;
 import android.content.SharedPreferences;
 import com.tencent.mm.compatible.util.d;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
 
 public final class ac
 {
-  public static final String ckd = d.bxc + "/tencent/noop.dat";
-  private static long cke = Fl() / 1000L;
+  public static final String cfv = d.bpe + "/tencent/noop.dat";
+  private static long cfw = FH() / 1000L;
   private static long lastUpdateTime = 0L;
   
-  public static long Fl()
+  public static long FH()
   {
-    Object localObject = y.getContext().getSharedPreferences("noop_prefs", 0);
+    Object localObject = aa.getContext().getSharedPreferences("noop_prefs", 0);
     int i = ((SharedPreferences)localObject).getInt("noop_strategy", 1);
     if (1 == i)
     {
-      cke = 270L;
-      new StringBuilder("getNoopIntervalInMs use hard code noop:").append(cke);
-      return cke * 1000L;
+      cfw = 270L;
+      new StringBuilder("getNoopIntervalInMs use hard code noop:").append(cfw);
+      return cfw * 1000L;
     }
     if (3 == i)
     {
       l = ((SharedPreferences)localObject).getLong("noop_min_interval", 270L);
       if ((l >= 180L) && (l <= 3600L))
       {
-        cke = l;
+        cfw = l;
         return l * 1000L;
       }
-      cke = 270L;
-      new StringBuilder("getNoopIntervalInMs use wx noop:").append(cke);
-      return cke * 1000L;
+      cfw = 270L;
+      new StringBuilder("getNoopIntervalInMs use wx noop:").append(cfw);
+      return cfw * 1000L;
     }
     long l = System.currentTimeMillis() / 1000L;
     if (l - lastUpdateTime > 3600L)
     {
-      localObject = Fm();
+      localObject = FI();
       if ((localObject[0] < 180L) || (localObject[0] > 3600L)) {
         break label206;
       }
     }
     label206:
-    for (cke = localObject[0];; cke = 270L)
+    for (cfw = localObject[0];; cfw = 270L)
     {
       lastUpdateTime = l;
-      new StringBuilder("getNoopIntervalInMs use sync noop:").append(cke);
-      return cke * 1000L;
+      new StringBuilder("getNoopIntervalInMs use sync noop:").append(cfw);
+      return cfw * 1000L;
     }
   }
   
   /* Error */
-  private static long[] Fm()
+  private static long[] FI()
   {
     // Byte code:
     //   0: iconst_2
@@ -69,7 +69,7 @@ public final class ac
     //   15: pop
     //   16: new 103	java/io/File
     //   19: dup
-    //   20: getstatic 33	com/tencent/mm/network/ac:ckd	Ljava/lang/String;
+    //   20: getstatic 33	com/tencent/mm/network/ac:cfv	Ljava/lang/String;
     //   23: invokespecial 104	java/io/File:<init>	(Ljava/lang/String;)V
     //   26: astore_3
     //   27: aload_3
@@ -243,7 +243,7 @@ public final class ac
   }
   
   /* Error */
-  public static void f(long paramLong1, long paramLong2)
+  public static void e(long paramLong1, long paramLong2)
   {
     // Byte code:
     //   0: new 13	java/lang/StringBuilder
@@ -265,7 +265,7 @@ public final class ac
     //   30: lconst_0
     //   31: lcmp
     //   32: ifgt +32 -> 64
-    //   35: invokestatic 50	com/tencent/mm/sdk/platformtools/y:getContext	()Landroid/content/Context;
+    //   35: invokestatic 50	com/tencent/mm/sdk/platformtools/aa:getContext	()Landroid/content/Context;
     //   38: ldc 52
     //   40: iconst_0
     //   41: invokevirtual 58	android/content/Context:getSharedPreferences	(Ljava/lang/String;I)Landroid/content/SharedPreferences;
@@ -284,7 +284,7 @@ public final class ac
     //   73: ldc2_w 85
     //   76: lcmp
     //   77: ifgt +40 -> 117
-    //   80: invokestatic 50	com/tencent/mm/sdk/platformtools/y:getContext	()Landroid/content/Context;
+    //   80: invokestatic 50	com/tencent/mm/sdk/platformtools/aa:getContext	()Landroid/content/Context;
     //   83: ldc 52
     //   85: iconst_0
     //   86: invokevirtual 58	android/content/Context:getSharedPreferences	(Ljava/lang/String;I)Landroid/content/SharedPreferences;
@@ -310,7 +310,7 @@ public final class ac
     //   136: invokevirtual 76	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
     //   139: pop
     //   140: return
-    //   141: invokestatic 50	com/tencent/mm/sdk/platformtools/y:getContext	()Landroid/content/Context;
+    //   141: invokestatic 50	com/tencent/mm/sdk/platformtools/aa:getContext	()Landroid/content/Context;
     //   144: ldc 52
     //   146: iconst_0
     //   147: invokevirtual 58	android/content/Context:getSharedPreferences	(Ljava/lang/String;I)Landroid/content/SharedPreferences;
@@ -336,13 +336,13 @@ public final class ac
     //   194: iflt -131 -> 63
     //   197: new 103	java/io/File
     //   200: dup
-    //   201: getstatic 33	com/tencent/mm/network/ac:ckd	Ljava/lang/String;
+    //   201: getstatic 33	com/tencent/mm/network/ac:cfv	Ljava/lang/String;
     //   204: invokespecial 104	java/io/File:<init>	(Ljava/lang/String;)V
     //   207: astore 8
     //   209: aload 8
     //   211: invokevirtual 108	java/io/File:exists	()Z
     //   214: ifeq +135 -> 349
-    //   217: invokestatic 97	com/tencent/mm/network/ac:Fm	()[J
+    //   217: invokestatic 97	com/tencent/mm/network/ac:FI	()[J
     //   220: astore 8
     //   222: aload 8
     //   224: iconst_1
@@ -366,7 +366,7 @@ public final class ac
     //   252: astore 8
     //   254: new 103	java/io/File
     //   257: dup
-    //   258: getstatic 33	com/tencent/mm/network/ac:ckd	Ljava/lang/String;
+    //   258: getstatic 33	com/tencent/mm/network/ac:cfv	Ljava/lang/String;
     //   261: invokespecial 104	java/io/File:<init>	(Ljava/lang/String;)V
     //   264: astore 11
     //   266: aload 9

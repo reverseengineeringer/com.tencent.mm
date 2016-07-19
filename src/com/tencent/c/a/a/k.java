@@ -26,12 +26,7 @@ final class k
     finally {}
   }
   
-  protected final boolean jY()
-  {
-    return true;
-  }
-  
-  protected final String jZ()
+  protected final String iA()
   {
     try
     {
@@ -41,7 +36,7 @@ final class k
     finally {}
   }
   
-  protected final a ka()
+  protected final a iB()
   {
     try
     {
@@ -50,6 +45,11 @@ final class k
       return locala;
     }
     finally {}
+  }
+  
+  protected final boolean iz()
+  {
+    return true;
   }
   
   protected final void write(String paramString)

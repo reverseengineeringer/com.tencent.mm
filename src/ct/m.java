@@ -1,11 +1,19 @@
 package ct;
 
-public final class m
-  extends Exception
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+
+final class m
+  extends BroadcastReceiver
 {
-  public m(String paramString)
+  m(j paramj) {}
+  
+  public final void onReceive(Context paramContext, Intent paramIntent)
   {
-    super(paramString);
+    new StringBuilder("onAccessSchedulerTriggered by timer, curTime:").append(System.currentTimeMillis());
+    az.a();
+    o.a().a(new j.a(a, (byte)0));
   }
 }
 

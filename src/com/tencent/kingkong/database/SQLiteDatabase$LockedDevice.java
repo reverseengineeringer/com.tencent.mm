@@ -6,9 +6,9 @@ public enum SQLiteDatabase$LockedDevice
   
   private final int value;
   
-  private SQLiteDatabase$LockedDevice(int paramInt1)
+  private SQLiteDatabase$LockedDevice(int paramInt)
   {
-    value = paramInt1;
+    value = paramInt;
   }
   
   public final int getValue()

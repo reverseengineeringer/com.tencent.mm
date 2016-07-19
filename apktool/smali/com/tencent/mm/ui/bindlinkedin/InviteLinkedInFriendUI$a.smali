@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+.field final synthetic lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 123
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$a;->kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$a;->lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,7 +51,7 @@
 
     .prologue
     .line 129
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$a;->kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$a;->lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->a(Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;)Landroid/widget/EditText;
 
@@ -66,7 +66,7 @@
     move-result v0
 
     .line 130
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$a;->kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$a;->lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->b(Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;)Landroid/widget/EditText;
 
@@ -84,7 +84,7 @@
     if-nez v0, :cond_0
 
     .line 132
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$a;->kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$a;->lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->a(Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;)Landroid/widget/EditText;
 
@@ -99,7 +99,7 @@
     if-nez v1, :cond_1
 
     .line 135
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$a;->kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$a;->lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->b(Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;)Landroid/widget/EditText;
 
@@ -117,11 +117,11 @@
 
     .line 138
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$a;->kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$a;->lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->bC(Z)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->bp(Z)V
 
     .line 142
     :goto_0
@@ -129,11 +129,11 @@
 
     .line 140
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$a;->kNW:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$a;->lnm:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->bC(Z)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI;->bp(Z)V
 
     goto :goto_0
 .end method

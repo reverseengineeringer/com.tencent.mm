@@ -10,9 +10,9 @@ final class SingleChatInfoUI$2
   
   public final void run()
   {
-    View localView = ((com.tencent.mm.ui.base.preference.a)SingleChatInfoUI.a(krj)).a(cYT, krj.gWB);
+    View localView = ((com.tencent.mm.ui.base.preference.a)SingleChatInfoUI.a(kQq)).a(cXz, kQq.eLC);
     if (localView != null) {
-      com.tencent.mm.ui.f.a.c(krj.koJ.kpc, localView);
+      com.tencent.mm.ui.g.a.b(kQq.kNN.kOg, localView);
     }
   }
 }

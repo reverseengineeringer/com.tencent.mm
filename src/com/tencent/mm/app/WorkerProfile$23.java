@@ -1,24 +1,51 @@
 package com.tencent.mm.app;
 
-import com.tencent.mm.model.ah;
-import com.tencent.mm.modelmulti.h;
-import com.tencent.mm.network.m.a;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.u;
+import android.content.Context;
+import android.content.Intent;
+import com.tencent.mm.booter.NotifyReceiver.NotifyService;
+import com.tencent.mm.modelfriend.a;
+import com.tencent.mm.plugin.report.service.KVReportJni.KVReportJava2C;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m.a;
+import com.tencent.mm.ui.MMAppMgr;
 
 final class WorkerProfile$23
-  extends m.a
+  implements m.a
 {
   WorkerProfile$23(WorkerProfile paramWorkerProfile) {}
   
-  public final void aK(int paramInt)
+  public final void a(com.tencent.mm.t.m paramm, boolean paramBoolean)
   {
-    if ((paramInt != 5) && (paramInt != 1)) {}
-    while ((!ah.rh()) || (ah.tK()) || (ah.tM())) {
+    if ((paramBoolean) && (!foreground))
+    {
+      if (!WorkerProfile.jB()) {
+        v.w("MicroMsg.WorkerProfile", "can't kill the working process");
+      }
+    }
+    else {
       return;
     }
-    u.i("!32@/B4Tb64lLpKJUHFjVVLDtjoRkfkHVaSq", "dkmsg Network connected , try send msg.");
-    ah.tE().d(new h());
+    MMAppMgr.bgo();
+    v.appenderClose();
+    KVReportJni.KVReportJava2C.onExitAppOrAppCrash();
+    v.e("MicroMsg.WorkerProfile", "now killing the working process....");
+    if (a.yp())
+    {
+      v.e("MicroMsg.WorkerProfile", "address book syncing, wait a minute please");
+      return;
+    }
+    paramm = aa.getContext();
+    paramm.stopService(new Intent(paramm, NotifyReceiver.NotifyService.class));
+    com.tencent.mm.s.m.c(new Runnable()
+    {
+      public final void run() {}
+    });
+  }
+  
+  public final void jD()
+  {
+    WorkerProfile.b(Zr).Z(WorkerProfile.a(Zr));
   }
 }
 

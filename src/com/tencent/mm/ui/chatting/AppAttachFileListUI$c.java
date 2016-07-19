@@ -1,12 +1,12 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.n.a.a;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.p.a.a;
+import com.tencent.mm.storage.ai;
 
 final class AppAttachFileListUI$c
 {
-  public ag aFR;
-  public a.a kQk;
+  public ai arX;
+  public a.a lpZ;
   
   private AppAttachFileListUI$c(AppAttachFileListUI paramAppAttachFileListUI) {}
 }

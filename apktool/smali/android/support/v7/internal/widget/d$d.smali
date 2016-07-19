@@ -18,7 +18,7 @@
 .method public abstract dismiss()V
 .end method
 
-.method public abstract g(Ljava/lang/CharSequence;)V
+.method public abstract h(Ljava/lang/CharSequence;)V
 .end method
 
 .method public abstract isShowing()Z

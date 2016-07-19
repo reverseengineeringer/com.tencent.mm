@@ -1,14 +1,11 @@
 .class final Lcom/tencent/mm/ui/chatting/ChattingUI$a$66;
-.super Ljava/lang/Object;
+.super Lcom/tencent/mm/sdk/c/c;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,67 +13,84 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/hd;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic kpz:Landroid/view/MenuItem$OnMenuItemClickListener;
-
-.field final synthetic laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.field final synthetic lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/chatting/ChattingUI$a;Landroid/view/MenuItem$OnMenuItemClickListener;)V
-    .locals 0
+.method constructor <init>(Lcom/tencent/mm/ui/chatting/ChattingUI$a;)V
+    .locals 1
 
     .prologue
-    .line 1818
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$66;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 2150
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$66;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$66;->kpz:Landroid/view/MenuItem$OnMenuItemClickListener;
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Lcom/tencent/mm/e/a/hd;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$66;->kum:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
+    .locals 1
 
     .prologue
-    .line 1822
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$66;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 2150
+    check-cast p1, Lcom/tencent/mm/e/a/hd;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/hd;->aoj:Lcom/tencent/mm/e/a/hd$a;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/ui/j;->koS:Z
+    iget v0, v0, Lcom/tencent/mm/e/a/hd$a;->action:I
 
-    if-nez v0, :cond_1
+    packed-switch v0, :pswitch_data_0
 
-    .line 1823
-    const-string/jumbo v0, "!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/"
-
-    const-string/jumbo v1, "Actionbar customView onclick screen not enable"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1831
-    :cond_0
     :goto_0
-    return-void
+    :pswitch_0
+    const/4 v0, 0x0
 
-    .line 1826
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$66;->kpz:Landroid/view/MenuItem$OnMenuItemClickListener;
+    return v0
 
-    if-eqz v0, :cond_0
+    :pswitch_1
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$66;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    .line 1827
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$66;->kpz:Landroid/view/MenuItem$OnMenuItemClickListener;
-
-    const/4 v1, 0x0
-
-    invoke-interface {v0, v1}, Landroid/view/MenuItem$OnMenuItemClickListener;->onMenuItemClick(Landroid/view/MenuItem;)Z
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->d(Lcom/tencent/mm/ui/chatting/ChattingUI$a;)V
 
     goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

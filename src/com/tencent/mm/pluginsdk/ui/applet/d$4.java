@@ -7,10 +7,10 @@ final class d$4
 {
   d$4(d paramd) {}
   
-  public final void aRm()
+  public final void aVY()
   {
-    if (iIA.cpb != null) {
-      iIA.cpb.notifyDataSetChanged();
+    if (jfx.ckp != null) {
+      jfx.ckp.notifyDataSetChanged();
     }
   }
 }

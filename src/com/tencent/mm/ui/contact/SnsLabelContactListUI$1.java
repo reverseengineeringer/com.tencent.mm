@@ -10,7 +10,7 @@ final class SnsLabelContactListUI$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    lmz.finish();
+    lMP.finish();
     return true;
   }
 }

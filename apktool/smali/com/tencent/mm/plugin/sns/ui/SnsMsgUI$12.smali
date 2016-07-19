@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->Gb()V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic cHz:Lcom/tencent/mm/ui/tools/m;
+.field final synthetic cED:Lcom/tencent/mm/ui/tools/m;
 
-.field final synthetic hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+.field final synthetic huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 310
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$12;->hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+    .line 312
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$12;->huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$12;->cHz:Lcom/tencent/mm/ui/tools/m;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$12;->cED:Lcom/tencent/mm/ui/tools/m;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,13 +41,22 @@
 
 # virtual methods
 .method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
-    .locals 8
+    .locals 10
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)Z"
+        }
+    .end annotation
 
     .prologue
-    const/4 v7, 0x1
+    const/4 v8, 0x1
 
-    .line 314
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$12;->hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+    .line 316
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$12;->huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->b(Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;)Landroid/widget/ListView;
 
@@ -59,36 +68,36 @@
 
     if-ge p3, v0, :cond_0
 
-    .line 315
-    const-string/jumbo v0, "!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp"
+    .line 317
+    const-string/jumbo v0, "MicroMsg.SnsMsgUI"
 
     const-string/jumbo v1, "on header view long click, ignore"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 323
+    :goto_0
+    return v8
 
     .line 321
-    :goto_0
-    return v7
-
-    .line 319
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$12;->cHz:Lcom/tencent/mm/ui/tools/m;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$12;->cED:Lcom/tencent/mm/ui/tools/m;
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$12;->hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+    iget-object v6, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$12;->huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$12;->hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$12;->huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->i(Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;)Lcom/tencent/mm/ui/base/n$d;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->i(Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;)Lcom/tencent/mm/ui/base/n$d;
 
-    move-result-object v6
+    move-result-object v7
 
-    move-object v1, p2
+    move-object v2, p2
 
-    move v2, p3
+    move v3, p3
 
-    move-wide v3, p4
+    move-wide v4, p4
 
-    invoke-virtual/range {v0 .. v6}, Lcom/tencent/mm/ui/tools/m;->a(Landroid/view/View;IJLandroid/view/View$OnCreateContextMenuListener;Lcom/tencent/mm/ui/base/n$d;)V
+    invoke-virtual/range {v1 .. v7}, Lcom/tencent/mm/ui/tools/m;->a(Landroid/view/View;IJLandroid/view/View$OnCreateContextMenuListener;Lcom/tencent/mm/ui/base/n$d;)V
 
     goto :goto_0
 .end method

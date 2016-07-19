@@ -7,7 +7,7 @@ final class d$6
   
   public final void run()
   {
-    d.a(bmw, d.f(bmw), d.g(bmw), d.h(bmw), bmx, bmy);
+    d.a(bac, d.f(bac), d.g(bac), d.h(bac), bad, bae);
   }
 }
 

@@ -3,28 +3,28 @@ package com.tencent.mm.dbsupport.newcursor;
 import android.database.Cursor;
 import android.util.SparseArray;
 
-public abstract interface e
+public abstract interface e<T>
   extends Cursor
 {
-  public abstract boolean T(Object paramObject);
-  
-  public abstract a V(Object paramObject);
-  
   public abstract void a(j.a parama);
   
   public abstract boolean a(Object paramObject, a parama);
   
-  public abstract void aG(boolean paramBoolean);
+  public abstract boolean ae(Object paramObject);
   
-  public abstract a cj(int paramInt);
+  public abstract a ag(Object paramObject);
   
-  public abstract void ck(int paramInt);
+  public abstract void al(boolean paramBoolean);
   
-  public abstract boolean cl(int paramInt);
+  public abstract a cJ(int paramInt);
   
-  public abstract boolean qG();
+  public abstract void cK(int paramInt);
   
-  public abstract SparseArray[] qH();
+  public abstract boolean cL(int paramInt);
+  
+  public abstract boolean pk();
+  
+  public abstract SparseArray<T>[] pl();
 }
 
 /* Location:

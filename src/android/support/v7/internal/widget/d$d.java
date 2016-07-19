@@ -6,7 +6,7 @@ abstract interface d$d
 {
   public abstract void dismiss();
   
-  public abstract void g(CharSequence paramCharSequence);
+  public abstract void h(CharSequence paramCharSequence);
   
   public abstract boolean isShowing();
   

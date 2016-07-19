@@ -10,7 +10,7 @@ final class MemoryLeakActivity$4
   
   public final void onDismiss(DialogInterface paramDialogInterface)
   {
-    clo.finish();
+    cgr.finish();
   }
 }
 

@@ -12,48 +12,48 @@ import junit.framework.Assert;
 public final class c
   extends b.a
 {
-  public static final Map bvd = new HashMap();
+  public static final Map<String, b.a> bjM = new HashMap();
   
   static
   {
     c localc = new c();
-    bvd.put("//assert", localc);
-    bvd.put("//netassert", localc);
-    bvd.put("//jniassert", localc);
-    bvd.put("//jnipushassert", localc);
-    bvd.put("//pushassert", localc);
+    bjM.put("//assert", localc);
+    bjM.put("//netassert", localc);
+    bjM.put("//jniassert", localc);
+    bjM.put("//jnipushassert", localc);
+    bjM.put("//pushassert", localc);
   }
   
   public c()
   {
-    bvc = 5;
+    bjL = 5;
   }
   
-  public final boolean aG(Context paramContext)
+  public final boolean aD(Context paramContext)
   {
-    if ("//assert".equals(bvb[0]))
+    if ("//assert".equals(ajd[0]))
     {
       Assert.assertTrue("test errlog " + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()), false);
       return true;
     }
-    if ("//netassert".equals(bvb[0]))
+    if ("//netassert".equals(ajd[0]))
     {
       Assert.assertTrue("NetsceneQueue forbid in ", false);
       return true;
     }
-    if ("//jniassert".equals(bvb[0]))
+    if ("//jniassert".equals(ajd[0]))
     {
       MMProtocalJni.setClientPackVersion(-1);
       return true;
     }
-    if ("//jnipushassert".equals(bvb[0]))
+    if ("//jnipushassert".equals(ajd[0]))
     {
-      WatchDogPushReceiver.eb(2);
+      WatchDogPushReceiver.eI(2);
       return true;
     }
-    if ("//pushassert".equals(bvb[0]))
+    if ("//pushassert".equals(ajd[0]))
     {
-      WatchDogPushReceiver.eb(1);
+      WatchDogPushReceiver.eI(1);
       return true;
     }
     return false;

@@ -15,15 +15,15 @@
 
 
 # static fields
-.field private static final fn:[I
+.field private static final fJ:[I
 
 
 # instance fields
-.field ic:Z
+.field iw:Z
 
-.field ie:Z
+.field ix:Z
 
-.field if:Landroid/graphics/Paint;
+.field iy:Landroid/graphics/Paint;
 
 .field public weight:F
 
@@ -44,7 +44,7 @@
 
     aput v2, v0, v1
 
-    sput-object v0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->fn:[I
+    sput-object v0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->fJ:[I
 
     return-void
 .end method
@@ -80,7 +80,7 @@
     iput v2, p0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->weight:F
 
     .line 1296
-    sget-object v0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->fn:[I
+    sget-object v0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->fJ:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 

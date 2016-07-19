@@ -4,14 +4,14 @@
 
 
 # direct methods
-.method public static q(Lcom/tencent/mm/storage/ag;)I
+.method public static t(Lcom/tencent/mm/storage/ai;)I
     .locals 3
 
     .prologue
     const/4 v0, 0x1
 
     .line 27
-    iget v1, p0, Lcom/tencent/mm/d/b/bg;->field_type:I
+    iget v1, p0, Lcom/tencent/mm/e/b/bj;->field_type:I
 
     const/16 v2, 0x22
 
@@ -27,7 +27,7 @@
 
     .line 29
     :cond_1
-    iget v1, p0, Lcom/tencent/mm/d/b/bg;->field_type:I
+    iget v1, p0, Lcom/tencent/mm/e/b/bj;->field_type:I
 
     if-eq v1, v0, :cond_0
 

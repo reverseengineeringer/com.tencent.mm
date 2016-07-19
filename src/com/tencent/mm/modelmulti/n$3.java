@@ -1,32 +1,24 @@
 package com.tencent.mm.modelmulti;
 
-import com.tencent.mm.jni.platformcomm.WakerLock;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.e.a.hi;
+import com.tencent.mm.model.z.c.a;
+import com.tencent.mm.sdk.c.a;
+import com.tencent.mm.storage.e;
 
 final class n$3
-  implements Runnable
+  implements z.c.a
 {
-  n$3(n paramn, n.c paramc) {}
+  n$3(n paramn, e parame, String paramString) {}
   
-  public final void run()
+  public final void i(String paramString, boolean paramBoolean)
   {
-    if (bWv != bWu.bWt)
+    if ((bjz != null) && (bjz.bbx()))
     {
-      u.e("!32@/B4Tb64lLpI6Lursy5hy/Q9ZyLKKXfPn", "ERROR: finish runningProc(%s) != proc(%s) ", new Object[] { bWu.bWt, bWv });
-      return;
+      paramString = new hi();
+      aoH.aoF = bPP;
+      aoH.aoI = bjz.bbw();
+      a.kug.y(paramString);
     }
-    bWu.bWt = null;
-    bWu.bmH.unLock();
-    Object localObject = bWv;
-    if (localObject != null)
-    {
-      int i = ay.d((Integer)h.a((int)ay.an(((n.c)localObject).getStartTime()), new int[] { 200, 500, 800, 1500, 3000, 5000, 10000, 30000, 60000, 90000 }, new Integer[] { Integer.valueOf(70), Integer.valueOf(71), Integer.valueOf(72), Integer.valueOf(73), Integer.valueOf(74), Integer.valueOf(75), Integer.valueOf(76), Integer.valueOf(77), Integer.valueOf(78), Integer.valueOf(79), Integer.valueOf(80) }));
-      localObject = h.fUJ;
-      h.b(99L, i, 1L, false);
-    }
-    bWu.a(null);
   }
 }
 

@@ -1,320 +1,437 @@
-.class public final Lct/cm;
-.super Lct/cl;
+.class final Lct/cm;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final a:Lct/cm;
+# interfaces
+.implements Lcom/tencent/map/geolocation/TencentPoi;
 
 
 # instance fields
-.field private final b:Ljava/util/List;
+.field private a:Ljava/lang/String;
 
-.field private final c:J
+.field private b:Ljava/lang/String;
+
+.field private c:Ljava/lang/String;
+
+.field private d:D
+
+.field private e:Ljava/lang/String;
+
+.field private f:D
+
+.field private g:D
+
+.field private h:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lcom/tencent/map/geolocation/TencentPoi;)V
+    .locals 2
 
     .prologue
-    .line 13
-    new-instance v0, Lct/cm;
+    .line 27
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    .line 28
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentPoi;->getName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    const-wide/16 v2, 0x0
+    iput-object v0, p0, Lct/cm;->a:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2, v3}, Lct/cm;-><init>(Ljava/util/List;J)V
+    .line 29
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentPoi;->getAddress()Ljava/lang/String;
 
-    sput-object v0, Lct/cm;->a:Lct/cm;
+    move-result-object v0
 
+    iput-object v0, p0, Lct/cm;->b:Ljava/lang/String;
+
+    .line 30
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentPoi;->getCatalog()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lct/cm;->c:Ljava/lang/String;
+
+    .line 31
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentPoi;->getDistance()D
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lct/cm;->d:D
+
+    .line 32
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentPoi;->getUid()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lct/cm;->e:Ljava/lang/String;
+
+    .line 33
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentPoi;->getLatitude()D
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lct/cm;->f:D
+
+    .line 34
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentPoi;->getLongitude()D
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lct/cm;->g:D
+
+    .line 35
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentPoi;->getDirection()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lct/cm;->h:Ljava/lang/String;
+
+    .line 36
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/List;J)V
-    .locals 1
+.method public constructor <init>(Lorg/json/JSONObject;)V
+    .locals 2
 
     .prologue
-    .line 20
-    invoke-direct {p0}, Lct/cl;-><init>()V
+    .line 38
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
-    iput-wide p2, p0, Lct/cm;->c:J
+    .line 39
+    :try_start_0
+    const-string/jumbo v0, "name"
 
-    .line 22
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    move-result-object v0
 
-    iput-object v0, p0, Lct/cm;->b:Ljava/util/List;
+    iput-object v0, p0, Lct/cm;->a:Ljava/lang/String;
 
-    .line 24
+    const-string/jumbo v0, "addr"
+
+    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lct/cm;->b:Ljava/lang/String;
+
+    const-string/jumbo v0, "catalog"
+
+    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lct/cm;->c:Ljava/lang/String;
+
+    const-string/jumbo v0, "dist"
+
+    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;)D
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lct/cm;->d:D
+
+    const-string/jumbo v0, "uid"
+
+    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lct/cm;->e:Ljava/lang/String;
+
+    const-string/jumbo v0, "latitude"
+
+    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;)D
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lct/cm;->f:D
+
+    const-string/jumbo v0, "longitude"
+
+    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;)D
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lct/cm;->g:D
+
+    const-string/jumbo v0, "direction"
+
+    const-string/jumbo v1, ""
+
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lct/cm;->h:Ljava/lang/String;
+
+    iget-wide v0, p0, Lct/cm;->f:D
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string/jumbo v0, "pointy"
+
+    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;)D
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lct/cm;->f:D
+
+    :cond_0
+    iget-wide v0, p0, Lct/cm;->g:D
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string/jumbo v0, "pointx"
+
+    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;)D
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lct/cm;->g:D
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_1
     return-void
+
+    :catch_0
+    move-exception v0
+
+    throw v0
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/List;
+.method public final getAddress()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 47
-    iget-object v0, p0, Lct/cm;->b:Ljava/util/List;
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v0
+    .line 79
+    iget-object v0, p0, Lct/cm;->b:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final a(JJ)Z
+.method public final getCatalog()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 84
+    iget-object v0, p0, Lct/cm;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final getDirection()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 109
+    iget-object v0, p0, Lct/cm;->h:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final getDistance()D
     .locals 2
 
     .prologue
-    .line 53
-    iget-wide v0, p0, Lct/cm;->c:J
+    .line 89
+    iget-wide v0, p0, Lct/cm;->d:D
 
-    sub-long v0, p1, v0
-
-    cmp-long v0, v0, p3
-
-    if-gez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-wide v0
 .end method
 
-.method public final a(Lct/cm;)Z
-    .locals 10
+.method public final getLatitude()D
+    .locals 2
 
     .prologue
-    const/4 v5, 0x1
+    .line 94
+    iget-wide v0, p0, Lct/cm;->f:D
 
-    const/4 v4, 0x0
+    return-wide v0
+.end method
 
-    .line 63
-    iget-object v1, p1, Lct/cm;->b:Ljava/util/List;
+.method public final getLongitude()D
+    .locals 2
 
-    .line 64
-    iget-object v0, p0, Lct/cm;->b:Ljava/util/List;
+    .prologue
+    .line 99
+    iget-wide v0, p0, Lct/cm;->g:D
 
-    .line 66
-    if-eqz v1, :cond_0
+    return-wide v0
+.end method
 
-    if-nez v0, :cond_1
+.method public final getName()Ljava/lang/String;
+    .locals 1
 
-    .line 70
-    :cond_0
-    :goto_0
-    return v4
+    .prologue
+    .line 74
+    iget-object v0, p0, Lct/cm;->a:Ljava/lang/String;
 
-    .line 68
-    :cond_1
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    return-object v0
+.end method
 
-    move-result v2
+.method public final getUid()Ljava/lang/String;
+    .locals 1
 
-    if-eqz v2, :cond_0
+    .prologue
+    .line 104
+    iget-object v0, p0, Lct/cm;->e:Ljava/lang/String;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    return-object v0
+.end method
 
-    move-result v2
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    if-eqz v2, :cond_0
+    .prologue
+    .line 114
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 70
-    if-eqz v1, :cond_2
+    const-string/jumbo v1, "PoiData{"
 
-    if-nez v0, :cond_3
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_2
-    move v0, v4
+    .line 115
+    const-string/jumbo v1, "name="
 
-    :goto_1
-    if-nez v0, :cond_10
-
-    move v0, v5
-
-    :goto_2
-    if-nez v0, :cond_0
-
-    move v4, v5
-
-    goto :goto_0
-
-    :cond_3
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v3
-
-    if-nez v2, :cond_4
-
-    if-nez v3, :cond_4
-
-    move v0, v5
-
-    goto :goto_1
-
-    :cond_4
-    if-eqz v2, :cond_5
-
-    if-nez v3, :cond_6
-
-    :cond_5
-    move v0, v4
-
-    goto :goto_1
-
-    :cond_6
-    add-int v6, v2, v3
-
-    invoke-static {v1, v0}, Lct/b$a;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_9
-
-    move v3, v4
-
-    :cond_7
-    :goto_3
-    shl-int/lit8 v0, v3, 0x1
-
-    int-to-double v0, v0
-
-    int-to-double v6, v6
-
-    const-wide/high16 v8, 0x3fe0000000000000L    # 0.5
-
-    mul-double/2addr v6, v8
-
-    cmpl-double v0, v0, v6
-
-    if-gez v0, :cond_8
-
-    const/16 v0, 0xd
-
-    if-lt v3, v0, :cond_f
-
-    :cond_8
-    move v0, v5
-
-    goto :goto_1
-
-    :cond_9
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-eqz v2, :cond_a
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-nez v2, :cond_b
-
-    :cond_a
-    move v3, v4
-
-    goto :goto_3
-
-    :cond_b
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v3
-
-    if-le v2, v3, :cond_e
-
-    move-object v2, v1
-
-    :goto_4
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v7
-
-    move v3, v4
-
-    :cond_c
-    :goto_5
-    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/net/wifi/ScanResult;
-
-    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v8
-
-    :cond_d
-    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_c
-
-    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    check-cast v1, Landroid/net/wifi/ScanResult;
+    iget-object v2, p0, Lct/cm;->a:Ljava/lang/String;
 
-    iget-object v1, v1, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v9, v0, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
+    move-result-object v1
 
-    invoke-virtual {v1, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string/jumbo v2, ","
 
-    move-result v1
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v1, :cond_d
+    .line 116
+    const-string/jumbo v1, "addr="
 
-    add-int/lit8 v0, v3, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move v3, v0
+    move-result-object v1
 
-    goto :goto_5
+    iget-object v2, p0, Lct/cm;->b:Ljava/lang/String;
 
-    :cond_e
-    move-object v2, v0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object v0, v1
+    move-result-object v1
 
-    goto :goto_4
+    const-string/jumbo v2, ","
 
-    :cond_f
-    move v0, v4
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_1
+    .line 117
+    const-string/jumbo v1, "catalog="
 
-    :cond_10
-    move v0, v4
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_2
+    move-result-object v1
+
+    iget-object v2, p0, Lct/cm;->c:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v2, ","
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 118
+    const-string/jumbo v1, "dist="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-wide v2, p0, Lct/cm;->d:D
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v2, ","
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 119
+    const-string/jumbo v1, "latitude="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-wide v2, p0, Lct/cm;->f:D
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v2, ","
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 120
+    const-string/jumbo v1, "longitude="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-wide v2, p0, Lct/cm;->g:D
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v2, ","
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 121
+    const-string/jumbo v1, "direction="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lct/cm;->h:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v2, ","
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 122
+    const-string/jumbo v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 123
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

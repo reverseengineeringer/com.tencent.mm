@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract setSingleLineAllCaps(Landroid/widget/TextView;)V
+.method public abstract a(Landroid/widget/TextView;)V
 .end method

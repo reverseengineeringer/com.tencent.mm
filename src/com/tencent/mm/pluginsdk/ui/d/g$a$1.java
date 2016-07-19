@@ -5,7 +5,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 import com.tencent.mm.jni.platformcomm.PlatformComm.C2Java;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.s;
 
 final class g$a$1
@@ -17,18 +17,18 @@ final class g$a$1
   {
     if (!PlatformComm.C2Java.isNetworkConnected())
     {
-      u.w("!44@/B4Tb64lLpJ721CYNoMrI4TNb+IdX5kijxTVE+9ur/c=", "hy: no network. abort download");
-      s.makeText(g.a.a(iPS), g.a.a(iPS).getString(2131427481), 0).show();
-      if (g.a.b(iPS) != null) {
-        g.a.b(iPS).db(false);
+      v.w("MicroMsg.MailPhoneMenuHelper", "hy: no network. abort download");
+      s.makeText(g.a.a(jmZ), g.a.a(jmZ).getString(2131232845), 0).show();
+      if (g.a.b(jmZ) != null) {
+        g.a.b(jmZ).cZ(false);
       }
     }
     do
     {
       return;
-      l.a(g.a.a(iPS), g.a.c(iPS));
-    } while (g.a.b(iPS) == null);
-    g.a.b(iPS).db(true);
+      l.b(g.a.a(jmZ), g.a.c(jmZ));
+    } while (g.a.b(jmZ) == null);
+    g.a.b(jmZ).cZ(true);
   }
 }
 

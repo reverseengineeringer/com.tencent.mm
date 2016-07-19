@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+.field final synthetic lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
 
 # direct methods
@@ -26,45 +26,45 @@
     .locals 0
 
     .prologue
-    .line 304
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 540
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private biE()V
+.method private boA()V
     .locals 2
 
     .prologue
-    .line 312
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 548
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->d(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->e(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/tools/MMGestureGallery$k;
 
     move-result-object v0
 
     const/4 v1, 0x2
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->removeMessages(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/MMGestureGallery$k;->removeMessages(I)V
 
-    .line 313
+    .line 549
     return-void
 .end method
 
-.method private if(Z)V
+.method private iN(Z)V
     .locals 6
 
     .prologue
-    .line 491
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 770
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->y(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->H(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/tools/MMGestureGallery$k;
 
     move-result-object v0
 
-    iput-boolean p1, v0, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->lwI:Z
+    iput-boolean p1, v0, Lcom/tencent/mm/ui/tools/MMGestureGallery$k;->lXv:Z
 
     const/4 v1, 0x0
 
@@ -72,9 +72,9 @@
 
     const-wide/16 v4, 0x0
 
-    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->c(IJJ)V
+    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/ui/tools/MMGestureGallery$k;->c(IJJ)V
 
-    .line 492
+    .line 771
     return-void
 .end method
 
@@ -94,26 +94,26 @@
 
     const/4 v6, 0x0
 
-    .line 317
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 553
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->getSelectedView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 318
+    .line 554
     instance-of v2, v0, Landroid/view/ViewGroup;
 
     if-eqz v2, :cond_3
 
-    .line 320
-    const v2, 0x7f07002b
+    .line 556
+    const v2, 0x7f100024
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 321
+    .line 557
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
@@ -124,19 +124,19 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 322
+    .line 558
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->e(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->f(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->f(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/tools/MMGestureGallery$e;
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->g(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/tools/MMGestureGallery$e;
 
     move-result-object v0
 
@@ -148,46 +148,46 @@
 
     if-ne v0, v7, :cond_1
 
-    .line 323
-    invoke-direct {p0, v7}, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->if(Z)V
+    .line 559
+    invoke-direct {p0, v7}, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->iN(Z)V
 
     :cond_1
     move v0, v6
 
-    .line 487
+    .line 766
     :goto_0
     return v0
 
-    .line 328
+    .line 564
     :cond_2
-    const v2, 0x7f07002c
+    const v2, 0x7f100023
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 329
+    .line 565
     if-nez v0, :cond_3
 
     move v0, v6
 
-    .line 330
+    .line 566
     goto :goto_0
 
-    .line 334
+    .line 570
     :cond_3
     instance-of v2, v0, Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
-    if-eqz v2, :cond_13
+    if-eqz v2, :cond_1b
 
-    .line 335
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 571
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     check-cast v0, Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     invoke-static {v2, v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;Lcom/tencent/mm/ui/base/MultiTouchImageView;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
-    .line 337
+    .line 573
     const-string/jumbo v0, "dktest"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -208,21 +208,21 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 339
+    .line 575
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     if-nez v0, :cond_4
 
-    .line 341
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->biE()V
+    .line 577
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->boA()V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->d(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->e(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/tools/MMGestureGallery$k;
 
     move-result-object v0
 
@@ -230,26 +230,26 @@
 
     const-wide/16 v4, 0x0
 
-    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->c(IJJ)V
+    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/ui/tools/MMGestureGallery$k;->c(IJJ)V
 
-    .line 342
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 578
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->bdh()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->biM()V
 
-    .line 344
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 580
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0, v8}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;F)F
 
-    .line 345
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 581
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
@@ -261,7 +261,7 @@
 
     invoke-static {v0, v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->b(Lcom/tencent/mm/ui/tools/MMGestureGallery;F)F
 
-    .line 346
+    .line 582
     const-string/jumbo v0, "dktest"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -270,9 +270,9 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->g(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
+    invoke-static {v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->h(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
 
     move-result v3
 
@@ -284,29 +284,29 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 347
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 583
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0, v6}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;Z)Z
 
-    .line 350
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->h(Lcom/tencent/mm/ui/tools/MMGestureGallery;)I
-
-    .line 352
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 586
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->i(Lcom/tencent/mm/ui/tools/MMGestureGallery;)I
 
+    .line 588
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->j(Lcom/tencent/mm/ui/tools/MMGestureGallery;)I
+
     move-result v0
 
-    if-ne v0, v7, :cond_d
+    if-ne v0, v7, :cond_f
 
-    .line 354
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 590
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -314,8 +314,8 @@
 
     invoke-static {v0, v2, v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;J)J
 
-    .line 355
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 591
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {p2, v6}, Lcom/tencent/mm/ui/base/f;->e(Landroid/view/MotionEvent;I)F
 
@@ -323,8 +323,8 @@
 
     invoke-static {v0, v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->c(Lcom/tencent/mm/ui/tools/MMGestureGallery;F)F
 
-    .line 356
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 592
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {p2, v6}, Lcom/tencent/mm/ui/base/f;->f(Landroid/view/MotionEvent;I)F
 
@@ -332,7 +332,7 @@
 
     invoke-static {v0, v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->d(Lcom/tencent/mm/ui/tools/MMGestureGallery;F)F
 
-    .line 389
+    .line 626
     :cond_4
     :goto_1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
@@ -349,21 +349,21 @@
 
     const/16 v2, 0x106
 
-    if-ne v0, v2, :cond_6
+    if-ne v0, v2, :cond_7
 
-    .line 390
+    .line 627
     :cond_5
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->biE()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->boA()V
 
-    .line 391
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 628
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0, v8}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;F)F
 
-    .line 392
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 629
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
@@ -375,33 +375,31 @@
 
     invoke-static {v0, v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->b(Lcom/tencent/mm/ui/tools/MMGestureGallery;F)F
 
-    .line 393
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 630
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0, v7}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;Z)Z
 
-    .line 395
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 632
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->g(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->h(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
 
     move-result v0
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScaleRate()F
-
-    move-result v2
+    iget v2, v2, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gkV:F
 
     cmpg-float v0, v0, v2
 
     if-gez v0, :cond_6
 
-    .line 396
+    .line 633
     invoke-static {p2, v6}, Lcom/tencent/mm/ui/base/f;->e(Landroid/view/MotionEvent;I)F
 
     move-result v0
@@ -412,7 +410,7 @@
 
     sub-float/2addr v0, v2
 
-    .line 397
+    .line 634
     invoke-static {p2, v6}, Lcom/tencent/mm/ui/base/f;->f(Landroid/view/MotionEvent;I)F
 
     move-result v2
@@ -423,8 +421,73 @@
 
     sub-float/2addr v2, v3
 
-    .line 398
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 635
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
+
+    move-result-object v3
+
+    invoke-static {p2, v7}, Lcom/tencent/mm/ui/base/f;->e(Landroid/view/MotionEvent;I)F
+
+    move-result v4
+
+    add-float/2addr v0, v4
+
+    invoke-static {p2, v7}, Lcom/tencent/mm/ui/base/f;->f(Landroid/view/MotionEvent;I)F
+
+    move-result v4
+
+    add-float/2addr v2, v4
+
+    invoke-virtual {v3, v0, v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->n(FF)V
+
+    .line 639
+    :cond_6
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->h(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
+
+    move-result v0
+
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->biN()F
+
+    move-result v2
+
+    cmpl-float v0, v0, v2
+
+    if-lez v0, :cond_7
+
+    .line 640
+    invoke-static {p2, v6}, Lcom/tencent/mm/ui/base/f;->e(Landroid/view/MotionEvent;I)F
+
+    move-result v0
+
+    invoke-static {p2, v7}, Lcom/tencent/mm/ui/base/f;->e(Landroid/view/MotionEvent;I)F
+
+    move-result v2
+
+    sub-float/2addr v0, v2
+
+    .line 641
+    invoke-static {p2, v6}, Lcom/tencent/mm/ui/base/f;->f(Landroid/view/MotionEvent;I)F
+
+    move-result v2
+
+    invoke-static {p2, v7}, Lcom/tencent/mm/ui/base/f;->f(Landroid/view/MotionEvent;I)F
+
+    move-result v3
+
+    sub-float/2addr v2, v3
+
+    .line 642
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
@@ -444,98 +507,135 @@
 
     invoke-virtual {v3, v0, v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->o(FF)V
 
-    .line 404
-    :cond_6
+    .line 647
+    :cond_7
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    if-ne v0, v7, :cond_9
+    if-ne v0, v7, :cond_b
 
-    .line 406
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->biE()V
+    .line 649
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->boA()V
 
-    .line 407
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->n(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
-
-    .line 408
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 650
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->o(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
 
-    .line 411
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 651
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->p(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
 
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    .line 413
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 653
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->q(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
 
-    .line 415
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    move-result v0
 
-    new-instance v2, Lcom/tencent/mm/ui/tools/MMGestureGallery$f;
+    if-nez v0, :cond_8
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-direct {v2, v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery$f;-><init>(Lcom/tencent/mm/ui/tools/MMGestureGallery;)V
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->r(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;Lcom/tencent/mm/ui/tools/MMGestureGallery$a;)Lcom/tencent/mm/ui/tools/MMGestureGallery$a;
+    move-result v0
 
-    .line 417
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    if-nez v0, :cond_8
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->r(Lcom/tencent/mm/ui/tools/MMGestureGallery;)V
-
-    .line 421
-    :cond_7
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->s(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-nez v0, :cond_8
 
-    .line 423
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->t(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
 
-    .line 425
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    move-result v0
+
+    if-eqz v0, :cond_13
+
+    :cond_8
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->u(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_9
+
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->v(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_13
+
+    .line 656
+    :cond_9
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     new-instance v2, Lcom/tencent/mm/ui/tools/MMGestureGallery$g;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-direct {v2, v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery$g;-><init>(Lcom/tencent/mm/ui/tools/MMGestureGallery;)V
 
     invoke-static {v0, v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;Lcom/tencent/mm/ui/tools/MMGestureGallery$a;)Lcom/tencent/mm/ui/tools/MMGestureGallery$a;
 
-    .line 427
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 657
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->r(Lcom/tencent/mm/ui/tools/MMGestureGallery;)V
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->w(Lcom/tencent/mm/ui/tools/MMGestureGallery;)V
 
-    .line 430
-    :cond_8
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 659
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->x(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    .line 660
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->y(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    .line 661
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->z(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    .line 662
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->A(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    .line 663
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->B(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    .line 664
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->C(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    .line 709
+    :cond_a
+    :goto_2
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0, v8}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;F)F
 
-    .line 431
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 710
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
@@ -547,17 +647,17 @@
 
     invoke-static {v0, v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->b(Lcom/tencent/mm/ui/tools/MMGestureGallery;F)F
 
-    .line 434
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 713
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->i(Lcom/tencent/mm/ui/tools/MMGestureGallery;)I
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->j(Lcom/tencent/mm/ui/tools/MMGestureGallery;)I
 
     move-result v0
 
-    if-ne v0, v7, :cond_9
+    if-ne v0, v7, :cond_b
 
-    .line 435
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 714
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -565,16 +665,16 @@
 
     invoke-static {v0, v2, v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->c(Lcom/tencent/mm/ui/tools/MMGestureGallery;J)J
 
-    .line 437
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 716
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->k(Lcom/tencent/mm/ui/tools/MMGestureGallery;)J
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->l(Lcom/tencent/mm/ui/tools/MMGestureGallery;)J
 
     move-result-wide v2
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->u(Lcom/tencent/mm/ui/tools/MMGestureGallery;)J
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->D(Lcom/tencent/mm/ui/tools/MMGestureGallery;)J
 
     move-result-wide v4
 
@@ -584,12 +684,12 @@
 
     cmp-long v0, v2, v4
 
-    if-gez v0, :cond_11
+    if-gez v0, :cond_19
 
-    .line 439
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 718
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->l(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->m(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
 
     move-result v0
 
@@ -605,11 +705,11 @@
 
     cmpg-float v0, v0, v9
 
-    if-gez v0, :cond_9
+    if-gez v0, :cond_b
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->m(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->n(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
 
     move-result v0
 
@@ -625,21 +725,21 @@
 
     cmpg-float v0, v0, v9
 
-    if-gez v0, :cond_9
+    if-gez v0, :cond_b
 
-    .line 440
-    invoke-direct {p0, v6}, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->if(Z)V
+    .line 719
+    invoke-direct {p0, v6}, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->iN(Z)V
 
-    .line 451
-    :cond_9
-    :goto_2
+    .line 730
+    :cond_b
+    :goto_3
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     const/4 v2, 0x5
 
-    if-eq v0, v2, :cond_a
+    if-eq v0, v2, :cond_c
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -647,18 +747,18 @@
 
     const/16 v2, 0x105
 
-    if-ne v0, v2, :cond_b
+    if-ne v0, v2, :cond_d
 
-    .line 452
-    :cond_a
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 731
+    :cond_c
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0, v8}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;F)F
 
-    .line 453
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 732
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
@@ -670,72 +770,72 @@
 
     invoke-static {v0, v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->b(Lcom/tencent/mm/ui/tools/MMGestureGallery;F)F
 
-    .line 454
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 733
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0, v7}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;Z)Z
 
-    .line 457
-    :cond_b
+    .line 736
+    :cond_d
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    if-ne v0, v1, :cond_13
+    if-ne v0, v1, :cond_1b
 
-    .line 458
+    .line 737
     invoke-static {p2}, Lcom/tencent/mm/ui/base/f;->r(Landroid/view/MotionEvent;)I
 
     move-result v0
 
-    if-ne v0, v1, :cond_15
+    if-ne v0, v1, :cond_1d
 
-    .line 459
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->biE()V
+    .line 738
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->boA()V
 
-    .line 460
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 739
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->v(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_c
-
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->p(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->E(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
 
     move-result v0
 
-    if-nez v0, :cond_c
+    if-nez v0, :cond_e
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->s(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_12
+    if-nez v0, :cond_e
 
-    :cond_c
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->t(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1a
+
+    :cond_e
     move v0, v7
 
-    .line 461
+    .line 740
     goto/16 :goto_0
 
-    .line 357
-    :cond_d
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 593
+    :cond_f
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->i(Lcom/tencent/mm/ui/tools/MMGestureGallery;)I
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->j(Lcom/tencent/mm/ui/tools/MMGestureGallery;)I
 
     move-result v0
 
     if-ne v0, v1, :cond_4
 
-    .line 359
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 595
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -743,16 +843,16 @@
 
     invoke-static {v0, v2, v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->b(Lcom/tencent/mm/ui/tools/MMGestureGallery;J)J
 
-    .line 360
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 596
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->j(Lcom/tencent/mm/ui/tools/MMGestureGallery;)J
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->k(Lcom/tencent/mm/ui/tools/MMGestureGallery;)J
 
     move-result-wide v2
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->k(Lcom/tencent/mm/ui/tools/MMGestureGallery;)J
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->l(Lcom/tencent/mm/ui/tools/MMGestureGallery;)J
 
     move-result-wide v4
 
@@ -762,12 +862,12 @@
 
     cmp-long v0, v2, v4
 
-    if-gez v0, :cond_10
+    if-gez v0, :cond_12
 
-    .line 361
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 597
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->l(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->m(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
 
     move-result v0
 
@@ -785,11 +885,11 @@
 
     cmpg-float v0, v0, v2
 
-    if-gez v0, :cond_f
+    if-gez v0, :cond_11
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->m(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->n(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
 
     move-result v0
 
@@ -807,22 +907,22 @@
 
     cmpg-float v0, v0, v2
 
-    if-gez v0, :cond_f
+    if-gez v0, :cond_11
 
-    .line 363
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 599
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0, v6}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;I)I
 
-    .line 365
-    const-string/jumbo v0, "!44@/B4Tb64lLpLtADHeupmcR9RkE1hpp/4l1le5KqFDqOc="
+    .line 601
+    const-string/jumbo v0, "MicroMsg.MMGestureGallery"
 
     const-string/jumbo v2, "double click!"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 367
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 603
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
@@ -832,43 +932,21 @@
 
     move-result v0
 
-    .line 369
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 605
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScaleRate()F
-
-    move-result v2
+    iget v2, v2, Lcom/tencent/mm/ui/base/MultiTouchImageView;->gkV:F
 
     cmpg-float v0, v0, v2
 
-    if-gtz v0, :cond_e
+    if-gtz v0, :cond_10
 
-    .line 371
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
-
-    move-result-object v0
-
-    invoke-static {p2, v6}, Lcom/tencent/mm/ui/base/f;->e(Landroid/view/MotionEvent;I)F
-
-    move-result v2
-
-    invoke-static {p2, v6}, Lcom/tencent/mm/ui/base/f;->f(Landroid/view/MotionEvent;I)F
-
-    move-result v3
-
-    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->p(FF)V
-
-    goto/16 :goto_1
-
-    .line 374
-    :cond_e
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 607
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
@@ -886,49 +964,232 @@
 
     goto/16 :goto_1
 
-    .line 377
-    :cond_f
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
-
-    invoke-static {v0, v7}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;I)I
-
-    goto/16 :goto_1
-
-    .line 382
+    .line 610
     :cond_10
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
+
+    move-result-object v0
+
+    invoke-static {p2, v6}, Lcom/tencent/mm/ui/base/f;->e(Landroid/view/MotionEvent;I)F
+
+    move-result v2
+
+    invoke-static {p2, v6}, Lcom/tencent/mm/ui/base/f;->f(Landroid/view/MotionEvent;I)F
+
+    move-result v3
+
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->n(FF)V
+
+    .line 611
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->biL()V
+
+    goto/16 :goto_1
+
+    .line 614
+    :cond_11
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0, v7}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;I)I
 
     goto/16 :goto_1
 
-    .line 444
-    :cond_11
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 619
+    :cond_12
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0, v6}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;I)I
+    invoke-static {v0, v7}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;I)I
 
-    .line 446
-    const-string/jumbo v0, "!44@/B4Tb64lLpLtADHeupmcR9RkE1hpp/4l1le5KqFDqOc="
+    goto/16 :goto_1
 
-    const-string/jumbo v2, "single long click over!"
+    .line 668
+    :cond_13
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->s(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_14
+
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->q(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_15
+
+    .line 670
+    :cond_14
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->z(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    .line 671
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->x(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    .line 673
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    new-instance v2, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
+
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-direct {v2, v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;-><init>(Lcom/tencent/mm/ui/tools/MMGestureGallery;)V
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;Lcom/tencent/mm/ui/tools/MMGestureGallery$a;)Lcom/tencent/mm/ui/tools/MMGestureGallery$a;
+
+    .line 674
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->w(Lcom/tencent/mm/ui/tools/MMGestureGallery;)V
+
+    .line 678
+    :cond_15
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->t(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_16
+
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->r(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_17
+
+    .line 680
+    :cond_16
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->A(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    .line 681
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->y(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    .line 683
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    new-instance v2, Lcom/tencent/mm/ui/tools/MMGestureGallery$i;
+
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-direct {v2, v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery$i;-><init>(Lcom/tencent/mm/ui/tools/MMGestureGallery;)V
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;Lcom/tencent/mm/ui/tools/MMGestureGallery$a;)Lcom/tencent/mm/ui/tools/MMGestureGallery$a;
+
+    .line 684
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->w(Lcom/tencent/mm/ui/tools/MMGestureGallery;)V
+
+    .line 688
+    :cond_17
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->u(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_18
+
+    .line 690
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->B(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    .line 692
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    new-instance v2, Lcom/tencent/mm/ui/tools/MMGestureGallery$j;
+
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-direct {v2, v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery$j;-><init>(Lcom/tencent/mm/ui/tools/MMGestureGallery;)V
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;Lcom/tencent/mm/ui/tools/MMGestureGallery$a;)Lcom/tencent/mm/ui/tools/MMGestureGallery$a;
+
+    .line 694
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->w(Lcom/tencent/mm/ui/tools/MMGestureGallery;)V
+
+    .line 699
+    :cond_18
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->v(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    .line 701
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->C(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+
+    .line 703
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    new-instance v2, Lcom/tencent/mm/ui/tools/MMGestureGallery$f;
+
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-direct {v2, v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery$f;-><init>(Lcom/tencent/mm/ui/tools/MMGestureGallery;)V
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;Lcom/tencent/mm/ui/tools/MMGestureGallery$a;)Lcom/tencent/mm/ui/tools/MMGestureGallery$a;
+
+    .line 705
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->w(Lcom/tencent/mm/ui/tools/MMGestureGallery;)V
 
     goto/16 :goto_2
 
-    .line 464
-    :cond_12
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
-
-    invoke-static {v0, v7}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;Z)Z
-
-    .line 465
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 723
+    :cond_19
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0, v6}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;I)I
 
-    .line 466
+    .line 725
+    const-string/jumbo v0, "MicroMsg.MMGestureGallery"
+
+    const-string/jumbo v2, "single long click over!"
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_3
+
+    .line 743
+    :cond_1a
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0, v7}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;Z)Z
+
+    .line 744
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+
+    invoke-static {v0, v6}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;I)I
+
+    .line 745
     invoke-static {p2, v6}, Lcom/tencent/mm/ui/base/f;->e(Landroid/view/MotionEvent;I)F
 
     move-result v0
@@ -939,7 +1200,7 @@
 
     sub-float/2addr v0, v1
 
-    .line 467
+    .line 746
     invoke-static {p2, v6}, Lcom/tencent/mm/ui/base/f;->f(Landroid/view/MotionEvent;I)F
 
     move-result v1
@@ -950,7 +1211,7 @@
 
     sub-float/2addr v1, v2
 
-    .line 468
+    .line 747
     mul-float v2, v0, v0
 
     mul-float v3, v1, v1
@@ -965,58 +1226,58 @@
 
     double-to-float v2, v2
 
-    .line 470
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 749
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->w(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
+    invoke-static {v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->F(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
 
     move-result v3
 
     cmpl-float v3, v3, v8
 
-    if-nez v3, :cond_14
+    if-nez v3, :cond_1c
 
-    .line 471
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 750
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0, v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;F)F
 
-    :cond_13
-    :goto_3
+    :cond_1b
+    :goto_4
     move v0, v6
 
-    .line 487
+    .line 766
     goto/16 :goto_0
 
-    .line 473
-    :cond_14
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 752
+    :cond_1c
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->w(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
+    invoke-static {v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->F(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
 
     move-result v3
 
     div-float/2addr v2, v3
 
-    .line 474
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 753
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->x(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
+    invoke-static {v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->G(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_13
+    if-eqz v3, :cond_1b
 
-    .line 475
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 754
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v4}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->g(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
+    invoke-static {v4}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->h(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
 
     move-result v4
 
@@ -1036,13 +1297,13 @@
 
     invoke-virtual {v3, v2, v0, v1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->c(FFF)V
 
-    goto :goto_3
+    goto :goto_4
 
-    .line 480
-    :cond_15
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 759
+    :cond_1d
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->l(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->m(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
 
     move-result v0
 
@@ -1058,11 +1319,11 @@
 
     cmpl-float v0, v0, v9
 
-    if-gtz v0, :cond_16
+    if-gtz v0, :cond_1e
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->m(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->n(Lcom/tencent/mm/ui/tools/MMGestureGallery;)F
 
     move-result v0
 
@@ -1078,16 +1339,16 @@
 
     cmpl-float v0, v0, v9
 
-    if-lez v0, :cond_13
+    if-lez v0, :cond_1b
 
-    .line 481
-    :cond_16
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->biE()V
+    .line 760
+    :cond_1e
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->boA()V
 
-    .line 482
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 761
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;->lXp:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-static {v0, v6}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Lcom/tencent/mm/ui/tools/MMGestureGallery;I)I
 
-    goto :goto_3
+    goto :goto_4
 .end method

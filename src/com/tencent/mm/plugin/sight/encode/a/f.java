@@ -3,15 +3,15 @@ package com.tencent.mm.plugin.sight.encode.a;
 import android.os.Looper;
 import android.os.Message;
 import android.util.SparseArray;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import java.lang.ref.WeakReference;
 
 public final class f
 {
-  public b.b gAN = b.b.gzN;
-  SparseArray gAO = new SparseArray();
-  aa gAP = new aa(Looper.getMainLooper())
+  public b.b gHp = b.b.gGp;
+  SparseArray<WeakReference<b.a>> gHq = new SparseArray();
+  ac gHr = new ac(Looper.getMainLooper())
   {
     public final void handleMessage(Message paramAnonymousMessage)
     {
@@ -19,11 +19,11 @@ public final class f
       {
         paramAnonymousMessage = (b.b)obj;
         int i = 0;
-        if (i < gAO.size())
+        if (i < gHq.size())
         {
-          b.a locala = (b.a)((WeakReference)gAO.valueAt(i)).get();
+          b.a locala = (b.a)((WeakReference)gHq.valueAt(i)).get();
           if (locala != null) {
-            switch (f.2.gAR[paramAnonymousMessage.ordinal()])
+            switch (f.2.gHt[paramAnonymousMessage.ordinal()])
             {
             }
           }
@@ -35,7 +35,7 @@ public final class f
             continue;
             locala.onStop();
             continue;
-            locala.awu();
+            locala.ayT();
             continue;
             locala.onError();
           }
@@ -58,20 +58,20 @@ public final class f
         do
         {
           return;
-          gAO.put(paramAnonymousMessage.hashCode(), new WeakReference(paramAnonymousMessage));
+          gHq.put(paramAnonymousMessage.hashCode(), new WeakReference(paramAnonymousMessage));
           return;
         } while (259 != what);
         paramAnonymousMessage = (b.a)obj;
       } while (paramAnonymousMessage == null);
-      gAO.remove(paramAnonymousMessage.hashCode());
+      gHq.remove(paramAnonymousMessage.hashCode());
     }
   };
   
   public final void b(b.b paramb)
   {
-    u.i("!56@/B4Tb64lLpKqlKwF1ffTCwg004KTnhCXKcRjvlWyYsav9U7R7fFEGA==", "status change to %s", new Object[] { paramb.toString() });
-    gAN = paramb;
-    gAP.sendMessage(gAP.obtainMessage(257, paramb));
+    v.i("MicroMsg.SightMediaStatusHandler", "status change to %s", new Object[] { paramb.toString() });
+    gHp = paramb;
+    gHr.sendMessage(gHr.obtainMessage(257, paramb));
   }
 }
 

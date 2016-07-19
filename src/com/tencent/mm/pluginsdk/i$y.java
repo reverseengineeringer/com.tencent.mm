@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk;
 
 public abstract interface i$y
 {
-  public abstract String afi();
+  public abstract String ahM();
 }
 
 /* Location:

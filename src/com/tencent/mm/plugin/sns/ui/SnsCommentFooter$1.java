@@ -11,23 +11,23 @@ final class SnsCommentFooter$1
   
   public final void afterTextChanged(Editable paramEditable)
   {
-    if (SnsCommentFooter.a(hdG).getText() == null) {
+    if (SnsCommentFooter.a(hst).getText() == null) {
       return;
     }
-    SnsCommentFooter.a(hdG).requestFocus();
+    SnsCommentFooter.a(hst).requestFocus();
     if ((paramEditable.length() > 0) && (paramEditable.toString().trim().length() > 0)) {}
     for (int i = 1;; i = 0)
     {
-      if ((i != 0) && (hdG.eYS))
+      if ((i != 0) && (hst.fhm))
       {
-        SnsCommentFooter.a(hdG, true);
-        hdG.eYS = false;
+        SnsCommentFooter.a(hst, true);
+        hst.fhm = false;
       }
       if (i != 0) {
         break;
       }
-      SnsCommentFooter.a(hdG, false);
-      hdG.eYS = true;
+      SnsCommentFooter.a(hst, false);
+      hst.fhm = true;
       return;
     }
   }

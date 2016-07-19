@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/o_" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/cnt" android:background="@drawable/atq" android:visibility="visible" android:persistentDrawingCache="all" android:alwaysDrawnWithCache="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip">
+        <TextView android:textSize="@dimen/i8" android:textStyle="bold" android:textColor="@color/ak" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/cnu" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/he" />
+        <ImageView android:id="@id/cnv" android:layout_width="fill_parent" android:layout_height="103.0dip" android:layout_marginTop="@dimen/hj" android:layout_marginBottom="@dimen/hb" android:scaleType="fitXY" android:contentDescription="@string/dhs" />
+        <ImageView android:id="@id/cnw" android:layout_width="177.0dip" android:layout_height="177.0dip" android:scaleType="fitXY" android:contentDescription="@string/diq" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/cnx" android:background="@color/oa" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="25.0dip">
+            <ImageView android:id="@id/cny" android:layout_width="@dimen/ps" android:layout_height="@dimen/ps" android:layout_marginRight="@dimen/cp" android:src="@raw/bankcard_tips_icon" />
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:id="@id/cnz" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dhu" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/ja" android:textColor="@color/oh" android:layout_gravity="center_horizontal" android:id="@id/co0" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j8" android:text="@string/dis" />
+    <RelativeLayout android:layout_gravity="bottom|center" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginBottom="10.0dip" android:layout_weight="1.0">
+        <ImageView android:id="@id/co1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/hb" android:src="@raw/offline_bottom_logo" android:layout_alignParentBottom="true" />
+        <TextView android:textSize="@dimen/i8" android:textColor="@color/oc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginBottom="@dimen/hb" android:text="@string/dlx" android:layout_toRightOf="@id/co1" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

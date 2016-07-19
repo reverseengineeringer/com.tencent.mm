@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kuf:Lcom/tencent/mm/ui/account/MMKeyboardUperView;
+.field final synthetic kTm:Lcom/tencent/mm/ui/account/MMKeyboardUperView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 15
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/MMKeyboardUperView$1;->kuf:Lcom/tencent/mm/ui/account/MMKeyboardUperView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/MMKeyboardUperView$1;->kTm:Lcom/tencent/mm/ui/account/MMKeyboardUperView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,14 +41,14 @@
 
     .prologue
     .line 19
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/MMKeyboardUperView$1;->kuf:Lcom/tencent/mm/ui/account/MMKeyboardUperView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/MMKeyboardUperView$1;->kTm:Lcom/tencent/mm/ui/account/MMKeyboardUperView;
 
     const/16 v1, 0x82
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->fullScroll(I)Z
 
     .line 20
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/MMKeyboardUperView$1;->kuf:Lcom/tencent/mm/ui/account/MMKeyboardUperView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/MMKeyboardUperView$1;->kTm:Lcom/tencent/mm/ui/account/MMKeyboardUperView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->a(Lcom/tencent/mm/ui/account/MMKeyboardUperView;)Landroid/view/View;
 

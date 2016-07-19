@@ -13,7 +13,7 @@ final class SnsCommentDetailUI$10
   public final void onScrollStateChanged(AbsListView paramAbsListView, int paramInt)
   {
     if (paramInt == 1) {
-      hda.age();
+      hrN.aiI();
     }
   }
 }

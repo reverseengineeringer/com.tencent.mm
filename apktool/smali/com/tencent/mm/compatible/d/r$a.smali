@@ -18,9 +18,6 @@
 .method public abstract A(II)V
 .end method
 
-.method public abstract g(ILjava/lang/String;)V
-.end method
-
 .method public abstract getInt(II)I
 .end method
 
@@ -30,5 +27,8 @@
 .method public abstract getString(ILjava/lang/String;)Ljava/lang/String;
 .end method
 
-.method public abstract j(IJ)V
+.method public abstract h(IJ)V
+.end method
+
+.method public abstract h(ILjava/lang/String;)V
 .end method

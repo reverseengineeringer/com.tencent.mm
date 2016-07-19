@@ -2,31 +2,31 @@ package com.tencent.mm.storage;
 
 public final class x
 {
-  public String auy;
-  public String fNO;
-  public int kfq;
-  private boolean kfr = false;
-  public int kfs;
-  public int kft;
-  public String kfu;
+  public String agl;
+  public String fWR;
+  public int kFA;
+  public String kFB;
+  public int kFx;
+  private boolean kFy = false;
+  public int kFz;
   
   public x()
   {
-    kfq = -1;
+    kFx = -1;
   }
   
   public x(String paramString)
   {
-    auy = paramString;
-    kfq = -1;
+    agl = paramString;
+    kFx = -1;
   }
   
-  public final void pE(int paramInt)
+  public final void rt(int paramInt)
   {
-    if ((kfq != -1) && (kfq != paramInt) && (paramInt == 7)) {
-      kfr = true;
+    if ((kFx != -1) && (kFx != paramInt) && (paramInt == 7)) {
+      kFy = true;
     }
-    kfq = paramInt;
+    kFx = paramInt;
   }
 }
 

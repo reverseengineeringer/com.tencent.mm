@@ -3,29 +3,29 @@ package android.support.v4.b;
 import android.os.Parcel;
 import android.os.Parcelable.ClassLoaderCreator;
 
-public final class c
-  implements Parcelable.ClassLoaderCreator
+public final class c<T>
+  implements Parcelable.ClassLoaderCreator<T>
 {
-  private final b el;
+  private final b<T> eG;
   
-  public c(b paramb)
+  public c(b<T> paramb)
   {
-    el = paramb;
+    eG = paramb;
   }
   
-  public final Object createFromParcel(Parcel paramParcel)
+  public final T createFromParcel(Parcel paramParcel)
   {
-    return el.createFromParcel(paramParcel, null);
+    return (T)eG.createFromParcel(paramParcel, null);
   }
   
-  public final Object createFromParcel(Parcel paramParcel, ClassLoader paramClassLoader)
+  public final T createFromParcel(Parcel paramParcel, ClassLoader paramClassLoader)
   {
-    return el.createFromParcel(paramParcel, paramClassLoader);
+    return (T)eG.createFromParcel(paramParcel, paramClassLoader);
   }
   
-  public final Object[] newArray(int paramInt)
+  public final T[] newArray(int paramInt)
   {
-    return el.newArray(paramInt);
+    return eG.newArray(paramInt);
   }
 }
 

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract aj(Landroid/content/Context;Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/i$n;
+.method public abstract am(Landroid/content/Context;Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/i$n;
 .end method

@@ -9,46 +9,46 @@ import java.util.ArrayList;
 final class k$a
   extends BaseAdapter
 {
-  private int lI = -1;
-  private f mN;
+  private int lY = -1;
+  private f nd;
   
   public k$a(k paramk, f paramf)
   {
-    mN = paramf;
+    nd = paramf;
     bo();
   }
   
   private void bo()
   {
-    h localh = cmO).mf;
+    h localh = cne).mv;
     if (localh != null)
     {
-      ArrayList localArrayList = k.c(mO).bw();
+      ArrayList localArrayList = k.c(ne).bw();
       int j = localArrayList.size();
       int i = 0;
       while (i < j)
       {
         if ((h)localArrayList.get(i) == localh)
         {
-          lI = i;
+          lY = i;
           return;
         }
         i += 1;
       }
     }
-    lI = -1;
+    lY = -1;
   }
   
-  public final h B(int paramInt)
+  public final h G(int paramInt)
   {
-    if (k.a(mO)) {}
-    for (ArrayList localArrayList = mN.bw();; localArrayList = mN.bu())
+    if (k.a(ne)) {}
+    for (ArrayList localArrayList = nd.bw();; localArrayList = nd.bu())
     {
       int i = paramInt;
-      if (lI >= 0)
+      if (lY >= 0)
       {
         i = paramInt;
-        if (paramInt >= lI) {
+        if (paramInt >= lY) {
           i = paramInt + 1;
         }
       }
@@ -58,8 +58,8 @@ final class k$a
   
   public final int getCount()
   {
-    if (k.a(mO)) {}
-    for (ArrayList localArrayList = mN.bw(); lI < 0; localArrayList = mN.bu()) {
+    if (k.a(ne)) {}
+    for (ArrayList localArrayList = nd.bw(); lY < 0; localArrayList = nd.bu()) {
       return localArrayList.size();
     }
     return localArrayList.size() - 1;
@@ -73,15 +73,18 @@ final class k$a
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
     if (paramView == null) {
-      paramView = k.b(mO).inflate(2131363314, paramViewGroup, false);
+      paramView = k.b(ne).inflate(2130903059, paramViewGroup, false);
     }
     for (;;)
     {
       paramViewGroup = (m.a)paramView;
-      if (mO.lD) {
-        ((ListMenuItemView)paramView).setForceShowIcon(true);
+      if (ne.lT)
+      {
+        ListMenuItemView localListMenuItemView = (ListMenuItemView)paramView;
+        lT = true;
+        lR = true;
       }
-      paramViewGroup.a(B(paramInt));
+      paramViewGroup.a(G(paramInt));
       return paramView;
     }
   }

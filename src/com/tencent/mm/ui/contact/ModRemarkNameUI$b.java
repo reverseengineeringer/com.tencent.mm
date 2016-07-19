@@ -8,20 +8,20 @@ import com.tencent.mm.ui.tools.i;
 final class ModRemarkNameUI$b
   implements TextWatcher
 {
-  private int gjm = 800;
+  private int gtH = 800;
   
   private ModRemarkNameUI$b(ModRemarkNameUI paramModRemarkNameUI) {}
   
   public final void afterTextChanged(Editable paramEditable)
   {
-    gjm = i.ai(800, paramEditable.toString());
-    if (gjm < 0) {
-      gjm = 0;
+    gtH = i.as(800, paramEditable.toString());
+    if (gtH < 0) {
+      gtH = 0;
     }
-    if (ModRemarkNameUI.l(llQ) != null) {
-      ModRemarkNameUI.l(llQ).setText(gjm);
+    if (ModRemarkNameUI.l(lMe) != null) {
+      ModRemarkNameUI.l(lMe).setText(gtH);
     }
-    ModRemarkNameUI.m(llQ);
+    ModRemarkNameUI.m(lMe);
   }
   
   public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}

@@ -3,7 +3,7 @@ package com.tencent.mm.ui.tools;
 import android.view.View;
 import android.view.View.OnCreateContextMenuListener;
 import android.view.View.OnLongClickListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.l;
 
 final class m$2
@@ -13,11 +13,11 @@ final class m$2
   
   public final boolean onLongClick(View paramView)
   {
-    u.v("!44@/B4Tb64lLpLsoKMPiL0xLC429fVkFuxXeqosDHFYUTE=", "registerForContextMenu normal view long click");
-    m.a(lwP).clear();
-    lwO.onCreateContextMenu(m.a(lwP), paramView, null);
-    lwP.biF();
-    return m.a(lwP).size() > 0;
+    v.v("MicroMsg.MMSubMenuHelper", "registerForContextMenu normal view long click");
+    m.a(lXC).clear();
+    lXB.onCreateContextMenu(m.a(lXC), paramView, null);
+    lXC.boB();
+    return m.a(lXC).size() > 0;
   }
 }
 

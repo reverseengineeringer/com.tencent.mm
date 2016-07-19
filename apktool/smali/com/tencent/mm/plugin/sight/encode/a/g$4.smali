@@ -18,17 +18,17 @@
 
 
 # instance fields
-.field final synthetic fRR:Ljava/lang/String;
+.field final synthetic gHu:Lcom/tencent/mm/plugin/sight/encode/a/g$a;
 
-.field final synthetic gAS:Lcom/tencent/mm/plugin/sight/encode/a/g$a;
+.field final synthetic gHv:I
 
-.field final synthetic gAT:I
+.field final synthetic gHw:Lcom/tencent/mm/plugin/sight/encode/a/g;
 
-.field final synthetic gAU:Lcom/tencent/mm/plugin/sight/encode/a/g;
+.field final synthetic gHx:Ljava/util/List;
 
-.field final synthetic gAV:Ljava/util/List;
+.field final synthetic gHy:Ljava/lang/String;
 
-.field final synthetic gAW:Ljava/lang/String;
+.field final synthetic gaU:Ljava/lang/String;
 
 
 # direct methods
@@ -37,17 +37,17 @@
 
     .prologue
     .line 244
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gAU:Lcom/tencent/mm/plugin/sight/encode/a/g;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gHw:Lcom/tencent/mm/plugin/sight/encode/a/g;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->fRR:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gaU:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gAV:Ljava/util/List;
+    iput-object p3, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gHx:Ljava/util/List;
 
-    iput-object p4, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gAW:Ljava/lang/String;
+    iput-object p4, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gHy:Ljava/lang/String;
 
-    iput-object p5, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gAS:Lcom/tencent/mm/plugin/sight/encode/a/g$a;
+    iput-object p5, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gHu:Lcom/tencent/mm/plugin/sight/encode/a/g$a;
 
-    iput p6, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gAT:I
+    iput p6, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gHv:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,334 +57,334 @@
 
 # virtual methods
 .method public final run()V
-    .locals 17
+    .locals 18
 
     .prologue
     .line 249
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->fRR:Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gaU:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/sight/base/c;->tS(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/plugin/sight/base/c;->uY(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
     .line 250
-    invoke-static {v3}, Lcom/tencent/mm/a/e;->ax(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/tencent/mm/a/e;->aB(Ljava/lang/String;)Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_0
+    if-nez v2, :cond_0
 
     .line 251
-    const-string/jumbo v1, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
+    const-string/jumbo v2, "MicroMsg.SightRecorderHelper"
 
-    const-string/jumbo v2, "thumb data not found, try to create thumb"
+    const-string/jumbo v3, "thumb data not found, try to create thumb"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 252
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->fRR:Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gaU:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/sight/base/c;->tV(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-static {v2}, Lcom/tencent/mm/plugin/sight/base/c;->vb(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
-    move-result-object v1
+    move-result-object v2
 
     .line 256
-    const/16 v2, 0x3c
+    const/16 v3, 0x3c
 
     :try_start_0
-    sget-object v4, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
+    sget-object v5, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
-    const/4 v5, 0x1
+    const/4 v6, 0x1
 
-    invoke-static {v1, v2, v4, v3, v5}, Lcom/tencent/mm/sdk/platformtools/d;->a(Landroid/graphics/Bitmap;ILandroid/graphics/Bitmap$CompressFormat;Ljava/lang/String;Z)V
+    invoke-static {v2, v3, v5, v4, v6}, Lcom/tencent/mm/sdk/platformtools/d;->a(Landroid/graphics/Bitmap;ILandroid/graphics/Bitmap$CompressFormat;Ljava/lang/String;Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 263
     :cond_0
     :goto_0
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 264
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gAV:Ljava/util/List;
+    iget-object v2, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gHx:Ljava/util/List;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Ljava/lang/String;
+    check-cast v2, Ljava/lang/String;
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 265
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    move v2, v1
+    move v3, v2
 
     :goto_1
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gAV:Ljava/util/List;
+    iget-object v2, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gHx:Ljava/util/List;
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    invoke-interface {v2}, Ljava/util/List;->size()I
 
-    move-result v1
+    move-result v2
 
-    if-ge v2, v1, :cond_1
+    if-ge v3, v2, :cond_1
 
     .line 266
-    const/16 v1, 0x2c
+    const/16 v2, 0x2c
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 267
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gAV:Ljava/util/List;
+    iget-object v2, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gHx:Ljava/util/List;
 
-    invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Ljava/lang/String;
+    check-cast v2, Ljava/lang/String;
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 265
-    add-int/lit8 v1, v2, 0x1
+    add-int/lit8 v2, v3, 0x1
 
-    move v2, v1
+    move v3, v2
 
     goto :goto_1
 
     .line 258
     :catch_0
-    move-exception v1
+    move-exception v2
 
-    const-string/jumbo v1, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
+    const-string/jumbo v2, "MicroMsg.SightRecorderHelper"
 
-    const-string/jumbo v2, "save bitmap to image error"
+    const-string/jumbo v3, "save bitmap to image error"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 269
     :cond_1
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 270
-    invoke-static {}, Lcom/tencent/mm/an/j;->Ea()Lcom/tencent/mm/an/n;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "SELECT MAX(masssendid) FROM videoinfo2"
-
-    iget-object v1, v1, Lcom/tencent/mm/an/n;->bCw:Lcom/tencent/mm/az/g;
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v1, v2, v5}, Lcom/tencent/mm/az/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
 
-    if-nez v5, :cond_2
+    .line 270
+    invoke-static {}, Lcom/tencent/mm/aq/n;->Es()Lcom/tencent/mm/aq/r;
 
-    const-wide/16 v1, 0x0
+    move-result-object v2
+
+    const-string/jumbo v3, "SELECT MAX(masssendid) FROM videoinfo2"
+
+    iget-object v2, v2, Lcom/tencent/mm/aq/r;->bvG:Lcom/tencent/mm/bc/g;
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v2, v3, v6}, Lcom/tencent/mm/bc/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v6
+
+    if-nez v6, :cond_2
+
+    const-wide/16 v2, 0x0
 
     :goto_2
-    const-wide/16 v5, 0x1
+    const-wide/16 v6, 0x1
 
-    add-long/2addr v5, v1
+    add-long/2addr v6, v2
 
     .line 271
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    move v2, v1
+    move v3, v2
 
     :goto_3
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gAV:Ljava/util/List;
+    iget-object v2, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gHx:Ljava/util/List;
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    invoke-interface {v2}, Ljava/util/List;->size()I
 
-    move-result v1
+    move-result v2
 
-    if-ge v2, v1, :cond_8
+    if-ge v3, v2, :cond_8
 
     .line 272
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gAV:Ljava/util/List;
+    iget-object v2, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gHx:Ljava/util/List;
 
-    invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Ljava/lang/String;
+    check-cast v2, Ljava/lang/String;
 
     .line 273
-    const-string/jumbo v7, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
+    const-string/jumbo v8, "MicroMsg.SightRecorderHelper"
 
-    const-string/jumbo v8, "do prepare sight message for %s, massSendId %d, massSendList %s, videoMD5 %s"
+    const-string/jumbo v9, "do prepare sight message for %s, massSendId %d, massSendList %s, videoMD5 %s"
 
-    const/4 v9, 0x4
+    const/4 v10, 0x4
 
-    new-array v9, v9, [Ljava/lang/Object;
+    new-array v10, v10, [Ljava/lang/Object;
 
-    const/4 v10, 0x0
+    const/4 v11, 0x0
 
-    aput-object v1, v9, v10
+    aput-object v2, v10, v11
 
-    const/4 v10, 0x1
+    const/4 v11, 0x1
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v11
+    move-result-object v12
 
-    aput-object v11, v9, v10
+    aput-object v12, v10, v11
 
-    const/4 v10, 0x2
+    const/4 v11, 0x2
 
-    aput-object v4, v9, v10
+    aput-object v5, v10, v11
 
-    const/4 v10, 0x3
+    const/4 v11, 0x3
 
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gAW:Ljava/lang/String;
+    iget-object v12, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gHy:Ljava/lang/String;
 
-    aput-object v11, v9, v10
+    aput-object v12, v10, v11
 
-    invoke-static {v7, v8, v9}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v8, v9, v10}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 276
-    invoke-static {v1}, Lcom/tencent/mm/an/n;->bn(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
-
-    .line 277
-    invoke-static {}, Lcom/tencent/mm/an/j;->Ea()Lcom/tencent/mm/an/n;
-
-    invoke-static {v7}, Lcom/tencent/mm/an/n;->jM(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/aq/r;->ko(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 278
-    invoke-static {}, Lcom/tencent/mm/an/j;->Ea()Lcom/tencent/mm/an/n;
+    .line 277
+    invoke-static {}, Lcom/tencent/mm/aq/n;->Es()Lcom/tencent/mm/aq/r;
 
-    invoke-static {v7}, Lcom/tencent/mm/an/n;->jL(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v8}, Lcom/tencent/mm/aq/r;->kq(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 281
-    invoke-static {v3, v8}, Lcom/tencent/mm/a/e;->o(Ljava/lang/String;Ljava/lang/String;)J
+    .line 278
+    invoke-static {}, Lcom/tencent/mm/aq/n;->Es()Lcom/tencent/mm/aq/r;
 
-    move-result-wide v10
-
-    .line 282
-    const-string/jumbo v12, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
-
-    const-string/jumbo v13, "prepare to send sight to %s, sightThumbSize %d bytes"
-
-    const/4 v14, 0x2
-
-    new-array v14, v14, [Ljava/lang/Object;
-
-    const/4 v15, 0x0
-
-    aput-object v1, v14, v15
-
-    const/4 v15, 0x1
-
-    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v16
-
-    aput-object v16, v14, v15
-
-    invoke-static {v12, v13, v14}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 283
-    const-wide/16 v12, 0x0
-
-    cmp-long v10, v10, v12
-
-    if-gtz v10, :cond_4
-
-    .line 284
-    const-string/jumbo v1, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
-
-    const-string/jumbo v7, "copy remux thumb path from %s to %s error, index %d"
-
-    const/4 v9, 0x3
-
-    new-array v9, v9, [Ljava/lang/Object;
-
-    const/4 v10, 0x0
-
-    aput-object v3, v9, v10
-
-    const/4 v10, 0x1
-
-    aput-object v8, v9, v10
-
-    const/4 v8, 0x2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v8}, Lcom/tencent/mm/aq/r;->kp(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
-    aput-object v10, v9, v8
+    .line 281
+    invoke-static {v4, v9}, Lcom/tencent/mm/a/e;->n(Ljava/lang/String;Ljava/lang/String;)J
 
-    invoke-static {v1, v7, v9}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    move-result-wide v12
+
+    .line 282
+    const-string/jumbo v11, "MicroMsg.SightRecorderHelper"
+
+    const-string/jumbo v14, "prepare to send sight to %s, sightThumbSize %d bytes"
+
+    const/4 v15, 0x2
+
+    new-array v15, v15, [Ljava/lang/Object;
+
+    const/16 v16, 0x0
+
+    aput-object v2, v15, v16
+
+    const/16 v16, 0x1
+
+    invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v17
+
+    aput-object v17, v15, v16
+
+    invoke-static {v11, v14, v15}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 283
+    const-wide/16 v14, 0x0
+
+    cmp-long v11, v12, v14
+
+    if-gtz v11, :cond_4
+
+    .line 284
+    const-string/jumbo v2, "MicroMsg.SightRecorderHelper"
+
+    const-string/jumbo v8, "copy remux thumb path from %s to %s error, index %d"
+
+    const/4 v10, 0x3
+
+    new-array v10, v10, [Ljava/lang/Object;
+
+    const/4 v11, 0x0
+
+    aput-object v4, v10, v11
+
+    const/4 v11, 0x1
+
+    aput-object v9, v10, v11
+
+    const/4 v9, 0x2
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v11
+
+    aput-object v11, v10, v9
+
+    invoke-static {v2, v8, v10}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 286
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gAS:Lcom/tencent/mm/plugin/sight/encode/a/g$a;
+    iget-object v2, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gHu:Lcom/tencent/mm/plugin/sight/encode/a/g$a;
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/plugin/sight/encode/a/g;->a(Lcom/tencent/mm/plugin/sight/encode/a/g$a;I)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/plugin/sight/encode/a/g;->a(Lcom/tencent/mm/plugin/sight/encode/a/g$a;I)V
 
     .line 271
     :goto_4
-    add-int/lit8 v1, v2, 0x1
+    add-int/lit8 v2, v3, 0x1
 
-    move v2, v1
+    move v3, v2
 
     goto/16 :goto_3
 
     .line 270
     :cond_2
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    invoke-interface {v5}, Landroid/database/Cursor;->moveToFirst()Z
+    invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
-    move-result v6
+    move-result v7
 
-    if-eqz v6, :cond_3
+    if-eqz v7, :cond_3
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-interface {v5, v1}, Landroid/database/Cursor;->getLong(I)J
+    invoke-interface {v6, v2}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-wide v1
+    move-result-wide v2
 
     :cond_3
-    invoke-interface {v5}, Landroid/database/Cursor;->close()V
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     goto/16 :goto_2
 
@@ -392,79 +392,79 @@
     :cond_4
     move-object/from16 v0, p0
 
-    iget-object v8, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->fRR:Ljava/lang/String;
+    iget-object v9, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gaU:Ljava/lang/String;
 
-    invoke-static {v8, v9}, Lcom/tencent/mm/a/e;->o(Ljava/lang/String;Ljava/lang/String;)J
+    invoke-static {v9, v10}, Lcom/tencent/mm/a/e;->n(Ljava/lang/String;Ljava/lang/String;)J
 
-    move-result-wide v10
+    move-result-wide v12
 
     .line 290
-    const-string/jumbo v8, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
+    const-string/jumbo v9, "MicroMsg.SightRecorderHelper"
 
-    const-string/jumbo v12, "prepare to send sight to %s, sightFileSize %d bytes"
+    const-string/jumbo v11, "prepare to send sight to %s, sightFileSize %d bytes"
 
-    const/4 v13, 0x2
+    const/4 v14, 0x2
 
-    new-array v13, v13, [Ljava/lang/Object;
+    new-array v14, v14, [Ljava/lang/Object;
 
-    const/4 v14, 0x0
+    const/4 v15, 0x0
 
-    aput-object v1, v13, v14
+    aput-object v2, v14, v15
 
-    const/4 v14, 0x1
+    const/4 v15, 0x1
 
-    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v15
+    move-result-object v16
 
-    aput-object v15, v13, v14
+    aput-object v16, v14, v15
 
-    invoke-static {v8, v12, v13}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v9, v11, v14}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 291
-    const-wide/16 v12, 0x0
+    const-wide/16 v14, 0x0
 
-    cmp-long v8, v10, v12
+    cmp-long v9, v12, v14
 
-    if-gtz v8, :cond_5
+    if-gtz v9, :cond_5
 
     .line 292
-    const-string/jumbo v1, "!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw="
+    const-string/jumbo v2, "MicroMsg.SightRecorderHelper"
 
-    const-string/jumbo v7, "copy remux video path from %s to %s error, index %d"
+    const-string/jumbo v8, "copy remux video path from %s to %s error, index %d"
 
-    const/4 v8, 0x3
+    const/4 v9, 0x3
 
-    new-array v8, v8, [Ljava/lang/Object;
+    new-array v9, v9, [Ljava/lang/Object;
 
-    const/4 v10, 0x0
+    const/4 v11, 0x0
 
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->fRR:Ljava/lang/String;
+    iget-object v12, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gaU:Ljava/lang/String;
 
-    aput-object v11, v8, v10
+    aput-object v12, v9, v11
 
-    const/4 v10, 0x1
+    const/4 v11, 0x1
 
-    aput-object v9, v8, v10
+    aput-object v10, v9, v11
 
-    const/4 v9, 0x2
+    const/4 v10, 0x2
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v10
+    move-result-object v11
 
-    aput-object v10, v8, v9
+    aput-object v11, v9, v10
 
-    invoke-static {v1, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v8, v9}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 294
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gAS:Lcom/tencent/mm/plugin/sight/encode/a/g$a;
+    iget-object v2, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gHu:Lcom/tencent/mm/plugin/sight/encode/a/g$a;
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/plugin/sight/encode/a/g;->a(Lcom/tencent/mm/plugin/sight/encode/a/g$a;I)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/plugin/sight/encode/a/g;->a(Lcom/tencent/mm/plugin/sight/encode/a/g$a;I)V
 
     goto :goto_4
 
@@ -472,249 +472,249 @@
     :cond_5
     move-object/from16 v0, p0
 
-    iget v8, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gAT:I
+    iget v9, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gHv:I
 
     move-object/from16 v0, p0
 
-    iget-object v9, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gAW:Ljava/lang/String;
+    iget-object v10, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gHy:Ljava/lang/String;
 
-    new-instance v10, Lcom/tencent/mm/an/m;
+    new-instance v11, Lcom/tencent/mm/aq/q;
 
-    invoke-direct {v10}, Lcom/tencent/mm/an/m;-><init>()V
+    invoke-direct {v11}, Lcom/tencent/mm/aq/q;-><init>()V
 
-    iput-object v7, v10, Lcom/tencent/mm/an/m;->anC:Ljava/lang/String;
+    iput-object v8, v11, Lcom/tencent/mm/aq/q;->aaq:Ljava/lang/String;
 
-    iput v8, v10, Lcom/tencent/mm/an/m;->cfZ:I
+    iput v9, v11, Lcom/tencent/mm/aq/q;->cbl:I
 
-    iput-object v1, v10, Lcom/tencent/mm/an/m;->aEV:Ljava/lang/String;
+    iput-object v2, v11, Lcom/tencent/mm/aq/q;->ara:Ljava/lang/String;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
-    move-result-object v1
+    move-result-object v2
 
-    const/4 v8, 0x2
+    const/4 v9, 0x2
 
-    const-string/jumbo v11, ""
+    const-string/jumbo v12, ""
 
-    invoke-virtual {v1, v8, v11}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v9, v12}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Ljava/lang/String;
+    check-cast v2, Ljava/lang/String;
 
-    iput-object v1, v10, Lcom/tencent/mm/an/m;->cfR:Ljava/lang/String;
+    iput-object v2, v11, Lcom/tencent/mm/aq/q;->cbd:Ljava/lang/String;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FR()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Go()J
 
-    move-result-wide v11
+    move-result-wide v12
 
-    iput-wide v11, v10, Lcom/tencent/mm/an/m;->cfW:J
+    iput-wide v12, v11, Lcom/tencent/mm/aq/q;->cbi:J
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FR()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Go()J
 
-    move-result-wide v11
+    move-result-wide v12
 
-    iput-wide v11, v10, Lcom/tencent/mm/an/m;->cfX:J
+    iput-wide v12, v11, Lcom/tencent/mm/aq/q;->cbj:J
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput-object v1, v10, Lcom/tencent/mm/an/m;->cgf:Ljava/lang/String;
+    iput-object v2, v11, Lcom/tencent/mm/aq/q;->cbr:Ljava/lang/String;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput-object v1, v10, Lcom/tencent/mm/an/m;->ceU:Ljava/lang/String;
+    iput-object v2, v11, Lcom/tencent/mm/aq/q;->cag:Ljava/lang/String;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput v1, v10, Lcom/tencent/mm/an/m;->cgd:I
+    iput v2, v11, Lcom/tencent/mm/aq/q;->cbp:I
 
-    const/4 v1, 0x3
+    const/4 v2, 0x3
 
-    iput v1, v10, Lcom/tencent/mm/an/m;->cgg:I
+    iput v2, v11, Lcom/tencent/mm/aq/q;->cbs:I
 
-    invoke-static {}, Lcom/tencent/mm/an/j;->Ea()Lcom/tencent/mm/an/n;
+    invoke-static {}, Lcom/tencent/mm/aq/n;->Es()Lcom/tencent/mm/aq/r;
 
-    invoke-static {v7}, Lcom/tencent/mm/an/n;->jL(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v8}, Lcom/tencent/mm/aq/r;->kp(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-static {v1}, Lcom/tencent/mm/an/n;->bc(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/tencent/mm/aq/r;->kr(Ljava/lang/String;)I
 
-    move-result v1
+    move-result v2
 
-    if-gtz v1, :cond_6
+    if-gtz v2, :cond_6
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKT0Ff1DaNVTWjs/xAN/V6v"
+    const-string/jumbo v2, "MicroMsg.VideoLogic"
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    new-instance v9, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v9, "initMassSendSight::get Video size failed:"
+    const-string/jumbo v10, "initMassSendSight::get Video size failed:"
 
-    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v8
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v8
 
-    invoke-static {v1, v7}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v8}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_4
 
     :cond_6
-    iput v1, v10, Lcom/tencent/mm/an/m;->bEp:I
+    iput v2, v11, Lcom/tencent/mm/aq/q;->bxA:I
 
-    invoke-static {}, Lcom/tencent/mm/an/j;->Ea()Lcom/tencent/mm/an/n;
+    invoke-static {}, Lcom/tencent/mm/aq/n;->Es()Lcom/tencent/mm/aq/r;
 
-    invoke-static {v7}, Lcom/tencent/mm/an/n;->jM(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v8}, Lcom/tencent/mm/aq/r;->kq(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-static {v1}, Lcom/tencent/mm/an/n;->bc(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/tencent/mm/aq/r;->kr(Ljava/lang/String;)I
 
-    move-result v8
+    move-result v9
 
-    if-gtz v8, :cond_7
+    if-gtz v9, :cond_7
 
-    const-string/jumbo v7, "!32@/B4Tb64lLpKT0Ff1DaNVTWjs/xAN/V6v"
+    const-string/jumbo v8, "MicroMsg.VideoLogic"
 
-    new-instance v9, Ljava/lang/StringBuilder;
+    new-instance v10, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v10, "get Thumb size failed :"
+    const-string/jumbo v11, "get Thumb size failed :"
 
-    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v10, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v9, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v2
 
-    const-string/jumbo v9, " size:"
+    const-string/jumbo v10, " size:"
 
-    invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-static {v7, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_4
 
     :cond_7
-    iput v8, v10, Lcom/tencent/mm/an/m;->cfV:I
+    iput v9, v11, Lcom/tencent/mm/aq/q;->cbh:I
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKT0Ff1DaNVTWjs/xAN/V6v"
+    const-string/jumbo v2, "MicroMsg.VideoLogic"
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    new-instance v9, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v11, "initMassSendSight file:"
+    const-string/jumbo v12, "initMassSendSight file:"
 
-    invoke-direct {v8, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v9, v12}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v8
 
-    const-string/jumbo v8, " thumbsize:"
+    const-string/jumbo v9, " thumbsize:"
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v8
 
-    iget v8, v10, Lcom/tencent/mm/an/m;->cfV:I
+    iget v9, v11, Lcom/tencent/mm/aq/q;->cbh:I
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v8
 
-    const-string/jumbo v8, " videosize:"
+    const-string/jumbo v9, " videosize:"
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v8
 
-    iget v8, v10, Lcom/tencent/mm/an/m;->bEp:I
+    iget v9, v11, Lcom/tencent/mm/aq/q;->bxA:I
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v8
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v8
 
-    invoke-static {v1, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v8}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/16 v1, 0xc8
+    const/16 v2, 0xc8
 
-    iput v1, v10, Lcom/tencent/mm/an/m;->status:I
+    iput v2, v11, Lcom/tencent/mm/aq/q;->status:I
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKT0Ff1DaNVTWjs/xAN/V6v"
+    const-string/jumbo v2, "MicroMsg.VideoLogic"
 
-    const-string/jumbo v7, "massSendId %d, videoMD5 %s, massSendList %s"
+    const-string/jumbo v8, "massSendId %d, videoMD5 %s, massSendList %s"
 
-    const/4 v8, 0x3
+    const/4 v9, 0x3
 
-    new-array v8, v8, [Ljava/lang/Object;
+    new-array v9, v9, [Ljava/lang/Object;
 
-    const/4 v11, 0x0
+    const/4 v12, 0x0
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v12
+    move-result-object v13
 
-    aput-object v12, v8, v11
+    aput-object v13, v9, v12
 
-    const/4 v11, 0x1
+    const/4 v12, 0x1
 
-    aput-object v9, v8, v11
+    aput-object v10, v9, v12
 
-    const/4 v11, 0x2
+    const/4 v12, 0x2
 
-    aput-object v4, v8, v11
+    aput-object v5, v9, v12
 
-    invoke-static {v1, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v8, v9}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iput-object v4, v10, Lcom/tencent/mm/an/m;->cgh:Ljava/lang/String;
+    iput-object v5, v11, Lcom/tencent/mm/aq/q;->cbt:Ljava/lang/String;
 
-    iput-wide v5, v10, Lcom/tencent/mm/an/m;->cfc:J
+    iput-wide v6, v11, Lcom/tencent/mm/aq/q;->cap:J
 
-    iput-object v9, v10, Lcom/tencent/mm/an/m;->aHN:Ljava/lang/String;
+    iput-object v10, v11, Lcom/tencent/mm/aq/q;->aud:Ljava/lang/String;
 
-    invoke-static {}, Lcom/tencent/mm/an/j;->Ea()Lcom/tencent/mm/an/n;
+    invoke-static {}, Lcom/tencent/mm/aq/n;->Es()Lcom/tencent/mm/aq/r;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1, v10}, Lcom/tencent/mm/an/n;->a(Lcom/tencent/mm/an/m;)Z
+    invoke-virtual {v2, v11}, Lcom/tencent/mm/aq/r;->a(Lcom/tencent/mm/aq/q;)Z
 
     goto/16 :goto_4
 
     .line 301
     :cond_8
-    invoke-static {v5, v6}, Lcom/tencent/mm/an/o;->ai(J)I
+    invoke-static {v6, v7}, Lcom/tencent/mm/aq/s;->ap(J)I
 
     .line 303
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->fRR:Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/plugin/sight/encode/a/g$4;->gaU:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/loader/stub/b;->deleteFile(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/a/e;->deleteFile(Ljava/lang/String;)Z
 
     .line 304
-    invoke-static {v3}, Lcom/tencent/mm/loader/stub/b;->deleteFile(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/tencent/mm/a/e;->deleteFile(Ljava/lang/String;)Z
 
     .line 305
     return-void

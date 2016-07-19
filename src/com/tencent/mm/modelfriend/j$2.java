@@ -1,7 +1,7 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.protocal.b.abu;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.acj;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.applet.b.b;
 
 final class j$2
@@ -9,23 +9,23 @@ final class j$2
 {
   j$2(j paramj) {}
   
-  public final String dd(int paramInt)
+  public final String dI(int paramInt)
   {
-    if ((paramInt < 0) || (paramInt >= bMp.getCount())) {
-      u.e("!32@/B4Tb64lLpKtUZnUqFd8jYERHC2aCXs9", "pos is invalid");
+    if ((paramInt < 0) || (paramInt >= bFJ.getCount())) {
+      v.e("MicroMsg.FriendAdapter", "pos is invalid");
     }
-    abu localabu;
+    acj localacj;
     do
     {
       return null;
-      localabu = bMp.dc(paramInt);
-    } while (localabu == null);
-    return eiB;
+      localacj = bFJ.dH(paramInt);
+    } while (localacj == null);
+    return emC;
   }
   
-  public final int yz()
+  public final int yM()
   {
-    return bMp.getCount();
+    return bFJ.getCount();
   }
 }
 

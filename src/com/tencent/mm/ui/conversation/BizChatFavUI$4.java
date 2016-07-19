@@ -2,16 +2,21 @@ package com.tencent.mm.ui.conversation;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
-import com.tencent.mm.r.m;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.t.m;
+import com.tencent.mm.v.al;
+import com.tencent.mm.v.an;
 
 final class BizChatFavUI$4
   implements DialogInterface.OnCancelListener
 {
-  BizChatFavUI$4(BizChatFavUI paramBizChatFavUI, com.tencent.mm.t.ah paramah) {}
+  BizChatFavUI$4(BizChatFavUI paramBizChatFavUI, al paramal) {}
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    com.tencent.mm.model.ah.tE().c(lnX);
+    an.xN();
+    paramDialogInterface = lOw;
+    ah.tF().c(paramDialogInterface);
   }
 }
 

@@ -8,13 +8,13 @@ import android.util.Base64;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.ab.n;
-import com.tencent.mm.aw.a;
+import com.tencent.mm.ae.n;
+import com.tencent.mm.az.a;
 import com.tencent.mm.pluginsdk.ui.tools.f.a;
 import com.tencent.mm.sdk.b.b;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.g;
 import java.io.File;
 
@@ -23,62 +23,62 @@ final class c$1
 {
   c$1(c paramc) {}
   
-  public final void Xq()
+  public final void Zb()
   {
-    u.d("!44@/B4Tb64lLpKYc17gQ4E+i2zzIzCJ7JpqKkNH7lU5Rrk=", com.tencent.mm.compatible.util.f.oY() + " onPrepared");
-    c.b(gyI);
+    v.d("MicroMsg.VideoPopupHelper", com.tencent.mm.compatible.util.f.nq() + " onPrepared");
+    c.b(gFh);
   }
   
-  public final int aA(int paramInt1, int paramInt2)
+  public final void aE(int paramInt1, int paramInt2)
   {
-    return 0;
-  }
-  
-  public final void aB(int paramInt1, int paramInt2) {}
-  
-  public final void az(int paramInt1, int paramInt2)
-  {
-    u.e("!44@/B4Tb64lLpKYc17gQ4E+i2zzIzCJ7JpqKkNH7lU5Rrk=", "on play video error, what %d extra %d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
-    c.c(gyI).stop();
-    b.q(Base64.encodeToString((com.tencent.mm.plugin.sight.base.c.avE() + "[SightPopupHelper] on play video error, what " + paramInt1 + " extra " + paramInt2 + ", path=" + ay.ad(c.d(gyI), "")).getBytes(), 2), "FullScreenPlaySight");
-    final String str = c.d(gyI);
-    ab.j(new Runnable()
+    v.e("MicroMsg.VideoPopupHelper", "on play video error, what %d extra %d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    c.c(gFh).stop();
+    b.o(Base64.encodeToString((com.tencent.mm.plugin.sight.base.c.axV() + "[SightPopupHelper] on play video error, what " + paramInt1 + " extra " + paramInt2 + ", path=" + be.ab(c.d(gFh), "")).getBytes(), 2), "FullScreenPlaySight");
+    final String str = c.d(gFh);
+    ad.k(new Runnable()
     {
       public final void run()
       {
-        Object localObject = (ImageView)gyI.findViewById(2131166462);
-        ((ImageView)localObject).setImageBitmap(fRQ);
+        Object localObject = (ImageView)gFh.findViewById(2131756835);
+        ((ImageView)localObject).setImageBitmap(gaT);
         ((ImageView)localObject).setVisibility(0);
         localObject = new Intent();
         ((Intent)localObject).setAction("android.intent.action.VIEW");
         ((Intent)localObject).setDataAndType(Uri.fromFile(new File(str)), "video/*");
         try
         {
-          gyI.getContext().startActivity(Intent.createChooser((Intent)localObject, gyI.getContext().getString(2131432531)));
+          gFh.getContext().startActivity(Intent.createChooser((Intent)localObject, gFh.getContext().getString(2131232712)));
           return;
         }
         catch (Exception localException)
         {
-          u.e("!44@/B4Tb64lLpKYc17gQ4E+i2zzIzCJ7JpqKkNH7lU5Rrk=", "startActivity fail, activity not found");
-          g.e(gyI.getContext(), 2131432547, 2131432546);
+          v.e("MicroMsg.VideoPopupHelper", "startActivity fail, activity not found");
+          g.f(gFh.getContext(), 2131232633, 2131232634);
         }
       }
     });
   }
   
-  public final void lG()
+  public final int aF(int paramInt1, int paramInt2)
   {
-    u.d("!44@/B4Tb64lLpKYc17gQ4E+i2zzIzCJ7JpqKkNH7lU5Rrk=", "on completion");
-    c.e(gyI).post(new Runnable()
+    return 0;
+  }
+  
+  public final void aG(int paramInt1, int paramInt2) {}
+  
+  public final void jQ()
+  {
+    v.d("MicroMsg.VideoPopupHelper", "on completion");
+    c.e(gFh).post(new Runnable()
     {
       public final void run()
       {
-        c.e(gyI).setVisibility(0);
-        c.e(gyI).startAnimation(AnimationUtils.loadAnimation(gyI.getContext(), 2130837575));
+        c.e(gFh).setVisibility(0);
+        c.e(gFh).startAnimation(AnimationUtils.loadAnimation(gFh.getContext(), 2130968612));
       }
     });
-    c.c(gyI).setLoop(true);
-    c.b(gyI);
+    c.c(gFh).ew(true);
+    c.b(gFh);
   }
 }
 

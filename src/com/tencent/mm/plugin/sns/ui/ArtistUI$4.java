@@ -10,7 +10,7 @@ final class ArtistUI$4
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    gWk.finish();
+    hjG.finish();
     return true;
   }
 }

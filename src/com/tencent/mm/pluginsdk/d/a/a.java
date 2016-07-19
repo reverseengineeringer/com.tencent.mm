@@ -1,38 +1,40 @@
 package com.tencent.mm.pluginsdk.d.a;
 
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 public final class a
 {
-  private CountDownLatch izC = null;
+  private CountDownLatch iVY = null;
   
   public final void b(long paramLong, Runnable paramRunnable)
   {
-    if (izC == null) {
-      izC = new CountDownLatch(1);
+    v.i("MicroMsg.SyncJob", "doAsSyncJob");
+    if (iVY == null) {
+      iVY = new CountDownLatch(1);
     }
-    ab.j(paramRunnable);
-    if (izC != null) {}
+    ad.k(paramRunnable);
+    v.i("MicroMsg.SyncJob", "doAsSyncJob postToMainThread");
+    if (iVY != null) {}
     try
     {
-      izC.await(paramLong, TimeUnit.MILLISECONDS);
+      iVY.await(paramLong, TimeUnit.MILLISECONDS);
       return;
     }
     catch (InterruptedException paramRunnable)
     {
-      u.w("!32@/B4Tb64lLpKFlnpbg/Va1O9HKulZRc5c", paramRunnable.getMessage());
+      v.w("MicroMsg.SyncJob", paramRunnable.getMessage());
     }
   }
   
   public final void countDown()
   {
-    if (izC != null)
+    if (iVY != null)
     {
-      izC.countDown();
-      izC = null;
+      iVY.countDown();
+      iVY = null;
     }
   }
 }

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kub:Lcom/tencent/mm/ui/account/LoginVoiceUI;
+.field final synthetic kTi:Lcom/tencent/mm/ui/account/LoginVoiceUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 81
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI$2;->kub:Lcom/tencent/mm/ui/account/LoginVoiceUI;
+    .line 80
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI$2;->kTi:Lcom/tencent/mm/ui/account/LoginVoiceUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,8 +40,8 @@
     .locals 5
 
     .prologue
-    .line 85
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 84
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v1, 0x2d25
 
@@ -59,27 +59,27 @@
 
     aput-object v4, v2, v3
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
-    .line 86
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI$2;->kub:Lcom/tencent/mm/ui/account/LoginVoiceUI;
+    .line 85
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI$2;->kTi:Lcom/tencent/mm/ui/account/LoginVoiceUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/account/LoginVoiceUI;->finish()V
 
-    .line 87
+    .line 86
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI$2;->kub:Lcom/tencent/mm/ui/account/LoginVoiceUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI$2;->kTi:Lcom/tencent/mm/ui/account/LoginVoiceUI;
 
     const-class v2, Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 88
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI$2;->kub:Lcom/tencent/mm/ui/account/LoginVoiceUI;
+    .line 87
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI$2;->kTi:Lcom/tencent/mm/ui/account/LoginVoiceUI;
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/account/LoginVoiceUI;->startActivity(Landroid/content/Intent;)V
 
-    .line 89
+    .line 88
     return-void
 .end method

@@ -2,23 +2,23 @@ package com.tencent.mm.ui.applet;
 
 import android.os.Message;
 import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class d$a$4
-  extends aa
+  extends ac
 {
   d$a$4(d.a parama) {}
   
   public final void handleMessage(Message paramMessage)
   {
-    if (kzY.enn.getVisibility() != 0)
+    if (kZe.esm.getVisibility() != 0)
     {
-      kzY.kzW = 0;
+      kZe.kZc = 0;
       return;
     }
-    d.a locala = kzY;
-    kzW += 1;
-    kzY.bcl();
+    d.a locala = kZe;
+    kZc += 1;
+    kZe.bhy();
     super.handleMessage(paramMessage);
   }
 }

@@ -8,12 +8,12 @@ import android.widget.TextView;
 public final class d$a
   extends a.a
 {
-  public View cMt;
-  public TextView cNT;
-  public TextView cOd;
-  public ImageView czS;
-  public CheckBox czW;
-  public TextView fKK;
+  public View cJf;
+  public ImageView cui;
+  public TextView cuj;
+  public TextView cuk;
+  public CheckBox cul;
+  public TextView fTN;
   
   public d$a(d paramd)
   {

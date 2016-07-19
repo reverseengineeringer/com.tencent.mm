@@ -17,11 +17,20 @@
 # instance fields
 .field dividerHeight:I
 
-.field kBL:Ljava/util/List;
+.field kQN:Landroid/graphics/drawable/Drawable;
 
-.field kBM:I
+.field laR:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field krE:Landroid/graphics/drawable/Drawable;
+.field laS:I
 
 
 # direct methods
@@ -37,7 +46,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->kBL:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->laR:Ljava/util/List;
 
     .line 491
     return-void
@@ -45,7 +54,7 @@
 
 
 # virtual methods
-.method public final ap(Landroid/view/View;)V
+.method public final at(Landroid/view/View;)V
     .locals 3
 
     .prologue
@@ -63,7 +72,7 @@
     invoke-virtual {p1, v2, v2, v0, v1}, Landroid/view/View;->layout(IIII)V
 
     .line 509
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->kBL:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->laR:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -83,14 +92,14 @@
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     .line 529
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->krE:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->kQN:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_0
 
     .line 530
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->krE:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->kQN:Landroid/graphics/drawable/Drawable;
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->kBM:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->laS:I
 
     iget v3, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->dividerHeight:I
 
@@ -98,7 +107,7 @@
 
     .line 533
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->kBL:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->laR:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -111,7 +120,7 @@
     if-ge v1, v2, :cond_2
 
     .line 535
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->kBL:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->laR:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -132,12 +141,12 @@
     invoke-virtual {p1, v4, v0}, Landroid/graphics/Canvas;->translate(FF)V
 
     .line 538
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->krE:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->kQN:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_1
 
     .line 539
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->krE:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->kQN:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
@@ -172,7 +181,7 @@
     invoke-super/range {p0 .. p5}, Landroid/view/View;->onLayout(ZIIII)V
 
     .line 515
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->kBL:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->laR:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -187,7 +196,7 @@
     if-ge v1, v2, :cond_0
 
     .line 517
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->kBL:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;->laR:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tencent.mm.plugin.record.ui.RecordVoiceBaseView android:gravity="center|left" android:id="@id/am2" android:background="@drawable/fb" android:padding="@dimen/i7" android:paddingRight="@dimen/j8" android:clickable="true" android:layout_width="fill_parent" android:layout_height="55.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="@dimen/fl" android:drawableLeft="@raw/chatfrom_voice_playing" android:drawablePadding="@dimen/j8"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,12 +1,9 @@
 package com.tencent.mm.ui.voicesearch;
 
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.h.a;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.modelsimple.z;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
+import com.tencent.mm.modelsimple.x;
 import com.tencent.mm.storage.k;
+import com.tencent.mm.t.m;
 
 final class b$7
   implements Runnable
@@ -15,19 +12,18 @@ final class b$7
   
   public final void run()
   {
-    if (b.b(lCw).isHidden())
+    if (b.b(mdn).isHidden())
     {
-      Object localObject = b.b(lCw);
-      ((a)localObject).setType(field_type & 0xFFFFFFDF);
-      if (b.c(lCw))
+      b.b(mdn).oG();
+      if (b.c(mdn))
       {
-        localObject = new z(lCy, 3);
-        ah.tE().d((j)localObject);
-        b.d(lCw);
+        x localx = new x(mdo, 3);
+        ah.tF().a(localx, 0);
+        b.d(mdn);
       }
       return;
     }
-    b.b(lCw).qg();
+    b.b(mdn).oF();
   }
 }
 

@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private iKF:Z
+.field private jhC:Z
 
-.field final synthetic iKG:Lcom/tencent/mm/pluginsdk/ui/chat/a;
+.field final synthetic jhD:Lcom/tencent/mm/pluginsdk/ui/chat/a;
 
 .field public value:Z
 
@@ -27,18 +27,18 @@
     .locals 1
 
     .prologue
-    .line 345
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/a$a;->iKG:Lcom/tencent/mm/pluginsdk/ui/chat/a;
+    .line 363
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/a$a;->jhD:Lcom/tencent/mm/pluginsdk/ui/chat/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 346
+    .line 364
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/a$a;->iKF:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/a$a;->jhC:Z
 
     iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/a$a;->value:Z
 
-    .line 347
+    .line 365
     return-void
 .end method

@@ -2,10 +2,10 @@ package com.tencent.mm.ui.conversation;
 
 final class d$a
 {
-  public String aji;
+  public String UY;
   public String content;
-  public int loE;
-  public String loF;
+  public int lOU;
+  public String lOV;
   
   private d$a(d paramd) {}
 }

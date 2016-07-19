@@ -11,12 +11,12 @@ import com.tencent.mm.ui.widget.MMSwitchBtn.a;
 public class CheckBoxPreference
   extends Preference
 {
-  private TextView hSK;
-  private int hSL = -1;
-  private String hSM = "";
-  private int hSN = 8;
-  public boolean kKS = false;
-  private MMSwitchBtn krr;
+  private TextView iln;
+  private int ilo = -1;
+  private String ilp = "";
+  private int ilq = 8;
+  private MMSwitchBtn kQy;
+  public boolean lkh = false;
   
   public CheckBoxPreference(Context paramContext)
   {
@@ -31,64 +31,64 @@ public class CheckBoxPreference
   public CheckBoxPreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(2131363222);
+    setLayoutResource(2130904054);
   }
   
-  public void av(String paramString, int paramInt)
+  public void ax(String paramString, int paramInt)
   {
-    hSL = paramInt;
-    hSM = paramString;
-    if (hSK != null)
+    ilo = paramInt;
+    ilp = paramString;
+    if (iln != null)
     {
       if (paramInt > 0) {
-        hSK.setBackgroundResource(hSL);
+        iln.setBackgroundResource(ilo);
       }
-      if (!TextUtils.isEmpty(hSM)) {
-        hSK.setText(hSM);
+      if (!TextUtils.isEmpty(ilp)) {
+        iln.setText(ilp);
       }
     }
   }
   
-  public final void hA(boolean paramBoolean)
+  public final void ie(boolean paramBoolean)
   {
-    if (krr != null)
+    if (kQy != null)
     {
-      kKS = paramBoolean;
-      krr.setCheck(paramBoolean);
+      lkh = paramBoolean;
+      kQy.iV(paramBoolean);
     }
   }
   
   public final boolean isChecked()
   {
-    if (krr != null) {
-      return krr.lFD;
+    if (kQy != null) {
+      return kQy.mgQ;
     }
-    return kKS;
-  }
-  
-  public void na(int paramInt)
-  {
-    hSN = paramInt;
-    if (hSK != null) {
-      hSK.setVisibility(hSN);
-    }
+    return lkh;
   }
   
   public void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    krr = ((MMSwitchBtn)paramView.findViewById(2131166506));
-    krr.setSwitchListener(new MMSwitchBtn.a()
+    kQy = ((MMSwitchBtn)paramView.findViewById(2131755174));
+    kQy.mgU = new MMSwitchBtn.a()
     {
-      public final void fg(boolean paramAnonymousBoolean)
+      public final void ft(boolean paramAnonymousBoolean)
       {
         callChangeListener(Boolean.valueOf(paramAnonymousBoolean));
       }
-    });
-    krr.setCheck(kKS);
-    hSK = ((TextView)paramView.findViewById(2131169458));
-    av(hSM, hSL);
-    na(hSN);
+    };
+    kQy.iV(lkh);
+    iln = ((TextView)paramView.findViewById(2131758143));
+    ax(ilp, ilo);
+    ox(ilq);
+  }
+  
+  public void ox(int paramInt)
+  {
+    ilq = paramInt;
+    if (iln != null) {
+      iln.setVisibility(ilq);
+    }
   }
 }
 

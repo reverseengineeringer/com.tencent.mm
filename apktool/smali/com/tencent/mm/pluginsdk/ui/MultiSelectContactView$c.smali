@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract aRc()V
+.method public abstract aVN()V
 .end method

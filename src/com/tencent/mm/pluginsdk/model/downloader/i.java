@@ -3,9 +3,9 @@ package com.tencent.mm.pluginsdk.model.downloader;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class i
   extends h
@@ -17,29 +17,29 @@ final class i
   
   public final long a(d paramd)
   {
-    if (ay.kz(iCq)) {
+    if (be.kf(iZe)) {
       return -1L;
     }
-    paramd = new Intent("android.intent.action.VIEW", Uri.parse(iCq));
+    paramd = new Intent("android.intent.action.VIEW", Uri.parse(iZe));
     paramd.addFlags(268435456);
     try
     {
-      y.getContext().startActivity(paramd);
+      aa.getContext().startActivity(paramd);
       return 0L;
     }
     catch (Exception paramd)
     {
-      u.e("!56@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXMR0rg2iWmbvGurx8Zm7eZ3Q==", "Add download task failed: " + paramd.toString());
+      v.e("MicroMsg.FileDownloaderImplNormal", "Add download task failed: " + paramd.toString());
     }
     return -1L;
   }
   
-  public final int cG(long paramLong)
+  public final int cV(long paramLong)
   {
     return 1;
   }
   
-  public final e cH(long paramLong)
+  public final e cW(long paramLong)
   {
     e locale = new e();
     id = paramLong;
@@ -47,12 +47,12 @@ final class i
     return locale;
   }
   
-  public final boolean cI(long paramLong)
+  public final boolean cX(long paramLong)
   {
     return false;
   }
   
-  public final boolean cJ(long paramLong)
+  public final boolean cY(long paramLong)
   {
     return false;
   }

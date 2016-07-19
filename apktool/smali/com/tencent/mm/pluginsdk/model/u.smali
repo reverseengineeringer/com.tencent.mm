@@ -16,7 +16,35 @@
 
 
 # virtual methods
-.method public final FG()Ljava/lang/String;
+.method public final By(Ljava/lang/String;)Z
+    .locals 1
+
+    .prologue
+    .line 47
+    if-eqz p1, :cond_0
+
+    const-string/jumbo v0, "com.tencent.map"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 48
+    const/4 v0, 0x1
+
+    .line 50
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final Gb()Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -104,7 +132,7 @@
     goto :goto_0
 .end method
 
-.method public final aPk()Ljava/lang/String;
+.method public final aTQ()Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -114,7 +142,7 @@
     return-object v0
 .end method
 
-.method public final aPl()Lcom/tencent/mm/pluginsdk/model/r$a;
+.method public final aTR()Lcom/tencent/mm/pluginsdk/model/r$a;
     .locals 3
 
     .prologue
@@ -124,47 +152,47 @@
     invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/model/r$a;-><init>()V
 
     .line 66
-    const v1, 0x7f0b0864
+    const v1, 0x7f08135f
 
-    iput v1, v0, Lcom/tencent/mm/pluginsdk/model/r$a;->iAI:I
+    iput v1, v0, Lcom/tencent/mm/pluginsdk/model/r$a;->iXi:I
 
     .line 67
-    invoke-static {}, Lcom/tencent/mm/g/h;->pS()Lcom/tencent/mm/g/e;
+    invoke-static {}, Lcom/tencent/mm/h/h;->om()Lcom/tencent/mm/h/e;
 
     move-result-object v1
 
     const-string/jumbo v2, "QQMapDownloadTips"
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/g/e;->getValue(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/h/e;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 68
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
     .line 69
-    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/model/r$a;->iAJ:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/model/r$a;->iXj:Ljava/lang/String;
 
     .line 71
     :cond_0
-    const v1, 0x7f0b0863
+    const v1, 0x7f081360
 
-    iput v1, v0, Lcom/tencent/mm/pluginsdk/model/r$a;->iAK:I
+    iput v1, v0, Lcom/tencent/mm/pluginsdk/model/r$a;->iXk:I
 
     .line 72
-    const v1, 0x7f0405e9
+    const v1, 0x7f0203e2
 
-    iput v1, v0, Lcom/tencent/mm/pluginsdk/model/r$a;->iAH:I
+    iput v1, v0, Lcom/tencent/mm/pluginsdk/model/r$a;->iXh:I
 
     .line 73
     return-object v0
 .end method
 
-.method public final cK(Landroid/content/Context;)Z
+.method public final cH(Landroid/content/Context;)Z
     .locals 6
 
     .prologue
@@ -259,32 +287,4 @@
 
     .line 42
     goto :goto_1
-.end method
-
-.method public final zC(Ljava/lang/String;)Z
-    .locals 1
-
-    .prologue
-    .line 47
-    if-eqz p1, :cond_0
-
-    const-string/jumbo v0, "com.tencent.map"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 48
-    const/4 v0, 0x1
-
-    .line 50
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

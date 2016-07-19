@@ -3,57 +3,57 @@ package com.tencent.mm.booter;
 final class d$a
   implements com.tencent.mm.model.d.a
 {
-  private final String bmA = "lock_audio";
+  private final String bag = "lock_audio";
   
   private d$a(d paramd) {}
   
-  public final void mM()
+  public final void kZ()
   {
-    if (!d.o(bmw)) {
+    if (!d.o(bac)) {
       return;
     }
     try
     {
-      bmw.mB();
+      bac.kO();
       return;
     }
     finally {}
   }
   
-  public final void mN()
+  public final void la()
   {
-    if (!d.o(bmw)) {
+    if (!d.o(bac)) {
       return;
     }
     try
     {
-      bmw.release();
+      bac.release();
       return;
     }
     finally {}
   }
   
-  public final void mO()
+  public final void lb()
   {
-    if (!d.o(bmw)) {
+    if (!d.o(bac)) {
       return;
     }
     try
     {
-      bmw.pause();
+      bac.pause();
       return;
     }
     finally {}
   }
   
-  public final void mP()
+  public final void lc()
   {
-    if (!d.o(bmw)) {
+    if (!d.o(bac)) {
       return;
     }
     try
     {
-      bmw.pause();
+      bac.pause();
       return;
     }
     finally {}

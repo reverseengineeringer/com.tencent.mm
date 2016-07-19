@@ -1,118 +1,22 @@
 package ct;
 
-import android.net.wifi.ScanResult;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.List;
-import org.eclipse.jdt.annotation.Nullable;
+import android.location.Location;
+import android.os.Bundle;
 
-final class br
+public final class br
 {
-  private static final Comparator a = new Comparator() {};
-  private ArrayList b;
-  private long c;
-  private long d;
+  public static final Bundle a = new Bundle();
+  public static final Location b = new Location("");
   
-  br()
+  public static String a(int paramInt1, int paramInt2)
   {
-    b = new ArrayList();
-    c = 0L;
-  }
-  
-  private br(List paramList, long paramLong1, long paramLong2)
-  {
-    b = new ArrayList(paramList);
-    Collections.sort(b, a);
-    c = paramLong1;
-    d = paramLong2;
-  }
-  
-  public final br a(@Nullable br parambr)
-  {
-    if ((parambr == null) || (b.size() == 0)) {}
-    for (int i = 1; i != 0; i = 0) {
-      return new br(b, c, d);
-    }
-    Object localObject2;
-    Object localObject1;
-    br localbr;
-    ArrayList localArrayList;
-    if (d > d)
-    {
-      localObject2 = b;
-      localObject1 = b;
-      localbr = new br();
-      localArrayList = b;
-      c = Math.max(c, c);
-      d = Math.max(d, d);
-      localArrayList.addAll((Collection)localObject1);
-      parambr = ((ArrayList)localObject2).iterator();
-    }
-    label129:
-    label228:
-    for (;;)
-    {
-      if (!parambr.hasNext()) {
-        break label230;
-      }
-      localObject1 = (ScanResult)parambr.next();
-      localObject2 = BSSID;
-      Iterator localIterator = b.iterator();
-      do
-      {
-        if (!localIterator.hasNext()) {
-          break;
-        }
-      } while (!nextBSSID.equals(localObject2));
-      for (i = 1;; i = 0)
-      {
-        if (i != 0) {
-          break label228;
-        }
-        localArrayList.add(localObject1);
-        break label129;
-        localObject2 = b;
-        localObject1 = b;
-        break;
-      }
-    }
-    label230:
-    return localbr;
-  }
-  
-  public final ArrayList a()
-  {
-    return b;
-  }
-  
-  public final void a(long paramLong)
-  {
-    c = paramLong;
-  }
-  
-  public final void a(List paramList)
-  {
-    b.clear();
-    b.addAll(paramList);
-    Collections.sort(b, a);
-  }
-  
-  public final void b()
-  {
-    b.clear();
-  }
-  
-  public final void b(long paramLong)
-  {
-    d = paramLong;
-  }
-  
-  public final int c()
-  {
-    return b.size();
+    StringBuilder localStringBuilder = new StringBuilder();
+    localStringBuilder.append("http://lbs.map.qq.com/loc");
+    localStringBuilder.append("?");
+    localStringBuilder.append("c=1");
+    localStringBuilder.append("&mars=").append(paramInt1);
+    localStringBuilder.append("&obs=").append(paramInt2);
+    return localStringBuilder.toString();
   }
 }
 

@@ -1,13 +1,13 @@
 package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class WXVideoObject
   implements WXMediaMessage.b
 {
   private static final int LENGTH_LIMIT = 10240;
-  private static final String TAG = "!44@/B4Tb64lLpJzNFkXfnMUR98Xd/IsQLrYLUyRWBhcjoc=";
+  private static final String TAG = "MicroMsg.SDK.WXVideoObject";
   public String videoLowBandUrl;
   public String videoUrl;
   
@@ -15,17 +15,17 @@ public class WXVideoObject
   {
     if (((videoUrl == null) || (videoUrl.length() == 0)) && ((videoLowBandUrl == null) || (videoLowBandUrl.length() == 0)))
     {
-      u.e("!44@/B4Tb64lLpJzNFkXfnMUR98Xd/IsQLrYLUyRWBhcjoc=", "both arguments are null");
+      v.e("MicroMsg.SDK.WXVideoObject", "both arguments are null");
       return false;
     }
     if ((videoUrl != null) && (videoUrl.length() > 10240))
     {
-      u.e("!44@/B4Tb64lLpJzNFkXfnMUR98Xd/IsQLrYLUyRWBhcjoc=", "checkArgs fail, videoUrl is too long");
+      v.e("MicroMsg.SDK.WXVideoObject", "checkArgs fail, videoUrl is too long");
       return false;
     }
     if ((videoLowBandUrl != null) && (videoLowBandUrl.length() > 10240))
     {
-      u.e("!44@/B4Tb64lLpJzNFkXfnMUR98Xd/IsQLrYLUyRWBhcjoc=", "checkArgs fail, videoLowBandUrl is too long");
+      v.e("MicroMsg.SDK.WXVideoObject", "checkArgs fail, videoLowBandUrl is too long");
       return false;
     }
     return true;

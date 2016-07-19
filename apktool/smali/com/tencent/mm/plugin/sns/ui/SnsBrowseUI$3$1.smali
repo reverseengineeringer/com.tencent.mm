@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hbZ:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$3;
+.field final synthetic hqL:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$3;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 325
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$3$1;->hbZ:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$3;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$3$1;->hqL:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,17 +41,17 @@
 
     .prologue
     .line 328
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$3$1;->hbZ:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$3;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$3$1;->hqL:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$3;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$3;->hbY:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$3;->hqK:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;->hbK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;->hqA:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     if-eqz v1, :cond_0
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->heq:Landroid/widget/Gallery;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htc:Landroid/widget/Gallery;
 
     invoke-virtual {v0}, Landroid/widget/Gallery;->getSelectedView()Landroid/view/View;
 
@@ -63,7 +63,7 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->bdf()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->biI()V
 
     .line 329
     :cond_0

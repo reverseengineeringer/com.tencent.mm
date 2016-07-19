@@ -1,457 +1,320 @@
 .class public final Lcom/tencent/mm/storage/z;
-.super Lcom/tencent/mm/d/b/ak;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field protected static aot:Lcom/tencent/mm/sdk/h/c$a;
+.field public static final kFM:Lcom/tencent/mm/storage/z;
+
+.field public static final kFN:Lcom/tencent/mm/storage/z;
+
+.field public static final kFO:Lcom/tencent/mm/storage/z;
+
+.field public static final kFP:Lcom/tencent/mm/storage/z;
+
+.field public static final kFQ:Lcom/tencent/mm/storage/z;
+
+.field public static final kFR:Lcom/tencent/mm/storage/z;
+
+.field public static final kFS:Lcom/tencent/mm/storage/z;
+
+.field public static final kFT:Lcom/tencent/mm/storage/z;
+
+.field public static final kFU:Lcom/tencent/mm/storage/z;
+
+.field public static final kFV:Lcom/tencent/mm/storage/z;
+
+.field public static final kFW:Lcom/tencent/mm/storage/z;
+
+
+# instance fields
+.field public fxK:I
+
+.field public tag:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 2
 
     .prologue
-    const/16 v5, 0x10
+    .line 7
+    new-instance v0, Lcom/tencent/mm/storage/z;
+
+    const-string/jumbo v1, "timeline"
+
+    invoke-direct {v0, v1}, Lcom/tencent/mm/storage/z;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lcom/tencent/mm/storage/z;->kFM:Lcom/tencent/mm/storage/z;
 
     .line 8
-    new-instance v0, Lcom/tencent/mm/sdk/h/c$a;
+    new-instance v0, Lcom/tencent/mm/storage/z;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/h/c$a;-><init>()V
+    const-string/jumbo v1, "album_friend"
 
-    new-array v1, v5, [Ljava/lang/reflect/Field;
+    invoke-direct {v0, v1}, Lcom/tencent/mm/storage/z;-><init>(Ljava/lang/String;)V
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->ceD:[Ljava/lang/reflect/Field;
+    sput-object v0, Lcom/tencent/mm/storage/z;->kFN:Lcom/tencent/mm/storage/z;
 
-    const/16 v1, 0x11
+    .line 9
+    new-instance v0, Lcom/tencent/mm/storage/z;
 
-    new-array v1, v1, [Ljava/lang/String;
+    const-string/jumbo v1, "album_self"
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    invoke-direct {v0, v1}, Lcom/tencent/mm/storage/z;-><init>(Ljava/lang/String;)V
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    sput-object v0, Lcom/tencent/mm/storage/z;->kFO:Lcom/tencent/mm/storage/z;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    .line 10
+    new-instance v0, Lcom/tencent/mm/storage/z;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    const-string/jumbo v1, "album_stranger"
 
-    const/4 v3, 0x0
+    invoke-direct {v0, v1}, Lcom/tencent/mm/storage/z;-><init>(Ljava/lang/String;)V
 
-    const-string/jumbo v4, "downloadId"
+    sput-object v0, Lcom/tencent/mm/storage/z;->kFP:Lcom/tencent/mm/storage/z;
 
-    aput-object v4, v2, v3
+    .line 11
+    new-instance v0, Lcom/tencent/mm/storage/z;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    const-string/jumbo v1, "profile_friend"
 
-    const-string/jumbo v3, "downloadId"
+    invoke-direct {v0, v1}, Lcom/tencent/mm/storage/z;-><init>(Ljava/lang/String;)V
 
-    const-string/jumbo v4, "LONG default \'-1\'  PRIMARY KEY "
+    sput-object v0, Lcom/tencent/mm/storage/z;->kFQ:Lcom/tencent/mm/storage/z;
 
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 12
+    new-instance v0, Lcom/tencent/mm/storage/z;
 
-    const-string/jumbo v2, " downloadId LONG default \'-1\'  PRIMARY KEY "
+    const-string/jumbo v1, "profile_stranger"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Lcom/tencent/mm/storage/z;-><init>(Ljava/lang/String;)V
 
-    const-string/jumbo v2, ", "
+    sput-object v0, Lcom/tencent/mm/storage/z;->kFR:Lcom/tencent/mm/storage/z;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 13
+    new-instance v0, Lcom/tencent/mm/storage/z;
 
-    const-string/jumbo v2, "downloadId"
+    const-string/jumbo v1, "comment"
 
-    iput-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYw:Ljava/lang/String;
+    invoke-direct {v0, v1}, Lcom/tencent/mm/storage/z;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/storage/z;->kFS:Lcom/tencent/mm/storage/z;
 
-    const/4 v3, 0x1
+    .line 14
+    new-instance v0, Lcom/tencent/mm/storage/z;
 
-    const-string/jumbo v4, "downloadUrl"
+    const-string/jumbo v1, "comment_detail"
 
-    aput-object v4, v2, v3
+    invoke-direct {v0, v1}, Lcom/tencent/mm/storage/z;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+    sput-object v0, Lcom/tencent/mm/storage/z;->kFT:Lcom/tencent/mm/storage/z;
 
-    const-string/jumbo v3, "downloadUrl"
+    .line 15
+    new-instance v0, Lcom/tencent/mm/storage/z;
 
-    const-string/jumbo v4, "TEXT default \'\' "
+    const-string/jumbo v1, "other"
 
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v1}, Lcom/tencent/mm/storage/z;-><init>(Ljava/lang/String;)V
 
-    const-string/jumbo v2, " downloadUrl TEXT default \'\' "
+    sput-object v0, Lcom/tencent/mm/storage/z;->kFU:Lcom/tencent/mm/storage/z;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 16
+    new-instance v0, Lcom/tencent/mm/storage/z;
 
-    const-string/jumbo v2, ", "
+    const-string/jumbo v1, "snssight"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Lcom/tencent/mm/storage/z;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/storage/z;->kFV:Lcom/tencent/mm/storage/z;
 
-    const/4 v3, 0x2
+    .line 17
+    new-instance v0, Lcom/tencent/mm/storage/z;
 
-    const-string/jumbo v4, "fileName"
+    const-string/jumbo v1, "fts"
 
-    aput-object v4, v2, v3
+    invoke-direct {v0, v1}, Lcom/tencent/mm/storage/z;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
-
-    const-string/jumbo v3, "fileName"
-
-    const-string/jumbo v4, "TEXT default \'\' "
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " fileName TEXT default \'\' "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
-
-    const/4 v3, 0x3
-
-    const-string/jumbo v4, "filePath"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
-
-    const-string/jumbo v3, "filePath"
-
-    const-string/jumbo v4, "TEXT default \'\' "
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " filePath TEXT default \'\' "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
-
-    const/4 v3, 0x4
-
-    const-string/jumbo v4, "fileType"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
-
-    const-string/jumbo v3, "fileType"
-
-    const-string/jumbo v4, "INTEGER default \'0\' "
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " fileType INTEGER default \'0\' "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
-
-    const/4 v3, 0x5
-
-    const-string/jumbo v4, "status"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
-
-    const-string/jumbo v3, "status"
-
-    const-string/jumbo v4, "INTEGER default \'0\' "
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " status INTEGER default \'0\' "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
-
-    const/4 v3, 0x6
-
-    const-string/jumbo v4, "md5"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
-
-    const-string/jumbo v3, "md5"
-
-    const-string/jumbo v4, "TEXT default \'\' "
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " md5 TEXT default \'\' "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
-
-    const/4 v3, 0x7
-
-    const-string/jumbo v4, "autoInstall"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
-
-    const-string/jumbo v3, "autoInstall"
-
-    const-string/jumbo v4, "INTEGER default \'false\' "
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " autoInstall INTEGER default \'false\' "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
-
-    const/16 v3, 0x8
-
-    const-string/jumbo v4, "showNotification"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
-
-    const-string/jumbo v3, "showNotification"
-
-    const-string/jumbo v4, "INTEGER default \'false\' "
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " showNotification INTEGER default \'false\' "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
-
-    const/16 v3, 0x9
-
-    const-string/jumbo v4, "sysDownloadId"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
-
-    const-string/jumbo v3, "sysDownloadId"
-
-    const-string/jumbo v4, "LONG default \'-1\' "
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " sysDownloadId LONG default \'-1\' "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
-
-    const/16 v3, 0xa
-
-    const-string/jumbo v4, "downloaderType"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
-
-    const-string/jumbo v3, "downloaderType"
-
-    const-string/jumbo v4, "INTEGER default \'0\' "
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " downloaderType INTEGER default \'0\' "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
-
-    const/16 v3, 0xb
-
-    const-string/jumbo v4, "appId"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
-
-    const-string/jumbo v3, "appId"
-
-    const-string/jumbo v4, "TEXT default \'\' "
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " appId TEXT default \'\' "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
-
-    const/16 v3, 0xc
-
-    const-string/jumbo v4, "downloadUrlHashCode"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
-
-    const-string/jumbo v3, "downloadUrlHashCode"
-
-    const-string/jumbo v4, "INTEGER default \'0\' "
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " downloadUrlHashCode INTEGER default \'0\' "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
-
-    const/16 v3, 0xd
-
-    const-string/jumbo v4, "packageName"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
-
-    const-string/jumbo v3, "packageName"
-
-    const-string/jumbo v4, "TEXT default \'\' "
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " packageName TEXT default \'\' "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
-
-    const/16 v3, 0xe
-
-    const-string/jumbo v4, "downloadedSize"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
-
-    const-string/jumbo v3, "downloadedSize"
-
-    const-string/jumbo v4, "LONG default \'0\' "
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " downloadedSize LONG default \'0\' "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
-
-    const/16 v3, 0xf
-
-    const-string/jumbo v4, "totalSize"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
-
-    const-string/jumbo v3, "totalSize"
-
-    const-string/jumbo v4, "LONG default \'0\' "
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " totalSize LONG default \'0\' "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
-
-    const-string/jumbo v3, "rowid"
-
-    aput-object v3, v2, v5
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->jYy:Ljava/lang/String;
-
-    sput-object v0, Lcom/tencent/mm/storage/z;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    sput-object v0, Lcom/tencent/mm/storage/z;->kFW:Lcom/tencent/mm/storage/z;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
     .prologue
-    .line 5
-    invoke-direct {p0}, Lcom/tencent/mm/d/b/ak;-><init>()V
+    .line 63
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 19
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lcom/tencent/mm/storage/z;->tag:Ljava/lang/String;
+
+    .line 20
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/tencent/mm/storage/z;->fxK:I
+
+    .line 64
+    iput-object p1, p0, Lcom/tencent/mm/storage/z;->tag:Ljava/lang/String;
+
+    .line 65
     return-void
+.end method
+
+.method public static a(Lcom/tencent/mm/storage/z;I)Lcom/tencent/mm/storage/z;
+    .locals 2
+
+    .prologue
+    .line 73
+    new-instance v0, Lcom/tencent/mm/storage/z;
+
+    iget-object v1, p0, Lcom/tencent/mm/storage/z;->tag:Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Lcom/tencent/mm/storage/z;-><init>(Ljava/lang/String;)V
+
+    iput p1, v0, Lcom/tencent/mm/storage/z;->fxK:I
+
+    .line 74
+    return-object v0
+.end method
+
+.method public static bcg()Lcom/tencent/mm/storage/z;
+    .locals 2
+
+    .prologue
+    .line 23
+    new-instance v0, Lcom/tencent/mm/storage/z;
+
+    const-string/jumbo v1, "timeline"
+
+    invoke-direct {v0, v1}, Lcom/tencent/mm/storage/z;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public static bch()Lcom/tencent/mm/storage/z;
+    .locals 2
+
+    .prologue
+    .line 27
+    new-instance v0, Lcom/tencent/mm/storage/z;
+
+    const-string/jumbo v1, "album_friend"
+
+    invoke-direct {v0, v1}, Lcom/tencent/mm/storage/z;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public static bci()Lcom/tencent/mm/storage/z;
+    .locals 2
+
+    .prologue
+    .line 31
+    new-instance v0, Lcom/tencent/mm/storage/z;
+
+    const-string/jumbo v1, "album_self"
+
+    invoke-direct {v0, v1}, Lcom/tencent/mm/storage/z;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public static bcj()Lcom/tencent/mm/storage/z;
+    .locals 2
+
+    .prologue
+    .line 35
+    new-instance v0, Lcom/tencent/mm/storage/z;
+
+    const-string/jumbo v1, "album_stranger"
+
+    invoke-direct {v0, v1}, Lcom/tencent/mm/storage/z;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public static bck()Lcom/tencent/mm/storage/z;
+    .locals 2
+
+    .prologue
+    .line 55
+    new-instance v0, Lcom/tencent/mm/storage/z;
+
+    const-string/jumbo v1, "snssight"
+
+    invoke-direct {v0, v1}, Lcom/tencent/mm/storage/z;-><init>(Ljava/lang/String;)V
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method protected final ls()Lcom/tencent/mm/sdk/h/c$a;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
     .prologue
-    .line 12
-    sget-object v0, Lcom/tencent/mm/storage/z;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    .line 79
+    instance-of v0, p1, Lcom/tencent/mm/storage/z;
+
+    if-eqz v0, :cond_0
+
+    .line 80
+    check-cast p1, Lcom/tencent/mm/storage/z;
+
+    iget-object v0, p1, Lcom/tencent/mm/storage/z;->tag:Ljava/lang/String;
+
+    iget-object v1, p0, Lcom/tencent/mm/storage/z;->tag:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    .line 82
+    :goto_0
+    return v0
+
+    :cond_0
+    invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 86
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lcom/tencent/mm/storage/z;->tag:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "@"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/tencent/mm/storage/z;->fxK:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

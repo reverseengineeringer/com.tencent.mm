@@ -2,8 +2,8 @@ package android.support.v4.view;
 
 import android.view.ViewGroup;
 
-class o$a
-  extends o.d
+final class o$a
+  extends o.c
 {
   public final void a(ViewGroup paramViewGroup, boolean paramBoolean)
   {

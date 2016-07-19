@@ -2,9 +2,9 @@ package com.tencent.mm.ui.voicesearch;
 
 final class a$a
 {
-  public CharSequence loG;
-  public CharSequence loH;
-  public int loI;
+  public CharSequence lOW;
+  public CharSequence lOX;
+  public int lOY;
   public CharSequence nickName;
   
   private a$a(a parama) {}

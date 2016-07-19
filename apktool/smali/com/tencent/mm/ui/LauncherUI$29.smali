@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/LauncherUI;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    value = Lcom/tencent/mm/ui/LauncherUI;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic knl:Lcom/tencent/mm/ui/LauncherUI;
+.field final synthetic kMs:Lcom/tencent/mm/ui/LauncherUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 4378
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$29;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 4514
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$29;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,14 +37,41 @@
 
 # virtual methods
 .method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 4383
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$29;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 4518
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->G(Lcom/tencent/mm/ui/LauncherUI;)V
+    const-string/jumbo v1, "android.settings.MANAGE_APPLICATIONS_SETTINGS"
 
-    .line 4384
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .line 4519
+    const/high16 v1, 0x10000000
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 4520
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUI$29;->kMs:Lcom/tencent/mm/ui/LauncherUI;
+
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/LauncherUI;->startActivity(Landroid/content/Intent;)V
+
+    .line 4521
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
+    .line 4522
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$29;->kMs:Lcom/tencent/mm/ui/LauncherUI;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/MMAppMgr;->a(Landroid/content/Context;Z)V
+
+    .line 4523
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$29;->kMs:Lcom/tencent/mm/ui/LauncherUI;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/LauncherUI;->finish()V
+
+    .line 4524
     return-void
 .end method

@@ -7,80 +7,90 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.animation.AlphaAnimation;
 import android.widget.TextView;
-import com.tencent.mm.aw.a;
+import com.tencent.mm.az.a;
 
 public class AnimImageView
   extends TextView
 {
-  private boolean bCZ = false;
+  private boolean bwj = false;
   private Context context;
-  private AlphaAnimation fRZ;
-  private AnimationDrawable fSa;
-  private boolean kBC = false;
-  private AnimationDrawable kBD;
+  private AlphaAnimation gbc;
+  private AnimationDrawable gbd;
+  public boolean laI = false;
+  private AnimationDrawable laJ;
   private int type = 1;
   
   public AnimImageView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
     context = paramContext;
-    aqb();
+    asY();
   }
   
   public AnimImageView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
     context = paramContext;
-    aqb();
+    asY();
   }
   
-  private void aqb()
+  private void asY()
   {
-    fRZ = new AlphaAnimation(0.1F, 1.0F);
-    fRZ.setDuration(1000L);
-    fRZ.setRepeatCount(-1);
-    fRZ.setRepeatMode(2);
-    fSa = new AnimationDrawable();
-    Drawable localDrawable = getResources().getDrawable(2130903448);
+    gbc = new AlphaAnimation(0.1F, 1.0F);
+    gbc.setDuration(1000L);
+    gbc.setRepeatCount(-1);
+    gbc.setRepeatMode(2);
+    gbd = new AnimationDrawable();
+    Drawable localDrawable = getResources().getDrawable(2131165303);
     localDrawable.setBounds(0, 0, localDrawable.getIntrinsicWidth(), localDrawable.getIntrinsicHeight());
-    fSa.addFrame(localDrawable, 300);
-    localDrawable = getResources().getDrawable(2130903555);
+    gbd.addFrame(localDrawable, 300);
+    localDrawable = getResources().getDrawable(2131165304);
     localDrawable.setBounds(0, 0, localDrawable.getIntrinsicWidth(), localDrawable.getIntrinsicHeight());
-    fSa.addFrame(localDrawable, 300);
-    localDrawable = getResources().getDrawable(2130903592);
+    gbd.addFrame(localDrawable, 300);
+    localDrawable = getResources().getDrawable(2131165305);
     localDrawable.setBounds(0, 0, localDrawable.getIntrinsicWidth(), localDrawable.getIntrinsicHeight());
-    fSa.addFrame(localDrawable, 300);
-    fSa.setOneShot(false);
-    fSa.setVisible(true, true);
-    kBD = new AnimationDrawable();
-    localDrawable = getResources().getDrawable(2130903493);
+    gbd.addFrame(localDrawable, 300);
+    gbd.setOneShot(false);
+    gbd.setVisible(true, true);
+    laJ = new AnimationDrawable();
+    localDrawable = getResources().getDrawable(2131165320);
     localDrawable.setBounds(0, 0, localDrawable.getIntrinsicWidth(), localDrawable.getIntrinsicHeight());
-    kBD.addFrame(localDrawable, 300);
-    localDrawable = getResources().getDrawable(2130903611);
+    laJ.addFrame(localDrawable, 300);
+    localDrawable = getResources().getDrawable(2131165321);
     localDrawable.setBounds(0, 0, localDrawable.getIntrinsicWidth(), localDrawable.getIntrinsicHeight());
-    kBD.addFrame(localDrawable, 300);
-    localDrawable = getResources().getDrawable(2130903418);
+    laJ.addFrame(localDrawable, 300);
+    localDrawable = getResources().getDrawable(2131165322);
     localDrawable.setBounds(0, 0, localDrawable.getIntrinsicWidth(), localDrawable.getIntrinsicHeight());
-    kBD.addFrame(localDrawable, 300);
-    kBD.setOneShot(false);
-    kBD.setVisible(true, true);
+    laJ.addFrame(localDrawable, 300);
+    laJ.setOneShot(false);
+    laJ.setVisible(true, true);
   }
   
-  public final void aqc()
+  public final void asZ()
   {
-    if ((fRZ != null) && (fRZ.isInitialized())) {
+    if ((gbc != null) && (gbc.isInitialized())) {
       setAnimation(null);
     }
     if (type == 1)
     {
-      bCZ = false;
+      bwj = false;
       setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
-      fSa.stop();
-      kBD.stop();
+      gbd.stop();
+      laJ.stop();
     }
   }
   
-  public final void bcp()
+  public final void bhC()
+  {
+    if (laI)
+    {
+      setBackgroundDrawable(a.C(context, 2130837977));
+      return;
+    }
+    setBackgroundDrawable(a.C(context, 2130838046));
+  }
+  
+  public final void bhD()
   {
     switch (type)
     {
@@ -89,47 +99,30 @@ public class AnimImageView
       do
       {
         return;
-      } while (bCZ);
-      bCZ = true;
-      if (kBC)
+      } while (bwj);
+      bwj = true;
+      if (laI)
       {
-        setCompoundDrawablesWithIntrinsicBounds(fSa, null, null, null);
-        fSa.stop();
-        fSa.start();
+        setCompoundDrawablesWithIntrinsicBounds(gbd, null, null, null);
+        gbd.stop();
+        gbd.start();
         return;
       }
-      setCompoundDrawablesWithIntrinsicBounds(null, null, kBD, null);
-      kBD.stop();
-      kBD.start();
+      setCompoundDrawablesWithIntrinsicBounds(null, null, laJ, null);
+      laJ.stop();
+      laJ.start();
       return;
     }
-    if (kBC) {
-      setBackgroundDrawable(a.y(context, 2130970339));
+    if (laI) {
+      setBackgroundDrawable(a.C(context, 2130837977));
     }
     for (;;)
     {
-      setAnimation(fRZ);
-      fRZ.startNow();
+      setAnimation(gbc);
+      gbc.startNow();
       return;
-      setBackgroundDrawable(a.y(context, 2130970364));
+      setBackgroundDrawable(a.C(context, 2130838046));
     }
-  }
-  
-  public void setFromGroup(boolean paramBoolean) {}
-  
-  public void setFromVoice(boolean paramBoolean)
-  {
-    kBC = paramBoolean;
-  }
-  
-  public void setType(int paramInt)
-  {
-    if (kBC)
-    {
-      setBackgroundDrawable(a.y(context, 2130970339));
-      return;
-    }
-    setBackgroundDrawable(a.y(context, 2130970364));
   }
 }
 

@@ -11,12 +11,12 @@ import android.widget.ListAdapter;
 final class DragSortListView$a
   extends BaseAdapter
 {
-  ListAdapter pL;
+  private ListAdapter pZ;
   
   public DragSortListView$a(final DragSortListView paramDragSortListView, ListAdapter paramListAdapter)
   {
-    pL = paramListAdapter;
-    pL.registerDataSetObserver(new DataSetObserver()
+    pZ = paramListAdapter;
+    pZ.registerDataSetObserver(new DataSetObserver()
     {
       public final void onChanged()
       {
@@ -32,27 +32,27 @@ final class DragSortListView$a
   
   public final boolean areAllItemsEnabled()
   {
-    return pL.areAllItemsEnabled();
+    return pZ.areAllItemsEnabled();
   }
   
   public final int getCount()
   {
-    return pL.getCount();
+    return pZ.getCount();
   }
   
   public final Object getItem(int paramInt)
   {
-    return pL.getItem(paramInt);
+    return pZ.getItem(paramInt);
   }
   
   public final long getItemId(int paramInt)
   {
-    return pL.getItemId(paramInt);
+    return pZ.getItemId(paramInt);
   }
   
   public final int getItemViewType(int paramInt)
   {
-    return pL.getItemViewType(paramInt);
+    return pZ.getItemViewType(paramInt);
   }
   
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
@@ -61,7 +61,7 @@ final class DragSortListView$a
     {
       paramViewGroup = (b)paramView;
       View localView1 = paramViewGroup.getChildAt(0);
-      View localView2 = pL.getView(paramInt, localView1, lEn);
+      View localView2 = pZ.getView(paramInt, localView1, mfd);
       paramView = paramViewGroup;
       if (localView2 != localView1)
       {
@@ -71,12 +71,12 @@ final class DragSortListView$a
         paramViewGroup.addView(localView2);
         paramView = paramViewGroup;
       }
-      DragSortListView.a(lEn, lEn.getHeaderViewsCount() + paramInt, paramView);
+      DragSortListView.a(mfd, mfd.getHeaderViewsCount() + paramInt, paramView);
       return paramView;
     }
-    paramViewGroup = pL.getView(paramInt, null, lEn);
+    paramViewGroup = pZ.getView(paramInt, null, mfd);
     if ((paramViewGroup instanceof Checkable)) {}
-    for (paramView = new c(lEn.getContext());; paramView = new b(lEn.getContext()))
+    for (paramView = new c(mfd.getContext());; paramView = new b(mfd.getContext()))
     {
       paramView.setLayoutParams(new AbsListView.LayoutParams(-1, -2));
       paramView.addView(paramViewGroup);
@@ -86,22 +86,22 @@ final class DragSortListView$a
   
   public final int getViewTypeCount()
   {
-    return pL.getViewTypeCount();
+    return pZ.getViewTypeCount();
   }
   
   public final boolean hasStableIds()
   {
-    return pL.hasStableIds();
+    return pZ.hasStableIds();
   }
   
   public final boolean isEmpty()
   {
-    return pL.isEmpty();
+    return pZ.isEmpty();
   }
   
   public final boolean isEnabled(int paramInt)
   {
-    return pL.isEnabled(paramInt);
+    return pZ.isEnabled(paramInt);
   }
 }
 

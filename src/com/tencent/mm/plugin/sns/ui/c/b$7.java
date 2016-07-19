@@ -1,10 +1,13 @@
 package com.tencent.mm.plugin.sns.ui.c;
 
-import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.plugin.sns.b.a;
-import com.tencent.mm.pluginsdk.g;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.ah;
+import com.tencent.mm.plugin.sns.e.ar;
+import com.tencent.mm.plugin.sns.i.s;
+import com.tencent.mm.plugin.sns.ui.aq.a;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class b$7
   implements View.OnClickListener
@@ -13,15 +16,18 @@ final class b$7
   
   public final void onClick(View paramView)
   {
-    try
+    if ((paramView.getTag() instanceof String))
     {
-      int i = ((Integer)paramView.getTag()).intValue();
-      paramView = new Intent();
-      paramView.putExtra("sns_label_sns_info", i);
-      a.coa.y(paramView, hpo.asX);
-      return;
+      paramView = (String)paramView.getTag();
+      v.d("MicroMsg.TimelineClickListener", "localId " + paramView);
+      ah.mL(s.wV(paramView));
+      ah.mJ(s.wV(paramView));
+      ad.aBF().aCf();
+      hFM.aDL();
+      if (hFM.hFL != null) {
+        hFM.hFL.aFA();
+      }
     }
-    catch (Exception paramView) {}
   }
 }
 

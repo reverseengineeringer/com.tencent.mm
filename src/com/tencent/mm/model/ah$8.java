@@ -1,16 +1,16 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.r.m;
-import com.tencent.mm.r.t.b;
+import com.tencent.mm.t.m;
+import com.tencent.mm.t.t.b;
 
 final class ah$8
   implements t.b
 {
   ah$8(ah paramah) {}
   
-  public final m tQ()
+  public final m tR()
   {
-    return ah.g(bBf);
+    return ah.g(buk);
   }
 }
 

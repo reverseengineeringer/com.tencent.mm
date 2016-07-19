@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ab/a/c/g;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/f;->bac()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/ui/f;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,40 +18,16 @@
 
 
 # instance fields
-.field final synthetic amV:Ljava/lang/String;
-
-.field final synthetic bCX:Ljava/lang/String;
-
-.field final synthetic hWn:I
-
-.field final synthetic klo:Lcom/tencent/mm/ui/f;
-
-.field final synthetic klp:Lcom/tencent/mm/ui/base/preference/IconPreference;
-
-.field final synthetic klq:Ljava/lang/String;
-
-.field final synthetic klr:Lcom/tencent/mm/d/a/iv;
+.field final synthetic kKO:Lcom/tencent/mm/ui/f;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/f;Lcom/tencent/mm/ui/base/preference/IconPreference;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Lcom/tencent/mm/d/a/iv;)V
+.method constructor <init>(Lcom/tencent/mm/ui/f;)V
     .locals 0
 
     .prologue
-    .line 1277
-    iput-object p1, p0, Lcom/tencent/mm/ui/f$3;->klo:Lcom/tencent/mm/ui/f;
-
-    iput-object p2, p0, Lcom/tencent/mm/ui/f$3;->klp:Lcom/tencent/mm/ui/base/preference/IconPreference;
-
-    iput-object p3, p0, Lcom/tencent/mm/ui/f$3;->amV:Ljava/lang/String;
-
-    iput p4, p0, Lcom/tencent/mm/ui/f$3;->hWn:I
-
-    iput-object p5, p0, Lcom/tencent/mm/ui/f$3;->klq:Ljava/lang/String;
-
-    iput-object p6, p0, Lcom/tencent/mm/ui/f$3;->bCX:Ljava/lang/String;
-
-    iput-object p7, p0, Lcom/tencent/mm/ui/f$3;->klr:Lcom/tencent/mm/d/a/iv;
+    .line 1198
+    iput-object p1, p0, Lcom/tencent/mm/ui/f$3;->kKO:Lcom/tencent/mm/ui/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -60,55 +36,81 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Landroid/view/View;Lcom/tencent/mm/ab/a/d/b;)V
-    .locals 2
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 3
 
     .prologue
-    .line 1297
-    iget v0, p3, Lcom/tencent/mm/ab/a/d/b;->status:I
+    .line 1202
+    iget-object v0, p0, Lcom/tencent/mm/ui/f$3;->kKO:Lcom/tencent/mm/ui/f;
 
-    if-nez v0, :cond_0
+    invoke-static {v0}, Lcom/tencent/mm/ui/f;->g(Lcom/tencent/mm/ui/f;)Landroid/widget/CheckBox;
 
-    iget-object v0, p3, Lcom/tencent/mm/ab/a/d/b;->bitmap:Landroid/graphics/Bitmap;
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1298
-    iget-object v0, p3, Lcom/tencent/mm/ab/a/d/b;->bitmap:Landroid/graphics/Bitmap;
+    .line 1203
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
-    .line 1299
-    new-instance v1, Lcom/tencent/mm/ui/f$3$2;
+    move-result-object v0
 
-    invoke-direct {v1, p0, v0}, Lcom/tencent/mm/ui/f$3$2;-><init>(Lcom/tencent/mm/ui/f$3;Landroid/graphics/Bitmap;)V
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    move-result-object v1
 
-    .line 1323
+    const/16 v2, 0x1008
+
+    iget-object v0, p0, Lcom/tencent/mm/ui/f$3;->kKO:Lcom/tencent/mm/ui/f;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/f;->g(Lcom/tencent/mm/ui/f;)Landroid/widget/CheckBox;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x1
+
     :goto_0
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
+
+    .line 1206
+    :cond_0
+    invoke-static {}, Lcom/tencent/mm/ui/LauncherUI;->bfJ()Lcom/tencent/mm/ui/LauncherUI;
+
+    move-result-object v0
+
+    .line 1207
+    if-eqz v0, :cond_1
+
+    .line 1208
+    const-string/jumbo v1, "tab_find_friend"
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->Ix(Ljava/lang/String;)V
+
+    .line 1211
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/ui/f$3;->kKO:Lcom/tencent/mm/ui/f;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
+
+    invoke-static {v0}, Lcom/tencent/mm/at/a;->cy(Landroid/content/Context;)V
+
+    .line 1212
     return-void
 
-    .line 1310
-    :cond_0
-    new-instance v0, Lcom/tencent/mm/ui/f$3$3;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/f$3$3;-><init>(Lcom/tencent/mm/ui/f$3;)V
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    .line 1203
+    :cond_2
+    const/4 v0, 0x0
 
     goto :goto_0
-.end method
-
-.method public final ie(Ljava/lang/String;)V
-    .locals 1
-
-    .prologue
-    .line 1281
-    new-instance v0, Lcom/tencent/mm/ui/f$3$1;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/f$3$1;-><init>(Lcom/tencent/mm/ui/f$3;)V
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
-
-    .line 1293
-    return-void
 .end method

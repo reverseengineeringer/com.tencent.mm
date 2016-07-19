@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+.field final synthetic ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 838
-    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingPluginQQMsgUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 837
+    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingPluginQQMsgUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-direct {p0, p1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BaseUriSpanHandler;-><init>(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)V
 
@@ -40,7 +40,7 @@
     .locals 1
 
     .prologue
-    .line 861
+    .line 860
     const/4 v0, 0x0
 
     return v0
@@ -50,19 +50,19 @@
     .locals 1
 
     .prologue
-    .line 866
+    .line 865
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method final bb(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
+.method final bg(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
     .locals 3
 
     .prologue
     const/4 v1, 0x0
 
-    .line 842
+    .line 841
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -75,14 +75,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 843
+    .line 842
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
     const/16 v2, 0xd
 
     invoke-direct {v0, p1, v2, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/g;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 846
+    .line 845
     :goto_0
     return-object v0
 
@@ -92,11 +92,11 @@
     goto :goto_0
 .end method
 
-.method final lg()[I
+.method final jH()[I
     .locals 3
 
     .prologue
-    .line 856
+    .line 855
     const/4 v0, 0x1
 
     new-array v0, v0, [I

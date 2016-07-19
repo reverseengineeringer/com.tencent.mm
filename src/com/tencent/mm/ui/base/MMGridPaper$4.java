@@ -1,34 +1,34 @@
 package com.tencent.mm.ui.base;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class MMGridPaper$4
   implements MMFlipper.a
 {
   MMGridPaper$4(MMGridPaper paramMMGridPaper) {}
   
-  public final void aT(int paramInt1, int paramInt2)
+  public final void bb(int paramInt1, int paramInt2)
   {
-    u.v("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "onMeasure width:[new %d, old %d] height:[new %d, old %d], dialogMode[%B], orientationChange[%B]", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(kEx.kDX), Integer.valueOf(paramInt2), Integer.valueOf(kEx.kDY), Boolean.valueOf(kEx.kEn), Boolean.valueOf(kEx.kEm) });
-    if (((Math.abs(kEx.kDY - paramInt2) < 50) && (Math.abs(kEx.kDX - paramInt1) < 50)) || (paramInt2 == 0) || (paramInt1 == 0))
+    v.v("MicroMsg.MMGridPaper", "onMeasure width:[new %d, old %d] height:[new %d, old %d], dialogMode[%B], orientationChange[%B]", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(ldA.ldb), Integer.valueOf(paramInt2), Integer.valueOf(ldA.ldc), Boolean.valueOf(ldA.ldr), Boolean.valueOf(ldA.ldq) });
+    if (((Math.abs(ldA.ldc - paramInt2) < 50) && (Math.abs(ldA.ldb - paramInt1) < 50)) || (paramInt2 == 0) || (paramInt1 == 0))
     {
-      u.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "match width height limit, return");
+      v.d("MicroMsg.MMGridPaper", "match width height limit, return");
       return;
     }
-    if ((kEx.kEn) && (kEx.kDX > paramInt1) && (!kEx.kEm))
+    if ((ldA.ldr) && (ldA.ldb > paramInt1) && (!ldA.ldq))
     {
-      u.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "match ori limit, return");
+      v.d("MicroMsg.MMGridPaper", "match ori limit, return");
       return;
     }
-    u.v("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "onMeasure: match");
-    u.v("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "onMeasure: mIsManualMeasureMode[%b]", new Object[] { Boolean.valueOf(kEx.kEt) });
-    kEx.kEm = false;
-    if (!kEx.kEt)
+    v.v("MicroMsg.MMGridPaper", "onMeasure: match");
+    v.v("MicroMsg.MMGridPaper", "onMeasure: mIsManualMeasureMode[%b]", new Object[] { Boolean.valueOf(ldA.ldx) });
+    ldA.ldq = false;
+    if (!ldA.ldx)
     {
-      kEx.kDY = paramInt2;
-      kEx.kDX = paramInt1;
+      ldA.ldc = paramInt2;
+      ldA.ldb = paramInt1;
     }
-    kEx.refresh();
+    ldA.refresh();
   }
 }
 

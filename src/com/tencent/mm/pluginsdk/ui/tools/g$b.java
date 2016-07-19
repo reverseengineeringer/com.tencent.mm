@@ -3,27 +3,27 @@ package com.tencent.mm.pluginsdk.ui.tools;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.widget.ImageView;
-import com.tencent.mm.platformtools.k;
+import com.tencent.mm.platformtools.j;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.ExifHelper;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.sdk.platformtools.d;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.IOException;
 import java.util.HashMap;
 
 final class g$b
   implements Runnable
 {
-  private int dTb;
-  private int eNa;
-  private String[] iSx;
-  private String iSy;
+  private int dVj;
+  private int eUT;
+  private String[] jpG;
+  private String jpH;
   private String url;
   
   private g$b(g paramg) {}
   
-  private Bitmap AW(String paramString)
+  private Bitmap Dd(String paramString)
   {
     Object localObject;
     if (paramString == null) {
@@ -34,16 +34,16 @@ final class g$b
     do
     {
       return (Bitmap)localObject;
-      if ((dTb <= 0) || (eNa <= 0)) {
-        return k.ku(paramString);
+      if ((dVj <= 0) || (eUT <= 0)) {
+        return j.ld(paramString);
       }
-      str = paramString + "_" + eNa + "_" + dTb;
-      localBitmap = k.k(str, eNa, dTb);
+      str = paramString + "_" + eUT + "_" + dVj;
+      localBitmap = j.k(str, eUT, dVj);
       localObject = localBitmap;
     } while (localBitmap != null);
-    int i = BackwardSupportUtil.ExifHelper.kq(paramString);
+    int i = BackwardSupportUtil.ExifHelper.EM(paramString);
     if ((90 == i) || (270 == i)) {}
-    for (paramString = d.b(paramString, eNa, dTb, true);; paramString = d.b(paramString, dTb, eNa, true))
+    for (paramString = d.b(paramString, eUT, dVj, true);; paramString = d.b(paramString, dVj, eUT, true))
     {
       localObject = paramString;
       if (paramString == null) {
@@ -64,39 +64,39 @@ final class g$b
   
   public final void run()
   {
-    if (iSo.iSd)
+    if (jpx.jpm)
     {
-      u.w("!32@/B4Tb64lLpI8lfBMGe0Uu+gqtVk/eA4D", "on load image jog, isQuit, return");
+      v.w("MicroMsg.ImageEngine", "on load image jog, isQuit, return");
       return;
     }
-    synchronized (iSo.bLt)
+    synchronized (jpx.bEN)
     {
-      if (iSo.iSg.get(iSy) == null)
+      if (jpx.jpp.get(jpH) == null)
       {
-        u.w("!32@/B4Tb64lLpI8lfBMGe0Uu+gqtVk/eA4D", "check before decode, no match wait to render view, renderKey is %s, return", new Object[] { iSy });
+        v.w("MicroMsg.ImageEngine", "check before decode, no match wait to render view, renderKey is %s, return", new Object[] { jpH });
         return;
       }
     }
     ??? = null;
     Object localObject3 = null;
     int i;
-    if (iSx != null)
+    if (jpG != null)
     {
       i = 0;
       ??? = localObject3;
     }
     for (;;)
     {
-      if (i < iSx.length)
+      if (i < jpG.length)
       {
         if (i == 0)
         {
-          ??? = AW(iSx[0]);
+          ??? = Dd(jpG[0]);
           localObject3 = ???;
           if (??? == null) {
             break label403;
           }
-          iSo.iSi.put(iSy, ???);
+          jpx.jpr.put(jpH, ???);
         }
       }
       else
@@ -106,43 +106,43 @@ final class g$b
         if (??? == null)
         {
           localObject3 = ???;
-          if (!ay.kz(url))
+          if (!be.kf(url))
           {
-            ??? = k.a(iSo.b(iSy, url, eNa, dTb));
+            ??? = j.a(jpx.b(jpH, url, eUT, dVj));
             localObject3 = ???;
             if (??? != null)
             {
-              iSo.iSi.put(iSy, ???);
+              jpx.jpr.put(jpH, ???);
               localObject3 = ???;
             }
           }
         }
         if (localObject3 == null) {}
       }
-      synchronized (iSo.bLt)
+      synchronized (jpx.bEN)
       {
-        Object localObject5 = (ImageView)iSo.iSg.get(iSy);
+        Object localObject5 = (ImageView)jpx.jpp.get(jpH);
         if (localObject5 != null)
         {
-          iSo.iSh.remove(localObject5);
-          g.e locale = (g.e)iSo.iSk.aSQ();
-          ayh = ((ImageView)localObject5);
-          efe = ((Bitmap)localObject3);
-          iSo.bQM.post(locale);
+          jpx.jpq.remove(localObject5);
+          g.e locale = (g.e)jpx.jpt.aXJ();
+          akj = ((ImageView)localObject5);
+          eiG = ((Bitmap)localObject3);
+          jpx.bpz.post(locale);
         }
-        iSo.iSg.remove(iSy);
-        iSo.iSl.v(this);
+        jpx.jpp.remove(jpH);
+        jpx.jpu.v(this);
         return;
-        localObject5 = g.f(iSx[i], url, eNa, dTb);
-        localObject3 = (Bitmap)iSo.iSi.get(localObject5);
+        localObject5 = g.i(jpG[i], url, eUT, dVj);
+        localObject3 = (Bitmap)jpx.jpr.get(localObject5);
         ??? = localObject3;
         if (localObject3 == null) {
-          ??? = AW(iSx[i]);
+          ??? = Dd(jpG[i]);
         }
         localObject3 = ???;
         if (??? != null)
         {
-          iSo.iSi.put(localObject5, ???);
+          jpx.jpr.put(localObject5, ???);
           break label134;
         }
         label403:

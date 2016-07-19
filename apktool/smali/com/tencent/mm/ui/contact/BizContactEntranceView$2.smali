@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic liY:Lcom/tencent/mm/ui/contact/BizContactEntranceView;
+.field final synthetic lJj:Lcom/tencent/mm/ui/contact/BizContactEntranceView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 72
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$2;->liY:Lcom/tencent/mm/ui/contact/BizContactEntranceView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$2;->lJj:Lcom/tencent/mm/ui/contact/BizContactEntranceView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 76
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$2;->liY:Lcom/tencent/mm/ui/contact/BizContactEntranceView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$2;->lJj:Lcom/tencent/mm/ui/contact/BizContactEntranceView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->a(Lcom/tencent/mm/ui/contact/BizContactEntranceView;)Landroid/content/Context;
 
@@ -52,7 +52,7 @@
     if-eqz v0, :cond_0
 
     .line 77
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$2;->liY:Lcom/tencent/mm/ui/contact/BizContactEntranceView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$2;->lJj:Lcom/tencent/mm/ui/contact/BizContactEntranceView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->a(Lcom/tencent/mm/ui/contact/BizContactEntranceView;)Landroid/content/Context;
 
@@ -60,7 +60,7 @@
 
     check-cast v0, Lcom/tencent/mm/ui/MMActivity;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/MMActivity;->age()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/MMActivity;->aiI()V
 
     .line 79
     :cond_0

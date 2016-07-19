@@ -2,7 +2,7 @@ package com.tencent.mm.ui.tools;
 
 public abstract interface r$a
 {
-  public abstract void biL();
+  public abstract void boH();
   
   public abstract void collapseActionView();
 }

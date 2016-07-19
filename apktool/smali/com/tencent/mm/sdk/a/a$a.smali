@@ -19,11 +19,11 @@
 
 .field public flags:I
 
-.field public jUA:Landroid/os/Bundle;
+.field public ktZ:Ljava/lang/String;
 
-.field public jUy:Ljava/lang/String;
+.field public kua:Ljava/lang/String;
 
-.field public jUz:Ljava/lang/String;
+.field public kub:Landroid/os/Bundle;
 
 
 # direct methods
@@ -55,7 +55,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/tencent/mm/sdk/a/a$a;->jUy:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/sdk/a/a$a;->ktZ:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -67,7 +67,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/sdk/a/a$a;->jUz:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/sdk/a/a$a;->kua:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -103,7 +103,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/sdk/a/a$a;->jUA:Landroid/os/Bundle;
+    iget-object v1, p0, Lcom/tencent/mm/sdk/a/a$a;->kub:Landroid/os/Bundle;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

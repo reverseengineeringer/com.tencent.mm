@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic chi:Lcom/tencent/mm/modelvoice/i;
+.field final synthetic ccz:Lcom/tencent/mm/modelvoice/i;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 310
-    iput-object p1, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iput-object p1, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,7 +57,7 @@
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
     .line 316
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->f(Lcom/tencent/mm/modelvoice/i;)I
 
@@ -77,7 +77,7 @@
     new-array v7, v0, [B
 
     .line 320
-    iget-object v1, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v1, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v1}, Lcom/tencent/mm/modelvoice/i;->f(Lcom/tencent/mm/modelvoice/i;)I
 
@@ -90,7 +90,7 @@
     int-to-short v8, v1
 
     .line 322
-    const-string/jumbo v1, "!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU"
+    const-string/jumbo v1, "MicroMsg.SilkPlayer"
 
     const-string/jumbo v2, "frameLen: %d, playBufferSize: %d"
 
@@ -114,19 +114,19 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 324
-    const-string/jumbo v0, "!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU"
+    const-string/jumbo v0, "MicroMsg.SilkPlayer"
 
     const-string/jumbo v1, "Thread start"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 325
     :cond_0
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->g(Lcom/tencent/mm/modelvoice/i;)I
 
@@ -136,7 +136,7 @@
 
     if-eq v0, v1, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->g(Lcom/tencent/mm/modelvoice/i;)I
 
@@ -148,7 +148,7 @@
 
     .line 326
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/modelvoice/i;->Es()Ljava/lang/Object;
+    invoke-static {}, Lcom/tencent/mm/modelvoice/i;->EM()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -158,11 +158,11 @@
 
     .line 328
     :try_start_1
-    invoke-static {}, Lcom/tencent/mm/modelvoice/i;->Et()I
+    invoke-static {}, Lcom/tencent/mm/modelvoice/i;->EN()I
 
     move-result v0
 
-    iget-object v2, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v2, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v2}, Lcom/tencent/mm/modelvoice/i;->h(Lcom/tencent/mm/modelvoice/i;)I
 
@@ -171,7 +171,7 @@
     if-eq v0, v2, :cond_2
 
     .line 329
-    const-string/jumbo v0, "!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU"
+    const-string/jumbo v0, "MicroMsg.SilkPlayer"
 
     const-string/jumbo v2, "[%d] diff id, useDeocder: %d"
 
@@ -181,7 +181,7 @@
 
     const/4 v4, 0x0
 
-    iget-object v5, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v5, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v5}, Lcom/tencent/mm/modelvoice/i;->h(Lcom/tencent/mm/modelvoice/i;)I
 
@@ -195,7 +195,7 @@
 
     const/4 v4, 0x1
 
-    invoke-static {}, Lcom/tencent/mm/modelvoice/i;->Et()I
+    invoke-static {}, Lcom/tencent/mm/modelvoice/i;->EN()I
 
     move-result v5
 
@@ -205,12 +205,12 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 330
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
-    iget-object v2, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v2, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v2}, Lcom/tencent/mm/modelvoice/i;->d(Lcom/tencent/mm/modelvoice/i;)Ljava/lang/String;
 
@@ -234,14 +234,14 @@
     if-gez v9, :cond_8
 
     .line 338
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/tencent/mm/modelvoice/i;->a(Lcom/tencent/mm/modelvoice/i;I)I
 
     .line 339
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0xa1
 
@@ -251,10 +251,10 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
     .line 340
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0xa1
 
@@ -264,10 +264,10 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
     .line 341
-    const-string/jumbo v0, "!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU"
+    const-string/jumbo v0, "MicroMsg.SilkPlayer"
 
     const-string/jumbo v1, "[%d] SilkDoDec failed: %d"
 
@@ -277,7 +277,7 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v4, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v4}, Lcom/tencent/mm/modelvoice/i;->h(Lcom/tencent/mm/modelvoice/i;)I
 
@@ -297,10 +297,10 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 342
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->i(Lcom/tencent/mm/modelvoice/i;)Lcom/tencent/mm/c/c/b;
 
@@ -308,18 +308,18 @@
 
     if-eqz v0, :cond_0
 
-    sget-boolean v0, Lcom/tencent/mm/platformtools/r;->cnP:Z
+    sget-boolean v0, Lcom/tencent/mm/platformtools/q;->ciU:Z
 
     if-eqz v0, :cond_0
 
     .line 343
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->i(Lcom/tencent/mm/modelvoice/i;)Lcom/tencent/mm/c/c/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/c/c/b;->lV()V
+    invoke-virtual {v0}, Lcom/tencent/mm/c/c/b;->kl()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -332,7 +332,7 @@
     move-object v7, v0
 
     .line 428
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0xa1
 
@@ -342,10 +342,10 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
     .line 429
-    const-string/jumbo v0, "!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU"
+    const-string/jumbo v0, "MicroMsg.SilkPlayer"
 
     const-string/jumbo v1, "exception:%s"
 
@@ -355,16 +355,16 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 430
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->n(Lcom/tencent/mm/modelvoice/i;)Landroid/media/MediaPlayer$OnErrorListener;
 
@@ -373,7 +373,7 @@
     if-eqz v0, :cond_3
 
     .line 431
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->n(Lcom/tencent/mm/modelvoice/i;)Landroid/media/MediaPlayer$OnErrorListener;
 
@@ -389,7 +389,7 @@
 
     .line 433
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     const/4 v1, 0x0
 
@@ -398,7 +398,7 @@
     .line 436
     :cond_4
     :goto_1
-    invoke-static {}, Lcom/tencent/mm/modelvoice/i;->Es()Ljava/lang/Object;
+    invoke-static {}, Lcom/tencent/mm/modelvoice/i;->EM()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -406,11 +406,11 @@
 
     .line 438
     :try_start_3
-    invoke-static {}, Lcom/tencent/mm/modelvoice/i;->Et()I
+    invoke-static {}, Lcom/tencent/mm/modelvoice/i;->EN()I
 
     move-result v0
 
-    iget-object v2, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v2, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v2}, Lcom/tencent/mm/modelvoice/i;->h(Lcom/tencent/mm/modelvoice/i;)I
 
@@ -422,7 +422,7 @@
     invoke-static {}, Lcom/tencent/mm/modelvoice/MediaRecorder;->SilkDecUnInit()I
 
     .line 440
-    const-string/jumbo v0, "!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU"
+    const-string/jumbo v0, "MicroMsg.SilkPlayer"
 
     const-string/jumbo v2, "[%d] SilkDecUnInit"
 
@@ -432,7 +432,7 @@
 
     const/4 v4, 0x0
 
-    iget-object v5, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v5, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v5}, Lcom/tencent/mm/modelvoice/i;->h(Lcom/tencent/mm/modelvoice/i;)I
 
@@ -444,10 +444,10 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 441
-    invoke-static {}, Lcom/tencent/mm/modelvoice/i;->Eu()I
+    invoke-static {}, Lcom/tencent/mm/modelvoice/i;->EO()I
 
     .line 443
     :cond_5
@@ -456,7 +456,7 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_4
 
     .line 445
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->g(Lcom/tencent/mm/modelvoice/i;)I
 
@@ -467,7 +467,7 @@
     if-eq v0, v1, :cond_e
 
     .line 446
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->o(Lcom/tencent/mm/modelvoice/i;)Lcom/tencent/mm/modelvoice/d$a;
 
@@ -476,17 +476,17 @@
     if-eqz v0, :cond_6
 
     .line 447
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->o(Lcom/tencent/mm/modelvoice/i;)Lcom/tencent/mm/modelvoice/d$a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/modelvoice/d$a;->lG()V
+    invoke-interface {v0}, Lcom/tencent/mm/modelvoice/d$a;->jQ()V
 
     .line 450
     :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->p(Lcom/tencent/mm/modelvoice/i;)Landroid/media/MediaPlayer$OnCompletionListener;
 
@@ -495,7 +495,7 @@
     if-eqz v0, :cond_7
 
     .line 451
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->p(Lcom/tencent/mm/modelvoice/i;)Landroid/media/MediaPlayer$OnCompletionListener;
 
@@ -524,11 +524,11 @@
 
     .line 349
     :cond_8
-    sget-boolean v0, Lcom/tencent/mm/platformtools/r;->cnP:Z
+    sget-boolean v0, Lcom/tencent/mm/platformtools/q;->ciU:Z
 
     if-eqz v0, :cond_9
 
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->i(Lcom/tencent/mm/modelvoice/i;)Lcom/tencent/mm/c/c/b;
 
@@ -537,7 +537,7 @@
     if-eqz v0, :cond_9
 
     .line 358
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->i(Lcom/tencent/mm/modelvoice/i;)Lcom/tencent/mm/c/c/b;
 
@@ -550,7 +550,7 @@
     .line 361
     :cond_9
     :goto_3
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->j(Lcom/tencent/mm/modelvoice/i;)Z
 
@@ -559,11 +559,11 @@
     if-eqz v0, :cond_a
 
     .line 362
-    const-string/jumbo v0, "!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU"
+    const-string/jumbo v0, "MicroMsg.SilkPlayer"
 
     const-string/jumbo v1, "waitting for switching complete"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 363
     const-wide/16 v0, 0x14
@@ -577,7 +577,7 @@
     .line 367
     :cond_a
     :try_start_6
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->b(Lcom/tencent/mm/modelvoice/i;)Landroid/media/AudioTrack;
 
@@ -594,7 +594,7 @@
     .line 374
     :goto_4
     :try_start_7
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->k(Lcom/tencent/mm/modelvoice/i;)I
 
@@ -602,14 +602,14 @@
     if-nez v9, :cond_b
 
     .line 377
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/tencent/mm/modelvoice/i;->a(Lcom/tencent/mm/modelvoice/i;I)I
 
     .line 378
-    const-string/jumbo v0, "!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU"
+    const-string/jumbo v0, "MicroMsg.SilkPlayer"
 
     const-string/jumbo v1, "[%d] play completed"
 
@@ -619,7 +619,7 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v4, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v4}, Lcom/tencent/mm/modelvoice/i;->h(Lcom/tencent/mm/modelvoice/i;)I
 
@@ -631,10 +631,10 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 379
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->i(Lcom/tencent/mm/modelvoice/i;)Lcom/tencent/mm/c/c/b;
 
@@ -642,25 +642,25 @@
 
     if-eqz v0, :cond_0
 
-    sget-boolean v0, Lcom/tencent/mm/platformtools/r;->cnP:Z
+    sget-boolean v0, Lcom/tencent/mm/platformtools/q;->ciU:Z
 
     if-eqz v0, :cond_0
 
     .line 380
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->i(Lcom/tencent/mm/modelvoice/i;)Lcom/tencent/mm/c/c/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/c/c/b;->lV()V
+    invoke-virtual {v0}, Lcom/tencent/mm/c/c/b;->kl()V
 
     .line 381
     new-instance v0, Lcom/tencent/mm/modelvoice/i$a$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/modelvoice/i$a$1;-><init>(Lcom/tencent/mm/modelvoice/i$a;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
     goto/16 :goto_0
 
@@ -669,7 +669,7 @@
     move-exception v0
 
     .line 369
-    const-string/jumbo v1, "!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU"
+    const-string/jumbo v1, "MicroMsg.SilkPlayer"
 
     const-string/jumbo v2, "write audio track failed: %s"
 
@@ -685,10 +685,10 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 370
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0xa1
 
@@ -698,10 +698,10 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
     .line 371
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0xa1
 
@@ -711,13 +711,13 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
     goto :goto_4
 
     .line 393
     :cond_b
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->g(Lcom/tencent/mm/modelvoice/i;)I
 
@@ -728,7 +728,7 @@
     if-ne v0, v1, :cond_c
 
     .line 394
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->l(Lcom/tencent/mm/modelvoice/i;)Ljava/lang/String;
 
@@ -740,14 +740,14 @@
 
     .line 396
     :try_start_8
-    const-string/jumbo v0, "!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU"
+    const-string/jumbo v0, "MicroMsg.SilkPlayer"
 
     const-string/jumbo v2, "before mOk.notify"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 397
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->l(Lcom/tencent/mm/modelvoice/i;)Ljava/lang/String;
 
@@ -756,11 +756,11 @@
     invoke-virtual {v0}, Ljava/lang/Object;->notify()V
 
     .line 398
-    const-string/jumbo v0, "!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU"
+    const-string/jumbo v0, "MicroMsg.SilkPlayer"
 
     const-string/jumbo v2, "after mOk.notify"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_2
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
@@ -774,7 +774,7 @@
 
     .line 403
     :try_start_a
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->m(Lcom/tencent/mm/modelvoice/i;)Ljava/lang/String;
 
@@ -786,14 +786,14 @@
 
     .line 405
     :try_start_b
-    const-string/jumbo v0, "!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU"
+    const-string/jumbo v0, "MicroMsg.SilkPlayer"
 
     const-string/jumbo v2, "before mpause.wait"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 406
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->m(Lcom/tencent/mm/modelvoice/i;)Ljava/lang/String;
 
@@ -802,11 +802,11 @@
     invoke-virtual {v0}, Ljava/lang/Object;->wait()V
 
     .line 407
-    const-string/jumbo v0, "!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU"
+    const-string/jumbo v0, "MicroMsg.SilkPlayer"
 
     const-string/jumbo v2, "after mpause.wait"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_b
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_3
     .catchall {:try_start_b .. :try_end_b} :catchall_1
@@ -836,7 +836,7 @@
 
     .line 400
     :try_start_e
-    const-string/jumbo v2, "!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU"
+    const-string/jumbo v2, "MicroMsg.SilkPlayer"
 
     const-string/jumbo v3, "exception:%s"
 
@@ -846,13 +846,13 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_5
 
@@ -875,7 +875,7 @@
 
     .line 409
     :try_start_10
-    const-string/jumbo v2, "!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU"
+    const-string/jumbo v2, "MicroMsg.SilkPlayer"
 
     const-string/jumbo v3, "exception:%s"
 
@@ -885,13 +885,13 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_10
     .catchall {:try_start_10 .. :try_end_10} :catchall_1
 
@@ -900,7 +900,7 @@
     .line 413
     :cond_c
     :try_start_11
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->l(Lcom/tencent/mm/modelvoice/i;)Ljava/lang/String;
 
@@ -912,7 +912,7 @@
 
     .line 415
     :try_start_12
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->l(Lcom/tencent/mm/modelvoice/i;)Ljava/lang/String;
 
@@ -948,7 +948,7 @@
 
     .line 417
     :try_start_15
-    const-string/jumbo v2, "!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU"
+    const-string/jumbo v2, "MicroMsg.SilkPlayer"
 
     const-string/jumbo v3, "exception:%s"
 
@@ -958,13 +958,13 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_15
     .catchall {:try_start_15 .. :try_end_15} :catchall_3
 
@@ -973,7 +973,7 @@
     .line 421
     :cond_d
     :try_start_16
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->g(Lcom/tencent/mm/modelvoice/i;)I
 
@@ -1005,7 +1005,7 @@
 
     .line 454
     :cond_e
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->b(Lcom/tencent/mm/modelvoice/i;)Landroid/media/AudioTrack;
 
@@ -1014,14 +1014,14 @@
     if-eqz v0, :cond_7
 
     .line 455
-    const-string/jumbo v0, "!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU"
+    const-string/jumbo v0, "MicroMsg.SilkPlayer"
 
     const-string/jumbo v1, "mAudioTrack.stop()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 456
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->b(Lcom/tencent/mm/modelvoice/i;)Landroid/media/AudioTrack;
 
@@ -1030,7 +1030,7 @@
     invoke-virtual {v0}, Landroid/media/AudioTrack;->stop()V
 
     .line 457
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->b(Lcom/tencent/mm/modelvoice/i;)Landroid/media/AudioTrack;
 
@@ -1039,7 +1039,7 @@
     invoke-virtual {v0}, Landroid/media/AudioTrack;->release()V
 
     .line 458
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/i;->c(Lcom/tencent/mm/modelvoice/i;)Landroid/media/AudioTrack;
 

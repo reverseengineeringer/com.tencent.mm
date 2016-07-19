@@ -1,61 +1,32 @@
-.class public interface abstract Lcom/tencent/mm/protocal/f;
+.class public final Lcom/tencent/mm/protocal/f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/IInterface;
 
+# direct methods
+.method public static bi(II)V
+    .locals 7
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/mm/protocal/f$a;
-    }
-.end annotation
+    .prologue
+    .line 78
+    if-ltz p0, :cond_0
 
+    .line 79
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
-# virtual methods
-.method public abstract a(I[B[B)Z
-.end method
+    const-wide/16 v0, 0x140
 
-.method public abstract cT(I)V
-.end method
+    add-int v2, p0, p1
 
-.method public abstract getCmdId()I
-.end method
+    int-to-long v2, v2
 
-.method public abstract gl(Ljava/lang/String;)V
-.end method
+    const-wide/16 v4, 0x1
 
-.method public abstract rg()I
-.end method
+    const/4 v6, 0x1
 
-.method public abstract tq()[B
-.end method
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
-.method public abstract vR()[B
-.end method
-
-.method public abstract vT()[B
-.end method
-
-.method public abstract wi()Ljava/lang/String;
-.end method
-
-.method public abstract wj()I
-.end method
-
-.method public abstract wk()[B
-.end method
-
-.method public abstract wl()Ljava/lang/String;
-.end method
-
-.method public abstract wm()Ljava/lang/String;
-.end method
-
-.method public abstract wn()I
-.end method
-
-.method public abstract wo()Ljava/lang/String;
+    .line 81
+    :cond_0
+    return-void
 .end method

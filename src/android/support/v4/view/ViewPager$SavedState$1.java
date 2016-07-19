@@ -3,7 +3,7 @@ package android.support.v4.view;
 import android.support.v4.b.b;
 
 final class ViewPager$SavedState$1
-  implements b
+  implements b<ViewPager.SavedState>
 {}
 
 /* Location:

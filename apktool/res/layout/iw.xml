@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:flowlayout="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/a9z" style="@style/MMScroll">
+        <LinearLayout style="@style/MMBody">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/i8" android:textColor="@color/gn" android:gravity="center|left|top" android:layout_gravity="center|left|top" android:id="@id/a_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bkd" />
+                <com.tencent.mm.ui.base.MMClearEditText android:textColor="@color/j_" android:layout_gravity="bottom" android:id="@id/a_1" android:paddingLeft="@dimen/hj" android:visibility="gone" android:layout_marginTop="@dimen/i7" android:minHeight="@dimen/h8" style="@style/MMLineEditText" />
+                <TextView android:textColor="@color/j_" android:layout_gravity="bottom" android:id="@id/a_2" android:background="@drawable/dl" android:paddingLeft="@dimen/hj" android:paddingBottom="@dimen/j_" android:layout_marginTop="@dimen/i7" android:minHeight="@dimen/h8" android:hint="@string/bkc" style="@style/MMLineEditText" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/a_3" android:background="@drawable/a7q" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/h4" android:textColor="#ff8e8e8e" android:id="@id/a_4" android:paddingBottom="@dimen/i7" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <Button android:textSize="@dimen/h4" android:gravity="center" android:id="@id/a_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/h6" style="@style/MMSolidWhiteSmallButton" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/he">
+                <TextView android:textSize="@dimen/i8" android:textColor="@color/gn" android:gravity="center|left|top" android:layout_gravity="center|left|top" android:id="@id/a_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bk7" />
+                <TextView android:textColor="@color/h_" android:layout_gravity="bottom" android:id="@id/a_7" android:background="@drawable/dl" android:paddingLeft="@dimen/hj" android:paddingBottom="@dimen/j_" android:layout_marginTop="@dimen/i7" android:layout_marginBottom="@dimen/j_" android:minHeight="@dimen/h8" android:text="@string/bk6" style="@style/MMLineEditText" />
+                <com.tencent.mm.ui.base.MMTagPanel android:textColor="@color/j_" android:layout_gravity="bottom" android:id="@id/a_8" android:background="@drawable/dl" android:paddingLeft="@dimen/hj" android:paddingTop="@dimen/j8" android:paddingBottom="@dimen/j8" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/i7" android:minHeight="@dimen/h8" flowlayout:horizontalSpacing="@dimen/ct" flowlayout:verticalSpacing="@dimen/ct" />
+            </LinearLayout>
+            <com.tencent.mm.pluginsdk.ui.ProfileEditPhoneNumberView android:id="@id/a_9" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:layout_gravity="center|left|top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/he">
+                <TextView android:textSize="@dimen/i8" android:textColor="@color/gn" android:gravity="center|left|top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bk_" />
+                <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:id="@id/a__" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/i7" android:minHeight="@dimen/h8">
+                    <com.tencent.mm.ui.widget.MMEditText android:textColor="@color/j_" android:gravity="center|left|top" android:id="@id/a_a" android:background="@null" android:layout_width="0.0dip" android:singleLine="false" android:layout_weight="1.0" style="@style/MMEditText" />
+                    <TextView android:textColor="#ff999999" android:gravity="bottom|center|right" android:layout_gravity="bottom|center|right" android:id="@id/a_b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j8" />
+                </LinearLayout>
+                <TextView android:textColor="@color/h_" android:gravity="center|left" android:id="@id/a_c" android:background="@drawable/dl" android:paddingLeft="@dimen/hj" android:paddingBottom="@dimen/j_" android:layout_width="fill_parent" android:layout_marginTop="@dimen/i7" android:layout_marginBottom="@dimen/j_" android:minHeight="@dimen/h8" android:hint="@string/bk9" android:singleLine="false" style="@style/MMLineEditText" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/he">
+                <TextView android:textSize="@dimen/i8" android:textColor="@color/gn" android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bkb" />
+                <TextView android:textColor="@color/h_" android:layout_gravity="bottom" android:id="@id/a_d" android:background="@drawable/dl" android:paddingLeft="@dimen/hj" android:paddingBottom="@dimen/j_" android:layout_marginTop="@dimen/i7" android:layout_marginBottom="@dimen/j_" android:minHeight="@dimen/h8" android:text="@string/bka" style="@style/MMLineEditText" />
+                <ImageView android:id="@id/a_e" android:background="#ffefefef" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_marginTop="@dimen/i7" android:src="@drawable/wd" android:scaleType="center" />
+                <ImageView android:id="@id/a_f" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_marginTop="@dimen/i7" android:scaleType="centerCrop" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

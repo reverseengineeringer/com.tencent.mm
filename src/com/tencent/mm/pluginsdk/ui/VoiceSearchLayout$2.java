@@ -1,62 +1,62 @@
 package com.tencent.mm.pluginsdk.ui;
 
-import com.tencent.mm.ao.d;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ar.d;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class VoiceSearchLayout$2
-  implements af.a
+  implements ah.a
 {
   VoiceSearchLayout$2(VoiceSearchLayout paramVoiceSearchLayout) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    if (VoiceSearchLayout.d(iHM) == null) {
+    if (VoiceSearchLayout.d(jeJ) == null) {
       return true;
     }
-    if (VoiceSearchLayout.e(iHM) < VoiceSearchLayout.aRh().length)
+    if (VoiceSearchLayout.e(jeJ) < VoiceSearchLayout.aVT().length)
     {
-      VoiceSearchLayout.a(iHM, VoiceSearchLayout.aRh()[VoiceSearchLayout.f(iHM)]);
+      VoiceSearchLayout.a(jeJ, VoiceSearchLayout.aVT()[VoiceSearchLayout.f(jeJ)]);
       return true;
     }
-    d locald = VoiceSearchLayout.d(iHM);
-    u.d("!32@/B4Tb64lLpJjyqE6YDnAp3o91K/Zm7/t", "cAmplitude " + cid);
-    int i = cid;
-    cid = 0;
-    if (i > d.aoE) {
-      d.aoE = i;
+    d locald = VoiceSearchLayout.d(jeJ);
+    v.d("MicroMsg.SceneVoiceAddr", "cAmplitude " + cdu);
+    int i = cdu;
+    cdu = 0;
+    if (i > d.adf) {
+      d.adf = i;
     }
-    u.d("getMaxAmplitude", " map: " + i + " max:" + d.aoE + " per:" + i * 100 / d.aoE);
-    i = i * 100 / d.aoE;
-    u.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "addr vol:" + i);
-    int k = VoiceSearchLayout.g(iHM);
-    if (VoiceSearchLayout.g(iHM) == VoiceSearchLayout.h(iHM))
+    v.d("getMaxAmplitude", " map: " + i + " max:" + d.adf + " per:" + i * 100 / d.adf);
+    i = i * 100 / d.adf;
+    v.d("MicroMsg.VoiceSearchLayout", "addr vol:" + i);
+    int k = VoiceSearchLayout.g(jeJ);
+    if (VoiceSearchLayout.g(jeJ) == VoiceSearchLayout.h(jeJ))
     {
       if (i <= 10)
       {
-        VoiceSearchLayout.i(iHM);
-        if (VoiceSearchLayout.j(iHM) >= VoiceSearchLayout.aRi().length) {
-          VoiceSearchLayout.k(iHM);
+        VoiceSearchLayout.i(jeJ);
+        if (VoiceSearchLayout.j(jeJ) >= VoiceSearchLayout.aVU().length) {
+          VoiceSearchLayout.k(jeJ);
         }
-        VoiceSearchLayout.a(iHM, VoiceSearchLayout.aRi()[VoiceSearchLayout.j(iHM)]);
+        VoiceSearchLayout.a(jeJ, VoiceSearchLayout.aVU()[VoiceSearchLayout.j(jeJ)]);
         return true;
       }
       int j = i / 5;
       i = j;
-      if (j >= VoiceSearchLayout.aRj().length) {
-        i = VoiceSearchLayout.aRj().length - 1;
+      if (j >= VoiceSearchLayout.aVV().length) {
+        i = VoiceSearchLayout.aVV().length - 1;
       }
-      u.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "addr mvol:" + i);
-      VoiceSearchLayout.b(iHM, i);
+      v.d("MicroMsg.VoiceSearchLayout", "addr mvol:" + i);
+      VoiceSearchLayout.b(jeJ, i);
     }
     for (;;)
     {
-      VoiceSearchLayout.a(iHM, VoiceSearchLayout.aRj()[k]);
+      VoiceSearchLayout.a(jeJ, VoiceSearchLayout.aVV()[k]);
       return true;
-      if (VoiceSearchLayout.g(iHM) > VoiceSearchLayout.h(iHM)) {
-        VoiceSearchLayout.l(iHM);
+      if (VoiceSearchLayout.g(jeJ) > VoiceSearchLayout.h(jeJ)) {
+        VoiceSearchLayout.l(jeJ);
       } else {
-        VoiceSearchLayout.m(iHM);
+        VoiceSearchLayout.m(jeJ);
       }
     }
   }

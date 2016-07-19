@@ -4,35 +4,35 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.MatrixCursor;
 import android.net.Uri;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.HashMap;
 import java.util.Map;
 
 public final class c
   extends MMPluginProvider.a
 {
-  private static final Map cAT;
+  private static final Map<String, Object> cxO;
   
   static
   {
     HashMap localHashMap = new HashMap();
-    cAT = localHashMap;
+    cxO = localHashMap;
     localHashMap.put("_build_info_sdk_int_", Integer.valueOf(587333634));
-    cAT.put("_build_info_sdk_name_", "android 3.2.2");
-    cAT.put("_wxapp_pay_entry_classname_", "com.tencent.mm.plugin.base.stub.WXPayEntryActivity");
+    cxO.put("_build_info_sdk_name_", "android 3.2.2");
+    cxO.put("_wxapp_pay_entry_classname_", "com.tencent.mm.plugin.base.stub.WXPayEntryActivity");
   }
   
-  public static Uri Jw()
+  public static Uri Kf()
   {
     return null;
   }
   
-  public static int Jx()
+  public static int Kg()
   {
     return 0;
   }
   
-  public static int Jy()
+  public static int Kh()
   {
     return 0;
   }
@@ -40,17 +40,17 @@ public final class c
   public static Cursor a(String[] paramArrayOfString1, String[] paramArrayOfString2)
   {
     paramArrayOfString2 = paramArrayOfString2[0];
-    Object localObject = cAT.get(paramArrayOfString2);
+    Object localObject = cxO.get(paramArrayOfString2);
     if (localObject == null)
     {
-      u.w("!56@/B4Tb64lLpJVwK899MjSHnGus/LYixbx/xUPPDfdLnaW++vs6UTDlA==", "not found value for key: " + paramArrayOfString2);
+      v.w("MicroMsg.MMPluginProviderSharedPrefImpl", "not found value for key: " + paramArrayOfString2);
       return null;
     }
     int i;
     MatrixCursor localMatrixCursor;
     if (localObject == null)
     {
-      u.e("!56@/B4Tb64lLpJ4ba4B7uT0vIuwclbFoi5gAykVHqdxOX6pBh8qPlAfTg==", "unresolve failed, null value");
+      v.e("MicroMsg.SDK.PluginProvider.Resolver", "unresolve failed, null value");
       i = 0;
       localMatrixCursor = new MatrixCursor(paramArrayOfString1);
       if (localObject != null) {
@@ -92,15 +92,15 @@ public final class c
         i = 6;
         break;
       }
-      u.e("!56@/B4Tb64lLpJ4ba4B7uT0vIuwclbFoi5gAykVHqdxOX6pBh8qPlAfTg==", "unresolve failed, unknown type=" + localObject.getClass().toString());
+      v.e("MicroMsg.SDK.PluginProvider.Resolver", "unresolve failed, unknown type=" + localObject.getClass().toString());
       i = 0;
       break;
     }
   }
   
-  public final boolean bp(Context paramContext)
+  public final boolean bk(Context paramContext)
   {
-    super.bp(paramContext);
+    super.bk(paramContext);
     return true;
   }
 }

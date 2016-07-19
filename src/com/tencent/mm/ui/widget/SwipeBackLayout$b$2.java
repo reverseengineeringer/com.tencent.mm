@@ -1,7 +1,7 @@
 package com.tencent.mm.ui.widget;
 
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.tools.k;
 import com.tencent.mm.ui.tools.k.a;
 
@@ -12,28 +12,28 @@ final class SwipeBackLayout$b$2
   
   public final void run()
   {
-    u.i("!44@/B4Tb64lLpK0aWizdgE60RZj+63liLyIPH/0AOVXUq4=", "on Complete, result %B, releaseLeft %d", new Object[] { Boolean.valueOf(lGR), Integer.valueOf(lGQ.lGN) });
-    SwipeBackLayout.d(lGQ.lGP, lGR);
-    if (lGR) {
-      if (lGQ.lGN > 0)
+    v.i("MicroMsg.SwipeBackLayout", "on Complete, result %B, releaseLeft %d", new Object[] { Boolean.valueOf(mif), Integer.valueOf(mie.mib) });
+    SwipeBackLayout.d(mie.mid, mif);
+    if (mif) {
+      if (mie.mib > 0)
       {
-        f.I(0.0F);
-        lGQ.lGP.io(lGR);
-        if ((lGR) && (SwipeBackLayout.j(lGQ.lGP)))
+        f.H(0.0F);
+        mie.mid.iX(mif);
+        if ((mif) && (SwipeBackLayout.j(mie.mid)))
         {
-          if (lGQ.lGN != 0) {
+          if (mie.mib != 0) {
             break label174;
           }
-          k.a(SwipeBackLayout.c(lGQ.lGP), 200L, 0.0F, new k.a()
+          k.a(SwipeBackLayout.c(mie.mid), 200L, 0.0F, new k.a()
           {
-            public final void biD()
+            public final void boz()
             {
               onAnimationEnd();
             }
             
             public final void onAnimationEnd()
             {
-              SwipeBackLayout.b(lGQ.lGP, false);
+              SwipeBackLayout.b(mie.mid, false);
             }
           });
         }
@@ -41,39 +41,39 @@ final class SwipeBackLayout$b$2
     }
     for (;;)
     {
-      SwipeBackLayout.c(lGQ.lGP, false);
+      SwipeBackLayout.c(mie.mid, false);
       return;
-      f.I(1.0F);
+      f.H(1.0F);
       break;
-      SwipeBackLayout.b(lGQ.lGP, false);
+      SwipeBackLayout.b(mie.mid, false);
       break;
       label174:
-      k.a(SwipeBackLayout.c(lGQ.lGP), 200L, lGQ.lGN, new k.a()
+      k.a(SwipeBackLayout.c(mie.mid), 200L, mie.mib, new k.a()
       {
-        public final void biD()
+        public final void boz()
         {
           onAnimationEnd();
         }
         
         public final void onAnimationEnd()
         {
-          SwipeBackLayout.a(lGQ.lGP, true);
-          ab.j(new Runnable()
+          SwipeBackLayout.a(mie.mid, true);
+          ad.k(new Runnable()
           {
             public final void run()
             {
-              if (SwipeBackLayout.g(lGQ.lGP) != null)
+              if (SwipeBackLayout.g(mie.mid) != null)
               {
-                SwipeBackLayout.g(lGQ.lGP).aNg();
-                u.d("!44@/B4Tb64lLpK0aWizdgE60RZj+63liLyIPH/0AOVXUq4=", "ashutest:: on onSwipeBack");
+                SwipeBackLayout.g(mie.mid).aEs();
+                v.d("MicroMsg.SwipeBackLayout", "ashutest:: on onSwipeBack");
               }
-              f.I(1.0F);
-              SwipeBackLayout.b(lGQ.lGP, false);
+              f.H(1.0F);
+              SwipeBackLayout.b(mie.mid, false);
             }
           });
         }
       });
-      f.l(true, lGQ.lGN);
+      f.l(true, mie.mib);
     }
   }
 }

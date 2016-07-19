@@ -5,17 +5,17 @@ import java.util.List;
 public abstract class n
   extends m
 {
-  public List cvM;
-  public boolean llg;
+  public List<String> crs;
+  public boolean lLt;
   
-  public n(l paraml, List paramList, boolean paramBoolean1, boolean paramBoolean2)
+  public n(l paraml, List<String> paramList, boolean paramBoolean1, boolean paramBoolean2)
   {
-    super(paraml, paramBoolean2);
-    cvM = paramList;
-    llg = paramBoolean1;
+    super(paraml, paramBoolean2, 0);
+    crs = paramList;
+    lLt = paramBoolean1;
   }
   
-  public int He(String paramString)
+  public int Jt(String paramString)
   {
     return -1;
   }

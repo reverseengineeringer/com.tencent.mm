@@ -9,9 +9,9 @@ final class MMListPopupWindow$1
   
   public final void run()
   {
-    View localView = kFn.pY;
+    View localView = ler.qm;
     if ((localView != null) && (localView.getWindowToken() != null)) {
-      kFn.show();
+      ler.show();
     }
   }
 }

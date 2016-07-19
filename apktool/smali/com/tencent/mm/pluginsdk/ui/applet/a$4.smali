@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iHY:Lcom/tencent/mm/pluginsdk/ui/applet/a;
+.field final synthetic jeV:Lcom/tencent/mm/pluginsdk/ui/applet/a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 243
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/a$4;->iHY:Lcom/tencent/mm/pluginsdk/ui/applet/a;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/a$4;->jeV:Lcom/tencent/mm/pluginsdk/ui/applet/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,21 +36,21 @@
 
 
 # virtual methods
-.method public final bK(Z)V
+.method public final bz(Z)V
     .locals 3
 
     .prologue
     .line 248
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/a$4;->iHY:Lcom/tencent/mm/pluginsdk/ui/applet/a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/a$4;->jeV:Lcom/tencent/mm/pluginsdk/ui/applet/a;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/a;->iHW:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/a;->jeT:Ljava/lang/String;
 
     .line 249
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/a$4;->iHY:Lcom/tencent/mm/pluginsdk/ui/applet/a;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/a$4;->jeV:Lcom/tencent/mm/pluginsdk/ui/applet/a;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/a$4;->iHY:Lcom/tencent/mm/pluginsdk/ui/applet/a;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/a$4;->jeV:Lcom/tencent/mm/pluginsdk/ui/applet/a;
 
-    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/ui/applet/a;->iHR:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/ui/applet/a;->jeO:Ljava/lang/String;
 
     invoke-static {v1, p1, v2, v0}, Lcom/tencent/mm/pluginsdk/ui/applet/a;->a(Lcom/tencent/mm/pluginsdk/ui/applet/a;ZLjava/lang/String;Ljava/lang/String;)V
 

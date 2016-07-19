@@ -3,64 +3,64 @@ package com.tencent.mm.sdk.b;
 public final class b
 {
   public static boolean foreground = false;
-  public static String jUB = "unknow";
-  private static c jUC = null;
-  private static boolean jUD = false;
-  private static String jUE = null;
+  public static String kuc = "unknow";
+  private static c kud = null;
+  private static boolean kue = false;
+  private static String kuf = null;
   
-  public static void Cx(String paramString)
+  public static void EK(String paramString)
   {
-    jUB = paramString;
+    kuc = paramString;
   }
   
-  public static void Cy(String paramString)
+  public static void EL(String paramString)
   {
-    jUE = paramString;
+    kuf = paramString;
   }
   
   public static void a(a parama)
   {
-    if (jUC != null) {
-      jUC.a(parama);
+    if (kud != null) {
+      kud.a(parama);
     }
   }
   
   public static void a(c paramc)
   {
-    jUC = paramc;
+    kud = paramc;
   }
   
-  public static void aM(boolean paramBoolean)
+  public static void aZn()
+  {
+    kue = true;
+  }
+  
+  public static boolean aZo()
+  {
+    return kue;
+  }
+  
+  public static String aZp()
+  {
+    return kuf;
+  }
+  
+  public static void ar(boolean paramBoolean)
   {
     foreground = paramBoolean;
   }
   
-  public static void aUn()
+  public static void g(int paramInt, String paramString)
   {
-    jUD = true;
-  }
-  
-  public static boolean aUo()
-  {
-    return jUD;
-  }
-  
-  public static String aUp()
-  {
-    return jUE;
-  }
-  
-  public static void f(int paramInt, String paramString)
-  {
-    if (jUC != null) {
-      jUC.f(paramInt, paramString);
+    if (kud != null) {
+      kud.g(paramInt, paramString);
     }
   }
   
-  public static void q(String paramString1, String paramString2)
+  public static void o(String paramString1, String paramString2)
   {
-    if (jUC != null) {
-      jUC.q(paramString1, paramString2);
+    if (kud != null) {
+      kud.o(paramString1, paramString2);
     }
   }
 }

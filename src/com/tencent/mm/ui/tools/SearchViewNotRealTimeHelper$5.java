@@ -10,8 +10,8 @@ final class SearchViewNotRealTimeHelper$5
   
   public final void onClick(View paramView)
   {
-    if (SearchViewNotRealTimeHelper.c(lxN) != null) {
-      SearchViewNotRealTimeHelper.c(lxN).lq(lxN.getSearchContent());
+    if (SearchViewNotRealTimeHelper.c(lYC) != null) {
+      SearchViewNotRealTimeHelper.c(lYC).mb(lYC.aVM());
     }
   }
 }

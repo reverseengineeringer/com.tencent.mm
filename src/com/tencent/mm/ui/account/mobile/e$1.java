@@ -2,7 +2,7 @@ package com.tencent.mm.ui.account.mobile;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class e$1
   implements View.OnClickListener
@@ -11,7 +11,7 @@ final class e$1
   
   public final void onClick(View paramView)
   {
-    ay.C(kxP, kxP.getString(2131432244));
+    be.D(kWW, kWW.getString(2131235761));
   }
 }
 

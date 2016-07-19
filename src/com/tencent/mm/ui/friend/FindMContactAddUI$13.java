@@ -12,16 +12,16 @@ final class FindMContactAddUI$13
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((FindMContactAddUI.k(lrt) != null) && (FindMContactAddUI.k(lrt).contains("2")))
+    if ((FindMContactAddUI.k(lRX) != null) && (FindMContactAddUI.k(lRX).contains("2")))
     {
-      paramDialogInterface = new Intent(lrt, FindMContactInviteUI.class);
-      paramDialogInterface.putExtra("regsetinfo_ticket", FindMContactAddUI.l(lrt));
-      paramDialogInterface.putExtra("login_type", FindMContactAddUI.m(lrt));
-      paramDialogInterface.putExtra("regsetinfo_NextStyle", FindMContactAddUI.e(lrt));
-      MMWizardActivity.v(lrt, paramDialogInterface);
+      paramDialogInterface = new Intent(lRX, FindMContactInviteUI.class);
+      paramDialogInterface.putExtra("regsetinfo_ticket", FindMContactAddUI.l(lRX));
+      paramDialogInterface.putExtra("login_type", FindMContactAddUI.m(lRX));
+      paramDialogInterface.putExtra("regsetinfo_NextStyle", FindMContactAddUI.e(lRX));
+      MMWizardActivity.v(lRX, paramDialogInterface);
       return;
     }
-    FindMContactAddUI.n(lrt);
+    FindMContactAddUI.n(lRX);
   }
 }
 

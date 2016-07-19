@@ -1,7 +1,7 @@
 package com.tencent.mm.plugin.sight.decode.a;
 
 import com.tencent.mm.plugin.sight.base.SightVideoJNI;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class b$2
   implements Runnable
@@ -11,8 +11,8 @@ final class b$2
   public final void run()
   {
     long l = System.currentTimeMillis();
-    SightVideoJNI.freeObj(bR);
-    u.d("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "#0x%x tick: do clear video %d, use %d ms", new Object[] { Integer.valueOf(gxL.hashCode()), Integer.valueOf(bR), Long.valueOf(System.currentTimeMillis() - l) });
+    SightVideoJNI.freeObj(cf);
+    v.d("MicroMsg.SightPlayController", "#0x%x tick: do clear video %d, use %d ms", new Object[] { Integer.valueOf(gEj.hashCode()), Integer.valueOf(cf), Long.valueOf(System.currentTimeMillis() - l) });
   }
 }
 

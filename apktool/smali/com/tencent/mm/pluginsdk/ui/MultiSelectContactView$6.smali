@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic cqb:Landroid/view/View;
+.field final synthetic clo:Landroid/view/View;
 
-.field final synthetic iHi:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
+.field final synthetic jed:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 332
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$6;->iHi:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$6;->jed:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
 
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$6;->cqb:Landroid/view/View;
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$6;->clo:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
 
     .prologue
     .line 344
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$6;->cqb:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$6;->clo:Landroid/view/View;
 
     new-instance v1, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$6$1;
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->Gb()V
+    value = Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gJM:Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;
+.field final synthetic gRm:Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 173
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$2;->gJM:Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$2;->gRm:Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 176
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$2;->gJM:Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI$2;->gRm:Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/lucky/ui/SnsLuckyMoneyDetailUI;->finish()V
 

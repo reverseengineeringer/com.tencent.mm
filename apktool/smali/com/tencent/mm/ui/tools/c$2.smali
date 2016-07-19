@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 92
+    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,9 +34,9 @@
     .locals 0
 
     .prologue
-    .line 95
-    invoke-static {}, Lcom/tencent/mm/ui/tools/c;->bit()Z
+    .line 109
+    invoke-static {}, Lcom/tencent/mm/ui/tools/c;->boq()Z
 
-    .line 96
+    .line 110
     return-void
 .end method

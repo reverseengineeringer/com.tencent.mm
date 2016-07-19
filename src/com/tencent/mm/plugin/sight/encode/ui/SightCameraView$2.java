@@ -9,8 +9,8 @@ final class SightCameraView$2
   
   public final void run()
   {
-    if (gEp.gEc != null) {
-      gEp.gEd.initialize(gEp.gEc.gDv);
+    if (gKQ.gKC != null) {
+      gKQ.gKD.initialize(gKQ.gKC.gJW);
     }
   }
   

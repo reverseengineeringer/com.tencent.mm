@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lBv:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
+.field final synthetic mcn:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 413
-    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$3;->lBv:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
+    .line 420
+    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$3;->mcn:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,8 +40,8 @@
     .locals 5
 
     .prologue
-    .line 417
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$3;->lBv:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
+    .line 424
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$3;->mcn:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
 
     const/4 v1, -0x1
 
@@ -59,11 +59,11 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->setResult(ILandroid/content/Intent;)V
 
-    .line 418
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$3;->lBv:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
+    .line 425
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$3;->mcn:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->finish()V
 
-    .line 419
+    .line 426
     return-void
 .end method

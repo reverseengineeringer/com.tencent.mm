@@ -1,13 +1,18 @@
 package com.tencent.mm.ui.chatting;
 
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
+
 final class ChattingUI$a$97
-  implements Runnable
+  implements View.OnTouchListener
 {
   ChattingUI$a$97(ChattingUI.a parama) {}
   
-  public final void run()
+  public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    ChattingUI.a.h(laF);
+    lAY.Xk();
+    return false;
   }
 }
 

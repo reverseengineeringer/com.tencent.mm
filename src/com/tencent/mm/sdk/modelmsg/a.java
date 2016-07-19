@@ -8,8 +8,8 @@ public final class a
   public static final class a
     extends com.tencent.mm.sdk.e.a
   {
-    public String bNO;
-    public String bXM;
+    public String bHk;
+    public String bRs;
     public String username;
     
     public final int getType()
@@ -17,31 +17,31 @@ public final class a
       return 3;
     }
     
-    public final void l(Bundle paramBundle)
+    public final void n(Bundle paramBundle)
     {
-      super.l(paramBundle);
-      paramBundle.putString("_wxapi_getmessage_req_lang", bXM);
-      paramBundle.putString("_wxapi_getmessage_req_country", bNO);
+      super.n(paramBundle);
+      paramBundle.putString("_wxapi_getmessage_req_lang", bRs);
+      paramBundle.putString("_wxapi_getmessage_req_country", bHk);
     }
     
-    public final void m(Bundle paramBundle)
+    public final void o(Bundle paramBundle)
     {
-      super.m(paramBundle);
-      bXM = paramBundle.getString("_wxapi_getmessage_req_lang");
-      bNO = paramBundle.getString("_wxapi_getmessage_req_country");
+      super.o(paramBundle);
+      bRs = paramBundle.getString("_wxapi_getmessage_req_lang");
+      bHk = paramBundle.getString("_wxapi_getmessage_req_country");
     }
   }
   
   public static final class b
     extends b
   {
-    public WXMediaMessage jUS;
+    public WXMediaMessage kuy;
     
     public b() {}
     
     public b(Bundle paramBundle)
     {
-      m(paramBundle);
+      o(paramBundle);
     }
     
     public final int getType()
@@ -49,16 +49,16 @@ public final class a
       return 3;
     }
     
-    public final void l(Bundle paramBundle)
+    public final void n(Bundle paramBundle)
     {
-      super.l(paramBundle);
-      paramBundle.putAll(WXMediaMessage.a.b(jUS));
+      super.n(paramBundle);
+      paramBundle.putAll(WXMediaMessage.a.b(kuy));
     }
     
-    public final void m(Bundle paramBundle)
+    public final void o(Bundle paramBundle)
     {
-      super.m(paramBundle);
-      jUS = WXMediaMessage.a.J(paramBundle);
+      super.o(paramBundle);
+      kuy = WXMediaMessage.a.P(paramBundle);
     }
   }
 }

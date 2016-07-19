@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/bhs" android:background="@drawable/a3o" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.ui.base.MMImageButton android:id="@id/bht" android:focusable="true" style="@style/MMTitleButton" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="19.0dip" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="center" android:id="@id/dq" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/fn" android:singleLine="true" android:layout_weight="1.0" />
+        <TextView android:textSize="13.0dip" android:textColor="#ffcecece" android:id="@id/we" android:visibility="gone" android:text="@string/fn" android:layout_weight="1.0" style="@style/MMTitle" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:visibility="visible" style="@style/MMTitleButton">
+        <ProgressBar android:id="@id/js" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/smallCustomProgressBar" />
+        <com.tencent.mm.ui.base.MMImageButton android:id="@id/bhu" android:focusable="true" style="@style/MMTitleButton" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,6 +1,9 @@
 package com.tencent.mm.modelsfs;
 
-public enum g$a {}
+public enum g$a
+{
+  private g$a() {}
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.modelsfs.g.a

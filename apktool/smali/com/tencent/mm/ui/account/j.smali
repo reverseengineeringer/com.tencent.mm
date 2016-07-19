@@ -14,13 +14,13 @@
 # instance fields
 .field private final context:Landroid/content/Context;
 
-.field private ffH:Ljava/util/regex/Pattern;
+.field private fom:Ljava/util/regex/Pattern;
 
-.field private hXb:Landroid/content/ContentResolver;
+.field private iqI:Landroid/content/ContentResolver;
 
-.field private final hXg:[Ljava/lang/String;
+.field private final iqN:[Ljava/lang/String;
 
-.field private final kwO:Lcom/tencent/mm/ui/account/j$a;
+.field private final kVV:Lcom/tencent/mm/ui/account/j$a;
 
 
 # direct methods
@@ -29,7 +29,7 @@
 
     .prologue
     .line 35
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->fetchFreeHandler()Landroid/os/Handler;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ac;->fetchFreeHandler()Landroid/os/Handler;
 
     move-result-object v0
 
@@ -42,7 +42,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/j;->ffH:Ljava/util/regex/Pattern;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/j;->fom:Ljava/util/regex/Pattern;
 
     .line 36
     if-eqz p1, :cond_0
@@ -68,16 +68,16 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d000d
+    const v1, 0x7f090030
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/j;->hXg:[Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/j;->iqN:[Ljava/lang/String;
 
     .line 41
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/j;->kwO:Lcom/tencent/mm/ui/account/j$a;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/j;->kVV:Lcom/tencent/mm/ui/account/j$a;
 
     .line 42
     return-void
@@ -85,7 +85,7 @@
 
 
 # virtual methods
-.method public final bbX()V
+.method public final bhj()V
     .locals 3
 
     .prologue
@@ -110,7 +110,7 @@
     return-void
 .end method
 
-.method public final bbY()V
+.method public final bhk()V
     .locals 1
 
     .prologue
@@ -127,8 +127,8 @@
     return-void
 .end method
 
-.method public final bbZ()V
-    .locals 10
+.method public final bhl()V
+    .locals 11
 
     .prologue
     const/4 v5, 0x2
@@ -151,7 +151,7 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/tencent/mm/ui/account/j;->hXb:Landroid/content/ContentResolver;
+    iput-object v2, p0, Lcom/tencent/mm/ui/account/j;->iqI:Landroid/content/ContentResolver;
 
     .line 69
     const/4 v2, 0x3
@@ -175,20 +175,20 @@
     .line 70
     const-string/jumbo v3, "( "
 
-    move v9, v0
+    move v10, v0
 
     move-object v0, v3
 
-    move v3, v9
+    move v3, v10
 
     :goto_0
-    iget-object v4, p0, Lcom/tencent/mm/ui/account/j;->hXg:[Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/ui/account/j;->iqN:[Ljava/lang/String;
 
     array-length v4, v4
 
     if-ge v3, v4, :cond_1
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/account/j;->hXg:[Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/ui/account/j;->iqN:[Ljava/lang/String;
 
     array-length v4, v4
 
@@ -210,7 +210,7 @@
 
     move-result-object v0
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/account/j;->hXg:[Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/ui/account/j;->iqN:[Ljava/lang/String;
 
     aget-object v4, v4, v3
 
@@ -248,7 +248,7 @@
 
     move-result-object v0
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/account/j;->hXg:[Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/ui/account/j;->iqN:[Ljava/lang/String;
 
     aget-object v4, v4, v3
 
@@ -285,13 +285,13 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    const-wide/32 v7, 0x493e0
+    const-wide/32 v8, 0x493e0
 
-    sub-long/2addr v3, v7
+    sub-long/2addr v4, v8
 
-    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -305,7 +305,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpL541hXrSnc37wqD5dP0OdT7d6yWSV5tro="
+    const-string/jumbo v0, "MicroMsg.SmsContentObserver"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -321,7 +321,7 @@
 
     move-result-object v4
 
-    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 71
     if-eqz v3, :cond_2
@@ -342,7 +342,7 @@
     .line 76
     :cond_3
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/j;->hXb:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/j;->iqI:Landroid/content/ContentResolver;
 
     const/4 v4, 0x0
 
@@ -414,7 +414,7 @@
     move-result-object v0
 
     .line 91
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/j;->ffH:Ljava/util/regex/Pattern;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/j;->fom:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
@@ -432,9 +432,9 @@
 
     .line 92
     :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/j;->kwO:Lcom/tencent/mm/ui/account/j$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/j;->kVV:Lcom/tencent/mm/ui/account/j$a;
 
-    invoke-interface {v0, v6}, Lcom/tencent/mm/ui/account/j$a;->Gr(Ljava/lang/String;)V
+    invoke-interface {v0, v6}, Lcom/tencent/mm/ui/account/j$a;->IG(Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -457,9 +457,9 @@
     .line 94
     :cond_6
     :try_start_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/j;->kwO:Lcom/tencent/mm/ui/account/j$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/j;->kVV:Lcom/tencent/mm/ui/account/j$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/account/j$a;->bbK()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/account/j$a;->bgW()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
@@ -475,13 +475,13 @@
     .line 98
     :goto_6
     :try_start_3
-    const-string/jumbo v2, "!44@/B4Tb64lLpL541hXrSnc37wqD5dP0OdT7d6yWSV5tro="
+    const-string/jumbo v2, "MicroMsg.SmsContentObserver"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
@@ -576,12 +576,12 @@
 
     const-string/jumbo v4, ""
 
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/tencent/mm/pluginsdk/g/a;->a(Landroid/app/Activity;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/tencent/mm/pluginsdk/h/a;->a(Landroid/app/Activity;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
     .line 57
-    const-string/jumbo v1, "!44@/B4Tb64lLpL541hXrSnc37wqD5dP0OdT7d6yWSV5tro="
+    const-string/jumbo v1, "MicroMsg.SmsContentObserver"
 
     const-string/jumbo v2, "summerper checkPermission checkSMS[%b], stack[%s], activity[%s]"
 
@@ -599,7 +599,7 @@
 
     const/4 v4, 0x1
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->aVJ()Lcom/tencent/mm/sdk/platformtools/ad;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->baX()Lcom/tencent/mm/sdk/platformtools/af;
 
     move-result-object v5
 
@@ -611,7 +611,7 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 58
     if-nez v0, :cond_0
@@ -622,7 +622,7 @@
 
     .line 62
     :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/j;->bbZ()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/j;->bhl()V
 
     goto :goto_0
 .end method

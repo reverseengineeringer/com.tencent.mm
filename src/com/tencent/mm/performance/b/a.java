@@ -1,143 +1,84 @@
 package com.tencent.mm.performance.b;
 
-import android.os.Looper;
-import com.tencent.mm.performance.wxperformancetool.c;
-import java.lang.ref.WeakReference;
-import java.util.ArrayList;
-import java.util.HashMap;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.Map.Entry;
-import java.util.Set;
 
 public final class a
-  extends com.tencent.mm.performance.e.a
+  extends com.tencent.mm.performance.d.a
 {
-  public static String TYPE = "LooperMonitorController";
-  public HashMap ckx;
-  public c cky;
-  public HashSet ckz;
+  public static String TYPE = "MemoryAlarmController";
+  public long cfP = -1L;
+  public long cfQ = -1L;
+  public long cfR = -1L;
+  public long cfS = -1L;
+  public boolean cfT = false;
+  public HashSet<a> cfU;
   
-  public a(c paramc)
+  private void a(int paramInt, long paramLong1, long paramLong2, long paramLong3)
   {
-    cky = paramc;
+    for (;;)
+    {
+      a locala;
+      synchronized (cfU)
+      {
+        Iterator localIterator = cfU.iterator();
+        if (!localIterator.hasNext()) {
+          break label121;
+        }
+        locala = (a)localIterator.next();
+        switch (paramInt)
+        {
+        case 0: 
+          locala.a(paramLong1, paramLong2, paramLong3);
+        }
+      }
+      locala.b(paramLong1, paramLong2, paramLong3);
+      continue;
+      locala.c(paramLong1, paramLong2, paramLong3);
+      continue;
+      label121:
+      return;
+    }
   }
   
-  public final String Fs()
+  public final String FP()
   {
     return TYPE;
   }
   
-  public final void Ft()
+  public final void FQ()
   {
-    if ((ckx == null) || (ckx.isEmpty()) || (!b.ckF) || (!b.ckG)) {
-      return;
-    }
-    for (;;)
+    if (!cfT) {}
+    long l1;
+    long l2;
+    do
     {
-      Object localObject5;
-      Object localObject6;
-      WeakReference localWeakReference;
-      Looper localLooper;
-      Object localObject1;
-      try
+      return;
+      l1 = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+      l2 = l1 / cfP;
+      v.d("MicroMsg.WxPerformace", "memoryalarm memory use %d, total %d", new Object[] { Long.valueOf(l1), Long.valueOf(cfP) });
+      if (l2 >= cfS)
       {
-        localObject5 = ckx.entrySet().iterator();
-        Object localObject2 = null;
-        if (!((Iterator)localObject5).hasNext()) {
-          break label239;
-        }
-        localObject6 = (Map.Entry)((Iterator)localObject5).next();
-        localWeakReference = (WeakReference)((Map.Entry)localObject6).getKey();
-        localObject6 = (b)((Map.Entry)localObject6).getValue();
-        localLooper = (Looper)localWeakReference.get();
-        if (localLooper == null) {
-          break label217;
-        }
-        if ((ckA == -1L) || (!b.ckF)) {
-          break label287;
-        }
-        if (b.ckG) {
-          break label183;
-        }
+        a(2, l2, cfP, l1);
+        return;
       }
-      finally {}
-      if (localObject1 > ckB)
+      if (l2 >= cfR)
       {
-        ckC = ckA;
-        a(localLooper, localObject1, ckB, false, ckH);
-        continue;
-        label183:
-        long l;
-        if (ckC == ckA)
-        {
-          l = -1L;
-        }
-        else
-        {
-          l = System.currentTimeMillis() - ckA;
-          continue;
-          label217:
-          Object localObject4;
-          if (localObject3 == null) {
-            localObject4 = new ArrayList();
-          }
-          for (;;)
-          {
-            ((ArrayList)localObject4).add(localWeakReference);
-            break;
-            label239:
-            if (localObject4 != null)
-            {
-              localObject4 = ((ArrayList)localObject4).iterator();
-              while (((Iterator)localObject4).hasNext())
-              {
-                localObject5 = (WeakReference)((Iterator)localObject4).next();
-                ckx.remove(localObject5);
-              }
-            }
-            return;
-          }
-          label287:
-          l = -1L;
-        }
+        a(1, l2, cfP, l1);
+        return;
       }
-    }
-  }
-  
-  public final void a(Looper paramLooper)
-  {
-    if (paramLooper == null) {
-      throw new IllegalArgumentException("addMoniterLooper, looper is null");
-    }
-    WeakReference localWeakReference = new WeakReference(paramLooper);
-    if (ckx.containsKey(localWeakReference)) {
-      return;
-    }
-    b localb = new b(this, localWeakReference);
-    try
-    {
-      ckx.put(localWeakReference, localb);
-      paramLooper.setMessageLogging(localb);
-      return;
-    }
-    finally {}
-  }
-  
-  public final void a(Looper paramLooper, long paramLong, int paramInt, boolean paramBoolean, String paramString)
-  {
-    synchronized (ckz)
-    {
-      Iterator localIterator = ckz.iterator();
-      if (localIterator.hasNext()) {
-        ((a)localIterator.next()).b(paramLooper, paramLong, paramInt, paramBoolean, paramString);
-      }
-    }
+    } while (l2 < cfQ);
+    a(0, l2, cfP, l1);
   }
   
   public static abstract interface a
   {
-    public abstract void b(Looper paramLooper, long paramLong, int paramInt, boolean paramBoolean, String paramString);
+    public abstract void a(long paramLong1, long paramLong2, long paramLong3);
+    
+    public abstract void b(long paramLong1, long paramLong2, long paramLong3);
+    
+    public abstract void c(long paramLong1, long paramLong2, long paramLong3);
   }
 }
 

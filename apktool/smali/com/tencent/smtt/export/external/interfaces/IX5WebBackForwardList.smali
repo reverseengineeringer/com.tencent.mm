@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/tencent/smtt/export/external/interfaces/IX5WebBackForwardList;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # virtual methods

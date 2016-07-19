@@ -1,55 +1,55 @@
 package com.tencent.mm.ui.account;
 
 import com.tencent.mm.model.ah;
-import com.tencent.mm.modelsimple.t;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.modelsimple.r;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.applet.SecurityImage;
 import com.tencent.mm.ui.applet.SecurityImage.b;
 
 public final class f
   extends SecurityImage.b
 {
-  private static f ktP = null;
-  public String cbh = null;
-  public String ktJ = null;
-  public String ktK = null;
-  public String ktL = null;
-  public String ktM = null;
-  public byte[] ktN = null;
-  public int ktO = 0;
+  private static f kSW = null;
+  public String bUU = null;
+  public String kSQ = null;
+  public String kSR = null;
+  public String kSS = null;
+  public String kST = null;
+  public byte[] kSU = null;
+  public int kSV = 0;
   
   public static void a(f paramf)
   {
-    ktP = paramf;
+    kSW = paramf;
   }
   
-  public static String bbE()
+  public static String bgQ()
   {
-    if (ktP != null) {
-      return ktPcbh;
+    if (kSW != null) {
+      return kSWbUU;
     }
     return null;
   }
   
-  public static String bbF()
+  public static String bgR()
   {
-    if (ktP != null) {
-      return ktPktJ;
+    if (kSW != null) {
+      return kSWkSQ;
     }
     return null;
   }
   
-  public final void bby()
+  public final void bgK()
   {
-    if (!ay.kz(ktK))
+    if (!be.kf(kSR))
     {
-      localt = new t(cbh, ktK, kzR.getSecCodeType(), "", "", "", 0, "", false, true);
-      ah.tE().d(localt);
+      localr = new r(bUU, kSR, kYX.kSV, "", "", "", 0, "", false, true);
+      ah.tF().a(localr, 0);
       return;
     }
-    t localt = new t(cbh, ktJ, kzR.getSecCodeType(), "", "", "", 0, "", false, false);
-    ah.tE().d(localt);
+    r localr = new r(bUU, kSQ, kYX.kSV, "", "", "", 0, "", false, false);
+    ah.tF().a(localr, 0);
   }
 }
 

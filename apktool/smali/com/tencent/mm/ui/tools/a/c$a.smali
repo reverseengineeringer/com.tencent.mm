@@ -15,11 +15,11 @@
 
 
 # virtual methods
-.method public abstract Om()V
+.method public abstract Px()V
 .end method
 
-.method public abstract On()V
+.method public abstract Py()V
 .end method
 
-.method public abstract mm(Ljava/lang/String;)V
+.method public abstract ng(Ljava/lang/String;)V
 .end method

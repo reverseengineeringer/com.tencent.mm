@@ -1,11 +1,11 @@
 package com.tencent.mm.ui.account;
 
 public final class SetPwdUI$a
-  extends Enum
+  extends Enum<a>
 {
-  public static int[] bbW()
+  public static int[] bhi()
   {
-    return (int[])kwF.clone();
+    return (int[])kVM.clone();
   }
 }
 

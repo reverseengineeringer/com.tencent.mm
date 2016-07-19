@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:paddingTop="@dimen/hb" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/j7"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dl" android:paddingLeft="@dimen/hb" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/w1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="test" style="@style/MMPreferenceTextLarge" />
+        <TextView android:id="@id/w2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="test" style="@style/MMPreferenceTextSmall" />
+    </LinearLayout>
+</RelativeLayout>

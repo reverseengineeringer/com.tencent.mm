@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final izj:Ljava/util/concurrent/atomic/AtomicInteger;
+.field private static final iVF:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
@@ -19,7 +19,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/k;->izj:Ljava/util/concurrent/atomic/AtomicInteger;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/k;->iVF:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-void
 .end method
@@ -29,7 +29,7 @@
 
     .prologue
     .line 58
-    sget-object v0, Lcom/tencent/mm/pluginsdk/k;->izj:Ljava/util/concurrent/atomic/AtomicInteger;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/k;->iVF:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
@@ -53,14 +53,14 @@
 
     .prologue
     .line 64
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUS()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZW()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 65
-    sget-object v0, Lcom/tencent/mm/pluginsdk/k;->izj:Ljava/util/concurrent/atomic/AtomicInteger;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/k;->iVF:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
@@ -76,7 +76,7 @@
 
     new-instance v1, Landroid/content/ComponentName;
 
-    sget-object v2, Lcom/tencent/mm/ui/d$e;->kjL:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/ui/d$e;->kJT:Ljava/lang/String;
 
     const-string/jumbo v3, "com.tencent.mm.booter.MMReceivers$ToolsProcessReceiver"
 
@@ -90,7 +90,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -104,7 +104,7 @@
 
     .prologue
     .line 72
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -117,7 +117,7 @@
 
     .line 75
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -138,7 +138,7 @@
     move-result-object v0
 
     .line 80
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->bq(Ljava/util/List;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->bz(Ljava/util/List;)Z
 
     move-result v1
 
@@ -184,14 +184,14 @@
     if-eqz v0, :cond_0
 
     .line 91
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUS()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZW()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
     .line 92
-    sget-object v0, Lcom/tencent/mm/pluginsdk/k;->izj:Ljava/util/concurrent/atomic/AtomicInteger;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/k;->iVF:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
 
@@ -205,7 +205,7 @@
 
     new-instance v1, Landroid/content/ComponentName;
 
-    sget-object v2, Lcom/tencent/mm/ui/d$e;->kjL:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/ui/d$e;->kJT:Ljava/lang/String;
 
     const-string/jumbo v3, "com.tencent.mm.booter.MMReceivers$ToolsProcessReceiver"
 
@@ -219,7 +219,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v1
 

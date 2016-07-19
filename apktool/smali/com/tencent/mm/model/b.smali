@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private final bzj:I
+.field private final bsg:I
 
 
 # direct methods
@@ -13,7 +13,7 @@
 
     .prologue
     .line 16
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tj()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tk()Ljava/lang/String;
 
     move-result-object v0
 
@@ -22,7 +22,7 @@
     .line 17
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/model/b;->bzj:I
+    iput v0, p0, Lcom/tencent/mm/model/b;->bsg:I
 
     .line 18
     return-void
@@ -33,7 +33,7 @@
 
     .prologue
     .line 21
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tj()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tk()Ljava/lang/String;
 
     move-result-object v0
 
@@ -42,7 +42,7 @@
     .line 22
     const/4 v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/model/b;->bzj:I
+    iput v0, p0, Lcom/tencent/mm/model/b;->bsg:I
 
     .line 23
     return-void

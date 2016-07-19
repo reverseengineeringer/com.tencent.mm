@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract V()Landroid/app/Notification$Builder;
+.method public abstract U()Landroid/app/Notification$Builder;
 .end method

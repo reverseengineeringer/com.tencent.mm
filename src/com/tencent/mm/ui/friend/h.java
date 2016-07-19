@@ -8,13 +8,13 @@ import android.content.DialogInterface.OnClickListener;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.text.TextUtils;
-import com.tencent.mm.aa.b;
+import com.tencent.mm.ad.b;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelfriend.o;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.g.d;
 import java.util.ArrayList;
@@ -22,67 +22,35 @@ import java.util.ArrayList;
 public final class h
   implements d
 {
-  private ProgressDialog cWw;
+  private ProgressDialog cUM;
   private Context context;
-  a lsv;
+  a lSZ;
   
   public h(Context paramContext, a parama)
   {
     context = paramContext;
-    lsv = parama;
+    lSZ = parama;
   }
   
-  final void Hu(final String paramString)
+  final void JJ(final String paramString)
   {
     Object localObject = new ArrayList();
     ((ArrayList)localObject).add(paramString);
     paramString = new b((ArrayList)localObject);
-    ah.tE().d(paramString);
+    ah.tF().a(paramString, 0);
     localObject = context;
-    context.getString(2131428839);
-    cWw = g.a((Context)localObject, context.getString(2131428841), true, new DialogInterface.OnCancelListener()
+    context.getString(2131233321);
+    cUM = g.a((Context)localObject, context.getString(2131233319), true, new DialogInterface.OnCancelListener()
     {
       public final void onCancel(DialogInterface paramAnonymousDialogInterface)
       {
-        ah.tE().c(paramString);
-        lsv.ic(false);
+        ah.tF().c(paramString);
+        lSZ.iG(false);
       }
     });
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
-  {
-    String str = paramString;
-    if (TextUtils.isEmpty(paramString)) {
-      str = "";
-    }
-    u.i("!56@/B4Tb64lLpJtMRMH2jRSdghVsn4FqgjSjw154pjf3+T/ppFmtTaxXw==", "[onSceneEnd] errType:%d,errCode:%d,errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), str });
-    if (paramj.getType() != 489) {
-      return;
-    }
-    if (cWw != null)
-    {
-      cWw.dismiss();
-      cWw = null;
-    }
-    ah.tE().b(489, this);
-    if ((paramInt1 == 0) && (paramInt2 == 0))
-    {
-      u.i("!56@/B4Tb64lLpJtMRMH2jRSdghVsn4FqgjSjw154pjf3+T/ppFmtTaxXw==", "dealSendInviteSuccess");
-      g.a(context, 2131428840, 2131430877, new DialogInterface.OnClickListener()
-      {
-        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
-        {
-          lsv.ic(true);
-        }
-      });
-      return;
-    }
-    u.i("!56@/B4Tb64lLpJtMRMH2jRSdghVsn4FqgjSjw154pjf3+T/ppFmtTaxXw==", "dealSendInviteFail");
-    lsv.ic(false);
-  }
-  
-  final void j(Cursor paramCursor)
+  final void h(Cursor paramCursor)
   {
     ArrayList localArrayList1 = new ArrayList();
     ArrayList localArrayList2 = new ArrayList();
@@ -95,7 +63,7 @@ public final class h
       while (i < j)
       {
         localObject = new o();
-        ((o)localObject).c(paramCursor);
+        ((o)localObject).b(paramCursor);
         localArrayList1.add(field_googlegmail);
         localArrayList2.add(Integer.valueOf(i));
         localArrayList3.add(localObject);
@@ -105,22 +73,54 @@ public final class h
       localArrayList2.add(Integer.valueOf(-1));
     }
     paramCursor = context;
-    Object localObject = context.getResources().getString(2131428708);
-    context.getResources().getString(2131430884);
+    Object localObject = context.getResources().getString(2131233143);
+    context.getResources().getString(2131230873);
     g.a(paramCursor, (String)localObject, localArrayList1, localArrayList2, new g.d()
     {
-      public final void aq(int paramAnonymousInt1, int paramAnonymousInt2)
+      public final void av(int paramAnonymousInt1, int paramAnonymousInt2)
       {
         if (paramAnonymousInt2 != -1) {
-          Hu(localArrayList3getfield_googlegmail);
+          JJ(localArrayList3getfield_googlegmail);
         }
       }
     });
   }
   
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
+  {
+    String str = paramString;
+    if (TextUtils.isEmpty(paramString)) {
+      str = "";
+    }
+    v.i("MicroMsg.SendInviteGoogleContact", "[onSceneEnd] errType:%d,errCode:%d,errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), str });
+    if (paramj.getType() != 489) {
+      return;
+    }
+    if (cUM != null)
+    {
+      cUM.dismiss();
+      cUM = null;
+    }
+    ah.tF().b(489, this);
+    if ((paramInt1 == 0) && (paramInt2 == 0))
+    {
+      v.i("MicroMsg.SendInviteGoogleContact", "dealSendInviteSuccess");
+      g.a(context, 2131233318, 2131231028, new DialogInterface.OnClickListener()
+      {
+        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+        {
+          lSZ.iG(true);
+        }
+      });
+      return;
+    }
+    v.i("MicroMsg.SendInviteGoogleContact", "dealSendInviteFail");
+    lSZ.iG(false);
+  }
+  
   public static abstract interface a
   {
-    public abstract void ic(boolean paramBoolean);
+    public abstract void iG(boolean paramBoolean);
   }
 }
 

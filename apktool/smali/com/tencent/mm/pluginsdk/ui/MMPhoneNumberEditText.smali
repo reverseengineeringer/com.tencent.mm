@@ -12,21 +12,21 @@
 
 
 # instance fields
-.field private fPV:Landroid/view/View$OnFocusChangeListener;
+.field private fYY:Landroid/view/View$OnFocusChangeListener;
 
-.field public iGN:Ljava/lang/String;
+.field public jdI:Ljava/lang/String;
 
-.field public iGO:Z
+.field public jdJ:Z
 
-.field public iGP:Landroid/graphics/drawable/Drawable;
+.field public jdK:Landroid/graphics/drawable/Drawable;
 
-.field private iGQ:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$a;
+.field jdL:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$a;
 
-.field public iGR:Z
+.field public jdM:Z
 
-.field private iGS:Z
+.field private jdN:Z
 
-.field iGT:I
+.field jdO:I
 
 
 # direct methods
@@ -42,21 +42,21 @@
     .line 25
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGN:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdI:Ljava/lang/String;
 
     .line 27
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGO:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdJ:Z
 
     .line 51
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGS:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdN:Z
 
     .line 163
-    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGT:I
+    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdO:I
 
     .line 202
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->fPV:Landroid/view/View$OnFocusChangeListener;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->fYY:Landroid/view/View$OnFocusChangeListener;
 
     .line 43
     invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->init()V
@@ -77,21 +77,21 @@
     .line 25
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGN:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdI:Ljava/lang/String;
 
     .line 27
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGO:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdJ:Z
 
     .line 51
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGS:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdN:Z
 
     .line 163
-    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGT:I
+    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdO:I
 
     .line 202
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->fPV:Landroid/view/View$OnFocusChangeListener;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->fYY:Landroid/view/View$OnFocusChangeListener;
 
     .line 48
     invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->init()V
@@ -100,7 +100,7 @@
     return-void
 .end method
 
-.method private Az(Ljava/lang/String;)V
+.method private CA(Ljava/lang/String;)V
     .locals 4
 
     .prologue
@@ -110,7 +110,7 @@
     move-result v0
 
     .line 187
-    invoke-static {}, Lcom/tencent/mm/ay/g;->aWe()Lcom/tencent/mm/ay/g;
+    invoke-static {}, Lcom/tencent/mm/bb/g;->bbq()Lcom/tencent/mm/bb/g;
 
     move-result-object v1
 
@@ -122,7 +122,7 @@
 
     move-result v3
 
-    invoke-virtual {v1, v2, p1, v3}, Lcom/tencent/mm/ay/g;->c(Landroid/content/Context;Ljava/lang/CharSequence;F)Landroid/text/SpannableString;
+    invoke-virtual {v1, v2, p1, v3}, Lcom/tencent/mm/bb/g;->c(Landroid/content/Context;Ljava/lang/CharSequence;F)Landroid/text/SpannableString;
 
     move-result-object v1
 
@@ -180,7 +180,7 @@
 
     .prologue
     .line 21
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->aQX()V
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->aVH()V
 
     return-void
 .end method
@@ -190,12 +190,12 @@
 
     .prologue
     .line 21
-    iput-boolean p1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGS:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdN:Z
 
     return p1
 .end method
 
-.method private aQV()V
+.method private aVF()V
     .locals 2
 
     .prologue
@@ -217,7 +217,7 @@
     if-eqz v0, :cond_0
 
     .line 211
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->aQX()V
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->aVH()V
 
     .line 215
     :goto_0
@@ -225,12 +225,12 @@
 
     .line 213
     :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->aQW()V
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->aVG()V
 
     goto :goto_0
 .end method
 
-.method private aQX()V
+.method private aVH()V
     .locals 5
 
     .prologue
@@ -272,7 +272,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGQ:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdL:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$a;
 
     return-object v0
 .end method
@@ -282,7 +282,7 @@
 
     .prologue
     .line 21
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->aQV()V
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->aVF()V
 
     return-void
 .end method
@@ -292,7 +292,7 @@
 
     .prologue
     .line 21
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGS:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdN:Z
 
     return v0
 .end method
@@ -302,7 +302,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->fPV:Landroid/view/View$OnFocusChangeListener;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->fYY:Landroid/view/View$OnFocusChangeListener;
 
     return-object v0
 .end method
@@ -318,24 +318,24 @@
 
     move-result-object v0
 
-    const v1, 0x7f0406c3
+    const v1, 0x7f020419
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGP:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdK:Landroid/graphics/drawable/Drawable;
 
     .line 70
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGP:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdK:Landroid/graphics/drawable/Drawable;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGP:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdK:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGP:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdK:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -344,7 +344,7 @@
     invoke-virtual {v0, v4, v4, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     .line 72
-    const-string/jumbo v0, "!44@/B4Tb64lLpKV1gYdF8HNDrIV/d4j0/6hFGTPpQharhE="
+    const-string/jumbo v0, "MicroMsg.MMClearEditText"
 
     const-string/jumbo v1, "imgX width %d height %d"
 
@@ -352,7 +352,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGP:Landroid/graphics/drawable/Drawable;
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdK:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -366,7 +366,7 @@
 
     const/4 v3, 0x1
 
-    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGP:Landroid/graphics/drawable/Drawable;
+    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdK:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -378,13 +378,13 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 74
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->aQV()V
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->aVF()V
 
     .line 75
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGP:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdK:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -394,7 +394,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0501cd
+    const v2, 0x7f0b0154
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -436,7 +436,7 @@
 
 
 # virtual methods
-.method final aQW()V
+.method final aVG()V
     .locals 5
 
     .prologue
@@ -457,7 +457,7 @@
 
     aget-object v1, v1, v2
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGP:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdK:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->getCompoundDrawables()[Landroid/graphics/drawable/Drawable;
 
@@ -491,7 +491,7 @@
 
     .line 232
     :cond_0
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGO:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdJ:Z
 
     if-nez v0, :cond_1
 
@@ -522,7 +522,7 @@
     if-ne p1, v1, :cond_0
 
     .line 167
-    iput v6, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGT:I
+    iput v6, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdO:I
 
     .line 168
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->getText()Landroid/text/Editable;
@@ -535,7 +535,7 @@
 
     .line 170
     :try_start_0
-    invoke-direct {p0, v1}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->Az(Ljava/lang/String;)V
+    invoke-direct {p0, v1}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->CA(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -548,7 +548,7 @@
     :catch_0
     move-exception v2
 
-    const-string/jumbo v2, "!44@/B4Tb64lLpKV1gYdF8HNDrIV/d4j0/6hFGTPpQharhE="
+    const-string/jumbo v2, "MicroMsg.MMClearEditText"
 
     const-string/jumbo v3, "!!MMClearEditText Exception %d"
 
@@ -556,7 +556,7 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    iget v5, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGT:I
+    iget v5, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdO:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -564,21 +564,21 @@
 
     aput-object v5, v4, v6
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 173
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGT:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdO:I
 
     const/4 v3, 0x3
 
     if-ge v2, v3, :cond_1
 
     .line 174
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGT:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdO:I
 
     add-int/lit8 v2, v2, 0x1
 
-    iput v2, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGT:I
+    iput v2, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->jdO:I
 
     .line 175
     new-instance v2, Ljava/lang/StringBuilder;
@@ -596,30 +596,19 @@
     move-result-object v1
 
     .line 176
-    invoke-direct {p0, v1}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->Az(Ljava/lang/String;)V
+    invoke-direct {p0, v1}, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->CA(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 178
     :cond_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpKV1gYdF8HNDrIV/d4j0/6hFGTPpQharhE="
+    const-string/jumbo v1, "MicroMsg.MMClearEditText"
 
     const-string/jumbo v2, "!!MMClearEditText, IndexOutOfBoundsException cannot fix"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
-.end method
-
-.method public setCallback(Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$a;)V
-    .locals 0
-
-    .prologue
-    .line 246
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->iGQ:Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText$a;
-
-    .line 247
-    return-void
 .end method
 
 .method public setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
@@ -627,7 +616,7 @@
 
     .prologue
     .line 205
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->fPV:Landroid/view/View$OnFocusChangeListener;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;->fYY:Landroid/view/View$OnFocusChangeListener;
 
     .line 206
     return-void

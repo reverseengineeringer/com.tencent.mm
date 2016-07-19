@@ -3,7 +3,7 @@ package com.tencent.mm.ui.bindlinkedin;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.model.h;
 
 final class InviteLinkedInFriendUI$3
@@ -15,9 +15,9 @@ final class InviteLinkedInFriendUI$3
   {
     paramDialogInterface = new Intent();
     paramDialogInterface.putExtra("rawUrl", "http://www.linkedin.com/bind/plugin/");
-    paramDialogInterface.putExtra("geta8key_username", h.sc());
+    paramDialogInterface.putExtra("geta8key_username", h.se());
     paramDialogInterface.putExtra("geta8key_scene", 17);
-    c.a(kNW, "webview", "com.tencent.mm.plugin.webview.ui.tools.WebViewUI", paramDialogInterface, 100);
+    c.a(lnm, "webview", "com.tencent.mm.plugin.webview.ui.tools.WebViewUI", paramDialogInterface, 100);
   }
 }
 

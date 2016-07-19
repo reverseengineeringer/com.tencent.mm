@@ -1,27 +1,15 @@
 package com.tencent.mm.app;
 
-import android.content.Context;
-import com.tencent.mm.pluginsdk.i.j;
-import com.tencent.mm.ui.MMAppMgr;
+import com.tencent.mm.e.a.ko;
+import com.tencent.mm.sdk.c.c;
 
 final class WorkerProfile$18
-  implements i.j
+  extends c<ko>
 {
-  WorkerProfile$18(WorkerProfile paramWorkerProfile) {}
-  
-  public final void ai(Context paramContext)
+  WorkerProfile$18(WorkerProfile paramWorkerProfile)
   {
-    MMAppMgr.b(paramContext, true);
-  }
-  
-  public final void b(Context paramContext, boolean paramBoolean)
-  {
-    MMAppMgr.b(paramContext, paramBoolean);
-  }
-  
-  public final boolean lb()
-  {
-    return MMAppMgr.lb();
+    super(0);
+    kum = ko.class.getName().hashCode();
   }
 }
 

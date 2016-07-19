@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic hGc:Landroid/widget/CheckBox;
+.field final synthetic hYb:Landroid/widget/CheckBox;
 
-.field final synthetic krb:Lcom/tencent/mm/ui/s;
+.field final synthetic kQi:Lcom/tencent/mm/ui/s;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 577
-    iput-object p1, p0, Lcom/tencent/mm/ui/s$4;->krb:Lcom/tencent/mm/ui/s;
+    .line 578
+    iput-object p1, p0, Lcom/tencent/mm/ui/s$4;->kQi:Lcom/tencent/mm/ui/s;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/s$4;->hGc:Landroid/widget/CheckBox;
+    iput-object p2, p0, Lcom/tencent/mm/ui/s$4;->hYb:Landroid/widget/CheckBox;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,23 +44,23 @@
     .locals 3
 
     .prologue
-    .line 580
-    iget-object v0, p0, Lcom/tencent/mm/ui/s$4;->hGc:Landroid/widget/CheckBox;
+    .line 581
+    iget-object v0, p0, Lcom/tencent/mm/ui/s$4;->hYb:Landroid/widget/CheckBox;
 
     if-eqz v0, :cond_0
 
-    .line 581
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 582
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v1
 
     const/16 v2, 0x1008
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/s$4;->hGc:Landroid/widget/CheckBox;
+    iget-object v0, p0, Lcom/tencent/mm/ui/s$4;->hYb:Landroid/widget/CheckBox;
 
     invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -77,34 +77,34 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
-    .line 583
+    .line 584
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/ui/LauncherUI;->bat()Lcom/tencent/mm/ui/LauncherUI;
+    invoke-static {}, Lcom/tencent/mm/ui/LauncherUI;->bfJ()Lcom/tencent/mm/ui/LauncherUI;
 
     move-result-object v0
 
-    .line 584
+    .line 585
     if-eqz v0, :cond_1
 
-    .line 585
+    .line 586
     const-string/jumbo v1, "tab_find_friend"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->Gi(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->Ix(Ljava/lang/String;)V
 
-    .line 587
+    .line 588
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/s$4;->krb:Lcom/tencent/mm/ui/s;
+    iget-object v0, p0, Lcom/tencent/mm/ui/s$4;->kQi:Lcom/tencent/mm/ui/s;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/s;->c(Lcom/tencent/mm/ui/s;)Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/ap/a;->cC(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/tencent/mm/at/a;->cy(Landroid/content/Context;)V
 
-    .line 588
+    .line 589
     return-void
 
-    .line 581
+    .line 582
     :cond_2
     const/4 v0, 0x0
 

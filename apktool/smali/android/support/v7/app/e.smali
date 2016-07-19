@@ -4,53 +4,71 @@
 
 
 # instance fields
-.field private ce:Ljava/util/ArrayList;
+.field private cs:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private iG:Landroid/support/v7/app/ActionBarActivity;
+.field private iX:Landroid/support/v7/app/ActionBarActivity;
 
-.field private iZ:Landroid/content/Context;
+.field private jA:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private ja:Landroid/support/v7/internal/widget/ActionBarOverlayLayout;
+.field private jB:I
 
-.field private jb:Landroid/support/v7/internal/widget/ActionBarContainer;
+.field private jC:Z
 
-.field private jc:Landroid/view/ViewGroup;
+.field private jD:I
 
-.field private jd:Landroid/support/v7/internal/widget/ActionBarView;
+.field private jE:Z
 
-.field private je:Landroid/support/v7/internal/widget/ActionBarContextView;
+.field private jF:Z
 
-.field private jf:Landroid/support/v7/internal/widget/ActionBarContainer;
+.field jG:Z
 
-.field private jg:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
+.field private jH:Z
 
-.field private jh:I
+.field private jI:Z
 
-.field private ji:Z
+.field private jJ:Landroid/support/v7/app/ActionBar$a;
 
-.field private jj:Ljava/util/ArrayList;
+.field private jq:Landroid/content/Context;
 
-.field private jk:I
+.field private jr:Landroid/support/v7/internal/widget/ActionBarOverlayLayout;
 
-.field private jl:Z
+.field private js:Landroid/support/v7/internal/widget/ActionBarContainer;
 
-.field private jm:I
+.field private jt:Landroid/view/ViewGroup;
 
-.field private jn:Z
+.field private ju:Landroid/support/v7/internal/widget/ActionBarView;
 
-.field private jo:Z
+.field private jv:Landroid/support/v7/internal/widget/ActionBarContextView;
 
-.field jp:Z
+.field private jw:Landroid/support/v7/internal/widget/ActionBarContainer;
 
-.field private jq:Z
+.field private jx:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
 
-.field private jr:Z
+.field private jy:I
 
-.field private js:Landroid/support/v7/app/ActionBar$a;
+.field private jz:Z
 
 .field mContext:Landroid/content/Context;
 
-.field final mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
+.field final mHandler:Lcom/tencent/mm/sdk/platformtools/ac;
 
 
 # direct methods
@@ -70,46 +88,46 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v7/app/e;->ce:Ljava/util/ArrayList;
+    iput-object v0, p0, Landroid/support/v7/app/e;->cs:Ljava/util/ArrayList;
 
     .line 73
     const/4 v0, -0x1
 
-    iput v0, p0, Landroid/support/v7/app/e;->jh:I
+    iput v0, p0, Landroid/support/v7/app/e;->jy:I
 
     .line 82
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v7/app/e;->jj:Ljava/util/ArrayList;
+    iput-object v0, p0, Landroid/support/v7/app/e;->jA:Ljava/util/ArrayList;
 
     .line 93
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v7/app/e;->mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object v0, p0, Landroid/support/v7/app/e;->mHandler:Lcom/tencent/mm/sdk/platformtools/ac;
 
     .line 96
-    iput v2, p0, Landroid/support/v7/app/e;->jm:I
+    iput v2, p0, Landroid/support/v7/app/e;->jD:I
 
     .line 102
-    iput-boolean v1, p0, Landroid/support/v7/app/e;->jq:Z
+    iput-boolean v1, p0, Landroid/support/v7/app/e;->jH:Z
 
     .line 108
-    iput-object p1, p0, Landroid/support/v7/app/e;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iput-object p1, p0, Landroid/support/v7/app/e;->iX:Landroid/support/v7/app/ActionBarActivity;
 
     .line 109
     iput-object p1, p0, Landroid/support/v7/app/e;->mContext:Landroid/content/Context;
 
     .line 110
-    iput-object p2, p0, Landroid/support/v7/app/e;->js:Landroid/support/v7/app/ActionBar$a;
+    iput-object p2, p0, Landroid/support/v7/app/e;->jJ:Landroid/support/v7/app/ActionBar$a;
 
     .line 111
-    iget-object v3, p0, Landroid/support/v7/app/e;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v3, p0, Landroid/support/v7/app/e;->iX:Landroid/support/v7/app/ActionBarActivity;
 
-    const v0, 0x7f071106
+    const v0, 0x7f100099
 
     invoke-virtual {v3, v0}, Landroid/support/v7/app/ActionBarActivity;->findViewById(I)Landroid/view/View;
 
@@ -117,18 +135,18 @@
 
     check-cast v0, Landroid/support/v7/internal/widget/ActionBarOverlayLayout;
 
-    iput-object v0, p0, Landroid/support/v7/app/e;->ja:Landroid/support/v7/internal/widget/ActionBarOverlayLayout;
+    iput-object v0, p0, Landroid/support/v7/app/e;->jr:Landroid/support/v7/internal/widget/ActionBarOverlayLayout;
 
-    iget-object v0, p0, Landroid/support/v7/app/e;->ja:Landroid/support/v7/internal/widget/ActionBarOverlayLayout;
+    iget-object v0, p0, Landroid/support/v7/app/e;->jr:Landroid/support/v7/internal/widget/ActionBarOverlayLayout;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/app/e;->ja:Landroid/support/v7/internal/widget/ActionBarOverlayLayout;
+    iget-object v0, p0, Landroid/support/v7/app/e;->jr:Landroid/support/v7/internal/widget/ActionBarOverlayLayout;
 
-    invoke-virtual {v0, p0}, Landroid/support/v7/internal/widget/ActionBarOverlayLayout;->setActionBar(Landroid/support/v7/app/ActionBar;)V
+    iput-object p0, v0, Landroid/support/v7/internal/widget/ActionBarOverlayLayout;->iY:Landroid/support/v7/app/ActionBar;
 
     :cond_0
-    const v0, 0x7f0710ff
+    const v0, 0x7f100096
 
     invoke-virtual {v3, v0}, Landroid/support/v7/app/ActionBarActivity;->findViewById(I)Landroid/view/View;
 
@@ -136,9 +154,9 @@
 
     check-cast v0, Landroid/support/v7/internal/widget/ActionBarView;
 
-    iput-object v0, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iput-object v0, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
-    const v0, 0x7f071100
+    const v0, 0x7f100097
 
     invoke-virtual {v3, v0}, Landroid/support/v7/app/ActionBarActivity;->findViewById(I)Landroid/view/View;
 
@@ -146,9 +164,9 @@
 
     check-cast v0, Landroid/support/v7/internal/widget/ActionBarContextView;
 
-    iput-object v0, p0, Landroid/support/v7/app/e;->je:Landroid/support/v7/internal/widget/ActionBarContextView;
+    iput-object v0, p0, Landroid/support/v7/app/e;->jv:Landroid/support/v7/internal/widget/ActionBarContextView;
 
-    const v0, 0x7f0710fe
+    const v0, 0x7f100095
 
     invoke-virtual {v3, v0}, Landroid/support/v7/app/ActionBarActivity;->findViewById(I)Landroid/view/View;
 
@@ -156,9 +174,9 @@
 
     check-cast v0, Landroid/support/v7/internal/widget/ActionBarContainer;
 
-    iput-object v0, p0, Landroid/support/v7/app/e;->jb:Landroid/support/v7/internal/widget/ActionBarContainer;
+    iput-object v0, p0, Landroid/support/v7/app/e;->js:Landroid/support/v7/internal/widget/ActionBarContainer;
 
-    const v0, 0x7f071107
+    const v0, 0x7f10009a
 
     invoke-virtual {v3, v0}, Landroid/support/v7/app/ActionBarActivity;->findViewById(I)Landroid/view/View;
 
@@ -166,18 +184,18 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    iput-object v0, p0, Landroid/support/v7/app/e;->jc:Landroid/view/ViewGroup;
+    iput-object v0, p0, Landroid/support/v7/app/e;->jt:Landroid/view/ViewGroup;
 
-    iget-object v0, p0, Landroid/support/v7/app/e;->jc:Landroid/view/ViewGroup;
+    iget-object v0, p0, Landroid/support/v7/app/e;->jt:Landroid/view/ViewGroup;
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Landroid/support/v7/app/e;->jb:Landroid/support/v7/internal/widget/ActionBarContainer;
+    iget-object v0, p0, Landroid/support/v7/app/e;->js:Landroid/support/v7/internal/widget/ActionBarContainer;
 
-    iput-object v0, p0, Landroid/support/v7/app/e;->jc:Landroid/view/ViewGroup;
+    iput-object v0, p0, Landroid/support/v7/app/e;->jt:Landroid/view/ViewGroup;
 
     :cond_1
-    const v0, 0x7f071101
+    const v0, 0x7f100098
 
     invoke-virtual {v3, v0}, Landroid/support/v7/app/ActionBarActivity;->findViewById(I)Landroid/view/View;
 
@@ -185,17 +203,17 @@
 
     check-cast v0, Landroid/support/v7/internal/widget/ActionBarContainer;
 
-    iput-object v0, p0, Landroid/support/v7/app/e;->jf:Landroid/support/v7/internal/widget/ActionBarContainer;
+    iput-object v0, p0, Landroid/support/v7/app/e;->jw:Landroid/support/v7/internal/widget/ActionBarContainer;
 
-    iget-object v0, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Landroid/support/v7/app/e;->je:Landroid/support/v7/internal/widget/ActionBarContextView;
+    iget-object v0, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Landroid/support/v7/app/e;->jb:Landroid/support/v7/internal/widget/ActionBarContainer;
+    iget-object v0, p0, Landroid/support/v7/app/e;->jv:Landroid/support/v7/internal/widget/ActionBarContextView;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Landroid/support/v7/app/e;->js:Landroid/support/v7/internal/widget/ActionBarContainer;
 
     if-nez v0, :cond_3
 
@@ -233,15 +251,15 @@
     throw v0
 
     :cond_3
-    iget-object v0, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
-    iget-object v3, p0, Landroid/support/v7/app/e;->je:Landroid/support/v7/internal/widget/ActionBarContextView;
+    iget-object v3, p0, Landroid/support/v7/app/e;->jv:Landroid/support/v7/internal/widget/ActionBarContextView;
 
-    invoke-virtual {v0, v3}, Landroid/support/v7/internal/widget/ActionBarView;->setContextView(Landroid/support/v7/internal/widget/ActionBarContextView;)V
+    iput-object v3, v0, Landroid/support/v7/internal/widget/ActionBarView;->jv:Landroid/support/v7/internal/widget/ActionBarContextView;
 
-    iget-object v0, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
-    invoke-virtual {v0}, Landroid/support/v7/internal/widget/ActionBarView;->bO()Z
+    invoke-virtual {v0}, Landroid/support/v7/internal/widget/ActionBarView;->bP()Z
 
     move-result v0
 
@@ -250,13 +268,11 @@
     move v0, v1
 
     :goto_0
-    iput v0, p0, Landroid/support/v7/app/e;->jk:I
+    iput v0, p0, Landroid/support/v7/app/e;->jB:I
 
-    iget-object v0, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
-    invoke-virtual {v0}, Landroid/support/v7/internal/widget/ActionBarView;->getDisplayOptions()I
-
-    move-result v0
+    iget v0, v0, Landroid/support/v7/internal/widget/ActionBarView;->nU:I
 
     and-int/lit8 v0, v0, 0x4
 
@@ -267,12 +283,12 @@
     :goto_1
     if-eqz v0, :cond_4
 
-    iput-boolean v1, p0, Landroid/support/v7/app/e;->ji:Z
+    iput-boolean v1, p0, Landroid/support/v7/app/e;->jz:Z
 
     :cond_4
     iget-object v3, p0, Landroid/support/v7/app/e;->mContext:Landroid/content/Context;
 
-    invoke-static {v3}, Landroid/support/v7/internal/view/a;->m(Landroid/content/Context;)Landroid/support/v7/internal/view/a;
+    invoke-static {v3}, Landroid/support/v7/internal/view/a;->k(Landroid/content/Context;)Landroid/support/v7/internal/view/a;
 
     move-result-object v3
 
@@ -294,15 +310,15 @@
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Landroid/support/v7/app/e;->o(Z)V
+    invoke-virtual {p0, v0}, Landroid/support/v7/app/e;->n(Z)V
 
-    iget-object v0, p0, Landroid/support/v7/app/e;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Landroid/support/v7/app/e;->iX:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0}, Landroid/support/v7/app/ActionBarActivity;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v1, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-virtual {v1, v0}, Landroid/support/v7/internal/widget/ActionBarView;->setTitle(Ljava/lang/CharSequence;)V
 
@@ -326,11 +342,9 @@
 
     .prologue
     .line 294
-    iget-object v0, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
-    invoke-virtual {v0}, Landroid/support/v7/internal/widget/ActionBarView;->getDisplayOptions()I
-
-    move-result v0
+    iget v0, v0, Landroid/support/v7/internal/widget/ActionBarView;->nU:I
 
     .line 295
     and-int/lit8 v1, p2, 0x4
@@ -340,11 +354,11 @@
     .line 296
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Landroid/support/v7/app/e;->ji:Z
+    iput-boolean v1, p0, Landroid/support/v7/app/e;->jz:Z
 
     .line 298
     :cond_0
-    iget-object v1, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v1, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
     and-int v2, p1, p2
 
@@ -362,7 +376,7 @@
 
 
 # virtual methods
-.method public final aJ()V
+.method public final aI()V
     .locals 4
 
     .prologue
@@ -375,9 +389,9 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a05a6
+    const v1, 0x7f03001e
 
-    iget-object v2, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v2, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
     const/4 v3, 0x0
 
@@ -391,14 +405,14 @@
     return-void
 .end method
 
-.method public final aK()V
+.method public final aJ()V
     .locals 2
 
     .prologue
     .line 200
-    iget-object v0, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
-    const v1, 0x7f040002
+    const v1, 0x7f0208c7
 
     invoke-virtual {v0, v1}, Landroid/support/v7/internal/widget/ActionBarView;->setIcon(I)V
 
@@ -406,7 +420,7 @@
     return-void
 .end method
 
-.method public final aL()V
+.method public final aK()V
     .locals 2
 
     .prologue
@@ -418,6 +432,21 @@
     invoke-direct {p0, v0, v1}, Landroid/support/v7/app/e;->setDisplayOptions(II)V
 
     .line 309
+    return-void
+.end method
+
+.method public final aL()V
+    .locals 2
+
+    .prologue
+    .line 318
+    const/4 v0, 0x0
+
+    const/16 v1, 0x8
+
+    invoke-direct {p0, v0, v1}, Landroid/support/v7/app/e;->setDisplayOptions(II)V
+
+    .line 319
     return-void
 .end method
 
@@ -445,11 +474,11 @@
     const/4 v1, 0x0
 
     .line 961
-    iget-boolean v2, p0, Landroid/support/v7/app/e;->jn:Z
+    iget-boolean v2, p0, Landroid/support/v7/app/e;->jE:Z
 
-    iget-boolean v3, p0, Landroid/support/v7/app/e;->jo:Z
+    iget-boolean v3, p0, Landroid/support/v7/app/e;->jF:Z
 
-    iget-boolean v4, p0, Landroid/support/v7/app/e;->jp:Z
+    iget-boolean v4, p0, Landroid/support/v7/app/e;->jG:Z
 
     if-nez v4, :cond_4
 
@@ -465,19 +494,19 @@
     if-eqz v2, :cond_6
 
     .line 964
-    iget-boolean v2, p0, Landroid/support/v7/app/e;->jq:Z
+    iget-boolean v2, p0, Landroid/support/v7/app/e;->jH:Z
 
     if-nez v2, :cond_3
 
     .line 965
-    iput-boolean v0, p0, Landroid/support/v7/app/e;->jq:Z
+    iput-boolean v0, p0, Landroid/support/v7/app/e;->jH:Z
 
     .line 966
-    iget-object v2, p0, Landroid/support/v7/app/e;->jc:Landroid/view/ViewGroup;
+    iget-object v2, p0, Landroid/support/v7/app/e;->jt:Landroid/view/ViewGroup;
 
     invoke-virtual {v2}, Landroid/view/ViewGroup;->clearAnimation()V
 
-    iget-object v2, p0, Landroid/support/v7/app/e;->jc:Landroid/view/ViewGroup;
+    iget-object v2, p0, Landroid/support/v7/app/e;->jt:Landroid/view/ViewGroup;
 
     invoke-virtual {v2}, Landroid/view/ViewGroup;->getVisibility()I
 
@@ -496,26 +525,26 @@
 
     iget-object v2, p0, Landroid/support/v7/app/e;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f020068
+    const v3, 0x7f040003
 
     invoke-static {v2, v3}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v2
 
-    iget-object v3, p0, Landroid/support/v7/app/e;->jc:Landroid/view/ViewGroup;
+    iget-object v3, p0, Landroid/support/v7/app/e;->jt:Landroid/view/ViewGroup;
 
     invoke-virtual {v3, v2}, Landroid/view/ViewGroup;->startAnimation(Landroid/view/animation/Animation;)V
 
     :cond_1
-    iget-object v2, p0, Landroid/support/v7/app/e;->jc:Landroid/view/ViewGroup;
+    iget-object v2, p0, Landroid/support/v7/app/e;->jt:Landroid/view/ViewGroup;
 
     invoke-virtual {v2, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    iget-object v2, p0, Landroid/support/v7/app/e;->jf:Landroid/support/v7/internal/widget/ActionBarContainer;
+    iget-object v2, p0, Landroid/support/v7/app/e;->jw:Landroid/support/v7/internal/widget/ActionBarContainer;
 
     if-eqz v2, :cond_3
 
-    iget-object v2, p0, Landroid/support/v7/app/e;->jf:Landroid/support/v7/internal/widget/ActionBarContainer;
+    iget-object v2, p0, Landroid/support/v7/app/e;->jw:Landroid/support/v7/internal/widget/ActionBarContainer;
 
     invoke-virtual {v2}, Landroid/support/v7/internal/widget/ActionBarContainer;->getVisibility()I
 
@@ -527,18 +556,18 @@
 
     iget-object v0, p0, Landroid/support/v7/app/e;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f02006b
+    const v2, 0x7f040002
 
     invoke-static {v0, v2}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v0
 
-    iget-object v2, p0, Landroid/support/v7/app/e;->jf:Landroid/support/v7/internal/widget/ActionBarContainer;
+    iget-object v2, p0, Landroid/support/v7/app/e;->jw:Landroid/support/v7/internal/widget/ActionBarContainer;
 
     invoke-virtual {v2, v0}, Landroid/support/v7/internal/widget/ActionBarContainer;->startAnimation(Landroid/view/animation/Animation;)V
 
     :cond_2
-    iget-object v0, p0, Landroid/support/v7/app/e;->jf:Landroid/support/v7/internal/widget/ActionBarContainer;
+    iget-object v0, p0, Landroid/support/v7/app/e;->jw:Landroid/support/v7/internal/widget/ActionBarContainer;
 
     invoke-virtual {v0, v1}, Landroid/support/v7/internal/widget/ActionBarContainer;->setVisibility(I)V
 
@@ -561,19 +590,19 @@
 
     .line 969
     :cond_6
-    iget-boolean v2, p0, Landroid/support/v7/app/e;->jq:Z
+    iget-boolean v2, p0, Landroid/support/v7/app/e;->jH:Z
 
     if-eqz v2, :cond_3
 
     .line 970
-    iput-boolean v1, p0, Landroid/support/v7/app/e;->jq:Z
+    iput-boolean v1, p0, Landroid/support/v7/app/e;->jH:Z
 
     .line 971
-    iget-object v2, p0, Landroid/support/v7/app/e;->jc:Landroid/view/ViewGroup;
+    iget-object v2, p0, Landroid/support/v7/app/e;->jt:Landroid/view/ViewGroup;
 
     invoke-virtual {v2}, Landroid/view/ViewGroup;->clearAnimation()V
 
-    iget-object v2, p0, Landroid/support/v7/app/e;->jc:Landroid/view/ViewGroup;
+    iget-object v2, p0, Landroid/support/v7/app/e;->jt:Landroid/view/ViewGroup;
 
     invoke-virtual {v2}, Landroid/view/ViewGroup;->getVisibility()I
 
@@ -592,26 +621,26 @@
 
     iget-object v1, p0, Landroid/support/v7/app/e;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f020067
+    const v2, 0x7f040005
 
     invoke-static {v1, v2}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v1
 
-    iget-object v2, p0, Landroid/support/v7/app/e;->jc:Landroid/view/ViewGroup;
+    iget-object v2, p0, Landroid/support/v7/app/e;->jt:Landroid/view/ViewGroup;
 
     invoke-virtual {v2, v1}, Landroid/view/ViewGroup;->startAnimation(Landroid/view/animation/Animation;)V
 
     :cond_7
-    iget-object v1, p0, Landroid/support/v7/app/e;->jc:Landroid/view/ViewGroup;
+    iget-object v1, p0, Landroid/support/v7/app/e;->jt:Landroid/view/ViewGroup;
 
     invoke-virtual {v1, v5}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    iget-object v1, p0, Landroid/support/v7/app/e;->jf:Landroid/support/v7/internal/widget/ActionBarContainer;
+    iget-object v1, p0, Landroid/support/v7/app/e;->jw:Landroid/support/v7/internal/widget/ActionBarContainer;
 
     if-eqz v1, :cond_3
 
-    iget-object v1, p0, Landroid/support/v7/app/e;->jf:Landroid/support/v7/internal/widget/ActionBarContainer;
+    iget-object v1, p0, Landroid/support/v7/app/e;->jw:Landroid/support/v7/internal/widget/ActionBarContainer;
 
     invoke-virtual {v1}, Landroid/support/v7/internal/widget/ActionBarContainer;->getVisibility()I
 
@@ -623,18 +652,18 @@
 
     iget-object v0, p0, Landroid/support/v7/app/e;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f020066
+    const v1, 0x7f040004
 
     invoke-static {v0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/v7/app/e;->jf:Landroid/support/v7/internal/widget/ActionBarContainer;
+    iget-object v1, p0, Landroid/support/v7/app/e;->jw:Landroid/support/v7/internal/widget/ActionBarContainer;
 
     invoke-virtual {v1, v0}, Landroid/support/v7/internal/widget/ActionBarContainer;->startAnimation(Landroid/view/animation/Animation;)V
 
     :cond_8
-    iget-object v0, p0, Landroid/support/v7/app/e;->jf:Landroid/support/v7/internal/widget/ActionBarContainer;
+    iget-object v0, p0, Landroid/support/v7/app/e;->jw:Landroid/support/v7/internal/widget/ActionBarContainer;
 
     invoke-virtual {v0, v5}, Landroid/support/v7/internal/widget/ActionBarContainer;->setVisibility(I)V
 
@@ -651,7 +680,7 @@
 
     .prologue
     .line 1034
-    iget-boolean v0, p0, Landroid/support/v7/app/e;->jr:Z
+    iget-boolean v0, p0, Landroid/support/v7/app/e;->jI:Z
 
     return v0
 .end method
@@ -661,11 +690,9 @@
 
     .prologue
     .line 338
-    iget-object v0, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
-    invoke-virtual {v0}, Landroid/support/v7/internal/widget/ActionBarView;->getCustomNavigationView()Landroid/view/View;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/v7/internal/widget/ActionBarView;->ob:Landroid/view/View;
 
     return-object v0
 .end method
@@ -675,11 +702,9 @@
 
     .prologue
     .line 382
-    iget-object v0, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
-    invoke-virtual {v0}, Landroid/support/v7/internal/widget/ActionBarView;->getDisplayOptions()I
-
-    move-result v0
+    iget v0, v0, Landroid/support/v7/internal/widget/ActionBarView;->nU:I
 
     return v0
 .end method
@@ -689,7 +714,7 @@
 
     .prologue
     .line 520
-    iget-object v0, p0, Landroid/support/v7/app/e;->jb:Landroid/support/v7/internal/widget/ActionBarContainer;
+    iget-object v0, p0, Landroid/support/v7/app/e;->js:Landroid/support/v7/internal/widget/ActionBarContainer;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/widget/ActionBarContainer;->getHeight()I
 
@@ -703,7 +728,7 @@
 
     .prologue
     .line 503
-    iget-object v0, p0, Landroid/support/v7/app/e;->iZ:Landroid/content/Context;
+    iget-object v0, p0, Landroid/support/v7/app/e;->jq:Landroid/content/Context;
 
     if-nez v0, :cond_0
 
@@ -720,7 +745,7 @@
     move-result-object v1
 
     .line 506
-    const v2, 0x7f010093
+    const v2, 0x7f010008
 
     const/4 v3, 0x1
 
@@ -739,12 +764,12 @@
 
     invoke-direct {v1, v2, v0}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
-    iput-object v1, p0, Landroid/support/v7/app/e;->iZ:Landroid/content/Context;
+    iput-object v1, p0, Landroid/support/v7/app/e;->jq:Landroid/content/Context;
 
     .line 515
     :cond_0
     :goto_0
-    iget-object v0, p0, Landroid/support/v7/app/e;->iZ:Landroid/content/Context;
+    iget-object v0, p0, Landroid/support/v7/app/e;->jq:Landroid/content/Context;
 
     return-object v0
 
@@ -752,7 +777,7 @@
     :cond_1
     iget-object v0, p0, Landroid/support/v7/app/e;->mContext:Landroid/content/Context;
 
-    iput-object v0, p0, Landroid/support/v7/app/e;->iZ:Landroid/content/Context;
+    iput-object v0, p0, Landroid/support/v7/app/e;->jq:Landroid/content/Context;
 
     goto :goto_0
 .end method
@@ -762,11 +787,9 @@
 
     .prologue
     .line 343
-    iget-object v0, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
-    invoke-virtual {v0}, Landroid/support/v7/internal/widget/ActionBarView;->getTitle()Ljava/lang/CharSequence;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/v7/internal/widget/ActionBarView;->kD:Ljava/lang/CharSequence;
 
     return-object v0
 .end method
@@ -776,14 +799,14 @@
 
     .prologue
     .line 540
-    iget-boolean v0, p0, Landroid/support/v7/app/e;->jn:Z
+    iget-boolean v0, p0, Landroid/support/v7/app/e;->jE:Z
 
     if-nez v0, :cond_0
 
     .line 541
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroid/support/v7/app/e;->jn:Z
+    iput-boolean v0, p0, Landroid/support/v7/app/e;->jE:Z
 
     .line 542
     invoke-virtual {p0}, Landroid/support/v7/app/e;->aW()V
@@ -798,12 +821,12 @@
 
     .prologue
     .line 555
-    iget-boolean v0, p0, Landroid/support/v7/app/e;->jq:Z
+    iget-boolean v0, p0, Landroid/support/v7/app/e;->jH:Z
 
     return v0
 .end method
 
-.method final o(Z)V
+.method final n(Z)V
     .locals 5
 
     .prologue
@@ -814,32 +837,30 @@
     const/4 v2, 0x0
 
     .line 156
-    iput-boolean p1, p0, Landroid/support/v7/app/e;->jl:Z
+    iput-boolean p1, p0, Landroid/support/v7/app/e;->jC:Z
 
     .line 158
-    iget-boolean v0, p0, Landroid/support/v7/app/e;->jl:Z
+    iget-boolean v0, p0, Landroid/support/v7/app/e;->jC:Z
 
     if-nez v0, :cond_1
 
     .line 159
-    iget-object v0, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
-    invoke-virtual {v0, v3}, Landroid/support/v7/internal/widget/ActionBarView;->setEmbeddedTabView(Landroid/support/v7/internal/widget/ScrollingTabContainerView;)V
+    invoke-virtual {v0, v3}, Landroid/support/v7/internal/widget/ActionBarView;->b(Landroid/support/v7/internal/widget/ScrollingTabContainerView;)V
 
     .line 160
-    iget-object v0, p0, Landroid/support/v7/app/e;->jb:Landroid/support/v7/internal/widget/ActionBarContainer;
+    iget-object v0, p0, Landroid/support/v7/app/e;->js:Landroid/support/v7/internal/widget/ActionBarContainer;
 
-    iget-object v3, p0, Landroid/support/v7/app/e;->jg:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
+    iget-object v3, p0, Landroid/support/v7/app/e;->jx:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
 
-    invoke-virtual {v0, v3}, Landroid/support/v7/internal/widget/ActionBarContainer;->setTabContainer(Landroid/support/v7/internal/widget/ScrollingTabContainerView;)V
+    invoke-virtual {v0, v3}, Landroid/support/v7/internal/widget/ActionBarContainer;->a(Landroid/support/v7/internal/widget/ScrollingTabContainerView;)V
 
     .line 165
     :goto_0
-    iget-object v0, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
-    invoke-virtual {v0}, Landroid/support/v7/internal/widget/ActionBarView;->getNavigationMode()I
-
-    move-result v0
+    iget v0, v0, Landroid/support/v7/internal/widget/ActionBarView;->nT:I
 
     const/4 v3, 0x2
 
@@ -849,7 +870,7 @@
 
     .line 166
     :goto_1
-    iget-object v3, p0, Landroid/support/v7/app/e;->jg:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
+    iget-object v3, p0, Landroid/support/v7/app/e;->jx:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
 
     if-eqz v3, :cond_0
 
@@ -857,39 +878,39 @@
     if-eqz v0, :cond_3
 
     .line 168
-    iget-object v3, p0, Landroid/support/v7/app/e;->jg:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
+    iget-object v3, p0, Landroid/support/v7/app/e;->jx:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
 
     invoke-virtual {v3, v2}, Landroid/support/v7/internal/widget/ScrollingTabContainerView;->setVisibility(I)V
 
     .line 173
     :cond_0
     :goto_2
-    iget-object v3, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v3, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
-    iget-boolean v4, p0, Landroid/support/v7/app/e;->jl:Z
+    iget-boolean v4, p0, Landroid/support/v7/app/e;->jC:Z
 
     if-nez v4, :cond_4
 
     if-eqz v0, :cond_4
 
     :goto_3
-    invoke-virtual {v3, v1}, Landroid/support/v7/internal/widget/ActionBarView;->setCollapsable(Z)V
+    iput-boolean v1, v3, Landroid/support/v7/internal/widget/ActionBarView;->ok:Z
 
     .line 174
     return-void
 
     .line 162
     :cond_1
-    iget-object v0, p0, Landroid/support/v7/app/e;->jb:Landroid/support/v7/internal/widget/ActionBarContainer;
+    iget-object v0, p0, Landroid/support/v7/app/e;->js:Landroid/support/v7/internal/widget/ActionBarContainer;
 
-    invoke-virtual {v0, v3}, Landroid/support/v7/internal/widget/ActionBarContainer;->setTabContainer(Landroid/support/v7/internal/widget/ScrollingTabContainerView;)V
+    invoke-virtual {v0, v3}, Landroid/support/v7/internal/widget/ActionBarContainer;->a(Landroid/support/v7/internal/widget/ScrollingTabContainerView;)V
 
     .line 163
-    iget-object v0, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
-    iget-object v3, p0, Landroid/support/v7/app/e;->jg:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
+    iget-object v3, p0, Landroid/support/v7/app/e;->jx:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
 
-    invoke-virtual {v0, v3}, Landroid/support/v7/internal/widget/ActionBarView;->setEmbeddedTabView(Landroid/support/v7/internal/widget/ScrollingTabContainerView;)V
+    invoke-virtual {v0, v3}, Landroid/support/v7/internal/widget/ActionBarView;->b(Landroid/support/v7/internal/widget/ScrollingTabContainerView;)V
 
     goto :goto_0
 
@@ -901,7 +922,7 @@
 
     .line 170
     :cond_3
-    iget-object v3, p0, Landroid/support/v7/app/e;->jg:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
+    iget-object v3, p0, Landroid/support/v7/app/e;->jx:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
 
     const/16 v4, 0x8
 
@@ -916,28 +937,28 @@
     goto :goto_3
 .end method
 
-.method public final p(Z)V
+.method public final o(Z)V
     .locals 1
 
     .prologue
     .line 977
-    iput-boolean p1, p0, Landroid/support/v7/app/e;->jr:Z
+    iput-boolean p1, p0, Landroid/support/v7/app/e;->jI:Z
 
     .line 978
     if-nez p1, :cond_0
 
     .line 979
-    iget-object v0, p0, Landroid/support/v7/app/e;->jc:Landroid/view/ViewGroup;
+    iget-object v0, p0, Landroid/support/v7/app/e;->jt:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->clearAnimation()V
 
     .line 980
-    iget-object v0, p0, Landroid/support/v7/app/e;->jf:Landroid/support/v7/internal/widget/ActionBarContainer;
+    iget-object v0, p0, Landroid/support/v7/app/e;->jw:Landroid/support/v7/internal/widget/ActionBarContainer;
 
     if-eqz v0, :cond_0
 
     .line 981
-    iget-object v0, p0, Landroid/support/v7/app/e;->jf:Landroid/support/v7/internal/widget/ActionBarContainer;
+    iget-object v0, p0, Landroid/support/v7/app/e;->jw:Landroid/support/v7/internal/widget/ActionBarContainer;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/widget/ActionBarContainer;->clearAnimation()V
 
@@ -951,9 +972,9 @@
 
     .prologue
     .line 333
-    iget-object v0, p0, Landroid/support/v7/app/e;->jb:Landroid/support/v7/internal/widget/ActionBarContainer;
+    iget-object v0, p0, Landroid/support/v7/app/e;->js:Landroid/support/v7/internal/widget/ActionBarContainer;
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/internal/widget/ActionBarContainer;->setPrimaryBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p1}, Landroid/support/v7/internal/widget/ActionBarContainer;->b(Landroid/graphics/drawable/Drawable;)V
 
     .line 334
     return-void
@@ -964,9 +985,9 @@
 
     .prologue
     .line 182
-    iget-object v0, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/internal/widget/ActionBarView;->setCustomNavigationView(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Landroid/support/v7/internal/widget/ActionBarView;->F(Landroid/view/View;)V
 
     .line 183
     return-void
@@ -1008,11 +1029,11 @@
     .line 287
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroid/support/v7/app/e;->ji:Z
+    iput-boolean v0, p0, Landroid/support/v7/app/e;->jz:Z
 
     .line 289
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-virtual {v0, p1}, Landroid/support/v7/internal/widget/ActionBarView;->setDisplayOptions(I)V
 
@@ -1020,36 +1041,12 @@
     return-void
 .end method
 
-.method public final setDisplayShowTitleEnabled(Z)V
-    .locals 2
-
-    .prologue
-    const/16 v1, 0x8
-
-    .line 318
-    if-eqz p1, :cond_0
-
-    move v0, v1
-
-    :goto_0
-    invoke-direct {p0, v0, v1}, Landroid/support/v7/app/e;->setDisplayOptions(II)V
-
-    .line 319
-    return-void
-
-    .line 318
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
 .method public final setHomeButtonEnabled(Z)V
     .locals 1
 
     .prologue
     .line 328
-    iget-object v0, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-virtual {v0, p1}, Landroid/support/v7/internal/widget/ActionBarView;->setHomeButtonEnabled(Z)V
 
@@ -1062,7 +1059,7 @@
 
     .prologue
     .line 215
-    iget-object v0, p0, Landroid/support/v7/app/e;->jd:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/app/e;->ju:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-virtual {v0, p1}, Landroid/support/v7/internal/widget/ActionBarView;->setLogo(Landroid/graphics/drawable/Drawable;)V
 
@@ -1075,14 +1072,14 @@
 
     .prologue
     .line 525
-    iget-boolean v0, p0, Landroid/support/v7/app/e;->jn:Z
+    iget-boolean v0, p0, Landroid/support/v7/app/e;->jE:Z
 
     if-eqz v0, :cond_0
 
     .line 526
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroid/support/v7/app/e;->jn:Z
+    iput-boolean v0, p0, Landroid/support/v7/app/e;->jE:Z
 
     .line 527
     invoke-virtual {p0}, Landroid/support/v7/app/e;->aW()V

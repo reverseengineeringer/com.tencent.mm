@@ -5,9 +5,9 @@ import java.util.List;
 
 public abstract interface m$j
 {
-  public abstract void a(m.k paramk, List paramList, HashSet paramHashSet, String[] paramArrayOfString, String paramString);
+  public abstract void a(m.k paramk, List<m.g> paramList, HashSet<String> paramHashSet, String[] paramArrayOfString, String paramString);
   
-  public abstract void iD(String paramString);
+  public abstract void iU(String paramString);
 }
 
 /* Location:

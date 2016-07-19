@@ -1,6 +1,6 @@
 package com.tencent.mm.pluginsdk.model;
 
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class i$1
   implements Runnable
@@ -9,12 +9,12 @@ final class i$1
   
   public final void run()
   {
-    final Object localObject = iAl.IB();
-    iAl.handler.post(new Runnable()
+    final Object localObject = iWL.Ja();
+    iWL.handler.post(new Runnable()
     {
       public final void run()
       {
-        iAl.onPostExecute(localObject);
+        iWL.onPostExecute(localObject);
       }
     });
   }

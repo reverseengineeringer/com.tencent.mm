@@ -5,10 +5,10 @@ import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import com.tencent.mm.modelsns.a;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.h.k;
-import com.tencent.mm.plugin.sns.h.l;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.i.k;
+import com.tencent.mm.plugin.sns.i.l;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SnsHeader$3
   implements View.OnClickListener
@@ -21,16 +21,16 @@ final class SnsHeader$3
     if ((paramView.getTag() instanceof String))
     {
       localObject = (String)paramView.getTag();
-      u.i("!32@/B4Tb64lLpLa/2+v7MkrLfzFBcAhlFoe", "sns Header localId " + (String)localObject);
-      paramView = ad.azi().vo((String)localObject);
-      if ((SnsHeader.h(hei) != null) && (paramView != null))
+      v.i("MicroMsg.SnsHeader", "sns Header localId " + (String)localObject);
+      paramView = ad.aBI().wA((String)localObject);
+      if ((SnsHeader.h(hsT) != null) && (paramView != null))
       {
         localIntent = new Intent();
-        localIntent.setClass(SnsHeader.h(hei), SnsCommentDetailUI.class);
+        localIntent.setClass(SnsHeader.h(hsT), SnsCommentDetailUI.class);
         if ((paramView != null) && (field_userName != null) && (!field_userName.equals(""))) {
           break label114;
         }
-        u.i("!32@/B4Tb64lLpLa/2+v7MkrLfzFBcAhlFoe", "error cntinfo or username is null");
+        v.i("MicroMsg.SnsHeader", "error cntinfo or username is null");
       }
     }
     return;
@@ -38,10 +38,10 @@ final class SnsHeader$3
     localIntent.putExtra("INTENT_TALKER", field_userName);
     localIntent.putExtra("INTENT_SNS_LOCAL_ID", (String)localObject);
     localIntent.putExtra("INTENT_FROMGALLERY", true);
-    Object localObject = a.dQ(726);
-    ((a)localObject).dT(hek).dT(bMq).dT(field_createTime);
-    ((a)localObject).CV();
-    SnsHeader.h(hei).startActivity(localIntent);
+    Object localObject = a.ex(726);
+    ((a)localObject).eA(hsW).eA(bFK).eA(field_createTime);
+    ((a)localObject).Dg();
+    SnsHeader.h(hsT).startActivity(localIntent);
   }
 }
 

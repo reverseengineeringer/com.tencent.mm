@@ -11,7 +11,7 @@ final class ActionBarView$2
   
   public final void onClick(View paramView)
   {
-    paramView = aoh).oi;
+    paramView = aox).oy;
     if (paramView != null) {
       paramView.collapseActionView();
     }

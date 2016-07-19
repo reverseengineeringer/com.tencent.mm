@@ -34,17 +34,6 @@ public final class b
     return localByteArrayOutputStream.toByteArray();
   }
   
-  public static boolean deleteFile(String paramString)
-  {
-    if (paramString == null) {}
-    do
-    {
-      return true;
-      paramString = new File(paramString);
-    } while (!paramString.exists());
-    return paramString.delete();
-  }
-  
   public static final boolean f(File paramFile)
   {
     int i = 0;

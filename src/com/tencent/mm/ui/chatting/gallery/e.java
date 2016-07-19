@@ -12,11 +12,11 @@ import android.util.SparseIntArray;
 import android.widget.ImageView;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.am;
-import com.tencent.mm.sdk.platformtools.am.a;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.ap;
+import com.tencent.mm.sdk.platformtools.ap.a;
+import com.tencent.mm.sdk.platformtools.v;
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -27,24 +27,24 @@ import java.util.Set;
 final class e
   implements ViewPager.e
 {
-  private static long lfT = 0L;
+  private static long lGg = 0L;
   private static int mScreenHeight;
   private static int mScreenWidth = 0;
-  private am bJm = new am(1, "chatting-image-gallery-lazy-loader");
-  private aa bQM = new aa();
-  private LinkedList dS = new LinkedList();
-  SparseArray eeV = new SparseArray();
-  HashMap eeW = new HashMap();
-  SparseArray eeX = new SparseArray();
-  SparseArray eeY = new SparseArray();
-  protected com.tencent.mm.a.f eeZ = new com.tencent.mm.a.f(5, new com.tencent.mm.a.f.a() {});
-  protected SparseIntArray efa = new SparseIntArray();
-  private boolean efc = false;
-  private int efg = -1;
-  private int fs = 0;
-  a lfR;
-  protected com.tencent.mm.a.f lfS = new com.tencent.mm.a.f(40, new com.tencent.mm.a.f.a() {});
-  private LinkedList lfU = new LinkedList();
+  private ap bCz = new ap(1, "chatting-image-gallery-lazy-loader");
+  private ac bpz = new ac();
+  private LinkedList<String> ei = new LinkedList();
+  SparseArray<Bitmap> eiA = new SparseArray();
+  protected com.tencent.mm.a.f<String, Bitmap> eiB = new com.tencent.mm.a.f(5, new com.tencent.mm.a.f.a() {});
+  protected SparseIntArray eiC = new SparseIntArray();
+  private boolean eiE = false;
+  private int eiI = -1;
+  SparseArray<WeakReference<ImageView>> eix = new SparseArray();
+  HashMap<String, Integer> eiy = new HashMap();
+  SparseArray<String> eiz = new SparseArray();
+  private int fO = 0;
+  a lGe;
+  protected com.tencent.mm.a.f<Integer, Bitmap> lGf = new com.tencent.mm.a.f(40, new com.tencent.mm.a.f.a() {});
+  private LinkedList<Integer> lGh = new LinkedList();
   
   static
   {
@@ -53,60 +53,60 @@ final class e
   
   public e(a parama)
   {
-    lfR = parama;
+    lGe = parama;
   }
   
   private void a(int paramInt, Bitmap paramBitmap)
   {
-    if (eeV.get(paramInt) == null) {
+    if (eix.get(paramInt) == null) {
       return;
     }
-    ImageView localImageView = (ImageView)((WeakReference)eeV.get(paramInt)).get();
-    eeX.get(paramInt);
-    lfR.c(localImageView, paramBitmap);
-    ho(paramInt);
+    ImageView localImageView = (ImageView)((WeakReference)eix.get(paramInt)).get();
+    eiz.get(paramInt);
+    lGe.c(localImageView, paramBitmap);
+    is(paramInt);
   }
   
-  private boolean aal()
+  private boolean acF()
   {
-    return fs == 0;
+    return fO == 0;
   }
   
-  private void aam()
+  private void acG()
   {
-    if (efc) {}
+    if (eiE) {}
     do
     {
       do
       {
         return;
-      } while (dS.size() == 0);
-      localObject = (String)dS.removeLast();
-    } while (!eeW.containsKey(localObject));
-    efc = true;
-    final Object localObject = new am.a()
+      } while (ei.size() == 0);
+      localObject = (String)ei.removeLast();
+    } while (!eiy.containsKey(localObject));
+    eiE = true;
+    final Object localObject = new ap.a()
     {
-      private Bitmap efe = null;
+      private Bitmap eiG = null;
       
-      public final boolean vd()
+      public final boolean vf()
       {
         if ((e.b(e.this) == null) || (TextUtils.isEmpty(localObject))) {
           return false;
         }
         try
         {
-          efe = e.b(e.this).Hc(localObject);
+          eiG = e.b(e.this).Jr(localObject);
           return true;
         }
         catch (Exception localException)
         {
-          u.w("!44@/B4Tb64lLpJSmuQVFTi9B6QdAPUqkDaT/sMIXOVKzm0=", "try to load Bmp fail: %s", new Object[] { localException.getMessage() });
-          efe = null;
+          v.w("MicroMsg.ImageGalleryLazyLoader", "try to load Bmp fail: %s", new Object[] { localException.getMessage() });
+          eiG = null;
         }
         return false;
       }
       
-      public final boolean ve()
+      public final boolean vg()
       {
         e.d(e.this);
         if (e.e(e.this).containsKey(localObject))
@@ -115,24 +115,24 @@ final class e
           if (e.f(e.this)) {
             break label136;
           }
-          e.g(e.this).put(i, efe);
+          e.g(e.this).put(i, eiG);
         }
         Bitmap localBitmap;
         int j;
         for (;;)
         {
-          u(localObject, efe);
-          localBitmap = efe;
+          r(localObject, eiG);
+          localBitmap = eiG;
           if ((localBitmap != null) && (!localBitmap.isRecycled())) {
             break;
           }
           j = 0;
-          u.i("!44@/B4Tb64lLpJSmuQVFTi9B6QdAPUqkDaT/sMIXOVKzm0=", "bmp size : %s", new Object[] { Integer.valueOf(j) });
-          efe = null;
+          v.i("MicroMsg.ImageGalleryLazyLoader", "bmp size : %s", new Object[] { Integer.valueOf(j) });
+          eiG = null;
           e.h(e.this);
           return false;
           label136:
-          e.a(e.this, i, efe);
+          e.a(e.this, i, eiG);
         }
         if (Build.VERSION.SDK_INT >= 12) {}
         for (int i = localBitmap.getByteCount();; i = localBitmap.getRowBytes() * localBitmap.getHeight())
@@ -145,51 +145,51 @@ final class e
         }
       }
     };
-    bJm.c((am.a)localObject);
+    bCz.c((ap.a)localObject);
   }
   
-  private void ho(int paramInt)
+  private void is(int paramInt)
   {
-    if (eeX.get(paramInt) != null)
+    if (eiz.get(paramInt) != null)
     {
-      String str = (String)eeX.get(paramInt);
-      eeV.remove(paramInt);
-      eeX.remove(paramInt);
-      eeW.remove(str);
-      eeY.remove(paramInt);
+      String str = (String)eiz.get(paramInt);
+      eix.remove(paramInt);
+      eiz.remove(paramInt);
+      eiy.remove(str);
+      eiA.remove(paramInt);
     }
   }
   
-  private void hp(final int paramInt)
+  private void it(final int paramInt)
   {
-    if (lfS.ad(Integer.valueOf(paramInt))) {
+    if (lGf.ax(Integer.valueOf(paramInt))) {
       return;
     }
-    ah.tv().d(new Runnable()
+    ah.tw().d(new Runnable()
     {
       public final void run()
       {
         if (e.b(e.this) == null) {
-          u.e("!44@/B4Tb64lLpJSmuQVFTi9B6QdAPUqkDaT/sMIXOVKzm0=", "loader is null!");
+          v.e("MicroMsg.ImageGalleryLazyLoader", "loader is null!");
         }
         final Bitmap localBitmap;
         do
         {
           return;
-          localBitmap = e.b(e.this).rE(paramInt);
+          localBitmap = e.b(e.this).tG(paramInt);
         } while (localBitmap == null);
         e.c(e.this).post(new Runnable()
         {
           public final void run()
           {
-            lfS.put(Integer.valueOf(cqF), localBitmap);
+            lGf.put(Integer.valueOf(clS), localBitmap);
           }
         });
       }
     }, 300L);
   }
   
-  public final void R(Map paramMap)
+  public final void R(Map<String, Bitmap> paramMap)
   {
     Iterator localIterator = paramMap.keySet().iterator();
     while (localIterator.hasNext())
@@ -198,51 +198,51 @@ final class e
       Bitmap localBitmap = (Bitmap)paramMap.get(str);
       if (localBitmap != null)
       {
-        eeZ.put(str, localBitmap);
-        lfU.push(Integer.valueOf(localBitmap.hashCode()));
-        u.i("!44@/B4Tb64lLpJSmuQVFTi9B6QdAPUqkDaT/sMIXOVKzm0=", "we got one cache from preload : %s %s", new Object[] { str, Integer.valueOf(localBitmap.hashCode()) });
+        eiB.put(str, localBitmap);
+        lGh.push(Integer.valueOf(localBitmap.hashCode()));
+        v.i("MicroMsg.ImageGalleryLazyLoader", "we got one cache from preload : %s %s", new Object[] { str, Integer.valueOf(localBitmap.hashCode()) });
       }
       else
       {
-        u.e("!44@/B4Tb64lLpJSmuQVFTi9B6QdAPUqkDaT/sMIXOVKzm0=", "we got one null cache from preload");
+        v.e("MicroMsg.ImageGalleryLazyLoader", "we got one null cache from preload");
       }
     }
   }
   
   public final void a(int paramInt1, float paramFloat, int paramInt2) {}
   
-  final void aak()
+  final void acE()
   {
-    com.tencent.mm.a.f localf = lfS;
+    com.tencent.mm.a.f localf = lGf;
     new Object() {};
-    localf.kl();
-    localf = eeZ;
+    localf.iM();
+    localf = eiB;
     new Object() {};
-    localf.kl();
+    localf.iM();
   }
   
   public final boolean b(ImageView paramImageView, int paramInt)
   {
-    u.i("!44@/B4Tb64lLpJSmuQVFTi9B6QdAPUqkDaT/sMIXOVKzm0=", "loadThumb position %s", new Object[] { Integer.valueOf(paramInt) });
-    Bitmap localBitmap = (Bitmap)lfS.get(Integer.valueOf(paramInt));
+    v.i("MicroMsg.ImageGalleryLazyLoader", "loadThumb position %s", new Object[] { Integer.valueOf(paramInt) });
+    Bitmap localBitmap = (Bitmap)lGf.get(Integer.valueOf(paramInt));
     if ((localBitmap != null) && (!localBitmap.isRecycled()))
     {
-      lfR.c(paramImageView, localBitmap);
+      lGe.c(paramImageView, localBitmap);
       return true;
     }
     return false;
   }
   
-  public final void n(int paramInt)
+  public final void p(int paramInt)
   {
-    if (!lfR).lel.leo.leC) {
+    if (!lGe).lEy.lEA.lEO) {
       return;
     }
-    if (efg == -1)
+    if (eiI == -1)
     {
       int i = 0;
       if (i == 0) {
-        hp(paramInt);
+        it(paramInt);
       }
       for (;;)
       {
@@ -252,34 +252,48 @@ final class e
           break label126;
         }
         if (paramInt + i <= paramInt + 3) {
-          hp(paramInt + i);
+          it(paramInt + i);
         }
         if (paramInt - i >= Math.max(paramInt - 3, 0)) {
-          hp(paramInt - i);
+          it(paramInt - i);
         }
       }
     }
-    if (efg > paramInt) {
-      hp(Math.max(paramInt - 3, 0));
+    if (eiI > paramInt) {
+      it(Math.max(paramInt - 3, 0));
     }
     for (;;)
     {
       label126:
-      efg = paramInt;
+      eiI = paramInt;
       return;
-      if (efg < paramInt) {
-        hp(paramInt + 3);
+      if (eiI < paramInt) {
+        it(paramInt + 3);
       }
     }
   }
   
-  public final void o(int paramInt)
+  public final void p(ImageView paramImageView, String paramString)
+  {
+    if (ei.contains(paramString)) {
+      return;
+    }
+    int i = paramImageView.hashCode();
+    is(i);
+    eiy.put(paramString, Integer.valueOf(i));
+    eiz.put(i, paramString);
+    eix.put(i, new WeakReference(paramImageView));
+    ei.add(paramString);
+    acG();
+  }
+  
+  public final void q(int paramInt)
   {
     int j = 0;
-    fs = paramInt;
-    if (aal())
+    fO = paramInt;
+    if (acF())
     {
-      int[] arrayOfInt = new int[eeY.size()];
+      int[] arrayOfInt = new int[eiA.size()];
       int i = 0;
       for (;;)
       {
@@ -287,33 +301,19 @@ final class e
         if (i >= arrayOfInt.length) {
           break;
         }
-        arrayOfInt[i] = eeY.keyAt(i);
+        arrayOfInt[i] = eiA.keyAt(i);
         i += 1;
       }
       while (paramInt < arrayOfInt.length)
       {
         i = arrayOfInt[paramInt];
-        a(i, (Bitmap)eeY.get(i));
+        a(i, (Bitmap)eiA.get(i));
         paramInt += 1;
       }
     }
   }
   
-  public final void o(ImageView paramImageView, String paramString)
-  {
-    if (dS.contains(paramString)) {
-      return;
-    }
-    int i = paramImageView.hashCode();
-    ho(i);
-    eeW.put(paramString, Integer.valueOf(i));
-    eeX.put(i, paramString);
-    eeV.put(i, new WeakReference(paramImageView));
-    dS.add(paramString);
-    aam();
-  }
-  
-  protected final void u(String paramString, Bitmap paramBitmap)
+  protected final void r(String paramString, Bitmap paramBitmap)
   {
     int i;
     if (paramBitmap != null)
@@ -323,15 +323,15 @@ final class e
       {
         mScreenWidth = getContextgetResourcesgetDisplayMetricswidthPixels;
         mScreenHeight = getContextgetResourcesgetDisplayMetricsheightPixels;
-        lfT = mScreenWidth * lfT;
+        lGg = mScreenWidth * lGg;
       }
-      if (l > lfT * 2L)
+      if (l > lGg * 2L)
       {
         i = 1;
         if (i == 0) {
           break label103;
         }
-        u.i("!44@/B4Tb64lLpJSmuQVFTi9B6QdAPUqkDaT/sMIXOVKzm0=", "file %s too big to cache");
+        v.i("MicroMsg.ImageGalleryLazyLoader", "file %s too big to cache");
       }
     }
     label103:
@@ -340,27 +340,27 @@ final class e
       return;
       i = 0;
       break;
-      eeZ.d(paramString, paramBitmap);
-    } while (!lgbeeZ.ad(paramString));
-    u.i("!44@/B4Tb64lLpJSmuQVFTi9B6QdAPUqkDaT/sMIXOVKzm0=", "update origCache and preload cache");
+      eiB.g(paramString, paramBitmap);
+    } while (!lGoeiB.ax(paramString));
+    v.i("MicroMsg.ImageGalleryLazyLoader", "update origCache and preload cache");
     try
     {
-      lgbeeZ.d(paramString, paramBitmap);
+      lGoeiB.g(paramString, paramBitmap);
       return;
     }
     catch (Exception paramString)
     {
-      u.printErrStackTrace("!44@/B4Tb64lLpJSmuQVFTi9B6QdAPUqkDaT/sMIXOVKzm0=", paramString, "update preload cache failed", new Object[0]);
+      v.printErrStackTrace("MicroMsg.ImageGalleryLazyLoader", paramString, "update preload cache failed", new Object[0]);
     }
   }
   
   public static abstract interface a
   {
-    public abstract Bitmap Hc(String paramString);
+    public abstract Bitmap Jr(String paramString);
     
     public abstract void c(ImageView paramImageView, Bitmap paramBitmap);
     
-    public abstract Bitmap rE(int paramInt);
+    public abstract Bitmap tG(int paramInt);
   }
 }
 

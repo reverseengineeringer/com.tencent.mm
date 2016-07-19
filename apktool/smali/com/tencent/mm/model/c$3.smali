@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/az/g$b;
+.implements Lcom/tencent/mm/bc/g$b;
 
 
 # annotations
@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 1258
+    .line 1314
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,12 +30,12 @@
 
 
 # virtual methods
-.method public final lr()[Ljava/lang/String;
+.method public final kE()[Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 1261
-    sget-object v0, Lcom/tencent/mm/storage/ah;->aoY:[Ljava/lang/String;
+    .line 1317
+    sget-object v0, Lcom/tencent/mm/aj/b;->bkN:[Ljava/lang/String;
 
     return-object v0
 .end method

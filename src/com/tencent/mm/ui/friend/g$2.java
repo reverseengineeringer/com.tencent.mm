@@ -10,7 +10,7 @@ final class g$2
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    lsu.lsr.g(true, lsu.iHW);
+    lSY.lSV.g(true, lSY.jeT);
   }
 }
 

@@ -1,84 +1,83 @@
 package com.tencent.mm.plugin.accountsync.a;
 
+import com.tencent.mm.bc.g.b;
 import com.tencent.mm.model.ae;
-import com.tencent.mm.model.ah;
 import com.tencent.mm.model.y;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.HashMap;
 
 public final class c
   implements ae
 {
-  private static int cfp = 0;
-  public static int coh = a.col;
-  private static af coj = null;
-  private a cog = null;
-  private com.tencent.mm.plugin.accountsync.model.a coi;
+  private static int caB = 0;
+  public static int cjv = a.cjz;
+  private static com.tencent.mm.sdk.platformtools.ah cjx = null;
+  private a cju = null;
+  private com.tencent.mm.plugin.accountsync.model.a cjw;
   
-  public static void eo(int paramInt)
+  public static void fa(int paramInt)
   {
-    coh = paramInt;
-    switch (2.cok[(paramInt - 1)])
+    cjv = paramInt;
+    switch (2.cjy[(paramInt - 1)])
     {
     default: 
       return;
     case 1: 
-      cfp = 0;
-      if (coj == null) {
-        coj = new af(new af.a()
+      caB = 0;
+      if (cjx == null) {
+        cjx = new com.tencent.mm.sdk.platformtools.ah(new ah.a()
         {
-          public final boolean lj()
+          public final boolean jK()
           {
-            c.kE();
-            if ((c.aa() == 1) || (c.aa() == 16) || (c.aa() % 96 == 0)) {
-              ah.kU().nn();
+            c.je();
+            if ((c.caB == 1) || (c.caB == 16) || (c.caB % 96 == 0)) {
+              com.tencent.mm.model.ah.jv().lB();
             }
             return true;
           }
         }, true);
       }
-      u.d("!44@/B4Tb64lLpIAhUt0Bg2QTtWTArGQBknYDKsnvcDnFmA=", "[oneliang][SmsVerifyCodeState]Sent");
-      coj.ds(900000L);
+      v.d("MicroMsg.SubCoreAccountSync", "[oneliang][SmsVerifyCodeState]Sent");
+      cjx.dJ(900000L);
       return;
     }
-    if (coj != null) {
-      coj.aUF();
+    if (cjx != null) {
+      cjx.aZJ();
     }
-    u.d("!44@/B4Tb64lLpIAhUt0Bg2QTtWTArGQBknYDKsnvcDnFmA=", "[oneliang][SmsVerifyCodeState]verified");
-    coh = a.col;
-    ah.kU().no();
-    cfp = 0;
-    coj = null;
+    v.d("MicroMsg.SubCoreAccountSync", "[oneliang][SmsVerifyCodeState]verified");
+    cjv = a.cjz;
+    com.tencent.mm.model.ah.jv().lC();
+    caB = 0;
+    cjx = null;
   }
   
-  public final void aN(int paramInt) {}
-  
-  public final void ai(boolean paramBoolean)
+  public final void aj(boolean paramBoolean)
   {
-    coi = new com.tencent.mm.plugin.accountsync.model.a();
+    cjw = new com.tencent.mm.plugin.accountsync.model.a();
   }
   
-  public final void aj(boolean paramBoolean) {}
+  public final void ak(boolean paramBoolean) {}
   
-  public final HashMap lo()
+  public final void cu(int paramInt) {}
+  
+  public final void ok()
+  {
+    com.tencent.mm.plugin.accountsync.model.a locala = cjw;
+    com.tencent.mm.sdk.c.a.kug.e(cjH);
+    cjw = null;
+  }
+  
+  public final HashMap<Integer, g.b> ol()
   {
     return null;
   }
   
-  public final void lp()
-  {
-    com.tencent.mm.plugin.accountsync.model.a locala = coi;
-    com.tencent.mm.sdk.c.a.jUF.c("ModNewContact", cot);
-    coi = null;
-  }
-  
   public static enum a
   {
-    public static int[] FZ()
+    public static int[] Gw()
     {
-      return (int[])coo.clone();
+      return (int[])cjC.clone();
     }
   }
 }

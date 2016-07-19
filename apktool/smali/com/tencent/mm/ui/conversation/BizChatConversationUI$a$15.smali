@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ui/i$a;
+.implements Lcom/tencent/mm/ui/base/MMSlideDelView$c;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+.field final synthetic lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 235
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$15;->lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+    .line 405
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$15;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,88 +36,20 @@
 
 
 # virtual methods
-.method public final Gh()V
-    .locals 4
+.method public final I(Landroid/view/View;)I
+    .locals 1
 
     .prologue
-    const/16 v3, 0x8
+    .line 409
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$15;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
 
-    const/4 v2, 0x0
-
-    .line 239
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$15;->lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
-
-    invoke-static {}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->JT()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/tencent/mm/model/i;->dY(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->Gj(Ljava/lang/String;)V
-
-    .line 240
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$15;->lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->b(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Lcom/tencent/mm/ui/conversation/a;
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->e(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Lcom/tencent/mm/ui/conversation/EnterpriseFullHeightListView;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/conversation/a;->getCount()I
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/conversation/EnterpriseFullHeightListView;->getPositionForView(Landroid/view/View;)I
 
     move-result v0
 
-    if-gtz v0, :cond_0
-
-    .line 241
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$15;->lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->c(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 242
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$15;->lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->d(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Landroid/widget/ListView;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/widget/ListView;->setVisibility(I)V
-
-    .line 247
-    :goto_0
-    return-void
-
-    .line 244
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$15;->lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->c(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 245
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$15;->lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->d(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Landroid/widget/ListView;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/widget/ListView;->setVisibility(I)V
-
-    goto :goto_0
-.end method
-
-.method public final Gi()V
-    .locals 0
-
-    .prologue
-    .line 252
-    return-void
+    return v0
 .end method

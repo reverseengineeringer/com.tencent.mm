@@ -27,7 +27,7 @@
     .line 22
     const-string/jumbo v0, "key_username"
 
-    invoke-static {p2, v0}, Lcom/tencent/mm/sdk/platformtools/p;->g(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0}, Lcom/tencent/mm/sdk/platformtools/q;->g(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -57,7 +57,7 @@
     if-nez v0, :cond_2
 
     .line 28
-    const-string/jumbo v0, "!64@/B4Tb64lLpJYWR0wzx4Vma/Smbu3SvmO2My0VDe73QFb9e+L3G3h7NfodBPnxaVH"
+    const-string/jumbo v0, "MicroMsg.auto.MMAutoMessageReplyReceiver"
 
     const-string/jumbo v2, "username %s reply null"
 
@@ -65,7 +65,7 @@
 
     aput-object v1, v3, v5
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -77,7 +77,7 @@
 
     .line 31
     :cond_2
-    const-string/jumbo v2, "!64@/B4Tb64lLpJYWR0wzx4Vma/Smbu3SvmO2My0VDe73QFb9e+L3G3h7NfodBPnxaVH"
+    const-string/jumbo v2, "MicroMsg.auto.MMAutoMessageReplyReceiver"
 
     const-string/jumbo v3, "username %s reply %s"
 
@@ -93,10 +93,10 @@
 
     aput-object v5, v4, v6
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 32
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aOV()Lcom/tencent/mm/pluginsdk/i$l;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aTx()Lcom/tencent/mm/pluginsdk/i$l;
 
     move-result-object v2
 
@@ -104,11 +104,11 @@
 
     move-result-object v0
 
-    invoke-static {v1}, Lcom/tencent/mm/model/i;->eK(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/model/i;->eW(Ljava/lang/String;)I
 
     move-result v3
 
-    invoke-interface {v2, v1, v0, v3}, Lcom/tencent/mm/pluginsdk/i$l;->u(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-interface {v2, v1, v0, v3}, Lcom/tencent/mm/pluginsdk/i$l;->s(Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_0
 .end method

@@ -5,35 +5,35 @@ import oicq.wlogin_sdk.tools.util;
 public final class ai
   extends a
 {
-  public int mcW = 0;
-  public int mcX = 0;
-  public int mcY = 0;
+  public int mPa = 0;
+  public int mPb = 0;
+  public int mPc = 0;
   
   public ai()
   {
-    mbE = 326;
+    mNI = 326;
   }
   
-  public final Boolean bot()
+  public final Boolean bvr()
   {
-    if (mco < 12) {
+    if (mOs < 12) {
       return Boolean.valueOf(false);
     }
-    int i = util.E(mby, mcn + 4);
-    if (mco < i + 12) {
+    int i = util.F(mNC, mOr + 4);
+    if (mOs < i + 12) {
       return Boolean.valueOf(false);
     }
-    mcW = i;
-    i = util.E(mby, mcn + 6 + mcW);
-    if (mco < mcW + 12 + i) {
+    mPa = i;
+    i = util.F(mNC, mOr + 6 + mPa);
+    if (mOs < mPa + 12 + i) {
       return Boolean.valueOf(false);
     }
-    mcX = i;
-    i = util.E(mby, mcn + 10 + mcW + mcX);
-    if (mco < mcW + 12 + mcX + i) {
+    mPb = i;
+    i = util.F(mNC, mOr + 10 + mPa + mPb);
+    if (mOs < mPa + 12 + mPb + i) {
       return Boolean.valueOf(false);
     }
-    mcY = i;
+    mPc = i;
     return Boolean.valueOf(true);
   }
 }

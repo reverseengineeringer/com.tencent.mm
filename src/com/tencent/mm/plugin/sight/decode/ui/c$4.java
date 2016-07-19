@@ -7,7 +7,7 @@ final class c$4
   
   public final void run()
   {
-    gyI.dismiss();
+    gFh.dismiss();
   }
 }
 

@@ -1,19 +1,14 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.tencent.mm.plugin.sns.lucky.b.n;
-import com.tencent.mm.plugin.sns.lucky.view.LuckyTimelineTip;
+import com.tencent.mm.e.a.ex;
+import com.tencent.mm.sdk.c.c;
 
 final class SnsTimeLineUI$3
-  implements View.OnClickListener
+  extends c<ex>
 {
-  SnsTimeLineUI$3(SnsTimeLineUI paramSnsTimeLineUI) {}
-  
-  public final void onClick(View paramView)
+  SnsTimeLineUI$3(SnsTimeLineUI paramSnsTimeLineUI)
   {
-    SnsTimeLineUI.h(hkJ).axS();
-    SnsTimeLineUI.j(hkJ).setVisibility(8);
+    kum = ex.class.getName().hashCode();
   }
 }
 

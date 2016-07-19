@@ -17,7 +17,7 @@
 
 
 # virtual methods
-.method public Ld()V
+.method public LX()V
     .locals 3
 
     .prologue
@@ -200,28 +200,28 @@
 
     aput-object v2, v0, v1
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/AlphabetScrollBar;->eEz:[Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/AlphabetScrollBar;->eKO:[Ljava/lang/String;
 
     .line 20
     const v0, 0x3fa66666    # 1.3f
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/AlphabetScrollBar;->eEx:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/AlphabetScrollBar;->eKM:F
 
     .line 21
     const/16 v0, 0x4f
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/AlphabetScrollBar;->eEy:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/AlphabetScrollBar;->eKN:I
 
     .line 22
     return-void
 .end method
 
-.method protected getToastLayoutId()I
+.method protected final agD()I
     .locals 1
 
     .prologue
     .line 34
-    const v0, 0x7f0a0570
+    const v0, 0x7f030532
 
     return v0
 .end method

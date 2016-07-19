@@ -15,18 +15,18 @@ import java.util.TimeZone;
 
 final class b$a
 {
-  int Ro = 0;
-  String ajD;
-  String ajE = "2.21";
-  DisplayMetrics ajF;
-  int ajG = Build.VERSION.SDK_INT;
-  String ajH = Build.MANUFACTURER;
-  String ajI = Locale.getDefault().getLanguage();
-  String ajJ = "WX";
-  String ajK;
-  String ajL;
-  String ajM = null;
-  String ajN = null;
+  String VA = Locale.getDefault().getLanguage();
+  String VB = "WX";
+  String VC;
+  String VD;
+  int VE = 0;
+  String VF = null;
+  String VG = null;
+  String Vv;
+  String Vw = "2.21";
+  DisplayMetrics Vx;
+  int Vy = Build.VERSION.SDK_INT;
+  String Vz = Build.MANUFACTURER;
   Context ctx = null;
   String imsi;
   String model = Build.MODEL;
@@ -38,22 +38,22 @@ final class b$a
     ctx = paramContext.getApplicationContext();
     try
     {
-      ajD = ctx.getPackageManager().getPackageInfo(ctx.getPackageName(), 0).versionName;
-      ajF = new DisplayMetrics();
-      ((WindowManager)ctx.getApplicationContext().getSystemService("window")).getDefaultDisplay().getMetrics(ajF);
-      if (s.j(paramContext, "android.permission.READ_PHONE_STATE"))
+      Vv = ctx.getPackageManager().getPackageInfo(ctx.getPackageName(), 0).versionName;
+      Vx = new DisplayMetrics();
+      ((WindowManager)ctx.getApplicationContext().getSystemService("window")).getDefaultDisplay().getMetrics(Vx);
+      if (s.k(paramContext, "android.permission.READ_PHONE_STATE"))
       {
         paramContext = (TelephonyManager)paramContext.getSystemService("phone");
         if (paramContext != null)
         {
-          ajK = paramContext.getSimOperator();
+          VC = paramContext.getSimOperator();
           imsi = paramContext.getSubscriberId();
         }
       }
       timezone = TimeZone.getDefault().getID();
-      ajL = s.aa(ctx);
+      VD = s.W(ctx);
       packageName = ctx.getPackageName();
-      ajN = s.kj();
+      VG = s.iK();
       return;
     }
     catch (PackageManager.NameNotFoundException localNameNotFoundException)

@@ -9,105 +9,114 @@ import android.support.v7.internal.widget.ActionBarView;
 import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import java.lang.ref.WeakReference;
 
 public final class c$a
   extends a
   implements f.a
 {
-  f iO;
-  protected ActionMode kzr = null;
-  private a.a kzs;
-  WeakReference kzt;
+  f jf;
+  WeakReference<View> kYA;
+  protected ActionMode kYy = null;
+  private a.a kYz;
   
   public c$a(c paramc, a.a parama)
   {
-    kzs = parama;
+    kYz = parama;
     paramc = new f(paramc.getThemedContext());
-    lU = 1;
-    iO = paramc;
-    iO.a(this);
+    mk = 1;
+    jf = paramc;
+    jf.a(this);
   }
   
   public final void a(f paramf)
   {
-    if (kzs == null) {
+    if (kYz == null) {
       return;
     }
     invalidate();
-    kzu.je.showOverflowMenu();
+    kYB.jv.showOverflowMenu();
   }
   
-  public final boolean bcj()
+  public final boolean bhv()
   {
-    iO.br();
+    jf.br();
     try
     {
-      boolean bool = kzs.a(this, iO);
+      boolean bool = kYz.a(this, jf);
       return bool;
     }
     finally
     {
-      iO.bs();
+      jf.bs();
     }
   }
   
   public final boolean d(MenuItem paramMenuItem)
   {
-    if (kzs != null) {
-      return kzs.a(this, paramMenuItem);
+    if (kYz != null) {
+      return kYz.a(this, paramMenuItem);
     }
     return false;
   }
   
   public final void finish()
   {
-    if (kzu.kzq != this) {
+    if (kYB.kYx != this) {
       return;
     }
-    if (c.c(kzu.jn, kzu.jo, false)) {
-      kzs.b(this);
+    if (c.b(kYB.jE, kYB.jF, false)) {
+      kYz.b(this);
     }
-    kzs = null;
-    kzu.hs(false);
-    kzu.je.bM();
-    kzu.jd.sendAccessibilityEvent(32);
-    kzu.kzq = null;
+    kYz = null;
+    kYB.hQ(false);
+    kYB.jv.bN();
+    kYB.ju.sendAccessibilityEvent(32);
+    kYB.kYx = null;
   }
   
   public final Menu getMenu()
   {
-    return iO;
+    return jf;
   }
   
   public final void invalidate()
   {
-    iO.br();
+    jf.br();
     try
     {
-      kzs.b(this, iO);
+      kYz.b(this, jf);
       return;
     }
     finally
     {
-      iO.bs();
+      jf.bs();
     }
   }
   
   public final void setSubtitle(CharSequence paramCharSequence)
   {
-    kzu.je.setSubtitle(paramCharSequence);
+    ActionBarContextView localActionBarContextView = kYB.jv;
+    nG = paramCharSequence;
+    localActionBarContextView.bM();
   }
   
   public final void setTitle(CharSequence paramCharSequence)
   {
-    kzu.je.setTitle(paramCharSequence);
+    ActionBarContextView localActionBarContextView = kYB.jv;
+    kD = paramCharSequence;
+    localActionBarContextView.bM();
   }
   
   public final void setTitleOptionalHint(boolean paramBoolean)
   {
     super.setTitleOptionalHint(paramBoolean);
-    kzu.je.setTitleOptional(paramBoolean);
+    ActionBarContextView localActionBarContextView = kYB.jv;
+    if (paramBoolean != nN) {
+      localActionBarContextView.requestLayout();
+    }
+    nN = paramBoolean;
   }
 }
 

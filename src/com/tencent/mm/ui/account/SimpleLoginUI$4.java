@@ -10,8 +10,8 @@ final class SimpleLoginUI$4
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    SimpleLoginUI.b(kwL);
-    SimpleLoginUI.c(kwL);
+    SimpleLoginUI.b(kVS);
+    SimpleLoginUI.c(kVS);
     return true;
   }
 }

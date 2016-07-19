@@ -1,18 +1,12 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.plugin.sns.h.k;
+import android.view.View;
 
 public abstract interface r
 {
-  public abstract String f(long paramLong, String paramString);
+  public abstract boolean aDW();
   
-  public abstract int getCount();
-  
-  public abstract k ly(int paramInt);
-  
-  public abstract void notifyDataSetChanged();
-  
-  public abstract void uF(String paramString);
+  public abstract boolean ae(View paramView);
 }
 
 /* Location:

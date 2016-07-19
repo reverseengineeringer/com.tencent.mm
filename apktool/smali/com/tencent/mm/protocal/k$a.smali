@@ -1,4 +1,4 @@
-.class public final Lcom/tencent/mm/protocal/k$a;
+.class public interface abstract Lcom/tencent/mm/protocal/k$a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -9,43 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x609
     name = "a"
 .end annotation
 
 
-# instance fields
-.field public final iUR:[I
+# virtual methods
+.method public abstract aAi()Z
+.end method
 
-.field public final iUS:[I
+.method public abstract tZ()[B
+.end method
 
-.field public final iUT:I
-
-.field public final iUU:I
-
-
-# direct methods
-.method public constructor <init>([III)V
-    .locals 1
-
-    .prologue
-    .line 196
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 197
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/tencent/mm/protocal/k$a;->iUR:[I
-
-    .line 198
-    iput-object p1, p0, Lcom/tencent/mm/protocal/k$a;->iUS:[I
-
-    .line 199
-    iput p2, p0, Lcom/tencent/mm/protocal/k$a;->iUT:I
-
-    .line 200
-    iput p3, p0, Lcom/tencent/mm/protocal/k$a;->iUU:I
-
-    .line 201
-    return-void
+.method public abstract ua()I
 .end method

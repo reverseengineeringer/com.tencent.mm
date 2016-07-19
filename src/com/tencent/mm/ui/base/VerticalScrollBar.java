@@ -9,66 +9,66 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.TextView;
-import com.tencent.mm.aw.a;
+import com.tencent.mm.az.a;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
 
 public abstract class VerticalScrollBar
   extends View
 {
-  private Paint cIZ;
-  private int eEA;
-  private float eEB;
-  private float eEC = 0.0F;
-  private float eED;
-  private o eEE;
-  private TextView eEF;
-  private int eEG;
-  public float eEx;
-  public int eEy;
-  public String[] eEz;
-  public a kKB;
+  private float boG;
+  private Paint cGd;
+  public float eKM;
+  public int eKN;
+  public String[] eKO;
+  private int eKP;
+  private float eKQ = 0.0F;
+  private float eKR;
+  private o eKS;
+  private TextView eKT;
+  private int eKU;
+  public a ljR;
   
   public VerticalScrollBar(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    Ld();
+    LX();
     setFocusable(true);
     setFocusableInTouchMode(true);
-    eEG = BackwardSupportUtil.b.a(paramContext, 3.0F);
-    paramAttributeSet = inflate(paramContext, getToastLayoutId(), null);
-    int i = BackwardSupportUtil.b.a(paramContext, eEy);
-    eEE = new o(paramAttributeSet, i, i);
-    eEF = ((TextView)paramAttributeSet.findViewById(2131165711));
-    cIZ = new Paint();
-    cIZ.setAntiAlias(true);
-    cIZ.setColor(-11119018);
-    cIZ.setTextAlign(Paint.Align.CENTER);
+    eKU = BackwardSupportUtil.b.a(paramContext, 3.0F);
+    paramAttributeSet = inflate(paramContext, agD(), null);
+    int i = BackwardSupportUtil.b.a(paramContext, eKN);
+    eKS = new o(paramAttributeSet, i, i);
+    eKT = ((TextView)paramAttributeSet.findViewById(2131758990));
+    cGd = new Paint();
+    cGd.setAntiAlias(true);
+    cGd.setColor(-11119018);
+    cGd.setTextAlign(Paint.Align.CENTER);
   }
   
-  public abstract void Ld();
+  public abstract void LX();
   
-  public abstract int getToastLayoutId();
+  public abstract int agD();
   
   protected void onDraw(Canvas paramCanvas)
   {
     super.onDraw(paramCanvas);
     final int i = getMeasuredHeight();
     final int j = getMeasuredWidth();
-    eEB = (i / (eEz.length * eEx));
-    cIZ.setTextSize(eEB);
-    if (eEC != eEB)
+    boG = (i / (eKO.length * eKM));
+    cGd.setTextSize(boG);
+    if (eKQ != boG)
     {
-      eEC = eEB;
+      eKQ = boG;
       post(new Runnable()
       {
         public final void run()
         {
-          if (eEz.length <= 0) {}
+          if (eKO.length <= 0) {}
           int i;
           do
           {
             return;
-            i = (int)VerticalScrollBar.a(VerticalScrollBar.this).measureText(eEz[(eEz.length - 1)]) + a.fromDPToPix(getContext(), 8);
+            i = (int)VerticalScrollBar.a(VerticalScrollBar.this).measureText(eKO[(eKO.length - 1)]) + a.fromDPToPix(getContext(), 8);
           } while (i <= j);
           ViewGroup.LayoutParams localLayoutParams = getLayoutParams();
           width = i;
@@ -78,9 +78,9 @@ public abstract class VerticalScrollBar
       });
     }
     i = 0;
-    while (i < eEz.length)
+    while (i < eKO.length)
     {
-      paramCanvas.drawText(eEz[i], j / 2.0F, eEB + i * eEB * eEx, cIZ);
+      paramCanvas.drawText(eKO[i], j / 2.0F, boG + i * boG * eKM, cGd);
       i += 1;
     }
   }
@@ -89,31 +89,31 @@ public abstract class VerticalScrollBar
   {
     if ((paramMotionEvent.getAction() == 0) || (paramMotionEvent.getAction() == 2))
     {
-      eED = paramMotionEvent.getY();
-      if (eED < 0.0F) {
-        eED = 0.0F;
+      eKR = paramMotionEvent.getY();
+      if (eKR < 0.0F) {
+        eKR = 0.0F;
       }
-      if (eED > getMeasuredHeight()) {
-        eED = getMeasuredHeight();
+      if (eKR > getMeasuredHeight()) {
+        eKR = getMeasuredHeight();
       }
-      setBackgroundDrawable(a.y(getContext(), 2130970338));
-      int j = (int)(eED / (eEB * eEx));
+      setBackgroundDrawable(a.C(getContext(), 2130839220));
+      int j = (int)(eKR / (boG * eKM));
       int i = j;
-      if (j >= eEz.length) {
-        i = eEz.length - 1;
+      if (j >= eKO.length) {
+        i = eKO.length - 1;
       }
-      eEA = i;
-      if (eEA != -1) {
+      eKP = i;
+      if (eKP != -1) {
         break label208;
       }
-      eEF.setText(2131431014);
-      eEE.showAtLocation(this, 17, 0, 0);
-      if (kKB != null)
+      eKT.setText(2131234783);
+      eKS.showAtLocation(this, 17, 0, 0);
+      if (ljR != null)
       {
-        if (eEA != -1) {
+        if (eKP != -1) {
           break label227;
         }
-        kKB.ls(a.A(getContext(), 2131431014));
+        ljR.md(a.E(getContext(), 2131234783));
       }
     }
     for (;;)
@@ -122,25 +122,20 @@ public abstract class VerticalScrollBar
       if ((paramMotionEvent.getAction() == 1) || (paramMotionEvent.getAction() == 3))
       {
         setBackgroundResource(0);
-        eEE.dismiss();
+        eKS.dismiss();
       }
       return true;
       label208:
-      eEF.setText(eEz[eEA]);
+      eKT.setText(eKO[eKP]);
       break;
       label227:
-      kKB.ls(eEz[eEA]);
+      ljR.md(eKO[eKP]);
     }
-  }
-  
-  public void setOnScrollBarTouchListener(a parama)
-  {
-    kKB = parama;
   }
   
   public static abstract interface a
   {
-    public abstract void ls(String paramString);
+    public abstract void md(String paramString);
   }
 }
 

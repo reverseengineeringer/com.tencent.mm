@@ -13,12 +13,12 @@ final class a$1
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
     if (paramMotionEvent.getAction() == 0) {
-      ((TextView)paramView.findViewById(2131166935)).setTextColor(-10395295);
+      ((TextView)paramView.findViewById(2131755286)).setTextColor(-10395295);
     }
     while (paramMotionEvent.getAction() != 1) {
       return false;
     }
-    ((TextView)paramView.findViewById(2131166935)).setTextColor(-1);
+    ((TextView)paramView.findViewById(2131755286)).setTextColor(-1);
     return false;
   }
 }

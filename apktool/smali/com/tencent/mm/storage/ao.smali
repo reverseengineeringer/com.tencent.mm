@@ -1,229 +1,507 @@
 .class public final Lcom/tencent/mm/storage/ao;
-.super Lcom/tencent/mm/sdk/h/f;
+.super Lcom/tencent/mm/sdk/h/g;
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/mm/storage/ao$a;
-    }
-.end annotation
-
-
-# static fields
-.field public static final aoY:[Ljava/lang/String;
-
-
 # instance fields
-.field private aoX:Lcom/tencent/mm/sdk/h/d;
-
-.field private final kgh:Lcom/tencent/mm/sdk/h/h;
+.field private kHa:Lcom/tencent/mm/storage/h;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    .prologue
-    .line 23
-    const/4 v0, 0x1
-
-    new-array v0, v0, [Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    sget-object v2, Lcom/tencent/mm/storage/an;->aot:Lcom/tencent/mm/sdk/h/c$a;
-
-    const-string/jumbo v3, "Stranger"
-
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/h/f;->a(Lcom/tencent/mm/sdk/h/c$a;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    aput-object v2, v0, v1
-
-    sput-object v0, Lcom/tencent/mm/storage/ao;->aoY:[Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/tencent/mm/sdk/h/d;)V
-    .locals 3
-
-    .prologue
-    .line 60
-    sget-object v0, Lcom/tencent/mm/storage/an;->aot:Lcom/tencent/mm/sdk/h/c$a;
-
-    const-string/jumbo v1, "Stranger"
-
-    const/4 v2, 0x0
-
-    invoke-direct {p0, p1, v0, v1, v2}, Lcom/tencent/mm/sdk/h/f;-><init>(Lcom/tencent/mm/sdk/h/d;Lcom/tencent/mm/sdk/h/c$a;Ljava/lang/String;[Ljava/lang/String;)V
-
-    .line 32
-    new-instance v0, Lcom/tencent/mm/storage/ao$1;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/storage/ao$1;-><init>(Lcom/tencent/mm/storage/ao;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/storage/ao;->kgh:Lcom/tencent/mm/sdk/h/h;
-
-    .line 61
-    iput-object p1, p0, Lcom/tencent/mm/storage/ao;->aoX:Lcom/tencent/mm/sdk/h/d;
-
-    .line 62
-    return-void
-.end method
-
-.method private b(Lcom/tencent/mm/storage/an;)V
+.method public constructor <init>(Lcom/tencent/mm/storage/h;)V
     .locals 1
 
     .prologue
-    .line 41
-    iget-object v0, p0, Lcom/tencent/mm/storage/ao;->kgh:Lcom/tencent/mm/sdk/h/h;
+    .line 26
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/h/g;-><init>()V
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/sdk/h/h;->aw(Ljava/lang/Object;)Z
+    .line 21
+    const/4 v0, 0x0
 
-    move-result v0
+    iput-object v0, p0, Lcom/tencent/mm/storage/ao;->kHa:Lcom/tencent/mm/storage/h;
 
-    if-eqz v0, :cond_0
+    .line 27
+    iput-object p1, p0, Lcom/tencent/mm/storage/ao;->kHa:Lcom/tencent/mm/storage/h;
 
-    .line 42
-    iget-object v0, p0, Lcom/tencent/mm/storage/ao;->kgh:Lcom/tencent/mm/sdk/h/h;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/h/h;->Ep()V
-
-    .line 44
-    :cond_0
+    .line 29
     return-void
 .end method
 
-
-# virtual methods
-.method public final FH(Ljava/lang/String;)Lcom/tencent/mm/storage/an;
-    .locals 9
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 65
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-gtz v0, :cond_1
-
-    .line 75
-    :cond_0
-    :goto_0
-    return-object v2
-
-    .line 68
-    :cond_1
-    new-instance v8, Lcom/tencent/mm/storage/an;
-
-    invoke-direct {v8}, Lcom/tencent/mm/storage/an;-><init>()V
-
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/storage/ao;->aoX:Lcom/tencent/mm/sdk/h/d;
-
-    const-string/jumbo v1, "Stranger"
-
-    const-string/jumbo v3, "encryptUsername = ?"
-
-    const/4 v4, 0x1
-
-    new-array v4, v4, [Ljava/lang/String;
-
-    const/4 v5, 0x0
-
-    aput-object p1, v4, v5
-
-    move-object v5, v2
-
-    move-object v6, v2
-
-    move-object v7, v2
-
-    invoke-interface/range {v0 .. v7}, Lcom/tencent/mm/sdk/h/d;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v0
-
-    .line 70
-    invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 71
-    invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
-
-    .line 72
-    invoke-virtual {v8, v0}, Lcom/tencent/mm/storage/an;->c(Landroid/database/Cursor;)V
-
-    .line 74
-    :cond_2
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    move-object v2, v8
-
-    .line 75
-    goto :goto_0
-.end method
-
-.method public final FI(Ljava/lang/String;)I
+.method public static HW(Ljava/lang/String;)Z
     .locals 5
 
     .prologue
-    .line 79
-    iget-object v0, p0, Lcom/tencent/mm/storage/ao;->aoX:Lcom/tencent/mm/sdk/h/d;
+    const/4 v1, 0x1
 
-    const-string/jumbo v1, "Stranger"
+    const/4 v0, 0x0
 
-    const-string/jumbo v2, "(encryptUsername=?)"
+    .line 153
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
-    const/4 v3, 0x1
+    move-result v2
 
-    new-array v3, v3, [Ljava/lang/String;
+    if-eqz v2, :cond_1
+
+    .line 171
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 158
+    :cond_1
+    :try_start_0
+    const-string/jumbo v2, "deviceinfoconfig"
+
+    invoke-static {p0, v2}, Lcom/tencent/mm/sdk/platformtools/r;->cr(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v2
+
+    .line 160
+    if-eqz v2, :cond_0
+
+    .line 167
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 170
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rp()Lcom/tencent/mm/storage/ao;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/storage/ao;->HV(Ljava/lang/String;)I
+
+    move v0, v1
+
+    .line 171
+    goto :goto_0
+
+    .line 163
+    :catch_0
+    move-exception v2
+
+    .line 164
+    const-string/jumbo v3, "MicroMsg.ServerConfigInfoStorage"
+
+    const-string/jumbo v4, "exception:%s"
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v2
+
+    aput-object v2, v1, v0
+
+    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
+.end method
+
+.method private static HX(Ljava/lang/String;)Z
+    .locals 9
+
+    .prologue
+    const/4 v0, 0x1
 
     const/4 v4, 0x0
 
-    aput-object p1, v3, v4
+    .line 202
+    .line 203
+    new-instance v1, Ljava/io/File;
 
-    invoke-interface {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/h/d;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    sget-object v2, Lcom/tencent/mm/storage/j;->bpc:Ljava/lang/String;
 
-    move-result v0
+    invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 80
-    if-lez v0, :cond_0
+    .line 204
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
-    .line 81
-    invoke-virtual {p0}, Lcom/tencent/mm/storage/ao;->Ep()V
+    move-result v2
 
-    .line 83
+    if-nez v2, :cond_0
+
+    .line 205
+    invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
+
+    .line 208
     :cond_0
-    const-string/jumbo v1, "!44@/B4Tb64lLpJZ7cU6crbeb5dTa0zLWGgip6b0bwNd834="
+    const/4 v3, 0x0
+
+    .line 210
+    :try_start_0
+    const-string/jumbo v1, "MicroMsg.ServerConfigInfoStorage"
+
+    const-string/jumbo v2, "writeConfigToLocalFile, path: %s, info:%s"
+
+    const/4 v5, 0x2
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v8, Lcom/tencent/mm/storage/j;->bpc:Ljava/lang/String;
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    const-string/jumbo v8, "deviceconfig.cfg"
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    aput-object v7, v5, v6
+
+    const/4 v6, 0x1
+
+    aput-object p0, v5, v6
+
+    invoke-static {v1, v2, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 211
+    new-instance v2, Ljava/io/FileWriter;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v5, Lcom/tencent/mm/storage/j;->bpc:Ljava/lang/String;
+
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v5, "deviceconfig.cfg"
+
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v2, v1}, Ljava/io/FileWriter;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 212
+    :try_start_1
+    invoke-virtual {v2, p0}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    .line 214
+    :try_start_2
+    invoke-virtual {v2}, Ljava/io/FileWriter;->close()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_5
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 222
+    :try_start_3
+    invoke-virtual {v2}, Ljava/io/FileWriter;->close()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+
+    .line 230
+    :goto_0
+    return v0
+
+    .line 225
+    :catch_0
+    move-exception v1
+
+    .line 226
+    const-string/jumbo v2, "MicroMsg.ServerConfigInfoStorage"
+
+    const-string/jumbo v3, "exception:%s"
+
+    new-array v5, v0, [Ljava/lang/Object;
+
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v1
+
+    aput-object v1, v5, v4
+
+    invoke-static {v2, v3, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 218
+    :catch_1
+    move-exception v1
+
+    move-object v2, v1
+
+    move v1, v4
+
+    .line 219
+    :goto_1
+    :try_start_4
+    const-string/jumbo v5, "MicroMsg.ServerConfigInfoStorage"
+
+    const-string/jumbo v6, "exception:%s"
+
+    const/4 v7, 0x1
+
+    new-array v7, v7, [Ljava/lang/Object;
+
+    const/4 v8, 0x0
+
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v2
+
+    aput-object v2, v7, v8
+
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    .line 222
+    if-eqz v3, :cond_2
+
+    .line 224
+    :try_start_5
+    invoke-virtual {v3}, Ljava/io/FileWriter;->close()V
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
+
+    move v0, v1
+
+    .line 227
+    goto :goto_0
+
+    .line 225
+    :catch_2
+    move-exception v2
+
+    .line 226
+    const-string/jumbo v3, "MicroMsg.ServerConfigInfoStorage"
+
+    const-string/jumbo v5, "exception:%s"
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v2
+
+    aput-object v2, v0, v4
+
+    invoke-static {v3, v5, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    move v0, v1
+
+    .line 227
+    goto :goto_0
+
+    .line 222
+    :catchall_0
+    move-exception v1
+
+    :goto_2
+    if-eqz v3, :cond_1
+
+    .line 224
+    :try_start_6
+    invoke-virtual {v3}, Ljava/io/FileWriter;->close()V
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
+
+    .line 227
+    :cond_1
+    :goto_3
+    throw v1
+
+    .line 225
+    :catch_3
+    move-exception v2
+
+    .line 226
+    const-string/jumbo v3, "MicroMsg.ServerConfigInfoStorage"
+
+    const-string/jumbo v5, "exception:%s"
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v2
+
+    aput-object v2, v0, v4
+
+    invoke-static {v3, v5, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_3
+
+    .line 222
+    :catchall_1
+    move-exception v1
+
+    move-object v3, v2
+
+    goto :goto_2
+
+    .line 218
+    :catch_4
+    move-exception v1
+
+    move-object v3, v2
+
+    move-object v2, v1
+
+    move v1, v4
+
+    goto :goto_1
+
+    :catch_5
+    move-exception v1
+
+    move-object v3, v2
+
+    move-object v2, v1
+
+    move v1, v0
+
+    goto :goto_1
+
+    :cond_2
+    move v0, v1
+
+    goto :goto_0
+.end method
+
+.method public static bds()Ljava/lang/String;
+    .locals 4
+
+    .prologue
+    .line 95
+    new-instance v1, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
+
+    .line 96
+    sget-object v0, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
+
+    .line 97
+    if-eqz v0, :cond_0
+
+    .line 98
+    const-string/jumbo v2, "/"
+
+    const-string/jumbo v3, ":"
+
+    invoke-virtual {v0, v2, v3}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 100
+    :cond_0
+    const-string/jumbo v2, "fingerprint"
+
+    invoke-virtual {v1, v2, v0}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 101
+    const-string/jumbo v0, "manufacturer"
+
+    sget-object v2, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    invoke-virtual {v1, v0, v2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 102
+    const-string/jumbo v0, "device"
+
+    sget-object v2, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    invoke-virtual {v1, v0, v2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 103
+    const-string/jumbo v0, "model"
+
+    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    invoke-virtual {v1, v0, v2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 104
+    const-string/jumbo v0, "product"
+
+    sget-object v2, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
+
+    invoke-virtual {v1, v0, v2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 105
+    const-string/jumbo v0, "board"
+
+    sget-object v2, Landroid/os/Build;->BOARD:Ljava/lang/String;
+
+    invoke-virtual {v1, v0, v2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 106
+    const-string/jumbo v0, "release"
+
+    sget-object v2, Landroid/os/Build$VERSION;->RELEASE:Ljava/lang/String;
+
+    invoke-virtual {v1, v0, v2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 107
+    const-string/jumbo v0, "codename"
+
+    sget-object v2, Landroid/os/Build$VERSION;->CODENAME:Ljava/lang/String;
+
+    invoke-virtual {v1, v0, v2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 108
+    const-string/jumbo v0, "incremental"
+
+    sget-object v2, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
+
+    invoke-virtual {v1, v0, v2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 109
+    const-string/jumbo v0, "display"
+
+    sget-object v2, Landroid/os/Build;->DISPLAY:Ljava/lang/String;
+
+    invoke-virtual {v1, v0, v2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 110
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/util/LinkedHashMap;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 111
+    const-string/jumbo v1, "MicroMsg.ServerConfigInfoStorage"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v3, "delByEncryptUsername:"
+    const-string/jumbo v3, "getLocalFingerprint  "
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string/jumbo v3, " result:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -231,168 +509,394 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 84
-    return v0
+    .line 112
+    return-object v0
 .end method
 
-.method public final a(Lcom/tencent/mm/storage/ao$a;)V
-    .locals 2
+.method public static bdt()Ljava/lang/String;
+    .locals 4
 
     .prologue
-    .line 47
-    iget-object v0, p0, Lcom/tencent/mm/storage/ao;->kgh:Lcom/tencent/mm/sdk/h/h;
+    .line 129
+    new-instance v0, Ljava/lang/StringBuffer;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    invoke-virtual {v0, p1, v1}, Lcom/tencent/mm/sdk/h/h;->a(Ljava/lang/Object;Landroid/os/Looper;)V
+    .line 130
+    const-string/jumbo v1, "<deviceinfo>"
 
-    .line 48
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-.method public final synthetic a(Lcom/tencent/mm/sdk/h/c;)Z
-    .locals 1
+    .line 131
+    const-string/jumbo v1, "<MANUFACTURER name=\""
 
-    .prologue
-    .line 18
-    check-cast p1, Lcom/tencent/mm/storage/an;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    if-eqz p1, :cond_1
+    .line 132
+    sget-object v1, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/h/f;->a(Lcom/tencent/mm/sdk/h/c;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    move-result v0
+    .line 133
+    const-string/jumbo v1, "\">"
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-direct {p0, p1}, Lcom/tencent/mm/storage/ao;->b(Lcom/tencent/mm/storage/an;)V
+    .line 134
+    const-string/jumbo v1, "<MODEL name=\""
 
-    :cond_0
-    :goto_0
-    return v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    :cond_1
-    const/4 v0, 0x0
+    .line 135
+    sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    goto :goto_0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-.method public final b(Lcom/tencent/mm/storage/ao$a;)V
-    .locals 1
+    .line 136
+    const-string/jumbo v1, "\">"
 
-    .prologue
-    .line 51
-    iget-object v0, p0, Lcom/tencent/mm/storage/ao;->kgh:Lcom/tencent/mm/sdk/h/h;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/sdk/h/h;->remove(Ljava/lang/Object;)V
+    .line 137
+    const-string/jumbo v1, "<VERSION_RELEASE name=\""
 
-    .line 52
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-.method public final synthetic b(Lcom/tencent/mm/sdk/h/c;)Z
-    .locals 1
+    .line 138
+    sget-object v1, Landroid/os/Build$VERSION;->RELEASE:Ljava/lang/String;
 
-    .prologue
-    .line 18
-    check-cast p1, Lcom/tencent/mm/storage/an;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/storage/ao;->c(Lcom/tencent/mm/storage/an;)Z
+    .line 139
+    const-string/jumbo v1, "\">"
 
-    move-result v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    return v0
-.end method
+    .line 140
+    const-string/jumbo v1, "<VERSION_INCREMENTAL name=\""
 
-.method public final c(Lcom/tencent/mm/storage/an;)Z
-    .locals 7
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .prologue
-    const/4 v1, 0x1
+    .line 141
+    sget-object v1, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 114
-    const-string/jumbo v3, "stranger NULL !"
+    .line 142
+    const-string/jumbo v1, "\">"
 
-    if-eqz p1, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    move v0, v1
+    .line 143
+    const-string/jumbo v1, "<DISPLAY name=\""
 
-    :goto_0
-    invoke-static {v3, v0}, Ljunit/framework/Assert;->assertTrue(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 116
-    const-string/jumbo v0, "!44@/B4Tb64lLpJZ7cU6crbeb5dTa0zLWGgip6b0bwNd834="
+    .line 144
+    sget-object v1, Landroid/os/Build;->DISPLAY:Ljava/lang/String;
 
-    const-string/jumbo v3, "replace : encryptUsername=%s, conRemark=%s"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    const/4 v4, 0x2
+    .line 145
+    const-string/jumbo v1, "\">"
 
-    new-array v4, v4, [Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    iget-object v5, p1, Lcom/tencent/mm/storage/an;->field_encryptUsername:Ljava/lang/String;
+    .line 146
+    const-string/jumbo v1, "</DISPLAY></VERSION_INCREMENTAL></VERSION_RELEASE></MODEL></MANUFACTURER></deviceinfo>"
 
-    aput-object v5, v4, v2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    iget-object v5, p1, Lcom/tencent/mm/storage/an;->field_conRemark:Ljava/lang/String;
+    .line 147
+    const-string/jumbo v1, "MicroMsg.ServerConfigInfoStorage"
 
-    aput-object v5, v4, v1
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const-string/jumbo v3, "getFingerprint  "
 
-    .line 117
-    invoke-virtual {p1}, Lcom/tencent/mm/storage/an;->lX()Landroid/content/ContentValues;
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 148
+    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 118
-    iget-object v3, p0, Lcom/tencent/mm/storage/ao;->aoX:Lcom/tencent/mm/sdk/h/d;
+    return-object v0
+.end method
 
-    const-string/jumbo v4, "Stranger"
 
-    const-string/jumbo v5, ""
+# virtual methods
+.method public final HV(Ljava/lang/String;)I
+    .locals 4
 
-    invoke-interface {v3, v4, v5, v0}, Lcom/tencent/mm/sdk/h/d;->replace(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
+    .prologue
+    const/4 v3, 0x0
 
-    move-result-wide v3
+    .line 81
+    const-string/jumbo v0, "MicroMsg.ServerConfigInfoStorage"
 
-    const-wide/16 v5, 0x0
+    const-string/jumbo v1, "dkconf info:[%s] "
 
-    cmp-long v0, v3, v5
+    const/4 v2, 0x1
 
-    if-lez v0, :cond_1
+    new-array v2, v2, [Ljava/lang/Object;
+
+    aput-object p1, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 85
+    iget-object v0, p0, Lcom/tencent/mm/storage/ao;->kHa:Lcom/tencent/mm/storage/h;
+
+    const v1, 0x13001
+
+    invoke-virtual {v0, v1, p1}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
+
+    .line 88
+    invoke-static {p1}, Lcom/tencent/mm/storage/ao;->HX(Ljava/lang/String;)Z
+
+    .line 90
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/h/g;->FX(Ljava/lang/String;)V
+
+    .line 91
+    return v3
+.end method
+
+.method public final bdq()V
+    .locals 7
+
+    .prologue
+    const/4 v1, -0x1
+
+    const/4 v3, 0x1
+
+    const/4 v2, 0x0
+
+    .line 32
+    iget-object v0, p0, Lcom/tencent/mm/storage/ao;->kHa:Lcom/tencent/mm/storage/h;
+
+    const v4, 0x13001
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v0, v4, v5}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    const-string/jumbo v4, "MicroMsg.ServerConfigInfoStorage"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v6, "hy: readConfig xml "
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    invoke-super {p0, v0}, Lcom/tencent/mm/sdk/h/g;->FX(Ljava/lang/String;)V
+
+    :cond_0
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    move v0, v3
+
+    :goto_0
+    if-nez v0, :cond_5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v4, Lcom/tencent/mm/storage/j;->bpc:Ljava/lang/String;
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v4, "deviceconfig.cfg"
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tencent/mm/a/e;->aB(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_2
 
     move v0, v1
 
-    .line 120
+    .line 33
     :goto_1
-    if-nez v0, :cond_2
+    const-string/jumbo v1, "MicroMsg.ServerConfigInfoStorage"
 
-    .line 124
-    :goto_2
-    return v2
+    const-string/jumbo v4, "hy: read from local retcode: %d"
 
-    :cond_0
-    move v0, v2
+    new-array v3, v3, [Ljava/lang/Object;
 
-    .line 114
-    goto :goto_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v3, v2
+
+    invoke-static {v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 34
+    return-void
 
     :cond_1
     move v0, v2
 
-    .line 118
+    .line 32
+    goto :goto_0
+
+    :cond_2
+    invoke-static {v0, v2, v1}, Lcom/tencent/mm/a/e;->d(Ljava/lang/String;II)[B
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->P([B)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    const/4 v0, -0x2
+
     goto :goto_1
 
-    .line 123
-    :cond_2
-    invoke-direct {p0, p1}, Lcom/tencent/mm/storage/ao;->b(Lcom/tencent/mm/storage/an;)V
+    :cond_3
+    new-instance v1, Ljava/lang/String;
 
-    move v2, v1
+    invoke-static {}, Ljava/nio/charset/Charset;->defaultCharset()Ljava/nio/charset/Charset;
 
-    .line 124
-    goto :goto_2
+    move-result-object v4
+
+    invoke-direct {v1, v0, v4}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
+
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    const/4 v0, -0x3
+
+    goto :goto_1
+
+    :cond_4
+    const-string/jumbo v0, "MicroMsg.ServerConfigInfoStorage"
+
+    const-string/jumbo v4, "hy: read from file: %s"
+
+    new-array v5, v3, [Ljava/lang/Object;
+
+    aput-object v1, v5, v2
+
+    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/storage/ao;->HV(Ljava/lang/String;)I
+
+    move v0, v2
+
+    goto :goto_1
+
+    :cond_5
+    const-string/jumbo v0, "MicroMsg.ServerConfigInfoStorage"
+
+    const-string/jumbo v1, "hy: got conf from db"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    move v0, v2
+
+    goto :goto_1
+.end method
+
+.method public final bdr()Ljava/lang/String;
+    .locals 4
+
+    .prologue
+    .line 75
+    iget-object v0, p0, Lcom/tencent/mm/storage/ao;->kHa:Lcom/tencent/mm/storage/h;
+
+    const v1, 0x13001
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 76
+    const-string/jumbo v1, "MicroMsg.ServerConfigInfoStorage"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "getInfoByKey xml "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string/jumbo v3, " key 77825"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 77
+    return-object v0
 .end method

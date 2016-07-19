@@ -2,7 +2,8 @@ package com.tencent.mm.ui.bindmobile;
 
 import android.content.Intent;
 import android.widget.CheckBox;
-import com.tencent.mm.d.a.nk;
+import com.tencent.mm.e.a.nx;
+import com.tencent.mm.model.h;
 import com.tencent.mm.sdk.c.b;
 import com.tencent.mm.ui.MMWizardActivity;
 import com.tencent.mm.ui.friend.i.a;
@@ -12,59 +13,59 @@ final class BindMContactUI$6
 {
   BindMContactUI$6(BindMContactUI paramBindMContactUI, String paramString) {}
   
-  public final void qo(int paramInt)
+  public final void sg(int paramInt)
   {
     if (paramInt == 1) {
-      if (BindMContactUI.h(kOD))
+      if (BindMContactUI.h(lnT))
       {
-        if (!com.tencent.mm.model.h.sj())
+        if (!h.sl())
         {
-          localObject = new nk();
-          aJL.aJM = true;
-          aJL.aJN = true;
-          com.tencent.mm.sdk.c.a.jUF.j((b)localObject);
+          localObject = new nx();
+          awf.awg = true;
+          awf.awh = true;
+          com.tencent.mm.sdk.c.a.kug.y((b)localObject);
         }
-        BindMContactUI.i(kOD);
+        BindMContactUI.i(lnT);
         localObject = new Intent();
         ((Intent)localObject).addFlags(67108864);
-        com.tencent.mm.plugin.a.a.coa.d(kOD, (Intent)localObject);
+        com.tencent.mm.plugin.a.a.cjo.d(lnT, (Intent)localObject);
       }
     }
     label205:
     while (paramInt != 2)
     {
       return;
-      if (BindMContactUI.j(kOD))
+      if (BindMContactUI.j(lnT))
       {
-        com.tencent.mm.ui.base.g.ba(kOD, kOD.getString(2131432751));
-        MMWizardActivity.v(kOD, new Intent(kOD, BindMContactStatusUI.class));
+        com.tencent.mm.ui.base.g.aZ(lnT, lnT.getString(2131234674));
+        MMWizardActivity.v(lnT, new Intent(lnT, BindMContactStatusUI.class));
         return;
       }
-      if (BindMContactUI.k(kOD))
+      if (BindMContactUI.k(lnT))
       {
-        if (!BindMContactUI.l(kOD)) {
+        if (!BindMContactUI.l(lnT)) {
           break label205;
         }
-        com.tencent.mm.plugin.report.service.h.fUJ.g(11002, new Object[] { Integer.valueOf(3), Integer.valueOf(3) });
+        com.tencent.mm.plugin.report.service.g.gdY.h(11002, new Object[] { Integer.valueOf(3), Integer.valueOf(3) });
       }
       for (;;)
       {
-        MMWizardActivity.v(kOD, new Intent(kOD, BindMContactStatusUI.class));
+        MMWizardActivity.v(lnT, new Intent(lnT, BindMContactStatusUI.class));
         return;
-        com.tencent.mm.plugin.report.service.h.fUJ.g(11002, new Object[] { Integer.valueOf(1), Integer.valueOf(2) });
+        com.tencent.mm.plugin.report.service.g.gdY.h(11002, new Object[] { Integer.valueOf(1), Integer.valueOf(2) });
       }
     }
-    Object localObject = new Intent(kOD, BindMContactVerifyUI.class);
-    ((Intent)localObject).putExtra("bindmcontact_mobile", kxx);
-    ((Intent)localObject).putExtra("is_bind_for_safe_device", BindMContactUI.h(kOD));
-    ((Intent)localObject).putExtra("is_bind_for_contact_sync", BindMContactUI.l(kOD));
-    ((Intent)localObject).putExtra("is_bind_for_change_mobile", BindMContactUI.j(kOD));
-    ((Intent)localObject).putExtra("KEnterFromBanner", BindMContactUI.k(kOD));
-    if (BindMContactUI.m(kOD) != null) {
-      ((Intent)localObject).putExtra("BIND_FIND_ME_BY_MOBILE", BindMContactUI.m(kOD).isChecked());
+    Object localObject = new Intent(lnT, BindMContactVerifyUI.class);
+    ((Intent)localObject).putExtra("bindmcontact_mobile", kWE);
+    ((Intent)localObject).putExtra("is_bind_for_safe_device", BindMContactUI.h(lnT));
+    ((Intent)localObject).putExtra("is_bind_for_contact_sync", BindMContactUI.l(lnT));
+    ((Intent)localObject).putExtra("is_bind_for_change_mobile", BindMContactUI.j(lnT));
+    ((Intent)localObject).putExtra("KEnterFromBanner", BindMContactUI.k(lnT));
+    if (BindMContactUI.m(lnT) != null) {
+      ((Intent)localObject).putExtra("BIND_FIND_ME_BY_MOBILE", BindMContactUI.m(lnT).isChecked());
     }
-    ((Intent)localObject).putExtra("BIND_FOR_QQ_REG", BindMContactUI.n(kOD));
-    MMWizardActivity.v(kOD, (Intent)localObject);
+    ((Intent)localObject).putExtra("BIND_FOR_QQ_REG", BindMContactUI.n(lnT));
+    MMWizardActivity.v(lnT, (Intent)localObject);
   }
 }
 

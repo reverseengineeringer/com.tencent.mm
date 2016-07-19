@@ -4,6 +4,187 @@
 
 
 # direct methods
+.method public static final aa(II)I
+    .locals 2
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 354
+    const/high16 v1, 0x20000
+
+    if-eq p0, v1, :cond_0
+
+    const v1, 0x20004
+
+    if-ne p0, v1, :cond_2
+
+    .line 355
+    :cond_0
+    packed-switch p1, :pswitch_data_0
+
+    .line 412
+    :cond_1
+    :goto_0
+    :pswitch_0
+    return v0
+
+    .line 357
+    :pswitch_1
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    .line 359
+    :pswitch_2
+    const/4 v0, 0x2
+
+    goto :goto_0
+
+    .line 361
+    :pswitch_3
+    const/4 v0, 0x3
+
+    goto :goto_0
+
+    .line 363
+    :pswitch_4
+    const/4 v0, 0x4
+
+    goto :goto_0
+
+    .line 365
+    :pswitch_5
+    const/4 v0, 0x5
+
+    goto :goto_0
+
+    .line 367
+    :pswitch_6
+    const/4 v0, 0x6
+
+    goto :goto_0
+
+    .line 369
+    :pswitch_7
+    const/4 v0, 0x7
+
+    goto :goto_0
+
+    .line 374
+    :pswitch_8
+    const/16 v0, 0x8
+
+    goto :goto_0
+
+    .line 376
+    :pswitch_9
+    const/16 v0, 0xa
+
+    goto :goto_0
+
+    .line 379
+    :pswitch_a
+    const/16 v0, 0x9
+
+    goto :goto_0
+
+    .line 381
+    :pswitch_b
+    const/16 v0, 0x10
+
+    goto :goto_0
+
+    .line 385
+    :cond_2
+    const v1, 0x20003
+
+    if-ne p0, v1, :cond_3
+
+    .line 386
+    sparse-switch p1, :sswitch_data_0
+
+    goto :goto_0
+
+    .line 389
+    :sswitch_0
+    const/16 v0, 0xc
+
+    goto :goto_0
+
+    .line 392
+    :sswitch_1
+    const/16 v0, 0xd
+
+    goto :goto_0
+
+    .line 395
+    :sswitch_2
+    const/16 v0, 0xe
+
+    goto :goto_0
+
+    .line 405
+    :sswitch_3
+    const/16 v0, 0xb
+
+    goto :goto_0
+
+    .line 409
+    :cond_3
+    const/high16 v1, 0x10000
+
+    if-ne p0, v1, :cond_1
+
+    .line 410
+    const/16 v0, 0x11
+
+    goto :goto_0
+
+    .line 355
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+        :pswitch_5
+        :pswitch_6
+        :pswitch_7
+        :pswitch_8
+        :pswitch_8
+        :pswitch_8
+        :pswitch_8
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_b
+        :pswitch_9
+        :pswitch_a
+        :pswitch_a
+    .end packed-switch
+
+    .line 386
+    :sswitch_data_0
+    .sparse-switch
+        0x1 -> :sswitch_0
+        0x2 -> :sswitch_1
+        0x3 -> :sswitch_2
+        0x5 -> :sswitch_0
+        0x6 -> :sswitch_1
+        0x7 -> :sswitch_2
+        0x1d -> :sswitch_3
+        0x1e -> :sswitch_3
+        0x1f -> :sswitch_3
+        0x20 -> :sswitch_3
+        0x22 -> :sswitch_3
+        0x23 -> :sswitch_3
+        0x24 -> :sswitch_3
+        0x25 -> :sswitch_3
+        0x26 -> :sswitch_3
+    .end sparse-switch
+.end method
+
 .method public static b(Ljava/lang/String;ZII)V
     .locals 8
 
@@ -18,14 +199,14 @@
 
     const/4 v6, 0x1
 
-    .line 176
+    .line 211
     if-nez p3, :cond_2
 
-    .line 177
+    .line 212
     if-eqz p1, :cond_0
 
-    .line 178
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 213
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     new-array v4, v2, [Ljava/lang/Object;
 
@@ -43,18 +224,18 @@
 
     aput-object v2, v4, v1
 
-    invoke-virtual {v0, v7, v4}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v7, v4}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
-    .line 229
+    .line 264
     :goto_0
     return-void
 
-    .line 181
+    .line 216
     :cond_0
     if-lez p2, :cond_1
 
-    .line 182
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 217
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -72,13 +253,13 @@
 
     aput-object v3, v2, v1
 
-    invoke-virtual {v0, v7, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v7, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 186
+    .line 221
     :cond_1
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -96,22 +277,22 @@
 
     aput-object v3, v2, v1
 
-    invoke-virtual {v0, v7, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v7, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 192
+    .line 227
     :cond_2
     sparse-switch p3, :sswitch_data_0
 
     move v0, v3
 
-    .line 211
+    .line 246
     :goto_1
     if-eqz p1, :cond_3
 
-    .line 216
-    sget-object v4, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 251
+    sget-object v4, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     new-array v5, v2, [Ljava/lang/Object;
 
@@ -129,48 +310,48 @@
 
     aput-object v0, v5, v1
 
-    invoke-virtual {v4, v7, v5}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v4, v7, v5}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto :goto_0
 
     :sswitch_0
     move v0, v1
 
-    .line 199
+    .line 234
     goto :goto_1
 
     :sswitch_1
     move v0, v2
 
-    .line 202
+    .line 237
     goto :goto_1
 
-    .line 204
+    .line 239
     :sswitch_2
     const/4 v0, 0x4
 
-    .line 205
+    .line 240
     goto :goto_1
 
-    .line 207
+    .line 242
     :sswitch_3
     const/4 v0, 0x5
 
-    .line 208
+    .line 243
     goto :goto_1
 
-    .line 210
+    .line 245
     :sswitch_4
     const/4 v0, 0x6
 
     goto :goto_1
 
-    .line 219
+    .line 254
     :cond_3
     if-lez p2, :cond_4
 
-    .line 220
-    sget-object v4, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 255
+    sget-object v4, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -188,13 +369,13 @@
 
     aput-object v0, v2, v1
 
-    invoke-virtual {v4, v7, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v4, v7, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 224
+    .line 259
     :cond_4
-    sget-object v4, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v4, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -212,11 +393,11 @@
 
     aput-object v0, v2, v1
 
-    invoke-virtual {v4, v7, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v4, v7, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
-    .line 192
+    .line 227
     nop
 
     :sswitch_data_0
@@ -233,7 +414,7 @@
     .end sparse-switch
 .end method
 
-.method public static dH(I)V
+.method public static en(I)V
     .locals 6
 
     .prologue
@@ -243,98 +424,98 @@
 
     const/4 v3, 0x1
 
-    .line 126
+    .line 161
     new-instance v0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;
 
     invoke-direct {v0}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;-><init>()V
 
-    .line 127
+    .line 162
     invoke-virtual {v0, v4}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetID(I)V
 
-    .line 128
+    .line 163
     invoke-virtual {v0, v5}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetKey(I)V
 
-    .line 129
+    .line 164
     invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetValue(I)V
 
-    .line 131
+    .line 166
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 132
+    .line 167
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 133
+    .line 168
     if-eq p0, v3, :cond_0
 
-    .line 134
+    .line 169
     new-instance v0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;
 
     invoke-direct {v0}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;-><init>()V
 
-    .line 135
+    .line 170
     invoke-virtual {v0, v4}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetID(I)V
 
-    .line 136
+    .line 171
     const/4 v2, 0x2
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetKey(I)V
 
-    .line 137
+    .line 172
     invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetValue(I)V
 
-    .line 138
+    .line 173
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 139
+    .line 174
     new-instance v0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;
 
     invoke-direct {v0}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;-><init>()V
 
-    .line 140
+    .line 175
     invoke-virtual {v0, v4}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetID(I)V
 
-    .line 141
+    .line 176
     invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetKey(I)V
 
-    .line 142
+    .line 177
     invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetValue(I)V
 
-    .line 143
+    .line 178
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 151
+    .line 186
     :goto_0
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
-    invoke-static {v1, v5}, Lcom/tencent/mm/plugin/report/service/h;->d(Ljava/util/ArrayList;Z)V
+    invoke-static {v1, v5}, Lcom/tencent/mm/plugin/report/service/g;->d(Ljava/util/ArrayList;Z)V
 
-    .line 152
+    .line 187
     return-void
 
-    .line 145
+    .line 180
     :cond_0
     new-instance v0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;
 
     invoke-direct {v0}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;-><init>()V
 
-    .line 146
+    .line 181
     invoke-virtual {v0, v4}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetID(I)V
 
-    .line 147
+    .line 182
     invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetKey(I)V
 
-    .line 148
+    .line 183
     invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetValue(I)V
 
-    .line 149
+    .line 184
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 .end method
 
-.method public static m(IJ)V
+.method public static k(IJ)V
     .locals 7
 
     .prologue
@@ -344,8 +525,8 @@
 
     const/4 v4, 0x0
 
-    .line 81
-    const-string/jumbo v0, "!44@/B4Tb64lLpKLxeMowbLUcAFldVd3xo5jMHEnkiX3cRU="
+    .line 116
+    const-string/jumbo v0, "MicroMsg.FTS.FTSReportLogic"
 
     const-string/jumbo v1, "reportIDKey: type=%d time=%d"
 
@@ -365,69 +546,69 @@
 
     aput-object v3, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 82
+    .line 117
     sparse-switch p0, :sswitch_data_0
 
-    .line 100
+    .line 135
     :goto_0
     return-void
 
-    .line 88
+    .line 123
     :sswitch_0
     new-instance v0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;
 
     invoke-direct {v0}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;-><init>()V
 
-    .line 89
+    .line 124
     invoke-virtual {v0, v6}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetID(I)V
 
-    .line 90
+    .line 125
     add-int/lit8 v1, p0, 0x1
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetKey(I)V
 
-    .line 91
+    .line 126
     long-to-int v1, p1
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetValue(I)V
 
-    .line 92
+    .line 127
     new-instance v1, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;
 
     invoke-direct {v1}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;-><init>()V
 
-    .line 93
+    .line 128
     invoke-virtual {v1, v6}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetID(I)V
 
-    .line 94
+    .line 129
     add-int/lit8 v2, p0, 0x2
 
     invoke-virtual {v1, v2}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetKey(I)V
 
-    .line 95
+    .line 130
     invoke-virtual {v1, v5}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetValue(I)V
 
-    .line 96
+    .line 131
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 97
+    .line 132
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 98
+    .line 133
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 99
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 134
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
-    invoke-static {v2, v4}, Lcom/tencent/mm/plugin/report/service/h;->d(Ljava/util/ArrayList;Z)V
+    invoke-static {v2, v4}, Lcom/tencent/mm/plugin/report/service/g;->d(Ljava/util/ArrayList;Z)V
 
     goto :goto_0
 
-    .line 82
+    .line 117
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -438,8 +619,8 @@
     .end sparse-switch
 .end method
 
-.method public static n(IJ)V
-    .locals 8
+.method public static l(IJ)V
+    .locals 9
 
     .prologue
     const/16 v7, 0x95
@@ -448,18 +629,18 @@
 
     const/4 v5, 0x0
 
-    .line 156
+    .line 191
     if-lez p0, :cond_0
 
-    .line 157
+    .line 192
     add-int/lit8 v0, p0, -0x1
 
     mul-int/lit8 v0, v0, 0x2
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 158
-    const-string/jumbo v1, "!44@/B4Tb64lLpKLxeMowbLUcAFldVd3xo5jMHEnkiX3cRU="
+    .line 193
+    const-string/jumbo v1, "MicroMsg.FTS.FTSReportLogic"
 
     const-string/jumbo v2, "reportIDKeySearchTime: reportKey=%d taskId=%d"
 
@@ -479,57 +660,57 @@
 
     aput-object v4, v3, v6
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 159
+    .line 194
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 160
+    .line 195
     new-instance v2, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;
 
     invoke-direct {v2}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;-><init>()V
 
-    .line 161
+    .line 196
     invoke-virtual {v2, v7}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetID(I)V
 
-    .line 162
+    .line 197
     invoke-virtual {v2, v0}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetKey(I)V
 
-    .line 163
+    .line 198
     long-to-int v3, p1
 
     invoke-virtual {v2, v3}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetValue(I)V
 
-    .line 164
+    .line 199
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 165
+    .line 200
     new-instance v2, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;
 
     invoke-direct {v2}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;-><init>()V
 
-    .line 166
+    .line 201
     invoke-virtual {v2, v7}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetID(I)V
 
-    .line 167
+    .line 202
     add-int/lit8 v0, v0, 0x1
 
     invoke-virtual {v2, v0}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetKey(I)V
 
-    .line 168
+    .line 203
     invoke-virtual {v2, v6}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetValue(I)V
 
-    .line 169
+    .line 204
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 170
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 205
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
-    invoke-static {v1, v5}, Lcom/tencent/mm/plugin/report/service/h;->d(Ljava/util/ArrayList;Z)V
+    invoke-static {v1, v5}, Lcom/tencent/mm/plugin/report/service/g;->d(Ljava/util/ArrayList;Z)V
 
-    .line 172
+    .line 207
     :cond_0
     return-void
 .end method

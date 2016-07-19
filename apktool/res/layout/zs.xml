@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@drawable/o2" android:layout_height="@dimen/j7" android:minHeight="@dimen/j7" style="@style/MMListItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/j_" android:id="@id/ba" android:layout_width="0.0dip" android:layout_marginLeft="@dimen/i7" android:layout_marginRight="@dimen/j8" android:layout_weight="1.0" style="@style/MMFontPreferenceLarge" />
+    <RadioButton android:textSize="0.0dip" android:id="@id/du" android:background="@drawable/lw" android:focusable="false" android:focusableInTouchMode="false" android:visibility="gone" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/j8" android:button="@null" android:text="" android:drawablePadding="0.0dip" />
+    <CheckBox android:id="@id/bjq" android:focusable="false" android:focusableInTouchMode="false" android:visibility="gone" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j8" android:layout_marginRight="@dimen/j8" />
+</LinearLayout>

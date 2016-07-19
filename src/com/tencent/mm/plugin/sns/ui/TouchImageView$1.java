@@ -7,8 +7,8 @@ final class TouchImageView$1
   
   public final void run()
   {
-    hmQ.setPressed(false);
-    hmQ.invalidate();
+    hDa.setPressed(false);
+    hDa.invalidate();
   }
 }
 

@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic cqb:Landroid/view/View;
+.field final synthetic clo:Landroid/view/View;
 
-.field final synthetic iIh:Lcom/tencent/mm/ui/base/o;
+.field final synthetic jfe:Lcom/tencent/mm/ui/base/o;
 
-.field final synthetic iIj:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
+.field final synthetic jfg:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
 
 # direct methods
@@ -31,11 +31,11 @@
 
     .prologue
     .line 1225
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$4;->iIj:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$4;->jfg:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$4;->cqb:Landroid/view/View;
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$4;->clo:Landroid/view/View;
 
-    iput-object p3, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$4;->iIh:Lcom/tencent/mm/ui/base/o;
+    iput-object p3, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$4;->jfe:Lcom/tencent/mm/ui/base/o;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,24 +51,24 @@
     const/4 v4, 0x0
 
     .line 1229
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$4;->iIj:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$4;->jfg:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
     if-eqz v0, :cond_0
 
     .line 1230
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$4;->iIj:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$4;->jfg:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
     const/4 v1, 0x1
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$4;->cqb:Landroid/view/View;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$4;->clo:Landroid/view/View;
 
-    invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->ah(Landroid/view/View;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->ak(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$4;->cqb:Landroid/view/View;
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$4;->clo:Landroid/view/View;
 
-    invoke-static {v3}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->ai(Landroid/view/View;)I
+    invoke-static {v3}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->al(Landroid/view/View;)I
 
     move-result v3
 
@@ -76,17 +76,17 @@
 
     .line 1232
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$4;->iIh:Lcom/tencent/mm/ui/base/o;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$4;->jfe:Lcom/tencent/mm/ui/base/o;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/o;->dismiss()V
 
     .line 1233
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$4;->iIh:Lcom/tencent/mm/ui/base/o;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$4;->jfe:Lcom/tencent/mm/ui/base/o;
 
     invoke-virtual {v0, v4}, Lcom/tencent/mm/ui/base/o;->setFocusable(Z)V
 
     .line 1234
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$4;->iIh:Lcom/tencent/mm/ui/base/o;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$4;->jfe:Lcom/tencent/mm/ui/base/o;
 
     invoke-virtual {v0, v4}, Lcom/tencent/mm/ui/base/o;->setTouchable(Z)V
 

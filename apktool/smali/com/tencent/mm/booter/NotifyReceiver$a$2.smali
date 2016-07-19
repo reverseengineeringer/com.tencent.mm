@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/booter/NotifyReceiver$a;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/booter/NotifyReceiver$a;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bmP:Lcom/tencent/mm/booter/NotifyReceiver$a;
+.field final synthetic bav:Lcom/tencent/mm/booter/NotifyReceiver$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 782
-    iput-object p1, p0, Lcom/tencent/mm/booter/NotifyReceiver$a$2;->bmP:Lcom/tencent/mm/booter/NotifyReceiver$a;
+    .line 1001
+    iput-object p1, p0, Lcom/tencent/mm/booter/NotifyReceiver$a$2;->bav:Lcom/tencent/mm/booter/NotifyReceiver$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,10 +40,10 @@
     .locals 3
 
     .prologue
-    .line 786
-    iget-object v0, p0, Lcom/tencent/mm/booter/NotifyReceiver$a$2;->bmP:Lcom/tencent/mm/booter/NotifyReceiver$a;
+    .line 1005
+    iget-object v0, p0, Lcom/tencent/mm/booter/NotifyReceiver$a$2;->bav:Lcom/tencent/mm/booter/NotifyReceiver$a;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/sdk/platformtools/ab;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tw()Lcom/tencent/mm/sdk/platformtools/ad;
 
     move-result-object v1
 
@@ -51,9 +51,9 @@
 
     invoke-direct {v2, v0}, Lcom/tencent/mm/booter/NotifyReceiver$a$4;-><init>(Lcom/tencent/mm/booter/NotifyReceiver$a;)V
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/sdk/platformtools/ab;->r(Ljava/lang/Runnable;)I
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/sdk/platformtools/ad;->t(Ljava/lang/Runnable;)I
 
-    .line 787
+    .line 1006
     const/4 v0, 0x0
 
     return v0

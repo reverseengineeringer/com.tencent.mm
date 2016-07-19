@@ -1,12 +1,13 @@
 package com.tencent.mm.model;
 
 import android.database.Cursor;
-import com.tencent.mm.az.g;
-import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.bc.g;
 import com.tencent.mm.sdk.platformtools.ad;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag;
-import com.tencent.mm.storage.ah.c;
+import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.aj;
+import com.tencent.mm.storage.aj.c;
 
 final class ar$2
   implements Runnable
@@ -15,39 +16,39 @@ final class ar$2
   
   public final void run()
   {
-    Object localObject1 = ah.tD().rs();
-    Object localObject2 = bBG;
-    long l = bBJ;
-    localObject1 = bCw.query(((com.tencent.mm.storage.ah)localObject1).Fs((String)localObject2), null, com.tencent.mm.storage.ah.dA(l), null, null, null, "createTime ASC ");
+    Object localObject1 = ah.tE().rt();
+    Object localObject2 = bjA;
+    long l = buR;
+    localObject1 = bvG.query(((aj)localObject1).HJ((String)localObject2), null, aj.dR(l), null, null, null, "createTime ASC ");
     if (((Cursor)localObject1).moveToFirst()) {
-      while ((!((Cursor)localObject1).isAfterLast()) && ((bBH == null) || (!bBH.ui())))
+      while ((!((Cursor)localObject1).isAfterLast()) && ((buP == null) || (!buP.uj())))
       {
-        localObject2 = new ag();
-        ((ag)localObject2).c((Cursor)localObject1);
-        ar.f((ag)localObject2);
+        localObject2 = new ai();
+        ((ai)localObject2).b((Cursor)localObject1);
+        ar.f((ai)localObject2);
         ((Cursor)localObject1).moveToNext();
       }
     }
     ((Cursor)localObject1).close();
-    localObject1 = ah.tD().rs();
-    localObject2 = bBG;
-    l = bBJ;
-    u.w("!32@/B4Tb64lLpLj7S4izLo0fC/WdDBM+++1", "deleteByTalker :%s  stack:%s", new Object[] { localObject2, ad.aVc() });
-    ((com.tencent.mm.storage.ah)localObject1).a(((com.tencent.mm.storage.ah)localObject1).Fs((String)localObject2), com.tencent.mm.storage.ah.dA(l), null);
-    int i = bCw.delete(((com.tencent.mm.storage.ah)localObject1).Fs((String)localObject2), com.tencent.mm.storage.ah.dA(l), null);
+    localObject1 = ah.tE().rt();
+    localObject2 = bjA;
+    l = buR;
+    v.w("MicroMsg.MsgInfoStorage", "deleteByTalker :%s  stack:%s", new Object[] { localObject2, af.bag() });
+    ((aj)localObject1).a(((aj)localObject1).HJ((String)localObject2), aj.dR(l), null);
+    int i = bvG.delete(((aj)localObject1).HJ((String)localObject2), aj.dR(l), null);
     if (i != 0)
     {
-      ((com.tencent.mm.storage.ah)localObject1).DI("delete_talker " + (String)localObject2);
-      localObject2 = new ah.c((String)localObject2, "delete", i);
-      kgu = -1L;
-      ((com.tencent.mm.storage.ah)localObject1).a((ah.c)localObject2);
+      ((aj)localObject1).FX("delete_talker " + (String)localObject2);
+      localObject2 = new aj.c((String)localObject2, "delete", i);
+      kGT = -1L;
+      ((aj)localObject1).a((aj.c)localObject2);
     }
-    ab.j(new Runnable()
+    ad.k(new Runnable()
     {
       public final void run()
       {
-        if (bBH != null) {
-          bBH.uh();
+        if (buP != null) {
+          buP.ui();
         }
       }
     });

@@ -1,10 +1,10 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.plugin.sns.d.ad;
+import com.tencent.mm.plugin.sns.e.ad;
 import com.tencent.mm.sdk.h.g.a;
 import com.tencent.mm.sdk.h.i;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SnsStrangerCommentDetailUI$7
   implements g.a
@@ -13,17 +13,17 @@ final class SnsStrangerCommentDetailUI$7
   
   public final void a(String paramString, i parami)
   {
-    ad.ZP().post(new Runnable()
+    ad.acj().post(new Runnable()
     {
       public final void run()
       {
-        u.v("!56@/B4Tb64lLpKq4kzQEmWfvWlP1B6VxlvUA5NJce3mTcriiJ7E+LoT7Q==", "comment notify");
-        SnsStrangerCommentDetailUI.d(hiQ).a(null, null);
-        if (SnsStrangerCommentDetailUI.e(hiQ))
+        v.v("MicroMsg.SnsStrangerCommentDetailUI", "comment notify");
+        SnsStrangerCommentDetailUI.d(hxF).a(null, null);
+        if (SnsStrangerCommentDetailUI.e(hxF))
         {
-          SnsStrangerCommentDetailUI.a(hiQ, false);
-          SnsStrangerCommentDetailUI localSnsStrangerCommentDetailUI = hiQ;
-          ad.ZP().postDelayed(new SnsStrangerCommentDetailUI.8(localSnsStrangerCommentDetailUI), 10L);
+          SnsStrangerCommentDetailUI.a(hxF, false);
+          SnsStrangerCommentDetailUI localSnsStrangerCommentDetailUI = hxF;
+          ad.acj().postDelayed(new SnsStrangerCommentDetailUI.8(localSnsStrangerCommentDetailUI), 10L);
         }
       }
     });

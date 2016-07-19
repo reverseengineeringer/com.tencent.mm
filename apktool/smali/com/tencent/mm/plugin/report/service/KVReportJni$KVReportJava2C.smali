@@ -52,6 +52,9 @@
 .method public static native reportListIDKey([Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;Z)V
 .end method
 
+.method public static native setDebugFlag(Z)V
+.end method
+
 .method public static native setUin(J)V
 .end method
 

@@ -4,9 +4,9 @@ import com.tencent.mm.model.ah;
 import com.tencent.mm.plugin.gwallet.a.b;
 import com.tencent.mm.plugin.gwallet.a.b.a;
 import com.tencent.mm.plugin.gwallet.a.c;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ab.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.ad.a;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class GWalletQueryProvider$1
   implements b.a
@@ -15,36 +15,36 @@ final class GWalletQueryProvider$1
   
   public final void a(c paramc)
   {
-    u.d("!44@/B4Tb64lLpJlq3g3dssAoZZ5jyUwqm48qdJiAhkom5Q=", "Setup finished.");
-    if (!paramc.isSuccess())
+    v.d("MicroMsg.GWalletQueryProvider", "Setup finished.");
+    if (!paramc.ep())
     {
-      u.e("!44@/B4Tb64lLpJlq3g3dssAoZZ5jyUwqm48qdJiAhkom5Q=", "Problem setting up in-app billing: " + paramc);
-      GWalletQueryProvider.a(exw);
-      if (GWalletQueryProvider.b(exw) != null) {
-        GWalletQueryProvider.b(exw).dispose();
+      v.e("MicroMsg.GWalletQueryProvider", "Problem setting up in-app billing: " + paramc);
+      GWalletQueryProvider.a(eDQ);
+      if (GWalletQueryProvider.b(eDQ) != null) {
+        GWalletQueryProvider.b(eDQ).dispose();
       }
-      GWalletQueryProvider.c(exw);
+      GWalletQueryProvider.c(eDQ);
       return;
     }
-    ah.tv().a(new ab.a()
+    ah.tw().a(new ad.a()
     {
       public final String toString()
       {
         return super.toString() + "|onIabSetupFinished";
       }
       
-      public final boolean vd()
+      public final boolean vf()
       {
-        GWalletQueryProvider.d(exw);
+        GWalletQueryProvider.d(eDQ);
         return true;
       }
       
-      public final boolean ve()
+      public final boolean vg()
       {
-        if (GWalletQueryProvider.b(exw) != null) {
-          GWalletQueryProvider.b(exw).dispose();
+        if (GWalletQueryProvider.b(eDQ) != null) {
+          GWalletQueryProvider.b(eDQ).dispose();
         }
-        GWalletQueryProvider.c(exw);
+        GWalletQueryProvider.c(eDQ);
         return true;
       }
     });

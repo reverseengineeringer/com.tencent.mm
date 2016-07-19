@@ -19,6 +19,15 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields

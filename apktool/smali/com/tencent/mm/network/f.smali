@@ -15,19 +15,28 @@
 
 
 # virtual methods
-.method public abstract EJ()Lcom/tencent/mm/network/d;
+.method public abstract Fe()Lcom/tencent/mm/network/d;
 .end method
 
-.method public abstract EK()V
+.method public abstract Ff()V
 .end method
 
-.method public abstract EL()Lcom/tencent/mm/network/h;
+.method public abstract Fg()Lcom/tencent/mm/network/h;
 .end method
 
 .method public abstract a(Lcom/tencent/mm/network/p;Lcom/tencent/mm/network/k;)I
 .end method
 
 .method public abstract a(ZLjava/util/List;)I
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(Z",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)I"
+        }
+    .end annotation
 .end method
 
 .method public abstract a(ILjava/lang/String;IZ)V
@@ -45,22 +54,22 @@
 .method public abstract a(Lcom/tencent/mm/network/q;)V
 .end method
 
-.method public abstract a(Lcom/tencent/mm/protocal/y;)V
+.method public abstract a(Lcom/tencent/mm/protocal/ab;)V
 .end method
 
 .method public abstract a(ZLjava/lang/String;Ljava/lang/String;[I[IIILjava/lang/String;Ljava/lang/String;)V
 .end method
 
-.method public abstract aO(Z)V
+.method public abstract at(Z)V
 .end method
 
-.method public abstract aP(Z)V
+.method public abstract au(Z)V
 .end method
 
-.method public abstract aQ(Z)V
+.method public abstract av(Z)V
 .end method
 
-.method public abstract c(Ljava/lang/String;Ljava/util/List;)I
+.method public abstract aw(Z)V
 .end method
 
 .method public abstract c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -69,7 +78,20 @@
 .method public abstract cancel(I)V
 .end method
 
-.method public abstract f(I[B)I
+.method public abstract d(Ljava/lang/String;Ljava/util/List;)I
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)I"
+        }
+    .end annotation
+.end method
+
+.method public abstract g(I[B)I
 .end method
 
 .method public abstract getIPsString(Z)[Ljava/lang/String;
@@ -81,10 +103,10 @@
 .method public abstract getNetworkServerIp()Ljava/lang/String;
 .end method
 
-.method public abstract gg(Ljava/lang/String;)V
+.method public abstract gt(Ljava/lang/String;)V
 .end method
 
-.method public abstract gh(Ljava/lang/String;)V
+.method public abstract gu(Ljava/lang/String;)V
 .end method
 
 .method public abstract keepSignalling()V
@@ -108,8 +130,8 @@
 .method public abstract stopSignalling()V
 .end method
 
-.method public abstract vM()Z
+.method public abstract vO()Z
 .end method
 
-.method public abstract vY()V
+.method public abstract wa()V
 .end method

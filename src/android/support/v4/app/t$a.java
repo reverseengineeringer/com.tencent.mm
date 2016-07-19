@@ -13,8 +13,8 @@ import java.util.List;
 public final class t$a
   implements n, o
 {
-  List dB = new ArrayList();
-  Notification.Builder dw;
+  Notification.Builder dM;
+  List<Bundle> dR = new ArrayList();
   final Bundle mExtras;
   
   public t$a(Context paramContext, Notification paramNotification, CharSequence paramCharSequence1, CharSequence paramCharSequence2, CharSequence paramCharSequence3, RemoteViews paramRemoteViews, int paramInt1, PendingIntent paramPendingIntent1, PendingIntent paramPendingIntent2, Bitmap paramBitmap, int paramInt2, int paramInt3, boolean paramBoolean1, boolean paramBoolean2, int paramInt4, CharSequence paramCharSequence4, boolean paramBoolean3, Bundle paramBundle, String paramString1, boolean paramBoolean4, String paramString2)
@@ -42,7 +42,7 @@ public final class t$a
       }
       bool = true;
       label202:
-      dw = paramContext.setFullScreenIntent(paramPendingIntent2, bool).setLargeIcon(paramBitmap).setNumber(paramInt1).setUsesChronometer(paramBoolean2).setPriority(paramInt4).setProgress(paramInt2, paramInt3, paramBoolean1);
+      dM = paramContext.setFullScreenIntent(paramPendingIntent2, bool).setLargeIcon(paramBitmap).setNumber(paramInt1).setUsesChronometer(paramBoolean2).setPriority(paramInt4).setProgress(paramInt2, paramInt3, paramBoolean1);
       mExtras = new Bundle();
       if (paramBundle != null) {
         mExtras.putAll(paramBundle);
@@ -81,14 +81,14 @@ public final class t$a
     }
   }
   
-  public final Notification.Builder V()
+  public final Notification.Builder U()
   {
-    return dw;
+    return dM;
   }
   
   public final void a(s.a parama)
   {
-    dB.add(t.b(dw, parama));
+    dR.add(t.b(dM, parama));
   }
 }
 

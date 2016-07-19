@@ -1,17 +1,17 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.d.a.dz;
-import com.tencent.mm.d.a.dz.b;
+import com.tencent.mm.e.a.ed;
+import com.tencent.mm.e.a.ed.b;
 
 final class SnsUploadConfigView$2
   implements Runnable
 {
-  SnsUploadConfigView$2(SnsUploadConfigView paramSnsUploadConfigView, dz paramdz) {}
+  SnsUploadConfigView$2(SnsUploadConfigView paramSnsUploadConfigView, ed paramed) {}
   
   public final void run()
   {
-    if (!hlM.ayb.atR) {
-      SnsUploadConfigView.k(hlL);
+    if (!hBO.akd.afB) {
+      SnsUploadConfigView.k(hBN);
     }
   }
 }

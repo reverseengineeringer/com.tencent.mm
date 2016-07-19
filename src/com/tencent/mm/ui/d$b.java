@@ -2,7 +2,7 @@ package com.tencent.mm.ui;
 
 public abstract interface d$b
 {
-  public static final String kjK = "FREE_WIFI_IS_DEFAULT_FOCUS".toLowerCase();
+  public static final String kJS = "FREE_WIFI_IS_DEFAULT_FOCUS".toLowerCase();
 }
 
 /* Location:

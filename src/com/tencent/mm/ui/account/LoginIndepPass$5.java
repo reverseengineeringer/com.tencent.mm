@@ -3,7 +3,7 @@ package com.tencent.mm.ui.account;
 import android.content.Intent;
 import com.tencent.mm.plugin.a.a;
 import com.tencent.mm.pluginsdk.g;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class LoginIndepPass$5
   implements Runnable
@@ -12,11 +12,11 @@ final class LoginIndepPass$5
   
   public final void run()
   {
-    u.d("!32@/B4Tb64lLpL2ifO2GeMy1sPAUKApbAFH", "onSceneEnd, in runnable");
-    Intent localIntent = a.coa.ak(ktE);
+    v.d("MicroMsg.LoginIndepPass", "onSceneEnd, in runnable");
+    Intent localIntent = a.cjo.ag(kSL);
     localIntent.addFlags(67108864);
-    ktE.startActivity(localIntent);
-    ktE.finish();
+    kSL.startActivity(localIntent);
+    kSL.finish();
   }
 }
 

@@ -7,11 +7,11 @@
 .method public abstract a(Lcom/tencent/mm/ui/contact/a/a;)Z
 .end method
 
+.method public abstract azv()Landroid/widget/ListView;
+.end method
+
 .method public abstract b(Lcom/tencent/mm/ui/contact/a/a;)Z
 .end method
 
 .method public abstract getActivity()Landroid/app/Activity;
-.end method
-
-.method public abstract getContentLV()Landroid/widget/ListView;
 .end method

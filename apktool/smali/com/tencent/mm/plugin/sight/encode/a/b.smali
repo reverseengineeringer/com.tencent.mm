@@ -19,28 +19,31 @@
 .method public abstract a(Lcom/tencent/mm/plugin/sight/encode/a/b$b;)V
 .end method
 
-.method public abstract awo()Z
+.method public abstract ayM()Z
 .end method
 
-.method public abstract awp()J
+.method public abstract ayN()J
 .end method
 
-.method public abstract awq()Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+.method public abstract ayO()Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 .end method
 
-.method public abstract awr()V
+.method public abstract ayP()V
 .end method
 
-.method public abstract aws()F
+.method public abstract ayQ()Ljava/lang/String;
 .end method
 
-.method public abstract awt()Landroid/hardware/Camera$PreviewCallback;
+.method public abstract ayR()F
+.end method
+
+.method public abstract ayS()Landroid/hardware/Camera$PreviewCallback;
 .end method
 
 .method public abstract b(Lcom/tencent/mm/plugin/sight/encode/a/b$a;)V
 .end method
 
-.method public abstract bk(Ljava/lang/String;Ljava/lang/String;)V
+.method public abstract br(Ljava/lang/String;Ljava/lang/String;)V
 .end method
 
 .method public abstract cancel()V
@@ -50,9 +53,6 @@
 .end method
 
 .method public abstract getFrameCount()I
-.end method
-
-.method public abstract getRecordPath()Ljava/lang/String;
 .end method
 
 .method public abstract initialize(I)V

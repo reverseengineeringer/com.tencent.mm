@@ -4,7 +4,7 @@ import android.widget.TextView;
 
 final class g$a$c
 {
-  TextView cVH;
+  TextView cTU;
   
   private g$a$c(g.a parama) {}
 }

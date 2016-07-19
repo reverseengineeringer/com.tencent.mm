@@ -1,31 +1,19 @@
 package android.support.v4.view;
 
-import android.animation.ValueAnimator;
 import android.graphics.Paint;
 import android.view.View;
 
-class m$d
+final class m$d
   extends m.c
 {
-  public final void a(View paramView, int paramInt, Paint paramPaint)
+  public final void a(View paramView, Paint paramPaint)
   {
-    paramView.setLayerType(paramInt, paramPaint);
+    paramView.setLayerPaint(paramPaint);
   }
   
-  public void a(View paramView, Paint paramPaint)
+  public final int k(View paramView)
   {
-    a(paramView, paramView.getLayerType(), paramPaint);
-    paramView.invalidate();
-  }
-  
-  final long ah()
-  {
-    return ValueAnimator.getFrameDelay();
-  }
-  
-  public final int j(View paramView)
-  {
-    return paramView.getLayerType();
+    return paramView.getLayoutDirection();
   }
 }
 

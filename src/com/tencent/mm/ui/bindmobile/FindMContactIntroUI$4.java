@@ -13,11 +13,11 @@ final class FindMContactIntroUI$4
   
   public final void onClick(View paramView)
   {
-    g.a(kOZ, kOZ.getString(2131428717), null, kOZ.getString(2131428718), kOZ.getString(2131428719), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+    g.b(lop, lop.getString(2131232776), null, lop.getString(2131232777), lop.getString(2131232775), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
-        FindMContactIntroUI.b(kOZ);
+        FindMContactIntroUI.b(lop);
       }
     }, new DialogInterface.OnClickListener()
     {

@@ -12,7 +12,7 @@ final class BindMContactIntroUI$26
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    MMWizardActivity.v(kOs, new Intent(kOs, BindMContactStatusUI.class));
+    MMWizardActivity.v(lnI, new Intent(lnI, BindMContactStatusUI.class));
   }
 }
 

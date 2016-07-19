@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/dbsupport/newcursor/j;->cm(I)I
+    value = Lcom/tencent/mm/dbsupport/newcursor/j;->cM(I)I
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -13,9 +13,18 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/dbsupport/newcursor/b",
+        "<",
+        "Lcom/tencent/mm/dbsupport/newcursor/a;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic bvH:Lcom/tencent/mm/dbsupport/newcursor/j;
+.field final synthetic bkA:Lcom/tencent/mm/dbsupport/newcursor/j;
 
 
 # direct methods
@@ -23,10 +32,9 @@
     .locals 0
 
     .prologue
-    .line 1
-    iput-object p1, p0, Lcom/tencent/mm/dbsupport/newcursor/j$1;->bvH:Lcom/tencent/mm/dbsupport/newcursor/j;
+    .line 264
+    iput-object p1, p0, Lcom/tencent/mm/dbsupport/newcursor/j$1;->bkA:Lcom/tencent/mm/dbsupport/newcursor/j;
 
-    .line 277
     invoke-direct {p0}, Lcom/tencent/mm/dbsupport/newcursor/b;-><init>()V
 
     return-void
@@ -34,20 +42,33 @@
 
 
 # virtual methods
-.method public final d(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+.method public final e(Ljava/util/ArrayList;)Ljava/util/ArrayList;
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/Object;",
+            ">;)",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/dbsupport/newcursor/a;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 286
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/j$1;->bvH:Lcom/tencent/mm/dbsupport/newcursor/j;
+    .line 273
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/j$1;->bkA:Lcom/tencent/mm/dbsupport/newcursor/j;
 
-    iget-object v1, v0, Lcom/tencent/mm/dbsupport/newcursor/j;->bvC:Lcom/tencent/mm/dbsupport/newcursor/j$a;
+    iget-object v1, v0, Lcom/tencent/mm/dbsupport/newcursor/j;->bkv:Lcom/tencent/mm/dbsupport/newcursor/j$a;
 
     if-eqz v1, :cond_0
 
-    iget-object v0, v0, Lcom/tencent/mm/dbsupport/newcursor/j;->bvC:Lcom/tencent/mm/dbsupport/newcursor/j$a;
+    iget-object v0, v0, Lcom/tencent/mm/dbsupport/newcursor/j;->bkv:Lcom/tencent/mm/dbsupport/newcursor/j$a;
 
-    invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/j$a;->d(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+    invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/j$a;->e(Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -60,20 +81,20 @@
     goto :goto_0
 .end method
 
-.method public final qD()Lcom/tencent/mm/dbsupport/newcursor/a;
+.method public final ph()Lcom/tencent/mm/dbsupport/newcursor/a;
     .locals 2
 
     .prologue
-    .line 281
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/j$1;->bvH:Lcom/tencent/mm/dbsupport/newcursor/j;
+    .line 268
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/j$1;->bkA:Lcom/tencent/mm/dbsupport/newcursor/j;
 
-    iget-object v1, v0, Lcom/tencent/mm/dbsupport/newcursor/j;->bvC:Lcom/tencent/mm/dbsupport/newcursor/j$a;
+    iget-object v1, v0, Lcom/tencent/mm/dbsupport/newcursor/j;->bkv:Lcom/tencent/mm/dbsupport/newcursor/j$a;
 
     if-eqz v1, :cond_0
 
-    iget-object v0, v0, Lcom/tencent/mm/dbsupport/newcursor/j;->bvC:Lcom/tencent/mm/dbsupport/newcursor/j$a;
+    iget-object v0, v0, Lcom/tencent/mm/dbsupport/newcursor/j;->bkv:Lcom/tencent/mm/dbsupport/newcursor/j$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/dbsupport/newcursor/j$a;->qD()Lcom/tencent/mm/dbsupport/newcursor/a;
+    invoke-interface {v0}, Lcom/tencent/mm/dbsupport/newcursor/j$a;->ph()Lcom/tencent/mm/dbsupport/newcursor/a;
 
     move-result-object v0
 

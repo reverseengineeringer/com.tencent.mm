@@ -19,9 +19,9 @@
 
 
 # instance fields
-.field final synthetic kzu:Lcom/tencent/mm/ui/b/c;
+.field final synthetic kYB:Lcom/tencent/mm/ui/b/c;
 
-.field public kzv:Lcom/tencent/mm/ui/b/c$a;
+.field public kYC:Lcom/tencent/mm/ui/b/c$a;
 
 
 # direct methods
@@ -30,14 +30,14 @@
 
     .prologue
     .line 983
-    iput-object p1, p0, Lcom/tencent/mm/ui/b/c$b;->kzu:Lcom/tencent/mm/ui/b/c;
+    iput-object p1, p0, Lcom/tencent/mm/ui/b/c$b;->kYB:Lcom/tencent/mm/ui/b/c;
 
     invoke-direct {p0}, Landroid/view/ActionMode;-><init>()V
 
     .line 981
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kzv:Lcom/tencent/mm/ui/b/c$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kYC:Lcom/tencent/mm/ui/b/c$a;
 
     .line 985
     new-instance v0, Lcom/tencent/mm/ui/b/c$a;
@@ -48,12 +48,12 @@
 
     invoke-direct {v0, p1, v1}, Lcom/tencent/mm/ui/b/c$a;-><init>(Lcom/tencent/mm/ui/b/c;Landroid/support/v7/a/a$a;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kzv:Lcom/tencent/mm/ui/b/c$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kYC:Lcom/tencent/mm/ui/b/c$a;
 
     .line 986
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kzv:Lcom/tencent/mm/ui/b/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kYC:Lcom/tencent/mm/ui/b/c$a;
 
-    iput-object p0, v0, Lcom/tencent/mm/ui/b/c$a;->kzr:Landroid/view/ActionMode;
+    iput-object p0, v0, Lcom/tencent/mm/ui/b/c$a;->kYy:Landroid/view/ActionMode;
 
     .line 992
     return-void
@@ -66,7 +66,7 @@
 
     .prologue
     .line 1006
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kzv:Lcom/tencent/mm/ui/b/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kYC:Lcom/tencent/mm/ui/b/c$a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/b/c$a;->finish()V
 
@@ -79,13 +79,13 @@
 
     .prologue
     .line 1061
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kzv:Lcom/tencent/mm/ui/b/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kYC:Lcom/tencent/mm/ui/b/c$a;
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/b/c$a;->kzt:Ljava/lang/ref/WeakReference;
+    iget-object v1, v0, Lcom/tencent/mm/ui/b/c$a;->kYA:Ljava/lang/ref/WeakReference;
 
     if-eqz v1, :cond_0
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/b/c$a;->kzt:Ljava/lang/ref/WeakReference;
+    iget-object v0, v0, Lcom/tencent/mm/ui/b/c$a;->kYA:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -107,9 +107,9 @@
 
     .prologue
     .line 1001
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kzv:Lcom/tencent/mm/ui/b/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kYC:Lcom/tencent/mm/ui/b/c$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/b/c$a;->iO:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, v0, Lcom/tencent/mm/ui/b/c$a;->jf:Landroid/support/v7/internal/view/menu/f;
 
     return-object v0
 .end method
@@ -119,11 +119,11 @@
 
     .prologue
     .line 996
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kzv:Lcom/tencent/mm/ui/b/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kYC:Lcom/tencent/mm/ui/b/c$a;
 
     new-instance v1, Landroid/support/v7/internal/view/c;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/b/c$a;->kzu:Lcom/tencent/mm/ui/b/c;
+    iget-object v0, v0, Lcom/tencent/mm/ui/b/c$a;->kYB:Lcom/tencent/mm/ui/b/c;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/b/c;->getThemedContext()Landroid/content/Context;
 
@@ -139,15 +139,13 @@
 
     .prologue
     .line 1046
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kzv:Lcom/tencent/mm/ui/b/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kYC:Lcom/tencent/mm/ui/b/c$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/b/c$a;->kzu:Lcom/tencent/mm/ui/b/c;
+    iget-object v0, v0, Lcom/tencent/mm/ui/b/c$a;->kYB:Lcom/tencent/mm/ui/b/c;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/b/c;->je:Landroid/support/v7/internal/widget/ActionBarContextView;
+    iget-object v0, v0, Lcom/tencent/mm/ui/b/c;->jv:Landroid/support/v7/internal/widget/ActionBarContextView;
 
-    invoke-virtual {v0}, Landroid/support/v7/internal/widget/ActionBarContextView;->getSubtitle()Ljava/lang/CharSequence;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/v7/internal/widget/ActionBarContextView;->nG:Ljava/lang/CharSequence;
 
     return-object v0
 .end method
@@ -157,15 +155,13 @@
 
     .prologue
     .line 1041
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kzv:Lcom/tencent/mm/ui/b/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kYC:Lcom/tencent/mm/ui/b/c$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/b/c$a;->kzu:Lcom/tencent/mm/ui/b/c;
+    iget-object v0, v0, Lcom/tencent/mm/ui/b/c$a;->kYB:Lcom/tencent/mm/ui/b/c;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/b/c;->je:Landroid/support/v7/internal/widget/ActionBarContextView;
+    iget-object v0, v0, Lcom/tencent/mm/ui/b/c;->jv:Landroid/support/v7/internal/widget/ActionBarContextView;
 
-    invoke-virtual {v0}, Landroid/support/v7/internal/widget/ActionBarContextView;->getTitle()Ljava/lang/CharSequence;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/v7/internal/widget/ActionBarContextView;->kD:Ljava/lang/CharSequence;
 
     return-object v0
 .end method
@@ -175,7 +171,7 @@
 
     .prologue
     .line 1011
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kzv:Lcom/tencent/mm/ui/b/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kYC:Lcom/tencent/mm/ui/b/c$a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/b/c$a;->invalidate()V
 
@@ -188,35 +184,64 @@
 
     .prologue
     .line 1056
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kzv:Lcom/tencent/mm/ui/b/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kYC:Lcom/tencent/mm/ui/b/c$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/b/c$a;->kzu:Lcom/tencent/mm/ui/b/c;
+    iget-object v0, v0, Lcom/tencent/mm/ui/b/c$a;->kYB:Lcom/tencent/mm/ui/b/c;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/b/c;->je:Landroid/support/v7/internal/widget/ActionBarContextView;
+    iget-object v0, v0, Lcom/tencent/mm/ui/b/c;->jv:Landroid/support/v7/internal/widget/ActionBarContextView;
 
-    iget-boolean v0, v0, Landroid/support/v7/internal/widget/ActionBarContextView;->nx:Z
+    iget-boolean v0, v0, Landroid/support/v7/internal/widget/ActionBarContextView;->nN:Z
 
     return v0
 .end method
 
 .method public final setCustomView(Landroid/view/View;)V
-    .locals 2
+    .locals 3
 
     .prologue
     .line 1016
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kzv:Lcom/tencent/mm/ui/b/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kYC:Lcom/tencent/mm/ui/b/c$a;
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/b/c$a;->kzu:Lcom/tencent/mm/ui/b/c;
+    iget-object v1, v0, Lcom/tencent/mm/ui/b/c$a;->kYB:Lcom/tencent/mm/ui/b/c;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/b/c;->je:Landroid/support/v7/internal/widget/ActionBarContextView;
+    iget-object v1, v1, Lcom/tencent/mm/ui/b/c;->jv:Landroid/support/v7/internal/widget/ActionBarContextView;
 
-    invoke-virtual {v1, p1}, Landroid/support/v7/internal/widget/ActionBarContextView;->setCustomView(Landroid/view/View;)V
+    iget-object v2, v1, Landroid/support/v7/internal/widget/ActionBarContextView;->nI:Landroid/view/View;
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, v1, Landroid/support/v7/internal/widget/ActionBarContextView;->nI:Landroid/view/View;
+
+    invoke-virtual {v1, v2}, Landroid/support/v7/internal/widget/ActionBarContextView;->removeView(Landroid/view/View;)V
+
+    :cond_0
+    iput-object p1, v1, Landroid/support/v7/internal/widget/ActionBarContextView;->nI:Landroid/view/View;
+
+    iget-object v2, v1, Landroid/support/v7/internal/widget/ActionBarContextView;->nJ:Landroid/widget/LinearLayout;
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, v1, Landroid/support/v7/internal/widget/ActionBarContextView;->nJ:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v2}, Landroid/support/v7/internal/widget/ActionBarContextView;->removeView(Landroid/view/View;)V
+
+    const/4 v2, 0x0
+
+    iput-object v2, v1, Landroid/support/v7/internal/widget/ActionBarContextView;->nJ:Landroid/widget/LinearLayout;
+
+    :cond_1
+    if-eqz p1, :cond_2
+
+    invoke-virtual {v1, p1}, Landroid/support/v7/internal/widget/ActionBarContextView;->addView(Landroid/view/View;)V
+
+    :cond_2
+    invoke-virtual {v1}, Landroid/support/v7/internal/widget/ActionBarContextView;->requestLayout()V
 
     new-instance v1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v1, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/b/c$a;->kzt:Ljava/lang/ref/WeakReference;
+    iput-object v1, v0, Lcom/tencent/mm/ui/b/c$a;->kYA:Ljava/lang/ref/WeakReference;
 
     .line 1017
     return-void
@@ -227,9 +252,9 @@
 
     .prologue
     .line 1036
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kzv:Lcom/tencent/mm/ui/b/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kYC:Lcom/tencent/mm/ui/b/c$a;
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/b/c$a;->kzu:Lcom/tencent/mm/ui/b/c;
+    iget-object v1, v0, Lcom/tencent/mm/ui/b/c$a;->kYB:Lcom/tencent/mm/ui/b/c;
 
     iget-object v1, v1, Lcom/tencent/mm/ui/b/c;->mContext:Landroid/content/Context;
 
@@ -252,7 +277,7 @@
 
     .prologue
     .line 1021
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kzv:Lcom/tencent/mm/ui/b/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kYC:Lcom/tencent/mm/ui/b/c$a;
 
     invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/b/c$a;->setSubtitle(Ljava/lang/CharSequence;)V
 
@@ -265,9 +290,9 @@
 
     .prologue
     .line 1031
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kzv:Lcom/tencent/mm/ui/b/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kYC:Lcom/tencent/mm/ui/b/c$a;
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/b/c$a;->kzu:Lcom/tencent/mm/ui/b/c;
+    iget-object v1, v0, Lcom/tencent/mm/ui/b/c$a;->kYB:Lcom/tencent/mm/ui/b/c;
 
     iget-object v1, v1, Lcom/tencent/mm/ui/b/c;->mContext:Landroid/content/Context;
 
@@ -290,7 +315,7 @@
 
     .prologue
     .line 1026
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kzv:Lcom/tencent/mm/ui/b/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kYC:Lcom/tencent/mm/ui/b/c$a;
 
     invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/b/c$a;->setTitle(Ljava/lang/CharSequence;)V
 
@@ -303,7 +328,7 @@
 
     .prologue
     .line 1051
-    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kzv:Lcom/tencent/mm/ui/b/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b/c$b;->kYC:Lcom/tencent/mm/ui/b/c$a;
 
     invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/b/c$a;->setTitleOptionalHint(Z)V
 

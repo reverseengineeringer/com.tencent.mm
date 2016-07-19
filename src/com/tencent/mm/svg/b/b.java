@@ -10,62 +10,62 @@ import android.graphics.drawable.Drawable;
 import android.os.Build.VERSION;
 import android.view.Gravity;
 import android.view.View;
-import com.tencent.mm.svg.d.c;
+import com.tencent.mm.svg.c.c;
 
 public abstract class b
   extends Drawable
 {
-  protected final Rect ewu = new Rect();
-  public long khY = 0L;
-  protected int khZ = 0;
-  protected boolean kia = false;
-  protected Paint kib = new Paint();
-  protected View kic;
-  protected int kid = 0;
-  protected int kie = 0;
-  protected int kif = 0;
-  protected int kig = 0;
-  protected float kih;
+  protected final Rect eCN = new Rect();
+  protected int eDA = 0;
+  protected int eDB = 0;
+  protected boolean kIA = false;
+  protected Paint kIB = new Paint();
+  protected View kIC;
+  protected int kID = 0;
+  protected int kIE = 0;
+  protected float kIF;
+  public long kIy = 0L;
+  protected int kIz = 0;
   
   public b(int paramInt1, int paramInt2, int paramInt3)
   {
-    kif = paramInt1;
-    kig = paramInt2;
-    kih = 1.0F;
-    kid = kif;
-    kie = kig;
+    kID = paramInt1;
+    kIE = paramInt2;
+    kIF = 1.0F;
+    eDA = kID;
+    eDB = kIE;
     setLevel(10000);
-    khZ = paramInt3;
+    kIz = paramInt3;
   }
   
-  private void aYU()
+  private void ben()
   {
-    kic = a.f(this);
-    if (kic != null) {
-      a.b(kic, kib);
+    kIC = a.g(this);
+    if (kIC != null) {
+      a.b(kIC, kIB);
     }
   }
   
-  protected final void aYS()
+  protected final void bel()
   {
-    ewu.set(0, 0, getIntrinsicWidth(), getIntrinsicHeight());
+    eCN.set(0, 0, getIntrinsicWidth(), getIntrinsicHeight());
   }
   
-  protected final void aYT()
+  protected final void bem()
   {
-    if (kia)
+    if (kIA)
     {
       Rect localRect = getBounds();
-      Gravity.apply(119, getIntrinsicWidth(), getIntrinsicHeight(), localRect, ewu);
+      Gravity.apply(119, getIntrinsicWidth(), getIntrinsicHeight(), localRect, eCN);
     }
-    kia = false;
+    kIA = false;
   }
   
-  protected final void b(Canvas paramCanvas)
+  protected final void c(Canvas paramCanvas)
   {
-    if (com.tencent.mm.svg.d.b.aYZ())
+    if (com.tencent.mm.svg.c.b.beq())
     {
-      int i = ewu.height() / 3;
+      int i = eCN.height() / 3;
       paramCanvas.save();
       Paint localPaint = new Paint();
       localPaint.setStyle(Paint.Style.FILL);
@@ -74,7 +74,7 @@ public abstract class b
       localPaint.setTextSize(i);
       localPaint.setStrokeWidth(1.0F);
       float f = localPaint.measureText("SVG");
-      paramCanvas.translate(ewu.width() - f, ewu.height() * 2 / 3);
+      paramCanvas.translate(eCN.width() - f, eCN.height() * 2 / 3);
       paramCanvas.drawText("SVG", 0.0F, i, localPaint);
       paramCanvas.restore();
     }
@@ -82,18 +82,18 @@ public abstract class b
   
   public int getIntrinsicHeight()
   {
-    return kie;
+    return eDB;
   }
   
   public int getIntrinsicWidth()
   {
-    return kid;
+    return eDA;
   }
   
   public int getOpacity()
   {
-    if ((kic != null) && (kic.getAlpha() < 1.0F)) {}
-    while ((kib != null) && (kib.getAlpha() < 255)) {
+    if ((kIC != null) && (kIC.getAlpha() < 1.0F)) {}
+    while ((kIB != null) && (kIB.getAlpha() < 255)) {
       return -3;
     }
     return 0;
@@ -101,50 +101,50 @@ public abstract class b
   
   protected void onBoundsChange(Rect paramRect)
   {
-    kia = true;
+    kIA = true;
   }
   
   protected boolean onLevelChange(int paramInt)
   {
-    aYU();
+    ben();
     return super.onLevelChange(paramInt);
   }
   
   @TargetApi(17)
   public void setAlpha(int paramInt)
   {
-    kib.setAlpha(paramInt);
-    if ((kic != null) && (Build.VERSION.SDK_INT >= 17)) {}
+    kIB.setAlpha(paramInt);
+    if ((kIC != null) && (Build.VERSION.SDK_INT >= 17)) {}
     try
     {
-      kic.setLayerPaint(kib);
+      kIC.setLayerPaint(kIB);
       return;
     }
     catch (NoSuchMethodError localNoSuchMethodError)
     {
-      c.printErrStackTrace("!32@/B4Tb64lLpJP2UkyhTNSitZ1GCNwn6IX", localNoSuchMethodError, "fucking samsung", new Object[0]);
+      c.printErrStackTrace("MicroMsg.SVGDrawable", localNoSuchMethodError, "fucking samsung", new Object[0]);
     }
   }
   
   @TargetApi(17)
   public void setColorFilter(ColorFilter paramColorFilter)
   {
-    kib.setColorFilter(paramColorFilter);
-    if ((kic != null) && (Build.VERSION.SDK_INT >= 17)) {}
+    kIB.setColorFilter(paramColorFilter);
+    if ((kIC != null) && (Build.VERSION.SDK_INT >= 17)) {}
     try
     {
-      kic.setLayerPaint(kib);
+      kIC.setLayerPaint(kIB);
       return;
     }
     catch (NoSuchMethodError paramColorFilter)
     {
-      c.printErrStackTrace("!32@/B4Tb64lLpJP2UkyhTNSitZ1GCNwn6IX", paramColorFilter, "fucking samsung", new Object[0]);
+      c.printErrStackTrace("MicroMsg.SVGDrawable", paramColorFilter, "fucking samsung", new Object[0]);
     }
   }
   
   public boolean setVisible(boolean paramBoolean1, boolean paramBoolean2)
   {
-    aYU();
+    ben();
     return super.setVisible(paramBoolean1, paramBoolean2);
   }
 }

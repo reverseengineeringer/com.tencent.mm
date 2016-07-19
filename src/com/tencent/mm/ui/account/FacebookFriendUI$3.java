@@ -11,7 +11,7 @@ final class FacebookFriendUI$3
   
   public final void onClick(View paramView)
   {
-    BackwardSupportUtil.c.a(FacebookFriendUI.e(ksr));
+    BackwardSupportUtil.c.a(FacebookFriendUI.e(kRz));
   }
 }
 

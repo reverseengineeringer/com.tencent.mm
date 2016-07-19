@@ -16,10 +16,19 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Lcom/tencent/mm/cache/MCacheItem;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field private boX:Lcom/tencent/mm/sdk/h/c;
+.field private bcW:Lcom/tencent/mm/sdk/h/c;
 
 
 # direct methods
@@ -45,11 +54,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 35
-    invoke-direct {p0, p1}, Lcom/tencent/mm/cache/MCacheItem;->E(Landroid/os/Parcel;)Lcom/tencent/mm/sdk/h/c;
+    invoke-direct {p0, p1}, Lcom/tencent/mm/cache/MCacheItem;->c(Landroid/os/Parcel;)Lcom/tencent/mm/sdk/h/c;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/cache/MCacheItem;->boX:Lcom/tencent/mm/sdk/h/c;
+    iput-object v0, p0, Lcom/tencent/mm/cache/MCacheItem;->bcW:Lcom/tencent/mm/sdk/h/c;
 
     .line 36
     return-void
@@ -63,13 +72,13 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 39
-    iput-object p1, p0, Lcom/tencent/mm/cache/MCacheItem;->boX:Lcom/tencent/mm/sdk/h/c;
+    iput-object p1, p0, Lcom/tencent/mm/cache/MCacheItem;->bcW:Lcom/tencent/mm/sdk/h/c;
 
     .line 40
     return-void
 .end method
 
-.method private E(Landroid/os/Parcel;)Lcom/tencent/mm/sdk/h/c;
+.method private c(Landroid/os/Parcel;)Lcom/tencent/mm/sdk/h/c;
     .locals 11
 
     .prologue
@@ -99,14 +108,14 @@
 
     check-cast v0, Lcom/tencent/mm/sdk/h/c;
 
-    iput-object v0, p0, Lcom/tencent/mm/cache/MCacheItem;->boX:Lcom/tencent/mm/sdk/h/c;
+    iput-object v0, p0, Lcom/tencent/mm/cache/MCacheItem;->bcW:Lcom/tencent/mm/sdk/h/c;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
     .line 50
     :goto_0
     :try_start_2
-    invoke-static {v2}, Lcom/tencent/mm/sdk/h/c;->e(Ljava/lang/Class;)[Ljava/lang/reflect/Field;
+    invoke-static {v2}, Lcom/tencent/mm/sdk/h/c;->g(Ljava/lang/Class;)[Ljava/lang/reflect/Field;
 
     move-result-object v4
 
@@ -121,7 +130,7 @@
     aget-object v6, v4, v2
 
     .line 52
-    sget-object v0, Lcom/tencent/mm/cache/MCacheItem$a;->boZ:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/cache/MCacheItem$a;->bcY:Ljava/util/Map;
 
     invoke-virtual {v6}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
 
@@ -156,7 +165,7 @@
 
     const/4 v6, 0x2
 
-    iget-object v9, p0, Lcom/tencent/mm/cache/MCacheItem;->boX:Lcom/tencent/mm/sdk/h/c;
+    iget-object v9, p0, Lcom/tencent/mm/cache/MCacheItem;->bcW:Lcom/tencent/mm/sdk/h/c;
 
     aput-object v9, v8, v6
 
@@ -179,7 +188,7 @@
 
     .line 58
     :try_start_4
-    const-string/jumbo v6, "!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk"
+    const-string/jumbo v6, "MicroMsg.MCacheItem"
 
     const-string/jumbo v7, "exception:%s"
 
@@ -189,13 +198,13 @@
 
     const/4 v9, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v8, v9
 
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
 
@@ -206,19 +215,19 @@
     move-exception v0
 
     .line 66
-    const-string/jumbo v2, "!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk"
+    const-string/jumbo v2, "MicroMsg.MCacheItem"
 
     const-string/jumbo v4, "exception:%s"
 
     new-array v5, v10, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v5, v3
 
-    invoke-static {v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v1
 
@@ -229,7 +238,7 @@
     .line 63
     :cond_1
     :try_start_5
-    iget-object v0, p0, Lcom/tencent/mm/cache/MCacheItem;->boX:Lcom/tencent/mm/sdk/h/c;
+    iget-object v0, p0, Lcom/tencent/mm/cache/MCacheItem;->bcW:Lcom/tencent/mm/sdk/h/c;
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
 
@@ -262,7 +271,7 @@
     const/4 v2, 0x0
 
     .line 80
-    iget-object v0, p0, Lcom/tencent/mm/cache/MCacheItem;->boX:Lcom/tencent/mm/sdk/h/c;
+    iget-object v0, p0, Lcom/tencent/mm/cache/MCacheItem;->bcW:Lcom/tencent/mm/sdk/h/c;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -275,13 +284,13 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 82
-    iget-object v0, p0, Lcom/tencent/mm/cache/MCacheItem;->boX:Lcom/tencent/mm/sdk/h/c;
+    iget-object v0, p0, Lcom/tencent/mm/cache/MCacheItem;->bcW:Lcom/tencent/mm/sdk/h/c;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/h/c;->e(Ljava/lang/Class;)[Ljava/lang/reflect/Field;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/h/c;->g(Ljava/lang/Class;)[Ljava/lang/reflect/Field;
 
     move-result-object v3
 
@@ -296,7 +305,7 @@
     aget-object v5, v3, v1
 
     .line 84
-    sget-object v0, Lcom/tencent/mm/cache/MCacheItem$a;->boY:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/cache/MCacheItem$a;->bcX:Ljava/util/Map;
 
     invoke-virtual {v5}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
 
@@ -329,7 +338,7 @@
 
     const/4 v5, 0x2
 
-    iget-object v8, p0, Lcom/tencent/mm/cache/MCacheItem;->boX:Lcom/tencent/mm/sdk/h/c;
+    iget-object v8, p0, Lcom/tencent/mm/cache/MCacheItem;->bcW:Lcom/tencent/mm/sdk/h/c;
 
     aput-object v8, v7, v5
 
@@ -351,19 +360,19 @@
     move-exception v0
 
     .line 90
-    const-string/jumbo v5, "!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk"
+    const-string/jumbo v5, "MicroMsg.MCacheItem"
 
     const-string/jumbo v6, "exception:%s"
 
     new-array v7, v9, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v7, v2
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 

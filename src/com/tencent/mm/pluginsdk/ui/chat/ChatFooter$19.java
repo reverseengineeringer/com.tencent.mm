@@ -9,7 +9,7 @@ final class ChatFooter$19
   
   public final void run()
   {
-    h.i(ChatFooter.b(iLO));
+    h.e(ChatFooter.b(jiL));
   }
 }
 

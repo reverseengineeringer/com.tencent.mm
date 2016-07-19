@@ -33,14 +33,14 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getResources()Landroid/content/res/Resources;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 26
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getResources()Landroid/content/res/Resources;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -108,10 +108,10 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/a;->ak(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/a;->an(Landroid/view/View;)V
 
     .line 46
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/a;->dj(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/a;->dh(Landroid/content/Context;)V
 
     .line 47
     return-void

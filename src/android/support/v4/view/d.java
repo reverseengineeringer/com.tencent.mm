@@ -5,22 +5,22 @@ import android.view.View;
 
 public abstract class d
 {
-  private b eA;
-  public a ez;
+  public a eV;
+  private b eW;
   public final Context mContext;
   
   public final void a(b paramb)
   {
-    if ((eA != null) && (paramb != null)) {
+    if ((eW != null) && (paramb != null)) {
       new StringBuilder("setVisibilityListener: Setting a new ActionProvider.VisibilityListener when one is already set. Are you reusing this ").append(getClass().getSimpleName()).append(" instance while it is still in use somewhere else?");
     }
-    eA = paramb;
+    eW = paramb;
   }
   
-  public final void k(boolean paramBoolean)
+  public final void j(boolean paramBoolean)
   {
-    if (ez != null) {
-      ez.l(paramBoolean);
+    if (eV != null) {
+      eV.k(paramBoolean);
     }
   }
   
@@ -28,7 +28,7 @@ public abstract class d
   
   public static abstract interface a
   {
-    public abstract void l(boolean paramBoolean);
+    public abstract void k(boolean paramBoolean);
   }
   
   public static abstract interface b {}

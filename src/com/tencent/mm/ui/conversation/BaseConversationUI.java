@@ -1,5 +1,6 @@
 package com.tencent.mm.ui.conversation;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Rect;
@@ -8,10 +9,10 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.os.MessageQueue;
 import android.os.MessageQueue.IdleHandler;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.a;
 import android.view.ActionMode;
 import android.view.ActionMode.Callback;
 import android.view.KeyEvent;
@@ -30,9 +31,10 @@ import com.tencent.mm.compatible.util.c;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.h;
 import com.tencent.mm.model.i;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.pluginsdk.e;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.LauncherUI.FitSystemWindowLayoutView;
 import com.tencent.mm.ui.MMFragmentActivity;
 import com.tencent.mm.ui.MMFragmentActivity.a;
@@ -42,41 +44,41 @@ import com.tencent.mm.ui.chatting.ChattingUI.a;
 import com.tencent.mm.ui.o;
 import com.tencent.mm.ui.p;
 import com.tencent.mm.ui.tools.TestTimeForChatting;
-import com.tencent.mm.ui.widget.SwipeBackLayout;
 import com.tencent.mm.ui.widget.f;
 
 public class BaseConversationUI
   extends MMFragmentActivity
 {
-  com.tencent.mm.ui.b dsa;
-  private ActionBar iH;
-  private int kmA = -1;
-  private View kmD;
-  private View kmE;
-  private ChattingUI.a kmF;
-  private TestTimeForChatting kmG;
-  private OnLayoutChangedLinearLayout kmH;
-  private OnLayoutChangedLinearLayout.a kmI = new OnLayoutChangedLinearLayout.a()
+  com.tencent.mm.ui.b dsq;
+  private ActionBar iY;
+  private String kLV;
+  private int kLX = -1;
+  private View kMb;
+  private View kMc;
+  private ChattingUI.a kMd;
+  private TestTimeForChatting kMe;
+  private OnLayoutChangedLinearLayout kMf;
+  private OnLayoutChangedLinearLayout.a kMg = new OnLayoutChangedLinearLayout.a()
   {
-    public final void baH()
+    public final void bfV()
     {
       if (BaseConversationUI.f(BaseConversationUI.this) == null)
       {
-        BaseConversationUI.a(BaseConversationUI.this, AnimationUtils.loadAnimation(BaseConversationUI.this, MMFragmentActivity.a.kqw));
+        BaseConversationUI.a(BaseConversationUI.this, AnimationUtils.loadAnimation(BaseConversationUI.this, MMFragmentActivity.a.kPB));
         BaseConversationUI.f(BaseConversationUI.this).setAnimationListener(new Animation.AnimationListener()
         {
           public final void onAnimationEnd(Animation paramAnonymous2Animation)
           {
-            u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "klem animationEnd");
+            v.i("MicroMsg.BaseConversationUI", "klem animationEnd");
             BaseConversationUI.h(BaseConversationUI.this);
-            D(1.0F);
+            B(1.0F);
           }
           
           public final void onAnimationRepeat(Animation paramAnonymous2Animation) {}
           
           public final void onAnimationStart(Animation paramAnonymous2Animation)
           {
-            u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "klem onAnimationStart");
+            v.i("MicroMsg.BaseConversationUI", "klem onAnimationStart");
             BaseConversationUI.g(BaseConversationUI.this);
             BaseConversationUI.a(BaseConversationUI.this, false);
           }
@@ -84,46 +86,47 @@ public class BaseConversationUI
       }
       if (BaseConversationUI.i(BaseConversationUI.this))
       {
-        BaseConversationUI.d(BaseConversationUI.this).getView().startAnimation(BaseConversationUI.f(BaseConversationUI.this));
+        dmView.startAnimation(BaseConversationUI.f(BaseConversationUI.this));
         BaseConversationUI.j(BaseConversationUI.this);
       }
       for (;;)
       {
-        kkKf = null;
-        u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "klem CHATTING ONLAYOUT ");
+        kljv = null;
+        v.i("MicroMsg.BaseConversationUI", "klem CHATTING ONLAYOUT ");
         return;
         BaseConversationUI.g(BaseConversationUI.this);
         BaseConversationUI.h(BaseConversationUI.this);
       }
     }
   };
-  String kmJ;
-  Bundle kmK;
-  Runnable kmL = new Runnable()
+  String kMh;
+  Bundle kMi;
+  Runnable kMj = new Runnable()
   {
     public final void run()
     {
-      kmQ = false;
+      kMo = false;
       if (isFinishing()) {
         return;
       }
+      com.tencent.mm.modelstat.a.Dw().a(4, getLocalClassName(), hashCode());
       if (BaseConversationUI.a(BaseConversationUI.this) == null) {}
       for (boolean bool = false;; bool = BaseConversationUI.a(BaseConversationUI.this).isShown())
       {
-        u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "ashutest::startChatting, ishow:%b", new Object[] { Boolean.valueOf(bool) });
-        Object localObject = new Intent().putExtra("Chat_User", kmJ);
-        if (kmK != null) {
-          ((Intent)localObject).putExtras(kmK);
+        v.i("MicroMsg.BaseConversationUI", "ashutest::startChatting, ishow:%b", new Object[] { Boolean.valueOf(bool) });
+        Object localObject = new Intent().putExtra("Chat_User", kMh);
+        if (kMi != null) {
+          ((Intent)localObject).putExtras(kMi);
         }
         ((Intent)localObject).putExtra("img_gallery_enter_from_chatting_ui", true);
         BaseConversationUI.a(BaseConversationUI.this, (Intent)localObject);
-        BaseConversationUI.k(BaseConversationUI.this).setOnChattingLayoutChangedListener(BaseConversationUI.l(BaseConversationUI.this));
+        kljv = BaseConversationUI.l(BaseConversationUI.this);
         BaseConversationUI.a(BaseConversationUI.this).setVisibility(0);
         localObject = BaseConversationUI.this;
-        if ((lnk != null) && (!lnk.bbg())) {
-          lnk.hh(false);
+        if ((lNE != null) && (!lNE.bgq())) {
+          lNE.hF(false);
         }
-        if (!BaseConversationUI.d(BaseConversationUI.this).bbg()) {
+        if (!BaseConversationUI.d(BaseConversationUI.this).bgq()) {
           break;
         }
         f.a(BaseConversationUI.this);
@@ -136,66 +139,46 @@ public class BaseConversationUI
       return super.toString() + "|startChattingRunnable";
     }
   };
-  private Animation kmN;
-  private boolean kmO = false;
-  private Animation kmP;
-  public boolean kmQ = true;
-  private String kmy;
-  private boolean lau = false;
-  private long law = 0L;
-  public b lnk;
-  private a lnl = a.lnq;
-  private c lnm = new c((byte)0);
+  private Animation kMl;
+  private boolean kMm = false;
+  private Animation kMn;
+  public boolean kMo = true;
+  private boolean lAM = false;
+  private long lAO = 0L;
+  public b lNE;
+  private a lNF = a.lNK;
+  private c lNG = new c((byte)0);
   String title;
   
   private void a(LauncherUI.FitSystemWindowLayoutView paramFitSystemWindowLayoutView, int paramInt, Rect paramRect, ViewGroup paramViewGroup)
   {
     int j = getWindow().getDecorView().getBottom();
-    int k = iF.aP().getCustomView().getBottom();
-    if ((lnk != null) && (lnk.getView() != null)) {}
-    for (int i = j - (paramInt + k + lnk.getView().getBottom());; i = 0)
+    int k = iW.aP().getCustomView().getBottom();
+    if ((lNE != null) && (lNE.mView != null)) {}
+    for (int i = j - (paramInt + k + lNE.mView.getBottom());; i = 0)
     {
-      u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "ashu::fitSystemWindows 2. decorBottom:%d, statusBarHeight:%d, actionBarHeight:%d, paddingForNavBar:%d", new Object[] { Integer.valueOf(j), Integer.valueOf(paramInt), Integer.valueOf(k), Integer.valueOf(i) });
-      paramFitSystemWindowLayoutView.setActionBarContainer(paramViewGroup);
+      v.i("MicroMsg.BaseConversationUI", "ashu::fitSystemWindows 2. decorBottom:%d, statusBarHeight:%d, actionBarHeight:%d, paddingForNavBar:%d", new Object[] { Integer.valueOf(j), Integer.valueOf(paramInt), Integer.valueOf(k), Integer.valueOf(i) });
+      kMH = paramViewGroup;
       paramFitSystemWindowLayoutView.fitSystemWindows(paramRect);
       return;
     }
   }
   
-  private void baE()
+  private void bfP()
   {
-    boolean bool = true;
-    if ((!c.bU(19)) || (!com.tencent.mm.compatible.h.b.oU())) {
+    if ((kMd != null) && (kMd.bQo)) {
       return;
     }
-    if (kmF == null) {}
-    for (;;)
-    {
-      u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "ashutest: tryResetChattingSwipeStatus, chattingFragment NULL ? %B", new Object[] { Boolean.valueOf(bool) });
-      if (kmF == null) {
-        break;
-      }
-      kmF.kqo.lEy = false;
-      return;
-      bool = false;
-    }
-  }
-  
-  private void bay()
-  {
-    if ((kmF != null) && (kmF.bWL)) {
-      return;
-    }
-    View localView = p.ee(this).inflate(2131363263, null);
-    dsa = new com.tencent.mm.ui.b(localView);
-    iH.setLogo(new ColorDrawable(getResources().getColor(17170445)));
-    iH.setDisplayShowTitleEnabled(false);
-    iH.setDisplayHomeAsUpEnabled(false);
-    iH.aL();
-    iH.aM();
-    iH.setCustomView(localView);
-    NW();
-    dsa.b(new View.OnClickListener()
+    View localView = p.ef(this).inflate(2130903064, null);
+    dsq = new com.tencent.mm.ui.b(localView);
+    iY.setLogo(new ColorDrawable(getResources().getColor(17170445)));
+    iY.aL();
+    iY.setDisplayHomeAsUpEnabled(false);
+    iY.aK();
+    iY.aM();
+    iY.setCustomView(localView);
+    Pg();
+    dsq.g(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
@@ -204,9 +187,28 @@ public class BaseConversationUI
     });
   }
   
-  private ViewGroup bhA()
+  private void bfS()
   {
-    Object localObject1 = iH.getCustomView().getParent();
+    boolean bool = true;
+    if ((!c.cm(19)) || (!com.tencent.mm.compatible.i.b.nm())) {
+      return;
+    }
+    if (kMd == null) {}
+    for (;;)
+    {
+      v.i("MicroMsg.BaseConversationUI", "ashutest: tryResetChattingSwipeStatus, chattingFragment NULL ? %B", new Object[] { Boolean.valueOf(bool) });
+      if (kMd == null) {
+        break;
+      }
+      kMd.kPt.mfo = false;
+      return;
+      bool = false;
+    }
+  }
+  
+  private ViewGroup bnq()
+  {
+    Object localObject1 = iY.getCustomView().getParent();
     Object localObject2 = null;
     ViewGroup localViewGroup = (ViewGroup)getWindow().getDecorView();
     while ((localObject1 != localViewGroup) && (localObject1 != null))
@@ -218,19 +220,19 @@ public class BaseConversationUI
     return (ViewGroup)localObject2;
   }
   
-  public final void D(float paramFloat)
+  public final void B(float paramFloat)
   {
-    u.v("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "ashutest::on swipe %f, duration %d, status %s", new Object[] { Float.valueOf(paramFloat), Long.valueOf(240L), lnl });
-    if ((!c.bU(19)) || (!com.tencent.mm.compatible.h.b.oU())) {}
+    v.v("MicroMsg.BaseConversationUI", "ashutest::on swipe %f, duration %d, status %s", new Object[] { Float.valueOf(paramFloat), Long.valueOf(240L), lNF });
+    if ((!c.cm(19)) || (!com.tencent.mm.compatible.i.b.nm())) {}
     do
     {
       return;
-      if (a.lnr == lnl) {
+      if (a.lNL == lNF) {
         break;
       }
-      super.D(paramFloat);
+      super.B(paramFloat);
     } while (Float.compare(1.0F, paramFloat) > 0);
-    View localView = findViewById(2131165190);
+    View localView = findViewById(2131755045);
     if (Float.compare(1.0F, paramFloat) <= 0)
     {
       com.tencent.mm.ui.tools.k.f(localView, 0.0F);
@@ -239,48 +241,48 @@ public class BaseConversationUI
     com.tencent.mm.ui.tools.k.f(localView, localView.getWidth() / 4 * (1.0F - paramFloat) * -1.0F);
   }
   
-  public final void NW()
+  public final void Pg()
   {
-    if (dsa != null) {
-      dsa.setTitle(i.dY(title));
+    if (dsq != null) {
+      dsq.setTitle(i.ej(title));
     }
   }
   
   public final void a(String paramString, Bundle paramBundle, boolean paramBoolean)
   {
-    if (kmG == null) {}
-    for (boolean bool = false;; bool = kmG.isShown())
+    if (kMe == null) {}
+    for (boolean bool = false;; bool = kMe.isShown())
     {
-      u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "try startChatting, ishow:%b", new Object[] { Boolean.valueOf(bool) });
-      kmK = paramBundle;
-      kmJ = paramString;
-      kmO = paramBoolean;
-      ah.tv().aUV();
-      ab.pq(-8);
-      ab.j(kmL);
+      v.i("MicroMsg.BaseConversationUI", "try startChatting, ishow:%b", new Object[] { Boolean.valueOf(bool) });
+      kMi = paramBundle;
+      kMh = paramString;
+      kMm = paramBoolean;
+      ah.tw().aZZ();
+      ad.rh(-8);
+      ad.k(kMj);
       return;
     }
   }
   
-  public final void bhB()
+  public final void bnr()
   {
-    if (lnk != null)
+    if (lNE != null)
     {
-      lnk.onResume();
-      if (!lnk.bbg()) {
-        lnk.hh(true);
+      lNE.onResume();
+      if (!lNE.bgq()) {
+        lNE.hF(true);
       }
     }
   }
   
   public boolean dispatchKeyEvent(KeyEvent paramKeyEvent)
   {
-    u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "ui group onKeyDown, code:%d action:%d", new Object[] { Integer.valueOf(paramKeyEvent.getKeyCode()), Integer.valueOf(paramKeyEvent.getAction()) });
+    v.i("MicroMsg.BaseConversationUI", "ui group onKeyDown, code:%d action:%d", new Object[] { Integer.valueOf(paramKeyEvent.getKeyCode()), Integer.valueOf(paramKeyEvent.getAction()) });
     if ((paramKeyEvent.getKeyCode() == 4) && (paramKeyEvent.getAction() == 0)) {
-      ab.t(kmL);
+      ad.v(kMj);
     }
-    if ((kmF != null) && (kmF.bWL) && (!kmF.lav)) {
-      if (!kmF.onKeyDown(paramKeyEvent.getKeyCode(), paramKeyEvent)) {}
+    if ((kMd != null) && (kMd.bQo) && (!kMd.lAN)) {
+      if (!kMd.onKeyDown(paramKeyEvent.getKeyCode(), paramKeyEvent)) {}
     }
     boolean bool;
     do
@@ -295,7 +297,7 @@ public class BaseConversationUI
         }
         catch (Exception paramKeyEvent)
         {
-          u.w("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "dispatch key event catch exception %s", new Object[] { paramKeyEvent.getMessage() });
+          v.w("MicroMsg.BaseConversationUI", "dispatch key event catch exception %s", new Object[] { paramKeyEvent.getMessage() });
           return false;
         }
         if (paramKeyEvent.getKeyCode() != 4) {
@@ -303,12 +305,12 @@ public class BaseConversationUI
         }
         if (paramKeyEvent.getAction() == 0)
         {
-          lau = true;
-          law = System.currentTimeMillis();
+          lAM = true;
+          lAO = System.currentTimeMillis();
         }
       } while (paramKeyEvent.getAction() != 1);
-      u.d("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "hasBack %B, %d", new Object[] { Boolean.valueOf(lau), Long.valueOf(System.currentTimeMillis() - law) });
-    } while ((!lau) || (System.currentTimeMillis() - law > 30000L));
+      v.d("MicroMsg.BaseConversationUI", "hasBack %B, %d", new Object[] { Boolean.valueOf(lAM), Long.valueOf(System.currentTimeMillis() - lAO) });
+    } while ((!lAM) || (System.currentTimeMillis() - lAO > 30000L));
     finish();
     return true;
     try
@@ -318,84 +320,85 @@ public class BaseConversationUI
     }
     catch (Exception paramKeyEvent)
     {
-      u.w("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "dispatch key event catch exception %s", new Object[] { paramKeyEvent.getMessage() });
+      v.w("MicroMsg.BaseConversationUI", "dispatch key event catch exception %s", new Object[] { paramKeyEvent.getMessage() });
     }
     return false;
   }
   
-  public final void ha(boolean paramBoolean)
+  public final void hB(boolean paramBoolean)
   {
-    if (kmG == null) {}
-    for (boolean bool = false;; bool = kmG.isShown())
+    if (kMe == null) {}
+    for (boolean bool = false;; bool = kMe.isShown())
     {
-      u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "try closeChatting, ishow:%b", new Object[] { Boolean.valueOf(bool) });
-      if ((kmF != null) && (kmF.bbg())) {
+      v.i("MicroMsg.BaseConversationUI", "try closeChatting, ishow:%b", new Object[] { Boolean.valueOf(bool) });
+      if ((kMd != null) && (kMd.bgq())) {
         f.b(this);
       }
-      if ((kmG != null) && (kmG.getVisibility() != 8) && (kmF != null)) {
+      if ((kMe != null) && (kMe.getVisibility() != 8) && (kMd != null)) {
         break;
       }
       return;
     }
-    u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "closeChatting");
-    kmG.setVisibility(8);
-    kmQ = true;
-    if (kmN == null)
+    v.i("MicroMsg.BaseConversationUI", "closeChatting");
+    kMe.setVisibility(8);
+    kMo = true;
+    if (kMl == null)
     {
-      kmN = AnimationUtils.loadAnimation(this, MMFragmentActivity.a.kqz);
-      kmN.setAnimationListener(new Animation.AnimationListener()
+      kMl = AnimationUtils.loadAnimation(this, MMFragmentActivity.a.kPE);
+      kMl.setAnimationListener(new Animation.AnimationListener()
       {
         public final void onAnimationEnd(Animation paramAnonymousAnimation)
         {
-          ah.tv().aUY();
-          ab.pq(0);
+          ah.tw().bac();
+          ad.rh(0);
           BaseConversationUI.e(BaseConversationUI.this);
-          u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "klem pop out onAnimationEnd");
+          v.i("MicroMsg.BaseConversationUI", "klem pop out onAnimationEnd");
         }
         
         public final void onAnimationRepeat(Animation paramAnonymousAnimation) {}
         
         public final void onAnimationStart(Animation paramAnonymousAnimation)
         {
-          ah.tv().aUV();
-          ab.pq(-8);
-          u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "klem pop out onAnimationStart");
+          ah.tw().aZZ();
+          ad.rh(-8);
+          v.i("MicroMsg.BaseConversationUI", "klem pop out onAnimationStart");
           BaseConversationUI.a(BaseConversationUI.this, true);
         }
       });
     }
-    kmF.onPause();
-    kmF.beZ();
-    kmF.bWL = false;
+    kMd.onPause();
+    kMd.bkH();
+    kMd.bQo = false;
     if (paramBoolean) {
-      kmG.startAnimation(kmN);
+      kMe.startAnimation(kMl);
     }
     for (;;)
     {
-      if (!kmF.bbg()) {
-        bay();
+      if (!kMd.bgq()) {
+        bfP();
       }
-      G();
-      bhB();
+      F();
+      bnr();
+      com.tencent.mm.modelstat.a.Dw().a(3, getLocalClassName(), hashCode());
       return;
-      D(1.0F);
-      baE();
+      B(1.0F);
+      bfS();
     }
   }
   
   public final void j(boolean paramBoolean, int paramInt)
   {
     long l = 120L;
-    u.v("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "ashutest: on settle %B, speed %d, status %s", new Object[] { Boolean.valueOf(paramBoolean), Integer.valueOf(paramInt), lnl });
-    if ((!c.bU(19)) || (!com.tencent.mm.compatible.h.b.oU())) {
+    v.v("MicroMsg.BaseConversationUI", "ashutest: on settle %B, speed %d, status %s", new Object[] { Boolean.valueOf(paramBoolean), Integer.valueOf(paramInt), lNF });
+    if ((!c.cm(19)) || (!com.tencent.mm.compatible.i.b.nm())) {
       return;
     }
-    if (a.lnr != lnl)
+    if (a.lNL != lNF)
     {
       super.j(paramBoolean, paramInt);
       return;
     }
-    View localView = findViewById(2131165190);
+    View localView = findViewById(2131755045);
     if (paramBoolean)
     {
       if (paramInt > 0) {}
@@ -419,86 +422,87 @@ public class BaseConversationUI
   {
     int i = 1;
     super.onActivityResult(paramInt1, paramInt2, paramIntent);
-    if (lnk != null) {
-      lnk.onActivityResult(paramInt1, paramInt2, paramIntent);
+    if (lNE != null) {
+      lNE.onActivityResult(paramInt1, paramInt2, paramIntent);
     }
     if (paramInt2 != -1) {}
     do
     {
       return;
-      if ((paramInt1 == 2001) && (kmF != null)) {
-        kmF.onActivityResult(paramInt1, paramInt2, paramIntent);
+      if ((paramInt1 == 2001) && (kMd != null)) {
+        kMd.onActivityResult(paramInt1, paramInt2, paramIntent);
       }
       int j = 0xFFFF & paramInt1;
-      u.w("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "check request code %d", new Object[] { Integer.valueOf(j) });
+      v.w("MicroMsg.BaseConversationUI", "check request code %d", new Object[] { Integer.valueOf(j) });
       switch (j)
       {
       default: 
         i = 0;
       }
-    } while ((i == 0) || (kmF != null));
-    u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "on select image ActivityResult. the chattingUI maybe kill in the background.");
-    ab.t(lnm);
-    lnm.knB = 0;
-    lnm.auo = paramInt1;
-    lnm.arU = paramInt2;
-    lnm.aup = paramIntent;
-    ab.j(lnm);
+    } while ((i == 0) || (kMd != null));
+    v.i("MicroMsg.BaseConversationUI", "on select image ActivityResult. the chattingUI maybe kill in the background.");
+    ad.v(lNG);
+    lNG.kMI = 0;
+    lNG.agb = paramInt1;
+    lNG.adJ = paramInt2;
+    lNG.agc = paramIntent;
+    ad.k(lNG);
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
     getWindow().setFormat(-2);
-    iH = iF.aP();
-    bbk();
+    e.H(this);
+    iY = iW.aP();
+    bgu();
   }
   
   protected void onDestroy()
   {
     super.onDestroy();
-    kmF = null;
-    kmH = null;
-    kmG = null;
-    lnk = null;
-    dsa = null;
-    kmP = null;
-    kmN = null;
+    kMd = null;
+    kMf = null;
+    kMe = null;
+    lNE = null;
+    dsq = null;
+    kMn = null;
+    kMl = null;
   }
   
   protected void onNewIntent(Intent paramIntent)
   {
-    u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "onNewIntent");
+    v.i("MicroMsg.BaseConversationUI", "onNewIntent");
     setIntent(paramIntent);
   }
   
   protected void onPause()
   {
-    u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "on pause");
+    v.i("MicroMsg.BaseConversationUI", "on pause");
     super.onPause();
     if (!isFinishing()) {
       f.a(this);
     }
-    lnl = a.lns;
-    if ((kmF != null) && (kmF.bbg())) {
-      kmF.kqo.setEnableGesture(false);
+    lNF = a.lNM;
+    if ((kMd != null) && (kMd.bgq())) {
+      kMd.kPt.fGj = false;
     }
   }
   
   protected void onRestoreInstanceState(Bundle paramBundle)
   {
     super.onRestoreInstanceState(paramBundle);
-    kmy = paramBundle.getString("last_restore_talker");
-    u.d("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "onRestoreInstantceState:%s", new Object[] { kmy });
+    kLV = paramBundle.getString("last_restore_talker");
+    v.d("MicroMsg.BaseConversationUI", "onRestoreInstantceState:%s", new Object[] { kLV });
   }
   
   protected void onResume()
   {
     super.onResume();
     f.b(this);
-    D(1.0F);
-    lnl = a.lnr;
-    if ((c.bU(19)) && (com.tencent.mm.compatible.h.b.oU()))
+    B(1.0F);
+    lNF = a.lNL;
+    if ((c.cm(19)) && (com.tencent.mm.compatible.i.b.nm()))
     {
       Looper.myQueue().addIdleHandler(new MessageQueue.IdleHandler()
       {
@@ -508,18 +512,18 @@ public class BaseConversationUI
           if (BaseConversationUI.a(BaseConversationUI.this) == null)
           {
             if (BaseConversationUI.b(BaseConversationUI.this) == null) {
-              BaseConversationUI.a(BaseConversationUI.this, p.ee(BaseConversationUI.this).inflate(2131361994, null));
+              BaseConversationUI.a(BaseConversationUI.this, p.ef(BaseConversationUI.this).inflate(2130903256, null));
             }
             if (BaseConversationUI.c(BaseConversationUI.this) == null) {
-              BaseConversationUI.b(BaseConversationUI.this, p.ee(BaseConversationUI.this).inflate(2131363263, null));
+              BaseConversationUI.b(BaseConversationUI.this, p.ef(BaseConversationUI.this).inflate(2130903064, null));
             }
           }
-          u.d("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "prepare chattingUI view use %dms", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+          v.d("MicroMsg.BaseConversationUI", "prepare chattingUI view use %dms", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
           return false;
         }
       });
-      if ((kmF != null) && (kmF.bbg())) {
-        kmF.kqo.setEnableGesture(true);
+      if ((kMd != null) && (kMd.bgq())) {
+        kMd.kPt.fGj = true;
       }
       Looper.myQueue().addIdleHandler(new MessageQueue.IdleHandler()
       {
@@ -528,69 +532,75 @@ public class BaseConversationUI
           long l = System.currentTimeMillis();
           if (BaseConversationUI.a(BaseConversationUI.this) == null)
           {
-            Object localObject = h.sc();
+            Object localObject = h.se();
             localObject = new Intent().putExtra("Chat_User", (String)localObject);
             BaseConversationUI.a(BaseConversationUI.this, (Intent)localObject);
-            dePD = true;
-            BaseConversationUI.d(BaseConversationUI.this).bfc();
+            deXw = true;
+            BaseConversationUI.d(BaseConversationUI.this).bkL();
             BaseConversationUI.a(BaseConversationUI.this).setVisibility(8);
-            dkqn = true;
+            dkPs = true;
             BaseConversationUI.d(BaseConversationUI.this).onPause();
-            BaseConversationUI.d(BaseConversationUI.this).beZ();
-            dbWL = false;
-            bhB();
+            BaseConversationUI.d(BaseConversationUI.this).bkH();
+            dbQo = false;
+            bnr();
           }
           BaseConversationUI.a(BaseConversationUI.this, null);
           BaseConversationUI.b(BaseConversationUI.this, null);
-          u.d("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "prepare chattingUI logic use %dms", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+          v.d("MicroMsg.BaseConversationUI", "prepare chattingUI logic use %dms", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
           return false;
         }
       });
     }
-    bay();
-    iH.show();
+    bfP();
+    iY.show();
   }
   
   protected void onSaveInstanceState(Bundle paramBundle)
   {
-    if ((kmF != null) && (!ay.kz(kmF.getTalkerUserName())))
+    if ((kMd != null) && (!be.kf(kMd.bjO())))
     {
-      u.d("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "onSaveInstanceState:%s", new Object[] { kmF.getTalkerUserName() });
-      paramBundle.putString("last_restore_talker", kmF.getTalkerUserName());
+      v.d("MicroMsg.BaseConversationUI", "onSaveInstanceState:%s", new Object[] { kMd.bjO() });
+      paramBundle.putString("last_restore_talker", kMd.bjO());
     }
   }
   
   public ActionMode onWindowStartingActionMode(ActionMode.Callback paramCallback)
   {
-    if ((kmF == null) || (kmF.kZN == null) || (!kmF.bbg())) {
+    if ((kMd == null) || (kMd.lAf == null) || (!kMd.bgq())) {
       return super.onWindowStartingActionMode(paramCallback);
     }
-    return kmF.kZN.startActionMode(paramCallback);
+    if (c.co(22)) {
+      return super.onWindowStartingActionMode(paramCallback);
+    }
+    return kMd.lAf.startActionMode(paramCallback);
   }
   
-  private static enum a {}
+  private static enum a
+  {
+    private a() {}
+  }
   
   public static class b
     extends o
   {
-    public BaseConversationUI lnu;
-    private BaseConversationUI.a meW = BaseConversationUI.a.lnq;
+    public BaseConversationUI lNO;
+    private BaseConversationUI.a lNP = BaseConversationUI.a.lNK;
     
-    public final void Gj(String paramString)
+    public final void Ah(String paramString)
     {
-      if (lnu != null)
+      if (lNO != null)
       {
-        BaseConversationUI localBaseConversationUI = lnu;
+        BaseConversationUI localBaseConversationUI = lNO;
         title = paramString;
-        if (dsa != null) {
-          localBaseConversationUI.NW();
+        if (dsq != null) {
+          localBaseConversationUI.Pg();
         }
       }
     }
     
     public final void finish()
     {
-      getActivity().finish();
+      y().finish();
     }
     
     protected int getLayoutId()
@@ -598,20 +608,20 @@ public class BaseConversationUI
       return 0;
     }
     
-    public View onCreateView(LayoutInflater paramLayoutInflater, ViewGroup paramViewGroup, Bundle paramBundle)
+    public final View onCreateView(LayoutInflater paramLayoutInflater, ViewGroup paramViewGroup, Bundle paramBundle)
     {
-      meW = BaseConversationUI.a.lnq;
-      lnu = ((BaseConversationUI)getActivity());
+      lNP = BaseConversationUI.a.lNK;
+      lNO = ((BaseConversationUI)y());
       paramLayoutInflater = paramLayoutInflater.inflate(getLayoutId(), paramViewGroup, false);
-      setHasOptionsMenu(true);
+      A();
       return paramLayoutInflater;
     }
     
     public void onDestroy()
     {
-      if (meW != BaseConversationUI.a.lns)
+      if (lNP != BaseConversationUI.a.lNM)
       {
-        u.w("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "fmStatus != ActivityStatus.ACTIVITY_PAUSE when fm onDestroy");
+        v.w("MicroMsg.BaseConversationUI", "fmStatus != ActivityStatus.ACTIVITY_PAUSE when fm onDestroy");
         onPause();
       }
       super.onDestroy();
@@ -620,33 +630,33 @@ public class BaseConversationUI
     public void onPause()
     {
       super.onPause();
-      meW = BaseConversationUI.a.lns;
+      lNP = BaseConversationUI.a.lNM;
     }
     
     public void onResume()
     {
       super.onResume();
-      meW = BaseConversationUI.a.lnr;
+      lNP = BaseConversationUI.a.lNL;
     }
   }
   
   private final class c
     implements Runnable
   {
-    int arU;
-    int auo;
-    Intent aup;
-    int knB = 0;
+    int adJ;
+    int agb;
+    Intent agc;
+    int kMI = 0;
     
     private c() {}
     
     public final void run()
     {
-      if (ah.rh())
+      if (ah.rg())
       {
-        u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "on post select image job, acc has ready, retry count %d", new Object[] { Integer.valueOf(knB) });
+        v.i("MicroMsg.BaseConversationUI", "on post select image job, acc has ready, retry count %d", new Object[] { Integer.valueOf(kMI) });
         a(BaseConversationUI.m(BaseConversationUI.this), null, false);
-        ab.j(new Runnable()
+        ad.k(new Runnable()
         {
           public final void run()
           {
@@ -654,11 +664,11 @@ public class BaseConversationUI
             if (BaseConversationUI.d(BaseConversationUI.this) == null) {}
             for (;;)
             {
-              u.d("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "on select image ActivityResult. after creat chattingUI, chatting fragment is null? %B", new Object[] { Boolean.valueOf(bool) });
+              v.d("MicroMsg.BaseConversationUI", "on select image ActivityResult. after creat chattingUI, chatting fragment is null? %B", new Object[] { Boolean.valueOf(bool) });
               if (BaseConversationUI.d(BaseConversationUI.this) != null)
               {
-                u.d("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "on select image ActivityResult. do post activity result");
-                BaseConversationUI.d(BaseConversationUI.this).onActivityResult(auo & 0xFFFF, arU, aup);
+                v.d("MicroMsg.BaseConversationUI", "on select image ActivityResult. do post activity result");
+                BaseConversationUI.d(BaseConversationUI.this).onActivityResult(agb & 0xFFFF, adJ, agc);
               }
               return;
               bool = false;
@@ -672,14 +682,14 @@ public class BaseConversationUI
         });
         return;
       }
-      if (knB >= 3)
+      if (kMI >= 3)
       {
-        u.w("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "on post select image job, match max retry count");
+        v.w("MicroMsg.BaseConversationUI", "on post select image job, match max retry count");
         return;
       }
-      u.w("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "on post select image job, acc not ready, cur retry count %d", new Object[] { Integer.valueOf(knB) });
-      knB += 1;
-      ab.e(this, 300L);
+      v.w("MicroMsg.BaseConversationUI", "on post select image job, acc not ready, cur retry count %d", new Object[] { Integer.valueOf(kMI) });
+      kMI += 1;
+      ad.e(this, 300L);
     }
     
     public final String toString()

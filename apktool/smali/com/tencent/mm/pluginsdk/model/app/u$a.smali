@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract aEY()V
+.method public abstract oq()V
 .end method

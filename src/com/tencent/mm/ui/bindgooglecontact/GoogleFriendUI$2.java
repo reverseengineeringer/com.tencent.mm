@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.bindgooglecontact;
 
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.ui.tools.r.b;
 
 final class GoogleFriendUI$2
@@ -8,24 +8,24 @@ final class GoogleFriendUI$2
 {
   GoogleFriendUI$2(GoogleFriendUI paramGoogleFriendUI) {}
   
-  public final void Gd() {}
+  public final void GA() {}
   
-  public final void Ge() {}
+  public final void GB() {}
   
-  public final void Gf() {}
+  public final void GC() {}
   
-  public final void Gg() {}
+  public final void GD() {}
   
-  public final boolean kE(String paramString)
+  public final boolean ln(String paramString)
   {
     return false;
   }
   
-  public final void kF(String paramString)
+  public final void lo(String paramString)
   {
-    GoogleFriendUI.a(kNj, ay.kx(paramString));
-    if (GoogleFriendUI.a(kNj) != null) {
-      GoogleFriendUI.a(kNj).pH(GoogleFriendUI.b(kNj));
+    GoogleFriendUI.a(lmy, be.lh(paramString));
+    if (GoogleFriendUI.a(lmy) != null) {
+      GoogleFriendUI.a(lmy).qY(GoogleFriendUI.b(lmy));
     }
   }
 }

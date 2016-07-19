@@ -1,16 +1,16 @@
 package com.tencent.mm.ui.account;
 
-import com.tencent.mm.modelsimple.t;
-import com.tencent.mm.r.j;
+import com.tencent.mm.modelsimple.r;
+import com.tencent.mm.t.j;
 
 final class FacebookLoginUI$3
   extends b
 {
   FacebookLoginUI$3(FacebookLoginUI paramFacebookLoginUI) {}
   
-  public final j d(j paramj, String paramString)
+  public final j a(j paramj, String paramString)
   {
-    return new t("facebook@wechat_auth", FacebookLoginUI.a(ksx), ((t)paramj).getSecCodeType(), paramString, ((t)paramj).zb(), ((t)paramj).Cy(), 0, "", true, false);
+    return new r("facebook@wechat_auth", FacebookLoginUI.a(kRF), ((r)paramj).CK(), paramString, ((r)paramj).zo(), ((r)paramj).CL(), 0, "", true, false);
   }
 }
 

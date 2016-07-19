@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.plugin.sns.ui.SnsTextView android:textSize="@dimen/jc" android:textColor="@color/ow" android:id="@id/c94" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" />
+    <com.tencent.mm.plugin.sns.ui.SnsTextView android:textSize="@dimen/jc" android:textColor="@color/me" android:id="@id/c95" android:background="@drawable/n8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j_" android:singleLine="true" />
+</LinearLayout>

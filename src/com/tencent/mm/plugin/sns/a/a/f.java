@@ -2,18 +2,21 @@ package com.tencent.mm.plugin.sns.a.a;
 
 import android.app.Activity;
 import android.view.View;
-import com.tencent.mm.d.a.hn;
+import com.tencent.mm.e.a.hs;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.h.c;
-import com.tencent.mm.plugin.sns.h.s;
-import com.tencent.mm.plugin.sns.ui.at;
+import com.tencent.mm.platformtools.q;
+import com.tencent.mm.plugin.sns.data.i;
+import com.tencent.mm.plugin.sns.i.c;
+import com.tencent.mm.plugin.sns.i.s;
+import com.tencent.mm.plugin.sns.ui.az;
 import com.tencent.mm.pluginsdk.e;
-import com.tencent.mm.protocal.b.aqi;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.protocal.b.aqt;
+import com.tencent.mm.protocal.b.t;
+import com.tencent.mm.protocal.b.w;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -26,131 +29,131 @@ import java.util.Set;
 public final class f
   implements b
 {
-  public static Map gGD = new HashMap();
-  public Activity asX;
-  public long cIK = 0L;
-  public int fjb = 1;
-  public int gFQ = 0;
-  public Map gGA = new HashMap();
-  private LinkedList gGB = new LinkedList();
-  private Map gGC = new HashMap();
-  private int gGE = 0;
-  public View gGF = null;
-  public a gGG = null;
-  private int gGH = -1;
-  public HashMap gGu = new HashMap();
-  public HashSet gGv = new HashSet();
-  public Map gGw = new HashMap();
-  public Map gGx = new HashMap();
-  public HashSet gGy = new HashSet();
-  public Map gGz = new HashMap();
+  public static Map<String, Integer> gNf = new HashMap();
+  public Activity aeH;
+  public long cFO = 0L;
+  public int frY = 1;
+  public HashMap<String, Long> gMW = new HashMap();
+  public HashSet<Long> gMX = new HashSet();
+  public Map<String, Long> gMY = new HashMap();
+  public Map<String, Integer> gMZ = new HashMap();
+  public int gMs = 0;
+  public HashSet<Long> gNa = new HashSet();
+  public Map<Long, g> gNb = new HashMap();
+  public Map<String, a> gNc = new HashMap();
+  private LinkedList<String> gNd = new LinkedList();
+  private Map<String, Integer> gNe = new HashMap();
+  private int gNg = 0;
+  public View gNh = null;
+  public a gNi = null;
+  private int gNj = -1;
   
   public f(int paramInt)
   {
-    fjb = paramInt;
+    frY = paramInt;
   }
   
-  public final void a(int paramInt1, String paramString1, String paramString2, boolean paramBoolean, View paramView, long paramLong, at paramat, aqi paramaqi, int paramInt2)
+  public final void a(int paramInt1, String paramString1, String paramString2, boolean paramBoolean, View paramView, long paramLong, az paramaz, aqt paramaqt, int paramInt2)
   {
-    gGv.add(Long.valueOf(paramLong));
-    gGu.put(paramString1, Long.valueOf(paramLong));
+    gMX.add(Long.valueOf(paramLong));
+    gMW.put(paramString1, Long.valueOf(paramLong));
     label77:
     long l;
-    if (gGH == -1)
+    if (gNj == -1)
     {
-      if (asX == null)
+      if (aeH == null)
       {
         i = -1;
-        gGH = i;
+        gNj = i;
       }
     }
     else
     {
-      if ((gGG == null) && (paramView != null) && (ad.gOk))
+      if ((gNi == null) && (paramView != null) && (com.tencent.mm.plugin.sns.e.ad.gVV))
       {
-        if (paramat != null) {
+        if (paramaz != null) {
           break label276;
         }
-        paramat = null;
-        gGG = new a(paramat, paramLong, paramView, gFQ, gGF, gGH, fjb, paramaqi, paramInt1);
-        paramView = gGG;
-        gFZ = System.currentTimeMillis();
-        ad.ZP().post(new a.1(paramView));
+        paramaz = null;
+        gNi = new a(paramaz, paramLong, paramView, gMs, gNh, gNj, frY, paramaqt, paramInt1);
+        paramView = gNi;
+        gMB = System.currentTimeMillis();
+        com.tencent.mm.plugin.sns.e.ad.acj().post(new a.1(paramView));
       }
-      if (!gGw.containsKey(paramString1)) {
+      if (!gMY.containsKey(paramString1)) {
         break label310;
       }
-      l = ay.ao(((Long)gGw.get(paramString1)).longValue());
+      l = be.av(((Long)gMY.get(paramString1)).longValue());
       if (l >= 1200000L) {
-        break label552;
+        break label553;
       }
-      if (!gGx.containsKey(paramString1)) {
+      if (!gMZ.containsKey(paramString1)) {
         break label286;
       }
     }
     label276:
     label286:
-    for (int i = ((Integer)gGx.get(paramString1)).intValue();; i = 0)
+    for (int i = ((Integer)gMZ.get(paramString1)).intValue();; i = 0)
     {
       if (i < 2) {
         break label292;
       }
-      com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpLeo9dFcGZqKT8YfYn4JbbN", "passed localid " + paramString1 + " viewid " + paramString2 + " passedTime: " + l);
+      v.i("MicroMsg.SnsAdStatistic", "passed localid " + paramString1 + " viewid " + paramString2 + " passedTime: " + l);
       return;
-      i = e.cJ(asX);
+      i = e.cG(aeH);
       break;
-      paramat = hmo;
+      paramaz = hCu;
       break label77;
     }
     label292:
-    gGx.put(paramString1, Integer.valueOf(i + 1));
+    gMZ.put(paramString1, Integer.valueOf(i + 1));
     label310:
-    if (!gGA.containsKey(paramString1))
+    if (!gNc.containsKey(paramString1))
     {
-      gGA.put(paramString1, new a(ay.FT(), paramString1, paramInt1, paramString2, paramInt2, paramLong));
-      com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpLeo9dFcGZqKT8YfYn4JbbN", "onAdAdded " + paramInt1 + " " + paramString1 + "  isExposure: " + paramBoolean);
+      gNc.put(paramString1, new a(be.Gq(), paramString1, paramInt1, paramString2, paramInt2, paramLong));
+      v.i("MicroMsg.SnsAdStatistic", "onAdAdded " + paramInt1 + " " + paramString1 + "  isExposure: " + paramBoolean);
       if (paramInt2 == 9) {
-        if (!gGz.containsKey(Long.valueOf(paramLong))) {
-          break label587;
+        if (!gNb.containsKey(Long.valueOf(paramLong))) {
+          break label588;
         }
       }
     }
-    label552:
-    label587:
-    for (paramView = (g)gGz.get(Long.valueOf(paramLong));; paramView = new g("timeline"))
+    label553:
+    label588:
+    for (paramView = (g)gNb.get(Long.valueOf(paramLong));; paramView = new g("timeline"))
     {
-      gGP = ay.FT();
-      gGz.put(Long.valueOf(paramLong), paramView);
-      if (!gGB.contains(paramString1))
+      gNq = be.Gq();
+      gNb.put(Long.valueOf(paramLong), paramView);
+      if (!gNd.contains(paramString1))
       {
-        gGB.add(paramString1);
-        com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpLeo9dFcGZqKT8YfYn4JbbN", "exposures item " + paramString1);
-        gGC.put(paramString1, Integer.valueOf((int)(System.currentTimeMillis() / 1000L)));
+        gNd.add(paramString1);
+        v.i("MicroMsg.SnsAdStatistic", "exposures item " + paramString1);
+        gNe.put(paramString1, Integer.valueOf((int)(System.currentTimeMillis() / 1000L)));
       }
       if (paramInt2 != 9) {
-        break label602;
+        break label603;
       }
-      paramString1 = new d(paramString2, fjb, 2);
-      ah.tE().d(paramString1);
+      paramString1 = new d(paramString2, frY, 2);
+      ah.tF().a(paramString1, 0);
       return;
-      gGw.put(paramString1, Long.valueOf(ay.FT()));
-      gGx.put(paramString1, Integer.valueOf(0));
+      gMY.put(paramString1, Long.valueOf(be.Gq()));
+      gMZ.put(paramString1, Integer.valueOf(0));
       break label310;
       break;
     }
-    label602:
-    paramString1 = new d(paramString2, fjb, 1);
-    ah.tE().d(paramString1);
+    label603:
+    paramString1 = new d(paramString2, frY, 1);
+    ah.tF().a(paramString1, 0);
   }
   
   public final void b(long paramLong, int paramInt, boolean paramBoolean)
   {
     g localg;
-    if (gGz.containsKey(Long.valueOf(paramLong)))
+    if (gNb.containsKey(Long.valueOf(paramLong)))
     {
-      localg = (g)gGz.get(Long.valueOf(paramLong));
+      localg = (g)gNb.get(Long.valueOf(paramLong));
       if (paramInt > 0) {
-        gGR.gHk = paramInt;
+        gNs.gOp = paramInt;
       }
       if (!paramBoolean) {
         break label92;
@@ -159,57 +162,52 @@ public final class f
     label92:
     for (paramInt = 1;; paramInt = 0)
     {
-      gGN = paramInt;
-      gGz.put(Long.valueOf(paramLong), localg);
+      gNo = paramInt;
+      gNb.put(Long.valueOf(paramLong), localg);
       return;
       localg = new g("timeline");
       break;
     }
   }
   
-  public final boolean bU(long paramLong)
+  public final boolean ck(long paramLong)
   {
-    return gGv.contains(Long.valueOf(paramLong));
+    return gMX.contains(Long.valueOf(paramLong));
   }
   
-  public final void bV(final long paramLong)
+  public final void cl(final long paramLong)
   {
-    ab.j(new Runnable()
+    com.tencent.mm.sdk.platformtools.ad.k(new Runnable()
     {
       public final void run()
       {
         f localf;
         long l;
-        if (bU(paramLong))
+        if (ck(paramLong))
         {
           localf = f.this;
           l = paramLong;
-          if (!gGz.containsKey(Long.valueOf(l))) {
+          if (!gNb.containsKey(Long.valueOf(l))) {
             break label98;
           }
         }
         label98:
-        for (g localg = (g)gGz.get(Long.valueOf(l));; localg = new g("timeline"))
+        for (g localg = (g)gNb.get(Long.valueOf(l));; localg = new g("timeline"))
         {
-          gGN = 1;
-          gGR.gHi += 1;
-          gGz.put(Long.valueOf(l), localg);
+          gNo = 1;
+          gNs.gOn += 1;
+          gNb.put(Long.valueOf(l), localg);
           return;
         }
       }
     });
   }
   
-  public final boolean bW(long paramLong)
-  {
-    return gGy.contains(Long.valueOf(paramLong));
-  }
-  
   public final void clear()
   {
-    com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpLeo9dFcGZqKT8YfYn4JbbN", "clean the adRemove" + gGB.size());
+    v.i("MicroMsg.SnsAdStatistic", "clean the adRemove" + gNd.size());
     Object localObject1 = new LinkedList();
-    Object localObject2 = gGA.keySet().iterator();
+    Object localObject2 = gNc.keySet().iterator();
     while (((Iterator)localObject2).hasNext()) {
       ((List)localObject1).add((String)((Iterator)localObject2).next());
     }
@@ -217,53 +215,58 @@ public final class f
     while (((Iterator)localObject1).hasNext())
     {
       localObject2 = (String)((Iterator)localObject1).next();
-      localObject2 = (a)gGA.get(localObject2);
-      n(position, aIr, cbR);
+      localObject2 = (a)gNc.get(localObject2);
+      q(position, auL, bVG);
     }
-    localObject1 = gGB.iterator();
+    localObject1 = gNd.iterator();
     c localc;
     int i;
     while (((Iterator)localObject1).hasNext())
     {
       localObject2 = (String)((Iterator)localObject1).next();
-      localc = ad.azj().lM(s.vI((String)localObject2));
+      localc = com.tencent.mm.plugin.sns.e.ad.aBJ().mZ(s.wV((String)localObject2));
       if (localc != null)
       {
         field_localFlag |= 0x80;
         i = (int)(System.currentTimeMillis() / 1000L);
-        if (!gGC.containsKey(localObject2)) {
+        if (!gNe.containsKey(localObject2)) {
           break label275;
         }
-        i = ((Integer)gGC.get(localObject2)).intValue();
+        i = ((Integer)gNe.get(localObject2)).intValue();
       }
     }
     label275:
     for (;;)
     {
       field_exposureTime = i;
-      ad.azj().b(field_snsId, localc);
+      com.tencent.mm.plugin.sns.e.ad.aBJ().b(field_snsId, localc);
       break;
-      gGB.clear();
-      gGC.clear();
+      gNd.clear();
+      gNe.clear();
       return;
     }
   }
   
-  public final void f(long paramLong, boolean paramBoolean)
+  public final boolean cm(long paramLong)
+  {
+    return gNa.contains(Long.valueOf(paramLong));
+  }
+  
+  public final void g(long paramLong, boolean paramBoolean)
   {
     g localg;
-    if (gGz.containsKey(Long.valueOf(paramLong)))
+    if (gNb.containsKey(Long.valueOf(paramLong)))
     {
-      localg = (g)gGz.get(Long.valueOf(paramLong));
+      localg = (g)gNb.get(Long.valueOf(paramLong));
       if (!paramBoolean) {
         break label88;
       }
     }
     label88:
-    for (gGR.gHl = 2;; gGR.gHl = 1)
+    for (gNs.gOq = 2;; gNs.gOq = 1)
     {
-      gGR.gHm = 1;
-      gGz.put(Long.valueOf(paramLong), localg);
+      gNs.gOr = 1;
+      gNb.put(Long.valueOf(paramLong), localg);
       return;
       localg = new g("timeline");
       break;
@@ -272,16 +275,16 @@ public final class f
   
   public final void k(final long paramLong1, long paramLong2)
   {
-    ab.j(new Runnable()
+    com.tencent.mm.sdk.platformtools.ad.k(new Runnable()
     {
       public final void run()
       {
-        if (bU(paramLong1))
+        if (ck(paramLong1))
         {
           f localf = f.this;
-          long l = gGM;
-          if (!gGy.contains(Long.valueOf(l))) {
-            gGy.add(Long.valueOf(l));
+          long l = gNn;
+          if (!gNa.contains(Long.valueOf(l))) {
+            gNa.add(Long.valueOf(l));
           }
         }
       }
@@ -290,225 +293,228 @@ public final class f
   
   public final void l(final long paramLong1, long paramLong2)
   {
-    ab.j(new Runnable()
+    com.tencent.mm.sdk.platformtools.ad.k(new Runnable()
     {
       public final void run()
       {
         f localf;
         long l1;
         long l2;
-        if (bU(paramLong1))
+        if (ck(paramLong1))
         {
           localf = f.this;
           l1 = paramLong1;
-          l2 = ciy;
-          if (!gGz.containsKey(Long.valueOf(l1))) {
+          l2 = cdP;
+          if (!gNb.containsKey(Long.valueOf(l1))) {
             break label106;
           }
         }
         label106:
-        for (g localg = (g)gGz.get(Long.valueOf(l1));; localg = new g("timeline"))
+        for (g localg = (g)gNb.get(Long.valueOf(l1));; localg = new g("timeline"))
         {
-          if (gGR.gHn == 0L) {
-            gGR.gHn = l2;
+          if (gNs.gOs == 0L) {
+            gNs.gOs = l2;
           }
-          gGz.put(Long.valueOf(l1), localg);
+          gNb.put(Long.valueOf(l1), localg);
           return;
         }
       }
     });
   }
   
-  public final void n(int paramInt, String paramString1, String paramString2)
-  {
-    long l;
-    if (gGu.containsKey(paramString1))
-    {
-      l = ((Long)gGu.remove(paramString1)).longValue();
-      gGv.remove(Long.valueOf(l));
-    }
-    Object localObject2;
-    Object localObject3;
-    Object localObject4;
-    if ((gGG != null) && (ad.gOk))
-    {
-      localObject1 = gGG;
-      cQa = true;
-      gGa = System.currentTimeMillis();
-      localObject1 = gGG;
-      if (gFV < 0)
-      {
-        gGq = 2;
-        if (gFX >= 0) {
-          break label1049;
-        }
-      }
-      label1049:
-      for (gGr = 2;; gGr = 1)
-      {
-        localObject2 = new StringBuffer();
-        ((StringBuffer)localObject2).append(com.tencent.mm.plugin.sns.data.h.bX(cbS) + ",");
-        ((StringBuffer)localObject2).append(cbT + ",");
-        ((StringBuffer)localObject2).append(gGq + ",");
-        ((StringBuffer)localObject2).append(gGr + ",");
-        ((StringBuffer)localObject2).append(gGn + ",");
-        ((StringBuffer)localObject2).append(gGo + ",");
-        ((StringBuffer)localObject2).append(gGp + ",");
-        ((StringBuffer)localObject2).append(gFZ + ",");
-        ((StringBuffer)localObject2).append(gGa + ",");
-        if ((gGd > 0L) && (gGg == 0L)) {
-          gGg = System.currentTimeMillis();
-        }
-        ((StringBuffer)localObject2).append(gGd + ",");
-        ((StringBuffer)localObject2).append(gGg + ",");
-        if ((gGj > 0L) && (gGm == 0L)) {
-          gGm = System.currentTimeMillis();
-        }
-        ((StringBuffer)localObject2).append(gGj + ",");
-        ((StringBuffer)localObject2).append(gGm);
-        com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpKYLkEeAUxXbSmc9F1nPCWf", "report " + ((StringBuffer)localObject2).toString());
-        localObject3 = new com.tencent.mm.protocal.b.r();
-        iWO = gGj;
-        iWP = gGm;
-        gGq = gGq;
-        gGr = gGr;
-        iWJ = gGn;
-        iWK = gGo;
-        iWL = gGp;
-        iWM = gGd;
-        iWN = gGg;
-        startTime = gFZ;
-        endTime = gGa;
-        ad.azd().g(12010, new Object[] { ((StringBuffer)localObject2).toString() });
-        localObject4 = com.tencent.mm.modelsns.a.dQ(730);
-        ((com.tencent.mm.modelsns.a)localObject4).jf(com.tencent.mm.plugin.sns.data.h.bX(cbS)).jf(cbT).dT(gGq).dT(gGr).dT(gGn).dT(gGo).dT(gGp).jf(gFZ).jf(gGa).jf(gGd).jf(gGg).jf(gGj).jf(gGm);
-        ((com.tencent.mm.modelsns.a)localObject4).CV();
-        localObject4 = new hn();
-        aDk.position = position;
-        com.tencent.mm.sdk.c.a.jUF.j((com.tencent.mm.sdk.c.b)localObject4);
-        if (!com.tencent.mm.platformtools.r.cnQ) {
-          break label1058;
-        }
-        int j = new Random(System.currentTimeMillis()).nextInt(2000) + 10;
-        com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpKYLkEeAUxXbSmc9F1nPCWf", "run on test kv " + j);
-        int i = 0;
-        while (i < j)
-        {
-          ad.azd().g(12010, new Object[] { ((StringBuffer)localObject2).toString() });
-          i += 1;
-        }
-        gGq = 1;
-        break;
-      }
-      label1058:
-      localObject2 = gGG;
-      localObject1 = new com.tencent.mm.protocal.b.u();
-      if (gFL != null)
-      {
-        iWU = gFL.jJV;
-        iWT = gFL.jJS;
-        gGG = null;
-        localObject2 = localObject1;
-      }
-    }
-    for (Object localObject1 = localObject3;; localObject1 = null)
-    {
-      if (gGA.containsKey(paramString1))
-      {
-        localObject3 = (a)gGA.remove(paramString1);
-        gGw.put(paramString1, Long.valueOf(ay.FT()));
-        if (localObject3 == null)
-        {
-          return;
-          localObject1 = null;
-          break;
-        }
-        l = ay.ao(time);
-        com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpLeo9dFcGZqKT8YfYn4JbbN", "onAdRemoved " + paramInt + " " + paramString1 + " " + l + " ");
-        if (eLV == 9)
-        {
-          localObject4 = (g)gGz.remove(Long.valueOf(cbS));
-          paramString1 = "";
-          if (localObject4 != null)
-          {
-            ((g)localObject4).lk(0);
-            paramString1 = ((g)localObject4).axw();
-          }
-          gGy.remove(Long.valueOf(cbS));
-        }
-        for (paramString1 = new d(paramString2, fjb, (int)l, (com.tencent.mm.protocal.b.r)localObject1, (com.tencent.mm.protocal.b.u)localObject2, 2, paramString1);; paramString1 = new d(paramString2, fjb, (int)l, (com.tencent.mm.protocal.b.r)localObject1, (com.tencent.mm.protocal.b.u)localObject2, 1, ""))
-        {
-          ah.tE().d(paramString1);
-          return;
-        }
-      }
-      com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpLeo9dFcGZqKT8YfYn4JbbN", "can not find onAdRemoved " + paramInt + " " + paramString1);
-      return;
-      localObject2 = null;
-    }
-  }
-  
   public final void n(final long paramLong, int paramInt)
   {
-    ab.j(new Runnable()
+    com.tencent.mm.sdk.platformtools.ad.k(new Runnable()
     {
       public final void run()
       {
-        b(paramLong, gGK, gGL);
+        b(paramLong, fkf, gNm);
       }
     });
   }
   
   public final void onResume()
   {
-    if (cIK <= 0L) {}
+    if (cFO <= 0L) {}
     for (;;)
     {
       return;
-      long l = ay.ao(cIK);
-      Iterator localIterator = gGA.keySet().iterator();
+      long l = be.av(cFO);
+      Iterator localIterator = gNc.keySet().iterator();
       Object localObject;
       a locala;
       while (localIterator.hasNext())
       {
         localObject = (String)localIterator.next();
-        locala = (a)gGA.get(localObject);
-        com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpLeo9dFcGZqKT8YfYn4JbbN", "before Key " + (String)localObject + " " + time);
+        locala = (a)gNc.get(localObject);
+        v.i("MicroMsg.SnsAdStatistic", "before Key " + (String)localObject + " " + time);
       }
-      localIterator = gGA.keySet().iterator();
+      localIterator = gNc.keySet().iterator();
       while (localIterator.hasNext())
       {
         localObject = (String)localIterator.next();
-        localObject = (a)gGA.get(localObject);
+        localObject = (a)gNc.get(localObject);
         time -= l;
       }
-      localIterator = gGA.keySet().iterator();
+      localIterator = gNc.keySet().iterator();
       while (localIterator.hasNext())
       {
         localObject = (String)localIterator.next();
-        locala = (a)gGA.get(localObject);
-        com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpLeo9dFcGZqKT8YfYn4JbbN", "update Key " + (String)localObject + " " + time);
+        locala = (a)gNc.get(localObject);
+        v.i("MicroMsg.SnsAdStatistic", "update Key " + (String)localObject + " " + time);
       }
     }
   }
   
+  public final void q(int paramInt, String paramString1, String paramString2)
+  {
+    if (gMW.containsKey(paramString1))
+    {
+      l = ((Long)gMW.remove(paramString1)).longValue();
+      gMX.remove(Long.valueOf(l));
+    }
+    Object localObject3 = null;
+    Object localObject4 = null;
+    Object localObject2 = localObject3;
+    Object localObject1 = localObject4;
+    if (gNi != null)
+    {
+      localObject2 = localObject3;
+      localObject1 = localObject4;
+      if (com.tencent.mm.plugin.sns.e.ad.gVV)
+      {
+        localObject1 = gNi;
+        cND = true;
+        gMC = System.currentTimeMillis();
+        localObject1 = gNi;
+        if (gMx < 0)
+        {
+          gMS = 2;
+          if (gMz >= 0) {
+            break label1071;
+          }
+        }
+        label1071:
+        for (gMT = 2;; gMT = 1)
+        {
+          localObject3 = new StringBuffer();
+          ((StringBuffer)localObject3).append(i.cn(bVH) + ",");
+          ((StringBuffer)localObject3).append(bVI + ",");
+          ((StringBuffer)localObject3).append(gMS + ",");
+          ((StringBuffer)localObject3).append(gMT + ",");
+          ((StringBuffer)localObject3).append(gMP + ",");
+          ((StringBuffer)localObject3).append(gMQ + ",");
+          ((StringBuffer)localObject3).append(gMR + ",");
+          ((StringBuffer)localObject3).append(gMB + ",");
+          ((StringBuffer)localObject3).append(gMC + ",");
+          if ((gMF > 0L) && (gMI == 0L)) {
+            gMI = System.currentTimeMillis();
+          }
+          ((StringBuffer)localObject3).append(gMF + ",");
+          ((StringBuffer)localObject3).append(gMI + ",");
+          if ((gML > 0L) && (gMO == 0L)) {
+            gMO = System.currentTimeMillis();
+          }
+          ((StringBuffer)localObject3).append(gML + ",");
+          ((StringBuffer)localObject3).append(gMO);
+          v.i("MicroMsg.AdViewStatic", "report " + ((StringBuffer)localObject3).toString());
+          localObject2 = new t();
+          jup = gML;
+          juq = gMO;
+          gMS = gMS;
+          gMT = gMT;
+          juk = gMP;
+          jul = gMQ;
+          jum = gMR;
+          jun = gMF;
+          juo = gMI;
+          startTime = gMB;
+          endTime = gMC;
+          com.tencent.mm.plugin.sns.e.ad.aBD().h(12010, new Object[] { ((StringBuffer)localObject3).toString() });
+          localObject4 = com.tencent.mm.modelsns.a.ex(730);
+          ((com.tencent.mm.modelsns.a)localObject4).jx(i.cn(bVH)).jx(bVI).eA(gMS).eA(gMT).eA(gMP).eA(gMQ).eA(gMR).jx(gMB).jx(gMC).jx(gMF).jx(gMI).jx(gML).jx(gMO);
+          ((com.tencent.mm.modelsns.a)localObject4).Dg();
+          localObject4 = new hs();
+          apo.position = position;
+          com.tencent.mm.sdk.c.a.kug.y((com.tencent.mm.sdk.c.b)localObject4);
+          if (!q.ciV) {
+            break label1080;
+          }
+          int j = new Random(System.currentTimeMillis()).nextInt(2000) + 10;
+          v.i("MicroMsg.AdViewStatic", "run on test kv " + j);
+          int i = 0;
+          while (i < j)
+          {
+            com.tencent.mm.plugin.sns.e.ad.aBD().h(12010, new Object[] { ((StringBuffer)localObject3).toString() });
+            i += 1;
+          }
+          gMS = 1;
+          break;
+        }
+        label1080:
+        localObject3 = gNi;
+        localObject1 = new w();
+        if (gMn == null) {
+          break label1185;
+        }
+        juv = gMn.kis;
+        juu = gMn.kip;
+      }
+    }
+    for (;;)
+    {
+      gNi = null;
+      if (!gNc.containsKey(paramString1)) {
+        break label1375;
+      }
+      localObject3 = (a)gNc.remove(paramString1);
+      gMY.put(paramString1, Long.valueOf(be.Gq()));
+      if (localObject3 != null) {
+        break;
+      }
+      return;
+      label1185:
+      localObject1 = null;
+    }
+    long l = be.av(time);
+    v.i("MicroMsg.SnsAdStatistic", "onAdRemoved " + paramInt + " " + paramString1 + " " + l + " ");
+    if (cTv == 9)
+    {
+      localObject4 = (g)gNb.remove(Long.valueOf(bVH));
+      paramString1 = "";
+      if (localObject4 != null)
+      {
+        ((g)localObject4).mt(0);
+        paramString1 = ((g)localObject4).azY();
+      }
+      gNa.remove(Long.valueOf(bVH));
+    }
+    for (paramString1 = new d(paramString2, frY, (int)l, (t)localObject2, (w)localObject1, 2, paramString1);; paramString1 = new d(paramString2, frY, (int)l, (t)localObject2, (w)localObject1, 1, ""))
+    {
+      ah.tF().a(paramString1, 0);
+      return;
+    }
+    label1375:
+    v.i("MicroMsg.SnsAdStatistic", "can not find onAdRemoved " + paramInt + " " + paramString1);
+  }
+  
   static final class a
   {
-    public String aIr;
-    public String cbR;
-    public long cbS;
-    public int eLV;
+    public String auL;
+    public String bVG;
+    public long bVH;
+    public int cTv;
     public int position;
     public long time;
     
     public a(long paramLong1, String paramString1, int paramInt1, String paramString2, int paramInt2, long paramLong2)
     {
       time = paramLong1;
-      aIr = paramString1;
+      auL = paramString1;
       position = paramInt1;
-      cbR = paramString2;
-      cbS = paramLong2;
-      eLV = paramInt2;
+      bVG = paramString2;
+      bVH = paramLong2;
+      cTv = paramInt2;
     }
   }
 }

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract ir(I)V
+.method public abstract jA(I)V
 .end method

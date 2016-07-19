@@ -4,13 +4,12 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 public class TranslateCommentTextView
   extends LinearLayout
 {
-  public SnsTranslateResultView hdt;
-  public MaskTextView hmR;
+  public MaskTextView hDb;
+  public SnsTranslateResultView hsg;
   
   public TranslateCommentTextView(Context paramContext)
   {
@@ -26,20 +25,10 @@ public class TranslateCommentTextView
   
   private void init()
   {
-    LayoutInflater.from(getContext()).inflate(2131362816, this);
-    hmR = ((MaskTextView)findViewById(2131168519));
-    hdt = ((SnsTranslateResultView)findViewById(2131168520));
-    hdt.setVisibility(8);
-  }
-  
-  public TextView getOriginCommentTextView()
-  {
-    return hmR;
-  }
-  
-  public SnsTranslateResultView getTranslateResultView()
-  {
-    return hdt;
+    LayoutInflater.from(getContext()).inflate(2130904525, this);
+    hDb = ((MaskTextView)findViewById(2131759346));
+    hsg = ((SnsTranslateResultView)findViewById(2131759099));
+    hsg.setVisibility(8);
   }
 }
 

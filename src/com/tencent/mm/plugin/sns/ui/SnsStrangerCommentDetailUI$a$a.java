@@ -5,12 +5,12 @@ import android.widget.TextView;
 
 final class SnsStrangerCommentDetailUI$a$a
 {
-  TextView cqK;
-  ImageView czS;
-  TextView dFw;
-  TextView fya;
-  TextView gbe;
-  ImageView hiT;
+  TextView clX;
+  ImageView cui;
+  TextView dGX;
+  TextView fHe;
+  TextView glf;
+  ImageView hxI;
   
   SnsStrangerCommentDetailUI$a$a(SnsStrangerCommentDetailUI.a parama) {}
 }

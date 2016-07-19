@@ -2,19 +2,19 @@ package com.tencent.mm.plugin.gwallet.a;
 
 import android.content.Context;
 import android.os.RemoteException;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.Iterator;
 import java.util.List;
 
 public final class b$2
   implements Runnable
 {
-  public b$2(b paramb, List paramList, b.b paramb1, aa paramaa) {}
+  public b$2(b paramb, List paramList, b.b paramb1, ac paramac) {}
   
   public final void run()
   {
-    final Object localObject = exM.iterator();
+    final Object localObject = eEg.iterator();
     int i = 0;
     int j;
     for (;;)
@@ -25,17 +25,17 @@ public final class b$2
       String str = (String)((Iterator)localObject).next();
       try
       {
-        b localb = exL;
-        localb.pt("consume");
+        b localb = eEf;
+        localb.qJ("consume");
         if (str != null) {}
         try
         {
           if (str.equals("")) {
-            b.pu("Can't consume " + str + ". No token.");
+            b.qK("Can't consume " + str + ". No token.");
           }
-          j = exD.c(3, mContext.getPackageName(), str);
+          j = eDX.c(3, mContext.getPackageName(), str);
           if (j == 0) {
-            u.d("!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68", "Successfully consumed token: " + str);
+            v.d("MicroMsg.IabHelper", "Successfully consumed token: " + str);
           }
         }
         catch (RemoteException localRemoteException)
@@ -45,20 +45,20 @@ public final class b$2
       }
       catch (a locala)
       {
-        i = exC.exV;
+        i = eDW.eEp;
       }
     }
-    u.d("!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68", "Error consuming consuming token " + locala);
+    v.d("MicroMsg.IabHelper", "Error consuming consuming token " + locala);
     throw new a(j, "Error consuming token " + locala);
     label227:
-    if (exN != null)
+    if (eEh != null)
     {
       localObject = new c(i, "");
-      cIj.post(new Runnable()
+      cFn.post(new Runnable()
       {
         public final void run()
         {
-          exN.b(localObject, null);
+          eEh.b(localObject, null);
         }
       });
     }

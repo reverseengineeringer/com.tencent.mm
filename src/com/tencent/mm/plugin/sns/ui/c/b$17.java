@@ -1,36 +1,81 @@
 package com.tencent.mm.plugin.sns.ui.c;
 
+import android.app.Activity;
+import android.content.Context;
+import android.view.ContextMenu;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.view.View;
-import com.tencent.mm.plugin.sight.decode.a.a;
-import com.tencent.mm.plugin.sight.decode.a.b.e;
-import com.tencent.mm.plugin.sns.ui.ad;
-import java.lang.ref.WeakReference;
+import com.tencent.mm.e.a.bz;
+import com.tencent.mm.e.a.bz.b;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.i.l;
+import com.tencent.mm.plugin.sns.ui.o;
+import com.tencent.mm.protocal.b.auf;
+import com.tencent.mm.protocal.b.je;
 
 final class b$17
-  implements b.e
+  extends c
 {
   b$17(b paramb) {}
   
-  public final void a(com.tencent.mm.plugin.sight.decode.a.b paramb, int paramInt)
+  public final void a(ContextMenu paramContextMenu, View paramView, ContextMenu.ContextMenuInfo paramContextMenuInfo)
   {
-    if ((paramb != null) && (paramInt == 0)) {
-      if (gxp == null) {
-        break label78;
-      }
-    }
-    label78:
-    for (paramb = (View)gxp.get();; paramb = null)
+    paramContextMenuInfo = paramView.getTag();
+    Object localObject;
+    if ((paramContextMenuInfo instanceof o))
     {
-      if ((paramb != null) && ((paramb instanceof a)))
-      {
-        paramb = (a)paramb;
-        paramb.getVideoPath();
-        if ((paramb.getTagObject() != null) && ((paramb.getTagObject() instanceof ad))) {
-          paramb.getTagObject();
+      paramContextMenuInfo = (o)paramContextMenuInfo;
+      localObject = hkU;
+      if (com.tencent.mm.av.c.zM("favorite")) {
+        switch (kli.jFu)
+        {
+        default: 
+          paramContextMenu.add(0, 3, 0, paramView.getContext().getString(2131234160));
         }
       }
-      return;
     }
+    for (;;)
+    {
+      paramContextMenu.add(0, 6, 0, hFM.aeH.getString(2131235573));
+      com.tencent.mm.plugin.sns.abtest.a.a(paramContextMenu, ad.aBI().wA(agV));
+      return;
+      paramContextMenu.add(0, 4, 0, paramView.getContext().getString(2131234160));
+      localObject = new bz();
+      ahe.agV = agV;
+      com.tencent.mm.sdk.c.a.kug.y((com.tencent.mm.sdk.c.b)localObject);
+      if (ahf.agF)
+      {
+        paramContextMenu.add(0, 18, 0, paramView.getContext().getString(2131231704));
+        continue;
+        paramContextMenu.add(0, 5, 0, paramView.getContext().getString(2131234160));
+        continue;
+        paramContextMenu.add(0, 9, 0, paramView.getContext().getString(2131234160));
+        continue;
+        paramContextMenu.add(0, 3, 0, paramView.getContext().getString(2131234160));
+        localObject = new bz();
+        ahe.agV = agV;
+        com.tencent.mm.sdk.c.a.kug.y((com.tencent.mm.sdk.c.b)localObject);
+        if (ahf.agF) {
+          paramContextMenu.add(0, 18, 0, paramView.getContext().getString(2131231704));
+        }
+      }
+    }
+  }
+  
+  public final boolean ah(View paramView)
+  {
+    Object localObject = paramView.getTag();
+    if ((localObject instanceof o))
+    {
+      localObject = (o)localObject;
+      auf localauf = hkU;
+      if ((kli.jFu == 10) || (kli.jFu == 17) || (kli.jFu == 22) || (kli.jFu == 23)) {
+        return false;
+      }
+      hFM.hFn.a(paramView, agV, localauf);
+      return true;
+    }
+    return false;
   }
 }
 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/j_" android:padding="0.0dip" android:layout_height="wrap_content" style="@style/MMBody">
+            <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hb" android:layout_marginTop="@dimen/hf" android:layout_marginRight="@dimen/hb">
+                <ImageView android:layout_width="wrap_content" android:layout_height="@dimen/hd" android:src="@drawable/acd" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hb" android:layout_marginTop="@dimen/hf" android:layout_marginRight="@dimen/hb">
+                <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/l7" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hb" android:layout_marginTop="@dimen/hf" android:layout_marginRight="@dimen/hb">
+                <Button android:id="@id/ja" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/l4" android:layout_weight="1.0" style="@style/MMSolidGreenLargeButton" />
+                <Button android:id="@id/jb" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/k3" android:layout_weight="1.0" style="@style/MMSolidGreenLargeButton" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hf" android:layout_marginBottom="@dimen/hf">
+                <TextView android:textSize="14.0dip" android:textColor="#ff406ca2" android:id="@id/jc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/jm" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

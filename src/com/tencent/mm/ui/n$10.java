@@ -2,26 +2,26 @@ package com.tencent.mm.ui;
 
 import android.app.Activity;
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import com.tencent.mm.modelsimple.d;
 import com.tencent.mm.ui.base.b;
 
 final class n$10
-  implements DialogInterface.OnCancelListener
+  implements DialogInterface.OnClickListener
 {
   n$10(Intent paramIntent, Activity paramActivity) {}
   
-  public final void onCancel(DialogInterface paramDialogInterface)
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (kqi != null)
+    if (kPn != null)
     {
-      if (!(cms instanceof LauncherUI)) {
-        cms.finish();
+      if (!(chx instanceof LauncherUI)) {
+        chx.finish();
       }
-      cms.startActivity(kqi);
-      b.w(cms, kqi);
-      d.aW(cms);
+      chx.startActivity(kPn);
+      b.w(chx, kPn);
+      d.aS(chx);
     }
   }
 }

@@ -1,13 +1,14 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.ui.base.MMPullDownView.b;
-
 final class ChattingUI$a$113
-  implements MMPullDownView.b
+  implements Runnable
 {
   ChattingUI$a$113(ChattingUI.a parama) {}
   
-  public final void UV() {}
+  public final void run()
+  {
+    ChattingUI.a.am(lAY);
+  }
 }
 
 /* Location:

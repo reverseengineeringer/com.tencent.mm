@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/dq" style="@style/MMFormInputTitleTextView" />
+    <EditText android:id="@id/ew" android:imeOptions="actionDone" style="@style/MMFormInputEditText" />
+</merge>

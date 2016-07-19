@@ -1,25 +1,24 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.dbsupport.newcursor.a;
 import com.tencent.mm.dbsupport.newcursor.k;
 import java.util.ArrayList;
 
 final class e$c
-  extends k
+  extends k<K, T>
 {
-  public e$c(e parame, com.tencent.mm.dbsupport.newcursor.e parame1)
+  public e$c(com.tencent.mm.dbsupport.newcursor.e<K> parame)
   {
-    super(parame1, e.a(parame));
+    super(locale, e.a(parame));
   }
   
-  public final ArrayList d(ArrayList paramArrayList)
+  public final ArrayList<T> e(ArrayList paramArrayList)
   {
-    return kjZ.d(paramArrayList);
+    return kKh.e(paramArrayList);
   }
   
-  public final a qM()
+  public final T pq()
   {
-    return kjZ.qD();
+    return kKh.ph();
   }
 }
 

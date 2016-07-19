@@ -4,7 +4,7 @@ import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 
 final class i$d
-  extends d
+  extends d<MenuItem.OnMenuItemClickListener>
   implements MenuItem.OnMenuItemClickListener
 {
   i$d(i parami, MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener)
@@ -14,7 +14,7 @@ final class i$d
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    return ((MenuItem.OnMenuItemClickListener)lr).onMenuItemClick(mA.f(paramMenuItem));
+    return ((MenuItem.OnMenuItemClickListener)lI).onMenuItemClick(mQ.f(paramMenuItem));
   }
 }
 

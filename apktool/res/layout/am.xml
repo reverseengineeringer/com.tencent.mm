@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/aor" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/hg" android:layout_marginBottom="@dimen/hg" android:minWidth="@dimen/hu" android:dividerPadding="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/cu" android:textColor="@color/ot" android:gravity="center_vertical" android:id="@id/h2" android:paddingLeft="@dimen/i7" android:paddingRight="@dimen/i7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/i6" />
+    <ImageView android:id="@id/h3" android:background="@color/aj" android:layout_width="fill_parent" android:layout_height="@dimen/dy" />
+    <ListView android:layout_gravity="center" android:id="@id/h4" android:background="@null" android:layout_width="fill_parent" android:layout_height="0.0dip" android:listSelector="@drawable/a6" android:cacheColorHint="@null" android:divider="@color/m2" android:dividerHeight="@dimen/dz" android:layout_weight="1.0" />
+    <ImageView android:background="@color/m2" android:layout_width="fill_parent" android:layout_height="@dimen/dz" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/h5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minWidth="@dimen/hu">
+        <Button android:enabled="false" android:textSize="@dimen/i8" android:textColor="@color/j_" android:id="@id/h6" android:background="@drawable/a6" android:layout_width="0.0dip" android:layout_height="@dimen/i2" android:text="@string/hr" android:layout_weight="1.0" />
+        <ImageView android:id="@id/h7" android:background="@color/m2" android:layout_width="@dimen/dz" android:layout_height="fill_parent" />
+        <Button android:enabled="false" android:textSize="@dimen/i8" android:textColor="@color/j_" android:id="@id/h8" android:background="@drawable/a6" android:layout_width="0.0dip" android:layout_height="@dimen/i2" android:text="@string/hs" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

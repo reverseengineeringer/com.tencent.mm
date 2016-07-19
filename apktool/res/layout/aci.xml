@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/cg0" android:background="@drawable/qk" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:layout_gravity="center" android:id="@id/cg1" android:background="@drawable/hh" android:visibility="gone" android:layout_width="73.0dip" android:layout_height="73.0dip" android:scaleType="fitXY" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:contentDescription="@string/cxf" />
+</RelativeLayout>

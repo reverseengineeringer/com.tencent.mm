@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub android:id="@id/dv" android:layout="@layout/j" android:inflatedId="@id/dw" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:id="@id/dx" android:layout_width="fill_parent" android:layout_height="?android:windowTitleSize" style="?android:attr/windowTitleBackgroundStyle">
+        <ImageView android:id="@id/dy" android:visibility="gone" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginRight="5.0dip" android:scaleType="fitCenter" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <LinearLayout android:id="@id/dz" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/e0" android:visibility="gone" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginLeft="5.0dip" android:scaleType="fitCenter" />
+            <ProgressBar android:layout_gravity="center_vertical" android:id="@id/e1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:max="10000" style="?android:attr/progressBarStyleSmallTitle" />
+        </LinearLayout>
+        <ProgressBar android:id="@id/e2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:max="10000" android:layout_toLeftOf="@id/dz" android:layout_toRightOf="@id/dy" android:layout_centerVertical="true" style="?android:attr/progressBarStyleHorizontal" />
+        <TextView android:gravity="center_vertical" android:id="@id/dq" android:background="@null" android:fadingEdge="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollHorizontally="true" android:layout_toLeftOf="@id/dz" android:layout_toRightOf="@id/dy" style="?android:attr/windowTitleStyle" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/a" android:layout_width="fill_parent" android:layout_height="0.0dip" android:foreground="?android:windowContentOverlay" android:layout_weight="1.0" android:foregroundGravity="fill_horizontal|center|top" />
+</LinearLayout>

@@ -1,28 +1,28 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.protocal.b.alq;
-import com.tencent.mm.protocal.b.dd;
-import com.tencent.mm.protocal.b.wt;
-import com.tencent.mm.protocal.h;
-import com.tencent.mm.protocal.h.b;
-import com.tencent.mm.protocal.h.d;
+import com.tencent.mm.protocal.b.amb;
+import com.tencent.mm.protocal.b.dg;
+import com.tencent.mm.protocal.b.xe;
+import com.tencent.mm.protocal.k;
+import com.tencent.mm.protocal.k.b;
+import com.tencent.mm.protocal.k.d;
 
 public final class ak$b
-  extends h.d
-  implements h.b
+  extends k.d
+  implements k.b
 {
-  public wt bBq = new wt();
+  public xe buv = new xe();
+  
+  public final int D(byte[] paramArrayOfByte)
+  {
+    buv = ((xe)new xe().au(paramArrayOfByte));
+    k.a(this, buv.kfH);
+    return buv.kfH.jxr;
+  }
   
   public final int getCmdId()
   {
     return 0;
-  }
-  
-  public final int y(byte[] paramArrayOfByte)
-  {
-    bBq = ((wt)new wt().am(paramArrayOfByte));
-    h.a(this, bBq.jHj);
-    return bBq.jHj.iZL;
   }
 }
 

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/ak" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center" android:id="@id/aja" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@raw/default_avatar" android:scaleType="center" android:layout_centerInParent="true" />
+    <View android:background="#c0000000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ProgressBar android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@style/largeCustomProgressBar" />
+</RelativeLayout>

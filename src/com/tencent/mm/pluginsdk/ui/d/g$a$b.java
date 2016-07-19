@@ -5,9 +5,9 @@ import android.widget.TextView;
 
 final class g$a$b
 {
-  TextView cVH;
-  Button dTu;
-  TextView iPT;
+  TextView cTU;
+  Button dVC;
+  TextView jna;
   
   private g$a$b(g.a parama) {}
 }

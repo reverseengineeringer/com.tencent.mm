@@ -22,7 +22,7 @@
 
 
 # static fields
-.field private static cor:Lcom/tencent/mm/plugin/accountsync/model/AccountAuthenticatorService$a;
+.field private static cjF:Lcom/tencent/mm/plugin/accountsync/model/AccountAuthenticatorService$a;
 
 
 # direct methods
@@ -33,7 +33,7 @@
     .line 24
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/plugin/accountsync/model/AccountAuthenticatorService;->cor:Lcom/tencent/mm/plugin/accountsync/model/AccountAuthenticatorService$a;
+    sput-object v0, Lcom/tencent/mm/plugin/accountsync/model/AccountAuthenticatorService;->cjF:Lcom/tencent/mm/plugin/accountsync/model/AccountAuthenticatorService$a;
 
     return-void
 .end method
@@ -86,7 +86,7 @@
     if-eqz v1, :cond_0
 
     .line 37
-    sget-object v0, Lcom/tencent/mm/plugin/accountsync/model/AccountAuthenticatorService;->cor:Lcom/tencent/mm/plugin/accountsync/model/AccountAuthenticatorService$a;
+    sget-object v0, Lcom/tencent/mm/plugin/accountsync/model/AccountAuthenticatorService;->cjF:Lcom/tencent/mm/plugin/accountsync/model/AccountAuthenticatorService$a;
 
     if-nez v0, :cond_2
 
@@ -94,10 +94,10 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/accountsync/model/AccountAuthenticatorService$a;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/tencent/mm/plugin/accountsync/model/AccountAuthenticatorService;->cor:Lcom/tencent/mm/plugin/accountsync/model/AccountAuthenticatorService$a;
+    sput-object v0, Lcom/tencent/mm/plugin/accountsync/model/AccountAuthenticatorService;->cjF:Lcom/tencent/mm/plugin/accountsync/model/AccountAuthenticatorService$a;
 
     :cond_2
-    sget-object v0, Lcom/tencent/mm/plugin/accountsync/model/AccountAuthenticatorService;->cor:Lcom/tencent/mm/plugin/accountsync/model/AccountAuthenticatorService$a;
+    sget-object v0, Lcom/tencent/mm/plugin/accountsync/model/AccountAuthenticatorService;->cjF:Lcom/tencent/mm/plugin/accountsync/model/AccountAuthenticatorService$a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/accountsync/model/AccountAuthenticatorService$a;->getIBinder()Landroid/os/IBinder;
 

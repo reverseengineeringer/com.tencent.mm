@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic kOu:[I
+.field static final synthetic lnK:[I
 
 
 # direct methods
@@ -32,12 +32,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$20;->kOu:[I
+    sput-object v0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$20;->lnK:[I
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$20;->kOu:[I
+    sget-object v0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$20;->lnK:[I
 
-    sget-object v1, Lcom/tencent/mm/modelfriend/m$a;->bMz:Lcom/tencent/mm/modelfriend/m$a;
+    sget-object v1, Lcom/tencent/mm/modelfriend/m$a;->bFT:Lcom/tencent/mm/modelfriend/m$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/modelfriend/m$a;->ordinal()I
 
@@ -51,9 +51,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$20;->kOu:[I
+    sget-object v0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$20;->lnK:[I
 
-    sget-object v1, Lcom/tencent/mm/modelfriend/m$a;->bMA:Lcom/tencent/mm/modelfriend/m$a;
+    sget-object v1, Lcom/tencent/mm/modelfriend/m$a;->bFU:Lcom/tencent/mm/modelfriend/m$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/modelfriend/m$a;->ordinal()I
 
@@ -67,9 +67,9 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$20;->kOu:[I
+    sget-object v0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$20;->lnK:[I
 
-    sget-object v1, Lcom/tencent/mm/modelfriend/m$a;->bMC:Lcom/tencent/mm/modelfriend/m$a;
+    sget-object v1, Lcom/tencent/mm/modelfriend/m$a;->bFW:Lcom/tencent/mm/modelfriend/m$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/modelfriend/m$a;->ordinal()I
 
@@ -83,9 +83,9 @@
 
     :goto_2
     :try_start_3
-    sget-object v0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$20;->kOu:[I
+    sget-object v0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$20;->lnK:[I
 
-    sget-object v1, Lcom/tencent/mm/modelfriend/m$a;->bMB:Lcom/tencent/mm/modelfriend/m$a;
+    sget-object v1, Lcom/tencent/mm/modelfriend/m$a;->bFV:Lcom/tencent/mm/modelfriend/m$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/modelfriend/m$a;->ordinal()I
 

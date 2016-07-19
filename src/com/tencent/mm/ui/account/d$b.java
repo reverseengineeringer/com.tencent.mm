@@ -5,12 +5,12 @@ import android.widget.TextView;
 
 final class d$b
 {
-  TextView bMs;
-  TextView bMt;
-  ImageView coY;
-  TextView ksm;
-  TextView ksn;
-  ImageView kso;
+  TextView bFM;
+  TextView bFN;
+  ImageView ckm;
+  TextView kRu;
+  TextView kRv;
+  ImageView kRw;
 }
 
 /* Location:

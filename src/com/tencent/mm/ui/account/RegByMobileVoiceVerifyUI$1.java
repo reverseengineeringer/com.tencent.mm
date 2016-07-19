@@ -10,8 +10,8 @@ final class RegByMobileVoiceVerifyUI$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    kvq.age();
-    kvq.finish();
+    kUx.aiI();
+    kUx.finish();
     return true;
   }
 }

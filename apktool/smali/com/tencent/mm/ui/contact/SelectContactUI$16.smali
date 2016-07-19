@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+.field final synthetic lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
-.field final synthetic lmq:Ljava/util/ArrayList;
+.field final synthetic lMF:Ljava/util/ArrayList;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 589
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$16;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    .line 588
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$16;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$16;->lmq:Ljava/util/ArrayList;
+    iput-object p2, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$16;->lMF:Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,13 +50,13 @@
 
     const/4 v5, 0x0
 
-    .line 592
-    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
+    .line 591
+    invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 595
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$16;->lmq:Ljava/util/ArrayList;
+    .line 594
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$16;->lMF:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -79,8 +79,8 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 596
-    const-string/jumbo v1, "!44@/B4Tb64lLpJQGo7VtHU/gqcqIvwmEmrSejrKUoictEE="
+    .line 595
+    const-string/jumbo v1, "MicroMsg.SelectContactUI"
 
     const-string/jumbo v4, "toSend, %s"
 
@@ -88,10 +88,10 @@
 
     aput-object v3, v7, v5
 
-    invoke-static {v1, v4, v7}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v4, v7}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 597
-    invoke-static {v3}, Lcom/tencent/mm/model/i;->dn(Ljava/lang/String;)Z
+    .line 596
+    invoke-static {v3}, Lcom/tencent/mm/model/i;->du(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -102,12 +102,12 @@
     :goto_1
     add-int v12, v0, v1
 
-    .line 598
-    new-instance v0, Lcom/tencent/mm/ab/k;
+    .line 597
+    new-instance v0, Lcom/tencent/mm/ae/k;
 
     const/4 v1, 0x4
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$16;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    iget-object v4, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$16;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
     invoke-virtual {v4}, Lcom/tencent/mm/ui/contact/SelectContactUI;->getIntent()Landroid/content/Intent;
 
@@ -121,44 +121,44 @@
 
     const-string/jumbo v8, ""
 
-    const v11, 0x7f04070e
+    const v11, 0x7f0201be
 
     move v7, v5
 
-    invoke-direct/range {v0 .. v11}, Lcom/tencent/mm/ab/k;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILcom/tencent/mm/r/e;ILjava/lang/String;Ljava/lang/String;ZI)V
+    invoke-direct/range {v0 .. v11}, Lcom/tencent/mm/ae/k;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILcom/tencent/mm/t/e;ILjava/lang/String;Ljava/lang/String;ZI)V
 
-    .line 602
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 601
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    invoke-virtual {v1, v0, v5}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
-    .line 603
-    iget-object v1, v0, Lcom/tencent/mm/ab/k;->ask:Lcom/tencent/mm/storage/ag;
+    .line 602
+    iget-object v1, v0, Lcom/tencent/mm/ae/k;->aec:Lcom/tencent/mm/storage/ai;
 
     if-eqz v1, :cond_0
 
-    .line 604
-    iget-object v0, v0, Lcom/tencent/mm/ab/k;->ask:Lcom/tencent/mm/storage/ag;
+    .line 603
+    iget-object v0, v0, Lcom/tencent/mm/ae/k;->aec:Lcom/tencent/mm/storage/ai;
 
-    iget-object v9, v0, Lcom/tencent/mm/d/b/bg;->field_imgPath:Ljava/lang/String;
+    iget-object v9, v0, Lcom/tencent/mm/e/b/bj;->field_imgPath:Ljava/lang/String;
 
     :cond_0
     move v0, v12
 
-    .line 606
+    .line 605
     goto :goto_0
 
     :cond_1
     move v1, v5
 
-    .line 597
+    .line 596
     goto :goto_1
 
-    .line 607
+    .line 606
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$16;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$16;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/contact/SelectContactUI;->e(Lcom/tencent/mm/ui/contact/SelectContactUI;)Landroid/app/ProgressDialog;
 
@@ -166,27 +166,27 @@
 
     invoke-virtual {v1}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 608
+    .line 607
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 609
+    .line 608
     const-string/jumbo v2, "Select_Contact"
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$16;->lmq:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$16;->lMF:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putStringArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
 
-    .line 610
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$16;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    .line 609
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$16;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
     const/4 v3, -0x1
 
     invoke-virtual {v2, v3, v1}, Lcom/tencent/mm/ui/contact/SelectContactUI;->setResult(ILandroid/content/Intent;)V
 
-    .line 611
-    sget-object v1, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 610
+    sget-object v1, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v2, 0x2b28
 
@@ -200,7 +200,7 @@
 
     aput-object v4, v3, v5
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$16;->lmq:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$16;->lMF:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
@@ -222,13 +222,13 @@
 
     aput-object v0, v3, v4
 
-    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
-    .line 612
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$16;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    .line 611
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$16;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/SelectContactUI;->finish()V
 
-    .line 613
+    .line 612
     return-void
 .end method

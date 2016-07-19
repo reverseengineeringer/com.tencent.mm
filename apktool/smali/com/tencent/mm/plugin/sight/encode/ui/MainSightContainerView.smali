@@ -11,89 +11,87 @@
 
 
 # instance fields
-.field private cFG:Z
+.field private cCJ:Z
 
-.field private coj:Lcom/tencent/mm/sdk/platformtools/af;
+.field private cjx:Lcom/tencent/mm/sdk/platformtools/ah;
 
-.field private eED:F
+.field private eDs:Z
 
-.field private eXt:Landroid/view/View;
+.field private eKR:F
 
-.field private exa:Z
+.field public ffJ:Landroid/view/View;
 
-.field public gBJ:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
+.field private gHP:Z
 
-.field private gBU:Landroid/view/View;
+.field public gHS:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
 
-.field private gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+.field public gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-.field private gBW:Lcom/tencent/mm/plugin/sight/encode/a/h;
+.field public gHX:Lcom/tencent/mm/plugin/sight/encode/a/b;
 
-.field private gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+.field private gIA:Z
 
-.field private gBY:Z
+.field public gIB:Lcom/tencent/mm/plugin/sight/encode/ui/b;
 
-.field private gBZ:Lcom/tencent/mm/plugin/sight/encode/ui/b;
+.field public gIC:Landroid/view/View;
 
-.field private gBn:Z
+.field public gID:Landroid/widget/TextView;
 
-.field public gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
+.field public gIE:Landroid/view/View;
 
-.field private gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+.field private gIF:Lcom/tencent/mm/plugin/sight/encode/a/g;
 
-.field private gBv:Lcom/tencent/mm/plugin/sight/encode/a/b;
+.field public gIG:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerBottomView;
 
-.field private gCa:Landroid/view/View;
+.field public gIH:Landroid/view/View;
 
-.field private gCb:Landroid/widget/TextView;
+.field private final gII:I
 
-.field private gCc:Landroid/view/View;
+.field private gIJ:Landroid/app/Dialog;
 
-.field private gCd:Lcom/tencent/mm/plugin/sight/encode/a/g;
+.field private gIK:Landroid/app/Dialog;
 
-.field public gCe:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerBottomView;
+.field private gIL:Ljava/lang/Runnable;
 
-.field private gCf:Landroid/view/View;
+.field private gIM:Z
 
-.field public gCg:Landroid/graphics/Bitmap;
+.field private gIN:Z
 
-.field private final gCh:I
+.field private gIO:Ljava/lang/String;
 
-.field private gCi:Landroid/app/Dialog;
+.field private gIP:Z
 
-.field private gCj:Landroid/app/Dialog;
+.field private gIQ:Z
 
-.field private gCk:Ljava/lang/Runnable;
+.field private gIR:Z
 
-.field private gCl:Z
+.field public gIS:Lcom/tencent/mm/ui/MMFragmentActivity;
 
-.field private gCm:Z
+.field private gIT:Z
 
-.field private gCn:Ljava/lang/String;
+.field gIU:Lcom/tencent/mm/sdk/c/c;
 
-.field private gCo:Z
+.field public gIV:Z
 
-.field private gCp:Z
+.field private gIW:Z
 
-.field private gCq:Z
+.field public gIX:Landroid/view/View;
 
-.field private gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
+.field private gIY:Landroid/media/MediaPlayer;
 
-.field private gCs:Z
+.field private gIZ:Landroid/view/animation/Animation;
 
-.field private gCt:Lcom/tencent/mm/sdk/c/c;
+.field public gIl:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
 
-.field private gCu:Z
+.field public gIw:Landroid/view/View;
 
-.field private gCv:Z
+.field private gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-.field private gCw:Landroid/view/View;
+.field public gIy:Lcom/tencent/mm/plugin/sight/encode/a/h;
 
-.field private gCx:Landroid/media/MediaPlayer;
+.field private gIz:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-.field private gCy:Landroid/view/animation/Animation;
-
-.field private gCz:Lcom/tencent/mm/sdk/platformtools/aa;
+.field private gJa:Lcom/tencent/mm/sdk/platformtools/ac;
 
 
 # direct methods
@@ -128,85 +126,85 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/plugin/sight/encode/a/h;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBW:Lcom/tencent/mm/plugin/sight/encode/a/h;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIy:Lcom/tencent/mm/plugin/sight/encode/a/h;
 
     .line 89
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBn:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHP:Z
 
     .line 95
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eED:F
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eKR:F
 
     .line 97
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBY:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIA:Z
 
     .line 107
     new-instance v0, Lcom/tencent/mm/plugin/sight/encode/a/g;
 
     invoke-direct {v0}, Lcom/tencent/mm/plugin/sight/encode/a/g;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCd:Lcom/tencent/mm/plugin/sight/encode/a/g;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIF:Lcom/tencent/mm/plugin/sight/encode/a/g;
 
     .line 339
     const/16 v0, 0x1e
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCh:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gII:I
 
     .line 347
-    iput-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCi:Landroid/app/Dialog;
+    iput-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIJ:Landroid/app/Dialog;
 
     .line 348
-    iput-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCj:Landroid/app/Dialog;
+    iput-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIK:Landroid/app/Dialog;
 
     .line 349
     new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$13;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$13;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCk:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIL:Ljava/lang/Runnable;
 
     .line 382
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCl:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIM:Z
 
     .line 383
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->exa:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eDs:Z
 
     .line 384
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCm:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIN:Z
 
     .line 385
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCn:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIO:Ljava/lang/String;
 
     .line 545
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCo:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIP:Z
 
     .line 626
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCp:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIQ:Z
 
     .line 674
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCq:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIR:Z
 
     .line 762
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCs:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIT:Z
 
     .line 764
     new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$4;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$4;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCt:Lcom/tencent/mm/sdk/c/c;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIU:Lcom/tencent/mm/sdk/c/c;
 
     .line 1038
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCu:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIV:Z
 
     .line 1039
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCv:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIW:Z
 
     .line 1096
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->cFG:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->cCJ:Z
 
     .line 1310
     new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$9;
@@ -217,7 +215,7 @@
 
     invoke-direct {v0, p0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$9;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;Landroid/os/Looper;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCz:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gJa:Lcom/tencent/mm/sdk/platformtools/ac;
 
     .line 111
     return-void
@@ -228,7 +226,7 @@
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCk:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIL:Ljava/lang/Runnable;
 
     return-object v0
 .end method
@@ -238,7 +236,7 @@
 
     .prologue
     .line 73
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCn:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIO:Ljava/lang/String;
 
     return-object p1
 .end method
@@ -248,19 +246,19 @@
 
     .prologue
     .line 73
-    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCl:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIM:Z
 
     return p1
 .end method
 
-.method private aqS()V
+.method private aui()V
     .locals 5
 
     .prologue
     const/4 v4, 0x0
 
     .line 540
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
+    const-string/jumbo v0, "MicroMsg.MainSightContainerView"
 
     const-string/jumbo v1, "hide recoder view, last time show %B"
 
@@ -268,7 +266,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBY:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIA:Z
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -276,38 +274,38 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 541
-    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBY:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIA:Z
 
     .line 542
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->aqS()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->aui()V
 
     .line 543
     return-void
 .end method
 
-.method private awA()V
+.method private ayZ()V
     .locals 2
 
     .prologue
     .line 342
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
+    const-string/jumbo v0, "MicroMsg.MainSightContainerView"
 
     const-string/jumbo v1, "ashutest::cancel record"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 343
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->awA()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->ayZ()V
 
     .line 344
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCa:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIC:Landroid/view/View;
 
     const/4 v1, 0x1
 
@@ -317,176 +315,12 @@
     return-void
 .end method
 
-.method private awz()V
-    .locals 5
-
-    .prologue
-    const v4, 0x3faaaaab
-
-    .line 181
-    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->avB()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 182
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    if-eqz v0, :cond_0
-
-    .line 210
-    :goto_0
-    return-void
-
-    .line 185
-    :cond_0
-    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
-
-    invoke-direct {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    .line 192
-    :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    const v1, 0x7f070efa
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setId(I)V
-
-    .line 193
-    new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
-
-    const/4 v1, -0x1
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
-
-    const/16 v3, 0xf0
-
-    invoke-static {v2, v3}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
-
-    move-result v2
-
-    invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
-
-    .line 195
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {p0, v1, v2, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
-
-    .line 197
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    sget v1, Lcom/tencent/mm/pluginsdk/l/a;->iFk:I
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setTargetWidth(I)V
-
-    .line 198
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBv:Lcom/tencent/mm/plugin/sight/encode/a/b;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setSightMedia(Lcom/tencent/mm/plugin/sight/encode/a/b;)V
-
-    .line 199
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setSightCameraUIIm(Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$a;)V
-
-    .line 200
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setPreviewRate(F)V
-
-    .line 202
-    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->avB()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 203
-    const v0, 0x7f070ef8
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/ViewStub;
-
-    invoke-virtual {v0}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    .line 204
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    sget v1, Lcom/tencent/mm/pluginsdk/l/a;->iFk:I
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setTargetWidth(I)V
-
-    .line 205
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setFixPreviewRate(F)V
-
-    .line 206
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setVisibility(I)V
-
-    goto :goto_0
-
-    .line 187
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->removeView(Landroid/view/View;)V
-
-    .line 188
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBv:Lcom/tencent/mm/plugin/sight/encode/a/b;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/a/b;->b(Lcom/tencent/mm/plugin/sight/encode/a/b$a;)V
-
-    .line 189
-    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
-
-    invoke-direct {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    goto :goto_1
-
-    .line 208
-    :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    goto/16 :goto_0
-.end method
-
 .method static synthetic b(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
     .locals 1
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
     return-object v0
 .end method
@@ -496,7 +330,7 @@
 
     .prologue
     .line 73
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCu:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIV:Z
 
     return v0
 .end method
@@ -506,7 +340,7 @@
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
     return-object v0
 .end method
@@ -516,19 +350,41 @@
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIS:Lcom/tencent/mm/ui/MMFragmentActivity;
 
     return-object v0
 .end method
 
-.method private eL(Z)V
+.method private eD(Z)V
+    .locals 1
+
+    .prologue
+    .line 440
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIz:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    if-nez v0, :cond_0
+
+    .line 444
+    :goto_0
+    return-void
+
+    .line 443
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIz:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->eD(Z)V
+
+    goto :goto_0
+.end method
+
+.method private eE(Z)V
     .locals 4
 
     .prologue
     const/16 v1, 0x8
 
     .line 629
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCp:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIQ:Z
 
     if-ne v0, p1, :cond_1
 
@@ -539,13 +395,13 @@
 
     .line 633
     :cond_1
-    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCp:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIQ:Z
 
     .line 634
     if-eqz p1, :cond_2
 
     .line 635
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCa:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIC:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
@@ -554,7 +410,7 @@
     if-eqz v0, :cond_0
 
     .line 639
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
     new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$2;
 
@@ -568,24 +424,24 @@
 
     .line 659
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCa:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIC:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 660
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eXt:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->ffJ:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 661
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCb:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gID:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_0
 .end method
 
-.method private eM(Z)V
+.method private eF(Z)V
     .locals 9
 
     .prologue
@@ -600,57 +456,57 @@
     const/4 v4, 0x1
 
     .line 843
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->getRecordPath()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->ayQ()Ljava/lang/String;
 
     move-result-object v0
 
     .line 845
-    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCs:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIT:Z
 
     .line 846
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIz:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->axc()V
+    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->azD()V
 
     .line 849
-    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCv:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIW:Z
 
     if-eqz v1, :cond_0
 
     .line 850
-    new-instance v1, Lcom/tencent/mm/d/a/gj;
+    new-instance v1, Lcom/tencent/mm/e/a/gu;
 
-    invoke-direct {v1}, Lcom/tencent/mm/d/a/gj;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/e/a/gu;-><init>()V
 
     .line 851
-    iget-object v2, v1, Lcom/tencent/mm/d/a/gj;->aBx:Lcom/tencent/mm/d/a/gj$a;
+    iget-object v2, v1, Lcom/tencent/mm/e/a/gu;->anP:Lcom/tencent/mm/e/a/gu$a;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sight/base/c;->tS(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sight/base/c;->uY(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    iput-object v3, v2, Lcom/tencent/mm/d/a/gj$a;->imagePath:Ljava/lang/String;
+    iput-object v3, v2, Lcom/tencent/mm/e/a/gu$a;->imagePath:Ljava/lang/String;
 
     .line 852
-    iget-object v2, v1, Lcom/tencent/mm/d/a/gj;->aBx:Lcom/tencent/mm/d/a/gj$a;
+    iget-object v2, v1, Lcom/tencent/mm/e/a/gu;->anP:Lcom/tencent/mm/e/a/gu$a;
 
-    iput-object v0, v2, Lcom/tencent/mm/d/a/gj$a;->aBy:Ljava/lang/String;
+    iput-object v0, v2, Lcom/tencent/mm/e/a/gu$a;->anQ:Ljava/lang/String;
 
     .line 853
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 859
     :goto_0
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCu:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIV:Z
 
     if-eqz v0, :cond_2
 
     .line 860
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     new-array v1, v7, [Ljava/lang/Object;
 
@@ -666,7 +522,7 @@
 
     aput-object v2, v1, v4
 
-    invoke-virtual {v0, v8, v1}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v8, v1}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     .line 867
     :goto_1
@@ -674,18 +530,18 @@
 
     .line 855
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIS:Lcom/tencent/mm/ui/MMFragmentActivity;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sight/base/c;->tS(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sight/base/c;->uY(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    iget-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCl:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIM:Z
 
     if-eqz v3, :cond_1
 
     :goto_2
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCn:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIO:Ljava/lang/String;
 
     invoke-static {v1, v2, v0, v3, p1}, Lcom/tencent/mm/plugin/sight/encode/a/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
@@ -698,7 +554,7 @@
 
     .line 863
     :cond_2
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     new-array v1, v7, [Ljava/lang/Object;
 
@@ -714,7 +570,7 @@
 
     aput-object v2, v1, v4
 
-    invoke-virtual {v0, v8, v1}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v8, v1}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto :goto_1
 .end method
@@ -724,7 +580,7 @@
 
     .prologue
     .line 73
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCp:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIQ:Z
 
     return v0
 .end method
@@ -736,7 +592,7 @@
     .line 73
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCp:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIQ:Z
 
     return v0
 .end method
@@ -746,7 +602,7 @@
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCa:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIC:Landroid/view/View;
 
     return-object v0
 .end method
@@ -756,7 +612,7 @@
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eXt:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->ffJ:Landroid/view/View;
 
     return-object v0
 .end method
@@ -766,51 +622,29 @@
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCb:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gID:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method static synthetic k(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)Landroid/view/View;
-    .locals 1
-
-    .prologue
-    .line 73
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBU:Landroid/view/View;
-
-    return-object v0
-.end method
-
-.method static synthetic l(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)Z
-    .locals 1
-
-    .prologue
-    .line 73
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCq:Z
-
-    return v0
-.end method
-
-.method private li()V
+.method private jJ()V
     .locals 6
 
     .prologue
     const/4 v5, 0x1
 
     .line 363
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
+    const-string/jumbo v0, "MicroMsg.MainSightContainerView"
 
-    const-string/jumbo v1, "stop record: is finishRecord %B, is for Sns %B"
+    const-string/jumbo v1, "stop record: is finishRecord %B, is for Sns %B, SNS short video duration is %d"
 
-    const/4 v2, 0x2
+    const/4 v2, 0x3
 
     new-array v2, v2, [Ljava/lang/Object;
 
     const/4 v3, 0x0
 
-    iget-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBn:Z
+    iget-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHP:Z
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -818,7 +652,7 @@
 
     aput-object v4, v2, v3
 
-    iget-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCu:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIV:Z
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -826,46 +660,60 @@
 
     aput-object v3, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const/4 v3, 0x2
+
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->getDuration()I
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 364
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBn:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHP:Z
 
     if-nez v0, :cond_1
 
     .line 365
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
+    const-string/jumbo v0, "MicroMsg.MainSightContainerView"
 
     const-string/jumbo v1, "sight camera view try stop"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 366
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->li()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->jJ()V
 
     .line 368
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCu:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIV:Z
 
     if-nez v0, :cond_2
 
     .line 369
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCw:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIX:Landroid/view/View;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 371
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->awH()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->azh()V
 
     .line 373
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f070f03
+    const v0, 0x7f100b0b
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->findViewById(I)Landroid/view/View;
 
@@ -873,13 +721,13 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIS:Lcom/tencent/mm/ui/MMFragmentActivity;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCe:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerBottomView;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIG:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerBottomView;
 
     invoke-virtual {v2}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerBottomView;->getHeight()I
 
@@ -889,32 +737,32 @@
 
     invoke-virtual {v0, v1, v2, p0, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->a(Lcom/tencent/mm/ui/MMFragmentActivity;ILandroid/widget/AdapterView$OnItemClickListener;Lcom/tencent/mm/plugin/sight/encode/ui/a;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    const v1, 0x7f070962
-
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->setSearchView(Landroid/view/View;)V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
-
-    const v1, 0x7f070f01
+    const v1, 0x7f10055e
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->setEmptyBgView(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->U(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->setMainSightContentView(Lcom/tencent/mm/plugin/sight/encode/ui/a;)V
+    const v1, 0x7f100b09
+
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gJF:Landroid/view/View;
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+
+    iput-object p0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gJG:Lcom/tencent/mm/plugin/sight/encode/ui/a;
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
     new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$15;
 
@@ -922,9 +770,9 @@
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->post(Ljava/lang/Runnable;)Z
 
-    invoke-direct {p0, v5}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eL(Z)V
+    invoke-direct {p0, v5}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eE(Z)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
     new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$14;
 
@@ -937,10 +785,10 @@
     .line 378
     :cond_1
     :goto_0
-    iput-boolean v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBn:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHP:Z
 
     .line 379
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCa:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIC:Landroid/view/View;
 
     invoke-virtual {v0, v5}, Landroid/view/View;->setEnabled(Z)V
 
@@ -949,9 +797,31 @@
 
     .line 375
     :cond_2
-    invoke-direct {p0, v5}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eM(Z)V
+    invoke-direct {p0, v5}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eF(Z)V
 
     goto :goto_0
+.end method
+
+.method static synthetic k(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)Landroid/view/View;
+    .locals 1
+
+    .prologue
+    .line 73
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIw:Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method static synthetic l(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)Z
+    .locals 1
+
+    .prologue
+    .line 73
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIR:Z
+
+    return v0
 .end method
 
 .method static synthetic m(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)Landroid/app/Dialog;
@@ -959,7 +829,7 @@
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCi:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIJ:Landroid/app/Dialog;
 
     return-object v0
 .end method
@@ -969,7 +839,7 @@
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCj:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIK:Landroid/app/Dialog;
 
     return-object v0
 .end method
@@ -979,7 +849,7 @@
 
     .prologue
     .line 73
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCl:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIM:Z
 
     return v0
 .end method
@@ -989,7 +859,7 @@
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCn:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIO:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -999,7 +869,7 @@
 
     .prologue
     .line 73
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCo:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIP:Z
 
     return v0
 .end method
@@ -1011,7 +881,7 @@
     .line 73
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCj:Landroid/app/Dialog;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIK:Landroid/app/Dialog;
 
     return-object v0
 .end method
@@ -1023,7 +893,7 @@
     .line 73
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCi:Landroid/app/Dialog;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIJ:Landroid/app/Dialog;
 
     return-object v0
 .end method
@@ -1035,7 +905,7 @@
     .line 73
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCs:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIT:Z
 
     return v0
 .end method
@@ -1045,7 +915,7 @@
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBZ:Lcom/tencent/mm/plugin/sight/encode/ui/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIB:Lcom/tencent/mm/plugin/sight/encode/ui/b;
 
     return-object v0
 .end method
@@ -1055,267 +925,859 @@
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBJ:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIl:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final Qo()V
-    .locals 3
+.method public final RE()V
+    .locals 2
 
     .prologue
     .line 276
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "SightSendResult"
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIU:Lcom/tencent/mm/sdk/c/c;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCt:Lcom/tencent/mm/sdk/c/c;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->e(Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 277
     return-void
 .end method
 
-.method public final a(Lcom/tencent/mm/ui/MMFragmentActivity;)V
-    .locals 9
+.method public final ayY()V
+    .locals 5
 
     .prologue
-    const v8, 0x7f070f00
+    const v4, 0x3faaaaab
 
-    const v7, 0x7f070eff
+    .line 181
+    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->axS()Z
 
-    const/16 v6, 0x8
+    move-result v0
 
-    .line 126
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
+    if-eqz v0, :cond_1
 
-    .line 128
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    .line 182
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    move-result-wide v1
+    if-eqz v0, :cond_0
 
-    .line 130
-    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/a/e;
+    .line 210
+    :goto_0
+    return-void
 
-    invoke-direct {v0}, Lcom/tencent/mm/plugin/sight/encode/a/e;-><init>()V
+    .line 185
+    :cond_0
+    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBv:Lcom/tencent/mm/plugin/sight/encode/a/b;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIS:Lcom/tencent/mm/ui/MMFragmentActivity;
 
-    .line 133
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->awz()V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;-><init>(Landroid/content/Context;)V
 
-    .line 135
-    const v0, 0x7f070ef9
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->findViewById(I)Landroid/view/View;
+    .line 192
+    :goto_1
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    move-result-object v0
+    const v1, 0x7f100b11
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCf:Landroid/view/View;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setId(I)V
 
-    .line 136
-    const v0, 0x7f070f05
+    .line 193
+    new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->findViewById(I)Landroid/view/View;
+    const/4 v1, -0x1
 
-    move-result-object v0
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIS:Lcom/tencent/mm/ui/MMFragmentActivity;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCc:Landroid/view/View;
+    const/16 v3, 0xf0
 
-    .line 137
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCc:Landroid/view/View;
+    invoke-static {v2, v3}, Lcom/tencent/mm/az/a;->fromDPToPix(Landroid/content/Context;I)I
 
-    new-instance v3, Landroid/widget/RelativeLayout$LayoutParams;
+    move-result v2
 
-    const/4 v4, -0x1
+    invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    iget-object v5, p1, Landroid/support/v7/app/ActionBarActivity;->iF:Landroid/support/v7/app/a;
+    .line 195
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v5}, Landroid/support/v7/app/a;->aP()Landroid/support/v7/app/ActionBar;
+    const/4 v2, 0x1
 
-    move-result-object v5
+    invoke-virtual {p0, v1, v2, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {v5}, Landroid/support/v7/app/ActionBar;->getHeight()I
+    .line 197
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    move-result v5
+    sget v1, Lcom/tencent/mm/pluginsdk/m/a;->jcf:I
 
-    invoke-direct {v3, v4, v5}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->mp(I)V
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    .line 198
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    .line 140
-    const v0, 0x7f070efe
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHX:Lcom/tencent/mm/plugin/sight/encode/a/b;
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->a(Lcom/tencent/mm/plugin/sight/encode/a/b;)V
 
-    move-result-object v0
+    .line 199
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    check-cast v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerBottomView;
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->a(Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$a;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCe:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerBottomView;
+    .line 200
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    .line 141
-    const v0, 0x7f070f09
+    invoke-virtual {v0, v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->w(F)V
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->findViewById(I)Landroid/view/View;
+    .line 202
+    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->axS()Z
 
-    move-result-object v0
+    move-result v0
 
-    check-cast v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
+    if-eqz v0, :cond_2
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBJ:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
-
-    .line 142
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCe:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerBottomView;
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBJ:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
-
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerBottomView;->setContentImageView(Landroid/widget/ImageView;)V
-
-    .line 143
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCe:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerBottomView;
-
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerBottomView;->setMainSightContainerView(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)V
-
-    .line 147
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBW:Lcom/tencent/mm/plugin/sight/encode/a/h;
-
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/a/h;->d(Landroid/view/ViewGroup;)V
-
-    .line 149
-    const v0, 0x7f070f07
+    .line 203
+    const v0, 0x7f100b10
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCa:Landroid/view/View;
+    check-cast v0, Landroid/view/ViewStub;
 
-    .line 150
-    const v0, 0x7f070f06
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
+    check-cast v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCb:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIz:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    .line 151
-    const v0, 0x7f070f08
+    .line 204
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIz:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->findViewById(I)Landroid/view/View;
+    sget v1, Lcom/tencent/mm/pluginsdk/m/a;->jcf:I
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->mp(I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eXt:Landroid/view/View;
+    .line 205
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIz:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    .line 153
-    const v0, 0x7f070f0a
+    invoke-virtual {v0, v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->v(F)V
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->findViewById(I)Landroid/view/View;
+    .line 206
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIz:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    check-cast v0, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setVisibility(I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
+    goto :goto_0
 
-    .line 155
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCa:Landroid/view/View;
+    .line 187
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    new-instance v3, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$1;
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->removeView(Landroid/view/View;)V
 
-    invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$1;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)V
+    .line 188
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHX:Lcom/tencent/mm/plugin/sight/encode/a/b;
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    .line 162
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eXt:Landroid/view/View;
+    invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/a/b;->b(Lcom/tencent/mm/plugin/sight/encode/a/b$a;)V
 
-    new-instance v3, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$10;
+    .line 189
+    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
-    invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$10;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)V
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIS:Lcom/tencent/mm/ui/MMFragmentActivity;
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;-><init>(Landroid/content/Context;)V
 
-    .line 170
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUx()Z
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    goto :goto_1
+
+    .line 208
+    :cond_2
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIz:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    goto/16 :goto_0
+.end method
+
+.method public final azc()V
+    .locals 2
+
+    .prologue
+    .line 679
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIP:Z
+
+    if-eqz v0, :cond_0
+
+    .line 699
+    :goto_0
+    return-void
+
+    .line 683
+    :cond_0
+    const-string/jumbo v0, "MicroMsg.MainSightContainerView"
+
+    const-string/jumbo v1, "readyCamera"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 685
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIw:Landroid/view/View;
+
+    if-eqz v0, :cond_1
+
+    .line 686
+    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$3;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$3;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)V
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    .line 697
+    :cond_1
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->u(F)V
+
+    goto :goto_0
+.end method
+
+.method public final aze()I
+    .locals 1
+
+    .prologue
+    .line 1331
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getHeight()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final azf()V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 1258
+    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->axS()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0, v7}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->findViewById(I)Landroid/view/View;
+    .line 1259
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIz:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setVisibility(I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCw:Landroid/view/View;
-
-    invoke-virtual {p0, v8}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v6}, Landroid/view/View;->setVisibility(I)V
-
+    .line 1263
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCw:Landroid/view/View;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eE(Z)V
 
-    .line 172
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->awI()V
-
-    .line 173
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
-
-    const-string/jumbo v3, "init concrol view use %dms"
-
-    const/4 v4, 0x1
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    const/4 v5, 0x0
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v6
-
-    sub-long v1, v6, v1
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    aput-object v1, v4, v5
-
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 177
+    .line 1264
     return-void
 
-    .line 170
+    .line 1261
     :cond_0
-    invoke-virtual {p0, v7}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->findViewById(I)Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    move-result-object v0
-
-    invoke-virtual {v0, v6}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0, v8}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCw:Landroid/view/View;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setVisibility(I)V
 
     goto :goto_0
 .end method
 
-.method public final avw()V
+.method public final azg()V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x4
+
+    .line 1268
+    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->axS()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 1269
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIz:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setVisibility(I)V
+
+    .line 1273
+    :goto_0
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eE(Z)V
+
+    .line 1274
+    return-void
+
+    .line 1271
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setVisibility(I)V
+
+    goto :goto_0
+.end method
+
+.method public final azh()V
+    .locals 7
+
+    .prologue
+    const/4 v1, 0x0
+
+    const/4 v0, 0x1
+
+    .line 389
+    iget-boolean v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIM:Z
+
+    if-nez v2, :cond_0
+
+    .line 414
+    :goto_0
+    return-void
+
+    .line 393
+    :cond_0
+    const-string/jumbo v2, "MicroMsg.MainSightContainerView"
+
+    const-string/jumbo v3, "toggle play video, path %s, muxDone %B, mute %B, playing %B"
+
+    const/4 v4, 0x4
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v5}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->ayQ()Ljava/lang/String;
+
+    move-result-object v5
+
+    aput-object v5, v4, v1
+
+    iget-boolean v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIM:Z
+
+    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v5
+
+    aput-object v5, v4, v0
+
+    const/4 v5, 0x2
+
+    iget-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIN:Z
+
+    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    const/4 v5, 0x3
+
+    iget-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eDs:Z
+
+    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 396
+    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->axS()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    .line 397
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIz:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v2}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->isPlaying()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    .line 398
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIN:Z
+
+    .line 405
+    :cond_1
+    :goto_1
+    iget-boolean v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIN:Z
+
+    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->axS()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_5
+
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIz:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v3}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->getVisibility()I
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIz:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v3, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setVisibility(I)V
+
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIz:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIS:Lcom/tencent/mm/ui/MMFragmentActivity;
+
+    const v5, 0x7f040024
+
+    invoke-static {v4, v5}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->startAnimation(Landroid/view/animation/Animation;)V
+
+    :cond_2
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIz:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->ayQ()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->W(Ljava/lang/String;Z)V
+
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v2}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->getVisibility()I
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    const/16 v3, 0x8
+
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setVisibility(I)V
+
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIS:Lcom/tencent/mm/ui/MMFragmentActivity;
+
+    const v4, 0x7f040025
+
+    invoke-static {v3, v4}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->startAnimation(Landroid/view/animation/Animation;)V
+
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->aui()V
+
+    .line 407
+    :cond_3
+    :goto_2
+    iget-boolean v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIN:Z
+
+    if-nez v2, :cond_6
+
+    .line 408
+    invoke-direct {p0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eE(Z)V
+
+    .line 412
+    :goto_3
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eDs:Z
+
+    .line 413
+    iget-boolean v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIN:Z
+
+    if-nez v2, :cond_7
+
+    :goto_4
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIN:Z
+
+    goto/16 :goto_0
+
+    .line 401
+    :cond_4
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v2}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->isPlaying()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    .line 402
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIN:Z
+
+    goto :goto_1
+
+    .line 405
+    :cond_5
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    const v4, 0x3faaaaab
+
+    invoke-virtual {v3, v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->v(F)V
+
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->ayQ()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->W(Ljava/lang/String;Z)V
+
+    goto :goto_2
+
+    .line 410
+    :cond_6
+    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eE(Z)V
+
+    goto :goto_3
+
+    :cond_7
+    move v0, v1
+
+    .line 413
+    goto :goto_4
+.end method
+
+.method public final azi()V
+    .locals 2
+
+    .prologue
+    .line 1082
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIE:Landroid/view/View;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 1083
+    return-void
+.end method
+
+.method public final azj()Z
+    .locals 1
+
+    .prologue
+    .line 1336
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final azl()V
+    .locals 11
+
+    .prologue
+    const/4 v2, 0x0
+
+    const/4 v6, 0x3
+
+    const/4 v10, 0x2
+
+    const/4 v4, 0x1
+
+    const/4 v7, 0x0
+
+    .line 503
+    const-string/jumbo v0, "MicroMsg.MainSightContainerView"
+
+    const-string/jumbo v1, "show recorder view, last time show %B"
+
+    new-array v3, v4, [Ljava/lang/Object;
+
+    iget-boolean v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIA:Z
+
+    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v5
+
+    aput-object v5, v3, v7
+
+    invoke-static {v0, v1, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 504
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIA:Z
+
+    if-eqz v0, :cond_0
+
+    .line 537
+    :goto_0
+    return-void
+
+    .line 508
+    :cond_0
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->ayY()V
+
+    .line 510
+    iput-boolean v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIP:Z
+
+    .line 511
+    iput-boolean v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIR:Z
+
+    .line 513
+    invoke-static {}, Lcom/tencent/mm/compatible/e/b;->nh()Z
+
+    move-result v0
+
+    invoke-static {}, Lcom/tencent/mm/compatible/e/b;->ni()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    if-nez v0, :cond_4
+
+    :cond_1
+    const-string/jumbo v3, "MicroMsg.MainSightContainerView"
+
+    const-string/jumbo v5, "no permission video : %s audio %s"
+
+    new-array v8, v10, [Ljava/lang/Object;
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v9
+
+    aput-object v9, v8, v7
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v9
+
+    aput-object v9, v8, v4
+
+    invoke-static {v3, v5, v8}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    if-nez v0, :cond_2
+
+    if-nez v1, :cond_2
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const v1, 0x7f08012f
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const v2, 0x7f0800ef
+
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    :goto_1
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    const v5, 0x7f0800f2
+
+    invoke-virtual {v3, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    new-instance v5, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$11;
+
+    invoke-direct {v5, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$11;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)V
+
+    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
+
+    move v0, v7
+
+    :goto_2
+    if-nez v0, :cond_5
+
+    .line 514
+    const-string/jumbo v0, "MicroMsg.MainSightContainerView"
+
+    const-string/jumbo v1, "no permission"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 515
+    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$17;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$17;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)V
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->post(Ljava/lang/Runnable;)Z
+
+    goto :goto_0
+
+    .line 513
+    :cond_2
+    if-nez v0, :cond_3
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const v1, 0x7f080131
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const v2, 0x7f0800f0
+
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_1
+
+    :cond_3
+    if-nez v1, :cond_7
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const v1, 0x7f080130
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const v2, 0x7f0800f1
+
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_1
+
+    :cond_4
+    move v0, v4
+
+    goto :goto_2
+
+    .line 525
+    :cond_5
+    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIA:Z
+
+    .line 526
+    iput-boolean v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHP:Z
+
+    .line 527
+    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIN:Z
+
+    .line 528
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIX:Landroid/view/View;
+
+    invoke-virtual {v0, v7}, Landroid/view/View;->setVisibility(I)V
+
+    .line 529
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->azl()V
+
+    .line 531
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIy:Lcom/tencent/mm/plugin/sight/encode/a/h;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/h;->ayU()V
+
+    .line 533
+    invoke-direct {p0, v7}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eE(Z)V
+
+    .line 535
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIV:Z
+
+    if-eqz v0, :cond_6
+
+    move v0, v6
+
+    .line 536
+    :goto_3
+    sget-object v1, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
+
+    const/16 v2, 0x2cb3
+
+    new-array v3, v6, [Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v3, v7
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v3, v4
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v3, v10
+
+    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
+
+    goto/16 :goto_0
+
+    :cond_6
+    move v0, v4
+
+    .line 535
+    goto :goto_3
+
+    :cond_7
+    move-object v1, v2
+
+    goto/16 :goto_1
+.end method
+
+.method public final azm()V
     .locals 13
 
     .prologue
@@ -1330,13 +1792,13 @@
     const/4 v8, 0x1
 
     .line 916
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
+    const-string/jumbo v1, "MicroMsg.MainSightContainerView"
 
     const-string/jumbo v2, "do send to friend, muxDone %B, loadingDialog null %B"
 
     new-array v3, v11, [Ljava/lang/Object;
 
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCl:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIM:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -1344,7 +1806,7 @@
 
     aput-object v0, v3, v9
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCi:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIJ:Landroid/app/Dialog;
 
     if-nez v0, :cond_1
 
@@ -1357,15 +1819,15 @@
 
     aput-object v0, v3, v8
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 917
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCl:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIM:Z
 
     if-nez v0, :cond_3
 
     .line 918
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCi:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIJ:Landroid/app/Dialog;
 
     if-eqz v0, :cond_2
 
@@ -1390,7 +1852,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0b06a4
+    const v2, 0x7f08121f
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1402,65 +1864,65 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCi:Landroid/app/Dialog;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIJ:Landroid/app/Dialog;
 
     goto :goto_1
 
     .line 925
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->getRecordPath()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->ayQ()Ljava/lang/String;
 
     move-result-object v1
 
     .line 926
-    invoke-static {v1}, Lcom/tencent/mm/plugin/sight/base/c;->tS(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/plugin/sight/base/c;->uY(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 927
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->getDuration()I
 
     move-result v4
 
     .line 929
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->awY()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->azx()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 933
-    invoke-static {}, Lcom/tencent/mm/an/j;->Ee()Lcom/tencent/mm/an/g;
+    invoke-static {}, Lcom/tencent/mm/aq/n;->Ew()Lcom/tencent/mm/aq/k;
 
     move-result-object v0
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCn:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIO:Ljava/lang/String;
 
     const/4 v5, 0x0
 
-    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/an/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILcom/tencent/mm/an/g$a;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/aq/k;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILcom/tencent/mm/aq/k$a;)V
 
     .line 935
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->getSelectedContact()Ljava/util/LinkedList;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->azw()Ljava/util/LinkedList;
 
     move-result-object v10
 
     .line 936
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v2, 0x2cb3
 
@@ -1488,7 +1950,7 @@
 
     aput-object v5, v3, v11
 
-    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     .line 939
     new-instance v7, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$6;
@@ -1503,9 +1965,9 @@
     if-ne v0, v8, :cond_6
 
     .line 955
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCd:Lcom/tencent/mm/plugin/sight/encode/a/g;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIF:Lcom/tencent/mm/plugin/sight/encode/a/g;
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCn:Ljava/lang/String;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIO:Ljava/lang/String;
 
     invoke-interface {v10, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1519,9 +1981,9 @@
 
     .line 960
     :goto_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->getSelectedContact()Ljava/util/LinkedList;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->azw()Ljava/util/LinkedList;
 
     move-result-object v0
 
@@ -1531,14 +1993,14 @@
 
     if-gt v0, v8, :cond_4
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBZ:Lcom/tencent/mm/plugin/sight/encode/ui/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIB:Lcom/tencent/mm/plugin/sight/encode/ui/b;
 
     if-eqz v0, :cond_4
 
     .line 961
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->getSelectedContact()Ljava/util/LinkedList;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->azw()Ljava/util/LinkedList;
 
     move-result-object v0
 
@@ -1559,11 +2021,11 @@
 
     .line 972
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIS:Lcom/tencent/mm/ui/MMFragmentActivity;
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIS:Lcom/tencent/mm/ui/MMFragmentActivity;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/MMFragmentActivity;->getAssets()Landroid/content/res/AssetManager;
 
@@ -1580,9 +2042,9 @@
 
     invoke-direct {v0}, Landroid/media/MediaPlayer;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCx:Landroid/media/MediaPlayer;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIY:Landroid/media/MediaPlayer;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCx:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIY:Landroid/media/MediaPlayer;
 
     invoke-virtual {v4}, Landroid/content/res/AssetFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
@@ -1598,7 +2060,7 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/media/MediaPlayer;->setDataSource(Ljava/io/FileDescriptor;JJ)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCx:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIY:Landroid/media/MediaPlayer;
 
     new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$8;
 
@@ -1606,17 +2068,17 @@
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCx:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIY:Landroid/media/MediaPlayer;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setLooping(Z)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCx:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIY:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->prepare()V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCx:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIY:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->start()V
     :try_end_0
@@ -1625,7 +2087,7 @@
     .line 973
     :cond_5
     :goto_3
-    invoke-virtual {p0, v8, v8}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->n(ZZ)V
+    invoke-virtual {p0, v8, v8}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->q(ZZ)V
 
     .line 975
     invoke-interface {v10}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1659,7 +2121,7 @@
     if-eqz v0, :cond_7
 
     .line 977
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     new-array v2, v11, [Ljava/lang/Object;
 
@@ -1675,15 +2137,15 @@
 
     aput-object v3, v2, v8
 
-    invoke-virtual {v0, v12, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v12, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto :goto_4
 
     .line 957
     :cond_6
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCd:Lcom/tencent/mm/plugin/sight/encode/a/g;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIF:Lcom/tencent/mm/plugin/sight/encode/a/g;
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCn:Ljava/lang/String;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIO:Ljava/lang/String;
 
     move-object v3, v1
 
@@ -1695,7 +2157,7 @@
 
     .line 980
     :cond_7
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     new-array v2, v11, [Ljava/lang/Object;
 
@@ -1711,7 +2173,7 @@
 
     aput-object v3, v2, v8
 
-    invoke-virtual {v0, v12, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v12, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto :goto_4
 
@@ -1721,759 +2183,7 @@
     goto :goto_3
 .end method
 
-.method public final awB()Z
-    .locals 1
-
-    .prologue
-    .line 499
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCo:Z
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final awD()V
-    .locals 2
-
-    .prologue
-    .line 679
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCo:Z
-
-    if-eqz v0, :cond_0
-
-    .line 699
-    :goto_0
-    return-void
-
-    .line 683
-    :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
-
-    const-string/jumbo v1, "readyCamera"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 685
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBU:Landroid/view/View;
-
-    if-eqz v0, :cond_1
-
-    .line 686
-    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$3;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$3;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)V
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    .line 697
-    :cond_1
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->setCameraShadowAlpha(F)V
-
-    goto :goto_0
-.end method
-
-.method public final awF()V
-    .locals 2
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 1258
-    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->avB()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 1259
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setVisibility(I)V
-
-    .line 1263
-    :goto_0
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eL(Z)V
-
-    .line 1264
-    return-void
-
-    .line 1261
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setVisibility(I)V
-
-    goto :goto_0
-.end method
-
-.method public final awG()V
-    .locals 2
-
-    .prologue
-    const/4 v1, 0x4
-
-    .line 1268
-    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->avB()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 1269
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setVisibility(I)V
-
-    .line 1273
-    :goto_0
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eL(Z)V
-
-    .line 1274
-    return-void
-
-    .line 1271
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setVisibility(I)V
-
-    goto :goto_0
-.end method
-
-.method public final awH()V
-    .locals 7
-
-    .prologue
-    const/4 v1, 0x0
-
-    const/4 v0, 0x1
-
-    .line 389
-    iget-boolean v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCl:Z
-
-    if-nez v2, :cond_0
-
-    .line 414
-    :goto_0
-    return-void
-
-    .line 393
-    :cond_0
-    const-string/jumbo v2, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
-
-    const-string/jumbo v3, "toggle play video, path %s, muxDone %B, mute %B, playing %B"
-
-    const/4 v4, 0x4
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v5}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->getRecordPath()Ljava/lang/String;
-
-    move-result-object v5
-
-    aput-object v5, v4, v1
-
-    iget-boolean v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCl:Z
-
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v5
-
-    aput-object v5, v4, v0
-
-    const/4 v5, 0x2
-
-    iget-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCm:Z
-
-    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v6
-
-    aput-object v6, v4, v5
-
-    const/4 v5, 0x3
-
-    iget-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->exa:Z
-
-    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v6
-
-    aput-object v6, v4, v5
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 396
-    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->avB()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    .line 397
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v2}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->isPlaying()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    .line 398
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCm:Z
-
-    .line 405
-    :cond_1
-    :goto_1
-    iget-boolean v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCm:Z
-
-    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->avB()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_5
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v3}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->getVisibility()I
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v3, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setVisibility(I)V
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
-
-    const v5, 0x7f020047
-
-    invoke-static {v4, v5}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->startAnimation(Landroid/view/animation/Animation;)V
-
-    :cond_2
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->getRecordPath()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->Q(Ljava/lang/String;Z)V
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v2}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->getVisibility()I
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    const/16 v3, 0x8
-
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setVisibility(I)V
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
-
-    const v4, 0x7f020063
-
-    invoke-static {v3, v4}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->startAnimation(Landroid/view/animation/Animation;)V
-
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->aqS()V
-
-    .line 407
-    :cond_3
-    :goto_2
-    iget-boolean v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCm:Z
-
-    if-nez v2, :cond_6
-
-    .line 408
-    invoke-direct {p0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eL(Z)V
-
-    .line 412
-    :goto_3
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->exa:Z
-
-    .line 413
-    iget-boolean v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCm:Z
-
-    if-nez v2, :cond_7
-
-    :goto_4
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCm:Z
-
-    goto/16 :goto_0
-
-    .line 401
-    :cond_4
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v2}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->isPlaying()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    .line 402
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCm:Z
-
-    goto :goto_1
-
-    .line 405
-    :cond_5
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    const v4, 0x3faaaaab
-
-    invoke-virtual {v3, v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setFixPreviewRate(F)V
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->getRecordPath()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->Q(Ljava/lang/String;Z)V
-
-    goto :goto_2
-
-    .line 410
-    :cond_6
-    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eL(Z)V
-
-    goto :goto_3
-
-    :cond_7
-    move v0, v1
-
-    .line 413
-    goto :goto_4
-.end method
-
-.method public final awI()V
-    .locals 2
-
-    .prologue
-    .line 1082
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCc:Landroid/view/View;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 1083
-    return-void
-.end method
-
-.method public final awJ()Z
-    .locals 1
-
-    .prologue
-    .line 1336
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final awN()V
-    .locals 3
-
-    .prologue
-    .line 271
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    const-string/jumbo v1, "SightSendResult"
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCt:Lcom/tencent/mm/sdk/c/c;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
-
-    .line 272
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    const-string/jumbo v1, "SightSendResult"
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCt:Lcom/tencent/mm/sdk/c/c;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
-
-    .line 273
-    return-void
-.end method
-
-.method public final awO()V
-    .locals 11
-
-    .prologue
-    const/4 v2, 0x0
-
-    const/4 v6, 0x3
-
-    const/4 v10, 0x2
-
-    const/4 v4, 0x1
-
-    const/4 v7, 0x0
-
-    .line 503
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
-
-    const-string/jumbo v1, "show recorder view, last time show %B"
-
-    new-array v3, v4, [Ljava/lang/Object;
-
-    iget-boolean v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBY:Z
-
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v5
-
-    aput-object v5, v3, v7
-
-    invoke-static {v0, v1, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 504
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBY:Z
-
-    if-eqz v0, :cond_0
-
-    .line 537
-    :goto_0
-    return-void
-
-    .line 508
-    :cond_0
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->awz()V
-
-    .line 510
-    iput-boolean v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCo:Z
-
-    .line 511
-    iput-boolean v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCq:Z
-
-    .line 513
-    invoke-static {}, Lcom/tencent/mm/compatible/e/b;->oQ()Z
-
-    move-result v0
-
-    invoke-static {}, Lcom/tencent/mm/compatible/e/b;->oR()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    if-nez v0, :cond_4
-
-    :cond_1
-    const-string/jumbo v3, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
-
-    const-string/jumbo v5, "no permission video : %s audio %s"
-
-    new-array v8, v10, [Ljava/lang/Object;
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v9
-
-    aput-object v9, v8, v7
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v9
-
-    aput-object v9, v8, v4
-
-    invoke-static {v3, v5, v8}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    if-nez v0, :cond_2
-
-    if-nez v1, :cond_2
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const v1, 0x7f0b08a7
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const v2, 0x7f0b08a3
-
-    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    :goto_1
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    const v5, 0x7f0b08a4
-
-    invoke-virtual {v3, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    new-instance v5, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$11;
-
-    invoke-direct {v5, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$11;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)V
-
-    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
-
-    move v0, v7
-
-    :goto_2
-    if-nez v0, :cond_5
-
-    .line 514
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
-
-    const-string/jumbo v1, "no permission"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 515
-    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$17;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$17;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)V
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->post(Ljava/lang/Runnable;)Z
-
-    goto :goto_0
-
-    .line 513
-    :cond_2
-    if-nez v0, :cond_3
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const v1, 0x7f0b08a5
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const v2, 0x7f0b08a1
-
-    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_1
-
-    :cond_3
-    if-nez v1, :cond_7
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const v1, 0x7f0b08a6
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const v2, 0x7f0b08a2
-
-    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_1
-
-    :cond_4
-    move v0, v4
-
-    goto :goto_2
-
-    .line 525
-    :cond_5
-    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBY:Z
-
-    .line 526
-    iput-boolean v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBn:Z
-
-    .line 527
-    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCm:Z
-
-    .line 528
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCw:Landroid/view/View;
-
-    invoke-virtual {v0, v7}, Landroid/view/View;->setVisibility(I)V
-
-    .line 529
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->awO()V
-
-    .line 531
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBW:Lcom/tencent/mm/plugin/sight/encode/a/h;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/h;->awv()V
-
-    .line 533
-    invoke-direct {p0, v7}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eL(Z)V
-
-    .line 535
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCu:Z
-
-    if-eqz v0, :cond_6
-
-    move v0, v6
-
-    .line 536
-    :goto_3
-    sget-object v1, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
-
-    const/16 v2, 0x2cb3
-
-    new-array v3, v6, [Ljava/lang/Object;
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    aput-object v0, v3, v7
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    aput-object v0, v3, v4
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    aput-object v0, v3, v10
-
-    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
-
-    goto/16 :goto_0
-
-    :cond_6
-    move v0, v4
-
-    .line 535
-    goto :goto_3
-
-    :cond_7
-    move-object v1, v2
-
-    goto/16 :goto_1
-.end method
-
-.method public final awP()Z
-    .locals 2
-
-    .prologue
-    const/4 v0, 0x1
-
-    .line 988
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
-
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDc:Lcom/tencent/mm/plugin/sight/encode/ui/d;
-
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/d;->awS()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 989
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
-
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDc:Lcom/tencent/mm/plugin/sight/encode/ui/d;
-
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/d;->awT()V
-
-    .line 997
-    :goto_0
-    return v0
-
-    .line 993
-    :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getVisibility()I
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 994
-    invoke-virtual {p0, v0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->n(ZZ)V
-
-    goto :goto_0
-
-    .line 997
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final eJ(Z)V
+.method public final eB(Z)V
     .locals 2
 
     .prologue
@@ -2481,7 +2191,7 @@
     if-eqz p1, :cond_0
 
     .line 1088
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCc:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIE:Landroid/view/View;
 
     const/4 v1, 0x0
 
@@ -2490,7 +2200,7 @@
     .line 1089
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->setIsMute(Z)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eD(Z)V
 
     .line 1094
     :goto_0
@@ -2498,19 +2208,19 @@
 
     .line 1091
     :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->awI()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->azi()V
 
     .line 1092
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->qr()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->oU()Z
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->setIsMute(Z)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eD(Z)V
 
     goto :goto_0
 .end method
 
-.method public final eN(Z)V
+.method public final eG(Z)V
     .locals 7
 
     .prologue
@@ -2519,7 +2229,7 @@
     const/4 v6, 0x1
 
     .line 870
-    const-string/jumbo v2, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
+    const-string/jumbo v2, "MicroMsg.MainSightContainerView"
 
     const-string/jumbo v3, "do save to draft, muxDone %B, loadingDialog null %B"
 
@@ -2527,7 +2237,7 @@
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCl:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIM:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -2535,7 +2245,7 @@
 
     aput-object v0, v4, v1
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCj:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIK:Landroid/app/Dialog;
 
     if-nez v0, :cond_1
 
@@ -2548,15 +2258,15 @@
 
     aput-object v0, v4, v6
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 871
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCl:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIM:Z
 
     if-nez v0, :cond_3
 
     .line 872
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCj:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIK:Landroid/app/Dialog;
 
     if-eqz v0, :cond_2
 
@@ -2581,7 +2291,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0b06a4
+    const v3, 0x7f08121f
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2593,365 +2303,74 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCj:Landroid/app/Dialog;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIK:Landroid/app/Dialog;
 
     goto :goto_1
 
     .line 879
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->getRecordPath()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->ayQ()Ljava/lang/String;
 
     move-result-object v1
 
     .line 880
-    invoke-static {v1}, Lcom/tencent/mm/plugin/sight/base/c;->tS(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/plugin/sight/base/c;->uY(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 881
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->getDuration()I
 
     move-result v4
 
     .line 883
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 887
-    invoke-static {}, Lcom/tencent/mm/an/j;->Ee()Lcom/tencent/mm/an/g;
+    invoke-static {}, Lcom/tencent/mm/aq/n;->Ew()Lcom/tencent/mm/aq/k;
 
     move-result-object v0
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCn:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIO:Ljava/lang/String;
 
     new-instance v5, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$5;
 
     invoke-direct {v5, p0, v1, v2, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$5;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/an/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILcom/tencent/mm/an/g$a;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/aq/k;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILcom/tencent/mm/aq/k$a;)V
 
     .line 911
-    invoke-virtual {p0, v6, v6}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->n(ZZ)V
+    invoke-virtual {p0, v6, v6}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->q(ZZ)V
 
     goto :goto_1
 .end method
 
-.method public getCameraHeight()I
+.method public final oU()Z
     .locals 1
 
     .prologue
-    .line 623
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    .line 436
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIN:Z
 
     if-nez v0, :cond_0
 
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
     const/4 v0, 0x0
 
-    :goto_0
-    return v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->getHeight()I
-
-    move-result v0
-
     goto :goto_0
-.end method
-
-.method public getViewHeight()I
-    .locals 1
-
-    .prologue
-    .line 1331
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getHeight()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final n(ZZ)V
-    .locals 6
-
-    .prologue
-    const/16 v5, 0x8
-
-    const/4 v3, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v4, 0x0
-
-    .line 554
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCo:Z
-
-    if-eqz v0, :cond_1
-
-    .line 620
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 557
-    :cond_1
-    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCo:Z
-
-    .line 559
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->am(Landroid/view/View;)Z
-
-    .line 561
-    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->avB()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    .line 562
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setVisibility(I)V
-
-    .line 563
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v0, v5}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setVisibility(I)V
-
-    .line 570
-    :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->clearCache()V
-
-    .line 572
-    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCq:Z
-
-    .line 573
-    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->exa:Z
-
-    .line 574
-    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCm:Z
-
-    .line 575
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$16;
-
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$16;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)V
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->post(Ljava/lang/Runnable;)Z
-
-    .line 576
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
-
-    const-string/jumbo v1, "dismiss sight view"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 577
-    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCs:Z
-
-    .line 578
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->aqS()V
-
-    .line 579
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->axc()V
-
-    .line 580
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBZ:Lcom/tencent/mm/plugin/sight/encode/ui/b;
-
-    if-eqz v0, :cond_2
-
-    .line 581
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBZ:Lcom/tencent/mm/plugin/sight/encode/ui/b;
-
-    invoke-interface {v0, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/b;->eK(Z)V
-
-    .line 583
-    :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->dismiss()V
-
-    .line 585
-    :cond_3
-    const v0, 0x3f59999a    # 0.85f
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->setCameraShadowAlpha(F)V
-
-    .line 587
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->awI()V
-
-    .line 589
-    invoke-direct {p0, v4}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eL(Z)V
-
-    .line 591
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBU:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
-
-    .line 592
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBU:Landroid/view/View;
-
-    invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
-
-    .line 594
-    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBn:Z
-
-    .line 595
-    const-string/jumbo v0, ""
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCn:Ljava/lang/String;
-
-    .line 597
-    if-eqz p1, :cond_4
-
-    .line 599
-    new-instance v1, Landroid/view/animation/TranslateAnimation;
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBJ:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->getTop()I
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBJ:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->getTop()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    :goto_2
-    invoke-direct {v1, v2, v2, v0, v2}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
-
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCy:Landroid/view/animation/Animation;
-
-    .line 601
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCy:Landroid/view/animation/Animation;
-
-    const-wide/16 v1, 0x12c
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
-
-    .line 602
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCy:Landroid/view/animation/Animation;
-
-    invoke-virtual {v0, p0}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
-
-    .line 603
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCz:Lcom/tencent/mm/sdk/platformtools/aa;
-
-    const-wide/16 v1, 0x15e
-
-    invoke-virtual {v0, v4, v1, v2}, Lcom/tencent/mm/sdk/platformtools/aa;->sendEmptyMessageDelayed(IJ)Z
-
-    .line 606
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBJ:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
-
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->setVisibility(I)V
-
-    .line 607
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBJ:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getLeft()I
-
-    move-result v1
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getRight()I
-
-    move-result v2
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getBottom()I
-
-    move-result v3
-
-    invoke-virtual {v0, v1, v4, v2, v3}, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->layout(IIII)V
-
-    .line 608
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBJ:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCy:Landroid/view/animation/Animation;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->startAnimation(Landroid/view/animation/Animation;)V
-
-    .line 611
-    :cond_4
-    if-eqz p2, :cond_5
-
-    .line 612
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->Qo()V
-
-    .line 616
-    :cond_5
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x15
-
-    if-lt v0, v1, :cond_0
-
-    .line 617
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/MMFragmentActivity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f0801ae
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/view/Window;->setStatusBarColor(I)V
-
-    goto/16 :goto_0
-
-    .line 565
-    :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->removeView(Landroid/view/View;)V
-
-    .line 566
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBv:Lcom/tencent/mm/plugin/sight/encode/a/b;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/a/b;->b(Lcom/tencent/mm/plugin/sight/encode/a/b$a;)V
-
-    goto/16 :goto_1
-
-    .line 599
-    :cond_7
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getBottom()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    goto :goto_2
 .end method
 
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
@@ -2959,7 +2378,7 @@
 
     .prologue
     .line 1286
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
+    const-string/jumbo v0, "MicroMsg.MainSightContainerView"
 
     const-string/jumbo v1, "on animation end %s"
 
@@ -2971,7 +2390,7 @@
 
     aput-object p1, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 1298
     return-void
@@ -2982,7 +2401,7 @@
 
     .prologue
     .line 1302
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
+    const-string/jumbo v0, "MicroMsg.MainSightContainerView"
 
     const-string/jumbo v1, "on animation repeat %s"
 
@@ -2994,7 +2413,7 @@
 
     aput-object p1, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 1303
     return-void
@@ -3005,7 +2424,7 @@
 
     .prologue
     .line 1281
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
+    const-string/jumbo v0, "MicroMsg.MainSightContainerView"
 
     const-string/jumbo v1, "on animation start %s"
 
@@ -3017,7 +2436,7 @@
 
     aput-object p1, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 1282
     return-void
@@ -3025,11 +2444,20 @@
 
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
-    const v8, 0x7f020063
+    const v8, 0x7f040025
 
-    const v7, 0x7f020047
+    const v7, 0x7f040024
 
     const/16 v6, 0x8
 
@@ -3041,18 +2469,18 @@
     add-int/lit8 v0, p3, -0x1
 
     .line 711
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->lf(I)Z
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->mm(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->exa:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eDs:Z
 
     if-eqz v1, :cond_1
 
     .line 712
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->awH()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->azh()V
 
     .line 760
     :cond_0
@@ -3061,70 +2489,70 @@
 
     .line 716
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->le(I)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->ml(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
     .line 717
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDc:Lcom/tencent/mm/plugin/sight/encode/ui/d;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gJD:Lcom/tencent/mm/plugin/sight/encode/ui/d;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/d;->awT()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/d;->azq()V
 
     goto :goto_0
 
     .line 721
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->ld(I)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->mk(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
     .line 722
-    sget-boolean v0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCM:Z
+    sget-boolean v0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gJn:Z
 
     if-eqz v0, :cond_0
 
     .line 723
-    invoke-direct {p0, v5}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eM(Z)V
+    invoke-direct {p0, v5}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eF(Z)V
 
     goto :goto_0
 
     .line 728
     :cond_3
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->dd(I)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->dI(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/c;->ub(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/c;->vh(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
     .line 729
-    sget-boolean v0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCN:Z
+    sget-boolean v0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gJo:Z
 
     if-nez v0, :cond_0
 
     .line 730
-    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eN(Z)V
+    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eG(Z)V
 
     goto :goto_0
 
     .line 735
     :cond_4
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
+    const-string/jumbo v1, "MicroMsg.MainSightContainerView"
 
     const-string/jumbo v2, "on item click Item : %d"
 
@@ -3136,74 +2564,74 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 736
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->lc(I)V
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->mj(I)V
 
     .line 737
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
     invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->notifyDataSetChanged()V
 
     .line 739
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->qr()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->oU()Z
 
     move-result v1
 
     if-nez v1, :cond_6
 
-    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCl:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIM:Z
 
     if-eqz v1, :cond_6
 
     .line 740
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->awH()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->azh()V
 
     .line 757
     :cond_5
     :goto_1
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDc:Lcom/tencent/mm/plugin/sight/encode/ui/d;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gJD:Lcom/tencent/mm/plugin/sight/encode/ui/d;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/d;->awS()Z
+    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/d;->azp()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->lg(I)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->mn(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 758
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDc:Lcom/tencent/mm/plugin/sight/encode/ui/d;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gJD:Lcom/tencent/mm/plugin/sight/encode/ui/d;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/d;->awT()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/d;->azq()V
 
     goto :goto_0
 
     .line 741
     :cond_6
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->awY()Z
+    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->azx()Z
 
     move-result v1
 
     if-eqz v1, :cond_7
 
     .line 742
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eXt:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->ffJ:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
 
@@ -3212,14 +2640,14 @@
     if-nez v1, :cond_5
 
     .line 743
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eXt:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->ffJ:Landroid/view/View;
 
     invoke-virtual {v1, v6}, Landroid/view/View;->setVisibility(I)V
 
     .line 744
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eXt:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->ffJ:Landroid/view/View;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIS:Lcom/tencent/mm/ui/MMFragmentActivity;
 
     invoke-static {v2, v8}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
@@ -3228,14 +2656,14 @@
     invoke-virtual {v1, v2}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
     .line 745
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCb:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gID:Landroid/widget/TextView;
 
     invoke-virtual {v1, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 746
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCb:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gID:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIS:Lcom/tencent/mm/ui/MMFragmentActivity;
 
     invoke-static {v2, v8}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
@@ -3247,7 +2675,7 @@
 
     .line 748
     :cond_7
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eXt:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->ffJ:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
 
@@ -3256,14 +2684,14 @@
     if-eqz v1, :cond_5
 
     .line 750
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eXt:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->ffJ:Landroid/view/View;
 
     invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
 
     .line 751
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eXt:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->ffJ:Landroid/view/View;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIS:Lcom/tencent/mm/ui/MMFragmentActivity;
 
     invoke-static {v2, v7}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
@@ -3272,21 +2700,21 @@
     invoke-virtual {v1, v2}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
     .line 752
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCb:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gID:Landroid/widget/TextView;
 
-    const v2, 0x7f0b0c75
+    const v2, 0x7f081202
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
     .line 753
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCb:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gID:Landroid/widget/TextView;
 
     invoke-virtual {v1, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 754
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCb:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gID:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIS:Lcom/tencent/mm/ui/MMFragmentActivity;
 
     invoke-static {v2, v7}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
@@ -3302,13 +2730,13 @@
 
     .prologue
     .line 1024
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBJ:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIl:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBJ:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIl:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->gBH:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->gIj:Z
 
     if-eqz v0, :cond_1
 
@@ -3326,16 +2754,16 @@
     .line 1031
     if-eqz p1, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCo:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIP:Z
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
     if-eqz v0, :cond_0
 
     .line 1032
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
+    const-string/jumbo v0, "MicroMsg.MainSightContainerView"
 
     const-string/jumbo v1, "change size l: %d, t: %d, r: %d, b: %d"
 
@@ -3375,57 +2803,12 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 1033
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->awX()V
-
-    goto :goto_0
-.end method
-
-.method public final onPause()V
-    .locals 2
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 1001
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCs:Z
-
-    if-eqz v0, :cond_0
-
-    .line 1012
-    :goto_0
-    return-void
-
-    .line 1005
-    :cond_0
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBn:Z
-
-    if-nez v0, :cond_1
-
-    .line 1006
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->n(ZZ)V
-
-    goto :goto_0
-
-    .line 1008
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setVisibility(I)V
-
-    .line 1009
-    invoke-direct {p0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eL(Z)V
-
-    .line 1010
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->axc()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->azu()V
 
     goto :goto_0
 .end method
@@ -3441,7 +2824,7 @@
     const/4 v5, 0x1
 
     .line 1103
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCq:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIR:Z
 
     if-nez v0, :cond_1
 
@@ -3452,13 +2835,13 @@
 
     .line 1107
     :cond_1
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBn:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHP:Z
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->axh()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->azJ()Z
 
     move-result v0
 
@@ -3466,12 +2849,12 @@
 
     .line 1108
     :cond_2
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBn:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHP:Z
 
     if-nez v0, :cond_0
 
     .line 1111
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eED:F
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eKR:F
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
@@ -3484,11 +2867,11 @@
     if-lez v0, :cond_3
 
     .line 1112
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->awA()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->ayZ()V
 
     .line 1117
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBW:Lcom/tencent/mm/plugin/sight/encode/a/h;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIy:Lcom/tencent/mm/plugin/sight/encode/a/h;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/h;->hide()V
 
@@ -3496,22 +2879,22 @@
 
     .line 1114
     :cond_3
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
+    const-string/jumbo v0, "MicroMsg.MainSightContainerView"
 
     const-string/jumbo v1, "full stop"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1115
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->li()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->jJ()V
 
     goto :goto_1
 
     .line 1120
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v0, v6}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->eP(Z)V
+    invoke-virtual {v0, v6}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->eI(Z)V
 
     .line 1121
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
@@ -3525,64 +2908,64 @@
 
     .line 1123
     :pswitch_1
-    iput-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->cFG:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->cCJ:Z
 
     .line 1124
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eED:F
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eKR:F
 
     .line 1125
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
+    const-string/jumbo v0, "MicroMsg.MainSightContainerView"
 
     const-string/jumbo v1, "ashutest::action down, status %s"
 
     new-array v2, v5, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->getCurMediaStatus()Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    invoke-virtual {v3}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->azE()Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     move-result-object v3
 
     aput-object v3, v2, v6
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 1126
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->axf()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->azH()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 1127
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->coj:Lcom/tencent/mm/sdk/platformtools/af;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->cjx:Lcom/tencent/mm/sdk/platformtools/ah;
 
     if-nez v0, :cond_5
 
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/af;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ah;
 
     new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$12;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$12;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)V
 
-    invoke-direct {v0, v1, v6}, Lcom/tencent/mm/sdk/platformtools/af;-><init>(Lcom/tencent/mm/sdk/platformtools/af$a;Z)V
+    invoke-direct {v0, v1, v6}, Lcom/tencent/mm/sdk/platformtools/ah;-><init>(Lcom/tencent/mm/sdk/platformtools/ah$a;Z)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->coj:Lcom/tencent/mm/sdk/platformtools/af;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->cjx:Lcom/tencent/mm/sdk/platformtools/ah;
 
     :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->coj:Lcom/tencent/mm/sdk/platformtools/af;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->cjx:Lcom/tencent/mm/sdk/platformtools/ah;
 
-    const-wide/16 v1, 0x1e
+    const-wide/16 v2, 0x1e
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;->ds(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ah;->dJ(J)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCa:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIC:Landroid/view/View;
 
     invoke-virtual {v0, v6}, Landroid/view/View;->setEnabled(Z)V
 
@@ -3590,12 +2973,12 @@
 
     .line 1131
     :pswitch_2
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->cFG:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->cCJ:Z
 
     if-nez v0, :cond_0
 
     .line 1132
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eED:F
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eKR:F
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
@@ -3608,33 +2991,33 @@
     if-lez v0, :cond_6
 
     .line 1135
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v0, v5}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->eP(Z)V
+    invoke-virtual {v0, v5}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->eI(Z)V
 
     .line 1136
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBW:Lcom/tencent/mm/plugin/sight/encode/a/h;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIy:Lcom/tencent/mm/plugin/sight/encode/a/h;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/h;->awx()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/h;->ayW()V
 
     goto/16 :goto_0
 
     .line 1138
     :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v0, v6}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->eP(Z)V
+    invoke-virtual {v0, v6}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->eI(Z)V
 
     .line 1139
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBW:Lcom/tencent/mm/plugin/sight/encode/a/h;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIy:Lcom/tencent/mm/plugin/sight/encode/a/h;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/h;->aww()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/h;->ayV()V
 
     goto/16 :goto_0
 
     .line 1144
     :pswitch_3
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
+    const-string/jumbo v0, "MicroMsg.MainSightContainerView"
 
     const-string/jumbo v1, "ashutest::action up, y delta %f, isTooShort %B, status %s"
 
@@ -3642,7 +3025,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eED:F
+    iget v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eKR:F
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
@@ -3656,9 +3039,9 @@
 
     aput-object v3, v2, v6
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->axd()Z
+    invoke-virtual {v3}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->azF()Z
 
     move-result v3
 
@@ -3670,45 +3053,45 @@
 
     const/4 v3, 0x2
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->getCurMediaStatus()Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    invoke-virtual {v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->azE()Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     move-result-object v4
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 1146
-    iput-boolean v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->cFG:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->cCJ:Z
 
     .line 1148
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->coj:Lcom/tencent/mm/sdk/platformtools/af;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->cjx:Lcom/tencent/mm/sdk/platformtools/ah;
 
     if-eqz v0, :cond_7
 
     .line 1149
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->coj:Lcom/tencent/mm/sdk/platformtools/af;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->cjx:Lcom/tencent/mm/sdk/platformtools/ah;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/af;->aUF()V
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ah;->aZJ()V
 
     .line 1152
     :cond_7
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->axg()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->azI()Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
     .line 1153
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->awA()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->ayZ()V
 
     .line 1178
     :goto_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBW:Lcom/tencent/mm/plugin/sight/encode/a/h;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIy:Lcom/tencent/mm/plugin/sight/encode/a/h;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/h;->hide()V
 
@@ -3716,22 +3099,22 @@
 
     .line 1157
     :cond_8
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->lu()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->kf()Z
 
     move-result v0
 
     if-nez v0, :cond_9
 
     .line 1158
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->awA()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->ayZ()V
 
     goto :goto_2
 
     .line 1162
     :cond_9
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eED:F
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eKR:F
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
@@ -3744,15 +3127,15 @@
     if-lez v0, :cond_a
 
     .line 1163
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->awA()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->ayZ()V
 
     goto :goto_2
 
     .line 1164
     :cond_a
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->axd()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->azF()Z
 
     move-result v0
 
@@ -3771,24 +3154,24 @@
 
     move-result-object v1
 
-    const v2, 0x7f0b06a2
+    const v2, 0x7f081227
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/g;->ba(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/g;->aZ(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
 
     .line 1167
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->awA()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->ayZ()V
 
     goto :goto_2
 
     .line 1168
     :cond_b
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->axe()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->azG()Z
 
     move-result v0
 
@@ -3807,60 +3190,60 @@
 
     move-result-object v1
 
-    const v2, 0x7f0b06a3
+    const v2, 0x7f081220
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/g;->ba(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/g;->aZ(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
 
     .line 1171
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->awA()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->ayZ()V
 
     goto :goto_2
 
     .line 1173
     :cond_c
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->li()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->jJ()V
 
     goto :goto_2
 
     .line 1181
     :pswitch_4
-    iput-boolean v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->cFG:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->cCJ:Z
 
     .line 1182
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->coj:Lcom/tencent/mm/sdk/platformtools/af;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->cjx:Lcom/tencent/mm/sdk/platformtools/ah;
 
     if-eqz v0, :cond_d
 
     .line 1183
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->coj:Lcom/tencent/mm/sdk/platformtools/af;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->cjx:Lcom/tencent/mm/sdk/platformtools/ah;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/af;->aUF()V
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ah;->aZJ()V
 
     .line 1186
     :cond_d
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->lu()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->kf()Z
 
     move-result v0
 
     if-nez v0, :cond_e
 
     .line 1187
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->awA()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->ayZ()V
 
     goto/16 :goto_0
 
     .line 1191
     :cond_e
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->awA()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->ayZ()V
 
     .line 1192
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBW:Lcom/tencent/mm/plugin/sight/encode/a/h;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIy:Lcom/tencent/mm/plugin/sight/encode/a/h;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/h;->hide()V
 
@@ -3879,27 +3262,282 @@
     .end packed-switch
 .end method
 
-.method public final qr()Z
-    .locals 1
+.method public final q(ZZ)V
+    .locals 6
 
     .prologue
-    .line 436
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCm:Z
+    const/16 v5, 0x8
 
-    if-nez v0, :cond_0
+    const/4 v3, 0x1
 
-    const/4 v0, 0x1
+    const/4 v2, 0x0
 
-    :goto_0
-    return v0
+    const/4 v4, 0x0
 
+    .line 554
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIP:Z
+
+    if-eqz v0, :cond_1
+
+    .line 620
     :cond_0
-    const/4 v0, 0x0
+    :goto_0
+    return-void
 
-    goto :goto_0
+    .line 557
+    :cond_1
+    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIP:Z
+
+    .line 559
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->ap(Landroid/view/View;)Z
+
+    .line 561
+    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->axS()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    .line 562
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v0, v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setVisibility(I)V
+
+    .line 563
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIz:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v0, v5}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setVisibility(I)V
+
+    .line 570
+    :goto_1
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHS:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->clearCache()V
+
+    .line 572
+    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIR:Z
+
+    .line 573
+    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eDs:Z
+
+    .line 574
+    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIN:Z
+
+    .line 575
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$16;
+
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$16;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;)V
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->post(Ljava/lang/Runnable;)Z
+
+    .line 576
+    const-string/jumbo v0, "MicroMsg.MainSightContainerView"
+
+    const-string/jumbo v1, "dismiss sight view"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 577
+    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIT:Z
+
+    .line 578
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->aui()V
+
+    .line 579
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIz:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->azD()V
+
+    .line 580
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIB:Lcom/tencent/mm/plugin/sight/encode/ui/b;
+
+    if-eqz v0, :cond_2
+
+    .line 581
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIB:Lcom/tencent/mm/plugin/sight/encode/ui/b;
+
+    invoke-interface {v0, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/b;->eC(Z)V
+
+    .line 583
+    :cond_2
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIx:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->dismiss()V
+
+    .line 585
+    :cond_3
+    const v0, 0x3f59999a    # 0.85f
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->u(F)V
+
+    .line 587
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->azi()V
+
+    .line 589
+    invoke-direct {p0, v4}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->eE(Z)V
+
+    .line 591
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIw:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
+
+    .line 592
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIw:Landroid/view/View;
+
+    invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
+
+    .line 594
+    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHP:Z
+
+    .line 595
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIO:Ljava/lang/String;
+
+    .line 597
+    if-eqz p1, :cond_4
+
+    .line 599
+    new-instance v1, Landroid/view/animation/TranslateAnimation;
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIl:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->getTop()I
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIl:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->getTop()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    :goto_2
+    invoke-direct {v1, v2, v2, v0, v2}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
+
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIZ:Landroid/view/animation/Animation;
+
+    .line 601
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIZ:Landroid/view/animation/Animation;
+
+    const-wide/16 v2, 0x12c
+
+    invoke-virtual {v0, v2, v3}, Landroid/view/animation/Animation;->setDuration(J)V
+
+    .line 602
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIZ:Landroid/view/animation/Animation;
+
+    invoke-virtual {v0, p0}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+
+    .line 603
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gJa:Lcom/tencent/mm/sdk/platformtools/ac;
+
+    const-wide/16 v2, 0x15e
+
+    invoke-virtual {v0, v4, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ac;->sendEmptyMessageDelayed(IJ)Z
+
+    .line 606
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIl:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
+
+    invoke-virtual {v0, v4}, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->setVisibility(I)V
+
+    .line 607
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIl:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getLeft()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getRight()I
+
+    move-result v2
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getBottom()I
+
+    move-result v3
+
+    invoke-virtual {v0, v1, v4, v2, v3}, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->layout(IIII)V
+
+    .line 608
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIl:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;
+
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIZ:Landroid/view/animation/Animation;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->startAnimation(Landroid/view/animation/Animation;)V
+
+    .line 611
+    :cond_4
+    if-eqz p2, :cond_5
+
+    .line 612
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->RE()V
+
+    .line 616
+    :cond_5
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x15
+
+    if-lt v0, v1, :cond_0
+
+    .line 617
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIS:Lcom/tencent/mm/ui/MMFragmentActivity;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/MMFragmentActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f0f01f9
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->setStatusBarColor(I)V
+
+    goto/16 :goto_0
+
+    .line 565
+    :cond_6
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->removeView(Landroid/view/View;)V
+
+    .line 566
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHX:Lcom/tencent/mm/plugin/sight/encode/a/b;
+
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gHW:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/a/b;->b(Lcom/tencent/mm/plugin/sight/encode/a/b$a;)V
+
+    goto/16 :goto_1
+
+    .line 599
+    :cond_7
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->getBottom()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    goto :goto_2
 .end method
 
-.method public setCameraShadowAlpha(F)V
+.method public final u(F)V
     .locals 8
     .annotation build Landroid/annotation/TargetApi;
         value = 0xb
@@ -3927,20 +3565,20 @@
     .line 1055
     const/16 v1, 0xb
 
-    invoke-static {v1}, Lcom/tencent/mm/compatible/util/c;->bU(I)Z
+    invoke-static {v1}, Lcom/tencent/mm/compatible/util/c;->cm(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 1056
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCf:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIH:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setAlpha(F)V
 
     .line 1064
     :goto_0
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
+    const-string/jumbo v1, "MicroMsg.MainSightContainerView"
 
     const-string/jumbo v2, "set alpha: %f"
 
@@ -3952,7 +3590,7 @@
 
     aput-object v4, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 1065
     cmpg-float v0, v0, v5
@@ -3960,7 +3598,7 @@
     if-gtz v0, :cond_1
 
     .line 1066
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCf:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIH:Landroid/view/View;
 
     const/16 v1, 0x8
 
@@ -3972,12 +3610,12 @@
     invoke-direct {v0, v6, v5}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
     .line 1068
-    const-wide/16 v1, 0x1f4
+    const-wide/16 v2, 0x1f4
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
+    invoke-virtual {v0, v2, v3}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
     .line 1069
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCf:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIH:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
@@ -4000,7 +3638,7 @@
     invoke-virtual {v1, v4}, Landroid/view/animation/AlphaAnimation;->setFillAfter(Z)V
 
     .line 1061
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCf:Landroid/view/View;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIH:Landroid/view/View;
 
     invoke-virtual {v2, v1}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
@@ -4008,86 +3646,9 @@
 
     .line 1071
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCf:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gIH:Landroid/view/View;
 
     invoke-virtual {v0, v7}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_1
-.end method
-
-.method public setIMainSightViewCallback(Lcom/tencent/mm/plugin/sight/encode/ui/b;)V
-    .locals 0
-
-    .prologue
-    .line 667
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBZ:Lcom/tencent/mm/plugin/sight/encode/ui/b;
-
-    .line 668
-    return-void
-.end method
-
-.method public setIsDismissForMPermission(Z)V
-    .locals 0
-
-    .prologue
-    .line 549
-    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCo:Z
-
-    .line 550
-    return-void
-.end method
-
-.method public setIsForSns(Z)V
-    .locals 0
-
-    .prologue
-    .line 1042
-    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCu:Z
-
-    .line 1043
-    return-void
-.end method
-
-.method public setIsFroLuck(Z)V
-    .locals 0
-
-    .prologue
-    .line 1046
-    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gCv:Z
-
-    .line 1047
-    return-void
-.end method
-
-.method public setIsMute(Z)V
-    .locals 1
-
-    .prologue
-    .line 440
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    if-nez v0, :cond_0
-
-    .line 444
-    :goto_0
-    return-void
-
-    .line 443
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setIsMute(Z)V
-
-    goto :goto_0
-.end method
-
-.method public setSightIconView(Landroid/view/View;)V
-    .locals 0
-
-    .prologue
-    .line 702
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->gBU:Landroid/view/View;
-
-    .line 703
-    return-void
 .end method

@@ -12,11 +12,11 @@ final class RegByEmailUI$4
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    kuo.finish();
-    b.kC("L2_signup");
-    paramDialogInterface = new Intent(kuo, LoginHistoryUI.class);
-    paramDialogInterface.putExtra("email_address", RegByEmailUI.g(kuo));
-    kuo.startActivity(paramDialogInterface);
+    kTv.finish();
+    b.ll("L2_signup");
+    paramDialogInterface = new Intent(kTv, LoginHistoryUI.class);
+    paramDialogInterface.putExtra("email_address", RegByEmailUI.g(kTv));
+    kTv.startActivity(paramDialogInterface);
   }
 }
 

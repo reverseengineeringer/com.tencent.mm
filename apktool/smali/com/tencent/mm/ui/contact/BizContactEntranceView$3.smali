@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/contact/BizContactEntranceView;->bha()V
+    value = Lcom/tencent/mm/ui/contact/BizContactEntranceView;->bmJ()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic liY:Lcom/tencent/mm/ui/contact/BizContactEntranceView;
+.field final synthetic lJj:Lcom/tencent/mm/ui/contact/BizContactEntranceView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 102
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3;->liY:Lcom/tencent/mm/ui/contact/BizContactEntranceView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3;->lJj:Lcom/tencent/mm/ui/contact/BizContactEntranceView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,7 +47,7 @@
     const/4 v8, 0x0
 
     .line 106
-    invoke-static {}, Lcom/tencent/mm/t/aj;->xF()Lcom/tencent/mm/t/m;
+    invoke-static {}, Lcom/tencent/mm/v/an;->xH()Lcom/tencent/mm/v/n;
 
     move-result-object v0
 
@@ -79,7 +79,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v4, "!32@/B4Tb64lLpJBvWFKDfNn3fDJZ/Q78pVI"
+    const-string/jumbo v4, "MicroMsg.BizInfoStorage"
 
     const-string/jumbo v5, "getLastNewBizUpdateTime, sql %s"
 
@@ -87,11 +87,11 @@
 
     aput-object v1, v6, v8
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     new-array v4, v8, [Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v4}, Lcom/tencent/mm/t/m;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v0, v1, v4}, Lcom/tencent/mm/v/n;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
@@ -99,11 +99,11 @@
 
     .line 107
     :goto_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -115,12 +115,12 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->av(Ljava/lang/Object;)J
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->aQ(Ljava/lang/Object;)J
 
     move-result-wide v4
 
     .line 108
-    const-string/jumbo v0, "!44@/B4Tb64lLpJcZAIZpKXu2mTdFdAbI/Q60cydqQUhVTI="
+    const-string/jumbo v0, "MicroMsg.BizContactEntranceView"
 
     const-string/jumbo v1, "last updateTime %d, enterTime %d"
 
@@ -140,7 +140,7 @@
 
     aput-object v7, v6, v9
 
-    invoke-static {v0, v1, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 109
     new-instance v0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3$1;
@@ -149,7 +149,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3$1;-><init>(Lcom/tencent/mm/ui/contact/BizContactEntranceView$3;JJ)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
     .line 114
     return-void

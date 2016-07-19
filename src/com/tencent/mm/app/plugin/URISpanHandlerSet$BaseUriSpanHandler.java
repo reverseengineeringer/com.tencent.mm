@@ -13,9 +13,9 @@ abstract class URISpanHandlerSet$BaseUriSpanHandler
   
   abstract boolean a(String paramString, boolean paramBoolean, l paraml, Bundle paramBundle);
   
-  abstract g bb(String paramString);
+  abstract g bg(String paramString);
   
-  abstract int[] lg();
+  abstract int[] jH();
 }
 
 /* Location:

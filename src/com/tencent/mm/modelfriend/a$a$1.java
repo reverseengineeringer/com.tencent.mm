@@ -4,13 +4,13 @@ import android.os.Looper;
 import android.os.Message;
 import com.tencent.mm.compatible.util.f.a;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.HashSet;
 import java.util.Iterator;
 
 final class a$a$1
-  extends aa
+  extends ac
 {
   a$a$1(Looper paramLooper)
   {
@@ -19,18 +19,18 @@ final class a$a$1
   
   public final void handleMessage(Message paramMessage)
   {
-    if (!ah.rh()) {
+    if (!ah.rg()) {
       return;
     }
     f.a locala = new f.a();
-    int i = a.bLp.size();
+    int i = a.bEJ.size();
     boolean bool = Boolean.parseBoolean(obj.toString());
-    paramMessage = a.bLp.iterator();
+    paramMessage = a.bEJ.iterator();
     while (paramMessage.hasNext()) {
-      ((a.b)paramMessage.next()).aU(bool);
+      ((a.b)paramMessage.next()).aA(bool);
     }
-    a.bLp.clear();
-    u.i("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "callBackHandler setSize:%d time:%d", new Object[] { Integer.valueOf(i), Long.valueOf(locala.pa()) });
+    a.bEJ.clear();
+    v.i("MicroMsg.AddrBookSyncHelper", "callBackHandler setSize:%d time:%d", new Object[] { Integer.valueOf(i), Long.valueOf(locala.ns()) });
   }
 }
 

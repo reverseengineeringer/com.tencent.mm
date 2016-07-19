@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingTop="22.0dip" android:paddingBottom="22.0dip" style="@style/ChattingUIContent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/a3d" android:paddingRight="@dimen/j8" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@raw/chatting_status_tick" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:layout_gravity="right" android:id="@id/gv" android:visibility="gone" style="@style/ChattingUISenderText" />
+        <RelativeLayout android:id="@id/a0s" android:background="@drawable/wj" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/a2_" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="center" android:layout_alignLeft="@id/a9" android:layout_alignTop="@id/a9" android:layout_alignRight="@id/a9" android:layout_alignBottom="@id/a9" />
+            <com.tencent.mm.plugin.sight.decode.ui.SightPlayTextureView android:id="@id/a9" android:layout_width="208.0px" android:layout_height="140.0px" />
+            <ViewStub android:id="@id/a2a" android:layout="@layout/a9e" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <ImageView android:id="@id/a2b" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <com.tencent.mm.ui.widget.MMPinProgressBtn android:id="@id/a2c" android:visibility="gone" android:layout_width="@dimen/oo" android:layout_height="@dimen/oo" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <include layout="@layout/chatting_item_avatar_to" />
+</LinearLayout>

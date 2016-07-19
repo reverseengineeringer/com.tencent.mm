@@ -5,10 +5,15 @@ import android.view.MotionEvent;
 import android.view.View;
 import com.tencent.smtt.export.external.extension.interfaces.IX5WebViewClientExtension;
 import com.tencent.smtt.export.external.extension.interfaces.IX5WebViewExtension;
+import com.tencent.smtt.export.external.interfaces.JsResult;
+import com.tencent.smtt.export.external.interfaces.WebResourceRequest;
+import com.tencent.smtt.export.external.interfaces.WebResourceResponse;
 
 public abstract class ProxyWebViewClientExtension
   implements IX5WebViewClientExtension
 {
+  private static boolean sCompatibleOnMetricsSavedCountReceived = true;
+  private static boolean sCompatibleOnPageLoadingStartedAndFinished = true;
   protected IX5WebViewClientExtension mWebViewClientExt;
   
   public void computeScroll(View paramView)
@@ -38,6 +43,19 @@ public abstract class ProxyWebViewClientExtension
     if (mWebViewClientExt != null) {
       mWebViewClientExt.hideAddressBar();
     }
+  }
+  
+  public boolean notifyAutoAudioPlay(String paramString, JsResult paramJsResult)
+  {
+    if (mWebViewClientExt != null) {
+      try
+      {
+        boolean bool = mWebViewClientExt.notifyAutoAudioPlay(paramString, paramJsResult);
+        return bool;
+      }
+      catch (NoSuchMethodError paramString) {}
+    }
+    return false;
   }
   
   public void onDoubleTapStart()
@@ -88,6 +106,23 @@ public abstract class ProxyWebViewClientExtension
       return mWebViewClientExt.onInterceptTouchEvent(paramMotionEvent, paramView);
     }
     return false;
+  }
+  
+  public void onMetricsSavedCountReceived(String paramString1, boolean paramBoolean, long paramLong, String paramString2, int paramInt)
+  {
+    if ((mWebViewClientExt != null) && (sCompatibleOnMetricsSavedCountReceived)) {}
+    try
+    {
+      mWebViewClientExt.onMetricsSavedCountReceived(paramString1, paramBoolean, paramLong, paramString2, paramInt);
+      return;
+    }
+    catch (NoSuchMethodError paramString1)
+    {
+      if ((paramString1.getMessage() == null) || (!paramString1.getMessage().contains("onMetricsSavedCountReceived"))) {
+        throw paramString1;
+      }
+      sCompatibleOnMetricsSavedCountReceived = false;
+    }
   }
   
   public Object onMiscCallBack(String paramString, Bundle paramBundle)
@@ -155,6 +190,20 @@ public abstract class ProxyWebViewClientExtension
     }
   }
   
+  public void onReportHtmlInfo(int paramInt, String paramString)
+  {
+    if (mWebViewClientExt != null) {
+      mWebViewClientExt.onReportHtmlInfo(paramInt, paramString);
+    }
+  }
+  
+  public void onResponseReceived(WebResourceRequest paramWebResourceRequest, WebResourceResponse paramWebResourceResponse, int paramInt)
+  {
+    if (mWebViewClientExt != null) {
+      mWebViewClientExt.onResponseReceived(paramWebResourceRequest, paramWebResourceResponse, paramInt);
+    }
+  }
+  
   public void onScrollChanged(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     if (mWebViewClientExt != null) {
@@ -181,6 +230,19 @@ public abstract class ProxyWebViewClientExtension
     if (mWebViewClientExt != null) {
       mWebViewClientExt.onShowListBox(paramArrayOfString, paramArrayOfInt1, paramArrayOfInt2, paramInt);
     }
+  }
+  
+  public boolean onShowLongClickPopupMenu()
+  {
+    if (mWebViewClientExt != null) {
+      try
+      {
+        boolean bool = mWebViewClientExt.onShowLongClickPopupMenu();
+        return bool;
+      }
+      catch (NoSuchMethodError localNoSuchMethodError) {}
+    }
+    return false;
   }
   
   public void onShowMutilListBox(String[] paramArrayOfString, int[] paramArrayOfInt1, int[] paramArrayOfInt2, int[] paramArrayOfInt3)
@@ -261,6 +323,13 @@ public abstract class ProxyWebViewClientExtension
       return mWebViewClientExt.preShouldOverrideUrlLoading(paramIX5WebViewExtension, paramString);
     }
     return false;
+  }
+  
+  public void showTranslateBubble(int paramInt1, String paramString1, String paramString2, int paramInt2)
+  {
+    if (mWebViewClientExt != null) {
+      mWebViewClientExt.showTranslateBubble(paramInt1, paramString1, paramString2, paramInt2);
+    }
   }
 }
 

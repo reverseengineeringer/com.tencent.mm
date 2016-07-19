@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hdL:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7;
+.field final synthetic hsy:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 607
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7$1;->hdL:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7$1;->hsy:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,15 +41,15 @@
 
     .prologue
     .line 610
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7$1;->hdL:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7$1;->hsy:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->j(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;)Landroid/widget/ImageView;
 
     move-result-object v0
 
-    const v1, 0x7f0404b7
+    const v1, 0x7f020213
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 

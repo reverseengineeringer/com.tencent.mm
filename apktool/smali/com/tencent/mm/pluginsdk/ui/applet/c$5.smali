@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic fqR:Landroid/graphics/Bitmap;
+.field final synthetic fzX:Landroid/graphics/Bitmap;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 1401
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$5;->fqR:Landroid/graphics/Bitmap;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$5;->fzX:Landroid/graphics/Bitmap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 1405
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$5;->fqR:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$5;->fzX:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$5;->fqR:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$5;->fzX:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 

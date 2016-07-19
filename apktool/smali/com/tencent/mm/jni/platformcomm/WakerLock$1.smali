@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bwM:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+.field final synthetic blZ:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 22
-    iput-object p1, p0, Lcom/tencent/mm/jni/platformcomm/WakerLock$1;->bwM:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    .line 25
+    iput-object p1, p0, Lcom/tencent/mm/jni/platformcomm/WakerLock$1;->blZ:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,8 +40,8 @@
     .locals 5
 
     .prologue
-    .line 26
-    iget-object v0, p0, Lcom/tencent/mm/jni/platformcomm/WakerLock$1;->bwM:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    .line 29
+    iget-object v0, p0, Lcom/tencent/mm/jni/platformcomm/WakerLock$1;->blZ:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     # getter for: Lcom/tencent/mm/jni/platformcomm/WakerLock;->wakeLock:Landroid/os/PowerManager$WakeLock;
     invoke-static {v0}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->access$000(Lcom/tencent/mm/jni/platformcomm/WakerLock;)Landroid/os/PowerManager$WakeLock;
@@ -54,8 +54,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 27
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSCksk5w/QSxQTciH9sVsR"
+    .line 30
+    const-string/jumbo v0, "MicroMsg.WakerLock"
 
     const-string/jumbo v1, "unlock by fucking handler! [%d,%d] @[%s]"
 
@@ -65,7 +65,7 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcom/tencent/mm/jni/platformcomm/WakerLock$1;->bwM:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iget-object v4, p0, Lcom/tencent/mm/jni/platformcomm/WakerLock$1;->blZ:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     invoke-virtual {v4}, Ljava/lang/Object;->hashCode()I
 
@@ -79,7 +79,7 @@
 
     const/4 v3, 0x1
 
-    iget-object v4, p0, Lcom/tencent/mm/jni/platformcomm/WakerLock$1;->bwM:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iget-object v4, p0, Lcom/tencent/mm/jni/platformcomm/WakerLock$1;->blZ:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     # getter for: Lcom/tencent/mm/jni/platformcomm/WakerLock;->wakeLock:Landroid/os/PowerManager$WakeLock;
     invoke-static {v4}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->access$000(Lcom/tencent/mm/jni/platformcomm/WakerLock;)Landroid/os/PowerManager$WakeLock;
@@ -98,7 +98,7 @@
 
     const/4 v3, 0x2
 
-    iget-object v4, p0, Lcom/tencent/mm/jni/platformcomm/WakerLock$1;->bwM:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iget-object v4, p0, Lcom/tencent/mm/jni/platformcomm/WakerLock$1;->blZ:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     # getter for: Lcom/tencent/mm/jni/platformcomm/WakerLock;->mCreatePosStackLine:Ljava/lang/String;
     invoke-static {v4}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->access$100(Lcom/tencent/mm/jni/platformcomm/WakerLock;)Ljava/lang/String;
@@ -107,15 +107,15 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 28
-    iget-object v0, p0, Lcom/tencent/mm/jni/platformcomm/WakerLock$1;->bwM:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    .line 31
+    iget-object v0, p0, Lcom/tencent/mm/jni/platformcomm/WakerLock$1;->blZ:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     invoke-virtual {v0}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->unLock()V
 
-    .line 30
-    iget-object v0, p0, Lcom/tencent/mm/jni/platformcomm/WakerLock$1;->bwM:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    .line 33
+    iget-object v0, p0, Lcom/tencent/mm/jni/platformcomm/WakerLock$1;->blZ:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     # getter for: Lcom/tencent/mm/jni/platformcomm/WakerLock;->autoUnlockCallback:Lcom/tencent/mm/jni/platformcomm/WakerLock$a;
     invoke-static {v0}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->access$200(Lcom/tencent/mm/jni/platformcomm/WakerLock;)Lcom/tencent/mm/jni/platformcomm/WakerLock$a;
@@ -124,17 +124,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 31
-    iget-object v0, p0, Lcom/tencent/mm/jni/platformcomm/WakerLock$1;->bwM:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    .line 34
+    iget-object v0, p0, Lcom/tencent/mm/jni/platformcomm/WakerLock$1;->blZ:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     # getter for: Lcom/tencent/mm/jni/platformcomm/WakerLock;->autoUnlockCallback:Lcom/tencent/mm/jni/platformcomm/WakerLock$a;
     invoke-static {v0}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->access$200(Lcom/tencent/mm/jni/platformcomm/WakerLock;)Lcom/tencent/mm/jni/platformcomm/WakerLock$a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/jni/platformcomm/WakerLock$a;->qZ()V
+    invoke-interface {v0}, Lcom/tencent/mm/jni/platformcomm/WakerLock$a;->pO()V
 
-    .line 35
+    .line 38
     :cond_0
     return-void
 .end method

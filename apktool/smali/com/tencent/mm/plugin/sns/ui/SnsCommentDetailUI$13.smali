@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->Gb()V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+.field final synthetic hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1167
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$13;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    .line 1192
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$13;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,28 +36,28 @@
 
 
 # virtual methods
-.method public final awE()V
+.method public final azd()V
     .locals 1
 
     .prologue
-    .line 1171
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$13;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    .line 1196
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$13;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->c(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     move-result-object v0
 
-    iget-boolean v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->eYQ:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->fhk:Z
 
     if-eqz v0, :cond_0
 
-    .line 1176
+    .line 1201
     :goto_0
     return-void
 
-    .line 1174
+    .line 1199
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$13;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$13;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->r(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
 

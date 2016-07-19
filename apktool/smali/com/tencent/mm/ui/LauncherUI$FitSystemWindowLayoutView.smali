@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private fKX:Landroid/graphics/Rect;
+.field private fUa:Landroid/graphics/Rect;
 
-.field private knA:Landroid/view/ViewGroup;
+.field public kMH:Landroid/view/ViewGroup;
 
 
 # direct methods
@@ -25,22 +25,22 @@
     .locals 1
 
     .prologue
-    .line 5625
+    .line 4790
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 5616
+    .line 4781
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->fKX:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->fUa:Landroid/graphics/Rect;
 
-    .line 5618
+    .line 4783
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->knA:Landroid/view/ViewGroup;
+    iput-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->kMH:Landroid/view/ViewGroup;
 
-    .line 5626
+    .line 4791
     return-void
 .end method
 
@@ -48,22 +48,22 @@
     .locals 1
 
     .prologue
-    .line 5621
+    .line 4786
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 5616
+    .line 4781
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->fKX:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->fUa:Landroid/graphics/Rect;
 
-    .line 5618
+    .line 4783
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->knA:Landroid/view/ViewGroup;
+    iput-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->kMH:Landroid/view/ViewGroup;
 
-    .line 5622
+    .line 4787
     return-void
 .end method
 
@@ -86,8 +86,8 @@
 
     const/4 v3, 0x0
 
-    .line 5657
-    const-string/jumbo v0, "!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2"
+    .line 4822
+    const-string/jumbo v0, "MicroMsg.LauncherUI"
 
     const-string/jumbo v1, "ashu::fitSystemWindows beg %s"
 
@@ -99,14 +99,14 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 5659
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->knA:Landroid/view/ViewGroup;
+    .line 4824
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->kMH:Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->knA:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->kMH:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -116,7 +116,7 @@
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->knA:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->kMH:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -128,7 +128,7 @@
 
     iget v5, v0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2"
+    const-string/jumbo v1, "MicroMsg.LauncherUI"
 
     const-string/jumbo v2, "try to setFitSystemWindowsBottomRightPadding: %d %d"
 
@@ -146,7 +146,7 @@
 
     aput-object v7, v6, v9
 
-    invoke-static {v1, v2, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v2, v3
 
@@ -173,7 +173,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v12}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {v6, v12}, Lcom/tencent/mm/az/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v6
 
@@ -190,7 +190,7 @@
     if-gez v4, :cond_4
 
     :cond_0
-    const-string/jumbo v2, "!44@/B4Tb64lLpItTdpuA6oxWS/W5hNAWFGiw97iJPQYJL0="
+    const-string/jumbo v2, "MicroMsg.TestTimeForChatting"
 
     const-string/jumbo v6, "ERROR bottom padding %d"
 
@@ -202,9 +202,9 @@
 
     aput-object v8, v7, v3
 
-    invoke-static {v2, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iput v3, v1, Lcom/tencent/mm/ui/tools/TestTimeForChatting;->lyn:I
+    iput v3, v1, Lcom/tencent/mm/ui/tools/TestTimeForChatting;->lZb:I
 
     :goto_1
     int-to-float v2, v5
@@ -213,7 +213,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v12}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {v6, v12}, Lcom/tencent/mm/az/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v6
 
@@ -230,7 +230,7 @@
     if-gez v5, :cond_5
 
     :cond_1
-    const-string/jumbo v2, "!44@/B4Tb64lLpItTdpuA6oxWS/W5hNAWFGiw97iJPQYJL0="
+    const-string/jumbo v2, "MicroMsg.TestTimeForChatting"
 
     const-string/jumbo v6, "ERROR right padding %d"
 
@@ -242,12 +242,12 @@
 
     aput-object v8, v7, v3
 
-    invoke-static {v2, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iput v3, v1, Lcom/tencent/mm/ui/tools/TestTimeForChatting;->lyo:I
+    iput v3, v1, Lcom/tencent/mm/ui/tools/TestTimeForChatting;->lZc:I
 
     :goto_2
-    const-string/jumbo v1, "!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2"
+    const-string/jumbo v1, "MicroMsg.LauncherUI"
 
     const-string/jumbo v2, "setFitSystemWindowsUseActionBarContainer: %d %d OK"
 
@@ -265,7 +265,7 @@
 
     aput-object v4, v6, v9
 
-    invoke-static {v1, v2, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_2
     iget v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
@@ -276,18 +276,18 @@
 
     iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    invoke-static {v1, v2, v4, v0}, Lcom/tencent/mm/ui/v;->n(IIII)V
+    invoke-static {v1, v2, v4, v0}, Lcom/tencent/mm/ui/v;->m(IIII)V
 
-    .line 5662
+    .line 4827
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->fKX:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->fUa:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 5666
+    .line 4831
     const/16 v0, 0xe
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/util/c;->bU(I)Z
+    invoke-static {v0}, Lcom/tencent/mm/compatible/util/c;->cm(I)Z
 
     move-result v0
 
@@ -295,7 +295,7 @@
 
     move v0, v3
 
-    .line 5668
+    .line 4833
     :goto_3
     invoke-virtual {p0}, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->getChildCount()I
 
@@ -303,34 +303,34 @@
 
     if-ge v0, v1, :cond_8
 
-    .line 5669
+    .line 4834
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 5670
+    .line 4835
     instance-of v2, v1, Lcom/tencent/mm/ui/tools/TestTimeForChatting;
 
     if-eqz v2, :cond_7
 
-    .line 5671
+    .line 4836
     invoke-virtual {v1, v9}, Landroid/view/View;->setFitsSystemWindows(Z)V
 
     move-object v0, v1
 
-    .line 5674
+    .line 4839
     check-cast v0, Lcom/tencent/mm/ui/tools/TestTimeForChatting;
 
     invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/tools/TestTimeForChatting;->fitSystemWindows(Landroid/graphics/Rect;)Z
 
     move-result v0
 
-    .line 5675
+    .line 4840
     invoke-virtual {v1, v3}, Landroid/view/View;->setFitsSystemWindows(Z)V
 
-    .line 5680
+    .line 4845
     :goto_4
-    const-string/jumbo v1, "!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2"
+    const-string/jumbo v1, "MicroMsg.LauncherUI"
 
     const-string/jumbo v2, "ashu::fitSystemWindows child ret %B, ApiLevel %d"
 
@@ -350,17 +350,17 @@
 
     aput-object v0, v4, v9
 
-    invoke-static {v1, v2, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 5682
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->fKX:Landroid/graphics/Rect;
+    .line 4847
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->fUa:Landroid/graphics/Rect;
 
     invoke-super {p0, v0}, Landroid/widget/FrameLayout;->fitSystemWindows(Landroid/graphics/Rect;)Z
 
     move-result v0
 
-    .line 5684
-    const-string/jumbo v1, "!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2"
+    .line 4849
+    const-string/jumbo v1, "MicroMsg.LauncherUI"
 
     const-string/jumbo v2, "ashu::fitSystemWindows super ret %B"
 
@@ -372,19 +372,19 @@
 
     aput-object v5, v4, v3
 
-    invoke-static {v1, v2, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 5686
+    .line 4851
     return v0
 
-    .line 5659
+    .line 4824
     :cond_4
-    iput v4, v1, Lcom/tencent/mm/ui/tools/TestTimeForChatting;->lyn:I
+    iput v4, v1, Lcom/tencent/mm/ui/tools/TestTimeForChatting;->lZb:I
 
     goto/16 :goto_1
 
     :cond_5
-    iput v5, v1, Lcom/tencent/mm/ui/tools/TestTimeForChatting;->lyo:I
+    iput v5, v1, Lcom/tencent/mm/ui/tools/TestTimeForChatting;->lZc:I
 
     goto/16 :goto_2
 
@@ -395,7 +395,7 @@
 
     goto/16 :goto_0
 
-    .line 5668
+    .line 4833
     :cond_7
     add-int/lit8 v0, v0, 0x1
 
@@ -405,15 +405,4 @@
     move v0, v3
 
     goto :goto_4
-.end method
-
-.method public setActionBarContainer(Landroid/view/ViewGroup;)V
-    .locals 0
-
-    .prologue
-    .line 5642
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->knA:Landroid/view/ViewGroup;
-
-    .line 5643
-    return-void
 .end method

@@ -1,7 +1,7 @@
 package com.tencent.mm.plugin.sight.encode.ui;
 
 public final class d$b
-  extends Enum
+  extends Enum<b>
 {}
 
 /* Location:

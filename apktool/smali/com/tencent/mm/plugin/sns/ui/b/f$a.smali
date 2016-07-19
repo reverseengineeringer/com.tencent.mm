@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 14
+    .line 15
     invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/b/a$b;-><init>()V
 
     return-void

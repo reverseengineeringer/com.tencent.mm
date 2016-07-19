@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract ot(I)V
+.method public abstract pZ(I)V
 .end method

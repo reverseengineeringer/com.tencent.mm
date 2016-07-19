@@ -13,8 +13,8 @@ final class FindMContactIntroUI$7
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ah.tD().rn().set(12322, Boolean.valueOf(true));
-    FindMContactIntroUI.f(kOZ);
+    ah.tE().ro().set(12322, Boolean.valueOf(true));
+    FindMContactIntroUI.f(lop);
   }
 }
 

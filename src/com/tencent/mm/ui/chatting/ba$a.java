@@ -1,48 +1,52 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.Context;
-import com.tencent.mm.a.n;
-import com.tencent.mm.sdk.platformtools.ax.a;
-import com.tencent.mm.storage.ar;
-import com.tencent.mm.ui.base.bn;
-import com.tencent.mm.ui.base.h;
-import java.util.Iterator;
-import java.util.List;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import java.util.Map;
 
 final class ba$a
-  implements ax.a
+  implements Comparable<a>
 {
-  private String bvX;
-  private Context context;
-  private boolean iBB;
-  private List iTr;
+  public boolean auy;
+  public int color;
+  public int luj;
+  public boolean luk;
+  public String lul;
+  public int offset;
   
-  public ba$a(Context paramContext, List paramList, boolean paramBoolean, String paramString)
+  public static a p(Map<String, String> paramMap, String paramString)
   {
-    context = paramContext;
-    iTr = paramList;
-    iBB = paramBoolean;
-    bvX = paramString;
-  }
-  
-  public final boolean ud()
-  {
-    Iterator localIterator = iTr.iterator();
-    while (localIterator.hasNext())
+    a locala = new a();
+    for (;;)
     {
-      ar localar = (ar)localIterator.next();
-      ba.a(context, localar, iBB, bvX);
+      try
+      {
+        offset = Integer.parseInt((String)paramMap.get(paramString + ".offset"));
+        str = (String)paramMap.get(paramString + ".font");
+        if (be.kf(str))
+        {
+          v.d("MicroMsg.LineNode", "parseFrom, font is null, use default value");
+          str = "m";
+          auy = ba.pC(str);
+          luk = ba.Jc(str);
+          luj = ba.Jd(str);
+          color = ba.Je((String)paramMap.get(paramString + ".color"));
+          lul = ((String)paramMap.get(paramString + ".chars"));
+          if (!be.kf(lul)) {
+            break;
+          }
+          v.e("MicroMsg.LineNode", "parseFrom fail, chars is null");
+          return null;
+        }
+      }
+      catch (Exception paramMap)
+      {
+        v.e("MicroMsg.LineNode", "parseFrom fail, ex = " + paramMap.getMessage());
+        return null;
+      }
+      String str = str.toLowerCase();
     }
-    return true;
-  }
-  
-  public final boolean ue()
-  {
-    if (ba.aOm() != null) {
-      ba.aOm().dismiss();
-    }
-    h.aN(context, context.getString(a.n.finish_sent));
-    return true;
+    return locala;
   }
 }
 

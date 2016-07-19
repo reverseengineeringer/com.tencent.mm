@@ -1,293 +1,206 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.StateListDrawable;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.ar.c;
-import com.tencent.mm.d.b.bg;
-import com.tencent.mm.model.ar;
-import com.tencent.mm.n.a.a;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.pluginsdk.model.app.aj;
-import com.tencent.mm.pluginsdk.model.app.k;
-import com.tencent.mm.pluginsdk.model.app.l;
-import com.tencent.mm.pluginsdk.ui.a.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.model.i;
+import com.tencent.mm.modelfriend.m;
+import com.tencent.mm.platformtools.s;
+import com.tencent.mm.pluginsdk.ui.d.e;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.ai.b;
+import com.tencent.mm.storage.ai.e;
+import com.tencent.mm.storage.aj;
 import com.tencent.mm.ui.j;
 import com.tencent.mm.ui.o;
 
-public final class bd
-  extends aa
+final class bd
+  extends ab.b
 {
-  private ChattingUI.a kTe;
-  
   public bd()
   {
-    super(52);
+    super(9);
   }
   
   public final View a(LayoutInflater paramLayoutInflater, View paramView)
   {
     Object localObject;
-    if ((paramView != null) && (paramView.getTag() != null) && ((paramView.getTag() instanceof a)))
+    if ((paramView != null) && (paramView.getTag() != null))
     {
       localObject = paramView;
-      if (getTagtype == eLV) {}
+      if (getTagtype == cTv) {}
     }
     else
     {
-      localObject = new ax(paramLayoutInflater, 2131361946);
-      ((View)localObject).setTag(new a(eLV).aE((View)localObject));
+      localObject = new ay(paramLayoutInflater, 2130903293);
+      ((View)localObject).setTag(new de(cTv).aM((View)localObject));
     }
     return (View)localObject;
   }
   
-  public final void a(aa.a parama, int paramInt, ChattingUI.a parama1, ag paramag, String paramString)
+  public final void a(ab.a parama, int paramInt, ChattingUI.a parama1, ai paramai, String paramString)
   {
-    kTe = parama1;
-    a locala = (a)parama;
-    Object localObject1 = aj.aPS().cT(field_msgId);
-    Object localObject2 = field_content;
-    if ((localObject1 != null) && (localObject2 != null)) {
-      paramString = a.a.B((String)localObject2, field_reserved);
+    de localde = (de)parama;
+    if (field_type == 37)
+    {
+      parama = com.tencent.mm.model.ah.tE().rt().Hz(field_content);
+      if ((parama == null) || (iAQ == null) || (iAQ.length() <= 0))
+      {
+        v.e("MicroMsg.ChattingItemFMessageFrom", "getView : parse verify msg failed");
+        return;
+      }
+      com.tencent.mm.s.b.o(iAQ, kGd);
+      if (i.ek(iAQ))
+      {
+        lCy.setVisibility(8);
+        lCz.setVisibility(8);
+        lCA.setVisibility(0);
+        lCx.setBackgroundColor(16777215);
+        lCA.setText(parama1.getString(2131232961));
+        switch (scene)
+        {
+        case 14: 
+        case 15: 
+        case 16: 
+        case 17: 
+        case 19: 
+        case 20: 
+        case 21: 
+        default: 
+          label224:
+          lrC.setText(2131231663);
+          label234:
+          gvP.setText(e.a(kNN.kOg, parama.getDisplayName(), gvP.getTextSize()));
+          n(cui, iAQ);
+          iRg.setVisibility(0);
+          if ((content != null) && (!content.trim().equals(""))) {
+            iRg.setText(content);
+          }
+          break;
+        }
+      }
     }
     for (;;)
     {
-      dg localdg = new dg(paramag, kAy, paramInt, null, 0, (byte)0);
-      HardDeviceChattingItemView localHardDeviceChattingItemView = (HardDeviceChattingItemView)kTa;
-      int j;
-      int k;
-      int i;
-      if ((paramString != null) && ((asN == 1) || (byd == 1))) {
-        if (t.kz(bxY))
-        {
-          localObject2 = bxU;
-          Object localObject3 = bxV;
-          if (!ay.kz((String)localObject2))
-          {
-            localObject1 = localObject3;
-            paramag = (ag)localObject2;
-            if (!ay.kz((String)localObject3)) {}
-          }
-          else
-          {
-            u.e("!56@/B4Tb64lLpJ4OHK7JMOa8DHZqBwonFRRNdHfjPfP1PlY1v166tKAoA==", "color is null or highlight color is null, color = %s, highlight color = %s", new Object[] { localObject2, localObject3 });
-            paramag = "#ffffff";
-            localObject1 = "#ffffff";
-          }
-          localObject2 = new StateListDrawable();
-          localObject3 = new ColorDrawable(Color.parseColor((String)localObject1));
-          ((StateListDrawable)localObject2).addState(new int[] { 16842919 }, (Drawable)localObject3);
-          localObject1 = new ColorDrawable(Color.parseColor((String)localObject1));
-          ((StateListDrawable)localObject2).addState(new int[] { 16842908 }, (Drawable)localObject1);
-          localObject1 = new ColorDrawable(Color.parseColor(paramag));
-          ((StateListDrawable)localObject2).addState(new int[] { 16842766 }, (Drawable)localObject1);
-          paramag = new ColorDrawable(Color.parseColor(paramag));
-          ((StateListDrawable)localObject2).addState(new int[0], paramag);
-          localHardDeviceChattingItemView.setBackgroundDrawable((Drawable)localObject2);
-          bxY = "#ffffff";
-          paramag = bxW;
-          localObject1 = bxX;
-          j = 2131231100;
-          k = 2131231100;
-          i = k;
-          paramInt = j;
-          if (!t.kz(paramag))
-          {
-            i = k;
-            paramInt = j;
-            if (!t.kz((String)localObject1)) {
-              paramInt = j;
-            }
-          }
-        }
-      }
-      try
+      lth.setTag(new dh(paramai, kZE, paramInt, null, 0, (byte)0));
+      lth.setOnClickListener(lsL.lvy);
+      lth.setOnLongClickListener(lsL.lvA);
+      return;
+      lCy.setVisibility(0);
+      lCz.setVisibility(0);
+      lCA.setVisibility(0);
+      lCx.setBackgroundResource(2130839156);
+      lCA.setText(parama1.getString(2131232960));
+      break;
+      lrC.setText(2131231667);
+      break label234;
+      lrC.setText(2131231669);
+      break label234;
+      lrC.setText(2131234269);
+      break label234;
+      lrC.setText(2131231662);
+      break label234;
+      paramString = com.tencent.mm.modelfriend.ah.zD().hI(iAQ);
+      if ((paramString.yv() != null) && (!paramString.yv().equals("")))
       {
-        i = Color.parseColor(paramag);
-        paramInt = i;
-        j = Color.parseColor((String)localObject1);
-        paramInt = i;
-        i = j;
-        paramag = new StateListDrawable();
-        localObject1 = new ColorDrawable(i);
-        paramag.addState(new int[] { 16842919 }, (Drawable)localObject1);
-        localObject1 = new ColorDrawable(i);
-        paramag.addState(new int[] { 16842908 }, (Drawable)localObject1);
-        localObject1 = new ColorDrawable(paramInt);
-        paramag.addState(new int[] { 16842766 }, (Drawable)localObject1);
-        localObject1 = new ColorDrawable(paramInt);
-        paramag.addState(new int[0], (Drawable)localObject1);
-        kUp.setBackgroundDrawable(paramag);
-        paramag = bxY;
-        if (locala != null)
-        {
-          i = 2131231100;
-          paramInt = i;
-          if (t.kz(paramag)) {}
-        }
+        lCB.setVisibility(0);
+        lCB.setText(parama1.getString(2131231655, new Object[] { paramString.yv() }));
+        break label224;
       }
-      catch (IllegalArgumentException paramag)
+      lCB.setVisibility(8);
+      break label224;
+      iRg.setText(parama1.getString(2131231668));
+      continue;
+      if (field_type == 40)
       {
-        try
+        ai.b localb = com.tencent.mm.model.ah.tE().rt().HA(field_content);
+        if ((localb == null) || (iAQ == null) || (iAQ.length() <= 0))
         {
-          paramInt = Color.parseColor(paramag);
-          kUm.setTextColor(paramInt);
-          kUn.setTextColor(paramInt);
-          kUk.setTextColor(paramInt);
-          kUl.setTextColor(paramInt);
-          kUo.setTextColor(paramInt);
-          kUm.setText(bxQ);
-          kUn.setText(bxO);
-          kUk.setText(bxS);
-          kUl.setText(bxR);
-          kUo.setText(bxT);
-          if (!t.kz(bxZ))
+          v.e("MicroMsg.ChattingItemFMessageFrom", "getView : parse possible friend msg failed");
+          return;
+        }
+        com.tencent.mm.s.b.o(iAQ, kGd);
+        if (i.ek(iAQ))
+        {
+          lCy.setVisibility(8);
+          lCz.setVisibility(8);
+          lCA.setVisibility(0);
+          lCx.setBackgroundColor(16777215);
+          lCA.setText(parama1.getString(2131232961));
+          label721:
+          switch (scene)
           {
-            kUq.setVisibility(0);
-            a.b.l(kUq, bxZ);
-            kTa.setOnLongClickListener(kSE.kVu);
-            kTa.setTag(localdg);
-            kTa.setOnClickListener(kSE.kVs);
-            return;
-            if (localObject1 == null) {}
-            for (boolean bool = true;; bool = false)
-            {
-              u.e("!56@/B4Tb64lLpKwUcOR+EdWcqqGVJnK8iwmbiZxNVncOS2bsW//QRniUw==", "amessage:%b, %s, %d, %s", new Object[] { Boolean.valueOf(bool), localObject2, Long.valueOf(field_msgId), paramString });
-              paramString = null;
-              break;
-            }
-            paramag = paramag;
-            u.w("!56@/B4Tb64lLpKwUcOR+EdWcqqGVJnK8iwmbiZxNVncOS2bsW//QRniUw==", "hy: line color given color is incorrect. use default");
-            i = k;
+          default: 
+            v.d("MicroMsg.ChattingItemFMessageFrom", "prossible friend sceneType:%d", new Object[] { Integer.valueOf(scene) });
+            lrC.setText(2131231658);
+            iRg.setText(2131231659);
+            gvP.setText(e.a(kNN.kOg, localb.getDisplayName(), gvP.getTextSize()));
           }
         }
-        catch (IllegalArgumentException paramag)
+        for (;;)
         {
-          for (;;)
-          {
-            u.w("!56@/B4Tb64lLpKwUcOR+EdWcqqGVJnK8iwmbiZxNVncOS2bsW//QRniUw==", "hy: given color is incorrect.use default");
-            paramInt = i;
-            continue;
-            kUq.setVisibility(8);
+          n(cui, iAQ);
+          break;
+          lCy.setVisibility(0);
+          lCz.setVisibility(0);
+          lCA.setVisibility(0);
+          lCx.setBackgroundResource(2130839156);
+          lCA.setText(parama1.getString(2131232960));
+          break label721;
+          lrC.setText(2131231649);
+          iRg.setText(2131231650);
+          paramString = localb.bcU();
+          parama = paramString;
+          if (paramString == null) {
+            parama = localb.getDisplayName();
           }
+          gvP.setText(e.a(kNN.kOg, parama, gvP.getTextSize()));
+          continue;
+          lrC.setText(2131231654);
+          paramString = m.hQ(kGe);
+          parama = paramString;
+          if (s.kf(paramString)) {
+            parama = m.hQ(kGf);
+          }
+          iRg.setText(parama1.getString(2131231655, new Object[] { parama }));
+          gvP.setText(e.a(kNN.kOg, localb.getDisplayName(), gvP.getTextSize()));
+          continue;
+          lrC.setText(2131231665);
+          iRg.setText(2131231666);
+          gvP.setText(e.a(kNN.kOg, localb.getDisplayName(), gvP.getTextSize()));
+          continue;
+          lrC.setText(2131231661);
+          iRg.setText(2131231660);
+          gvP.setText(e.a(kNN.kOg, localb.getDisplayName(), gvP.getTextSize()));
         }
       }
+      v.w("MicroMsg.ChattingItemFMessageFrom", "FROM_FMESSAGE did not include this type, msgType = " + field_type);
     }
   }
   
-  public final boolean a(ContextMenu paramContextMenu, View paramView, ag paramag)
+  public final boolean a(ContextMenu paramContextMenu, View paramView, ai paramai)
   {
-    paramContextMenu.add(getTagposition, 100, 0, kTe.getString(2131427849));
     return false;
   }
   
-  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ag paramag)
+  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ai paramai)
   {
-    switch (paramMenuItem.getItemId())
-    {
-    }
-    for (;;)
-    {
-      return false;
-      parama = field_content;
-      paramMenuItem = null;
-      if (parama != null) {
-        paramMenuItem = a.a.dz(parama);
-      }
-      if (paramMenuItem != null) {
-        l.zR(aoq);
-      }
-      ar.E(field_msgId);
-    }
+    return false;
   }
   
-  public final boolean a(View paramView, ChattingUI.a parama, ag paramag)
+  public final boolean a(View paramView, ChattingUI.a parama, ai paramai)
   {
-    int i = 0;
-    String str = field_content;
-    paramView = a.a.B(str, field_reserved);
-    if (paramView == null)
-    {
-      u.i("!56@/B4Tb64lLpKwUcOR+EdWcqqGVJnK8iwmbiZxNVncOS2bsW//QRniUw==", "onItemClick, content is null.");
-      return false;
-    }
-    u.d("!56@/B4Tb64lLpKwUcOR+EdWcqqGVJnK8iwmbiZxNVncOS2bsW//QRniUw==", "onItemClick, url is (%s).", new Object[] { url });
-    if (!t.kz(url))
-    {
-      paramag = new Intent();
-      paramag.putExtra("rawUrl", url);
-      c.c(koJ.kpc, "webview", ".ui.tools.WebViewUI", paramag);
-      return true;
-    }
-    if (!t.kz(bxP))
-    {
-      int j = byf;
-      if (System.currentTimeMillis() - j * 1000L >= 2592000000L) {
-        i = 1;
-      }
-      if (i == 0)
-      {
-        Intent localIntent = new Intent();
-        localIntent.putExtra("key_rank_info", str);
-        localIntent.putExtra("key_rank_semi", field_reserved);
-        localIntent.putExtra("key_rank_title", bya);
-        localIntent.putExtra("key_champion_info", byb);
-        localIntent.putExtra("key_champion_coverimg", byb);
-        localIntent.putExtra("rank_id", bxP);
-        localIntent.putExtra("app_username", appName);
-        localIntent.putExtra("device_type", bye);
-        localIntent.putExtra("key_champioin_username", bxZ);
-        c.c(koJ.kpc, "exdevice", ".ui.ExdeviceRankInfoUI", localIntent);
-      }
-    }
-    for (;;)
-    {
-      return true;
-      c.u(koJ.kpc, "exdevice", ".ui.ExdeviceExpireUI");
-    }
+    return false;
   }
   
-  final class a
-    extends aa.a
+  protected final boolean bjZ()
   {
-    protected TextView kUk;
-    protected TextView kUl;
-    protected TextView kUm;
-    protected TextView kUn;
-    protected TextView kUo;
-    protected TextView kUp;
-    protected ImageView kUq;
-    
-    public a(int paramInt)
-    {
-      super();
-    }
-    
-    public final a aE(View paramView)
-    {
-      super.aC(paramView);
-      kUk = ((TextView)paramView.findViewById(2131165672));
-      kUm = ((TextView)paramView.findViewById(2131165670));
-      kUl = ((TextView)paramView.findViewById(2131165673));
-      kUn = ((TextView)paramView.findViewById(2131165671));
-      kUo = ((TextView)paramView.findViewById(2131165676));
-      kUp = ((TextView)paramView.findViewById(2131165674));
-      edK = ((CheckBox)paramView.findViewById(2131165186));
-      kUq = ((ImageView)paramView.findViewById(2131165675));
-      return this;
-    }
+    return false;
   }
 }
 

@@ -3,7 +3,7 @@ package com.tencent.mm.plugin.sns.ui;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 
 final class SnsUploadConfigView$11
   implements DialogInterface.OnClickListener
@@ -12,7 +12,7 @@ final class SnsUploadConfigView$11
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    c.a(hlL.getContext(), ".ui.account.FacebookAuthUI", new Intent().putExtra("shake_music", true));
+    c.a(hBN.getContext(), ".ui.account.FacebookAuthUI", new Intent().putExtra("shake_music", true));
   }
 }
 

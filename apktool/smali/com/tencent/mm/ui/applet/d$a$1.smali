@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ba/c$b;
+.implements Lcom/tencent/mm/bd/c$b;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kzY:Lcom/tencent/mm/ui/applet/d$a;
+.field final synthetic kZe:Lcom/tencent/mm/ui/applet/d$a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 62
-    iput-object p1, p0, Lcom/tencent/mm/ui/applet/d$a$1;->kzY:Lcom/tencent/mm/ui/applet/d$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/applet/d$a$1;->kZe:Lcom/tencent/mm/ui/applet/d$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,21 +36,21 @@
 
 
 # virtual methods
-.method public final aZi()V
+.method public final bez()V
     .locals 3
 
     .prologue
     .line 66
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/d$a$1;->kzY:Lcom/tencent/mm/ui/applet/d$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/d$a$1;->kZe:Lcom/tencent/mm/ui/applet/d$a;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/applet/d$a$1;->kzY:Lcom/tencent/mm/ui/applet/d$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/applet/d$a$1;->kZe:Lcom/tencent/mm/ui/applet/d$a;
 
     iget-object v1, v1, Lcom/tencent/mm/ui/applet/d$a;->context:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/applet/d$a;->eh(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/applet/d$a;->el(Landroid/content/Context;)V
 
     .line 67
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/d$a$1;->kzY:Lcom/tencent/mm/ui/applet/d$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/d$a$1;->kZe:Lcom/tencent/mm/ui/applet/d$a;
 
     iget-object v0, v0, Lcom/tencent/mm/ui/applet/d$a;->context:Landroid/content/Context;
 

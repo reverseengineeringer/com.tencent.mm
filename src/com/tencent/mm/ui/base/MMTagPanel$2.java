@@ -11,11 +11,11 @@ final class MMTagPanel$2
   public final void afterTextChanged(Editable paramEditable)
   {
     paramEditable = paramEditable.toString();
-    if (MMTagPanel.e(kHq) != null) {
-      MMTagPanel.e(kHq).nh(paramEditable);
+    if (MMTagPanel.e(lgs) != null) {
+      MMTagPanel.e(lgs).op(paramEditable);
     }
     if (paramEditable.length() > 0) {
-      kHq.bcY();
+      lgs.biA();
     }
   }
   

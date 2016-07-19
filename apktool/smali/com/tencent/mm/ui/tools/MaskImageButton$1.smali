@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lxb:Lcom/tencent/mm/ui/tools/MaskImageButton;
+.field final synthetic lXO:Lcom/tencent/mm/ui/tools/MaskImageButton;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 39
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MaskImageButton$1;->lxb:Lcom/tencent/mm/ui/tools/MaskImageButton;
+    .line 41
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MaskImageButton$1;->lXO:Lcom/tencent/mm/ui/tools/MaskImageButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,18 +40,18 @@
     .locals 2
 
     .prologue
-    .line 42
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MaskImageButton$1;->lxb:Lcom/tencent/mm/ui/tools/MaskImageButton;
+    .line 44
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MaskImageButton$1;->lXO:Lcom/tencent/mm/ui/tools/MaskImageButton;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/MaskImageButton;->setPressed(Z)V
 
-    .line 43
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MaskImageButton$1;->lxb:Lcom/tencent/mm/ui/tools/MaskImageButton;
+    .line 45
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MaskImageButton$1;->lXO:Lcom/tencent/mm/ui/tools/MaskImageButton;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/MaskImageButton;->invalidate()V
 
-    .line 44
+    .line 46
     return-void
 .end method

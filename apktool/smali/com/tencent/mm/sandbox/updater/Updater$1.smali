@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic jTV:Lcom/tencent/mm/sandbox/updater/Updater;
+.field final synthetic ktt:Lcom/tencent/mm/sandbox/updater/Updater;
 
-.field final synthetic jTW:Landroid/content/DialogInterface$OnCancelListener;
+.field final synthetic ktu:Landroid/content/DialogInterface$OnCancelListener;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 120
-    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/Updater$1;->jTV:Lcom/tencent/mm/sandbox/updater/Updater;
+    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/Updater$1;->ktt:Lcom/tencent/mm/sandbox/updater/Updater;
 
-    iput-object p2, p0, Lcom/tencent/mm/sandbox/updater/Updater$1;->jTW:Landroid/content/DialogInterface$OnCancelListener;
+    iput-object p2, p0, Lcom/tencent/mm/sandbox/updater/Updater$1;->ktu:Landroid/content/DialogInterface$OnCancelListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
 
     .prologue
     .line 124
-    invoke-static {}, Lcom/tencent/mm/model/ah;->kU()Lcom/tencent/mm/model/y;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->jv()Lcom/tencent/mm/model/y;
 
     move-result-object v0
 
@@ -56,15 +56,15 @@
     .line 126
     const/4 v0, 0x2
 
-    invoke-static {v0}, Lcom/tencent/mm/sandbox/updater/Updater;->pj(I)V
+    invoke-static {v0}, Lcom/tencent/mm/sandbox/updater/Updater;->qZ(I)V
 
     .line 127
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/Updater$1;->jTV:Lcom/tencent/mm/sandbox/updater/Updater;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/Updater$1;->ktt:Lcom/tencent/mm/sandbox/updater/Updater;
 
     invoke-virtual {v0}, Lcom/tencent/mm/sandbox/updater/Updater;->cancel()V
 
     .line 128
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/Updater$1;->jTV:Lcom/tencent/mm/sandbox/updater/Updater;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/Updater$1;->ktt:Lcom/tencent/mm/sandbox/updater/Updater;
 
     invoke-static {v0}, Lcom/tencent/mm/sandbox/updater/Updater;->a(Lcom/tencent/mm/sandbox/updater/Updater;)Z
 
@@ -73,12 +73,12 @@
     if-nez v0, :cond_0
 
     .line 129
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/Updater$1;->jTW:Landroid/content/DialogInterface$OnCancelListener;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/Updater$1;->ktu:Landroid/content/DialogInterface$OnCancelListener;
 
     if-eqz v0, :cond_0
 
     .line 130
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/Updater$1;->jTW:Landroid/content/DialogInterface$OnCancelListener;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/Updater$1;->ktu:Landroid/content/DialogInterface$OnCancelListener;
 
     invoke-interface {v0, p1}, Landroid/content/DialogInterface$OnCancelListener;->onCancel(Landroid/content/DialogInterface;)V
 

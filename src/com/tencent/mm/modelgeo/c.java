@@ -3,12 +3,12 @@ package com.tencent.mm.modelgeo;
 import android.content.Context;
 import android.location.LocationManager;
 import android.os.Looper;
-import com.tencent.mm.platformtools.r;
+import com.tencent.mm.platformtools.q;
 import com.tencent.mm.sdk.b.b;
 import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -18,42 +18,42 @@ import java.util.List;
 public final class c
   implements a
 {
-  public static c bJd;
-  private boolean bOj = false;
-  g bOk;
-  List bOl = new ArrayList();
-  List bOm = new ArrayList();
-  long bOn = 0L;
-  boolean bOo = false;
-  boolean bOp = false;
-  double bOq = 23.0D;
-  double bOr = 100.0D;
-  int bOs = 0;
-  double bOt = 0.0D;
-  double bOu = 0.0D;
-  private e bOv = new e()
+  public static c bCq;
+  public boolean bHE = false;
+  g bHF;
+  List<WeakReference<a.a>> bHG = new ArrayList();
+  List<a.a> bHH = new ArrayList();
+  long bHI = 0L;
+  boolean bHJ = false;
+  boolean bHK = false;
+  double bHL = 23.0D;
+  double bHM = 100.0D;
+  int bHN = 0;
+  double bHO = 0.0D;
+  double bHP = 0.0D;
+  private e bHQ = new e()
   {
     public final void a(final boolean paramAnonymousBoolean, double paramAnonymousDouble1, final double paramAnonymousDouble2, final int paramAnonymousInt, final double paramAnonymousDouble3, double paramAnonymousDouble4)
     {
       if (paramAnonymousBoolean)
       {
-        bOq = paramAnonymousDouble1;
-        bOr = paramAnonymousDouble2;
-        bOs = paramAnonymousInt;
-        bOt = paramAnonymousDouble3;
-        bOu = paramAnonymousDouble4;
-        bOn = System.currentTimeMillis();
-        bOo = true;
-        bOp = false;
+        bHL = paramAnonymousDouble1;
+        bHM = paramAnonymousDouble2;
+        bHN = paramAnonymousInt;
+        bHO = paramAnonymousDouble3;
+        bHP = paramAnonymousDouble4;
+        bHI = System.currentTimeMillis();
+        bHJ = true;
+        bHK = false;
         c.a(c.this, 67592);
       }
-      u.d("!32@/B4Tb64lLpIu6Y+BscdrxN3pFdbvvih6", "onGetLocation fLongitude: %f fLatitude:%f locType:%d %f:spped", new Object[] { Double.valueOf(paramAnonymousDouble2), Double.valueOf(paramAnonymousDouble1), Integer.valueOf(paramAnonymousInt), Double.valueOf(paramAnonymousDouble3) });
-      new aa(Looper.getMainLooper()).postDelayed(new Runnable()
+      v.d("MicroMsg.LocationGeo", "onGetLocation fLongitude: %f fLatitude:%f locType:%d %f:spped", new Object[] { Double.valueOf(paramAnonymousDouble2), Double.valueOf(paramAnonymousDouble1), Integer.valueOf(paramAnonymousInt), Double.valueOf(paramAnonymousDouble3) });
+      new ac(Looper.getMainLooper()).postDelayed(new Runnable()
       {
         public final void run()
         {
           Object localObject1 = new LinkedList();
-          Object localObject2 = bOl.iterator();
+          Object localObject2 = bHG.iterator();
           while (((Iterator)localObject2).hasNext())
           {
             WeakReference localWeakReference = (WeakReference)((Iterator)localObject2).next();
@@ -65,38 +65,38 @@ public final class c
           while (((Iterator)localObject1).hasNext())
           {
             localObject2 = (a.a)((Iterator)localObject1).next();
-            if ((r.cmK) && (b.aUo())) {
-              ((a.a)localObject2).a(paramAnonymousBoolean, (float)r.lng, (float)r.lat, paramAnonymousInt, (float)paramAnonymousDouble3, paramAnonymousDouble2);
+            if ((q.chP) && (b.aZo())) {
+              ((a.a)localObject2).a(paramAnonymousBoolean, (float)q.lng, (float)q.lat, paramAnonymousInt, (float)paramAnonymousDouble3, paramAnonymousDouble2);
             } else {
-              ((a.a)localObject2).a(paramAnonymousBoolean, (float)bOC, (float)bOD, paramAnonymousInt, (float)paramAnonymousDouble3, paramAnonymousDouble2);
+              ((a.a)localObject2).a(paramAnonymousBoolean, (float)bHX, (float)bHY, paramAnonymousInt, (float)paramAnonymousDouble3, paramAnonymousDouble2);
             }
           }
         }
       }, 200L);
     }
   };
-  private f bOw = new f()
+  private f bHR = new f()
   {
     public final void a(final boolean paramAnonymousBoolean, double paramAnonymousDouble1, final double paramAnonymousDouble2, final int paramAnonymousInt, final double paramAnonymousDouble3, double paramAnonymousDouble4)
     {
       if (paramAnonymousBoolean)
       {
-        bOq = paramAnonymousDouble1;
-        bOr = paramAnonymousDouble2;
-        bOs = paramAnonymousInt;
-        bOt = paramAnonymousDouble3;
-        bOu = paramAnonymousDouble4;
-        bOp = true;
-        bOo = false;
-        bOn = System.currentTimeMillis();
+        bHL = paramAnonymousDouble1;
+        bHM = paramAnonymousDouble2;
+        bHN = paramAnonymousInt;
+        bHO = paramAnonymousDouble3;
+        bHP = paramAnonymousDouble4;
+        bHK = true;
+        bHJ = false;
+        bHI = System.currentTimeMillis();
         c.a(c.this, 67591);
       }
-      u.d("!32@/B4Tb64lLpIu6Y+BscdrxN3pFdbvvih6", "onGetLocationWgs84 fLongitude: %f fLatitude:%f locType:%d %f:spped", new Object[] { Double.valueOf(paramAnonymousDouble2), Double.valueOf(paramAnonymousDouble1), Integer.valueOf(paramAnonymousInt), Double.valueOf(paramAnonymousDouble3) });
-      new aa(Looper.getMainLooper()).postDelayed(new Runnable()
+      v.d("MicroMsg.LocationGeo", "onGetLocationWgs84 fLongitude: %f fLatitude:%f locType:%d %f:spped", new Object[] { Double.valueOf(paramAnonymousDouble2), Double.valueOf(paramAnonymousDouble1), Integer.valueOf(paramAnonymousInt), Double.valueOf(paramAnonymousDouble3) });
+      new ac(Looper.getMainLooper()).postDelayed(new Runnable()
       {
         public final void run()
         {
-          Iterator localIterator = bOl.iterator();
+          Iterator localIterator = bHG.iterator();
           Object localObject;
           while (localIterator.hasNext())
           {
@@ -104,21 +104,21 @@ public final class c
             if ((localObject != null) && (((WeakReference)localObject).get() != null))
             {
               localObject = (a.a)((WeakReference)localObject).get();
-              if ((r.cmK) && (b.aUo())) {
-                ((a.a)localObject).a(paramAnonymousBoolean, (float)r.lng, (float)r.lat, paramAnonymousInt, (float)paramAnonymousDouble3, paramAnonymousDouble2);
+              if ((q.chP) && (b.aZo())) {
+                ((a.a)localObject).a(paramAnonymousBoolean, (float)q.lng, (float)q.lat, paramAnonymousInt, (float)paramAnonymousDouble3, paramAnonymousDouble2);
               } else {
-                ((a.a)localObject).a(paramAnonymousBoolean, (float)bOC, (float)bOD, paramAnonymousInt, (float)paramAnonymousDouble3, paramAnonymousDouble2);
+                ((a.a)localObject).a(paramAnonymousBoolean, (float)bHX, (float)bHY, paramAnonymousInt, (float)paramAnonymousDouble3, paramAnonymousDouble2);
               }
             }
           }
-          localIterator = bOm.iterator();
+          localIterator = bHH.iterator();
           while (localIterator.hasNext())
           {
             localObject = (a.a)localIterator.next();
-            if ((r.cmK) && (b.aUo())) {
-              ((a.a)localObject).a(paramAnonymousBoolean, (float)r.lng, (float)r.lat, paramAnonymousInt, (float)paramAnonymousDouble3, paramAnonymousDouble2);
+            if ((q.chP) && (b.aZo())) {
+              ((a.a)localObject).a(paramAnonymousBoolean, (float)q.lng, (float)q.lat, paramAnonymousInt, (float)paramAnonymousDouble3, paramAnonymousDouble2);
             } else {
-              ((a.a)localObject).a(paramAnonymousBoolean, (float)bOC, (float)bOD, paramAnonymousInt, (float)paramAnonymousDouble3, paramAnonymousDouble2);
+              ((a.a)localObject).a(paramAnonymousBoolean, (float)bHX, (float)bHY, paramAnonymousInt, (float)paramAnonymousDouble3, paramAnonymousDouble2);
             }
           }
         }
@@ -130,54 +130,54 @@ public final class c
   private c(Context paramContext)
   {
     mContext = paramContext;
-    bOk = g.aN(paramContext);
+    bHF = g.aK(paramContext);
   }
   
-  public static c zD()
+  public static c zQ()
   {
-    if (bJd == null) {
-      bJd = new c(y.getContext());
+    if (bCq == null) {
+      bCq = new c(aa.getContext());
     }
-    return bJd;
+    return bCq;
   }
   
-  public static boolean zE()
+  public static boolean zR()
   {
     try
     {
-      boolean bool = ((LocationManager)y.getContext().getSystemService("location")).isProviderEnabled("gps");
+      boolean bool = ((LocationManager)aa.getContext().getSystemService("location")).isProviderEnabled("gps");
       return bool;
     }
     catch (Exception localException)
     {
-      u.e("!32@/B4Tb64lLpIu6Y+BscdrxN3pFdbvvih6", "exception:%s", new Object[] { ay.b(localException) });
+      v.e("MicroMsg.LocationGeo", "exception:%s", new Object[] { be.f(localException) });
     }
     return false;
   }
   
-  public static boolean zF()
+  public static boolean zS()
   {
     try
     {
-      boolean bool = ((LocationManager)y.getContext().getSystemService("location")).isProviderEnabled("network");
+      boolean bool = ((LocationManager)aa.getContext().getSystemService("location")).isProviderEnabled("network");
       return bool;
     }
     catch (Exception localException)
     {
-      u.e("!32@/B4Tb64lLpIu6Y+BscdrxN3pFdbvvih6", "exception:%s", new Object[] { ay.b(localException) });
+      v.e("MicroMsg.LocationGeo", "exception:%s", new Object[] { be.f(localException) });
     }
     return false;
   }
   
   public final void a(a.a parama)
   {
-    if ((!bOj) && (bOl.size() > 0)) {}
+    if ((!bHE) && (bHG.size() > 0)) {}
     try
     {
-      g.zH();
-      g.a(bOv, 1, Looper.getMainLooper());
-      bOj = true;
-      Iterator localIterator = bOl.iterator();
+      g.zU();
+      g.a(bHQ, 1, Looper.getMainLooper());
+      bHE = true;
+      Iterator localIterator = bHG.iterator();
       WeakReference localWeakReference;
       do
       {
@@ -188,10 +188,10 @@ public final class c
       } while ((localWeakReference == null) || (localWeakReference.get() == null) || (!((a.a)localWeakReference.get()).equals(parama)));
       i = 0;
       if (i != 0) {
-        bOl.add(new WeakReference(parama));
+        bHG.add(new WeakReference(parama));
       }
-      u.i("!32@/B4Tb64lLpIu6Y+BscdrxN3pFdbvvih6", "add listeners size %d", new Object[] { Integer.valueOf(bOl.size()) });
-      if (bOl.size() != 1) {}
+      v.i("MicroMsg.LocationGeo", "add listeners size %d", new Object[] { Integer.valueOf(bHG.size()) });
+      if (bHG.size() != 1) {}
     }
     catch (g.a locala)
     {
@@ -199,17 +199,17 @@ public final class c
       {
         try
         {
-          g.a(bOv, 1, Looper.getMainLooper());
-          if ((bOo) && (System.currentTimeMillis() - bOn < 60000L)) {
-            bOv.a(true, bOq, bOr, bOs, bOt, bOu);
+          g.a(bHQ, 1, Looper.getMainLooper());
+          if ((bHJ) && (System.currentTimeMillis() - bHI < 60000L)) {
+            bHQ.a(true, bHL, bHM, bHN, bHO, bHP);
           }
           return;
           locala = locala;
-          u.d("!32@/B4Tb64lLpIu6Y+BscdrxN3pFdbvvih6", locala.toString());
+          v.d("MicroMsg.LocationGeo", locala.toString());
         }
         catch (g.a parama)
         {
-          u.d("!32@/B4Tb64lLpIu6Y+BscdrxN3pFdbvvih6", parama.toString());
+          v.d("MicroMsg.LocationGeo", parama.toString());
           continue;
         }
         int i = 1;
@@ -219,13 +219,13 @@ public final class c
   
   public final void b(a.a parama)
   {
-    if ((bOj) && (bOl.size() > 0)) {}
+    if ((bHE) && (bHG.size() > 0)) {}
     try
     {
-      g.zH();
-      g.a(bOw, 0, Looper.getMainLooper());
-      bOj = false;
-      Iterator localIterator = bOl.iterator();
+      g.zU();
+      g.a(bHR, 0, Looper.getMainLooper());
+      bHE = false;
+      Iterator localIterator = bHG.iterator();
       WeakReference localWeakReference;
       do
       {
@@ -236,10 +236,10 @@ public final class c
       } while ((localWeakReference == null) || (localWeakReference.get() == null) || (!((a.a)localWeakReference.get()).equals(parama)));
       i = 0;
       if (i != 0) {
-        bOl.add(new WeakReference(parama));
+        bHG.add(new WeakReference(parama));
       }
-      u.i("!32@/B4Tb64lLpIu6Y+BscdrxN3pFdbvvih6", "add listeners size %d", new Object[] { Integer.valueOf(bOl.size()) });
-      if (bOl.size() != 1) {}
+      v.i("MicroMsg.LocationGeo", "add listeners size %d", new Object[] { Integer.valueOf(bHG.size()) });
+      if (bHG.size() != 1) {}
     }
     catch (g.a locala)
     {
@@ -247,17 +247,17 @@ public final class c
       {
         try
         {
-          g.a(bOw, 0, Looper.getMainLooper());
-          if ((bOp) && (System.currentTimeMillis() - bOn < 60000L)) {
-            bOv.a(true, bOq, bOr, bOs, bOt, bOu);
+          g.a(bHR, 0, Looper.getMainLooper());
+          if ((bHK) && (System.currentTimeMillis() - bHI < 60000L)) {
+            bHQ.a(true, bHL, bHM, bHN, bHO, bHP);
           }
           return;
           locala = locala;
-          u.d("!32@/B4Tb64lLpIu6Y+BscdrxN3pFdbvvih6", locala.toString());
+          v.d("MicroMsg.LocationGeo", locala.toString());
         }
         catch (g.a parama)
         {
-          u.d("!32@/B4Tb64lLpIu6Y+BscdrxN3pFdbvvih6", parama.toString());
+          v.d("MicroMsg.LocationGeo", parama.toString());
           continue;
         }
         int i = 1;
@@ -267,12 +267,12 @@ public final class c
   
   public final void c(final a.a parama)
   {
-    new aa().post(new Runnable()
+    new ac().post(new Runnable()
     {
       public final void run()
       {
         Object localObject1 = new ArrayList();
-        Object localObject2 = bOl.iterator();
+        Object localObject2 = bHG.iterator();
         while (((Iterator)localObject2).hasNext())
         {
           WeakReference localWeakReference = (WeakReference)((Iterator)localObject2).next();
@@ -284,11 +284,11 @@ public final class c
         while (((Iterator)localObject1).hasNext())
         {
           localObject2 = (WeakReference)((Iterator)localObject1).next();
-          bOl.remove(localObject2);
+          bHG.remove(localObject2);
         }
-        u.i("!32@/B4Tb64lLpIu6Y+BscdrxN3pFdbvvih6", "stop listeners size %d", new Object[] { Integer.valueOf(bOl.size()) });
-        if ((bOl.size() == 0) && (bOk != null)) {
-          g.zH();
+        v.i("MicroMsg.LocationGeo", "stop listeners size %d", new Object[] { Integer.valueOf(bHG.size()) });
+        if ((bHG.size() == 0) && (bHF != null)) {
+          g.zU();
         }
       }
     });

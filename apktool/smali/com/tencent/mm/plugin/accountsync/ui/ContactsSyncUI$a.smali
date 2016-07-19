@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field private coE:Z
+.field final synthetic cjS:Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;
 
-.field private coF:Lcom/tencent/mm/modelsimple/d$a;
+.field private cjT:Z
 
-.field final synthetic coG:Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;
+.field private cjU:Lcom/tencent/mm/modelsimple/d$a;
 
 
 # direct methods
@@ -30,57 +30,57 @@
     .locals 1
 
     .prologue
-    .line 309
-    iput-object p1, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->coG:Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;
+    .line 318
+    iput-object p1, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->cjS:Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 302
+    .line 311
     new-instance v0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a$1;-><init>(Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->coF:Lcom/tencent/mm/modelsimple/d$a;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->cjU:Lcom/tencent/mm/modelsimple/d$a;
 
-    .line 310
-    iput-boolean p2, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->coE:Z
+    .line 319
+    iput-boolean p2, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->cjT:Z
 
-    .line 311
+    .line 320
     return-void
 .end method
 
 
 # virtual methods
-.method final D(Landroid/content/Context;Ljava/lang/String;)I
+.method final F(Landroid/content/Context;Ljava/lang/String;)I
     .locals 3
 
     .prologue
     const/4 v0, 0x1
 
-    .line 365
+    .line 374
     if-nez p1, :cond_0
 
-    .line 377
+    .line 386
     :goto_0
     return v0
 
-    .line 368
+    .line 377
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->coF:Lcom/tencent/mm/modelsimple/d$a;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->cjU:Lcom/tencent/mm/modelsimple/d$a;
 
     invoke-static {p1, p2, v1}, Lcom/tencent/mm/modelsimple/d;->a(Landroid/content/Context;Ljava/lang/String;Lcom/tencent/mm/modelsimple/d$a;)I
 
     move-result v1
 
-    .line 369
+    .line 378
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_1
 
-    .line 370
-    iget-object v1, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->coG:Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;
+    .line 379
+    iget-object v1, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->cjS:Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;
 
-    const v2, 0x7f0b07c5
+    const v2, 0x7f080586
 
     invoke-virtual {v1, v2}, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->getString(I)Ljava/lang/String;
 
@@ -94,16 +94,16 @@
 
     goto :goto_0
 
-    .line 373
+    .line 382
     :cond_1
     const/4 v2, 0x3
 
     if-ne v1, v2, :cond_2
 
-    .line 374
-    iget-object v1, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->coG:Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;
+    .line 383
+    iget-object v1, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->cjS:Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;
 
-    const v2, 0x7f0b07c6
+    const v2, 0x7f080585
 
     invoke-virtual {v1, v2}, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->getString(I)Ljava/lang/String;
 
@@ -117,70 +117,70 @@
 
     goto :goto_0
 
-    .line 377
+    .line 386
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method public final bn(Landroid/content/Context;)I
+.method public final bi(Landroid/content/Context;)I
     .locals 7
 
     .prologue
-    .line 315
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tI()Z
+    .line 324
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tJ()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tM()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tN()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 316
+    .line 325
     :cond_0
     const/4 v0, 0x4
 
-    .line 360
+    .line 369
     :goto_0
     return v0
 
-    .line 319
+    .line 328
     :cond_1
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->coE:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->cjT:Z
 
     if-nez v0, :cond_2
 
-    .line 320
-    const-string/jumbo v0, "!44@/B4Tb64lLpIUGQfqwvb6Vhbtqd7qMdkL5Q4wuWECcU8="
+    .line 329
+    const-string/jumbo v0, "MicroMsg.ProcessorAddAccount"
 
     const-string/jumbo v1, "no need to bind mobile"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 321
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->coG:Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;
+    .line 330
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->cjS:Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->coF:Lcom/tencent/mm/modelsimple/d$a;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->cjU:Lcom/tencent/mm/modelsimple/d$a;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/modelsimple/d;->a(Landroid/content/Context;Lcom/tencent/mm/modelsimple/d$a;)I
 
-    .line 322
+    .line 331
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 325
+    .line 334
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -194,41 +194,41 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 326
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    .line 335
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 327
-    const-string/jumbo v0, "!44@/B4Tb64lLpIUGQfqwvb6Vhbtqd7qMdkL5Q4wuWECcU8="
+    .line 336
+    const-string/jumbo v0, "MicroMsg.ProcessorAddAccount"
 
     const-string/jumbo v1, "not bind mobile phone"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 328
+    .line 337
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 332
+    .line 341
     :cond_3
-    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yC()Z
+    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yP()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 333
-    const v1, 0x7f0b07cc
+    .line 342
+    const v1, 0x7f080584
 
-    const v2, 0x7f0b0ddd
+    const v2, 0x7f080134
 
-    const v3, 0x7f0b0de8
+    const v3, 0x7f0800f7
 
-    const v4, 0x7f0b0de4
+    const v4, 0x7f080099
 
     new-instance v5, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a$2;
 
@@ -242,14 +242,14 @@
 
     invoke-static/range {v0 .. v6}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;IIIILandroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
-    .line 358
+    .line 367
     const/4 v0, 0x5
 
     goto :goto_0
 
-    .line 360
+    .line 369
     :cond_4
-    invoke-virtual {p0, p1, v0}, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->D(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-virtual {p0, p1, v0}, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->F(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result v0
 

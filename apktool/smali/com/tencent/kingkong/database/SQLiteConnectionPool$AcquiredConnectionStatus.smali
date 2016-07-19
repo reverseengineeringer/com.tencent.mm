@@ -13,11 +13,20 @@
     name = "AcquiredConnectionStatus"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;",
+        ">;"
+    }
+.end annotation
+
 
 # static fields
-.field public static final enum DISCARD:Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;
+.field private static final synthetic $VALUES:[Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;
 
-.field private static final synthetic ENUM$VALUES:[Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;
+.field public static final enum DISCARD:Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;
 
 .field public static final enum NORMAL:Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;
 
@@ -79,13 +88,18 @@
 
     aput-object v1, v0, v4
 
-    sput-object v0, Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;->ENUM$VALUES:[Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;
+    sput-object v0, Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;->$VALUES:[Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .prologue
     .line 93
@@ -98,7 +112,7 @@
     .locals 1
 
     .prologue
-    .line 1
+    .line 93
     const-class v0, Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -111,19 +125,17 @@
 .end method
 
 .method public static values()[Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;
-    .locals 4
+    .locals 1
 
     .prologue
-    const/4 v3, 0x0
+    .line 93
+    sget-object v0, Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;->$VALUES:[Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;
 
-    .line 1
-    sget-object v0, Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;->ENUM$VALUES:[Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;
+    invoke-virtual {v0}, [Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;->clone()Ljava/lang/Object;
 
-    array-length v1, v0
+    move-result-object v0
 
-    new-array v2, v1, [Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;
+    check-cast v0, [Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;
 
-    invoke-static {v0, v3, v2, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    return-object v2
+    return-object v0
 .end method

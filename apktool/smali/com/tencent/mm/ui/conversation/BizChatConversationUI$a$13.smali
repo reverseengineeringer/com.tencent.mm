@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/t/c$a;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+.field final synthetic lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1018
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$13;->lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+    .line 362
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$13;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,66 +36,78 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/t/c$a$b;)V
-    .locals 3
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
-    .line 1022
-    if-eqz p1, :cond_0
+    .line 366
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$13;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
 
-    iget-object v0, p1, Lcom/tencent/mm/t/c$a$b;->bHc:Lcom/tencent/mm/t/b;
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->JT()Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->e(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Lcom/tencent/mm/ui/conversation/EnterpriseFullHeightListView;
 
     move-result-object v0
 
-    iget-object v1, p1, Lcom/tencent/mm/t/c$a$b;->bHc:Lcom/tencent/mm/t/b;
-
-    iget-object v1, v1, Lcom/tencent/mm/t/b;->field_brandUserName:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/conversation/EnterpriseFullHeightListView;->getHeaderViewsCount()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-ge p3, v0, :cond_1
 
-    .line 1023
-    const-string/jumbo v0, "!44@/B4Tb64lLpKy3Chyc6XXOXXrN+2WuSA5l4/ktVQL7f8="
+    .line 367
+    if-nez p3, :cond_0
 
-    const-string/jumbo v1, "bizChatExtension bizChatConv change"
+    .line 368
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$13;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->g(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)V
 
-    .line 1024
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$13;->lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->b(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Lcom/tencent/mm/ui/conversation/a;
-
-    move-result-object v0
-
-    iget-wide v1, p1, Lcom/tencent/mm/t/c$a$b;->bHb:J
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/conversation/a;->dS(J)V
-
-    .line 1025
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$13;->lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
-
-    iget-boolean v0, v0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->klz:Z
-
-    if-eqz v0, :cond_0
-
-    .line 1026
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$13;->lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->b(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Lcom/tencent/mm/ui/conversation/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/conversation/a;->Gk()V
-
-    .line 1029
+    .line 375
     :cond_0
+    :goto_0
     return-void
+
+    .line 372
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$13;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->e(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Lcom/tencent/mm/ui/conversation/EnterpriseFullHeightListView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/conversation/EnterpriseFullHeightListView;->getHeaderViewsCount()I
+
+    move-result v0
+
+    sub-int v0, p3, v0
+
+    .line 373
+    iget-object v1, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$13;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+
+    invoke-static {v1}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->b(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Lcom/tencent/mm/ui/conversation/a;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/conversation/a;->getItem(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/v/b;
+
+    .line 374
+    iget-object v1, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$13;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+
+    iget-wide v2, v0, Lcom/tencent/mm/v/b;->field_bizChatId:J
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->b(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;J)V
+
+    goto :goto_0
 .end method

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/AtSomeoneUI;->Gb()V
+    value = Lcom/tencent/mm/ui/chatting/AtSomeoneUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kRg:Lcom/tencent/mm/ui/chatting/AtSomeoneUI;
+.field final synthetic lrj:Lcom/tencent/mm/ui/chatting/AtSomeoneUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 78
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneUI$1;->kRg:Lcom/tencent/mm/ui/chatting/AtSomeoneUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneUI$1;->lrj:Lcom/tencent/mm/ui/chatting/AtSomeoneUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,14 +41,14 @@
 
     .prologue
     .line 82
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneUI$1;->kRg:Lcom/tencent/mm/ui/chatting/AtSomeoneUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneUI$1;->lrj:Lcom/tencent/mm/ui/chatting/AtSomeoneUI;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/chatting/AtSomeoneUI;->setResult(I)V
 
     .line 83
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneUI$1;->kRg:Lcom/tencent/mm/ui/chatting/AtSomeoneUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AtSomeoneUI$1;->lrj:Lcom/tencent/mm/ui/chatting/AtSomeoneUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/AtSomeoneUI;->finish()V
 

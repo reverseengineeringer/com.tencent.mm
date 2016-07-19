@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/bvz" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/cri" android:background="@color/op" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <com.tencent.mm.plugin.webview.ui.tools.widget.FontChooserView android:id="@id/crj" android:background="@color/oo" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_below="@id/cri" />
+    <ImageView android:id="@id/crk" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/q0" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+</RelativeLayout>

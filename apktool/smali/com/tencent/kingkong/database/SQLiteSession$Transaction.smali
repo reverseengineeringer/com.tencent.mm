@@ -31,17 +31,17 @@
     .locals 0
 
     .prologue
-    .line 1000
+    .line 1010
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/tencent/kingkong/database/SQLiteSession$Transaction;)V
+.method synthetic constructor <init>(Lcom/tencent/kingkong/database/SQLiteSession$1;)V
     .locals 0
 
     .prologue
-    .line 1000
+    .line 1010
     invoke-direct {p0}, Lcom/tencent/kingkong/database/SQLiteSession$Transaction;-><init>()V
 
     return-void

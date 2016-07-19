@@ -4,36 +4,37 @@ import android.content.Context;
 import com.tencent.mm.c.b.g.b;
 import com.tencent.mm.compatible.d.p;
 import com.tencent.mm.model.ah;
+import com.tencent.mm.modelsfs.FileOp;
 import com.tencent.mm.modelvoice.d.b;
 import com.tencent.mm.modelvoice.i;
 import com.tencent.mm.modelvoice.j;
 import com.tencent.mm.modelvoice.o;
 import com.tencent.mm.modelvoice.q;
 import com.tencent.mm.modelvoice.s;
-import com.tencent.mm.r.f;
-import com.tencent.mm.r.f.a;
-import com.tencent.mm.r.f.b;
 import com.tencent.mm.sdk.i.e;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.al;
-import com.tencent.mm.sdk.platformtools.al.a;
-import com.tencent.mm.sdk.platformtools.al.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.ao;
+import com.tencent.mm.sdk.platformtools.ao.a;
+import com.tencent.mm.sdk.platformtools.ao.b;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.f;
+import com.tencent.mm.t.f.a;
+import com.tencent.mm.t.f.b;
 import junit.framework.Assert;
 
 public final class a
   implements com.tencent.mm.compatible.b.d.a, f
 {
-  private com.tencent.mm.modelvoice.d api = null;
-  boolean apj = false;
-  private boolean apk = false;
-  com.tencent.mm.compatible.util.a apl;
-  private int apm = 0;
-  private boolean apn = false;
-  boolean apo = false;
-  public f.b app = null;
-  public f.a apq;
+  private com.tencent.mm.modelvoice.d aaA = null;
+  boolean aaB = false;
+  private boolean aaC = false;
+  com.tencent.mm.compatible.util.a aaD;
+  private int aaE = 0;
+  private boolean aaF = false;
+  boolean aaG = false;
+  public f.b aaH = null;
+  public f.a aaI;
   Context context = null;
   
   public a(Context paramContext)
@@ -44,16 +45,16 @@ public final class a
   public a(Context paramContext, int paramInt)
   {
     context = paramContext;
-    apl = new com.tencent.mm.compatible.util.a(paramContext);
-    apm = paramInt;
+    aaD = new com.tencent.mm.compatible.util.a(paramContext);
+    aaE = paramInt;
     new g.b();
   }
   
-  private void lD()
+  private void jN()
   {
     com.tencent.mm.modelvoice.d.a local2 = new com.tencent.mm.modelvoice.d.a()
     {
-      public final void lG()
+      public final void jQ()
       {
         e.a(new Runnable()
         {
@@ -61,37 +62,37 @@ public final class a
           {
             try
             {
-              if (bsLbpQ == 1) {
+              if (bgPbdQ == 1) {
                 Thread.sleep(300L);
               }
-              if (apq != null) {
-                ab.j(new Runnable()
+              if (aaI != null) {
+                ad.k(new Runnable()
                 {
                   public final void run()
                   {
-                    ah.tF().b(apj, false);
+                    ah.tG().b(aaB, false);
                     Context localContext = context;
-                    boolean bool = apj;
-                    al.a local1 = new al.a()
+                    boolean bool = aaB;
+                    ao.a local1 = new ao.a()
                     {
-                      public final void lG()
+                      public final void jQ()
                       {
                         if (!isPlaying())
                         {
-                          ah.tF().b(a.this);
-                          ah.tF().nM();
-                          apo = false;
-                          apl.oV();
-                          ah.tF().setMode(0);
-                          u.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "onCompletion() resetSpeaker");
+                          ah.tG().b(a.this);
+                          ah.tG().mb();
+                          aaG = false;
+                          ah.tG().setMode(0);
+                          aaD.nn();
+                          v.i("MicroMsg.SceneVoicePlayer", "onCompletion() resetSpeaker");
                         }
-                        apq.lG();
+                        aaI.jQ();
                       }
                     };
                     if (bool) {}
-                    for (al.b localb = al.b.jXa;; localb = al.b.jXb)
+                    for (ao.b localb = ao.b.kxt;; localb = ao.b.kxu)
                     {
-                      al.a(localContext, 2131432253, localb, false, local1);
+                      ao.a(localContext, 2131234158, localb, false, local1);
                       return;
                     }
                   }
@@ -101,14 +102,14 @@ public final class a
             }
             catch (InterruptedException localInterruptedException)
             {
-              u.e("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "exception:%s", new Object[] { ay.b(localInterruptedException) });
+              v.e("MicroMsg.SceneVoicePlayer", "exception:%s", new Object[] { be.f(localInterruptedException) });
             }
           }
         }, "SceneVoice_onCompletion");
       }
     };
-    if (api != null) {
-      api.a(local2);
+    if (aaA != null) {
+      aaA.a(local2);
     }
   }
   
@@ -118,266 +119,279 @@ public final class a
     {
       public final void onError()
       {
-        apl.oV();
-        ah.tF().b(a.this);
-        if (apo)
+        ah.tG().b(a.this);
+        if (aaG)
         {
-          ah.tF().nM();
-          apo = false;
+          ah.tG().mb();
+          aaG = false;
         }
-        ah.tF().setMode(0);
-        if (app != null) {
-          ab.j(new Runnable()
+        ah.tG().setMode(0);
+        aaD.nn();
+        if (aaH != null) {
+          ad.k(new Runnable()
           {
             public final void run()
             {
-              app.onError();
+              aaH.onError();
             }
           });
         }
       }
     };
-    if (api != null) {
-      api.a(local1);
+    if (aaA != null) {
+      aaA.a(local1);
     }
+  }
+  
+  public final void N(boolean paramBoolean)
+  {
+    if (aaB == paramBoolean) {
+      return;
+    }
+    aaB = paramBoolean;
+    if ((aaA != null) && (aaA.isPlaying())) {
+      aaA.N(paramBoolean);
+    }
+    ah.tG().b(paramBoolean, false);
   }
   
   public final void a(f.a parama)
   {
-    apq = parama;
+    aaI = parama;
   }
   
   public final void a(f.b paramb)
   {
-    app = paramb;
+    aaH = paramb;
   }
   
   public final boolean a(String paramString, boolean paramBoolean, int paramInt1, int paramInt2)
   {
-    u.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "start file name:[%s] speakerOn:[%b]", new Object[] { paramString, Boolean.valueOf(paramBoolean) });
-    ah.tF().a(this);
-    ah.tF().nL();
-    boolean bool;
-    int i;
-    if (paramString.length() > 0)
+    v.i("MicroMsg.SceneVoicePlayer", "start file name:[%s] speakerOn:[%b], isFullPath: %s, type: %s, userType: %s", new Object[] { paramString, Boolean.valueOf(paramBoolean), Boolean.valueOf(true), Integer.valueOf(paramInt1), Integer.valueOf(aaE) });
+    ah.tG().a(this);
+    ah.tG().ma();
+    if (paramString.length() > 0) {}
+    for (boolean bool = true;; bool = false)
     {
-      bool = true;
       Assert.assertTrue(bool);
-      i = paramInt1;
-      if (paramInt1 == -1) {
-        i = o.b(paramString, apm, true);
+      if (FileOp.aB(paramString)) {
+        break;
       }
-      if (i != 0) {
-        break label216;
+      v.e("MicroMsg.SceneVoicePlayer", "start, file %s not exist!, fullPath: %s", new Object[] { paramString, paramString });
+      return false;
+    }
+    int i = paramInt1;
+    if (paramInt1 == -1) {
+      i = o.b(paramString, aaE, true);
+    }
+    if (i == 0) {
+      if (context != null) {
+        aaA = new s((byte)0);
       }
-      if (context == null) {
-        break label202;
-      }
-      api = new s((byte)0);
     }
     for (;;)
     {
-      apj = paramBoolean;
-      apn = paramBoolean;
-      if ((ah.tF().nS()) || (ah.tF().nN())) {
-        apj = false;
+      aaB = paramBoolean;
+      aaF = paramBoolean;
+      if ((ah.tG().mi()) || (ah.tG().mc())) {
+        aaB = false;
       }
-      ak(apj);
-      lD();
+      N(aaB);
+      jN();
       setError();
-      if (api.c(paramString, paramBoolean, paramInt2)) {
-        break label306;
+      if (aaA.c(paramString, paramBoolean, paramInt2)) {
+        break;
       }
-      u.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "Start Record PlayError fileName[" + paramString + "], [" + paramBoolean + "]");
+      v.i("MicroMsg.SceneVoicePlayer", "start play fileName[" + paramString + "], [" + paramBoolean + "]");
       return false;
-      bool = false;
-      break;
-      label202:
-      api = new s();
+      aaA = new s();
       continue;
-      label216:
       if (i == 1)
       {
         if (context != null) {
-          api = new j(context);
+          aaA = new j(context);
         } else {
-          api = new j();
+          aaA = new j();
         }
       }
       else if (i == 2) {
         if (context != null) {
-          api = new i(context);
+          aaA = new i(context);
         } else {
-          api = new i();
+          aaA = new i();
         }
       }
     }
-    label306:
-    apl.requestFocus();
+    aaD.requestFocus();
     return true;
   }
   
   public final boolean a(String paramString, boolean paramBoolean1, boolean paramBoolean2, int paramInt)
   {
-    u.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "start file name:[%s] speakerOn:[%b]", new Object[] { paramString, Boolean.valueOf(paramBoolean1) });
-    ah.tF().a(this);
-    ah.tF().nL();
-    apo = true;
+    v.i("MicroMsg.SceneVoicePlayer", "start file name:[%s] speakerOn:[%b], isFullPath: %s, type: %s, userType: %s", new Object[] { paramString, Boolean.valueOf(paramBoolean1), Boolean.valueOf(paramBoolean2), Integer.valueOf(paramInt), Integer.valueOf(aaE) });
+    ah.tG().a(this);
+    ah.tG().ma();
+    aaG = true;
     boolean bool;
-    int i;
-    label101:
-    String str;
     if (paramString.length() > 0)
     {
       bool = true;
       Assert.assertTrue(bool);
-      i = paramInt;
-      if (paramInt == -1) {
-        i = o.b(paramString, apm, paramBoolean2);
-      }
-      if (i != 0) {
-        break label274;
-      }
-      if (context == null) {
-        break label260;
-      }
-      api = new s((byte)0);
-      apj = paramBoolean1;
-      apn = paramBoolean1;
-      if ((ah.tF().nS()) || (ah.tF().nN()))
-      {
-        u.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "headset plugged: %b, bluetoothon: %b", new Object[] { Boolean.valueOf(ah.tF().nS()), Boolean.valueOf(ah.tF().nN()) });
-        apj = false;
-      }
-      ah.tF().b(apj, false);
-      lD();
-      setError();
-      str = null;
       if (!paramBoolean2) {
-        break label364;
+        break label131;
       }
       str = paramString;
-    }
-    for (;;)
-    {
-      if (api.s(str, apj)) {
-        break label380;
+      label88:
+      if (FileOp.aB(str)) {
+        break label149;
       }
-      u.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "Start Record PlayError fileName[" + paramString + "], [" + paramBoolean1 + "]");
+      if (!paramBoolean2) {
+        break label140;
+      }
+    }
+    label131:
+    label140:
+    for (String str = paramString;; str = q.ic(paramString))
+    {
+      v.e("MicroMsg.SceneVoicePlayer", "start, file %s not exist!, fullPath: %s", new Object[] { paramString, str });
       return false;
       bool = false;
       break;
-      label260:
-      api = new s();
-      break label101;
-      label274:
+      str = q.ic(paramString);
+      break label88;
+    }
+    label149:
+    int i = paramInt;
+    if (paramInt == -1) {
+      i = o.b(paramString, aaE, paramBoolean2);
+    }
+    if (i == 0) {
+      if (context != null)
+      {
+        aaA = new s((byte)0);
+        aaB = paramBoolean1;
+        aaF = paramBoolean1;
+        if ((ah.tG().mi()) || (ah.tG().mc()))
+        {
+          v.i("MicroMsg.SceneVoicePlayer", "headset plugged: %b, bluetoothon: %b", new Object[] { Boolean.valueOf(ah.tG().mi()), Boolean.valueOf(ah.tG().mc()) });
+          aaB = false;
+        }
+        ah.tG().b(aaB, false);
+        jN();
+        setError();
+        str = null;
+        if (!paramBoolean2) {
+          break label451;
+        }
+        str = paramString;
+      }
+    }
+    for (;;)
+    {
+      if (aaA.w(str, aaB)) {
+        break label467;
+      }
+      v.i("MicroMsg.SceneVoicePlayer", "start play error fileName[" + paramString + "], [" + paramBoolean1 + "]");
+      return false;
+      aaA = new s();
+      break;
       if (i == 1)
       {
         if (context != null)
         {
-          api = new j(context);
-          break label101;
+          aaA = new j(context);
+          break;
         }
-        api = new j();
-        break label101;
+        aaA = new j();
+        break;
       }
       if (i != 2) {
-        break label101;
+        break;
       }
       if (context != null)
       {
-        api = new i(context);
-        break label101;
+        aaA = new i(context);
+        break;
       }
-      api = new i();
-      break label101;
-      label364:
-      if (apm == 0) {
-        str = q.hK(paramString);
+      aaA = new i();
+      break;
+      label451:
+      if (aaE == 0) {
+        str = q.ic(paramString);
       }
     }
-    label380:
-    apl.requestFocus();
+    label467:
+    aaD.requestFocus();
     return true;
   }
   
-  public final void aO(int paramInt)
+  public final void be(int paramInt)
   {
-    u.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "onBluetoothHeadsetStateChange, status: %d, currentSpeaker: %b, bluetoothResumeSpeaker: %b, isRequestStartBluetooth: %b", new Object[] { Integer.valueOf(paramInt), Boolean.valueOf(apj), Boolean.valueOf(apn), Boolean.valueOf(apo) });
+    v.i("MicroMsg.SceneVoicePlayer", "onBluetoothHeadsetStateChange, status: %d, currentSpeaker: %b, bluetoothResumeSpeaker: %b, isRequestStartBluetooth: %b", new Object[] { Integer.valueOf(paramInt), Boolean.valueOf(aaB), Boolean.valueOf(aaF), Boolean.valueOf(aaG) });
     switch (paramInt)
     {
     default: 
       return;
     case 1: 
-      ak(false);
+      N(false);
       return;
     }
-    ak(apn);
-    if (apo)
+    N(aaF);
+    if (aaG)
     {
-      ah.tF().nM();
-      apo = false;
+      ah.tG().mb();
+      aaG = false;
     }
-    ah.tF().b(this);
+    ah.tG().b(this);
   }
   
-  public final void ak(boolean paramBoolean)
-  {
-    if (apj == paramBoolean) {
-      return;
-    }
-    apj = paramBoolean;
-    if ((api != null) && (api.isPlaying())) {
-      api.ak(paramBoolean);
-    }
-    ah.tF().b(paramBoolean, false);
-  }
-  
-  public final boolean c(String paramString, boolean paramBoolean)
+  public final boolean f(String paramString, boolean paramBoolean)
   {
     return a(paramString, paramBoolean, false, -1);
   }
   
   public final boolean isPlaying()
   {
-    if (api == null) {
+    if (aaA == null) {
       return false;
     }
-    return api.isPlaying();
+    return aaA.isPlaying();
   }
   
-  public final boolean lB()
+  public final boolean jL()
   {
-    if (api == null) {
+    if (aaA == null) {
       return false;
     }
-    ah.tF().nL();
-    apo = true;
-    if (ah.tF().nN()) {
-      apj = false;
+    v.i("MicroMsg.SceneVoicePlayer", "resume");
+    ah.tG().ma();
+    aaG = true;
+    if (ah.tG().mc()) {
+      aaB = false;
     }
-    boolean bool = api.lB();
-    apl.requestFocus();
+    ah.tG().b(aaB, false);
+    boolean bool = aaA.jL();
+    aaD.requestFocus();
     return bool;
   }
   
-  public final boolean lC()
+  public final boolean jM()
   {
-    return apk;
+    return aaC;
   }
   
-  public final double lE()
+  public final double jO()
   {
-    if (api == null) {
+    if (aaA == null) {
       return 0.0D;
     }
-    return api.lE();
+    return aaA.jO();
   }
   
-  public final boolean lF()
+  public final boolean jP()
   {
-    if (api == null) {}
-    while (api.getStatus() != 2) {
+    if (aaA == null) {}
+    while (aaA.getStatus() != 2) {
       return false;
     }
     return true;
@@ -385,37 +399,38 @@ public final class a
   
   public final boolean pause()
   {
-    if (api == null) {
+    if (aaA == null) {
       return false;
     }
-    if (api.isPlaying()) {}
-    for (boolean bool = api.pause();; bool = false)
+    v.i("MicroMsg.SceneVoicePlayer", "pause");
+    if (aaA.isPlaying()) {}
+    for (boolean bool = aaA.pause();; bool = false)
     {
-      if (apo)
+      if (aaG)
       {
-        ah.tF().nM();
-        apo = false;
+        ah.tG().mb();
+        aaG = false;
       }
-      ah.tF().setMode(0);
-      apl.oV();
+      ah.tG().setMode(0);
+      aaD.nn();
       return bool;
     }
   }
   
   public final void stop()
   {
-    if (api == null) {
+    if (aaA == null) {
       return;
     }
-    u.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "stop, isRequestStartBluetooth: %b, player.isPlaying: %b", new Object[] { Boolean.valueOf(apo), Boolean.valueOf(api.isPlaying()) });
-    apl.oV();
-    api.lv();
-    ah.tF().b(this);
-    if (apo) {
-      ah.tF().nM();
+    v.i("MicroMsg.SceneVoicePlayer", "stop, isRequestStartBluetooth: %b, player.isPlaying: %b", new Object[] { Boolean.valueOf(aaG), Boolean.valueOf(aaA.isPlaying()) });
+    aaA.jW();
+    ah.tG().b(this);
+    if (aaG) {
+      ah.tG().mb();
     }
-    apo = false;
-    ah.tF().setMode(0);
+    aaG = false;
+    ah.tG().setMode(0);
+    aaD.nn();
   }
 }
 

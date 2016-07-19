@@ -13,7 +13,7 @@ final class LoginHistoryUI$24
   {
     if ((66 == paramInt) && (paramKeyEvent.getAction() == 0))
     {
-      ktx.Zi();
+      kSF.aby();
       return true;
     }
     return false;

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/friend/FindMContactAddUI;->Gb()V
+    value = Lcom/tencent/mm/ui/friend/FindMContactAddUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lrt:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+.field final synthetic lRX:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 296
-    iput-object p1, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$9;->lrt:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$9;->lRX:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
     const/4 v2, 0x0
 
     .line 300
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$9;->lrt:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$9;->lRX:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->f(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)Landroid/widget/Button;
 
@@ -52,7 +52,7 @@
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setVisibility(I)V
 
     .line 301
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$9;->lrt:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$9;->lRX:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->g(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)Landroid/widget/TextView;
 
@@ -63,16 +63,16 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 302
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$9;->lrt:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$9;->lRX:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->c(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)Lcom/tencent/mm/modelfriend/j;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/modelfriend/j;->aV(Z)V
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/modelfriend/j;->aB(Z)V
 
     .line 303
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$9;->lrt:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$9;->lRX:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->c(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)Lcom/tencent/mm/modelfriend/j;
 

@@ -11,19 +11,19 @@ final class SnsLabelUI$3
   
   public final boolean onChildClick(ExpandableListView paramExpandableListView, View paramView, int paramInt1, int paramInt2, long paramLong)
   {
-    if (paramInt2 == SnsLabelUI.a(hfA).getChildrenCount(paramInt1) - 1) {
-      SnsLabelUI.h(hfA);
+    if (paramInt2 == SnsLabelUI.a(hur).getChildrenCount(paramInt1) - 1) {
+      SnsLabelUI.h(hur);
     }
     for (;;)
     {
       return false;
-      paramExpandableListView = (String)SnsLabelUI.a(hfA).getChild(paramInt1, paramInt2);
-      SnsLabelUI.a(hfA);
-      ah.vS(paramExpandableListView);
+      paramExpandableListView = (String)SnsLabelUI.a(hur).getChild(paramInt1, paramInt2);
+      SnsLabelUI.a(hur);
+      al.xg(paramExpandableListView);
       if (paramInt1 == 2) {
-        SnsLabelUI.a(hfA, 1, ahfA).hfH, paramExpandableListView, paramView);
+        SnsLabelUI.a(hur, 1, ahur).huy, paramExpandableListView, paramView);
       } else if (paramInt1 == 3) {
-        SnsLabelUI.a(hfA, 2, ahfA).hfI, paramExpandableListView, paramView);
+        SnsLabelUI.a(hur, 2, ahur).huz, paramExpandableListView, paramView);
       }
     }
   }

@@ -11,11 +11,11 @@ final class ContactRemarkInfoModUI$14
   
   public final void onClick(View paramView)
   {
-    ContactRemarkInfoModUI.f(ljV);
-    ContactRemarkInfoModUI.a(ljV, false, paramView.getId());
-    ContactRemarkInfoModUI.g(ljV).performClick();
-    ContactRemarkInfoModUI.g(ljV).requestFocus();
-    ljV.apz();
+    ContactRemarkInfoModUI.f(lKg);
+    ContactRemarkInfoModUI.a(lKg, false, paramView.getId());
+    ContactRemarkInfoModUI.g(lKg).performClick();
+    ContactRemarkInfoModUI.g(lKg).requestFocus();
+    lKg.asv();
   }
 }
 

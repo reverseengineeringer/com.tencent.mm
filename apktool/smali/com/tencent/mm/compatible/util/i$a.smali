@@ -26,13 +26,13 @@
     .locals 0
 
     .prologue
-    .line 384
+    .line 441
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 385
+    .line 442
     iput-object p1, p0, Lcom/tencent/mm/compatible/util/i$a;->mParent:Ljava/lang/Thread$UncaughtExceptionHandler;
 
-    .line 386
+    .line 443
     return-void
 .end method
 
@@ -46,8 +46,8 @@
 
     const/4 v1, 0x0
 
-    .line 390
-    .line 391
+    .line 447
+    .line 448
     instance-of v2, p2, Ljava/lang/UnsatisfiedLinkError;
 
     if-nez v2, :cond_0
@@ -71,21 +71,21 @@
     :cond_0
     move v2, v0
 
-    .line 395
+    .line 452
     :goto_0
     if-eqz v2, :cond_3
 
-    .line 396
+    .line 453
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/compatible/util/i;->pd()V
+    invoke-static {}, Lcom/tencent/mm/compatible/util/i;->nv()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 399
+    .line 456
     :goto_1
     if-eqz v0, :cond_1
 
-    .line 400
+    .line 457
     new-instance v0, Ljava/lang/UnsatisfiedLinkError;
 
     const-string/jumbo v1, "Invalid JNI libraries detected and recovered."
@@ -96,19 +96,19 @@
 
     move-result-object p2
 
-    .line 401
+    .line 458
     :cond_1
     iget-object v0, p0, Lcom/tencent/mm/compatible/util/i$a;->mParent:Ljava/lang/Thread$UncaughtExceptionHandler;
 
     invoke-interface {v0, p1, p2}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
 
-    .line 402
+    .line 459
     return-void
 
     :cond_2
     move v2, v1
 
-    .line 391
+    .line 448
     goto :goto_0
 
     :catch_0

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ksk:Lcom/tencent/mm/ui/account/FacebookAuthUI;
+.field final synthetic kRs:Lcom/tencent/mm/ui/account/FacebookAuthUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 186
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookAuthUI$4;->ksk:Lcom/tencent/mm/ui/account/FacebookAuthUI;
+    .line 187
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookAuthUI$4;->kRs:Lcom/tencent/mm/ui/account/FacebookAuthUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,6 +40,6 @@
     .locals 0
 
     .prologue
-    .line 189
+    .line 190
     return-void
 .end method

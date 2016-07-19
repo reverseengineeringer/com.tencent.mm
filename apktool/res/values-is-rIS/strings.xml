@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">%1$s krefst uppfærslu á Android Wear forritinu.</string>
+    <string name="b">%1$s getur ekki keyrt nema þú uppfærir Android Wear forritið.</string>
+    <string name="c">Uppfærðu Android Wear</string>
+    <string name="d">%1$s krefst einhverrar Google Play þjónustu sem ekki er tiltæk sem stendur. Hafðu samband við þróunaraðilann til að fá aðstoð.</string>
+    <string name="e">Virkja þjónustu Google Play</string>
+    <string name="f">%1$s virkar ekki nema þú gerir þjónustu Google Play virka.</string>
+    <string name="g">Virkja þjónustu Google Play</string>
+    <string name="h">%1$s bað um</string>
+    <string name="i">Sækja þjónustu Google Play</string>
+    <string name="j">%1$s getur ekki keyrt án þjónustu Google Play, sem vantar í símann þinn.</string>
+    <string name="k">%1$s getur ekki keyrt án þjónustu Google Play, sem vantar í spjaldtölvuna þína.</string>
+    <string name="l">Sækja þjónustu Google Play</string>
+    <string name="m">Tilgreindur reikningur er ekki til staðar í þessu tæki. Veldu annan reikning.</string>
+    <string name="n">Ógildur reikningur</string>
+    <string name="o">Forrit krefst þess að þjónusta Google Play sé virk.</string>
+    <string name="p">Gagnatengingar er krafist til að tengjast þjónustu Google Play.</string>
+    <string name="q">Netvilla</string>
+    <string name="r">Forrit krefst þess að þjónusta Google Play sé uppfærð.</string>
+    <string name="s">Villa í þjónustu Google Play</string>
+    <string name="t">Villa við að skrá tilgreindan reikning inn. Veldu annan reikning.</string>
+    <string name="u">Innskráning mistókst</string>
+    <string name="v">Óþekkt vandamál með þjónustu Google Play.</string>
+    <string name="w">%1$s reiðir sig á þjónustu Google Play, sem er ekki studd í tækinu þínu. Hafðu samband við framleiðandann til að fá aðstoð.</string>
+    <string name="x">Þjónusta Google Play</string>
+    <string name="y">Uppfæra</string>
+    <string name="z">%1$s getur ekki keyrt nema þú uppfærir þjónustu Google Play.</string>
+    <string name="a0">Uppfæra þjónustu Google Play</string>
+    <string name="a1">%1$s getur ekki keyrt án þjónustu Google Play, sem verið er að uppfæra.</string>
+    <string name="a2">Verið er að uppfæra þjónustu Google Play</string>
+    <string name="a3">Opna í símanum</string>
+    <string name="a4">Skrá inn</string>
+    <string name="a5">Skrá inn með Google</string>
+</resources>

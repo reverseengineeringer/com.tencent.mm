@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <item type="layout" name="qa">r/x/qa.xml</item>
-    <item type="layout" name="qb">r/x/qb.xml</item>
-    <item type="layout" name="a0j">r/x/a0j.xml</item>
-    <item type="layout" name="afn">r/x/afn.xml</item>
-    <item type="layout" name="afo">r/x/afo.xml</item>
-</resources>

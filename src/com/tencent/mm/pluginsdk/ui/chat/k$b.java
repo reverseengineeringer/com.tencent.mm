@@ -2,13 +2,13 @@ package com.tencent.mm.pluginsdk.ui.chat;
 
 public final class k$b
 {
-  public String aFT;
-  public String aGj;
-  public String alS;
+  public String YH;
   public String appId;
-  public int asc;
-  public int iMt;
-  public String iMu;
+  public String arZ;
+  public String asp;
+  public int jjq;
+  public String jjr;
+  public int scene;
 }
 
 /* Location:

@@ -3,14 +3,14 @@ package oicq.wlogin_sdk.a;
 public final class ah
   extends a
 {
-  public int mcV = 0;
+  public int mOZ = 0;
   
   public ah()
   {
-    mbE = 325;
+    mNI = 325;
   }
   
-  public final byte[] bs(byte[] paramArrayOfByte)
+  public final byte[] bA(byte[] paramArrayOfByte)
   {
     if (paramArrayOfByte != null) {}
     for (int i = paramArrayOfByte.length + 0;; i = 0)
@@ -19,11 +19,11 @@ public final class ah
       if (arrayOfByte.length > 0) {
         System.arraycopy(paramArrayOfByte, 0, arrayOfByte, 0, i);
       }
-      mcV = arrayOfByte.length;
-      super.sL(mbE);
-      super.A(arrayOfByte, arrayOfByte.length);
-      super.bos();
-      return super.boo();
+      mOZ = arrayOfByte.length;
+      super.vE(mNI);
+      super.B(arrayOfByte, arrayOfByte.length);
+      super.bvq();
+      return super.bvm();
     }
   }
 }

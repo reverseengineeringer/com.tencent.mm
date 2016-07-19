@@ -14,19 +14,19 @@ final class c$a
   {
     int i = 0;
     Filter.FilterResults localFilterResults = new Filter.FilterResults();
-    if (c.a(krN) == null) {}
-    synchronized (c.b(krN))
+    if (c.a(kQV) == null) {}
+    synchronized (c.b(kQV))
     {
-      c.a(krN, new ArrayList(c.c(krN)));
+      c.a(kQV, new ArrayList(c.c(kQV)));
       if (??? != null) {
         if (???.length() != 0) {
           break label132;
         }
       }
     }
-    synchronized (c.b(krN))
+    synchronized (c.b(kQV))
     {
-      ??? = new ArrayList(c.a(krN));
+      ??? = new ArrayList(c.a(kQV));
       values = ???;
       count = ((ArrayList)???).size();
       return localFilterResults;
@@ -37,18 +37,18 @@ final class c$a
     ??? = ???.toString().toLowerCase();
     Object localObject3;
     String str1;
-    if ((c.d(krN) != null) && (c.d(krN).length() > 0))
+    if ((c.d(kQV) != null) && (c.d(kQV).length() > 0))
     {
-      localObject3 = ???.split(c.d(krN));
+      localObject3 = ???.split(c.d(kQV));
       if ((localObject3 != null) && (localObject3.length > 1))
       {
-        str1 = localObject3[0] + c.d(krN);
+        str1 = localObject3[0] + c.d(kQV);
         ??? = localObject3[1];
       }
     }
     for (;;)
     {
-      localObject3 = c.a(krN);
+      localObject3 = c.a(kQV);
       int j = ((ArrayList)localObject3).size();
       ArrayList localArrayList = new ArrayList(j);
       while (i < j)
@@ -68,13 +68,13 @@ final class c$a
   
   protected final void publishResults(CharSequence paramCharSequence, Filter.FilterResults paramFilterResults)
   {
-    c.a(krN, (List)values);
+    c.a(kQV, (List)values);
     if (count > 0)
     {
-      krN.notifyDataSetChanged();
+      kQV.notifyDataSetChanged();
       return;
     }
-    krN.notifyDataSetInvalidated();
+    kQV.notifyDataSetInvalidated();
   }
 }
 

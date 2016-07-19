@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract ic(Z)V
+.method public abstract iG(Z)V
 .end method

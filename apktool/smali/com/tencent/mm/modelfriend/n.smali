@@ -4,86 +4,18 @@
 
 
 # direct methods
-.method public static aM(Landroid/content/Context;)Z
-    .locals 4
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 133
-    new-instance v1, Landroid/content/Intent;
-
-    const-string/jumbo v2, "com.google.android.gms.common.account.CHOOSE_ACCOUNT"
-
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 134
-    new-instance v2, Landroid/content/Intent;
-
-    const-string/jumbo v3, "com.tencent.mm.gms.ACTION_CHOOSE_ACCOUNT"
-
-    invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 135
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v2, v0}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1, v0}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    .line 136
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0x8
-
-    if-lt v1, v2, :cond_0
-
-    .line 138
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1, v0}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "googleauth"
-
-    invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    .line 139
-    if-eqz v1, :cond_1
-
-    .line 148
-    :cond_0
-    :goto_0
-    return v0
-
-    .line 142
-    :cond_1
-    const/4 v0, 0x1
-
-    goto :goto_0
-.end method
-
-.method public static w(Ljava/util/List;)Ljava/lang/String;
+.method public static B(Ljava/util/List;)Ljava/lang/String;
     .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lorg/apache/http/NameValuePair;",
+            ">;)",
+            "Ljava/lang/String;"
+        }
+    .end annotation
 
     .prologue
     .line 101
@@ -190,16 +122,94 @@
     return-object v0
 .end method
 
-.method public static yL()Z
+.method public static aJ(Landroid/content/Context;)Z
+    .locals 4
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 133
+    new-instance v1, Landroid/content/Intent;
+
+    const-string/jumbo v2, "com.google.android.gms.common.account.CHOOSE_ACCOUNT"
+
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .line 134
+    new-instance v2, Landroid/content/Intent;
+
+    const-string/jumbo v3, "com.tencent.mm.gms.ACTION_CHOOSE_ACCOUNT"
+
+    invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .line 135
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2, v0}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1, v0}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    .line 136
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x8
+
+    if-lt v1, v2, :cond_0
+
+    .line 138
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1, v0}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "googleauth"
+
+    invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    .line 139
+    if-eqz v1, :cond_1
+
+    .line 148
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 142
+    :cond_1
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method
+
+.method public static yY()Z
     .locals 3
 
     .prologue
     .line 70
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 

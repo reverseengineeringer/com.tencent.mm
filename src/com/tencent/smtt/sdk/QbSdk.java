@@ -18,16 +18,11 @@ import android.os.Looper;
 import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
-import android.webkit.CookieManager;
-import android.webkit.CookieSyncManager;
-import android.webkit.WebIconDatabase;
-import android.webkit.WebStorage;
-import android.webkit.WebViewDatabase;
 import android.widget.Toast;
-import com.tencent.smtt.a.r;
-import com.tencent.smtt.a.s;
 import com.tencent.smtt.export.external.DexLoader;
-import com.tencent.smtt.sdk.a.c;
+import com.tencent.smtt.utils.TbsLog;
+import com.tencent.smtt.utils.e;
+import com.tencent.smtt.utils.s;
 import dalvik.system.DexClassLoader;
 import java.io.File;
 import java.lang.reflect.Constructor;
@@ -40,87 +35,89 @@ public class QbSdk
 {
   public static final String LOGIN_TYPE_KEY_PARTNER_CALL_POS = "PosID";
   public static final String LOGIN_TYPE_KEY_PARTNER_ID = "ChannelID";
-  public static final int SVNVERSION = 332159;
+  public static final String PARAM_KEY_FEATUREID = "param_key_featureid";
+  public static final String PARAM_KEY_FUNCTIONID = "param_key_functionid";
+  public static final String PARAM_KEY_POSITIONID = "param_key_positionid";
+  public static final int SVNVERSION = 381760;
   public static final String TID_QQNumber_Prefix = "QQ:";
   public static final int VERSION = 1;
-  private static int lRg;
-  private static String lRh;
-  private static Class lRi;
-  private static Object lRj;
-  static boolean lRk;
-  static boolean lRl;
-  private static boolean lRm;
-  private static String[] lRn;
-  private static String lRo;
-  private static String lRp;
-  static volatile boolean lRq;
-  private static boolean lRr;
-  private static n lRs;
-  private static boolean lRt = false;
-  private static boolean lRu = false;
-  static n lRv = new n()
+  public static boolean mTbsDebugInstallOnline = false;
+  public static n mTbsListenerDebug;
+  private static int msT;
+  private static String msU;
+  private static Class<?> msV;
+  private static Object msW;
+  static boolean msX;
+  static boolean msY;
+  private static boolean msZ;
+  private static String[] mta;
+  private static String mtb;
+  private static String mtc;
+  static volatile boolean mtd;
+  private static boolean mte;
+  private static n mtf;
+  private static boolean mtg = false;
+  private static boolean mth = false;
+  static n mti = new n()
   {
-    public final void onDownloadFinish(int paramAnonymousInt)
+    public final void qW(int paramAnonymousInt)
     {
-      k.lSz = false;
-      if (QbSdk.bll() != null) {
-        QbSdk.bll().onDownloadFinish(paramAnonymousInt);
+      k.mup = false;
+      if (QbSdk.brp() != null) {
+        QbSdk.brp().qW(paramAnonymousInt);
       }
       if (QbSdk.mTbsListenerDebug != null) {
-        QbSdk.mTbsListenerDebug.onDownloadFinish(paramAnonymousInt);
+        QbSdk.mTbsListenerDebug.qW(paramAnonymousInt);
       }
     }
     
-    public final void onDownloadProgress(int paramAnonymousInt)
-    {
-      if (QbSdk.mTbsListenerDebug != null) {
-        QbSdk.mTbsListenerDebug.onDownloadProgress(paramAnonymousInt);
-      }
-      if (QbSdk.bll() != null) {
-        QbSdk.bll().onDownloadProgress(paramAnonymousInt);
-      }
-    }
-    
-    public final void onInstallFinish(int paramAnonymousInt)
+    public final void qX(int paramAnonymousInt)
     {
       QbSdk.setTBSInstallingStatus(false);
-      k.lSz = false;
-      if (QbSdk.bll() != null) {
-        QbSdk.bll().onInstallFinish(paramAnonymousInt);
+      k.mup = false;
+      if (QbSdk.brp() != null) {
+        QbSdk.brp().qX(paramAnonymousInt);
       }
       if (QbSdk.mTbsListenerDebug != null) {
-        QbSdk.mTbsListenerDebug.onInstallFinish(paramAnonymousInt);
+        QbSdk.mTbsListenerDebug.qX(paramAnonymousInt);
+      }
+    }
+    
+    public final void qY(int paramAnonymousInt)
+    {
+      if (QbSdk.mTbsListenerDebug != null) {
+        QbSdk.mTbsListenerDebug.qY(paramAnonymousInt);
+      }
+      if (QbSdk.brp() != null) {
+        QbSdk.brp().qY(paramAnonymousInt);
       }
     }
   };
-  public static boolean mTbsDebugInstallOnline;
-  public static n mTbsListenerDebug;
   public static boolean sIsVersionPrinted = false;
   
   static
   {
-    lRh = "";
-    lRk = false;
-    lRl = false;
-    lRm = false;
-    lRo = null;
-    lRp = null;
-    lRq = lRk;
-    lRr = true;
-    lRs = null;
+    msU = "";
+    msX = false;
+    msY = false;
+    msZ = false;
+    mtb = null;
+    mtc = null;
+    mtd = msX;
+    mte = true;
+    mtf = null;
     mTbsListenerDebug = null;
-    mTbsDebugInstallOnline = false;
   }
   
-  static boolean M(Context paramContext, int paramInt)
+  static boolean R(Context paramContext, int paramInt)
   {
-    if (eM(paramContext))
+    if (eQ(paramContext))
     {
-      paramContext = com.tencent.smtt.a.m.a(lRj, "isX5Disabled", new Class[] { Integer.TYPE, Integer.TYPE, Integer.TYPE }, new Object[] { Integer.valueOf(paramInt), Integer.valueOf(25434), Integer.valueOf(20000) });
+      paramContext = com.tencent.smtt.utils.n.a(msW, "isX5Disabled", new Class[] { Integer.TYPE, Integer.TYPE, Integer.TYPE }, new Object[] { Integer.valueOf(paramInt), Integer.valueOf(26508), Integer.valueOf(20000) });
       if (paramContext != null) {
         return ((Boolean)paramContext).booleanValue();
       }
-      paramContext = com.tencent.smtt.a.m.a(lRj, "isX5Disabled", new Class[] { Integer.TYPE, Integer.TYPE }, new Object[] { Integer.valueOf(paramInt), Integer.valueOf(25434) });
+      paramContext = com.tencent.smtt.utils.n.a(msW, "isX5Disabled", new Class[] { Integer.TYPE, Integer.TYPE }, new Object[] { Integer.valueOf(paramInt), Integer.valueOf(26508) });
       if (paramContext != null) {
         return ((Boolean)paramContext).booleanValue();
       }
@@ -128,30 +125,30 @@ public class QbSdk
     return true;
   }
   
-  static Bundle b(Context paramContext, Bundle paramBundle)
+  static void brn()
   {
-    if (!eL(paramContext))
+    msX = true;
+    TbsLog.e("QbSdk", "sys WebView: SysWebViewForcedInner");
+  }
+  
+  static String bro()
+  {
+    return msU;
+  }
+  
+  static Bundle c(Context paramContext, Bundle paramBundle)
+  {
+    if (!eP(paramContext))
     {
-      o.fp(paramContext).al(216, "initForPatch return false!");
+      o.fp(paramContext).av(216, "initForPatch return false!");
       return null;
     }
-    paramBundle = com.tencent.smtt.a.m.a(lRj, "incrUpdate", new Class[] { Context.class, Bundle.class }, new Object[] { paramContext, paramBundle });
+    paramBundle = com.tencent.smtt.utils.n.a(msW, "incrUpdate", new Class[] { Context.class, Bundle.class }, new Object[] { paramContext, paramBundle });
     if (paramBundle != null) {
       return (Bundle)paramBundle;
     }
-    o.fp(paramContext).al(216, "incrUpdate return null!");
+    o.fp(paramContext).av(216, "incrUpdate return null!");
     return null;
-  }
-  
-  static void blj()
-  {
-    lRk = true;
-    r.e("QbSdk", "sys WebView: SysWebViewForcedInner");
-  }
-  
-  static String blk()
-  {
-    return lRh;
   }
   
   static boolean c(Context paramContext, boolean paramBoolean1, boolean paramBoolean2)
@@ -160,176 +157,239 @@ public class QbSdk
     boolean bool2 = false;
     boolean bool1 = false;
     paramBoolean1 = false;
-    if ((q.fr(paramContext)) && (!q.fA(paramContext)))
+    if ((q.fr(paramContext)) && (!q.fB(paramContext)))
     {
-      h.bly().N(paramContext, 302);
+      h.brC().S(paramContext, 302);
       paramBoolean2 = paramBoolean1;
+      label37:
       return paramBoolean2;
     }
     if (!m(paramContext, false))
     {
-      r.e("loaderror", "315");
+      TbsLog.e("loaderror", "315");
       return false;
     }
-    Object localObject = com.tencent.smtt.a.m.a(lRj, "canLoadX5Core", new Class[] { Integer.TYPE }, new Object[] { Integer.valueOf(25434) });
-    label162:
+    Object localObject1 = com.tencent.smtt.utils.n.a(msW, "canLoadX5Core", new Class[] { Integer.TYPE }, new Object[] { Integer.valueOf(26508) });
+    int k;
+    label201:
     String str;
-    if (localObject != null)
+    if (localObject1 != null)
     {
-      if (((localObject instanceof String)) && (((String)localObject).equalsIgnoreCase("AuthenticationFail")))
+      if (((localObject1 instanceof String)) && (((String)localObject1).equalsIgnoreCase("AuthenticationFail")))
       {
         if (!paramBoolean2) {
           Toast.makeText(paramContext, "Authentication fail, use sys webview, please contact tencent ", 1).show();
         }
-        r.e("loaderror", "317");
+        TbsLog.e("loaderror", "317");
         return false;
       }
-      localObject = (Bundle)localObject;
-      int k = ((Bundle)localObject).getInt("result_code", -1);
+      if (!(localObject1 instanceof Bundle))
+      {
+        h.brC().a(paramContext, 330, new Throwable(String.valueOf(localObject1)));
+        TbsLog.e("loaderror", "ret not instance of bundle");
+        return false;
+      }
+      localObject1 = (Bundle)localObject1;
+      k = ((Bundle)localObject1).getInt("result_code", -1);
       if (k == 0)
       {
         paramBoolean1 = true;
         if (!q.fr(paramContext)) {
-          break label293;
+          break label333;
         }
-        d.so(q.ft(paramContext));
+        d.ut(q.ft(paramContext));
         str = String.valueOf(q.ft(paramContext));
-        lRh = str;
+        msU = str;
         if (str.length() == 5) {
-          lRh = "0" + lRh;
+          msU = "0" + msU;
         }
-        if (lRh.length() != 6) {
-          lRh = "";
-        }
-        lRn = ((Bundle)localObject).getStringArray("tbs_jarfiles");
-        switch (k)
-        {
+        if (msU.length() != 6) {
+          msU = "";
         }
       }
     }
     for (;;)
     {
-      paramBoolean2 = paramBoolean1;
-      if (paramBoolean1) {
-        break;
+      label333:
+      int i;
+      try
+      {
+        mta = ((Bundle)localObject1).getStringArray("tbs_jarfiles");
+        switch (k)
+        {
+        default: 
+          paramBoolean2 = paramBoolean1;
+          if (paramBoolean1) {
+            break label37;
+          }
+          TbsLog.e("loaderror", "319");
+          return paramBoolean1;
+        }
       }
-      r.e("loaderror", "319");
-      return paramBoolean1;
+      catch (Throwable localThrowable)
+      {
+        h.brC().a(paramContext, 329, localThrowable);
+        return false;
+      }
       paramBoolean1 = false;
-      break label162;
-      label293:
+      break label201;
       if (Build.VERSION.SDK_INT >= 12) {
-        lRh = ((Bundle)localObject).getString("tbs_core_version", "0");
+        msU = ((Bundle)localObject1).getString("tbs_core_version", "0");
       }
       try
       {
-        for (;;)
+        msT = Integer.parseInt(msU);
+        d.ut(msT);
+        if (msT > 0)
         {
-          lRg = Integer.parseInt(lRh);
-          d.so(lRg);
-          if (lRg > 0)
-          {
-            i = j;
-            if (lRg <= 25438) {}
-          }
-          else
-          {
-            if (lRg != 25472) {
-              break label431;
-            }
-            i = j;
-          }
-          if (i == 0) {
-            break;
-          }
-          m.blT();
-          com.tencent.smtt.a.d.u(m.fj(paramContext));
-          h.bly().N(paramContext, 307);
-          r.e("loaderror", "is_obsolete -- delete 319");
-          return false;
-          str = ((Bundle)localObject).getString("tbs_core_version");
-          lRh = str;
-          if (str == null) {
-            lRh = "0";
-          }
+          i = j;
+          if (msT <= 25438) {}
         }
+        else
+        {
+          if (msT != 25472) {
+            continue;
+          }
+          i = j;
+        }
+        if (i == 0) {
+          continue;
+        }
+        m.brX();
+        e.v(m.b(null, paramContext));
+        h.brC().S(paramContext, 307);
+        TbsLog.e("loaderror", "is_obsolete -- delete 319");
+        return false;
+        str = ((Bundle)localObject1).getString("tbs_core_version");
+        msU = str;
+        if (str != null) {
+          continue;
+        }
+        msU = "0";
+        continue;
       }
       catch (NumberFormatException localNumberFormatException)
       {
-        for (;;)
-        {
-          lRg = 0;
-          continue;
-          label431:
-          i = 0;
+        msT = 0;
+        continue;
+        i = 0;
+        continue;
+      }
+      Object localObject3;
+      try
+      {
+        Object localObject2 = com.tencent.smtt.utils.n.a(msW, "getErrorCodeForLogReport", new Class[0], new Object[0]);
+        if (((localObject2 instanceof Integer)) && (((Integer)localObject2).intValue() != -1)) {
+          h.brC().S(paramContext, ((Integer)localObject2).intValue());
         }
       }
-      h.bly().N(paramContext, 307);
-      continue;
-      h.bly().N(paramContext, 404);
-      continue;
-      localObject = lRj;
-      Class localClass = Integer.TYPE;
-      int i = a.blh();
-      localObject = com.tencent.smtt.a.m.a(localObject, "canLoadX5", new Class[] { localClass }, new Object[] { Integer.valueOf(i) });
-      if (localObject != null)
+      catch (Exception localException)
       {
-        if (((localObject instanceof String)) && (((String)localObject).equalsIgnoreCase("AuthenticationFail")))
+        for (;;)
         {
-          if (!paramBoolean2) {
-            Toast.makeText(paramContext, "Authentication fail, use sys webview, please contact tencent ", 1).show();
+          localObject3 = null;
+        }
+        h.brC().S(paramContext, 307);
+      }
+      continue;
+      if (q.fr(paramContext))
+      {
+        h.brC().S(paramContext, 404);
+        continue;
+        localObject3 = msW;
+        Class localClass = Integer.TYPE;
+        i = a.brl();
+        localObject3 = com.tencent.smtt.utils.n.a(localObject3, "canLoadX5", new Class[] { localClass }, new Object[] { Integer.valueOf(i) });
+        if (localObject3 != null)
+        {
+          if (((localObject3 instanceof String)) && (((String)localObject3).equalsIgnoreCase("AuthenticationFail")))
+          {
+            if (!paramBoolean2) {
+              Toast.makeText(paramContext, "Authentication fail, use sys webview, please contact tencent ", 1).show();
+            }
+            TbsLog.e("loaderror", "317");
+            return false;
           }
-          r.e("loaderror", "317");
-          return false;
-        }
-        paramBoolean1 = bool2;
-        if (!(localObject instanceof Boolean)) {
-          continue;
-        }
-        bool2 = d.eO(paramContext);
-        boolean bool3 = M(paramContext, d.blo());
-        lRg = d.blo();
-        paramBoolean1 = bool1;
-        if (((Boolean)localObject).booleanValue())
-        {
+          paramBoolean1 = bool2;
+          if (!(localObject3 instanceof Boolean)) {
+            continue;
+          }
+          bool2 = R(paramContext, d.brs());
+          msT = d.brs();
           paramBoolean1 = bool1;
-          if (bool2)
+          if (((Boolean)localObject3).booleanValue())
           {
             paramBoolean1 = bool1;
-            if (!bool3) {
+            if (!bool2) {
               paramBoolean1 = true;
             }
           }
+          paramBoolean2 = paramBoolean1;
+          if (paramBoolean1) {
+            break;
+          }
+          TbsLog.e("loaderror", "318");
+          TbsLog.w("loaderror", "isX5Disable:" + bool2);
+          TbsLog.w("loaderror", "(Boolean) ret:" + (Boolean)localObject3);
+          return paramBoolean1;
         }
-        paramBoolean2 = paramBoolean1;
-        if (paramBoolean1) {
-          break;
-        }
-        r.e("loaderror", "318");
-        r.w("loaderror", "isSupportable:" + bool2);
-        r.w("loaderror", "isX5Disable:" + bool3);
-        r.w("loaderror", "(Boolean) ret:" + (Boolean)localObject);
-        return paramBoolean1;
+        h.brC().S(paramContext, 308);
+        paramBoolean1 = bool2;
       }
-      h.bly().N(paramContext, 308);
-      paramBoolean1 = bool2;
     }
   }
   
   public static boolean canLoadVideo(Context paramContext)
   {
-    Object localObject = com.tencent.smtt.a.m.a(lRj, "canLoadVideo", new Class[] { Integer.TYPE }, new Object[] { Integer.valueOf(0) });
+    Object localObject = com.tencent.smtt.utils.n.a(msW, "canLoadVideo", new Class[] { Integer.TYPE }, new Object[] { Integer.valueOf(0) });
     if (localObject != null) {
       if (!((Boolean)localObject).booleanValue()) {
-        h.bly().N(paramContext, 313);
+        h.brC().S(paramContext, 313);
       }
     }
     while (localObject == null)
     {
       return false;
-      h.bly().N(paramContext, 314);
+      h.brC().S(paramContext, 314);
     }
     return ((Boolean)localObject).booleanValue();
+  }
+  
+  public static void canOpenFile(Context paramContext, final String paramString, final u<Boolean> paramu)
+  {
+    new Thread()
+    {
+      public final void run()
+      {
+        Object localObject = d.jb(true);
+        ((d)localObject).init(val$context);
+        final boolean bool;
+        if (((d)localObject).brr())
+        {
+          localObject = ((d)localObject).brq();
+          Context localContext = val$context;
+          String str = paramString;
+          localObject = mvz.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "canOpenFile", new Class[] { Context.class, String.class }, new Object[] { localContext, str });
+          if ((localObject instanceof Boolean)) {
+            bool = ((Boolean)localObject).booleanValue();
+          }
+        }
+        for (;;)
+        {
+          new Handler(Looper.getMainLooper()).post(new Runnable()
+          {
+            public final void run()
+            {
+              mtj.onReceiveValue(Boolean.valueOf(bool));
+            }
+          });
+          return;
+          bool = false;
+          continue;
+          bool = false;
+        }
+      }
+    }.start();
   }
   
   public static boolean canOpenMimeFileType(Context paramContext, String paramString)
@@ -340,7 +400,7 @@ public class QbSdk
   
   public static boolean canUseVideoFeatrue(Context paramContext, int paramInt)
   {
-    paramContext = com.tencent.smtt.a.m.a(lRj, "canUseVideoFeatrue", new Class[] { Integer.TYPE }, new Object[] { Integer.valueOf(paramInt) });
+    paramContext = com.tencent.smtt.utils.n.a(msW, "canUseVideoFeatrue", new Class[] { Integer.TYPE }, new Object[] { Integer.valueOf(paramInt) });
     if ((paramContext != null) && ((paramContext instanceof Boolean))) {
       return ((Boolean)paramContext).booleanValue();
     }
@@ -349,38 +409,271 @@ public class QbSdk
   
   public static void clear(Context paramContext) {}
   
-  public static void clearAllWebViewCache(Context paramContext)
+  /* Error */
+  public static void clearAllWebViewCache(Context paramContext, boolean paramBoolean)
   {
-    try
-    {
-      new android.webkit.WebView(paramContext).clearCache(true);
-      CookieSyncManager.createInstance(paramContext);
-      CookieManager.getInstance().removeAllCookie();
-      WebViewDatabase.getInstance(paramContext).clearUsernamePassword();
-      WebViewDatabase.getInstance(paramContext).clearHttpAuthUsernamePassword();
-      WebViewDatabase.getInstance(paramContext).clearFormData();
-      WebStorage.getInstance().deleteAllData();
-      WebIconDatabase.getInstance().removeAllIcons();
-    }
-    catch (Throwable localThrowable)
-    {
-      for (;;)
-      {
-        try
-        {
-          if (new WebView(paramContext).getWebViewClientExtension() != null)
-          {
-            d locald = d.is(false);
-            if ((locald != null) && (locald.bln())) {
-              blmmDexLoader.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "clearAllCache", new Class[] { Context.class }, new Object[] { paramContext });
-            }
-          }
-          return;
-        }
-        catch (Throwable paramContext) {}
-        localThrowable = localThrowable;
-        r.e("QbSdk", "clearAllWebViewCache exception 1 -- " + Log.getStackTraceString(localThrowable));
-      }
+    // Byte code:
+    //   0: new 383	android/webkit/WebView
+    //   3: dup
+    //   4: aload_0
+    //   5: invokespecial 385	android/webkit/WebView:<init>	(Landroid/content/Context;)V
+    //   8: iconst_1
+    //   9: invokevirtual 389	android/webkit/WebView:clearCache	(Z)V
+    //   12: iload_1
+    //   13: ifeq +14 -> 27
+    //   16: aload_0
+    //   17: invokestatic 395	android/webkit/CookieSyncManager:createInstance	(Landroid/content/Context;)Landroid/webkit/CookieSyncManager;
+    //   20: pop
+    //   21: invokestatic 401	android/webkit/CookieManager:getInstance	()Landroid/webkit/CookieManager;
+    //   24: invokevirtual 404	android/webkit/CookieManager:removeAllCookie	()V
+    //   27: aload_0
+    //   28: invokestatic 409	android/webkit/WebViewDatabase:getInstance	(Landroid/content/Context;)Landroid/webkit/WebViewDatabase;
+    //   31: invokevirtual 412	android/webkit/WebViewDatabase:clearUsernamePassword	()V
+    //   34: aload_0
+    //   35: invokestatic 409	android/webkit/WebViewDatabase:getInstance	(Landroid/content/Context;)Landroid/webkit/WebViewDatabase;
+    //   38: invokevirtual 415	android/webkit/WebViewDatabase:clearHttpAuthUsernamePassword	()V
+    //   41: aload_0
+    //   42: invokestatic 409	android/webkit/WebViewDatabase:getInstance	(Landroid/content/Context;)Landroid/webkit/WebViewDatabase;
+    //   45: invokevirtual 418	android/webkit/WebViewDatabase:clearFormData	()V
+    //   48: invokestatic 423	android/webkit/WebStorage:getInstance	()Landroid/webkit/WebStorage;
+    //   51: invokevirtual 426	android/webkit/WebStorage:deleteAllData	()V
+    //   54: invokestatic 431	android/webkit/WebIconDatabase:getInstance	()Landroid/webkit/WebIconDatabase;
+    //   57: invokevirtual 434	android/webkit/WebIconDatabase:removeAllIcons	()V
+    //   60: new 436	com/tencent/smtt/sdk/WebView
+    //   63: dup
+    //   64: aload_0
+    //   65: invokespecial 437	com/tencent/smtt/sdk/WebView:<init>	(Landroid/content/Context;)V
+    //   68: invokevirtual 441	com/tencent/smtt/sdk/WebView:getWebViewClientExtension	()Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewClientExtension;
+    //   71: ifnull +59 -> 130
+    //   74: iconst_0
+    //   75: invokestatic 445	com/tencent/smtt/sdk/d:jb	(Z)Lcom/tencent/smtt/sdk/d;
+    //   78: astore_2
+    //   79: aload_2
+    //   80: ifnull +50 -> 130
+    //   83: aload_2
+    //   84: invokevirtual 448	com/tencent/smtt/sdk/d:brr	()Z
+    //   87: ifeq +43 -> 130
+    //   90: aload_2
+    //   91: invokevirtual 452	com/tencent/smtt/sdk/d:brq	()Lcom/tencent/smtt/sdk/t;
+    //   94: astore_2
+    //   95: iload_1
+    //   96: ifeq +64 -> 160
+    //   99: aload_2
+    //   100: getfield 458	com/tencent/smtt/sdk/t:mvz	Lcom/tencent/smtt/export/external/DexLoader;
+    //   103: ldc_w 460
+    //   106: ldc_w 462
+    //   109: iconst_1
+    //   110: anewarray 120	java/lang/Class
+    //   113: dup
+    //   114: iconst_0
+    //   115: ldc -80
+    //   117: aastore
+    //   118: iconst_1
+    //   119: anewarray 4	java/lang/Object
+    //   122: dup
+    //   123: iconst_0
+    //   124: aload_0
+    //   125: aastore
+    //   126: invokevirtual 468	com/tencent/smtt/export/external/DexLoader:invokeStaticMethod	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    //   129: pop
+    //   130: return
+    //   131: astore_2
+    //   132: ldc -113
+    //   134: new 272	java/lang/StringBuilder
+    //   137: dup
+    //   138: ldc_w 470
+    //   141: invokespecial 275	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   144: aload_2
+    //   145: invokestatic 476	android/util/Log:getStackTraceString	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   148: invokevirtual 279	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   151: invokevirtual 282	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   154: invokestatic 151	com/tencent/smtt/utils/TbsLog:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   157: goto -97 -> 60
+    //   160: aload_2
+    //   161: getfield 458	com/tencent/smtt/sdk/t:mvz	Lcom/tencent/smtt/export/external/DexLoader;
+    //   164: ldc_w 460
+    //   167: ldc_w 462
+    //   170: iconst_2
+    //   171: anewarray 120	java/lang/Class
+    //   174: dup
+    //   175: iconst_0
+    //   176: ldc -80
+    //   178: aastore
+    //   179: dup
+    //   180: iconst_1
+    //   181: getstatic 477	java/lang/Boolean:TYPE	Ljava/lang/Class;
+    //   184: aastore
+    //   185: iconst_2
+    //   186: anewarray 4	java/lang/Object
+    //   189: dup
+    //   190: iconst_0
+    //   191: aload_0
+    //   192: aastore
+    //   193: dup
+    //   194: iconst_1
+    //   195: iload_1
+    //   196: invokestatic 480	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+    //   199: aastore
+    //   200: invokevirtual 468	com/tencent/smtt/export/external/DexLoader:invokeStaticMethod	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    //   203: pop
+    //   204: return
+    //   205: astore_3
+    //   206: aload_2
+    //   207: getfield 458	com/tencent/smtt/sdk/t:mvz	Lcom/tencent/smtt/export/external/DexLoader;
+    //   210: ldc_w 460
+    //   213: ldc_w 482
+    //   216: iconst_1
+    //   217: anewarray 120	java/lang/Class
+    //   220: dup
+    //   221: iconst_0
+    //   222: ldc -80
+    //   224: aastore
+    //   225: iconst_1
+    //   226: anewarray 4	java/lang/Object
+    //   229: dup
+    //   230: iconst_0
+    //   231: aload_0
+    //   232: aastore
+    //   233: invokevirtual 468	com/tencent/smtt/export/external/DexLoader:invokeStaticMethod	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    //   236: pop
+    //   237: aload_2
+    //   238: getfield 458	com/tencent/smtt/sdk/t:mvz	Lcom/tencent/smtt/export/external/DexLoader;
+    //   241: ldc_w 460
+    //   244: ldc_w 484
+    //   247: iconst_1
+    //   248: anewarray 120	java/lang/Class
+    //   251: dup
+    //   252: iconst_0
+    //   253: ldc -80
+    //   255: aastore
+    //   256: iconst_1
+    //   257: anewarray 4	java/lang/Object
+    //   260: dup
+    //   261: iconst_0
+    //   262: aload_0
+    //   263: aastore
+    //   264: invokevirtual 468	com/tencent/smtt/export/external/DexLoader:invokeStaticMethod	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    //   267: pop
+    //   268: aload_2
+    //   269: getfield 458	com/tencent/smtt/sdk/t:mvz	Lcom/tencent/smtt/export/external/DexLoader;
+    //   272: ldc_w 460
+    //   275: ldc_w 486
+    //   278: iconst_1
+    //   279: anewarray 120	java/lang/Class
+    //   282: dup
+    //   283: iconst_0
+    //   284: ldc -80
+    //   286: aastore
+    //   287: iconst_1
+    //   288: anewarray 4	java/lang/Object
+    //   291: dup
+    //   292: iconst_0
+    //   293: aload_0
+    //   294: aastore
+    //   295: invokevirtual 468	com/tencent/smtt/export/external/DexLoader:invokeStaticMethod	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    //   298: pop
+    //   299: aload_2
+    //   300: getfield 458	com/tencent/smtt/sdk/t:mvz	Lcom/tencent/smtt/export/external/DexLoader;
+    //   303: ldc_w 488
+    //   306: ldc_w 490
+    //   309: aconst_null
+    //   310: iconst_0
+    //   311: anewarray 4	java/lang/Object
+    //   314: invokevirtual 468	com/tencent/smtt/export/external/DexLoader:invokeStaticMethod	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    //   317: pop
+    //   318: aload_2
+    //   319: getfield 458	com/tencent/smtt/sdk/t:mvz	Lcom/tencent/smtt/export/external/DexLoader;
+    //   322: ldc_w 488
+    //   325: ldc_w 492
+    //   328: aconst_null
+    //   329: iconst_0
+    //   330: anewarray 4	java/lang/Object
+    //   333: invokevirtual 468	com/tencent/smtt/export/external/DexLoader:invokeStaticMethod	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    //   336: pop
+    //   337: aload_2
+    //   338: getfield 458	com/tencent/smtt/sdk/t:mvz	Lcom/tencent/smtt/export/external/DexLoader;
+    //   341: ldc_w 494
+    //   344: ldc_w 495
+    //   347: aconst_null
+    //   348: iconst_0
+    //   349: anewarray 4	java/lang/Object
+    //   352: invokevirtual 468	com/tencent/smtt/export/external/DexLoader:invokeStaticMethod	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    //   355: astore_0
+    //   356: aload_0
+    //   357: ifnull +23 -> 380
+    //   360: aload_2
+    //   361: getfield 458	com/tencent/smtt/sdk/t:mvz	Lcom/tencent/smtt/export/external/DexLoader;
+    //   364: aload_0
+    //   365: ldc_w 494
+    //   368: ldc_w 497
+    //   371: aconst_null
+    //   372: iconst_0
+    //   373: anewarray 4	java/lang/Object
+    //   376: invokevirtual 501	com/tencent/smtt/export/external/DexLoader:invokeMethod	(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    //   379: pop
+    //   380: aload_2
+    //   381: getfield 458	com/tencent/smtt/sdk/t:mvz	Lcom/tencent/smtt/export/external/DexLoader;
+    //   384: ldc_w 503
+    //   387: ldc_w 495
+    //   390: aconst_null
+    //   391: iconst_0
+    //   392: anewarray 4	java/lang/Object
+    //   395: invokevirtual 468	com/tencent/smtt/export/external/DexLoader:invokeStaticMethod	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    //   398: astore_0
+    //   399: aload_0
+    //   400: ifnull +23 -> 423
+    //   403: aload_2
+    //   404: getfield 458	com/tencent/smtt/sdk/t:mvz	Lcom/tencent/smtt/export/external/DexLoader;
+    //   407: aload_0
+    //   408: ldc_w 503
+    //   411: ldc_w 505
+    //   414: aconst_null
+    //   415: iconst_0
+    //   416: anewarray 4	java/lang/Object
+    //   419: invokevirtual 501	com/tencent/smtt/export/external/DexLoader:invokeMethod	(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    //   422: pop
+    //   423: aload_2
+    //   424: getfield 458	com/tencent/smtt/sdk/t:mvz	Lcom/tencent/smtt/export/external/DexLoader;
+    //   427: ldc_w 460
+    //   430: ldc_w 506
+    //   433: aconst_null
+    //   434: iconst_0
+    //   435: anewarray 4	java/lang/Object
+    //   438: invokevirtual 468	com/tencent/smtt/export/external/DexLoader:invokeStaticMethod	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    //   441: pop
+    //   442: return
+    //   443: astore_0
+    //   444: return
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	445	0	paramContext	Context
+    //   0	445	1	paramBoolean	boolean
+    //   78	22	2	localObject	Object
+    //   131	293	2	localThrowable	Throwable
+    //   205	1	3	localException	Exception
+    // Exception table:
+    //   from	to	target	type
+    //   0	12	131	java/lang/Throwable
+    //   16	27	131	java/lang/Throwable
+    //   27	60	131	java/lang/Throwable
+    //   160	204	205	java/lang/Exception
+    //   60	79	443	java/lang/Throwable
+    //   83	95	443	java/lang/Throwable
+    //   99	130	443	java/lang/Throwable
+    //   160	204	443	java/lang/Throwable
+    //   206	356	443	java/lang/Throwable
+    //   360	380	443	java/lang/Throwable
+    //   380	399	443	java/lang/Throwable
+    //   403	423	443	java/lang/Throwable
+    //   423	442	443	java/lang/Throwable
+  }
+  
+  public static void closeFileReader(Context paramContext)
+  {
+    d locald = d.jb(true);
+    locald.init(paramContext);
+    if (locald.brr()) {
+      brqmvz.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "closeFileReader", new Class[0], new Object[0]);
     }
   }
   
@@ -389,20 +682,23 @@ public class QbSdk
     if (paramContext == null) {
       return false;
     }
+    if (k.eY(paramContext)) {
+      return false;
+    }
     if (isMiniQBShortCutExist(paramContext, paramString1, paramString2) == true) {
       return false;
     }
-    d locald = d.is(false);
-    if ((locald != null) && (locald.bln()))
+    d locald = d.jb(false);
+    if ((locald != null) && (locald.brr()))
     {
       Bitmap localBitmap = null;
       if ((paramDrawable instanceof BitmapDrawable)) {
         localBitmap = ((BitmapDrawable)paramDrawable).getBitmap();
       }
-      paramDrawable = blmmDexLoader;
-      r.e("QbSdk", "qbsdk createMiniQBShortCut");
+      paramDrawable = brqmvz;
+      TbsLog.e("QbSdk", "qbsdk createMiniQBShortCut");
       paramContext = paramDrawable.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "createMiniQBShortCut", new Class[] { Context.class, String.class, String.class, Bitmap.class }, new Object[] { paramContext, paramString1, paramString2, localBitmap });
-      r.e("QbSdk", "qbsdk after createMiniQBShortCut ret: " + paramContext);
+      TbsLog.e("QbSdk", "qbsdk after createMiniQBShortCut ret: " + paramContext);
       return paramContext != null;
     }
     return false;
@@ -416,126 +712,97 @@ public class QbSdk
     {
       do
       {
-        return false;
-        locald = d.is(false);
-      } while ((locald == null) || (!locald.bln()));
-    } while (blmmDexLoader.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "deleteMiniQBShortCut", new Class[] { Context.class, String.class, String.class }, new Object[] { paramContext, paramString1, paramString2 }) == null);
+        do
+        {
+          return false;
+        } while (k.eY(paramContext));
+        locald = d.jb(false);
+      } while ((locald == null) || (!locald.brr()));
+    } while (brqmvz.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "deleteMiniQBShortCut", new Class[] { Context.class, String.class, String.class }, new Object[] { paramContext, paramString1, paramString2 }) == null);
     return true;
   }
   
-  private static boolean e(File paramFile)
-  {
-    if ((paramFile == null) || (!paramFile.exists()) || (!paramFile.isDirectory())) {}
-    int k;
-    do
-    {
-      return true;
-      File[] arrayOfFile = paramFile.listFiles();
-      int m = arrayOfFile.length;
-      int j = 0;
-      k = 1;
-      if (j < m)
-      {
-        File localFile = arrayOfFile[j];
-        int i;
-        if (localFile.isFile()) {
-          if ((k != 0) && (localFile.delete())) {
-            i = 1;
-          }
-        }
-        for (;;)
-        {
-          j += 1;
-          k = i;
-          break;
-          i = 0;
-          continue;
-          i = k;
-          if (localFile.isDirectory())
-          {
-            e(localFile);
-            i = k;
-          }
-        }
-      }
-    } while ((k != 0) && (paramFile.delete()));
-    return false;
-  }
-  
-  private static boolean eL(Context paramContext)
+  private static boolean eP(Context paramContext)
   {
     try
     {
-      if (lRi != null) {
+      if (msV != null) {
         return true;
       }
-      m.blT();
-      Object localObject = m.fj(paramContext);
+      m.brX();
+      Object localObject = m.b(null, paramContext);
       if (localObject == null)
       {
-        r.e("QbSdk", "QbSdk initForPatch (false) optDir == null");
+        TbsLog.e("QbSdk", "QbSdk initForPatch (false) optDir == null");
         return false;
       }
       File localFile = new File((File)localObject, "tbs_sdk_extension_dex.jar");
       if (!localFile.exists())
       {
-        r.l("QbSdk", "QbSdk initForPatch (false) dexFile.exists()=false", true);
+        TbsLog.e("QbSdk", "QbSdk initForPatch (false) dexFile.exists()=false", true);
         return false;
       }
       localObject = new DexClassLoader(localFile.getAbsolutePath(), ((File)localObject).getAbsolutePath(), null, QbSdk.class.getClassLoader()).loadClass("com.tencent.tbs.sdk.extension.TbsSDKExtension");
-      lRi = (Class)localObject;
-      lRj = ((Class)localObject).getConstructor(new Class[] { Context.class, Context.class }).newInstance(new Object[] { paramContext, paramContext });
+      msV = (Class)localObject;
+      msW = ((Class)localObject).getConstructor(new Class[] { Context.class, Context.class }).newInstance(new Object[] { paramContext, paramContext });
       return true;
     }
     catch (Throwable paramContext)
     {
-      r.e("QbSdk", "initForPatch sys WebView: " + Log.getStackTraceString(paramContext));
+      TbsLog.e("QbSdk", "initForPatch sys WebView: " + Log.getStackTraceString(paramContext));
     }
     return false;
   }
   
-  private static boolean eM(Context paramContext)
+  private static boolean eQ(Context paramContext)
   {
+    Object localObject2;
     try
     {
-      if (lRi != null) {
+      if (msV != null) {
         return true;
       }
-      m.blT();
-      File localFile = m.fj(paramContext);
-      if (localFile == null)
+      m.brX();
+      localObject2 = m.b(null, paramContext);
+      if (localObject2 == null)
       {
-        r.e("QbSdk", "QbSdk initForX5DisableConfig (false) optDir == null");
+        TbsLog.e("QbSdk", "QbSdk initForX5DisableConfig (false) optDir == null");
         return false;
       }
       if (q.fr(paramContext)) {
-        if (!q.fB(paramContext)) {}
+        if (!q.fC(paramContext)) {}
       }
-      for (localObject = new File(q.fs(paramContext), "tbs_sdk_extension_dex.jar"); !((File)localObject).exists(); localObject = new File(m.fj(paramContext), "tbs_sdk_extension_dex.jar"))
+      for (localObject1 = new File(q.fs(paramContext), "tbs_sdk_extension_dex.jar"); !((File)localObject1).exists(); localObject1 = new File(m.b(null, paramContext), "tbs_sdk_extension_dex.jar"))
       {
         return false;
-        h.bly().N(paramContext, 1001);
+        h.brC().S(paramContext, 1001);
         return false;
-        m.blT();
+        m.brX();
       }
-      localObject = new DexClassLoader(((File)localObject).getAbsolutePath(), localFile.getAbsolutePath(), null, QbSdk.class.getClassLoader()).loadClass("com.tencent.tbs.sdk.extension.TbsSDKExtension");
+      localObject1 = new DexClassLoader(((File)localObject1).getAbsolutePath(), ((File)localObject2).getAbsolutePath(), null, QbSdk.class.getClassLoader()).loadClass("com.tencent.tbs.sdk.extension.TbsSDKExtension");
     }
     catch (Throwable paramContext)
     {
-      r.e("QbSdk", "initForX5DisableConfig sys WebView: " + Log.getStackTraceString(paramContext));
+      TbsLog.e("QbSdk", "initForX5DisableConfig sys WebView: " + Log.getStackTraceString(paramContext));
       return false;
     }
-    lRi = (Class)localObject;
-    Object localObject = ((Class)localObject).getConstructor(new Class[] { Context.class, Context.class });
+    msV = (Class)localObject1;
+    Object localObject1 = ((Class)localObject1).getConstructor(new Class[] { Context.class, Context.class });
     if (q.fr(paramContext)) {}
-    for (lRj = ((Constructor)localObject).newInstance(new Object[] { paramContext, q.fu(paramContext) });; lRj = ((Constructor)localObject).newInstance(new Object[] { paramContext, paramContext }))
+    for (msW = ((Constructor)localObject1).newInstance(new Object[] { paramContext, q.fu(paramContext) });; msW = ((Constructor)localObject1).newInstance(new Object[] { paramContext, paramContext }))
     {
-      com.tencent.smtt.a.m.a(lRj, "setClientVersion", new Class[] { Integer.TYPE }, new Object[] { Integer.valueOf(1) });
+      paramContext = msW;
+      localObject1 = com.tencent.smtt.utils.c.VI;
+      localObject2 = com.tencent.smtt.utils.c.mww;
+      String str1 = com.tencent.smtt.utils.c.mwx;
+      String str2 = com.tencent.smtt.utils.c.VJ;
+      com.tencent.smtt.utils.n.a(paramContext, "putInfo", new Class[] { String.class, String.class, String.class, String.class }, new Object[] { localObject1, localObject2, str1, str2 });
+      com.tencent.smtt.utils.n.a(msW, "setClientVersion", new Class[] { Integer.TYPE }, new Object[] { Integer.valueOf(1) });
       return true;
     }
   }
   
-  private static boolean eN(Context paramContext)
+  private static boolean eR(Context paramContext)
   {
     boolean bool = true;
     try
@@ -546,36 +813,36 @@ public class QbSdk
         if (!localFile1.isDirectory()) {
           return true;
         }
-        e(new File(paramContext.getFilesDir().getParentFile().getPath() + "/app_tes_private"));
+        e.v(new File(paramContext.getFilesDir().getParentFile().getPath() + "/app_tes_private"));
         File localFile2 = new File(paramContext.getFilesDir().getParentFile().getPath() + "/app_appcache");
-        q(new File(localFile2, "ApplicationCache.db"));
-        q(new File(localFile2, "cache.db"));
+        e.v(new File(localFile2, "ApplicationCache.db"));
+        e.v(new File(localFile2, "cache.db"));
         localFile2 = paramContext.getCacheDir();
-        e(new File(localFile2, "com.android.renderscript.cache"));
-        e(new File(localFile2, "webviewCache"));
-        e(new File(localFile2, "webviewCacheChromium"));
-        e(new File(localFile2, "webviewCacheChromiumStaging"));
-        q(paramContext.getDatabasePath("smtt_webviewPrivate.db"));
-        q(paramContext.getDatabasePath("smtt_webviewPrivate.db-journal"));
-        q(paramContext.getDatabasePath("webview.db"));
-        q(paramContext.getDatabasePath("webview.db-journal"));
-        q(paramContext.getDatabasePath("webviewCache_x5.db"));
-        q(paramContext.getDatabasePath("webviewCache_x5.db-journal"));
-        q(paramContext.getDatabasePath("webviewCookiesChromium.db"));
-        q(paramContext.getDatabasePath("webviewCookiesChromiumPrivate.db"));
-        q(paramContext.getDatabasePath("webview_x5.db"));
-        q(paramContext.getDatabasePath("webview_x5.db-journal"));
-        q(new File(paramContext.getFilesDir(), "safe_uxss.js"));
-        q(new File(paramContext.getFilesDir().getParentFile().getPath() + "/lib/libwebviewext.so"));
-        q(new File(paramContext.getFilesDir().getParentFile().getPath() + "/shared_prefs/SHARED_PREFERENCE_SECURE_WEBVIEW.xml"));
-        q(new File(paramContext.getFilesDir().getParentFile().getPath() + "/shared_prefs/x5_config.xml"));
-        e(localFile1);
+        e.v(new File(localFile2, "com.android.renderscript.cache"));
+        e.v(new File(localFile2, "webviewCache"));
+        e.v(new File(localFile2, "webviewCacheChromium"));
+        e.v(new File(localFile2, "webviewCacheChromiumStaging"));
+        e.v(paramContext.getDatabasePath("smtt_webviewPrivate.db"));
+        e.v(paramContext.getDatabasePath("smtt_webviewPrivate.db-journal"));
+        e.v(paramContext.getDatabasePath("webview.db"));
+        e.v(paramContext.getDatabasePath("webview.db-journal"));
+        e.v(paramContext.getDatabasePath("webviewCache_x5.db"));
+        e.v(paramContext.getDatabasePath("webviewCache_x5.db-journal"));
+        e.v(paramContext.getDatabasePath("webviewCookiesChromium.db"));
+        e.v(paramContext.getDatabasePath("webviewCookiesChromiumPrivate.db"));
+        e.v(paramContext.getDatabasePath("webview_x5.db"));
+        e.v(paramContext.getDatabasePath("webview_x5.db-journal"));
+        e.v(new File(paramContext.getFilesDir(), "safe_uxss.js"));
+        e.v(new File(paramContext.getFilesDir().getParentFile().getPath() + "/lib/libwebviewext.so"));
+        e.v(new File(paramContext.getFilesDir().getParentFile().getPath() + "/shared_prefs/SHARED_PREFERENCE_SECURE_WEBVIEW.xml"));
+        e.v(new File(paramContext.getFilesDir().getParentFile().getPath() + "/shared_prefs/x5_config.xml"));
+        e.v(localFile1);
         return true;
       }
     }
     catch (Throwable paramContext)
     {
-      r.e("QbSdk", "deleteFilesUseless Exception: " + Log.getStackTraceString(paramContext));
+      TbsLog.e("QbSdk", "deleteFilesUseless Exception: " + Log.getStackTraceString(paramContext));
       bool = false;
     }
     return bool;
@@ -583,15 +850,15 @@ public class QbSdk
   
   public static void forceSysWebView()
   {
-    lRl = true;
-    r.e("QbSdk", "sys WebView: SysWebViewForcedByOuter");
+    msY = true;
+    TbsLog.e("QbSdk", "sys WebView: SysWebViewForcedByOuter");
   }
   
   public static long getApkFileSize(Context paramContext)
   {
     long l = 0L;
     if (paramContext != null) {
-      l = eUgetApplicationContextlSs.getLong("tbs_apkfilesize", 0L);
+      l = eWgetApplicationContextmuh.getLong("tbs_apkfilesize", 0L);
     }
     return l;
   }
@@ -599,9 +866,9 @@ public class QbSdk
   public static String[] getDexLoaderFileList(Context paramContext1, Context paramContext2, String paramString)
   {
     int i = 0;
-    if (lRn != null)
+    if (mta != null)
     {
-      int j = lRn.length;
+      int j = mta.length;
       paramContext2 = new String[j];
       for (;;)
       {
@@ -609,11 +876,11 @@ public class QbSdk
         if (i >= j) {
           break;
         }
-        paramContext2[i] = (paramString + lRn[i]);
+        paramContext2[i] = (paramString + mta[i]);
         i += 1;
       }
     }
-    paramContext2 = com.tencent.smtt.a.m.a(lRj, "getJarFiles", new Class[] { Context.class, Context.class, String.class }, new Object[] { paramContext1, paramContext2, paramString });
+    paramContext2 = com.tencent.smtt.utils.n.a(msW, "getJarFiles", new Class[] { Context.class, Context.class, String.class }, new Object[] { paramContext1, paramContext2, paramString });
     paramContext1 = paramContext2;
     if (paramContext2 == null) {
       paramContext1 = "";
@@ -624,41 +891,68 @@ public class QbSdk
   
   public static boolean getDownloadWithoutWifi()
   {
-    return lRt;
+    return mtg;
+  }
+  
+  public static String getMiniQBVersion()
+  {
+    Object localObject = d.jb(false);
+    if ((localObject != null) && (((d)localObject).brr()))
+    {
+      localObject = brqmvz.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "getMiniQBVersion", new Class[0], new Object[0]);
+      if (localObject == null) {
+        return null;
+      }
+      return (String)localObject;
+    }
+    return null;
   }
   
   public static String getQQBuildNumber()
   {
-    return lRp;
+    return mtc;
   }
   
   public static boolean getTBSInstalling()
   {
-    return lRu;
+    return mth;
   }
   
   public static String getTID()
   {
-    return lRo;
+    return mtb;
   }
   
   public static int getTbsVersion(Context paramContext)
   {
-    eN(paramContext);
+    eR(paramContext);
     if (q.fr(paramContext)) {
       return q.ft(paramContext);
     }
-    m.blT();
-    return m.fe(paramContext);
+    return m.brX().ff(paramContext);
   }
   
   public static String getX5CoreTimestamp()
   {
-    Object localObject = com.tencent.smtt.a.m.a(lRi, "getX5CoreTimestamp", null, new Object[0]);
+    Object localObject = com.tencent.smtt.utils.n.a(msV, "getX5CoreTimestamp", null, new Object[0]);
     if (localObject == null) {
       return "";
     }
     return (String)localObject;
+  }
+  
+  public static boolean installLocalQbApk(Context paramContext, String paramString1, String paramString2, Bundle paramBundle)
+  {
+    d locald = d.jb(false);
+    if ((locald != null) && (locald.brr()))
+    {
+      paramContext = brqmvz.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "installLocalQbApk", new Class[] { Context.class, String.class, String.class, Bundle.class }, new Object[] { paramContext, paramString1, paramString2, paramBundle });
+      if (paramContext == null) {
+        return false;
+      }
+      return ((Boolean)paramContext).booleanValue();
+    }
+    return false;
   }
   
   public static boolean intentDispatch(WebView paramWebView, Intent paramIntent, String paramString1, String paramString2)
@@ -699,10 +993,10 @@ public class QbSdk
       if ("miniqb://home".equals(paramIntent))
       {
         paramString1 = "qb://navicard/addCard?cardId=168&cardName=168";
-        if (c.a(localContext, paramString1, localHashMap, "QbSdk.startMiniQBToLoadUrl") != 0)
+        if (com.tencent.smtt.sdk.a.c.a(localContext, paramString1, localHashMap, "QbSdk.startMiniQBToLoadUrl") != 0)
         {
-          paramString1 = d.is(false);
-          if ((paramString1 != null) && (paramString1.bln()) && (paramString1.blm().a(localContext, paramIntent, null, paramString2) == 0)) {
+          paramString1 = d.jb(false);
+          if ((paramString1 != null) && (paramString1.brr()) && (paramString1.brq().a(localContext, paramIntent, null, paramString2) == 0)) {
             return true;
           }
           paramWebView.loadUrl(paramIntent);
@@ -721,17 +1015,20 @@ public class QbSdk
     if (paramContext == null) {
       return false;
     }
-    paramString2 = d.is(false);
-    if ((paramString2 != null) && (paramString2.bln()))
+    if (k.eY(paramContext)) {
+      return false;
+    }
+    paramString2 = d.jb(false);
+    if ((paramString2 != null) && (paramString2.brr()))
     {
-      paramContext = blmmDexLoader.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "isMiniQBShortCutExist", new Class[] { Context.class, String.class }, new Object[] { paramContext, paramString1 });
+      paramContext = brqmvz.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "isMiniQBShortCutExist", new Class[] { Context.class, String.class }, new Object[] { paramContext, paramString1 });
       if (paramContext != null) {
         if (!(paramContext instanceof Boolean)) {
-          break label90;
+          break label99;
         }
       }
     }
-    label90:
+    label99:
     for (paramContext = (Boolean)paramContext;; paramContext = Boolean.valueOf(false))
     {
       return paramContext.booleanValue();
@@ -763,7 +1060,7 @@ public class QbSdk
     }
     catch (Throwable paramContext)
     {
-      r.e("QbSdk", "isSdkVideoServiceFg Exception: " + Log.getStackTraceString(paramContext));
+      TbsLog.e("QbSdk", "isSdkVideoServiceFg Exception: " + Log.getStackTraceString(paramContext));
     }
     return false;
     label120:
@@ -773,12 +1070,12 @@ public class QbSdk
   public static boolean isTbsCoreInited()
   {
     boolean bool2 = false;
-    d locald = d.is(false);
+    d locald = d.jb(false);
     boolean bool1 = bool2;
     if (locald != null)
     {
       bool1 = bool2;
-      if (lRB) {
+      if (mtq) {
         bool1 = true;
       }
     }
@@ -787,16 +1084,15 @@ public class QbSdk
   
   public static boolean isX5DisabledSync(Context paramContext)
   {
-    if (i.eT(paramContext).blG() == 2) {}
+    if (i.eV(paramContext).brK() == 2) {}
     for (int i = 1; i != 0; i = 0) {
       return false;
     }
-    if (!eM(paramContext)) {
+    if (!eQ(paramContext)) {
       return true;
     }
-    m.blT();
-    i = m.fe(paramContext);
-    paramContext = com.tencent.smtt.a.m.a(lRj, "isX5DisabledSync", new Class[] { Integer.TYPE, Integer.TYPE }, new Object[] { Integer.valueOf(i), Integer.valueOf(25434) });
+    i = m.brX().ff(paramContext);
+    paramContext = com.tencent.smtt.utils.n.a(msW, "isX5DisabledSync", new Class[] { Integer.TYPE, Integer.TYPE }, new Object[] { Integer.valueOf(i), Integer.valueOf(26508) });
     if (paramContext != null) {
       return ((Boolean)paramContext).booleanValue();
     }
@@ -809,23 +1105,23 @@ public class QbSdk
     int i1 = -1;
     if (!sIsVersionPrinted)
     {
-      r.e("QbSdk", "svn version is 332159");
+      TbsLog.i("QbSdk", "svn revision: 381760; SDK_VERSION_CODE: 26508; SDK_VERSION_NAME: 2.1.2.1082");
       sIsVersionPrinted = true;
     }
-    if ((lRk) && (!paramBoolean))
+    if ((msX) && (!paramBoolean))
     {
-      r.l("QbSdk", "QbSdk init mIsSysWebViewForced = true", false);
-      h.bly().N(paramContext, 401);
+      TbsLog.e("QbSdk", "QbSdk init mIsSysWebViewForced = true", false);
+      h.brC().S(paramContext, 401);
       return false;
     }
-    if (lRl)
+    if (msY)
     {
-      r.l("QbSdk", "QbSdk init mIsSysWebViewForcedByOuter = true", true);
-      h.bly().N(paramContext, 402);
+      TbsLog.e("QbSdk", "QbSdk init mIsSysWebViewForcedByOuter = true", true);
+      h.brC().S(paramContext, 402);
       return false;
     }
-    if (!lRr) {
-      lRr = true;
+    if (!mte) {
+      mte = true;
     }
     try
     {
@@ -865,12 +1161,12 @@ public class QbSdk
         }
         try
         {
-          m.blT();
-          localObject4 = m.fj(paramContext);
+          m.brX();
+          localObject4 = m.b(null, paramContext);
           if (localObject4 == null)
           {
-            r.e("QbSdk", "QbSdk init (false) optDir == null");
-            h.bly().N(paramContext, 312);
+            TbsLog.e("QbSdk", "QbSdk init (false) optDir == null");
+            h.brC().S(paramContext, 312);
             return false;
             localObject1 = paramContext.getSharedPreferences("tbs_preloadx5_check_cfg_file", 0);
             continue;
@@ -879,55 +1175,60 @@ public class QbSdk
         }
         catch (Exception localException)
         {
-          r.e("QbSdk", "QbSdk init Exception: " + Log.getStackTraceString(localException));
-          h.bly().a(paramContext, 305, localException);
-          r.e("loaderror", "316");
+          TbsLog.e("QbSdk", "QbSdk init Exception: " + Log.getStackTraceString(localException));
+          h.brC().a(paramContext, 305, localException);
+          TbsLog.e("loaderror", "316");
           return false;
           if (q.fr(paramContext))
           {
-            if (q.fB(paramContext))
+            if (q.fC(paramContext))
             {
               localFile2 = new File(q.fs(paramContext), "tbs_sdk_extension_dex.jar");
               if (!localFile2.exists())
               {
-                h.bly().N(paramContext, 403);
+                h.brC().S(paramContext, 403);
                 return false;
               }
             }
             else
             {
-              h.bly().N(paramContext, 304);
+              h.brC().S(paramContext, 304);
               return false;
             }
           }
           else
           {
-            m.blT();
-            localFile2 = new File(m.fj(paramContext), "tbs_sdk_extension_dex.jar");
+            m.brX();
+            localFile2 = new File(m.b(null, paramContext), "tbs_sdk_extension_dex.jar");
             continue;
           }
         }
         catch (Throwable localThrowable3)
         {
-          r.e("QbSdk", "QbSdk init Throwable: " + Log.getStackTraceString(localThrowable3));
-          h.bly().a(paramContext, 306, localThrowable3);
+          TbsLog.e("QbSdk", "QbSdk init Throwable: " + Log.getStackTraceString(localThrowable3));
+          h.brC().a(paramContext, 306, localThrowable3);
           continue;
           localObject3 = new DexClassLoader(localThrowable3.getAbsolutePath(), ((File)localObject5).getAbsolutePath(), null, QbSdk.class.getClassLoader()).loadClass("com.tencent.tbs.sdk.extension.TbsSDKExtension");
-          lRi = (Class)localObject3;
+          msV = (Class)localObject3;
           localObject3 = ((Class)localObject3).getConstructor(new Class[] { Context.class, Context.class });
           if (q.fr(paramContext))
           {
-            lRj = ((Constructor)localObject3).newInstance(new Object[] { paramContext, q.fu(paramContext) });
-            com.tencent.smtt.a.m.a(lRj, "setClientVersion", new Class[] { Integer.TYPE }, new Object[] { Integer.valueOf(1) });
+            msW = ((Constructor)localObject3).newInstance(new Object[] { paramContext, q.fu(paramContext) });
+            localObject3 = msW;
+            localObject5 = com.tencent.smtt.utils.c.VI;
+            String str1 = com.tencent.smtt.utils.c.mww;
+            String str2 = com.tencent.smtt.utils.c.mwx;
+            String str3 = com.tencent.smtt.utils.c.VJ;
+            com.tencent.smtt.utils.n.a(localObject3, "putInfo", new Class[] { String.class, String.class, String.class, String.class }, new Object[] { localObject5, str1, str2, str3 });
+            com.tencent.smtt.utils.n.a(msW, "setClientVersion", new Class[] { Integer.TYPE }, new Object[] { Integer.valueOf(1) });
             return true;
           }
-          lRj = ((Constructor)localObject3).newInstance(new Object[] { paramContext, paramContext });
+          msW = ((Constructor)localObject3).newInstance(new Object[] { paramContext, paramContext });
           continue;
         }
         try
         {
-          m.blT();
-          j = m.fe(paramContext);
+          j = m.brX().ff(paramContext);
           if (j <= 0) {
             continue;
           }
@@ -963,20 +1264,20 @@ public class QbSdk
             if (i != j) {
               continue;
             }
-            m.blT();
-            com.tencent.smtt.a.d.d(m.fj(paramContext), false);
-            i.eT(paramContext);
-            localObject4 = i.blC();
+            m.brX();
+            e.d(m.b(null, paramContext), false);
+            i.eV(paramContext);
+            localObject4 = i.brG();
             if (localObject4 != null) {
-              com.tencent.smtt.a.d.d((File)localObject4, false);
+              e.d((File)localObject4, false);
             }
-            r.e("QbSdk", "QbSdk - preload_x5_check: tbs core " + j + " is deleted!");
+            TbsLog.e("QbSdk", "QbSdk - preload_x5_check: tbs core " + j + " is deleted!");
             ((SharedPreferences.Editor)localObject1).putInt("tbs_precheck_disable_version", i);
             ((SharedPreferences.Editor)localObject1).commit();
           }
           catch (Throwable localThrowable1)
           {
-            r.e("QbSdk", "tbs_preload_x5_counter disable version exception:" + Log.getStackTraceString(localThrowable1));
+            TbsLog.e("QbSdk", "tbs_preload_x5_counter disable version exception:" + Log.getStackTraceString(localThrowable1));
           }
         }
         catch (Throwable localThrowable7)
@@ -991,7 +1292,7 @@ public class QbSdk
         localObject2 = null;
         i = -1;
         k = -1;
-        r.e("QbSdk", "tbs_preload_x5_counter Inc exception:" + Log.getStackTraceString(localThrowable4));
+        TbsLog.e("QbSdk", "tbs_preload_x5_counter Inc exception:" + Log.getStackTraceString(localThrowable4));
         m = i;
         localObject5 = localObject2;
         n = -1;
@@ -999,7 +1300,7 @@ public class QbSdk
         localObject2 = localObject5;
         j = m;
         continue;
-        r.e("QbSdk", "QbSdk - preload_x5_check -- reset exception core_ver:" + j + "; value:" + i);
+        TbsLog.e("QbSdk", "QbSdk - preload_x5_check -- reset exception core_ver:" + j + "; value:" + i);
         continue;
         j = i1;
         if (i > 0)
@@ -1007,9 +1308,9 @@ public class QbSdk
           j = i1;
           if (i <= 3)
           {
-            r.i("QbSdk", "QbSdk - preload_x5_check -- before creation!");
-            d.is(true).init(paramContext);
-            r.i("QbSdk", "QbSdk - preload_x5_check -- after creation!");
+            TbsLog.i("QbSdk", "QbSdk - preload_x5_check -- before creation!");
+            d.jb(true).init(paramContext);
+            TbsLog.i("QbSdk", "QbSdk - preload_x5_check -- after creation!");
             j = 0;
           }
         }
@@ -1022,39 +1323,38 @@ public class QbSdk
         }
         catch (Throwable localThrowable2)
         {
-          r.e("QbSdk", "tbs_preload_x5_counter Dec exception:" + Log.getStackTraceString(localThrowable2));
+          TbsLog.e("QbSdk", "tbs_preload_x5_counter Dec exception:" + Log.getStackTraceString(localThrowable2));
           continue;
         }
-        r.i("QbSdk", "QbSdk -- preload_x5_check result:" + j);
+        TbsLog.i("QbSdk", "QbSdk -- preload_x5_check result:" + j);
       }
       if (q.fr(paramContext)) {
-        if ((lRg != 0) && (lRg != q.ft(paramContext)))
+        if ((msT != 0) && (msT != q.ft(paramContext)))
         {
-          lRi = null;
-          lRj = null;
-          r.e("QbSdk", "QbSdk init (false) isThirdPartyApp");
-          h.bly().N(paramContext, 302);
+          msV = null;
+          msW = null;
+          TbsLog.e("QbSdk", "QbSdk init (false) isThirdPartyApp");
+          h.brC().S(paramContext, 302);
           return false;
         }
       }
-      for (lRg = q.ft(paramContext); lRi != null; lRg = i)
+      for (msT = q.ft(paramContext); msV != null; msT = i)
       {
         return true;
-        if (lRg == 0) {
-          break label1287;
+        if (msT == 0) {
+          break label1406;
         }
-        m.blT();
-        j = m.fe(paramContext);
+        j = m.brX().ff(paramContext);
         i = j;
-        if (lRg != j)
+        if (msT != j)
         {
           if (j != 88888888)
           {
-            lRi = null;
-            lRj = null;
-            r.l("QbSdk", "QbSdk init (false) not isThirdPartyApp tbsCoreInstalledVer=" + j, true);
-            r.l("QbSdk", "QbSdk init (false) not isThirdPartyApp sTbsVersion=" + lRg, true);
-            h.bly().N(paramContext, 303);
+            msV = null;
+            msW = null;
+            TbsLog.e("QbSdk", "QbSdk init (false) not isThirdPartyApp tbsCoreInstalledVer=" + j, true);
+            TbsLog.e("QbSdk", "QbSdk init (false) not isThirdPartyApp sTbsVersion=" + msT, true);
+            h.brC().a(paramContext, 303, new Throwable("sTbsVersion: " + msT + "; tbsCoreInstalledVer: " + j));
             return false;
           }
           File localFile1 = new File(paramContext.getDir("tbs", 0), "core_private");
@@ -1066,7 +1366,7 @@ public class QbSdk
             if (localFile1.exists())
             {
               localFile1.delete();
-              r.k("QbSdk", "LOCAL_SDCARD_TBS_VERSION --> (" + localFile1.getName() + ") is deleted!", true);
+              TbsLog.i("QbSdk", "LOCAL_SDCARD_TBS_VERSION --> (" + localFile1.getName() + ") is deleted!", true);
               i = j;
             }
           }
@@ -1093,8 +1393,8 @@ public class QbSdk
   {
     try
     {
-      lRq = lRk;
-      if (!lRm)
+      mtd = msX;
+      if (!msZ)
       {
         new Thread()
         {
@@ -1110,41 +1410,44 @@ public class QbSdk
                 return;
                 new android.webkit.WebView(paramContext);
               } while (parama == null);
+              parama.aUb();
               return;
-              paramAnonymousMessage = d.is(true).blm();
-            } while (paramAnonymousMessage == null);
-            paramAnonymousMessage.createSDKWebview(paramContext);
+              paramAnonymousMessage = d.jb(true).brq();
+              if (paramAnonymousMessage != null) {
+                paramAnonymousMessage.fE(paramContext);
+              }
+            } while (parama == null);
+            parama.aUb();
           }
         }
         {
           public final void run()
           {
-            m.blT();
-            if (m.fe(val$context) == 0) {
-              m.blT().r(val$context, true);
+            if (m.brX().ff(val$context) == 0) {
+              m.brX().s(val$context, true);
             }
-            d locald = d.is(true);
+            d locald = d.jb(true);
             locald.o(val$context, true);
             if (q.fr(val$context))
             {
               if (!q.fx(val$context.getApplicationContext())) {
-                k.eX(val$context);
+                k.p(val$context, false);
               }
-              if ((!WebView.mSysWebviewCreated) && (!QbSdk.lRq)) {
-                QbSdk.lRk = false;
+              if ((!WebView.mSysWebviewCreated) && (!QbSdk.mtd)) {
+                QbSdk.msX = false;
               }
             }
-            boolean bool = locald.bln();
-            lRx.sendEmptyMessage(3);
+            boolean bool = locald.brr();
+            mtm.sendEmptyMessage(3);
             if (!bool)
             {
-              lRx.sendEmptyMessage(2);
+              mtm.sendEmptyMessage(2);
               return;
             }
-            lRx.sendEmptyMessage(1);
+            mtm.sendEmptyMessage(1);
           }
         }.start();
-        lRm = true;
+        msZ = true;
       }
       return;
     }
@@ -1155,44 +1458,21 @@ public class QbSdk
     }
   }
   
-  private static boolean q(File paramFile)
-  {
-    if ((paramFile == null) || (!paramFile.exists()) || (!paramFile.isFile())) {
-      return true;
-    }
-    try
-    {
-      paramFile.delete();
-      return true;
-    }
-    catch (Throwable paramFile)
-    {
-      r.e("QbSdk", "deleteFile Exception: " + Log.getStackTraceString(paramFile));
-    }
-    return false;
-  }
-  
   public static void reset(Context paramContext)
   {
-    r.l("QbSdk", "QbSdk reset!", true);
+    TbsLog.e("QbSdk", "QbSdk reset!", true);
     try
     {
       k.stopDownload();
       k.eZ(paramContext);
-      if (e(paramContext.getDir("tbs", 0))) {
-        r.l("QbSdk", "delete downloaded apk success", true);
-      }
-      for (;;)
-      {
-        blTlSF = 0;
-        return;
-        r.l("QbSdk", "delete downloaded apk fail", true);
-      }
+      e.v(paramContext.getDir("tbs", 0));
+      TbsLog.i("QbSdk", "delete downloaded apk success", true);
+      brXmux = 0;
       return;
     }
     catch (Throwable paramContext)
     {
-      r.e("QbSdk", "QbSdk reset exception:" + Log.getStackTraceString(paramContext));
+      TbsLog.e("QbSdk", "QbSdk reset exception:" + Log.getStackTraceString(paramContext));
     }
   }
   
@@ -1203,44 +1483,57 @@ public class QbSdk
       return;
     }
     paramString = paramString.substring(3);
-    lRo = "0000000000000000".substring(paramString.length()) + paramString;
+    mtb = "0000000000000000".substring(paramString.length()) + paramString;
+  }
+  
+  public static void setDeviceInfo(String paramString1, String paramString2, String paramString3, String paramString4)
+  {
+    com.tencent.smtt.utils.c.VI = paramString1;
+    com.tencent.smtt.utils.c.mww = paramString2;
+    com.tencent.smtt.utils.c.mwx = paramString3;
+    com.tencent.smtt.utils.c.VJ = paramString4;
   }
   
   public static void setDownloadWithoutWifi(boolean paramBoolean)
   {
-    lRt = paramBoolean;
+    mtg = paramBoolean;
   }
   
   public static void setQQBuildNumber(String paramString)
   {
-    lRp = paramString;
+    mtc = paramString;
   }
   
   public static void setTBSInstallingStatus(boolean paramBoolean)
   {
-    lRu = paramBoolean;
+    mth = paramBoolean;
   }
   
   public static void setTbsListener(n paramn)
   {
-    lRs = paramn;
+    mtf = paramn;
   }
   
   public static void setTbsLogClient(s params)
   {
-    r.a(params);
+    TbsLog.setTbsLogClient(params);
   }
   
-  public static boolean startMiniQBToLoadUrl(Context paramContext, String paramString, HashMap paramHashMap)
+  public static int startMiniQBToLoadUrl(Context paramContext, String paramString, HashMap<String, String> paramHashMap)
   {
-    if (paramContext == null) {}
-    d locald;
-    do
+    if (paramContext == null) {
+      return -100;
+    }
+    d locald = d.jb(true);
+    locald.init(paramContext);
+    if (locald.brr())
     {
-      return false;
-      locald = d.is(false);
-    } while ((locald == null) || (!locald.bln()) || (locald.blm().a(paramContext, paramString, paramHashMap, null) != 0));
-    return true;
+      if ((paramContext != null) && (getApplicationInfopackageName.equals("com.nd.android.pandahome2")) && (getTbsVersion(paramContext) < 25487)) {
+        return -101;
+      }
+      return locald.brq().a(paramContext, paramString, paramHashMap, null);
+    }
+    return -102;
   }
   
   public static boolean startQBForDoc(Context paramContext, String paramString1, int paramInt1, int paramInt2, String paramString2)
@@ -1253,7 +1546,7 @@ public class QbSdk
     HashMap localHashMap = new HashMap();
     localHashMap.put("ChannelID", getApplicationContextgetApplicationInfoprocessName);
     localHashMap.put("PosID", Integer.toString(paramInt1));
-    return c.a(paramContext, paramString1, paramInt2, paramString2, localHashMap, paramBundle);
+    return com.tencent.smtt.sdk.a.c.a(paramContext, paramString1, paramInt2, paramString2, localHashMap, paramBundle);
   }
   
   public static boolean startQBForVideo(Context paramContext, String paramString, int paramInt)
@@ -1261,7 +1554,7 @@ public class QbSdk
     HashMap localHashMap = new HashMap();
     localHashMap.put("ChannelID", getApplicationInfoprocessName);
     localHashMap.put("PosID", Integer.toString(paramInt));
-    return c.a(paramContext, paramString, localHashMap);
+    return com.tencent.smtt.sdk.a.c.a(paramContext, paramString, localHashMap);
   }
   
   public static boolean startQBToLoadurl(Context paramContext, String paramString, int paramInt)
@@ -1269,7 +1562,7 @@ public class QbSdk
     HashMap localHashMap = new HashMap();
     localHashMap.put("ChannelID", getApplicationInfoprocessName);
     localHashMap.put("PosID", Integer.toString(paramInt));
-    return c.a(paramContext, paramString, localHashMap, "QbSdk.startQBToLoadurl") == 0;
+    return com.tencent.smtt.sdk.a.c.a(paramContext, paramString, localHashMap, "QbSdk.startQBToLoadurl") == 0;
   }
   
   public static int startQBWeb(Context paramContext, String paramString)
@@ -1279,75 +1572,104 @@ public class QbSdk
     do
     {
       return -1;
-      locald = d.is(false);
-    } while ((locald == null) || (!locald.bln()));
-    paramContext = blmmDexLoader.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "startQBWeb", new Class[] { Context.class, String.class, String.class }, new Object[] { paramContext, paramString, null });
+      locald = d.jb(false);
+    } while ((locald == null) || (!locald.brr()));
+    paramContext = brqmvz.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "startQBWeb", new Class[] { Context.class, String.class, String.class }, new Object[] { paramContext, paramString, null });
     if (paramContext == null) {
       return -3;
     }
     return ((Integer)paramContext).intValue();
   }
   
-  public static boolean startQbOrMiniQBToLoadUrl(Context paramContext, String paramString, HashMap paramHashMap)
+  public static boolean startQbOrMiniQBToLoadUrl(Context paramContext, String paramString, HashMap<String, String> paramHashMap)
   {
     if (paramContext == null) {
       return false;
     }
-    d locald = d.is(false);
-    String str;
+    d locald = d.jb(true);
+    locald.init(paramContext);
+    Object localObject1;
+    String str1;
     if ("miniqb://home".equals(paramString)) {
-      if ((locald != null) && (locald.bln()))
+      if (locald.brr())
       {
-        Object localObject = (Bundle)blmmDexLoader.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "getAdWebViewInfoFromX5Core", new Class[0], new Object[0]);
-        if (localObject != null)
+        localObject1 = (Bundle)brqmvz.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "getAdWebViewInfoFromX5Core", new Class[0], new Object[0]);
+        if (localObject1 != null)
         {
-          str = ((Bundle)localObject).getString("ad_webview_detail_url");
-          localObject = ((Bundle)localObject).getString("ad_webview_click_stat_posid_for_qb");
-          if (!TextUtils.isEmpty(str)) {
+          str1 = ((Bundle)localObject1).getString("ad_webview_detail_url");
+          localObject1 = ((Bundle)localObject1).getString("ad_webview_click_stat_posid_for_qb");
+          if (!TextUtils.isEmpty(str1))
+          {
             if (paramHashMap != null) {
-              paramHashMap.put("PosID", localObject);
+              paramHashMap.put("PosID", localObject1);
             }
+            paramString = str1;
           }
         }
       }
     }
     for (;;)
     {
-      if (c.a(paramContext, str, paramHashMap, "QbSdk.startMiniQBToLoadUrl") != 0)
+      Object localObject2 = str1;
+      localObject1 = paramString;
+      if ("miniqb://home".equals(paramString))
       {
-        if ((locald != null) && (locald.bln()) && (locald.blm().a(paramContext, paramString, paramHashMap, null) == 0)) {
-          return true;
+        localObject2 = str1;
+        localObject1 = paramString;
+        if (paramHashMap != null)
+        {
+          String str2 = (String)paramHashMap.get("curUrlQQ");
+          localObject2 = str1;
+          localObject1 = paramString;
+          if (!TextUtils.isEmpty(str2))
+          {
+            paramString = com.tencent.smtt.utils.i.bytesToHex(str2.getBytes());
+            localObject1 = "http://adsolution.imtt.qq.com/index?p=tad&u=" + paramString;
+            localObject2 = localObject1;
+          }
+        }
+      }
+      if (com.tencent.smtt.sdk.a.c.a(paramContext, (String)localObject2, paramHashMap, "QbSdk.startMiniQBToLoadUrl") != 0)
+      {
+        if (locald.brr())
+        {
+          if ((paramContext != null) && (getApplicationInfopackageName.equals("com.nd.android.pandahome2")) && (getTbsVersion(paramContext) < 25487)) {
+            return false;
+          }
+          if (locald.brq().a(paramContext, (String)localObject1, paramHashMap, null) == 0) {
+            return true;
+          }
         }
       }
       else {
         return true;
       }
       return false;
-      str = "qb://navicard/addCard?cardId=168&cardName=168";
+      str1 = "qb://navicard/addCard?cardId=168&cardName=168";
       continue;
-      str = paramString;
+      str1 = paramString;
     }
   }
   
   public static void unForceSysWebView()
   {
-    lRl = false;
-    r.e("QbSdk", "sys WebView: unForceSysWebView called");
+    msY = false;
+    TbsLog.e("QbSdk", "sys WebView: unForceSysWebView called");
   }
   
   public static boolean useSoftWare()
   {
-    if (lRj == null) {
+    if (msW == null) {
       return false;
     }
-    Object localObject2 = com.tencent.smtt.a.m.a(lRj, "useSoftWare", new Class[0], new Object[0]);
+    Object localObject2 = com.tencent.smtt.utils.n.a(msW, "useSoftWare", new Class[0], new Object[0]);
     Object localObject1 = localObject2;
     if (localObject2 == null)
     {
-      localObject1 = lRj;
+      localObject1 = msW;
       localObject2 = Integer.TYPE;
-      int i = a.blh();
-      localObject1 = com.tencent.smtt.a.m.a(localObject1, "useSoftWare", new Class[] { localObject2 }, new Object[] { Integer.valueOf(i) });
+      int i = a.brl();
+      localObject1 = com.tencent.smtt.utils.n.a(localObject1, "useSoftWare", new Class[] { localObject2 }, new Object[] { Integer.valueOf(i) });
     }
     if (localObject1 == null) {
       return false;
@@ -1355,7 +1677,10 @@ public class QbSdk
     return ((Boolean)localObject1).booleanValue();
   }
   
-  public static abstract interface a {}
+  public static abstract interface a
+  {
+    public abstract void aUb();
+  }
 }
 
 /* Location:

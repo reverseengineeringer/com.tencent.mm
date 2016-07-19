@@ -13,23 +13,32 @@
     name = "a"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/tencent/mm/pluginsdk/model/a$a;",
+        ">;"
+    }
+.end annotation
+
 
 # static fields
-.field public static final enum izL:Lcom/tencent/mm/pluginsdk/model/a$a;
+.field public static final enum iWj:Lcom/tencent/mm/pluginsdk/model/a$a;
 
-.field public static final enum izM:Lcom/tencent/mm/pluginsdk/model/a$a;
+.field public static final enum iWk:Lcom/tencent/mm/pluginsdk/model/a$a;
 
-.field public static final enum izN:Lcom/tencent/mm/pluginsdk/model/a$a;
+.field public static final enum iWl:Lcom/tencent/mm/pluginsdk/model/a$a;
 
-.field public static final enum izO:Lcom/tencent/mm/pluginsdk/model/a$a;
+.field public static final enum iWm:Lcom/tencent/mm/pluginsdk/model/a$a;
 
-.field public static final enum izP:Lcom/tencent/mm/pluginsdk/model/a$a;
+.field public static final enum iWn:Lcom/tencent/mm/pluginsdk/model/a$a;
 
-.field private static final synthetic izQ:[Lcom/tencent/mm/pluginsdk/model/a$a;
+.field private static final synthetic iWo:[Lcom/tencent/mm/pluginsdk/model/a$a;
 
 
 # instance fields
-.field public final cwi:I
+.field public final crO:I
 
 
 # direct methods
@@ -54,7 +63,7 @@
 
     invoke-direct {v0, v1, v2, v2}, Lcom/tencent/mm/pluginsdk/model/a$a;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->izL:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->iWj:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     .line 50
     new-instance v0, Lcom/tencent/mm/pluginsdk/model/a$a;
@@ -63,7 +72,7 @@
 
     invoke-direct {v0, v1, v3, v3}, Lcom/tencent/mm/pluginsdk/model/a$a;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->izM:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->iWk:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     .line 51
     new-instance v0, Lcom/tencent/mm/pluginsdk/model/a$a;
@@ -72,7 +81,7 @@
 
     invoke-direct {v0, v1, v4, v4}, Lcom/tencent/mm/pluginsdk/model/a$a;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->izN:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->iWl:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     .line 52
     new-instance v0, Lcom/tencent/mm/pluginsdk/model/a$a;
@@ -81,7 +90,7 @@
 
     invoke-direct {v0, v1, v5, v5}, Lcom/tencent/mm/pluginsdk/model/a$a;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->izO:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->iWm:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     .line 53
     new-instance v0, Lcom/tencent/mm/pluginsdk/model/a$a;
@@ -90,53 +99,58 @@
 
     invoke-direct {v0, v1, v6, v6}, Lcom/tencent/mm/pluginsdk/model/a$a;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->izP:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->iWn:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     .line 48
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/tencent/mm/pluginsdk/model/a$a;
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/model/a$a;->izL:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/model/a$a;->iWj:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/model/a$a;->izM:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/model/a$a;->iWk:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/model/a$a;->izN:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/model/a$a;->iWl:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/model/a$a;->izO:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/model/a$a;->iWm:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     aput-object v1, v0, v5
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/model/a$a;->izP:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/model/a$a;->iWn:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     aput-object v1, v0, v6
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->izQ:[Lcom/tencent/mm/pluginsdk/model/a$a;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->iWo:[Lcom/tencent/mm/pluginsdk/model/a$a;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)V"
+        }
+    .end annotation
 
     .prologue
     .line 56
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 57
-    iput p3, p0, Lcom/tencent/mm/pluginsdk/model/a$a;->cwi:I
+    iput p3, p0, Lcom/tencent/mm/pluginsdk/model/a$a;->crO:I
 
     .line 58
     return-void
 .end method
 
-.method public static nY(I)Lcom/tencent/mm/pluginsdk/model/a$a;
+.method public static pE(I)Lcom/tencent/mm/pluginsdk/model/a$a;
     .locals 1
 
     .prologue
@@ -144,38 +158,38 @@
     packed-switch p0, :pswitch_data_0
 
     .line 82
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->izL:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->iWj:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     :goto_0
     return-object v0
 
     .line 77
     :pswitch_0
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->izL:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->iWj:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     goto :goto_0
 
     .line 78
     :pswitch_1
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->izM:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->iWk:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     goto :goto_0
 
     .line 79
     :pswitch_2
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->izN:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->iWl:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     goto :goto_0
 
     .line 80
     :pswitch_3
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->izO:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->iWm:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     goto :goto_0
 
     .line 81
     :pswitch_4
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->izP:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->iWn:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     goto :goto_0
 
@@ -213,7 +227,7 @@
 
     .prologue
     .line 48
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->izQ:[Lcom/tencent/mm/pluginsdk/model/a$a;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$a;->iWo:[Lcom/tencent/mm/pluginsdk/model/a$a;
 
     invoke-virtual {v0}, [Lcom/tencent/mm/pluginsdk/model/a$a;->clone()Ljava/lang/Object;
 
@@ -231,7 +245,7 @@
 
     .prologue
     .line 65
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$1;->izK:[I
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$1;->iWi:[I
 
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/model/a$a;->ordinal()I
 

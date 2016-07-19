@@ -2,32 +2,32 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.widget.ListView;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.c;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SnsStrangerCommentDetailUI$2
   implements Runnable
 {
-  int hdw = -1;
-  int hdx = 10;
+  int hsj = -1;
+  int hsk = 10;
   
   SnsStrangerCommentDetailUI$2(SnsStrangerCommentDetailUI paramSnsStrangerCommentDetailUI) {}
   
   public final void run()
   {
-    if (!SnsStrangerCommentDetailUI.h(hiQ)) {
-      hdx = 10;
+    if (!SnsStrangerCommentDetailUI.h(hxF)) {
+      hsk = 10;
     }
-    SnsStrangerCommentDetailUI.i(hiQ);
-    u.e("!56@/B4Tb64lLpKq4kzQEmWfvWlP1B6VxlvUA5NJce3mTcriiJ7E+LoT7Q==", "list.bottom:" + SnsStrangerCommentDetailUI.a(hiQ).getBottom() + " footer.top" + SnsStrangerCommentDetailUI.a(hiQ).getTop());
-    int i = SnsStrangerCommentDetailUI.j(hiQ).getTop();
-    int j = hdx;
-    hdx = (j - 1);
-    if ((j > 0) && ((hdw != i) || (SnsStrangerCommentDetailUI.a(hiQ).getBottom() == SnsStrangerCommentDetailUI.g(hiQ)))) {
-      new aa().postDelayed(this, 30L);
+    SnsStrangerCommentDetailUI.i(hxF);
+    v.e("MicroMsg.SnsStrangerCommentDetailUI", "list.bottom:" + SnsStrangerCommentDetailUI.a(hxF).getBottom() + " footer.top" + SnsStrangerCommentDetailUI.a(hxF).getTop());
+    int i = SnsStrangerCommentDetailUI.j(hxF).getTop();
+    int j = hsk;
+    hsk = (j - 1);
+    if ((j > 0) && ((hsj != i) || (SnsStrangerCommentDetailUI.a(hxF).getBottom() == SnsStrangerCommentDetailUI.g(hxF)))) {
+      new ac().postDelayed(this, 30L);
     }
-    hdw = i;
-    BackwardSupportUtil.c.b(SnsStrangerCommentDetailUI.a(hiQ), SnsStrangerCommentDetailUI.a(hiQ).getCount() - 1);
+    hsj = i;
+    BackwardSupportUtil.c.b(SnsStrangerCommentDetailUI.a(hxF), SnsStrangerCommentDetailUI.a(hxF).getCount() - 1);
   }
 }
 

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/o" style="@style/FavListItemAvatar" />
+    <TextView android:id="@id/z" android:layout_marginLeft="10.0dip" android:text="{name}" style="@style/FavListItemName" />
+    <TextView android:gravity="right" android:id="@id/a6" android:text="{time}" style="@style/FavListItemTime" />
+</LinearLayout>

@@ -1,6 +1,6 @@
 package com.tencent.mm.modelgeo;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -14,11 +14,11 @@ final class c$3
   public final void run()
   {
     Object localObject1 = new ArrayList();
-    Object localObject2 = bOx.bOl.iterator();
+    Object localObject2 = bHS.bHG.iterator();
     while (((Iterator)localObject2).hasNext())
     {
       WeakReference localWeakReference = (WeakReference)((Iterator)localObject2).next();
-      if ((localWeakReference == null) || (localWeakReference.get() == null) || (((a.a)localWeakReference.get()).equals(bOG))) {
+      if ((localWeakReference == null) || (localWeakReference.get() == null) || (((a.a)localWeakReference.get()).equals(bIb))) {
         ((List)localObject1).add(localWeakReference);
       }
     }
@@ -26,11 +26,11 @@ final class c$3
     while (((Iterator)localObject1).hasNext())
     {
       localObject2 = (WeakReference)((Iterator)localObject1).next();
-      bOx.bOl.remove(localObject2);
+      bHS.bHG.remove(localObject2);
     }
-    u.i("!32@/B4Tb64lLpIu6Y+BscdrxN3pFdbvvih6", "stop listeners size %d", new Object[] { Integer.valueOf(bOx.bOl.size()) });
-    if ((bOx.bOl.size() == 0) && (bOx.bOk != null)) {
-      g.zH();
+    v.i("MicroMsg.LocationGeo", "stop listeners size %d", new Object[] { Integer.valueOf(bHS.bHG.size()) });
+    if ((bHS.bHG.size() == 0) && (bHS.bHF != null)) {
+      g.zU();
     }
   }
 }

@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable.Creator;
 
 final class CursorWindow$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<CursorWindow>
 {
   public final CursorWindow createFromParcel(Parcel paramParcel)
   {

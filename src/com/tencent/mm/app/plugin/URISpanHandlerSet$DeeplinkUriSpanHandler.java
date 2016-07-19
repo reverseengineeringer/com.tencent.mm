@@ -6,19 +6,21 @@ import android.content.DialogInterface.OnClickListener;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Toast;
-import com.tencent.mm.modelsimple.ag;
+import com.tencent.mm.modelsimple.ae;
 import com.tencent.mm.pluginsdk.d;
 import com.tencent.mm.pluginsdk.d.a;
+import com.tencent.mm.pluginsdk.l;
 import com.tencent.mm.pluginsdk.ui.d.b;
-import com.tencent.mm.protocal.b.aub;
-import com.tencent.mm.r.j;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.t.n;
+import com.tencent.mm.protocal.b.aur;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.j;
 import com.tencent.mm.ui.base.p;
 import com.tencent.mm.ui.base.s;
+import com.tencent.mm.v.m;
+import com.tencent.mm.v.o;
 
-@URISpanHandlerSet.a(lh=URISpanHandlerSet.PRIORITY.LOW)
+@URISpanHandlerSet.a(jI=URISpanHandlerSet.PRIORITY.LOW)
 class URISpanHandlerSet$DeeplinkUriSpanHandler
   extends URISpanHandlerSet.BaseUriSpanHandler
 {
@@ -29,36 +31,36 @@ class URISpanHandlerSet$DeeplinkUriSpanHandler
   
   final boolean a(final com.tencent.mm.pluginsdk.ui.applet.g paramg, final b paramb)
   {
-    u.i("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "DeeplinkUriSpanHandler handleSpanClick %d, %s", new Object[] { Integer.valueOf(type), url });
+    v.i("MicroMsg.URISpanHandlerSet", "DeeplinkUriSpanHandler handleSpanClick %d, %s", new Object[] { Integer.valueOf(type), url });
     if (paramb != null) {}
     for (paramb = (String)paramb.a(paramg);; paramb = null)
     {
       if (type == 30)
       {
-        paramg = ay.ky(url);
-        final com.tencent.mm.t.l locall;
+        paramg = be.li(url);
+        final m localm;
         if ((paramg.startsWith("weixin://shieldBrandMsg/")) || (paramg.startsWith("weixin://receiveBrandMsg/")))
         {
-          if (ay.kz(paramb))
+          if (be.kf(paramb))
           {
-            u.e("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "DeeplinkUriSpanHandler username is null");
+            v.e("MicroMsg.URISpanHandlerSet", "DeeplinkUriSpanHandler username is null");
             return true;
           }
-          locall = n.gS(paramb);
-          if (locall == null)
+          localm = o.hi(paramb);
+          if (localm == null)
           {
-            u.e("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "DeeplinkUriSpanHandler BizInfo is null");
+            v.e("MicroMsg.URISpanHandlerSet", "DeeplinkUriSpanHandler BizInfo is null");
             return true;
           }
           if (paramg.startsWith("weixin://shieldBrandMsg/")) {
-            com.tencent.mm.ui.base.g.a(URISpanHandlerSet.a(ang), 2131429566, 2131430877, 2131429567, 2131430409, new DialogInterface.OnClickListener()
+            com.tencent.mm.ui.base.g.a(URISpanHandlerSet.a(ZU), 2131235674, 2131231028, 2131235673, 2131231427, new DialogInterface.OnClickListener()
             {
               public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
               {
-                paramAnonymousInt = locallfield_brandFlag;
-                locallfield_brandFlag |= 0x1;
-                u.i("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "shield biz msg %s, %s, old = %d, new = %d", new Object[] { paramg, paramb, Integer.valueOf(paramAnonymousInt), Integer.valueOf(locallfield_brandFlag) });
-                n.e(locall);
+                paramAnonymousInt = localmfield_brandFlag;
+                localmfield_brandFlag |= 0x1;
+                v.i("MicroMsg.URISpanHandlerSet", "shield biz msg %s, %s, old = %d, new = %d", new Object[] { paramg, paramb, Integer.valueOf(paramAnonymousInt), Integer.valueOf(localmfield_brandFlag) });
+                o.e(localm);
               }
             }, null);
           }
@@ -68,21 +70,21 @@ class URISpanHandlerSet$DeeplinkUriSpanHandler
           return true;
           if (paramg.startsWith("weixin://receiveBrandMsg/"))
           {
-            com.tencent.mm.ui.base.g.a(URISpanHandlerSet.a(ang), 2131429568, 2131430877, 2131429569, 2131430409, new DialogInterface.OnClickListener()
+            com.tencent.mm.ui.base.g.a(URISpanHandlerSet.a(ZU), 2131235672, 2131231028, 2131235671, 2131231427, new DialogInterface.OnClickListener()
             {
               public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
               {
-                paramAnonymousInt = locallfield_brandFlag;
-                locallfield_brandFlag &= 0xFFFFFFFE;
-                u.i("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "receive biz msg %s, %s, old = %d, new = %d", new Object[] { paramg, paramb, Integer.valueOf(paramAnonymousInt), Integer.valueOf(locallfield_brandFlag) });
-                n.e(locall);
+                paramAnonymousInt = localmfield_brandFlag;
+                localmfield_brandFlag &= 0xFFFFFFFE;
+                v.i("MicroMsg.URISpanHandlerSet", "receive biz msg %s, %s, old = %d, new = %d", new Object[] { paramg, paramb, Integer.valueOf(paramAnonymousInt), Integer.valueOf(localmfield_brandFlag) });
+                o.e(localm);
               }
             }, null);
             continue;
-            if (d.m(Uri.parse(paramg))) {
-              d.q(URISpanHandlerSet.a(ang), paramb, paramg);
+            if (d.i(Uri.parse(paramg))) {
+              d.r(URISpanHandlerSet.a(ZU), paramb, paramg);
             } else {
-              d.a(URISpanHandlerSet.a(ang), paramg, paramb, 1, paramg, null);
+              d.a(URISpanHandlerSet.a(ZU), paramg, paramb, 1, paramg, null);
             }
           }
         }
@@ -91,9 +93,9 @@ class URISpanHandlerSet$DeeplinkUriSpanHandler
     }
   }
   
-  final boolean a(String paramString, boolean paramBoolean, final com.tencent.mm.pluginsdk.l paraml, Bundle paramBundle)
+  final boolean a(String paramString, boolean paramBoolean, final l paraml, Bundle paramBundle)
   {
-    if ((ay.kz(paramString)) || (paramBundle == null)) {
+    if ((be.kf(paramString)) || (paramBundle == null)) {
       if (paramString == null)
       {
         paramBoolean = true;
@@ -101,11 +103,11 @@ class URISpanHandlerSet$DeeplinkUriSpanHandler
           break label59;
         }
         bool = true;
-        u.e("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "url is null ? %b, paramsBundle is null ? %b", new Object[] { Boolean.valueOf(paramBoolean), Boolean.valueOf(bool) });
+        v.e("MicroMsg.URISpanHandlerSet", "url is null ? %b, paramsBundle is null ? %b", new Object[] { Boolean.valueOf(paramBoolean), Boolean.valueOf(bool) });
       }
     }
     label59:
-    while (!d.m(Uri.parse(paramString))) {
+    while (!d.i(Uri.parse(paramString))) {
       for (;;)
       {
         return false;
@@ -115,24 +117,24 @@ class URISpanHandlerSet$DeeplinkUriSpanHandler
       }
     }
     int j = paramBundle.getInt("key_scene", -1);
-    u.d("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "DeeplinkUriSpanHandler jump, %d, %s", new Object[] { Integer.valueOf(j), paramString });
+    v.d("MicroMsg.URISpanHandlerSet", "DeeplinkUriSpanHandler jump, %d, %s", new Object[] { Integer.valueOf(j), paramString });
     int i = j;
     if (j == -1) {
       i = 5;
     }
-    paraml = com.tencent.mm.ui.base.g.a(URISpanHandlerSet.a(ang), "", true, null);
-    d.a(URISpanHandlerSet.a(ang), paramString, i, new d.a()
+    paraml = com.tencent.mm.ui.base.g.a(URISpanHandlerSet.a(ZU), "", true, null);
+    d.a(URISpanHandlerSet.a(ZU), paramString, i, new d.a()
     {
       public final void a(int paramAnonymousInt1, int paramAnonymousInt2, String paramAnonymousString, j paramAnonymousj, boolean paramAnonymousBoolean)
       {
         if ((paraml != null) && (paraml.isShowing())) {
           paraml.dismiss();
         }
-        if ((paramAnonymousj != null) && (paramAnonymousInt1 != 0) && (paramAnonymousInt2 != 0) && ((paramAnonymousj instanceof ag)))
+        if ((paramAnonymousj != null) && (paramAnonymousInt1 != 0) && (paramAnonymousInt2 != 0) && ((paramAnonymousj instanceof ae)))
         {
-          paramAnonymousString = ((ag)paramAnonymousj).CM();
-          if ((paramAnonymousString != null) && (URISpanHandlerSet.a(ang) != null)) {
-            s.makeText(URISpanHandlerSet.a(ang), URISpanHandlerSet.a(ang).getString(2131430877) + " : " + ay.ky(jMS), 0).show();
+          paramAnonymousString = ((ae)paramAnonymousj).CZ();
+          if ((paramAnonymousString != null) && (URISpanHandlerSet.a(ZU) != null)) {
+            s.makeText(URISpanHandlerSet.a(ZU), URISpanHandlerSet.a(ZU).getString(2131231028) + " : " + be.li(klC), 0).show();
           }
         }
       }
@@ -140,16 +142,16 @@ class URISpanHandlerSet$DeeplinkUriSpanHandler
     return true;
   }
   
-  final com.tencent.mm.pluginsdk.ui.applet.g bb(String paramString)
+  final com.tencent.mm.pluginsdk.ui.applet.g bg(String paramString)
   {
-    u.i("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "DeeplinkUriSpanHandler getHrefFromUrl %s", new Object[] { paramString });
+    v.i("MicroMsg.URISpanHandlerSet", "DeeplinkUriSpanHandler getHrefFromUrl %s", new Object[] { paramString });
     if (paramString.trim().toLowerCase().startsWith("weixin://")) {
       return new com.tencent.mm.pluginsdk.ui.applet.g(paramString, 30, null);
     }
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 30 };
   }

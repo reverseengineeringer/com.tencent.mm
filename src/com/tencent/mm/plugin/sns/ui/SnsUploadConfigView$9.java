@@ -13,7 +13,7 @@ final class SnsUploadConfigView$9
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a.coa.h(new Intent(), SnsUploadConfigView.i(hlL));
+    a.cjo.h(new Intent(), SnsUploadConfigView.i(hBN));
   }
 }
 

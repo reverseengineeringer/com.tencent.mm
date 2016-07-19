@@ -2,9 +2,9 @@ package com.tencent.mm.modelsearch;
 
 public abstract class o$a
   extends m.k
-  implements Comparable
+  implements Comparable<a>
 {
-  public boolean bZY = false;
+  public boolean bTH = false;
   public int mPriority = Integer.MAX_VALUE;
   
   public abstract boolean execute();

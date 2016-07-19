@@ -6,24 +6,24 @@ import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.telephony.TelephonyManager;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ah;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.File;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
 public final class PlatformComm
 {
-  public static a bwq = null;
+  public static a blD = null;
   private static Context context = null;
-  private static aa handler = null;
+  private static ac handler = null;
   
-  public static void a(Context paramContext, aa paramaa)
+  public static void a(Context paramContext, ac paramac)
   {
     context = paramContext;
-    handler = paramaa;
-    a.aI(paramContext);
+    handler = paramac;
+    a.aF(paramContext);
   }
   
   static class APNInfo
@@ -85,7 +85,7 @@ public final class PlatformComm
       }
       catch (Exception localException)
       {
-        u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+        v.e("PlatformComm", exception2String(localException));
         new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
       }
       return null;
@@ -103,7 +103,7 @@ public final class PlatformComm
       }
       catch (Exception localException)
       {
-        u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+        v.e("PlatformComm", exception2String(localException));
         new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
       }
       return 0;
@@ -116,13 +116,13 @@ public final class PlatformComm
         if (PlatformComm.context == null) {
           return null;
         }
-        int i = ah.du(PlatformComm.context);
+        int i = ak.dv(PlatformComm.context);
         if (i != 0)
         {
           PlatformComm.SIMInfo localSIMInfo = new PlatformComm.SIMInfo();
           ispCode = String.valueOf(i);
-          u.d("!24@zf96t1YgIScRsX2UOICiFQ==", "getISPCode MCC_MNC=%s", new Object[] { ispCode });
-          ispName = ah.dv(PlatformComm.context);
+          v.d("PlatformComm", "getISPCode MCC_MNC=%s", new Object[] { ispCode });
+          ispName = ak.dw(PlatformComm.context);
           return localSIMInfo;
         }
       }
@@ -152,7 +152,7 @@ public final class PlatformComm
         {
           for (;;)
           {
-            u.e("!24@zf96t1YgIScRsX2UOICiFQ==", "getActiveNetworkInfo failed.");
+            v.e("PlatformComm", "getActiveNetworkInfo failed.");
             localObject2 = null;
           }
           Object localObject2 = (WifiManager)PlatformComm.context.getSystemService("wifi");
@@ -226,9 +226,9 @@ public final class PlatformComm
           return 0L;
         }
         if (paramBoolean) {
-          return a.qR();
+          return a.pG();
         }
-        long l = a.qQ();
+        long l = a.pF();
         return l;
       }
       catch (Exception localException) {}
@@ -242,23 +242,23 @@ public final class PlatformComm
       }
       try
       {
-        int i = ah.cn(PlatformComm.context);
+        int i = ak.ci(PlatformComm.context);
         if (i == -1) {
           return -1;
         }
-        if (ah.dx(PlatformComm.context)) {
+        if (ak.dy(PlatformComm.context)) {
           return 3;
         }
-        if (ah.dA(PlatformComm.context)) {
+        if (ak.dB(PlatformComm.context)) {
           return 4;
         }
-        if (ah.dy(PlatformComm.context)) {
+        if (ak.dz(PlatformComm.context)) {
           return 5;
         }
-        if (ah.ps(i)) {
+        if (ak.rj(i)) {
           return 1;
         }
-        boolean bool = ah.pr(i);
+        boolean bool = ak.ri(i);
         if (bool) {
           return 2;
         }
@@ -266,7 +266,7 @@ public final class PlatformComm
       }
       catch (Exception localException)
       {
-        u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+        v.e("PlatformComm", exception2String(localException));
         new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
       }
       return -1;
@@ -279,12 +279,12 @@ public final class PlatformComm
       }
       try
       {
-        boolean bool = ah.dD(PlatformComm.context);
+        boolean bool = ak.dE(PlatformComm.context);
         return bool;
       }
       catch (Exception localException)
       {
-        u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+        v.e("PlatformComm", exception2String(localException));
         new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
       }
       return false;
@@ -292,16 +292,16 @@ public final class PlatformComm
     
     public static void restartProcess()
     {
-      if (PlatformComm.bwq == null) {
+      if (PlatformComm.blD == null) {
         return;
       }
       try
       {
-        PlatformComm.qS().post(new Runnable()
+        PlatformComm.pH().post(new Runnable()
         {
           public final void run()
           {
-            PlatformComm.bwq.restartProcess();
+            PlatformComm.blD.restartProcess();
           }
         });
         return;
@@ -322,7 +322,7 @@ public final class PlatformComm
       }
       catch (Exception localException)
       {
-        u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+        v.e("PlatformComm", exception2String(localException));
         new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
       }
       return false;
@@ -341,7 +341,7 @@ public final class PlatformComm
       }
       catch (Exception localException)
       {
-        u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+        v.e("PlatformComm", exception2String(localException));
         new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
       }
       return false;
@@ -359,7 +359,7 @@ public final class PlatformComm
       }
       catch (Exception localException)
       {
-        u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+        v.e("PlatformComm", exception2String(localException));
         new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
       }
       return null;

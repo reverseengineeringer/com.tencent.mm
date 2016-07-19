@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/ba4" android:background="@drawable/hi" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="0.9">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ba5" android:background="@raw/sns_luckymoney_post_title" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="28.0dip" android:textColor="#ffebcd9b" android:id="@id/b5i" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cr9" />
+            <TextView android:textSize="10.0dip" android:textColor="#ffebcd9b" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cr_" />
+        </LinearLayout>
+        <TextView android:textSize="17.0dip" android:textColor="#ffebcd9b" android:gravity="center" android:id="@id/ba6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="40.0dip" android:text="@string/bew" android:layout_weight="0.3" android:layout_below="@id/ba5" android:layout_centerHorizontal="true" />
+        <RelativeLayout android:gravity="center|top" android:id="@id/ba7" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_weight="0.3" android:layout_below="@id/ba6" android:layout_centerHorizontal="true">
+            <ImageView android:id="@id/ba8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@raw/sns_lucky_post_camera_bg" android:scaleType="center" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+            <RelativeLayout android:gravity="center" android:id="@id/ba9" android:layout_width="220.0dip" android:layout_height="165.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+                <View android:id="@id/ba_" android:background="@drawable/i8" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <ImageView android:id="@id/baa" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@raw/sns_lucky_post_camera" android:scaleType="center" android:layout_centerHorizontal="true" />
+                    <TextView android:textSize="18.0dip" android:textColor="#ffbea06d" android:id="@id/bab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/crb" android:layout_below="@id/baa" android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+                <ImageView android:id="@id/bac" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="3.0dip" android:scaleType="centerCrop" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout android:gravity="bottom|center" android:layout_gravity="bottom|center" android:orientation="vertical" android:id="@id/bad" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip" android:layout_weight="0.3">
+            <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/aml" android:scaleType="fitXY" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@raw/sns_lucky_time_icon" android:layout_alignParentLeft="true" />
+                <TextView android:textSize="12.0dip" android:textColor="#ffffdba0" android:id="@id/bae" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/crg" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@raw/sns_lucky_time_icon" android:layout_alignParentRight="true" />
+            </LinearLayout>
+            <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/amk" android:scaleType="fitXY" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/baf" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="1.0">
+        <RelativeLayout android:id="@id/bag" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <com.tencent.mm.plugin.sns.lucky.view.LuckyNewPreview android:id="@id/bah" android:visibility="invisible" android:layout_width="100.0dip" android:layout_height="75.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="16.0dip" android:textColor="#ffebcd9b" android:gravity="center" android:id="@id/bai" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/bex" android:layout_below="@id/bah" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <com.tencent.mm.plugin.sns.ui.SnsEditText android:textSize="16.0dip" android:textColorHint="#ffb2b2b2" android:ellipsize="end" android:gravity="top" android:id="@id/baj" android:background="@color/ow" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:visibility="gone" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:hint="@string/cr2" android:singleLine="false" android:layout_weight="1.0" android:inputType="textCapSentences|textMultiLine" style="@style/MMEditText" />
+        <com.tencent.mm.plugin.sns.lucky.view.LuckySnsUploadSayFooter android:id="@id/ba2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

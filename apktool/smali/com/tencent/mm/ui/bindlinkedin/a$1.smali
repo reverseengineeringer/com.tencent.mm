@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic kOa:Lcom/tencent/mm/ui/bindlinkedin/a;
+.field final synthetic lnq:Lcom/tencent/mm/ui/bindlinkedin/a;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 35
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindlinkedin/a$1;->kOa:Lcom/tencent/mm/ui/bindlinkedin/a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindlinkedin/a$1;->lnq:Lcom/tencent/mm/ui/bindlinkedin/a;
 
     const/16 v0, 0xa
 
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method protected final b(Ljava/lang/String;Ljava/lang/String;II)Lcom/tencent/mm/platformtools/j;
+.method protected final b(Ljava/lang/String;Ljava/lang/String;II)Lcom/tencent/mm/platformtools/i;
     .locals 1
 
     .prologue

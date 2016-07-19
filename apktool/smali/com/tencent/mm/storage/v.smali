@@ -4,11 +4,11 @@
 
 
 # static fields
-.field public static final aoY:[Ljava/lang/String;
+.field public static final bkN:[Ljava/lang/String;
 
 
 # instance fields
-.field public bCw:Lcom/tencent/mm/az/g;
+.field public bvG:Lcom/tencent/mm/bc/g;
 
 
 # direct methods
@@ -27,12 +27,12 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/storage/v;->aoY:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/storage/v;->bkN:[Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/tencent/mm/az/g;)V
+.method public constructor <init>(Lcom/tencent/mm/bc/g;)V
     .locals 0
 
     .prologue
@@ -40,7 +40,7 @@
     invoke-direct {p0}, Lcom/tencent/mm/sdk/h/g;-><init>()V
 
     .line 39
-    iput-object p1, p0, Lcom/tencent/mm/storage/v;->bCw:Lcom/tencent/mm/az/g;
+    iput-object p1, p0, Lcom/tencent/mm/storage/v;->bvG:Lcom/tencent/mm/bc/g;
 
     .line 40
     return-void

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gEp:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+.field final synthetic gKQ:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 305
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$3;->gEp:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    .line 312
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$3;->gKQ:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,21 +40,21 @@
     .locals 1
 
     .prologue
-    .line 308
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$3;->gEp:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    .line 315
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$3;->gKQ:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->gEc:Lcom/tencent/mm/plugin/sight/encode/ui/f;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->gKC:Lcom/tencent/mm/plugin/sight/encode/ui/f;
 
     if-eqz v0, :cond_0
 
-    .line 309
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$3;->gEp:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    .line 316
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$3;->gKQ:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->gEd:Lcom/tencent/mm/plugin/sight/encode/a/b;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->gKD:Lcom/tencent/mm/plugin/sight/encode/a/b;
 
     invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/encode/a/b;->cancel()V
 
-    .line 311
+    .line 318
     :cond_0
     return-void
 .end method
@@ -63,7 +63,7 @@
     .locals 2
 
     .prologue
-    .line 315
+    .line 322
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

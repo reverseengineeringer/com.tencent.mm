@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lxh:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
+.field final synthetic lXV:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 74
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$1;->lxh:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
+    .line 75
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$1;->lXV:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,13 +37,13 @@
 
 # virtual methods
 .method public final a(ZFFIDD)Z
-    .locals 6
+    .locals 7
 
     .prologue
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
-    .line 78
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$1;->lxh:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
+    .line 79
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$1;->lXV:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->a(Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;)Lcom/tencent/mm/modelgeo/c;
 
@@ -51,17 +51,17 @@
 
     if-nez v0, :cond_1
 
-    .line 96
+    .line 97
     :cond_0
     :goto_0
-    return v5
+    return v6
 
-    .line 82
+    .line 83
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 83
-    const-string/jumbo v0, "!44@/B4Tb64lLpIde65kiMeUpqlCN7YBh+S07SSwJ3cICKI="
+    .line 84
+    const-string/jumbo v0, "MicroMsg.MultiStageCitySelectUI"
 
     const-string/jumbo v1, "lat:%f lng:%f accuracy:%f"
 
@@ -73,7 +73,7 @@
 
     move-result-object v3
 
-    aput-object v3, v2, v5
+    aput-object v3, v2, v6
 
     const/4 v3, 0x1
 
@@ -91,27 +91,27 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 85
-    new-instance v0, Lcom/tencent/mm/modelsimple/o;
-
-    float-to-double v1, p3
-
-    float-to-double v3, p2
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/tencent/mm/modelsimple/o;-><init>(DD)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 86
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    new-instance v0, Lcom/tencent/mm/modelsimple/n;
+
+    float-to-double v2, p3
+
+    float-to-double v4, p2
+
+    invoke-direct {v0, v2, v3, v4, v5}, Lcom/tencent/mm/modelsimple/n;-><init>(DD)V
+
+    .line 87
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    invoke-virtual {v1, v0, v6}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
-    .line 91
+    .line 92
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$1;->lxh:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$1;->lXV:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->a(Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;)Lcom/tencent/mm/modelgeo/c;
 
@@ -119,14 +119,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 92
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$1;->lxh:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
+    .line 93
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$1;->lXV:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->a(Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;)Lcom/tencent/mm/modelgeo/c;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$1;->lxh:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$1;->lXV:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->c(Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;)Lcom/tencent/mm/modelgeo/a$a;
 
@@ -134,16 +134,16 @@
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/modelgeo/c;->c(Lcom/tencent/mm/modelgeo/a$a;)V
 
-    .line 93
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$1;->lxh:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
+    .line 94
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$1;->lXV:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->d(Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;)Lcom/tencent/mm/modelgeo/c;
 
     goto :goto_0
 
-    .line 88
+    .line 89
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$1;->lxh:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$1;->lXV:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->b(Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;)V
 

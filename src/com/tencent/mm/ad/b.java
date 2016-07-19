@@ -2,66 +2,80 @@ package com.tencent.mm.ad;
 
 import com.tencent.mm.network.e;
 import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b.zl;
-import com.tencent.mm.protocal.b.zm;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j.b;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.zx;
+import com.tencent.mm.protocal.b.zy;
+import com.tencent.mm.protocal.b.zz;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.a.c;
+import com.tencent.mm.t.d;
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 public final class b
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private d anM;
-  private final a bUv;
+  private LinkedList<zx> bIL;
+  public String bIM;
+  private final a bkQ;
+  private d bkT;
   
-  public b(String paramString1, String paramString2, String paramString3)
+  public b(ArrayList<String> paramArrayList)
   {
     Object localObject = new a.a();
-    bFa = new zl();
-    bFb = new zm();
-    uri = "/cgi-bin/micromsg-bin/invitelinkedinfriend";
-    bEY = 677;
-    bFc = 0;
-    bFd = 0;
-    bUv = ((a.a)localObject).vy();
-    localObject = (zl)bUv.bEW.bFf;
-    jwj = paramString1;
-    jwl = paramString2;
-    jwk = paramString3;
+    byl = new zy();
+    bym = new zz();
+    uri = "/cgi-bin/micromsg-bin/invitegooglecontact";
+    byj = 489;
+    byn = 0;
+    byo = 0;
+    bkQ = ((a.a)localObject).vA();
+    bIL = new LinkedList();
+    if (paramArrayList.size() > 0)
+    {
+      int i = 0;
+      while (i < paramArrayList.size())
+      {
+        localObject = new zx();
+        jyJ = ((String)paramArrayList.get(i));
+        bIL.add(localObject);
+        i += 1;
+      }
+    }
+  }
+  
+  public final zz Aa()
+  {
+    return (zz)bkQ.byi.byq;
   }
   
   public final int a(e parame, d paramd)
   {
-    anM = paramd;
-    return a(parame, bUv, this);
-  }
-  
-  protected final int a(o paramo)
-  {
-    return j.b.bFI;
+    v.i("MicroMsg.GoogleContact.NetSceneInviteGoogleContact", "doScene");
+    bkT = paramd;
+    paramd = (zy)bkQ.byh.byq;
+    cmq = bIL.size();
+    cmr = bIL;
+    return a(parame, bkQ, this);
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    u.d("!56@/B4Tb64lLpK+IBX8XDgnvhaozS6gV+K/39XkuZsYAsZ7cIpacrC6MQ==", "[oneliang][NetSceneInviteLinkedInFriend]:netId:%s,errType:%s,errCode:%s,errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString });
-    if ((paramInt2 == 0) && (paramInt3 == 0)) {
-      u.d("!56@/B4Tb64lLpK+IBX8XDgnvhaozS6gV+K/39XkuZsYAsZ7cIpacrC6MQ==", "[oneliang][NetSceneInviteLinkedInFriend]:net end ok");
+    v.i("MicroMsg.GoogleContact.NetSceneInviteGoogleContact", "NetId:%d, ErrType:%d, ErrCode:%d, errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString });
+    if ((paramInt2 != 0) || (paramInt3 != 0))
+    {
+      bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
+      return;
     }
-    anM.a(paramInt2, paramInt3, paramString, this);
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()
   {
-    return 677;
-  }
-  
-  protected final int lk()
-  {
-    return 10;
+    return 489;
   }
 }
 

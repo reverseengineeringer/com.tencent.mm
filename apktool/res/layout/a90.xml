@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="top" android:background="@color/q" android:layout_width="fill_parent" android:layout_height="@dimen/hb" />
+    <TextView android:textSize="@dimen/i8" android:textColor="@color/ow" android:gravity="center_horizontal" android:id="@id/alx" android:padding="@dimen/i7" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/cmw" />
+    <ImageView android:id="@id/a4h" android:background="@color/q" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerInside" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="@color/q" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/c6x" android:layout_width="fill_parent" android:layout_height="@dimen/jb" android:src="@color/ot" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/ot" android:gravity="center" android:id="@id/a4l" android:layout_width="fill_parent" android:layout_height="@dimen/j7" android:text="@string/cmy" />
+            <ImageButton android:id="@id/c6y" android:background="@null" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/acp" />
+        </FrameLayout>
+    </LinearLayout>
+</merge>

@@ -1,106 +1,105 @@
 package com.tencent.mm.modelmulti;
 
-import com.tencent.mm.d.b.bg;
+import com.tencent.mm.e.b.bj;
 import com.tencent.mm.model.c;
-import com.tencent.mm.platformtools.n;
-import com.tencent.mm.protocal.b.rl;
-import com.tencent.mm.protocal.b.rm;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag;
-import com.tencent.mm.storage.s;
+import com.tencent.mm.platformtools.m;
+import com.tencent.mm.protocal.b.rw;
+import com.tencent.mm.protocal.b.rx;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.aj;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.concurrent.LinkedBlockingQueue;
 
 final class a$2
-  implements af.a
+  implements ah.a
 {
   a$2(a parama) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    u.d("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr pusherTry onTimerExpired tryStartNetscene");
-    a locala1 = bUB;
-    long l1 = com.tencent.mm.platformtools.t.FS();
-    if ((bDG) && (l1 - bDQ > 300000L))
+    v.d("MicroMsg.GetChatRoomMsgService", "summerbadcr pusherTry onTimerExpired tryStartNetscene");
+    a locala1 = bOc;
+    long l1 = com.tencent.mm.platformtools.s.Gp();
+    if ((bwQ) && (l1 - bxb > 300000L))
     {
-      u.w("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr tryStartNetscene Not Callback too long:%d . Force Run Now", new Object[] { Long.valueOf(l1 - bDQ) });
-      bDG = false;
+      v.w("MicroMsg.GetChatRoomMsgService", "summerbadcr tryStartNetscene Not Callback too long:%d . Force Run Now", new Object[] { Long.valueOf(l1 - bxb) });
+      bwQ = false;
     }
-    if (bDG) {
-      u.d("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr tryStartNetscene netSceneRunning: " + bDG + " ret");
+    if (bwQ) {
+      v.d("MicroMsg.GetChatRoomMsgService", "summerbadcr tryStartNetscene netSceneRunning: " + bwQ + " ret");
     }
     for (;;)
     {
       return false;
       str = null;
       a.a locala = null;
-      if (!bUy.isEmpty())
+      if (!bNZ.isEmpty())
       {
-        locala = (a.a)bUy.poll();
-        str = bUD;
+        locala = (a.a)bNZ.poll();
+        str = bOe;
       }
       if (locala != null) {
         break label962;
       }
-      synchronized (bUx)
+      synchronized (bNY)
       {
-        u.d("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr tryStartNetscene needGetInfosMap size[%d], content[%s]", new Object[] { Integer.valueOf(bUx.size()), bUx });
-        if ((bUz == null) || (com.tencent.mm.platformtools.t.kz(bUz.AM())))
+        v.d("MicroMsg.GetChatRoomMsgService", "summerbadcr tryStartNetscene needGetInfosMap size[%d], content[%s]", new Object[] { Integer.valueOf(bNY.size()), bNY });
+        if ((bOa == null) || (com.tencent.mm.platformtools.s.kf(bOa.AY())))
         {
-          bUx.clear();
-          bUz = null;
-          u.d("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr tryStartNetscene currentListener is or its chatroomid is null ret");
+          bNY.clear();
+          bOa = null;
+          v.d("MicroMsg.GetChatRoomMsgService", "summerbadcr tryStartNetscene currentListener is or its chatroomid is null ret");
         }
       }
     }
-    String str = bUz.AM();
-    LinkedList localLinkedList = (LinkedList)bUx.get(str);
+    String str = bOa.AY();
+    LinkedList localLinkedList = (LinkedList)bNY.get(str);
     int i;
     label344:
     Object localObject3;
-    ag localag;
+    ai localai;
     if ((localLinkedList == null) || (localLinkedList.size() == 0))
     {
       if (localLinkedList == null) {}
       for (i = -1;; i = localLinkedList.size())
       {
-        u.d("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr tryStartNetscene current talker[%s] no infos and ret infos size:%d", new Object[] { str, Integer.valueOf(i) });
+        v.d("MicroMsg.GetChatRoomMsgService", "summerbadcr tryStartNetscene current talker[%s] no infos and ret infos size:%d", new Object[] { str, Integer.valueOf(i) });
         break;
       }
-      u.i("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr tryStartNetscene get nextInfo in map in db but not fault: " + localObject3 + " flag:" + field_flag);
+      v.i("MicroMsg.GetChatRoomMsgService", "summerbadcr tryStartNetscene get nextInfo in map in db but not fault: " + localObject3 + " flag:" + field_flag);
     }
     Object localObject2;
     if (!localLinkedList.isEmpty())
     {
       localObject3 = (a.a)localLinkedList.poll();
-      localag = com.tencent.mm.model.ah.tD().rs().y(str, bUE);
+      localai = com.tencent.mm.model.ah.tE().rt().D(str, bOf);
       if (field_msgId == 0L)
       {
-        u.i("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr tryStartNetscene get nextInfo in map not in db:" + localObject3);
+        v.i("MicroMsg.GetChatRoomMsgService", "summerbadcr tryStartNetscene get nextInfo in map not in db:" + localObject3);
         localObject2 = localObject3;
         label452:
-        if ((localObject2 != null) || (com.tencent.mm.platformtools.t.kz(str))) {
+        if ((localObject2 != null) || (com.tencent.mm.platformtools.s.kf(str))) {
           break label721;
         }
-        localObject3 = com.tencent.mm.model.ah.tD().rt().EA(str);
+        localObject3 = com.tencent.mm.model.ah.tE().ru().GO(str);
         if (localObject3 == null) {
           break label721;
         }
         long l2 = field_lastSeq;
         i = field_UnDeliverCount;
-        u.i("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr tryStartNetscene lastSeq[%d], undeliverCount[%d]", new Object[] { Long.valueOf(l2), Integer.valueOf(i) });
+        v.i("MicroMsg.GetChatRoomMsgService", "summerbadcr tryStartNetscene lastSeq[%d], undeliverCount[%d]", new Object[] { Long.valueOf(l2), Integer.valueOf(i) });
         if (l2 == 0L) {
           break label721;
         }
-        localObject3 = com.tencent.mm.model.ah.tD().rs().y(str, l2);
+        localObject3 = com.tencent.mm.model.ah.tE().rt().D(str, l2);
         if (field_msgId != 0L) {
           break label688;
         }
         localObject2 = new a.a(str, (int)l2, i, 1);
-        u.i("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr tryStartNetscene get nextInfo in db:" + localObject2);
+        v.i("MicroMsg.GetChatRoomMsgService", "summerbadcr tryStartNetscene get nextInfo in db:" + localObject2);
       }
     }
     label688:
@@ -108,46 +107,46 @@ final class a$2
     label962:
     for (;;)
     {
-      u.i("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr tryStartNetscene nextInfo:" + localObject2);
+      v.i("MicroMsg.GetChatRoomMsgService", "summerbadcr tryStartNetscene nextInfo:" + localObject2);
       if (localObject2 == null)
       {
-        bOS.ds(500L);
+        bIn.dJ(500L);
         break;
         if ((field_flag & 0x1) == 0) {
           break label344;
         }
-        u.i("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr tryStartNetscene get nextInfo in map in db but fault: " + localObject3 + " flag:" + field_flag);
+        v.i("MicroMsg.GetChatRoomMsgService", "summerbadcr tryStartNetscene get nextInfo in map in db but fault: " + localObject3 + " flag:" + field_flag);
         localObject2 = localObject3;
         break label452;
-        u.i("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr tryStartNetscene get nextInfo in db but has get msg id:%d, svrId:%d", new Object[] { Long.valueOf(field_msgId), Long.valueOf(field_msgSvrId) });
+        v.i("MicroMsg.GetChatRoomMsgService", "summerbadcr tryStartNetscene get nextInfo in db but has get msg id:%d, svrId:%d", new Object[] { Long.valueOf(field_msgId), Long.valueOf(field_msgSvrId) });
         continue;
       }
-      bDG = true;
-      bDQ = l1;
-      localObject3 = new rl();
-      jqn = n.kw(str);
-      iXB = bUE;
-      if (bUE == 0)
+      bwQ = true;
+      bxb = l1;
+      localObject3 = new rw();
+      jOs = m.lg(str);
+      jvf = bOf;
+      if (bOf == 0)
       {
-        jqo = 0;
-        if (bUF != 0) {
-          u.w("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr tryStartNetscene msgSeq is 0 but needCount[%d], stack[%s]!", new Object[] { Integer.valueOf(bUF), com.tencent.mm.platformtools.t.FW() });
+        jOt = 0;
+        if (bOg != 0) {
+          v.w("MicroMsg.GetChatRoomMsgService", "summerbadcr tryStartNetscene msgSeq is 0 but needCount[%d], stack[%s]!", new Object[] { Integer.valueOf(bOg), com.tencent.mm.platformtools.s.Gt() });
         }
       }
       for (;;)
       {
-        jqp = bUG;
-        u.i("!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s=", "summerbadcr tryStartNetscene MsgSeq[%d], NeedCount[%d], UpDownFlag[%d]", new Object[] { Integer.valueOf(iXB), Integer.valueOf(jqo), Integer.valueOf(jqp) });
-        localObject2 = new com.tencent.mm.r.a.a();
-        bFa = ((com.tencent.mm.at.a)localObject3);
-        bFb = new rm();
+        jOu = bOh;
+        v.i("MicroMsg.GetChatRoomMsgService", "summerbadcr tryStartNetscene MsgSeq[%d], NeedCount[%d], UpDownFlag[%d]", new Object[] { Integer.valueOf(jvf), Integer.valueOf(jOt), Integer.valueOf(jOu) });
+        localObject2 = new com.tencent.mm.t.a.a();
+        byl = ((com.tencent.mm.ax.a)localObject3);
+        bym = new rx();
         uri = "/cgi-bin/micromsg-bin/getcrmsg";
-        bEY = 805;
-        bFc = 0;
-        bFd = 0;
-        com.tencent.mm.r.t.a(((com.tencent.mm.r.a.a)localObject2).vy(), new a.3(locala1), true);
+        byj = 805;
+        byn = 0;
+        byo = 0;
+        com.tencent.mm.t.t.a(((com.tencent.mm.t.a.a)localObject2).vA(), new a.3(locala1), true);
         break;
-        jqo = 18;
+        jOt = 18;
       }
       break label452;
     }

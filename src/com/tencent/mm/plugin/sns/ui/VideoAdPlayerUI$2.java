@@ -10,7 +10,7 @@ final class VideoAdPlayerUI$2
   
   public final void onClick(View paramView)
   {
-    hnc.finish();
+    hDx.finish();
   }
 }
 

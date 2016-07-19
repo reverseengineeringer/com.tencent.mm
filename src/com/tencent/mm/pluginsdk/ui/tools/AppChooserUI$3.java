@@ -12,8 +12,8 @@ final class AppChooserUI$3
   
   public final void onClick(View paramView)
   {
-    if ((AppChooserUI.c(iRi) != null) && (ciRi).iRm != null)) {
-      AppChooserUI.a(iRi, ciRi).iRm.activityInfo.packageName, false);
+    if ((AppChooserUI.c(jos) != null) && (cjos).jow != null)) {
+      AppChooserUI.a(jos, cjos).jow.activityInfo.packageName, false);
     }
   }
 }

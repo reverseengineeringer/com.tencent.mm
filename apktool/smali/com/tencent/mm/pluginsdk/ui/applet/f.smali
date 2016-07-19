@@ -15,17 +15,17 @@
 # instance fields
 .field background:I
 
-.field fSm:Landroid/view/View$OnClickListener;
+.field gbp:Landroid/view/View$OnClickListener;
 
-.field iIp:Lcom/tencent/mm/pluginsdk/ui/applet/e;
+.field jfm:Lcom/tencent/mm/pluginsdk/ui/applet/e;
 
-.field iIw:Lcom/tencent/mm/pluginsdk/ui/applet/f$a;
+.field jft:Lcom/tencent/mm/pluginsdk/ui/applet/f$a;
 
-.field iIz:I
+.field jfw:I
 
-.field private final iJe:Landroid/view/View$OnTouchListener;
+.field private final jga:Landroid/view/View$OnTouchListener;
 
-.field iJj:Lcom/tencent/mm/pluginsdk/ui/applet/f$b;
+.field jgf:Lcom/tencent/mm/pluginsdk/ui/applet/f$b;
 
 .field row:I
 
@@ -48,14 +48,14 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/applet/f$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/applet/f;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/f;->iJe:Landroid/view/View$OnTouchListener;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/f;->jga:Landroid/view/View$OnTouchListener;
 
     .line 40
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/f$2;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/applet/f$2;-><init>(Lcom/tencent/mm/pluginsdk/ui/applet/f;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/f;->fSm:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/f;->gbp:Landroid/view/View$OnClickListener;
 
     return-void
 .end method

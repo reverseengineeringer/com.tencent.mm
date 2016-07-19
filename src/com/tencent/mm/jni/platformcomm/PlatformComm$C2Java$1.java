@@ -5,7 +5,7 @@ final class PlatformComm$C2Java$1
 {
   public final void run()
   {
-    PlatformComm.bwq.restartProcess();
+    PlatformComm.blD.restartProcess();
   }
 }
 

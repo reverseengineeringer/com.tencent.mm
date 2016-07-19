@@ -9,9 +9,7 @@
 
 
 # instance fields
-.field private iO:Landroid/support/v7/internal/view/menu/f;
-
-.field private ls:I
+.field private jf:Landroid/support/v7/internal/view/menu/f;
 
 
 # direct methods
@@ -36,7 +34,7 @@
 
     .prologue
     .line 62
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/ExpandedMenuView;->iO:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/ExpandedMenuView;->jf:Landroid/support/v7/internal/view/menu/f;
 
     const/4 v1, 0x0
 
@@ -52,20 +50,10 @@
 
     .prologue
     .line 49
-    iput-object p1, p0, Landroid/support/v7/internal/view/menu/ExpandedMenuView;->iO:Landroid/support/v7/internal/view/menu/f;
+    iput-object p1, p0, Landroid/support/v7/internal/view/menu/ExpandedMenuView;->jf:Landroid/support/v7/internal/view/menu/f;
 
     .line 50
     return-void
-.end method
-
-.method public final getWindowAnimations()I
-    .locals 1
-
-    .prologue
-    .line 73
-    iget v0, p0, Landroid/support/v7/internal/view/menu/ExpandedMenuView;->ls:I
-
-    return v0
 .end method
 
 .method protected final onDetachedFromWindow()V

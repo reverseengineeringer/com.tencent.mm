@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/contact/AddressUI$a;->aZm()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/ui/contact/AddressUI$a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+.field final synthetic lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1126
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$14;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    .line 1094
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$14;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,15 +40,11 @@
     .locals 1
 
     .prologue
-    .line 1130
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$14;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    .line 1097
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$14;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/contact/AddressUI$a;->a(Lcom/tencent/mm/ui/contact/AddressUI$a;)Lcom/tencent/mm/ui/contact/a;
+    invoke-static {v0}, Lcom/tencent/mm/ui/contact/AddressUI$a;->m(Lcom/tencent/mm/ui/contact/AddressUI$a;)V
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/a;->pause()V
-
-    .line 1131
+    .line 1098
     return-void
 .end method

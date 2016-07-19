@@ -1,17 +1,20 @@
 package com.tencent.mm.t;
 
-public abstract interface c$a
+import com.tencent.mm.protocal.b.am;
+
+public final class c$a
 {
-  public abstract void a(b paramb);
+  public am bys;
+  public boolean byt = false;
+  public boolean byu = false;
+  public boolean byv = false;
   
-  public static enum a {}
-  
-  public static final class b
+  public c$a(am paramam, boolean paramBoolean1, boolean paramBoolean2, boolean paramBoolean3)
   {
-    public String auQ;
-    public int bHa;
-    public long bHb;
-    public b bHc;
+    bys = paramam;
+    byt = paramBoolean1;
+    byu = paramBoolean2;
+    byv = paramBoolean3;
   }
 }
 

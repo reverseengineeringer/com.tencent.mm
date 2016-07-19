@@ -11,7 +11,7 @@ final class RegByMobileRegAIOUI$12
   public final void onFocusChange(View paramView, boolean paramBoolean)
   {
     if (paramBoolean) {
-      RegByMobileRegAIOUI.a(kuT);
+      RegByMobileRegAIOUI.a(kUa);
     }
   }
 }

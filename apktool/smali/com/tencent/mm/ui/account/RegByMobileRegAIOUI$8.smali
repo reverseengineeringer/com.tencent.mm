@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/ab$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ad$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field bNn:Ljava/lang/String;
+.field bGH:Ljava/lang/String;
 
 .field bitmap:Landroid/graphics/Bitmap;
 
-.field final synthetic kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+.field final synthetic kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
 
 # direct methods
@@ -30,8 +30,8 @@
     .locals 0
 
     .prologue
-    .line 621
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 622
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,7 +44,7 @@
     .locals 2
 
     .prologue
-    .line 660
+    .line 661
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -70,29 +70,29 @@
     return-object v0
 .end method
 
-.method public final vd()Z
+.method public final vf()Z
     .locals 5
 
     .prologue
-    .line 645
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 646
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/modelsimple/c;->aT(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/modelsimple/c;->aP(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->bNn:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->bGH:Ljava/lang/String;
 
-    .line 646
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 647
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/modelsimple/c;->aU(Landroid/content/Context;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/tencent/mm/modelsimple/c;->aQ(Landroid/content/Context;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->bitmap:Landroid/graphics/Bitmap;
 
-    .line 647
+    .line 648
     iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->bitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
@@ -105,7 +105,7 @@
 
     if-nez v0, :cond_0
 
-    .line 649
+    .line 650
     :try_start_0
     iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->bitmap:Landroid/graphics/Bitmap;
 
@@ -117,7 +117,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v4, Lcom/tencent/mm/compatible/util/d;->bur:Ljava/lang/String;
+    sget-object v4, Lcom/tencent/mm/compatible/util/d;->biR:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -139,19 +139,19 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 652
+    .line 653
     :cond_0
     :goto_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 650
+    .line 651
     :catch_0
     move-exception v0
 
-    .line 651
-    const-string/jumbo v1, "!44@/B4Tb64lLpLrFBPJPItazeC2EyRjy73us9HlrmPyGsI="
+    .line 652
+    const-string/jumbo v1, "MicroMsg.RegByMobileRegAIOUI"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -171,19 +171,19 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public final ve()Z
-    .locals 2
+.method public final vg()Z
+    .locals 3
 
     .prologue
-    .line 626
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->bNn:Ljava/lang/String;
+    .line 627
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->bGH:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -193,7 +193,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->i(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Lcom/tencent/mm/ui/base/MMFormInputView;
 
@@ -215,50 +215,67 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 627
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 628
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->i(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Lcom/tencent/mm/ui/base/MMFormInputView;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->bNn:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->bGH:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/MMFormInputView;->setText(Ljava/lang/String;)V
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/MMFormInputView;->fNQ:Landroid/widget/EditText;
 
-    .line 630
+    if-eqz v2, :cond_1
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMFormInputView;->fNQ:Landroid/widget/EditText;
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+
+    .line 631
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/compatible/util/e;->oW()Z
+    :goto_0
+    invoke-static {}, Lcom/tencent/mm/compatible/util/e;->no()Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
-    .line 631
-    const-string/jumbo v0, "!44@/B4Tb64lLpLrFBPJPItazeC2EyRjy73us9HlrmPyGsI="
+    .line 632
+    const-string/jumbo v0, "MicroMsg.RegByMobileRegAIOUI"
 
     const-string/jumbo v1, "SDcard is not available"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 632
+    .line 633
     const/4 v0, 0x0
 
-    .line 640
-    :goto_0
+    .line 641
+    :goto_1
     return v0
 
-    .line 635
+    .line 628
     :cond_1
+    const-string/jumbo v0, "MicroMsg.MMFormInputView"
+
+    const-string/jumbo v1, "contentET is null!"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 636
+    :cond_2
     iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->bitmap:Landroid/graphics/Bitmap;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->bitmap:Landroid/graphics/Bitmap;
 
@@ -266,18 +283,18 @@
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->m(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
-    .line 636
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 637
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->n(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Landroid/widget/ImageView;
 
@@ -287,8 +304,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 637
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 638
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->o(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Landroid/widget/ImageView;
 
@@ -298,14 +315,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 638
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 639
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$8;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->p(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Z
 
-    .line 640
-    :cond_2
+    .line 641
+    :cond_3
     const/4 v0, 0x1
 
-    goto :goto_0
+    goto :goto_1
 .end method

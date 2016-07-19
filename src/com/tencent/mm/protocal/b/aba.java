@@ -1,64 +1,85 @@
 package com.tencent.mm.protocal.b;
 
+import java.util.LinkedList;
+
 public final class aba
-  extends com.tencent.mm.at.a
+  extends alt
 {
-  public String cQT;
-  public double latitude;
-  public double longitude;
+  public String jVr;
+  public LinkedList<String> jVu = new LinkedList();
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.a(1, latitude);
-      paramVarArgs.a(2, longitude);
-      if (cQT != null) {
-        paramVarArgs.d(3, cQT);
+      if (kfq != null)
+      {
+        paramVarArgs.cx(1, kfq.iO());
+        kfq.a(paramVarArgs);
       }
-      paramInt = 0;
+      if (jVr != null) {
+        paramVarArgs.e(2, jVr);
+      }
+      paramVarArgs.d(3, 1, jVu);
+      return 0;
     }
-    int i;
-    do
+    if (paramInt == 1) {
+      if (kfq == null) {
+        break label379;
+      }
+    }
+    label379:
+    for (paramInt = a.a.a.a.cv(1, kfq.iO()) + 0;; paramInt = 0)
     {
-      return paramInt;
-      if (paramInt != 1) {
+      int i = paramInt;
+      if (jVr != null) {
+        i = paramInt + a.a.a.b.b.a.f(2, jVr);
+      }
+      return i + a.a.a.a.c(3, 1, jVu);
+      if (paramInt == 2)
+      {
+        paramVarArgs = (byte[])paramVarArgs[0];
+        jVu.clear();
+        paramVarArgs = new a.a.a.a.a(paramVarArgs, jrk);
+        for (paramInt = alt.a(paramVarArgs); paramInt > 0; paramInt = alt.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bve();
+          }
+        }
         break;
       }
-      i = a.a.a.b.b.a.ay(1) + 8 + 0 + (a.a.a.b.b.a.ay(2) + 8);
-      paramInt = i;
-    } while (cQT == null);
-    return i + a.a.a.b.b.a.e(3, cQT);
-    if (paramInt == 2)
-    {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.bog();
-        }
-      }
-      return 0;
-    }
-    if (paramInt == 3)
-    {
-      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-      aba localaba = (aba)paramVarArgs[1];
-      switch (((Integer)paramVarArgs[2]).intValue())
+      if (paramInt == 3)
       {
-      default: 
-        return -1;
-      case 1: 
-        latitude = maU.readDouble();
-        return 0;
-      case 2: 
-        longitude = maU.readDouble();
+        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
+        aba localaba = (aba)paramVarArgs[1];
+        paramInt = ((Integer)paramVarArgs[2]).intValue();
+        switch (paramInt)
+        {
+        default: 
+          return -1;
+        case 1: 
+          paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+          i = paramVarArgs.size();
+          paramInt = 0;
+          while (paramInt < i)
+          {
+            Object localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new df();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+            for (boolean bool = true; bool; bool = ((df)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, alt.a((a.a.a.a.a)localObject2))) {}
+            kfq = ((df)localObject1);
+            paramInt += 1;
+          }
+        case 2: 
+          jVr = mMY.readString();
+          return 0;
+        }
+        jVu.add(mMY.readString());
         return 0;
       }
-      cQT = maU.readString();
-      return 0;
+      return -1;
     }
-    return -1;
   }
 }
 

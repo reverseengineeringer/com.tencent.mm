@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic kIx:[I
+.field static final synthetic lhN:[I
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 108
-    invoke-static {}, Lcom/tencent/mm/ui/base/MaskLayout$a;->bde()[I
+    invoke-static {}, Lcom/tencent/mm/ui/base/MaskLayout$a;->biH()[I
 
     move-result-object v0
 
@@ -32,12 +32,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/tencent/mm/ui/base/MaskLayout$1;->kIx:[I
+    sput-object v0, Lcom/tencent/mm/ui/base/MaskLayout$1;->lhN:[I
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/ui/base/MaskLayout$1;->kIx:[I
+    sget-object v0, Lcom/tencent/mm/ui/base/MaskLayout$1;->lhN:[I
 
-    sget v1, Lcom/tencent/mm/ui/base/MaskLayout$a;->kIA:I
+    sget v1, Lcom/tencent/mm/ui/base/MaskLayout$a;->lhQ:I
 
     add-int/lit8 v1, v1, -0x1
 
@@ -49,9 +49,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/tencent/mm/ui/base/MaskLayout$1;->kIx:[I
+    sget-object v0, Lcom/tencent/mm/ui/base/MaskLayout$1;->lhN:[I
 
-    sget v1, Lcom/tencent/mm/ui/base/MaskLayout$a;->kIB:I
+    sget v1, Lcom/tencent/mm/ui/base/MaskLayout$a;->lhR:I
 
     add-int/lit8 v1, v1, -0x1
 
@@ -63,9 +63,9 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/tencent/mm/ui/base/MaskLayout$1;->kIx:[I
+    sget-object v0, Lcom/tencent/mm/ui/base/MaskLayout$1;->lhN:[I
 
-    sget v1, Lcom/tencent/mm/ui/base/MaskLayout$a;->kIz:I
+    sget v1, Lcom/tencent/mm/ui/base/MaskLayout$a;->lhP:I
 
     add-int/lit8 v1, v1, -0x1
 
@@ -77,9 +77,9 @@
 
     :goto_2
     :try_start_3
-    sget-object v0, Lcom/tencent/mm/ui/base/MaskLayout$1;->kIx:[I
+    sget-object v0, Lcom/tencent/mm/ui/base/MaskLayout$1;->lhN:[I
 
-    sget v1, Lcom/tencent/mm/ui/base/MaskLayout$a;->kIy:I
+    sget v1, Lcom/tencent/mm/ui/base/MaskLayout$a;->lhO:I
 
     add-int/lit8 v1, v1, -0x1
 

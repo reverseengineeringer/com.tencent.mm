@@ -1,14 +1,14 @@
 package com.tencent.mm.modelmulti;
 
-import com.tencent.mm.protocal.u.a;
-import com.tencent.mm.protocal.u.b;
-import com.tencent.mm.r.h;
+import com.tencent.mm.protocal.x.a;
+import com.tencent.mm.protocal.x.b;
+import com.tencent.mm.t.h;
 
 public final class f$a
   extends h
 {
-  private final u.a bVj = new u.a();
-  private final u.b bVk = new u.b();
+  private final x.a bOK = new x.a();
+  private final x.b bOL = new x.b();
   
   public final int getType()
   {

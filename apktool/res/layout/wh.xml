@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/d4" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.plugin.multitalk.ui.widget.MultiTalkVideoView android:id="@id/bc9" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/bc_" android:background="#dd1f2127" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/bca" android:background="@drawable/jp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <TextView android:textSize="@dimen/h4" android:textColor="@color/ow" android:gravity="center" android:id="@id/bcb" android:background="#dd1f2127" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/bmd" />
+    <ImageView android:id="@id/bcc" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/amv" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

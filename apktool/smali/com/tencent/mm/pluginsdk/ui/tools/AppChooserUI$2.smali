@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+.field final synthetic jos:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 134
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$2;->iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$2;->jos:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 137
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$2;->iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$2;->jos:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->c(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;
 
@@ -49,26 +49,26 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$2;->iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$2;->jos:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->c(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->iRm:Landroid/content/pm/ResolveInfo;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->jow:Landroid/content/pm/ResolveInfo;
 
     if-eqz v0, :cond_0
 
     .line 138
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$2;->iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$2;->jos:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
     const v2, 0x43060
 
@@ -76,13 +76,13 @@
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$2;->iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$2;->jos:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->c(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->iRm:Landroid/content/pm/ResolveInfo;
+    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->jow:Landroid/content/pm/ResolveInfo;
 
     iget-object v2, v2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
@@ -91,15 +91,15 @@
     invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
     .line 142
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$2;->iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$2;->jos:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$2;->iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$2;->jos:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->c(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->iRm:Landroid/content/pm/ResolveInfo;
+    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->jow:Landroid/content/pm/ResolveInfo;
 
     iget-object v1, v1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 

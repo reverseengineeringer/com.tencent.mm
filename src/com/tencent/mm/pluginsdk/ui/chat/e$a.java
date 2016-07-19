@@ -5,7 +5,7 @@ import com.tencent.mm.pluginsdk.ui.ChatFooterPanel;
 
 public abstract interface e$a
 {
-  public abstract ChatFooterPanel bs(Context paramContext);
+  public abstract ChatFooterPanel bo(Context paramContext);
 }
 
 /* Location:

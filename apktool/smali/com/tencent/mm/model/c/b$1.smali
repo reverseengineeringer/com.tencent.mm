@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/r/t$a;
+.implements Lcom/tencent/mm/t/t$a;
 
 
 # annotations
@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 60
+    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +30,7 @@
 
 
 # virtual methods
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/a;Lcom/tencent/mm/r/j;)I
+.method public final a(IILjava/lang/String;Lcom/tencent/mm/t/a;Lcom/tencent/mm/t/j;)I
     .locals 7
 
     .prologue
@@ -40,14 +40,14 @@
 
     const/4 v5, 0x0
 
-    .line 64
+    .line 66
     if-nez p1, :cond_0
 
     if-eqz p2, :cond_1
 
-    .line 65
+    .line 67
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpKfsnXedoHFNvolZcmK6lBp"
+    const-string/jumbo v0, "MicroMsg.ABTestUpdater"
 
     const-string/jumbo v1, "Update Error: %d, %d, next update will be performed %d(s) later"
 
@@ -75,58 +75,63 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 67
-    invoke-static {}, Lcom/tencent/mm/model/c/b;->pd()V
-
-    .line 68
-    invoke-static {v6}, Lcom/tencent/mm/model/c/b;->cP(I)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 69
-    invoke-static {}, Lcom/tencent/mm/model/c/b;->uW()V
+    invoke-static {}, Lcom/tencent/mm/model/c/b;->nv()V
 
-    .line 82
+    .line 70
+    invoke-static {v6}, Lcom/tencent/mm/model/c/b;->dv(I)V
+
+    .line 71
+    invoke-static {}, Lcom/tencent/mm/model/c/b;->uY()V
+
+    .line 85
     :goto_0
     return v5
 
-    .line 73
-    :cond_1
-    iget-object v0, p4, Lcom/tencent/mm/r/a;->bEX:Lcom/tencent/mm/r/a$c;
-
-    iget-object v0, v0, Lcom/tencent/mm/r/a$c;->bFf:Lcom/tencent/mm/at/a;
-
-    check-cast v0, Lcom/tencent/mm/protocal/b/pe;
-
-    .line 74
-    invoke-static {}, Lcom/tencent/mm/model/c/b;->pd()V
-
     .line 75
-    iget v1, v0, Lcom/tencent/mm/protocal/b/pe;->jjK:I
+    :cond_1
+    iget-object v0, p4, Lcom/tencent/mm/t/a;->byi:Lcom/tencent/mm/t/a$c;
 
-    invoke-static {v1}, Lcom/tencent/mm/model/c/b;->cQ(I)V
+    iget-object v0, v0, Lcom/tencent/mm/t/a$c;->byq:Lcom/tencent/mm/ax/a;
+
+    check-cast v0, Lcom/tencent/mm/protocal/b/pn;
 
     .line 76
-    iget v1, v0, Lcom/tencent/mm/protocal/b/pe;->jpi:I
-
-    invoke-static {v1}, Lcom/tencent/mm/model/c/b;->cP(I)V
+    invoke-static {}, Lcom/tencent/mm/model/c/b;->nv()V
 
     .line 77
-    iget-object v1, v0, Lcom/tencent/mm/protocal/b/pe;->jph:Ljava/util/LinkedList;
+    iget v1, v0, Lcom/tencent/mm/protocal/b/pn;->jHR:I
 
-    invoke-static {v1}, Lcom/tencent/mm/model/c/b;->p(Ljava/util/List;)V
+    invoke-static {v1}, Lcom/tencent/mm/model/c/b;->dw(I)V
 
     .line 78
-    invoke-static {}, Lcom/tencent/mm/model/c/b;->uW()V
+    iget v1, v0, Lcom/tencent/mm/protocal/b/pn;->jNj:I
+
+    invoke-static {v1}, Lcom/tencent/mm/model/c/b;->dv(I)V
 
     .line 79
-    const-string/jumbo v1, "!32@/B4Tb64lLpKfsnXedoHFNvolZcmK6lBp"
+    iget-object v1, v0, Lcom/tencent/mm/protocal/b/pn;->jNk:Ljava/util/LinkedList;
+
+    invoke-static {v1}, Lcom/tencent/mm/model/c/b;->t(Ljava/util/List;)V
+
+    .line 80
+    iget-object v1, v0, Lcom/tencent/mm/protocal/b/pn;->jNi:Ljava/util/LinkedList;
+
+    invoke-static {v1}, Lcom/tencent/mm/model/c/b;->u(Ljava/util/List;)V
+
+    .line 81
+    invoke-static {}, Lcom/tencent/mm/model/c/b;->uY()V
+
+    .line 82
+    const-string/jumbo v1, "MicroMsg.ABTestUpdater"
 
     const-string/jumbo v2, "Update Interval: %d"
 
     new-array v3, v4, [Ljava/lang/Object;
 
-    iget v0, v0, Lcom/tencent/mm/protocal/b/pe;->jpi:I
+    iget v0, v0, Lcom/tencent/mm/protocal/b/pn;->jNj:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -134,10 +139,10 @@
 
     aput-object v0, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 81
-    invoke-static {}, Lcom/tencent/mm/model/c/b;->uX()Z
+    .line 84
+    invoke-static {}, Lcom/tencent/mm/model/c/b;->uZ()Z
 
     goto :goto_0
 .end method

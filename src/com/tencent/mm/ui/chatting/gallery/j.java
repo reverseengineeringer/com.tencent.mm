@@ -15,69 +15,73 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
-import com.tencent.mm.an.n;
-import com.tencent.mm.an.o;
-import com.tencent.mm.d.b.bg;
+import com.tencent.mm.aq.n;
+import com.tencent.mm.aq.q;
+import com.tencent.mm.aq.r;
+import com.tencent.mm.e.b.bj;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.model.ar;
 import com.tencent.mm.pluginsdk.ui.tools.VideoSurfaceView;
 import com.tencent.mm.pluginsdk.ui.tools.VideoTextureView;
-import com.tencent.mm.pluginsdk.ui.tools.f;
 import com.tencent.mm.pluginsdk.ui.tools.f.a;
-import com.tencent.mm.protocal.b.ask;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.pluginsdk.ui.tools.m;
+import com.tencent.mm.protocal.b.ata;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.MultiTouchImageView;
-import com.tencent.mm.ui.base.g;
+import com.tencent.mm.ui.chatting.a;
+import com.tencent.mm.ui.chatting.a.a;
+import com.tencent.mm.ui.chatting.a.b;
 import com.tencent.mm.ui.widget.MMPinProgressBtn;
 import java.io.File;
 import java.util.HashMap;
 
 public final class j
 {
-  String bxn = "";
-  public TextView dTA;
-  public int dfq;
-  public f hfd;
-  public ImageView hfe;
-  public ImageView hff;
-  public MMPinProgressBtn hfg;
-  public View hfh;
-  public View hnE;
-  public b leH;
-  public b.b lgW;
-  public HashMap lgX = new HashMap();
-  public RelativeLayout lgY;
-  public RelativeLayout lgZ;
-  public ImageView lha;
-  public f lhb;
-  public MMPinProgressBtn lhc;
-  public LinearLayout lhd;
-  public TextView lhe;
-  public TextView lhf;
-  public ImageView lhg;
-  public ProgressBar lhh;
-  public ProgressBar lhi;
-  public LinearLayout lhj;
-  public TextView lhk;
-  public ImageView lhl;
-  public MultiTouchImageView lhm;
-  int lhn = 0;
-  int lho = 0;
-  int lhp = 0;
+  String asv = "";
+  public int bQx;
+  long cbi;
+  public TextView dVI;
+  String fMU;
+  public View hDZ;
+  int hfL = 0;
+  public com.tencent.mm.pluginsdk.ui.tools.f htU;
+  public ImageView htV;
+  public ImageView htW;
+  public MMPinProgressBtn htX;
+  public View htY;
+  public b lET;
+  int lHA = 0;
+  public b.b lHi;
+  public HashMap<String, Boolean> lHj = new HashMap();
+  public RelativeLayout lHk;
+  public RelativeLayout lHl;
+  public ImageView lHm;
+  public com.tencent.mm.pluginsdk.ui.tools.f lHn;
+  public MMPinProgressBtn lHo;
+  public LinearLayout lHp;
+  public TextView lHq;
+  public TextView lHr;
+  public ImageView lHs;
+  public ProgressBar lHt;
+  public ProgressBar lHu;
+  public LinearLayout lHv;
+  public TextView lHw;
+  public ImageView lHx;
+  public MultiTouchImageView lHy;
+  int lHz = 0;
   
   @TargetApi(11)
   public j(b paramb, View paramView)
   {
-    hnE = paramView;
-    leH = paramb;
-    lhm = ((MultiTouchImageView)paramView.findViewById(2131165228));
-    lhi = ((ProgressBar)paramView.findViewById(2131165689));
-    if ((com.tencent.mm.compatible.util.c.bU(11)) && (paramView.getLayerType() != 2)) {
+    hDZ = paramView;
+    lET = paramb;
+    lHy = ((MultiTouchImageView)paramView.findViewById(2131755043));
+    lHu = ((ProgressBar)paramView.findViewById(2131757347));
+    if ((com.tencent.mm.compatible.util.c.cm(11)) && (paramView.getLayerType() != 2)) {
       paramView.setLayerType(2, null);
     }
   }
@@ -89,70 +93,39 @@ public final class j
     }
   }
   
-  public final j bgQ()
+  public final j bmA()
   {
-    if (lhd == null)
+    if (lHk == null)
     {
-      lhd = ((LinearLayout)((ViewStub)hnE.findViewById(2131165557)).inflate());
-      lhh = ((ProgressBar)lhd.findViewById(2131165431));
-      lhe = ((TextView)lhd.findViewById(2131165560));
-      lhf = ((TextView)lhd.findViewById(2131165559));
-      lhg = ((ImageView)lhd.findViewById(2131165558));
-    }
-    return this;
-  }
-  
-  public final j bgR()
-  {
-    if (lhj == null)
-    {
-      lhj = ((LinearLayout)((ViewStub)hnE.findViewById(2131165688)).inflate());
-      lhl = ((ImageView)lhj.findViewById(2131165701));
-      lhk = ((TextView)lhj.findViewById(2131165668));
-    }
-    return this;
-  }
-  
-  public final j bgS()
-  {
-    if (lgY == null)
-    {
-      lgY = ((RelativeLayout)((ViewStub)hnE.findViewById(2131165687)).inflate());
-      hfd = com.tencent.mm.pluginsdk.ui.tools.m.cU(hnE.getContext());
+      lHk = ((RelativeLayout)((ViewStub)hDZ.findViewById(2131757344)).inflate());
+      htU = m.cS(hDZ.getContext());
       RelativeLayout.LayoutParams localLayoutParams = new RelativeLayout.LayoutParams(-1, -2);
       localLayoutParams.addRule(13);
-      lgY.addView((View)hfd, localLayoutParams);
-      ((View)hfd).setVisibility(8);
-      hfh = lgY.findViewById(2131165574);
-      hfh.setVisibility(8);
-      dTA = ((TextView)lgY.findViewById(2131169437));
-      hfg = ((MMPinProgressBtn)lgY.findViewById(2131168597));
-      hfg.setVisibility(8);
-      hfe = ((ImageView)lgY.findViewById(2131168596));
-      hff = ((ImageView)lgY.findViewById(2131168598));
-      hfd.setVideoCallback(new f.a()
+      lHk.addView((View)htU, localLayoutParams);
+      ((View)htU).setVisibility(8);
+      htY = lHk.findViewById(2131756840);
+      htY.setVisibility(8);
+      dVI = ((TextView)lHk.findViewById(2131759005));
+      htX = ((MMPinProgressBtn)lHk.findViewById(2131758988));
+      htX.setVisibility(8);
+      htV = ((ImageView)lHk.findViewById(2131758987));
+      htW = ((ImageView)lHk.findViewById(2131758989));
+      htU.a(new f.a()
       {
-        public final void Xq() {}
+        public final void Zb() {}
         
-        public final int aA(int paramAnonymousInt1, int paramAnonymousInt2)
+        public final void aE(int paramAnonymousInt1, int paramAnonymousInt2)
         {
-          return 0;
-        }
-        
-        public final void aB(int paramAnonymousInt1, int paramAnonymousInt2) {}
-        
-        public final void az(int paramAnonymousInt1, int paramAnonymousInt2)
-        {
-          hfd.stop();
-          final String str = (String)((View)hfd).getTag();
-          com.tencent.mm.sdk.b.b.q(Base64.encodeToString((com.tencent.mm.plugin.sight.base.c.avE() + "[ImageGallery] on play sight error, what=" + paramAnonymousInt1 + ", extra=" + paramAnonymousInt2 + ", path=" + ay.ad(str, "")).getBytes(), 2), "FullScreenPlaySight");
-          ab.j(new Runnable()
+          htU.stop();
+          final String str = (String)((View)htU).getTag();
+          com.tencent.mm.sdk.b.b.o(Base64.encodeToString((com.tencent.mm.plugin.sight.base.c.axV() + "[ImageGallery] on play sight error, what=" + paramAnonymousInt1 + ", extra=" + paramAnonymousInt2 + ", path=" + be.ab(str, "")).getBytes(), 2), "FullScreenPlaySight");
+          ad.k(new Runnable()
           {
             public final void run()
             {
-              if (ay.kz(str))
+              if (be.kf(str))
               {
-                g.e(leH.lem, 2131428868, 2131427941);
+                com.tencent.mm.ui.base.g.f(lET.lEz, 2131235819, 2131231739);
                 return;
               }
               Intent localIntent = new Intent();
@@ -160,69 +133,110 @@ public final class j
               localIntent.setDataAndType(Uri.fromFile(new File(str)), "video/*");
               try
               {
-                leH.lem.startActivity(Intent.createChooser(localIntent, leH.lem.koJ.kpc.getString(2131432531)));
+                lET.lEz.startActivity(Intent.createChooser(localIntent, lET.lEz.kNN.kOg.getString(2131232712)));
                 return;
               }
               catch (Exception localException)
               {
-                u.e("!44@/B4Tb64lLpJSmuQVFTi9B0ynMnS76y+/Pqewi8jmiJ0=", "startActivity fail, activity not found");
-                g.e(leH.lem, 2131432547, 2131432546);
+                v.e("MicroMsg.ImageGalleryViewHolder", "startActivity fail, activity not found");
+                com.tencent.mm.ui.base.g.f(lET.lEz, 2131232633, 2131232634);
               }
             }
           });
-          lgX.put(str, Boolean.valueOf(true));
+          lHj.put(str, Boolean.valueOf(true));
         }
         
-        public final void lG()
+        public final int aF(int paramAnonymousInt1, int paramAnonymousInt2)
         {
-          hfd.start();
-          hfh.post(new Runnable()
+          return 0;
+        }
+        
+        public final void aG(int paramAnonymousInt1, int paramAnonymousInt2) {}
+        
+        public final void jQ()
+        {
+          htU.start();
+          htY.post(new Runnable()
           {
             public final void run()
             {
-              if ((hfh == null) || (hfh.getVisibility() == 0)) {
+              if ((htY == null) || (htY.getVisibility() == 0)) {
                 return;
               }
-              if ((hfh.getTag() != null) && ((hfh.getTag() instanceof com.tencent.mm.an.m)))
+              if ((htY.getTag() != null) && ((htY.getTag() instanceof q)))
               {
-                com.tencent.mm.an.m localm = (com.tencent.mm.an.m)hfh.getTag();
-                if ((cgi != null) && (!ay.kz(cgi.byS)))
+                q localq = (q)htY.getTag();
+                if ((cbu != null) && (!be.kf(cbu.brM)))
                 {
-                  hfh.setVisibility(8);
+                  htY.setVisibility(8);
                   return;
                 }
               }
-              hfh.setVisibility(0);
-              hfh.startAnimation(AnimationUtils.loadAnimation(hfh.getContext(), 2130837575));
+              htY.setVisibility(0);
+              htY.startAnimation(AnimationUtils.loadAnimation(htY.getContext(), 2130968612));
             }
           });
         }
       });
-      dTA.setOnClickListener(new View.OnClickListener()
+      dVI.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
-          if ((paramAnonymousView.getTag() != null) && ((paramAnonymousView.getTag() instanceof ag)))
+          ai localai;
+          q localq;
+          Intent localIntent;
+          String str;
+          boolean bool;
+          if ((paramAnonymousView.getTag() != null) && ((paramAnonymousView.getTag() instanceof ai)))
           {
-            paramAnonymousView = (ag)paramAnonymousView.getTag();
-            ask localask = jVfield_imgPath).cgi;
-            if ((localask != null) && (!t.kz(byS)))
+            localai = (ai)paramAnonymousView.getTag();
+            a.a(a.a.lph, localai);
+            localq = com.tencent.mm.aq.s.kC(field_imgPath);
+            ata localata = cbu;
+            if ((localata != null) && (!com.tencent.mm.platformtools.s.kf(brM)))
             {
-              com.tencent.mm.an.j.Ea();
-              String str = n.jM(field_imgPath);
-              Intent localIntent = new Intent();
+              n.Es();
+              paramAnonymousView = r.kq(field_imgPath);
+              localIntent = new Intent();
               localIntent.putExtra("IsAd", false);
-              localIntent.putExtra("KStremVideoUrl", byS);
-              localIntent.putExtra("KThumUrl", byX);
-              localIntent.putExtra("KThumbPath", str);
+              localIntent.putExtra("KStremVideoUrl", brM);
+              localIntent.putExtra("KThumUrl", brR);
+              localIntent.putExtra("KThumbPath", paramAnonymousView);
               localIntent.putExtra("KMediaId", "fakeid_" + field_msgId);
-              localIntent.putExtra("KMediaVideoTime", jmL);
-              localIntent.putExtra("KMediaTitle", byU);
-              localIntent.putExtra("StreamWording", byV);
-              localIntent.putExtra("StremWebUrl", byW);
-              localIntent.putExtra("KFromUserName", field_talker);
-              com.tencent.mm.ar.c.c(leH.lem.koJ.kpc, "sns", ".ui.VideoAdPlayerUI", localIntent);
+              localIntent.putExtra("KMediaVideoTime", jKM);
+              localIntent.putExtra("KMediaTitle", brO);
+              localIntent.putExtra("StreamWording", brP);
+              localIntent.putExtra("StremWebUrl", brQ);
+              str = field_talker;
+              bool = str.endsWith("@chatroom");
+              if (!bool) {
+                break label384;
+              }
+              paramAnonymousView = ar.fx(field_content);
+              localIntent.putExtra("KSta_StremVideoAduxInfo", brS);
+              localIntent.putExtra("KSta_StremVideoPublishId", brT);
+              localIntent.putExtra("KSta_SourceType", 1);
+              if (!bool) {
+                break label390;
+              }
             }
+          }
+          label384:
+          label390:
+          for (int i = lpqvalue;; i = lppvalue)
+          {
+            localIntent.putExtra("KSta_Scene", i);
+            localIntent.putExtra("KSta_FromUserName", paramAnonymousView);
+            localIntent.putExtra("KSta_ChatName", str);
+            localIntent.putExtra("KSta_MsgId", field_msgSvrId);
+            localIntent.putExtra("KSta_SnsStatExtStr", atH);
+            if (bool) {
+              localIntent.putExtra("KSta_ChatroomMembercount", com.tencent.mm.model.f.dV(str));
+            }
+            com.tencent.mm.av.c.c(lET.lEz.kNN.kOg, "sns", ".ui.VideoAdPlayerUI", localIntent);
+            return;
+            paramAnonymousView = str;
+            break;
           }
         }
       });
@@ -230,42 +244,57 @@ public final class j
     return this;
   }
   
-  public final j bgT()
+  public final j bmB()
   {
-    if (lgZ == null)
+    if (lHl == null)
     {
-      lgZ = ((RelativeLayout)((ViewStub)hnE.findViewById(2131165686)).inflate());
-      lha = ((ImageView)lgZ.findViewById(2131165540));
-      if (!com.tencent.mm.compatible.util.c.bU(14)) {
-        break label164;
+      lHl = ((RelativeLayout)((ViewStub)hDZ.findViewById(2131757343)).inflate());
+      lHm = ((ImageView)lHl.findViewById(2131757352));
+      if (!com.tencent.mm.compatible.util.c.cm(14)) {
+        break label163;
       }
     }
-    label164:
-    for (lhb = new VideoTextureView(hnE.getContext());; lhb = new VideoSurfaceView(hnE.getContext()))
+    label163:
+    for (lHn = new VideoTextureView(hDZ.getContext());; lHn = new VideoSurfaceView(hDZ.getContext()))
     {
-      lhb.setPlayProgressCallback(true);
+      lHn.ex(true);
       RelativeLayout.LayoutParams localLayoutParams = new RelativeLayout.LayoutParams(-1, -1);
-      lgZ.addView((View)lhb, 1, localLayoutParams);
-      lhc = ((MMPinProgressBtn)lgZ.findViewById(2131165541));
-      lhc.setVisibility(8);
-      ((View)lhb).setVisibility(8);
-      lhb.setVideoCallback(new f.a()
+      lHl.addView((View)lHn, 1, localLayoutParams);
+      lHo = ((MMPinProgressBtn)lHl.findViewById(2131757353));
+      lHo.setVisibility(8);
+      ((View)lHn).setVisibility(8);
+      lHn.a(new f.a()
       {
-        public final void Xq() {}
+        public final void Zb() {}
         
-        public final int aA(final int paramAnonymousInt1, final int paramAnonymousInt2)
+        public final void aE(int paramAnonymousInt1, int paramAnonymousInt2)
         {
-          u.i("!44@/B4Tb64lLpJSmuQVFTi9B0ynMnS76y+/Pqewi8jmiJ0=", "dkvideo onplaytime:%d total:%d,%d size:%d cnt:%d user:%s", new Object[] { Integer.valueOf(paramAnonymousInt1), Integer.valueOf(lhn), Integer.valueOf(paramAnonymousInt2), Integer.valueOf(lho), Integer.valueOf(lhp), bxn });
-          ah.tv().r(new Runnable()
+          lHn.stop();
+          ad.k(new Runnable()
           {
             public final void run()
             {
-              h localh = h.fUJ;
-              int j = lho;
+              iw(false);
+              com.tencent.mm.ui.base.g.f(lET.lEz, 2131235819, 2131231739);
+              lET.ty(bQx);
+              com.tencent.mm.plugin.report.service.g.gdY.h(12084, new Object[] { Integer.valueOf(lHz), Integer.valueOf(hfL * 1000), Integer.valueOf(0), Integer.valueOf(4), asv, Integer.valueOf(lHA), fMU, Long.valueOf(cbi) });
+            }
+          });
+        }
+        
+        public final int aF(final int paramAnonymousInt1, final int paramAnonymousInt2)
+        {
+          v.i("MicroMsg.ImageGalleryViewHolder", "dkvideo onplaytime:%d total:%d,%d size:%d cnt:%d user:%s", new Object[] { Integer.valueOf(paramAnonymousInt1), Integer.valueOf(hfL), Integer.valueOf(paramAnonymousInt2), Integer.valueOf(lHz), Integer.valueOf(lHA), asv });
+          ah.tw().t(new Runnable()
+          {
+            public final void run()
+            {
+              com.tencent.mm.plugin.report.service.g localg = com.tencent.mm.plugin.report.service.g.gdY;
+              int j = lHz;
               if (paramAnonymousInt2 <= 0) {}
-              for (int i = lhn * 1000;; i = paramAnonymousInt2)
+              for (int i = hfL * 1000;; i = paramAnonymousInt2)
               {
-                localh.g(12084, new Object[] { Integer.valueOf(j), Integer.valueOf(i), Integer.valueOf(paramAnonymousInt1), Integer.valueOf(1), bxn, Integer.valueOf(lhp) });
+                localg.h(12084, new Object[] { Integer.valueOf(j), Integer.valueOf(i), Integer.valueOf(paramAnonymousInt1), Integer.valueOf(1), asv, Integer.valueOf(lHA), fMU, Long.valueOf(cbi) });
                 return;
               }
             }
@@ -273,30 +302,16 @@ public final class j
           return 0;
         }
         
-        public final void aB(int paramAnonymousInt1, int paramAnonymousInt2) {}
+        public final void aG(int paramAnonymousInt1, int paramAnonymousInt2) {}
         
-        public final void az(int paramAnonymousInt1, int paramAnonymousInt2)
+        public final void jQ()
         {
-          lhb.stop();
-          ab.j(new Runnable()
+          ad.k(new Runnable()
           {
             public final void run()
             {
-              hT(false);
-              g.e(leH.lem, 2131428868, 2131427941);
-              leH.rw(dfq);
-            }
-          });
-        }
-        
-        public final void lG()
-        {
-          ab.j(new Runnable()
-          {
-            public final void run()
-            {
-              leH.lem.hS(true);
-              leH.rw(dfq);
+              lET.lEz.iv(true);
+              lET.ty(bQx);
             }
           });
         }
@@ -305,16 +320,40 @@ public final class j
     }
   }
   
-  public final void hT(boolean paramBoolean)
+  public final j bmy()
+  {
+    if (lHp == null)
+    {
+      lHp = ((LinearLayout)((ViewStub)hDZ.findViewById(2131757345)).inflate());
+      lHt = ((ProgressBar)lHp.findViewById(2131756075));
+      lHq = ((TextView)lHp.findViewById(2131756777));
+      lHr = ((TextView)lHp.findViewById(2131757349));
+      lHs = ((ImageView)lHp.findViewById(2131757348));
+    }
+    return this;
+  }
+  
+  public final j bmz()
+  {
+    if (lHv == null)
+    {
+      lHv = ((LinearLayout)((ViewStub)hDZ.findViewById(2131757346)).inflate());
+      lHx = ((ImageView)lHv.findViewById(2131757350));
+      lHw = ((TextView)lHv.findViewById(2131756461));
+    }
+    return this;
+  }
+  
+  public final void iw(boolean paramBoolean)
   {
     if (paramBoolean)
     {
-      z((View)bgTlhb, 0);
-      z(bgTlha, 8);
+      z((View)bmBlHn, 0);
+      z(bmBlHm, 8);
       return;
     }
-    z((View)bgTlhb, 8);
-    z(bgTlha, 0);
+    z((View)bmBlHn, 8);
+    z(bmBlHm, 0);
   }
 }
 

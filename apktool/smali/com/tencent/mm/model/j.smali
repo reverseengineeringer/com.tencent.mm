@@ -4,25 +4,25 @@
 
 
 # direct methods
-.method public static E(Ljava/lang/String;Ljava/lang/String;)I
+.method public static B(Ljava/lang/String;Ljava/lang/String;)I
     .locals 5
 
     .prologue
     const/4 v0, 0x0
 
     .line 100
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
     .line 101
-    const-string/jumbo v1, "!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI="
+    const-string/jumbo v1, "MicroMsg.ConversationLogic"
 
     const-string/jumbo v2, "get total unread, but has not set uin"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 114
     :cond_0
@@ -31,11 +31,11 @@
 
     .line 105
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/s;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->ru()Lcom/tencent/mm/storage/s;
 
     move-result-object v1
 
@@ -69,7 +69,7 @@
 
     move-result-object v3
 
-    sget-object v4, Lcom/tencent/mm/i/a;->bvk:Ljava/lang/String;
+    sget-object v4, Lcom/tencent/mm/j/a;->bjU:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -81,7 +81,7 @@
 
     move-result-object v3
 
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->li(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -91,7 +91,7 @@
 
     move-result-object v2
 
-    iget-object v1, v1, Lcom/tencent/mm/storage/s;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v1, v1, Lcom/tencent/mm/storage/s;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const/4 v3, 0x0
 
@@ -135,7 +135,7 @@
     const/4 v1, 0x0
 
     .line 20
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gq()J
 
     move-result-wide v2
 
@@ -165,7 +165,7 @@
 
     .line 30
     :cond_0
-    const-string/jumbo v4, "!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI="
+    const-string/jumbo v4, "MicroMsg.ConversationLogic"
 
     const-string/jumbo v5, "unreadcheck unRead getTotalUnread %d"
 
@@ -177,7 +177,7 @@
 
     aput-object v7, v6, v1
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 33
     if-gtz v0, :cond_1
@@ -190,15 +190,15 @@
 
     .line 36
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/s;
+    invoke-virtual {v4}, Lcom/tencent/mm/model/c;->ru()Lcom/tencent/mm/storage/s;
 
     move-result-object v4
 
-    invoke-virtual {v4, p0}, Lcom/tencent/mm/storage/s;->EJ(Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v4, p0}, Lcom/tencent/mm/storage/s;->GX(Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v4
 
@@ -206,20 +206,20 @@
     if-nez v4, :cond_2
 
     .line 38
-    const-string/jumbo v4, "!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI="
+    const-string/jumbo v4, "MicroMsg.ConversationLogic"
 
     const-string/jumbo v5, "cursor is null, return"
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 39
-    const-string/jumbo v4, "!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI="
+    const-string/jumbo v4, "MicroMsg.ConversationLogic"
 
     const-string/jumbo v5, "get count use %d ms"
 
     new-array v6, v9, [Ljava/lang/Object;
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->ao(J)J
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/be;->av(J)J
 
     move-result-wide v2
 
@@ -229,7 +229,7 @@
 
     aput-object v2, v6, v1
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
@@ -245,11 +245,11 @@
     if-nez v5, :cond_4
 
     .line 44
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v5}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v5
 
@@ -257,14 +257,14 @@
 
     move-result-object v6
 
-    invoke-virtual {v5, v6}, Lcom/tencent/mm/storage/q;->Ep(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v5, v6}, Lcom/tencent/mm/storage/q;->GD(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
 
     move-result-object v5
 
     .line 45
     if-eqz v5, :cond_3
 
-    iget v6, v5, Lcom/tencent/mm/d/b/p;->aSC:I
+    iget v6, v5, Lcom/tencent/mm/e/b/p;->aFl:I
 
     if-nez v6, :cond_3
 
@@ -276,7 +276,7 @@
     sub-int/2addr v0, v6
 
     .line 51
-    const-string/jumbo v6, "!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI="
+    const-string/jumbo v6, "MicroMsg.ConversationLogic"
 
     const-string/jumbo v7, "unreadcheck chatroom mute %s, unRead %d,"
 
@@ -284,7 +284,7 @@
 
     new-array v8, v8, [Ljava/lang/Object;
 
-    iget-object v5, v5, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v5, v5, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     aput-object v5, v8, v1
 
@@ -294,7 +294,7 @@
 
     aput-object v5, v8, v9
 
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 43
     :cond_3
@@ -304,7 +304,7 @@
 
     .line 56
     :cond_4
-    const-string/jumbo v5, "!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI="
+    const-string/jumbo v5, "MicroMsg.ConversationLogic"
 
     const-string/jumbo v6, "unreadcheck  result talker count is %d"
 
@@ -316,19 +316,19 @@
 
     aput-object v8, v7, v1
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 57
     invoke-interface {v4}, Landroid/database/Cursor;->close()V
 
     .line 58
-    const-string/jumbo v4, "!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI="
+    const-string/jumbo v4, "MicroMsg.ConversationLogic"
 
     const-string/jumbo v5, "unreadcheck get count use %d ms"
 
     new-array v6, v9, [Ljava/lang/Object;
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->ao(J)J
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/be;->av(J)J
 
     move-result-wide v2
 
@@ -338,7 +338,7 @@
 
     aput-object v2, v6, v1
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 59
     invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
@@ -353,8 +353,18 @@
     goto/16 :goto_0
 .end method
 
-.method public static a(Ljava/lang/String;Ljava/util/List;)I
+.method public static b(Ljava/lang/String;Ljava/util/List;)I
     .locals 10
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)I"
+        }
+    .end annotation
 
     .prologue
     const/4 v9, 0x1
@@ -362,18 +372,18 @@
     const/4 v1, 0x0
 
     .line 87
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 88
-    const-string/jumbo v0, "!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI="
+    const-string/jumbo v0, "MicroMsg.ConversationLogic"
 
     const-string/jumbo v2, "get total unread with black list, but has not set uin"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -383,20 +393,20 @@
 
     .line 92
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gq()J
 
     move-result-wide v2
 
     .line 93
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/s;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ru()Lcom/tencent/mm/storage/s;
 
     move-result-object v4
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpJN/RyYD3u7HK+YneAQ/0gN4D0Emw3Mmi8="
+    const-string/jumbo v0, "MicroMsg.ConversationStorage"
 
     const-string/jumbo v5, "getTotalUnreadCursor filter[%s] [%s]"
 
@@ -406,13 +416,13 @@
 
     aput-object p0, v6, v1
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->aVJ()Lcom/tencent/mm/sdk/platformtools/ad;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->baX()Lcom/tencent/mm/sdk/platformtools/af;
 
     move-result-object v7
 
     aput-object v7, v6, v9
 
-    invoke-static {v0, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -446,7 +456,7 @@
 
     move-result-object v0
 
-    sget-object v6, Lcom/tencent/mm/i/a;->bvk:Ljava/lang/String;
+    sget-object v6, Lcom/tencent/mm/j/a;->bjU:Ljava/lang/String;
 
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -470,7 +480,7 @@
 
     move-result-object v0
 
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->li(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -546,7 +556,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v5, "!44@/B4Tb64lLpJN/RyYD3u7HK+YneAQ/0gN4D0Emw3Mmi8="
+    const-string/jumbo v5, "MicroMsg.ConversationStorage"
 
     const-string/jumbo v6, "get total unread with black list, sql is %s"
 
@@ -554,9 +564,9 @@
 
     aput-object v0, v7, v1
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v4, v4, Lcom/tencent/mm/storage/s;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v4, v4, Lcom/tencent/mm/storage/s;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const/4 v5, 0x0
 
@@ -570,13 +580,13 @@
     move-result v0
 
     .line 95
-    const-string/jumbo v4, "!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI="
+    const-string/jumbo v4, "MicroMsg.ConversationLogic"
 
     const-string/jumbo v5, "get count with black list use %d ms"
 
     new-array v6, v9, [Ljava/lang/Object;
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->ao(J)J
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/be;->av(J)J
 
     move-result-wide v2
 
@@ -586,26 +596,26 @@
 
     aput-object v2, v6, v1
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 .end method
 
-.method public static eR(Ljava/lang/String;)I
+.method public static fd(Ljava/lang/String;)I
     .locals 1
 
     .prologue
     .line 73
     const/4 v0, 0x0
 
-    invoke-static {p0, v0}, Lcom/tencent/mm/model/j;->a(Ljava/lang/String;Ljava/util/List;)I
+    invoke-static {p0, v0}, Lcom/tencent/mm/model/j;->b(Ljava/lang/String;Ljava/util/List;)I
 
     move-result v0
 
     return v0
 .end method
 
-.method public static eS(Ljava/lang/String;)I
+.method public static fe(Ljava/lang/String;)I
     .locals 10
 
     .prologue
@@ -614,32 +624,32 @@
     const/4 v1, 0x0
 
     .line 165
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI="
+    const-string/jumbo v0, "MicroMsg.ConversationLogic"
 
     const-string/jumbo v2, "get Total Unread Talker, but has not set uin"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
     return v1
 
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gq()J
 
     move-result-wide v2
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/s;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ru()Lcom/tencent/mm/storage/s;
 
     move-result-object v0
 
@@ -663,7 +673,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->li(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -689,7 +699,7 @@
 
     move-result-object v5
 
-    sget-object v6, Lcom/tencent/mm/i/a;->bvk:Ljava/lang/String;
+    sget-object v6, Lcom/tencent/mm/j/a;->bjU:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -713,7 +723,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "!44@/B4Tb64lLpJN/RyYD3u7HK+YneAQ/0gN4D0Emw3Mmi8="
+    const-string/jumbo v5, "MicroMsg.ConversationStorage"
 
     const-string/jumbo v6, "get total unread talker, sql is %s"
 
@@ -721,9 +731,9 @@
 
     aput-object v4, v7, v1
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v0, v0, Lcom/tencent/mm/storage/s;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v0, v0, Lcom/tencent/mm/storage/s;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const/4 v5, 0x0
 
@@ -748,33 +758,33 @@
 
     if-lez v0, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/s;
+    invoke-virtual {v4}, Lcom/tencent/mm/model/c;->ru()Lcom/tencent/mm/storage/s;
 
     move-result-object v4
 
-    invoke-virtual {v4, p0}, Lcom/tencent/mm/storage/s;->EJ(Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v4, p0}, Lcom/tencent/mm/storage/s;->GX(Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v4
 
     if-nez v4, :cond_2
 
-    const-string/jumbo v4, "!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI="
+    const-string/jumbo v4, "MicroMsg.ConversationLogic"
 
     const-string/jumbo v5, "cursor is null, return"
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string/jumbo v4, "!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI="
+    const-string/jumbo v4, "MicroMsg.ConversationLogic"
 
     const-string/jumbo v5, "get count use %d ms"
 
     new-array v6, v9, [Ljava/lang/Object;
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->ao(J)J
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/be;->av(J)J
 
     move-result-wide v2
 
@@ -784,7 +794,7 @@
 
     aput-object v2, v6, v1
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v1, v0
 
@@ -800,11 +810,11 @@
 
     if-nez v5, :cond_4
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v5}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v5
 
@@ -812,13 +822,13 @@
 
     move-result-object v6
 
-    invoke-virtual {v5, v6}, Lcom/tencent/mm/storage/q;->Ep(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v5, v6}, Lcom/tencent/mm/storage/q;->GD(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
 
     move-result-object v5
 
     if-eqz v5, :cond_3
 
-    iget v5, v5, Lcom/tencent/mm/d/b/p;->aSC:I
+    iget v5, v5, Lcom/tencent/mm/e/b/p;->aFl:I
 
     if-nez v5, :cond_3
 
@@ -830,7 +840,7 @@
     goto :goto_2
 
     :cond_4
-    const-string/jumbo v5, "!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI="
+    const-string/jumbo v5, "MicroMsg.ConversationLogic"
 
     const-string/jumbo v6, "result talker count is %d"
 
@@ -842,17 +852,17 @@
 
     aput-object v8, v7, v1
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     invoke-interface {v4}, Landroid/database/Cursor;->close()V
 
-    const-string/jumbo v4, "!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI="
+    const-string/jumbo v4, "MicroMsg.ConversationLogic"
 
     const-string/jumbo v5, "get count use %d ms"
 
     new-array v6, v9, [Ljava/lang/Object;
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->ao(J)J
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/be;->av(J)J
 
     move-result-wide v2
 
@@ -862,7 +872,7 @@
 
     aput-object v2, v6, v1
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
 
@@ -876,25 +886,25 @@
     goto/16 :goto_1
 .end method
 
-.method public static sV()I
+.method public static sU()I
     .locals 6
 
     .prologue
     const/4 v0, 0x0
 
     .line 119
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
     .line 120
-    const-string/jumbo v1, "!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI="
+    const-string/jumbo v1, "MicroMsg.ConversationLogic"
 
     const-string/jumbo v2, "get Bottle Total Conversation Unread, but has not set uin"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 133
     :cond_0
@@ -903,15 +913,15 @@
 
     .line 124
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/s;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->ru()Lcom/tencent/mm/storage/s;
 
     move-result-object v1
 
-    const-string/jumbo v2, "!44@/B4Tb64lLpJN/RyYD3u7HK+YneAQ/0gN4D0Emw3Mmi8="
+    const-string/jumbo v2, "MicroMsg.ConversationStorage"
 
     const-string/jumbo v3, "get bottle total conversation unread sql is %s"
 
@@ -923,9 +933,9 @@
 
     aput-object v5, v4, v0
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v1, v1, Lcom/tencent/mm/storage/s;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v1, v1, Lcom/tencent/mm/storage/s;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v2, "select count(*) from rbottleconversation where unReadCount > 0"
 

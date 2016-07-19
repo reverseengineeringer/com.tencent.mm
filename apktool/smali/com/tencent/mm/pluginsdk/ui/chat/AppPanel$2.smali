@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->aRx()V
+    value = Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->aWk()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iKi:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;
+.field final synthetic jhe:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 642
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$2;->iKi:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;
+    .line 659
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$2;->jhe:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,19 +36,19 @@
 
 
 # virtual methods
-.method public final kk(I)V
+.method public final lA(I)V
     .locals 1
 
     .prologue
-    .line 647
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$2;->iKi:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;
+    .line 664
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$2;->jhe:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->e(Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;)Lcom/tencent/mm/ui/base/MMDotView;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/MMDotView;->setSelectedDot(I)V
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/MMDotView;->sy(I)V
 
-    .line 648
+    .line 665
     return-void
 .end method

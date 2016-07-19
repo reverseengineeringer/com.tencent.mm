@@ -4,7 +4,7 @@ import java.util.List;
 
 public abstract interface t
 {
-  public abstract List kZ();
+  public abstract List<s> jA();
 }
 
 /* Location:

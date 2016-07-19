@@ -1,122 +1,124 @@
 package com.tencent.mm.ax;
 
-import android.util.SparseArray;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 
 public final class b
 {
-  public byte[] cCk;
-  public SparseArray jSi;
+  public byte[] jrl;
   
-  private b(SparseArray paramSparseArray, byte[] paramArrayOfByte)
+  private b() {}
+  
+  public b(byte[] paramArrayOfByte)
   {
-    jSi = paramSparseArray;
-    cCk = paramArrayOfByte;
+    this(paramArrayOfByte, 0, paramArrayOfByte.length);
   }
   
-  public static b a(SparseArray paramSparseArray, InputStream paramInputStream, int paramInt)
+  public b(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
+  {
+    jrl = new byte[paramInt2];
+    System.arraycopy(paramArrayOfByte, paramInt1, jrl, 0, paramInt2);
+  }
+  
+  public static b Dr(String paramString)
   {
     try
     {
-      byte[] arrayOfByte = new byte[paramInt];
-      if (paramInputStream.read(arrayOfByte, 0, arrayOfByte.length) != arrayOfByte.length) {
-        u.e("!56@/B4Tb64lLpKgNpJeOuPSQZ6BveZqQ6bymjzxm7YQRZUZx4dzmc4SSw==", "[cpan] newPluralsConllection failed. data length no equal.");
-      }
-      paramSparseArray = new b(paramSparseArray, arrayOfByte);
-      return paramSparseArray;
+      b localb = new b();
+      jrl = paramString.getBytes("UTF-8");
+      return localb;
     }
-    catch (IOException paramSparseArray)
+    catch (UnsupportedEncodingException paramString)
     {
-      u.e("!56@/B4Tb64lLpKgNpJeOuPSQZ6BveZqQ6bymjzxm7YQRZUZx4dzmc4SSw==", "[cpan] newPluralsConllection failed:%s", new Object[] { ay.b(paramSparseArray) });
+      throw new RuntimeException("UTF-8 not supported?", paramString);
     }
-    return null;
   }
   
-  public final String getQuantityString(int paramInt1, int paramInt2, Object... paramVarArgs)
+  public static b aO(byte[] paramArrayOfByte)
   {
+    if (paramArrayOfByte != null) {}
     for (;;)
     {
-      try
-      {
-        int j = jSi.indexOfKey(paramInt1);
-        if (j < 0) {
-          return null;
-        }
-        localObject = (a)jSi.valueAt(j);
-        k = jSk.length;
-        paramInt1 = 0;
-        i = 0;
-        if (paramInt1 < k)
-        {
-          if (jSk[paramInt1] != paramInt2) {
-            break label326;
-          }
-          i = paramInt1;
-          break label332;
-        }
-        if (j <= jSi.size() - 1) {
-          if (i >= k - 1)
-          {
-            a locala = (a)jSi.valueAt(j + 1);
-            localObject = new String(cCk, jSl[i], jSl[0] - jSl[i]);
-          }
-        }
-      }
-      catch (Exception paramVarArgs)
-      {
-        int k;
-        int i;
-        localObject = null;
-        u.e("!56@/B4Tb64lLpKgNpJeOuPSQZ6BveZqQ6bymjzxm7YQRZUZx4dzmc4SSw==", "[cpan] getString failed. %s", new Object[] { ay.b(paramVarArgs) });
-        return (String)localObject;
-      }
-      try
-      {
-        if ((!ay.kz((String)localObject)) && (paramVarArgs == null)) {
-          break label329;
-        }
-        paramVarArgs = String.format((String)localObject, paramVarArgs);
-        return paramVarArgs;
-      }
-      catch (Exception paramVarArgs)
-      {
-        continue;
-      }
-      Object localObject = new String(cCk, jSl[i], jSl[(i + 1)] - jSl[i]);
-      continue;
-      if (i >= k - 1)
-      {
-        localObject = new String(cCk, jSl[i], cCk.length - jSl[i]);
-      }
-      else
-      {
-        localObject = new String(cCk, jSl[i], jSl[(i + 1)] - jSl[i]);
-        continue;
-        label326:
-        break label332;
-        label329:
-        return (String)localObject;
-        label332:
-        paramInt1 += 1;
-      }
+      return new b(paramArrayOfByte);
+      paramArrayOfByte = new byte[0];
     }
   }
   
-  static final class a
+  public static b g(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
   {
-    public final int jSj;
-    public final int[] jSk;
-    public final int[] jSl;
-    
-    public a(int paramInt, int[] paramArrayOfInt1, int[] paramArrayOfInt2)
+    return new b(paramArrayOfByte, paramInt1, paramInt2);
+  }
+  
+  /* Error */
+  public final String aXZ()
+  {
+    // Byte code:
+    //   0: iconst_0
+    //   1: istore_1
+    //   2: iload_1
+    //   3: aload_0
+    //   4: getfield 17	com/tencent/mm/ax/b:jrl	[B
+    //   7: arraylength
+    //   8: if_icmplt +19 -> 27
+    //   11: new 32	java/lang/String
+    //   14: dup
+    //   15: aload_0
+    //   16: getfield 17	com/tencent/mm/ax/b:jrl	[B
+    //   19: iconst_0
+    //   20: iload_1
+    //   21: ldc 30
+    //   23: invokespecial 54	java/lang/String:<init>	([BIILjava/lang/String;)V
+    //   26: areturn
+    //   27: aload_0
+    //   28: getfield 17	com/tencent/mm/ax/b:jrl	[B
+    //   31: iload_1
+    //   32: baload
+    //   33: istore_2
+    //   34: iload_2
+    //   35: ifeq -24 -> 11
+    //   38: iload_1
+    //   39: iconst_1
+    //   40: iadd
+    //   41: istore_1
+    //   42: goto -40 -> 2
+    //   45: astore_3
+    //   46: new 38	java/lang/RuntimeException
+    //   49: dup
+    //   50: ldc 40
+    //   52: invokespecial 57	java/lang/RuntimeException:<init>	(Ljava/lang/String;)V
+    //   55: athrow
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	56	0	this	b
+    //   1	41	1	i	int
+    //   33	2	2	j	int
+    //   45	1	3	localUnsupportedEncodingException	UnsupportedEncodingException
+    // Exception table:
+    //   from	to	target	type
+    //   2	11	45	java/io/UnsupportedEncodingException
+    //   11	27	45	java/io/UnsupportedEncodingException
+    //   27	34	45	java/io/UnsupportedEncodingException
+  }
+  
+  public final b qD(int paramInt)
+  {
+    byte[] arrayOfByte = new byte[paramInt];
+    if (jrl.length >= paramInt)
     {
-      jSj = paramInt;
-      jSk = paramArrayOfInt1;
-      jSl = paramArrayOfInt2;
+      System.arraycopy(jrl, 0, arrayOfByte, 0, paramInt - 1);
+      jrl = arrayOfByte;
+      return this;
     }
+    System.arraycopy(jrl, 0, arrayOfByte, 0, jrl.length);
+    jrl = arrayOfByte;
+    return this;
+  }
+  
+  public final byte[] toByteArray()
+  {
+    int i = jrl.length;
+    byte[] arrayOfByte = new byte[i];
+    System.arraycopy(jrl, 0, arrayOfByte, 0, i);
+    return arrayOfByte;
   }
 }
 

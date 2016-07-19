@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tencent.mm.plugin.favorite.ui.base.FavDetailFooterView android:textSize="@dimen/jc" android:textColor="#ff868686" android:id="@id/ajw" android:paddingTop="@dimen/j8" android:paddingBottom="@dimen/hf" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="{day}"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

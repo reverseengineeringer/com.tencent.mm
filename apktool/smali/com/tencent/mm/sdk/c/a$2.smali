@@ -16,9 +16,19 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/tencent/mm/sdk/c/c;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic jUH:Lcom/tencent/mm/sdk/c/a;
+.field final synthetic kuj:Lcom/tencent/mm/sdk/c/a;
 
 
 # direct methods
@@ -26,8 +36,8 @@
     .locals 0
 
     .prologue
-    .line 92
-    iput-object p1, p0, Lcom/tencent/mm/sdk/c/a$2;->jUH:Lcom/tencent/mm/sdk/c/a;
+    .line 102
+    iput-object p1, p0, Lcom/tencent/mm/sdk/c/a$2;->kuj:Lcom/tencent/mm/sdk/c/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,22 +46,18 @@
 
 
 # virtual methods
-.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public final bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 2
 
     .prologue
-    .line 92
+    .line 102
     check-cast p1, Lcom/tencent/mm/sdk/c/c;
 
     check-cast p2, Lcom/tencent/mm/sdk/c/c;
 
-    invoke-virtual {p2}, Lcom/tencent/mm/sdk/c/c;->getPriority()I
+    iget v0, p2, Lcom/tencent/mm/sdk/c/c;->priority:I
 
-    move-result v0
-
-    invoke-virtual {p1}, Lcom/tencent/mm/sdk/c/c;->getPriority()I
-
-    move-result v1
+    iget v1, p1, Lcom/tencent/mm/sdk/c/c;->priority:I
 
     sub-int/2addr v0, v1
 

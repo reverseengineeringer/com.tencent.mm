@@ -1,8 +1,8 @@
 package com.tencent.mm.a;
 
-public abstract interface f$a
+public abstract interface f$a<K, O>
 {
-  public abstract void e(Object paramObject1, Object paramObject2);
+  public abstract void h(K paramK, O paramO);
 }
 
 /* Location:

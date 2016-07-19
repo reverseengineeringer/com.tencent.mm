@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/RecordListItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView style="@style/RecordListItemAvatar" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/record_listitem_header" /> //暂时注掉
+<include layout="@layout/record_listitem_voice_view" />
+        <TextView android:textColor="@color/gn" android:gravity="center|left" android:id="@id/byc" android:text="@string/ap3" android:drawableLeft="@raw/chatfrom_voice_playing" android:drawablePadding="20.0dip" style="@style/RecordListItemVoiceCard" />
+        <ImageView android:layout_width="fill_parent" android:layout_height="1.0px" style="@style/RecordListItemEndDivider" />
+    </LinearLayout>
+</LinearLayout>

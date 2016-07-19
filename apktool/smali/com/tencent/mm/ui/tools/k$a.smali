@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract biD()V
+.method public abstract boz()V
 .end method
 
 .method public abstract onAnimationEnd()V

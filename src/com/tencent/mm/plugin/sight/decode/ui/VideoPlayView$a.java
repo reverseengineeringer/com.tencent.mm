@@ -2,13 +2,13 @@ package com.tencent.mm.plugin.sight.decode.ui;
 
 public abstract interface VideoPlayView$a
 {
-  public abstract void awa();
+  public abstract void ayy();
   
-  public abstract void awb();
+  public abstract void ayz();
   
-  public abstract void eG(boolean paramBoolean);
+  public abstract void ey(boolean paramBoolean);
   
-  public abstract void kY(int paramInt);
+  public abstract void mf(int paramInt);
 }
 
 /* Location:

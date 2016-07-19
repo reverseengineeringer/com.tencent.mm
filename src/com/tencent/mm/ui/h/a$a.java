@@ -1,8 +1,10 @@
 package com.tencent.mm.ui.h;
 
-public abstract interface a$a
+final class a$a
+  implements Comparable<a>
 {
-  public abstract void b(a.c paramc);
+  String info;
+  long kwd;
 }
 
 /* Location:

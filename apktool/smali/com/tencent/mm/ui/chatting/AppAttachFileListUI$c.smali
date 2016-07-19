@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field public aFR:Lcom/tencent/mm/storage/ag;
+.field public arX:Lcom/tencent/mm/storage/ai;
 
-.field final synthetic kQj:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;
+.field final synthetic lpY:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;
 
-.field public kQk:Lcom/tencent/mm/n/a$a;
+.field public lpZ:Lcom/tencent/mm/p/a$a;
 
 
 # direct methods
@@ -28,7 +28,7 @@
 
     .prologue
     .line 239
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$c;->kQj:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$c;->lpY:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

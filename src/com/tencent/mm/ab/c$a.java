@@ -1,14 +1,16 @@
 package com.tencent.mm.ab;
 
-import com.tencent.mm.r.j;
+import com.tencent.mm.protocal.b.sj;
 
-public abstract interface c$a
+final class c$a
 {
-  public abstract void a(long paramLong, int paramInt1, int paramInt2, Object paramObject, int paramInt3, int paramInt4, j paramj);
+  String aoX;
+  sj bIv;
+  int bIw = 0;
+  int errCode;
+  int errType;
   
-  public abstract void a(long paramLong1, long paramLong2, int paramInt1, Object paramObject, int paramInt2, int paramInt3);
-  
-  public abstract void a(long paramLong, Object paramObject);
+  c$a(c paramc) {}
 }
 
 /* Location:

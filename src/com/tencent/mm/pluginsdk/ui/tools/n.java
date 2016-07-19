@@ -3,56 +3,54 @@ package com.tencent.mm.pluginsdk.ui.tools;
 import android.app.Activity;
 import android.view.KeyEvent;
 import android.view.Menu;
-import com.tencent.mm.ae.a;
-import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.ah.a;
 import com.tencent.mm.pluginsdk.ui.VoiceSearchLayout;
 import com.tencent.mm.pluginsdk.ui.VoiceSearchLayout.a;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
-import com.tencent.mm.ui.tools.g;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.ui.tools.r;
 import com.tencent.mm.ui.tools.r.b;
 
 public final class n
-  extends com.tencent.mm.ui.tools.r
+  extends r
 {
-  private VoiceSearchLayout ggv;
-  public boolean iTf = true;
-  int iTg;
-  int iTh;
-  a iTi;
-  private VoiceSearchLayout.a iTj = new VoiceSearchLayout.a()
+  private VoiceSearchLayout gqU;
+  public boolean jqs = true;
+  int jqt;
+  int jqu;
+  a jqv;
+  private VoiceSearchLayout.a jqw = new VoiceSearchLayout.a()
   {
     public final void a(boolean paramAnonymousBoolean, String[] paramAnonymousArrayOfString, long paramAnonymousLong)
     {
-      u.d("!44@/B4Tb64lLpKCGRi+LcyHSIxOnXE6bSAHMOhyEEusEOY=", "on voice search return, success %B, voice id %d", new Object[] { Boolean.valueOf(paramAnonymousBoolean), Long.valueOf(paramAnonymousLong) });
-      if (iTi != null) {
-        iTi.a(paramAnonymousBoolean, paramAnonymousArrayOfString, paramAnonymousLong, iTh);
+      com.tencent.mm.sdk.platformtools.v.d("MicroMsg.VoiceSearchViewHelper", "on voice search return, success %B, voice id %d", new Object[] { Boolean.valueOf(paramAnonymousBoolean), Long.valueOf(paramAnonymousLong) });
+      if (jqv != null) {
+        jqv.a(paramAnonymousBoolean, paramAnonymousArrayOfString, paramAnonymousLong, jqu);
       }
     }
     
-    public final void aRk()
+    public final void aVW()
     {
-      if ((com.tencent.mm.an.r.bf(y.getContext())) || (a.aR(y.getContext()))) {}
+      if ((com.tencent.mm.aq.v.bc(aa.getContext())) || (a.aN(aa.getContext()))) {}
       do
       {
         return;
-        u.d("!44@/B4Tb64lLpKCGRi+LcyHSIxOnXE6bSAHMOhyEEusEOY=", "on voice search start");
-        h.fUJ.g(10453, new Object[] { Integer.valueOf(iTg), Integer.valueOf(3) });
-      } while (iTi == null);
-      iTi.KR();
+        com.tencent.mm.sdk.platformtools.v.d("MicroMsg.VoiceSearchViewHelper", "on voice search start");
+        com.tencent.mm.plugin.report.service.g.gdY.h(10453, new Object[] { Integer.valueOf(jqt), Integer.valueOf(3) });
+      } while (jqv == null);
+      jqv.LD();
     }
     
-    public final void aRl()
+    public final void aVX()
     {
-      u.d("!44@/B4Tb64lLpKCGRi+LcyHSIxOnXE6bSAHMOhyEEusEOY=", "on voice search cancel");
-      h.fUJ.g(10453, new Object[] { Integer.valueOf(iTg), Integer.valueOf(4) });
-      if (lxz != null)
+      com.tencent.mm.sdk.platformtools.v.d("MicroMsg.VoiceSearchViewHelper", "on voice search cancel");
+      com.tencent.mm.plugin.report.service.g.gdY.h(10453, new Object[] { Integer.valueOf(jqt), Integer.valueOf(4) });
+      if (lYo != null)
       {
-        lxz.setEditTextEnabled(true);
-        lxz.setStatusBtnEnabled(true);
+        lYo.iJ(true);
+        lYo.iK(true);
       }
-      if (iTi != null) {
-        iTi.KS();
+      if (jqv != null) {
+        jqv.LE();
       }
     }
   };
@@ -67,58 +65,58 @@ public final class n
   public final void a(Activity paramActivity, Menu paramMenu)
   {
     super.a(paramActivity, paramMenu);
-    if (ggv != null) {
-      ggv.setOnSearchListener(iTj);
+    if (gqU != null) {
+      gqU.jev = jqw;
     }
   }
   
   public final void a(a parama)
   {
-    iTi = parama;
-    lxA = parama;
+    jqv = parama;
+    lYp = parama;
   }
   
-  protected final boolean aST()
+  protected final boolean aXM()
   {
     boolean bool1 = false;
-    boolean bool2 = iTf;
-    if (ggv == null) {
+    boolean bool2 = jqs;
+    if (gqU == null) {
       bool1 = true;
     }
-    u.d("!44@/B4Tb64lLpKCGRi+LcyHSIxOnXE6bSAHMOhyEEusEOY=", "check has voice search, Enable %B, layout is null ? %B", new Object[] { Boolean.valueOf(bool2), Boolean.valueOf(bool1) });
-    return iTf;
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.VoiceSearchViewHelper", "check has voice search, Enable %B, layout is null ? %B", new Object[] { Boolean.valueOf(bool2), Boolean.valueOf(bool1) });
+    return jqs;
   }
   
-  protected final void aSU()
+  protected final void aXN()
   {
-    u.d("!44@/B4Tb64lLpKCGRi+LcyHSIxOnXE6bSAHMOhyEEusEOY=", "do require voice search");
-    if (lxz != null)
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.VoiceSearchViewHelper", "do require voice search");
+    if (lYo != null)
     {
-      lxz.setEditTextEnabled(false);
-      lxz.setStatusBtnEnabled(false);
+      lYo.iJ(false);
+      lYo.iK(false);
     }
-    if ((ggv != null) && (ggv.getVisibility() == 8))
+    if ((gqU != null) && (gqU.getVisibility() == 8))
     {
-      u.d("!44@/B4Tb64lLpKCGRi+LcyHSIxOnXE6bSAHMOhyEEusEOY=", "do voice search layout start");
-      ggv.or(iTh);
+      com.tencent.mm.sdk.platformtools.v.d("MicroMsg.VoiceSearchViewHelper", "do voice search layout start");
+      gqU.pW(jqu);
     }
   }
   
-  protected final void aSV()
+  protected final void aXO()
   {
     cancel();
   }
   
   public final void cancel()
   {
-    u.d("!44@/B4Tb64lLpKCGRi+LcyHSIxOnXE6bSAHMOhyEEusEOY=", "do cancel");
-    if (ggv != null) {
-      ggv.aRg();
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.VoiceSearchViewHelper", "do cancel");
+    if (gqU != null) {
+      gqU.aVS();
     }
-    if (lxz != null)
+    if (lYo != null)
     {
-      lxz.setEditTextEnabled(true);
-      lxz.setStatusBtnEnabled(true);
+      lYo.iJ(true);
+      lYo.iK(true);
     }
   }
   
@@ -126,10 +124,10 @@ public final class n
   {
     if (4 == paramInt)
     {
-      if ((ggv != null) && (ggv.getVisibility() == 0)) {}
+      if ((gqU != null) && (gqU.getVisibility() == 0)) {}
       for (boolean bool = true;; bool = false)
       {
-        u.d("!44@/B4Tb64lLpKCGRi+LcyHSIxOnXE6bSAHMOhyEEusEOY=", "on back key down, try hide voice search panel, it is visiable[%B]", new Object[] { Boolean.valueOf(bool) });
+        com.tencent.mm.sdk.platformtools.v.d("MicroMsg.VoiceSearchViewHelper", "on back key down, try hide voice search panel, it is visiable[%B]", new Object[] { Boolean.valueOf(bool) });
         cancel();
         if (!bool) {
           break;
@@ -137,28 +135,28 @@ public final class n
         return true;
       }
     }
-    u.d("!44@/B4Tb64lLpKCGRi+LcyHSIxOnXE6bSAHMOhyEEusEOY=", "not match key code, pass to super");
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.VoiceSearchViewHelper", "not match key code, pass to super");
     return super.onKeyDown(paramInt, paramKeyEvent);
   }
   
   public final void r(VoiceSearchLayout paramVoiceSearchLayout)
   {
-    ggv = paramVoiceSearchLayout;
-    iTh = 1;
-    if (1 == iTh)
+    gqU = paramVoiceSearchLayout;
+    jqu = 1;
+    if (1 == jqu)
     {
-      iTg = 2;
+      jqt = 2;
       return;
     }
-    iTg = 1;
+    jqt = 1;
   }
   
   public static abstract interface a
     extends r.b
   {
-    public abstract void KR();
+    public abstract void LD();
     
-    public abstract void KS();
+    public abstract void LE();
     
     public abstract void a(boolean paramBoolean, String[] paramArrayOfString, long paramLong, int paramInt);
   }

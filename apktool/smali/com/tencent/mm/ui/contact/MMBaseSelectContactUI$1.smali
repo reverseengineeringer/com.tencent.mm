@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->Gb()V
+    value = Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+.field final synthetic lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 137
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$1;->lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+    .line 141
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$1;->lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,22 +40,22 @@
     .locals 1
 
     .prologue
-    .line 140
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$1;->lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+    .line 144
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$1;->lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->a(Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;)V
 
-    .line 141
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$1;->lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+    .line 145
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$1;->lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->bhs()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->bnd()V
 
-    .line 142
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$1;->lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+    .line 146
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$1;->lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->bht()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->bne()V
 
-    .line 143
+    .line 147
     const/4 v0, 0x0
 
     return v0

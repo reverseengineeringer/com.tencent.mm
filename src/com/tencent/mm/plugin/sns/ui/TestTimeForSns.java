@@ -4,13 +4,13 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
-import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.plugin.report.service.f;
 
 public class TestTimeForSns
   extends FrameLayout
 {
   public final boolean DEBUG = true;
-  public final String TAG = "!32@/B4Tb64lLpItTdpuA6oxWRdwg5f05xk5";
+  public final String TAG = "MicroMsg.TestTimeForSns";
   public long beginTime;
   private boolean hasDrawed;
   private a listener;
@@ -32,11 +32,11 @@ public class TestTimeForSns
     {
       hasDrawed = true;
       if (listener != null) {
-        listener.kw();
+        listener.iZ();
       }
     }
-    g.ke(10);
-    g.ke(22);
+    f.ls(10);
+    f.ls(22);
   }
   
   public boolean hasDrawed()
@@ -51,7 +51,7 @@ public class TestTimeForSns
   
   public static abstract interface a
   {
-    public abstract void kw();
+    public abstract void iZ();
   }
 }
 

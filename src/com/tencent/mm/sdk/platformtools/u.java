@@ -1,359 +1,210 @@
 package com.tencent.mm.sdk.platformtools;
 
-import android.os.Build;
-import android.os.Build.VERSION;
-import android.os.Handler;
-import android.os.Looper;
-import android.os.Process;
-import android.util.Log;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.util.DisplayMetrics;
+import java.util.Locale;
 
 public final class u
 {
-  private static final String hKO;
-  private static a jVn;
-  private static a jVo;
-  private static int level = 6;
-  
-  static
+  public static Locale EZ(String paramString)
   {
-    Object localObject = new a()
+    if (paramString.equals("zh_TW")) {
+      return Locale.TAIWAN;
+    }
+    if (paramString.equals("zh_HK")) {
+      return new Locale("zh", "HK");
+    }
+    if (paramString.equals("en")) {
+      return Locale.ENGLISH;
+    }
+    if (paramString.equals("zh_CN")) {
+      return Locale.CHINA;
+    }
+    if ((paramString.equalsIgnoreCase("th")) || (paramString.equalsIgnoreCase("id")) || (paramString.equalsIgnoreCase("vi")) || (paramString.equalsIgnoreCase("pt")) || (paramString.equalsIgnoreCase("es")) || (paramString.equalsIgnoreCase("ru")) || (paramString.equalsIgnoreCase("ar")) || (paramString.equalsIgnoreCase("he")) || (paramString.equalsIgnoreCase("pl")) || (paramString.equalsIgnoreCase("hi")) || (paramString.equalsIgnoreCase("ja")) || (paramString.equalsIgnoreCase("it")) || (paramString.equalsIgnoreCase("ko")) || (paramString.equalsIgnoreCase("ms")) || (paramString.equalsIgnoreCase("tr")) || (paramString.equalsIgnoreCase("de")) || (paramString.equalsIgnoreCase("fr")) || (paramString.equalsIgnoreCase("my"))) {
+      return new Locale(paramString);
+    }
+    if (paramString.equalsIgnoreCase("in_ID")) {
+      return new Locale("id");
+    }
+    v.e("MicroMsg.LocaleUtil", "transLanguageToLocale country = " + paramString);
+    return Locale.ENGLISH;
+  }
+  
+  private static String Fa(String paramString)
+  {
+    String str1 = Locale.getDefault().getLanguage().trim();
+    String str2 = str1 + "_" + Locale.getDefault().getCountry().trim();
+    if (str1.equals("en")) {
+      paramString = str1;
+    }
+    do
     {
-      private Handler handler = new Handler(Looper.getMainLooper());
-      
-      public final void appenderClose() {}
-      
-      public final void appenderFlush() {}
-      
-      public final void appenderFlushSync() {}
-      
-      public final int getLogLevel()
-      {
-        return u.aa();
+      return paramString;
+      if (str2.equals("zh_TW")) {
+        return "zh_TW";
       }
-      
-      public final void logD(String paramAnonymousString1, String paramAnonymousString2, String paramAnonymousString3, int paramAnonymousInt1, int paramAnonymousInt2, long paramAnonymousLong1, long paramAnonymousLong2, String paramAnonymousString4)
-      {
-        u.aa();
+      if (str2.equals("zh_HK")) {
+        return "zh_HK";
       }
-      
-      public final void logE(String paramAnonymousString1, String paramAnonymousString2, String paramAnonymousString3, int paramAnonymousInt1, int paramAnonymousInt2, long paramAnonymousLong1, long paramAnonymousLong2, String paramAnonymousString4)
-      {
-        u.aa();
+      if (str2.equals("zh_CN")) {
+        return "zh_CN";
       }
-      
-      public final void logF(String paramAnonymousString1, String paramAnonymousString2, String paramAnonymousString3, int paramAnonymousInt1, int paramAnonymousInt2, long paramAnonymousLong1, long paramAnonymousLong2, String paramAnonymousString4)
-      {
-        if (u.aa() > 5) {}
+      if (str1.equals("th")) {
+        return "th";
       }
-      
-      public final void logI(String paramAnonymousString1, String paramAnonymousString2, String paramAnonymousString3, int paramAnonymousInt1, int paramAnonymousInt2, long paramAnonymousLong1, long paramAnonymousLong2, String paramAnonymousString4)
-      {
-        u.aa();
+      if (str1.equals("id")) {
+        return "id";
       }
-      
-      public final void logV(String paramAnonymousString1, String paramAnonymousString2, String paramAnonymousString3, int paramAnonymousInt1, int paramAnonymousInt2, long paramAnonymousLong1, long paramAnonymousLong2, String paramAnonymousString4)
-      {
-        u.aa();
+      if (str2.equals("in_ID")) {
+        return "id";
       }
-      
-      public final void logW(String paramAnonymousString1, String paramAnonymousString2, String paramAnonymousString3, int paramAnonymousInt1, int paramAnonymousInt2, long paramAnonymousLong1, long paramAnonymousLong2, String paramAnonymousString4)
-      {
-        u.aa();
+      if (str1.equals("vi")) {
+        return "vi";
       }
-    };
-    jVn = (a)localObject;
-    jVo = (a)localObject;
-    localObject = new StringBuilder();
-    try
-    {
-      ((StringBuilder)localObject).append("VERSION.RELEASE:[" + Build.VERSION.RELEASE);
-      ((StringBuilder)localObject).append("] VERSION.CODENAME:[" + Build.VERSION.CODENAME);
-      ((StringBuilder)localObject).append("] VERSION.INCREMENTAL:[" + Build.VERSION.INCREMENTAL);
-      ((StringBuilder)localObject).append("] BOARD:[" + Build.BOARD);
-      ((StringBuilder)localObject).append("] DEVICE:[" + Build.DEVICE);
-      ((StringBuilder)localObject).append("] DISPLAY:[" + Build.DISPLAY);
-      ((StringBuilder)localObject).append("] FINGERPRINT:[" + Build.FINGERPRINT);
-      ((StringBuilder)localObject).append("] HOST:[" + Build.HOST);
-      ((StringBuilder)localObject).append("] MANUFACTURER:[" + Build.MANUFACTURER);
-      ((StringBuilder)localObject).append("] MODEL:[" + Build.MODEL);
-      ((StringBuilder)localObject).append("] PRODUCT:[" + Build.PRODUCT);
-      ((StringBuilder)localObject).append("] TAGS:[" + Build.TAGS);
-      ((StringBuilder)localObject).append("] TYPE:[" + Build.TYPE);
-      ((StringBuilder)localObject).append("] USER:[" + Build.USER + "]");
-      hKO = ((StringBuilder)localObject).toString();
+      if (str1.equals("pt")) {
+        return "pt";
+      }
+      if (str1.equals("es")) {
+        return "es";
+      }
+      if (str1.equals("ru")) {
+        return "ru";
+      }
+      if (str1.equals("ar")) {
+        return "ar";
+      }
+      if (str1.equals("he")) {
+        return "he";
+      }
+      if (str1.equals("pl")) {
+        return "pl";
+      }
+      if (str1.equals("hi")) {
+        return "hi";
+      }
+      if (str1.equals("ja")) {
+        return "ja";
+      }
+      if (str1.equals("it")) {
+        return "it";
+      }
+      if (str1.equals("ko")) {
+        return "ko";
+      }
+      if (str1.equals("ms")) {
+        return "ms";
+      }
+      if (str1.equals("tr")) {
+        return "tr";
+      }
+      if (str1.equals("de")) {
+        return "de";
+      }
+      if (str1.equals("fr")) {
+        return "fr";
+      }
+    } while (!str1.equals("my"));
+    return "my";
+  }
+  
+  public static void a(Context paramContext, Locale paramLocale)
+  {
+    paramContext = paramContext.getResources();
+    Configuration localConfiguration = paramContext.getConfiguration();
+    if (locale.equals(paramLocale)) {
       return;
     }
-    catch (Throwable localThrowable)
+    DisplayMetrics localDisplayMetrics = paramContext.getDisplayMetrics();
+    locale = paramLocale;
+    paramContext.updateConfiguration(localConfiguration, localDisplayMetrics);
+    Resources.getSystem().updateConfiguration(localConfiguration, localDisplayMetrics);
+  }
+  
+  public static boolean aZB()
+  {
+    String str = aZF();
+    return (str.equals("zh_CN")) || (str.equals("zh_TW")) || (str.equals("zh_HK"));
+  }
+  
+  public static boolean aZC()
+  {
+    return aZF().equals("zh_CN");
+  }
+  
+  public static boolean aZD()
+  {
+    return (aZF().equals("zh_TW")) || (aZF().equals("zh_HK"));
+  }
+  
+  public static String aZE()
+  {
+    return Locale.getDefault().getCountry().trim();
+  }
+  
+  public static String aZF()
+  {
+    String str = be.li(ba.getProperty("language_key"));
+    if ((str.length() > 0) && (!str.equals("language_default"))) {
+      return str;
+    }
+    return Fa("en");
+  }
+  
+  public static String d(SharedPreferences paramSharedPreferences)
+  {
+    paramSharedPreferences = be.li(paramSharedPreferences.getString("language_key", null));
+    if ((paramSharedPreferences.length() > 0) && (!paramSharedPreferences.equals("language_default")))
     {
-      for (;;) {}
+      ba.setProperty("language_key", paramSharedPreferences);
+      return paramSharedPreferences;
     }
+    paramSharedPreferences = Fa("en");
+    ba.setProperty("language_key", paramSharedPreferences);
+    return paramSharedPreferences;
   }
   
-  public static void a(a parama)
+  public static String jdMethod_do(Context paramContext)
   {
-    jVo = parama;
-  }
-  
-  public static a aUC()
-  {
-    return jVo;
-  }
-  
-  public static String aUD()
-  {
-    return hKO;
-  }
-  
-  public static void appenderClose()
-  {
-    if (jVo != null) {
-      jVo.appenderClose();
+    paramContext = e(paramContext.getSharedPreferences(aa.aZO(), 0));
+    String str = aZF();
+    if (paramContext.equalsIgnoreCase("language_default")) {
+      return str;
     }
+    return paramContext;
   }
   
-  public static void appenderFlush()
+  public static String dp(Context paramContext)
   {
-    if (jVo != null) {
-      jVo.appenderFlush();
+    int i = 0;
+    String[] arrayOfString1 = paramContext.getResources().getStringArray(2131296261);
+    String str = e(paramContext.getSharedPreferences(aa.aZO(), 0));
+    if (str == null) {
+      return paramContext.getString(2131230946);
     }
-  }
-  
-  public static void appenderFlushSync()
-  {
-    if (jVo != null) {
-      jVo.appenderFlushSync();
-    }
-  }
-  
-  public static void d(String paramString1, String paramString2)
-  {
-    d(paramString1, paramString2, null);
-  }
-  
-  public static void d(String paramString1, String paramString2, Object... paramVarArgs)
-  {
-    if ((jVo != null) && (jVo.getLogLevel() <= 1)) {
-      if (paramVarArgs != null) {
-        break label65;
-      }
-    }
-    for (;;)
+    String[] arrayOfString2 = t.gwc;
+    int k = arrayOfString2.length;
+    int j = 0;
+    while (i < k)
     {
-      paramVarArgs = paramString2;
-      if (paramString2 == null) {
-        paramVarArgs = "";
+      if (arrayOfString2[i].equals(str)) {
+        return arrayOfString1[j];
       }
-      jVo.logD(paramString1, "", "", 0, Process.myPid(), Thread.currentThread().getId(), Looper.getMainLooper().getThread().getId(), paramVarArgs);
-      return;
-      label65:
-      paramString2 = String.format(paramString2, paramVarArgs);
+      j += 1;
+      i += 1;
     }
+    return paramContext.getString(2131230946);
   }
   
-  public static void e(String paramString1, String paramString2)
+  public static String e(SharedPreferences paramSharedPreferences)
   {
-    e(paramString1, paramString2, null);
-  }
-  
-  public static void e(String paramString1, String paramString2, Object... paramVarArgs)
-  {
-    if ((jVo != null) && (jVo.getLogLevel() <= 4)) {
-      if (paramVarArgs != null) {
-        break label65;
-      }
+    paramSharedPreferences = be.li(paramSharedPreferences.getString("language_key", null));
+    if (!be.kf(paramSharedPreferences)) {
+      return paramSharedPreferences;
     }
-    for (;;)
-    {
-      paramVarArgs = paramString2;
-      if (paramString2 == null) {
-        paramVarArgs = "";
-      }
-      jVo.logE(paramString1, "", "", 0, Process.myPid(), Thread.currentThread().getId(), Looper.getMainLooper().getThread().getId(), paramVarArgs);
-      return;
-      label65:
-      paramString2 = String.format(paramString2, paramVarArgs);
-    }
-  }
-  
-  public static void f(String paramString1, String paramString2)
-  {
-    f(paramString1, paramString2, null);
-  }
-  
-  public static void f(String paramString1, String paramString2, Object... paramVarArgs)
-  {
-    if ((jVo != null) && (jVo.getLogLevel() <= 5)) {
-      if (paramVarArgs != null) {
-        break label56;
-      }
-    }
-    for (;;)
-    {
-      jVo.logF(paramString1, "", "", 0, Process.myPid(), Thread.currentThread().getId(), Looper.getMainLooper().getThread().getId(), paramString2);
-      return;
-      label56:
-      paramString2 = String.format(paramString2, paramVarArgs);
-    }
-  }
-  
-  public static int getLogLevel()
-  {
-    if (jVo != null) {
-      return jVo.getLogLevel();
-    }
-    return 6;
-  }
-  
-  public static void h(String paramString1, String paramString2, Object... paramVarArgs)
-  {
-    if ((jVo != null) && (jVo.getLogLevel() <= 1))
-    {
-      paramVarArgs = String.format(paramString2, paramVarArgs);
-      paramString2 = paramVarArgs;
-      if (paramVarArgs == null) {
-        paramString2 = "";
-      }
-      paramString2 = paramString2 + "  " + new ad();
-      jVo.logI(paramString1, "", "", 0, Process.myPid(), Thread.currentThread().getId(), Looper.getMainLooper().getThread().getId(), paramString2);
-    }
-  }
-  
-  public static void i(String paramString1, String paramString2)
-  {
-    i(paramString1, paramString2, null);
-  }
-  
-  public static void i(String paramString1, String paramString2, Object... paramVarArgs)
-  {
-    if ((jVo != null) && (jVo.getLogLevel() <= 2)) {
-      if (paramVarArgs != null) {
-        break label65;
-      }
-    }
-    for (;;)
-    {
-      paramVarArgs = paramString2;
-      if (paramString2 == null) {
-        paramVarArgs = "";
-      }
-      jVo.logI(paramString1, "", "", 0, Process.myPid(), Thread.currentThread().getId(), Looper.getMainLooper().getThread().getId(), paramVarArgs);
-      return;
-      label65:
-      paramString2 = String.format(paramString2, paramVarArgs);
-    }
-  }
-  
-  public static void j(String paramString1, String paramString2, Object... paramVarArgs)
-  {
-    if ((jVo != null) && (jVo.getLogLevel() <= 2))
-    {
-      paramVarArgs = String.format(paramString2, paramVarArgs);
-      paramString2 = paramVarArgs;
-      if (paramVarArgs == null) {
-        paramString2 = "";
-      }
-      paramString2 = paramString2 + "  " + new ad();
-      jVo.logI(paramString1, "", "", 0, Process.myPid(), Thread.currentThread().getId(), Looper.getMainLooper().getThread().getId(), paramString2);
-    }
-  }
-  
-  public static void pp(int paramInt)
-  {
-    level = paramInt;
-  }
-  
-  public static void printErrStackTrace(String paramString1, Throwable paramThrowable, String paramString2, Object... paramVarArgs)
-  {
-    if ((jVo != null) && (jVo.getLogLevel() <= 4)) {
-      if (paramVarArgs != null) {
-        break label92;
-      }
-    }
-    for (;;)
-    {
-      paramVarArgs = paramString2;
-      if (paramString2 == null) {
-        paramVarArgs = "";
-      }
-      paramThrowable = paramVarArgs + "  " + Log.getStackTraceString(paramThrowable);
-      jVo.logE(paramString1, "", "", 0, Process.myPid(), Thread.currentThread().getId(), Looper.getMainLooper().getThread().getId(), paramThrowable);
-      return;
-      label92:
-      paramString2 = String.format(paramString2, paramVarArgs);
-    }
-  }
-  
-  public static void v(String paramString1, String paramString2)
-  {
-    v(paramString1, paramString2, null);
-  }
-  
-  public static void v(String paramString1, String paramString2, Object... paramVarArgs)
-  {
-    if ((jVo != null) && (jVo.getLogLevel() <= 0)) {
-      if (paramVarArgs != null) {
-        break label64;
-      }
-    }
-    for (;;)
-    {
-      paramVarArgs = paramString2;
-      if (paramString2 == null) {
-        paramVarArgs = "";
-      }
-      jVo.logV(paramString1, "", "", 0, Process.myPid(), Thread.currentThread().getId(), Looper.getMainLooper().getThread().getId(), paramVarArgs);
-      return;
-      label64:
-      paramString2 = String.format(paramString2, paramVarArgs);
-    }
-  }
-  
-  public static void w(String paramString1, String paramString2)
-  {
-    w(paramString1, paramString2, null);
-  }
-  
-  public static void w(String paramString1, String paramString2, Object... paramVarArgs)
-  {
-    if ((jVo != null) && (jVo.getLogLevel() <= 3)) {
-      if (paramVarArgs != null) {
-        break label65;
-      }
-    }
-    for (;;)
-    {
-      paramVarArgs = paramString2;
-      if (paramString2 == null) {
-        paramVarArgs = "";
-      }
-      jVo.logW(paramString1, "", "", 0, Process.myPid(), Thread.currentThread().getId(), Looper.getMainLooper().getThread().getId(), paramVarArgs);
-      return;
-      label65:
-      paramString2 = String.format(paramString2, paramVarArgs);
-    }
-  }
-  
-  public static abstract interface a
-  {
-    public abstract void appenderClose();
-    
-    public abstract void appenderFlush();
-    
-    public abstract void appenderFlushSync();
-    
-    public abstract int getLogLevel();
-    
-    public abstract void logD(String paramString1, String paramString2, String paramString3, int paramInt1, int paramInt2, long paramLong1, long paramLong2, String paramString4);
-    
-    public abstract void logE(String paramString1, String paramString2, String paramString3, int paramInt1, int paramInt2, long paramLong1, long paramLong2, String paramString4);
-    
-    public abstract void logF(String paramString1, String paramString2, String paramString3, int paramInt1, int paramInt2, long paramLong1, long paramLong2, String paramString4);
-    
-    public abstract void logI(String paramString1, String paramString2, String paramString3, int paramInt1, int paramInt2, long paramLong1, long paramLong2, String paramString4);
-    
-    public abstract void logV(String paramString1, String paramString2, String paramString3, int paramInt1, int paramInt2, long paramLong1, long paramLong2, String paramString4);
-    
-    public abstract void logW(String paramString1, String paramString2, String paramString3, int paramInt1, int paramInt2, long paramLong1, long paramLong2, String paramString4);
+    return "language_default";
   }
 }
 

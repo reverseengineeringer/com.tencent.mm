@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static aG(I)[B
+.method public static aY(I)[B
     .locals 5
 
     .prologue
@@ -98,7 +98,7 @@
     return v0
 .end method
 
-.method public static p([B)I
+.method public static l([B)I
     .locals 2
 
     .prologue

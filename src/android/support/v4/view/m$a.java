@@ -6,11 +6,11 @@ import android.view.View;
 import android.view.ViewParent;
 
 class m$a
-  implements m.h
+  implements m.e
 {
   public void a(View paramView, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
-    paramView.postInvalidateDelayed(ah(), paramInt1, paramInt2, paramInt3, paramInt4);
+    paramView.postInvalidateDelayed(af(), paramInt1, paramInt2, paramInt3, paramInt4);
   }
   
   public void a(View paramView, int paramInt, Paint paramPaint) {}
@@ -21,7 +21,7 @@ class m$a
   
   public void a(View paramView, Runnable paramRunnable)
   {
-    paramView.postDelayed(paramRunnable, ah());
+    paramView.postDelayed(paramRunnable, af());
   }
   
   public boolean a(View paramView, int paramInt)
@@ -29,7 +29,7 @@ class m$a
     return false;
   }
   
-  long ah()
+  long af()
   {
     return 10L;
   }
@@ -43,7 +43,7 @@ class m$a
   
   public void g(View paramView)
   {
-    paramView.postInvalidateDelayed(ah());
+    paramView.postInvalidateDelayed(af());
   }
   
   public int h(View paramView)

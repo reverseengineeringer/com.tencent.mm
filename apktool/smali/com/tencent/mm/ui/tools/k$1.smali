@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lwh:Lcom/tencent/mm/ui/tools/k$a;
+.field final synthetic lWT:Lcom/tencent/mm/ui/tools/k$a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 201
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/k$1;->lwh:Lcom/tencent/mm/ui/tools/k$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/k$1;->lWT:Lcom/tencent/mm/ui/tools/k$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 216
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/k$1;->lwh:Lcom/tencent/mm/ui/tools/k$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/k$1;->lWT:Lcom/tencent/mm/ui/tools/k$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/k$a;->biD()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/k$a;->boz()V
 
     .line 217
     return-void
@@ -54,7 +54,7 @@
 
     .prologue
     .line 212
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/k$1;->lwh:Lcom/tencent/mm/ui/tools/k$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/k$1;->lWT:Lcom/tencent/mm/ui/tools/k$a;
 
     invoke-interface {v0}, Lcom/tencent/mm/ui/tools/k$a;->onAnimationEnd()V
 

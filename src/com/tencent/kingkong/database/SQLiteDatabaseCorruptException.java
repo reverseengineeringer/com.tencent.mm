@@ -7,13 +7,13 @@ public class SQLiteDatabaseCorruptException
 {
   public SQLiteDatabaseCorruptException()
   {
-    g.qI();
+    g.pm();
   }
   
   public SQLiteDatabaseCorruptException(String paramString)
   {
     super(paramString);
-    g.qI();
+    g.pm();
   }
 }
 

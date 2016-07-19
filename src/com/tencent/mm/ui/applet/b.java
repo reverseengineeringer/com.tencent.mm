@@ -7,13 +7,13 @@ import android.os.MessageQueue.IdleHandler;
 import android.view.GestureDetector;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.LinkedList;
 
 public final class b
 {
   int direction = 0;
-  private GestureDetector fge = new GestureDetector(new GestureDetector.OnGestureListener()
+  private GestureDetector fpd = new GestureDetector(new GestureDetector.OnGestureListener()
   {
     public final boolean onDown(MotionEvent paramAnonymousMotionEvent)
     {
@@ -45,37 +45,37 @@ public final class b
       return false;
     }
   });
-  private MessageQueue.IdleHandler kmz;
-  a kzA;
-  private int kzx;
-  private c kzy;
-  LinkedList kzz;
+  private MessageQueue.IdleHandler kLW;
+  private int kYE;
+  private c kYF;
+  LinkedList<String> kYG;
+  a kYH;
   
   public b(a parama)
   {
-    kzA = parama;
-    kzx = 15;
-    kzy = new c(40);
-    kzz = new LinkedList();
-    kmz = new MessageQueue.IdleHandler()
+    kYH = parama;
+    kYE = 15;
+    kYF = new c(40);
+    kYG = new LinkedList();
+    kLW = new MessageQueue.IdleHandler()
     {
       public final boolean queueIdle()
       {
-        while (kzz.size() > 0)
+        while (kYG.size() > 0)
         {
-          String str = (String)kzz.removeFirst();
-          kzA.hw(str);
+          String str = (String)kYG.removeFirst();
+          kYH.hO(str);
         }
         return true;
       }
     };
-    Looper.myQueue().addIdleHandler(kmz);
+    Looper.myQueue().addIdleHandler(kLW);
   }
   
   public final void a(int paramInt, b paramb)
   {
     if (paramb == null) {
-      u.e("!44@/B4Tb64lLpJspJHBv5qC7V5a0uLUZHReE2O/w9CK6JI=", "earlyGet, getter is null, no early get headimg will be performed");
+      v.e("MicroMsg.EarlyGetHeadImg", "earlyGet, getter is null, no early get headimg will be performed");
     }
     int j;
     int i;
@@ -83,25 +83,25 @@ public final class b
     do
     {
       return;
-      if (kzx <= 0)
+      if (kYE <= 0)
       {
-        u.e("!44@/B4Tb64lLpJspJHBv5qC7V5a0uLUZHReE2O/w9CK6JI=", "earlyGet fail, threshold is invalid");
+        v.e("MicroMsg.EarlyGetHeadImg", "earlyGet fail, threshold is invalid");
         return;
       }
-      j = paramb.yz();
+      j = paramb.yM();
       i = 1;
-      if (i > kzx) {
+      if (i > kYE) {
         break;
       }
       if (direction != 1) {
         break label121;
       }
     } while (paramInt - i < 0);
-    String str = paramb.dd(paramInt - i);
-    if ((str != null) && (str.length() != 0) && (!kzy.contains(str)))
+    String str = paramb.dI(paramInt - i);
+    if ((str != null) && (str.length() != 0) && (!kYF.contains(str)))
     {
-      kzy.zT(str);
-      kzz.add(str);
+      kYF.BQ(str);
+      kYG.add(str);
     }
     for (;;)
     {
@@ -112,62 +112,62 @@ public final class b
       if (paramInt + i >= j) {
         break;
       }
-      str = paramb.dd(paramInt + i);
-      if ((str != null) && (str.length() != 0) && (!kzy.contains(str)))
+      str = paramb.dI(paramInt + i);
+      if ((str != null) && (str.length() != 0) && (!kYF.contains(str)))
       {
-        kzy.zT(str);
-        kzz.add(str);
+        kYF.BQ(str);
+        kYG.add(str);
       }
     }
   }
   
   public final void detach()
   {
-    if (kmz != null) {
-      Looper.myQueue().removeIdleHandler(kmz);
+    if (kLW != null) {
+      Looper.myQueue().removeIdleHandler(kLW);
     }
   }
   
   public final void onTouchEvent(MotionEvent paramMotionEvent)
   {
-    if (fge != null) {
-      fge.onTouchEvent(paramMotionEvent);
+    if (fpd != null) {
+      fpd.onTouchEvent(paramMotionEvent);
     }
   }
   
   public static abstract interface a
   {
-    public abstract Bitmap hw(String paramString);
+    public abstract Bitmap hO(String paramString);
   }
   
   public static abstract interface b
   {
-    public abstract String dd(int paramInt);
+    public abstract String dI(int paramInt);
     
-    public abstract int yz();
+    public abstract int yM();
   }
   
   private final class c
   {
-    private LinkedList bpa = null;
+    private LinkedList<String> bcZ = null;
     private int maxSize = 40;
     
     public c(int paramInt) {}
     
-    final boolean contains(String paramString)
+    final void BQ(String paramString)
     {
-      return bpa.contains(paramString);
-    }
-    
-    final void zT(String paramString)
-    {
-      if (bpa.contains(paramString)) {}
+      if (bcZ.contains(paramString)) {}
       do
       {
         return;
-        bpa.add(paramString);
-      } while (bpa.size() < maxSize);
-      bpa.removeFirst();
+        bcZ.add(paramString);
+      } while (bcZ.size() < maxSize);
+      bcZ.removeFirst();
+    }
+    
+    final boolean contains(String paramString)
+    {
+      return bcZ.contains(paramString);
     }
   }
 }

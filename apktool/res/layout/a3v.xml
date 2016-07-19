@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingLeft="@dimen/cy" android:paddingRight="@dimen/cy" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:minHeight="@dimen/j7" style="@style/MMFullLineItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center|left" android:id="@id/g6" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/j7" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/g3" android:paddingTop="@dimen/j8" android:paddingBottom="@dimen/j8" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/hj">
+                <TextView android:gravity="left" android:id="@id/bsu" android:layout_width="@dimen/fq" android:layout_height="0.0dip" android:text="@string/a5g" android:singleLine="true" android:layout_weight="1.0" style="@style/MMFontPreferenceLarge" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/bj9" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/bsv" android:maxLines="2" android:singleLine="false" style="@style/MMFontPreferenceSummary" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

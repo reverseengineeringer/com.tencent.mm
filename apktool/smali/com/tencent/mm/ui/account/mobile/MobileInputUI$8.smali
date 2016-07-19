@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kyc:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+.field final synthetic kXj:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 507
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/MobileInputUI$8;->kyc:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/MobileInputUI$8;->kXj:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 511
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/MobileInputUI$8;->kyc:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/MobileInputUI$8;->kXj:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->e(Lcom/tencent/mm/ui/account/mobile/MobileInputUI;)V
 

@@ -1,15 +1,15 @@
 package com.tencent.mm.sandbox.updater;
 
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah.a;
 
 final class e$1
-  implements af.a
+  implements ah.a
 {
   e$1(e parame) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    e.a(jTO, true);
+    e.a(ktm, true);
     return true;
   }
 }

@@ -12,7 +12,7 @@
 
 
 # static fields
-.field public static bvz:Lcom/tencent/mm/dbsupport/newcursor/h$a;
+.field public static bks:Lcom/tencent/mm/dbsupport/newcursor/h$a;
 
 
 # direct methods
@@ -20,13 +20,13 @@
     .locals 7
 
     .prologue
-    .line 17
-    sget-object v0, Lcom/tencent/mm/dbsupport/newcursor/h;->bvz:Lcom/tencent/mm/dbsupport/newcursor/h$a;
+    .line 20
+    sget-object v0, Lcom/tencent/mm/dbsupport/newcursor/h;->bks:Lcom/tencent/mm/dbsupport/newcursor/h$a;
 
     if-eqz v0, :cond_0
 
-    .line 18
-    sget-object v0, Lcom/tencent/mm/dbsupport/newcursor/h;->bvz:Lcom/tencent/mm/dbsupport/newcursor/h$a;
+    .line 21
+    sget-object v0, Lcom/tencent/mm/dbsupport/newcursor/h;->bks:Lcom/tencent/mm/dbsupport/newcursor/h$a;
 
     move-object v1, p0
 
@@ -40,28 +40,28 @@
 
     invoke-interface/range {v0 .. v6}, Lcom/tencent/mm/dbsupport/newcursor/h$a;->b(Ljava/lang/String;Ljava/lang/String;IJ[I)V
 
-    .line 20
+    .line 23
     :cond_0
     return-void
 .end method
 
-.method public static qJ()Z
+.method public static pn()Z
     .locals 1
 
     .prologue
-    .line 34
-    sget-object v0, Lcom/tencent/mm/dbsupport/newcursor/h;->bvz:Lcom/tencent/mm/dbsupport/newcursor/h$a;
+    .line 36
+    sget-object v0, Lcom/tencent/mm/dbsupport/newcursor/h;->bks:Lcom/tencent/mm/dbsupport/newcursor/h$a;
 
     if-eqz v0, :cond_0
 
-    .line 35
-    sget-object v0, Lcom/tencent/mm/dbsupport/newcursor/h;->bvz:Lcom/tencent/mm/dbsupport/newcursor/h$a;
+    .line 37
+    sget-object v0, Lcom/tencent/mm/dbsupport/newcursor/h;->bks:Lcom/tencent/mm/dbsupport/newcursor/h$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/dbsupport/newcursor/h$a;->qJ()Z
+    invoke-interface {v0}, Lcom/tencent/mm/dbsupport/newcursor/h$a;->pn()Z
 
     move-result v0
 
-    .line 37
+    .line 39
     :goto_0
     return v0
 
@@ -71,23 +71,23 @@
     goto :goto_0
 .end method
 
-.method public static qK()J
+.method public static po()J
     .locals 2
 
     .prologue
-    .line 45
-    sget-object v0, Lcom/tencent/mm/dbsupport/newcursor/h;->bvz:Lcom/tencent/mm/dbsupport/newcursor/h$a;
+    .line 49
+    sget-object v0, Lcom/tencent/mm/dbsupport/newcursor/h;->bks:Lcom/tencent/mm/dbsupport/newcursor/h$a;
 
     if-eqz v0, :cond_0
 
-    .line 46
-    sget-object v0, Lcom/tencent/mm/dbsupport/newcursor/h;->bvz:Lcom/tencent/mm/dbsupport/newcursor/h$a;
+    .line 50
+    sget-object v0, Lcom/tencent/mm/dbsupport/newcursor/h;->bks:Lcom/tencent/mm/dbsupport/newcursor/h$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/dbsupport/newcursor/h$a;->qK()J
+    invoke-interface {v0}, Lcom/tencent/mm/dbsupport/newcursor/h$a;->po()J
 
     move-result-wide v0
 
-    .line 48
+    .line 52
     :goto_0
     return-wide v0
 

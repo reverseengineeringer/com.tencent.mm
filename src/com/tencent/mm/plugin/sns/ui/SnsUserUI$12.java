@@ -1,5 +1,6 @@
 package com.tencent.mm.plugin.sns.ui;
 
+import android.content.Intent;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 
@@ -10,13 +11,10 @@ final class SnsUserUI$12
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if ((SnsUserUI.f(hme) != null) && (fhme).haP))
-    {
-      SnsUserUI.f(hme).eY(true);
-      SnsUserUI.b(hme);
-      return true;
-    }
-    hme.finish();
+    paramMenuItem = new Intent();
+    paramMenuItem.setClass(hCj, SnsMsgUI.class);
+    paramMenuItem.putExtra("sns_msg_force_show_all", true);
+    hCj.startActivityForResult(paramMenuItem, 8);
     return true;
   }
 }

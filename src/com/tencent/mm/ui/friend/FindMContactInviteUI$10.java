@@ -10,7 +10,7 @@ final class FindMContactInviteUI$10
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    FindMContactInviteUI.h(lrv);
+    FindMContactInviteUI.h(lRZ);
     return true;
   }
 }

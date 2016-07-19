@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/LoginUI;->m(IILjava/lang/String;)Z
+    value = Lcom/tencent/mm/ui/account/LoginUI;->k(IILjava/lang/String;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ktY:Lcom/tencent/mm/ui/account/LoginUI;
+.field final synthetic kTf:Lcom/tencent/mm/ui/account/LoginUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 431
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginUI$2;->ktY:Lcom/tencent/mm/ui/account/LoginUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginUI$2;->kTf:Lcom/tencent/mm/ui/account/LoginUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 435
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginUI$2;->ktY:Lcom/tencent/mm/ui/account/LoginUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginUI$2;->kTf:Lcom/tencent/mm/ui/account/LoginUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/LoginUI;->f(Lcom/tencent/mm/ui/account/LoginUI;)Lcom/tencent/mm/ui/applet/SecurityImage;
 

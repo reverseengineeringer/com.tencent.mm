@@ -7,32 +7,32 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.aw.a;
-import com.tencent.mm.az.g;
+import com.tencent.mm.az.a;
+import com.tencent.mm.bc.g;
 import com.tencent.mm.modelfriend.ah;
 import com.tencent.mm.modelfriend.h;
 import com.tencent.mm.modelfriend.r;
 import com.tencent.mm.pluginsdk.ui.d.e;
-import com.tencent.mm.q.b;
+import com.tencent.mm.s.b;
 import com.tencent.mm.ui.i.a;
 
 public final class InviteFacebookFriendsUI$a
-  extends com.tencent.mm.ui.i
+  extends com.tencent.mm.ui.i<h>
 {
-  private int[] bMl;
-  String coW;
-  private boolean[] coX;
+  private int[] bFF;
+  String ckk;
+  private boolean[] ckl;
   
   public InviteFacebookFriendsUI$a(Context paramContext, i.a parama)
   {
     super(paramContext, new h());
-    koC = parama;
+    kNG = parama;
   }
   
-  public final long[] Gj()
+  public final long[] GG()
   {
     int m = 0;
-    Object localObject = coX;
+    Object localObject = ckl;
     int n = localObject.length;
     int i = 0;
     int k;
@@ -49,10 +49,10 @@ public final class InviteFacebookFriendsUI$a
     i = m;
     if (j < getCount())
     {
-      if (coX[j] == 0) {
+      if (ckl[j] == 0) {
         break label102;
       }
-      localObject[i] = getItemaSw;
+      localObject[i] = getItemaFf;
       i += 1;
     }
     label102:
@@ -64,10 +64,10 @@ public final class InviteFacebookFriendsUI$a
     }
   }
   
-  public final void Gk()
+  public final void GH()
   {
-    com.tencent.mm.modelfriend.i locali = ah.zr();
-    String str = coW;
+    com.tencent.mm.modelfriend.i locali = ah.zE();
+    String str = ckk;
     StringBuilder localStringBuilder = new StringBuilder();
     localStringBuilder.append(" where facebookfriend.status = 102 ");
     if ((str != null) && (str.length() > 0))
@@ -77,24 +77,24 @@ public final class InviteFacebookFriendsUI$a
       localStringBuilder.append("facebookfriend.nickname like '%" + str + "%' or ");
       localStringBuilder.append("facebookfriend.username like '%" + str + "%' ) ");
     }
-    setCursor(bCw.rawQuery("select facebookfriend.fbid,facebookfriend.fbname,facebookfriend.fbimgkey,facebookfriend.status,facebookfriend.username,facebookfriend.nickname,facebookfriend.nicknamepyinitial,facebookfriend.nicknamequanpin,facebookfriend.sex,facebookfriend.personalcard,facebookfriend.province,facebookfriend.city,facebookfriend.signature,facebookfriend.alias,facebookfriend.type,facebookfriend.email from facebookfriend  " + localStringBuilder.toString() + " order by  case when status = 100 then 0  when status = 102 then 3  when status = 101 then 1 else 2 end  , nicknamepyinitial", null));
-    bMl = new int[getCount()];
-    coX = new boolean[getCount()];
+    setCursor(bvG.rawQuery("select facebookfriend.fbid,facebookfriend.fbname,facebookfriend.fbimgkey,facebookfriend.status,facebookfriend.username,facebookfriend.nickname,facebookfriend.nicknamepyinitial,facebookfriend.nicknamequanpin,facebookfriend.sex,facebookfriend.personalcard,facebookfriend.province,facebookfriend.city,facebookfriend.signature,facebookfriend.alias,facebookfriend.type,facebookfriend.email from facebookfriend  " + localStringBuilder.toString() + " order by  case when status = 100 then 0  when status = 102 then 3  when status = 101 then 1 else 2 end  , nicknamepyinitial", null));
+    bFF = new int[getCount()];
+    ckl = new boolean[getCount()];
     super.notifyDataSetChanged();
   }
   
-  protected final void Gl()
+  protected final void GI()
   {
-    Gk();
+    GH();
   }
   
-  public final void ep(int paramInt)
+  public final void fb(int paramInt)
   {
-    if ((paramInt < 0) || (paramInt >= coX.length)) {
+    if ((paramInt < 0) || (paramInt >= ckl.length)) {
       return;
     }
-    boolean[] arrayOfBoolean = coX;
-    if (coX[paramInt] == 0) {}
+    boolean[] arrayOfBoolean = ckl;
+    if (ckl[paramInt] == 0) {}
     for (int i = 1;; i = 0)
     {
       arrayOfBoolean[paramInt] = i;
@@ -110,43 +110,43 @@ public final class InviteFacebookFriendsUI$a
     if (paramView == null)
     {
       paramViewGroup = new a();
-      paramView = View.inflate(context, 2131362447, null);
-      coY = ((ImageView)paramView.findViewById(2131167114));
-      bMs = ((TextView)paramView.findViewById(2131167115));
-      coZ = ((TextView)paramView.findViewById(2131167116));
-      cpa = ((CheckBox)paramView.findViewById(2131167117));
+      paramView = View.inflate(context, 2130903549, null);
+      ckm = ((ImageView)paramView.findViewById(2131756733));
+      bFM = ((TextView)paramView.findViewById(2131756734));
+      ckn = ((TextView)paramView.findViewById(2131756739));
+      cko = ((CheckBox)paramView.findViewById(2131756740));
       paramView.setTag(paramViewGroup);
-      bMs.setText(e.a(context, localh.yw(), bMs.getTextSize()));
-      localBitmap = b.fK(aSw);
+      bFM.setText(e.a(context, localh.yI(), bFM.getTextSize()));
+      localBitmap = b.fX(aFf);
       if (localBitmap != null) {
         break label211;
       }
-      coY.setImageDrawable(a.y(context, 2130903473));
+      ckm.setImageDrawable(a.C(context, 2131165359));
     }
     for (;;)
     {
-      cpa.setChecked(coX[paramInt]);
-      if (!ah.zu().hA(Long.toString(aSw))) {
+      cko.setChecked(ckl[paramInt]);
+      if (!ah.zH().hS(Long.toString(aFf))) {
         break label223;
       }
-      coZ.setVisibility(0);
+      ckn.setVisibility(0);
       return paramView;
       paramViewGroup = (a)paramView.getTag();
       break;
       label211:
-      coY.setImageBitmap(localBitmap);
+      ckm.setImageBitmap(localBitmap);
     }
     label223:
-    coZ.setVisibility(8);
+    ckn.setVisibility(8);
     return paramView;
   }
   
   public static final class a
   {
-    TextView bMs;
-    ImageView coY;
-    TextView coZ;
-    CheckBox cpa;
+    TextView bFM;
+    ImageView ckm;
+    TextView ckn;
+    CheckBox cko;
   }
 }
 

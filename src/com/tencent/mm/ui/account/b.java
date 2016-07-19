@@ -6,8 +6,8 @@ import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
 import android.content.DialogInterface.OnDismissListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.applet.SecurityImage;
 import com.tencent.mm.ui.applet.SecurityImage.b;
 import com.tencent.mm.ui.base.g;
@@ -15,15 +15,15 @@ import com.tencent.mm.ui.base.g;
 public abstract class b
   extends SecurityImage.b
 {
-  SecurityImage kqh = null;
-  j krH = null;
+  SecurityImage kPm = null;
+  j kQQ = null;
   
-  public final void bby()
+  public abstract j a(j paramj, String paramString);
+  
+  public final void bgK()
   {
-    ah.tE().d(d(krH, ""));
+    ah.tF().a(a(kQQ, ""), 0);
   }
-  
-  public abstract j d(j paramj, String paramString);
 }
 
 /* Location:

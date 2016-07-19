@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/af$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ah$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic arv:Lcom/tencent/mm/c/b/i;
+.field final synthetic adc:Lcom/tencent/mm/c/b/i;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 260
-    iput-object p1, p0, Lcom/tencent/mm/c/b/i$3;->arv:Lcom/tencent/mm/c/b/i;
+    iput-object p1, p0, Lcom/tencent/mm/c/b/i$3;->adc:Lcom/tencent/mm/c/b/i;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,19 +36,19 @@
 
 
 # virtual methods
-.method public final lj()Z
+.method public final jK()Z
     .locals 2
 
     .prologue
     .line 264
-    const-string/jumbo v0, "!44@/B4Tb64lLpJjyqE6YDnAp4yx32s8/BqPmq6RdxNqkkU="
+    const-string/jumbo v0, "MicroMsg.SceneVoiceService"
 
     const-string/jumbo v1, "onTimerExpired"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 265
-    iget-object v0, p0, Lcom/tencent/mm/c/b/i$3;->arv:Lcom/tencent/mm/c/b/i;
+    iget-object v0, p0, Lcom/tencent/mm/c/b/i$3;->adc:Lcom/tencent/mm/c/b/i;
 
     invoke-static {v0}, Lcom/tencent/mm/c/b/i;->h(Lcom/tencent/mm/c/b/i;)V
 

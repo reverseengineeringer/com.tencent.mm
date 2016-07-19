@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/afk" android:paddingLeft="@dimen/i7" android:paddingRight="@dimen/co" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/rn" style="@style/MMListCatalog" />
+    <LinearLayout android:orientation="vertical" android:id="@id/g3" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

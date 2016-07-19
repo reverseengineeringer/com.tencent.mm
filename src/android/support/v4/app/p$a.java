@@ -6,9 +6,9 @@ import android.os.Bundle;
 public final class p$a
   extends s.a
 {
-  public static final s.a.a cC = new s.a.a() {};
+  public static final s.a.a cS = new s.a.a() {};
   public PendingIntent actionIntent;
-  private final w[] cB;
+  private final w[] cR;
   public int icon;
   private final Bundle mExtras;
   public CharSequence title;
@@ -24,10 +24,10 @@ public final class p$a
     title = p.d.d(paramCharSequence);
     actionIntent = paramPendingIntent;
     mExtras = paramBundle;
-    cB = null;
+    cR = null;
   }
   
-  protected final PendingIntent X()
+  protected final PendingIntent W()
   {
     return actionIntent;
   }

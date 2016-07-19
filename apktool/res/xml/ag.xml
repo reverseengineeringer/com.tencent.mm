@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto">
+    <PreferenceSmallCategory />
+    <Preference android:layout="@layout/yk" android:persistent="false" android:title="@string/akh" android:key="record_data" android:defaultValue="true" />
+    <PreferenceSmallCategory />
+    <CheckBoxPreference android:persistent="false" android:title="@string/ako" android:key="join_rank" android:defaultValue="true" />
+    <PreferenceSmallCategory />
+    <CheckBoxPreference android:layout="@layout/yk" android:persistent="false" android:title="@string/akq" android:key="notify_rank" android:defaultValue="true" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/akp" android:key="notify_like" android:defaultValue="true" />
+    <PreferenceSmallCategory />
+    <CheckBoxPreference android:persistent="false" android:title="@string/akn" android:key="device_step_detector" android:defaultValue="true" />
+</PreferenceScreen>

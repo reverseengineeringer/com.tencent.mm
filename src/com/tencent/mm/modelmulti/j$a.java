@@ -1,28 +1,28 @@
 package com.tencent.mm.modelmulti;
 
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.h.d;
-import com.tencent.mm.protocal.t.a;
-import com.tencent.mm.protocal.t.b;
-import com.tencent.mm.r.h;
+import com.tencent.mm.protocal.k.c;
+import com.tencent.mm.protocal.k.d;
+import com.tencent.mm.protocal.w.a;
+import com.tencent.mm.protocal.w.b;
+import com.tencent.mm.t.h;
 
 public final class j$a
   extends h
 {
-  private final t.a bUR = new t.a();
-  private final t.b bUS;
-  private final boolean bUT;
+  private final w.a bOs = new w.a();
+  private final w.b bOt;
+  private final boolean bOu;
   
   public j$a()
   {
-    bUS = new t.b();
-    bUT = false;
+    bOt = new w.b();
+    bOu = false;
   }
   
-  public j$a(t.b paramb)
+  public j$a(w.b paramb)
   {
-    bUS = paramb;
-    bUT = true;
+    bOt = paramb;
+    bOu = true;
   }
   
   public final int getType()
@@ -35,14 +35,14 @@ public final class j$a
     return "/cgi-bin/micromsg-bin/newsync";
   }
   
-  public final h.c tW()
+  public final k.c tX()
   {
-    return bUR;
+    return bOs;
   }
   
-  public final h.d tX()
+  public final k.d tY()
   {
-    return bUS;
+    return bOt;
   }
 }
 

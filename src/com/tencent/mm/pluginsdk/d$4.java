@@ -3,11 +3,11 @@ package com.tencent.mm.pluginsdk;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.widget.Toast;
-import com.tencent.mm.modelsimple.ag;
-import com.tencent.mm.protocal.b.aub;
-import com.tencent.mm.r.j;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.modelsimple.ae;
+import com.tencent.mm.protocal.b.aur;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.j;
 import com.tencent.mm.ui.base.s;
 
 final class d$4
@@ -17,15 +17,15 @@ final class d$4
   
   public final void a(int paramInt1, int paramInt2, String paramString, j paramj, boolean paramBoolean)
   {
-    u.i("!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ", "DeepLinkHelper.DeepLinkCallback, %d, %d, %s, %b", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString, Boolean.valueOf(paramBoolean) });
-    if ((cBq != null) && (cBq.isShowing())) {
-      cBq.dismiss();
+    v.i("MicroMsg.DeepLinkHelper", "DeepLinkHelper.DeepLinkCallback, %d, %d, %s, %b", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString, Boolean.valueOf(paramBoolean) });
+    if ((iUW != null) && (iUW.isShowing())) {
+      iUW.dismiss();
     }
-    if ((paramj != null) && (paramInt1 != 0) && (paramInt2 != 0) && ((paramj instanceof ag)))
+    if ((paramj != null) && (paramInt1 != 0) && (paramInt2 != 0) && ((paramj instanceof ae)))
     {
-      paramString = ((ag)paramj).CM();
+      paramString = ((ae)paramj).CZ();
       if ((paramString != null) && (val$context != null)) {
-        s.makeText(val$context, val$context.getString(2131430877) + " : " + ay.ky(jMS), 0).show();
+        s.makeText(val$context, val$context.getString(2131231028) + " : " + be.li(klC), 0).show();
       }
     }
   }

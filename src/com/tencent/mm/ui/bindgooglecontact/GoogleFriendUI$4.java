@@ -9,10 +9,10 @@ final class GoogleFriendUI$4
 {
   GoogleFriendUI$4(GoogleFriendUI paramGoogleFriendUI, ArrayList paramArrayList, o paramo) {}
   
-  public final void aq(int paramInt1, int paramInt2)
+  public final void av(int paramInt1, int paramInt2)
   {
     if (paramInt2 != -1) {
-      GoogleFriendUI.a(kNj, (o)kNk.get(paramInt2), kNl);
+      GoogleFriendUI.a(lmy, (o)lmz.get(paramInt2), lmA);
     }
   }
 }

@@ -4,33 +4,33 @@ import com.tencent.mm.sdk.h.d;
 import com.tencent.mm.sdk.h.f;
 
 public final class c
-  extends f
+  extends f<b>
 {
-  public static final String[] aoY = { f.a(b.aot, "appattach") };
-  d aoX;
+  public static final String[] bkN = { f.a(b.bjR, "appattach") };
+  d bkP;
   
   public c(d paramd)
   {
-    super(paramd, b.aot, "appattach", null);
-    aoX = paramd;
+    super(paramd, b.bjR, "appattach", null);
+    bkP = paramd;
   }
   
-  public final b cS(long paramLong)
-  {
-    b localb = new b();
-    field_msgInfoId = paramLong;
-    if (c(localb, new String[] { "msgInfoId" })) {
-      return localb;
-    }
-    return null;
-  }
-  
-  public final b zK(String paramString)
+  public final b BG(String paramString)
   {
     b localb = new b();
     field_mediaSvrId = paramString;
     if (c(localb, new String[] { "mediaSvrId" })) {}
     while (c(localb, new String[] { "mediaId" })) {
+      return localb;
+    }
+    return null;
+  }
+  
+  public final b dj(long paramLong)
+  {
+    b localb = new b();
+    field_msgInfoId = paramLong;
+    if (c(localb, new String[] { "msgInfoId" })) {
       return localb;
     }
     return null;

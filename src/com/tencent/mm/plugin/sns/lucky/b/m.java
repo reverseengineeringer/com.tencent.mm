@@ -3,48 +3,48 @@ package com.tencent.mm.plugin.sns.lucky.b;
 import com.tencent.mm.a.g;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.q;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.r;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.h;
 import com.tencent.mm.storage.j.a;
 import java.util.Map;
 
 public final class m
 {
-  private static m gIg = null;
-  private static String gIh = "";
-  StringBuffer cuM = new StringBuffer();
+  private static m gPl = null;
+  private static String gPm = "";
+  StringBuffer cqq = new StringBuffer();
   public int level = 0;
   
-  public static m axH()
+  public static m aAj()
   {
-    if (!ah.rh()) {
+    if (!ah.rg()) {
       return new m();
     }
-    String str1 = (String)ah.tD().rn().a(j.a.keu, "");
-    String str2 = g.m(str1.getBytes());
-    if ((gIg == null) || (!str2.equals(gIh)))
+    String str1 = (String)ah.tE().ro().a(j.a.kEl, "");
+    String str2 = g.j(str1.getBytes());
+    if ((gPl == null) || (!str2.equals(gPm)))
     {
-      u.i("!44@/B4Tb64lLpJTMeYfRMNNQQTX5kUu93tUia035g7BTJQ=", "create NewYearSnsAmountLevel");
+      v.i("MicroMsg.NewYearSnsAmountLevel", "create NewYearSnsAmountLevel");
       m localm = new m();
-      gIg = localm;
-      localm.T(str1, false);
-      gIh = str2;
+      gPl = localm;
+      localm.Z(str1, false);
+      gPm = str2;
     }
-    return gIg;
+    return gPl;
   }
   
-  public final void T(String paramString, boolean paramBoolean)
+  public final void Z(String paramString, boolean paramBoolean)
   {
-    cuM = new StringBuffer();
-    Map localMap = q.J(paramString, "sysmsg", null);
+    cqq = new StringBuffer();
+    Map localMap = r.cr(paramString, "sysmsg");
     level = 0;
     if (localMap == null)
     {
-      u.i("!44@/B4Tb64lLpJTMeYfRMNNQQTX5kUu93tUia035g7BTJQ=", "errr for paser %s", new Object[] { paramString });
+      v.i("MicroMsg.NewYearSnsAmountLevel", "errr for paser %s", new Object[] { paramString });
       if (paramBoolean) {
-        b.lp(68);
+        b.id(68);
       }
     }
     do
@@ -52,31 +52,31 @@ public final class m
       do
       {
         return;
-        level = ay.Dr((String)localMap.get(".sysmsg.NewYearSNSAmountLevelCtrl2016.Level"));
-        u.i("!44@/B4Tb64lLpJTMeYfRMNNQQTX5kUu93tUia035g7BTJQ=", "get level %d", new Object[] { Integer.valueOf(level) });
+        level = be.FG((String)localMap.get(".sysmsg.NewYearSNSAmountLevelCtrl2016.Level"));
+        v.i("MicroMsg.NewYearSnsAmountLevel", "get level %d", new Object[] { Integer.valueOf(level) });
       } while (!paramBoolean);
       if (level == 0)
       {
-        b.lp(69);
+        b.id(69);
         return;
       }
       if (level == 1)
       {
-        b.lp(70);
+        b.id(70);
         return;
       }
       if (level == 2)
       {
-        b.lp(71);
+        b.id(71);
         return;
       }
       if (level == 3)
       {
-        b.lp(72);
+        b.id(72);
         return;
       }
     } while (level != 4);
-    b.lp(73);
+    b.id(73);
   }
 }
 

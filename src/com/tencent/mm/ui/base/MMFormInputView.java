@@ -12,18 +12,18 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.tencent.mm.R.b;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class MMFormInputView
   extends LinearLayout
 {
-  private TextView cNT;
-  private EditText fEO;
-  private int kDK = -1;
-  private int kDL = -1;
-  private int[] kDM;
-  private View.OnFocusChangeListener kDN = null;
+  private TextView cuj;
+  public EditText fNQ;
+  public View.OnFocusChangeListener iLN = null;
   private int layout = -1;
+  private int lcP = -1;
+  private int lcQ = -1;
+  private int[] lcR;
   private Context mContext = null;
   
   public MMFormInputView(Context paramContext, AttributeSet paramAttributeSet)
@@ -35,9 +35,9 @@ public class MMFormInputView
   public MMFormInputView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet);
-    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.FormItemView, paramInt, 0);
-    kDL = paramAttributeSet.getResourceId(2, -1);
-    kDK = paramAttributeSet.getResourceId(1, -1);
+    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.Wy, paramInt, 0);
+    lcQ = paramAttributeSet.getResourceId(2, -1);
+    lcP = paramAttributeSet.getResourceId(1, -1);
     layout = paramAttributeSet.getResourceId(0, layout);
     paramAttributeSet.recycle();
     inflate(paramContext, layout, this);
@@ -46,43 +46,33 @@ public class MMFormInputView
   
   public final void addTextChangedListener(TextWatcher paramTextWatcher)
   {
-    if ((paramTextWatcher != null) && (fEO != null))
+    if ((paramTextWatcher != null) && (fNQ != null))
     {
-      fEO.addTextChangedListener(paramTextWatcher);
+      fNQ.addTextChangedListener(paramTextWatcher);
       return;
     }
-    u.w("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "watcher : %s, contentET : %s", new Object[] { paramTextWatcher, fEO });
+    v.w("MicroMsg.MMFormInputView", "watcher : %s, contentET : %s", new Object[] { paramTextWatcher, fNQ });
   }
   
-  public EditText getContentEditText()
+  public final Editable getText()
   {
-    return fEO;
-  }
-  
-  public Editable getText()
-  {
-    if (fEO != null) {
-      return fEO.getText();
+    if (fNQ != null) {
+      return fNQ.getText();
     }
-    u.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "contentET is null!");
+    v.e("MicroMsg.MMFormInputView", "contentET is null!");
     return null;
-  }
-  
-  public TextView getTitleTextView()
-  {
-    return cNT;
   }
   
   public void onFinishInflate()
   {
-    cNT = ((TextView)findViewById(2131165460));
-    fEO = ((EditText)findViewById(2131166420));
-    if ((cNT == null) || (fEO == null)) {
-      u.w("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "titleTV : %s, contentET : %s", new Object[] { cNT, fEO });
+    cuj = ((TextView)findViewById(2131755172));
+    fNQ = ((EditText)findViewById(2131755215));
+    if ((cuj == null) || (fNQ == null)) {
+      v.w("MicroMsg.MMFormInputView", "titleTV : %s, contentET : %s", new Object[] { cuj, fNQ });
     }
     for (;;)
     {
-      if (fEO != null)
+      if (fNQ != null)
       {
         View.OnFocusChangeListener local1 = new View.OnFocusChangeListener()
         {
@@ -94,7 +84,7 @@ public class MMFormInputView
               if (!paramAnonymousBoolean) {
                 break label63;
               }
-              setBackgroundResource(2130970444);
+              setBackgroundResource(2130838514);
             }
             for (;;)
             {
@@ -104,95 +94,30 @@ public class MMFormInputView
               }
               return;
               label63:
-              setBackgroundResource(2130970418);
+              setBackgroundResource(2130838515);
             }
           }
         };
-        fEO.setOnFocusChangeListener(local1);
+        fNQ.setOnFocusChangeListener(local1);
       }
       return;
-      if (kDK != -1) {
-        cNT.setText(kDK);
+      if (lcP != -1) {
+        cuj.setText(lcP);
       }
-      if (kDL != -1) {
-        fEO.setHint(kDL);
+      if (lcQ != -1) {
+        fNQ.setHint(lcQ);
       }
     }
   }
   
-  public void setFocusListener(View.OnFocusChangeListener paramOnFocusChangeListener)
+  public final void setInputType(int paramInt)
   {
-    kDN = paramOnFocusChangeListener;
-  }
-  
-  public void setHint(int paramInt)
-  {
-    if (fEO != null)
+    if (fNQ != null)
     {
-      fEO.setHint(paramInt);
+      fNQ.setInputType(paramInt);
       return;
     }
-    u.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "contentET is null!");
-  }
-  
-  public void setHint(String paramString)
-  {
-    if (fEO != null)
-    {
-      fEO.setHint(paramString);
-      return;
-    }
-    u.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "contentET is null!");
-  }
-  
-  public void setImeOption(int paramInt)
-  {
-    if (fEO != null)
-    {
-      fEO.setImeOptions(paramInt);
-      return;
-    }
-    u.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "contentET is null!");
-  }
-  
-  public void setInputType(int paramInt)
-  {
-    if (fEO != null)
-    {
-      fEO.setInputType(paramInt);
-      return;
-    }
-    u.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "contentET is null!");
-  }
-  
-  public void setText(String paramString)
-  {
-    if (fEO != null)
-    {
-      fEO.setText(paramString);
-      return;
-    }
-    u.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "contentET is null!");
-  }
-  
-  public void setTitle(int paramInt)
-  {
-    if (cNT != null)
-    {
-      cNT.setText(paramInt);
-      return;
-    }
-    u.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "titleTV is null!");
-  }
-  
-  public void setTitle(String paramString)
-  {
-    if (cNT != null)
-    {
-      cNT.setText(paramString);
-      return;
-    }
-    u.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "titleTV is null!");
+    v.e("MicroMsg.MMFormInputView", "contentET is null!");
   }
 }
 

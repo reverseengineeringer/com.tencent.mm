@@ -2,8 +2,8 @@ package com.tencent.mm.ui.account;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SetPwdUI$2
   implements MenuItem.OnMenuItemClickListener
@@ -12,14 +12,14 @@ final class SetPwdUI$2
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if ((kwz.bbL()) && (kwz.goQ))
+    if ((kVG.bgX()) && (kVG.gzi))
     {
-      u.d("!32@/B4Tb64lLpLtIluUtTn2QG2YcQ4VEs+3", "cpan settpassword cancel 11868 1");
-      h.fUJ.g(11868, new Object[] { Integer.valueOf(1) });
+      v.d("MicroMsg.SetPwdUI", "cpan settpassword cancel 11868 1");
+      g.gdY.h(11868, new Object[] { Integer.valueOf(1) });
     }
-    kwz.age();
-    kwz.setResult(0);
-    kwz.finish();
+    kVG.aiI();
+    kVG.setResult(0);
+    kVG.finish();
     return true;
   }
 }

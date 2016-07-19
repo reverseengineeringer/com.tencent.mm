@@ -4,9 +4,9 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.view.View;
 import android.widget.ListView;
-import com.tencent.mm.az.g;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.h.h;
+import com.tencent.mm.bc.g;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.i.h;
 
 final class SnsMsgUI$6$1
   implements DialogInterface.OnClickListener
@@ -15,10 +15,10 @@ final class SnsMsgUI$6$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    SnsMsgUI.b(hfW.hfU).setVisibility(8);
-    SnsMsgUI.c(hfW.hfU).setVisibility(0);
-    azlbCw.cj("SnsComment", "delete from SnsComment");
-    hfW.hfU.bC(false);
+    SnsMsgUI.b(huN.huL).setVisibility(8);
+    SnsMsgUI.c(huN.huL).setVisibility(0);
+    aBLbvG.cx("SnsComment", "delete from SnsComment");
+    huN.huL.bp(false);
   }
 }
 

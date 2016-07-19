@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private gEh:J
+.field private gKH:J
 
 
 # direct methods
@@ -21,14 +21,14 @@
     .line 34
     const-wide/16 v0, -0x1
 
-    iput-wide v0, p0, Lcom/tencent/mm/ui/m;->gEh:J
+    iput-wide v0, p0, Lcom/tencent/mm/ui/m;->gKH:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract bbf()V
+.method public abstract aMg()V
 .end method
 
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
@@ -40,14 +40,14 @@
     const/4 v5, 0x0
 
     .line 38
-    const-string/jumbo v0, "!56@/B4Tb64lLpJiPTFK0tOc/6bP9+pOv/bqSMr6nkxN8Gc3TaHKXgVUQw=="
+    const-string/jumbo v0, "MicroMsg.MMCustomMenuItemClickListener"
 
     const-string/jumbo v1, "button onclick"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 40
-    iget-wide v0, p0, Lcom/tencent/mm/ui/m;->gEh:J
+    iget-wide v0, p0, Lcom/tencent/mm/ui/m;->gKH:J
 
     const-wide/16 v2, -0x1
 
@@ -60,7 +60,7 @@
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lcom/tencent/mm/ui/m;->gEh:J
+    iget-wide v2, p0, Lcom/tencent/mm/ui/m;->gKH:J
 
     sub-long/2addr v0, v2
 
@@ -74,7 +74,7 @@
     if-gez v2, :cond_0
 
     .line 48
-    const-string/jumbo v2, "!56@/B4Tb64lLpJiPTFK0tOc/6bP9+pOv/bqSMr6nkxN8Gc3TaHKXgVUQw=="
+    const-string/jumbo v2, "MicroMsg.MMCustomMenuItemClickListener"
 
     const-string/jumbo v3, "click time limited limitetime:%d, delaytime:%d"
 
@@ -96,7 +96,7 @@
 
     aput-object v1, v4, v0
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 66
     :goto_0
@@ -108,10 +108,10 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/ui/m;->gEh:J
+    iput-wide v0, p0, Lcom/tencent/mm/ui/m;->gKH:J
 
     .line 53
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/m;->bbf()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/m;->aMg()V
 
     goto :goto_0
 .end method

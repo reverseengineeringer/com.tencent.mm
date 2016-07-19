@@ -7,7 +7,7 @@ final class C2Java$2
   
   public final void run()
   {
-    z.Fi().onNotify(cit, ciu, civ);
+    z.FE().onNotify(cdK, cdL, cdM);
   }
 }
 

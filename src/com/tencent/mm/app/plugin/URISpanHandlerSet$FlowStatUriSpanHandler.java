@@ -22,9 +22,9 @@ class URISpanHandlerSet$FlowStatUriSpanHandler
       if (paramb != null) {
         paramb.a(paramg);
       }
-      paramg = LauncherUI.bat();
+      paramg = LauncherUI.bfJ();
       if (paramg != null) {
-        paramg.Gi("tab_settings");
+        paramg.Ix("tab_settings");
       }
       return true;
     }
@@ -35,16 +35,16 @@ class URISpanHandlerSet$FlowStatUriSpanHandler
   {
     if (paramString.equals("weixin://flowstat"))
     {
-      paramString = LauncherUI.bat();
+      paramString = LauncherUI.bfJ();
       if (paramString != null) {
-        paramString.Gi("tab_settings");
+        paramString.Ix("tab_settings");
       }
       return true;
     }
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     if (paramString.trim().startsWith("weixin://flowstat")) {
       return new g(paramString, 16, null);
@@ -52,7 +52,7 @@ class URISpanHandlerSet$FlowStatUriSpanHandler
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 16 };
   }

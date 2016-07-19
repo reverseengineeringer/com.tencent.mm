@@ -12,7 +12,7 @@ final class e$1
   {
     WebView localWebView = val$transport.getWebView();
     if (localWebView != null) {
-      ((IX5WebViewBase.WebViewTransport)val$resultMsg.obj).setWebView(localWebView.getX5WebView());
+      ((IX5WebViewBase.WebViewTransport)val$resultMsg.obj).setWebView(mvJ);
     }
     val$resultMsg.sendToTarget();
   }

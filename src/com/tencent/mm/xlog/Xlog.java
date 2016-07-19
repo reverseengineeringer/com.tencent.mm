@@ -2,14 +2,17 @@ package com.tencent.mm.xlog;
 
 import com.tencent.mm.compatible.util.i;
 import com.tencent.mm.sdk.a;
-import com.tencent.mm.sdk.platformtools.av;
-import com.tencent.mm.sdk.platformtools.u.a;
+import com.tencent.mm.sdk.platformtools.bb;
+import com.tencent.mm.sdk.platformtools.v.a;
+import com.tencent.mm.sdk.platformtools.w;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Xlog
-  implements u.a
+  implements v.a
 {
-  static boolean lIx = false;
-  public static av lIy;
+  static boolean mkg = false;
+  public static w mkh;
   
   static
   {
@@ -17,13 +20,52 @@ public class Xlog
     onCreate();
   }
   
-  private static String CZ(String paramString)
+  private static String Fo(String paramString)
   {
-    String str = paramString;
-    if (lIy != null) {
-      str = lIy.CZ(paramString);
+    w localw;
+    if (mkh != null) {
+      localw = mkh;
     }
-    return str;
+    switch (paramString.charAt(0) ^ 0xDCBA)
+    {
+    default: 
+      return paramString;
+    case '?': 
+      return kvh.Fo(paramString);
+    }
+    return localw.y(paramString, 0, paramString.length());
+  }
+  
+  private static String Kp(String paramString)
+  {
+    Object localObject = paramString;
+    if (mkh != null)
+    {
+      localObject = mkh;
+      Matcher localMatcher = w.kvf.matcher(paramString);
+      int j = paramString.length();
+      StringBuilder localStringBuilder = new StringBuilder();
+      int i = 0;
+      while (i < j) {
+        if (localMatcher.find(i))
+        {
+          if (localMatcher.start() != i) {
+            localStringBuilder.append(paramString.substring(i, localMatcher.start()));
+          }
+          i = localMatcher.start();
+          int k = localMatcher.end();
+          int m = Integer.parseInt(paramString.substring(i + 1, k - 1));
+          localStringBuilder.append(((w)localObject).y(paramString, i, k + m));
+          i = k + m;
+        }
+        else
+        {
+          localStringBuilder.append(paramString.substring(i));
+        }
+      }
+      localObject = localStringBuilder.toString();
+    }
+    return (String)localObject;
   }
   
   public static native void appenderOpen(String paramString1, String paramString2, int paramInt);
@@ -36,18 +78,18 @@ public class Xlog
   
   public static void init()
   {
-    if (lIx) {
+    if (mkg) {
       return;
     }
-    lIx = true;
+    mkg = true;
     try
     {
-      i.b(a.jUv, Xlog.class.getClassLoader());
+      i.b(a.ktW, Xlog.class.getClassLoader());
       return;
     }
     catch (Exception localException)
     {
-      System.loadLibrary(a.jUv);
+      System.loadLibrary(a.ktW);
     }
   }
   
@@ -73,32 +115,32 @@ public class Xlog
   
   public final void logD(String paramString1, String paramString2, String paramString3, int paramInt1, int paramInt2, long paramLong1, long paramLong2, String paramString4)
   {
-    logWrite2(1, CZ(paramString1), paramString2, paramString3, paramInt1, paramInt2, paramLong1, paramLong2, paramString4);
+    logWrite2(1, Fo(paramString1), paramString2, paramString3, paramInt1, paramInt2, paramLong1, paramLong2, Kp(paramString4));
   }
   
   public final void logE(String paramString1, String paramString2, String paramString3, int paramInt1, int paramInt2, long paramLong1, long paramLong2, String paramString4)
   {
-    logWrite2(4, CZ(paramString1), paramString2, paramString3, paramInt1, paramInt2, paramLong1, paramLong2, paramString4);
+    logWrite2(4, Fo(paramString1), paramString2, paramString3, paramInt1, paramInt2, paramLong1, paramLong2, Kp(paramString4));
   }
   
   public final void logF(String paramString1, String paramString2, String paramString3, int paramInt1, int paramInt2, long paramLong1, long paramLong2, String paramString4)
   {
-    logWrite2(5, CZ(paramString1), paramString2, paramString3, paramInt1, paramInt2, paramLong1, paramLong2, paramString4);
+    logWrite2(5, Fo(paramString1), paramString2, paramString3, paramInt1, paramInt2, paramLong1, paramLong2, Kp(paramString4));
   }
   
   public final void logI(String paramString1, String paramString2, String paramString3, int paramInt1, int paramInt2, long paramLong1, long paramLong2, String paramString4)
   {
-    logWrite2(2, CZ(paramString1), paramString2, paramString3, paramInt1, paramInt2, paramLong1, paramLong2, paramString4);
+    logWrite2(2, Fo(paramString1), paramString2, paramString3, paramInt1, paramInt2, paramLong1, paramLong2, Kp(paramString4));
   }
   
   public final void logV(String paramString1, String paramString2, String paramString3, int paramInt1, int paramInt2, long paramLong1, long paramLong2, String paramString4)
   {
-    logWrite2(0, CZ(paramString1), paramString2, paramString3, paramInt1, paramInt2, paramLong1, paramLong2, paramString4);
+    logWrite2(0, Fo(paramString1), paramString2, paramString3, paramInt1, paramInt2, paramLong1, paramLong2, Kp(paramString4));
   }
   
   public final void logW(String paramString1, String paramString2, String paramString3, int paramInt1, int paramInt2, long paramLong1, long paramLong2, String paramString4)
   {
-    logWrite2(3, CZ(paramString1), paramString2, paramString3, paramInt1, paramInt2, paramLong1, paramLong2, paramString4);
+    logWrite2(3, Fo(paramString1), paramString2, paramString3, paramInt1, paramInt2, paramLong1, paramLong2, Kp(paramString4));
   }
   
   static class XLoggerInfo

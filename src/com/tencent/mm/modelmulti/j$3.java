@@ -1,82 +1,82 @@
 package com.tencent.mm.modelmulti;
 
+import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.protocal.b.afb;
-import com.tencent.mm.protocal.b.alx;
-import com.tencent.mm.protocal.b.ih;
-import com.tencent.mm.protocal.b.ii;
-import com.tencent.mm.protocal.t.b;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.protocal.b.afw;
+import com.tencent.mm.protocal.b.ami;
+import com.tencent.mm.protocal.b.iq;
+import com.tencent.mm.protocal.b.ir;
+import com.tencent.mm.protocal.w.b;
 import com.tencent.mm.sdk.b.b;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.aj;
 import java.util.LinkedList;
 
 final class j$3
-  implements af.a
+  implements ah.a
 {
-  private int bVJ = 0;
-  private long bVK = 0L;
-  private int bVL = 0;
+  private int bPk = 0;
+  private long bPl = 0L;
+  private int bPm = 0;
   
   j$3(j paramj) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    if (!com.tencent.mm.model.ah.rh())
+    if (!ah.rg())
     {
-      u.e(j.b(bVH), "syncRespHandler acc is not ready STOP :%s", new Object[] { j.c(bVH) });
-      j.d(bVH);
+      v.e(j.b(bPi), "syncRespHandler acc is not ready STOP :%s", new Object[] { j.c(bPi) });
+      j.d(bPi);
       return false;
     }
-    if (j.e(bVH))
+    if (j.e(bPi))
     {
-      com.tencent.mm.model.ah.tD().rs().aXM();
-      j.d(bVH);
+      ah.tE().rt().Hk(j.b(bPi));
+      j.d(bPi);
       return false;
     }
-    if ((j.c(bVH) == null) || (cbVH).iVk.jfa == null) || (cbVH).iVk.jfa.jak == null))
+    if ((j.c(bPi) == null) || (cbPi).jsH.jCN == null) || (cbPi).jsH.jCN.cmr == null))
     {
-      u.e(j.b(bVH), "syncRespHandler CmdList is null! Stop Processing :%s", new Object[] { j.c(bVH) });
-      com.tencent.mm.model.ah.tD().rs().aXM();
-      j.d(bVH);
+      v.e(j.b(bPi), "syncRespHandler CmdList is null! Stop Processing :%s", new Object[] { j.c(bPi) });
+      ah.tE().rt().Hk(j.b(bPi));
+      j.d(bPi);
       return false;
     }
-    LinkedList localLinkedList = cbVH).iVk.jfa.jak;
-    Object localObject = new m(true);
-    if (!tDrskgi) {
-      com.tencent.mm.model.ah.tD().rs().aXL();
-    }
-    bVL += 1;
-    long l1 = ay.FS();
+    LinkedList localLinkedList = cbPi).jsH.jCN.cmr;
+    Object localObject = new n(true);
+    ah.tE().rt().Hj(j.b(bPi));
+    bPm += 1;
+    long l1 = be.Gp();
     int i = 0;
     while (i < 5)
     {
-      if (bVJ < localLinkedList.size())
+      if (bPk < localLinkedList.size())
       {
-        u.v(j.b(bVH), "syncRespHandler i:%d curidx:%d size:%d cmdid:%d cmdbuf:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(bVJ), Integer.valueOf(localLinkedList.size()), Integer.valueOf(getbVJ)).jgP), Integer.valueOf(getbVJ)).jgQ.jHs) });
-        if (!((m)localObject).a((ih)localLinkedList.get(bVJ), false)) {
-          u.w(j.b(bVH), "DoCmd Failed index:%d", new Object[] { Integer.valueOf(bVJ) });
+        v.v(j.b(bPi), "syncRespHandler i:%d curidx:%d size:%d cmdid:%d cmdbuf:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(bPk), Integer.valueOf(localLinkedList.size()), Integer.valueOf(getbPk)).jEM), Integer.valueOf(getbPk)).jEN.kfQ) });
+        if (!((n)localObject).a((iq)localLinkedList.get(bPk), false)) {
+          v.w(j.b(bPi), "DoCmd Failed index:%d", new Object[] { Integer.valueOf(bPk) });
         }
-        bVJ += 1;
+        bPk += 1;
       }
-      if (bVJ >= localLinkedList.size())
+      if (bPk >= localLinkedList.size())
       {
-        bVK += ay.an(l1);
-        l2 = ay.an(j.f(bVH));
-        u.i(j.b(bVH), "syncRespHandler process DONE idx:%d size:%d time[%d,%d] count:%d %s", new Object[] { Integer.valueOf(bVJ), Integer.valueOf(localLinkedList.size()), Long.valueOf(l2), Long.valueOf(bVK), Integer.valueOf(bVL), j.c(bVH) });
-        bVH.a(j.c(bVH));
-        ((m)localObject).Bh();
-        com.tencent.mm.model.ah.tD().rs().aXM();
-        i = ay.d((Integer)h.a((int)bVK, new int[] { 100, 300, 1000, 3000 }, new Integer[] { Integer.valueOf(240), Integer.valueOf(239), Integer.valueOf(238), Integer.valueOf(237), Integer.valueOf(236) }));
-        localObject = h.fUJ;
-        h.b(99L, i, 1L, false);
-        i = ay.d((Integer)h.a(localLinkedList.size(), new int[] { 0, 1, 2, 3, 5, 10 }, new Integer[] { Integer.valueOf(249), Integer.valueOf(248), Integer.valueOf(247), Integer.valueOf(246), Integer.valueOf(245), Integer.valueOf(244), Integer.valueOf(243) }));
-        localObject = h.fUJ;
-        h.b(99L, i, 1L, false);
-        localObject = h.fUJ;
+        bPl += be.au(l1);
+        l2 = be.au(j.f(bPi));
+        v.i(j.b(bPi), "syncRespHandler process DONE idx:%d size:%d time[%d,%d] count:%d %s", new Object[] { Integer.valueOf(bPk), Integer.valueOf(localLinkedList.size()), Long.valueOf(l2), Long.valueOf(bPl), Integer.valueOf(bPm), j.c(bPi) });
+        bPi.a(j.c(bPi));
+        ((n)localObject).Bg();
+        ah.tE().rt().Hk(j.b(bPi));
+        i = be.f((Integer)g.a((int)bPl, new int[] { 100, 300, 1000, 3000 }, new Integer[] { Integer.valueOf(240), Integer.valueOf(239), Integer.valueOf(238), Integer.valueOf(237), Integer.valueOf(236) }));
+        localObject = g.gdY;
+        g.b(99L, i, 1L, false);
+        i = be.f((Integer)g.a(localLinkedList.size(), new int[] { 0, 1, 2, 3, 5, 10 }, new Integer[] { Integer.valueOf(249), Integer.valueOf(248), Integer.valueOf(247), Integer.valueOf(246), Integer.valueOf(245), Integer.valueOf(244), Integer.valueOf(243) }));
+        localObject = g.gdY;
+        g.b(99L, i, 1L, false);
+        localObject = g.gdY;
         int j;
         int k;
         int m;
@@ -85,43 +85,43 @@ final class j$3
         if (b.foreground)
         {
           l1 = 241L;
-          h.b(99L, l1, 1L, false);
-          localObject = h.fUJ;
-          h.b(99L, j.g(bVH), 1L, false);
-          localObject = h.fUJ;
-          h.b(99L, 0L, 1L, false);
-          localObject = h.fUJ;
+          g.b(99L, l1, 1L, false);
+          localObject = g.gdY;
+          g.b(99L, j.g(bPi), 1L, false);
+          localObject = g.gdY;
+          g.b(99L, 0L, 1L, false);
+          localObject = g.gdY;
           j = localLinkedList.size();
-          k = j.g(bVH);
-          m = cbVH).iVk.jdw;
-          l1 = bVK;
-          n = bVL;
-          str = j.h(bVH);
+          k = j.g(bPi);
+          m = cbPi).jsH.jBg;
+          l1 = bPl;
+          n = bPm;
+          str = j.h(bPi);
           if (!b.foreground) {
-            break label1007;
+            break label1023;
           }
         }
-        label1007:
+        label1023:
         for (i = 1;; i = 2)
         {
-          ((h)localObject).g(12063, new Object[] { Integer.valueOf(j), Long.valueOf(l2), Integer.valueOf(k), Integer.valueOf(m), Long.valueOf(l1), Integer.valueOf(n), str, Integer.valueOf(i) });
-          j.d(bVH);
-          com.tencent.mm.model.ah.tv().r(new j.b(bVH, j.i(bVH), localLinkedList));
+          ((g)localObject).h(12063, new Object[] { Integer.valueOf(j), Long.valueOf(l2), Integer.valueOf(k), Integer.valueOf(m), Long.valueOf(l1), Integer.valueOf(n), str, Integer.valueOf(i) });
+          j.d(bPi);
+          ah.tw().t(new j.b(bPi, j.i(bPi), localLinkedList));
           return false;
           l1 = 242L;
           break;
         }
       }
-      long l2 = ay.an(l1);
+      long l2 = be.au(l1);
       if (l2 > 500L)
       {
-        u.d(j.b(bVH), "syncRespHandler PAUSE by 500ms  time:%d  processcount:%d sum:%d ,%s", new Object[] { Long.valueOf(l2), Integer.valueOf(i), Integer.valueOf(bVJ), j.c(bVH) });
-        bVK += ay.an(l1);
+        v.d(j.b(bPi), "syncRespHandler PAUSE by 500ms  time:%d  processcount:%d sum:%d ,%s", new Object[] { Long.valueOf(l2), Integer.valueOf(i), Integer.valueOf(bPk), j.c(bPi) });
+        bPl += be.au(l1);
         return true;
       }
       i += 1;
     }
-    bVK += ay.an(l1);
+    bPl += be.au(l1);
     return true;
   }
 }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/FavListItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:padding="@dimen/fg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <include layout="@layout/fav_listitem_header" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ff">
+                <FrameLayout android:id="@id/akg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip">
+                    <ImageView android:id="@id/ak_" android:src="@color/d2" android:contentDescription="@string/d_" style="@style/FavListItemAlbum" />
+                    <ImageView android:layout_gravity="center" android:id="@id/akh" android:visibility="gone" android:src="@drawable/yq" android:contentDescription="@string/d_" style="@style/FavListItemMask" />
+                    <ImageView android:layout_gravity="bottom|center|right" android:id="@id/aki" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/acr" android:contentDescription="@string/d_" />
+                </FrameLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/jc" android:textColor="@color/ek" android:id="@id/akj" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <TextView android:textSize="@dimen/i8" android:textColor="@color/eb" android:ellipsize="end" android:id="@id/akk" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:maxLines="2" />
+                    <TextView android:textSize="@dimen/jc" android:textColor="@color/ek" android:id="@id/akl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+                    <TextView android:textSize="@dimen/i8" android:textColor="@color/eb" android:ellipsize="end" android:id="@id/akm" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:maxLines="2" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <include layout="@layout/fav_listitem_edit_view" />
+    </LinearLayout>
+    <View android:background="@color/ej" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <include layout="@layout/fav_listitem_footer" />
+</LinearLayout>

@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+.field final synthetic jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
-.field final synthetic iSp:Landroid/util/SparseArray;
+.field final synthetic jpy:Landroid/util/SparseArray;
 
-.field final synthetic iSq:Lcom/tencent/mm/pluginsdk/ui/tools/g$c;
+.field final synthetic jpz:Lcom/tencent/mm/pluginsdk/ui/tools/g$c;
 
 
 # direct methods
@@ -30,12 +30,12 @@
     .locals 0
 
     .prologue
-    .line 126
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$5;->iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+    .line 124
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$5;->jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$5;->iSp:Landroid/util/SparseArray;
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$5;->jpy:Landroid/util/SparseArray;
 
-    iput-object p3, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$5;->iSq:Lcom/tencent/mm/pluginsdk/ui/tools/g$c;
+    iput-object p3, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$5;->jpz:Lcom/tencent/mm/pluginsdk/ui/tools/g$c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,18 +50,18 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 130
-    const-string/jumbo v0, "!32@/B4Tb64lLpI8lfBMGe0Uu+gqtVk/eA4D"
+    .line 128
+    const-string/jumbo v0, "MicroMsg.ImageEngine"
 
     const-string/jumbo v1, "begin do recycled"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     move v1, v2
 
-    .line 131
+    .line 129
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$5;->iSp:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$5;->jpy:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
@@ -69,8 +69,8 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 132
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$5;->iSp:Landroid/util/SparseArray;
+    .line 130
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$5;->jpy:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
@@ -78,11 +78,11 @@
 
     check-cast v0, Landroid/graphics/Bitmap;
 
-    .line 133
+    .line 131
     if-eqz v0, :cond_0
 
-    .line 134
-    const-string/jumbo v3, "!32@/B4Tb64lLpI8lfBMGe0Uu+gqtVk/eA4D"
+    .line 132
+    const-string/jumbo v3, "MicroMsg.ImageEngine"
 
     const-string/jumbo v4, "recycled def bmp %s"
 
@@ -96,12 +96,12 @@
 
     aput-object v6, v5, v2
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 135
+    .line 133
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 131
+    .line 129
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -109,31 +109,31 @@
 
     goto :goto_0
 
-    .line 138
+    .line 136
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$5;->iSp:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$5;->jpy:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 139
-    const-string/jumbo v0, "!32@/B4Tb64lLpI8lfBMGe0Uu+gqtVk/eA4D"
+    .line 137
+    const-string/jumbo v0, "MicroMsg.ImageEngine"
 
     const-string/jumbo v1, "clear drawable cache"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 140
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$5;->iSq:Lcom/tencent/mm/pluginsdk/ui/tools/g$c;
+    .line 138
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$5;->jpz:Lcom/tencent/mm/pluginsdk/ui/tools/g$c;
 
     invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/g$c;->clear()V
 
-    .line 141
-    const-string/jumbo v0, "!32@/B4Tb64lLpI8lfBMGe0Uu+gqtVk/eA4D"
+    .line 139
+    const-string/jumbo v0, "MicroMsg.ImageEngine"
 
     const-string/jumbo v1, "end do recycled"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 142
+    .line 140
     return-void
 .end method

@@ -5,15 +5,15 @@ final class RegByMobileRegAIOUI$15
 {
   RegByMobileRegAIOUI$15(RegByMobileRegAIOUI paramRegByMobileRegAIOUI) {}
   
-  public final void Gr(String paramString)
+  public final void IG(String paramString)
   {
     paramString = paramString.trim();
-    RegByMobileRegAIOUI.d(kuT, paramString);
+    RegByMobileRegAIOUI.d(kUa, paramString);
   }
   
-  public final void bbK()
+  public final void bgW()
   {
-    RegByMobileRegAIOUI.w(kuT);
+    RegByMobileRegAIOUI.w(kUa);
   }
 }
 

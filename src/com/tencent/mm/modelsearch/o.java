@@ -2,7 +2,7 @@ package com.tencent.mm.modelsearch;
 
 public abstract interface o
 {
-  public abstract boolean Ce();
+  public abstract boolean Cl();
   
   public abstract a a(int paramInt, a parama);
   
@@ -12,9 +12,9 @@ public abstract interface o
   
   public static abstract class a
     extends m.k
-    implements Comparable
+    implements Comparable<a>
   {
-    public boolean bZY = false;
+    public boolean bTH = false;
     public int mPriority = Integer.MAX_VALUE;
     
     public abstract boolean execute();

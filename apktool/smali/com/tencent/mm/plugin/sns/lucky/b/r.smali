@@ -4,15 +4,24 @@
 
 
 # static fields
-.field private static gIM:Lcom/tencent/mm/plugin/sns/lucky/b/r;
+.field private static gPm:Ljava/lang/String;
 
-.field private static gIh:Ljava/lang/String;
+.field private static gQn:Lcom/tencent/mm/plugin/sns/lucky/b/r;
 
 
 # instance fields
-.field cuM:Ljava/lang/StringBuffer;
+.field cqq:Ljava/lang/StringBuffer;
 
-.field gIN:Ljava/util/LinkedList;
+.field gQo:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList",
+            "<",
+            "Lcom/tencent/mm/plugin/sns/lucky/b/q;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -23,12 +32,12 @@
     .line 21
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/plugin/sns/lucky/b/r;->gIM:Lcom/tencent/mm/plugin/sns/lucky/b/r;
+    sput-object v0, Lcom/tencent/mm/plugin/sns/lucky/b/r;->gQn:Lcom/tencent/mm/plugin/sns/lucky/b/r;
 
     .line 22
     const-string/jumbo v0, ""
 
-    sput-object v0, Lcom/tencent/mm/plugin/sns/lucky/b/r;->gIh:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/plugin/sns/lucky/b/r;->gPm:Ljava/lang/String;
 
     return-void
 .end method
@@ -45,14 +54,14 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/b/r;->gIN:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/b/r;->gQo:Ljava/util/LinkedList;
 
     .line 28
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/b/r;->cuM:Ljava/lang/StringBuffer;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/b/r;->cqq:Ljava/lang/StringBuffer;
 
     return-void
 .end method

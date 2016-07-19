@@ -1,17 +1,16 @@
 package com.tencent.mm.ui.conversation;
 
 import android.view.View;
-import android.widget.ListView;
-import com.tencent.mm.ui.base.MMSlideDelView.c;
+import com.tencent.mm.ui.base.MMSlideDelView.f;
 
 final class BizChatConversationUI$a$16
-  implements MMSlideDelView.c
+  implements MMSlideDelView.f
 {
   BizChatConversationUI$a$16(BizChatConversationUI.a parama) {}
   
-  public final int I(View paramView)
+  public final void j(View paramView, int paramInt)
   {
-    return BizChatConversationUI.a.d(lnN).getPositionForView(paramView);
+    BizChatConversationUI.a.e(lOo).performItemClick(paramView, paramInt, 0L);
   }
 }
 

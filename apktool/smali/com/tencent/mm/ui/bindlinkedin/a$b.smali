@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field kOb:Landroid/widget/ImageView;
+.field lnr:Landroid/widget/ImageView;
 
-.field kOc:Landroid/widget/TextView;
+.field lns:Landroid/widget/TextView;
 
-.field kOd:Landroid/widget/TextView;
+.field lnt:Landroid/widget/TextView;
 
-.field kOe:Landroid/widget/TextView;
+.field lnu:Landroid/widget/TextView;
 
 
 # direct methods
@@ -35,19 +35,19 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 116
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOb:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnr:Landroid/widget/ImageView;
 
     .line 117
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOc:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lns:Landroid/widget/TextView;
 
     .line 118
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOd:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnt:Landroid/widget/TextView;
 
     .line 119
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
     .line 121
-    const v0, 0x7f070fc2
+    const v0, 0x7f1009c3
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -55,10 +55,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOb:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnr:Landroid/widget/ImageView;
 
     .line 122
-    const v0, 0x7f070fc3
+    const v0, 0x7f1009c4
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -66,10 +66,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOc:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lns:Landroid/widget/TextView;
 
     .line 123
-    const v0, 0x7f070fc4
+    const v0, 0x7f1009c5
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -77,10 +77,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOd:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnt:Landroid/widget/TextView;
 
     .line 124
-    const v0, 0x7f070fc5
+    const v0, 0x7f1009c6
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -88,7 +88,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a$b;->kOe:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a$b;->lnu:Landroid/widget/TextView;
 
     .line 125
     return-void

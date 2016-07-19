@@ -5,20 +5,20 @@ import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.d.a.jp;
+import com.tencent.mm.e.a.ju;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.plugin.sns.d.aa;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.p;
-import com.tencent.mm.plugin.sns.h.h;
-import com.tencent.mm.plugin.sns.h.k;
-import com.tencent.mm.plugin.sns.h.l;
-import com.tencent.mm.plugin.sns.h.s;
-import com.tencent.mm.protocal.b.atp;
-import com.tencent.mm.protocal.b.ba;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.sns.e.aa;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.p;
+import com.tencent.mm.plugin.sns.i.h;
+import com.tencent.mm.plugin.sns.i.k;
+import com.tencent.mm.plugin.sns.i.l;
+import com.tencent.mm.plugin.sns.i.s;
+import com.tencent.mm.protocal.b.auf;
+import com.tencent.mm.protocal.b.bd;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.base.g;
 
 final class SnsCommentDetailUI$22
@@ -28,53 +28,53 @@ final class SnsCommentDetailUI$22
   
   public final void onClick(View paramView)
   {
-    g.a(hda, 2131433055, 2131430877, new DialogInterface.OnClickListener()
+    g.a(hrN, 2131235575, 2131231028, new DialogInterface.OnClickListener()
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
-        u.d("!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc=", "to del by localId " + SnsCommentDetailUI.u(hda));
-        paramAnonymousDialogInterface = com.tencent.mm.plugin.sns.h.f.vo(SnsCommentDetailUI.u(hda));
+        v.d("MicroMsg.SnsCommentDetailUI", "to del by localId " + SnsCommentDetailUI.u(hrN));
+        paramAnonymousDialogInterface = com.tencent.mm.plugin.sns.i.f.wA(SnsCommentDetailUI.u(hrN));
         if (paramAnonymousDialogInterface == null) {
-          u.e("!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc=", "try to del item fail can not get snsinfo by localid %s", new Object[] { SnsCommentDetailUI.u(hda) });
+          v.e("MicroMsg.SnsCommentDetailUI", "try to del item fail can not get snsinfo by localid %s", new Object[] { SnsCommentDetailUI.u(hrN) });
         }
-        while (paramAnonymousDialogInterface.lN(32)) {
+        while (paramAnonymousDialogInterface.na(32)) {
           return;
         }
         Object localObject;
         if (field_snsId == 0L)
         {
-          ad.azi().lS(gUC);
+          ad.aBI().nf(hhu);
           localObject = new Intent();
-          ((Intent)localObject).putExtra("sns_gallery_op_id", s.vI(SnsCommentDetailUI.u(hda)));
-          hda.setResult(-1, (Intent)localObject);
-          if ((SnsCommentDetailUI.p(hda)) && (!paramAnonymousDialogInterface.isValid())) {
+          ((Intent)localObject).putExtra("sns_gallery_op_id", s.wV(SnsCommentDetailUI.u(hrN)));
+          hrN.setResult(-1, (Intent)localObject);
+          if ((SnsCommentDetailUI.p(hrN)) && (!paramAnonymousDialogInterface.isValid())) {
             ((Intent)localObject).putExtra("sns_gallery_force_finish", true);
           }
-          localObject = paramAnonymousDialogInterface.azR();
+          localObject = paramAnonymousDialogInterface.aCD();
           if (localObject != null) {
-            if (jMw != null) {
-              break label332;
+            if (klh != null) {
+              break label333;
             }
           }
         }
-        label332:
-        for (paramAnonymousDialogInterface = null;; paramAnonymousDialogInterface = jMw.iXW)
+        label333:
+        for (paramAnonymousDialogInterface = null;; paramAnonymousDialogInterface = klh.jvB)
         {
-          if ((!ay.kz(paramAnonymousDialogInterface)) && (com.tencent.mm.plugin.sns.b.a.cob.aU(paramAnonymousDialogInterface)))
+          if ((!be.kf(paramAnonymousDialogInterface)) && (com.tencent.mm.plugin.sns.b.a.cjp.aZ(paramAnonymousDialogInterface)))
           {
-            String str = com.tencent.mm.plugin.sns.b.a.cob.aS(paramAnonymousDialogInterface);
-            jp localjp = new jp();
-            aGi.appId = paramAnonymousDialogInterface;
-            aGi.aGj = eiB;
-            aGi.alS = str;
-            com.tencent.mm.sdk.c.a.jUF.j(localjp);
+            String str = com.tencent.mm.plugin.sns.b.a.cjp.aX(paramAnonymousDialogInterface);
+            ju localju = new ju();
+            aso.appId = paramAnonymousDialogInterface;
+            aso.asp = emC;
+            aso.YH = str;
+            com.tencent.mm.sdk.c.a.kug.y(localju);
           }
-          hda.finish();
+          hrN.finish();
           return;
-          ad.azh().ci(field_snsId);
-          ah.tE().d(new p(field_snsId, 1));
-          ad.azi().delete(field_snsId);
-          ad.azl().cr(field_snsId);
+          ad.aBH().cy(field_snsId);
+          ah.tF().a(new p(field_snsId, 1), 0);
+          ad.aBI().delete(field_snsId);
+          ad.aBL().cG(field_snsId);
           break;
         }
       }

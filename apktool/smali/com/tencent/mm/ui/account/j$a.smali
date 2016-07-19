@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract Gr(Ljava/lang/String;)V
+.method public abstract IG(Ljava/lang/String;)V
 .end method
 
-.method public abstract bbK()V
+.method public abstract bgW()V
 .end method

@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/AnnotationDefault;
     value = .subannotation Lcom/tencent/mm/sdk/h/e;
-        aVR = 0x0
+        bbe = 0x0
     .end subannotation
 .end annotation
 
@@ -25,8 +25,8 @@
 
 
 # virtual methods
-.method public abstract aVQ()Ljava/lang/String;
+.method public abstract bbd()Ljava/lang/String;
 .end method
 
-.method public abstract aVR()I
+.method public abstract bbe()I
 .end method

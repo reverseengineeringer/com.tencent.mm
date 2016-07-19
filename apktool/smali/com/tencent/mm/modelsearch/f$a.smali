@@ -27,13 +27,13 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 270
+    .line 290
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 271
+    .line 291
     iput v0, p0, Lcom/tencent/mm/modelsearch/f$a;->start:I
 
-    .line 272
+    .line 292
     iput v0, p0, Lcom/tencent/mm/modelsearch/f$a;->end:I
 
     return-void
@@ -45,7 +45,7 @@
     .locals 1
 
     .prologue
-    .line 275
+    .line 295
     iget v0, p0, Lcom/tencent/mm/modelsearch/f$a;->start:I
 
     if-ltz v0, :cond_0

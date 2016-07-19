@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk;
 
 public abstract interface i$o$a
 {
-  public abstract int DE();
+  public abstract int DV();
 }
 
 /* Location:

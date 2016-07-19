@@ -4,9 +4,9 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.modelsimple.t;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.modelsimple.r;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.applet.SecurityImage;
 import com.tencent.mm.ui.base.g;
 
@@ -17,17 +17,17 @@ final class SimpleLoginUI$8
   
   public final void onClick(final DialogInterface paramDialogInterface, int paramInt)
   {
-    u.d("!32@/B4Tb64lLpL46PYMpl/SkTFlMftv8Nwe", "imgSid:" + dkwL).ktL + " img len" + dkwL).ktN.length + " " + com.tencent.mm.compatible.util.f.oZ());
-    paramDialogInterface = new t(dkwL).cbh, dkwL).ktJ, dkwL).ktO, SimpleLoginUI.e(kwL).getSecImgCode(), SimpleLoginUI.e(kwL).getSecImgSid(), SimpleLoginUI.e(kwL).getSecImgEncryptKey(), 0, "", false, false);
-    ah.tE().d(paramDialogInterface);
-    SimpleLoginUI localSimpleLoginUI1 = kwL;
-    SimpleLoginUI localSimpleLoginUI2 = kwL;
-    kwL.getString(2131430877);
-    SimpleLoginUI.a(localSimpleLoginUI1, g.a(localSimpleLoginUI2, kwL.getString(2131427765), true, new DialogInterface.OnCancelListener()
+    v.d("MicroMsg.SimpleLoginUI", "imgSid:" + dkVS).kSS + " img len" + dkVS).kSU.length + " " + com.tencent.mm.compatible.util.f.nr());
+    paramDialogInterface = new r(dkVS).bUU, dkVS).kSQ, dkVS).kSV, SimpleLoginUI.e(kVS).bhw(), ekVS).kSS, ekVS).kST, 0, "", false, false);
+    ah.tF().a(paramDialogInterface, 0);
+    SimpleLoginUI localSimpleLoginUI1 = kVS;
+    SimpleLoginUI localSimpleLoginUI2 = kVS;
+    kVS.getString(2131231028);
+    SimpleLoginUI.a(localSimpleLoginUI1, g.a(localSimpleLoginUI2, kVS.getString(2131233543), true, new DialogInterface.OnCancelListener()
     {
       public final void onCancel(DialogInterface paramAnonymousDialogInterface)
       {
-        ah.tE().c(paramDialogInterface);
+        ah.tF().c(paramDialogInterface);
       }
     }));
   }

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kqQ:Lcom/tencent/mm/ui/NoRomSpaceDexUI;
+.field final synthetic kPX:Lcom/tencent/mm/ui/NoRomSpaceDexUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 28
-    iput-object p1, p0, Lcom/tencent/mm/ui/NoRomSpaceDexUI$1;->kqQ:Lcom/tencent/mm/ui/NoRomSpaceDexUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/NoRomSpaceDexUI$1;->kPX:Lcom/tencent/mm/ui/NoRomSpaceDexUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

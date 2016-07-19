@@ -1,118 +1,118 @@
 package com.tencent.mm.pluginsdk.model.downloader;
 
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.Iterator;
 import java.util.Vector;
 
 public final class a
 {
-  private static Vector iCf = new Vector();
-  private static k iCg;
+  private static Vector<k> iYP = new Vector();
+  private static k iYQ;
   
   public static void a(k paramk)
   {
-    if ((paramk != null) && (!iCf.contains(paramk))) {
-      iCf.add(paramk);
+    if ((paramk != null) && (!iYP.contains(paramk))) {
+      iYP.add(paramk);
     }
   }
   
-  public static void aPZ()
+  public static void aUI()
   {
-    iCg = null;
+    iYQ = null;
   }
   
   public static void b(k paramk)
   {
-    if ((iCf != null) && (paramk != null)) {
-      iCf.remove(paramk);
+    if ((iYP != null) && (paramk != null)) {
+      iYP.remove(paramk);
     }
   }
   
   public static void c(k paramk)
   {
-    iCg = paramk;
+    iYQ = paramk;
   }
   
-  public final void cX(final long paramLong)
+  public final void jdMethod_do(final long paramLong)
   {
-    u.i("!56@/B4Tb64lLpKVQlIh1YRBXzdWPJKtG776lZ8EhHWW4u4+NDTrwItS9A==", "notifyTaskRemoved: %d", new Object[] { Long.valueOf(paramLong) });
-    ab.j(new Runnable()
+    v.i("MicroMsg.FileDownloaderCallbackManager", "notifyTaskRemoved: %d", new Object[] { Long.valueOf(paramLong) });
+    ad.k(new Runnable()
     {
       public final void run()
       {
-        if (a.aQa() != null)
+        if (a.aUJ() != null)
         {
-          Iterator localIterator = a.aQa().iterator();
+          Iterator localIterator = a.aUJ().iterator();
           while (localIterator.hasNext()) {
             ((k)localIterator.next()).onTaskRemoved(paramLong);
           }
         }
-        if (a.aQb() != null) {
-          a.aQb().onTaskRemoved(paramLong);
+        if (a.aUK() != null) {
+          a.aUK().onTaskRemoved(paramLong);
         }
       }
     });
   }
   
-  public final void cY(final long paramLong)
+  public final void dp(final long paramLong)
   {
-    u.i("!56@/B4Tb64lLpKVQlIh1YRBXzdWPJKtG776lZ8EhHWW4u4+NDTrwItS9A==", "notifyTaskFailed: %d", new Object[] { Long.valueOf(paramLong) });
-    ab.j(new Runnable()
+    v.i("MicroMsg.FileDownloaderCallbackManager", "notifyTaskFailed: %d", new Object[] { Long.valueOf(paramLong) });
+    ad.k(new Runnable()
     {
       public final void run()
       {
-        if (a.aQa() != null)
+        if (a.aUJ() != null)
         {
-          Iterator localIterator = a.aQa().iterator();
+          Iterator localIterator = a.aUJ().iterator();
           while (localIterator.hasNext()) {
             ((k)localIterator.next()).onTaskFailed(paramLong);
           }
         }
-        if (a.aQb() != null) {
-          a.aQb().onTaskFailed(paramLong);
+        if (a.aUK() != null) {
+          a.aUK().onTaskFailed(paramLong);
         }
       }
     });
   }
   
-  public final void k(final long paramLong, String paramString)
+  public final void m(final long paramLong, String paramString)
   {
-    u.i("!56@/B4Tb64lLpKVQlIh1YRBXzdWPJKtG776lZ8EhHWW4u4+NDTrwItS9A==", "notifyTaskStarted: %d, %s", new Object[] { Long.valueOf(paramLong), paramString });
-    ab.j(new Runnable()
+    v.i("MicroMsg.FileDownloaderCallbackManager", "notifyTaskStarted: %d, %s", new Object[] { Long.valueOf(paramLong), paramString });
+    ad.k(new Runnable()
     {
       public final void run()
       {
-        if (a.aQa() != null)
+        if (a.aUJ() != null)
         {
-          Iterator localIterator = a.aQa().iterator();
+          Iterator localIterator = a.aUJ().iterator();
           while (localIterator.hasNext()) {
-            ((k)localIterator.next()).onTaskStarted(paramLong, dtx);
+            ((k)localIterator.next()).onTaskStarted(paramLong, dtN);
           }
         }
-        if (a.aQb() != null) {
-          a.aQb().onTaskStarted(paramLong, dtx);
+        if (a.aUK() != null) {
+          a.aUK().onTaskStarted(paramLong, dtN);
         }
       }
     });
   }
   
-  public final void l(final long paramLong, String paramString)
+  public final void n(final long paramLong, String paramString)
   {
-    u.i("!56@/B4Tb64lLpKVQlIh1YRBXzdWPJKtG776lZ8EhHWW4u4+NDTrwItS9A==", "notifyTaskFinished: %d", new Object[] { Long.valueOf(paramLong) });
-    ab.j(new Runnable()
+    v.i("MicroMsg.FileDownloaderCallbackManager", "notifyTaskFinished: %d", new Object[] { Long.valueOf(paramLong) });
+    ad.k(new Runnable()
     {
       public final void run()
       {
-        if (a.aQa() != null)
+        if (a.aUJ() != null)
         {
-          Iterator localIterator = a.aQa().iterator();
+          Iterator localIterator = a.aUJ().iterator();
           while (localIterator.hasNext()) {
-            ((k)localIterator.next()).c(paramLong, dtx);
+            ((k)localIterator.next()).d(paramLong, dtN);
           }
         }
-        if (a.aQb() != null) {
-          a.aQb().c(paramLong, dtx);
+        if (a.aUK() != null) {
+          a.aUK().d(paramLong, dtN);
         }
       }
     });

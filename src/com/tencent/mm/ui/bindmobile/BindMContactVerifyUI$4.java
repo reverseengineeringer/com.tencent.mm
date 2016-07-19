@@ -14,13 +14,13 @@ final class BindMContactVerifyUI$4
   
   public final void onClick(View paramView)
   {
-    kOF.age();
+    lnV.aiI();
     paramView = new Intent();
     Bundle localBundle = new Bundle();
-    localBundle.putString("bindmcontact_mobile", BindMContactVerifyUI.c(kOF));
+    localBundle.putString("bindmcontact_mobile", BindMContactVerifyUI.c(lnV));
     localBundle.putInt("voice_verify_type", 4);
     paramView.putExtras(localBundle);
-    a.coa.e(kOF, paramView);
+    a.cjo.e(lnV, paramView);
   }
 }
 

@@ -13,15 +13,24 @@
     name = "b"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/tencent/mm/ui/friend/i$b;",
+        ">;"
+    }
+.end annotation
+
 
 # static fields
-.field public static final enum lsJ:I
+.field public static final enum lTn:I
 
-.field public static final enum lsK:I
+.field public static final enum lTo:I
 
-.field public static final enum lsL:I
+.field public static final enum lTp:I
 
-.field private static final synthetic lsM:[I
+.field private static final synthetic lTq:[I
 
 
 # direct methods
@@ -36,30 +45,30 @@
     const/4 v3, 0x1
 
     .line 85
-    sput v3, Lcom/tencent/mm/ui/friend/i$b;->lsJ:I
+    sput v3, Lcom/tencent/mm/ui/friend/i$b;->lTn:I
 
-    sput v4, Lcom/tencent/mm/ui/friend/i$b;->lsK:I
+    sput v4, Lcom/tencent/mm/ui/friend/i$b;->lTo:I
 
-    sput v0, Lcom/tencent/mm/ui/friend/i$b;->lsL:I
+    sput v0, Lcom/tencent/mm/ui/friend/i$b;->lTp:I
 
     .line 84
     new-array v0, v0, [I
 
     const/4 v1, 0x0
 
-    sget v2, Lcom/tencent/mm/ui/friend/i$b;->lsJ:I
+    sget v2, Lcom/tencent/mm/ui/friend/i$b;->lTn:I
 
     aput v2, v0, v1
 
-    sget v1, Lcom/tencent/mm/ui/friend/i$b;->lsK:I
+    sget v1, Lcom/tencent/mm/ui/friend/i$b;->lTo:I
 
     aput v1, v0, v3
 
-    sget v1, Lcom/tencent/mm/ui/friend/i$b;->lsL:I
+    sget v1, Lcom/tencent/mm/ui/friend/i$b;->lTp:I
 
     aput v1, v0, v4
 
-    sput-object v0, Lcom/tencent/mm/ui/friend/i$b;->lsM:[I
+    sput-object v0, Lcom/tencent/mm/ui/friend/i$b;->lTq:[I
 
     return-void
 .end method

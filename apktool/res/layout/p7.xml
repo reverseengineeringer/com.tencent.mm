@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/FreeWifiSuccBody"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:textSize="10.0dip" android:id="@id/apb" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="toast" />
+    <Button android:textSize="10.0dip" android:id="@id/apc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="alert" />
+</LinearLayout>

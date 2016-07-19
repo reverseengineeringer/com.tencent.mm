@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;->aap()V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;->YB()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic heS:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;
+.field final synthetic htJ:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 183
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1$1;->heS:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;
+    .line 207
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1$1;->htJ:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,18 +40,18 @@
     .locals 1
 
     .prologue
-    .line 188
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1$1;->heS:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;
+    .line 212
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1$1;->htJ:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gXN:Lcom/tencent/mm/plugin/sns/ui/o$a;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hkZ:Lcom/tencent/mm/plugin/sns/ui/q$a;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1$1;->heS:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1$1;->htJ:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->b(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Z
 
@@ -59,16 +59,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 189
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1$1;->heS:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;
+    .line 213
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1$1;->htJ:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->gXN:Lcom/tencent/mm/plugin/sns/ui/o$a;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->hkZ:Lcom/tencent/mm/plugin/sns/ui/q$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/o$a;->Kk()V
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/q$a;->KU()V
 
-    .line 192
+    .line 216
     :cond_0
     return-void
 .end method

@@ -1,7 +1,5 @@
 package com.tencent.mm.ui.contact;
 
-import android.widget.ListView;
-
 final class AddressUI$a$15
   implements Runnable
 {
@@ -9,7 +7,7 @@ final class AddressUI$a$15
   
   public final void run()
   {
-    AddressUI.a.c(liu).setSelection(0);
+    AddressUI.a.a(lIF).pause();
   }
 }
 

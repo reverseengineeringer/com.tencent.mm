@@ -2,9 +2,9 @@ package com.tencent.mm.ui.base;
 
 public abstract interface TalkRoomPopupNav$a
 {
-  public abstract void bdl();
+  public abstract void biT();
   
-  public abstract void bdm();
+  public abstract void biU();
 }
 
 /* Location:

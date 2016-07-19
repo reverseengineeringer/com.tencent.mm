@@ -5,14 +5,14 @@ import oicq.wlogin_sdk.tools.util;
 public final class y
   extends a
 {
-  int mcL = 0;
+  int mOP = 0;
   
   public y()
   {
-    mbE = 292;
+    mNI = 292;
   }
   
-  private static int B(byte[] paramArrayOfByte, int paramInt)
+  private static int C(byte[] paramArrayOfByte, int paramInt)
   {
     if (paramArrayOfByte != null)
     {
@@ -26,36 +26,36 @@ public final class y
   
   public final byte[] a(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2, int paramInt, byte[] paramArrayOfByte3, byte[] paramArrayOfByte4, byte[] paramArrayOfByte5)
   {
-    int n = B(paramArrayOfByte1, 16);
-    int m = B(paramArrayOfByte2, 16);
-    int k = B(paramArrayOfByte3, 16);
-    int j = B(paramArrayOfByte4, 32);
-    int i = B(paramArrayOfByte5, 16);
-    mcL = (n + 2 + 2 + m + 2 + 2 + k + 2 + j + 2 + i);
-    byte[] arrayOfByte = new byte[mcL];
-    util.m(arrayOfByte, 0, n);
+    int n = C(paramArrayOfByte1, 16);
+    int m = C(paramArrayOfByte2, 16);
+    int k = C(paramArrayOfByte3, 16);
+    int j = C(paramArrayOfByte4, 32);
+    int i = C(paramArrayOfByte5, 16);
+    mOP = (n + 2 + 2 + m + 2 + 2 + k + 2 + j + 2 + i);
+    byte[] arrayOfByte = new byte[mOP];
+    util.o(arrayOfByte, 0, n);
     System.arraycopy(paramArrayOfByte1, 0, arrayOfByte, 2, n);
     n += 2;
-    util.m(arrayOfByte, n, m);
+    util.o(arrayOfByte, n, m);
     n += 2;
     System.arraycopy(paramArrayOfByte2, 0, arrayOfByte, n, m);
     m = n + m;
-    util.m(arrayOfByte, m, paramInt);
+    util.o(arrayOfByte, m, paramInt);
     paramInt = m + 2;
-    util.m(arrayOfByte, paramInt, k);
+    util.o(arrayOfByte, paramInt, k);
     paramInt += 2;
     System.arraycopy(paramArrayOfByte3, 0, arrayOfByte, paramInt, k);
     paramInt += k;
-    util.m(arrayOfByte, paramInt, j);
+    util.o(arrayOfByte, paramInt, j);
     paramInt += 2;
     System.arraycopy(paramArrayOfByte4, 0, arrayOfByte, paramInt, j);
     paramInt += j;
-    util.m(arrayOfByte, paramInt, i);
+    util.o(arrayOfByte, paramInt, i);
     System.arraycopy(paramArrayOfByte5, 0, arrayOfByte, paramInt + 2, i);
-    super.sL(mbE);
-    super.A(arrayOfByte, mcL);
-    super.bos();
-    return super.boo();
+    super.vE(mNI);
+    super.B(arrayOfByte, mOP);
+    super.bvq();
+    return super.bvm();
   }
 }
 

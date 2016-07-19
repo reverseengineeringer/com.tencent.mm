@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <HorizontalScrollView android:orientation="horizontal" android:background="@drawable/a4g" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:layout_weight="1.0">
+            <LinearLayout android:gravity="right" android:layout_gravity="right" android:orientation="horizontal" android:id="@id/biw" android:layout_width="fill_parent" android:layout_height="120.0dip" />
+        </HorizontalScrollView>
+        <LinearLayout android:orientation="horizontal" android:id="@id/bjg" android:layout_width="wrap_content" android:layout_height="120.0dip" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+        <TextView android:gravity="center|left" android:id="@android:id/summary" android:layout_width="fill_parent" android:layout_weight="1.0" style="@style/MMFontPreferenceSmall" />
+        <View android:background="#ff808080" android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_margin="5.0dip" />
+        <TextView android:text="@string/cfp" style="@style/MMFontPreferenceSmall" />
+        <View android:background="#ff00ff00" android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_margin="5.0dip" />
+        <TextView android:text="@string/cfo" style="@style/MMFontPreferenceSmall" />
+    </LinearLayout>
+</LinearLayout>

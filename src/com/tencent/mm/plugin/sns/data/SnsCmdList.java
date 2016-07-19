@@ -9,44 +9,44 @@ import java.util.List;
 public class SnsCmdList
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
-  private int gHv = 0;
-  private int gHw = 0;
-  public List gHx = new LinkedList();
-  public List gHy = new LinkedList();
+  public static final Parcelable.Creator<SnsCmdList> CREATOR = new Parcelable.Creator() {};
+  private int gOA = 0;
+  public List<Integer> gOB = new LinkedList();
+  public List<Integer> gOC = new LinkedList();
+  private int gOz = 0;
   
   public int describeContents()
   {
     return 0;
   }
   
-  public final void ll(int paramInt)
+  public final void mu(int paramInt)
   {
-    gHx.add(Integer.valueOf(paramInt));
+    gOB.add(Integer.valueOf(paramInt));
   }
   
-  public final void lm(int paramInt)
+  public final void mv(int paramInt)
   {
-    gHy.add(Integer.valueOf(paramInt));
+    gOC.add(Integer.valueOf(paramInt));
   }
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
     int i = 0;
-    gHv = gHx.size();
-    paramParcel.writeInt(gHv);
+    gOz = gOB.size();
+    paramParcel.writeInt(gOz);
     paramInt = 0;
-    while (paramInt < gHv)
+    while (paramInt < gOz)
     {
-      paramParcel.writeInt(((Integer)gHx.get(paramInt)).intValue());
+      paramParcel.writeInt(((Integer)gOB.get(paramInt)).intValue());
       paramInt += 1;
     }
-    gHw = gHy.size();
-    paramParcel.writeInt(gHw);
+    gOA = gOC.size();
+    paramParcel.writeInt(gOA);
     paramInt = i;
-    while (paramInt < gHw)
+    while (paramInt < gOA)
     {
-      paramParcel.writeInt(((Integer)gHy.get(paramInt)).intValue());
+      paramParcel.writeInt(((Integer)gOC.get(paramInt)).intValue());
       paramInt += 1;
     }
   }

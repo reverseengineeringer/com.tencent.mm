@@ -1,6 +1,6 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class CheckCanSubscribeBizUI$3
   implements Runnable
@@ -9,12 +9,12 @@ final class CheckCanSubscribeBizUI$3
   
   public final void run()
   {
-    u.d("!44@/B4Tb64lLpKI+ZbHiEoPsk2SzqNNPitzPtV/pCqqwzc=", "onNotifyChange toUserName = " + CheckCanSubscribeBizUI.d(kjH) + ", userName = " + dFW);
-    if (CheckCanSubscribeBizUI.d(kjH).equals(dFW))
+    v.d("MicroMsg.CheckCanSubscribeBizUI", "onNotifyChange toUserName = " + CheckCanSubscribeBizUI.d(kJP) + ", userName = " + cJR);
+    if (CheckCanSubscribeBizUI.d(kJP).equals(cJR))
     {
-      CheckCanSubscribeBizUI.e(kjH);
-      if (!CheckCanSubscribeBizUI.f(kjH)) {
-        CheckCanSubscribeBizUI.b(kjH);
+      CheckCanSubscribeBizUI.e(kJP);
+      if (!CheckCanSubscribeBizUI.f(kJP)) {
+        CheckCanSubscribeBizUI.b(kJP);
       }
     }
   }

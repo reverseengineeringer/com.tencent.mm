@@ -12,13 +12,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
 .end annotation
 
 
 # instance fields
-.field private final synthetic val$prefix:Ljava/lang/String;
+.field final synthetic val$prefix:Ljava/lang/String;
 
 
 # direct methods
@@ -26,10 +26,9 @@
     .locals 0
 
     .prologue
-    .line 1
+    .line 1004
     iput-object p1, p0, Lcom/tencent/kingkong/database/SQLiteDatabase$2;->val$prefix:Ljava/lang/String;
 
-    .line 1004
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

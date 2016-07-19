@@ -10,25 +10,25 @@ final class SnsUploadSayFooter$4
 {
   SnsUploadSayFooter$4(SnsUploadSayFooter paramSnsUploadSayFooter) {}
   
-  public final void ahA() {}
+  public final void akl() {}
   
-  public final void ahB()
+  public final void akm()
   {
-    SnsUploadSayFooter.c(hlP).getInputConnection().sendKeyEvent(new KeyEvent(0, 67));
-    SnsUploadSayFooter.c(hlP).getInputConnection().sendKeyEvent(new KeyEvent(1, 67));
+    chBQ).mfQ.sendKeyEvent(new KeyEvent(0, 67));
+    chBQ).mfQ.sendKeyEvent(new KeyEvent(1, 67));
   }
   
   public final void append(String paramString)
   {
     try
     {
-      SnsUploadSayFooter.c(hlP).HO(paramString);
+      SnsUploadSayFooter.c(hBQ).Kd(paramString);
       return;
     }
     catch (Exception paramString) {}
   }
   
-  public final void dr(boolean paramBoolean) {}
+  public final void dq(boolean paramBoolean) {}
 }
 
 /* Location:

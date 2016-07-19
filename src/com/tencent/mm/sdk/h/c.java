@@ -2,8 +2,8 @@ package com.tencent.mm.sdk.h;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.HashMap;
@@ -17,7 +17,7 @@ import junit.framework.Assert;
 
 public abstract class c
 {
-  public long jYv = -1L;
+  public long kyS = -1L;
   
   public static String a(Field paramField)
   {
@@ -153,7 +153,7 @@ public abstract class c
     {
       arrayOfString[i] = a(paramArrayOfField[i]);
       String str = "getFullColumns failed:" + paramArrayOfField[i].getName();
-      if (!ay.kz(arrayOfString[i])) {}
+      if (!be.kf(arrayOfString[i])) {}
       for (boolean bool = true;; bool = false)
       {
         Assert.assertTrue(str, bool);
@@ -165,23 +165,23 @@ public abstract class c
     return arrayOfString;
   }
   
-  private static Map b(Field[] paramArrayOfField)
+  private static Map<String, String> b(Field[] paramArrayOfField)
   {
     HashMap localHashMap = new HashMap();
     int i = 0;
     if (i < paramArrayOfField.length)
     {
       Object localObject = paramArrayOfField[i];
-      String str = b.d(((Field)localObject).getType());
+      String str = b.f(((Field)localObject).getType());
       if (str == null) {
-        u.e("!44@/B4Tb64lLpLLUFo2TM7uCbJuPRuarh9/GXNqcjNxYhM=", "failed identify on column: " + ((Field)localObject).getName() + ", skipped");
+        v.e("MicroMsg.SDK.IAutoDBItem", "failed identify on column: " + ((Field)localObject).getName() + ", skipped");
       }
       for (;;)
       {
         i += 1;
         break;
         localObject = a((Field)localObject);
-        if (!ay.kz((String)localObject)) {
+        if (!be.kf((String)localObject)) {
           localHashMap.put(localObject, str);
         }
       }
@@ -200,22 +200,22 @@ public abstract class c
     if (i < paramArrayOfField.length)
     {
       localField = paramArrayOfField[i];
-      localObject = b.d(localField.getType());
+      localObject = b.f(localField.getType());
       if (localObject == null) {
-        u.e("!44@/B4Tb64lLpLLUFo2TM7uCbJuPRuarh9/GXNqcjNxYhM=", "failed identify on column: " + localField.getName() + ", skipped");
+        v.e("MicroMsg.SDK.IAutoDBItem", "failed identify on column: " + localField.getName() + ", skipped");
       }
       do
       {
         i += 1;
         break;
         str2 = a(localField);
-      } while (ay.kz(str2));
+      } while (be.kf(str2));
       if (!localField.isAnnotationPresent(e.class)) {
         break label241;
       }
-      str1 = " default '" + ((e)localField.getAnnotation(e.class)).aVQ() + "' ";
+      str1 = " default '" + ((e)localField.getAnnotation(e.class)).bbd() + "' ";
     }
-    for (int j = ((e)localField.getAnnotation(e.class)).aVR();; j = 0)
+    for (int j = ((e)localField.getAnnotation(e.class)).bbe();; j = 0)
     {
       localObject = new StringBuilder().append(str2).append(" ").append((String)localObject).append(str1);
       if (j == 1)
@@ -241,7 +241,7 @@ public abstract class c
     }
   }
   
-  public static Field[] e(Class paramClass)
+  public static Field[] g(Class<?> paramClass)
   {
     a locala = new a();
     LinkedList localLinkedList = new LinkedList();
@@ -263,13 +263,13 @@ public abstract class c
         if (!localField.isAnnotationPresent(e.class)) {
           break label171;
         }
-        if (((e)localField.getAnnotation(e.class)).aVR() == 1) {
-          jYw = paramClass;
+        if (((e)localField.getAnnotation(e.class)).bbe() == 1) {
+          kyT = paramClass;
         }
       }
       for (;;)
       {
-        if (!ay.kz(paramClass))
+        if (!be.kf(paramClass))
         {
           if (paramClass.equals("rowid")) {
             Assert.assertTrue("field_rowid reserved by MAutoDBItem, change now!", false);
@@ -287,26 +287,26 @@ public abstract class c
         } while (!str.startsWith("field_"));
       }
     }
-    ceD = ((Field[])localLinkedList.toArray(new Field[0]));
-    blR = a(ceD);
-    jYx = b(ceD);
-    jYy = c(ceD);
-    return ceD;
+    bZI = ((Field[])localLinkedList.toArray(new Field[0]));
+    aZx = a(bZI);
+    kyU = b(bZI);
+    kyV = c(bZI);
+    return bZI;
   }
   
-  public abstract void c(Cursor paramCursor);
+  public abstract void b(Cursor paramCursor);
   
-  public abstract ContentValues lX();
+  public abstract ContentValues kn();
   
-  public abstract a ls();
+  public abstract a ou();
   
   public static final class a
   {
-    public String[] blR;
-    public Field[] ceD;
-    public String jYw;
-    public Map jYx = new HashMap();
-    public String jYy;
+    public String[] aZx;
+    public Field[] bZI;
+    public String kyT;
+    public Map<String, String> kyU = new HashMap();
+    public String kyV;
   }
 }
 

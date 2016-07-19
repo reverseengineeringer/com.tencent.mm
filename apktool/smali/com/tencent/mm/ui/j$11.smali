@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnLongClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/ui/j;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/ui/j;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,20 @@
 
 
 # instance fields
-.field final synthetic kpx:Lcom/tencent/mm/ui/j;
+.field final synthetic kOB:Lcom/tencent/mm/ui/j;
+
+.field final synthetic kOG:Lcom/tencent/mm/ui/j$a;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/j;)V
+.method constructor <init>(Lcom/tencent/mm/ui/j;Lcom/tencent/mm/ui/j$a;)V
     .locals 0
 
     .prologue
-    .line 1045
-    iput-object p1, p0, Lcom/tencent/mm/ui/j$11;->kpx:Lcom/tencent/mm/ui/j;
+    .line 858
+    iput-object p1, p0, Lcom/tencent/mm/ui/j$11;->kOB:Lcom/tencent/mm/ui/j;
+
+    iput-object p2, p0, Lcom/tencent/mm/ui/j$11;->kOG:Lcom/tencent/mm/ui/j$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,44 +40,18 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final onLongClick(Landroid/view/View;)Z
     .locals 2
 
     .prologue
-    const/16 v1, 0x400
+    .line 862
+    iget-object v0, p0, Lcom/tencent/mm/ui/j$11;->kOB:Lcom/tencent/mm/ui/j;
 
-    .line 1049
-    iget-object v0, p0, Lcom/tencent/mm/ui/j$11;->kpx:Lcom/tencent/mm/ui/j;
+    iget-object v1, p0, Lcom/tencent/mm/ui/j$11;->kOG:Lcom/tencent/mm/ui/j$a;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/j;->i(Lcom/tencent/mm/ui/j;)Landroid/support/v7/app/ActionBarActivity;
+    invoke-static {v0, p1, v1}, Lcom/tencent/mm/ui/j;->a(Lcom/tencent/mm/ui/j;Landroid/view/View;Lcom/tencent/mm/ui/j$a;)Z
 
-    move-result-object v0
+    move-result v0
 
-    invoke-virtual {v0}, Landroid/support/v7/app/ActionBarActivity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1, v1}, Landroid/view/Window;->setFlags(II)V
-
-    .line 1050
-    iget-object v0, p0, Lcom/tencent/mm/ui/j$11;->kpx:Lcom/tencent/mm/ui/j;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/j;->j(Lcom/tencent/mm/ui/j;)Landroid/support/v7/app/ActionBar;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 1051
-    iget-object v0, p0, Lcom/tencent/mm/ui/j$11;->kpx:Lcom/tencent/mm/ui/j;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/j;->j(Lcom/tencent/mm/ui/j;)Landroid/support/v7/app/ActionBar;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/support/v7/app/ActionBar;->hide()V
-
-    .line 1053
-    :cond_0
-    return-void
+    return v0
 .end method

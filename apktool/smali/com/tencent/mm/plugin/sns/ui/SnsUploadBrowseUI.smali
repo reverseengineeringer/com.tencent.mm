@@ -3,15 +3,34 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/plugin/sns/ui/o$a;
+.implements Lcom/tencent/mm/plugin/sns/ui/q$a;
 
 
 # instance fields
-.field private hbL:I
+.field private hBy:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private hlv:Ljava/util/ArrayList;
+.field private hBz:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private hlw:Ljava/util/HashMap;
+.field private hqB:I
 
 
 # direct methods
@@ -27,19 +46,19 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hlv:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hBy:Ljava/util/ArrayList;
 
     .line 29
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hbL:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hqB:I
 
     .line 30
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hlw:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hBz:Ljava/util/HashMap;
 
     return-void
 .end method
@@ -49,14 +68,14 @@
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hlw:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hBz:Ljava/util/HashMap;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method protected final Gb()V
+.method protected final Gy()V
     .locals 7
 
     .prologue
@@ -75,7 +94,7 @@
 
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -90,10 +109,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hlv:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hBy:Ljava/util/ArrayList;
 
     .line 106
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hlv:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hBy:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
@@ -113,58 +132,58 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hbL:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hqB:I
 
     .line 113
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hbK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hqA:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     .line 114
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hbK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hqA:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
-    invoke-virtual {v0, v6}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->setEnableHorLongBmpMode(Z)V
+    iput-boolean v6, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htl:Z
 
     .line 115
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hbK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hqA:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->setShowTitle(Z)V
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htk:Z
 
     .line 116
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayW()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBx()Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hlv:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hBy:Ljava/util/ArrayList;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/d/ai;->aS(Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/e/ah;->aY(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v1
 
     .line 117
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hbK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hqA:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
-    iget v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hbL:I
+    iget v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hqB:I
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsBaseGalleryUI;->hbF:Lcom/tencent/mm/plugin/sns/ui/n;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsBaseGalleryUI;->hqv:Lcom/tencent/mm/plugin/sns/ui/p;
 
     move-object v5, p0
 
-    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->a(Ljava/util/List;Ljava/lang/String;ILcom/tencent/mm/plugin/sns/ui/q;Lcom/tencent/mm/plugin/sns/ui/o$a;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->a(Ljava/util/List;Ljava/lang/String;ILcom/tencent/mm/plugin/sns/ui/s;Lcom/tencent/mm/plugin/sns/ui/q$a;)V
 
     .line 118
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hbK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hqA:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$1;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$1;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->setOnPageSelectListener(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$c;)V
+    iput-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->htB:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$c;
 
     .line 124
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hbK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hqA:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->addView(Landroid/view/View;)V
 
@@ -176,9 +195,9 @@
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 149
-    const v0, 0x7f0b0dea
+    const v0, 0x7f0800a4
 
-    const v1, 0x7f0404f1
+    const v1, 0x7f020514
 
     new-instance v2, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3;
 
@@ -189,7 +208,7 @@
     goto :goto_0
 .end method
 
-.method protected final Kj()I
+.method protected final KT()I
     .locals 1
 
     .prologue
@@ -199,7 +218,7 @@
     return v0
 .end method
 
-.method public final aCN()V
+.method public final aFS()V
     .locals 6
 
     .prologue
@@ -209,11 +228,9 @@
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
     .line 70
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hbK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hqA:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->getFlipList()Ljava/util/List;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->clW:Ljava/util/List;
 
     .line 71
     if-nez v0, :cond_0
@@ -224,7 +241,7 @@
 
     .line 74
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hlv:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hBy:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
@@ -244,14 +261,14 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/plugin/sns/f/b;
+    check-cast v0, Lcom/tencent/mm/plugin/sns/g/b;
 
     .line 76
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayW()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBx()Ljava/lang/String;
 
     move-result-object v4
 
@@ -259,9 +276,9 @@
 
     move-result-object v1
 
-    iget-object v4, v0, Lcom/tencent/mm/plugin/sns/f/b;->aHW:Lcom/tencent/mm/protocal/b/add;
+    iget-object v4, v0, Lcom/tencent/mm/plugin/sns/g/b;->aus:Lcom/tencent/mm/protocal/b/adw;
 
-    iget-object v4, v4, Lcom/tencent/mm/protocal/b/add;->iXW:Ljava/lang/String;
+    iget-object v4, v4, Lcom/tencent/mm/protocal/b/adw;->jvB:Ljava/lang/String;
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -272,9 +289,9 @@
     move-result-object v1
 
     .line 77
-    iget-object v4, v0, Lcom/tencent/mm/plugin/sns/f/b;->aHW:Lcom/tencent/mm/protocal/b/add;
+    iget-object v4, v0, Lcom/tencent/mm/plugin/sns/g/b;->aus:Lcom/tencent/mm/protocal/b/adw;
 
-    iget-object v4, v4, Lcom/tencent/mm/protocal/b/add;->iXW:Ljava/lang/String;
+    iget-object v4, v4, Lcom/tencent/mm/protocal/b/adw;->jvB:Ljava/lang/String;
 
     const-string/jumbo v5, "pre_temp_extend_pic"
 
@@ -285,9 +302,9 @@
     if-eqz v4, :cond_2
 
     .line 78
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/f/b;->aHW:Lcom/tencent/mm/protocal/b/add;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/g/b;->aus:Lcom/tencent/mm/protocal/b/adw;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/add;->iXW:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/adw;->jvB:Ljava/lang/String;
 
     const/16 v1, 0x13
 
@@ -297,7 +314,7 @@
 
     .line 80
     :goto_2
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hlv:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hBy:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -307,14 +324,14 @@
     :cond_1
     const-string/jumbo v0, "sns_gallery_temp_paths"
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hlv:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hBy:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
     .line 83
     const-string/jumbo v0, "sns_update_preview_image_count"
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hlw:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hBz:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->size()I
 
@@ -323,7 +340,7 @@
     invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 84
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hlw:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hBz:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
@@ -343,26 +360,26 @@
     goto :goto_2
 .end method
 
-.method public final an(Ljava/lang/String;I)V
+.method public final ap(Ljava/lang/String;I)V
     .locals 1
 
     .prologue
     .line 175
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hbK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hqA:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     if-eqz v0, :cond_0
 
     .line 176
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hbK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hqA:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->aBT()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->aET()V
 
     .line 179
     :cond_0
     return-void
 .end method
 
-.method public final ao(Ljava/lang/String;I)V
+.method public final aq(Ljava/lang/String;I)V
     .locals 0
 
     .prologue
@@ -390,14 +407,14 @@
     if-nez v0, :cond_0
 
     .line 92
-    const-string/jumbo v0, "!44@/B4Tb64lLpJ9RADwjweyFmLDFFXKbUWPLoOH5G6um6E="
+    const-string/jumbo v0, "MicroMsg.SnsUploadBrowseUI"
 
     const-string/jumbo v1, "dispatchKeyEvent"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 93
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->aCN()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->aFS()V
 
     .line 94
     const/4 v0, 0x1
@@ -419,7 +436,7 @@
 
     .prologue
     .line 65
-    const v0, 0x7f0a046e
+    const v0, 0x7f030563
 
     return v0
 .end method
@@ -429,7 +446,7 @@
 
     .prologue
     .line 186
-    const-string/jumbo v0, "!44@/B4Tb64lLpJ9RADwjweyFmLDFFXKbUWPLoOH5G6um6E="
+    const-string/jumbo v0, "MicroMsg.SnsUploadBrowseUI"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -445,7 +462,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 187
     const/4 v0, -0x1
@@ -465,7 +482,7 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/plugin/sns/ui/SnsBaseGalleryUI;->onCreate(Landroid/os/Bundle;)V
 
     .line 34
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->Gb()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->Gy()V
 
     .line 35
     return-void
@@ -476,27 +493,27 @@
 
     .prologue
     .line 39
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hbK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hqA:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     if-eqz v0, :cond_0
 
     .line 40
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hbK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hqA:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->aBU()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->aEU()V
 
     .line 41
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hbK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hqA:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->onDestroy()V
 
     .line 43
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sns/d/g;->L(Landroid/app/Activity;)V
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sns/e/g;->G(Landroid/app/Activity;)V
 
     .line 44
     invoke-super {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsBaseGalleryUI;->onDestroy()V
@@ -510,12 +527,12 @@
 
     .prologue
     .line 57
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hbK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hqA:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     if-eqz v0, :cond_0
 
     .line 58
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hbK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hqA:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->onPause()V
 
@@ -535,14 +552,14 @@
     invoke-super {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsBaseGalleryUI;->onResume()V
 
     .line 50
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hbK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hqA:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     if-eqz v0, :cond_0
 
     .line 51
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hbK:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->hqA:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->aBT()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->aET()V
 
     .line 53
     :cond_0

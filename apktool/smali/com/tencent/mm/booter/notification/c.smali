@@ -12,15 +12,15 @@
 
 
 # static fields
-.field public static bnC:Ljava/lang/String;
+.field public static bbA:Ljava/lang/String;
 
-.field public static bnD:Ljava/lang/String;
+.field public static bbB:Ljava/lang/String;
 
-.field public static bnE:Ljava/lang/String;
+.field public static bbC:Ljava/lang/String;
 
 
 # instance fields
-.field amw:Lcom/tencent/mm/booter/notification/a/g;
+.field Zl:Lcom/tencent/mm/booter/notification/a/g;
 
 .field mContext:Landroid/content/Context;
 
@@ -33,17 +33,17 @@
     .line 56
     const-string/jumbo v0, "com.tencent.preference.notification.key.unread.msg"
 
-    sput-object v0, Lcom/tencent/mm/booter/notification/c;->bnC:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/booter/notification/c;->bbA:Ljava/lang/String;
 
     .line 57
     const-string/jumbo v0, "com.tencent.preference.notification.key.unread.talker"
 
-    sput-object v0, Lcom/tencent/mm/booter/notification/c;->bnD:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/booter/notification/c;->bbB:Ljava/lang/String;
 
     .line 58
     const-string/jumbo v0, "com.tencent.preference.notification.key.all.notified.msgid"
 
-    sput-object v0, Lcom/tencent/mm/booter/notification/c;->bnE:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/booter/notification/c;->bbC:Ljava/lang/String;
 
     return-void
 .end method
@@ -56,7 +56,7 @@
     invoke-direct {p0}, Lcom/tencent/mm/booter/notification/a;-><init>()V
 
     .line 61
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -68,14 +68,14 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/booter/notification/a/g;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/notification/c;->amw:Lcom/tencent/mm/booter/notification/a/g;
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/c;->Zl:Lcom/tencent/mm/booter/notification/a/g;
 
     .line 62
     return-void
 .end method
 
 .method public static B(J)V
-    .locals 5
+    .locals 6
 
     .prologue
     .line 580
@@ -92,7 +92,7 @@
 
     .line 584
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/booter/notification/c;->nt()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/booter/notification/c;->lH()Ljava/lang/String;
 
     move-result-object v0
 
@@ -152,7 +152,7 @@
     move-result-object v0
 
     .line 592
-    invoke-static {}, Lcom/tencent/mm/g/g;->pf()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/tencent/mm/h/g;->nx()Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -160,7 +160,7 @@
 
     move-result-object v1
 
-    sget-object v2, Lcom/tencent/mm/booter/notification/c;->bnE:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/booter/notification/c;->bbC:Ljava/lang/String;
 
     invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
@@ -169,7 +169,7 @@
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 593
-    const-string/jumbo v1, "!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ=="
+    const-string/jumbo v1, "MicroMsg.Notification.AppMsg.Handle"
 
     const-string/jumbo v2, "setNotifiedMsgId: %s"
 
@@ -181,13 +181,13 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
 .method private static C(J)Z
-    .locals 7
+    .locals 8
 
     .prologue
     const/4 v1, 0x1
@@ -208,12 +208,12 @@
 
     .line 603
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/booter/notification/c;->nt()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/booter/notification/c;->lH()Ljava/lang/String;
 
     move-result-object v2
 
     .line 604
-    const-string/jumbo v3, "!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ=="
+    const-string/jumbo v3, "MicroMsg.Notification.AppMsg.Handle"
 
     const-string/jumbo v4, "isAlreadyNotified: %s, msgId: %d"
 
@@ -229,7 +229,7 @@
 
     aput-object v6, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 605
     new-instance v3, Ljava/lang/StringBuilder;
@@ -264,6 +264,18 @@
 
 .method private static a(Ljava/util/List;Ljava/lang/String;)Lcom/tencent/mm/booter/notification/c$a;
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/booter/notification/c$a;",
+            ">;",
+            "Ljava/lang/String;",
+            ")",
+            "Lcom/tencent/mm/booter/notification/c$a;"
+        }
+    .end annotation
 
     .prologue
     const/4 v1, 0x0
@@ -300,7 +312,7 @@
     check-cast v0, Lcom/tencent/mm/booter/notification/c$a;
 
     .line 525
-    iget-object v3, v0, Lcom/tencent/mm/booter/notification/c$a;->ajh:Ljava/lang/String;
+    iget-object v3, v0, Lcom/tencent/mm/booter/notification/c$a;->UX:Ljava/lang/String;
 
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -317,7 +329,7 @@
     goto :goto_0
 .end method
 
-.method public static a(Ljava/lang/String;Lcom/tencent/mm/storage/ag;IZ)Z
+.method public static a(Ljava/lang/String;Lcom/tencent/mm/storage/ai;IZ)Z
     .locals 8
 
     .prologue
@@ -330,7 +342,7 @@
     const/4 v0, 0x0
 
     .line 82
-    const-string/jumbo v2, "!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ=="
+    const-string/jumbo v2, "MicroMsg.Notification.AppMsg.Handle"
 
     const-string/jumbo v3, "preNotificationCheck, talker: %s, tipsFlag: %s "
 
@@ -344,17 +356,17 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 84
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
     .line 85
-    const-string/jumbo v2, "!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ=="
+    const-string/jumbo v2, "MicroMsg.Notification.AppMsg.Handle"
 
     const-string/jumbo v3, "[FALSE](MMCore.accHasReady())preNotificationCheck, talker: %s, tipsFlag: %s "
 
@@ -368,7 +380,7 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 124
     :goto_0
@@ -378,7 +390,7 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    iget-wide v2, p1, Lcom/tencent/mm/d/b/bg;->field_msgSvrId:J
+    iget-wide v2, p1, Lcom/tencent/mm/e/b/bj;->field_msgSvrId:J
 
     invoke-static {v2, v3}, Lcom/tencent/mm/booter/notification/c;->C(J)Z
 
@@ -389,13 +401,13 @@
     if-nez p3, :cond_1
 
     .line 90
-    const-string/jumbo v2, "!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ=="
+    const-string/jumbo v2, "MicroMsg.Notification.AppMsg.Handle"
 
     const-string/jumbo v3, "[FALSE](msgInfo != null && NotificationQueueManager.getImpl().isAlreadyNotify(msgInfo.getMsgSvrId()), msgId: %d"
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    iget-wide v4, p1, Lcom/tencent/mm/d/b/bg;->field_msgSvrId:J
+    iget-wide v4, p1, Lcom/tencent/mm/e/b/bj;->field_msgSvrId:J
 
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -403,7 +415,7 @@
 
     aput-object v4, v1, v0
 
-    invoke-static {v2, v3, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -414,7 +426,7 @@
     if-nez v2, :cond_2
 
     .line 95
-    const-string/jumbo v2, "!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ=="
+    const-string/jumbo v2, "MicroMsg.Notification.AppMsg.Handle"
 
     const-string/jumbo v3, "[FALSE](tipsFlag & ConstantsProtocal.TEXT_NOTIFY_SVR_FLAG) == 0)preNotificationCheck, talker: %s, tipsFlag: %s "
 
@@ -428,36 +440,36 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 100
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    iget v2, v2, Lcom/tencent/mm/model/c;->bzI:I
+    iget v2, v2, Lcom/tencent/mm/model/c;->bsL:I
 
-    invoke-static {v2}, Lcom/tencent/mm/model/c;->cv(I)Z
+    invoke-static {v2}, Lcom/tencent/mm/model/c;->da(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    invoke-static {}, Lcom/tencent/mm/model/h;->sh()I
+    invoke-static {}, Lcom/tencent/mm/model/h;->sj()I
 
     move-result v2
 
-    invoke-static {v2}, Lcom/tencent/mm/model/h;->cw(I)Z
+    invoke-static {v2}, Lcom/tencent/mm/model/h;->db(I)Z
 
     move-result v2
 
     if-nez v2, :cond_3
 
     .line 101
-    const-string/jumbo v2, "!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ=="
+    const-string/jumbo v2, "MicroMsg.Notification.AppMsg.Handle"
 
     const-string/jumbo v3, "[NO NOTIFICATION](MMCore.getAccStg().isWebWXOnline() && !ConfigStorageLogic.isWebWXNotificationOpen())preNotificationCheck, talker: %s, tipsFlag: %s isWebWXOnline: %B,isWebWXNotificationOpen: %B "
 
@@ -473,13 +485,13 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    iget v1, v1, Lcom/tencent/mm/model/c;->bzI:I
+    iget v1, v1, Lcom/tencent/mm/model/c;->bsL:I
 
-    invoke-static {v1}, Lcom/tencent/mm/model/c;->cv(I)Z
+    invoke-static {v1}, Lcom/tencent/mm/model/c;->da(I)Z
 
     move-result v1
 
@@ -489,11 +501,11 @@
 
     aput-object v1, v4, v6
 
-    invoke-static {}, Lcom/tencent/mm/model/h;->sh()I
+    invoke-static {}, Lcom/tencent/mm/model/h;->sj()I
 
     move-result v1
 
-    invoke-static {v1}, Lcom/tencent/mm/model/h;->cw(I)Z
+    invoke-static {v1}, Lcom/tencent/mm/model/h;->db(I)Z
 
     move-result v1
 
@@ -503,61 +515,61 @@
 
     aput-object v1, v4, v7
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
     .line 107
     :cond_3
-    invoke-static {p0}, Lcom/tencent/mm/model/i;->dS(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/model/i;->ed(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_5
 
     .line 108
-    new-instance v2, Lcom/tencent/mm/d/a/gf;
+    new-instance v2, Lcom/tencent/mm/e/a/gq;
 
-    invoke-direct {v2}, Lcom/tencent/mm/d/a/gf;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/e/a/gq;-><init>()V
 
-    iget-object v3, v2, Lcom/tencent/mm/d/a/gf;->aBf:Lcom/tencent/mm/d/a/gf$a;
+    iget-object v3, v2, Lcom/tencent/mm/e/a/gq;->anx:Lcom/tencent/mm/e/a/gq$a;
 
-    iput v7, v3, Lcom/tencent/mm/d/a/gf$a;->axD:I
+    iput v7, v3, Lcom/tencent/mm/e/a/gq$a;->ajK:I
 
-    sget-object v3, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v3, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v3, v2}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
-    iget-object v2, v2, Lcom/tencent/mm/d/a/gf;->aBg:Lcom/tencent/mm/d/a/gf$b;
+    iget-object v2, v2, Lcom/tencent/mm/e/a/gq;->any:Lcom/tencent/mm/e/a/gq$b;
 
-    iget-boolean v2, v2, Lcom/tencent/mm/d/a/gf$b;->atR:Z
+    iget-boolean v2, v2, Lcom/tencent/mm/e/a/gq$b;->afB:Z
 
     if-nez v2, :cond_4
 
     .line 109
-    new-instance v2, Lcom/tencent/mm/d/a/gf;
+    new-instance v2, Lcom/tencent/mm/e/a/gq;
 
-    invoke-direct {v2}, Lcom/tencent/mm/d/a/gf;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/e/a/gq;-><init>()V
 
-    iget-object v3, v2, Lcom/tencent/mm/d/a/gf;->aBf:Lcom/tencent/mm/d/a/gf$a;
+    iget-object v3, v2, Lcom/tencent/mm/e/a/gq;->anx:Lcom/tencent/mm/e/a/gq$a;
 
-    iput v1, v3, Lcom/tencent/mm/d/a/gf$a;->axD:I
+    iput v1, v3, Lcom/tencent/mm/e/a/gq$a;->ajK:I
 
-    iget-object v3, v2, Lcom/tencent/mm/d/a/gf;->aBf:Lcom/tencent/mm/d/a/gf$a;
+    iget-object v3, v2, Lcom/tencent/mm/e/a/gq;->anx:Lcom/tencent/mm/e/a/gq$a;
 
-    iput-object p0, v3, Lcom/tencent/mm/d/a/gf$a;->aBh:Ljava/lang/String;
+    iput-object p0, v3, Lcom/tencent/mm/e/a/gq$a;->anz:Ljava/lang/String;
 
-    iget-object v3, v2, Lcom/tencent/mm/d/a/gf;->aBf:Lcom/tencent/mm/d/a/gf$a;
+    iget-object v3, v2, Lcom/tencent/mm/e/a/gq;->anx:Lcom/tencent/mm/e/a/gq$a;
 
-    iput v7, v3, Lcom/tencent/mm/d/a/gf$a;->aBi:I
+    iput v7, v3, Lcom/tencent/mm/e/a/gq$a;->anA:I
 
-    sget-object v3, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v3, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v3, v2}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 112
     :cond_4
-    const-string/jumbo v2, "!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ=="
+    const-string/jumbo v2, "MicroMsg.Notification.AppMsg.Handle"
 
     const-string/jumbo v3, "[NO NOTIFICATION](ContactStorageLogic.isLbsRoom(talker))preNotificationCheck, talker: %s, tipsFlag: %s "
 
@@ -571,25 +583,25 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
     .line 117
     :cond_5
-    invoke-static {p0}, Lcom/tencent/mm/model/i;->eN(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/model/i;->eZ(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_6
 
-    invoke-static {p0}, Lcom/tencent/mm/model/i;->dn(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/model/i;->du(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_7
 
-    invoke-static {p0}, Lcom/tencent/mm/model/i;->eM(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/model/i;->eY(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -597,11 +609,23 @@
 
     if-eqz p1, :cond_7
 
-    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p1, v2}, Lcom/tencent/mm/storage/ag;->EP(Ljava/lang/String;)Z
+    invoke-virtual {p1, v2}, Lcom/tencent/mm/storage/ai;->Hd(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_7
+
+    if-eqz p1, :cond_7
+
+    invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p1, v2}, Lcom/tencent/mm/storage/ai;->He(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -609,9 +633,9 @@
 
     .line 118
     :cond_6
-    const-string/jumbo v2, "!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ=="
+    const-string/jumbo v2, "MicroMsg.Notification.AppMsg.Handle"
 
-    const-string/jumbo v3, "[NO NOTIFICATION](ContactStorageLogic.isMuteContact(talker) || (ContactStorageLogic.isChatRoom(talker) && !ContactStorageLogic.isChatRoomNotify(talker) && !msgInfo.isAtSomeone(ConfigStorageLogic.getUsernameFromUserInfo())))preNotificationCheck, talker: %s, tipsFlag: %s "
+    const-string/jumbo v3, "[NO NOTIFICATION](ContactStorageLogic.isMuteContact(talker) || (ContactStorageLogic.isChatRoom(talker) && !ContactStorageLogic.isChatRoomNotify(talker) && !msgInfo.isAtSomeone(ConfigStorageLogic.getUsernameFromUserInfo())) && (msgInfo != null && !msgInfo.isChatRoomNotice(ConfigStorageLogic.getUsernameFromUserInfo())) )preNotificationCheck, talker: %s, tipsFlag: %s "
 
     new-array v4, v6, [Ljava/lang/Object;
 
@@ -623,7 +647,7 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
@@ -634,7 +658,7 @@
     goto/16 :goto_0
 .end method
 
-.method public static bC(I)V
+.method public static bU(I)V
     .locals 5
 
     .prologue
@@ -646,7 +670,7 @@
     move-result v0
 
     .line 572
-    invoke-static {}, Lcom/tencent/mm/g/g;->pf()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/tencent/mm/h/g;->nx()Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -654,7 +678,7 @@
 
     move-result-object v1
 
-    sget-object v2, Lcom/tencent/mm/booter/notification/c;->bnC:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/booter/notification/c;->bbA:Ljava/lang/String;
 
     invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
@@ -663,7 +687,7 @@
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 573
-    const-string/jumbo v1, "!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ=="
+    const-string/jumbo v1, "MicroMsg.Notification.AppMsg.Handle"
 
     const-string/jumbo v2, "saveTotalUnreadMsg %d"
 
@@ -677,21 +701,30 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 574
     return-void
 .end method
 
-.method public static c(Ljava/util/ArrayList;)V
+.method public static d(Ljava/util/ArrayList;)V
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/booter/notification/c$a;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
     .line 555
     if-nez p0, :cond_0
 
     .line 556
-    invoke-static {}, Lcom/tencent/mm/g/g;->pf()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/tencent/mm/h/g;->nx()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -699,7 +732,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/tencent/mm/booter/notification/c;->bnD:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/booter/notification/c;->bbB:Ljava/lang/String;
 
     const-string/jumbo v2, ""
 
@@ -711,7 +744,7 @@
 
     .line 567
     :goto_0
-    const-string/jumbo v1, "!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ=="
+    const-string/jumbo v1, "MicroMsg.Notification.AppMsg.Handle"
 
     const-string/jumbo v2, "saveTotalUnreadTalker %s"
 
@@ -728,7 +761,7 @@
     :goto_1
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 568
     return-void
@@ -741,7 +774,7 @@
     invoke-direct {v0, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     .line 560
-    invoke-static {}, Lcom/tencent/mm/g/g;->pf()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/tencent/mm/h/g;->nx()Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -749,7 +782,7 @@
 
     move-result-object v1
 
-    sget-object v2, Lcom/tencent/mm/booter/notification/c;->bnD:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/booter/notification/c;->bbB:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/tencent/mm/booter/notification/queue/c;->a(Ljava/io/Serializable;)Ljava/lang/String;
 
@@ -769,7 +802,7 @@
     :catch_0
     move-exception v0
 
-    invoke-static {}, Lcom/tencent/mm/g/g;->pf()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/tencent/mm/h/g;->nx()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -777,7 +810,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/tencent/mm/booter/notification/c;->bnD:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/booter/notification/c;->bbB:Ljava/lang/String;
 
     const-string/jumbo v2, ""
 
@@ -798,12 +831,12 @@
     goto :goto_1
 .end method
 
-.method public static np()V
+.method public static lD()V
     .locals 3
 
     .prologue
     .line 626
-    invoke-static {}, Lcom/tencent/mm/g/g;->pf()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/tencent/mm/h/g;->nx()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -811,7 +844,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/tencent/mm/booter/notification/c;->bnE:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/booter/notification/c;->bbC:Ljava/lang/String;
 
     const-string/jumbo v2, ""
 
@@ -825,7 +858,7 @@
     return-void
 .end method
 
-.method static nq()Landroid/app/Notification;
+.method static lE()Landroid/app/Notification;
     .locals 2
 
     .prologue
@@ -835,7 +868,7 @@
     invoke-direct {v0}, Landroid/app/Notification;-><init>()V
 
     .line 72
-    const v1, 0x7f040668
+    const v1, 0x7f0203be
 
     iput v1, v0, Landroid/app/Notification;->icon:I
 
@@ -858,16 +891,16 @@
     return-object v0
 .end method
 
-.method private static nr()I
+.method private static lF()I
     .locals 3
 
     .prologue
     .line 533
-    invoke-static {}, Lcom/tencent/mm/g/g;->pf()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/tencent/mm/h/g;->nx()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    sget-object v1, Lcom/tencent/mm/booter/notification/c;->bnC:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/booter/notification/c;->bbA:Ljava/lang/String;
 
     const/4 v2, 0x0
 
@@ -878,17 +911,26 @@
     return v0
 .end method
 
-.method public static ns()Ljava/util/ArrayList;
+.method public static lG()Ljava/util/ArrayList;
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/booter/notification/c$a;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 543
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/g/g;->pf()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/tencent/mm/h/g;->nx()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    sget-object v1, Lcom/tencent/mm/booter/notification/c;->bnD:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/booter/notification/c;->bbB:Ljava/lang/String;
 
     const-string/jumbo v2, ""
 
@@ -896,7 +938,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/booter/notification/queue/c;->cO(Ljava/lang/String;)Ljava/io/Serializable;
+    invoke-static {v0}, Lcom/tencent/mm/booter/notification/queue/c;->cV(Ljava/lang/String;)Ljava/io/Serializable;
 
     move-result-object v0
 
@@ -938,16 +980,16 @@
     goto :goto_0
 .end method
 
-.method private static nt()Ljava/lang/String;
+.method private static lH()Ljava/lang/String;
     .locals 3
 
     .prologue
     .line 612
-    invoke-static {}, Lcom/tencent/mm/g/g;->pf()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/tencent/mm/h/g;->nx()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    sget-object v1, Lcom/tencent/mm/booter/notification/c;->bnE:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/booter/notification/c;->bbC:Ljava/lang/String;
 
     const-string/jumbo v2, ""
 
@@ -967,7 +1009,7 @@
     .line 202
     iget-object v0, p0, Lcom/tencent/mm/booter/notification/c;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->dO(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->dP(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -981,32 +1023,32 @@
 
     if-eqz p1, :cond_1
 
-    iget-object v0, p1, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v0, p1, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p1, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v0, p1, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     const/4 v1, 0x1
 
     iput v1, v0, Landroid/app/Notification;->priority:I
 
-    invoke-static {}, Lcom/tencent/mm/g/g;->pg()Z
+    invoke-static {}, Lcom/tencent/mm/h/g;->ny()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget-boolean v0, p2, Lcom/tencent/mm/booter/notification/a/g;->boH:Z
+    iget-boolean v0, p2, Lcom/tencent/mm/booter/notification/a/g;->bcG:Z
 
     if-nez v0, :cond_0
 
-    iget-boolean v0, p2, Lcom/tencent/mm/booter/notification/a/g;->boG:Z
+    iget-boolean v0, p2, Lcom/tencent/mm/booter/notification/a/g;->bcF:Z
 
     if-eqz v0, :cond_1
 
     :cond_0
-    iget-object v0, p1, Lcom/tencent/mm/booter/notification/NotificationItem;->dg:Landroid/app/Notification;
+    iget-object v0, p1, Lcom/tencent/mm/booter/notification/NotificationItem;->dw:Landroid/app/Notification;
 
     const/4 v1, 0x0
 
@@ -1050,37 +1092,37 @@
     if-ne p2, v3, :cond_0
 
     .line 265
-    invoke-static {}, Lcom/tencent/mm/aq/a;->aOQ()I
+    invoke-static {}, Lcom/tencent/mm/au/a;->aTs()I
 
     move-result p2
 
     .line 267
     :cond_0
-    iget-object v3, v4, Landroid/support/v4/app/p$d;->dg:Landroid/app/Notification;
+    iget-object v3, v4, Landroid/support/v4/app/p$d;->dw:Landroid/app/Notification;
 
     const v5, -0xff0100
 
     iput v5, v3, Landroid/app/Notification;->ledARGB:I
 
-    iget-object v3, v4, Landroid/support/v4/app/p$d;->dg:Landroid/app/Notification;
+    iget-object v3, v4, Landroid/support/v4/app/p$d;->dw:Landroid/app/Notification;
 
     const/16 v5, 0x12c
 
     iput v5, v3, Landroid/app/Notification;->ledOnMS:I
 
-    iget-object v3, v4, Landroid/support/v4/app/p$d;->dg:Landroid/app/Notification;
+    iget-object v3, v4, Landroid/support/v4/app/p$d;->dw:Landroid/app/Notification;
 
     const/16 v5, 0x3e8
 
     iput v5, v3, Landroid/app/Notification;->ledOffMS:I
 
-    iget-object v3, v4, Landroid/support/v4/app/p$d;->dg:Landroid/app/Notification;
+    iget-object v3, v4, Landroid/support/v4/app/p$d;->dw:Landroid/app/Notification;
 
     iget v3, v3, Landroid/app/Notification;->ledOnMS:I
 
     if-eqz v3, :cond_b
 
-    iget-object v3, v4, Landroid/support/v4/app/p$d;->dg:Landroid/app/Notification;
+    iget-object v3, v4, Landroid/support/v4/app/p$d;->dw:Landroid/app/Notification;
 
     iget v3, v3, Landroid/app/Notification;->ledOffMS:I
 
@@ -1089,9 +1131,9 @@
     const/4 v3, 0x1
 
     :goto_0
-    iget-object v5, v4, Landroid/support/v4/app/p$d;->dg:Landroid/app/Notification;
+    iget-object v5, v4, Landroid/support/v4/app/p$d;->dw:Landroid/app/Notification;
 
-    iget-object v6, v4, Landroid/support/v4/app/p$d;->dg:Landroid/app/Notification;
+    iget-object v6, v4, Landroid/support/v4/app/p$d;->dw:Landroid/app/Notification;
 
     iget v6, v6, Landroid/app/Notification;->flags:I
 
@@ -1106,7 +1148,7 @@
 
     iput v3, v5, Landroid/app/Notification;->flags:I
 
-    invoke-virtual {v4, p2}, Landroid/support/v4/app/p$d;->l(I)Landroid/support/v4/app/p$d;
+    invoke-virtual {v4, p2}, Landroid/support/v4/app/p$d;->m(I)Landroid/support/v4/app/p$d;
 
     move-result-object v3
 
@@ -1114,12 +1156,12 @@
 
     move-result-object v3
 
-    iput-object p4, v3, Landroid/support/v4/app/p$d;->cJ:Landroid/app/PendingIntent;
+    iput-object p4, v3, Landroid/support/v4/app/p$d;->cZ:Landroid/app/PendingIntent;
 
     .line 268
     const/4 v3, 0x1
 
-    iput-boolean v3, v4, Landroid/support/v4/app/p$d;->da:Z
+    iput-boolean v3, v4, Landroid/support/v4/app/p$d;->dr:Z
 
     .line 270
     if-eqz p5, :cond_1
@@ -1136,7 +1178,7 @@
 
     .line 278
     :cond_2
-    iget-object v3, v4, Landroid/support/v4/app/p$d;->dg:Landroid/app/Notification;
+    iget-object v3, v4, Landroid/support/v4/app/p$d;->dw:Landroid/app/Notification;
 
     iput p3, v3, Landroid/app/Notification;->defaults:I
 
@@ -1144,7 +1186,7 @@
 
     if-eqz v3, :cond_3
 
-    iget-object v3, v4, Landroid/support/v4/app/p$d;->dg:Landroid/app/Notification;
+    iget-object v3, v4, Landroid/support/v4/app/p$d;->dw:Landroid/app/Notification;
 
     iget v5, v3, Landroid/app/Notification;->flags:I
 
@@ -1157,7 +1199,7 @@
     if-eqz p8, :cond_4
 
     .line 280
-    iput-object p8, v4, Landroid/support/v4/app/p$d;->cM:Landroid/graphics/Bitmap;
+    iput-object p8, v4, Landroid/support/v4/app/p$d;->dc:Landroid/graphics/Bitmap;
 
     .line 283
     :cond_4
@@ -1171,11 +1213,11 @@
     .line 285
     iget-object v3, p1, Landroid/app/Notification;->sound:Landroid/net/Uri;
 
-    iget-object v5, v4, Landroid/support/v4/app/p$d;->dg:Landroid/app/Notification;
+    iget-object v5, v4, Landroid/support/v4/app/p$d;->dw:Landroid/app/Notification;
 
     iput-object v3, v5, Landroid/app/Notification;->sound:Landroid/net/Uri;
 
-    iget-object v3, v4, Landroid/support/v4/app/p$d;->dg:Landroid/app/Notification;
+    iget-object v3, v4, Landroid/support/v4/app/p$d;->dw:Landroid/app/Notification;
 
     const/4 v5, -0x1
 
@@ -1190,7 +1232,7 @@
     .line 289
     iget-object v3, p1, Landroid/app/Notification;->vibrate:[J
 
-    iget-object v5, v4, Landroid/support/v4/app/p$d;->dg:Landroid/app/Notification;
+    iget-object v5, v4, Landroid/support/v4/app/p$d;->dw:Landroid/app/Notification;
 
     iput-object v3, v5, Landroid/app/Notification;->vibrate:[J
 
@@ -1238,47 +1280,47 @@
     .line 305
     const-string/jumbo v3, "msg"
 
-    iput-object v3, v4, Landroid/support/v4/app/p$d;->db:Ljava/lang/String;
+    iput-object v3, v4, Landroid/support/v4/app/p$d;->ds:Ljava/lang/String;
 
     .line 306
-    new-instance v3, Lcom/tencent/mm/d/a/l;
+    new-instance v3, Lcom/tencent/mm/e/a/m;
 
-    invoke-direct {v3}, Lcom/tencent/mm/d/a/l;-><init>()V
+    invoke-direct {v3}, Lcom/tencent/mm/e/a/m;-><init>()V
 
     .line 307
-    iget-object v5, v3, Lcom/tencent/mm/d/a/l;->ast:Lcom/tencent/mm/d/a/l$a;
+    iget-object v5, v3, Lcom/tencent/mm/e/a/m;->aef:Lcom/tencent/mm/e/a/m$a;
 
     move-object/from16 v0, p15
 
-    iput-object v0, v5, Lcom/tencent/mm/d/a/l$a;->username:Ljava/lang/String;
+    iput-object v0, v5, Lcom/tencent/mm/e/a/m$a;->username:Ljava/lang/String;
 
     .line 308
-    iget-object v5, v3, Lcom/tencent/mm/d/a/l;->ast:Lcom/tencent/mm/d/a/l$a;
+    iget-object v5, v3, Lcom/tencent/mm/e/a/m;->aef:Lcom/tencent/mm/e/a/m$a;
 
-    iput-object p5, v5, Lcom/tencent/mm/d/a/l$a;->title:Ljava/lang/String;
+    iput-object p5, v5, Lcom/tencent/mm/e/a/m$a;->title:Ljava/lang/String;
 
     .line 309
-    sget-object v5, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v5, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v5, v3}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v5, v3}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 310
-    iget-object v5, v3, Lcom/tencent/mm/d/a/l;->ast:Lcom/tencent/mm/d/a/l$a;
+    iget-object v5, v3, Lcom/tencent/mm/e/a/m;->aef:Lcom/tencent/mm/e/a/m$a;
 
-    iget-object v5, v5, Lcom/tencent/mm/d/a/l$a;->asu:Landroid/support/v4/app/p$f;
+    iget-object v5, v5, Lcom/tencent/mm/e/a/m$a;->aeg:Landroid/support/v4/app/p$f;
 
     if-eqz v5, :cond_9
 
     .line 311
-    iget-object v3, v3, Lcom/tencent/mm/d/a/l;->ast:Lcom/tencent/mm/d/a/l$a;
+    iget-object v3, v3, Lcom/tencent/mm/e/a/m;->aef:Lcom/tencent/mm/e/a/m$a;
 
-    iget-object v3, v3, Lcom/tencent/mm/d/a/l$a;->asu:Landroid/support/v4/app/p$f;
+    iget-object v3, v3, Lcom/tencent/mm/e/a/m$a;->aeg:Landroid/support/v4/app/p$f;
 
     invoke-interface {v3, v4}, Landroid/support/v4/app/p$f;->a(Landroid/support/v4/app/p$d;)Landroid/support/v4/app/p$d;
 
     .line 315
     :cond_9
-    invoke-static {}, Landroid/support/v4/app/p;->W()Landroid/support/v4/app/p$h;
+    invoke-static {}, Landroid/support/v4/app/p;->V()Landroid/support/v4/app/p$h;
 
     move-result-object v3
 
@@ -1350,26 +1392,26 @@
 .end method
 
 .method public final a(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZI)V
-    .locals 18
+    .locals 19
 
     .prologue
     .line 335
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
     .line 337
-    invoke-static {}, Lcom/tencent/mm/booter/notification/a/e;->nE()Z
+    invoke-static {}, Lcom/tencent/mm/booter/notification/a/e;->lS()Z
 
     move-result v8
 
     .line 338
-    invoke-static {}, Lcom/tencent/mm/booter/notification/a/e;->nC()Z
+    invoke-static {}, Lcom/tencent/mm/booter/notification/a/e;->lQ()Z
 
     move-result v7
 
     .line 341
-    const-string/jumbo v3, "!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ=="
+    const-string/jumbo v3, "MicroMsg.Notification.AppMsg.Handle"
 
     const-string/jumbo v4, "push:isShake: %B, isSound: %B"
 
@@ -1393,12 +1435,12 @@
 
     aput-object v9, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 343
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v3, p1, v3
+    cmp-long v3, p1, v4
 
     if-nez v3, :cond_0
 
@@ -1408,19 +1450,19 @@
 
     .line 351
     :cond_0
-    invoke-static/range {p3 .. p3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static/range {p3 .. p3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    invoke-static/range {p4 .. p4}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static/range {p4 .. p4}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    invoke-static/range {p5 .. p5}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static/range {p5 .. p5}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -1428,51 +1470,51 @@
 
     .line 352
     :cond_1
-    const-string/jumbo v2, "!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ=="
+    const-string/jumbo v2, "MicroMsg.Notification.AppMsg.Handle"
 
     const-string/jumbo v3, "[NO NOTIFICATION] Util.isNullOrNil(userName) || Util.isNullOrNil(nickName) || Util.isNullOrNil(content)"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 356
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/g/g;->pI()Z
+    invoke-static {}, Lcom/tencent/mm/h/g;->oa()Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    invoke-static {}, Lcom/tencent/mm/g/g;->pJ()Z
+    invoke-static {}, Lcom/tencent/mm/h/g;->ob()Z
 
     move-result v3
 
     if-nez v3, :cond_3
 
     .line 357
-    const-string/jumbo v2, "!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ=="
+    const-string/jumbo v2, "MicroMsg.Notification.AppMsg.Handle"
 
     const-string/jumbo v3, "[NO NOTIFICATION](MMCore.getAccStg().isWebWXOnline() && !ConfigStorageLogic.isWebWXNotificationOpen())preNotificationCheck"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 360
     :cond_3
-    invoke-static {}, Lcom/tencent/mm/g/g;->ph()Z
+    invoke-static {}, Lcom/tencent/mm/h/g;->nz()Z
 
     move-result v3
 
     if-nez v3, :cond_4
 
     .line 361
-    const-string/jumbo v2, "!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ=="
+    const-string/jumbo v2, "MicroMsg.Notification.AppMsg.Handle"
 
     const-string/jumbo v3, "[NO NOTIFICATION]new MsgNotification setting no notification"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1485,31 +1527,31 @@
     if-eqz v3, :cond_5
 
     .line 368
-    const-string/jumbo v2, "!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ=="
+    const-string/jumbo v2, "MicroMsg.Notification.AppMsg.Handle"
 
     const-string/jumbo v3, "[NO NOTIFICATION]already notify"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 372
     :cond_5
-    invoke-static {}, Lcom/tencent/mm/booter/notification/queue/b;->nw()Lcom/tencent/mm/booter/notification/queue/b;
+    invoke-static {}, Lcom/tencent/mm/booter/notification/queue/b;->lK()Lcom/tencent/mm/booter/notification/queue/b;
 
     move-result-object v3
 
     invoke-virtual {v3}, Lcom/tencent/mm/booter/notification/queue/b;->restore()V
 
     .line 374
-    invoke-static {}, Lcom/tencent/mm/booter/notification/c;->nr()I
+    invoke-static {}, Lcom/tencent/mm/booter/notification/c;->lF()I
 
     move-result v3
 
     add-int/lit8 v5, v3, 0x1
 
     .line 376
-    invoke-static {}, Lcom/tencent/mm/booter/notification/c;->ns()Ljava/util/ArrayList;
+    invoke-static {}, Lcom/tencent/mm/booter/notification/c;->lG()Ljava/util/ArrayList;
 
     move-result-object v3
 
@@ -1528,7 +1570,7 @@
     add-int/lit8 v6, v3, 0x1
 
     .line 378
-    invoke-static {}, Lcom/tencent/mm/booter/notification/c;->ns()Ljava/util/ArrayList;
+    invoke-static {}, Lcom/tencent/mm/booter/notification/c;->lG()Ljava/util/ArrayList;
 
     move-result-object v3
 
@@ -1555,31 +1597,31 @@
 
     move-object/from16 v0, p3
 
-    iput-object v0, v4, Lcom/tencent/mm/booter/notification/c$a;->ajh:Ljava/lang/String;
+    iput-object v0, v4, Lcom/tencent/mm/booter/notification/c$a;->UX:Ljava/lang/String;
 
     const/4 v9, 0x1
 
-    iput v9, v4, Lcom/tencent/mm/booter/notification/c$a;->bnF:I
+    iput v9, v4, Lcom/tencent/mm/booter/notification/c$a;->bbD:I
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :goto_2
-    invoke-static {v3}, Lcom/tencent/mm/booter/notification/c;->c(Ljava/util/ArrayList;)V
+    invoke-static {v3}, Lcom/tencent/mm/booter/notification/c;->d(Ljava/util/ArrayList;)V
 
-    invoke-static {}, Lcom/tencent/mm/booter/notification/c;->nr()I
+    invoke-static {}, Lcom/tencent/mm/booter/notification/c;->lF()I
 
     move-result v4
 
     add-int/lit8 v4, v4, 0x1
 
-    invoke-static {v4}, Lcom/tencent/mm/booter/notification/c;->bC(I)V
+    invoke-static {v4}, Lcom/tencent/mm/booter/notification/c;->bU(I)V
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v4
 
     .line 383
-    invoke-static {}, Lcom/tencent/mm/booter/notification/a/e;->nB()Z
+    invoke-static {}, Lcom/tencent/mm/booter/notification/a/e;->lP()Z
 
     move-result v3
 
@@ -1593,73 +1635,73 @@
 
     .line 388
     :goto_3
-    invoke-static {}, Lcom/tencent/mm/booter/notification/c;->nq()Landroid/app/Notification;
+    invoke-static {}, Lcom/tencent/mm/booter/notification/c;->lE()Landroid/app/Notification;
 
     move-result-object v8
 
     .line 390
-    invoke-static {}, Lcom/tencent/mm/booter/notification/queue/b;->nw()Lcom/tencent/mm/booter/notification/queue/b;
+    invoke-static {}, Lcom/tencent/mm/booter/notification/queue/b;->lK()Lcom/tencent/mm/booter/notification/queue/b;
 
     move-result-object v7
 
     move-object/from16 v0, p3
 
-    invoke-virtual {v7, v0}, Lcom/tencent/mm/booter/notification/queue/b;->cN(Ljava/lang/String;)I
+    invoke-virtual {v7, v0}, Lcom/tencent/mm/booter/notification/queue/b;->cU(Ljava/lang/String;)I
 
     move-result v17
 
     .line 392
     move-object/from16 v0, p0
 
-    iget-object v7, v0, Lcom/tencent/mm/booter/notification/c;->amw:Lcom/tencent/mm/booter/notification/a/g;
+    iget-object v7, v0, Lcom/tencent/mm/booter/notification/c;->Zl:Lcom/tencent/mm/booter/notification/a/g;
 
-    iput v5, v7, Lcom/tencent/mm/booter/notification/a/g;->boB:I
+    iput v5, v7, Lcom/tencent/mm/booter/notification/a/g;->bcA:I
 
     .line 393
     move-object/from16 v0, p0
 
-    iget-object v7, v0, Lcom/tencent/mm/booter/notification/c;->amw:Lcom/tencent/mm/booter/notification/a/g;
+    iget-object v7, v0, Lcom/tencent/mm/booter/notification/c;->Zl:Lcom/tencent/mm/booter/notification/a/g;
 
-    iput v4, v7, Lcom/tencent/mm/booter/notification/a/g;->boA:I
+    iput v4, v7, Lcom/tencent/mm/booter/notification/a/g;->bcz:I
 
     .line 394
     move-object/from16 v0, p0
 
-    iget-object v7, v0, Lcom/tencent/mm/booter/notification/c;->amw:Lcom/tencent/mm/booter/notification/a/g;
+    iget-object v7, v0, Lcom/tencent/mm/booter/notification/c;->Zl:Lcom/tencent/mm/booter/notification/a/g;
 
-    iput-boolean v10, v7, Lcom/tencent/mm/booter/notification/a/g;->boH:Z
+    iput-boolean v10, v7, Lcom/tencent/mm/booter/notification/a/g;->bcG:Z
 
     .line 395
     move-object/from16 v0, p0
 
-    iget-object v7, v0, Lcom/tencent/mm/booter/notification/c;->amw:Lcom/tencent/mm/booter/notification/a/g;
+    iget-object v7, v0, Lcom/tencent/mm/booter/notification/c;->Zl:Lcom/tencent/mm/booter/notification/a/g;
 
-    iput-boolean v3, v7, Lcom/tencent/mm/booter/notification/a/g;->boG:Z
+    iput-boolean v3, v7, Lcom/tencent/mm/booter/notification/a/g;->bcF:Z
 
     .line 397
-    invoke-static {}, Lcom/tencent/mm/g/g;->pi()Z
+    invoke-static {}, Lcom/tencent/mm/h/g;->nA()Z
 
     move-result v7
 
     .line 399
-    invoke-static {}, Lcom/tencent/mm/aq/a;->aOQ()I
+    invoke-static {}, Lcom/tencent/mm/au/a;->aTs()I
 
     move-result v9
 
     .line 400
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/tencent/mm/booter/notification/c;->amw:Lcom/tencent/mm/booter/notification/a/g;
+    iget-object v11, v0, Lcom/tencent/mm/booter/notification/c;->Zl:Lcom/tencent/mm/booter/notification/a/g;
 
-    iget-object v12, v11, Lcom/tencent/mm/booter/notification/a/g;->bot:Lcom/tencent/mm/booter/notification/a/b;
+    iget-object v12, v11, Lcom/tencent/mm/booter/notification/a/g;->bcs:Lcom/tencent/mm/booter/notification/a/b;
 
     iget-object v13, v11, Lcom/tencent/mm/booter/notification/a/g;->mContext:Landroid/content/Context;
 
     invoke-virtual {v12, v13, v3, v10, v8}, Lcom/tencent/mm/booter/notification/a/b;->a(Landroid/content/Context;ZZLandroid/app/Notification;)I
 
-    iget-object v3, v11, Lcom/tencent/mm/booter/notification/a/g;->bot:Lcom/tencent/mm/booter/notification/a/b;
+    iget-object v3, v11, Lcom/tencent/mm/booter/notification/a/g;->bcs:Lcom/tencent/mm/booter/notification/a/b;
 
-    iget v10, v3, Lcom/tencent/mm/booter/notification/a/b;->bok:I
+    iget v10, v3, Lcom/tencent/mm/booter/notification/a/b;->bci:I
 
     .line 401
     new-instance v3, Landroid/content/Intent;
@@ -1741,7 +1783,7 @@
     move-result-object v14
 
     .line 405
-    invoke-static {}, Lcom/tencent/mm/g/g;->pi()Z
+    invoke-static {}, Lcom/tencent/mm/h/g;->nA()Z
 
     move-result v3
 
@@ -1751,7 +1793,7 @@
 
     move-object/from16 v1, p6
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/booter/notification/a/a;->t(Ljava/lang/String;Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-static {v0, v1}, Lcom/tencent/mm/booter/notification/a/a;->r(Ljava/lang/String;Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v3
 
@@ -1781,15 +1823,15 @@
     .line 409
     move-wide/from16 v0, p1
 
-    iput-wide v0, v3, Lcom/tencent/mm/booter/notification/NotificationItem;->bnV:J
+    iput-wide v0, v3, Lcom/tencent/mm/booter/notification/NotificationItem;->bbT:J
 
     .line 410
-    iput v6, v3, Lcom/tencent/mm/booter/notification/NotificationItem;->bnW:I
+    iput v6, v3, Lcom/tencent/mm/booter/notification/NotificationItem;->bbU:I
 
     .line 412
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/booter/notification/c;->amw:Lcom/tencent/mm/booter/notification/a/g;
+    iget-object v2, v0, Lcom/tencent/mm/booter/notification/c;->Zl:Lcom/tencent/mm/booter/notification/a/g;
 
     move-object/from16 v0, p0
 
@@ -1798,32 +1840,32 @@
     .line 418
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/booter/notification/c;->amw:Lcom/tencent/mm/booter/notification/a/g;
+    iget-object v2, v0, Lcom/tencent/mm/booter/notification/c;->Zl:Lcom/tencent/mm/booter/notification/a/g;
 
-    iget v2, v2, Lcom/tencent/mm/booter/notification/a/g;->boB:I
+    iget v2, v2, Lcom/tencent/mm/booter/notification/a/g;->bcA:I
 
-    invoke-static {v2}, Lcom/tencent/mm/booter/notification/d;->bD(I)V
+    invoke-static {v2}, Lcom/tencent/mm/booter/notification/d;->bV(I)V
 
     .line 419
     move-object/from16 v0, p3
 
-    invoke-static {v0, v6}, Lcom/tencent/mm/booter/notification/d;->m(Ljava/lang/String;I)V
+    invoke-static {v0, v6}, Lcom/tencent/mm/booter/notification/d;->j(Ljava/lang/String;I)V
 
     goto/16 :goto_0
 
     .line 377
     :cond_7
-    iget v3, v3, Lcom/tencent/mm/booter/notification/c$a;->bnF:I
+    iget v3, v3, Lcom/tencent/mm/booter/notification/c$a;->bbD:I
 
     goto/16 :goto_1
 
     .line 378
     :cond_8
-    iget v9, v4, Lcom/tencent/mm/booter/notification/c$a;->bnF:I
+    iget v9, v4, Lcom/tencent/mm/booter/notification/c$a;->bbD:I
 
     add-int/lit8 v9, v9, 0x1
 
-    iput v9, v4, Lcom/tencent/mm/booter/notification/c$a;->bnF:I
+    iput v9, v4, Lcom/tencent/mm/booter/notification/c$a;->bbD:I
 
     goto/16 :goto_2
 

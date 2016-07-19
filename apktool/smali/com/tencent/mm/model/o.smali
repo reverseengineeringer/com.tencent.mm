@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field bAq:Lcom/tencent/mm/model/c;
+.field btt:Lcom/tencent/mm/model/c;
 
 
 # direct methods
@@ -16,7 +16,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 25
-    iput-object p1, p0, Lcom/tencent/mm/model/o;->bAq:Lcom/tencent/mm/model/c;
+    iput-object p1, p0, Lcom/tencent/mm/model/o;->btt:Lcom/tencent/mm/model/c;
 
     .line 26
     return-void
@@ -36,7 +36,7 @@
 
     .line 250
     :cond_0
-    iget-wide v0, p0, Lcom/tencent/mm/h/a;->bvi:J
+    iget-wide v0, p0, Lcom/tencent/mm/i/a;->bjS:J
 
     long-to-int v0, v0
 
@@ -48,17 +48,17 @@
     invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/k;->setUsername(Ljava/lang/String;)V
 
     .line 253
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/s;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ru()Lcom/tencent/mm/storage/s;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/storage/s;->EA(Ljava/lang/String;)Lcom/tencent/mm/storage/r;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/storage/s;->GO(Ljava/lang/String;)Lcom/tencent/mm/storage/r;
 
     move-result-object v0
 
@@ -66,20 +66,20 @@
     if-nez v0, :cond_2
 
     .line 255
-    invoke-virtual {p0}, Lcom/tencent/mm/storage/k;->qb()V
+    invoke-virtual {p0}, Lcom/tencent/mm/storage/k;->oz()V
 
     .line 260
     :goto_0
     const/4 v0, 0x3
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/k;->aY(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/k;->bo(I)V
 
     .line 262
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v0
 
@@ -91,7 +91,7 @@
 
     .line 257
     :cond_2
-    invoke-virtual {p0}, Lcom/tencent/mm/storage/k;->qa()V
+    invoke-virtual {p0}, Lcom/tencent/mm/storage/k;->oy()V
 
     goto :goto_0
 .end method
@@ -101,10 +101,10 @@
 
     .prologue
     .line 340
-    iget-object v0, p0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     .line 341
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -118,31 +118,31 @@
     if-eqz v2, :cond_0
 
     .line 344
-    const v2, 0x7f0b005a
+    const v2, 0x7f0809de
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 345
-    const v2, 0x7f0b005b
+    const v2, 0x7f0809df
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 346
-    const v2, 0x7f0b005c
+    const v2, 0x7f0809e0
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 349
     :cond_0
@@ -155,31 +155,31 @@
     if-eqz v2, :cond_1
 
     .line 350
-    const v2, 0x7f0b005d
+    const v2, 0x7f0809ad
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 351
-    const v2, 0x7f0b005e
+    const v2, 0x7f0809ae
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 352
-    const v2, 0x7f0b005f
+    const v2, 0x7f0809af
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 355
     :cond_1
@@ -192,31 +192,31 @@
     if-eqz v2, :cond_2
 
     .line 356
-    const v2, 0x7f0b0063
+    const v2, 0x7f0809e5
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 357
-    const v2, 0x7f0b0064
+    const v2, 0x7f0809e6
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 358
-    const v2, 0x7f0b0065
+    const v2, 0x7f0809e7
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 361
     :cond_2
@@ -229,31 +229,31 @@
     if-eqz v2, :cond_3
 
     .line 362
-    const v2, 0x7f0b0060
+    const v2, 0x7f0809c2
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 363
-    const v2, 0x7f0b0061
+    const v2, 0x7f0809c3
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 364
-    const v2, 0x7f0b0062
+    const v2, 0x7f0809c4
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 367
     :cond_3
@@ -266,31 +266,31 @@
     if-eqz v2, :cond_4
 
     .line 368
-    const v2, 0x7f0b0066
+    const v2, 0x7f0809cb
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 369
-    const v2, 0x7f0b0067
+    const v2, 0x7f0809cc
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 370
-    const v2, 0x7f0b0068
+    const v2, 0x7f0809cd
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 373
     :cond_4
@@ -303,31 +303,31 @@
     if-eqz v2, :cond_5
 
     .line 374
-    const v2, 0x7f0b007e
+    const v2, 0x7f0809e1
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 375
-    const v2, 0x7f0b007f
+    const v2, 0x7f0809e2
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 376
-    const v2, 0x7f0b0080
+    const v2, 0x7f0809e3
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 379
     :cond_5
@@ -340,31 +340,31 @@
     if-eqz v2, :cond_6
 
     .line 380
-    const v2, 0x7f0b0069
+    const v2, 0x7f0809b3
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 381
-    const v2, 0x7f0b006a
+    const v2, 0x7f0809b4
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 382
-    const v2, 0x7f0b006b
+    const v2, 0x7f0809b5
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 385
     :cond_6
@@ -377,31 +377,31 @@
     if-eqz v2, :cond_7
 
     .line 386
-    const v2, 0x7f0b006c
+    const v2, 0x7f0809d6
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 387
-    const v2, 0x7f0b006d
+    const v2, 0x7f0809d7
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 388
-    const v2, 0x7f0b006e
+    const v2, 0x7f0809d8
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 391
     :cond_7
@@ -414,31 +414,31 @@
     if-eqz v2, :cond_8
 
     .line 392
-    const v2, 0x7f0b006f
+    const v2, 0x7f0809bc
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 393
-    const v2, 0x7f0b0070
+    const v2, 0x7f0809bd
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 394
-    const v2, 0x7f0b0071
+    const v2, 0x7f0809be
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 397
     :cond_8
@@ -451,31 +451,31 @@
     if-eqz v2, :cond_9
 
     .line 398
-    const v2, 0x7f0b0078
+    const v2, 0x7f0809c8
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 399
-    const v2, 0x7f0b0079
+    const v2, 0x7f0809c9
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 400
-    const v2, 0x7f0b007a
+    const v2, 0x7f0809ca
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 403
     :cond_9
@@ -488,31 +488,31 @@
     if-eqz v2, :cond_a
 
     .line 404
-    const v2, 0x7f0b1624
+    const v2, 0x7f0809b6
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 405
-    const v2, 0x7f0b007c
+    const v2, 0x7f0809b7
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 406
-    const v2, 0x7f0b007d
+    const v2, 0x7f0809b8
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 409
     :cond_a
@@ -525,31 +525,31 @@
     if-eqz v2, :cond_b
 
     .line 410
-    const v2, 0x7f0b0057
+    const v2, 0x7f0809d5
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 411
-    const v2, 0x7f0b0058
+    const v2, 0x7f0809dc
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 412
-    const v2, 0x7f0b0059
+    const v2, 0x7f0809dd
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 415
     :cond_b
@@ -562,31 +562,31 @@
     if-eqz v2, :cond_c
 
     .line 416
-    const v2, 0x7f0b0054
+    const v2, 0x7f0809b9
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 417
-    const v2, 0x7f0b0055
+    const v2, 0x7f0809ba
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 418
-    const v2, 0x7f0b0056
+    const v2, 0x7f0809bb
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 421
     :cond_c
@@ -599,31 +599,31 @@
     if-eqz v2, :cond_d
 
     .line 422
-    const v2, 0x7f0b0081
+    const v2, 0x7f0809eb
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 423
-    const v2, 0x7f0b0082
+    const v2, 0x7f0809ec
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 424
-    const v2, 0x7f0b0083
+    const v2, 0x7f0809ed
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 427
     :cond_d
@@ -636,31 +636,31 @@
     if-eqz v2, :cond_e
 
     .line 428
-    const v2, 0x7f0b0072
+    const v2, 0x7f0809d2
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 429
-    const v2, 0x7f0b0073
+    const v2, 0x7f0809d3
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 430
-    const v2, 0x7f0b0074
+    const v2, 0x7f0809d4
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 433
     :cond_e
@@ -673,31 +673,31 @@
     if-eqz v2, :cond_f
 
     .line 434
-    const v2, 0x7f0b0075
+    const v2, 0x7f0809bf
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 435
-    const v2, 0x7f0b0076
+    const v2, 0x7f0809c0
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 436
-    const v2, 0x7f0b0077
+    const v2, 0x7f0809c1
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 439
     :cond_f
@@ -710,31 +710,31 @@
     if-eqz v2, :cond_10
 
     .line 440
-    const v2, 0x7f0b0084
+    const v2, 0x7f0809b0
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 441
-    const v2, 0x7f0b0085
+    const v2, 0x7f0809b1
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 442
-    const v2, 0x7f0b0086
+    const v2, 0x7f0809b2
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 445
     :cond_10
@@ -747,31 +747,31 @@
     if-eqz v2, :cond_11
 
     .line 446
-    const v2, 0x7f0b0088
+    const v2, 0x7f0809ee
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 447
-    const v2, 0x7f0b0089
+    const v2, 0x7f0809ef
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 448
-    const v2, 0x7f0b008a
+    const v2, 0x7f0809f0
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 451
     :cond_11
@@ -784,31 +784,31 @@
     if-eqz v2, :cond_12
 
     .line 452
-    const v2, 0x7f0b008b
+    const v2, 0x7f0809e8
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 453
-    const v2, 0x7f0b008c
+    const v2, 0x7f0809e9
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 454
-    const v2, 0x7f0b008d
+    const v2, 0x7f0809ea
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 457
     :cond_12
@@ -821,31 +821,31 @@
     if-eqz v2, :cond_13
 
     .line 458
-    const v2, 0x7f0b0051
+    const v2, 0x7f0809d9
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 459
-    const v2, 0x7f0b0052
+    const v2, 0x7f0809da
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 460
-    const v2, 0x7f0b0053
+    const v2, 0x7f0809db
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 463
     :cond_13
@@ -858,31 +858,31 @@
     if-eqz v2, :cond_14
 
     .line 464
-    const v2, 0x7f0b008e
+    const v2, 0x7f0809c5
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 465
-    const v2, 0x7f0b008f
+    const v2, 0x7f0809c6
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 466
-    const v2, 0x7f0b0090
+    const v2, 0x7f0809c7
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 469
     :cond_14
@@ -895,31 +895,31 @@
     if-eqz v0, :cond_15
 
     .line 470
-    const v0, 0x7f0b0091
+    const v0, 0x7f0809cf
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/k;->bC(Ljava/lang/String;)V
 
     .line 471
-    const v0, 0x7f0b0092
+    const v0, 0x7f0809d0
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
 
     .line 472
-    const v0, 0x7f0b0093
+    const v0, 0x7f0809d1
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/k;->bE(Ljava/lang/String;)V
 
     .line 474
     :cond_15
@@ -935,13 +935,13 @@
     const/4 v1, 0x3
 
     .line 87
-    iget-object v0, p0, Lcom/tencent/mm/model/o;->bAq:Lcom/tencent/mm/model/c;
+    iget-object v0, p0, Lcom/tencent/mm/model/o;->btt:Lcom/tencent/mm/model/c;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v0
 
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/storage/q;->Ep(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/storage/q;->GD(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
 
     move-result-object v0
 
@@ -955,7 +955,7 @@
 
     .line 91
     :cond_0
-    iget-wide v2, v0, Lcom/tencent/mm/h/a;->bvi:J
+    iget-wide v2, v0, Lcom/tencent/mm/i/a;->bjS:J
 
     long-to-int v2, v2
 
@@ -965,7 +965,7 @@
     invoke-virtual {v0, p2}, Lcom/tencent/mm/storage/k;->setUsername(Ljava/lang/String;)V
 
     .line 93
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->qa()V
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->oy()V
 
     .line 95
     invoke-static {v0}, Lcom/tencent/mm/model/o;->v(Lcom/tencent/mm/storage/k;)V
@@ -976,15 +976,15 @@
     const/4 v1, 0x4
 
     :cond_1
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/storage/k;->aY(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/storage/k;->bo(I)V
 
     .line 97
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->qg()V
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->oF()V
 
     .line 99
-    iget-object v1, p0, Lcom/tencent/mm/model/o;->bAq:Lcom/tencent/mm/model/c;
+    iget-object v1, p0, Lcom/tencent/mm/model/o;->btt:Lcom/tencent/mm/model/c;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v1
 
@@ -1003,12 +1003,12 @@
     if-eqz p1, :cond_2
 
     .line 103
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->qg()V
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->oF()V
 
     .line 104
-    iget-object v1, p0, Lcom/tencent/mm/model/o;->bAq:Lcom/tencent/mm/model/c;
+    iget-object v1, p0, Lcom/tencent/mm/model/o;->btt:Lcom/tencent/mm/model/c;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v1
 

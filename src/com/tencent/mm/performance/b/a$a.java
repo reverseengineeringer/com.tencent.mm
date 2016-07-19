@@ -1,10 +1,12 @@
 package com.tencent.mm.performance.b;
 
-import android.os.Looper;
-
 public abstract interface a$a
 {
-  public abstract void b(Looper paramLooper, long paramLong, int paramInt, boolean paramBoolean, String paramString);
+  public abstract void a(long paramLong1, long paramLong2, long paramLong3);
+  
+  public abstract void b(long paramLong1, long paramLong2, long paramLong3);
+  
+  public abstract void c(long paramLong1, long paramLong2, long paramLong3);
 }
 
 /* Location:

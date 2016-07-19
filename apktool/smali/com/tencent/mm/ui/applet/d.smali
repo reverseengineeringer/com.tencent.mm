@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static kzS:I
+.field private static kYY:I
 
 
 # direct methods
@@ -23,7 +23,7 @@
     .line 37
     const/4 v0, 0x0
 
-    sput v0, Lcom/tencent/mm/ui/applet/d;->kzS:I
+    sput v0, Lcom/tencent/mm/ui/applet/d;->kYY:I
 
     return-void
 .end method
@@ -39,26 +39,26 @@
     return-void
 .end method
 
-.method static synthetic bck()I
+.method static synthetic bhx()I
     .locals 2
 
     .prologue
     .line 34
-    sget v0, Lcom/tencent/mm/ui/applet/d;->kzS:I
+    sget v0, Lcom/tencent/mm/ui/applet/d;->kYY:I
 
     add-int/lit8 v1, v0, -0x1
 
-    sput v1, Lcom/tencent/mm/ui/applet/d;->kzS:I
+    sput v1, Lcom/tencent/mm/ui/applet/d;->kYY:I
 
     return v0
 .end method
 
-.method public static eg(Landroid/content/Context;)V
+.method public static ek(Landroid/content/Context;)V
     .locals 3
 
     .prologue
     .line 42
-    sget v0, Lcom/tencent/mm/ui/applet/d;->kzS:I
+    sget v0, Lcom/tencent/mm/ui/applet/d;->kYY:I
 
     if-lez v0, :cond_0
 
@@ -72,7 +72,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0089
+    const v1, 0x7f0305d5
 
     const/4 v2, 0x0
 
@@ -86,20 +86,20 @@
     invoke-direct {v1, p0, v0}, Lcom/tencent/mm/ui/applet/d$a;-><init>(Landroid/content/Context;Landroid/view/View;)V
 
     .line 45
-    iget-object v0, v1, Lcom/tencent/mm/ui/applet/d$a;->all:Landroid/view/WindowManager;
+    iget-object v0, v1, Lcom/tencent/mm/ui/applet/d$a;->Yk:Landroid/view/WindowManager;
 
-    iget-object v2, v1, Lcom/tencent/mm/ui/applet/d$a;->alk:Landroid/widget/FrameLayout;
+    iget-object v2, v1, Lcom/tencent/mm/ui/applet/d$a;->Yj:Landroid/widget/FrameLayout;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/applet/d$a;->alm:Landroid/view/WindowManager$LayoutParams;
+    iget-object v1, v1, Lcom/tencent/mm/ui/applet/d$a;->Yl:Landroid/view/WindowManager$LayoutParams;
 
     invoke-interface {v0, v2, v1}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 46
-    sget v0, Lcom/tencent/mm/ui/applet/d;->kzS:I
+    sget v0, Lcom/tencent/mm/ui/applet/d;->kYY:I
 
     add-int/lit8 v0, v0, 0x1
 
-    sput v0, Lcom/tencent/mm/ui/applet/d;->kzS:I
+    sput v0, Lcom/tencent/mm/ui/applet/d;->kYY:I
 
     goto :goto_0
 .end method

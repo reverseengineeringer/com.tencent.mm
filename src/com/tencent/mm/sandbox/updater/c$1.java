@@ -1,27 +1,27 @@
 package com.tencent.mm.sandbox.updater;
 
 import android.os.Message;
-import com.tencent.mm.protocal.b.alq;
+import com.tencent.mm.protocal.b.amb;
 import com.tencent.mm.sandbox.b.a;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.File;
 
 final class c$1
-  extends aa
+  extends ac
 {
   c$1(c paramc) {}
   
   public final void handleMessage(Message paramMessage)
   {
-    if ((1 == what) && (!c.a(jTv)))
+    if ((1 == what) && (!c.a(ksP)))
     {
-      new File(jTv.aTM()).delete();
+      new File(ksP.aYJ()).delete();
       if (arg1 != 0) {
         break label79;
       }
-      u.d("!56@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkWxWU3EihDr6zrocW4g7iOg==", "patch ok");
-      c.b(jTv).a(200, 0, (alq)obj);
+      v.d("MicroMsg.NetSceneGetUpdatePackFromCDN", "patch ok");
+      c.b(ksP).a(200, 0, (amb)obj);
     }
     for (;;)
     {
@@ -29,9 +29,9 @@ final class c$1
       return;
       label79:
       if (arg1 == 3) {
-        c.b(jTv).a(3, -1, (alq)obj);
+        c.b(ksP).a(3, -1, (amb)obj);
       } else if (arg1 == 4) {
-        c.b(jTv).a(4, -1, (alq)obj);
+        c.b(ksP).a(4, -1, (amb)obj);
       }
     }
   }

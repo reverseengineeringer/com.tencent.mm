@@ -1,16 +1,16 @@
 package com.tencent.mm.compatible.d;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class o$a
 {
-  int bsG = 0;
-  private long bsH = 0L;
+  int bgK = 0;
+  private long bgL = 0L;
   private long mLastIdle = 0L;
   
   public o$a(o paramo) {}
   
-  public final void f(String[] paramArrayOfString)
+  public final void e(String[] paramArrayOfString)
   {
     long l2 = Long.parseLong(paramArrayOfString[4], 10);
     long l1 = 0L;
@@ -31,11 +31,11 @@ public final class o$a
       }
     }
     long l3 = mLastIdle;
-    long l4 = l1 - bsH;
-    bsG = ((int)((float)(l4 - (l2 - l3)) / (float)l4 * 100.0F));
-    bsH = l1;
+    long l4 = l1 - bgL;
+    bgK = ((int)((float)(l4 - (l2 - l3)) / (float)l4 * 100.0F));
+    bgL = l1;
     mLastIdle = l2;
-    u.i("!32@l31zBa06gKv3g5PVsxQDw6xSkq6dzCWS", "CPU total=" + l1 + "; idle=" + l2 + "; usage=" + bsG);
+    v.i(" MicroMsg.CpuUsage", "CPU total=" + l1 + "; idle=" + l2 + "; usage=" + bgK);
   }
 }
 

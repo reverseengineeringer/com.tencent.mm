@@ -1,7 +1,7 @@
 package com.tencent.mm.ui.tools;
 
 import android.support.v4.view.g;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class r$9
   implements Runnable
@@ -10,19 +10,19 @@ final class r$9
   
   public final void run()
   {
-    if (lxI.dRe == null) {
-      u.w(lxI.TAG, "post do expand search menu, but search menu item is null");
+    if (lYx.dTj == null) {
+      v.w(lYx.TAG, "post do expand search menu, but search menu item is null");
     }
     do
     {
       return;
-      if (lxI.lxu)
+      if (lYx.lYj)
       {
-        g.b(lxI.dRe);
+        g.b(lYx.dTj);
         return;
       }
-    } while (lxI.lxH == null);
-    lxI.lxH.biL();
+    } while (lYx.lYw == null);
+    lYx.lYw.boH();
   }
 }
 

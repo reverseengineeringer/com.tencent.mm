@@ -14,34 +14,67 @@
     }
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Landroid/widget/BaseAdapter;",
+        "Lcom/tencent/mm/sdk/h/g$a;",
+        "Lcom/tencent/mm/sdk/h/j$b;"
+    }
+.end annotation
+
 
 # instance fields
 .field public context:Landroid/content/Context;
 
 .field protected count:I
 
-.field private fRv:Lcom/tencent/mm/sdk/platformtools/aa;
+.field private gay:Lcom/tencent/mm/sdk/platformtools/ac;
 
-.field private koA:Landroid/database/Cursor;
+.field public kND:Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "TT;"
+        }
+    .end annotation
+.end field
 
-.field public koB:Ljava/util/Map;
+.field private kNE:Landroid/database/Cursor;
 
-.field public koC:Lcom/tencent/mm/ui/i$a;
+.field public kNF:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Integer;",
+            "TT;>;"
+        }
+    .end annotation
+.end field
 
-.field private koD:I
+.field public kNG:Lcom/tencent/mm/ui/i$a;
 
-.field private koE:I
+.field private kNH:I
 
-.field private koF:I
+.field private kNI:I
 
-.field private koG:Ljava/lang/Runnable;
+.field private kNJ:I
 
-.field public koz:Ljava/lang/Object;
+.field private kNK:Ljava/lang/Runnable;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/Object;)V
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "TT;)V"
+        }
+    .end annotation
 
     .prologue
     const/4 v0, 0x0
@@ -52,40 +85,40 @@
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
     .line 32
-    iput-object v0, p0, Lcom/tencent/mm/ui/i;->koA:Landroid/database/Cursor;
+    iput-object v0, p0, Lcom/tencent/mm/ui/i;->kNE:Landroid/database/Cursor;
 
     .line 33
-    iput-object v0, p0, Lcom/tencent/mm/ui/i;->koB:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/ui/i;->kNF:Ljava/util/Map;
 
     .line 155
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/i;->fRv:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object v0, p0, Lcom/tencent/mm/ui/i;->gay:Lcom/tencent/mm/sdk/platformtools/ac;
 
     .line 156
-    iput v2, p0, Lcom/tencent/mm/ui/i;->koD:I
+    iput v2, p0, Lcom/tencent/mm/ui/i;->kNH:I
 
     .line 157
-    iput v2, p0, Lcom/tencent/mm/ui/i;->koE:I
+    iput v2, p0, Lcom/tencent/mm/ui/i;->kNI:I
 
     .line 158
-    iput v2, p0, Lcom/tencent/mm/ui/i;->koF:I
+    iput v2, p0, Lcom/tencent/mm/ui/i;->kNJ:I
 
     .line 180
     new-instance v0, Lcom/tencent/mm/ui/i$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/i$1;-><init>(Lcom/tencent/mm/ui/i;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/i;->koG:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/i;->kNK:Ljava/lang/Runnable;
 
     .line 39
-    iput-object p2, p0, Lcom/tencent/mm/ui/i;->koz:Ljava/lang/Object;
+    iput-object p2, p0, Lcom/tencent/mm/ui/i;->kND:Ljava/lang/Object;
 
     .line 40
     iput-object p1, p0, Lcom/tencent/mm/ui/i;->context:Landroid/content/Context;
@@ -104,7 +137,7 @@
 
     .prologue
     .line 19
-    iget v0, p0, Lcom/tencent/mm/ui/i;->koD:I
+    iget v0, p0, Lcom/tencent/mm/ui/i;->kNH:I
 
     return v0
 .end method
@@ -114,52 +147,52 @@
 
     .prologue
     .line 19
-    iget v0, p0, Lcom/tencent/mm/ui/i;->koF:I
+    iget v0, p0, Lcom/tencent/mm/ui/i;->kNJ:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/i;->koF:I
+    iput v0, p0, Lcom/tencent/mm/ui/i;->kNJ:I
 
     return v0
 .end method
 
-.method private baK()V
+.method private bfW()V
     .locals 2
 
     .prologue
     .line 166
-    const-string/jumbo v0, "!32@/B4Tb64lLpLoWFlKjeNWAb26tvInbzty"
+    const-string/jumbo v0, "MicroMsg.MListAdapter"
 
     const-string/jumbo v1, "ashutest:: on UI, directly call resetCursor Job"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 168
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koC:Lcom/tencent/mm/ui/i$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kNG:Lcom/tencent/mm/ui/i$a;
 
     if-eqz v0, :cond_0
 
     .line 169
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koC:Lcom/tencent/mm/ui/i$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kNG:Lcom/tencent/mm/ui/i$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/i$a;->Gi()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/i$a;->GF()V
 
     .line 172
     :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/i;->adW()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/i;->closeCursor()V
 
     .line 173
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/i;->Gk()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/i;->GH()V
 
     .line 175
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koC:Lcom/tencent/mm/ui/i$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kNG:Lcom/tencent/mm/ui/i$a;
 
     if-eqz v0, :cond_1
 
     .line 176
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koC:Lcom/tencent/mm/ui/i$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kNG:Lcom/tencent/mm/ui/i$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/i$a;->Gh()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/i$a;->GE()V
 
     .line 178
     :cond_1
@@ -171,17 +204,17 @@
 
     .prologue
     .line 19
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koG:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kNK:Ljava/lang/Runnable;
 
     return-object v0
 .end method
 
-.method static synthetic d(Lcom/tencent/mm/ui/i;)Lcom/tencent/mm/sdk/platformtools/aa;
+.method static synthetic d(Lcom/tencent/mm/ui/i;)Lcom/tencent/mm/sdk/platformtools/ac;
     .locals 1
 
     .prologue
     .line 19
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->fRv:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->gay:Lcom/tencent/mm/sdk/platformtools/ac;
 
     return-object v0
 .end method
@@ -191,7 +224,7 @@
 
     .prologue
     .line 19
-    iget v0, p0, Lcom/tencent/mm/ui/i;->koF:I
+    iget v0, p0, Lcom/tencent/mm/ui/i;->kNJ:I
 
     return v0
 .end method
@@ -203,7 +236,7 @@
     .line 19
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/i;->koF:I
+    iput v0, p0, Lcom/tencent/mm/ui/i;->kNJ:I
 
     return v0
 .end method
@@ -213,20 +246,20 @@
 
     .prologue
     .line 19
-    invoke-direct {p0}, Lcom/tencent/mm/ui/i;->baK()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/i;->bfW()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract Gk()V
+.method public abstract GH()V
 .end method
 
-.method public abstract Gl()V
+.method public abstract GI()V
 .end method
 
-.method public final SU()I
+.method public final Um()I
     .locals 1
 
     .prologue
@@ -253,9 +286,6 @@
     return v0
 .end method
 
-.method public abstract a(Ljava/lang/Object;Landroid/database/Cursor;)Ljava/lang/Object;
-.end method
-
 .method public a(ILcom/tencent/mm/sdk/h/j;Ljava/lang/Object;)V
     .locals 5
 
@@ -269,7 +299,7 @@
 
     .line 125
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpLoWFlKjeNWAb26tvInbzty"
+    const-string/jumbo v0, "MicroMsg.MListAdapter"
 
     const-string/jumbo v1, "onNotifyChange obj not String event:%d stg:%s obj:%s"
 
@@ -293,7 +323,7 @@
 
     aput-object p3, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 129
     :goto_0
@@ -315,13 +345,13 @@
 
     .prologue
     .line 152
-    invoke-direct {p0}, Lcom/tencent/mm/ui/i;->baK()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/i;->bfW()V
 
     .line 153
     return-void
 .end method
 
-.method public aCr()I
+.method public aFp()I
     .locals 1
 
     .prologue
@@ -331,28 +361,28 @@
     return v0
 .end method
 
-.method public adW()V
+.method public closeCursor()V
     .locals 1
 
     .prologue
     .line 91
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koB:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kNF:Ljava/util/Map;
 
     if-eqz v0, :cond_0
 
     .line 92
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koB:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kNF:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     .line 94
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koA:Landroid/database/Cursor;
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kNE:Landroid/database/Cursor;
 
     if-eqz v0, :cond_1
 
     .line 95
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koA:Landroid/database/Cursor;
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kNE:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
@@ -364,6 +394,16 @@
 
     .line 99
     return-void
+.end method
+
+.method public abstract convertFrom(Ljava/lang/Object;Landroid/database/Cursor;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;",
+            "Landroid/database/Cursor;",
+            ")TT;"
+        }
+    .end annotation
 .end method
 
 .method public getCount()I
@@ -390,7 +430,7 @@
     :cond_0
     iget v0, p0, Lcom/tencent/mm/ui/i;->count:I
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/i;->aCr()I
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/i;->aFp()I
 
     move-result v1
 
@@ -404,11 +444,11 @@
 
     .prologue
     .line 49
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koA:Landroid/database/Cursor;
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kNE:Landroid/database/Cursor;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koA:Landroid/database/Cursor;
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kNE:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->isClosed()Z
 
@@ -418,35 +458,40 @@
 
     .line 50
     :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/i;->Gl()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/i;->GI()V
 
     .line 51
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koA:Landroid/database/Cursor;
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kNE:Landroid/database/Cursor;
 
     invoke-static {v0}, Ljunit/framework/Assert;->assertNotNull(Ljava/lang/Object;)V
 
     .line 53
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koA:Landroid/database/Cursor;
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kNE:Landroid/database/Cursor;
 
     return-object v0
 .end method
 
 .method public getItem(I)Ljava/lang/Object;
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)TT;"
+        }
+    .end annotation
 
     .prologue
     const/4 v1, 0x0
 
     .line 208
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/i;->mm(I)Z
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/i;->nG(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 209
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koz:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kND:Ljava/lang/Object;
 
     .line 229
     :cond_0
@@ -455,12 +500,12 @@
 
     .line 212
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koB:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kNF:Ljava/util/Map;
 
     if-eqz v0, :cond_2
 
     .line 213
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koB:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kNF:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -495,18 +540,18 @@
 
     .line 223
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koB:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kNF:Ljava/util/Map;
 
     if-nez v0, :cond_5
 
     .line 224
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koz:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kND:Ljava/lang/Object;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/i;->getCursor()Landroid/database/Cursor;
 
     move-result-object v1
 
-    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/ui/i;->a(Ljava/lang/Object;Landroid/database/Cursor;)Ljava/lang/Object;
+    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/ui/i;->convertFrom(Ljava/lang/Object;Landroid/database/Cursor;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -518,12 +563,12 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v1, v0}, Lcom/tencent/mm/ui/i;->a(Ljava/lang/Object;Landroid/database/Cursor;)Ljava/lang/Object;
+    invoke-virtual {p0, v1, v0}, Lcom/tencent/mm/ui/i;->convertFrom(Ljava/lang/Object;Landroid/database/Cursor;)Ljava/lang/Object;
 
     move-result-object v0
 
     .line 228
-    iget-object v1, p0, Lcom/tencent/mm/ui/i;->koB:Ljava/util/Map;
+    iget-object v1, p0, Lcom/tencent/mm/ui/i;->kNF:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -544,50 +589,7 @@
     return-wide v0
 .end method
 
-.method public final hd(Z)V
-    .locals 1
-
-    .prologue
-    .line 69
-    if-nez p1, :cond_1
-
-    .line 70
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koB:Ljava/util/Map;
-
-    if-eqz v0, :cond_0
-
-    .line 71
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koB:Ljava/util/Map;
-
-    invoke-interface {v0}, Ljava/util/Map;->clear()V
-
-    .line 72
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/i;->koB:Ljava/util/Map;
-
-    .line 80
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 76
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/i;->koB:Ljava/util/Map;
-
-    if-nez v0, :cond_0
-
-    .line 77
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/i;->koB:Ljava/util/Map;
-
-    goto :goto_0
-.end method
-
-.method public final mm(I)Z
+.method public final nG(I)Z
     .locals 2
 
     .prologue
@@ -598,7 +600,7 @@
 
     iget v0, p0, Lcom/tencent/mm/ui/i;->count:I
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/i;->aCr()I
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/i;->aFp()I
 
     move-result v1
 
@@ -617,12 +619,55 @@
     goto :goto_0
 .end method
 
+.method public final setCacheEnable(Z)V
+    .locals 1
+
+    .prologue
+    .line 69
+    if-nez p1, :cond_1
+
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kNF:Ljava/util/Map;
+
+    if-eqz v0, :cond_0
+
+    .line 71
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kNF:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
+
+    .line 72
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/i;->kNF:Ljava/util/Map;
+
+    .line 80
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 76
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/ui/i;->kNF:Ljava/util/Map;
+
+    if-nez v0, :cond_0
+
+    .line 77
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/i;->kNF:Ljava/util/Map;
+
+    goto :goto_0
+.end method
+
 .method public final setCursor(Landroid/database/Cursor;)V
     .locals 1
 
     .prologue
     .line 57
-    iput-object p1, p0, Lcom/tencent/mm/ui/i;->koA:Landroid/database/Cursor;
+    iput-object p1, p0, Lcom/tencent/mm/ui/i;->kNE:Landroid/database/Cursor;
 
     .line 58
     const/4 v0, -0x1

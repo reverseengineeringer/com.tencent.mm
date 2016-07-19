@@ -2,7 +2,7 @@ package com.tencent.mm.app.plugin;
 
 import android.os.Bundle;
 import android.os.Looper;
-import com.tencent.mm.d.a.ez;
+import com.tencent.mm.e.a.ff;
 import com.tencent.mm.pluginsdk.l;
 import com.tencent.mm.pluginsdk.ui.applet.g;
 import com.tencent.mm.pluginsdk.ui.d.b;
@@ -24,11 +24,11 @@ class URISpanHandlerSet$PayUriSpanHandler
       if (paramb != null) {
         paramb.a(paramg);
       }
-      paramb = new ez();
-      azK.actionCode = 11;
-      azK.azM = url;
-      azK.context = URISpanHandlerSet.a(ang);
-      a.jUF.a(paramb, Looper.myLooper());
+      paramb = new ff();
+      alS.actionCode = 11;
+      alS.alU = url;
+      alS.context = URISpanHandlerSet.a(ZU);
+      a.kug.a(paramb, Looper.myLooper());
       return true;
     }
     return false;
@@ -39,12 +39,12 @@ class URISpanHandlerSet$PayUriSpanHandler
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 28 };
   }

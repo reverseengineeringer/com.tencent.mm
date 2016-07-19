@@ -16,6 +16,16 @@
     name = "c"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/tencent/mm/modelsearch/m$g;",
+        ">;"
+    }
+.end annotation
+
 
 # direct methods
 .method public constructor <init>()V
@@ -39,9 +49,9 @@
 
     check-cast p2, Lcom/tencent/mm/modelsearch/m$g;
 
-    iget v0, p1, Lcom/tencent/mm/modelsearch/m$g;->bZJ:I
+    iget v0, p1, Lcom/tencent/mm/modelsearch/m$g;->bTs:I
 
-    iget v1, p2, Lcom/tencent/mm/modelsearch/m$g;->bZJ:I
+    iget v1, p2, Lcom/tencent/mm/modelsearch/m$g;->bTs:I
 
     if-ge v0, v1, :cond_0
 
@@ -51,9 +61,9 @@
     return v0
 
     :cond_0
-    iget v0, p1, Lcom/tencent/mm/modelsearch/m$g;->bZJ:I
+    iget v0, p1, Lcom/tencent/mm/modelsearch/m$g;->bTs:I
 
-    iget v1, p2, Lcom/tencent/mm/modelsearch/m$g;->bZJ:I
+    iget v1, p2, Lcom/tencent/mm/modelsearch/m$g;->bTs:I
 
     if-le v0, v1, :cond_1
 

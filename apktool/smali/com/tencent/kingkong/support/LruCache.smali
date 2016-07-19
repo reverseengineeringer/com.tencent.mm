@@ -3,6 +3,19 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<K:",
+        "Ljava/lang/Object;",
+        "V:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
 # instance fields
 .field private createCount:I
 
@@ -11,6 +24,13 @@
 .field private hitCount:I
 
 .field private final map:Ljava/util/LinkedHashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedHashMap",
+            "<TK;TV;>;"
+        }
+    .end annotation
+.end field
 
 .field private maxSize:I
 
@@ -64,6 +84,11 @@
 
 .method private safeSizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;TV;)I"
+        }
+    .end annotation
 
     .prologue
     .line 291
@@ -114,6 +139,11 @@
 # virtual methods
 .method protected create(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;)TV;"
+        }
+    .end annotation
 
     .prologue
     .line 287
@@ -148,6 +178,11 @@
 
 .method public entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(ZTK;TV;TV;)V"
+        }
+    .end annotation
 
     .prologue
     .line 269
@@ -193,6 +228,11 @@
 
 .method public final get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;)TV;"
+        }
+    .end annotation
 
     .prologue
     .line 112
@@ -244,7 +284,7 @@
 
     iput v0, p0, Lcom/tencent/kingkong/support/LruCache;->missCount:I
 
-    .line 117
+    .line 124
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -262,7 +302,7 @@
 
     goto :goto_0
 
-    .line 117
+    .line 124
     :catchall_0
     move-exception v0
 
@@ -300,7 +340,7 @@
 
     invoke-virtual {v2, p1, v0}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 138
+    .line 148
     :goto_1
     monitor-exit p0
     :try_end_2
@@ -331,7 +371,7 @@
 
     goto :goto_1
 
-    .line 138
+    .line 148
     :catchall_1
     move-exception v0
 
@@ -427,6 +467,11 @@
 
 .method public final put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;TV;)TV;"
+        }
+    .end annotation
 
     .prologue
     .line 166
@@ -488,7 +533,7 @@
 
     iput v1, p0, Lcom/tencent/kingkong/support/LruCache;->size:I
 
-    .line 171
+    .line 178
     :cond_2
     monitor-exit p0
     :try_end_0
@@ -511,7 +556,7 @@
     .line 185
     return-object v0
 
-    .line 171
+    .line 178
     :catchall_0
     move-exception v0
 
@@ -549,6 +594,11 @@
 
 .method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;)TV;"
+        }
+    .end annotation
 
     .prologue
     .line 235
@@ -589,7 +639,7 @@
 
     iput v1, p0, Lcom/tencent/kingkong/support/LruCache;->size:I
 
-    .line 240
+    .line 245
     :cond_1
     monitor-exit p0
     :try_end_0
@@ -609,7 +659,7 @@
     :cond_2
     return-object v0
 
-    .line 240
+    .line 245
     :catchall_0
     move-exception v0
 
@@ -645,7 +695,7 @@
     :try_start_0
     iput p1, p0, Lcom/tencent/kingkong/support/LruCache;->maxSize:I
 
-    .line 99
+    .line 101
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -656,7 +706,7 @@
     .line 103
     return-void
 
-    .line 99
+    .line 101
     :catchall_0
     move-exception v0
 
@@ -694,6 +744,11 @@
 
 .method protected sizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;TV;)I"
+        }
+    .end annotation
 
     .prologue
     .line 306
@@ -704,6 +759,13 @@
 
 .method public final declared-synchronized snapshot()Ljava/util/Map;
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map",
+            "<TK;TV;>;"
+        }
+    .end annotation
 
     .prologue
     .line 376
@@ -765,7 +827,6 @@
 
     const/4 v3, 0x0
 
-    .line 383
     iget v4, p0, Lcom/tencent/kingkong/support/LruCache;->maxSize:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -800,7 +861,6 @@
 
     move-result-object v0
 
-    .line 382
     aput-object v0, v2, v3
 
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -856,6 +916,8 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -864,13 +926,10 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 202
     const-string/jumbo v2, ".sizeOf() is reporting inconsistent results!"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -881,12 +940,11 @@
 
     move-result-object v1
 
-    .line 201
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 199
+    .line 223
     :catchall_0
     move-exception v0
 
@@ -997,7 +1055,7 @@
 
     iput v3, p0, Lcom/tencent/kingkong/support/LruCache;->evictionCount:I
 
-    .line 199
+    .line 223
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

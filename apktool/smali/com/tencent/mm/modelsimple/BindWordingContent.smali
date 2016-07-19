@@ -8,10 +8,19 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Lcom/tencent/mm/modelsimple/BindWordingContent;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public caF:Ljava/lang/Integer;
+.field public bUo:Ljava/lang/Integer;
 
 .field public content:Ljava/lang/String;
 
@@ -57,7 +66,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsimple/BindWordingContent;->caF:Ljava/lang/Integer;
+    iput-object v0, p0, Lcom/tencent/mm/modelsimple/BindWordingContent;->bUo:Ljava/lang/Integer;
 
     .line 22
     const/4 v0, 0x2
@@ -88,7 +97,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsimple/BindWordingContent;->caF:Ljava/lang/Integer;
+    iput-object v0, p0, Lcom/tencent/mm/modelsimple/BindWordingContent;->bUo:Ljava/lang/Integer;
 
     .line 28
     return-void
@@ -118,7 +127,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsimple/BindWordingContent;->caF:Ljava/lang/Integer;
+    iput-object v0, p0, Lcom/tencent/mm/modelsimple/BindWordingContent;->bUo:Ljava/lang/Integer;
 
     .line 17
     iput-object p1, p0, Lcom/tencent/mm/modelsimple/BindWordingContent;->title:Ljava/lang/String;
@@ -166,7 +175,7 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
     .line 37
-    iget-object v0, p0, Lcom/tencent/mm/modelsimple/BindWordingContent;->caF:Ljava/lang/Integer;
+    iget-object v0, p0, Lcom/tencent/mm/modelsimple/BindWordingContent;->bUo:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 

@@ -3,17 +3,29 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/az/f$a;
+.implements Lcom/tencent/mm/bc/f$a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/h/f",
+        "<",
+        "Lcom/tencent/mm/storage/e;",
+        ">;",
+        "Lcom/tencent/mm/bc/f$a;"
+    }
+.end annotation
 
 
 # static fields
-.field public static final aLn:[Ljava/lang/String;
+.field public static final axS:[Ljava/lang/String;
 
-.field public static final aoY:[Ljava/lang/String;
+.field public static final bkN:[Ljava/lang/String;
 
 
 # instance fields
-.field public aoX:Lcom/tencent/mm/sdk/h/d;
+.field public bkP:Lcom/tencent/mm/sdk/h/d;
 
 
 # direct methods
@@ -28,7 +40,7 @@
     .line 22
     new-array v0, v4, [Ljava/lang/String;
 
-    sget-object v1, Lcom/tencent/mm/storage/e;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    sget-object v1, Lcom/tencent/mm/storage/e;->bjR:Lcom/tencent/mm/sdk/h/c$a;
 
     const-string/jumbo v2, "chatroom"
 
@@ -38,7 +50,7 @@
 
     aput-object v1, v0, v3
 
-    sput-object v0, Lcom/tencent/mm/storage/f;->aoY:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/storage/f;->bkN:[Ljava/lang/String;
 
     .line 25
     new-array v0, v4, [Ljava/lang/String;
@@ -47,7 +59,7 @@
 
     aput-object v1, v0, v3
 
-    sput-object v0, Lcom/tencent/mm/storage/f;->aLn:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/storage/f;->axS:[Ljava/lang/String;
 
     return-void
 .end method
@@ -57,23 +69,34 @@
 
     .prologue
     .line 32
-    sget-object v0, Lcom/tencent/mm/storage/e;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    sget-object v0, Lcom/tencent/mm/storage/e;->bjR:Lcom/tencent/mm/sdk/h/c$a;
 
     const-string/jumbo v1, "chatroom"
 
-    sget-object v2, Lcom/tencent/mm/storage/f;->aLn:[Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/storage/f;->axS:[Ljava/lang/String;
 
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/tencent/mm/sdk/h/f;-><init>(Lcom/tencent/mm/sdk/h/d;Lcom/tencent/mm/sdk/h/c$a;Ljava/lang/String;[Ljava/lang/String;)V
 
     .line 33
-    iput-object p1, p0, Lcom/tencent/mm/storage/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iput-object p1, p0, Lcom/tencent/mm/storage/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     .line 34
     return-void
 .end method
 
-.method private static DS(Ljava/lang/String;)Ljava/util/List;
+.method private static Gh(Ljava/lang/String;)Ljava/util/List;
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 53
@@ -131,7 +154,7 @@
 
 
 # virtual methods
-.method public final DT(Ljava/lang/String;)Lcom/tencent/mm/storage/e;
+.method public final Gi(Ljava/lang/String;)Lcom/tencent/mm/storage/e;
     .locals 4
 
     .prologue
@@ -170,7 +193,7 @@
     goto :goto_0
 .end method
 
-.method public final DU(Ljava/lang/String;)Lcom/tencent/mm/storage/e;
+.method public final Gj(Ljava/lang/String;)Lcom/tencent/mm/storage/e;
     .locals 4
 
     .prologue
@@ -204,7 +227,7 @@
     return-object v0
 .end method
 
-.method public final DV(Ljava/lang/String;)Ljava/lang/String;
+.method public final Gk(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
     .prologue
@@ -233,7 +256,7 @@
 
     invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kx(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->lh(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -252,7 +275,7 @@
     move-result-object v0
 
     .line 300
-    iget-object v4, p0, Lcom/tencent/mm/storage/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v4, p0, Lcom/tencent/mm/storage/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     invoke-interface {v4, v0, v3}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
@@ -273,7 +296,7 @@
     if-gtz v4, :cond_2
 
     .line 304
-    const-string/jumbo v1, "!44@/B4Tb64lLpIELL9O96QoKG6hYx4y45rzIZBjRMoLQqc="
+    const-string/jumbo v1, "MicroMsg.ChatroomStorage"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -295,7 +318,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 305
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
@@ -328,7 +351,7 @@
     invoke-direct {v1}, Lcom/tencent/mm/storage/e;-><init>()V
 
     .line 310
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/storage/e;->c(Landroid/database/Cursor;)V
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/storage/e;->b(Landroid/database/Cursor;)V
 
     .line 311
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
@@ -339,12 +362,23 @@
     goto :goto_2
 .end method
 
-.method public final DW(Ljava/lang/String;)Ljava/util/List;
+.method public final Gl(Ljava/lang/String;)Ljava/util/List;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 334
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/storage/f;->DV(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/storage/f;->Gk(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -359,14 +393,14 @@
     return-object v0
 
     :cond_0
-    invoke-static {v0}, Lcom/tencent/mm/storage/f;->DS(Ljava/lang/String;)Ljava/util/List;
+    invoke-static {v0}, Lcom/tencent/mm/storage/f;->Gh(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method public final DX(Ljava/lang/String;)Z
+.method public final Gm(Ljava/lang/String;)Z
     .locals 6
 
     .prologue
@@ -387,7 +421,7 @@
     invoke-static {v0}, Ljunit/framework/Assert;->assertTrue(Z)V
 
     .line 362
-    iget-object v0, p0, Lcom/tencent/mm/storage/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v0, p0, Lcom/tencent/mm/storage/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v3, "chatroom"
 
@@ -416,7 +450,7 @@
 
     .line 366
     :cond_1
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/storage/f;->DI(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/storage/f;->FX(Ljava/lang/String;)V
 
     move v2, v1
 
@@ -424,7 +458,7 @@
     goto :goto_1
 .end method
 
-.method public final a(Lcom/tencent/mm/az/f;)I
+.method public final a(Lcom/tencent/mm/bc/f;)I
     .locals 1
 
     .prologue
@@ -434,21 +468,81 @@
     return v0
 .end method
 
-.method public final aWn()Ljava/util/List;
+.method public final bridge synthetic b(Lcom/tencent/mm/sdk/h/c;)Z
+    .locals 1
+
+    .prologue
+    .line 17
+    check-cast p1, Lcom/tencent/mm/storage/e;
+
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/storage/f;->b(Lcom/tencent/mm/storage/e;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final b(Lcom/tencent/mm/storage/e;)Z
+    .locals 2
+
+    .prologue
+    .line 84
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/h/f;->b(Lcom/tencent/mm/sdk/h/c;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 85
+    iget-object v0, p1, Lcom/tencent/mm/storage/e;->field_chatroomname:Ljava/lang/String;
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/f;->FX(Ljava/lang/String;)V
+
+    .line 86
+    const/4 v0, 0x1
+
+    .line 89
+    :goto_0
+    return v0
+
+    .line 88
+    :cond_0
+    const-string/jumbo v0, "MicroMsg.ChatroomStorage"
+
+    const-string/jumbo v1, "replace error"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 89
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final bbA()Ljava/util/List;
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     const/4 v1, 0x0
 
-    .line 181
-    const-string/jumbo v0, "!44@/B4Tb64lLpIELL9O96QoKG6hYx4y45rzIZBjRMoLQqc="
+    .line 180
+    const-string/jumbo v0, "MicroMsg.ChatroomStorage"
 
     const-string/jumbo v2, "getAllGroupCard : select * from chatroom where chatroomname like \'%@groupcard\'"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 182
-    iget-object v0, p0, Lcom/tencent/mm/storage/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v0, p0, Lcom/tencent/mm/storage/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v2, "select * from chatroom where chatroomname like \'%@groupcard\'"
 
@@ -487,7 +581,7 @@
     invoke-direct {v1}, Lcom/tencent/mm/storage/e;-><init>()V
 
     .line 192
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/e;->c(Landroid/database/Cursor;)V
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/e;->b(Landroid/database/Cursor;)V
 
     .line 193
     new-instance v3, Ljava/lang/StringBuilder;
@@ -525,65 +619,14 @@
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
     .line 196
-    invoke-static {v0}, Lcom/tencent/mm/storage/f;->DS(Ljava/lang/String;)Ljava/util/List;
+    invoke-static {v0}, Lcom/tencent/mm/storage/f;->Gh(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method public final bridge synthetic b(Lcom/tencent/mm/sdk/h/c;)Z
-    .locals 1
-
-    .prologue
-    .line 17
-    check-cast p1, Lcom/tencent/mm/storage/e;
-
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/storage/f;->b(Lcom/tencent/mm/storage/e;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final b(Lcom/tencent/mm/storage/e;)Z
-    .locals 2
-
-    .prologue
-    .line 84
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/h/f;->b(Lcom/tencent/mm/sdk/h/c;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 85
-    iget-object v0, p1, Lcom/tencent/mm/storage/e;->field_chatroomname:Ljava/lang/String;
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/f;->DI(Ljava/lang/String;)V
-
-    .line 86
-    const/4 v0, 0x1
-
-    .line 89
-    :goto_0
-    return v0
-
-    .line 88
-    :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpIELL9O96QoKG6hYx4y45rzIZBjRMoLQqc="
-
-    const-string/jumbo v1, "replace error"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 89
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final dY(Ljava/lang/String;)Ljava/lang/String;
+.method public final ej(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
     .prologue
@@ -612,7 +655,7 @@
 
     invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kx(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->lh(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -631,7 +674,7 @@
     move-result-object v0
 
     .line 318
-    iget-object v4, p0, Lcom/tencent/mm/storage/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v4, p0, Lcom/tencent/mm/storage/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     invoke-interface {v4, v0, v3}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
@@ -652,7 +695,7 @@
     if-gtz v4, :cond_2
 
     .line 322
-    const-string/jumbo v1, "!44@/B4Tb64lLpIELL9O96QoKG6hYx4y45rzIZBjRMoLQqc="
+    const-string/jumbo v1, "MicroMsg.ChatroomStorage"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -674,7 +717,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 323
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
@@ -707,7 +750,7 @@
     invoke-direct {v1}, Lcom/tencent/mm/storage/e;-><init>()V
 
     .line 328
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/storage/e;->c(Landroid/database/Cursor;)V
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/storage/e;->b(Landroid/database/Cursor;)V
 
     .line 329
     invoke-interface {v0}, Landroid/database/Cursor;->close()V

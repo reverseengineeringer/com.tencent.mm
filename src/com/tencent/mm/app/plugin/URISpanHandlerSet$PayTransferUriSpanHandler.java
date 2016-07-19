@@ -3,12 +3,13 @@ package com.tencent.mm.app.plugin;
 import android.content.Context;
 import android.os.Bundle;
 import android.widget.Toast;
+import com.tencent.mm.model.h;
 import com.tencent.mm.pluginsdk.l;
 import com.tencent.mm.pluginsdk.ui.applet.g;
 import com.tencent.mm.pluginsdk.ui.d.b;
 import com.tencent.mm.pluginsdk.wallet.d;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 @URISpanHandlerSet.a
 class URISpanHandlerSet$PayTransferUriSpanHandler
@@ -31,11 +32,11 @@ class URISpanHandlerSet$PayTransferUriSpanHandler
     {
       paramBundle = null;
       if (paraml != null) {
-        paramBundle = paraml.aPf().toString();
+        paramBundle = paraml.aTH().toString();
       }
-      if (ay.kz(paramBundle))
+      if (be.kf(paramBundle))
       {
-        u.e("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "SERVICE_JUMP_TO_PAY fail, null username");
+        v.e("MicroMsg.URISpanHandlerSet", "SERVICE_JUMP_TO_PAY fail, null username");
         return false;
       }
       paraml = paramString.substring(8);
@@ -45,29 +46,35 @@ class URISpanHandlerSet$PayTransferUriSpanHandler
       }
       i = paramString.indexOf("=");
       if (i < 0) {
-        break label150;
+        break label175;
       }
     }
-    label150:
+    label175:
     for (paramString = paramString.substring(i + 1);; paramString = "")
     {
-      if (ay.getInt(paramString, 0) == 1)
+      if (be.getInt(paramString, 0) == 1)
       {
-        d.a(URISpanHandlerSet.a(ang), 2, paramBundle, 11);
-        return true;
+        if (h.ss()) {
+          d.b(URISpanHandlerSet.a(ZU), 5, paramBundle, 11);
+        }
+        for (;;)
+        {
+          return true;
+          d.b(URISpanHandlerSet.a(ZU), 2, paramBundle, 11);
+        }
       }
-      Toast.makeText(URISpanHandlerSet.a(ang), URISpanHandlerSet.a(ang).getString(2131429528), 0).show();
+      Toast.makeText(URISpanHandlerSet.a(ZU), URISpanHandlerSet.a(ZU).getString(2131234906), 0).show();
       return false;
       return false;
     }
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[0];
   }

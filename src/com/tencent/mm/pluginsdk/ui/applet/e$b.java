@@ -5,13 +5,13 @@ import android.widget.TextView;
 
 final class e$b
 {
-  public TextView cHk;
-  public ImageView cHn;
-  public ImageView czS;
-  public int eLV;
-  public ImageView gzB;
-  public TextView iJb;
-  public ImageView iJc;
+  public TextView cEo;
+  public ImageView cEr;
+  public int cTv;
+  public ImageView cui;
+  public ImageView gGd;
+  public TextView jfX;
+  public ImageView jfY;
   
   e$b(e parame) {}
 }

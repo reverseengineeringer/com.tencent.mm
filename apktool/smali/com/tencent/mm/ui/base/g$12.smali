@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic ibo:Lcom/tencent/mm/ui/base/g$b;
+.field final synthetic iva:Lcom/tencent/mm/ui/base/g$b;
 
-.field final synthetic ibp:Landroid/widget/EditText;
+.field final synthetic ivb:Landroid/widget/EditText;
 
 .field final synthetic val$context:Landroid/content/Context;
 
@@ -31,9 +31,9 @@
 
     .prologue
     .line 606
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/g$12;->ibo:Lcom/tencent/mm/ui/base/g$b;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/g$12;->iva:Lcom/tencent/mm/ui/base/g$b;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/base/g$12;->ibp:Landroid/widget/EditText;
+    iput-object p2, p0, Lcom/tencent/mm/ui/base/g$12;->ivb:Landroid/widget/EditText;
 
     iput-object p3, p0, Lcom/tencent/mm/ui/base/g$12;->val$context:Landroid/content/Context;
 
@@ -52,14 +52,14 @@
     const/4 v0, 0x1
 
     .line 611
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/g$12;->ibo:Lcom/tencent/mm/ui/base/g$b;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/g$12;->iva:Lcom/tencent/mm/ui/base/g$b;
 
     if-eqz v1, :cond_0
 
     .line 612
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$12;->ibo:Lcom/tencent/mm/ui/base/g$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$12;->iva:Lcom/tencent/mm/ui/base/g$b;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/g$12;->ibp:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/g$12;->ivb:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -73,7 +73,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/g$b;->i(Ljava/lang/CharSequence;)Z
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/g$b;->r(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -96,7 +96,7 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/g$12$1;-><init>(Lcom/tencent/mm/ui/base/g$12;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
     .line 626
     :cond_1

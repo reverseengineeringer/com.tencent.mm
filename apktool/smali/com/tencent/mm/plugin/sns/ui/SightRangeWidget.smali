@@ -41,9 +41,7 @@
     if-eqz p4, :cond_0
 
     .line 43
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SightRangeWidget;->getLabelRange()I
-
-    move-result v0
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnR:I
 
     if-ne v0, v1, :cond_1
 
@@ -53,7 +51,7 @@
     invoke-virtual {p4, v0}, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->setVisibility(I)V
 
     .line 45
-    invoke-virtual {p4}, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->aAP()V
+    invoke-virtual {p4}, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->aDG()V
 
     .line 52
     :cond_0
@@ -69,22 +67,22 @@
     goto :goto_0
 .end method
 
-.method protected getLayoutResource()I
-    .locals 1
-
-    .prologue
-    .line 31
-    const v0, 0x7f0a0450
-
-    return v0
-.end method
-
-.method protected getMaxTagNameLen()I
+.method protected final aEk()I
     .locals 1
 
     .prologue
     .line 36
     const/16 v0, 0xa
+
+    return v0
+.end method
+
+.method protected final getLayoutResource()I
+    .locals 1
+
+    .prologue
+    .line 31
+    const v0, 0x7f030543
 
     return v0
 .end method

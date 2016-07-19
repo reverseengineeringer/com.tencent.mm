@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$2;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.super Lcom/tencent/mm/sdk/platformtools/ac;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic lBC:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;
+.field final synthetic mcu:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;
 
 
 # direct methods
@@ -23,10 +23,10 @@
     .locals 0
 
     .prologue
-    .line 82
-    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$2;->lBC:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;
+    .line 83
+    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$2;->mcu:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;
 
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
     return-void
 .end method
@@ -37,11 +37,11 @@
     .locals 1
 
     .prologue
-    .line 84
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$2;->lBC:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;
+    .line 85
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$2;->mcu:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->finish()V
 
-    .line 85
+    .line 86
     return-void
 .end method

@@ -4,17 +4,8 @@
 
 
 # virtual methods
-.method public abstract f(JLjava/lang/String;)Ljava/lang/String;
+.method public abstract aDW()Z
 .end method
 
-.method public abstract getCount()I
-.end method
-
-.method public abstract ly(I)Lcom/tencent/mm/plugin/sns/h/k;
-.end method
-
-.method public abstract notifyDataSetChanged()V
-.end method
-
-.method public abstract uF(Ljava/lang/String;)V
+.method public abstract ae(Landroid/view/View;)Z
 .end method

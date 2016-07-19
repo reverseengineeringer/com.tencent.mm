@@ -7,70 +7,70 @@ final class b
   extends h
   implements Runnable
 {
-  boolean aA = true;
-  boolean aB;
-  int aC;
-  CharSequence aD;
-  int aE;
-  CharSequence aF;
-  final f ap;
-  a aq;
-  a ar;
-  int as;
-  int at;
-  int au;
-  int av;
-  int aw;
-  int ax;
-  int ay;
-  boolean az;
+  final f Q;
+  a R;
+  a S;
+  int T;
+  int U;
+  int V;
+  int W;
+  int X;
+  int Y;
+  int Z;
+  boolean aa;
+  boolean ab = true;
+  boolean ac;
+  int ad;
+  CharSequence ae;
+  int af;
+  CharSequence ag;
   int mIndex = -1;
   String mName;
   
   public b(f paramf)
   {
-    ap = paramf;
+    Q = paramf;
   }
   
   private void a(int paramInt1, Fragment paramFragment, String paramString, int paramInt2)
   {
-    mFragmentManager = ap;
+    aR = Q;
     if (paramString != null)
     {
-      if ((mTag != null) && (!paramString.equals(mTag))) {
-        throw new IllegalStateException("Can't change tag of fragment " + paramFragment + ": was " + mTag + " now " + paramString);
+      if ((aX != null) && (!paramString.equals(aX))) {
+        throw new IllegalStateException("Can't change tag of fragment " + paramFragment + ": was " + aX + " now " + paramString);
       }
-      mTag = paramString;
+      aX = paramString;
     }
     if (paramInt1 != 0)
     {
-      if ((mFragmentId != 0) && (mFragmentId != paramInt1)) {
-        throw new IllegalStateException("Can't change container ID of fragment " + paramFragment + ": was " + mFragmentId + " now " + paramInt1);
+      if ((aV != 0) && (aV != paramInt1)) {
+        throw new IllegalStateException("Can't change container ID of fragment " + paramFragment + ": was " + aV + " now " + paramInt1);
       }
-      mFragmentId = paramInt1;
-      mContainerId = paramInt1;
+      aV = paramInt1;
+      aW = paramInt1;
     }
     paramString = new a();
-    aI = paramInt2;
-    aJ = paramFragment;
+    aj = paramInt2;
+    ak = paramFragment;
     a(paramString);
   }
   
-  private int g(boolean paramBoolean)
+  private int f(boolean paramBoolean)
   {
-    if (aB) {
+    if (ac) {
       throw new IllegalStateException("commit already called");
     }
     if (f.DEBUG)
     {
       new StringBuilder("Commit: ").append(this);
-      a("  ", new PrintWriter(new android.support.v4.c.b("!24@V7hIHjrMJWvjSI3wvi8Tog==")));
+      a("  ", new PrintWriter(new android.support.v4.c.b("FragmentManager")));
     }
-    aB = true;
-    if (az) {}
-    for (mIndex = ap.a(this);; mIndex = -1)
+    ac = true;
+    if (aa) {}
+    for (mIndex = Q.a(this);; mIndex = -1)
     {
-      ap.a(this, paramBoolean);
+      Q.a(this, paramBoolean);
       return mIndex;
     }
   }
@@ -89,7 +89,10 @@ final class b
   
   public final h a(Fragment paramFragment)
   {
-    a(2131168416, paramFragment, null, 2);
+    a locala = new a();
+    aj = 3;
+    ak = paramFragment;
+    a(locala);
     return this;
   }
   
@@ -101,22 +104,22 @@ final class b
   
   final void a(a parama)
   {
-    if (aq == null)
+    if (R == null)
     {
-      ar = parama;
-      aq = parama;
+      S = parama;
+      R = parama;
     }
     for (;;)
     {
-      aK = at;
-      aL = au;
-      aM = av;
-      aN = aw;
-      as += 1;
+      al = U;
+      am = V;
+      an = W;
+      ao = X;
+      T += 1;
       return;
-      aH = ar;
-      ar.aG = parama;
-      ar = parama;
+      ai = S;
+      S.ah = parama;
+      S = parama;
     }
   }
   
@@ -135,108 +138,108 @@ final class b
       paramPrintWriter.print(" mIndex=");
       paramPrintWriter.print(mIndex);
       paramPrintWriter.print(" mCommitted=");
-      paramPrintWriter.println(aB);
-      if (ax != 0)
+      paramPrintWriter.println(ac);
+      if (Y != 0)
       {
         paramPrintWriter.print(paramString);
         paramPrintWriter.print("mTransition=#");
-        paramPrintWriter.print(Integer.toHexString(ax));
+        paramPrintWriter.print(Integer.toHexString(Y));
         paramPrintWriter.print(" mTransitionStyle=#");
-        paramPrintWriter.println(Integer.toHexString(ay));
+        paramPrintWriter.println(Integer.toHexString(Z));
       }
-      if ((at != 0) || (au != 0))
+      if ((U != 0) || (V != 0))
       {
         paramPrintWriter.print(paramString);
         paramPrintWriter.print("mEnterAnim=#");
-        paramPrintWriter.print(Integer.toHexString(at));
+        paramPrintWriter.print(Integer.toHexString(U));
         paramPrintWriter.print(" mExitAnim=#");
-        paramPrintWriter.println(Integer.toHexString(au));
+        paramPrintWriter.println(Integer.toHexString(V));
       }
-      if ((av != 0) || (aw != 0))
+      if ((W != 0) || (X != 0))
       {
         paramPrintWriter.print(paramString);
         paramPrintWriter.print("mPopEnterAnim=#");
-        paramPrintWriter.print(Integer.toHexString(av));
+        paramPrintWriter.print(Integer.toHexString(W));
         paramPrintWriter.print(" mPopExitAnim=#");
-        paramPrintWriter.println(Integer.toHexString(aw));
+        paramPrintWriter.println(Integer.toHexString(X));
       }
-      if ((aC != 0) || (aD != null))
+      if ((ad != 0) || (ae != null))
       {
         paramPrintWriter.print(paramString);
         paramPrintWriter.print("mBreadCrumbTitleRes=#");
-        paramPrintWriter.print(Integer.toHexString(aC));
+        paramPrintWriter.print(Integer.toHexString(ad));
         paramPrintWriter.print(" mBreadCrumbTitleText=");
-        paramPrintWriter.println(aD);
+        paramPrintWriter.println(ae);
       }
-      if ((aE != 0) || (aF != null))
+      if ((af != 0) || (ag != null))
       {
         paramPrintWriter.print(paramString);
         paramPrintWriter.print("mBreadCrumbShortTitleRes=#");
-        paramPrintWriter.print(Integer.toHexString(aE));
+        paramPrintWriter.print(Integer.toHexString(af));
         paramPrintWriter.print(" mBreadCrumbShortTitleText=");
-        paramPrintWriter.println(aF);
+        paramPrintWriter.println(ag);
       }
     }
-    if (aq != null)
+    if (R != null)
     {
       paramPrintWriter.print(paramString);
       paramPrintWriter.println("Operations:");
       String str2 = paramString + "    ";
-      a locala = aq;
+      a locala = R;
       int i = 0;
       while (locala != null)
       {
         String str1;
         int j;
-        switch (aI)
+        switch (aj)
         {
         default: 
-          str1 = "cmd=" + aI;
+          str1 = "cmd=" + aj;
           paramPrintWriter.print(paramString);
           paramPrintWriter.print("  Op #");
           paramPrintWriter.print(i);
           paramPrintWriter.print(": ");
           paramPrintWriter.print(str1);
           paramPrintWriter.print(" ");
-          paramPrintWriter.println(aJ);
+          paramPrintWriter.println(ak);
           if (paramBoolean)
           {
-            if ((aK != 0) || (aL != 0))
+            if ((al != 0) || (am != 0))
             {
               paramPrintWriter.print(paramString);
               paramPrintWriter.print("enterAnim=#");
-              paramPrintWriter.print(Integer.toHexString(aK));
+              paramPrintWriter.print(Integer.toHexString(al));
               paramPrintWriter.print(" exitAnim=#");
-              paramPrintWriter.println(Integer.toHexString(aL));
+              paramPrintWriter.println(Integer.toHexString(am));
             }
-            if ((aM != 0) || (aN != 0))
+            if ((an != 0) || (ao != 0))
             {
               paramPrintWriter.print(paramString);
               paramPrintWriter.print("popEnterAnim=#");
-              paramPrintWriter.print(Integer.toHexString(aM));
+              paramPrintWriter.print(Integer.toHexString(an));
               paramPrintWriter.print(" popExitAnim=#");
-              paramPrintWriter.println(Integer.toHexString(aN));
+              paramPrintWriter.println(Integer.toHexString(ao));
             }
           }
-          if ((aO == null) || (aO.size() <= 0)) {
-            break label787;
+          if ((ap == null) || (ap.size() <= 0)) {
+            break label786;
           }
           j = 0;
-          label621:
-          if (j >= aO.size()) {
-            break label787;
+          label620:
+          if (j >= ap.size()) {
+            break label786;
           }
           paramPrintWriter.print(str2);
-          if (aO.size() == 1) {
+          if (ap.size() == 1) {
             paramPrintWriter.print("Removed: ");
           }
           break;
         }
         for (;;)
         {
-          paramPrintWriter.println(aO.get(j));
+          paramPrintWriter.println(ap.get(j));
           j += 1;
-          break label621;
+          break label620;
           str1 = "NULL";
           break;
           str1 = "ADD";
@@ -261,18 +264,27 @@ final class b
           paramPrintWriter.print(j);
           paramPrintWriter.print(": ");
         }
-        label787:
-        locala = aG;
+        label786:
+        locala = ah;
         i += 1;
       }
     }
   }
   
+  public final h b(int paramInt, Fragment paramFragment)
+  {
+    if (paramInt == 0) {
+      throw new IllegalArgumentException("Must use non-zero containerViewId");
+    }
+    a(paramInt, paramFragment, null, 2);
+    return this;
+  }
+  
   public final h b(Fragment paramFragment)
   {
     a locala = new a();
-    aI = 3;
-    aJ = paramFragment;
+    aj = 6;
+    ak = paramFragment;
     a(locala);
     return this;
   }
@@ -280,60 +292,51 @@ final class b
   public final h c(Fragment paramFragment)
   {
     a locala = new a();
-    aI = 6;
-    aJ = paramFragment;
+    aj = 7;
+    ak = paramFragment;
     a(locala);
     return this;
   }
   
   public final int commit()
   {
-    return g(false);
+    return f(false);
   }
   
   public final int commitAllowingStateLoss()
   {
-    return g(true);
-  }
-  
-  public final h d(Fragment paramFragment)
-  {
-    a locala = new a();
-    aI = 7;
-    aJ = paramFragment;
-    a(locala);
-    return this;
+    return f(true);
   }
   
   final void e(int paramInt)
   {
-    if (!az) {}
+    if (!aa) {}
     for (;;)
     {
       return;
       if (f.DEBUG) {
         new StringBuilder("Bump nesting in ").append(this).append(" by ").append(paramInt);
       }
-      for (a locala = aq; locala != null; locala = aG)
+      for (a locala = R; locala != null; locala = ah)
       {
         Fragment localFragment;
-        if (aJ != null)
+        if (ak != null)
         {
-          localFragment = aJ;
-          mBackStackNesting += paramInt;
+          localFragment = ak;
+          aQ += paramInt;
           if (f.DEBUG) {
-            new StringBuilder("Bump nesting of ").append(aJ).append(" to ").append(aJ.mBackStackNesting);
+            new StringBuilder("Bump nesting of ").append(ak).append(" to ").append(ak.aQ);
           }
         }
-        if (aO != null)
+        if (ap != null)
         {
-          int i = aO.size() - 1;
+          int i = ap.size() - 1;
           while (i >= 0)
           {
-            localFragment = (Fragment)aO.get(i);
-            mBackStackNesting += paramInt;
+            localFragment = (Fragment)ap.get(i);
+            aQ += paramInt;
             if (f.DEBUG) {
-              new StringBuilder("Bump nesting of ").append(localFragment).append(" to ").append(mBackStackNesting);
+              new StringBuilder("Bump nesting of ").append(localFragment).append(" to ").append(aQ);
             }
             i -= 1;
           }
@@ -342,86 +345,86 @@ final class b
     }
   }
   
-  public final void h(boolean paramBoolean)
+  public final void g(boolean paramBoolean)
   {
     if (f.DEBUG)
     {
       new StringBuilder("popFromBackStack: ").append(this);
-      a("  ", new PrintWriter(new android.support.v4.c.b("!24@V7hIHjrMJWvjSI3wvi8Tog==")));
+      a("  ", new PrintWriter(new android.support.v4.c.b("FragmentManager")));
     }
     e(-1);
-    Object localObject1 = ar;
+    Object localObject1 = S;
     int i;
     if (localObject1 != null)
     {
       Fragment localFragment;
-      switch (aI)
+      switch (aj)
       {
       default: 
-        throw new IllegalArgumentException("Unknown cmd: " + aI);
+        throw new IllegalArgumentException("Unknown cmd: " + aj);
       case 1: 
-        localFragment = aJ;
-        mNextAnim = aN;
-        ap.a(localFragment, f.i(ax), ay);
+        localFragment = ak;
+        bf = ao;
+        Q.a(localFragment, f.i(Y), Z);
       }
       for (;;)
       {
-        localObject1 = aH;
+        localObject1 = ai;
         break;
-        localFragment = aJ;
+        localFragment = ak;
         if (localFragment != null)
         {
-          mNextAnim = aN;
-          ap.a(localFragment, f.i(ax), ay);
+          bf = ao;
+          Q.a(localFragment, f.i(Y), Z);
         }
-        if (aO != null)
+        if (ap != null)
         {
           i = 0;
-          while (i < aO.size())
+          while (i < ap.size())
           {
-            localFragment = (Fragment)aO.get(i);
-            mNextAnim = aM;
-            ap.a(localFragment, false);
+            localFragment = (Fragment)ap.get(i);
+            bf = an;
+            Q.a(localFragment, false);
             i += 1;
           }
-          localFragment = aJ;
-          mNextAnim = aM;
-          ap.a(localFragment, false);
+          localFragment = ak;
+          bf = an;
+          Q.a(localFragment, false);
           continue;
-          localFragment = aJ;
-          mNextAnim = aM;
-          ap.c(localFragment, f.i(ax), ay);
+          localFragment = ak;
+          bf = an;
+          Q.c(localFragment, f.i(Y), Z);
           continue;
-          localFragment = aJ;
-          mNextAnim = aN;
-          ap.b(localFragment, f.i(ax), ay);
+          localFragment = ak;
+          bf = ao;
+          Q.b(localFragment, f.i(Y), Z);
           continue;
-          localFragment = aJ;
-          mNextAnim = aM;
-          ap.e(localFragment, f.i(ax), ay);
+          localFragment = ak;
+          bf = an;
+          Q.e(localFragment, f.i(Y), Z);
           continue;
-          localFragment = aJ;
-          mNextAnim = aM;
-          ap.d(localFragment, f.i(ax), ay);
+          localFragment = ak;
+          bf = an;
+          Q.d(localFragment, f.i(Y), Z);
         }
       }
     }
     if (paramBoolean) {
-      ap.a(ap.bC, f.i(ax), ay, true);
+      Q.a(Q.bQ, f.i(Y), Z, true);
     }
     if (mIndex >= 0)
     {
-      localObject1 = ap;
+      localObject1 = Q;
       i = mIndex;
     }
     try
     {
-      bz.set(i, null);
-      if (bA == null) {
-        bA = new ArrayList();
+      bN.set(i, null);
+      if (bO == null) {
+        bO = new ArrayList();
       }
       if (f.DEBUG) {}
-      bA.add(Integer.valueOf(i));
+      bO.add(Integer.valueOf(i));
       mIndex = -1;
       return;
     }
@@ -433,43 +436,43 @@ final class b
     if (f.DEBUG) {
       new StringBuilder("Run: ").append(this);
     }
-    if ((az) && (mIndex < 0)) {
+    if ((aa) && (mIndex < 0)) {
       throw new IllegalStateException("addToBackStack() called after commit()");
     }
     e(1);
-    a locala = aq;
+    a locala = R;
     Object localObject1;
     if (locala != null)
     {
-      switch (aI)
+      switch (aj)
       {
       default: 
-        throw new IllegalArgumentException("Unknown cmd: " + aI);
+        throw new IllegalArgumentException("Unknown cmd: " + aj);
       case 1: 
-        localObject1 = aJ;
-        mNextAnim = aK;
-        ap.a((Fragment)localObject1, false);
+        localObject1 = ak;
+        bf = al;
+        Q.a((Fragment)localObject1, false);
       }
       for (;;)
       {
-        locala = aG;
+        locala = ah;
         break;
-        localObject1 = aJ;
+        localObject1 = ak;
         Object localObject2;
-        if (ap.bv != null)
+        if (Q.bJ != null)
         {
           int i = 0;
           localObject2 = localObject1;
-          if (i < ap.bv.size())
+          if (i < Q.bJ.size())
           {
-            Fragment localFragment = (Fragment)ap.bv.get(i);
+            Fragment localFragment = (Fragment)Q.bJ.get(i);
             if (f.DEBUG) {
               new StringBuilder("OP_REPLACE: adding=").append(localObject1).append(" old=").append(localFragment);
             }
             if (localObject1 != null)
             {
               localObject2 = localObject1;
-              if (mContainerId != mContainerId) {}
+              if (aW != aW) {}
             }
             else
             {
@@ -477,7 +480,7 @@ final class b
                 break label291;
               }
               localObject2 = null;
-              aJ = null;
+              ak = null;
             }
             for (;;)
             {
@@ -485,19 +488,19 @@ final class b
               localObject1 = localObject2;
               break;
               label291:
-              if (aO == null) {
-                aO = new ArrayList();
+              if (ap == null) {
+                ap = new ArrayList();
               }
-              aO.add(localFragment);
-              mNextAnim = aL;
-              if (az)
+              ap.add(localFragment);
+              bf = am;
+              if (aa)
               {
-                mBackStackNesting += 1;
+                aQ += 1;
                 if (f.DEBUG) {
-                  new StringBuilder("Bump nesting of ").append(localFragment).append(" to ").append(mBackStackNesting);
+                  new StringBuilder("Bump nesting of ").append(localFragment).append(" to ").append(aQ);
                 }
               }
-              ap.a(localFragment, ax, ay);
+              Q.a(localFragment, Y, Z);
               localObject2 = localObject1;
             }
           }
@@ -508,40 +511,40 @@ final class b
         }
         if (localObject2 != null)
         {
-          mNextAnim = aK;
-          ap.a((Fragment)localObject2, false);
+          bf = al;
+          Q.a((Fragment)localObject2, false);
           continue;
-          localObject1 = aJ;
-          mNextAnim = aL;
-          ap.a((Fragment)localObject1, ax, ay);
+          localObject1 = ak;
+          bf = am;
+          Q.a((Fragment)localObject1, Y, Z);
           continue;
-          localObject1 = aJ;
-          mNextAnim = aL;
-          ap.b((Fragment)localObject1, ax, ay);
+          localObject1 = ak;
+          bf = am;
+          Q.b((Fragment)localObject1, Y, Z);
           continue;
-          localObject1 = aJ;
-          mNextAnim = aK;
-          ap.c((Fragment)localObject1, ax, ay);
+          localObject1 = ak;
+          bf = al;
+          Q.c((Fragment)localObject1, Y, Z);
           continue;
-          localObject1 = aJ;
-          mNextAnim = aL;
-          ap.d((Fragment)localObject1, ax, ay);
+          localObject1 = ak;
+          bf = am;
+          Q.d((Fragment)localObject1, Y, Z);
           continue;
-          localObject1 = aJ;
-          mNextAnim = aK;
-          ap.e((Fragment)localObject1, ax, ay);
+          localObject1 = ak;
+          bf = al;
+          Q.e((Fragment)localObject1, Y, Z);
         }
       }
     }
-    ap.a(ap.bC, ax, ay, true);
-    if (az)
+    Q.a(Q.bQ, Y, Z, true);
+    if (aa)
     {
-      localObject1 = ap;
-      if (bx == null) {
-        bx = new ArrayList();
+      localObject1 = Q;
+      if (bL == null) {
+        bL = new ArrayList();
       }
-      bx.add(this);
-      ((f)localObject1).L();
+      bL.add(this);
+      ((f)localObject1).K();
     }
   }
   
@@ -566,15 +569,15 @@ final class b
   
   static final class a
   {
-    a aG;
-    a aH;
-    int aI;
-    Fragment aJ;
-    int aK;
-    int aL;
-    int aM;
-    int aN;
-    ArrayList aO;
+    a ah;
+    a ai;
+    int aj;
+    Fragment ak;
+    int al;
+    int am;
+    int an;
+    int ao;
+    ArrayList<Fragment> ap;
   }
 }
 

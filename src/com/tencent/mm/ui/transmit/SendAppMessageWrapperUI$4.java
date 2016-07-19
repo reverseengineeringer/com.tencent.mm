@@ -11,10 +11,10 @@ final class SendAppMessageWrapperUI$4
   
   public final void a(boolean paramBoolean, String paramString, int paramInt)
   {
-    lBv.setResult(-1);
-    lBv.finish();
-    paramString = ReportUtil.a(lBv.getIntent().getExtras(), 0);
-    ReportUtil.a(lBv, paramString);
+    mcn.setResult(-1);
+    mcn.finish();
+    paramString = ReportUtil.a(mcn.getIntent().getExtras(), 0);
+    ReportUtil.a(mcn, paramString);
   }
 }
 

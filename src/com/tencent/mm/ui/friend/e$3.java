@@ -5,10 +5,10 @@ final class e$3
 {
   e$3(e parame) {}
   
-  public final void ib(boolean paramBoolean)
+  public final void iF(boolean paramBoolean)
   {
     if (paramBoolean) {
-      lrX.notifyDataSetChanged();
+      lSB.notifyDataSetChanged();
     }
   }
 }

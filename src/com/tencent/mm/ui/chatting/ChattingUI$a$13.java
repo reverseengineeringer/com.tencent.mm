@@ -1,52 +1,49 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.d.a.lk;
-import com.tencent.mm.d.a.lk.a;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.e.a.lq;
+import com.tencent.mm.e.a.lq.a;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.modelmulti.a;
 import com.tencent.mm.modelmulti.a.a;
-import com.tencent.mm.modelmulti.l;
-import com.tencent.mm.platformtools.n;
-import com.tencent.mm.protocal.b.ak;
-import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.protocal.b.an;
 import com.tencent.mm.sdk.c.c;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class ChattingUI$a$13
-  extends c
+  extends c<lq>
 {
   ChattingUI$a$13(ChattingUI.a parama)
   {
-    super(0);
+    kum = lq.class.getName().hashCode();
   }
   
-  public final boolean a(b paramb)
+  private boolean a(lq paramlq)
   {
-    Object localObject = aHQ.data;
+    Object localObject = aug.data;
     if (localObject != null)
     {
-      paramb = new ak();
+      paramlq = new an();
       try
       {
-        paramb.am((byte[])localObject);
-        localObject = n.a(iXC);
-        u.i("!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/", "summerbadcr SilenceNotifyEvent callback chatRoomId[%s], current talker[%s]", new Object[] { localObject, laF.kRI.field_username });
-        if ((!ay.kz((String)localObject)) && (((String)localObject).equals(laF.kRI.field_username)))
+        paramlq.au((byte[])localObject);
+        localObject = com.tencent.mm.platformtools.m.a(jvg);
+        v.i("MicroMsg.ChattingUI", "summerbadcr SilenceNotifyEvent callback chatRoomId[%s], current talker[%s]", new Object[] { localObject, lAY.lrK.field_username });
+        if ((!be.kf((String)localObject)) && (((String)localObject).equals(lAY.lrK.field_username)))
         {
-          u.i("!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/", "summerbadcr SilenceNotifyEvent need GetChatRoomMsg down");
-          paramb = new a.a((String)localObject, iXB, iXD, 0);
-          l.Bf().a(paramb, laF);
+          v.i("MicroMsg.ChattingUI", "summerbadcr SilenceNotifyEvent need GetChatRoomMsg down");
+          paramlq = new a.a((String)localObject, jvf, jvh, 0);
+          com.tencent.mm.modelmulti.m.Be().a(paramlq, lAY);
         }
         return false;
       }
-      catch (Exception paramb)
+      catch (Exception paramlq)
       {
-        u.e("!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/", "summerbadcr SilenceNotifyEvent callback parse exception:" + paramb.getMessage());
+        v.e("MicroMsg.ChattingUI", "summerbadcr SilenceNotifyEvent callback parse exception:" + paramlq.getMessage());
         return false;
       }
     }
-    u.e("!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/", "summerbadcr silenceNotifyListener callback event data is null");
+    v.e("MicroMsg.ChattingUI", "summerbadcr silenceNotifyListener callback event data is null");
     return false;
   }
 }

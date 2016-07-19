@@ -10,7 +10,7 @@ final class LoginUI$13
   
   public final void onClick(View paramView)
   {
-    LoginUI.c(ktY);
+    LoginUI.c(kTf);
   }
 }
 

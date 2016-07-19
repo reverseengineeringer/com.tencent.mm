@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gAD:Lcom/tencent/mm/plugin/sight/encode/a/e;
+.field final synthetic gHf:Lcom/tencent/mm/plugin/sight/encode/a/e;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 247
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e$3;->gAD:Lcom/tencent/mm/plugin/sight/encode/a/e;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e$3;->gHf:Lcom/tencent/mm/plugin/sight/encode/a/e;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,25 +36,25 @@
 
 
 # virtual methods
-.method public final awn()V
+.method public final ayL()V
     .locals 2
 
     .prologue
     .line 251
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e$3;->gAD:Lcom/tencent/mm/plugin/sight/encode/a/e;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e$3;->gHf:Lcom/tencent/mm/plugin/sight/encode/a/e;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gGW:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
 
     if-eqz v0, :cond_0
 
     .line 252
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e$3;->gAD:Lcom/tencent/mm/plugin/sight/encode/a/e;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e$3;->gHf:Lcom/tencent/mm/plugin/sight/encode/a/e;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gGW:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
 
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->gAJ:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->gHl:Z
 
     .line 254
     :cond_0

@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field aCK:I
+.field apd:I
 
-.field krd:Z
+.field kQk:Z
 
-.field kre:Z
+.field kQl:Z
 
-.field krf:Lcom/tencent/mm/ui/s$d;
+.field kQm:Lcom/tencent/mm/ui/s$d;
 
 
 # direct methods
@@ -35,16 +35,16 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 198
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/s$c;->krd:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/s$c;->kQk:Z
 
     .line 199
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/s$c;->kre:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/s$c;->kQl:Z
 
     .line 200
-    iput v0, p0, Lcom/tencent/mm/ui/s$c;->aCK:I
+    iput v0, p0, Lcom/tencent/mm/ui/s$c;->apd:I
 
     .line 195
-    iput-object p1, p0, Lcom/tencent/mm/ui/s$c;->krf:Lcom/tencent/mm/ui/s$d;
+    iput-object p1, p0, Lcom/tencent/mm/ui/s$c;->kQm:Lcom/tencent/mm/ui/s$d;
 
     .line 196
     return-void

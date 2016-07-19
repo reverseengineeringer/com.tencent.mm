@@ -18,13 +18,13 @@ public class MMGIFException
   public static final int D_GIF_ERR_OPEN_FAILED = 101;
   public static final int D_GIF_ERR_READ_FAILED = 102;
   public static final int D_GIF_ERR_WRONG_RECORD = 107;
-  private static final String TAG = "!44@/B4Tb64lLpISAcxqEoGUAZ3QidtC2RLrcJuDE8yE8XE=";
+  private static final String TAG = "MicroMsg.GIF.MMGIFException";
   private static final long serialVersionUID = 1L;
   private final int errorCode;
   
   public MMGIFException(int paramInt)
   {
-    super("!44@/B4Tb64lLpISAcxqEoGUAZ3QidtC2RLrcJuDE8yE8XE=" + paramInt);
+    super("MicroMsg.GIF.MMGIFException" + paramInt);
     errorCode = paramInt;
   }
   

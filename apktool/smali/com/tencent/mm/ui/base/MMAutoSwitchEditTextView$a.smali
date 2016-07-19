@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract Go(Ljava/lang/String;)V
+.method public abstract ID(Ljava/lang/String;)V
 .end method

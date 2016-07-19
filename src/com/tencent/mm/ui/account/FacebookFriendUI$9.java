@@ -3,19 +3,19 @@ package com.tencent.mm.ui.account;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import com.tencent.mm.modelfriend.x;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah.a;
 import com.tencent.mm.storage.h;
+import com.tencent.mm.t.m;
 
 final class FacebookFriendUI$9
-  implements af.a
+  implements ah.a
 {
   FacebookFriendUI$9(FacebookFriendUI paramFacebookFriendUI, x paramx) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    ah.tD().rn().set(65829, Integer.valueOf(1));
-    ah.tE().d(coR);
+    ah.tE().ro().set(65829, Integer.valueOf(1));
+    ah.tF().a(ckf, 0);
     return false;
   }
 }

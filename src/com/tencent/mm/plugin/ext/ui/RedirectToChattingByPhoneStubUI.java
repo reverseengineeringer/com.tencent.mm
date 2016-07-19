@@ -6,11 +6,11 @@ import android.os.IBinder;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.p;
 
@@ -18,9 +18,9 @@ public class RedirectToChattingByPhoneStubUI
   extends Activity
   implements d
 {
-  private p dLD = null;
+  private p dNk = null;
   
-  public final boolean VC()
+  public final boolean Xk()
   {
     InputMethodManager localInputMethodManager = (InputMethodManager)getSystemService("input_method");
     if (localInputMethodManager == null) {}
@@ -37,48 +37,48 @@ public class RedirectToChattingByPhoneStubUI
     try
     {
       bool = localInputMethodManager.hideSoftInputFromWindow((IBinder)localObject, 0);
-      u.v("!64@/B4Tb64lLpJfKsem8vz7H377OVeg21KplMgz7y7vvJgP0BrYCsHsNCzbFi7WLdKY", "hide VKB result %B", new Object[] { Boolean.valueOf(bool) });
+      v.v("MicroMsg.RedirectToChattingByPhoneStubUI", "hide VKB result %B", new Object[] { Boolean.valueOf(bool) });
       return bool;
     }
     catch (IllegalArgumentException localIllegalArgumentException)
     {
       for (;;)
       {
-        u.e("!64@/B4Tb64lLpJfKsem8vz7H377OVeg21KplMgz7y7vvJgP0BrYCsHsNCzbFi7WLdKY", "hide VKB exception %s", new Object[] { localIllegalArgumentException });
+        v.e("MicroMsg.RedirectToChattingByPhoneStubUI", "hide VKB exception %s", new Object[] { localIllegalArgumentException });
         boolean bool = false;
       }
     }
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
-  {
-    finish();
-  }
-  
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    getString(2131430941);
-    dLD = g.a(this, "", false, null);
-    ab.e(new Runnable()
+    getString(2131231049);
+    dNk = g.a(this, "", false, null);
+    ad.e(new Runnable()
     {
       public final void run()
       {
-        VC();
+        Xk();
       }
     }, 500L);
-    ah.tE().a(106, this);
+    ah.tF().a(106, this);
   }
   
   protected void onDestroy()
   {
     super.onDestroy();
-    ah.tE().b(106, this);
-    if (dLD != null)
+    ah.tF().b(106, this);
+    if (dNk != null)
     {
-      dLD.dismiss();
-      dLD = null;
+      dNk.dismiss();
+      dNk = null;
     }
+  }
+  
+  public void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
+  {
+    finish();
   }
 }
 

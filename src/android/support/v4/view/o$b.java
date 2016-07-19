@@ -1,8 +1,11 @@
 package android.support.v4.view;
 
-final class o$b
-  extends o.a
-{}
+import android.view.ViewGroup;
+
+abstract interface o$b
+{
+  public abstract void a(ViewGroup paramViewGroup, boolean paramBoolean);
+}
 
 /* Location:
  * Qualified Name:     android.support.v4.view.o.b

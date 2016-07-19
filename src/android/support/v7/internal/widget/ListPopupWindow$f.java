@@ -9,10 +9,10 @@ final class ListPopupWindow$f
   
   public final void run()
   {
-    if ((ListPopupWindow.a(qi) != null) && (ListPopupWindow.a(qi).getCount() > ListPopupWindow.a(qi).getChildCount()) && (ListPopupWindow.a(qi).getChildCount() <= qi.pU))
+    if ((ListPopupWindow.a(qw) != null) && (ListPopupWindow.a(qw).getCount() > ListPopupWindow.a(qw).getChildCount()) && (ListPopupWindow.a(qw).getChildCount() <= qw.qi))
     {
-      ListPopupWindow.b(qi).setInputMethodMode(2);
-      qi.show();
+      ListPopupWindow.b(qw).setInputMethodMode(2);
+      qw.show();
     }
   }
 }

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract bdp()V
+.method public abstract biW()V
 .end method

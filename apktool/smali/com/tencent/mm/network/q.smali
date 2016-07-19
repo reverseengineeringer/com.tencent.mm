@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract ks()Z
+.method public abstract iV()Z
 .end method

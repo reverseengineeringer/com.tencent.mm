@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->Gb()V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hgH:Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;
+.field final synthetic hvx:Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 185
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI$3;->hgH:Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI$3;->hvx:Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 188
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI$3;->hgH:Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI$3;->hvx:Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;->b(Lcom/tencent/mm/plugin/sns/ui/SnsNotInterestUI;)V
 

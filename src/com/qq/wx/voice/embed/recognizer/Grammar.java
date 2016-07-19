@@ -30,13 +30,13 @@ public class Grammar
       if (i >= e.size())
       {
         return localStringBuffer.toString();
-        e.get(i)).ajk = a(e.get(i)).ajh);
-        e.get(i)).ajl = a(e.get(i)).aji);
-        e.get(i)).ajm = a(e.get(i)).ajj);
+        e.get(i)).Va = a(e.get(i)).UX);
+        e.get(i)).Vb = a(e.get(i)).UY);
+        e.get(i)).Vc = a(e.get(i)).UZ);
         i += 1;
         break;
       }
-      String str = e.get(i)).ajk;
+      String str = e.get(i)).Va;
       if (!str.isEmpty())
       {
         if (localStringBuffer.length() > 0) {
@@ -44,7 +44,7 @@ public class Grammar
         }
         localStringBuffer.append(str);
       }
-      str = e.get(i)).ajl;
+      str = e.get(i)).Vb;
       if (!str.isEmpty())
       {
         if (localStringBuffer.length() > 0) {
@@ -52,7 +52,7 @@ public class Grammar
         }
         localStringBuffer.append(str);
       }
-      str = e.get(i)).ajm;
+      str = e.get(i)).Vc;
       if (!str.isEmpty())
       {
         if (localStringBuffer.length() > 0) {
@@ -83,7 +83,7 @@ public class Grammar
       return 65233;
     }
     if ((paramString1.compareTo("/system/lib") == 0) || (paramString1.compareTo("/system/lib/") == 0)) {}
-    for (int i = a.c(paramString1, paramString2, paramString3); i < 0; i = a.b(paramContext, paramString1, paramString2, paramString3)) {
+    for (int i = a.e(paramString1, paramString2, paramString3); i < 0; i = a.b(paramContext, paramString1, paramString2, paramString3)) {
       return i;
     }
     mDataPath = a.b;
@@ -118,19 +118,19 @@ public class Grammar
       if (j >= e.size()) {
         break;
       }
-      if (e.get(j)).ajk.compareTo(b.name) == 0)
+      if (e.get(j)).Va.compareTo(b.name) == 0)
       {
-        name = e.get(j)).ajh;
+        name = e.get(j)).UX;
         return 0;
       }
-      if (e.get(j)).ajl.compareTo(b.name) == 0)
+      if (e.get(j)).Vb.compareTo(b.name) == 0)
       {
-        name = e.get(j)).ajh;
+        name = e.get(j)).UX;
         return 0;
       }
-      if (e.get(j)).ajm.compareTo(b.name) == 0)
+      if (e.get(j)).Vc.compareTo(b.name) == 0)
       {
-        name = e.get(j)).ajh;
+        name = e.get(j)).UX;
         return 0;
       }
       j += 1;

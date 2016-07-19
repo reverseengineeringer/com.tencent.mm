@@ -4,10 +4,10 @@ import android.os.Looper;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import com.tencent.mm.model.i;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.contact.a.a;
 import com.tencent.mm.ui.contact.a.e;
 import java.util.ArrayList;
@@ -20,70 +20,77 @@ import java.util.Set;
 public final class q
   extends p
 {
-  private String aEy;
-  private aa handler = new aa(Looper.getMainLooper());
-  private int[] llh;
-  private List lli;
-  private p.a llj;
-  private Map llu = new HashMap();
-  private List llv = new ArrayList();
+  private String aqC;
+  private ac handler = new ac(Looper.getMainLooper());
+  private Map<String, String> lLH = new HashMap();
+  private List<String> lLI = new ArrayList();
+  private int[] lLu;
+  private List<String> lLv;
+  private p.a lLw;
   
-  public q(MMBaseSelectContactUI paramMMBaseSelectContactUI, List paramList, boolean paramBoolean, String paramString)
+  public q(MMBaseSelectContactUI paramMMBaseSelectContactUI, List<String> paramList, boolean paramBoolean, String paramString)
   {
-    super(paramMMBaseSelectContactUI, paramList, paramBoolean);
-    lli = paramList;
-    if (!ay.kz(paramString))
+    super(paramMMBaseSelectContactUI, paramList, paramBoolean, 0);
+    lLv = paramList;
+    if (!be.kf(paramString))
     {
-      llv = ay.h(paramString.split(","));
-      if (llv != null)
+      lLI = be.g(paramString.split(","));
+      if (lLI != null)
       {
-        paramMMBaseSelectContactUI = llv.iterator();
+        paramMMBaseSelectContactUI = lLI.iterator();
         while (paramMMBaseSelectContactUI.hasNext())
         {
           paramList = (String)paramMMBaseSelectContactUI.next();
-          paramString = i.dY(paramList);
-          if (!ay.kz(paramString)) {
-            llu.put(paramString, paramList);
+          paramString = i.ej(paramList);
+          if (!be.kf(paramString)) {
+            lLH.put(paramString, paramList);
           }
         }
       }
     }
-    Ou();
+    initData();
   }
   
-  private void Ou()
+  private void initData()
   {
-    aEy = null;
+    aqC = null;
     clearCache();
   }
   
   public final void a(p.a parama)
   {
-    llj = parama;
+    lLw = parama;
   }
   
-  public final void a(final String paramString, int[] paramArrayOfInt)
+  public final void aF(String paramString, boolean paramBoolean)
   {
-    Ou();
-    aEy = paramString;
-    llh = paramArrayOfInt;
-    u.i("!64@/B4Tb64lLpKhTakOeAnWoE+Hnw8PY3wvD1iV66Nvwn2PXP0bF+wxOuOQthSOCceR", "doSearch: query=%s", new Object[] { aEy });
-    llv.clear();
-    if (llu != null)
+    if (lLw != null) {
+      lLw.k(paramString, getCount(), paramBoolean);
+    }
+  }
+  
+  public final void b(final String paramString, int[] paramArrayOfInt)
+  {
+    initData();
+    aqC = paramString;
+    lLu = paramArrayOfInt;
+    v.i("MicroMsg.MMSearchWechatSportContactAdapter", "doSearch: query=%s", new Object[] { aqC });
+    lLI.clear();
+    if (lLH != null)
     {
-      paramArrayOfInt = llu.keySet().iterator();
+      paramArrayOfInt = lLH.keySet().iterator();
       while (paramArrayOfInt.hasNext())
       {
         String str = (String)paramArrayOfInt.next();
         if (str.contains(paramString))
         {
-          llv.add(llu.get(str));
-          u.d("!64@/B4Tb64lLpKhTakOeAnWoE+Hnw8PY3wvD1iV66Nvwn2PXP0bF+wxOuOQthSOCceR", "ap match display name %s", new Object[] { str });
+          lLI.add(lLH.get(str));
+          v.d("MicroMsg.MMSearchWechatSportContactAdapter", "ap match display name %s", new Object[] { str });
         }
       }
     }
-    u.d("!64@/B4Tb64lLpKhTakOeAnWoE+Hnw8PY3wvD1iV66Nvwn2PXP0bF+wxOuOQthSOCceR", "ap match user: %s,  %s", new Object[] { Integer.valueOf(llv.size()), llv.toArray() });
-    ah.tv().r(new Runnable()
+    v.d("MicroMsg.MMSearchWechatSportContactAdapter", "ap match user: %s,  %s", new Object[] { Integer.valueOf(lLI.size()), lLI.toArray() });
+    ah.tw().t(new Runnable()
     {
       public final void run()
       {
@@ -91,18 +98,11 @@ public final class q
         {
           public final void run()
           {
-            av(ghm, true);
+            aF(grO, true);
           }
         });
       }
     });
-  }
-  
-  public final void av(String paramString, boolean paramBoolean)
-  {
-    if (llj != null) {
-      llj.k(paramString, getCount(), paramBoolean);
-    }
   }
   
   protected final boolean c(a parama)
@@ -113,23 +113,23 @@ public final class q
   public final void finish()
   {
     super.finish();
-    Ou();
+    initData();
   }
   
   public final int getCount()
   {
-    if (llv == null) {
+    if (lLI == null) {
       return 0;
     }
-    return llv.size();
+    return lLI.size();
   }
   
-  protected final a iH(int paramInt)
+  protected final a jQ(int paramInt)
   {
     e locale = new e(paramInt);
-    aEy = aEy;
-    cId = ah.tD().rq().En((String)llv.get(paramInt));
-    lkT = awQ();
+    aqC = aqC;
+    cFh = ah.tE().rr().GB((String)lLI.get(paramInt));
+    lLe = azn();
     return locale;
   }
 }

@@ -18,8 +18,8 @@
 .method public abstract a(Lcom/tencent/mm/model/c;Z)V
 .end method
 
-.method public abstract aj(Z)V
+.method public abstract ak(Z)V
 .end method
 
-.method public abstract sa()V
+.method public abstract sc()V
 .end method

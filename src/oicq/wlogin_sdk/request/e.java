@@ -5,9 +5,9 @@ public final class e
 {
   public e(i parami)
   {
-    mbE = 2064;
-    mbF = 13;
-    mbH = parami;
+    mNI = 2064;
+    mNJ = 13;
+    mNL = parami;
   }
 }
 

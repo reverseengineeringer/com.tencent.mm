@@ -6,11 +6,11 @@
 # instance fields
 .field private count:I
 
-.field private dMC:Landroid/view/View;
+.field private dOk:Landroid/view/View;
 
-.field private dMD:Landroid/widget/TextView;
+.field private dOl:Landroid/widget/TextView;
 
-.field private dME:Lcom/tencent/mm/sdk/platformtools/af;
+.field private dOm:Lcom/tencent/mm/sdk/platformtools/ah;
 
 
 # direct methods
@@ -27,7 +27,7 @@
     iput v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton;->count:I
 
     .line 55
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/af;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ah;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -39,9 +39,9 @@
 
     const/4 v3, 0x1
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/af;-><init>(Landroid/os/Looper;Lcom/tencent/mm/sdk/platformtools/af$a;Z)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ah;-><init>(Landroid/os/Looper;Lcom/tencent/mm/sdk/platformtools/ah$a;Z)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton;->dME:Lcom/tencent/mm/sdk/platformtools/af;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton;->dOm:Lcom/tencent/mm/sdk/platformtools/ah;
 
     .line 36
     invoke-direct {p0}, Lcom/tencent/mm/plugin/f2f/F2FButton;->init()V
@@ -63,7 +63,7 @@
     iput v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton;->count:I
 
     .line 55
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/af;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ah;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -75,9 +75,9 @@
 
     const/4 v3, 0x1
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/af;-><init>(Landroid/os/Looper;Lcom/tencent/mm/sdk/platformtools/af$a;Z)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ah;-><init>(Landroid/os/Looper;Lcom/tencent/mm/sdk/platformtools/ah$a;Z)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton;->dME:Lcom/tencent/mm/sdk/platformtools/af;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton;->dOm:Lcom/tencent/mm/sdk/platformtools/ah;
 
     .line 41
     invoke-direct {p0}, Lcom/tencent/mm/plugin/f2f/F2FButton;->init()V
@@ -101,7 +101,7 @@
 
     .prologue
     .line 18
-    iget-object v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton;->dMD:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton;->dOl:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -135,21 +135,21 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a04e8
+    const v1, 0x7f0301f7
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     .line 47
-    const v0, 0x7f070f34
+    const v0, 0x7f1006ae
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/f2f/F2FButton;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton;->dMC:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton;->dOk:Landroid/view/View;
 
     .line 48
-    const v0, 0x7f070f35
+    const v0, 0x7f1006af
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/f2f/F2FButton;->findViewById(I)Landroid/view/View;
 
@@ -157,15 +157,15 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton;->dMD:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton;->dOl:Landroid/widget/TextView;
 
     .line 49
-    iget-object v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton;->dMC:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton;->dOk:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     .line 50
-    iget-object v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton;->dMD:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton;->dOl:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:background="@null" android:paddingTop="@dimen/j8" android:paddingBottom="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/ah9" android:text="@string/ajz" style="@style/ExdeviceAffectedTextView" />
+        </RelativeLayout>
+        <com.tencent.mm.ui.base.MMHorList android:id="@id/ah_" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</merge>

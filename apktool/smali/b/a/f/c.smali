@@ -4,7 +4,7 @@
 
 
 # virtual methods
-.method public abstract boR()Ljava/lang/String;
+.method public abstract bvP()Ljava/lang/String;
 .end method
 
 .method public abstract getNonce()Ljava/lang/String;

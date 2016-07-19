@@ -4,7 +4,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelfriend.z;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 
 final class RegSetInfoUI$16$1
   implements DialogInterface.OnCancelListener
@@ -13,8 +13,8 @@ final class RegSetInfoUI$16$1
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    ah.tE().c(kwq);
-    ah.tE().b(429, kwr.kwh);
+    ah.tF().c(kVx);
+    ah.tF().b(429, kVy.kVo);
   }
 }
 

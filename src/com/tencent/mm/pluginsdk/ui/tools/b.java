@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.tools;
 
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.h;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -10,61 +10,61 @@ import java.util.List;
 
 public final class b
 {
-  public static boolean AR(String paramString)
+  public static boolean CY(String paramString)
   {
     if ((paramString == null) || (paramString.length() == 0))
     {
-      u.e("!32@/B4Tb64lLpI2WocNsy9sFoT3u3tMXqXe", "markNew fail, appId is empty");
+      v.e("MicroMsg.AppNewIconUtil", "markNew fail, appId is empty");
       return false;
     }
-    h localh = ah.tD().rn();
+    h localh = ah.tE().ro();
     if (localh == null)
     {
-      u.e("!32@/B4Tb64lLpI2WocNsy9sFoT3u3tMXqXe", "markNew fail, cfgStg is null");
+      v.e("MicroMsg.AppNewIconUtil", "markNew fail, cfgStg is null");
       return false;
     }
     a locala = new a((byte)0);
-    locala.sN((String)localh.get(69121, null));
-    if (!hss.contains(paramString)) {
-      hss.add(paramString);
+    locala.up((String)localh.get(69121, null));
+    if (!hKe.contains(paramString)) {
+      hKe.add(paramString);
     }
-    localh.set(69121, locala.aSM());
+    localh.set(69121, locala.aXF());
     return true;
   }
   
-  public static boolean AS(String paramString)
+  public static boolean CZ(String paramString)
   {
     if ((paramString == null) || (paramString.length() == 0))
     {
-      u.e("!32@/B4Tb64lLpI2WocNsy9sFoT3u3tMXqXe", "unmarkNew fail, appId is empty");
+      v.e("MicroMsg.AppNewIconUtil", "unmarkNew fail, appId is empty");
       return false;
     }
-    h localh = ah.tD().rn();
+    h localh = ah.tE().ro();
     if (localh == null)
     {
-      u.e("!32@/B4Tb64lLpI2WocNsy9sFoT3u3tMXqXe", "unmarkNew fail, cfgStg is null");
+      v.e("MicroMsg.AppNewIconUtil", "unmarkNew fail, cfgStg is null");
       return false;
     }
     a locala = new a((byte)0);
-    locala.sN((String)localh.get(69121, null));
-    if (hss.contains(paramString)) {
-      hss.remove(paramString);
+    locala.up((String)localh.get(69121, null));
+    if (hKe.contains(paramString)) {
+      hKe.remove(paramString);
     }
-    localh.set(69121, locala.aSM());
+    localh.set(69121, locala.aXF());
     return true;
   }
   
   private static final class a
   {
-    List hss = new ArrayList();
+    List<String> hKe = new ArrayList();
     
-    final String aSM()
+    final String aXF()
     {
-      if ((hss == null) || (hss.size() == 0)) {
+      if ((hKe == null) || (hKe.size() == 0)) {
         return "";
       }
       StringBuffer localStringBuffer = new StringBuffer();
-      Iterator localIterator = hss.iterator();
+      Iterator localIterator = hKe.iterator();
       while (localIterator.hasNext())
       {
         localStringBuffer.append((String)localIterator.next());
@@ -73,9 +73,9 @@ public final class b
       return localStringBuffer.toString();
     }
     
-    final void sN(String paramString)
+    final void up(String paramString)
     {
-      hss = new ArrayList();
+      hKe = new ArrayList();
       if ((paramString == null) || (paramString.length() == 0)) {}
       for (;;)
       {
@@ -86,7 +86,7 @@ public final class b
         while (i < j)
         {
           Object localObject = paramString[i];
-          hss.add(localObject);
+          hKe.add(localObject);
           i += 1;
         }
       }

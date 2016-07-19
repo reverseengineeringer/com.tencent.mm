@@ -11,8 +11,8 @@ final class ChattingSightContainerView$9
   
   public final void onAnimationEnd(Animation paramAnimation)
   {
-    ChattingSightContainerView.e(gBF).setBackgroundColor(-587202560);
-    ChattingSightContainerView.k(gBF);
+    ChattingSightContainerView.e(gIh).setBackgroundColor(-587202560);
+    ChattingSightContainerView.k(gIh);
   }
   
   public final void onAnimationRepeat(Animation paramAnimation) {}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/m_" android:paddingRight="@dimen/i7" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center_vertical" android:id="@id/bt3" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/cy" android:layout_marginRight="@dimen/hj" android:minWidth="@dimen/fq" style="@style/MMPreferenceTextLarge" />
+    <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:ellipsize="end" android:gravity="right" android:id="@id/bt4" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/i7" android:layout_marginBottom="@dimen/i7" />
+</LinearLayout>

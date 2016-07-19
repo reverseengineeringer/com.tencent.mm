@@ -10,7 +10,7 @@ final class ModRemarkNameUI$a
   
   public final void onClick(View paramView)
   {
-    ModRemarkNameUI.n(llQ);
+    ModRemarkNameUI.n(lMe);
   }
 }
 

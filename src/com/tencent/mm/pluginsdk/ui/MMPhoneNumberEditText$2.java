@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui;
 
 import android.text.Editable;
 import android.text.TextWatcher;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class MMPhoneNumberEditText$2
   implements TextWatcher
@@ -13,26 +13,26 @@ final class MMPhoneNumberEditText$2
   
   public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
   {
-    if (ay.kz(paramCharSequence.toString()))
+    if (be.kf(paramCharSequence.toString()))
     {
-      MMPhoneNumberEditText.a(iGU, true);
+      MMPhoneNumberEditText.a(jdP, true);
       return;
     }
-    MMPhoneNumberEditText.a(iGU, false);
+    MMPhoneNumberEditText.a(jdP, false);
   }
   
   public final void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
   {
-    MMPhoneNumberEditText.c(iGU);
-    if ((paramCharSequence.toString().equals("")) && (!MMPhoneNumberEditText.d(iGU))) {
-      if ((MMPhoneNumberEditText.b(iGU) != null) && (iGU.isFocused())) {
-        MMPhoneNumberEditText.b(iGU).g(iGU);
+    MMPhoneNumberEditText.c(jdP);
+    if ((paramCharSequence.toString().equals("")) && (!MMPhoneNumberEditText.d(jdP))) {
+      if ((MMPhoneNumberEditText.b(jdP) != null) && (jdP.isFocused())) {
+        MMPhoneNumberEditText.b(jdP).g(jdP);
       }
     }
-    while ((paramCharSequence.toString().equals("")) || (!MMPhoneNumberEditText.d(iGU)) || (MMPhoneNumberEditText.b(iGU) == null) || (!iGU.isFocused())) {
+    while ((paramCharSequence.toString().equals("")) || (!MMPhoneNumberEditText.d(jdP)) || (MMPhoneNumberEditText.b(jdP) == null) || (!jdP.isFocused())) {
       return;
     }
-    MMPhoneNumberEditText.b(iGU).aQY();
+    MMPhoneNumberEditText.b(jdP).aVI();
   }
 }
 

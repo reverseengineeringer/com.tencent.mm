@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/voicesearch/b;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/voicesearch/b;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lCw:Lcom/tencent/mm/ui/voicesearch/b;
+.field final synthetic mdn:Lcom/tencent/mm/ui/voicesearch/b;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 721
-    iput-object p1, p0, Lcom/tencent/mm/ui/voicesearch/b$11;->lCw:Lcom/tencent/mm/ui/voicesearch/b;
+    iput-object p1, p0, Lcom/tencent/mm/ui/voicesearch/b$11;->mdn:Lcom/tencent/mm/ui/voicesearch/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 725
-    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/b$11;->lCw:Lcom/tencent/mm/ui/voicesearch/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/b$11;->mdn:Lcom/tencent/mm/ui/voicesearch/b;
 
     const/4 v1, 0x0
 

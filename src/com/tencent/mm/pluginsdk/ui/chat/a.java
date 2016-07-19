@@ -2,47 +2,48 @@ package com.tencent.mm.pluginsdk.ui.chat;
 
 public final class a
 {
-  public final String TAG = "!44@y2bwEXoldKOm0VRCSF7qKJBY45Kf3oPOzu7KaDzfJTs=";
-  a iKA = new a();
-  a iKB = new a();
-  a iKC = new a();
-  a iKD = new a();
-  a iKE = new a();
-  a iKk = new a();
-  a iKl = new a();
-  public a iKm = new a();
-  a iKn = new a();
-  a iKo = new a();
-  a iKp = new a();
-  a iKq = new a();
-  a iKr = new a();
-  a iKs = new a();
-  a iKt = new a();
-  a iKu = new a();
-  a iKv = new a();
-  a iKw = new a();
-  a iKx = new a();
-  a iKy = new a();
-  a iKz = new a();
+  public final String TAG = "MircoMsg.AppPanelControl";
+  a jhA = new a();
+  public a jhB = new a();
+  a jhg = new a();
+  a jhh = new a();
+  public a jhi = new a();
+  a jhj = new a();
+  a jhk = new a();
+  a jhl = new a();
+  a jhm = new a();
+  a jhn = new a();
+  a jho = new a();
+  a jhp = new a();
+  a jhq = new a();
+  a jhr = new a();
+  a jhs = new a();
+  a jht = new a();
+  a jhu = new a();
+  a jhv = new a();
+  a jhw = new a();
+  a jhx = new a();
+  a jhy = new a();
+  a jhz = new a();
   
-  public final void gq(boolean paramBoolean)
+  public final void gP(boolean paramBoolean)
   {
-    iKr.value = paramBoolean;
+    jhn.value = paramBoolean;
   }
   
-  public final void gr(boolean paramBoolean)
+  public final void gQ(boolean paramBoolean)
   {
-    iKs.value = paramBoolean;
+    jho.value = paramBoolean;
   }
   
-  public final void gs(boolean paramBoolean)
+  public final void gR(boolean paramBoolean)
   {
-    iKD.value = paramBoolean;
+    jhz.value = paramBoolean;
   }
   
   public final class a
   {
-    private boolean iKF = true;
+    private boolean jhC = true;
     public boolean value = true;
     
     public a() {}

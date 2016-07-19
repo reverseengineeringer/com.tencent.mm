@@ -42,18 +42,6 @@
     return-void
 .end method
 
-.method public static bridge synthetic adoptFd(I)Landroid/os/ParcelFileDescriptor;
-    .locals 1
-
-    .prologue
-    .line 1
-    invoke-static {p0}, Lcom/tencent/kingkong/ParcelFileDescriptor;->adoptFd(I)Lcom/tencent/kingkong/ParcelFileDescriptor;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public static adoptFd(I)Lcom/tencent/kingkong/ParcelFileDescriptor;
     .locals 2
 

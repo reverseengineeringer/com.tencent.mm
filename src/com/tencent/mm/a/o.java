@@ -15,7 +15,7 @@ public final class o
     uin = ((int)(0xFFFFFFFFFFFFFFFF & paramLong));
   }
   
-  public static int aF(String paramString)
+  public static int aK(String paramString)
   {
     try
     {

@@ -2,7 +2,7 @@ package com.tencent.mm.compatible.util;
 
 public abstract interface a$a
 {
-  public abstract void bT(int paramInt);
+  public abstract void cl(int paramInt);
 }
 
 /* Location:

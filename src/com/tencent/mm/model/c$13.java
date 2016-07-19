@@ -1,13 +1,14 @@
 package com.tencent.mm.model;
 
+import com.tencent.mm.bc.g.b;
+import com.tencent.mm.storage.ad;
+
 final class c$13
-  implements Runnable
+  implements g.b
 {
-  c$13(c paramc) {}
-  
-  public final void run()
+  public final String[] kE()
   {
-    bzL.rl();
+    return ad.bkN;
   }
 }
 

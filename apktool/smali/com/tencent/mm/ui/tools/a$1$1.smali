@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ltU:Lcom/tencent/mm/ui/tools/a$1;
+.field final synthetic lUV:Lcom/tencent/mm/ui/tools/a$1;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 71
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/a$1$1;->ltU:Lcom/tencent/mm/ui/tools/a$1;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/a$1$1;->lUV:Lcom/tencent/mm/ui/tools/a$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 75
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a$1$1;->ltU:Lcom/tencent/mm/ui/tools/a$1;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a$1$1;->lUV:Lcom/tencent/mm/ui/tools/a$1;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/a$1;->a(Lcom/tencent/mm/ui/tools/a$1;)Z
 

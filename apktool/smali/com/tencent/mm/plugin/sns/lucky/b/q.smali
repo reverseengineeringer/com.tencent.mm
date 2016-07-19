@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public gIK:Ljava/lang/String;
+.field public gPj:J
 
-.field public gIL:Ljava/lang/String;
+.field public gPk:J
 
-.field public gIe:J
+.field public gQl:Ljava/lang/String;
 
-.field public gIf:J
+.field public gQm:Ljava/lang/String;
 
 
 # direct methods
@@ -24,20 +24,20 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 8
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/lucky/b/q;->gIe:J
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/lucky/b/q;->gPj:J
 
     .line 9
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/lucky/b/q;->gIf:J
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/lucky/b/q;->gPk:J
 
     .line 11
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/b/q;->gIK:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/b/q;->gQl:Ljava/lang/String;
 
     .line 12
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/b/q;->gIL:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/b/q;->gQm:Ljava/lang/String;
 
     return-void
 .end method

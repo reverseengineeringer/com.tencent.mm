@@ -7,7 +7,7 @@ final class SightCameraSurfaceView$2
   
   public final void run()
   {
-    gDS.gEc.awZ();
+    gKs.gKC.azy();
   }
   
   public final String toString()

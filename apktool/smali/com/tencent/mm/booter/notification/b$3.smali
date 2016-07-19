@@ -13,9 +13,18 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/lf;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic bnB:Lcom/tencent/mm/booter/notification/b;
+.field final synthetic bbz:Lcom/tencent/mm/booter/notification/b;
 
 
 # direct methods
@@ -23,46 +32,51 @@
     .locals 1
 
     .prologue
-    .line 153
-    iput-object p1, p0, Lcom/tencent/mm/booter/notification/b$3;->bnB:Lcom/tencent/mm/booter/notification/b;
+    .line 151
+    iput-object p1, p0, Lcom/tencent/mm/booter/notification/b$3;->bbz:Lcom/tencent/mm/booter/notification/b;
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/lf;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/booter/notification/b$3;->kum:I
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
+.method private a(Lcom/tencent/mm/e/a/lf;)Z
     .locals 8
 
     .prologue
     const/4 v7, 0x0
 
-    .line 155
+    .line 153
     if-eqz p1, :cond_0
 
-    instance-of v0, p1, Lcom/tencent/mm/d/a/kw;
+    instance-of v0, p1, Lcom/tencent/mm/e/a/lf;
 
     if-eqz v0, :cond_0
 
+    .line 155
+    iget-object v0, p1, Lcom/tencent/mm/e/a/lf;->atM:Lcom/tencent/mm/e/a/lf$a;
+
+    iget-object v1, v0, Lcom/tencent/mm/e/a/lf$a;->asp:Ljava/lang/String;
+
     .line 156
-    check-cast p1, Lcom/tencent/mm/d/a/kw;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/lf;->atM:Lcom/tencent/mm/e/a/lf$a;
+
+    iget v2, v0, Lcom/tencent/mm/e/a/lf$a;->arf:I
 
     .line 157
-    iget-object v0, p1, Lcom/tencent/mm/d/a/kw;->aHs:Lcom/tencent/mm/d/a/kw$a;
-
-    iget-object v1, v0, Lcom/tencent/mm/d/a/kw$a;->aGj:Ljava/lang/String;
-
-    .line 158
-    iget-object v0, p1, Lcom/tencent/mm/d/a/kw;->aHs:Lcom/tencent/mm/d/a/kw$a;
-
-    iget v2, v0, Lcom/tencent/mm/d/a/kw$a;->aFa:I
-
-    .line 159
-    iget-object v3, p0, Lcom/tencent/mm/booter/notification/b$3;->bnB:Lcom/tencent/mm/booter/notification/b;
+    iget-object v3, p0, Lcom/tencent/mm/booter/notification/b$3;->bbz:Lcom/tencent/mm/booter/notification/b;
 
     :try_start_0
     const-string/jumbo v0, "showSendMsgFailNotification fromUserName:%s msgType:%d"
@@ -79,7 +93,7 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     iget-object v0, v3, Lcom/tencent/mm/booter/notification/b;->context:Landroid/content/Context;
 
@@ -191,7 +205,7 @@
 
     iget-object v2, v3, Lcom/tencent/mm/booter/notification/b;->context:Landroid/content/Context;
 
-    const v4, 0x7f0b0e30
+    const v4, 0x7f080113
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -203,7 +217,7 @@
 
     iget-object v2, v3, Lcom/tencent/mm/booter/notification/b;->context:Landroid/content/Context;
 
-    const v4, 0x7f0b0ecb
+    const v4, 0x7f080c26
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -221,7 +235,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/aq/a;->aOQ()I
+    invoke-static {}, Lcom/tencent/mm/au/a;->aTs()I
 
     move-result v1
 
@@ -247,7 +261,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 161
+    .line 159
     :cond_0
     :goto_0
     return v7
@@ -256,4 +270,20 @@
     move-exception v0
 
     goto :goto_0
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
+    .locals 1
+
+    .prologue
+    .line 151
+    check-cast p1, Lcom/tencent/mm/e/a/lf;
+
+    invoke-direct {p0, p1}, Lcom/tencent/mm/booter/notification/b$3;->a(Lcom/tencent/mm/e/a/lf;)Z
+
+    move-result v0
+
+    return v0
 .end method

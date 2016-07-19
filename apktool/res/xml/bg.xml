@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto"
+  xmlns:android1="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="@string/cee" android:key="settings_landscape_mode" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/cfu" android:key="settings_nfc_switch" android:defaultValue="false" />
+    <Preference android:layout="@layout/yk" android:title="@string/chu" android:key="settings_sns_sight_auto_download" />
+    <Preference android:layout="@layout/yk" android:title="@string/chk" android:key="settings_silence_update_mode" />
+    <Preference android:layout="@layout/yk" android:title="@string/cef" android:key="settings_language" />
+    <Preference android:layout="@layout/yk" android:title="@string/ci5" android:key="settings_text_size" />
+    <IconPreference android:title="@string/cga" android:key="settings_plugins" />
+    <Preference android:layout="@layout/yk" android:title="@string/cia" android:key="settings_traffic_statistic" />
+    <Preference android:layout="@layout/yk" android:title="@string/cjc" android:key="settngs_clean" />
+    <PreferenceCategory />
+</PreferenceScreen>

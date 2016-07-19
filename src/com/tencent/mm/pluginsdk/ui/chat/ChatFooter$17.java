@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.chat;
 
 import android.os.Message;
 import com.tencent.mm.compatible.a.a.a;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class ChatFooter$17
   implements a.a
@@ -13,8 +13,8 @@ final class ChatFooter$17
   {
     Message localMessage = new Message();
     what = 1002;
-    obj = Boolean.valueOf(cCD);
-    ChatFooter.I(iLO).sendMessage(localMessage);
+    obj = Boolean.valueOf(czA);
+    ChatFooter.J(jiL).sendMessage(localMessage);
   }
 }
 

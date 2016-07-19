@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract aiq()V
+.method public abstract akX()V
 .end method

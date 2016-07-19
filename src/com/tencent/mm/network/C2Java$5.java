@@ -1,6 +1,6 @@
 package com.tencent.mm.network;
 
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class C2Java$5
   implements Runnable
@@ -9,9 +9,9 @@ final class C2Java$5
   
   public final void run()
   {
-    x localx = z.Fi();
-    if (ay.kz(ciw)) {}
-    for (byte[] arrayOfByte = null;; arrayOfByte = ciw.getBytes())
+    x localx = z.FE();
+    if (be.kf(cdN)) {}
+    for (byte[] arrayOfByte = null;; arrayOfByte = cdN.getBytes())
     {
       localx.onNotify(0, 268369923, arrayOfByte);
       return;

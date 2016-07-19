@@ -21,17 +21,27 @@
 
 
 # static fields
-.field private static amF:J
+.field private static Zu:J
 
-.field private static bwA:J
+.field private static blM:I
 
-.field private static bwB:Ljava/util/HashMap;
+.field private static blN:J
 
-.field private static final bwC:[B
+.field private static blO:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/jni/platformcomm/b$c$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private static bwD:Landroid/content/BroadcastReceiver;
+.field private static final blP:[B
 
-.field private static bwz:I
+.field private static blQ:Landroid/content/BroadcastReceiver;
 
 
 # direct methods
@@ -46,30 +56,30 @@
     const/4 v0, 0x0
 
     .line 134
-    sput v0, Lcom/tencent/mm/jni/platformcomm/b$c;->bwz:I
+    sput v0, Lcom/tencent/mm/jni/platformcomm/b$c;->blM:I
 
     .line 136
-    sput-wide v2, Lcom/tencent/mm/jni/platformcomm/b$c;->amF:J
+    sput-wide v2, Lcom/tencent/mm/jni/platformcomm/b$c;->Zu:J
 
     .line 137
-    sput-wide v2, Lcom/tencent/mm/jni/platformcomm/b$c;->bwA:J
+    sput-wide v2, Lcom/tencent/mm/jni/platformcomm/b$c;->blN:J
 
     .line 138
-    sput-object v1, Lcom/tencent/mm/jni/platformcomm/b$c;->bwB:Ljava/util/HashMap;
+    sput-object v1, Lcom/tencent/mm/jni/platformcomm/b$c;->blO:Ljava/util/HashMap;
 
     .line 139
     new-array v0, v0, [B
 
-    sput-object v0, Lcom/tencent/mm/jni/platformcomm/b$c;->bwC:[B
+    sput-object v0, Lcom/tencent/mm/jni/platformcomm/b$c;->blP:[B
 
     .line 177
-    sput-object v1, Lcom/tencent/mm/jni/platformcomm/b$c;->bwD:Landroid/content/BroadcastReceiver;
+    sput-object v1, Lcom/tencent/mm/jni/platformcomm/b$c;->blQ:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
 
-.method private static b(Ljava/lang/String;Ljava/lang/String;J)V
-    .locals 5
+.method private static a(Ljava/lang/String;Ljava/lang/String;J)V
+    .locals 6
 
     .prologue
     .line 278
@@ -96,13 +106,13 @@
     move-result-object v1
 
     .line 279
-    sget-object v2, Lcom/tencent/mm/jni/platformcomm/b$c;->bwC:[B
+    sget-object v2, Lcom/tencent/mm/jni/platformcomm/b$c;->blP:[B
 
     monitor-enter v2
 
     .line 280
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/b$c;->bwB:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/b$c;->blO:Ljava/util/HashMap;
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -121,34 +131,34 @@
     invoke-direct {v0, v3}, Lcom/tencent/mm/jni/platformcomm/b$c$a;-><init>(B)V
 
     .line 283
-    iput-object p0, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwE:Ljava/lang/String;
+    iput-object p0, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blR:Ljava/lang/String;
 
     .line 284
-    iput-object p1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwx:Ljava/lang/String;
+    iput-object p1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blK:Ljava/lang/String;
 
     .line 285
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    iput-wide v3, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwJ:J
+    iput-wide v4, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blW:J
 
     .line 286
     const/4 v3, 0x0
 
-    iput v3, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwH:I
+    iput v3, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blU:I
 
     .line 287
     const/4 v3, 0x0
 
-    iput v3, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwI:I
+    iput v3, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blV:I
 
     .line 288
-    sget-object v3, Lcom/tencent/mm/jni/platformcomm/b$c;->bwB:Ljava/util/HashMap;
+    sget-object v3, Lcom/tencent/mm/jni/platformcomm/b$c;->blO:Ljava/util/HashMap;
 
     invoke-virtual {v3, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 291
     :cond_0
-    iget-object v1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwL:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object v1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blY:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
@@ -157,23 +167,23 @@
     if-nez v1, :cond_1
 
     .line 292
-    iput-wide p2, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwK:J
+    iput-wide p2, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blX:J
 
     .line 293
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ah;->dt(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ak;->du(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwF:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blS:Ljava/lang/String;
 
     .line 294
     sget-boolean v1, Lcom/tencent/mm/sdk/b/b;->foreground:Z
 
-    iput-boolean v1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwG:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blT:Z
 
     .line 296
     :cond_1
@@ -191,8 +201,8 @@
     throw v0
 .end method
 
-.method private static c(Ljava/lang/String;Ljava/lang/String;J)V
-    .locals 6
+.method private static b(Ljava/lang/String;Ljava/lang/String;J)V
+    .locals 8
 
     .prologue
     .line 300
@@ -219,18 +229,18 @@
     move-result-object v0
 
     .line 301
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     .line 302
-    sget-object v3, Lcom/tencent/mm/jni/platformcomm/b$c;->bwC:[B
+    sget-object v4, Lcom/tencent/mm/jni/platformcomm/b$c;->blP:[B
 
-    monitor-enter v3
+    monitor-enter v4
 
     .line 303
     :try_start_0
-    sget-object v4, Lcom/tencent/mm/jni/platformcomm/b$c;->bwB:Ljava/util/HashMap;
+    sget-object v1, Lcom/tencent/mm/jni/platformcomm/b$c;->blO:Ljava/util/HashMap;
 
-    invoke-virtual {v4, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -240,59 +250,59 @@
     if-eqz v0, :cond_0
 
     .line 305
-    iget-object v4, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwL:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object v1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blY:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
-    move-result v4
+    move-result v1
 
-    if-lez v4, :cond_0
+    if-lez v1, :cond_0
 
     .line 306
-    iget v4, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwH:I
+    iget v1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blU:I
 
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v1, v1, 0x1
 
-    iput v4, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwH:I
+    iput v1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blU:I
 
     .line 307
-    iget-object v4, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwL:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object v1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blY:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
 
-    move-result v4
+    move-result v1
 
-    if-nez v4, :cond_0
+    if-nez v1, :cond_0
 
     .line 308
-    iget-wide v1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwK:J
+    iget-wide v2, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blX:J
 
-    sub-long v1, p2, v1
+    sub-long v2, p2, v2
 
     .line 309
-    iget-wide v4, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwJ:J
+    iget-wide v6, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blW:J
 
-    add-long/2addr v4, v1
+    add-long/2addr v6, v2
 
-    iput-wide v4, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwJ:J
+    iput-wide v6, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blW:J
 
     .line 310
-    iget v4, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwI:I
+    iget v1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blV:I
 
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v1, v1, 0x1
 
-    iput v4, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwI:I
+    iput v1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blV:I
 
     :cond_0
-    move-wide v0, v1
+    move-wide v0, v2
 
     .line 314
-    monitor-exit v3
+    monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 316
-    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/b$c;->qX()V
+    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/b$c;->pM()V
 
     .line 318
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -306,7 +316,7 @@
 
     if-gez v0, :cond_1
 
-    sget-wide v0, Lcom/tencent/mm/jni/platformcomm/b$c;->bwA:J
+    sget-wide v0, Lcom/tencent/mm/jni/platformcomm/b$c;->blN:J
 
     sub-long v0, v2, v0
 
@@ -318,17 +328,17 @@
 
     .line 320
     :cond_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpIDuTvsMKPbuFiTCClcINC4bw0bFRAadsY="
+    const-string/jumbo v0, "MicroMsg.WakeLockStatsManager"
 
     const-string/jumbo v1, "saveStatsToStorage triggered."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 321
-    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/b$c;->qY()V
+    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/b$c;->pN()V
 
     .line 322
-    sput-wide v2, Lcom/tencent/mm/jni/platformcomm/b$c;->bwA:J
+    sput-wide v2, Lcom/tencent/mm/jni/platformcomm/b$c;->blN:J
 
     .line 324
     :cond_2
@@ -339,11 +349,21 @@
     move-exception v0
 
     :try_start_1
-    monitor-exit v3
+    monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw v0
+.end method
+
+.method static synthetic c(Ljava/lang/String;Ljava/lang/String;J)V
+    .locals 0
+
+    .prologue
+    .line 124
+    invoke-static {p0, p1, p2, p3}, Lcom/tencent/mm/jni/platformcomm/b$c;->a(Ljava/lang/String;Ljava/lang/String;J)V
+
+    return-void
 .end method
 
 .method static synthetic d(Ljava/lang/String;Ljava/lang/String;J)V
@@ -356,6 +376,32 @@
     return-void
 .end method
 
+.method public static dG(Ljava/lang/String;)V
+    .locals 1
+
+    .prologue
+    .line 237
+    const/4 v0, 0x1
+
+    invoke-static {p0, v0}, Lcom/tencent/mm/jni/platformcomm/b$c;->h(Ljava/lang/String;Z)V
+
+    .line 238
+    return-void
+.end method
+
+.method public static dH(Ljava/lang/String;)V
+    .locals 1
+
+    .prologue
+    .line 241
+    const/4 v0, 0x0
+
+    invoke-static {p0, v0}, Lcom/tencent/mm/jni/platformcomm/b$c;->h(Ljava/lang/String;Z)V
+
+    .line 242
+    return-void
+.end method
+
 .method public static detach()V
     .locals 5
 
@@ -363,27 +409,27 @@
     const/4 v4, 0x0
 
     .line 227
-    sget v0, Lcom/tencent/mm/jni/platformcomm/b$c;->bwz:I
+    sget v0, Lcom/tencent/mm/jni/platformcomm/b$c;->blM:I
 
     if-lez v0, :cond_0
 
     .line 228
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    sget-object v1, Lcom/tencent/mm/jni/platformcomm/b$c;->bwD:Landroid/content/BroadcastReceiver;
+    sget-object v1, Lcom/tencent/mm/jni/platformcomm/b$c;->blQ:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 229
-    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/b$c;->qY()V
+    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/b$c;->pN()V
 
     .line 230
-    sput v4, Lcom/tencent/mm/jni/platformcomm/b$c;->bwz:I
+    sput v4, Lcom/tencent/mm/jni/platformcomm/b$c;->blM:I
 
     .line 232
-    const-string/jumbo v0, "!44@/B4Tb64lLpIDuTvsMKPbuFiTCClcINC4bw0bFRAadsY="
+    const-string/jumbo v0, "MicroMsg.WakeLockStatsManager"
 
     const-string/jumbo v1, "WakeLockStatsManager is detached from process [%s]"
 
@@ -391,57 +437,21 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aQC()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aVm()Ljava/lang/String;
 
     move-result-object v3
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 234
     :cond_0
     return-void
 .end method
 
-.method public static dx(Ljava/lang/String;)V
-    .locals 1
-
-    .prologue
-    .line 237
-    const/4 v0, 0x1
-
-    invoke-static {p0, v0}, Lcom/tencent/mm/jni/platformcomm/b$c;->e(Ljava/lang/String;Z)V
-
-    .line 238
-    return-void
-.end method
-
-.method public static dy(Ljava/lang/String;)V
-    .locals 1
-
-    .prologue
-    .line 241
-    const/4 v0, 0x0
-
-    invoke-static {p0, v0}, Lcom/tencent/mm/jni/platformcomm/b$c;->e(Ljava/lang/String;Z)V
-
-    .line 242
-    return-void
-.end method
-
-.method static synthetic e(Ljava/lang/String;Ljava/lang/String;J)V
-    .locals 0
-
-    .prologue
-    .line 124
-    invoke-static {p0, p1, p2, p3}, Lcom/tencent/mm/jni/platformcomm/b$c;->c(Ljava/lang/String;Ljava/lang/String;J)V
-
-    return-void
-.end method
-
-.method private static e(Ljava/lang/String;Z)V
-    .locals 5
+.method private static h(Ljava/lang/String;Z)V
+    .locals 6
 
     .prologue
     .line 245
@@ -450,12 +460,12 @@
     move-result v0
 
     .line 246
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aQC()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aVm()Ljava/lang/String;
 
     move-result-object v1
 
     .line 248
-    sget v2, Lcom/tencent/mm/jni/platformcomm/b$c;->bwz:I
+    sget v2, Lcom/tencent/mm/jni/platformcomm/b$c;->blM:I
 
     if-ne v0, v2, :cond_1
 
@@ -467,7 +477,7 @@
 
     move-result-wide v2
 
-    invoke-static {v1, p0, v2, v3}, Lcom/tencent/mm/jni/platformcomm/b$c;->b(Ljava/lang/String;Ljava/lang/String;J)V
+    invoke-static {v1, p0, v2, v3}, Lcom/tencent/mm/jni/platformcomm/b$c;->a(Ljava/lang/String;Ljava/lang/String;J)V
 
     .line 271
     :goto_0
@@ -479,7 +489,7 @@
 
     move-result-wide v2
 
-    invoke-static {v1, p0, v2, v3}, Lcom/tencent/mm/jni/platformcomm/b$c;->c(Ljava/lang/String;Ljava/lang/String;J)V
+    invoke-static {v1, p0, v2, v3}, Lcom/tencent/mm/jni/platformcomm/b$c;->b(Ljava/lang/String;Ljava/lang/String;J)V
 
     goto :goto_0
 
@@ -514,12 +524,12 @@
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v2, v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+    invoke-virtual {v2, v0, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
     .line 261
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -557,12 +567,12 @@
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v2, v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+    invoke-virtual {v2, v0, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
     .line 268
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -573,14 +583,14 @@
     goto :goto_0
 .end method
 
-.method public static qW()V
+.method public static pL()V
     .locals 6
 
     .prologue
     const/4 v2, 0x0
 
     .line 180
-    sget v0, Lcom/tencent/mm/jni/platformcomm/b$c;->bwz:I
+    sget v0, Lcom/tencent/mm/jni/platformcomm/b$c;->blM:I
 
     if-nez v0, :cond_1
 
@@ -589,24 +599,24 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/jni/platformcomm/b$c;->bwz:I
+    sput v0, Lcom/tencent/mm/jni/platformcomm/b$c;->blM:I
 
     .line 183
     new-instance v0, Lcom/tencent/mm/jni/platformcomm/b$c$1;
 
     invoke-direct {v0}, Lcom/tencent/mm/jni/platformcomm/b$c$1;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/jni/platformcomm/b$c;->bwD:Landroid/content/BroadcastReceiver;
+    sput-object v0, Lcom/tencent/mm/jni/platformcomm/b$c;->blQ:Landroid/content/BroadcastReceiver;
 
     .line 215
-    sget-object v3, Lcom/tencent/mm/jni/platformcomm/b$c;->bwC:[B
+    sget-object v3, Lcom/tencent/mm/jni/platformcomm/b$c;->blP:[B
 
     monitor-enter v3
 
     :try_start_0
     new-instance v0, Ljava/io/File;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -634,7 +644,7 @@
 
     move-result-wide v4
 
-    sput-wide v4, Lcom/tencent/mm/jni/platformcomm/b$c;->amF:J
+    sput-wide v4, Lcom/tencent/mm/jni/platformcomm/b$c;->Zu:J
 
     invoke-virtual {v1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
@@ -642,7 +652,7 @@
 
     check-cast v0, Ljava/util/HashMap;
 
-    sput-object v0, Lcom/tencent/mm/jni/platformcomm/b$c;->bwB:Ljava/util/HashMap;
+    sput-object v0, Lcom/tencent/mm/jni/platformcomm/b$c;->blO:Ljava/util/HashMap;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
@@ -676,18 +686,18 @@
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 220
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    sget-object v3, Lcom/tencent/mm/jni/platformcomm/b$c;->bwD:Landroid/content/BroadcastReceiver;
+    sget-object v3, Lcom/tencent/mm/jni/platformcomm/b$c;->blQ:Landroid/content/BroadcastReceiver;
 
     const-string/jumbo v4, "com.tencent.mm.permission.MM_MESSAGE"
 
     invoke-virtual {v1, v3, v0, v4, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
     .line 222
-    const-string/jumbo v0, "!44@/B4Tb64lLpIDuTvsMKPbuFiTCClcINC4bw0bFRAadsY="
+    const-string/jumbo v0, "MicroMsg.WakeLockStatsManager"
 
     const-string/jumbo v1, "WakeLockStatsManager is attached to process [%s]"
 
@@ -697,13 +707,13 @@
 
     const/4 v3, 0x0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aQC()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aVm()Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 224
     :cond_1
@@ -717,23 +727,23 @@
 
     :goto_1
     :try_start_4
-    const-string/jumbo v1, "!44@/B4Tb64lLpIDuTvsMKPbuFiTCClcINC4bw0bFRAadsY="
+    const-string/jumbo v1, "MicroMsg.WakeLockStatsManager"
 
     const-string/jumbo v4, "failed to load stats from storage, use default value for last stats info."
 
-    invoke-static {v1, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v4
 
-    sput-wide v4, Lcom/tencent/mm/jni/platformcomm/b$c;->amF:J
+    sput-wide v4, Lcom/tencent/mm/jni/platformcomm/b$c;->Zu:J
 
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v1, Lcom/tencent/mm/jni/platformcomm/b$c;->bwB:Ljava/util/HashMap;
+    sput-object v1, Lcom/tencent/mm/jni/platformcomm/b$c;->blO:Ljava/util/HashMap;
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
@@ -812,7 +822,7 @@
     goto :goto_1
 .end method
 
-.method private static qX()V
+.method private static pM()V
     .locals 12
 
     .prologue
@@ -821,7 +831,7 @@
     const/4 v3, 0x0
 
     .line 327
-    sget-object v4, Lcom/tencent/mm/jni/platformcomm/b$c;->bwC:[B
+    sget-object v4, Lcom/tencent/mm/jni/platformcomm/b$c;->blP:[B
 
     monitor-enter v4
 
@@ -829,21 +839,21 @@
     :try_start_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v5
+    move-result-wide v6
 
     .line 330
-    sget-wide v0, Lcom/tencent/mm/jni/platformcomm/b$c;->amF:J
+    sget-wide v0, Lcom/tencent/mm/jni/platformcomm/b$c;->Zu:J
 
-    sub-long v0, v5, v0
+    sub-long v0, v6, v0
 
-    const-wide/32 v7, 0x1499700
+    const-wide/32 v8, 0x1499700
 
-    cmp-long v0, v0, v7
+    cmp-long v0, v0, v8
 
     if-ltz v0, :cond_4
 
     .line 331
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/b$c;->bwB:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/b$c;->blO:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
 
@@ -852,12 +862,12 @@
     if-nez v0, :cond_3
 
     .line 332
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 334
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/b$c;->bwB:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/b$c;->blO:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
@@ -890,19 +900,19 @@
     check-cast v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;
 
     .line 337
-    iget v1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwI:I
+    iget v1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blV:I
 
     if-lez v1, :cond_0
 
     .line 338
     const/4 v1, 0x0
 
-    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->setLength(I)V
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->setLength(I)V
 
     .line 339
-    iget-object v1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwE:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blR:Ljava/lang/String;
 
-    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -912,7 +922,7 @@
 
     move-result-object v1
 
-    iget-object v9, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwx:Ljava/lang/String;
+    iget-object v9, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blK:Ljava/lang/String;
 
     const-string/jumbo v10, ","
 
@@ -932,7 +942,7 @@
 
     move-result-object v1
 
-    iget v9, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwI:I
+    iget v9, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blV:I
 
     invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -944,7 +954,7 @@
 
     move-result-object v1
 
-    iget v9, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwH:I
+    iget v9, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blU:I
 
     invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -956,9 +966,9 @@
 
     move-result-object v1
 
-    iget-wide v9, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwJ:J
+    iget-wide v10, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blW:J
 
-    invoke-virtual {v1, v9, v10}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v10, v11}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -968,7 +978,7 @@
 
     move-result-object v9
 
-    iget-boolean v1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwG:Z
+    iget-boolean v1, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blT:Z
 
     if-eqz v1, :cond_1
 
@@ -985,32 +995,32 @@
 
     move-result-object v1
 
-    iget-object v0, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->bwF:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/jni/platformcomm/b$c$a;->blS:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 347
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     .line 348
-    new-instance v1, Lcom/tencent/mm/d/a/js;
+    new-instance v1, Lcom/tencent/mm/e/a/jy;
 
-    invoke-direct {v1}, Lcom/tencent/mm/d/a/js;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/e/a/jy;-><init>()V
 
     .line 349
-    iget-object v9, v1, Lcom/tencent/mm/d/a/js;->aGp:Lcom/tencent/mm/d/a/js$a;
+    iget-object v9, v1, Lcom/tencent/mm/e/a/jy;->asz:Lcom/tencent/mm/e/a/jy$a;
 
-    iput-object v0, v9, Lcom/tencent/mm/d/a/js$a;->aGq:Ljava/lang/String;
+    iput-object v0, v9, Lcom/tencent/mm/e/a/jy$a;->asA:Ljava/lang/String;
 
     .line 350
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 352
-    const-string/jumbo v0, "!44@/B4Tb64lLpIDuTvsMKPbuFiTCClcINC4bw0bFRAadsY="
+    const-string/jumbo v0, "MicroMsg.WakeLockStatsManager"
 
     const-string/jumbo v1, "kvstat-str: %s"
 
@@ -1020,13 +1030,13 @@
 
     const/4 v10, 0x0
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v11
 
     aput-object v11, v9, v10
 
-    invoke-static {v0, v1, v9}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v9}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
@@ -1049,13 +1059,13 @@
     .line 355
     :cond_2
     :try_start_1
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/b$c;->bwB:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/b$c;->blO:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
     .line 357
     :cond_3
-    sput-wide v5, Lcom/tencent/mm/jni/platformcomm/b$c;->amF:J
+    sput-wide v6, Lcom/tencent/mm/jni/platformcomm/b$c;->Zu:J
 
     .line 359
     :cond_4
@@ -1066,12 +1076,12 @@
     return-void
 .end method
 
-.method private static qY()V
+.method private static pN()V
     .locals 6
 
     .prologue
     .line 386
-    sget-object v3, Lcom/tencent/mm/jni/platformcomm/b$c;->bwC:[B
+    sget-object v3, Lcom/tencent/mm/jni/platformcomm/b$c;->blP:[B
 
     monitor-enter v3
 
@@ -1082,7 +1092,7 @@
     :try_start_0
     new-instance v0, Ljava/io/File;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -1099,7 +1109,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/modelsfs/FileOp;->iO(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/modelsfs/FileOp;->jf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -1146,7 +1156,7 @@
     .line 398
     :goto_0
     :try_start_1
-    const-string/jumbo v2, "!44@/B4Tb64lLpIDuTvsMKPbuFiTCClcINC4bw0bFRAadsY="
+    const-string/jumbo v2, "MicroMsg.WakeLockStatsManager"
 
     const-string/jumbo v4, "failed to save stats to storage."
 
@@ -1154,7 +1164,7 @@
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    invoke-static {v2, v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -1201,12 +1211,12 @@
 
     .line 395
     :try_start_5
-    sget-wide v0, Lcom/tencent/mm/jni/platformcomm/b$c;->amF:J
+    sget-wide v0, Lcom/tencent/mm/jni/platformcomm/b$c;->Zu:J
 
     invoke-virtual {v2, v0, v1}, Ljava/io/ObjectOutputStream;->writeLong(J)V
 
     .line 396
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/b$c;->bwB:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/b$c;->blO:Ljava/util/HashMap;
 
     invoke-virtual {v2, v0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
     :try_end_5

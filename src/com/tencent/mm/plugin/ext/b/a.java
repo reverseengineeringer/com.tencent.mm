@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.ext.b;
 
 public final class a
 {
-  public static final String[] dKx = { "retCode" };
+  public static final String[] dLY = { "retCode" };
 }
 
 /* Location:

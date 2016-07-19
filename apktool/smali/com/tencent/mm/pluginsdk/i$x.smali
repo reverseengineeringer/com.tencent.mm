@@ -18,5 +18,5 @@
 .method public abstract m(Ljava/lang/String;Landroid/graphics/Bitmap;)V
 .end method
 
-.method public abstract qq(Ljava/lang/String;)Landroid/graphics/Bitmap;
+.method public abstract rG(Ljava/lang/String;)Landroid/graphics/Bitmap;
 .end method

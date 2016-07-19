@@ -10,7 +10,7 @@ final class MMTagPanel$8$3
   
   public final void run()
   {
-    MMTagPanel.e(kHs.kHq).ne(((TextView)dSX).getText().toString());
+    MMTagPanel.e(lgu.lgs).om(((TextView)dVf).getText().toString());
   }
 }
 

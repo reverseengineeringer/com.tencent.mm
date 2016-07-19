@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lkt:Lcom/tencent/mm/ui/contact/k;
+.field final synthetic lKE:Lcom/tencent/mm/ui/contact/k;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 151
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/k$4;->lkt:Lcom/tencent/mm/ui/contact/k;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/k$4;->lKE:Lcom/tencent/mm/ui/contact/k;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,14 +41,14 @@
 
     .prologue
     .line 155
-    const-string/jumbo v0, "!44@/B4Tb64lLpISOYcLaKm7W93grpYn2xfC5yJeWqznlqY="
+    const-string/jumbo v0, "MicroMsg.FMessageContactView"
 
     const-string/jumbo v1, "initNoNew, goto FMessageConversationUI"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 156
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/k$4;->lkt:Lcom/tencent/mm/ui/contact/k;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/k$4;->lKE:Lcom/tencent/mm/ui/contact/k;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/k;->d(Lcom/tencent/mm/ui/contact/k;)Landroid/content/Context;
 
@@ -62,7 +62,7 @@
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     .line 157
     return-void

@@ -2,9 +2,9 @@ package com.tencent.mm.plugin.sight.draft.ui;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.an.h;
-import com.tencent.mm.an.j;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.aq.l;
+import com.tencent.mm.aq.n;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class b$c
   implements View.OnClickListener
@@ -16,16 +16,16 @@ final class b$c
     if (!(paramView.getTag() instanceof b.e)) {
       return;
     }
-    b.e(gzt).awd();
+    b.e(gFV).ayB();
     paramView = (b.e)paramView.getTag();
-    if (cfv == null)
+    if (caH == null)
     {
-      u.e("!56@/B4Tb64lLpJ8NKLwSZ2/Li1Vl1EOzrjMav6QQvoMQ7gze8tXohsfkA==", "draftInfo is NULL");
+      v.e("MicroMsg.SightDraftContainerAdapter", "draftInfo is NULL");
       return;
     }
-    cfv.field_fileStatus = 6;
-    j.Eb().a(cfv, new String[] { "localId" });
-    gzt.a(null, null);
+    caH.field_fileStatus = 6;
+    n.Et().a(caH, new String[] { "localId" });
+    gFV.a(null, null);
   }
 }
 

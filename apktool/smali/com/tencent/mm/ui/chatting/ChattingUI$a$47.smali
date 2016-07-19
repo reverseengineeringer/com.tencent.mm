@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnCreateContextMenuListener;
+.implements Lcom/tencent/mm/model/as$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;->a(Landroid/view/View;Lcom/tencent/mm/storage/ag$a;)V
+    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;->keepSignalling()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.field final synthetic lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 10791
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$47;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 1192
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$47;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,40 +36,20 @@
 
 
 # virtual methods
-.method public final onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V
-    .locals 4
+.method public final a(Lcom/tencent/mm/network/e;)V
+    .locals 0
 
     .prologue
-    const/4 v3, 0x1
+    .line 1196
+    if-nez p1, :cond_0
 
-    const/4 v2, 0x0
-
-    .line 10796
-    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const v1, 0x7f0b1557
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {p1, v2, v2, v2, v0}, Landroid/view/ContextMenu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
-
-    .line 10797
-    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const v1, 0x7f0b155a
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {p1, v2, v3, v3, v0}, Landroid/view/ContextMenu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
-
-    .line 10798
+    .line 1200
+    :goto_0
     return-void
+
+    .line 1199
+    :cond_0
+    invoke-interface {p1}, Lcom/tencent/mm/network/e;->keepSignalling()V
+
+    goto :goto_0
 .end method

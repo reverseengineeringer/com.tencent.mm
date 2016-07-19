@@ -11,15 +11,15 @@ final class f
   extends e
   implements NativeActionModeAwareLayout.a
 {
-  final NativeActionModeAwareLayout jt;
-  ActionMode ju;
+  final NativeActionModeAwareLayout jK;
+  ActionMode jL;
   
   public f(ActionBarActivity paramActionBarActivity, ActionBar.a parama)
   {
     super(paramActionBarActivity, parama);
-    jt = ((NativeActionModeAwareLayout)paramActionBarActivity.findViewById(2131165282));
-    if (jt != null) {
-      jt.setActionModeForChildListener(this);
+    jK = ((NativeActionModeAwareLayout)paramActionBarActivity.findViewById(2131755156));
+    if (jK != null) {
+      jK.qz = this;
     }
   }
   
@@ -30,50 +30,50 @@ final class f
   
   final boolean aX()
   {
-    return (ju == null) && (super.aX());
+    return (jL == null) && (super.aX());
   }
   
   public final void hide()
   {
     super.hide();
-    if (ju != null) {
-      ju.finish();
+    if (jL != null) {
+      jL.finish();
     }
   }
   
   public final void show()
   {
     super.show();
-    if (ju != null) {
-      ju.finish();
+    if (jL != null) {
+      jL.finish();
     }
   }
   
   private final class a
     implements ActionMode.Callback
   {
-    private final ActionMode.Callback jv;
+    private final ActionMode.Callback jM;
     
     a(ActionMode.Callback paramCallback)
     {
-      jv = paramCallback;
+      jM = paramCallback;
     }
     
     public final boolean onActionItemClicked(ActionMode paramActionMode, MenuItem paramMenuItem)
     {
-      return jv.onActionItemClicked(paramActionMode, paramMenuItem);
+      return jM.onActionItemClicked(paramActionMode, paramMenuItem);
     }
     
     public final boolean onCreateActionMode(ActionMode paramActionMode, Menu paramMenu)
     {
-      boolean bool = jv.onCreateActionMode(paramActionMode, paramMenu);
+      boolean bool = jM.onCreateActionMode(paramActionMode, paramMenu);
       if (bool)
       {
-        ju = paramActionMode;
+        jL = paramActionMode;
         paramActionMode = f.this;
-        if (!jp)
+        if (!jG)
         {
-          jp = true;
+          jG = true;
           paramActionMode.aW();
         }
       }
@@ -82,19 +82,19 @@ final class f
     
     public final void onDestroyActionMode(ActionMode paramActionMode)
     {
-      jv.onDestroyActionMode(paramActionMode);
+      jM.onDestroyActionMode(paramActionMode);
       paramActionMode = f.this;
-      if (jp)
+      if (jG)
       {
-        jp = false;
+        jG = false;
         paramActionMode.aW();
       }
-      ju = null;
+      jL = null;
     }
     
     public final boolean onPrepareActionMode(ActionMode paramActionMode, Menu paramMenu)
     {
-      return jv.onPrepareActionMode(paramActionMode, paramMenu);
+      return jM.onPrepareActionMode(paramActionMode, paramMenu);
     }
   }
 }

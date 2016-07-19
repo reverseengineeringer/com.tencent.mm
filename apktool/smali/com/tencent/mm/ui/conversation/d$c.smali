@@ -15,29 +15,29 @@
 
 
 # instance fields
-.field public cHp:Landroid/view/View;
+.field public cEt:Landroid/view/View;
 
-.field public cHq:Landroid/widget/TextView;
+.field public cEu:Landroid/widget/TextView;
 
-.field public kFW:Landroid/view/View;
+.field final synthetic lPJ:Lcom/tencent/mm/ui/conversation/d;
 
-.field public lpA:Landroid/widget/TextView;
+.field lPK:Z
 
-.field public lpB:Landroid/view/View;
+.field lPL:Z
 
-.field final synthetic lpt:Lcom/tencent/mm/ui/conversation/d;
+.field lPM:Z
 
-.field lpu:Z
+.field lPN:Z
 
-.field lpv:Z
+.field lPO:Z
 
-.field lpw:Z
+.field public lPP:Landroid/widget/ImageView;
 
-.field lpx:Z
+.field public lPQ:Landroid/widget/TextView;
 
-.field lpy:Z
+.field public lPR:Landroid/view/View;
 
-.field public lpz:Landroid/widget/ImageView;
+.field public lfa:Landroid/view/View;
 
 .field username:Ljava/lang/String;
 
@@ -52,7 +52,7 @@
     const/4 v1, 0x0
 
     .line 965
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/d$c;->lpt:Lcom/tencent/mm/ui/conversation/d;
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/d$c;->lPJ:Lcom/tencent/mm/ui/conversation/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -62,37 +62,37 @@
     iput-object v0, p0, Lcom/tencent/mm/ui/conversation/d$c;->username:Ljava/lang/String;
 
     .line 968
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/conversation/d$c;->lpu:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/conversation/d$c;->lPK:Z
 
     .line 970
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/conversation/d$c;->lpv:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/conversation/d$c;->lPL:Z
 
     .line 972
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/conversation/d$c;->lpw:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/conversation/d$c;->lPM:Z
 
     .line 974
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/conversation/d$c;->lpx:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/conversation/d$c;->lPN:Z
 
     .line 976
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/conversation/d$c;->lpy:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/conversation/d$c;->lPO:Z
 
     .line 978
-    iput-object v1, p0, Lcom/tencent/mm/ui/conversation/d$c;->cHp:Landroid/view/View;
+    iput-object v1, p0, Lcom/tencent/mm/ui/conversation/d$c;->cEt:Landroid/view/View;
 
     .line 979
-    iput-object v1, p0, Lcom/tencent/mm/ui/conversation/d$c;->kFW:Landroid/view/View;
+    iput-object v1, p0, Lcom/tencent/mm/ui/conversation/d$c;->lfa:Landroid/view/View;
 
     .line 980
-    iput-object v1, p0, Lcom/tencent/mm/ui/conversation/d$c;->lpz:Landroid/widget/ImageView;
+    iput-object v1, p0, Lcom/tencent/mm/ui/conversation/d$c;->lPP:Landroid/widget/ImageView;
 
     .line 981
-    iput-object v1, p0, Lcom/tencent/mm/ui/conversation/d$c;->lpA:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/tencent/mm/ui/conversation/d$c;->lPQ:Landroid/widget/TextView;
 
     .line 982
-    iput-object v1, p0, Lcom/tencent/mm/ui/conversation/d$c;->cHq:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/tencent/mm/ui/conversation/d$c;->cEu:Landroid/widget/TextView;
 
     .line 983
-    iput-object v1, p0, Lcom/tencent/mm/ui/conversation/d$c;->lpB:Landroid/view/View;
+    iput-object v1, p0, Lcom/tencent/mm/ui/conversation/d$c;->lPR:Landroid/view/View;
 
     return-void
 .end method

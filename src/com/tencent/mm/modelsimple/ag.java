@@ -2,63 +2,54 @@ package com.tencent.mm.modelsimple;
 
 import com.tencent.mm.network.e;
 import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b.aua;
-import com.tencent.mm.protocal.b.aub;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.a.c;
-import com.tencent.mm.r.d;
-import com.tencent.mm.sdk.platformtools.u;
-import java.util.LinkedList;
+import com.tencent.mm.protocal.b.acp;
+import com.tencent.mm.protocal.b.acq;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.d;
 
 public final class ag
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private d anM;
-  public final a anN;
+  private final a bkQ;
+  private d bkT;
   
-  public ag(String paramString, int paramInt, LinkedList paramLinkedList)
+  public ag(int paramInt)
   {
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvgrJK3HXolQk+XJy2ORbiyI=", "ticket link = " + paramString + "; scene = " + paramInt);
-    Object localObject = new a.a();
-    bFa = new aua();
-    bFb = new aub();
-    uri = "/cgi-bin/mmbiz-bin/translatelink";
-    bEY = 1200;
-    bFc = 0;
-    bFd = 0;
-    anN = ((a.a)localObject).vy();
-    localObject = (aua)anN.bEW.bFf;
-    cbL = paramString;
-    asc = paramInt;
-    jMQ = paramLinkedList;
-  }
-  
-  public final aub CM()
-  {
-    if ((anN != null) && (anN.bEX.bFf != null)) {
-      return (aub)anN.bEX.bFf;
-    }
-    return null;
+    a.a locala = new a.a();
+    byl = new acp();
+    bym = new acq();
+    uri = "/cgi-bin/micromsg-bin/logoutwebwx";
+    byj = 281;
+    byn = 0;
+    byo = 0;
+    bkQ = locala.vA();
+    bkQ.byh.byq).jsU = paramInt;
   }
   
   public final int a(e parame, d paramd)
   {
-    anM = paramd;
-    return a(parame, anN, this);
+    v.d("MicroMsg.NetSceneWebWXLogout", "doScene");
+    bkT = paramd;
+    return a(parame, bkQ, this);
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvgrJK3HXolQk+XJy2ORbiyI=", "swap deep link with ticket onGYNetEnd:[%d,%d,%s]", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString });
-    anM.a(paramInt2, paramInt3, paramString, this);
+    if ((paramInt2 != 0) || (paramInt3 != 0)) {
+      v.d("MicroMsg.NetSceneWebWXLogout", "logout Error. ");
+    }
+    if (bkT != null) {
+      bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
+    }
   }
   
   public final int getType()
   {
-    return 1200;
+    return 281;
   }
 }
 

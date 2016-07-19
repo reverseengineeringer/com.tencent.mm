@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="20.0dip" android:paddingBottom="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.plugin.scanner.ui.StrokedImageView android:id="@id/bqz" android:background="@drawable/kq" android:layout_width="87.0dip" android:layout_height="87.0dip" android:scaleType="centerCrop" />
+    <TextView android:textSize="@dimen/jc" android:textColor="#ffaaaaaa" android:ellipsize="end" android:gravity="center" android:id="@id/br0" android:scrollbars="none" android:layout_width="84.0dip" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:lines="2" android:singleLine="false" />
+</LinearLayout>

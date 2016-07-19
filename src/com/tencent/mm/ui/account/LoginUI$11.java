@@ -11,7 +11,7 @@ final class LoginUI$11
   
   public final void onClick(View paramView)
   {
-    ktY.startActivity(new Intent(ktY, FacebookLoginUI.class));
+    kTf.startActivity(new Intent(kTf, FacebookLoginUI.class));
   }
 }
 

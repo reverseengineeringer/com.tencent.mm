@@ -1,59 +1,115 @@
 package com.tencent.mm.modelsimple;
 
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
 import com.tencent.mm.network.e;
 import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b.aag;
-import com.tencent.mm.protocal.b.aah;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.a.c;
-import com.tencent.mm.r.d;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.platformtools.m;
+import com.tencent.mm.protocal.b.amj;
+import com.tencent.mm.protocal.b.amt;
+import com.tencent.mm.protocal.b.amu;
+import com.tencent.mm.protocal.b.amv;
+import com.tencent.mm.s.h;
+import com.tencent.mm.s.i;
+import com.tencent.mm.s.n;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.a.c;
+import java.util.Iterator;
+import java.util.LinkedList;
 
 public final class x
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private d anM;
-  private final a bUv;
+  private final a bkQ;
+  private com.tencent.mm.t.d bkT;
   
   public x(String paramString)
   {
-    a.a locala = new a.a();
-    bFa = new aag();
-    bFb = new aah();
-    uri = "/cgi-bin/micromsg-bin/jumpemotiondetail";
-    bEY = 666;
-    bFc = 0;
-    bFd = 0;
-    bUv = locala.vy();
-    bUv.bEW.bFf).eiq = paramString;
+    this(paramString, 0);
   }
   
-  public final aah CJ()
+  public x(String paramString, int paramInt)
   {
-    return (aah)bUv.bEX.bFf;
+    Object localObject = new a.a();
+    byl = new amu();
+    bym = new amv();
+    uri = "/cgi-bin/micromsg-bin/searchcontact";
+    byj = 106;
+    byn = 34;
+    byo = 1000000034;
+    bkQ = ((a.a)localObject).vA();
+    v.d("MicroMsg.NetSceneSearchContact", "search username [%s]", new Object[] { paramString });
+    localObject = (amu)bkQ.byh.byq;
+    jFX = new amj().EF(paramString);
+    kgc = paramInt;
   }
   
-  public final int a(e parame, d paramd)
+  public final amv CY()
   {
-    anM = paramd;
-    return a(parame, bUv, this);
+    amv localamv = (amv)bkQ.byi.byq;
+    if (localamv != null)
+    {
+      Iterator localIterator = jOR.iterator();
+      while (localIterator.hasNext())
+      {
+        amt localamt = (amt)localIterator.next();
+        ah.tE().rX().cA(jFX.kfU, jNd);
+      }
+    }
+    return localamv;
+  }
+  
+  public final int a(e parame, com.tencent.mm.t.d paramd)
+  {
+    bkT = paramd;
+    return a(parame, bkQ, this);
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvnQejfDcCRgTHdjqFJ3ccXQ=", "[oneliang][NetSceneScanEmoji]:netId:%s,errType:%s,errCode:%s,errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString });
-    if ((paramInt2 == 0) && (paramInt3 == 0)) {
-      u.d("!44@/B4Tb64lLpK+IBX8XDgnvnQejfDcCRgTHdjqFJ3ccXQ=", "[oneliang][NetSceneScanEmoji]:net end ok");
+    paramo = (amv)bkQ.byi.byq;
+    if ((paramo != null) && (jOQ > 0)) {
+      paramo = jOR.iterator();
     }
-    anM.a(paramInt2, paramInt3, paramString, this);
+    while (paramo.hasNext())
+    {
+      paramArrayOfByte = (amt)paramo.next();
+      v.d("MicroMsg.NetSceneSearchContact", "search RES username [%s]", new Object[] { jFX });
+      h localh = new h();
+      username = m.a(jFX);
+      bxJ = jDF;
+      bxI = jDG;
+      aqQ = -1;
+      v.d("MicroMsg.NetSceneSearchContact", "dkhurl search %s b[%s] s[%s]", new Object[] { localh.getUsername(), localh.vk(), localh.vl() });
+      aFc = 3;
+      localh.ap(true);
+      n.vu().a(localh);
+      continue;
+      if ((paramo != null) && (!be.kf(m.a(jFX))))
+      {
+        paramArrayOfByte = m.a(jFX);
+        localh = new h();
+        username = paramArrayOfByte;
+        bxJ = jDF;
+        bxI = jDG;
+        aqQ = -1;
+        v.d("MicroMsg.NetSceneSearchContact", "dkhurl search %s b[%s] s[%s]", new Object[] { localh.getUsername(), localh.vk(), localh.vl() });
+        aFc = 3;
+        localh.ap(true);
+        n.vu().a(localh);
+      }
+    }
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()
   {
-    return 666;
+    return 106;
   }
 }
 

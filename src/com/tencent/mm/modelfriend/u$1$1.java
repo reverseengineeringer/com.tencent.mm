@@ -1,22 +1,23 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
 
 final class u$1$1
   implements d
 {
   u$1$1(u.1 param1) {}
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    com.tencent.mm.sdk.platformtools.u.d("!56@/B4Tb64lLpK+IBX8XDgnvtitwdiFr6yUU+4wykkCPbQfDMqQQ+s8JQ==", "summerauth dkcert getcert type:%d ret [%d,%d]", new Object[] { Integer.valueOf(paramj.getType()), Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    v.d("MicroMsg.NetSceneBindMobileForReg", "summerauth dkcert getcert type:%d ret [%d,%d]", new Object[] { Integer.valueOf(paramj.getType()), Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
     if ((paramInt1 != 0) || (paramInt2 != 0))
     {
-      bML.bMK.anM.a(paramInt1, paramInt2, "", bML.bMK);
+      bGf.bGe.bkT.onSceneEnd(paramInt1, paramInt2, "", bGf.bGe);
       return;
     }
-    bML.bMK.a(bML.bMK.bFs, bML.bMK.anM);
+    bGf.bGe.a(bGf.bGe.byD, bGf.bGe.bkT);
   }
 }
 

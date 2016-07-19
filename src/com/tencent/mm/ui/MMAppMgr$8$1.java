@@ -1,15 +1,15 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.ab.h;
-import com.tencent.mm.ab.n;
-import com.tencent.mm.an.q.a;
-import com.tencent.mm.app.plugin.voicereminder.a.d;
+import com.tencent.mm.ae.h;
+import com.tencent.mm.aq.u.a;
 import com.tencent.mm.c.b.i;
-import com.tencent.mm.d.a.me;
+import com.tencent.mm.e.a.mr;
 import com.tencent.mm.model.ah;
+import com.tencent.mm.model.z.a;
+import com.tencent.mm.model.z.g;
 import com.tencent.mm.modelvoice.m;
-import com.tencent.mm.pluginsdk.model.app.ai.a;
-import com.tencent.mm.pluginsdk.model.app.aj;
+import com.tencent.mm.pluginsdk.model.app.ak.a;
+import com.tencent.mm.pluginsdk.model.app.al;
 import com.tencent.mm.sdk.c.a;
 
 final class MMAppMgr$8$1
@@ -19,13 +19,15 @@ final class MMAppMgr$8$1
   
   public final void run()
   {
-    m.Ey().run();
-    com.tencent.mm.an.j.Ec().run();
-    n.Am().run();
-    aj.aPU().run();
-    d.lq().run();
-    a.jUF.j(new me());
-    ah.tD().rp().b(null);
+    m.ES().run();
+    com.tencent.mm.aq.n.Eu().run();
+    com.tencent.mm.ae.n.Aw().run();
+    al.aUD().run();
+    if (z.a.btz != null) {
+      z.a.btz.tb();
+    }
+    a.kug.y(new mr());
+    ah.tE().rq().b(null);
   }
 }
 

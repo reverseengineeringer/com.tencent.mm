@@ -15,9 +15,18 @@
 
 
 # instance fields
-.field atR:Z
+.field afB:Z
 
-.field public lBc:Ljava/util/List;
+.field public mbW:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -25,18 +34,18 @@
     .locals 1
 
     .prologue
-    .line 890
+    .line 932
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 892
+    .line 934
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$b;->lBc:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$b;->mbW:Ljava/util/List;
 
-    .line 894
+    .line 936
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$b;->atR:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$b;->afB:Z
 
     return-void
 .end method
@@ -45,7 +54,7 @@
     .locals 0
 
     .prologue
-    .line 890
+    .line 932
     invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$b;-><init>()V
 
     return-void

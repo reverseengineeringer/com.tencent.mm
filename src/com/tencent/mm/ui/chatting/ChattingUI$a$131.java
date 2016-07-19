@@ -1,45 +1,16 @@
 package com.tencent.mm.ui.chatting;
 
-import android.widget.ListView;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.tools.q;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 final class ChattingUI$a$131
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  ChattingUI$a$131(ChattingUI.a parama, int paramInt) {}
+  ChattingUI$a$131(ChattingUI.a parama) {}
   
-  public final void run()
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    u.d("!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/", "dz: scroll to select:%d", new Object[] { Integer.valueOf(lbE) });
-    q localq = new q(ChattingUI.a.e(laF));
-    int j = lbE;
-    fqJ.removeCallbacks(localq);
-    lxt = 0;
-    int i = fqJ.getFirstVisiblePosition();
-    int k = fqJ.getChildCount() + i - 1;
-    if (j <= i)
-    {
-      i = i - j + 1;
-      mMode = 2;
-      if (i <= 0) {
-        break label156;
-      }
-    }
-    label156:
-    for (lxr = (1000 / i);; lxr = 1000)
-    {
-      lxp = j;
-      lxq = -1;
-      fqJ.post(localq);
-      do
-      {
-        return;
-      } while (j < k);
-      i = j - k + 1;
-      mMode = 1;
-      break;
-    }
+    ChattingUI.a.as(lAY);
   }
 }
 

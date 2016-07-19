@@ -4,15 +4,15 @@ import android.os.Bundle;
 
 public final class w$a
 {
-  public final String dT;
-  public CharSequence dU;
-  public CharSequence[] dV;
-  public boolean dW = true;
+  public final String ej;
+  public CharSequence ek;
+  public CharSequence[] el;
+  public boolean em = true;
   public Bundle mExtras = new Bundle();
   
   public w$a(String paramString)
   {
-    dT = paramString;
+    ej = paramString;
   }
 }
 

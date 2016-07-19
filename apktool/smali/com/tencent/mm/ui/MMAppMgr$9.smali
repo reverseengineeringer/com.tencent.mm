@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bWP:I
+.field final synthetic bQs:I
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 696
-    iput p1, p0, Lcom/tencent/mm/ui/MMAppMgr$9;->bWP:I
+    .line 734
+    iput p1, p0, Lcom/tencent/mm/ui/MMAppMgr$9;->bQs:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,18 +40,18 @@
     .locals 3
 
     .prologue
-    .line 701
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 739
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
     const/16 v1, 0x41
 
-    iget v2, p0, Lcom/tencent/mm/ui/MMAppMgr$9;->bWP:I
+    iget v2, p0, Lcom/tencent/mm/ui/MMAppMgr$9;->bQs:I
 
     add-int/lit8 v2, v2, 0x1
 
@@ -61,6 +61,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
-    .line 702
+    .line 740
     return-void
 .end method

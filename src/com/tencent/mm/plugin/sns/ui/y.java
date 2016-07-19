@@ -1,149 +1,222 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.content.Context;
-import android.content.res.Resources;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.plugin.sns.b.a;
-import com.tencent.mm.plugin.sns.ui.b.a.b;
-import com.tencent.mm.pluginsdk.model.app.g;
-import com.tencent.mm.protocal.b.atp;
-import com.tencent.mm.protocal.b.bb;
-import com.tencent.mm.protocal.b.bc;
-import com.tencent.mm.protocal.b.k;
-import com.tencent.mm.protocal.b.m;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ai.b;
+import com.tencent.mm.e.a.hd;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.ar;
+import com.tencent.mm.plugin.sns.e.as;
+import com.tencent.mm.plugin.sns.h.f;
+import com.tencent.mm.pluginsdk.ui.applet.CdnImageView;
+import com.tencent.mm.pointers.PInt;
+import com.tencent.mm.protocal.b.acn;
+import com.tencent.mm.protocal.b.afj;
+import com.tencent.mm.protocal.b.asb;
+import com.tencent.mm.sdk.c.c;
+import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
+import com.tencent.mm.sdk.modelmsg.WXMusicObject;
+import com.tencent.mm.sdk.modelmsg.c.a;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.ui.MMActivity;
+import com.tencent.mm.ui.p;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 public final class y
+  implements v
 {
-  public static boolean a(Context paramContext, atp paramatp, a.b paramb)
+  MMActivity adL;
+  private String appName = "";
+  String asu = "";
+  private View cvL;
+  private c dUy = new c() {};
+  private TextView eLK = null;
+  boolean giD = false;
+  private CdnImageView hkN = null;
+  private TextView hkO = null;
+  private com.tencent.mm.modelsns.a hkT = null;
+  ImageView hmP;
+  private Bitmap hmQ;
+  private boolean hmi = false;
+  private boolean hmj = false;
+  WXMediaMessage hmk = null;
+  String mediaId;
+  
+  public y(MMActivity paramMMActivity)
   {
-    Object localObject;
-    boolean bool;
-    if ((gQy != null) && (gQy.iWq != null))
+    adL = paramMMActivity;
+    com.tencent.mm.sdk.c.a.kug.d(dUy);
+  }
+  
+  public final boolean a(int paramInt1, int paramInt2, b.a.d.i parami, String paramString1, List<String> paramList1, acn paramacn, int paramInt3, boolean paramBoolean, List<String> paramList2, PInt paramPInt, String paramString2)
+  {
+    ad.aBF();
+    paramString1 = ar.a(hmk, paramString1, asu, appName);
+    if (paramString1 == null)
     {
-      localObject = gQy.iWq.iWi;
-      if (ay.kz((String)localObject))
+      com.tencent.mm.sdk.platformtools.v.e("MicroMsg.MusicWidget", "packHelper == null, %s, %s", new Object[] { asu, appName });
+      return false;
+    }
+    value = gYr;
+    if (paramInt3 > com.tencent.mm.plugin.sns.b.a.gOt) {
+      paramString1.mO(4);
+    }
+    if (hmi) {
+      paramString1.mS(5);
+    }
+    paramPInt = new LinkedList();
+    if (paramList1 != null)
+    {
+      new LinkedList();
+      paramString2 = com.tencent.mm.model.i.sS();
+      paramList1 = paramList1.iterator();
+      while (paramList1.hasNext())
       {
-        bool = false;
-        if (!bool) {
-          break label524;
-        }
-        hnM.setTag(gHs);
-        hnM.setVisibility(8);
-        localObject = gQy;
-        if ((iWu == null) || (iWv == null)) {
-          break label331;
-        }
-        if (!a.cob.m(paramContext, iWq.iWi)) {
-          break label288;
-        }
-        paramContext = iWu;
-        label113:
-        paramatp = t.aUB();
-        if (!paramatp.equals("zh_CN")) {
-          break label297;
-        }
-        paramContext = iYa;
-        label131:
-        switch (dzC)
+        String str = (String)paramList1.next();
+        if (!paramString2.contains(str))
         {
-        default: 
-          hnM.setVisibility(8);
-          label173:
-          if (ay.kz(paramContext))
-          {
-            u.e("!44@/B4Tb64lLpKh/xK0/eXshKnFlscMU/rA8tIMSVM/Ujc=", "text can not load ?");
-            hnM.setVisibility(8);
-          }
-          break;
+          asb localasb = new asb();
+          emC = str;
+          paramPInt.add(localasb);
         }
       }
+    }
+    paramString1.O(paramPInt);
+    if (parami != null) {
+      paramString1.bA(token, jYE);
+    }
+    paramString1.a(paramacn);
+    if (paramBoolean) {
+      paramString1.mT(1);
     }
     for (;;)
     {
-      if (hnM.getVisibility() != 0) {
-        break label536;
-      }
-      return true;
-      localObject = g.ai((String)localObject, true);
-      if ((localObject == null) || (ay.kz(field_appId)))
+      paramString1.aZ(paramList2);
+      if ((hmj) && (hmk != null))
       {
-        bool = false;
-        break;
+        paramString1.wa(hmk.mediaTagName);
+        paramString1.F(asu, hmk.messageExt, hmk.messageAction);
       }
-      if ((field_appInfoFlag & 0x20) > 0) {}
-      for (bool = true;; bool = false)
+      paramInt1 = paramString1.commit();
+      if (hkT != null)
       {
-        u.v("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "canShowSNSTail, appid = %s, ret = %b", new Object[] { field_appId, Boolean.valueOf(bool) });
-        break;
+        hkT.ez(paramInt1);
+        com.tencent.mm.plugin.sns.h.d.hdt.c(hkT);
       }
-      label288:
-      paramContext = iWv;
-      break label113;
-      label297:
-      if ((paramatp.equals("zh_TW")) || (paramatp.equals("zh_HK")))
-      {
-        paramContext = iYb;
-        break label131;
-      }
-      paramContext = iXZ;
-      break label131;
-      label331:
-      if (localObject == null) {
-        paramatp = "";
-      }
-      for (;;)
-      {
-        try
-        {
-          if (ay.kz(paramatp)) {
-            continue;
-          }
-          int i = paramContext.getResources().getIdentifier(paramatp, "string", paramContext.getPackageName());
-          if (i <= 0) {
-            continue;
-          }
-          paramContext = paramContext.getString(i);
-        }
-        catch (Exception paramContext)
-        {
-          paramContext = "";
-        }
-        if (dzC == 6)
-        {
-          if (iWt == null) {
-            paramatp = "";
-          } else if (a.cob.m(paramContext, iWq.iWi)) {
-            paramatp = iWt.iYc;
-          } else {
-            paramatp = iWt.iYd;
-          }
-        }
-        else {
-          paramatp = iWr;
-        }
-      }
-      break label131;
-      hnM.setText(paramContext);
-      hnM.setVisibility(0);
-      break label173;
-      if (iWm != 1) {
-        break label173;
-      }
-      hnM.setText(paramContext);
-      hnM.setVisibility(0);
-      break label173;
-      hnM.setText(paramContext);
-      hnM.setVisibility(0);
-      break label173;
-      label524:
-      hnM.setVisibility(8);
+      ad.aBF().aCf();
+      adL.finish();
+      return false;
+      paramString1.mT(0);
     }
-    label536:
+  }
+  
+  public final boolean a(int paramInt, Intent paramIntent)
+  {
     return false;
   }
+  
+  public final boolean aDO()
+  {
+    return true;
+  }
+  
+  public final View aDP()
+  {
+    cvL = p.ef(adL).inflate(2130904545, null);
+    hkN = ((CdnImageView)cvL.findViewById(2131757802));
+    eLK = ((TextView)cvL.findViewById(2131757804));
+    hkO = ((TextView)cvL.findViewById(2131757805));
+    cvL.findViewById(2131757253).setVisibility(8);
+    eLK.setText(hmk.title);
+    if (hmk.thumbData != null) {
+      hmQ = com.tencent.mm.sdk.platformtools.d.aX(hmk.thumbData);
+    }
+    hkN.setImageBitmap(hmQ);
+    if (!be.kf(hmk.description))
+    {
+      hkO.setText(hmk.description);
+      hkO.setVisibility(0);
+      hmP = ((ImageView)cvL.findViewById(2131757253));
+      hmP.setVisibility(0);
+      if ((!b.Bu()) || (!giD)) {
+        break label259;
+      }
+      hmP.setImageResource(2130838861);
+    }
+    for (;;)
+    {
+      hmP.setOnClickListener(new View.OnClickListener()
+      {
+        public final void onClick(View paramAnonymousView)
+        {
+          if (b.Bu())
+          {
+            aEi();
+            return;
+          }
+          paramAnonymousView = y.this;
+          if (hmk == null)
+          {
+            com.tencent.mm.sdk.platformtools.v.w("MicroMsg.MusicWidget", "doBeingPlayMusic: but item is null");
+            return;
+          }
+          new ac(adL.getMainLooper()).post(new y.3(paramAnonymousView));
+        }
+      });
+      com.tencent.mm.plugin.sns.data.i.b(hkN, adL);
+      return cvL;
+      hkO.setVisibility(8);
+      break;
+      label259:
+      hmP.setImageResource(2130838863);
+    }
+  }
+  
+  public final boolean aDQ()
+  {
+    if ((hmQ != null) && (!hmQ.isRecycled())) {
+      hmQ.recycle();
+    }
+    com.tencent.mm.sdk.c.a.kug.e(dUy);
+    if ((b.Bu()) && (giD)) {
+      aEi();
+    }
+    return b.Bu();
+  }
+  
+  final void aEi()
+  {
+    new ac(adL.getMainLooper()).post(new Runnable()
+    {
+      public final void run()
+      {
+        b.Bt();
+        giD = false;
+      }
+    });
+  }
+  
+  public final void p(Bundle paramBundle)
+  {
+    hmk = c.aadL.getIntent().getBundleExtra("Ksnsupload_timeline")).kuy;
+    mediaId = adL.getIntent().getStringExtra("Ksnsupload_musicid");
+    hkT = com.tencent.mm.modelsns.a.l(adL.getIntent());
+    asu = be.ab(adL.getIntent().getStringExtra("Ksnsupload_appid"), "");
+    appName = be.ab(adL.getIntent().getStringExtra("Ksnsupload_appname"), "");
+    hmi = adL.getIntent().getBooleanExtra("KThrid_app", false);
+    hmj = adL.getIntent().getBooleanExtra("KSnsAction", false);
+  }
+  
+  public final void q(Bundle paramBundle) {}
 }
 
 /* Location:

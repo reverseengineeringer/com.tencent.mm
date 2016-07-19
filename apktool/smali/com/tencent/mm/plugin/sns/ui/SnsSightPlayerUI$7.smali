@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+.field final synthetic hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 419
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$7;->his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+    .line 457
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$7;->hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,11 +40,11 @@
     .locals 1
 
     .prologue
-    .line 424
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$7;->his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+    .line 462
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$7;->hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->aBF()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->aEu()V
 
-    .line 425
+    .line 463
     return-void
 .end method

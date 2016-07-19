@@ -2,19 +2,19 @@ package com.tencent.mm.ui;
 
 public abstract interface h
 {
-  public abstract void aZq();
+  public abstract void beH();
   
-  public abstract void aZr();
+  public abstract void beI();
   
-  public abstract void aZs();
+  public abstract void beJ();
   
-  public abstract void aZt();
+  public abstract void beK();
   
-  public abstract void aZu();
+  public abstract void beL();
   
-  public abstract void aZv();
+  public abstract void beM();
   
-  public abstract void bad();
+  public abstract void bfv();
 }
 
 /* Location:

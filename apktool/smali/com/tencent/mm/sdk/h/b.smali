@@ -4,11 +4,44 @@
 
 
 # static fields
-.field private static final boY:Ljava/util/Map;
+.field private static final bcX:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Class",
+            "<*>;",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private static final boZ:Ljava/util/Map;
+.field private static final bcY:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Class",
+            "<*>;",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private static final jYu:Ljava/util/Map;
+.field private static final kyR:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Class",
+            "<*>;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -21,25 +54,25 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/sdk/h/b;->boY:Ljava/util/Map;
+    sput-object v0, Lcom/tencent/mm/sdk/h/b;->bcX:Ljava/util/Map;
 
     .line 137
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/sdk/h/b;->boZ:Ljava/util/Map;
+    sput-object v0, Lcom/tencent/mm/sdk/h/b;->bcY:Ljava/util/Map;
 
     .line 138
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/sdk/h/b;->jYu:Ljava/util/Map;
+    sput-object v0, Lcom/tencent/mm/sdk/h/b;->kyR:Ljava/util/Map;
 
     .line 142
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boY:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcX:Ljava/util/Map;
 
     const-class v1, [B
 
@@ -50,7 +83,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 151
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boY:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcX:Ljava/util/Map;
 
     sget-object v1, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
 
@@ -61,7 +94,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 159
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boY:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcX:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Short;
 
@@ -72,7 +105,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 168
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boY:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcX:Ljava/util/Map;
 
     sget-object v1, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
@@ -83,7 +116,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 176
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boY:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcX:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Boolean;
 
@@ -94,7 +127,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 185
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boY:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcX:Ljava/util/Map;
 
     sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
@@ -105,7 +138,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 193
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boY:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcX:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Integer;
 
@@ -116,7 +149,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 202
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boY:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcX:Ljava/util/Map;
 
     sget-object v1, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
@@ -127,7 +160,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 210
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boY:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcX:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Float;
 
@@ -138,7 +171,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 219
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boY:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcX:Ljava/util/Map;
 
     sget-object v1, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
 
@@ -149,7 +182,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 227
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boY:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcX:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Double;
 
@@ -160,7 +193,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 236
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boY:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcX:Ljava/util/Map;
 
     sget-object v1, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
@@ -171,7 +204,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 244
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boY:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcX:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Long;
 
@@ -182,7 +215,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 253
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boY:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcX:Ljava/util/Map;
 
     const-class v1, Ljava/lang/String;
 
@@ -193,7 +226,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 263
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boZ:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcY:Ljava/util/Map;
 
     const-class v1, [B
 
@@ -204,7 +237,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 272
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boZ:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcY:Ljava/util/Map;
 
     sget-object v1, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
 
@@ -215,7 +248,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 280
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boZ:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcY:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Short;
 
@@ -226,7 +259,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 289
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boZ:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcY:Ljava/util/Map;
 
     sget-object v1, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
@@ -237,7 +270,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 297
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boZ:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcY:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Boolean;
 
@@ -248,7 +281,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 306
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boZ:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcY:Ljava/util/Map;
 
     sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
@@ -259,7 +292,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 314
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boZ:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcY:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Integer;
 
@@ -270,7 +303,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 323
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boZ:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcY:Ljava/util/Map;
 
     sget-object v1, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
@@ -281,7 +314,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 331
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boZ:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcY:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Float;
 
@@ -292,7 +325,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 340
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boZ:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcY:Ljava/util/Map;
 
     sget-object v1, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
 
@@ -303,7 +336,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 348
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boZ:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcY:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Double;
 
@@ -314,7 +347,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 357
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boZ:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcY:Ljava/util/Map;
 
     sget-object v1, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
@@ -325,7 +358,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 365
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boZ:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcY:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Long;
 
@@ -336,7 +369,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 374
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->boZ:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->bcY:Ljava/util/Map;
 
     const-class v1, Ljava/lang/String;
 
@@ -347,7 +380,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 384
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->jYu:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->kyR:Ljava/util/Map;
 
     const-class v1, [B
 
@@ -356,7 +389,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 386
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->jYu:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->kyR:Ljava/util/Map;
 
     sget-object v1, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
 
@@ -365,7 +398,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 387
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->jYu:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->kyR:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Short;
 
@@ -374,7 +407,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 389
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->jYu:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->kyR:Ljava/util/Map;
 
     sget-object v1, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
@@ -383,7 +416,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 390
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->jYu:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->kyR:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Boolean;
 
@@ -392,7 +425,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 392
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->jYu:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->kyR:Ljava/util/Map;
 
     sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
@@ -401,7 +434,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 393
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->jYu:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->kyR:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Integer;
 
@@ -410,7 +443,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 395
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->jYu:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->kyR:Ljava/util/Map;
 
     sget-object v1, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
@@ -419,7 +452,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 396
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->jYu:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->kyR:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Float;
 
@@ -428,7 +461,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 398
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->jYu:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->kyR:Ljava/util/Map;
 
     sget-object v1, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
 
@@ -437,7 +470,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 399
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->jYu:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->kyR:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Double;
 
@@ -446,7 +479,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 401
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->jYu:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->kyR:Ljava/util/Map;
 
     sget-object v1, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
@@ -455,7 +488,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 402
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->jYu:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->kyR:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Long;
 
@@ -464,7 +497,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 404
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->jYu:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->kyR:Ljava/util/Map;
 
     const-class v1, Ljava/lang/String;
 
@@ -485,12 +518,20 @@
     goto :goto_0
 .end method
 
-.method public static d(Ljava/lang/Class;)Ljava/lang/String;
+.method public static f(Ljava/lang/Class;)Ljava/lang/String;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class",
+            "<*>;)",
+            "Ljava/lang/String;"
+        }
+    .end annotation
 
     .prologue
     .line 413
-    sget-object v0, Lcom/tencent/mm/sdk/h/b;->jYu:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sdk/h/b;->kyR:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -579,7 +620,7 @@
 .end method
 
 .method public static keep_getDouble(Ljava/lang/reflect/Field;Ljava/lang/Object;Landroid/content/ContentValues;)V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 559
@@ -621,9 +662,9 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/reflect/Field;->getDouble(Ljava/lang/Object;)D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v1
 
@@ -765,7 +806,7 @@
 .end method
 
 .method public static keep_getLong(Ljava/lang/reflect/Field;Ljava/lang/Object;Landroid/content/ContentValues;)V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 587
@@ -807,9 +848,9 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/reflect/Field;->getLong(Ljava/lang/Object;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 

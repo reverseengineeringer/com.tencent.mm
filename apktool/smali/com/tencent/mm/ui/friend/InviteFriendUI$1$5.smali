@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lrP:Lcom/tencent/mm/ui/friend/InviteFriendUI$1;
+.field final synthetic lSt:Lcom/tencent/mm/ui/friend/InviteFriendUI$1;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 346
-    iput-object p1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$5;->lrP:Lcom/tencent/mm/ui/friend/InviteFriendUI$1;
+    iput-object p1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$5;->lSt:Lcom/tencent/mm/ui/friend/InviteFriendUI$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,9 +44,9 @@
     if-eqz p1, :cond_0
 
     .line 351
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$5;->lrP:Lcom/tencent/mm/ui/friend/InviteFriendUI$1;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$5;->lSt:Lcom/tencent/mm/ui/friend/InviteFriendUI$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/friend/InviteFriendUI;->finish()V
 

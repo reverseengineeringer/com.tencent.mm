@@ -13,10 +13,10 @@ final class MMAppMgr$6
   {
     if (paramBoolean)
     {
-      ah.tD().rn().set(4105, Boolean.valueOf(true));
+      ah.tE().ro().set(4105, Boolean.valueOf(true));
       return;
     }
-    ah.tD().rn().set(4105, Boolean.valueOf(false));
+    ah.tE().ro().set(4105, Boolean.valueOf(false));
   }
 }
 

@@ -31,7 +31,7 @@
 
 # virtual methods
 .method public final println(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 1
+    .locals 0
     .param p3    # Ljava/lang/String;
         .annotation build Lorg/eclipse/jdt/annotation/NonNull;
         .end annotation
@@ -39,11 +39,5 @@
 
     .prologue
     .line 154
-    const/4 v0, 0x4
-
-    if-ne p2, v0, :cond_0
-
-    .line 157
-    :cond_0
     return-void
 .end method

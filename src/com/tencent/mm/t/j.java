@@ -1,84 +1,170 @@
 package com.tencent.mm.t;
 
-import com.tencent.mm.d.b.k;
-import com.tencent.mm.sdk.h.c.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import java.lang.reflect.Field;
-import java.util.Map;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import junit.framework.Assert;
 
-public final class j
-  extends k
+public abstract class j
 {
-  protected static c.a aot;
+  public int Ux = -99;
+  public e byD;
+  public long byE = be.Gq();
+  public int byF = -1;
+  public boolean byG = false;
+  private p byH;
+  d byI;
+  public boolean byJ;
+  private o byK;
+  int priority = 0;
   
-  static
+  public int a(e parame, final o paramo, final com.tencent.mm.network.j paramj)
   {
-    c.a locala = new c.a();
-    ceD = new Field[10];
-    blR = new String[11];
-    StringBuilder localStringBuilder = new StringBuilder();
-    blR[0] = "userId";
-    jYx.put("userId", "TEXT PRIMARY KEY ");
-    localStringBuilder.append(" userId TEXT PRIMARY KEY ");
-    localStringBuilder.append(", ");
-    jYw = "userId";
-    blR[1] = "userName";
-    jYx.put("userName", "TEXT default '' ");
-    localStringBuilder.append(" userName TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[2] = "userNamePY";
-    jYx.put("userNamePY", "TEXT default '' ");
-    localStringBuilder.append(" userNamePY TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[3] = "brandUserName";
-    jYx.put("brandUserName", "TEXT default '' ");
-    localStringBuilder.append(" brandUserName TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[4] = "UserVersion";
-    jYx.put("UserVersion", "INTEGER default '-1' ");
-    localStringBuilder.append(" UserVersion INTEGER default '-1' ");
-    localStringBuilder.append(", ");
-    blR[5] = "needToUpdate";
-    jYx.put("needToUpdate", "INTEGER default 'true' ");
-    localStringBuilder.append(" needToUpdate INTEGER default 'true' ");
-    localStringBuilder.append(", ");
-    blR[6] = "headImageUrl";
-    jYx.put("headImageUrl", "TEXT");
-    localStringBuilder.append(" headImageUrl TEXT");
-    localStringBuilder.append(", ");
-    blR[7] = "profileUrl";
-    jYx.put("profileUrl", "TEXT");
-    localStringBuilder.append(" profileUrl TEXT");
-    localStringBuilder.append(", ");
-    blR[8] = "bitFlag";
-    jYx.put("bitFlag", "INTEGER default '0' ");
-    localStringBuilder.append(" bitFlag INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    blR[9] = "addMemberUrl";
-    jYx.put("addMemberUrl", "TEXT");
-    localStringBuilder.append(" addMemberUrl TEXT");
-    blR[10] = "rowid";
-    jYy = localStringBuilder.toString();
-    aot = locala;
-  }
-  
-  public final boolean cU(int paramInt)
-  {
-    return (field_bitFlag & paramInt) != 0;
-  }
-  
-  protected final c.a ls()
-  {
-    return aot;
-  }
-  
-  public final boolean wu()
-  {
-    if (field_needToUpdate) {}
-    while (((ay.kz(field_profileUrl)) && (ay.kz(field_headImageUrl))) || ((ay.kz(field_userNamePY)) && (!ay.kz(field_userName)))) {
-      return true;
+    c(parame);
+    byK = paramo;
+    if (Ux == -99)
+    {
+      Ux = px();
+      v.i("MicroMsg.NetSceneBase", "initilized security limit count to " + Ux);
     }
+    if (px() > 1) {
+      switch (2.byO[(a(paramo) - 1)])
+      {
+      default: 
+        Assert.assertTrue("invalid security verification status", false);
+      }
+    }
+    while (vF())
+    {
+      v.e("MicroMsg.NetSceneBase", "dispatch failed, scene limited for security, current limit=" + px());
+      a(a.byQ);
+      byF = -1;
+      return byF;
+      Assert.assertTrue("scene security verification not passed, type=" + paramo.getType() + ", uri=" + paramo.getUri() + ", CHECK NOW", false);
+      continue;
+      v.e("MicroMsg.NetSceneBase", "scene security verification not passed, type=" + paramo.getType() + ", uri=" + paramo.getUri());
+      Ux -= 1;
+      a(a.byP);
+      byF = -1;
+      return byF;
+    }
+    Ux -= 1;
+    r localr = new r(paramo);
+    if (byH != null) {
+      byH.cancel();
+    }
+    byH = new p(paramo, paramj, this, byI, parame);
+    byF = parame.a(localr, byH);
+    v.i("MicroMsg.NetSceneBase", "dispatcher send, %d", new Object[] { Integer.valueOf(byF) });
+    if (byF < 0)
+    {
+      new ac().post(new Runnable()
+      {
+        public final void run()
+        {
+          paramj.a(-1, 3, -1, "send to network failed", paramo, null);
+        }
+      });
+      return 99999999;
+    }
+    parame = byH;
+    handler.postDelayed(bzw, 330000L);
+    return byF;
+  }
+  
+  public abstract int a(e parame, d paramd);
+  
+  public int a(o paramo)
+  {
+    return b.byS;
+  }
+  
+  public void a(a parama) {}
+  
+  public boolean a(j paramj)
+  {
     return false;
+  }
+  
+  public boolean b(j paramj)
+  {
+    return false;
+  }
+  
+  public final void c(e parame)
+  {
+    byE = be.Gq();
+    byD = parame;
+  }
+  
+  public void cancel()
+  {
+    v.i("MicroMsg.NetSceneBase", "cancel: %d", new Object[] { Integer.valueOf(byF) });
+    byG = true;
+    if (byH != null) {
+      byH.cancel();
+    }
+    if ((byF != -1) && (byD != null))
+    {
+      int i = byF;
+      byF = -1;
+      byD.cancel(i);
+    }
+  }
+  
+  public String getInfo()
+  {
+    return "";
+  }
+  
+  public abstract int getType();
+  
+  public int px()
+  {
+    return 1;
+  }
+  
+  public boolean vE()
+  {
+    return false;
+  }
+  
+  public boolean vF()
+  {
+    return Ux <= 0;
+  }
+  
+  public boolean vG()
+  {
+    return px() == 1;
+  }
+  
+  public o vH()
+  {
+    return byK;
+  }
+  
+  public final int vI()
+  {
+    if (byK == null) {
+      return 0;
+    }
+    return byK.hashCode();
+  }
+  
+  protected static enum a
+  {
+    private a() {}
+  }
+  
+  protected static enum b
+  {
+    public static int[] vJ()
+    {
+      return (int[])byV.clone();
+    }
   }
 }
 

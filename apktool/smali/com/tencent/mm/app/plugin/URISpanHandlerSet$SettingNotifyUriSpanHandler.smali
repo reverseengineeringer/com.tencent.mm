@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+.field final synthetic ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 633
-    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingNotifyUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 632
+    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingNotifyUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-direct {p0, p1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BaseUriSpanHandler;-><init>(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)V
 
@@ -40,36 +40,36 @@
     .locals 3
 
     .prologue
-    .line 656
+    .line 655
     iget v0, p1, Lcom/tencent/mm/pluginsdk/ui/applet/g;->type:I
 
     const/16 v1, 0x9
 
     if-ne v0, v1, :cond_2
 
-    .line 657
+    .line 656
     if-eqz p2, :cond_0
 
-    .line 658
+    .line 657
     invoke-interface {p2, p1}, Lcom/tencent/mm/pluginsdk/ui/d/b;->a(Lcom/tencent/mm/pluginsdk/ui/applet/g;)Ljava/lang/Object;
 
-    .line 660
+    .line 659
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/ui/LauncherUI;->bat()Lcom/tencent/mm/ui/LauncherUI;
+    invoke-static {}, Lcom/tencent/mm/ui/LauncherUI;->bfJ()Lcom/tencent/mm/ui/LauncherUI;
 
     move-result-object v0
 
-    .line 661
+    .line 660
     if-eqz v0, :cond_1
 
-    .line 662
+    .line 661
     const-string/jumbo v1, "tab_settings"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->Gi(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->Ix(Ljava/lang/String;)V
 
-    .line 664
+    .line 663
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingNotifyUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingNotifyUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -79,12 +79,12 @@
 
     const-string/jumbo v2, ".ui.setting.SettingsNotificationUI"
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ar/c;->u(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/av/c;->v(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 665
+    .line 664
     const/4 v0, 0x1
 
-    .line 670
+    .line 669
     :goto_0
     return v0
 
@@ -98,7 +98,7 @@
     .locals 4
 
     .prologue
-    .line 675
+    .line 674
     const-string/jumbo v0, "weixin://setting/notify"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -107,32 +107,32 @@
 
     if-eqz v0, :cond_2
 
-    .line 676
-    invoke-static {}, Lcom/tencent/mm/ui/LauncherUI;->bat()Lcom/tencent/mm/ui/LauncherUI;
+    .line 675
+    invoke-static {}, Lcom/tencent/mm/ui/LauncherUI;->bfJ()Lcom/tencent/mm/ui/LauncherUI;
 
     move-result-object v0
 
-    .line 677
+    .line 676
     if-eqz v0, :cond_0
 
-    .line 678
+    .line 677
     const-string/jumbo v1, "tab_settings"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->Gi(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->Ix(Ljava/lang/String;)V
 
-    .line 680
+    .line 679
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 681
+    .line 680
     const/high16 v1, 0x4000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 682
-    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingNotifyUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 681
+    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingNotifyUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -142,14 +142,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 683
+    .line 682
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 685
+    .line 684
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingNotifyUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$SettingNotifyUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -159,12 +159,12 @@
 
     const-string/jumbo v3, ".ui.setting.SettingsNotificationUI"
 
-    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
-    .line 686
+    .line 685
     const/4 v0, 0x1
 
-    .line 688
+    .line 687
     :goto_0
     return v0
 
@@ -174,13 +174,13 @@
     goto :goto_0
 .end method
 
-.method final bb(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
+.method final bg(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
     .locals 3
 
     .prologue
     const/4 v1, 0x0
 
-    .line 637
+    .line 636
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -193,14 +193,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 638
+    .line 637
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
     const/16 v2, 0x9
 
     invoke-direct {v0, p1, v2, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/g;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 641
+    .line 640
     :goto_0
     return-object v0
 
@@ -210,11 +210,11 @@
     goto :goto_0
 .end method
 
-.method final lg()[I
+.method final jH()[I
     .locals 3
 
     .prologue
-    .line 651
+    .line 650
     const/4 v0, 0x1
 
     new-array v0, v0, [I

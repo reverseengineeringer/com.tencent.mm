@@ -61,7 +61,7 @@
 
     .prologue
     .line 185
-    iget-object v0, p3, Landroid/support/v4/view/a/a;->gL:Ljava/lang/Object;
+    iget-object v0, p3, Landroid/support/v4/view/a/a;->hg:Ljava/lang/Object;
 
     check-cast p1, Landroid/view/View$AccessibilityDelegate;
 
@@ -101,7 +101,7 @@
     return v0
 .end method
 
-.method public final ae()Ljava/lang/Object;
+.method public final ac()Ljava/lang/Object;
     .locals 1
 
     .prologue

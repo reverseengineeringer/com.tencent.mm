@@ -12,12 +12,12 @@ final class RangeWidget$1
   
   public final void onClick(View paramView)
   {
-    paramView = new Intent(RangeWidget.a(haC), SnsLabelUI.class);
-    paramView.putExtra("KLabel_range_index", RangeWidget.b(haC));
-    paramView.putExtra("Klabel_name_list", RangeWidget.c(haC));
-    paramView.putExtra("Ktag_rangeFilterprivate", RangeWidget.d(haC));
-    paramView.putExtra("k_sns_label_ui_style", haC.style);
-    RangeWidget.a(haC).startActivityForResult(paramView, 5);
+    paramView = new Intent(RangeWidget.a(hnU), SnsLabelUI.class);
+    paramView.putExtra("KLabel_range_index", RangeWidget.b(hnU));
+    paramView.putExtra("Klabel_name_list", RangeWidget.c(hnU));
+    paramView.putExtra("Ktag_rangeFilterprivate", RangeWidget.d(hnU));
+    paramView.putExtra("k_sns_label_ui_style", hnU.style);
+    RangeWidget.a(hnU).startActivityForResult(paramView, 5);
   }
 }
 

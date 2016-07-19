@@ -1,30 +1,18 @@
 package com.tencent.mm.modelstat;
 
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-
 final class g$3
-  implements af.a
+  implements Runnable
 {
-  public final boolean lj()
+  g$3(g paramg, int paramInt1, int paramInt2, String paramString1, int paramInt3, String paramString2, boolean paramBoolean) {}
+  
+  public final void run()
   {
-    try
-    {
-      g.Ds();
-      if ((g.Dt() < 2000) && (g.Dt() > 1000))
-      {
-        g.dZ(g.Dt());
-        return false;
-      }
-      g.ea(g.Dt());
-      return false;
-    }
-    catch (Exception localException)
-    {
-      u.e("!44@/B4Tb64lLpL5Ojn0IScONoo+FDv6oyheT6xM4CLuwD0=", "run :%s", new Object[] { ay.b(localException) });
-    }
-    return false;
+    g.b(bYS, bYT, bYU, bYW);
+  }
+  
+  public final String toString()
+  {
+    return super.toString() + "|report";
   }
 }
 

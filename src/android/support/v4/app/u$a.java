@@ -13,11 +13,11 @@ import java.util.List;
 public final class u$a
   implements n, o
 {
-  List dB = new ArrayList();
-  Notification.Builder dw;
+  Notification.Builder dM;
+  List<Bundle> dR = new ArrayList();
   Bundle mExtras;
   
-  public u$a(Context paramContext, Notification paramNotification, CharSequence paramCharSequence1, CharSequence paramCharSequence2, CharSequence paramCharSequence3, RemoteViews paramRemoteViews, int paramInt1, PendingIntent paramPendingIntent1, PendingIntent paramPendingIntent2, Bitmap paramBitmap, int paramInt2, int paramInt3, boolean paramBoolean1, boolean paramBoolean2, boolean paramBoolean3, int paramInt4, CharSequence paramCharSequence4, boolean paramBoolean4, ArrayList paramArrayList, Bundle paramBundle, String paramString1, boolean paramBoolean5, String paramString2)
+  public u$a(Context paramContext, Notification paramNotification, CharSequence paramCharSequence1, CharSequence paramCharSequence2, CharSequence paramCharSequence3, RemoteViews paramRemoteViews, int paramInt1, PendingIntent paramPendingIntent1, PendingIntent paramPendingIntent2, Bitmap paramBitmap, int paramInt2, int paramInt3, boolean paramBoolean1, boolean paramBoolean2, boolean paramBoolean3, int paramInt4, CharSequence paramCharSequence4, boolean paramBoolean4, ArrayList<String> paramArrayList, Bundle paramBundle, String paramString1, boolean paramBoolean5, String paramString2)
   {
     paramContext = new Notification.Builder(paramContext).setWhen(when).setShowWhen(paramBoolean2).setSmallIcon(icon, iconLevel).setContent(contentView).setTicker(tickerText, paramRemoteViews).setSound(sound, audioStreamType).setVibrate(vibrate).setLights(ledARGB, ledOnMS, ledOffMS);
     if ((flags & 0x2) != 0)
@@ -41,7 +41,7 @@ public final class u$a
       }
       paramBoolean2 = true;
       label207:
-      dw = paramContext.setFullScreenIntent(paramPendingIntent2, paramBoolean2).setLargeIcon(paramBitmap).setNumber(paramInt1).setUsesChronometer(paramBoolean3).setPriority(paramInt4).setProgress(paramInt2, paramInt3, paramBoolean1);
+      dM = paramContext.setFullScreenIntent(paramPendingIntent2, paramBoolean2).setLargeIcon(paramBitmap).setNumber(paramInt1).setUsesChronometer(paramBoolean3).setPriority(paramInt4).setProgress(paramInt2, paramInt3, paramBoolean1);
       mExtras = new Bundle();
       if (paramBundle != null) {
         mExtras.putAll(paramBundle);
@@ -83,14 +83,14 @@ public final class u$a
     }
   }
   
-  public final Notification.Builder V()
+  public final Notification.Builder U()
   {
-    return dw;
+    return dM;
   }
   
   public final void a(s.a parama)
   {
-    dB.add(t.b(dw, parama));
+    dR.add(t.b(dM, parama));
   }
 }
 

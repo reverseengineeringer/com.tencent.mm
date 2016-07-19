@@ -57,7 +57,7 @@ class a$a
   
   public final void a(Object paramObject, View paramView, android.support.v4.view.a.a parama)
   {
-    parama = gL;
+    parama = hg;
     ((View.AccessibilityDelegate)paramObject).onInitializeAccessibilityNodeInfo(paramView, (AccessibilityNodeInfo)parama);
   }
   
@@ -71,7 +71,7 @@ class a$a
     return ((View.AccessibilityDelegate)paramObject).onRequestSendAccessibilityEvent(paramViewGroup, paramView, paramAccessibilityEvent);
   }
   
-  public final Object ae()
+  public final Object ac()
   {
     return new View.AccessibilityDelegate();
   }

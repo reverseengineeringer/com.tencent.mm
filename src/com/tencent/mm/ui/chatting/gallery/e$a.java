@@ -5,11 +5,11 @@ import android.widget.ImageView;
 
 public abstract interface e$a
 {
-  public abstract Bitmap Hc(String paramString);
+  public abstract Bitmap Jr(String paramString);
   
   public abstract void c(ImageView paramImageView, Bitmap paramBitmap);
   
-  public abstract Bitmap rE(int paramInt);
+  public abstract Bitmap tG(int paramInt);
 }
 
 /* Location:

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+.field final synthetic hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 755
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$2;->his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+    .line 798
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$2;->hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,113 +42,160 @@
     .prologue
     const/4 v8, 0x2
 
-    const/4 v7, 0x1
+    const/4 v1, 0x1
 
-    const/4 v6, 0x0
+    const/4 v2, 0x0
 
-    .line 760
-    invoke-static {}, Lcom/tencent/mm/g/h;->pS()Lcom/tencent/mm/g/e;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "SIGHTCannotTransmitForFav"
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/g/e;->getValue(Ljava/lang/String;)Ljava/lang/String;
+    .line 803
+    invoke-static {}, Lcom/tencent/mm/h/h;->om()Lcom/tencent/mm/h/e;
 
     move-result-object v0
 
-    .line 762
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->Dr(Ljava/lang/String;)I
+    const-string/jumbo v3, "SIGHTCannotTransmitForFav"
+
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/h/e;->getValue(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 806
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->FG(Ljava/lang/String;)I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_3
 
-    .line 763
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$2;->his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+    .line 807
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$2;->hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->b(Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->c(Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/modelsfs/FileOp;->ax(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/modelsfs/FileOp;->aB(Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 764
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$2;->his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+    .line 808
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$2;->hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->m(Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->m(Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-static {v1}, Lcom/tencent/mm/modelsfs/FileOp;->ax(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/tencent/mm/modelsfs/FileOp;->aB(Ljava/lang/String;)Z
 
-    move-result v1
+    move-result v3
 
-    .line 765
-    const-string/jumbo v2, "!44@/B4Tb64lLpLAQNo3yhYAsqDk1iee7Bh2S7FW+l6OQsk="
+    .line 809
+    const-string/jumbo v4, "MicroMsg.SnsSightPlayerUI"
 
-    const-string/jumbo v3, "config can forward sight, thumb existed %B, video existed %B"
+    const-string/jumbo v5, "config can forward sight, thumb existed %B, video existed %B"
 
-    new-array v4, v8, [Ljava/lang/Object;
+    new-array v6, v8, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v5
+    move-result-object v7
 
-    aput-object v5, v4, v6
+    aput-object v7, v6, v2
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v5
+    move-result-object v7
 
-    aput-object v5, v4, v7
+    aput-object v7, v6, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 766
-    if-eqz v0, :cond_0
+    .line 810
+    if-eqz v0, :cond_3
 
-    if-eqz v1, :cond_0
+    if-eqz v3, :cond_3
 
-    .line 767
+    .line 811
     const/4 v0, 0x3
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$2;->his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$2;->hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
-    const v2, 0x7f0b1716
+    const v4, 0x7f081239
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->getString(I)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->getString(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-interface {p1, v6, v0, v6, v1}, Landroid/view/ContextMenu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+    invoke-interface {p1, v2, v0, v2, v3}, Landroid/view/ContextMenu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
-    .line 770
+    move v0, v1
+
+    .line 815
+    :goto_0
+    const-string/jumbo v3, "favorite"
+
+    invoke-static {v3}, Lcom/tencent/mm/av/c;->zM(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 816
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$2;->hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+
+    const v4, 0x7f080d70
+
+    invoke-virtual {v3, v4}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-interface {p1, v2, v8, v2, v3}, Landroid/view/ContextMenu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+
+    .line 819
     :cond_0
-    const-string/jumbo v0, "favorite"
+    if-eqz v0, :cond_1
 
-    invoke-static {v0}, Lcom/tencent/mm/ar/c;->yf(Ljava/lang/String;)Z
+    .line 820
+    new-instance v0, Lcom/tencent/mm/e/a/bz;
 
-    move-result v0
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/bz;-><init>()V
+
+    .line 821
+    iget-object v3, v0, Lcom/tencent/mm/e/a/bz;->ahe:Lcom/tencent/mm/e/a/bz$a;
+
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$2;->hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+
+    invoke-static {v4}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->d(Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;)Ljava/lang/String;
+
+    move-result-object v4
+
+    iput-object v4, v3, Lcom/tencent/mm/e/a/bz$a;->agV:Ljava/lang/String;
+
+    .line 822
+    sget-object v3, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v3, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
+
+    .line 823
+    iget-object v0, v0, Lcom/tencent/mm/e/a/bz;->ahf:Lcom/tencent/mm/e/a/bz$b;
+
+    iget-boolean v0, v0, Lcom/tencent/mm/e/a/bz$b;->agF:Z
 
     if-eqz v0, :cond_1
 
-    .line 771
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$2;->his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+    .line 824
+    const/4 v0, 0x4
 
-    const v1, 0x7f0b0e8e
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$2;->hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->getString(I)Ljava/lang/String;
+    const v4, 0x7f0803d8
 
-    move-result-object v0
+    invoke-virtual {v3, v4}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->getString(I)Ljava/lang/String;
 
-    invoke-interface {p1, v6, v8, v6, v0}, Landroid/view/ContextMenu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+    move-result-object v3
 
-    .line 773
+    invoke-interface {p1, v2, v0, v2, v3}, Landroid/view/ContextMenu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+
+    .line 828
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$2;->his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$2;->hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->i(Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;)Z
 
@@ -156,22 +203,27 @@
 
     if-nez v0, :cond_2
 
-    .line 774
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$2;->his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+    .line 829
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$2;->hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, v0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v1, 0x7f0b1644
+    const v3, 0x7f0812f5
 
-    invoke-virtual {v0, v1}, Landroid/support/v7/app/ActionBarActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v3}, Landroid/support/v7/app/ActionBarActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {p1, v6, v7, v6, v0}, Landroid/view/ContextMenu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+    invoke-interface {p1, v2, v1, v2, v0}, Landroid/view/ContextMenu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
-    .line 776
+    .line 831
     :cond_2
     return-void
+
+    :cond_3
+    move v0, v2
+
+    goto :goto_0
 .end method

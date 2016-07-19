@@ -5,9 +5,9 @@ import android.content.DialogInterface.OnCancelListener;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import android.widget.EditText;
-import com.tencent.mm.ad.b;
+import com.tencent.mm.ag.b;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.base.g;
 
 final class InviteLinkedInFriendUI$2
@@ -17,11 +17,11 @@ final class InviteLinkedInFriendUI$2
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if ((InviteLinkedInFriendUI.a(kNW).getText().toString().trim().length() > 0) && (InviteLinkedInFriendUI.b(kNW).getText().toString().trim().length() > 0))
+    if ((InviteLinkedInFriendUI.a(lnm).getText().toString().trim().length() > 0) && (InviteLinkedInFriendUI.b(lnm).getText().toString().trim().length() > 0))
     {
-      InviteLinkedInFriendUI.a(kNW, new b(InviteLinkedInFriendUI.c(kNW), InviteLinkedInFriendUI.a(kNW).getText().toString(), InviteLinkedInFriendUI.b(kNW).getText().toString()));
-      ah.tE().d(InviteLinkedInFriendUI.d(kNW));
-      InviteLinkedInFriendUI.a(kNW, g.a(kNW, kNW.getString(2131431101), false, new DialogInterface.OnCancelListener()
+      InviteLinkedInFriendUI.a(lnm, new b(InviteLinkedInFriendUI.c(lnm), InviteLinkedInFriendUI.a(lnm).getText().toString(), InviteLinkedInFriendUI.b(lnm).getText().toString()));
+      ah.tF().a(InviteLinkedInFriendUI.d(lnm), 0);
+      InviteLinkedInFriendUI.a(lnm, g.a(lnm, lnm.getString(2131233495), false, new DialogInterface.OnCancelListener()
       {
         public final void onCancel(DialogInterface paramAnonymousDialogInterface) {}
       }));

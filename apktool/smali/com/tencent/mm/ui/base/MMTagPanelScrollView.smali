@@ -12,13 +12,13 @@
 
 
 # instance fields
-.field private dSZ:Ljava/lang/Runnable;
+.field private dVh:Ljava/lang/Runnable;
 
-.field private dTb:I
+.field private dVj:I
 
-.field private kHD:Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;
+.field private lgF:Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;
 
-.field private kHE:I
+.field public lgG:I
 
 
 # direct methods
@@ -36,22 +36,22 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/MMTagPanelScrollView$1;-><init>(Lcom/tencent/mm/ui/base/MMTagPanelScrollView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->dSZ:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->dVh:Ljava/lang/Runnable;
 
     .line 49
     new-instance v0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;-><init>(B)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->kHD:Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->lgF:Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;
 
     .line 51
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->dTb:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->dVj:I
 
     .line 52
     const/4 v0, 0x2
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->kHE:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->lgG:I
 
     .line 20
     return-void
@@ -71,22 +71,22 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/MMTagPanelScrollView$1;-><init>(Lcom/tencent/mm/ui/base/MMTagPanelScrollView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->dSZ:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->dVh:Ljava/lang/Runnable;
 
     .line 49
     new-instance v0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;-><init>(B)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->kHD:Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->lgF:Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;
 
     .line 51
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->dTb:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->dVj:I
 
     .line 52
     const/4 v0, 0x2
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->kHE:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->lgG:I
 
     .line 16
     return-void
@@ -94,6 +94,22 @@
 
 
 # virtual methods
+.method protected onLayout(ZIIII)V
+    .locals 1
+
+    .prologue
+    .line 92
+    invoke-super/range {p0 .. p5}, Landroid/widget/ScrollView;->onLayout(ZIIII)V
+
+    .line 93
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0, p5}, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->scrollBy(II)V
+
+    .line 94
+    return-void
+.end method
+
 .method protected onMeasure(II)V
     .locals 9
 
@@ -133,16 +149,18 @@
     check-cast v0, Lcom/tencent/mm/ui/base/MMTagPanel;
 
     .line 69
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->bcU()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->biv()Z
 
     move-result v1
 
     .line 71
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->getLineCount()I
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/FlowLayout;->lbe:Ljava/util/LinkedList;
+
+    invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
 
     move-result v2
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->kHE:I
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->lgG:I
 
     if-ne v2, v3, :cond_2
 
@@ -155,7 +173,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0501d8
+    const v4, 0x7f0b017a
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -163,15 +181,17 @@
 
     add-int/2addr v2, v3
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->dTb:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->dVj:I
 
     .line 74
     :cond_2
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->getLineCount()I
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/FlowLayout;->lbe:Ljava/util/LinkedList;
+
+    invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
 
     move-result v2
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->kHE:I
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->lgG:I
 
     if-lt v2, v3, :cond_0
 
@@ -181,20 +201,20 @@
     move-result v2
 
     .line 76
-    iget v3, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->kHE:I
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->lgG:I
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/base/MMTagPanel;->qv(I)I
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/base/MMTagPanel;->sn(I)I
 
     move-result v3
 
-    iget v4, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->dTb:I
+    iget v4, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->dVj:I
 
     invoke-static {v3, v4}, Ljava/lang/Math;->max(II)I
 
     move-result v3
 
     .line 77
-    const-string/jumbo v4, "!44@/B4Tb64lLpKQCorpigjVFfNjBMjVypaedPMLHoF4vok="
+    const-string/jumbo v4, "MicroMsg.FavTagPanelScrollView"
 
     const-string/jumbo v5, "height %d"
 
@@ -208,56 +228,28 @@
 
     aput-object v7, v6, v8
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 78
     invoke-virtual {p0, v2, v3}, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->setMeasuredDimension(II)V
-
-    .line 79
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->dSZ:Ljava/lang/Runnable;
-
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->removeCallbacks(Ljava/lang/Runnable;)Z
-
-    .line 80
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->dSZ:Ljava/lang/Runnable;
-
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->post(Ljava/lang/Runnable;)Z
 
     .line 81
     if-eqz v1, :cond_0
 
     .line 83
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->kHD:Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->lgF:Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;
 
-    iput-object v0, v1, Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;->kHG:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iput-object v0, v1, Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;->lgI:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     .line 84
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->kHD:Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->lgF:Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     .line 85
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->kHD:Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->lgF:Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
-.end method
-
-.method public setMaxLine(I)V
-    .locals 0
-
-    .prologue
-    .line 55
-    if-gtz p1, :cond_0
-
-    .line 56
-    const/4 p1, 0x1
-
-    .line 58
-    :cond_0
-    iput p1, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->kHE:I
-
-    .line 59
-    return-void
 .end method

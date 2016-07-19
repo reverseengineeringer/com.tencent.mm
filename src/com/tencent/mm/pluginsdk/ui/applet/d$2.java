@@ -1,19 +1,19 @@
 package com.tencent.mm.pluginsdk.ui.applet;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class d$2
   implements f.b
 {
   d$2(d paramd) {}
   
-  public final boolean fK(int paramInt)
+  public final boolean gB(int paramInt)
   {
-    if ((!iIA.iIp.iIK) || (!iIA.iIp.ov(paramInt))) {}
-    while (iIA.iIp.ou(paramInt)) {
+    if ((!jfx.jfm.jfG) || (!jfx.jfm.qb(paramInt))) {}
+    while (jfx.jfm.qa(paramInt)) {
       return true;
     }
-    u.d("!44@/B4Tb64lLpLSOpQlr7qYXXzhEhFJKZisQQbc4kK5pDc=", "onItemLongClick " + paramInt);
+    v.d("MicroMsg.ContactListArchor", "onItemLongClick " + paramInt);
     return true;
   }
 }

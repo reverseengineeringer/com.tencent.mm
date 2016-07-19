@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bmw:Lcom/tencent/mm/booter/d;
+.field final synthetic bac:Lcom/tencent/mm/booter/d;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 588
-    iput-object p1, p0, Lcom/tencent/mm/booter/d$7;->bmw:Lcom/tencent/mm/booter/d;
+    iput-object p1, p0, Lcom/tencent/mm/booter/d$7;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,16 +43,16 @@
     const/4 v7, 0x1
 
     .line 592
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$7;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$7;->bac:Lcom/tencent/mm/booter/d;
 
-    invoke-static {v0}, Lcom/tencent/mm/booter/d;->d(Lcom/tencent/mm/booter/d;)Lcom/tencent/mm/sdk/platformtools/af;
+    invoke-static {v0}, Lcom/tencent/mm/booter/d;->d(Lcom/tencent/mm/booter/d;)Lcom/tencent/mm/sdk/platformtools/ah;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/af;->aUF()V
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ah;->aZJ()V
 
     .line 594
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$7;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$7;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-static {v0}, Lcom/tencent/mm/booter/d;->c(Lcom/tencent/mm/booter/d;)Ljava/util/List;
 
@@ -80,7 +80,7 @@
     if-eqz v0, :cond_0
 
     .line 596
-    const-string/jumbo v2, "!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei"
+    const-string/jumbo v2, "MicroMsg.DownloadPlayer"
 
     const-string/jumbo v3, "on error call back: %s"
 
@@ -94,7 +94,7 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 597
     invoke-interface {v0}, Lcom/tencent/mm/model/v;->onError()V
@@ -103,15 +103,15 @@
 
     .line 600
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f0b01e3
+    const v2, 0x7f080ca6
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

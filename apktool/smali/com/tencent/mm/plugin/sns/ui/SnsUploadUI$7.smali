@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+.field final synthetic hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 307
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$7;->hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+    .line 324
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$7;->hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,13 +40,13 @@
     .locals 2
 
     .prologue
-    .line 310
+    .line 327
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$7$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$7$1;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$7;)V
 
-    .line 372
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$7;->hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+    .line 389
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$7;->hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->f(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Landroid/widget/FrameLayout;
 
@@ -54,8 +54,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 373
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$7;->hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+    .line 390
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$7;->hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;->f(Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;)Landroid/widget/FrameLayout;
 
@@ -63,7 +63,7 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->setOnDragListener(Landroid/view/View$OnDragListener;)V
 
-    .line 375
+    .line 392
     :cond_0
     return-void
 .end method

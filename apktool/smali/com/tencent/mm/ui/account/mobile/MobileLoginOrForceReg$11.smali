@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kyq:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
+.field final synthetic kXx:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
 
 .field final synthetic val$url:Ljava/lang/String;
 
@@ -29,7 +29,7 @@
 
     .prologue
     .line 144
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$11;->kyq:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$11;->kXx:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
 
     iput-object p2, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$11;->val$url:Ljava/lang/String;
 
@@ -67,25 +67,25 @@
 
     .line 153
     :goto_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$11;->kyq:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$11;->kXx:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;->b(Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;)Lcom/tencent/mm/sdk/platformtools/aa;
+    invoke-static {v1}, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;->b(Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;)Lcom/tencent/mm/sdk/platformtools/ac;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$11;->kyq:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$11;->kXx:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
 
-    invoke-static {v2}, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;->b(Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;)Lcom/tencent/mm/sdk/platformtools/aa;
+    invoke-static {v2}, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;->b(Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;)Lcom/tencent/mm/sdk/platformtools/ac;
 
     move-result-object v2
 
     const/4 v3, 0x0
 
-    invoke-virtual {v2, v3, v0}, Lcom/tencent/mm/sdk/platformtools/aa;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {v2, v3, v0}, Lcom/tencent/mm/sdk/platformtools/ac;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/platformtools/aa;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/platformtools/ac;->sendMessage(Landroid/os/Message;)Z
 
     .line 156
     return-void
@@ -94,11 +94,11 @@
     :catch_0
     move-exception v1
 
-    const-string/jumbo v1, "!44@kCDfVf11b5ODuKlWMsaJVoc4C30kOcNmvf8lIbZ2/oI="
+    const-string/jumbo v1, "MicorMsg.MobileLoginOrForceReg"
 
     const-string/jumbo v2, "download avatar failed"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

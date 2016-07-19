@@ -9,19 +9,19 @@ final class ActionMenuPresenter$c
 {
   public ActionMenuPresenter$c(ActionMenuPresenter paramActionMenuPresenter, Context paramContext)
   {
-    super(paramContext, null, 2130772112);
+    super(paramContext, null, 2130771993);
     setClickable(true);
     setFocusable(true);
     setVisibility(0);
     setEnabled(true);
   }
   
-  public final boolean be()
+  public final boolean bf()
   {
     return false;
   }
   
-  public final boolean bf()
+  public final boolean bg()
   {
     return false;
   }
@@ -32,7 +32,7 @@ final class ActionMenuPresenter$c
       return true;
     }
     playSoundEffect(0);
-    kU.showOverflowMenu();
+    ll.showOverflowMenu();
     return true;
   }
 }

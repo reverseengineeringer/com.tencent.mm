@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tencent.mm.plugin.webview.ui.tools.WebViewKeyboardLinerLayout android:id="@id/af9" android:background="@null" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <FrameLayout android:id="@id/g3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="containerFrameLayout">
+            <include layout="@layout/webview_logo_layout" />
+            <com.tencent.mm.plugin.webview.ui.tools.LogoWebViewWrapper android:id="@id/af_" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <FrameLayout android:id="@id/afa" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="containerFrameLayout" />
+            </com.tencent.mm.plugin.webview.ui.tools.LogoWebViewWrapper>
+        </FrameLayout>
+        <FrameLayout android:id="@id/afb" android:background="@color/ow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="refreshFrameLayout">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/cr" android:layout_marginBottom="@dimen/cr" android:src="@raw/webview_refresh_icon" />
+                <TextView android:textSize="18.0sp" android:textColor="#ffdddddd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dkw" style="@style/MMWebViewRefreshTextView" />
+            </LinearLayout>
+        </FrameLayout>
+        <com.tencent.mm.ui.base.MMFalseProgressBar android:layout_gravity="center|left|top" android:id="@id/afc" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:progressDrawable="@drawable/je" android:contentDescription="progressBar" />
+    </FrameLayout>
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/afd" android:background="@color/ow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <ImageButton android:id="@id/afe" android:background="@drawable/x" android:paddingLeft="30.0dip" android:paddingRight="30.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/q2" android:layout_alignParentLeft="true" />
+        <ImageView android:background="@color/w" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_toRightOf="@id/afe" />
+        <ImageButton android:id="@id/aff" android:background="@drawable/x" android:paddingLeft="30.0dip" android:paddingRight="30.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/q3" android:layout_alignParentRight="true" />
+        <ImageView android:background="@color/w" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_toLeftOf="@id/aff" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/csu" android:background="@color/ow" android:layout_width="fill_parent" android:layout_height="49.0dip">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:background="@color/m2" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip">
+            <ImageButton android:id="@id/csv" android:background="@null" android:padding="@dimen/j8" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/q6" android:layout_weight="1.0" />
+            <ImageButton android:id="@id/csw" android:background="@null" android:padding="@dimen/j8" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/q7" android:layout_weight="1.0" />
+            <ImageButton android:id="@id/csx" android:background="@null" android:padding="@dimen/j8" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/q5" android:layout_weight="1.0" />
+            <ImageView android:id="@id/csy" android:background="@null" android:padding="@dimen/j8" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/q_" android:layout_weight="1.0" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/csz" android:background="@null" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="38.0dip" android:layout_weight="1.0">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:background="@drawable/qc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0">
+                    <ImageView android:layout_gravity="center" android:background="@null" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@raw/fav_note_voiceplayer_record_icon" android:layout_weight="0.5" />
+                    <TextView android:textColor="@color/ow" android:layout_gravity="center_vertical" android:id="@id/ct0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="00:00" android:layout_weight="0.5" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.tencent.mm.plugin.webview.ui.tools.WebViewKeyboardLinerLayout>

@@ -1,9 +1,10 @@
 package com.tencent.smtt.sdk;
 
+import android.net.Uri;
 import android.webkit.ValueCallback;
 
 final class e$2
-  implements u
+  implements u<Uri>
 {
   e$2(e parame, ValueCallback paramValueCallback) {}
 }

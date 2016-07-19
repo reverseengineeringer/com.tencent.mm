@@ -2,14 +2,14 @@ package com.tencent.mm.ui;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnDismissListener;
-import com.tencent.mm.sdk.platformtools.z;
+import com.tencent.mm.sdk.platformtools.ab;
 
 final class MMAppMgr$14
   implements DialogInterface.OnDismissListener
 {
   public final void onDismiss(DialogInterface paramDialogInterface)
   {
-    z.CR("show_wap_adviser");
+    ab.Fe("show_wap_adviser");
   }
 }
 

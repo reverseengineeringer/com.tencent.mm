@@ -4,23 +4,23 @@
 
 
 # virtual methods
-.method public abstract avT()V
+.method public abstract a(Lcom/tencent/mm/plugin/sight/decode/ui/b;)V
 .end method
 
-.method public abstract getVideoTotalTime()I
+.method public abstract ayo()I
 .end method
 
-.method public abstract kU(I)V
+.method public abstract ayq()V
 .end method
 
-.method public abstract setIplaySeekCallback(Lcom/tencent/mm/plugin/sight/decode/ui/b;)V
+.method public abstract c(Landroid/view/View$OnClickListener;)V
 .end method
 
-.method public abstract setIsPlay(Z)V
+.method public abstract eu(Z)V
 .end method
 
-.method public abstract setOnPlayButtonClickListener(Landroid/view/View$OnClickListener;)V
+.method public abstract ma(I)V
 .end method
 
-.method public abstract setVideoTotalTime(I)V
+.method public abstract mb(I)V
 .end method

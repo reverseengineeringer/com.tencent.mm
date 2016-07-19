@@ -10,12 +10,12 @@ final class BindMContactIntroUI$23$1
   
   public final void a(l paraml)
   {
-    paraml.setHeaderTitle(2131428650);
-    if ((kOw.kOv & 0x2) != 0) {
-      paraml.bL(0, 2131428652);
+    paraml.setHeaderTitle(2131231277);
+    if ((lnM.lnL & 0x2) != 0) {
+      paraml.bR(0, 2131231295);
     }
-    if ((kOw.kOv & 0x1) != 0) {
-      paraml.bL(1, 2131428653);
+    if ((lnM.lnL & 0x1) != 0) {
+      paraml.bR(1, 2131231256);
     }
   }
 }

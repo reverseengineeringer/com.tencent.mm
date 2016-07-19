@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:paddingLeft="@dimen/hb" android:paddingRight="@dimen/hb" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:minHeight="@dimen/j7"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@android:id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/MMFontPreferenceLarge" />
+    <TextView android:id="@id/vo" android:paddingTop="@dimen/j8" android:paddingRight="@dimen/j8" android:paddingBottom="@dimen/j8" android:singleLine="true" android:layout_alignParentRight="true" style="@style/MMFontPreferenceSummary" />
+    <TextView android:textSize="@dimen/i8" android:id="@id/vp" android:singleLine="true" android:layout_below="@android:id/title" style="@style/MMFontPreferenceSummary" />
+    <TextView android:textSize="@dimen/i8" android:id="@id/vq" android:text="@string/v2" android:singleLine="true" android:layout_below="@id/vp" style="@style/MMFontPreferenceSummary" />
+    <TextView android:textSize="@dimen/i8" android:textColor="@color/bl" android:id="@id/vr" android:singleLine="true" android:layout_toRightOf="@id/vq" android:layout_alignBottom="@id/vq" style="@style/MMFontPreferenceSummary" />
+</RelativeLayout>

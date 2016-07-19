@@ -5,8 +5,8 @@ import com.tencent.mm.ui.base.MaskLayout;
 
 final class AtSomeoneUI$b
 {
-  public TextView czU;
-  public MaskLayout dbN;
+  public TextView cwQ;
+  public MaskLayout dat;
 }
 
 /* Location:

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/aja" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:textColor="@color/pu" android:ellipsize="none" android:gravity="center_vertical" android:id="@id/zr" android:layout_marginLeft="3.0dip" android:singleLine="false" style="@style/MMFontPreferenceSummary" />
+</LinearLayout>

@@ -4,7 +4,7 @@ import com.tencent.mm.model.bb;
 import com.tencent.mm.modelfriend.ah;
 import com.tencent.mm.modelfriend.b;
 import com.tencent.mm.pluginsdk.ui.applet.a.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class c$1$1
   implements a.a
@@ -13,24 +13,24 @@ final class c$1$1
   
   public final void a(boolean paramBoolean1, boolean paramBoolean2, String paramString1, String paramString2)
   {
-    u.i("!44@/B4Tb64lLpLFDma4Qh7ELFMASImQ3OVXqyPXynP82wU=", "cpan ok:%b hasSendVerify:%b  username:%s gitemId:%s", new Object[] { Boolean.valueOf(paramBoolean1), Boolean.valueOf(paramBoolean2), paramString1, paramString2 });
-    b localb = ah.zq().hr(paramString2);
+    v.i("MicroMsg.MobileFriendAdapter", "cpan ok:%b hasSendVerify:%b  username:%s gitemId:%s", new Object[] { Boolean.valueOf(paramBoolean1), Boolean.valueOf(paramBoolean2), paramString1, paramString2 });
+    b localb = ah.zD().hJ(paramString2);
     if (localb != null)
     {
       if (paramBoolean1)
       {
         username = paramString1;
         status = 2;
-        bb.uE().b(26, new Object[0]);
-        c.GH(paramString1);
+        bb.uG().c(26, new Object[0]);
+        c.IX(paramString1);
       }
-      bEv = 2;
-      u.d("!44@/B4Tb64lLpLFDma4Qh7ELFMASImQ3OVXqyPXynP82wU=", "f :%s", new Object[] { localb.toString() });
-      ah.zq().a(paramString2, localb);
-      kPn.kPm.Gk();
+      bxG = 2;
+      v.d("MicroMsg.MobileFriendAdapter", "f :%s", new Object[] { localb.toString() });
+      ah.zD().a(paramString2, localb);
+      loD.loC.GH();
       return;
     }
-    u.w("!44@/B4Tb64lLpLFDma4Qh7ELFMASImQ3OVXqyPXynP82wU=", "cpan mobile friend is null. qq:%s", new Object[] { paramString2 });
+    v.w("MicroMsg.MobileFriendAdapter", "cpan mobile friend is null. qq:%s", new Object[] { paramString2 });
   }
 }
 

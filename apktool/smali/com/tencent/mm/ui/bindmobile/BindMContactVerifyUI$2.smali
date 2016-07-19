@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;->Gb()V
+    value = Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kOF:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
+.field final synthetic lnV:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 149
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->kOF:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->lnV:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,10 +40,10 @@
     .locals 8
 
     .prologue
-    const v7, 0x7f0b0ddd
+    const v7, 0x7f080134
 
     .line 153
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->kOF:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->lnV:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;->a(Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;)Landroid/widget/EditText;
 
@@ -71,11 +71,11 @@
     if-eqz v0, :cond_0
 
     .line 155
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->kOF:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->lnV:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
 
-    const v1, 0x7f0b0505
+    const v1, 0x7f080250
 
-    invoke-static {v0, v1, v7}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
+    invoke-static {v0, v1, v7}, Lcom/tencent/mm/ui/base/g;->f(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
     .line 187
     :goto_0
@@ -83,52 +83,52 @@
 
     .line 159
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->kOF:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->lnV:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;->age()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;->aiI()V
 
     .line 161
-    new-instance v0, Lcom/tencent/mm/d/a/fm;
+    new-instance v0, Lcom/tencent/mm/e/a/fs;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/fm;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/fs;-><init>()V
 
     .line 162
-    iget-object v1, v0, Lcom/tencent/mm/d/a/fm;->aAm:Lcom/tencent/mm/d/a/fm$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/fs;->ams:Lcom/tencent/mm/e/a/fs$a;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->kOF:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->lnV:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
 
-    iput-object v2, v1, Lcom/tencent/mm/d/a/fm$a;->context:Landroid/content/Context;
+    iput-object v2, v1, Lcom/tencent/mm/e/a/fs$a;->context:Landroid/content/Context;
 
     .line 163
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 164
-    iget-object v0, v0, Lcom/tencent/mm/d/a/fm;->aAn:Lcom/tencent/mm/d/a/fm$b;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/fs;->amt:Lcom/tencent/mm/e/a/fs$b;
 
-    iget-object v5, v0, Lcom/tencent/mm/d/a/fm$b;->aAo:Ljava/lang/String;
+    iget-object v5, v0, Lcom/tencent/mm/e/a/fs$b;->amu:Ljava/lang/String;
 
     .line 166
-    new-instance v0, Lcom/tencent/mm/d/a/fn;
+    new-instance v0, Lcom/tencent/mm/e/a/ft;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/fn;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/ft;-><init>()V
 
     .line 167
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 168
-    iget-object v0, v0, Lcom/tencent/mm/d/a/fn;->aAp:Lcom/tencent/mm/d/a/fn$a;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/ft;->amv:Lcom/tencent/mm/e/a/ft$a;
 
-    iget-object v6, v0, Lcom/tencent/mm/d/a/fn$a;->aAq:Ljava/lang/String;
+    iget-object v6, v0, Lcom/tencent/mm/e/a/ft$a;->amw:Ljava/lang/String;
 
     .line 172
     const/4 v2, 0x2
 
     .line 173
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->kOF:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->lnV:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;->b(Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;)Z
 
@@ -143,7 +143,7 @@
     :cond_1
     new-instance v0, Lcom/tencent/mm/modelfriend/v;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->kOF:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->lnV:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;->c(Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;)Ljava/lang/String;
 
@@ -154,24 +154,26 @@
     invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/modelfriend/v;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 179
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
     .line 180
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->kOF:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->lnV:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->kOF:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->lnV:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->kOF:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->lnV:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
 
     invoke-virtual {v3, v7}, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;->getString(I)Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->kOF:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$2;->lnV:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
 
-    const v4, 0x7f0b0506
+    const v4, 0x7f080244
 
     invoke-virtual {v3, v4}, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;->getString(I)Ljava/lang/String;
 

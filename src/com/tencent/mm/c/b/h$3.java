@@ -2,8 +2,8 @@ package com.tencent.mm.c.b;
 
 import com.tencent.mm.compatible.util.a;
 import com.tencent.mm.modelvoice.q;
-import com.tencent.mm.r.g.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.g.a;
 
 final class h$3
   implements g.a
@@ -12,11 +12,11 @@ final class h$3
   
   public final void onError()
   {
-    ars.arc.oV();
-    u.e("!44@/B4Tb64lLpJjyqE6YDnApwOwHOAz5sGPSEN1mjztZrA=", "Record Failed file:" + ars.mFileName);
-    q.bg(ars.mFileName);
-    if (ars.arp != null) {
-      ars.arp.onError();
+    acL.acv.nn();
+    v.e("MicroMsg.SceneVoice.Recorder", "Record Failed file:" + acL.mFileName);
+    q.kP(acL.mFileName);
+    if (acL.acI != null) {
+      acL.acI.onError();
     }
   }
 }

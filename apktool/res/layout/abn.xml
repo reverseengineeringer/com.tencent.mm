@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/bar" android:background="@color/lf" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.ui.KeyboardLinearLayout android:id="@id/ae1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.tencent.mm.plugin.sns.ui.WrapScollview android:id="@id/b_y" android:background="@color/lf" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/b_z" android:background="@color/lf" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.tencent.mm.plugin.sns.ui.RangeWidget android:id="@id/ce6" android:background="@color/ow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hb" />
+                <LinearLayout android:orientation="horizontal" android:background="@color/ow" android:paddingLeft="@dimen/hb" android:paddingRight="@dimen/hb" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.tencent.mm.plugin.sns.ui.SnsEditText android:gravity="top" android:id="@id/b5e" android:background="@null" android:paddingTop="@dimen/j8" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/cu_" android:maxLines="4" android:minLines="4" android:singleLine="false" android:layout_weight="1.0" android:inputType="textCapSentences|textMultiLine" style="@style/MMEditText" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/bas" android:background="@color/ow" android:paddingLeft="@dimen/hb" android:paddingTop="@dimen/hb" android:paddingRight="@dimen/hb" android:paddingBottom="@dimen/hr" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/i6" />
+                <com.tencent.mm.plugin.sns.ui.LocationWidget android:id="@id/cct" android:background="@color/ow" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.tencent.mm.plugin.sns.ui.RangeWidget android:id="@id/ce7" android:background="@color/ow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hf" />
+                <com.tencent.mm.plugin.sns.ui.AtContactWidget android:id="@id/ce8" android:background="@drawable/dl" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.tencent.mm.plugin.sns.ui.SnsUploadConfigView android:id="@id/ce9" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </com.tencent.mm.plugin.sns.ui.WrapScollview>
+    </com.tencent.mm.ui.KeyboardLinearLayout>
+    <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.tencent.mm.plugin.sns.ui.SnsUploadSayFooter android:gravity="bottom" android:layout_gravity="bottom" android:id="@id/ba2" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

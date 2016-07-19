@@ -5,9 +5,9 @@ final class DragSortListView$1
 {
   DragSortListView$1(DragSortListView paramDragSortListView) {}
   
-  public final float G(float paramFloat)
+  public final float F(float paramFloat)
   {
-    return DragSortListView.a(lEn) * paramFloat;
+    return DragSortListView.a(mfd) * paramFloat;
   }
 }
 

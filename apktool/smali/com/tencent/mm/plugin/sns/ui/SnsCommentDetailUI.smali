@@ -3,9 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/plugin/sns/d/b$b;
+.implements Lcom/tencent/mm/plugin/sns/e/b$b;
 .implements Lcom/tencent/mm/pluginsdk/i$o$e$a;
-.implements Lcom/tencent/mm/r/d;
+.implements Lcom/tencent/mm/t/d;
 
 
 # annotations
@@ -19,143 +19,154 @@
 
 
 # static fields
-.field public static hcE:I
+.field public static hrq:I
 
 
 # instance fields
-.field private cuh:I
+.field private auk:Ljava/lang/String;
 
-.field private dRJ:Lcom/tencent/mm/ui/tools/m;
+.field private baY:Ljava/lang/String;
 
-.field private dSq:Lcom/tencent/mm/sdk/c/c;
+.field private cTv:I
 
-.field private dUv:Landroid/text/ClipboardManager;
+.field private cpL:I
 
-.field private eLV:I
+.field private dTR:Lcom/tencent/mm/ui/tools/m;
 
-.field private eNy:Ljava/lang/String;
+.field private dUy:Lcom/tencent/mm/sdk/c/c;
 
-.field private eoM:Landroid/view/View$OnClickListener;
+.field private dWD:Landroid/text/ClipboardManager;
 
-.field private gLC:Landroid/widget/LinearLayout;
+.field private etK:Landroid/view/View$OnClickListener;
 
-.field private gPn:Ljava/lang/String;
+.field private gTh:Landroid/widget/LinearLayout;
 
-.field private gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+.field private hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-.field private gWG:Lcom/tencent/mm/plugin/sns/ui/af;
+.field private hke:Lcom/tencent/mm/plugin/sns/ui/aj;
 
-.field private gWM:Lcom/tencent/mm/plugin/sns/ui/a;
+.field private hkk:Lcom/tencent/mm/plugin/sns/ui/b;
 
-.field private gWN:Lcom/tencent/mm/plugin/sns/e/b;
+.field private hkl:Lcom/tencent/mm/plugin/sns/f/b;
 
-.field private gWP:Lcom/tencent/mm/ui/base/p;
+.field private hkn:Lcom/tencent/mm/ui/base/p;
 
-.field private gYg:Landroid/view/View$OnTouchListener;
+.field private hls:Landroid/view/View$OnTouchListener;
 
-.field private hbq:Lcom/tencent/mm/plugin/sight/decode/ui/c;
+.field private hoO:Lcom/tencent/mm/plugin/sight/decode/ui/c;
 
-.field private hcA:Lcom/tencent/mm/plugin/sns/ui/au;
+.field private hqM:J
 
-.field private hcB:Z
+.field private hqN:J
 
-.field private hcC:I
+.field private hqO:Landroid/view/View;
 
-.field private hcD:I
+.field private hqP:Landroid/widget/TextView;
 
-.field private hcF:Lcom/tencent/mm/plugin/sns/a/a/f;
+.field private hqQ:Landroid/widget/LinearLayout;
 
-.field private hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+.field private hqR:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
 
-.field private hcH:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+.field private hqS:Landroid/widget/ListView;
 
-.field private hcI:Z
+.field private hqT:Landroid/view/View;
 
-.field private hcJ:Landroid/app/Dialog;
+.field private hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
-.field private hcK:Lcom/tencent/mm/plugin/sns/d/af;
+.field private hqV:Landroid/view/animation/ScaleAnimation;
 
-.field private hcL:Lcom/tencent/mm/sdk/c/c;
+.field private hqW:Landroid/view/animation/ScaleAnimation;
 
-.field private hcM:Lcom/tencent/mm/sdk/c/c;
+.field hqX:Landroid/widget/LinearLayout;
 
-.field private hcN:Lcom/tencent/mm/sdk/c/c;
+.field hqY:Landroid/widget/LinearLayout;
 
-.field private hcO:Lcom/tencent/mm/sdk/c/c;
+.field private hqZ:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList",
+            "<",
+            "Lcom/tencent/mm/protocal/b/aqk;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private hcP:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;
+.field private hrA:Lcom/tencent/mm/sdk/c/c;
 
-.field private hcQ:Landroid/view/View$OnClickListener;
+.field private hrB:Lcom/tencent/mm/sdk/c/c;
 
-.field private hcR:Landroid/view/View$OnClickListener;
+.field private hrC:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;
 
-.field private hcS:Lcom/tencent/mm/sdk/c/c;
+.field private hrD:Landroid/view/View$OnClickListener;
 
-.field private hcT:Lcom/tencent/mm/sdk/c/c;
+.field private hrE:Landroid/view/View$OnClickListener;
 
-.field hcU:Z
+.field private hrF:Lcom/tencent/mm/sdk/c/c;
 
-.field private hcV:Landroid/widget/LinearLayout;
+.field private hrG:Lcom/tencent/mm/sdk/c/c;
 
-.field private hcW:Z
+.field hrH:Z
 
-.field hcX:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+.field private hrI:Landroid/widget/LinearLayout;
 
-.field public hcY:Lcom/tencent/mm/model/z$c$a;
+.field private hrJ:Z
 
-.field private hcZ:Lcom/tencent/mm/plugin/sns/ui/at;
+.field hrK:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
 
-.field private hca:J
+.field public hrL:Lcom/tencent/mm/model/z$c$a;
 
-.field private hcb:J
+.field private hrM:Lcom/tencent/mm/plugin/sns/ui/az;
 
-.field private hcc:Landroid/view/View;
+.field private hra:I
 
-.field private hcd:Landroid/widget/TextView;
+.field private hrb:Z
 
-.field private hce:Landroid/widget/LinearLayout;
+.field private hrc:Lcom/tencent/mm/plugin/sns/ui/am;
 
-.field private hcf:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
+.field private hrd:Ljava/lang/String;
 
-.field private hcg:Landroid/widget/ListView;
+.field private hre:Lcom/tencent/mm/storage/q;
 
-.field private hch:Landroid/view/View;
+.field private hrf:I
 
-.field private hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+.field private hrg:Z
 
-.field private hcj:Landroid/view/animation/ScaleAnimation;
+.field private hrh:Landroid/widget/ImageView;
 
-.field private hck:Landroid/view/animation/ScaleAnimation;
+.field private hri:Lcom/tencent/mm/plugin/sns/ui/h;
 
-.field hcl:Landroid/widget/LinearLayout;
+.field private hrj:Ljava/lang/String;
 
-.field hcm:Landroid/widget/LinearLayout;
+.field private hrk:Z
 
-.field private hcn:Ljava/util/LinkedList;
+.field private hrl:J
 
-.field private hco:I
+.field private hrm:Lcom/tencent/mm/plugin/sns/ui/ba;
 
-.field private hcp:Z
+.field private hrn:Z
 
-.field private hcq:Lcom/tencent/mm/plugin/sns/ui/ai;
+.field private hro:I
 
-.field private hcr:Ljava/lang/String;
+.field private hrp:I
 
-.field private hcs:Lcom/tencent/mm/storage/q;
+.field public hrr:I
 
-.field private hct:I
+.field private hrs:Lcom/tencent/mm/plugin/sns/a/a/f;
 
-.field private hcu:Z
+.field private hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-.field private hcv:Landroid/widget/ImageView;
+.field private hru:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
-.field private hcw:Lcom/tencent/mm/plugin/sns/ui/h;
+.field private hrv:Z
 
-.field private hcx:Ljava/lang/String;
+.field private hrw:Landroid/app/Dialog;
 
-.field private hcy:Z
+.field private hrx:Lcom/tencent/mm/plugin/sns/e/ae;
 
-.field private hcz:J
+.field private hry:Lcom/tencent/mm/sdk/c/c;
+
+.field private hrz:Lcom/tencent/mm/sdk/c/c;
 
 .field private mScreenHeight:I
 
@@ -167,195 +178,200 @@
     .locals 1
 
     .prologue
-    .line 168
+    .line 170
     const/16 v0, 0x22
 
-    sput v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcE:I
+    sput v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrq:I
 
     return-void
 .end method
 
 .method public constructor <init>()V
-    .locals 5
+    .locals 6
 
     .prologue
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
     const/4 v2, 0x0
 
     const/4 v1, 0x0
 
-    .line 103
+    .line 105
     invoke-direct {p0}, Lcom/tencent/mm/ui/MMActivity;-><init>()V
 
-    .line 111
-    iput-wide v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hca:J
+    .line 113
+    iput-wide v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqM:J
 
-    .line 112
-    iput-wide v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcb:J
+    .line 114
+    iput-wide v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqN:J
 
-    .line 129
+    .line 131
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hco:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hra:I
 
-    .line 130
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcp:Z
+    .line 132
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrb:Z
 
-    .line 141
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->aVI()Landroid/view/View$OnTouchListener;
+    .line 143
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->baW()Landroid/view/View$OnTouchListener;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gYg:Landroid/view/View$OnTouchListener;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hls:Landroid/view/View$OnTouchListener;
 
-    .line 142
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWP:Lcom/tencent/mm/ui/base/p;
-
-    .line 143
-    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cuh:I
+    .line 144
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkn:Lcom/tencent/mm/ui/base/p;
 
     .line 145
-    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hct:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cpL:I
 
-    .line 146
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcu:Z
+    .line 147
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrf:I
 
-    .line 154
-    const-string/jumbo v0, ""
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcx:Ljava/lang/String;
+    .line 148
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrg:Z
 
     .line 156
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcy:Z
+    const-string/jumbo v0, ""
 
-    .line 157
-    iput-wide v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcz:J
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrj:Ljava/lang/String;
 
-    .line 161
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcB:Z
+    .line 158
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrk:Z
 
-    .line 167
+    .line 159
+    iput-wide v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrl:J
+
+    .line 163
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrn:Z
+
+    .line 169
     const/16 v0, 0x67
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcD:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrp:I
 
-    .line 182
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcI:Z
+    .line 172
+    const/16 v0, 0xd2
 
-    .line 183
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcJ:Landroid/app/Dialog;
-
-    .line 185
-    new-instance v0, Lcom/tencent/mm/plugin/sns/d/af;
-
-    invoke-direct {v0}, Lcom/tencent/mm/plugin/sns/d/af;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcK:Lcom/tencent/mm/plugin/sns/d/af;
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrr:I
 
     .line 186
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrv:Z
+
+    .line 187
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrw:Landroid/app/Dialog;
+
+    .line 189
+    new-instance v0, Lcom/tencent/mm/plugin/sns/e/ae;
+
+    invoke-direct {v0}, Lcom/tencent/mm/plugin/sns/e/ae;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrx:Lcom/tencent/mm/plugin/sns/e/ae;
+
+    .line 190
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$1;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcL:Lcom/tencent/mm/sdk/c/c;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hry:Lcom/tencent/mm/sdk/c/c;
 
-    .line 204
+    .line 208
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$12;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$12;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcM:Lcom/tencent/mm/sdk/c/c;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrz:Lcom/tencent/mm/sdk/c/c;
 
-    .line 220
+    .line 224
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$23;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$23;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcN:Lcom/tencent/mm/sdk/c/c;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrA:Lcom/tencent/mm/sdk/c/c;
 
-    .line 238
+    .line 242
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$30;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$30;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcO:Lcom/tencent/mm/sdk/c/c;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrB:Lcom/tencent/mm/sdk/c/c;
 
-    .line 353
+    .line 357
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcP:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrC:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;
 
-    .line 360
+    .line 364
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$31;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$31;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcQ:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrD:Landroid/view/View$OnClickListener;
 
-    .line 388
+    .line 392
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$32;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$32;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcR:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrE:Landroid/view/View$OnClickListener;
 
-    .line 573
+    .line 577
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$35;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$35;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eoM:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->etK:Landroid/view/View$OnClickListener;
 
-    .line 805
+    .line 826
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$5;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$5;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcS:Lcom/tencent/mm/sdk/c/c;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrF:Lcom/tencent/mm/sdk/c/c;
 
-    .line 812
+    .line 833
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$6;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$6;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dSq:Lcom/tencent/mm/sdk/c/c;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dUy:Lcom/tencent/mm/sdk/c/c;
 
-    .line 916
+    .line 941
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$7;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$7;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcT:Lcom/tencent/mm/sdk/c/c;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrG:Lcom/tencent/mm/sdk/c/c;
 
-    .line 1417
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcU:Z
+    .line 1442
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrH:Z
 
-    .line 1418
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcV:Landroid/widget/LinearLayout;
+    .line 1443
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrI:Landroid/widget/LinearLayout;
 
-    .line 1437
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcW:Z
+    .line 1462
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrJ:Z
 
-    .line 1438
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcX:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+    .line 1463
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrK:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
 
-    .line 1439
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hbq:Lcom/tencent/mm/plugin/sight/decode/ui/c;
+    .line 1464
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hoO:Lcom/tencent/mm/plugin/sight/decode/ui/c;
 
-    .line 1447
+    .line 1472
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$19;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$19;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcY:Lcom/tencent/mm/model/z$c$a;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrL:Lcom/tencent/mm/model/z$c$a;
 
-    .line 1461
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcZ:Lcom/tencent/mm/plugin/sns/ui/at;
+    .line 1486
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrM:Lcom/tencent/mm/plugin/sns/ui/az;
 
-    .line 2639
+    .line 2793
     return-void
 .end method
 
@@ -363,8 +379,8 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gYg:Landroid/view/View$OnTouchListener;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hls:Landroid/view/View$OnTouchListener;
 
     return-object v0
 .end method
@@ -373,8 +389,8 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcQ:Landroid/view/View$OnClickListener;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrD:Landroid/view/View$OnClickListener;
 
     return-object v0
 .end method
@@ -383,8 +399,8 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcs:Lcom/tencent/mm/storage/q;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hre:Lcom/tencent/mm/storage/q;
 
     return-object v0
 .end method
@@ -393,8 +409,8 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcw:Lcom/tencent/mm/plugin/sns/ui/h;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hri:Lcom/tencent/mm/plugin/sns/ui/h;
 
     return-object v0
 .end method
@@ -403,8 +419,8 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
     return-object v0
 .end method
@@ -413,8 +429,8 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dRJ:Lcom/tencent/mm/ui/tools/m;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dTR:Lcom/tencent/mm/ui/tools/m;
 
     return-object v0
 .end method
@@ -423,8 +439,8 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eNy:Ljava/lang/String;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->baY:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -433,8 +449,8 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eoM:Landroid/view/View$OnClickListener;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->etK:Landroid/view/View$OnClickListener;
 
     return-object v0
 .end method
@@ -443,8 +459,8 @@
     .locals 0
 
     .prologue
-    .line 103
-    iput p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hco:I
+    .line 105
+    iput p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hra:I
 
     return p1
 .end method
@@ -453,8 +469,8 @@
     .locals 0
 
     .prologue
-    .line 103
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcJ:Landroid/app/Dialog;
+    .line 105
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrw:Landroid/app/Dialog;
 
     return-object p1
 .end method
@@ -463,13 +479,13 @@
     .locals 0
 
     .prologue
-    .line 103
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWP:Lcom/tencent/mm/ui/base/p;
+    .line 105
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkn:Lcom/tencent/mm/ui/base/p;
 
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;IILcom/tencent/mm/d/a/lw;)V
+.method static synthetic a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;IILcom/tencent/mm/e/a/ex;)V
     .locals 5
 
     .prologue
@@ -477,30 +493,30 @@
 
     const/4 v4, 0x1
 
-    .line 103
+    .line 105
     const/4 v0, -0x1
 
     if-ne p2, v0, :cond_1
 
-    invoke-direct {p0, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fb(Z)Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-direct {p0, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fk(Z)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/k;->azR()Lcom/tencent/mm/protocal/b/atp;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/k;->aCD()Lcom/tencent/mm/protocal/b/auf;
 
     move-result-object v0
 
-    iget-object v1, v0, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    iget-object v1, v0, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget v1, v1, Lcom/tencent/mm/protocal/b/iv;->jhv:I
+    iget v1, v1, Lcom/tencent/mm/protocal/b/je;->jFu:I
 
     if-ne v1, v4, :cond_0
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/iv;->jhw:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/je;->jFv:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -515,13 +531,13 @@
     add-int/lit8 p1, p1, 0x1
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcX:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrK:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcX:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrK:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
 
-    sget-object v1, Lcom/tencent/mm/plugin/sns/ui/ai;->hgk:[I
+    sget-object v1, Lcom/tencent/mm/plugin/sns/ui/am;->hva:[I
 
     aget v1, v1, p1
 
@@ -539,33 +555,33 @@
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/TagImageView;->getLocationInWindow([I)V
 
-    iget-object v2, p3, Lcom/tencent/mm/d/a/lw;->aIg:Lcom/tencent/mm/d/a/lw$b;
+    iget-object v2, p3, Lcom/tencent/mm/e/a/ex;->alx:Lcom/tencent/mm/e/a/ex$b;
 
     aget v3, v1, v3
 
-    iput v3, v2, Lcom/tencent/mm/d/a/lw$b;->atj:I
+    iput v3, v2, Lcom/tencent/mm/e/a/ex$b;->aeT:I
 
-    iget-object v2, p3, Lcom/tencent/mm/d/a/lw;->aIg:Lcom/tencent/mm/d/a/lw$b;
+    iget-object v2, p3, Lcom/tencent/mm/e/a/ex;->alx:Lcom/tencent/mm/e/a/ex$b;
 
     aget v1, v1, v4
 
-    iput v1, v2, Lcom/tencent/mm/d/a/lw$b;->atk:I
+    iput v1, v2, Lcom/tencent/mm/e/a/ex$b;->aeU:I
 
-    iget-object v1, p3, Lcom/tencent/mm/d/a/lw;->aIg:Lcom/tencent/mm/d/a/lw$b;
+    iget-object v1, p3, Lcom/tencent/mm/e/a/ex;->alx:Lcom/tencent/mm/e/a/ex$b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/TagImageView;->getWidth()I
 
     move-result v2
 
-    iput v2, v1, Lcom/tencent/mm/d/a/lw$b;->atl:I
+    iput v2, v1, Lcom/tencent/mm/e/a/ex$b;->aeV:I
 
-    iget-object v1, p3, Lcom/tencent/mm/d/a/lw;->aIg:Lcom/tencent/mm/d/a/lw$b;
+    iget-object v1, p3, Lcom/tencent/mm/e/a/ex;->alx:Lcom/tencent/mm/e/a/ex$b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/TagImageView;->getHeight()I
 
     move-result v0
 
-    iput v0, v1, Lcom/tencent/mm/d/a/lw$b;->atm:I
+    iput v0, v1, Lcom/tencent/mm/e/a/ex$b;->aeW:I
 
     :cond_1
     return-void
@@ -585,7 +601,7 @@
 
     const/4 v2, 0x0
 
-    .line 103
+    .line 105
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -600,7 +616,7 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/j;->bOa:Ljava/lang/Object;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/j;->tag:Ljava/lang/Object;
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$a;
 
@@ -609,24 +625,24 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$a;->hdu:Ljava/lang/Object;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$a;->hsh:Ljava/lang/Object;
 
-    instance-of v0, v0, Lcom/tencent/mm/protocal/b/apz;
+    instance-of v0, v0, Lcom/tencent/mm/protocal/b/aqk;
 
     if-eqz v0, :cond_2
 
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcp:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrb:Z
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fa(Z)V
+    invoke-direct {p0, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fj(Z)V
 
     :cond_0
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$a;->hdu:Ljava/lang/Object;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$a;->hsh:Ljava/lang/Object;
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/apz;
+    check-cast v0, Lcom/tencent/mm/protocal/b/aqk;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$a;->cqK:Landroid/widget/TextView;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$a;->clX:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -636,17 +652,17 @@
 
     move-result-object v1
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v5, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v5, v5, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v5, v5, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     new-array v6, v6, [Ljava/lang/String;
 
-    iget-object v7, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v7, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v7, v7, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v7, v7, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v8, 0x7f0b0207
+    const v8, 0x7f080399
 
     invoke-virtual {v7, v8}, Landroid/support/v7/app/ActionBarActivity;->getString(I)Ljava/lang/String;
 
@@ -654,11 +670,11 @@
 
     aput-object v7, v6, v2
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v2, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v7, 0x7f0b0dea
+    const v7, 0x7f0800a4
 
     invoke-virtual {v2, v7}, Landroid/support/v7/app/ActionBarActivity;->getString(I)Ljava/lang/String;
 
@@ -666,17 +682,17 @@
 
     aput-object v2, v6, v3
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v2, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v3, 0x7f0b0de4
+    const v3, 0x7f080099
 
     invoke-virtual {v2, v3}, Landroid/support/v7/app/ActionBarActivity;->getString(I)Ljava/lang/String;
 
     new-instance v2, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$34;
 
-    invoke-direct {v2, p0, v1, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$34;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Ljava/lang/CharSequence;Lcom/tencent/mm/protocal/b/apz;)V
+    invoke-direct {v2, p0, v1, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$34;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Ljava/lang/CharSequence;Lcom/tencent/mm/protocal/b/aqk;)V
 
     invoke-static {v5, v4, v6, v2}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/String;Lcom/tencent/mm/ui/base/g$c;)Landroid/app/Dialog;
 
@@ -685,37 +701,37 @@
     return-void
 
     :cond_2
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$a;->hdu:Ljava/lang/Object;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$a;->hsh:Ljava/lang/Object;
 
     instance-of v0, v0, [Ljava/lang/Object;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$a;->hdu:Ljava/lang/Object;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$a;->hsh:Ljava/lang/Object;
 
     check-cast v0, [Ljava/lang/Object;
 
     check-cast v0, [Ljava/lang/Object;
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     aget-object v1, v0, v6
 
     check-cast v1, Ljava/lang/String;
 
-    iget-object v6, v5, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->gNf:Lcom/tencent/mm/protocal/b/apz;
+    iget-object v6, v5, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->gUR:Lcom/tencent/mm/protocal/b/aqk;
 
     if-eqz v6, :cond_3
 
-    iget-object v6, v5, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->gNf:Lcom/tencent/mm/protocal/b/apz;
+    iget-object v6, v5, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->gUR:Lcom/tencent/mm/protocal/b/aqk;
 
-    iget-object v6, v6, Lcom/tencent/mm/protocal/b/apz;->iYA:Ljava/lang/String;
+    iget-object v6, v6, Lcom/tencent/mm/protocal/b/aqk;->jwf:Ljava/lang/String;
 
     if-eqz v6, :cond_3
 
-    iget-object v6, v5, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->gNf:Lcom/tencent/mm/protocal/b/apz;
+    iget-object v6, v5, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->gUR:Lcom/tencent/mm/protocal/b/aqk;
 
-    iget-object v6, v6, Lcom/tencent/mm/protocal/b/apz;->iYA:Ljava/lang/String;
+    iget-object v6, v6, Lcom/tencent/mm/protocal/b/aqk;->jwf:Ljava/lang/String;
 
     invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -724,7 +740,7 @@
     if-nez v1, :cond_5
 
     :cond_3
-    invoke-virtual {v5}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->aBN()Z
+    invoke-virtual {v5}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->aEJ()Z
 
     move-result v1
 
@@ -735,13 +751,13 @@
     :goto_2
     if-eqz v1, :cond_6
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v5, 0x7f0b1633
+    const v5, 0x7f0812c9
 
     invoke-virtual {p0, v5}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getString(I)Ljava/lang/String;
 
@@ -763,13 +779,13 @@
 
     aget-object v1, v0, v3
 
-    check-cast v1, Lcom/tencent/mm/protocal/b/apz;
+    check-cast v1, Lcom/tencent/mm/protocal/b/aqk;
 
-    invoke-virtual {v4, v5, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->a(Ljava/lang/String;Lcom/tencent/mm/protocal/b/apz;)V
+    invoke-virtual {v4, v5, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->a(Ljava/lang/String;Lcom/tencent/mm/protocal/b/aqk;)V
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    invoke-virtual {v1, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->fc(Z)V
+    invoke-virtual {v1, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->fl(Z)V
 
     aget-object v0, v0, v2
 
@@ -779,17 +795,17 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcr:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/h/f;->vo(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/h/k;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/d/ai;->l(Lcom/tencent/mm/plugin/sns/h/k;)Lcom/tencent/mm/protocal/b/aqi;
+    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/i/f;->wA(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/tencent/mm/protocal/b/aqi;->jJU:Ljava/util/LinkedList;
+    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/e/ah;->l(Lcom/tencent/mm/plugin/sns/i/k;)Lcom/tencent/mm/protocal/b/aqt;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/aqt;->kir:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
 
@@ -799,7 +815,7 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
     invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->getCount()I
 
@@ -807,7 +823,7 @@
 
     if-le v0, v1, :cond_4
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->getCount()I
 
@@ -816,19 +832,19 @@
     add-int/lit8 v0, v0, -0x1
 
     :cond_4
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcP:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrC:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;
 
-    iput v0, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;->hdy:I
+    iput v0, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;->hsl:I
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcP:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrC:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;
 
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result v1
 
-    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;->gzr:I
+    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;->cVc:I
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcP:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrC:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;->run()V
 
@@ -846,7 +862,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v5, 0x7f0b1633
+    const v5, 0x7f0812c9
 
     invoke-virtual {p0, v5}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getString(I)Ljava/lang/String;
 
@@ -868,7 +884,7 @@
 
     aput-object v3, v1, v2
 
-    const v2, 0x7f0b0de4
+    const v2, 0x7f080099
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getString(I)Ljava/lang/String;
 
@@ -890,16 +906,16 @@
     .locals 1
 
     .prologue
-    .line 103
+    .line 105
     const/4 v0, 0x4
 
-    invoke-static {p1, v0}, Lcom/tencent/mm/plugin/sns/d/an;->aj(Ljava/lang/String;I)V
+    invoke-static {p1, v0}, Lcom/tencent/mm/plugin/sns/e/am;->ak(Ljava/lang/String;I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->notifyDataSetChanged()V
 
@@ -907,11 +923,11 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Ljava/lang/String;Lcom/tencent/mm/protocal/b/apz;)V
-    .locals 5
+.method static synthetic a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Ljava/lang/String;Lcom/tencent/mm/protocal/b/aqk;)V
+    .locals 6
 
     .prologue
-    .line 103
+    .line 105
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -926,9 +942,9 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/h/s;->vJ(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/i/s;->wW(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -939,15 +955,15 @@
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/h/f;->vn(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/i/f;->wz(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v1
 
     const/16 v0, 0x20
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sns/h/k;->lN(I)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
 
     move-result v0
 
@@ -958,35 +974,35 @@
     :goto_1
     const/4 v2, 0x1
 
-    invoke-static {v1, v0, p1, p2, v2}, Lcom/tencent/mm/plugin/sns/d/al$a;->a(Lcom/tencent/mm/plugin/sns/h/k;ILjava/lang/String;Lcom/tencent/mm/protocal/b/apz;Z)Lcom/tencent/mm/protocal/b/apz;
+    invoke-static {v1, v0, p1, p2, v2}, Lcom/tencent/mm/plugin/sns/e/ak$a;->a(Lcom/tencent/mm/plugin/sns/i/k;ILjava/lang/String;Lcom/tencent/mm/protocal/b/aqk;Z)Lcom/tencent/mm/protocal/b/aqk;
 
     move-result-object v0
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/d/ai;->k(Lcom/tencent/mm/plugin/sns/h/k;)Lcom/tencent/mm/protocal/b/aqi;
+    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/e/ah;->k(Lcom/tencent/mm/plugin/sns/i/k;)Lcom/tencent/mm/protocal/b/aqt;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
-    iget-object v2, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->hdq:Ljava/util/LinkedList;
+    iget-object v2, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->hsd:Ljava/util/LinkedList;
 
     invoke-virtual {v2, v0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
     invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->notifyDataSetChanged()V
 
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
     new-instance v2, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$1;
 
     invoke-direct {v2, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$1;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;)V
 
-    const-wide/16 v3, 0x3c
+    const-wide/16 v4, 0x3c
 
-    invoke-virtual {v0, v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/aa;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/ac;->postDelayed(Ljava/lang/Runnable;J)Z
 
     goto :goto_0
 
@@ -1004,14 +1020,14 @@
 
     const/4 v6, 0x0
 
-    .line 103
-    invoke-direct {p0, v6}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fb(Z)Lcom/tencent/mm/plugin/sns/h/k;
+    .line 105
+    invoke-direct {p0, v6}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fk(Z)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/k;->aAf()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/k;->aCE()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1026,28 +1042,28 @@
     return-void
 
     :cond_1
-    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcH:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hru:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->setVisibility(I)V
 
     :goto_1
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/aj;
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/an;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
     const/4 v3, 0x2
 
-    invoke-direct {v0, v1, v2, v6, v3}, Lcom/tencent/mm/plugin/sns/ui/aj;-><init>(Ljava/lang/String;ZZI)V
+    invoke-direct {v0, v1, v2, v6, v3}, Lcom/tencent/mm/plugin/sns/ui/an;-><init>(Ljava/lang/String;ZZI)V
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcd:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqP:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
@@ -1056,25 +1072,25 @@
     :cond_2
     const/4 v0, 0x4
 
-    invoke-static {p1, v0}, Lcom/tencent/mm/plugin/sns/d/an;->aj(Ljava/lang/String;I)V
+    invoke-static {p1, v0}, Lcom/tencent/mm/plugin/sns/e/am;->ak(Ljava/lang/String;I)V
 
-    invoke-static {p1}, Lcom/tencent/mm/plugin/sns/d/an;->uO(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/d/an$b;
+    invoke-static {p1}, Lcom/tencent/mm/plugin/sns/e/am;->vU(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/e/am$b;
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcH:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hru:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
     invoke-virtual {v0, v6}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcH:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hru:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
-    iget-boolean v5, v1, Lcom/tencent/mm/plugin/sns/d/an$b;->gPP:Z
+    iget-boolean v5, v1, Lcom/tencent/mm/plugin/sns/e/am$b;->gXN:Z
 
     move-object v3, p2
 
     move-object v4, p3
 
-    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->a(Lcom/tencent/mm/plugin/sns/d/an$b;ILjava/lang/String;Ljava/lang/String;Z)V
+    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->a(Lcom/tencent/mm/plugin/sns/e/am$b;ILjava/lang/String;Ljava/lang/String;Z)V
 
     goto :goto_1
 .end method
@@ -1083,22 +1099,22 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcp:Z
+    .line 105
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrb:Z
 
     return v0
 .end method
 
-.method private aBI()V
+.method private aEE()V
     .locals 2
 
     .prologue
-    .line 2334
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hch:Landroid/view/View;
+    .line 2488
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqT:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hch:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqT:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
@@ -1108,21 +1124,21 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 2357
+    .line 2511
     :cond_0
     :goto_0
     return-void
 
-    .line 2337
+    .line 2491
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hch:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqT:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hck:Landroid/view/animation/ScaleAnimation;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqW:Landroid/view/animation/ScaleAnimation;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 2338
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hck:Landroid/view/animation/ScaleAnimation;
+    .line 2492
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqW:Landroid/view/animation/ScaleAnimation;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$28;
 
@@ -1133,50 +1149,50 @@
     goto :goto_0
 .end method
 
-.method private aBJ()V
+.method private aEF()V
     .locals 2
 
     .prologue
-    .line 2420
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcv:Landroid/widget/ImageView;
+    .line 2574
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrh:Landroid/widget/ImageView;
 
     if-nez v0, :cond_0
 
-    .line 2436
+    .line 2590
     :goto_0
     return-void
 
-    .line 2423
+    .line 2577
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcv:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrh:Landroid/widget/ImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setPressed(Z)V
 
-    .line 2425
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcx:Ljava/lang/String;
+    .line 2579
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrj:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/au;->sQ(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/ba;->us(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2429
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcv:Landroid/widget/ImageView;
+    .line 2583
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrh:Landroid/widget/ImageView;
 
-    const v1, 0x7f040027
+    const v1, 0x7f02054d
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_0
 
-    .line 2433
+    .line 2587
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcv:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrh:Landroid/widget/ImageView;
 
-    const v1, 0x7f040024
+    const v1, 0x7f02054f
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -1189,12 +1205,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 103
-    invoke-direct {p0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fb(Z)Lcom/tencent/mm/plugin/sns/h/k;
+    .line 105
+    invoke-direct {p0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fk(Z)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/k;->aAf()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/k;->aCE()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1204,15 +1220,15 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcH:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hru:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcH:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hru:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->mi(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->nA(I)V
 
     :cond_0
     return-void
@@ -1222,10 +1238,10 @@
     .locals 1
 
     .prologue
-    .line 103
+    .line 105
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcp:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrb:Z
 
     return v0
 .end method
@@ -1234,8 +1250,8 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     return-object v0
 .end method
@@ -1244,16 +1260,16 @@
     .locals 1
 
     .prologue
-    .line 103
+    .line 105
     const/4 v0, 0x4
 
-    invoke-static {p1, v0}, Lcom/tencent/mm/plugin/sns/d/an;->aj(Ljava/lang/String;I)V
+    invoke-static {p1, v0}, Lcom/tencent/mm/plugin/sns/e/am;->ak(Ljava/lang/String;I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->notifyDataSetChanged()V
 
@@ -1261,72 +1277,26 @@
     return-void
 .end method
 
-.method static synthetic d(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Landroid/widget/ListView;
-    .locals 1
-
-    .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcg:Landroid/widget/ListView;
-
-    return-object v0
-.end method
-
-.method static synthetic d(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Ljava/lang/String;)V
+.method private static c(Ljava/util/LinkedList;Ljava/util/LinkedList;)Z
     .locals 5
-
-    .prologue
-    const/4 v4, 0x0
-
-    .line 103
-    invoke-direct {p0, v4}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fb(Z)Lcom/tencent/mm/plugin/sns/h/k;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/k;->aAf()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x4
-
-    invoke-static {p1, v0}, Lcom/tencent/mm/plugin/sns/d/an;->ak(Ljava/lang/String;I)V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcH:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->setVisibility(I)V
-
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/aj;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x2
-
-    invoke-direct {v0, v1, v2, v4, v3}, Lcom/tencent/mm/plugin/sns/ui/aj;-><init>(Ljava/lang/String;ZZI)V
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcd:Landroid/widget/TextView;
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method private static d(Ljava/util/LinkedList;Ljava/util/LinkedList;)Z
-    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/LinkedList",
+            "<",
+            "Lcom/tencent/mm/protocal/b/aqk;",
+            ">;",
+            "Ljava/util/LinkedList",
+            "<",
+            "Lcom/tencent/mm/protocal/b/aqk;",
+            ">;)Z"
+        }
+    .end annotation
 
     .prologue
     const/4 v1, 0x0
 
-    .line 283
+    .line 287
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_1
@@ -1334,11 +1304,11 @@
     :cond_0
     move v0, v1
 
-    .line 297
+    .line 301
     :goto_0
     return v0
 
-    .line 287
+    .line 291
     :cond_1
     invoke-virtual {p0}, Ljava/util/LinkedList;->size()I
 
@@ -1352,10 +1322,10 @@
 
     move v0, v1
 
-    .line 288
+    .line 292
     goto :goto_0
 
-    .line 291
+    .line 295
     :cond_2
     invoke-virtual {p0}, Ljava/util/LinkedList;->size()I
 
@@ -1366,22 +1336,22 @@
     :goto_1
     if-ge v2, v3, :cond_4
 
-    .line 292
+    .line 296
     invoke-virtual {p0, v2}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/apz;
+    check-cast v0, Lcom/tencent/mm/protocal/b/aqk;
 
-    iget-object v4, v0, Lcom/tencent/mm/protocal/b/apz;->iYA:Ljava/lang/String;
+    iget-object v4, v0, Lcom/tencent/mm/protocal/b/aqk;->jwf:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/apz;
+    check-cast v0, Lcom/tencent/mm/protocal/b/aqk;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/apz;->iYA:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqk;->jwf:Ljava/lang/String;
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1391,10 +1361,10 @@
 
     move v0, v1
 
-    .line 293
+    .line 297
     goto :goto_0
 
-    .line 291
+    .line 295
     :cond_3
     add-int/lit8 v0, v2, 0x1
 
@@ -1402,19 +1372,78 @@
 
     goto :goto_1
 
-    .line 297
+    .line 301
     :cond_4
     const/4 v0, 0x1
 
     goto :goto_0
 .end method
 
+.method static synthetic d(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Landroid/widget/ListView;
+    .locals 1
+
+    .prologue
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqS:Landroid/widget/ListView;
+
+    return-object v0
+.end method
+
+.method static synthetic d(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Ljava/lang/String;)V
+    .locals 5
+
+    .prologue
+    const/4 v4, 0x0
+
+    .line 105
+    invoke-direct {p0, v4}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fk(Z)Lcom/tencent/mm/plugin/sns/i/k;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/k;->aCE()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x4
+
+    invoke-static {p1, v0}, Lcom/tencent/mm/plugin/sns/e/am;->al(Ljava/lang/String;I)V
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hru:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->setVisibility(I)V
+
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/an;
+
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x2
+
+    invoke-direct {v0, v1, v2, v4, v3}, Lcom/tencent/mm/plugin/sns/ui/an;-><init>(Ljava/lang/String;ZZI)V
+
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqP:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method static synthetic e(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)I
     .locals 1
 
     .prologue
-    .line 103
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hco:I
+    .line 105
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hra:I
 
     return v0
 .end method
@@ -1423,16 +1452,16 @@
     .locals 1
 
     .prologue
-    .line 103
+    .line 105
     const/4 v0, 0x4
 
-    invoke-static {p1, v0}, Lcom/tencent/mm/plugin/sns/d/an;->ak(Ljava/lang/String;I)V
+    invoke-static {p1, v0}, Lcom/tencent/mm/plugin/sns/e/am;->al(Ljava/lang/String;I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->notifyDataSetChanged()V
 
@@ -1440,55 +1469,78 @@
     return-void
 .end method
 
-.method private e(Ljava/util/List;Z)Z
-    .locals 11
+.method static synthetic f(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Lcom/tencent/mm/plugin/sns/i/k;
+    .locals 1
 
     .prologue
-    .line 2505
+    .line 105
+    const/4 v0, 0x1
+
+    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fk(Z)Lcom/tencent/mm/plugin/sns/i/k;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method private f(Ljava/util/List;Z)Z
+    .locals 11
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/protocal/b/aqk;",
+            ">;Z)Z"
+        }
+    .end annotation
+
+    .prologue
+    .line 2659
     const/high16 v0, 0x42000000    # 32.0f
 
     invoke-static {p0, v0}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$b;->a(Landroid/content/Context;F)I
 
     move-result v2
 
-    .line 2506
+    .line 2660
     const/high16 v0, 0x40c00000    # 6.0f
 
     invoke-static {p0, v0}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$b;->a(Landroid/content/Context;F)I
 
     move-result v3
 
-    .line 2507
+    .line 2661
     const/high16 v0, 0x41200000    # 10.0f
 
     invoke-static {p0, v0}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$b;->a(Landroid/content/Context;F)I
 
     move-result v1
 
-    .line 2508
+    .line 2662
     const/high16 v0, 0x41880000    # 17.0f
 
     invoke-static {p0, v0}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$b;->a(Landroid/content/Context;F)I
 
     move-result v4
 
-    .line 2509
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    .line 2663
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
     if-nez v0, :cond_0
 
-    .line 2510
+    .line 2664
     const/4 v0, 0x0
 
-    .line 2619
+    .line 2773
     :goto_0
     return v0
 
-    .line 2512
+    .line 2666
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     const-string/jumbo v5, "window"
 
@@ -1510,13 +1562,13 @@
 
     move-result-object v5
 
-    const v6, 0x7f0501db
+    const v6, 0x7f0b0152
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v5
 
-    const-string/jumbo v6, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
+    const-string/jumbo v6, "MicroMsg.SnsCommentDetailUI"
 
     const-string/jumbo v7, "guess size %d %f"
 
@@ -1540,7 +1592,7 @@
 
     aput-object v10, v8, v9
 
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     int-to-float v0, v0
 
@@ -1550,15 +1602,15 @@
 
     sub-float v5, v0, v5
 
-    .line 2513
+    .line 2667
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
     if-gtz v0, :cond_2
 
-    .line 2514
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    .line 2668
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getParent()Landroid/view/ViewParent;
 
@@ -1566,78 +1618,78 @@
 
     if-eqz v0, :cond_1
 
-    .line 2516
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    .line 2670
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 2518
+    .line 2672
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 2519
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    .line 2673
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 2520
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gLC:Landroid/widget/LinearLayout;
+    .line 2674
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gTh:Landroid/widget/LinearLayout;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 2521
+    .line 2675
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 2523
+    .line 2677
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getParent()Landroid/view/ViewParent;
 
-    .line 2528
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    .line 2682
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 2529
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    .line 2683
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
     const/4 v6, 0x0
 
     invoke-virtual {v0, v6}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 2530
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    .line 2684
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/16 v6, 0xb
 
     if-ne v0, v6, :cond_7
 
-    .line 2539
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcI:Z
+    .line 2693
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrv:Z
 
     if-nez v0, :cond_4
 
-    .line 2540
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    .line 2694
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
-    const v6, 0x7f0404d1
+    const v6, 0x7f020341
 
     invoke-virtual {v0, v6}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
-    .line 2556
+    .line 2710
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
     const/4 v6, 0x0
 
@@ -1645,34 +1697,34 @@
 
     invoke-virtual {v0, v6, v3, v7, v3}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
-    .line 2557
+    .line 2711
     new-instance v0, Landroid/widget/ImageView;
 
-    iget-object v6, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v6, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v6, v6, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v6, v6, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-direct {v0, v6}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    .line 2558
-    iget v6, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    .line 2712
+    iget v6, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/16 v7, 0xb
 
     if-ne v6, v7, :cond_8
 
-    .line 2559
-    const v6, 0x7f030117
+    .line 2713
+    const v6, 0x7f070139
 
     invoke-virtual {v0, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 2563
+    .line 2717
     :goto_2
     const/4 v6, 0x0
 
     invoke-virtual {v0, v1, v4, v1, v6}, Landroid/widget/ImageView;->setPadding(IIII)V
 
-    .line 2564
+    .line 2718
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
     const/4 v4, -0x2
@@ -1681,41 +1733,41 @@
 
     invoke-direct {v1, v4, v6}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 2565
+    .line 2719
     const/16 v4, 0x31
 
     iput v4, v1, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
-    .line 2566
+    .line 2720
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2567
+    .line 2721
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setClickable(Z)V
 
-    .line 2568
+    .line 2722
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setFocusable(Z)V
 
-    .line 2570
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    .line 2724
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 2574
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    .line 2728
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    sget v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcE:I
+    sget v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrq:I
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/az/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v1
 
-    .line 2575
+    .line 2729
     int-to-float v0, v1
 
     sub-float v0, v5, v0
@@ -1726,7 +1778,7 @@
 
     div-int/2addr v0, v4
 
-    .line 2576
+    .line 2730
     int-to-float v1, v1
 
     sub-float v1, v5, v1
@@ -1737,15 +1789,15 @@
 
     rem-int/2addr v1, v4
 
-    .line 2577
+    .line 2731
     if-le v1, v2, :cond_3
 
-    .line 2578
+    .line 2732
     add-int/lit8 v0, v0, 0x1
 
-    .line 2580
+    .line 2734
     :cond_3
-    const-string/jumbo v1, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
+    const-string/jumbo v1, "MicroMsg.SnsCommentDetailUI"
 
     const-string/jumbo v4, "guess size %d"
 
@@ -1761,18 +1813,18 @@
 
     aput-object v7, v5, v6
 
-    invoke-static {v1, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2584
-    new-instance v4, Lcom/tencent/mm/plugin/sns/ui/e;
+    .line 2738
+    new-instance v4, Lcom/tencent/mm/plugin/sns/ui/f;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-direct {v4, v1}, Lcom/tencent/mm/plugin/sns/ui/e;-><init>(Landroid/content/Context;)V
+    invoke-direct {v4, v1}, Lcom/tencent/mm/plugin/sns/ui/f;-><init>(Landroid/content/Context;)V
 
-    .line 2585
+    .line 2739
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
     const/4 v5, -0x1
@@ -1781,13 +1833,13 @@
 
     invoke-direct {v1, v5, v6}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 2586
-    invoke-virtual {v4, v1}, Lcom/tencent/mm/plugin/sns/ui/e;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    .line 2740
+    invoke-virtual {v4, v1}, Lcom/tencent/mm/plugin/sns/ui/f;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2593
-    invoke-virtual {v4, v0}, Lcom/tencent/mm/plugin/sns/ui/e;->setLineMaxCounte(I)V
+    .line 2747
+    iput v0, v4, Lcom/tencent/mm/plugin/sns/ui/f;->hjY:I
 
-    .line 2594
+    .line 2748
     const/4 v0, 0x0
 
     move v1, v0
@@ -1799,89 +1851,89 @@
 
     if-ge v1, v0, :cond_9
 
-    .line 2595
+    .line 2749
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/apz;
+    check-cast v0, Lcom/tencent/mm/protocal/b/aqk;
 
-    .line 2596
+    .line 2750
     new-instance v5, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;
 
-    iget-object v6, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v6, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v6, v6, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v6, v6, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-direct {v5, v6}, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;-><init>(Landroid/content/Context;)V
 
-    .line 2597
+    .line 2751
     sget-object v6, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v5, v6}, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 2598
-    const v6, 0x7f0405a6
+    .line 2752
+    const v6, 0x7f020350
 
     invoke-virtual {v5, v6}, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->setImageResource(I)V
 
-    .line 2599
+    .line 2753
     new-instance v6, Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-direct {v6, v2, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 2600
+    .line 2754
     const/4 v7, 0x0
 
     const/4 v8, 0x0
 
     invoke-virtual {v6, v7, v3, v3, v8}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
 
-    .line 2601
+    .line 2755
     invoke-virtual {v5, v6}, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2602
-    iget-object v6, v0, Lcom/tencent/mm/protocal/b/apz;->iYA:Ljava/lang/String;
+    .line 2756
+    iget-object v6, v0, Lcom/tencent/mm/protocal/b/aqk;->jwf:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->setTag(Ljava/lang/Object;)V
 
-    .line 2605
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/apz;->iYA:Ljava/lang/String;
+    .line 2759
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqk;->jwf:Ljava/lang/String;
 
     const/4 v6, 0x1
 
     invoke-static {v5, v0, v6}, Lcom/tencent/mm/pluginsdk/ui/a$b;->b(Landroid/widget/ImageView;Ljava/lang/String;Z)V
 
-    .line 2606
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcQ:Landroid/view/View$OnClickListener;
+    .line 2760
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrD:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v5, v0}, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 2608
-    invoke-virtual {v4, v5}, Lcom/tencent/mm/plugin/sns/ui/e;->addView(Landroid/view/View;)V
+    .line 2762
+    invoke-virtual {v4, v5}, Lcom/tencent/mm/plugin/sns/ui/f;->addView(Landroid/view/View;)V
 
-    .line 2594
+    .line 2748
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_3
 
-    .line 2542
+    .line 2696
     :cond_4
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fb(Z)Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fk(Z)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v0
 
-    .line 2543
+    .line 2697
     if-eqz v0, :cond_6
 
-    .line 2544
-    iget-object v6, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eNy:Ljava/lang/String;
+    .line 2698
+    iget-object v6, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->baY:Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/i/k;->field_userName:Ljava/lang/String;
 
     invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1889,61 +1941,61 @@
 
     if-eqz v0, :cond_5
 
-    .line 2545
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    .line 2699
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
-    const v6, 0x7f0404db
+    const v6, 0x7f020342
 
     invoke-virtual {v0, v6}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
     goto/16 :goto_1
 
-    .line 2547
+    .line 2701
     :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
-    const v6, 0x7f0404d1
+    const v6, 0x7f020341
 
     invoke-virtual {v0, v6}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
     goto/16 :goto_1
 
-    .line 2550
+    .line 2704
     :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
-    const v6, 0x7f0404d1
+    const v6, 0x7f020341
 
     invoke-virtual {v0, v6}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
     goto/16 :goto_1
 
-    .line 2554
+    .line 2708
     :cond_7
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
-    const v6, 0x7f0404e0
+    const v6, 0x7f02033f
 
     invoke-virtual {v0, v6}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
     goto/16 :goto_1
 
-    .line 2561
+    .line 2715
     :cond_8
-    const v6, 0x7f0300f5
+    const v6, 0x7f070138
 
     invoke-virtual {v0, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto/16 :goto_2
 
-    .line 2613
+    .line 2767
     :cond_9
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 2617
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gLC:Landroid/widget/LinearLayout;
+    .line 2771
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gTh:Landroid/widget/LinearLayout;
 
     if-eqz p2, :cond_a
 
@@ -1952,126 +2004,112 @@
     :goto_4
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 2619
+    .line 2773
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 2617
+    .line 2771
     :cond_a
     const/4 v0, 0x0
 
     goto :goto_4
 .end method
 
-.method static synthetic f(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Lcom/tencent/mm/plugin/sns/h/k;
-    .locals 1
-
-    .prologue
-    .line 103
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fb(Z)Lcom/tencent/mm/plugin/sns/h/k;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method private fa(Z)V
+.method private fj(Z)V
     .locals 3
 
     .prologue
     const/4 v2, 0x0
 
-    .line 443
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcp:Z
+    .line 447
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrb:Z
 
-    .line 446
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    .line 450
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->aBN()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->aEJ()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 447
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    .line 451
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->aBP()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->aEM()V
 
-    .line 448
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    .line 452
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    const v1, 0x7f0b162c
+    const v1, 0x7f08130d
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->setHint(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->xf(Ljava/lang/String;)V
 
-    .line 452
+    .line 456
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->fc(Z)V
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->fl(Z)V
 
-    .line 453
+    .line 457
     if-eqz p1, :cond_1
 
-    .line 454
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcg:Landroid/widget/ListView;
+    .line 458
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqS:Landroid/widget/ListView;
 
     invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$c;->a(Landroid/widget/ListView;)V
 
-    .line 456
+    .line 460
     :cond_1
     return-void
 .end method
 
-.method private fb(Z)Lcom/tencent/mm/plugin/sns/h/k;
+.method private fk(Z)Lcom/tencent/mm/plugin/sns/i/k;
     .locals 3
 
     .prologue
     const/4 v1, 0x0
 
-    .line 583
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Z
+    .line 587
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tH()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 584
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tJ()Z
+    .line 588
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tK()Z
 
-    .line 589
+    .line 593
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcr:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 591
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcr:Ljava/lang/String;
+    .line 595
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/h/f;->vo(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/i/f;->wA(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v0
 
-    .line 592
+    .line 596
     if-nez v0, :cond_2
 
-    .line 593
+    .line 597
     if-eqz p1, :cond_1
 
-    .line 594
-    const v0, 0x7f0b1677
+    .line 598
+    const v0, 0x7f0812b1
 
     const/4 v2, 0x0
 
@@ -2081,52 +2119,52 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 597
+    .line 601
     :cond_1
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->finish()V
 
     move-object v0, v1
 
-    .line 611
+    .line 615
     :goto_0
     return-object v0
 
-    .line 600
+    .line 604
     :cond_2
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/k;->aAf()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/k;->aCE()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 603
+    .line 607
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/h/f;->vn(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/i/f;->wz(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v0
 
-    .line 604
+    .line 608
     if-nez v0, :cond_4
 
-    .line 605
+    .line 609
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->finish()V
 
     move-object v0, v1
 
-    .line 606
+    .line 610
     goto :goto_0
 
-    .line 609
+    .line 613
     :cond_4
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/k;->aAl()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/k;->aCX()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcr:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
 
     goto :goto_0
 .end method
@@ -2135,8 +2173,8 @@
     .locals 0
 
     .prologue
-    .line 103
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aBI()V
+    .line 105
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aEE()V
 
     return-void
 .end method
@@ -2145,20 +2183,20 @@
     .locals 1
 
     .prologue
-    .line 103
+    .line 105
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fa(Z)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fj(Z)V
 
     return-void
 .end method
 
-.method static synthetic i(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Lcom/tencent/mm/plugin/sns/ui/au;
+.method static synthetic i(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Lcom/tencent/mm/plugin/sns/ui/ba;
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcA:Lcom/tencent/mm/plugin/sns/ui/au;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrm:Lcom/tencent/mm/plugin/sns/ui/ba;
 
     return-object v0
 .end method
@@ -2167,8 +2205,8 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcP:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrC:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;
 
     return-object v0
 .end method
@@ -2177,8 +2215,8 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dUv:Landroid/text/ClipboardManager;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dWD:Landroid/text/ClipboardManager;
 
     return-object v0
 .end method
@@ -2187,8 +2225,8 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -2197,23 +2235,33 @@
     .locals 0
 
     .prologue
-    .line 103
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aBJ()V
+    .line 105
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aEF()V
 
     return-void
 .end method
 
-.method private ma(I)Landroid/widget/LinearLayout;
+.method static synthetic n(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Lcom/tencent/mm/plugin/sns/ui/aj;
+    .locals 1
+
+    .prologue
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hke:Lcom/tencent/mm/plugin/sns/ui/aj;
+
+    return-object v0
+.end method
+
+.method private np(I)Landroid/widget/LinearLayout;
     .locals 2
 
     .prologue
-    .line 1421
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcV:Landroid/widget/LinearLayout;
+    .line 1446
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrI:Landroid/widget/LinearLayout;
 
     if-nez v0, :cond_0
 
-    .line 1423
-    invoke-static {p0}, Lcom/tencent/mm/ui/p;->ee(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    .line 1448
+    invoke-static {p0}, Lcom/tencent/mm/ui/p;->ef(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
@@ -2225,43 +2273,33 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcV:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrI:Landroid/widget/LinearLayout;
 
-    .line 1424
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcV:Landroid/widget/LinearLayout;
+    .line 1449
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrI:Landroid/widget/LinearLayout;
 
-    .line 1427
+    .line 1452
     :goto_0
     return-object v0
 
-    .line 1426
+    .line 1451
     :cond_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcU:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrH:Z
 
-    .line 1427
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcV:Landroid/widget/LinearLayout;
+    .line 1452
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrI:Landroid/widget/LinearLayout;
 
     goto :goto_0
 .end method
 
-.method static synthetic n(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Lcom/tencent/mm/plugin/sns/ui/af;
+.method static synthetic o(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Lcom/tencent/mm/plugin/sns/ui/b;
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWG:Lcom/tencent/mm/plugin/sns/ui/af;
-
-    return-object v0
-.end method
-
-.method static synthetic o(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Lcom/tencent/mm/plugin/sns/ui/a;
-    .locals 1
-
-    .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWM:Lcom/tencent/mm/plugin/sns/ui/a;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkk:Lcom/tencent/mm/plugin/sns/ui/b;
 
     return-object v0
 .end method
@@ -2270,8 +2308,8 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcu:Z
+    .line 105
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrg:Z
 
     return v0
 .end method
@@ -2280,8 +2318,8 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcJ:Landroid/app/Dialog;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrw:Landroid/app/Dialog;
 
     return-object v0
 .end method
@@ -2290,12 +2328,12 @@
     .locals 2
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->isShown()Z
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->getCount()I
 
@@ -2303,17 +2341,17 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/h/f;->vn(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/h/k;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/d/ai;->k(Lcom/tencent/mm/plugin/sns/h/k;)Lcom/tencent/mm/protocal/b/aqi;
+    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/i/f;->wz(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/tencent/mm/protocal/b/aqi;->jJU:Ljava/util/LinkedList;
+    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/e/ah;->k(Lcom/tencent/mm/plugin/sns/i/k;)Lcom/tencent/mm/protocal/b/aqt;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/aqt;->kir:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
 
@@ -2323,7 +2361,7 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
     invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->getCount()I
 
@@ -2331,7 +2369,7 @@
 
     if-le v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->getCount()I
 
@@ -2340,11 +2378,11 @@
     add-int/lit8 v0, v0, -0x1
 
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcP:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrC:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;
 
-    iput v0, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;->hdy:I
+    iput v0, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;->hsl:I
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcP:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrC:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;->run()V
 
@@ -2357,36 +2395,36 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 103
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    .line 105
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/h/s;->vJ(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/i/s;->wW(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/h/f;->vn(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/i/f;->wz(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v1
 
-    iget v2, v1, Lcom/tencent/mm/plugin/sns/h/k;->field_likeFlag:I
+    iget v2, v1, Lcom/tencent/mm/plugin/sns/i/k;->field_likeFlag:I
 
     if-nez v2, :cond_2
 
-    iput v0, v1, Lcom/tencent/mm/plugin/sns/h/k;->field_likeFlag:I
+    iput v0, v1, Lcom/tencent/mm/plugin/sns/i/k;->field_likeFlag:I
 
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/h/k;->aAf()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/i/k;->aCE()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/plugin/sns/h/f;->a(Ljava/lang/String;Lcom/tencent/mm/plugin/sns/h/k;)Z
+    invoke-static {v2, v1}, Lcom/tencent/mm/plugin/sns/i/f;->a(Ljava/lang/String;Lcom/tencent/mm/plugin/sns/i/k;)Z
 
     const/16 v2, 0x20
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/plugin/sns/h/k;->lN(I)Z
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
 
     move-result v2
 
@@ -2397,44 +2435,44 @@
     :cond_0
     const-string/jumbo v2, ""
 
-    invoke-static {v1, v0, v2}, Lcom/tencent/mm/plugin/sns/d/al$a;->a(Lcom/tencent/mm/plugin/sns/h/k;ILjava/lang/String;)Lcom/tencent/mm/protocal/b/apz;
+    invoke-static {v1, v0, v2}, Lcom/tencent/mm/plugin/sns/e/ak$a;->a(Lcom/tencent/mm/plugin/sns/i/k;ILjava/lang/String;)Lcom/tencent/mm/protocal/b/aqk;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->notifyDataSetChanged()V
 
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/h/f;->vn(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/i/f;->wz(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/d/ai;->k(Lcom/tencent/mm/plugin/sns/h/k;)Lcom/tencent/mm/protocal/b/aqi;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/e/ah;->k(Lcom/tencent/mm/plugin/sns/i/k;)Lcom/tencent/mm/protocal/b/aqt;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    iget-object v1, v0, Lcom/tencent/mm/protocal/b/aqi;->jJU:Ljava/util/LinkedList;
+    iget-object v1, v0, Lcom/tencent/mm/protocal/b/aqt;->kir:Ljava/util/LinkedList;
 
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcn:Ljava/util/LinkedList;
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqZ:Ljava/util/LinkedList;
 
-    iget-object v1, v0, Lcom/tencent/mm/protocal/b/aqi;->jJU:Ljava/util/LinkedList;
+    iget-object v1, v0, Lcom/tencent/mm/protocal/b/aqt;->kir:Ljava/util/LinkedList;
 
-    iget-object v2, v0, Lcom/tencent/mm/protocal/b/aqi;->jJX:Ljava/util/LinkedList;
+    iget-object v2, v0, Lcom/tencent/mm/protocal/b/aqt;->kiu:Ljava/util/LinkedList;
 
     invoke-virtual {v2}, Ljava/util/LinkedList;->isEmpty()Z
 
     move-result v2
 
-    invoke-direct {p0, v1, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->e(Ljava/util/List;Z)Z
+    invoke-direct {p0, v1, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->f(Ljava/util/List;Z)Z
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqi;->jJU:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqt;->kir:Ljava/util/LinkedList;
 
-    iput-object v0, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->hdr:Ljava/util/LinkedList;
+    iput-object v0, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->hse:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->notifyDataSetChanged()V
 
@@ -2444,19 +2482,19 @@
     :cond_2
     const/4 v0, 0x0
 
-    iput v0, v1, Lcom/tencent/mm/plugin/sns/h/k;->field_likeFlag:I
+    iput v0, v1, Lcom/tencent/mm/plugin/sns/i/k;->field_likeFlag:I
 
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/h/k;->aAf()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/plugin/sns/h/f;->a(Ljava/lang/String;Lcom/tencent/mm/plugin/sns/h/k;)Z
-
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/h/k;->aAf()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/i/k;->aCE()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/d/al$a;->uM(Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/plugin/sns/i/f;->a(Ljava/lang/String;Lcom/tencent/mm/plugin/sns/i/k;)Z
+
+    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/i/k;->aCE()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/e/ak$a;->vS(Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -2465,8 +2503,8 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcF:Lcom/tencent/mm/plugin/sns/a/a/f;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrs:Lcom/tencent/mm/plugin/sns/a/a/f;
 
     return-object v0
 .end method
@@ -2475,8 +2513,8 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcr:Ljava/lang/String;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -2485,8 +2523,8 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hch:Landroid/view/View;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqT:Landroid/view/View;
 
     return-object v0
 .end method
@@ -2495,8 +2533,8 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcj:Landroid/view/animation/ScaleAnimation;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqV:Landroid/view/animation/ScaleAnimation;
 
     return-object v0
 .end method
@@ -2505,8 +2543,8 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    .line 105
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     return v0
 .end method
@@ -2515,8 +2553,8 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
     return-object v0
 .end method
@@ -2525,34 +2563,34 @@
     .locals 1
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gLC:Landroid/widget/LinearLayout;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gTh:Landroid/widget/LinearLayout;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method protected final Gb()V
-    .locals 9
+.method protected final Gy()V
+    .locals 11
 
     .prologue
-    const v7, 0x7f070dd9
+    const v7, 0x7f100ff4
 
     const/4 v6, -0x1
 
     const/4 v2, 0x1
 
-    const/16 v8, 0x8
+    const/16 v10, 0x8
 
     const/4 v5, 0x0
 
-    .line 975
-    const v0, 0x7f0b1661
+    .line 1000
+    const v0, 0x7f08124a
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->qb(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->rR(I)V
 
-    .line 977
+    .line 1002
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$17;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$17;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
@@ -2563,34 +2601,34 @@
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
-    .line 979
-    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
+    .line 1004
+    invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eNy:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->baY:Ljava/lang/String;
 
-    .line 983
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayQ()Z
+    .line 1008
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBr()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 984
+    .line 1009
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->finish()V
 
-    .line 986
+    .line 1011
     :cond_0
-    invoke-direct {p0, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fb(Z)Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-direct {p0, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fk(Z)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v1
 
-    .line 987
+    .line 1012
     if-nez v1, :cond_1
 
-    .line 988
-    const-string/jumbo v0, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
+    .line 1013
+    const-string/jumbo v0, "MicroMsg.SnsCommentDetailUI"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2598,7 +2636,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2608,18 +2646,18 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 989
+    .line 1014
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->finish()V
 
-    .line 1276
+    .line 1301
     :goto_0
     return-void
 
-    .line 992
+    .line 1017
     :cond_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
+    const-string/jumbo v0, "MicroMsg.SnsCommentDetailUI"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2627,7 +2665,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2639,7 +2677,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcr:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2651,7 +2689,7 @@
 
     move-result-object v3
 
-    iget-object v4, v1, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
+    iget-object v4, v1, Lcom/tencent/mm/plugin/sns/i/k;->field_userName:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2661,30 +2699,30 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 995
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    .line 1020
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/h/s;->vJ(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/i/s;->wW(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/h/k;->aAn()Z
+    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/i/k;->aCZ()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 996
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/h/k;->aAe()Lcom/tencent/mm/protocal/b/ade;
+    .line 1021
+    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/i/k;->aCR()Lcom/tencent/mm/protocal/b/adx;
 
     move-result-object v3
 
-    .line 1006
-    const v0, 0x7f070dd7
+    .line 1031
+    const v0, 0x7f100ff2
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->findViewById(I)Landroid/view/View;
 
@@ -2692,8 +2730,8 @@
 
     invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1007
-    const v0, 0x7f070dd8
+    .line 1032
+    const v0, 0x7f100ff3
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->findViewById(I)Landroid/view/View;
 
@@ -2701,17 +2739,17 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 1008
-    iget v3, v3, Lcom/tencent/mm/protocal/b/ade;->jzQ:I
+    .line 1033
+    iget v3, v3, Lcom/tencent/mm/protocal/b/adx;->jYD:I
 
     sparse-switch v3, :sswitch_data_0
 
-    .line 1023
-    const v3, 0x7f0b16dc
+    .line 1048
+    const v3, 0x7f0812c6
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(I)V
 
-    .line 1024
+    .line 1049
     invoke-virtual {p0, v7}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -2720,12 +2758,12 @@
 
     move v0, v2
 
-    .line 1031
+    .line 1056
     :goto_1
     if-eqz v0, :cond_2
 
-    .line 1032
-    const v0, 0x7f070dd7
+    .line 1057
+    const v0, 0x7f100ff2
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->findViewById(I)Landroid/view/View;
 
@@ -2733,13 +2771,13 @@
 
     new-instance v3, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$8;
 
-    invoke-direct {v3, p0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$8;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Lcom/tencent/mm/plugin/sns/h/k;)V
+    invoke-direct {v3, p0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$8;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Lcom/tencent/mm/plugin/sns/i/k;)V
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1055
+    .line 1080
     :cond_2
-    const v0, 0x7f070dda
+    const v0, 0x7f100ff5
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->findViewById(I)Landroid/view/View;
 
@@ -2747,10 +2785,10 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcg:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqS:Landroid/widget/ListView;
 
-    .line 1056
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcg:Landroid/widget/ListView;
+    .line 1081
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqS:Landroid/widget/ListView;
 
     new-instance v3, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$9;
 
@@ -2758,8 +2796,8 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/ListView;->post(Ljava/lang/Runnable;)Z
 
-    .line 1063
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcg:Landroid/widget/ListView;
+    .line 1088
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqS:Landroid/widget/ListView;
 
     new-instance v3, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$10;
 
@@ -2767,16 +2805,16 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/ListView;->setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
 
-    .line 1078
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    .line 1103
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/p;->ee(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {v0}, Lcom/tencent/mm/ui/p;->ef(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v3, 0x7f0a0444
+    const v3, 0x7f030567
 
     const/4 v4, 0x0
 
@@ -2784,32 +2822,32 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    .line 1080
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 1105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcR:Landroid/view/View$OnClickListener;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrE:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1081
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcg:Landroid/widget/ListView;
+    .line 1106
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqS:Landroid/widget/ListView;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
     invoke-virtual {v0, v3}, Landroid/widget/ListView;->addHeaderView(Landroid/view/View;)V
 
-    .line 1082
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aBH()Z
+    .line 1107
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aED()Z
 
     move-result v0
 
-    .line 1084
+    .line 1109
     if-nez v0, :cond_4
 
-    .line 1085
-    const-string/jumbo v1, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
+    .line 1110
+    const-string/jumbo v1, "MicroMsg.SnsCommentDetailUI"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2825,114 +2863,114 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1086
+    .line 1111
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->finish()V
 
     goto/16 :goto_0
 
-    .line 1010
+    .line 1035
     :sswitch_0
-    const v3, 0x7f0b16de
+    const v3, 0x7f0812c3
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(I)V
 
-    .line 1011
+    .line 1036
     invoke-virtual {p0, v7}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {v0, v8}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v10}, Landroid/view/View;->setVisibility(I)V
 
     move v0, v5
 
-    .line 1012
+    .line 1037
     goto :goto_1
 
-    .line 1014
+    .line 1039
     :sswitch_1
-    const v3, 0x7f0b16df
+    const v3, 0x7f0812c5
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(I)V
 
-    .line 1015
+    .line 1040
     invoke-virtual {p0, v7}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {v0, v8}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v10}, Landroid/view/View;->setVisibility(I)V
 
     move v0, v5
 
-    .line 1016
+    .line 1041
     goto/16 :goto_1
 
-    .line 1018
+    .line 1043
     :sswitch_2
-    const v3, 0x7f0b16dd
+    const v3, 0x7f0812c4
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(I)V
 
-    .line 1019
+    .line 1044
     invoke-virtual {p0, v7}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {v0, v8}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v10}, Landroid/view/View;->setVisibility(I)V
 
     move v0, v2
 
-    .line 1021
+    .line 1046
     goto/16 :goto_1
 
-    .line 1029
+    .line 1054
     :cond_3
-    const v0, 0x7f070dd7
+    const v0, 0x7f100ff2
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {v0, v8}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v10}, Landroid/view/View;->setVisibility(I)V
 
     move v0, v5
 
     goto/16 :goto_1
 
-    .line 1089
+    .line 1114
     :cond_4
-    invoke-direct {p0, v5}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fb(Z)Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-direct {p0, v5}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fk(Z)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v0
 
-    .line 1090
+    .line 1115
     if-eqz v0, :cond_5
 
-    .line 1091
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/k;->azR()Lcom/tencent/mm/protocal/b/atp;
+    .line 1116
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/k;->aCD()Lcom/tencent/mm/protocal/b/auf;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/an;->c(Lcom/tencent/mm/protocal/b/atp;)I
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/aq;->c(Lcom/tencent/mm/protocal/b/auf;)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
-    .line 1093
+    .line 1118
     :cond_5
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/16 v3, 0xb
 
     if-ne v0, v3, :cond_6
 
-    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v3, v1, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
+    iget-object v3, v1, Lcom/tencent/mm/plugin/sns/i/k;->field_userName:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2940,64 +2978,64 @@
 
     if-eqz v0, :cond_6
 
-    .line 1094
+    .line 1119
     new-instance v0, Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcf:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqR:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
 
-    .line 1095
+    .line 1120
     new-instance v0, Landroid/widget/AbsListView$LayoutParams;
 
     const/4 v3, -0x2
 
     invoke-direct {v0, v6, v3}, Landroid/widget/AbsListView$LayoutParams;-><init>(II)V
 
-    .line 1096
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcf:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
+    .line 1121
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqR:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
 
     invoke-virtual {v3, v0}, Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1097
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcf:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
+    .line 1122
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqR:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcR:Landroid/view/View$OnClickListener;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrE:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1099
+    .line 1124
     :cond_6
     new-instance v0, Landroid/widget/LinearLayout;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v3, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v3, v3, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v3, v3, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-direct {v0, v3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
-    .line 1100
+    .line 1125
     new-instance v0, Landroid/widget/AbsListView$LayoutParams;
 
     const/4 v3, -0x2
 
     invoke-direct {v0, v6, v3}, Landroid/widget/AbsListView$LayoutParams;-><init>(II)V
 
-    .line 1101
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    .line 1126
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1102
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    .line 1127
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcR:Landroid/view/View$OnClickListener;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrE:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1105
+    .line 1130
     const/high16 v0, 0x40000000    # 2.0f
 
     invoke-static {p0, v0}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$b;->a(Landroid/content/Context;F)I
@@ -3008,53 +3046,53 @@
 
     new-instance v3, Landroid/widget/LinearLayout;
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v4, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v4, v4, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v4, v4, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-direct {v3, v4}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    const v4, 0x7f0404af
+    const v4, 0x7f020748
 
     invoke-virtual {v3, v4}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
     invoke-virtual {v3, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iput-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gLC:Landroid/widget/LinearLayout;
+    iput-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gTh:Landroid/widget/LinearLayout;
 
-    .line 1108
-    iget v0, v1, Lcom/tencent/mm/plugin/sns/h/k;->field_localPrivate:I
+    .line 1133
+    iget v0, v1, Lcom/tencent/mm/plugin/sns/i/k;->field_localPrivate:I
 
     and-int/lit8 v0, v0, 0x1
 
     if-eqz v0, :cond_7
 
-    .line 1109
-    const v0, 0x7f070dcd
+    .line 1134
+    const v0, 0x7f10049d
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {v0, v8}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v10}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1111
+    .line 1136
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 1112
+    .line 1137
     new-instance v3, Landroid/widget/AbsListView$LayoutParams;
 
     const/4 v4, -0x2
 
     invoke-direct {v3, v6, v4}, Landroid/widget/AbsListView$LayoutParams;-><init>(II)V
 
-    .line 1113
+    .line 1138
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1114
-    const v3, 0x7f0b1639
+    .line 1139
+    const v3, 0x7f081251
 
     invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getString(I)Ljava/lang/String;
 
@@ -3062,12 +3100,12 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1115
+    .line 1140
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f08017d
+    const v4, 0x7f0f002f
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -3075,12 +3113,12 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 1116
+    .line 1141
     const/16 v3, 0x11
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 1117
+    .line 1142
     const/high16 v3, 0x40e00000    # 7.0f
 
     invoke-static {p0, v3}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$b;->a(Landroid/content/Context;F)I
@@ -3089,42 +3127,42 @@
 
     invoke-virtual {v0, v5, v3, v5, v5}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 1118
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcg:Landroid/widget/ListView;
+    .line 1143
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqS:Landroid/widget/ListView;
 
     invoke-virtual {v3, v0}, Landroid/widget/ListView;->addFooterView(Landroid/view/View;)V
 
-    .line 1121
+    .line 1146
     :cond_7
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcf:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqR:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
 
     if-eqz v0, :cond_8
 
-    .line 1122
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcI:Z
+    .line 1147
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrv:Z
 
-    .line 1123
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcg:Landroid/widget/ListView;
+    .line 1148
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqS:Landroid/widget/ListView;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcf:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqR:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
 
     invoke-virtual {v0, v3}, Landroid/widget/ListView;->addHeaderView(Landroid/view/View;)V
 
-    .line 1126
+    .line 1151
     :cond_8
-    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/d/ai;->k(Lcom/tencent/mm/plugin/sns/h/k;)Lcom/tencent/mm/protocal/b/aqi;
+    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/e/ah;->k(Lcom/tencent/mm/plugin/sns/i/k;)Lcom/tencent/mm/protocal/b/aqt;
 
     move-result-object v0
 
-    .line 1127
+    .line 1152
     if-nez v0, :cond_c
 
-    .line 1128
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    .line 1153
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v0, v8}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v0, v10}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 1129
+    .line 1154
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
     new-instance v3, Ljava/util/LinkedList;
@@ -3137,25 +3175,25 @@
 
     invoke-direct {v0, p0, v3, v4, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Ljava/util/LinkedList;Ljava/util/LinkedList;Landroid/app/Activity;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
-    .line 1139
+    .line 1164
     :goto_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcg:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqS:Landroid/widget/ListView;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hce:Landroid/widget/LinearLayout;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqQ:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v3}, Landroid/widget/ListView;->addHeaderView(Landroid/view/View;)V
 
-    .line 1140
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcg:Landroid/widget/ListView;
+    .line 1165
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqS:Landroid/widget/ListView;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
     invoke-virtual {v0, v3}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 1147
-    const v0, 0x7f070dcd
+    .line 1172
+    const v0, 0x7f10049d
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->findViewById(I)Landroid/view/View;
 
@@ -3163,81 +3201,79 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    .line 1148
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    .line 1173
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     new-instance v3, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$11;
 
-    invoke-direct {v3, p0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$11;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Lcom/tencent/mm/plugin/sns/h/k;)V
+    invoke-direct {v3, p0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$11;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Lcom/tencent/mm/plugin/sns/i/k;)V
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->setOnEditTouchListener(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$a;)V
+    iput-object v3, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->hsq:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$a;
 
-    .line 1167
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    .line 1192
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     new-instance v3, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$13;
 
     invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$13;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->setOnSmileyShowListener(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$d;)V
+    iput-object v3, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->hsr:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$d;
 
-    .line 1179
-    invoke-direct {p0, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fb(Z)Lcom/tencent/mm/plugin/sns/h/k;
+    .line 1204
+    invoke-direct {p0, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fk(Z)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v0
 
-    .line 1180
+    .line 1205
     if-eqz v0, :cond_9
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/k;->aAk()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/k;->aCW()Z
 
     move-result v0
 
     if-nez v0, :cond_9
 
-    .line 1181
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    .line 1206
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    invoke-virtual {v0, v8}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->setVisibility(I)V
+    invoke-virtual {v0, v10}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->setVisibility(I)V
 
-    .line 1184
+    .line 1209
     :cond_9
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcP:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$c;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->aEK()V
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->setAfterEditAction(Ljava/lang/Runnable;)V
+    .line 1210
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    .line 1185
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->aEL()V
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->aBO()V
-
-    .line 1186
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    .line 1211
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     new-instance v3, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$14;
 
-    invoke-direct {v3, p0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$14;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Lcom/tencent/mm/plugin/sns/h/k;)V
+    invoke-direct {v3, p0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$14;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Lcom/tencent/mm/plugin/sns/i/k;)V
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->setOnCommentSendImp(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$c;)V
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$c;)V
 
-    .line 1201
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    .line 1226
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     new-instance v3, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$15;
 
     invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$15;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
 
-    iget v1, v1, Lcom/tencent/mm/plugin/sns/h/k;->field_likeFlag:I
+    iget v1, v1, Lcom/tencent/mm/plugin/sns/i/k;->field_likeFlag:I
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->hdz:Landroid/widget/ImageView;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->hsm:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->hdz:Landroid/widget/ImageView;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->hsm:Landroid/widget/ImageView;
 
     new-instance v4, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$7;
 
@@ -3245,12 +3281,12 @@
 
     invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1238
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    .line 1263
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    invoke-virtual {v0, v8}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->setHeartBtnVisibility(I)V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->aEO()V
 
-    .line 1240
+    .line 1265
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -3261,50 +3297,50 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcy:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrk:Z
 
-    .line 1241
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcy:Z
+    .line 1266
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrk:Z
 
     if-eqz v0, :cond_a
 
-    .line 1242
+    .line 1267
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
     const-string/jumbo v1, "INTENT_FROMSUI_COMMENTID"
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v6, 0x0
 
-    invoke-virtual {v0, v1, v3, v4}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+    invoke-virtual {v0, v1, v6, v7}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcz:J
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrl:J
 
-    .line 1243
-    iget-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcz:J
+    .line 1268
+    iget-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrl:J
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v6, 0x0
 
-    cmp-long v0, v0, v3
+    cmp-long v0, v0, v6
 
     if-eqz v0, :cond_a
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->hdq:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->hsd:Ljava/util/LinkedList;
 
     if-eqz v0, :cond_a
 
     move v1, v5
 
-    .line 1244
+    .line 1269
     :goto_3
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->hdq:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->hsd:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -3312,65 +3348,65 @@
 
     if-ge v1, v0, :cond_a
 
-    .line 1245
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    .line 1270
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->hdq:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->hsd:Ljava/util/LinkedList;
 
     invoke-virtual {v0, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/apz;
+    check-cast v0, Lcom/tencent/mm/protocal/b/aqk;
 
-    .line 1246
-    iget v3, v0, Lcom/tencent/mm/protocal/b/apz;->jJx:I
+    .line 1271
+    iget v3, v0, Lcom/tencent/mm/protocal/b/aqk;->khU:I
 
     if-eqz v3, :cond_e
 
-    iget v3, v0, Lcom/tencent/mm/protocal/b/apz;->jJx:I
+    iget v3, v0, Lcom/tencent/mm/protocal/b/aqk;->khU:I
 
-    int-to-long v3, v3
+    int-to-long v6, v3
 
-    .line 1247
+    .line 1272
     :goto_4
-    iget-wide v6, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcz:J
+    iget-wide v8, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrl:J
 
-    cmp-long v3, v3, v6
+    cmp-long v3, v6, v8
 
     if-nez v3, :cond_11
 
-    .line 1248
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcg:Landroid/widget/ListView;
+    .line 1273
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqS:Landroid/widget/ListView;
 
     invoke-virtual {v3, v1}, Landroid/widget/ListView;->setSelection(I)V
 
-    .line 1249
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcs:Lcom/tencent/mm/storage/q;
+    .line 1274
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hre:Lcom/tencent/mm/storage/q;
 
-    iget-object v3, v0, Lcom/tencent/mm/protocal/b/apz;->iYA:Ljava/lang/String;
+    iget-object v3, v0, Lcom/tencent/mm/protocal/b/aqk;->jwf:Ljava/lang/String;
 
-    invoke-virtual {v1, v3}, Lcom/tencent/mm/storage/q;->Ep(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v1, v3}, Lcom/tencent/mm/storage/q;->GD(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
 
     move-result-object v1
 
-    .line 1251
+    .line 1276
     if-eqz v1, :cond_f
 
-    .line 1252
-    invoke-virtual {v1}, Lcom/tencent/mm/h/a;->qz()Ljava/lang/String;
+    .line 1277
+    invoke-virtual {v1}, Lcom/tencent/mm/i/a;->pc()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1258
+    .line 1283
     :goto_5
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v6, 0x7f0b1633
+    const v6, 0x7f0812c9
 
     invoke-virtual {p0, v6}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getString(I)Ljava/lang/String;
 
@@ -3388,30 +3424,30 @@
 
     move-result-object v1
 
-    invoke-virtual {v3, v1, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->a(Ljava/lang/String;Lcom/tencent/mm/protocal/b/apz;)V
+    invoke-virtual {v3, v1, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->a(Ljava/lang/String;Lcom/tencent/mm/protocal/b/aqk;)V
 
-    .line 1264
+    .line 1289
     :cond_a
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcy:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrk:Z
 
     if-eqz v0, :cond_b
 
-    .line 1265
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 1290
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$16;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$16;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
-    .line 1275
+    .line 1300
     :cond_b
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v1, 0x7f070d08
+    const v1, 0x7f100ffb
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3419,13 +3455,13 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcH:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hru:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcH:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hru:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v3, 0x7f07009d
+    const v3, 0x7f100145
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3437,155 +3473,149 @@
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->setResultTextSize(F)V
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->A(F)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcH:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hru:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->getResultTextView()Landroid/widget/TextView;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->glg:Landroid/widget/TextView;
 
-    move-result-object v0
-
-    const v1, 0x7f04049e
+    const v1, 0x7f02073c
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/aj;
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/an;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
     const/4 v3, 0x2
 
-    invoke-direct {v0, v1, v5, v2, v3}, Lcom/tencent/mm/plugin/sns/ui/aj;-><init>(Ljava/lang/String;ZZI)V
+    invoke-direct {v0, v1, v5, v2, v3}, Lcom/tencent/mm/plugin/sns/ui/an;-><init>(Ljava/lang/String;ZZI)V
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcH:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hru:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->getResultTextView()Landroid/widget/TextView;
-
-    move-result-object v1
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->glg:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dRJ:Lcom/tencent/mm/ui/tools/m;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dTR:Lcom/tencent/mm/ui/tools/m;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcH:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hru:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->getResultTextView()Landroid/widget/TextView;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->glg:Landroid/widget/TextView;
 
-    move-result-object v1
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFq:Lcom/tencent/mm/plugin/sns/ui/c/c;
 
-    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/c/b;->hoT:Lcom/tencent/mm/plugin/sns/ui/c/c;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
-
-    iget-object v4, v4, Lcom/tencent/mm/plugin/sns/ui/c/b;->hoQ:Lcom/tencent/mm/plugin/sns/ui/c/a;
+    iget-object v4, v4, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFn:Lcom/tencent/mm/plugin/sns/ui/c/a;
 
     invoke-virtual {v0, v1, v3, v4}, Lcom/tencent/mm/ui/tools/m;->a(Landroid/view/View;Landroid/view/View$OnCreateContextMenuListener;Lcom/tencent/mm/ui/base/n$d;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
     const/4 v1, 0x4
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/plugin/sns/d/an;->al(Ljava/lang/String;I)Z
+    invoke-static {v0, v1}, Lcom/tencent/mm/plugin/sns/e/am;->am(Ljava/lang/String;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_13
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/d/an;->uO(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/d/an$b;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/e/am;->vU(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/e/am$b;
 
     move-result-object v4
 
     if-eqz v4, :cond_12
 
-    iget-boolean v0, v4, Lcom/tencent/mm/plugin/sns/d/an$b;->bDp:Z
+    iget-boolean v0, v4, Lcom/tencent/mm/plugin/sns/e/am$b;->bwz:Z
 
     if-eqz v0, :cond_12
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcH:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hru:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
     invoke-virtual {v0, v5}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcH:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hru:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
     const/4 v1, 0x0
 
-    iget-object v3, v4, Lcom/tencent/mm/plugin/sns/d/an$b;->azM:Ljava/lang/String;
+    iget-object v3, v4, Lcom/tencent/mm/plugin/sns/e/am$b;->alU:Ljava/lang/String;
 
-    iget-object v4, v4, Lcom/tencent/mm/plugin/sns/d/an$b;->bJn:Ljava/lang/String;
+    iget-object v4, v4, Lcom/tencent/mm/plugin/sns/e/am$b;->bCA:Ljava/lang/String;
 
-    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->a(Lcom/tencent/mm/plugin/sns/d/an$b;ILjava/lang/String;Ljava/lang/String;Z)V
+    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->a(Lcom/tencent/mm/plugin/sns/e/am$b;ILjava/lang/String;Ljava/lang/String;Z)V
 
     goto/16 :goto_0
 
-    .line 1131
+    .line 1156
     :cond_c
-    iget-object v3, v0, Lcom/tencent/mm/protocal/b/aqi;->jJU:Ljava/util/LinkedList;
+    iget-object v3, v0, Lcom/tencent/mm/protocal/b/aqt;->kir:Ljava/util/LinkedList;
 
-    iput-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcn:Ljava/util/LinkedList;
+    iput-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqZ:Ljava/util/LinkedList;
 
-    .line 1132
-    iget-object v3, v0, Lcom/tencent/mm/protocal/b/aqi;->jJU:Ljava/util/LinkedList;
+    .line 1157
+    iget-object v3, v0, Lcom/tencent/mm/protocal/b/aqt;->kir:Ljava/util/LinkedList;
 
-    iget-object v4, v0, Lcom/tencent/mm/protocal/b/aqi;->jJX:Ljava/util/LinkedList;
+    iget-object v4, v0, Lcom/tencent/mm/protocal/b/aqt;->kiu:Ljava/util/LinkedList;
 
     invoke-virtual {v4}, Ljava/util/LinkedList;->isEmpty()Z
 
     move-result v4
 
-    invoke-direct {p0, v3, v4}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->e(Ljava/util/List;Z)Z
+    invoke-direct {p0, v3, v4}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->f(Ljava/util/List;Z)Z
 
-    .line 1133
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcf:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
+    .line 1158
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqR:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
 
     if-eqz v3, :cond_d
 
-    .line 1134
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcf:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
+    .line 1159
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqR:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    invoke-virtual {v3, v1, v4}, Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;->a(Lcom/tencent/mm/plugin/sns/h/k;Lcom/tencent/mm/plugin/sns/ui/c/b;)V
+    invoke-virtual {v3, v1, v4}, Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;->a(Lcom/tencent/mm/plugin/sns/i/k;Lcom/tencent/mm/plugin/sns/ui/c/b;)V
 
-    .line 1136
+    .line 1161
     :cond_d
     new-instance v3, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
-    iget-object v4, v0, Lcom/tencent/mm/protocal/b/aqi;->jJX:Ljava/util/LinkedList;
+    iget-object v4, v0, Lcom/tencent/mm/protocal/b/aqt;->kiu:Ljava/util/LinkedList;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqi;->jJU:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqt;->kir:Ljava/util/LinkedList;
 
     invoke-direct {v3, p0, v4, v0, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Ljava/util/LinkedList;Ljava/util/LinkedList;Landroid/app/Activity;)V
 
-    iput-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iput-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
     goto/16 :goto_2
 
-    .line 1246
+    .line 1271
     :cond_e
-    iget-wide v3, v0, Lcom/tencent/mm/protocal/b/apz;->jJA:J
+    iget-wide v6, v0, Lcom/tencent/mm/protocal/b/aqk;->khX:J
 
     goto/16 :goto_4
 
-    .line 1254
+    .line 1279
     :cond_f
-    iget-object v1, v0, Lcom/tencent/mm/protocal/b/apz;->jyd:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/protocal/b/aqk;->jWK:Ljava/lang/String;
 
     if-eqz v1, :cond_10
 
-    iget-object v1, v0, Lcom/tencent/mm/protocal/b/apz;->jyd:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/protocal/b/aqk;->jWK:Ljava/lang/String;
 
     goto/16 :goto_5
 
     :cond_10
-    iget-object v1, v0, Lcom/tencent/mm/protocal/b/apz;->iYA:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/protocal/b/aqk;->jwf:Ljava/lang/String;
 
     goto/16 :goto_5
 
-    .line 1244
+    .line 1269
     :cond_11
     add-int/lit8 v0, v1, 0x1
 
@@ -3593,22 +3623,22 @@
 
     goto/16 :goto_3
 
-    .line 1275
+    .line 1300
     :cond_12
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcH:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hru:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
-    invoke-virtual {v0, v8}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->setVisibility(I)V
+    invoke-virtual {v0, v10}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->setVisibility(I)V
 
     goto/16 :goto_0
 
     :cond_13
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcH:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hru:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
-    invoke-virtual {v0, v8}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->setVisibility(I)V
+    invoke-virtual {v0, v10}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->setVisibility(I)V
 
     goto/16 :goto_0
 
-    .line 1008
+    .line 1033
     :sswitch_data_0
     .sparse-switch
         0xc9 -> :sswitch_0
@@ -3617,285 +3647,148 @@
     .end sparse-switch
 .end method
 
-.method public final R(Ljava/lang/String;Z)V
+.method public final X(Ljava/lang/String;Z)V
     .locals 0
 
     .prologue
-    .line 2899
+    .line 3058
     return-void
 .end method
 
-.method public final S(Ljava/lang/String;Z)V
+.method public final Y(Ljava/lang/String;Z)V
     .locals 0
 
     .prologue
-    .line 3003
+    .line 3162
     return-void
-.end method
-
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
-    .locals 5
-
-    .prologue
-    .line 2942
-    invoke-virtual {p4}, Lcom/tencent/mm/r/j;->getType()I
-
-    move-result v0
-
-    const/16 v1, 0xda
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWP:Lcom/tencent/mm/ui/base/p;
-
-    if-eqz v0, :cond_0
-
-    .line 2943
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWP:Lcom/tencent/mm/ui/base/p;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/p;->dismiss()V
-
-    .line 2946
-    :cond_0
-    if-nez p1, :cond_1
-
-    if-nez p2, :cond_1
-
-    .line 2955
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/h/f;->vn(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/h/k;
-
-    move-result-object v0
-
-    .line 2956
-    if-nez v0, :cond_2
-
-    .line 2957
-    const-string/jumbo v0, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, "invalid pcid:"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 2958
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->finish()V
-
-    .line 2991
-    :cond_1
-    :goto_0
-    return-void
-
-    .line 2961
-    :cond_2
-    const-string/jumbo v1, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v3, "snsId: "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string/jumbo v3, "  username:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v3, v0, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 2965
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
-
-    if-nez v1, :cond_3
-
-    .line 2966
-    const-string/jumbo v0, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
-
-    const-string/jumbo v1, "fatal error! Sns onSceneEnd before initView and infoHeader is null!"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 2967
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->finish()V
-
-    goto :goto_0
-
-    .line 2970
-    :cond_3
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aBH()Z
-
-    .line 2972
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/d/ai;->k(Lcom/tencent/mm/plugin/sns/h/k;)Lcom/tencent/mm/protocal/b/aqi;
-
-    move-result-object v1
-
-    .line 2973
-    const-string/jumbo v2, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v4, "onsceneend "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v4, v1, Lcom/tencent/mm/protocal/b/aqi;->jJU:Ljava/util/LinkedList;
-
-    invoke-virtual {v4}, Ljava/util/LinkedList;->size()I
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string/jumbo v4, " "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    iget-object v4, v1, Lcom/tencent/mm/protocal/b/aqi;->jJX:Ljava/util/LinkedList;
-
-    invoke-virtual {v4}, Ljava/util/LinkedList;->size()I
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 2974
-    if-eqz v1, :cond_1
-
-    .line 2979
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcn:Ljava/util/LinkedList;
-
-    iget-object v3, v1, Lcom/tencent/mm/protocal/b/aqi;->jJU:Ljava/util/LinkedList;
-
-    invoke-static {v2, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->d(Ljava/util/LinkedList;Ljava/util/LinkedList;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    .line 2980
-    iget-object v2, v1, Lcom/tencent/mm/protocal/b/aqi;->jJU:Ljava/util/LinkedList;
-
-    iget-object v3, v1, Lcom/tencent/mm/protocal/b/aqi;->jJX:Ljava/util/LinkedList;
-
-    invoke-virtual {v3}, Ljava/util/LinkedList;->isEmpty()Z
-
-    move-result v3
-
-    invoke-direct {p0, v2, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->e(Ljava/util/List;Z)Z
-
-    .line 2981
-    iget-object v2, v1, Lcom/tencent/mm/protocal/b/aqi;->jJU:Ljava/util/LinkedList;
-
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcn:Ljava/util/LinkedList;
-
-    .line 2983
-    :cond_4
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcf:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
-
-    if-eqz v2, :cond_5
-
-    .line 2984
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcf:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
-
-    invoke-virtual {v2, v0, v3}, Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;->a(Lcom/tencent/mm/plugin/sns/h/k;Lcom/tencent/mm/plugin/sns/ui/c/b;)V
-
-    .line 2986
-    :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
-
-    iget-object v2, v1, Lcom/tencent/mm/protocal/b/aqi;->jJX:Ljava/util/LinkedList;
-
-    iget-object v1, v1, Lcom/tencent/mm/protocal/b/aqi;->jJU:Ljava/util/LinkedList;
-
-    iput-object v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->hdq:Ljava/util/LinkedList;
-
-    iput-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->hdr:Ljava/util/LinkedList;
-
-    .line 2987
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hci:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->notifyDataSetChanged()V
-
-    goto/16 :goto_0
 .end method
 
 .method public final a(ZZLjava/lang/String;Z)V
     .locals 0
 
     .prologue
-    .line 2996
+    .line 3155
     return-void
 .end method
 
-.method final aBH()Z
-    .locals 13
+.method public final aAK()V
+    .locals 3
 
     .prologue
-    .line 1463
+    const/4 v2, 0x0
+
+    .line 3166
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aRX()I
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_2
+
+    .line 3167
+    const-string/jumbo v0, "MicroMsg.SnsCommentDetailUI"
+
+    const-string/jumbo v1, "keybaordhide! "
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 3168
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrb:Z
+
+    .line 3171
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+
+    iget-boolean v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->fhj:Z
+
+    if-eqz v0, :cond_1
+
+    .line 3172
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+
+    iput-boolean v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->fhj:Z
+
+    .line 3183
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 3175
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->aEJ()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 3176
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->aEM()V
+
+    .line 3177
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+
+    const v1, 0x7f08130d
+
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->xf(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 3180
+    :cond_2
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aRX()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    .line 3181
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aEE()V
+
+    goto :goto_0
+.end method
+
+.method public final aAf()V
+    .locals 0
+
+    .prologue
+    .line 3062
+    return-void
+.end method
+
+.method final aED()Z
+    .locals 14
+
+    .prologue
+    .line 1488
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fb(Z)Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fk(Z)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v10
 
-    .line 1464
+    .line 1489
     if-nez v10, :cond_0
 
-    .line 1465
+    .line 1490
     const/4 v0, 0x0
 
-    .line 2329
+    .line 2483
     :goto_0
     return v0
 
-    .line 1467
+    .line 1492
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
+    const-string/jumbo v0, "MicroMsg.SnsCommentDetailUI"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3903,7 +3796,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->toString()Ljava/lang/String;
 
@@ -3917,17 +3810,17 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1469
+    .line 1494
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 1470
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    .line 1495
+    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
 
@@ -3939,17 +3832,17 @@
 
     invoke-virtual {v1, v0}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 1472
+    .line 1497
     iget v1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->mScreenWidth:I
 
-    .line 1473
+    .line 1498
     iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
     iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->mScreenHeight:I
 
-    .line 1475
+    .line 1500
     iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->mScreenHeight:I
 
     iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->mScreenWidth:I
@@ -3961,16 +3854,16 @@
     :goto_1
     iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->mScreenWidth:I
 
-    .line 1477
+    .line 1502
     iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->mScreenWidth:I
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcD:I
+    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrp:I
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {v1, v2}, Lcom/tencent/mm/az/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -3978,24 +3871,24 @@
 
     div-int/lit8 v0, v0, 0x3
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcC:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hro:I
 
-    .line 1478
-    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/h/k;->azR()Lcom/tencent/mm/protocal/b/atp;
+    .line 1503
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aCD()Lcom/tencent/mm/protocal/b/auf;
 
     move-result-object v11
 
-    .line 1479
-    invoke-static {v11}, Lcom/tencent/mm/plugin/sns/ui/an;->c(Lcom/tencent/mm/protocal/b/atp;)I
+    .line 1504
+    invoke-static {v11}, Lcom/tencent/mm/plugin/sns/ui/aq;->c(Lcom/tencent/mm/protocal/b/auf;)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
-    .line 1480
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 1505
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v1, 0x7f070d9e
+    const v1, 0x7f100ff6
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -4003,14 +3896,14 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 1481
+    .line 1506
     if-eqz v0, :cond_1
 
     if-nez v10, :cond_5
 
-    .line 1482
+    .line 1507
     :cond_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
+    const-string/jumbo v1, "MicroMsg.SnsCommentDetailUI"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -4046,20 +3939,20 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1483
+    .line 1508
     const/4 v0, 0x0
 
     goto/16 :goto_0
 
-    .line 1475
+    .line 1500
     :cond_2
     iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->mScreenWidth:I
 
     goto :goto_1
 
-    .line 1482
+    .line 1507
     :cond_3
     const/4 v0, 0x0
 
@@ -4073,38 +3966,38 @@
     :cond_5
     move-object v1, v0
 
-    .line 1485
+    .line 1510
     check-cast v1, Lcom/tencent/mm/ui/tools/MaskImageButton;
 
-    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/h/k;->aAl()Ljava/lang/String;
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aCX()Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, v1, Lcom/tencent/mm/ui/tools/MaskImageButton;->lxa:Ljava/lang/Object;
+    iput-object v2, v1, Lcom/tencent/mm/ui/tools/MaskImageButton;->lXN:Ljava/lang/Object;
 
-    .line 1486
-    iget-object v1, v10, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
+    .line 1511
+    iget-object v1, v10, Lcom/tencent/mm/plugin/sns/i/k;->field_userName:Ljava/lang/String;
 
     const/4 v2, 0x1
 
     invoke-static {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/ui/a$b;->b(Landroid/widget/ImageView;Ljava/lang/String;Z)V
 
-    .line 1487
-    iget-object v1, v10, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
+    .line 1512
+    iget-object v1, v10, Lcom/tencent/mm/plugin/sns/i/k;->field_userName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setTag(Ljava/lang/Object;)V
 
-    .line 1488
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    .line 1513
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/c/b;->hoR:Landroid/view/View$OnClickListener;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFo:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1491
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 1516
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v1, 0x7f070070
+    const v1, 0x7f100563
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -4112,17 +4005,17 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 1492
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcs:Lcom/tencent/mm/storage/q;
+    .line 1517
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hre:Lcom/tencent/mm/storage/q;
 
-    iget-object v2, v10, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
+    iget-object v2, v10, Lcom/tencent/mm/plugin/sns/i/k;->field_userName:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/q;->Ep(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/q;->GD(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
 
     move-result-object v3
 
-    .line 1493
-    const-string/jumbo v1, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
+    .line 1518
+    const-string/jumbo v1, "MicroMsg.SnsCommentDetailUI"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -4130,7 +4023,7 @@
 
     invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, v10, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
+    iget-object v4, v10, Lcom/tencent/mm/plugin/sns/i/k;->field_userName:Ljava/lang/String;
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4142,7 +4035,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/h/k;->aAf()Ljava/lang/String;
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aCE()Ljava/lang/String;
 
     move-result-object v4
 
@@ -4156,7 +4049,7 @@
 
     move-result-object v2
 
-    iget v4, v10, Lcom/tencent/mm/plugin/sns/h/k;->field_createTime:I
+    iget v4, v10, Lcom/tencent/mm/plugin/sns/i/k;->field_createTime:I
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -4166,26 +4059,26 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1494
+    .line 1519
     if-nez v3, :cond_6
 
-    .line 1495
+    .line 1520
     const/4 v0, 0x0
 
     goto/16 :goto_0
 
-    .line 1497
+    .line 1522
     :cond_6
-    iget-wide v1, v3, Lcom/tencent/mm/h/a;->bvi:J
+    iget-wide v4, v3, Lcom/tencent/mm/i/a;->bjS:J
 
-    long-to-int v1, v1
+    long-to-int v1, v4
 
     if-nez v1, :cond_7
 
-    .line 1498
-    const-string/jumbo v1, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
+    .line 1523
+    const-string/jumbo v1, "MicroMsg.SnsCommentDetailUI"
 
     const-string/jumbo v2, "getContact %s"
 
@@ -4195,76 +4088,76 @@
 
     const/4 v5, 0x0
 
-    iget-object v6, v10, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
+    iget-object v6, v10, Lcom/tencent/mm/plugin/sns/i/k;->field_userName:Ljava/lang/String;
 
     aput-object v6, v4, v5
 
-    invoke-static {v1, v2, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1499
-    sget-object v1, Lcom/tencent/mm/model/z$a;->bAs:Lcom/tencent/mm/model/z$c;
+    .line 1524
+    sget-object v1, Lcom/tencent/mm/model/z$a;->btv:Lcom/tencent/mm/model/z$c;
 
-    iget-object v2, v10, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
+    iget-object v2, v10, Lcom/tencent/mm/plugin/sns/i/k;->field_userName:Ljava/lang/String;
 
     const-string/jumbo v4, ""
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcY:Lcom/tencent/mm/model/z$c$a;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrL:Lcom/tencent/mm/model/z$c$a;
 
     invoke-interface {v1, v2, v4, v5}, Lcom/tencent/mm/model/z$c;->a(Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/model/z$c$a;)V
 
-    .line 1501
+    .line 1526
     :cond_7
     if-nez v3, :cond_e
 
-    iget-object v1, v10, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
+    iget-object v1, v10, Lcom/tencent/mm/plugin/sns/i/k;->field_userName:Ljava/lang/String;
 
     :goto_4
     const-string/jumbo v2, ""
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1502
+    .line 1527
     const/16 v2, 0x20
 
-    invoke-virtual {v10, v2}, Lcom/tencent/mm/plugin/sns/h/k;->lN(I)Z
+    invoke-virtual {v10, v2}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_8
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_8
 
-    .line 1503
-    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/h/k;->aAq()Lcom/tencent/mm/plugin/sns/h/b;
+    .line 1528
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aDc()Lcom/tencent/mm/plugin/sns/i/b;
 
     move-result-object v2
 
-    .line 1504
+    .line 1529
     if-eqz v2, :cond_8
 
-    iget-object v4, v2, Lcom/tencent/mm/plugin/sns/h/b;->bNn:Ljava/lang/String;
+    iget-object v4, v2, Lcom/tencent/mm/plugin/sns/i/b;->bGH:Ljava/lang/String;
 
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_8
 
-    .line 1505
-    iget-object v1, v2, Lcom/tencent/mm/plugin/sns/h/b;->bNn:Ljava/lang/String;
+    .line 1530
+    iget-object v1, v2, Lcom/tencent/mm/plugin/sns/i/b;->bGH:Ljava/lang/String;
 
-    .line 1510
+    .line 1535
     :cond_8
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    .line 1511
-    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    .line 1536
+    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/16 v4, 0xb
 
@@ -4272,7 +4165,7 @@
 
     const/4 v2, 0x3
 
-    .line 1513
+    .line 1538
     :goto_5
     new-instance v4, Lcom/tencent/mm/pluginsdk/ui/d/f;
 
@@ -4282,20 +4175,20 @@
 
     invoke-direct {v4, v5}, Lcom/tencent/mm/pluginsdk/ui/d/f;-><init>(Landroid/text/SpannableString;)V
 
-    .line 1514
+    .line 1539
     new-instance v5, Lcom/tencent/mm/pluginsdk/ui/d/j;
 
     new-instance v6, Lcom/tencent/mm/plugin/sns/data/a;
 
     const/16 v7, 0x20
 
-    invoke-virtual {v10, v7}, Lcom/tencent/mm/plugin/sns/h/k;->lN(I)Z
+    invoke-virtual {v10, v7}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
 
     move-result v7
 
-    iget-object v3, v3, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v3, v3, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/h/k;->aAl()Ljava/lang/String;
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aCX()Ljava/lang/String;
 
     move-result-object v8
 
@@ -4303,28 +4196,28 @@
 
     invoke-direct {v6, v7, v3, v8, v9}, Lcom/tencent/mm/plugin/sns/data/a;-><init>(ZLjava/lang/String;Ljava/lang/String;I)V
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcw:Lcom/tencent/mm/plugin/sns/ui/h;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hri:Lcom/tencent/mm/plugin/sns/ui/h;
 
     invoke-direct {v5, v6, v3, v2}, Lcom/tencent/mm/pluginsdk/ui/d/j;-><init>(Ljava/lang/Object;Lcom/tencent/mm/pluginsdk/ui/d/j$a;I)V
 
     invoke-virtual {v4, v5, v1}, Lcom/tencent/mm/pluginsdk/ui/d/f;->e(Ljava/lang/Object;Ljava/lang/CharSequence;)V
 
-    .line 1516
-    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/v;
+    .line 1541
+    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/x;
 
-    invoke-direct {v1}, Lcom/tencent/mm/plugin/sns/ui/v;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/plugin/sns/ui/x;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 1517
+    .line 1542
     sget-object v1, Landroid/widget/TextView$BufferType;->SPANNABLE:Landroid/widget/TextView$BufferType;
 
     invoke-virtual {v0, v4, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
-    .line 1519
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 1544
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v1, 0x7f070da6
+    const v1, 0x7f100ff8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -4332,33 +4225,33 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 1520
+    .line 1545
     const-string/jumbo v1, ""
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1522
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/at;
+    .line 1547
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/az;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/at;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/az;-><init>(Landroid/view/View;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcZ:Lcom/tencent/mm/plugin/sns/ui/at;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrM:Lcom/tencent/mm/plugin/sns/ui/az;
 
-    .line 1524
+    .line 1549
     const/16 v0, 0x20
 
-    invoke-virtual {v10, v0}, Lcom/tencent/mm/plugin/sns/h/k;->lN(I)Z
+    invoke-virtual {v10, v0}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_10
 
-    .line 1525
-    iget-object v6, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcZ:Lcom/tencent/mm/plugin/sns/ui/at;
+    .line 1550
+    iget-object v6, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrM:Lcom/tencent/mm/plugin/sns/ui/az;
 
-    iget-wide v0, v10, Lcom/tencent/mm/plugin/sns/h/k;->field_snsId:J
+    iget-wide v0, v10, Lcom/tencent/mm/plugin/sns/i/k;->field_snsId:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -4366,59 +4259,59 @@
 
     new-instance v0, Lcom/tencent/mm/plugin/sns/data/b;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcZ:Lcom/tencent/mm/plugin/sns/ui/at;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrM:Lcom/tencent/mm/plugin/sns/ui/az;
 
     const/4 v2, 0x0
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcr:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
 
-    iget-wide v4, v10, Lcom/tencent/mm/plugin/sns/h/k;->field_snsId:J
+    iget-wide v4, v10, Lcom/tencent/mm/plugin/sns/i/k;->field_snsId:J
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/plugin/sns/data/b;-><init>(Lcom/tencent/mm/plugin/sns/ui/at;ILjava/lang/String;J)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/plugin/sns/data/b;-><init>(Lcom/tencent/mm/plugin/sns/ui/az;ILjava/lang/String;J)V
 
-    invoke-virtual {v6, v7, v0}, Lcom/tencent/mm/plugin/sns/ui/at;->h(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v6, v7, v0}, Lcom/tencent/mm/plugin/sns/ui/az;->l(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 1526
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcZ:Lcom/tencent/mm/plugin/sns/ui/at;
+    .line 1551
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrM:Lcom/tencent/mm/plugin/sns/ui/az;
 
-    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/h/k;->aAq()Lcom/tencent/mm/plugin/sns/h/b;
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aDc()Lcom/tencent/mm/plugin/sns/i/b;
 
     move-result-object v1
 
-    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/h/k;->aAr()Lcom/tencent/mm/plugin/sns/h/a;
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aDd()Lcom/tencent/mm/plugin/sns/i/a;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/sns/ui/at;->a(Lcom/tencent/mm/plugin/sns/h/b;Lcom/tencent/mm/plugin/sns/h/a;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/sns/ui/az;->a(Lcom/tencent/mm/plugin/sns/i/b;Lcom/tencent/mm/plugin/sns/i/a;)V
 
-    .line 1527
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcZ:Lcom/tencent/mm/plugin/sns/ui/at;
+    .line 1552
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrM:Lcom/tencent/mm/plugin/sns/ui/az;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/c/b;->hpa:Landroid/view/View$OnClickListener;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFx:Landroid/view/View$OnClickListener;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/c/b;->hpm:Landroid/view/View$OnClickListener;
+    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFJ:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/sns/ui/at;->a(Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/sns/ui/az;->a(Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;)V
 
-    .line 1528
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcZ:Lcom/tencent/mm/plugin/sns/ui/at;
+    .line 1553
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrM:Lcom/tencent/mm/plugin/sns/ui/az;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/at;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/az;->setVisibility(I)V
 
-    .line 1534
+    .line 1559
     :goto_6
-    iget-object v1, v11, Lcom/tencent/mm/protocal/b/atp;->jMu:Ljava/lang/String;
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->klf:Ljava/lang/String;
 
-    .line 1536
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 1561
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v2, 0x7f07009d
+    const v2, 0x7f100145
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -4426,12 +4319,12 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcd:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqP:Landroid/widget/TextView;
 
-    .line 1538
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/aj;
+    .line 1563
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/an;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
     const/4 v3, 0x1
 
@@ -4439,29 +4332,29 @@
 
     const/4 v5, 0x2
 
-    invoke-direct {v0, v2, v3, v4, v5}, Lcom/tencent/mm/plugin/sns/ui/aj;-><init>(Ljava/lang/String;ZZI)V
+    invoke-direct {v0, v2, v3, v4, v5}, Lcom/tencent/mm/plugin/sns/ui/an;-><init>(Ljava/lang/String;ZZI)V
 
-    .line 1539
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcd:Landroid/widget/TextView;
+    .line 1564
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqP:Landroid/widget/TextView;
 
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 1544
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dRJ:Lcom/tencent/mm/ui/tools/m;
+    .line 1569
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dTR:Lcom/tencent/mm/ui/tools/m;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcd:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqP:Landroid/widget/TextView;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/c/b;->hoT:Lcom/tencent/mm/plugin/sns/ui/c/c;
+    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFq:Lcom/tencent/mm/plugin/sns/ui/c/c;
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    iget-object v4, v4, Lcom/tencent/mm/plugin/sns/ui/c/b;->hoQ:Lcom/tencent/mm/plugin/sns/ui/c/a;
+    iget-object v4, v4, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFn:Lcom/tencent/mm/plugin/sns/ui/c/a;
 
     invoke-virtual {v0, v2, v3, v4}, Lcom/tencent/mm/ui/tools/m;->a(Landroid/view/View;Landroid/view/View$OnCreateContextMenuListener;Lcom/tencent/mm/ui/base/n$d;)V
 
-    .line 1548
+    .line 1573
     if-eqz v1, :cond_9
 
     const-string/jumbo v0, ""
@@ -4472,40 +4365,40 @@
 
     if-eqz v0, :cond_11
 
-    .line 1549
+    .line 1574
     :cond_9
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcd:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqP:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1556
+    .line 1581
     :goto_7
-    sget-object v0, Lcom/tencent/mm/plugin/sns/b/a;->cob:Lcom/tencent/mm/pluginsdk/f;
+    sget-object v0, Lcom/tencent/mm/plugin/sns/b/a;->cjp:Lcom/tencent/mm/pluginsdk/f;
 
-    iget-object v1, v11, Lcom/tencent/mm/protocal/b/atp;->jMw:Lcom/tencent/mm/protocal/b/ba;
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->klh:Lcom/tencent/mm/protocal/b/bd;
 
-    iget-object v1, v1, Lcom/tencent/mm/protocal/b/ba;->iXW:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/bd;->jvB:Ljava/lang/String;
 
-    invoke-interface {v0, p0, v1}, Lcom/tencent/mm/pluginsdk/f;->m(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-interface {v0, p0, v1}, Lcom/tencent/mm/pluginsdk/f;->n(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
-    sget-object v1, Lcom/tencent/mm/plugin/sns/b/a;->cob:Lcom/tencent/mm/pluginsdk/f;
+    sget-object v1, Lcom/tencent/mm/plugin/sns/b/a;->cjp:Lcom/tencent/mm/pluginsdk/f;
 
-    iget-object v2, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    iget-object v2, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget-object v2, v2, Lcom/tencent/mm/protocal/b/iv;->eiq:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/protocal/b/je;->emu:Ljava/lang/String;
 
     const-string/jumbo v3, "timeline"
 
     invoke-interface {v1, v2, v3, v0}, Lcom/tencent/mm/pluginsdk/f;->a(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
-    .line 1559
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 1584
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v1, 0x7f070da9
+    const v1, 0x7f100ffc
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -4513,125 +4406,130 @@
 
     check-cast v0, Landroid/view/ViewStub;
 
-    .line 1560
-    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcW:Z
+    .line 1585
+    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrJ:Z
 
     if-nez v1, :cond_c
 
-    .line 1561
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    .line 1586
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_12
 
-    .line 1562
-    const v1, 0x7f0a041a
+    .line 1587
+    const v1, 0x7f0305af
 
     invoke-virtual {v0, v1}, Landroid/view/ViewStub;->setLayoutResource(I)V
 
-    .line 1577
+    .line 1602
     :cond_a
     :goto_8
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/4 v2, 0x2
 
     if-eq v1, v2, :cond_b
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/4 v2, 0x3
 
     if-eq v1, v2, :cond_b
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/4 v2, 0x4
 
     if-eq v1, v2, :cond_b
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/4 v2, 0x5
 
     if-ne v1, v2, :cond_19
 
-    .line 1578
+    .line 1603
     :cond_b
     invoke-virtual {v0}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+    check-cast v1, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcX:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrK:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
 
-    .line 1590
+    .line 1615
     :goto_9
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcW:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrJ:Z
 
-    .line 1592
+    .line 1617
     :cond_c
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
-    const/4 v1, 0x6
+    const/4 v2, 0x6
 
-    if-eq v0, v1, :cond_1d
+    if-eq v1, v2, :cond_1d
 
-    .line 1594
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    .line 1619
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
-    const/4 v1, 0x2
+    const/4 v2, 0x2
 
-    if-eq v0, v1, :cond_d
+    if-eq v1, v2, :cond_d
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
-    const/4 v1, 0x3
+    const/4 v2, 0x3
 
-    if-eq v0, v1, :cond_d
+    if-eq v1, v2, :cond_d
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
-    const/4 v1, 0x4
+    const/4 v2, 0x4
 
-    if-eq v0, v1, :cond_d
+    if-eq v1, v2, :cond_d
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
-    const/4 v1, 0x5
+    const/4 v2, 0x5
 
-    if-ne v0, v1, :cond_24
+    if-ne v1, v2, :cond_28
 
-    .line 1595
+    .line 1620
     :cond_d
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcX:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrK:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->gZC:Ljava/util/ArrayList;
+    if-eqz v1, :cond_27
+
+    .line 1621
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrK:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->hmU:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 1596
+    .line 1622
     const/4 v0, 0x0
 
     move v1, v0
 
     :goto_a
-    sget-object v0, Lcom/tencent/mm/plugin/sns/ui/ai;->hgg:[I
+    sget-object v0, Lcom/tencent/mm/plugin/sns/ui/am;->huW:[I
 
-    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     aget v0, v0, v2
 
     if-ge v1, v0, :cond_1c
 
-    .line 1597
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcX:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+    .line 1623
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrK:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
 
-    sget-object v2, Lcom/tencent/mm/plugin/sns/ui/ai;->hgk:[I
+    sget-object v2, Lcom/tencent/mm/plugin/sns/ui/am;->hva:[I
 
     aget v2, v2, v1
 
@@ -4641,65 +4539,65 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/TagImageView;
 
-    .line 1598
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcX:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+    .line 1624
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrK:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
 
     invoke-virtual {v2, v0}, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->a(Lcom/tencent/mm/plugin/sns/ui/TagImageView;)V
 
-    .line 1600
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    .line 1626
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/c/b;->hac:Landroid/view/View$OnClickListener;
+    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/c/b;->hnu:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/plugin/sns/ui/TagImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1602
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dRJ:Lcom/tencent/mm/ui/tools/m;
+    .line 1628
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dTR:Lcom/tencent/mm/ui/tools/m;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/c/b;->hpe:Lcom/tencent/mm/plugin/sns/ui/c/c;
+    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFB:Lcom/tencent/mm/plugin/sns/ui/c/c;
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    iget-object v4, v4, Lcom/tencent/mm/plugin/sns/ui/c/b;->hoQ:Lcom/tencent/mm/plugin/sns/ui/c/a;
+    iget-object v4, v4, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFn:Lcom/tencent/mm/plugin/sns/ui/c/a;
 
     invoke-virtual {v2, v0, v3, v4}, Lcom/tencent/mm/ui/tools/m;->a(Landroid/view/View;Landroid/view/View$OnCreateContextMenuListener;Lcom/tencent/mm/ui/base/n$d;)V
 
-    .line 1596
+    .line 1622
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_a
 
-    .line 1501
+    .line 1526
     :cond_e
-    invoke-virtual {v3}, Lcom/tencent/mm/h/a;->qz()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/tencent/mm/i/a;->pc()Ljava/lang/String;
 
     move-result-object v1
 
     goto/16 :goto_4
 
-    .line 1511
+    .line 1536
     :cond_f
     const/4 v2, 0x2
 
     goto/16 :goto_5
 
-    .line 1530
+    .line 1555
     :cond_10
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcZ:Lcom/tencent/mm/plugin/sns/ui/at;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrM:Lcom/tencent/mm/plugin/sns/ui/az;
 
     const/16 v1, 0x8
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/at;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/az;->setVisibility(I)V
 
     goto/16 :goto_6
 
-    .line 1551
+    .line 1576
     :cond_11
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcd:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqP:Landroid/widget/TextView;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -4721,15 +4619,15 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1552
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcd:Landroid/widget/TextView;
+    .line 1577
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqP:Landroid/widget/TextView;
 
     const/4 v1, 0x2
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/d/e;->a(Landroid/widget/TextView;I)Landroid/text/SpannableString;
+    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/d/e;->b(Landroid/widget/TextView;I)Landroid/text/SpannableString;
 
-    .line 1553
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcd:Landroid/widget/TextView;
+    .line 1578
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqP:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
@@ -4737,141 +4635,141 @@
 
     goto/16 :goto_7
 
-    .line 1563
+    .line 1588
     :cond_12
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/4 v2, 0x3
 
     if-ne v1, v2, :cond_13
 
-    .line 1564
-    const v1, 0x7f0a0469
+    .line 1589
+    const v1, 0x7f0305ac
 
     invoke-virtual {v0, v1}, Landroid/view/ViewStub;->setLayoutResource(I)V
 
     goto/16 :goto_8
 
-    .line 1565
+    .line 1590
     :cond_13
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/4 v2, 0x4
 
     if-ne v1, v2, :cond_14
 
-    .line 1566
-    const v1, 0x7f0a0434
+    .line 1591
+    const v1, 0x7f0305ad
 
     invoke-virtual {v0, v1}, Landroid/view/ViewStub;->setLayoutResource(I)V
 
     goto/16 :goto_8
 
-    .line 1567
+    .line 1592
     :cond_14
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/4 v2, 0x5
 
     if-ne v1, v2, :cond_15
 
-    .line 1568
-    const v1, 0x7f0a03fe
+    .line 1593
+    const v1, 0x7f0305ae
 
     invoke-virtual {v0, v1}, Landroid/view/ViewStub;->setLayoutResource(I)V
 
     goto/16 :goto_8
 
-    .line 1569
+    .line 1594
     :cond_15
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/4 v2, 0x6
 
     if-eq v1, v2, :cond_a
 
-    .line 1570
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    .line 1595
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/4 v2, 0x1
 
     if-eq v1, v2, :cond_16
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     if-nez v1, :cond_17
 
-    .line 1571
+    .line 1596
     :cond_16
-    const v1, 0x7f0a041f
+    const v1, 0x7f03058c
 
     invoke-virtual {v0, v1}, Landroid/view/ViewStub;->setLayoutResource(I)V
 
     goto/16 :goto_8
 
-    .line 1572
+    .line 1597
     :cond_17
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/16 v2, 0x9
 
     if-ne v1, v2, :cond_18
 
-    .line 1573
-    const v1, 0x7f0a042e
+    .line 1598
+    const v1, 0x7f03058a
 
     invoke-virtual {v0, v1}, Landroid/view/ViewStub;->setLayoutResource(I)V
 
     goto/16 :goto_8
 
-    .line 1574
+    .line 1599
     :cond_18
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/16 v2, 0xb
 
     if-ne v1, v2, :cond_a
 
-    .line 1575
-    const v1, 0x7f0a03f8
+    .line 1600
+    const v1, 0x7f030572
 
     invoke-virtual {v0, v1}, Landroid/view/ViewStub;->setLayoutResource(I)V
 
     goto/16 :goto_8
 
-    .line 1581
+    .line 1606
     :cond_19
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/16 v2, 0x9
 
     if-ne v1, v2, :cond_1a
 
-    .line 1582
+    .line 1607
     invoke-virtual {v0}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
 
     goto/16 :goto_9
 
-    .line 1584
+    .line 1609
     :cond_1a
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/16 v2, 0xb
 
     if-ne v1, v2, :cond_1b
 
-    .line 1585
+    .line 1610
     invoke-virtual {v0}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+    check-cast v1, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcX:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrK:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
 
     goto/16 :goto_9
 
-    .line 1588
+    .line 1613
     :cond_1b
     const/16 v1, 0x8
 
@@ -4879,20 +4777,20 @@
 
     goto/16 :goto_9
 
-    .line 1604
+    .line 1630
     :cond_1c
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcX:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrK:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcC:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hro:I
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->setImageViewWidth(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->nk(I)V
 
-    .line 1605
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcq:Lcom/tencent/mm/plugin/sns/ui/ai;
+    .line 1631
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrc:Lcom/tencent/mm/plugin/sns/ui/am;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcX:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrK:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
 
-    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/h/k;->aAl()Ljava/lang/String;
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aCX()Ljava/lang/String;
 
     move-result-object v3
 
@@ -4900,28 +4798,28 @@
 
     move-result v4
 
-    iget v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/4 v6, -0x1
 
     const/16 v2, 0x20
 
-    invoke-virtual {v10, v2}, Lcom/tencent/mm/plugin/sns/h/k;->lN(I)Z
+    invoke-virtual {v10, v2}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
 
     const/4 v7, 0x0
 
-    sget-object v8, Lcom/tencent/mm/storage/i$a;->kas:Lcom/tencent/mm/storage/i$a;
+    sget-object v8, Lcom/tencent/mm/storage/z;->kFT:Lcom/tencent/mm/storage/z;
 
     move-object v2, v11
 
-    invoke-virtual/range {v0 .. v8}, Lcom/tencent/mm/plugin/sns/ui/ai;->a(Lcom/tencent/mm/plugin/sns/ui/PhotosContent;Lcom/tencent/mm/protocal/b/atp;Ljava/lang/String;IIIZLcom/tencent/mm/storage/i$a;)V
+    invoke-virtual/range {v0 .. v8}, Lcom/tencent/mm/plugin/sns/ui/am;->a(Lcom/tencent/mm/plugin/sns/ui/PhotosContent;Lcom/tencent/mm/protocal/b/auf;Ljava/lang/String;IIIZLcom/tencent/mm/storage/z;)V
 
-    .line 1984
+    .line 2035
     :cond_1d
     :goto_b
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v1, 0x7f070daa
+    const v1, 0x7f100ffd
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -4929,59 +4827,81 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 1994
-    iget-object v1, v11, Lcom/tencent/mm/protocal/b/atp;->jMv:Lcom/tencent/mm/protocal/b/aby;
+    .line 2045
+    const/16 v1, 0x20
 
-    if-nez v1, :cond_50
+    invoke-virtual {v10, v1}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
 
-    const/4 v1, 0x0
+    move-result v1
 
-    .line 1995
-    :goto_c
-    iget-object v2, v11, Lcom/tencent/mm/protocal/b/atp;->jMv:Lcom/tencent/mm/protocal/b/aby;
+    if-eqz v1, :cond_5c
 
-    if-nez v2, :cond_51
+    .line 2046
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aDd()Lcom/tencent/mm/plugin/sns/i/a;
 
-    const/4 v2, 0x0
+    move-result-object v1
 
-    .line 1996
-    :goto_d
-    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/h/k;->aAl()Ljava/lang/String;
+    .line 2047
+    if-eqz v1, :cond_5b
+
+    .line 2048
+    iget-object v2, v1, Lcom/tencent/mm/plugin/sns/i/a;->hdH:Ljava/lang/String;
+
+    .line 2049
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/i/a;->hdI:Ljava/lang/String;
+
+    .line 2050
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aCX()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 1997
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    .line 2051
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_52
+    if-nez v3, :cond_5b
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    .line 2052
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
-    move-result v3
+    move-result v1
 
-    if-eqz v3, :cond_52
+    if-eqz v1, :cond_5a
 
-    .line 1998
-    const/16 v1, 0x8
+    .line 2054
+    const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 2017
-    :goto_e
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    .line 2065
+    :cond_1e
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/c/b;->hpk:Landroid/view/View$OnClickListener;
+    .line 2066
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setClickable(Z)V
+
+    .line 2067
+    const v1, -0x8c8c8d
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 2100
+    :goto_c
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
+
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFH:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 2019
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 2102
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v1, 0x7f070dac
+    const v1, 0x7f100fff
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -4989,24 +4909,24 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 2020
+    .line 2103
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v2, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    iget v3, v10, Lcom/tencent/mm/plugin/sns/h/k;->field_createTime:I
+    iget v3, v10, Lcom/tencent/mm/plugin/sns/i/k;->field_createTime:I
 
-    int-to-long v3, v3
+    int-to-long v4, v3
 
-    const-wide/16 v5, 0x3e8
+    const-wide/16 v6, 0x3e8
 
-    mul-long/2addr v3, v5
+    mul-long/2addr v4, v6
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/plugin/sns/ui/ao;->i(Landroid/content/Context;J)Ljava/lang/String;
+    invoke-static {v2, v4, v5}, Lcom/tencent/mm/plugin/sns/ui/at;->i(Landroid/content/Context;J)Ljava/lang/String;
 
     move-result-object v2
 
@@ -5020,10 +4940,118 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 2022
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 2106
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v1, 0x7f070dae
+    const v1, 0x7f101000
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/plugin/sns/ui/AsyncTextView;
+
+    .line 2107
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
+
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFK:Landroid/view/View$OnClickListener;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 2108
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 2109
+    const/16 v1, 0x20
+
+    invoke-virtual {v10, v1}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_20
+
+    .line 2110
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aDd()Lcom/tencent/mm/plugin/sns/i/a;
+
+    move-result-object v3
+
+    .line 2111
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aCX()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
+
+    .line 2112
+    iget v1, v3, Lcom/tencent/mm/plugin/sns/i/a;->hdJ:I
+
+    sget v2, Lcom/tencent/mm/plugin/sns/i/a;->hdv:I
+
+    if-ne v1, v2, :cond_63
+
+    .line 2113
+    iget-object v1, v3, Lcom/tencent/mm/plugin/sns/i/a;->hdK:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_62
+
+    .line 2114
+    iget-object v1, v3, Lcom/tencent/mm/plugin/sns/i/a;->hdK:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 2115
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 2169
+    :cond_1f
+    :goto_d
+    invoke-virtual {v0}, Landroid/widget/TextView;->getVisibility()I
+
+    move-result v1
+
+    const/16 v2, 0x8
+
+    if-eq v1, v2, :cond_20
+
+    iget-object v1, v3, Lcom/tencent/mm/plugin/sns/i/a;->hdL:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_20
+
+    .line 2170
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f0f01f8
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 2171
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 2176
+    :cond_20
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
+
+    const v1, 0x7f101002
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5031,57 +5059,57 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 2023
-    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/v;
+    .line 2177
+    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/x;
 
-    invoke-direct {v1}, Lcom/tencent/mm/plugin/sns/ui/v;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/plugin/sns/ui/x;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 2026
-    sget-object v1, Lcom/tencent/mm/plugin/sns/b/a;->cob:Lcom/tencent/mm/pluginsdk/f;
+    .line 2180
+    sget-object v1, Lcom/tencent/mm/plugin/sns/b/a;->cjp:Lcom/tencent/mm/pluginsdk/f;
 
-    iget-object v2, v11, Lcom/tencent/mm/protocal/b/atp;->jMw:Lcom/tencent/mm/protocal/b/ba;
+    iget-object v2, v11, Lcom/tencent/mm/protocal/b/auf;->klh:Lcom/tencent/mm/protocal/b/bd;
 
-    iget-object v2, v2, Lcom/tencent/mm/protocal/b/ba;->iXW:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/protocal/b/bd;->jvB:Ljava/lang/String;
 
-    invoke-interface {v1, p0, v2}, Lcom/tencent/mm/pluginsdk/f;->l(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v1, p0, v2}, Lcom/tencent/mm/pluginsdk/f;->m(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2027
-    sget-object v2, Lcom/tencent/mm/plugin/sns/b/a;->cob:Lcom/tencent/mm/pluginsdk/f;
+    .line 2181
+    sget-object v2, Lcom/tencent/mm/plugin/sns/b/a;->cjp:Lcom/tencent/mm/pluginsdk/f;
 
-    iget-object v3, v11, Lcom/tencent/mm/protocal/b/atp;->jMw:Lcom/tencent/mm/protocal/b/ba;
+    iget-object v3, v11, Lcom/tencent/mm/protocal/b/auf;->klh:Lcom/tencent/mm/protocal/b/bd;
 
-    iget-object v3, v3, Lcom/tencent/mm/protocal/b/ba;->iXW:Ljava/lang/String;
+    iget-object v3, v3, Lcom/tencent/mm/protocal/b/bd;->jvB:Ljava/lang/String;
 
     const-string/jumbo v4, "timeline"
 
-    invoke-interface {v2, p0, v3, v4}, Lcom/tencent/mm/pluginsdk/f;->e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v2, p0, v3, v4}, Lcom/tencent/mm/pluginsdk/f;->d(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 2028
-    sget-object v2, Lcom/tencent/mm/plugin/sns/b/a;->cob:Lcom/tencent/mm/pluginsdk/f;
+    .line 2182
+    sget-object v2, Lcom/tencent/mm/plugin/sns/b/a;->cjp:Lcom/tencent/mm/pluginsdk/f;
 
-    invoke-interface {v2, v1}, Lcom/tencent/mm/pluginsdk/f;->aT(Ljava/lang/String;)Z
+    invoke-interface {v2, v1}, Lcom/tencent/mm/pluginsdk/f;->aY(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_55
+    if-eqz v2, :cond_6a
 
-    .line 2033
+    .line 2187
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 2034
+    .line 2188
     new-instance v2, Landroid/text/SpannableString;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f0b1635
+    const v4, 0x7f081247
 
     invoke-virtual {p0, v4}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getString(I)Ljava/lang/String;
 
@@ -5101,7 +5129,7 @@
 
     invoke-direct {v2, v1}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 2035
+    .line 2189
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$a;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$a;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
@@ -5116,33 +5144,33 @@
 
     invoke-virtual {v2, v1, v3, v4, v5}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
 
-    .line 2036
+    .line 2190
     sget-object v1, Landroid/widget/TextView$BufferType;->SPANNABLE:Landroid/widget/TextView$BufferType;
 
     invoke-virtual {v0, v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
-    .line 2037
-    iget-object v1, v11, Lcom/tencent/mm/protocal/b/atp;->jMw:Lcom/tencent/mm/protocal/b/ba;
+    .line 2191
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->klh:Lcom/tencent/mm/protocal/b/bd;
 
-    if-eqz v1, :cond_1e
+    if-eqz v1, :cond_21
 
-    iget-object v1, v11, Lcom/tencent/mm/protocal/b/atp;->jMw:Lcom/tencent/mm/protocal/b/ba;
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->klh:Lcom/tencent/mm/protocal/b/bd;
 
-    iget-object v1, v1, Lcom/tencent/mm/protocal/b/ba;->iXW:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/bd;->jvB:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/pluginsdk/model/app/g;->zM(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/pluginsdk/model/app/g;->BI(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-nez v1, :cond_1f
+    if-nez v1, :cond_22
 
-    .line 2038
-    :cond_1e
+    .line 2192
+    :cond_21
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f08015c
+    const v2, 0x7f0f01f8
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -5150,20 +5178,20 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 2039
+    .line 2193
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 2041
-    :cond_1f
+    .line 2195
+    :cond_22
     invoke-virtual {v0, v11}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 2046
-    :goto_f
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 2200
+    :goto_e
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v1, 0x7f070db0
+    const v1, 0x7f101004
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5171,41 +5199,41 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 2047
-    iget-object v1, v10, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
+    .line 2201
+    iget-object v1, v10, Lcom/tencent/mm/plugin/sns/i/k;->field_userName:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eNy:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->baY:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_56
+    if-eqz v1, :cond_6b
 
-    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/h/k;->isValid()Z
-
-    move-result v1
-
-    if-nez v1, :cond_20
-
-    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/h/k;->aAn()Z
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->isValid()Z
 
     move-result v1
 
-    if-eqz v1, :cond_56
+    if-nez v1, :cond_23
 
-    .line 2048
-    :cond_20
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aCZ()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6b
+
+    .line 2202
+    :cond_23
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 2049
+    .line 2203
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/h/k;->aAl()Ljava/lang/String;
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aCX()Ljava/lang/String;
 
     move-result-object v2
 
@@ -5219,7 +5247,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/h/k;->aAf()Ljava/lang/String;
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aCE()Ljava/lang/String;
 
     move-result-object v2
 
@@ -5233,18 +5261,18 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 2050
+    .line 2204
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$22;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$22;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 2109
-    :goto_10
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 2263
+    :goto_f
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v1, 0x7f070dab
+    const v1, 0x7f100ffe
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5252,21 +5280,21 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 2111
-    invoke-static {v10}, Lcom/tencent/mm/plugin/sns/d/ai;->k(Lcom/tencent/mm/plugin/sns/h/k;)Lcom/tencent/mm/protocal/b/aqi;
+    .line 2265
+    invoke-static {v10}, Lcom/tencent/mm/plugin/sns/e/ah;->k(Lcom/tencent/mm/plugin/sns/i/k;)Lcom/tencent/mm/protocal/b/aqt;
 
     move-result-object v4
 
-    .line 2112
-    if-nez v4, :cond_57
+    .line 2266
+    if-nez v4, :cond_6c
 
-    .line 2113
+    .line 2267
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 2189
-    :goto_11
+    .line 2343
+    :goto_10
     new-instance v0, Landroid/view/animation/ScaleAnimation;
 
     const/4 v1, 0x0
@@ -5287,16 +5315,16 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFIFIF)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcj:Landroid/view/animation/ScaleAnimation;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqV:Landroid/view/animation/ScaleAnimation;
 
-    .line 2190
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcj:Landroid/view/animation/ScaleAnimation;
+    .line 2344
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqV:Landroid/view/animation/ScaleAnimation;
 
-    const-wide/16 v1, 0x96
+    const-wide/16 v2, 0x96
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
+    invoke-virtual {v0, v2, v3}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 2191
+    .line 2345
     new-instance v0, Landroid/view/animation/ScaleAnimation;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -5317,37 +5345,37 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFIFIF)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hck:Landroid/view/animation/ScaleAnimation;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqW:Landroid/view/animation/ScaleAnimation;
 
-    .line 2192
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hck:Landroid/view/animation/ScaleAnimation;
+    .line 2346
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqW:Landroid/view/animation/ScaleAnimation;
 
-    const-wide/16 v1, 0x96
+    const-wide/16 v2, 0x96
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
+    invoke-virtual {v0, v2, v3}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 2194
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 2348
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v1, 0x7f070db1
+    const v1, 0x7f1000dd
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hch:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqT:Landroid/view/View;
 
-    .line 2195
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hch:Landroid/view/View;
+    .line 2349
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqT:Landroid/view/View;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2196
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 2350
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v1, 0x7f070db5
+    const v1, 0x7f101005
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5355,28 +5383,28 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcl:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqX:Landroid/widget/LinearLayout;
 
-    .line 2197
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcl:Landroid/widget/LinearLayout;
+    .line 2351
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqX:Landroid/widget/LinearLayout;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$25;
 
-    invoke-direct {v1, p0, v10}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$25;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Lcom/tencent/mm/plugin/sns/h/k;)V
+    invoke-direct {v1, p0, v10}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$25;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Lcom/tencent/mm/plugin/sns/i/k;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 2212
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcl:Landroid/widget/LinearLayout;
+    .line 2366
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqX:Landroid/widget/LinearLayout;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gYg:Landroid/view/View$OnTouchListener;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hls:Landroid/view/View$OnTouchListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 2214
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 2368
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v1, 0x7f070db2
+    const v1, 0x7f100fec
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5384,10 +5412,10 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcm:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqY:Landroid/widget/LinearLayout;
 
-    .line 2215
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcm:Landroid/widget/LinearLayout;
+    .line 2369
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqY:Landroid/widget/LinearLayout;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$26;
 
@@ -5395,17 +5423,17 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 2224
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcm:Landroid/widget/LinearLayout;
+    .line 2378
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqY:Landroid/widget/LinearLayout;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gYg:Landroid/view/View$OnTouchListener;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hls:Landroid/view/View$OnTouchListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 2226
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 2380
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v1, 0x7f070db8
+    const v1, 0x7f101006
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5415,45 +5443,45 @@
 
     check-cast v7, Landroid/widget/ImageButton;
 
-    .line 2227
+    .line 2381
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fb(Z)Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fk(Z)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v0
 
-    .line 2228
-    iget v1, v0, Lcom/tencent/mm/plugin/sns/h/k;->field_localPrivate:I
+    .line 2382
+    iget v1, v0, Lcom/tencent/mm/plugin/sns/i/k;->field_localPrivate:I
 
     and-int/lit8 v1, v1, 0x1
 
-    if-eqz v1, :cond_21
+    if-eqz v1, :cond_24
 
-    .line 2229
+    .line 2383
     const/16 v1, 0x8
 
     invoke-virtual {v7, v1}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    .line 2231
-    :cond_21
-    if-eqz v0, :cond_22
+    .line 2385
+    :cond_24
+    if-eqz v0, :cond_25
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/k;->aAk()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/k;->aCW()Z
 
     move-result v0
 
-    if-nez v0, :cond_22
+    if-nez v0, :cond_25
 
-    .line 2232
+    .line 2386
     const/16 v0, 0x8
 
     invoke-virtual {v7, v0}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    .line 2234
-    :cond_22
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcm:Landroid/widget/LinearLayout;
+    .line 2388
+    :cond_25
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqY:Landroid/widget/LinearLayout;
 
-    const v1, 0x7f070db3
+    const v1, 0x7f100fed
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -5461,10 +5489,10 @@
 
     check-cast v5, Landroid/widget/ImageView;
 
-    .line 2235
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcl:Landroid/widget/LinearLayout;
+    .line 2389
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqX:Landroid/widget/LinearLayout;
 
-    const v1, 0x7f070db6
+    const v1, 0x7f100ff0
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -5472,10 +5500,10 @@
 
     check-cast v6, Landroid/widget/ImageView;
 
-    .line 2236
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcm:Landroid/widget/LinearLayout;
+    .line 2390
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqY:Landroid/widget/LinearLayout;
 
-    const v1, 0x7f070db4
+    const v1, 0x7f100fee
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -5483,10 +5511,10 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    .line 2237
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcl:Landroid/widget/LinearLayout;
+    .line 2391
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqX:Landroid/widget/LinearLayout;
 
-    const v1, 0x7f070db7
+    const v1, 0x7f100fef
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -5494,47 +5522,47 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    .line 2238
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    .line 2392
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/16 v1, 0xb
 
-    if-ne v0, v1, :cond_23
+    if-ne v0, v1, :cond_26
 
-    .line 2239
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 2393
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v1, 0x7f070db1
+    const v1, 0x7f1000dd
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    const v1, 0x7f040480
+    const v1, 0x7f020345
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 2241
-    const v0, 0x7f0404a1
+    .line 2395
+    const v0, 0x7f02044a
 
     invoke-virtual {v7, v0}, Landroid/widget/ImageButton;->setImageResource(I)V
 
-    .line 2243
-    const v0, 0x7f04048a
+    .line 2397
+    const v0, 0x7f02044b
 
     invoke-virtual {v5, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 2244
-    const v0, 0x7f040485
+    .line 2398
+    const v0, 0x7f02044c
 
     invoke-virtual {v6, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 2245
+    .line 2399
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f080122
+    const v1, 0x7f0f01e9
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -5542,12 +5570,12 @@
 
     invoke-virtual {v3, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 2247
+    .line 2401
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f080122
+    const v1, 0x7f0f01e9
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -5555,56 +5583,94 @@
 
     invoke-virtual {v4, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 2249
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcm:Landroid/widget/LinearLayout;
+    .line 2403
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqY:Landroid/widget/LinearLayout;
 
-    const v1, 0x7f0404b4
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
-
-    .line 2250
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcl:Landroid/widget/LinearLayout;
-
-    const v1, 0x7f04049b
+    const v1, 0x7f0204af
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
-    .line 2253
-    :cond_23
+    .line 2404
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqX:Landroid/widget/LinearLayout;
+
+    const v1, 0x7f0204b0
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
+
+    .line 2407
+    :cond_26
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$27;
 
     move-object v1, p0
 
     move-object v2, v10
 
-    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$27;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Lcom/tencent/mm/plugin/sns/h/k;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/ImageView;Landroid/widget/ImageView;)V
+    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$27;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Lcom/tencent/mm/plugin/sns/i/k;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/ImageView;Landroid/widget/ImageView;)V
 
     invoke-virtual {v7, v0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 2329
+    .line 2483
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1606
-    :cond_24
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    .line 1633
+    :cond_27
+    const-string/jumbo v1, "MicroMsg.SnsCommentDetailUI"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "the imagesKeeper is null,when viewtype = "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string/jumbo v3, ",stub is "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Landroid/view/ViewStub;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_b
+
+    .line 1635
+    :cond_28
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/16 v1, 0xb
 
-    if-ne v0, v1, :cond_2c
+    if-ne v0, v1, :cond_30
 
-    .line 1607
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcX:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+    .line 1636
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrK:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->gZC:Ljava/util/ArrayList;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->hmU:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 1608
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcX:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+    .line 1637
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrK:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
 
-    const v1, 0x7f070cec
+    const v1, 0x7f10102f
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->findViewById(I)Landroid/view/View;
 
@@ -5612,63 +5678,63 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/TagImageView;
 
-    .line 1609
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcX:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+    .line 1638
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrK:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->a(Lcom/tencent/mm/plugin/sns/ui/TagImageView;)V
 
-    .line 1610
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    .line 1639
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/c/b;->hac:Landroid/view/View$OnClickListener;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/c/b;->hnu:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/TagImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1612
-    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/h/k;->aAl()Ljava/lang/String;
+    .line 1641
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aCX()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1613
+    .line 1642
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1614
+    .line 1643
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1615
-    new-instance v3, Lcom/tencent/mm/plugin/sns/ui/ag;
+    .line 1644
+    new-instance v3, Lcom/tencent/mm/plugin/sns/ui/ak;
 
-    invoke-direct {v3}, Lcom/tencent/mm/plugin/sns/ui/ag;-><init>()V
+    invoke-direct {v3}, Lcom/tencent/mm/plugin/sns/ui/ak;-><init>()V
 
-    .line 1616
-    iput-object v1, v3, Lcom/tencent/mm/plugin/sns/ui/ag;->axC:Ljava/lang/String;
+    .line 1645
+    iput-object v1, v3, Lcom/tencent/mm/plugin/sns/ui/ak;->ajJ:Ljava/lang/String;
 
-    .line 1617
+    .line 1646
     const/4 v1, 0x0
 
-    iput v1, v3, Lcom/tencent/mm/plugin/sns/ui/ag;->index:I
+    iput v1, v3, Lcom/tencent/mm/plugin/sns/ui/ak;->index:I
 
-    .line 1618
-    iput-object v2, v3, Lcom/tencent/mm/plugin/sns/ui/ag;->heo:Ljava/util/List;
+    .line 1647
+    iput-object v2, v3, Lcom/tencent/mm/plugin/sns/ui/ak;->hta:Ljava/util/List;
 
-    .line 1619
+    .line 1648
     const/4 v1, 0x1
 
-    iput-boolean v1, v3, Lcom/tencent/mm/plugin/sns/ui/ag;->hbM:Z
+    iput-boolean v1, v3, Lcom/tencent/mm/plugin/sns/ui/ak;->hqC:Z
 
-    .line 1620
-    if-eqz v0, :cond_25
+    .line 1649
+    if-eqz v0, :cond_29
 
-    .line 1621
+    .line 1650
     invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/sns/ui/TagImageView;->setTag(Ljava/lang/Object;)V
 
-    .line 1624
-    :cond_25
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 1653
+    :cond_29
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v1, 0x7f070daf
+    const v1, 0x7f101003
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5676,37 +5742,37 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 1625
-    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
+    .line 1654
+    invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, v11, Lcom/tencent/mm/protocal/b/atp;->eiB:Ljava/lang/String;
+    iget-object v2, v11, Lcom/tencent/mm/protocal/b/auf;->emC:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-nez v1, :cond_27
+    if-nez v1, :cond_2b
 
-    .line 1626
-    invoke-static {v10}, Lcom/tencent/mm/plugin/sns/d/ai;->l(Lcom/tencent/mm/plugin/sns/h/k;)Lcom/tencent/mm/protocal/b/aqi;
+    .line 1655
+    invoke-static {v10}, Lcom/tencent/mm/plugin/sns/e/ah;->l(Lcom/tencent/mm/plugin/sns/i/k;)Lcom/tencent/mm/protocal/b/aqt;
 
     move-result-object v1
 
-    .line 1627
-    iget-object v2, v1, Lcom/tencent/mm/protocal/b/aqi;->jKj:Lcom/tencent/mm/protocal/b/aqw;
+    .line 1656
+    iget-object v2, v1, Lcom/tencent/mm/protocal/b/aqt;->kiG:Lcom/tencent/mm/protocal/b/ari;
 
-    if-eqz v2, :cond_26
+    if-eqz v2, :cond_2a
 
-    iget-object v2, v1, Lcom/tencent/mm/protocal/b/aqi;->jKj:Lcom/tencent/mm/protocal/b/aqw;
+    iget-object v2, v1, Lcom/tencent/mm/protocal/b/aqt;->kiG:Lcom/tencent/mm/protocal/b/ari;
 
-    iget v2, v2, Lcom/tencent/mm/protocal/b/aqw;->jKy:I
+    iget v2, v2, Lcom/tencent/mm/protocal/b/ari;->kiZ:I
 
-    if-eqz v2, :cond_26
+    if-eqz v2, :cond_2a
 
-    .line 1628
-    const v2, 0x7f0b10c1
+    .line 1657
+    const v2, 0x7f080b84
 
     const/4 v3, 0x1
 
@@ -5714,9 +5780,9 @@
 
     const/4 v4, 0x0
 
-    iget-object v1, v1, Lcom/tencent/mm/protocal/b/aqi;->jKj:Lcom/tencent/mm/protocal/b/aqw;
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/aqt;->kiG:Lcom/tencent/mm/protocal/b/ari;
 
-    iget v1, v1, Lcom/tencent/mm/protocal/b/aqw;->jKy:I
+    iget v1, v1, Lcom/tencent/mm/protocal/b/ari;->kiZ:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -5728,42 +5794,42 @@
 
     move-result-object v1
 
-    .line 1629
+    .line 1658
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1630
+    .line 1659
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1637
-    :goto_12
-    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/h/k;->aAe()Lcom/tencent/mm/protocal/b/ade;
+    .line 1666
+    :goto_11
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aCR()Lcom/tencent/mm/protocal/b/adx;
 
     move-result-object v0
 
-    .line 1638
-    if-eqz v0, :cond_2b
+    .line 1667
+    if-eqz v0, :cond_2f
 
-    .line 1639
-    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
+    .line 1668
+    invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, v11, Lcom/tencent/mm/protocal/b/atp;->eiB:Ljava/lang/String;
+    iget-object v2, v11, Lcom/tencent/mm/protocal/b/auf;->emC:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_28
+    if-eqz v1, :cond_2c
 
-    .line 1640
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcq:Lcom/tencent/mm/plugin/sns/ui/ai;
+    .line 1669
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrc:Lcom/tencent/mm/plugin/sns/ui/am;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcX:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrK:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
 
-    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/h/k;->aAl()Ljava/lang/String;
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aCX()Ljava/lang/String;
 
     move-result-object v3
 
@@ -5771,56 +5837,56 @@
 
     move-result v4
 
-    iget v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/4 v6, -0x1
 
     const/16 v2, 0x20
 
-    invoke-virtual {v10, v2}, Lcom/tencent/mm/plugin/sns/h/k;->lN(I)Z
+    invoke-virtual {v10, v2}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
 
     const/4 v7, 0x0
 
-    sget-object v8, Lcom/tencent/mm/storage/i$a;->kas:Lcom/tencent/mm/storage/i$a;
+    sget-object v8, Lcom/tencent/mm/storage/z;->kFT:Lcom/tencent/mm/storage/z;
 
     const/4 v9, 0x1
 
     move-object v2, v11
 
-    invoke-virtual/range {v0 .. v9}, Lcom/tencent/mm/plugin/sns/ui/ai;->a(Lcom/tencent/mm/plugin/sns/ui/PhotosContent;Lcom/tencent/mm/protocal/b/atp;Ljava/lang/String;IIIZLcom/tencent/mm/storage/i$a;Z)V
+    invoke-virtual/range {v0 .. v9}, Lcom/tencent/mm/plugin/sns/ui/am;->a(Lcom/tencent/mm/plugin/sns/ui/PhotosContent;Lcom/tencent/mm/protocal/b/auf;Ljava/lang/String;IIIZLcom/tencent/mm/storage/z;Z)V
 
     goto/16 :goto_b
 
-    .line 1632
-    :cond_26
+    .line 1661
+    :cond_2a
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    goto :goto_12
+    goto :goto_11
 
-    .line 1635
-    :cond_27
+    .line 1664
+    :cond_2b
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    goto :goto_12
+    goto :goto_11
 
-    .line 1643
-    :cond_28
-    invoke-static {v10}, Lcom/tencent/mm/plugin/sns/lucky/b/w;->h(Lcom/tencent/mm/plugin/sns/h/k;)Z
+    .line 1672
+    :cond_2c
+    invoke-static {v10}, Lcom/tencent/mm/plugin/sns/lucky/b/w;->h(Lcom/tencent/mm/plugin/sns/i/k;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_29
+    if-eqz v1, :cond_2d
 
-    .line 1644
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcq:Lcom/tencent/mm/plugin/sns/ui/ai;
+    .line 1673
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrc:Lcom/tencent/mm/plugin/sns/ui/am;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcX:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrK:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
 
-    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/h/k;->aAl()Ljava/lang/String;
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aCX()Ljava/lang/String;
 
     move-result-object v3
 
@@ -5828,38 +5894,38 @@
 
     move-result v4
 
-    iget v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/4 v6, -0x1
 
     const/16 v2, 0x20
 
-    invoke-virtual {v10, v2}, Lcom/tencent/mm/plugin/sns/h/k;->lN(I)Z
+    invoke-virtual {v10, v2}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
 
     const/4 v7, 0x0
 
-    sget-object v8, Lcom/tencent/mm/storage/i$a;->kas:Lcom/tencent/mm/storage/i$a;
+    sget-object v8, Lcom/tencent/mm/storage/z;->kFT:Lcom/tencent/mm/storage/z;
 
     const/4 v9, 0x0
 
     move-object v2, v11
 
-    invoke-virtual/range {v0 .. v9}, Lcom/tencent/mm/plugin/sns/ui/ai;->a(Lcom/tencent/mm/plugin/sns/ui/PhotosContent;Lcom/tencent/mm/protocal/b/atp;Ljava/lang/String;IIIZLcom/tencent/mm/storage/i$a;Z)V
+    invoke-virtual/range {v0 .. v9}, Lcom/tencent/mm/plugin/sns/ui/am;->a(Lcom/tencent/mm/plugin/sns/ui/PhotosContent;Lcom/tencent/mm/protocal/b/auf;Ljava/lang/String;IIIZLcom/tencent/mm/storage/z;Z)V
 
     goto/16 :goto_b
 
-    .line 1647
-    :cond_29
-    iget v1, v0, Lcom/tencent/mm/protocal/b/ade;->eRP:I
+    .line 1676
+    :cond_2d
+    iget v1, v0, Lcom/tencent/mm/protocal/b/adx;->eZJ:I
 
-    if-nez v1, :cond_2a
+    if-nez v1, :cond_2e
 
-    .line 1649
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcq:Lcom/tencent/mm/plugin/sns/ui/ai;
+    .line 1678
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrc:Lcom/tencent/mm/plugin/sns/ui/am;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcX:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrK:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
 
-    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/h/k;->aAl()Ljava/lang/String;
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aCX()Ljava/lang/String;
 
     move-result-object v3
 
@@ -5867,29 +5933,29 @@
 
     move-result v4
 
-    iget v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/4 v6, -0x1
 
     const/16 v2, 0x20
 
-    invoke-virtual {v10, v2}, Lcom/tencent/mm/plugin/sns/h/k;->lN(I)Z
+    invoke-virtual {v10, v2}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
 
     const/4 v7, 0x0
 
-    sget-object v8, Lcom/tencent/mm/storage/i$a;->kas:Lcom/tencent/mm/storage/i$a;
+    sget-object v8, Lcom/tencent/mm/storage/z;->kFT:Lcom/tencent/mm/storage/z;
 
     const/4 v9, 0x1
 
     move-object v2, v11
 
-    invoke-virtual/range {v0 .. v9}, Lcom/tencent/mm/plugin/sns/ui/ai;->a(Lcom/tencent/mm/plugin/sns/ui/PhotosContent;Lcom/tencent/mm/protocal/b/atp;Ljava/lang/String;IIIZLcom/tencent/mm/storage/i$a;Z)V
+    invoke-virtual/range {v0 .. v9}, Lcom/tencent/mm/plugin/sns/ui/am;->a(Lcom/tencent/mm/plugin/sns/ui/PhotosContent;Lcom/tencent/mm/protocal/b/auf;Ljava/lang/String;IIIZLcom/tencent/mm/storage/z;Z)V
 
     goto/16 :goto_b
 
-    .line 1652
-    :cond_2a
-    const-string/jumbo v1, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
+    .line 1681
+    :cond_2e
+    const-string/jumbo v1, "MicroMsg.SnsCommentDetailUI"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -5897,7 +5963,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v0, v0, Lcom/tencent/mm/protocal/b/ade;->eRP:I
+    iget v0, v0, Lcom/tencent/mm/protocal/b/adx;->eZJ:I
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -5907,13 +5973,13 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_b
 
-    .line 1656
-    :cond_2b
-    const-string/jumbo v0, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
+    .line 1685
+    :cond_2f
+    const-string/jumbo v0, "MicroMsg.SnsCommentDetailUI"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -5921,7 +5987,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/h/k;->aAl()Ljava/lang/String;
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aCX()Ljava/lang/String;
 
     move-result-object v2
 
@@ -5933,35 +5999,35 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_b
 
-    .line 1660
-    :cond_2c
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    .line 1689
+    :cond_30
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
     const/16 v1, 0x9
 
-    if-ne v0, v1, :cond_38
+    if-ne v0, v1, :cond_40
 
-    .line 1662
-    new-instance v6, Lcom/tencent/mm/plugin/sns/ui/ad;
+    .line 1691
+    new-instance v7, Lcom/tencent/mm/plugin/sns/ui/ae;
 
-    invoke-direct {v6}, Lcom/tencent/mm/plugin/sns/ui/ad;-><init>()V
+    invoke-direct {v7}, Lcom/tencent/mm/plugin/sns/ui/ae;-><init>()V
 
-    .line 1663
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 1692
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    .line 1664
-    const v0, 0x7f070049
+    .line 1693
+    const v0, 0x7f1003f5
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v7
+    move-result-object v8
 
-    .line 1665
-    const v0, 0x7f07002c
+    .line 1694
+    const v0, 0x7f100023
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5969,11 +6035,11 @@
 
     check-cast v2, Lcom/tencent/mm/plugin/sight/decode/a/a;
 
-    .line 1667
-    iput-object v7, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbj:Landroid/view/View;
+    .line 1696
+    iput-object v8, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hoK:Landroid/view/View;
 
-    .line 1668
-    const v0, 0x7f070cf5
+    .line 1697
+    const v0, 0x7f1000d0
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5981,10 +6047,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbk:Landroid/widget/ImageView;
+    iput-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfS:Landroid/widget/ImageView;
 
-    .line 1669
-    const v0, 0x7f0700d0
+    .line 1698
+    const v0, 0x7f100bc0
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5992,21 +6058,10 @@
 
     check-cast v0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
 
-    iput-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbl:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
+    iput-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfR:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
 
-    .line 1670
-    const v0, 0x7f070cf6
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbm:Landroid/widget/TextView;
-
-    .line 1671
-    const v0, 0x7f070cf4
+    .line 1699
+    const v0, 0x7f100f9c
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -6014,65 +6069,76 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbn:Landroid/widget/TextView;
+    iput-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfT:Landroid/widget/TextView;
 
-    .line 1672
-    iput-object v2, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->gzz:Lcom/tencent/mm/plugin/sight/decode/a/a;
+    .line 1700
+    const v0, 0x7f100f9b
 
-    .line 1673
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hoL:Landroid/widget/TextView;
+
+    .line 1701
+    iput-object v2, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->gGb:Lcom/tencent/mm/plugin/sight/decode/a/a;
+
+    .line 1702
     const/4 v0, 0x0
 
-    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/h/k;->aAl()Ljava/lang/String;
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aCX()Ljava/lang/String;
 
     move-result-object v1
 
     const/16 v3, 0x20
 
-    invoke-virtual {v10, v3}, Lcom/tencent/mm/plugin/sns/h/k;->lN(I)Z
+    invoke-virtual {v10, v3}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
 
     move-result v3
 
-    invoke-virtual {v6, v11, v0, v1, v3}, Lcom/tencent/mm/plugin/sns/ui/ad;->a(Lcom/tencent/mm/protocal/b/atp;ILjava/lang/String;Z)V
+    invoke-virtual {v7, v11, v0, v1, v3}, Lcom/tencent/mm/plugin/sns/ui/ae;->a(Lcom/tencent/mm/protocal/b/auf;ILjava/lang/String;Z)V
 
-    .line 1674
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbm:Landroid/widget/TextView;
+    .line 1703
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfT:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1675
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->gzz:Lcom/tencent/mm/plugin/sight/decode/a/a;
+    .line 1704
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->gGb:Lcom/tencent/mm/plugin/sight/decode/a/a;
 
-    invoke-interface {v0, v6}, Lcom/tencent/mm/plugin/sight/decode/a/a;->setTagObject(Ljava/lang/Object;)V
+    invoke-interface {v0, v7}, Lcom/tencent/mm/plugin/sight/decode/a/a;->aF(Ljava/lang/Object;)V
 
-    .line 1676
-    invoke-virtual {v7, v6}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    .line 1705
+    invoke-virtual {v8, v7}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 1678
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbj:Landroid/view/View;
+    .line 1707
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hoK:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/c/b;->hpl:Landroid/view/View$OnClickListener;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFI:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1680
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dRJ:Lcom/tencent/mm/ui/tools/m;
+    .line 1709
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dTR:Lcom/tencent/mm/ui/tools/m;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/c/b;->hpg:Lcom/tencent/mm/plugin/sns/ui/c/c;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFD:Lcom/tencent/mm/plugin/sns/ui/c/c;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/c/b;->hoQ:Lcom/tencent/mm/plugin/sns/ui/c/a;
+    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFn:Lcom/tencent/mm/plugin/sns/ui/c/a;
 
-    invoke-virtual {v0, v7, v1, v3}, Lcom/tencent/mm/ui/tools/m;->a(Landroid/view/View;Landroid/view/View$OnCreateContextMenuListener;Lcom/tencent/mm/ui/base/n$d;)V
+    invoke-virtual {v0, v8, v1, v3}, Lcom/tencent/mm/ui/tools/m;->a(Landroid/view/View;Landroid/view/View$OnCreateContextMenuListener;Lcom/tencent/mm/ui/base/n$d;)V
 
-    .line 1681
-    invoke-interface {v2}, Lcom/tencent/mm/plugin/sight/decode/a/a;->getUIContext()Landroid/content/Context;
+    .line 1710
+    invoke-interface {v2}, Lcom/tencent/mm/plugin/sight/decode/a/a;->axZ()Landroid/content/Context;
 
     move-result-object v0
 
@@ -6084,7 +6150,7 @@
 
     move-result-object v0
 
-    .line 1682
+    .line 1711
     const/high16 v1, 0x44200000    # 640.0f
 
     iget v3, v0, Landroid/util/DisplayMetrics;->widthPixels:I
@@ -6113,19 +6179,19 @@
 
     float-to-int v0, v0
 
-    .line 1683
+    .line 1712
     rem-int/lit8 v1, v0, 0x20
 
-    if-eqz v1, :cond_2d
+    if-eqz v1, :cond_31
 
-    .line 1686
+    .line 1715
     rem-int/lit8 v1, v0, 0x20
 
     sub-int/2addr v0, v1
 
-    .line 1688
-    :cond_2d
-    const-string/jumbo v1, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
+    .line 1717
+    :cond_31
+    const-string/jumbo v1, "MicroMsg.SnsCommentDetailUI"
 
     const-string/jumbo v3, "small side %d"
 
@@ -6137,69 +6203,69 @@
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v8
+    move-result-object v6
 
-    aput-object v8, v4, v5
+    aput-object v6, v4, v5
 
-    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1690
-    int-to-double v3, v0
+    .line 1719
+    int-to-double v4, v0
 
-    const-wide/high16 v8, 0x3ff0000000000000L    # 1.0
+    const-wide/high16 v12, 0x3ff0000000000000L    # 1.0
 
-    mul-double/2addr v3, v8
+    mul-double/2addr v4, v12
 
-    const-wide/high16 v8, 0x406e000000000000L    # 240.0
+    const-wide/high16 v12, 0x406e000000000000L    # 240.0
 
-    mul-double/2addr v3, v8
+    mul-double/2addr v4, v12
 
-    const-wide/high16 v8, 0x4074000000000000L    # 320.0
+    const-wide/high16 v12, 0x4074000000000000L    # 320.0
 
-    div-double/2addr v3, v8
+    div-double/2addr v4, v12
 
-    double-to-int v1, v3
+    double-to-int v1, v4
 
-    .line 1691
-    invoke-interface {v2, v0, v1}, Lcom/tencent/mm/plugin/sight/decode/a/a;->bc(II)V
+    .line 1720
+    invoke-interface {v2, v0, v1}, Lcom/tencent/mm/plugin/sight/decode/a/a;->bg(II)V
 
-    .line 1692
-    iget-object v3, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbn:Landroid/widget/TextView;
+    .line 1721
+    iget-object v3, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hoL:Landroid/widget/TextView;
 
     invoke-virtual {v3}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v3
 
-    .line 1693
+    .line 1722
     iput v0, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 1694
+    .line 1723
     iput v1, v3, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 1695
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbn:Landroid/widget/TextView;
+    .line 1724
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hoL:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1697
-    iget-object v0, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    .line 1726
+    iget-object v0, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    if-eqz v0, :cond_30
+    if-eqz v0, :cond_34
 
-    iget-object v0, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    iget-object v0, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/iv;->jhw:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/je;->jFv:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
     move-result v0
 
-    if-lez v0, :cond_30
+    if-lez v0, :cond_34
 
-    .line 1698
-    iget-object v0, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    .line 1727
+    iget-object v0, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/iv;->jhw:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/je;->jFv:Ljava/util/LinkedList;
 
     const/4 v1, 0x0
 
@@ -6207,58 +6273,58 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/add;
+    check-cast v0, Lcom/tencent/mm/protocal/b/adw;
 
     move-object v1, v0
 
-    .line 1702
-    :goto_13
+    .line 1731
+    :goto_12
     const/16 v0, 0x20
 
-    invoke-virtual {v10, v0}, Lcom/tencent/mm/plugin/sns/h/k;->lN(I)Z
+    invoke-virtual {v10, v0}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2e
+    if-eqz v0, :cond_32
 
-    .line 1704
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->gzz:Lcom/tencent/mm/plugin/sight/decode/a/a;
+    .line 1733
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->gGb:Lcom/tencent/mm/plugin/sight/decode/a/a;
 
     new-instance v3, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$20;
 
-    invoke-direct {v3, p0, v10}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$20;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Lcom/tencent/mm/plugin/sns/h/k;)V
+    invoke-direct {v3, p0, v10}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$20;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Lcom/tencent/mm/plugin/sns/i/k;)V
 
-    invoke-interface {v0, v3}, Lcom/tencent/mm/plugin/sight/decode/a/a;->setOnCompletionListener(Lcom/tencent/mm/plugin/sight/decode/a/b$e;)V
+    invoke-interface {v0, v3}, Lcom/tencent/mm/plugin/sight/decode/a/a;->a(Lcom/tencent/mm/plugin/sight/decode/a/b$e;)V
 
-    .line 1718
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcF:Lcom/tencent/mm/plugin/sns/a/a/f;
+    .line 1747
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrs:Lcom/tencent/mm/plugin/sns/a/a/f;
 
-    iget-wide v3, v10, Lcom/tencent/mm/plugin/sns/h/k;->field_snsId:J
+    iget-wide v4, v10, Lcom/tencent/mm/plugin/sns/i/k;->field_snsId:J
 
-    invoke-virtual {v0, v3, v4}, Lcom/tencent/mm/plugin/sns/a/a/f;->bW(J)Z
+    invoke-virtual {v0, v4, v5}, Lcom/tencent/mm/plugin/sns/a/a/f;->cm(J)Z
 
     move-result v0
 
-    if-nez v0, :cond_2e
+    if-nez v0, :cond_32
 
-    .line 1719
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->gzz:Lcom/tencent/mm/plugin/sight/decode/a/a;
+    .line 1748
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->gGb:Lcom/tencent/mm/plugin/sight/decode/a/a;
 
     new-instance v3, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$21;
 
-    invoke-direct {v3, p0, v10, v6}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$21;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Lcom/tencent/mm/plugin/sns/h/k;Lcom/tencent/mm/plugin/sns/ui/ad;)V
+    invoke-direct {v3, p0, v10, v7}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$21;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Lcom/tencent/mm/plugin/sns/i/k;Lcom/tencent/mm/plugin/sns/ui/ae;)V
 
-    invoke-interface {v0, v3}, Lcom/tencent/mm/plugin/sight/decode/a/a;->setOnDecodeDurationListener(Lcom/tencent/mm/plugin/sight/decode/a/b$f;)V
+    invoke-interface {v0, v3}, Lcom/tencent/mm/plugin/sight/decode/a/a;->a(Lcom/tencent/mm/plugin/sight/decode/a/b$f;)V
 
-    .line 1740
-    :cond_2e
-    iget-object v0, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    .line 1769
+    :cond_32
+    iget-object v0, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
     if-eqz v0, :cond_1d
 
-    iget-object v0, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    iget-object v0, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/iv;->jhw:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/je;->jFv:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -6266,52 +6332,52 @@
 
     if-lez v0, :cond_1d
 
-    .line 1743
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
+    .line 1772
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/d/g;->w(Lcom/tencent/mm/protocal/b/add;)Z
+    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/e/g;->w(Lcom/tencent/mm/protocal/b/adw;)Z
 
     move-result v0
 
-    if-nez v0, :cond_33
+    if-nez v0, :cond_38
 
-    .line 1744
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
+    .line 1773
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/d/g;->z(Lcom/tencent/mm/protocal/b/add;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/e/g;->z(Lcom/tencent/mm/protocal/b/adw;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_31
+    if-eqz v0, :cond_35
 
-    .line 1745
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbk:Landroid/widget/ImageView;
+    .line 1774
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfS:Landroid/widget/ImageView;
 
     const/16 v3, 0x8
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1746
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbl:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
+    .line 1775
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfR:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
 
     const/4 v3, 0x0
 
     invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->setVisibility(I)V
 
-    .line 1747
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbl:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
+    .line 1776
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfR:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->bjH()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->bpF()V
 
-    .line 1789
-    :cond_2f
-    :goto_14
-    invoke-interface {v2, v6}, Lcom/tencent/mm/plugin/sight/decode/a/a;->setTagObject(Ljava/lang/Object;)V
+    .line 1827
+    :cond_33
+    :goto_13
+    invoke-interface {v2, v7}, Lcom/tencent/mm/plugin/sight/decode/a/a;->aF(Ljava/lang/Object;)V
 
-    .line 1791
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
+    .line 1829
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
 
     move-result-object v0
 
@@ -6321,174 +6387,247 @@
 
     const/4 v4, 0x0
 
-    sget-object v5, Lcom/tencent/mm/storage/i$a;->kas:Lcom/tencent/mm/storage/i$a;
+    sget-object v5, Lcom/tencent/mm/storage/z;->kFT:Lcom/tencent/mm/storage/z;
 
-    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/plugin/sns/d/g;->a(Lcom/tencent/mm/protocal/b/add;Lcom/tencent/mm/plugin/sight/decode/a/a;IILcom/tencent/mm/storage/i$a;)Z
+    const/16 v6, 0x20
 
-    .line 1792
-    invoke-virtual {v7, v6}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v10, v6}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
 
-    .line 1794
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcF:Lcom/tencent/mm/plugin/sns/a/a/f;
+    move-result v6
+
+    invoke-virtual/range {v0 .. v6}, Lcom/tencent/mm/plugin/sns/e/g;->a(Lcom/tencent/mm/protocal/b/adw;Lcom/tencent/mm/plugin/sight/decode/a/a;IILcom/tencent/mm/storage/z;Z)Z
+
+    .line 1830
+    invoke-virtual {v8, v7}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    .line 1832
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrs:Lcom/tencent/mm/plugin/sns/a/a/f;
 
     if-eqz v0, :cond_1d
 
-    .line 1795
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcF:Lcom/tencent/mm/plugin/sns/a/a/f;
+    .line 1833
+    const/16 v0, 0x20
 
-    iget-wide v2, v10, Lcom/tencent/mm/plugin/sns/h/k;->field_snsId:J
-
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/d/g;->ayz()I
+    invoke-virtual {v10, v0}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
 
     move-result v0
 
-    const/4 v4, 0x5
+    if-eqz v0, :cond_3e
 
-    if-ne v0, v4, :cond_37
-
-    const/4 v0, 0x1
-
-    :goto_15
-    invoke-virtual {v1, v2, v3, v0}, Lcom/tencent/mm/plugin/sns/a/a/f;->f(JZ)V
-
-    goto/16 :goto_b
-
-    .line 1700
-    :cond_30
-    const/4 v1, 0x0
-
-    goto/16 :goto_13
-
-    .line 1748
-    :cond_31
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/d/g;->ayz()I
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/g;->aAZ()I
+
+    move-result v0
+
+    const/4 v1, 0x5
+
+    if-ne v0, v1, :cond_3d
+
+    const/4 v0, 0x1
+
+    .line 1836
+    :goto_14
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrs:Lcom/tencent/mm/plugin/sns/a/a/f;
+
+    iget-wide v2, v10, Lcom/tencent/mm/plugin/sns/i/k;->field_snsId:J
+
+    invoke-virtual {v1, v2, v3, v0}, Lcom/tencent/mm/plugin/sns/a/a/f;->g(JZ)V
+
+    goto/16 :goto_b
+
+    .line 1729
+    :cond_34
+    const/4 v1, 0x0
+
+    goto/16 :goto_12
+
+    .line 1777
+    :cond_35
+    const/16 v0, 0x20
+
+    invoke-virtual {v10, v0}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_36
+
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/g;->aAZ()I
 
     move-result v0
 
     const/4 v3, 0x5
 
-    if-ne v0, v3, :cond_32
+    if-ne v0, v3, :cond_36
 
-    .line 1749
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/d/g;->C(Lcom/tencent/mm/protocal/b/add;)V
-
-    .line 1750
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbk:Landroid/widget/ImageView;
-
-    const/16 v3, 0x8
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 1751
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbl:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->setVisibility(I)V
-
-    .line 1752
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbl:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->bjH()V
-
-    goto :goto_14
-
-    .line 1754
-    :cond_32
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
+    .line 1778
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/d/g;->A(Lcom/tencent/mm/protocal/b/add;)V
-
-    .line 1755
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbk:Landroid/widget/ImageView;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 1756
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbl:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
-
-    const/16 v3, 0x8
-
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->setVisibility(I)V
-
-    .line 1757
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbk:Landroid/widget/ImageView;
-
-    const v3, 0x7f040673
-
-    invoke-static {p0, v3}, Lcom/tencent/mm/aw/a;->y(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    goto :goto_14
-
-    .line 1761
-    :cond_33
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/d/g;->x(Lcom/tencent/mm/protocal/b/add;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_34
-
-    .line 1762
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbk:Landroid/widget/ImageView;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 1763
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbl:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
-
-    const/16 v3, 0x8
-
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->setVisibility(I)V
-
-    .line 1764
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbk:Landroid/widget/ImageView;
-
-    const v3, 0x7f040673
-
-    invoke-static {p0, v3}, Lcom/tencent/mm/aw/a;->y(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/e/g;->C(Lcom/tencent/mm/protocal/b/adw;)V
 
     .line 1779
-    :goto_16
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->gzz:Lcom/tencent/mm/plugin/sight/decode/a/a;
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfS:Landroid/widget/ImageView;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/decode/a/a;->avG()Z
+    const/16 v3, 0x8
+
+    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 1780
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfR:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->setVisibility(I)V
+
+    .line 1781
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfR:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->bpF()V
+
+    goto :goto_13
+
+    .line 1783
+    :cond_36
+    const/16 v0, 0x20
+
+    invoke-virtual {v10, v0}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2f
+    if-nez v0, :cond_37
 
-    .line 1780
-    const-string/jumbo v0, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/g;->aAY()I
+
+    move-result v0
+
+    const/4 v3, 0x5
+
+    if-ne v0, v3, :cond_37
+
+    .line 1784
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/e/g;->C(Lcom/tencent/mm/protocal/b/adw;)V
+
+    .line 1785
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfS:Landroid/widget/ImageView;
+
+    const/16 v3, 0x8
+
+    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 1786
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfR:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->setVisibility(I)V
+
+    .line 1787
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfR:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->bpF()V
+
+    goto/16 :goto_13
+
+    .line 1789
+    :cond_37
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/e/g;->A(Lcom/tencent/mm/protocal/b/adw;)V
+
+    .line 1790
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfS:Landroid/widget/ImageView;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 1791
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfR:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
+
+    const/16 v3, 0x8
+
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->setVisibility(I)V
+
+    .line 1792
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfS:Landroid/widget/ImageView;
+
+    const v3, 0x7f02070d
+
+    invoke-static {p0, v3}, Lcom/tencent/mm/az/a;->C(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    goto/16 :goto_13
+
+    .line 1796
+    :cond_38
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/e/g;->x(Lcom/tencent/mm/protocal/b/adw;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_39
+
+    .line 1797
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfS:Landroid/widget/ImageView;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 1798
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfR:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
+
+    const/16 v3, 0x8
+
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->setVisibility(I)V
+
+    .line 1799
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfS:Landroid/widget/ImageView;
+
+    const v3, 0x7f02070d
+
+    invoke-static {p0, v3}, Lcom/tencent/mm/az/a;->C(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 1817
+    :goto_15
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->gGb:Lcom/tencent/mm/plugin/sight/decode/a/a;
+
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/decode/a/a;->aya()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_33
+
+    .line 1818
+    const-string/jumbo v0, "MicroMsg.SnsCommentDetailUI"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -6496,7 +6635,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, v1, Lcom/tencent/mm/protocal/b/add;->iXW:Ljava/lang/String;
+    iget-object v4, v1, Lcom/tencent/mm/protocal/b/adw;->jvB:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6508,7 +6647,7 @@
 
     move-result-object v3
 
-    iget-object v4, v1, Lcom/tencent/mm/protocal/b/add;->eiq:Ljava/lang/String;
+    iget-object v4, v1, Lcom/tencent/mm/protocal/b/adw;->emu:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6520,7 +6659,7 @@
 
     move-result-object v3
 
-    iget-object v4, v1, Lcom/tencent/mm/protocal/b/add;->jzt:Ljava/lang/String;
+    iget-object v4, v1, Lcom/tencent/mm/protocal/b/adw;->jYg:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6530,151 +6669,219 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1781
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
+    .line 1819
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/d/g;->A(Lcom/tencent/mm/protocal/b/add;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/e/g;->A(Lcom/tencent/mm/protocal/b/adw;)V
 
-    .line 1782
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbk:Landroid/widget/ImageView;
+    .line 1820
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfS:Landroid/widget/ImageView;
 
     const/4 v3, 0x0
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1783
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbl:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
+    .line 1821
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfR:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
 
     const/16 v3, 0x8
 
     invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->setVisibility(I)V
 
-    .line 1784
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbk:Landroid/widget/ImageView;
+    .line 1822
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfS:Landroid/widget/ImageView;
 
-    const v3, 0x7f040673
+    const v3, 0x7f02070d
 
-    invoke-static {p0, v3}, Lcom/tencent/mm/aw/a;->y(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p0, v3}, Lcom/tencent/mm/az/a;->C(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_14
+    goto/16 :goto_13
 
-    .line 1766
-    :cond_34
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
+    .line 1801
+    :cond_39
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/d/g;->y(Lcom/tencent/mm/protocal/b/add;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/e/g;->y(Lcom/tencent/mm/protocal/b/adw;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_35
+    if-eqz v0, :cond_3a
 
-    .line 1767
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbk:Landroid/widget/ImageView;
+    .line 1802
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfS:Landroid/widget/ImageView;
 
     const/16 v3, 0x8
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1768
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbl:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
+    .line 1803
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfR:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
 
     const/16 v3, 0x8
 
     invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->setVisibility(I)V
 
-    goto :goto_16
+    goto :goto_15
 
-    .line 1769
-    :cond_35
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
+    .line 1804
+    :cond_3a
+    const/16 v0, 0x20
+
+    invoke-virtual {v10, v0}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3b
+
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/d/g;->ayz()I
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/g;->aAZ()I
 
     move-result v0
 
     const/4 v3, 0x5
 
-    if-gt v0, v3, :cond_36
+    if-gt v0, v3, :cond_3b
 
-    .line 1770
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbk:Landroid/widget/ImageView;
+    .line 1805
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfS:Landroid/widget/ImageView;
 
     const/16 v3, 0x8
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1771
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbl:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
+    .line 1806
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfR:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
 
     const/16 v3, 0x8
 
     invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->setVisibility(I)V
 
-    goto/16 :goto_16
+    goto/16 :goto_15
 
-    .line 1773
-    :cond_36
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
+    .line 1807
+    :cond_3b
+    const/16 v0, 0x20
+
+    invoke-virtual {v10, v0}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3c
+
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/d/g;->A(Lcom/tencent/mm/protocal/b/add;)V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/g;->aAY()I
 
-    .line 1774
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbk:Landroid/widget/ImageView;
+    move-result v0
+
+    const/4 v3, 0x5
+
+    if-gt v0, v3, :cond_3c
+
+    .line 1808
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfS:Landroid/widget/ImageView;
+
+    const/16 v3, 0x8
+
+    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 1809
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfR:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
+
+    const/16 v3, 0x8
+
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->setVisibility(I)V
+
+    goto/16 :goto_15
+
+    .line 1811
+    :cond_3c
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/e/g;->A(Lcom/tencent/mm/protocal/b/adw;)V
+
+    .line 1812
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfS:Landroid/widget/ImageView;
 
     const/4 v3, 0x0
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1775
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbl:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
+    .line 1813
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfR:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
 
     const/16 v3, 0x8
 
     invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->setVisibility(I)V
 
-    .line 1776
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/ui/ad;->hbk:Landroid/widget/ImageView;
+    .line 1814
+    iget-object v0, v7, Lcom/tencent/mm/plugin/sns/ui/ae;->hfS:Landroid/widget/ImageView;
 
-    const v3, 0x7f040673
+    const v3, 0x7f02070d
 
-    invoke-static {p0, v3}, Lcom/tencent/mm/aw/a;->y(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p0, v3}, Lcom/tencent/mm/az/a;->C(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_16
-
-    .line 1795
-    :cond_37
-    const/4 v0, 0x0
-
     goto/16 :goto_15
 
-    .line 1801
-    :cond_38
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    .line 1833
+    :cond_3d
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_3e
+    goto/16 :goto_14
 
-    .line 1802
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    :cond_3e
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
 
-    const v1, 0x7f070da5
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/g;->aAY()I
+
+    move-result v0
+
+    const/4 v1, 0x5
+
+    if-ne v0, v1, :cond_3f
+
+    const/4 v0, 0x1
+
+    goto/16 :goto_14
+
+    :cond_3f
+    const/4 v0, 0x0
+
+    goto/16 :goto_14
+
+    .line 1842
+    :cond_40
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
+
+    if-nez v0, :cond_46
+
+    .line 1843
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
+
+    const v1, 0x7f100ff7
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -6682,36 +6889,36 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    .line 1803
-    const v1, 0x7f0a0449
+    .line 1844
+    const v1, 0x7f03058b
 
-    invoke-direct {p0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->ma(I)Landroid/widget/LinearLayout;
+    invoke-direct {p0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->np(I)Landroid/widget/LinearLayout;
 
     move-result-object v6
 
-    .line 1804
-    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcU:Z
+    .line 1845
+    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrH:Z
 
-    if-nez v1, :cond_39
+    if-nez v1, :cond_41
 
-    .line 1805
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcX:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+    .line 1846
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrK:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
 
-    .line 1806
+    .line 1847
     const/4 v1, 0x3
 
     invoke-virtual {v0, v6, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;I)V
 
-    .line 1807
+    .line 1848
     invoke-virtual {v6}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    if-eqz v0, :cond_3c
+    if-eqz v0, :cond_44
 
-    .line 1809
+    .line 1850
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-virtual {v6}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -6720,13 +6927,13 @@
 
     invoke-direct {v0, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1813
-    :goto_17
+    .line 1854
+    :goto_16
     iget v1, v0, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
     const/16 v2, 0xc
 
-    invoke-static {p0, v2}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {p0, v2}, Lcom/tencent/mm/az/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v2
 
@@ -6736,25 +6943,25 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
 
-    .line 1814
+    .line 1855
     invoke-virtual {v6, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1815
-    :cond_39
-    iget-object v0, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    .line 1856
+    :cond_41
+    iget-object v0, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/iv;->jhw:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/je;->jFv:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_3d
+    if-nez v0, :cond_45
 
-    .line 1819
-    iget-object v0, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    .line 1860
+    iget-object v0, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/iv;->jhw:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/je;->jFv:Ljava/util/LinkedList;
 
     const/4 v1, 0x0
 
@@ -6762,10 +6969,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/tencent/mm/protocal/b/add;
+    check-cast v1, Lcom/tencent/mm/protocal/b/adw;
 
-    .line 1820
-    const v0, 0x7f070d0e
+    .line 1861
+    const v0, 0x7f100aea
 
     invoke-virtual {v6, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -6773,23 +6980,23 @@
 
     check-cast v2, Lcom/tencent/mm/ui/MMImageView;
 
-    .line 1822
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
+    .line 1863
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
 
     move-result-object v0
 
-    const v3, 0x7f030289
+    const v3, 0x7f07002d
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result v4
 
-    sget-object v5, Lcom/tencent/mm/storage/i$a;->kas:Lcom/tencent/mm/storage/i$a;
+    sget-object v5, Lcom/tencent/mm/storage/z;->kFT:Lcom/tencent/mm/storage/z;
 
-    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/plugin/sns/d/g;->b(Lcom/tencent/mm/protocal/b/add;Landroid/view/View;IILcom/tencent/mm/storage/i$a;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/plugin/sns/e/g;->b(Lcom/tencent/mm/protocal/b/adw;Landroid/view/View;IILcom/tencent/mm/storage/z;)V
 
-    .line 1826
-    const v0, 0x7f070d0f
+    .line 1867
+    const v0, 0x7f1008c5
 
     invoke-virtual {v6, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -6797,24 +7004,24 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcv:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrh:Landroid/widget/ImageView;
 
-    .line 1827
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcv:Landroid/widget/ImageView;
+    .line 1868
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrh:Landroid/widget/ImageView;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gYg:Landroid/view/View$OnTouchListener;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hls:Landroid/view/View$OnTouchListener;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 1829
-    iget-object v0, v11, Lcom/tencent/mm/protocal/b/atp;->iXW:Ljava/lang/String;
+    .line 1870
+    iget-object v0, v11, Lcom/tencent/mm/protocal/b/auf;->jvB:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcx:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrj:Ljava/lang/String;
 
-    .line 1830
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aBJ()V
+    .line 1871
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aEF()V
 
-    .line 1831
+    .line 1872
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -6827,34 +7034,34 @@
 
     move-result v0
 
-    .line 1832
-    new-instance v3, Lcom/tencent/mm/plugin/sns/ui/m;
+    .line 1873
+    new-instance v3, Lcom/tencent/mm/plugin/sns/ui/o;
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcr:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
 
-    invoke-direct {v3, v11, v4, v0}, Lcom/tencent/mm/plugin/sns/ui/m;-><init>(Lcom/tencent/mm/protocal/b/atp;Ljava/lang/String;Z)V
+    invoke-direct {v3, v11, v4, v0}, Lcom/tencent/mm/plugin/sns/ui/o;-><init>(Lcom/tencent/mm/protocal/b/auf;Ljava/lang/String;Z)V
 
     invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/MMImageView;->setTag(Ljava/lang/Object;)V
 
-    .line 1833
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcA:Lcom/tencent/mm/plugin/sns/ui/au;
+    .line 1874
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrm:Lcom/tencent/mm/plugin/sns/ui/ba;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/au;->hmw:Landroid/view/View$OnClickListener;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/ba;->hCF:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v2, v0}, Lcom/tencent/mm/ui/MMImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1835
-    iget-object v3, v1, Lcom/tencent/mm/protocal/b/add;->eia:Ljava/lang/String;
+    .line 1876
+    iget-object v3, v1, Lcom/tencent/mm/protocal/b/adw;->elX:Ljava/lang/String;
 
-    .line 1836
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    .line 1877
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_3a
+    if-nez v0, :cond_42
 
-    .line 1837
-    const v0, 0x7f070d12
+    .line 1878
+    const v0, 0x7f100aed
 
     invoke-virtual {v6, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -6864,19 +7071,19 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1839
-    :cond_3a
-    iget-object v1, v1, Lcom/tencent/mm/protocal/b/add;->asP:Ljava/lang/String;
+    .line 1880
+    :cond_42
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/adw;->aez:Ljava/lang/String;
 
-    .line 1840
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    .line 1881
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_3b
+    if-nez v0, :cond_43
 
-    .line 1841
-    const v0, 0x7f070d11
+    .line 1882
+    const v0, 0x7f100aec
 
     invoke-virtual {v6, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -6884,53 +7091,397 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 1842
+    .line 1883
     new-instance v3, Landroid/text/SpannableString;
 
     invoke-direct {v3, v1}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 1843
+    .line 1884
     sget-object v1, Landroid/widget/TextView$BufferType;->SPANNABLE:Landroid/widget/TextView$BufferType;
 
     invoke-virtual {v0, v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
-    .line 1847
-    :cond_3b
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/m;
+    .line 1888
+    :cond_43
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/o;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcr:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
 
-    invoke-direct {v0, v11, v1}, Lcom/tencent/mm/plugin/sns/ui/m;-><init>(Lcom/tencent/mm/protocal/b/atp;Ljava/lang/String;)V
+    invoke-direct {v0, v11, v1}, Lcom/tencent/mm/plugin/sns/ui/o;-><init>(Lcom/tencent/mm/protocal/b/auf;Ljava/lang/String;)V
 
     invoke-virtual {v6, v0}, Landroid/widget/LinearLayout;->setTag(Ljava/lang/Object;)V
 
-    .line 1849
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dRJ:Lcom/tencent/mm/ui/tools/m;
+    .line 1890
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dTR:Lcom/tencent/mm/ui/tools/m;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/c/b;->hpf:Lcom/tencent/mm/plugin/sns/ui/c/c;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFC:Lcom/tencent/mm/plugin/sns/ui/c/c;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/c/b;->hoQ:Lcom/tencent/mm/plugin/sns/ui/c/a;
+    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFn:Lcom/tencent/mm/plugin/sns/ui/c/a;
 
     invoke-virtual {v0, v6, v1, v3}, Lcom/tencent/mm/ui/tools/m;->a(Landroid/view/View;Landroid/view/View$OnCreateContextMenuListener;Lcom/tencent/mm/ui/base/n$d;)V
 
-    .line 1850
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcA:Lcom/tencent/mm/plugin/sns/ui/au;
+    .line 1891
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrm:Lcom/tencent/mm/plugin/sns/ui/ba;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/au;->hhi:Landroid/view/View$OnClickListener;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/ba;->hvY:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v6, v0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1852
-    invoke-static {v2, p0}, Lcom/tencent/mm/plugin/sns/data/h;->b(Landroid/view/View;Landroid/content/Context;)V
+    .line 1893
+    invoke-static {v2, p0}, Lcom/tencent/mm/plugin/sns/data/i;->b(Landroid/view/View;Landroid/content/Context;)V
 
     goto/16 :goto_b
 
-    .line 1811
-    :cond_3c
+    .line 1852
+    :cond_44
+    new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
+
+    const/4 v1, -0x1
+
+    const/4 v2, -0x2
+
+    invoke-direct {v0, v1, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    goto/16 :goto_16
+
+    .line 1896
+    :cond_45
+    const/16 v0, 0x8
+
+    invoke-virtual {v6, v0}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    goto/16 :goto_b
+
+    .line 1900
+    :cond_46
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
+
+    const v1, 0x7f100ff7
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    .line 1902
+    const v1, 0x7f030589
+
+    invoke-direct {p0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->np(I)Landroid/widget/LinearLayout;
+
+    move-result-object v9
+
+    .line 1905
+    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrH:Z
+
+    if-nez v1, :cond_47
+
+    .line 1906
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrK:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
+
+    .line 1907
+    const/4 v1, 0x3
+
+    invoke-virtual {v0, v9, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;I)V
+
+    .line 1908
+    invoke-virtual {v9}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_48
+
+    .line 1910
+    new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
+
+    invoke-virtual {v9}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 1914
+    :goto_17
+    iget v1, v0, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
+
+    const/16 v2, 0xc
+
+    invoke-static {p0, v2}, Lcom/tencent/mm/az/a;->fromDPToPix(Landroid/content/Context;I)I
+
+    move-result v2
+
+    iget v3, v0, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
+
+    iget v4, v0, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
+
+    .line 1915
+    invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 1918
+    :cond_47
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dTR:Lcom/tencent/mm/ui/tools/m;
+
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
+
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFC:Lcom/tencent/mm/plugin/sns/ui/c/c;
+
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
+
+    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFn:Lcom/tencent/mm/plugin/sns/ui/c/a;
+
+    invoke-virtual {v0, v9, v1, v2}, Lcom/tencent/mm/ui/tools/m;->a(Landroid/view/View;Landroid/view/View$OnCreateContextMenuListener;Lcom/tencent/mm/ui/base/n$d;)V
+
+    .line 1920
+    const/4 v0, 0x0
+
+    .line 1921
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
+
+    iget v1, v1, Lcom/tencent/mm/protocal/b/je;->jFu:I
+
+    const/16 v2, 0x9
+
+    if-ne v1, v2, :cond_49
+
+    .line 1922
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
+
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/je;->jFv:Ljava/util/LinkedList;
+
+    invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_78
+
+    .line 1923
+    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/o;
+
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
+
+    invoke-direct {v1, v11, v2}, Lcom/tencent/mm/plugin/sns/ui/o;-><init>(Lcom/tencent/mm/protocal/b/auf;Ljava/lang/String;)V
+
+    invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->setTag(Ljava/lang/Object;)V
+
+    .line 1924
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrm:Lcom/tencent/mm/plugin/sns/ui/ba;
+
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/ba;->hCz:Landroid/view/View$OnClickListener;
+
+    invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    move v6, v0
+
+    .line 1974
+    :goto_18
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ak$a;->aCc()I
+
+    move-result v0
+
+    and-int/lit8 v0, v0, 0x1
+
+    if-gtz v0, :cond_51
+
+    const/4 v0, 0x1
+
+    :goto_19
+    if-eqz v0, :cond_52
+
+    iget-object v0, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
+
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/je;->emu:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/aq;->xk(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object v7, v0
+
+    .line 1975
+    :goto_1a
+    iget-object v0, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
+
+    iget-object v8, v0, Lcom/tencent/mm/protocal/b/je;->aez:Ljava/lang/String;
+
+    .line 1977
+    const v0, 0x7f1008c5
+
+    invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 1978
+    const v0, 0x7f100aea
+
+    invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/tencent/mm/ui/MMImageView;
+
+    .line 1979
+    iget-object v0, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
+
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/je;->jFv:Ljava/util/LinkedList;
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_55
+
+    .line 1980
+    const/4 v0, 0x0
+
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/ui/MMImageView;->setVisibility(I)V
+
+    .line 1981
+    iget-object v0, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
+
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/je;->jFv:Ljava/util/LinkedList;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/tencent/mm/protocal/b/adw;
+
+    .line 1983
+    iget-object v0, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
+
+    iget v0, v0, Lcom/tencent/mm/protocal/b/je;->jFu:I
+
+    const/4 v3, 0x5
+
+    if-ne v0, v3, :cond_53
+
+    .line 1984
+    iget-object v0, v1, Lcom/tencent/mm/protocal/b/adw;->emu:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/aq;->xk(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
+    .line 1985
+    iget-object v7, v1, Lcom/tencent/mm/protocal/b/adw;->aez:Ljava/lang/String;
+
+    .line 1986
+    const v0, 0x7f1008c5
+
+    invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+
+    .line 1987
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
+
+    move-result-object v0
+
+    const v3, 0x7f070039
+
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v4
+
+    sget-object v5, Lcom/tencent/mm/storage/z;->kFT:Lcom/tencent/mm/storage/z;
+
+    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/plugin/sns/e/g;->b(Lcom/tencent/mm/protocal/b/adw;Landroid/view/View;IILcom/tencent/mm/storage/z;)V
+
+    move-object v1, v7
+
+    move-object v7, v8
+
+    .line 2010
+    :goto_1b
+    invoke-static {v2, p0}, Lcom/tencent/mm/plugin/sns/data/i;->b(Landroid/view/View;Landroid/content/Context;)V
+
+    .line 2012
+    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_57
+
+    .line 2013
+    const v0, 0x7f100aed
+
+    invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    .line 2014
+    const v0, 0x7f100aed
+
+    invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    invoke-virtual {v0, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 2019
+    :goto_1c
+    const v0, 0x7f100aec
+
+    invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    .line 2020
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_59
+
+    .line 2021
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 2022
+    if-eqz v6, :cond_58
+
+    .line 2023
+    iget-object v2, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
+
+    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
+
+    invoke-static {v1, v2, v0}, Lcom/tencent/mm/plugin/sns/data/i;->a(Ljava/lang/String;Landroid/content/Context;Landroid/widget/TextView;)Landroid/text/SpannableString;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto/16 :goto_b
+
+    .line 1912
+    :cond_48
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
 
     const/4 v1, -0x1
@@ -6941,611 +7492,349 @@
 
     goto/16 :goto_17
 
-    .line 1855
-    :cond_3d
-    const/16 v0, 0x8
-
-    invoke-virtual {v6, v0}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    goto/16 :goto_b
-
-    .line 1859
-    :cond_3e
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
-
-    const v1, 0x7f070da5
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    .line 1861
-    const v1, 0x7f0a0447
-
-    invoke-direct {p0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->ma(I)Landroid/widget/LinearLayout;
-
-    move-result-object v9
-
-    .line 1864
-    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcU:Z
-
-    if-nez v1, :cond_3f
-
-    .line 1865
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcX:Lcom/tencent/mm/plugin/sns/ui/PhotosContent;
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
-
-    .line 1866
-    const/4 v1, 0x3
-
-    invoke-virtual {v0, v9, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;I)V
-
-    .line 1867
-    invoke-virtual {v9}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_40
-
-    .line 1869
-    new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
-
-    invoke-virtual {v9}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 1873
-    :goto_18
-    iget v1, v0, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
-
-    const/16 v2, 0xc
-
-    invoke-static {p0, v2}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
-
-    move-result v2
-
-    iget v3, v0, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
-
-    iget v4, v0, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
-
-    .line 1874
-    invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 1877
-    :cond_3f
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dRJ:Lcom/tencent/mm/ui/tools/m;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
-
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/c/b;->hpf:Lcom/tencent/mm/plugin/sns/ui/c/c;
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
-
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/c/b;->hoQ:Lcom/tencent/mm/plugin/sns/ui/c/a;
-
-    invoke-virtual {v0, v9, v1, v2}, Lcom/tencent/mm/ui/tools/m;->a(Landroid/view/View;Landroid/view/View$OnCreateContextMenuListener;Lcom/tencent/mm/ui/base/n$d;)V
-
-    .line 1879
-    const/4 v0, 0x0
-
-    .line 1880
-    iget-object v1, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
-
-    iget v1, v1, Lcom/tencent/mm/protocal/b/iv;->jhv:I
-
-    const/16 v2, 0x9
-
-    if-ne v1, v2, :cond_41
-
-    .line 1881
-    iget-object v1, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
-
-    iget-object v1, v1, Lcom/tencent/mm/protocal/b/iv;->jhw:Ljava/util/LinkedList;
-
-    invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
-
-    move-result v1
-
-    if-lez v1, :cond_63
-
-    .line 1882
-    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/m;
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcr:Ljava/lang/String;
-
-    invoke-direct {v1, v11, v2}, Lcom/tencent/mm/plugin/sns/ui/m;-><init>(Lcom/tencent/mm/protocal/b/atp;Ljava/lang/String;)V
-
-    invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->setTag(Ljava/lang/Object;)V
-
-    .line 1883
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcA:Lcom/tencent/mm/plugin/sns/ui/au;
-
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/au;->hms:Landroid/view/View$OnClickListener;
-
-    invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    move v6, v0
-
-    .line 1923
-    :goto_19
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/al$a;->azB()I
-
-    move-result v0
-
-    and-int/lit8 v0, v0, 0x1
-
-    if-gtz v0, :cond_47
-
-    const/4 v0, 0x1
-
-    :goto_1a
-    if-eqz v0, :cond_48
-
-    iget-object v0, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
-
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/iv;->eiq:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/an;->vX(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    move-object v7, v0
-
-    .line 1924
-    :goto_1b
-    iget-object v0, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
-
-    iget-object v8, v0, Lcom/tencent/mm/protocal/b/iv;->asP:Ljava/lang/String;
-
     .line 1926
-    const v0, 0x7f070d0f
+    :cond_49
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 1927
-    const v0, 0x7f070d0e
-
-    invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/tencent/mm/ui/MMImageView;
-
-    .line 1928
-    iget-object v0, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
-
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/iv;->jhw:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_4b
-
-    .line 1929
-    const/4 v0, 0x0
-
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/ui/MMImageView;->setVisibility(I)V
-
-    .line 1930
-    iget-object v0, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
-
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/iv;->jhw:Ljava/util/LinkedList;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/tencent/mm/protocal/b/add;
-
-    .line 1932
-    iget-object v0, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
-
-    iget v0, v0, Lcom/tencent/mm/protocal/b/iv;->jhv:I
-
-    const/4 v3, 0x5
-
-    if-ne v0, v3, :cond_49
-
-    .line 1933
-    iget-object v0, v1, Lcom/tencent/mm/protocal/b/add;->eiq:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/an;->vX(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v8
-
-    .line 1934
-    iget-object v7, v1, Lcom/tencent/mm/protocal/b/add;->asP:Ljava/lang/String;
-
-    .line 1935
-    const v0, 0x7f070d0f
-
-    invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
-
-    .line 1936
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
-
-    move-result-object v0
-
-    const v3, 0x7f030290
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v4
-
-    sget-object v5, Lcom/tencent/mm/storage/i$a;->kas:Lcom/tencent/mm/storage/i$a;
-
-    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/plugin/sns/d/g;->b(Lcom/tencent/mm/protocal/b/add;Landroid/view/View;IILcom/tencent/mm/storage/i$a;)V
-
-    move-object v1, v7
-
-    move-object v7, v8
-
-    .line 1959
-    :goto_1c
-    invoke-static {v2, p0}, Lcom/tencent/mm/plugin/sns/data/h;->b(Landroid/view/View;Landroid/content/Context;)V
-
-    .line 1961
-    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4d
-
-    .line 1962
-    const v0, 0x7f070d12
-
-    invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    .line 1963
-    const v0, 0x7f070d12
-
-    invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    invoke-virtual {v0, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 1968
-    :goto_1d
-    const v0, 0x7f070d11
-
-    invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    .line 1969
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4f
-
-    .line 1970
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 1971
-    if-eqz v6, :cond_4e
-
-    .line 1972
-    iget-object v2, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
-
-    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
-
-    invoke-static {v1, v2, v0}, Lcom/tencent/mm/plugin/sns/data/h;->a(Ljava/lang/String;Landroid/content/Context;Landroid/widget/TextView;)Landroid/text/SpannableString;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    goto/16 :goto_b
-
-    .line 1871
-    :cond_40
-    new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
-
-    const/4 v1, -0x1
-
-    const/4 v2, -0x2
-
-    invoke-direct {v0, v1, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    goto/16 :goto_18
-
-    .line 1885
-    :cond_41
-    iget-object v1, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
-
-    iget v1, v1, Lcom/tencent/mm/protocal/b/iv;->jhv:I
+    iget v1, v1, Lcom/tencent/mm/protocal/b/je;->jFu:I
 
     const/16 v2, 0xa
 
-    if-ne v1, v2, :cond_42
+    if-ne v1, v2, :cond_4a
 
-    .line 1886
-    iget-object v1, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    .line 1927
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget-object v1, v1, Lcom/tencent/mm/protocal/b/iv;->jhw:Ljava/util/LinkedList;
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/je;->jFv:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
 
     move-result v1
 
-    if-lez v1, :cond_63
+    if-lez v1, :cond_78
 
-    .line 1887
-    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/m;
+    .line 1928
+    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/o;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcr:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
 
-    invoke-direct {v1, v11, v2}, Lcom/tencent/mm/plugin/sns/ui/m;-><init>(Lcom/tencent/mm/protocal/b/atp;Ljava/lang/String;)V
+    invoke-direct {v1, v11, v2}, Lcom/tencent/mm/plugin/sns/ui/o;-><init>(Lcom/tencent/mm/protocal/b/auf;Ljava/lang/String;)V
 
     invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->setTag(Ljava/lang/Object;)V
 
-    .line 1888
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcA:Lcom/tencent/mm/plugin/sns/ui/au;
+    .line 1929
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrm:Lcom/tencent/mm/plugin/sns/ui/ba;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/au;->hmu:Landroid/view/View$OnClickListener;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/ba;->hCB:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     move v6, v0
 
-    goto/16 :goto_19
+    goto/16 :goto_18
 
-    .line 1890
-    :cond_42
-    iget-object v1, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    .line 1931
+    :cond_4a
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget v1, v1, Lcom/tencent/mm/protocal/b/iv;->jhv:I
+    iget v1, v1, Lcom/tencent/mm/protocal/b/je;->jFu:I
 
     const/16 v2, 0x11
 
-    if-ne v1, v2, :cond_43
+    if-ne v1, v2, :cond_4b
 
-    .line 1891
-    iget-object v1, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    .line 1932
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget-object v1, v1, Lcom/tencent/mm/protocal/b/iv;->jhw:Ljava/util/LinkedList;
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/je;->jFv:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
 
     move-result v1
 
-    if-lez v1, :cond_63
+    if-lez v1, :cond_78
 
-    .line 1892
-    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/m;
+    .line 1933
+    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/o;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcr:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
 
-    invoke-direct {v1, v11, v2}, Lcom/tencent/mm/plugin/sns/ui/m;-><init>(Lcom/tencent/mm/protocal/b/atp;Ljava/lang/String;)V
+    invoke-direct {v1, v11, v2}, Lcom/tencent/mm/plugin/sns/ui/o;-><init>(Lcom/tencent/mm/protocal/b/auf;Ljava/lang/String;)V
 
     invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->setTag(Ljava/lang/Object;)V
 
-    .line 1893
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcA:Lcom/tencent/mm/plugin/sns/ui/au;
+    .line 1934
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrm:Lcom/tencent/mm/plugin/sns/ui/ba;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/au;->hmv:Landroid/view/View$OnClickListener;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/ba;->hCC:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     move v6, v0
 
-    goto/16 :goto_19
+    goto/16 :goto_18
 
-    .line 1895
-    :cond_43
-    iget-object v1, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    .line 1936
+    :cond_4b
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget v1, v1, Lcom/tencent/mm/protocal/b/iv;->jhv:I
+    iget v1, v1, Lcom/tencent/mm/protocal/b/je;->jFu:I
+
+    const/16 v2, 0x16
+
+    if-ne v1, v2, :cond_4c
+
+    .line 1937
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
+
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/je;->jFv:Ljava/util/LinkedList;
+
+    invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_78
+
+    .line 1938
+    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/o;
+
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
+
+    invoke-direct {v1, v11, v2}, Lcom/tencent/mm/plugin/sns/ui/o;-><init>(Lcom/tencent/mm/protocal/b/auf;Ljava/lang/String;)V
+
+    invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->setTag(Ljava/lang/Object;)V
+
+    .line 1939
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrm:Lcom/tencent/mm/plugin/sns/ui/ba;
+
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/ba;->hCD:Landroid/view/View$OnClickListener;
+
+    invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    move v6, v0
+
+    goto/16 :goto_18
+
+    .line 1941
+    :cond_4c
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
+
+    iget v1, v1, Lcom/tencent/mm/protocal/b/je;->jFu:I
+
+    const/16 v2, 0x17
+
+    if-ne v1, v2, :cond_4d
+
+    .line 1942
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
+
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/je;->jFv:Ljava/util/LinkedList;
+
+    invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_78
+
+    .line 1943
+    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/o;
+
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
+
+    invoke-direct {v1, v11, v2}, Lcom/tencent/mm/plugin/sns/ui/o;-><init>(Lcom/tencent/mm/protocal/b/auf;Ljava/lang/String;)V
+
+    invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->setTag(Ljava/lang/Object;)V
+
+    .line 1944
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrm:Lcom/tencent/mm/plugin/sns/ui/ba;
+
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/ba;->hCE:Landroid/view/View$OnClickListener;
+
+    invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    move v6, v0
+
+    goto/16 :goto_18
+
+    .line 1946
+    :cond_4d
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
+
+    iget v1, v1, Lcom/tencent/mm/protocal/b/je;->jFu:I
 
     const/16 v2, 0xe
 
-    if-ne v1, v2, :cond_44
+    if-ne v1, v2, :cond_4e
 
-    .line 1896
-    iget-object v1, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    .line 1947
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget-object v1, v1, Lcom/tencent/mm/protocal/b/iv;->jhw:Ljava/util/LinkedList;
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/je;->jFv:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
 
     move-result v1
 
-    if-lez v1, :cond_63
+    if-lez v1, :cond_78
 
-    .line 1897
-    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/m;
+    .line 1948
+    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/o;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcr:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
 
-    invoke-direct {v1, v11, v2}, Lcom/tencent/mm/plugin/sns/ui/m;-><init>(Lcom/tencent/mm/protocal/b/atp;Ljava/lang/String;)V
+    invoke-direct {v1, v11, v2}, Lcom/tencent/mm/plugin/sns/ui/o;-><init>(Lcom/tencent/mm/protocal/b/auf;Ljava/lang/String;)V
 
     invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->setTag(Ljava/lang/Object;)V
 
-    .line 1898
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcA:Lcom/tencent/mm/plugin/sns/ui/au;
+    .line 1949
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrm:Lcom/tencent/mm/plugin/sns/ui/ba;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/au;->hmt:Landroid/view/View$OnClickListener;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/ba;->hCA:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     move v6, v0
 
-    goto/16 :goto_19
+    goto/16 :goto_18
 
-    .line 1900
-    :cond_44
-    iget-object v1, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    .line 1951
+    :cond_4e
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget v1, v1, Lcom/tencent/mm/protocal/b/iv;->jhv:I
+    iget v1, v1, Lcom/tencent/mm/protocal/b/je;->jFu:I
 
     const/16 v2, 0xc
 
-    if-ne v1, v2, :cond_45
+    if-ne v1, v2, :cond_4f
 
-    .line 1901
-    iget-object v1, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    .line 1952
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget-object v1, v1, Lcom/tencent/mm/protocal/b/iv;->jhw:Ljava/util/LinkedList;
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/je;->jFv:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
 
     move-result v1
 
-    if-lez v1, :cond_63
+    if-lez v1, :cond_78
 
-    .line 1902
-    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/m;
+    .line 1953
+    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/o;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcr:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
 
-    invoke-direct {v1, v11, v2}, Lcom/tencent/mm/plugin/sns/ui/m;-><init>(Lcom/tencent/mm/protocal/b/atp;Ljava/lang/String;)V
+    invoke-direct {v1, v11, v2}, Lcom/tencent/mm/plugin/sns/ui/o;-><init>(Lcom/tencent/mm/protocal/b/auf;Ljava/lang/String;)V
 
     invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->setTag(Ljava/lang/Object;)V
 
-    .line 1903
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcA:Lcom/tencent/mm/plugin/sns/ui/au;
+    .line 1954
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrm:Lcom/tencent/mm/plugin/sns/ui/ba;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/au;->hmx:Landroid/view/View$OnClickListener;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/ba;->hCG:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     move v6, v0
 
-    goto/16 :goto_19
+    goto/16 :goto_18
 
-    .line 1905
-    :cond_45
-    iget-object v1, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    .line 1956
+    :cond_4f
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget v1, v1, Lcom/tencent/mm/protocal/b/iv;->jhv:I
+    iget v1, v1, Lcom/tencent/mm/protocal/b/je;->jFu:I
 
     const/16 v2, 0xd
 
-    if-ne v1, v2, :cond_46
+    if-ne v1, v2, :cond_50
 
-    .line 1906
-    iget-object v1, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    .line 1957
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget-object v1, v1, Lcom/tencent/mm/protocal/b/iv;->jhw:Ljava/util/LinkedList;
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/je;->jFv:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
 
     move-result v1
 
-    if-lez v1, :cond_63
+    if-lez v1, :cond_78
 
-    .line 1907
-    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/m;
+    .line 1958
+    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/o;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcr:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
 
-    invoke-direct {v1, v11, v2}, Lcom/tencent/mm/plugin/sns/ui/m;-><init>(Lcom/tencent/mm/protocal/b/atp;Ljava/lang/String;)V
+    invoke-direct {v1, v11, v2}, Lcom/tencent/mm/plugin/sns/ui/o;-><init>(Lcom/tencent/mm/protocal/b/auf;Ljava/lang/String;)V
 
     invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->setTag(Ljava/lang/Object;)V
 
-    .line 1908
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcA:Lcom/tencent/mm/plugin/sns/ui/au;
+    .line 1959
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrm:Lcom/tencent/mm/plugin/sns/ui/ba;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/au;->hmy:Landroid/view/View$OnClickListener;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/ba;->hCH:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     move v6, v0
 
-    goto/16 :goto_19
+    goto/16 :goto_18
 
-    .line 1913
-    :cond_46
-    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/m;
+    .line 1964
+    :cond_50
+    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/o;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcr:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
 
-    invoke-direct {v1, v11, v2}, Lcom/tencent/mm/plugin/sns/ui/m;-><init>(Lcom/tencent/mm/protocal/b/atp;Ljava/lang/String;)V
+    invoke-direct {v1, v11, v2}, Lcom/tencent/mm/plugin/sns/ui/o;-><init>(Lcom/tencent/mm/protocal/b/auf;Ljava/lang/String;)V
 
     invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->setTag(Ljava/lang/Object;)V
 
-    .line 1914
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcA:Lcom/tencent/mm/plugin/sns/ui/au;
+    .line 1965
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrm:Lcom/tencent/mm/plugin/sns/ui/ba;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/au;->hhi:Landroid/view/View$OnClickListener;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/ba;->hvY:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1916
-    iget v1, v11, Lcom/tencent/mm/protocal/b/atp;->bxl:I
+    .line 1967
+    iget v1, v11, Lcom/tencent/mm/protocal/b/auf;->bqe:I
 
     and-int/lit8 v1, v1, 0x1
 
-    if-lez v1, :cond_63
+    if-lez v1, :cond_78
 
-    .line 1917
+    .line 1968
     const/4 v0, 0x1
 
     move v6, v0
 
-    goto/16 :goto_19
+    goto/16 :goto_18
 
-    .line 1923
-    :cond_47
+    .line 1974
+    :cond_51
     const/4 v0, 0x0
 
-    goto/16 :goto_1a
+    goto/16 :goto_19
 
-    :cond_48
+    :cond_52
     const-string/jumbo v0, ""
 
     move-object v7, v0
 
-    goto/16 :goto_1b
+    goto/16 :goto_1a
 
-    .line 1937
-    :cond_49
-    iget-object v0, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    .line 1988
+    :cond_53
+    iget-object v0, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget v0, v0, Lcom/tencent/mm/protocal/b/iv;->jhv:I
+    iget v0, v0, Lcom/tencent/mm/protocal/b/je;->jFu:I
 
     const/16 v3, 0x12
 
-    if-ne v0, v3, :cond_4a
+    if-ne v0, v3, :cond_54
 
-    .line 1938
-    const v0, 0x7f070d0f
+    .line 1989
+    const v0, 0x7f1008c5
 
     invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -7555,8 +7844,8 @@
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1939
-    const v0, 0x7f070d0f
+    .line 1990
+    const v0, 0x7f1008c5
 
     invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -7564,37 +7853,37 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v3, 0x7f0407a2
+    const v3, 0x7f0207f3
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 1940
+    .line 1991
     const/4 v0, 0x0
 
     invoke-virtual {v2, v0}, Lcom/tencent/mm/ui/MMImageView;->setVisibility(I)V
 
-    .line 1941
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
+    .line 1992
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
 
     move-result-object v0
 
-    const v3, 0x7f030290
+    const v3, 0x7f070039
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result v4
 
-    sget-object v5, Lcom/tencent/mm/storage/i$a;->kal:Lcom/tencent/mm/storage/i$a;
+    sget-object v5, Lcom/tencent/mm/storage/z;->kFT:Lcom/tencent/mm/storage/z;
 
-    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/plugin/sns/d/g;->b(Lcom/tencent/mm/protocal/b/add;Landroid/view/View;IILcom/tencent/mm/storage/i$a;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/plugin/sns/e/g;->b(Lcom/tencent/mm/protocal/b/adw;Landroid/view/View;IILcom/tencent/mm/storage/z;)V
 
     move-object v1, v8
 
-    goto/16 :goto_1c
+    goto/16 :goto_1b
 
-    .line 1943
-    :cond_4a
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
+    .line 1994
+    :cond_54
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
 
     move-result-object v0
 
@@ -7602,26 +7891,26 @@
 
     move-result v3
 
-    sget-object v4, Lcom/tencent/mm/storage/i$a;->kal:Lcom/tencent/mm/storage/i$a;
+    sget-object v4, Lcom/tencent/mm/storage/z;->kFT:Lcom/tencent/mm/storage/z;
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/tencent/mm/plugin/sns/d/g;->b(Lcom/tencent/mm/protocal/b/add;Landroid/view/View;ILcom/tencent/mm/storage/i$a;)V
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/tencent/mm/plugin/sns/e/g;->b(Lcom/tencent/mm/protocal/b/adw;Landroid/view/View;ILcom/tencent/mm/storage/z;)V
 
     move-object v1, v8
 
-    .line 1949
-    goto/16 :goto_1c
+    .line 2000
+    goto/16 :goto_1b
 
-    :cond_4b
-    iget-object v0, v11, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    :cond_55
+    iget-object v0, v11, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget v0, v0, Lcom/tencent/mm/protocal/b/iv;->jhv:I
+    iget v0, v0, Lcom/tencent/mm/protocal/b/je;->jFu:I
 
     const/16 v1, 0x12
 
-    if-ne v0, v1, :cond_4c
+    if-ne v0, v1, :cond_56
 
-    .line 1950
-    const v0, 0x7f070d0f
+    .line 2001
+    const v0, 0x7f1008c5
 
     invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -7633,8 +7922,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1951
-    const v0, 0x7f070d0f
+    .line 2002
+    const v0, 0x7f1008c5
 
     invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -7642,62 +7931,62 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f0407a2
+    const v1, 0x7f0207f3
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 1952
+    .line 2003
     const/4 v0, 0x0
 
     invoke-virtual {v2, v0}, Lcom/tencent/mm/ui/MMImageView;->setVisibility(I)V
 
-    .line 1953
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
+    .line 2004
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
 
     move-result-object v0
 
     const/4 v1, -0x1
 
-    const v3, 0x7f030290
+    const v3, 0x7f070039
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result v4
 
-    invoke-virtual {v0, v2, v1, v3, v4}, Lcom/tencent/mm/plugin/sns/d/g;->c(Landroid/view/View;III)V
+    invoke-virtual {v0, v2, v1, v3, v4}, Lcom/tencent/mm/plugin/sns/e/g;->c(Landroid/view/View;III)V
 
     move-object v1, v8
 
-    goto/16 :goto_1c
+    goto/16 :goto_1b
 
-    .line 1955
-    :cond_4c
+    .line 2006
+    :cond_56
     const/4 v0, 0x0
 
     invoke-virtual {v2, v0}, Lcom/tencent/mm/ui/MMImageView;->setVisibility(I)V
 
-    .line 1956
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
+    .line 2007
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
 
     move-result-object v0
 
     const/4 v1, -0x1
 
-    const v3, 0x7f030295
+    const v3, 0x7f07003c
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result v4
 
-    invoke-virtual {v0, v2, v1, v3, v4}, Lcom/tencent/mm/plugin/sns/d/g;->c(Landroid/view/View;III)V
+    invoke-virtual {v0, v2, v1, v3, v4}, Lcom/tencent/mm/plugin/sns/e/g;->c(Landroid/view/View;III)V
 
     move-object v1, v8
 
-    goto/16 :goto_1c
+    goto/16 :goto_1b
 
-    .line 1965
-    :cond_4d
-    const v0, 0x7f070d12
+    .line 2016
+    :cond_57
+    const v0, 0x7f100aed
 
     invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -7707,89 +7996,169 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    goto/16 :goto_1d
+    goto/16 :goto_1c
 
-    .line 1974
-    :cond_4e
+    .line 2025
+    :cond_58
     new-instance v2, Landroid/text/SpannableString;
 
     invoke-direct {v2, v1}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 1975
+    .line 2026
     const-string/jumbo v1, ""
 
     sget-object v3, Landroid/widget/TextView$BufferType;->SPANNABLE:Landroid/widget/TextView$BufferType;
 
     invoke-virtual {v0, v1, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
-    .line 1976
+    .line 2027
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_b
 
-    .line 1979
-    :cond_4f
+    .line 2030
+    :cond_59
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto/16 :goto_b
 
-    .line 1994
-    :cond_50
-    iget-object v1, v11, Lcom/tencent/mm/protocal/b/atp;->jMv:Lcom/tencent/mm/protocal/b/aby;
+    .line 2059
+    :cond_5a
+    const/4 v1, 0x0
 
-    iget-object v1, v1, Lcom/tencent/mm/protocal/b/aby;->bLO:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 2060
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1e
+
+    .line 2061
+    const v1, -0xa8946b
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 2062
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setClickable(Z)V
+
+    .line 2063
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_c
 
-    .line 1995
-    :cond_51
-    iget-object v2, v11, Lcom/tencent/mm/protocal/b/atp;->jMv:Lcom/tencent/mm/protocal/b/aby;
+    .line 2071
+    :cond_5b
+    const/16 v1, 0x8
 
-    iget-object v2, v2, Lcom/tencent/mm/protocal/b/aby;->eLJ:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    goto/16 :goto_d
+    goto/16 :goto_c
 
-    .line 2000
-    :cond_52
+    .line 2075
+    :cond_5c
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->klg:Lcom/tencent/mm/protocal/b/acn;
+
+    if-nez v1, :cond_5d
+
+    const/4 v1, 0x0
+
+    .line 2076
+    :goto_1d
+    iget-object v2, v11, Lcom/tencent/mm/protocal/b/auf;->klg:Lcom/tencent/mm/protocal/b/acn;
+
+    if-nez v2, :cond_5e
+
+    const/4 v2, 0x0
+
+    .line 2077
+    :goto_1e
+    invoke-virtual {v10}, Lcom/tencent/mm/plugin/sns/i/k;->aCX()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
+
+    .line 2078
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_5f
+
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_5f
+
+    .line 2079
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    goto/16 :goto_c
+
+    .line 2075
+    :cond_5d
+    iget-object v1, v11, Lcom/tencent/mm/protocal/b/auf;->klg:Lcom/tencent/mm/protocal/b/acn;
+
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/acn;->bFi:Ljava/lang/String;
+
+    goto :goto_1d
+
+    .line 2076
+    :cond_5e
+    iget-object v2, v11, Lcom/tencent/mm/protocal/b/auf;->klg:Lcom/tencent/mm/protocal/b/acn;
+
+    iget-object v2, v2, Lcom/tencent/mm/protocal/b/acn;->eTE:Ljava/lang/String;
+
+    goto :goto_1e
+
+    .line 2081
+    :cond_5f
     const/4 v3, 0x0
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 2001
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    .line 2082
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
-    if-nez v3, :cond_54
+    if-nez v3, :cond_61
 
-    .line 2002
+    .line 2083
     const v3, -0xa8946b
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 2003
+    .line 2084
     const/4 v3, 0x1
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setClickable(Z)V
 
-    .line 2004
-    iget-wide v3, v10, Lcom/tencent/mm/plugin/sns/h/k;->field_snsId:J
+    .line 2085
+    iget-wide v4, v10, Lcom/tencent/mm/plugin/sns/i/k;->field_snsId:J
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
-    cmp-long v3, v3, v5
+    cmp-long v3, v4, v6
 
-    if-nez v3, :cond_53
+    if-nez v3, :cond_60
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
-    if-nez v3, :cond_53
+    if-nez v3, :cond_60
 
-    .line 2005
+    .line 2086
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -7814,106 +8183,429 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_e
+    goto/16 :goto_c
 
-    .line 2007
-    :cond_53
+    .line 2088
+    :cond_60
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_e
+    goto/16 :goto_c
 
-    .line 2011
-    :cond_54
+    .line 2092
+    :cond_61
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 2012
+    .line 2093
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setClickable(Z)V
 
-    .line 2013
+    .line 2094
     const v1, -0x8c8c8d
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
+    goto/16 :goto_c
+
+    .line 2117
+    :cond_62
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    goto/16 :goto_d
+
+    .line 2119
+    :cond_63
+    iget v1, v3, Lcom/tencent/mm/plugin/sns/i/a;->hdJ:I
+
+    sget v2, Lcom/tencent/mm/plugin/sns/i/a;->hdw:I
+
+    if-ne v1, v2, :cond_1f
+
+    .line 2120
+    iget-object v1, v3, Lcom/tencent/mm/plugin/sns/i/a;->hdK:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_69
+
+    .line 2121
+    const-string/jumbo v2, ""
+
+    .line 2122
+    iget-object v1, v3, Lcom/tencent/mm/plugin/sns/i/a;->hdM:Ljava/util/LinkedList;
+
+    invoke-virtual {v1}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    :cond_64
+    :goto_1f
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_66
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    .line 2123
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hre:Lcom/tencent/mm/storage/q;
+
+    invoke-virtual {v5, v1}, Lcom/tencent/mm/storage/q;->GC(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+
+    move-result-object v5
+
+    .line 2124
+    if-eqz v5, :cond_65
+
+    .line 2125
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v5}, Lcom/tencent/mm/i/a;->pc()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 2129
+    :goto_20
+    iget-object v5, v3, Lcom/tencent/mm/plugin/sns/i/a;->hdM:Ljava/util/LinkedList;
+
+    invoke-virtual {v5}, Ljava/util/LinkedList;->getLast()Ljava/lang/Object;
+
+    move-result-object v5
+
+    if-eq v5, v1, :cond_64
+
+    .line 2130
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v2, ","
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_1f
+
+    .line 2127
+    :cond_65
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_20
+
+    .line 2133
+    :cond_66
+    iget-object v1, v3, Lcom/tencent/mm/plugin/sns/i/a;->hdK:Ljava/lang/String;
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    aput-object v2, v4, v5
+
+    invoke-static {v1, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 2135
+    new-instance v4, Lcom/tencent/mm/pluginsdk/ui/d/f;
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getTextSize()F
+
+    const/4 v5, 0x1
+
+    invoke-static {p0, v1, v5}, Lcom/tencent/mm/pluginsdk/ui/d/e;->b(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
+
+    move-result-object v5
+
+    invoke-direct {v4, v5}, Lcom/tencent/mm/pluginsdk/ui/d/f;-><init>(Landroid/text/SpannableString;)V
+
+    .line 2137
+    const/4 v5, 0x0
+
+    invoke-virtual {v4, v5, v1}, Lcom/tencent/mm/pluginsdk/ui/d/f;->e(Ljava/lang/Object;Ljava/lang/CharSequence;)V
+
+    .line 2139
+    invoke-virtual {v0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object v1
+
+    .line 2140
+    const/4 v5, 0x0
+
+    invoke-virtual {v4}, Lcom/tencent/mm/pluginsdk/ui/d/f;->length()I
+
+    move-result v6
+
+    invoke-static {v4, v5, v6, v1}, Landroid/text/Layout;->getDesiredWidth(Ljava/lang/CharSequence;IILandroid/text/TextPaint;)F
+
+    move-result v5
+
+    .line 2141
+    float-to-int v5, v5
+
+    invoke-static {p0, v5}, Lcom/tencent/mm/az/a;->F(Landroid/content/Context;I)I
+
+    move-result v5
+
+    .line 2143
+    iget v6, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrr:I
+
+    if-le v5, v6, :cond_68
+
+    .line 2145
+    :cond_67
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    const/4 v5, 0x1
+
+    if-le v4, v5, :cond_1f
+
+    .line 2146
+    const/4 v4, 0x0
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v5
+
+    add-int/lit8 v5, v5, -0x2
+
+    invoke-virtual {v2, v4, v5}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 2147
+    iget-object v4, v3, Lcom/tencent/mm/plugin/sns/i/a;->hdK:Ljava/lang/String;
+
+    const/4 v5, 0x1
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    const-string/jumbo v8, "..."
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    aput-object v7, v5, v6
+
+    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    .line 2149
+    new-instance v5, Lcom/tencent/mm/pluginsdk/ui/d/f;
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getTextSize()F
+
+    const/4 v6, 0x1
+
+    invoke-static {p0, v4, v6}, Lcom/tencent/mm/pluginsdk/ui/d/e;->b(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
+
+    move-result-object v6
+
+    invoke-direct {v5, v6}, Lcom/tencent/mm/pluginsdk/ui/d/f;-><init>(Landroid/text/SpannableString;)V
+
+    .line 2150
+    const/4 v6, 0x0
+
+    invoke-virtual {v5, v6, v4}, Lcom/tencent/mm/pluginsdk/ui/d/f;->e(Ljava/lang/Object;Ljava/lang/CharSequence;)V
+
+    .line 2151
+    const/4 v4, 0x0
+
+    invoke-virtual {v5}, Lcom/tencent/mm/pluginsdk/ui/d/f;->length()I
+
+    move-result v6
+
+    invoke-static {v5, v4, v6, v1}, Landroid/text/Layout;->getDesiredWidth(Ljava/lang/CharSequence;IILandroid/text/TextPaint;)F
+
+    move-result v4
+
+    .line 2152
+    float-to-int v4, v4
+
+    invoke-static {p0, v4}, Lcom/tencent/mm/az/a;->F(Landroid/content/Context;I)I
+
+    move-result v4
+
+    .line 2153
+    sget-object v6, Landroid/widget/TextView$BufferType;->SPANNABLE:Landroid/widget/TextView$BufferType;
+
+    invoke-virtual {v0, v5, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
+
+    .line 2154
+    const/4 v5, 0x0
+
+    invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 2158
+    iget v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrr:I
+
+    if-gt v4, v5, :cond_67
+
+    goto/16 :goto_d
+
+    .line 2160
+    :cond_68
+    sget-object v1, Landroid/widget/TextView$BufferType;->SPANNABLE:Landroid/widget/TextView$BufferType;
+
+    invoke-virtual {v0, v4, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
+
+    .line 2161
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    goto/16 :goto_d
+
+    .line 2165
+    :cond_69
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    goto/16 :goto_d
+
+    .line 2197
+    :cond_6a
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
     goto/16 :goto_e
 
-    .line 2043
-    :cond_55
+    .line 2260
+    :cond_6b
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto/16 :goto_f
 
-    .line 2106
-    :cond_56
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    goto/16 :goto_10
-
-    .line 2116
-    :cond_57
-    iget-object v1, v4, Lcom/tencent/mm/protocal/b/aqi;->jKa:Ljava/util/LinkedList;
+    .line 2270
+    :cond_6c
+    iget-object v1, v4, Lcom/tencent/mm/protocal/b/aqt;->kix:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
 
     move-result v1
 
-    if-gtz v1, :cond_5b
+    if-gtz v1, :cond_70
 
-    .line 2117
+    .line 2271
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 2158
-    :cond_58
-    :goto_1e
-    if-eqz v4, :cond_62
+    .line 2312
+    :cond_6d
+    :goto_21
+    if-eqz v4, :cond_77
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eNy:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->baY:Ljava/lang/String;
 
-    if-eqz v0, :cond_62
+    if-eqz v0, :cond_77
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eNy:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->baY:Ljava/lang/String;
 
-    iget-object v1, v4, Lcom/tencent/mm/protocal/b/aqi;->iYA:Ljava/lang/String;
+    iget-object v1, v4, Lcom/tencent/mm/protocal/b/aqt;->jwf:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_62
+    if-eqz v0, :cond_77
 
-    iget v0, v4, Lcom/tencent/mm/protocal/b/aqi;->jKb:I
+    iget v0, v4, Lcom/tencent/mm/protocal/b/aqt;->kiy:I
 
     const/4 v1, 0x3
 
-    if-ne v0, v1, :cond_59
+    if-ne v0, v1, :cond_6e
 
-    iget-object v0, v4, Lcom/tencent/mm/protocal/b/aqi;->jKg:Ljava/util/LinkedList;
+    iget-object v0, v4, Lcom/tencent/mm/protocal/b/aqt;->kiD:Ljava/util/LinkedList;
 
-    if-nez v0, :cond_5a
+    if-nez v0, :cond_6f
 
-    :cond_59
-    iget v0, v4, Lcom/tencent/mm/protocal/b/aqi;->jKb:I
+    :cond_6e
+    iget v0, v4, Lcom/tencent/mm/protocal/b/aqt;->kiy:I
 
     const/4 v1, 0x5
 
-    if-ne v0, v1, :cond_62
+    if-ne v0, v1, :cond_77
 
-    iget-object v0, v4, Lcom/tencent/mm/protocal/b/aqi;->jzT:Ljava/util/LinkedList;
+    iget-object v0, v4, Lcom/tencent/mm/protocal/b/aqt;->jYG:Ljava/util/LinkedList;
 
-    if-eqz v0, :cond_62
+    if-eqz v0, :cond_77
 
-    .line 2163
-    :cond_5a
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 2317
+    :cond_6f
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v1, 0x7f070dad
+    const v1, 0x7f101001
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -7923,16 +8615,16 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2164
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 2318
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v1, 0x7f070dad
+    const v1, 0x7f101001
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iget v1, v10, Lcom/tencent/mm/plugin/sns/h/k;->gUC:I
+    iget v1, v10, Lcom/tencent/mm/plugin/sns/i/k;->hhu:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -7940,10 +8632,10 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 2165
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 2319
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v1, 0x7f070dad
+    const v1, 0x7f101001
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -7955,93 +8647,62 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    goto/16 :goto_11
+    goto/16 :goto_10
 
-    .line 2118
-    :cond_5b
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eNy:Ljava/lang/String;
+    .line 2272
+    :cond_70
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->baY:Ljava/lang/String;
 
-    iget-object v2, v4, Lcom/tencent/mm/protocal/b/aqi;->iYA:Ljava/lang/String;
+    iget-object v2, v4, Lcom/tencent/mm/protocal/b/aqt;->jwf:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_60
+    if-eqz v1, :cond_75
 
-    .line 2119
+    .line 2273
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 2120
-    const-string/jumbo v2, ""
+    .line 2274
+    const-string/jumbo v1, ""
 
-    .line 2121
-    const/4 v1, 0x0
+    .line 2275
+    const/4 v2, 0x0
 
-    .line 2122
-    iget-object v3, v4, Lcom/tencent/mm/protocal/b/aqi;->jKa:Ljava/util/LinkedList;
+    .line 2276
+    iget-object v3, v4, Lcom/tencent/mm/protocal/b/aqt;->kix:Ljava/util/LinkedList;
 
     invoke-virtual {v3}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
 
-    move-object v3, v2
+    move v3, v2
 
-    move v2, v1
+    move-object v2, v1
 
-    :goto_1f
+    :goto_22
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_5f
+    if-eqz v1, :cond_74
 
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/tencent/mm/protocal/b/apz;
+    check-cast v1, Lcom/tencent/mm/protocal/b/aqk;
 
-    .line 2123
-    if-nez v2, :cond_5c
+    .line 2277
+    if-nez v3, :cond_71
 
-    .line 2124
-    const/4 v2, 0x1
+    .line 2278
+    const/4 v3, 0x1
 
-    .line 2125
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string/jumbo v6, "  "
-
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    move v12, v2
-
-    move-object v2, v3
-
-    move v3, v12
-
-    .line 2130
-    :goto_20
-    iget-object v6, v1, Lcom/tencent/mm/protocal/b/apz;->jyd:Ljava/lang/String;
-
-    if-eqz v6, :cond_5d
-
-    .line 2131
+    .line 2279
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -8050,10 +8711,35 @@
 
     move-result-object v2
 
-    iget-object v1, v1, Lcom/tencent/mm/protocal/b/apz;->jyd:Ljava/lang/String;
+    const-string/jumbo v6, "  "
 
-    .line 2134
-    :goto_21
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 2284
+    :goto_23
+    iget-object v6, v1, Lcom/tencent/mm/protocal/b/aqk;->jWK:Ljava/lang/String;
+
+    if-eqz v6, :cond_72
+
+    .line 2285
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/aqk;->jWK:Ljava/lang/String;
+
+    .line 2288
+    :goto_24
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -8062,52 +8748,44 @@
 
     move-result-object v1
 
-    move v2, v3
+    move-object v2, v1
 
-    move-object v3, v1
+    .line 2290
+    goto :goto_22
 
-    .line 2136
-    goto :goto_1f
-
-    .line 2127
-    :cond_5c
+    .line 2281
+    :cond_71
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v2
 
     const-string/jumbo v6, ",  "
 
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    move v12, v2
+    goto :goto_23
 
-    move-object v2, v3
+    .line 2287
+    :cond_72
+    iget-object v6, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hre:Lcom/tencent/mm/storage/q;
 
-    move v3, v12
+    iget-object v7, v1, Lcom/tencent/mm/protocal/b/aqk;->jwf:Ljava/lang/String;
 
-    goto :goto_20
-
-    .line 2133
-    :cond_5d
-    iget-object v6, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcs:Lcom/tencent/mm/storage/q;
-
-    iget-object v7, v1, Lcom/tencent/mm/protocal/b/apz;->iYA:Ljava/lang/String;
-
-    invoke-virtual {v6, v7}, Lcom/tencent/mm/storage/q;->Ep(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v6, v7}, Lcom/tencent/mm/storage/q;->GD(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
 
     move-result-object v6
 
-    .line 2134
+    .line 2288
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -8116,36 +8794,36 @@
 
     move-result-object v2
 
-    if-nez v6, :cond_5e
+    if-nez v6, :cond_73
 
-    iget-object v1, v1, Lcom/tencent/mm/protocal/b/apz;->iYA:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/aqk;->jwf:Ljava/lang/String;
 
-    goto :goto_21
+    goto :goto_24
 
-    :cond_5e
-    invoke-virtual {v6}, Lcom/tencent/mm/h/a;->qz()Ljava/lang/String;
+    :cond_73
+    invoke-virtual {v6}, Lcom/tencent/mm/i/a;->pc()Ljava/lang/String;
 
     move-result-object v1
 
-    goto :goto_21
+    goto :goto_24
 
-    .line 2137
-    :cond_5f
-    const v1, 0x7f0b165d
+    .line 2291
+    :cond_74
+    const v1, 0x7f081306
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    new-array v2, v2, [Ljava/lang/Object;
+    new-array v3, v3, [Ljava/lang/Object;
 
     const/4 v5, 0x0
 
-    aput-object v3, v2, v5
+    aput-object v2, v3, v5
 
-    invoke-virtual {p0, v1, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v1, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2142
+    .line 2296
     invoke-virtual {v0}, Landroid/widget/TextView;->getTextSize()F
 
     move-result v2
@@ -8154,66 +8832,66 @@
 
     move-result-object v1
 
-    .line 2143
+    .line 2297
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_1e
+    goto/16 :goto_21
 
-    .line 2145
-    :cond_60
+    .line 2299
+    :cond_75
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 2146
-    iget-object v1, v4, Lcom/tencent/mm/protocal/b/aqi;->jKa:Ljava/util/LinkedList;
+    .line 2300
+    iget-object v1, v4, Lcom/tencent/mm/protocal/b/aqt;->kix:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    :cond_61
+    :cond_76
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_58
+    if-eqz v1, :cond_6d
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/tencent/mm/protocal/b/apz;
+    check-cast v1, Lcom/tencent/mm/protocal/b/aqk;
 
-    .line 2147
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eNy:Ljava/lang/String;
+    .line 2301
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->baY:Ljava/lang/String;
 
-    iget-object v1, v1, Lcom/tencent/mm/protocal/b/apz;->iYA:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/aqk;->jwf:Ljava/lang/String;
 
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_61
+    if-eqz v1, :cond_76
 
-    .line 2148
+    .line 2302
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 2149
-    const v1, 0x7f0b1660
+    .line 2303
+    const v1, 0x7f081307
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2151
+    .line 2305
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 2152
+    .line 2306
     invoke-virtual {v0}, Landroid/widget/TextView;->getTextSize()F
 
     move-result v2
@@ -8222,16 +8900,16 @@
 
     move-result-object v1
 
-    .line 2153
+    .line 2307
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_1e
+    goto/16 :goto_21
 
-    .line 2184
-    :cond_62
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcc:Landroid/view/View;
+    .line 2338
+    :cond_77
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    const v1, 0x7f070dad
+    const v1, 0x7f101001
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -8241,113 +8919,19 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    goto/16 :goto_11
+    goto/16 :goto_10
 
-    :cond_63
+    :cond_78
     move v6, v0
 
-    goto/16 :goto_19
-.end method
-
-.method public final axE()V
-    .locals 0
-
-    .prologue
-    .line 2903
-    return-void
-.end method
-
-.method public final ayk()V
-    .locals 3
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 3007
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aNP()I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_2
-
-    .line 3008
-    const-string/jumbo v0, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
-
-    const-string/jumbo v1, "keybaordhide! "
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 3009
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcp:Z
-
-    .line 3012
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
-
-    iget-boolean v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->eYP:Z
-
-    if-eqz v0, :cond_1
-
-    .line 3013
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
-
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->setModeClick(Z)V
-
-    .line 3024
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 3016
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->aBN()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 3017
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->aBP()V
-
-    .line 3018
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
-
-    const v1, 0x7f0b162c
-
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->setHint(Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 3021
-    :cond_2
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aNP()I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    .line 3022
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aBI()V
-
-    goto :goto_0
+    goto/16 :goto_18
 .end method
 
 .method public final b(ZLjava/lang/String;Z)V
     .locals 0
 
     .prologue
-    .line 3001
+    .line 3160
     return-void
 .end method
 
@@ -8355,8 +8939,8 @@
     .locals 1
 
     .prologue
-    .line 970
-    const v0, 0x7f0a0454
+    .line 995
+    const v0, 0x7f030566
 
     return v0
 .end method
@@ -8369,8 +8953,8 @@
 
     const/4 v2, 0x0
 
-    .line 2907
-    const-string/jumbo v0, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
+    .line 3066
+    const-string/jumbo v0, "MicroMsg.SnsCommentDetailUI"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -8386,82 +8970,82 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2908
+    .line 3067
     const/16 v0, 0xf
 
     if-ne p1, v0, :cond_1
 
-    .line 2909
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    .line 3068
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/c/b;->hoQ:Lcom/tencent/mm/plugin/sns/ui/c/a;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFn:Lcom/tencent/mm/plugin/sns/ui/c/a;
 
     if-eqz v0, :cond_0
 
-    .line 2910
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    .line 3069
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/c/b;->hoQ:Lcom/tencent/mm/plugin/sns/ui/c/a;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFn:Lcom/tencent/mm/plugin/sns/ui/c/a;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/tencent/mm/plugin/sns/ui/c/a;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 2938
+    .line 3097
     :cond_0
     :goto_0
     return-void
 
-    .line 2914
+    .line 3073
     :cond_1
     const/16 v0, 0x10
 
     if-ne p1, v0, :cond_2
 
-    .line 2915
-    const-string/jumbo v0, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
+    .line 3074
+    const-string/jumbo v0, "MicroMsg.SnsCommentDetailUI"
 
     const-string/jumbo v1, "REQUEST_CODE_FOR_FULLSCREEN"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2917
-    new-instance v0, Lcom/tencent/mm/d/a/ep;
+    .line 3076
+    new-instance v0, Lcom/tencent/mm/e/a/ev;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/ep;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/ev;-><init>()V
 
-    .line 2918
-    iget-object v1, v0, Lcom/tencent/mm/d/a/ep;->azn:Lcom/tencent/mm/d/a/ep$a;
+    .line 3077
+    iget-object v1, v0, Lcom/tencent/mm/e/a/ev;->alu:Lcom/tencent/mm/e/a/ev$a;
 
     const/4 v2, 0x1
 
-    iput v2, v1, Lcom/tencent/mm/d/a/ep$a;->asc:I
+    iput v2, v1, Lcom/tencent/mm/e/a/ev$a;->scene:I
 
-    .line 2919
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 3078
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     goto :goto_0
 
-    .line 2922
+    .line 3081
     :cond_2
     if-ne p2, v4, :cond_0
 
-    .line 2925
+    .line 3084
     packed-switch p1, :pswitch_data_0
 
     goto :goto_0
 
-    .line 2927
+    .line 3086
     :pswitch_0
     if-ne p2, v4, :cond_0
 
-    .line 2928
+    .line 3087
     invoke-virtual {p3}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v1
@@ -8474,19 +9058,19 @@
 
     move-object v5, v2
 
-    .line 2929
+    .line 3088
     invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->managedQuery(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
-    .line 2930
+    .line 3089
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 2931
+    .line 3090
     const-string/jumbo v1, "_id"
 
     invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -8497,7 +9081,7 @@
 
     move-result-object v0
 
-    .line 2932
+    .line 3091
     new-instance v1, Landroid/content/Intent;
 
     const-string/jumbo v2, "android.intent.action.EDIT"
@@ -8522,12 +9106,12 @@
 
     invoke-direct {v1, v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 2933
+    .line 3092
     invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 2925
+    .line 3084
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -8538,67 +9122,69 @@
     .locals 3
 
     .prologue
-    .line 2629
+    .line 2783
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 2631
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    .line 2785
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/h/f;->vn(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/i/f;->wz(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v0
 
-    .line 2632
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/d/ai;->k(Lcom/tencent/mm/plugin/sns/h/k;)Lcom/tencent/mm/protocal/b/aqi;
+    .line 2786
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/e/ah;->k(Lcom/tencent/mm/plugin/sns/i/k;)Lcom/tencent/mm/protocal/b/aqt;
 
     move-result-object v1
 
-    .line 2633
-    iget-object v2, v1, Lcom/tencent/mm/protocal/b/aqi;->jJU:Ljava/util/LinkedList;
+    .line 2787
+    iget-object v2, v1, Lcom/tencent/mm/protocal/b/aqt;->kir:Ljava/util/LinkedList;
 
-    iget-object v1, v1, Lcom/tencent/mm/protocal/b/aqi;->jJX:Ljava/util/LinkedList;
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/aqt;->kiu:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->isEmpty()Z
 
     move-result v1
 
-    invoke-direct {p0, v2, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->e(Ljava/util/List;Z)Z
+    invoke-direct {p0, v2, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->f(Ljava/util/List;Z)Z
 
-    .line 2634
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcf:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
+    .line 2788
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqR:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
 
     if-eqz v1, :cond_0
 
-    .line 2635
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcf:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
+    .line 2789
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqR:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;->a(Lcom/tencent/mm/plugin/sns/h/k;Lcom/tencent/mm/plugin/sns/ui/c/b;)V
+    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;->a(Lcom/tencent/mm/plugin/sns/i/k;Lcom/tencent/mm/plugin/sns/ui/c/b;)V
 
-    .line 2637
+    .line 2791
     :cond_0
     return-void
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 11
+    .locals 13
 
     .prologue
-    const/4 v5, -0x1
+    const/16 v8, 0x20
+
+    const/4 v6, -0x1
+
+    const/4 v12, 0x1
 
     const/4 v1, 0x0
 
-    const/4 v7, 0x1
+    .line 620
+    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/e;->e(Lcom/tencent/mm/ui/MMActivity;)V
 
-    .line 616
-    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/e;->g(Lcom/tencent/mm/ui/MMActivity;)V
-
-    .line 617
+    .line 621
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 618
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayZ()Lcom/tencent/mm/plugin/sns/d/al$a;
+    .line 622
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->getSnsServer()Lcom/tencent/mm/plugin/sns/e/ak$a;
 
     move-result-object v0
 
@@ -8606,9 +9192,9 @@
 
     const-string/jumbo v3, "@__weixintimtline"
 
-    invoke-virtual {v0, v2, v3, p0}, Lcom/tencent/mm/plugin/sns/d/al$a;->a(ILjava/lang/String;Lcom/tencent/mm/pluginsdk/i$o$e$a;)V
+    invoke-virtual {v0, v2, v3, p0}, Lcom/tencent/mm/plugin/sns/e/ak$a;->a(ILjava/lang/String;Lcom/tencent/mm/pluginsdk/i$o$e$a;)V
 
-    .line 619
+    .line 623
     const-string/jumbo v0, "clipboard"
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -8617,46 +9203,46 @@
 
     check-cast v0, Landroid/text/ClipboardManager;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dUv:Landroid/text/ClipboardManager;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dWD:Landroid/text/ClipboardManager;
 
-    .line 622
+    .line 626
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hca:J
+    iput-wide v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqM:J
 
-    .line 623
+    .line 627
     new-instance v0, Lcom/tencent/mm/ui/tools/m;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/m;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dRJ:Lcom/tencent/mm/ui/tools/m;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dTR:Lcom/tencent/mm/ui/tools/m;
 
-    .line 625
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/au;
+    .line 629
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/ba;
 
     new-instance v2, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$2;
 
     invoke-direct {v2, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$2;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)V
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcK:Lcom/tencent/mm/plugin/sns/d/af;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrx:Lcom/tencent/mm/plugin/sns/e/ae;
 
-    invoke-direct {v0, p0, v2, v7, v3}, Lcom/tencent/mm/plugin/sns/ui/au;-><init>(Landroid/content/Context;Lcom/tencent/mm/plugin/sns/ui/au$a;ILcom/tencent/mm/plugin/sns/d/ac;)V
+    invoke-direct {v0, p0, v2, v12, v3}, Lcom/tencent/mm/plugin/sns/ui/ba;-><init>(Landroid/content/Context;Lcom/tencent/mm/plugin/sns/ui/ba$a;ILcom/tencent/mm/plugin/sns/e/ac;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcA:Lcom/tencent/mm/plugin/sns/ui/au;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrm:Lcom/tencent/mm/plugin/sns/ui/ba;
 
-    .line 634
+    .line 638
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$3;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcK:Lcom/tencent/mm/plugin/sns/d/af;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrx:Lcom/tencent/mm/plugin/sns/e/ae;
 
-    invoke-direct {v0, p0, p0, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$3;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Landroid/app/Activity;Lcom/tencent/mm/plugin/sns/d/ac;)V
+    invoke-direct {v0, p0, p0, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$3;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Landroid/app/Activity;Lcom/tencent/mm/plugin/sns/e/ac;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    .line 689
-    const v0, 0x7f070dcb
+    .line 693
+    const v0, 0x7f100499
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->findViewById(I)Landroid/view/View;
 
@@ -8664,32 +9250,32 @@
 
     check-cast v0, Landroid/widget/FrameLayout;
 
-    .line 691
-    new-instance v2, Lcom/tencent/mm/plugin/sns/e/b;
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
-
-    invoke-direct {v2, p0, v3, v0}, Lcom/tencent/mm/plugin/sns/e/b;-><init>(Landroid/content/Context;Lcom/tencent/mm/plugin/sns/ui/c/b;Landroid/widget/FrameLayout;)V
-
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWN:Lcom/tencent/mm/plugin/sns/e/b;
-
-    .line 693
-    new-instance v2, Lcom/tencent/mm/plugin/sns/ui/a;
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
-
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWN:Lcom/tencent/mm/plugin/sns/e/b;
-
-    invoke-direct {v2, p0, v3, v0, v4}, Lcom/tencent/mm/plugin/sns/ui/a;-><init>(Landroid/content/Context;Lcom/tencent/mm/plugin/sns/ui/c/b;Landroid/widget/FrameLayout;Lcom/tencent/mm/plugin/sns/e/b;)V
-
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWM:Lcom/tencent/mm/plugin/sns/ui/a;
-
     .line 695
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    new-instance v2, Lcom/tencent/mm/plugin/sns/f/b;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/c/b;->awN()V
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    .line 722
+    invoke-direct {v2, p0, v3, v0}, Lcom/tencent/mm/plugin/sns/f/b;-><init>(Landroid/content/Context;Lcom/tencent/mm/plugin/sns/ui/c/b;Landroid/widget/FrameLayout;)V
+
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkl:Lcom/tencent/mm/plugin/sns/f/b;
+
+    .line 697
+    new-instance v2, Lcom/tencent/mm/plugin/sns/ui/b;
+
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
+
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkl:Lcom/tencent/mm/plugin/sns/f/b;
+
+    invoke-direct {v2, p0, v3, v0, v4}, Lcom/tencent/mm/plugin/sns/ui/b;-><init>(Landroid/content/Context;Lcom/tencent/mm/plugin/sns/ui/c/b;Landroid/widget/FrameLayout;Lcom/tencent/mm/plugin/sns/f/b;)V
+
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkk:Lcom/tencent/mm/plugin/sns/ui/b;
+
+    .line 699
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/c/b;->aGh()V
+
+    .line 726
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -8702,44 +9288,44 @@
 
     const-string/jumbo v2, ""
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
-    .line 723
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    .line 727
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 724
+    .line 728
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
     const-string/jumbo v2, "INTENT_SNSID"
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    invoke-virtual {v0, v2, v3, v4}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+    invoke-virtual {v0, v2, v4, v5}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v2
 
-    .line 725
+    .line 729
     const-string/jumbo v0, "sns_table_"
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/plugin/sns/h/s;->r(Ljava/lang/String;J)Ljava/lang/String;
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/plugin/sns/i/s;->u(Ljava/lang/String;J)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
-    .line 728
+    .line 732
     :cond_0
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getIntent()Landroid/content/Intent;
 
@@ -8753,172 +9339,196 @@
 
     const-string/jumbo v2, ""
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcr:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
 
-    .line 729
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcr:Ljava/lang/String;
+    .line 733
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 730
+    .line 734
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
     const-string/jumbo v2, "INTENT_SNS_LOCAL_ID"
 
-    invoke-virtual {v0, v2, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-virtual {v0, v2, v6}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 731
-    if-eq v0, v5, :cond_1
+    .line 735
+    if-eq v0, v6, :cond_1
 
-    .line 732
+    .line 736
     const-string/jumbo v2, "sns_table_"
 
-    int-to-long v3, v0
+    int-to-long v4, v0
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/plugin/sns/h/s;->r(Ljava/lang/String;J)Ljava/lang/String;
+    invoke-static {v2, v4, v5}, Lcom/tencent/mm/plugin/sns/i/s;->u(Ljava/lang/String;J)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcr:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
 
-    .line 736
+    .line 740
     :cond_1
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const-string/jumbo v2, "INTENT_SNS_TIMELINEOBJECT"
+    const-string/jumbo v4, "INTENT_SNS_TIMELINEOBJECT"
 
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->getByteArrayExtra(Ljava/lang/String;)[B
+    invoke-virtual {v0, v4}, Landroid/content/Intent;->getByteArrayExtra(Ljava/lang/String;)[B
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    new-instance v2, Lcom/tencent/mm/protocal/b/atp;
+    new-instance v4, Lcom/tencent/mm/protocal/b/auf;
 
-    invoke-direct {v2}, Lcom/tencent/mm/protocal/b/atp;-><init>()V
+    invoke-direct {v4}, Lcom/tencent/mm/protocal/b/auf;-><init>()V
 
     :try_start_0
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/protocal/b/atp;->am([B)Lcom/tencent/mm/at/a;
+    invoke-virtual {v4, v0}, Lcom/tencent/mm/protocal/b/auf;->au([B)Lcom/tencent/mm/ax/a;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azi()Lcom/tencent/mm/plugin/sns/h/l;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBI()Lcom/tencent/mm/plugin/sns/i/l;
 
     move-result-object v0
 
-    new-instance v3, Ljava/math/BigInteger;
+    new-instance v5, Ljava/math/BigInteger;
 
-    iget-object v4, v2, Lcom/tencent/mm/protocal/b/atp;->iXW:Ljava/lang/String;
+    iget-object v6, v4, Lcom/tencent/mm/protocal/b/auf;->jvB:Ljava/lang/String;
 
-    invoke-direct {v3, v4}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;)V
+    invoke-direct {v5, v6}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v3}, Ljava/math/BigInteger;->longValue()J
+    invoke-virtual {v5}, Ljava/math/BigInteger;->longValue()J
 
-    move-result-wide v3
+    move-result-wide v6
 
-    invoke-virtual {v0, v3, v4}, Lcom/tencent/mm/plugin/sns/h/l;->cx(J)Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-virtual {v0, v6, v7}, Lcom/tencent/mm/plugin/sns/i/l;->cM(J)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v0
 
-    if-nez v0, :cond_7
+    if-nez v0, :cond_a
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
+    const-string/jumbo v0, "MicroMsg.SnsCommentDetailUI"
 
-    const-string/jumbo v3, "info is null, can insert to sns info"
+    const-string/jumbo v5, "info is null, can insert to sns info"
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Lcom/tencent/mm/plugin/sns/h/k;
+    new-instance v0, Lcom/tencent/mm/plugin/sns/i/k;
 
-    invoke-direct {v0}, Lcom/tencent/mm/plugin/sns/h/k;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/plugin/sns/i/k;-><init>()V
 
-    new-instance v3, Ljava/math/BigInteger;
+    new-instance v5, Ljava/math/BigInteger;
 
-    iget-object v4, v2, Lcom/tencent/mm/protocal/b/atp;->iXW:Ljava/lang/String;
+    iget-object v6, v4, Lcom/tencent/mm/protocal/b/auf;->jvB:Ljava/lang/String;
 
-    invoke-direct {v3, v4}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;)V
+    invoke-direct {v5, v6}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v3}, Ljava/math/BigInteger;->longValue()J
+    invoke-virtual {v5}, Ljava/math/BigInteger;->longValue()J
 
-    move-result-wide v3
+    move-result-wide v6
 
-    iput-wide v3, v0, Lcom/tencent/mm/plugin/sns/h/k;->field_snsId:J
+    iput-wide v6, v0, Lcom/tencent/mm/plugin/sns/i/k;->field_snsId:J
 
     :try_start_1
-    invoke-virtual {v2}, Lcom/tencent/mm/protocal/b/atp;->toByteArray()[B
+    invoke-virtual {v4}, Lcom/tencent/mm/protocal/b/auf;->toByteArray()[B
 
-    move-result-object v3
+    move-result-object v5
 
-    iput-object v3, v0, Lcom/tencent/mm/plugin/sns/h/k;->field_content:[B
+    iput-object v5, v0, Lcom/tencent/mm/plugin/sns/i/k;->field_content:[B
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
     :goto_0
-    iget v3, v2, Lcom/tencent/mm/protocal/b/atp;->fpL:I
+    iget v5, v4, Lcom/tencent/mm/protocal/b/auf;->fyR:I
 
-    iput v3, v0, Lcom/tencent/mm/plugin/sns/h/k;->field_createTime:I
+    iput v5, v0, Lcom/tencent/mm/plugin/sns/i/k;->field_createTime:I
 
-    iget-object v3, v2, Lcom/tencent/mm/protocal/b/atp;->eiB:Ljava/lang/String;
+    iget-object v5, v4, Lcom/tencent/mm/protocal/b/auf;->emC:Ljava/lang/String;
 
-    iput-object v3, v0, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
+    iput-object v5, v0, Lcom/tencent/mm/plugin/sns/i/k;->field_userName:Ljava/lang/String;
 
-    iget-object v2, v2, Lcom/tencent/mm/protocal/b/atp;->jMx:Lcom/tencent/mm/protocal/b/iv;
+    iget-object v4, v4, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
 
-    iget v2, v2, Lcom/tencent/mm/protocal/b/iv;->jhv:I
+    iget v4, v4, Lcom/tencent/mm/protocal/b/je;->jFu:I
 
-    iput v2, v0, Lcom/tencent/mm/plugin/sns/h/k;->field_type:I
+    iput v4, v0, Lcom/tencent/mm/plugin/sns/i/k;->field_type:I
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/k;->aAi()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/k;->aCU()V
 
-    new-instance v2, Lcom/tencent/mm/protocal/b/aqi;
+    new-instance v4, Lcom/tencent/mm/protocal/b/aqt;
 
-    invoke-direct {v2}, Lcom/tencent/mm/protocal/b/aqi;-><init>()V
+    invoke-direct {v4}, Lcom/tencent/mm/protocal/b/aqt;-><init>()V
 
-    new-instance v3, Lcom/tencent/mm/protocal/b/alx;
+    new-instance v5, Lcom/tencent/mm/protocal/b/ami;
 
-    invoke-direct {v3}, Lcom/tencent/mm/protocal/b/alx;-><init>()V
+    invoke-direct {v5}, Lcom/tencent/mm/protocal/b/ami;-><init>()V
 
-    iput-object v3, v2, Lcom/tencent/mm/protocal/b/aqi;->jJQ:Lcom/tencent/mm/protocal/b/alx;
+    iput-object v5, v4, Lcom/tencent/mm/protocal/b/aqt;->kin:Lcom/tencent/mm/protocal/b/ami;
 
     :try_start_2
-    invoke-virtual {v2}, Lcom/tencent/mm/protocal/b/aqi;->toByteArray()[B
+    invoke-virtual {v4}, Lcom/tencent/mm/protocal/b/aqt;->toByteArray()[B
 
-    move-result-object v2
+    move-result-object v4
 
-    iput-object v2, v0, Lcom/tencent/mm/plugin/sns/h/k;->field_attrBuf:[B
+    iput-object v4, v0, Lcom/tencent/mm/plugin/sns/i/k;->field_attrBuf:[B
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
     :goto_1
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azi()Lcom/tencent/mm/plugin/sns/h/l;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBI()Lcom/tencent/mm/plugin/sns/i/l;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v0}, Lcom/tencent/mm/plugin/sns/i/l;->a(Lcom/tencent/mm/sdk/h/c;)Z
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v4
+
+    const-string/jumbo v0, "MicroMsg.FTS.SnsComment"
+
+    const-string/jumbo v6, "insert sns obj use time %d"
+
+    new-array v7, v12, [Ljava/lang/Object;
+
+    sub-long v2, v4, v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
 
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/plugin/sns/h/l;->a(Lcom/tencent/mm/sdk/h/c;)Z
+    aput-object v2, v7, v1
 
-    .line 737
+    invoke-static {v0, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 741
     :cond_2
     :goto_2
-    invoke-direct {p0, v7}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fb(Z)Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-direct {p0, v12}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fk(Z)Lcom/tencent/mm/plugin/sns/i/k;
 
-    move-result-object v6
+    move-result-object v11
 
-    .line 738
-    const-string/jumbo v0, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
+    .line 742
+    const-string/jumbo v0, "MicroMsg.SnsCommentDetailUI"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -8926,7 +9536,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8938,7 +9548,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcr:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrd:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8948,306 +9558,372 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 739
-    if-eqz v6, :cond_3
+    .line 743
+    if-eqz v11, :cond_3
 
-    .line 740
-    const-string/jumbo v0, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
+    .line 744
+    const-string/jumbo v0, "MicroMsg.SnsCommentDetailUI"
 
     const-string/jumbo v2, "commentdetail %s"
 
-    new-array v3, v7, [Ljava/lang/Object;
+    new-array v3, v12, [Ljava/lang/Object;
 
-    iget-object v4, v6, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
+    iget-object v4, v11, Lcom/tencent/mm/plugin/sns/i/k;->field_userName:Ljava/lang/String;
 
     const-string/jumbo v5, ""
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v3, v1
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 742
+    .line 746
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/h/s;->vJ(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/i/s;->wW(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 743
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    .line 747
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/h/s;->tZ(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/i/s;->vf(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_c
 
-    .line 744
-    if-eqz v6, :cond_8
+    .line 748
+    if-eqz v11, :cond_b
 
-    .line 745
-    iget-object v0, v6, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
+    .line 749
+    iget-object v0, v11, Lcom/tencent/mm/plugin/sns/i/k;->field_userName:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/model/i;->dU(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/model/i;->ef(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
-    .line 746
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 750
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    new-instance v2, Lcom/tencent/mm/plugin/sns/d/o;
+    new-instance v2, Lcom/tencent/mm/plugin/sns/e/o;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/tencent/mm/plugin/sns/h/s;->vH(Ljava/lang/String;)J
+    invoke-static {v3}, Lcom/tencent/mm/plugin/sns/i/s;->wU(Ljava/lang/String;)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-direct {v2, v3, v4}, Lcom/tencent/mm/plugin/sns/d/o;-><init>(J)V
+    invoke-direct {v2, v4, v5}, Lcom/tencent/mm/plugin/sns/e/o;-><init>(J)V
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
-    .line 755
+    .line 759
     :cond_4
     :goto_3
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v2, 0xd2
 
-    invoke-virtual {v0, v2, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v2, p0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
-    .line 756
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 760
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v2, 0xda
 
-    invoke-virtual {v0, v2, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v2, p0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
-    .line 757
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 761
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v2, 0xd5
 
-    invoke-virtual {v0, v2, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v2, p0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
-    .line 758
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 762
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v2, 0x2aa
 
-    invoke-virtual {v0, v2, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v2, p0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
-    .line 759
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 763
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v2, 0xd6
 
-    invoke-virtual {v0, v2, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v2, p0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
-    .line 760
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 764
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v2, 0x2ab
 
-    invoke-virtual {v0, v2, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v2, p0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
-    .line 762
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayX()Lcom/tencent/mm/storage/q;
+    .line 766
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBy()Lcom/tencent/mm/storage/q;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcs:Lcom/tencent/mm/storage/q;
-
-    .line 764
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/af;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/af;-><init>(Landroid/app/Activity;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWG:Lcom/tencent/mm/plugin/sns/ui/af;
-
-    .line 765
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/ai;
-
-    iget-object v2, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
-
-    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
-
-    invoke-direct {v0, v2}, Lcom/tencent/mm/plugin/sns/ui/ai;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcq:Lcom/tencent/mm/plugin/sns/ui/ai;
-
-    .line 767
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/h;
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcK:Lcom/tencent/mm/plugin/sns/d/af;
-
-    invoke-direct {v0, p0, v7, v2}, Lcom/tencent/mm/plugin/sns/ui/h;-><init>(Landroid/app/Activity;ILcom/tencent/mm/plugin/sns/d/ac;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcw:Lcom/tencent/mm/plugin/sns/ui/h;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hre:Lcom/tencent/mm/storage/q;
 
     .line 768
-    if-eqz v6, :cond_5
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/aj;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/aj;-><init>(Landroid/app/Activity;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hke:Lcom/tencent/mm/plugin/sns/ui/aj;
 
     .line 769
-    invoke-virtual {v6}, Lcom/tencent/mm/plugin/sns/h/k;->azR()Lcom/tencent/mm/protocal/b/atp;
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/am;
+
+    iget-object v2, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
+
+    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
+
+    invoke-direct {v0, v2}, Lcom/tencent/mm/plugin/sns/ui/am;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrc:Lcom/tencent/mm/plugin/sns/ui/am;
+
+    .line 771
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/h;
+
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrx:Lcom/tencent/mm/plugin/sns/e/ae;
+
+    invoke-direct {v0, p0, v12, v2}, Lcom/tencent/mm/plugin/sns/ui/h;-><init>(Landroid/app/Activity;ILcom/tencent/mm/plugin/sns/e/ac;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hri:Lcom/tencent/mm/plugin/sns/ui/h;
+
+    .line 772
+    if-eqz v11, :cond_5
+
+    .line 773
+    invoke-virtual {v11}, Lcom/tencent/mm/plugin/sns/i/k;->aCD()Lcom/tencent/mm/protocal/b/auf;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/an;->c(Lcom/tencent/mm/protocal/b/atp;)I
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/aq;->c(Lcom/tencent/mm/protocal/b/auf;)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
-    .line 771
+    .line 778
     :cond_5
-    if-eqz v6, :cond_6
+    if-eqz v11, :cond_6
 
-    const/16 v0, 0x20
-
-    invoke-virtual {v6, v0}, Lcom/tencent/mm/plugin/sns/h/k;->lN(I)Z
+    invoke-virtual {v11, v8}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    .line 772
+    .line 779
     new-instance v0, Lcom/tencent/mm/plugin/sns/a/a/f;
 
     const/4 v2, 0x2
 
     invoke-direct {v0, v2}, Lcom/tencent/mm/plugin/sns/a/a/f;-><init>(I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcF:Lcom/tencent/mm/plugin/sns/a/a/f;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrs:Lcom/tencent/mm/plugin/sns/a/a/f;
 
-    .line 773
-    invoke-static {v6}, Lcom/tencent/mm/plugin/sns/d/ai;->k(Lcom/tencent/mm/plugin/sns/h/k;)Lcom/tencent/mm/protocal/b/aqi;
+    .line 780
+    invoke-virtual {v11}, Lcom/tencent/mm/plugin/sns/i/k;->aCD()Lcom/tencent/mm/protocal/b/auf;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/aq;->c(Lcom/tencent/mm/protocal/b/auf;)I
+
+    .line 783
+    :cond_6
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->Gy()V
+
+    .line 785
+    if-eqz v11, :cond_7
+
+    invoke-virtual {v11, v8}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    .line 786
+    invoke-static {v11}, Lcom/tencent/mm/plugin/sns/e/ah;->k(Lcom/tencent/mm/plugin/sns/i/k;)Lcom/tencent/mm/protocal/b/aqt;
 
     move-result-object v9
 
-    .line 774
-    invoke-virtual {v6}, Lcom/tencent/mm/plugin/sns/h/k;->azR()Lcom/tencent/mm/protocal/b/atp;
+    .line 787
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrs:Lcom/tencent/mm/plugin/sns/a/a/f;
 
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/an;->c(Lcom/tencent/mm/protocal/b/atp;)I
-
-    .line 775
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcF:Lcom/tencent/mm/plugin/sns/a/a/f;
-
-    invoke-virtual {v6}, Lcom/tencent/mm/plugin/sns/h/k;->aAl()Ljava/lang/String;
+    invoke-virtual {v11}, Lcom/tencent/mm/plugin/sns/i/k;->aCX()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v6}, Lcom/tencent/mm/plugin/sns/h/k;->aAu()Ljava/lang/String;
+    invoke-virtual {v11}, Lcom/tencent/mm/plugin/sns/i/k;->aDg()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v6}, Lcom/tencent/mm/plugin/sns/h/k;->aAh()Z
+    invoke-virtual {v11}, Lcom/tencent/mm/plugin/sns/i/k;->aCT()Z
 
     move-result v4
 
-    const/4 v5, 0x0
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    iget-wide v6, v6, Lcom/tencent/mm/plugin/sns/h/k;->field_snsId:J
+    iget-wide v6, v11, Lcom/tencent/mm/plugin/sns/i/k;->field_snsId:J
 
-    iget-object v8, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcZ:Lcom/tencent/mm/plugin/sns/ui/at;
+    iget-object v8, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrM:Lcom/tencent/mm/plugin/sns/ui/az;
 
-    iget v10, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->eLV:I
+    iget v10, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->cTv:I
 
-    invoke-virtual/range {v0 .. v10}, Lcom/tencent/mm/plugin/sns/a/a/f;->a(ILjava/lang/String;Ljava/lang/String;ZLandroid/view/View;JLcom/tencent/mm/plugin/sns/ui/at;Lcom/tencent/mm/protocal/b/aqi;I)V
+    invoke-virtual/range {v0 .. v10}, Lcom/tencent/mm/plugin/sns/a/a/f;->a(ILjava/lang/String;Ljava/lang/String;ZLandroid/view/View;JLcom/tencent/mm/plugin/sns/ui/az;Lcom/tencent/mm/protocal/b/aqt;I)V
 
-    .line 778
-    :cond_6
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->Gb()V
+    .line 790
+    :cond_7
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    .line 779
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcg:Landroid/widget/ListView;
+    if-eqz v0, :cond_9
 
-    if-nez v0, :cond_a
+    .line 792
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
 
-    .line 803
+    const v2, 0x7f100023
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/plugin/sight/decode/a/a;
+
+    .line 793
+    invoke-virtual {v11}, Lcom/tencent/mm/plugin/sns/i/k;->aCD()Lcom/tencent/mm/protocal/b/auf;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lcom/tencent/mm/protocal/b/auf;->kli:Lcom/tencent/mm/protocal/b/je;
+
+    iget v2, v2, Lcom/tencent/mm/protocal/b/je;->jFu:I
+
+    const/16 v3, 0xf
+
+    if-ne v2, v3, :cond_8
+
+    instance-of v2, v0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayImageView;
+
+    if-eqz v2, :cond_8
+
+    .line 794
+    check-cast v0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayImageView;
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayImageView;->gEO:Lcom/tencent/mm/plugin/sight/decode/a/b;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/decode/a/b;->aye()Z
+
+    move-result v1
+
+    .line 796
+    :cond_8
+    invoke-static {v11, v12, v1}, Lcom/tencent/mm/plugin/sns/a/a/i;->a(Lcom/tencent/mm/plugin/sns/i/k;ZZ)V
+
+    .line 797
+    sget-object v0, Lcom/tencent/mm/modelstat/k$a;->bZx:Lcom/tencent/mm/modelstat/k$a;
+
+    invoke-virtual {v11}, Lcom/tencent/mm/plugin/sns/i/k;->aCD()Lcom/tencent/mm/protocal/b/auf;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/auf;->hmg:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/modelstat/k;->a(Lcom/tencent/mm/modelstat/k$a;Ljava/lang/String;)V
+
+    .line 800
+    :cond_9
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqS:Landroid/widget/ListView;
+
+    if-nez v0, :cond_d
+
+    .line 824
     :goto_4
     return-void
 
-    .line 736
-    :cond_7
-    const-string/jumbo v0, "!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc="
+    .line 740
+    :cond_a
+    const-string/jumbo v0, "MicroMsg.SnsCommentDetailUI"
 
     const-string/jumbo v2, "info is not null, can not insert to sns info"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_2
 
-    .line 749
-    :cond_8
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 753
+    :cond_b
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    new-instance v2, Lcom/tencent/mm/plugin/sns/d/o;
+    new-instance v2, Lcom/tencent/mm/plugin/sns/e/o;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/tencent/mm/plugin/sns/h/s;->vH(Ljava/lang/String;)J
+    invoke-static {v3}, Lcom/tencent/mm/plugin/sns/i/s;->wU(Ljava/lang/String;)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-direct {v2, v3, v4}, Lcom/tencent/mm/plugin/sns/d/o;-><init>(J)V
+    invoke-direct {v2, v4, v5}, Lcom/tencent/mm/plugin/sns/e/o;-><init>(J)V
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
     goto/16 :goto_3
 
-    .line 752
-    :cond_9
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 756
+    :cond_c
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    new-instance v2, Lcom/tencent/mm/plugin/sns/d/k;
+    new-instance v2, Lcom/tencent/mm/plugin/sns/e/k;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/tencent/mm/plugin/sns/h/s;->vH(Ljava/lang/String;)J
+    invoke-static {v3}, Lcom/tencent/mm/plugin/sns/i/s;->wU(Ljava/lang/String;)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-direct {v2, v3, v4, v1}, Lcom/tencent/mm/plugin/sns/d/k;-><init>(JI)V
+    invoke-direct {v2, v4, v5, v1}, Lcom/tencent/mm/plugin/sns/e/k;-><init>(JI)V
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
     goto/16 :goto_3
 
-    .line 782
-    :cond_a
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcg:Landroid/widget/ListView;
+    .line 803
+    :cond_d
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqS:Landroid/widget/ListView;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$4;
 
@@ -9255,245 +9931,232 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 794
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 815
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "MusicPlayer"
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dUy:Lcom/tencent/mm/sdk/c/c;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dSq:Lcom/tencent/mm/sdk/c/c;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->d(Lcom/tencent/mm/sdk/c/c;)Z
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    .line 816
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    .line 795
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hry:Lcom/tencent/mm/sdk/c/c;
 
-    const-string/jumbo v1, "SnsTranslateFinish"
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->d(Lcom/tencent/mm/sdk/c/c;)Z
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcL:Lcom/tencent/mm/sdk/c/c;
+    .line 817
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrz:Lcom/tencent/mm/sdk/c/c;
 
-    .line 796
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->d(Lcom/tencent/mm/sdk/c/c;)Z
 
-    const-string/jumbo v1, "SnsTranslateStart"
+    .line 818
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcM:Lcom/tencent/mm/sdk/c/c;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrA:Lcom/tencent/mm/sdk/c/c;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->d(Lcom/tencent/mm/sdk/c/c;)Z
 
-    .line 797
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 819
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "SnsUnTranslate"
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrB:Lcom/tencent/mm/sdk/c/c;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcN:Lcom/tencent/mm/sdk/c/c;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->d(Lcom/tencent/mm/sdk/c/c;)Z
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    .line 820
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    .line 798
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrF:Lcom/tencent/mm/sdk/c/c;
 
-    const-string/jumbo v1, "GalleryPhotoInfo"
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->d(Lcom/tencent/mm/sdk/c/c;)Z
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcO:Lcom/tencent/mm/sdk/c/c;
+    .line 821
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrG:Lcom/tencent/mm/sdk/c/c;
 
-    .line 799
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->d(Lcom/tencent/mm/sdk/c/c;)Z
 
-    const-string/jumbo v1, "SnsLuckyPayNotify"
+    .line 823
+    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/e;->f(Lcom/tencent/mm/ui/MMActivity;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcS:Lcom/tencent/mm/sdk/c/c;
+    goto :goto_4
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
-
-    .line 800
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    const-string/jumbo v1, "FullScreenHelper"
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcT:Lcom/tencent/mm/sdk/c/c;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
-
-    .line 802
-    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/e;->h(Lcom/tencent/mm/ui/MMActivity;)V
-
-    goto/16 :goto_4
-
-    .line 736
+    .line 740
     :catch_0
     move-exception v0
 
     goto/16 :goto_2
 
     :catch_1
-    move-exception v2
+    move-exception v4
 
     goto/16 :goto_1
 
     :catch_2
-    move-exception v3
+    move-exception v5
 
     goto/16 :goto_0
 .end method
 
 .method public onDestroy()V
-    .locals 8
+    .locals 9
 
     .prologue
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
-    .line 869
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayZ()Lcom/tencent/mm/plugin/sns/d/al$a;
+    .line 894
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->getSnsServer()Lcom/tencent/mm/plugin/sns/e/ak$a;
 
     move-result-object v0
 
     const/4 v1, 0x5
 
-    invoke-virtual {v0, p0, v1}, Lcom/tencent/mm/plugin/sns/d/al$a;->a(Lcom/tencent/mm/pluginsdk/i$o$e$a;I)Z
+    invoke-virtual {v0, p0, v1}, Lcom/tencent/mm/plugin/sns/e/ak$a;->a(Lcom/tencent/mm/pluginsdk/i$o$e$a;I)Z
 
-    .line 870
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 895
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0xd2
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
-    .line 871
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 896
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0xda
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
-    .line 872
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 897
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0xd5
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
-    .line 873
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 898
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0xd6
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
-    .line 874
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 899
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0x2ab
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
-    .line 875
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 900
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0x2aa
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
-    .line 876
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azg()Lcom/tencent/mm/plugin/sns/d/g;
+    .line 901
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBG()Lcom/tencent/mm/plugin/sns/e/g;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sns/d/g;->L(Landroid/app/Activity;)V
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sns/e/g;->G(Landroid/app/Activity;)V
 
-    .line 878
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 903
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "MusicPlayer"
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dUy:Lcom/tencent/mm/sdk/c/c;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->dSq:Lcom/tencent/mm/sdk/c/c;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->e(Lcom/tencent/mm/sdk/c/c;)Z
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
-
-    .line 880
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcw:Lcom/tencent/mm/plugin/sns/ui/h;
+    .line 905
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hri:Lcom/tencent/mm/plugin/sns/ui/h;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcw:Lcom/tencent/mm/plugin/sns/ui/h;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hri:Lcom/tencent/mm/plugin/sns/ui/h;
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/h;->asX:Landroid/app/Activity;
+    iput-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/h;->aeH:Landroid/app/Activity;
 
-    .line 882
+    .line 907
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/ui/v;->aBg()V
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/ui/x;->aEh()V
 
-    .line 883
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    .line 908
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     if-eqz v0, :cond_1
 
-    .line 884
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    .line 909
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->ahz()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->akj()V
 
-    .line 887
+    .line 912
     :cond_1
-    invoke-direct {p0, v7}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fb(Z)Lcom/tencent/mm/plugin/sns/h/k;
-
-    move-result-object v0
-
-    .line 888
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcF:Lcom/tencent/mm/plugin/sns/a/a/f;
-
-    if-eqz v1, :cond_2
-
-    if-eqz v0, :cond_2
-
-    const/16 v1, 0x20
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/h/k;->lN(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 889
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcF:Lcom/tencent/mm/plugin/sns/a/a/f;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/k;->aAl()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/k;->aAu()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v7, v2, v3}, Lcom/tencent/mm/plugin/sns/a/a/f;->n(ILjava/lang/String;Ljava/lang/String;)V
-
-    .line 890
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/k;->aAr()Lcom/tencent/mm/plugin/sns/h/a;
+    invoke-direct {p0, v8}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->fk(Z)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v1
 
-    .line 891
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/h/a;->gRE:Ljava/lang/String;
+    .line 913
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrs:Lcom/tencent/mm/plugin/sns/a/a/f;
 
-    .line 892
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azd()Lcom/tencent/mm/plugin/sns/a/a/h;
+    if-eqz v0, :cond_2
+
+    if-eqz v1, :cond_2
+
+    const/16 v0, 0x20
+
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sns/i/k;->na(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 914
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrs:Lcom/tencent/mm/plugin/sns/a/a/f;
+
+    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/i/k;->aCX()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/i/k;->aDg()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v8, v2, v3}, Lcom/tencent/mm/plugin/sns/a/a/f;->q(ILjava/lang/String;Ljava/lang/String;)V
+
+    .line 915
+    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/i/k;->aDd()Lcom/tencent/mm/plugin/sns/i/a;
+
+    move-result-object v0
+
+    .line 916
+    if-nez v0, :cond_3
+
+    const-string/jumbo v0, ""
+
+    .line 917
+    :goto_0
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBD()Lcom/tencent/mm/plugin/sns/a/a/h;
 
     move-result-object v2
 
@@ -9503,21 +10166,21 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    iget-wide v5, v0, Lcom/tencent/mm/plugin/sns/h/k;->field_snsId:J
+    iget-wide v6, v1, Lcom/tencent/mm/plugin/sns/i/k;->field_snsId:J
 
-    invoke-static {v5, v6}, Lcom/tencent/mm/plugin/sns/data/h;->bX(J)Ljava/lang/String;
+    invoke-static {v6, v7}, Lcom/tencent/mm/plugin/sns/data/i;->cn(J)Ljava/lang/String;
 
     move-result-object v5
 
-    aput-object v5, v4, v7
+    aput-object v5, v4, v8
 
     const/4 v5, 0x1
 
-    aput-object v1, v4, v5
+    aput-object v0, v4, v5
 
     const/4 v5, 0x2
 
-    iget-wide v6, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hca:J
+    iget-wide v6, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqM:J
 
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -9537,27 +10200,27 @@
 
     aput-object v6, v4, v5
 
-    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/plugin/sns/a/a/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/plugin/sns/a/a/h;->h(I[Ljava/lang/Object;)V
 
-    .line 894
+    .line 919
     const/16 v2, 0x2dc
 
-    invoke-static {v2}, Lcom/tencent/mm/modelsns/a;->dR(I)Lcom/tencent/mm/modelsns/a;
+    invoke-static {v2}, Lcom/tencent/mm/modelsns/a;->ey(I)Lcom/tencent/mm/modelsns/a;
 
     move-result-object v2
 
-    .line 897
-    iget-wide v3, v0, Lcom/tencent/mm/plugin/sns/h/k;->field_snsId:J
+    .line 922
+    iget-wide v4, v1, Lcom/tencent/mm/plugin/sns/i/k;->field_snsId:J
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/plugin/sns/data/h;->bX(J)Ljava/lang/String;
+    invoke-static {v4, v5}, Lcom/tencent/mm/plugin/sns/data/i;->cn(J)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/modelsns/a;->jf(Ljava/lang/String;)Lcom/tencent/mm/modelsns/a;
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/modelsns/a;->jx(Ljava/lang/String;)Lcom/tencent/mm/modelsns/a;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelsns/a;->jf(Ljava/lang/String;)Lcom/tencent/mm/modelsns/a;
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/modelsns/a;->jx(Ljava/lang/String;)Lcom/tencent/mm/modelsns/a;
 
     move-result-object v0
 
@@ -9565,9 +10228,9 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-wide v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hca:J
+    iget-wide v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqM:J
 
-    invoke-virtual {v1, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -9575,7 +10238,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelsns/a;->jf(Ljava/lang/String;)Lcom/tencent/mm/modelsns/a;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelsns/a;->jx(Ljava/lang/String;)Lcom/tencent/mm/modelsns/a;
 
     move-result-object v0
 
@@ -9585,9 +10248,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v1, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -9595,135 +10258,129 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelsns/a;->jf(Ljava/lang/String;)Lcom/tencent/mm/modelsns/a;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelsns/a;->jx(Ljava/lang/String;)Lcom/tencent/mm/modelsns/a;
 
-    .line 902
-    invoke-virtual {v2}, Lcom/tencent/mm/modelsns/a;->CV()Z
+    .line 927
+    invoke-virtual {v2}, Lcom/tencent/mm/modelsns/a;->Dg()Z
 
-    .line 905
+    .line 930
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcG:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/c/b;->Qo()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/c/b;->RE()V
 
-    .line 907
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 932
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "SnsTranslateFinish"
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hry:Lcom/tencent/mm/sdk/c/c;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcL:Lcom/tencent/mm/sdk/c/c;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->e(Lcom/tencent/mm/sdk/c/c;)Z
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    .line 933
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    .line 908
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrz:Lcom/tencent/mm/sdk/c/c;
 
-    const-string/jumbo v1, "SnsTranslateStart"
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->e(Lcom/tencent/mm/sdk/c/c;)Z
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcM:Lcom/tencent/mm/sdk/c/c;
+    .line 934
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrA:Lcom/tencent/mm/sdk/c/c;
 
-    .line 909
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->e(Lcom/tencent/mm/sdk/c/c;)Z
 
-    const-string/jumbo v1, "SnsUnTranslate"
+    .line 935
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcN:Lcom/tencent/mm/sdk/c/c;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrB:Lcom/tencent/mm/sdk/c/c;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->e(Lcom/tencent/mm/sdk/c/c;)Z
 
-    .line 910
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 936
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "GalleryPhotoInfo"
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrF:Lcom/tencent/mm/sdk/c/c;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcO:Lcom/tencent/mm/sdk/c/c;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->e(Lcom/tencent/mm/sdk/c/c;)Z
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    .line 937
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    .line 911
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrG:Lcom/tencent/mm/sdk/c/c;
 
-    const-string/jumbo v1, "SnsLuckyPayNotify"
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->e(Lcom/tencent/mm/sdk/c/c;)Z
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcS:Lcom/tencent/mm/sdk/c/c;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
-
-    .line 912
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    const-string/jumbo v1, "FullScreenHelper"
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcT:Lcom/tencent/mm/sdk/c/c;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
-
-    .line 913
+    .line 938
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onDestroy()V
 
-    .line 914
+    .line 939
     return-void
+
+    .line 916
+    :cond_3
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/i/a;->gZH:Ljava/lang/String;
+
+    goto/16 :goto_0
 .end method
 
 .method public onPause()V
-    .locals 3
+    .locals 4
 
     .prologue
-    .line 954
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->aze()Lcom/tencent/mm/plugin/sns/d/b;
+    .line 979
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBE()Lcom/tencent/mm/plugin/sns/e/b;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sns/d/b;->b(Lcom/tencent/mm/plugin/sns/d/b$b;)V
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sns/e/b;->b(Lcom/tencent/mm/plugin/sns/e/b$b;)V
 
-    .line 955
+    .line 980
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onPause()V
 
-    .line 956
-    new-instance v0, Lcom/tencent/mm/d/a/nd;
+    .line 981
+    new-instance v0, Lcom/tencent/mm/e/a/nq;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/nd;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/nq;-><init>()V
 
-    .line 958
-    iget-object v0, v0, Lcom/tencent/mm/d/a/nd;->aJy:Lcom/tencent/mm/d/a/nd$a;
+    .line 983
+    iget-object v0, v0, Lcom/tencent/mm/e/a/nq;->avS:Lcom/tencent/mm/e/a/nq$a;
 
     const/4 v1, 0x1
 
-    iput v1, v0, Lcom/tencent/mm/d/a/nd$a;->type:I
+    iput v1, v0, Lcom/tencent/mm/e/a/nq$a;->type:I
 
-    .line 959
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hbq:Lcom/tencent/mm/plugin/sight/decode/ui/c;
+    .line 984
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hoO:Lcom/tencent/mm/plugin/sight/decode/ui/c;
 
     if-eqz v0, :cond_0
 
-    .line 960
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hbq:Lcom/tencent/mm/plugin/sight/decode/ui/c;
+    .line 985
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hoO:Lcom/tencent/mm/plugin/sight/decode/ui/c;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/c;->dismiss()V
 
-    .line 961
+    .line 986
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hbq:Lcom/tencent/mm/plugin/sight/decode/ui/c;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hoO:Lcom/tencent/mm/plugin/sight/decode/ui/c;
 
-    .line 963
+    .line 988
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcF:Lcom/tencent/mm/plugin/sns/a/a/f;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrs:Lcom/tencent/mm/plugin/sns/a/a/f;
 
     if-eqz v0, :cond_1
 
-    .line 964
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcF:Lcom/tencent/mm/plugin/sns/a/a/f;
+    .line 989
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrs:Lcom/tencent/mm/plugin/sns/a/a/f;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gq()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, v0, Lcom/tencent/mm/plugin/sns/a/a/f;->cIK:J
+    iput-wide v2, v0, Lcom/tencent/mm/plugin/sns/a/a/f;->cFO:J
 
-    .line 966
+    .line 991
     :cond_1
     return-void
 .end method
@@ -9732,82 +10389,356 @@
     .locals 4
 
     .prologue
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
-    .line 934
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->aze()Lcom/tencent/mm/plugin/sns/d/b;
+    const/4 v2, 0x0
+
+    .line 959
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBE()Lcom/tencent/mm/plugin/sns/e/b;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sns/d/b;->a(Lcom/tencent/mm/plugin/sns/d/b$b;)V
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sns/e/b;->a(Lcom/tencent/mm/plugin/sns/e/b$b;)V
 
-    .line 935
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
-
-    if-eqz v0, :cond_0
-
-    .line 936
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->gPn:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->setState(Ljava/lang/String;)V
-
-    .line 938
-    :cond_0
-    new-instance v0, Lcom/tencent/mm/d/a/nd;
-
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/nd;-><init>()V
-
-    .line 939
-    iget-object v1, v0, Lcom/tencent/mm/d/a/nd;->aJy:Lcom/tencent/mm/d/a/nd$a;
-
-    iput v3, v1, Lcom/tencent/mm/d/a/nd$a;->aJz:I
-
-    .line 940
-    iget-object v1, v0, Lcom/tencent/mm/d/a/nd;->aJy:Lcom/tencent/mm/d/a/nd$a;
-
-    const/4 v2, 0x1
-
-    iput v2, v1, Lcom/tencent/mm/d/a/nd$a;->aJA:I
-
-    .line 941
-    iget-object v1, v0, Lcom/tencent/mm/d/a/nd;->aJy:Lcom/tencent/mm/d/a/nd$a;
-
-    iput v3, v1, Lcom/tencent/mm/d/a/nd$a;->aJB:I
-
-    .line 942
-    iget-object v1, v0, Lcom/tencent/mm/d/a/nd;->aJy:Lcom/tencent/mm/d/a/nd$a;
-
-    iput v3, v1, Lcom/tencent/mm/d/a/nd$a;->type:I
-
-    .line 943
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
-
-    .line 944
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcF:Lcom/tencent/mm/plugin/sns/a/a/f;
+    .line 960
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     if-eqz v0, :cond_1
 
-    .line 945
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hcF:Lcom/tencent/mm/plugin/sns/a/a/f;
+    .line 961
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/i/s;->wW(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->hsn:Landroid/widget/Button;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->hsn:Landroid/widget/Button;
+
+    invoke-virtual {v1, v2}, Landroid/widget/Button;->setEnabled(Z)V
+
+    :cond_0
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->hsm:Landroid/widget/ImageView;
+
+    if-eqz v1, :cond_1
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->hsm:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setEnabled(Z)V
+
+    .line 963
+    :cond_1
+    :goto_0
+    new-instance v0, Lcom/tencent/mm/e/a/nq;
+
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/nq;-><init>()V
+
+    .line 964
+    iget-object v1, v0, Lcom/tencent/mm/e/a/nq;->avS:Lcom/tencent/mm/e/a/nq$a;
+
+    iput v2, v1, Lcom/tencent/mm/e/a/nq$a;->avT:I
+
+    .line 965
+    iget-object v1, v0, Lcom/tencent/mm/e/a/nq;->avS:Lcom/tencent/mm/e/a/nq$a;
+
+    iput v3, v1, Lcom/tencent/mm/e/a/nq$a;->avU:I
+
+    .line 966
+    iget-object v1, v0, Lcom/tencent/mm/e/a/nq;->avS:Lcom/tencent/mm/e/a/nq$a;
+
+    iput v2, v1, Lcom/tencent/mm/e/a/nq$a;->avV:I
+
+    .line 967
+    iget-object v1, v0, Lcom/tencent/mm/e/a/nq;->avS:Lcom/tencent/mm/e/a/nq$a;
+
+    iput v2, v1, Lcom/tencent/mm/e/a/nq$a;->type:I
+
+    .line 968
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
+
+    .line 969
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrs:Lcom/tencent/mm/plugin/sns/a/a/f;
+
+    if-eqz v0, :cond_2
+
+    .line 970
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrs:Lcom/tencent/mm/plugin/sns/a/a/f;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/a/a/f;->onResume()V
 
-    .line 947
-    :cond_1
+    .line 972
+    :cond_2
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onResume()V
 
-    .line 948
+    .line 973
     return-void
+
+    .line 961
+    :cond_3
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->hsn:Landroid/widget/Button;
+
+    if-eqz v1, :cond_4
+
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->hsn:Landroid/widget/Button;
+
+    invoke-virtual {v1, v3}, Landroid/widget/Button;->setEnabled(Z)V
+
+    :cond_4
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->hsm:Landroid/widget/ImageView;
+
+    if-eqz v1, :cond_1
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->hsm:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setEnabled(Z)V
+
+    goto :goto_0
 .end method
 
-.method public final ur(Ljava/lang/String;)V
+.method public onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
+    .locals 5
+
+    .prologue
+    .line 3101
+    invoke-virtual {p4}, Lcom/tencent/mm/t/j;->getType()I
+
+    move-result v0
+
+    const/16 v1, 0xda
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkn:Lcom/tencent/mm/ui/base/p;
+
+    if-eqz v0, :cond_0
+
+    .line 3102
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hkn:Lcom/tencent/mm/ui/base/p;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/p;->dismiss()V
+
+    .line 3105
+    :cond_0
+    if-nez p1, :cond_1
+
+    if-nez p2, :cond_1
+
+    .line 3114
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/i/f;->wz(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/i/k;
+
+    move-result-object v0
+
+    .line 3115
+    if-nez v0, :cond_2
+
+    .line 3116
+    const-string/jumbo v0, "MicroMsg.SnsCommentDetailUI"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "invalid pcid:"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 3117
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->finish()V
+
+    .line 3150
+    :cond_1
+    :goto_0
+    return-void
+
+    .line 3120
+    :cond_2
+    const-string/jumbo v1, "MicroMsg.SnsCommentDetailUI"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "snsId: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->auk:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string/jumbo v3, "  username:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-object v3, v0, Lcom/tencent/mm/plugin/sns/i/k;->field_userName:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 3124
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqO:Landroid/view/View;
+
+    if-nez v1, :cond_3
+
+    .line 3125
+    const-string/jumbo v0, "MicroMsg.SnsCommentDetailUI"
+
+    const-string/jumbo v1, "fatal error! Sns onSceneEnd before initView and infoHeader is null!"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 3126
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->finish()V
+
+    goto :goto_0
+
+    .line 3129
+    :cond_3
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->aED()Z
+
+    .line 3131
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/e/ah;->k(Lcom/tencent/mm/plugin/sns/i/k;)Lcom/tencent/mm/protocal/b/aqt;
+
+    move-result-object v1
+
+    .line 3132
+    const-string/jumbo v2, "MicroMsg.SnsCommentDetailUI"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v4, "onsceneend "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v4, v1, Lcom/tencent/mm/protocal/b/aqt;->kir:Ljava/util/LinkedList;
+
+    invoke-virtual {v4}, Ljava/util/LinkedList;->size()I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string/jumbo v4, " "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget-object v4, v1, Lcom/tencent/mm/protocal/b/aqt;->kiu:Ljava/util/LinkedList;
+
+    invoke-virtual {v4}, Ljava/util/LinkedList;->size()I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 3133
+    if-eqz v1, :cond_1
+
+    .line 3138
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqZ:Ljava/util/LinkedList;
+
+    iget-object v3, v1, Lcom/tencent/mm/protocal/b/aqt;->kir:Ljava/util/LinkedList;
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->c(Ljava/util/LinkedList;Ljava/util/LinkedList;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    .line 3139
+    iget-object v2, v1, Lcom/tencent/mm/protocal/b/aqt;->kir:Ljava/util/LinkedList;
+
+    iget-object v3, v1, Lcom/tencent/mm/protocal/b/aqt;->kiu:Ljava/util/LinkedList;
+
+    invoke-virtual {v3}, Ljava/util/LinkedList;->isEmpty()Z
+
+    move-result v3
+
+    invoke-direct {p0, v2, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->f(Ljava/util/List;Z)Z
+
+    .line 3140
+    iget-object v2, v1, Lcom/tencent/mm/protocal/b/aqt;->kir:Ljava/util/LinkedList;
+
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqZ:Ljava/util/LinkedList;
+
+    .line 3142
+    :cond_4
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqR:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
+
+    if-eqz v2, :cond_5
+
+    .line 3143
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqR:Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;
+
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hrt:Lcom/tencent/mm/plugin/sns/ui/c/b;
+
+    invoke-virtual {v2, v0, v3}, Lcom/tencent/mm/plugin/sns/lucky/view/SnsDetailLuckyHeader;->a(Lcom/tencent/mm/plugin/sns/i/k;Lcom/tencent/mm/plugin/sns/ui/c/b;)V
+
+    .line 3145
+    :cond_5
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+
+    iget-object v2, v1, Lcom/tencent/mm/protocal/b/aqt;->kiu:Ljava/util/LinkedList;
+
+    iget-object v1, v1, Lcom/tencent/mm/protocal/b/aqt;->kir:Ljava/util/LinkedList;
+
+    iput-object v2, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->hsd:Ljava/util/LinkedList;
+
+    iput-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->hse:Ljava/util/LinkedList;
+
+    .line 3146
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->hqU:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->notifyDataSetChanged()V
+
+    goto/16 :goto_0
+.end method
+
+.method public final vw(Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 2886
+    .line 3045
     return-void
 .end method

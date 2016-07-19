@@ -11,8 +11,8 @@ final class SearchViewNotRealTimeHelper$2
   
   public final boolean onEditorAction(TextView paramTextView, int paramInt, KeyEvent paramKeyEvent)
   {
-    if ((3 == paramInt) && (SearchViewNotRealTimeHelper.c(lxN) != null)) {
-      return SearchViewNotRealTimeHelper.c(lxN).kE(lxN.getSearchContent());
+    if ((3 == paramInt) && (SearchViewNotRealTimeHelper.c(lYC) != null)) {
+      return SearchViewNotRealTimeHelper.c(lYC).ln(lYC.aVM());
     }
     return false;
   }

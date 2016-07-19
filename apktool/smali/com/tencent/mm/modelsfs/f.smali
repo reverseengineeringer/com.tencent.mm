@@ -90,7 +90,7 @@
     goto :goto_0
 .end method
 
-.method public static iT(Ljava/lang/String;)Z
+.method public static jk(Ljava/lang/String;)Z
     .locals 1
 
     .prologue
@@ -117,7 +117,7 @@
     goto :goto_0
 .end method
 
-.method public static iU(Ljava/lang/String;)Ljava/lang/String;
+.method public static jl(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
     .prologue
@@ -143,7 +143,7 @@
     return-object p0
 .end method
 
-.method public static iV(Ljava/lang/String;)J
+.method public static jm(Ljava/lang/String;)J
     .locals 2
 
     .prologue
@@ -165,7 +165,7 @@
     move-result-object v0
 
     .line 42
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->Ds(Ljava/lang/String;)J
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->FH(Ljava/lang/String;)J
 
     move-result-wide v0
 

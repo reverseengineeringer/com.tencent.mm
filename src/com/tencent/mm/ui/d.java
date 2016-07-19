@@ -1,30 +1,30 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
 
 public final class d
 {
   public static final class a
   {
-    public static int kjJ = 0;
+    public static int kJR = 0;
   }
   
   public static abstract interface b
   {
-    public static final String kjK = "FREE_WIFI_IS_DEFAULT_FOCUS".toLowerCase();
+    public static final String kJS = "FREE_WIFI_IS_DEFAULT_FOCUS".toLowerCase();
   }
   
   public static final class c {}
   
   public static final class d
   {
-    public static final String buD = null;
+    public static final String bjg = null;
   }
   
   public static abstract interface e
   {
-    public static final String kjL = ;
-    public static final String kjM = y.getPackageName() + ":tools";
+    public static final String kJT = ;
+    public static final String kJU = aa.getPackageName() + ":tools";
   }
   
   public static final class f {}

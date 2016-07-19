@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field private blE:Lcom/tencent/mm/network/r;
+.field private aZg:Lcom/tencent/mm/network/r;
 
-.field private cjo:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+.field private ceF:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
-.field private cjp:I
+.field private ceG:I
 
 
 # direct methods
@@ -36,13 +36,13 @@
     .line 87
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/network/r$a;->cjp:I
+    iput v0, p0, Lcom/tencent/mm/network/r$a;->ceG:I
 
     .line 90
-    iput-object p1, p0, Lcom/tencent/mm/network/r$a;->blE:Lcom/tencent/mm/network/r;
+    iput-object p1, p0, Lcom/tencent/mm/network/r$a;->aZg:Lcom/tencent/mm/network/r;
 
     .line 91
-    iput-object p2, p0, Lcom/tencent/mm/network/r$a;->cjo:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iput-object p2, p0, Lcom/tencent/mm/network/r$a;->ceF:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     .line 92
     return-void
@@ -53,7 +53,7 @@
 
     .prologue
     .line 83
-    iget-object v0, p0, Lcom/tencent/mm/network/r$a;->blE:Lcom/tencent/mm/network/r;
+    iget-object v0, p0, Lcom/tencent/mm/network/r$a;->aZg:Lcom/tencent/mm/network/r;
 
     return-object v0
 .end method
@@ -82,18 +82,18 @@
     if-ne v2, v3, :cond_0
 
     .line 122
-    const-string/jumbo v2, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v2, "MicroMsg.AutoAuth"
 
     const-string/jumbo v3, "summerauth IOnAutoAuth onGYNetEnd manual auth"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 123
-    invoke-interface {p5}, Lcom/tencent/mm/network/p;->wg()Lcom/tencent/mm/protocal/f;
+    invoke-interface {p5}, Lcom/tencent/mm/network/p;->wi()Lcom/tencent/mm/protocal/h;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/tencent/mm/protocal/f;->wj()I
+    invoke-interface {v2}, Lcom/tencent/mm/protocal/h;->wl()I
 
     move-result v2
 
@@ -102,7 +102,7 @@
     if-nez p2, :cond_4
 
     .line 124
-    invoke-interface {p5}, Lcom/tencent/mm/network/p;->wh()I
+    invoke-interface {p5}, Lcom/tencent/mm/network/p;->wj()I
 
     move-result v2
 
@@ -112,35 +112,35 @@
     if-ne v2, v3, :cond_3
 
     .line 126
-    sget-object v2, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v2, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v2, 0x1c
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
     .line 127
-    iget v0, p0, Lcom/tencent/mm/network/r$a;->cjp:I
+    iget v0, p0, Lcom/tencent/mm/network/r$a;->ceG:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/network/r$a;->cjp:I
+    iput v0, p0, Lcom/tencent/mm/network/r$a;->ceG:I
 
     .line 128
-    iget v0, p0, Lcom/tencent/mm/network/r$a;->cjp:I
+    iget v0, p0, Lcom/tencent/mm/network/r$a;->ceG:I
 
     const/4 v1, 0x1
 
     if-le v0, v1, :cond_2
 
     .line 129
-    const-string/jumbo v0, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v0, "MicroMsg.AutoAuth"
 
     const-string/jumbo v1, "summerauth manualLoginDecodeFailedTry beyond 1 no more try!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 130
-    iget-object v0, p0, Lcom/tencent/mm/network/r$a;->blE:Lcom/tencent/mm/network/r;
+    iget-object v0, p0, Lcom/tencent/mm/network/r$a;->aZg:Lcom/tencent/mm/network/r;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -150,7 +150,7 @@
 
     const-string/jumbo v2, ""
 
-    invoke-static {p4, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p4, v2}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -162,16 +162,16 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, p2, p3, v1}, Lcom/tencent/mm/network/r;->d(IILjava/lang/String;)V
+    invoke-virtual {v0, p2, p3, v1}, Lcom/tencent/mm/network/r;->c(IILjava/lang/String;)V
 
     .line 144
     :cond_0
     :goto_0
-    invoke-interface {p5}, Lcom/tencent/mm/network/p;->wg()Lcom/tencent/mm/protocal/f;
+    invoke-interface {p5}, Lcom/tencent/mm/network/p;->wi()Lcom/tencent/mm/protocal/h;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/protocal/f;->wj()I
+    invoke-interface {v0}, Lcom/tencent/mm/protocal/h;->wl()I
 
     move-result v0
 
@@ -184,18 +184,18 @@
     if-ne v7, p3, :cond_6
 
     .line 147
-    iget-object v0, p0, Lcom/tencent/mm/network/r$a;->blE:Lcom/tencent/mm/network/r;
+    iget-object v0, p0, Lcom/tencent/mm/network/r$a;->aZg:Lcom/tencent/mm/network/r;
 
-    iput p1, v0, Lcom/tencent/mm/network/r;->ciQ:I
+    iput p1, v0, Lcom/tencent/mm/network/r;->ceh:I
 
     .line 148
-    iget-object v0, p0, Lcom/tencent/mm/network/r$a;->blE:Lcom/tencent/mm/network/r;
+    iget-object v0, p0, Lcom/tencent/mm/network/r$a;->aZg:Lcom/tencent/mm/network/r;
 
-    iget-object v0, v0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    iget-object v0, v0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
-    iget-object v1, p0, Lcom/tencent/mm/network/r$a;->blE:Lcom/tencent/mm/network/r;
+    iget-object v1, p0, Lcom/tencent/mm/network/r$a;->aZg:Lcom/tencent/mm/network/r;
 
-    iget-object v1, v1, Lcom/tencent/mm/network/r;->ciO:Lcom/tencent/mm/network/r$b;
+    iget-object v1, v1, Lcom/tencent/mm/network/r;->cef:Lcom/tencent/mm/network/r$b;
 
     invoke-interface {p5, v0, v1, v6, v6}, Lcom/tencent/mm/network/p;->a(Lcom/tencent/mm/network/d;Lcom/tencent/mm/network/i;II)V
 
@@ -211,7 +211,7 @@
 
     .line 135
     :cond_3
-    iput v6, p0, Lcom/tencent/mm/network/r$a;->cjp:I
+    iput v6, p0, Lcom/tencent/mm/network/r$a;->ceG:I
 
     .line 136
     invoke-interface {p5, p0, p2, p3, p4}, Lcom/tencent/mm/network/p;->a(Lcom/tencent/mm/network/i;IILjava/lang/String;)V
@@ -220,14 +220,14 @@
 
     .line 139
     :cond_4
-    sget-object v2, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v2, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     if-ne v7, p3, :cond_5
 
     const-wide/16 v2, 0x1e
 
     :goto_2
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
     goto :goto_0
 
@@ -248,7 +248,7 @@
     .line 157
     :cond_7
     :goto_3
-    iget-object v0, p0, Lcom/tencent/mm/network/r$a;->blE:Lcom/tencent/mm/network/r;
+    iget-object v0, p0, Lcom/tencent/mm/network/r$a;->aZg:Lcom/tencent/mm/network/r;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -258,7 +258,7 @@
 
     const-string/jumbo v2, ""
 
-    invoke-static {p4, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p4, v2}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -270,7 +270,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, p2, p3, v1}, Lcom/tencent/mm/network/r;->d(IILjava/lang/String;)V
+    invoke-virtual {v0, p2, p3, v1}, Lcom/tencent/mm/network/r;->c(IILjava/lang/String;)V
 
     goto :goto_1
 
@@ -308,13 +308,13 @@
 
     .prologue
     .line 96
-    iget-object v0, p0, Lcom/tencent/mm/network/r$a;->cjo:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iget-object v0, p0, Lcom/tencent/mm/network/r$a;->ceF:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    const-string/jumbo v3, "MMAutoAuth.IOnAutoAuth.onAutoAuth"
+    const-string/jumbo v1, "MMAutoAuth.IOnAutoAuth.onAutoAuth"
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
+    invoke-virtual {v0, v2, v3, v1}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
 
     .line 100
     new-instance v0, Lcom/tencent/mm/network/r$a$1;
@@ -332,11 +332,11 @@
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/network/r$a$1;-><init>(Lcom/tencent/mm/network/r$a;Lcom/tencent/mm/network/p;IILjava/lang/String;)V
 
     .line 112
-    iget-object v1, p0, Lcom/tencent/mm/network/r$a;->blE:Lcom/tencent/mm/network/r;
+    iget-object v1, p0, Lcom/tencent/mm/network/r$a;->aZg:Lcom/tencent/mm/network/r;
 
-    iget-object v1, v1, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v1, v1, Lcom/tencent/mm/network/r;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/at;->b(Lcom/tencent/mm/sdk/platformtools/aa;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/az;->b(Lcom/tencent/mm/sdk/platformtools/ac;)Ljava/lang/Object;
 
     .line 113
     return-void

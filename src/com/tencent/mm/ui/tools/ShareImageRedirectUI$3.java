@@ -10,7 +10,7 @@ final class ShareImageRedirectUI$3
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    lxO.finish();
+    lYD.finish();
   }
 }
 

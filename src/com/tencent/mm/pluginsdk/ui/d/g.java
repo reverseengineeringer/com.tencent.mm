@@ -21,16 +21,16 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.tencent.mm.ag.b.a;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.aj.b.a;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.jni.platformcomm.PlatformComm.C2Java;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.protocal.b.aee;
-import com.tencent.mm.protocal.b.aho;
-import com.tencent.mm.protocal.b.ahp;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.protocal.b.aex;
+import com.tencent.mm.protocal.b.aif;
+import com.tencent.mm.protocal.b.aig;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.j.a;
 import com.tencent.mm.storage.q;
 import com.tencent.mm.ui.base.g.c;
@@ -43,27 +43,27 @@ import junit.framework.Assert;
 
 public final class g
 {
-  static String iPK;
+  static String jmR;
   
-  private static void a(Activity paramActivity, com.tencent.mm.storage.k paramk, String paramString, ArrayList paramArrayList)
+  private static void a(Activity paramActivity, com.tencent.mm.storage.k paramk, String paramString, ArrayList<String> paramArrayList)
   {
-    Object localObject = new aee();
-    jAL = paramString;
-    ahp localahp = new ahp();
-    fUi = paramArrayList.size();
-    jEu = new LinkedList();
+    Object localObject = new aex();
+    jZy = paramString;
+    aig localaig = new aig();
+    cmq = paramArrayList.size();
+    kcX = new LinkedList();
     Iterator localIterator = paramArrayList.iterator();
     while (localIterator.hasNext())
     {
       String str = (String)localIterator.next();
-      aho localaho = new aho();
-      jEt = str;
-      jEu.add(localaho);
+      aif localaif = new aif();
+      kcW = str;
+      kcX.add(localaif);
     }
-    jAJ = localahp;
-    ah.tD().rp().b(new b.a(60, (com.tencent.mm.at.a)localObject));
-    paramString = ah.tD().rq().Ep(paramString);
-    if ((paramString != null) && ((int)bvi > 0) && (com.tencent.mm.h.a.ce(field_type)))
+    jZw = localaig;
+    ah.tE().rq().b(new b.a(60, (com.tencent.mm.ax.a)localObject));
+    paramString = ah.tE().rr().GD(paramString);
+    if ((paramString != null) && ((int)bjS > 0) && (com.tencent.mm.i.a.cy(field_type)))
     {
       paramArrayList = paramArrayList.iterator();
       for (paramString = ""; paramArrayList.hasNext(); paramString = paramString + ",")
@@ -72,93 +72,94 @@ public final class g
         paramString = paramString + (String)localObject;
       }
       paramk.cc(paramString);
-      ah.tD().rq().L(paramk);
+      ah.tE().rr().L(paramk);
     }
-    Toast.makeText(paramActivity, paramActivity.getString(2131427907), 0).show();
+    Toast.makeText(paramActivity, paramActivity.getString(2131235620), 0).show();
   }
   
   public static void a(final Context paramContext, String paramString, final DialogInterface.OnDismissListener paramOnDismissListener, final Bundle paramBundle)
   {
-    if (ah.rh()) {}
-    for (boolean bool = ((Boolean)ah.tD().rn().a(j.a.kcy, Boolean.valueOf(false))).booleanValue();; bool = false)
+    if (ah.rg()) {}
+    for (boolean bool = ((Boolean)ah.tE().ro().a(j.a.kCX, Boolean.valueOf(false))).booleanValue();; bool = false)
     {
       final int j = paramBundle.getInt("fromScene");
       int i;
-      if ((aSI()) || (aSJ()))
+      if ((aXB()) || (aXC()))
       {
         i = 1;
         if (i == 0) {
           break label605;
         }
-        localObject = ay.ky(paramBundle.getString("Contact_User"));
-        if ((localObject != null) && (localObject != "") && (!((String)localObject).endsWith("@chatroom")) && (!com.tencent.mm.model.h.dQ((String)localObject))) {
+        localObject = be.li(paramBundle.getString("Contact_User"));
+        if ((localObject != null) && (localObject != "") && (!((String)localObject).endsWith("@chatroom")) && (!com.tencent.mm.model.h.dZ((String)localObject))) {
           break label451;
         }
         if (!bool) {
           break label414;
         }
         localObject = new String[3];
-        localObject[0] = paramContext.getResources().getString(2131427979);
-        localObject[1] = paramContext.getResources().getString(2131427980);
-        localObject[2] = paramContext.getResources().getString(2131427977);
+        localObject[0] = paramContext.getResources().getString(2131231735);
+        localObject[1] = paramContext.getResources().getString(2131231736);
+        localObject[2] = paramContext.getResources().getString(2131231727);
       }
       label154:
       label414:
       label451:
       label605:
-      for (final Object localObject = ay.h((String[])localObject);; localObject = ay.h(new String[] { paramContext.getResources().getString(2131427979), paramContext.getResources().getString(2131427983) }))
+      for (final Object localObject = be.g((String[])localObject);; localObject = be.g(new String[] { paramContext.getResources().getString(2131231735), paramContext.getResources().getString(2131231729) }))
       {
-        com.tencent.mm.plugin.report.service.h.fUJ.g(11621, new Object[] { Integer.valueOf(j), Integer.valueOf(2) });
-        if (l.kN())
+        com.tencent.mm.plugin.report.service.g.gdY.h(11621, new Object[] { Integer.valueOf(j), Integer.valueOf(2) });
+        if (l.jn())
         {
-          ((List)localObject).add(paramContext.getResources().getString(2131427986));
-          com.tencent.mm.plugin.report.service.h.fUJ.g(11621, new Object[] { Integer.valueOf(j), Integer.valueOf(3) });
+          ((List)localObject).add(paramContext.getResources().getString(2131231731));
+          com.tencent.mm.plugin.report.service.g.gdY.h(11621, new Object[] { Integer.valueOf(j), Integer.valueOf(3) });
           if (PlatformComm.C2Java.isNetworkConnected())
           {
-            i = ay.b((Integer)ah.tD().rn().a(j.a.kby, null), 3);
-            u.v("!44@/B4Tb64lLpKJ2tjJPAs9izyRRSOU7cWUv6KsEHXPyIo=", "hy: minus pb counter, ori counter = %d", new Object[] { Integer.valueOf(i) });
-            ah.tD().rn().b(j.a.kby, Integer.valueOf(i - 1));
+            i = be.b((Integer)ah.tE().ro().a(j.a.kBK, null), 3);
+            v.v("MicroMsg.WxPhoneBookHelper", "hy: minus pb counter, ori counter = %d", new Object[] { Integer.valueOf(i) });
+            ah.tE().ro().b(j.a.kBK, Integer.valueOf(i - 1));
           }
         }
         final com.tencent.mm.ui.base.k localk = new com.tencent.mm.ui.base.k(paramContext);
         localk.setTitle(paramString);
         a locala = new a((List)localObject, paramContext, paramOnDismissListener, paramBundle);
-        iPR = new g.a.a()
+        jmY = new g.a.a()
         {
-          public final void db(boolean paramAnonymousBoolean)
+          public final void cZ(boolean paramAnonymousBoolean)
           {
             if (paramAnonymousBoolean)
             {
-              iPN.dismiss();
+              jmU.dismiss();
               if (paramOnDismissListener != null) {
                 paramOnDismissListener.onDismiss(null);
               }
             }
           }
         };
-        cTk = locala;
+        cQB = locala;
         com.tencent.mm.ui.base.g.a(paramContext, localk);
         localk.setOnCancelListener(new DialogInterface.OnCancelListener()
         {
           public final void onCancel(DialogInterface paramAnonymousDialogInterface)
           {
-            if (iPL != null) {
-              iPL.onDismiss(null);
+            if (jmS != null) {
+              jmS.onDismiss(null);
             }
           }
         });
-        iRx = new AdapterView.OnItemClickListener()
+        joG = new AdapterView.OnItemClickListener()
         {
-          public final void onItemClick(AdapterView paramAnonymousAdapterView, final View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+          public final void onItemClick(AdapterView<?> paramAnonymousAdapterView, final View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
           {
-            paramAnonymousView = eGo.replace(" ", "").replace("(", "").replace(")", "").replace("-", "");
+            paramAnonymousView = eOc.replace(" ", "").replace("(", "").replace(")", "").replace("-", "");
             paramAnonymousAdapterView = (String)localObject.get(paramAnonymousInt);
-            u.i("!44@/B4Tb64lLpJ721CYNoMrI4TNb+IdX5kijxTVE+9ur/c=", paramAnonymousAdapterView);
-            if (paramContext.getString(2131427979).equals(paramAnonymousAdapterView))
+            v.i("MicroMsg.MailPhoneMenuHelper", paramAnonymousAdapterView);
+            if (paramContext.getString(2131231735).equals(paramAnonymousAdapterView))
             {
               paramAnonymousAdapterView = new Intent("android.intent.action.DIAL", Uri.parse("tel:" + paramAnonymousView));
+              paramAnonymousAdapterView.addFlags(268435456);
               paramContext.startActivity(paramAnonymousAdapterView);
-              com.tencent.mm.plugin.report.service.h.fUJ.O(10112, "1");
+              com.tencent.mm.plugin.report.service.g.gdY.X(10112, "1");
               localk.dismiss();
               if (paramOnDismissListener != null) {
                 paramOnDismissListener.onDismiss(null);
@@ -171,38 +172,38 @@ public final class g
                 do
                 {
                   return;
-                  if (!paramContext.getString(2131427980).equals(paramAnonymousAdapterView)) {
+                  if (!paramContext.getString(2131231736).equals(paramAnonymousAdapterView)) {
                     break;
                   }
-                  com.tencent.mm.plugin.report.service.h.fUJ.g(12766, new Object[] { Integer.valueOf(1) });
+                  com.tencent.mm.plugin.report.service.g.gdY.h(12059, new Object[] { Integer.valueOf(0), Integer.valueOf(0), Integer.valueOf(0), Integer.valueOf(0), Integer.valueOf(0) });
                   paramAnonymousAdapterView = new Intent();
                   paramAnonymousAdapterView.putExtra("IPCallTalkUI_phoneNumber", paramAnonymousView);
-                  com.tencent.mm.ar.c.c(paramContext, "ipcall", ".ui.IPCallTalkUI", paramAnonymousAdapterView);
+                  com.tencent.mm.av.c.c(paramContext, "ipcall", ".ui.IPCallTalkUI", paramAnonymousAdapterView);
                   localk.dismiss();
                 } while (paramOnDismissListener == null);
                 paramOnDismissListener.onDismiss(null);
                 return;
-                if (paramContext.getString(2131427977).equals(paramAnonymousAdapterView))
+                if (paramContext.getString(2131231727).equals(paramAnonymousAdapterView))
                 {
-                  if ((g.aSI()) && (g.aSJ())) {
-                    paramAnonymousAdapterView = paramContext.getResources().getStringArray(2131558401);
+                  if ((g.aXB()) && (g.aXC())) {
+                    paramAnonymousAdapterView = paramContext.getResources().getStringArray(2131296275);
                   }
                   for (;;)
                   {
-                    paramContext.getResources().getString(2131427975);
-                    com.tencent.mm.ui.base.g.a(paramContext, eGo, paramAnonymousAdapterView, "", new g.c()new DialogInterface.OnCancelListener
+                    paramContext.getResources().getString(2131231733);
+                    com.tencent.mm.ui.base.g.a(paramContext, eOc, paramAnonymousAdapterView, "", new g.c()new DialogInterface.OnCancelListener
                     {
-                      public final void eu(int paramAnonymous2Int)
+                      public final void fg(int paramAnonymous2Int)
                       {
-                        if (iPL != null) {
-                          iPL.onDismiss(null);
+                        if (jmS != null) {
+                          jmS.onDismiss(null);
                         }
                         switch (paramAnonymous2Int)
                         {
                         default: 
                           return;
                         case 0: 
-                          if (g.aSI())
+                          if (g.aXB())
                           {
                             Context localContext = val$context;
                             String str = paramAnonymousView;
@@ -210,63 +211,63 @@ public final class g
                             localIntent.setType("vnd.android.cursor.dir/contact");
                             localIntent.putExtra("phone", str);
                             localContext.startActivity(localIntent);
-                            com.tencent.mm.plugin.report.service.h.fUJ.O(10113, "1");
+                            com.tencent.mm.plugin.report.service.g.gdY.X(10113, "1");
                             return;
                           }
-                          g.aR(val$context, paramAnonymousView);
-                          com.tencent.mm.plugin.report.service.h.fUJ.O(10114, "1");
+                          g.aP(val$context, paramAnonymousView);
+                          com.tencent.mm.plugin.report.service.g.gdY.X(10114, "1");
                           return;
                         }
-                        g.aR(val$context, paramAnonymousView);
-                        com.tencent.mm.plugin.report.service.h.fUJ.O(10114, "1");
+                        g.aP(val$context, paramAnonymousView);
+                        com.tencent.mm.plugin.report.service.g.gdY.X(10114, "1");
                       }
                     }, new DialogInterface.OnCancelListener()
                     {
                       public final void onCancel(DialogInterface paramAnonymous2DialogInterface)
                       {
-                        if (iPL != null) {
-                          iPL.onDismiss(null);
+                        if (jmS != null) {
+                          jmS.onDismiss(null);
                         }
                       }
                     });
                     localk.dismiss();
                     return;
-                    if (g.aSI())
+                    if (g.aXB())
                     {
                       paramAnonymousAdapterView = new String[1];
-                      paramAnonymousAdapterView[0] = paramContext.getResources().getString(2131427981);
+                      paramAnonymousAdapterView[0] = paramContext.getResources().getString(2131231726);
                     }
                     else
                     {
                       paramAnonymousAdapterView = new String[1];
-                      paramAnonymousAdapterView[0] = paramContext.getResources().getString(2131427982);
+                      paramAnonymousAdapterView[0] = paramContext.getResources().getString(2131231734);
                     }
                   }
                 }
-                if (paramContext.getString(2131427983).equals(paramAnonymousAdapterView))
+                if (paramContext.getString(2131231729).equals(paramAnonymousAdapterView))
                 {
-                  com.tencent.mm.pluginsdk.h.c.a(paramContext, paramAnonymousView, paramAnonymousView);
-                  com.tencent.mm.plugin.report.service.h.fUJ.O(10115, "1");
+                  com.tencent.mm.pluginsdk.i.c.a(paramContext, paramAnonymousView, paramAnonymousView);
+                  com.tencent.mm.plugin.report.service.g.gdY.X(10115, "1");
                   if (paramOnDismissListener != null) {
                     paramOnDismissListener.onDismiss(null);
                   }
                   localk.dismiss();
                   return;
                 }
-                if (paramContext.getString(2131427986).equals(paramAnonymousAdapterView))
+                if (paramContext.getString(2131231731).equals(paramAnonymousAdapterView))
                 {
-                  u.d("!44@/B4Tb64lLpJ721CYNoMrI4TNb+IdX5kijxTVE+9ur/c=", "hy: button should consume this action");
+                  v.d("MicroMsg.MailPhoneMenuHelper", "hy: button should consume this action");
                   return;
                 }
-                if (!g.iPK.equals(paramAnonymousAdapterView)) {
+                if (!g.jmR.equals(paramAnonymousAdapterView)) {
                   break;
                 }
-                g.a((Activity)paramContext, eGo, paramBundle);
+                g.a((Activity)paramContext, eOc, paramBundle);
                 localk.dismiss();
               } while (paramOnDismissListener == null);
               paramOnDismissListener.onDismiss(null);
               return;
-              u.e("!44@/B4Tb64lLpJ721CYNoMrI4TNb+IdX5kijxTVE+9ur/c=", "hy: error phone item clicked. should not happen");
+              v.e("MicroMsg.MailPhoneMenuHelper", "hy: error phone item clicked. should not happen");
               localk.dismiss();
             } while (paramOnDismissListener == null);
             paramOnDismissListener.onDismiss(null);
@@ -279,56 +280,56 @@ public final class g
           i = 0;
           break;
           localObject = new String[2];
-          localObject[0] = paramContext.getResources().getString(2131427979);
-          localObject[1] = paramContext.getResources().getString(2131427977);
+          localObject[0] = paramContext.getResources().getString(2131231735);
+          localObject[1] = paramContext.getResources().getString(2131231727);
           break label154;
-          localObject = ah.tD().rq().Ep((String)localObject);
+          localObject = ah.tE().rr().GD((String)localObject);
         } while (localObject == null);
-        localObject = ((com.tencent.mm.storage.k)localObject).qz();
-        iPK = paramContext.getResources().getString(2131427978, new Object[] { localObject });
+        localObject = ((com.tencent.mm.storage.k)localObject).pc();
+        jmR = paramContext.getResources().getString(2131231728, new Object[] { localObject });
         if (bool)
         {
           localObject = new String[4];
-          localObject[0] = paramContext.getResources().getString(2131427979);
-          localObject[1] = paramContext.getResources().getString(2131427980);
-          localObject[2] = iPK;
-          localObject[3] = paramContext.getResources().getString(2131427977);
+          localObject[0] = paramContext.getResources().getString(2131231735);
+          localObject[1] = paramContext.getResources().getString(2131231736);
+          localObject[2] = jmR;
+          localObject[3] = paramContext.getResources().getString(2131231727);
           break label154;
         }
         localObject = new String[3];
-        localObject[0] = paramContext.getResources().getString(2131427979);
-        localObject[1] = iPK;
-        localObject[2] = paramContext.getResources().getString(2131427977);
+        localObject[0] = paramContext.getResources().getString(2131231735);
+        localObject[1] = jmR;
+        localObject[2] = paramContext.getResources().getString(2131231727);
         break label154;
       }
     }
   }
   
-  static boolean aSI()
+  static boolean aXB()
   {
-    Context localContext = y.getContext();
+    Context localContext = aa.getContext();
     Intent localIntent = new Intent("android.intent.action.INSERT");
     localIntent.setType("vnd.android.cursor.dir/contact");
     localIntent.putExtra("phone", "10086");
-    return ay.n(localContext, localIntent);
+    return be.n(localContext, localIntent);
   }
   
-  static boolean aSJ()
+  static boolean aXC()
   {
-    return ay.n(y.getContext(), new Intent("android.intent.action.PICK", ContactsContract.Contacts.CONTENT_URI));
+    return be.n(aa.getContext(), new Intent("android.intent.action.PICK", ContactsContract.Contacts.CONTENT_URI));
   }
   
   public static void b(final Context paramContext, final String paramString, DialogInterface.OnDismissListener paramOnDismissListener)
   {
-    if ((com.tencent.mm.model.h.sm() & 0x1) == 0) {}
+    if ((com.tencent.mm.model.h.so() & 0x1) == 0) {}
     for (int i = 1; i != 0; i = 0)
     {
-      com.tencent.mm.ui.base.g.a(paramContext, paramString, paramContext.getResources().getStringArray(2131558422), "", new g.c()
+      com.tencent.mm.ui.base.g.a(paramContext, paramString, paramContext.getResources().getStringArray(2131296259), "", new g.c()
       {
-        public final void eu(int paramAnonymousInt)
+        public final void fg(int paramAnonymousInt)
         {
-          if (iPL != null) {
-            iPL.onDismiss(null);
+          if (jmS != null) {
+            jmS.onDismiss(null);
           }
           String str1 = paramString.replace(" ", "").replace("#", "@");
           switch (paramAnonymousInt)
@@ -341,21 +342,21 @@ public final class g
             localIntent.putExtra("composeType", 4);
             String str2 = str1.substring(0, str1.indexOf('@'));
             localIntent.putExtra("toList", new String[] { str2 + " " + str1 });
-            com.tencent.mm.ar.c.c(localContext, "qqmail", ".ui.ComposeUI", localIntent);
+            com.tencent.mm.av.c.c(localContext, "qqmail", ".ui.ComposeUI", localIntent);
             return;
           }
-          g.aQ(paramContext, str1);
+          g.aO(paramContext, str1);
         }
       });
       return;
     }
-    String str = paramContext.getResources().getString(2131427974);
+    String str = paramContext.getResources().getString(2131231643);
     paramOnDismissListener = new g.c()
     {
-      public final void eu(int paramAnonymousInt)
+      public final void fg(int paramAnonymousInt)
       {
-        if (iPL != null) {
-          iPL.onDismiss(null);
+        if (jmS != null) {
+          jmS.onDismiss(null);
         }
         String str = paramString.replace(" ", "").replace("#", "@");
         switch (paramAnonymousInt)
@@ -363,7 +364,7 @@ public final class g
         default: 
           return;
         }
-        g.aQ(paramContext, str);
+        g.aO(paramContext, str);
       }
     };
     com.tencent.mm.ui.base.g.a(paramContext, paramString, new String[] { str }, "", paramOnDismissListener);
@@ -372,37 +373,37 @@ public final class g
   private static final class a
     extends BaseAdapter
   {
-    private Bundle cp = null;
-    private List enm = null;
-    private DialogInterface.OnDismissListener iPQ = null;
-    a iPR = null;
+    private Bundle cF = null;
+    private List<String> esl = null;
+    private DialogInterface.OnDismissListener jmX = null;
+    a jmY = null;
     private Context mContext = null;
     
-    public a(List paramList, Context paramContext, DialogInterface.OnDismissListener paramOnDismissListener, Bundle paramBundle)
+    public a(List<String> paramList, Context paramContext, DialogInterface.OnDismissListener paramOnDismissListener, Bundle paramBundle)
     {
       if (paramContext != null) {}
       for (boolean bool = true;; bool = false)
       {
         Assert.assertTrue(bool);
-        enm = paramList;
+        esl = paramList;
         mContext = paramContext;
-        iPQ = paramOnDismissListener;
-        cp = paramBundle;
+        jmX = paramOnDismissListener;
+        cF = paramBundle;
         return;
       }
     }
     
     public final int getCount()
     {
-      if (enm == null) {
+      if (esl == null) {
         return 0;
       }
-      return enm.size();
+      return esl.size();
     }
     
     public final Object getItem(int paramInt)
     {
-      return enm.get(paramInt);
+      return esl.get(paramInt);
     }
     
     public final long getItemId(int paramInt)
@@ -412,8 +413,8 @@ public final class g
     
     public final int getItemViewType(int paramInt)
     {
-      String str = (String)enm.get(paramInt);
-      if (mContext.getString(2131427986).equals(str)) {
+      String str = (String)esl.get(paramInt);
+      if (mContext.getString(2131231731).equals(str)) {
         return 1;
       }
       return 0;
@@ -430,11 +431,11 @@ public final class g
         paramView = (LayoutInflater)mContext.getSystemService("layout_inflater");
         if (paramInt == 1)
         {
-          paramViewGroup = paramView.inflate(2131363051, paramViewGroup, false);
+          paramViewGroup = paramView.inflate(2130903307, paramViewGroup, false);
           paramView = new b((byte)0);
-          cVH = ((TextView)paramViewGroup.findViewById(2131165460));
-          dTu = ((Button)paramViewGroup.findViewById(2131166467));
-          iPT = ((TextView)paramViewGroup.findViewById(2131165317));
+          cTU = ((TextView)paramViewGroup.findViewById(2131755172));
+          dVC = ((Button)paramViewGroup.findViewById(2131756114));
+          jna = ((TextView)paramViewGroup.findViewById(2131756097));
           paramViewGroup.setTag(paramView);
           localObject = paramView;
           paramView = paramViewGroup;
@@ -445,39 +446,39 @@ public final class g
         switch (paramInt)
         {
         default: 
-          u.e("!44@/B4Tb64lLpJ721CYNoMrI4TNb+IdX5kijxTVE+9ur/c=", "hy: error tag");
+          v.e("MicroMsg.MailPhoneMenuHelper", "hy: error tag");
           return paramView;
-          paramViewGroup = paramView.inflate(2131363041, paramViewGroup, false);
+          paramViewGroup = paramView.inflate(2130903308, paramViewGroup, false);
           paramView = new c((byte)0);
-          cVH = ((TextView)paramViewGroup.findViewById(2131165460));
+          cTU = ((TextView)paramViewGroup.findViewById(2131755172));
           break label105;
           localObject = paramView.getTag();
         }
       }
       paramViewGroup = (c)localObject;
-      cVH.setText(e.a(mContext, ay.ky(str), cVH.getTextSize()));
+      cTU.setText(e.a(mContext, be.li(str), cTU.getTextSize()));
       return paramView;
       paramViewGroup = (b)localObject;
-      cVH.setText(e.a(mContext, ay.ky(str), cVH.getTextSize()));
-      iPT.setText(mContext.getString(2131427976));
-      dTu.setOnClickListener(new View.OnClickListener()
+      cTU.setText(e.a(mContext, be.li(str), cTU.getTextSize()));
+      jna.setText(mContext.getString(2131231737));
+      dVC.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
           if (!PlatformComm.C2Java.isNetworkConnected())
           {
-            u.w("!44@/B4Tb64lLpJ721CYNoMrI4TNb+IdX5kijxTVE+9ur/c=", "hy: no network. abort download");
-            s.makeText(g.a.a(g.a.this), g.a.a(g.a.this).getString(2131427481), 0).show();
+            v.w("MicroMsg.MailPhoneMenuHelper", "hy: no network. abort download");
+            s.makeText(g.a.a(g.a.this), g.a.a(g.a.this).getString(2131232845), 0).show();
             if (g.a.b(g.a.this) != null) {
-              g.a.b(g.a.this).db(false);
+              g.a.b(g.a.this).cZ(false);
             }
           }
           do
           {
             return;
-            l.a(g.a.a(g.a.this), g.a.c(g.a.this));
+            l.b(g.a.a(g.a.this), g.a.c(g.a.this));
           } while (g.a.b(g.a.this) == null);
-          g.a.b(g.a.this).db(true);
+          g.a.b(g.a.this).cZ(true);
         }
       });
       return paramView;
@@ -490,21 +491,21 @@ public final class g
     
     public static abstract interface a
     {
-      public abstract void db(boolean paramBoolean);
+      public abstract void cZ(boolean paramBoolean);
     }
     
     private final class b
     {
-      TextView cVH;
-      Button dTu;
-      TextView iPT;
+      TextView cTU;
+      Button dVC;
+      TextView jna;
       
       private b() {}
     }
     
     private final class c
     {
-      TextView cVH;
+      TextView cTU;
       
       private c() {}
     }

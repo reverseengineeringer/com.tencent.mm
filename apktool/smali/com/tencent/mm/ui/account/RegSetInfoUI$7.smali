@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+.field final synthetic kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
-.field final synthetic kwi:Lcom/tencent/mm/modelsimple/v;
+.field final synthetic kVp:Lcom/tencent/mm/modelsimple/t;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/account/RegSetInfoUI;Lcom/tencent/mm/modelsimple/v;)V
+.method constructor <init>(Lcom/tencent/mm/ui/account/RegSetInfoUI;Lcom/tencent/mm/modelsimple/t;)V
     .locals 0
 
     .prologue
     .line 533
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$7;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$7;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$7;->kwi:Lcom/tencent/mm/modelsimple/v;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$7;->kVp:Lcom/tencent/mm/modelsimple/t;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,24 +45,24 @@
 
     .prologue
     .line 537
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$7;->kwi:Lcom/tencent/mm/modelsimple/v;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$7;->kVp:Lcom/tencent/mm/modelsimple/t;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
     .line 538
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0x7e
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$7;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$7;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
     .line 539
     return-void

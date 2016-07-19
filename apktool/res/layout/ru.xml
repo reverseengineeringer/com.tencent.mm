@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/awm" style="@style/MMSearchListSmallItem">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/awn" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginLeft="8.0dip" />
+        <TextView android:textColor="#ff7a93af" android:layout_gravity="center_vertical" android:id="@id/awp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ir" android:text="{tip}" style="@style/MMFontTitleInList" />
+    </LinearLayout>
+</FrameLayout>

@@ -15,13 +15,31 @@
 
 
 # instance fields
-.field bZF:Lcom/tencent/mm/modelsearch/j;
+.field bTo:Lcom/tencent/mm/modelsearch/j;
 
-.field bZG:Lcom/tencent/mm/modelsearch/o;
+.field bTp:Lcom/tencent/mm/modelsearch/o;
 
-.field bZH:Ljava/util/LinkedList;
+.field bTq:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList",
+            "<",
+            "Lcom/tencent/mm/modelsearch/k;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field bZI:Landroid/util/SparseArray;
+.field bTr:Landroid/util/SparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/SparseArray",
+            "<",
+            "Lcom/tencent/mm/modelsearch/l;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -37,14 +55,14 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsearch/m$f;->bZH:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/modelsearch/m$f;->bTq:Ljava/util/LinkedList;
 
     .line 322
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iput-object v0, p0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     return-void
 .end method

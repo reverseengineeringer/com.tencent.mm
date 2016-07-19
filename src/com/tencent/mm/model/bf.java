@@ -1,37 +1,37 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.HashSet;
 import java.util.Set;
 
 public final class bf
 {
-  boolean bCZ = false;
-  Set bDa = new HashSet();
+  boolean bwj = false;
+  Set<a> bwk = new HashSet();
   
   public final boolean a(a parama)
   {
-    if (bCZ)
+    if (bwj)
     {
-      u.e("!32@/B4Tb64lLpIFIlpC8b6zf6sidN7sYXyI", "add , is running , forbid add");
+      v.e("MicroMsg.UninitForUEH", "add , is running , forbid add");
       return false;
     }
-    return bDa.add(parama);
+    return bwk.add(parama);
   }
   
   public final boolean b(a parama)
   {
-    if (bCZ)
+    if (bwj)
     {
-      u.e("!32@/B4Tb64lLpIFIlpC8b6zf6sidN7sYXyI", "remove , is running , forbid remove");
+      v.e("MicroMsg.UninitForUEH", "remove , is running , forbid remove");
       return false;
     }
-    return bDa.remove(parama);
+    return bwk.remove(parama);
   }
   
   public static abstract interface a
   {
-    public abstract boolean uK();
+    public abstract boolean uM();
   }
 }
 

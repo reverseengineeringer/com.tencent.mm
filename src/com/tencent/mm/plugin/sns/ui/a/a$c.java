@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sns.ui.a;
 
 final class a$c
 {
-  long cfW;
+  long cbi;
   long id;
   int index;
 }

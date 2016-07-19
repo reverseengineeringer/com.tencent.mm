@@ -34,10 +34,10 @@
 
 
 # virtual methods
-.method protected abstract X()Landroid/app/PendingIntent;
+.method protected abstract W()Landroid/app/PendingIntent;
 .end method
 
-.method protected abstract Y()[Landroid/support/v4/app/y$a;
+.method protected abstract X()[Landroid/support/v4/app/y$a;
 .end method
 
 .method protected abstract getExtras()Landroid/os/Bundle;

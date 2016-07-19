@@ -12,7 +12,62 @@
 
 
 # direct methods
-.method private static A(Landroid/content/Context;Ljava/lang/String;)[Landroid/accounts/Account;
+.method private static A(Landroid/content/Context;Ljava/lang/String;)Z
+    .locals 5
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 380
+    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->aX(Landroid/content/Context;)[Landroid/accounts/Account;
+
+    move-result-object v2
+
+    .line 381
+    if-eqz v2, :cond_0
+
+    array-length v1, v2
+
+    if-nez v1, :cond_1
+
+    .line 391
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 385
+    :cond_1
+    array-length v3, v2
+
+    move v1, v0
+
+    :goto_1
+    if-ge v1, v3, :cond_0
+
+    aget-object v4, v2, v1
+
+    .line 386
+    iget-object v4, v4, Landroid/accounts/Account;->name:Ljava/lang/String;
+
+    invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    .line 387
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    .line 385
+    :cond_2
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+.end method
+
+.method private static B(Landroid/content/Context;Ljava/lang/String;)[Landroid/accounts/Account;
     .locals 3
 
     .prologue
@@ -39,32 +94,32 @@
     :catch_0
     move-exception v1
 
-    const-string/jumbo v1, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v1, "MicroMsg.MMAccountManager"
 
     const-string/jumbo v2, "get all accounts failed"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method private static Cl()Ljava/lang/String;
+.method private static Cs()Ljava/lang/String;
     .locals 4
 
     .prologue
     .line 256
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 257
-    const-string/jumbo v0, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v0, "MicroMsg.MMAccountManager"
 
     const-string/jumbo v1, "getCurrentAccountName MMCore.acc Not Ready"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 258
     const-string/jumbo v0, ""
@@ -78,11 +133,11 @@
     const-string/jumbo v1, ""
 
     .line 261
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -97,7 +152,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 262
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -106,7 +161,7 @@
     .line 276
     :cond_1
     :goto_1
-    invoke-static {v0}, Lcom/tencent/mm/modelsimple/d;->jc(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/modelsimple/d;->ju(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -114,30 +169,30 @@
 
     .line 265
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/model/h;->sd()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/h;->sf()Ljava/lang/String;
 
     move-result-object v0
 
     .line 266
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
     .line 269
-    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
 
     move-result-object v0
 
     .line 270
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_3
 
-    invoke-static {v0}, Lcom/tencent/mm/storage/k;->Ed(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/storage/k;->Gr(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -165,11 +220,11 @@
     if-nez p0, :cond_0
 
     .line 57
-    const-string/jumbo v0, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v0, "MicroMsg.MMAccountManager"
 
     const-string/jumbo v2, "context is null"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -179,30 +234,30 @@
 
     .line 61
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/modelsimple/d;->Cl()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/modelsimple/d;->Cs()Ljava/lang/String;
 
     move-result-object v0
 
     .line 62
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
     .line 63
-    const-string/jumbo v0, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v0, "MicroMsg.MMAccountManager"
 
     const-string/jumbo v4, "account username is null or nil"
 
-    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 65
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -217,7 +272,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 66
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v4
 
@@ -225,7 +280,7 @@
 
     .line 73
     :cond_1
-    invoke-static {p0, v0}, Lcom/tencent/mm/modelsimple/d;->z(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v0}, Lcom/tencent/mm/modelsimple/d;->A(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -246,7 +301,7 @@
     :cond_3
     const-string/jumbo v1, "android.permission.READ_CONTACTS"
 
-    invoke-static {p0, v1}, Lcom/tencent/mm/pluginsdk/g/a;->aL(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v1}, Lcom/tencent/mm/pluginsdk/h/a;->aK(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -310,7 +365,7 @@
     if-eqz p1, :cond_5
 
     .line 90
-    invoke-interface {p1, v1}, Lcom/tencent/mm/modelsimple/d$a;->h(Landroid/os/Bundle;)V
+    invoke-interface {p1, v1}, Lcom/tencent/mm/modelsimple/d$a;->j(Landroid/os/Bundle;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -325,7 +380,7 @@
     move-exception v0
 
     .line 96
-    const-string/jumbo v1, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v1, "MicroMsg.MMAccountManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -345,14 +400,14 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 99
     :cond_6
     if-eqz p1, :cond_7
 
     .line 100
-    invoke-interface {p1, v7}, Lcom/tencent/mm/modelsimple/d$a;->h(Landroid/os/Bundle;)V
+    invoke-interface {p1, v7}, Lcom/tencent/mm/modelsimple/d$a;->j(Landroid/os/Bundle;)V
 
     :cond_7
     move v0, v2
@@ -377,11 +432,11 @@
     if-nez p0, :cond_0
 
     .line 108
-    const-string/jumbo v1, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v1, "MicroMsg.MMAccountManager"
 
     const-string/jumbo v2, "activity is null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 160
     :goto_0
@@ -389,29 +444,29 @@
 
     .line 112
     :cond_0
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
     .line 113
-    const-string/jumbo v1, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v1, "MicroMsg.MMAccountManager"
 
     const-string/jumbo v2, "account username is null or nil"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 116
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/modelsimple/d;->Cl()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/modelsimple/d;->Cs()Ljava/lang/String;
 
     move-result-object v0
 
     .line 117
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -434,7 +489,7 @@
     .line 125
     const-string/jumbo v4, "android.permission.READ_CONTACTS"
 
-    invoke-static {p0, v4}, Lcom/tencent/mm/pluginsdk/g/a;->aL(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v4}, Lcom/tencent/mm/pluginsdk/h/a;->aK(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v4
 
@@ -447,7 +502,7 @@
 
     .line 129
     :cond_2
-    invoke-static {p0, p1}, Lcom/tencent/mm/modelsimple/d;->z(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, p1}, Lcom/tencent/mm/modelsimple/d;->A(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v4
 
@@ -469,7 +524,7 @@
     :cond_3
     const/4 v4, 0x0
 
-    invoke-static {p0, v4}, Lcom/tencent/mm/modelsimple/d;->x(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v4}, Lcom/tencent/mm/modelsimple/d;->y(Landroid/content/Context;Ljava/lang/String;)Z
 
     .line 135
     const-string/jumbo v4, ""
@@ -510,7 +565,7 @@
     if-eqz p2, :cond_4
 
     .line 141
-    invoke-interface {p2, v0}, Lcom/tencent/mm/modelsimple/d$a;->h(Landroid/os/Bundle;)V
+    invoke-interface {p2, v0}, Lcom/tencent/mm/modelsimple/d$a;->j(Landroid/os/Bundle;)V
 
     .line 144
     :cond_4
@@ -573,7 +628,7 @@
     move-exception v0
 
     .line 154
-    const-string/jumbo v2, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v2, "MicroMsg.MMAccountManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -593,14 +648,14 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 157
     :cond_5
     if-eqz p2, :cond_6
 
     .line 158
-    invoke-interface {p2, v6}, Lcom/tencent/mm/modelsimple/d$a;->h(Landroid/os/Bundle;)V
+    invoke-interface {p2, v6}, Lcom/tencent/mm/modelsimple/d$a;->j(Landroid/os/Bundle;)V
 
     :cond_6
     move v0, v1
@@ -614,26 +669,26 @@
     goto/16 :goto_1
 .end method
 
-.method public static aV(Landroid/content/Context;)V
+.method public static aR(Landroid/content/Context;)V
     .locals 4
 
     .prologue
     const/4 v2, 0x0
 
     .line 164
-    invoke-static {}, Lcom/tencent/mm/ar/c;->aSY()Z
+    invoke-static {}, Lcom/tencent/mm/av/c;->aXR()Z
 
     .line 165
-    sget v0, Lcom/tencent/mm/sdk/platformtools/f;->akO:I
+    sget v0, Lcom/tencent/mm/sdk/platformtools/f;->XH:I
 
     if-nez v0, :cond_1
 
     .line 169
-    const-string/jumbo v0, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v0, "MicroMsg.MMAccountManager"
 
     const-string/jumbo v1, "do not auto add account"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 187
     :cond_0
@@ -642,24 +697,24 @@
 
     .line 172
     :cond_1
-    sget v0, Lcom/tencent/mm/sdk/platformtools/f;->akO:I
+    sget v0, Lcom/tencent/mm/sdk/platformtools/f;->XH:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_3
 
     .line 173
-    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yD()Lcom/tencent/mm/modelfriend/m$a;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yQ()Lcom/tencent/mm/modelfriend/m$a;
 
     move-result-object v0
 
     .line 174
-    sget-object v1, Lcom/tencent/mm/modelfriend/m$a;->bMB:Lcom/tencent/mm/modelfriend/m$a;
+    sget-object v1, Lcom/tencent/mm/modelfriend/m$a;->bFV:Lcom/tencent/mm/modelfriend/m$a;
 
     if-ne v0, v1, :cond_2
 
     .line 175
-    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yF()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yS()Ljava/lang/String;
 
     move-result-object v0
 
@@ -669,7 +724,7 @@
     move-result v0
 
     .line 177
-    const-string/jumbo v1, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v1, "MicroMsg.MMAccountManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -685,23 +740,23 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 179
     :cond_2
-    const-string/jumbo v0, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v0, "MicroMsg.MMAccountManager"
 
     const-string/jumbo v1, "the user not bind mobile or not aggreed to upload addressbook"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 182
     :cond_3
-    sget v0, Lcom/tencent/mm/sdk/platformtools/f;->akO:I
+    sget v0, Lcom/tencent/mm/sdk/platformtools/f;->XH:I
 
     const/4 v1, 0x2
 
@@ -713,7 +768,7 @@
     move-result v0
 
     .line 184
-    const-string/jumbo v1, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v1, "MicroMsg.MMAccountManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -729,12 +784,12 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public static aW(Landroid/content/Context;)Z
+.method public static aS(Landroid/content/Context;)Z
     .locals 3
     .annotation build Lcom/jg/JgMethodChecked;
         author = 0x14
@@ -763,7 +818,7 @@
     .line 233
     const-string/jumbo v0, "accountName"
 
-    invoke-static {}, Lcom/tencent/mm/modelsimple/d;->Cl()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/modelsimple/d;->Cs()Ljava/lang/String;
 
     move-result-object v2
 
@@ -777,11 +832,11 @@
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 236
-    invoke-static {}, Lcom/tencent/mm/modelsimple/d;->Cl()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/modelsimple/d;->Cs()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/tencent/mm/modelsimple/d;->x(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v0}, Lcom/tencent/mm/modelsimple/d;->y(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
@@ -796,12 +851,12 @@
     return v0
 .end method
 
-.method public static aX(Landroid/content/Context;)V
+.method public static aT(Landroid/content/Context;)V
     .locals 2
 
     .prologue
     .line 284
-    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->aY(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->aU(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -810,7 +865,7 @@
     .line 285
     new-instance v0, Lcom/tencent/mm/modelsimple/b;
 
-    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->ba(Landroid/content/Context;)Landroid/accounts/Account;
+    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->aW(Landroid/content/Context;)Landroid/accounts/Account;
 
     move-result-object v1
 
@@ -833,26 +888,26 @@
     :cond_0
     const/4 v0, 0x0
 
-    invoke-static {p0, v0}, Lcom/tencent/mm/modelsimple/d;->x(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v0}, Lcom/tencent/mm/modelsimple/d;->y(Landroid/content/Context;Ljava/lang/String;)Z
 
     .line 289
-    const-string/jumbo v0, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v0, "MicroMsg.MMAccountManager"
 
     const-string/jumbo v1, "no account added or not current account"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public static aY(Landroid/content/Context;)Z
+.method public static aU(Landroid/content/Context;)Z
     .locals 3
 
     .prologue
     const/4 v0, 0x0
 
     .line 314
-    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->ba(Landroid/content/Context;)Landroid/accounts/Account;
+    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->aW(Landroid/content/Context;)Landroid/accounts/Account;
 
     move-result-object v1
 
@@ -868,7 +923,7 @@
     :cond_1
     iget-object v1, v1, Landroid/accounts/Account;->name:Ljava/lang/String;
 
-    invoke-static {}, Lcom/tencent/mm/modelsimple/d;->Cl()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/modelsimple/d;->Cs()Ljava/lang/String;
 
     move-result-object v2
 
@@ -884,7 +939,7 @@
     goto :goto_0
 .end method
 
-.method public static aZ(Landroid/content/Context;)Z
+.method public static aV(Landroid/content/Context;)Z
     .locals 4
 
     .prologue
@@ -893,18 +948,18 @@
     const/4 v0, 0x0
 
     .line 327
-    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->aY(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->aU(Landroid/content/Context;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
     .line 328
-    const-string/jumbo v1, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v1, "MicroMsg.MMAccountManager"
 
     const-string/jumbo v2, "no account added or not current account"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 343
     :cond_0
@@ -915,14 +970,14 @@
     :cond_1
     const-string/jumbo v2, "android.permission.READ_CONTACTS"
 
-    invoke-static {p0, v2}, Lcom/tencent/mm/pluginsdk/g/a;->aL(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v2}, Lcom/tencent/mm/pluginsdk/h/a;->aK(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
     .line 334
-    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->ba(Landroid/content/Context;)Landroid/accounts/Account;
+    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->aW(Landroid/content/Context;)Landroid/accounts/Account;
 
     move-result-object v2
 
@@ -956,39 +1011,39 @@
 
     .line 342
     :cond_2
-    const-string/jumbo v1, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v1, "MicroMsg.MMAccountManager"
 
     const-string/jumbo v2, "no account added"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public static ba(Landroid/content/Context;)Landroid/accounts/Account;
+.method public static aW(Landroid/content/Context;)Landroid/accounts/Account;
     .locals 7
 
     .prologue
     const/4 v1, 0x0
 
     .line 348
-    invoke-static {}, Lcom/tencent/mm/modelsimple/d;->Cl()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/modelsimple/d;->Cs()Ljava/lang/String;
 
     move-result-object v0
 
     .line 349
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
     .line 350
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -1004,14 +1059,14 @@
 
     .line 353
     :cond_0
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_3
 
     .line 354
-    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->bb(Landroid/content/Context;)[Landroid/accounts/Account;
+    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->aX(Landroid/content/Context;)[Landroid/accounts/Account;
 
     move-result-object v4
 
@@ -1066,7 +1121,7 @@
     goto :goto_0
 .end method
 
-.method private static bb(Landroid/content/Context;)[Landroid/accounts/Account;
+.method private static aX(Landroid/content/Context;)[Landroid/accounts/Account;
     .locals 2
 
     .prologue
@@ -1092,11 +1147,11 @@
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v0, "MicroMsg.MMAccountManager"
 
     const-string/jumbo v1, "get all accounts failed"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 373
     const/4 v0, 0x0
@@ -1104,14 +1159,14 @@
     goto :goto_0
 .end method
 
-.method public static bc(Landroid/content/Context;)Ljava/lang/String;
+.method public static aY(Landroid/content/Context;)Ljava/lang/String;
     .locals 5
 
     .prologue
     .line 408
     const-string/jumbo v0, "com.google"
 
-    invoke-static {p0, v0}, Lcom/tencent/mm/modelsimple/d;->A(Landroid/content/Context;Ljava/lang/String;)[Landroid/accounts/Account;
+    invoke-static {p0, v0}, Lcom/tencent/mm/modelsimple/d;->B(Landroid/content/Context;Ljava/lang/String;)[Landroid/accounts/Account;
 
     move-result-object v2
 
@@ -1139,13 +1194,13 @@
     iget-object v0, v0, Landroid/accounts/Account;->name:Ljava/lang/String;
 
     .line 413
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->De(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->Ft(Ljava/lang/String;)Z
 
     move-result v4
 
@@ -1162,7 +1217,7 @@
     return-object v0
 .end method
 
-.method private static jc(Ljava/lang/String;)Ljava/lang/String;
+.method private static ju(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
     .prologue
@@ -1201,7 +1256,7 @@
     move-exception v0
 
     .line 431
-    const-string/jumbo v1, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v1, "MicroMsg.MMAccountManager"
 
     const-string/jumbo v2, "stringFilter failed, %s, %s"
 
@@ -1221,12 +1276,12 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method public static x(Landroid/content/Context;Ljava/lang/String;)Z
+.method public static y(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 10
 
     .prologue
@@ -1235,12 +1290,12 @@
     const/4 v0, 0x0
 
     .line 190
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
     .line 191
-    const-string/jumbo v2, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v2, "MicroMsg.MMAccountManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1256,17 +1311,17 @@
 
     move-result-object v4
 
-    invoke-static {v2, v4}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 193
     if-nez p0, :cond_0
 
     .line 194
-    const-string/jumbo v1, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v1, "MicroMsg.MMAccountManager"
 
     const-string/jumbo v2, "null context"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 221
     :goto_0
@@ -1275,7 +1330,7 @@
     .line 199
     :cond_0
     :try_start_0
-    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->bb(Landroid/content/Context;)[Landroid/accounts/Account;
+    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->aX(Landroid/content/Context;)[Landroid/accounts/Account;
 
     move-result-object v4
 
@@ -1288,11 +1343,11 @@
 
     .line 201
     :cond_1
-    const-string/jumbo v2, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v2, "MicroMsg.MMAccountManager"
 
     const-string/jumbo v3, "get account info is null or nil"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -1350,7 +1405,7 @@
     invoke-virtual {v5, v7, v8, v9}, Landroid/accounts/AccountManager;->removeAccount(Landroid/accounts/Account;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;
 
     .line 213
-    const-string/jumbo v7, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v7, "MicroMsg.MMAccountManager"
 
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -1366,7 +1421,7 @@
 
     move-result-object v8
 
-    invoke-static {v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1377,7 +1432,7 @@
     move-exception v1
 
     .line 218
-    const-string/jumbo v2, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v2, "MicroMsg.MMAccountManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1397,7 +1452,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1408,12 +1463,12 @@
     goto :goto_0
 .end method
 
-.method public static y(Landroid/content/Context;Ljava/lang/String;)V
+.method public static z(Landroid/content/Context;Ljava/lang/String;)V
     .locals 2
 
     .prologue
     .line 304
-    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->aY(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->aU(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -1422,7 +1477,7 @@
     .line 305
     new-instance v0, Lcom/tencent/mm/modelsimple/b;
 
-    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->ba(Landroid/content/Context;)Landroid/accounts/Account;
+    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->aW(Landroid/content/Context;)Landroid/accounts/Account;
 
     move-result-object v1
 
@@ -1445,69 +1500,14 @@
     :cond_0
     const/4 v0, 0x0
 
-    invoke-static {p0, v0}, Lcom/tencent/mm/modelsimple/d;->x(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v0}, Lcom/tencent/mm/modelsimple/d;->y(Landroid/content/Context;Ljava/lang/String;)Z
 
     .line 309
-    const-string/jumbo v0, "!44@/B4Tb64lLpKKKHTL+uUSWr8RQSJ6YRj00998+t8XZdQ="
+    const-string/jumbo v0, "MicroMsg.MMAccountManager"
 
     const-string/jumbo v1, "no account added or not current account"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
-.end method
-
-.method private static z(Landroid/content/Context;Ljava/lang/String;)Z
-    .locals 5
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 380
-    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->bb(Landroid/content/Context;)[Landroid/accounts/Account;
-
-    move-result-object v2
-
-    .line 381
-    if-eqz v2, :cond_0
-
-    array-length v1, v2
-
-    if-nez v1, :cond_1
-
-    .line 391
-    :cond_0
-    :goto_0
-    return v0
-
-    .line 385
-    :cond_1
-    array-length v3, v2
-
-    move v1, v0
-
-    :goto_1
-    if-ge v1, v3, :cond_0
-
-    aget-object v4, v2, v1
-
-    .line 386
-    iget-object v4, v4, Landroid/accounts/Account;->name:Ljava/lang/String;
-
-    invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    .line 387
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    .line 385
-    :cond_2
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
 .end method

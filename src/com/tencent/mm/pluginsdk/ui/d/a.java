@@ -4,7 +4,7 @@ import android.content.Context;
 import com.tencent.mm.pluginsdk.i.a;
 import com.tencent.mm.pluginsdk.i.c;
 import com.tencent.mm.pluginsdk.ui.applet.g;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -20,9 +20,9 @@ public final class a
   {
     Context localContext = paramContext;
     if (paramContext == null) {
-      localContext = y.getContext();
+      localContext = aa.getContext();
     }
-    paramContext = i.a.iyS.p(localContext, paramString);
+    paramContext = i.a.iVo.q(localContext, paramString);
     if (paramContext != null)
     {
       start = paramInt1;
@@ -33,10 +33,10 @@ public final class a
     return paramContext;
   }
   
-  public static ArrayList aP(Context paramContext, String paramString)
+  public static ArrayList<g> aN(Context paramContext, String paramString)
   {
     ArrayList localArrayList = new ArrayList();
-    paramString = d.a.iPB.matcher(paramString);
+    paramString = d.a.jmH.matcher(paramString);
     while (paramString.find())
     {
       int i = paramString.start();

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lfA:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
+.field final synthetic lFM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 96
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI$1;->lfA:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
+    .line 116
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI$1;->lFM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,8 +42,8 @@
     .prologue
     const/4 v1, 0x4
 
-    .line 99
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI$1;->lfA:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
+    .line 119
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI$1;->lFM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;->a(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;)Landroid/widget/GridView;
 
@@ -51,7 +51,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI$1;->lfA:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI$1;->lFM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;->a(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;)Landroid/widget/GridView;
 
@@ -63,8 +63,8 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 100
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI$1;->lfA:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
+    .line 120
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI$1;->lFM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;->a(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;)Landroid/widget/GridView;
 
@@ -72,7 +72,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setVisibility(I)V
 
-    .line 102
+    .line 122
     :cond_0
     return-void
 .end method

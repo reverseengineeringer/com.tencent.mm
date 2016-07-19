@@ -1,62 +1,38 @@
 package com.tencent.mm.protocal.b;
 
-import a.a.a.b;
-
 public final class aif
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public String jEW;
-  public int jEX;
-  public String jiH;
+  public String kcW;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (jEW == null) {
-        throw new b("Not all required fields were included: FileId");
+      if (kcW != null) {
+        paramVarArgs.e(1, kcW);
       }
-      if (jiH == null) {
-        throw new b("Not all required fields were included: AesKey");
-      }
-      if (jEW != null) {
-        paramVarArgs.d(1, jEW);
-      }
-      if (jiH != null) {
-        paramVarArgs.d(2, jiH);
-      }
-      paramVarArgs.ci(3, jEX);
       return 0;
     }
     if (paramInt == 1) {
-      if (jEW == null) {
-        break label337;
+      if (kcW == null) {
+        break label174;
       }
     }
-    label337:
-    for (paramInt = a.a.a.b.b.a.e(1, jEW) + 0;; paramInt = 0)
+    label174:
+    for (paramInt = a.a.a.b.b.a.f(1, kcW) + 0;; paramInt = 0)
     {
-      int i = paramInt;
-      if (jiH != null) {
-        i = paramInt + a.a.a.b.b.a.e(2, jiH);
-      }
-      return i + a.a.a.a.cg(3, jEX);
+      return paramInt;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
-        if (jEW == null) {
-          throw new b("Not all required fields were included: FileId");
-        }
-        if (jiH != null) {
-          break;
-        }
-        throw new b("Not all required fields were included: AesKey");
+        break;
       }
       if (paramInt == 3)
       {
@@ -66,14 +42,8 @@ public final class aif
         {
         default: 
           return -1;
-        case 1: 
-          jEW = maU.readString();
-          return 0;
-        case 2: 
-          jiH = maU.readString();
-          return 0;
         }
-        jEX = maU.jC();
+        kcW = mMY.readString();
         return 0;
       }
       return -1;

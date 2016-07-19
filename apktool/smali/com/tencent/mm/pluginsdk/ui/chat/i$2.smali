@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/pluginsdk/ui/chat/i$2;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.super Lcom/tencent/mm/sdk/platformtools/ac;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic iMq:Lcom/tencent/mm/pluginsdk/ui/chat/i;
+.field final synthetic jjn:Lcom/tencent/mm/pluginsdk/ui/chat/i;
 
 
 # direct methods
@@ -24,9 +24,9 @@
 
     .prologue
     .line 106
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/i$2;->iMq:Lcom/tencent/mm/pluginsdk/ui/chat/i;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/i$2;->jjn:Lcom/tencent/mm/pluginsdk/ui/chat/i;
 
-    invoke-direct {p0, p2}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {p0, p2}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
     return-void
 .end method
@@ -40,13 +40,13 @@
     const/4 v2, 0x0
 
     .line 109
-    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/chat/i$2;->iMq:Lcom/tencent/mm/pluginsdk/ui/chat/i;
+    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/chat/i$2;->jjn:Lcom/tencent/mm/pluginsdk/ui/chat/i;
 
-    iget-object v0, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->aAF:Landroid/widget/ImageView;
+    iget-object v0, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->amO:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->iMl:Lcom/tencent/mm/pluginsdk/ui/chat/g;
+    iget-object v0, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->jji:Lcom/tencent/mm/pluginsdk/ui/chat/g;
 
     if-eqz v0, :cond_0
 
@@ -54,15 +54,15 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->iMm:Lcom/tencent/mm/ui/base/o;
+    iget-object v0, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->jjj:Lcom/tencent/mm/ui/base/o;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->iHc:Landroid/view/View;
+    iget-object v0, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->jdX:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->eOa:Landroid/view/View;
+    iget-object v0, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->eVS:Landroid/view/View;
 
     if-nez v0, :cond_1
 
@@ -73,33 +73,33 @@
 
     .line 109
     :cond_1
-    iget-object v0, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->aAF:Landroid/widget/ImageView;
+    iget-object v0, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->amO:Landroid/widget/ImageView;
 
     iget-object v1, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->bitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    iget-boolean v0, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->iMn:Z
+    iget-boolean v0, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->jjk:Z
 
     if-eqz v0, :cond_3
 
     const/16 v0, 0x53
 
     :goto_1
-    iget-boolean v1, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->iMn:Z
+    iget-boolean v1, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->jjk:Z
 
     if-eqz v1, :cond_4
 
     move v1, v2
 
     :goto_2
-    iget-object v3, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->iMo:Lcom/tencent/mm/pluginsdk/ui/chat/h$a;
+    iget-object v3, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->jjl:Lcom/tencent/mm/pluginsdk/ui/chat/h$a;
 
     if-eqz v3, :cond_5
 
-    iget-object v3, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->iMo:Lcom/tencent/mm/pluginsdk/ui/chat/h$a;
+    iget-object v3, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->jjl:Lcom/tencent/mm/pluginsdk/ui/chat/h$a;
 
-    invoke-interface {v3}, Lcom/tencent/mm/pluginsdk/ui/chat/h$a;->getYFromBottom()I
+    invoke-interface {v3}, Lcom/tencent/mm/pluginsdk/ui/chat/h$a;->aWW()I
 
     move-result v3
 
@@ -110,11 +110,11 @@
 
     if-lt v5, v6, :cond_2
 
-    invoke-static {}, Lcom/tencent/mm/ui/v;->bbw()Landroid/graphics/Rect;
+    invoke-static {}, Lcom/tencent/mm/ui/v;->bgI()Landroid/graphics/Rect;
 
     move-result-object v5
 
-    iget-boolean v6, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->iMn:Z
+    iget-boolean v6, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->jjk:Z
 
     if-eqz v6, :cond_6
 
@@ -125,7 +125,7 @@
 
     add-int/2addr v3, v6
 
-    const-string/jumbo v6, "!44@/B4Tb64lLpKYgkPW7g2h7ZPkZDASCTQgMn5vbr5V3XA="
+    const-string/jumbo v6, "MicroMsg.RecentImageBubble"
 
     const-string/jumbo v7, "recent bubble navbar height %s %s"
 
@@ -151,26 +151,26 @@
 
     aput-object v5, v8, v9
 
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_2
-    iget-object v5, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->iMm:Lcom/tencent/mm/ui/base/o;
+    iget-object v5, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->jjj:Lcom/tencent/mm/ui/base/o;
 
-    iget-object v6, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->iHc:Landroid/view/View;
+    iget-object v6, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->jdX:Landroid/view/View;
 
     invoke-virtual {v5, v6, v0, v1, v3}, Lcom/tencent/mm/ui/base/o;->showAtLocation(Landroid/view/View;III)V
 
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/af;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ah;
 
     new-instance v1, Lcom/tencent/mm/pluginsdk/ui/chat/i$4;
 
     invoke-direct {v1, v4}, Lcom/tencent/mm/pluginsdk/ui/chat/i$4;-><init>(Lcom/tencent/mm/pluginsdk/ui/chat/i;)V
 
-    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;-><init>(Lcom/tencent/mm/sdk/platformtools/af$a;Z)V
+    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/ah;-><init>(Lcom/tencent/mm/sdk/platformtools/ah$a;Z)V
 
-    const-wide/16 v1, 0x2710
+    const-wide/16 v2, 0x2710
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;->ds(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ah;->dJ(J)V
 
     goto :goto_0
 
@@ -185,7 +185,7 @@
     goto :goto_2
 
     :cond_5
-    iget-object v3, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->eOa:Landroid/view/View;
+    iget-object v3, v4, Lcom/tencent/mm/pluginsdk/ui/chat/i;->eVS:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getHeight()I
 

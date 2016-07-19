@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/tencent/mm/console/Shell$a;
 
 
 # annotations
@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 138
+    .line 125
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,70 +30,40 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public final j(Landroid/content/Intent;)V
+    .locals 5
 
     .prologue
-    const/4 v6, 0x1
+    const/4 v4, 0x0
 
-    const/4 v5, 0x0
+    .line 129
+    const-string/jumbo v0, "flag"
 
-    .line 143
-    const-string/jumbo v0, "!24@/B4Tb64lLpLOIdMtS2bKaA=="
+    invoke-virtual {p1, v0, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    const-string/jumbo v1, "dkcrash begin tid:%d [%s]"
+    move-result v0
 
-    const/4 v2, 0x2
+    sput v0, Lcom/tencent/mm/platformtools/q;->ciW:I
+
+    .line 130
+    const-string/jumbo v0, "MicroMsg.Shell"
+
+    const-string/jumbo v1, "dkwt shell [%d]"
+
+    const/4 v2, 0x1
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/Thread;->getId()J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    aput-object v3, v2, v5
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/Thread;->getName()Ljava/lang/String;
-
-    move-result-object v3
-
-    aput-object v3, v2, v6
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 144
-    const-string/jumbo v0, "!24@/B4Tb64lLpLOIdMtS2bKaA=="
-
-    const-string/jumbo v1, "%d "
-
-    new-array v2, v6, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v3
+    sget v3, Lcom/tencent/mm/platformtools/q;->ciW:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    aput-object v3, v2, v5
+    aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 146
+    .line 131
     return-void
 .end method

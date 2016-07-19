@@ -9,42 +9,42 @@ public final class h
 {
   public h(i parami)
   {
-    mbE = 2064;
-    mbF = 3;
-    mbH = parami;
+    mNI = 2064;
+    mNJ = 3;
+    mNL = parami;
   }
   
-  public final int i(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
+  public final int k(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
   {
     f localf = new f();
     g localg = new g();
-    int i = super.z(paramArrayOfByte, paramInt1 + 2);
-    super.bop();
+    int i = super.A(paramArrayOfByte, paramInt1 + 2);
+    super.bvn();
     int j = paramInt1 + 5;
     switch (i)
     {
     case 3: 
     case 4: 
     default: 
-      h(paramArrayOfByte, j, mbt - j - 1);
+      j(paramArrayOfByte, j, mNx - j - 1);
       return i;
     case 2: 
-      paramInt2 = localf.k(paramArrayOfByte, j, mbt - j);
+      paramInt2 = localf.m(paramArrayOfByte, j, mNx - j);
       paramInt1 = paramInt2;
       if (paramInt2 >= 0)
       {
-        mbH.mbM = localf;
-        paramInt2 = localg.k(paramArrayOfByte, j, mbt - j);
+        mNL.mNQ = localf;
+        paramInt2 = localg.m(paramArrayOfByte, j, mNx - j);
         paramInt1 = paramInt2;
         if (paramInt2 >= 0)
         {
-          mbH.mbN = localg;
+          mNL.mNR = localg;
           return i;
         }
       }
       break;
     case 5: 
-      super.h(paramArrayOfByte, j, mbt - j - 1);
+      super.j(paramArrayOfByte, j, mNx - j - 1);
       return i;
     }
     return paramInt1;

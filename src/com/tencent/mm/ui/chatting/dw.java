@@ -1,18 +1,29 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.storage.ag;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.TextView;
 
 final class dw
+  extends ab.a
 {
-  ag aFR;
-  String hmX;
-  String lbW;
+  TextView cuk;
   
-  public dw(String paramString1, ag paramag, String paramString2)
+  public dw(int paramInt)
   {
-    lbW = paramString1;
-    aFR = paramag;
-    hmX = paramString2;
+    super(paramInt);
+  }
+  
+  public final ab.a aO(View paramView)
+  {
+    super.aG(paramView);
+    dXd = ((TextView)paramView.findViewById(2131755018));
+    gtM = ((TextView)paramView.findViewById(2131755288));
+    cuk = ((TextView)paramView.findViewById(2131755289));
+    ehl = ((CheckBox)paramView.findViewById(2131755013));
+    dOk = paramView.findViewById(2131755017);
+    type = 2;
+    return this;
   }
 }
 

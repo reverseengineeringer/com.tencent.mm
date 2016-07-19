@@ -13,9 +13,9 @@ final class ImageGalleryUI$15
   {
     paraml.setHeaderTitle("");
     int i = 0;
-    while (i < lgR.size())
+    while (i < lHd.size())
     {
-      paraml.b(((Integer)lgR.get(i)).intValue(), (CharSequence)lgS.get(i));
+      paraml.b(((Integer)lHd.get(i)).intValue(), (CharSequence)lHe.get(i));
       i += 1;
     }
   }

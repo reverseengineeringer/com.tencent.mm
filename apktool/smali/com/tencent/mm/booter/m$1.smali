@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/booter/m;->nk()V
+    value = Lcom/tencent/mm/booter/m;->ly()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bnf:I
+.field final synthetic baM:I
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 101
-    iput p1, p0, Lcom/tencent/mm/booter/m$1;->bnf:I
+    iput p1, p0, Lcom/tencent/mm/booter/m$1;->baM:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 104
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v1, 0x29b3
 
@@ -49,7 +49,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget v3, p0, Lcom/tencent/mm/booter/m$1;->bnf:I
+    iget v3, p0, Lcom/tencent/mm/booter/m$1;->baM:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -61,7 +61,7 @@
 
     move-result-object v2
 
-    sget v3, Lcom/tencent/mm/sdk/platformtools/f;->akC:I
+    sget v3, Lcom/tencent/mm/sdk/platformtools/f;->Xv:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -71,7 +71,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->O(ILjava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/g;->X(ILjava/lang/String;)V
 
     .line 105
     return-void

@@ -3,8 +3,8 @@ package com.tencent.mm.ui.friend;
 import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.d.a.iu;
-import com.tencent.mm.d.a.iu.b;
+import com.tencent.mm.e.a.iz;
+import com.tencent.mm.e.a.iz.b;
 import com.tencent.mm.pluginsdk.g;
 
 final class InviteFriendUI$2
@@ -14,15 +14,15 @@ final class InviteFriendUI$2
   
   public final void onClick(View paramView)
   {
-    paramView = new iu();
-    aER.auE = 0;
-    aER.aET = (InviteFriendUI.b(lrM) + "@qqim");
-    aER.aEU = InviteFriendUI.g(lrM);
-    com.tencent.mm.sdk.c.a.jUF.j(paramView);
-    if (aES.atR) {
-      com.tencent.mm.plugin.a.a.coa.e(new Intent().putExtra("Chat_User", InviteFriendUI.b(lrM) + "@qqim"), lrM);
+    paramView = new iz();
+    aqW.agr = 0;
+    aqW.aqY = (InviteFriendUI.b(lSq) + "@qqim");
+    aqW.aqZ = InviteFriendUI.g(lSq);
+    com.tencent.mm.sdk.c.a.kug.y(paramView);
+    if (aqX.afB) {
+      com.tencent.mm.plugin.a.a.cjo.e(new Intent().putExtra("Chat_User", InviteFriendUI.b(lSq) + "@qqim"), lSq);
     }
-    lrM.finish();
+    lSq.finish();
   }
 }
 

@@ -8,7 +8,7 @@ import com.tencent.mm.ui.widget.DrawedCallBackLinearLayout;
 public class OnLayoutChangedLinearLayout
   extends DrawedCallBackLinearLayout
 {
-  public a kKf;
+  public a ljv;
   
   public OnLayoutChangedLinearLayout(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -24,19 +24,14 @@ public class OnLayoutChangedLinearLayout
   public void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
-    if (kKf != null) {
-      kKf.baH();
+    if (ljv != null) {
+      ljv.bfV();
     }
-  }
-  
-  public void setOnChattingLayoutChangedListener(a parama)
-  {
-    kKf = parama;
   }
   
   public static abstract interface a
   {
-    public abstract void baH();
+    public abstract void bfV();
   }
 }
 

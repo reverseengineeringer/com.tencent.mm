@@ -1,170 +1,147 @@
 package com.tencent.mm.protocal.b;
 
-import a.a.a.b;
 import java.util.LinkedList;
 
 public final class ch
-  extends com.tencent.mm.at.a
-  implements apk
+  extends alt
 {
-  public String ID;
-  public int iZL;
-  public alx iZM;
-  public String iZN;
-  public String iZO;
-  public String iZP;
-  public int iZQ;
-  public alx iZv;
+  public long cmO;
+  public int jtN;
+  public int jxl;
+  public LinkedList<iy> jxm = new LinkedList();
+  public String jxn;
+  public String jxo;
+  public String jxp;
+  public String jxq;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (iZM == null) {
-        throw new b("Not all required fields were included: QRCodeBuffer");
-      }
-      if (iZv == null) {
-        throw new b("Not all required fields were included: Key");
-      }
-      paramVarArgs.ci(1, iZL);
-      if (iZM != null)
+      if (kfq != null)
       {
-        paramVarArgs.cj(2, iZM.kn());
-        iZM.a(paramVarArgs);
+        paramVarArgs.cx(1, kfq.iO());
+        kfq.a(paramVarArgs);
       }
-      if (iZN != null) {
-        paramVarArgs.d(3, iZN);
+      paramVarArgs.cw(2, jxl);
+      paramVarArgs.d(3, 8, jxm);
+      if (jxn != null) {
+        paramVarArgs.e(4, jxn);
       }
-      if (iZv != null)
-      {
-        paramVarArgs.cj(4, iZv.kn());
-        iZv.a(paramVarArgs);
+      if (jxo != null) {
+        paramVarArgs.e(5, jxo);
       }
-      if (iZO != null) {
-        paramVarArgs.d(5, iZO);
+      paramVarArgs.cw(6, jtN);
+      paramVarArgs.z(7, cmO);
+      if (jxp != null) {
+        paramVarArgs.e(8, jxp);
       }
-      if (iZP != null) {
-        paramVarArgs.d(6, iZP);
+      if (jxq != null) {
+        paramVarArgs.e(9, jxq);
       }
-      paramVarArgs.ci(7, iZQ);
-      if (ID != null) {
-        paramVarArgs.d(8, ID);
-      }
-      paramInt = 0;
+      return 0;
     }
-    int i;
-    do
+    if (paramInt == 1) {
+      if (kfq == null) {
+        break label747;
+      }
+    }
+    label747:
+    for (paramInt = a.a.a.a.cv(1, kfq.iO()) + 0;; paramInt = 0)
     {
-      return paramInt;
-      if (paramInt != 1) {
+      int i = paramInt + a.a.a.a.cu(2, jxl) + a.a.a.a.c(3, 8, jxm);
+      paramInt = i;
+      if (jxn != null) {
+        paramInt = i + a.a.a.b.b.a.f(4, jxn);
+      }
+      i = paramInt;
+      if (jxo != null) {
+        i = paramInt + a.a.a.b.b.a.f(5, jxo);
+      }
+      i = i + a.a.a.a.cu(6, jtN) + a.a.a.a.y(7, cmO);
+      paramInt = i;
+      if (jxp != null) {
+        paramInt = i + a.a.a.b.b.a.f(8, jxp);
+      }
+      i = paramInt;
+      if (jxq != null) {
+        i = paramInt + a.a.a.b.b.a.f(9, jxq);
+      }
+      return i;
+      if (paramInt == 2)
+      {
+        paramVarArgs = (byte[])paramVarArgs[0];
+        jxm.clear();
+        paramVarArgs = new a.a.a.a.a(paramVarArgs, jrk);
+        for (paramInt = alt.a(paramVarArgs); paramInt > 0; paramInt = alt.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bve();
+          }
+        }
         break;
       }
-      i = a.a.a.a.cg(1, iZL) + 0;
-      paramInt = i;
-      if (iZM != null) {
-        paramInt = i + a.a.a.a.ch(2, iZM.kn());
-      }
-      i = paramInt;
-      if (iZN != null) {
-        i = paramInt + a.a.a.b.b.a.e(3, iZN);
-      }
-      paramInt = i;
-      if (iZv != null) {
-        paramInt = i + a.a.a.a.ch(4, iZv.kn());
-      }
-      i = paramInt;
-      if (iZO != null) {
-        i = paramInt + a.a.a.b.b.a.e(5, iZO);
-      }
-      paramInt = i;
-      if (iZP != null) {
-        paramInt = i + a.a.a.b.b.a.e(6, iZP);
-      }
-      i = paramInt + a.a.a.a.cg(7, iZQ);
-      paramInt = i;
-    } while (ID == null);
-    return i + a.a.a.b.b.a.e(8, ID);
-    if (paramInt == 2)
-    {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.bog();
-        }
-      }
-      if (iZM == null) {
-        throw new b("Not all required fields were included: QRCodeBuffer");
-      }
-      if (iZv == null) {
-        throw new b("Not all required fields were included: Key");
-      }
-      return 0;
-    }
-    if (paramInt == 3)
-    {
-      Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
-      ch localch = (ch)paramVarArgs[1];
-      paramInt = ((Integer)paramVarArgs[2]).intValue();
-      Object localObject2;
-      boolean bool;
-      switch (paramInt)
+      if (paramInt == 3)
       {
-      default: 
-        return -1;
-      case 1: 
-        iZL = maU.jC();
-        return 0;
-      case 2: 
-        paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-        i = paramVarArgs.size();
-        paramInt = 0;
-        while (paramInt < i)
+        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
+        ch localch = (ch)paramVarArgs[1];
+        paramInt = ((Integer)paramVarArgs[2]).intValue();
+        Object localObject2;
+        boolean bool;
+        switch (paramInt)
         {
-          localObject2 = (byte[])paramVarArgs.get(paramInt);
-          localObject1 = new alx();
-          localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-          for (bool = true; bool; bool = ((alx)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
-          iZM = ((alx)localObject1);
-          paramInt += 1;
+        default: 
+          return -1;
+        case 1: 
+          paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+          i = paramVarArgs.size();
+          paramInt = 0;
+          while (paramInt < i)
+          {
+            localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new df();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+            for (bool = true; bool; bool = ((df)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, alt.a((a.a.a.a.a)localObject2))) {}
+            kfq = ((df)localObject1);
+            paramInt += 1;
+          }
+        case 2: 
+          jxl = mMY.id();
+          return 0;
+        case 3: 
+          paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+          i = paramVarArgs.size();
+          paramInt = 0;
+          while (paramInt < i)
+          {
+            localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new iy();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+            for (bool = true; bool; bool = ((iy)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, alt.a((a.a.a.a.a)localObject2))) {}
+            jxm.add(localObject1);
+            paramInt += 1;
+          }
+        case 4: 
+          jxn = mMY.readString();
+          return 0;
+        case 5: 
+          jxo = mMY.readString();
+          return 0;
+        case 6: 
+          jtN = mMY.id();
+          return 0;
+        case 7: 
+          cmO = mMY.ie();
+          return 0;
+        case 8: 
+          jxp = mMY.readString();
+          return 0;
         }
-        return 0;
-      case 3: 
-        iZN = maU.readString();
-        return 0;
-      case 4: 
-        paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-        i = paramVarArgs.size();
-        paramInt = 0;
-        while (paramInt < i)
-        {
-          localObject2 = (byte[])paramVarArgs.get(paramInt);
-          localObject1 = new alx();
-          localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-          for (bool = true; bool; bool = ((alx)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
-          iZv = ((alx)localObject1);
-          paramInt += 1;
-        }
-        return 0;
-      case 5: 
-        iZO = maU.readString();
-        return 0;
-      case 6: 
-        iZP = maU.readString();
-        return 0;
-      case 7: 
-        iZQ = maU.jC();
+        jxq = mMY.readString();
         return 0;
       }
-      ID = maU.readString();
-      return 0;
+      return -1;
     }
-    return -1;
-  }
-  
-  public final int getRet()
-  {
-    return iZL;
   }
 }
 

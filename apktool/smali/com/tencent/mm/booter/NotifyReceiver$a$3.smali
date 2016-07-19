@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bmP:Lcom/tencent/mm/booter/NotifyReceiver$a;
+.field final synthetic bav:Lcom/tencent/mm/booter/NotifyReceiver$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 814
-    iput-object p1, p0, Lcom/tencent/mm/booter/NotifyReceiver$a$3;->bmP:Lcom/tencent/mm/booter/NotifyReceiver$a;
+    .line 1033
+    iput-object p1, p0, Lcom/tencent/mm/booter/NotifyReceiver$a$3;->bav:Lcom/tencent/mm/booter/NotifyReceiver$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,8 +42,8 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 818
-    const-string/jumbo v0, "!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl"
+    .line 1037
+    const-string/jumbo v0, "MicroMsg.NotifyReceiver"
 
     const-string/jumbo v1, "checkKillPorcess, canKillProcess :%b"
 
@@ -53,7 +53,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {}, Lcom/tencent/mm/booter/NotifyReceiver;->mZ()Z
+    invoke-static {}, Lcom/tencent/mm/booter/NotifyReceiver;->lm()Z
 
     move-result v4
 
@@ -63,72 +63,72 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 819
-    invoke-static {}, Lcom/tencent/mm/booter/NotifyReceiver;->mT()[B
+    .line 1038
+    invoke-static {}, Lcom/tencent/mm/booter/NotifyReceiver;->lg()[B
 
     move-result-object v1
 
     monitor-enter v1
 
-    .line 820
+    .line 1039
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/booter/NotifyReceiver;->mU()Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    invoke-static {}, Lcom/tencent/mm/booter/NotifyReceiver;->lh()Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 821
-    invoke-static {}, Lcom/tencent/mm/booter/NotifyReceiver;->mU()Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    .line 1040
+    invoke-static {}, Lcom/tencent/mm/booter/NotifyReceiver;->lh()Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->unLock()V
 
-    .line 823
+    .line 1042
     :cond_0
     const/4 v0, 0x0
 
     invoke-static {v0}, Lcom/tencent/mm/booter/NotifyReceiver;->a(Lcom/tencent/mm/jni/platformcomm/WakerLock;)Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
-    .line 824
+    .line 1043
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 825
-    invoke-static {}, Lcom/tencent/mm/booter/NotifyReceiver;->mZ()Z
+    .line 1044
+    invoke-static {}, Lcom/tencent/mm/booter/NotifyReceiver;->lm()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 826
-    invoke-static {}, Lcom/tencent/mm/booter/notification/f$a;->nv()Lcom/tencent/mm/booter/notification/f;
+    .line 1045
+    invoke-static {}, Lcom/tencent/mm/booter/notification/f$a;->lJ()Lcom/tencent/mm/booter/notification/f;
 
     move-result-object v0
 
     const/4 v1, -0x1
 
-    invoke-virtual {v0, v1, v5}, Lcom/tencent/mm/booter/notification/f;->i(ILjava/lang/String;)V
+    invoke-virtual {v0, v1, v5}, Lcom/tencent/mm/booter/notification/f;->j(ILjava/lang/String;)V
 
-    .line 827
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->appenderFlushSync()V
+    .line 1046
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->appenderFlushSync()V
 
-    .line 828
+    .line 1047
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
 
     invoke-static {v0}, Landroid/os/Process;->killProcess(I)V
 
-    .line 830
+    .line 1049
     :cond_1
     return-void
 
-    .line 824
+    .line 1043
     :catchall_0
     move-exception v0
 

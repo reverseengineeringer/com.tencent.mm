@@ -1,8 +1,8 @@
 package com.tencent.mm.ui.conversation;
 
 import android.content.Intent;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.base.OnLayoutChangedLinearLayout;
+import com.tencent.mm.modelstat.a;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.chatting.ChattingUI.a;
 import com.tencent.mm.ui.tools.TestTimeForChatting;
 import com.tencent.mm.ui.widget.f;
@@ -14,30 +14,31 @@ final class BaseConversationUI$6
   
   public final void run()
   {
-    lnn.kmQ = false;
-    if (lnn.isFinishing()) {
+    lNH.kMo = false;
+    if (lNH.isFinishing()) {
       return;
     }
-    if (BaseConversationUI.a(lnn) == null) {}
-    for (boolean bool = false;; bool = BaseConversationUI.a(lnn).isShown())
+    a.Dw().a(4, lNH.getLocalClassName(), lNH.hashCode());
+    if (BaseConversationUI.a(lNH) == null) {}
+    for (boolean bool = false;; bool = BaseConversationUI.a(lNH).isShown())
     {
-      u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "ashutest::startChatting, ishow:%b", new Object[] { Boolean.valueOf(bool) });
-      Object localObject = new Intent().putExtra("Chat_User", lnn.kmJ);
-      if (lnn.kmK != null) {
-        ((Intent)localObject).putExtras(lnn.kmK);
+      v.i("MicroMsg.BaseConversationUI", "ashutest::startChatting, ishow:%b", new Object[] { Boolean.valueOf(bool) });
+      Object localObject = new Intent().putExtra("Chat_User", lNH.kMh);
+      if (lNH.kMi != null) {
+        ((Intent)localObject).putExtras(lNH.kMi);
       }
       ((Intent)localObject).putExtra("img_gallery_enter_from_chatting_ui", true);
-      BaseConversationUI.a(lnn, (Intent)localObject);
-      BaseConversationUI.k(lnn).setOnChattingLayoutChangedListener(BaseConversationUI.l(lnn));
-      BaseConversationUI.a(lnn).setVisibility(0);
-      localObject = lnn;
-      if ((lnk != null) && (!lnk.bbg())) {
-        lnk.hh(false);
+      BaseConversationUI.a(lNH, (Intent)localObject);
+      klNH).ljv = BaseConversationUI.l(lNH);
+      BaseConversationUI.a(lNH).setVisibility(0);
+      localObject = lNH;
+      if ((lNE != null) && (!lNE.bgq())) {
+        lNE.hF(false);
       }
-      if (!BaseConversationUI.d(lnn).bbg()) {
+      if (!BaseConversationUI.d(lNH).bgq()) {
         break;
       }
-      f.a(lnn);
+      f.a(lNH);
       return;
     }
   }

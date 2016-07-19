@@ -12,9 +12,9 @@ final class SnsMsgUI$2
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
     paramMenuItem = new Intent();
-    paramMenuItem.putExtra("sns_cmd_list", SnsMsgUI.j(hfU));
-    hfU.setResult(-1, paramMenuItem);
-    hfU.finish();
+    paramMenuItem.putExtra("sns_cmd_list", SnsMsgUI.j(huL));
+    huL.setResult(-1, paramMenuItem);
+    huL.finish();
     return true;
   }
 }

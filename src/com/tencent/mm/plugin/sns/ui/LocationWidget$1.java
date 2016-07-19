@@ -2,8 +2,8 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.pluginsdk.g.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.pluginsdk.h.a;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class LocationWidget$1
   implements View.OnClickListener
@@ -12,12 +12,12 @@ final class LocationWidget$1
   
   public final void onClick(View paramView)
   {
-    boolean bool = a.a(LocationWidget.a(gZr), "android.permission.ACCESS_COARSE_LOCATION", 1024, "", "");
-    u.d("!32@/B4Tb64lLpIu6Y+BscdrxMP5NzODT+9I", "summerper checkPermission checkLocation[%b]", new Object[] { Boolean.valueOf(bool) });
+    boolean bool = a.a(LocationWidget.a(hmJ), "android.permission.ACCESS_COARSE_LOCATION", 1024, "", "");
+    v.d("MicroMsg.LocationWidget", "summerper checkPermission checkLocation[%b]", new Object[] { Boolean.valueOf(bool) });
     if (!bool) {
       return;
     }
-    gZr.aBb();
+    hmJ.aDZ();
   }
 }
 

@@ -1,45 +1,43 @@
 package com.tencent.mm.sdk.platformtools;
 
-import android.hardware.SensorListener;
+import android.app.ActivityManager;
+import android.app.ActivityManager.RunningTaskInfo;
+import android.content.ComponentName;
+import android.content.Context;
+import java.util.Iterator;
+import java.util.List;
 
-final class be$a
-  implements SensorListener
+public final class be$a
 {
-  private Runnable fjN;
-  private float[] gOr = { 0.0F, 0.0F, 0.0F };
+  private Context context;
   
-  public be$a(Runnable paramRunnable)
+  public be$a(Context paramContext)
   {
-    fjN = paramRunnable;
+    context = paramContext;
   }
   
-  public final void onAccuracyChanged(int paramInt1, int paramInt2) {}
-  
-  public final void onSensorChanged(int paramInt, float[] paramArrayOfFloat)
+  public final String toString()
   {
-    int i = 0;
-    float[] arrayOfFloat = new float[3];
-    paramInt = 0;
-    while (paramInt < 3)
+    Object localObject1 = context;
+    if (localObject1 == null) {
+      return null;
+    }
+    Object localObject2 = (ActivityManager)((Context)localObject1).getSystemService("activity");
+    localObject1 = ((Context)localObject1).getPackageName();
+    if ((localObject2 == null) || (be.kf((String)localObject1))) {
+      return null;
+    }
+    Object localObject3 = ((ActivityManager)localObject2).getRunningTasks(100);
+    localObject2 = new StringBuffer();
+    localObject3 = ((List)localObject3).iterator();
+    while (((Iterator)localObject3).hasNext())
     {
-      arrayOfFloat[paramInt] = Math.abs(paramArrayOfFloat[paramInt] - gOr[paramInt]);
-      int j = i;
-      if (gOr[paramInt] != 0.0F)
-      {
-        j = i;
-        if (arrayOfFloat[paramInt] > 1.0F)
-        {
-          j = 1;
-          t.d("!32@/B4Tb64lLpKvYOkSzPmwxJaUdxCq9g2m", "isONShake:" + arrayOfFloat[paramInt]);
-        }
+      ActivityManager.RunningTaskInfo localRunningTaskInfo = (ActivityManager.RunningTaskInfo)((Iterator)localObject3).next();
+      if ((baseActivity.getClassName().startsWith((String)localObject1)) || (topActivity.getClassName().startsWith((String)localObject1))) {
+        ((StringBuffer)localObject2).append(String.format("{id:%d num:%d/%d top:%s base:%s}", new Object[] { Integer.valueOf(id), Integer.valueOf(numRunning), Integer.valueOf(numActivities), topActivity.getShortClassName(), baseActivity.getShortClassName() }));
       }
-      gOr[paramInt] = paramArrayOfFloat[paramInt];
-      paramInt += 1;
-      i = j;
     }
-    if (i != 0) {
-      fjN.run();
-    }
+    return ((StringBuffer)localObject2).toString();
   }
 }
 

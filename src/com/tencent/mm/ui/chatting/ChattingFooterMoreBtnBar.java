@@ -8,67 +8,67 @@ import android.widget.ImageButton;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
-import com.tencent.mm.aw.a;
+import com.tencent.mm.az.a;
 import java.util.List;
 
 public class ChattingFooterMoreBtnBar
   extends LinearLayout
 {
-  private ImageButton dSD;
-  private LinearLayout.LayoutParams eqa;
-  private ImageButton kSS;
-  private ImageButton kST;
-  private ImageButton kSU;
-  private ImageButton kSV;
+  private ImageButton dUL;
+  private LinearLayout.LayoutParams evl;
+  private ImageButton lsZ;
+  private ImageButton lta;
+  private ImageButton ltb;
+  private ImageButton ltc;
   
   public ChattingFooterMoreBtnBar(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
     setOrientation(0);
     setGravity(16);
-    setBackgroundResource(2130970217);
-    eqa = new LinearLayout.LayoutParams(0, getResources().getDimensionPixelSize(2131034596), 1.0F);
-    eqa.topMargin = a.fromDPToPix(getContext(), 0);
-    kSS = new ImageButton(getContext());
-    kSS.setImageResource(2130970014);
-    kSS.setScaleType(ImageView.ScaleType.CENTER);
-    kSS.setBackgroundResource(0);
-    kSS.setContentDescription(paramContext.getString(2131429636));
-    kSV = new ImageButton(getContext());
-    kSV.setImageResource(2130970005);
-    kSV.setScaleType(ImageView.ScaleType.CENTER);
-    kSV.setBackgroundResource(0);
-    kSV.setContentDescription(paramContext.getString(2131429637));
-    dSD = new ImageButton(getContext());
-    dSD.setImageResource(2130970012);
-    dSD.setScaleType(ImageView.ScaleType.CENTER);
-    dSD.setBackgroundResource(0);
-    dSD.setContentDescription(paramContext.getString(2131429638));
-    kSU = new ImageButton(getContext());
-    kSU.setImageResource(2130970029);
-    kSU.setScaleType(ImageView.ScaleType.CENTER);
-    kSU.setBackgroundResource(0);
-    kSU.setContentDescription(paramContext.getString(2131429640));
-    kST = new ImageButton(getContext());
-    kST.setImageResource(2130970037);
-    kST.setScaleType(ImageView.ScaleType.CENTER);
-    kST.setBackgroundResource(0);
-    kST.setContentDescription(paramContext.getString(2131429639));
-    ben();
+    setBackgroundResource(2130837800);
+    evl = new LinearLayout.LayoutParams(0, getResources().getDimensionPixelSize(2131427703), 1.0F);
+    evl.topMargin = a.fromDPToPix(getContext(), 0);
+    lsZ = new ImageButton(getContext());
+    lsZ.setImageResource(2130837958);
+    lsZ.setScaleType(ImageView.ScaleType.CENTER);
+    lsZ.setBackgroundResource(0);
+    lsZ.setContentDescription(paramContext.getString(2131231717));
+    ltc = new ImageButton(getContext());
+    ltc.setImageResource(2130837956);
+    ltc.setScaleType(ImageView.ScaleType.CENTER);
+    ltc.setBackgroundResource(0);
+    ltc.setContentDescription(paramContext.getString(2131231716));
+    dUL = new ImageButton(getContext());
+    dUL.setImageResource(2130837954);
+    dUL.setScaleType(ImageView.ScaleType.CENTER);
+    dUL.setBackgroundResource(0);
+    dUL.setContentDescription(paramContext.getString(2131231714));
+    ltb = new ImageButton(getContext());
+    ltb.setImageResource(2130837957);
+    ltb.setScaleType(ImageView.ScaleType.CENTER);
+    ltb.setBackgroundResource(0);
+    ltb.setContentDescription(paramContext.getString(2131231713));
+    lta = new ImageButton(getContext());
+    lta.setImageResource(2130837955);
+    lta.setScaleType(ImageView.ScaleType.CENTER);
+    lta.setBackgroundResource(0);
+    lta.setContentDescription(paramContext.getString(2131231715));
+    bjW();
   }
   
-  public final void ben()
+  public final void bjW()
   {
     removeAllViews();
-    addView(kSS, eqa);
-    addView(kSV, eqa);
-    addView(dSD, eqa);
-    if (u.bea().size() > 0)
+    addView(lsZ, evl);
+    addView(ltc, evl);
+    addView(dUL, evl);
+    if (v.bjH().size() > 0)
     {
-      addView(kSU, eqa);
+      addView(ltb, evl);
       return;
     }
-    addView(kST, eqa);
+    addView(lta, evl);
   }
   
   public final void c(int paramInt, View.OnClickListener paramOnClickListener)
@@ -76,50 +76,50 @@ public class ChattingFooterMoreBtnBar
     switch (paramInt)
     {
     default: 
-      com.tencent.mm.sdk.platformtools.u.w("!44@ZzDoKFw9tuqbSG6bBKzSwwI3A00x1rQTiVfD2QYTczE=", "set button listener error button index %d", new Object[] { Integer.valueOf(paramInt) });
+      com.tencent.mm.sdk.platformtools.v.w("Ashu.ChattingFooterMoreBtnBar", "set button listener error button index %d", new Object[] { Integer.valueOf(paramInt) });
       return;
     case 2: 
-      kSU.setOnClickListener(paramOnClickListener);
+      ltb.setOnClickListener(paramOnClickListener);
       return;
     case 3: 
-      dSD.setOnClickListener(paramOnClickListener);
+      dUL.setOnClickListener(paramOnClickListener);
       return;
     case 1: 
-      kST.setOnClickListener(paramOnClickListener);
+      lta.setOnClickListener(paramOnClickListener);
       return;
     case 0: 
-      kSS.setOnClickListener(paramOnClickListener);
+      lsZ.setOnClickListener(paramOnClickListener);
       return;
     }
-    kSV.setOnClickListener(paramOnClickListener);
+    ltc.setOnClickListener(paramOnClickListener);
   }
   
-  public final void ra(int paramInt)
+  public final void tc(int paramInt)
   {
     boolean bool;
     if (paramInt > 0)
     {
       bool = true;
-      kSS.setClickable(bool);
-      kSS.setEnabled(bool);
-      if (u.bea().size() <= 0) {
+      lsZ.setClickable(bool);
+      lsZ.setEnabled(bool);
+      if (v.bjH().size() <= 0) {
         break label87;
       }
-      kSU.setClickable(bool);
-      kSU.setEnabled(bool);
+      ltb.setClickable(bool);
+      ltb.setEnabled(bool);
     }
     for (;;)
     {
-      dSD.setClickable(bool);
-      dSD.setEnabled(bool);
-      kSV.setClickable(bool);
-      kSV.setEnabled(bool);
+      dUL.setClickable(bool);
+      dUL.setEnabled(bool);
+      ltc.setClickable(bool);
+      ltc.setEnabled(bool);
       return;
       bool = false;
       break;
       label87:
-      kST.setClickable(bool);
-      kST.setEnabled(bool);
+      lta.setClickable(bool);
+      lta.setEnabled(bool);
     }
   }
 }

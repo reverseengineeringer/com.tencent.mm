@@ -13,9 +13,18 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/gk;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic knl:Lcom/tencent/mm/ui/LauncherUI;
+.field final synthetic kMs:Lcom/tencent/mm/ui/LauncherUI;
 
 
 # direct methods
@@ -23,46 +32,54 @@
     .locals 1
 
     .prologue
-    .line 2402
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$8;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 2373
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$8;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/gk;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/ui/LauncherUI$8;->kum:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
-    .locals 5
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
+    .locals 2
 
     .prologue
-    const/4 v4, 0x0
+    const/4 v1, 0x1
 
-    .line 2408
-    const-string/jumbo v0, "!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2"
+    .line 2373
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$8;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    const-string/jumbo v1, "appTagUnreadChangeListener, event:%s"
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->a(Lcom/tencent/mm/ui/LauncherUI;Z)Z
 
-    const/4 v2, 0x1
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$8;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    new-array v2, v2, [Ljava/lang/Object;
+    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->n(Lcom/tencent/mm/ui/LauncherUI;)Ljava/lang/Runnable;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v3
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->v(Ljava/lang/Runnable;)V
 
-    aput-object v3, v2, v4
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$8;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->n(Lcom/tencent/mm/ui/LauncherUI;)Ljava/lang/Runnable;
 
-    .line 2409
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$8;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/LauncherUI;->baj()V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
-    .line 2410
-    return v4
+    return v1
 .end method

@@ -1,25 +1,11 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
+import com.tencent.mm.kiss.d.b;
 
 final class SnsTimeLineUI$18
-  implements MenuItem.OnMenuItemClickListener
+  implements b<Void>
 {
-  SnsTimeLineUI$18(SnsTimeLineUI paramSnsTimeLineUI) {}
-  
-  public final boolean onMenuItemClick(MenuItem paramMenuItem)
-  {
-    if ((SnsTimeLineUI.z(hkJ) != null) && (zhkJ).haP))
-    {
-      SnsTimeLineUI.z(hkJ).eY(true);
-      SnsTimeLineUI.A(hkJ);
-      return true;
-    }
-    hkJ.age();
-    hkJ.finish();
-    return false;
-  }
+  SnsTimeLineUI$18(SnsTimeLineUI paramSnsTimeLineUI, boolean paramBoolean) {}
 }
 
 /* Location:

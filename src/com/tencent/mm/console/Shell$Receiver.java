@@ -3,7 +3,7 @@ package com.tencent.mm.console;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.HashMap;
 
 public class Shell$Receiver
@@ -12,14 +12,14 @@ public class Shell$Receiver
   public void onReceive(Context paramContext, Intent paramIntent)
   {
     paramContext = paramIntent.getAction();
-    Shell.a locala = (Shell.a)Shell.pX().get(paramContext);
+    Shell.a locala = (Shell.a)Shell.ot().get(paramContext);
     if (locala == null)
     {
-      u.e("!24@/B4Tb64lLpLOIdMtS2bKaA==", "no action found for %s", new Object[] { paramContext });
+      v.e("MicroMsg.Shell", "no action found for %s", new Object[] { paramContext });
       return;
     }
-    u.e("!24@/B4Tb64lLpLOIdMtS2bKaA==", "shell action %s", new Object[] { paramContext });
-    locala.i(paramIntent);
+    v.e("MicroMsg.Shell", "shell action %s", new Object[] { paramContext });
+    locala.j(paramIntent);
   }
 }
 

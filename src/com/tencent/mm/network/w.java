@@ -9,7 +9,8 @@ public class w
   public static void onCreate()
   {
     Xlog.init();
-    i.b(a.jUu, w.class.getClassLoader());
+    i.b(a.ktV, w.class.getClassLoader());
+    Java2C.setObject(new C2JavaBridge());
     Java2C.onCreate();
   }
   

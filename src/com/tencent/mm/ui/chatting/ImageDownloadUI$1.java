@@ -3,7 +3,7 @@ package com.tencent.mm.ui.chatting;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 
 final class ImageDownloadUI$1
   implements MenuItem.OnMenuItemClickListener
@@ -12,8 +12,8 @@ final class ImageDownloadUI$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    ah.tE().c(ImageDownloadUI.a(lcm));
-    lcm.finish();
+    ah.tF().c(ImageDownloadUI.a(lCD));
+    lCD.finish();
     return true;
   }
 }

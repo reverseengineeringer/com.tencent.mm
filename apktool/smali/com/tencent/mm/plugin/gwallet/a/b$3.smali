@@ -18,28 +18,28 @@
 
 
 # instance fields
-.field final synthetic cIj:Lcom/tencent/mm/sdk/platformtools/aa;
+.field final synthetic cFn:Lcom/tencent/mm/sdk/platformtools/ac;
 
-.field final synthetic exL:Lcom/tencent/mm/plugin/gwallet/a/b;
+.field final synthetic eEf:Lcom/tencent/mm/plugin/gwallet/a/b;
 
-.field final synthetic exQ:Ljava/lang/String;
+.field final synthetic eEk:Ljava/lang/String;
 
-.field final synthetic exR:Lcom/tencent/mm/plugin/gwallet/a/b$b;
+.field final synthetic eEl:Lcom/tencent/mm/plugin/gwallet/a/b$b;
 
 
 # direct methods
-.method public constructor <init>(Lcom/tencent/mm/plugin/gwallet/a/b;Ljava/lang/String;Lcom/tencent/mm/sdk/platformtools/aa;Lcom/tencent/mm/plugin/gwallet/a/b$b;)V
+.method public constructor <init>(Lcom/tencent/mm/plugin/gwallet/a/b;Ljava/lang/String;Lcom/tencent/mm/sdk/platformtools/ac;Lcom/tencent/mm/plugin/gwallet/a/b$b;)V
     .locals 0
 
     .prologue
     .line 458
-    iput-object p1, p0, Lcom/tencent/mm/plugin/gwallet/a/b$3;->exL:Lcom/tencent/mm/plugin/gwallet/a/b;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/gwallet/a/b$3;->eEf:Lcom/tencent/mm/plugin/gwallet/a/b;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/gwallet/a/b$3;->exQ:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/gwallet/a/b$3;->eEk:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/tencent/mm/plugin/gwallet/a/b$3;->cIj:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object p3, p0, Lcom/tencent/mm/plugin/gwallet/a/b$3;->cFn:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    iput-object p4, p0, Lcom/tencent/mm/plugin/gwallet/a/b$3;->exR:Lcom/tencent/mm/plugin/gwallet/a/b$b;
+    iput-object p4, p0, Lcom/tencent/mm/plugin/gwallet/a/b$3;->eEl:Lcom/tencent/mm/plugin/gwallet/a/b$b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -68,9 +68,9 @@
 
     .line 463
     :try_start_0
-    iget-object v2, p0, Lcom/tencent/mm/plugin/gwallet/a/b$3;->exL:Lcom/tencent/mm/plugin/gwallet/a/b;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/gwallet/a/b$3;->eEf:Lcom/tencent/mm/plugin/gwallet/a/b;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/gwallet/a/b$3;->exQ:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/gwallet/a/b$3;->eEk:Ljava/lang/String;
 
     invoke-static {v2, v1, v3}, Lcom/tencent/mm/plugin/gwallet/a/b;->a(Lcom/tencent/mm/plugin/gwallet/a/b;Landroid/content/Intent;Ljava/lang/String;)I
 
@@ -94,18 +94,18 @@
     :goto_0
     const-string/jumbo v2, "RESPONSE_CODE"
 
-    iget v3, v0, Lcom/tencent/mm/plugin/gwallet/a/c;->exV:I
+    iget v3, v0, Lcom/tencent/mm/plugin/gwallet/a/c;->eEp:I
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 478
-    iget-object v2, p0, Lcom/tencent/mm/plugin/gwallet/a/b$3;->cIj:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/gwallet/a/b$3;->cFn:Lcom/tencent/mm/sdk/platformtools/ac;
 
     new-instance v3, Lcom/tencent/mm/plugin/gwallet/a/b$3$1;
 
     invoke-direct {v3, p0, v0, v1}, Lcom/tencent/mm/plugin/gwallet/a/b$3$1;-><init>(Lcom/tencent/mm/plugin/gwallet/a/b$3;Lcom/tencent/mm/plugin/gwallet/a/c;Landroid/content/Intent;)V
 
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
     .line 483
     return-void

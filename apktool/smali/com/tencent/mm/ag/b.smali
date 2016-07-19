@@ -1,145 +1,201 @@
 .class public final Lcom/tencent/mm/ag/b;
-.super Lcom/tencent/mm/sdk/h/g;
+.super Lcom/tencent/mm/t/j;
 .source "SourceFile"
 
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/mm/ag/b$a;,
-        Lcom/tencent/mm/ag/b$i;,
-        Lcom/tencent/mm/ag/b$n;,
-        Lcom/tencent/mm/ag/b$f;,
-        Lcom/tencent/mm/ag/b$p;,
-        Lcom/tencent/mm/ag/b$g;,
-        Lcom/tencent/mm/ag/b$j;,
-        Lcom/tencent/mm/ag/b$o;,
-        Lcom/tencent/mm/ag/b$k;,
-        Lcom/tencent/mm/ag/b$e;,
-        Lcom/tencent/mm/ag/b$b;,
-        Lcom/tencent/mm/ag/b$d;,
-        Lcom/tencent/mm/ag/b$l;,
-        Lcom/tencent/mm/ag/b$m;,
-        Lcom/tencent/mm/ag/b$c;,
-        Lcom/tencent/mm/ag/b$h;,
-        Lcom/tencent/mm/ag/b$q;
-    }
-.end annotation
-
-
-# static fields
-.field public static final aoY:[Ljava/lang/String;
+# interfaces
+.implements Lcom/tencent/mm/network/j;
 
 
 # instance fields
-.field bCw:Lcom/tencent/mm/az/g;
+.field private final bNW:Lcom/tencent/mm/t/a;
+
+.field private bkT:Lcom/tencent/mm/t/d;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
     .prologue
-    .line 56
-    const/4 v0, 0x1
+    const/4 v2, 0x0
 
-    new-array v0, v0, [Ljava/lang/String;
+    .line 25
+    invoke-direct {p0}, Lcom/tencent/mm/t/j;-><init>()V
 
-    const/4 v1, 0x0
+    .line 26
+    new-instance v0, Lcom/tencent/mm/t/a$a;
 
-    const-string/jumbo v2, "CREATE TABLE IF NOT EXISTS oplog2 ( id INTEGER PRIMARY KEY , inserTime long , cmdId int , buffer blob , reserved1 int , reserved2 long , reserved3 text , reserved4 text ) "
+    invoke-direct {v0}, Lcom/tencent/mm/t/a$a;-><init>()V
 
-    aput-object v2, v0, v1
+    .line 27
+    new-instance v1, Lcom/tencent/mm/protocal/b/aaa;
 
-    sput-object v0, Lcom/tencent/mm/ag/b;->aoY:[Ljava/lang/String;
+    invoke-direct {v1}, Lcom/tencent/mm/protocal/b/aaa;-><init>()V
 
-    return-void
-.end method
+    iput-object v1, v0, Lcom/tencent/mm/t/a$a;->byl:Lcom/tencent/mm/ax/a;
 
-.method public constructor <init>(Lcom/tencent/mm/az/g;)V
-    .locals 0
+    .line 28
+    new-instance v1, Lcom/tencent/mm/protocal/b/aab;
 
-    .prologue
-    .line 80
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/h/g;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/protocal/b/aab;-><init>()V
 
-    .line 81
-    iput-object p1, p0, Lcom/tencent/mm/ag/b;->bCw:Lcom/tencent/mm/az/g;
+    iput-object v1, v0, Lcom/tencent/mm/t/a$a;->bym:Lcom/tencent/mm/ax/a;
 
-    .line 82
+    .line 29
+    const-string/jumbo v1, "/cgi-bin/micromsg-bin/invitelinkedinfriend"
+
+    iput-object v1, v0, Lcom/tencent/mm/t/a$a;->uri:Ljava/lang/String;
+
+    .line 30
+    const/16 v1, 0x2a5
+
+    iput v1, v0, Lcom/tencent/mm/t/a$a;->byj:I
+
+    .line 31
+    iput v2, v0, Lcom/tencent/mm/t/a$a;->byn:I
+
+    .line 32
+    iput v2, v0, Lcom/tencent/mm/t/a$a;->byo:I
+
+    .line 33
+    invoke-virtual {v0}, Lcom/tencent/mm/t/a$a;->vA()Lcom/tencent/mm/t/a;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/ag/b;->bNW:Lcom/tencent/mm/t/a;
+
+    .line 34
+    iget-object v0, p0, Lcom/tencent/mm/ag/b;->bNW:Lcom/tencent/mm/t/a;
+
+    iget-object v0, v0, Lcom/tencent/mm/t/a;->byh:Lcom/tencent/mm/t/a$b;
+
+    iget-object v0, v0, Lcom/tencent/mm/t/a$b;->byq:Lcom/tencent/mm/ax/a;
+
+    check-cast v0, Lcom/tencent/mm/protocal/b/aaa;
+
+    .line 35
+    iput-object p1, v0, Lcom/tencent/mm/protocal/b/aaa;->jUR:Ljava/lang/String;
+
+    .line 36
+    iput-object p2, v0, Lcom/tencent/mm/protocal/b/aaa;->jUT:Ljava/lang/String;
+
+    .line 37
+    iput-object p3, v0, Lcom/tencent/mm/protocal/b/aaa;->jUS:Ljava/lang/String;
+
+    .line 38
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/ag/b$q;)Z
-    .locals 9
+.method public final a(Lcom/tencent/mm/network/e;Lcom/tencent/mm/t/d;)I
+    .locals 1
 
     .prologue
-    const/4 v1, 0x0
+    .line 56
+    iput-object p2, p0, Lcom/tencent/mm/ag/b;->bkT:Lcom/tencent/mm/t/d;
 
-    const/4 v0, 0x1
+    .line 57
+    iget-object v0, p0, Lcom/tencent/mm/ag/b;->bNW:Lcom/tencent/mm/t/a;
 
-    .line 98
-    if-nez p1, :cond_1
+    invoke-virtual {p0, p1, v0, p0}, Lcom/tencent/mm/ag/b;->a(Lcom/tencent/mm/network/e;Lcom/tencent/mm/network/o;Lcom/tencent/mm/network/j;)I
 
-    .line 103
-    :cond_0
-    :goto_0
+    move-result v0
+
     return v0
+.end method
 
-    .line 101
-    :cond_1
-    iget-object v2, p0, Lcom/tencent/mm/ag/b;->bCw:Lcom/tencent/mm/az/g;
+.method protected final a(Lcom/tencent/mm/network/o;)I
+    .locals 1
 
-    const-string/jumbo v3, "oplog2"
+    .prologue
+    .line 75
+    sget v0, Lcom/tencent/mm/t/j$b;->byT:I
 
-    const-string/jumbo v4, "id= ? AND inserTime= ?"
+    return v0
+.end method
 
-    const/4 v5, 0x2
+.method public final a(IIILjava/lang/String;Lcom/tencent/mm/network/o;[B)V
+    .locals 5
 
-    new-array v5, v5, [Ljava/lang/String;
+    .prologue
+    .line 61
+    const-string/jumbo v0, "MicroMsg.NetSceneInviteLinkedInFriend"
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    const-string/jumbo v1, "[oneliang][NetSceneInviteLinkedInFriend]:netId:%s,errType:%s,errCode:%s,errMsg:%s"
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 v2, 0x4
 
-    iget v7, p1, Lcom/tencent/mm/ag/b$q;->id:I
+    new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const/4 v3, 0x0
 
-    move-result-object v6
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v4
 
-    move-result-object v6
+    aput-object v4, v2, v3
 
-    aput-object v6, v5, v1
+    const/4 v3, 0x1
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v4
 
-    iget-wide v7, p1, Lcom/tencent/mm/ag/b$q;->bOJ:J
+    aput-object v4, v2, v3
 
-    invoke-virtual {v6, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const/4 v3, 0x2
 
-    move-result-object v6
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v4
 
-    move-result-object v6
+    aput-object v4, v2, v3
 
-    aput-object v6, v5, v0
+    const/4 v3, 0x3
 
-    invoke-virtual {v2, v3, v4, v5}, Lcom/tencent/mm/az/g;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    aput-object p4, v2, v3
 
-    move-result v2
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 103
-    if-gez v2, :cond_0
+    .line 62
+    if-nez p2, :cond_0
 
-    move v0, v1
+    if-nez p3, :cond_0
 
-    goto :goto_0
+    .line 63
+    const-string/jumbo v0, "MicroMsg.NetSceneInviteLinkedInFriend"
+
+    const-string/jumbo v1, "[oneliang][NetSceneInviteLinkedInFriend]:net end ok"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 67
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ag/b;->bkT:Lcom/tencent/mm/t/d;
+
+    invoke-interface {v0, p2, p3, p4, p0}, Lcom/tencent/mm/t/d;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
+
+    .line 68
+    return-void
+.end method
+
+.method public final getType()I
+    .locals 1
+
+    .prologue
+    .line 45
+    const/16 v0, 0x2a5
+
+    return v0
+.end method
+
+.method protected final px()I
+    .locals 1
+
+    .prologue
+    .line 71
+    const/16 v0, 0xa
+
+    return v0
 .end method

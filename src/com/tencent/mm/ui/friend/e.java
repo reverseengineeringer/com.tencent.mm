@@ -11,15 +11,15 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.tencent.mm.a.o;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.model.bb;
 import com.tencent.mm.model.h;
 import com.tencent.mm.model.i;
 import com.tencent.mm.modelfriend.af;
 import com.tencent.mm.modelfriend.ag;
-import com.tencent.mm.q.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.s.b;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 import com.tencent.mm.ui.MMActivity;
@@ -28,160 +28,160 @@ import java.util.LinkedList;
 public final class e
   extends d
 {
-  private final MMActivity arW;
-  private String coW;
-  private final int jK;
-  private final a lrS;
-  private final c lrT;
-  private d.a lrU;
-  boolean lrV = false;
-  private a lrW = new a()
+  private final MMActivity adL;
+  private String ckk;
+  private final int kb;
+  private a lSA = new a()
   {
     public final void e(int paramAnonymousInt1, String paramAnonymousString, int paramAnonymousInt2)
     {
-      u.d("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "[cpan] postion:%d qq:%s status:%d", new Object[] { Integer.valueOf(paramAnonymousInt1), paramAnonymousString, Integer.valueOf(paramAnonymousInt2) });
+      v.d("MicroMsg.QQFriendAdapter", "[cpan] postion:%d qq:%s status:%d", new Object[] { Integer.valueOf(paramAnonymousInt1), paramAnonymousString, Integer.valueOf(paramAnonymousInt2) });
       af localaf = (af)getItem(paramAnonymousInt1);
       if (localaf == null) {
-        u.e("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "[cpan] qq friend is null. qq:%s", new Object[] { paramAnonymousString });
+        v.e("MicroMsg.QQFriendAdapter", "[cpan] qq friend is null. qq:%s", new Object[] { paramAnonymousString });
       }
       do
       {
         return;
-        if (ay.kz(localaf.getUsername()))
+        if (be.kf(localaf.getUsername()))
         {
-          u.e("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "[cpan] qq friend username is null. qq:%s", new Object[] { paramAnonymousString });
+          v.e("MicroMsg.QQFriendAdapter", "[cpan] qq friend username is null. qq:%s", new Object[] { paramAnonymousString });
           return;
         }
-        u.d("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "qq friend:%s", new Object[] { localaf.toString() });
-        if (bNl == 0)
+        v.d("MicroMsg.QQFriendAdapter", "qq friend:%s", new Object[] { localaf.toString() });
+        if (bGF == 0)
         {
-          paramAnonymousInt1 = o.aF(bNk);
+          paramAnonymousInt1 = o.aK(bGE);
           paramAnonymousString = new g(e.a(e.this), new g.a()
           {
             public final void g(boolean paramAnonymous2Boolean, String paramAnonymous2String)
             {
-              paramAnonymous2String = com.tencent.mm.modelfriend.ah.zv().V(o.aF(paramAnonymous2String));
+              paramAnonymous2String = com.tencent.mm.modelfriend.ah.zI().aa(o.aK(paramAnonymous2String));
               if (paramAnonymous2String != null)
               {
-                bEv = 2;
-                u.d("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "qq friend onSendInviteEmail:%s", new Object[] { paramAnonymous2String.toString() });
-                com.tencent.mm.modelfriend.ah.zv().a(bNk, paramAnonymous2String);
-                Gk();
+                bxG = 2;
+                v.d("MicroMsg.QQFriendAdapter", "qq friend onSendInviteEmail:%s", new Object[] { paramAnonymous2String.toString() });
+                com.tencent.mm.modelfriend.ah.zI().a(bGE, paramAnonymous2String);
+                GH();
                 return;
               }
-              u.w("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "cpan qq friedn is null. qq:%s", new Object[] { paramAnonymous2String });
+              v.w("MicroMsg.QQFriendAdapter", "cpan qq friedn is null. qq:%s", new Object[] { paramAnonymous2String });
             }
           }, (byte)0);
           paramAnonymousString.o(new int[] { paramAnonymousInt1 });
-          iHW = bNk;
-          bEv = 1;
-          com.tencent.mm.modelfriend.ah.zv().a(bNk, localaf);
-          Gk();
+          jeT = bGE;
+          bxG = 1;
+          com.tencent.mm.modelfriend.ah.zI().a(bGE, localaf);
+          GH();
           return;
         }
-      } while (bNl != 1);
+      } while (bGF != 1);
       paramAnonymousString = new com.tencent.mm.pluginsdk.ui.applet.a(e.a(e.this), new com.tencent.mm.pluginsdk.ui.applet.a.a()
       {
         public final void a(boolean paramAnonymous2Boolean1, boolean paramAnonymous2Boolean2, String paramAnonymous2String1, String paramAnonymous2String2)
         {
-          u.i("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "cpan ok:%b hasSendVerify:%b  username:%s gitemId:%s", new Object[] { Boolean.valueOf(paramAnonymous2Boolean1), Boolean.valueOf(paramAnonymous2Boolean2), paramAnonymous2String1, paramAnonymous2String2 });
-          long l = new o(o.aF(paramAnonymous2String2)).longValue();
-          af localaf = com.tencent.mm.modelfriend.ah.zv().V(l);
+          v.i("MicroMsg.QQFriendAdapter", "cpan ok:%b hasSendVerify:%b  username:%s gitemId:%s", new Object[] { Boolean.valueOf(paramAnonymous2Boolean1), Boolean.valueOf(paramAnonymous2Boolean2), paramAnonymous2String1, paramAnonymous2String2 });
+          long l = new o(o.aK(paramAnonymous2String2)).longValue();
+          af localaf = com.tencent.mm.modelfriend.ah.zI().aa(l);
           if ((localaf != null) && (paramAnonymous2Boolean1)) {
             username = paramAnonymous2String1;
           }
           if (localaf != null)
           {
-            bEv = 2;
-            u.d("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "f :%s", new Object[] { localaf.toString() });
-            com.tencent.mm.modelfriend.ah.zv().a(l, localaf);
-            Gk();
+            bxG = 2;
+            v.d("MicroMsg.QQFriendAdapter", "f :%s", new Object[] { localaf.toString() });
+            com.tencent.mm.modelfriend.ah.zI().a(l, localaf);
+            GH();
           }
           for (;;)
           {
             if ((paramAnonymous2Boolean1) && (localaf != null)) {
-              e.Ht(paramAnonymous2String1);
+              e.JI(paramAnonymous2String1);
             }
             return;
-            u.w("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "cpan qq friend is null. qq:%s", new Object[] { paramAnonymous2String2 });
+            v.w("MicroMsg.QQFriendAdapter", "cpan qq friend is null. qq:%s", new Object[] { paramAnonymous2String2 });
           }
         }
       });
-      iHW = bNk;
-      iHV = false;
+      jeT = bGE;
+      jeS = false;
       LinkedList localLinkedList = new LinkedList();
       localLinkedList.add(Integer.valueOf(12));
       paramAnonymousString.a(localaf.getUsername(), localLinkedList, true);
-      bEv = 1;
-      com.tencent.mm.modelfriend.ah.zv().a(bNk, localaf);
-      Gk();
+      bxG = 1;
+      com.tencent.mm.modelfriend.ah.zI().a(bGE, localaf);
+      GH();
     }
   };
+  private final a lSw;
+  private final c lSx;
+  private d.a lSy;
+  boolean lSz = false;
   
   public e(MMActivity paramMMActivity, int paramInt)
   {
     super(paramMMActivity, new af());
-    arW = paramMMActivity;
-    jK = paramInt;
-    lrV = paramMMActivity.getIntent().getBooleanExtra("qqgroup_sendmessage", false);
-    lrS = new a(paramMMActivity, new a.a()
+    adL = paramMMActivity;
+    kb = paramInt;
+    lSz = paramMMActivity.getIntent().getBooleanExtra("qqgroup_sendmessage", false);
+    lSw = new a(paramMMActivity, new a.a()
     {
-      public final void Hs(String paramAnonymousString)
+      public final void JH(String paramAnonymousString)
       {
-        Object localObject = com.tencent.mm.modelfriend.ah.zv();
-        af localaf = ((ag)localObject).hC(paramAnonymousString);
+        Object localObject = com.tencent.mm.modelfriend.ah.zI();
+        af localaf = ((ag)localObject).hU(paramAnonymousString);
         if (localaf == null)
         {
-          u.w("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "[cpan] dealSucc failed. qqlist is null. username is :%s", new Object[] { paramAnonymousString });
+          v.w("MicroMsg.QQFriendAdapter", "[cpan] dealSucc failed. qqlist is null. username is :%s", new Object[] { paramAnonymousString });
           return;
         }
-        bNl = 2;
-        ((ag)localObject).a(bNk, localaf);
+        bGF = 2;
+        ((ag)localObject).a(bGE, localaf);
         notifyDataSetChanged();
-        localObject = com.tencent.mm.model.ah.tD().rq().Ep(paramAnonymousString);
+        localObject = com.tencent.mm.model.ah.tE().rr().GD(paramAnonymousString);
         if (localObject != null) {
-          if (((field_conRemark == null) || (field_conRemark.equals(""))) && (localaf != null) && (localaf.zl() != null) && (!localaf.zl().equals(""))) {
-            i.b((k)localObject, localaf.zl());
+          if (((field_conRemark == null) || (field_conRemark.equals(""))) && (localaf != null) && (localaf.zy() != null) && (!localaf.zy().equals(""))) {
+            i.b((k)localObject, localaf.zy());
           }
         }
         for (;;)
         {
-          bb.uE().b(26, new Object[0]);
+          bb.uG().c(26, new Object[0]);
           return;
-          localaf = com.tencent.mm.modelfriend.ah.zv().hC(paramAnonymousString);
+          localaf = com.tencent.mm.modelfriend.ah.zI().hU(paramAnonymousString);
           if (localaf != null)
           {
-            localaf.zo();
-            u.d("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "user " + paramAnonymousString + " qq " + bNk);
-            com.tencent.mm.modelfriend.ah.zv().a(bNk, localaf);
+            localaf.zB();
+            v.d("MicroMsg.QQFriendAdapter", "user " + paramAnonymousString + " qq " + bGE);
+            com.tencent.mm.modelfriend.ah.zI().a(bGE, localaf);
           }
         }
       }
       
-      public final void aw(String paramAnonymousString, boolean paramAnonymousBoolean)
+      public final void aG(String paramAnonymousString, boolean paramAnonymousBoolean)
       {
         if (paramAnonymousBoolean)
         {
-          af localaf = com.tencent.mm.modelfriend.ah.zv().hC(paramAnonymousString);
+          af localaf = com.tencent.mm.modelfriend.ah.zI().hU(paramAnonymousString);
           if (localaf == null) {
             break label73;
           }
-          localaf.zo();
-          u.d("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "user " + paramAnonymousString + " qq " + bNk);
-          com.tencent.mm.modelfriend.ah.zv().a(bNk, localaf);
+          localaf.zB();
+          v.d("MicroMsg.QQFriendAdapter", "user " + paramAnonymousString + " qq " + bGE);
+          com.tencent.mm.modelfriend.ah.zI().a(bGE, localaf);
         }
         for (;;)
         {
           notifyDataSetChanged();
           return;
           label73:
-          u.w("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "[cpan] dealFail failed. qqlist is null. username is :%s", new Object[] { paramAnonymousString });
+          v.w("MicroMsg.QQFriendAdapter", "[cpan] dealFail failed. qqlist is null. username is :%s", new Object[] { paramAnonymousString });
         }
       }
     });
-    lrT = new c(paramMMActivity, new c.a()
+    lSx = new c(paramMMActivity, new c.a()
     {
-      public final void ib(boolean paramAnonymousBoolean)
+      public final void iF(boolean paramAnonymousBoolean)
       {
         if (paramAnonymousBoolean) {
           notifyDataSetChanged();
@@ -190,36 +190,31 @@ public final class e
     });
   }
   
-  public final void Gk()
+  public final void GH()
   {
-    adW();
-    if (ay.kz(coW)) {
-      setCursor(com.tencent.mm.modelfriend.ah.zv().q(jK, lrV));
+    closeCursor();
+    if (be.kf(ckk)) {
+      setCursor(com.tencent.mm.modelfriend.ah.zI().q(kb, lSz));
     }
     for (;;)
     {
-      if ((lrU != null) && (coW != null)) {
-        lrU.qm(getCursor().getCount());
+      if ((lSy != null) && (ckk != null)) {
+        lSy.se(getCursor().getCount());
       }
       notifyDataSetChanged();
       return;
-      setCursor(com.tencent.mm.modelfriend.ah.zv().b(jK, coW, lrV));
+      setCursor(com.tencent.mm.modelfriend.ah.zI().b(kb, ckk, lSz));
     }
   }
   
-  protected final void Gl()
+  protected final void GI()
   {
-    Gk();
+    GH();
   }
   
   public final void a(d.a parama)
   {
-    lrU = parama;
-  }
-  
-  public final void fZ(String paramString)
-  {
-    notifyDataSetChanged();
+    lSy = parama;
   }
   
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
@@ -227,99 +222,104 @@ public final class e
     af localaf = (af)getItem(paramInt);
     if (paramView == null)
     {
-      paramView = View.inflate(arW, 2131363163, null);
+      paramView = View.inflate(adL, 2130904192, null);
       paramViewGroup = new b(paramView);
       paramView.setTag(paramViewGroup);
-      kPi = paramInt;
-      lrZ = bNk;
-      status = bNl;
-      bMs.setText(com.tencent.mm.pluginsdk.ui.d.e.a(arW, localaf.getDisplayName(), bMs.getTextSize()));
-      if (o.aF(bNk) == 0) {
+      loy = paramInt;
+      lSD = bGE;
+      status = bGF;
+      bFM.setText(com.tencent.mm.pluginsdk.ui.d.e.a(adL, localaf.getDisplayName(), bFM.getTextSize()));
+      if (o.aK(bGE) == 0) {
         break label596;
       }
     }
     label198:
     label596:
-    for (Bitmap localBitmap = b.G(bNk);; localBitmap = null)
+    for (Bitmap localBitmap = b.L(bGE);; localBitmap = null)
     {
       if (localBitmap == null) {
-        coY.setImageDrawable(com.tencent.mm.aw.a.y(arW, 2130903473));
+        ckm.setImageDrawable(com.tencent.mm.az.a.C(adL, 2131165359));
       }
       for (;;)
       {
-        if (!lrV) {
+        if (!lSz) {
           break label198;
         }
-        kPj.setVisibility(8);
+        loz.setVisibility(8);
         return paramView;
         paramViewGroup = (b)paramView.getTag();
         break;
-        coY.setImageBitmap(localBitmap);
+        ckm.setImageBitmap(localBitmap);
       }
-      switch (bNl)
+      switch (bGF)
       {
       }
       for (;;)
       {
-        switch (bEv)
+        switch (bxG)
         {
         default: 
           return paramView;
         case 0: 
         case 2: 
-          eEo.setVisibility(0);
-          czd.setVisibility(4);
+          eKo.setVisibility(0);
+          cwb.setVisibility(4);
           return paramView;
-          if (bEv == 2)
+          if (bxG == 2)
           {
-            kPj.setClickable(false);
-            kPj.setBackgroundDrawable(null);
-            eEo.setText(2131428830);
-            eEo.setTextColor(arW.getResources().getColor(2131231110));
+            loz.setClickable(false);
+            loz.setBackgroundDrawable(null);
+            eKo.setText(2131232963);
+            eKo.setTextColor(adL.getResources().getColor(2131689768));
           }
           else
           {
-            kPj.setClickable(true);
-            kPj.setBackgroundResource(2130970320);
-            eEo.setText(2131428829);
-            eEo.setTextColor(arW.getResources().getColor(2131231100));
+            loz.setClickable(true);
+            loz.setBackgroundResource(2130837816);
+            eKo.setText(2131232962);
+            eKo.setTextColor(adL.getResources().getColor(2131690049));
             continue;
-            if ((com.tencent.mm.model.ah.tD().rq().El(localaf.getUsername())) || (h.sc().equals(localaf.getUsername())))
+            if ((com.tencent.mm.model.ah.tE().rr().Gz(localaf.getUsername())) || (h.se().equals(localaf.getUsername())))
             {
-              kPj.setClickable(false);
-              kPj.setBackgroundDrawable(null);
-              eEo.setText(2131428826);
-              eEo.setTextColor(arW.getResources().getColor(2131231110));
+              loz.setClickable(false);
+              loz.setBackgroundDrawable(null);
+              eKo.setText(2131232961);
+              eKo.setTextColor(adL.getResources().getColor(2131689768));
             }
-            else if (bEv == 2)
+            else if (bxG == 2)
             {
-              kPj.setClickable(false);
-              kPj.setBackgroundDrawable(null);
-              eEo.setText(2131428831);
-              eEo.setTextColor(arW.getResources().getColor(2131231110));
+              loz.setClickable(false);
+              loz.setBackgroundDrawable(null);
+              eKo.setText(2131232966);
+              eKo.setTextColor(adL.getResources().getColor(2131689768));
             }
             else
             {
-              kPj.setClickable(true);
-              kPj.setBackgroundResource(2130970320);
-              eEo.setText(2131428825);
-              eEo.setTextColor(arW.getResources().getColor(2131231100));
+              loz.setClickable(true);
+              loz.setBackgroundResource(2130837816);
+              eKo.setText(2131232960);
+              eKo.setTextColor(adL.getResources().getColor(2131690049));
             }
           }
           break;
         }
       }
-      eEo.setVisibility(4);
-      czd.setVisibility(0);
+      eKo.setVisibility(4);
+      cwb.setVisibility(0);
       return paramView;
     }
   }
   
-  public final void pH(String paramString)
+  public final void gm(String paramString)
   {
-    coW = ay.kx(paramString.trim());
-    adW();
-    Gk();
+    notifyDataSetChanged();
+  }
+  
+  public final void qY(String paramString)
+  {
+    ckk = be.lh(paramString.trim());
+    closeCursor();
+    GH();
   }
   
   static abstract interface a
@@ -329,28 +329,28 @@ public final class e
   
   final class b
   {
-    TextView bMs;
-    ImageView coY;
-    ProgressBar czd;
-    TextView eEo;
-    int kPi;
-    View kPj;
-    String lrZ;
+    TextView bFM;
+    ImageView ckm;
+    ProgressBar cwb;
+    TextView eKo;
+    String lSD;
+    int loy;
+    View loz;
     int status;
     
     public b(View paramView)
     {
-      coY = ((ImageView)paramView.findViewById(2131167114));
-      bMs = ((TextView)paramView.findViewById(2131167115));
-      kPj = paramView.findViewById(2131169383);
-      eEo = ((TextView)paramView.findViewById(2131169384));
-      czd = ((ProgressBar)paramView.findViewById(2131169385));
-      kPj.setOnClickListener(new View.OnClickListener()
+      ckm = ((ImageView)paramView.findViewById(2131756733));
+      bFM = ((TextView)paramView.findViewById(2131756734));
+      loz = paramView.findViewById(2131758485);
+      eKo = ((TextView)paramView.findViewById(2131758486));
+      cwb = ((ProgressBar)paramView.findViewById(2131758487));
+      loz.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
           if (e.b(e.this) != null) {
-            e.b(e.this).e(kPi, lrZ, status);
+            e.b(e.this).e(loy, lSD, status);
           }
         }
       });

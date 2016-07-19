@@ -12,7 +12,7 @@ final class BindQQUI$5
   
   public final void onClick(View paramView)
   {
-    MMWizardActivity.v(kPv, new Intent(kPv, VerifyQQUI.class));
+    MMWizardActivity.v(loL, new Intent(loL, VerifyQQUI.class));
   }
 }
 

@@ -1,52 +1,40 @@
 package com.tencent.mm.pluginsdk.c;
 
-import com.tencent.mm.d.a.ha;
-import com.tencent.mm.d.a.ha.a;
+import com.tencent.mm.e.a.hl;
 import com.tencent.mm.sdk.c.a;
 import com.tencent.mm.sdk.c.c;
 import java.util.ArrayList;
 
 public abstract class b
-  extends c
+  extends c<hl>
 {
-  protected ArrayList izz = new ArrayList(3);
+  protected ArrayList<String> iVV = new ArrayList(3);
   
   public b(int paramInt)
   {
     super(0);
+    kum = hl.class.getName().hashCode();
   }
   
   public static void a(String paramString, b paramb)
   {
-    if (!izz.contains(paramString)) {
-      izz.add(paramString);
+    if (!iVV.contains(paramString)) {
+      iVV.add(paramString);
     }
-    a.jUF.b("NetSceneResponse", paramb);
-    e.zz(paramString);
+    a.kug.d(paramb);
+    e.Bv(paramString);
   }
   
   public static void b(String paramString, b paramb)
   {
-    e.zA(paramString);
-    a.jUF.c("NetSceneResponse", paramb);
-    if (izz.contains(paramString)) {
-      izz.remove(paramString);
+    e.Bw(paramString);
+    a.kug.e(paramb);
+    if (iVV.contains(paramString)) {
+      iVV.remove(paramString);
     }
   }
   
   public abstract void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.sdk.c.b paramb);
-  
-  public final boolean a(com.tencent.mm.sdk.c.b paramb)
-  {
-    if ((paramb instanceof ha))
-    {
-      paramb = (ha)paramb;
-      if ((aCD.aCF != null) && (izz.contains(aCD.aCF.id))) {
-        a(aCD.errType, aCD.errCode, aCD.aCE, aCD.aCF);
-      }
-    }
-    return false;
-  }
 }
 
 /* Location:

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->Gb()V
+    value = Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kKA:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
+.field final synthetic ljQ:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 114
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$2;->kKA:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$2;->ljQ:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 118
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$2;->kKA:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$2;->ljQ:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->b(Lcom/tencent/mm/ui/base/TalkRoomPopupNav;)V
 

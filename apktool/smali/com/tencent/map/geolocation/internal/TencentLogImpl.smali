@@ -341,22 +341,11 @@
 
     .line 106
     :cond_0
-    sget-boolean v0, Lcom/tencent/map/geolocation/internal/TencentLogImpl;->DEBUG:Z
-
-    if-eqz v0, :cond_1
-
-    .line 107
-    const/4 v0, 0x4
-
-    if-ne p2, v0, :cond_1
-
-    .line 110
-    :cond_1
     return-void
 .end method
 
 .method public final shutdown(J)V
-    .locals 2
+    .locals 3
 
     .prologue
     .line 64

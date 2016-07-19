@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/tencent/smtt/sdk/QbSdk$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # annotations
@@ -12,3 +11,8 @@
     accessFlags = 0x609
     name = "a"
 .end annotation
+
+
+# virtual methods
+.method public abstract aUb()V
+.end method

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kLM:Lcom/tencent/mm/ui/base/preference/MMPreference;
+.field final synthetic llb:Lcom/tencent/mm/ui/base/preference/MMPreference;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 148
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$2;->kLM:Lcom/tencent/mm/ui/base/preference/MMPreference;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$2;->llb:Lcom/tencent/mm/ui/base/preference/MMPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,6 +38,15 @@
 # virtual methods
 .method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
     .line 152
@@ -67,7 +76,7 @@
 
     if-eqz v1, :cond_0
 
-    iget-boolean v1, v0, Lcom/tencent/mm/ui/base/preference/Preference;->kMm:Z
+    iget-boolean v1, v0, Lcom/tencent/mm/ui/base/preference/Preference;->llB:Z
 
     if-eqz v1, :cond_0
 
@@ -94,7 +103,7 @@
 
     invoke-direct {v2, p0, v1, v0}, Lcom/tencent/mm/ui/base/preference/MMPreference$2$1;-><init>(Lcom/tencent/mm/ui/base/preference/MMPreference$2;Lcom/tencent/mm/ui/base/preference/DialogPreference;Lcom/tencent/mm/ui/base/preference/Preference;)V
 
-    iput-object v2, v1, Lcom/tencent/mm/ui/base/preference/DialogPreference;->kLa:Lcom/tencent/mm/ui/base/preference/DialogPreference$a;
+    iput-object v2, v1, Lcom/tencent/mm/ui/base/preference/DialogPreference;->lkp:Lcom/tencent/mm/ui/base/preference/DialogPreference$a;
 
     .line 195
     :cond_2
@@ -115,18 +124,18 @@
 
     invoke-direct {v2, p0, v1, v0}, Lcom/tencent/mm/ui/base/preference/MMPreference$2$2;-><init>(Lcom/tencent/mm/ui/base/preference/MMPreference$2;Lcom/tencent/mm/ui/base/preference/EditPreference;Lcom/tencent/mm/ui/base/preference/Preference;)V
 
-    iput-object v2, v1, Lcom/tencent/mm/ui/base/preference/EditPreference;->kLc:Lcom/tencent/mm/ui/base/preference/EditPreference$a;
+    iput-object v2, v1, Lcom/tencent/mm/ui/base/preference/EditPreference;->lkr:Lcom/tencent/mm/ui/base/preference/EditPreference$a;
 
     .line 219
     :cond_3
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
     .line 220
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$2;->kLM:Lcom/tencent/mm/ui/base/preference/MMPreference;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$2;->llb:Lcom/tencent/mm/ui/base/preference/MMPreference;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$2;->kLM:Lcom/tencent/mm/ui/base/preference/MMPreference;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/MMPreference$2;->llb:Lcom/tencent/mm/ui/base/preference/MMPreference;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/base/preference/MMPreference;->d(Lcom/tencent/mm/ui/base/preference/MMPreference;)Lcom/tencent/mm/ui/base/preference/h;
 

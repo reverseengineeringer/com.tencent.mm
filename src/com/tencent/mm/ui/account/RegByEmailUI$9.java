@@ -10,7 +10,7 @@ final class RegByEmailUI$9
   
   public final void afterTextChanged(Editable paramEditable)
   {
-    RegByEmailUI.b(kuo);
+    RegByEmailUI.b(kTv);
   }
   
   public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}

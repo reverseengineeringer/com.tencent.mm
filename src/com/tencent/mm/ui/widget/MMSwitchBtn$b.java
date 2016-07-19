@@ -9,8 +9,8 @@ final class MMSwitchBtn$b
   extends Animation
 {
   int direction = 0;
-  float lFI = 0.0F;
-  long lFJ = 0L;
+  float mgV = 0.0F;
+  long mgW = 0L;
   
   public MMSwitchBtn$b(final MMSwitchBtn paramMMSwitchBtn)
   {
@@ -20,13 +20,13 @@ final class MMSwitchBtn$b
       public final void onAnimationEnd(Animation paramAnonymousAnimation)
       {
         boolean bool2 = true;
-        boolean bool3 = MMSwitchBtn.a(lFK);
+        boolean bool3 = MMSwitchBtn.a(mgX);
         if (direction == 1)
         {
           bool1 = true;
           if (bool3 != bool1)
           {
-            paramAnonymousAnimation = lFK;
+            paramAnonymousAnimation = mgX;
             if (direction != 1) {
               break label96;
             }
@@ -36,16 +36,16 @@ final class MMSwitchBtn$b
         for (boolean bool1 = bool2;; bool1 = false)
         {
           MMSwitchBtn.a(paramAnonymousAnimation, bool1);
-          lFK.post(new Runnable()
+          mgX.post(new Runnable()
           {
             public final void run()
             {
-              if (MMSwitchBtn.b(lFK) != null) {
-                MMSwitchBtn.b(lFK).fg(MMSwitchBtn.a(lFK));
+              if (MMSwitchBtn.b(mgX) != null) {
+                MMSwitchBtn.b(mgX).ft(MMSwitchBtn.a(mgX));
               }
             }
           });
-          MMSwitchBtn.c(lFK);
+          MMSwitchBtn.c(mgX);
           return;
           bool1 = false;
           break;
@@ -61,10 +61,10 @@ final class MMSwitchBtn$b
   protected final void applyTransformation(float paramFloat, Transformation paramTransformation)
   {
     if (direction == 0) {}
-    for (dlFK).left = (lFI - (float)lFJ * paramFloat);; dlFK).left = (lFI + (float)lFJ * paramFloat))
+    for (dmgX).left = (mgV - (float)mgW * paramFloat);; dmgX).left = (mgV + (float)mgW * paramFloat))
     {
-      MMSwitchBtn.e(lFK);
-      lFK.invalidate();
+      MMSwitchBtn.e(mgX);
+      mgX.invalidate();
       return;
     }
   }

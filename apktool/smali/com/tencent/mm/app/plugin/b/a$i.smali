@@ -13,78 +13,76 @@
     name = "i"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/dt;",
+        ">;"
+    }
+.end annotation
+
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
     .prologue
-    .line 40
-    const/4 v0, 0x0
+    .line 38
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/dt;
 
-    .line 41
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/app/plugin/b/a$i;->kum:I
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
-    .locals 3
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
+    .locals 2
 
     .prologue
-    const/4 v0, 0x0
+    .line 38
+    const-string/jumbo v0, "MicroMsg.SubCoreExtAgent"
 
-    .line 45
-    instance-of v1, p1, Lcom/tencent/mm/d/a/dp;
+    const-string/jumbo v1, "requestAccountSync()"
 
-    if-nez v1, :cond_0
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 46
-    const-string/jumbo v1, "!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc="
-
-    const-string/jumbo v2, "mismatched event"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 56
-    :goto_0
-    return v0
-
-    .line 50
-    :cond_0
-    const-string/jumbo v1, "!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc="
-
-    const-string/jumbo v2, "requestAccountSync()"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 51
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    if-nez v1, :cond_1
-
-    .line 52
-    const-string/jumbo v1, "!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc="
-
-    const-string/jumbo v2, "MMApplicationContext.getContext() == null"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 55
-    :cond_1
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/modelsimple/d;->aZ(Landroid/content/Context;)Z
+    if-nez v0, :cond_0
 
-    .line 56
+    const-string/jumbo v0, "MicroMsg.SubCoreExtAgent"
+
+    const-string/jumbo v1, "MMApplicationContext.getContext() == null"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tencent/mm/modelsimple/d;->aV(Landroid/content/Context;)Z
+
     const/4 v0, 0x1
 
     goto :goto_0

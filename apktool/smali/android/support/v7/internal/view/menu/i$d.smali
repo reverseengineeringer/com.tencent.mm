@@ -16,9 +16,19 @@
     name = "d"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroid/support/v7/internal/view/menu/d",
+        "<",
+        "Landroid/view/MenuItem$OnMenuItemClickListener;",
+        ">;",
+        "Landroid/view/MenuItem$OnMenuItemClickListener;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic mA:Landroid/support/v7/internal/view/menu/i;
+.field final synthetic mQ:Landroid/support/v7/internal/view/menu/i;
 
 
 # direct methods
@@ -27,7 +37,7 @@
 
     .prologue
     .line 345
-    iput-object p1, p0, Landroid/support/v7/internal/view/menu/i$d;->mA:Landroid/support/v7/internal/view/menu/i;
+    iput-object p1, p0, Landroid/support/v7/internal/view/menu/i$d;->mQ:Landroid/support/v7/internal/view/menu/i;
 
     .line 346
     invoke-direct {p0, p2}, Landroid/support/v7/internal/view/menu/d;-><init>(Ljava/lang/Object;)V
@@ -43,11 +53,11 @@
 
     .prologue
     .line 351
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/i$d;->lr:Ljava/lang/Object;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/i$d;->lI:Ljava/lang/Object;
 
     check-cast v0, Landroid/view/MenuItem$OnMenuItemClickListener;
 
-    iget-object v1, p0, Landroid/support/v7/internal/view/menu/i$d;->mA:Landroid/support/v7/internal/view/menu/i;
+    iget-object v1, p0, Landroid/support/v7/internal/view/menu/i$d;->mQ:Landroid/support/v7/internal/view/menu/i;
 
     invoke-virtual {v1, p1}, Landroid/support/v7/internal/view/menu/i;->f(Landroid/view/MenuItem;)Landroid/support/v4/a/a/b;
 

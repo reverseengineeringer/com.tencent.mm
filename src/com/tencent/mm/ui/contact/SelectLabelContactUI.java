@@ -10,8 +10,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import com.tencent.mm.pluginsdk.i.a;
 import com.tencent.mm.pluginsdk.i.e;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.chatting.ChattingUI;
@@ -24,14 +24,14 @@ import java.util.HashSet;
 public class SelectLabelContactUI
   extends MMBaseSelectContactUI
 {
-  private HashSet dbR;
-  private int dbS;
+  private HashSet<String> dax;
+  private int day;
+  private HashSet<String> lMn;
   private String label;
-  private HashSet llY;
   
-  private void Hi(String paramString)
+  private void Jx(String paramString)
   {
-    if (r.aW(dbS, 16384))
+    if (r.be(day, 16384))
     {
       localIntent = new Intent();
       localIntent.putExtra("Select_Contact", paramString);
@@ -47,126 +47,126 @@ public class SelectLabelContactUI
     finish();
   }
   
-  private void Nk()
+  private void PH()
   {
-    if ((r.aW(dbS, 64)) && (dbR.size() > 0))
+    if ((r.be(day, 64)) && (dax.size() > 0))
     {
-      ad(1, getString(2131430888) + "(" + dbR.size() + ")");
+      an(1, getString(2131230967) + "(" + dax.size() + ")");
       M(1, true);
       return;
     }
-    ad(1, getString(2131430888));
+    an(1, getString(2131230967));
     M(1, false);
   }
   
-  protected final void Ou()
+  protected final n LP()
   {
-    super.Ou();
-    label = getIntent().getStringExtra("label");
-    dbS = getIntent().getIntExtra("list_attr", 0);
-    dbR = new HashSet();
-    llY = new HashSet();
-    String str = getIntent().getStringExtra("always_select_contact");
-    if (!ay.kz(str)) {
-      llY.addAll(ay.h(str.split(",")));
-    }
-    if (!ay.kz(getIntent().getStringExtra("already_select_contact"))) {
-      dbR.addAll(ay.h(str.split(",")));
-    }
+    String str = i.a.aTy().rx(label);
+    return new h(this, r.be(day, 64), i.a.aTy().rA(str));
   }
   
-  public final boolean a(a parama)
-  {
-    if ((lkT) && (cId != null)) {
-      return dbR.contains(cId.field_username);
-    }
-    return false;
-  }
-  
-  protected final String afU()
-  {
-    return label;
-  }
-  
-  protected final boolean ahC()
-  {
-    return false;
-  }
-  
-  protected final n ahD()
-  {
-    String str = i.a.aOW().qh(label);
-    return new h(this, r.aW(dbS, 64), i.a.aOW().qk(str));
-  }
-  
-  protected final p ahE()
+  protected final p LQ()
   {
     return null;
   }
   
-  public final boolean b(a parama)
+  protected final boolean LS()
   {
-    if ((lkT) && (cId != null)) {
-      return llY.contains(cId.field_username);
+    return false;
+  }
+  
+  protected final String LT()
+  {
+    return label;
+  }
+  
+  public final boolean a(a parama)
+  {
+    if ((lLe) && (cFh != null)) {
+      return dax.contains(cFh.field_username);
     }
     return false;
+  }
+  
+  public final boolean b(a parama)
+  {
+    if ((lLe) && (cFh != null)) {
+      return lMn.contains(cFh.field_username);
+    }
+    return false;
+  }
+  
+  protected final void initData()
+  {
+    super.initData();
+    label = getIntent().getStringExtra("label");
+    day = getIntent().getIntExtra("list_attr", 0);
+    dax = new HashSet();
+    lMn = new HashSet();
+    String str = getIntent().getStringExtra("always_select_contact");
+    if (!be.kf(str)) {
+      lMn.addAll(be.g(str.split(",")));
+    }
+    if (!be.kf(getIntent().getStringExtra("already_select_contact"))) {
+      dax.addAll(be.g(str.split(",")));
+    }
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    if (r.aW(dbS, 64)) {
-      a(1, getString(2131430888), new MenuItem.OnMenuItemClickListener()
+    if (r.be(day, 64)) {
+      a(1, getString(2131230967), new MenuItem.OnMenuItemClickListener()
       {
         public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
         {
           paramAnonymousMenuItem = new ArrayList(SelectLabelContactUI.a(SelectLabelContactUI.this));
-          u.i("!44@/B4Tb64lLpKoY55HdaUCtqT2I08XVRNif1ohy8/Do0k=", "SelectUser: %s", new Object[] { paramAnonymousMenuItem.toString() });
-          SelectLabelContactUI.a(SelectLabelContactUI.this, ay.b(paramAnonymousMenuItem, ","));
+          v.i("MicroMsg.SelectLabelContactUI", "SelectUser: %s", new Object[] { paramAnonymousMenuItem.toString() });
+          SelectLabelContactUI.a(SelectLabelContactUI.this, be.b(paramAnonymousMenuItem, ","));
           return true;
         }
-      }, j.b.kpJ);
+      }, j.b.kOO);
     }
-    Nk();
+    PH();
   }
   
-  public void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    paramAdapterView = bhp();
-    paramView = paramAdapterView.rM(paramInt);
+    paramAdapterView = bmZ();
+    paramView = paramAdapterView.tO(paramInt);
     if (paramView == null) {}
-    while (cId == null) {
+    while (cFh == null) {
       return;
     }
-    paramView = cId.field_username;
-    u.i("!44@/B4Tb64lLpKoY55HdaUCtqT2I08XVRNif1ohy8/Do0k=", "ClickUser=%s", new Object[] { paramView });
-    if (r.aW(dbS, 64))
+    paramView = cFh.field_username;
+    v.i("MicroMsg.SelectLabelContactUI", "ClickUser=%s", new Object[] { paramView });
+    if (r.be(day, 64))
     {
-      if ((!llY.contains(paramView)) && (!dbR.contains(paramView)) && (r.aW(dbS, 131072)) && (llY.size() + dbR.size() >= getIntent().getIntExtra("max_limit_num", Integer.MAX_VALUE)))
+      if ((!lMn.contains(paramView)) && (!dax.contains(paramView)) && (r.be(day, 131072)) && (lMn.size() + dax.size() >= getIntent().getIntExtra("max_limit_num", Integer.MAX_VALUE)))
       {
-        g.a(koJ.kpc, getString(2131427819, new Object[] { Integer.valueOf(getIntent().getIntExtra("max_limit_num", Integer.MAX_VALUE)) }), getString(2131431011), new DialogInterface.OnClickListener()
+        g.a(kNN.kOg, getString(2131234845, new Object[] { Integer.valueOf(getIntent().getIntExtra("max_limit_num", Integer.MAX_VALUE)) }), getString(2131231000), new DialogInterface.OnClickListener()
         {
           public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
         });
         return;
       }
-      if (!llY.contains(paramView))
+      if (!lMn.contains(paramView))
       {
-        if (!dbR.contains(paramView)) {
+        if (!dax.contains(paramView)) {
           break label216;
         }
-        dbR.remove(paramView);
+        dax.remove(paramView);
       }
       for (;;)
       {
-        Nk();
+        PH();
         paramAdapterView.notifyDataSetChanged();
         return;
         label216:
-        dbR.add(paramView);
+        dax.add(paramView);
       }
     }
-    Hi(paramView);
+    Jx(paramView);
   }
 }
 

@@ -18,61 +18,63 @@ import com.tencent.mm.model.as.a;
 import com.tencent.mm.model.aw;
 import com.tencent.mm.network.e;
 import com.tencent.mm.plugin.a.a;
+import com.tencent.mm.plugin.a.b;
 import com.tencent.mm.pluginsdk.g;
 import com.tencent.mm.protocal.GeneralControlWrapper;
 import com.tencent.mm.protocal.JsapiPermissionWrapper;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.protocal.c;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.account.mobile.MobileInputUI;
 
 public class WelcomeSelectView
   extends WelcomeView
 {
-  private int cFj = 800;
+  private int cCm = 800;
   private Context context;
-  private View ktR;
-  private Button kwP;
-  private Button kwQ;
-  private TextView kwR;
+  private View kSY;
+  private Button kVW;
+  private Button kVX;
+  private TextView kVY;
   
   public WelcomeSelectView(Context paramContext)
   {
     super(paramContext);
-    bw(paramContext);
+    br(paramContext);
   }
   
   @TargetApi(11)
   public WelcomeSelectView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    bw(paramContext);
+    br(paramContext);
   }
   
-  private void bw(final Context paramContext)
+  private void br(final Context paramContext)
   {
     context = paramContext;
-    View localView = LayoutInflater.from(paramContext).inflate(2131362425, this);
-    ktR = localView.findViewById(2131167033);
-    kwP = ((Button)localView.findViewById(2131167034));
-    kwQ = ((Button)localView.findViewById(2131167035));
-    kwR = ((TextView)localView.findViewById(2131167032));
-    ktR.setVisibility(8);
-    kwR.setVisibility(8);
-    kwR.setText(t.jdMethod_do(paramContext));
-    cFj = getResourcesgetDisplayMetricsheightPixels;
-    kwR.setOnClickListener(new View.OnClickListener()
+    View localView = LayoutInflater.from(paramContext).inflate(2130904693, this);
+    kSY = localView.findViewById(2131759827);
+    kVW = ((Button)localView.findViewById(2131758841));
+    kVX = ((Button)localView.findViewById(2131758840));
+    kVY = ((TextView)localView.findViewById(2131759826));
+    kSY.setVisibility(8);
+    kVY.setVisibility(8);
+    kVY.setText(u.dp(paramContext));
+    cCm = getResourcesgetDisplayMetricsheightPixels;
+    kVY.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
         paramAnonymousView = new Intent();
         paramAnonymousView.putExtra("not_auth_setting", true);
         paramAnonymousView.putExtra("from_login_history", true);
-        a.coa.s(paramAnonymousView, getContext());
+        a.cjo.s(paramAnonymousView, getContext());
       }
     });
-    kwP.setOnClickListener(new View.OnClickListener()
+    kVW.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
@@ -81,33 +83,33 @@ public class WelcomeSelectView
         paramContext.startActivity(paramAnonymousView);
       }
     });
-    kwQ.setOnClickListener(new View.OnClickListener()
+    kVX.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
-        if (com.tencent.mm.protocal.b.iUg)
+        if (c.jrz)
         {
-          paramAnonymousView = paramContext.getString(2131427756, new Object[] { "0x" + Integer.toHexString(com.tencent.mm.protocal.b.iUf), t.aUB() });
+          paramAnonymousView = paramContext.getString(2131232146, new Object[] { "0x" + Integer.toHexString(c.jry), u.aZF() });
           Intent localIntent = new Intent();
           localIntent.putExtra("rawUrl", paramAnonymousView);
           localIntent.putExtra("showShare", false);
           localIntent.putExtra("show_bottom", false);
           localIntent.putExtra("needRedirect", false);
           localIntent.putExtra("neverGetA8Key", true);
-          localIntent.putExtra("hardcode_jspermission", JsapiPermissionWrapper.iUp);
-          localIntent.putExtra("hardcode_general_ctrl", GeneralControlWrapper.iUm);
-          a.coa.j(localIntent, paramContext);
+          localIntent.putExtra("hardcode_jspermission", JsapiPermissionWrapper.jrI);
+          localIntent.putExtra("hardcode_general_ctrl", GeneralControlWrapper.jrF);
+          a.cjo.j(localIntent, paramContext);
           return;
         }
-        aw.uB();
+        aw.uD();
         paramAnonymousView = new Intent(paramContext, RegByMobileRegAIOUI.class);
         paramAnonymousView.putExtra("login_type", 0);
         paramContext.startActivity(paramAnonymousView);
-        aw.uB();
-        com.tencent.mm.plugin.a.b.en(20);
-        com.tencent.mm.plugin.a.b.kC("RE200_100");
-        com.tencent.mm.plugin.a.b.b(false, ah.tx() + "," + getClass().getName() + ",R100_100_new," + ah.fd("R100_100_new") + ",2");
-        com.tencent.mm.plugin.a.b.kB("R100_100_new");
+        aw.uD();
+        b.eZ(20);
+        b.ll("RE200_100");
+        b.b(false, ah.ty() + "," + getClass().getName() + ",R100_100_new," + ah.fq("R100_100_new") + ",2");
+        b.lk("R100_100_new");
       }
     });
     init();
@@ -115,29 +117,29 @@ public class WelcomeSelectView
   
   private void init()
   {
-    String str = t.e(context.getSharedPreferences(y.aUK(), 0));
-    kwR.setText(t.jdMethod_do(context));
+    String str = u.e(context.getSharedPreferences(aa.aZO(), 0));
+    kVY.setText(u.dp(context));
     if ((str != null) && (str.equals("language_default"))) {
-      kwR.setText(context.getString(2131427768));
+      kVY.setText(context.getString(2131233538));
     }
-    kwP.setText(2131427595);
-    kwQ.setText(2131427594);
+    kVW.setText(2131233286);
+    kVX.setText(2131233285);
   }
   
-  public final void bca()
+  public final void bhm()
   {
-    ao(ktR);
-    ao(kwR);
-    ktR.setVisibility(0);
-    kwR.setVisibility(0);
-    ab.j(new Runnable()
+    as(kSY);
+    as(kVY);
+    kSY.setVisibility(0);
+    kVY.setVisibility(0);
+    ad.k(new Runnable()
     {
       public final void run()
       {
-        ah.tE().d(new as(new as.a()
+        ah.tF().a(new as(new as.a()
         {
           public final void a(e paramAnonymous2e) {}
-        }, "launch normal"));
+        }, "launch normal"), 0);
       }
     });
   }

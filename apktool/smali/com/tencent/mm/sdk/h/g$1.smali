@@ -13,9 +13,19 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/h/h",
+        "<",
+        "Lcom/tencent/mm/sdk/h/g$a;",
+        "Lcom/tencent/mm/sdk/h/i;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic jYD:Lcom/tencent/mm/sdk/h/g;
+.field final synthetic kza:Lcom/tencent/mm/sdk/h/g;
 
 
 # direct methods
@@ -24,7 +34,7 @@
 
     .prologue
     .line 38
-    iput-object p1, p0, Lcom/tencent/mm/sdk/h/g$1;->jYD:Lcom/tencent/mm/sdk/h/g;
+    iput-object p1, p0, Lcom/tencent/mm/sdk/h/g$1;->kza:Lcom/tencent/mm/sdk/h/g;
 
     invoke-direct {p0}, Lcom/tencent/mm/sdk/h/h;-><init>()V
 
@@ -33,7 +43,7 @@
 
 
 # virtual methods
-.method protected final synthetic g(Ljava/lang/Object;Ljava/lang/Object;)V
+.method protected final synthetic k(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
 
     .prologue
@@ -42,7 +52,7 @@
 
     check-cast p2, Lcom/tencent/mm/sdk/h/i;
 
-    iget-object v0, p2, Lcom/tencent/mm/sdk/h/i;->asJ:Ljava/lang/String;
+    iget-object v0, p2, Lcom/tencent/mm/sdk/h/i;->aev:Ljava/lang/String;
 
     invoke-interface {p1, v0, p2}, Lcom/tencent/mm/sdk/h/g$a;->a(Ljava/lang/String;Lcom/tencent/mm/sdk/h/i;)V
 

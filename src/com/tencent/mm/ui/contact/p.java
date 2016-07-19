@@ -9,8 +9,8 @@ import com.tencent.mm.modelsearch.m.a;
 import com.tencent.mm.modelsearch.m.g;
 import com.tencent.mm.modelsearch.m.j;
 import com.tencent.mm.modelsearch.m.k;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.contact.a.a;
 import com.tencent.mm.ui.contact.a.d;
 import com.tencent.mm.ui.contact.a.e;
@@ -22,25 +22,21 @@ import java.util.List;
 public class p
   extends m
 {
-  private String aEy;
-  private String[] bYs;
-  private Comparator cOf = new m.a();
-  private List faT = null;
-  private aa handler = new aa(Looper.getMainLooper());
-  private m.k iht;
-  private int liF = Integer.MAX_VALUE;
-  private int liG = Integer.MAX_VALUE;
-  private int[] llh;
-  private List lli;
-  private a llj;
-  private int llm = Integer.MAX_VALUE;
-  private int lln = Integer.MAX_VALUE;
-  private List llo = null;
-  private List llp = null;
-  private List llq = null;
-  private m.j llr = new m.j()
+  private String aqC;
+  private String[] bSb;
+  private Comparator<m.g> cLe = new m.a();
+  private List<m.g> fjr = null;
+  private ac handler = new ac(Looper.getMainLooper());
+  private m.k iBv;
+  private int lIQ = Integer.MAX_VALUE;
+  private int lIR = Integer.MAX_VALUE;
+  private int lLA = Integer.MAX_VALUE;
+  private List<m.g> lLB = null;
+  private List<m.g> lLC = null;
+  private List<m.g> lLD = null;
+  private m.j lLE = new m.j()
   {
-    public final void a(m.k paramAnonymousk, List paramAnonymousList, HashSet paramAnonymousHashSet, String[] paramAnonymousArrayOfString, String paramAnonymousString)
+    public final void a(m.k paramAnonymousk, List<m.g> paramAnonymousList, HashSet<String> paramAnonymousHashSet, String[] paramAnonymousArrayOfString, String paramAnonymousString)
     {
       if ((p.a(p.this) == null) || (!p.a(p.this).equals(paramAnonymousk))) {
         return;
@@ -52,7 +48,7 @@ public class p
       p.a(p.this, paramAnonymousString, false);
     }
     
-    public final void iD(String paramAnonymousString)
+    public final void iU(String paramAnonymousString)
     {
       if (!paramAnonymousString.equals(p.c(p.this))) {
         return;
@@ -60,22 +56,22 @@ public class p
       p.b(p.this);
     }
   };
-  private m.j lls = new m.j()
+  private m.j lLF = new m.j()
   {
-    public final void a(m.k paramAnonymousk, List paramAnonymousList, HashSet paramAnonymousHashSet, String[] paramAnonymousArrayOfString, String paramAnonymousString)
+    public final void a(m.k paramAnonymousk, List<m.g> paramAnonymousList, HashSet<String> paramAnonymousHashSet, String[] paramAnonymousArrayOfString, String paramAnonymousString)
     {
       if ((p.a(p.this) == null) || (!p.a(p.this).equals(paramAnonymousk))) {
         return;
       }
       p.a(p.this, paramAnonymousArrayOfString);
       p.a(p.this, paramAnonymousList);
-      p.c(p.this, FTSUtils.a(paramAnonymousList, c.bYR, 131072, 131072));
-      p.d(p.this, FTSUtils.a(paramAnonymousList, c.bYR, 131075, 131075));
-      p.e(p.this, FTSUtils.a(paramAnonymousList, c.bYR, 131076, 131076));
+      p.c(p.this, FTSUtils.a(paramAnonymousList, c.bSA, 131072, 131072));
+      p.d(p.this, FTSUtils.a(paramAnonymousList, c.bSA, 131075, 131075));
+      p.e(p.this, FTSUtils.a(paramAnonymousList, c.bSA, 131076, 131076));
       p.a(p.this, paramAnonymousString, true);
     }
     
-    public final void iD(String paramAnonymousString)
+    public final void iU(String paramAnonymousString)
     {
       if (!paramAnonymousString.equals(p.c(p.this))) {
         return;
@@ -83,44 +79,27 @@ public class p
       p.a(p.this, paramAnonymousString, true);
     }
   };
+  private int[] lLu;
+  private List<String> lLv;
+  private a lLw;
+  private int lLz = Integer.MAX_VALUE;
   
-  public p(MMBaseSelectContactUI paramMMBaseSelectContactUI, List paramList, boolean paramBoolean)
+  public p(MMBaseSelectContactUI paramMMBaseSelectContactUI, List<String> paramList, boolean paramBoolean, int paramInt)
   {
-    super(paramMMBaseSelectContactUI, paramBoolean);
-    lli = paramList;
-    u.i("!44@/B4Tb64lLpKhTakOeAnWoDkRkLo+QS9PCpquubVDhrw=", "Create!");
-    Ou();
+    super(paramMMBaseSelectContactUI, paramBoolean, paramInt);
+    lLv = paramList;
+    v.i("MicroMsg.MMSearchContactAdapter", "Create!");
+    initData();
   }
   
-  private void Ou()
-  {
-    u.i("!44@/B4Tb64lLpKhTakOeAnWoDkRkLo+QS9PCpquubVDhrw=", "initData!");
-    llm = Integer.MAX_VALUE;
-    lln = Integer.MAX_VALUE;
-    liF = Integer.MAX_VALUE;
-    liG = Integer.MAX_VALUE;
-    llo = null;
-    faT = null;
-    llp = null;
-    llq = null;
-    if (iht != null)
-    {
-      com.tencent.mm.modelsearch.m.a(iht);
-      iht = null;
-    }
-    aEy = null;
-    bYs = null;
-    clearCache();
-  }
-  
-  private a bQ(int paramInt1, int paramInt2)
+  private a bW(int paramInt1, int paramInt2)
   {
     g localg = new g(paramInt2);
-    lnf = lkS.getActivity().getResources().getString(paramInt1);
+    lNA = lLd.getActivity().getResources().getString(paramInt1);
     return localg;
   }
   
-  private static int bU(List paramList)
+  private static int cj(List<? extends Object> paramList)
   {
     if (paramList == null) {
       return 0;
@@ -130,32 +109,32 @@ public class p
   
   public void a(a parama)
   {
-    llj = parama;
+    lLw = parama;
   }
   
-  public void a(String paramString, int[] paramArrayOfInt)
+  public void aF(String paramString, boolean paramBoolean)
   {
-    Ou();
-    aEy = paramString;
-    llh = paramArrayOfInt;
-    u.i("!44@/B4Tb64lLpKhTakOeAnWoDkRkLo+QS9PCpquubVDhrw=", "doSearch: query=%s", new Object[] { aEy });
-    iht = com.tencent.mm.modelsearch.m.a(aEy, paramArrayOfInt, llr, handler, 1);
-  }
-  
-  public void av(String paramString, boolean paramBoolean)
-  {
-    if (llj != null) {
-      llj.k(paramString, getCount(), paramBoolean);
+    if (lLw != null) {
+      lLw.k(paramString, getCount(), paramBoolean);
     }
+  }
+  
+  public void b(String paramString, int[] paramArrayOfInt)
+  {
+    initData();
+    aqC = paramString;
+    lLu = paramArrayOfInt;
+    v.i("MicroMsg.MMSearchContactAdapter", "doSearch: query=%s", new Object[] { aqC });
+    iBv = com.tencent.mm.modelsearch.m.a(aqC, paramArrayOfInt, lLE, handler, 1);
   }
   
   protected boolean c(a parama)
   {
     int j = position;
-    int k = llm;
-    int m = lln;
-    int n = liF;
-    int i1 = liG;
+    int k = lLz;
+    int m = lLA;
+    int n = lIQ;
+    int i1 = lIR;
     int i = 0;
     while (i < 4)
     {
@@ -170,110 +149,150 @@ public class p
   public void finish()
   {
     super.finish();
-    u.i("!44@/B4Tb64lLpKhTakOeAnWoDkRkLo+QS9PCpquubVDhrw=", "finish!");
-    Ou();
+    v.i("MicroMsg.MMSearchContactAdapter", "finish!");
+    initData();
   }
   
   public int getCount()
   {
-    int j = bU(llo) + bU(faT) + bU(llp) + bU(llq) + 0;
+    int j = cj(lLB) + cj(fjr) + cj(lLC) + cj(lLD) + 0;
     int i = j;
-    if (llm != Integer.MAX_VALUE) {
+    if (lLz != Integer.MAX_VALUE) {
       i = j + 1;
     }
     j = i;
-    if (lln != Integer.MAX_VALUE) {
+    if (lLA != Integer.MAX_VALUE) {
       j = i + 1;
     }
     i = j;
-    if (liF != Integer.MAX_VALUE) {
+    if (lIQ != Integer.MAX_VALUE) {
       i = j + 1;
     }
     j = i;
-    if (liG != Integer.MAX_VALUE) {
+    if (lIR != Integer.MAX_VALUE) {
       j = i + 1;
     }
     return j;
   }
   
-  public a iH(int paramInt)
+  final void initData()
+  {
+    v.i("MicroMsg.MMSearchContactAdapter", "initData!");
+    lLz = Integer.MAX_VALUE;
+    lLA = Integer.MAX_VALUE;
+    lIQ = Integer.MAX_VALUE;
+    lIR = Integer.MAX_VALUE;
+    lLB = null;
+    fjr = null;
+    lLC = null;
+    lLD = null;
+    if (iBv != null)
+    {
+      com.tencent.mm.modelsearch.m.a(iBv);
+      iBv = null;
+    }
+    aqC = null;
+    bSb = null;
+    clearCache();
+  }
+  
+  public a jQ(int paramInt)
   {
     Object localObject;
-    if (paramInt == llm) {
-      localObject = bQ(2131431337, paramInt);
+    if (paramInt == lLz) {
+      localObject = bW(2131234808, paramInt);
     }
     for (;;)
     {
-      if (localObject != null) {
-        aEy = aEy;
+      if (localObject != null)
+      {
+        aqC = aqC;
+        scene = scene;
       }
       return (a)localObject;
-      if (paramInt == lln)
+      if (paramInt == lLA)
       {
-        localObject = bQ(2131431338, paramInt);
+        localObject = bW(2131234796, paramInt);
       }
-      else if (paramInt == liF)
+      else if (paramInt == lIQ)
       {
-        localObject = bQ(2131431342, paramInt);
+        localObject = bW(2131234795, paramInt);
       }
-      else if (paramInt == liG)
+      else if (paramInt == lIR)
       {
-        localObject = bQ(2131431345, paramInt);
+        localObject = bW(2131234793, paramInt);
       }
       else
       {
         int i;
-        if (paramInt > liG)
+        if (paramInt > lIR)
         {
-          i = liG;
+          i = paramInt - lIR - 1;
           localObject = new e(paramInt);
-          cNY = ((m.g)llq.get(paramInt - i - 1));
-          bYs = bYs;
-          lkT = awQ();
+          cKY = ((m.g)lLD.get(i));
+          bSb = bSb;
+          lLe = azn();
+          lNi = true;
+          lNg = (i + 1);
+          ((e)localObject).bY(cKY.type, cKY.bTs);
         }
-        else if (paramInt > liF)
+        else if (paramInt > lIQ)
         {
-          i = liF;
+          i = paramInt - lIQ - 1;
           localObject = new d(paramInt);
-          cNY = ((m.g)llp.get(paramInt - i - 1));
-          bYs = bYs;
-          lkT = awQ();
+          cKY = ((m.g)lLC.get(i));
+          bSb = bSb;
+          lLe = azn();
+          lNi = true;
+          lNg = (i + 1);
+          ((d)localObject).bY(cKY.type, cKY.bTs);
         }
-        else if (paramInt > lln)
+        else if (paramInt > lLA)
         {
-          i = lln;
+          i = paramInt - lLA - 1;
           localObject = new e(paramInt);
-          cNY = ((m.g)faT.get(paramInt - i - 1));
-          bYs = bYs;
-          lkT = awQ();
+          cKY = ((m.g)fjr.get(i));
+          bSb = bSb;
+          lLe = azn();
+          lNi = true;
+          lNg = (i + 1);
+          ((e)localObject).bY(cKY.type, cKY.bTs);
         }
-        else if (paramInt > llm)
+        else if (paramInt > lLz)
         {
-          i = llm;
-          m.g localg = (m.g)llo.get(paramInt - i - 1);
+          i = paramInt - lLz - 1;
+          m.g localg = (m.g)lLB.get(i);
           if (type == 131072)
           {
             localObject = new e(paramInt);
-            cNY = localg;
-            bYs = bYs;
-            lkT = awQ();
+            cKY = localg;
+            bSb = bSb;
+            lLe = azn();
+            lNh = true;
+            lNi = true;
+            lNg = (i + 1);
+            ((e)localObject).bY(cKY.type, cKY.bTs);
           }
           else if (type == 131075)
           {
             localObject = new d(paramInt);
-            cNY = localg;
-            bYs = bYs;
-            lkT = awQ();
+            cKY = localg;
+            bSb = bSb;
+            lLe = azn();
+            lNh = true;
+            lNi = true;
+            lNg = (i + 1);
+            ((d)localObject).bY(cKY.type, cKY.bTs);
           }
           else
           {
-            u.e("!44@/B4Tb64lLpKhTakOeAnWoDkRkLo+QS9PCpquubVDhrw=", "createTopHitsDataItem return unkown type %d", new Object[] { Integer.valueOf(type) });
+            v.e("MicroMsg.MMSearchContactAdapter", "createTopHitsDataItem return unkown type %d", new Object[] { Integer.valueOf(type) });
             localObject = null;
           }
         }
         else
         {
-          u.e("!44@/B4Tb64lLpKhTakOeAnWoDkRkLo+QS9PCpquubVDhrw=", "unkown position=%d", new Object[] { Integer.valueOf(paramInt) });
+          v.e("MicroMsg.MMSearchContactAdapter", "unkown position=%d", new Object[] { Integer.valueOf(paramInt) });
           localObject = null;
         }
       }

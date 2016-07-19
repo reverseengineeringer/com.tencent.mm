@@ -10,7 +10,7 @@ final class MultiSelectContactView$5
   
   public final void onClick(View paramView)
   {
-    MultiSelectContactView.a(iHi, paramView);
+    MultiSelectContactView.a(jed, paramView);
   }
 }
 

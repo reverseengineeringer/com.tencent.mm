@@ -2,63 +2,41 @@ package android.support.v4.app;
 
 import android.app.Notification;
 import android.app.Notification.Builder;
-import android.app.PendingIntent;
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.widget.RemoteViews;
+import android.os.Bundle;
+import android.util.SparseArray;
+import java.util.Iterator;
+import java.util.Set;
 
-final class p$m
+class p$m
   extends p.k
 {
-  public final Notification b(p.d paramd)
+  public Bundle a(Notification paramNotification)
   {
-    Context localContext = mContext;
-    Notification localNotification = dg;
-    CharSequence localCharSequence1 = cH;
-    CharSequence localCharSequence2 = cI;
-    CharSequence localCharSequence3 = cN;
-    RemoteViews localRemoteViews = cL;
-    int i = cO;
-    PendingIntent localPendingIntent2 = cJ;
-    PendingIntent localPendingIntent1 = cK;
-    Bitmap localBitmap = cM;
-    int j = cT;
-    int k = cU;
-    boolean bool2 = cV;
-    paramd = new Notification.Builder(localContext).setWhen(when).setSmallIcon(icon, iconLevel).setContent(contentView).setTicker(tickerText, localRemoteViews).setSound(sound, audioStreamType).setVibrate(vibrate).setLights(ledARGB, ledOnMS, ledOffMS);
-    if ((flags & 0x2) != 0)
+    return t.a(paramNotification);
+  }
+  
+  public Notification b(p.d paramd)
+  {
+    Object localObject = new t.a(mContext, dw, cX, cY, dd, db, de, cZ, da, dc, dk, dl, dm, dh, mPriority, dj, dr, mExtras, dn, jdField_do, dp);
+    p.a((n)localObject, dq);
+    p.a((o)localObject, di);
+    paramd = dM.build();
+    Bundle localBundle1 = t.a(paramd);
+    Bundle localBundle2 = new Bundle(mExtras);
+    Iterator localIterator = mExtras.keySet().iterator();
+    while (localIterator.hasNext())
     {
-      bool1 = true;
-      paramd = paramd.setOngoing(bool1);
-      if ((flags & 0x8) == 0) {
-        break label312;
-      }
-      bool1 = true;
-      label198:
-      paramd = paramd.setOnlyAlertOnce(bool1);
-      if ((flags & 0x10) == 0) {
-        break label318;
-      }
-      bool1 = true;
-      label219:
-      paramd = paramd.setAutoCancel(bool1).setDefaults(defaults).setContentTitle(localCharSequence1).setContentText(localCharSequence2).setContentInfo(localCharSequence3).setContentIntent(localPendingIntent2).setDeleteIntent(deleteIntent);
-      if ((flags & 0x80) == 0) {
-        break label324;
+      String str = (String)localIterator.next();
+      if (localBundle1.containsKey(str)) {
+        localBundle2.remove(str);
       }
     }
-    label312:
-    label318:
-    label324:
-    for (boolean bool1 = true;; bool1 = false)
-    {
-      return paramd.setFullScreenIntent(localPendingIntent1, bool1).setLargeIcon(localBitmap).setNumber(i).setProgress(j, k, bool2).getNotification();
-      bool1 = false;
-      break;
-      bool1 = false;
-      break label198;
-      bool1 = false;
-      break label219;
+    localBundle1.putAll(localBundle2);
+    localObject = t.c(dR);
+    if (localObject != null) {
+      t.a(paramd).putSparseParcelableArray("android.support.actionExtras", (SparseArray)localObject);
     }
+    return paramd;
   }
 }
 

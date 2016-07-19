@@ -1,39 +1,60 @@
 package com.tencent.mm.plugin.sns.h;
 
-import com.tencent.mm.plugin.sns.d.ad;
+import com.tencent.mm.modelsns.a;
+import com.tencent.mm.sdk.platformtools.v;
+import java.util.Iterator;
+import java.util.Vector;
 
-public final class f
+public abstract class f
 {
-  public static boolean a(String paramString, k paramk)
-  {
-    if (s.tZ(paramString)) {
-      return ad.azi().b(s.vH(paramString), paramk);
-    }
-    return ad.azj().b(s.vH(paramString), paramk.aAw());
-  }
+  private Vector<a> hdu = new Vector();
   
-  public static k vn(String paramString)
+  public final a aI(Object paramObject)
   {
-    if (s.tZ(paramString)) {
-      return ad.azi().cx(s.vH(paramString));
+    if (paramObject == null) {
+      return null;
     }
-    paramString = ad.azj().cp(s.vH(paramString));
-    if (paramString != null) {
-      return paramString.azS();
+    try
+    {
+      Iterator localIterator = hdu.iterator();
+      while (localIterator.hasNext())
+      {
+        a locala = (a)localIterator.next();
+        if (paramObject.equals(bVN))
+        {
+          hdu.remove(locala);
+          return locala;
+        }
+      }
+    }
+    catch (Exception localException)
+    {
+      v.e("MicroMsg.Ss_log_base_helper", "report by key " + localException.getMessage() + " " + paramObject);
     }
     return null;
   }
   
-  public static k vo(String paramString)
+  public final a b(a parama)
   {
-    if (s.tZ(paramString)) {
-      return ad.azi().lR(s.vI(paramString));
+    hdu.add(parama);
+    return parama;
+  }
+  
+  public final boolean c(a parama)
+  {
+    Iterator localIterator = hdu.iterator();
+    while (localIterator.hasNext())
+    {
+      a locala = (a)localIterator.next();
+      if (bVQ == bVQ) {
+        hdu.remove(locala);
+      }
     }
-    paramString = ad.azj().lM(s.vI(paramString));
-    if (paramString != null) {
-      return paramString.azS();
+    for (boolean bool = true;; bool = false)
+    {
+      hdu.add(parama);
+      return bool;
     }
-    return null;
   }
 }
 

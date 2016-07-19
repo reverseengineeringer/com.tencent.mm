@@ -47,26 +47,22 @@ public class DatabaseUtils
   public static void appendEscapedSQLString(StringBuilder paramStringBuilder, String paramString)
   {
     paramStringBuilder.append('\'');
-    int i;
     if (paramString.indexOf('\'') != -1)
     {
       int j = paramString.length();
-      i = 0;
-      if (i < j) {}
-    }
-    for (;;)
-    {
-      paramStringBuilder.append('\'');
-      return;
-      char c = paramString.charAt(i);
-      if (c == '\'') {
-        paramStringBuilder.append('\'');
+      int i = 0;
+      while (i < j)
+      {
+        char c = paramString.charAt(i);
+        if (c == '\'') {
+          paramStringBuilder.append('\'');
+        }
+        paramStringBuilder.append(c);
+        i += 1;
       }
-      paramStringBuilder.append(c);
-      i += 1;
-      break;
-      paramStringBuilder.append(paramString);
     }
+    paramStringBuilder.append(paramString);
+    paramStringBuilder.append('\'');
   }
   
   public static String[] appendSelectionArgs(String[] paramArrayOfString1, String[] paramArrayOfString2)
@@ -177,20 +173,16 @@ public class DatabaseUtils
     paramContext = com.tencent.kingkong.support.Context.openOrCreateDatabase(paramContext, paramString1, paramLockedDevice, paramString2, paramArithmetic, 0, null, false);
     paramString1 = TextUtils.split(paramString3, ";\n");
     int j = paramString1.length;
-    for (;;)
+    while (i < j)
     {
-      if (i >= j)
-      {
-        paramContext.setVersion(paramInt);
-        paramContext.close();
-        return;
-      }
       paramLockedDevice = paramString1[i];
       if (!TextUtils.isEmpty(paramLockedDevice)) {
         paramContext.execSQL(paramLockedDevice);
       }
       i += 1;
     }
+    paramContext.setVersion(paramInt);
+    paramContext.close();
   }
   
   public static void cursorDoubleToContentValues(Cursor paramCursor, String paramString1, ContentValues paramContentValues, String paramString2)
@@ -235,34 +227,32 @@ public class DatabaseUtils
     }
     for (;;)
     {
-      if (i >= k)
+      Object localObject;
+      boolean bool;
+      if (i < k) {
+        switch (paramCursor.getType(i))
+        {
+        case 3: 
+        default: 
+          localObject = paramCursor.getString(i);
+          if (localObject != null) {
+            bool = paramCursorWindow.putString((String)localObject, paramInt, i);
+          }
+          break;
+        }
+      }
+      for (;;)
       {
+        if (bool) {
+          break label264;
+        }
+        paramCursorWindow.freeLastRow();
         paramInt += 1;
         if (paramCursor.moveToNext()) {
           break;
         }
         paramCursor.moveToPosition(j);
         return;
-      }
-      Object localObject;
-      boolean bool;
-      switch (paramCursor.getType(i))
-      {
-      case 3: 
-      default: 
-        localObject = paramCursor.getString(i);
-        if (localObject != null) {
-          bool = paramCursorWindow.putString((String)localObject, paramInt, i);
-        }
-        break;
-      }
-      for (;;)
-      {
-        if (bool) {
-          break label268;
-        }
-        paramCursorWindow.freeLastRow();
-        break;
         bool = paramCursorWindow.putNull(paramInt, i);
         continue;
         bool = paramCursorWindow.putLong(paramCursor.getLong(i), paramInt, i);
@@ -281,7 +271,7 @@ public class DatabaseUtils
           bool = paramCursorWindow.putNull(paramInt, i);
         }
       }
-      label268:
+      label264:
       i += 1;
     }
   }
@@ -349,26 +339,31 @@ public class DatabaseUtils
   
   public static void cursorRowToContentValues(Cursor paramCursor, ContentValues paramContentValues)
   {
-    if ((paramCursor instanceof AbstractWindowedCursor)) {}
+    AbstractWindowedCursor localAbstractWindowedCursor;
     String[] arrayOfString;
     int i;
-    for (AbstractWindowedCursor localAbstractWindowedCursor = (AbstractWindowedCursor)paramCursor;; localAbstractWindowedCursor = null)
+    if ((paramCursor instanceof AbstractWindowedCursor))
     {
+      localAbstractWindowedCursor = (AbstractWindowedCursor)paramCursor;
       arrayOfString = paramCursor.getColumnNames();
       int j = arrayOfString.length;
       i = 0;
-      if (i < j) {
-        break;
+      label27:
+      if (i >= j) {
+        return;
       }
-      return;
-    }
-    if ((localAbstractWindowedCursor != null) && (localAbstractWindowedCursor.isBlob(i))) {
+      if ((localAbstractWindowedCursor == null) || (!localAbstractWindowedCursor.isBlob(i))) {
+        break label74;
+      }
       paramContentValues.put(arrayOfString[i], paramCursor.getBlob(i));
     }
     for (;;)
     {
       i += 1;
+      break label27;
+      localAbstractWindowedCursor = null;
       break;
+      label74:
       paramContentValues.put(arrayOfString[i], paramCursor.getString(i));
     }
   }
@@ -417,25 +412,23 @@ public class DatabaseUtils
     int i = 0;
     for (;;)
     {
-      if (i >= j)
-      {
-        paramPrintStream.println("}");
-        return;
-      }
-      try
-      {
-        String str1 = paramCursor.getString(i);
-        paramPrintStream.println("   " + arrayOfString[i] + '=' + str1);
-        i += 1;
-      }
-      catch (SQLiteException localSQLiteException)
-      {
-        for (;;)
+      if (i < j) {
+        try
         {
-          String str2 = "<unprintable>";
+          String str1 = paramCursor.getString(i);
+          paramPrintStream.println("   " + arrayOfString[i] + '=' + str1);
+          i += 1;
+        }
+        catch (SQLiteException localSQLiteException)
+        {
+          for (;;)
+          {
+            String str2 = "<unprintable>";
+          }
         }
       }
     }
+    paramPrintStream.println("}");
   }
   
   public static void dumpCurrentRow(Cursor paramCursor, StringBuilder paramStringBuilder)
@@ -446,25 +439,23 @@ public class DatabaseUtils
     int i = 0;
     for (;;)
     {
-      if (i >= j)
-      {
-        paramStringBuilder.append("}\n");
-        return;
-      }
-      try
-      {
-        String str1 = paramCursor.getString(i);
-        paramStringBuilder.append("   " + arrayOfString[i] + '=' + str1 + "\n");
-        i += 1;
-      }
-      catch (SQLiteException localSQLiteException)
-      {
-        for (;;)
+      if (i < j) {
+        try
         {
-          String str2 = "<unprintable>";
+          String str1 = paramCursor.getString(i);
+          paramStringBuilder.append("   " + arrayOfString[i] + '=' + str1 + "\n");
+          i += 1;
+        }
+        catch (SQLiteException localSQLiteException)
+        {
+          for (;;)
+          {
+            String str2 = "<unprintable>";
+          }
         }
       }
     }
+    paramStringBuilder.append("}\n");
   }
   
   public static String dumpCurrentRowToString(Cursor paramCursor)
@@ -482,43 +473,31 @@ public class DatabaseUtils
   public static void dumpCursor(Cursor paramCursor, PrintStream paramPrintStream)
   {
     paramPrintStream.println(">>>>> Dumping cursor " + paramCursor);
-    int i;
     if (paramCursor != null)
     {
-      i = paramCursor.getPosition();
+      int i = paramCursor.getPosition();
       paramCursor.moveToPosition(-1);
-    }
-    for (;;)
-    {
-      if (!paramCursor.moveToNext())
-      {
-        paramCursor.moveToPosition(i);
-        paramPrintStream.println("<<<<<");
-        return;
+      while (paramCursor.moveToNext()) {
+        dumpCurrentRow(paramCursor, paramPrintStream);
       }
-      dumpCurrentRow(paramCursor, paramPrintStream);
+      paramCursor.moveToPosition(i);
     }
+    paramPrintStream.println("<<<<<");
   }
   
   public static void dumpCursor(Cursor paramCursor, StringBuilder paramStringBuilder)
   {
     paramStringBuilder.append(">>>>> Dumping cursor " + paramCursor + "\n");
-    int i;
     if (paramCursor != null)
     {
-      i = paramCursor.getPosition();
+      int i = paramCursor.getPosition();
       paramCursor.moveToPosition(-1);
-    }
-    for (;;)
-    {
-      if (!paramCursor.moveToNext())
-      {
-        paramCursor.moveToPosition(i);
-        paramStringBuilder.append("<<<<<\n");
-        return;
+      while (paramCursor.moveToNext()) {
+        dumpCurrentRow(paramCursor, paramStringBuilder);
       }
-      dumpCurrentRow(paramCursor, paramStringBuilder);
+      paramCursor.moveToPosition(i);
     }
+    paramStringBuilder.append("<<<<<\n");
   }
   
   public static String dumpCursorToString(Cursor paramCursor)
@@ -534,36 +513,29 @@ public class DatabaseUtils
     int k = paramArrayOfByte.length;
     char[] arrayOfChar = new char[k << 1];
     int i = 0;
-    for (;;)
+    while (i < k)
     {
-      if (i >= k) {
-        return arrayOfChar;
-      }
       int m = j + 1;
       arrayOfChar[j] = DIGITS[((paramArrayOfByte[i] & 0xF0) >>> 4)];
       j = m + 1;
       arrayOfChar[m] = DIGITS[(paramArrayOfByte[i] & 0xF)];
       i += 1;
     }
+    return arrayOfChar;
   }
   
   public static int findRowIdColumnIndex(String[] paramArrayOfString)
   {
-    int k = paramArrayOfString.length;
+    int j = paramArrayOfString.length;
     int i = 0;
-    for (;;)
+    while (i < j)
     {
-      int j;
-      if (i >= k) {
-        j = -1;
+      if (paramArrayOfString[i].equals("_id")) {
+        return i;
       }
-      do
-      {
-        return j;
-        j = i;
-      } while (paramArrayOfString[i].equals("_id"));
       i += 1;
     }
+    return -1;
   }
   
   public static String getCollationKey(String paramString)
@@ -886,7 +858,7 @@ public class DatabaseUtils
   {
     public static final int TABLE_INFO_PRAGMA_COLUMNNAME_INDEX = 1;
     public static final int TABLE_INFO_PRAGMA_DEFAULT_INDEX = 4;
-    private HashMap mColumns;
+    private HashMap<String, Integer> mColumns;
     private final SQLiteDatabase mDb;
     private String mInsertSQL = null;
     private SQLiteStatement mInsertStatement = null;
@@ -909,24 +881,18 @@ public class DatabaseUtils
       localStringBuilder1.append(" (");
       StringBuilder localStringBuilder2 = new StringBuilder(128);
       localStringBuilder2.append("VALUES (");
+      Cursor localCursor;
       for (;;)
       {
         try
         {
-          Cursor localCursor = mDb.rawQuery("PRAGMA table_info(" + mTableName + ")", null);
+          localCursor = mDb.rawQuery("PRAGMA table_info(" + mTableName + ")", null);
           localObject1 = localCursor;
           mColumns = new HashMap(localCursor.getCount());
           int i = 1;
           localObject1 = localCursor;
-          boolean bool = localCursor.moveToNext();
-          if (!bool)
-          {
-            if (localCursor != null) {
-              localCursor.close();
-            }
-            localStringBuilder1.append(localStringBuilder2);
-            mInsertSQL = localStringBuilder1.toString();
-            return;
+          if (!localCursor.moveToNext()) {
+            break;
           }
           localObject1 = localCursor;
           String str1 = localCursor.getString(1);
@@ -952,7 +918,7 @@ public class DatabaseUtils
               localStringBuilder1.append(str1);
               localObject1 = localCursor;
               if (i != localCursor.getCount()) {
-                break label377;
+                break label335;
               }
               str1 = ");";
               localObject1 = localCursor;
@@ -979,9 +945,14 @@ public class DatabaseUtils
           }
         }
         continue;
-        label377:
+        label335:
         String str2 = ", ";
       }
+      if (localCursor != null) {
+        localCursor.close();
+      }
+      localStringBuilder1.append(localStringBuilder2);
+      mInsertSQL = localStringBuilder1.toString();
     }
     
     private SQLiteStatement getStatement(boolean paramBoolean)
@@ -1013,76 +984,76 @@ public class DatabaseUtils
     {
       // Byte code:
       //   0: aload_0
-      //   1: getfield 39	com/tencent/kingkong/DatabaseUtils$InsertHelper:mDb	Lcom/tencent/kingkong/database/SQLiteDatabase;
-      //   4: invokevirtual 144	com/tencent/kingkong/database/SQLiteDatabase:beginTransactionNonExclusive	()V
+      //   1: getfield 40	com/tencent/kingkong/DatabaseUtils$InsertHelper:mDb	Lcom/tencent/kingkong/database/SQLiteDatabase;
+      //   4: invokevirtual 145	com/tencent/kingkong/database/SQLiteDatabase:beginTransactionNonExclusive	()V
       //   7: aload_0
       //   8: iload_2
-      //   9: invokespecial 146	com/tencent/kingkong/DatabaseUtils$InsertHelper:getStatement	(Z)Lcom/tencent/kingkong/database/SQLiteStatement;
+      //   9: invokespecial 147	com/tencent/kingkong/DatabaseUtils$InsertHelper:getStatement	(Z)Lcom/tencent/kingkong/database/SQLiteStatement;
       //   12: astore 5
       //   14: aload 5
-      //   16: invokevirtual 151	com/tencent/kingkong/database/SQLiteStatement:clearBindings	()V
+      //   16: invokevirtual 152	com/tencent/kingkong/database/SQLiteStatement:clearBindings	()V
       //   19: aload_1
-      //   20: invokevirtual 157	android/content/ContentValues:valueSet	()Ljava/util/Set;
-      //   23: invokeinterface 163 1 0
+      //   20: invokevirtual 158	android/content/ContentValues:valueSet	()Ljava/util/Set;
+      //   23: invokeinterface 164 1 0
       //   28: astore 6
       //   30: aload 6
-      //   32: invokeinterface 168 1 0
-      //   37: ifne +25 -> 62
-      //   40: aload 5
-      //   42: invokevirtual 172	com/tencent/kingkong/database/SQLiteStatement:executeInsert	()J
-      //   45: lstore_3
-      //   46: aload_0
-      //   47: getfield 39	com/tencent/kingkong/DatabaseUtils$InsertHelper:mDb	Lcom/tencent/kingkong/database/SQLiteDatabase;
-      //   50: invokevirtual 175	com/tencent/kingkong/database/SQLiteDatabase:setTransactionSuccessful	()V
-      //   53: aload_0
-      //   54: getfield 39	com/tencent/kingkong/DatabaseUtils$InsertHelper:mDb	Lcom/tencent/kingkong/database/SQLiteDatabase;
-      //   57: invokevirtual 178	com/tencent/kingkong/database/SQLiteDatabase:endTransaction	()V
-      //   60: lload_3
-      //   61: lreturn
-      //   62: aload 6
-      //   64: invokeinterface 182 1 0
-      //   69: checkcast 184	java/util/Map$Entry
-      //   72: astore 7
-      //   74: aload 5
-      //   76: aload_0
-      //   77: aload 7
-      //   79: invokeinterface 187 1 0
-      //   84: checkcast 130	java/lang/String
-      //   87: invokevirtual 191	com/tencent/kingkong/DatabaseUtils$InsertHelper:getColumnIndex	(Ljava/lang/String;)I
-      //   90: aload 7
-      //   92: invokeinterface 194 1 0
-      //   97: invokestatic 198	com/tencent/kingkong/DatabaseUtils:bindObjectToProgram	(Lcom/tencent/kingkong/database/SQLiteProgram;ILjava/lang/Object;)V
-      //   100: goto -70 -> 30
-      //   103: astore 5
-      //   105: ldc -56
-      //   107: new 45	java/lang/StringBuilder
-      //   110: dup
-      //   111: ldc -54
-      //   113: invokespecial 63	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-      //   116: aload_1
-      //   117: invokevirtual 205	java/lang/StringBuilder:append	(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-      //   120: ldc -49
-      //   122: invokevirtual 54	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      //   32: invokeinterface 169 1 0
+      //   37: ifeq +99 -> 136
+      //   40: aload 6
+      //   42: invokeinterface 173 1 0
+      //   47: checkcast 175	java/util/Map$Entry
+      //   50: astore 7
+      //   52: aload 5
+      //   54: aload_0
+      //   55: aload 7
+      //   57: invokeinterface 178 1 0
+      //   62: checkcast 131	java/lang/String
+      //   65: invokevirtual 182	com/tencent/kingkong/DatabaseUtils$InsertHelper:getColumnIndex	(Ljava/lang/String;)I
+      //   68: aload 7
+      //   70: invokeinterface 185 1 0
+      //   75: invokestatic 189	com/tencent/kingkong/DatabaseUtils:bindObjectToProgram	(Lcom/tencent/kingkong/database/SQLiteProgram;ILjava/lang/Object;)V
+      //   78: goto -48 -> 30
+      //   81: astore 5
+      //   83: ldc -65
+      //   85: new 46	java/lang/StringBuilder
+      //   88: dup
+      //   89: ldc -63
+      //   91: invokespecial 64	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+      //   94: aload_1
+      //   95: invokevirtual 196	java/lang/StringBuilder:append	(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+      //   98: ldc -58
+      //   100: invokevirtual 55	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      //   103: aload_0
+      //   104: getfield 42	com/tencent/kingkong/DatabaseUtils$InsertHelper:mTableName	Ljava/lang/String;
+      //   107: invokevirtual 55	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      //   110: invokevirtual 70	java/lang/StringBuilder:toString	()Ljava/lang/String;
+      //   113: iconst_1
+      //   114: anewarray 4	java/lang/Object
+      //   117: dup
+      //   118: iconst_0
+      //   119: aload 5
+      //   121: aastore
+      //   122: invokestatic 204	com/tencent/kingkong/support/Log:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   125: aload_0
-      //   126: getfield 41	com/tencent/kingkong/DatabaseUtils$InsertHelper:mTableName	Ljava/lang/String;
-      //   129: invokevirtual 54	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-      //   132: invokevirtual 69	java/lang/StringBuilder:toString	()Ljava/lang/String;
-      //   135: iconst_1
-      //   136: anewarray 4	java/lang/Object
-      //   139: dup
-      //   140: iconst_0
-      //   141: aload 5
-      //   143: aastore
-      //   144: invokestatic 213	com/tencent/kingkong/support/Log:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-      //   147: aload_0
-      //   148: getfield 39	com/tencent/kingkong/DatabaseUtils$InsertHelper:mDb	Lcom/tencent/kingkong/database/SQLiteDatabase;
-      //   151: invokevirtual 178	com/tencent/kingkong/database/SQLiteDatabase:endTransaction	()V
-      //   154: ldc2_w 214
+      //   126: getfield 40	com/tencent/kingkong/DatabaseUtils$InsertHelper:mDb	Lcom/tencent/kingkong/database/SQLiteDatabase;
+      //   129: invokevirtual 207	com/tencent/kingkong/database/SQLiteDatabase:endTransaction	()V
+      //   132: ldc2_w 208
+      //   135: lreturn
+      //   136: aload 5
+      //   138: invokevirtual 213	com/tencent/kingkong/database/SQLiteStatement:executeInsert	()J
+      //   141: lstore_3
+      //   142: aload_0
+      //   143: getfield 40	com/tencent/kingkong/DatabaseUtils$InsertHelper:mDb	Lcom/tencent/kingkong/database/SQLiteDatabase;
+      //   146: invokevirtual 216	com/tencent/kingkong/database/SQLiteDatabase:setTransactionSuccessful	()V
+      //   149: aload_0
+      //   150: getfield 40	com/tencent/kingkong/DatabaseUtils$InsertHelper:mDb	Lcom/tencent/kingkong/database/SQLiteDatabase;
+      //   153: invokevirtual 207	com/tencent/kingkong/database/SQLiteDatabase:endTransaction	()V
+      //   156: lload_3
       //   157: lreturn
       //   158: astore_1
       //   159: aload_0
-      //   160: getfield 39	com/tencent/kingkong/DatabaseUtils$InsertHelper:mDb	Lcom/tencent/kingkong/database/SQLiteDatabase;
-      //   163: invokevirtual 178	com/tencent/kingkong/database/SQLiteDatabase:endTransaction	()V
+      //   160: getfield 40	com/tencent/kingkong/DatabaseUtils$InsertHelper:mDb	Lcom/tencent/kingkong/database/SQLiteDatabase;
+      //   163: invokevirtual 207	com/tencent/kingkong/database/SQLiteDatabase:endTransaction	()V
       //   166: aload_1
       //   167: athrow
       // Local variable table:
@@ -1090,20 +1061,20 @@ public class DatabaseUtils
       //   0	168	0	this	InsertHelper
       //   0	168	1	paramContentValues	ContentValues
       //   0	168	2	paramBoolean	boolean
-      //   45	16	3	l	long
-      //   12	63	5	localSQLiteStatement	SQLiteStatement
-      //   103	39	5	localSQLException	SQLException
-      //   28	35	6	localIterator	java.util.Iterator
-      //   72	19	7	localEntry	java.util.Map.Entry
+      //   141	16	3	l	long
+      //   12	41	5	localSQLiteStatement	SQLiteStatement
+      //   81	56	5	localSQLException	SQLException
+      //   28	13	6	localIterator	java.util.Iterator
+      //   50	19	7	localEntry	java.util.Map.Entry
       // Exception table:
       //   from	to	target	type
-      //   7	30	103	com/tencent/kingkong/SQLException
-      //   30	53	103	com/tencent/kingkong/SQLException
-      //   62	100	103	com/tencent/kingkong/SQLException
+      //   7	30	81	com/tencent/kingkong/SQLException
+      //   30	78	81	com/tencent/kingkong/SQLException
+      //   136	149	81	com/tencent/kingkong/SQLException
       //   7	30	158	finally
-      //   30	53	158	finally
-      //   62	100	158	finally
-      //   105	147	158	finally
+      //   30	78	158	finally
+      //   83	125	158	finally
+      //   136	149	158	finally
     }
     
     public void bind(int paramInt, double paramDouble)
@@ -1140,9 +1111,9 @@ public class DatabaseUtils
     {
       SQLiteStatement localSQLiteStatement = mPreparedStatement;
       if (paramBoolean) {}
-      for (int i = 1;; i = 0)
+      for (long l = 1L;; l = 0L)
       {
-        localSQLiteStatement.bindLong(paramInt, i);
+        localSQLiteStatement.bindLong(paramInt, l);
         return;
       }
     }

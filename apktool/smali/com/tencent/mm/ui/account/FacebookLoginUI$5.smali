@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/FacebookLoginUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/FacebookLoginUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+.field final synthetic kRF:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 339
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$5;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    .line 344
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$5;->kRF:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,12 +40,12 @@
     .locals 1
 
     .prologue
-    .line 343
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$5;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    .line 348
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$5;->kRF:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->c(Lcom/tencent/mm/ui/account/FacebookLoginUI;)V
 
-    .line 344
+    .line 349
     const/4 v0, 0x1
 
     return v0

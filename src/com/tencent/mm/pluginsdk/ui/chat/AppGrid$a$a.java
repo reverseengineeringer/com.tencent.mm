@@ -6,11 +6,11 @@ import android.widget.TextView;
 
 final class AppGrid$a$a
 {
-  TextView emW;
-  ImageView fAr;
-  TextView iJH;
-  View iJI;
-  View iJJ;
+  TextView erW;
+  ImageView fJv;
+  TextView jgD;
+  View jgE;
+  View jgF;
   
   AppGrid$a$a(AppGrid.a parama) {}
 }

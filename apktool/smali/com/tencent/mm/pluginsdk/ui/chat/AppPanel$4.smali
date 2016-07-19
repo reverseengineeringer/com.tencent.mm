@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iKi:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;
+.field final synthetic jhe:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1151
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$4;->iKi:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;
+    .line 1191
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$4;->jhe:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,8 +40,8 @@
     .locals 5
 
     .prologue
-    .line 1154
-    invoke-static {}, Lcom/tencent/mm/modelcdntran/e;->xX()Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
+    .line 1194
+    invoke-static {}, Lcom/tencent/mm/modelcdntran/e;->ya()Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
 
     move-result-object v0
 
@@ -49,8 +49,8 @@
 
     move-result v0
 
-    .line 1155
-    const-string/jumbo v1, "!32@/B4Tb64lLpIswCbzJzq2kbhBmMfFikWd"
+    .line 1195
+    const-string/jumbo v1, "MicroMsg.AppPanel"
 
     const-string/jumbo v2, "preMakeConnection ret:%d"
 
@@ -66,11 +66,11 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1156
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->aRC()Z
+    .line 1196
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel;->aWp()Z
 
-    .line 1157
+    .line 1197
     return-void
 .end method

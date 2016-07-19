@@ -11,9 +11,9 @@ final class MMBaseSelectContactUI$1
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    MMBaseSelectContactUI.a(lle);
-    lle.bhs();
-    lle.bht();
+    MMBaseSelectContactUI.a(lLr);
+    lLr.bnd();
+    lLr.bne();
     return false;
   }
 }

@@ -10,7 +10,7 @@ final class LoginHistoryUI$3
   
   public final void onClick(View paramView)
   {
-    LoginHistoryUI.e(ktx);
+    LoginHistoryUI.e(kSF);
   }
 }
 

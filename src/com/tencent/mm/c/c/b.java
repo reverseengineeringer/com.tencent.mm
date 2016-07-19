@@ -1,6 +1,6 @@
 package com.tencent.mm.c.c;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.BufferedOutputStream;
 import java.io.DataOutputStream;
 import java.io.File;
@@ -11,18 +11,18 @@ import java.nio.ByteOrder;
 
 public final class b
 {
-  public String arA;
-  DataOutputStream arB;
-  int arC;
+  public String adi;
+  DataOutputStream adj;
+  int adk;
   
   public b(String paramString, int paramInt1, int paramInt2)
   {
-    arA = paramString;
+    adi = paramString;
     paramString = new File(paramString);
     try
     {
       paramString.createNewFile();
-      arB = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(paramString)));
+      adj = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(paramString)));
       paramString = ByteBuffer.allocate(44);
       paramString.order(ByteOrder.LITTLE_ENDIAN);
       paramString.putInt(1179011410);
@@ -38,47 +38,47 @@ public final class b
       paramString.putShort((short)16);
       paramString.putInt(1635017060);
       paramString.putInt(0);
-      arC = 44;
-      arB.write(paramString.array());
+      adk = 44;
+      adj.write(paramString.array());
       return;
     }
     catch (IOException paramString)
     {
-      u.e("!32@/B4Tb64lLpKpZHW/L14GFGPrC+e0fvOZ", "create file failed: " + paramString.getMessage());
+      v.e("MicroMsg.PcmWriter", "create file failed: " + paramString.getMessage());
     }
   }
   
   public final boolean h(byte[] paramArrayOfByte, int paramInt)
   {
-    if (arB == null) {
+    if (adj == null) {
       return false;
     }
     try
     {
-      arB.write(paramArrayOfByte, 0, paramInt);
-      arC += paramInt;
+      adj.write(paramArrayOfByte, 0, paramInt);
+      adk += paramInt;
       return true;
     }
     catch (Exception paramArrayOfByte)
     {
-      u.e("!32@/B4Tb64lLpKpZHW/L14GFGPrC+e0fvOZ", "write to file failed: " + paramArrayOfByte.getMessage());
+      v.e("MicroMsg.PcmWriter", "write to file failed: " + paramArrayOfByte.getMessage());
     }
     return false;
   }
   
   /* Error */
-  public final void lV()
+  public final void kl()
   {
     // Byte code:
     //   0: aload_0
-    //   1: getfield 43	com/tencent/mm/c/c/b:arB	Ljava/io/DataOutputStream;
+    //   1: getfield 43	com/tencent/mm/c/c/b:adj	Ljava/io/DataOutputStream;
     //   4: invokevirtual 121	java/io/DataOutputStream:close	()V
     //   7: aconst_null
     //   8: astore_2
     //   9: new 123	java/io/RandomAccessFile
     //   12: dup
     //   13: aload_0
-    //   14: getfield 19	com/tencent/mm/c/c/b:arA	Ljava/lang/String;
+    //   14: getfield 19	com/tencent/mm/c/c/b:adi	Ljava/lang/String;
     //   17: ldc 125
     //   19: invokespecial 127	java/io/RandomAccessFile:<init>	(Ljava/lang/String;Ljava/lang/String;)V
     //   22: astore_1
@@ -94,7 +94,7 @@ public final class b
     //   42: pop
     //   43: aload_2
     //   44: aload_0
-    //   45: getfield 72	com/tencent/mm/c/c/b:arC	I
+    //   45: getfield 72	com/tencent/mm/c/c/b:adk	I
     //   48: bipush 8
     //   50: isub
     //   51: invokevirtual 63	java/nio/ByteBuffer:putInt	(I)Ljava/nio/ByteBuffer;
@@ -108,7 +108,7 @@ public final class b
     //   67: pop
     //   68: aload_2
     //   69: aload_0
-    //   70: getfield 72	com/tencent/mm/c/c/b:arC	I
+    //   70: getfield 72	com/tencent/mm/c/c/b:adk	I
     //   73: bipush 42
     //   75: isub
     //   76: invokevirtual 63	java/nio/ByteBuffer:putInt	(I)Ljava/nio/ByteBuffer;
@@ -133,7 +133,7 @@ public final class b
     //   113: invokevirtual 91	java/io/IOException:getMessage	()Ljava/lang/String;
     //   116: invokevirtual 95	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   119: invokevirtual 98	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   122: invokestatic 104	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   122: invokestatic 104	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   125: goto -118 -> 7
     //   128: astore_1
     //   129: aconst_null

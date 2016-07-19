@@ -14,14 +14,12 @@ final class n$8
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (kqi != null)
+    if (kPn != null)
     {
-      if (!(cms instanceof LauncherUI)) {
-        cms.finish();
-      }
-      cms.startActivity(kqi);
-      b.w(cms, kqi);
-      d.aW(cms);
+      chx.finish();
+      chx.startActivity(kPn);
+      b.w(chx, kPn);
+      d.aS(chx);
     }
   }
 }

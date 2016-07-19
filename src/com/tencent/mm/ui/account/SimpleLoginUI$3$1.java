@@ -7,9 +7,9 @@ final class SimpleLoginUI$3$1
 {
   SimpleLoginUI$3$1(SimpleLoginUI.3 param3) {}
   
-  public final void aEY()
+  public final void oq()
   {
-    kwM.kwL.finish();
+    kVT.kVS.finish();
   }
 }
 

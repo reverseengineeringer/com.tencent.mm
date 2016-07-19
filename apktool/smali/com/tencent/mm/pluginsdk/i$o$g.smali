@@ -15,14 +15,23 @@
 
 
 # virtual methods
-.method public abstract aAK()Z
+.method public abstract aDA()Z
 .end method
 
-.method public abstract cA(J)Ljava/util/List;
+.method public abstract cP(J)Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(J)",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 .end method
 
-.method public abstract cB(J)Ljava/lang/String;
+.method public abstract cQ(J)Ljava/lang/String;
 .end method
 
-.method public abstract q(Ljava/lang/String;J)Z
+.method public abstract t(Ljava/lang/String;J)Z
 .end method

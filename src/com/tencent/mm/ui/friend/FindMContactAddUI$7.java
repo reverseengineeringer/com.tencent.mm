@@ -13,36 +13,36 @@ final class FindMContactAddUI$7
   
   public final void notifyDataSetChanged()
   {
-    if ((FindMContactAddUI.e(lrt) != 2) && (FindMContactAddUI.e(lrt) == 1))
+    if ((FindMContactAddUI.e(lRX) != 2) && (FindMContactAddUI.e(lRX) == 1))
     {
-      FindMContactAddUI.f(lrt).setText(lrt.getString(2131428721));
-      if (!FindMContactAddUI.c(lrt).yy()) {
+      FindMContactAddUI.f(lRX).setText(lRX.getString(2131232757));
+      if (!FindMContactAddUI.c(lRX).yL()) {
         break label230;
       }
-      if ((FindMContactAddUI.e(lrt) != 1) && (FindMContactAddUI.f(lrt).getVisibility() == 0) && (FindMContactAddUI.g(lrt) != null))
+      if ((FindMContactAddUI.e(lRX) != 1) && (FindMContactAddUI.f(lRX).getVisibility() == 0) && (FindMContactAddUI.g(lRX) != null))
       {
-        FindMContactAddUI.f(lrt).setVisibility(8);
-        FindMContactAddUI.g(lrt).setVisibility(0);
+        FindMContactAddUI.f(lRX).setVisibility(8);
+        FindMContactAddUI.g(lRX).setVisibility(0);
       }
     }
     for (;;)
     {
-      if ((FindMContactAddUI.c(lrt).getSelectCount() <= 0) || (FindMContactAddUI.e(lrt) == 1)) {
+      if ((FindMContactAddUI.c(lRX).yK() <= 0) || (FindMContactAddUI.e(lRX) == 1)) {
         break label292;
       }
-      FindMContactAddUI.h(lrt).setText(lrt.getResources().getQuantityString(2131755020, FindMContactAddUI.c(lrt).getSelectCount(), new Object[] { Integer.valueOf(FindMContactAddUI.c(lrt).getSelectCount()) }));
+      FindMContactAddUI.h(lRX).setText(lRX.getResources().getQuantityString(2131361797, FindMContactAddUI.c(lRX).yK(), new Object[] { Integer.valueOf(FindMContactAddUI.c(lRX).yK()) }));
       return;
-      FindMContactAddUI.f(lrt).setText(lrt.getString(2131428720, new Object[] { Integer.valueOf(FindMContactAddUI.c(lrt).getCount()) }));
+      FindMContactAddUI.f(lRX).setText(lRX.getString(2131232756, new Object[] { Integer.valueOf(FindMContactAddUI.c(lRX).getCount()) }));
       break;
       label230:
-      if ((FindMContactAddUI.e(lrt) != 1) && (FindMContactAddUI.f(lrt).getVisibility() == 8) && (FindMContactAddUI.g(lrt) != null))
+      if ((FindMContactAddUI.e(lRX) != 1) && (FindMContactAddUI.f(lRX).getVisibility() == 8) && (FindMContactAddUI.g(lRX) != null))
       {
-        FindMContactAddUI.f(lrt).setVisibility(0);
-        FindMContactAddUI.g(lrt).setVisibility(8);
+        FindMContactAddUI.f(lRX).setVisibility(0);
+        FindMContactAddUI.g(lRX).setVisibility(8);
       }
     }
     label292:
-    FindMContactAddUI.h(lrt).setText(lrt.getResources().getQuantityString(2131755018, FindMContactAddUI.c(lrt).getCount(), new Object[] { Integer.valueOf(FindMContactAddUI.c(lrt).getCount()) }));
+    FindMContactAddUI.h(lRX).setText(lRX.getResources().getQuantityString(2131361800, FindMContactAddUI.c(lRX).getCount(), new Object[] { Integer.valueOf(FindMContactAddUI.c(lRX).getCount()) }));
   }
 }
 

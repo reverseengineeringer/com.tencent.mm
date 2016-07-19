@@ -17,12 +17,7 @@ final class d
   
   protected final void a(a parama) {}
   
-  protected final boolean jY()
-  {
-    return (s.j(context, "android.permission.WRITE_EXTERNAL_STORAGE")) && (Environment.getExternalStorageState().equals("mounted"));
-  }
-  
-  protected final String jZ()
+  protected final String iA()
   {
     for (;;)
     {
@@ -57,9 +52,14 @@ final class d
     }
   }
   
-  protected final a ka()
+  protected final a iB()
   {
     return null;
+  }
+  
+  protected final boolean iz()
+  {
+    return (s.k(context, "android.permission.WRITE_EXTERNAL_STORAGE")) && (Environment.getExternalStorageState().equals("mounted"));
   }
   
   /* Error */
@@ -68,25 +68,25 @@ final class d
     // Byte code:
     //   0: aload_0
     //   1: monitorenter
-    //   2: new 88	java/lang/StringBuilder
+    //   2: new 72	java/lang/StringBuilder
     //   5: dup
     //   6: invokespecial 105	java/lang/StringBuilder:<init>	()V
-    //   9: invokestatic 48	android/os/Environment:getExternalStorageDirectory	()Ljava/io/File;
+    //   9: invokestatic 23	android/os/Environment:getExternalStorageDirectory	()Ljava/io/File;
     //   12: invokevirtual 108	java/lang/StringBuilder:append	(Ljava/lang/Object;)Ljava/lang/StringBuilder;
     //   15: ldc 110
-    //   17: invokevirtual 97	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   17: invokevirtual 81	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   20: ldc 112
-    //   22: invokestatic 54	com/tencent/c/a/a/s:decode	(Ljava/lang/String;)Ljava/lang/String;
-    //   25: invokevirtual 97	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   22: invokestatic 31	com/tencent/c/a/a/s:decode	(Ljava/lang/String;)Ljava/lang/String;
+    //   25: invokevirtual 81	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   28: invokevirtual 115	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   31: invokestatic 119	com/tencent/c/a/a/c:ap	(Ljava/lang/String;)Ljava/io/File;
+    //   31: invokestatic 119	com/tencent/c/a/a/c:at	(Ljava/lang/String;)Ljava/io/File;
     //   34: pop
-    //   35: new 44	java/io/File
+    //   35: new 17	java/io/File
     //   38: dup
-    //   39: invokestatic 48	android/os/Environment:getExternalStorageDirectory	()Ljava/io/File;
-    //   42: ldc 50
-    //   44: invokestatic 54	com/tencent/c/a/a/s:decode	(Ljava/lang/String;)Ljava/lang/String;
-    //   47: invokespecial 57	java/io/File:<init>	(Ljava/io/File;Ljava/lang/String;)V
+    //   39: invokestatic 23	android/os/Environment:getExternalStorageDirectory	()Ljava/io/File;
+    //   42: ldc 25
+    //   44: invokestatic 31	com/tencent/c/a/a/s:decode	(Ljava/lang/String;)Ljava/lang/String;
+    //   47: invokespecial 34	java/io/File:<init>	(Ljava/io/File;Ljava/lang/String;)V
     //   50: astore_2
     //   51: new 121	java/io/BufferedWriter
     //   54: dup
@@ -97,16 +97,16 @@ final class d
     //   63: invokespecial 129	java/io/BufferedWriter:<init>	(Ljava/io/Writer;)V
     //   66: astore_2
     //   67: aload_2
-    //   68: new 88	java/lang/StringBuilder
+    //   68: new 72	java/lang/StringBuilder
     //   71: dup
-    //   72: ldc 86
-    //   74: invokestatic 54	com/tencent/c/a/a/s:decode	(Ljava/lang/String;)Ljava/lang/String;
+    //   72: ldc 66
+    //   74: invokestatic 31	com/tencent/c/a/a/s:decode	(Ljava/lang/String;)Ljava/lang/String;
     //   77: invokestatic 133	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
-    //   80: invokespecial 93	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   83: ldc 80
-    //   85: invokevirtual 97	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   80: invokespecial 77	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   83: ldc 60
+    //   85: invokevirtual 81	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   88: aload_1
-    //   89: invokevirtual 97	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   89: invokevirtual 81	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   92: invokevirtual 115	java/lang/StringBuilder:toString	()Ljava/lang/String;
     //   95: invokevirtual 135	java/io/BufferedWriter:write	(Ljava/lang/String;)V
     //   98: aload_2

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->Gb()V
+    value = Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+.field final synthetic lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 363
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$16;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$16;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 374
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$16;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$16;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->b(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;)V
 

@@ -1,17 +1,17 @@
 package com.tencent.mm.ui.applet;
 
 import android.widget.Toast;
-import com.tencent.mm.ba.c.b;
+import com.tencent.mm.bd.c.b;
 
 final class d$a$1
   implements c.b
 {
   d$a$1(d.a parama) {}
   
-  public final void aZi()
+  public final void bez()
   {
-    kzY.eh(kzY.context);
-    Toast.makeText(kzY.context, "trace file has saved ", 0).show();
+    kZe.el(kZe.context);
+    Toast.makeText(kZe.context, "trace file has saved ", 0).show();
   }
 }
 

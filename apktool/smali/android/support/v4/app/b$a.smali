@@ -15,23 +15,32 @@
 
 
 # instance fields
-.field aG:Landroid/support/v4/app/b$a;
+.field ah:Landroid/support/v4/app/b$a;
 
-.field aH:Landroid/support/v4/app/b$a;
+.field ai:Landroid/support/v4/app/b$a;
 
-.field aI:I
+.field aj:I
 
-.field aJ:Landroid/support/v4/app/Fragment;
+.field ak:Landroid/support/v4/app/Fragment;
 
-.field aK:I
+.field al:I
 
-.field aL:I
+.field am:I
 
-.field aM:I
+.field an:I
 
-.field aN:I
+.field ao:I
 
-.field aO:Ljava/util/ArrayList;
+.field ap:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/support/v4/app/Fragment;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods

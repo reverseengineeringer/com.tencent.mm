@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kPd:Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI;
+.field final synthetic lot:Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 275
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI$7;->kPd:Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI$7;->lot:Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

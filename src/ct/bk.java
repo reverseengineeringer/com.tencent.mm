@@ -1,73 +1,35 @@
 package ct;
 
-import android.text.TextUtils;
+import android.os.Bundle;
 
-public final class bk
+public abstract class bk
 {
-  public final bj a;
-  public int b;
-  String c;
-  String d;
-  public String e;
-  String f;
-  public String g;
-  public String h;
-  public String i;
-  public String j;
-  public int k;
-  public int l;
-  public long m;
-  public String n;
-  String o = "4.4.8";
-  String p = "151203";
-  public String q = "4.4.8";
-  public boolean r = true;
-  public boolean s = false;
-  public boolean t = true;
+  private String a;
+  private String b;
+  private boolean c;
   
-  bk(bj parambj)
+  public bk(String paramString1, String paramString2)
   {
-    a = parambj;
+    a = paramString1;
+    b = paramString2;
+    c = true;
   }
   
-  public final String a()
+  public void a() {}
+  
+  protected abstract boolean a(Bundle paramBundle);
+  
+  public final boolean b(Bundle paramBundle)
   {
-    if (TextUtils.isEmpty(c)) {
-      return "0123456789ABCDEF";
+    if (!c) {
+      return false;
     }
-    return c;
+    return a(paramBundle);
   }
   
-  public final String b()
+  public String toString()
   {
-    if (TextUtils.isEmpty(d)) {
-      return "0123456789ABCDEF";
-    }
-    return d;
-  }
-  
-  public final String c()
-  {
-    if (TextUtils.isEmpty(f)) {
-      return "0123456789ABCDEF";
-    }
-    return f;
-  }
-  
-  public final String d()
-  {
-    if (o == null) {
-      return "None";
-    }
-    return o;
-  }
-  
-  public final String e()
-  {
-    if (p == null) {
-      return "None";
-    }
-    return p;
+    return "[name=" + a + ",desc=" + b + ",enabled=" + c + "]";
   }
 }
 

@@ -15,23 +15,23 @@
 
 
 # instance fields
-.field ajh:Ljava/lang/String;
+.field UX:Ljava/lang/String;
 
-.field cqK:Landroid/widget/TextView;
+.field clX:Landroid/widget/TextView;
 
-.field czS:Landroid/widget/ImageView;
+.field cui:Landroid/widget/ImageView;
 
-.field dFw:Landroid/widget/TextView;
+.field dGX:Landroid/widget/TextView;
 
-.field fya:Landroid/widget/TextView;
+.field fHe:Landroid/widget/TextView;
 
-.field final synthetic hds:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+.field final synthetic hsf:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
-.field hdt:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+.field hsg:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
-.field hdu:Ljava/lang/Object;
+.field hsh:Ljava/lang/Object;
 
-.field hdv:Lcom/tencent/mm/protocal/b/apz;
+.field hsi:Lcom/tencent/mm/protocal/b/aqk;
 
 
 # direct methods
@@ -39,8 +39,8 @@
     .locals 0
 
     .prologue
-    .line 2871
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$a;->hds:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    .line 3030
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$a;->hsf:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

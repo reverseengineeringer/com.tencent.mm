@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic oh:Landroid/support/v7/internal/widget/ActionBarView;
+.field final synthetic ox:Landroid/support/v7/internal/widget/ActionBarView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 150
-    iput-object p1, p0, Landroid/support/v7/internal/widget/ActionBarView$2;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iput-object p1, p0, Landroid/support/v7/internal/widget/ActionBarView$2;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,13 +41,13 @@
 
     .prologue
     .line 153
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$2;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$2;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ActionBarView;->a(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/support/v7/internal/widget/ActionBarView$a;
 
     move-result-object v0
 
-    iget-object v0, v0, Landroid/support/v7/internal/widget/ActionBarView$a;->oi:Landroid/support/v7/internal/view/menu/h;
+    iget-object v0, v0, Landroid/support/v7/internal/widget/ActionBarView$a;->oy:Landroid/support/v7/internal/view/menu/h;
 
     .line 154
     if-eqz v0, :cond_0

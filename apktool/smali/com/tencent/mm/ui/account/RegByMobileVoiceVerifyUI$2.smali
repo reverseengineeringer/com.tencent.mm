@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kvq:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;
+.field final synthetic kUx:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 138
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$2;->kvq:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$2;->kUx:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 142
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$2;->kvq:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$2;->kUx:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;
 
     new-instance v1, Landroid/content/Intent;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$2;->kvq:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$2;->kUx:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;
 
     const-class v3, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI;
 
@@ -53,7 +53,7 @@
 
     const-string/jumbo v2, "voice_verify_code"
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$2;->kvq:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$2;->kUx:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;
 
     invoke-static {v3}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->a(Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;)Ljava/lang/String;
 

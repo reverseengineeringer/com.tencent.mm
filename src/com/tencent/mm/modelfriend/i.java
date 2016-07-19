@@ -2,18 +2,18 @@ package com.tencent.mm.modelfriend;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import junit.framework.Assert;
 
 public final class i
   extends com.tencent.mm.sdk.h.g
 {
-  public static final String[] aoY = { "CREATE TABLE IF NOT EXISTS facebookfriend ( fbid long  PRIMARY KEY , fbname text  , fbimgkey int  , status int  , username text  , nickname text  , nicknamepyinitial text  , nicknamequanpin text  , sex int  , personalcard int  , province text  , city text  , signature text  , alias text  , type int  , email text  ) " };
-  public com.tencent.mm.az.g bCw;
+  public static final String[] bkN = { "CREATE TABLE IF NOT EXISTS facebookfriend ( fbid long  PRIMARY KEY , fbname text  , fbimgkey int  , status int  , username text  , nickname text  , nicknamepyinitial text  , nicknamequanpin text  , sex int  , personalcard int  , province text  , city text  , signature text  , alias text  , type int  , email text  ) " };
+  public com.tencent.mm.bc.g bvG;
   
-  public i(com.tencent.mm.az.g paramg)
+  public i(com.tencent.mm.bc.g paramg)
   {
-    bCw = paramg;
+    bvG = paramg;
   }
   
   public final boolean a(h paramh)
@@ -21,13 +21,13 @@ public final class i
     boolean bool;
     Object localObject;
     int i;
-    if (aou == -1)
+    if (aqQ == -1)
     {
       bool = true;
       Assert.assertTrue("Func Set always conv_flag == flag_all", bool);
-      long l = aSw;
-      localObject = "select facebookfriend.fbid,facebookfriend.fbname,facebookfriend.fbimgkey,facebookfriend.status,facebookfriend.username,facebookfriend.nickname,facebookfriend.nicknamepyinitial,facebookfriend.nicknamequanpin,facebookfriend.sex,facebookfriend.personalcard,facebookfriend.province,facebookfriend.city,facebookfriend.signature,facebookfriend.alias,facebookfriend.type,facebookfriend.email from facebookfriend   where facebookfriend.fbid = \"" + ay.kx(String.valueOf(l)) + "\"";
-      localObject = bCw.rawQuery((String)localObject, null);
+      long l = aFf;
+      localObject = "select facebookfriend.fbid,facebookfriend.fbname,facebookfriend.fbimgkey,facebookfriend.status,facebookfriend.username,facebookfriend.nickname,facebookfriend.nicknamepyinitial,facebookfriend.nicknamequanpin,facebookfriend.sex,facebookfriend.personalcard,facebookfriend.province,facebookfriend.city,facebookfriend.signature,facebookfriend.alias,facebookfriend.type,facebookfriend.email from facebookfriend   where facebookfriend.fbid = \"" + be.lh(String.valueOf(l)) + "\"";
+      localObject = bvG.rawQuery((String)localObject, null);
       if (((Cursor)localObject).getCount() <= 0) {
         break label121;
       }
@@ -37,9 +37,9 @@ public final class i
       if (i != 0) {
         break label128;
       }
-      aou = -1;
-      paramh = paramh.lX();
-      if ((int)bCw.insert("facebookfriend", "fbid", paramh) == -1) {
+      aqQ = -1;
+      paramh = paramh.kn();
+      if ((int)bvG.insert("facebookfriend", "fbid", paramh) == -1) {
         break label126;
       }
     }
@@ -54,18 +54,18 @@ public final class i
       i = 0;
       break label76;
       return false;
-      localObject = paramh.lX();
-      i = bCw.update("facebookfriend", (ContentValues)localObject, "fbid=?", new String[] { aSw });
+      localObject = paramh.kn();
+      i = bvG.update("facebookfriend", (ContentValues)localObject, "fbid=?", new String[] { aFf });
       if (i > 0) {
-        Ep();
+        EJ();
       }
     } while (i > 0);
     return false;
   }
   
-  public final boolean yx()
+  public final boolean yJ()
   {
-    return bCw.cj("facebookfriend", "delete from facebookfriend");
+    return bvG.cx("facebookfriend", "delete from facebookfriend");
   }
 }
 

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract hw(Ljava/lang/String;)Landroid/graphics/Bitmap;
+.method public abstract hO(Ljava/lang/String;)Landroid/graphics/Bitmap;
 .end method

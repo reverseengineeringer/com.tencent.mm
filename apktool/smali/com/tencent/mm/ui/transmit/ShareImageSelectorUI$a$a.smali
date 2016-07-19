@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field lBE:I
+.field mcw:I
 
-.field lBF:I
+.field mcx:I
 
-.field final synthetic lBG:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$a;
+.field final synthetic mcy:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$a;
 
 
 # direct methods
@@ -27,17 +27,17 @@
     .locals 0
 
     .prologue
-    .line 367
-    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$a$a;->lBG:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$a;
+    .line 370
+    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$a$a;->mcy:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 368
-    iput p2, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$a$a;->lBE:I
+    .line 371
+    iput p2, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$a$a;->mcw:I
 
-    .line 369
-    iput p3, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$a$a;->lBF:I
+    .line 372
+    iput p3, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$a$a;->mcx:I
 
-    .line 370
+    .line 373
     return-void
 .end method

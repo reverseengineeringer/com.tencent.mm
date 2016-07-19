@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/tencent/smtt/export/external/interfaces/ISelectionInterface;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # static fields

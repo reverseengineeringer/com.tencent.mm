@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/rx" android:background="@drawable/mf" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hb"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/c51" android:background="@drawable/mg" android:layout_width="fill_parent" android:layout_height="77.0dip" android:layout_alignParentTop="true">
+            <ImageView android:id="@id/c52" android:layout_width="@dimen/p0" android:layout_height="@dimen/p0" android:layout_marginLeft="@dimen/hr" android:src="@raw/shake_card_package_defaultlogo" android:scaleType="fitCenter" />
+            <TextView android:textSize="@dimen/dx" android:textColor="@color/ow" android:ellipsize="end" android:id="@id/s0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hj" android:layout_marginRight="@dimen/hr" android:singleLine="true" />
+        </LinearLayout>
+        <ImageView android:id="@id/c53" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/aqk" android:layout_alignBottom="@id/c51" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/c54" android:layout_width="fill_parent" android:layout_height="31.0dip">
+        <TextView android:textSize="@dimen/jc" android:textColor="@color/gn" android:ellipsize="end" android:gravity="left" android:id="@id/q3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hr" android:singleLine="true" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/jc" android:textColor="@color/gn" android:gravity="right" android:id="@id/c55" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j8" android:layout_marginRight="@dimen/hr" android:minWidth="80.0dip" android:singleLine="true" />
+    </LinearLayout>
+</LinearLayout>

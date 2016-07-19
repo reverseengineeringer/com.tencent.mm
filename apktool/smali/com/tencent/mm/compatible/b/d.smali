@@ -12,23 +12,32 @@
 
 
 # static fields
-.field private static bpw:Z
+.field private static bdv:Z
 
-.field public static bpx:Z
+.field public static bdw:Z
 
-.field private static bpy:Z
+.field private static bdx:Z
 
-.field private static bpz:Z
+.field private static bdy:Z
 
 
 # instance fields
-.field private final aod:Ljava/util/Set;
+.field private final bdA:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set",
+            "<",
+            "Lcom/tencent/mm/compatible/b/d$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public bpA:I
+.field public final bdt:Landroid/media/AudioManager;
 
-.field public final bpu:Landroid/media/AudioManager;
+.field private bdu:I
 
-.field private bpv:I
+.field public bdz:I
 
 
 # direct methods
@@ -38,17 +47,17 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 48
-    sput-boolean v0, Lcom/tencent/mm/compatible/b/d;->bpw:Z
-
     .line 49
-    sput-boolean v0, Lcom/tencent/mm/compatible/b/d;->bpx:Z
+    sput-boolean v0, Lcom/tencent/mm/compatible/b/d;->bdv:Z
 
-    .line 51
-    sput-boolean v0, Lcom/tencent/mm/compatible/b/d;->bpy:Z
+    .line 50
+    sput-boolean v0, Lcom/tencent/mm/compatible/b/d;->bdw:Z
 
     .line 52
-    sput-boolean v0, Lcom/tencent/mm/compatible/b/d;->bpz:Z
+    sput-boolean v0, Lcom/tencent/mm/compatible/b/d;->bdx:Z
+
+    .line 53
+    sput-boolean v0, Lcom/tencent/mm/compatible/b/d;->bdy:Z
 
     return-void
 .end method
@@ -68,25 +77,25 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 86
+    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
+    .line 40
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/compatible/b/d;->bpv:I
+    iput v0, p0, Lcom/tencent/mm/compatible/b/d;->bdu:I
 
-    .line 54
-    iput v4, p0, Lcom/tencent/mm/compatible/b/d;->bpA:I
+    .line 55
+    iput v4, p0, Lcom/tencent/mm/compatible/b/d;->bdz:I
 
-    .line 60
+    .line 61
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/compatible/b/d;->aod:Ljava/util/Set;
+    iput-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdA:Ljava/util/Set;
 
-    .line 87
+    .line 88
     const-string/jumbo v0, "audio"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -95,10 +104,10 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    iput-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    iput-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
-    .line 88
-    const-string/jumbo v0, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 89
+    const-string/jumbo v0, "MicroMsg.MMAudioManager"
 
     const-string/jumbo v1, "init dkbt %s"
 
@@ -106,15 +115,15 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->nQ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->mg()Ljava/lang/String;
 
     move-result-object v3
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 90
+    .line 91
     new-instance v0, Lcom/tencent/mm/compatible/b/d$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/compatible/b/d$1;-><init>(Lcom/tencent/mm/compatible/b/d;)V
@@ -127,7 +136,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 103
+    .line 104
     new-instance v0, Lcom/tencent/mm/compatible/b/d$2;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/compatible/b/d$2;-><init>(Lcom/tencent/mm/compatible/b/d;)V
@@ -140,7 +149,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 113
+    .line 114
     new-instance v0, Lcom/tencent/mm/compatible/b/d$3;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/compatible/b/d$3;-><init>(Lcom/tencent/mm/compatible/b/d;)V
@@ -153,16 +162,16 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 126
+    .line 127
     const/16 v0, 0xb
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/util/e;->bU(I)Z
+    invoke-static {v0}, Lcom/tencent/mm/compatible/util/e;->cm(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 128
+    .line 129
     new-instance v0, Lcom/tencent/mm/compatible/b/d$4;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/compatible/b/d$4;-><init>(Lcom/tencent/mm/compatible/b/d;)V
@@ -175,42 +184,42 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 153
+    .line 154
     :cond_0
     return-void
+.end method
+
+.method static synthetic Z(Z)Z
+    .locals 0
+
+    .prologue
+    .line 36
+    sput-boolean p0, Lcom/tencent/mm/compatible/b/d;->bdx:Z
+
+    return p0
 .end method
 
 .method static synthetic a(Lcom/tencent/mm/compatible/b/d;)Landroid/media/AudioManager;
     .locals 1
 
     .prologue
-    .line 35
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 36
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     return-object v0
 .end method
 
-.method static synthetic aw(Z)Z
+.method static synthetic aa(Z)Z
     .locals 0
 
     .prologue
-    .line 35
-    sput-boolean p0, Lcom/tencent/mm/compatible/b/d;->bpy:Z
+    .line 36
+    sput-boolean p0, Lcom/tencent/mm/compatible/b/d;->bdv:Z
 
     return p0
 .end method
 
-.method static synthetic ax(Z)Z
-    .locals 0
-
-    .prologue
-    .line 35
-    sput-boolean p0, Lcom/tencent/mm/compatible/b/d;->bpw:Z
-
-    return p0
-.end method
-
-.method private static nO()Z
+.method private static md()Z
     .locals 4
     .annotation build Landroid/annotation/TargetApi;
         value = 0xe
@@ -221,7 +230,7 @@
 
     const/4 v0, 0x1
 
-    .line 206
+    .line 207
     :try_start_0
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -229,7 +238,7 @@
 
     if-lt v2, v3, :cond_2
 
-    .line 207
+    .line 208
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v2
@@ -244,7 +253,7 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 218
+    .line 219
     :cond_0
     :goto_0
     return v0
@@ -252,23 +261,23 @@
     :cond_1
     move v0, v1
 
-    .line 207
+    .line 208
     goto :goto_0
 
-    .line 208
+    .line 209
     :cond_2
-    sget-boolean v2, Lcom/tencent/mm/compatible/b/d;->bpw:Z
+    sget-boolean v2, Lcom/tencent/mm/compatible/b/d;->bdv:Z
 
     if-nez v2, :cond_0
 
-    .line 211
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    .line 212
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/j;->brL:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/j;->bfM:I
 
     if-ne v2, v0, :cond_3
 
-    .line 212
+    .line 213
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
@@ -281,24 +290,50 @@
 
     goto :goto_0
 
-    .line 216
+    .line 217
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    const-string/jumbo v0, "MicroMsg.MMAudioManager"
 
     const-string/jumbo v2, "dkbt exception in isConnectDevice()"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     move v0, v1
 
-    .line 218
+    .line 219
     goto :goto_0
 .end method
 
-.method public static nP()Z
+.method public static me()I
+    .locals 2
+
+    .prologue
+    .line 232
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "audio"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/media/AudioManager;
+
+    .line 233
+    invoke-virtual {v0}, Landroid/media/AudioManager;->isBluetoothScoOn()Z
+
+    .line 235
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public static mf()Z
     .locals 5
 
     .prologue
@@ -306,8 +341,8 @@
 
     const/4 v1, 0x0
 
-    .line 231
-    const-string/jumbo v0, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 244
+    const-string/jumbo v0, "MicroMsg.MMAudioManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -315,7 +350,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-boolean v4, Lcom/tencent/mm/compatible/b/d;->bpy:Z
+    sget-boolean v4, Lcom/tencent/mm/compatible/b/d;->bdx:Z
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -327,7 +362,7 @@
 
     move-result-object v3
 
-    sget-boolean v4, Lcom/tencent/mm/compatible/b/d;->bpz:Z
+    sget-boolean v4, Lcom/tencent/mm/compatible/b/d;->bdy:Z
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -337,26 +372,26 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 232
-    sget-boolean v0, Lcom/tencent/mm/compatible/b/d;->bpy:Z
+    .line 245
+    sget-boolean v0, Lcom/tencent/mm/compatible/b/d;->bdx:Z
 
     if-eqz v0, :cond_0
 
-    sget-boolean v0, Lcom/tencent/mm/compatible/b/d;->bpz:Z
+    sget-boolean v0, Lcom/tencent/mm/compatible/b/d;->bdy:Z
 
     if-nez v0, :cond_0
 
     move v0, v1
 
-    .line 277
+    .line 290
     :goto_0
     return v0
 
-    .line 235
+    .line 248
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    const-string/jumbo v0, "MicroMsg.MMAudioManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -364,7 +399,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-boolean v4, Lcom/tencent/mm/compatible/b/d;->bpw:Z
+    sget-boolean v4, Lcom/tencent/mm/compatible/b/d;->bdv:Z
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -374,17 +409,17 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 236
-    invoke-static {}, Lcom/tencent/mm/compatible/b/d;->nO()Z
+    .line 249
+    invoke-static {}, Lcom/tencent/mm/compatible/b/d;->md()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 237
-    const-string/jumbo v0, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 250
+    const-string/jumbo v0, "MicroMsg.MMAudioManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -392,7 +427,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-boolean v3, Lcom/tencent/mm/compatible/b/d;->bpw:Z
+    sget-boolean v3, Lcom/tencent/mm/compatible/b/d;->bdv:Z
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -404,7 +439,7 @@
 
     move-result-object v2
 
-    invoke-static {}, Lcom/tencent/mm/compatible/b/d;->nO()Z
+    invoke-static {}, Lcom/tencent/mm/compatible/b/d;->md()Z
 
     move-result v3
 
@@ -416,35 +451,35 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
-    .line 238
+    .line 251
     goto :goto_0
 
-    .line 241
+    .line 254
     :cond_1
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
 
-    .line 242
+    .line 255
     if-nez v0, :cond_2
 
-    .line 243
-    const-string/jumbo v0, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 256
+    const-string/jumbo v0, "MicroMsg.MMAudioManager"
 
     const-string/jumbo v2, "dkbt BluetoothAdapter.getDefaultAdapter() == null"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
-    .line 244
+    .line 257
     goto :goto_0
 
-    .line 246
+    .line 259
     :cond_2
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->isEnabled()Z
 
@@ -452,25 +487,25 @@
 
     if-nez v3, :cond_3
 
-    .line 247
-    const-string/jumbo v0, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 260
+    const-string/jumbo v0, "MicroMsg.MMAudioManager"
 
     const-string/jumbo v2, "dkbt !adp.isEnabled()"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
-    .line 248
+    .line 261
     goto :goto_0
 
-    .line 250
+    .line 263
     :cond_3
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->getBondedDevices()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 251
+    .line 264
     if-eqz v0, :cond_4
 
     invoke-interface {v0}, Ljava/util/Set;->size()I
@@ -479,26 +514,26 @@
 
     if-nez v3, :cond_5
 
-    .line 252
+    .line 265
     :cond_4
-    const-string/jumbo v0, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    const-string/jumbo v0, "MicroMsg.MMAudioManager"
 
     const-string/jumbo v2, "dkbt setDev == null || setDev.size() == 0"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
-    .line 253
+    .line 266
     goto :goto_0
 
-    .line 256
+    .line 269
     :cond_5
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .line 257
+    .line 270
     :cond_6
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -506,14 +541,14 @@
 
     if-eqz v0, :cond_8
 
-    .line 258
+    .line 271
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/bluetooth/BluetoothDevice;
 
-    .line 259
+    .line 272
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothDevice;->getBondState()I
 
     move-result v0
@@ -524,26 +559,26 @@
 
     move v0, v2
 
-    .line 264
+    .line 277
     :goto_1
     if-nez v0, :cond_7
 
-    .line 265
-    const-string/jumbo v0, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 278
+    const-string/jumbo v0, "MicroMsg.MMAudioManager"
 
     const-string/jumbo v2, "dkbt hasBond == false"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
-    .line 266
+    .line 279
     goto/16 :goto_0
 
     :cond_7
     move v0, v2
 
-    .line 277
+    .line 290
     goto/16 :goto_0
 
     :cond_8
@@ -552,7 +587,7 @@
     goto :goto_1
 .end method
 
-.method private nT()V
+.method private mj()V
     .locals 7
 
     .prologue
@@ -560,48 +595,48 @@
 
     const v6, 0x17001
 
-    .line 709
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 722
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     if-eqz v0, :cond_1
 
-    .line 710
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 723
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->getMode()I
 
     move-result v0
 
-    .line 711
-    iget-object v1, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 724
+    iget-object v1, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v1}, Landroid/media/AudioManager;->isSpeakerphoneOn()Z
 
     move-result v1
 
-    .line 712
-    invoke-static {}, Lcom/tencent/mm/compatible/d/k;->oi()Lcom/tencent/mm/compatible/d/k;
+    .line 725
+    invoke-static {}, Lcom/tencent/mm/compatible/d/k;->my()Lcom/tencent/mm/compatible/d/k;
 
     move-result-object v2
 
-    invoke-virtual {v2, v5}, Lcom/tencent/mm/compatible/d/k;->bR(I)Ljava/lang/Object;
+    invoke-virtual {v2, v5}, Lcom/tencent/mm/compatible/d/k;->cj(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 713
-    invoke-static {}, Lcom/tencent/mm/compatible/d/k;->oi()Lcom/tencent/mm/compatible/d/k;
+    .line 726
+    invoke-static {}, Lcom/tencent/mm/compatible/d/k;->my()Lcom/tencent/mm/compatible/d/k;
 
     move-result-object v3
 
-    invoke-virtual {v3, v6}, Lcom/tencent/mm/compatible/d/k;->bR(I)Ljava/lang/Object;
+    invoke-virtual {v3, v6}, Lcom/tencent/mm/compatible/d/k;->cj(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 714
+    .line 727
     if-nez v2, :cond_0
 
-    .line 715
-    invoke-static {}, Lcom/tencent/mm/compatible/d/k;->oi()Lcom/tencent/mm/compatible/d/k;
+    .line 728
+    invoke-static {}, Lcom/tencent/mm/compatible/d/k;->my()Lcom/tencent/mm/compatible/d/k;
 
     move-result-object v2
 
@@ -611,8 +646,8 @@
 
     invoke-virtual {v2, v5, v4}, Lcom/tencent/mm/compatible/d/k;->set(ILjava/lang/Object;)V
 
-    .line 716
-    const-string/jumbo v2, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 729
+    const-string/jumbo v2, "MicroMsg.MMAudioManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -628,14 +663,14 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 718
+    .line 731
     :cond_0
     if-nez v3, :cond_1
 
-    .line 719
-    invoke-static {}, Lcom/tencent/mm/compatible/d/k;->oi()Lcom/tencent/mm/compatible/d/k;
+    .line 732
+    invoke-static {}, Lcom/tencent/mm/compatible/d/k;->my()Lcom/tencent/mm/compatible/d/k;
 
     move-result-object v1
 
@@ -645,8 +680,8 @@
 
     invoke-virtual {v1, v6, v2}, Lcom/tencent/mm/compatible/d/k;->set(ILjava/lang/Object;)V
 
-    .line 721
-    const-string/jumbo v1, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 734
+    const-string/jumbo v1, "MicroMsg.MMAudioManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -662,69 +697,52 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 725
+    .line 738
     :cond_1
     return-void
 .end method
 
-.method static synthetic nV()Z
+.method static synthetic ml()Z
     .locals 1
 
     .prologue
-    .line 35
-    sget-boolean v0, Lcom/tencent/mm/compatible/b/d;->bpy:Z
+    .line 36
+    sget-boolean v0, Lcom/tencent/mm/compatible/b/d;->bdx:Z
 
     return v0
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/compatible/b/d$a;)V
-    .locals 1
-
-    .prologue
-    .line 63
-    if-eqz p1, :cond_0
-
-    .line 64
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->aod:Ljava/util/Set;
-
-    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    .line 66
-    :cond_0
-    return-void
-.end method
-
-.method public final au(Z)I
+.method public final X(Z)I
     .locals 3
 
     .prologue
     const/4 v1, 0x0
 
-    .line 223
+    .line 224
     if-eqz p1, :cond_0
 
     const/4 v0, 0x3
 
-    .line 224
+    .line 225
     :goto_0
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->nN()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->mc()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 227
+    .line 228
     :goto_1
     return v1
 
     :cond_0
     move v0, v1
 
-    .line 223
+    .line 224
     goto :goto_0
 
     :cond_1
@@ -733,7 +751,7 @@
     goto :goto_1
 .end method
 
-.method public final av(Z)Z
+.method public final Y(Z)Z
     .locals 9
     .annotation build Landroid/annotation/TargetApi;
         value = 0xb
@@ -750,14 +768,14 @@
 
     const/4 v0, 0x0
 
-    .line 494
-    const-string/jumbo v3, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 507
+    const-string/jumbo v3, "MicroMsg.MMAudioManager"
 
     const-string/jumbo v4, "IPCall dkbt shiftSpeaker:%b -> %b  %s"
 
     new-array v5, v1, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->nR()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->mh()Z
 
     move-result v6
 
@@ -773,27 +791,27 @@
 
     aput-object v6, v5, v7
 
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->nQ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->mg()Ljava/lang/String;
 
     move-result-object v6
 
     aput-object v6, v5, v2
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 496
-    sget-boolean v3, Lcom/tencent/mm/sdk/platformtools/ak;->aKi:Z
+    .line 509
+    sget-boolean v3, Lcom/tencent/mm/sdk/platformtools/an;->awC:Z
 
     if-eqz v3, :cond_1
 
-    .line 497
-    const-string/jumbo v1, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 510
+    const-string/jumbo v1, "MicroMsg.MMAudioManager"
 
     const-string/jumbo v2, "shiftSpeaker return when calling blue:%d"
 
     new-array v3, v7, [Ljava/lang/Object;
 
-    iget v4, p0, Lcom/tencent/mm/compatible/b/d;->bpv:I
+    iget v4, p0, Lcom/tencent/mm/compatible/b/d;->bdu:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -801,66 +819,66 @@
 
     aput-object v4, v3, v0
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move p1, v0
 
-    .line 654
+    .line 667
     :cond_0
     :goto_0
     return p1
 
-    .line 501
+    .line 514
     :cond_1
-    sget-boolean v3, Lcom/tencent/mm/compatible/b/d;->bpx:Z
+    sget-boolean v3, Lcom/tencent/mm/compatible/b/d;->bdw:Z
 
     if-eqz v3, :cond_2
 
-    .line 502
-    iget-object v1, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 515
+    iget-object v1, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v1, v0}, Landroid/media/AudioManager;->setMode(I)V
 
     move p1, v0
 
-    .line 503
+    .line 516
     goto :goto_0
 
-    .line 506
+    .line 519
     :cond_2
-    invoke-direct {p0}, Lcom/tencent/mm/compatible/b/d;->nT()V
+    invoke-direct {p0}, Lcom/tencent/mm/compatible/b/d;->mj()V
 
-    .line 508
-    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 521
+    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget-boolean v3, v3, Lcom/tencent/mm/compatible/d/a;->bqF:Z
+    iget-boolean v3, v3, Lcom/tencent/mm/compatible/d/a;->beF:Z
 
     if-eqz v3, :cond_a
 
-    .line 510
+    .line 523
     if-eqz p1, :cond_6
 
-    .line 511
+    .line 524
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-ge v2, v8, :cond_5
 
-    .line 518
+    .line 531
     :goto_1
-    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v1, v1, Lcom/tencent/mm/compatible/d/a;->bqG:I
+    iget v1, v1, Lcom/tencent/mm/compatible/d/a;->beG:I
 
     if-ltz v1, :cond_3
 
-    .line 519
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 532
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->bqG:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->beG:I
 
-    .line 522
+    .line 535
     :cond_3
-    const-string/jumbo v1, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    const-string/jumbo v1, "MicroMsg.MMAudioManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -876,10 +894,10 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 523
-    iget-object v1, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 536
+    iget-object v1, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v1}, Landroid/media/AudioManager;->getMode()I
 
@@ -887,12 +905,12 @@
 
     if-eq v0, v1, :cond_4
 
-    .line 524
+    .line 537
     invoke-virtual {p0, v0}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
 
-    .line 527
+    .line 540
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->isSpeakerphoneOn()Z
 
@@ -900,7 +918,7 @@
 
     if-nez v0, :cond_0
 
-    .line 528
+    .line 541
     invoke-virtual {p0, v7}, Lcom/tencent/mm/compatible/b/d;->setSpeakerphoneOn(Z)V
 
     goto :goto_0
@@ -908,24 +926,24 @@
     :cond_5
     move v0, v1
 
-    .line 515
+    .line 528
     goto :goto_1
 
-    .line 531
+    .line 544
     :cond_6
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-ge v3, v8, :cond_7
 
-    .line 534
-    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    .line 547
+    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget v1, v1, Lcom/tencent/mm/compatible/d/j;->brL:I
+    iget v1, v1, Lcom/tencent/mm/compatible/d/j;->bfM:I
 
     if-ne v1, v7, :cond_1c
 
-    .line 536
-    const-string/jumbo v1, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 549
+    const-string/jumbo v1, "MicroMsg.MMAudioManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -937,27 +955,27 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move v1, v0
 
-    .line 541
+    .line 554
     :cond_7
     :goto_2
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/a;->bqH:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/a;->beH:I
 
     if-ltz v2, :cond_8
 
-    .line 542
-    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 555
+    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v1, v1, Lcom/tencent/mm/compatible/d/a;->bqH:I
+    iget v1, v1, Lcom/tencent/mm/compatible/d/a;->beH:I
 
-    .line 545
+    .line 558
     :cond_8
-    const-string/jumbo v2, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    const-string/jumbo v2, "MicroMsg.MMAudioManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -973,10 +991,10 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 546
-    iget-object v2, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 559
+    iget-object v2, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v2}, Landroid/media/AudioManager;->getMode()I
 
@@ -984,12 +1002,12 @@
 
     if-eq v1, v2, :cond_9
 
-    .line 547
+    .line 560
     invoke-virtual {p0, v1}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
 
-    .line 550
+    .line 563
     :cond_9
-    iget-object v1, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    iget-object v1, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v1}, Landroid/media/AudioManager;->isSpeakerphoneOn()Z
 
@@ -997,117 +1015,117 @@
 
     if-eqz v1, :cond_0
 
-    .line 551
+    .line 564
     invoke-virtual {p0, v0}, Lcom/tencent/mm/compatible/b/d;->setSpeakerphoneOn(Z)V
 
     goto/16 :goto_0
 
-    .line 558
+    .line 571
     :cond_a
-    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget-boolean v3, v3, Lcom/tencent/mm/compatible/d/a;->bpH:Z
+    iget-boolean v3, v3, Lcom/tencent/mm/compatible/d/a;->bdH:Z
 
     if-eqz v3, :cond_12
 
-    .line 559
-    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 572
+    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/compatible/d/a;->nW()Z
+    invoke-virtual {v3}, Lcom/tencent/mm/compatible/d/a;->mm()Z
 
     move-result v3
 
     if-eqz v3, :cond_e
 
-    .line 560
-    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 573
+    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v1, v1, Lcom/tencent/mm/compatible/d/a;->bpJ:I
+    iget v1, v1, Lcom/tencent/mm/compatible/d/a;->bdJ:I
 
     if-ltz v1, :cond_c
 
-    .line 562
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 575
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->bpJ:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->bdJ:I
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
 
-    .line 570
+    .line 583
     :cond_b
     :goto_3
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->bpL:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->bdL:I
 
     if-lez v0, :cond_0
 
-    .line 572
+    .line 585
     invoke-virtual {p0, p1}, Lcom/tencent/mm/compatible/b/d;->setSpeakerphoneOn(Z)V
 
     goto/16 :goto_0
 
-    .line 563
+    .line 576
     :cond_c
-    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v1, v1, Lcom/tencent/mm/compatible/d/a;->bpK:I
+    iget v1, v1, Lcom/tencent/mm/compatible/d/a;->bdK:I
 
     if-ltz v1, :cond_b
 
-    .line 564
+    .line 577
     if-eqz p1, :cond_d
 
-    .line 565
+    .line 578
     invoke-virtual {p0, v0}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
 
     goto :goto_3
 
-    .line 567
+    .line 580
     :cond_d
     invoke-virtual {p0, v2}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
 
     goto :goto_3
 
-    .line 577
+    .line 590
     :cond_e
-    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/compatible/d/a;->nX()Z
+    invoke-virtual {v3}, Lcom/tencent/mm/compatible/d/a;->mn()Z
 
     move-result v3
 
     if-eqz v3, :cond_12
 
-    .line 578
+    .line 591
     if-eqz p1, :cond_10
 
-    .line 579
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 592
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->oa()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->mq()Z
 
     move-result v0
 
     if-eqz v0, :cond_f
 
-    .line 581
+    .line 594
     invoke-virtual {p0, v7}, Lcom/tencent/mm/compatible/b/d;->setSpeakerphoneOn(Z)V
 
-    .line 583
+    .line 596
     :cond_f
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->nZ()I
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->mp()I
 
     move-result v0
 
     if-ltz v0, :cond_0
 
-    .line 585
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 598
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->nZ()I
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->mp()I
 
     move-result v0
 
@@ -1115,33 +1133,33 @@
 
     goto/16 :goto_0
 
-    .line 589
+    .line 602
     :cond_10
-    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/compatible/d/a;->oc()Z
+    invoke-virtual {v1}, Lcom/tencent/mm/compatible/d/a;->ms()Z
 
     move-result v1
 
     if-eqz v1, :cond_11
 
-    .line 591
+    .line 604
     invoke-virtual {p0, v0}, Lcom/tencent/mm/compatible/b/d;->setSpeakerphoneOn(Z)V
 
-    .line 593
+    .line 606
     :cond_11
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->ob()I
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->mr()I
 
     move-result v0
 
     if-ltz v0, :cond_0
 
-    .line 595
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 608
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->ob()I
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->mr()I
 
     move-result v0
 
@@ -1149,31 +1167,31 @@
 
     goto/16 :goto_0
 
-    .line 603
+    .line 616
     :cond_12
     if-eqz p1, :cond_16
 
-    .line 604
+    .line 617
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-ge v2, v8, :cond_15
 
-    .line 611
+    .line 624
     :goto_4
-    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v1, v1, Lcom/tencent/mm/compatible/d/a;->bqg:I
+    iget v1, v1, Lcom/tencent/mm/compatible/d/a;->beg:I
 
     if-ltz v1, :cond_13
 
-    .line 612
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 625
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->bqg:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->beg:I
 
-    .line 615
+    .line 628
     :cond_13
-    const-string/jumbo v1, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    const-string/jumbo v1, "MicroMsg.MMAudioManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1189,10 +1207,10 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 616
-    iget-object v1, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 629
+    iget-object v1, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v1}, Landroid/media/AudioManager;->getMode()I
 
@@ -1200,12 +1218,12 @@
 
     if-eq v0, v1, :cond_14
 
-    .line 617
+    .line 630
     invoke-virtual {p0, v0}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
 
-    .line 619
+    .line 632
     :cond_14
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->isSpeakerphoneOn()Z
 
@@ -1213,7 +1231,7 @@
 
     if-nez v0, :cond_0
 
-    .line 620
+    .line 633
     invoke-virtual {p0, v7}, Lcom/tencent/mm/compatible/b/d;->setSpeakerphoneOn(Z)V
 
     goto/16 :goto_0
@@ -1221,24 +1239,24 @@
     :cond_15
     move v0, v1
 
-    .line 608
+    .line 621
     goto :goto_4
 
-    .line 623
+    .line 636
     :cond_16
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-ge v3, v8, :cond_17
 
-    .line 626
-    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    .line 639
+    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget v1, v1, Lcom/tencent/mm/compatible/d/j;->brL:I
+    iget v1, v1, Lcom/tencent/mm/compatible/d/j;->bfM:I
 
     if-ne v1, v7, :cond_1b
 
-    .line 628
-    const-string/jumbo v1, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 641
+    const-string/jumbo v1, "MicroMsg.MMAudioManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1250,47 +1268,47 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move v1, v0
 
-    .line 634
+    .line 647
     :cond_17
     :goto_5
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-lt v3, v8, :cond_18
 
-    invoke-static {}, Lcom/tencent/mm/compatible/util/j;->nu()Z
+    invoke-static {}, Lcom/tencent/mm/compatible/util/j;->lI()Z
 
     move-result v3
 
     if-eqz v3, :cond_18
 
-    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget v3, v3, Lcom/tencent/mm/compatible/d/j;->brM:I
+    iget v3, v3, Lcom/tencent/mm/compatible/d/j;->bfN:I
 
     if-ne v2, v3, :cond_18
 
     move v1, v2
 
-    .line 639
+    .line 652
     :cond_18
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/a;->bqh:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/a;->beh:I
 
     if-ltz v2, :cond_19
 
-    .line 640
-    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 653
+    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v1, v1, Lcom/tencent/mm/compatible/d/a;->bqh:I
+    iget v1, v1, Lcom/tencent/mm/compatible/d/a;->beh:I
 
-    .line 643
+    .line 656
     :cond_19
-    const-string/jumbo v2, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    const-string/jumbo v2, "MicroMsg.MMAudioManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1306,10 +1324,10 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 644
-    iget-object v2, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 657
+    iget-object v2, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v2}, Landroid/media/AudioManager;->getMode()I
 
@@ -1317,12 +1335,12 @@
 
     if-eq v1, v2, :cond_1a
 
-    .line 645
+    .line 658
     invoke-virtual {p0, v1}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
 
-    .line 648
+    .line 661
     :cond_1a
-    iget-object v1, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    iget-object v1, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v1}, Landroid/media/AudioManager;->isSpeakerphoneOn()Z
 
@@ -1330,7 +1348,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 649
+    .line 662
     invoke-virtual {p0, v0}, Lcom/tencent/mm/compatible/b/d;->setSpeakerphoneOn(Z)V
 
     goto/16 :goto_0
@@ -1346,36 +1364,36 @@
     goto/16 :goto_2
 .end method
 
-.method public final b(Lcom/tencent/mm/compatible/b/d$a;)V
+.method public final a(Lcom/tencent/mm/compatible/b/d$a;)V
     .locals 1
 
     .prologue
-    .line 69
+    .line 64
     if-eqz p1, :cond_0
 
-    .line 70
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->aod:Ljava/util/Set;
+    .line 65
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdA:Ljava/util/Set;
 
-    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 72
+    .line 67
     :cond_0
     return-void
 .end method
 
-.method public final b(ZI)Z
+.method public final a(ZI)Z
     .locals 4
 
     .prologue
-    .line 658
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 671
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v0, p2}, Landroid/media/AudioManager;->getStreamMaxVolume(I)I
 
     move-result v0
 
-    .line 660
-    const-string/jumbo v1, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 673
+    const-string/jumbo v1, "MicroMsg.MMAudioManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1391,31 +1409,31 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 661
+    .line 674
     div-int/lit8 v0, v0, 0x3
 
-    .line 662
-    iget-object v1, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 675
+    iget-object v1, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v1, p2}, Landroid/media/AudioManager;->getStreamVolume(I)I
 
     move-result v1
 
-    .line 663
+    .line 676
     if-ge v1, v0, :cond_0
 
-    .line 664
-    iget-object v2, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 677
+    iget-object v2, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, p2, v0, v3}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
-    .line 667
+    .line 680
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    const-string/jumbo v0, "MicroMsg.MMAudioManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1441,9 +1459,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 670
+    .line 683
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, v0}, Lcom/tencent/mm/compatible/b/d;->b(ZZ)Z
@@ -1451,6 +1469,23 @@
     move-result v0
 
     return v0
+.end method
+
+.method public final b(Lcom/tencent/mm/compatible/b/d$a;)V
+    .locals 1
+
+    .prologue
+    .line 70
+    if-eqz p1, :cond_0
+
+    .line 71
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdA:Ljava/util/Set;
+
+    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    .line 73
+    :cond_0
+    return-void
 .end method
 
 .method public final b(ZZ)Z
@@ -1470,21 +1505,21 @@
 
     const/4 v2, 0x0
 
-    .line 298
-    iget-object v3, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 311
+    iget-object v3, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v3}, Landroid/media/AudioManager;->getMode()I
 
     move-result v3
 
-    .line 300
-    const-string/jumbo v5, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 313
+    const-string/jumbo v5, "MicroMsg.MMAudioManager"
 
     const-string/jumbo v6, "dkbt shiftSpeaker:%b -> %b  %s"
 
     new-array v7, v0, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->nR()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->mh()Z
 
     move-result v8
 
@@ -1500,21 +1535,21 @@
 
     aput-object v8, v7, v1
 
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->nQ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->mg()Ljava/lang/String;
 
     move-result-object v8
 
     aput-object v8, v7, v4
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 302
-    sget-boolean v5, Lcom/tencent/mm/sdk/platformtools/ak;->aKi:Z
+    .line 315
+    sget-boolean v5, Lcom/tencent/mm/sdk/platformtools/an;->awC:Z
 
     if-eqz v5, :cond_1
 
-    .line 303
-    const-string/jumbo v0, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 316
+    const-string/jumbo v0, "MicroMsg.MMAudioManager"
 
     const-string/jumbo v5, "shiftSpeaker return when calling Mode:%d blue:%d"
 
@@ -1526,7 +1561,7 @@
 
     aput-object v3, v4, v2
 
-    iget v3, p0, Lcom/tencent/mm/compatible/b/d;->bpv:I
+    iget v3, p0, Lcom/tencent/mm/compatible/b/d;->bdu:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1534,150 +1569,150 @@
 
     aput-object v3, v4, v1
 
-    invoke-static {v0, v5, v4}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v5, v4}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move p1, v2
 
-    .line 488
+    .line 501
     :cond_0
     :goto_0
     return p1
 
-    .line 307
+    .line 320
     :cond_1
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->nN()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->mc()Z
 
     move-result v3
 
     if-nez v3, :cond_2
 
-    sget-boolean v3, Lcom/tencent/mm/compatible/b/d;->bpx:Z
+    sget-boolean v3, Lcom/tencent/mm/compatible/b/d;->bdw:Z
 
     if-eqz v3, :cond_3
 
-    .line 308
+    .line 321
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v0, v2}, Landroid/media/AudioManager;->setMode(I)V
 
     move p1, v2
 
-    .line 309
+    .line 322
     goto :goto_0
 
-    .line 312
+    .line 325
     :cond_3
-    invoke-direct {p0}, Lcom/tencent/mm/compatible/b/d;->nT()V
+    invoke-direct {p0}, Lcom/tencent/mm/compatible/b/d;->mj()V
 
-    .line 315
+    .line 328
     if-eqz p2, :cond_b
 
-    .line 316
-    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 329
+    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget-boolean v3, v3, Lcom/tencent/mm/compatible/d/a;->bpH:Z
+    iget-boolean v3, v3, Lcom/tencent/mm/compatible/d/a;->bdH:Z
 
     if-eqz v3, :cond_14
 
-    .line 317
-    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 330
+    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/compatible/d/a;->nW()Z
+    invoke-virtual {v3}, Lcom/tencent/mm/compatible/d/a;->mm()Z
 
     move-result v3
 
     if-eqz v3, :cond_7
 
-    .line 319
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 332
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->bpJ:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->bdJ:I
 
     if-ltz v0, :cond_5
 
-    .line 321
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 334
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->bpJ:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->bdJ:I
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
 
-    .line 331
+    .line 344
     :cond_4
     :goto_1
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->bpL:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->bdL:I
 
     if-lez v0, :cond_0
 
-    .line 333
+    .line 346
     invoke-virtual {p0, p1}, Lcom/tencent/mm/compatible/b/d;->setSpeakerphoneOn(Z)V
 
     goto :goto_0
 
-    .line 322
+    .line 335
     :cond_5
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->bpK:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->bdK:I
 
     if-ltz v0, :cond_4
 
-    .line 324
+    .line 337
     if-eqz p1, :cond_6
 
-    .line 326
+    .line 339
     invoke-virtual {p0, v2}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
 
     goto :goto_1
 
-    .line 328
+    .line 341
     :cond_6
     invoke-virtual {p0, v4}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
 
     goto :goto_1
 
-    .line 338
+    .line 351
     :cond_7
-    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/compatible/d/a;->nX()Z
+    invoke-virtual {v3}, Lcom/tencent/mm/compatible/d/a;->mn()Z
 
     move-result v3
 
     if-eqz v3, :cond_14
 
-    .line 339
+    .line 352
     if-eqz p1, :cond_9
 
-    .line 340
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 353
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->oa()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->mq()Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
-    .line 342
+    .line 355
     invoke-virtual {p0, v1}, Lcom/tencent/mm/compatible/b/d;->setSpeakerphoneOn(Z)V
 
-    .line 344
+    .line 357
     :cond_8
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->nZ()I
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->mp()I
 
     move-result v0
 
     if-ltz v0, :cond_0
 
-    .line 346
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 359
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->nZ()I
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->mp()I
 
     move-result v0
 
@@ -1685,33 +1720,33 @@
 
     goto :goto_0
 
-    .line 350
+    .line 363
     :cond_9
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->oc()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->ms()Z
 
     move-result v0
 
     if-eqz v0, :cond_a
 
-    .line 352
+    .line 365
     invoke-virtual {p0, v2}, Lcom/tencent/mm/compatible/b/d;->setSpeakerphoneOn(Z)V
 
-    .line 354
+    .line 367
     :cond_a
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->ob()I
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->mr()I
 
     move-result v0
 
     if-ltz v0, :cond_0
 
-    .line 356
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 369
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->ob()I
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->mr()I
 
     move-result v0
 
@@ -1719,40 +1754,40 @@
 
     goto/16 :goto_0
 
-    .line 365
+    .line 378
     :cond_b
-    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget-boolean v3, v3, Lcom/tencent/mm/compatible/d/a;->bpH:Z
+    iget-boolean v3, v3, Lcom/tencent/mm/compatible/d/a;->bdH:Z
 
     if-eqz v3, :cond_14
 
-    .line 366
-    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 379
+    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/compatible/d/a;->nY()Z
+    invoke-virtual {v3}, Lcom/tencent/mm/compatible/d/a;->mo()Z
 
     move-result v3
 
     if-eqz v3, :cond_14
 
-    .line 368
+    .line 381
     if-eqz p1, :cond_f
 
-    .line 369
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 382
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->nY()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->mo()Z
 
     move-result v3
 
     if-eqz v3, :cond_c
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->bpN:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->bdN:I
 
     and-int/lit8 v3, v0, 0x10
 
-    const-string/jumbo v4, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v4, "VoipAudioInfo"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1773,7 +1808,7 @@
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-lez v3, :cond_c
 
@@ -1782,23 +1817,23 @@
     :cond_c
     if-eqz v2, :cond_d
 
-    .line 371
+    .line 384
     invoke-virtual {p0, v1}, Lcom/tencent/mm/compatible/b/d;->setSpeakerphoneOn(Z)V
 
-    .line 373
+    .line 386
     :cond_d
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->od()I
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->mt()I
 
     move-result v0
 
     if-ltz v0, :cond_0
 
-    .line 375
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 388
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->od()I
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->mt()I
 
     move-result v0
 
@@ -1809,24 +1844,24 @@
     :cond_e
     move v0, v2
 
-    .line 369
+    .line 382
     goto :goto_2
 
-    .line 379
+    .line 392
     :cond_f
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->nY()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->mo()Z
 
     move-result v3
 
     if-eqz v3, :cond_13
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->bpN:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/a;->bdN:I
 
     and-int/lit8 v3, v0, 0x1
 
-    const-string/jumbo v4, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v4, "VoipAudioInfo"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1847,30 +1882,30 @@
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-lez v3, :cond_12
 
     :goto_4
     if-eqz v1, :cond_10
 
-    .line 381
+    .line 394
     invoke-virtual {p0, v2}, Lcom/tencent/mm/compatible/b/d;->setSpeakerphoneOn(Z)V
 
-    .line 383
+    .line 396
     :cond_10
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->oe()I
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->mu()I
 
     move-result v0
 
     if-ltz v0, :cond_0
 
-    .line 385
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 398
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->oe()I
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/d/a;->mu()I
 
     move-result v0
 
@@ -1881,7 +1916,7 @@
     :cond_11
     move v0, v2
 
-    .line 379
+    .line 392
     goto :goto_3
 
     :cond_12
@@ -1894,34 +1929,34 @@
 
     goto :goto_4
 
-    .line 396
+    .line 409
     :cond_14
     if-eqz p2, :cond_21
 
-    .line 397
+    .line 410
     if-eqz p1, :cond_1a
 
-    .line 398
+    .line 411
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-ge v3, v9, :cond_18
 
-    .line 405
+    .line 418
     :goto_5
-    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v3, v3, Lcom/tencent/mm/compatible/d/a;->bqg:I
+    iget v3, v3, Lcom/tencent/mm/compatible/d/a;->beg:I
 
     if-ltz v3, :cond_15
 
-    .line 406
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 419
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/a;->bqg:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/a;->beg:I
 
-    .line 409
+    .line 422
     :cond_15
-    const-string/jumbo v3, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    const-string/jumbo v3, "MicroMsg.MMAudioManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1937,10 +1972,10 @@
 
     move-result-object v5
 
-    invoke-static {v3, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 410
-    iget-object v3, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 423
+    iget-object v3, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v3}, Landroid/media/AudioManager;->getMode()I
 
@@ -1948,12 +1983,12 @@
 
     if-eq v2, v3, :cond_16
 
-    .line 411
+    .line 424
     invoke-virtual {p0, v2}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
 
-    .line 414
+    .line 427
     :cond_16
-    iget-object v3, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    iget-object v3, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v3}, Landroid/media/AudioManager;->getMode()I
 
@@ -1961,18 +1996,18 @@
 
     if-eq v2, v3, :cond_17
 
-    .line 415
-    iget v2, p0, Lcom/tencent/mm/compatible/b/d;->bpA:I
+    .line 428
+    iget v2, p0, Lcom/tencent/mm/compatible/b/d;->bdz:I
 
     if-nez v2, :cond_19
 
-    .line 416
-    iput v1, p0, Lcom/tencent/mm/compatible/b/d;->bpA:I
+    .line 429
+    iput v1, p0, Lcom/tencent/mm/compatible/b/d;->bdz:I
 
-    .line 421
+    .line 434
     :cond_17
     :goto_6
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->isSpeakerphoneOn()Z
 
@@ -1980,7 +2015,7 @@
 
     if-nez v0, :cond_0
 
-    .line 422
+    .line 435
     invoke-virtual {p0, v1}, Lcom/tencent/mm/compatible/b/d;->setSpeakerphoneOn(Z)V
 
     goto/16 :goto_0
@@ -1988,35 +2023,35 @@
     :cond_18
     move v2, v0
 
-    .line 402
+    .line 415
     goto :goto_5
 
-    .line 417
+    .line 430
     :cond_19
-    iget v2, p0, Lcom/tencent/mm/compatible/b/d;->bpA:I
+    iget v2, p0, Lcom/tencent/mm/compatible/b/d;->bdz:I
 
     if-ne v2, v4, :cond_17
 
-    .line 418
-    iput v0, p0, Lcom/tencent/mm/compatible/b/d;->bpA:I
+    .line 431
+    iput v0, p0, Lcom/tencent/mm/compatible/b/d;->bdz:I
 
     goto :goto_6
 
-    .line 425
+    .line 438
     :cond_1a
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-ge v3, v9, :cond_1f
 
-    .line 428
-    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    .line 441
+    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget v3, v3, Lcom/tencent/mm/compatible/d/j;->brL:I
+    iget v3, v3, Lcom/tencent/mm/compatible/d/j;->bfM:I
 
     if-ne v3, v1, :cond_25
 
-    .line 430
-    const-string/jumbo v3, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 443
+    const-string/jumbo v3, "MicroMsg.MMAudioManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2028,46 +2063,46 @@
 
     move-result-object v5
 
-    invoke-static {v3, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move v3, v2
 
-    .line 436
+    .line 449
     :goto_7
     sget v5, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-lt v5, v9, :cond_1b
 
-    invoke-static {}, Lcom/tencent/mm/compatible/util/j;->nu()Z
+    invoke-static {}, Lcom/tencent/mm/compatible/util/j;->lI()Z
 
     move-result v5
 
     if-eqz v5, :cond_1b
 
-    sget-object v5, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v5, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget v5, v5, Lcom/tencent/mm/compatible/d/j;->brM:I
+    iget v5, v5, Lcom/tencent/mm/compatible/d/j;->bfN:I
 
     if-ne v4, v5, :cond_1b
 
     move v3, v4
 
-    .line 441
+    .line 454
     :cond_1b
-    sget-object v5, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    sget-object v5, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v5, v5, Lcom/tencent/mm/compatible/d/a;->bqh:I
+    iget v5, v5, Lcom/tencent/mm/compatible/d/a;->beh:I
 
     if-ltz v5, :cond_1c
 
-    .line 442
-    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bsL:Lcom/tencent/mm/compatible/d/a;
+    .line 455
+    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bgP:Lcom/tencent/mm/compatible/d/a;
 
-    iget v3, v3, Lcom/tencent/mm/compatible/d/a;->bqh:I
+    iget v3, v3, Lcom/tencent/mm/compatible/d/a;->beh:I
 
-    .line 445
+    .line 458
     :cond_1c
-    const-string/jumbo v5, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    const-string/jumbo v5, "MicroMsg.MMAudioManager"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -2083,10 +2118,10 @@
 
     move-result-object v6
 
-    invoke-static {v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 446
-    iget-object v5, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 459
+    iget-object v5, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v5}, Landroid/media/AudioManager;->getMode()I
 
@@ -2094,12 +2129,12 @@
 
     if-eq v3, v5, :cond_1d
 
-    .line 447
+    .line 460
     invoke-virtual {p0, v3}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
 
-    .line 449
+    .line 462
     :cond_1d
-    iget-object v5, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    iget-object v5, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v5}, Landroid/media/AudioManager;->getMode()I
 
@@ -2107,18 +2142,18 @@
 
     if-eq v3, v5, :cond_1e
 
-    .line 450
-    iget v3, p0, Lcom/tencent/mm/compatible/b/d;->bpA:I
+    .line 463
+    iget v3, p0, Lcom/tencent/mm/compatible/b/d;->bdz:I
 
     if-nez v3, :cond_20
 
-    .line 451
-    iput v4, p0, Lcom/tencent/mm/compatible/b/d;->bpA:I
+    .line 464
+    iput v4, p0, Lcom/tencent/mm/compatible/b/d;->bdz:I
 
-    .line 456
+    .line 469
     :cond_1e
     :goto_8
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->isSpeakerphoneOn()Z
 
@@ -2126,7 +2161,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 457
+    .line 470
     invoke-virtual {p0, v2}, Lcom/tencent/mm/compatible/b/d;->setSpeakerphoneOn(Z)V
 
     goto/16 :goto_0
@@ -2134,74 +2169,74 @@
     :cond_1f
     move v3, v0
 
-    .line 433
+    .line 446
     goto :goto_7
 
-    .line 452
+    .line 465
     :cond_20
-    iget v3, p0, Lcom/tencent/mm/compatible/b/d;->bpA:I
+    iget v3, p0, Lcom/tencent/mm/compatible/b/d;->bdz:I
 
     if-ne v3, v1, :cond_1e
 
-    .line 453
-    iput v0, p0, Lcom/tencent/mm/compatible/b/d;->bpA:I
+    .line 466
+    iput v0, p0, Lcom/tencent/mm/compatible/b/d;->bdz:I
 
     goto :goto_8
 
-    .line 463
+    .line 476
     :cond_21
     invoke-virtual {p0, p1}, Lcom/tencent/mm/compatible/b/d;->setSpeakerphoneOn(Z)V
 
-    .line 466
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->nR()Z
+    .line 479
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->mh()Z
 
     move-result v1
 
     if-eq v1, p1, :cond_0
 
-    .line 467
+    .line 480
     if-eqz p1, :cond_22
 
-    .line 468
+    .line 481
     invoke-virtual {p0, v2}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
 
     goto/16 :goto_0
 
-    .line 470
+    .line 483
     :cond_22
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-lt v1, v9, :cond_23
 
-    invoke-static {}, Lcom/tencent/mm/compatible/util/j;->nu()Z
+    invoke-static {}, Lcom/tencent/mm/compatible/util/j;->lI()Z
 
     move-result v1
 
     if-eqz v1, :cond_23
 
-    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget v1, v1, Lcom/tencent/mm/compatible/d/j;->brM:I
+    iget v1, v1, Lcom/tencent/mm/compatible/d/j;->bfN:I
 
     if-eq v4, v1, :cond_23
 
-    .line 472
+    .line 485
     invoke-virtual {p0, v0}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
 
     goto/16 :goto_0
 
-    .line 476
+    .line 489
     :cond_23
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-lt v1, v9, :cond_24
 
-    .line 477
+    .line 490
     invoke-virtual {p0, v0}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
 
     goto/16 :goto_0
 
-    .line 479
+    .line 492
     :cond_24
     invoke-virtual {p0, v4}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
 
@@ -2213,12 +2248,12 @@
     goto/16 :goto_7
 .end method
 
-.method public final bN(I)V
+.method public final cf(I)V
     .locals 5
 
     .prologue
-    .line 75
-    const-string/jumbo v0, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 76
+    const-string/jumbo v0, "MicroMsg.MMAudioManager"
 
     const-string/jumbo v1, "notify, new status: %d, current status: %d"
 
@@ -2236,7 +2271,7 @@
 
     const/4 v3, 0x1
 
-    iget v4, p0, Lcom/tencent/mm/compatible/b/d;->bpv:I
+    iget v4, p0, Lcom/tencent/mm/compatible/b/d;->bdu:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2244,18 +2279,18 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 76
-    iget v0, p0, Lcom/tencent/mm/compatible/b/d;->bpv:I
+    .line 77
+    iget v0, p0, Lcom/tencent/mm/compatible/b/d;->bdu:I
 
     if-eq v0, p1, :cond_0
 
-    .line 77
-    iput p1, p0, Lcom/tencent/mm/compatible/b/d;->bpv:I
-
     .line 78
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->aod:Ljava/util/Set;
+    iput p1, p0, Lcom/tencent/mm/compatible/b/d;->bdu:I
+
+    .line 79
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdA:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -2274,27 +2309,27 @@
 
     check-cast v0, Lcom/tencent/mm/compatible/b/d$a;
 
-    .line 79
-    invoke-interface {v0, p1}, Lcom/tencent/mm/compatible/b/d$a;->aO(I)V
+    .line 80
+    invoke-interface {v0, p1}, Lcom/tencent/mm/compatible/b/d$a;->be(I)V
 
     goto :goto_0
 
-    .line 83
+    .line 84
     :cond_0
     return-void
 .end method
 
-.method public final bO(I)V
+.method public final cg(I)V
     .locals 3
 
     .prologue
-    .line 685
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 698
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     if-eqz v0, :cond_0
 
-    .line 686
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 699
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     const/4 v1, 0x1
 
@@ -2302,22 +2337,22 @@
 
     invoke-virtual {v0, p1, v1, v2}, Landroid/media/AudioManager;->adjustStreamVolume(III)V
 
-    .line 688
+    .line 701
     :cond_0
     return-void
 .end method
 
-.method public final bP(I)V
+.method public final ch(I)V
     .locals 3
 
     .prologue
-    .line 691
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 704
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     if-eqz v0, :cond_0
 
-    .line 692
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 705
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     const/4 v1, -0x1
 
@@ -2325,12 +2360,47 @@
 
     invoke-virtual {v0, p1, v1, v2}, Landroid/media/AudioManager;->adjustStreamVolume(III)V
 
-    .line 694
+    .line 707
     :cond_0
     return-void
 .end method
 
-.method public final nL()I
+.method public final lZ()V
+    .locals 5
+
+    .prologue
+    const/4 v4, 0x0
+
+    .line 173
+    const-string/jumbo v0, "MicroMsg.MMAudioManager"
+
+    const-string/jumbo v1, "dkbt bluetoothStopped %s"
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->mg()Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v2, v4
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 174
+    sput-boolean v4, Lcom/tencent/mm/compatible/b/d;->bdw:Z
+
+    .line 175
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/compatible/b/d;->cf(I)V
+
+    .line 176
+    return-void
+.end method
+
+.method public final ma()I
     .locals 7
 
     .prologue
@@ -2340,8 +2410,8 @@
 
     const/4 v2, 0x1
 
-    .line 178
-    invoke-static {}, Lcom/tencent/mm/compatible/b/d;->nP()Z
+    .line 179
+    invoke-static {}, Lcom/tencent/mm/compatible/b/d;->mf()Z
 
     move-result v3
 
@@ -2349,32 +2419,32 @@
 
     move v2, v0
 
-    .line 190
+    .line 191
     :cond_0
     :goto_0
     return v2
 
-    .line 181
-    :cond_1
-    iput v0, p0, Lcom/tencent/mm/compatible/b/d;->bpv:I
-
     .line 182
-    const-string/jumbo v3, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    :cond_1
+    iput v0, p0, Lcom/tencent/mm/compatible/b/d;->bdu:I
+
+    .line 183
+    const-string/jumbo v3, "MicroMsg.MMAudioManager"
 
     const-string/jumbo v4, "dkbt begin tryStartBluetooth %s"
 
     new-array v5, v2, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->nQ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->mg()Ljava/lang/String;
 
     move-result-object v6
 
     aput-object v6, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 183
-    iget-object v3, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 184
+    iget-object v3, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v3}, Landroid/media/AudioManager;->isBluetoothScoAvailableOffCall()Z
 
@@ -2384,9 +2454,9 @@
 
     move v0, v1
 
-    .line 184
+    .line 185
     :goto_1
-    const-string/jumbo v3, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    const-string/jumbo v3, "MicroMsg.MMAudioManager"
 
     const-string/jumbo v4, "dkbt end tryStartBluetooth %s ret:%s"
 
@@ -2394,7 +2464,7 @@
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->nQ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->mg()Ljava/lang/String;
 
     move-result-object v6
 
@@ -2406,10 +2476,10 @@
 
     aput-object v6, v5, v2
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 186
-    const-string/jumbo v3, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 187
+    const-string/jumbo v3, "MicroMsg.MMAudioManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -2417,7 +2487,7 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->nQ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->mg()Ljava/lang/String;
 
     move-result-object v5
 
@@ -2439,10 +2509,10 @@
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 187
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->nN()Z
+    .line 188
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->mc()Z
 
     move-result v0
 
@@ -2450,12 +2520,12 @@
 
     move v2, v1
 
-    .line 190
+    .line 191
     goto :goto_0
 
-    .line 183
+    .line 184
     :cond_2
-    sget-boolean v4, Lcom/tencent/mm/sdk/platformtools/ak;->aKi:Z
+    sget-boolean v4, Lcom/tencent/mm/sdk/platformtools/an;->awC:Z
 
     if-eqz v4, :cond_3
 
@@ -2464,15 +2534,15 @@
     goto :goto_1
 
     :cond_3
-    sget-object v4, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v4, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget v4, v4, Lcom/tencent/mm/compatible/d/j;->brC:I
+    iget v4, v4, Lcom/tencent/mm/compatible/d/j;->bfD:I
 
     if-eq v4, v2, :cond_4
 
-    sget-object v4, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v4, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget v4, v4, Lcom/tencent/mm/compatible/d/j;->brC:I
+    iget v4, v4, Lcom/tencent/mm/compatible/d/j;->bfD:I
 
     if-ne v4, v0, :cond_5
 
@@ -2480,15 +2550,15 @@
     invoke-virtual {v3}, Landroid/media/AudioManager;->startBluetoothSco()V
 
     :cond_5
-    sget-object v4, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v4, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget v4, v4, Lcom/tencent/mm/compatible/d/j;->brD:I
+    iget v4, v4, Lcom/tencent/mm/compatible/d/j;->bfE:I
 
     if-eq v4, v2, :cond_6
 
-    sget-object v4, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v4, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget v4, v4, Lcom/tencent/mm/compatible/d/j;->brC:I
+    iget v4, v4, Lcom/tencent/mm/compatible/d/j;->bfD:I
 
     if-ne v4, v0, :cond_7
 
@@ -2501,7 +2571,7 @@
     goto :goto_1
 .end method
 
-.method public final nM()V
+.method public final mb()V
     .locals 6
 
     .prologue
@@ -2509,51 +2579,51 @@
 
     const/4 v4, 0x0
 
-    .line 194
-    const-string/jumbo v0, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 195
+    const-string/jumbo v0, "MicroMsg.MMAudioManager"
 
     const-string/jumbo v1, "dkbt begin stopBluetooth %s"
 
     new-array v2, v5, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->nQ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->mg()Ljava/lang/String;
 
     move-result-object v3
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 195
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 196
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-static {v0}, Lcom/tencent/mm/compatible/c/a;->a(Landroid/media/AudioManager;)Z
 
-    .line 196
-    const-string/jumbo v0, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 197
+    const-string/jumbo v0, "MicroMsg.MMAudioManager"
 
     const-string/jumbo v1, "dkbt end stopBluetooth %s"
 
     new-array v2, v5, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->nQ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->mg()Ljava/lang/String;
 
     move-result-object v3
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 197
+    .line 198
     return-void
 .end method
 
-.method public final nN()Z
+.method public final mc()Z
     .locals 1
 
     .prologue
-    .line 200
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 201
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->isBluetoothScoOn()Z
 
@@ -2561,7 +2631,7 @@
 
     if-nez v0, :cond_0
 
-    sget-boolean v0, Lcom/tencent/mm/compatible/b/d;->bpx:Z
+    sget-boolean v0, Lcom/tencent/mm/compatible/b/d;->bdw:Z
 
     if-eqz v0, :cond_1
 
@@ -2577,18 +2647,18 @@
     goto :goto_0
 .end method
 
-.method public final nQ()Ljava/lang/String;
+.method public final mg()Ljava/lang/String;
     .locals 2
 
     .prologue
-    .line 281
+    .line 294
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "mode:"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    iget-object v1, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v1}, Landroid/media/AudioManager;->getMode()I
 
@@ -2604,7 +2674,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    iget-object v1, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v1}, Landroid/media/AudioManager;->isSpeakerphoneOn()Z
 
@@ -2620,7 +2690,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->nN()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/b/d;->mc()Z
 
     move-result v1
 
@@ -2634,7 +2704,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/compatible/b/d;->bpv:I
+    iget v1, p0, Lcom/tencent/mm/compatible/b/d;->bdu:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2647,12 +2717,12 @@
     return-object v0
 .end method
 
-.method public final nR()Z
+.method public final mh()Z
     .locals 1
 
     .prologue
-    .line 285
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 298
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->getMode()I
 
@@ -2671,23 +2741,23 @@
     goto :goto_0
 .end method
 
-.method public final nS()Z
+.method public final mi()Z
     .locals 1
 
     .prologue
-    .line 678
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 691
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     if-eqz v0, :cond_0
 
-    .line 679
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 692
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->isWiredHeadsetOn()Z
 
     move-result v0
 
-    .line 681
+    .line 694
     :goto_0
     return v0
 
@@ -2697,8 +2767,10 @@
     goto :goto_0
 .end method
 
-.method public final nU()V
+.method public final mk()V
     .locals 9
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     .prologue
     const/4 v8, 0x0
@@ -2709,34 +2781,34 @@
 
     const/4 v1, 0x0
 
-    .line 728
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 743
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     if-eqz v0, :cond_1
 
-    .line 729
-    invoke-static {}, Lcom/tencent/mm/compatible/d/k;->oi()Lcom/tencent/mm/compatible/d/k;
+    .line 744
+    invoke-static {}, Lcom/tencent/mm/compatible/d/k;->my()Lcom/tencent/mm/compatible/d/k;
 
     move-result-object v0
 
-    invoke-virtual {v0, v7}, Lcom/tencent/mm/compatible/d/k;->bR(I)Ljava/lang/Object;
+    invoke-virtual {v0, v7}, Lcom/tencent/mm/compatible/d/k;->cj(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 730
-    invoke-static {}, Lcom/tencent/mm/compatible/d/k;->oi()Lcom/tencent/mm/compatible/d/k;
+    .line 745
+    invoke-static {}, Lcom/tencent/mm/compatible/d/k;->my()Lcom/tencent/mm/compatible/d/k;
 
     move-result-object v2
 
-    invoke-virtual {v2, v6}, Lcom/tencent/mm/compatible/d/k;->bR(I)Ljava/lang/Object;
+    invoke-virtual {v2, v6}, Lcom/tencent/mm/compatible/d/k;->cj(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 732
+    .line 747
     if-eqz v0, :cond_0
 
-    .line 733
-    const-string/jumbo v3, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 748
+    const-string/jumbo v3, "MicroMsg.MMAudioManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -2752,9 +2824,9 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 734
+    .line 749
     check-cast v0, Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -2763,20 +2835,20 @@
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/compatible/b/d;->setSpeakerphoneOn(Z)V
 
-    .line 735
-    invoke-static {}, Lcom/tencent/mm/compatible/d/k;->oi()Lcom/tencent/mm/compatible/d/k;
+    .line 750
+    invoke-static {}, Lcom/tencent/mm/compatible/d/k;->my()Lcom/tencent/mm/compatible/d/k;
 
     move-result-object v0
 
     invoke-virtual {v0, v7, v8}, Lcom/tencent/mm/compatible/d/k;->set(ILjava/lang/Object;)V
 
-    .line 738
+    .line 753
     :cond_0
     if-eqz v2, :cond_1
 
-    .line 741
+    .line 756
     :try_start_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    const-string/jumbo v0, "MicroMsg.MMAudioManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2798,9 +2870,9 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 742
+    .line 757
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -2811,7 +2883,7 @@
 
     move-result v0
 
-    .line 747
+    .line 762
     :goto_0
     const/4 v2, -0x1
 
@@ -2821,18 +2893,18 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 748
+    .line 763
     invoke-virtual {p0, v0}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
 
-    .line 752
+    .line 767
     :goto_1
-    invoke-static {}, Lcom/tencent/mm/compatible/d/k;->oi()Lcom/tencent/mm/compatible/d/k;
+    invoke-static {}, Lcom/tencent/mm/compatible/d/k;->my()Lcom/tencent/mm/compatible/d/k;
 
     move-result-object v0
 
     invoke-virtual {v0, v6, v8}, Lcom/tencent/mm/compatible/d/k;->set(ILjava/lang/Object;)V
 
-    .line 755
+    .line 770
     :cond_1
     return-void
 
@@ -2843,7 +2915,7 @@
 
     goto :goto_0
 
-    .line 750
+    .line 765
     :cond_2
     invoke-virtual {p0, v1}, Lcom/tencent/mm/compatible/b/d;->setMode(I)V
 
@@ -2854,13 +2926,13 @@
     .locals 5
 
     .prologue
-    .line 758
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 773
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     if-eqz v0, :cond_0
 
-    .line 759
-    const-string/jumbo v0, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 774
+    const-string/jumbo v0, "MicroMsg.MMAudioManager"
 
     const-string/jumbo v1, "set mode from %d to %d"
 
@@ -2870,7 +2942,7 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    iget-object v4, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v4}, Landroid/media/AudioManager;->getMode()I
 
@@ -2890,14 +2962,14 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 760
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 775
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v0, p1}, Landroid/media/AudioManager;->setMode(I)V
 
-    .line 762
+    .line 777
     :cond_0
     return-void
 .end method
@@ -2906,8 +2978,8 @@
     .locals 3
 
     .prologue
-    .line 765
-    const-string/jumbo v0, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 780
+    const-string/jumbo v0, "MicroMsg.MMAudioManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2927,15 +2999,15 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 766
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 781
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     if-eqz v0, :cond_0
 
-    .line 767
-    const-string/jumbo v0, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
+    .line 782
+    const-string/jumbo v0, "MicroMsg.MMAudioManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2951,14 +3023,14 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 768
-    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    .line 783
+    iget-object v0, p0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     invoke-virtual {v0, p1}, Landroid/media/AudioManager;->setSpeakerphoneOn(Z)V
 
-    .line 770
+    .line 785
     :cond_0
     return-void
 .end method

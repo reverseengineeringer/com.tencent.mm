@@ -11,9 +11,9 @@ final class ChatFooter$5
   
   public final void onClick(View paramView)
   {
-    iLO.aRE();
-    if ((h.sJ().booleanValue()) && (iLO.iLf != null)) {
-      iLO.iLf.a(Boolean.valueOf(true), Boolean.valueOf(true));
+    jiL.aWr();
+    if ((h.sL().booleanValue()) && (jiL.jic != null)) {
+      jiL.jic.a(Boolean.valueOf(true), Boolean.valueOf(true));
     }
   }
 }

@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic kog:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
+.field final synthetic kNm:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
 
-.field koh:Landroid/view/View;
+.field kNn:Landroid/view/View;
 
-.field koi:Lcom/tencent/mm/ui/TabIconView;
+.field kNo:Lcom/tencent/mm/ui/TabIconView;
 
-.field koj:Landroid/widget/TextView;
+.field kNp:Landroid/widget/TextView;
 
-.field kok:Landroid/widget/TextView;
+.field kNq:Landroid/widget/TextView;
 
-.field kol:Landroid/widget/ImageView;
+.field kNr:Landroid/widget/ImageView;
 
 
 # direct methods
@@ -34,7 +34,7 @@
 
     .prologue
     .line 44
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$a;->kog:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$a;->kNm:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

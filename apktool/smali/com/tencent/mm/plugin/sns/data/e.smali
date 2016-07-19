@@ -4,46 +4,90 @@
 
 
 # instance fields
-.field public aHW:Lcom/tencent/mm/protocal/b/add;
+.field public eKF:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/protocal/b/adw;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public buL:Ljava/lang/String;
+.field public gOE:Ljava/lang/String;
 
-.field public gHB:Lcom/tencent/mm/storage/i$a;
-
-.field public requestType:I
+.field public gOF:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 12
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
+    .line 21
+    new-instance v0, Ljava/util/LinkedList;
+
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/data/e;->eKF:Ljava/util/List;
+
+    .line 27
     return-void
 .end method
 
-.method public constructor <init>(Lcom/tencent/mm/protocal/b/add;ILjava/lang/String;Lcom/tencent/mm/storage/i$a;)V
-    .locals 0
+.method public constructor <init>(Lcom/tencent/mm/protocal/b/adw;)V
+    .locals 1
 
     .prologue
-    .line 16
+    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/data/e;->aHW:Lcom/tencent/mm/protocal/b/add;
+    .line 21
+    new-instance v0, Ljava/util/LinkedList;
 
-    .line 18
-    iput p2, p0, Lcom/tencent/mm/plugin/sns/data/e;->requestType:I
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 19
-    iput-object p4, p0, Lcom/tencent/mm/plugin/sns/data/e;->gHB:Lcom/tencent/mm/storage/i$a;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/data/e;->eKF:Ljava/util/List;
 
-    .line 20
-    iput-object p3, p0, Lcom/tencent/mm/plugin/sns/data/e;->buL:Ljava/lang/String;
+    .line 30
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/data/e;->eKF:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 31
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/protocal/b/adw;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 33
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 21
+    new-instance v0, Ljava/util/LinkedList;
+
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/data/e;->eKF:Ljava/util/List;
+
+    .line 34
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/data/e;->eKF:Ljava/util/List;
+
+    .line 35
     return-void
 .end method

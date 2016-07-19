@@ -13,11 +13,11 @@ import android.os.Bundle;
 import com.tencent.mm.a.g;
 import com.tencent.mm.pluginsdk.i.a;
 import com.tencent.mm.pluginsdk.i.r;
-import com.tencent.mm.protocal.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.protocal.c;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -25,12 +25,95 @@ import java.util.Set;
 
 public final class p
 {
-  public static void H(Bundle paramBundle)
+  public static String BR(String paramString)
+  {
+    if ((paramString == null) || (paramString.length() == 0))
+    {
+      v.e("MicroMsg.AppUtil", "getDbSignature, svrSign is null");
+      return null;
+    }
+    return BS(paramString);
+  }
+  
+  private static String BS(String paramString)
+  {
+    StringBuffer localStringBuffer = new StringBuffer();
+    localStringBuffer.append(paramString.toLowerCase());
+    localStringBuffer.append("mMHc ItnStR");
+    return g.j(localStringBuffer.toString().getBytes());
+  }
+  
+  public static void BT(String paramString)
+  {
+    if (be.kf(paramString)) {
+      v.e("MicroMsg.AppUtil", "appid is null");
+    }
+    SharedPreferences localSharedPreferences;
+    do
+    {
+      return;
+      localSharedPreferences = aa.aZQ();
+    } while (localSharedPreferences == null);
+    String str = localSharedPreferences.getString("key_app_ids_registion_while_not_login", "");
+    if (str.contains(paramString))
+    {
+      v.i("MicroMsg.AppUtil", "this app has been saved : %s in %s", new Object[] { paramString, str });
+      return;
+    }
+    StringBuilder localStringBuilder = new StringBuilder();
+    localStringBuilder.append(paramString);
+    localStringBuilder.append("|");
+    localStringBuilder.append(str);
+    paramString = localStringBuilder.toString();
+    localSharedPreferences.edit().putString("key_app_ids_registion_while_not_login", paramString).commit();
+  }
+  
+  public static String BU(String paramString)
+  {
+    if (be.kf(paramString)) {
+      return null;
+    }
+    Object localObject = aa.getContext().getPackageManager();
+    try
+    {
+      localObject = ((PackageManager)localObject).getPackageArchiveInfo(paramString, 0);
+      v.i("MicroMsg.AppUtil", "get package name from archive filepath  :%s, package name is : %s", new Object[] { paramString, packageName });
+      paramString = packageName;
+      return paramString;
+    }
+    catch (Exception paramString)
+    {
+      v.e("MicroMsg.AppUtil", "get package name from archive file path, failed : %s", new Object[] { paramString.getMessage() });
+    }
+    return null;
+  }
+  
+  public static int BV(String paramString)
+  {
+    if (be.kf(paramString)) {
+      return 0;
+    }
+    Object localObject = aa.getContext().getPackageManager();
+    try
+    {
+      localObject = ((PackageManager)localObject).getPackageArchiveInfo(paramString, 0);
+      v.i("MicroMsg.AppUtil", "get package version code from archive filepath  :%s, package version code is : %d", new Object[] { paramString, Integer.valueOf(versionCode) });
+      int i = versionCode;
+      return i;
+    }
+    catch (Exception paramString)
+    {
+      v.e("MicroMsg.AppUtil", "get package version code from archive file path, failed : %s", new Object[] { paramString.getMessage() });
+    }
+    return 0;
+  }
+  
+  public static void N(Bundle paramBundle)
   {
     paramBundle.putString("wx_token_key", "com.tencent.mm.openapi.token");
   }
   
-  public static void I(Bundle paramBundle)
+  public static void O(Bundle paramBundle)
   {
     paramBundle.putString("platformId", "wechat");
   }
@@ -39,7 +122,7 @@ public final class p
   {
     if ((paramString1 == null) || (paramString1.length() == 0))
     {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "buildRedirectUrl fail, invalid arguments");
+      v.e("MicroMsg.AppUtil", "buildRedirectUrl fail, invalid arguments");
       return null;
     }
     int i;
@@ -68,9 +151,9 @@ public final class p
         str2 = ((String)localObject).substring(j + 1);
         paramString1 = ((String)localObject).substring(0, j);
       }
-      u.v("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "buildRedirectUrl, sharpStr = %s, paramStr = %s, srcUrl = %s", new Object[] { str1, str2, paramString1 });
+      v.v("MicroMsg.AppUtil", "buildRedirectUrl, sharpStr = %s, paramStr = %s, srcUrl = %s", new Object[] { str1, str2, paramString1 });
       localLinkedHashMap = new LinkedHashMap();
-      if (ay.kz(str2)) {
+      if (be.kf(str2)) {
         break label289;
       }
       String[] arrayOfString = str2.split("&");
@@ -83,10 +166,10 @@ public final class p
         break label289;
       }
       str3 = arrayOfString[j];
-      if (!ay.kz(str3))
+      if (!be.kf(str3))
       {
         int m = str3.indexOf("=");
-        u.v("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "buildRedirectUrl, equalIdx = %d", new Object[] { Integer.valueOf(m) });
+        v.v("MicroMsg.AppUtil", "buildRedirectUrl, equalIdx = %d", new Object[] { Integer.valueOf(m) });
         if (m < 0) {
           break label278;
         }
@@ -112,7 +195,7 @@ public final class p
     }
     localLinkedHashMap.put("from=", localObject);
     localLinkedHashMap.put("isappinstalled=", String.valueOf(i));
-    u.v("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "buildRedirectUrl, pMap size = %d", new Object[] { Integer.valueOf(localLinkedHashMap.size()) });
+    v.v("MicroMsg.AppUtil", "buildRedirectUrl, pMap size = %d", new Object[] { Integer.valueOf(localLinkedHashMap.size()) });
     paramString2 = new StringBuilder();
     localObject = localLinkedHashMap.keySet().iterator();
     while (((Iterator)localObject).hasNext())
@@ -127,29 +210,29 @@ public final class p
     paramString2 = paramString2.toString();
     paramString2 = paramString1 + "?" + paramString2;
     paramString1 = paramString2;
-    if (!ay.kz(str1)) {
+    if (!be.kf(str1)) {
       paramString1 = paramString2 + str1;
     }
-    u.v("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "buildRedirectUrl, ret url = %s", new Object[] { paramString1 });
+    v.v("MicroMsg.AppUtil", "buildRedirectUrl, ret url = %s", new Object[] { paramString1 });
     return paramString1;
   }
   
-  public static String aI(Context paramContext, String paramString)
+  public static String aH(Context paramContext, String paramString)
   {
-    paramContext = aJ(paramContext, paramString);
+    paramContext = aI(paramContext, paramString);
     if ((paramContext == null) || (paramContext.length == 0))
     {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "signs is null");
+      v.e("MicroMsg.AppUtil", "signs is null");
       return null;
     }
-    return zV(g.m(paramContext[0].toByteArray()));
+    return BS(g.j(paramContext[0].toByteArray()));
   }
   
-  public static Signature[] aJ(Context paramContext, String paramString)
+  public static Signature[] aI(Context paramContext, String paramString)
   {
     if ((paramString == null) || (paramString.length() == 0))
     {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "getSignature, packageName is null");
+      v.e("MicroMsg.AppUtil", "getSignature, packageName is null");
       return null;
     }
     paramContext = paramContext.getPackageManager();
@@ -158,26 +241,26 @@ public final class p
       paramContext = paramContext.getPackageInfo(paramString, 64);
       if (paramContext == null)
       {
-        u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "info is null, packageName = " + paramString);
+        v.e("MicroMsg.AppUtil", "info is null, packageName = " + paramString);
         return null;
       }
     }
     catch (PackageManager.NameNotFoundException paramContext)
     {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "NameNotFoundException");
+      v.e("MicroMsg.AppUtil", "NameNotFoundException");
       return null;
     }
     return signatures;
   }
   
-  public static boolean aK(Context paramContext, String paramString)
+  public static boolean aJ(Context paramContext, String paramString)
   {
     Uri localUri = Uri.parse(paramString);
     Intent localIntent = new Intent("android.intent.action.VIEW", localUri);
     localIntent.addFlags(268435456);
-    if (as(paramContext, "com.android.vending") != null)
+    if (ar(paramContext, "com.android.vending") != null)
     {
-      u.v("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "installAppWithGP, gp is installed, url = %s", new Object[] { paramString });
+      v.v("MicroMsg.AppUtil", "installAppWithGP, gp is installed, url = %s", new Object[] { paramString });
       localIntent.setPackage("com.android.vending");
     }
     for (;;)
@@ -189,7 +272,7 @@ public final class p
       }
       catch (Exception paramString)
       {
-        u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "installAppWithGP first, ex = %s", new Object[] { paramString.getMessage() });
+        v.e("MicroMsg.AppUtil", "installAppWithGP first, ex = %s", new Object[] { paramString.getMessage() });
         try
         {
           paramString = new Intent("android.intent.action.VIEW", localUri);
@@ -199,25 +282,25 @@ public final class p
         }
         catch (Exception paramContext)
         {
-          u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "installAppWithGP second, ex = %s", new Object[] { paramContext.getMessage() });
+          v.e("MicroMsg.AppUtil", "installAppWithGP second, ex = %s", new Object[] { paramContext.getMessage() });
         }
       }
-      u.v("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "installAppWithGP, gp is not installed, url = %s", new Object[] { paramString });
+      v.v("MicroMsg.AppUtil", "installAppWithGP, gp is not installed, url = %s", new Object[] { paramString });
     }
     return false;
   }
   
-  public static void aPL()
+  public static void aUt()
   {
-    al.iCd = null;
-    al.iCe = -1L;
+    an.iYN = null;
+    an.iYO = -1L;
   }
   
-  public static PackageInfo as(Context paramContext, String paramString)
+  public static PackageInfo ar(Context paramContext, String paramString)
   {
     if ((paramString == null) || (paramString.length() == 0))
     {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "getPackageInfo, packageName is null");
+      v.e("MicroMsg.AppUtil", "getPackageInfo, packageName is null");
       return null;
     }
     try
@@ -227,7 +310,7 @@ public final class p
     }
     catch (PackageManager.NameNotFoundException paramContext)
     {
-      u.w("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "app not installed, packageName = " + paramString);
+      v.w("MicroMsg.AppUtil", "app not installed, packageName = " + paramString);
     }
     return null;
   }
@@ -235,102 +318,102 @@ public final class p
   public static void b(Bundle paramBundle, String paramString)
   {
     paramBundle.putString("platformId", "wechat");
-    if (!ay.kz(paramString)) {
+    if (!be.kf(paramString)) {
       paramBundle.putString("launchParam", paramString);
     }
   }
   
   public static boolean b(Context paramContext, f paramf)
   {
-    u.i("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "check the signature of the Application.");
+    v.i("MicroMsg.AppUtil", "check the signature of the Application.");
     if (paramContext == null)
     {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "context is null.");
+      v.e("MicroMsg.AppUtil", "context is null.");
       return true;
     }
     if (paramf == null)
     {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "appInfo is null.");
+      v.e("MicroMsg.AppUtil", "appInfo is null.");
       return true;
     }
-    if (ay.kz(field_packageName))
+    if (be.kf(field_packageName))
     {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "packageName is null.");
+      v.e("MicroMsg.AppUtil", "packageName is null.");
       return true;
     }
-    if (ay.kz(field_signature))
+    if (be.kf(field_signature))
     {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "app.field_signature is null. app.field_packageName is %s", new Object[] { field_packageName });
+      v.e("MicroMsg.AppUtil", "app.field_signature is null. app.field_packageName is %s", new Object[] { field_packageName });
       return true;
     }
-    paramContext = aJ(paramContext, field_packageName);
+    paramContext = aI(paramContext, field_packageName);
     if ((paramContext == null) || (paramContext.length == 0))
     {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "apk signatures is null");
+      v.e("MicroMsg.AppUtil", "apk signatures is null");
       return false;
     }
     int j = paramContext.length;
     int i = 0;
     while (i < j)
     {
-      String str = zV(g.m(paramContext[i].toByteArray()));
+      String str = BS(g.j(paramContext[i].toByteArray()));
       if (field_signature.equals(str))
       {
-        u.i("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "app_name : %s ,signature : %s", new Object[] { field_appName, field_signature });
+        v.i("MicroMsg.AppUtil", "app_name : %s ,signature : %s", new Object[] { field_appName, field_signature });
         return true;
       }
       i += 1;
     }
-    u.w("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "signature is diff.(app_name:%s)", new Object[] { field_appName });
+    v.w("MicroMsg.AppUtil", "signature is diff.(app_name:%s)", new Object[] { field_appName });
     return false;
   }
   
   public static boolean b(Context paramContext, f paramf, String paramString)
   {
-    i.r localr = i.a.iyG;
+    i.r localr = i.a.iVc;
     if ((paramString == null) || (paramString.length() == 0))
     {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "isAppValid, packageName is null");
+      v.e("MicroMsg.AppUtil", "isAppValid, packageName is null");
       localr.f(paramf);
       return false;
     }
     if (paramf == null)
     {
-      u.i("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "app does not exist");
+      v.i("MicroMsg.AppUtil", "app does not exist");
       return true;
     }
     if ((field_packageName == null) || (field_packageName.length() == 0))
     {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "isAppValid fail, local packageName is null");
+      v.e("MicroMsg.AppUtil", "isAppValid fail, local packageName is null");
       localr.f(paramf);
       return false;
     }
     if ((field_signature == null) || (field_signature.length() == 0))
     {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "isAppValid fail, local signature is null");
+      v.e("MicroMsg.AppUtil", "isAppValid fail, local signature is null");
       localr.f(paramf);
       return false;
     }
-    paramContext = aJ(paramContext, paramString);
+    paramContext = aI(paramContext, paramString);
     if ((paramContext == null) || (paramContext.length == 0))
     {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "isAppValid, apk signatures is null");
+      v.e("MicroMsg.AppUtil", "isAppValid, apk signatures is null");
       localr.f(paramf);
       return false;
     }
     if (!field_packageName.equals(paramString))
     {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "isAppValid, packageName is diff, src:%s,local:%s", new Object[] { field_packageName, paramString });
+      v.e("MicroMsg.AppUtil", "isAppValid, packageName is diff, src:%s,local:%s", new Object[] { field_packageName, paramString });
       localr.f(paramf);
       return false;
     }
-    u.i("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "server signatures:%s", new Object[] { field_signature });
+    v.i("MicroMsg.AppUtil", "server signatures:%s", new Object[] { field_signature });
     int j = paramContext.length;
     int i = 0;
     while (i < j)
     {
-      paramString = zV(g.m(paramContext[i].toByteArray()));
-      u.i("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "local signatures:%s", new Object[] { paramString });
+      paramString = BS(g.j(paramContext[i].toByteArray()));
+      v.i("MicroMsg.AppUtil", "local signatures:%s", new Object[] { paramString });
       if ((field_signature != null) && (field_signature.equals(paramString)))
       {
         localr.g(paramf);
@@ -338,7 +421,7 @@ public final class p
       }
       i += 1;
     }
-    u.w("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "isAppValid, signature is diff");
+    v.w("MicroMsg.AppUtil", "isAppValid, signature is diff");
     localr.f(paramf);
     return false;
   }
@@ -355,26 +438,26 @@ public final class p
     }
     catch (Exception paramContext)
     {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "install app failed: " + paramUri.toString() + ", ex = " + paramContext.getMessage());
+      v.e("MicroMsg.AppUtil", "install app failed: " + paramUri.toString() + ", ex = " + paramContext.getMessage());
     }
     return false;
   }
   
-  public static String e(Context paramContext, String paramString1, String paramString2)
+  public static String d(Context paramContext, String paramString1, String paramString2)
   {
     if ((paramString1 == null) || (paramString1.length() == 0) || (paramString2 == null) || (paramString2.length() == 0))
     {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "buildSourceUrl fail, invalid arguments");
+      v.e("MicroMsg.AppUtil", "buildSourceUrl fail, invalid arguments");
       return null;
     }
-    String str2 = t.d(paramContext.getSharedPreferences(y.aUK(), 0));
+    String str2 = u.d(paramContext.getSharedPreferences(aa.aZO(), 0));
     String str1;
     if ((str2 == null) || (str2.length() == 0)) {
       str1 = "zh_CN";
     }
     for (;;)
     {
-      return paramContext.getString(2131428995, new Object[] { paramString1, Integer.valueOf(b.iUf), str1, b.bwR, paramString2 });
+      return paramContext.getString(2131234129, new Object[] { paramString1, Integer.valueOf(c.jry), str1, c.boS, paramString2 });
       str1 = str2;
       if (str2.equals("en")) {
         str1 = "en_US";
@@ -382,94 +465,31 @@ public final class p
     }
   }
   
-  public static boolean m(Context paramContext, String paramString)
+  public static boolean n(Context paramContext, String paramString)
   {
-    return as(paramContext, paramString) != null;
+    return ar(paramContext, paramString) != null;
   }
   
-  public static String r(Context paramContext, String paramString1, String paramString2)
+  public static String s(Context paramContext, String paramString1, String paramString2)
   {
     if ((paramString1 == null) || (paramString1.length() == 0) || (paramString2.length() == 0))
     {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "buildUnistallUrl fail, invalid arguments");
+      v.e("MicroMsg.AppUtil", "buildUnistallUrl fail, invalid arguments");
       return null;
     }
-    String str2 = t.d(paramContext.getSharedPreferences(y.aUK(), 0));
+    String str2 = u.d(paramContext.getSharedPreferences(aa.aZO(), 0));
     String str1;
     if ((str2 == null) || (str2.length() == 0)) {
       str1 = "zh_CN";
     }
     for (;;)
     {
-      return paramContext.getString(2131428996, new Object[] { paramString1, Integer.valueOf(b.iUf), str1, b.bwR, paramString2, Integer.valueOf(0) });
+      return paramContext.getString(2131234130, new Object[] { paramString1, Integer.valueOf(c.jry), str1, c.boS, paramString2, Integer.valueOf(0) });
       str1 = str2;
       if (str2.equals("en")) {
         str1 = "en_US";
       }
     }
-  }
-  
-  public static String zU(String paramString)
-  {
-    if ((paramString == null) || (paramString.length() == 0))
-    {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "getDbSignature, svrSign is null");
-      return null;
-    }
-    return zV(paramString);
-  }
-  
-  private static String zV(String paramString)
-  {
-    StringBuffer localStringBuffer = new StringBuffer();
-    localStringBuffer.append(paramString.toLowerCase());
-    localStringBuffer.append("mMHc ItnStR");
-    return g.m(localStringBuffer.toString().getBytes());
-  }
-  
-  public static void zW(String paramString)
-  {
-    if (ay.kz(paramString)) {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "appid is null");
-    }
-    SharedPreferences localSharedPreferences;
-    do
-    {
-      return;
-      localSharedPreferences = y.aUM();
-    } while (localSharedPreferences == null);
-    String str = localSharedPreferences.getString("key_app_ids_registion_while_not_login", "");
-    if (str.contains(paramString))
-    {
-      u.i("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "this app has been saved : %s in %s", new Object[] { paramString, str });
-      return;
-    }
-    StringBuilder localStringBuilder = new StringBuilder();
-    localStringBuilder.append(paramString);
-    localStringBuilder.append("|");
-    localStringBuilder.append(str);
-    paramString = localStringBuilder.toString();
-    localSharedPreferences.edit().putString("key_app_ids_registion_while_not_login", paramString).commit();
-  }
-  
-  public static String zX(String paramString)
-  {
-    if (ay.kz(paramString)) {
-      return null;
-    }
-    Object localObject = y.getContext().getPackageManager();
-    try
-    {
-      localObject = ((PackageManager)localObject).getPackageArchiveInfo(paramString, 0);
-      u.i("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "get package name from archive filepath  :%s, package name is : %s", new Object[] { paramString, packageName });
-      paramString = packageName;
-      return paramString;
-    }
-    catch (Exception paramString)
-    {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "get package name from archive file path, failed : %s", new Object[] { paramString.getMessage() });
-    }
-    return null;
   }
 }
 

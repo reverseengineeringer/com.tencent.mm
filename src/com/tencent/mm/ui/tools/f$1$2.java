@@ -3,8 +3,8 @@ package com.tencent.mm.ui.tools;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.widget.Toast;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.sdk.platformtools.aa;
 
 final class f$1$2
   implements Runnable
@@ -13,28 +13,28 @@ final class f$1$2
   
   public final void run()
   {
-    if (lvk.cYO != null) {
-      lvk.cYO.dismiss();
+    if (lWm.cXy != null) {
+      lWm.cXy.dismiss();
     }
-    h localh;
+    g localg;
     long l;
-    if (lvl)
+    if (lWn)
     {
-      if (lvk.lvh) {
-        Toast.makeText(y.getContext(), y.getContext().getString(2131431124), 1).show();
+      if (lWm.lWj) {
+        Toast.makeText(aa.getContext(), aa.getContext().getString(2131234343), 1).show();
       }
-      if (!lvk.lvi) {
+      if (!lWm.lWk) {
         break label193;
       }
-      localh = h.fUJ;
-      if (!lvl) {
+      localg = g.gdY;
+      if (!lWn) {
         break label186;
       }
       l = 12L;
       label81:
-      h.b(181L, l, 1L, false);
-      localh = h.fUJ;
-      if (!lvl) {
+      g.b(181L, l, 1L, false);
+      localg = g.gdY;
+      if (!lWn) {
         break label228;
       }
     }
@@ -43,20 +43,20 @@ final class f$1$2
     label228:
     for (int i = 1;; i = 0)
     {
-      localh.g(11224, new Object[] { Integer.valueOf(i), Integer.valueOf(f.aa()), Long.valueOf(lvm) });
-      if (lvk.lvj != null) {
-        lvk.lvj.pV();
+      localg.h(11224, new Object[] { Integer.valueOf(i), Integer.valueOf(f.access$000()), Long.valueOf(lWo) });
+      if (lWm.lWl != null) {
+        lWm.lWl.op();
       }
       return;
-      Toast.makeText(y.getContext(), y.getContext().getString(2131431123), 1).show();
+      Toast.makeText(aa.getContext(), aa.getContext().getString(2131234339), 1).show();
       break;
       l = 13L;
       break label81;
-      localh = h.fUJ;
-      if (lvl) {}
+      localg = g.gdY;
+      if (lWn) {}
       for (l = 14L;; l = 15L)
       {
-        h.b(181L, l, 1L, false);
+        g.b(181L, l, 1L, false);
         break;
       }
     }

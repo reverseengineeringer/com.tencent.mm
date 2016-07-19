@@ -4,27 +4,27 @@
 
 
 # static fields
-.field public static akC:I
+.field public static XH:I
 
-.field public static akE:Ljava/lang/String;
+.field public static Xv:I
 
-.field public static akG:I
+.field public static Xx:Ljava/lang/String;
 
-.field public static akO:I
+.field public static Xz:I
 
-.field public static jUZ:I
+.field public static kuF:I
 
-.field public static jVa:I
+.field public static kuG:I
 
-.field public static jVb:Ljava/lang/String;
+.field public static kuH:Ljava/lang/String;
 
-.field public static jVc:Z
+.field public static kuI:Z
 
-.field public static jVd:Z
+.field public static kuJ:Z
 
-.field public static jVe:Z
+.field public static kuK:Z
 
-.field public static jVf:Z
+.field public static kuL:Z
 
 
 # direct methods
@@ -35,16 +35,16 @@
     const/4 v2, 0x0
 
     .line 14
-    sput v2, Lcom/tencent/mm/sdk/platformtools/f;->akG:I
+    sput v2, Lcom/tencent/mm/sdk/platformtools/f;->Xz:I
 
     .line 19
-    sput v2, Lcom/tencent/mm/sdk/platformtools/f;->akC:I
+    sput v2, Lcom/tencent/mm/sdk/platformtools/f;->Xv:I
 
     .line 20
-    sput v2, Lcom/tencent/mm/sdk/platformtools/f;->jUZ:I
+    sput v2, Lcom/tencent/mm/sdk/platformtools/f;->kuF:I
 
     .line 23
-    sput v2, Lcom/tencent/mm/sdk/platformtools/f;->akO:I
+    sput v2, Lcom/tencent/mm/sdk/platformtools/f;->XH:I
 
     .line 27
     new-instance v0, Ljava/lang/StringBuilder;
@@ -61,10 +61,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/sdk/platformtools/f;->akE:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/sdk/platformtools/f;->Xx:Ljava/lang/String;
 
     .line 28
-    sput v2, Lcom/tencent/mm/sdk/platformtools/f;->jVa:I
+    sput v2, Lcom/tencent/mm/sdk/platformtools/f;->kuG:I
 
     .line 29
     new-instance v0, Ljava/lang/StringBuilder;
@@ -73,7 +73,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getPackageName()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -85,31 +85,31 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/sdk/platformtools/f;->jVb:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/sdk/platformtools/f;->kuH:Ljava/lang/String;
 
     .line 30
-    sput-boolean v2, Lcom/tencent/mm/sdk/platformtools/f;->jVc:Z
+    sput-boolean v2, Lcom/tencent/mm/sdk/platformtools/f;->kuI:Z
 
     .line 31
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/tencent/mm/sdk/platformtools/f;->jVd:Z
+    sput-boolean v0, Lcom/tencent/mm/sdk/platformtools/f;->kuJ:Z
 
     .line 32
-    sput-boolean v2, Lcom/tencent/mm/sdk/platformtools/f;->jVe:Z
+    sput-boolean v2, Lcom/tencent/mm/sdk/platformtools/f;->kuK:Z
 
     .line 33
-    sput-boolean v2, Lcom/tencent/mm/sdk/platformtools/f;->jVf:Z
+    sput-boolean v2, Lcom/tencent/mm/sdk/platformtools/f;->kuL:Z
 
     return-void
 .end method
 
-.method public static E(Landroid/content/Context;I)Ljava/lang/String;
+.method public static I(Landroid/content/Context;I)Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 108
-    sget-boolean v0, Lcom/tencent/mm/sdk/platformtools/f;->jVc:Z
+    sget-boolean v0, Lcom/tencent/mm/sdk/platformtools/f;->kuI:Z
 
     invoke-static {p0, p1, v0}, Lcom/tencent/mm/sdk/platformtools/f;->a(Landroid/content/Context;IZ)Ljava/lang/String;
 
@@ -124,7 +124,7 @@
     .prologue
     const/4 v5, 0x2
 
-    .line 124
+    .line 121
     shr-int/lit8 v0, p1, 0x8
 
     and-int/lit16 v1, v0, 0xff
@@ -165,7 +165,7 @@
 
     .line 132
     :goto_0
-    const-string/jumbo v2, "!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg="
+    const-string/jumbo v2, "MicroMsg.SDK.ChannelUtil"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -181,7 +181,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 133
     const v1, 0xfffffff
@@ -247,7 +247,7 @@
     move-result-object v0
 
     .line 150
-    const-string/jumbo v1, "!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg="
+    const-string/jumbo v1, "MicroMsg.SDK.ChannelUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -263,7 +263,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 166
     :cond_1
@@ -410,7 +410,7 @@
     goto/16 :goto_1
 .end method
 
-.method public static dl(Landroid/content/Context;)V
+.method public static dj(Landroid/content/Context;)V
     .locals 2
 
     .prologue
@@ -426,12 +426,12 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->d(Ljava/io/InputStream;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->d(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 43
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/q;->CK(Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/r;->EX(Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v0
 
@@ -448,7 +448,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/sdk/platformtools/f;->akC:I
+    sput v0, Lcom/tencent/mm/sdk/platformtools/f;->Xv:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -460,16 +460,16 @@
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg="
+    const-string/jumbo v0, "MicroMsg.SDK.ChannelUtil"
 
     const-string/jumbo v1, "setup channel id from channel.ini failed"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public static dm(Landroid/content/Context;)V
+.method public static dk(Landroid/content/Context;)V
     .locals 4
 
     .prologue
@@ -485,12 +485,12 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->d(Ljava/io/InputStream;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->d(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 56
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/q;->CK(Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/r;->EX(Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v1
 
@@ -503,12 +503,12 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->li(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 59
-    sput-object v0, Lcom/tencent/mm/sdk/platformtools/f;->akE:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/sdk/platformtools/f;->Xx:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -531,7 +531,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/sdk/platformtools/f;->akE:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/sdk/platformtools/f;->Xx:Ljava/lang/String;
 
     .line 63
     :cond_0
@@ -547,7 +547,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/sdk/platformtools/f;->akG:I
+    sput v0, Lcom/tencent/mm/sdk/platformtools/f;->Xz:I
 
     .line 64
     const-string/jumbo v0, "BUILD_REVISION"
@@ -562,7 +562,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/sdk/platformtools/f;->jVa:I
+    sput v0, Lcom/tencent/mm/sdk/platformtools/f;->kuG:I
 
     .line 65
     const-string/jumbo v0, "GPRS_ALERT"
@@ -577,7 +577,7 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/tencent/mm/sdk/platformtools/f;->jVe:Z
+    sput-boolean v0, Lcom/tencent/mm/sdk/platformtools/f;->kuK:Z
 
     .line 66
     const-string/jumbo v0, "AUTO_ADD_ACOUNT"
@@ -592,7 +592,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/sdk/platformtools/f;->akO:I
+    sput v0, Lcom/tencent/mm/sdk/platformtools/f;->XH:I
 
     .line 67
     const-string/jumbo v0, "NOKIA_AOL"
@@ -607,10 +607,10 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/tencent/mm/sdk/platformtools/f;->jVf:Z
+    sput-boolean v0, Lcom/tencent/mm/sdk/platformtools/f;->kuL:Z
 
     .line 69
-    const-string/jumbo v0, "!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg="
+    const-string/jumbo v0, "MicroMsg.SDK.ChannelUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -618,7 +618,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v3, Lcom/tencent/mm/sdk/platformtools/f;->akE:Ljava/lang/String;
+    sget-object v3, Lcom/tencent/mm/sdk/platformtools/f;->Xx:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -628,10 +628,10 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 70
-    const-string/jumbo v0, "!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg="
+    const-string/jumbo v0, "MicroMsg.SDK.ChannelUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -639,7 +639,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget v3, Lcom/tencent/mm/sdk/platformtools/f;->akG:I
+    sget v3, Lcom/tencent/mm/sdk/platformtools/f;->Xz:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -649,10 +649,10 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 71
-    const-string/jumbo v0, "!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg="
+    const-string/jumbo v0, "MicroMsg.SDK.ChannelUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -660,7 +660,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-boolean v3, Lcom/tencent/mm/sdk/platformtools/f;->jVe:Z
+    sget-boolean v3, Lcom/tencent/mm/sdk/platformtools/f;->kuK:Z
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -670,10 +670,10 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 72
-    const-string/jumbo v0, "!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg="
+    const-string/jumbo v0, "MicroMsg.SDK.ChannelUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -681,7 +681,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget v3, Lcom/tencent/mm/sdk/platformtools/f;->akO:I
+    sget v3, Lcom/tencent/mm/sdk/platformtools/f;->XH:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -691,10 +691,10 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 73
-    const-string/jumbo v0, "!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg="
+    const-string/jumbo v0, "MicroMsg.SDK.ChannelUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -702,7 +702,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-boolean v3, Lcom/tencent/mm/sdk/platformtools/f;->jVf:Z
+    sget-boolean v3, Lcom/tencent/mm/sdk/platformtools/f;->kuL:Z
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -712,7 +712,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 75
     const-string/jumbo v0, "MARKET_URL"
@@ -743,11 +743,11 @@
     if-eqz v1, :cond_1
 
     .line 77
-    sput-object v0, Lcom/tencent/mm/sdk/platformtools/f;->jVb:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/sdk/platformtools/f;->kuH:Ljava/lang/String;
 
     .line 79
     :cond_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg="
+    const-string/jumbo v0, "MicroMsg.SDK.ChannelUtil"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -755,7 +755,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v2, Lcom/tencent/mm/sdk/platformtools/f;->jVb:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/sdk/platformtools/f;->kuH:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -765,7 +765,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -777,11 +777,11 @@
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg="
+    const-string/jumbo v0, "MicroMsg.SDK.ChannelUtil"
 
     const-string/jumbo v1, "setup profile from profile.ini failed"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -807,13 +807,13 @@
     move-exception v0
 
     .line 101
-    const-string/jumbo v1, "!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg="
+    const-string/jumbo v1, "MicroMsg.SDK.ChannelUtil"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 103
     const/4 v0, 0x0
@@ -842,13 +842,13 @@
     move-exception v0
 
     .line 92
-    const-string/jumbo v1, "!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg="
+    const-string/jumbo v1, "MicroMsg.SDK.ChannelUtil"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 93
     const/4 v0, 0x0

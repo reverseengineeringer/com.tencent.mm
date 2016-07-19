@@ -1,5 +1,8 @@
 package com.tencent.mm.ui.chatting;
 
+import com.tencent.mm.ui.LauncherUI;
+import com.tencent.mm.ui.conversation.BaseConversationUI;
+
 final class ChattingUI$a$7
   implements Runnable
 {
@@ -7,7 +10,39 @@ final class ChattingUI$a$7
   
   public final void run()
   {
-    ChattingUI.a.d(laF);
+    boolean bool = true;
+    if (lAY.kLa) {
+      ChattingUI.a.au(lAY);
+    }
+    Object localObject;
+    do
+    {
+      do
+      {
+        do
+        {
+          return;
+          if (!(lAY.y() instanceof LauncherUI)) {
+            break;
+          }
+          localObject = LauncherUI.bfJ();
+        } while (localObject == null);
+        if (!lAY.bgq()) {}
+        for (bool = true;; bool = false)
+        {
+          ((LauncherUI)localObject).hB(bool);
+          return;
+        }
+      } while (!(lAY.y() instanceof BaseConversationUI));
+      localObject = (BaseConversationUI)lAY.y();
+    } while (localObject == null);
+    if (!lAY.bgq()) {}
+    for (;;)
+    {
+      ((BaseConversationUI)localObject).hB(bool);
+      return;
+      bool = false;
+    }
   }
 }
 

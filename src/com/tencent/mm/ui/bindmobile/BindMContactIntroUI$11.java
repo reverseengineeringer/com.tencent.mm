@@ -3,7 +3,7 @@ package com.tencent.mm.ui.bindmobile;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 
 final class BindMContactIntroUI$11
   implements DialogInterface.OnClickListener
@@ -13,9 +13,9 @@ final class BindMContactIntroUI$11
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     paramDialogInterface = new Intent();
-    paramDialogInterface.putExtra("kintent_hint", kOs.getString(2131428229));
+    paramDialogInterface.putExtra("kintent_hint", lnI.getString(2131235172));
     paramDialogInterface.putExtra("from_unbind", true);
-    c.a(kOs, "accountsync", "com.tencent.mm.ui.account.RegByMobileSetPwdUI", paramDialogInterface, 1);
+    c.a(lnI, "accountsync", "com.tencent.mm.ui.account.RegByMobileSetPwdUI", paramDialogInterface, 1);
   }
 }
 

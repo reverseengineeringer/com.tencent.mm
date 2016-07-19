@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.chatting.gallery;
 
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class b$a$1
   implements Runnable
@@ -9,15 +9,15 @@ final class b$a$1
   
   public final void run()
   {
-    b.a.a(leN, leK);
-    if (leL.booleanValue()) {
-      leN.handler.postDelayed(new Runnable()
+    b.a.a(lEZ, lEW);
+    if (lEX.booleanValue()) {
+      lEZ.handler.postDelayed(new Runnable()
       {
         public final void run()
         {
-          b.a.a(leN);
-          if (leM.lev != null) {
-            leM.lev.Xq();
+          b.a.a(lEZ);
+          if (lEY.lEH != null) {
+            lEY.lEH.Zb();
           }
         }
       }, 0L);

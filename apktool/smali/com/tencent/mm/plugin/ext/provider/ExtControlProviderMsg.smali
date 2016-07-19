@@ -16,31 +16,31 @@
 
 
 # static fields
-.field private static final dKS:Landroid/content/UriMatcher;
+.field private static final dMB:Landroid/content/UriMatcher;
 
-.field private static final dKV:[Ljava/lang/String;
+.field private static final dME:[Ljava/lang/String;
 
-.field private static final dKW:[Ljava/lang/String;
+.field private static final dMF:[Ljava/lang/String;
 
-.field private static final dKX:[Ljava/lang/String;
+.field private static final dMG:[Ljava/lang/String;
 
-.field private static final dKY:[Ljava/lang/String;
+.field private static final dMH:[Ljava/lang/String;
 
-.field private static final dKZ:[Ljava/lang/String;
+.field private static final dMI:[Ljava/lang/String;
 
-.field private static final dLa:[Ljava/lang/String;
+.field private static final dMJ:[Ljava/lang/String;
 
 
 # instance fields
-.field private dKH:[Ljava/lang/String;
+.field private dMC:Z
 
-.field private dKI:I
+.field private dMD:Landroid/content/Context;
 
-.field private dKT:Z
+.field private dMK:Landroid/database/MatrixCursor;
 
-.field private dKU:Landroid/content/Context;
+.field private dMk:[Ljava/lang/String;
 
-.field private dLb:Landroid/database/MatrixCursor;
+.field private dMl:I
 
 
 # direct methods
@@ -58,7 +58,7 @@
 
     const/4 v3, 0x0
 
-    .line 94
+    .line 95
     const/16 v0, 0x8
 
     new-array v0, v0, [Ljava/lang/String;
@@ -101,9 +101,9 @@
 
     aput-object v1, v0, v7
 
-    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKV:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dME:[Ljava/lang/String;
 
-    .line 104
+    .line 105
     new-array v0, v5, [Ljava/lang/String;
 
     const-string/jumbo v1, "userId"
@@ -114,9 +114,9 @@
 
     aput-object v1, v0, v4
 
-    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKW:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMF:[Ljava/lang/String;
 
-    .line 108
+    .line 109
     new-array v0, v5, [Ljava/lang/String;
 
     const-string/jumbo v1, "userId"
@@ -127,9 +127,9 @@
 
     aput-object v1, v0, v4
 
-    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKX:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMG:[Ljava/lang/String;
 
-    .line 112
+    .line 113
     new-array v0, v6, [Ljava/lang/String;
 
     const-string/jumbo v1, "userId"
@@ -144,9 +144,9 @@
 
     aput-object v1, v0, v5
 
-    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKY:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMH:[Ljava/lang/String;
 
-    .line 117
+    .line 118
     new-array v0, v5, [Ljava/lang/String;
 
     const-string/jumbo v1, "msgId"
@@ -157,9 +157,9 @@
 
     aput-object v1, v0, v4
 
-    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKZ:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMI:[Ljava/lang/String;
 
-    .line 121
+    .line 122
     new-array v0, v5, [Ljava/lang/String;
 
     const-string/jumbo v1, "msgId"
@@ -170,17 +170,17 @@
 
     aput-object v1, v0, v4
 
-    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dLa:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMJ:[Ljava/lang/String;
 
-    .line 127
+    .line 128
     new-instance v0, Landroid/content/UriMatcher;
 
     const/4 v1, -0x1
 
     invoke-direct {v0, v1}, Landroid/content/UriMatcher;-><init>(I)V
 
-    .line 129
-    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKS:Landroid/content/UriMatcher;
+    .line 130
+    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMB:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.plugin.ext.message"
 
@@ -188,8 +188,8 @@
 
     invoke-virtual {v0, v1, v2, v7}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 130
-    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKS:Landroid/content/UriMatcher;
+    .line 131
+    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMB:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.plugin.ext.message"
 
@@ -199,8 +199,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 131
-    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKS:Landroid/content/UriMatcher;
+    .line 132
+    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMB:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.plugin.ext.message"
 
@@ -210,8 +210,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 132
-    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKS:Landroid/content/UriMatcher;
+    .line 133
+    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMB:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.plugin.ext.message"
 
@@ -221,8 +221,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 133
-    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKS:Landroid/content/UriMatcher;
+    .line 134
+    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMB:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.plugin.ext.message"
 
@@ -232,8 +232,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 134
-    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKS:Landroid/content/UriMatcher;
+    .line 135
+    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMB:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.plugin.ext.message"
 
@@ -243,8 +243,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 135
-    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKS:Landroid/content/UriMatcher;
+    .line 136
+    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMB:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.plugin.ext.message"
 
@@ -254,8 +254,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 136
-    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKS:Landroid/content/UriMatcher;
+    .line 137
+    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMB:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.plugin.ext.message"
 
@@ -265,7 +265,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 137
+    .line 138
     return-void
 .end method
 
@@ -275,26 +275,26 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 155
+    .line 156
     invoke-direct {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;-><init>()V
 
-    .line 139
-    iput-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dLb:Landroid/database/MatrixCursor;
+    .line 140
+    iput-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMK:Landroid/database/MatrixCursor;
 
-    .line 143
+    .line 144
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMC:Z
 
-    .line 146
-    iput-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKH:[Ljava/lang/String;
+    .line 147
+    iput-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMk:[Ljava/lang/String;
 
-    .line 149
+    .line 150
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKI:I
+    iput v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMl:I
 
-    .line 156
+    .line 157
     return-void
 .end method
 
@@ -304,44 +304,44 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 159
+    .line 160
     invoke-direct {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;-><init>()V
 
-    .line 139
-    iput-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dLb:Landroid/database/MatrixCursor;
+    .line 140
+    iput-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMK:Landroid/database/MatrixCursor;
 
-    .line 143
+    .line 144
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMC:Z
 
-    .line 146
-    iput-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKH:[Ljava/lang/String;
+    .line 147
+    iput-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMk:[Ljava/lang/String;
 
-    .line 149
+    .line 150
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKI:I
-
-    .line 160
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKT:Z
+    iput v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMl:I
 
     .line 161
-    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKH:[Ljava/lang/String;
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMC:Z
 
     .line 162
-    iput p2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKI:I
+    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMk:[Ljava/lang/String;
 
     .line 163
-    iput-object p3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKU:Landroid/content/Context;
+    iput p2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMl:I
 
     .line 164
+    iput-object p3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMD:Landroid/content/Context;
+
+    .line 165
     return-void
 .end method
 
-.method private Vy()Landroid/database/Cursor;
+.method private Xg()Landroid/database/Cursor;
     .locals 12
 
     .prologue
@@ -351,31 +351,31 @@
 
     const/4 v11, 0x0
 
-    .line 431
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 457
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v1, "getUnReadUserList()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 433
+    .line 459
     new-instance v8, Landroid/database/MatrixCursor;
 
-    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKX:[Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMG:[Ljava/lang/String;
 
     invoke-direct {v8, v0}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 436
+    .line 462
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rs()Lcom/tencent/mm/storage/ah;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/aj;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/storage/ah;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v0, v0, Lcom/tencent/mm/storage/aj;->bvG:Lcom/tencent/mm/bc/g;
 
     const-string/jumbo v1, "message"
 
@@ -419,21 +419,21 @@
 
     const/4 v7, 0x0
 
-    invoke-virtual/range {v0 .. v7}, Lcom/tencent/mm/az/g;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual/range {v0 .. v7}, Lcom/tencent/mm/bc/g;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
 
-    .line 437
+    .line 463
     if-eqz v1, :cond_4
 
-    .line 438
+    .line 464
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 440
+    .line 466
     :cond_0
     const-string/jumbo v0, "talker"
 
@@ -445,62 +445,62 @@
 
     move-result-object v0
 
-    .line 441
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 467
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v2
 
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/storage/q;->Ep(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/storage/q;->GD(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
 
     move-result-object v2
 
-    .line 442
-    invoke-static {v0}, Lcom/tencent/mm/model/i;->dn(Ljava/lang/String;)Z
+    .line 468
+    invoke-static {v0}, Lcom/tencent/mm/model/i;->du(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 443
-    iget-object v0, v2, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    .line 469
+    iget-object v0, v2, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/model/i;->eI(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, v2, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/tencent/mm/model/i;->eH(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/model/i;->eU(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget v0, v2, Lcom/tencent/mm/d/b/p;->field_verifyFlag:I
+    iget-object v0, v2, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/storage/k;->pD(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, v2, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/tencent/mm/model/i;->ey(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/model/i;->eT(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget-object v0, v2, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget v0, v2, Lcom/tencent/mm/e/b/p;->field_verifyFlag:I
 
-    invoke-static {v0}, Lcom/tencent/mm/model/i;->ez(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/storage/k;->rs(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, v2, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/tencent/mm/model/i;->eK(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, v2, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/tencent/mm/model/i;->eL(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -512,21 +512,21 @@
     :goto_0
     if-nez v0, :cond_2
 
-    .line 445
-    iget-wide v2, v2, Lcom/tencent/mm/h/a;->bvi:J
+    .line 471
+    iget-wide v2, v2, Lcom/tencent/mm/i/a;->bjS:J
 
     long-to-int v0, v2
 
     int-to-long v2, v0
 
-    .line 450
+    .line 476
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Object;
 
     const/4 v4, 0x0
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/plugin/ext/a/a;->bc(J)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/tencent/mm/plugin/ext/a/a;->bk(J)Ljava/lang/String;
 
     move-result-object v2
 
@@ -552,7 +552,7 @@
 
     invoke-virtual {v8, v0}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
 
-    .line 451
+    .line 477
     :cond_2
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -560,63 +560,63 @@
 
     if-nez v0, :cond_0
 
-    .line 453
+    .line 479
     :cond_3
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 455
+    .line 481
     :cond_4
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-object v0, v8
 
-    .line 464
+    .line 490
     :goto_1
     return-object v0
 
     :cond_5
     move v0, v10
 
-    .line 443
+    .line 469
     goto :goto_0
 
-    .line 457
+    .line 483
     :catch_0
     move-exception v0
 
-    .line 458
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 484
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderMsg"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 459
+    .line 485
     invoke-virtual {v8}, Landroid/database/MatrixCursor;->close()V
 
-    .line 463
+    .line 489
     const/4 v0, 0x4
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
 
     move-object v0, v9
 
-    .line 464
+    .line 490
     goto :goto_1
 .end method
 
-.method static synthetic Vz()[Ljava/lang/String;
+.method static synthetic Xh()[Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 56
-    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKY:[Ljava/lang/String;
+    .line 57
+    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMH:[Ljava/lang/String;
 
     return-object v0
 .end method
@@ -625,29 +625,27 @@
     .locals 12
 
     .prologue
-    const/16 v11, 0xf
+    const/4 v11, 0x4
 
-    const/4 v10, 0x4
+    const/4 v4, 0x2
 
     const/4 v0, 0x1
 
-    const/4 v5, 0x3
+    const/4 v10, 0x3
 
     const/4 v1, 0x0
 
-    .line 343
-    const-string/jumbo v2, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 358
+    const-string/jumbo v2, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v3, "getUnReadMsgs() "
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 344
-    const-string/jumbo v2, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 359
+    const-string/jumbo v2, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v3, "getUnReadMsgs(), %s, %s"
-
-    const/4 v4, 0x2
 
     new-array v4, v4, [Ljava/lang/Object;
 
@@ -655,50 +653,100 @@
 
     aput-object p3, v4, v0
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 345
+    .line 360
     if-eqz p1, :cond_0
 
     array-length v2, p1
 
-    if-lez v2, :cond_0
+    if-gtz v2, :cond_1
 
-    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    .line 346
+    .line 361
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v1, "wrong args"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 347
-    invoke-virtual {p0, v5}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    .line 362
+    const/16 v0, 0xe75
 
-    .line 348
-    invoke-static {v5}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gL(I)Landroid/database/MatrixCursor;
+    invoke-virtual {p0, v10, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->aA(II)V
+
+    .line 363
+    const/16 v0, 0xe75
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hK(I)Landroid/database/MatrixCursor;
 
     move-result-object v1
 
-    .line 426
+    .line 452
     :goto_0
     return-object v1
 
-    .line 350
+    .line 365
     :cond_1
-    if-eqz p2, :cond_3
+    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    .line 366
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderMsg"
+
+    const-string/jumbo v1, "callSource == null"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 367
+    const/16 v0, 0xe76
+
+    invoke-virtual {p0, v10, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->aA(II)V
+
+    .line 368
+    const/16 v0, 0xe76
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hK(I)Landroid/database/MatrixCursor;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    .line 370
+    :cond_2
+    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    .line 371
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderMsg"
+
+    const-string/jumbo v1, "countStr == null"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 372
+    const/16 v0, 0xe77
+
+    invoke-virtual {p0, v10, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->aA(II)V
+
+    .line 373
+    const/16 v0, 0xe77
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hK(I)Landroid/database/MatrixCursor;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    .line 375
+    :cond_3
+    if-eqz p2, :cond_5
 
     const-string/jumbo v2, "openapi"
 
@@ -706,20 +754,20 @@
 
     move-result v2
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_5
 
     move v6, v0
 
-    .line 352
+    .line 377
     :goto_1
     const/4 v2, 0x0
 
-    .line 354
-    if-eqz v6, :cond_6
+    .line 379
+    if-eqz v6, :cond_8
 
-    .line 357
+    .line 382
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/plugin/ext/b;->Vq()Lcom/tencent/mm/storage/aq;
+    invoke-static {}, Lcom/tencent/mm/plugin/ext/b;->WS()Lcom/tencent/mm/storage/as;
 
     move-result-object v3
 
@@ -727,144 +775,148 @@
 
     aget-object v4, p1, v4
 
-    invoke-virtual {v3, v4}, Lcom/tencent/mm/storage/aq;->FJ(Ljava/lang/String;)Lcom/tencent/mm/storage/ap;
+    invoke-virtual {v3, v4}, Lcom/tencent/mm/storage/as;->Ia(Ljava/lang/String;)Lcom/tencent/mm/storage/ar;
 
     move-result-object v3
 
-    .line 358
-    if-eqz v3, :cond_2
+    .line 383
+    if-eqz v3, :cond_4
 
-    iget-object v4, v3, Lcom/tencent/mm/storage/ap;->field_openId:Ljava/lang/String;
+    iget-object v4, v3, Lcom/tencent/mm/storage/ar;->field_openId:Ljava/lang/String;
 
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_2
-
-    iget-object v4, v3, Lcom/tencent/mm/storage/ap;->field_username:Ljava/lang/String;
-
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_4
+    if-nez v4, :cond_4
 
-    .line 359
-    :cond_2
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    iget-object v4, v3, Lcom/tencent/mm/storage/ar;->field_username:Ljava/lang/String;
+
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_6
+
+    .line 384
+    :cond_4
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v1, "openidInApp is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 360
+    .line 385
     const/4 v0, 0x3
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    const/16 v1, 0xe78
 
-    .line 361
-    const/4 v0, 0x3
+    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->aA(II)V
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gL(I)Landroid/database/MatrixCursor;
+    .line 386
+    const/16 v0, 0xe78
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hK(I)Landroid/database/MatrixCursor;
 
     move-result-object v1
 
     goto :goto_0
 
-    :cond_3
+    :cond_5
     move v6, v1
 
-    .line 350
+    .line 375
     goto :goto_1
 
-    .line 363
-    :cond_4
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 388
+    :cond_6
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v4}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v4
 
-    iget-object v3, v3, Lcom/tencent/mm/storage/ap;->field_username:Ljava/lang/String;
+    iget-object v3, v3, Lcom/tencent/mm/storage/ar;->field_username:Ljava/lang/String;
 
-    invoke-virtual {v4, v3}, Lcom/tencent/mm/storage/q;->Ep(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v4, v3}, Lcom/tencent/mm/storage/q;->GD(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
 
     move-result-object v3
 
-    .line 368
+    .line 393
     :goto_2
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_7
 
-    iget-object v4, v3, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v4, v3, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    if-eqz v4, :cond_5
+    if-eqz v4, :cond_7
 
-    iget-object v4, v3, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v4, v3, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
     move-result v4
 
-    if-gtz v4, :cond_7
+    if-gtz v4, :cond_9
 
-    .line 369
-    :cond_5
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 394
+    :cond_7
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v1, "contact is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 370
+    .line 395
     const/4 v0, 0x3
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    const/16 v1, 0xe79
 
-    .line 371
-    const/4 v0, 0x3
+    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->aA(II)V
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gL(I)Landroid/database/MatrixCursor;
+    .line 396
+    const/16 v0, 0xe79
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hK(I)Landroid/database/MatrixCursor;
 
     move-result-object v1
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 365
-    :cond_6
+    .line 390
+    :cond_8
     const/4 v3, 0x0
 
     aget-object v3, p1, v3
 
-    invoke-static {v3}, Lcom/tencent/mm/plugin/ext/a/a;->nS(Ljava/lang/String;)J
+    invoke-static {v3}, Lcom/tencent/mm/plugin/ext/a/a;->pc(Ljava/lang/String;)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    .line 366
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 391
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
-    move-result-object v5
+    move-result-object v3
 
-    invoke-virtual {v5}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v3}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
-    move-result-object v5
+    move-result-object v3
 
-    invoke-virtual {v5, v3, v4}, Lcom/tencent/mm/storage/q;->dv(J)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v3, v4, v5}, Lcom/tencent/mm/storage/q;->dM(J)Lcom/tencent/mm/storage/k;
 
     move-result-object v3
 
     goto :goto_2
 
-    .line 375
-    :cond_7
-    invoke-virtual {v3}, Lcom/tencent/mm/storage/k;->qz()Ljava/lang/String;
+    .line 400
+    :cond_9
+    invoke-virtual {v3}, Lcom/tencent/mm/storage/k;->pc()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 377
-    iget-object v4, v3, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    .line 402
+    iget-object v4, v3, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     const-string/jumbo v7, "@chatroom"
 
@@ -872,12 +924,12 @@
 
     move-result v4
 
-    if-eqz v4, :cond_f
+    if-eqz v4, :cond_11
 
-    .line 378
-    iget-object v4, v3, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    .line 403
+    iget-object v4, v3, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    invoke-static {v4}, Lcom/tencent/mm/model/i;->dY(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/tencent/mm/model/i;->ej(Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
@@ -885,11 +937,11 @@
 
     move v4, v0
 
-    .line 382
+    .line 407
     :goto_3
-    if-eqz v6, :cond_b
+    if-eqz v6, :cond_d
 
-    .line 386
+    .line 411
     :try_start_1
     invoke-static {p3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
     :try_end_1
@@ -897,63 +949,69 @@
 
     move-result v1
 
-    .line 390
+    .line 415
     :goto_4
-    if-lez v1, :cond_8
+    if-lez v1, :cond_a
 
-    if-lt v1, v11, :cond_a
+    const/16 v0, 0xf
 
-    .line 391
-    :cond_8
+    if-lt v1, v0, :cond_c
+
+    .line 416
+    :cond_a
     :try_start_2
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rs()Lcom/tencent/mm/storage/ah;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/aj;
 
     move-result-object v0
 
-    iget-object v1, v3, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v1, v3, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     const/16 v7, 0xf
 
-    invoke-virtual {v0, v1, v7}, Lcom/tencent/mm/storage/ah;->aR(Ljava/lang/String;I)Landroid/database/Cursor;
+    invoke-virtual {v0, v1, v7}, Lcom/tencent/mm/storage/aj;->bc(Ljava/lang/String;I)Landroid/database/Cursor;
 
     move-result-object v0
 
     move-object v8, v0
 
-    .line 399
+    .line 424
     :goto_5
-    if-nez v8, :cond_c
+    if-nez v8, :cond_e
 
-    .line 400
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 425
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v1, "msgCursor == null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 401
-    const/4 v0, 0x4
+    .line 426
+    const/4 v0, 0x3
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    const/4 v1, 0x4
 
-    .line 402
-    const/4 v0, 0x4
+    const/16 v3, 0xe7a
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gL(I)Landroid/database/MatrixCursor;
+    invoke-virtual {p0, v0, v1, v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->l(III)V
+
+    .line 427
+    const/16 v0, 0xe7a
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hK(I)Landroid/database/MatrixCursor;
 
     move-result-object v1
 
     goto/16 :goto_0
 
-    .line 388
+    .line 413
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v7, "exception in parseInt(%s)"
 
@@ -965,82 +1023,86 @@
 
     aput-object p3, v8, v9
 
-    invoke-static {v0, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v7, v8}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
     goto :goto_4
 
-    .line 419
+    .line 444
     :catch_1
     move-exception v0
 
     move-object v1, v2
 
-    .line 420
+    .line 445
     :goto_6
-    const-string/jumbo v2, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    const-string/jumbo v2, "MicroMsg.ExtControlProviderMsg"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 421
-    if-eqz v1, :cond_9
+    .line 446
+    if-eqz v1, :cond_b
 
-    .line 423
+    .line 448
     invoke-virtual {v1}, Landroid/database/MatrixCursor;->close()V
 
-    .line 425
-    :cond_9
-    invoke-virtual {p0, v10}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    .line 451
+    :cond_b
+    const/16 v0, 0xc
 
-    .line 426
-    invoke-static {v10}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gL(I)Landroid/database/MatrixCursor;
+    invoke-virtual {p0, v10, v11, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->l(III)V
+
+    .line 452
+    const/16 v0, 0xc
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hK(I)Landroid/database/MatrixCursor;
 
     move-result-object v1
 
     goto/16 :goto_0
 
-    .line 393
-    :cond_a
+    .line 418
+    :cond_c
     :try_start_3
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rs()Lcom/tencent/mm/storage/ah;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/aj;
 
     move-result-object v0
 
-    iget-object v7, v3, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v7, v3, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    invoke-virtual {v0, v7, v1}, Lcom/tencent/mm/storage/ah;->aR(Ljava/lang/String;I)Landroid/database/Cursor;
+    invoke-virtual {v0, v7, v1}, Lcom/tencent/mm/storage/aj;->bc(Ljava/lang/String;I)Landroid/database/Cursor;
 
     move-result-object v0
 
     move-object v8, v0
 
-    .line 395
+    .line 420
     goto :goto_5
 
-    .line 396
-    :cond_b
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 421
+    :cond_d
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rs()Lcom/tencent/mm/storage/ah;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/aj;
 
     move-result-object v0
 
-    iget-object v1, v3, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v1, v3, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     const/4 v7, 0x3
 
-    invoke-virtual {v0, v1, v7}, Lcom/tencent/mm/storage/ah;->aR(Ljava/lang/String;I)Landroid/database/Cursor;
+    invoke-virtual {v0, v1, v7}, Lcom/tencent/mm/storage/aj;->bc(Ljava/lang/String;I)Landroid/database/Cursor;
 
     move-result-object v0
 
@@ -1048,75 +1110,79 @@
 
     goto :goto_5
 
-    .line 405
-    :cond_c
+    .line 430
+    :cond_e
     new-instance v1, Landroid/database/MatrixCursor;
 
-    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKV:[Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dME:[Ljava/lang/String;
 
     invoke-direct {v1, v0}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 407
+    .line 432
     :try_start_4
     invoke-interface {v8}, Landroid/database/Cursor;->getCount()I
 
     move-result v0
 
-    if-lez v0, :cond_e
+    if-lez v0, :cond_10
 
     invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v0
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_10
 
-    .line 408
-    new-instance v2, Lcom/tencent/mm/storage/ag;
+    .line 433
+    new-instance v2, Lcom/tencent/mm/storage/ai;
 
-    invoke-direct {v2}, Lcom/tencent/mm/storage/ag;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/storage/ai;-><init>()V
 
-    .line 410
-    :cond_d
-    invoke-virtual {v2, v8}, Lcom/tencent/mm/storage/ag;->c(Landroid/database/Cursor;)V
+    .line 435
+    :cond_f
+    invoke-virtual {v2, v8}, Lcom/tencent/mm/storage/ai;->b(Landroid/database/Cursor;)V
 
-    .line 411
+    .line 436
     const/4 v0, 0x0
 
     aget-object v7, p1, v0
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v7}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->a(Landroid/database/MatrixCursor;Lcom/tencent/mm/storage/ag;Lcom/tencent/mm/storage/k;ZLjava/lang/String;ZLjava/lang/String;)V
+    invoke-direct/range {v0 .. v7}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->a(Landroid/database/MatrixCursor;Lcom/tencent/mm/storage/ai;Lcom/tencent/mm/storage/k;ZLjava/lang/String;ZLjava/lang/String;)V
 
-    .line 412
+    .line 437
     invoke-interface {v8}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
 
-    if-nez v0, :cond_d
+    if-nez v0, :cond_f
 
-    .line 414
-    :cond_e
+    .line 439
+    :cond_10
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 416
-    const/4 v0, 0x0
+    .line 441
+    const/4 v0, 0x2
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-virtual {p0, v0, v2, v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->l(III)V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
 
     goto/16 :goto_0
 
-    .line 419
+    .line 444
     :catch_2
     move-exception v0
 
     goto :goto_6
 
-    :cond_f
+    :cond_11
     move v4, v1
 
     goto/16 :goto_3
@@ -1126,8 +1192,8 @@
     .locals 1
 
     .prologue
-    .line 56
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dLb:Landroid/database/MatrixCursor;
+    .line 57
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMK:Landroid/database/MatrixCursor;
 
     return-object v0
 .end method
@@ -1136,77 +1202,77 @@
     .locals 0
 
     .prologue
-    .line 56
-    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dLb:Landroid/database/MatrixCursor;
+    .line 57
+    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMK:Landroid/database/MatrixCursor;
 
     return-object p1
 .end method
 
-.method private a(Landroid/database/MatrixCursor;Lcom/tencent/mm/storage/ag;Lcom/tencent/mm/storage/k;ZLjava/lang/String;ZLjava/lang/String;)V
+.method private a(Landroid/database/MatrixCursor;Lcom/tencent/mm/storage/ai;Lcom/tencent/mm/storage/k;ZLjava/lang/String;ZLjava/lang/String;)V
     .locals 6
 
     .prologue
-    .line 849
+    .line 875
     if-nez p2, :cond_1
 
-    .line 924
+    .line 950
     :cond_0
     :goto_0
     return-void
 
-    .line 852
+    .line 878
     :cond_1
-    invoke-static {p7}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p7}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 853
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 879
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v1, "userOpenId is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 856
+    .line 882
     :cond_2
-    iget v0, p2, Lcom/tencent/mm/d/b/bg;->field_type:I
+    iget v0, p2, Lcom/tencent/mm/e/b/bj;->field_type:I
 
     const/16 v1, 0x270f
 
     if-eq v0, v1, :cond_0
 
-    iget v0, p2, Lcom/tencent/mm/d/b/bg;->field_type:I
+    iget v0, p2, Lcom/tencent/mm/e/b/bj;->field_type:I
 
     const/16 v1, 0x2710
 
     if-eq v0, v1, :cond_0
 
-    .line 859
+    .line 885
     const-string/jumbo v1, ""
 
-    .line 860
+    .line 886
     const-string/jumbo v0, ""
 
-    .line 862
+    .line 888
     if-eqz p4, :cond_3
 
-    .line 863
-    iget-object v2, p2, Lcom/tencent/mm/d/b/bg;->field_content:Ljava/lang/String;
+    .line 889
+    iget-object v2, p2, Lcom/tencent/mm/e/b/bj;->field_content:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/tencent/mm/model/ar;->fj(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/tencent/mm/model/ar;->fw(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 864
+    .line 890
     const/4 v3, -0x1
 
     if-eq v2, v3, :cond_3
 
-    iget-object v3, p2, Lcom/tencent/mm/d/b/bg;->field_content:Ljava/lang/String;
+    iget-object v3, p2, Lcom/tencent/mm/e/b/bj;->field_content:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -1214,8 +1280,8 @@
 
     if-le v3, v2, :cond_3
 
-    .line 865
-    iget-object v3, p2, Lcom/tencent/mm/d/b/bg;->field_content:Ljava/lang/String;
+    .line 891
+    iget-object v3, p2, Lcom/tencent/mm/e/b/bj;->field_content:Ljava/lang/String;
 
     const/4 v4, 0x0
 
@@ -1227,7 +1293,7 @@
 
     move-result-object v3
 
-    .line 866
+    .line 892
     if-eqz v3, :cond_3
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
@@ -1236,8 +1302,8 @@
 
     if-lez v4, :cond_3
 
-    .line 867
-    iget-object v4, p2, Lcom/tencent/mm/d/b/bg;->field_content:Ljava/lang/String;
+    .line 893
+    iget-object v4, p2, Lcom/tencent/mm/e/b/bj;->field_content:Ljava/lang/String;
 
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
@@ -1247,13 +1313,13 @@
 
     if-lt v4, v5, :cond_3
 
-    .line 868
-    invoke-static {v3}, Lcom/tencent/mm/model/i;->dY(Ljava/lang/String;)Ljava/lang/String;
+    .line 894
+    invoke-static {v3}, Lcom/tencent/mm/model/i;->ej(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 869
-    iget-object v0, p2, Lcom/tencent/mm/d/b/bg;->field_content:Ljava/lang/String;
+    .line 895
+    iget-object v0, p2, Lcom/tencent/mm/e/b/bj;->field_content:Ljava/lang/String;
 
     add-int/lit8 v2, v2, 0x2
 
@@ -1261,24 +1327,24 @@
 
     move-result-object v0
 
-    .line 875
+    .line 901
     :cond_3
     const-string/jumbo v2, ""
 
-    .line 876
-    invoke-static {p2}, Lcom/tencent/mm/plugin/ext/b/b;->q(Lcom/tencent/mm/storage/ag;)I
+    .line 902
+    invoke-static {p2}, Lcom/tencent/mm/plugin/ext/b/b;->t(Lcom/tencent/mm/storage/ai;)I
 
     move-result v3
 
-    .line 877
+    .line 903
     const/4 v4, 0x1
 
     if-ne v3, v4, :cond_6
 
-    .line 878
+    .line 904
     if-eqz p4, :cond_5
 
-    .line 879
+    .line 905
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1303,89 +1369,89 @@
 
     move-object v1, v0
 
-    .line 902
+    .line 928
     :cond_4
     :goto_1
     if-eqz p6, :cond_9
 
-    .line 908
+    .line 934
     :goto_2
     :try_start_0
-    invoke-static {p7}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p7}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_a
 
-    .line 909
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 935
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v1, "userId is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto/16 :goto_0
 
-    .line 921
+    .line 947
     :catch_0
     move-exception v0
 
-    .line 922
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 948
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderMsg"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 881
+    .line 907
     :cond_5
-    iget-object v0, p2, Lcom/tencent/mm/d/b/bg;->field_content:Ljava/lang/String;
+    iget-object v0, p2, Lcom/tencent/mm/e/b/bj;->field_content:Ljava/lang/String;
 
     move-object v1, v0
 
     goto :goto_1
 
-    .line 883
+    .line 909
     :cond_6
     const/4 v0, 0x2
 
     if-ne v3, v0, :cond_7
 
-    .line 884
-    invoke-static {}, Lcom/tencent/mm/modelvoice/m;->Ew()Lcom/tencent/mm/modelvoice/u;
+    .line 910
+    invoke-static {}, Lcom/tencent/mm/modelvoice/m;->EQ()Lcom/tencent/mm/modelvoice/u;
 
     move-result-object v0
 
-    iget-wide v4, p2, Lcom/tencent/mm/d/b/bg;->field_msgId:J
+    iget-wide v4, p2, Lcom/tencent/mm/e/b/bj;->field_msgId:J
 
     long-to-int v1, v4
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelvoice/u;->ee(I)Lcom/tencent/mm/modelvoice/p;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelvoice/u;->eN(I)Lcom/tencent/mm/modelvoice/p;
 
     move-result-object v0
 
-    .line 885
+    .line 911
     if-eqz v0, :cond_d
 
-    iget-object v1, v0, Lcom/tencent/mm/modelvoice/p;->anC:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/modelvoice/p;->aaq:Ljava/lang/String;
 
     if-eqz v1, :cond_d
 
-    .line 886
-    iget-object v0, v0, Lcom/tencent/mm/modelvoice/p;->anC:Ljava/lang/String;
+    .line 912
+    iget-object v0, v0, Lcom/tencent/mm/modelvoice/p;->aaq:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/modelvoice/q;->hK(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/modelvoice/q;->ic(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 887
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 913
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v2, "voice file = %s"
 
@@ -1397,27 +1463,27 @@
 
     aput-object v0, v4, v5
 
-    invoke-static {v1, v2, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :goto_3
     move-object v1, v0
 
-    .line 889
+    .line 915
     goto :goto_1
 
-    .line 890
+    .line 916
     :cond_7
     if-nez p4, :cond_4
 
-    .line 893
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKU:Landroid/content/Context;
+    .line 919
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMD:Landroid/content/Context;
 
     if-eqz v0, :cond_8
 
-    .line 894
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKU:Landroid/content/Context;
+    .line 920
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMD:Landroid/content/Context;
 
-    const v1, 0x7f0b0fa7
+    const v1, 0x7f080725
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1427,7 +1493,7 @@
 
     goto :goto_1
 
-    .line 896
+    .line 922
     :cond_8
     const-string/jumbo v0, ""
 
@@ -1435,22 +1501,22 @@
 
     goto :goto_1
 
-    .line 906
+    .line 932
     :cond_9
     :try_start_1
-    iget-wide v4, p3, Lcom/tencent/mm/h/a;->bvi:J
+    iget-wide v4, p3, Lcom/tencent/mm/i/a;->bjS:J
 
     long-to-int v0, v4
 
     int-to-long v4, v0
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/plugin/ext/a/a;->bc(J)Ljava/lang/String;
+    invoke-static {v4, v5}, Lcom/tencent/mm/plugin/ext/a/a;->bk(J)Ljava/lang/String;
 
     move-result-object p7
 
     goto :goto_2
 
-    .line 912
+    .line 938
     :cond_a
     const/16 v0, 0x8
 
@@ -1458,9 +1524,9 @@
 
     const/4 v0, 0x0
 
-    iget-wide v4, p2, Lcom/tencent/mm/d/b/bg;->field_msgId:J
+    iget-wide v4, p2, Lcom/tencent/mm/e/b/bj;->field_msgId:J
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/plugin/ext/a/a;->bc(J)Ljava/lang/String;
+    invoke-static {v4, v5}, Lcom/tencent/mm/plugin/ext/a/a;->bk(J)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1476,7 +1542,7 @@
 
     const/4 v4, 0x3
 
-    iget v0, p2, Lcom/tencent/mm/d/b/bg;->field_isSend:I
+    iget v0, p2, Lcom/tencent/mm/e/b/bj;->field_isSend:I
 
     if-nez v0, :cond_b
 
@@ -1503,7 +1569,7 @@
 
     const/4 v1, 0x6
 
-    iget v0, p2, Lcom/tencent/mm/d/b/bg;->field_status:I
+    iget v0, p2, Lcom/tencent/mm/e/b/bj;->field_status:I
 
     const/4 v3, 0x4
 
@@ -1520,9 +1586,9 @@
 
     const/4 v0, 0x7
 
-    iget-wide v3, p2, Lcom/tencent/mm/d/b/bg;->field_createTime:J
+    iget-wide v4, p2, Lcom/tencent/mm/e/b/bj;->field_createTime:J
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
@@ -1562,104 +1628,104 @@
 
     const/4 v0, 0x0
 
-    .line 469
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 495
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v2, "getOneMsg()"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 470
+    .line 496
     if-eqz p1, :cond_0
 
     array-length v1, p1
 
     if-gtz v1, :cond_1
 
-    .line 471
+    .line 497
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v1, "wrong args"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 472
-    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    .line 498
+    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
 
     move-object v1, v8
 
-    .line 515
+    .line 541
     :goto_0
     return-object v1
 
-    .line 478
+    .line 504
     :cond_1
     const/4 v1, 0x0
 
     :try_start_0
     aget-object v1, p1, v1
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/ext/a/a;->nS(Ljava/lang/String;)J
+    invoke-static {v1}, Lcom/tencent/mm/plugin/ext/a/a;->pc(Ljava/lang/String;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    .line 480
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 506
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v3}, Lcom/tencent/mm/model/c;->rs()Lcom/tencent/mm/storage/ah;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/aj;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v3, v1, v2}, Lcom/tencent/mm/storage/ah;->dz(J)Lcom/tencent/mm/storage/ag;
+    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/storage/aj;->dQ(J)Lcom/tencent/mm/storage/ai;
 
     move-result-object v2
 
-    .line 481
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 507
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v1
 
-    iget-object v3, v2, Lcom/tencent/mm/d/b/bg;->field_talker:Ljava/lang/String;
+    iget-object v3, v2, Lcom/tencent/mm/e/b/bj;->field_talker:Ljava/lang/String;
 
-    invoke-virtual {v1, v3}, Lcom/tencent/mm/storage/q;->Ep(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v1, v3}, Lcom/tencent/mm/storage/q;->GD(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
 
     move-result-object v3
 
-    .line 488
+    .line 514
     if-eqz v3, :cond_2
 
-    iget-wide v4, v3, Lcom/tencent/mm/h/a;->bvi:J
+    iget-wide v4, v3, Lcom/tencent/mm/i/a;->bjS:J
 
     long-to-int v1, v4
 
     if-gtz v1, :cond_3
 
-    .line 489
+    .line 515
     :cond_2
     const/4 v0, 0x3
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
 
     move-object v1, v8
 
-    .line 490
+    .line 516
     goto :goto_0
 
-    .line 494
+    .line 520
     :cond_3
-    invoke-virtual {v3}, Lcom/tencent/mm/storage/k;->qz()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/tencent/mm/storage/k;->pc()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 496
-    iget-object v1, v3, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    .line 522
+    iget-object v1, v3, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     const-string/jumbo v4, "@chatroom"
 
@@ -1669,16 +1735,16 @@
 
     if-eqz v1, :cond_6
 
-    .line 497
-    iget-object v1, v3, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    .line 523
+    iget-object v1, v3, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/model/i;->dY(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/model/i;->ej(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     move v4, v6
 
-    .line 500
+    .line 526
     :goto_1
     if-eqz p2, :cond_5
 
@@ -1690,17 +1756,17 @@
 
     if-eqz v1, :cond_5
 
-    .line 501
+    .line 527
     :goto_2
     new-instance v1, Landroid/database/MatrixCursor;
 
-    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKV:[Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dME:[Ljava/lang/String;
 
     invoke-direct {v1, v0}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 502
+    .line 528
     const/4 v0, 0x0
 
     :try_start_1
@@ -1708,55 +1774,55 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v7}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->a(Landroid/database/MatrixCursor;Lcom/tencent/mm/storage/ag;Lcom/tencent/mm/storage/k;ZLjava/lang/String;ZLjava/lang/String;)V
+    invoke-direct/range {v0 .. v7}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->a(Landroid/database/MatrixCursor;Lcom/tencent/mm/storage/ai;Lcom/tencent/mm/storage/k;ZLjava/lang/String;ZLjava/lang/String;)V
 
-    .line 505
+    .line 531
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_0
 
-    .line 508
+    .line 534
     :catch_0
     move-exception v0
 
-    .line 509
+    .line 535
     :goto_3
-    const-string/jumbo v2, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    const-string/jumbo v2, "MicroMsg.ExtControlProviderMsg"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 510
+    .line 536
     if-eqz v1, :cond_4
 
-    .line 512
+    .line 538
     invoke-virtual {v1}, Landroid/database/MatrixCursor;->close()V
 
-    .line 514
+    .line 540
     :cond_4
     const/4 v0, 0x4
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
 
     move-object v1, v8
 
-    .line 515
+    .line 541
     goto :goto_0
 
     :cond_5
     move v6, v0
 
-    .line 500
+    .line 526
     goto :goto_2
 
-    .line 508
+    .line 534
     :catch_1
     move-exception v0
 
@@ -1770,7 +1836,7 @@
     goto :goto_1
 .end method
 
-.method private m([Ljava/lang/String;)Landroid/database/Cursor;
+.method private l([Ljava/lang/String;)Landroid/database/Cursor;
     .locals 9
 
     .prologue
@@ -1778,48 +1844,48 @@
 
     const/4 v2, 0x0
 
-    .line 258
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 273
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v3, "getUnReadCount()"
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 259
+    .line 274
     if-eqz p1, :cond_0
 
     array-length v0, p1
 
     if-gtz v0, :cond_1
 
-    .line 260
+    .line 275
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v2, "wrong args"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 261
+    .line 276
     const/4 v0, 0x3
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
 
     move-object v0, v1
 
-    .line 291
+    .line 306
     :goto_0
     return-object v0
 
-    .line 264
+    .line 279
     :cond_1
     new-instance v0, Landroid/database/MatrixCursor;
 
-    sget-object v3, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKW:[Ljava/lang/String;
+    sget-object v3, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMF:[Ljava/lang/String;
 
     invoke-direct {v0, v3}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 266
+    .line 281
     :try_start_0
     const-string/jumbo v3, "*"
 
@@ -1833,22 +1899,22 @@
 
     if-eqz v3, :cond_3
 
-    .line 267
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 282
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/s;
+    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->ru()Lcom/tencent/mm/storage/s;
 
     move-result-object v2
 
     const-string/jumbo v3, ""
 
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/storage/s;->eR(Ljava/lang/String;)I
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/storage/s;->fd(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 268
+    .line 283
     const/4 v3, 0x2
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -1869,43 +1935,43 @@
 
     invoke-virtual {v0, v3}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
 
-    .line 282
+    .line 297
     :cond_2
     const/4 v2, 0x0
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 284
+    .line 299
     :catch_0
     move-exception v2
 
-    .line 285
-    const-string/jumbo v3, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 300
+    const-string/jumbo v3, "MicroMsg.ExtControlProviderMsg"
 
     invoke-virtual {v2}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v3, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 286
+    .line 301
     invoke-virtual {v0}, Landroid/database/MatrixCursor;->close()V
 
-    .line 290
+    .line 305
     const/4 v0, 0x4
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
 
     move-object v0, v1
 
-    .line 291
+    .line 306
     goto :goto_0
 
-    .line 271
+    .line 286
     :cond_3
     :goto_1
     :try_start_1
@@ -1913,41 +1979,41 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 273
+    .line 288
     aget-object v3, p1, v2
 
-    invoke-static {v3}, Lcom/tencent/mm/plugin/ext/a/a;->nS(Ljava/lang/String;)J
+    invoke-static {v3}, Lcom/tencent/mm/plugin/ext/a/a;->pc(Ljava/lang/String;)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    .line 274
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 289
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
-    move-result-object v5
+    move-result-object v3
 
-    invoke-virtual {v5}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v3}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
-    move-result-object v5
+    move-result-object v3
 
-    invoke-virtual {v5, v3, v4}, Lcom/tencent/mm/storage/q;->dv(J)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v3, v4, v5}, Lcom/tencent/mm/storage/q;->dM(J)Lcom/tencent/mm/storage/k;
 
-    move-result-object v5
+    move-result-object v3
 
-    .line 275
-    if-eqz v5, :cond_4
+    .line 290
+    if-eqz v3, :cond_4
 
-    iget-wide v6, v5, Lcom/tencent/mm/h/a;->bvi:J
+    iget-wide v6, v3, Lcom/tencent/mm/i/a;->bjS:J
 
     long-to-int v6, v6
 
     if-lez v6, :cond_4
 
-    .line 277
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 292
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/s;
+    invoke-virtual {v6}, Lcom/tencent/mm/model/c;->ru()Lcom/tencent/mm/storage/s;
 
     move-result-object v6
 
@@ -1957,202 +2023,197 @@
 
     invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v5, v5, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v3, v3, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    move-result-object v3
 
     const-string/jumbo v7, "\' );"
 
-    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    move-result-object v3
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v3
 
-    invoke-virtual {v6, v5}, Lcom/tencent/mm/storage/s;->eR(Ljava/lang/String;)I
+    invoke-virtual {v6, v3}, Lcom/tencent/mm/storage/s;->fd(Ljava/lang/String;)I
 
-    move-result v5
+    move-result v3
 
-    .line 278
+    .line 293
     const/4 v6, 0x2
 
     new-array v6, v6, [Ljava/lang/Object;
 
     const/4 v7, 0x0
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    aput-object v3, v6, v7
-
-    const/4 v3, 0x1
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v4
 
-    aput-object v4, v6, v3
+    aput-object v4, v6, v7
+
+    const/4 v4, 0x1
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v6, v4
 
     invoke-virtual {v0, v6}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 271
+    .line 286
     :cond_4
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 .end method
 
-.method private n([Ljava/lang/String;)Landroid/database/Cursor;
+.method private m([Ljava/lang/String;)Landroid/database/Cursor;
     .locals 10
 
     .prologue
-    const/4 v2, 0x3
+    const/4 v3, 0x3
 
-    const/4 v7, 0x0
+    const/4 v0, 0x0
 
-    .line 525
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 551
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderMsg"
 
-    const-string/jumbo v1, "handleRecordMsg()"
+    const-string/jumbo v2, "handleRecordMsg()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 526
+    .line 552
     if-eqz p1, :cond_0
 
-    array-length v0, p1
+    array-length v1, p1
 
-    const/4 v1, 0x2
+    const/4 v2, 0x2
 
-    if-ge v0, v1, :cond_1
+    if-ge v1, v2, :cond_1
 
-    .line 527
+    .line 553
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderMsg"
 
-    const-string/jumbo v1, "wrong args"
+    const-string/jumbo v2, "wrong args"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 528
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    .line 554
+    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
 
-    move-object v0, v7
-
-    .line 629
+    .line 655
     :goto_0
     return-object v0
 
-    .line 533
+    .line 559
     :cond_1
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
     :try_start_0
-    aget-object v0, p1, v0
+    aget-object v1, p1, v1
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
-    move-result v2
+    move-result v3
 
-    .line 534
-    const/4 v0, 0x1
+    .line 560
+    const/4 v1, 0x1
 
-    aget-object v0, p1, v0
+    aget-object v1, p1, v1
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/ext/a/a;->nS(Ljava/lang/String;)J
+    invoke-static {v1}, Lcom/tencent/mm/plugin/ext/a/a;->pc(Ljava/lang/String;)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    .line 536
-    const-wide/16 v0, 0x0
+    .line 562
+    const-wide/16 v6, 0x0
 
-    cmp-long v0, v3, v0
+    cmp-long v1, v4, v6
 
-    if-gtz v0, :cond_2
+    if-gtz v1, :cond_3
 
-    .line 537
-    const/4 v0, 0x3
+    .line 563
+    const/4 v1, 0x3
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
-
-    move-object v0, v7
-
-    .line 538
-    goto :goto_0
-
-    .line 540
-    :cond_2
-    new-instance v5, Lcom/tencent/mm/pluginsdk/d/a/a;
-
-    invoke-direct {v5}, Lcom/tencent/mm/pluginsdk/d/a/a;-><init>()V
-
-    .line 541
-    const-wide/16 v8, 0xfa0
-
-    new-instance v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg$1;
-
-    move-object v1, p0
-
-    move-object v6, p1
-
-    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg$1;-><init>(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;IJLcom/tencent/mm/pluginsdk/d/a/a;[Ljava/lang/String;)V
-
-    invoke-virtual {v5, v8, v9, v0}, Lcom/tencent/mm/pluginsdk/d/a/a;->b(JLjava/lang/Runnable;)V
-
-    .line 620
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dLb:Landroid/database/MatrixCursor;
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 622
+    .line 648
     :catch_0
-    move-exception v0
+    move-exception v1
 
-    .line 623
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 649
+    const-string/jumbo v2, "MicroMsg.ExtControlProviderMsg"
 
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 624
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dLb:Landroid/database/MatrixCursor;
+    .line 650
+    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMK:Landroid/database/MatrixCursor;
 
-    if-eqz v0, :cond_3
+    if-eqz v1, :cond_2
 
-    .line 626
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dLb:Landroid/database/MatrixCursor;
+    .line 652
+    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMK:Landroid/database/MatrixCursor;
 
-    invoke-virtual {v0}, Landroid/database/MatrixCursor;->close()V
+    invoke-virtual {v1}, Landroid/database/MatrixCursor;->close()V
 
-    .line 628
+    .line 654
+    :cond_2
+    const/4 v1, 0x4
+
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
+
+    goto :goto_0
+
+    .line 566
     :cond_3
-    const/4 v0, 0x4
+    :try_start_1
+    new-instance v6, Lcom/tencent/mm/pluginsdk/d/a/a;
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-direct {v6}, Lcom/tencent/mm/pluginsdk/d/a/a;-><init>()V
 
-    move-object v0, v7
+    .line 567
+    const-wide/16 v8, 0xfa0
 
-    .line 629
+    new-instance v1, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg$1;
+
+    move-object v2, p0
+
+    move-object v7, p1
+
+    invoke-direct/range {v1 .. v7}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg$1;-><init>(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;IJLcom/tencent/mm/pluginsdk/d/a/a;[Ljava/lang/String;)V
+
+    invoke-virtual {v6, v8, v9, v1}, Lcom/tencent/mm/pluginsdk/d/a/a;->b(JLjava/lang/Runnable;)V
+
+    .line 646
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMK:Landroid/database/MatrixCursor;
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
     goto :goto_0
 .end method
 
-.method private o([Ljava/lang/String;)Landroid/database/Cursor;
+.method private n([Ljava/lang/String;)Landroid/database/Cursor;
     .locals 10
 
     .prologue
@@ -2162,39 +2223,39 @@
 
     const/4 v3, 0x2
 
-    .line 639
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 665
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v2, "handlePlayVoice()"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 640
+    .line 666
     if-eqz p1, :cond_0
 
     array-length v1, p1
 
     if-ge v1, v3, :cond_2
 
-    .line 641
+    .line 667
     :cond_0
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v2, "wrong args"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 642
+    .line 668
     const/4 v1, 0x3
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
 
-    .line 701
+    .line 727
     :cond_1
     :goto_0
     return-object v0
 
-    .line 647
+    .line 673
     :cond_2
     const/4 v1, 0x0
 
@@ -2209,101 +2270,101 @@
 
     move-result v1
 
-    .line 648
+    .line 674
     const/4 v2, 0x1
 
     aget-object v2, p1, v2
 
-    invoke-static {v2}, Lcom/tencent/mm/plugin/ext/a/a;->nS(Ljava/lang/String;)J
+    invoke-static {v2}, Lcom/tencent/mm/plugin/ext/a/a;->pc(Ljava/lang/String;)J
 
     move-result-wide v2
 
-    .line 650
+    .line 676
     const-wide/16 v4, 0x0
 
     cmp-long v4, v2, v4
 
     if-gtz v4, :cond_4
 
-    .line 651
+    .line 677
     const/4 v1, 0x3
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 694
+    .line 720
     :catch_0
     move-exception v1
 
     move-object v2, v0
 
-    .line 695
+    .line 721
     :goto_1
-    const-string/jumbo v3, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    const-string/jumbo v3, "MicroMsg.ExtControlProviderMsg"
 
     invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v3, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 696
+    .line 722
     if-eqz v2, :cond_3
 
-    .line 698
+    .line 724
     invoke-virtual {v2}, Landroid/database/MatrixCursor;->close()V
 
-    .line 700
+    .line 726
     :cond_3
-    invoke-virtual {p0, v8}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {p0, v8}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
 
     goto :goto_0
 
-    .line 654
+    .line 680
     :cond_4
     const/4 v4, 0x3
 
     if-ne v1, v4, :cond_8
 
-    .line 655
+    .line 681
     :try_start_1
     new-instance v1, Landroid/database/MatrixCursor;
 
-    sget-object v4, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKZ:[Ljava/lang/String;
+    sget-object v4, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMI:[Ljava/lang/String;
 
     invoke-direct {v1, v4}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 656
+    .line 682
     :try_start_2
-    new-instance v4, Lcom/tencent/mm/d/a/du;
+    new-instance v4, Lcom/tencent/mm/e/a/dz;
 
-    invoke-direct {v4}, Lcom/tencent/mm/d/a/du;-><init>()V
+    invoke-direct {v4}, Lcom/tencent/mm/e/a/dz;-><init>()V
 
-    .line 657
-    iget-object v5, v4, Lcom/tencent/mm/d/a/du;->axH:Lcom/tencent/mm/d/a/du$a;
+    .line 683
+    iget-object v5, v4, Lcom/tencent/mm/e/a/dz;->ajO:Lcom/tencent/mm/e/a/dz$a;
 
-    iput-wide v2, v5, Lcom/tencent/mm/d/a/du$a;->avg:J
+    iput-wide v2, v5, Lcom/tencent/mm/e/a/dz$a;->agU:J
 
-    .line 658
-    sget-object v5, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 684
+    sget-object v5, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v5, v4}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v5, v4}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
-    .line 660
-    iget-object v5, v4, Lcom/tencent/mm/d/a/du;->axI:Lcom/tencent/mm/d/a/du$b;
+    .line 686
+    iget-object v5, v4, Lcom/tencent/mm/e/a/dz;->ajP:Lcom/tencent/mm/e/a/dz$b;
 
-    iget-object v5, v5, Lcom/tencent/mm/d/a/du$b;->anC:Ljava/lang/String;
+    iget-object v5, v5, Lcom/tencent/mm/e/a/dz$b;->aaq:Ljava/lang/String;
 
     if-eqz v5, :cond_5
 
-    iget-object v5, v4, Lcom/tencent/mm/d/a/du;->axI:Lcom/tencent/mm/d/a/du$b;
+    iget-object v5, v4, Lcom/tencent/mm/e/a/dz;->ajP:Lcom/tencent/mm/e/a/dz$b;
 
-    iget-object v5, v5, Lcom/tencent/mm/d/a/du$b;->anC:Ljava/lang/String;
+    iget-object v5, v5, Lcom/tencent/mm/e/a/dz$b;->aaq:Ljava/lang/String;
 
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
@@ -2311,7 +2372,7 @@
 
     if-gtz v5, :cond_6
 
-    .line 661
+    .line 687
     :cond_5
     const/4 v2, 0x2
 
@@ -2337,48 +2398,48 @@
 
     invoke-virtual {v1, v2}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
 
-    .line 662
+    .line 688
     const/4 v2, 0x4
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
 
     move-object v0, v1
 
-    .line 663
+    .line 689
     goto :goto_0
 
-    .line 665
+    .line 691
     :cond_6
-    new-instance v5, Lcom/tencent/mm/d/a/dn;
+    new-instance v5, Lcom/tencent/mm/e/a/dr;
 
-    invoke-direct {v5}, Lcom/tencent/mm/d/a/dn;-><init>()V
+    invoke-direct {v5}, Lcom/tencent/mm/e/a/dr;-><init>()V
 
-    .line 666
-    iget-object v6, v5, Lcom/tencent/mm/d/a/dn;->axm:Lcom/tencent/mm/d/a/dn$a;
+    .line 692
+    iget-object v6, v5, Lcom/tencent/mm/e/a/dr;->ajl:Lcom/tencent/mm/e/a/dr$a;
 
     const/4 v7, 0x1
 
-    iput v7, v6, Lcom/tencent/mm/d/a/dn$a;->op:I
+    iput v7, v6, Lcom/tencent/mm/e/a/dr$a;->op:I
 
-    .line 667
-    iget-object v6, v5, Lcom/tencent/mm/d/a/dn;->axm:Lcom/tencent/mm/d/a/dn$a;
+    .line 693
+    iget-object v6, v5, Lcom/tencent/mm/e/a/dr;->ajl:Lcom/tencent/mm/e/a/dr$a;
 
-    iget-object v4, v4, Lcom/tencent/mm/d/a/du;->axI:Lcom/tencent/mm/d/a/du$b;
+    iget-object v4, v4, Lcom/tencent/mm/e/a/dz;->ajP:Lcom/tencent/mm/e/a/dz$b;
 
-    iget-object v4, v4, Lcom/tencent/mm/d/a/du$b;->anC:Ljava/lang/String;
+    iget-object v4, v4, Lcom/tencent/mm/e/a/dz$b;->aaq:Ljava/lang/String;
 
-    iput-object v4, v6, Lcom/tencent/mm/d/a/dn$a;->anC:Ljava/lang/String;
+    iput-object v4, v6, Lcom/tencent/mm/e/a/dr$a;->aaq:Ljava/lang/String;
 
-    .line 668
-    sget-object v4, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 694
+    sget-object v4, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v4, v5}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v4, v5}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     move-result v4
 
     if-eqz v4, :cond_7
 
-    .line 669
+    .line 695
     const/4 v4, 0x2
 
     new-array v4, v4, [Ljava/lang/Object;
@@ -2403,31 +2464,31 @@
 
     invoke-virtual {v1, v4}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
 
-    .line 670
+    .line 696
     const/4 v4, 0x0
 
-    invoke-virtual {p0, v4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {p0, v4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
 
-    .line 676
+    .line 702
     :goto_2
-    invoke-static {}, Lcom/tencent/mm/plugin/ext/b;->Vo()Lcom/tencent/mm/plugin/ext/b;
+    invoke-static {}, Lcom/tencent/mm/plugin/ext/b;->WP()Lcom/tencent/mm/plugin/ext/b;
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/plugin/ext/b;->bb(J)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/plugin/ext/b;->bj(J)V
 
     move-object v0, v1
 
-    .line 678
+    .line 704
     goto/16 :goto_0
 
-    .line 672
+    .line 698
     :cond_7
-    const-string/jumbo v4, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    const-string/jumbo v4, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v5, "play failed"
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 673
+    .line 699
     const/4 v4, 0x2
 
     new-array v4, v4, [Ljava/lang/Object;
@@ -2452,16 +2513,16 @@
 
     invoke-virtual {v1, v4}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
 
-    .line 674
+    .line 700
     const/4 v4, 0x4
 
-    invoke-virtual {p0, v4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {p0, v4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
     goto :goto_2
 
-    .line 694
+    .line 720
     :catch_1
     move-exception v2
 
@@ -2473,119 +2534,123 @@
 
     goto/16 :goto_1
 
-    .line 680
+    .line 706
     :cond_8
     if-ne v1, v8, :cond_1
 
-    .line 681
+    .line 707
     :try_start_3
-    new-instance v1, Lcom/tencent/mm/d/a/dn;
+    new-instance v1, Lcom/tencent/mm/e/a/dr;
 
-    invoke-direct {v1}, Lcom/tencent/mm/d/a/dn;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/e/a/dr;-><init>()V
 
-    .line 682
-    iget-object v2, v1, Lcom/tencent/mm/d/a/dn;->axm:Lcom/tencent/mm/d/a/dn$a;
+    .line 708
+    iget-object v2, v1, Lcom/tencent/mm/e/a/dr;->ajl:Lcom/tencent/mm/e/a/dr$a;
 
     const/4 v3, 0x2
 
-    iput v3, v2, Lcom/tencent/mm/d/a/dn$a;->op:I
+    iput v3, v2, Lcom/tencent/mm/e/a/dr$a;->op:I
 
-    .line 684
-    sget-object v2, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 710
+    sget-object v2, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     move-result v1
 
     if-eqz v1, :cond_9
 
-    .line 685
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 711
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v2, "stop last playing"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 686
+    .line 712
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
 
     goto/16 :goto_0
 
-    .line 688
+    .line 714
     :cond_9
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v2, "stop last playing fail"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 689
+    .line 715
     const/4 v1, 0x4
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
     goto/16 :goto_0
 .end method
 
-.method private p([Ljava/lang/String;)Landroid/database/Cursor;
-    .locals 6
+.method private o([Ljava/lang/String;)Landroid/database/Cursor;
+    .locals 7
 
     .prologue
-    const/4 v5, 0x4
+    const/16 v3, 0xed9
 
-    const/4 v3, 0x3
+    const/16 v6, 0xc
+
+    const/4 v5, 0x1
 
     const/4 v1, 0x0
 
-    .line 712
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 738
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v2, "setMsgReaded()"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 713
+    .line 739
     if-eqz p1, :cond_0
 
     array-length v0, p1
 
     if-gtz v0, :cond_1
 
-    .line 714
+    .line 740
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v1, "wrong args"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 715
-    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    .line 741
+    const/4 v0, 0x3
 
-    .line 716
-    invoke-static {v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gL(I)Landroid/database/MatrixCursor;
+    invoke-virtual {p0, v0, v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->aA(II)V
+
+    .line 742
+    invoke-static {v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hK(I)Landroid/database/MatrixCursor;
 
     move-result-object v0
 
-    .line 736
+    .line 762
     :goto_0
     return-object v0
 
     :cond_1
     move v0, v1
 
-    .line 720
+    .line 746
     :goto_1
     :try_start_0
     array-length v2, p1
 
     if-ge v0, v2, :cond_4
 
-    .line 721
+    .line 747
     aget-object v2, p1, v0
 
     if-eqz v2, :cond_2
@@ -2598,9 +2663,9 @@
 
     if-gtz v2, :cond_3
 
-    .line 722
+    .line 748
     :cond_2
-    const-string/jumbo v2, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    const-string/jumbo v2, "MicroMsg.ExtControlProviderMsg"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2616,67 +2681,69 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 720
+    .line 746
     :goto_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 725
+    .line 751
     :cond_3
     aget-object v2, p1, v0
 
-    invoke-static {v2}, Lcom/tencent/mm/plugin/ext/a/a;->nS(Ljava/lang/String;)J
+    invoke-static {v2}, Lcom/tencent/mm/plugin/ext/a/a;->pc(Ljava/lang/String;)J
 
     move-result-wide v2
 
-    .line 726
-    invoke-static {}, Lcom/tencent/mm/plugin/ext/b;->Vo()Lcom/tencent/mm/plugin/ext/b;
+    .line 752
+    invoke-static {}, Lcom/tencent/mm/plugin/ext/b;->WP()Lcom/tencent/mm/plugin/ext/b;
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/plugin/ext/b;->bb(J)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/plugin/ext/b;->bj(J)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_2
 
-    .line 729
+    .line 755
     :catch_0
     move-exception v0
 
-    .line 730
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 756
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderMsg"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 731
-    invoke-virtual {p0, v5}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    .line 757
+    const/4 v0, 0x4
 
-    .line 733
-    invoke-static {v5}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gL(I)Landroid/database/MatrixCursor;
+    invoke-virtual {p0, v0, v6}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->aA(II)V
+
+    .line 759
+    invoke-static {v6}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hK(I)Landroid/database/MatrixCursor;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 735
+    .line 761
     :cond_4
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {p0, v1, v5}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->aA(II)V
 
-    .line 736
-    invoke-static {v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gL(I)Landroid/database/MatrixCursor;
+    .line 762
+    invoke-static {v5}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hK(I)Landroid/database/MatrixCursor;
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method private q([Ljava/lang/String;)Landroid/database/Cursor;
+.method private p([Ljava/lang/String;)Landroid/database/Cursor;
     .locals 6
 
     .prologue
@@ -2684,154 +2751,154 @@
 
     const/4 v0, 0x0
 
-    .line 745
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 771
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v2, "sendTextMsg()"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 747
+    .line 773
     if-eqz p1, :cond_0
 
     array-length v1, p1
 
     if-gtz v1, :cond_1
 
-    .line 748
+    .line 774
     :cond_0
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v2, "wrong args"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 749
-    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    .line 775
+    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
 
-    .line 843
+    .line 869
     :goto_0
     return-object v0
 
-    .line 754
+    .line 780
     :cond_1
     const/4 v1, 0x0
 
     :try_start_0
     aget-object v1, p1, v1
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/ext/a/a;->nS(Ljava/lang/String;)J
+    invoke-static {v1}, Lcom/tencent/mm/plugin/ext/a/a;->pc(Ljava/lang/String;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    .line 755
-    const-wide/16 v3, 0x0
+    .line 781
+    const-wide/16 v4, 0x0
 
-    cmp-long v3, v1, v3
+    cmp-long v1, v2, v4
 
-    if-gtz v3, :cond_3
+    if-gtz v1, :cond_3
 
-    .line 756
+    .line 782
     const/4 v1, 0x3
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 834
+    .line 860
     :catch_0
     move-exception v1
 
-    .line 835
-    const-string/jumbo v2, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    .line 861
+    const-string/jumbo v2, "MicroMsg.ExtControlProviderMsg"
 
     invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 836
-    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dLb:Landroid/database/MatrixCursor;
+    .line 862
+    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMK:Landroid/database/MatrixCursor;
 
     if-eqz v1, :cond_2
 
-    .line 838
-    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dLb:Landroid/database/MatrixCursor;
+    .line 864
+    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMK:Landroid/database/MatrixCursor;
 
     invoke-virtual {v1}, Landroid/database/MatrixCursor;->close()V
 
-    .line 840
+    .line 866
     :cond_2
     const/4 v1, 0x4
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
 
     goto :goto_0
 
-    .line 759
+    .line 785
     :cond_3
     :try_start_1
-    invoke-static {}, Lcom/tencent/mm/plugin/ext/b;->Vo()Lcom/tencent/mm/plugin/ext/b;
+    invoke-static {}, Lcom/tencent/mm/plugin/ext/b;->WP()Lcom/tencent/mm/plugin/ext/b;
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/plugin/ext/b;->ba(J)Lcom/tencent/mm/storage/k;
+    invoke-static {v2, v3}, Lcom/tencent/mm/plugin/ext/b;->bi(J)Lcom/tencent/mm/storage/k;
 
     move-result-object v1
 
-    .line 760
+    .line 786
     if-eqz v1, :cond_4
 
-    iget-wide v2, v1, Lcom/tencent/mm/h/a;->bvi:J
+    iget-wide v2, v1, Lcom/tencent/mm/i/a;->bjS:J
 
     long-to-int v2, v2
 
     if-gtz v2, :cond_5
 
-    .line 761
+    .line 787
     :cond_4
-    const-string/jumbo v1, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderMsg"
 
     const-string/jumbo v2, "toContact is null "
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 762
+    .line 788
     const/4 v1, 0x3
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
 
     goto :goto_0
 
-    .line 765
+    .line 791
     :cond_5
     new-instance v2, Landroid/database/MatrixCursor;
 
-    sget-object v3, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dLa:[Ljava/lang/String;
+    sget-object v3, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMJ:[Ljava/lang/String;
 
     invoke-direct {v2, v3}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    iput-object v2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dLb:Landroid/database/MatrixCursor;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMK:Landroid/database/MatrixCursor;
 
-    .line 767
+    .line 793
     new-instance v2, Lcom/tencent/mm/pluginsdk/d/a/a;
 
     invoke-direct {v2}, Lcom/tencent/mm/pluginsdk/d/a/a;-><init>()V
 
-    .line 769
-    const-wide/16 v3, 0x3a98
+    .line 795
+    const-wide/16 v4, 0x3a98
 
-    new-instance v5, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg$2;
+    new-instance v3, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg$2;
 
-    invoke-direct {v5, p0, v1, p1, v2}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg$2;-><init>(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;Lcom/tencent/mm/storage/k;[Ljava/lang/String;Lcom/tencent/mm/pluginsdk/d/a/a;)V
+    invoke-direct {v3, p0, v1, p1, v2}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg$2;-><init>(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;Lcom/tencent/mm/storage/k;[Ljava/lang/String;Lcom/tencent/mm/pluginsdk/d/a/a;)V
 
-    invoke-virtual {v2, v3, v4, v5}, Lcom/tencent/mm/pluginsdk/d/a/a;->b(JLjava/lang/Runnable;)V
+    invoke-virtual {v2, v4, v5, v3}, Lcom/tencent/mm/pluginsdk/d/a/a;->b(JLjava/lang/Runnable;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 843
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dLb:Landroid/database/MatrixCursor;
+    .line 869
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMK:Landroid/database/MatrixCursor;
 
     goto :goto_0
 .end method
@@ -2842,7 +2909,7 @@
     .locals 1
 
     .prologue
-    .line 249
+    .line 264
     const/4 v0, 0x0
 
     return v0
@@ -2852,7 +2919,7 @@
     .locals 1
 
     .prologue
-    .line 168
+    .line 169
     const/4 v0, 0x0
 
     return-object v0
@@ -2862,7 +2929,7 @@
     .locals 1
 
     .prologue
-    .line 244
+    .line 259
     const/4 v0, 0x0
 
     return-object v0
@@ -2872,316 +2939,364 @@
     .locals 1
 
     .prologue
-    .line 173
+    .line 174
     const/4 v0, 0x1
 
     return v0
 .end method
 
 .method public query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-    .locals 6
+    .locals 8
 
     .prologue
-    const/4 v5, 0x2
+    const/4 v7, 0x6
 
-    const/4 v4, 0x1
+    const/4 v6, 0x2
 
-    const/4 v3, 0x3
+    const/4 v5, 0x1
 
-    .line 178
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    const/4 v0, 0x0
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, "ExtControlProviderMsg query() mIsLocalUsed :"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-boolean v2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKT:Z
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v4, 0x3
 
     .line 179
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKT:Z
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderMsg"
 
-    if-eqz v0, :cond_1
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "ExtControlProviderMsg query() mIsLocalUsed :"
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMC:Z
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 180
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKU:Landroid/content/Context;
+    iget-boolean v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMC:Z
 
-    iget v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKI:I
+    if-eqz v1, :cond_2
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKH:[Ljava/lang/String;
+    .line 181
+    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMD:Landroid/content/Context;
 
-    invoke-virtual {p0, p1, v0, v1, v2}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->a(Landroid/net/Uri;Landroid/content/Context;I[Ljava/lang/String;)V
+    iget v2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMl:I
 
-    .line 183
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKL:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMk:[Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->Vw()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
+    invoke-virtual {p0, p1, v1, v2, v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->a(Landroid/net/Uri;Landroid/content/Context;I[Ljava/lang/String;)V
 
     .line 184
-    :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
+    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dMu:Ljava/lang/String;
 
-    const-string/jumbo v1, "wrong args"
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    move-result v1
+
+    if-eqz v1, :cond_0
 
     .line 185
-    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderMsg"
+
+    const-string/jumbo v1, "AppID == null"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 186
-    invoke-static {v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gL(I)Landroid/database/MatrixCursor;
+    const/4 v0, 0x7
+
+    invoke-virtual {p0, v4, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->aA(II)V
+
+    .line 187
+    const/4 v0, 0x7
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hK(I)Landroid/database/MatrixCursor;
 
     move-result-object v0
 
-    .line 239
+    .line 254
     :goto_0
     return-object v0
 
     .line 189
-    :cond_1
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->getContext()Landroid/content/Context;
+    :cond_0
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->Xd()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKU:Landroid/content/Context;
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
 
     .line 190
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKU:Landroid/content/Context;
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderMsg"
 
-    sget-object v1, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKS:Landroid/content/UriMatcher;
+    const-string/jumbo v1, "PkgName == null"
 
-    invoke-virtual {p0, p1, v0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->a(Landroid/net/Uri;Landroid/content/Context;Landroid/content/UriMatcher;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 191
+    invoke-virtual {p0, v4, v7}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->aA(II)V
 
     .line 192
-    if-nez p1, :cond_2
-
-    .line 193
-    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
-
-    .line 194
-    invoke-static {v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gL(I)Landroid/database/MatrixCursor;
+    invoke-static {v7}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hK(I)Landroid/database/MatrixCursor;
 
     move-result-object v0
 
     goto :goto_0
+
+    .line 195
+    :cond_1
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->Xf()I
+
+    move-result v1
 
     .line 196
-    :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKL:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->Vw()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
+    if-eq v1, v5, :cond_7
 
     .line 197
-    :cond_3
-    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderMsg"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "invalid appid ! return code = "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 198
-    invoke-static {v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gL(I)Landroid/database/MatrixCursor;
+    invoke-virtual {p0, v6, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->aA(II)V
+
+    .line 199
+    invoke-static {v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hK(I)Landroid/database/MatrixCursor;
 
     move-result-object v0
 
     goto :goto_0
-
-    .line 200
-    :cond_4
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->Vx()Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    .line 201
-    invoke-virtual {p0, v4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
 
     .line 202
-    invoke-static {v4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gL(I)Landroid/database/MatrixCursor;
+    :cond_2
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->getContext()Landroid/content/Context;
 
-    move-result-object v0
+    move-result-object v1
 
-    goto :goto_0
+    iput-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMD:Landroid/content/Context;
+
+    .line 203
+    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMD:Landroid/content/Context;
+
+    sget-object v2, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMB:Landroid/content/UriMatcher;
+
+    invoke-virtual {p0, p1, v1, v2}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->a(Landroid/net/Uri;Landroid/content/Context;Landroid/content/UriMatcher;)V
+
+    .line 205
+    if-nez p1, :cond_3
 
     .line 206
-    :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKU:Landroid/content/Context;
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->bx(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    .line 207
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4juIXFpXMSUI="
-
-    const-string/jumbo v1, "invalid appid ! return null"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 208
-    invoke-virtual {p0, v5}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
-
-    .line 209
-    invoke-static {v5}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gL(I)Landroid/database/MatrixCursor;
-
-    move-result-object v0
+    invoke-virtual {p0, v4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
 
     goto :goto_0
 
-    .line 211
+    .line 209
+    :cond_3
+    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dMu:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->Xd()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    .line 210
+    :cond_4
+    invoke-virtual {p0, v4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
+
+    goto :goto_0
+
+    .line 213
+    :cond_5
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->Xe()Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    .line 214
+    invoke-virtual {p0, v5}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
+
+    .line 215
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->cyb:Landroid/database/MatrixCursor;
+
+    goto :goto_0
+
+    .line 218
     :cond_6
-    const-string/jumbo v0, "source"
+    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMD:Landroid/content/Context;
 
-    invoke-virtual {p1, v0}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->bs(Landroid/content/Context;)Z
 
-    move-result-object v0
+    move-result v1
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
+    if-nez v1, :cond_7
 
-    move-result-object v0
+    .line 219
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderMsg"
 
-    .line 212
-    const-string/jumbo v1, "count"
+    const-string/jumbo v2, "invalid appid ! return null"
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 220
+    invoke-virtual {p0, v6}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->hJ(I)V
+
+    goto/16 :goto_0
+
+    .line 226
+    :cond_7
+    const-string/jumbo v1, "source"
 
     invoke-virtual {p1, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->li(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 214
-    iget-boolean v2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKT:Z
+    .line 227
+    const-string/jumbo v2, "count"
 
-    if-nez v2, :cond_7
+    invoke-virtual {p1, v2}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 215
-    sget-object v2, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKS:Landroid/content/UriMatcher;
+    move-result-object v2
 
-    invoke-virtual {v2, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->li(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result v2
+    move-result-object v2
 
-    iput v2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKI:I
+    .line 229
+    iget-boolean v3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMC:Z
 
-    .line 218
-    :cond_7
-    iget v2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dKI:I
+    if-nez v3, :cond_8
 
-    packed-switch v2, :pswitch_data_0
+    .line 230
+    sget-object v3, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMB:Landroid/content/UriMatcher;
 
-    .line 238
-    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->gK(I)V
+    invoke-virtual {v3, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
-    .line 239
-    const/4 v0, 0x0
+    move-result v3
+
+    iput v3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMl:I
+
+    .line 233
+    :cond_8
+    iget v3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->dMl:I
+
+    packed-switch v3, :pswitch_data_0
+
+    .line 253
+    const/16 v1, 0xf
+
+    invoke-virtual {p0, v4, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->aA(II)V
 
     goto/16 :goto_0
 
-    .line 222
+    .line 237
     :pswitch_0
-    invoke-direct {p0, p4, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->b([Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-direct {p0, p4, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->b([Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
     goto/16 :goto_0
 
-    .line 224
+    .line 239
     :pswitch_1
+    invoke-direct {p0, p4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->l([Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v0
+
+    goto/16 :goto_0
+
+    .line 241
+    :pswitch_2
+    invoke-direct {p0, p4, v1, v2}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->a([Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v0
+
+    goto/16 :goto_0
+
+    .line 243
+    :pswitch_3
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->Xg()Landroid/database/Cursor;
+
+    move-result-object v0
+
+    goto/16 :goto_0
+
+    .line 245
+    :pswitch_4
     invoke-direct {p0, p4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->m([Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
     goto/16 :goto_0
 
-    .line 226
-    :pswitch_2
-    invoke-direct {p0, p4, v0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->a([Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v0
-
-    goto/16 :goto_0
-
-    .line 228
-    :pswitch_3
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->Vy()Landroid/database/Cursor;
-
-    move-result-object v0
-
-    goto/16 :goto_0
-
-    .line 230
-    :pswitch_4
+    .line 247
+    :pswitch_5
     invoke-direct {p0, p4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->n([Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
     goto/16 :goto_0
 
-    .line 232
-    :pswitch_5
+    .line 249
+    :pswitch_6
     invoke-direct {p0, p4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->o([Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
     goto/16 :goto_0
 
-    .line 234
-    :pswitch_6
+    .line 251
+    :pswitch_7
     invoke-direct {p0, p4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->p([Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
     goto/16 :goto_0
 
-    .line 236
-    :pswitch_7
-    invoke-direct {p0, p4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderMsg;->q([Ljava/lang/String;)Landroid/database/Cursor;
+    .line 233
+    nop
 
-    move-result-object v0
-
-    goto/16 :goto_0
-
-    .line 218
     :pswitch_data_0
     .packed-switch 0x7
         :pswitch_0
@@ -3199,7 +3314,7 @@
     .locals 1
 
     .prologue
-    .line 254
+    .line 269
     const/4 v0, 0x0
 
     return v0

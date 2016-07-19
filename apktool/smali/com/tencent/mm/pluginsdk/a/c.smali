@@ -27,15 +27,7 @@
     return-void
 .end method
 
-.method public final a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V
-    .locals 0
-
-    .prologue
-    .line 33
-    return-void
-.end method
-
-.method public final a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILcom/tencent/mm/protocal/b/ask;ZZ)V
+.method public final a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILcom/tencent/mm/protocal/b/ata;ZZLjava/lang/String;)V
     .locals 0
 
     .prologue
@@ -43,7 +35,15 @@
     return-void
 .end method
 
-.method public final a(Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;)V
+.method public final a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 33
+    return-void
+.end method
+
+.method public final b(Ljava/lang/String;[BLjava/lang/String;)V
     .locals 0
 
     .prologue
@@ -51,7 +51,7 @@
     return-void
 .end method
 
-.method public final u(Ljava/lang/String;Ljava/lang/String;I)V
+.method public final s(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
     .prologue

@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field public klA:Z
+.field public kLa:Z
 
-.field public klz:Z
+.field public kLb:Z
 
 
 # direct methods
@@ -20,10 +20,10 @@
     invoke-direct {p0}, Landroid/support/v4/app/Fragment;-><init>()V
 
     .line 24
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/g;->klA:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/g;->kLb:Z
 
     .line 42
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/g;->klz:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/g;->kLa:Z
 
     .line 43
     return-void
@@ -39,10 +39,10 @@
     .line 24
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/g;->klA:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/g;->kLb:Z
 
     .line 35
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/g;->klz:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/g;->kLa:Z
 
     .line 38
     return-void
@@ -50,12 +50,12 @@
 
 
 # virtual methods
-.method public final Gg(Ljava/lang/String;)Landroid/content/SharedPreferences;
+.method public final Iv(Ljava/lang/String;)Landroid/content/SharedPreferences;
     .locals 2
 
     .prologue
     .line 121
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
@@ -68,25 +68,23 @@
     return-object v0
 .end method
 
-.method public final Gh(Ljava/lang/String;)J
+.method public final Iw(Ljava/lang/String;)J
     .locals 3
 
     .prologue
     const-wide/16 v0, -0x1
 
     .line 222
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/g;->klz:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/g;->kLa:Z
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getArguments()Landroid/os/Bundle;
-
-    move-result-object v2
+    iget-object v2, p0, Landroid/support/v4/app/Fragment;->aG:Landroid/os/Bundle;
 
     if-nez v2, :cond_1
 
     .line 223
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v2
 
@@ -105,16 +103,12 @@
 
     .line 224
     :cond_1
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getArguments()Landroid/os/Bundle;
-
-    move-result-object v2
+    iget-object v2, p0, Landroid/support/v4/app/Fragment;->aG:Landroid/os/Bundle;
 
     if-eqz v2, :cond_0
 
     .line 225
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getArguments()Landroid/os/Bundle;
-
-    move-result-object v2
+    iget-object v2, p0, Landroid/support/v4/app/Fragment;->aG:Landroid/os/Bundle;
 
     invoke-virtual {v2, p1, v0, v1}, Landroid/os/Bundle;->getLong(Ljava/lang/String;J)J
 
@@ -123,23 +117,21 @@
     goto :goto_0
 .end method
 
-.method public final aq(Ljava/lang/String;Z)Ljava/lang/Boolean;
+.method public final aA(Ljava/lang/String;Z)Ljava/lang/Boolean;
     .locals 1
 
     .prologue
     .line 214
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/g;->klz:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/g;->kLa:Z
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getArguments()Landroid/os/Bundle;
-
-    move-result-object v0
+    iget-object v0, p0, Landroid/support/v4/app/Fragment;->aG:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
     .line 215
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
@@ -160,9 +152,7 @@
     return-object v0
 
     :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getArguments()Landroid/os/Bundle;
-
-    move-result-object v0
+    iget-object v0, p0, Landroid/support/v4/app/Fragment;->aG:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
@@ -175,17 +165,17 @@
     goto :goto_0
 .end method
 
-.method public final baf()V
+.method public final bfx()V
     .locals 2
 
     .prologue
     .line 232
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/g;->klz:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/g;->kLa:Z
 
     if-eqz v0, :cond_0
 
     .line 233
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
@@ -203,9 +193,7 @@
 
     .prologue
     .line 130
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getView()Landroid/view/View;
-
-    move-result-object v1
+    iget-object v1, p0, Landroid/support/v4/app/Fragment;->mView:Landroid/view/View;
 
     .line 131
     const/4 v0, 0x0
@@ -227,7 +215,7 @@
     return-object v0
 
     :cond_1
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
@@ -243,12 +231,12 @@
 
     .prologue
     .line 66
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/g;->klz:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/g;->kLa:Z
 
     if-eqz v0, :cond_1
 
     .line 67
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
@@ -261,18 +249,18 @@
 
     .line 69
     :cond_1
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 70
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
-    iget-object v0, v0, Landroid/support/v4/app/FragmentActivity;->bb:Landroid/support/v4/app/f;
+    iget-object v0, v0, Landroid/support/v4/app/FragmentActivity;->bp:Landroid/support/v4/app/f;
 
     .line 71
     invoke-virtual {v0}, Landroid/support/v4/app/e;->popBackStack()V
@@ -285,18 +273,16 @@
 
     .prologue
     .line 77
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/g;->klz:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/g;->kLa:Z
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getArguments()Landroid/os/Bundle;
-
-    move-result-object v0
+    iget-object v0, p0, Landroid/support/v4/app/Fragment;->aG:Landroid/os/Bundle;
 
     if-nez v0, :cond_1
 
     .line 78
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
@@ -315,16 +301,12 @@
 
     .line 79
     :cond_1
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getArguments()Landroid/os/Bundle;
-
-    move-result-object v0
+    iget-object v0, p0, Landroid/support/v4/app/Fragment;->aG:Landroid/os/Bundle;
 
     if-eqz v0, :cond_0
 
     .line 80
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getArguments()Landroid/os/Bundle;
-
-    move-result-object v0
+    iget-object v0, p0, Landroid/support/v4/app/Fragment;->aG:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
@@ -333,12 +315,12 @@
     goto :goto_0
 .end method
 
-.method public getResources()Landroid/content/res/Resources;
+.method public final getResources()Landroid/content/res/Resources;
     .locals 1
 
     .prologue
     .line 57
-    invoke-super {p0}, Landroid/support/v4/app/Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-super {p0}, Landroid/support/v4/app/Fragment;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
@@ -346,7 +328,7 @@
     if-nez v0, :cond_0
 
     .line 59
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -374,12 +356,12 @@
     const/4 v0, 0x0
 
     .line 89
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/g;->klz:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/g;->kLa:Z
 
     if-eqz v1, :cond_0
 
     .line 90
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
@@ -395,16 +377,12 @@
     :cond_0
     if-nez v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getArguments()Landroid/os/Bundle;
-
-    move-result-object v1
+    iget-object v1, p0, Landroid/support/v4/app/Fragment;->aG:Landroid/os/Bundle;
 
     if-eqz v1, :cond_1
 
     .line 93
-    invoke-super {p0}, Landroid/support/v4/app/Fragment;->getArguments()Landroid/os/Bundle;
-
-    move-result-object v0
+    iget-object v0, p0, Landroid/support/v4/app/Fragment;->aG:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -420,14 +398,14 @@
 
     .prologue
     .line 184
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 185
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
@@ -450,7 +428,7 @@
 
     .prologue
     .line 169
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
@@ -464,7 +442,7 @@
     return v0
 
     :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
@@ -480,7 +458,7 @@
 
     .prologue
     .line 278
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/g;->klA:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/g;->kLb:Z
 
     if-nez v0, :cond_0
 
@@ -505,7 +483,7 @@
     .line 30
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/g;->klA:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/g;->kLb:Z
 
     .line 31
     return-void
@@ -580,14 +558,14 @@
 
     .prologue
     .line 259
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 260
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
@@ -603,7 +581,7 @@
 
     .prologue
     .line 140
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
@@ -618,14 +596,14 @@
 
     .prologue
     .line 178
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 179
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
@@ -641,7 +619,7 @@
 
     .prologue
     .line 47
-    invoke-super {p0}, Landroid/support/v4/app/Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-super {p0}, Landroid/support/v4/app/Fragment;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
@@ -649,7 +627,7 @@
     if-nez v0, :cond_0
 
     .line 49
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 

@@ -1,28 +1,28 @@
 package com.tencent.mm.t;
 
-import com.tencent.mm.model.ah;
-import com.tencent.mm.model.c;
-import com.tencent.mm.sdk.h.j;
-import com.tencent.mm.sdk.h.j.b;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.q;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.i.c;
+import com.tencent.mm.protocal.i.c.a;
+import com.tencent.mm.protocal.i.g;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class r$1
-  implements j.b
+  implements Runnable
 {
-  r$1(r paramr) {}
+  r$1(r paramr, int paramInt1, int paramInt2, String paramString) {}
   
-  public final void a(int paramInt, j paramj, Object paramObject)
+  public final void run()
   {
-    if ((paramObject == null) || (!(paramObject instanceof String))) {
-      u.i("!32@/B4Tb64lLpL9SB0DqhCSWgFPYrICdb5Q", "onNotifyChange obj not String event:%d stg:%s obj:%s", new Object[] { Integer.valueOf(paramInt), paramj, paramObject });
-    }
-    while ((!bJi.ajh.equals((String)paramObject)) || (bJi.bJc != 1)) {
+    v.d("MicroMsg.RemoteReqResp", "summerauth doAutoAuthEnd type:%d, stack[%s]", new Object[] { Integer.valueOf(r.a(bzG).getType()), be.baX() });
+    r.a(bzG).vC();
+    i.g localg = (i.g)r.a(bzG).tY();
+    if (localg == null)
+    {
+      v.f("MicroMsg.RemoteReqResp", "null auth.resp");
       return;
     }
-    u.i("!32@/B4Tb64lLpL9SB0DqhCSWgFPYrICdb5Q", "contactStgUpdate, %s", new Object[] { bJi.ajh });
-    bJi.hd(bJi.ajh);
-    ah.tD().rq().b(bJi.bJh);
+    i.c.a.jrR.a(localg, ada, adb, bzm);
   }
 }
 

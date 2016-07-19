@@ -10,7 +10,7 @@ final class CropImageNewUI$19
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    luq.finish();
+    lVs.finish();
     return true;
   }
 }

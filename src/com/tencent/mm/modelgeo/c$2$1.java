@@ -1,6 +1,6 @@
 package com.tencent.mm.modelgeo;
 
-import com.tencent.mm.platformtools.r;
+import com.tencent.mm.platformtools.q;
 import com.tencent.mm.sdk.b.b;
 import java.lang.ref.WeakReference;
 import java.util.Iterator;
@@ -13,7 +13,7 @@ final class c$2$1
   
   public final void run()
   {
-    Iterator localIterator = bOF.bOx.bOl.iterator();
+    Iterator localIterator = bIa.bHS.bHG.iterator();
     Object localObject;
     while (localIterator.hasNext())
     {
@@ -21,21 +21,21 @@ final class c$2$1
       if ((localObject != null) && (((WeakReference)localObject).get() != null))
       {
         localObject = (a.a)((WeakReference)localObject).get();
-        if ((r.cmK) && (b.aUo())) {
-          ((a.a)localObject).a(bOy, (float)r.lng, (float)r.lat, bOz, (float)bOA, bOB);
+        if ((q.chP) && (b.aZo())) {
+          ((a.a)localObject).a(bHT, (float)q.lng, (float)q.lat, bHU, (float)bHV, bHW);
         } else {
-          ((a.a)localObject).a(bOy, (float)bOC, (float)bOD, bOz, (float)bOA, bOB);
+          ((a.a)localObject).a(bHT, (float)bHX, (float)bHY, bHU, (float)bHV, bHW);
         }
       }
     }
-    localIterator = bOF.bOx.bOm.iterator();
+    localIterator = bIa.bHS.bHH.iterator();
     while (localIterator.hasNext())
     {
       localObject = (a.a)localIterator.next();
-      if ((r.cmK) && (b.aUo())) {
-        ((a.a)localObject).a(bOy, (float)r.lng, (float)r.lat, bOz, (float)bOA, bOB);
+      if ((q.chP) && (b.aZo())) {
+        ((a.a)localObject).a(bHT, (float)q.lng, (float)q.lat, bHU, (float)bHV, bHW);
       } else {
-        ((a.a)localObject).a(bOy, (float)bOC, (float)bOD, bOz, (float)bOA, bOB);
+        ((a.a)localObject).a(bHT, (float)bHX, (float)bHY, bHU, (float)bHV, bHW);
       }
     }
   }

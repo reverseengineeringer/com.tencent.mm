@@ -3,7 +3,7 @@ package com.tencent.mm.ui.bindgooglecontact;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 
 final class GoogleFriendUI$5
   implements DialogInterface.OnCancelListener
@@ -12,8 +12,8 @@ final class GoogleFriendUI$5
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    GoogleFriendUI.c(kNj);
-    ah.tE().c(GoogleFriendUI.d(kNj));
+    GoogleFriendUI.c(lmy);
+    ah.tF().c(GoogleFriendUI.d(lmy));
   }
 }
 

@@ -1,33 +1,33 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.protocal.b.alx;
-import com.tencent.mm.protocal.b.ws;
-import com.tencent.mm.protocal.h;
-import com.tencent.mm.protocal.h.a;
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.z;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.protocal.ac;
+import com.tencent.mm.protocal.b.ami;
+import com.tencent.mm.protocal.b.xd;
+import com.tencent.mm.protocal.k;
+import com.tencent.mm.protocal.k.a;
+import com.tencent.mm.protocal.k.c;
+import com.tencent.mm.sdk.platformtools.be;
 
 public final class ak$a
-  extends h.c
-  implements h.a
+  extends k.c
+  implements k.a
 {
-  public ws bBp = new ws();
+  public xd buu = new xd();
   
   public final int getCmdId()
   {
     return 0;
   }
   
-  public final byte[] tY()
+  public final byte[] tZ()
   {
-    iUJ = z.aTv();
-    bBp.jbx = new alx().aO(ay.aVA());
-    bBp.jGS = h.a(this);
-    return bBp.toByteArray();
+    jsg = ac.aYs();
+    buu.jzd = new ami().aV(be.baN());
+    buu.kfq = k.a(this);
+    return buu.toByteArray();
   }
   
-  public final int tZ()
+  public final int ua()
   {
     return 616;
   }

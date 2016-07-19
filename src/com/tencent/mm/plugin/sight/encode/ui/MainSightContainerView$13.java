@@ -2,8 +2,8 @@ package com.tencent.mm.plugin.sight.encode.ui;
 
 import com.tencent.mm.a.e;
 import com.tencent.mm.a.g;
-import com.tencent.mm.d.a.lj;
-import com.tencent.mm.d.a.lj.a;
+import com.tencent.mm.e.a.lp;
+import com.tencent.mm.e.a.lp.a;
 import com.tencent.mm.sdk.c.a;
 
 final class MainSightContainerView$13
@@ -13,12 +13,12 @@ final class MainSightContainerView$13
   
   public final void run()
   {
-    lj locallj = new lj();
-    aHJ.type = 1;
-    aHJ.aHM = MainSightContainerView.b(gCA).getRecordPath();
-    aHJ.aHN = g.aC(MainSightContainerView.b(gCA).getRecordPath());
-    aHJ.aHL = e.ax(aHJ.aHM);
-    a.jUF.j(locallj);
+    lp locallp = new lp();
+    atZ.type = 1;
+    atZ.auc = MainSightContainerView.b(gJb).ayQ();
+    atZ.aud = g.aH(MainSightContainerView.b(gJb).ayQ());
+    atZ.aub = e.aB(atZ.auc);
+    a.kug.y(locallp);
   }
 }
 

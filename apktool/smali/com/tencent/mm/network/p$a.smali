@@ -40,7 +40,7 @@
     return-void
 .end method
 
-.method public static ab(Landroid/os/IBinder;)Lcom/tencent/mm/network/p;
+.method public static D(Landroid/os/IBinder;)Lcom/tencent/mm/network/p;
     .locals 2
 
     .prologue
@@ -165,7 +165,7 @@
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 64
-    invoke-virtual {p0}, Lcom/tencent/mm/network/p$a;->wg()Lcom/tencent/mm/protocal/f;
+    invoke-virtual {p0}, Lcom/tencent/mm/network/p$a;->wi()Lcom/tencent/mm/protocal/h;
 
     move-result-object v2
 
@@ -175,7 +175,7 @@
     .line 66
     if-eqz v2, :cond_0
 
-    invoke-interface {v2}, Lcom/tencent/mm/protocal/f;->asBinder()Landroid/os/IBinder;
+    invoke-interface {v2}, Lcom/tencent/mm/protocal/h;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
@@ -191,7 +191,7 @@
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 72
-    invoke-virtual {p0}, Lcom/tencent/mm/network/p$a;->wf()Lcom/tencent/mm/protocal/e;
+    invoke-virtual {p0}, Lcom/tencent/mm/network/p$a;->wh()Lcom/tencent/mm/protocal/g;
 
     move-result-object v2
 
@@ -201,7 +201,7 @@
     .line 74
     if-eqz v2, :cond_1
 
-    invoke-interface {v2}, Lcom/tencent/mm/protocal/e;->asBinder()Landroid/os/IBinder;
+    invoke-interface {v2}, Lcom/tencent/mm/protocal/g;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
@@ -221,7 +221,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/network/i$a;->Z(Landroid/os/IBinder;)Lcom/tencent/mm/network/i;
+    invoke-static {v0}, Lcom/tencent/mm/network/i$a;->B(Landroid/os/IBinder;)Lcom/tencent/mm/network/i;
 
     move-result-object v0
 
@@ -250,7 +250,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 93
-    invoke-virtual {p0}, Lcom/tencent/mm/network/p$a;->vF()I
+    invoke-virtual {p0}, Lcom/tencent/mm/network/p$a;->vI()I
 
     move-result v0
 
@@ -269,7 +269,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 101
-    invoke-virtual {p0}, Lcom/tencent/mm/network/p$a;->vB()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/network/p$a;->vD()Z
 
     move-result v0
 
@@ -298,7 +298,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 109
-    invoke-virtual {p0}, Lcom/tencent/mm/network/p$a;->vx()I
+    invoke-virtual {p0}, Lcom/tencent/mm/network/p$a;->vz()I
 
     move-result v0
 
@@ -322,7 +322,7 @@
     move-result-object v0
 
     .line 119
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/network/p$a;->gk(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/network/p$a;->gx(Ljava/lang/String;)V
 
     .line 120
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -340,7 +340,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/network/i$a;->Z(Landroid/os/IBinder;)Lcom/tencent/mm/network/i;
+    invoke-static {v0}, Lcom/tencent/mm/network/i$a;->B(Landroid/os/IBinder;)Lcom/tencent/mm/network/i;
 
     move-result-object v0
 
@@ -378,7 +378,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/network/d$a;->W(Landroid/os/IBinder;)Lcom/tencent/mm/network/d;
+    invoke-static {v0}, Lcom/tencent/mm/network/d$a;->y(Landroid/os/IBinder;)Lcom/tencent/mm/network/d;
 
     move-result-object v0
 
@@ -387,7 +387,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/network/i$a;->Z(Landroid/os/IBinder;)Lcom/tencent/mm/network/i;
+    invoke-static {v2}, Lcom/tencent/mm/network/i$a;->B(Landroid/os/IBinder;)Lcom/tencent/mm/network/i;
 
     move-result-object v2
 
@@ -416,7 +416,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 156
-    invoke-virtual {p0}, Lcom/tencent/mm/network/p$a;->wh()I
+    invoke-virtual {p0}, Lcom/tencent/mm/network/p$a;->wj()I
 
     move-result v0
 

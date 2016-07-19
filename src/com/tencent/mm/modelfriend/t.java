@@ -1,46 +1,46 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.az.f.a;
+import com.tencent.mm.bc.f.a;
 import com.tencent.mm.sdk.h.d;
 import com.tencent.mm.sdk.h.j;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class t
-  extends com.tencent.mm.sdk.h.f
+  extends com.tencent.mm.sdk.h.f<s>
   implements f.a
 {
-  public static final String[] aoY = { com.tencent.mm.sdk.h.f.a(s.aot, "LinkedInFriend") };
-  public d aoX;
-  public j bME = new j()
+  public static final String[] bkN = { com.tencent.mm.sdk.h.f.a(s.bjR, "LinkedInFriend") };
+  public j bFY = new j()
   {
-    protected final boolean yv()
+    protected final boolean yH()
     {
       boolean bool = true;
-      if ((t.a(t.this) == null) || (t.a(t.this).aVP())) {
+      if ((t.a(t.this) == null) || (t.a(t.this).bbc())) {
         if (t.a(t.this) != null) {
           break label59;
         }
       }
       label59:
-      for (Object localObject = "null";; localObject = Boolean.valueOf(t.a(t.this).aVP()))
+      for (Object localObject = "null";; localObject = Boolean.valueOf(t.a(t.this).bbc()))
       {
-        u.w("!44@/B4Tb64lLpJ4FHnyJpFGLGUFfp8Yd7awqsKJHV4TzI0=", "shouldProcessEvent db is close :%s", new Object[] { localObject });
+        v.w("MicroMsg.LinkedInFriendStorage", "shouldProcessEvent db is close :%s", new Object[] { localObject });
         bool = false;
         return bool;
       }
     }
   };
+  public d bkP;
   
   public t(d paramd)
   {
-    super(paramd, s.aot, "LinkedInFriend", null);
-    aoX = paramd;
+    super(paramd, s.bjR, "LinkedInFriend", null);
+    bkP = paramd;
   }
   
-  public final int a(com.tencent.mm.az.f paramf)
+  public final int a(com.tencent.mm.bc.f paramf)
   {
     if (paramf != null) {
-      aoX = paramf;
+      bkP = paramf;
     }
     return 0;
   }
@@ -51,15 +51,15 @@ public final class t
     do
     {
       return false;
-      params = params.lX();
-    } while ((int)aoX.insert("LinkedInFriend", "linkedInId", params) <= 0);
+      params = params.kn();
+    } while ((int)bkP.insert("LinkedInFriend", "linkedInId", params) <= 0);
     return true;
   }
   
   public final void clear()
   {
-    aoX.cj("LinkedInFriend", " delete from LinkedInFriend");
-    bME.b(5, bME, "");
+    bkP.cx("LinkedInFriend", " delete from LinkedInFriend");
+    bFY.b(5, bFY, "");
   }
   
   public final String getTableName()
@@ -67,10 +67,10 @@ public final class t
     return "LinkedInFriend";
   }
   
-  public final boolean hB(String paramString)
+  public final boolean hT(String paramString)
   {
     paramString = "UPDATE LinkedInFriend SET userOpStatus='1" + "' WHERE linkedInId=" + "'" + paramString + "'";
-    return aoX.cj("LinkedInFriend", paramString);
+    return bkP.cx("LinkedInFriend", paramString);
   }
 }
 

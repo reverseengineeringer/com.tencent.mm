@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.model;
 
 public abstract interface s$a
 {
-  public abstract void aBG();
+  public abstract void aEC();
 }
 
 /* Location:

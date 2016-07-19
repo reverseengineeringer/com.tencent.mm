@@ -12,7 +12,7 @@ final class b$2
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ((ClipboardManager)buV.getSystemService("clipboard")).setText(buW);
+    ((ClipboardManager)bjx.getSystemService("clipboard")).setText(bjy);
   }
 }
 

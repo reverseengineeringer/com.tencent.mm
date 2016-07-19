@@ -15,5 +15,11 @@
 
 
 # virtual methods
-.method public abstract at(II)V
+.method public abstract aU(Landroid/view/View;)V
+.end method
+
+.method public abstract b(Landroid/graphics/Point;)V
+.end method
+
+.method public abstract ul(I)Landroid/view/View;
 .end method

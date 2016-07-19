@@ -8,9 +8,9 @@ import android.widget.ImageView;
 public class WalletIconImageView
   extends ImageView
 {
-  private int iTw = -1;
-  private int iTx = 4;
-  private View.OnClickListener iTy = null;
+  private int jqO = -1;
+  private int jqP = 4;
+  private View.OnClickListener jqQ = null;
   
   public WalletIconImageView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -22,35 +22,35 @@ public class WalletIconImageView
     super(paramContext, paramAttributeSet);
   }
   
-  public final void aSX()
+  public final void aXQ()
   {
-    super.setVisibility(iTx);
-    super.setImageResource(iTw);
-    super.setOnClickListener(iTy);
+    super.setVisibility(jqP);
+    super.setImageResource(jqO);
+    super.setOnClickListener(jqQ);
+  }
+  
+  public final void f(View.OnClickListener paramOnClickListener)
+  {
+    super.setVisibility(0);
+    super.setImageResource(2130838553);
+    super.setContentDescription(getContext().getString(2131231819));
+    super.setOnClickListener(paramOnClickListener);
   }
   
   public void setImageResource(int paramInt)
   {
-    iTw = paramInt;
+    jqO = paramInt;
     super.setImageResource(paramInt);
   }
   
   public void setOnClickListener(View.OnClickListener paramOnClickListener)
   {
-    iTy = paramOnClickListener;
-  }
-  
-  public void setToClearState(View.OnClickListener paramOnClickListener)
-  {
-    super.setVisibility(0);
-    super.setImageResource(2130970307);
-    super.setContentDescription(getContext().getString(2131429604));
-    super.setOnClickListener(paramOnClickListener);
+    jqQ = paramOnClickListener;
   }
   
   public void setVisibility(int paramInt)
   {
-    iTx = paramInt;
+    jqP = paramInt;
     super.setVisibility(paramInt);
   }
 }

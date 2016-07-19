@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic jSU:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
+.field final synthetic kso:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 94
-    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/AppInstallerUI$1;->jSU:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
+    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/AppInstallerUI$1;->kso:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 97
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/AppInstallerUI$1;->jSU:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/AppInstallerUI$1;->kso:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
 
     invoke-static {v0}, Lcom/tencent/mm/sandbox/updater/AppInstallerUI;->a(Lcom/tencent/mm/sandbox/updater/AppInstallerUI;)V
 

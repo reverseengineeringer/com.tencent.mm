@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 public class ResizeLayout
   extends LinearLayout
 {
-  private a kwv = null;
+  a kVC = null;
   
   public ResizeLayout(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -16,20 +16,15 @@ public class ResizeLayout
   
   protected void onSizeChanged(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
-    if (kwv != null) {
-      kwv.bJ(paramInt2, paramInt4);
+    if (kVC != null) {
+      kVC.bP(paramInt2, paramInt4);
     }
     super.onSizeChanged(paramInt1, paramInt2, paramInt3, paramInt4);
   }
   
-  public void setOnSizeChanged(a parama)
-  {
-    kwv = parama;
-  }
-  
   public static abstract interface a
   {
-    public abstract void bJ(int paramInt1, int paramInt2);
+    public abstract void bP(int paramInt1, int paramInt2);
   }
 }
 

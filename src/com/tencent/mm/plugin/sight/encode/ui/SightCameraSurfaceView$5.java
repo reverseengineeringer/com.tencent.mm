@@ -1,8 +1,8 @@
 package com.tencent.mm.plugin.sight.encode.ui;
 
 import android.media.MediaPlayer;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SightCameraSurfaceView$5
   implements Runnable
@@ -13,17 +13,17 @@ final class SightCameraSurfaceView$5
   {
     try
     {
-      gDS.axj();
-      SightCameraSurfaceView.e(gDS).stop();
-      SightCameraSurfaceView.e(gDS).release();
-      SightCameraSurfaceView.a(gDS, null);
+      gKs.azL();
+      SightCameraSurfaceView.e(gKs).stop();
+      SightCameraSurfaceView.e(gKs).release();
+      SightCameraSurfaceView.a(gKs, null);
       return;
     }
     catch (Exception localException)
     {
       for (;;)
       {
-        u.w("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "stop play video error: %s, %s", new Object[] { localException.getMessage(), ay.b(localException) });
+        v.w("MicroMsg.SightCameraSurfaceView", "stop play video error: %s, %s", new Object[] { localException.getMessage(), be.f(localException) });
       }
     }
   }

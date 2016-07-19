@@ -10,7 +10,7 @@ final class ArtistBrowseUI$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    gVZ.hbH.aAZ();
+    hjv.hqx.aDU();
     return true;
   }
 }

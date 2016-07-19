@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic ktw:Lcom/tencent/mm/modelsimple/t;
+.field final synthetic kSE:Lcom/tencent/mm/modelsimple/r;
 
-.field final synthetic ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+.field final synthetic kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/account/LoginHistoryUI;Lcom/tencent/mm/modelsimple/t;)V
+.method constructor <init>(Lcom/tencent/mm/ui/account/LoginHistoryUI;Lcom/tencent/mm/modelsimple/r;)V
     .locals 0
 
     .prologue
     .line 178
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$1;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$1;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$1;->ktw:Lcom/tencent/mm/modelsimple/t;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$1;->kSE:Lcom/tencent/mm/modelsimple/r;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,24 +45,24 @@
 
     .prologue
     .line 182
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$1;->ktw:Lcom/tencent/mm/modelsimple/t;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$1;->kSE:Lcom/tencent/mm/modelsimple/r;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
     .line 183
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$1;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$1;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
     const/16 v2, 0x2bd
 
-    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
     .line 184
     return-void

@@ -1,8 +1,8 @@
 package com.tencent.mm.ui.tools;
 
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.TimerTask;
 
 final class CropImageView$c
@@ -10,16 +10,16 @@ final class CropImageView$c
 {
   public final void run()
   {
-    u.d("!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE", "in timer task run");
+    v.d("MicroMsg.CropImageView", "in timer task run");
     Message localMessage = new Message();
-    if (CropImageView.j(luU)) {
+    if (CropImageView.j(lVW)) {
       what = 4659;
     }
     for (;;)
     {
-      CropImageView.l(luU).sendMessage(localMessage);
+      CropImageView.l(lVW).sendMessage(localMessage);
       return;
-      if (CropImageView.k(luU)) {
+      if (CropImageView.k(lVW)) {
         what = 4658;
       } else {
         what = 4660;

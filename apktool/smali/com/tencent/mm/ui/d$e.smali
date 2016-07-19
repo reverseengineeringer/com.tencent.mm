@@ -15,9 +15,9 @@
 
 
 # static fields
-.field public static final kjL:Ljava/lang/String;
+.field public static final kJT:Ljava/lang/String;
 
-.field public static final kjM:Ljava/lang/String;
+.field public static final kJU:Ljava/lang/String;
 
 
 # direct methods
@@ -25,19 +25,19 @@
     .locals 2
 
     .prologue
-    .line 58
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getPackageName()Ljava/lang/String;
+    .line 56
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/ui/d$e;->kjL:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/ui/d$e;->kJT:Ljava/lang/String;
 
-    .line 59
+    .line 57
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getPackageName()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -55,7 +55,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/ui/d$e;->kjM:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/ui/d$e;->kJU:Ljava/lang/String;
 
     return-void
 .end method

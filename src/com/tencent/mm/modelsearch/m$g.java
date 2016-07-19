@@ -4,27 +4,27 @@ import java.util.List;
 
 public class m$g
 {
-  public int bZJ;
-  public long bZK;
-  public String bZL;
-  public String[] bZM = null;
-  public int[] bZN = null;
-  public List[] bZO = null;
+  public int bTs;
+  public long bTt;
+  public String bTu;
+  public String[] bTv = null;
+  public int[] bTw = null;
+  public List<a>[] bTx = null;
   public String content;
   public long timestamp;
   public int type;
   public Object userData = null;
   
-  public final a Cd()
+  public final a Ck()
   {
-    return (a)bZO[0].get(0);
+    return (a)bTx[0].get(0);
   }
   
   public static final class a
   {
-    public int bZP = -1;
-    public int bZQ = -1;
-    public int bZR = -1;
+    public int bTA = -1;
+    public int bTy = -1;
+    public int bTz = -1;
     public int end;
     public int start;
     

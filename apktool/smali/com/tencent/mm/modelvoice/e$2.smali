@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/af$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ah$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic cgJ:Lcom/tencent/mm/modelvoice/e;
+.field final synthetic cbZ:Lcom/tencent/mm/modelvoice/e;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 276
-    iput-object p1, p0, Lcom/tencent/mm/modelvoice/e$2;->cgJ:Lcom/tencent/mm/modelvoice/e;
+    iput-object p1, p0, Lcom/tencent/mm/modelvoice/e$2;->cbZ:Lcom/tencent/mm/modelvoice/e;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,37 +36,37 @@
 
 
 # virtual methods
-.method public final lj()Z
+.method public final jK()Z
     .locals 5
 
     .prologue
     const/4 v4, -0x1
 
     .line 279
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/e$2;->cgJ:Lcom/tencent/mm/modelvoice/e;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/e$2;->cbZ:Lcom/tencent/mm/modelvoice/e;
 
-    iget-object v1, p0, Lcom/tencent/mm/modelvoice/e$2;->cgJ:Lcom/tencent/mm/modelvoice/e;
+    iget-object v1, p0, Lcom/tencent/mm/modelvoice/e$2;->cbZ:Lcom/tencent/mm/modelvoice/e;
 
     invoke-static {v1}, Lcom/tencent/mm/modelvoice/e;->a(Lcom/tencent/mm/modelvoice/e;)Lcom/tencent/mm/network/e;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/modelvoice/e$2;->cgJ:Lcom/tencent/mm/modelvoice/e;
+    iget-object v2, p0, Lcom/tencent/mm/modelvoice/e$2;->cbZ:Lcom/tencent/mm/modelvoice/e;
 
-    invoke-static {v2}, Lcom/tencent/mm/modelvoice/e;->b(Lcom/tencent/mm/modelvoice/e;)Lcom/tencent/mm/r/d;
+    invoke-static {v2}, Lcom/tencent/mm/modelvoice/e;->b(Lcom/tencent/mm/modelvoice/e;)Lcom/tencent/mm/t/d;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/modelvoice/e;->a(Lcom/tencent/mm/network/e;Lcom/tencent/mm/r/d;)I
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/modelvoice/e;->a(Lcom/tencent/mm/network/e;Lcom/tencent/mm/t/d;)I
 
     move-result v0
 
     if-ne v0, v4, :cond_0
 
     .line 280
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/e$2;->cgJ:Lcom/tencent/mm/modelvoice/e;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/e$2;->cbZ:Lcom/tencent/mm/modelvoice/e;
 
-    invoke-static {v0}, Lcom/tencent/mm/modelvoice/e;->b(Lcom/tencent/mm/modelvoice/e;)Lcom/tencent/mm/r/d;
+    invoke-static {v0}, Lcom/tencent/mm/modelvoice/e;->b(Lcom/tencent/mm/modelvoice/e;)Lcom/tencent/mm/t/d;
 
     move-result-object v0
 
@@ -74,9 +74,9 @@
 
     const-string/jumbo v2, "doScene failed"
 
-    iget-object v3, p0, Lcom/tencent/mm/modelvoice/e$2;->cgJ:Lcom/tencent/mm/modelvoice/e;
+    iget-object v3, p0, Lcom/tencent/mm/modelvoice/e$2;->cbZ:Lcom/tencent/mm/modelvoice/e;
 
-    invoke-interface {v0, v1, v4, v2, v3}, Lcom/tencent/mm/r/d;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    invoke-interface {v0, v1, v4, v2, v3}, Lcom/tencent/mm/t/d;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 
     .line 282
     :cond_0

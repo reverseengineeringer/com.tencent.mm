@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/model/ah;-><init>(Lcom/tencent/mm/model/x;Lcom/tencent/mm/storage/g;Lcom/tencent/mm/r/m$a;)V
+    value = Lcom/tencent/mm/model/ah;-><init>(Lcom/tencent/mm/model/x;Lcom/tencent/mm/storage/g;Lcom/tencent/mm/t/m$a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bBf:Lcom/tencent/mm/model/ah;
+.field final synthetic buk:Lcom/tencent/mm/model/ah;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 413
-    iput-object p1, p0, Lcom/tencent/mm/model/ah$6;->bBf:Lcom/tencent/mm/model/ah;
+    .line 414
+    iput-object p1, p0, Lcom/tencent/mm/model/ah$6;->buk:Lcom/tencent/mm/model/ah;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,13 +40,13 @@
     .locals 1
 
     .prologue
-    .line 416
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 417
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ah;->dG(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ak;->dH(Landroid/content/Context;)V
 
-    .line 417
+    .line 418
     return-void
 .end method

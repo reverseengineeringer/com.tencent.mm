@@ -2,7 +2,7 @@ package com.tencent.mm.ui.account;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.j;
 
@@ -13,7 +13,7 @@ final class RegByMobileRegAIOUI$18
   
   public final void onClick(View paramView)
   {
-    ay.C(kuT.koJ.kpc, kuT.getString(2131432244));
+    be.D(kUa.kNN.kOg, kUa.getString(2131235761));
   }
 }
 

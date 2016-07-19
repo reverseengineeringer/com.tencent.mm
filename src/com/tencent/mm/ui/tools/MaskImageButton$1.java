@@ -7,8 +7,8 @@ final class MaskImageButton$1
   
   public final void run()
   {
-    lxb.setPressed(false);
-    lxb.invalidate();
+    lXO.setPressed(false);
+    lXO.invalidate();
   }
 }
 

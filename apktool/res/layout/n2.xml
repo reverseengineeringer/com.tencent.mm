@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/jq" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/aju" android:layout_width="@dimen/cq" android:layout_height="@dimen/cq" android:scaleType="fitXY" />
+    <TextView android:textColor="@color/nf" android:layout_gravity="center_horizontal" android:id="@id/ajv" android:paddingTop="@dimen/jb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+</LinearLayout>

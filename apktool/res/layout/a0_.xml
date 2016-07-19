@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="@drawable/m0" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="48.0dip" style="@style/ScanProductPreferenceStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center|right" android:orientation="horizontal" android:background="@drawable/m0" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:ellipsize="end" android:gravity="center|left" android:id="@android:id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="9.0dip" android:singleLine="true" android:layout_weight="1.0" style="@style/MMFontPreferenceLarge" />
+        <ImageButton android:id="@id/bk1" android:background="@android:color/transparent" android:focusable="false" android:layout_width="50.0dip" android:layout_height="fill_parent" android:src="@drawable/a7w" />
+    </LinearLayout>
+</LinearLayout>

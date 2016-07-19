@@ -12,7 +12,7 @@
 
 
 # static fields
-.field public static iSL:[Landroid/text/InputFilter;
+.field public static jpU:[Landroid/text/InputFilter;
 
 
 # direct methods
@@ -35,7 +35,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/h;->iSL:[Landroid/text/InputFilter;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/h;->jpU:[Landroid/text/InputFilter;
 
     return-void
 .end method

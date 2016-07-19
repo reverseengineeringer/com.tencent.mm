@@ -8,162 +8,213 @@ import android.content.SharedPreferences;
 import android.os.Build.VERSION;
 import android.os.IBinder;
 import android.os.RemoteException;
-import com.tencent.mm.an.q.a;
 import com.tencent.mm.app.WorkerProfile;
-import com.tencent.mm.app.plugin.voicereminder.a.d;
+import com.tencent.mm.aq.u.a;
 import com.tencent.mm.compatible.d.p;
-import com.tencent.mm.d.a.ec;
-import com.tencent.mm.d.a.ev;
-import com.tencent.mm.d.a.ev.b;
-import com.tencent.mm.d.a.fw;
-import com.tencent.mm.d.a.hg;
-import com.tencent.mm.d.a.hl;
-import com.tencent.mm.d.a.hl.a;
-import com.tencent.mm.d.a.lk;
-import com.tencent.mm.d.a.me;
-import com.tencent.mm.d.a.mt;
-import com.tencent.mm.d.a.mt.b;
-import com.tencent.mm.d.a.nv;
+import com.tencent.mm.e.a.eg;
+import com.tencent.mm.e.a.gg;
+import com.tencent.mm.e.a.ho;
+import com.tencent.mm.e.a.hq;
+import com.tencent.mm.e.a.hq.a;
+import com.tencent.mm.e.a.lq;
+import com.tencent.mm.e.a.mr;
+import com.tencent.mm.e.a.ng;
+import com.tencent.mm.e.a.ng.b;
+import com.tencent.mm.e.a.oi;
+import com.tencent.mm.e.a.u;
+import com.tencent.mm.h.e;
 import com.tencent.mm.jni.platformcomm.WakerLock;
+import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.modelmulti.l;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.pluginsdk.model.app.ai.a;
-import com.tencent.mm.pluginsdk.model.app.aj;
-import com.tencent.mm.pointers.PByteArray;
-import com.tencent.mm.pointers.PInt;
+import com.tencent.mm.model.z.a;
+import com.tencent.mm.model.z.g;
+import com.tencent.mm.modelmulti.k;
+import com.tencent.mm.modelmulti.o;
+import com.tencent.mm.modelsimple.j;
+import com.tencent.mm.pluginsdk.model.app.ak.a;
+import com.tencent.mm.pluginsdk.model.app.al;
 import com.tencent.mm.protocal.MMProtocalJni;
-import com.tencent.mm.protocal.b.afb;
-import com.tencent.mm.protocal.b.ana;
-import com.tencent.mm.protocal.b.atm;
-import com.tencent.mm.protocal.h.b;
-import com.tencent.mm.protocal.l.b;
-import com.tencent.mm.protocal.t.b;
-import com.tencent.mm.protocal.x.b;
+import com.tencent.mm.protocal.aa.b;
+import com.tencent.mm.protocal.b.anl;
+import com.tencent.mm.protocal.b.auc;
+import com.tencent.mm.protocal.o.b;
 import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.s;
 import java.util.Set;
 import java.util.concurrent.locks.Lock;
 
 public class NotifyReceiver$NotifyService
   extends Service
 {
-  private void h(Intent paramIntent)
+  Boolean baw = null;
+  
+  private static void cJ(String paramString)
   {
-    if (paramIntent == null) {
-      u.e("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "receiveImp receiveIntent == null");
-    }
-    for (;;)
+    synchronized ()
     {
+      if (NotifyReceiver.lh() == null) {
+        NotifyReceiver.a(new WakerLock(aa.getContext()));
+      }
+      NotifyReceiver.lh().lock(5000L, paramString);
+      return;
+    }
+  }
+  
+  private void i(Intent paramIntent)
+  {
+    if (paramIntent == null)
+    {
+      v.e("MicroMsg.NotifyReceiver", "receiveImp receiveIntent == null");
       label11:
       return;
-      int i = WorkerProfile.kQ().ah(false);
-      if (com.tencent.mm.model.ah.tg())
-      {
-        u.e("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "mmcore is null, appcreate %d", new Object[] { Integer.valueOf(i) });
-        return;
+    }
+    int i = WorkerProfile.jr().M(false);
+    if (ah.th())
+    {
+      v.e("MicroMsg.NotifyReceiver", "mmcore is null, appcreate %d", new Object[] { Integer.valueOf(i) });
+      return;
+    }
+    if (!WorkerProfile.jr().js())
+    {
+      v.e("MicroMsg.NotifyReceiver", "WorkerProfile not has create, status %d", new Object[] { Integer.valueOf(i) });
+      return;
+    }
+    int j = paramIntent.getIntExtra("notify_option_type", 0);
+    if (j == 0)
+    {
+      v.e("MicroMsg.NotifyReceiver", "receiveImp invalid opcode.");
+      return;
+    }
+    if (ah.tH())
+    {
+      if (ah.tL()) {
+        break label158;
       }
-      if (!WorkerProfile.kQ().kR())
-      {
-        u.e("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "WorkerProfile not has create, status %d", new Object[] { Integer.valueOf(i) });
-        return;
+      ah.tK();
+    }
+    while ((!ah.rg()) || (ah.tN()))
+    {
+      v.e("MicroMsg.NotifyReceiver", "receiveImp hasSetuin:%b  isHold:%b  opcode:%d", new Object[] { Boolean.valueOf(ah.rg()), Boolean.valueOf(ah.tN()), Integer.valueOf(j) });
+      return;
+      label158:
+      v.i("MicroMsg.NotifyReceiver", "receiveImp uinHasDefaultButNoAcc but accInitializing true so not setup!");
+    }
+    if (tFbyZ == null)
+    {
+      v.w("MicroMsg.NotifyReceiver", "receiveImp  opcode:%d  getDispatcher == null", new Object[] { Integer.valueOf(j) });
+      ah.tF().aq(true);
+    }
+    if (baw == null) {
+      if (!com.tencent.mm.sdk.b.b.aZo()) {
+        break label310;
       }
-      i = paramIntent.getIntExtra("notify_option_type", 0);
-      if (i == 0)
+    }
+    Object localObject1;
+    boolean bool;
+    label310:
+    label513:
+    Object localObject2;
+    long l;
+    label1074:
+    label1204:
+    label1209:
+    label2056:
+    label2061:
+    label2534:
+    label2600:
+    label2605:
+    label3186:
+    label3191:
+    label3220:
+    for (;;)
+    {
+      localObject1 = this;
+      bool = false;
+      for (;;)
       {
-        u.e("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "receiveImp invalid opcode.");
-        return;
-      }
-      if (com.tencent.mm.model.ah.tG())
-      {
-        if (com.tencent.mm.model.ah.tK()) {
-          break label158;
-        }
-        com.tencent.mm.model.ah.tJ();
-      }
-      while ((!com.tencent.mm.model.ah.rh()) || (com.tencent.mm.model.ah.tM()))
-      {
-        u.e("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "receiveImp hasSetuin:%b  isHold:%b  opcode:%d", new Object[] { Boolean.valueOf(com.tencent.mm.model.ah.rh()), Boolean.valueOf(com.tencent.mm.model.ah.tM()), Integer.valueOf(i) });
-        return;
-        label158:
-        u.i("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "receiveImp uinHasDefaultButNoAcc but accInitializing true so not setup!");
-      }
-      if (tEbFO == null)
-      {
-        u.w("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "receiveImp  opcode:%d  getDispatcher == null", new Object[] { Integer.valueOf(i) });
-        com.tencent.mm.model.ah.tE().aL(true);
-      }
-      label415:
-      Object localObject1;
-      Object localObject2;
-      switch (i)
-      {
-      case 99: 
-      default: 
-        u.e("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "invald opCode:" + i);
-        return;
-      case 1: 
-        r(y.getContext(), "NotifyReceiver.handleCommand:NOTIFY_OPCODE_NETWORK_AVAILABLE");
-        paramIntent = y.getContext();
-        u.i("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "dealWithLooper");
-        if ((!com.tencent.mm.model.ah.rh()) || (com.tencent.mm.model.ah.tM()))
+        baw = Boolean.valueOf(bool);
+        v.i("MicroMsg.NotifyReceiver", "handleCommand useOld:%s status:%d operCode:%d", new Object[] { baw, Integer.valueOf(i), Integer.valueOf(j) });
+        switch (j)
         {
-          u.w("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "receiveImp hasSetuin:" + com.tencent.mm.model.ah.rh() + " isHold:" + com.tencent.mm.model.ah.tM());
+        default: 
+          v.e("MicroMsg.NotifyReceiver", "invald opCode:" + j);
           return;
+          if (be.getInt(com.tencent.mm.h.h.om().getValue("AndroidOldNotifyReceiver"), 0) <= com.tencent.mm.a.h.z(tEuin, 100)) {
+            break label3220;
+          }
+          bool = true;
+          localObject1 = this;
         }
-        if (!tEforeground)
+      }
+      if (baw.booleanValue()) {
+        s(aa.getContext(), "NotifyReceiver.handleCommand:NOTIFY_OPCODE_NETWORK_AVAILABLE");
+      }
+      paramIntent = aa.getContext();
+      v.i("MicroMsg.NotifyReceiver", "dealWithLooper");
+      if ((!ah.rg()) || (ah.tN()))
+      {
+        v.w("MicroMsg.NotifyReceiver", "receiveImp hasSetuin:" + ah.rg() + " isHold:" + ah.tN());
+        return;
+      }
+      if (!tFforeground)
+      {
+        if ((paramIntent != null) && (!ak.dA(paramIntent)))
         {
-          if ((paramIntent != null) && (!com.tencent.mm.sdk.platformtools.ah.dz(paramIntent)))
-          {
-            i = 1;
-            if (i != 0) {
-              break label415;
-            }
+          i = 1;
+          if (i != 0) {
+            break label513;
           }
         }
-        else {
-          l.Be().dC(2);
+      }
+      else {
+        com.tencent.mm.modelmulti.m.Bd().eh(2);
+      }
+      for (;;)
+      {
+        com.tencent.mm.modelvoice.m.ES().run();
+        com.tencent.mm.aq.n.Eu().run();
+        com.tencent.mm.ae.n.Aw().run();
+        al.aUD().run();
+        if (z.a.btz != null) {
+          z.a.btz.tb();
         }
-        for (;;)
-        {
-          com.tencent.mm.modelvoice.m.Ey().run();
-          com.tencent.mm.an.j.Ec().run();
-          com.tencent.mm.ab.n.Am().run();
-          aj.aPU().run();
-          d.lq().run();
-          a.jUF.j(new me());
-          return;
-          i = 0;
-          break;
-          com.tencent.mm.model.ah.tE().d(new com.tencent.mm.modelmulti.i());
-        }
-      case 2: 
-        r(y.getContext(), "NotifyReceiver.handleCommand:NOTIFY_OPCODE_NOTIFY");
-        int j = paramIntent.getIntExtra("notify_respType", 0);
+        a.kug.y(new mr());
+        return;
+        i = 0;
+        break;
+        ah.tF().a(new com.tencent.mm.modelmulti.i(), 0);
+      }
+      if (baw.booleanValue())
+      {
+        s(aa.getContext(), "NotifyReceiver.handleCommand:NOTIFY_OPCODE_NOTIFY");
+        j = paramIntent.getIntExtra("notify_respType", 0);
         localObject1 = paramIntent.getByteArrayExtra("notify_respBuf");
         localObject2 = paramIntent.getByteArrayExtra("notify_skey");
-        long l = paramIntent.getLongExtra("notfiy_recv_time", -1L);
+        l = paramIntent.getLongExtra("notfiy_recv_time", -1L);
         if (localObject1 == null) {}
         for (i = -1;; i = localObject1.length)
         {
-          u.i("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "dealWithNotify respType:%d recvTime:%d respBuf:%d sessionkey:%s ", new Object[] { Integer.valueOf(j), Long.valueOf(l), Integer.valueOf(i), ay.Dz(ay.aW((byte[])localObject2)) });
+          v.i("MicroMsg.NotifyReceiver", "dealWithNotify respType:%d recvTime:%d respBuf:%d sessionkey:%s ", new Object[] { Integer.valueOf(j), Long.valueOf(l), Integer.valueOf(i), be.FO(be.bd((byte[])localObject2)) });
           switch (j)
           {
           default: 
             return;
           case 10: 
-            u.d("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "on direct send notify");
-            paramIntent = new l.b();
-            deviceID = p.ox();
-            localObject2 = new com.tencent.mm.r.s(paramIntent, 10);
+            v.d("MicroMsg.NotifyReceiver", "on direct send notify");
+            paramIntent = new o.b();
+            deviceID = p.mN();
+            localObject2 = new s(paramIntent, 10);
             try
             {
-              if (!((com.tencent.mm.r.s)localObject2).a(10, (byte[])localObject1, null)) {
+              if (!((s)localObject2).a(10, (byte[])localObject1, null)) {
                 break label11;
               }
-              com.tencent.mm.model.ah.tE().a(0, 0, "", new com.tencent.mm.modelsimple.j(paramIntent));
+              ah.tF().onSceneEnd(0, 0, "", new j(paramIntent));
               return;
             }
             catch (RemoteException paramIntent)
@@ -172,374 +223,469 @@ public class NotifyReceiver$NotifyService
             }
           }
         }
-        if (ay.J((byte[])localObject2))
+        if (be.P((byte[])localObject2))
         {
-          u.e("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "dkpush dealWithNotify session:" + localObject2);
+          v.e("MicroMsg.NotifyReceiver", "dkpush dealWithNotify session:" + localObject2);
           return;
         }
-        if ((ay.J((byte[])localObject1)) || (localObject1.length <= 8))
+        if ((be.P((byte[])localObject1)) || (localObject1.length <= 8))
         {
-          u.e("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "dkpush dealWithNotify respBuf error ");
+          v.e("MicroMsg.NotifyReceiver", "dkpush dealWithNotify respBuf error ");
           return;
         }
         i = com.tencent.mm.a.n.c((byte[])localObject1, 0);
         j = com.tencent.mm.a.n.c((byte[])localObject1, 4);
         if (j != localObject1.length - 8)
         {
-          u.e("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "dkpush: respBuf length error len:" + localObject1.length);
+          v.e("MicroMsg.NotifyReceiver", "dkpush: respBuf length error len:" + localObject1.length);
           return;
         }
-        byte[] arrayOfByte = new byte[j];
-        System.arraycopy(localObject1, 8, arrayOfByte, 0, j);
-        u.i("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "dkpush PUSHDATA flag:%d bufLen:%d respBuf:%d recvTime:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(j), Integer.valueOf(localObject1.length), Long.valueOf(l) });
-        paramIntent = new t.b();
-        localObject1 = new PByteArray();
-        PByteArray localPByteArray = new PByteArray();
-        PInt localPInt1 = new PInt();
-        PInt localPInt2 = new PInt();
+        paramIntent = new byte[j];
+        System.arraycopy(localObject1, 8, paramIntent, 0, j);
+        v.i("MicroMsg.NotifyReceiver", "dkpush PUSHDATA flag:%d bufLen:%d respBuf:%d recvTime:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(j), Integer.valueOf(localObject1.length), Long.valueOf(l) });
         try
         {
-          if (!MMProtocalJni.unpack(localPByteArray, arrayOfByte, (byte[])localObject2, (PByteArray)localObject1, localPInt1, localPInt2))
+          NotifyReceiver.lk().lock();
+          k.a(i, paramIntent, (byte[])localObject2, l);
+          NotifyReceiver.ll().add(Long.valueOf(l));
+          t(aa.getContext(), "NotifyReceiver.NotifyData");
+          try
           {
-            u.e("!32@/B4Tb64lLpJRvkgZo4JKS+ippUZtfBu8", "unpack push resp failed");
+            NotifyReceiver.lk().unlock();
             return;
           }
-        }
-        catch (Exception paramIntent)
-        {
-          u.e("!32@/B4Tb64lLpJRvkgZo4JKS+ippUZtfBu8", "unpack push resp failed: %s", new Object[] { paramIntent });
-          return;
-        }
-        if (value == -13)
-        {
-          iUL = value;
-          u.e("!32@/B4Tb64lLpJRvkgZo4JKS+ippUZtfBu8", "unpack push resp failed session timeout");
-          return;
-        }
-        j = paramIntent.y(value);
-        u.d("!32@/B4Tb64lLpJRvkgZo4JKS+ippUZtfBu8", "bufToResp using protobuf ok");
-        iUL = j;
-        iUK = arrayOfByte.length;
-        localObject1 = t.kA(t.ky((String)com.tencent.mm.model.ah.tD().rn().get(8195, null)));
-        localObject2 = com.tencent.mm.platformtools.n.a(iVk.jeX);
-        if ((t.J((byte[])localObject2)) || (!com.tencent.mm.protocal.aa.l((byte[])localObject1, (byte[])localObject2)))
-        {
-          u.e("!32@/B4Tb64lLpJRvkgZo4JKS+ippUZtfBu8", "compareKeybuf syncKey failed");
-          return;
-        }
-        l.Be().a(paramIntent, i, l);
-        return;
-        if (localObject1 == null)
-        {
-          i = 7;
-          if (localObject1 != null) {
-            break label1264;
+          catch (Exception paramIntent)
+          {
+            return;
           }
-          j = 2;
-          if (localObject1 != null) {
-            break label1269;
-          }
-        }
-        for (int k = -1;; k = localObject1.length)
-        {
-          u.d("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "dkpush NOTIFY or SyncCheck selector:%d scnen:%d  respBuf:%d ", new Object[] { Integer.valueOf(i), Integer.valueOf(j), Integer.valueOf(k) });
           try
           {
-            NotifyReceiver.mX().lock();
-            i = l.Be().a(i, j, "");
-            if (i > 0)
+            NotifyReceiver.lk().unlock();
+            throw paramIntent;
+            if (localObject1 == null)
             {
-              u.d("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "add scene hash to memo, hash:%d", new Object[] { Integer.valueOf(i) });
-              NotifyReceiver.mY().add(Integer.valueOf(i));
-              s(y.getContext(), "NotifyReceiver.dealWithNotify:MMFunc_NewSync");
-            }
-            try
-            {
-              NotifyReceiver.mX().unlock();
-              return;
-            }
-            catch (Exception paramIntent)
-            {
-              return;
-            }
-            i = com.tencent.mm.a.n.c((byte[])localObject1, 0);
-            break;
-          }
-          finally {}
-          j = 1;
-          break label1135;
-        }
-      case 3: 
-        try
-        {
-          label1135:
-          label1264:
-          label1269:
-          NotifyReceiver.mX().unlock();
-          throw paramIntent;
-          u.d("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "dkpush GCM Notify");
-          i = l.Be().a(7L, 13, "");
-          try
-          {
-            NotifyReceiver.mX().lock();
-            if (i > 0)
-            {
-              u.d("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "add scene hash to memo, hash:%d", new Object[] { Integer.valueOf(i) });
-              NotifyReceiver.mY().add(Integer.valueOf(i));
-              s(y.getContext(), "NotifyReceiver.dealWithNotify:MM_PKT_GCM_NOTIFY");
-            }
-            try
-            {
-              NotifyReceiver.mX().unlock();
-              return;
-            }
-            catch (Exception paramIntent)
-            {
-              return;
-            }
-            try
-            {
-              NotifyReceiver.mX().unlock();
-              throw paramIntent;
-              paramIntent = new StringBuilder("oreh on newsynccheck2 notify, notify=");
-              boolean bool;
+              i = 7;
               if (localObject1 != null) {
-                bool = true;
+                break label1204;
               }
-              for (;;)
-              {
-                u.d("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", bool);
-                paramIntent = new x.b();
-                try
-                {
-                  paramIntent.y((byte[])localObject1);
-                  NotifyReceiver.mX().lock();
-                  i = l.Be().a(iVp, 1, paramIntent.aTu());
-                  if (i > 0)
-                  {
-                    u.d("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "add scene hash to memo, hash:%d", new Object[] { Integer.valueOf(i) });
-                    NotifyReceiver.mY().add(Integer.valueOf(i));
-                    s(y.getContext(), "NotifyReceiver.dealWithNotify:MM_PKT_NEW_SYNC_CHECK2_RESP");
-                  }
-                  try
-                  {
-                    NotifyReceiver.mX().unlock();
-                    return;
-                  }
-                  catch (Exception paramIntent)
-                  {
-                    return;
-                  }
-                  bool = false;
-                }
-                catch (Exception paramIntent)
-                {
-                  paramIntent = paramIntent;
-                  try
-                  {
-                    NotifyReceiver.mX().unlock();
-                    return;
-                  }
-                  catch (Exception paramIntent)
-                  {
-                    return;
-                  }
-                }
-                finally {}
+              j = 2;
+              if (localObject1 != null) {
+                break label1209;
               }
+            }
+            for (int k = -1;; k = localObject1.length)
+            {
+              v.d("MicroMsg.NotifyReceiver", "dkpush NOTIFY or SyncCheck selector:%d scnen:%d  respBuf:%d ", new Object[] { Integer.valueOf(i), Integer.valueOf(j), Integer.valueOf(k) });
               try
               {
-                NotifyReceiver.mX().unlock();
-                throw paramIntent;
-                com.tencent.mm.model.ah.tE().d(new com.tencent.mm.modelmulti.i());
-                return;
-                paramIntent = new mt();
-                aJb.aJd = true;
-                a.jUF.j(paramIntent);
-                paramIntent = aJc.aJf;
-                if (!ay.kz(paramIntent))
+                NotifyReceiver.lk().lock();
+                i = com.tencent.mm.modelmulti.m.Bd().a(i, j, "");
+                if (i > 0)
                 {
-                  u.v("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "voipinvite, exit talkroom first: " + paramIntent);
-                  paramIntent = new mt();
-                  aJb.aJe = true;
-                  a.jUF.j(paramIntent);
+                  v.d("MicroMsg.NotifyReceiver", "add scene hash to memo, hash:%d", new Object[] { Integer.valueOf(i) });
+                  NotifyReceiver.ll().add(Long.valueOf(i));
+                  t(aa.getContext(), "NotifyReceiver.dealWithNotify:MMFunc_NewSync");
                 }
-                if ((localObject1 == null) || (localObject1.length <= 0)) {
-                  continue;
-                }
-                if (localObject1[0] == 1)
-                {
-                  u.d("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "dealWithNotify case MM_VOIP_PUSHTYPE_INVITE, will launch voipUI");
-                  paramIntent = new nv();
-                  aKe.axL = 3;
-                  aKe.aKg = ((byte[])localObject1);
-                  a.jUF.j(paramIntent);
-                  return;
-                }
-                if (localObject1[0] != 101) {
-                  continue;
-                }
-                u.d("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "dealWithNotify case MM_PSTN_PUSHTYPE_INVITE");
-                paramIntent = new fw();
-                aAT.aAU = ((byte[])localObject1);
-                a.jUF.j(paramIntent);
-                return;
-                u.i("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "dealWithNotify MMFunc_VoipSync do VoipSync");
-                paramIntent = new nv();
-                aKe.axL = 6;
-                aKe.aKg = ((byte[])localObject1);
-                a.jUF.j(paramIntent);
-                return;
-                paramIntent = new ec();
-                ayn.ayo = ((byte[])localObject1);
-                a.jUF.j(paramIntent);
-                return;
-                if (ay.J((byte[])localObject1)) {
-                  continue;
-                }
-                paramIntent = new String((byte[])localObject1);
-                localObject1 = new com.tencent.mm.d.a.s();
-                asH.type = 4;
-                asH.asJ = paramIntent;
-                a.jUF.j((com.tencent.mm.sdk.c.b)localObject1);
-                return;
-                u.i("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "jacks do voice notify UI");
-                if (localObject1.length < 8) {
-                  continue;
-                }
-                paramIntent = new byte[4];
-                localObject2 = new byte[4];
-                System.arraycopy(localObject1, 0, paramIntent, 0, 4);
-                System.arraycopy(localObject1, 4, localObject2, 0, 4);
-                localObject1 = new hl();
-                aDf.aDg = com.tencent.mm.a.n.c(paramIntent, 0);
-                aDf.aDh = com.tencent.mm.a.n.c((byte[])localObject2, 0);
-                u.i("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "notifyId: %d, sequence: %d", new Object[] { Integer.valueOf(aDf.aDg), Integer.valueOf(aDf.aDh) });
-                a.jUF.j((com.tencent.mm.sdk.c.b)localObject1);
-                return;
-                u.i("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "hy: notify test newyear shake");
                 try
                 {
-                  paramIntent = new hg();
-                  i = atmamjAu;
-                  u.i("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "hy: test level: %d", new Object[] { Integer.valueOf(i) });
-                  aCV.aCW = i;
-                  a.jUF.j(paramIntent);
+                  NotifyReceiver.lk().unlock();
                   return;
                 }
                 catch (Exception paramIntent)
                 {
-                  u.e("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "hy: exception occurs when parsing : " + paramIntent.toString());
                   return;
                 }
-                if (localObject1 == null)
+                i = com.tencent.mm.a.n.c((byte[])localObject1, 0);
+                break;
+              }
+              finally {}
+              j = 1;
+              break label1074;
+            }
+            try
+            {
+              NotifyReceiver.lk().unlock();
+              throw paramIntent;
+              v.d("MicroMsg.NotifyReceiver", "dkpush GCM Notify");
+              i = com.tencent.mm.modelmulti.m.Bd().a(7L, 13, "");
+              try
+              {
+                NotifyReceiver.lk().lock();
+                if (i > 0)
                 {
-                  i = -1;
-                  u.i("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "summerbadcr on MM_PKT_SILENCE_NOTIFY notify respBuf len[%d]", new Object[] { Integer.valueOf(i) });
-                  if (localObject1 == null) {
-                    break label2344;
-                  }
+                  v.d("MicroMsg.NotifyReceiver", "add scene hash to memo, hash:%d", new Object[] { Integer.valueOf(i) });
+                  NotifyReceiver.ll().add(Long.valueOf(i));
+                  t(aa.getContext(), "NotifyReceiver.dealWithNotify:MM_PKT_GCM_NOTIFY");
                 }
-                for (paramIntent = new ana();; paramIntent = null)
+                try
                 {
+                  NotifyReceiver.lk().unlock();
+                  return;
+                }
+                catch (Exception paramIntent)
+                {
+                  return;
+                }
+                try
+                {
+                  NotifyReceiver.lk().unlock();
+                  throw paramIntent;
+                  paramIntent = new StringBuilder("oreh on newsynccheck2 notify, notify=");
+                  if (localObject1 != null) {
+                    bool = true;
+                  }
+                  for (;;)
+                  {
+                    v.d("MicroMsg.NotifyReceiver", bool);
+                    paramIntent = new aa.b();
+                    try
+                    {
+                      paramIntent.D((byte[])localObject1);
+                      NotifyReceiver.lk().lock();
+                      i = com.tencent.mm.modelmulti.m.Bd().a(jsM, 1, paramIntent.aYr());
+                      if (i > 0)
+                      {
+                        v.d("MicroMsg.NotifyReceiver", "add scene hash to memo, hash:%d", new Object[] { Integer.valueOf(i) });
+                        NotifyReceiver.ll().add(Long.valueOf(i));
+                        t(aa.getContext(), "NotifyReceiver.dealWithNotify:MM_PKT_NEW_SYNC_CHECK2_RESP");
+                      }
+                      try
+                      {
+                        NotifyReceiver.lk().unlock();
+                        return;
+                      }
+                      catch (Exception paramIntent)
+                      {
+                        return;
+                      }
+                      bool = false;
+                    }
+                    catch (Exception paramIntent)
+                    {
+                      paramIntent = paramIntent;
+                      try
+                      {
+                        NotifyReceiver.lk().unlock();
+                        return;
+                      }
+                      catch (Exception paramIntent)
+                      {
+                        return;
+                      }
+                    }
+                    finally {}
+                  }
                   try
                   {
-                    paramIntent.am((byte[])localObject1);
-                    u.d("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "summerbadcr MM_PKT_SILENCE_NOTIFY secureData[%d, %d, %d, %d, %d, %d]", new Object[] { Integer.valueOf(jHS), Integer.valueOf(jHT), Integer.valueOf(jHU), Integer.valueOf(jHV), Integer.valueOf(jHW), Integer.valueOf(jHX) });
-                    paramIntent = MMProtocalJni.decodeSecureNotifyData((byte[])localObject2, jHS, jHT, jHU, jHV, jHW, jHX, jHY, jHf.iTS);
-                    if (paramIntent == null) {
-                      break label2349;
+                    NotifyReceiver.lk().unlock();
+                    throw paramIntent;
+                    ah.tF().a(new com.tencent.mm.modelmulti.i(), 0);
+                    return;
+                    lo();
+                    if ((localObject1 == null) || (localObject1.length <= 0)) {
+                      break;
                     }
-                    u.d("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "summerbadcr on MM_PKT_SILENCE_NOTIFY data len:%d", new Object[] { Integer.valueOf(paramIntent.length) });
-                    localObject1 = new lk();
-                    aHQ.data = paramIntent;
-                    a.jUF.j((com.tencent.mm.sdk.c.b)localObject1);
+                    if (localObject1[0] == 1)
+                    {
+                      v.d("MicroMsg.NotifyReceiver", "dealWithNotify case MM_VOIP_PUSHTYPE_INVITE, will launch voipUI");
+                      v((byte[])localObject1);
+                      return;
+                    }
+                    if (localObject1[0] == 101)
+                    {
+                      v.d("MicroMsg.NotifyReceiver", "dealWithNotify case MM_PSTN_PUSHTYPE_INVITE");
+                      y((byte[])localObject1);
+                      return;
+                    }
+                    if (localObject1[0] == 3)
+                    {
+                      v.d("MicroMsg.NotifyReceiver", "dealWithNotify, MM_VOIP_PUSHTYPE_CANCEL");
+                      w((byte[])localObject1);
+                      return;
+                    }
+                    if (localObject1[0] != 2) {
+                      break;
+                    }
+                    v.d("MicroMsg.NotifyReceiver", "dealWithNotify, MM_VOIP_PUSHTYPE_ANSWERED");
+                    x((byte[])localObject1);
+                    return;
+                    v.i("MicroMsg.NotifyReceiver", "dealWithNotify MMFunc_VoipSync do VoipSync");
+                    z((byte[])localObject1);
+                    return;
+                    paramIntent = new eg();
+                    akp.akq = ((byte[])localObject1);
+                    a.kug.y(paramIntent);
+                    return;
+                    if (be.P((byte[])localObject1)) {
+                      break;
+                    }
+                    paramIntent = new String((byte[])localObject1);
+                    localObject1 = new u();
+                    aet.type = 4;
+                    aet.aev = paramIntent;
+                    a.kug.y((com.tencent.mm.sdk.c.b)localObject1);
+                    return;
+                    v.i("MicroMsg.NotifyReceiver", "jacks do voice notify UI");
+                    u((byte[])localObject1);
+                    return;
+                    v.i("MicroMsg.NotifyReceiver", "hy: notify test newyear shake");
+                    try
+                    {
+                      paramIntent = new ho();
+                      i = aucaujZh;
+                      v.i("MicroMsg.NotifyReceiver", "hy: test level: %d", new Object[] { Integer.valueOf(i) });
+                      apg.aph = i;
+                      a.kug.y(paramIntent);
+                      return;
+                    }
+                    catch (Exception paramIntent)
+                    {
+                      v.e("MicroMsg.NotifyReceiver", "hy: exception occurs when parsing : " + paramIntent.toString());
+                      return;
+                    }
+                    if (localObject1 == null)
+                    {
+                      i = -1;
+                      v.i("MicroMsg.NotifyReceiver", "summerbadcr on MM_PKT_SILENCE_NOTIFY notify respBuf len[%d]", new Object[] { Integer.valueOf(i) });
+                      if (localObject1 == null) {
+                        break label2056;
+                      }
+                    }
+                    for (paramIntent = new anl();; paramIntent = null)
+                    {
+                      try
+                      {
+                        paramIntent.au((byte[])localObject1);
+                        v.d("MicroMsg.NotifyReceiver", "summerbadcr MM_PKT_SILENCE_NOTIFY secureData[%d, %d, %d, %d, %d, %d]", new Object[] { Integer.valueOf(kgq), Integer.valueOf(kgr), Integer.valueOf(kgs), Integer.valueOf(kgt), Integer.valueOf(kgu), Integer.valueOf(kgv) });
+                        paramIntent = MMProtocalJni.decodeSecureNotifyData((byte[])localObject2, kgq, kgr, kgs, kgt, kgu, kgv, kgw, kfD.jrl);
+                        if (paramIntent == null) {
+                          break label2061;
+                        }
+                        v.d("MicroMsg.NotifyReceiver", "summerbadcr on MM_PKT_SILENCE_NOTIFY data len:%d", new Object[] { Integer.valueOf(paramIntent.length) });
+                        localObject1 = new lq();
+                        aug.data = paramIntent;
+                        a.kug.y((com.tencent.mm.sdk.c.b)localObject1);
+                        return;
+                      }
+                      catch (Exception paramIntent)
+                      {
+                        v.e("MicroMsg.NotifyReceiver", "summerbadcr MM_PKT_SILENCE_NOTIFY secureData parseFrom e: " + paramIntent.getMessage());
+                      }
+                      i = localObject1.length;
+                      break;
+                    }
+                    v.e("MicroMsg.NotifyReceiver", "summerbadcr on MM_PKT_SILENCE_NOTIFY data is null");
+                    return;
+                    j = paramIntent.getIntExtra("notify_respType", 0);
+                    localObject1 = paramIntent.getByteArrayExtra("notify_respBuf");
+                    localObject2 = paramIntent.getByteArrayExtra("notify_skey");
+                    l = paramIntent.getLongExtra("notfiy_recv_time", -1L);
+                    if (localObject1 == null) {}
+                    for (i = -1;; i = localObject1.length)
+                    {
+                      v.i("MicroMsg.NotifyReceiver", "dealWithNotify respType:%d recvTime:%d respBuf:%d sessionkey:%s ", new Object[] { Integer.valueOf(j), Long.valueOf(l), Integer.valueOf(i), be.FO(be.bd((byte[])localObject2)) });
+                      switch (j)
+                      {
+                      default: 
+                        return;
+                      case 10: 
+                        v.d("MicroMsg.NotifyReceiver", "on direct send notify");
+                        paramIntent = new o.b();
+                        deviceID = p.mN();
+                        localObject2 = new s(paramIntent, 10);
+                        try
+                        {
+                          if (!((s)localObject2).a(10, (byte[])localObject1, null)) {
+                            break label11;
+                          }
+                          ah.tF().onSceneEnd(0, 0, "", new j(paramIntent));
+                          return;
+                        }
+                        catch (RemoteException paramIntent)
+                        {
+                          return;
+                        }
+                      }
+                    }
+                    if (be.P((byte[])localObject2))
+                    {
+                      v.e("MicroMsg.NotifyReceiver", "dkpush dealWithNotify session:" + localObject2);
+                      return;
+                    }
+                    if ((be.P((byte[])localObject1)) || (localObject1.length <= 8))
+                    {
+                      v.e("MicroMsg.NotifyReceiver", "dkpush dealWithNotify respBuf error ");
+                      return;
+                    }
+                    i = com.tencent.mm.a.n.c((byte[])localObject1, 0);
+                    j = com.tencent.mm.a.n.c((byte[])localObject1, 4);
+                    if (j != localObject1.length - 8)
+                    {
+                      v.e("MicroMsg.NotifyReceiver", "dkpush: respBuf length error len:" + localObject1.length);
+                      return;
+                    }
+                    paramIntent = new byte[j];
+                    System.arraycopy(localObject1, 8, paramIntent, 0, j);
+                    v.i("MicroMsg.NotifyReceiver", "dkpush PUSHDATA flag:%d bufLen:%d respBuf:%d recvTime:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(j), Integer.valueOf(localObject1.length), Long.valueOf(l) });
+                    k.a(i, paramIntent, (byte[])localObject2, l);
+                    return;
+                    if (localObject1 == null)
+                    {
+                      i = 7;
+                      if (localObject1 != null) {
+                        break label2600;
+                      }
+                      j = 2;
+                      if (localObject1 != null) {
+                        break label2605;
+                      }
+                    }
+                    for (k = -1;; k = localObject1.length)
+                    {
+                      v.i("MicroMsg.NotifyReceiver", "dkpush NOTIFY or SyncCheck selector:%d scnen:%d  respBuf:%d ", new Object[] { Integer.valueOf(i), Integer.valueOf(j), Integer.valueOf(k) });
+                      com.tencent.mm.modelmulti.m.Bd().a(i, j, "");
+                      return;
+                      i = com.tencent.mm.a.n.c((byte[])localObject1, 0);
+                      break;
+                      j = 1;
+                      break label2534;
+                    }
+                    v.i("MicroMsg.NotifyReceiver", "dkpush GCM Notify");
+                    com.tencent.mm.modelmulti.m.Bd().a(7L, 13, "");
+                    return;
+                    paramIntent = new StringBuilder("oreh on newsynccheck2 notify, notify=");
+                    if (localObject1 != null) {}
+                    for (bool = true;; bool = false)
+                    {
+                      v.i("MicroMsg.NotifyReceiver", bool);
+                      paramIntent = new aa.b();
+                      com.tencent.mm.modelmulti.m.Bd().a(jsM, 1, paramIntent.aYr());
+                      return;
+                    }
+                    ah.tF().a(new com.tencent.mm.modelmulti.i(), 0);
+                    return;
+                    cJ("NotifyReceiver.dealWithNotify:MM_PKT_VOIP_REQ");
+                    lo();
+                    if ((localObject1 == null) || (localObject1.length <= 0)) {
+                      break;
+                    }
+                    if (localObject1[0] == 1)
+                    {
+                      v.d("MicroMsg.NotifyReceiver", "dealWithNotify case MM_VOIP_PUSHTYPE_INVITE, will launch voipUI");
+                      v((byte[])localObject1);
+                      return;
+                    }
+                    if (localObject1[0] == 101)
+                    {
+                      v.d("MicroMsg.NotifyReceiver", "dealWithNotify case MM_PSTN_PUSHTYPE_INVITE");
+                      y((byte[])localObject1);
+                      return;
+                    }
+                    if (localObject1[0] == 3)
+                    {
+                      v.d("MicroMsg.NotifyReceiver", "dealWithNotify, MM_VOIP_PUSHTYPE_CANCEL");
+                      w((byte[])localObject1);
+                      return;
+                    }
+                    if (localObject1[0] != 2) {
+                      break;
+                    }
+                    v.d("MicroMsg.NotifyReceiver", "dealWithNotify, MM_VOIP_PUSHTYPE_ANSWERED");
+                    x((byte[])localObject1);
+                    return;
+                    v.i("MicroMsg.NotifyReceiver", "dealWithNotify MMFunc_VoipSync do VoipSync");
+                    z((byte[])localObject1);
+                    return;
+                    paramIntent = new eg();
+                    akp.akq = ((byte[])localObject1);
+                    a.kug.y(paramIntent);
+                    return;
+                    cJ("NotifyReceiver.dealWithNotify:MM_PKT_VOIP_REQ");
+                    if (be.P((byte[])localObject1)) {
+                      break;
+                    }
+                    paramIntent = new String((byte[])localObject1);
+                    localObject1 = new u();
+                    aet.type = 4;
+                    aet.aev = paramIntent;
+                    a.kug.y((com.tencent.mm.sdk.c.b)localObject1);
+                    return;
+                    v.i("MicroMsg.NotifyReceiver", "jacks do voice notify UI");
+                    u((byte[])localObject1);
+                    return;
+                    if (localObject1 == null)
+                    {
+                      i = -1;
+                      v.i("MicroMsg.NotifyReceiver", "summerbadcr on MM_PKT_SILENCE_NOTIFY notify respBuf len[%d]", new Object[] { Integer.valueOf(i) });
+                      if (localObject1 == null) {
+                        break label3186;
+                      }
+                    }
+                    for (paramIntent = new anl();; paramIntent = null)
+                    {
+                      try
+                      {
+                        paramIntent.au((byte[])localObject1);
+                        v.d("MicroMsg.NotifyReceiver", "summerbadcr MM_PKT_SILENCE_NOTIFY secureData[%d, %d, %d, %d, %d, %d]", new Object[] { Integer.valueOf(kgq), Integer.valueOf(kgr), Integer.valueOf(kgs), Integer.valueOf(kgt), Integer.valueOf(kgu), Integer.valueOf(kgv) });
+                        paramIntent = MMProtocalJni.decodeSecureNotifyData((byte[])localObject2, kgq, kgr, kgs, kgt, kgu, kgv, kgw, kfD.jrl);
+                        if (paramIntent == null) {
+                          break label3191;
+                        }
+                        v.d("MicroMsg.NotifyReceiver", "summerbadcr on MM_PKT_SILENCE_NOTIFY data len:%d", new Object[] { Integer.valueOf(paramIntent.length) });
+                        localObject1 = new lq();
+                        aug.data = paramIntent;
+                        a.kug.y((com.tencent.mm.sdk.c.b)localObject1);
+                        return;
+                      }
+                      catch (Exception paramIntent)
+                      {
+                        v.e("MicroMsg.NotifyReceiver", "summerbadcr MM_PKT_SILENCE_NOTIFY secureData parseFrom e: " + paramIntent.getMessage());
+                      }
+                      i = localObject1.length;
+                      break;
+                    }
+                    v.e("MicroMsg.NotifyReceiver", "summerbadcr on MM_PKT_SILENCE_NOTIFY data is null");
                     return;
                   }
-                  catch (Exception paramIntent)
+                  catch (Exception localException1)
                   {
-                    u.e("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "summerbadcr MM_PKT_SILENCE_NOTIFY secureData parseFrom e: " + paramIntent.getMessage());
+                    for (;;) {}
                   }
-                  i = localObject1.length;
-                  break;
                 }
-                u.e("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "summerbadcr on MM_PKT_SILENCE_NOTIFY data is null");
-                return;
-                u.d("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "handleCommand, shoot netscene action");
-                i = paramIntent.getIntExtra("remote_netscene_funcid_key", 0);
-                u.d("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "edw onReceive, funcId = " + i);
-                if (i == 0)
+                catch (Exception localException2)
                 {
-                  u.e("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "edw onReceive fail, funcId is 0");
-                  return;
-                }
-                paramIntent = paramIntent.getByteArrayExtra("remote_netscene_req_buffer_key");
-                if (ay.J(paramIntent))
-                {
-                  u.e("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "onReceive, reqBuffer is null");
-                  return;
-                }
-                localObject1 = new ev();
-                azx.azz = paramIntent;
-                switch (i)
-                {
-                default: 
-                  u.e("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "onReceive fail, unknown type = " + i);
-                  return;
-                case 444: 
-                  azx.auE = 0;
-                }
-                for (;;)
-                {
-                  a.jUF.j((com.tencent.mm.sdk.c.b)localObject1);
-                  u.d("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "edw onReceive, ret = " + azy.atR);
-                  return;
-                  azx.auE = 1;
-                  continue;
-                  azx.auE = 2;
-                  continue;
-                  azx.auE = 3;
-                  continue;
-                  azx.auE = 4;
-                  continue;
-                  azx.auE = 5;
-                  continue;
-                  azx.auE = 6;
-                  continue;
-                  azx.auE = 7;
+                  for (;;) {}
                 }
               }
-              catch (Exception localException1)
-              {
-                for (;;) {}
-              }
+              finally {}
             }
-            catch (Exception localException2)
+            catch (Exception localException3)
             {
               for (;;) {}
             }
           }
-          finally {}
+          catch (Exception localException4)
+          {
+            for (;;) {}
+          }
         }
-        catch (Exception localException3)
-        {
-          label2344:
-          label2349:
-          for (;;) {}
-        }
+        finally {}
       }
     }
   }
   
-  private static void r(Context paramContext, String paramString)
+  private static void lo()
   {
-    synchronized ()
+    Object localObject = new ng();
+    avv.avx = true;
+    a.kug.y((com.tencent.mm.sdk.c.b)localObject);
+    localObject = avw.avz;
+    if (!be.kf((String)localObject))
     {
-      if (NotifyReceiver.mU() == null) {
-        NotifyReceiver.a(new WakerLock(paramContext));
-      }
-      NotifyReceiver.mU().lock(14000L, paramString);
-      return;
+      v.v("MicroMsg.NotifyReceiver", "voipinvite, exit talkroom first: " + (String)localObject);
+      localObject = new ng();
+      avv.avy = true;
+      a.kug.y((com.tencent.mm.sdk.c.b)localObject);
     }
   }
   
@@ -547,12 +693,79 @@ public class NotifyReceiver$NotifyService
   {
     synchronized ()
     {
-      if (NotifyReceiver.mW() == null) {
-        NotifyReceiver.b(new WakerLock(paramContext));
+      if (NotifyReceiver.lh() == null) {
+        NotifyReceiver.a(new WakerLock(paramContext));
       }
-      NotifyReceiver.mW().lock(60000L, paramString);
+      NotifyReceiver.lh().lock(14000L, paramString);
       return;
     }
+  }
+  
+  private static void t(Context paramContext, String paramString)
+  {
+    synchronized ()
+    {
+      if (NotifyReceiver.lj() == null) {
+        NotifyReceiver.b(new WakerLock(paramContext));
+      }
+      NotifyReceiver.lj().lock(60000L, paramString);
+      return;
+    }
+  }
+  
+  private static void u(byte[] paramArrayOfByte)
+  {
+    if (paramArrayOfByte.length < 8) {
+      return;
+    }
+    byte[] arrayOfByte1 = new byte[4];
+    byte[] arrayOfByte2 = new byte[4];
+    System.arraycopy(paramArrayOfByte, 0, arrayOfByte1, 0, 4);
+    System.arraycopy(paramArrayOfByte, 4, arrayOfByte2, 0, 4);
+    paramArrayOfByte = new hq();
+    apj.apk = com.tencent.mm.a.n.c(arrayOfByte1, 0);
+    apj.apl = com.tencent.mm.a.n.c(arrayOfByte2, 0);
+    v.i("MicroMsg.NotifyReceiver", "notifyId: %d, sequence: %d", new Object[] { Integer.valueOf(apj.apk), Integer.valueOf(apj.apl) });
+    a.kug.y(paramArrayOfByte);
+  }
+  
+  private static void v(byte[] paramArrayOfByte)
+  {
+    oi localoi = new oi();
+    awy.ajS = 3;
+    awy.awA = paramArrayOfByte;
+    a.kug.y(localoi);
+  }
+  
+  private static void w(byte[] paramArrayOfByte)
+  {
+    oi localoi = new oi();
+    awy.ajS = 9;
+    awy.awA = paramArrayOfByte;
+    a.kug.y(localoi);
+  }
+  
+  private static void x(byte[] paramArrayOfByte)
+  {
+    oi localoi = new oi();
+    awy.ajS = 10;
+    awy.awA = paramArrayOfByte;
+    a.kug.y(localoi);
+  }
+  
+  private static void y(byte[] paramArrayOfByte)
+  {
+    gg localgg = new gg();
+    anj.ank = paramArrayOfByte;
+    a.kug.y(localgg);
+  }
+  
+  private static void z(byte[] paramArrayOfByte)
+  {
+    oi localoi = new oi();
+    awy.ajS = 6;
+    awy.awA = paramArrayOfByte;
+    a.kug.y(localoi);
   }
   
   public IBinder onBind(Intent paramIntent)
@@ -568,8 +781,8 @@ public class NotifyReceiver$NotifyService
     }
     for (;;)
     {
-      long l = y.aUM().getLong("mm_stop_service_time", 86400000L);
-      new com.tencent.mm.sdk.platformtools.aa().postDelayed(new Runnable()
+      long l = aa.aZQ().getLong("mm_stop_service_time", 86400000L);
+      new ac().postDelayed(new Runnable()
       {
         public final void run()
         {
@@ -581,20 +794,20 @@ public class NotifyReceiver$NotifyService
       {
         startForeground(64324, new Notification());
         startService(new Intent(this, InnerService.class));
-        u.i("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "set service for mm.");
+        v.i("MicroMsg.NotifyReceiver", "set service for mm.");
       }
     }
   }
   
   public void onStart(Intent paramIntent, int paramInt)
   {
-    h(paramIntent);
+    i(paramIntent);
   }
   
   public int onStartCommand(Intent paramIntent, int paramInt1, int paramInt2)
   {
-    u.v("!24@/B4Tb64lLpKk4tudMInS/w==", "NotifyService onStartCommand flags :" + paramInt1 + "startId :" + paramInt2 + " intent " + paramIntent);
-    h(paramIntent);
+    v.i("MicroMsg.NotifyReceiver", "NotifyService onStartCommand flags :" + paramInt1 + "startId :" + paramInt2 + " intent " + paramIntent);
+    i(paramIntent);
     return 2;
   }
   
@@ -619,7 +832,7 @@ public class NotifyReceiver$NotifyService
       {
         for (;;)
         {
-          u.e("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "set service for mm exception:%s", new Object[] { localNullPointerException });
+          v.e("MicroMsg.NotifyReceiver", "set service for mm exception:%s", new Object[] { localNullPointerException });
         }
       }
     }

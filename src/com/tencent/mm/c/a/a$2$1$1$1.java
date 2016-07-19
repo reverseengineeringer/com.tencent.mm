@@ -2,27 +2,27 @@ package com.tencent.mm.c.a;
 
 import com.tencent.mm.compatible.b.d;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.f.a;
-import com.tencent.mm.sdk.platformtools.al.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ao.a;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.f.a;
 
 final class a$2$1$1$1
-  implements al.a
+  implements ao.a
 {
   a$2$1$1$1(a.2.1.1 param1) {}
   
-  public final void lG()
+  public final void jQ()
   {
-    if (!apv.apu.apt.apr.isPlaying())
+    if (!aaN.aaM.aaL.aaJ.isPlaying())
     {
-      ah.tF().b(apv.apu.apt.apr);
-      ah.tF().nM();
-      apv.apu.apt.apr.apo = false;
-      apv.apu.apt.apr.apl.oV();
-      ah.tF().setMode(0);
-      u.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "onCompletion() resetSpeaker");
+      ah.tG().b(aaN.aaM.aaL.aaJ);
+      ah.tG().mb();
+      aaN.aaM.aaL.aaJ.aaG = false;
+      ah.tG().setMode(0);
+      aaN.aaM.aaL.aaJ.aaD.nn();
+      v.i("MicroMsg.SceneVoicePlayer", "onCompletion() resetSpeaker");
     }
-    apv.apu.apt.apr.apq.lG();
+    aaN.aaM.aaL.aaJ.aaI.jQ();
   }
 }
 

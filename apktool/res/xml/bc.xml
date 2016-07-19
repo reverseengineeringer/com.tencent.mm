@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto"
+  xmlns:android1="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="@string/cfs" android:key="settings_new_msg_notification" />
+    <CheckBoxPreference android1:defaultValue="true" android:summary="@string/cd9" android:title="@string/cft" android:key="settings_show_detail" android:dependency="settings_new_msg_notification" />
+    <PreferenceSmallCategory />
+    <CheckBoxPreference android:title="@string/chz" android:key="settings_sound" android:dependency="settings_new_msg_notification" android:defaultValue="true" />
+    <Preference android:persistent="false" android:title="@string/cfx" android:key="settings_notification_ringtone" android:dependency="settings_sound" />
+    <CheckBoxPreference android:layout="@layout/a0i" android:title="@string/chg" android:key="settings_shake" android:dependency="settings_new_msg_notification" android:defaultValue="true" />
+    <PreferenceSmallCategory />
+    <CheckBoxPreference android:summary="@string/cht" android:title="@string/chs" android:key="settings_sns_notify" android:dependency="settings_new_sns_notify" android:defaultValue="true" />
+    <PreferenceCategory />
+</PreferenceScreen>

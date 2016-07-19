@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 public abstract interface h$a
 {
-  public abstract void g(Bundle paramBundle);
+  public abstract void i(Bundle paramBundle);
   
   public abstract void onError(int paramInt, String paramString);
 }

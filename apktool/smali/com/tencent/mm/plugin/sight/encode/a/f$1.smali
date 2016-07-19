@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/plugin/sight/encode/a/f$1;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.super Lcom/tencent/mm/sdk/platformtools/ac;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic gAQ:Lcom/tencent/mm/plugin/sight/encode/a/f;
+.field final synthetic gHs:Lcom/tencent/mm/plugin/sight/encode/a/f;
 
 
 # direct methods
@@ -24,9 +24,9 @@
 
     .prologue
     .line 27
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/f$1;->gAQ:Lcom/tencent/mm/plugin/sight/encode/a/f;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/f$1;->gHs:Lcom/tencent/mm/plugin/sight/encode/a/f;
 
-    invoke-direct {p0, p2}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {p0, p2}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
     return-void
 .end method
@@ -55,9 +55,9 @@
     move v2, v1
 
     :goto_0
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/f$1;->gAQ:Lcom/tencent/mm/plugin/sight/encode/a/f;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/f$1;->gHs:Lcom/tencent/mm/plugin/sight/encode/a/f;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/a/f;->gAO:Landroid/util/SparseArray;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/a/f;->gHq:Landroid/util/SparseArray;
 
     invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
 
@@ -66,9 +66,9 @@
     if-ge v2, v1, :cond_2
 
     .line 35
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/f$1;->gAQ:Lcom/tencent/mm/plugin/sight/encode/a/f;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/f$1;->gHs:Lcom/tencent/mm/plugin/sight/encode/a/f;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/a/f;->gAO:Landroid/util/SparseArray;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/a/f;->gHq:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
@@ -86,7 +86,7 @@
     if-eqz v1, :cond_0
 
     .line 37
-    sget-object v3, Lcom/tencent/mm/plugin/sight/encode/a/f$2;->gAR:[I
+    sget-object v3, Lcom/tencent/mm/plugin/sight/encode/a/f$2;->gHt:[I
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->ordinal()I
 
@@ -119,7 +119,7 @@
 
     .line 47
     :pswitch_2
-    invoke-interface {v1}, Lcom/tencent/mm/plugin/sight/encode/a/b$a;->awu()V
+    invoke-interface {v1}, Lcom/tencent/mm/plugin/sight/encode/a/b$a;->ayT()V
 
     goto :goto_1
 
@@ -152,9 +152,9 @@
 
     .line 61
     :cond_3
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/f$1;->gAQ:Lcom/tencent/mm/plugin/sight/encode/a/f;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/f$1;->gHs:Lcom/tencent/mm/plugin/sight/encode/a/f;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/a/f;->gAO:Landroid/util/SparseArray;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/a/f;->gHq:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -185,9 +185,9 @@
     if-eqz v0, :cond_2
 
     .line 68
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/f$1;->gAQ:Lcom/tencent/mm/plugin/sight/encode/a/f;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/f$1;->gHs:Lcom/tencent/mm/plugin/sight/encode/a/f;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/a/f;->gAO:Landroid/util/SparseArray;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/a/f;->gHq:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 

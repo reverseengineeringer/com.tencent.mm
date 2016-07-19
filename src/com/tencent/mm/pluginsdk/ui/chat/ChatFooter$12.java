@@ -1,22 +1,22 @@
 package com.tencent.mm.pluginsdk.ui.chat;
 
-import com.tencent.mm.pluginsdk.g.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.pluginsdk.h.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class ChatFooter$12
   implements AppPanel.b
 {
   ChatFooter$12(ChatFooter paramChatFooter) {}
   
-  public final void aRD()
+  public final void aWq()
   {
-    boolean bool = a.a(ChatFooter.b(iLO), "android.permission.RECORD_AUDIO", 1280, "", "");
-    u.d("!32@/B4Tb64lLpJ/7uFBkt7iPG30XecwVaGJ", "summerper checkPermission checkmicrophone[%b], stack[%s], activity[%s]", new Object[] { Boolean.valueOf(bool), ay.aVJ(), ChatFooter.b(iLO) });
+    boolean bool = a.a(ChatFooter.b(jiL), "android.permission.RECORD_AUDIO", 1280, "", "");
+    v.d("MicroMsg.ChatFooter", "summerper checkPermission checkmicrophone[%b], stack[%s], activity[%s]", new Object[] { Boolean.valueOf(bool), be.baX(), ChatFooter.b(jiL) });
     if (!bool) {
       return;
     }
-    ChatFooter.B(iLO);
+    ChatFooter.C(jiL);
   }
 }
 

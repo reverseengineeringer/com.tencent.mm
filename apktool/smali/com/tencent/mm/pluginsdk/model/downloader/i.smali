@@ -24,9 +24,9 @@
     const-wide/16 v0, -0x1
 
     .line 19
-    iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCq:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iZe:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -38,7 +38,7 @@
 
     .line 22
     :cond_0
-    iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCq:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iZe:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -58,7 +58,7 @@
 
     .line 26
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -76,7 +76,7 @@
     move-exception v2
 
     .line 28
-    const-string/jumbo v3, "!56@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXMR0rg2iWmbvGurx8Zm7eZ3Q=="
+    const-string/jumbo v3, "MicroMsg.FileDownloaderImplNormal"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -96,12 +96,12 @@
 
     move-result-object v2
 
-    invoke-static {v3, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public final cG(J)I
+.method public final cV(J)I
     .locals 1
 
     .prologue
@@ -111,8 +111,8 @@
     return v0
 .end method
 
-.method public final cH(J)Lcom/tencent/mm/pluginsdk/model/downloader/e;
-    .locals 2
+.method public final cW(J)Lcom/tencent/mm/pluginsdk/model/downloader/e;
+    .locals 3
 
     .prologue
     .line 41
@@ -132,7 +132,7 @@
     return-object v0
 .end method
 
-.method public final cI(J)Z
+.method public final cX(J)Z
     .locals 1
 
     .prologue
@@ -142,7 +142,7 @@
     return v0
 .end method
 
-.method public final cJ(J)Z
+.method public final cY(J)Z
     .locals 1
 
     .prologue

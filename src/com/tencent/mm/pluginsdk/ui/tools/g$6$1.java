@@ -10,7 +10,7 @@ final class g$6$1
   
   public final void run()
   {
-    g.d.b(iSr, eDz);
+    g.d.b(jpA, euw);
   }
 }
 

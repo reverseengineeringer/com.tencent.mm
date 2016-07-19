@@ -1,16 +1,16 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.h.d;
-import com.tencent.mm.protocal.m.a;
-import com.tencent.mm.protocal.m.b;
-import com.tencent.mm.r.h;
+import com.tencent.mm.protocal.k.c;
+import com.tencent.mm.protocal.k.d;
+import com.tencent.mm.protocal.p.a;
+import com.tencent.mm.protocal.p.b;
+import com.tencent.mm.t.h;
 
 public final class w$a
   extends h
 {
-  private m.a bMO = new m.a();
-  private m.b bMP = new m.b();
+  private p.a bGi = new p.a();
+  private p.b bGj = new p.b();
   
   public final int getType()
   {
@@ -22,17 +22,17 @@ public final class w$a
     return "/cgi-bin/micromsg-bin/emailreg";
   }
   
-  protected final h.c tW()
+  protected final k.c tX()
   {
-    return bMO;
+    return bGi;
   }
   
-  public final h.d tX()
+  public final k.d tY()
   {
-    return bMP;
+    return bGj;
   }
   
-  public final int vx()
+  public final int vz()
   {
     return 1;
   }

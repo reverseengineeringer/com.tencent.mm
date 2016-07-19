@@ -3,7 +3,7 @@ package com.tencent.mm.ui.tools;
 import java.util.Comparator;
 
 final class CountryCodeUI$1
-  implements Comparator
+  implements Comparator<d>
 {
   CountryCodeUI$1(CountryCodeUI paramCountryCodeUI) {}
 }

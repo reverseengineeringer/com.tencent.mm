@@ -3,14 +3,13 @@ package com.tencent.mm.plugin.sight.encode.a;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import com.tencent.mm.a.e;
-import com.tencent.mm.an.j;
-import com.tencent.mm.an.n;
-import com.tencent.mm.an.o;
-import com.tencent.mm.loader.stub.b;
+import com.tencent.mm.aq.n;
+import com.tencent.mm.aq.r;
+import com.tencent.mm.aq.s;
 import com.tencent.mm.plugin.sight.base.c;
-import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.ad;
 import com.tencent.mm.sdk.platformtools.d;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class g$3
   implements Runnable
@@ -19,35 +18,35 @@ final class g$3
   
   public final void run()
   {
-    u.i("!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw=", "do prepare sight message for %s", new Object[] { amO });
-    Object localObject1 = n.bn(amO);
-    if (-1L == o.e((String)localObject1, 1, amO))
+    v.i("MicroMsg.SightRecorderHelper", "do prepare sight message for %s", new Object[] { ZD });
+    Object localObject1 = r.ko(ZD);
+    if (-1L == s.c((String)localObject1, 1, ZD))
     {
-      u.e("!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw=", "prepare sight error, filename %s", new Object[] { localObject1 });
-      g.a(gAS, -1);
+      v.e("MicroMsg.SightRecorderHelper", "prepare sight error, filename %s", new Object[] { localObject1 });
+      g.a(gHu, -1);
       return;
     }
-    String str = c.tS(fRR);
+    String str = c.uY(gaU);
     Object localObject2;
-    if (!e.ax(str))
+    if (!e.aB(str))
     {
-      u.w("!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw=", "thumb data not found, try to create thumb");
-      localObject2 = c.tV(fRR);
+      v.w("MicroMsg.SightRecorderHelper", "thumb data not found, try to create thumb");
+      localObject2 = c.vb(gaU);
     }
     try
     {
       d.a((Bitmap)localObject2, 60, Bitmap.CompressFormat.JPEG, str, true);
-      j.Ea();
-      e.o(str, n.jM((String)localObject1));
-      j.Ea();
-      localObject2 = n.jL((String)localObject1);
-      long l = e.o(fRR, (String)localObject2);
-      u.i("!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw=", "prepare to send sight to %s, sightFileSize %d bytes", new Object[] { amO, Long.valueOf(l) });
+      n.Es();
+      e.n(str, r.kq((String)localObject1));
+      n.Es();
+      localObject2 = r.kp((String)localObject1);
+      long l = e.n(gaU, (String)localObject2);
+      v.i("MicroMsg.SightRecorderHelper", "prepare to send sight to %s, sightFileSize %d bytes", new Object[] { ZD, Long.valueOf(l) });
       if (l <= 0L)
       {
-        u.e("!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw=", "copy remux video path from %s to %s error", new Object[] { fRR, localObject2 });
-        g.a(gAS, -1);
-        o.bj((String)localObject1);
+        v.e("MicroMsg.SightRecorderHelper", "copy remux video path from %s to %s error", new Object[] { gaU, localObject2 });
+        g.a(gHu, -1);
+        s.ku((String)localObject1);
         return;
       }
     }
@@ -55,16 +54,16 @@ final class g$3
     {
       for (;;)
       {
-        u.e("!44@/B4Tb64lLpJzNfF2AY/6mpJl+hW1leUADAQiohIPwjw=", "save bitmap to image error");
+        v.e("MicroMsg.SightRecorderHelper", "save bitmap to image error");
       }
-      o.h((String)localObject1, gAT, 62);
-      o.jR((String)localObject1);
-      localObject1 = gAS;
+      s.h((String)localObject1, gHv, 62);
+      s.kx((String)localObject1);
+      localObject1 = gHu;
       if (localObject1 != null) {
-        ab.j(new g.2((g.a)localObject1, -1));
+        ad.k(new g.2((g.a)localObject1, -1));
       }
-      b.deleteFile(fRR);
-      b.deleteFile(str);
+      e.deleteFile(gaU);
+      e.deleteFile(str);
     }
   }
 }

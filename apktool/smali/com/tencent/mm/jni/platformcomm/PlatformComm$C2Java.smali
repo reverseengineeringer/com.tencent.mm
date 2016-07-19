@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 85
+    .line 81
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,20 +29,20 @@
     .locals 2
 
     .prologue
-    .line 88
+    .line 84
     new-instance v0, Ljava/io/StringWriter;
 
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
-    .line 89
+    .line 85
     new-instance v1, Ljava/io/PrintWriter;
 
     invoke-direct {v1, v0}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
 
-    .line 90
+    .line 86
     invoke-virtual {p0, v1}, Ljava/lang/Exception;->printStackTrace(Ljava/io/PrintWriter;)V
 
-    .line 91
+    .line 87
     invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -54,7 +54,7 @@
     .locals 4
 
     .prologue
-    .line 336
+    .line 332
     :try_start_0
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
@@ -69,34 +69,34 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 337
+    .line 333
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v1
 
-    .line 338
+    .line 334
     new-instance v0, Lcom/tencent/mm/jni/platformcomm/PlatformComm$APNInfo;
 
     invoke-direct {v0}, Lcom/tencent/mm/jni/platformcomm/PlatformComm$APNInfo;-><init>()V
 
-    .line 339
+    .line 335
     if-eqz v1, :cond_2
 
-    .line 340
+    .line 336
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->getType()I
 
     move-result v2
 
     iput v2, v0, Lcom/tencent/mm/jni/platformcomm/PlatformComm$APNInfo;->netType:I
 
-    .line 341
+    .line 337
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->getSubtype()I
 
     move-result v2
 
     iput v2, v0, Lcom/tencent/mm/jni/platformcomm/PlatformComm$APNInfo;->subNetType:I
 
-    .line 342
+    .line 338
     const/4 v2, 0x1
 
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->getType()I
@@ -105,7 +105,7 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 343
+    .line 339
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->getExtraInfo()Ljava/lang/String;
 
     move-result-object v2
@@ -117,11 +117,11 @@
     :goto_0
     iput-object v1, v0, Lcom/tencent/mm/jni/platformcomm/PlatformComm$APNInfo;->extraInfo:Ljava/lang/String;
 
-    .line 352
+    .line 348
     :goto_1
     return-object v0
 
-    .line 343
+    .line 339
     :cond_0
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->getExtraInfo()Ljava/lang/String;
 
@@ -129,13 +129,13 @@
 
     goto :goto_0
 
-    .line 346
+    .line 342
     :cond_1
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm$C2Java;->getCurWifiInfo()Lcom/tencent/mm/jni/platformcomm/PlatformComm$WifiInfo;
 
     move-result-object v1
 
-    .line 347
+    .line 343
     iget-object v1, v1, Lcom/tencent/mm/jni/platformcomm/PlatformComm$WifiInfo;->ssid:Ljava/lang/String;
 
     iput-object v1, v0, Lcom/tencent/mm/jni/platformcomm/PlatformComm$APNInfo;->extraInfo:Ljava/lang/String;
@@ -147,7 +147,7 @@
     :catch_0
     move-exception v0
 
-    .line 352
+    .line 348
     :cond_2
     const/4 v0, 0x0
 
@@ -160,7 +160,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 204
+    .line 200
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
 
@@ -168,11 +168,11 @@
 
     if-nez v1, :cond_0
 
-    .line 222
+    .line 218
     :goto_0
     return-object v0
 
-    .line 210
+    .line 206
     :cond_0
     :try_start_0
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
@@ -184,17 +184,17 @@
 
     move-result-object v1
 
-    .line 211
+    .line 207
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 212
+    .line 208
     invoke-virtual {v1}, Ljava/io/File;->createNewFile()Z
 
-    .line 214
+    .line 210
     :cond_1
     invoke-virtual {v1}, Ljava/io/File;->toString()Ljava/lang/String;
     :try_end_0
@@ -204,20 +204,20 @@
 
     goto :goto_0
 
-    .line 216
+    .line 212
     :catch_0
     move-exception v1
 
-    .line 217
-    const-string/jumbo v2, "!24@zf96t1YgIScRsX2UOICiFQ=="
+    .line 213
+    const-string/jumbo v2, "PlatformComm"
 
     invoke-static {v1}, Lcom/tencent/mm/jni/platformcomm/PlatformComm$C2Java;->exception2String(Ljava/lang/Exception;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 218
+    .line 214
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -277,7 +277,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 395
+    .line 391
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
 
@@ -287,11 +287,11 @@
 
     move v0, v1
 
-    .line 411
+    .line 407
     :goto_0
     return v0
 
-    .line 402
+    .line 398
     :cond_0
     :try_start_0
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
@@ -307,7 +307,7 @@
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    .line 403
+    .line 399
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getNetworkType()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -316,20 +316,20 @@
 
     goto :goto_0
 
-    .line 405
+    .line 401
     :catch_0
     move-exception v0
 
-    .line 406
-    const-string/jumbo v2, "!24@zf96t1YgIScRsX2UOICiFQ=="
+    .line 402
+    const-string/jumbo v2, "PlatformComm"
 
     invoke-static {v0}, Lcom/tencent/mm/jni/platformcomm/PlatformComm$C2Java;->exception2String(Ljava/lang/Exception;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 407
+    .line 403
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -380,7 +380,7 @@
 
     move v0, v1
 
-    .line 411
+    .line 407
     goto :goto_0
 .end method
 
@@ -390,7 +390,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 314
+    .line 310
     :try_start_0
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
@@ -399,39 +399,39 @@
 
     if-nez v1, :cond_1
 
-    .line 328
+    .line 324
     :cond_0
     :goto_0
     return-object v0
 
-    .line 316
+    .line 312
     :cond_1
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ah;->du(Landroid/content/Context;)I
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ak;->dv(Landroid/content/Context;)I
 
     move-result v2
 
-    .line 317
+    .line 313
     if-eqz v2, :cond_0
 
-    .line 321
+    .line 317
     new-instance v1, Lcom/tencent/mm/jni/platformcomm/PlatformComm$SIMInfo;
 
     invoke-direct {v1}, Lcom/tencent/mm/jni/platformcomm/PlatformComm$SIMInfo;-><init>()V
 
-    .line 322
+    .line 318
     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, v1, Lcom/tencent/mm/jni/platformcomm/PlatformComm$SIMInfo;->ispCode:Ljava/lang/String;
 
-    .line 323
-    const-string/jumbo v2, "!24@zf96t1YgIScRsX2UOICiFQ=="
+    .line 319
+    const-string/jumbo v2, "PlatformComm"
 
     const-string/jumbo v3, "getISPCode MCC_MNC=%s"
 
@@ -445,15 +445,15 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 325
+    .line 321
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ah;->dv(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ak;->dw(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -463,10 +463,10 @@
 
     move-object v0, v1
 
-    .line 326
+    .line 322
     goto :goto_0
 
-    .line 328
+    .line 324
     :catch_0
     move-exception v1
 
@@ -479,7 +479,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 280
+    .line 276
     :try_start_0
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
@@ -490,11 +490,11 @@
 
     move-object v0, v1
 
-    .line 307
+    .line 303
     :goto_0
     return-object v0
 
-    .line 282
+    .line 278
     :cond_0
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
@@ -511,14 +511,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 284
+    .line 280
     if-nez v0, :cond_1
 
     move-object v0, v1
 
     goto :goto_0
 
-    .line 288
+    .line 284
     :cond_1
     :try_start_1
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
@@ -527,7 +527,7 @@
 
     move-result-object v0
 
-    .line 292
+    .line 288
     :goto_1
     if-eqz v0, :cond_2
 
@@ -543,24 +543,24 @@
     :cond_2
     move-object v0, v1
 
-    .line 293
+    .line 289
     goto :goto_0
 
-    .line 290
+    .line 286
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!24@zf96t1YgIScRsX2UOICiFQ=="
+    const-string/jumbo v0, "PlatformComm"
 
     const-string/jumbo v2, "getActiveNetworkInfo failed."
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
     goto :goto_1
 
-    .line 296
+    .line 292
     :cond_3
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
@@ -575,40 +575,40 @@
 
     check-cast v0, Landroid/net/wifi/WifiManager;
 
-    .line 297
+    .line 293
     if-nez v0, :cond_4
 
     move-object v0, v1
 
     goto :goto_0
 
-    .line 299
+    .line 295
     :cond_4
     invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
     move-result-object v2
 
-    .line 300
+    .line 296
     if-nez v2, :cond_5
 
     move-object v0, v1
 
     goto :goto_0
 
-    .line 302
+    .line 298
     :cond_5
     new-instance v0, Lcom/tencent/mm/jni/platformcomm/PlatformComm$WifiInfo;
 
     invoke-direct {v0}, Lcom/tencent/mm/jni/platformcomm/PlatformComm$WifiInfo;-><init>()V
 
-    .line 303
+    .line 299
     invoke-virtual {v2}, Landroid/net/wifi/WifiInfo;->getSSID()Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, v0, Lcom/tencent/mm/jni/platformcomm/PlatformComm$WifiInfo;->ssid:Ljava/lang/String;
 
-    .line 304
+    .line 300
     invoke-virtual {v2}, Landroid/net/wifi/WifiInfo;->getBSSID()Ljava/lang/String;
 
     move-result-object v2
@@ -619,7 +619,7 @@
 
     goto :goto_0
 
-    .line 307
+    .line 303
     :catch_1
     move-exception v0
 
@@ -636,7 +636,7 @@
 
     const/4 v1, -0x1
 
-    .line 95
+    .line 91
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
 
@@ -650,20 +650,20 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 97
+    .line 93
     if-nez v0, :cond_0
 
     move v0, v1
 
-    .line 125
+    .line 121
     :goto_0
     return v0
 
-    .line 101
+    .line 97
     :cond_0
     const/4 v3, 0x0
 
-    .line 103
+    .line 99
     :try_start_0
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
     :try_end_0
@@ -671,13 +671,13 @@
 
     move-result-object v0
 
-    .line 107
+    .line 103
     :goto_1
     if-nez v0, :cond_1
 
     move v0, v1
 
-    .line 108
+    .line 104
     goto :goto_0
 
     :catch_0
@@ -687,7 +687,7 @@
 
     goto :goto_1
 
-    .line 112
+    .line 108
     :cond_1
     :try_start_1
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->getType()I
@@ -700,22 +700,22 @@
 
     move v0, v2
 
-    .line 122
+    .line 118
     goto :goto_0
 
-    .line 114
+    .line 110
     :pswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 120
+    .line 116
     :pswitch_1
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 125
+    .line 121
     :catch_1
     move-exception v0
 
@@ -723,7 +723,7 @@
 
     goto :goto_0
 
-    .line 112
+    .line 108
     nop
 
     :pswitch_data_0
@@ -741,7 +741,7 @@
     .locals 1
 
     .prologue
-    .line 133
+    .line 129
     const/4 v0, -0x1
 
     return v0
@@ -753,7 +753,7 @@
     .prologue
     const-wide/16 v0, 0x0
 
-    .line 361
+    .line 357
     :try_start_0
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
@@ -762,24 +762,24 @@
 
     if-nez v2, :cond_0
 
-    .line 371
+    .line 367
     :goto_0
     return-wide v0
 
-    .line 366
+    .line 362
     :cond_0
     if-eqz p0, :cond_1
 
-    .line 367
-    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/a;->qR()J
+    .line 363
+    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/a;->pG()J
 
     move-result-wide v0
 
     goto :goto_0
 
-    .line 369
+    .line 365
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/a;->qQ()J
+    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/a;->pF()J
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -787,7 +787,7 @@
 
     goto :goto_0
 
-    .line 371
+    .line 367
     :catch_0
     move-exception v2
 
@@ -804,7 +804,7 @@
 
     const/4 v1, -0x1
 
-    .line 170
+    .line 166
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
 
@@ -812,11 +812,11 @@
 
     if-nez v3, :cond_0
 
-    .line 200
+    .line 196
     :goto_0
     return v0
 
-    .line 176
+    .line 172
     :cond_0
     :try_start_0
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
@@ -824,75 +824,75 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ah;->cn(Landroid/content/Context;)I
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ak;->ci(Landroid/content/Context;)I
 
     move-result v3
 
-    .line 177
+    .line 173
     if-ne v3, v1, :cond_1
 
     move v0, v1
 
-    .line 178
+    .line 174
     goto :goto_0
 
-    .line 180
+    .line 176
     :cond_1
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ah;->dx(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ak;->dy(Landroid/content/Context;)Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
-    .line 181
+    .line 177
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 182
+    .line 178
     :cond_2
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ah;->dA(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ak;->dB(Landroid/content/Context;)Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    .line 183
+    .line 179
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 184
+    .line 180
     :cond_3
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ah;->dy(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ak;->dz(Landroid/content/Context;)Z
 
     move-result v4
 
     if-eqz v4, :cond_4
 
-    .line 185
+    .line 181
     const/4 v0, 0x5
 
     goto :goto_0
 
-    .line 186
+    .line 182
     :cond_4
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ah;->ps(I)Z
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ak;->rj(I)Z
 
     move-result v4
 
@@ -900,12 +900,12 @@
 
     move v0, v2
 
-    .line 187
+    .line 183
     goto :goto_0
 
-    .line 188
+    .line 184
     :cond_5
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ah;->pr(I)Z
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ak;->ri(I)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -913,31 +913,31 @@
 
     if-eqz v0, :cond_6
 
-    .line 189
+    .line 185
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 191
+    .line 187
     :cond_6
     const/4 v0, 0x6
 
     goto :goto_0
 
-    .line 194
+    .line 190
     :catch_0
     move-exception v3
 
-    .line 195
-    const-string/jumbo v4, "!24@zf96t1YgIScRsX2UOICiFQ=="
+    .line 191
+    const-string/jumbo v4, "PlatformComm"
 
     invoke-static {v3}, Lcom/tencent/mm/jni/platformcomm/PlatformComm$C2Java;->exception2String(Ljava/lang/Exception;)Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 196
+    .line 192
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -986,7 +986,7 @@
 
     move v0, v1
 
-    .line 200
+    .line 196
     goto/16 :goto_0
 .end method
 
@@ -996,7 +996,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 377
+    .line 373
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
 
@@ -1004,11 +1004,11 @@
 
     if-nez v1, :cond_0
 
-    .line 391
+    .line 387
     :goto_0
     return v0
 
-    .line 383
+    .line 379
     :cond_0
     :try_start_0
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
@@ -1016,7 +1016,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ah;->dD(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ak;->dE(Landroid/content/Context;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1024,20 +1024,20 @@
 
     goto :goto_0
 
-    .line 385
+    .line 381
     :catch_0
     move-exception v1
 
-    .line 386
-    const-string/jumbo v2, "!24@zf96t1YgIScRsX2UOICiFQ=="
+    .line 382
+    const-string/jumbo v2, "PlatformComm"
 
     invoke-static {v1}, Lcom/tencent/mm/jni/platformcomm/PlatformComm$C2Java;->exception2String(Ljava/lang/Exception;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 387
+    .line 383
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1093,19 +1093,19 @@
     .locals 2
 
     .prologue
-    .line 261
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->bwq:Lcom/tencent/mm/jni/platformcomm/PlatformComm$a;
+    .line 257
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->blD:Lcom/tencent/mm/jni/platformcomm/PlatformComm$a;
 
     if-nez v0, :cond_0
 
-    .line 275
+    .line 271
     :goto_0
     return-void
 
-    .line 266
+    .line 262
     :cond_0
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->qS()Lcom/tencent/mm/sdk/platformtools/aa;
+    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->pH()Lcom/tencent/mm/sdk/platformtools/ac;
 
     move-result-object v0
 
@@ -1113,13 +1113,13 @@
 
     invoke-direct {v1}, Lcom/tencent/mm/jni/platformcomm/PlatformComm$C2Java$1;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 274
+    .line 270
     :catch_0
     move-exception v0
 
@@ -1132,7 +1132,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 226
+    .line 222
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
 
@@ -1140,21 +1140,21 @@
 
     if-nez v1, :cond_0
 
-    .line 239
+    .line 235
     :goto_0
     return v0
 
-    .line 232
+    .line 228
     :cond_0
-    int-to-long v1, p0
+    int-to-long v2, p0
 
     :try_start_0
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-static {v1, v2, p1, v3}, Lcom/tencent/mm/jni/platformcomm/Alarm;->a(JILandroid/content/Context;)Z
+    invoke-static {v2, v3, p1, v1}, Lcom/tencent/mm/jni/platformcomm/Alarm;->a(JILandroid/content/Context;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1162,20 +1162,20 @@
 
     goto :goto_0
 
-    .line 234
+    .line 230
     :catch_0
     move-exception v1
 
-    .line 235
-    const-string/jumbo v2, "!24@zf96t1YgIScRsX2UOICiFQ=="
+    .line 231
+    const-string/jumbo v2, "PlatformComm"
 
     invoke-static {v1}, Lcom/tencent/mm/jni/platformcomm/PlatformComm$C2Java;->exception2String(Ljava/lang/Exception;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 236
+    .line 232
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1233,7 +1233,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 244
+    .line 240
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
 
@@ -1241,21 +1241,21 @@
 
     if-nez v1, :cond_0
 
-    .line 257
+    .line 253
     :goto_0
     return v0
 
-    .line 250
+    .line 246
     :cond_0
-    int-to-long v1, p0
+    int-to-long v2, p0
 
     :try_start_0
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/jni/platformcomm/Alarm;->a(JLandroid/content/Context;)Z
+    invoke-static {v2, v3, v1}, Lcom/tencent/mm/jni/platformcomm/Alarm;->a(JLandroid/content/Context;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1263,20 +1263,20 @@
 
     goto :goto_0
 
-    .line 252
+    .line 248
     :catch_0
     move-exception v1
 
-    .line 253
-    const-string/jumbo v2, "!24@zf96t1YgIScRsX2UOICiFQ=="
+    .line 249
+    const-string/jumbo v2, "PlatformComm"
 
     invoke-static {v1}, Lcom/tencent/mm/jni/platformcomm/PlatformComm$C2Java;->exception2String(Ljava/lang/Exception;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 254
+    .line 250
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1334,7 +1334,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 416
+    .line 412
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->access$000()Landroid/content/Context;
 
@@ -1342,11 +1342,11 @@
 
     if-nez v1, :cond_0
 
-    .line 429
+    .line 425
     :goto_0
     return-object v0
 
-    .line 422
+    .line 418
     :cond_0
     :try_start_0
     new-instance v1, Lcom/tencent/mm/jni/platformcomm/WakerLock;
@@ -1364,20 +1364,20 @@
 
     goto :goto_0
 
-    .line 424
+    .line 420
     :catch_0
     move-exception v1
 
-    .line 425
-    const-string/jumbo v2, "!24@zf96t1YgIScRsX2UOICiFQ=="
+    .line 421
+    const-string/jumbo v2, "PlatformComm"
 
     invoke-static {v1}, Lcom/tencent/mm/jni/platformcomm/PlatformComm$C2Java;->exception2String(Ljava/lang/Exception;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 426
+    .line 422
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V

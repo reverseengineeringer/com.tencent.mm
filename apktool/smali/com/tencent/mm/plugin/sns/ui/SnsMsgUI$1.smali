@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+.field final synthetic huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 104
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$1;->hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+    .line 106
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$1;->huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,19 +40,19 @@
     .locals 3
 
     .prologue
-    .line 108
+    .line 110
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/tencent/mm/plugin/sns/ui/ag;
+    instance-of v0, v0, Lcom/tencent/mm/plugin/sns/ui/ak;
 
     if-eqz v0, :cond_0
 
-    .line 109
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$1;->hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+    .line 111
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$1;->huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;)Lcom/tencent/mm/plugin/sns/ui/af;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;)Lcom/tencent/mm/plugin/sns/ui/aj;
 
     move-result-object v0
 
@@ -60,38 +60,38 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, p1, v1, v2}, Lcom/tencent/mm/plugin/sns/ui/af;->a(Landroid/view/View;ILcom/tencent/mm/plugin/sns/d/aq;)V
+    invoke-virtual {v0, p1, v1, v2}, Lcom/tencent/mm/plugin/sns/ui/aj;->a(Landroid/view/View;ILcom/tencent/mm/plugin/sns/e/ap;)V
 
-    .line 115
+    .line 117
     :goto_0
     return-void
 
-    .line 110
+    .line 112
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/tencent/mm/plugin/sns/h/g;
+    instance-of v0, v0, Lcom/tencent/mm/plugin/sns/i/g;
 
     if-eqz v0, :cond_1
 
-    .line 111
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$1;->hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+    .line 113
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$1;->huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/plugin/sns/h/g;
+    check-cast v0, Lcom/tencent/mm/plugin/sns/i/g;
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;Lcom/tencent/mm/plugin/sns/h/g;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;Lcom/tencent/mm/plugin/sns/i/g;)V
 
     goto :goto_0
 
-    .line 113
+    .line 115
     :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp"
+    const-string/jumbo v0, "MicroMsg.SnsMsgUI"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -111,7 +111,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

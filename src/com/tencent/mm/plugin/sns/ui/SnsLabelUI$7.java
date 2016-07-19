@@ -9,8 +9,8 @@ final class SnsLabelUI$7
   
   public final void run()
   {
-    SnsLabelUI.a(hfA).notifyDataSetChanged();
-    SnsLabelUI.g(hfA).expandGroup(ahfA).hfF);
+    SnsLabelUI.a(hur).notifyDataSetChanged();
+    SnsLabelUI.g(hur).expandGroup(ahur).huw);
   }
 }
 

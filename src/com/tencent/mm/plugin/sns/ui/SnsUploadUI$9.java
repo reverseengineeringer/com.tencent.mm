@@ -3,8 +3,8 @@ package com.tencent.mm.plugin.sns.ui;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.h.p;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.i.p;
 
 final class SnsUploadUI$9
   implements Runnable
@@ -14,9 +14,9 @@ final class SnsUploadUI$9
   public final void run()
   {
     DisplayMetrics localDisplayMetrics = new DisplayMetrics();
-    hlY.getWindowManager().getDefaultDisplay().getMetrics(localDisplayMetrics);
-    ad.ayY();
-    p.bh(widthPixels, heightPixels);
+    hCb.getWindowManager().getDefaultDisplay().getMetrics(localDisplayMetrics);
+    ad.aBz();
+    p.bm(widthPixels, heightPixels);
   }
 }
 

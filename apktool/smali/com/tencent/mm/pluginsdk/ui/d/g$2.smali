@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic iPL:Landroid/content/DialogInterface$OnDismissListener;
+.field final synthetic jmS:Landroid/content/DialogInterface$OnDismissListener;
 
-.field final synthetic iPM:Ljava/lang/String;
+.field final synthetic jmT:Ljava/lang/String;
 
 .field final synthetic val$context:Landroid/content/Context;
 
@@ -31,9 +31,9 @@
 
     .prologue
     .line 91
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$2;->iPL:Landroid/content/DialogInterface$OnDismissListener;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$2;->jmS:Landroid/content/DialogInterface$OnDismissListener;
 
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$2;->iPM:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$2;->jmT:Ljava/lang/String;
 
     iput-object p3, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$2;->val$context:Landroid/content/Context;
 
@@ -44,17 +44,17 @@
 
 
 # virtual methods
-.method public final eu(I)V
+.method public final fg(I)V
     .locals 3
 
     .prologue
     .line 94
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$2;->iPL:Landroid/content/DialogInterface$OnDismissListener;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$2;->jmS:Landroid/content/DialogInterface$OnDismissListener;
 
     if-eqz v0, :cond_0
 
     .line 95
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$2;->iPL:Landroid/content/DialogInterface$OnDismissListener;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$2;->jmS:Landroid/content/DialogInterface$OnDismissListener;
 
     const/4 v1, 0x0
 
@@ -62,7 +62,7 @@
 
     .line 98
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$2;->iPM:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$2;->jmT:Ljava/lang/String;
 
     const-string/jumbo v1, " "
 
@@ -91,7 +91,7 @@
     :pswitch_0
     iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$2;->val$context:Landroid/content/Context;
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/pluginsdk/ui/d/g;->aQ(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/pluginsdk/ui/d/g;->aO(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 

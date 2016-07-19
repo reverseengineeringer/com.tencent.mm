@@ -1,44 +1,26 @@
 package com.tencent.mm.ui;
 
-import android.graphics.Rect;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.a;
+import android.os.SystemClock;
 import android.view.View;
-import android.view.View.OnApplyWindowInsetsListener;
-import android.view.ViewGroup;
-import android.view.WindowInsets;
-import com.tencent.mm.compatible.util.c;
-import com.tencent.mm.sdk.platformtools.u;
+import android.view.View.OnClickListener;
+import java.util.Iterator;
+import java.util.LinkedList;
 
 final class LauncherUI$22
-  implements Runnable
+  implements View.OnClickListener
 {
-  LauncherUI$22(LauncherUI paramLauncherUI, int[] paramArrayOfInt, LauncherUI.FitSystemWindowLayoutView paramFitSystemWindowLayoutView, ViewGroup paramViewGroup) {}
+  LauncherUI$22(LauncherUI paramLauncherUI) {}
   
-  public final void run()
+  public final void onClick(View paramView)
   {
-    knl.iF.aP().getCustomView().getLocationInWindow(knr);
-    int i = knr[1];
-    if (i > 0) {
-      LauncherUI.a(knl, kns, i, new Rect(0, i, 0, 0), knt);
-    }
-    while (!c.bU(20)) {
-      return;
-    }
-    kns.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener()
+    if (SystemClock.elapsedRealtime() - LauncherUI.D(kMs) < 300L)
     {
-      public final WindowInsets onApplyWindowInsets(View paramAnonymousView, WindowInsets paramAnonymousWindowInsets)
-      {
-        if (paramAnonymousWindowInsets == null) {
-          return paramAnonymousWindowInsets;
-        }
-        u.i("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "OnApplyWindowInsetsListener %s", new Object[] { paramAnonymousWindowInsets });
-        paramAnonymousWindowInsets.consumeSystemWindowInsets();
-        LauncherUI.a(knl, kns, paramAnonymousWindowInsets.getSystemWindowInsetTop(), new Rect(paramAnonymousWindowInsets.getSystemWindowInsetLeft(), paramAnonymousWindowInsets.getSystemWindowInsetTop(), paramAnonymousWindowInsets.getSystemWindowInsetRight(), paramAnonymousWindowInsets.getSystemWindowInsetBottom()), knt);
-        return paramAnonymousWindowInsets;
+      paramView = LauncherUI.E(kMs).iterator();
+      while (paramView.hasNext()) {
+        ((Runnable)paramView.next()).run();
       }
-    });
+    }
+    LauncherUI.a(kMs, SystemClock.elapsedRealtime());
   }
 }
 

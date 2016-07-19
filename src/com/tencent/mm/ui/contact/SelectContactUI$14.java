@@ -10,7 +10,7 @@ final class SelectContactUI$14
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    SelectContactUI.b(lmm, false);
+    SelectContactUI.b(lMB, false);
   }
 }
 

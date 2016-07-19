@@ -2,8 +2,8 @@ package com.tencent.mm.pluginsdk.ui;
 
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
-import com.tencent.mm.q.d.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.s.d.a;
+import com.tencent.mm.sdk.platformtools.v;
 import junit.framework.Assert;
 
 public final class a
@@ -12,17 +12,17 @@ public final class a
 {
   private a(String paramString)
   {
-    super(b.fzj, paramString);
+    super(b.fIn, paramString);
   }
   
   private a(String paramString, byte paramByte)
   {
-    super(b.fzj, paramString, false);
+    super(b.fIn, paramString, false);
   }
   
-  public final void fZ(String paramString)
+  public final void gm(String paramString)
   {
-    super.fZ(paramString);
+    super.gm(paramString);
   }
   
   public static abstract interface a
@@ -36,7 +36,25 @@ public final class a
   
   public static final class b
   {
-    public static h.a fzj;
+    public static h.a fIn;
+    
+    public static void a(ImageView paramImageView, String paramString)
+    {
+      if (paramImageView == null)
+      {
+        v.e("MicroMsg.AvatarDrawable", "imageView is null");
+        return;
+      }
+      Object localObject = paramImageView.getDrawable();
+      if ((localObject != null) && ((localObject instanceof a))) {}
+      for (localObject = (a)localObject;; localObject = new a(paramString, '\000'))
+      {
+        ((a)localObject).Cz(paramString);
+        paramImageView.setImageDrawable((Drawable)localObject);
+        paramImageView.invalidate();
+        return;
+      }
+    }
     
     public static void a(ImageView paramImageView, String paramString, float paramFloat, boolean paramBoolean)
     {
@@ -46,12 +64,12 @@ public final class a
       }
       for (;;)
       {
-        ((b)localObject).Ay(paramString);
+        ((b)localObject).Cz(paramString);
         paramImageView.setImageDrawable((Drawable)localObject);
         paramImageView.invalidate();
         return;
         localObject = new b(paramString, paramFloat);
-        ((b)localObject).gl(paramBoolean);
+        ((b)localObject).gJ(paramBoolean);
       }
     }
     
@@ -61,39 +79,26 @@ public final class a
       if ((localObject != null) && ((localObject instanceof a))) {}
       for (localObject = (a)localObject;; localObject = new a(paramString, '\000'))
       {
-        ((a)localObject).Ay(paramString);
+        ((a)localObject).Cz(paramString);
         parama.setImageDrawable((Drawable)localObject);
         parama.doInvalidate();
         return;
       }
     }
     
-    public static h.a aQQ()
+    public static h.a aVA()
     {
-      if (fzj != null) {}
+      if (fIn != null) {}
       for (boolean bool = true;; bool = false)
       {
         Assert.assertTrue(bool);
-        return fzj;
+        return fIn;
       }
     }
     
-    public static void b(ImageView paramImageView, String paramString)
+    public static void b(ImageView paramImageView, String paramString, float paramFloat)
     {
-      if (paramImageView == null)
-      {
-        u.e("!32@/B4Tb64lLpLg5UpltBmF4RVBnMYAd83F", "imageView is null");
-        return;
-      }
-      Object localObject = paramImageView.getDrawable();
-      if ((localObject != null) && ((localObject instanceof a))) {}
-      for (localObject = (a)localObject;; localObject = new a(paramString, '\000'))
-      {
-        ((a)localObject).Ay(paramString);
-        paramImageView.setImageDrawable((Drawable)localObject);
-        paramImageView.invalidate();
-        return;
-      }
+      a(paramImageView, paramString, 0.15F, false);
     }
     
     public static void b(ImageView paramImageView, String paramString, boolean paramBoolean)
@@ -102,7 +107,7 @@ public final class a
       if ((localObject != null) && ((localObject instanceof a))) {}
       for (localObject = (a)localObject;; localObject = new a(paramString, (short)0))
       {
-        ((a)localObject).Ay(paramString);
+        ((a)localObject).Cz(paramString);
         paramImageView.setImageDrawable((Drawable)localObject);
         paramImageView.invalidate();
         return;

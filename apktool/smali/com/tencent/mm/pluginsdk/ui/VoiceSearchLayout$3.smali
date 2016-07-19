@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic iHM:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+.field final synthetic jeJ:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
-.field final synthetic iHN:Lcom/tencent/mm/pluginsdk/ui/g;
+.field final synthetic jeK:Lcom/tencent/mm/pluginsdk/ui/g;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 355
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$3;->iHM:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$3;->jeJ:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$3;->iHN:Lcom/tencent/mm/pluginsdk/ui/g;
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$3;->jeK:Lcom/tencent/mm/pluginsdk/ui/g;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

@@ -11,23 +11,23 @@ final class SnsStrangerCommentDetailUI$6
 {
   SnsStrangerCommentDetailUI$6(SnsStrangerCommentDetailUI paramSnsStrangerCommentDetailUI) {}
   
-  public final void eu(int paramInt)
+  public final void fg(int paramInt)
   {
     switch (paramInt)
     {
     default: 
       return;
     }
-    if (SnsStrangerCommentDetailUI.c(hiQ).qp())
+    if (SnsStrangerCommentDetailUI.c(hxF).oS())
     {
-      i.g(SnsStrangerCommentDetailUI.c(hiQ));
-      SnsStrangerCommentDetailUI.c(hiQ).qd();
-      a.cob.kG();
+      i.g(SnsStrangerCommentDetailUI.c(hxF));
+      SnsStrangerCommentDetailUI.c(hxF).oB();
+      a.cjp.jg();
       return;
     }
-    i.f(SnsStrangerCommentDetailUI.c(hiQ));
-    SnsStrangerCommentDetailUI.c(hiQ).qc();
-    a.cob.kG();
+    i.f(SnsStrangerCommentDetailUI.c(hxF));
+    SnsStrangerCommentDetailUI.c(hxF).oA();
+    a.cjp.jg();
   }
 }
 

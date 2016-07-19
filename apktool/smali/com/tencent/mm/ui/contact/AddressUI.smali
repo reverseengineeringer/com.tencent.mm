@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field public kXR:Lcom/tencent/mm/ui/o;
+.field public lyh:Lcom/tencent/mm/ui/o;
 
 
 # direct methods
@@ -39,7 +39,7 @@
     invoke-super {p0, p1}, Landroid/support/v4/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 86
-    iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->bb:Landroid/support/v4/app/f;
+    iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->bp:Landroid/support/v4/app/f;
 
     .line 88
     invoke-virtual {v0, v3}, Landroid/support/v4/app/e;->f(I)Landroid/support/v4/app/Fragment;
@@ -53,10 +53,10 @@
 
     invoke-direct {v1}, Lcom/tencent/mm/ui/contact/AddressUI$a;-><init>()V
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI;->kXR:Lcom/tencent/mm/ui/o;
+    iput-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI;->lyh:Lcom/tencent/mm/ui/o;
 
     .line 90
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI;->kXR:Lcom/tencent/mm/ui/o;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI;->lyh:Lcom/tencent/mm/ui/o;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/AddressUI;->getIntent()Landroid/content/Intent;
 
@@ -69,11 +69,11 @@
     invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/o;->setArguments(Landroid/os/Bundle;)V
 
     .line 91
-    invoke-virtual {v0}, Landroid/support/v4/app/e;->H()Landroid/support/v4/app/h;
+    invoke-virtual {v0}, Landroid/support/v4/app/e;->G()Landroid/support/v4/app/h;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI;->kXR:Lcom/tencent/mm/ui/o;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI;->lyh:Lcom/tencent/mm/ui/o;
 
     invoke-virtual {v0, v3, v1}, Landroid/support/v4/app/h;->a(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/h;
 
@@ -90,6 +90,6 @@
     .locals 0
 
     .prologue
-    .line 1412
+    .line 1418
     return-void
 .end method

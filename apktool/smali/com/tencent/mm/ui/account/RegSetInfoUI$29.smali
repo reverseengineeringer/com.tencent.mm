@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/RegSetInfoUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/RegSetInfoUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+.field final synthetic kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 304
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
     const/4 v2, 0x0
 
     .line 308
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->b(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Landroid/widget/EditText;
 
@@ -73,7 +73,7 @@
     if-le v1, v3, :cond_1
 
     .line 310
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->b(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Landroid/widget/EditText;
 
@@ -92,35 +92,35 @@
 
     .line 313
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->m(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Lcom/tencent/mm/sdk/platformtools/af;
+    invoke-static {v1}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->m(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Lcom/tencent/mm/sdk/platformtools/ah;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/sdk/platformtools/af;->aVf()Z
+    invoke-virtual {v1}, Lcom/tencent/mm/sdk/platformtools/ah;->baj()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
     .line 314
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->m(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Lcom/tencent/mm/sdk/platformtools/af;
+    invoke-static {v1}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->m(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Lcom/tencent/mm/sdk/platformtools/ah;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/sdk/platformtools/af;->aUF()V
+    invoke-virtual {v1}, Lcom/tencent/mm/sdk/platformtools/ah;->aZJ()V
 
     .line 316
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->n(Lcom/tencent/mm/ui/account/RegSetInfoUI;)V
 
     .line 317
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->b(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Landroid/widget/EditText;
 
@@ -138,14 +138,14 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
     .line 318
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->o(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Landroid/widget/ImageView;
 
@@ -157,7 +157,7 @@
 
     .line 322
     :goto_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->p(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Z
 
@@ -166,7 +166,7 @@
     if-nez v1, :cond_0
 
     .line 323
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->a(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Landroid/widget/EditText;
 
@@ -178,7 +178,7 @@
 
     .line 320
     :cond_3
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$29;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->o(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Landroid/widget/ImageView;
 

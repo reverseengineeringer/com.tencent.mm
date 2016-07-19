@@ -11,10 +11,10 @@ final class a$3
   
   public final void run()
   {
-    Intent localIntent = com.tencent.mm.plugin.a.a.coa.ak(amX);
+    Intent localIntent = com.tencent.mm.plugin.a.a.cjo.ag(ZM);
     localIntent.addFlags(67108864);
-    amX.startActivity(localIntent);
-    amX.finish();
+    ZM.startActivity(localIntent);
+    ZM.finish();
   }
 }
 

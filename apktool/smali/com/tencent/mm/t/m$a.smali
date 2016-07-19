@@ -13,14 +13,10 @@
     name = "a"
 .end annotation
 
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/mm/t/m$a$b;,
-        Lcom/tencent/mm/t/m$a$a;
-    }
-.end annotation
-
 
 # virtual methods
-.method public abstract a(Lcom/tencent/mm/t/m$a$b;)V
+.method public abstract a(Lcom/tencent/mm/t/m;Z)V
+.end method
+
+.method public abstract jD()V
 .end method

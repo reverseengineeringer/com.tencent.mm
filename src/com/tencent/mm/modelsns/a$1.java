@@ -7,7 +7,7 @@ final class a$1
   
   public final void run()
   {
-    a.a(ccj);
+    a.a(bVY);
   }
 }
 

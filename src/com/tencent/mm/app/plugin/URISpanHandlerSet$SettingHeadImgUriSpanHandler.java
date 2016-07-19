@@ -3,7 +3,7 @@ package com.tencent.mm.app.plugin;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.model.h;
 import com.tencent.mm.pluginsdk.l;
 import com.tencent.mm.pluginsdk.ui.applet.g;
@@ -26,9 +26,9 @@ class URISpanHandlerSet$SettingHeadImgUriSpanHandler
       if (paramb != null) {
         paramb.a(paramg);
       }
-      paramg = LauncherUI.bat();
+      paramg = LauncherUI.bfJ();
       if (paramg != null) {
-        paramg.Gi("tab_settings");
+        paramg.Ix("tab_settings");
       }
       return true;
     }
@@ -40,19 +40,19 @@ class URISpanHandlerSet$SettingHeadImgUriSpanHandler
     if (paramString.equals("weixin://setting/setheadimage"))
     {
       paramString = new Intent();
-      paramString.putExtra("Contact_User", h.sc());
-      paramString.putExtra("Contact_Nick", h.se());
+      paramString.putExtra("Contact_User", h.se());
+      paramString.putExtra("Contact_Nick", h.sg());
       paramString.putExtra("User_Avatar", true);
-      if ((URISpanHandlerSet.a(ang) instanceof Service)) {
+      if ((URISpanHandlerSet.a(ZU) instanceof Service)) {
         paramString.addFlags(268435456);
       }
-      c.c(URISpanHandlerSet.a(ang), "profile", ".ui.ContactInfoUI", paramString);
+      c.c(URISpanHandlerSet.a(ZU), "profile", ".ui.ContactInfoUI", paramString);
       return true;
     }
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     if (paramString.trim().startsWith("weixin://setting/setheadimage")) {
       return new g(paramString, 6, null);
@@ -60,7 +60,7 @@ class URISpanHandlerSet$SettingHeadImgUriSpanHandler
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 6 };
   }

@@ -7,19 +7,19 @@ import android.view.View;
 
 public final class g
 {
-  static final d eD = new a();
+  static final d eZ = new a();
   
   static
   {
     int i = Build.VERSION.SDK_INT;
     if (i >= 14)
     {
-      eD = new c();
+      eZ = new c();
       return;
     }
     if (i >= 11)
     {
-      eD = new b();
+      eZ = new b();
       return;
     }
   }
@@ -38,7 +38,7 @@ public final class g
     if ((paramMenuItem instanceof b)) {
       return ((b)paramMenuItem).a(parame);
     }
-    return eD.a(paramMenuItem, parame);
+    return eZ.a(paramMenuItem, parame);
   }
   
   public static MenuItem a(MenuItem paramMenuItem, View paramView)
@@ -46,7 +46,7 @@ public final class g
     if ((paramMenuItem instanceof b)) {
       return ((b)paramMenuItem).setActionView(paramView);
     }
-    return eD.a(paramMenuItem, paramView);
+    return eZ.a(paramMenuItem, paramView);
   }
   
   public static View a(MenuItem paramMenuItem)
@@ -54,7 +54,7 @@ public final class g
     if ((paramMenuItem instanceof b)) {
       return ((b)paramMenuItem).getActionView();
     }
-    return eD.a(paramMenuItem);
+    return null;
   }
   
   public static void a(MenuItem paramMenuItem, int paramInt)
@@ -64,7 +64,7 @@ public final class g
       ((b)paramMenuItem).setShowAsAction(paramInt);
       return;
     }
-    eD.a(paramMenuItem, paramInt);
+    eZ.a(paramMenuItem, paramInt);
   }
   
   public static MenuItem b(MenuItem paramMenuItem, int paramInt)
@@ -72,7 +72,7 @@ public final class g
     if ((paramMenuItem instanceof b)) {
       return ((b)paramMenuItem).setActionView(paramInt);
     }
-    return eD.b(paramMenuItem, paramInt);
+    return eZ.b(paramMenuItem, paramInt);
   }
   
   public static boolean b(MenuItem paramMenuItem)
@@ -80,7 +80,7 @@ public final class g
     if ((paramMenuItem instanceof b)) {
       return ((b)paramMenuItem).expandActionView();
     }
-    return eD.b(paramMenuItem);
+    return eZ.b(paramMenuItem);
   }
   
   public static boolean c(MenuItem paramMenuItem)
@@ -88,7 +88,7 @@ public final class g
     if ((paramMenuItem instanceof b)) {
       return ((b)paramMenuItem).collapseActionView();
     }
-    return eD.c(paramMenuItem);
+    return eZ.c(paramMenuItem);
   }
   
   static final class a
@@ -102,11 +102,6 @@ public final class g
     public final MenuItem a(MenuItem paramMenuItem, View paramView)
     {
       return paramMenuItem;
-    }
-    
-    public final View a(MenuItem paramMenuItem)
-    {
-      return null;
     }
     
     public final void a(MenuItem paramMenuItem, int paramInt) {}
@@ -140,11 +135,6 @@ public final class g
       return paramMenuItem.setActionView(paramView);
     }
     
-    public final View a(MenuItem paramMenuItem)
-    {
-      return paramMenuItem.getActionView();
-    }
-    
     public final void a(MenuItem paramMenuItem, int paramInt)
     {
       paramMenuItem.setShowAsAction(paramInt);
@@ -176,14 +166,14 @@ public final class g
       }
       h.a(paramMenuItem, new h.b()
       {
-        public final boolean af()
+        public final boolean ad()
         {
-          return parame.af();
+          return parame.ad();
         }
         
-        public final boolean ag()
+        public final boolean ae()
         {
-          return parame.ag();
+          return parame.ae();
         }
       });
     }
@@ -205,8 +195,6 @@ public final class g
     
     public abstract MenuItem a(MenuItem paramMenuItem, View paramView);
     
-    public abstract View a(MenuItem paramMenuItem);
-    
     public abstract void a(MenuItem paramMenuItem, int paramInt);
     
     public abstract MenuItem b(MenuItem paramMenuItem, int paramInt);
@@ -218,9 +206,9 @@ public final class g
   
   public static abstract interface e
   {
-    public abstract boolean af();
+    public abstract boolean ad();
     
-    public abstract boolean ag();
+    public abstract boolean ae();
   }
 }
 

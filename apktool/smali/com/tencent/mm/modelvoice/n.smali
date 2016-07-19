@@ -4,16 +4,16 @@
 
 
 # instance fields
-.field public cfR:Ljava/lang/String;
+.field public cbd:Ljava/lang/String;
 
-.field public cfS:Z
+.field public cbe:Z
 
 .field public time:J
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
-    .locals 5
+    .locals 6
 
     .prologue
     const/4 v1, 0x0
@@ -63,7 +63,7 @@
 
     aget-object v0, v2, v0
 
-    invoke-static {v0}, Lcom/tencent/mm/storage/k;->Ec(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/storage/k;->eb(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -81,7 +81,7 @@
     .line 43
     aget-object v3, v2, v0
 
-    iput-object v3, p0, Lcom/tencent/mm/modelvoice/n;->cfR:Ljava/lang/String;
+    iput-object v3, p0, Lcom/tencent/mm/modelvoice/n;->cbd:Ljava/lang/String;
 
     .line 45
     :cond_1
@@ -98,9 +98,9 @@
 
     invoke-static {v3}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    iput-wide v3, p0, Lcom/tencent/mm/modelvoice/n;->time:J
+    iput-wide v4, p0, Lcom/tencent/mm/modelvoice/n;->time:J
 
     .line 48
     :cond_2
@@ -121,7 +121,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/modelvoice/n;->cfS:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/modelvoice/n;->cbe:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -134,18 +134,18 @@
     :catch_0
     move-exception v0
 
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/n;->cfR:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/n;->cbd:Ljava/lang/String;
 
     if-nez v0, :cond_4
 
     .line 54
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/modelvoice/n;->cfR:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/modelvoice/n;->cbd:Ljava/lang/String;
 
     .line 56
     :cond_4
-    iput-boolean v1, p0, Lcom/tencent/mm/modelvoice/n;->cfS:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/modelvoice/n;->cbe:Z
 
     .line 57
     const-wide/16 v0, 0x0
@@ -153,11 +153,11 @@
     iput-wide v0, p0, Lcom/tencent/mm/modelvoice/n;->time:J
 
     .line 58
-    const-string/jumbo v0, "!32@/B4Tb64lLpLuTfcKnpSMB7/OhLfNVcYh"
+    const-string/jumbo v0, "MicroMsg.VoiceContent"
 
     const-string/jumbo v1, "VoiceContent parse failed."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -168,7 +168,7 @@
 .end method
 
 .method public static a(Ljava/lang/String;JZ)Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     .prologue
     .line 21

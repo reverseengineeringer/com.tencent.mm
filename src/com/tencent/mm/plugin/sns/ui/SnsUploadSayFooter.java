@@ -28,106 +28,82 @@ import com.tencent.mm.ui.widget.MMEditText;
 public class SnsUploadSayFooter
   extends BasePanelKeybordLayout
 {
-  private MMActivity arW;
-  ImageButton eYL;
-  ChatFooterPanel eYO;
-  private boolean eYR = true;
-  private MMEditText gLu = null;
+  private MMActivity adL;
+  ImageButton fhf;
+  ChatFooterPanel fhi;
+  private boolean fhl = true;
+  MMEditText gSZ = null;
   
   public SnsUploadSayFooter(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    arW = ((MMActivity)paramContext);
-    ah.tD().rn().set(-29414086, "TAG_DEFAULT_TAB");
-    ah.tD().rn().set(-29414083, Integer.valueOf(0));
-    eYL = ((ImageButton)((ViewGroup)p.ee(arW).inflate(2131362817, this)).findViewById(2131168521));
-    eYL.setOnClickListener(new View.OnClickListener()
+    adL = ((MMActivity)paramContext);
+    ah.tE().ro().set(-29414086, "TAG_DEFAULT_TAB");
+    ah.tE().ro().set(-29414083, Integer.valueOf(0));
+    fhf = ((ImageButton)((ViewGroup)p.ef(adL).inflate(2130904501, this)).findViewById(2131757797));
+    fhf.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
         SnsUploadSayFooter.b(SnsUploadSayFooter.this);
       }
     });
-    if (e.iMh == null)
+    if (e.jje == null)
     {
-      eYO = new d(arW);
+      fhi = new d(adL);
       return;
     }
-    eYO = e.iMh.bs(getContext());
-    eYO.setVisibility(8);
-    paramContext = (LinearLayout)findViewById(2131166057);
+    fhi = e.jje.bo(getContext());
+    fhi.setVisibility(8);
+    paramContext = (LinearLayout)findViewById(2131756548);
     paramContext.setOnClickListener(null);
-    paramContext.addView(eYO, -1, 0);
-    eYO.RP();
-    eYO.RQ();
-    eYO.setOnTextOperationListener(new ChatFooterPanel.a()
+    paramContext.addView(fhi, -1, 0);
+    fhi.Tj();
+    fhi.Tk();
+    fhi.jdd = new ChatFooterPanel.a()
     {
-      public final void ahA() {}
+      public final void akl() {}
       
-      public final void ahB()
+      public final void akm()
       {
-        SnsUploadSayFooter.c(SnsUploadSayFooter.this).getInputConnection().sendKeyEvent(new KeyEvent(0, 67));
-        SnsUploadSayFooter.c(SnsUploadSayFooter.this).getInputConnection().sendKeyEvent(new KeyEvent(1, 67));
+        cmfQ.sendKeyEvent(new KeyEvent(0, 67));
+        cmfQ.sendKeyEvent(new KeyEvent(1, 67));
       }
       
       public final void append(String paramAnonymousString)
       {
         try
         {
-          SnsUploadSayFooter.c(SnsUploadSayFooter.this).HO(paramAnonymousString);
+          SnsUploadSayFooter.c(SnsUploadSayFooter.this).Kd(paramAnonymousString);
           return;
         }
         catch (Exception paramAnonymousString) {}
       }
       
-      public final void dr(boolean paramAnonymousBoolean) {}
-    });
+      public final void dq(boolean paramAnonymousBoolean) {}
+    };
   }
   
-  private void ayl()
+  private void aAL()
   {
-    eYO.onPause();
-    eYO.setVisibility(8);
+    fhi.onPause();
+    fhi.setVisibility(8);
   }
   
-  public final boolean aCR()
+  public final boolean aFY()
   {
-    return eYO.getVisibility() == 0;
+    return fhi.getVisibility() == 0;
   }
   
-  public final void aCS()
+  public final void aFZ()
   {
-    ayl();
+    aAL();
     setVisibility(8);
   }
   
-  protected View getPanelView()
+  protected final View akk()
   {
-    return eYO;
-  }
-  
-  public void setMMEditText(MMEditText paramMMEditText)
-  {
-    gLu = paramMMEditText;
-    paramMMEditText.setOnClickListener(new View.OnClickListener()
-    {
-      public final void onClick(View paramAnonymousView)
-      {
-        if (getVisibility() == 8) {
-          setVisibility(0);
-        }
-        if (aCR()) {
-          SnsUploadSayFooter.a(SnsUploadSayFooter.this);
-        }
-      }
-    });
-    paramMMEditText.setOnEditorActionListener(new TextView.OnEditorActionListener()
-    {
-      public final boolean onEditorAction(TextView paramAnonymousTextView, int paramAnonymousInt, KeyEvent paramAnonymousKeyEvent)
-      {
-        return false;
-      }
-    });
+    return fhi;
   }
 }
 

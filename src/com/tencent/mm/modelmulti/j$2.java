@@ -1,19 +1,19 @@
 package com.tencent.mm.modelmulti;
 
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.sdk.platformtools.ah.a;
 
 final class j$2
-  implements af.a
+  implements ah.a
 {
   j$2(j paramj, j.a parama) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    j.a(bVH);
-    h localh = h.fUJ;
-    h.b(99L, 231L, 1L, false);
-    bVH.a(-1, 0, 0, "", bVI, null);
+    j.a(bPi);
+    g localg = g.gdY;
+    g.b(99L, 231L, 1L, false);
+    bPi.a(-1, 0, 0, "", bPj, null);
     return false;
   }
 }

@@ -6,26 +6,26 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.widget.MMEditText;
 
 public class SnsEditText
   extends MMEditText
 {
   private Context context;
-  private boolean eJC = false;
-  private ClipboardManager hdU = null;
-  private int hdV = 0;
-  private int hdW = 0;
-  private int hdX = 0;
-  private int hdY = 10;
+  private boolean eRs = false;
+  private ClipboardManager hsF = null;
+  int hsG = 0;
+  private int hsH = 0;
+  private int hsI = 0;
+  private int hsJ = 10;
   private float y;
   
   public SnsEditText(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
     context = paramContext;
-    hdU = ((ClipboardManager)context.getSystemService("clipboard"));
+    hsF = ((ClipboardManager)context.getSystemService("clipboard"));
     addTextChangedListener(new TextWatcher()
     {
       public final void afterTextChanged(Editable paramAnonymousEditable) {}
@@ -54,7 +54,7 @@ public class SnsEditText
             if ((paramAnonymousCharSequence.indexOf("\n") >= 0) && (paramAnonymousInt3 > 30))
             {
               SnsEditText.b(SnsEditText.this, paramAnonymousCharSequence.length());
-              u.d("!32@/B4Tb64lLpK78ssMyUxGWQLv4Av3wmU/", "parsterLen: %d %d", new Object[] { Integer.valueOf(paramAnonymousCharSequence.length()), Integer.valueOf(SnsEditText.c(SnsEditText.this)) });
+              v.d("MicroMsg.SnsEditText", "parsterLen: %d %d", new Object[] { Integer.valueOf(paramAnonymousCharSequence.length()), Integer.valueOf(SnsEditText.c(SnsEditText.this)) });
               return;
             }
           }
@@ -70,11 +70,6 @@ public class SnsEditText
     });
   }
   
-  public int getPasterLen()
-  {
-    return hdV;
-  }
-  
   public boolean onTextContextMenuItem(int paramInt)
   {
     return super.onTextContextMenuItem(paramInt);
@@ -83,8 +78,8 @@ public class SnsEditText
   public boolean onTouchEvent(MotionEvent paramMotionEvent)
   {
     if (paramMotionEvent.getAction() == 2) {
-      if (Math.abs(y - paramMotionEvent.getY()) > hdY) {
-        eJC = true;
+      if (Math.abs(y - paramMotionEvent.getY()) > hsJ) {
+        eRs = true;
       }
     }
     for (;;)
@@ -93,21 +88,16 @@ public class SnsEditText
       return super.onTouchEvent(paramMotionEvent);
       if (paramMotionEvent.getAction() == 1)
       {
-        if (eJC)
+        if (eRs)
         {
-          eJC = false;
+          eRs = false;
           return true;
         }
       }
       else {
-        eJC = false;
+        eRs = false;
       }
     }
-  }
-  
-  public void setPasterLen(int paramInt)
-  {
-    hdV = paramInt;
   }
 }
 

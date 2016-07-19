@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.ImageView;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.j;
@@ -18,24 +18,24 @@ final class SnsSightPlayerUI$5$1
   
   public final void run()
   {
-    Object localObject = (ImageView)hit.his.findViewById(2131166462);
+    Object localObject = (ImageView)hxi.hxh.findViewById(2131756835);
     if (localObject != null)
     {
-      ((ImageView)localObject).setImageBitmap(fRQ);
+      ((ImageView)localObject).setImageBitmap(gaT);
       ((ImageView)localObject).setVisibility(0);
     }
     localObject = new Intent();
     ((Intent)localObject).setAction("android.intent.action.VIEW");
-    ((Intent)localObject).setDataAndType(Uri.fromFile(new File(fbI)), "video/*");
+    ((Intent)localObject).setDataAndType(Uri.fromFile(new File(fki)), "video/*");
     try
     {
-      hit.his.koJ.kpc.startActivity(Intent.createChooser((Intent)localObject, hit.his.koJ.kpc.getString(2131432531)));
+      hxi.hxh.kNN.kOg.startActivity(Intent.createChooser((Intent)localObject, hxi.hxh.kNN.kOg.getString(2131232712)));
       return;
     }
     catch (Exception localException)
     {
-      u.e("!44@/B4Tb64lLpLAQNo3yhYAsqDk1iee7Bh2S7FW+l6OQsk=", "startActivity fail, activity not found");
-      g.e(hit.his.koJ.kpc, 2131432547, 2131432546);
+      v.e("MicroMsg.SnsSightPlayerUI", "startActivity fail, activity not found");
+      g.f(hxi.hxh.kNN.kOg, 2131232633, 2131232634);
     }
   }
 }

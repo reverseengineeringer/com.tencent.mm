@@ -6,28 +6,28 @@ import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
 import android.view.ViewConfiguration;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class l
   implements GestureDetector.OnGestureListener
 {
   private final Context context;
-  public final GestureDetector lwi;
-  public a lwj;
-  private final int lwk;
-  private final int lwl;
-  private final float lwm;
-  private final float lwn;
+  public final GestureDetector lWU;
+  public a lWV;
+  private final int lWW;
+  private final int lWX;
+  private final float lWY;
+  private final float lWZ;
   
   public l(Context paramContext)
   {
     context = paramContext;
-    lwi = new GestureDetector(context, this);
+    lWU = new GestureDetector(context, this);
     ViewConfiguration localViewConfiguration = ViewConfiguration.get(paramContext);
-    lwk = localViewConfiguration.getScaledMinimumFlingVelocity();
-    lwl = localViewConfiguration.getScaledMaximumFlingVelocity();
-    lwm = BackwardSupportUtil.b.a(paramContext, 70.0F);
-    lwn = BackwardSupportUtil.b.a(paramContext, 50.0F);
+    lWW = localViewConfiguration.getScaledMinimumFlingVelocity();
+    lWX = localViewConfiguration.getScaledMaximumFlingVelocity();
+    lWY = BackwardSupportUtil.b.a(paramContext, 70.0F);
+    lWZ = BackwardSupportUtil.b.a(paramContext, 50.0F);
   }
   
   public final boolean onDown(MotionEvent paramMotionEvent)
@@ -37,30 +37,30 @@ public final class l
   
   public final boolean onFling(MotionEvent paramMotionEvent1, MotionEvent paramMotionEvent2, float paramFloat1, float paramFloat2)
   {
-    if (lwj == null) {
+    if (lWV == null) {
       return true;
     }
-    u.v("!44@/B4Tb64lLpLtADHeupmcR9RkE1hpp/4l1le5KqFDqOc=", "lastX:%f, curX:%f, lastY:%f, curY:%f, vX:%f, vY:%f", new Object[] { Float.valueOf(paramMotionEvent1.getX()), Float.valueOf(paramMotionEvent2.getX()), Float.valueOf(paramMotionEvent1.getY()), Float.valueOf(paramMotionEvent2.getY()), Float.valueOf(paramFloat1), Float.valueOf(paramFloat2) });
+    v.v("MicroMsg.MMGestureGallery", "lastX:%f, curX:%f, lastY:%f, curY:%f, vX:%f, vY:%f", new Object[] { Float.valueOf(paramMotionEvent1.getX()), Float.valueOf(paramMotionEvent2.getX()), Float.valueOf(paramMotionEvent1.getY()), Float.valueOf(paramMotionEvent2.getY()), Float.valueOf(paramFloat1), Float.valueOf(paramFloat2) });
     float f1 = Math.abs(paramMotionEvent2.getY() - paramMotionEvent1.getY());
     float f2 = Math.abs(paramMotionEvent2.getX() - paramMotionEvent1.getX());
-    if ((f1 < lwn) && (paramFloat1 > 800.0F) && (f2 > lwm))
+    if ((f1 < lWZ) && (paramFloat1 > 800.0F) && (f2 > lWY))
     {
-      lwj.bgf();
+      lWV.blP();
       return true;
     }
-    if ((f1 < lwn) && (paramFloat1 < -800.0F) && (f2 < -lwm))
+    if ((f1 < lWZ) && (paramFloat1 < -800.0F) && (f2 < -lWY))
     {
-      lwj.bgg();
+      lWV.blQ();
       return true;
     }
-    if ((f2 < lwn) && (paramFloat2 > 800.0F))
+    if ((f2 < lWZ) && (paramFloat2 > 800.0F))
     {
-      lwj.bgh();
+      lWV.blR();
       return true;
     }
-    if ((f2 < lwn) && (paramFloat2 < -800.0F))
+    if ((f2 < lWZ) && (paramFloat2 < -800.0F))
     {
-      lwj.bge();
+      lWV.blO();
       return true;
     }
     return false;
@@ -82,13 +82,13 @@ public final class l
   
   public static abstract interface a
   {
-    public abstract void bge();
+    public abstract void blO();
     
-    public abstract void bgf();
+    public abstract void blP();
     
-    public abstract void bgg();
+    public abstract void blQ();
     
-    public abstract void bgh();
+    public abstract void blR();
   }
 }
 

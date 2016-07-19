@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract Z(Ljava/lang/Object;)V
+.method public abstract j(Landroid/view/View;I)V
 .end method

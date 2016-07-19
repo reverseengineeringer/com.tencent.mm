@@ -1,8 +1,8 @@
 package com.tencent.mm.ui;
 
 import android.graphics.Bitmap;
-import com.tencent.mm.d.a.iv;
-import com.tencent.mm.d.a.iv.a;
+import com.tencent.mm.e.a.ja;
+import com.tencent.mm.e.a.ja.a;
 import com.tencent.mm.ui.base.preference.IconPreference;
 
 final class f$4$2
@@ -12,10 +12,10 @@ final class f$4$2
   
   public final void run()
   {
-    f.a(klu.klo, true);
-    klu.klp.u(gMv);
-    f.a(klu.klp, 8, 0, false, 0, 0, 0);
-    f.a(klu.klo, klu.amV, klu.hWn, klu.klq, klu.bCX, klu.klr.aEY.asN);
+    f.a(kKS.kKO, true);
+    kKS.kKP.E(kKT);
+    f.a(kKS.kKP, 8, 8, false, 0, 0, 0);
+    f.a(kKS.kKO, kKS.ZK, kKS.ipT, kKS.kKQ, kKS.bwh, kKS.kKR.ard.aex);
   }
 }
 

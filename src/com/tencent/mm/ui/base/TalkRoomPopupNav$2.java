@@ -10,7 +10,7 @@ final class TalkRoomPopupNav$2
   
   public final void onClick(View paramView)
   {
-    TalkRoomPopupNav.b(kKA);
+    TalkRoomPopupNav.b(ljQ);
   }
 }
 

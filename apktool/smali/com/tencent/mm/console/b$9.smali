@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lcom/tencent/mm/model/as$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/console/b;->u(Landroid/content/Context;Ljava/lang/String;)Z
+    value = Lcom/tencent/mm/console/b;->v(Landroid/content/Context;Ljava/lang/String;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic buV:Landroid/content/Context;
+.field final synthetic bjv:Ljava/lang/String;
 
-.field final synthetic buZ:Ljava/lang/String;
+.field final synthetic bjw:I
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
+.method constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
     .prologue
-    .line 646
-    iput-object p1, p0, Lcom/tencent/mm/console/b$9;->buV:Landroid/content/Context;
+    .line 342
+    iput-object p1, p0, Lcom/tencent/mm/console/b$9;->bjv:Ljava/lang/String;
 
-    iput-object p2, p0, Lcom/tencent/mm/console/b$9;->buZ:Ljava/lang/String;
+    iput p2, p0, Lcom/tencent/mm/console/b$9;->bjw:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,26 +40,27 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public final a(Lcom/tencent/mm/network/e;)V
+    .locals 5
 
     .prologue
-    .line 649
-    iget-object v0, p0, Lcom/tencent/mm/console/b$9;->buV:Landroid/content/Context;
-
-    const-string/jumbo v1, "clipboard"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    .line 346
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    check-cast v0, Landroid/text/ClipboardManager;
+    const/4 v1, 0x3
 
-    .line 650
-    iget-object v1, p0, Lcom/tencent/mm/console/b$9;->buZ:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/console/b$9;->bjv:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroid/text/ClipboardManager;->setText(Ljava/lang/CharSequence;)V
+    iget v3, p0, Lcom/tencent/mm/console/b$9;->bjw:I
 
-    .line 651
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
+
+    move-result v4
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/tencent/mm/t/m;->a(ILjava/lang/String;IZ)V
+
+    .line 347
     return-void
 .end method

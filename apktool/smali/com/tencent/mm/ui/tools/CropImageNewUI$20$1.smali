@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic luv:Lcom/tencent/mm/ui/tools/CropImageNewUI$20;
+.field final synthetic lVx:Lcom/tencent/mm/ui/tools/CropImageNewUI$20;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 344
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$20$1;->luv:Lcom/tencent/mm/ui/tools/CropImageNewUI$20;
+    .line 346
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$20$1;->lVx:Lcom/tencent/mm/ui/tools/CropImageNewUI$20;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,20 +40,20 @@
     .locals 2
 
     .prologue
-    .line 348
+    .line 350
     const/4 v0, 0x0
 
-    const v1, 0x7f0b05f3
+    const v1, 0x7f08059d
 
-    invoke-virtual {p1, v0, v1}, Lcom/tencent/mm/ui/base/l;->bL(II)Landroid/view/MenuItem;
+    invoke-virtual {p1, v0, v1}, Lcom/tencent/mm/ui/base/l;->bR(II)Landroid/view/MenuItem;
 
-    .line 349
+    .line 351
     const/4 v0, 0x1
 
-    const v1, 0x7f0b05f4
+    const v1, 0x7f0805a1
 
-    invoke-virtual {p1, v0, v1}, Lcom/tencent/mm/ui/base/l;->bL(II)Landroid/view/MenuItem;
+    invoke-virtual {p1, v0, v1}, Lcom/tencent/mm/ui/base/l;->bR(II)Landroid/view/MenuItem;
 
-    .line 350
+    .line 352
     return-void
 .end method

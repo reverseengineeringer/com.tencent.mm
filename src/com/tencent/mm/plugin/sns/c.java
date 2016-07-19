@@ -1,88 +1,84 @@
 package com.tencent.mm.plugin.sns;
 
-import com.tencent.mm.d.a.fo;
-import com.tencent.mm.d.a.fo.a;
-import com.tencent.mm.d.a.kd;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.ai;
-import com.tencent.mm.plugin.sns.d.o;
-import com.tencent.mm.plugin.sns.h.k;
-import com.tencent.mm.plugin.sns.h.l;
-import com.tencent.mm.protocal.b.aqi;
-import com.tencent.mm.protocal.b.aqj;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.c.b;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.e.a.fu;
+import com.tencent.mm.e.a.fu.a;
+import com.tencent.mm.e.a.kj;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.o;
+import com.tencent.mm.plugin.sns.i.k;
+import com.tencent.mm.plugin.sns.i.l;
+import com.tencent.mm.protocal.b.aqt;
+import com.tencent.mm.protocal.b.aqu;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 import java.util.LinkedList;
 
 public final class c
-  extends com.tencent.mm.sdk.c.c
+  extends com.tencent.mm.sdk.c.c<fu>
   implements d
 {
-  private int gEP;
-  private aqi gEQ;
-  private k gER;
-  private af gES;
+  private int gLq;
+  private aqt gLr;
+  private k gLs;
+  private com.tencent.mm.sdk.platformtools.ah gLt;
   
   public c()
   {
-    super(0);
+    kum = fu.class.getName().hashCode();
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  private boolean a(fu paramfu)
   {
-    u.i("!56@/B4Tb64lLpKGmTQBd+K0W/Ymm6y2hwD1+KKyGn2+OTbOB1S/ZEXmpQ==", "dz:[onSceneEnd]errType:%d errCode:%d errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
-    gES.aUF();
-    if ((paramInt1 == 0) && (paramInt2 == 0))
+    if (!(paramfu instanceof fu))
     {
-      paramString = ad.azi().cx(gER.field_snsId);
-      paramj = new kd();
-      aGD.aAt = ai.k(paramString);
-      com.tencent.mm.sdk.c.a.jUF.j(paramj);
-      return;
-    }
-    paramString = new kd();
-    aGD.aAt = null;
-    com.tencent.mm.sdk.c.a.jUF.j(paramString);
-  }
-  
-  public final boolean a(b paramb)
-  {
-    if (!(paramb instanceof fo))
-    {
-      u.f("!56@/B4Tb64lLpKGmTQBd+K0W/Ymm6y2hwD1+KKyGn2+OTbOB1S/ZEXmpQ==", "mismatched event");
+      v.f("MicroMsg.GetSnsObjectDetailListener", "mismatched event");
       return false;
     }
-    gEP = aAr.awX;
-    gER = ad.azi().lR(gEP);
-    gEQ = ai.k(gER);
-    if ((gEQ != null) && (((gEQ.jKb == 3) && (gEQ.jKg != null) && (gEQ.jKg.size() > 0)) || ((gEQ.jKb == 5) && (gEQ.jzT != null) && (gEQ.jzT.size() > 0))))
+    gLq = amx.aiS;
+    gLs = ad.aBI().ne(gLq);
+    gLr = com.tencent.mm.plugin.sns.e.ah.k(gLs);
+    if ((gLr != null) && (((gLr.kiy == 3) && (gLr.kiD != null) && (gLr.kiD.size() > 0)) || ((gLr.kiy == 5) && (gLr.jYG != null) && (gLr.jYG.size() > 0))))
     {
-      aAs.aAt = gEQ;
+      amy.amz = gLr;
       return true;
     }
-    paramb = new o(gER.field_snsId);
-    anN.bEW.bFf).jKk = 1;
-    ah.tE().a(210, this);
-    ah.tE().d(paramb);
-    gES = new af(new af.a()
+    paramfu = new o(gLs.field_snsId);
+    bkQ.byh.byq).kiH = 1;
+    com.tencent.mm.model.ah.tF().a(210, this);
+    com.tencent.mm.model.ah.tF().a(paramfu, 0);
+    gLt = new com.tencent.mm.sdk.platformtools.ah(new ah.a()
     {
-      public final boolean lj()
+      public final boolean jK()
       {
-        kd localkd = new kd();
-        aGD.aAt = null;
-        com.tencent.mm.sdk.c.a.jUF.j(localkd);
+        kj localkj = new kj();
+        asM.amz = null;
+        com.tencent.mm.sdk.c.a.kug.y(localkj);
         return false;
       }
     }, false);
-    gES.ds(10000L);
+    gLt.dJ(10000L);
     return true;
+  }
+  
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
+  {
+    v.i("MicroMsg.GetSnsObjectDetailListener", "dz:[onSceneEnd]errType:%d errCode:%d errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
+    gLt.aZJ();
+    if ((paramInt1 == 0) && (paramInt2 == 0))
+    {
+      paramString = ad.aBI().cM(gLs.field_snsId);
+      paramj = new kj();
+      asM.amz = com.tencent.mm.plugin.sns.e.ah.k(paramString);
+      com.tencent.mm.sdk.c.a.kug.y(paramj);
+      return;
+    }
+    paramString = new kj();
+    asM.amz = null;
+    com.tencent.mm.sdk.c.a.kug.y(paramString);
   }
 }
 

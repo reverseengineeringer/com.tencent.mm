@@ -4,127 +4,127 @@
 
 
 # instance fields
-.field public bpH:Z
+.field public bdH:Z
 
-.field public bpI:I
+.field public bdI:I
 
-.field public bpJ:I
+.field public bdJ:I
 
-.field public bpK:I
+.field public bdK:I
 
-.field public bpL:I
+.field public bdL:I
 
-.field public bpM:I
+.field public bdM:I
 
-.field public bpN:I
+.field public bdN:I
 
-.field public bpO:I
+.field public bdO:I
 
-.field public bpP:I
+.field public bdP:I
 
-.field public bpQ:I
+.field public bdQ:I
 
-.field public bpR:I
+.field public bdR:I
 
-.field public bpS:I
+.field public bdS:I
 
-.field public bpT:I
+.field public bdT:I
 
-.field public bpU:I
+.field public bdU:I
 
-.field public bpV:I
+.field public bdV:I
 
-.field public bpW:I
+.field public bdW:I
 
-.field public bpX:I
+.field public bdX:I
 
-.field public bpY:I
+.field public bdY:I
 
-.field public bpZ:I
+.field public bdZ:I
 
-.field public bqA:I
+.field public beA:I
 
-.field public bqB:[S
+.field public beB:[S
 
-.field public bqC:[S
+.field public beC:[S
 
-.field public bqD:Z
+.field public beD:Z
 
-.field public bqE:I
+.field public beE:I
 
-.field public bqF:Z
+.field public beF:Z
 
-.field public bqG:I
+.field public beG:I
 
-.field public bqH:I
+.field public beH:I
 
-.field public bqI:I
+.field public beI:I
 
-.field public bqJ:I
+.field public beJ:I
 
-.field public bqK:I
+.field public beK:I
 
-.field public bqL:I
+.field public beL:I
 
-.field public bqM:I
+.field public beM:I
 
-.field public bqN:I
+.field public beN:I
 
-.field public bqO:I
+.field public beO:I
 
-.field public bqP:I
+.field public beP:I
 
-.field public bqa:I
+.field public bea:I
 
-.field public bqb:I
+.field public beb:I
 
-.field public bqc:I
+.field public bec:I
 
-.field public bqd:I
+.field public bed:I
 
-.field public bqe:I
+.field public bee:I
 
-.field public bqf:I
+.field public bef:I
 
-.field public bqg:I
+.field public beg:I
 
-.field public bqh:I
+.field public beh:I
 
-.field public bqi:I
+.field public bei:I
 
-.field public bqj:I
+.field public bej:I
 
-.field public bqk:I
+.field public bek:I
 
-.field public bql:Z
+.field public bel:Z
 
-.field public bqm:I
+.field public bem:I
 
-.field public bqn:I
+.field public ben:I
 
-.field public bqo:I
+.field public beo:I
 
-.field public bqp:I
+.field public bep:I
 
-.field public bqq:I
+.field public beq:I
 
-.field public bqr:I
+.field public ber:I
 
-.field public bqs:I
+.field public bes:I
 
-.field public bqt:I
+.field public bet:I
 
-.field public bqu:I
+.field public beu:I
 
-.field public bqv:I
+.field public bev:I
 
-.field public bqw:I
+.field public bew:I
 
-.field public bqx:I
+.field public bex:I
 
-.field public bqy:I
+.field public bey:I
 
-.field public bqz:I
+.field public bez:I
 
 
 # direct methods
@@ -138,24 +138,24 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 8
-    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/a;->bpH:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/a;->bdH:Z
 
     .line 67
     const/16 v0, 0xf
 
     new-array v0, v0, [S
 
-    iput-object v0, p0, Lcom/tencent/mm/compatible/d/a;->bqB:[S
+    iput-object v0, p0, Lcom/tencent/mm/compatible/d/a;->beB:[S
 
     .line 68
     const/4 v0, 0x2
 
     new-array v0, v0, [S
 
-    iput-object v0, p0, Lcom/tencent/mm/compatible/d/a;->bqC:[S
+    iput-object v0, p0, Lcom/tencent/mm/compatible/d/a;->beC:[S
 
     .line 72
-    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/a;->bqF:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/a;->beF:Z
 
     .line 93
     invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->reset()V
@@ -171,7 +171,7 @@
 
     .prologue
     .line 262
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -179,7 +179,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpI:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bdI:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -189,10 +189,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 263
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -200,7 +200,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpJ:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bdJ:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -210,10 +210,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 264
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -221,7 +221,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpK:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bdK:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -231,10 +231,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 265
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -242,7 +242,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpL:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bdL:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -252,10 +252,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 266
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -263,7 +263,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpM:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bdM:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -273,10 +273,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 267
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -284,7 +284,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpN:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bdN:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -294,10 +294,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 268
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -305,7 +305,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpO:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bdO:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -315,10 +315,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 269
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -326,7 +326,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpP:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bdP:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -336,10 +336,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 270
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -347,7 +347,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqt:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bet:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -357,10 +357,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 271
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -368,7 +368,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpS:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bdS:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -378,10 +378,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 272
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -389,7 +389,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpR:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bdR:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -399,10 +399,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 273
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -410,7 +410,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpT:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bdT:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -420,10 +420,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 274
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -431,7 +431,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqe:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bee:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -441,10 +441,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 275
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -452,7 +452,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqf:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bef:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -462,10 +462,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 276
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -473,7 +473,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqg:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->beg:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -483,10 +483,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 277
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -494,7 +494,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqh:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->beh:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -504,10 +504,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 278
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -515,7 +515,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqi:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bei:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -525,10 +525,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 279
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -536,7 +536,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqj:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bej:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -546,10 +546,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 280
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -557,7 +557,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqk:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bek:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -567,10 +567,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 284
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -578,7 +578,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqm:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bem:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -588,10 +588,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 285
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -599,7 +599,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqn:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->ben:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -609,10 +609,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 286
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -620,7 +620,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqo:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->beo:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -630,10 +630,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 287
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -641,7 +641,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqp:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bep:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -651,10 +651,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 289
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -662,7 +662,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqs:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bes:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -672,10 +672,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 290
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -683,7 +683,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqr:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->ber:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -693,10 +693,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 291
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -704,7 +704,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqq:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->beq:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -714,10 +714,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 292
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -725,7 +725,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqu:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->beu:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -735,10 +735,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 293
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -746,7 +746,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqv:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bev:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -756,10 +756,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 294
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -767,7 +767,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqw:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bew:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -777,10 +777,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 295
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -788,7 +788,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqx:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bex:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -798,10 +798,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 296
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -809,7 +809,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpU:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bdU:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -819,10 +819,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 297
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -830,7 +830,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpV:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bdV:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -840,10 +840,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 298
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -851,7 +851,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpW:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bdW:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -861,10 +861,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 299
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -872,7 +872,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpX:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bdX:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -882,10 +882,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 300
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -893,7 +893,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqa:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bea:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -903,10 +903,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 301
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -914,7 +914,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqb:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->beb:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -924,10 +924,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 302
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -935,7 +935,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqc:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bec:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -945,10 +945,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 303
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -956,7 +956,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqd:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bed:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -966,10 +966,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 305
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -977,7 +977,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqy:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bey:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -987,10 +987,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 306
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -998,7 +998,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqz:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bez:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1008,10 +1008,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 307
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1019,7 +1019,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqA:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->beA:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1029,10 +1029,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 309
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1040,7 +1040,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpY:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bdY:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1050,10 +1050,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 310
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1061,7 +1061,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpZ:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bdZ:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1071,10 +1071,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 312
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1082,7 +1082,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-boolean v2, p0, Lcom/tencent/mm/compatible/d/a;->bqD:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/compatible/d/a;->beD:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1092,10 +1092,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 313
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1103,7 +1103,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/compatible/d/a;->bqC:[S
+    iget-object v2, p0, Lcom/tencent/mm/compatible/d/a;->beC:[S
 
     const/4 v3, 0x0
 
@@ -1117,10 +1117,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 314
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1128,7 +1128,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/compatible/d/a;->bqC:[S
+    iget-object v2, p0, Lcom/tencent/mm/compatible/d/a;->beC:[S
 
     const/4 v3, 0x1
 
@@ -1142,10 +1142,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 316
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1153,7 +1153,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqE:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->beE:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1163,10 +1163,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 318
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1174,7 +1174,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqM:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->beM:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1184,10 +1184,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 319
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1195,7 +1195,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqN:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->beN:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1205,10 +1205,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 320
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1216,7 +1216,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqO:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->beO:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1226,10 +1226,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 321
-    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v0, "VoipAudioInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1237,7 +1237,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqP:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->beP:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1247,36 +1247,36 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 322
     return-void
 .end method
 
-.method public final nW()Z
+.method public final mm()Z
     .locals 1
 
     .prologue
     .line 163
-    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bpJ:I
+    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bdJ:I
 
     if-ltz v0, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bpK:I
+    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bdK:I
 
     if-ltz v0, :cond_2
 
     :cond_0
-    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bpJ:I
+    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bdJ:I
 
     if-gez v0, :cond_1
 
-    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bpK:I
+    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bdK:I
 
     if-gez v0, :cond_2
 
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bpL:I
+    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bdL:I
 
     if-lez v0, :cond_3
 
@@ -1294,12 +1294,12 @@
     goto :goto_0
 .end method
 
-.method public final nX()Z
+.method public final mn()Z
     .locals 1
 
     .prologue
     .line 170
-    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bpM:I
+    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bdM:I
 
     if-ltz v0, :cond_0
 
@@ -1314,12 +1314,12 @@
     goto :goto_0
 .end method
 
-.method public final nY()Z
+.method public final mo()Z
     .locals 1
 
     .prologue
     .line 174
-    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bpN:I
+    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bdN:I
 
     if-ltz v0, :cond_0
 
@@ -1334,28 +1334,28 @@
     goto :goto_0
 .end method
 
-.method public final nZ()I
+.method public final mp()I
     .locals 5
 
     .prologue
     const/4 v0, -0x1
 
     .line 178
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->nX()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->mn()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 179
-    iget v1, p0, Lcom/tencent/mm/compatible/d/a;->bpM:I
+    iget v1, p0, Lcom/tencent/mm/compatible/d/a;->bdM:I
 
     and-int/lit16 v1, v1, 0xe0
 
     shr-int/lit8 v1, v1, 0x5
 
     .line 180
-    const-string/jumbo v2, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v2, "VoipAudioInfo"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1371,7 +1371,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 181
     const/4 v2, 0x7
@@ -1390,7 +1390,7 @@
     goto :goto_0
 .end method
 
-.method public final oa()Z
+.method public final mq()Z
     .locals 6
 
     .prologue
@@ -1399,19 +1399,19 @@
     const/4 v2, 0x0
 
     .line 190
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->nX()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->mn()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 191
-    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bpM:I
+    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bdM:I
 
     and-int/lit8 v3, v0, 0x10
 
     .line 192
-    const-string/jumbo v4, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v4, "VoipAudioInfo"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1432,7 +1432,7 @@
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 193
     if-lez v3, :cond_0
@@ -1450,28 +1450,28 @@
     goto :goto_0
 .end method
 
-.method public final ob()I
+.method public final mr()I
     .locals 5
 
     .prologue
     const/4 v0, -0x1
 
     .line 199
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->nX()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->mn()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 200
-    iget v1, p0, Lcom/tencent/mm/compatible/d/a;->bpM:I
+    iget v1, p0, Lcom/tencent/mm/compatible/d/a;->bdM:I
 
     and-int/lit8 v1, v1, 0xe
 
     shr-int/lit8 v1, v1, 0x1
 
     .line 201
-    const-string/jumbo v2, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v2, "VoipAudioInfo"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1487,7 +1487,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 202
     const/4 v2, 0x7
@@ -1506,7 +1506,7 @@
     goto :goto_0
 .end method
 
-.method public final oc()Z
+.method public final ms()Z
     .locals 6
 
     .prologue
@@ -1515,19 +1515,19 @@
     const/4 v2, 0x0
 
     .line 211
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->nX()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->mn()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 212
-    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bpM:I
+    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bdM:I
 
     and-int/lit8 v3, v0, 0x1
 
     .line 213
-    const-string/jumbo v4, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v4, "VoipAudioInfo"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1548,7 +1548,7 @@
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 214
     if-lez v3, :cond_0
@@ -1566,28 +1566,28 @@
     goto :goto_0
 .end method
 
-.method public final od()I
+.method public final mt()I
     .locals 5
 
     .prologue
     const/4 v0, -0x1
 
     .line 220
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->nY()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->mo()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 221
-    iget v1, p0, Lcom/tencent/mm/compatible/d/a;->bpN:I
+    iget v1, p0, Lcom/tencent/mm/compatible/d/a;->bdN:I
 
     and-int/lit16 v1, v1, 0xe0
 
     shr-int/lit8 v1, v1, 0x5
 
     .line 222
-    const-string/jumbo v2, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v2, "VoipAudioInfo"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1603,7 +1603,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 223
     const/4 v2, 0x7
@@ -1622,28 +1622,28 @@
     goto :goto_0
 .end method
 
-.method public final oe()I
+.method public final mu()I
     .locals 5
 
     .prologue
     const/4 v0, -0x1
 
     .line 241
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->nY()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->mo()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 242
-    iget v1, p0, Lcom/tencent/mm/compatible/d/a;->bpN:I
+    iget v1, p0, Lcom/tencent/mm/compatible/d/a;->bdN:I
 
     and-int/lit8 v1, v1, 0xe
 
     shr-int/lit8 v1, v1, 0x1
 
     .line 243
-    const-string/jumbo v2, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+    const-string/jumbo v2, "VoipAudioInfo"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1659,7 +1659,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 244
     const/4 v2, 0x7
@@ -1687,172 +1687,172 @@
     const/4 v2, -0x1
 
     .line 97
-    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/a;->bpH:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/a;->bdH:Z
 
     .line 98
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpI:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bdI:I
 
     .line 99
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpJ:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bdJ:I
 
     .line 100
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpK:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bdK:I
 
     .line 101
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpL:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bdL:I
 
     .line 102
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpM:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bdM:I
 
     .line 103
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpN:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bdN:I
 
     .line 104
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpO:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bdO:I
 
     .line 106
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpQ:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bdQ:I
 
     .line 108
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpP:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bdP:I
 
     .line 110
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqt:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bet:I
 
     .line 111
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpR:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bdR:I
 
     .line 112
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpS:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bdS:I
 
     .line 113
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpT:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bdT:I
 
     .line 114
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqe:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bee:I
 
     .line 115
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqf:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bef:I
 
     .line 117
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqg:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->beg:I
 
     .line 118
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqh:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->beh:I
 
     .line 119
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqi:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bei:I
 
     .line 120
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqj:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bej:I
 
     .line 121
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqk:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bek:I
 
     .line 123
-    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/a;->bql:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/a;->bel:Z
 
     .line 125
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqm:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bem:I
 
     .line 126
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqn:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->ben:I
 
     .line 127
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqp:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bep:I
 
     .line 128
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqo:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->beo:I
 
     .line 130
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqs:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bes:I
 
     .line 131
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqq:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->beq:I
 
     .line 132
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqr:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->ber:I
 
     .line 133
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqu:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->beu:I
 
     .line 134
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqv:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bev:I
 
     .line 135
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqw:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bew:I
 
     .line 136
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqx:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bex:I
 
     .line 137
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpU:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bdU:I
 
     .line 138
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpV:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bdV:I
 
     .line 139
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpW:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bdW:I
 
     .line 140
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpX:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bdX:I
 
     .line 141
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqa:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bea:I
 
     .line 142
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqb:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->beb:I
 
     .line 143
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqc:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bec:I
 
     .line 144
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqd:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bed:I
 
     .line 146
-    iput v1, p0, Lcom/tencent/mm/compatible/d/a;->bqy:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/a;->bey:I
 
     .line 147
-    iput v1, p0, Lcom/tencent/mm/compatible/d/a;->bqz:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/a;->bez:I
 
     .line 148
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqA:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->beA:I
 
     .line 149
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpZ:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bdZ:I
 
     .line 150
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpY:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bdY:I
 
     .line 151
-    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/a;->bqD:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/a;->beD:Z
 
     .line 152
-    iget-object v0, p0, Lcom/tencent/mm/compatible/d/a;->bqC:[S
+    iget-object v0, p0, Lcom/tencent/mm/compatible/d/a;->beC:[S
 
     aput-short v2, v0, v1
 
     .line 153
-    iget-object v0, p0, Lcom/tencent/mm/compatible/d/a;->bqC:[S
+    iget-object v0, p0, Lcom/tencent/mm/compatible/d/a;->beC:[S
 
     const/4 v1, 0x1
 
     aput-short v2, v0, v1
 
     .line 154
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqE:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->beE:I
 
     .line 156
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqM:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->beM:I
 
     .line 157
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqN:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->beN:I
 
     .line 158
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqO:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->beO:I
 
     .line 159
-    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqP:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->beP:I
 
     .line 160
     return-void

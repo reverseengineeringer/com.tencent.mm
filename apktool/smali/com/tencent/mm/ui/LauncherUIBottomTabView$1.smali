@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field private final hjY:J
+.field private final hyD:J
 
-.field final synthetic kog:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
+.field final synthetic kNm:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
 
 
 # direct methods
@@ -29,14 +29,14 @@
 
     .prologue
     .line 73
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kog:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kNm:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 75
     const-wide/16 v0, 0x12c
 
-    iput-wide v0, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->hjY:J
+    iput-wide v0, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->hyD:J
 
     return-void
 .end method
@@ -44,12 +44,12 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 8
+    .locals 10
 
     .prologue
-    const-wide/16 v6, 0x12c
+    const-wide/16 v8, 0x12c
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     .line 79
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -63,7 +63,7 @@
     move-result v0
 
     .line 80
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kog:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kNm:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/LauncherUIBottomTabView;->a(Lcom/tencent/mm/ui/LauncherUIBottomTabView;)I
 
@@ -76,47 +76,47 @@
     .line 81
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kog:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kNm:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
 
-    invoke-static {v3}, Lcom/tencent/mm/ui/LauncherUIBottomTabView;->b(Lcom/tencent/mm/ui/LauncherUIBottomTabView;)J
+    invoke-static {v1}, Lcom/tencent/mm/ui/LauncherUIBottomTabView;->b(Lcom/tencent/mm/ui/LauncherUIBottomTabView;)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    sub-long/2addr v1, v3
+    sub-long/2addr v2, v4
 
-    cmp-long v1, v1, v6
+    cmp-long v1, v2, v8
 
     if-gtz v1, :cond_0
 
     .line 82
-    const-string/jumbo v1, "!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ="
+    const-string/jumbo v1, "MicroMsg.LauncherUITabView"
 
     const-string/jumbo v2, "onMainTabDoubleClick"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 83
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kog:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kNm:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/LauncherUIBottomTabView;->c(Lcom/tencent/mm/ui/LauncherUIBottomTabView;)Lcom/tencent/mm/sdk/platformtools/aa;
+    invoke-static {v1}, Lcom/tencent/mm/ui/LauncherUIBottomTabView;->c(Lcom/tencent/mm/ui/LauncherUIBottomTabView;)Lcom/tencent/mm/sdk/platformtools/ac;
 
     move-result-object v1
 
-    invoke-virtual {v1, v5}, Lcom/tencent/mm/sdk/platformtools/aa;->removeMessages(I)V
+    invoke-virtual {v1, v6}, Lcom/tencent/mm/sdk/platformtools/ac;->removeMessages(I)V
 
     .line 84
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    new-instance v2, Lcom/tencent/mm/d/a/gn;
+    new-instance v2, Lcom/tencent/mm/e/a/gy;
 
-    invoke-direct {v2}, Lcom/tencent/mm/d/a/gn;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/e/a/gy;-><init>()V
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 85
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kog:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kNm:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -125,7 +125,7 @@
     invoke-static {v1, v2, v3}, Lcom/tencent/mm/ui/LauncherUIBottomTabView;->a(Lcom/tencent/mm/ui/LauncherUIBottomTabView;J)J
 
     .line 86
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kog:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kNm:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
 
     invoke-static {v1, v0}, Lcom/tencent/mm/ui/LauncherUIBottomTabView;->a(Lcom/tencent/mm/ui/LauncherUIBottomTabView;I)I
 
@@ -135,7 +135,7 @@
 
     .line 91
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kog:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kNm:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/LauncherUIBottomTabView;->d(Lcom/tencent/mm/ui/LauncherUIBottomTabView;)Lcom/tencent/mm/ui/c$a;
 
@@ -146,7 +146,7 @@
     .line 92
     if-nez v0, :cond_1
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kog:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kNm:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/LauncherUIBottomTabView;->a(Lcom/tencent/mm/ui/LauncherUIBottomTabView;)I
 
@@ -156,14 +156,14 @@
 
     .line 93
     :cond_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ="
+    const-string/jumbo v1, "MicroMsg.LauncherUITabView"
 
     const-string/jumbo v2, "directly dispatch tab click event"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 94
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kog:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kNm:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -172,41 +172,41 @@
     invoke-static {v1, v2, v3}, Lcom/tencent/mm/ui/LauncherUIBottomTabView;->a(Lcom/tencent/mm/ui/LauncherUIBottomTabView;J)J
 
     .line 95
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kog:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kNm:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
 
     invoke-static {v1, v0}, Lcom/tencent/mm/ui/LauncherUIBottomTabView;->a(Lcom/tencent/mm/ui/LauncherUIBottomTabView;I)I
 
     .line 96
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kog:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kNm:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/LauncherUIBottomTabView;->d(Lcom/tencent/mm/ui/LauncherUIBottomTabView;)Lcom/tencent/mm/ui/c$a;
 
     move-result-object v1
 
-    invoke-interface {v1, v0}, Lcom/tencent/mm/ui/c$a;->gr(I)V
+    invoke-interface {v1, v0}, Lcom/tencent/mm/ui/c$a;->ho(I)V
 
     goto :goto_0
 
     .line 99
     :cond_2
-    const-string/jumbo v1, "!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ="
+    const-string/jumbo v1, "MicroMsg.LauncherUITabView"
 
     const-string/jumbo v2, "do double click check"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 100
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kog:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kNm:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/LauncherUIBottomTabView;->c(Lcom/tencent/mm/ui/LauncherUIBottomTabView;)Lcom/tencent/mm/sdk/platformtools/aa;
+    invoke-static {v1}, Lcom/tencent/mm/ui/LauncherUIBottomTabView;->c(Lcom/tencent/mm/ui/LauncherUIBottomTabView;)Lcom/tencent/mm/sdk/platformtools/ac;
 
     move-result-object v1
 
-    invoke-virtual {v1, v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/aa;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {v1, v6, v8, v9}, Lcom/tencent/mm/sdk/platformtools/ac;->sendEmptyMessageDelayed(IJ)Z
 
     .line 104
     :cond_3
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kog:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kNm:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -215,12 +215,12 @@
     invoke-static {v1, v2, v3}, Lcom/tencent/mm/ui/LauncherUIBottomTabView;->a(Lcom/tencent/mm/ui/LauncherUIBottomTabView;J)J
 
     .line 105
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kog:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUIBottomTabView$1;->kNm:Lcom/tencent/mm/ui/LauncherUIBottomTabView;
 
     invoke-static {v1, v0}, Lcom/tencent/mm/ui/LauncherUIBottomTabView;->a(Lcom/tencent/mm/ui/LauncherUIBottomTabView;I)I
 
     .line 107
-    const-string/jumbo v1, "!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ="
+    const-string/jumbo v1, "MicroMsg.LauncherUITabView"
 
     const-string/jumbo v2, "on tab click, index %d, but listener is null"
 
@@ -234,9 +234,9 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    aput-object v0, v3, v5
+    aput-object v0, v3, v6
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method

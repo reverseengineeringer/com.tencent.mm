@@ -17,7 +17,7 @@
     return-void
 .end method
 
-.method public static a(Landroid/app/Activity;I)Lcom/tencent/mm/compatible/d/c$a$a;
+.method public static b(Landroid/app/Activity;I)Lcom/tencent/mm/compatible/d/c$a$a;
     .locals 11
 
     .prologue
@@ -33,16 +33,16 @@
     invoke-direct {v2}, Lcom/tencent/mm/compatible/d/c$a$a;-><init>()V
 
     .line 312
-    iput-object v0, v2, Lcom/tencent/mm/compatible/d/c$a$a;->brz:Landroid/hardware/Camera;
+    iput-object v0, v2, Lcom/tencent/mm/compatible/d/c$a$a;->bfz:Landroid/hardware/Camera;
 
     .line 314
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gq()J
 
-    move-result-wide v3
+    move-result-wide v4
 
     .line 315
-    const-string/jumbo v5, "!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1"
+    const-string/jumbo v3, "MicroMsg.CameraUtil"
 
     const-string/jumbo v6, "ashu::begin to try Call Camera.open cameraID %d"
 
@@ -58,17 +58,17 @@
 
     aput-object v9, v7, v8
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 316
     invoke-static {p1}, Landroid/hardware/Camera;->open(I)Landroid/hardware/Camera;
 
-    move-result-object v5
+    move-result-object v3
 
-    iput-object v5, v2, Lcom/tencent/mm/compatible/d/c$a$a;->brz:Landroid/hardware/Camera;
+    iput-object v3, v2, Lcom/tencent/mm/compatible/d/c$a$a;->bfz:Landroid/hardware/Camera;
 
     .line 317
-    const-string/jumbo v5, "!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1"
+    const-string/jumbo v3, "MicroMsg.CameraUtil"
 
     const-string/jumbo v6, "ashu::Call Camera.open back, use %dms"
 
@@ -78,31 +78,31 @@
 
     const/4 v8, 0x0
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/ay;->ao(J)J
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/be;->av(J)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v3
+    move-result-object v4
 
-    aput-object v3, v7, v8
+    aput-object v4, v7, v8
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 324
-    iget-object v3, v2, Lcom/tencent/mm/compatible/d/c$a$a;->brz:Landroid/hardware/Camera;
+    iget-object v3, v2, Lcom/tencent/mm/compatible/d/c$a$a;->bfz:Landroid/hardware/Camera;
 
     if-nez v3, :cond_0
 
     .line 325
-    const-string/jumbo v1, "!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1"
+    const-string/jumbo v1, "MicroMsg.CameraUtil"
 
     const-string/jumbo v2, "open camera error, not exception, but camera null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 368
     :goto_0
@@ -113,7 +113,7 @@
     move-exception v2
 
     .line 319
-    const-string/jumbo v3, "!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1"
+    const-string/jumbo v3, "MicroMsg.CameraUtil"
 
     const-string/jumbo v4, "open camera error %s"
 
@@ -125,7 +125,7 @@
 
     aput-object v2, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -136,12 +136,12 @@
     invoke-direct {v3}, Landroid/hardware/Camera$CameraInfo;-><init>()V
 
     .line 330
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gq()J
 
     move-result-wide v4
 
     .line 331
-    const-string/jumbo v0, "!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1"
+    const-string/jumbo v0, "MicroMsg.CameraUtil"
 
     const-string/jumbo v6, "ashu::begin to Call Camera.getCameraInfo cameraID %d"
 
@@ -153,19 +153,19 @@
 
     aput-object v8, v7, v1
 
-    invoke-static {v0, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 332
     invoke-static {p1, v3}, Landroid/hardware/Camera;->getCameraInfo(ILandroid/hardware/Camera$CameraInfo;)V
 
     .line 333
-    const-string/jumbo v0, "!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1"
+    const-string/jumbo v0, "MicroMsg.CameraUtil"
 
     const-string/jumbo v6, "ashu::Call Camera.getCameraInfo back, use %dms"
 
     new-array v7, v10, [Ljava/lang/Object;
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/ay;->ao(J)J
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/be;->av(J)J
 
     move-result-wide v4
 
@@ -175,7 +175,7 @@
 
     aput-object v4, v7, v1
 
-    invoke-static {v0, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 335
     invoke-virtual {p0}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
@@ -213,12 +213,12 @@
 
     .line 363
     :goto_2
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gq()J
 
     move-result-wide v4
 
     .line 364
-    const-string/jumbo v6, "!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1"
+    const-string/jumbo v6, "MicroMsg.CameraUtil"
 
     const-string/jumbo v7, "ashu::begin to Call Camera.setDisplayOrientation %d"
 
@@ -230,21 +230,21 @@
 
     aput-object v9, v8, v1
 
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 365
-    iget-object v6, v2, Lcom/tencent/mm/compatible/d/c$a$a;->brz:Landroid/hardware/Camera;
+    iget-object v6, v2, Lcom/tencent/mm/compatible/d/c$a$a;->bfz:Landroid/hardware/Camera;
 
     invoke-virtual {v6, v0}, Landroid/hardware/Camera;->setDisplayOrientation(I)V
 
     .line 366
-    const-string/jumbo v0, "!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1"
+    const-string/jumbo v0, "MicroMsg.CameraUtil"
 
     const-string/jumbo v6, "ashu::Call Camera.setDisplayOrientation back, use %dms"
 
     new-array v7, v10, [Ljava/lang/Object;
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/ay;->ao(J)J
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/be;->av(J)J
 
     move-result-wide v4
 
@@ -254,12 +254,12 @@
 
     aput-object v4, v7, v1
 
-    invoke-static {v0, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 367
     iget v0, v3, Landroid/hardware/Camera$CameraInfo;->orientation:I
 
-    iput v0, v2, Lcom/tencent/mm/compatible/d/c$a$a;->brw:I
+    iput v0, v2, Lcom/tencent/mm/compatible/d/c$a$a;->bfw:I
 
     move-object v0, v2
 

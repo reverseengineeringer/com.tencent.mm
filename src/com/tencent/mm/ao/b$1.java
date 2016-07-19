@@ -1,30 +1,26 @@
 package com.tencent.mm.ao;
 
-import com.tencent.mm.a.e;
-import com.tencent.mm.compatible.util.f;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.u;
+import android.os.Looper;
+import android.os.MessageQueue;
+import android.os.MessageQueue.IdleHandler;
+import com.tencent.mm.sdk.platformtools.v;
 
-final class b$1
-  implements af.a
+public final class b$1
+  implements Runnable
 {
-  b$1(b paramb) {}
+  public b$1(b paramb) {}
   
-  public final boolean lj()
+  public final void run()
   {
-    long l = e.aw(chY.filename);
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvqfYc64hc25hhxPaLMWlC3U=", f.oZ() + " onTimerExpired: file:" + chY.filename + " nowlen:" + l + " oldoff:" + chY.ccD + " isFin:" + chY.anR);
-    if ((l - chY.ccD < 3300L) && (!chY.anR)) {
-      return true;
-    }
-    if (chY.a(chY.bFs, chY.anM) == -1)
+    Looper.myQueue().addIdleHandler(new MessageQueue.IdleHandler()
     {
-      chY.anP = (f.oX() + 40000);
-      chY.anM.a(3, -1, "doScene failed", chY);
-    }
-    return false;
+      public final boolean queueIdle()
+      {
+        v.d("MicroMsg.SpeexEncoderWorker", "queueIdle  ");
+        d.Dv().b(bWv);
+        return false;
+      }
+    });
   }
 }
 

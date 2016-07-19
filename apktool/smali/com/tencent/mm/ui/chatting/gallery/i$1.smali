@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/gallery/i;->a(Lcom/tencent/mm/storage/ag;Lcom/tencent/mm/an/m;)V
+    value = Lcom/tencent/mm/ui/chatting/gallery/i;->a(Lcom/tencent/mm/storage/ai;Lcom/tencent/mm/aq/q;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,24 +18,24 @@
 
 
 # instance fields
-.field final synthetic bRe:Lcom/tencent/mm/storage/ag;
+.field final synthetic bKB:Lcom/tencent/mm/storage/ai;
 
-.field final synthetic kWg:Lcom/tencent/mm/an/m;
+.field final synthetic lHh:Lcom/tencent/mm/ui/chatting/gallery/i;
 
-.field final synthetic lgV:Lcom/tencent/mm/ui/chatting/gallery/i;
+.field final synthetic lwm:Lcom/tencent/mm/aq/q;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/chatting/gallery/i;Lcom/tencent/mm/storage/ag;Lcom/tencent/mm/an/m;)V
+.method constructor <init>(Lcom/tencent/mm/ui/chatting/gallery/i;Lcom/tencent/mm/storage/ai;Lcom/tencent/mm/aq/q;)V
     .locals 0
 
     .prologue
-    .line 244
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/i$1;->lgV:Lcom/tencent/mm/ui/chatting/gallery/i;
+    .line 262
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/i$1;->lHh:Lcom/tencent/mm/ui/chatting/gallery/i;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/gallery/i$1;->bRe:Lcom/tencent/mm/storage/ag;
+    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/gallery/i$1;->bKB:Lcom/tencent/mm/storage/ai;
 
-    iput-object p3, p0, Lcom/tencent/mm/ui/chatting/gallery/i$1;->kWg:Lcom/tencent/mm/an/m;
+    iput-object p3, p0, Lcom/tencent/mm/ui/chatting/gallery/i$1;->lwm:Lcom/tencent/mm/aq/q;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,20 +48,20 @@
     .locals 3
 
     .prologue
-    .line 248
+    .line 266
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/tencent/mm/ui/chatting/gallery/i;->kWe:Z
+    sput-boolean v0, Lcom/tencent/mm/ui/chatting/gallery/i;->lwk:Z
 
-    .line 249
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/i$1;->lgV:Lcom/tencent/mm/ui/chatting/gallery/i;
+    .line 267
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/i$1;->lHh:Lcom/tencent/mm/ui/chatting/gallery/i;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/gallery/i$1;->bRe:Lcom/tencent/mm/storage/ag;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/gallery/i$1;->bKB:Lcom/tencent/mm/storage/ai;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/gallery/i$1;->kWg:Lcom/tencent/mm/an/m;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/gallery/i$1;->lwm:Lcom/tencent/mm/aq/q;
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/chatting/gallery/i;->a(Lcom/tencent/mm/ui/chatting/gallery/i;Lcom/tencent/mm/storage/ag;Lcom/tencent/mm/an/m;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/chatting/gallery/i;->a(Lcom/tencent/mm/ui/chatting/gallery/i;Lcom/tencent/mm/storage/ai;Lcom/tencent/mm/aq/q;)V
 
-    .line 250
+    .line 268
     return-void
 .end method

@@ -2,21 +2,21 @@ package com.tencent.smtt.sdk;
 
 public final class h$a
 {
-  private int lSj = 10;
-  int lSk = 3;
-  int[] lSl = new int[lSk];
-  int lSm = 0;
-  int lSn = 0;
+  private int mtY = 10;
+  int mtZ = 3;
+  int[] mua = new int[mtZ];
+  int mub = 0;
+  int muc = 0;
   
   public h$a(h paramh, int paramInt)
   {
-    lSl[0] = paramInt;
-    lSn += 1;
+    mua[0] = paramInt;
+    muc += 1;
   }
   
   public final boolean empty()
   {
-    return lSn == lSm;
+    return muc == mub;
   }
   
   public final String toString()
@@ -25,10 +25,10 @@ public final class h$a
       return "";
     }
     StringBuilder localStringBuilder = new StringBuilder("[");
-    int i = lSm;
-    while (i < lSn)
+    int i = mub;
+    while (i < muc)
     {
-      localStringBuilder.append(String.valueOf(lSl[i]) + ",");
+      localStringBuilder.append(String.valueOf(mua[i]) + ",");
       i += 1;
     }
     i = localStringBuilder.length();

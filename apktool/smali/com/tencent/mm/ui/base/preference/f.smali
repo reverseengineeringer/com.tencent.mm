@@ -4,13 +4,13 @@
 
 
 # virtual methods
-.method public abstract GB(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
+.method public abstract IR(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
 .end method
 
-.method public abstract GC(Ljava/lang/String;)Z
+.method public abstract IS(Ljava/lang/String;)Z
 .end method
 
-.method public abstract GD(Ljava/lang/String;)I
+.method public abstract IT(Ljava/lang/String;)I
 .end method
 
 .method public abstract a(Lcom/tencent/mm/ui/base/preference/Preference;)V
@@ -19,10 +19,10 @@
 .method public abstract a(Lcom/tencent/mm/ui/base/preference/Preference;I)V
 .end method
 
-.method public abstract addPreferencesFromResource(I)V
+.method public abstract aD(Ljava/lang/String;Z)V
 .end method
 
-.method public abstract at(Ljava/lang/String;Z)V
+.method public abstract addPreferencesFromResource(I)V
 .end method
 
 .method public abstract b(Lcom/tencent/mm/ui/base/preference/Preference;)Z

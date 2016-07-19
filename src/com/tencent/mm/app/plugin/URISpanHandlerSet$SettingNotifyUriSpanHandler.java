@@ -3,7 +3,7 @@ package com.tencent.mm.app.plugin;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.pluginsdk.l;
 import com.tencent.mm.pluginsdk.ui.applet.g;
 import com.tencent.mm.pluginsdk.ui.d.b;
@@ -25,11 +25,11 @@ class URISpanHandlerSet$SettingNotifyUriSpanHandler
       if (paramb != null) {
         paramb.a(paramg);
       }
-      paramg = LauncherUI.bat();
+      paramg = LauncherUI.bfJ();
       if (paramg != null) {
-        paramg.Gi("tab_settings");
+        paramg.Ix("tab_settings");
       }
-      c.u(URISpanHandlerSet.a(ang), "setting", ".ui.setting.SettingsNotificationUI");
+      c.v(URISpanHandlerSet.a(ZU), "setting", ".ui.setting.SettingsNotificationUI");
       return true;
     }
     return false;
@@ -39,22 +39,22 @@ class URISpanHandlerSet$SettingNotifyUriSpanHandler
   {
     if (paramString.equals("weixin://setting/notify"))
     {
-      paramString = LauncherUI.bat();
+      paramString = LauncherUI.bfJ();
       if (paramString != null) {
-        paramString.Gi("tab_settings");
+        paramString.Ix("tab_settings");
       }
       paramString = new Intent();
       paramString.addFlags(67108864);
-      if ((URISpanHandlerSet.a(ang) instanceof Service)) {
+      if ((URISpanHandlerSet.a(ZU) instanceof Service)) {
         paramString.addFlags(268435456);
       }
-      c.c(URISpanHandlerSet.a(ang), "setting", ".ui.setting.SettingsNotificationUI", paramString);
+      c.c(URISpanHandlerSet.a(ZU), "setting", ".ui.setting.SettingsNotificationUI", paramString);
       return true;
     }
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     if (paramString.trim().startsWith("weixin://setting/notify")) {
       return new g(paramString, 9, null);
@@ -62,7 +62,7 @@ class URISpanHandlerSet$SettingNotifyUriSpanHandler
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 9 };
   }

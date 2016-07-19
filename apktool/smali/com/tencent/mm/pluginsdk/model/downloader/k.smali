@@ -4,13 +4,13 @@
 
 
 # virtual methods
-.method public abstract bu(J)V
+.method public abstract bF(J)V
 .end method
 
-.method public abstract bv(J)V
+.method public abstract bG(J)V
 .end method
 
-.method public abstract c(JLjava/lang/String;)V
+.method public abstract d(JLjava/lang/String;)V
 .end method
 
 .method public abstract onTaskFailed(J)V

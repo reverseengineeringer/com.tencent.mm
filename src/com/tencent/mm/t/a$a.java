@@ -1,8 +1,24 @@
 package com.tencent.mm.t;
 
-public abstract interface a$a
+import com.tencent.mm.sdk.platformtools.be;
+
+public final class a$a
 {
-  public abstract void a(boolean paramBoolean, String paramString);
+  public int byj;
+  public com.tencent.mm.ax.a byl;
+  public com.tencent.mm.ax.a bym;
+  public int byn = 0;
+  public int byo = 0;
+  public boolean byp = true;
+  public String uri;
+  
+  public final a vA()
+  {
+    if ((byl == null) || (bym == null) || (be.kf(uri)) || (byj <= 0) || (byn == Integer.MIN_VALUE) || (byo == Integer.MIN_VALUE)) {
+      throw new IllegalArgumentException();
+    }
+    return new a(byl, bym, uri, byj, byn, byo, byp, (byte)0);
+  }
 }
 
 /* Location:

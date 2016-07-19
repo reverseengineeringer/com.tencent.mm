@@ -15,15 +15,14 @@ import android.view.View.OnKeyListener;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
-import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import com.tencent.mm.model.i;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.tools.a.c;
 import com.tencent.mm.ui.widget.MMEditText;
 import java.util.ArrayList;
@@ -33,36 +32,36 @@ import java.util.List;
 public class MultiSelectContactView
   extends LinearLayout
 {
-  private LayoutInflater fbg;
-  private HorizontalScrollView iGV;
-  private LinearLayout iGW;
-  private View iGX;
-  public MMEditText iGY;
-  private List iGZ;
-  private Animation iHa;
-  private int iHb = 0;
-  private View iHc;
-  private a iHd;
-  private b iHe;
-  private c iHf;
-  private List iHg;
-  boolean iHh = false;
+  private LayoutInflater exJ;
+  private HorizontalScrollView jdQ;
+  private LinearLayout jdR;
+  private View jdS;
+  public MMEditText jdT;
+  private List<String> jdU;
+  private Animation jdV;
+  private int jdW = 0;
+  private View jdX;
+  public a jdY;
+  public b jdZ;
+  public c jea;
+  private List<View> jeb;
+  boolean jec = false;
   private int padding = 0;
   
   public MultiSelectContactView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    fbg = LayoutInflater.from(paramContext);
-    fbg.inflate(2131363063, this, true);
-    iGV = ((HorizontalScrollView)findViewById(2131169103));
-    iGY = ((MMEditText)findViewById(2131167311));
-    iGW = ((LinearLayout)findViewById(2131169104));
-    iGX = findViewById(2131167310);
-    iGZ = new LinkedList();
-    iHa = AnimationUtils.loadAnimation(paramContext, 2130837575);
-    c.a(iGY).rZ(100).a(null);
-    iHc = findViewById(2131166057);
-    iGY.addTextChangedListener(new TextWatcher()
+    exJ = LayoutInflater.from(paramContext);
+    exJ.inflate(2130904094, this, true);
+    jdQ = ((HorizontalScrollView)findViewById(2131758218));
+    jdT = ((MMEditText)findViewById(2131758221));
+    jdR = ((LinearLayout)findViewById(2131758219));
+    jdS = findViewById(2131758220);
+    jdU = new LinkedList();
+    jdV = AnimationUtils.loadAnimation(paramContext, 2130968612);
+    c.a(jdT).ud(100).a(null);
+    jdX = findViewById(2131756548);
+    jdT.addTextChangedListener(new TextWatcher()
     {
       public final void afterTextChanged(Editable paramAnonymousEditable) {}
       
@@ -72,11 +71,11 @@ public class MultiSelectContactView
       {
         MultiSelectContactView.a(MultiSelectContactView.this);
         if (MultiSelectContactView.b(MultiSelectContactView.this) != null) {
-          MultiSelectContactView.b(MultiSelectContactView.this).AD(paramAnonymousCharSequence.toString());
+          MultiSelectContactView.b(MultiSelectContactView.this).CE(paramAnonymousCharSequence.toString());
         }
       }
     });
-    iGY.setOnKeyListener(new View.OnKeyListener()
+    jdT.setOnKeyListener(new View.OnKeyListener()
     {
       public final boolean onKey(View paramAnonymousView, int paramAnonymousInt, KeyEvent paramAnonymousKeyEvent)
       {
@@ -86,24 +85,24 @@ public class MultiSelectContactView
         return false;
       }
     });
-    iHg = new ArrayList();
-    iGY.clearFocus();
-    iGY.setOnFocusChangeListener(new View.OnFocusChangeListener()
+    jeb = new ArrayList();
+    jdT.clearFocus();
+    jdT.setOnFocusChangeListener(new View.OnFocusChangeListener()
     {
       public final void onFocusChange(View paramAnonymousView, boolean paramAnonymousBoolean)
       {
         if (paramAnonymousBoolean)
         {
-          MultiSelectContactView.e(MultiSelectContactView.this).setBackgroundResource(2130970444);
+          MultiSelectContactView.e(MultiSelectContactView.this).setBackgroundResource(2130838514);
           MultiSelectContactView.e(MultiSelectContactView.this).setPadding(MultiSelectContactView.f(MultiSelectContactView.this), MultiSelectContactView.f(MultiSelectContactView.this), MultiSelectContactView.f(MultiSelectContactView.this), MultiSelectContactView.f(MultiSelectContactView.this));
         }
         for (;;)
         {
           if (MultiSelectContactView.g(MultiSelectContactView.this) != null) {
-            MultiSelectContactView.g(MultiSelectContactView.this).aRc();
+            MultiSelectContactView.g(MultiSelectContactView.this).aVN();
           }
           return;
-          MultiSelectContactView.e(MultiSelectContactView.this).setBackgroundResource(2130970418);
+          MultiSelectContactView.e(MultiSelectContactView.this).setBackgroundResource(2130838515);
           MultiSelectContactView.e(MultiSelectContactView.this).setPadding(MultiSelectContactView.f(MultiSelectContactView.this), MultiSelectContactView.f(MultiSelectContactView.this), MultiSelectContactView.f(MultiSelectContactView.this), MultiSelectContactView.f(MultiSelectContactView.this));
         }
       }
@@ -115,13 +114,13 @@ public class MultiSelectContactView
     });
   }
   
-  private View AC(String paramString)
+  private View CD(String paramString)
   {
-    int j = iGW.getChildCount();
+    int j = jdR.getChildCount();
     int i = 0;
     while (i < j)
     {
-      View localView = iGW.getChildAt(i);
+      View localView = jdR.getChildAt(i);
       if (paramString.equals(localView.getTag())) {
         return localView;
       }
@@ -132,12 +131,12 @@ public class MultiSelectContactView
   
   private void a(final View paramView, boolean paramBoolean1, boolean paramBoolean2)
   {
-    if ((paramBoolean1) && (iHd != null)) {
-      iHd.rc(paramView.getTag().toString());
+    if ((paramBoolean1) && (jdY != null)) {
+      jdY.sz(paramView.getTag().toString());
     }
     if (paramBoolean2)
     {
-      Animation localAnimation = AnimationUtils.loadAnimation(getContext(), 2130837603);
+      Animation localAnimation = AnimationUtils.loadAnimation(getContext(), 2130968613);
       localAnimation.setAnimationListener(new Animation.AnimationListener()
       {
         public final void onAnimationEnd(Animation paramAnonymousAnimation)
@@ -146,7 +145,7 @@ public class MultiSelectContactView
           {
             public final void run()
             {
-              MultiSelectContactView.h(MultiSelectContactView.this).removeView(cqb);
+              MultiSelectContactView.h(MultiSelectContactView.this).removeView(clo);
               MultiSelectContactView.i(MultiSelectContactView.this);
               MultiSelectContactView.a(MultiSelectContactView.this, MultiSelectContactView.h(MultiSelectContactView.this).getChildCount());
             }
@@ -160,25 +159,25 @@ public class MultiSelectContactView
       paramView.startAnimation(localAnimation);
       return;
     }
-    iGW.removeView(paramView);
-    aRb();
-    oq(iGW.getChildCount());
+    jdR.removeView(paramView);
+    aVL();
+    pV(jdR.getChildCount());
   }
   
-  private void aQZ()
+  private void aVJ()
   {
-    if (iGW.getChildCount() == 0) {}
-    while (!iHh) {
+    if (jdR.getChildCount() == 0) {}
+    while (!jec) {
       return;
     }
-    View localView = iGW.getChildAt(iGW.getChildCount() - 1);
-    iHh = false;
-    localView.findViewById(2131167961).setVisibility(8);
+    View localView = jdR.getChildAt(jdR.getChildCount() - 1);
+    jec = false;
+    localView.findViewById(2131758835).setVisibility(8);
   }
   
-  private void aRa()
+  private void aVK()
   {
-    iGW.post(new Runnable()
+    jdR.post(new Runnable()
     {
       public final void run()
       {
@@ -187,76 +186,81 @@ public class MultiSelectContactView
     });
   }
   
-  private void aRb()
+  private void aVL()
   {
-    if (iGW.getChildCount() == 0)
+    if (jdR.getChildCount() == 0)
     {
-      iGX.setVisibility(0);
+      jdS.setVisibility(0);
       return;
     }
-    iGX.setVisibility(8);
+    jdS.setVisibility(8);
   }
   
-  private void oq(int paramInt)
+  private void pV(int paramInt)
   {
-    if (iHb <= 0)
+    if (jdW <= 0)
     {
-      iHb += getResources().getDimensionPixelSize(2131034581);
+      jdW += getResources().getDimensionPixelSize(2131427637);
       i = BackwardSupportUtil.b.a(getContext(), 40.0F);
-      int j = (int)iGY.getPaint().measureText(getContext().getString(2131430899));
-      int k = iHb;
-      iHb = (Math.max(i, j) + k);
+      int j = (int)jdT.getPaint().measureText(getContext().getString(2131231009));
+      int k = jdW;
+      jdW = (Math.max(i, j) + k);
     }
-    if (iHb <= 0) {
+    if (jdW <= 0) {
       return;
     }
-    int i = iHc.getWidth();
-    paramInt *= (getResources().getDimensionPixelSize(2131034638) + getResources().getDimensionPixelSize(2131034576));
-    u.v("!56@/B4Tb64lLpIV90IJEnqSdLjmnZq8oppFW6wgwrHFfV7MdTncY5Eqng==", "parentWidth:%d, avatarWidth:%d, minInputAreaWidth:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(paramInt), Integer.valueOf(iHb) });
-    LinearLayout.LayoutParams localLayoutParams = (LinearLayout.LayoutParams)iGV.getLayoutParams();
-    if (i - paramInt > iHb)
+    int i = jdX.getWidth();
+    paramInt *= (getResources().getDimensionPixelSize(2131427495) + getResources().getDimensionPixelSize(2131427463));
+    v.v("MicroMsg.MultiSeclectContactView", "parentWidth:%d, avatarWidth:%d, minInputAreaWidth:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(paramInt), Integer.valueOf(jdW) });
+    LinearLayout.LayoutParams localLayoutParams = (LinearLayout.LayoutParams)jdQ.getLayoutParams();
+    if (i - paramInt > jdW)
     {
       width = -2;
       return;
     }
-    width = (i - iHb);
+    width = (i - jdW);
   }
   
-  public final void AA(String paramString)
+  public final void CB(String paramString)
   {
-    if (ay.kz(paramString)) {
+    if (be.kf(paramString)) {
       return;
     }
-    if (iGZ.contains(paramString))
+    if (jdU.contains(paramString))
     {
-      u.i("!56@/B4Tb64lLpIV90IJEnqSdLjmnZq8oppFW6wgwrHFfV7MdTncY5Eqng==", "fixed user cant change");
+      v.i("MicroMsg.MultiSeclectContactView", "fixed user cant change");
       return;
     }
-    aQZ();
-    View localView = AC(paramString);
+    aVJ();
+    View localView = CD(paramString);
     if (localView != null)
     {
       a(localView, false, false);
       return;
     }
-    aj(paramString, true);
+    as(paramString, true);
   }
   
-  public final void AB(String paramString)
+  public final void CC(String paramString)
   {
-    paramString = AC(paramString);
+    paramString = CD(paramString);
     if (paramString != null) {
       a(paramString, false, false);
     }
   }
   
-  public final void aj(String paramString, boolean paramBoolean)
+  public final String aVM()
   {
-    oq(iGW.getChildCount() + 1);
-    View localView = fbg.inflate(2131363006, null, true);
-    ImageView localImageView = (ImageView)localView.findViewById(2131165640);
-    a.b.b(localImageView, paramString);
-    localImageView.setContentDescription(i.dY(paramString));
+    return jdT.getText().toString();
+  }
+  
+  public final void as(String paramString, boolean paramBoolean)
+  {
+    pV(jdR.getChildCount() + 1);
+    View localView = exJ.inflate(2130904309, null, true);
+    ImageView localImageView = (ImageView)localView.findViewById(2131756695);
+    a.b.a(localImageView, paramString);
+    localImageView.setContentDescription(i.ej(paramString));
     localView.setTag(paramString);
     localView.setOnClickListener(new View.OnClickListener()
     {
@@ -266,75 +270,37 @@ public class MultiSelectContactView
       }
     });
     if (paramBoolean) {
-      localView.startAnimation(iHa);
+      localView.startAnimation(jdV);
     }
-    iGW.addView(localView);
-    aRb();
+    jdR.addView(localView);
+    aVL();
     paramString = (LinearLayout.LayoutParams)localView.getLayoutParams();
-    height = getResources().getDimensionPixelSize(2131034638);
-    width = getResources().getDimensionPixelSize(2131034638);
-    rightMargin = getResources().getDimensionPixelSize(2131034576);
+    height = getResources().getDimensionPixelSize(2131427495);
+    width = getResources().getDimensionPixelSize(2131427495);
+    rightMargin = getResources().getDimensionPixelSize(2131427463);
     localView.setLayoutParams(paramString);
-    aRa();
+    aVK();
   }
   
   public void clearFocus()
   {
-    iGY.clearFocus();
-    aQZ();
-  }
-  
-  public EditText getInputText()
-  {
-    return iGY;
-  }
-  
-  public String getSearchContent()
-  {
-    return iGY.getText().toString();
-  }
-  
-  public int getSelectedCount()
-  {
-    return iGW.getChildCount();
-  }
-  
-  public void setFixedUserList(List paramList)
-  {
-    if (paramList == null) {
-      return;
-    }
-    iGZ.addAll(paramList);
-  }
-  
-  public void setOnContactDeselectListener(a parama)
-  {
-    iHd = parama;
-  }
-  
-  public void setOnSearchTextChangeListener(b paramb)
-  {
-    iHe = paramb;
-  }
-  
-  public void setOnSearchTextFouceChangeListener(c paramc)
-  {
-    iHf = paramc;
+    jdT.clearFocus();
+    aVJ();
   }
   
   public static abstract interface a
   {
-    public abstract void rc(String paramString);
+    public abstract void sz(String paramString);
   }
   
   public static abstract interface b
   {
-    public abstract void AD(String paramString);
+    public abstract void CE(String paramString);
   }
   
   public static abstract interface c
   {
-    public abstract void aRc();
+    public abstract void aVN();
   }
 }
 

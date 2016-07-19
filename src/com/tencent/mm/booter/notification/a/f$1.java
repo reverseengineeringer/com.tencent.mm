@@ -3,11 +3,11 @@ package com.tencent.mm.booter.notification.a;
 import android.media.MediaPlayer;
 import android.os.Looper;
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class f$1
-  extends aa
+  extends ac
 {
   f$1(f paramf, Looper paramLooper)
   {
@@ -16,20 +16,20 @@ final class f$1
   
   public final void handleMessage(Message paramMessage)
   {
-    u.i("!56@/B4Tb64lLpKR3MWtFvfaIMJb62Pm/jgsLT1nr0NtEmCplLo3H1kkFg==", "play sound handler, try to stop notify mediaplayer");
+    v.i("MicroMsg.Notification.Tool.Sound", "play sound handler, try to stop notify mediaplayer");
     try
     {
-      if ((bor.boo) && (bor.bop != null) && (bor.bop.isPlaying()))
+      if ((bcp.bcm) && (bcp.bcn != null) && (bcp.bcn.isPlaying()))
       {
-        bor.bop.stop();
-        bor.bop.release();
-        bor.boo = false;
+        bcp.bcn.stop();
+        bcp.bcn.release();
+        bcp.bcm = false;
       }
       return;
     }
     catch (IllegalStateException paramMessage)
     {
-      u.w("!56@/B4Tb64lLpKR3MWtFvfaIMJb62Pm/jgsLT1nr0NtEmCplLo3H1kkFg==", "Exception in playSoundHander %s", new Object[] { paramMessage.getMessage() });
+      v.w("MicroMsg.Notification.Tool.Sound", "Exception in playSoundHander %s", new Object[] { paramMessage.getMessage() });
     }
   }
 }

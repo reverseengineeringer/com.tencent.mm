@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sight.decode.a;
 
 public abstract interface b$f
 {
-  public abstract void a(b paramb, long paramLong);
+  public abstract void b(b paramb, long paramLong);
 }
 
 /* Location:

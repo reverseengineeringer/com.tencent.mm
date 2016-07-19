@@ -7,9 +7,9 @@ final class ActionBarSearchView$5
   
   public final void run()
   {
-    ActionBarSearchView.f(ltH).setText("");
-    if (ActionBarSearchView.c(ltH) != null) {
-      ActionBarSearchView.c(ltH).bim();
+    ActionBarSearchView.g(lUJ).setText("");
+    if (ActionBarSearchView.c(lUJ) != null) {
+      ActionBarSearchView.c(lUJ).boj();
     }
   }
 }

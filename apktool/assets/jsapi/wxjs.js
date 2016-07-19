@@ -2167,7 +2167,11 @@ var vsprintf = function(fmt, argv) {
     function _sendMessage(message) {
         _sendMessageQueue.push(message);
 		if (_readyMessageIframe) {
-			_readyMessageIframe.src = _CUSTOM_PROTOCOL_SCHEME + '://' + _QUEUE_HAS_MESSAGE;
+             if(window.WeixinJSBridge._isBridgeByIframe){
+                _readyMessageIframe.src = _CUSTOM_PROTOCOL_SCHEME + '://' + _QUEUE_HAS_MESSAGE;
+             }else{
+                console.log(_CUSTOM_PROTOCOL_SCHEME + '://' + _QUEUE_HAS_MESSAGE);
+             }
         }
 		
         // var ifm = _WXJS('iframe#__WeixinJSBridgeIframe')[0];
@@ -2297,8 +2301,13 @@ var vsprintf = function(fmt, argv) {
 		if (result === undefined) {
 			_setResultQueueRunning = false;
 		} else {
-			_setResultQueueRunning = true;
-			_setResultIframe.src = 'weixin://private/setresult/' + result;
+		     if(window.WeixinJSBridge._isBridgeByIframe){
+			    _setResultQueueRunning = true;
+			    _setResultIframe.src = 'weixin://private/setresult/' + result;
+		     }else{
+		        _setResultQueueRunning = true;
+                console.log('weixin://private/setresult/' + result);
+		     }
 		}
 	}
 
@@ -2890,6 +2899,7 @@ var vsprintf = function(fmt, argv) {
         _handleMessageFromWeixin: _handleMessageFromWeixin,
 		_hasInit: false,
 		_hasPreInit: false,
+		_isBridgeByIframe:true,
 		_continueSetResult: _continueSetResult
     };
 

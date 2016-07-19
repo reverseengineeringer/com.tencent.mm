@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field protected hAC:I
+.field protected hSw:I
 
-.field protected kij:Landroid/graphics/Picture;
+.field protected kIH:Landroid/graphics/Picture;
 
-.field protected kik:Landroid/graphics/Bitmap;
+.field protected kII:Landroid/graphics/Bitmap;
 
 
 # direct methods
@@ -31,10 +31,10 @@
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
     .line 190
-    iput-object p1, p0, Lcom/tencent/mm/svg/b/c$a;->kij:Landroid/graphics/Picture;
+    iput-object p1, p0, Lcom/tencent/mm/svg/b/c$a;->kIH:Landroid/graphics/Picture;
 
     .line 191
-    iput p2, p0, Lcom/tencent/mm/svg/b/c$a;->hAC:I
+    iput p2, p0, Lcom/tencent/mm/svg/b/c$a;->hSw:I
 
     .line 192
     return-void
@@ -59,9 +59,9 @@
     .line 206
     new-instance v0, Lcom/tencent/mm/svg/b/c;
 
-    iget-object v1, p0, Lcom/tencent/mm/svg/b/c$a;->kij:Landroid/graphics/Picture;
+    iget-object v1, p0, Lcom/tencent/mm/svg/b/c$a;->kIH:Landroid/graphics/Picture;
 
-    iget v2, p0, Lcom/tencent/mm/svg/b/c$a;->hAC:I
+    iget v2, p0, Lcom/tencent/mm/svg/b/c$a;->hSw:I
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/svg/b/c;-><init>(Landroid/graphics/Picture;I)V
 

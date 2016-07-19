@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/ga" android:background="@drawable/dl" android:layout_width="fill_parent" android:layout_height="@dimen/dn">
+        <TextView android:id="@id/gi" android:paddingLeft="@dimen/j8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/c9" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/MMFontTitleInList" />
+    </RelativeLayout>
+    <ImageView android:id="@id/gg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/j9" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <ProgressBar android:id="@id/a7x" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/smallCustomProgressBar" />
+</RelativeLayout>

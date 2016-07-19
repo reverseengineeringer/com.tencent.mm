@@ -1,171 +1,310 @@
 .class public final Lcom/tencent/mm/protocal/c;
-.super Ljava/lang/Object;
+.super Lcom/tencent/mm/protocal/e;
 .source "SourceFile"
 
 
+# static fields
+.field public static boS:Ljava/lang/String;
+
+.field public static jrA:Z
+
+.field public static jrB:I
+
+.field public static final jrC:[B
+
+.field public static final jrD:[B
+
+.field public static final jrE:[B
+
+.field public static final jrr:Ljava/lang/String;
+
+.field public static final jrs:Ljava/lang/String;
+
+.field public static jrt:Ljava/lang/String;
+
+.field public static final jru:Ljava/lang/String;
+
+.field public static jrv:Ljava/lang/String;
+
+.field public static final jrw:Ljava/lang/String;
+
+.field public static jrx:J
+
+.field public static jry:I
+
+.field public static jrz:Z
+
+
 # direct methods
-.method public static cX(Landroid/content/Context;)Z
+.method static constructor <clinit>()V
     .locals 3
 
     .prologue
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    .line 201
-    if-nez p0, :cond_0
+    .line 30
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 202
-    const-string/jumbo v1, "!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40="
+    const-string/jumbo v1, "android-"
 
-    const-string/jumbo v2, "getShutDownWxStatus context == null"
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 206
-    :goto_0
-    return v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 205
-    :cond_0
-    const-string/jumbo v1, "system_config_prefs_showdown"
+    move-result-object v0
 
-    const/4 v2, 0x4
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    move-result-object v0
 
-    move-result-object v1
+    sput-object v0, Lcom/tencent/mm/protocal/c;->boS:Ljava/lang/String;
 
-    .line 206
-    const-string/jumbo v2, "shut_down_weixin"
+    .line 31
+    sget-object v0, Landroid/os/Build;->BRAND:Ljava/lang/String;
 
-    invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    sput-object v0, Lcom/tencent/mm/protocal/c;->jrr:Ljava/lang/String;
+
+    .line 32
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    sget-object v1, Landroid/os/Build;->CPU_ABI:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/tencent/mm/protocal/c;->jrs:Ljava/lang/String;
+
+    .line 33
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v1, "android-"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/tencent/mm/protocal/c;->jrt:Ljava/lang/String;
+
+    .line 34
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v1, "android-"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget-object v1, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/tencent/mm/protocal/c;->jru:Ljava/lang/String;
+
+    .line 35
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/tencent/mm/protocal/c;->jrv:Ljava/lang/String;
+
+    .line 36
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "-"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/tencent/mm/protocal/c;->jrw:Ljava/lang/String;
+
+    .line 39
+    const-wide/16 v0, 0x0
+
+    sput-wide v0, Lcom/tencent/mm/protocal/c;->jrx:J
+
+    .line 42
+    const-string/jumbo v0, "0x26031641"
+
+    invoke-static {v0}, Ljava/lang/Integer;->decode(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
+    sput v0, Lcom/tencent/mm/protocal/c;->jry:I
+
+    .line 52
+    invoke-static {}, Lcom/tencent/mm/protocal/c;->aYe()Z
+
+    move-result v0
+
+    sput-boolean v0, Lcom/tencent/mm/protocal/c;->jrz:Z
+
+    .line 53
+    invoke-static {}, Lcom/tencent/mm/protocal/c;->aYd()Z
+
+    move-result v0
+
+    sput-boolean v0, Lcom/tencent/mm/protocal/c;->jrA:Z
+
+    .line 80
+    const/4 v0, 0x5
+
+    sput v0, Lcom/tencent/mm/protocal/c;->jrB:I
+
+    .line 93
+    sput-object v2, Lcom/tencent/mm/protocal/c;->jrC:[B
+
+    .line 95
+    sput-object v2, Lcom/tencent/mm/protocal/c;->jrD:[B
+
+    .line 96
+    sput-object v2, Lcom/tencent/mm/protocal/c;->jrE:[B
+
+    return-void
+.end method
+
+.method private static aYd()Z
+    .locals 2
+
+    .prologue
+    .line 45
+    sget v0, Lcom/tencent/mm/protocal/c;->jry:I
+
+    and-int/lit16 v0, v0, 0xff
+
+    const/16 v1, 0x20
+
+    if-lt v0, v1, :cond_0
+
+    sget v0, Lcom/tencent/mm/protocal/c;->jry:I
+
+    and-int/lit16 v0, v0, 0xff
+
+    const/16 v1, 0x2f
+
+    if-gt v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
     goto :goto_0
 .end method
 
-.method public static h(Landroid/content/Context;Z)V
-    .locals 3
+.method private static aYe()Z
+    .locals 2
 
     .prologue
-    .line 166
-    if-nez p0, :cond_0
+    .line 49
+    sget v0, Lcom/tencent/mm/protocal/c;->jry:I
 
-    .line 167
-    const-string/jumbo v0, "!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40="
+    and-int/lit16 v0, v0, 0xff
 
-    const-string/jumbo v1, "editFullExitStatus context == null"
+    if-ltz v0, :cond_0
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    sget v0, Lcom/tencent/mm/protocal/c;->jry:I
 
-    .line 174
+    and-int/lit16 v0, v0, 0xff
+
+    const/16 v1, 0x1f
+
+    if-gt v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
     :goto_0
-    return-void
+    return v0
 
-    .line 170
     :cond_0
-    const-string/jumbo v0, "system_config_prefs"
-
-    const/4 v1, 0x4
-
-    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 172
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "settings_fully_exit"
-
-    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 173
-    const-string/jumbo v0, "!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40="
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, "editFullExitStatus to "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method public static i(Landroid/content/Context;Z)V
-    .locals 3
+.method public static qE(I)V
+    .locals 1
 
     .prologue
-    .line 189
-    if-nez p0, :cond_0
+    .line 25
+    sput p0, Lcom/tencent/mm/protocal/c;->jry:I
 
-    .line 190
-    const-string/jumbo v0, "!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40="
+    .line 26
+    invoke-static {}, Lcom/tencent/mm/protocal/c;->aYe()Z
 
-    const-string/jumbo v1, "editShutDownWxStatus context == null"
+    move-result v0
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    sput-boolean v0, Lcom/tencent/mm/protocal/c;->jrz:Z
 
-    .line 197
-    :goto_0
+    .line 27
+    invoke-static {}, Lcom/tencent/mm/protocal/c;->aYd()Z
+
+    move-result v0
+
+    sput-boolean v0, Lcom/tencent/mm/protocal/c;->jrA:Z
+
+    .line 28
     return-void
-
-    .line 193
-    :cond_0
-    const-string/jumbo v0, "system_config_prefs_showdown"
-
-    const/4 v1, 0x4
-
-    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 195
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "shut_down_weixin"
-
-    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 196
-    const-string/jumbo v0, "!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40="
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, "editShutDownWxStatus to "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
 .end method

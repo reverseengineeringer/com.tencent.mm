@@ -1,35 +1,63 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.model.f;
-import com.tencent.mm.sdk.h.g.a;
-import com.tencent.mm.sdk.h.i;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import java.util.Map;
+import android.view.View;
+import android.widget.ListView;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.aj;
+import com.tencent.mm.ui.g.a;
+import com.tencent.mm.ui.j;
+import com.tencent.mm.ui.o;
 
 final class ChattingUI$a$65
-  implements g.a
+  implements Runnable
 {
-  ChattingUI$a$65(ChattingUI.a parama) {}
+  ChattingUI$a$65(ChattingUI.a parama, int paramInt, long paramLong) {}
   
-  public final void a(String paramString, i parami)
+  public final void run()
   {
-    u.v("!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/", "roommember watcher notify " + paramString);
-    if (laF.kYP) {
-      f.b(laF.getTalkerUserName(), laF.kYQ);
+    int i = clS - lAY.lyy.getFirstVisiblePosition();
+    Object localObject = lAY.lyy.getChildAt(i);
+    View localView2 = lAY.lyy.getChildAt(i + lAY.lyy.getHeaderViewsCount());
+    ai localai = ah.tE().rt().dQ(lBv);
+    View localView1 = null;
+    if (localObject != null)
+    {
+      if ((!localai.bcx()) && (!localai.bcB())) {
+        break label152;
+      }
+      localView1 = ((View)localObject).findViewById(2131756045);
+      localObject = localView1;
+      if (localView1 == null)
+      {
+        localObject = localView1;
+        if (localView2 != null)
+        {
+          if ((!localai.bcx()) && (!localai.bcB())) {
+            break label170;
+          }
+          localObject = localView2.findViewById(2131756045);
+        }
+      }
     }
     for (;;)
     {
-      if (!ay.kz(paramString))
-      {
-        laF.bfB();
-        ChattingUI.a.d(laF);
-        laF.bfl();
-        laF.bfT();
+      if (localObject != null) {
+        a.b(lAY.kNN.kOg, (View)localObject);
       }
-      laF.kSE.a(null, null);
       return;
-      laF.kYQ.clear();
+      label152:
+      if (!localai.bcC()) {
+        break;
+      }
+      localView1 = ((View)localObject).findViewById(2131755043);
+      break;
+      label170:
+      localObject = localView1;
+      if (localai.bcC()) {
+        localObject = localView2.findViewById(2131755043);
+      }
     }
   }
 }

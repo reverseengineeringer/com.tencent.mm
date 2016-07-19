@@ -1,21 +1,13 @@
 package com.tencent.mm.ui;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.tencent.mm.d.a.s;
-import com.tencent.mm.sdk.c.a;
-
 final class j$5
-  implements View.OnClickListener
+  implements Runnable
 {
   j$5(j paramj) {}
   
-  public final void onClick(View paramView)
+  public final void run()
   {
-    paramView = new s();
-    asH.type = 1;
-    a.jUF.j(paramView);
-    j.b(kpx).setVisibility(8);
+    kOB.F();
   }
 }
 

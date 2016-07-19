@@ -16,6 +16,16 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Landroid/support/v7/internal/widget/ActionBarView$SavedState;",
+        ">;"
+    }
+.end annotation
+
 
 # direct methods
 .method constructor <init>()V

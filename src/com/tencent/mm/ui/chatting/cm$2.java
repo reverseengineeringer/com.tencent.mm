@@ -1,21 +1,13 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.d.a.bg;
-import com.tencent.mm.sdk.c.a;
+import com.tencent.mm.pluginsdk.ui.applet.i.a;
 
 final class cm$2
-  implements DialogInterface.OnClickListener
+  implements i.a
 {
   cm$2(cm paramcm) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
-  {
-    paramDialogInterface = new bg();
-    auq.aur = true;
-    a.jUF.j(paramDialogInterface);
-  }
+  public final void bz(boolean paramBoolean) {}
 }
 
 /* Location:

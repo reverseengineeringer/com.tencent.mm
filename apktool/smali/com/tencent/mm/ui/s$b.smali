@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field ccb:I
+.field bVQ:I
 
 .field id:I
 
-.field krc:I
+.field kQj:I
 
 .field order:I
 
@@ -49,10 +49,10 @@
     iput p1, p0, Lcom/tencent/mm/ui/s$b;->id:I
 
     .line 235
-    iput p2, p0, Lcom/tencent/mm/ui/s$b;->krc:I
+    iput p2, p0, Lcom/tencent/mm/ui/s$b;->kQj:I
 
     .line 236
-    iput p3, p0, Lcom/tencent/mm/ui/s$b;->ccb:I
+    iput p3, p0, Lcom/tencent/mm/ui/s$b;->bVQ:I
 
     .line 237
     iput p4, p0, Lcom/tencent/mm/ui/s$b;->order:I

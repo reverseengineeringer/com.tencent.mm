@@ -6,26 +6,20 @@ import android.os.Build.VERSION;
 
 public final class b
 {
-  private static final a ei = new b();
+  private static final a ey = new b();
   
   static
   {
-    int i = Build.VERSION.SDK_INT;
-    if (i >= 15)
+    if (Build.VERSION.SDK_INT >= 15)
     {
-      ei = new d();
-      return;
-    }
-    if (i >= 11)
-    {
-      ei = new c();
+      ey = new c();
       return;
     }
   }
   
   public static Intent makeMainActivity(ComponentName paramComponentName)
   {
-    return ei.makeMainActivity(paramComponentName);
+    return ey.makeMainActivity(paramComponentName);
   }
   
   static abstract interface a
@@ -45,7 +39,7 @@ public final class b
     }
   }
   
-  static class c
+  static final class c
     extends b.b
   {
     public final Intent makeMainActivity(ComponentName paramComponentName)
@@ -53,10 +47,6 @@ public final class b
       return Intent.makeMainActivity(paramComponentName);
     }
   }
-  
-  static final class d
-    extends b.c
-  {}
 }
 
 /* Location:

@@ -59,7 +59,7 @@
     return-void
 .end method
 
-.method public j(Landroid/app/Activity;)V
+.method public f(Landroid/app/Activity;)V
     .locals 0
 
     .prologue
@@ -67,7 +67,7 @@
     return-void
 .end method
 
-.method public k(Landroid/app/Activity;)V
+.method public g(Landroid/app/Activity;)V
     .locals 0
 
     .prologue
@@ -75,7 +75,7 @@
     return-void
 .end method
 
-.method public l(Landroid/app/Activity;)V
+.method public h(Landroid/app/Activity;)V
     .locals 0
 
     .prologue
@@ -83,7 +83,7 @@
     return-void
 .end method
 
-.method public m(Landroid/app/Activity;)V
+.method public i(Landroid/app/Activity;)V
     .locals 0
 
     .prologue
@@ -91,7 +91,7 @@
     return-void
 .end method
 
-.method public n(Landroid/app/Activity;)V
+.method public j(Landroid/app/Activity;)V
     .locals 0
 
     .prologue
@@ -99,7 +99,7 @@
     return-void
 .end method
 
-.method public o(Landroid/app/Activity;)V
+.method public k(Landroid/app/Activity;)V
     .locals 0
 
     .prologue
@@ -107,7 +107,7 @@
     return-void
 .end method
 
-.method public p(Landroid/app/Activity;)V
+.method public l(Landroid/app/Activity;)V
     .locals 0
 
     .prologue
@@ -115,7 +115,7 @@
     return-void
 .end method
 
-.method public q(Landroid/app/Activity;)V
+.method public m(Landroid/app/Activity;)V
     .locals 0
 
     .prologue
@@ -123,7 +123,7 @@
     return-void
 .end method
 
-.method public r(Landroid/app/Activity;)V
+.method public n(Landroid/app/Activity;)V
     .locals 0
 
     .prologue
@@ -131,7 +131,7 @@
     return-void
 .end method
 
-.method public s(Landroid/app/Activity;)V
+.method public o(Landroid/app/Activity;)V
     .locals 0
 
     .prologue

@@ -10,29 +10,29 @@ final class MMPreference$1
   
   public final boolean a(Preference paramPreference, Object paramObject)
   {
-    if ((!MMPreference.a(kLM)) && (paramPreference.isEnabled()) && (kMm))
+    if ((!MMPreference.a(llb)) && (paramPreference.isEnabled()) && (llB))
     {
-      MMPreference.a(kLM, true);
+      MMPreference.a(llb, true);
       if (!(paramPreference instanceof CheckBoxPreference)) {
         break label155;
       }
       paramObject = (CheckBoxPreference)paramPreference;
-      kKS = ((CheckBoxPreference)paramObject).isChecked();
-      if (kMo) {
-        MMPreference.b(kLM).edit().putBoolean(cln, ((CheckBoxPreference)paramObject).isChecked()).commit();
+      lkh = ((CheckBoxPreference)paramObject).isChecked();
+      if (llD) {
+        MMPreference.b(llb).edit().putBoolean(cgq, ((CheckBoxPreference)paramObject).isChecked()).commit();
       }
-      MMPreference.c(kLM);
+      MMPreference.c(llb);
     }
     label155:
     for (int i = 1;; i = 0)
     {
-      if (cln != null) {
-        kLM.a(MMPreference.d(kLM), paramPreference);
+      if (cgq != null) {
+        llb.a(MMPreference.d(llb), paramPreference);
       }
       if (i != 0) {
-        MMPreference.d(kLM).notifyDataSetChanged();
+        MMPreference.d(llb).notifyDataSetChanged();
       }
-      MMPreference.a(kLM, false);
+      MMPreference.a(llb, false);
       return i != 0;
     }
   }

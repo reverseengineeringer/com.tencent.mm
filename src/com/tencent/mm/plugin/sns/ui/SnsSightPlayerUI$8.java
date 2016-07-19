@@ -14,12 +14,12 @@ final class SnsSightPlayerUI$8
   public final void run()
   {
     DisplayMetrics localDisplayMetrics = new DisplayMetrics();
-    his.getWindowManager().getDefaultDisplay().getMetrics(localDisplayMetrics);
-    if ((SnsSightPlayerUI.f(his) instanceof VideoSightView)) {
-      ((VideoSightView)SnsSightPlayerUI.f(his)).setDrawableWidth(widthPixels);
+    hxh.getWindowManager().getDefaultDisplay().getMetrics(localDisplayMetrics);
+    if ((SnsSightPlayerUI.f(hxh) instanceof VideoSightView)) {
+      ((VideoSightView)SnsSightPlayerUI.f(hxh)).lY(widthPixels);
     }
-    ((View)SnsSightPlayerUI.f(his)).requestLayout();
-    ((View)SnsSightPlayerUI.f(his)).postInvalidate();
+    ((View)SnsSightPlayerUI.f(hxh)).requestLayout();
+    ((View)SnsSightPlayerUI.f(hxh)).postInvalidate();
   }
 }
 

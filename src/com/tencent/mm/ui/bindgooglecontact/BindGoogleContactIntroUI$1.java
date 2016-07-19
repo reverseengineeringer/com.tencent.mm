@@ -11,9 +11,9 @@ final class BindGoogleContactIntroUI$1
   
   public final void onClick(View paramView)
   {
-    paramView = new Intent(kMI, BindGoogleContactUI.class);
-    paramView.putExtra("enter_scene", BindGoogleContactIntroUI.a(kMI));
-    kMI.startActivity(paramView);
+    paramView = new Intent(llX, BindGoogleContactUI.class);
+    paramView.putExtra("enter_scene", BindGoogleContactIntroUI.a(llX));
+    llX.startActivity(paramView);
   }
 }
 

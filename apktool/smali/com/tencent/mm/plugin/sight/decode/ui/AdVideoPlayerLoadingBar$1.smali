@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+.field final synthetic gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 68
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -52,19 +52,19 @@
     if-nez v0, :cond_1
 
     .line 72
-    const-string/jumbo v0, "!44@/B4Tb64lLpKQpS0z/gOJ2VnP45Iw97kkoTXdd8xFzvg="
+    const-string/jumbo v0, "MicroMsg.VideoPlayerLoadingBar"
 
     const-string/jumbo v1, "ontouch down"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-static {v0, v4}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->a(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;Z)Z
 
     .line 74
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
@@ -73,7 +73,7 @@
     invoke-static {v0, v1}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->a(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;F)F
 
     .line 75
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->a(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;)Lcom/tencent/mm/plugin/sight/decode/ui/b;
 
@@ -82,13 +82,13 @@
     if-eqz v0, :cond_0
 
     .line 76
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->a(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;)Lcom/tencent/mm/plugin/sight/decode/ui/b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/b;->avV()V
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/b;->ays()V
 
     .line 110
     :cond_0
@@ -111,7 +111,7 @@
     move-result v1
 
     .line 81
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->b(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;)Landroid/widget/ImageView;
 
@@ -126,7 +126,7 @@
     .line 82
     iget v2, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-static {v3}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->c(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;)F
 
@@ -139,7 +139,7 @@
     add-int/2addr v1, v2
 
     .line 84
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-static {v2, v1}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->a(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;I)I
 
@@ -149,7 +149,7 @@
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
     .line 87
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->b(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;)Landroid/widget/ImageView;
 
@@ -158,14 +158,14 @@
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 90
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->d(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;)I
 
     move-result v1
 
     .line 91
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->e(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;)I
 
@@ -174,7 +174,7 @@
     if-lez v0, :cond_2
 
     .line 92
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->f(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;)Landroid/widget/ImageView;
 
@@ -193,7 +193,7 @@
 
     mul-double/2addr v2, v4
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-static {v4}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->e(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;)I
 
@@ -203,7 +203,7 @@
 
     div-double/2addr v2, v4
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-static {v4}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->g(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;)I
 
@@ -218,7 +218,7 @@
     iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
     .line 94
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->f(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;)Landroid/widget/ImageView;
 
@@ -228,7 +228,7 @@
 
     .line 97
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->h(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;)Landroid/widget/TextView;
 
@@ -240,7 +240,7 @@
 
     div-int/lit8 v3, v1, 0x3c
 
-    invoke-static {v3}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->kV(I)Ljava/lang/String;
+    invoke-static {v3}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->mc(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -256,7 +256,7 @@
 
     rem-int/lit8 v1, v1, 0x3c
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->kV(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->mc(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -271,7 +271,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 98
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-static {v0, v6}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->a(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;Z)Z
 
@@ -279,7 +279,7 @@
 
     .line 101
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->i(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;)Z
 
@@ -288,14 +288,14 @@
     if-eqz v0, :cond_0
 
     .line 102
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->d(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;)I
 
     move-result v0
 
     .line 103
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->a(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;)Lcom/tencent/mm/plugin/sight/decode/ui/b;
 
@@ -304,7 +304,7 @@
     if-eqz v1, :cond_4
 
     .line 104
-    const-string/jumbo v1, "!44@/B4Tb64lLpKQpS0z/gOJ2VnP45Iw97kkoTXdd8xFzvg="
+    const-string/jumbo v1, "MicroMsg.VideoPlayerLoadingBar"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -320,20 +320,20 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 105
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->a(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;)Lcom/tencent/mm/plugin/sight/decode/ui/b;
 
     move-result-object v1
 
-    invoke-interface {v1, v0}, Lcom/tencent/mm/plugin/sight/decode/ui/b;->kW(I)V
+    invoke-interface {v1, v0}, Lcom/tencent/mm/plugin/sight/decode/ui/b;->md(I)V
 
     .line 107
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gyp:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar$1;->gEM:Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     invoke-static {v0, v4}, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;->a(Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;Z)Z
 

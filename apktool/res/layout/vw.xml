@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@drawable/hi" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.tencent.mm.ui.KeyboardLinearLayout android:id="@id/ae1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ScrollView android:id="@id/b_y" android:background="@drawable/a27" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+                <LinearLayout android:orientation="vertical" android:id="@id/b_z" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.tencent.mm.plugin.sns.lucky.view.LuckyNewPreview android:id="@id/ba0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/he" android:layout_centerHorizontal="true" />
+                    <TextView android:textSize="@dimen/cn" android:textColor="@color/mk" android:gravity="center" android:id="@id/ba1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ct" android:text="@string/bex" android:layout_below="@id/ba0" android:layout_centerHorizontal="true" />
+                    <LinearLayout android:orientation="horizontal" android:background="@color/ow" android:paddingLeft="@dimen/hb" android:paddingRight="@dimen/hb" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_below="@id/ba1">
+                        <com.tencent.mm.plugin.sns.ui.SnsEditText android:gravity="top" android:id="@id/b5e" android:background="@null" android:paddingTop="@dimen/j8" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/cu_" android:maxLines="4" android:minLines="4" android:singleLine="false" android:layout_weight="1.0" android:inputType="textCapSentences|textMultiLine" style="@style/MMEditText" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </com.tencent.mm.ui.KeyboardLinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.tencent.mm.plugin.sns.lucky.view.LuckySnsUploadSayFooter android:gravity="bottom" android:layout_gravity="bottom" android:id="@id/ba2" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

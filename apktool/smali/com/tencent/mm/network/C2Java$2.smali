@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic cit:I
+.field final synthetic cdK:I
 
-.field final synthetic ciu:I
+.field final synthetic cdL:I
 
-.field final synthetic civ:[B
+.field final synthetic cdM:[B
 
 
 # direct methods
@@ -30,12 +30,12 @@
     .locals 0
 
     .prologue
-    .line 202
-    iput p1, p0, Lcom/tencent/mm/network/C2Java$2;->cit:I
+    .line 207
+    iput p1, p0, Lcom/tencent/mm/network/C2Java$2;->cdK:I
 
-    iput p2, p0, Lcom/tencent/mm/network/C2Java$2;->ciu:I
+    iput p2, p0, Lcom/tencent/mm/network/C2Java$2;->cdL:I
 
-    iput-object p3, p0, Lcom/tencent/mm/network/C2Java$2;->civ:[B
+    iput-object p3, p0, Lcom/tencent/mm/network/C2Java$2;->cdM:[B
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,19 +48,19 @@
     .locals 4
 
     .prologue
-    .line 205
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fi()Lcom/tencent/mm/network/x;
+    .line 210
+    invoke-static {}, Lcom/tencent/mm/network/z;->FE()Lcom/tencent/mm/network/x;
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/network/C2Java$2;->cit:I
+    iget v1, p0, Lcom/tencent/mm/network/C2Java$2;->cdK:I
 
-    iget v2, p0, Lcom/tencent/mm/network/C2Java$2;->ciu:I
+    iget v2, p0, Lcom/tencent/mm/network/C2Java$2;->cdL:I
 
-    iget-object v3, p0, Lcom/tencent/mm/network/C2Java$2;->civ:[B
+    iget-object v3, p0, Lcom/tencent/mm/network/C2Java$2;->cdM:[B
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/network/x;->onNotify(II[B)V
 
-    .line 206
+    .line 211
     return-void
 .end method

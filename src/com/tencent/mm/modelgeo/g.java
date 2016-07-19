@@ -6,34 +6,34 @@ import com.tencent.map.geolocation.TencentLocationListener;
 import com.tencent.map.geolocation.TencentLocationManager;
 import com.tencent.map.geolocation.TencentLocationManagerOptions;
 import com.tencent.map.geolocation.TencentLocationRequest;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class g
 {
-  private static g bOI = null;
+  private static g bId = null;
   private static Context mContext;
   
   public static void a(TencentLocationListener paramTencentLocationListener, int paramInt, Looper paramLooper)
   {
-    u.d("!44@/B4Tb64lLpJfn8anhv+Gj4anGnlU7moSrNKFEcSm62U=", "requestLocationUpdate %s, isLoaded %b", new Object[] { Integer.valueOf(paramInt), Boolean.valueOf(TencentLocationManagerOptions.isLoadLibraryEnabled()) });
+    v.d("MicroMsg.SLocationManager", "requestLocationUpdate %s, isLoaded %b", new Object[] { Integer.valueOf(paramInt), Boolean.valueOf(TencentLocationManagerOptions.isLoadLibraryEnabled()) });
     TencentLocationManager.getInstance(mContext).setCoordinateType(paramInt);
     TencentLocationRequest localTencentLocationRequest = TencentLocationRequest.create();
     localTencentLocationRequest.setInterval(2000L);
-    u.i("!44@/B4Tb64lLpJfn8anhv+Gj4anGnlU7moSrNKFEcSm62U=", "requestCode %d", new Object[] { Integer.valueOf(TencentLocationManager.getInstance(mContext).requestLocationUpdates(localTencentLocationRequest, paramTencentLocationListener, paramLooper)) });
+    v.i("MicroMsg.SLocationManager", "requestCode %d", new Object[] { Integer.valueOf(TencentLocationManager.getInstance(mContext).requestLocationUpdates(localTencentLocationRequest, paramTencentLocationListener, paramLooper)) });
   }
   
-  public static g aN(Context paramContext)
+  public static g aK(Context paramContext)
   {
-    if (bOI == null) {
-      bOI = new g();
+    if (bId == null) {
+      bId = new g();
     }
     mContext = paramContext;
-    return bOI;
+    return bId;
   }
   
-  public static void zH()
+  public static void zU()
   {
-    u.d("!44@/B4Tb64lLpJfn8anhv+Gj4anGnlU7moSrNKFEcSm62U=", "removeUpdate");
+    v.d("MicroMsg.SLocationManager", "removeUpdate");
     TencentLocationManager.getInstance(mContext).removeUpdates(null);
   }
   

@@ -15,7 +15,7 @@ final class ChatroomContactUI$1
     default: 
       return;
     }
-    ChatroomContactUI.Hf(ChatroomContactUI.a(ljg));
+    ChatroomContactUI.Ju(ChatroomContactUI.a(lJr));
   }
 }
 

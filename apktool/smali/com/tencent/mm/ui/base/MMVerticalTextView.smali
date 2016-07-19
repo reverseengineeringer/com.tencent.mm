@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field private dGF:Landroid/text/TextPaint;
+.field private dIf:Landroid/text/TextPaint;
 
 .field private direction:I
 
-.field private eut:Ljava/lang/String;
+.field private eAL:Ljava/lang/String;
 
-.field kHR:Landroid/graphics/Rect;
+.field lgT:Landroid/graphics/Rect;
 
 
 # direct methods
@@ -32,37 +32,37 @@
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->kHR:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->lgT:Landroid/graphics/Rect;
 
     .line 30
     new-instance v0, Landroid/text/TextPaint;
 
     invoke-direct {v0}, Landroid/text/TextPaint;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->dGF:Landroid/text/TextPaint;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->dIf:Landroid/text/TextPaint;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->dGF:Landroid/text/TextPaint;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->dIf:Landroid/text/TextPaint;
 
     invoke-virtual {v0, v5}, Landroid/text/TextPaint;->setAntiAlias(Z)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->dGF:Landroid/text/TextPaint;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->dIf:Landroid/text/TextPaint;
 
     const/high16 v1, 0x41700000    # 15.0f
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->dGF:Landroid/text/TextPaint;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->dIf:Landroid/text/TextPaint;
 
     invoke-virtual {v0, v4}, Landroid/text/TextPaint;->setColor(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->dGF:Landroid/text/TextPaint;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->dIf:Landroid/text/TextPaint;
 
     sget-object v1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
     .line 32
-    sget-object v0, Lcom/tencent/mm/R$b;->verticaltextview:[I
+    sget-object v0, Lcom/tencent/mm/R$b;->Xe:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -81,7 +81,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->eut:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->eAL:Ljava/lang/String;
 
     .line 42
     :cond_0
@@ -97,7 +97,7 @@
     if-lez v1, :cond_1
 
     .line 44
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->dGF:Landroid/text/TextPaint;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->dIf:Landroid/text/TextPaint;
 
     int-to-float v1, v1
 
@@ -105,7 +105,7 @@
 
     .line 46
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->dGF:Landroid/text/TextPaint;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->dIf:Landroid/text/TextPaint;
 
     invoke-virtual {v0, v5, v4}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -168,7 +168,7 @@
 
     shr-int/lit8 v1, v1, 0x1
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->kHR:Landroid/graphics/Rect;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->lgT:Landroid/graphics/Rect;
 
     invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
 
@@ -192,9 +192,9 @@
 
     .line 138
     :goto_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->eut:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->eAL:Ljava/lang/String;
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->dGF:Landroid/text/TextPaint;
+    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->dIf:Landroid/text/TextPaint;
 
     move-object v0, p1
 
@@ -213,7 +213,7 @@
 
     shr-int/lit8 v1, v1, 0x1
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->kHR:Landroid/graphics/Rect;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->lgT:Landroid/graphics/Rect;
 
     invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
 
@@ -247,19 +247,19 @@
     const/high16 v5, -0x80000000
 
     .line 81
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->dGF:Landroid/text/TextPaint;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->dIf:Landroid/text/TextPaint;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->eut:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->eAL:Ljava/lang/String;
 
     const/4 v2, 0x0
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->eut:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->eAL:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v3
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->kHR:Landroid/graphics/Rect;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->lgT:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/text/TextPaint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
 
@@ -293,7 +293,7 @@
 
     .line 82
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->kHR:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->lgT:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
 
@@ -308,7 +308,7 @@
     goto :goto_0
 
     :cond_1
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->kHR:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->lgT:Landroid/graphics/Rect;
 
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
@@ -333,12 +333,12 @@
     goto :goto_0
 .end method
 
-.method public setText(Ljava/lang/String;)V
+.method public final setText(Ljava/lang/String;)V
     .locals 0
 
     .prologue
     .line 63
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->eut:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->eAL:Ljava/lang/String;
 
     .line 64
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMVerticalTextView;->requestLayout()V
@@ -347,42 +347,5 @@
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMVerticalTextView;->invalidate()V
 
     .line 66
-    return-void
-.end method
-
-.method public setTextColor(I)V
-    .locals 1
-
-    .prologue
-    .line 75
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->dGF:Landroid/text/TextPaint;
-
-    invoke-virtual {v0, p1}, Landroid/text/TextPaint;->setColor(I)V
-
-    .line 76
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMVerticalTextView;->invalidate()V
-
-    .line 77
-    return-void
-.end method
-
-.method public setTextSize(I)V
-    .locals 2
-
-    .prologue
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMVerticalTextView;->dGF:Landroid/text/TextPaint;
-
-    int-to-float v1, p1
-
-    invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTextSize(F)V
-
-    .line 70
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMVerticalTextView;->requestLayout()V
-
-    .line 71
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMVerticalTextView;->invalidate()V
-
-    .line 72
     return-void
 .end method

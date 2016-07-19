@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;->Gb()V
+    value = Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kNj:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
+.field final synthetic lmy:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 180
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$2;->kNj:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$2;->lmy:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final Gd()V
+.method public final GA()V
     .locals 0
 
     .prologue
@@ -44,7 +44,7 @@
     return-void
 .end method
 
-.method public final Ge()V
+.method public final GB()V
     .locals 0
 
     .prologue
@@ -52,7 +52,7 @@
     return-void
 .end method
 
-.method public final Gf()V
+.method public final GC()V
     .locals 0
 
     .prologue
@@ -60,7 +60,7 @@
     return-void
 .end method
 
-.method public final Gg()V
+.method public final GD()V
     .locals 0
 
     .prologue
@@ -68,7 +68,7 @@
     return-void
 .end method
 
-.method public final kE(Ljava/lang/String;)Z
+.method public final ln(Ljava/lang/String;)Z
     .locals 1
 
     .prologue
@@ -78,21 +78,21 @@
     return v0
 .end method
 
-.method public final kF(Ljava/lang/String;)V
+.method public final lo(Ljava/lang/String;)V
     .locals 2
 
     .prologue
     .line 190
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$2;->kNj:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$2;->lmy:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
 
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kx(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->lh(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;->a(Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;Ljava/lang/String;)Ljava/lang/String;
 
     .line 191
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$2;->kNj:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$2;->lmy:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;->a(Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;)Lcom/tencent/mm/ui/bindgooglecontact/a;
 
@@ -101,19 +101,19 @@
     if-eqz v0, :cond_0
 
     .line 192
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$2;->kNj:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$2;->lmy:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;->a(Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;)Lcom/tencent/mm/ui/bindgooglecontact/a;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$2;->kNj:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$2;->lmy:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;->b(Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/bindgooglecontact/a;->pH(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/bindgooglecontact/a;->qY(Ljava/lang/String;)V
 
     .line 194
     :cond_0

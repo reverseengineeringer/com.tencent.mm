@@ -12,55 +12,54 @@ import android.view.animation.AccelerateInterpolator;
 import android.widget.FrameLayout;
 import android.widget.FrameLayout.LayoutParams;
 import android.widget.Scroller;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.tools.l;
-import com.tencent.mm.ui.tools.l.a;
 
 public class MMPullDownView
   extends FrameLayout
   implements GestureDetector.OnGestureListener
 {
-  private static int kGh = 400;
-  private static final int kGk = Color.parseColor("#00000000");
-  private int bgColor = Color.parseColor("#ffffffff");
+  private static int lfl = 400;
+  private static final int lfo = Color.parseColor("#00000000");
+  public int bgColor = Color.parseColor("#ffffffff");
   private Context context;
-  private Scroller fK;
-  private GestureDetector fge;
-  private int kCu;
-  private int kDE = 1;
-  private g kFI;
-  private e kFJ;
-  private int kFK;
-  private int kFL;
-  private boolean kFM = false;
-  private boolean kFN = false;
-  private boolean kFO = false;
-  private boolean kFP = false;
-  private boolean kFQ = true;
-  private boolean kFR = false;
-  private boolean kFS = true;
-  private boolean kFT = true;
-  private c kFU;
-  private d kFV;
-  private View kFW;
-  private View kFX;
-  private int kFY;
-  private int kFZ = 4;
-  private int kGa = 4;
-  private boolean kGb = false;
-  private f kGc;
-  private boolean kGd = true;
-  private l kGe;
-  private boolean kGf = false;
-  private a kGg;
-  private aa kGi = new aa()
+  private GestureDetector fpd;
+  private Scroller gg;
+  private int lbA;
+  private int lcJ = 1;
+  public g leM;
+  public e leN;
+  public int leO;
+  private int leP;
+  private boolean leQ = false;
+  private boolean leR = false;
+  private boolean leS = false;
+  private boolean leT = false;
+  private boolean leU = true;
+  private boolean leV = false;
+  private boolean leW = true;
+  public boolean leX = true;
+  public c leY;
+  public d leZ;
+  private View lfa;
+  private View lfb;
+  private int lfc;
+  private int lfd = 4;
+  private int lfe = 4;
+  private boolean lff = false;
+  public f lfg;
+  public boolean lfh = true;
+  public l lfi;
+  public boolean lfj = false;
+  public a lfk;
+  private ac lfm = new ac()
   {
     public final void handleMessage(Message paramAnonymousMessage)
     {
       super.handleMessage(paramAnonymousMessage);
-      u.d("!32@/B4Tb64lLpI7QFnGqEKENPRhNROls06u", "updateDelayHandler handleMessage loadDataType[%d]", new Object[] { Integer.valueOf(MMPullDownView.a(MMPullDownView.this)) });
+      v.d("MicroMsg.MMPullDownView", "updateDelayHandler handleMessage loadDataType[%d]", new Object[] { Integer.valueOf(MMPullDownView.a(MMPullDownView.this)) });
       switch (MMPullDownView.a(MMPullDownView.this))
       {
       }
@@ -69,14 +68,14 @@ public class MMPullDownView
         MMPullDownView.g(MMPullDownView.this);
         return;
         if (MMPullDownView.b(MMPullDownView.this) != null) {
-          MMPullDownView.b(MMPullDownView.this).aiq();
+          MMPullDownView.b(MMPullDownView.this).akX();
         }
         if (MMPullDownView.c(MMPullDownView.this).getVisibility() == 0)
         {
           scrollTo(0, MMPullDownView.d(MMPullDownView.this));
           continue;
           if (MMPullDownView.e(MMPullDownView.this) != null) {
-            MMPullDownView.e(MMPullDownView.this).QR();
+            MMPullDownView.e(MMPullDownView.this).Sg();
           }
           if (MMPullDownView.f(MMPullDownView.this).getVisibility() == 0) {
             scrollTo(0, MMPullDownView.d(MMPullDownView.this));
@@ -85,11 +84,11 @@ public class MMPullDownView
       }
     }
   };
-  boolean kGj = false;
-  private boolean kGl = false;
-  private int kGm = Integer.MIN_VALUE;
-  private int kGn = bgColor;
-  private b kGo;
+  boolean lfn = false;
+  public boolean lfp = false;
+  private int lfq = Integer.MIN_VALUE;
+  public int lfr = bgColor;
+  public b lfs;
   
   public MMPullDownView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -99,160 +98,160 @@ public class MMPullDownView
   public MMPullDownView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    fK = new Scroller(paramContext, new AccelerateInterpolator());
-    kCu = kDE;
-    fge = new GestureDetector(paramContext, this);
-    kGe = new l(paramContext);
+    gg = new Scroller(paramContext, new AccelerateInterpolator());
+    lbA = lcJ;
+    fpd = new GestureDetector(paramContext, this);
+    lfi = new l(paramContext);
     context = paramContext;
   }
   
-  private void bcL()
+  private void bii()
   {
-    if (kGc != null) {
-      kGc.aCK();
+    if (lfg != null) {
+      lfg.aFO();
     }
     Scroller localScroller;
     int i;
     int j;
-    if (getScrollY() - kFK < 0)
+    if (getScrollY() - leO < 0)
     {
-      if (kFS)
+      if (leW)
       {
-        localScroller = fK;
+        localScroller = gg;
         i = getScrollY();
         j = -getScrollY();
-        localScroller.startScroll(0, i, 0, kFK + j, 200);
+        localScroller.startScroll(0, i, 0, leO + j, 200);
         postInvalidate();
       }
     }
-    else if (getScrollY() > kFL)
+    else if (getScrollY() > leP)
     {
-      if (!kFT) {
+      if (!leX) {
         break label220;
       }
-      fK.startScroll(0, getScrollY(), 0, kFL - getScrollY(), 200);
+      gg.startScroll(0, getScrollY(), 0, leP - getScrollY(), 200);
     }
     for (;;)
     {
       postInvalidate();
-      kFO = false;
+      leS = false;
       return;
-      if (kFW.getVisibility() == 4)
+      if (lfa.getVisibility() == 4)
       {
-        localScroller = fK;
+        localScroller = gg;
         i = getScrollY();
         j = -getScrollY();
-        localScroller.startScroll(0, i, 0, kFK + j, 200);
+        localScroller.startScroll(0, i, 0, leO + j, 200);
       }
-      if (kFW.getVisibility() == 0) {
-        fK.startScroll(0, getScrollY(), 0, -getScrollY(), 200);
+      if (lfa.getVisibility() == 0) {
+        gg.startScroll(0, getScrollY(), 0, -getScrollY(), 200);
       }
-      kFY = 0;
-      kFP = true;
-      kFQ = false;
+      lfc = 0;
+      leT = true;
+      leU = false;
       break;
       label220:
-      if (kFX.getVisibility() == 4) {
-        fK.startScroll(0, getScrollY(), 0, kFL - getScrollY(), 200);
+      if (lfb.getVisibility() == 4) {
+        gg.startScroll(0, getScrollY(), 0, leP - getScrollY(), 200);
       }
-      if (kFX.getVisibility() == 0)
+      if (lfb.getVisibility() == 0)
       {
-        localScroller = fK;
+        localScroller = gg;
         i = getScrollY();
-        j = kFL;
+        j = leP;
         int k = getScrollY();
-        localScroller.startScroll(0, i, 0, kFL + (j - k), 200);
+        localScroller.startScroll(0, i, 0, leP + (j - k), 200);
       }
-      kFY = 1;
-      kFP = true;
-      kFQ = false;
+      lfc = 1;
+      leT = true;
+      leU = false;
     }
   }
   
-  public final void bcK()
+  public final void bih()
   {
-    u.d("!32@/B4Tb64lLpI7QFnGqEKENPRhNROls06u", "forceTopLoadData isTopShowAll[%b], getScrollY[%d]. stack[%s]", new Object[] { Boolean.valueOf(kFS), Integer.valueOf(getScrollY()), ay.aVJ() });
+    v.d("MicroMsg.MMPullDownView", "forceTopLoadData isTopShowAll[%b], getScrollY[%d]. stack[%s]", new Object[] { Boolean.valueOf(leW), Integer.valueOf(getScrollY()), be.baX() });
     Scroller localScroller;
     int i;
     int j;
-    if (kFS)
+    if (leW)
     {
-      localScroller = fK;
+      localScroller = gg;
       i = getScrollY();
       j = -getScrollY();
-      localScroller.startScroll(0, i, 0, kFK + j, 200);
+      localScroller.startScroll(0, i, 0, leO + j, 200);
     }
     for (;;)
     {
       postInvalidate();
       return;
-      if (kFW.getVisibility() == 4)
+      if (lfa.getVisibility() == 4)
       {
-        localScroller = fK;
+        localScroller = gg;
         i = getScrollY();
         j = -getScrollY();
-        localScroller.startScroll(0, i, 0, kFK + j, 200);
+        localScroller.startScroll(0, i, 0, leO + j, 200);
       }
-      if (kFW.getVisibility() == 0) {
-        fK.startScroll(0, getScrollY(), 0, -getScrollY(), 200);
+      if (lfa.getVisibility() == 0) {
+        gg.startScroll(0, getScrollY(), 0, -getScrollY(), 200);
       }
-      kFY = 0;
-      kFP = true;
-      kFQ = false;
+      lfc = 0;
+      leT = true;
+      leU = false;
     }
   }
   
   public void computeScroll()
   {
-    if (fK.computeScrollOffset())
+    if (gg.computeScrollOffset())
     {
-      scrollTo(fK.getCurrX(), fK.getCurrY());
+      scrollTo(gg.getCurrX(), gg.getCurrY());
       postInvalidate();
     }
     for (;;)
     {
-      fK.isFinished();
+      gg.isFinished();
       return;
-      if (kFP)
+      if (leT)
       {
-        u.d("!32@/B4Tb64lLpI7QFnGqEKENPRhNROls06u", "summberbadcd computeScroll loadDataBegin true UPDATE_DELAY");
-        kFP = false;
-        kGi.sendEmptyMessageDelayed(0, kGh);
+        v.d("MicroMsg.MMPullDownView", "summberbadcd computeScroll loadDataBegin true UPDATE_DELAY");
+        leT = false;
+        lfm.sendEmptyMessageDelayed(0, lfl);
       }
     }
   }
   
   public boolean dispatchTouchEvent(MotionEvent paramMotionEvent)
   {
-    l locall = kGe;
-    if (lwj != null) {
-      lwi.onTouchEvent(paramMotionEvent);
+    l locall = lfi;
+    if (lWV != null) {
+      lWU.onTouchEvent(paramMotionEvent);
     }
-    if (!kFQ) {
+    if (!leU) {
       return true;
     }
-    if (kFV == null)
+    if (leZ == null)
     {
-      kFM = false;
-      if (kFU != null) {
+      leQ = false;
+      if (leY != null) {
         break label132;
       }
-      kFN = false;
+      leR = false;
       label54:
-      if (kGa == 0)
+      if (lfe == 0)
       {
-        if (!kFS) {
+        if (!leW) {
           break label148;
         }
-        kFW.setVisibility(4);
+        lfa.setVisibility(4);
       }
       label76:
-      if (kFZ == 0)
+      if (lfd == 0)
       {
-        if (!kFT) {
+        if (!leX) {
           break label159;
         }
-        kFX.setVisibility(4);
+        lfb.setVisibility(4);
       }
     }
     for (;;)
@@ -260,32 +259,32 @@ public class MMPullDownView
       if (paramMotionEvent.getAction() != 1) {
         break label170;
       }
-      bcL();
+      bii();
       return super.dispatchTouchEvent(paramMotionEvent);
-      kFM = kFV.Rd();
+      leQ = leZ.Ss();
       break;
       label132:
-      kFN = kFU.Re();
+      leR = leY.St();
       break label54;
       label148:
-      kFW.setVisibility(0);
+      lfa.setVisibility(0);
       break label76;
       label159:
-      kFX.setVisibility(0);
+      lfb.setVisibility(0);
     }
     label170:
     if (paramMotionEvent.getAction() == 3)
     {
-      bcL();
-      if (kGf) {
+      bii();
+      if (lfj) {
         return super.dispatchTouchEvent(paramMotionEvent);
       }
       return false;
     }
-    if (fge.onTouchEvent(paramMotionEvent))
+    if (fpd.onTouchEvent(paramMotionEvent))
     {
       paramMotionEvent.setAction(3);
-      kGj = true;
+      lfn = true;
       return super.dispatchTouchEvent(paramMotionEvent);
     }
     try
@@ -297,49 +296,71 @@ public class MMPullDownView
     return true;
   }
   
-  public int getCurScreen()
+  public final void hY(boolean paramBoolean)
   {
-    return kCu;
+    v.d("MicroMsg.MMPullDownView", "setIsTopShowAll showAll[%b], isTopShowAll[%b], stack[%s]", new Object[] { Boolean.valueOf(paramBoolean), Boolean.valueOf(leW), be.baX() });
+    leW = paramBoolean;
   }
   
-  public int getTopHeight()
+  public final void hZ(boolean paramBoolean)
   {
-    return kFK;
+    if (paramBoolean) {}
+    for (int i = 0;; i = 4)
+    {
+      lfd = i;
+      if (lfb != null) {
+        lfb.setVisibility(lfd);
+      }
+      return;
+    }
+  }
+  
+  public final void ia(boolean paramBoolean)
+  {
+    if (paramBoolean) {}
+    for (int i = 0;; i = 4)
+    {
+      lfe = i;
+      if (lfa != null) {
+        lfa.setVisibility(lfe);
+      }
+      return;
+    }
   }
   
   public boolean onDown(MotionEvent paramMotionEvent)
   {
-    if (!fK.isFinished()) {
-      fK.abortAnimation();
+    if (!gg.isFinished()) {
+      gg.abortAnimation();
     }
     return false;
   }
   
   public boolean onFling(MotionEvent paramMotionEvent1, MotionEvent paramMotionEvent2, float paramFloat1, float paramFloat2)
   {
-    u.v("!32@/B4Tb64lLpI7QFnGqEKENPRhNROls06u", "on fling, velocityX %f velocityY %f", new Object[] { Float.valueOf(paramFloat1), Float.valueOf(paramFloat2) });
+    v.v("MicroMsg.MMPullDownView", "on fling, velocityX %f velocityY %f", new Object[] { Float.valueOf(paramFloat1), Float.valueOf(paramFloat2) });
     return false;
   }
   
   public boolean onInterceptTouchEvent(MotionEvent paramMotionEvent)
   {
-    if (kGg != null) {
-      kGg.Vd();
+    if (lfk != null) {
+      lfk.WE();
     }
     return super.onInterceptTouchEvent(paramMotionEvent);
   }
   
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
-    u.d("!32@/B4Tb64lLpI7QFnGqEKENPRhNROls06u", "jacks onLayout change: %B, l:%d, t:%d, r:%d, b:%d", new Object[] { Boolean.valueOf(paramBoolean), Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), Integer.valueOf(paramInt4) });
+    v.d("MicroMsg.MMPullDownView", "jacks onLayout change: %B, l:%d, t:%d, r:%d, b:%d", new Object[] { Boolean.valueOf(paramBoolean), Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), Integer.valueOf(paramInt4) });
     View localView1;
-    if (!kGb)
+    if (!lff)
     {
-      localView1 = inflate(context, 2131363241, null);
-      View localView2 = inflate(context, 2131363241, null);
+      localView1 = inflate(context, 2130903836, null);
+      View localView2 = inflate(context, 2130903836, null);
       addView(localView1, 0, new FrameLayout.LayoutParams(-1, -2));
       addView(localView2, new FrameLayout.LayoutParams(-1, -2));
-      kGb = true;
+      lff = true;
     }
     paramInt4 = getChildCount();
     paramInt1 = 0;
@@ -363,22 +384,22 @@ public class MMPullDownView
         {
           for (;;)
           {
-            u.printErrStackTrace("!32@/B4Tb64lLpI7QFnGqEKENPRhNROls06u", localArrayIndexOutOfBoundsException, "childCount: %d, i:%d, childHeight:%d", new Object[] { Integer.valueOf(paramInt4), Integer.valueOf(paramInt1), Integer.valueOf(i) });
+            v.printErrStackTrace("MicroMsg.MMPullDownView", localArrayIndexOutOfBoundsException, "childCount: %d, i:%d, childHeight:%d", new Object[] { Integer.valueOf(paramInt4), Integer.valueOf(paramInt1), Integer.valueOf(i) });
           }
         }
       }
     }
-    kFW = getChildAt(0);
-    kFX = getChildAt(getChildCount() - 1);
-    kFW.setVisibility(kGa);
-    kFX.setVisibility(kFZ);
-    kFK = kFW.getHeight();
-    kFL = kFX.getHeight();
-    kGm = kFK;
-    if ((!kFR) && (kFK != 0))
+    lfa = getChildAt(0);
+    lfb = getChildAt(getChildCount() - 1);
+    lfa.setVisibility(lfe);
+    lfb.setVisibility(lfd);
+    leO = lfa.getHeight();
+    leP = lfb.getHeight();
+    lfq = leO;
+    if ((!leV) && (leO != 0))
     {
-      kFR = true;
-      scrollTo(0, kFK);
+      leV = true;
+      scrollTo(0, leO);
     }
   }
   
@@ -387,20 +408,20 @@ public class MMPullDownView
   public boolean onScroll(MotionEvent paramMotionEvent1, MotionEvent paramMotionEvent2, float paramFloat1, float paramFloat2)
   {
     int i = -1;
-    if (kGc != null) {
-      kGc.B(paramFloat2);
+    if (lfg != null) {
+      lfg.y(paramFloat2);
     }
     if (paramFloat2 > 0.0F) {
-      kFO = true;
+      leS = true;
     }
     int j;
     for (;;)
     {
-      if ((kFN) && ((kFO) || (getScrollY() - kFK > 0))) {
-        if ((!kGd) && ((kFX.getVisibility() != 0) || ((kFO) && (getScrollY() >= kFK * 2))))
+      if ((leR) && ((leS) || (getScrollY() - leO > 0))) {
+        if ((!lfh) && ((lfb.getVisibility() != 0) || ((leS) && (getScrollY() >= leO * 2))))
         {
           return true;
-          kFO = false;
+          leS = false;
         }
         else
         {
@@ -418,26 +439,26 @@ public class MMPullDownView
     label427:
     for (i = 1;; i = j)
     {
-      u.v("check", "moveUp:" + i + " distanceY:" + paramFloat2 + " scrollY:" + getScrollY());
-      if ((getScrollY() + i < kFK) && (!kFO)) {
-        j = kFK - getScrollY();
+      v.v("check", "moveUp:" + i + " distanceY:" + paramFloat2 + " scrollY:" + getScrollY());
+      if ((getScrollY() + i < leO) && (!leS)) {
+        j = leO - getScrollY();
       }
       for (;;)
       {
         scrollBy(0, j);
         return true;
         j = i;
-        if (!kGd)
+        if (!lfh)
         {
           j = i;
-          if (getScrollY() + i >= kFK * 2) {
-            j = kFK * 2 - getScrollY();
+          if (getScrollY() + i >= leO * 2) {
+            j = leO * 2 - getScrollY();
           }
         }
       }
-      if ((kFM) && ((!kFO) || (getScrollY() - kFK < 0)))
+      if ((leQ) && ((!leS) || (getScrollY() - leO < 0)))
       {
-        if ((!kGd) && ((kFW.getVisibility() != 0) || ((!kFO) && (getScrollY() <= 0)))) {
+        if ((!lfh) && ((lfa.getVisibility() != 0) || ((!leS) && (getScrollY() <= 0)))) {
           break;
         }
         j = (int)(paramFloat2 * 0.5D);
@@ -448,15 +469,15 @@ public class MMPullDownView
       }
       for (i = 1;; i = j)
       {
-        if (getScrollY() + i > kFK) {
-          j = kFK - getScrollY();
+        if (getScrollY() + i > leO) {
+          j = leO - getScrollY();
         }
         for (;;)
         {
           scrollBy(0, j);
           return true;
           j = i;
-          if (!kGd)
+          if (!lfh)
           {
             j = i;
             if (getScrollY() + i < 0) {
@@ -472,29 +493,29 @@ public class MMPullDownView
   protected void onScrollChanged(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.onScrollChanged(paramInt1, paramInt2, paramInt3, paramInt4);
-    if (kGo != null) {
-      kGo.UV();
+    if (lfs != null) {
+      lfs.Ww();
     }
-    if (!kGl) {}
+    if (!lfp) {}
     do
     {
       return;
-      if (kGm == Integer.MIN_VALUE)
+      if (lfq == Integer.MIN_VALUE)
       {
-        kGm = kFK;
-        u.d("!32@/B4Tb64lLpI7QFnGqEKENPRhNROls06u", "onScrollChanged static y:" + kGm);
+        lfq = leO;
+        v.d("MicroMsg.MMPullDownView", "onScrollChanged static y:" + lfq);
       }
-      if ((paramInt2 <= kGm) && (kGn != kGk))
+      if ((paramInt2 <= lfq) && (lfr != lfo))
       {
-        setBackgroundResource(2130970239);
-        kGn = kGk;
-        u.d("!32@/B4Tb64lLpI7QFnGqEKENPRhNROls06u", "onScrollChanged full");
+        setBackgroundResource(2130838813);
+        lfr = lfo;
+        v.d("MicroMsg.MMPullDownView", "onScrollChanged full");
         return;
       }
-    } while ((paramInt2 <= kGm) || (kGn == bgColor));
-    u.d("!32@/B4Tb64lLpI7QFnGqEKENPRhNROls06u", "onScrollChanged white");
+    } while ((paramInt2 <= lfq) || (lfr == bgColor));
+    v.d("MicroMsg.MMPullDownView", "onScrollChanged white");
     setBackgroundColor(bgColor);
-    kGn = bgColor;
+    lfr = bgColor;
   }
   
   public void onShowPress(MotionEvent paramMotionEvent) {}
@@ -511,185 +532,51 @@ public class MMPullDownView
     default: 
       return true;
     }
-    if (getScrollY() - kFK < 0) {
-      kFM = true;
+    if (getScrollY() - leO < 0) {
+      leQ = true;
     }
-    if (getScrollY() > kFL) {
-      kFN = true;
+    if (getScrollY() > leP) {
+      leR = true;
     }
-    bcL();
+    bii();
     return true;
-  }
-  
-  public void setAtBottomCallBack(c paramc)
-  {
-    kFU = paramc;
-  }
-  
-  public void setAtTopCallBack(d paramd)
-  {
-    kFV = paramd;
-  }
-  
-  public void setBgColor(String paramString)
-  {
-    bgColor = Color.parseColor(paramString);
-    kGn = bgColor;
-  }
-  
-  public void setBottomView(View paramView)
-  {
-    if (paramView == null)
-    {
-      kFZ = 4;
-      if (kFX != null) {
-        kFX.setVisibility(4);
-      }
-      return;
-    }
-    kFX = paramView;
-    kFX.setVisibility(0);
-    kFZ = 0;
-    removeViewAt(getChildCount() - 1);
-    addView(kFX, new FrameLayout.LayoutParams(-1, -2));
-    kFL = 0;
-  }
-  
-  public void setBottomViewVisible(boolean paramBoolean)
-  {
-    if (paramBoolean) {}
-    for (int i = 0;; i = 4)
-    {
-      kFZ = i;
-      if (kFX != null) {
-        kFX.setVisibility(kFZ);
-      }
-      return;
-    }
-  }
-  
-  public void setCanOverScrool(boolean paramBoolean)
-  {
-    kGd = paramBoolean;
-  }
-  
-  public void setIsBottomShowAll(boolean paramBoolean)
-  {
-    kFT = paramBoolean;
-  }
-  
-  public void setIsReturnSuperDispatchWhenCancel(boolean paramBoolean)
-  {
-    kGf = paramBoolean;
-  }
-  
-  public void setIsTopShowAll(boolean paramBoolean)
-  {
-    u.d("!32@/B4Tb64lLpI7QFnGqEKENPRhNROls06u", "setIsTopShowAll showAll[%b], isTopShowAll[%b], stack[%s]", new Object[] { Boolean.valueOf(paramBoolean), Boolean.valueOf(kFS), ay.aVJ() });
-    kFS = paramBoolean;
-  }
-  
-  public void setOnBottomLoadDataListener(e parame)
-  {
-    kFJ = parame;
-  }
-  
-  public void setOnInterceptTouchEventListener(a parama)
-  {
-    kGg = parama;
-  }
-  
-  public void setOnMMFlingListener(l.a parama)
-  {
-    kGe.lwj = parama;
-  }
-  
-  public void setOnScrollChangedListener(b paramb)
-  {
-    kGo = paramb;
-  }
-  
-  public void setOnSrcollDistance(f paramf)
-  {
-    kGc = paramf;
-  }
-  
-  public void setOnTopLoadDataListener(g paramg)
-  {
-    kFI = paramg;
-  }
-  
-  public void setShowBackground(boolean paramBoolean)
-  {
-    kGl = paramBoolean;
-  }
-  
-  public void setTopView(View paramView)
-  {
-    if (paramView == null)
-    {
-      kGa = 4;
-      if (kFW != null) {
-        kFW.setVisibility(4);
-      }
-      return;
-    }
-    removeViewAt(0);
-    kFW = paramView;
-    kFW.setVisibility(0);
-    kGa = 0;
-    addView(kFW, 0, new FrameLayout.LayoutParams(-1, -2));
-    kFK = 0;
-  }
-  
-  public void setTopViewVisible(boolean paramBoolean)
-  {
-    if (paramBoolean) {}
-    for (int i = 0;; i = 4)
-    {
-      kGa = i;
-      if (kFW != null) {
-        kFW.setVisibility(kGa);
-      }
-      return;
-    }
   }
   
   public static abstract interface a
   {
-    public abstract boolean Vd();
+    public abstract boolean WE();
   }
   
   public static abstract interface b
   {
-    public abstract void UV();
+    public abstract void Ww();
   }
   
   public static abstract interface c
   {
-    public abstract boolean Re();
+    public abstract boolean St();
   }
   
   public static abstract interface d
   {
-    public abstract boolean Rd();
+    public abstract boolean Ss();
   }
   
   public static abstract interface e
   {
-    public abstract void QR();
+    public abstract void Sg();
   }
   
   public static abstract interface f
   {
-    public abstract void B(float paramFloat);
+    public abstract void aFO();
     
-    public abstract void aCK();
+    public abstract void y(float paramFloat);
   }
   
   public static abstract interface g
   {
-    public abstract void aiq();
+    public abstract void akX();
   }
 }
 

@@ -1,24 +1,25 @@
 package com.tencent.mm.pluginsdk.model.app;
 
 import android.database.Cursor;
+import com.tencent.mm.e.b.g;
 import com.tencent.mm.sdk.h.d;
 import com.tencent.mm.sdk.h.f;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.ArrayList;
 import java.util.List;
 
 public final class o
-  extends f
+  extends f<g>
 {
-  public static final String[] aoY = { f.a(n.aot, "AppSort") };
-  public d aoX;
+  public static final String[] bkN = { f.a(n.bjR, "AppSort") };
+  public d bkP;
   
   public o(d paramd)
   {
-    super(paramd, n.aot, "AppSort", null);
-    aoX = paramd;
-    paramd.cj("AppSort", "CREATE INDEX IF NOT EXISTS flagIdIndex ON AppSort ( flag )");
-    paramd.cj("AppSort", "CREATE INDEX IF NOT EXISTS flagIdIndex ON AppSort ( sortId )");
+    super(paramd, n.bjR, "AppSort", null);
+    bkP = paramd;
+    paramd.cx("AppSort", "CREATE INDEX IF NOT EXISTS flagIdIndex ON AppSort ( flag )");
+    paramd.cx("AppSort", "CREATE INDEX IF NOT EXISTS flagIdIndex ON AppSort ( sortId )");
   }
   
   public final boolean a(n paramn)
@@ -26,7 +27,7 @@ public final class o
     return super.a(paramn);
   }
   
-  public final List cV(long paramLong)
+  public final List<String> dm(long paramLong)
   {
     ArrayList localArrayList = new ArrayList();
     Object localObject = new StringBuilder(256);
@@ -37,10 +38,10 @@ public final class o
     localObject = rawQuery(((StringBuilder)localObject).toString(), new String[0]);
     if (localObject == null)
     {
-      u.e("!32@/B4Tb64lLpKjqLIxHHV2u0eBiAQ5Q3BJ", "getAppListByFlag : cursor is null");
+      v.e("MicroMsg.AppSortStorage", "getAppListByFlag : cursor is null");
       return null;
     }
-    u.d("!32@/B4Tb64lLpKjqLIxHHV2u0eBiAQ5Q3BJ", "getAppListByFlag count = %d", new Object[] { Integer.valueOf(((Cursor)localObject).getCount()) });
+    v.d("MicroMsg.AppSortStorage", "getAppListByFlag count = %d", new Object[] { Integer.valueOf(((Cursor)localObject).getCount()) });
     int i = ((Cursor)localObject).getColumnIndex("appId");
     while (((Cursor)localObject).moveToNext()) {
       localArrayList.add(((Cursor)localObject).getString(i));

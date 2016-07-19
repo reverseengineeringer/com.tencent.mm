@@ -10,7 +10,7 @@ public final class d$b
   
   public d$b(Bundle paramBundle)
   {
-    m(paramBundle);
+    o(paramBundle);
   }
   
   public final int getType()

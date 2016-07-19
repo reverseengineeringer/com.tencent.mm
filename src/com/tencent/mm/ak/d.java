@@ -1,128 +1,107 @@
 package com.tencent.mm.ak;
 
-import com.tencent.mm.model.al.a;
-import com.tencent.mm.model.al.b;
-import com.tencent.mm.network.e;
-import com.tencent.mm.network.j;
-import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b.aep;
-import com.tencent.mm.protocal.b.fu;
-import com.tencent.mm.protocal.b.vn;
-import com.tencent.mm.protocal.b.vo;
-import com.tencent.mm.protocal.b.yi;
-import com.tencent.mm.r.j.a;
-import com.tencent.mm.r.j.b;
-import com.tencent.mm.r.k;
-import com.tencent.mm.sdk.platformtools.u;
+import java.util.LinkedList;
 
 public final class d
-  extends k
-  implements j
+  extends com.tencent.mm.ax.a
 {
-  private com.tencent.mm.r.d anM;
-  private final o bGh = new a();
-  String ccq = "";
+  public LinkedList<e> bRl = new LinkedList();
+  public int bRm;
+  public int bRn;
+  public int bRo;
+  public int bRp;
+  public String bRq;
+  public String name;
   
-  public d(String paramString1, String paramString2, String paramString3)
+  protected final int a(int paramInt, Object... paramVarArgs)
   {
-    al.a locala = (al.a)bGh.vA();
-    bBr.jtf = paramString1;
-    bBr.jtg = paramString2;
-    bBr.eiB = paramString3;
-    bBr.iWm = 261;
-    u.i("!64@/B4Tb64lLpK+IBX8XDgnvvIDLRVRTUAQ0LfYycHqOZ+MARrtsO9+xU3kxqmTrCa5", "get soter ticket sceneType %d", new Object[] { Integer.valueOf(bBr.iWm) });
-  }
-  
-  public final int a(e parame, com.tencent.mm.r.d paramd)
-  {
-    anM = paramd;
-    return a(parame, bGh, this);
-  }
-  
-  protected final int a(o paramo)
-  {
-    return j.b.bFI;
-  }
-  
-  public final void a(int paramInt1, int paramInt2, String paramString, o paramo)
-  {
-    ccq = tXbBs.jiB;
-    u.d("!64@/B4Tb64lLpK+IBX8XDgnvvIDLRVRTUAQ0LfYycHqOZ+MARrtsO9+xU3kxqmTrCa5", "onGYNetEndDelegated  errType:" + paramInt1 + " errCode:" + paramInt2 + " mTicket: " + ccq);
-    if (anM != null) {
-      anM.a(paramInt1, paramInt2, paramString, this);
+    if (paramInt == 0)
+    {
+      paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
+      paramVarArgs.d(1, 8, bRl);
+      if (name != null) {
+        paramVarArgs.e(2, name);
+      }
+      paramVarArgs.cw(3, bRm);
+      paramVarArgs.cw(4, bRn);
+      paramVarArgs.cw(5, bRo);
+      paramVarArgs.cw(6, bRp);
+      if (bRq != null) {
+        paramVarArgs.e(7, bRq);
+      }
+      paramInt = 0;
     }
-  }
-  
-  protected final void a(j.a parama) {}
-  
-  public final fu c(o paramo)
-  {
-    if (paramo != null) {
-      try
-      {
-        paramo = tXbBs.jbE;
-        return paramo;
+    int i;
+    do
+    {
+      return paramInt;
+      if (paramInt != 1) {
+        break;
       }
-      catch (Exception paramo)
-      {
-        u.printErrStackTrace("!64@/B4Tb64lLpK+IBX8XDgnvvIDLRVRTUAQ0LfYycHqOZ+MARrtsO9+xU3kxqmTrCa5", null, "retrieve ip list exception: %s", new Object[] { paramo.getMessage() });
+      i = a.a.a.a.c(1, 8, bRl) + 0;
+      paramInt = i;
+      if (name != null) {
+        paramInt = i + a.a.a.b.b.a.f(2, name);
       }
+      i = paramInt + a.a.a.a.cu(3, bRm) + a.a.a.a.cu(4, bRn) + a.a.a.a.cu(5, bRo) + a.a.a.a.cu(6, bRp);
+      paramInt = i;
+    } while (bRq == null);
+    return i + a.a.a.b.b.a.f(7, bRq);
+    if (paramInt == 2)
+    {
+      paramVarArgs = (byte[])paramVarArgs[0];
+      bRl.clear();
+      paramVarArgs = new a.a.a.a.a(paramVarArgs, jrk);
+      for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
+        if (!super.a(paramVarArgs, this, paramInt)) {
+          paramVarArgs.bve();
+        }
+      }
+      return 0;
     }
-    return null;
-  }
-  
-  public final aep d(o paramo)
-  {
-    if (paramo != null) {
-      try
+    if (paramInt == 3)
+    {
+      Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
+      d locald = (d)paramVarArgs[1];
+      paramInt = ((Integer)paramVarArgs[2]).intValue();
+      switch (paramInt)
       {
-        paramo = tXbBs.jbF;
-        return paramo;
+      default: 
+        return -1;
+      case 1: 
+        paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+        i = paramVarArgs.size();
+        paramInt = 0;
+        while (paramInt < i)
+        {
+          Object localObject2 = (byte[])paramVarArgs.get(paramInt);
+          localObject1 = new e();
+          localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+          for (boolean bool = true; bool; bool = ((e)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, com.tencent.mm.ax.a.a((a.a.a.a.a)localObject2))) {}
+          bRl.add(localObject1);
+          paramInt += 1;
+        }
+        return 0;
+      case 2: 
+        name = mMY.readString();
+        return 0;
+      case 3: 
+        bRm = mMY.id();
+        return 0;
+      case 4: 
+        bRn = mMY.id();
+        return 0;
+      case 5: 
+        bRo = mMY.id();
+        return 0;
+      case 6: 
+        bRp = mMY.id();
+        return 0;
       }
-      catch (Exception paramo)
-      {
-        u.printErrStackTrace("!64@/B4Tb64lLpK+IBX8XDgnvvIDLRVRTUAQ0LfYycHqOZ+MARrtsO9+xU3kxqmTrCa5", null, "retrieve network control exception: %s", new Object[] { paramo.getMessage() });
-      }
+      bRq = mMY.readString();
+      return 0;
     }
-    return null;
-  }
-  
-  public final yi e(o paramo)
-  {
-    if (paramo != null) {
-      try
-      {
-        paramo = tXbBs.jbD;
-        return paramo;
-      }
-      catch (Exception paramo)
-      {
-        u.printErrStackTrace("!64@/B4Tb64lLpK+IBX8XDgnvvIDLRVRTUAQ0LfYycHqOZ+MARrtsO9+xU3kxqmTrCa5", null, "retrieve host list exception: %s", new Object[] { paramo.getMessage() });
-      }
-    }
-    return null;
-  }
-  
-  public final int getType()
-  {
-    return 261;
-  }
-  
-  protected final int lk()
-  {
-    return 3;
-  }
-  
-  public final void vH()
-  {
-    if (anM != null) {
-      anM.a(3, -1, "", this);
-    }
-  }
-  
-  public final com.tencent.mm.r.d vI()
-  {
-    return anM;
+    return -1;
   }
 }
 

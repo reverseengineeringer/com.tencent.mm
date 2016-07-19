@@ -3,9 +3,14 @@ package android.support.v4.app;
 import android.app.Notification;
 import android.app.NotificationManager;
 
-class v$d
+final class v$d
   extends v.c
 {
+  public final int Z()
+  {
+    return 33;
+  }
+  
   public final void a(NotificationManager paramNotificationManager, String paramString, int paramInt)
   {
     paramNotificationManager.cancel(null, paramInt);

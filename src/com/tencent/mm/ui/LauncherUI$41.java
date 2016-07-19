@@ -2,22 +2,15 @@ package com.tencent.mm.ui;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.ac.b;
 
 final class LauncherUI$41
   implements DialogInterface.OnClickListener
 {
-  LauncherUI$41(LauncherUI paramLauncherUI, int paramInt) {}
+  LauncherUI$41(LauncherUI paramLauncherUI) {}
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     paramDialogInterface.dismiss();
-    if ((cBl != 1030) || (!b.AL()))
-    {
-      LauncherUI.f(knl, true);
-      MMAppMgr.b(knl, true);
-      knl.finish();
-    }
   }
 }
 

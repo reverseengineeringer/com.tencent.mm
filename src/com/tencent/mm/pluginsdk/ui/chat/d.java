@@ -11,31 +11,31 @@ public final class d
     super(paramContext, null);
   }
   
-  public final void RN() {}
+  public final void Th() {}
   
-  public final void RO() {}
+  public final void Ti() {}
   
-  public final void RP() {}
+  public final void Tj() {}
   
-  public final void RQ() {}
+  public final void Tk() {}
   
-  public final void RR() {}
+  public final void Tn() {}
   
-  public final void RS() {}
+  public final void To() {}
   
-  public final void j(boolean paramBoolean1, boolean paramBoolean2) {}
+  public final void bI(boolean paramBoolean) {}
+  
+  public final void hb(int paramInt) {}
+  
+  public final void k(boolean paramBoolean1, boolean paramBoolean2) {}
+  
+  public final void od(String paramString) {}
+  
+  public final void oe(String paramString) {}
   
   public final void onPause() {}
   
   public final void onResume() {}
-  
-  public final void setDefaultEmojiByDetail(String paramString) {}
-  
-  public final void setPortHeightPx(int paramInt) {}
-  
-  public final void setSendButtonEnable(boolean paramBoolean) {}
-  
-  public final void setTalkerName(String paramString) {}
 }
 
 /* Location:

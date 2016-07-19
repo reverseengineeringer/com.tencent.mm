@@ -1,31 +1,21 @@
 package com.tencent.smtt.sdk;
 
-import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
-import android.content.Context;
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.graphics.Picture;
+import com.tencent.smtt.export.external.interfaces.IX5WebViewBase;
+import com.tencent.smtt.export.external.interfaces.IX5WebViewBase.PictureListener;
 
 class WebView$5
-  implements View.OnClickListener
+  implements IX5WebViewBase.PictureListener
 {
-  WebView$5(WebView paramWebView, Context paramContext) {}
+  WebView$5(WebView paramWebView, WebView.PictureListener paramPictureListener) {}
   
-  public void onClick(View paramView)
+  public void onNewPicture(IX5WebViewBase paramIX5WebViewBase, Picture paramPicture, boolean paramBoolean)
   {
-    this$0.post(new Runnable()
-    {
-      public void run()
-      {
-        QbSdk.reset(val$context);
-        AlertDialog.Builder localBuilder = new AlertDialog.Builder(val$context);
-        localBuilder.setTitle("提示");
-        localBuilder.setPositiveButton("确定", null);
-        localBuilder.setMessage("删除成功!");
-        localBuilder.create().show();
-      }
-    });
+    this$0.mvJ = paramIX5WebViewBase;
+    val$listner.onNewPicture(this$0, paramPicture);
   }
+  
+  public void onNewPictureIfHaveContent(IX5WebViewBase paramIX5WebViewBase, Picture paramPicture) {}
 }
 
 /* Location:

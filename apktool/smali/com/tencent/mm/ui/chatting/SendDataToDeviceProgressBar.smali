@@ -4,19 +4,19 @@
 
 
 # instance fields
-.field private bQM:Lcom/tencent/mm/sdk/platformtools/aa;
-
 .field private bottom:I
 
-.field private cZX:Landroid/graphics/Paint;
+.field private bpz:Lcom/tencent/mm/sdk/platformtools/ac;
 
-.field private dEY:I
+.field private cYD:Landroid/graphics/Paint;
 
-.field private dEZ:I
+.field private dGx:I
 
-.field private dFa:Ljava/lang/Runnable;
+.field private dGy:I
 
-.field private ldv:I
+.field private dGz:Ljava/lang/Runnable;
+
+.field private evr:I
 
 .field private left:I
 
@@ -32,12 +32,12 @@
     .locals 1
 
     .prologue
-    .line 1151
+    .line 1510
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 1152
+    .line 1511
     return-void
 .end method
 
@@ -47,78 +47,78 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 1155
+    .line 1514
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 1137
+    .line 1496
     const/4 v0, 0x2
 
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dEY:I
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dGx:I
 
-    .line 1138
+    .line 1497
     iput v1, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->left:I
 
-    .line 1139
+    .line 1498
     iput v1, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->top:I
 
-    .line 1140
+    .line 1499
     iput v1, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->right:I
 
-    .line 1141
+    .line 1500
     iput v1, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->bottom:I
 
-    .line 1142
-    iput v1, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dEZ:I
+    .line 1501
+    iput v1, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dGy:I
 
-    .line 1143
+    .line 1502
     const/16 v0, 0xa
 
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->ldv:I
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->evr:I
 
-    .line 1217
+    .line 1576
     new-instance v0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar$1;-><init>(Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dFa:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dGz:Ljava/lang/Runnable;
 
-    .line 1156
-    const v0, 0x7f040003
+    .line 1515
+    const v0, 0x7f0208c6
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->setImageResource(I)V
 
-    .line 1157
+    .line 1516
     iput-object p1, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->mContext:Landroid/content/Context;
 
-    .line 1158
+    .line 1517
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->cZX:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->cYD:Landroid/graphics/Paint;
 
-    .line 1159
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->cZX:Landroid/graphics/Paint;
+    .line 1518
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->cYD:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 1160
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->cZX:Landroid/graphics/Paint;
+    .line 1519
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->cYD:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 1161
+    .line 1520
     iget-object v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f050010
+    const v1, 0x7f0b024c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -126,38 +126,38 @@
 
     iput v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->left:I
 
-    .line 1162
+    .line 1521
     iget v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->left:I
 
     iput v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->top:I
 
-    .line 1163
+    .line 1522
     iget-object v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f05000f
+    const v1, 0x7f0b024d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dEZ:I
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dGy:I
 
-    .line 1164
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 1523
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->bQM:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->bpz:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    .line 1165
+    .line 1524
     return-void
 .end method
 
@@ -167,8 +167,8 @@
     .locals 2
 
     .prologue
-    .line 1181
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dEY:I
+    .line 1540
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dGx:I
 
     int-to-float v0, v0
 
@@ -193,18 +193,18 @@
 
     const/4 v5, -0x1
 
-    .line 1186
+    .line 1545
     invoke-super {p0, p1}, Landroid/widget/ImageView;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 1187
+    .line 1546
     invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->getWidth()I
 
     move-result v0
 
     div-int/lit8 v0, v0, 0x2
 
-    .line 1189
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->cZX:Landroid/graphics/Paint;
+    .line 1548
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->cYD:Landroid/graphics/Paint;
 
     iget-object v2, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->mContext:Landroid/content/Context;
 
@@ -212,7 +212,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f080028
+    const v3, 0x7f0f0181
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -220,21 +220,21 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 1190
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->cZX:Landroid/graphics/Paint;
+    .line 1549
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->cYD:Landroid/graphics/Paint;
 
-    iget v2, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dEZ:I
+    iget v2, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dGy:I
 
     int-to-float v2, v2
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 1192
+    .line 1551
     iget v1, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->right:I
 
     if-ne v1, v5, :cond_0
 
-    .line 1193
+    .line 1552
     mul-int/lit8 v0, v0, 0x2
 
     iget v1, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->left:I
@@ -243,18 +243,18 @@
 
     iput v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->right:I
 
-    .line 1195
+    .line 1554
     :cond_0
     iget v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->bottom:I
 
     if-ne v0, v5, :cond_1
 
-    .line 1196
+    .line 1555
     iget v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->right:I
 
     iput v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->bottom:I
 
-    .line 1199
+    .line 1558
     :cond_1
     new-instance v1, Landroid/graphics/RectF;
 
@@ -276,35 +276,35 @@
 
     invoke-direct {v1, v0, v2, v3, v5}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 1200
+    .line 1559
     const/high16 v2, 0x43870000    # 270.0f
 
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dEY:I
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dGx:I
 
     int-to-float v3, v0
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->cZX:Landroid/graphics/Paint;
+    iget-object v5, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->cYD:Landroid/graphics/Paint;
 
     move-object v0, p1
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 1201
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dEY:I
+    .line 1560
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dGx:I
 
     add-int/lit16 v0, v0, 0x10e
 
-    .line 1202
+    .line 1561
     const/16 v2, 0x168
 
     if-le v0, v2, :cond_2
 
-    .line 1203
+    .line 1562
     add-int/lit16 v0, v0, -0x168
 
-    .line 1206
+    .line 1565
     :cond_2
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->cZX:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->cYD:Landroid/graphics/Paint;
 
     iget-object v3, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->mContext:Landroid/content/Context;
 
@@ -312,7 +312,7 @@
 
     move-result-object v3
 
-    const v5, 0x7f080027
+    const v5, 0x7f0f017f
 
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -320,22 +320,22 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 1207
+    .line 1566
     int-to-float v2, v0
 
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dEY:I
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dGx:I
 
     rsub-int v0, v0, 0x168
 
     int-to-float v3, v0
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->cZX:Landroid/graphics/Paint;
+    iget-object v5, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->cYD:Landroid/graphics/Paint;
 
     move-object v0, p1
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 1210
+    .line 1569
     return-void
 .end method
 
@@ -345,7 +345,7 @@
     .prologue
     const/16 v0, 0x64
 
-    .line 1169
+    .line 1528
     if-lt p1, v0, :cond_0
 
     move p1, v0
@@ -363,22 +363,22 @@
 
     float-to-int v0, v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dEY:I
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dGx:I
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->bQM:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->bpz:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dFa:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dGz:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->bQM:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->bpz:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dFa:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->dGz:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x0
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/aa;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ac;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1170
+    .line 1529
     return-void
 .end method

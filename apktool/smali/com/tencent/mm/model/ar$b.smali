@@ -15,25 +15,29 @@
 
 
 # instance fields
-.field public asc:I
+.field public buW:Ljava/lang/String;
 
-.field public bBO:Ljava/lang/String;
+.field public buX:Ljava/lang/String;
 
-.field public bBP:Ljava/lang/String;
+.field public buY:Ljava/lang/String;
 
-.field public bBQ:Ljava/lang/String;
+.field public buZ:Ljava/lang/String;
 
-.field public bBR:Ljava/lang/String;
+.field public bva:Ljava/lang/String;
 
-.field public bBS:Ljava/lang/String;
+.field public bvb:Ljava/lang/String;
 
-.field public bBT:Ljava/lang/String;
+.field public bvc:Ljava/lang/String;
 
-.field public bBU:Ljava/lang/String;
+.field public bvd:Ljava/lang/String;
 
-.field public bBV:Ljava/lang/String;
+.field public bve:Ljava/lang/String;
 
-.field public bBW:Ljava/lang/String;
+.field public bvf:Ljava/lang/String;
+
+.field public bvg:I
+
+.field public scene:I
 
 .field public userId:Ljava/lang/String;
 
@@ -43,13 +47,13 @@
     .locals 1
 
     .prologue
-    .line 570
+    .line 605
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 576
+    .line 611
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/model/ar$b;->asc:I
+    iput v0, p0, Lcom/tencent/mm/model/ar$b;->scene:I
 
     return-void
 .end method

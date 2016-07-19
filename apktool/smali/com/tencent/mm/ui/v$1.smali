@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic kry:Landroid/view/View;
+.field final synthetic kQH:Landroid/view/View;
 
-.field final synthetic krz:Landroid/view/View;
+.field final synthetic kQI:Landroid/view/View;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 125
-    iput-object p1, p0, Lcom/tencent/mm/ui/v$1;->kry:Landroid/view/View;
+    .line 131
+    iput-object p1, p0, Lcom/tencent/mm/ui/v$1;->kQH:Landroid/view/View;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/v$1;->krz:Landroid/view/View;
+    iput-object p2, p0, Lcom/tencent/mm/ui/v$1;->kQI:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,8 +44,8 @@
     .locals 5
 
     .prologue
-    .line 129
-    iget-object v0, p0, Lcom/tencent/mm/ui/v$1;->kry:Landroid/view/View;
+    .line 135
+    iget-object v0, p0, Lcom/tencent/mm/ui/v$1;->kQH:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -53,7 +53,7 @@
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 131
+    .line 137
     iget v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     iget v2, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
@@ -62,18 +62,18 @@
 
     iget v4, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    invoke-static {v1, v2, v3, v4}, Lcom/tencent/mm/ui/v;->n(IIII)V
+    invoke-static {v1, v2, v3, v4}, Lcom/tencent/mm/ui/v;->m(IIII)V
 
-    .line 133
-    iget-object v1, p0, Lcom/tencent/mm/ui/v$1;->krz:Landroid/view/View;
+    .line 139
+    iget-object v1, p0, Lcom/tencent/mm/ui/v$1;->kQI:Landroid/view/View;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/v$1;->krz:Landroid/view/View;
+    iget-object v2, p0, Lcom/tencent/mm/ui/v$1;->kQI:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v2
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/v$1;->krz:Landroid/view/View;
+    iget-object v3, p0, Lcom/tencent/mm/ui/v$1;->kQI:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getPaddingTop()I
 
@@ -85,8 +85,8 @@
 
     invoke-virtual {v1, v2, v3, v4, v0}, Landroid/view/View;->setPadding(IIII)V
 
-    .line 135
-    iget-object v0, p0, Lcom/tencent/mm/ui/v$1;->kry:Landroid/view/View;
+    .line 141
+    iget-object v0, p0, Lcom/tencent/mm/ui/v$1;->kQH:Landroid/view/View;
 
     invoke-virtual {v0, p2}, Landroid/view/View;->onApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
 

@@ -1,30 +1,31 @@
 package com.tencent.mm.app;
 
-import android.support.a.a;
+import com.tencent.mm.compatible.loader.e;
 import com.tencent.mm.compatible.util.i;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.d.a;
+import com.tencent.mm.sdk.platformtools.aa;
 import com.tencent.mm.xlog.Xlog;
 
 public class TMAssistantProfile
-  extends com.tencent.mm.compatible.loader.h
+  extends e
 {
-  public static final String alg = y.getPackageName() + ":TMAssistantDownloadSDKService";
+  public static final String Yf = aa.getPackageName() + ":TMAssistantDownloadSDKService";
   
   public final void aQ() {}
   
   public final void onCreate()
   {
     i.b("stlport_shared", SandBoxProfile.class.getClassLoader());
-    a.a(y.getContext(), true);
-    h.aP(alg);
+    a.b(aa.getContext(), true);
+    g.aU(Yf);
     i.setupBrokenLibraryHandler();
     Xlog.init();
-    MMApplicationWrapper.a(btM);
+    MMApplicationWrapper.initSVGPreload(bhP);
   }
   
   public String toString()
   {
-    return alg;
+    return Yf;
   }
 }
 

@@ -28,7 +28,7 @@
 .end method
 
 .method public constructor <init>(J)V
-    .locals 2
+    .locals 3
 
     .prologue
     .line 17
@@ -52,7 +52,7 @@
     return-void
 .end method
 
-.method public static aF(Ljava/lang/String;)I
+.method public static aK(Ljava/lang/String;)I
     .locals 4
 
     .prologue

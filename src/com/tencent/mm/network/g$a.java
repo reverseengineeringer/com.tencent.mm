@@ -29,7 +29,7 @@ public abstract class g$a
       return true;
     }
     paramParcel1.enforceInterface("com.tencent.mm.network.IIpxxCallback_AIDL");
-    aH(paramParcel1.readInt());
+    aZ(paramParcel1.readInt());
     paramParcel2.writeNoException();
     return true;
   }
@@ -44,7 +44,7 @@ public abstract class g$a
       mRemote = paramIBinder;
     }
     
-    public final void aH(int paramInt)
+    public final void aZ(int paramInt)
     {
       Parcel localParcel1 = Parcel.obtain();
       Parcel localParcel2 = Parcel.obtain();

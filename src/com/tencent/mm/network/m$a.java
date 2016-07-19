@@ -14,7 +14,7 @@ public abstract class m$a
     attachInterface(this, "com.tencent.mm.network.IOnNetworkChange_AIDL");
   }
   
-  public static m aa(IBinder paramIBinder)
+  public static m C(IBinder paramIBinder)
   {
     if (paramIBinder == null) {
       return null;
@@ -42,7 +42,7 @@ public abstract class m$a
       return true;
     }
     paramParcel1.enforceInterface("com.tencent.mm.network.IOnNetworkChange_AIDL");
-    aK(paramParcel1.readInt());
+    bc(paramParcel1.readInt());
     paramParcel2.writeNoException();
     return true;
   }
@@ -57,7 +57,12 @@ public abstract class m$a
       mRemote = paramIBinder;
     }
     
-    public final void aK(int paramInt)
+    public final IBinder asBinder()
+    {
+      return mRemote;
+    }
+    
+    public final void bc(int paramInt)
     {
       Parcel localParcel1 = Parcel.obtain();
       Parcel localParcel2 = Parcel.obtain();
@@ -74,11 +79,6 @@ public abstract class m$a
         localParcel2.recycle();
         localParcel1.recycle();
       }
-    }
-    
-    public final IBinder asBinder()
-    {
-      return mRemote;
     }
   }
 }

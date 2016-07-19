@@ -123,13 +123,13 @@
 
     check-cast v1, Lcom/qq/wx/voice/embed/recognizer/d;
 
-    iget-object v1, v1, Lcom/qq/wx/voice/embed/recognizer/d;->ajh:Ljava/lang/String;
+    iget-object v1, v1, Lcom/qq/wx/voice/embed/recognizer/d;->UX:Ljava/lang/String;
 
     invoke-static {v1}, Lcom/qq/wx/voice/embed/recognizer/Grammar;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/qq/wx/voice/embed/recognizer/d;->ajk:Ljava/lang/String;
+    iput-object v1, v0, Lcom/qq/wx/voice/embed/recognizer/d;->Va:Ljava/lang/String;
 
     iget-object v0, p0, Lcom/qq/wx/voice/embed/recognizer/Grammar;->e:Ljava/util/ArrayList;
 
@@ -147,13 +147,13 @@
 
     check-cast v1, Lcom/qq/wx/voice/embed/recognizer/d;
 
-    iget-object v1, v1, Lcom/qq/wx/voice/embed/recognizer/d;->aji:Ljava/lang/String;
+    iget-object v1, v1, Lcom/qq/wx/voice/embed/recognizer/d;->UY:Ljava/lang/String;
 
     invoke-static {v1}, Lcom/qq/wx/voice/embed/recognizer/Grammar;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/qq/wx/voice/embed/recognizer/d;->ajl:Ljava/lang/String;
+    iput-object v1, v0, Lcom/qq/wx/voice/embed/recognizer/d;->Vb:Ljava/lang/String;
 
     iget-object v0, p0, Lcom/qq/wx/voice/embed/recognizer/Grammar;->e:Ljava/util/ArrayList;
 
@@ -171,13 +171,13 @@
 
     check-cast v1, Lcom/qq/wx/voice/embed/recognizer/d;
 
-    iget-object v1, v1, Lcom/qq/wx/voice/embed/recognizer/d;->ajj:Ljava/lang/String;
+    iget-object v1, v1, Lcom/qq/wx/voice/embed/recognizer/d;->UZ:Ljava/lang/String;
 
     invoke-static {v1}, Lcom/qq/wx/voice/embed/recognizer/Grammar;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/qq/wx/voice/embed/recognizer/d;->ajm:Ljava/lang/String;
+    iput-object v1, v0, Lcom/qq/wx/voice/embed/recognizer/d;->Vc:Ljava/lang/String;
 
     add-int/lit8 v0, v2, 0x1
 
@@ -194,7 +194,7 @@
 
     check-cast v0, Lcom/qq/wx/voice/embed/recognizer/d;
 
-    iget-object v0, v0, Lcom/qq/wx/voice/embed/recognizer/d;->ajk:Ljava/lang/String;
+    iget-object v0, v0, Lcom/qq/wx/voice/embed/recognizer/d;->Va:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -224,7 +224,7 @@
 
     check-cast v0, Lcom/qq/wx/voice/embed/recognizer/d;
 
-    iget-object v0, v0, Lcom/qq/wx/voice/embed/recognizer/d;->ajl:Ljava/lang/String;
+    iget-object v0, v0, Lcom/qq/wx/voice/embed/recognizer/d;->Vb:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -254,7 +254,7 @@
 
     check-cast v0, Lcom/qq/wx/voice/embed/recognizer/d;
 
-    iget-object v0, v0, Lcom/qq/wx/voice/embed/recognizer/d;->ajm:Ljava/lang/String;
+    iget-object v0, v0, Lcom/qq/wx/voice/embed/recognizer/d;->Vc:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -353,7 +353,7 @@
     :cond_3
     iget-object v1, p0, Lcom/qq/wx/voice/embed/recognizer/Grammar;->a:Lcom/qq/wx/voice/embed/recognizer/f;
 
-    invoke-virtual {v1, p2, p3, p4}, Lcom/qq/wx/voice/embed/recognizer/f;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v1, p2, p3, p4}, Lcom/qq/wx/voice/embed/recognizer/f;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
@@ -461,7 +461,7 @@
 
     check-cast v0, Lcom/qq/wx/voice/embed/recognizer/d;
 
-    iget-object v0, v0, Lcom/qq/wx/voice/embed/recognizer/d;->ajk:Ljava/lang/String;
+    iget-object v0, v0, Lcom/qq/wx/voice/embed/recognizer/d;->Va:Ljava/lang/String;
 
     iget-object v3, p0, Lcom/qq/wx/voice/embed/recognizer/Grammar;->b:Lcom/qq/wx/voice/embed/recognizer/a;
 
@@ -481,7 +481,7 @@
 
     check-cast v0, Lcom/qq/wx/voice/embed/recognizer/d;
 
-    iget-object v0, v0, Lcom/qq/wx/voice/embed/recognizer/d;->ajh:Ljava/lang/String;
+    iget-object v0, v0, Lcom/qq/wx/voice/embed/recognizer/d;->UX:Ljava/lang/String;
 
     iput-object v0, p1, Lcom/qq/wx/voice/embed/recognizer/a;->name:Ljava/lang/String;
 
@@ -496,7 +496,7 @@
 
     check-cast v0, Lcom/qq/wx/voice/embed/recognizer/d;
 
-    iget-object v0, v0, Lcom/qq/wx/voice/embed/recognizer/d;->ajl:Ljava/lang/String;
+    iget-object v0, v0, Lcom/qq/wx/voice/embed/recognizer/d;->Vb:Ljava/lang/String;
 
     iget-object v3, p0, Lcom/qq/wx/voice/embed/recognizer/Grammar;->b:Lcom/qq/wx/voice/embed/recognizer/a;
 
@@ -516,7 +516,7 @@
 
     check-cast v0, Lcom/qq/wx/voice/embed/recognizer/d;
 
-    iget-object v0, v0, Lcom/qq/wx/voice/embed/recognizer/d;->ajh:Ljava/lang/String;
+    iget-object v0, v0, Lcom/qq/wx/voice/embed/recognizer/d;->UX:Ljava/lang/String;
 
     iput-object v0, p1, Lcom/qq/wx/voice/embed/recognizer/a;->name:Ljava/lang/String;
 
@@ -531,7 +531,7 @@
 
     check-cast v0, Lcom/qq/wx/voice/embed/recognizer/d;
 
-    iget-object v0, v0, Lcom/qq/wx/voice/embed/recognizer/d;->ajm:Ljava/lang/String;
+    iget-object v0, v0, Lcom/qq/wx/voice/embed/recognizer/d;->Vc:Ljava/lang/String;
 
     iget-object v3, p0, Lcom/qq/wx/voice/embed/recognizer/Grammar;->b:Lcom/qq/wx/voice/embed/recognizer/a;
 
@@ -551,7 +551,7 @@
 
     check-cast v0, Lcom/qq/wx/voice/embed/recognizer/d;
 
-    iget-object v0, v0, Lcom/qq/wx/voice/embed/recognizer/d;->ajh:Ljava/lang/String;
+    iget-object v0, v0, Lcom/qq/wx/voice/embed/recognizer/d;->UX:Ljava/lang/String;
 
     iput-object v0, p1, Lcom/qq/wx/voice/embed/recognizer/a;->name:Ljava/lang/String;
 

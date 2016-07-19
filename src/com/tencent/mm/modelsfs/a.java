@@ -1,48 +1,48 @@
 package com.tencent.mm.modelsfs;
 
 import com.tencent.mm.plugin.imgenc.MMIMAGEENCJNI;
-import com.tencent.mm.sdk.platformtools.ad;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class a
 {
-  private static boolean cah = false;
-  private long cai = 0L;
-  private long caj = 0L;
-  private long cak = 0L;
+  private static boolean bTQ = false;
+  private long bTR = 0L;
+  private long bTS = 0L;
+  private long bTT = 0L;
   private long mNativePtr = 0L;
   
   public a(long paramLong)
   {
-    caj = paramLong;
+    bTS = paramLong;
     init();
   }
   
   private void init()
   {
-    u.i("!32@/B4Tb64lLpLqipA+UxBxHTnPjizm5sB/", "init  key  enckey " + caj + "  hashcode " + hashCode());
-    mNativePtr = MMIMAGEENCJNI.open(caj);
+    v.i("MicroMsg.EncEngine", "init  key  enckey " + bTS + "  hashcode " + hashCode());
+    mNativePtr = MMIMAGEENCJNI.open(bTS);
     try
     {
-      u.i("!32@/B4Tb64lLpLqipA+UxBxHTnPjizm5sB/", "mNativePtr " + mNativePtr + " " + hashCode());
+      v.i("MicroMsg.EncEngine", "mNativePtr " + mNativePtr + " " + hashCode());
       return;
     }
     catch (Exception localException)
     {
-      u.e("!32@/B4Tb64lLpLqipA+UxBxHTnPjizm5sB/", "exception " + localException.getMessage());
+      v.e("MicroMsg.EncEngine", "exception " + localException.getMessage());
     }
   }
   
-  public final long Cf()
+  public final long Cm()
   {
-    cak = cai;
-    return cak;
+    bTT = bTR;
+    return bTT;
   }
   
   public final void free()
   {
-    u.i("!32@/B4Tb64lLpLqipA+UxBxHTnPjizm5sB/", "free mNativePtr: " + mNativePtr + " hashcode " + hashCode());
+    v.i("MicroMsg.EncEngine", "free mNativePtr: " + mNativePtr + " hashcode " + hashCode());
     MMIMAGEENCJNI.free(mNativePtr);
     mNativePtr = 0L;
   }
@@ -50,40 +50,40 @@ public final class a
   public final int j(byte[] paramArrayOfByte, int paramInt)
   {
     if (mNativePtr == 0L) {
-      u.i("!32@/B4Tb64lLpLqipA+UxBxHTnPjizm5sB/", "transFor " + ay.aVJ().toString());
+      v.i("MicroMsg.EncEngine", "transFor " + be.baX().toString());
     }
-    if (cah) {
-      u.i("!32@/B4Tb64lLpLqipA+UxBxHTnPjizm5sB/", "trans for  " + hashCode() + " " + paramArrayOfByte.length);
+    if (bTQ) {
+      v.i("MicroMsg.EncEngine", "trans for  " + hashCode() + " " + paramArrayOfByte.length);
     }
-    if ((cah) && (cai < 64L)) {
-      u.d("!32@/B4Tb64lLpLqipA+UxBxHTnPjizm5sB/", "dump before _offset " + cai + "  length:" + paramInt + " " + ay.I(paramArrayOfByte) + " hashcode " + hashCode());
+    if ((bTQ) && (bTR < 64L)) {
+      v.d("MicroMsg.EncEngine", "dump before _offset " + bTR + "  length:" + paramInt + " " + be.O(paramArrayOfByte) + " hashcode " + hashCode());
     }
-    MMIMAGEENCJNI.transFor(mNativePtr, paramArrayOfByte, cai, paramInt);
-    if ((cah) && (cai < 64L)) {
-      u.d("!32@/B4Tb64lLpLqipA+UxBxHTnPjizm5sB/", "dump after _offset " + cai + "  length:" + paramInt + " " + ay.I(paramArrayOfByte) + " hashcode " + hashCode());
+    MMIMAGEENCJNI.transFor(mNativePtr, paramArrayOfByte, bTR, paramInt);
+    if ((bTQ) && (bTR < 64L)) {
+      v.d("MicroMsg.EncEngine", "dump after _offset " + bTR + "  length:" + paramInt + " " + be.O(paramArrayOfByte) + " hashcode " + hashCode());
     }
-    cai += paramInt;
+    bTR += paramInt;
     return paramInt;
   }
   
   public final void reset()
   {
-    u.i("!32@/B4Tb64lLpLqipA+UxBxHTnPjizm5sB/", "reset " + ay.aVJ());
+    v.i("MicroMsg.EncEngine", "reset " + be.baX());
     free();
-    if (cak == 0L)
+    if (bTT == 0L)
     {
       init();
-      cai = 0L;
+      bTR = 0L;
       return;
     }
     init();
-    MMIMAGEENCJNI.seek(mNativePtr, cak, 1);
-    cai = cak;
+    MMIMAGEENCJNI.seek(mNativePtr, bTT, 1);
+    bTR = bTT;
   }
   
   public final void seek(long paramLong)
   {
-    cai = paramLong;
+    bTR = paramLong;
     MMIMAGEENCJNI.seek(mNativePtr, paramLong, 1);
   }
 }

@@ -3,17 +3,29 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/az/f$a;
+.implements Lcom/tencent/mm/bc/f$a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/h/f",
+        "<",
+        "Lcom/tencent/mm/modelfriend/s;",
+        ">;",
+        "Lcom/tencent/mm/bc/f$a;"
+    }
+.end annotation
 
 
 # static fields
-.field public static final aoY:[Ljava/lang/String;
+.field public static final bkN:[Ljava/lang/String;
 
 
 # instance fields
-.field public aoX:Lcom/tencent/mm/sdk/h/d;
+.field public bFY:Lcom/tencent/mm/sdk/h/j;
 
-.field public bME:Lcom/tencent/mm/sdk/h/j;
+.field public bkP:Lcom/tencent/mm/sdk/h/d;
 
 
 # direct methods
@@ -28,7 +40,7 @@
 
     const/4 v1, 0x0
 
-    sget-object v2, Lcom/tencent/mm/modelfriend/s;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    sget-object v2, Lcom/tencent/mm/modelfriend/s;->bjR:Lcom/tencent/mm/sdk/h/c$a;
 
     const-string/jumbo v3, "LinkedInFriend"
 
@@ -38,7 +50,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/modelfriend/t;->aoY:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/modelfriend/t;->bkN:[Ljava/lang/String;
 
     return-void
 .end method
@@ -48,7 +60,7 @@
 
     .prologue
     .line 55
-    sget-object v0, Lcom/tencent/mm/modelfriend/s;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    sget-object v0, Lcom/tencent/mm/modelfriend/s;->bjR:Lcom/tencent/mm/sdk/h/c$a;
 
     const-string/jumbo v1, "LinkedInFriend"
 
@@ -61,10 +73,10 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/modelfriend/t$1;-><init>(Lcom/tencent/mm/modelfriend/t;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelfriend/t;->bME:Lcom/tencent/mm/sdk/h/j;
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/t;->bFY:Lcom/tencent/mm/sdk/h/j;
 
     .line 56
-    iput-object p1, p0, Lcom/tencent/mm/modelfriend/t;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iput-object p1, p0, Lcom/tencent/mm/modelfriend/t;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     .line 58
     return-void
@@ -75,14 +87,14 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/t;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/t;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/az/f;)I
+.method public final a(Lcom/tencent/mm/bc/f;)I
     .locals 1
 
     .prologue
@@ -90,7 +102,7 @@
     if-eqz p1, :cond_0
 
     .line 66
-    iput-object p1, p0, Lcom/tencent/mm/modelfriend/t;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iput-object p1, p0, Lcom/tencent/mm/modelfriend/t;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     .line 68
     :cond_0
@@ -115,12 +127,12 @@
 
     .line 75
     :cond_1
-    invoke-virtual {p1}, Lcom/tencent/mm/modelfriend/s;->lX()Landroid/content/ContentValues;
+    invoke-virtual {p1}, Lcom/tencent/mm/modelfriend/s;->kn()Landroid/content/ContentValues;
 
     move-result-object v1
 
     .line 76
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/t;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v2, p0, Lcom/tencent/mm/modelfriend/t;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v3, "LinkedInFriend"
 
@@ -128,9 +140,9 @@
 
     invoke-interface {v2, v3, v4, v1}, Lcom/tencent/mm/sdk/h/d;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     .line 77
     if-lez v1, :cond_0
@@ -162,18 +174,18 @@
     const-string/jumbo v0, " delete from LinkedInFriend"
 
     .line 145
-    iget-object v1, p0, Lcom/tencent/mm/modelfriend/t;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/t;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v2, "LinkedInFriend"
 
-    invoke-interface {v1, v2, v0}, Lcom/tencent/mm/sdk/h/d;->cj(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-interface {v1, v2, v0}, Lcom/tencent/mm/sdk/h/d;->cx(Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 146
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/t;->bME:Lcom/tencent/mm/sdk/h/j;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/t;->bFY:Lcom/tencent/mm/sdk/h/j;
 
     const/4 v1, 0x5
 
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/t;->bME:Lcom/tencent/mm/sdk/h/j;
+    iget-object v2, p0, Lcom/tencent/mm/modelfriend/t;->bFY:Lcom/tencent/mm/sdk/h/j;
 
     const-string/jumbo v3, ""
 
@@ -193,7 +205,7 @@
     return-object v0
 .end method
 
-.method public final hB(Ljava/lang/String;)Z
+.method public final hT(Ljava/lang/String;)Z
     .locals 3
 
     .prologue
@@ -231,11 +243,11 @@
     move-result-object v0
 
     .line 140
-    iget-object v1, p0, Lcom/tencent/mm/modelfriend/t;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/t;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v2, "LinkedInFriend"
 
-    invoke-interface {v1, v2, v0}, Lcom/tencent/mm/sdk/h/d;->cj(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-interface {v1, v2, v0}, Lcom/tencent/mm/sdk/h/d;->cx(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 

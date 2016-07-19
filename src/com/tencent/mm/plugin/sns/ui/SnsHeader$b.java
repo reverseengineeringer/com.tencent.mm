@@ -6,12 +6,12 @@ import android.widget.TextView;
 
 final class SnsHeader$b
 {
-  ImageView coY;
-  TextView cyG;
-  TextView gWg;
-  ImageView hel;
-  LinearLayout hem;
-  LinearLayout hen;
+  ImageView ckm;
+  TextView cvE;
+  TextView hjC;
+  ImageView hsX;
+  LinearLayout hsY;
+  LinearLayout hsZ;
   
   SnsHeader$b(SnsHeader paramSnsHeader) {}
 }

@@ -1,100 +1,121 @@
 package com.tencent.mm.ba;
 
-import android.os.Process;
-import com.tencent.mm.sdk.platformtools.ah;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import android.util.SparseArray;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import java.io.IOException;
+import java.io.InputStream;
 
 public final class b
 {
-  private static boolean kiP = false;
+  public byte[] cze;
+  public SparseArray<a> krC;
   
-  public static void pO(int paramInt)
+  private b(SparseArray<a> paramSparseArray, byte[] paramArrayOfByte)
   {
-    final boolean bool1;
-    final boolean bool2;
-    final boolean bool3;
-    boolean bool4;
-    switch (paramInt)
+    krC = paramSparseArray;
+    cze = paramArrayOfByte;
+  }
+  
+  public static b a(SparseArray<a> paramSparseArray, InputStream paramInputStream, int paramInt)
+  {
+    try
     {
-    default: 
-      bool1 = false;
-      bool2 = false;
-      bool3 = false;
-      bool4 = false;
+      byte[] arrayOfByte = new byte[paramInt];
+      if (paramInputStream.read(arrayOfByte, 0, arrayOfByte.length) != arrayOfByte.length) {
+        v.e("MicroMsg.language.PluralsCollection", "[cpan] newPluralsConllection failed. data length no equal.");
+      }
+      paramSparseArray = new b(paramSparseArray, arrayOfByte);
+      return paramSparseArray;
     }
+    catch (IOException paramSparseArray)
+    {
+      v.e("MicroMsg.language.PluralsCollection", "[cpan] newPluralsConllection failed:%s", new Object[] { be.f(paramSparseArray) });
+    }
+    return null;
+  }
+  
+  public final String getQuantityString(int paramInt1, int paramInt2, Object... paramVarArgs)
+  {
     for (;;)
     {
-      u.d("!44@/B4Tb64lLpI67oPDTT86rE/rkKVKjyGP17sNLUXP5EY=", "hprof operate: dump:%b, checkWifi:%b, uploadSingal:%b,uploadAll:%b,", new Object[] { Boolean.valueOf(bool4), Boolean.valueOf(bool3), Boolean.valueOf(bool2), Boolean.valueOf(bool1) });
-      Executors.newSingleThreadExecutor().execute(new Runnable()
+      try
       {
-        public final void run()
+        int j = krC.indexOfKey(paramInt1);
+        if (j < 0) {
+          return null;
+        }
+        localObject = (a)krC.valueAt(j);
+        k = krE.length;
+        paramInt1 = 0;
+        i = 0;
+        if (paramInt1 < k)
         {
-          if (b.nV())
-          {
-            u.w("!44@/B4Tb64lLpI67oPDTT86rE/rkKVKjyGP17sNLUXP5EY=", "Hprof is mUploading");
-            return;
+          if (krE[paramInt1] != paramInt2) {
+            break label326;
           }
-          if (kiQ) {}
-          for (String str = a.z(true, false);; str = null)
+          i = paramInt1;
+          break label332;
+        }
+        if (j <= krC.size() - 1) {
+          if (i >= k - 1)
           {
-            Process.setThreadPriority(10);
-            boolean bool = ah.dB(y.getContext());
-            if ((bool3) && (!bool))
-            {
-              u.w("!44@/B4Tb64lLpI67oPDTT86rE/rkKVKjyGP17sNLUXP5EY=", "Hprof no wifi");
-              return;
-            }
-            if ((bool2) && (str != null)) {}
-            for (;;)
-            {
-              b.aw(true);
-              b.il(str);
-              b.aw(false);
-              return;
-              if (bool1) {
-                str = a.kiO;
-              } else {
-                str = null;
-              }
-            }
+            a locala = (a)krC.valueAt(j + 1);
+            localObject = new String(cze, krF[i], krF[0] - krF[i]);
           }
         }
-      });
-      return;
-      u.i("!44@/B4Tb64lLpI67oPDTT86rE/rkKVKjyGP17sNLUXP5EY=", "GC NOW.");
-      System.gc();
-      bool1 = false;
-      bool2 = false;
-      bool3 = false;
-      bool4 = false;
+      }
+      catch (Exception paramVarArgs)
+      {
+        int k;
+        int i;
+        localObject = null;
+        v.e("MicroMsg.language.PluralsCollection", "[cpan] getString failed. %s", new Object[] { be.f(paramVarArgs) });
+        return (String)localObject;
+      }
+      try
+      {
+        if ((!be.kf((String)localObject)) && (paramVarArgs == null)) {
+          break label329;
+        }
+        paramVarArgs = String.format((String)localObject, paramVarArgs);
+        return paramVarArgs;
+      }
+      catch (Exception paramVarArgs)
+      {
+        continue;
+      }
+      Object localObject = new String(cze, krF[i], krF[(i + 1)] - krF[i]);
       continue;
-      bool1 = false;
-      bool2 = true;
-      bool3 = false;
-      bool4 = true;
-      continue;
-      bool1 = false;
-      bool2 = true;
-      bool3 = true;
-      bool4 = true;
-      continue;
-      bool1 = false;
-      bool2 = false;
-      bool3 = false;
-      bool4 = true;
-      continue;
-      bool1 = true;
-      bool2 = false;
-      bool3 = false;
-      bool4 = false;
-      continue;
-      bool1 = true;
-      bool2 = false;
-      bool3 = true;
-      bool4 = false;
+      if (i >= k - 1)
+      {
+        localObject = new String(cze, krF[i], cze.length - krF[i]);
+      }
+      else
+      {
+        localObject = new String(cze, krF[i], krF[(i + 1)] - krF[i]);
+        continue;
+        label326:
+        break label332;
+        label329:
+        return (String)localObject;
+        label332:
+        paramInt1 += 1;
+      }
+    }
+  }
+  
+  static final class a
+  {
+    public final int krD;
+    public final int[] krE;
+    public final int[] krF;
+    
+    public a(int paramInt, int[] paramArrayOfInt1, int[] paramArrayOfInt2)
+    {
+      krD = paramInt;
+      krE = paramArrayOfInt1;
+      krF = paramArrayOfInt2;
     }
   }
 }

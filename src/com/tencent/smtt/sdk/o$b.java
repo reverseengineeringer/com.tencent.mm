@@ -2,17 +2,17 @@ package com.tencent.smtt.sdk;
 
 public final class o$b
 {
-  private final String lTl;
-  private final String lTm;
+  private final String mvd;
+  private final String mve;
   
   public o$b(String paramString1, String paramString2)
   {
-    lTl = paramString1;
-    lTm = paramString2;
+    mvd = paramString1;
+    mve = paramString2;
   }
   
   /* Error */
-  public final void blY()
+  public final void bsc()
   {
     // Byte code:
     //   0: aconst_null
@@ -26,7 +26,7 @@ public final class o$b
     //   12: new 27	java/io/FileOutputStream
     //   15: dup
     //   16: aload_0
-    //   17: getfield 19	com/tencent/smtt/sdk/o$b:lTm	Ljava/lang/String;
+    //   17: getfield 19	com/tencent/smtt/sdk/o$b:mve	Ljava/lang/String;
     //   20: invokespecial 30	java/io/FileOutputStream:<init>	(Ljava/lang/String;)V
     //   23: astore_3
     //   24: new 32	java/util/zip/ZipOutputStream
@@ -41,7 +41,7 @@ public final class o$b
     //   44: newarray <illegal type>
     //   46: astore 10
     //   48: aload_0
-    //   49: getfield 17	com/tencent/smtt/sdk/o$b:lTl	Ljava/lang/String;
+    //   49: getfield 17	com/tencent/smtt/sdk/o$b:mvd	Ljava/lang/String;
     //   52: astore 11
     //   54: new 40	java/io/FileInputStream
     //   57: dup
@@ -93,7 +93,7 @@ public final class o$b
     //   156: new 79	java/io/File
     //   159: dup
     //   160: aload_0
-    //   161: getfield 19	com/tencent/smtt/sdk/o$b:lTm	Ljava/lang/String;
+    //   161: getfield 19	com/tencent/smtt/sdk/o$b:mve	Ljava/lang/String;
     //   164: invokespecial 80	java/io/File:<init>	(Ljava/lang/String;)V
     //   167: astore 4
     //   169: new 82	java/io/RandomAccessFile

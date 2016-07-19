@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lBq:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
+.field final synthetic mci:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 118
-    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$1;->lBq:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
+    .line 115
+    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$1;->mci:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,19 +36,19 @@
 
 
 # virtual methods
-.method public final bq(Z)V
+.method public final aY(Z)V
     .locals 4
 
     .prologue
-    .line 121
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$1;->lBq:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
+    .line 118
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$1;->mci:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->isFinishing()Z
 
     move-result v0
 
-    .line 122
-    const-string/jumbo v1, "!44@/B4Tb64lLpJQGo7VtHU/glxECqNzQuUbU+29i/gx8/w="
+    .line 119
+    const-string/jumbo v1, "MicroMsg.SelectConversationUI"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -74,19 +74,19 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 123
+    .line 120
     if-nez p1, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 124
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$1;->lBq:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
+    .line 121
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$1;->mci:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->finish()V
 
-    .line 126
+    .line 123
     :cond_0
     return-void
 .end method

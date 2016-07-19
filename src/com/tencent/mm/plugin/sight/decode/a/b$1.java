@@ -1,7 +1,7 @@
 package com.tencent.mm.plugin.sight.decode.a;
 
 import com.tencent.mm.plugin.sight.base.SightVideoJNI;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class b$1
   implements Runnable
@@ -12,14 +12,14 @@ final class b$1
     try
     {
       SightVideoJNI.freeAll();
-      u.i("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "free all, use %d ms", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+      v.i("MicroMsg.SightPlayController", "free all, use %d ms", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
       return;
     }
     catch (Exception localException)
     {
       for (;;)
       {
-        u.e("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "free all sight error");
+        v.e("MicroMsg.SightPlayController", "free all sight error");
       }
     }
   }

@@ -14,7 +14,7 @@ public abstract class h$a
     attachInterface(this, "com.tencent.mm.network.INetworkEvent_AIDL");
   }
   
-  public static h Y(IBinder paramIBinder)
+  public static h A(IBinder paramIBinder)
   {
     if (paramIBinder == null) {
       return null;
@@ -45,13 +45,13 @@ public abstract class h$a
       return true;
     case 1: 
       paramParcel1.enforceInterface("com.tencent.mm.network.INetworkEvent_AIDL");
-      paramInt1 = EM();
+      paramInt1 = Fh();
       paramParcel2.writeNoException();
       paramParcel2.writeInt(paramInt1);
       return true;
     case 2: 
       paramParcel1.enforceInterface("com.tencent.mm.network.INetworkEvent_AIDL");
-      bool = c(m.a.aa(paramParcel1.readStrongBinder()));
+      bool = c(m.a.C(paramParcel1.readStrongBinder()));
       paramParcel2.writeNoException();
       paramInt1 = i;
       if (bool) {
@@ -61,7 +61,7 @@ public abstract class h$a
       return true;
     case 3: 
       paramParcel1.enforceInterface("com.tencent.mm.network.INetworkEvent_AIDL");
-      bool = d(m.a.aa(paramParcel1.readStrongBinder()));
+      bool = d(m.a.C(paramParcel1.readStrongBinder()));
       paramParcel2.writeNoException();
       paramInt1 = j;
       if (bool) {
@@ -71,12 +71,12 @@ public abstract class h$a
       return true;
     case 4: 
       paramParcel1.enforceInterface("com.tencent.mm.network.INetworkEvent_AIDL");
-      EN();
+      Fi();
       paramParcel2.writeNoException();
       return true;
     }
     paramParcel1.enforceInterface("com.tencent.mm.network.INetworkEvent_AIDL");
-    long l = EO();
+    long l = Fj();
     paramParcel2.writeNoException();
     paramParcel2.writeLong(l);
     return true;
@@ -92,7 +92,7 @@ public abstract class h$a
       mRemote = paramIBinder;
     }
     
-    public final int EM()
+    public final int Fh()
     {
       Parcel localParcel1 = Parcel.obtain();
       Parcel localParcel2 = Parcel.obtain();
@@ -111,7 +111,7 @@ public abstract class h$a
       }
     }
     
-    public final void EN()
+    public final void Fi()
     {
       Parcel localParcel1 = Parcel.obtain();
       Parcel localParcel2 = Parcel.obtain();
@@ -129,7 +129,7 @@ public abstract class h$a
       }
     }
     
-    public final long EO()
+    public final long Fj()
     {
       Parcel localParcel1 = Parcel.obtain();
       Parcel localParcel2 = Parcel.obtain();

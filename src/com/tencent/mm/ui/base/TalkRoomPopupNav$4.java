@@ -12,8 +12,8 @@ public final class TalkRoomPopupNav$4
   
   public final void onAnimationEnd(Animation paramAnimation)
   {
-    TalkRoomPopupNav.c(kKA).startAnimation(AnimationUtils.loadAnimation(kKA.getContext(), 2130837575));
-    TalkRoomPopupNav.c(kKA).setVisibility(0);
+    TalkRoomPopupNav.c(ljQ).startAnimation(AnimationUtils.loadAnimation(ljQ.getContext(), 2130968612));
+    TalkRoomPopupNav.c(ljQ).setVisibility(0);
   }
   
   public final void onAnimationRepeat(Animation paramAnimation) {}

@@ -2,7 +2,7 @@ package com.tencent.mm.model;
 
 public abstract interface bd$a
 {
-  public abstract void aX(String paramString);
+  public abstract void bc(String paramString);
 }
 
 /* Location:

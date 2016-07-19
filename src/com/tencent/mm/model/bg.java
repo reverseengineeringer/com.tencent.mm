@@ -1,16 +1,14 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.ah.k;
-import com.tencent.mm.platformtools.n;
-import com.tencent.mm.protocal.b.aj;
-import com.tencent.mm.r.c;
-import com.tencent.mm.r.c.a;
-import com.tencent.mm.r.c.b;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.ak.k;
+import com.tencent.mm.protocal.b.am;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.t.c;
+import com.tencent.mm.t.c.a;
+import com.tencent.mm.t.c.b;
+import com.tencent.mm.t.j;
 import java.io.ByteArrayInputStream;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -26,14 +24,14 @@ public final class bg
 {
   public final c.b b(c.a parama)
   {
-    parama = bFh;
-    if ((parama == null) || (iXv == null))
+    parama = bys;
+    if ((parama == null) || (juZ == null))
     {
-      u.f("!56@/B4Tb64lLpJ1mn1yTEPF73ZDQ50R1Ev65sOQfPQdXbT/Lqj8PBgXaQ==", "[oneliang]UpdatePackageMsgExtension failed, invalid cmdAM");
+      v.f("MicroMsg.UpdatePackageMsgExtension", "[oneliang]UpdatePackageMsgExtension failed, invalid cmdAM");
       return null;
     }
-    u.i("!56@/B4Tb64lLpJ1mn1yTEPF73ZDQ50R1Ev65sOQfPQdXbT/Lqj8PBgXaQ==", "[oneliang]UpdatePackageMsgExtension start");
-    parama = n.a(iXv);
+    v.i("MicroMsg.UpdatePackageMsgExtension", "[oneliang]UpdatePackageMsgExtension start");
+    parama = com.tencent.mm.platformtools.m.a(juZ);
     Object localObject = DocumentBuilderFactory.newInstance();
     for (;;)
     {
@@ -52,35 +50,35 @@ public final class bg
           {
             localObject = parama.item(i);
             if ((localObject == null) || (((Node)localObject).getNodeName() == null) || (!((Node)localObject).getNodeName().equals("pack"))) {
-              break label265;
+              break label266;
             }
             localObject = ((Node)localObject).getAttributes();
             if (localObject == null) {
-              break label265;
+              break label266;
             }
             localObject = ((NamedNodeMap)localObject).getNamedItem("type");
             if (localObject == null) {
-              break label265;
+              break label266;
             }
             localObject = new k(Integer.parseInt(((Node)localObject).getNodeValue()));
-            ah.tE().d((j)localObject);
-            break label265;
+            ah.tF().a((j)localObject, 0);
+            break label266;
           }
         }
-        u.i("!56@/B4Tb64lLpJ1mn1yTEPF73ZDQ50R1Ev65sOQfPQdXbT/Lqj8PBgXaQ==", "[oneliang]UpdatePackageMsgExtension end");
+        v.i("MicroMsg.UpdatePackageMsgExtension", "[oneliang]UpdatePackageMsgExtension end");
         return null;
       }
       catch (Exception parama)
       {
-        u.e("!56@/B4Tb64lLpJ1mn1yTEPF73ZDQ50R1Ev65sOQfPQdXbT/Lqj8PBgXaQ==", "exception:%s", new Object[] { ay.b(parama) });
+        v.e("MicroMsg.UpdatePackageMsgExtension", "exception:%s", new Object[] { be.f(parama) });
         return null;
       }
-      label265:
+      label266:
       i += 1;
     }
   }
   
-  public final void d(ag paramag) {}
+  public final void d(ai paramai) {}
 }
 
 /* Location:

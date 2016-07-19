@@ -10,7 +10,7 @@ final class BizChatConversationUI$a$5
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    BizChatConversationUI.a.h(lnN);
+    BizChatConversationUI.a.n(lOo);
   }
 }
 

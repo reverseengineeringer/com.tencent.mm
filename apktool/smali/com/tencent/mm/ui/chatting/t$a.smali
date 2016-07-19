@@ -1,9 +1,6 @@
-.class final Lcom/tencent/mm/ui/chatting/t$a;
+.class public final Lcom/tencent/mm/ui/chatting/t$a;
 .super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/am$a;
 
 
 # annotations
@@ -12,134 +9,213 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "a"
 .end annotation
 
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/ui/chatting/t$a$a;
+    }
+.end annotation
 
-# instance fields
-.field private kSe:Ljava/util/Set;
 
-.field private kSf:Lcom/tencent/mm/ui/base/p;
-
-.field private kSg:Lcom/tencent/mm/ui/chatting/dl;
+# static fields
+.field private static lsa:Landroid/util/DisplayMetrics;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Set;Lcom/tencent/mm/ui/base/p;Lcom/tencent/mm/ui/chatting/dl;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
-    .line 60
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 238
+    const/4 v0, 0x0
 
-    .line 61
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/t$a;->kSe:Ljava/util/Set;
+    sput-object v0, Lcom/tencent/mm/ui/chatting/t$a;->lsa:Landroid/util/DisplayMetrics;
 
-    .line 62
-    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/t$a;->kSf:Lcom/tencent/mm/ui/base/p;
-
-    .line 63
-    iput-object p3, p0, Lcom/tencent/mm/ui/chatting/t$a;->kSg:Lcom/tencent/mm/ui/chatting/dl;
-
-    .line 64
     return-void
 .end method
 
-
-# virtual methods
-.method public final vd()Z
+.method public static a(Landroid/content/Context;Landroid/text/TextPaint;Ljava/util/List;I)Lcom/tencent/mm/ui/chatting/t$a$a;
     .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Landroid/text/TextPaint;",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/v/m$b$b$a;",
+            ">;I)",
+            "Lcom/tencent/mm/ui/chatting/t$a$a;"
+        }
+    .end annotation
 
     .prologue
-    .line 68
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/t$a;->kSe:Ljava/util/Set;
+    const/4 v6, 0x0
 
-    new-instance v1, Ljava/util/LinkedList;
+    .line 293
+    new-instance v2, Lcom/tencent/mm/ui/chatting/t$a$a;
 
-    invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/ui/chatting/t$a$a;-><init>()V
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    .line 294
+    sget-object v0, Lcom/tencent/mm/ui/chatting/t$a;->lsa:Landroid/util/DisplayMetrics;
 
-    move-result-object v2
+    if-nez v0, :cond_0
 
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Long;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    new-instance v3, Lcom/tencent/mm/d/a/jh;
+    sput-object v0, Lcom/tencent/mm/ui/chatting/t$a;->lsa:Landroid/util/DisplayMetrics;
 
-    invoke-direct {v3}, Lcom/tencent/mm/d/a/jh;-><init>()V
+    :cond_0
+    sget-object v3, Lcom/tencent/mm/ui/chatting/t$a;->lsa:Landroid/util/DisplayMetrics;
 
-    iget-object v4, v3, Lcom/tencent/mm/d/a/jh;->aFM:Lcom/tencent/mm/d/a/jh$a;
+    .line 295
+    const/4 v0, 0x0
 
-    const/4 v5, 0x3
+    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    iput v5, v4, Lcom/tencent/mm/d/a/jh$a;->type:I
+    move-result-object v4
 
-    iget-object v4, v3, Lcom/tencent/mm/d/a/jh;->aFM:Lcom/tencent/mm/d/a/jh$a;
+    move v1, v0
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    :goto_0
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-wide v5
+    move-result v0
 
-    iput-wide v5, v4, Lcom/tencent/mm/d/a/jh$a;->avg:J
+    if-eqz v0, :cond_1
 
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/v/m$b$b$a;
+
+    iget-object v0, v0, Lcom/tencent/mm/v/m$b$b$a;->name:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->measureText(Ljava/lang/String;)F
+
+    move-result v0
+
+    cmpg-float v5, v1, v0
+
+    if-gez v5, :cond_5
+
+    :goto_1
+    move v1, v0
 
     goto :goto_0
 
-    :cond_0
-    invoke-static {v1}, Lcom/tencent/mm/model/ar;->n(Ljava/util/List;)V
+    :cond_1
+    float-to-int v0, v1
 
-    .line 69
-    const/4 v0, 0x1
+    const/16 v1, 0x1e
 
-    return v0
-.end method
+    invoke-static {p0, v1}, Lcom/tencent/mm/az/a;->fromDPToPix(Landroid/content/Context;I)I
 
-.method public final ve()Z
-    .locals 2
+    move-result v1
 
-    .prologue
-    .line 74
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/t$a;->kSf:Lcom/tencent/mm/ui/base/p;
+    mul-int/lit8 v1, v1, 0x2
 
-    if-eqz v0, :cond_0
+    add-int/2addr v1, v0
 
-    .line 75
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/t$a;->kSf:Lcom/tencent/mm/ui/base/p;
+    .line 296
+    const/16 v0, 0x5f
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/p;->dismiss()V
+    invoke-static {p0, v0}, Lcom/tencent/mm/az/a;->fromDPToPix(Landroid/content/Context;I)I
 
-    .line 76
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/t$a;->kSg:Lcom/tencent/mm/ui/chatting/dl;
+    move-result v0
 
-    if-eqz v0, :cond_0
+    .line 297
+    if-ge v1, v0, :cond_4
 
-    .line 78
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/t$a;->kSg:Lcom/tencent/mm/ui/chatting/dl;
+    .line 301
+    :goto_2
+    div-int/lit8 v1, v0, 0x2
 
-    sget v1, Lcom/tencent/mm/ui/chatting/dl$a;->lcC:I
+    sub-int v1, p3, v1
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/chatting/dl;->rd(I)V
+    if-gez v1, :cond_2
 
-    .line 81
-    :cond_0
-    const/4 v0, 0x1
+    .line 304
+    iput v6, v2, Lcom/tencent/mm/ui/chatting/t$a$a;->lsb:I
 
-    return v0
+    .line 305
+    iget v1, v3, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    add-int/lit8 v0, v0, 0x0
+
+    sub-int v0, v1, v0
+
+    iput v0, v2, Lcom/tencent/mm/ui/chatting/t$a$a;->lsc:I
+
+    .line 320
+    :goto_3
+    return-object v2
+
+    .line 306
+    :cond_2
+    iget v1, v3, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    div-int/lit8 v4, v0, 0x2
+
+    add-int/2addr v4, p3
+
+    sub-int/2addr v1, v4
+
+    if-gez v1, :cond_3
+
+    .line 308
+    iget v1, v3, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    add-int/lit8 v0, v0, 0x0
+
+    sub-int v0, v1, v0
+
+    iput v0, v2, Lcom/tencent/mm/ui/chatting/t$a$a;->lsb:I
+
+    .line 309
+    iput v6, v2, Lcom/tencent/mm/ui/chatting/t$a$a;->lsc:I
+
+    goto :goto_3
+
+    .line 317
+    :cond_3
+    div-int/lit8 v1, v0, 0x2
+
+    sub-int v1, p3, v1
+
+    iput v1, v2, Lcom/tencent/mm/ui/chatting/t$a$a;->lsb:I
+
+    .line 318
+    iget v1, v3, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    div-int/lit8 v0, v0, 0x2
+
+    add-int/2addr v0, p3
+
+    sub-int v0, v1, v0
+
+    iput v0, v2, Lcom/tencent/mm/ui/chatting/t$a$a;->lsc:I
+
+    goto :goto_3
+
+    :cond_4
+    move v0, v1
+
+    goto :goto_2
+
+    :cond_5
+    move v0, v1
+
+    goto :goto_1
 .end method

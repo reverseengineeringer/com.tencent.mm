@@ -18,36 +18,36 @@ final class b$9
     Object localObject1;
     Object localObject2;
     Object localObject3;
-    if ((b.g(lCw) != null) && (b.g(lCw).length != 0))
+    if ((b.g(mdn) != null) && (b.g(mdn).length != 0))
     {
       localObject1 = new ArrayList();
-      localObject2 = b.g(lCw);
+      localObject2 = b.g(mdn);
       int j = localObject2.length;
       while (i < j)
       {
         localObject3 = localObject2[i];
-        if (lCw.HM((String)localObject3)) {
+        if (mdn.Kb((String)localObject3)) {
           ((List)localObject1).add(localObject3);
         }
         i += 1;
       }
       if (((List)localObject1).size() > 0)
       {
-        b.a(lCw, ah.tD().rq().a((String[])((List)localObject1).toArray(new String[((List)localObject1).size()]), b.h(lCw), b.a(lCw)));
+        b.a(mdn, ah.tE().rr().a((String[])((List)localObject1).toArray(new String[((List)localObject1).size()]), b.h(mdn), b.a(mdn)));
         return;
       }
-      b.b(lCw, ah.tD().rq().aWH());
+      b.b(mdn, ah.tE().rr().bbV());
       return;
     }
-    if (b.i(lCw) != null)
+    if (b.i(mdn) != null)
     {
-      if (!b.h(lCw).equals("@all.chatroom.contact"))
+      if (!b.h(mdn).equals("@all.chatroom.contact"))
       {
-        localObject1 = ah.tD().rq().a(b.i(lCw), b.h(lCw), b.a(lCw), true);
-        b.c(lCw, (Cursor)localObject1);
+        localObject1 = ah.tE().rr().a(b.i(mdn), b.h(mdn), b.a(mdn), true);
+        b.c(mdn, (Cursor)localObject1);
         return;
       }
-      localObject1 = ah.tD().rq().a(b.i(lCw), "@micromsg.with.all.biz.qq.com", b.a(lCw), false);
+      localObject1 = ah.tE().rr().a(b.i(mdn), "@micromsg.with.all.biz.qq.com", b.a(mdn), false);
       localObject2 = new ArrayList();
       localObject3 = new ArrayList();
       while (((Cursor)localObject1).moveToNext())
@@ -63,13 +63,13 @@ final class b$9
         ((Cursor)localObject1).close();
       }
       if ((((ArrayList)localObject2).size() != 0) || (((ArrayList)localObject3).size() != 0)) {}
-      for (localObject1 = ah.tD().rq().a(b.i(lCw), (ArrayList)localObject2, null, (ArrayList)localObject3, b.a(lCw));; localObject1 = ah.tD().rq().aWH())
+      for (localObject1 = ah.tE().rr().a(b.i(mdn), (ArrayList)localObject2, null, (ArrayList)localObject3, b.a(mdn));; localObject1 = ah.tE().rr().bbV())
       {
-        b.d(lCw, (Cursor)localObject1);
+        b.d(mdn, (Cursor)localObject1);
         return;
       }
     }
-    b.e(lCw, ah.tD().rq().aWH());
+    b.e(mdn, ah.tE().rr().bbV());
   }
 }
 

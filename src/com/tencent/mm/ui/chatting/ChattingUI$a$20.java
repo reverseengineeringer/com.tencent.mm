@@ -1,16 +1,21 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.t.f;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 final class ChattingUI$a$20
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  ChattingUI$a$20(ChattingUI.a parama) {}
+  ChattingUI$a$20(ChattingUI.a parama, boolean paramBoolean) {}
   
-  public final void run()
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((laF.iID) && (laF.kSE != null) && (!laF.kSE.kVO)) {
-      f.d(laF.cYG);
+    ChattingUI.a locala = lAY;
+    if (lBa) {}
+    for (paramDialogInterface = "fromBanner";; paramDialogInterface = "fromPluginTalk")
+    {
+      locala.Jn(paramDialogInterface);
+      return;
     }
   }
 }

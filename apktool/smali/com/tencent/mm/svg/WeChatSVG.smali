@@ -9,7 +9,7 @@
 
     .prologue
     .line 12
-    invoke-static {}, Lcom/tencent/mm/svg/d/b;->aZa()Z
+    invoke-static {}, Lcom/tencent/mm/svg/c/b;->ber()Z
 
     move-result v0
 

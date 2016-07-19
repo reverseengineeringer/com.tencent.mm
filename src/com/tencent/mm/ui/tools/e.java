@@ -5,54 +5,54 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.ArrayList;
 import java.util.List;
 
 public final class e
   extends BaseAdapter
 {
-  private String coN;
+  private String ckb;
   private Context context;
-  private List eEq = new ArrayList();
-  private List eEr;
-  int[] eEs;
-  boolean eEt = false;
+  private List<d> eKE = new ArrayList();
+  private List<d> eKF;
+  int[] eKH;
+  boolean eKI = false;
   
-  public e(Context paramContext, List paramList)
+  public e(Context paramContext, List<d> paramList)
   {
     context = paramContext;
-    eEr = paramList;
-    aed();
-    aee();
+    eKF = paramList;
+    agF();
+    agG();
   }
   
-  private void aed()
+  private void agF()
   {
     int i = 0;
-    int j = eEr.size();
+    int j = eKF.size();
     while (i < j)
     {
-      eEq.add(eEr.get(i));
+      eKE.add(eKF.get(i));
       i += 1;
     }
   }
   
-  private void aee()
+  private void agG()
   {
-    eEs = new int[eEr.size()];
-    int j = eEr.size();
+    eKH = new int[eKF.size()];
+    int j = eKF.size();
     int i = 0;
     while (i < j)
     {
-      eEs[i] = eEr.get(i)).eCk;
+      eKH[i] = eKF.get(i)).eIJ;
       i += 1;
     }
   }
   
-  private static String hR(int paramInt)
+  private static String iZ(int paramInt)
   {
-    if (t.aUz()) {
+    if (u.aZD()) {
       return Integer.toString(paramInt) + "劃";
     }
     return String.valueOf((char)paramInt);
@@ -60,12 +60,12 @@ public final class e
   
   public final int getCount()
   {
-    return eEr.size();
+    return eKF.size();
   }
   
   public final Object getItem(int paramInt)
   {
-    return eEr.get(paramInt);
+    return eKF.get(paramInt);
   }
   
   public final long getItemId(int paramInt)
@@ -79,36 +79,36 @@ public final class e
     label83:
     int i;
     if (paramView == null) {
-      if (!t.aUz())
+      if (!u.aZD())
       {
-        paramView = View.inflate(context, 2131361920, null);
+        paramView = View.inflate(context, 2130903410, null);
         paramViewGroup = new a();
-        czT = ((TextView)paramView.findViewById(2131165247));
-        czU = ((TextView)paramView.findViewById(2131165378));
-        eEv = ((TextView)paramView.findViewById(2131165345));
+        cwP = ((TextView)paramView.findViewById(2131755265));
+        cwQ = ((TextView)paramView.findViewById(2131755275));
+        eKK = ((TextView)paramView.findViewById(2131755271));
         paramView.setTag(paramViewGroup);
         if (paramInt <= 0) {
           break label191;
         }
-        i = eEs[(paramInt - 1)];
+        i = eKH[(paramInt - 1)];
         label97:
         if (paramInt != 0) {
           break label197;
         }
-        czT.setVisibility(0);
-        czT.setText(hR(eEs[paramInt]));
+        cwP.setVisibility(0);
+        cwP.setText(iZ(eKH[paramInt]));
       }
     }
     for (;;)
     {
-      czU.setText(bUu);
-      eEv.setText(aJD);
-      if (!eEt) {
+      cwQ.setText(bNV);
+      eKK.setText(avX);
+      if (!eKI) {
         break label251;
       }
-      eEv.setVisibility(0);
+      eKK.setVisibility(0);
       return paramView;
-      paramView = View.inflate(context, 2131361890, null);
+      paramView = View.inflate(context, 2130903411, null);
       break;
       paramViewGroup = (a)paramView.getTag();
       break label83;
@@ -116,46 +116,46 @@ public final class e
       i = -1;
       break label97;
       label197:
-      if ((paramInt > 0) && (eEs[paramInt] != i))
+      if ((paramInt > 0) && (eKH[paramInt] != i))
       {
-        czT.setVisibility(0);
-        czT.setText(hR(eEs[paramInt]));
+        cwP.setVisibility(0);
+        cwP.setText(iZ(eKH[paramInt]));
       }
       else
       {
-        czT.setVisibility(8);
+        cwP.setVisibility(8);
       }
     }
     label251:
-    eEv.setVisibility(4);
+    eKK.setVisibility(4);
     return paramView;
   }
   
-  public final void pH(String paramString)
+  public final void qY(String paramString)
   {
     if (paramString != null)
     {
-      coN = paramString.trim();
-      eEr.clear();
-      int j = eEq.size();
+      ckb = paramString.trim();
+      eKF.clear();
+      int j = eKE.size();
       int i = 0;
       while (i < j)
       {
-        if ((eEq.get(i)).bUu.toUpperCase().contains(coN.toUpperCase())) || (eEq.get(i)).eCl.toUpperCase().contains(coN.toUpperCase())) || (eEq.get(i)).aJD.contains(coN))) {
-          eEr.add(eEq.get(i));
+        if ((eKE.get(i)).bNV.toUpperCase().contains(ckb.toUpperCase())) || (eKE.get(i)).eIK.toUpperCase().contains(ckb.toUpperCase())) || (eKE.get(i)).avX.contains(ckb))) {
+          eKF.add(eKE.get(i));
         }
         i += 1;
       }
-      aee();
+      agG();
       super.notifyDataSetChanged();
     }
   }
   
   static final class a
   {
-    TextView czT;
-    TextView czU;
-    TextView eEv;
+    TextView cwP;
+    TextView cwQ;
+    TextView eKK;
   }
 }
 

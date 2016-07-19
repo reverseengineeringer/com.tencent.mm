@@ -1,20 +1,20 @@
 package com.tencent.mm.c.b;
 
-import com.tencent.mm.r.g.a;
+import com.tencent.mm.t.g.a;
 
 public abstract interface a
 {
   public abstract void a(g.a parama);
   
-  public abstract boolean bp(String paramString);
+  public abstract boolean bh(String paramString);
   
   public abstract int getMaxAmplitude();
   
   public abstract int getStatus();
   
-  public abstract boolean lH();
+  public abstract boolean jR();
   
-  public abstract int lI();
+  public abstract int jS();
 }
 
 /* Location:

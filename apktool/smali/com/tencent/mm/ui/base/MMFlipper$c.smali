@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private fLa:F
+.field private fUd:F
 
 
 # direct methods
@@ -32,12 +32,12 @@
     .line 58
     const v0, 0x3fa66666    # 1.3f
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper$c;->fLa:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper$c;->fUd:F
 
     .line 59
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper$c;->fLa:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMFlipper$c;->fUd:F
 
     .line 60
     return-void

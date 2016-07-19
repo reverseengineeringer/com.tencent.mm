@@ -7,7 +7,7 @@ final class SelectContactUI$6
 {
   SelectContactUI$6(SelectContactUI paramSelectContactUI) {}
   
-  public final void bK(boolean paramBoolean) {}
+  public final void bz(boolean paramBoolean) {}
 }
 
 /* Location:

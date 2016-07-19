@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/j;->a(IILjava/lang/String;Landroid/view/MenuItem$OnMenuItemClickListener;Landroid/view/View$OnLongClickListener;I)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/ui/j;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kpx:Lcom/tencent/mm/ui/j;
+.field final synthetic kOB:Lcom/tencent/mm/ui/j;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1617
-    iput-object p1, p0, Lcom/tencent/mm/ui/j$4;->kpx:Lcom/tencent/mm/ui/j;
+    .line 1636
+    iput-object p1, p0, Lcom/tencent/mm/ui/j$4;->kOB:Lcom/tencent/mm/ui/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,11 +40,11 @@
     .locals 1
 
     .prologue
-    .line 1621
-    iget-object v0, p0, Lcom/tencent/mm/ui/j$4;->kpx:Lcom/tencent/mm/ui/j;
+    .line 1640
+    iget-object v0, p0, Lcom/tencent/mm/ui/j$4;->kOB:Lcom/tencent/mm/ui/j;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/j;->G()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/j;->F()V
 
-    .line 1622
+    .line 1641
     return-void
 .end method

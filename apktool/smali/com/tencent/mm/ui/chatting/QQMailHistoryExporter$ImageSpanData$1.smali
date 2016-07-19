@@ -16,6 +16,16 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter$ImageSpanData;",
+        ">;"
+    }
+.end annotation
+
 
 # direct methods
 .method constructor <init>()V
@@ -43,13 +53,13 @@
 
     move-result v1
 
-    iput v1, v0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter$ImageSpanData;->bEq:I
+    iput v1, v0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter$ImageSpanData;->bxB:I
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    iput v1, v0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter$ImageSpanData;->ldk:I
+    iput v1, v0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter$ImageSpanData;->lDB:I
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 

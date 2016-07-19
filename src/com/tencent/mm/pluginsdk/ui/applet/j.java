@@ -5,13 +5,13 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import com.tencent.mm.a.o;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.r.d;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.modelsimple.l;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.h;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.p;
 
@@ -19,88 +19,90 @@ public final class j
   implements d
 {
   Context context;
-  p eaF;
-  private af fzg = new af(new af.a()
+  p eed;
+  private com.tencent.mm.sdk.platformtools.ah fIk = new com.tencent.mm.sdk.platformtools.ah(new ah.a()
   {
-    public final boolean lj()
+    public final boolean jK()
     {
       j localj = j.this;
       Context localContext = context;
-      context.getString(2131430877);
-      eaF = g.a(localContext, context.getString(2131430941), true, new DialogInterface.OnCancelListener()
+      context.getString(2131231028);
+      eed = g.a(localContext, context.getString(2131231049), true, new DialogInterface.OnCancelListener()
       {
         public final void onCancel(DialogInterface paramAnonymous2DialogInterface)
         {
-          ah.tE().c(gcq);
-          eaF = null;
+          com.tencent.mm.model.ah.tF().c(gms);
+          eed = null;
         }
       });
       return false;
     }
   }, false);
-  com.tencent.mm.modelsimple.m gcq;
-  private String iJr;
+  l gms;
+  private String jgn;
   
   public j(Context paramContext)
   {
     context = paramContext;
   }
   
-  private void AH(String paramString)
+  private void CI(String paramString)
   {
     Intent localIntent = new Intent();
-    localIntent.putExtra("rawUrl", context.getString(2131428521, new Object[] { paramString }));
+    localIntent.putExtra("rawUrl", context.getString(2131232029, new Object[] { paramString }));
     localIntent.putExtra("useJs", true);
     localIntent.putExtra("vertical_scroll", true);
-    com.tencent.mm.ar.c.c(context, "webview", ".ui.tools.ContactQZoneWebView", localIntent);
+    localIntent.putExtra("neverGetA8Key", true);
+    com.tencent.mm.av.c.c(context, "webview", ".ui.tools.ContactQZoneWebView", localIntent);
   }
   
-  public final void AG(String paramString)
+  public final void CH(String paramString)
   {
     if ((paramString == null) || (paramString.length() == 0))
     {
-      u.e("!32@/B4Tb64lLpLndYJUrncSP96j13QaNgBN", "go fail, qqNum is null");
+      v.e("MicroMsg.ViewQZone", "go fail, qqNum is null");
       return;
     }
-    iJr = paramString;
-    String str1 = (String)ah.tD().rn().get(46, null);
-    String str2 = ay.ky((String)ah.tD().rn().get(72, null));
-    u.i("!32@/B4Tb64lLpLndYJUrncSP96j13QaNgBN", "get a2key:[%s], get new a2key:[%s]", new Object[] { str1, str2 });
-    if ((ay.kz(str1)) && (ay.kz(str2)))
+    jgn = paramString;
+    String str1 = (String)com.tencent.mm.model.ah.tE().ro().get(46, null);
+    String str2 = be.li((String)com.tencent.mm.model.ah.tE().ro().get(72, null));
+    v.i("MicroMsg.ViewQZone", "get a2key:[%s], get new a2key:[%s]", new Object[] { str1, str2 });
+    if ((be.kf(str1)) && (be.kf(str2)))
     {
-      AH(paramString);
+      CI(paramString);
       return;
     }
-    ah.tE().a(233, this);
-    gcq = new com.tencent.mm.modelsimple.m(o.aF(paramString));
-    ah.tE().d(gcq);
-    fzg.ds(3000L);
+    com.tencent.mm.model.ah.tF().a(233, this);
+    gms = new l(o.aK(paramString));
+    com.tencent.mm.model.ah.tF().a(gms, 0);
+    fIk.dJ(3000L);
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, com.tencent.mm.t.j paramj)
   {
-    fzg.aUF();
-    if (eaF != null) {
-      eaF.dismiss();
+    fIk.aZJ();
+    if (eed != null) {
+      eed.dismiss();
     }
-    ah.tE().b(233, this);
+    com.tencent.mm.model.ah.tF().b(233, this);
     if ((paramInt1 == 0) && (paramInt2 == 0))
     {
-      paramString = ((com.tencent.mm.modelsimple.m)paramj).Co();
+      paramString = ((l)paramj).Cv();
       if ((paramString == null) || (paramString.length() == 0))
       {
-        AH(iJr);
+        CI(jgn);
         return;
       }
       paramj = new Intent();
       paramj.putExtra("rawUrl", paramString);
       paramj.putExtra("useJs", true);
       paramj.putExtra("vertical_scroll", true);
-      com.tencent.mm.ar.c.c(context, "webview", ".ui.tools.ContactQZoneWebView", paramj);
+      paramj.putExtra("neverGetA8Key", true);
+      com.tencent.mm.av.c.c(context, "webview", ".ui.tools.ContactQZoneWebView", paramj);
       return;
     }
-    u.e("!32@/B4Tb64lLpLndYJUrncSP96j13QaNgBN", "getA8Key fail, errType = " + paramInt1 + ", errCode = " + paramInt2);
-    AH(iJr);
+    v.e("MicroMsg.ViewQZone", "getA8Key fail, errType = " + paramInt1 + ", errCode = " + paramInt2);
+    CI(jgn);
   }
 }
 

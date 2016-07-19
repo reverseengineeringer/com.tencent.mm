@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+.field final synthetic huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1228
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$5;->hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+    .line 1234
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$5;->huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,8 +40,8 @@
     .locals 4
 
     .prologue
-    .line 1232
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$5;->hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+    .line 1238
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$5;->huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->d(Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;)Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;
 
@@ -49,13 +49,13 @@
 
     if-nez v0, :cond_0
 
-    .line 1239
+    .line 1245
     :goto_0
     return-void
 
-    .line 1235
+    .line 1241
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$5;->hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$5;->huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->d(Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;)Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;
 
@@ -63,9 +63,9 @@
 
     monitor-enter v1
 
-    .line 1237
+    .line 1243
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$5;->hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$5;->huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->d(Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;)Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;
 
@@ -77,12 +77,12 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;->a(Ljava/lang/String;Lcom/tencent/mm/sdk/h/i;)V
 
-    .line 1238
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$5;->hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+    .line 1244
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$5;->huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->q(Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;)Z
 
-    .line 1239
+    .line 1245
     monitor-exit v1
 
     goto :goto_0

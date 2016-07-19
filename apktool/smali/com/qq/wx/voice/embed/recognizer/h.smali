@@ -3,14 +3,14 @@
 
 
 # instance fields
-.field private synthetic ajo:Lcom/qq/wx/voice/embed/recognizer/g;
+.field private synthetic Ve:Lcom/qq/wx/voice/embed/recognizer/g;
 
 
 # direct methods
 .method constructor <init>(Lcom/qq/wx/voice/embed/recognizer/g;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/qq/wx/voice/embed/recognizer/h;->ajo:Lcom/qq/wx/voice/embed/recognizer/g;
+    iput-object p1, p0, Lcom/qq/wx/voice/embed/recognizer/h;->Ve:Lcom/qq/wx/voice/embed/recognizer/g;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -40,11 +40,11 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/qq/wx/voice/embed/recognizer/h;->ajo:Lcom/qq/wx/voice/embed/recognizer/g;
+    iget-object v1, p0, Lcom/qq/wx/voice/embed/recognizer/h;->Ve:Lcom/qq/wx/voice/embed/recognizer/g;
 
-    iget-object v1, v1, Lcom/qq/wx/voice/embed/recognizer/g;->ajq:Lcom/qq/wx/voice/embed/recognizer/c;
+    iget-object v1, v1, Lcom/qq/wx/voice/embed/recognizer/g;->Vg:Lcom/qq/wx/voice/embed/recognizer/c;
 
-    invoke-interface {v1, v0}, Lcom/qq/wx/voice/embed/recognizer/c;->aF(I)V
+    invoke-interface {v1, v0}, Lcom/qq/wx/voice/embed/recognizer/c;->aX(I)V
 
     goto :goto_0
 
@@ -53,9 +53,9 @@
 
     check-cast v0, Lcom/qq/wx/voice/embed/recognizer/a;
 
-    iget-object v1, p0, Lcom/qq/wx/voice/embed/recognizer/h;->ajo:Lcom/qq/wx/voice/embed/recognizer/g;
+    iget-object v1, p0, Lcom/qq/wx/voice/embed/recognizer/h;->Ve:Lcom/qq/wx/voice/embed/recognizer/g;
 
-    iget-object v1, v1, Lcom/qq/wx/voice/embed/recognizer/g;->ajq:Lcom/qq/wx/voice/embed/recognizer/c;
+    iget-object v1, v1, Lcom/qq/wx/voice/embed/recognizer/g;->Vg:Lcom/qq/wx/voice/embed/recognizer/c;
 
     invoke-interface {v1, v0}, Lcom/qq/wx/voice/embed/recognizer/c;->a(Lcom/qq/wx/voice/embed/recognizer/a;)V
 

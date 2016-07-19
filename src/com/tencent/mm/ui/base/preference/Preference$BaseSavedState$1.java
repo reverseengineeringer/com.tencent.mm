@@ -3,7 +3,7 @@ package com.tencent.mm.ui.base.preference;
 import android.os.Parcelable.Creator;
 
 final class Preference$BaseSavedState$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<Preference.BaseSavedState>
 {}
 
 /* Location:

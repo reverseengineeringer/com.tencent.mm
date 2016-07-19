@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic apQ:Lcom/tencent/mm/c/b/b;
+.field final synthetic abi:Lcom/tencent/mm/c/b/b;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 107
-    iput-object p1, p0, Lcom/tencent/mm/c/b/b$1;->apQ:Lcom/tencent/mm/c/b/b;
+    iput-object p1, p0, Lcom/tencent/mm/c/b/b$1;->abi:Lcom/tencent/mm/c/b/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 110
-    iget-object v0, p0, Lcom/tencent/mm/c/b/b$1;->apQ:Lcom/tencent/mm/c/b/b;
+    iget-object v0, p0, Lcom/tencent/mm/c/b/b$1;->abi:Lcom/tencent/mm/c/b/b;
 
     invoke-static {v0}, Lcom/tencent/mm/c/b/b;->a(Lcom/tencent/mm/c/b/b;)Lcom/tencent/mm/c/b/b$a;
 
@@ -50,7 +50,7 @@
     if-eqz v0, :cond_0
 
     .line 111
-    iget-object v0, p0, Lcom/tencent/mm/c/b/b$1;->apQ:Lcom/tencent/mm/c/b/b;
+    iget-object v0, p0, Lcom/tencent/mm/c/b/b$1;->abi:Lcom/tencent/mm/c/b/b;
 
     invoke-static {v0}, Lcom/tencent/mm/c/b/b;->a(Lcom/tencent/mm/c/b/b;)Lcom/tencent/mm/c/b/b$a;
 
@@ -61,7 +61,7 @@
     .line 114
     :cond_0
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/c/b/b$1;->apQ:Lcom/tencent/mm/c/b/b;
+    iget-object v0, p0, Lcom/tencent/mm/c/b/b$1;->abi:Lcom/tencent/mm/c/b/b;
 
     invoke-static {v0}, Lcom/tencent/mm/c/b/b;->b(Lcom/tencent/mm/c/b/b;)Landroid/media/MediaRecorder;
 
@@ -73,9 +73,9 @@
 
     .line 118
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/c/b/b$1;->apQ:Lcom/tencent/mm/c/b/b;
+    iget-object v0, p0, Lcom/tencent/mm/c/b/b$1;->abi:Lcom/tencent/mm/c/b/b;
 
-    sget-object v1, Lcom/tencent/mm/c/b/b$b;->apV:Lcom/tencent/mm/c/b/b$b;
+    sget-object v1, Lcom/tencent/mm/c/b/b$b;->abn:Lcom/tencent/mm/c/b/b$b;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/c/b/b;->a(Lcom/tencent/mm/c/b/b;Lcom/tencent/mm/c/b/b$b;)Lcom/tencent/mm/c/b/b$b;
 
@@ -87,13 +87,13 @@
     move-exception v0
 
     .line 116
-    const-string/jumbo v1, "!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI="
+    const-string/jumbo v1, "MicroMsg.MMAudioRecorder"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

@@ -1,35 +1,14 @@
 package com.tencent.mm.ui.chatting;
 
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-
-final class dm
+public abstract interface dm
 {
-  View lcG;
-  ImageView lcH;
-  View lcI;
-  ImageView lcJ;
-  TextView lcK;
-  TextView lcL;
-  TextView lcM;
-  TextView lcN;
-  LinearLayout lcO;
-  TextView lcP;
-  TextView lcQ;
-  View lcR;
-  LinearLayout lcS;
-  LinearLayout lcT;
-  View lcU;
-  LinearLayout lcV;
-  LinearLayout lcW;
-  View lcX;
-  TextView lcY;
-  TextView lcZ;
-  ImageView lda;
-  ImageView ldb;
-  ImageView ldc;
+  public abstract void bkm();
+  
+  public abstract boolean bkn();
+  
+  public abstract void tf(int paramInt);
+  
+  public static enum a {}
 }
 
 /* Location:

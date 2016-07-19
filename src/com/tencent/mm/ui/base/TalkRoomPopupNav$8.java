@@ -11,8 +11,8 @@ public final class TalkRoomPopupNav$8
   
   public final void onAnimationEnd(Animation paramAnimation)
   {
-    if (TalkRoomPopupNav.f(kKA) != null) {
-      TalkRoomPopupNav.g(kKA).startAnimation(TalkRoomPopupNav.f(kKA));
+    if (TalkRoomPopupNav.f(ljQ) != null) {
+      TalkRoomPopupNav.g(ljQ).startAnimation(TalkRoomPopupNav.f(ljQ));
     }
   }
   

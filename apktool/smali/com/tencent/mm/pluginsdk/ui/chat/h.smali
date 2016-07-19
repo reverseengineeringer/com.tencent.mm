@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field private caJ:Landroid/content/ContentResolver;
+.field private bUs:Landroid/content/ContentResolver;
 
 .field protected mContext:Landroid/content/Context;
 
@@ -35,31 +35,31 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/h;->caJ:Landroid/content/ContentResolver;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/h;->bUs:Landroid/content/ContentResolver;
 
     .line 297
     return-void
 .end method
 
-.method private AJ(Ljava/lang/String;)Ljava/lang/String;
+.method private CP(Ljava/lang/String;)Ljava/lang/String;
     .locals 7
 
     .prologue
     const/4 v6, 0x0
 
     .line 301
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 302
-    const-string/jumbo v0, "!56@/B4Tb64lLpLZHVZfQnz6xEg7TjdBcGb0TQan+WtNeTNISqsLdE8nBQ=="
+    const-string/jumbo v0, "MicroMsg.RecentPhotoTips.ImageQuery"
 
     const-string/jumbo v1, "null or nill imageId"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 331
     :goto_0
@@ -89,7 +89,7 @@
 
     .line 308
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/h;->caJ:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/h;->bUs:Landroid/content/ContentResolver;
 
     sget-object v1, Landroid/provider/MediaStore$Images$Thumbnails;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
@@ -109,7 +109,7 @@
     if-nez v1, :cond_1
 
     .line 317
-    const-string/jumbo v0, "!56@/B4Tb64lLpLZHVZfQnz6xEg7TjdBcGb0TQan+WtNeTNISqsLdE8nBQ=="
+    const-string/jumbo v0, "MicroMsg.RecentPhotoTips.ImageQuery"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -125,7 +125,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -134,7 +134,7 @@
     move-exception v0
 
     .line 312
-    const-string/jumbo v1, "!56@/B4Tb64lLpLZHVZfQnz6xEg7TjdBcGb0TQan+WtNeTNISqsLdE8nBQ=="
+    const-string/jumbo v1, "MicroMsg.RecentPhotoTips.ImageQuery"
 
     const-string/jumbo v2, "query thumb exception e : %s"
 
@@ -150,7 +150,7 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -198,8 +198,17 @@
 
 
 # virtual methods
-.method public final aSk()Ljava/util/ArrayList;
+.method public final aXc()Ljava/util/ArrayList;
     .locals 10
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/pluginsdk/ui/chat/g;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     const/4 v9, 0x1
@@ -244,11 +253,11 @@
     aput-object v1, v2, v0
 
     .line 340
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gp()J
 
     .line 344
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/h;->caJ:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/h;->bUs:Landroid/content/ContentResolver;
 
     sget-object v1, Landroid/provider/MediaStore$Images$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
@@ -276,7 +285,7 @@
     move-exception v0
 
     .line 357
-    const-string/jumbo v1, "!56@/B4Tb64lLpLZHVZfQnz6xEg7TjdBcGb0TQan+WtNeTNISqsLdE8nBQ=="
+    const-string/jumbo v1, "MicroMsg.RecentPhotoTips.ImageQuery"
 
     const-string/jumbo v2, "query photo exception e : %s"
 
@@ -288,7 +297,7 @@
 
     aput-object v0, v3, v8
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v7
 
@@ -338,18 +347,18 @@
     move-result-object v3
 
     .line 372
-    invoke-direct {p0, v1}, Lcom/tencent/mm/pluginsdk/ui/chat/h;->AJ(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v1}, Lcom/tencent/mm/pluginsdk/ui/chat/h;->CP(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     .line 374
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v5
 
     if-nez v5, :cond_2
 
-    invoke-static {v2}, Lcom/tencent/mm/a/e;->ax(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/a/e;->aB(Ljava/lang/String;)Z
 
     move-result v5
 
@@ -357,11 +366,11 @@
 
     .line 375
     :cond_2
-    const-string/jumbo v1, "!56@/B4Tb64lLpLZHVZfQnz6xEg7TjdBcGb0TQan+WtNeTNISqsLdE8nBQ=="
+    const-string/jumbo v1, "MicroMsg.RecentPhotoTips.ImageQuery"
 
     const-string/jumbo v2, "file not exist"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 403
     :goto_1
@@ -382,7 +391,7 @@
 
     .line 379
     :cond_4
-    sget-object v5, Lcom/tencent/mm/compatible/util/d;->buk:Ljava/lang/String;
+    sget-object v5, Lcom/tencent/mm/compatible/util/d;->biK:Ljava/lang/String;
 
     invoke-virtual {v2, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -391,11 +400,11 @@
     if-eqz v5, :cond_5
 
     .line 380
-    const-string/jumbo v1, "!56@/B4Tb64lLpLZHVZfQnz6xEg7TjdBcGb0TQan+WtNeTNISqsLdE8nBQ=="
+    const-string/jumbo v1, "MicroMsg.RecentPhotoTips.ImageQuery"
 
     const-string/jumbo v2, "exclude weixin path image"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -408,74 +417,74 @@
     .line 385
     invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    iput-wide v7, v5, Lcom/tencent/mm/pluginsdk/ui/chat/g;->iMi:J
+    iput-wide v8, v5, Lcom/tencent/mm/pluginsdk/ui/chat/g;->jjf:J
 
     .line 386
     invoke-static {v3}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    iput-wide v7, v5, Lcom/tencent/mm/pluginsdk/ui/chat/g;->edh:J
+    iput-wide v8, v5, Lcom/tencent/mm/pluginsdk/ui/chat/g;->egI:J
 
     .line 387
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_6
 
-    invoke-static {v4}, Lcom/tencent/mm/a/e;->ax(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/tencent/mm/a/e;->aB(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_6
 
     .line 388
-    iput-object v4, v5, Lcom/tencent/mm/pluginsdk/ui/chat/g;->ayz:Ljava/lang/String;
+    iput-object v4, v5, Lcom/tencent/mm/pluginsdk/ui/chat/g;->akB:Ljava/lang/String;
 
     .line 391
     :cond_6
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_7
 
-    invoke-static {v2}, Lcom/tencent/mm/a/e;->ax(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/a/e;->aB(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_7
 
     .line 392
-    iput-object v2, v5, Lcom/tencent/mm/pluginsdk/ui/chat/g;->iMj:Ljava/lang/String;
+    iput-object v2, v5, Lcom/tencent/mm/pluginsdk/ui/chat/g;->jjg:Ljava/lang/String;
 
     .line 395
     :cond_7
-    iget-object v1, v5, Lcom/tencent/mm/pluginsdk/ui/chat/g;->iMj:Ljava/lang/String;
+    iget-object v1, v5, Lcom/tencent/mm/pluginsdk/ui/chat/g;->jjg:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_8
 
-    iget-object v1, v5, Lcom/tencent/mm/pluginsdk/ui/chat/g;->iMj:Ljava/lang/String;
+    iget-object v1, v5, Lcom/tencent/mm/pluginsdk/ui/chat/g;->jjg:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_8
 
     .line 396
-    const-string/jumbo v1, "!56@/B4Tb64lLpLZHVZfQnz6xEg7TjdBcGb0TQan+WtNeTNISqsLdE8nBQ=="
+    const-string/jumbo v1, "MicroMsg.RecentPhotoTips.ImageQuery"
 
     const-string/jumbo v2, "thumb file and orignal file both not exist"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 

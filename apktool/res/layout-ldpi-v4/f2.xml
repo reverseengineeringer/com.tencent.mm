@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/xt" android:background="@drawable/x2" android:paddingTop="15.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:gravity="center_horizontal" android:id="@id/xu" android:layout_width="65.0dip" android:layout_height="65.0dip" android:src="@drawable/xr" />
+        <TextView android:textSize="@dimen/cu" android:textColor="#ff000000" android:ellipsize="end" android:gravity="center" android:id="@id/xv" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:singleLine="true" />
+        <TextView android:textSize="@dimen/jc" android:textColor="#ff9f9e9f" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/c61" />
+        <TextView android:textSize="@dimen/jc" android:textColor="#ff9f9e9f" android:gravity="center" android:id="@id/xw" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/c62" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/cu" android:textColor="#ff000000" android:gravity="center" android:id="@id/xx" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_below="@id/xt" android:layout_centerHorizontal="true" />
+    <TextView android:gravity="center" android:id="@id/xy" android:visibility="gone" android:layout_marginLeft="10.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="10.0dip" android:layout_below="@id/xx" android:layout_centerHorizontal="true" style="@style/ChatroomUpgradeButton" />
+    <LinearLayout android:gravity="bottom|center" android:orientation="vertical" android:paddingBottom="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/jc" android:textColor="#ff848386" android:gravity="center" android:id="@id/xz" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:lineSpacingExtra="0.0dip" />
+        <TextView android:textSize="@dimen/jc" android:textColor="@color/pl" android:gravity="center" android:id="@id/y0" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="20.0dip" android:layout_marginTop="14.0dip" android:text="@string/c5w" android:lineSpacingExtra="0.0dip" />
+    </LinearLayout>
+</RelativeLayout>

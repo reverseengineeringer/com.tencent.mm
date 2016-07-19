@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic jSC:Ljava/util/Map;
+.field final synthetic krW:Ljava/util/Map;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 288
-    iput-object p1, p0, Lcom/tencent/mm/sandbox/monitor/a$3;->jSC:Ljava/util/Map;
+    iput-object p1, p0, Lcom/tencent/mm/sandbox/monitor/a$3;->krW:Ljava/util/Map;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
 
@@ -40,7 +40,7 @@
     .line 292
     new-instance v1, Landroid/content/Intent;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -56,7 +56,7 @@
     .line 294
     const-string/jumbo v2, "intent_extra_desc"
 
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/monitor/a$3;->jSC:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/monitor/a$3;->krW:Ljava/util/Map;
 
     const-string/jumbo v3, ".Response.desc"
 
@@ -84,7 +84,7 @@
 
     const/4 v4, 0x0
 
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/monitor/a$3;->jSC:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/monitor/a$3;->krW:Ljava/util/Map;
 
     const-string/jumbo v5, ".Response.url"
 
@@ -99,7 +99,7 @@
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
     .line 298
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 

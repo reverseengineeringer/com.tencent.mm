@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/ui/LauncherUI;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/ui/LauncherUI;->bfR()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic knl:Lcom/tencent/mm/ui/LauncherUI;
+.field final synthetic kMs:Lcom/tencent/mm/ui/LauncherUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 3623
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$24;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 4024
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$24;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,168 +37,79 @@
 
 # virtual methods
 .method public final run()V
-    .locals 6
+    .locals 3
 
     .prologue
-    const/4 v5, 0x1
-
-    const/4 v1, 0x0
-
-    .line 3628
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$24;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    iput-boolean v1, v0, Lcom/tencent/mm/ui/LauncherUI;->kmQ:Z
-
-    .line 3630
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$24;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/LauncherUI;->isFinishing()Z
+    .line 4028
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_1
 
-    .line 3656
-    :cond_0
+    const-string/jumbo v0, "MicroMsg.UnreadCountHelper"
+
+    const-string/jumbo v1, "getAddrTabUnreadCount, but mmcore not ready"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    .line 4029
     :goto_0
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUI$24;->kMs:Lcom/tencent/mm/ui/LauncherUI;
+
+    invoke-static {v1}, Lcom/tencent/mm/ui/LauncherUI;->a(Lcom/tencent/mm/ui/LauncherUI;)Lcom/tencent/mm/ui/c;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    .line 4030
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUI$24;->kMs:Lcom/tencent/mm/ui/LauncherUI;
+
+    invoke-static {v1}, Lcom/tencent/mm/ui/LauncherUI;->a(Lcom/tencent/mm/ui/LauncherUI;)Lcom/tencent/mm/ui/c;
+
+    move-result-object v1
+
+    invoke-interface {v1, v0}, Lcom/tencent/mm/ui/c;->rF(I)V
+
+    .line 4032
+    :cond_0
     return-void
 
-    .line 3634
+    .line 4028
     :cond_1
-    const-string/jumbo v2, "!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2"
-
-    const-string/jumbo v3, "ashutest::startChatting, ishow:%b"
-
-    new-array v4, v5, [Ljava/lang/Object;
-
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$24;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->p(Lcom/tencent/mm/ui/LauncherUI;)Lcom/tencent/mm/ui/tools/TestTimeForChatting;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    if-nez v0, :cond_3
-
-    move v0, v1
-
-    :goto_1
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
-    aput-object v0, v4, v1
+    const v1, 0x23102
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const/4 v2, 0x0
 
-    .line 3635
-    new-instance v0, Landroid/content/Intent;
-
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
-
-    const-string/jumbo v2, "Chat_User"
-
-    iget-object v3, p0, Lcom/tencent/mm/ui/LauncherUI$24;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    iget-object v3, v3, Lcom/tencent/mm/ui/LauncherUI;->kmJ:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 3636
-    iget-object v2, p0, Lcom/tencent/mm/ui/LauncherUI$24;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    check-cast v0, Ljava/lang/Integer;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/LauncherUI;->kmK:Landroid/os/Bundle;
-
-    if-eqz v2, :cond_2
-
-    .line 3637
-    iget-object v2, p0, Lcom/tencent/mm/ui/LauncherUI$24;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    iget-object v2, v2, Lcom/tencent/mm/ui/LauncherUI;->kmK:Landroid/os/Bundle;
-
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
-
-    .line 3640
-    :cond_2
-    const-string/jumbo v2, "img_gallery_enter_from_chatting_ui"
-
-    invoke-virtual {v0, v2, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    .line 3642
-    iget-object v2, p0, Lcom/tencent/mm/ui/LauncherUI$24;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-static {v2, v0}, Lcom/tencent/mm/ui/LauncherUI;->a(Lcom/tencent/mm/ui/LauncherUI;Landroid/content/Intent;)V
-
-    .line 3644
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$24;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->z(Lcom/tencent/mm/ui/LauncherUI;)Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lcom/tencent/mm/ui/LauncherUI$24;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-static {v2}, Lcom/tencent/mm/ui/LauncherUI;->A(Lcom/tencent/mm/ui/LauncherUI;)Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout;->setOnChattingLayoutChangedListener(Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;)V
-
-    .line 3645
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$24;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->p(Lcom/tencent/mm/ui/LauncherUI;)Lcom/tencent/mm/ui/tools/TestTimeForChatting;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/TestTimeForChatting;->setVisibility(I)V
-
-    .line 3646
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$24;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/LauncherUI;->baw()V
-
-    .line 3653
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$24;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->h(Lcom/tencent/mm/ui/LauncherUI;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->bbg()Z
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/s;->f(Ljava/lang/Integer;)I
 
     move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 3654
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$24;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/widget/f;->a(Lcom/tencent/mm/ui/widget/f$a;)V
 
     goto :goto_0
-
-    .line 3634
-    :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$24;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->p(Lcom/tencent/mm/ui/LauncherUI;)Lcom/tencent/mm/ui/tools/TestTimeForChatting;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/TestTimeForChatting;->isShown()Z
-
-    move-result v0
-
-    goto :goto_1
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 2
 
     .prologue
-    .line 3660
+    .line 4036
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -211,7 +122,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "|startChattingRunnable"
+    const-string/jumbo v1, "|setAddressTagUnread"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

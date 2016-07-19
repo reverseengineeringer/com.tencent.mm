@@ -6,16 +6,15 @@ import com.tencent.mm.c.b.c.a;
 import com.tencent.mm.c.c.d;
 import com.tencent.mm.compatible.d.j;
 import com.tencent.mm.compatible.d.p;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class k
   implements a
 {
-  private static int chB = 100;
-  public c apL;
-  private int apw = 0;
-  c.a aqt = new c.a()
+  private static int ccS = 100;
+  private int aaO = 0;
+  c.a abL = new c.a()
   {
     public final void B(int paramAnonymousInt1, int paramAnonymousInt2) {}
     
@@ -27,57 +26,58 @@ public final class k
       k.a(k.this, paramAnonymousArrayOfByte, paramAnonymousInt);
     }
   };
-  private d chC;
+  public c abd;
+  private d ccT;
   private String mFileName = null;
   public int mStatus = 0;
   
   private void clean()
   {
-    if (apL != null)
+    if (abd != null)
     {
-      apL.lH();
-      apL = null;
+      abd.jR();
+      abd = null;
     }
-    if (chC != null)
+    if (ccT != null)
     {
-      chC.lU();
-      chC = null;
+      ccT.kk();
+      ccT = null;
     }
   }
   
-  public final void a(com.tencent.mm.r.g.a parama) {}
+  public final void a(com.tencent.mm.t.g.a parama) {}
   
-  public final boolean bp(String paramString)
+  public final boolean bh(String paramString)
   {
-    if (!ay.kz(mFileName))
+    if (!be.kf(mFileName))
     {
-      u.e("!32@/B4Tb64lLpKxxZlLZKhWt+g3aFejQlb6", "Duplicate Call startRecord , maybe Stop Fail Before");
+      v.e("MicroMsg.SpeexRecorder", "Duplicate Call startRecord , maybe Stop Fail Before");
       return false;
     }
     mStatus = 1;
-    apw = 0;
-    apL = new c(16000, 0);
-    apL.aqi = -19;
-    if (bsQbrN > 0) {
-      apL.m(bsQbrN, true);
+    aaO = 0;
+    abd = new c(16000, 0);
+    abd.abA = -19;
+    if (bgWbfO > 0) {
+      abd.m(bgWbfO, true);
     }
     for (;;)
     {
-      apL.al(false);
-      apL.aqt = aqt;
-      chC = new d();
-      if (chC.br(paramString)) {
+      abd.O(false);
+      abd.abL = abL;
+      ccT = new d();
+      if (ccT.bk(paramString)) {
         break;
       }
-      u.e("!32@/B4Tb64lLpKxxZlLZKhWt+g3aFejQlb6", "init speex writer failed");
+      v.e("MicroMsg.SpeexRecorder", "init speex writer failed");
       clean();
       mStatus = -1;
       return false;
-      apL.m(5, false);
+      abd.m(5, false);
     }
-    if (!apL.lN())
+    if (!abd.jY())
     {
-      u.e("!32@/B4Tb64lLpKxxZlLZKhWt+g3aFejQlb6", "start record failed");
+      v.e("MicroMsg.SpeexRecorder", "start record failed");
       clean();
       mStatus = -1;
       return false;
@@ -88,12 +88,12 @@ public final class k
   
   public final int getMaxAmplitude()
   {
-    int i = apw;
-    apw = 0;
-    if (i > chB) {
-      chB = i;
+    int i = aaO;
+    aaO = 0;
+    if (i > ccS) {
+      ccS = i;
     }
-    return i * 100 / chB;
+    return i * 100 / ccS;
   }
   
   public final int getStatus()
@@ -101,7 +101,7 @@ public final class k
     return mStatus;
   }
   
-  public final boolean lH()
+  public final boolean jR()
   {
     mFileName = null;
     mStatus = 0;
@@ -109,9 +109,9 @@ public final class k
     return true;
   }
   
-  public final int lI()
+  public final int jS()
   {
-    return apL.aqy;
+    return abd.abQ;
   }
 }
 

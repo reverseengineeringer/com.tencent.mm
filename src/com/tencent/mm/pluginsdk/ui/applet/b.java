@@ -13,39 +13,38 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.modelsimple.z;
+import com.tencent.mm.modelsimple.x;
 import com.tencent.mm.pluginsdk.ui.d.e;
-import com.tencent.mm.protocal.b.amk;
-import com.tencent.mm.q.d.a;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.amv;
+import com.tencent.mm.s.d.a;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.RegionCodeDecoder;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
-import com.tencent.mm.t.aj;
-import com.tencent.mm.t.l;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.h;
 import com.tencent.mm.ui.base.h.a;
 import com.tencent.mm.ui.base.o;
+import com.tencent.mm.v.an;
 import java.util.LinkedList;
 
 public final class b
   implements a.a, d.a
 {
-  private int cLf;
-  String cNh;
-  ProgressDialog dfT;
-  k dsm;
-  private a iHZ;
-  h iIa;
-  com.tencent.mm.r.d iIb = null;
-  private boolean iIc = true;
+  private int cIi;
+  ProgressDialog deV;
+  k dsC;
+  private a jeW;
+  h jeX;
+  com.tencent.mm.t.d jeY = null;
+  private boolean jeZ = true;
   Context mContext;
+  String mUsername;
   
   public b(Context paramContext, String paramString, int paramInt, a parama)
   {
@@ -55,130 +54,130 @@ public final class b
   public b(Context paramContext, String paramString, int paramInt, a parama, boolean paramBoolean)
   {
     mContext = paramContext;
-    cNh = paramString;
-    cLf = paramInt;
-    iHZ = parama;
-    iIc = paramBoolean;
+    mUsername = paramString;
+    cIi = paramInt;
+    jeW = parama;
+    jeZ = paramBoolean;
   }
   
-  private void tg(String paramString)
+  private void uI(String paramString)
   {
-    u.i("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "searchContact %s", new Object[] { paramString });
-    if (iIb == null) {
-      iIb = new com.tencent.mm.r.d()
+    v.i("MicroMsg.AddContactDialog", "searchContact %s", new Object[] { paramString });
+    if (jeY == null) {
+      jeY = new com.tencent.mm.t.d()
       {
-        public final void a(int paramAnonymousInt1, int paramAnonymousInt2, String paramAnonymousString, com.tencent.mm.r.j paramAnonymousj)
+        public final void onSceneEnd(int paramAnonymousInt1, int paramAnonymousInt2, String paramAnonymousString, com.tencent.mm.t.j paramAnonymousj)
         {
-          if (dfT != null) {
-            dfT.dismiss();
+          if (deV != null) {
+            deV.dismiss();
           }
-          if (iIb != null) {
-            ah.tE().b(106, iIb);
+          if (jeY != null) {
+            ah.tF().b(106, jeY);
           }
-          if (dfT == null)
+          if (deV == null)
           {
-            u.e("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "has cancel the loading dialog");
-            cd(-1);
+            v.e("MicroMsg.AddContactDialog", "has cancel the loading dialog");
+            cx(-1);
             return;
           }
           if ((paramAnonymousInt1 != 0) || (paramAnonymousInt2 != 0))
           {
-            u.e("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "searchContact onSceneEnd, errType = %d, errCode = %d", new Object[] { Integer.valueOf(paramAnonymousInt1), Integer.valueOf(paramAnonymousInt2) });
-            cd(-1);
+            v.e("MicroMsg.AddContactDialog", "searchContact onSceneEnd, errType = %d, errCode = %d", new Object[] { Integer.valueOf(paramAnonymousInt1), Integer.valueOf(paramAnonymousInt2) });
+            cx(-1);
             return;
           }
           if (mContext == null)
           {
-            u.e("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "searchContact, context is null, msghandler has already been detached!");
-            cd(-1);
+            v.e("MicroMsg.AddContactDialog", "searchContact, context is null, msghandler has already been detached!");
+            cx(-1);
             return;
           }
           if (((mContext instanceof Activity)) && (((Activity)mContext).isFinishing()))
           {
-            u.e("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "searchContact, context isFinishing");
-            cd(-1);
+            v.e("MicroMsg.AddContactDialog", "searchContact, context isFinishing");
+            cx(-1);
             return;
           }
-          paramAnonymousString = ((z)paramAnonymousj).CL();
-          paramAnonymousj = com.tencent.mm.platformtools.n.a(jhS);
-          if (ay.kz(paramAnonymousj))
+          paramAnonymousString = ((x)paramAnonymousj).CY();
+          paramAnonymousj = com.tencent.mm.platformtools.m.a(jFX);
+          if (be.kf(paramAnonymousj))
           {
-            u.e("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "searchContact, user is null");
-            g.ba(mContext, mContext.getResources().getString(2131428949));
-            cd(-1);
+            v.e("MicroMsg.AddContactDialog", "searchContact, user is null");
+            g.aZ(mContext, mContext.getResources().getString(2131236689));
+            cx(-1);
             return;
           }
-          if ((cNh == null) || (!cNh.equals(paramAnonymousj))) {
-            u.w("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "user not the same, %s, %s", new Object[] { cNh, paramAnonymousj });
+          if ((mUsername == null) || (!mUsername.equals(paramAnonymousj))) {
+            v.w("MicroMsg.AddContactDialog", "user not the same, %s, %s", new Object[] { mUsername, paramAnonymousj });
           }
-          dsm = ah.tD().rq().Ep(paramAnonymousj);
-          if ((dsm == null) || ((int)dsm.bvi == 0))
+          dsC = ah.tE().rr().GD(paramAnonymousj);
+          if ((dsC == null) || ((int)dsC.bjS == 0))
           {
-            u.i("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "searchContact, no contact with username = " + paramAnonymousj + ", try get by alias");
-            dsm = ah.tD().rq().Em(paramAnonymousj);
-            if ((dsm == null) || ((int)dsm.bvi == 0))
+            v.i("MicroMsg.AddContactDialog", "searchContact, no contact with username = " + paramAnonymousj + ", try get by alias");
+            dsC = ah.tE().rr().GA(paramAnonymousj);
+            if ((dsC == null) || ((int)dsC.bjS == 0))
             {
-              u.i("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "searchContact, no contact with alias, new Contact");
-              dsm = new k(paramAnonymousj);
-              dsm.bE(bLR);
-              dsm.bH(com.tencent.mm.platformtools.n.a(jwg));
-              dsm.bI(com.tencent.mm.platformtools.n.a(jhI));
-              dsm.bJ(com.tencent.mm.platformtools.n.a(jhJ));
-              dsm.aZ(bLM);
-              dsm.bW(RegionCodeDecoder.M(bLV, bLN, bLO));
-              dsm.bQ(bLP);
-              dsm.aV(jxg);
-              dsm.bV(jxh);
-              dsm.aU(jxk);
-              dsm.bK(jxj);
-              dsm.bU(jxi);
+              v.i("MicroMsg.AddContactDialog", "searchContact, no contact with alias, new Contact");
+              dsC = new k(paramAnonymousj);
+              dsC.bz(bFl);
+              dsC.bC(com.tencent.mm.platformtools.m.a(jUO));
+              dsC.bD(com.tencent.mm.platformtools.m.a(jFN));
+              dsC.bE(com.tencent.mm.platformtools.m.a(jFO));
+              dsC.bp(bFg);
+              dsC.bV(RegionCodeDecoder.O(bFp, bFh, bFi));
+              dsC.bP(bFj);
+              dsC.bl(jVM);
+              dsC.bU(jVN);
+              dsC.bk(jVQ);
+              dsC.bF(jVP);
+              dsC.bT(jVO);
             }
           }
           for (;;)
           {
-            H(dsm);
+            H(dsC);
             return;
-            u.i("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "searchContact, contact in db, %s", new Object[] { paramAnonymousj });
+            v.i("MicroMsg.AddContactDialog", "searchContact, contact in db, %s", new Object[] { paramAnonymousj });
           }
         }
       };
     }
-    ah.tE().a(106, iIb);
-    paramString = new z(paramString);
-    ah.tE().d(paramString);
+    ah.tF().a(106, jeY);
+    paramString = new x(paramString);
+    ah.tF().a(paramString, 0);
   }
   
   final void H(final k paramk)
   {
     if (paramk == null)
     {
-      u.e("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "showContact fail, contact is null");
-      cd(-1);
+      v.e("MicroMsg.AddContactDialog", "showContact fail, contact is null");
+      cx(-1);
       return;
     }
-    Object localObject1 = mContext.getString(2131428915);
-    Bitmap localBitmap = com.tencent.mm.q.b.a(field_username, false, -1);
+    Object localObject1 = mContext.getString(2131236688);
+    Bitmap localBitmap = com.tencent.mm.s.b.a(field_username, false, -1);
     if (localBitmap == null) {
-      com.tencent.mm.q.n.vb().a(this);
+      com.tencent.mm.s.n.vd().a(this);
     }
-    if ((localBitmap != null) && (paramk.aWp())) {
+    if ((localBitmap != null) && (paramk.bbC())) {
       localBitmap = com.tencent.mm.sdk.platformtools.d.a(localBitmap, false, localBitmap.getWidth() / 2);
     }
     for (;;)
     {
       String str = field_nickname;
-      iIa = null;
+      jeX = null;
       com.tencent.mm.ui.j localj;
       boolean bool;
       if ((mContext instanceof MMActivity))
       {
-        if (!iIc)
+        if (!jeZ)
         {
           I(paramk);
           return;
         }
-        localj = mContext).koJ;
-        bool = paramk.aWp();
+        localj = mContext).kNN;
+        bool = paramk.bbC();
         localObject2 = new c.a()
         {
           public final void a(boolean paramAnonymousBoolean, String paramAnonymousString, int paramAnonymousInt)
@@ -188,43 +187,43 @@ public final class b
             }
             for (;;)
             {
-              iIa.dismiss();
+              jeX.dismiss();
               return;
-              cd(0);
+              cx(0);
             }
           }
         };
         if (((localObject1 == null) || (((String)localObject1).length() == 0)) && ((str == null) || (str.length() == 0)))
         {
-          u.e("!44@/B4Tb64lLpKepPGwm75eZGp+z8yM8hRDu9y0dA4MRdc=", "showDialogItem6 fail, title message both are empty");
+          v.e("MicroMsg.MMConfirmDialog", "showDialogItem6 fail, title message both are empty");
           paramk = null;
-          iIa = paramk;
+          jeX = paramk;
         }
       }
       else
       {
-        if (iIa != null) {
+        if (jeX != null) {
           break;
         }
-        u.e("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "showContact fail, cannot show dialog");
-        cd(-1);
+        v.e("MicroMsg.AddContactDialog", "showContact fail, cannot show dialog");
+        cx(-1);
         return;
       }
-      paramk = c.t(kpc, 2131363294);
-      h.a locala = new h.a(kpc);
-      locala.hw(false);
-      locala.hx(false);
-      c.c(paramk, false);
-      c.a(localj, locala, (c.a)localObject2, paramk, kpc.getResources().getString(2131428525));
-      Object localObject2 = (TextView)paramk.findViewById(2131169448);
-      ((TextView)localObject2).setText(e.a(kpc, (CharSequence)localObject1, ((TextView)localObject2).getTextSize()));
-      localObject1 = (TextView)paramk.findViewById(2131169422);
-      ((TextView)localObject1).setText(e.a(kpc, str, ((TextView)localObject1).getTextSize()));
+      paramk = c.x(kOg, 2130903375);
+      h.a locala = new h.a(kOg);
+      locala.hU(false);
+      locala.hV(false);
+      c.d(paramk, false);
+      c.a(localj, locala, (c.a)localObject2, paramk, kOg.getResources().getString(2131231890));
+      Object localObject2 = (TextView)paramk.findViewById(2131756273);
+      ((TextView)localObject2).setText(e.a(kOg, (CharSequence)localObject1, ((TextView)localObject2).getTextSize()));
+      localObject1 = (TextView)paramk.findViewById(2131756267);
+      ((TextView)localObject1).setText(e.a(kOg, str, ((TextView)localObject1).getTextSize()));
       if ("".length() == 0)
       {
-        paramk.findViewById(2131169423).setVisibility(8);
+        paramk.findViewById(2131756268).setVisibility(8);
         label343:
-        localObject1 = (ImageView)paramk.findViewById(2131169421);
+        localObject1 = (ImageView)paramk.findViewById(2131756266);
         if (localObject1 != null)
         {
           if ((localBitmap == null) || (localBitmap.isRecycled())) {
@@ -237,13 +236,13 @@ public final class b
       for (;;)
       {
         if (bool) {
-          ((ImageView)paramk.findViewById(2131169524)).setVisibility(0);
+          ((ImageView)paramk.findViewById(2131756278)).setVisibility(0);
         }
-        locala.aq(paramk);
-        paramk = locala.bcu();
+        locala.au(paramk);
+        paramk = locala.bhJ();
         paramk.show();
         break;
-        ((TextView)paramk.findViewById(2131169423)).setText("");
+        ((TextView)paramk.findViewById(2131756268)).setText("");
         break label343;
         label437:
         ((ImageView)localObject1).setVisibility(4);
@@ -253,50 +252,50 @@ public final class b
   
   final void I(k paramk)
   {
-    if (dfT != null) {
-      dfT.dismiss();
+    if (deV != null) {
+      deV.dismiss();
     }
     Object localObject = mContext;
-    mContext.getString(2131430877);
-    dfT = g.a((Context)localObject, mContext.getString(2131428927), true, null);
+    mContext.getString(2131231028);
+    deV = g.a((Context)localObject, mContext.getString(2131236690), true, null);
     localObject = new a(mContext, this);
     LinkedList localLinkedList = new LinkedList();
-    localLinkedList.add(Integer.valueOf(cLf));
+    localLinkedList.add(Integer.valueOf(cIi));
     ((a)localObject).d(field_username, localLinkedList);
   }
   
   public final void a(boolean paramBoolean1, boolean paramBoolean2, String paramString1, String paramString2)
   {
-    if (dfT != null) {
-      dfT.dismiss();
+    if (deV != null) {
+      deV.dismiss();
     }
     if (paramBoolean1)
     {
-      dsm.qa();
-      ah.tD().rq().a(dsm.field_username, dsm);
-      g.ba(mContext, mContext.getResources().getString(2131428916));
-      cd(1);
+      dsC.oy();
+      ah.tE().rr().a(dsC.field_username, dsC);
+      g.aZ(mContext, mContext.getResources().getString(2131236693));
+      cx(1);
       return;
     }
-    cd(-1);
+    cx(-1);
   }
   
-  final void cd(int paramInt)
+  final void cx(int paramInt)
   {
-    if (iHZ != null) {
-      iHZ.ir(paramInt);
+    if (jeW != null) {
+      jeW.jA(paramInt);
     }
   }
   
-  public final void fZ(String paramString)
+  public final void gm(String paramString)
   {
     int j = 1;
     int i;
-    if (dsm != null) {
-      if ((dsm.field_username != null) && (dsm.field_username.equals(paramString)))
+    if (dsC != null) {
+      if ((dsC.field_username != null) && (dsC.field_username.equals(paramString)))
       {
         i = 1;
-        if ((dsm.mc() == null) || (!dsm.mc().equals(paramString))) {
+        if ((dsC.ks() == null) || (!dsC.ks().equals(paramString))) {
           break label73;
         }
         label59:
@@ -307,7 +306,7 @@ public final class b
     }
     label73:
     label96:
-    while ((iIa == null) || (!iIa.isShowing())) {
+    while ((jeX == null) || (!jeX.isShowing())) {
       do
       {
         return;
@@ -315,21 +314,21 @@ public final class b
         break;
         j = 0;
         break label59;
-      } while ((cNh == null) || (!cNh.equals(paramString)));
+      } while ((mUsername == null) || (!mUsername.equals(paramString)));
     }
-    ab.j(new Runnable()
+    ad.k(new Runnable()
     {
       public final void run()
       {
-        ImageView localImageView = (ImageView)iIa.kCH.findViewById(2131169421);
+        ImageView localImageView = (ImageView)jeX.lbM.findViewById(2131756266);
         if (localImageView != null)
         {
-          Bitmap localBitmap2 = com.tencent.mm.q.b.a(dsm.field_username, false, -1);
+          Bitmap localBitmap2 = com.tencent.mm.s.b.a(dsC.field_username, false, -1);
           Bitmap localBitmap1 = localBitmap2;
           if (localBitmap2 != null)
           {
             localBitmap1 = localBitmap2;
-            if (dsm.aWp()) {
+            if (dsC.bbC()) {
               localBitmap1 = com.tencent.mm.sdk.platformtools.d.a(localBitmap2, false, localBitmap2.getWidth() / 2);
             }
           }
@@ -345,69 +344,69 @@ public final class b
   
   public final void show()
   {
-    dsm = ah.tD().rq().Ep(cNh);
-    if ((dsm != null) && ((int)dsm.bvi <= 0))
+    dsC = ah.tE().rr().GD(mUsername);
+    if ((dsC != null) && ((int)dsC.bjS <= 0))
     {
-      u.i("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "dealAddContact get by username fail, try alias, %s", new Object[] { cNh });
-      dsm = ah.tD().rq().Em(cNh);
+      v.i("MicroMsg.AddContactDialog", "dealAddContact get by username fail, try alias, %s", new Object[] { mUsername });
+      dsC = ah.tE().rr().GA(mUsername);
     }
-    if ((dsm != null) && ((int)dsm.bvi > 0))
+    if ((dsC != null) && ((int)dsC.bjS > 0))
     {
-      u.i("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "The contact already exists, so go to dealAddContact.");
-      if (dsm == null)
+      v.i("MicroMsg.AddContactDialog", "The contact already exists, so go to dealAddContact.");
+      if (dsC == null)
       {
-        u.e("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "dealAddContact fail, contact is null");
-        cd(-1);
+        v.e("MicroMsg.AddContactDialog", "dealAddContact fail, contact is null");
+        cx(-1);
       }
       Object localObject2;
       do
       {
         return;
-        localObject1 = dsm.field_username;
-        if (dsm.aWp()) {
+        localObject1 = dsC.field_username;
+        if (dsC.bbC()) {
           break;
         }
-        if (aj.xF().gK((String)localObject1).wz())
+        if (an.xH().gZ((String)localObject1).wB())
         {
           localObject2 = mContext;
-          mContext.getString(2131430877);
-          dfT = g.a((Context)localObject2, mContext.getString(2131428927), true, null);
-          tg((String)localObject1);
+          mContext.getString(2131231028);
+          deV = g.a((Context)localObject2, mContext.getString(2131236690), true, null);
+          uI((String)localObject1);
           return;
         }
-        localObject2 = BitmapFactory.decodeResource(mContext.getResources(), 2130970541);
+        localObject2 = BitmapFactory.decodeResource(mContext.getResources(), 2130838101);
       } while (!(mContext instanceof MMActivity));
-      com.tencent.mm.ui.j localj = mContext).koJ;
-      Object localObject3 = mContext.getResources().getString(2131428917);
+      com.tencent.mm.ui.j localj = mContext).kNN;
+      Object localObject3 = mContext.getResources().getString(2131236695);
       c.a local5 = new c.a()
       {
         public final void a(boolean paramAnonymousBoolean, String paramAnonymousString, int paramAnonymousInt)
         {
-          u.e("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "doAddContact fail, contact not biz");
-          cd(-1);
+          v.e("MicroMsg.AddContactDialog", "doAddContact fail, contact not biz");
+          cx(-1);
         }
       };
-      View localView = c.t(kpc, 2131363248);
-      localObject1 = c.ag(localView);
+      View localView = c.x(kOg, 2130903376);
+      localObject1 = c.aj(localView);
       c.a(localView, local5, (o)localObject1);
       label295:
       Object localObject4;
-      if (ay.kz((String)localObject3))
+      if (be.kf((String)localObject3))
       {
-        u.e("!44@/B4Tb64lLpKepPGwm75eZGp+z8yM8hRDu9y0dA4MRdc=", "showDialogItem7 fail, message is empty");
+        v.e("MicroMsg.MMConfirmDialog", "showDialogItem7 fail, message is empty");
         localObject1 = null;
         if (localObject1 == null)
         {
-          u.e("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "dealAddContact fail, connot show dialog");
-          cd(-1);
+          v.e("MicroMsg.AddContactDialog", "dealAddContact fail, connot show dialog");
+          cx(-1);
         }
       }
       else
       {
-        localObject4 = (TextView)localView.findViewById(2131169422);
-        ((TextView)localObject4).setText(e.a(kpc, (CharSequence)localObject3, ((TextView)localObject4).getTextSize()));
-        localObject3 = (Button)localView.findViewById(2131169426);
-        localObject4 = (ImageView)localView.findViewById(2131169421);
+        localObject4 = (TextView)localView.findViewById(2131756267);
+        ((TextView)localObject4).setText(e.a(kOg, (CharSequence)localObject3, ((TextView)localObject4).getTextSize()));
+        localObject3 = (Button)localView.findViewById(2131756263);
+        localObject4 = (ImageView)localView.findViewById(2131756266);
         if (localObject4 != null)
         {
           if ((localObject2 == null) || (((Bitmap)localObject2).isRecycled())) {
@@ -426,34 +425,34 @@ public final class b
         label428:
         ((ImageView)localObject4).setVisibility(8);
       }
-      if (com.tencent.mm.h.a.ce(dsm.field_type))
+      if (com.tencent.mm.i.a.cy(dsC.field_type))
       {
-        g.ba(mContext, mContext.getResources().getString(2131428916));
-        cd(-2);
+        g.aZ(mContext, mContext.getResources().getString(2131236693));
+        cx(-2);
         return;
       }
-      H(dsm);
+      H(dsC);
       return;
     }
     Object localObject1 = mContext;
-    mContext.getString(2131430877);
-    dfT = g.a((Context)localObject1, mContext.getString(2131428927), true, new DialogInterface.OnCancelListener()
+    mContext.getString(2131231028);
+    deV = g.a((Context)localObject1, mContext.getString(2131236690), true, new DialogInterface.OnCancelListener()
     {
       public final void onCancel(DialogInterface paramAnonymousDialogInterface)
       {
-        if (dfT != null)
+        if (deV != null)
         {
-          dfT.dismiss();
-          dfT = null;
+          deV.dismiss();
+          deV = null;
         }
       }
     });
-    tg(cNh);
+    uI(mUsername);
   }
   
   public static abstract interface a
   {
-    public abstract void ir(int paramInt);
+    public abstract void jA(int paramInt);
   }
 }
 

@@ -4,7 +4,7 @@ import android.app.Notification.Builder;
 
 abstract interface o
 {
-  public abstract Notification.Builder V();
+  public abstract Notification.Builder U();
 }
 
 /* Location:

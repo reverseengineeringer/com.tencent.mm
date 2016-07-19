@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kwz:Lcom/tencent/mm/ui/account/SetPwdUI;
+.field final synthetic kVG:Lcom/tencent/mm/ui/account/SetPwdUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 176
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/SetPwdUI$2;->kwz:Lcom/tencent/mm/ui/account/SetPwdUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/SetPwdUI$2;->kVG:Lcom/tencent/mm/ui/account/SetPwdUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,29 +45,29 @@
     const/4 v4, 0x1
 
     .line 180
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/SetPwdUI$2;->kwz:Lcom/tencent/mm/ui/account/SetPwdUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/SetPwdUI$2;->kVG:Lcom/tencent/mm/ui/account/SetPwdUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/SetPwdUI;->bbL()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/SetPwdUI;->bgX()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/SetPwdUI$2;->kwz:Lcom/tencent/mm/ui/account/SetPwdUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/SetPwdUI$2;->kVG:Lcom/tencent/mm/ui/account/SetPwdUI;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/ui/account/SetPwdUI;->goQ:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/ui/account/SetPwdUI;->gzi:Z
 
     if-eqz v0, :cond_0
 
     .line 181
-    const-string/jumbo v0, "!32@/B4Tb64lLpLtIluUtTn2QG2YcQ4VEs+3"
+    const-string/jumbo v0, "MicroMsg.SetPwdUI"
 
     const-string/jumbo v1, "cpan settpassword cancel 11868 1"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 182
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v1, 0x2e5c
 
@@ -79,21 +79,21 @@
 
     aput-object v3, v2, v5
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     .line 184
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/SetPwdUI$2;->kwz:Lcom/tencent/mm/ui/account/SetPwdUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/SetPwdUI$2;->kVG:Lcom/tencent/mm/ui/account/SetPwdUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/SetPwdUI;->age()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/SetPwdUI;->aiI()V
 
     .line 185
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/SetPwdUI$2;->kwz:Lcom/tencent/mm/ui/account/SetPwdUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/SetPwdUI$2;->kVG:Lcom/tencent/mm/ui/account/SetPwdUI;
 
     invoke-virtual {v0, v5}, Lcom/tencent/mm/ui/account/SetPwdUI;->setResult(I)V
 
     .line 186
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/SetPwdUI$2;->kwz:Lcom/tencent/mm/ui/account/SetPwdUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/SetPwdUI$2;->kVG:Lcom/tencent/mm/ui/account/SetPwdUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/account/SetPwdUI;->finish()V
 

@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static kjJ:I
+.field public static kJR:I
 
 
 # direct methods
@@ -23,10 +23,10 @@
     .locals 1
 
     .prologue
-    .line 3601
+    .line 3794
     const/4 v0, 0x0
 
-    sput v0, Lcom/tencent/mm/ui/d$a;->kjJ:I
+    sput v0, Lcom/tencent/mm/ui/d$a;->kJR:I
 
     return-void
 .end method

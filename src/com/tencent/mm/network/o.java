@@ -1,7 +1,7 @@
 package com.tencent.mm.network;
 
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.h.d;
+import com.tencent.mm.protocal.k.c;
+import com.tencent.mm.protocal.k.d;
 
 public abstract interface o
 {
@@ -9,13 +9,13 @@ public abstract interface o
   
   public abstract String getUri();
   
-  public abstract h.d tX();
+  public abstract k.d tY();
   
-  public abstract h.c vA();
+  public abstract k.c vC();
   
-  public abstract boolean vB();
+  public abstract boolean vD();
   
-  public abstract int vx();
+  public abstract int vz();
 }
 
 /* Location:

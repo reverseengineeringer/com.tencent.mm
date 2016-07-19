@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iKj:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$3;
+.field final synthetic jhf:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$3;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1003
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$3$2;->iKj:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$3;
+    .line 1036
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$3$2;->jhf:Lcom/tencent/mm/pluginsdk/ui/chat/AppPanel$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,9 +40,9 @@
     .locals 0
 
     .prologue
-    .line 1006
+    .line 1039
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 1007
+    .line 1040
     return-void
 .end method

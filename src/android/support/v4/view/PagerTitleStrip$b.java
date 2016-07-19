@@ -4,7 +4,7 @@ import android.widget.TextView;
 
 abstract interface PagerTitleStrip$b
 {
-  public abstract void setSingleLineAllCaps(TextView paramTextView);
+  public abstract void a(TextView paramTextView);
 }
 
 /* Location:

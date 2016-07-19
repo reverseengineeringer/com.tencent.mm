@@ -11,14 +11,14 @@ final class MMSwitchBtn$b$1
   public final void onAnimationEnd(Animation paramAnimation)
   {
     boolean bool2 = true;
-    boolean bool3 = MMSwitchBtn.a(lFM.lFK);
-    if (lFM.direction == 1)
+    boolean bool3 = MMSwitchBtn.a(mgZ.mgX);
+    if (mgZ.direction == 1)
     {
       bool1 = true;
       if (bool3 != bool1)
       {
-        paramAnimation = lFM.lFK;
-        if (lFM.direction != 1) {
+        paramAnimation = mgZ.mgX;
+        if (mgZ.direction != 1) {
           break label96;
         }
       }
@@ -27,16 +27,16 @@ final class MMSwitchBtn$b$1
     for (boolean bool1 = bool2;; bool1 = false)
     {
       MMSwitchBtn.a(paramAnimation, bool1);
-      lFM.lFK.post(new Runnable()
+      mgZ.mgX.post(new Runnable()
       {
         public final void run()
         {
-          if (MMSwitchBtn.b(lFM.lFK) != null) {
-            MMSwitchBtn.b(lFM.lFK).fg(MMSwitchBtn.a(lFM.lFK));
+          if (MMSwitchBtn.b(mgZ.mgX) != null) {
+            MMSwitchBtn.b(mgZ.mgX).ft(MMSwitchBtn.a(mgZ.mgX));
           }
         }
       });
-      MMSwitchBtn.c(lFM.lFK);
+      MMSwitchBtn.c(mgZ.mgX);
       return;
       bool1 = false;
       break;

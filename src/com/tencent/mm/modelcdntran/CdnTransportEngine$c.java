@@ -3,14 +3,14 @@ package com.tencent.mm.modelcdntran;
 final class CdnTransportEngine$c
 {
   public int field_AckSlice = 8192;
-  public int field_C2COverloadDelaySeconds = 0;
-  public int field_EnableCDNVerifyConnect = 0;
-  public int field_EnableCDNVideoRedirectOC = 0;
-  public int field_EnableStreamUploadVideo = 0;
+  public int field_C2COverloadDelaySeconds = 10;
+  public int field_EnableCDNVerifyConnect = 1;
+  public int field_EnableCDNVideoRedirectOC = 1;
+  public int field_EnableStreamUploadVideo = 1;
   public int field_Ptl = 35;
-  public int field_SNSOverloadDelaySeconds = 0;
+  public int field_SNSOverloadDelaySeconds = 60;
   public int field_UseDynamicETL = 0;
-  public int field_UseStreamCDN = 0;
+  public int field_UseStreamCDN = 1;
   public int field_WifiEtl = 90;
   public int field_noWifiEtl = 70;
   public boolean field_onlyrecvPtl = false;

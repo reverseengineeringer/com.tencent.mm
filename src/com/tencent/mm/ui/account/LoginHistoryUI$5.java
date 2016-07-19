@@ -1,7 +1,7 @@
 package com.tencent.mm.ui.account;
 
 import android.content.Intent;
-import com.tencent.mm.ac.b;
+import com.tencent.mm.af.b;
 import com.tencent.mm.ui.account.mobile.MobileInputUI;
 import com.tencent.mm.ui.base.g.c;
 
@@ -10,26 +10,26 @@ final class LoginHistoryUI$5
 {
   LoginHistoryUI$5(LoginHistoryUI paramLoginHistoryUI) {}
   
-  public final void eu(int paramInt)
+  public final void fg(int paramInt)
   {
-    if (b.AG())
+    if (b.AS())
     {
       switch (paramInt)
       {
       default: 
         return;
       case 0: 
-        localIntent = new Intent(ktx, MobileInputUI.class);
+        localIntent = new Intent(kSF, MobileInputUI.class);
         localIntent.putExtra("mobile_input_purpose", 5);
-        ktx.startActivity(localIntent);
+        kSF.startActivity(localIntent);
         return;
       case 1: 
-        localIntent = new Intent(ktx, LoginUI.class);
-        ktx.startActivity(localIntent);
+        localIntent = new Intent(kSF, LoginUI.class);
+        kSF.startActivity(localIntent);
         return;
       }
-      localIntent = new Intent(ktx, FacebookLoginUI.class);
-      ktx.startActivity(localIntent);
+      localIntent = new Intent(kSF, FacebookLoginUI.class);
+      kSF.startActivity(localIntent);
       return;
     }
     switch (paramInt)
@@ -37,13 +37,13 @@ final class LoginHistoryUI$5
     default: 
       return;
     case 0: 
-      localIntent = new Intent(ktx, MobileInputUI.class);
+      localIntent = new Intent(kSF, MobileInputUI.class);
       localIntent.putExtra("mobile_input_purpose", 5);
-      ktx.startActivity(localIntent);
+      kSF.startActivity(localIntent);
       return;
     }
-    Intent localIntent = new Intent(ktx, LoginUI.class);
-    ktx.startActivity(localIntent);
+    Intent localIntent = new Intent(kSF, LoginUI.class);
+    kSF.startActivity(localIntent);
   }
 }
 

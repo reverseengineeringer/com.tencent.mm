@@ -10,7 +10,7 @@ final class Sort3rdAppUI$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    krn.finish();
+    kQu.finish();
     return true;
   }
 }

@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class q
   extends ProgressDialog
@@ -21,7 +21,7 @@ public class q
     }
     catch (Exception localException)
     {
-      u.e("!44@/B4Tb64lLpK+qNTh5lI0rQ2+i9dgkCmS8K9PUsUQ4IY=", "dismiss exception, e = " + localException.getMessage());
+      v.e("MicroMsg.MMSafeProgressDialog", "dismiss exception, e = " + localException.getMessage());
     }
   }
 }

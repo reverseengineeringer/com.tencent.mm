@@ -2,7 +2,6 @@ package com.tencent.mm.pluginsdk.ui.tools;
 
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.graphics.SurfaceTexture;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
@@ -12,7 +11,8 @@ import android.media.MediaPlayer.OnVideoSizeChangedListener;
 import android.util.AttributeSet;
 import android.view.Surface;
 import android.view.TextureView.SurfaceTextureListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.MMTextureView;
 
 @TargetApi(14)
@@ -20,31 +20,31 @@ public class VideoTextureView
   extends MMTextureView
   implements f
 {
-  private int bsY = 0;
-  private int bsZ = 0;
-  private MediaPlayer gDN = null;
-  private Surface gxn = null;
-  private f.a gyx;
-  private String iSU;
-  private boolean iSV;
-  private boolean iSW;
-  MediaPlayer.OnVideoSizeChangedListener iSX = new MediaPlayer.OnVideoSizeChangedListener()
+  private int bhj = 0;
+  private int bhk = 0;
+  private Surface gDL = null;
+  private f.a gEU;
+  private MediaPlayer gKo = null;
+  private String jqg;
+  private boolean jqh;
+  private boolean jqi;
+  MediaPlayer.OnVideoSizeChangedListener jqj = new MediaPlayer.OnVideoSizeChangedListener()
   {
     public final void onVideoSizeChanged(MediaPlayer paramAnonymousMediaPlayer, int paramAnonymousInt1, int paramAnonymousInt2)
     {
       VideoTextureView.a(VideoTextureView.this, paramAnonymousMediaPlayer.getVideoWidth());
       VideoTextureView.b(VideoTextureView.this, paramAnonymousMediaPlayer.getVideoHeight());
-      u.v("!44@/B4Tb64lLpLHiNiACdo+aX3iR1A7B9vCqhbg6Ep6IDU=", "on size change size:( " + VideoTextureView.a(VideoTextureView.this) + " , " + VideoTextureView.b(VideoTextureView.this) + " )");
+      v.v("MicroMsg.VideoTextureView", "on size change size:( " + VideoTextureView.a(VideoTextureView.this) + " , " + VideoTextureView.b(VideoTextureView.this) + " )");
       VideoTextureView.c(VideoTextureView.this);
     }
   };
-  MediaPlayer.OnPreparedListener iSY = new MediaPlayer.OnPreparedListener()
+  MediaPlayer.OnPreparedListener jqk = new MediaPlayer.OnPreparedListener()
   {
     public final void onPrepared(MediaPlayer paramAnonymousMediaPlayer)
     {
       VideoTextureView.d(VideoTextureView.this);
       if (VideoTextureView.e(VideoTextureView.this) != null) {
-        VideoTextureView.e(VideoTextureView.this).Xq();
+        VideoTextureView.e(VideoTextureView.this).Zb();
       }
       VideoTextureView.a(VideoTextureView.this, paramAnonymousMediaPlayer.getVideoWidth());
       VideoTextureView.b(VideoTextureView.this, paramAnonymousMediaPlayer.getVideoHeight());
@@ -63,39 +63,41 @@ public class VideoTextureView
       VideoTextureView.h(VideoTextureView.this);
     }
   };
-  private MediaPlayer.OnCompletionListener iSZ = new MediaPlayer.OnCompletionListener()
+  private MediaPlayer.OnCompletionListener jql = new MediaPlayer.OnCompletionListener()
   {
     public final void onCompletion(MediaPlayer paramAnonymousMediaPlayer)
     {
+      VideoTextureView.a(VideoTextureView.this, be.Go());
       if (VideoTextureView.e(VideoTextureView.this) != null) {
-        VideoTextureView.e(VideoTextureView.this).lG();
+        VideoTextureView.e(VideoTextureView.this).jQ();
       }
     }
   };
-  private MediaPlayer.OnErrorListener iTa = new MediaPlayer.OnErrorListener()
+  private MediaPlayer.OnErrorListener jqm = new MediaPlayer.OnErrorListener()
   {
     public final boolean onError(MediaPlayer paramAnonymousMediaPlayer, int paramAnonymousInt1, int paramAnonymousInt2)
     {
-      u.d("!44@/B4Tb64lLpLHiNiACdo+aX3iR1A7B9vCqhbg6Ep6IDU=", "Error: " + paramAnonymousInt1 + "," + paramAnonymousInt2);
+      v.d("MicroMsg.VideoTextureView", "Error: " + paramAnonymousInt1 + "," + paramAnonymousInt2);
       if (VideoTextureView.e(VideoTextureView.this) != null) {
-        VideoTextureView.e(VideoTextureView.this).az(paramAnonymousInt1, paramAnonymousInt2);
+        VideoTextureView.e(VideoTextureView.this).aE(paramAnonymousInt1, paramAnonymousInt2);
       }
       return true;
     }
   };
-  TextureView.SurfaceTextureListener iTd = new TextureView.SurfaceTextureListener()
+  private long jqp = 0L;
+  TextureView.SurfaceTextureListener jqq = new TextureView.SurfaceTextureListener()
   {
     public final void onSurfaceTextureAvailable(SurfaceTexture paramAnonymousSurfaceTexture, int paramAnonymousInt1, int paramAnonymousInt2)
     {
-      u.i("!44@/B4Tb64lLpLHiNiACdo+aX3iR1A7B9vCqhbg6Ep6IDU=", "on texture available %d*%d", new Object[] { Integer.valueOf(paramAnonymousInt1), Integer.valueOf(paramAnonymousInt2) });
-      bcZ();
+      v.i("MicroMsg.VideoTextureView", "on texture available %d*%d", new Object[] { Integer.valueOf(paramAnonymousInt1), Integer.valueOf(paramAnonymousInt2) });
+      biB();
       VideoTextureView.a(VideoTextureView.this, new Surface(paramAnonymousSurfaceTexture));
       VideoTextureView.k(VideoTextureView.this);
     }
     
     public final boolean onSurfaceTextureDestroyed(SurfaceTexture paramAnonymousSurfaceTexture)
     {
-      u.i("!44@/B4Tb64lLpLHiNiACdo+aX3iR1A7B9vCqhbg6Ep6IDU=", "on texture destroyed");
+      v.i("MicroMsg.VideoTextureView", "on texture destroyed");
       VideoTextureView.a(VideoTextureView.this, null);
       if (VideoTextureView.g(VideoTextureView.this) != null)
       {
@@ -108,18 +110,16 @@ public class VideoTextureView
     
     public final void onSurfaceTextureSizeChanged(SurfaceTexture paramAnonymousSurfaceTexture, int paramAnonymousInt1, int paramAnonymousInt2)
     {
-      u.i("!44@/B4Tb64lLpLHiNiACdo+aX3iR1A7B9vCqhbg6Ep6IDU=", "on texture size changed");
+      v.i("MicroMsg.VideoTextureView", "on texture size changed");
       if ((VideoTextureView.g(VideoTextureView.this) != null) && (VideoTextureView.i(VideoTextureView.this)) && (VideoTextureView.a(VideoTextureView.this) == paramAnonymousInt1) && (VideoTextureView.b(VideoTextureView.this) == paramAnonymousInt2)) {
         VideoTextureView.g(VideoTextureView.this).start();
       }
     }
     
-    public final void onSurfaceTextureUpdated(SurfaceTexture paramAnonymousSurfaceTexture)
-    {
-      u.i("!44@/B4Tb64lLpLHiNiACdo+aX3iR1A7B9vCqhbg6Ep6IDU=", "on texture updated");
-    }
+    public final void onSurfaceTextureUpdated(SurfaceTexture paramAnonymousSurfaceTexture) {}
   };
-  private int qu;
+  private int qH;
+  private long startTime = 0L;
   
   public VideoTextureView(Context paramContext)
   {
@@ -134,155 +134,185 @@ public class VideoTextureView
   public VideoTextureView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setSurfaceTextureListener(iTd);
+    setSurfaceTextureListener(jqq);
     setFocusable(true);
     setFocusableInTouchMode(true);
     requestFocus();
   }
   
-  private void aSS()
+  private void aXL()
   {
-    if (iSU == null) {
+    if (jqg == null) {
       return;
     }
-    if (gDN != null)
+    if (gKo != null)
     {
-      gDN.stop();
-      gDN.release();
-      gDN = null;
+      gKo.stop();
+      gKo.release();
+      gKo = null;
     }
     try
     {
-      gDN = new MediaPlayer();
-      gDN.setOnPreparedListener(iSY);
-      gDN.setOnVideoSizeChangedListener(iSX);
-      iSV = false;
-      u.v("!44@/B4Tb64lLpLHiNiACdo+aX3iR1A7B9vCqhbg6Ep6IDU=", "reset duration to -1 in openVideo");
-      qu = -1;
-      gDN.setOnCompletionListener(iSZ);
-      gDN.setOnErrorListener(iTa);
-      gDN.setDataSource(iSU);
-      gDN.setSurface(gxn);
-      gDN.setAudioStreamType(3);
-      gDN.setScreenOnWhilePlaying(true);
-      gDN.prepareAsync();
-      bsZ = gDN.getVideoHeight();
-      bsY = gDN.getVideoWidth();
+      gKo = new MediaPlayer();
+      gKo.setOnPreparedListener(jqk);
+      gKo.setOnVideoSizeChangedListener(jqj);
+      jqh = false;
+      v.v("MicroMsg.VideoTextureView", "reset duration to -1 in openVideo");
+      qH = -1;
+      gKo.setOnCompletionListener(jql);
+      gKo.setOnErrorListener(jqm);
+      gKo.setDataSource(jqg);
+      gKo.setSurface(gDL);
+      gKo.setAudioStreamType(3);
+      gKo.setScreenOnWhilePlaying(true);
+      gKo.prepareAsync();
+      bhk = gKo.getVideoHeight();
+      bhj = gKo.getVideoWidth();
       return;
     }
     catch (Exception localException)
     {
-      u.printErrStackTrace("!44@/B4Tb64lLpLHiNiACdo+aX3iR1A7B9vCqhbg6Ep6IDU=", localException, "prepare async error %s", new Object[] { localException.getMessage() });
+      v.printErrStackTrace("MicroMsg.VideoTextureView", localException, "prepare async error %s", new Object[] { localException.getMessage() });
     }
   }
+  
+  public final void a(f.a parama)
+  {
+    gEU = parama;
+  }
+  
+  public final String axW()
+  {
+    return jqg;
+  }
+  
+  public final double ayx()
+  {
+    return 0.0D;
+  }
+  
+  public final void ew(boolean paramBoolean)
+  {
+    if (gKo != null) {
+      gKo.setLooping(paramBoolean);
+    }
+  }
+  
+  public final void ex(boolean paramBoolean) {}
   
   public final boolean f(Context paramContext, boolean paramBoolean)
   {
     return start();
   }
   
-  public final void g(double paramDouble) {}
-  
-  public int getCurrentPosition()
+  public final int getCurrentPosition()
   {
-    if ((gDN != null) && (iSV)) {
-      return gDN.getCurrentPosition();
+    if ((gKo != null) && (jqh)) {
+      return gKo.getCurrentPosition();
     }
     return 0;
   }
   
-  public int getDuration()
+  public final int getDuration()
   {
-    if ((gDN != null) && (iSV))
+    if ((gKo != null) && (jqh))
     {
-      if (qu > 0) {
-        return qu;
+      if (qH > 0) {
+        return qH;
       }
-      qu = gDN.getDuration();
-      return qu;
+      qH = gKo.getDuration();
+      return qH;
     }
-    qu = -1;
-    return qu;
-  }
-  
-  public double getLastProgresstime()
-  {
-    return 0.0D;
-  }
-  
-  public String getVideoPath()
-  {
-    return iSU;
+    qH = -1;
+    return qH;
   }
   
   public final boolean isPlaying()
   {
-    if ((gDN != null) && (iSV)) {
-      return gDN.isPlaying();
+    if ((gKo != null) && (jqh)) {
+      return gKo.isPlaying();
     }
     return false;
   }
+  
+  public final void j(double paramDouble) {}
   
   public final void onDetach() {}
   
   public final void pause()
   {
-    if ((gDN != null) && (iSV) && (gDN.isPlaying())) {
-      gDN.pause();
+    if ((gKo != null) && (jqh) && (gKo.isPlaying())) {
+      gKo.pause();
     }
-    iSW = false;
+    jqi = false;
   }
   
-  public void setLoop(boolean paramBoolean)
+  public final void setVideoPath(String paramString)
   {
-    if (gDN != null) {
-      gDN.setLooping(paramBoolean);
-    }
-  }
-  
-  public void setPlayProgressCallback(boolean paramBoolean) {}
-  
-  public void setThumb(Bitmap paramBitmap) {}
-  
-  public void setVideoCallback(f.a parama)
-  {
-    gyx = parama;
-  }
-  
-  public void setVideoPath(String paramString)
-  {
-    iSU = paramString;
-    iSW = false;
-    aSS();
+    jqg = paramString;
+    jqi = false;
+    aXL();
     requestLayout();
   }
   
   public final boolean start()
   {
-    if ((gDN != null) && (iSV))
+    if (startTime == 0L) {}
+    for (long l = be.Go();; l = startTime)
     {
-      gDN.start();
-      iSW = false;
+      startTime = l;
+      v.i("MicroMsg.VideoTextureView", "start %d", new Object[] { Long.valueOf(startTime) });
+      if ((gKo == null) || (!jqh)) {
+        break;
+      }
+      gKo.start();
+      jqi = false;
       return true;
     }
-    if ((gDN == null) && (iSV))
+    if ((gKo == null) && (jqh))
     {
-      iSW = true;
-      aSS();
+      jqi = true;
+      aXL();
       requestLayout();
       return true;
     }
-    iSW = true;
+    jqi = true;
     return true;
   }
   
   public final void stop()
   {
-    if (gDN != null)
+    long l1;
+    long l3;
+    if (jqp > 0L)
     {
-      gDN.stop();
-      gDN.release();
-      gDN = null;
+      l1 = jqp - startTime;
+      l3 = be.Go() - startTime;
+      if (l1 <= l3) {
+        break label156;
+      }
+    }
+    label156:
+    for (long l2 = l3;; l2 = l1)
+    {
+      int j = (int)l2 * 1000;
+      int i = j;
+      if (j > getDuration()) {
+        i = getDuration();
+      }
+      v.i("MicroMsg.VideoTextureView", "stop : dur:%d stop:%d comp:%d", new Object[] { Integer.valueOf(getDuration()), Long.valueOf(l3), Long.valueOf(l1) });
+      if (gEU != null) {
+        gEU.aF(i, getDuration());
+      }
+      if (gKo != null)
+      {
+        gKo.stop();
+        gKo.release();
+        gKo = null;
+      }
+      return;
+      l1 = 2147483647L;
+      break;
     }
   }
 }

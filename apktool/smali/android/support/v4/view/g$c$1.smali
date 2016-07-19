@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic eE:Landroid/support/v4/view/g$e;
+.field final synthetic fa:Landroid/support/v4/view/g$e;
 
-.field final synthetic eF:Landroid/support/v4/view/g$c;
+.field final synthetic fb:Landroid/support/v4/view/g$c;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 228
-    iput-object p1, p0, Landroid/support/v4/view/g$c$1;->eF:Landroid/support/v4/view/g$c;
+    iput-object p1, p0, Landroid/support/v4/view/g$c$1;->fb:Landroid/support/v4/view/g$c;
 
-    iput-object p2, p0, Landroid/support/v4/view/g$c$1;->eE:Landroid/support/v4/view/g$e;
+    iput-object p2, p0, Landroid/support/v4/view/g$c$1;->fa:Landroid/support/v4/view/g$e;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,28 +40,28 @@
 
 
 # virtual methods
-.method public final af()Z
+.method public final ad()Z
     .locals 1
 
     .prologue
     .line 231
-    iget-object v0, p0, Landroid/support/v4/view/g$c$1;->eE:Landroid/support/v4/view/g$e;
+    iget-object v0, p0, Landroid/support/v4/view/g$c$1;->fa:Landroid/support/v4/view/g$e;
 
-    invoke-interface {v0}, Landroid/support/v4/view/g$e;->af()Z
+    invoke-interface {v0}, Landroid/support/v4/view/g$e;->ad()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public final ag()Z
+.method public final ae()Z
     .locals 1
 
     .prologue
     .line 236
-    iget-object v0, p0, Landroid/support/v4/view/g$c$1;->eE:Landroid/support/v4/view/g$e;
+    iget-object v0, p0, Landroid/support/v4/view/g$c$1;->fa:Landroid/support/v4/view/g$e;
 
-    invoke-interface {v0}, Landroid/support/v4/view/g$e;->ag()Z
+    invoke-interface {v0}, Landroid/support/v4/view/g$e;->ae()Z
 
     move-result v0
 

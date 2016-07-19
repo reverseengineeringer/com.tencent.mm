@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->Gb()V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hdQ:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
+.field final synthetic hsD:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 253
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$4;->hdQ:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$4;->hsD:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,7 +57,7 @@
 
     .prologue
     .line 263
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$4;->hdQ:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$4;->hsD:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->b(Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;)Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
@@ -83,11 +83,11 @@
     if-lez v0, :cond_0
 
     .line 266
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$4;->hdQ:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$4;->hsD:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->bC(Z)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->bp(Z)V
 
     .line 271
     :goto_0
@@ -95,11 +95,11 @@
 
     .line 269
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$4;->hdQ:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI$4;->hsD:Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->bC(Z)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentUI;->bp(Z)V
 
     goto :goto_0
 .end method

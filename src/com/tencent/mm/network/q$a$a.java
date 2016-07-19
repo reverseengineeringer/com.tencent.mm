@@ -18,7 +18,7 @@ final class q$a$a
   }
   
   /* Error */
-  public final boolean ks()
+  public final boolean iV()
   {
     // Byte code:
     //   0: iconst_1

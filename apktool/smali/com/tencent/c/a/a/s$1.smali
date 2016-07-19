@@ -8,12 +8,22 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/c/a/a/s;->Z(Landroid/content/Context;)Lorg/json/JSONArray;
+    value = Lcom/tencent/c/a/a/s;->V(Landroid/content/Context;)Lorg/json/JSONArray;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x0
     name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Landroid/net/wifi/ScanResult;",
+        ">;"
+    }
 .end annotation
 
 

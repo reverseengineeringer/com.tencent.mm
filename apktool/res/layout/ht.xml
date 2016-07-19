@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/j3" android:paddingTop="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/WalletBody">
+            <android.support.v7.internal.widget.LinearLayoutICS android:layout_marginLeft="@dimen/jk" android:layout_marginRight="@dimen/jk" style="@style/WalletMultiFormStyle">
+                <LinearLayout android:orientation="vertical" android:id="@id/a69" android:background="@color/ow" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/h4" android:textColor="@color/kj" android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/he" android:layout_marginBottom="15.0dip" android:text="@string/a3j" android:singleLine="true" android:includeFontPadding="false" />
+                    <com.tencent.mm.wallet_core.ui.formview.WalletFormView android:id="@id/a6_" android:paddingLeft="0.0dip" wallet:layoutRes="@layout/afq" wallet:titleText="￥" wallet:contentHint="test" style="@style/WalletMoneyStyle" />
+                    <TextView android:background="#ffd8d8d8" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="21.0dip" />
+                    <LinearLayout android:orientation="horizontal" android:id="@id/a6a" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <TextView android:textSize="@dimen/h4" android:textColor="@color/hc" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="left" android:id="@id/a6b" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="45.0dip" android:singleLine="true" android:includeFontPadding="false" />
+                        <TextView android:textSize="@dimen/h4" android:textColor="@color/hc" android:gravity="center_vertical" android:layout_gravity="left" android:id="@id/a6c" android:layout_width="wrap_content" android:layout_height="45.0dip" android:text="@string/a32" android:singleLine="true" android:includeFontPadding="false" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.internal.widget.LinearLayoutICS>
+            <Button android:id="@id/a6d" android:layout_width="fill_parent" android:layout_marginTop="25.0dip" android:text="@string/a30" style="@style/WalletLineButton" />
+        </LinearLayout>
+    </ScrollView>
+    <include android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/tenpay_keyboard_layot" />
+</LinearLayout>

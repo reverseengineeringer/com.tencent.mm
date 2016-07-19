@@ -1,13 +1,12 @@
 package com.tencent.mm.app.plugin;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import com.tencent.mm.av.c;
 import com.tencent.mm.pluginsdk.l;
 import com.tencent.mm.pluginsdk.ui.applet.g;
 import com.tencent.mm.pluginsdk.ui.d.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.ui.ExposeWithProofUI;
+import com.tencent.mm.sdk.platformtools.be;
 
 @URISpanHandlerSet.a
 class URISpanHandlerSet$ExposeUriSpanHandler
@@ -26,18 +25,16 @@ class URISpanHandlerSet$ExposeUriSpanHandler
       localIntent = new Intent();
       paramg = (String)paramb.a(paramg);
       localIntent.putExtra("k_username", paramg);
-      if ((ay.kz(paramg)) || (!paramg.endsWith("@chatroom"))) {
-        break label115;
+      if ((be.kf(paramg)) || (!paramg.endsWith("@chatroom"))) {
+        break label110;
       }
     }
-    label115:
+    label110:
     for (int i = 36;; i = 39)
     {
-      localIntent.putExtra("k_need_step_two", true);
-      localIntent.putExtra("k_expose_scene", i);
-      localIntent.putExtra("k_from_profile", true);
-      localIntent.setClass(URISpanHandlerSet.a(ang), ExposeWithProofUI.class);
-      URISpanHandlerSet.a(ang).startActivity(localIntent);
+      localIntent.putExtra("showShare", false);
+      localIntent.putExtra("rawUrl", "https://weixin110.qq.com/security/readtemplate?t=weixin_report/w_type&scene=" + i);
+      c.c(URISpanHandlerSet.a(ZU), "webview", ".ui.tools.WebViewUI", localIntent);
       return true;
       return false;
     }
@@ -48,7 +45,7 @@ class URISpanHandlerSet$ExposeUriSpanHandler
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     if (paramString.trim().toLowerCase().equals("weixin://expose/")) {
       return new g(paramString, 31, null);
@@ -56,7 +53,7 @@ class URISpanHandlerSet$ExposeUriSpanHandler
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 31 };
   }

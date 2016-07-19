@@ -7,15 +7,15 @@ import com.tencent.mm.ui.base.NoMeasuredTextView;
 
 public final class c$g
 {
-  public TextView cHo;
-  public ImageView czS;
-  public NoMeasuredTextView lnF;
-  public NoMeasuredTextView lnG;
-  public NoMeasuredTextView lnH;
-  public ImageView lnI;
-  public ImageView lnJ;
-  public View lnK;
-  public ImageView loT;
+  public TextView cEs;
+  public ImageView cui;
+  public NoMeasuredTextView lOb;
+  public NoMeasuredTextView lOc;
+  public NoMeasuredTextView lOd;
+  public ImageView lOe;
+  public ImageView lOf;
+  public View lOg;
+  public ImageView lPj;
 }
 
 /* Location:

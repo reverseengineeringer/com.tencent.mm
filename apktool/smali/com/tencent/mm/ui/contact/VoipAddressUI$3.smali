@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lmM:Lcom/tencent/mm/ui/contact/VoipAddressUI;
+.field final synthetic lNc:Lcom/tencent/mm/ui/contact/VoipAddressUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 237
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI$3;->lmM:Lcom/tencent/mm/ui/contact/VoipAddressUI;
+    .line 236
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI$3;->lNc:Lcom/tencent/mm/ui/contact/VoipAddressUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,9 +40,9 @@
     .locals 0
 
     .prologue
-    .line 241
+    .line 240
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 242
+    .line 241
     return-void
 .end method

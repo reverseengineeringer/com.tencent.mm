@@ -10,7 +10,7 @@ final class BindMContactIntroUI$1
   
   public final void onClick(View paramView)
   {
-    BindMContactIntroUI.a(kOs);
+    BindMContactIntroUI.a(lnI);
   }
 }
 

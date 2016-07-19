@@ -1,6 +1,6 @@
 package com.tencent.mm.compatible.d;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -8,21 +8,21 @@ import java.util.ArrayList;
 
 public final class o
 {
-  private RandomAccessFile bsD;
-  private a bsE;
-  private ArrayList bsF;
+  private RandomAccessFile bgH;
+  private a bgI;
+  private ArrayList<a> bgJ;
   
-  private void ov()
+  private void mL()
   {
-    if (bsD != null)
+    if (bgH != null)
     {
       int i;
       String[] arrayOfString;
       try
       {
-        bsD.seek(0L);
+        bgH.seek(0L);
         i = -1;
-        String str = bsD.readLine();
+        String str = bgH.readLine();
         if ((str == null) || (str.length() <= 0)) {
           break label189;
         }
@@ -32,32 +32,32 @@ public final class o
         }
         if (i == -1)
         {
-          if (bsE == null) {
-            bsE = new a();
+          if (bgI == null) {
+            bgI = new a();
           }
-          bsE.f(arrayOfString);
+          bgI.e(arrayOfString);
         }
         else
         {
-          if (bsF == null) {
-            bsF = new ArrayList();
+          if (bgJ == null) {
+            bgJ = new ArrayList();
           }
-          if (i < bsF.size()) {
-            ((a)bsF.get(i)).f(arrayOfString);
+          if (i < bgJ.size()) {
+            ((a)bgJ.get(i)).e(arrayOfString);
           }
         }
       }
       catch (IOException localIOException)
       {
-        u.e("!32@l31zBa06gKv3g5PVsxQDw6xSkq6dzCWS", "Ops: " + localIOException);
+        v.e(" MicroMsg.CpuUsage", "Ops: " + localIOException);
         return;
       }
       a locala = new a();
-      locala.f(arrayOfString);
-      bsF.add(locala);
+      locala.e(arrayOfString);
+      bgJ.add(locala);
       break label206;
       label189:
-      u.e("!32@l31zBa06gKv3g5PVsxQDw6xSkq6dzCWS", "unable to get cpu line");
+      v.e(" MicroMsg.CpuUsage", "unable to get cpu line");
       label206:
       while (localIOException != null)
       {
@@ -71,26 +71,26 @@ public final class o
   {
     try
     {
-      bsD = new RandomAccessFile("/proc/stat", "r");
-      ov();
-      if (bsD != null) {
-        bsD.close();
+      bgH = new RandomAccessFile("/proc/stat", "r");
+      mL();
+      if (bgH != null) {
+        bgH.close();
       }
       StringBuffer localStringBuffer = new StringBuffer();
-      if (bsE != null)
+      if (bgI != null)
       {
         localStringBuffer.append("Cpu Total : ");
-        localStringBuffer.append(bsE.bsG);
+        localStringBuffer.append(bgI.bgK);
         localStringBuffer.append("%");
       }
-      if (bsF != null)
+      if (bgJ != null)
       {
         int i = 0;
-        while (i < bsF.size())
+        while (i < bgJ.size())
         {
-          a locala = (a)bsF.get(i);
+          a locala = (a)bgJ.get(i);
           localStringBuffer.append(" Cpu Core(" + i + ") : ");
-          localStringBuffer.append(bsG);
+          localStringBuffer.append(bgK);
           localStringBuffer.append("%");
           i += 1;
         }
@@ -100,15 +100,15 @@ public final class o
     {
       for (;;)
       {
-        bsD = null;
-        u.e("!32@l31zBa06gKv3g5PVsxQDw6xSkq6dzCWS", "cannot open /proc/stat: " + localFileNotFoundException);
+        bgH = null;
+        v.e(" MicroMsg.CpuUsage", "cannot open /proc/stat: " + localFileNotFoundException);
       }
     }
     catch (IOException localIOException)
     {
       for (;;)
       {
-        u.e("!32@l31zBa06gKv3g5PVsxQDw6xSkq6dzCWS", "cannot close /proc/stat: " + localIOException);
+        v.e(" MicroMsg.CpuUsage", "cannot close /proc/stat: " + localIOException);
       }
       return localIOException.toString();
     }
@@ -116,13 +116,13 @@ public final class o
   
   public final class a
   {
-    int bsG = 0;
-    private long bsH = 0L;
+    int bgK = 0;
+    private long bgL = 0L;
     private long mLastIdle = 0L;
     
     public a() {}
     
-    public final void f(String[] paramArrayOfString)
+    public final void e(String[] paramArrayOfString)
     {
       long l2 = Long.parseLong(paramArrayOfString[4], 10);
       long l1 = 0L;
@@ -143,11 +143,11 @@ public final class o
         }
       }
       long l3 = mLastIdle;
-      long l4 = l1 - bsH;
-      bsG = ((int)((float)(l4 - (l2 - l3)) / (float)l4 * 100.0F));
-      bsH = l1;
+      long l4 = l1 - bgL;
+      bgK = ((int)((float)(l4 - (l2 - l3)) / (float)l4 * 100.0F));
+      bgL = l1;
       mLastIdle = l2;
-      u.i("!32@l31zBa06gKv3g5PVsxQDw6xSkq6dzCWS", "CPU total=" + l1 + "; idle=" + l2 + "; usage=" + bsG);
+      v.i(" MicroMsg.CpuUsage", "CPU total=" + l1 + "; idle=" + l2 + "; usage=" + bgK);
     }
   }
 }

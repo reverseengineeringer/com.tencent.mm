@@ -9,13 +9,13 @@ import android.os.Environment;
 import android.os.StatFs;
 import android.util.StringBuilderPrinter;
 import com.tencent.mm.compatible.d.p;
-import com.tencent.mm.compatible.d.t;
+import com.tencent.mm.compatible.d.u;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.sdk.platformtools.f;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.h;
 import com.tencent.mm.ui.base.g;
 import java.io.File;
@@ -25,14 +25,14 @@ import java.util.Locale;
 
 public final class c
 {
-  private static int gwY = 0;
-  private static int gwZ = 0;
+  private static int gDw = 0;
+  private static int gDx = 0;
   
-  public static String avA()
+  public static String axR()
   {
-    Object localObject = ah.tD().rH();
-    int i = gwY;
-    gwY = i + 1;
+    Object localObject = ah.tE().rJ();
+    int i = gDw;
+    gDw = i + 1;
     localObject = new File(String.format("%s/tempvideo%s.mp4", new Object[] { localObject, Integer.valueOf(i) }));
     if (((File)localObject).exists()) {
       ((File)localObject).delete();
@@ -49,15 +49,15 @@ public final class c
     if (localFile.exists()) {
       localFile.delete();
     }
-    i = gwY;
-    ah.tv().r(new Runnable()
+    i = gDw;
+    ah.tw().t(new Runnable()
     {
       public final void run()
       {
-        int i = c.aa();
-        while (i < gxa)
+        int i = c.gDx;
+        while (i < gDy)
         {
-          File localFile1 = new File(String.format("%s/tempvideo%s.mp4", new Object[] { ah.tD().rH(), Integer.valueOf(i) }));
+          File localFile1 = new File(String.format("%s/tempvideo%s.mp4", new Object[] { ah.tE().rJ(), Integer.valueOf(i) }));
           if (localFile1.exists()) {
             localFile1.delete();
           }
@@ -71,85 +71,85 @@ public final class c
           }
           i += 1;
         }
-        c.kS(Math.max(gxa, 0));
+        c.lW(Math.max(gDy, 0));
       }
     });
     return ((File)localObject).getAbsolutePath();
   }
   
-  public static boolean avB()
+  public static boolean axS()
   {
-    if (bsMbtg == 0) {
+    if (bgQbhr == 0) {
       return false;
     }
-    return com.tencent.mm.compatible.util.c.bU(14);
+    return com.tencent.mm.compatible.util.c.cm(14);
   }
   
-  public static boolean avC()
+  public static boolean axT()
   {
-    if (bsMbte == 0) {
+    if (bgQbhp == 0) {
       return false;
     }
-    if (com.tencent.mm.compatible.util.c.bV(17)) {
+    if (com.tencent.mm.compatible.util.c.cn(17)) {
       return false;
     }
-    Object localObject = (String)ah.tD().rn().get(344067, "");
-    if (ay.kz((String)localObject))
+    Object localObject = (String)ah.tE().ro().get(344067, "");
+    if (be.kf((String)localObject))
     {
-      u.i("!32@/B4Tb64lLpK9CciVX+fT13P0KeYXGQzz", "not find fail record when use mediaCodec");
+      v.i("MicroMsg.SightUtil", "not find fail record when use mediaCodec");
       return true;
     }
     localObject = ((String)localObject).split(":");
     if ((localObject == null) || (localObject.length < 2))
     {
-      u.w("!32@/B4Tb64lLpK9CciVX+fT13P0KeYXGQzz", "check use mediacodec by AAC Config error:%s", new Object[] { "config format ERROR" });
+      v.w("MicroMsg.SightUtil", "check use mediacodec by AAC Config error:%s", new Object[] { "config format ERROR" });
       return true;
     }
-    int i = ay.Dr(localObject[0]);
-    int j = ay.Dr(localObject[1]);
-    if (com.tencent.mm.compatible.util.c.bW(i))
+    int i = be.FG(localObject[0]);
+    int j = be.FG(localObject[1]);
+    if (com.tencent.mm.compatible.util.c.co(i))
     {
-      u.w("!32@/B4Tb64lLpK9CciVX+fT13P0KeYXGQzz", "check use mediacodec by AAC Config :%s", new Object[] { "User has upgrade system, should try again" });
-      ah.tD().rn().set(344067, "");
+      v.w("MicroMsg.SightUtil", "check use mediacodec by AAC Config :%s", new Object[] { "User has upgrade system, should try again" });
+      ah.tE().ro().set(344067, "");
       return true;
     }
-    u.w("!32@/B4Tb64lLpK9CciVX+fT13P0KeYXGQzz", "check use mediacodec by AAC Config :failed %d times", new Object[] { Integer.valueOf(j) });
+    v.w("MicroMsg.SightUtil", "check use mediacodec by AAC Config :failed %d times", new Object[] { Integer.valueOf(j) });
     return j < 3;
   }
   
-  public static void avD()
+  public static void axU()
   {
-    Object localObject = (String)ah.tD().rn().get(344067, "");
-    if (ay.kz((String)localObject))
+    Object localObject = (String)ah.tE().ro().get(344067, "");
+    if (be.kf((String)localObject))
     {
       localObject = String.format("%d:%d", new Object[] { Integer.valueOf(Build.VERSION.SDK_INT), Integer.valueOf(1) });
-      u.i("!32@/B4Tb64lLpK9CciVX+fT13P0KeYXGQzz", "mark use mediacodec fail, create config %s", new Object[] { localObject });
+      v.i("MicroMsg.SightUtil", "mark use mediacodec fail, create config %s", new Object[] { localObject });
     }
     for (;;)
     {
-      ah.tD().rn().set(344067, localObject);
+      ah.tE().ro().set(344067, localObject);
       return;
       localObject = ((String)localObject).split(":");
       if ((localObject == null) || (localObject.length < 2))
       {
         localObject = String.format("%d:%d", new Object[] { Integer.valueOf(Build.VERSION.SDK_INT), Integer.valueOf(1) });
-        u.i("!32@/B4Tb64lLpK9CciVX+fT13P0KeYXGQzz", "mark use mediacodec fail, recreate config %s", new Object[] { localObject });
+        v.i("MicroMsg.SightUtil", "mark use mediacodec fail, recreate config %s", new Object[] { localObject });
       }
       else
       {
-        localObject = String.format("%d:%d", new Object[] { Integer.valueOf(ay.Dr(localObject[0])), Integer.valueOf(ay.Dr(localObject[1]) + 1) });
-        u.i("!32@/B4Tb64lLpK9CciVX+fT13P0KeYXGQzz", "mark use mediacodec fail, refresh config %s", new Object[] { localObject });
+        localObject = String.format("%d:%d", new Object[] { Integer.valueOf(be.FG(localObject[0])), Integer.valueOf(be.FG(localObject[1]) + 1) });
+        v.i("MicroMsg.SightUtil", "mark use mediacodec fail, refresh config %s", new Object[] { localObject });
       }
     }
   }
   
-  public static String avE()
+  public static String axV()
   {
     StringBuilder localStringBuilder = new StringBuilder(512);
     StringBuilderPrinter localStringBuilderPrinter = new StringBuilderPrinter(localStringBuilder);
-    Object localObject2 = y.getContext();
-    localStringBuilderPrinter.println("#accinfo.revision=" + com.tencent.mm.sdk.platformtools.e.btx);
-    localStringBuilderPrinter.println("#accinfo.build=" + com.tencent.mm.sdk.platformtools.e.bwS + ":" + com.tencent.mm.sdk.platformtools.e.bwT + ":" + f.akC);
+    Object localObject2 = aa.getContext();
+    localStringBuilderPrinter.println("#accinfo.revision=" + com.tencent.mm.sdk.platformtools.e.boQ);
+    localStringBuilderPrinter.println("#accinfo.build=" + com.tencent.mm.sdk.platformtools.e.boT + ":" + com.tencent.mm.sdk.platformtools.e.boU + ":" + f.Xv);
     Object localObject3 = new StringBuilder("#accinfo.env=");
     Object localObject1;
     if (com.tencent.mm.sdk.b.b.foreground) {
@@ -157,19 +157,19 @@ public final class c
     }
     for (;;)
     {
-      localStringBuilderPrinter.println((String)localObject1 + ":" + Thread.currentThread().getName() + ":" + com.tencent.mm.sdk.b.b.jUB);
-      localStringBuilderPrinter.println("#aacinfo.device_brand=" + com.tencent.mm.protocal.b.iTY);
-      localStringBuilderPrinter.println("#aacinfo.device_model=" + com.tencent.mm.protocal.b.iTZ);
-      localStringBuilderPrinter.println("#aacinfo.os_type=" + com.tencent.mm.protocal.b.iUa);
-      localStringBuilderPrinter.println("#aacinfo.os_name=" + com.tencent.mm.protocal.b.iUb);
-      localStringBuilderPrinter.println("#aacinfo.os_version=" + com.tencent.mm.protocal.b.iUc);
-      localStringBuilderPrinter.println("#aacinfo.device_name=" + com.tencent.mm.protocal.b.iUd);
+      localStringBuilderPrinter.println((String)localObject1 + ":" + Thread.currentThread().getName() + ":" + com.tencent.mm.sdk.b.b.kuc);
+      localStringBuilderPrinter.println("#aacinfo.device_brand=" + com.tencent.mm.protocal.c.jrr);
+      localStringBuilderPrinter.println("#aacinfo.device_model=" + com.tencent.mm.protocal.c.jrs);
+      localStringBuilderPrinter.println("#aacinfo.os_type=" + com.tencent.mm.protocal.c.jrt);
+      localStringBuilderPrinter.println("#aacinfo.os_name=" + com.tencent.mm.protocal.c.jru);
+      localStringBuilderPrinter.println("#aacinfo.os_version=" + com.tencent.mm.protocal.c.jrv);
+      localStringBuilderPrinter.println("#aacinfo.device_name=" + com.tencent.mm.protocal.c.jrw);
       try
       {
         localObject1 = Environment.getDataDirectory();
         localObject3 = new StatFs(((File)localObject1).getPath());
-        StatFs localStatFs = new StatFs(com.tencent.mm.compatible.util.d.bxc);
-        localObject1 = String.format("%dMB %s:%d:%d:%d %s:%d:%d:%d", new Object[] { Integer.valueOf(((ActivityManager)((Context)localObject2).getSystemService("activity")).getMemoryClass()), ((File)localObject1).getAbsolutePath(), Integer.valueOf(((StatFs)localObject3).getBlockSize()), Integer.valueOf(((StatFs)localObject3).getBlockCount()), Integer.valueOf(((StatFs)localObject3).getAvailableBlocks()), com.tencent.mm.compatible.util.d.bxc, Integer.valueOf(localStatFs.getBlockSize()), Integer.valueOf(localStatFs.getBlockCount()), Integer.valueOf(localStatFs.getAvailableBlocks()) });
+        StatFs localStatFs = new StatFs(com.tencent.mm.compatible.util.d.bpe);
+        localObject1 = String.format("%dMB %s:%d:%d:%d %s:%d:%d:%d", new Object[] { Integer.valueOf(((ActivityManager)((Context)localObject2).getSystemService("activity")).getMemoryClass()), ((File)localObject1).getAbsolutePath(), Integer.valueOf(((StatFs)localObject3).getBlockSize()), Integer.valueOf(((StatFs)localObject3).getBlockCount()), Integer.valueOf(((StatFs)localObject3).getAvailableBlocks()), com.tencent.mm.compatible.util.d.bpe, Integer.valueOf(localStatFs.getBlockSize()), Integer.valueOf(localStatFs.getBlockCount()), Integer.valueOf(localStatFs.getAvailableBlocks()) });
         localStringBuilderPrinter.println("#accinfo.data=" + (String)localObject1);
         localObject1 = new Date();
         localObject2 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSZ", Locale.getDefault());
@@ -182,59 +182,59 @@ public final class c
       {
         for (;;)
         {
-          u.e("!32@/B4Tb64lLpK9CciVX+fT13P0KeYXGQzz", "check data size failed :%s", new Object[] { localException.getMessage() });
+          v.e("MicroMsg.SightUtil", "check data size failed :%s", new Object[] { localException.getMessage() });
           String str = "";
         }
       }
     }
   }
   
-  public static String tS(String paramString)
+  public static String uY(String paramString)
   {
-    return ay.ad(paramString, "") + ".thumb";
+    return be.ab(paramString, "") + ".thumb";
   }
   
-  public static String tT(String paramString)
+  public static String uZ(String paramString)
   {
-    return ay.ad(paramString, "") + ".soundmp4";
+    return be.ab(paramString, "") + ".soundmp4";
   }
   
-  public static void tU(String paramString)
+  public static void va(String paramString)
   {
-    if (((Boolean)ah.tD().rn().get(344065, Boolean.valueOf(false))).booleanValue()) {
-      ab.j(new Runnable()
+    if (((Boolean)ah.tE().ro().get(344065, Boolean.valueOf(false))).booleanValue()) {
+      ad.k(new Runnable()
       {
         public final void run()
         {
-          g.ba(y.getContext(), gxb);
+          g.aZ(aa.getContext(), gDz);
         }
       });
     }
   }
   
-  public static Bitmap tV(String paramString)
+  public static Bitmap vb(String paramString)
   {
-    if (ay.kz(paramString)) {
+    if (be.kf(paramString)) {
       return null;
     }
     Bitmap localBitmap = ThumbnailUtils.createVideoThumbnail(paramString, 1);
     if (localBitmap == null)
     {
-      u.e("!32@/B4Tb64lLpK9CciVX+fT13P0KeYXGQzz", "create remux thumb bmp error, target path %s", new Object[] { paramString });
+      v.e("MicroMsg.SightUtil", "create remux thumb bmp error, target path %s", new Object[] { paramString });
       return localBitmap;
     }
     return com.tencent.mm.sdk.platformtools.d.a(localBitmap, 240, 320, true, true);
   }
   
-  public static boolean tW(String paramString)
+  public static boolean vc(String paramString)
   {
-    if ((ay.kz(paramString)) || (!com.tencent.mm.a.e.ax(paramString))) {
+    if ((be.kf(paramString)) || (!com.tencent.mm.a.e.aB(paramString))) {
       return false;
     }
-    long l = ay.FT();
+    long l = be.Gq();
     b localb = new b();
-    int i = SightVideoJNI.isSightOk(paramString, gwT, gwU, gwV, gwX, gwW, gwW.length);
-    u.d("!32@/B4Tb64lLpK9CciVX+fT13P0KeYXGQzz", "ashu::check sight use %dms", new Object[] { Long.valueOf(ay.ao(l)) });
+    int i = SightVideoJNI.isSightOk(paramString, gDr, gDs, gDt, gDv, gDu, gDu.length);
+    v.d("MicroMsg.SightUtil", "ashu::check sight use %dms", new Object[] { Long.valueOf(be.av(l)) });
     return i == 0;
   }
 }

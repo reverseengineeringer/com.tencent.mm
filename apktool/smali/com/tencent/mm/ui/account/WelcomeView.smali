@@ -28,8 +28,8 @@
 
 
 # virtual methods
-.method public final ao(Landroid/view/View;)V
-    .locals 3
+.method public final as(Landroid/view/View;)V
+    .locals 4
 
     .prologue
     .line 26
@@ -49,9 +49,9 @@
     invoke-virtual {v0, v1}, Landroid/view/animation/AlphaAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
     .line 28
-    const-wide/16 v1, 0x12c
+    const-wide/16 v2, 0x12c
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
+    invoke-virtual {v0, v2, v3}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
     .line 29
     new-instance v1, Lcom/tencent/mm/ui/account/WelcomeView$1;
@@ -67,7 +67,7 @@
     return-void
 .end method
 
-.method public abstract bca()V
+.method public abstract bhm()V
 .end method
 
 .method public abstract onResume()V

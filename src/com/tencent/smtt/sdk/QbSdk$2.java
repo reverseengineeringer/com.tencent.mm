@@ -2,37 +2,38 @@ package com.tencent.smtt.sdk;
 
 import android.content.Context;
 import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
+import android.webkit.WebView;
 
 final class QbSdk$2
-  extends Thread
+  extends Handler
 {
-  QbSdk$2(Context paramContext, Handler paramHandler) {}
-  
-  public final void run()
+  QbSdk$2(Looper paramLooper, Context paramContext, QbSdk.a parama)
   {
-    m.blT();
-    if (m.fe(val$context) == 0) {
-      m.blT().r(val$context, true);
-    }
-    d locald = d.is(true);
-    locald.o(val$context, true);
-    if (q.fr(val$context))
+    super(paramLooper);
+  }
+  
+  public final void handleMessage(Message paramMessage)
+  {
+    switch (what)
     {
-      if (!q.fx(val$context.getApplicationContext())) {
-        k.eX(val$context);
-      }
-      if ((!WebView.mSysWebviewCreated) && (!QbSdk.lRq)) {
-        QbSdk.lRk = false;
-      }
     }
-    boolean bool = locald.bln();
-    lRx.sendEmptyMessage(3);
-    if (!bool)
+    do
     {
-      lRx.sendEmptyMessage(2);
+      do
+      {
+        return;
+        new WebView(val$context);
+      } while (mtl == null);
+      mtl.aUb();
       return;
-    }
-    lRx.sendEmptyMessage(1);
+      paramMessage = d.jb(true).brq();
+      if (paramMessage != null) {
+        paramMessage.fE(val$context);
+      }
+    } while (mtl == null);
+    mtl.aUb();
   }
 }
 

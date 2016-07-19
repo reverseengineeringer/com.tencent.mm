@@ -25,19 +25,19 @@ import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 import com.tencent.mm.pluginsdk.ui.a.a;
 import com.tencent.mm.pluginsdk.ui.d.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.List;
 
 public class AddressView
   extends View
   implements a.a, d.a
 {
-  private static final String TAG = "!32@/B4Tb64lLpJvPADYHZ60V7qR4Q4a20iF";
-  public final int AVATAR_LAYOUT_WIDTH = getResources().getDimensionPixelSize(2131034638);
+  private static final String TAG = "MicroMsg.AddressView";
+  public final int AVATAR_LAYOUT_WIDTH = getResources().getDimensionPixelSize(2131427495);
   public final int AVATAR_PADDING;
   public final int AVATAR_START_POS;
-  public final int AVATAR_WIDTH = getResources().getDimensionPixelSize(2131034638);
+  public final int AVATAR_WIDTH = getResources().getDimensionPixelSize(2131427495);
   public final int COMMON_PADDING;
   public final int DESCRIPTION_PADDING;
   public final float DESCRIPTION_TEXT_SIZE;
@@ -52,7 +52,7 @@ public class AddressView
   private TextPaint descriptionPaint;
   CharSequence destNickName;
   private TextPaint displayNamePaint;
-  Drawable drawable = getResources().getDrawable(2130970510);
+  Drawable drawable = getResources().getDrawable(2130839328);
   private Paint.FontMetrics fm;
   boolean imageViewHasSetBounds;
   StaticLayout layout;
@@ -83,14 +83,14 @@ public class AddressView
   public AddressView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    NAME_TEXT_SIZE = com.tencent.mm.aw.a.z(paramContext, 2131034564);
-    DESCRIPTION_TEXT_SIZE = com.tencent.mm.aw.a.z(paramContext, 2131034567);
-    WEIBO_ICON_SIZE = getResources().getDimensionPixelSize(2131034602);
+    NAME_TEXT_SIZE = com.tencent.mm.az.a.D(paramContext, 2131427667);
+    DESCRIPTION_TEXT_SIZE = com.tencent.mm.az.a.D(paramContext, 2131427709);
+    WEIBO_ICON_SIZE = getResources().getDimensionPixelSize(2131427702);
     AVATAR_START_POS = 0;
-    AVATAR_PADDING = getResources().getDimensionPixelSize(2131034578);
+    AVATAR_PADDING = getResources().getDimensionPixelSize(2131427467);
     COMMON_PADDING = 0;
-    DESCRIPTION_PADDING = (getResources().getDimensionPixelSize(2131034582) * 2);
-    TEXT_TOP_PADDING = getResources().getDimensionPixelSize(2131034575);
+    DESCRIPTION_PADDING = (getResources().getDimensionPixelSize(2131427638) * 2);
+    TEXT_TOP_PADDING = getResources().getDimensionPixelSize(2131427708);
   }
   
   public static int dip2px(Context paramContext, float paramFloat)
@@ -103,7 +103,7 @@ public class AddressView
     TextPaint localTextPaint = new TextPaint();
     localTextPaint.setAntiAlias(true);
     localTextPaint.setTextSize(DESCRIPTION_TEXT_SIZE);
-    localTextPaint.setColor(getResources().getColor(2131231138));
+    localTextPaint.setColor(getResources().getColor(2131689744));
     return localTextPaint;
   }
   
@@ -112,7 +112,7 @@ public class AddressView
     TextPaint localTextPaint = new TextPaint();
     localTextPaint.setAntiAlias(true);
     localTextPaint.setTextSize(NAME_TEXT_SIZE);
-    localTextPaint.setColor(getResources().getColor(2131231135));
+    localTextPaint.setColor(getResources().getColor(2131689841));
     return localTextPaint;
   }
   
@@ -125,10 +125,10 @@ public class AddressView
         super.a(paramAnonymousView, paramAnonymousa);
         CharSequence localCharSequence = getContentDescription();
         paramAnonymousView = localCharSequence;
-        if (ay.kz((String)localCharSequence)) {
+        if (be.kf((String)localCharSequence)) {
           paramAnonymousView = nickName;
         }
-        android.support.v4.view.a.a.gK.d(gL, paramAnonymousView);
+        android.support.v4.view.a.a.hf.d(hg, paramAnonymousView);
       }
       
       public final void onPopulateAccessibilityEvent(View paramAnonymousView, AccessibilityEvent paramAnonymousAccessibilityEvent)
@@ -136,7 +136,7 @@ public class AddressView
         super.onPopulateAccessibilityEvent(paramAnonymousView, paramAnonymousAccessibilityEvent);
         CharSequence localCharSequence = getContentDescription();
         paramAnonymousView = localCharSequence;
-        if (ay.kz((String)localCharSequence)) {
+        if (be.kf((String)localCharSequence)) {
           paramAnonymousView = nickName;
         }
         paramAnonymousAccessibilityEvent.getText().add(paramAnonymousView);
@@ -234,7 +234,7 @@ public class AddressView
       do
       {
         return;
-        if (ay.kz(description)) {
+        if (be.kf(description)) {
           break;
         }
       } while (destNickName == null);
@@ -282,7 +282,7 @@ public class AddressView
     super.onInitializeAccessibilityNodeInfo(paramAccessibilityNodeInfo);
     CharSequence localCharSequence2 = getContentDescription();
     CharSequence localCharSequence1 = localCharSequence2;
-    if (ay.kz((String)localCharSequence2)) {
+    if (be.kf((String)localCharSequence2)) {
       localCharSequence1 = nickName;
     }
     paramAccessibilityNodeInfo.setText(localCharSequence1);
@@ -294,7 +294,7 @@ public class AddressView
     super.onPopulateAccessibilityEvent(paramAccessibilityEvent);
     CharSequence localCharSequence2 = getContentDescription();
     CharSequence localCharSequence1 = localCharSequence2;
-    if (ay.kz((String)localCharSequence2)) {
+    if (be.kf((String)localCharSequence2)) {
       localCharSequence1 = nickName;
     }
     paramAccessibilityEvent.getText().add(localCharSequence1);
@@ -313,7 +313,7 @@ public class AddressView
   public void resumeAvatarLoad()
   {
     if (avatarDrawable != null) {
-      ((com.tencent.mm.pluginsdk.ui.a)avatarDrawable).aQU();
+      ((com.tencent.mm.pluginsdk.ui.a)avatarDrawable).aVE();
     }
   }
   
@@ -363,7 +363,7 @@ public class AddressView
   public void stopAvatarLoad()
   {
     if (avatarDrawable != null) {
-      ((com.tencent.mm.pluginsdk.ui.a)avatarDrawable).aQT();
+      ((com.tencent.mm.pluginsdk.ui.a)avatarDrawable).aVD();
     }
   }
   
@@ -424,7 +424,7 @@ public class AddressView
       }
       return;
     }
-    u.e("!32@/B4Tb64lLpJvPADYHZ60V7qR4Q4a20iF", "nickNameTextColor should not be null");
+    v.e("MicroMsg.AddressView", "nickNameTextColor should not be null");
   }
 }
 

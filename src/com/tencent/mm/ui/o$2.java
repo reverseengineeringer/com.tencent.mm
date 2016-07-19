@@ -7,19 +7,19 @@ final class o$2
 {
   o$2(o paramo) {}
   
-  public final void aNg()
+  public final void aEs()
   {
-    kqp.aNg();
+    kPu.aEs();
   }
   
-  public final void aNh()
+  public final void aQQ()
   {
-    kqp.bbh();
+    kPu.bgr();
   }
   
   public final void onCancel()
   {
-    kqp.bbi();
+    kPu.bgs();
   }
 }
 

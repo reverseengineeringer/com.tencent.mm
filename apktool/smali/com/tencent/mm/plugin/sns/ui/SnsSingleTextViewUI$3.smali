@@ -13,9 +13,18 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/mn;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic hiD:Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;
+.field final synthetic hxs:Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;
 
 
 # direct methods
@@ -23,19 +32,29 @@
     .locals 1
 
     .prologue
-    .line 94
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI$3;->hiD:Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;
+    .line 95
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI$3;->hxs:Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/mn;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI$3;->kum:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 4
 
     .prologue
@@ -43,28 +62,26 @@
 
     const/4 v2, 0x0
 
-    .line 97
-    instance-of v0, p1, Lcom/tencent/mm/d/a/ma;
+    .line 95
+    check-cast p1, Lcom/tencent/mm/e/a/mn;
+
+    instance-of v0, p1, Lcom/tencent/mm/e/a/mn;
 
     if-eqz v0, :cond_0
 
-    .line 98
-    check-cast p1, Lcom/tencent/mm/d/a/ma;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI$3;->hxs:Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;
 
-    .line 99
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI$3;->hiD:Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;)Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/k;->aAf()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/k;->aCE()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p1, Lcom/tencent/mm/d/a/ma;->aIo:Lcom/tencent/mm/d/a/ma$a;
+    iget-object v1, p1, Lcom/tencent/mm/e/a/mn;->auI:Lcom/tencent/mm/e/a/mn$a;
 
-    iget-object v1, v1, Lcom/tencent/mm/d/a/ma$a;->id:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/e/a/mn$a;->id:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -72,15 +89,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 100
-    iget-object v0, p1, Lcom/tencent/mm/d/a/ma;->aIo:Lcom/tencent/mm/d/a/ma$a;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/mn;->auI:Lcom/tencent/mm/e/a/mn$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/a/ma$a;->id:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/mn$a;->id:Ljava/lang/String;
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/plugin/sns/d/an;->ak(Ljava/lang/String;I)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/plugin/sns/e/am;->al(Ljava/lang/String;I)V
 
-    .line 101
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI$3;->hiD:Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI$3;->hxs:Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;->b(Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;)Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
@@ -88,12 +103,10 @@
 
     invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;->setVisibility(I)V
 
-    .line 102
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI$3;->hiD:Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI$3;->hxs:Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;
 
     invoke-static {v0, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;Z)Z
 
-    .line 105
     :cond_0
     return v2
 .end method

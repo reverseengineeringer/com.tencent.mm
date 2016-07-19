@@ -1,18 +1,21 @@
 package com.tencent.mm.pluginsdk.i;
 
-import android.media.MediaRecorder;
-import com.tencent.mm.compatible.a.a.a;
+import android.content.ClipData;
+import android.content.Context;
+import android.os.Build.VERSION;
 
-final class c
-  implements a.a
+public final class c
 {
-  c(b paramb, int paramInt) {}
-  
-  public final void run()
+  public static void a(Context paramContext, CharSequence paramCharSequence1, CharSequence paramCharSequence2)
   {
-    if (gOn.fiT != null) {
-      gOn.fiT.setOrientationHint(gOm);
+    if (Build.VERSION.SDK_INT >= 11)
+    {
+      new d();
+      ((android.content.ClipboardManager)paramContext.getSystemService("clipboard")).setPrimaryClip(ClipData.newPlainText(paramCharSequence1, paramCharSequence2));
+      return;
     }
+    new e();
+    ((android.text.ClipboardManager)paramContext.getSystemService("clipboard")).setText(paramCharSequence2);
   }
 }
 

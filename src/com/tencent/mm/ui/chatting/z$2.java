@@ -1,16 +1,16 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.pluginsdk.ui.chat.ChatFooter;
-import com.tencent.mm.r.g.b;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 final class z$2
-  implements g.b
+  implements View.OnClickListener
 {
   z$2(z paramz) {}
   
-  public final void vz()
+  public final void onClick(View paramView)
   {
-    z.d(kSO).aRJ();
+    lsI.lsD.eb(((Long)paramView.getTag()).longValue());
   }
 }
 

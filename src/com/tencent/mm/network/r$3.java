@@ -1,9 +1,9 @@
 package com.tencent.mm.network;
 
-import com.tencent.mm.sdk.platformtools.at;
+import com.tencent.mm.sdk.platformtools.az;
 
 final class r$3
-  extends at
+  extends az<Object>
 {
   r$3(r paramr, String[] paramArrayOfString1, String[] paramArrayOfString2, int[] paramArrayOfInt)
   {
@@ -12,7 +12,7 @@ final class r$3
   
   protected final Object run()
   {
-    Java2C.setHostInfo(ciU, ciV, ciW);
+    Java2C.setHostInfo(cel, cem, cen);
     return null;
   }
 }

@@ -1,8 +1,8 @@
 package com.tencent.mm.ui.chatting;
 
-public abstract interface cr$a
+ enum cr$a
 {
-  public abstract void re(int paramInt);
+  private cr$a() {}
 }
 
 /* Location:

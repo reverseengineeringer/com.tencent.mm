@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnCancelListener;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+.field final synthetic lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 601
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$7;->loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+    .line 213
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$7;->lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,15 +36,17 @@
 
 
 # virtual methods
-.method public final onCancel(Landroid/content/DialogInterface;)V
+.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 1
 
     .prologue
-    .line 604
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$7;->loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+    .line 216
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$7;->lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizConversationUI$a;->i(Lcom/tencent/mm/ui/conversation/BizConversationUI$a;)Z
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/conversation/BizConversationUI$a;->finish()V
 
-    .line 605
-    return-void
+    .line 217
+    const/4 v0, 0x1
+
+    return v0
 .end method

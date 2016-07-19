@@ -13,11 +13,11 @@
 
 
 # static fields
-.field public static final iAA:[I
+.field public static final iWY:[Ljava/lang/String;
 
-.field public static final iAy:[Ljava/lang/String;
+.field public static final iWZ:[I
 
-.field public static final iAz:[I
+.field public static final iXa:[I
 
 
 # direct methods
@@ -96,54 +96,54 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/model/o;->iAy:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/model/o;->iWY:[Ljava/lang/String;
 
     .line 151
     new-array v0, v3, [I
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/model/o;->iAz:[I
+    sput-object v0, Lcom/tencent/mm/pluginsdk/model/o;->iWZ:[I
 
     .line 165
     new-array v0, v3, [I
 
     fill-array-data v0, :array_1
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/model/o;->iAA:[I
+    sput-object v0, Lcom/tencent/mm/pluginsdk/model/o;->iXa:[I
 
     return-void
 
     .line 151
     :array_0
     .array-data 4
-        0x7f03027f
-        0x7f030297
-        0x7f030292
-        0x7f0302a1
-        0x7f0302a5
-        0x7f030271
-        0x7f03027f
-        0x7f030292
-        0x7f030297
-        0x7f030286
-        0x7f030286
+        0x7f07003d
+        0x7f070031
+        0x7f070029
+        0x7f07002f
+        0x7f070028
+        0x7f070035
+        0x7f07003d
+        0x7f070029
+        0x7f070031
+        0x7f070033
+        0x7f070033
     .end array-data
 
     .line 165
     :array_1
     .array-data 4
-        0x7f03027f
-        0x7f030297
-        0x7f030292
-        0x7f0302a1
-        0x7f0302a5
-        0x7f030271
-        0x7f03027f
-        0x7f030292
-        0x7f030297
-        0x7f030286
-        0x7f030286
+        0x7f07003d
+        0x7f070031
+        0x7f070029
+        0x7f07002f
+        0x7f070028
+        0x7f070035
+        0x7f07003d
+        0x7f070029
+        0x7f070031
+        0x7f070033
+        0x7f070033
     .end array-data
 .end method
 
@@ -158,7 +158,140 @@
     return-void
 .end method
 
-.method public static aH(Landroid/content/Context;Ljava/lang/String;)I
+.method public static BD(Ljava/lang/String;)Z
+    .locals 5
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 200
+    sget-object v2, Lcom/tencent/mm/pluginsdk/model/o;->iWY:[Ljava/lang/String;
+
+    array-length v3, v2
+
+    move v1, v0
+
+    :goto_0
+    if-ge v1, v3, :cond_0
+
+    aget-object v4, v2, v1
+
+    .line 202
+    invoke-virtual {v4, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    .line 204
+    const/4 v0, 0x1
+
+    .line 207
+    :cond_0
+    return v0
+
+    .line 200
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+.end method
+
+.method public static BE(Ljava/lang/String;)I
+    .locals 5
+
+    .prologue
+    const/4 v3, -0x1
+
+    .line 626
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    invoke-static {}, Landroid/webkit/MimeTypeMap;->getSingleton()Landroid/webkit/MimeTypeMap;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Landroid/webkit/MimeTypeMap;->getMimeTypeFromExtension(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_0
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    :cond_1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v1, "*/"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_2
+    const/4 v1, 0x0
+
+    move v2, v3
+
+    :goto_0
+    sget-object v4, Lcom/tencent/mm/pluginsdk/model/o;->iWY:[Ljava/lang/String;
+
+    array-length v4, v4
+
+    if-ge v1, v4, :cond_4
+
+    sget-object v4, Lcom/tencent/mm/pluginsdk/model/o;->iWY:[Ljava/lang/String;
+
+    aget-object v4, v4, v1
+
+    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    move v2, v1
+
+    :cond_3
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_4
+    if-eq v2, v3, :cond_5
+
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/o;->iWZ:[I
+
+    aget v0, v0, v2
+
+    :goto_1
+    return v0
+
+    :cond_5
+    const v0, 0x7f070036
+
+    goto :goto_1
+.end method
+
+.method public static aG(Landroid/content/Context;Ljava/lang/String;)I
     .locals 9
 
     .prologue
@@ -298,11 +431,11 @@
 
     if-eqz v1, :cond_6
 
-    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/model/o;->cM(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/model/o$a;
+    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/model/o;->cJ(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/model/o$a;
 
     move-result-object v1
 
-    iget v6, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAB:I
+    iget v6, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXb:I
 
     if-ne v6, v8, :cond_7
 
@@ -340,12 +473,12 @@
 
     .line 339
     :cond_6
-    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/model/o;->cM(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/model/o$a;
+    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/model/o;->cJ(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/model/o$a;
 
     move-result-object v6
 
     .line 340
-    iget v1, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iAB:I
+    iget v1, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iXb:I
 
     if-ne v1, v8, :cond_9
 
@@ -357,11 +490,11 @@
     .line 327
     :cond_7
     :try_start_2
-    iget v6, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAB:I
+    iget v6, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXb:I
 
     if-ne v6, v2, :cond_8
 
-    iget v1, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAC:I
+    iget v1, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXc:I
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -388,11 +521,11 @@
 
     .line 344
     :cond_9
-    iget v1, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iAB:I
+    iget v1, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iXb:I
 
     if-ne v1, v2, :cond_a
 
-    iget v1, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iAC:I
+    iget v1, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iXc:I
 
     const/16 v7, 0x21
 
@@ -412,18 +545,18 @@
     invoke-direct {v1, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 352
-    iget v7, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iAB:I
+    iget v7, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iXb:I
 
     if-ne v7, v2, :cond_e
 
     .line 354
-    iget v2, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iAC:I
+    iget v2, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iXc:I
 
     const/16 v5, 0x21
 
     if-lt v2, v5, :cond_c
 
-    iget v2, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iAC:I
+    iget v2, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iXc:I
 
     const/16 v5, 0x27
 
@@ -475,13 +608,13 @@
 
     .line 359
     :cond_c
-    iget v2, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iAC:I
+    iget v2, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iXc:I
 
     const/16 v5, 0x28
 
     if-lt v2, v5, :cond_d
 
-    iget v2, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iAC:I
+    iget v2, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iXc:I
 
     const/16 v5, 0x2d
 
@@ -498,7 +631,7 @@
 
     .line 364
     :cond_d
-    iget v2, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iAC:I
+    iget v2, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iXc:I
 
     const/16 v5, 0x2e
 
@@ -528,7 +661,7 @@
     if-nez v5, :cond_b
 
     .line 372
-    iget-object v5, v2, Lcom/tencent/mm/pluginsdk/model/o$b;->iAE:Ljava/lang/String;
+    iget-object v5, v2, Lcom/tencent/mm/pluginsdk/model/o$b;->iXe:Ljava/lang/String;
 
     iget-object v2, v2, Lcom/tencent/mm/pluginsdk/model/o$b;->classname:Ljava/lang/String;
 
@@ -538,12 +671,12 @@
 
     .line 376
     :cond_e
-    iget v7, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iAB:I
+    iget v7, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iXb:I
 
     if-ne v7, v5, :cond_10
 
     .line 378
-    iget v7, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iAC:I
+    iget v7, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iXc:I
 
     if-ne v7, v5, :cond_f
 
@@ -558,7 +691,7 @@
 
     .line 383
     :cond_f
-    iget v5, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iAC:I
+    iget v5, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iXc:I
 
     if-ne v5, v2, :cond_b
 
@@ -573,16 +706,16 @@
 
     .line 389
     :cond_10
-    iget v2, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iAB:I
+    iget v2, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iXb:I
 
     if-nez v2, :cond_12
 
     .line 391
-    iget v2, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iAC:I
+    iget v2, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iXc:I
 
     if-lt v2, v3, :cond_11
 
-    iget v2, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iAC:I
+    iget v2, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iXc:I
 
     const/4 v5, 0x6
 
@@ -599,7 +732,7 @@
 
     .line 396
     :cond_11
-    iget v2, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iAC:I
+    iget v2, v6, Lcom/tencent/mm/pluginsdk/model/o$a;->iXc:I
 
     const/4 v5, 0x6
 
@@ -629,7 +762,7 @@
     if-nez v5, :cond_b
 
     .line 404
-    iget-object v5, v2, Lcom/tencent/mm/pluginsdk/model/o$b;->iAE:Ljava/lang/String;
+    iget-object v5, v2, Lcom/tencent/mm/pluginsdk/model/o$b;->iXe:Ljava/lang/String;
 
     iget-object v2, v2, Lcom/tencent/mm/pluginsdk/model/o$b;->classname:Ljava/lang/String;
 
@@ -662,7 +795,7 @@
     if-nez v5, :cond_b
 
     .line 416
-    iget-object v5, v2, Lcom/tencent/mm/pluginsdk/model/o$b;->iAE:Ljava/lang/String;
+    iget-object v5, v2, Lcom/tencent/mm/pluginsdk/model/o$b;->iXe:Ljava/lang/String;
 
     iget-object v2, v2, Lcom/tencent/mm/pluginsdk/model/o$b;->classname:Ljava/lang/String;
 
@@ -769,7 +902,7 @@
 
     iget-object v0, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/model/o$b;->iAE:Ljava/lang/String;
+    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/model/o$b;->iXe:Ljava/lang/String;
 
     move-object v0, v1
 
@@ -798,7 +931,7 @@
 
     iget-object v0, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/model/o$b;->iAE:Ljava/lang/String;
+    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/model/o$b;->iXe:Ljava/lang/String;
 
     goto :goto_1
 
@@ -809,17 +942,17 @@
     goto :goto_0
 .end method
 
-.method public static cL(Landroid/content/Context;)Z
+.method public static cI(Landroid/content/Context;)Z
     .locals 2
 
     .prologue
     .line 216
-    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/model/o;->cM(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/model/o$a;
+    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/model/o;->cJ(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/model/o$a;
 
     move-result-object v0
 
     .line 217
-    iget v0, v0, Lcom/tencent/mm/pluginsdk/model/o$a;->iAB:I
+    iget v0, v0, Lcom/tencent/mm/pluginsdk/model/o$a;->iXb:I
 
     const/4 v1, -0x1
 
@@ -838,7 +971,7 @@
     goto :goto_0
 .end method
 
-.method private static cM(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/model/o$a;
+.method private static cJ(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/model/o$a;
     .locals 7
 
     .prologue
@@ -871,12 +1004,12 @@
     .line 486
     const/4 v3, 0x2
 
-    iput v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAB:I
+    iput v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXb:I
 
     .line 487
     const-string/jumbo v3, "ADRQB_"
 
-    iput-object v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAD:Ljava/lang/String;
+    iput-object v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXd:Ljava/lang/String;
 
     .line 488
     if-eqz v0, :cond_0
@@ -890,14 +1023,14 @@
     .line 490
     iget v3, v0, Landroid/content/pm/PackageInfo;->versionCode:I
 
-    iput v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAC:I
+    iput v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXc:I
 
     .line 491
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v4, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAD:Ljava/lang/String;
+    iget-object v4, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXd:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -921,7 +1054,7 @@
 
     move-result-object v3
 
-    iput-object v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAD:Ljava/lang/String;
+    iput-object v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXd:Ljava/lang/String;
     :try_end_1
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_6
@@ -949,12 +1082,12 @@
     .line 502
     const/4 v3, 0x0
 
-    iput v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAB:I
+    iput v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXb:I
 
     .line 503
     const-string/jumbo v3, "ADRQBX_"
 
-    iput-object v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAD:Ljava/lang/String;
+    iput-object v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXd:Ljava/lang/String;
     :try_end_2
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_6
@@ -968,14 +1101,14 @@
     :try_start_3
     iget v2, v0, Landroid/content/pm/PackageInfo;->versionCode:I
 
-    iput v2, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAC:I
+    iput v2, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXc:I
 
     .line 552
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAD:Ljava/lang/String;
+    iget-object v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXd:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -999,7 +1132,7 @@
 
     move-result-object v0
 
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAD:Ljava/lang/String;
+    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXd:Ljava/lang/String;
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_6
 
@@ -1026,12 +1159,12 @@
     .line 510
     const/4 v3, 0x1
 
-    iput v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAB:I
+    iput v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXb:I
 
     .line 511
     const-string/jumbo v3, "ADRQBX5_"
 
-    iput-object v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAD:Ljava/lang/String;
+    iput-object v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXd:Ljava/lang/String;
     :try_end_4
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_4 .. :try_end_4} :catch_2
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_6
@@ -1054,12 +1187,12 @@
     .line 518
     const/4 v3, 0x2
 
-    iput v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAB:I
+    iput v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXb:I
 
     .line 519
     const-string/jumbo v3, "ADRQB_"
 
-    iput-object v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAD:Ljava/lang/String;
+    iput-object v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXd:Ljava/lang/String;
     :try_end_5
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_5 .. :try_end_5} :catch_3
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_6
@@ -1082,12 +1215,12 @@
     .line 526
     const/4 v3, 0x2
 
-    iput v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAB:I
+    iput v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXb:I
 
     .line 527
     const-string/jumbo v3, "ADRQB_"
 
-    iput-object v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAD:Ljava/lang/String;
+    iput-object v3, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXd:Ljava/lang/String;
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_4
 
@@ -1111,7 +1244,7 @@
     .line 534
     if-eqz v3, :cond_1
 
-    iget-object v4, v3, Lcom/tencent/mm/pluginsdk/model/o$b;->iAE:Ljava/lang/String;
+    iget-object v4, v3, Lcom/tencent/mm/pluginsdk/model/o$b;->iXe:Ljava/lang/String;
 
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1120,7 +1253,7 @@
     if-nez v4, :cond_1
 
     .line 536
-    iget-object v3, v3, Lcom/tencent/mm/pluginsdk/model/o$b;->iAE:Ljava/lang/String;
+    iget-object v3, v3, Lcom/tencent/mm/pluginsdk/model/o$b;->iXe:Ljava/lang/String;
 
     const/4 v4, 0x0
 
@@ -1131,12 +1264,12 @@
     .line 537
     const/4 v2, 0x2
 
-    iput v2, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAB:I
+    iput v2, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXb:I
 
     .line 538
     const-string/jumbo v2, "ADRQB_"
 
-    iput-object v2, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAD:Ljava/lang/String;
+    iput-object v2, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXd:Ljava/lang/String;
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_5
 
@@ -1153,142 +1286,60 @@
     goto :goto_2
 .end method
 
-.method public static zH(Ljava/lang/String;)Z
-    .locals 5
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 200
-    sget-object v2, Lcom/tencent/mm/pluginsdk/model/o;->iAy:[Ljava/lang/String;
-
-    array-length v3, v2
-
-    move v1, v0
-
-    :goto_0
-    if-ge v1, v3, :cond_0
-
-    aget-object v4, v2, v1
-
-    .line 202
-    invoke-virtual {v4, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    .line 204
-    const/4 v0, 0x1
-
-    .line 207
-    :cond_0
-    return v0
-
-    .line 200
-    :cond_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-.end method
-
-.method public static zI(Ljava/lang/String;)I
-    .locals 5
-
-    .prologue
-    const/4 v3, -0x1
-
-    .line 626
-    const/4 v0, 0x0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-lez v1, :cond_0
-
-    invoke-static {}, Landroid/webkit/MimeTypeMap;->getSingleton()Landroid/webkit/MimeTypeMap;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Landroid/webkit/MimeTypeMap;->getMimeTypeFromExtension(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_0
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    :cond_1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v1, "*/"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_2
-    const/4 v1, 0x0
-
-    move v2, v3
-
-    :goto_0
-    sget-object v4, Lcom/tencent/mm/pluginsdk/model/o;->iAy:[Ljava/lang/String;
-
-    array-length v4, v4
-
-    if-ge v1, v4, :cond_4
-
-    sget-object v4, Lcom/tencent/mm/pluginsdk/model/o;->iAy:[Ljava/lang/String;
-
-    aget-object v4, v4, v1
-
-    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    move v2, v1
-
-    :cond_3
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    if-eq v2, v3, :cond_5
-
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/o;->iAz:[I
-
-    aget v0, v0, v2
-
-    :goto_1
-    return v0
-
-    :cond_5
-    const v0, 0x7f0302b2
-
-    goto :goto_1
-.end method
-
 
 # virtual methods
-.method public final FG()Ljava/lang/String;
+.method public final By(Ljava/lang/String;)Z
+    .locals 1
+
+    .prologue
+    .line 226
+    const-string/jumbo v0, "com.tencent.mtt"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string/jumbo v0, "com.tencent.qbx"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string/jumbo v0, "com.tencent.mtt.x86"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string/jumbo v0, "com.tencent.qbx5"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 228
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 230
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final Gb()Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -1548,7 +1599,7 @@
     goto/16 :goto_0
 .end method
 
-.method public final aPk()Ljava/lang/String;
+.method public final aTQ()Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -1558,7 +1609,7 @@
     return-object v0
 .end method
 
-.method public final aPl()Lcom/tencent/mm/pluginsdk/model/r$a;
+.method public final aTR()Lcom/tencent/mm/pluginsdk/model/r$a;
     .locals 2
 
     .prologue
@@ -1568,37 +1619,37 @@
     invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/model/r$a;-><init>()V
 
     .line 246
-    const v1, 0x7f0b085f
+    const v1, 0x7f080dbf
 
-    iput v1, v0, Lcom/tencent/mm/pluginsdk/model/r$a;->iAI:I
+    iput v1, v0, Lcom/tencent/mm/pluginsdk/model/r$a;->iXi:I
 
     .line 247
-    const v1, 0x7f0b085e
+    const v1, 0x7f080dc1
 
-    iput v1, v0, Lcom/tencent/mm/pluginsdk/model/r$a;->iAK:I
+    iput v1, v0, Lcom/tencent/mm/pluginsdk/model/r$a;->iXk:I
 
     .line 248
-    const v1, 0x7f0405ed
+    const v1, 0x7f0203e0
 
-    iput v1, v0, Lcom/tencent/mm/pluginsdk/model/r$a;->iAH:I
+    iput v1, v0, Lcom/tencent/mm/pluginsdk/model/r$a;->iXh:I
 
     .line 249
     return-object v0
 .end method
 
-.method public final cK(Landroid/content/Context;)Z
+.method public final cH(Landroid/content/Context;)Z
     .locals 4
 
     .prologue
     const/4 v0, 0x0
 
     .line 181
-    invoke-static {p1}, Lcom/tencent/mm/pluginsdk/model/o;->cM(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/model/o$a;
+    invoke-static {p1}, Lcom/tencent/mm/pluginsdk/model/o;->cJ(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/model/o$a;
 
     move-result-object v1
 
     .line 182
-    iget v2, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAB:I
+    iget v2, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXb:I
 
     const/4 v3, -0x1
 
@@ -1611,13 +1662,13 @@
 
     .line 186
     :cond_1
-    iget v2, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAB:I
+    iget v2, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXb:I
 
     const/4 v3, 0x2
 
     if-ne v2, v3, :cond_2
 
-    iget v1, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iAC:I
+    iget v1, v1, Lcom/tencent/mm/pluginsdk/model/o$a;->iXc:I
 
     const/16 v2, 0x21
 
@@ -1713,56 +1764,5 @@
     move v0, v2
 
     .line 604
-    goto :goto_0
-.end method
-
-.method public final zC(Ljava/lang/String;)Z
-    .locals 1
-
-    .prologue
-    .line 226
-    const-string/jumbo v0, "com.tencent.mtt"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string/jumbo v0, "com.tencent.qbx"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string/jumbo v0, "com.tencent.mtt.x86"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string/jumbo v0, "com.tencent.qbx5"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 228
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 230
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
     goto :goto_0
 .end method

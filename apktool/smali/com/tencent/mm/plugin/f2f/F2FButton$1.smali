@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/af$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ah$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic dMF:Lcom/tencent/mm/plugin/f2f/F2FButton;
+.field final synthetic dOn:Lcom/tencent/mm/plugin/f2f/F2FButton;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 55
-    iput-object p1, p0, Lcom/tencent/mm/plugin/f2f/F2FButton$1;->dMF:Lcom/tencent/mm/plugin/f2f/F2FButton;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/f2f/F2FButton$1;->dOn:Lcom/tencent/mm/plugin/f2f/F2FButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,12 +36,12 @@
 
 
 # virtual methods
-.method public final lj()Z
+.method public final jK()Z
     .locals 3
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton$1;->dMF:Lcom/tencent/mm/plugin/f2f/F2FButton;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton$1;->dOn:Lcom/tencent/mm/plugin/f2f/F2FButton;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/f2f/F2FButton;->b(Lcom/tencent/mm/plugin/f2f/F2FButton;)Landroid/widget/TextView;
 
@@ -51,7 +51,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/f2f/F2FButton$1;->dMF:Lcom/tencent/mm/plugin/f2f/F2FButton;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/f2f/F2FButton$1;->dOn:Lcom/tencent/mm/plugin/f2f/F2FButton;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/f2f/F2FButton;->a(Lcom/tencent/mm/plugin/f2f/F2FButton;)I
 
@@ -70,12 +70,12 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 59
-    iget-object v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton$1;->dMF:Lcom/tencent/mm/plugin/f2f/F2FButton;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton$1;->dOn:Lcom/tencent/mm/plugin/f2f/F2FButton;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/f2f/F2FButton;->c(Lcom/tencent/mm/plugin/f2f/F2FButton;)I
 
     .line 60
-    iget-object v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton$1;->dMF:Lcom/tencent/mm/plugin/f2f/F2FButton;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/f2f/F2FButton$1;->dOn:Lcom/tencent/mm/plugin/f2f/F2FButton;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/f2f/F2FButton;->a(Lcom/tencent/mm/plugin/f2f/F2FButton;)I
 

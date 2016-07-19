@@ -9,7 +9,7 @@
 
     .prologue
     .line 54
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -24,7 +24,7 @@
 
     .line 58
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4"
+    const-string/jumbo v0, "MicroMsg.VoiceFile"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -40,7 +40,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 59
     invoke-static {p0, p1, p2}, Lcom/tencent/mm/modelvoice/o;->c(Ljava/lang/String;IZ)Z
@@ -74,141 +74,6 @@
     goto :goto_0
 .end method
 
-.method public static bc(Ljava/lang/String;)I
-    .locals 4
-
-    .prologue
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    .line 184
-    invoke-static {p0}, Lcom/tencent/mm/modelvoice/o;->ka(Ljava/lang/String;)I
-
-    move-result v2
-
-    packed-switch v2, :pswitch_data_0
-
-    .line 195
-    invoke-static {p0}, Lcom/tencent/mm/modelvoice/q;->hK(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/tencent/mm/modelvoice/o;->kb(Ljava/lang/String;)I
-
-    move-result v1
-
-    :cond_0
-    :goto_0
-    return v1
-
-    .line 186
-    :pswitch_0
-    invoke-static {p0}, Lcom/tencent/mm/modelvoice/q;->hK(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/tencent/mm/modelvoice/o;->kb(Ljava/lang/String;)I
-
-    move-result v1
-
-    goto :goto_0
-
-    .line 188
-    :pswitch_1
-    invoke-static {p0}, Lcom/tencent/mm/modelvoice/q;->hK(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    if-ltz v3, :cond_1
-
-    :goto_1
-    invoke-static {v0}, Ljunit/framework/Assert;->assertTrue(Z)V
-
-    new-instance v0, Ljava/io/File;
-
-    invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v0}, Ljava/io/File;->length()J
-
-    move-result-wide v2
-
-    long-to-int v0, v2
-
-    if-lez v0, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_1
-    move v0, v1
-
-    goto :goto_1
-
-    .line 190
-    :pswitch_2
-    invoke-static {p0}, Lcom/tencent/mm/modelvoice/q;->hK(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    if-ltz v3, :cond_2
-
-    :goto_2
-    invoke-static {v0}, Ljunit/framework/Assert;->assertTrue(Z)V
-
-    new-instance v0, Ljava/io/File;
-
-    invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v0}, Ljava/io/File;->length()J
-
-    move-result-wide v2
-
-    long-to-int v0, v2
-
-    if-lez v0, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_2
-    move v0, v1
-
-    goto :goto_2
-
-    .line 184
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
-.end method
-
 .method private static c(Ljava/lang/String;IZ)Z
     .locals 10
 
@@ -225,7 +90,7 @@
 
     .line 81
     :goto_0
-    const-string/jumbo v3, "!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4"
+    const-string/jumbo v3, "MicroMsg.VoiceFile"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -241,7 +106,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 90
     :try_start_0
@@ -275,11 +140,11 @@
     if-ne v4, v5, :cond_1
 
     .line 94
-    const-string/jumbo v0, "!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4"
+    const-string/jumbo v0, "MicroMsg.VoiceFile"
 
     const-string/jumbo v4, "read amr file header failed!"
 
-    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_6
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -302,7 +167,7 @@
     if-nez p1, :cond_5
 
     .line 79
-    invoke-static {p0}, Lcom/tencent/mm/modelvoice/q;->hK(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/modelvoice/q;->ic(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -313,19 +178,19 @@
     move-exception v0
 
     .line 109
-    const-string/jumbo v3, "!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4"
+    const-string/jumbo v3, "MicroMsg.VoiceFile"
 
     const-string/jumbo v4, "exception:%s"
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v2, v1
 
-    invoke-static {v3, v4, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
@@ -337,7 +202,7 @@
     invoke-direct {v4, v0}, Ljava/lang/String;-><init>([B)V
 
     .line 98
-    const-string/jumbo v5, "!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4"
+    const-string/jumbo v5, "MicroMsg.VoiceFile"
 
     const-string/jumbo v6, "isAmrHeader voice file headHex:|%s| headStr:|%s| AmrFileOperator.AMR_NB_HEAD:|%s|"
 
@@ -347,7 +212,7 @@
 
     const/4 v8, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->I([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->O([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -363,7 +228,7 @@
 
     aput-object v8, v7, v0
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 99
     const-string/jumbo v0, "#!AMR\n"
@@ -394,19 +259,19 @@
     move-exception v0
 
     .line 109
-    const-string/jumbo v3, "!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4"
+    const-string/jumbo v3, "MicroMsg.VoiceFile"
 
     const-string/jumbo v4, "exception:%s"
 
     new-array v5, v2, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_3
 
@@ -429,42 +294,53 @@
     move-exception v0
 
     .line 109
-    const-string/jumbo v3, "!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4"
+    const-string/jumbo v3, "MicroMsg.VoiceFile"
 
     const-string/jumbo v4, "exception:%s"
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v2, v1
 
-    invoke-static {v3, v4, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_4
 
-    .line 103
+    .line 102
     :catch_3
     move-exception v3
 
+    move-object v9, v3
+
+    move-object v3, v0
+
+    move-object v0, v9
+
+    .line 103
     :goto_5
     :try_start_6
-    const-string/jumbo v3, "!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4"
+    const-string/jumbo v4, "MicroMsg.VoiceFile"
 
-    const-string/jumbo v4, "file not found"
+    const-string/jumbo v5, ""
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v6, 0x0
+
+    new-array v6, v6, [Ljava/lang/Object;
+
+    invoke-static {v4, v0, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
     .line 105
-    if-eqz v0, :cond_3
+    if-eqz v3, :cond_3
 
     .line 107
     :try_start_7
-    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
+    invoke-virtual {v3}, Ljava/io/RandomAccessFile;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_4
 
@@ -475,19 +351,19 @@
     move-exception v0
 
     .line 109
-    const-string/jumbo v3, "!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4"
+    const-string/jumbo v3, "MicroMsg.VoiceFile"
 
     const-string/jumbo v4, "exception:%s"
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v2, v1
 
-    invoke-static {v3, v4, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_4
 
@@ -520,19 +396,19 @@
     move-exception v3
 
     .line 109
-    const-string/jumbo v4, "!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4"
+    const-string/jumbo v4, "MicroMsg.VoiceFile"
 
     const-string/jumbo v5, "exception:%s"
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v3
 
     aput-object v3, v2, v1
 
-    invoke-static {v4, v5, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_7
 
@@ -542,22 +418,9 @@
 
     goto :goto_6
 
-    :catchall_2
-    move-exception v3
-
-    move-object v9, v3
-
-    move-object v3, v0
-
-    move-object v0, v9
-
-    goto :goto_6
-
-    .line 103
+    .line 102
     :catch_6
     move-exception v0
-
-    move-object v0, v3
 
     goto :goto_5
 
@@ -583,7 +446,7 @@
 
     .line 129
     :goto_0
-    const-string/jumbo v3, "!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4"
+    const-string/jumbo v3, "MicroMsg.VoiceFile"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -599,7 +462,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 132
     :try_start_0
@@ -658,7 +521,7 @@
     if-nez p1, :cond_1
 
     .line 122
-    invoke-static {p0}, Lcom/tencent/mm/modelvoice/q;->hK(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/modelvoice/q;->ic(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -669,7 +532,7 @@
     if-ne p1, v2, :cond_6
 
     .line 124
-    const-string/jumbo v0, "!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4"
+    const-string/jumbo v0, "MicroMsg.VoiceFile"
 
     const-string/jumbo v3, "isSilkHeader usertype error, TYPE_RECOGNIZER_BIZ fileName:%s"
 
@@ -677,7 +540,7 @@
 
     aput-object p0, v2, v1
 
-    invoke-static {v0, v3, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -689,19 +552,19 @@
     move-exception v0
 
     .line 151
-    const-string/jumbo v3, "!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4"
+    const-string/jumbo v3, "MicroMsg.VoiceFile"
 
     const-string/jumbo v4, "exception:%s"
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v2, v1
 
-    invoke-static {v3, v4, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
@@ -713,7 +576,7 @@
     invoke-direct {v4, v0}, Ljava/lang/String;-><init>([B)V
 
     .line 140
-    const-string/jumbo v5, "!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4"
+    const-string/jumbo v5, "MicroMsg.VoiceFile"
 
     const-string/jumbo v6, "isSilkHeader voice file headHex:|%s| headStr:|%s| AmrFileOperator.AMR_NB_HEAD:|%s|"
 
@@ -723,7 +586,7 @@
 
     const/4 v8, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->I([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->O([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -739,7 +602,7 @@
 
     aput-object v8, v7, v0
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 141
     const-string/jumbo v0, "#!SILK_V3"
@@ -770,19 +633,19 @@
     move-exception v0
 
     .line 151
-    const-string/jumbo v3, "!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4"
+    const-string/jumbo v3, "MicroMsg.VoiceFile"
 
     const-string/jumbo v4, "exception:%s"
 
     new-array v5, v2, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_3
 
@@ -805,19 +668,19 @@
     move-exception v0
 
     .line 151
-    const-string/jumbo v3, "!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4"
+    const-string/jumbo v3, "MicroMsg.VoiceFile"
 
     const-string/jumbo v4, "exception:%s"
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v2, v1
 
-    invoke-static {v3, v4, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_4
 
@@ -827,11 +690,11 @@
 
     :goto_5
     :try_start_6
-    const-string/jumbo v3, "!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4"
+    const-string/jumbo v3, "MicroMsg.VoiceFile"
 
     const-string/jumbo v4, "isSilkHeader file not found"
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
@@ -851,19 +714,19 @@
     move-exception v0
 
     .line 151
-    const-string/jumbo v3, "!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4"
+    const-string/jumbo v3, "MicroMsg.VoiceFile"
 
     const-string/jumbo v4, "exception:%s"
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v2, v1
 
-    invoke-static {v3, v4, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_4
 
@@ -896,19 +759,19 @@
     move-exception v3
 
     .line 151
-    const-string/jumbo v4, "!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4"
+    const-string/jumbo v4, "MicroMsg.VoiceFile"
 
     const-string/jumbo v5, "exception:%s"
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v3
 
     aput-object v3, v2, v1
 
-    invoke-static {v4, v5, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_7
 
@@ -943,14 +806,14 @@
     goto/16 :goto_0
 .end method
 
-.method public static ka(Ljava/lang/String;)I
+.method public static kI(Ljava/lang/String;)I
     .locals 4
 
     .prologue
     const/4 v0, 0x0
 
     .line 26
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -966,7 +829,7 @@
 
     .line 29
     :cond_1
-    const-string/jumbo v1, "!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4"
+    const-string/jumbo v1, "MicroMsg.VoiceFile"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -982,7 +845,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 30
     invoke-static {p0, v0, v0}, Lcom/tencent/mm/modelvoice/o;->c(Ljava/lang/String;IZ)Z
@@ -1010,7 +873,7 @@
     goto :goto_0
 .end method
 
-.method private static kb(Ljava/lang/String;)I
+.method private static kJ(Ljava/lang/String;)I
     .locals 4
 
     .prologue
@@ -1067,4 +930,139 @@
     move v1, v0
 
     goto :goto_1
+.end method
+
+.method public static kr(Ljava/lang/String;)I
+    .locals 4
+
+    .prologue
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    .line 184
+    invoke-static {p0}, Lcom/tencent/mm/modelvoice/o;->kI(Ljava/lang/String;)I
+
+    move-result v2
+
+    packed-switch v2, :pswitch_data_0
+
+    .line 195
+    invoke-static {p0}, Lcom/tencent/mm/modelvoice/q;->ic(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tencent/mm/modelvoice/o;->kJ(Ljava/lang/String;)I
+
+    move-result v1
+
+    :cond_0
+    :goto_0
+    return v1
+
+    .line 186
+    :pswitch_0
+    invoke-static {p0}, Lcom/tencent/mm/modelvoice/q;->ic(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tencent/mm/modelvoice/o;->kJ(Ljava/lang/String;)I
+
+    move-result v1
+
+    goto :goto_0
+
+    .line 188
+    :pswitch_1
+    invoke-static {p0}, Lcom/tencent/mm/modelvoice/q;->ic(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    if-ltz v3, :cond_1
+
+    :goto_1
+    invoke-static {v0}, Ljunit/framework/Assert;->assertTrue(Z)V
+
+    new-instance v0, Ljava/io/File;
+
+    invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v0}, Ljava/io/File;->length()J
+
+    move-result-wide v2
+
+    long-to-int v0, v2
+
+    if-lez v0, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v1
+
+    goto :goto_1
+
+    .line 190
+    :pswitch_2
+    invoke-static {p0}, Lcom/tencent/mm/modelvoice/q;->ic(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    if-ltz v3, :cond_2
+
+    :goto_2
+    invoke-static {v0}, Ljunit/framework/Assert;->assertTrue(Z)V
+
+    new-instance v0, Ljava/io/File;
+
+    invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v0}, Ljava/io/File;->length()J
+
+    move-result-wide v2
+
+    long-to-int v0, v2
+
+    if-lez v0, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_2
+    move v0, v1
+
+    goto :goto_2
+
+    .line 184
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+    .end packed-switch
 .end method

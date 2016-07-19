@@ -1,21 +1,26 @@
 package com.tencent.mm.ui.chatting.gallery;
 
-import android.annotation.TargetApi;
+import android.animation.TimeInterpolator;
+import android.os.Build.VERSION;
 import android.view.View;
+import android.view.ViewPropertyAnimator;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class ImageGalleryGridUI$7
   implements Runnable
 {
-  ImageGalleryGridUI$7(ImageGalleryGridUI paramImageGalleryGridUI) {}
+  ImageGalleryGridUI$7(ImageGalleryGridUI paramImageGalleryGridUI, View paramView, TimeInterpolator paramTimeInterpolator) {}
   
-  @TargetApi(12)
   public final void run()
   {
-    if (lfA.lft != null)
-    {
-      lfA.lft.setVisibility(8);
-      lfA.lft = null;
+    if (Build.VERSION.SDK_INT >= 16) {
+      lFP.animate().setDuration(500L).alpha(0.0F).withEndAction(lFM.lFE).withLayer().setInterpolator(lFQ);
     }
+    while (lFM.handler == null) {
+      return;
+    }
+    lFP.animate().setDuration(500L).alpha(0.0F).setInterpolator(lFQ);
+    lFM.handler.postDelayed(lFM.lFE, 500L);
   }
 }
 

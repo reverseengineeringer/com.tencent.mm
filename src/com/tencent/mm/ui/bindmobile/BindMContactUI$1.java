@@ -10,7 +10,7 @@ final class BindMContactUI$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    BindMContactUI.a(kOD);
+    BindMContactUI.a(lnT);
   }
 }
 

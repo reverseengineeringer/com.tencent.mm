@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract Gs(Ljava/lang/String;)V
+.method public abstract IH(Ljava/lang/String;)V
 .end method

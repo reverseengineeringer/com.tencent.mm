@@ -1,8 +1,8 @@
 package com.tencent.mm.ui.account;
 
-import com.tencent.mm.ak.b;
+import com.tencent.mm.an.b;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 
 final class LoginHistoryUI$19
   implements Runnable
@@ -11,8 +11,8 @@ final class LoginHistoryUI$19
   
   public final void run()
   {
-    b localb = new b(ktA, ktB);
-    ah.tE().d(localb);
+    b localb = new b(kSI, cRT);
+    ah.tF().a(localb, 0);
   }
 }
 

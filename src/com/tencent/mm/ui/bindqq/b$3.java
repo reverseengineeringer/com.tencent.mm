@@ -10,7 +10,7 @@ final class b$3
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    kPA.onDetach();
+    loQ.onDetach();
   }
 }
 

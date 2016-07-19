@@ -8,22 +8,22 @@ import java.util.Map;
 
 public final class e$a
 {
-  TypedValue khP = new TypedValue();
-  Map khU;
-  Application kiu;
-  Resources lL;
+  Application kIS;
+  TypedValue kIp = new TypedValue();
+  Map<Integer, c> kIu;
+  Resources mb;
   
-  public e$a(Map paramMap, Application paramApplication)
+  public e$a(Map<Integer, c> paramMap, Application paramApplication)
   {
-    khU = paramMap;
-    kiu = paramApplication;
-    lL = paramApplication.getResources();
+    kIu = paramMap;
+    kIS = paramApplication;
+    mb = paramApplication.getResources();
   }
   
   public final void a(Integer paramInteger, c paramc)
   {
-    khU.put(paramInteger, paramc);
-    e.a(kiu, lL, paramInteger.intValue(), khP);
+    kIu.put(paramInteger, paramc);
+    e.a(kIS, mb, paramInteger.intValue(), kIp);
   }
 }
 

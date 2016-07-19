@@ -14,9 +14,9 @@ import java.util.ArrayList;
 public class PhotosContent
   extends MMFrameLayout
 {
-  ArrayList gZC = new ArrayList();
-  private float gZD;
-  private int gZE = 120;
+  public ArrayList<TagImageView> hmU = new ArrayList();
+  private float hmV;
+  private int hmW = 120;
   
   public PhotosContent(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -25,13 +25,50 @@ public class PhotosContent
   
   public final void a(TagImageView paramTagImageView)
   {
-    gZC.add(paramTagImageView);
+    hmU.add(paramTagImageView);
   }
   
-  public final TagImageView lW(int paramInt)
+  public final void nk(int paramInt)
   {
-    if (paramInt < gZC.size()) {
-      return (TagImageView)gZC.get(paramInt);
+    if (paramInt <= 0) {}
+    int i;
+    do
+    {
+      return;
+      hmV = getResourcesgetDisplayMetricsdensity;
+      hmW = ((int)(hmW * hmV));
+      if (paramInt < hmW) {}
+      for (;;)
+      {
+        i = 0;
+        while (i < hmU.size())
+        {
+          localObject1 = getChildAt(i);
+          Object localObject2 = new ViewGroup.MarginLayoutParams(((View)localObject1).getLayoutParams());
+          width = paramInt;
+          height = paramInt;
+          leftMargin = ((int)(i % 3 * (paramInt + hmV * 3.0F)));
+          topMargin = ((int)(i / 3 * (paramInt + hmV * 3.0F)));
+          localObject2 = new FrameLayout.LayoutParams((ViewGroup.MarginLayoutParams)localObject2);
+          gravity = 51;
+          ((View)localObject1).setLayoutParams((ViewGroup.LayoutParams)localObject2);
+          i += 1;
+        }
+        paramInt = hmW;
+      }
+      i = hmU.size() / 3;
+    } while (i <= 0);
+    Object localObject1 = (ViewGroup.MarginLayoutParams)getLayoutParams();
+    float f1 = paramInt * i;
+    float f2 = hmV;
+    height = ((int)((i - 1) * (f2 * 3.0F) + f1));
+    setLayoutParams((ViewGroup.LayoutParams)localObject1);
+  }
+  
+  public final TagImageView nl(int paramInt)
+  {
+    if (paramInt < hmU.size()) {
+      return (TagImageView)hmU.get(paramInt);
     }
     return null;
   }
@@ -39,43 +76,6 @@ public class PhotosContent
   protected void onMeasure(int paramInt1, int paramInt2)
   {
     super.onMeasure(paramInt1, paramInt2);
-  }
-  
-  public void setImageViewWidth(int paramInt)
-  {
-    if (paramInt <= 0) {}
-    int i;
-    do
-    {
-      return;
-      gZD = getResourcesgetDisplayMetricsdensity;
-      gZE = ((int)(gZE * gZD));
-      if (paramInt < gZE) {}
-      for (;;)
-      {
-        i = 0;
-        while (i < gZC.size())
-        {
-          localObject1 = getChildAt(i);
-          Object localObject2 = new ViewGroup.MarginLayoutParams(((View)localObject1).getLayoutParams());
-          width = paramInt;
-          height = paramInt;
-          leftMargin = ((int)(i % 3 * (paramInt + gZD * 3.0F)));
-          topMargin = ((int)(i / 3 * (paramInt + gZD * 3.0F)));
-          localObject2 = new FrameLayout.LayoutParams((ViewGroup.MarginLayoutParams)localObject2);
-          gravity = 51;
-          ((View)localObject1).setLayoutParams((ViewGroup.LayoutParams)localObject2);
-          i += 1;
-        }
-        paramInt = gZE;
-      }
-      i = gZC.size() / 3;
-    } while (i <= 0);
-    Object localObject1 = (ViewGroup.MarginLayoutParams)getLayoutParams();
-    float f1 = paramInt * i;
-    float f2 = gZD;
-    height = ((int)((i - 1) * (f2 * 3.0F) + f1));
-    setLayoutParams((ViewGroup.LayoutParams)localObject1);
   }
 }
 

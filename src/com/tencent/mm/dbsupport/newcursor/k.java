@@ -3,71 +3,71 @@ package com.tencent.mm.dbsupport.newcursor;
 import android.util.SparseArray;
 import java.util.ArrayList;
 
-public abstract class k
+public abstract class k<K, T extends a>
 {
-  public e bvI;
+  public e bkB;
   
   public k(e parame, int paramInt)
   {
-    bvI = parame;
-    bvI.aG(true);
-    bvI.a(new j.a()
+    bkB = parame;
+    bkB.al(true);
+    bkB.a(new j.a()
     {
-      public final ArrayList d(ArrayList paramAnonymousArrayList)
+      public final ArrayList<a> e(ArrayList<Object> paramAnonymousArrayList)
       {
-        return k.this.d(paramAnonymousArrayList);
+        return k.this.e(paramAnonymousArrayList);
       }
       
-      public final a qD()
+      public final a ph()
       {
-        return qM();
+        return pq();
       }
     });
     if (paramInt != 0) {
-      bvI.ck(paramInt);
+      bkB.cK(paramInt);
     }
     getCount();
   }
   
-  public final boolean T(Object paramObject)
+  public final boolean ae(Object paramObject)
   {
-    return bvI.T(paramObject);
+    return bkB.ae(paramObject);
   }
   
-  public final void b(Object paramObject, a parama)
+  public final void b(Object paramObject, T paramT)
   {
-    bvI.a(paramObject, parama);
+    bkB.a(paramObject, paramT);
   }
   
   public final void close()
   {
-    bvI.close();
-    bvI = null;
+    bkB.close();
+    bkB = null;
   }
   
-  public abstract ArrayList d(ArrayList paramArrayList);
+  public abstract ArrayList<T> e(ArrayList<Object> paramArrayList);
   
   public final int getCount()
   {
-    return bvI.getCount();
+    return bkB.getCount();
   }
   
   public final boolean isClosed()
   {
-    return bvI.isClosed();
+    return bkB.isClosed();
   }
   
-  public final boolean qG()
+  public final boolean pk()
   {
-    return bvI.qG();
+    return bkB.pk();
   }
   
-  public final SparseArray[] qH()
+  public final SparseArray<K>[] pl()
   {
-    return bvI.qH();
+    return bkB.pl();
   }
   
-  public abstract a qM();
+  public abstract T pq();
 }
 
 /* Location:

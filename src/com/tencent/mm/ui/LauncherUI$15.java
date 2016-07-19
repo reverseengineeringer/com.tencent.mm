@@ -1,28 +1,17 @@
 package com.tencent.mm.ui;
 
-import android.os.MessageQueue.IdleHandler;
-import android.view.LayoutInflater;
-import com.tencent.mm.sdk.platformtools.u;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.tencent.mm.plugin.report.service.g;
 
 final class LauncherUI$15
-  implements MessageQueue.IdleHandler
+  implements DialogInterface.OnClickListener
 {
   LauncherUI$15(LauncherUI paramLauncherUI) {}
   
-  public final boolean queueIdle()
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    long l = System.currentTimeMillis();
-    if (LauncherUI.p(knl) == null)
-    {
-      if (LauncherUI.q(knl) == null) {
-        LauncherUI.a(knl, p.ee(knl).inflate(2131361994, null));
-      }
-      if (LauncherUI.r(knl) == null) {
-        LauncherUI.b(knl, p.ee(knl).inflate(2131363263, null));
-      }
-    }
-    u.d("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "prepare chattingUI view use %dms", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
-    return false;
+    g.gdY.h(11584, new Object[] { Integer.valueOf(2) });
   }
 }
 

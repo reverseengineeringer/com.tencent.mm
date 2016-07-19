@@ -10,31 +10,31 @@ import com.tencent.mm.modelsearch.f;
 public final class g
   extends a
 {
-  public String lnf;
-  private b lnh = new b();
-  a lni = new a();
+  public String lNA;
+  private b lNB = new b();
+  a lNC = new a();
   
   public g(int paramInt)
   {
     super(0, paramInt);
   }
   
-  public final a.b ajt()
+  public final a.b amb()
   {
-    return lnh;
+    return lNB;
   }
   
-  protected final a.a awR()
+  protected final a.a azo()
   {
-    return lni;
+    return lNC;
   }
   
-  public final void er(Context paramContext) {}
+  public final void eu(Context paramContext) {}
   
   public final class a
     extends a.a
   {
-    public TextView dcT;
+    public TextView dbw;
     
     public a()
     {
@@ -52,9 +52,9 @@ public final class g
     
     public final View a(Context paramContext, ViewGroup paramViewGroup)
     {
-      paramContext = LayoutInflater.from(paramContext).inflate(2131363010, paramViewGroup, false);
-      paramViewGroup = (g.a)lni;
-      dcT = ((TextView)paramContext.findViewById(2131167263));
+      paramContext = LayoutInflater.from(paramContext).inflate(2130904325, paramViewGroup, false);
+      paramViewGroup = (g.a)lNC;
+      dbw = ((TextView)paramContext.findViewById(2131756195));
       paramContext.setTag(paramViewGroup);
       return paramContext;
     }
@@ -62,10 +62,10 @@ public final class g
     public final void a(Context paramContext, a.a parama, a parama1, boolean paramBoolean1, boolean paramBoolean2)
     {
       paramContext = (g.a)parama;
-      f.a(lnf, dcT);
+      f.a(lNA, dbw);
     }
     
-    public final boolean bhz()
+    public final boolean bnp()
     {
       return false;
     }

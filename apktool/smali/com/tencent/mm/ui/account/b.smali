@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field kqh:Lcom/tencent/mm/ui/applet/SecurityImage;
+.field kPm:Lcom/tencent/mm/ui/applet/SecurityImage;
 
-.field krH:Lcom/tencent/mm/r/j;
+.field kQQ:Lcom/tencent/mm/t/j;
 
 
 # direct methods
@@ -20,38 +20,40 @@
     invoke-direct {p0}, Lcom/tencent/mm/ui/applet/SecurityImage$b;-><init>()V
 
     .line 17
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/b;->kqh:Lcom/tencent/mm/ui/applet/SecurityImage;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/b;->kPm:Lcom/tencent/mm/ui/applet/SecurityImage;
 
     .line 18
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/b;->krH:Lcom/tencent/mm/r/j;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/b;->kQQ:Lcom/tencent/mm/t/j;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bby()V
+.method public abstract a(Lcom/tencent/mm/t/j;Ljava/lang/String;)Lcom/tencent/mm/t/j;
+.end method
+
+.method public final bgK()V
     .locals 3
 
     .prologue
     .line 22
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/b;->krH:Lcom/tencent/mm/r/j;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/b;->kQQ:Lcom/tencent/mm/t/j;
 
     const-string/jumbo v2, ""
 
-    invoke-virtual {p0, v1, v2}, Lcom/tencent/mm/ui/account/b;->d(Lcom/tencent/mm/r/j;Ljava/lang/String;)Lcom/tencent/mm/r/j;
+    invoke-virtual {p0, v1, v2}, Lcom/tencent/mm/ui/account/b;->a(Lcom/tencent/mm/t/j;Ljava/lang/String;)Lcom/tencent/mm/t/j;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
     .line 23
     return-void
-.end method
-
-.method public abstract d(Lcom/tencent/mm/r/j;Ljava/lang/String;)Lcom/tencent/mm/r/j;
 .end method

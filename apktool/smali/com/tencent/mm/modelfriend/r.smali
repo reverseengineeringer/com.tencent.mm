@@ -4,11 +4,11 @@
 
 
 # static fields
-.field public static final aoY:[Ljava/lang/String;
+.field public static final bkN:[Ljava/lang/String;
 
 
 # instance fields
-.field private bCw:Lcom/tencent/mm/az/g;
+.field private bvG:Lcom/tencent/mm/bc/g;
 
 
 # direct methods
@@ -27,12 +27,12 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/modelfriend/r;->aoY:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/modelfriend/r;->bkN:[Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/tencent/mm/az/g;)V
+.method public constructor <init>(Lcom/tencent/mm/bc/g;)V
     .locals 0
 
     .prologue
@@ -40,7 +40,7 @@
     invoke-direct {p0}, Lcom/tencent/mm/sdk/h/g;-><init>()V
 
     .line 46
-    iput-object p1, p0, Lcom/tencent/mm/modelfriend/r;->bCw:Lcom/tencent/mm/az/g;
+    iput-object p1, p0, Lcom/tencent/mm/modelfriend/r;->bvG:Lcom/tencent/mm/bc/g;
 
     .line 47
     return-void
@@ -63,20 +63,20 @@
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/modelfriend/r;->hA(Ljava/lang/String;)Z
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/modelfriend/r;->hS(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
     .line 72
-    iput v6, p1, Lcom/tencent/mm/modelfriend/q;->aou:I
+    iput v6, p1, Lcom/tencent/mm/modelfriend/q;->aqQ:I
 
-    invoke-virtual {p1}, Lcom/tencent/mm/modelfriend/q;->lX()Landroid/content/ContentValues;
+    invoke-virtual {p1}, Lcom/tencent/mm/modelfriend/q;->kn()Landroid/content/ContentValues;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/tencent/mm/modelfriend/r;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v3, p0, Lcom/tencent/mm/modelfriend/r;->bvG:Lcom/tencent/mm/bc/g;
 
     const-string/jumbo v4, "invitefriendopen"
 
@@ -102,7 +102,7 @@
 
     aput-object v7, v6, v1
 
-    invoke-virtual {v3, v4, v2, v5, v6}, Lcom/tencent/mm/az/g;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-virtual {v3, v4, v2, v5, v6}, Lcom/tencent/mm/bc/g;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v2
 
@@ -121,19 +121,19 @@
 
     .line 74
     :cond_2
-    iput v6, p1, Lcom/tencent/mm/modelfriend/q;->aou:I
+    iput v6, p1, Lcom/tencent/mm/modelfriend/q;->aqQ:I
 
-    invoke-virtual {p1}, Lcom/tencent/mm/modelfriend/q;->lX()Landroid/content/ContentValues;
+    invoke-virtual {p1}, Lcom/tencent/mm/modelfriend/q;->kn()Landroid/content/ContentValues;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/tencent/mm/modelfriend/r;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v3, p0, Lcom/tencent/mm/modelfriend/r;->bvG:Lcom/tencent/mm/bc/g;
 
     const-string/jumbo v4, "invitefriendopen"
 
     const-string/jumbo v5, "username"
 
-    invoke-virtual {v3, v4, v5, v2}, Lcom/tencent/mm/az/g;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
+    invoke-virtual {v3, v4, v5, v2}, Lcom/tencent/mm/bc/g;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     move-result-wide v2
 
@@ -146,7 +146,7 @@
     goto :goto_0
 .end method
 
-.method public final hA(Ljava/lang/String;)Z
+.method public final hS(Ljava/lang/String;)Z
     .locals 3
 
     .prologue
@@ -157,7 +157,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kx(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->lh(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -176,11 +176,11 @@
     move-result-object v0
 
     .line 87
-    iget-object v1, p0, Lcom/tencent/mm/modelfriend/r;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/r;->bvG:Lcom/tencent/mm/bc/g;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/az/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/bc/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
 

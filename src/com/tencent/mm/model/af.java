@@ -4,7 +4,7 @@ import java.util.Map;
 
 public abstract interface af
 {
-  public abstract Map kY();
+  public abstract Map<String, ae> jz();
 }
 
 /* Location:

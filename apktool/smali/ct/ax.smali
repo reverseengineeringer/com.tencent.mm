@@ -1,285 +1,217 @@
 .class public final Lct/ax;
 .super Ljava/lang/Object;
 
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lct/ax$a;,
-        Lct/ax$b;,
-        Lct/ax$c;
-    }
-.end annotation
+# interfaces
+.implements Lct/as;
 
 
 # static fields
-.field public static a:I
+.field private static k:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public static b:I
 
-.field private static c:I
+# instance fields
+.field public a:Lct/be;
 
-.field private static d:Ljava/util/concurrent/ThreadPoolExecutor;
+.field public b:I
+
+.field public c:Ljava/lang/String;
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:Lct/s;
+
+.field public i:J
+
+.field public j:I
+
+.field private l:Lct/be;
+
+.field private m:[B
+
+.field private n:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    const/4 v0, -0x1
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    sput v0, Lct/ax;->a:I
+    const/4 v1, 0x0
 
-    sput v0, Lct/ax;->b:I
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    const/16 v0, 0x4e20
-
-    sput v0, Lct/ax;->c:I
+    sput-object v0, Lct/ax;->k:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-void
 .end method
 
-.method public static a(Ljava/util/ArrayList;Ljava/lang/String;I)Lct/aw;
-    .locals 12
-
-    new-instance v9, Ljava/util/concurrent/CountDownLatch;
-
-    const/4 v0, 0x1
-
-    invoke-direct {v9, v0}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
-
-    new-instance v10, Lct/ax$c;
-
-    const/4 v0, 0x0
-
-    invoke-direct {v10, v0}, Lct/ax$c;-><init>(B)V
-
-    new-instance v8, Lct/aw;
-
-    invoke-direct {v8}, Lct/aw;-><init>()V
-
-    :try_start_0
-    sget-object v0, Lct/ax;->d:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x5
-
-    const-wide/16 v3, 0xbb8
-
-    sget-object v5, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    new-instance v6, Ljava/util/concurrent/LinkedBlockingQueue;
-
-    const/4 v7, 0x5
-
-    invoke-direct {v6, v7}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>(I)V
-
-    new-instance v7, Lct/ax$a;
-
-    const-string/jumbo v11, "HalleyAccess"
-
-    invoke-direct {v7, v11}, Lct/ax$a;-><init>(Ljava/lang/String;)V
-
-    invoke-direct/range {v0 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
-
-    sput-object v0, Lct/ax;->d:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    :cond_0
-    invoke-static {p0, p1}, Lct/ax;->a(Ljava/util/ArrayList;Ljava/lang/String;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lct/aw;
-
-    new-instance v2, Lct/ax$b;
-
-    invoke-direct {v2, v9, v10, v0}, Lct/ax$b;-><init>(Ljava/util/concurrent/CountDownLatch;Lct/ax$c;Lct/aw;)V
-
-    sget-object v0, Lct/ax;->d:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    :goto_1
-    return-object v8
-
-    :cond_1
-    if-ltz p2, :cond_2
-
-    sget v0, Lct/ax;->c:I
-
-    if-le p2, v0, :cond_3
-
-    :cond_2
-    sget p2, Lct/ax;->c:I
-
-    :cond_3
-    int-to-long v0, p2
-
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v9, v0, v1, v2}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, v10, Lct/ax$c;->b:Lct/aw;
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
-
-    :goto_2
-    move-object v8, v0
-
-    goto :goto_1
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_2
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_4
-    move-object v0, v8
-
-    goto :goto_2
-.end method
-
-.method public static a(Ljava/util/ArrayList;I)Ljava/net/Socket;
+.method public constructor <init>(Lct/be;)V
     .locals 3
 
+    const/4 v2, 0x0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput v2, p0, Lct/ax;->n:I
+
+    iput v2, p0, Lct/ax;->b:I
+
+    new-instance v0, Ljava/util/concurrent/CountDownLatch;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+
+    iput v2, p0, Lct/ax;->d:I
+
+    iput v2, p0, Lct/ax;->e:I
+
+    iput v2, p0, Lct/ax;->f:I
+
+    iput v2, p0, Lct/ax;->g:I
+
     const/4 v0, 0x0
 
-    if-eqz p0, :cond_0
+    iput-object v0, p0, Lct/ax;->h:Lct/s;
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+    const-wide/16 v0, 0x0
 
-    move-result v1
+    iput-wide v0, p0, Lct/ax;->i:J
 
-    if-gtz v1, :cond_1
+    const/16 v0, 0x14
 
-    :cond_0
-    :goto_0
-    return-object v0
+    iput v0, p0, Lct/ax;->j:I
 
-    :cond_1
-    const-string/jumbo v1, ""
+    iput-object p1, p0, Lct/ax;->l:Lct/be;
 
-    invoke-static {p0, v1, p1}, Lct/ax;->a(Ljava/util/ArrayList;Ljava/lang/String;I)Lct/aw;
+    sget-object v0, Lct/ax;->k:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    const-string/jumbo v0, "ParallelResolver"
-
-    const-string/jumbo v2, "getFastSocket end."
-
-    invoke-static {v0, v2}, Lct/bc;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, v1, Lct/aw;->b:Ljava/net/Socket;
-
-    goto :goto_0
-.end method
-
-.method private static a(Ljava/util/ArrayList;Ljava/lang/String;)Ljava/util/List;
-    .locals 4
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    iput v0, p0, Lct/ax;->n:I
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v0, p0, Lct/ax;->l:Lct/be;
+
+    iget v1, p0, Lct/ax;->n:I
+
+    invoke-virtual {v0, v1}, Lct/be;->a(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Lct/be;
+    .locals 1
+
+    iget-object v0, p0, Lct/ax;->a:Lct/be;
+
+    return-object v0
+.end method
+
+.method public final b()V
+    .locals 1
+
+    invoke-static {}, Lct/aw;->a()Lct/aw;
 
     move-result-object v0
 
-    check-cast v0, Lct/t;
+    invoke-virtual {v0, p0}, Lct/aw;->a(Lct/ax;)V
 
-    new-instance v3, Lct/aw;
-
-    invoke-direct {v3}, Lct/aw;-><init>()V
-
-    iput-object v0, v3, Lct/aw;->e:Lct/t;
-
-    invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    new-instance v0, Lct/aw;
-
-    invoke-direct {v0}, Lct/aw;-><init>()V
-
-    iput-object p1, v0, Lct/aw;->a:Ljava/lang/String;
-
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    return-object v1
+    return-void
 .end method
 
-.method public static a()V
+.method public final c()I
     .locals 1
 
-    sget-object v0, Lct/ax;->d:Ljava/util/concurrent/ThreadPoolExecutor;
+    iget v0, p0, Lct/ax;->b:I
 
-    if-eqz v0, :cond_0
+    return v0
+.end method
 
-    sget-object v0, Lct/ax;->d:Ljava/util/concurrent/ThreadPoolExecutor;
+.method public final d()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdownNow()Ljava/util/List;
+    iget-object v0, p0, Lct/ax;->c:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    return-object v0
+.end method
 
-    sput-object v0, Lct/ax;->d:Ljava/util/concurrent/ThreadPoolExecutor;
+.method public final e()Lct/s;
+    .locals 1
 
-    :cond_0
+    iget-object v0, p0, Lct/ax;->h:Lct/s;
+
+    return-object v0
+.end method
+
+.method public final f()I
+    .locals 1
+
+    iget v0, p0, Lct/ax;->d:I
+
+    return v0
+.end method
+
+.method public final g()I
+    .locals 1
+
+    iget v0, p0, Lct/ax;->g:I
+
+    return v0
+.end method
+
+.method public final h()I
+    .locals 1
+
+    iget v0, p0, Lct/ax;->e:I
+
+    return v0
+.end method
+
+.method public final i()I
+    .locals 1
+
+    iget v0, p0, Lct/ax;->f:I
+
+    return v0
+.end method
+
+.method public final j()V
+    .locals 1
+
+    iget-object v0, p0, Lct/ax;->l:Lct/be;
+
+    invoke-virtual {v0}, Lct/be;->a()[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Lct/ax;->m:[B
+
     return-void
+.end method
+
+.method public final k()I
+    .locals 1
+
+    iget v0, p0, Lct/ax;->n:I
+
+    return v0
+.end method
+
+.method public final l()[B
+    .locals 1
+
+    iget-object v0, p0, Lct/ax;->m:[B
+
+    return-object v0
 .end method

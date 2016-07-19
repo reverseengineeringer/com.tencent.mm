@@ -10,9 +10,9 @@ import com.tencent.mm.model.n;
 import com.tencent.mm.pluginsdk.l;
 import com.tencent.mm.pluginsdk.ui.d.b;
 import com.tencent.mm.sdk.h.d;
-import com.tencent.mm.storage.ad;
-import com.tencent.mm.storage.ak;
-import com.tencent.mm.storage.al;
+import com.tencent.mm.storage.ae;
+import com.tencent.mm.storage.am;
+import com.tencent.mm.storage.an;
 import com.tencent.mm.ui.contact.SelectContactUI;
 import java.util.LinkedList;
 import java.util.List;
@@ -31,41 +31,41 @@ class URISpanHandlerSet$ContactUriSpanHandler
     int i = type;
     if ((i == 23) || (i == 21) || (i == 22) || (i == 2))
     {
-      ad localad = (ad)paramg.c(ad.class);
+      ae localae = (ae)paramg.d(ae.class);
       if (paramb != null) {
         paramb.a(paramg);
       }
-      if (localad == null)
+      if (localae == null)
       {
-        com.tencent.mm.ui.base.g.y(URISpanHandlerSet.a(ang), URISpanHandlerSet.a(ang).getString(2131428023), URISpanHandlerSet.a(ang).getString(2131430877));
+        com.tencent.mm.ui.base.g.b(URISpanHandlerSet.a(ZU), URISpanHandlerSet.a(ZU).getString(2131233478), URISpanHandlerSet.a(ZU).getString(2131231028), true);
         return false;
       }
-      if (localad.getType().equals("@t.qq.com")) {
-        if (ah.tD().rv().FD("@t.qq.com") == null) {
-          break label277;
+      if (localae.getType().equals("@t.qq.com")) {
+        if (ah.tE().rx().HT("@t.qq.com") == null) {
+          break label279;
         }
       }
-      label277:
+      label279:
       for (i = 1;; i = 0)
       {
         if (i == 0) {
-          com.tencent.mm.ui.base.g.y(URISpanHandlerSet.a(ang), URISpanHandlerSet.a(ang).getString(2131428023), URISpanHandlerSet.a(ang).getString(2131430877));
+          com.tencent.mm.ui.base.g.b(URISpanHandlerSet.a(ZU), URISpanHandlerSet.a(ZU).getString(2131233478), URISpanHandlerSet.a(ZU).getString(2131231028), true);
         }
-        if (!localad.getType().equals("@domain.android")) {
-          break label366;
+        if (!localae.getType().equals("@domain.android")) {
+          break label369;
         }
-        paramb = ah.tD().rv();
+        paramb = ah.tE().rx();
         paramg = new LinkedList();
-        paramb = aoX.query("role_info", null, "int_reserved1=1", null, null, null, null);
+        paramb = bkP.query("role_info", null, "int_reserved1=1", null, null, null, null);
         if (paramb.getCount() <= 0) {
           break;
         }
         paramb.moveToFirst();
         while (!paramb.isAfterLast())
         {
-          ak localak = new ak();
-          localak.c(paramb);
-          paramg.add(localak);
+          am localam = new am();
+          localam.b(paramb);
+          paramg.add(localam);
           paramb.moveToNext();
         }
       }
@@ -74,20 +74,20 @@ class URISpanHandlerSet$ContactUriSpanHandler
       {
         i = 0;
         if (i < paramg.size()) {
-          if (!((ak)paramg.get(i)).PN()) {}
+          if (!((am)paramg.get(i)).Rc()) {}
         }
       }
       for (i = 1;; i = 0)
       {
         if (i == 0) {
-          com.tencent.mm.ui.base.g.y(URISpanHandlerSet.a(ang), URISpanHandlerSet.a(ang).getString(2131428023), URISpanHandlerSet.a(ang).getString(2131430877));
+          com.tencent.mm.ui.base.g.b(URISpanHandlerSet.a(ZU), URISpanHandlerSet.a(ZU).getString(2131233478), URISpanHandlerSet.a(ZU).getString(2131231028), true);
         }
-        label366:
+        label369:
         paramg = new Intent();
-        paramg.setClass(URISpanHandlerSet.a(ang), SelectContactUI.class);
-        paramg.putExtra("Contact_GroupFilter_Type", localad.getType()).putExtra("Contact_GroupFilter_Str", localad.aWT()).putExtra("Contact_GroupFilter_DisplayName", localad.qy());
+        paramg.setClass(URISpanHandlerSet.a(ZU), SelectContactUI.class);
+        paramg.putExtra("Contact_GroupFilter_Type", localae.getType()).putExtra("Contact_GroupFilter_Str", localae.bcm()).putExtra("Contact_GroupFilter_DisplayName", localae.pb());
         paramg.addFlags(268435456);
-        URISpanHandlerSet.a(ang).startActivity(paramg);
+        URISpanHandlerSet.a(ZU).startActivity(paramg);
         return true;
         i += 1;
         break;
@@ -100,30 +100,30 @@ class URISpanHandlerSet$ContactUriSpanHandler
   {
     if ((paramString.equals("weixin://contacts/microblog/")) || (paramString.equals("weixin://contacts/micromessenger/")) || (paramString.equals("weixin://contacts/all/")))
     {
-      paraml = n.eY(URISpanHandlerSet.a(ang).getString(2131427395));
+      paraml = n.fk(URISpanHandlerSet.a(ZU).getString(2131233184));
       if (paramString.equals("weixin://contacts/microblog/")) {
-        paraml = n.eY(URISpanHandlerSet.a(ang).getString(2131427396));
+        paraml = n.fk(URISpanHandlerSet.a(ZU).getString(2131233183));
       }
       if (paramString.equals("weixin://contacts/micromessenger/")) {
-        paraml = n.eY(URISpanHandlerSet.a(ang).getString(2131427395));
+        paraml = n.fk(URISpanHandlerSet.a(ZU).getString(2131233184));
       }
       if (paramString.equals("weixin://contacts/all/")) {
-        paraml = n.eY(URISpanHandlerSet.a(ang).getString(2131427394));
+        paraml = n.fk(URISpanHandlerSet.a(ZU).getString(2131233180));
       }
       paramString = new Intent();
-      paramString.setClass(URISpanHandlerSet.a(ang), SelectContactUI.class);
-      paramString.putExtra("Contact_GroupFilter_Type", paraml.getType()).putExtra("Contact_GroupFilter_Str", paraml.aWT()).putExtra("Contact_GroupFilter_DisplayName", paraml.qy());
+      paramString.setClass(URISpanHandlerSet.a(ZU), SelectContactUI.class);
+      paramString.putExtra("Contact_GroupFilter_Type", paraml.getType()).putExtra("Contact_GroupFilter_Str", paraml.bcm()).putExtra("Contact_GroupFilter_DisplayName", paraml.pb());
       paramString.addFlags(268435456);
       return true;
     }
     return false;
   }
   
-  final com.tencent.mm.pluginsdk.ui.applet.g bb(String paramString)
+  final com.tencent.mm.pluginsdk.ui.applet.g bg(String paramString)
   {
     Object localObject2 = null;
     if (paramString.trim().equals("weixin://contacts/all/")) {
-      localObject1 = new com.tencent.mm.pluginsdk.ui.applet.g(paramString, 23, new ad("@all.android", null, URISpanHandlerSet.a(ang).getString(2131427394), null, true, true));
+      localObject1 = new com.tencent.mm.pluginsdk.ui.applet.g(paramString, 23, new ae("@all.android", null, URISpanHandlerSet.a(ZU).getString(2131233180), null, true, true));
     }
     String str;
     int i;
@@ -133,10 +133,10 @@ class URISpanHandlerSet$ContactUriSpanHandler
       {
         return (com.tencent.mm.pluginsdk.ui.applet.g)localObject1;
         if (paramString.trim().equals("weixin://contacts/microblog/")) {
-          return new com.tencent.mm.pluginsdk.ui.applet.g(paramString, 22, n.eY(URISpanHandlerSet.a(ang).getString(2131427396)));
+          return new com.tencent.mm.pluginsdk.ui.applet.g(paramString, 22, n.fk(URISpanHandlerSet.a(ZU).getString(2131233183)));
         }
         if (paramString.trim().equals("weixin://contacts/micromessenger/")) {
-          return new com.tencent.mm.pluginsdk.ui.applet.g(paramString, 2, new ad("@micromsg.qq.com", null, URISpanHandlerSet.a(ang).getString(2131427395), null, true, true));
+          return new com.tencent.mm.pluginsdk.ui.applet.g(paramString, 2, new ae("@micromsg.qq.com", null, URISpanHandlerSet.a(ZU).getString(2131233184), null, true, true));
         }
         localObject1 = localObject2;
       } while (!paramString.trim().startsWith("weixin://contacts/"));
@@ -145,10 +145,10 @@ class URISpanHandlerSet$ContactUriSpanHandler
       localObject1 = localObject2;
     } while (i == -1);
     Object localObject1 = str.substring(i + 1);
-    return new com.tencent.mm.pluginsdk.ui.applet.g(paramString, 21, n.F("@" + (String)localObject1, URISpanHandlerSet.a(ang).getString(2131427397)));
+    return new com.tencent.mm.pluginsdk.ui.applet.g(paramString, 21, n.C("@" + (String)localObject1, URISpanHandlerSet.a(ZU).getString(2131233182)));
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 23, 21, 22, 2 };
   }

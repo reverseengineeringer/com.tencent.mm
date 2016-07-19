@@ -4,25 +4,25 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
-import com.tencent.mm.modelsimple.t;
+import com.tencent.mm.modelsimple.r;
 import com.tencent.mm.plugin.a.b;
 import com.tencent.mm.ui.MMActivity;
 
 final class LoginHistoryUI$9
   implements DialogInterface.OnClickListener
 {
-  LoginHistoryUI$9(LoginHistoryUI paramLoginHistoryUI, com.tencent.mm.r.j paramj) {}
+  LoginHistoryUI$9(LoginHistoryUI paramLoginHistoryUI, com.tencent.mm.t.j paramj) {}
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    b.kC("R400_100_login");
+    b.ll("R400_100_login");
     paramDialogInterface = new Intent();
-    paramDialogInterface.putExtra("regsetinfo_binduin", fktx).cbh);
-    paramDialogInterface.putExtra("regsetinfo_pwd", fktx).ktJ);
+    paramDialogInterface.putExtra("regsetinfo_binduin", fkSF).bUU);
+    paramDialogInterface.putExtra("regsetinfo_pwd", fkSF).kSQ);
     paramDialogInterface.putExtra("regsetinfo_ismobile", 0);
-    paramDialogInterface.putExtra("regsetinfo_NextControl", ((t)aoT).yQ());
-    paramDialogInterface.setClass(ktx, RegSetInfoUI.class);
-    ktx.koJ.kpc.startActivity(paramDialogInterface);
+    paramDialogInterface.putExtra("regsetinfo_NextControl", ((r)acZ).zd());
+    paramDialogInterface.setClass(kSF, RegSetInfoUI.class);
+    kSF.kNN.kOg.startActivity(paramDialogInterface);
   }
 }
 

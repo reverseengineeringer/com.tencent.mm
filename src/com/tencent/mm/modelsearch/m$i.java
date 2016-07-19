@@ -1,45 +1,45 @@
 package com.tencent.mm.modelsearch;
 
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import java.util.Comparator;
 import java.util.HashSet;
 
 public final class m$i
 {
-  public String aEy;
-  public String apb;
-  public int asc;
-  public m.j bYr;
-  public HashSet bYt;
-  public int bYu;
-  public int[] bZU;
-  public int[] bZV;
-  public Comparator bZW;
-  public aa handler;
+  public String ajT;
+  public String aqC;
+  public m.j bSa;
+  public HashSet<String> bSc;
+  public int bSd;
+  public int[] bTD;
+  public int[] bTE;
+  public Comparator<m.g> bTF;
+  public ac handler;
+  public int scene;
   
-  public static i a(String paramString, int paramInt, HashSet paramHashSet, m.j paramj, aa paramaa)
+  public static i a(String paramString, int paramInt, HashSet<String> paramHashSet, m.j paramj, ac paramac)
   {
-    return a(paramString, null, null, null, paramInt, paramHashSet, null, paramj, paramaa);
+    return a(paramString, null, null, null, paramInt, paramHashSet, null, paramj, paramac);
   }
   
-  public static i a(String paramString1, String paramString2, int[] paramArrayOfInt1, int[] paramArrayOfInt2, int paramInt, HashSet paramHashSet, Comparator paramComparator, m.j paramj, aa paramaa)
+  public static i a(String paramString1, String paramString2, int[] paramArrayOfInt1, int[] paramArrayOfInt2, int paramInt, HashSet<String> paramHashSet, Comparator<m.g> paramComparator, m.j paramj, ac paramac)
   {
     i locali = new i();
-    aEy = paramString1;
-    apb = paramString2;
-    bZU = paramArrayOfInt1;
-    bZV = paramArrayOfInt2;
-    bYu = paramInt;
-    bYt = paramHashSet;
-    bZW = paramComparator;
-    bYr = paramj;
-    handler = paramaa;
+    aqC = paramString1;
+    ajT = paramString2;
+    bTD = paramArrayOfInt1;
+    bTE = paramArrayOfInt2;
+    bSd = paramInt;
+    bSc = paramHashSet;
+    bTF = paramComparator;
+    bSa = paramj;
+    handler = paramac;
     return locali;
   }
   
-  public static i b(String paramString, int[] paramArrayOfInt1, int[] paramArrayOfInt2, int paramInt, HashSet paramHashSet, Comparator paramComparator, m.j paramj, aa paramaa)
+  public static i b(String paramString, int[] paramArrayOfInt1, int[] paramArrayOfInt2, int paramInt, HashSet<String> paramHashSet, Comparator<m.g> paramComparator, m.j paramj, ac paramac)
   {
-    return a(paramString, null, paramArrayOfInt1, paramArrayOfInt2, paramInt, paramHashSet, paramComparator, paramj, paramaa);
+    return a(paramString, null, paramArrayOfInt1, paramArrayOfInt2, paramInt, paramHashSet, paramComparator, paramj, paramac);
   }
 }
 

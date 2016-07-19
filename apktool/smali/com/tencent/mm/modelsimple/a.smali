@@ -14,7 +14,7 @@
     return-void
 .end method
 
-.method public static iY(Ljava/lang/String;)Lcom/tencent/mm/modelsimple/BindWordingContent;
+.method public static jq(Ljava/lang/String;)Lcom/tencent/mm/modelsimple/BindWordingContent;
     .locals 6
 
     .prologue
@@ -151,7 +151,7 @@
 
     move-result-object v1
 
-    iput-object v1, v2, Lcom/tencent/mm/modelsimple/BindWordingContent;->caF:Ljava/lang/Integer;
+    iput-object v1, v2, Lcom/tencent/mm/modelsimple/BindWordingContent;->bUo:Ljava/lang/Integer;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -167,7 +167,7 @@
 
     move-result-object v1
 
-    iput-object v1, v2, Lcom/tencent/mm/modelsimple/BindWordingContent;->caF:Ljava/lang/Integer;
+    iput-object v1, v2, Lcom/tencent/mm/modelsimple/BindWordingContent;->bUo:Ljava/lang/Integer;
 
     goto :goto_1
 

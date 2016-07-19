@@ -7,16 +7,16 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.model.i;
 import com.tencent.mm.pluginsdk.ui.d.e;
 
 public class f
   extends a
 {
-  public CharSequence cKS;
-  private b lnc = new b();
-  a lnd = new a();
+  public CharSequence cHV;
+  private b lNx = new b();
+  a lNy = new a();
   public String username;
   
   public f(int paramInt)
@@ -24,35 +24,35 @@ public class f
     super(3, paramInt);
   }
   
-  public final a.b ajt()
+  public final a.b amb()
   {
-    return lnc;
+    return lNx;
   }
   
-  protected final a.a awR()
+  protected final a.a azo()
   {
-    return lnd;
+    return lNy;
   }
   
-  public void er(Context paramContext)
+  public void eu(Context paramContext)
   {
-    if (cId == null)
+    if (cFh == null)
     {
-      cKS = "";
+      cHV = "";
       username = "";
       return;
     }
-    cKS = e.a(paramContext, i.d(cId), com.tencent.mm.aw.a.z(paramContext, 2131034564));
-    username = cId.field_username;
+    cHV = e.a(paramContext, i.d(cFh), com.tencent.mm.az.a.D(paramContext, 2131427667));
+    username = cFh.field_username;
   }
   
   public final class a
     extends a.a
   {
-    public TextView cHk;
-    public TextView cOd;
-    public ImageView czS;
-    public CheckBox czW;
+    public TextView cEo;
+    public ImageView cui;
+    public TextView cuk;
+    public CheckBox cul;
     
     public a()
     {
@@ -70,13 +70,13 @@ public class f
     
     public final View a(Context paramContext, ViewGroup paramViewGroup)
     {
-      paramContext = LayoutInflater.from(paramContext).inflate(2131363057, paramViewGroup, false);
-      paramViewGroup = (f.a)lnd;
-      czS = ((ImageView)paramContext.findViewById(2131165293));
-      cHk = ((TextView)paramContext.findViewById(2131165340));
-      cOd = ((TextView)paramContext.findViewById(2131165341));
-      cOd.setVisibility(8);
-      czW = ((CheckBox)paramContext.findViewById(2131165695));
+      paramContext = LayoutInflater.from(paramContext).inflate(2130904323, paramViewGroup, false);
+      paramViewGroup = (f.a)lNy;
+      cui = ((ImageView)paramContext.findViewById(2131755444));
+      cEo = ((TextView)paramContext.findViewById(2131755331));
+      cuk = ((TextView)paramContext.findViewById(2131755333));
+      cuk.setVisibility(8);
+      cul = ((CheckBox)paramContext.findViewById(2131755446));
       paramContext.setTag(paramViewGroup);
       return paramContext;
     }
@@ -85,27 +85,27 @@ public class f
     {
       paramContext = (f)parama1;
       parama = (f.a)parama;
-      com.tencent.mm.modelsearch.f.a(cKS, cHk);
-      com.tencent.mm.pluginsdk.ui.a.b.b(czS, username);
-      if (lkT)
+      com.tencent.mm.modelsearch.f.a(cHV, cEo);
+      com.tencent.mm.pluginsdk.ui.a.b.a(cui, username);
+      if (lLe)
       {
         if (paramBoolean1)
         {
-          czW.setChecked(true);
-          czW.setEnabled(false);
+          cul.setChecked(true);
+          cul.setEnabled(false);
         }
         for (;;)
         {
-          czW.setVisibility(0);
+          cul.setVisibility(0);
           return;
-          czW.setChecked(paramBoolean2);
-          czW.setEnabled(true);
+          cul.setChecked(paramBoolean2);
+          cul.setEnabled(true);
         }
       }
-      czW.setVisibility(8);
+      cul.setVisibility(8);
     }
     
-    public final boolean bhz()
+    public final boolean bnp()
     {
       return false;
     }

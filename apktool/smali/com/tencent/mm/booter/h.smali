@@ -4,17 +4,17 @@
 
 
 # direct methods
-.method public static nb()Z
+.method public static lp()Z
     .locals 4
 
     .prologue
-    .line 86
+    .line 84
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -28,7 +28,7 @@
 
     check-cast v0, Ljava/lang/Long;
 
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/t;->d(Ljava/lang/Long;)J
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/s;->d(Ljava/lang/Long;)J
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -36,7 +36,7 @@
     :goto_0
     const-wide/16 v0, 0x0
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/platformtools/t;->am(J)J
+    invoke-static {v0, v1}, Lcom/tencent/mm/platformtools/s;->at(J)J
 
     move-result-wide v0
 

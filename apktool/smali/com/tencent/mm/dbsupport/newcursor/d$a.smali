@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private bvu:[Ljava/lang/Object;
+.field private bkn:[Ljava/lang/Object;
 
-.field final synthetic bvv:Lcom/tencent/mm/dbsupport/newcursor/d;
+.field final synthetic bko:Lcom/tencent/mm/dbsupport/newcursor/d;
 
 .field private final endIndex:I
 
@@ -29,51 +29,49 @@
     .locals 0
 
     .prologue
-    .line 132
-    iput-object p1, p0, Lcom/tencent/mm/dbsupport/newcursor/d$a;->bvv:Lcom/tencent/mm/dbsupport/newcursor/d;
+    .line 125
+    iput-object p1, p0, Lcom/tencent/mm/dbsupport/newcursor/d$a;->bko:Lcom/tencent/mm/dbsupport/newcursor/d;
 
-    .line 128
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 129
+    .line 126
     iput p2, p0, Lcom/tencent/mm/dbsupport/newcursor/d$a;->index:I
 
-    .line 130
+    .line 127
     iput p3, p0, Lcom/tencent/mm/dbsupport/newcursor/d$a;->endIndex:I
 
-    .line 131
-    iput-object p4, p0, Lcom/tencent/mm/dbsupport/newcursor/d$a;->bvu:[Ljava/lang/Object;
+    .line 128
+    iput-object p4, p0, Lcom/tencent/mm/dbsupport/newcursor/d$a;->bkn:[Ljava/lang/Object;
 
+    .line 129
     return-void
 .end method
 
 
 # virtual methods
-.method public final U(Ljava/lang/Object;)Lcom/tencent/mm/dbsupport/newcursor/d$a;
+.method public final af(Ljava/lang/Object;)Lcom/tencent/mm/dbsupport/newcursor/d$a;
     .locals 3
 
     .prologue
-    .line 142
+    .line 139
     iget v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d$a;->index:I
 
     iget v1, p0, Lcom/tencent/mm/dbsupport/newcursor/d$a;->endIndex:I
 
     if-ne v0, v1, :cond_0
 
-    .line 143
+    .line 140
     new-instance v0, Landroid/database/CursorIndexOutOfBoundsException;
 
-    .line 144
     const-string/jumbo v1, "No more columns left."
 
-    .line 143
     invoke-direct {v0, v1}, Landroid/database/CursorIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 147
+    .line 143
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d$a;->bvu:[Ljava/lang/Object;
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d$a;->bkn:[Ljava/lang/Object;
 
     iget v1, p0, Lcom/tencent/mm/dbsupport/newcursor/d$a;->index:I
 
@@ -83,6 +81,6 @@
 
     aput-object p1, v0, v1
 
-    .line 148
+    .line 144
     return-object p0
 .end method

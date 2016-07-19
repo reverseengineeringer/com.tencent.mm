@@ -1,7 +1,7 @@
 package com.tencent.mm.ui;
 
 public final class j$b
-  extends Enum
+  extends Enum<b>
 {}
 
 /* Location:

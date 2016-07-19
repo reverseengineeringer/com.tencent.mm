@@ -14,14 +14,14 @@ public final class BackwardSupportUtil$c
       if (Build.VERSION.SDK_INT < 8) {
         break;
       }
-      new as();
+      new ay();
       if (paramListView.getFirstVisiblePosition() > 10) {
         paramListView.setSelection(10);
       }
     } while (Build.VERSION.SDK_INT < 8);
     paramListView.smoothScrollToPosition(0);
     return;
-    new ar();
+    new ax();
     paramListView.setSelection(0);
   }
   
@@ -34,7 +34,7 @@ public final class BackwardSupportUtil$c
       if (Build.VERSION.SDK_INT < 8) {
         break;
       }
-      new as();
+      new ay();
       int i = paramListView.getFirstVisiblePosition();
       if ((i > paramInt) && (i - paramInt > 10)) {
         paramListView.setSelection(paramInt + 10);
@@ -48,7 +48,7 @@ public final class BackwardSupportUtil$c
         }
       }
     }
-    new ar();
+    new ax();
     paramListView.setSelection(paramInt);
   }
 }

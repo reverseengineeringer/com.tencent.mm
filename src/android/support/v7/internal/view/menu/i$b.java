@@ -9,23 +9,23 @@ final class i$b
   extends FrameLayout
   implements CollapsibleActionView
 {
-  final b mD;
+  final b mT;
   
   i$b(View paramView)
   {
     super(paramView.getContext());
-    mD = ((b)paramView);
+    mT = ((b)paramView);
     addView(paramView);
   }
   
   public final void onActionViewCollapsed()
   {
-    mD.onActionViewCollapsed();
+    mT.onActionViewCollapsed();
   }
   
   public final void onActionViewExpanded()
   {
-    mD.onActionViewExpanded();
+    mT.onActionViewExpanded();
   }
 }
 

@@ -2,34 +2,34 @@ package com.tencent.mm.ui.tools;
 
 import android.text.InputFilter;
 import android.text.Spanned;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public final class i
   implements InputFilter
 {
-  private int lwc;
-  private int lwd;
+  private int lWO;
+  private int lWP;
   
   public i(int paramInt1, int paramInt2)
   {
-    lwc = paramInt1;
-    lwd = paramInt2;
+    lWO = paramInt1;
+    lWP = paramInt2;
   }
   
-  public static int HB(String paramString)
+  public static int JR(String paramString)
   {
     int i = 0;
     int j = 0;
-    if (ay.kz(paramString)) {
+    if (be.kf(paramString)) {
       return 0;
     }
     int m = paramString.length();
-    int n = HC(paramString);
-    if (ay.kz(paramString)) {}
-    for (i = j;; i = paramString.length() - (j + HC(paramString)))
+    int n = JS(paramString);
+    if (be.kf(paramString)) {}
+    for (i = j;; i = paramString.length() - (j + JS(paramString)))
     {
       return i + (n + m);
       int k;
@@ -49,9 +49,9 @@ public final class i
     }
   }
   
-  public static int HC(String paramString)
+  public static int JS(String paramString)
   {
-    if (ay.kz(paramString)) {
+    if (be.kf(paramString)) {
       return 0;
     }
     paramString = Pattern.compile("[\\u4e00-\\u9fa5]").matcher(paramString);
@@ -73,39 +73,39 @@ public final class i
     return i;
   }
   
-  public static int ai(int paramInt, String paramString)
+  public static int as(int paramInt, String paramString)
   {
-    if (t.aUx()) {
-      return Math.round((paramInt - Math.round(HB(paramString))) / 2.0F);
+    if (u.aZB()) {
+      return Math.round((paramInt - Math.round(JR(paramString))) / 2.0F);
     }
-    return paramInt - HB(paramString);
+    return paramInt - JR(paramString);
   }
   
-  public static int aj(int paramInt, String paramString)
+  public static int at(int paramInt, String paramString)
   {
-    if (t.aUx()) {
-      return Math.round((Math.round(HB(paramString)) - paramInt) / 2.0F);
+    if (u.aZB()) {
+      return Math.round((Math.round(JR(paramString)) - paramInt) / 2.0F);
     }
-    return HB(paramString) - paramInt;
+    return JR(paramString) - paramInt;
   }
   
-  public static int bh(String paramString, int paramInt)
+  public static int bt(String paramString, int paramInt)
   {
-    if (paramInt == a.lwe) {
-      if (!ay.kz(paramString)) {}
+    if (paramInt == a.lWQ) {
+      if (!be.kf(paramString)) {}
     }
-    while (paramInt != a.lwf)
+    while (paramInt != a.lWR)
     {
       return 0;
       return paramString.length();
     }
-    return HB(paramString);
+    return JR(paramString);
   }
   
   public final CharSequence filter(CharSequence paramCharSequence, int paramInt1, int paramInt2, Spanned paramSpanned, int paramInt3, int paramInt4)
   {
     Object localObject = paramCharSequence;
-    if (bh(paramSpanned.toString(), lwd) + bh(paramCharSequence.toString(), lwd) > lwc) {
+    if (bt(paramSpanned.toString(), lWP) + bt(paramCharSequence.toString(), lWP) > lWO) {
       localObject = "";
     }
     return (CharSequence)localObject;

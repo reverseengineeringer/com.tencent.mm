@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/aq_" android:background="@color/lf" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="14.0dip" />
+    <RelativeLayout android:id="@id/aqa" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="68.0dip">
+        <LinearLayout android:id="@id/aq6" style="@style/FTSListSmallItem">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/hz" android:layout_height="@dimen/hz" android:layout_marginRight="@dimen/iv" android:src="@raw/addfriend_icon_search" />
+            <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/j_" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:id="@id/i1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="{title}" android:singleLine="true" style="@style/MMFontTitleInList" />
+                <TextView android:id="@id/i3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/ax9" android:singleLine="true" style="@style/MMFontTipInList" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/aqb" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ProgressBar android:id="@id/aqc" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/smallCustomProgressBar" />
+        <TextView android:textSize="14.0dip" android:layout_gravity="center" android:id="@id/fr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/ba_" />
+    </LinearLayout>
+</LinearLayout>

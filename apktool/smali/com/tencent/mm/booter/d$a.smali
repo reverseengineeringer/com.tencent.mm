@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field private final bmA:Ljava/lang/String;
+.field final synthetic bac:Lcom/tencent/mm/booter/d;
 
-.field final synthetic bmw:Lcom/tencent/mm/booter/d;
+.field private final bag:Ljava/lang/String;
 
 
 # direct methods
@@ -29,14 +29,14 @@
 
     .prologue
     .line 1791
-    iput-object p1, p0, Lcom/tencent/mm/booter/d$a;->bmw:Lcom/tencent/mm/booter/d;
+    iput-object p1, p0, Lcom/tencent/mm/booter/d$a;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1793
     const-string/jumbo v0, "lock_audio"
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/d$a;->bmA:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/booter/d$a;->bag:Ljava/lang/String;
 
     return-void
 .end method
@@ -53,12 +53,12 @@
 
 
 # virtual methods
-.method public final mM()V
+.method public final kZ()V
     .locals 2
 
     .prologue
     .line 1797
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$a;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$a;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-static {v0}, Lcom/tencent/mm/booter/d;->o(Lcom/tencent/mm/booter/d;)Z
 
@@ -78,9 +78,9 @@
 
     .line 1802
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$a;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$a;->bac:Lcom/tencent/mm/booter/d;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/booter/d;->mB()V
+    invoke-virtual {v0}, Lcom/tencent/mm/booter/d;->kO()V
 
     .line 1803
     monitor-exit v1
@@ -97,12 +97,12 @@
     throw v0
 .end method
 
-.method public final mN()V
+.method public final la()V
     .locals 2
 
     .prologue
     .line 1809
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$a;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$a;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-static {v0}, Lcom/tencent/mm/booter/d;->o(Lcom/tencent/mm/booter/d;)Z
 
@@ -122,7 +122,7 @@
 
     .line 1813
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$a;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$a;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-virtual {v0}, Lcom/tencent/mm/booter/d;->release()V
 
@@ -141,12 +141,12 @@
     throw v0
 .end method
 
-.method public final mO()V
+.method public final lb()V
     .locals 2
 
     .prologue
     .line 1820
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$a;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$a;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-static {v0}, Lcom/tencent/mm/booter/d;->o(Lcom/tencent/mm/booter/d;)Z
 
@@ -166,7 +166,7 @@
 
     .line 1825
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$a;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$a;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-virtual {v0}, Lcom/tencent/mm/booter/d;->pause()V
 
@@ -185,12 +185,12 @@
     throw v0
 .end method
 
-.method public final mP()V
+.method public final lc()V
     .locals 2
 
     .prologue
     .line 1832
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$a;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$a;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-static {v0}, Lcom/tencent/mm/booter/d;->o(Lcom/tencent/mm/booter/d;)Z
 
@@ -210,7 +210,7 @@
 
     .line 1836
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$a;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$a;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-virtual {v0}, Lcom/tencent/mm/booter/d;->pause()V
 

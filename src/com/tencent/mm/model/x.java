@@ -4,13 +4,13 @@ import com.tencent.mm.storage.s.b;
 
 public abstract interface x
 {
-  public abstract y kU();
+  public abstract y jv();
   
-  public abstract s.b kV();
+  public abstract s.b jw();
   
-  public abstract u kW();
+  public abstract u jx();
   
-  public abstract q kX();
+  public abstract q jy();
 }
 
 /* Location:

@@ -3,7 +3,7 @@ package com.tencent.mm.ui;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.DialogInterface.OnDismissListener;
-import com.tencent.mm.sdk.platformtools.z;
+import com.tencent.mm.sdk.platformtools.ab;
 
 final class MMAppMgr$11
   implements DialogInterface.OnDismissListener
@@ -12,9 +12,9 @@ final class MMAppMgr$11
   
   public final void onDismiss(DialogInterface paramDialogInterface)
   {
-    z.CR("show_wap_adviser");
-    if (kqd != null) {
-      kqd.onClick(paramDialogInterface, 0);
+    ab.Fe("show_wap_adviser");
+    if (iGg != null) {
+      iGg.onClick(paramDialogInterface, 0);
     }
   }
 }

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->Gb()V
+    value = Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lxh:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
+.field final synthetic lXV:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 254
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$2;->lxh:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
+    .line 260
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$2;->lXV:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,17 +40,17 @@
     .locals 1
 
     .prologue
-    .line 258
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$2;->lxh:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
+    .line 264
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$2;->lXV:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->e(Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;)V
 
-    .line 259
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$2;->lxh:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
+    .line 265
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$2;->lXV:Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->finish()V
 
-    .line 260
+    .line 266
     const/4 v0, 0x1
 
     return v0

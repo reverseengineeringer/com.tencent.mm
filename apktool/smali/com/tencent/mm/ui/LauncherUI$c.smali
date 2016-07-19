@@ -19,15 +19,15 @@
 
 
 # instance fields
-.field private final doN:Landroid/support/v4/view/ViewPager;
+.field private final dou:Landroid/support/v4/view/ViewPager;
 
-.field private knD:Lcom/tencent/mm/ui/contact/AddressUI$a;
+.field private heY:I
 
-.field private knE:Z
+.field private kMK:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
-.field private knF:I
+.field private kML:Z
 
-.field final synthetic knl:Lcom/tencent/mm/ui/LauncherUI;
+.field final synthetic kMs:Lcom/tencent/mm/ui/LauncherUI;
 
 
 # direct methods
@@ -37,34 +37,34 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 3805
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 3599
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    .line 3806
-    iget-object v0, p2, Landroid/support/v4/app/FragmentActivity;->bb:Landroid/support/v4/app/f;
+    .line 3600
+    iget-object v0, p2, Landroid/support/v4/app/FragmentActivity;->bp:Landroid/support/v4/app/f;
 
     invoke-direct {p0, v0}, Landroid/support/v4/app/g;-><init>(Landroid/support/v4/app/e;)V
 
-    .line 3802
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knE:Z
+    .line 3596
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kML:Z
 
-    .line 3803
-    iput v1, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knF:I
+    .line 3597
+    iput v1, p0, Lcom/tencent/mm/ui/LauncherUI$c;->heY:I
 
-    .line 3807
-    iput-object p3, p0, Lcom/tencent/mm/ui/LauncherUI$c;->doN:Landroid/support/v4/view/ViewPager;
+    .line 3601
+    iput-object p3, p0, Lcom/tencent/mm/ui/LauncherUI$c;->dou:Landroid/support/v4/view/ViewPager;
 
-    .line 3808
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->doN:Landroid/support/v4/view/ViewPager;
+    .line 3602
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->dou:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0, p0}, Landroid/support/v4/view/ViewPager;->setAdapter(Landroid/support/v4/view/j;)V
+    invoke-virtual {v0, p0}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/j;)V
 
-    .line 3809
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->doN:Landroid/support/v4/view/ViewPager;
+    .line 3603
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->dou:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0, p0}, Landroid/support/v4/view/ViewPager;->setOnPageChangeListener(Landroid/support/v4/view/ViewPager$e;)V
+    invoke-virtual {v0, p0}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ViewPager$e;)V
 
-    .line 3813
+    .line 3607
     return-void
 .end method
 
@@ -78,8 +78,8 @@
 
     const/4 v4, 0x1
 
-    .line 3828
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 3622
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->a(Lcom/tencent/mm/ui/LauncherUI;)Lcom/tencent/mm/ui/c;
 
@@ -87,8 +87,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 3829
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 3623
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->a(Lcom/tencent/mm/ui/LauncherUI;)Lcom/tencent/mm/ui/c;
 
@@ -96,7 +96,7 @@
 
     invoke-interface {v0, p1, p2}, Lcom/tencent/mm/ui/c;->b(IF)V
 
-    .line 3831
+    .line 3625
     :cond_0
     const/4 v0, 0x0
 
@@ -104,35 +104,35 @@
 
     if-eqz v0, :cond_2
 
-    .line 3832
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knD:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    .line 3626
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMK:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     if-nez v0, :cond_1
 
-    .line 3833
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 3627
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/ui/LauncherUI;->pW(I)Lcom/tencent/mm/ui/o;
+    invoke-virtual {v0, v4}, Lcom/tencent/mm/ui/LauncherUI;->rL(I)Lcom/tencent/mm/ui/o;
 
     move-result-object v0
 
     check-cast v0, Lcom/tencent/mm/ui/contact/AddressUI$a;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knD:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMK:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
-    .line 3835
+    .line 3629
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knD:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMK:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
-    invoke-virtual {v0, v5}, Lcom/tencent/mm/ui/contact/AddressUI$a;->hU(Z)V
+    invoke-virtual {v0, v5}, Lcom/tencent/mm/ui/contact/AddressUI$a;->ix(Z)V
 
-    .line 3859
+    .line 3653
     :goto_0
     return-void
 
-    .line 3837
+    .line 3631
     :cond_2
-    const-string/jumbo v0, "!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2"
+    const-string/jumbo v0, "MicroMsg.LauncherUI"
 
     const-string/jumbo v1, "onPageScrolled, position = %d, mLastIndex = %d"
 
@@ -146,9 +146,9 @@
 
     aput-object v3, v2, v5
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-static {v3}, Lcom/tencent/mm/ui/LauncherUI;->C(Lcom/tencent/mm/ui/LauncherUI;)I
+    invoke-static {v3}, Lcom/tencent/mm/ui/LauncherUI;->B(Lcom/tencent/mm/ui/LauncherUI;)I
 
     move-result v3
 
@@ -158,37 +158,37 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 3838
+    .line 3632
     const/4 v0, -0x1
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/LauncherUI;->C(Lcom/tencent/mm/ui/LauncherUI;)I
+    invoke-static {v1}, Lcom/tencent/mm/ui/LauncherUI;->B(Lcom/tencent/mm/ui/LauncherUI;)I
 
     move-result v1
 
     if-ne v0, v1, :cond_5
 
-    .line 3840
+    .line 3634
     if-eq p1, v4, :cond_3
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->C(Lcom/tencent/mm/ui/LauncherUI;)I
+    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->B(Lcom/tencent/mm/ui/LauncherUI;)I
 
     move-result v0
 
     if-ne v0, v4, :cond_4
 
-    .line 3841
+    .line 3635
     :cond_3
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -200,38 +200,38 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
-    .line 3843
+    .line 3637
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/LauncherUI;->C(Lcom/tencent/mm/ui/LauncherUI;)I
+    invoke-static {v1}, Lcom/tencent/mm/ui/LauncherUI;->B(Lcom/tencent/mm/ui/LauncherUI;)I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/LauncherUI;->b(Lcom/tencent/mm/ui/LauncherUI;)I
 
     move-result v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/LauncherUI;->bH(II)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/LauncherUI;->bM(II)V
 
-    .line 3844
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 3638
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/LauncherUI;->pU(I)V
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/LauncherUI;->rJ(I)V
 
     goto :goto_0
 
-    .line 3846
+    .line 3640
     :cond_5
     new-instance v0, Lcom/tencent/mm/ui/LauncherUI$c$1;
 
     invoke-direct {v0, p0, p1}, Lcom/tencent/mm/ui/LauncherUI$c$1;-><init>(Lcom/tencent/mm/ui/LauncherUI$c;I)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
     goto :goto_0
 .end method
@@ -240,13 +240,13 @@
     .locals 1
 
     .prologue
-    .line 3817
+    .line 3611
     const/4 v0, 0x4
 
     return v0
 .end method
 
-.method public final gr(I)V
+.method public final ho(I)V
     .locals 6
 
     .prologue
@@ -256,8 +256,8 @@
 
     const v4, 0x41001
 
-    .line 3972
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 3759
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->b(Lcom/tencent/mm/ui/LauncherUI;)I
 
@@ -265,54 +265,54 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 3973
-    const-string/jumbo v0, "!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2"
+    .line 3760
+    const-string/jumbo v0, "MicroMsg.LauncherUI"
 
     const-string/jumbo v1, "on click same index"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3974
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 3761
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/LauncherUI;->pW(I)Lcom/tencent/mm/ui/o;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/LauncherUI;->rL(I)Lcom/tencent/mm/ui/o;
 
     move-result-object v0
 
-    .line 3975
+    .line 3762
     instance-of v1, v0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;
 
     if-eqz v1, :cond_0
 
-    .line 3976
+    .line 3763
     check-cast v0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->aZp()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->beG()V
 
-    .line 3992
+    .line 3779
     :cond_0
     :goto_0
     return-void
 
-    .line 3980
+    .line 3767
     :cond_1
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knE:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kML:Z
 
-    .line 3981
-    iget v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knF:I
+    .line 3768
+    iget v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->heY:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knF:I
+    iput v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->heY:I
 
-    .line 3982
-    const-string/jumbo v0, "!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2"
+    .line 3769
+    const-string/jumbo v0, "MicroMsg.LauncherUI"
 
     const-string/jumbo v1, "onTabClick count:%d"
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget v3, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knF:I
+    iget v3, p0, Lcom/tencent/mm/ui/LauncherUI$c;->heY:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -320,53 +320,53 @@
 
     aput-object v3, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 3983
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->doN:Landroid/support/v4/view/ViewPager;
+    .line 3770
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->dou:Landroid/support/v4/view/ViewPager;
 
     invoke-virtual {v0, p1, v5}, Landroid/support/v4/view/ViewPager;->j(IZ)V
 
-    .line 3985
+    .line 3772
     const/4 v0, 0x3
 
     if-ne p1, v0, :cond_0
 
-    .line 3986
-    invoke-static {}, Lcom/tencent/mm/m/c;->qP()Lcom/tencent/mm/m/a;
+    .line 3773
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
 
     move-result-object v0
 
     const v1, 0x40001
 
-    invoke-virtual {v0, v1, v4}, Lcom/tencent/mm/m/a;->H(II)V
+    invoke-virtual {v0, v1, v4}, Lcom/tencent/mm/o/a;->H(II)V
 
-    .line 3987
-    invoke-static {}, Lcom/tencent/mm/m/c;->qP()Lcom/tencent/mm/m/a;
+    .line 3774
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
 
     move-result-object v0
 
     const v1, 0x4000c
 
-    invoke-virtual {v0, v1, v4}, Lcom/tencent/mm/m/a;->H(II)V
+    invoke-virtual {v0, v1, v4}, Lcom/tencent/mm/o/a;->H(II)V
 
-    .line 3988
-    invoke-static {}, Lcom/tencent/mm/m/c;->qP()Lcom/tencent/mm/m/a;
+    .line 3775
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
 
     move-result-object v0
 
     const v1, 0x40003
 
-    invoke-virtual {v0, v1, v4}, Lcom/tencent/mm/m/a;->H(II)V
+    invoke-virtual {v0, v1, v4}, Lcom/tencent/mm/o/a;->H(II)V
 
-    .line 3989
-    invoke-static {}, Lcom/tencent/mm/m/c;->qP()Lcom/tencent/mm/m/a;
+    .line 3776
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
 
     move-result-object v0
 
     const v1, 0x40005
 
-    invoke-virtual {v0, v1, v4}, Lcom/tencent/mm/m/a;->H(II)V
+    invoke-virtual {v0, v1, v4}, Lcom/tencent/mm/o/a;->H(II)V
 
     goto :goto_0
 .end method
@@ -375,17 +375,17 @@
     .locals 1
 
     .prologue
-    .line 3822
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 3616
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/LauncherUI;->pW(I)Lcom/tencent/mm/ui/o;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/LauncherUI;->rL(I)Lcom/tencent/mm/ui/o;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final n(I)V
+.method public final p(I)V
     .locals 9
 
     .prologue
@@ -399,8 +399,8 @@
 
     const/4 v4, 0x1
 
-    .line 3863
-    const-string/jumbo v0, "!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2"
+    .line 3657
+    const-string/jumbo v0, "MicroMsg.LauncherUI"
 
     const-string/jumbo v1, "on page selected changed to %d"
 
@@ -412,16 +412,16 @@
 
     aput-object v3, v2, v6
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 3864
-    const-string/jumbo v0, "!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2"
+    .line 3658
+    const-string/jumbo v0, "MicroMsg.LauncherUI"
 
     const-string/jumbo v1, "reportSwitch clickCount:%d, pos:%d"
 
     new-array v2, v7, [Ljava/lang/Object;
 
-    iget v3, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knF:I
+    iget v3, p0, Lcom/tencent/mm/ui/LauncherUI$c;->heY:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -435,28 +435,58 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knF:I
+    iget v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->heY:I
 
-    if-lez v0, :cond_5
+    if-lez v0, :cond_6
 
-    iget v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knF:I
+    iget v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->heY:I
 
     add-int/lit8 v0, v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knF:I
+    iput v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->heY:I
 
     packed-switch p1, :pswitch_data_0
 
     :cond_0
     :goto_0
-    iput-boolean v6, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knE:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kML:Z
 
-    .line 3866
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 3660
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->b(Lcom/tencent/mm/ui/LauncherUI;)I
+
+    move-result v0
+
+    if-eq p1, v0, :cond_1
+
+    .line 3661
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
+
+    const/4 v1, 0x4
+
+    iget-object v2, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
+
+    invoke-static {v2}, Lcom/tencent/mm/ui/LauncherUI;->b(Lcom/tencent/mm/ui/LauncherUI;)I
+
+    move-result v2
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/LauncherUI;->a(Lcom/tencent/mm/ui/LauncherUI;II)V
+
+    .line 3662
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
+
+    const/4 v1, 0x3
+
+    invoke-static {v0, v1, p1}, Lcom/tencent/mm/ui/LauncherUI;->a(Lcom/tencent/mm/ui/LauncherUI;II)V
+
+    .line 3665
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/LauncherUI;->b(Lcom/tencent/mm/ui/LauncherUI;)I
 
@@ -464,58 +494,58 @@
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->a(Lcom/tencent/mm/ui/LauncherUI;I)I
 
-    .line 3867
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 3666
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-static {v0, p1}, Lcom/tencent/mm/ui/LauncherUI;->b(Lcom/tencent/mm/ui/LauncherUI;I)I
 
-    .line 3868
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 3667
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->a(Lcom/tencent/mm/ui/LauncherUI;)Lcom/tencent/mm/ui/c;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    .line 3869
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 3668
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->a(Lcom/tencent/mm/ui/LauncherUI;)Lcom/tencent/mm/ui/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/tencent/mm/ui/c;->setTo(I)V
+    invoke-interface {v0, p1}, Lcom/tencent/mm/ui/c;->hn(I)V
 
-    .line 3872
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 3671
+    :cond_2
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/LauncherUI;->G()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/LauncherUI;->F()V
 
-    .line 3874
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 3673
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->C(Lcom/tencent/mm/ui/LauncherUI;)I
+    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->B(Lcom/tencent/mm/ui/LauncherUI;)I
 
     move-result v0
 
-    if-ne v0, v4, :cond_2
+    if-ne v0, v4, :cond_3
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->b(Lcom/tencent/mm/ui/LauncherUI;)I
 
     move-result v0
 
-    if-eq v0, v4, :cond_2
+    if-eq v0, v4, :cond_3
 
-    .line 3875
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 3674
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -531,107 +561,107 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
-    .line 3878
-    :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 3677
+    :cond_3
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->b(Lcom/tencent/mm/ui/LauncherUI;)I
 
     move-result v0
 
-    if-ne v0, v4, :cond_3
+    if-ne v0, v4, :cond_4
 
-    .line 3879
+    .line 3678
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    const v3, 0x53102
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
-    invoke-virtual {v0, v3, v8}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
+
+    const v1, 0x53102
+
+    invoke-virtual {v0, v1, v8}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Long;
 
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/t;->d(Ljava/lang/Long;)J
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/s;->d(Ljava/lang/Long;)J
 
-    move-result-wide v3
+    move-result-wide v0
 
-    sub-long v0, v1, v3
+    sub-long v0, v2, v0
 
-    .line 3880
+    .line 3679
     const-wide/32 v2, 0x2bf20
 
     cmp-long v0, v0, v2
 
-    if-ltz v0, :cond_3
+    if-ltz v0, :cond_4
 
-    .line 3881
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 3680
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/LauncherUI;->b(Lcom/tencent/mm/ui/LauncherUI;)I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->pW(I)Lcom/tencent/mm/ui/o;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->rL(I)Lcom/tencent/mm/ui/o;
 
     move-result-object v0
 
-    .line 3882
+    .line 3681
     check-cast v0, Lcom/tencent/mm/ui/contact/AddressUI$a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/AddressUI$a;->bgZ()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/AddressUI$a;->bmI()V
 
-    .line 3898
-    :cond_3
+    .line 3685
+    :cond_4
     return-void
 
-    .line 3864
+    .line 3658
     :pswitch_0
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-string/jumbo v1, "1"
 
-    invoke-virtual {v0, v5, v1}, Lcom/tencent/mm/plugin/report/service/h;->O(ILjava/lang/String;)V
+    invoke-virtual {v0, v5, v1}, Lcom/tencent/mm/plugin/report/service/g;->X(ILjava/lang/String;)V
 
     goto/16 :goto_0
 
     :pswitch_1
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-string/jumbo v1, "2"
 
-    invoke-virtual {v0, v5, v1}, Lcom/tencent/mm/plugin/report/service/h;->O(ILjava/lang/String;)V
+    invoke-virtual {v0, v5, v1}, Lcom/tencent/mm/plugin/report/service/g;->X(ILjava/lang/String;)V
 
     goto/16 :goto_0
 
     :pswitch_2
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-string/jumbo v1, "3"
 
-    invoke-virtual {v0, v5, v1}, Lcom/tencent/mm/plugin/report/service/h;->O(ILjava/lang/String;)V
+    invoke-virtual {v0, v5, v1}, Lcom/tencent/mm/plugin/report/service/g;->X(ILjava/lang/String;)V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    sget-object v1, Lcom/tencent/mm/storage/j$a;->kcS:Lcom/tencent/mm/storage/j$a;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/tencent/mm/storage/j$a;->kDz:Lcom/tencent/mm/storage/j$a;
 
     invoke-virtual {v0, v1, v8}, Lcom/tencent/mm/storage/h;->a(Lcom/tencent/mm/storage/j$a;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -641,19 +671,19 @@
 
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/platformtools/t;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/platformtools/s;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
-    sget-object v2, Lcom/tencent/mm/storage/j$a;->kcU:Lcom/tencent/mm/storage/j$a;
+    sget-object v2, Lcom/tencent/mm/storage/j$a;->kDB:Lcom/tencent/mm/storage/j$a;
 
     invoke-virtual {v0, v2, v8}, Lcom/tencent/mm/storage/h;->a(Lcom/tencent/mm/storage/j$a;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -661,7 +691,7 @@
 
     check-cast v0, Ljava/lang/Boolean;
 
-    invoke-static {v0, v6}, Lcom/tencent/mm/platformtools/t;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v0, v6}, Lcom/tencent/mm/platformtools/s;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v0
 
@@ -679,17 +709,17 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
-    invoke-static {v1}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_5
 
     array-length v0, v2
 
-    if-le v0, v4, :cond_4
+    if-le v0, v4, :cond_5
 
     array-length v0, v2
 
@@ -703,15 +733,15 @@
 
     move-result v0
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_5
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->D(Lcom/tencent/mm/ui/LauncherUI;)I
+    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->C(Lcom/tencent/mm/ui/LauncherUI;)I
 
     move-result v0
 
-    if-eq v0, v7, :cond_4
+    if-eq v0, v7, :cond_5
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -724,7 +754,7 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v1, 0x316d
 
@@ -742,11 +772,11 @@
 
     aput-object v3, v2, v4
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
-    :cond_4
+    :cond_5
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -754,43 +784,43 @@
     goto :goto_1
 
     :pswitch_3
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-string/jumbo v1, "4"
 
-    invoke-virtual {v0, v5, v1}, Lcom/tencent/mm/plugin/report/service/h;->O(ILjava/lang/String;)V
+    invoke-virtual {v0, v5, v1}, Lcom/tencent/mm/plugin/report/service/g;->X(ILjava/lang/String;)V
 
     goto/16 :goto_0
 
-    :cond_5
+    :cond_6
     packed-switch p1, :pswitch_data_1
 
     goto/16 :goto_0
 
     :pswitch_4
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-string/jumbo v1, "5"
 
-    invoke-virtual {v0, v5, v1}, Lcom/tencent/mm/plugin/report/service/h;->O(ILjava/lang/String;)V
+    invoke-virtual {v0, v5, v1}, Lcom/tencent/mm/plugin/report/service/g;->X(ILjava/lang/String;)V
 
     goto/16 :goto_0
 
     :pswitch_5
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-string/jumbo v1, "6"
 
-    invoke-virtual {v0, v5, v1}, Lcom/tencent/mm/plugin/report/service/h;->O(ILjava/lang/String;)V
+    invoke-virtual {v0, v5, v1}, Lcom/tencent/mm/plugin/report/service/g;->X(ILjava/lang/String;)V
 
     goto/16 :goto_0
 
     :pswitch_6
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-string/jumbo v1, "7"
 
-    invoke-virtual {v0, v5, v1}, Lcom/tencent/mm/plugin/report/service/h;->O(ILjava/lang/String;)V
+    invoke-virtual {v0, v5, v1}, Lcom/tencent/mm/plugin/report/service/g;->X(ILjava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -812,14 +842,14 @@
     .end packed-switch
 .end method
 
-.method public final o(I)V
+.method public final q(I)V
     .locals 6
 
     .prologue
     const/4 v5, 0x1
 
-    .line 3959
-    const-string/jumbo v0, "!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2"
+    .line 3746
+    const-string/jumbo v0, "MicroMsg.LauncherUI"
 
     const-string/jumbo v1, "onPageScrollStateChanged state %d"
 
@@ -833,26 +863,26 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 3960
+    .line 3747
     if-nez p1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knD:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMK:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     if-eqz v0, :cond_0
 
-    .line 3961
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knD:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    .line 3748
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMK:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
-    invoke-virtual {v0, v5}, Lcom/tencent/mm/ui/contact/AddressUI$a;->hU(Z)V
+    invoke-virtual {v0, v5}, Lcom/tencent/mm/ui/contact/AddressUI$a;->ix(Z)V
 
-    .line 3962
+    .line 3749
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->knD:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$c;->kMK:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
-    .line 3967
+    .line 3754
     :cond_0
     return-void
 .end method

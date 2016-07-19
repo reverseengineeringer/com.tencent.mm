@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sight/base/c;->avA()Ljava/lang/String;
+    value = Lcom/tencent/mm/plugin/sight/base/c;->axR()Ljava/lang/String;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gxa:I
+.field final synthetic gDy:I
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 72
-    iput p1, p0, Lcom/tencent/mm/plugin/sight/base/c$1;->gxa:I
+    iput p1, p0, Lcom/tencent/mm/plugin/sight/base/c$1;->gDy:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,12 +43,13 @@
     const/4 v6, 0x0
 
     .line 76
-    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->aa()I
+    # getter for: Lcom/tencent/mm/plugin/sight/base/c;->gDx:I
+    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->access$000()I
 
     move-result v0
 
     :goto_0
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/base/c$1;->gxa:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sight/base/c$1;->gDy:I
 
     if-ge v0, v1, :cond_3
 
@@ -61,11 +62,11 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/tencent/mm/model/c;->rH()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/tencent/mm/model/c;->rJ()Ljava/lang/String;
 
     move-result-object v4
 
@@ -179,13 +180,13 @@
 
     .line 90
     :cond_3
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/base/c$1;->gxa:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/base/c$1;->gDy:I
 
     invoke-static {v0, v6}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sight/base/c;->kS(I)I
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sight/base/c;->lW(I)I
 
     .line 91
     return-void

@@ -3,7 +3,7 @@ package com.tencent.mm.pluginsdk.ui.d;
 import android.content.Context;
 import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.ui.base.g.c;
 
 final class g$1
@@ -11,12 +11,12 @@ final class g$1
 {
   g$1(DialogInterface.OnDismissListener paramOnDismissListener, String paramString, Context paramContext) {}
   
-  public final void eu(int paramInt)
+  public final void fg(int paramInt)
   {
-    if (iPL != null) {
-      iPL.onDismiss(null);
+    if (jmS != null) {
+      jmS.onDismiss(null);
     }
-    String str1 = iPM.replace(" ", "").replace("#", "@");
+    String str1 = jmT.replace(" ", "").replace("#", "@");
     switch (paramInt)
     {
     default: 
@@ -30,7 +30,7 @@ final class g$1
       c.c(localContext, "qqmail", ".ui.ComposeUI", localIntent);
       return;
     }
-    g.aQ(val$context, str1);
+    g.aO(val$context, str1);
   }
 }
 

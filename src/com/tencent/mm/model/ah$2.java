@@ -1,14 +1,14 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.sdk.platformtools.ab.b;
+import com.tencent.mm.sdk.platformtools.ad.b;
 
 final class ah$2
-  implements ab.b
+  implements ad.b
 {
-  public final void tP()
+  public final void tQ()
   {
-    if (ah.e(ah.tO()) != null) {
-      ah.e(ah.tO()).release();
+    if (ah.e(ah.tP()) != null) {
+      ah.e(ah.tP()).release();
     }
   }
 }

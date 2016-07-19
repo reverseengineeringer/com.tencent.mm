@@ -7,7 +7,7 @@ public abstract interface WebResourceRequest
 {
   public abstract String getMethod();
   
-  public abstract Map getRequestHeaders();
+  public abstract Map<String, String> getRequestHeaders();
   
   public abstract Uri getUrl();
   

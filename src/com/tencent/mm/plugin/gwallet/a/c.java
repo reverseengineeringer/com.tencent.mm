@@ -2,23 +2,23 @@ package com.tencent.mm.plugin.gwallet.a;
 
 public final class c
 {
-  public int exV;
+  public int eEp;
   String mMessage;
   
   public c(int paramInt, String paramString)
   {
-    exV = paramInt;
+    eEp = paramInt;
     if ((paramString == null) || (paramString.trim().length() == 0))
     {
-      mMessage = b.hE(paramInt);
+      mMessage = b.iK(paramInt);
       return;
     }
-    mMessage = (paramString + " (response: " + b.hE(paramInt) + ")");
+    mMessage = (paramString + " (response: " + b.iK(paramInt) + ")");
   }
   
-  public final boolean isSuccess()
+  public final boolean ep()
   {
-    return exV == 0;
+    return eEp == 0;
   }
   
   public final String toString()

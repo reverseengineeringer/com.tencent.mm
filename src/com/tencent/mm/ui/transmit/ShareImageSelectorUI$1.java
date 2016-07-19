@@ -10,7 +10,7 @@ final class ShareImageSelectorUI$1
   
   public final void onClick(View paramView)
   {
-    ShareImageSelectorUI.a(lBC);
+    ShareImageSelectorUI.a(mcu);
   }
 }
 

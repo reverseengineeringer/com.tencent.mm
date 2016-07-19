@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic cBe:[I
+.field static final synthetic cxZ:[I
 
 
 # direct methods
@@ -23,7 +23,7 @@
     .locals 3
 
     .prologue
-    .line 118
+    .line 126
     invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->values()[Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
     move-result-object v0
@@ -32,12 +32,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$5;->cBe:[I
+    sput-object v0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$5;->cxZ:[I
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$5;->cBe:[I
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$5;->cxZ:[I
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->iFR:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->jcM:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->ordinal()I
 
@@ -51,9 +51,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$5;->cBe:[I
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$5;->cxZ:[I
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->iFS:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->jcN:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->ordinal()I
 
@@ -67,9 +67,9 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$5;->cBe:[I
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$5;->cxZ:[I
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->iFT:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->jcO:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->ordinal()I
 

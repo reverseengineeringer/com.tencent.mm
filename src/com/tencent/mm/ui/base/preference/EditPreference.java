@@ -9,17 +9,17 @@ import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.ViewGroup.MarginLayoutParams;
 import android.widget.EditText;
-import com.tencent.mm.aw.a;
+import com.tencent.mm.az.a;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.h;
 
 public class EditPreference
   extends Preference
 {
-  private h apf;
-  private Preference.a kKX;
-  a kLc;
-  private EditText kLd;
+  private h fTL;
+  private Preference.a lkm;
+  a lkr;
+  private EditText lks;
   String value;
   
   public EditPreference(Context paramContext, AttributeSet paramAttributeSet)
@@ -34,14 +34,14 @@ public class EditPreference
   
   public final void a(Preference.a parama)
   {
-    kKX = parama;
+    lkm = parama;
   }
   
   public final void showDialog()
   {
     final EditText localEditText;
-    if (kLd != null) {
-      localEditText = kLd;
+    if (lks != null) {
+      localEditText = lks;
     }
     for (;;)
     {
@@ -49,7 +49,7 @@ public class EditPreference
       if ((localObject instanceof ViewGroup.MarginLayoutParams))
       {
         localObject = (ViewGroup.MarginLayoutParams)localObject;
-        int i = localEditText.getResources().getDimensionPixelSize(2131034580);
+        int i = localEditText.getResources().getDimensionPixelSize(2131427634);
         leftMargin = i;
         rightMargin = i;
         topMargin = i;
@@ -58,7 +58,7 @@ public class EditPreference
       if (localEditText.getParent() != null) {
         ((ViewGroup)localEditText.getParent()).removeView(localEditText);
       }
-      apf = g.a(mContext, getTitle().toString(), localEditText, a.A(mContext, 2131430888), a.A(mContext, 2131430884), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+      fTL = g.a(mContext, getTitle().toString(), localEditText, a.E(mContext, 2131230967), a.E(mContext, 2131230873), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
       {
         public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
         {
@@ -67,7 +67,7 @@ public class EditPreference
           }
           value = localEditText.getText().toString();
           if (EditPreference.b(EditPreference.this) != null) {
-            EditPreference.b(EditPreference.this).bdp();
+            EditPreference.b(EditPreference.this).biW();
           }
           if (EditPreference.c(EditPreference.this) != null) {
             EditPreference.c(EditPreference.this).a(EditPreference.this, EditPreference.d(EditPreference.this));
@@ -92,7 +92,7 @@ public class EditPreference
   
   public static abstract interface a
   {
-    public abstract void bdp();
+    public abstract void biW();
   }
 }
 

@@ -8,7 +8,7 @@ final class g$1
 {
   g$1(g paramg) {}
   
-  public final void a(b paramb, int paramInt) {}
+  public final void d(b paramb, int paramInt) {}
 }
 
 /* Location:

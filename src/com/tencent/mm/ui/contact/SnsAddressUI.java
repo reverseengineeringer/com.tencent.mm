@@ -10,9 +10,9 @@ import android.widget.ListView;
 import android.widget.Toast;
 import com.tencent.mm.pluginsdk.ui.MultiSelectContactView;
 import com.tencent.mm.pluginsdk.ui.MultiSelectContactView.a;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.i;
 import com.tencent.mm.ui.contact.a.a;
 import com.tencent.mm.ui.j.b;
@@ -25,17 +25,17 @@ import java.util.List;
 public class SnsAddressUI
   extends MMBaseSelectContactUI
 {
-  private List cvM;
-  private HashSet dbR;
+  private List<String> crs;
+  private HashSet<String> dax;
   
-  private void Nk()
+  private void PH()
   {
     String str;
-    if (dbR.size() == 0)
+    if (dax.size() == 0)
     {
-      str = String.format("%s", new Object[] { getString(2131430888) });
-      ad(1, str);
-      if (dbR.size() < 0) {
+      str = String.format("%s", new Object[] { getString(2131230967) });
+      an(1, str);
+      if (dax.size() < 0) {
         break label98;
       }
     }
@@ -44,68 +44,68 @@ public class SnsAddressUI
     {
       M(1, bool);
       return;
-      str = String.format("%s(%d/%d)", new Object[] { getString(2131430888), Integer.valueOf(dbR.size()), Integer.valueOf(i.kak) });
+      str = String.format("%s(%d/%d)", new Object[] { getString(2131230967), Integer.valueOf(dax.size()), Integer.valueOf(i.kAG) });
       break;
     }
   }
   
-  protected final void Ou()
+  protected final n LP()
   {
-    super.Ou();
-    cvM = new ArrayList();
-    Object localObject = ay.h(ay.ad(getIntent().getStringExtra("Block_list"), "").split(","));
-    HashSet localHashSet = r.bhu();
-    localHashSet.addAll((Collection)localObject);
-    cvM.addAll(localHashSet);
-    cvM.addAll(r.bhv());
-    dbR = new HashSet();
-    localObject = ay.ad(getIntent().getStringExtra("Select_Contact"), "");
-    if (!ay.kz((String)localObject)) {
-      dbR.addAll(ay.h(((String)localObject).split(",")));
-    }
+    c.a locala = new c.a();
+    lIW = true;
+    lJc = true;
+    lJe = getString(2131230835);
+    lJd = be.ab(getIntent().getStringExtra("Add_get_from_sns"), "");
+    return new c(this, crs, true, true, locala);
+  }
+  
+  protected final p LQ()
+  {
+    return new p(this, crs, true, scene);
+  }
+  
+  protected final boolean LS()
+  {
+    return true;
+  }
+  
+  protected final String LT()
+  {
+    return be.ab(getIntent().getStringExtra("Add_address_titile"), "");
   }
   
   public final boolean a(a parama)
   {
-    if ((lkT) && (cId != null)) {
-      return dbR.contains(cId.field_username);
+    if ((lLe) && (cFh != null)) {
+      return dax.contains(cFh.field_username);
     }
     return false;
   }
   
-  protected final String afU()
-  {
-    return ay.ad(getIntent().getStringExtra("Add_address_titile"), "");
-  }
-  
-  protected final boolean ahC()
-  {
-    return true;
-  }
-  
-  protected final n ahD()
-  {
-    c.a locala = new c.a();
-    liL = true;
-    liR = true;
-    liT = getString(2131428339);
-    liS = ay.ad(getIntent().getStringExtra("Add_get_from_sns"), "");
-    return new c(this, cvM, true, true, locala);
-  }
-  
-  protected final p ahE()
-  {
-    return new p(this, cvM, true);
-  }
-  
-  public final int[] ahF()
+  public final int[] akn()
   {
     return new int[] { 131072 };
   }
   
-  protected final boolean aiD()
+  protected final boolean all()
   {
     return true;
+  }
+  
+  protected final void initData()
+  {
+    super.initData();
+    crs = new ArrayList();
+    Object localObject = be.g(be.ab(getIntent().getStringExtra("Block_list"), "").split(","));
+    HashSet localHashSet = r.bnf();
+    localHashSet.addAll((Collection)localObject);
+    crs.addAll(localHashSet);
+    crs.addAll(r.bng());
+    dax = new HashSet();
+    localObject = be.ab(getIntent().getStringExtra("Select_Contact"), "");
+    if (!be.kf((String)localObject)) {
+      dax.addAll(be.g(((String)localObject).split(",")));
+    }
   }
   
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
@@ -121,37 +121,37 @@ public class SnsAddressUI
       return;
     }
     paramIntent = paramIntent.getStringExtra("Select_Contact");
-    if (ay.kz(paramIntent))
+    if (be.kf(paramIntent))
     {
-      u.i("!32@/B4Tb64lLpLI3JJoWXimvSAB0KTsifPc", "GET_LABEL_USERS return usernames is null or empty");
+      v.i("MicroMsg.SnsAddressUI", "GET_LABEL_USERS return usernames is null or empty");
       return;
     }
-    u.i("!32@/B4Tb64lLpLI3JJoWXimvSAB0KTsifPc", "GET_LABEL_USERS select username=%s", new Object[] { paramIntent });
+    v.i("MicroMsg.SnsAddressUI", "GET_LABEL_USERS select username=%s", new Object[] { paramIntent });
     paramIntent = paramIntent.split(",");
     paramInt2 = paramIntent.length;
     paramInt1 = i;
     while (paramInt1 < paramInt2)
     {
       Object localObject = paramIntent[paramInt1];
-      if (dbR.add(localObject)) {
-        fbM.AA((String)localObject);
+      if (dax.add(localObject)) {
+        fkm.CB((String)localObject);
       }
       paramInt1 += 1;
     }
-    Nk();
-    bhp().notifyDataSetChanged();
+    PH();
+    bmZ().notifyDataSetChanged();
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    u.i("!32@/B4Tb64lLpLI3JJoWXimvSAB0KTsifPc", "Create!");
-    a(1, getString(2131430888), new MenuItem.OnMenuItemClickListener()
+    v.i("MicroMsg.SnsAddressUI", "Create!");
+    a(1, getString(2131230967), new MenuItem.OnMenuItemClickListener()
     {
       public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
       {
         paramAnonymousMenuItem = new Intent();
-        List localList = ay.h((String[])SnsAddressUI.a(SnsAddressUI.this).toArray(new String[0]));
+        List localList = be.g((String[])SnsAddressUI.a(SnsAddressUI.this).toArray(new String[0]));
         if ((localList == null) || (localList.size() == 0)) {
           paramAnonymousMenuItem.putExtra("Select_Contact", "");
         }
@@ -159,7 +159,7 @@ public class SnsAddressUI
         {
           setResult(-1, paramAnonymousMenuItem);
           finish();
-          ab.e(new Runnable()
+          ad.e(new Runnable()
           {
             public final void run()
             {
@@ -169,10 +169,10 @@ public class SnsAddressUI
             }
           }, 100L);
           return true;
-          paramAnonymousMenuItem.putExtra("Select_Contact", ay.b(localList, ","));
+          paramAnonymousMenuItem.putExtra("Select_Contact", be.b(localList, ","));
         }
       }
-    }, j.b.kpJ);
+    }, j.b.kOO);
     b(new MenuItem.OnMenuItemClickListener()
     {
       public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
@@ -184,15 +184,15 @@ public class SnsAddressUI
         return true;
       }
     });
-    paramBundle = dbR.iterator();
+    paramBundle = dax.iterator();
     while (paramBundle.hasNext())
     {
       String str = (String)paramBundle.next();
-      fbM.AA(str);
+      fkm.CB(str);
     }
-    fbM.setOnContactDeselectListener(new MultiSelectContactView.a()
+    fkm.jdY = new MultiSelectContactView.a()
     {
-      public final void rc(String paramAnonymousString)
+      public final void sz(String paramAnonymousString)
       {
         if (paramAnonymousString != null)
         {
@@ -200,61 +200,61 @@ public class SnsAddressUI
           SnsAddressUI.b(SnsAddressUI.this);
         }
       }
-    });
-    Nk();
+    };
+    PH();
   }
   
-  public void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    paramAdapterView = bhp();
-    paramView = paramAdapterView.rM(paramInt - getContentLV().getHeaderViewsCount());
+    paramAdapterView = bmZ();
+    paramView = paramAdapterView.tO(paramInt - fOP.getHeaderViewsCount());
     if (paramView == null) {}
-    while (cId == null) {
+    while (cFh == null) {
       return;
     }
-    u.i("!32@/B4Tb64lLpLI3JJoWXimvSAB0KTsifPc", "ClickUser=%s", new Object[] { cId.field_username });
-    paramView = cId.field_username;
-    bhs();
-    if (dbR.contains(paramView))
+    v.i("MicroMsg.SnsAddressUI", "ClickUser=%s", new Object[] { cFh.field_username });
+    paramView = cFh.field_username;
+    bnd();
+    if (dax.contains(paramView))
     {
-      dbR.remove(paramView);
-      fbM.AA(paramView);
+      dax.remove(paramView);
+      fkm.CB(paramView);
     }
     for (;;)
     {
-      Nk();
+      PH();
       paramAdapterView.notifyDataSetChanged();
       return;
-      if (dbR.size() < i.kak)
+      if (dax.size() < i.kAG)
       {
-        dbR.add(paramView);
-        fbM.AA(paramView);
+        dax.add(paramView);
+        fkm.CB(paramView);
       }
       else
       {
-        Toast.makeText(this, 2131432999, 0).show();
-        u.i("!32@/B4Tb64lLpLI3JJoWXimvSAB0KTsifPc", "select user size equal max size:%d", new Object[] { Integer.valueOf(i.kak) });
+        Toast.makeText(this, 2131235500, 0).show();
+        v.i("MicroMsg.SnsAddressUI", "select user size equal max size:%d", new Object[] { Integer.valueOf(i.kAG) });
       }
     }
   }
   
-  protected final void rb(String paramString)
+  protected final void sy(String paramString)
   {
     Intent localIntent = new Intent();
     localIntent.setClass(this, SelectLabelContactUI.class);
     localIntent.putExtra("label", paramString);
     paramString = new HashSet();
-    paramString.addAll(dbR);
-    localIntent.putExtra("always_select_contact", ay.b(new ArrayList(paramString), ","));
+    paramString.addAll(dax);
+    localIntent.putExtra("always_select_contact", be.b(new ArrayList(paramString), ","));
     localIntent.putExtra("list_attr", r.n(new int[] { 16384, 64 }));
     startActivityForResult(localIntent, 3);
   }
   
-  public final void rc(String paramString)
+  public final void sz(String paramString)
   {
-    dbR.remove(paramString);
-    bhp().notifyDataSetChanged();
-    Nk();
+    dax.remove(paramString);
+    bmZ().notifyDataSetChanged();
+    PH();
   }
 }
 

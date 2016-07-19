@@ -2,20 +2,20 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.os.Looper;
 import com.tencent.mm.model.z.c.a;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class SnsCommentDetailUI$19
   implements z.c.a
 {
   SnsCommentDetailUI$19(SnsCommentDetailUI paramSnsCommentDetailUI) {}
   
-  public final void f(String paramString, boolean paramBoolean)
+  public final void i(String paramString, boolean paramBoolean)
   {
-    new aa(Looper.getMainLooper()).postDelayed(new Runnable()
+    new ac(Looper.getMainLooper()).postDelayed(new Runnable()
     {
       public final void run()
       {
-        hda.aBH();
+        hrN.aED();
       }
     }, 500L);
   }

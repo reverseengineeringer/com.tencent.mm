@@ -4,17 +4,17 @@
 
 
 # static fields
-.field public static final bwZ:Ljava/lang/String;
+.field public static final bpb:Ljava/lang/String;
 
-.field public static final bxa:Ljava/lang/String;
+.field public static final bpc:Ljava/lang/String;
 
-.field public static final bxb:Ljava/lang/String;
+.field public static final bpd:Ljava/lang/String;
 
-.field public static bxc:Ljava/lang/String;
+.field public static bpe:Ljava/lang/String;
 
-.field public static bxd:Ljava/lang/String;
+.field public static bpf:Ljava/lang/String;
 
-.field public static bxe:Ljava/lang/String;
+.field public static bpg:Ljava/lang/String;
 
 
 # direct methods
@@ -23,7 +23,7 @@
 
     .prologue
     .line 18
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -70,14 +70,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/loader/stub/a;->bwZ:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/loader/stub/a;->bpb:Ljava/lang/String;
 
     .line 22
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/tencent/mm/loader/stub/a;->bwZ:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/loader/stub/a;->bpb:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -93,13 +93,13 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/loader/stub/a;->bxa:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/loader/stub/a;->bpc:Ljava/lang/String;
 
     .line 25
     :try_start_0
     new-instance v0, Ljava/io/File;
 
-    sget-object v1, Lcom/tencent/mm/loader/stub/a;->bxa:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/loader/stub/a;->bpc:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -122,7 +122,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/tencent/mm/loader/stub/a;->bwZ:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/loader/stub/a;->bpb:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -138,7 +138,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/loader/stub/a;->bxb:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/loader/stub/a;->bpd:Ljava/lang/String;
 
     .line 38
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
@@ -149,14 +149,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/loader/stub/a;->bxc:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/loader/stub/a;->bpe:Ljava/lang/String;
 
     .line 39
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/tencent/mm/loader/stub/a;->bxc:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/loader/stub/a;->bpe:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -172,14 +172,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/loader/stub/a;->bxd:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/loader/stub/a;->bpf:Ljava/lang/String;
 
     .line 40
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/tencent/mm/loader/stub/a;->bxd:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/loader/stub/a;->bpf:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -195,7 +195,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/loader/stub/a;->bxe:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/loader/stub/a;->bpg:Ljava/lang/String;
 
     return-void
 

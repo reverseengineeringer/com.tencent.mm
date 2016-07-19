@@ -1,24 +1,31 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.widget.ListView;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.g;
-import com.tencent.mm.sdk.platformtools.u;
+import android.content.Intent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.tencent.mm.kiss.app.Interactor;
+import com.tencent.mm.modelsns.a;
+import com.tencent.mm.plugin.sns.e.ap;
+import com.tencent.mm.plugin.sns.h.b;
+import com.tencent.mm.plugin.sns.vending.a.b;
 
 final class SnsTimeLineUI$31
-  implements Runnable
+  implements View.OnClickListener
 {
   SnsTimeLineUI$31(SnsTimeLineUI paramSnsTimeLineUI) {}
   
-  public final void run()
+  public final void onClick(View paramView)
   {
-    if (SnsTimeLineUI.b(hkJ) == null) {}
-    while (SnsTimeLineUI.m(hkJ)) {
-      return;
+    if ((SnsTimeLineUI.g(hzE) != null) && (ghzE).hkb != null)) {
+      ghzE).hkb.gXn.eQ(true);
     }
-    u.v("!32@/B4Tb64lLpIApwzsVfw/GSpHowATRrWf", "zeustest update onFling notify resume " + (hkJ.gWB.getFirstVisiblePosition() - hkJ.gWB.getHeaderViewsCount()));
-    ad.azg().start();
-    bhkJ).gPl.aCC();
+    paramView = (a.b)hzE.pT().get(1);
+    a locala = a.ex(725);
+    locala.eA(hGd);
+    locala.Dg();
+    paramView = new Intent();
+    paramView.setClass(hzE, SnsMsgUI.class);
+    hzE.startActivityForResult(paramView, 13);
   }
 }
 

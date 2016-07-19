@@ -15,9 +15,18 @@
 
 
 # instance fields
-.field final nh:Landroid/util/SparseArray;
+.field final nx:Landroid/util/SparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/SparseArray",
+            "<",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field final synthetic ni:Landroid/support/v7/internal/widget/AbsSpinnerICS;
+.field final synthetic ny:Landroid/support/v7/internal/widget/AbsSpinnerICS;
 
 
 # direct methods
@@ -26,7 +35,7 @@
 
     .prologue
     .line 422
-    iput-object p1, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$a;->ni:Landroid/support/v7/internal/widget/AbsSpinnerICS;
+    iput-object p1, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$a;->ny:Landroid/support/v7/internal/widget/AbsSpinnerICS;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -35,19 +44,19 @@
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$a;->nh:Landroid/util/SparseArray;
+    iput-object v0, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$a;->nx:Landroid/util/SparseArray;
 
     return-void
 .end method
 
 
 # virtual methods
-.method final D(I)Landroid/view/View;
+.method final J(I)Landroid/view/View;
     .locals 2
 
     .prologue
     .line 431
-    iget-object v0, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$a;->nh:Landroid/util/SparseArray;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$a;->nx:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -59,7 +68,7 @@
     if-eqz v0, :cond_0
 
     .line 434
-    iget-object v1, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$a;->nh:Landroid/util/SparseArray;
+    iget-object v1, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$a;->nx:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->delete(I)V
 
@@ -73,7 +82,7 @@
 
     .prologue
     .line 426
-    iget-object v0, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$a;->nh:Landroid/util/SparseArray;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$a;->nx:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 

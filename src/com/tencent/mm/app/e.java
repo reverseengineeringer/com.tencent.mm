@@ -1,153 +1,98 @@
 package com.tencent.mm.app;
 
+import android.app.ActivityManager;
+import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
+import android.os.Build;
+import android.os.Environment;
+import android.os.StatFs;
+import android.util.Base64;
+import android.util.StringBuilderPrinter;
+import com.tencent.mm.loader.stub.BaseBuildInfo;
+import com.tencent.mm.loader.stub.a;
+import com.tencent.mm.loader.stub.c;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ag;
+import com.tencent.mm.sdk.platformtools.ag.a;
+import com.tencent.mm.sdk.platformtools.ag.c;
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public final class e
 {
-  public static void a(Context paramContext, a parama)
+  public static void c(Context paramContext, String paramString1, String paramString2)
   {
-    if (paramContext == null) {
-      return;
-    }
-    for (;;)
+    try
     {
-      int i;
+      StringBuilder localStringBuilder = new StringBuilder(2560);
+      StringBuilderPrinter localStringBuilderPrinter = new StringBuilderPrinter(localStringBuilder);
+      localStringBuilderPrinter.println("#client.version=" + BaseBuildInfo.boR);
+      localStringBuilderPrinter.println("#accinfo.revision=" + BaseBuildInfo.qE());
+      Object localObject2 = c.bph.x("last_login_uin", "0");
+      if (localObject2 != null)
+      {
+        localObject1 = localObject2;
+        if (!((String)localObject2).equals("0")) {}
+      }
+      else
+      {
+        localObject1 = Integer.toString((Build.DEVICE + Build.FINGERPRINT + Build.MANUFACTURER + Build.MODEL).hashCode());
+      }
+      localStringBuilderPrinter.println("#accinfo.uin=" + (String)localObject1);
+      localObject2 = new StringBuilder("#accinfo.runtime=").append(System.currentTimeMillis() - MMApplicationLifeCycle.sAppStartTime).append("(");
+      Object localObject1 = paramString1;
+      if (paramString1 == null) {
+        localObject1 = "";
+      }
+      localStringBuilderPrinter.println((String)localObject1 + ") by cup");
+      localStringBuilderPrinter.println("#accinfo.build=" + BaseBuildInfo.boT + ":" + BaseBuildInfo.boU + ":0");
       try
       {
-        paramContext = paramContext.getSharedPreferences("crash_status_file", 4);
-        String[] arrayOfString = paramContext.getString("crashlist", "").split(";");
-        if ((arrayOfString == null) || (arrayOfString.length <= 0)) {
-          break;
+        paramString1 = Environment.getDataDirectory();
+        localObject1 = new StatFs(paramString1.getPath());
+        localObject2 = new StatFs(a.bpe);
+        paramString1 = String.format("%dMB %dMB %s:%d:%d:%d %s:%d:%d:%d", new Object[] { Integer.valueOf(((ActivityManager)paramContext.getSystemService("activity")).getMemoryClass()), Integer.valueOf(((ActivityManager)paramContext.getSystemService("activity")).getLargeMemoryClass()), paramString1.getAbsolutePath(), Integer.valueOf(((StatFs)localObject1).getBlockSize()), Integer.valueOf(((StatFs)localObject1).getBlockCount()), Integer.valueOf(((StatFs)localObject1).getAvailableBlocks()), a.bpe, Integer.valueOf(((StatFs)localObject2).getBlockSize()), Integer.valueOf(((StatFs)localObject2).getBlockCount()), Integer.valueOf(((StatFs)localObject2).getAvailableBlocks()) });
+        localStringBuilderPrinter.println("#accinfo.data=" + paramString1);
+        paramString1 = new Date();
+        localObject1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSZ", Locale.getDefault());
+        localStringBuilderPrinter.println("#accinfo.crashTime=" + ((SimpleDateFormat)localObject1).format(paramString1));
+        localStringBuilderPrinter.println("#crashContent=");
+        paramString1 = paramString2;
+        if (d.aa(aa.getContext()) == 1) {
+          paramString1 = paramString2.substring(0, d.ab(aa.getContext()));
         }
-        paramContext = paramContext.edit();
-        paramContext.putString("crashlist", "");
-        paramContext.commit();
-        i = 0;
-        if (i >= arrayOfString.length) {
-          break;
-        }
-        if (arrayOfString[i] == null)
-        {
-          paramContext = null;
-          if ((paramContext == null) || (paramContext.length < 2)) {
-            break label413;
-          }
-          if (paramContext[1].equals("anr"))
-          {
-            parama.aI(10);
-            break label413;
-          }
-        }
-        else
-        {
-          paramContext = arrayOfString[i].split(",");
-          continue;
-        }
-        parama.aI(11);
-        if ("com.tencent.mm".equals(paramContext[0])) {
-          parama.aI(14);
-        }
-        if ("com.tencent.mm:push".equals(paramContext[0])) {
-          parama.aI(17);
-        }
-        if ("com.tencent.mm:tools".equals(paramContext[0])) {
-          parama.aI(20);
-        }
-        if (paramContext[1].equals("java"))
-        {
-          parama.aI(12);
-          if ("com.tencent.mm".equals(paramContext[0])) {
-            parama.aI(15);
-          }
-          if ("com.tencent.mm:push".equals(paramContext[0])) {
-            parama.aI(18);
-          }
-          if ("com.tencent.mm:tools".equals(paramContext[0])) {
-            parama.aI(21);
-          }
-        }
-        if (paramContext[1].equals("jni"))
-        {
-          parama.aI(13);
-          if ("com.tencent.mm".equals(paramContext[0])) {
-            parama.aI(16);
-          }
-          if ("com.tencent.mm:push".equals(paramContext[0])) {
-            parama.aI(19);
-          }
-          if ("com.tencent.mm:tools".equals(paramContext[0])) {
-            parama.aI(22);
-          }
-        }
-        if (paramContext[1].equals("first"))
-        {
-          if ("com.tencent.mm".equals(paramContext[0])) {
-            parama.aI(23);
-          }
-          if ("com.tencent.mm:push".equals(paramContext[0])) {
-            parama.aI(24);
-          }
-          if ("com.tencent.mm:tools".equals(paramContext[0])) {
-            parama.aI(25);
-          }
-        }
-      }
-      catch (Throwable paramContext)
-      {
+        d.b(aa.getContext(), aa.aVm(), "first");
+        localStringBuilderPrinter.println(paramString1);
+        paramString1 = new Intent();
+        paramString1.setAction("INTENT_ACTION_UNCATCH");
+        paramString1.putExtra("INTENT_EXTRA_USER_NAME", c.bph.x("login_user_name", "never_login_crash"));
+        paramString1.putExtra("INTENT_EXTRA_EXCEPTION_MSG", Base64.encodeToString(localStringBuilder.toString().getBytes(), 2));
+        paramString1.putExtra("INTENT_EXTRA_DATA_PATH", a.bpc + "crash/");
+        paramString1.putExtra("INTENT_EXTRA_SDCARD_PATH", a.bpg);
+        paramString1.putExtra("INTENT_EXTRA_UIN", c.bph.x("last_login_uin", "0"));
+        paramString1.putExtra("INTENT_EXTRA_CLIENT_VERSION", BaseBuildInfo.boR);
+        paramString1.putExtra("INTENT_EXTRA_DEVICE_TYPE", BaseBuildInfo.boS);
+        paramString1.putExtra("INTENT_EXTRA_TAG", "exception");
+        paramString2 = paramContext.getSharedPreferences("system_config_prefs", 0);
+        paramString1.putExtra("INTENT_EXTRA_HOST", "http://" + paramString2.getString("support.weixin.qq.com", "support.weixin.qq.com"));
+        paramString1.setClassName(paramContext, paramContext.getPackageName() + ".crash.CrashUploaderService");
+        aa.getContext().startService(paramString1);
         return;
       }
-      label413:
-      i += 1;
-    }
-  }
-  
-  public static int ae(Context paramContext)
-  {
-    if (paramContext == null) {
-      return 0;
-    }
-    try
-    {
-      int i = paramContext.getSharedPreferences("crash_status_file", 4).getInt("channel", -1);
-      return i;
-    }
-    catch (Throwable paramContext) {}
-    return 0;
-  }
-  
-  public static int af(Context paramContext)
-  {
-    if (paramContext == null) {
-      return 0;
-    }
-    try
-    {
-      int i = paramContext.getSharedPreferences("crash_status_file", 4).getInt("googleplaysizelimit", 1024);
-      return i;
-    }
-    catch (Throwable paramContext) {}
-    return 0;
-  }
-  
-  public static void d(Context paramContext, String paramString1, String paramString2)
-  {
-    try
-    {
-      Object localObject = paramContext.getSharedPreferences("crash_status_file", 4);
-      paramContext = ((SharedPreferences)localObject).getString("crashlist", "");
-      localObject = ((SharedPreferences)localObject).edit();
-      ((SharedPreferences.Editor)localObject).putString("crashlist", paramContext + ";" + paramString1 + "," + paramString2);
-      ((SharedPreferences.Editor)localObject).commit();
+      catch (Exception paramString1)
+      {
+        for (;;)
+        {
+          paramString1 = "";
+        }
+      }
       return;
     }
-    catch (Throwable paramContext) {}
-  }
-  
-  public static abstract interface a
-  {
-    public abstract void aI(int paramInt);
+    catch (Exception paramContext) {}
   }
 }
 

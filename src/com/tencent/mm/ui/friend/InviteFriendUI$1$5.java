@@ -8,7 +8,7 @@ final class InviteFriendUI$1$5
   public final void g(boolean paramBoolean, String paramString)
   {
     if (paramBoolean) {
-      lrP.lrM.finish();
+      lSt.lSq.finish();
     }
   }
 }

@@ -15,28 +15,28 @@ import com.tencent.mm.R.b;
 public class MMVerticalTextView
   extends View
 {
-  private TextPaint dGF = new TextPaint();
+  private TextPaint dIf = new TextPaint();
   private int direction;
-  private String eut;
-  Rect kHR = new Rect();
+  private String eAL;
+  Rect lgT = new Rect();
   
   public MMVerticalTextView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    dGF.setAntiAlias(true);
-    dGF.setTextSize(15.0F);
-    dGF.setColor(-16777216);
-    dGF.setTextAlign(Paint.Align.CENTER);
-    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.verticaltextview);
+    dIf.setAntiAlias(true);
+    dIf.setTextSize(15.0F);
+    dIf.setColor(-16777216);
+    dIf.setTextAlign(Paint.Align.CENTER);
+    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.Xe);
     int i = paramAttributeSet.getResourceId(0, 0);
     if (i != 0) {
-      eut = paramContext.getString(i);
+      eAL = paramContext.getString(i);
     }
     i = paramAttributeSet.getDimensionPixelOffset(2, 15);
     if (i > 0) {
-      dGF.setTextSize(i);
+      dIf.setTextSize(i);
     }
-    dGF.setColor(paramAttributeSet.getColor(1, -16777216));
+    dIf.setColor(paramAttributeSet.getColor(1, -16777216));
     direction = paramAttributeSet.getInt(3, 0);
     paramAttributeSet.recycle();
     requestLayout();
@@ -51,15 +51,15 @@ public class MMVerticalTextView
     int j;
     if (direction == 0)
     {
-      j = (getWidth() >> 1) - (kHR.height() >> 1);
+      j = (getWidth() >> 1) - (lgT.height() >> 1);
       localPath.moveTo(j, 0.0F);
       localPath.lineTo(j, i);
     }
     for (;;)
     {
-      paramCanvas.drawTextOnPath(eut, localPath, 0.0F, 0.0F, dGF);
+      paramCanvas.drawTextOnPath(eAL, localPath, 0.0F, 0.0F, dIf);
       return;
-      j = (getWidth() >> 1) + (kHR.height() >> 1);
+      j = (getWidth() >> 1) + (lgT.height() >> 1);
       localPath.moveTo(j, i);
       localPath.lineTo(j, 0.0F);
     }
@@ -67,7 +67,7 @@ public class MMVerticalTextView
   
   protected void onMeasure(int paramInt1, int paramInt2)
   {
-    dGF.getTextBounds(eut, 0, eut.length(), kHR);
+    dIf.getTextBounds(eAL, 0, eAL.length(), lgT);
     int j = View.MeasureSpec.getMode(paramInt1);
     paramInt1 = View.MeasureSpec.getSize(paramInt1);
     if (j == 1073741824) {}
@@ -81,13 +81,13 @@ public class MMVerticalTextView
       {
         setMeasuredDimension(paramInt1, paramInt2);
         return;
-        i = kHR.height();
+        i = lgT.height();
         if (j != Integer.MIN_VALUE) {
           break label119;
         }
         paramInt1 = Math.min(i, paramInt1);
         break;
-        i = kHR.width();
+        i = lgT.width();
         if (j == Integer.MIN_VALUE) {
           paramInt2 = Math.min(i, paramInt2);
         } else {
@@ -99,22 +99,9 @@ public class MMVerticalTextView
     }
   }
   
-  public void setText(String paramString)
+  public final void setText(String paramString)
   {
-    eut = paramString;
-    requestLayout();
-    invalidate();
-  }
-  
-  public void setTextColor(int paramInt)
-  {
-    dGF.setColor(paramInt);
-    invalidate();
-  }
-  
-  public void setTextSize(int paramInt)
-  {
-    dGF.setTextSize(paramInt);
+    eAL = paramString;
     requestLayout();
     invalidate();
   }

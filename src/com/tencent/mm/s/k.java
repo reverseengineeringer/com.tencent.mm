@@ -1,392 +1,293 @@
 package com.tencent.mm.s;
 
-import android.content.Context;
-import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.Bitmap.CompressFormat;
-import android.graphics.BitmapFactory;
-import android.graphics.BitmapFactory.Options;
-import com.tencent.mm.model.ap.a;
-import com.tencent.mm.model.ap.e;
-import com.tencent.mm.network.j;
-import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ax.a;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.lang.ref.WeakReference;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import android.content.ContentValues;
+import com.tencent.mm.ax.b;
+import com.tencent.mm.model.h;
+import com.tencent.mm.modelsfs.FileOp;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.ami;
+import com.tencent.mm.protocal.b.tg;
+import com.tencent.mm.protocal.b.th;
+import com.tencent.mm.protocal.k.d;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.a.c;
+import com.tencent.mm.t.j.b;
+import java.io.IOException;
+import java.io.OutputStream;
 
-public final class k
+final class k
+  extends com.tencent.mm.t.j
+  implements com.tencent.mm.network.j
 {
-  private static String J(String paramString1, String paramString2)
+  private com.tencent.mm.t.d bkT;
+  private int bxP;
+  private OutputStream bxQ = null;
+  private String bxR;
+  private String bxt;
+  private int bxx;
+  private String bxz;
+  private String username;
+  
+  public k(String paramString)
   {
-    if ((paramString1 == null) || (!com.tencent.mm.model.ax.qZ())) {
-      paramString2 = null;
+    username = paramString;
+    if (com.tencent.mm.storage.k.eb(paramString)) {
+      username = com.tencent.mm.storage.k.Gs(paramString);
     }
-    do
-    {
-      return paramString2;
-      paramString1 = p.wT().ga(paramString1);
-    } while (field_brandIconURL == null);
-    return field_brandIconURL;
+    v.i("MicroMsg.NetSceneGetHDHeadImg", "init Headimage in_username:" + paramString + " out_username" + username);
+    bxx = 480;
+    bxP = 480;
+    bxz = "jpg";
   }
   
-  public static Bitmap b(String paramString1, String paramString2, int paramInt)
+  private int E(byte[] paramArrayOfByte)
   {
-    Object localObject;
-    if (!com.tencent.mm.model.ax.tl().isSDCardAvailable()) {
-      localObject = cV(paramInt);
-    }
-    String str;
-    label149:
-    do
+    try
     {
-      return (Bitmap)localObject;
-      if ((paramString1 == null) || (!com.tencent.mm.model.ax.qZ())) {
-        return null;
+      if (bxQ == null) {
+        bxQ = FileOp.iZ(bxR);
       }
-      str = paramString2;
-      if (paramString2 == null)
+      bxQ.write(paramArrayOfByte);
+      return paramArrayOfByte.length;
+    }
+    catch (IOException paramArrayOfByte)
+    {
+      v.e("MicroMsg.NetSceneGetHDHeadImg", "exception:%s", new Object[] { be.f(paramArrayOfByte) });
+    }
+    return -1;
+  }
+  
+  public static void K(String paramString1, String paramString2)
+  {
+    n.vd().J(paramString1, paramString2);
+  }
+  
+  private void vn()
+  {
+    try
+    {
+      if (bxQ != null)
       {
-        paramString2 = J(paramString1, null);
-        str = paramString2;
-        if (paramString2 == null) {
-          return null;
+        bxQ.flush();
+        bxQ.close();
+        bxQ = null;
+      }
+      return;
+    }
+    catch (IOException localIOException)
+    {
+      v.e("MicroMsg.NetSceneGetHDHeadImg", "exception:%s", new Object[] { be.f(localIOException) });
+    }
+  }
+  
+  public final int a(e parame, com.tencent.mm.t.d paramd)
+  {
+    int j = 0;
+    bkT = paramd;
+    if ((username == null) || (username.length() == 0))
+    {
+      v.e("MicroMsg.NetSceneGetHDHeadImg", "username is null");
+      return -1;
+    }
+    if (username.endsWith("@qqim"))
+    {
+      v.e("MicroMsg.NetSceneGetHDHeadImg", "never try get qq user hd.");
+      return -1;
+    }
+    Object localObject1 = n.vv();
+    n.vd();
+    bxt = d.n(username, true);
+    if (FileOp.aB(bxt))
+    {
+      v.i("MicroMsg.NetSceneGetHDHeadImg", "The HDAvatar of " + username + " is already exists");
+      return 0;
+    }
+    bxR = (bxt + ".tmp");
+    paramd = ((g)localObject1).gp(username);
+    Object localObject2;
+    if (paramd == null)
+    {
+      FileOp.deleteFile(bxR);
+      paramd = new f();
+      username = username;
+      bxz = bxz;
+      bxx = bxx;
+      bxy = bxP;
+      aqQ = -1;
+      localObject2 = paramd.kn();
+      bvG.insert("hdheadimginfo", "username", (ContentValues)localObject2);
+      localObject1 = new a.a();
+      byl = new tg();
+      bym = new th();
+      uri = "/cgi-bin/micromsg-bin/gethdheadimg";
+      byj = 158;
+      byn = 47;
+      byo = 1000000047;
+      localObject1 = ((a.a)localObject1).vA();
+      localObject2 = (tg)byh.byq;
+      if (com.tencent.mm.storage.k.eb(username)) {
+        break label608;
+      }
+      emC = username;
+      jPH = 1;
+    }
+    for (;;)
+    {
+      v.d("MicroMsg.NetSceneGetHDHeadImg", "inUser:" + username + " outUser:" + emC + " outType:" + jPH);
+      jPE = bxx;
+      jPF = bxP;
+      jPG = bxz;
+      jwi = bxA;
+      jwj = bxB;
+      return a(parame, (o)localObject1, this);
+      localObject2 = bxR;
+      int i = j;
+      if (paramd != null)
+      {
+        i = j;
+        if (localObject2 != null)
+        {
+          if (((String)localObject2).length() != 0) {
+            break label541;
+          }
+          i = j;
         }
       }
-      paramString2 = p.wV();
-      if (!bwl.containsKey(paramString1)) {
-        break label242;
-      }
-      localObject = (Bitmap)((WeakReference)bwl.get(paramString1)).get();
-      if ((localObject != null) && (!((Bitmap)localObject).isRecycled())) {
-        break label213;
-      }
-      localObject = J(paramString1, str);
-      localObject = com.tencent.mm.sdk.platformtools.e.xf(a.gm(paramString1 + (String)localObject));
-      if (localObject != null) {
+      for (;;)
+      {
+        if (i == 0)
+        {
+          FileOp.deleteFile(bxR);
+          paramd.reset();
+          username = username;
+          bxz = bxz;
+          bxx = bxx;
+          bxy = bxP;
+          ((g)localObject1).a(username, paramd);
+        }
         break;
-      }
-      t.i("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "not found brand icon local");
-      paramString2 = null;
-      localObject = paramString2;
-    } while (paramString2 != null);
-    paramString2 = p.wV();
-    if ((bn.iW(paramString1)) || (bn.iW(str))) {
-      t.e("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "pushing for brand " + paramString1 + ", url " + str);
-    }
-    for (;;)
-    {
-      return null;
-      paramString2.d(paramString1, (Bitmap)localObject);
-      for (;;)
-      {
-        label213:
-        paramString2 = (WeakReference)bwl.get(paramString1);
-        if (paramString2 == null) {
-          break;
-        }
-        paramString2 = (Bitmap)paramString2.get();
-        break label149;
-        label242:
-        localObject = J(paramString1, str);
-        localObject = com.tencent.mm.sdk.platformtools.e.xf(a.gm(paramString1 + (String)localObject));
-        if (localObject == null)
+        label541:
+        i = j;
+        if (paramd.vi().equals(bxz))
         {
-          t.i("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "not found brand icon local");
-          break;
-        }
-        paramString2.d(paramString1, (Bitmap)localObject);
-      }
-      if (bn.X(bn.c((Integer)bwk.get(paramString1))) < 300L)
-      {
-        t.i("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "downloading interval less than 5 mins for " + paramString1);
-      }
-      else
-      {
-        bwk.put(paramString1, Integer.valueOf((int)bn.DL()));
-        if ((bwm == null) || (bwm.aFl())) {
-          bwm = new com.tencent.mm.sdk.platformtools.ax(1, "brand-logic");
-        }
-        str = J(paramString1, str);
-        bwm.c(new b(paramString1, str));
-      }
-    }
-  }
-  
-  private static Bitmap cV(int paramInt)
-  {
-    Object localObject = null;
-    if (paramInt <= 0) {}
-    Bitmap localBitmap;
-    do
-    {
-      return (Bitmap)localObject;
-      localObject = new BitmapFactory.Options();
-      com.tencent.mm.sdk.platformtools.e.a((BitmapFactory.Options)localObject);
-      localBitmap = BitmapFactory.decodeStream(aa.getContext().getResources().openRawResource(paramInt), null, (BitmapFactory.Options)localObject);
-      localObject = localBitmap;
-    } while (localBitmap == null);
-    return com.tencent.mm.sdk.platformtools.e.a(localBitmap, false, localBitmap.getWidth() >> 1);
-  }
-  
-  public static Bitmap gk(String paramString)
-  {
-    boolean bool = false;
-    if ((bn.iW(paramString)) || (!com.tencent.mm.model.ax.tl().isSDCardAvailable()) || (!com.tencent.mm.model.ax.qZ())) {
-      return null;
-    }
-    a locala = p.wV();
-    String str = String.format("%s%f", new Object[] { paramString, Float.valueOf(1.5F) });
-    Bitmap localBitmap1;
-    if (bwl.containsKey(str))
-    {
-      Bitmap localBitmap2 = (Bitmap)((WeakReference)bwl.get(str)).get();
-      if (localBitmap2 != null)
-      {
-        localBitmap1 = localBitmap2;
-        if (!localBitmap2.isRecycled()) {}
-      }
-      else
-      {
-        localBitmap1 = BackwardSupportUtil.b.b(paramString, 1.5F);
-        bwl.remove(str);
-        bwl.put(str, new WeakReference(localBitmap1));
-      }
-    }
-    for (;;)
-    {
-      if (localBitmap1 == null) {
-        bool = true;
-      }
-      t.i("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "get verify user icon = %s, is null ? %s", new Object[] { paramString, String.valueOf(bool) });
-      return localBitmap1;
-      localBitmap1 = BackwardSupportUtil.b.b(paramString, 1.5F);
-      bwl.put(str, new WeakReference(localBitmap1));
-    }
-  }
-  
-  public static Bitmap gl(String paramString)
-  {
-    Object localObject2 = null;
-    Object localObject1;
-    if (!com.tencent.mm.model.ax.tl().isSDCardAvailable()) {
-      localObject1 = cV(0);
-    }
-    do
-    {
-      do
-      {
-        do
-        {
-          do
+          i = j;
+          if (bxx == bxx)
           {
-            return (Bitmap)localObject1;
-            localObject1 = localObject2;
-          } while (paramString == null);
-          localObject1 = localObject2;
-        } while (!com.tencent.mm.model.ax.qZ());
-        localObject1 = p.wV();
-        if (!bwl.containsKey(paramString)) {
-          break;
-        }
-        paramString = (Bitmap)((WeakReference)bwl.get(paramString)).get();
-        localObject1 = localObject2;
-      } while (paramString == null);
-      localObject1 = localObject2;
-    } while (paramString.isRecycled());
-    for (;;)
-    {
-      return paramString;
-      paramString = null;
-    }
-  }
-  
-  public static final class a
-  {
-    List bwj = new ArrayList();
-    Map bwk = new HashMap();
-    Map bwl = new HashMap();
-    com.tencent.mm.sdk.platformtools.ax bwm = null;
-    
-    public static String gm(String paramString)
-    {
-      if (com.tencent.mm.model.ax.qZ()) {
-        return com.tencent.mm.model.ax.tl().rE() + "/brand_" + com.tencent.mm.a.e.n(paramString.getBytes());
-      }
-      return "";
-    }
-    
-    public final void a(a parama)
-    {
-      bwj.add(parama);
-    }
-    
-    public final void b(a parama)
-    {
-      bwj.remove(parama);
-    }
-    
-    final void d(String paramString, Bitmap paramBitmap)
-    {
-      Bitmap localBitmap1;
-      if (bwl.containsKey(paramString)) {
-        localBitmap1 = (Bitmap)((WeakReference)bwl.get(paramString)).get();
-      }
-      for (;;)
-      {
-        Bitmap localBitmap3;
-        if (localBitmap1 != null)
-        {
-          localBitmap3 = localBitmap1;
-          if (!localBitmap1.isRecycled()) {
-            break label105;
-          }
-        }
-        try
-        {
-          localBitmap1 = Bitmap.createScaledBitmap(paramBitmap, 128, 128, true);
-          localBitmap1 = com.tencent.mm.sdk.platformtools.e.a(localBitmap1, true, localBitmap1.getWidth() >> 1);
-          bwl.remove(paramString);
-          bwl.put(paramString, new WeakReference(localBitmap1));
-          localBitmap3 = localBitmap1;
-          label105:
-          if (localBitmap3 == paramBitmap)
-          {
-            return;
-            localBitmap1 = null;
-          }
-        }
-        catch (OutOfMemoryError localOutOfMemoryError)
-        {
-          for (;;)
-          {
-            Bitmap localBitmap2 = paramBitmap;
-          }
-          paramBitmap.recycle();
-        }
-      }
-    }
-    
-    public final void wN()
-    {
-      bwj.clear();
-    }
-    
-    public static abstract interface a
-    {
-      public abstract void gn(String paramString);
-    }
-  }
-  
-  private static final class b
-    implements ax.a
-  {
-    public byte[] brO = null;
-    private final String bwn;
-    private final String url;
-    
-    public b(String paramString1, String paramString2)
-    {
-      bwn = paramString1;
-      url = paramString2;
-    }
-    
-    public final boolean ud()
-    {
-      if ((bn.iW(bwn)) || (bn.iW(url))) {}
-      Object localObject1;
-      Object localObject2;
-      for (;;)
-      {
-        return false;
-        try
-        {
-          ByteArrayOutputStream localByteArrayOutputStream = new ByteArrayOutputStream();
-          localObject1 = j.i(url, 3000, 5000);
-          if (localObject1 != null)
-          {
-            localObject2 = new byte['Ѐ'];
-            for (;;)
+            i = j;
+            if (bxy == bxP)
             {
-              int i = ((InputStream)localObject1).read((byte[])localObject2);
-              if (i == -1) {
-                break;
+              i = j;
+              if (FileOp.jc((String)localObject2) == bxB) {
+                i = 1;
               }
-              localByteArrayOutputStream.write((byte[])localObject2, 0, i);
             }
-            ((InputStream)localObject1).close();
           }
         }
-        catch (Exception localException1)
-        {
-          t.e("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "exception:%s", new Object[] { bn.a(localException1) });
-          t.e("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "get url:" + url + " failed.");
-          brO = null;
-          return false;
-        }
       }
-      brO = localException1.toByteArray();
-      localException1.close();
-      if (bn.J(brO))
+      label608:
+      if (username.equals(h.se() + "@bottle"))
       {
-        t.e("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "imgBuff null brand:" + bwn);
-        return false;
+        emC = h.se();
+        jPH = 2;
       }
-      k.a locala;
-      String str;
-      if (com.tencent.mm.model.ax.qZ())
+      else
       {
-        ap.a.boB.B(brO.length, 0);
-        locala = p.wV();
-        localObject1 = bwn;
-        str = url;
-        localObject2 = brO;
-      }
-      try
-      {
-        str = (String)localObject1 + str;
-        localObject2 = com.tencent.mm.sdk.platformtools.e.aC((byte[])localObject2);
-        com.tencent.mm.sdk.platformtools.e.a((Bitmap)localObject2, 100, Bitmap.CompressFormat.PNG, k.a.gm(str), false);
-        locala.d((String)localObject1, (Bitmap)localObject2);
-        t.i("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "update brand icon for  " + (String)localObject1 + ", done");
-        bwk.remove(localObject1);
-        return true;
-      }
-      catch (Exception localException2)
-      {
-        for (;;)
-        {
-          t.e("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "exception:%s", new Object[] { bn.a(localException2) });
-        }
+        emC = username;
+        jPH = 2;
       }
     }
-    
-    public final boolean ue()
+  }
+  
+  protected final int a(o paramo)
+  {
+    if ((username == null) || (username.length() == 0)) {
+      return j.b.byU;
+    }
+    return j.b.byT;
+  }
+  
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
+  {
+    paramArrayOfByte = (th)byi.byq;
+    v.d("MicroMsg.NetSceneGetHDHeadImg", "errType:" + paramInt2 + " errCode:" + paramInt3);
+    if ((paramInt2 != 4) && (paramInt3 != 0))
     {
-      k.a locala = p.wV();
-      String str = bwn;
-      int i = 0;
-      try
-      {
-        while (i < bwj.size())
-        {
-          ((k.a.a)bwj.get(i)).gn(str);
-          i += 1;
-        }
-        return false;
-      }
-      catch (Exception localException)
-      {
-        t.e("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "exception:%s", new Object[] { bn.a(localException) });
+      v.e("MicroMsg.NetSceneGetHDHeadImg", "errType:" + paramInt2 + " errCode:" + paramInt3);
+      bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
+      vn();
+      return;
+    }
+    if ((paramInt2 == 4) || (paramInt2 == 5))
+    {
+      bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
+      v.e("MicroMsg.NetSceneGetHDHeadImg", "ErrType:" + paramInt2);
+      vn();
+      return;
+    }
+    paramInt1 = tYjsi;
+    if ((paramInt1 == -4) || (paramInt1 == -54) || (paramInt1 == -55)) {
+      v.e("MicroMsg.NetSceneGetHDHeadImg", "retcode == " + paramInt1);
+    }
+    for (paramInt1 = 1; paramInt1 != 0; paramInt1 = 0)
+    {
+      v.e("MicroMsg.NetSceneGetHDHeadImg", "handleCertainError");
+      bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
+      vn();
+      return;
+    }
+    int i = -1;
+    paramInt1 = i;
+    if (jxU != null)
+    {
+      paramInt1 = i;
+      if (jxU.kfS != null) {
+        paramInt1 = E(jxU.kfS.jrl);
       }
     }
+    if (paramInt1 < 0)
+    {
+      v.e("MicroMsg.NetSceneGetHDHeadImg", "appendBuf fail");
+      bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
+      vn();
+      return;
+    }
+    paramo = n.vv();
+    f localf = paramo.gp(username);
+    bxB = (paramInt1 + jwj);
+    bxA = jwi;
+    paramo.a(username, localf);
+    if (bxB >= bxA) {}
+    for (paramInt1 = 1; paramInt1 == 0; paramInt1 = 0)
+    {
+      v.d("MicroMsg.NetSceneGetHDHeadImg", "doScene again");
+      a(byD, bkT);
+      return;
+    }
+    FileOp.V(bxR, bxt);
+    K(bxt, username);
+    vn();
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
+  }
+  
+  protected final void cancel()
+  {
+    super.cancel();
+    vn();
+  }
+  
+  public final int getType()
+  {
+    return 158;
+  }
+  
+  protected final int px()
+  {
+    return 10;
   }
 }
 

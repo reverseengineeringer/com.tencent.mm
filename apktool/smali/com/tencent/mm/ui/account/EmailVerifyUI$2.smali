@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/EmailVerifyUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/EmailVerifyUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ksd:Lcom/tencent/mm/ui/account/EmailVerifyUI;
+.field final synthetic kRl:Lcom/tencent/mm/ui/account/EmailVerifyUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 112
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI$2;->ksd:Lcom/tencent/mm/ui/account/EmailVerifyUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI$2;->kRl:Lcom/tencent/mm/ui/account/EmailVerifyUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,16 +36,16 @@
 
 
 # virtual methods
-.method public final bbz()V
+.method public final bgL()V
     .locals 2
 
     .prologue
     .line 117
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI$2;->ksd:Lcom/tencent/mm/ui/account/EmailVerifyUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI$2;->kRl:Lcom/tencent/mm/ui/account/EmailVerifyUI;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->bC(Z)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->bp(Z)V
 
     .line 118
     return-void

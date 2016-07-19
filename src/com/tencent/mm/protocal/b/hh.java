@@ -1,35 +1,43 @@
 package com.tencent.mm.protocal.b;
 
 public final class hh
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public String eiB;
+  public int cmu;
+  public String jDt;
+  public long jDu;
+  public int jDv;
+  public int juM;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (eiB != null) {
-        paramVarArgs.d(1, eiB);
+      if (jDt != null) {
+        paramVarArgs.e(1, jDt);
       }
+      paramVarArgs.z(2, jDu);
+      paramVarArgs.cw(3, jDv);
+      paramVarArgs.cw(4, juM);
+      paramVarArgs.cw(5, cmu);
       return 0;
     }
     if (paramInt == 1) {
-      if (eiB == null) {
-        break label174;
+      if (jDt == null) {
+        break label318;
       }
     }
-    label174:
-    for (paramInt = a.a.a.b.b.a.e(1, eiB) + 0;; paramInt = 0)
+    label318:
+    for (paramInt = a.a.a.b.b.a.f(1, jDt) + 0;; paramInt = 0)
     {
-      return paramInt;
+      return paramInt + a.a.a.a.y(2, jDu) + a.a.a.a.cu(3, jDv) + a.a.a.a.cu(4, juM) + a.a.a.a.cu(5, cmu);
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
         break;
@@ -42,8 +50,20 @@ public final class hh
         {
         default: 
           return -1;
+        case 1: 
+          jDt = mMY.readString();
+          return 0;
+        case 2: 
+          jDu = mMY.ie();
+          return 0;
+        case 3: 
+          jDv = mMY.id();
+          return 0;
+        case 4: 
+          juM = mMY.id();
+          return 0;
         }
-        eiB = maU.readString();
+        cmu = mMY.id();
         return 0;
       }
       return -1;

@@ -9,8 +9,8 @@ final class g$5
   
   public final void d(MenuItem paramMenuItem, int paramInt)
   {
-    if (kCA != null) {
-      kCA.aq(paramInt, paramMenuItem.getItemId());
+    if (lbF != null) {
+      lbF.av(paramInt, paramMenuItem.getItemId());
     }
   }
 }

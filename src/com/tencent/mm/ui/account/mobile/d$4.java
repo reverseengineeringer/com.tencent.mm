@@ -12,7 +12,7 @@ final class d$4
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    b.kD(ah.tx() + "," + getClass().getName() + ",L200_300," + ah.fd("L200_300") + ",2");
+    b.lm(ah.ty() + "," + getClass().getName() + ",L200_300," + ah.fq("L200_300") + ",2");
   }
 }
 

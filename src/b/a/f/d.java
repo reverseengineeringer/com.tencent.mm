@@ -5,21 +5,21 @@ import java.util.Random;
 public final class d
   implements c
 {
-  private a men = new a();
+  private a mQr = new a();
   
-  private static Long boS()
+  private static Long bvQ()
   {
     return Long.valueOf(Long.valueOf(System.currentTimeMillis()).longValue() / 1000L);
   }
   
-  public final String boR()
+  public final String bvP()
   {
-    return String.valueOf(boS());
+    return String.valueOf(bvQ());
   }
   
   public final String getNonce()
   {
-    return String.valueOf(boS().longValue() + Integer.valueOf(new Random().nextInt()).intValue());
+    return String.valueOf(bvQ().longValue() + Integer.valueOf(new Random().nextInt()).intValue());
   }
   
   static final class a {}

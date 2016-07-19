@@ -15,4 +15,4 @@
 
 
 # static fields
-.field public static izh:Lcom/tencent/mm/pluginsdk/i$q;
+.field public static iVD:Lcom/tencent/mm/pluginsdk/i$q;

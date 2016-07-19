@@ -1,660 +1,604 @@
 package com.tencent.mm.platformtools;
 
-import android.app.ActivityManager;
-import android.app.ActivityManager.RunningTaskInfo;
-import android.content.ComponentName;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.net.Uri;
-import android.os.Debug;
-import android.os.StatFs;
-import android.os.SystemClock;
-import android.os.Vibrator;
-import com.tencent.mm.compatible.util.d;
-import com.tencent.mm.compatible.util.e;
-import com.tencent.mm.pluginsdk.i.ab;
-import com.tencent.mm.pluginsdk.i.ad;
-import com.tencent.mm.pluginsdk.i.ag;
-import com.tencent.mm.sdk.platformtools.f;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import android.content.pm.Signature;
+import android.content.res.AssetManager;
+import android.content.res.Resources;
+import android.content.res.Resources.NotFoundException;
+import android.content.res.XmlResourceParser;
+import android.os.Build.VERSION;
+import android.text.TextUtils;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.sdk.platformtools.z;
+import java.io.File;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
-import java.util.TimeZone;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public final class t
 {
-  private static final TimeZone GMT = TimeZone.getTimeZone("GMT");
-  private static final long[] cnZ = { 300L, 200L, 300L, 200L };
-  
-  public static boolean C(Context paramContext, String paramString)
+  public static boolean a(Context paramContext, ArrayList<c> paramArrayList, boolean paramBoolean)
   {
-    Intent localIntent = new Intent("android.intent.action.VIEW", Uri.parse(paramString));
-    if (!n(paramContext, localIntent))
+    if (paramArrayList.size() == 0) {
+      return false;
+    }
+    Iterator localIterator = paramArrayList.iterator();
+    c localc;
+    Object localObject2;
+    Object localObject1;
+    Object localObject3;
+    int i;
+    for (;;)
     {
-      u.e("!24@/B4Tb64lLpKIVTyJhzV/jw==", "jump to url failed, " + paramString);
-      return false;
+      if (localIterator.hasNext())
+      {
+        localc = (c)localIterator.next();
+        if (!TextUtils.isEmpty(YH))
+        {
+          localObject2 = YH;
+          localObject1 = new ArrayList();
+          localObject3 = paramContext.getPackageResourcePath();
+          if (Build.VERSION.SDK_INT >= 21)
+          {
+            paramArrayList = ((String)localObject3).split("/");
+            if (paramArrayList != null)
+            {
+              i = 0;
+              label92:
+              if (i >= paramArrayList.length) {
+                break label787;
+              }
+              if (!paramArrayList[i].contains(paramContext.getPackageName())) {
+                break;
+              }
+              paramArrayList = paramArrayList[i];
+              label115:
+              if (!TextUtils.isEmpty(paramArrayList))
+              {
+                String str = ((String)localObject3).replace(paramArrayList, (String)localObject2 + "-1");
+                if (new File(str).exists()) {
+                  ((List)localObject1).add(str);
+                }
+                paramArrayList = ((String)localObject3).replace(paramArrayList, (String)localObject2 + "-2");
+                if (new File(paramArrayList).exists()) {
+                  ((List)localObject1).add(paramArrayList);
+                }
+              }
+            }
+            label225:
+            if (((List)localObject1).size() <= 0) {
+              continue;
+            }
+            localObject1 = ((List)localObject1).iterator();
+            label244:
+            while (((Iterator)localObject1).hasNext())
+            {
+              localObject2 = new File((String)((Iterator)localObject1).next());
+              if (((File)localObject2).exists()) {
+                paramArrayList = "";
+              }
+            }
+          }
+        }
+      }
     }
-    paramContext.startActivity(localIntent);
-    return true;
-  }
-  
-  public static long FR()
-  {
-    return System.currentTimeMillis() / 1000L;
-  }
-  
-  public static long FS()
-  {
-    return System.currentTimeMillis();
-  }
-  
-  public static long FT()
-  {
-    return SystemClock.elapsedRealtime();
-  }
-  
-  public static void FU()
-  {
-    u.w("!24@/B4Tb64lLpKIVTyJhzV/jw==", "memory usage: h=%s/%s, e=%s/%s, n=%s/%s", new Object[] { al(Debug.getGlobalAllocSize()), al(Debug.getGlobalAllocSize() + Debug.getGlobalFreedSize()), al(Debug.getGlobalExternalAllocSize()), al(Debug.getGlobalExternalAllocSize() + Debug.getGlobalExternalFreedSize()), al(Debug.getNativeHeapAllocatedSize()), al(Debug.getNativeHeapSize()) });
-  }
-  
-  public static boolean FV()
-  {
-    if (!e.oW()) {
-      return false;
-    }
-    long l2 = 0L;
-    long l4 = 0L;
     for (;;)
     {
       try
       {
-        StatFs localStatFs = new StatFs(d.bxc);
-        l1 = l4;
-      }
-      catch (Exception localException1)
-      {
-        try
+        long l = System.currentTimeMillis();
+        if (paramBoolean)
         {
-          l3 = localStatFs.getBlockCount();
-          l1 = l4;
-          l2 = l3;
-          l4 = localStatFs.getAvailableBlocks();
-          l1 = l4;
-          l2 = l3;
-          i = localStatFs.getBlockSize();
-          l1 = i;
-          l2 = l4;
-          if (localStatFs != null) {
-            break;
+          localObject2 = paramContext.getPackageManager().getPackageInfo(YH, 64);
+          if (signatures.length <= 0) {
+            break label793;
           }
-          return false;
-        }
-        catch (Exception localException2)
-        {
-          long l1;
-          long l3;
-          int i;
-          for (;;) {}
-        }
-        localException1 = localException1;
-        localStatFs = null;
-        l1 = l4;
-      }
-      tmp91_88[0] = localException1;
-      u.e("!24@/B4Tb64lLpKIVTyJhzV/jw==", "checkSDCardFull", tmp91_88);
-      l4 = 0L;
-      l3 = l2;
-      l2 = l1;
-      l1 = l4;
-    }
-    if (l3 <= 0L) {
-      return false;
-    }
-    if (l3 - l2 < 0L) {
-      return false;
-    }
-    i = (int)((l3 - l2) * 100L / l3);
-    l4 = l1 * l2;
-    u.i("!24@/B4Tb64lLpKIVTyJhzV/jw==", "checkSDCardFull blockCount: %d, availCount: %d, blockSize: %d, totalSize: %d, availSize: %d, used percent: %d", new Object[] { Long.valueOf(l3), Long.valueOf(l2), Long.valueOf(l1), Long.valueOf(l1 * l3), Long.valueOf(l4), Integer.valueOf(i) });
-    if (95 > i) {
-      return false;
-    }
-    if (l4 > 104857600L) {
-      return false;
-    }
-    u.i("!24@/B4Tb64lLpKIVTyJhzV/jw==", "checkSDCardFull is full!");
-    return true;
-  }
-  
-  public static a FW()
-  {
-    return new a();
-  }
-  
-  public static String I(byte[] paramArrayOfByte)
-  {
-    return k(paramArrayOfByte, 0);
-  }
-  
-  public static boolean J(byte[] paramArrayOfByte)
-  {
-    return (paramArrayOfByte == null) || (paramArrayOfByte.length <= 0);
-  }
-  
-  public static int Y(Object paramObject)
-  {
-    if (paramObject == null) {}
-    do
-    {
-      return 0;
-      if ((paramObject instanceof Integer)) {
-        return ((Integer)paramObject).intValue();
-      }
-    } while (!(paramObject instanceof Long));
-    return ((Long)paramObject).intValue();
-  }
-  
-  public static boolean a(Boolean paramBoolean, boolean paramBoolean1)
-  {
-    if (paramBoolean == null) {
-      return paramBoolean1;
-    }
-    return paramBoolean.booleanValue();
-  }
-  
-  public static int ad(int paramInt1, int paramInt2)
-  {
-    if (paramInt1 <= paramInt2)
-    {
-      u.e("!24@/B4Tb64lLpKIVTyJhzV/jw==", "getIntRandom failed upLimit:" + paramInt1 + "<= downLimit:" + paramInt2);
-      return 0;
-    }
-    return new Random(System.currentTimeMillis()).nextInt(paramInt1 - paramInt2 + 1) + paramInt2;
-  }
-  
-  public static String ad(String paramString1, String paramString2)
-  {
-    if (paramString1 == null) {
-      return paramString2;
-    }
-    return paramString1;
-  }
-  
-  public static List ae(String paramString1, String paramString2)
-  {
-    String str = null;
-    if (paramString1 != null)
-    {
-      paramString2 = Pattern.compile(paramString2).matcher(paramString1);
-      int j = paramString2.groupCount();
-      int i = 1;
-      paramString1 = new ArrayList();
-      str = paramString1;
-      if (paramString2.find()) {
-        for (;;)
-        {
-          str = paramString1;
+          paramArrayList = z.Fb(signatures[(signatures.length - 1)].toCharsString());
+          break label793;
+          localObject2 = YH;
+          localObject3 = cjn;
+          if ((TextUtils.isEmpty(paramArrayList)) || (!paramArrayList.equalsIgnoreCase(cjn))) {
+            break label796;
+          }
+          bool = true;
+          v.i("MicroMsg.YYBMarketVerify", "summertoken containLowerMarket usesSystemApi[%b], infopkg[%s], infoMD5[%s], sigMD5[%s], equal[%b], takes[%d]ms", new Object[] { Boolean.valueOf(paramBoolean), localObject2, localObject3, paramArrayList, Boolean.valueOf(bool), Long.valueOf(System.currentTimeMillis() - l) });
+          if ((TextUtils.isEmpty(paramArrayList)) || (!paramArrayList.equalsIgnoreCase(cjn))) {
+            break label244;
+          }
+          l = System.currentTimeMillis();
+          if (!paramBoolean) {
+            continue;
+          }
+          i = getPackageManagergetPackageInfoYH, 0).versionCode;
+          paramArrayList = YH;
+          int j = cjm;
+          if (i > cjm) {
+            continue;
+          }
+          bool = true;
+          v.i("MicroMsg.YYBMarketVerify", "summertoken containLowerMarket usesSystemApi[%b], infopkg[%s], infovc[%d], versionCode[%d], less[%b], takes[%d]ms", new Object[] { Boolean.valueOf(paramBoolean), paramArrayList, Integer.valueOf(j), Integer.valueOf(i), Boolean.valueOf(bool), Long.valueOf(System.currentTimeMillis() - l) });
+          j = cjm;
           if (i > j) {
-            break;
+            break label244;
           }
-          paramString1.add(paramString2.group(i));
+          return true;
           i += 1;
+          break label92;
+          paramArrayList = ((String)localObject3).split("/");
+          if (paramArrayList == null) {
+            break label225;
+          }
+          localObject3 = new StringBuilder();
+          i = 0;
+          if (i < paramArrayList.length)
+          {
+            if (i != paramArrayList.length - 1)
+            {
+              ((StringBuilder)localObject3).append(paramArrayList[i]);
+              ((StringBuilder)localObject3).append("/");
+            }
+            i += 1;
+            continue;
+          }
+          paramArrayList = ((StringBuilder)localObject3).toString();
+          localObject3 = paramArrayList + (String)localObject2 + "-1.apk";
+          if (new File((String)localObject3).exists()) {
+            ((List)localObject1).add(localObject3);
+          }
+          paramArrayList = paramArrayList + (String)localObject2 + "-2.apk";
+          if (!new File(paramArrayList).exists()) {
+            break label225;
+          }
+          ((List)localObject1).add(paramArrayList);
+          break label225;
         }
+        paramArrayList = b.l(((File)localObject2).getAbsoluteFile());
+        continue;
+        i = a.E(paramContext, YH);
+        continue;
+        bool = false;
+        continue;
+        return false;
       }
-    }
-    return str;
-  }
-  
-  public static boolean ae(int paramInt1, int paramInt2)
-  {
-    return paramInt2 > paramInt1 * 2.0D;
-  }
-  
-  public static boolean af(int paramInt1, int paramInt2)
-  {
-    return paramInt1 > paramInt2 * 2.0D;
-  }
-  
-  public static String al(long paramLong)
-  {
-    float f;
-    if (paramLong >> 20 > 0L)
-    {
-      f = Math.round((float)paramLong * 10.0F / 1048576.0F) / 10.0F;
-      return f + "MB";
-    }
-    if (paramLong >> 9 > 0L)
-    {
-      f = Math.round((float)paramLong * 10.0F / 1024.0F) / 10.0F;
-      return f + "KB";
-    }
-    return paramLong + "B";
-  }
-  
-  public static long am(long paramLong)
-  {
-    return System.currentTimeMillis() / 1000L - paramLong;
-  }
-  
-  public static long an(long paramLong)
-  {
-    return System.currentTimeMillis() - paramLong;
-  }
-  
-  public static long ao(long paramLong)
-  {
-    return SystemClock.elapsedRealtime() - paramLong;
-  }
-  
-  public static String b(List paramList, String paramString)
-  {
-    if (paramList == null) {
-      return "";
-    }
-    StringBuilder localStringBuilder = new StringBuilder("");
-    int i = 0;
-    if (i < paramList.size())
-    {
-      if (i == paramList.size() - 1) {
-        localStringBuilder.append(((String)paramList.get(i)).trim());
-      }
-      for (;;)
-      {
-        i += 1;
-        break;
-        localStringBuilder.append(((String)paramList.get(i)).trim() + paramString);
-      }
-    }
-    return localStringBuilder.toString();
-  }
-  
-  public static void bi(Context paramContext)
-  {
-    paramContext = (Vibrator)paramContext.getSystemService("vibrator");
-    if (paramContext == null) {
-      return;
-    }
-    paramContext.vibrate(cnZ, -1);
-  }
-  
-  public static boolean bj(Context paramContext)
-  {
-    String str = paramContext.getClass().getName();
-    paramContext = bk(paramContext);
-    u.d("!24@/B4Tb64lLpKIVTyJhzV/jw==", "top activity=" + paramContext + ", context=" + str);
-    return paramContext.equalsIgnoreCase(str);
-  }
-  
-  private static String bk(Context paramContext)
-  {
-    try
-    {
-      paramContext = getSystemService"activity"getRunningTasks1get0topActivity.getClassName();
-      u.i("!24@/B4Tb64lLpKIVTyJhzV/jw==", "top activity name =" + paramContext);
-      return paramContext;
-    }
-    catch (Exception paramContext) {}
-    return "(null)";
-  }
-  
-  public static boolean bl(Context paramContext)
-  {
-    if (i.ag.aPc() != null) {
-      i.ag.aPc().aqH();
-    }
-    Intent localIntent;
-    if ((f.akG & 0x1) != 0)
-    {
-      u.e("!24@/B4Tb64lLpKIVTyJhzV/jw==", "package has set external update mode");
-      Uri localUri = Uri.parse(f.jVb);
-      localIntent = new Intent("android.intent.action.VIEW", localUri).addFlags(268435456);
-      if ((localUri == null) || (localIntent == null) || (!n(paramContext, localIntent)))
-      {
-        u.e("!24@/B4Tb64lLpKIVTyJhzV/jw==", "parse market uri failed, jump to weixin.qq.com");
-        paramContext.startActivity(new Intent("android.intent.action.VIEW", Uri.parse("http://weixin.qq.com")).addFlags(268435456));
-      }
-    }
-    do
-    {
-      return true;
-      u.i("!24@/B4Tb64lLpKIVTyJhzV/jw==", "parse market uri ok");
-      paramContext.startActivity(localIntent);
-      return true;
-      y.getContext().getSharedPreferences("system_config_prefs", 0).edit().putLong("recomended_update_ignore", System.currentTimeMillis() / 1000L).commit();
-    } while (i.ag.aPc() == null);
-    i.ag.aPc().a(paramContext, new DialogInterface.OnCancelListener()
-    {
-      public final void onCancel(DialogInterface paramAnonymousDialogInterface) {}
-    }).update(3);
-    return true;
-  }
-  
-  public static long c(Long paramLong)
-  {
-    if (paramLong == null) {
-      return 0L;
-    }
-    return paramLong.longValue();
-  }
-  
-  public static boolean c(Boolean paramBoolean)
-  {
-    if (paramBoolean == null) {
-      return true;
-    }
-    return paramBoolean.booleanValue();
-  }
-  
-  public static int d(Integer paramInteger)
-  {
-    if (paramInteger == null) {
-      return 0;
-    }
-    return paramInteger.intValue();
-  }
-  
-  public static long d(Long paramLong)
-  {
-    if (paramLong == null) {
-      return 0L;
-    }
-    return paramLong.longValue();
-  }
-  
-  /* Error */
-  public static String d(java.io.InputStream paramInputStream)
-  {
-    // Byte code:
-    //   0: new 452	java/io/BufferedReader
-    //   3: dup
-    //   4: new 454	java/io/InputStreamReader
-    //   7: dup
-    //   8: aload_0
-    //   9: invokespecial 457	java/io/InputStreamReader:<init>	(Ljava/io/InputStream;)V
-    //   12: invokespecial 460	java/io/BufferedReader:<init>	(Ljava/io/Reader;)V
-    //   15: astore_2
-    //   16: new 55	java/lang/StringBuilder
-    //   19: dup
-    //   20: invokespecial 272	java/lang/StringBuilder:<init>	()V
-    //   23: astore_1
-    //   24: aload_2
-    //   25: invokevirtual 463	java/io/BufferedReader:readLine	()Ljava/lang/String;
-    //   28: astore_3
-    //   29: aload_3
-    //   30: ifnull +41 -> 71
-    //   33: aload_1
-    //   34: new 55	java/lang/StringBuilder
-    //   37: dup
-    //   38: invokespecial 272	java/lang/StringBuilder:<init>	()V
-    //   41: aload_3
-    //   42: invokevirtual 64	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   45: ldc_w 465
-    //   48: invokevirtual 64	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   51: invokevirtual 68	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   54: invokevirtual 64	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   57: pop
-    //   58: goto -34 -> 24
-    //   61: astore_2
-    //   62: aload_0
-    //   63: invokevirtual 470	java/io/InputStream:close	()V
-    //   66: aload_1
-    //   67: invokevirtual 68	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   70: areturn
-    //   71: aload_0
-    //   72: invokevirtual 470	java/io/InputStream:close	()V
-    //   75: goto -9 -> 66
-    //   78: astore_0
-    //   79: goto -13 -> 66
-    //   82: astore_1
-    //   83: aload_0
-    //   84: invokevirtual 470	java/io/InputStream:close	()V
-    //   87: aload_1
-    //   88: athrow
-    //   89: astore_0
-    //   90: goto -24 -> 66
-    //   93: astore_0
-    //   94: goto -7 -> 87
-    // Local variable table:
-    //   start	length	slot	name	signature
-    //   0	97	0	paramInputStream	java.io.InputStream
-    //   23	44	1	localStringBuilder	StringBuilder
-    //   82	6	1	localObject	Object
-    //   15	10	2	localBufferedReader	java.io.BufferedReader
-    //   61	1	2	localIOException	java.io.IOException
-    //   28	14	3	str	String
-    // Exception table:
-    //   from	to	target	type
-    //   24	29	61	java/io/IOException
-    //   33	58	61	java/io/IOException
-    //   71	75	78	java/io/IOException
-    //   24	29	82	finally
-    //   33	58	82	finally
-    //   62	66	89	java/io/IOException
-    //   83	87	93	java/io/IOException
-  }
-  
-  public static boolean d(Boolean paramBoolean)
-  {
-    if (paramBoolean == null) {
-      return false;
-    }
-    return paramBoolean.booleanValue();
-  }
-  
-  public static int e(Integer paramInteger)
-  {
-    if (paramInteger == null) {
-      return 0;
-    }
-    return paramInteger.intValue();
-  }
-  
-  @Deprecated
-  public static int eW(String paramString)
-  {
-    if (paramString != null) {
-      try
-      {
-        if (paramString.length() <= 0) {
-          return 0;
-        }
-        int i = Integer.parseInt(paramString);
-        return i;
-      }
-      catch (NumberFormatException paramString) {}
-    }
-    return 0;
-  }
-  
-  public static String el(int paramInt)
-  {
-    return String.format("%d:%02d", new Object[] { Long.valueOf(paramInt / 60L), Long.valueOf(paramInt % 60L) });
-  }
-  
-  public static boolean em(int paramInt)
-  {
-    long l1 = paramInt * 1000L;
-    long l2 = l1 - System.currentTimeMillis();
-    u.d("!24@/B4Tb64lLpKIVTyJhzV/jw==", "time " + l1 + "  systime " + System.currentTimeMillis() + " diff " + l2);
-    return l2 < 0L;
-  }
-  
-  public static List h(String[] paramArrayOfString)
-  {
-    if ((paramArrayOfString == null) || (paramArrayOfString.length == 0)) {
-      return null;
-    }
-    ArrayList localArrayList = new ArrayList();
-    int i = 0;
-    while (i < paramArrayOfString.length)
-    {
-      localArrayList.add(paramArrayOfString[i]);
-      i += 1;
-    }
-    return localArrayList;
-  }
-  
-  public static String k(byte[] paramArrayOfByte, int paramInt)
-  {
-    int k = 0;
-    if (paramArrayOfByte == null) {
-      return "(null)";
-    }
-    int i = paramInt;
-    if (paramInt <= 0) {
-      i = paramArrayOfByte.length;
-    }
-    char[] arrayOfChar1 = new char[16];
-    char[] tmp28_26 = arrayOfChar1;
-    tmp28_26[0] = 48;
-    char[] tmp34_28 = tmp28_26;
-    tmp34_28[1] = 49;
-    char[] tmp40_34 = tmp34_28;
-    tmp40_34[2] = 50;
-    char[] tmp46_40 = tmp40_34;
-    tmp46_40[3] = 51;
-    char[] tmp52_46 = tmp46_40;
-    tmp52_46[4] = 52;
-    char[] tmp58_52 = tmp52_46;
-    tmp58_52[5] = 53;
-    char[] tmp64_58 = tmp58_52;
-    tmp64_58[6] = 54;
-    char[] tmp71_64 = tmp64_58;
-    tmp71_64[7] = 55;
-    char[] tmp78_71 = tmp71_64;
-    tmp78_71[8] = 56;
-    char[] tmp85_78 = tmp78_71;
-    tmp85_78[9] = 57;
-    char[] tmp92_85 = tmp85_78;
-    tmp92_85[10] = 97;
-    char[] tmp99_92 = tmp92_85;
-    tmp99_92[11] = 98;
-    char[] tmp106_99 = tmp99_92;
-    tmp106_99[12] = 99;
-    char[] tmp113_106 = tmp106_99;
-    tmp113_106[13] = 100;
-    char[] tmp120_113 = tmp113_106;
-    tmp120_113[14] = 101;
-    char[] tmp127_120 = tmp120_113;
-    tmp127_120[15] = 102;
-    tmp127_120;
-    char[] arrayOfChar2 = new char[i * 3 + i / 16];
-    int j = 0;
-    paramInt = k;
-    if (j < i + 0)
-    {
-      k = paramArrayOfByte[j];
-      int m = paramInt + 1;
-      arrayOfChar2[paramInt] = ' ';
-      int n = m + 1;
-      arrayOfChar2[m] = arrayOfChar1[(k >>> 4 & 0xF)];
-      paramInt = n + 1;
-      arrayOfChar2[n] = arrayOfChar1[(k & 0xF)];
-      if ((j % 16 != 0) || (j <= 0)) {
-        break label256;
-      }
-      k = paramInt + 1;
-      arrayOfChar2[paramInt] = '\n';
-      paramInt = k;
-    }
-    label256:
-    for (;;)
-    {
-      j += 1;
+      catch (Exception paramArrayList) {}
+      break label244;
       break;
-      return new String(arrayOfChar2);
+      label787:
+      paramArrayList = "";
+      break label115;
+      label793:
+      continue;
+      label796:
+      boolean bool = false;
     }
-  }
-  
-  public static byte[] kA(String paramString)
-  {
-    Object localObject;
-    if ((paramString == null) || (paramString.length() <= 0)) {
-      localObject = new byte[0];
-    }
-    for (;;)
-    {
-      return (byte[])localObject;
-      try
-      {
-        byte[] arrayOfByte = new byte[paramString.length() / 2];
-        int i = 0;
-        for (;;)
-        {
-          localObject = arrayOfByte;
-          if (i >= arrayOfByte.length) {
-            break;
-          }
-          arrayOfByte[i] = ((byte)(Integer.parseInt(paramString.substring(i * 2, i * 2 + 2), 16) & 0xFF));
-          i += 1;
-        }
-        return new byte[0];
-      }
-      catch (NumberFormatException paramString) {}
-    }
-  }
-  
-  public static String kx(String paramString)
-  {
-    String str = paramString;
-    if (paramString != null) {
-      str = paramString.replace("\\[", "[[]").replace("%", "").replace("\\^", "").replace("'", "").replace("\\{", "").replace("\\}", "").replace("\"", "");
-    }
-    return str;
-  }
-  
-  public static String ky(String paramString)
-  {
-    String str = paramString;
-    if (paramString == null) {
-      str = "";
-    }
-    return str;
-  }
-  
-  public static boolean kz(String paramString)
-  {
-    return (paramString == null) || (paramString.length() <= 0);
-  }
-  
-  private static boolean n(Context paramContext, Intent paramIntent)
-  {
-    return paramContext.getPackageManager().queryIntentActivities(paramIntent, 65536).size() > 0;
   }
   
   public static final class a
   {
-    public final String toString()
+    /* Error */
+    public static int E(Context paramContext, String paramString)
     {
-      StackTraceElement[] arrayOfStackTraceElement = new Throwable().getStackTrace();
-      if ((arrayOfStackTraceElement == null) || (arrayOfStackTraceElement.length < 4)) {
-        return "";
-      }
-      StringBuilder localStringBuilder = new StringBuilder();
-      int i = 3;
-      while (i < arrayOfStackTraceElement.length)
+      // Byte code:
+      //   0: aload_0
+      //   1: aload_1
+      //   2: iconst_0
+      //   3: invokevirtual 21	android/content/Context:createPackageContext	(Ljava/lang/String;I)Landroid/content/Context;
+      //   6: astore_1
+      //   7: aload_1
+      //   8: ifnonnull +11 -> 19
+      //   11: iconst_0
+      //   12: ireturn
+      //   13: astore_1
+      //   14: aconst_null
+      //   15: astore_1
+      //   16: goto -9 -> 7
+      //   19: aload_1
+      //   20: invokevirtual 25	android/content/Context:getAssets	()Landroid/content/res/AssetManager;
+      //   23: astore 5
+      //   25: new 27	android/content/res/Resources
+      //   28: dup
+      //   29: aload 5
+      //   31: aload_0
+      //   32: invokevirtual 31	android/content/Context:getResources	()Landroid/content/res/Resources;
+      //   35: invokevirtual 35	android/content/res/Resources:getDisplayMetrics	()Landroid/util/DisplayMetrics;
+      //   38: aconst_null
+      //   39: invokespecial 39	android/content/res/Resources:<init>	(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
+      //   42: astore 4
+      //   44: aload_1
+      //   45: aload 5
+      //   47: invokestatic 42	com/tencent/mm/platformtools/t$a:a	(Landroid/content/Context;Landroid/content/res/AssetManager;)Landroid/content/res/XmlResourceParser;
+      //   50: astore_0
+      //   51: aload_0
+      //   52: ifnull -41 -> 11
+      //   55: aload_0
+      //   56: invokeinterface 48 1 0
+      //   61: istore_2
+      //   62: iload_2
+      //   63: iconst_1
+      //   64: if_icmpeq -53 -> 11
+      //   67: iload_2
+      //   68: tableswitch	default:+20->88, 2:+44->112
+      //   88: aload_0
+      //   89: invokeinterface 51 1 0
+      //   94: istore_3
+      //   95: iload_3
+      //   96: istore_2
+      //   97: goto -35 -> 62
+      //   100: astore_0
+      //   101: aconst_null
+      //   102: astore_0
+      //   103: goto -52 -> 51
+      //   106: astore_1
+      //   107: iconst_0
+      //   108: istore_2
+      //   109: goto -47 -> 62
+      //   112: aload_0
+      //   113: invokeinterface 55 1 0
+      //   118: astore_1
+      //   119: aload_1
+      //   120: invokestatic 61	android/text/TextUtils:isEmpty	(Ljava/lang/CharSequence;)Z
+      //   123: ifne -35 -> 88
+      //   126: aload_1
+      //   127: ldc 63
+      //   129: invokevirtual 69	java/lang/String:equals	(Ljava/lang/Object;)Z
+      //   132: ifeq -44 -> 88
+      //   135: aload_0
+      //   136: ldc 71
+      //   138: ldc 73
+      //   140: invokeinterface 77 3 0
+      //   145: aload 4
+      //   147: invokestatic 80	com/tencent/mm/platformtools/t$a:a	(Ljava/lang/String;Landroid/content/res/Resources;)Ljava/lang/String;
+      //   150: astore_0
+      //   151: aload_0
+      //   152: invokestatic 61	android/text/TextUtils:isEmpty	(Ljava/lang/CharSequence;)Z
+      //   155: ifne -144 -> 11
+      //   158: aload_0
+      //   159: invokestatic 86	java/lang/Integer:parseInt	(Ljava/lang/String;)I
+      //   162: ireturn
+      //   163: astore_1
+      //   164: goto -102 -> 62
+      //   167: astore_1
+      //   168: goto -106 -> 62
+      // Local variable table:
+      //   start	length	slot	name	signature
+      //   0	171	0	paramContext	Context
+      //   0	171	1	paramString	String
+      //   61	48	2	i	int
+      //   94	2	3	j	int
+      //   42	104	4	localResources	Resources
+      //   23	23	5	localAssetManager	AssetManager
+      // Exception table:
+      //   from	to	target	type
+      //   0	7	13	android/content/pm/PackageManager$NameNotFoundException
+      //   44	51	100	java/io/IOException
+      //   55	62	106	org/xmlpull/v1/XmlPullParserException
+      //   88	95	163	org/xmlpull/v1/XmlPullParserException
+      //   88	95	167	java/io/IOException
+    }
+    
+    private static XmlResourceParser a(Context paramContext, AssetManager paramAssetManager)
+    {
+      int j = 1;
+      try
       {
-        if (arrayOfStackTraceElement[i].getClassName().contains("com.tencent.mm"))
+        String str2 = (String)Context.class.getMethod("getPackageResourcePath", new Class[0]).invoke(paramContext, new Object[0]);
+        Method localMethod = AssetManager.class.getMethod("getCookieName", new Class[] { Integer.TYPE });
+        String str1 = str2;
+        int i = j;
+        if (str2 == null)
         {
-          localStringBuilder.append("[");
-          localStringBuilder.append(arrayOfStackTraceElement[i].getClassName().substring(15));
-          localStringBuilder.append(":");
-          localStringBuilder.append(arrayOfStackTraceElement[i].getMethodName());
-          localStringBuilder.append("(" + arrayOfStackTraceElement[i].getLineNumber() + ")]");
+          str1 = str2;
+          i = j;
+          if (paramContext.getPackageName().equals("android"))
+          {
+            str1 = "/system/framework/framework-res.apk";
+            i = j;
+          }
         }
-        i += 1;
+        while (i < 20)
+        {
+          if (str1 != null) {
+            if (str1.equals(localMethod.invoke(paramAssetManager, new Object[] { Integer.valueOf(i) })))
+            {
+              paramContext = paramAssetManager.openXmlResourceParser(i, "AndroidManifest.xml");
+              return paramContext;
+            }
+          }
+          i += 1;
+        }
+        return paramAssetManager.openXmlResourceParser("AndroidManifest.xml");
       }
-      return localStringBuilder.toString();
+      catch (Exception paramContext) {}
+    }
+    
+    private static String a(String paramString, Resources paramResources)
+    {
+      if ((paramString == null) || (!paramString.startsWith("@"))) {
+        return paramString;
+      }
+      try
+      {
+        paramResources = paramResources.getString(Integer.parseInt(paramString.substring(1)));
+        return paramResources;
+      }
+      catch (Resources.NotFoundException paramResources)
+      {
+        return paramString;
+      }
+      catch (NumberFormatException paramResources) {}
+      return paramString;
+    }
+  }
+  
+  public static final class b
+  {
+    private static char[] Q(byte[] paramArrayOfByte)
+    {
+      int k = paramArrayOfByte.length;
+      char[] arrayOfChar = new char[k * 2];
+      int i = 0;
+      if (i < k)
+      {
+        int m = paramArrayOfByte[i];
+        int j = m >> 4 & 0xF;
+        if (j >= 10)
+        {
+          j = j + 97 - 10;
+          label44:
+          arrayOfChar[(i * 2)] = ((char)j);
+          j = m & 0xF;
+          if (j < 10) {
+            break label97;
+          }
+          j = j + 97 - 10;
+        }
+        for (;;)
+        {
+          arrayOfChar[(i * 2 + 1)] = ((char)j);
+          i += 1;
+          break;
+          j += 48;
+          break label44;
+          label97:
+          j += 48;
+        }
+      }
+      return arrayOfChar;
+    }
+    
+    /* Error */
+    public static String l(File paramFile)
+    {
+      // Byte code:
+      //   0: aconst_null
+      //   1: astore 5
+      //   3: aconst_null
+      //   4: astore 4
+      //   6: new 18	java/util/jar/JarFile
+      //   9: dup
+      //   10: aload_0
+      //   11: invokespecial 22	java/util/jar/JarFile:<init>	(Ljava/io/File;)V
+      //   14: astore_3
+      //   15: sipush 8192
+      //   18: newarray <illegal type>
+      //   20: astore 5
+      //   22: aload_3
+      //   23: invokevirtual 26	java/util/jar/JarFile:entries	()Ljava/util/Enumeration;
+      //   26: astore 6
+      //   28: aload 4
+      //   30: astore_0
+      //   31: aload 6
+      //   33: invokeinterface 32 1 0
+      //   38: ifeq +319 -> 357
+      //   41: aload 6
+      //   43: invokeinterface 36 1 0
+      //   48: checkcast 38	java/util/jar/JarEntry
+      //   51: astore 4
+      //   53: aload 4
+      //   55: invokevirtual 41	java/util/jar/JarEntry:isDirectory	()Z
+      //   58: ifne -27 -> 31
+      //   61: aload 4
+      //   63: invokevirtual 45	java/util/jar/JarEntry:getName	()Ljava/lang/String;
+      //   66: ldc 47
+      //   68: invokevirtual 53	java/lang/String:startsWith	(Ljava/lang/String;)Z
+      //   71: ifne -40 -> 31
+      //   74: aload 4
+      //   76: invokevirtual 45	java/util/jar/JarEntry:getName	()Ljava/lang/String;
+      //   79: astore 7
+      //   81: ldc 55
+      //   83: aload 7
+      //   85: invokevirtual 59	java/lang/String:equals	(Ljava/lang/Object;)Z
+      //   88: ifne -57 -> 31
+      //   91: ldc 61
+      //   93: aload 7
+      //   95: invokevirtual 59	java/lang/String:equals	(Ljava/lang/Object;)Z
+      //   98: ifne -67 -> 31
+      //   101: aload 4
+      //   103: invokevirtual 65	java/util/jar/JarEntry:getSize	()J
+      //   106: ldc2_w 66
+      //   109: lcmp
+      //   110: ifgt -79 -> 31
+      //   113: invokestatic 72	java/lang/System:currentTimeMillis	()J
+      //   116: lstore_1
+      //   117: ldc 74
+      //   119: new 76	java/lang/StringBuilder
+      //   122: dup
+      //   123: ldc 78
+      //   125: invokespecial 81	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+      //   128: aload 7
+      //   130: invokevirtual 85	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      //   133: invokevirtual 88	java/lang/StringBuilder:toString	()Ljava/lang/String;
+      //   136: invokestatic 94	com/tencent/mm/sdk/platformtools/v:d	(Ljava/lang/String;Ljava/lang/String;)V
+      //   139: aload_3
+      //   140: aload 4
+      //   142: invokevirtual 98	java/util/jar/JarFile:getInputStream	(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
+      //   145: astore 7
+      //   147: ldc 74
+      //   149: new 76	java/lang/StringBuilder
+      //   152: dup
+      //   153: ldc 100
+      //   155: invokespecial 81	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+      //   158: invokestatic 72	java/lang/System:currentTimeMillis	()J
+      //   161: lload_1
+      //   162: lsub
+      //   163: invokevirtual 103	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
+      //   166: invokevirtual 88	java/lang/StringBuilder:toString	()Ljava/lang/String;
+      //   169: invokestatic 94	com/tencent/mm/sdk/platformtools/v:d	(Ljava/lang/String;Ljava/lang/String;)V
+      //   172: aload 7
+      //   174: aload 5
+      //   176: iconst_0
+      //   177: sipush 8192
+      //   180: invokevirtual 109	java/io/InputStream:read	([BII)I
+      //   183: iconst_m1
+      //   184: if_icmpne -12 -> 172
+      //   187: aload 7
+      //   189: invokevirtual 113	java/io/InputStream:close	()V
+      //   192: aload 4
+      //   194: invokevirtual 117	java/util/jar/JarEntry:getCertificates	()[Ljava/security/cert/Certificate;
+      //   197: astore 7
+      //   199: aload 7
+      //   201: ifnull +9 -> 210
+      //   204: aload 7
+      //   206: arraylength
+      //   207: ifne +57 -> 264
+      //   210: new 119	java/lang/SecurityException
+      //   213: dup
+      //   214: new 76	java/lang/StringBuilder
+      //   217: dup
+      //   218: ldc 121
+      //   220: invokespecial 81	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+      //   223: aload 4
+      //   225: invokevirtual 45	java/util/jar/JarEntry:getName	()Ljava/lang/String;
+      //   228: invokevirtual 85	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      //   231: invokevirtual 88	java/lang/StringBuilder:toString	()Ljava/lang/String;
+      //   234: invokespecial 122	java/lang/SecurityException:<init>	(Ljava/lang/String;)V
+      //   237: athrow
+      //   238: astore 4
+      //   240: aload_3
+      //   241: astore_0
+      //   242: aload 4
+      //   244: astore_3
+      //   245: aload_3
+      //   246: athrow
+      //   247: astore 4
+      //   249: aload_0
+      //   250: astore_3
+      //   251: aload 4
+      //   253: astore_0
+      //   254: aload_3
+      //   255: ifnull +7 -> 262
+      //   258: aload_3
+      //   259: invokevirtual 123	java/util/jar/JarFile:close	()V
+      //   262: aload_0
+      //   263: athrow
+      //   264: aload_0
+      //   265: ifnonnull +89 -> 354
+      //   268: aload 7
+      //   270: iconst_0
+      //   271: aaload
+      //   272: checkcast 125	java/security/cert/X509Certificate
+      //   275: astore_0
+      //   276: aload_0
+      //   277: astore 4
+      //   279: aload_0
+      //   280: ifnonnull +6 -> 286
+      //   283: goto +71 -> 354
+      //   286: aload 4
+      //   288: ifnull +31 -> 319
+      //   291: new 49	java/lang/String
+      //   294: dup
+      //   295: aload 4
+      //   297: invokevirtual 129	java/security/cert/X509Certificate:getEncoded	()[B
+      //   300: invokestatic 131	com/tencent/mm/platformtools/t$b:Q	([B)[C
+      //   303: invokespecial 134	java/lang/String:<init>	([C)V
+      //   306: invokevirtual 137	java/lang/String:getBytes	()[B
+      //   309: invokestatic 143	com/tencent/mm/sdk/platformtools/z:bb	([B)Ljava/lang/String;
+      //   312: astore_0
+      //   313: aload_3
+      //   314: invokevirtual 123	java/util/jar/JarFile:close	()V
+      //   317: aload_0
+      //   318: areturn
+      //   319: aload_3
+      //   320: invokevirtual 123	java/util/jar/JarFile:close	()V
+      //   323: ldc -111
+      //   325: areturn
+      //   326: astore_0
+      //   327: ldc -111
+      //   329: areturn
+      //   330: astore_3
+      //   331: aload_0
+      //   332: areturn
+      //   333: astore_3
+      //   334: goto -72 -> 262
+      //   337: astore_0
+      //   338: aconst_null
+      //   339: astore_3
+      //   340: goto -86 -> 254
+      //   343: astore_0
+      //   344: goto -90 -> 254
+      //   347: astore_3
+      //   348: aload 5
+      //   350: astore_0
+      //   351: goto -106 -> 245
+      //   354: goto -323 -> 31
+      //   357: aload_0
+      //   358: astore 4
+      //   360: goto -74 -> 286
+      // Local variable table:
+      //   start	length	slot	name	signature
+      //   0	363	0	paramFile	File
+      //   116	46	1	l	long
+      //   14	306	3	localObject1	Object
+      //   330	1	3	localIOException1	java.io.IOException
+      //   333	1	3	localIOException2	java.io.IOException
+      //   339	1	3	localObject2	Object
+      //   347	1	3	localException1	Exception
+      //   4	220	4	localJarEntry	java.util.jar.JarEntry
+      //   238	5	4	localException2	Exception
+      //   247	5	4	localObject3	Object
+      //   277	82	4	localFile	File
+      //   1	348	5	arrayOfByte	byte[]
+      //   26	16	6	localEnumeration	java.util.Enumeration
+      //   79	190	7	localObject4	Object
+      // Exception table:
+      //   from	to	target	type
+      //   15	28	238	java/lang/Exception
+      //   31	172	238	java/lang/Exception
+      //   172	199	238	java/lang/Exception
+      //   204	210	238	java/lang/Exception
+      //   210	238	238	java/lang/Exception
+      //   268	276	238	java/lang/Exception
+      //   291	313	238	java/lang/Exception
+      //   245	247	247	finally
+      //   319	323	326	java/io/IOException
+      //   313	317	330	java/io/IOException
+      //   258	262	333	java/io/IOException
+      //   6	15	337	finally
+      //   15	28	343	finally
+      //   31	172	343	finally
+      //   172	199	343	finally
+      //   204	210	343	finally
+      //   210	238	343	finally
+      //   268	276	343	finally
+      //   291	313	343	finally
+      //   6	15	347	java/lang/Exception
+    }
+  }
+  
+  public static final class c
+  {
+    public final String YH;
+    public final int cjm;
+    public final String cjn;
+    
+    public c(String paramString1, int paramInt, String paramString2)
+    {
+      YH = paramString1;
+      cjm = paramInt;
+      cjn = paramString2;
     }
   }
 }

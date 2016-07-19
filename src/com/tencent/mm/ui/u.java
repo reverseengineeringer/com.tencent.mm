@@ -1,18 +1,18 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.d.a.mw;
+import com.tencent.mm.e.a.nj;
 import com.tencent.mm.sdk.c.a;
 
 public final class u
 {
-  public static void ae(int paramInt, String paramString)
+  public static void ao(int paramInt, String paramString)
   {
-    if (a.jUF != null)
+    if (a.kug != null)
     {
-      mw localmw = new mw();
-      aJl.className = paramString;
-      aJl.aJm = paramInt;
-      a.jUF.j(localmw);
+      nj localnj = new nj();
+      avF.className = paramString;
+      avF.avG = paramInt;
+      a.kug.y(localnj);
     }
   }
 }

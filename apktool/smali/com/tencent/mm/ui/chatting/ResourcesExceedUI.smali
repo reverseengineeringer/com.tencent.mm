@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private ldm:Landroid/widget/TextView;
+.field private lDD:Landroid/widget/TextView;
 
 .field private type:I
 
@@ -27,7 +27,7 @@
 
 
 # virtual methods
-.method protected final Gb()V
+.method protected final Gy()V
     .locals 2
 
     .prologue
@@ -39,7 +39,7 @@
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 38
-    const v0, 0x7f0701e4
+    const v0, 0x7f1005ad
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->findViewById(I)Landroid/view/View;
 
@@ -47,7 +47,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->ldm:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->lDD:Landroid/widget/TextView;
 
     .line 39
     iget v0, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->type:I
@@ -60,9 +60,9 @@
 
     .line 41
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->ldm:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->lDD:Landroid/widget/TextView;
 
-    const v1, 0x7f0b062c
+    const v1, 0x7f0813ea
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -70,9 +70,9 @@
 
     .line 44
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->ldm:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->lDD:Landroid/widget/TextView;
 
-    const v1, 0x7f0b062d
+    const v1, 0x7f0807da
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -80,9 +80,9 @@
 
     .line 47
     :pswitch_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->ldm:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->lDD:Landroid/widget/TextView;
 
-    const v1, 0x7f0b0618
+    const v1, 0x7f0809ff
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -102,7 +102,7 @@
 
     .prologue
     .line 54
-    const v0, 0x7f0a00d1
+    const v0, 0x7f0304cb
 
     return v0
 .end method
@@ -132,10 +132,10 @@
     .line 23
     const-string/jumbo v0, ""
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->Gj(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->Ah(Ljava/lang/String;)V
 
     .line 24
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->Gb()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->Gy()V
 
     .line 25
     return-void

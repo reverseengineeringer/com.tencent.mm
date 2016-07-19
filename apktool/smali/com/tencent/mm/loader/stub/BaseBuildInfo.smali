@@ -4,27 +4,29 @@
 
 
 # static fields
-.field public static btx:Ljava/lang/String;
+.field private static boP:Ljava/lang/String;
 
-.field private static bwP:Ljava/lang/String;
+.field public static boQ:Ljava/lang/String;
 
-.field public static bwQ:Ljava/lang/String;
+.field public static boR:Ljava/lang/String;
 
-.field public static bwR:Ljava/lang/String;
+.field public static boS:Ljava/lang/String;
 
-.field public static bwS:Ljava/lang/String;
+.field public static boT:Ljava/lang/String;
 
-.field public static bwT:Ljava/lang/String;
+.field public static boU:Ljava/lang/String;
 
-.field public static bwU:Ljava/lang/String;
+.field public static boV:Ljava/lang/String;
 
-.field public static bwV:Ljava/lang/String;
+.field public static boW:Ljava/lang/String;
 
-.field public static bwW:Ljava/lang/String;
+.field public static boX:Ljava/lang/String;
 
-.field public static bwX:Ljava/lang/String;
+.field public static boY:Ljava/lang/String;
 
-.field public static bwY:Ljava/lang/String;
+.field public static boZ:Ljava/lang/String;
+
+.field public static bpa:I
 
 
 # direct methods
@@ -32,22 +34,22 @@
     .locals 2
 
     .prologue
-    .line 11
-    const-string/jumbo v0, "false"
+    .line 12
+    const-string/jumbo v0, "true"
 
-    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->bwP:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->boP:Ljava/lang/String;
 
-    .line 13
-    const-string/jumbo v0, "44889924bffce294447caf7a30418c7c6488e607"
+    .line 14
+    const-string/jumbo v0, "7ff7d8d3642a6a7ddc0196499733d1bb5a1e138b"
 
-    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->btx:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->boQ:Ljava/lang/String;
 
-    .line 15
-    const-string/jumbo v0, "0x26030D40"
+    .line 16
+    const-string/jumbo v0, "0x26031641"
 
-    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->bwQ:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->boR:Ljava/lang/String;
 
-    .line 17
+    .line 18
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "android-"
@@ -64,42 +66,47 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->bwR:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->boS:Ljava/lang/String;
 
-    .line 19
-    const-string/jumbo v0, "02/03/2016 05:41 PM"
+    .line 20
+    const-string/jumbo v0, "2016-07-08 17:23:21"
 
-    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->bwS:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->boT:Ljava/lang/String;
 
-    .line 21
-    const-string/jumbo v0, "ammdev"
+    .line 22
+    const-string/jumbo v0, "null"
 
-    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->bwT:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->boU:Ljava/lang/String;
 
-    .line 23
-    const-string/jumbo v0, "MicroMessenger_Android_GIT_RELEASE #2677"
+    .line 24
+    const-string/jumbo v0, "MicroMessenger_Android_GIT_RELEASE_GRADLE #785"
 
-    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->bwU:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->boV:Ljava/lang/String;
 
-    .line 25
-    const-string/jumbo v0, "builder_/home/android"
+    .line 26
+    const-string/jumbo v0, "jenkins"
 
-    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->bwV:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->boW:Ljava/lang/String;
 
-    .line 27
-    const-string/jumbo v0, "unknown"
+    .line 28
+    const-string/jumbo v0, "null"
 
-    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->bwW:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->boX:Ljava/lang/String;
 
-    .line 29
-    const-string/jumbo v0, "origin/unstable/RB-2016-JAN/wechatout_string@git"
+    .line 30
+    const-string/jumbo v0, "origin/RB-2016-JUN@git"
 
-    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->bwX:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->boY:Ljava/lang/String;
 
-    .line 31
+    .line 32
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->bwY:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->boZ:Ljava/lang/String;
+
+    .line 34
+    const/4 v0, 0x3
+
+    sput v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->bpa:I
 
     return-void
 .end method
@@ -108,20 +115,74 @@
     .locals 0
 
     .prologue
-    .line 9
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static rb()Z
+.method public static qE()Ljava/lang/String;
     .locals 2
 
     .prologue
-    .line 35
+    .line 37
+    sget-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->boZ:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->boQ:Ljava/lang/String;
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->boQ:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "."
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->boZ:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public static qF()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 41
+    sget-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->boQ:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public static qG()Z
+    .locals 2
+
+    .prologue
+    .line 46
     const-string/jumbo v0, "false"
 
-    sget-object v1, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->bwP:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->boP:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -136,50 +197,6 @@
 
     :cond_0
     const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static rc()Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    .line 39
-    sget-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->bwY:Ljava/lang/String;
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->btx:Ljava/lang/String;
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v1, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->btx:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/tencent/mm/loader/stub/BaseBuildInfo;->bwY:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
 
     goto :goto_0
 .end method

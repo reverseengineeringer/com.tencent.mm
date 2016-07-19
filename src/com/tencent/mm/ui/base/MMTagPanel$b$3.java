@@ -9,8 +9,8 @@ final class MMTagPanel$b$3
   
   public final void run()
   {
-    MMTagPanel.a(kHv.kHq).setText("");
-    MMTagPanel.a(kHv.kHq).append(kHw);
+    MMTagPanel.a(lgx.lgs).setText("");
+    MMTagPanel.a(lgx.lgs).append(lgy);
   }
 }
 

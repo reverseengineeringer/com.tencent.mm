@@ -10,7 +10,7 @@ final class b$5
   
   public final void onClick(View paramView)
   {
-    hpo.ab(paramView);
+    hFM.aa(paramView);
   }
 }
 

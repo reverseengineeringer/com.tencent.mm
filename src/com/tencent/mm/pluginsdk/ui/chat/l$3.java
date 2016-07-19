@@ -1,12 +1,12 @@
 package com.tencent.mm.pluginsdk.ui.chat;
 
 import android.text.TextUtils;
-import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.plugin.report.service.g;
 import com.tencent.mm.pluginsdk.i.a;
 import com.tencent.mm.pluginsdk.i.f;
 import com.tencent.mm.pluginsdk.ui.emoji.PreViewEmojiView;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ah;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.a.c;
 
 public final class l$3
@@ -16,43 +16,43 @@ public final class l$3
   
   public final void run()
   {
-    l locall = iMB;
-    String str = cmo;
+    l locall = jjy;
+    String str = chu;
     int i;
     if (!TextUtils.isEmpty(str))
     {
-      iMz = str;
-      str = i.a.aOT().mI(str);
-      dmd = i.a.aOT().mD(str);
-      if (dmd != null) {
+      jjw = str;
+      str = i.a.aTv().nE(str);
+      dlK = i.a.aTv().nz(str);
+      if (dlK != null) {
         i = 1;
       }
     }
     while (i != 0)
     {
-      locall = iMB;
-      if ((dmd == null) || (iMb == null) || (iMv == null) || (cRn == null) || (iMd == null))
+      locall = jjy;
+      if ((dlK == null) || (jiY == null) || (jjs == null) || (cOS == null) || (jja == null))
       {
-        u.w("!56@/B4Tb64lLpIUhDmLVZ6YSYNmGC1A559IOpziKnLhSwba9W2PlYV7+A==", "some thing is null.");
+        v.w("MicroMsg.emoji.SuggestEmoticonBubble", "some thing is null.");
         return;
         i = 0;
       }
       else
       {
-        if (dmd.aYw()) {
-          iMb.a(c.aX(mContext, dmd.getName()), dmd.getName());
+        if (dlK.bdP()) {
+          jiY.a(c.aW(mContext, dlK.getName()), dlK.getName());
         }
         for (;;)
         {
-          locall.aSm();
-          new af(new l.2(locall), false).ds(3000L);
-          h.fUJ.g(10994, new Object[] { Integer.valueOf(0), iMz });
+          locall.aXe();
+          new ah(new l.2(locall), false).dJ(3000L);
+          g.gdY.h(10994, new Object[] { Integer.valueOf(0), jjw });
           return;
-          iMb.a(dmd, "");
+          jiY.a(dlK, "");
         }
       }
     }
-    u.d("!56@/B4Tb64lLpIUhDmLVZ6YSYNmGC1A559IOpziKnLhSwba9W2PlYV7+A==", "check false");
+    v.d("MicroMsg.emoji.SuggestEmoticonBubble", "check false");
   }
 }
 

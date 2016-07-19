@@ -4,7 +4,17 @@
 
 
 # static fields
-.field private static final cAT:Ljava/util/Map;
+.field private static final cxO:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -18,7 +28,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 22
-    sput-object v0, Lcom/tencent/mm/plugin/base/stub/c;->cAT:Ljava/util/Map;
+    sput-object v0, Lcom/tencent/mm/plugin/base/stub/c;->cxO:Ljava/util/Map;
 
     const-string/jumbo v1, "_build_info_sdk_int_"
 
@@ -31,7 +41,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 25
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/c;->cAT:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/c;->cxO:Ljava/util/Map;
 
     const-string/jumbo v1, "_build_info_sdk_name_"
 
@@ -40,7 +50,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 26
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/c;->cAT:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/c;->cxO:Ljava/util/Map;
 
     const-string/jumbo v1, "_wxapp_pay_entry_classname_"
 
@@ -62,7 +72,7 @@
     return-void
 .end method
 
-.method public static Jw()Landroid/net/Uri;
+.method public static Kf()Landroid/net/Uri;
     .locals 1
 
     .prologue
@@ -72,7 +82,7 @@
     return-object v0
 .end method
 
-.method public static Jx()I
+.method public static Kg()I
     .locals 1
 
     .prologue
@@ -82,7 +92,7 @@
     return v0
 .end method
 
-.method public static Jy()I
+.method public static Kh()I
     .locals 1
 
     .prologue
@@ -110,7 +120,7 @@
     aget-object v7, p1, v1
 
     .line 61
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/c;->cAT:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/c;->cxO:Ljava/util/Map;
 
     invoke-interface {v0, v7}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -120,7 +130,7 @@
     if-nez v8, :cond_0
 
     .line 63
-    const-string/jumbo v0, "!56@/B4Tb64lLpJVwK899MjSHnGus/LYixbx/xUPPDfdLnaW++vs6UTDlA=="
+    const-string/jumbo v0, "MicroMsg.MMPluginProviderSharedPrefImpl"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -136,7 +146,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 64
     const/4 v0, 0x0
@@ -149,11 +159,11 @@
     :cond_0
     if-nez v8, :cond_1
 
-    const-string/jumbo v0, "!56@/B4Tb64lLpJ4ba4B7uT0vIuwclbFoi5gAykVHqdxOX6pBh8qPlAfTg=="
+    const-string/jumbo v0, "MicroMsg.SDK.PluginProvider.Resolver"
 
     const-string/jumbo v6, "unresolve failed, null value"
 
-    invoke-static {v0, v6}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v6}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -250,7 +260,7 @@
     goto :goto_1
 
     :cond_7
-    const-string/jumbo v0, "!56@/B4Tb64lLpJ4ba4B7uT0vIuwclbFoi5gAykVHqdxOX6pBh8qPlAfTg=="
+    const-string/jumbo v0, "MicroMsg.SDK.PluginProvider.Resolver"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -274,7 +284,7 @@
 
     move-result-object v6
 
-    invoke-static {v0, v6}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v6}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -291,12 +301,12 @@
 
 
 # virtual methods
-.method public final bp(Landroid/content/Context;)Z
+.method public final bk(Landroid/content/Context;)Z
     .locals 1
 
     .prologue
     .line 33
-    invoke-super {p0, p1}, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider$a;->bp(Landroid/content/Context;)Z
+    invoke-super {p0, p1}, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider$a;->bk(Landroid/content/Context;)Z
 
     .line 34
     const/4 v0, 0x1

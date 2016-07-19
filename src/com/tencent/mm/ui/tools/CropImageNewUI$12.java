@@ -5,9 +5,9 @@ final class CropImageNewUI$12
 {
   CropImageNewUI$12(CropImageNewUI paramCropImageNewUI) {}
   
-  public final void biy()
+  public final void bou()
   {
-    CropImageNewUI.h(luq);
+    CropImageNewUI.h(lVs);
   }
 }
 

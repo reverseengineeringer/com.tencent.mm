@@ -2,7 +2,7 @@ package com.tencent.mm.sdk.i;
 
 public abstract interface c
 {
-  public abstract void k(Runnable paramRunnable);
+  public abstract void l(Runnable paramRunnable);
 }
 
 /* Location:

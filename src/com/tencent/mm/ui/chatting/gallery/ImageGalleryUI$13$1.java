@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.chatting.gallery;
 
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import com.tencent.mm.ui.tools.h.b;
 
 final class ImageGalleryUI$13$1
@@ -10,12 +10,12 @@ final class ImageGalleryUI$13$1
   
   public final void onAnimationEnd()
   {
-    ImageGalleryUI.l(lgO.lgM).post(new Runnable()
+    ImageGalleryUI.k(lHa.lGY).post(new Runnable()
     {
       public final void run()
       {
-        if (lgO.lgM.lgB != null) {
-          lgO.lgM.lgB.f(Boolean.valueOf(false));
+        if (lHa.lGY.lGN != null) {
+          lHa.lGY.lGN.e(Boolean.valueOf(false));
         }
       }
     });
@@ -23,8 +23,8 @@ final class ImageGalleryUI$13$1
   
   public final void onAnimationStart()
   {
-    if (lgO.lgM.lgB != null) {
-      lgO.lgM.lgB.f(Boolean.valueOf(true));
+    if (lHa.lGY.lGN != null) {
+      lHa.lGY.lGN.e(Boolean.valueOf(true));
     }
   }
 }

@@ -4,59 +4,48 @@ import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
-import com.tencent.mm.d.b.bg;
-import com.tencent.mm.pluginsdk.h.n;
-import com.tencent.mm.storage.ag;
-import com.tencent.mm.ui.j;
-import com.tencent.mm.ui.o;
+import com.tencent.mm.storage.ai;
 
 final class ck
-  extends aa
+  extends cj
 {
   public ck()
   {
-    super(38);
+    super(39);
   }
   
   public final View a(LayoutInflater paramLayoutInflater, View paramView)
   {
-    View localView;
+    Object localObject;
     if ((paramView != null) && (paramView.getTag() != null))
     {
-      localView = paramView;
-      if (getTagtype == eLV) {}
+      localObject = paramView;
+      if (getTagtype == cTv) {}
     }
     else
     {
-      localView = paramLayoutInflater.inflate(2131361968, null);
-      localView.setTag(new ee(eLV).aI(localView));
+      localObject = new ay(paramLayoutInflater, 2130903300);
+      ((View)localObject).setTag(new ef(cTv).aM((View)localObject));
     }
-    return localView;
+    return (View)localObject;
   }
   
-  public final void a(aa.a parama, int paramInt, ChattingUI.a parama1, ag paramag, String paramString)
+  public final void a(ab.a parama, int paramInt, ChattingUI.a parama1, ai paramai, String paramString)
   {
-    dUV.setVisibility(0);
-    dUV.setText(n.k(koJ.kpc, field_createTime));
+    ef.a((ef)parama, paramai, paramInt, parama1);
   }
   
-  public final boolean a(ContextMenu paramContextMenu, View paramView, ag paramag)
-  {
-    return false;
-  }
-  
-  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ag paramag)
+  public final boolean a(ContextMenu paramContextMenu, View paramView, ai paramai)
   {
     return false;
   }
   
-  public final boolean a(View paramView, ChattingUI.a parama, ag paramag)
+  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ai paramai)
   {
     return false;
   }
   
-  protected final boolean beq()
+  public final boolean a(View paramView, ChattingUI.a parama, ai paramai)
   {
     return false;
   }

@@ -1,6 +1,6 @@
 package com.tencent.mm.pluginsdk.c;
 
-import com.tencent.mm.d.a.gm;
+import com.tencent.mm.e.a.gx;
 import com.tencent.mm.sdk.c.a;
 import com.tencent.mm.sdk.c.b;
 import com.tencent.mm.sdk.h.g;
@@ -10,43 +10,43 @@ import com.tencent.mm.sdk.h.i;
 public abstract class d
   implements g.a
 {
-  public int izA = 0;
+  public int iVW = 0;
   
   public final void a(String paramString, i parami)
   {
-    parami = new gm();
-    aBD.aBE = pg(paramString);
-    a.jUF.j(parami);
+    parami = new gx();
+    anV.anW = qz(paramString);
+    a.kug.y(parami);
   }
   
-  public final void aPh()
+  public final void aTJ()
   {
-    if (izA == 0)
+    if (iVW == 0)
     {
-      g localg = abx();
+      g localg = adR();
       if (localg != null) {
         localg.c(this);
       }
     }
-    izA += 1;
+    iVW += 1;
   }
   
-  public abstract g abx();
+  public abstract g adR();
   
-  public abstract b pg(String paramString);
+  public abstract b qz(String paramString);
   
   public final void unregister()
   {
-    if (izA == 0) {}
+    if (iVW == 0) {}
     g localg;
     do
     {
       do
       {
         return;
-        izA -= 1;
-      } while (izA != 0);
-      localg = abx();
+        iVW -= 1;
+      } while (iVW != 0);
+      localg = adR();
     } while (localg == null);
     localg.d(this);
   }

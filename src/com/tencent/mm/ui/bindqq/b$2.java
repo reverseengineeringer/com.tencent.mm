@@ -10,8 +10,8 @@ final class b$2
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    kPA.apf = null;
-    kPA.onDetach();
+    loQ.fTL = null;
+    loQ.onDetach();
   }
 }
 

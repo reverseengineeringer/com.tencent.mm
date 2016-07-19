@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/tencent/smtt/sdk/w$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # annotations

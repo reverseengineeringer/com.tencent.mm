@@ -10,8 +10,8 @@ final class ContactRemarkInfoModUI$3
   
   public final void onClick(View paramView)
   {
-    ContactRemarkInfoModUI.a(ljV, true);
-    ContactRemarkInfoModUI.k(ljV);
+    ContactRemarkInfoModUI.a(lKg, true);
+    ContactRemarkInfoModUI.k(lKg);
   }
 }
 

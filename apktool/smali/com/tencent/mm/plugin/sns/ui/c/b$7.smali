@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hpo:Lcom/tencent/mm/plugin/sns/ui/c/b;
+.field final synthetic hFM:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1043
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/c/b$7;->hpo:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    .line 1201
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/c/b$7;->hFM:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,48 +37,85 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 3
+    .locals 4
 
     .prologue
-    .line 1049
-    :try_start_0
+    .line 1205
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Integer;
+    instance-of v0, v0, Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    if-eqz v0, :cond_0
+
+    .line 1206
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 1207
+    const-string/jumbo v1, "MicroMsg.TimelineClickListener"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "localId "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1208
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/i/s;->wV(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/e/ah;->mL(I)V
+
+    .line 1209
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/i/s;->wV(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 1051
-    new-instance v1, Landroid/content/Intent;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/e/ah;->mJ(I)Z
 
-    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
+    .line 1210
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBF()Lcom/tencent/mm/plugin/sns/e/ar;
 
-    .line 1053
-    const-string/jumbo v2, "sns_label_sns_info"
+    move-result-object v0
 
-    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/ar;->aCf()V
 
-    .line 1055
-    sget-object v0, Lcom/tencent/mm/plugin/sns/b/a;->coa:Lcom/tencent/mm/pluginsdk/g;
+    .line 1214
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/c/b$7;->hFM:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/c/b$7;->hpo:Lcom/tencent/mm/plugin/sns/ui/c/b;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/c/b;->aDL()V
 
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/c/b;->asX:Landroid/app/Activity;
+    .line 1215
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/c/b$7;->hFM:Lcom/tencent/mm/plugin/sns/ui/c/b;
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/g;->y(Landroid/content/Intent;Landroid/content/Context;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFL:Lcom/tencent/mm/plugin/sns/ui/aq$a;
 
-    .line 1059
-    :goto_0
+    if-eqz v0, :cond_0
+
+    .line 1216
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/c/b$7;->hFM:Lcom/tencent/mm/plugin/sns/ui/c/b;
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/c/b;->hFL:Lcom/tencent/mm/plugin/sns/ui/aq$a;
+
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/aq$a;->aFA()Z
+
+    .line 1219
+    :cond_0
     return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
 .end method

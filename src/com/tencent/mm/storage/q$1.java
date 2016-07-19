@@ -3,7 +3,7 @@ package com.tencent.mm.storage;
 import com.tencent.mm.sdk.h.h;
 
 final class q$1
-  extends h
+  extends h<q.a, k>
 {
   q$1(q paramq) {}
 }

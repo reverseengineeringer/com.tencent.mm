@@ -5,8 +5,8 @@ import android.widget.TextView;
 
 public final class b$a
 {
-  public TextView cHk;
-  public ImageView czS;
+  public TextView cEo;
+  public ImageView cui;
 }
 
 /* Location:

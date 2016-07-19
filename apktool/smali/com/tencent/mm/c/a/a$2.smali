@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/c/a/a;->lD()V
+    value = Lcom/tencent/mm/c/a/a;->jN()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic apr:Lcom/tencent/mm/c/a/a;
+.field final synthetic aaJ:Lcom/tencent/mm/c/a/a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 309
-    iput-object p1, p0, Lcom/tencent/mm/c/a/a$2;->apr:Lcom/tencent/mm/c/a/a;
+    .line 323
+    iput-object p1, p0, Lcom/tencent/mm/c/a/a$2;->aaJ:Lcom/tencent/mm/c/a/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,11 +36,11 @@
 
 
 # virtual methods
-.method public final lG()V
+.method public final jQ()V
     .locals 2
 
     .prologue
-    .line 314
+    .line 326
     new-instance v0, Lcom/tencent/mm/c/a/a$2$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/c/a/a$2$1;-><init>(Lcom/tencent/mm/c/a/a$2;)V
@@ -49,6 +49,6 @@
 
     invoke-static {v0, v1}, Lcom/tencent/mm/sdk/i/e;->a(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    .line 358
+    .line 370
     return-void
 .end method

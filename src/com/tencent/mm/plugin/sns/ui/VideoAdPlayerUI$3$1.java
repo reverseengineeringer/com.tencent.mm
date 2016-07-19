@@ -1,7 +1,7 @@
 package com.tencent.mm.plugin.sns.ui;
 
 import android.content.Intent;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.ui.base.g.c;
 
 final class VideoAdPlayerUI$3$1
@@ -9,7 +9,7 @@ final class VideoAdPlayerUI$3$1
 {
   VideoAdPlayerUI$3$1(VideoAdPlayerUI.3 param3) {}
   
-  public final void eu(int paramInt)
+  public final void fg(int paramInt)
   {
     switch (paramInt)
     {
@@ -19,13 +19,13 @@ final class VideoAdPlayerUI$3$1
       Intent localIntent = new Intent();
       localIntent.putExtra("Select_Conv_Type", 3);
       localIntent.putExtra("select_is_ret", true);
-      c.a(hnd.hnc, ".ui.transmit.SelectConversationUI", localIntent, 4097);
+      c.a(hDy.hDx, ".ui.transmit.SelectConversationUI", localIntent, 4097);
       return;
     case 1: 
-      VideoAdPlayerUI.i(hnd.hnc);
+      VideoAdPlayerUI.m(hDy.hDx);
       return;
     }
-    VideoAdPlayerUI.j(hnd.hnc);
+    VideoAdPlayerUI.n(hDy.hDx);
   }
 }
 

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gxL:Lcom/tencent/mm/plugin/sight/decode/a/b;
+.field final synthetic gEj:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 670
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$j;->gxL:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    .line 702
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$j;->gEj:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,7 +38,7 @@
     .locals 0
 
     .prologue
-    .line 670
+    .line 702
     invoke-direct {p0, p1}, Lcom/tencent/mm/plugin/sight/decode/a/b$j;-><init>(Lcom/tencent/mm/plugin/sight/decode/a/b;)V
 
     return-void
@@ -50,8 +50,8 @@
     .locals 2
 
     .prologue
-    .line 674
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$j;->gxL:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    .line 706
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$j;->gEj:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/a/b;->e(Lcom/tencent/mm/plugin/sight/decode/a/b;)I
 
@@ -59,7 +59,7 @@
 
     if-ltz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$j;->gxL:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$j;->gEj:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/a/b;->k(Lcom/tencent/mm/plugin/sight/decode/a/b;)Ljava/lang/ref/WeakReference;
 
@@ -67,7 +67,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$j;->gxL:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$j;->gEj:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/a/b;->k(Lcom/tencent/mm/plugin/sight/decode/a/b;)Ljava/lang/ref/WeakReference;
 
@@ -79,14 +79,14 @@
 
     if-nez v0, :cond_1
 
-    .line 679
+    .line 711
     :cond_0
     :goto_0
     return-void
 
-    .line 677
+    .line 709
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$j;->gxL:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$j;->gEj:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/a/b;->e(Lcom/tencent/mm/plugin/sight/decode/a/b;)I
 
@@ -96,8 +96,8 @@
 
     move-result-object v1
 
-    .line 678
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$j;->gxL:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    .line 710
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$j;->gEj:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/a/b;->k(Lcom/tencent/mm/plugin/sight/decode/a/b;)Ljava/lang/ref/WeakReference;
 

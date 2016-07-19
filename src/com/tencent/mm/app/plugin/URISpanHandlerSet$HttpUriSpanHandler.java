@@ -3,15 +3,15 @@ package com.tencent.mm.app.plugin;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.model.k;
 import com.tencent.mm.model.k.a;
 import com.tencent.mm.model.n;
 import com.tencent.mm.pluginsdk.l;
 import com.tencent.mm.pluginsdk.ui.applet.g;
 import com.tencent.mm.pluginsdk.ui.d.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.storage.ad;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.storage.ae;
 
 @URISpanHandlerSet.a
 class URISpanHandlerSet$HttpUriSpanHandler
@@ -27,8 +27,8 @@ class URISpanHandlerSet$HttpUriSpanHandler
     Object localObject1;
     if (type == 1)
     {
-      paramg.c(ad.class);
-      localObject1 = n.F("@" + url, URISpanHandlerSet.a(ang).getString(2131427397));
+      paramg.d(ae.class);
+      localObject1 = n.C("@" + url, URISpanHandlerSet.a(ZU).getString(2131233182));
       if (paramb == null) {
         break label334;
       }
@@ -38,7 +38,7 @@ class URISpanHandlerSet$HttpUriSpanHandler
     for (paramb = (String)paramb.a(paramg);; paramb = null)
     {
       Object localObject2;
-      if ((localObject1 == null) || (!aur))
+      if ((localObject1 == null) || (!age))
       {
         localObject2 = url;
         localObject1 = localObject2;
@@ -50,10 +50,10 @@ class URISpanHandlerSet$HttpUriSpanHandler
         if ((data != null) && ((data instanceof Integer))) {
           ((Intent)localObject2).putExtra("geta8key_scene", ((Integer)data).intValue());
         }
-        paramg = gZd;
-        if (!ay.kz(paramg))
+        paramg = hmp;
+        if (!be.kf(paramg))
         {
-          Object localObject3 = k.sW().eU(paramg);
+          Object localObject3 = k.sV().fg(paramg);
           if (localObject3 != null)
           {
             localObject1 = ((k.a)localObject3).getString("prePublishId", null);
@@ -68,14 +68,14 @@ class URISpanHandlerSet$HttpUriSpanHandler
             ((Intent)localObject2).putExtra("preChatName", (String)localObject3);
           }
         }
-        if (!ay.kz(paramb)) {
+        if (!be.kf(paramb)) {
           break label327;
         }
       }
       for (paramg = null;; paramg = paramb)
       {
         ((Intent)localObject2).putExtra("geta8key_username", paramg);
-        c.c(URISpanHandlerSet.a(ang), "webview", ".ui.tools.WebViewUI", (Intent)localObject2);
+        c.c(URISpanHandlerSet.a(ZU), "webview", ".ui.tools.WebViewUI", (Intent)localObject2);
         return true;
       }
       return false;
@@ -87,7 +87,7 @@ class URISpanHandlerSet$HttpUriSpanHandler
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     if (paramString.trim().toLowerCase().startsWith("http")) {
       return new g(paramString, 1, null);
@@ -95,7 +95,7 @@ class URISpanHandlerSet$HttpUriSpanHandler
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 1 };
   }

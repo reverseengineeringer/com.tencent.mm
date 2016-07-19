@@ -12,24 +12,24 @@ public class NoRomSpaceDexUI
 {
   protected final int getLayoutId()
   {
-    return 2131361907;
+    return 2130904118;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
     paramBundle = new h.a(this);
-    paramBundle.qz(2131431130);
-    paramBundle.Gz(getString(2131431131));
-    paramBundle.hw(false);
-    paramBundle.b(2131431132, new DialogInterface.OnClickListener()
+    paramBundle.ss(2131231790);
+    paramBundle.IN(getString(2131231789));
+    paramBundle.hU(false);
+    paramBundle.b(2131231787, new DialogInterface.OnClickListener()
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
         Process.killProcess(Process.myPid());
       }
     });
-    paramBundle.bcu().show();
+    paramBundle.bhJ().show();
   }
 }
 

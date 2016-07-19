@@ -3,19 +3,19 @@ package com.tencent.mm.modelsfs;
 public final class e
   extends SFSOutputStream
 {
-  private a cal;
+  private a bTU;
   
   public e(long paramLong1, long paramLong2)
   {
     super(paramLong1);
-    cal = new a(paramLong2);
+    bTU = new a(paramLong2);
   }
   
   public final void close()
   {
     super.close();
-    if (cal != null) {
-      cal.free();
+    if (bTU != null) {
+      bTU.free();
     }
   }
   
@@ -31,7 +31,7 @@ public final class e
   
   public final void write(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
   {
-    cal.j(paramArrayOfByte, paramInt2);
+    bTU.j(paramArrayOfByte, paramInt2);
     super.write(paramArrayOfByte, paramInt1, paramInt2);
   }
 }

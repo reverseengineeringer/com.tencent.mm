@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+.field final synthetic kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 273
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
     const/4 v7, 0x0
 
     .line 277
-    const-string/jumbo v0, "!32@/B4Tb64lLpL46PYMpl/SkTFlMftv8Nwe"
+    const-string/jumbo v0, "MicroMsg.SimpleLoginUI"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -51,13 +51,13 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/account/SimpleLoginUI;->d(Lcom/tencent/mm/ui/account/SimpleLoginUI;)Lcom/tencent/mm/ui/account/f;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/account/f;->ktL:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/ui/account/f;->kSS:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -69,13 +69,13 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/account/SimpleLoginUI;->d(Lcom/tencent/mm/ui/account/SimpleLoginUI;)Lcom/tencent/mm/ui/account/f;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/account/f;->ktN:[B
+    iget-object v2, v2, Lcom/tencent/mm/ui/account/f;->kSU:[B
 
     array-length v2, v2
 
@@ -89,7 +89,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcom/tencent/mm/compatible/util/f;->oZ()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/compatible/util/f;->nr()Ljava/lang/String;
 
     move-result-object v2
 
@@ -101,64 +101,60 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 279
-    new-instance v0, Lcom/tencent/mm/modelsimple/t;
+    new-instance v0, Lcom/tencent/mm/modelsimple/r;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/SimpleLoginUI;->d(Lcom/tencent/mm/ui/account/SimpleLoginUI;)Lcom/tencent/mm/ui/account/f;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/account/f;->cbh:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/ui/account/f;->bUU:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/account/SimpleLoginUI;->d(Lcom/tencent/mm/ui/account/SimpleLoginUI;)Lcom/tencent/mm/ui/account/f;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/account/f;->ktJ:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/ui/account/f;->kSQ:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
     invoke-static {v3}, Lcom/tencent/mm/ui/account/SimpleLoginUI;->d(Lcom/tencent/mm/ui/account/SimpleLoginUI;)Lcom/tencent/mm/ui/account/f;
 
     move-result-object v3
 
-    iget v3, v3, Lcom/tencent/mm/ui/account/f;->ktO:I
+    iget v3, v3, Lcom/tencent/mm/ui/account/f;->kSV:I
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+    iget-object v4, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
     invoke-static {v4}, Lcom/tencent/mm/ui/account/SimpleLoginUI;->e(Lcom/tencent/mm/ui/account/SimpleLoginUI;)Lcom/tencent/mm/ui/applet/SecurityImage;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/tencent/mm/ui/applet/SecurityImage;->getSecImgCode()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/tencent/mm/ui/applet/SecurityImage;->bhw()Ljava/lang/String;
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+    iget-object v5, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
     invoke-static {v5}, Lcom/tencent/mm/ui/account/SimpleLoginUI;->e(Lcom/tencent/mm/ui/account/SimpleLoginUI;)Lcom/tencent/mm/ui/applet/SecurityImage;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/tencent/mm/ui/applet/SecurityImage;->getSecImgSid()Ljava/lang/String;
+    iget-object v5, v5, Lcom/tencent/mm/ui/applet/SecurityImage;->kSS:Ljava/lang/String;
 
-    move-result-object v5
-
-    iget-object v6, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+    iget-object v6, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
     invoke-static {v6}, Lcom/tencent/mm/ui/account/SimpleLoginUI;->e(Lcom/tencent/mm/ui/account/SimpleLoginUI;)Lcom/tencent/mm/ui/applet/SecurityImage;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/tencent/mm/ui/applet/SecurityImage;->getSecImgEncryptKey()Ljava/lang/String;
-
-    move-result-object v6
+    iget-object v6, v6, Lcom/tencent/mm/ui/applet/SecurityImage;->kST:Ljava/lang/String;
 
     const-string/jumbo v8, ""
 
@@ -166,29 +162,29 @@
 
     move v10, v7
 
-    invoke-direct/range {v0 .. v10}, Lcom/tencent/mm/modelsimple/t;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ZZ)V
+    invoke-direct/range {v0 .. v10}, Lcom/tencent/mm/modelsimple/r;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ZZ)V
 
     .line 281
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    invoke-virtual {v1, v0, v7}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
     .line 283
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
-    const v4, 0x7f0b0ddd
+    const v4, 0x7f080134
 
     invoke-virtual {v3, v4}, Lcom/tencent/mm/ui/account/SimpleLoginUI;->getString(I)Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$8;->kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
-    const v4, 0x7f0b01b5
+    const v4, 0x7f080b07
 
     invoke-virtual {v3, v4}, Lcom/tencent/mm/ui/account/SimpleLoginUI;->getString(I)Ljava/lang/String;
 
@@ -198,7 +194,7 @@
 
     new-instance v5, Lcom/tencent/mm/ui/account/SimpleLoginUI$8$1;
 
-    invoke-direct {v5, p0, v0}, Lcom/tencent/mm/ui/account/SimpleLoginUI$8$1;-><init>(Lcom/tencent/mm/ui/account/SimpleLoginUI$8;Lcom/tencent/mm/modelsimple/t;)V
+    invoke-direct {v5, p0, v0}, Lcom/tencent/mm/ui/account/SimpleLoginUI$8$1;-><init>(Lcom/tencent/mm/ui/account/SimpleLoginUI$8;Lcom/tencent/mm/modelsimple/r;)V
 
     invoke-static {v2, v3, v4, v5}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;ZLandroid/content/DialogInterface$OnCancelListener;)Lcom/tencent/mm/ui/base/p;
 

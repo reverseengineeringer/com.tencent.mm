@@ -2,9 +2,9 @@ package com.tencent.mm.sdk.platformtools;
 
 public abstract interface ad$a
 {
-  public abstract boolean ud();
+  public abstract boolean vf();
   
-  public abstract boolean ue();
+  public abstract boolean vg();
 }
 
 /* Location:

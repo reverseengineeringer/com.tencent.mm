@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    value = Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 877
+    .line 881
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,9 +34,9 @@
     .locals 0
 
     .prologue
-    .line 881
+    .line 885
     invoke-static {}, Lcom/tencent/mm/model/ah;->release()V
 
-    .line 882
+    .line 886
     return-void
 .end method

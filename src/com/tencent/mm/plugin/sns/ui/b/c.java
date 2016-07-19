@@ -8,102 +8,115 @@ import android.view.ViewStub;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.TextView.BufferType;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.g;
-import com.tencent.mm.plugin.sns.data.h;
-import com.tencent.mm.plugin.sns.h.k;
+import com.tencent.mm.plugin.sns.data.i;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.g;
 import com.tencent.mm.plugin.sns.ui.TagImageView;
-import com.tencent.mm.plugin.sns.ui.an;
-import com.tencent.mm.plugin.sns.ui.au;
-import com.tencent.mm.protocal.b.add;
-import com.tencent.mm.protocal.b.aeo;
-import com.tencent.mm.protocal.b.atp;
-import com.tencent.mm.protocal.b.iv;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.storage.i.a;
+import com.tencent.mm.plugin.sns.ui.aq;
+import com.tencent.mm.plugin.sns.ui.as;
+import com.tencent.mm.plugin.sns.ui.ba;
+import com.tencent.mm.plugin.sns.ui.o;
+import com.tencent.mm.protocal.b.adw;
+import com.tencent.mm.protocal.b.afj;
+import com.tencent.mm.protocal.b.auf;
+import com.tencent.mm.protocal.b.je;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.storage.z;
+import com.tencent.mm.ui.tools.m;
 import java.util.LinkedList;
 
 public final class c
   extends a
 {
-  public final void a(a.b paramb, int paramInt1, k paramk, atp paramatp, int paramInt2, an paraman)
+  public final void a(a.b paramb, int paramInt1, as paramas, auf paramauf, int paramInt2, aq paramaq)
   {
-    String str1 = paramk.aAl();
-    if (!jMx.jhw.isEmpty())
+    String str = hlg;
+    if (!kli.jFv.isEmpty())
     {
-      hnN.setPosition(paramInt1);
-      hht.setVisibility(0);
-      paramk = (add)jMx.jhw.get(0);
-      ad.azg().b(paramk, hnN, 2130903689, jx.hashCode(), i.a.kal);
-      gWs.setPressed(false);
-      String str2 = iXW;
-      if (com.tencent.mm.af.b.Bs())
+      hEi.position = paramInt1;
+      hwj.setVisibility(0);
+      paramas = (adw)kli.jFv.get(0);
+      Object localObject1 = ad.aBG();
+      Object localObject2 = hEi;
+      paramInt1 = jO.hashCode();
+      z localz = z.bcg();
+      fxK = fyR;
+      ((g)localObject1).b(paramas, (View)localObject2, 2131165229, paramInt1, localz);
+      hjR.setPressed(false);
+      localObject1 = jvB;
+      if (com.tencent.mm.ai.b.Bu())
       {
-        aeo localaeo = com.tencent.mm.af.b.mF();
-        if ((localaeo != null) && (com.tencent.mm.af.b.c(localaeo)) && (str2.equals(jBq)))
+        localObject2 = com.tencent.mm.ai.b.kS();
+        if ((localObject2 != null) && (com.tencent.mm.ai.b.c((afj)localObject2)) && (((String)localObject1).equals(kae)))
         {
           paramInt1 = 1;
           if (paramInt1 == 0) {
-            break label313;
+            break label337;
           }
-          gWs.setImageResource(2130968615);
-          label142:
-          hnN.setTag(new com.tencent.mm.plugin.sns.ui.m(paramatp, str1));
-          hnN.setOnClickListener(hcA.hmw);
-          hht.setTag(new com.tencent.mm.plugin.sns.ui.m(paramatp, str1));
-          dRJ.a(hht, gRg.hpf, gRg.hoQ);
-          hht.setOnClickListener(hcA.hhi);
-          paramatp = eia;
-          if (ay.kz(paramatp)) {
-            break label325;
+          hjR.setImageResource(2130838861);
+          label166:
+          hEi.setTag(new o(paramauf, str));
+          hEi.setOnClickListener(hrm.hCF);
+          hwj.setTag(new o(paramauf, str));
+          dTR.a(hwj, gZj.hFC, gZj.hFn);
+          hwj.setOnClickListener(hrm.hvY);
+          paramauf = elX;
+          if (be.kf(paramauf)) {
+            break label349;
           }
-          hnO.setVisibility(0);
-          hnO.setText(paramatp);
+          hEj.setVisibility(0);
+          hEj.setText(paramauf);
         }
       }
       for (;;)
       {
-        paramk = asP;
-        if (ay.kz(paramk)) {
-          break label336;
+        paramas = aez;
+        if (be.kf(paramas)) {
+          break label360;
         }
-        eMj.setVisibility(0);
-        paramk = new SpannableString(paramk);
-        eMj.setText(paramk, TextView.BufferType.SPANNABLE);
+        eLK.setVisibility(0);
+        paramas = new SpannableString(paramas);
+        eLK.setText(paramas, TextView.BufferType.SPANNABLE);
         return;
         paramInt1 = 0;
         break;
-        label313:
-        gWs.setImageResource(2130968612);
-        break label142;
-        label325:
-        hnO.setVisibility(4);
+        label337:
+        hjR.setImageResource(2130838863);
+        break label166;
+        label349:
+        hEj.setVisibility(4);
       }
-      label336:
-      eMj.setVisibility(8);
+      label360:
+      eLK.setVisibility(8);
       return;
     }
-    hht.setVisibility(8);
+    hwj.setVisibility(8);
   }
   
-  public final void c(a.b paramb)
+  public final void d(a.b paramb)
   {
-    hnK.setLayoutResource(2131362847);
-    hos = ((ViewStub)hnE.findViewById(2131168681));
-    if (!hot)
+    if (hEf != null)
     {
-      hou = hos.inflate();
-      hot = true;
+      hEf.setLayoutResource(2130904460);
+      hEO = ((ViewStub)hDZ.findViewById(2131759100));
+      if ((!hEP) && (hEO != null)) {
+        hEQ = hEO.inflate();
+      }
     }
-    hht = hou;
-    hht.findViewById(2131168527).setOnTouchListener(gRM.gYg);
-    hnN = ((TagImageView)hht.findViewById(2131168526));
-    gWs = ((ImageView)hht.findViewById(2131168527));
-    hnO = ((TextView)hht.findViewById(2131168530));
-    eMj = ((TextView)hht.findViewById(2131168529));
-    eMj.setTextColor(jx.getResources().getColor(2131231067));
-    eMj.setMaxLines(1);
-    h.b(hnN, jx);
+    for (hEP = true;; hEP = true)
+    {
+      hwj = hEQ;
+      hwj.findViewById(2131757253).setOnTouchListener(gZP.hls);
+      hEi = ((TagImageView)hwj.findViewById(2131757802));
+      hjR = ((ImageView)hwj.findViewById(2131757253));
+      hEj = ((TextView)hwj.findViewById(2131757805));
+      eLK = ((TextView)hwj.findViewById(2131757804));
+      eLK.setTextColor(jO.getResources().getColor(2131689957));
+      eLK.setMaxLines(1);
+      i.b(hEi, jO);
+      return;
+      hEQ = hDZ.findViewById(2131759204);
+    }
   }
 }
 

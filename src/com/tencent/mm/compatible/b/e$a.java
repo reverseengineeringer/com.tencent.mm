@@ -4,7 +4,7 @@ public abstract interface e$a
 {
   public abstract boolean isAvailable();
   
-  public abstract boolean nK();
+  public abstract boolean lY();
 }
 
 /* Location:

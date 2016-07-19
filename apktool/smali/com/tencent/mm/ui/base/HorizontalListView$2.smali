@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kCs:Lcom/tencent/mm/ui/base/HorizontalListView;
+.field final synthetic lby:Lcom/tencent/mm/ui/base/HorizontalListView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 162
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/HorizontalListView$2;->kCs:Lcom/tencent/mm/ui/base/HorizontalListView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/HorizontalListView$2;->lby:Lcom/tencent/mm/ui/base/HorizontalListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 165
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView$2;->kCs:Lcom/tencent/mm/ui/base/HorizontalListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView$2;->lby:Lcom/tencent/mm/ui/base/HorizontalListView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/HorizontalListView;->requestLayout()V
 

@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field public cYC:Z
+.field public cXm:Z
 
-.field eaH:Ljava/lang/String;
+.field eef:Ljava/lang/String;
 
-.field kkA:Ljava/lang/String;
+.field lNX:Ljava/lang/String;
 
-.field public lnC:Z
+.field public lNY:Z
 
-.field public lnD:Lcom/tencent/mm/t/b;
+.field public lNZ:Lcom/tencent/mm/v/b;
 
-.field final synthetic lnE:Lcom/tencent/mm/ui/conversation/a;
+.field final synthetic lOa:Lcom/tencent/mm/ui/conversation/a;
 
 
 # direct methods
@@ -36,15 +36,15 @@
     const/4 v0, 0x0
 
     .line 135
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/a$a;->lnE:Lcom/tencent/mm/ui/conversation/a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/a$a;->lOa:Lcom/tencent/mm/ui/conversation/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 136
-    iput-object v0, p0, Lcom/tencent/mm/ui/conversation/a$a;->kkA:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/conversation/a$a;->lNX:Ljava/lang/String;
 
     .line 137
-    iput-object v0, p0, Lcom/tencent/mm/ui/conversation/a$a;->eaH:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/conversation/a$a;->eef:Ljava/lang/String;
 
     return-void
 .end method

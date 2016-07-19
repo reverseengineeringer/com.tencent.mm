@@ -10,31 +10,31 @@ import android.view.ViewGroup;
 public final class f
 {
   int background = -1;
-  View.OnClickListener fSm = new View.OnClickListener()
+  View.OnClickListener gbp = new View.OnClickListener()
   {
     public final void onClick(View paramAnonymousView) {}
   };
-  e iIp;
-  a iIw;
-  int iIz;
-  private final View.OnTouchListener iJe = new View.OnTouchListener()
+  e jfm;
+  a jft;
+  int jfw;
+  private final View.OnTouchListener jga = new View.OnTouchListener()
   {
     public final boolean onTouch(View paramAnonymousView, MotionEvent paramAnonymousMotionEvent)
     {
       return true;
     }
   };
-  b iJj;
+  b jgf;
   int row;
   
   public static abstract interface a
   {
-    public abstract void ot(int paramInt);
+    public abstract void pZ(int paramInt);
   }
   
   public static abstract interface b
   {
-    public abstract boolean fK(int paramInt);
+    public abstract boolean gB(int paramInt);
   }
 }
 

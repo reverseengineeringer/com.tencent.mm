@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/ui/f$10;
-.super Lcom/tencent/mm/pluginsdk/c/a;
+.super Lcom/tencent/mm/sdk/c/c;
 .source "SourceFile"
 
 
@@ -13,9 +13,18 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/bf;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic klo:Lcom/tencent/mm/ui/f;
+.field final synthetic kKO:Lcom/tencent/mm/ui/f;
 
 
 # direct methods
@@ -23,33 +32,50 @@
     .locals 1
 
     .prologue
-    .line 249
-    iput-object p1, p0, Lcom/tencent/mm/ui/f$10;->klo:Lcom/tencent/mm/ui/f;
+    .line 231
+    iput-object p1, p0, Lcom/tencent/mm/ui/f$10;->kKO:Lcom/tencent/mm/ui/f;
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/c/a;-><init>(I)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+
+    const-class v0, Lcom/tencent/mm/e/a/bf;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/ui/f$10;->kum:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g(Lcom/tencent/mm/sdk/c/b;)V
-    .locals 1
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
+    .locals 3
 
     .prologue
-    .line 252
-    instance-of v0, p1, Lcom/tencent/mm/d/a/lg;
+    const/4 v2, 0x1
 
-    if-eqz v0, :cond_0
+    .line 231
+    const-string/jumbo v0, "MicroMsg.FindMoreFriendsUI"
 
-    .line 253
-    iget-object v0, p0, Lcom/tencent/mm/ui/f$10;->klo:Lcom/tencent/mm/ui/f;
+    const-string/jumbo v1, "dynamic config file change"
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/f;->c(Lcom/tencent/mm/ui/f;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 255
-    :cond_0
-    return-void
+    iget-object v0, p0, Lcom/tencent/mm/ui/f$10;->kKO:Lcom/tencent/mm/ui/f;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/f;->d(Lcom/tencent/mm/ui/f;)Lcom/tencent/mm/sdk/platformtools/ac;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/sdk/platformtools/ac;->sendEmptyMessage(I)Z
+
+    return v2
 .end method

@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
 .end annotation
 
@@ -25,7 +25,6 @@
     .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
     return-void
 .end method
 
@@ -53,7 +52,7 @@
     .prologue
     .line 96
     # getter for: Lcom/tencent/kingkong/support/Log;->level:I
-    invoke-static {}, Lcom/tencent/kingkong/support/Log;->access$0()I
+    invoke-static {}, Lcom/tencent/kingkong/support/Log;->access$000()I
 
     move-result v0
 
@@ -66,7 +65,7 @@
     .prologue
     .line 65
     # getter for: Lcom/tencent/kingkong/support/Log;->level:I
-    invoke-static {}, Lcom/tencent/kingkong/support/Log;->access$0()I
+    invoke-static {}, Lcom/tencent/kingkong/support/Log;->access$000()I
 
     .line 66
     return-void
@@ -78,7 +77,7 @@
     .prologue
     .line 81
     # getter for: Lcom/tencent/kingkong/support/Log;->level:I
-    invoke-static {}, Lcom/tencent/kingkong/support/Log;->access$0()I
+    invoke-static {}, Lcom/tencent/kingkong/support/Log;->access$000()I
 
     .line 82
     return-void
@@ -90,7 +89,7 @@
     .prologue
     .line 88
     # getter for: Lcom/tencent/kingkong/support/Log;->level:I
-    invoke-static {}, Lcom/tencent/kingkong/support/Log;->access$0()I
+    invoke-static {}, Lcom/tencent/kingkong/support/Log;->access$000()I
 
     move-result v0
 
@@ -109,7 +108,7 @@
     .prologue
     .line 58
     # getter for: Lcom/tencent/kingkong/support/Log;->level:I
-    invoke-static {}, Lcom/tencent/kingkong/support/Log;->access$0()I
+    invoke-static {}, Lcom/tencent/kingkong/support/Log;->access$000()I
 
     .line 59
     return-void
@@ -121,7 +120,7 @@
     .prologue
     .line 51
     # getter for: Lcom/tencent/kingkong/support/Log;->level:I
-    invoke-static {}, Lcom/tencent/kingkong/support/Log;->access$0()I
+    invoke-static {}, Lcom/tencent/kingkong/support/Log;->access$000()I
 
     .line 52
     return-void
@@ -133,7 +132,7 @@
     .prologue
     .line 73
     # getter for: Lcom/tencent/kingkong/support/Log;->level:I
-    invoke-static {}, Lcom/tencent/kingkong/support/Log;->access$0()I
+    invoke-static {}, Lcom/tencent/kingkong/support/Log;->access$000()I
 
     .line 74
     return-void

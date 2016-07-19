@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/MMAppMgr;->h(Landroid/app/Activity;)V
+    value = Lcom/tencent/mm/ui/MMAppMgr;->d(Landroid/app/Activity;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic cms:Landroid/app/Activity;
+.field final synthetic chx:Landroid/app/Activity;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 935
-    iput-object p1, p0, Lcom/tencent/mm/ui/MMAppMgr$4;->cms:Landroid/app/Activity;
+    .line 977
+    iput-object p1, p0, Lcom/tencent/mm/ui/MMAppMgr$4;->chx:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,8 +42,8 @@
     .prologue
     const/4 v3, 0x4
 
-    .line 939
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMAppMgr$4;->cms:Landroid/app/Activity;
+    .line 981
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMAppMgr$4;->chx:Landroid/app/Activity;
 
     new-instance v1, Landroid/view/KeyEvent;
 
@@ -53,6 +53,6 @@
 
     invoke-virtual {v0, v3, v1}, Landroid/app/Activity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
-    .line 940
+    .line 982
     return-void
 .end method

@@ -2,7 +2,7 @@ package com.tencent.mm.sdk.platformtools;
 
 public abstract interface ad$b
 {
-  public abstract void tD();
+  public abstract void tQ();
 }
 
 /* Location:

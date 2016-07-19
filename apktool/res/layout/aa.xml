@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/lf" android:baselineAligned="false" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ListView android:id="@id/fu" android:focusable="true" android:scrollbars="none" android:transcriptMode="disabled" style="@style/MMList" />
+        <TextView android:textColor="@color/j_" android:gravity="center_horizontal" android:layout_gravity="center_vertical" android:id="@id/fv" android:paddingTop="0.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/MMFontEmptyMsgLarge" />
+        <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/fw" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="MMFontPreferenceLarge" />
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <com.tencent.mm.ui.base.AlphabetScrollBar android:id="@id/fx" android:layout_width="@dimen/co" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <TextView android:id="@id/fy" android:background="@color/j3" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/bx" android:singleLine="false" style="@style/MMFontEmptyMsgLarge" />
+        <include layout="@layout/tab_loading_area" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/fz" android:background="@drawable/aei" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/j7">
+        <HorizontalScrollView android:orientation="horizontal" android:scrollbars="none" android:layout_width="0.0dip" android:layout_height="@dimen/j7" android:fillViewport="true" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:id="@id/g0" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/g1" android:layout_width="@dimen/iz" android:layout_height="@dimen/iz" android:layout_marginRight="@dimen/cp" android:src="@drawable/ae9" />
+            </LinearLayout>
+        </HorizontalScrollView>
+        <Button android:id="@id/g2" android:visibility="gone" android:layout_marginLeft="@dimen/j8" android:text="@string/fw" style="@style/MMSolidGreenSmallButton" />
+    </LinearLayout>
+</LinearLayout>

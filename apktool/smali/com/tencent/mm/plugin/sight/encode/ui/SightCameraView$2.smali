@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gEp:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+.field final synthetic gKQ:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 231
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$2;->gEp:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    .line 238
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$2;->gKQ:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,27 +40,27 @@
     .locals 2
 
     .prologue
-    .line 234
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$2;->gEp:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    .line 241
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$2;->gKQ:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->gEc:Lcom/tencent/mm/plugin/sight/encode/ui/f;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->gKC:Lcom/tencent/mm/plugin/sight/encode/ui/f;
 
     if-eqz v0, :cond_0
 
-    .line 235
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$2;->gEp:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    .line 242
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$2;->gKQ:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->gEd:Lcom/tencent/mm/plugin/sight/encode/a/b;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->gKD:Lcom/tencent/mm/plugin/sight/encode/a/b;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$2;->gEp:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$2;->gKQ:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->gEc:Lcom/tencent/mm/plugin/sight/encode/ui/f;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->gKC:Lcom/tencent/mm/plugin/sight/encode/ui/f;
 
-    iget v1, v1, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDv:I
+    iget v1, v1, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJW:I
 
     invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/a/b;->initialize(I)V
 
-    .line 237
+    .line 244
     :cond_0
     return-void
 .end method
@@ -69,7 +69,7 @@
     .locals 2
 
     .prologue
-    .line 240
+    .line 247
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

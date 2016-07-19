@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/c2a" android:visibility="gone" style="@style/MMBody">
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="2.0dip" android:layout_marginTop="40.0dip" android:src="@drawable/a82" />
+        <TextView android:textSize="@dimen/i8" android:textColor="@color/ak" android:gravity="center" android:layout_marginTop="15.0dip" android:text="@string/cml" style="@style/MMBriefText" />
+        <TextView android:gravity="center" android:id="@id/c2b" android:layout_marginTop="15.0dip" android:text="@string/cmk" style="@style/MMBriefText" />
+        <Button android:id="@id/c2c" android:layout_marginTop="35.0dip" style="@style/MMSolidGreenLargeButton" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center|left" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:minHeight="@dimen/j7"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/gs" android:paddingTop="@dimen/j8" android:paddingBottom="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/i7" android:layout_marginRight="@dimen/i7" android:minHeight="@dimen/j7">
+        <TextView android:textColor="@color/np" android:id="@android:id/title" android:paddingLeft="@dimen/hr" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxEms="6" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/MMFontPreferenceLarge" />
+        <LinearLayout android:gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/jb" android:layout_alignParentRight="true">
+            <ImageView android:id="@id/cg9" android:visibility="gone" android:scaleType="centerCrop" style="@style/TVInfoPreferenceThumb" />
+            <ImageView android:id="@id/cg_" android:visibility="gone" android:scaleType="centerCrop" style="@style/TVInfoPreferenceThumb" />
+            <ImageView android:id="@id/cga" android:visibility="gone" android:scaleType="centerCrop" style="@style/TVInfoPreferenceThumb" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:background="@drawable/ou" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="@dimen/i7" android:layout_marginRight="@dimen/i7" />
+</LinearLayout>

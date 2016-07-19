@@ -17,17 +17,21 @@ public final class SecurityImage$a
 {
   public static SecurityImage a(Context paramContext, int paramInt, byte[] paramArrayOfByte, String paramString1, String paramString2, final DialogInterface.OnClickListener paramOnClickListener, DialogInterface.OnCancelListener paramOnCancelListener, DialogInterface.OnDismissListener paramOnDismissListener, SecurityImage.b paramb)
   {
-    SecurityImage localSecurityImage = (SecurityImage)View.inflate(paramContext, 2131363295, null);
-    localSecurityImage.setNetworkModel(paramb);
-    kzJ = ((ProgressBar)localSecurityImage.findViewById(2131169526));
-    kzK = ((ImageView)localSecurityImage.findViewById(2131169525));
-    kzL = ((Button)localSecurityImage.findViewById(2131169527));
-    kzM = ((EditText)localSecurityImage.findViewById(2131169528));
-    kzL.setOnClickListener(new SecurityImage.1(localSecurityImage));
+    SecurityImage localSecurityImage = (SecurityImage)View.inflate(paramContext, 2130904306, null);
+    if (kYU != null) {
+      kYU.kYX = null;
+    }
+    kYU = paramb;
+    kYU.kYX = localSecurityImage;
+    kYQ = ((ProgressBar)localSecurityImage.findViewById(2131758832));
+    kYR = ((ImageView)localSecurityImage.findViewById(2131758831));
+    kYS = ((Button)localSecurityImage.findViewById(2131758833));
+    kYT = ((EditText)localSecurityImage.findViewById(2131758834));
+    kYS.setOnClickListener(new SecurityImage.1(localSecurityImage));
     localSecurityImage.a(paramInt, paramArrayOfByte, paramString1, paramString2);
     paramContext = new h.a(paramContext);
-    paramContext.qz(2131427616);
-    paramContext.b(2131430894, new DialogInterface.OnClickListener()
+    paramContext.ss(2131234436);
+    paramContext.b(2131230878, new DialogInterface.OnClickListener()
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
@@ -35,9 +39,9 @@ public final class SecurityImage$a
       }
     });
     paramContext.c(paramOnCancelListener);
-    paramContext.aq(localSecurityImage);
-    paramContext.hw(true);
-    SecurityImage.a(localSecurityImage, paramContext.bcu());
+    paramContext.au(localSecurityImage);
+    paramContext.hU(true);
+    SecurityImage.a(localSecurityImage, paramContext.bhJ());
     SecurityImage.c(localSecurityImage).setOnDismissListener(paramOnDismissListener);
     SecurityImage.c(localSecurityImage).show();
     return localSecurityImage;

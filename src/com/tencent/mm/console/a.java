@@ -1,25 +1,14 @@
 package com.tencent.mm.console;
 
-import com.tencent.mm.d.a.aq;
-import com.tencent.mm.d.a.aq.a;
+import com.tencent.mm.e.a.ar;
 import com.tencent.mm.sdk.c.c;
 
 public final class a
-  extends c
+  extends c<ar>
 {
   public a()
   {
-    super(0);
-  }
-  
-  public final boolean a(com.tencent.mm.sdk.c.b paramb)
-  {
-    if (!(paramb instanceof aq)) {
-      return false;
-    }
-    paramb = (aq)paramb;
-    atP.atR = b.u(atO.context, atO.atQ);
-    return false;
+    kum = ar.class.getName().hashCode();
   }
 }
 

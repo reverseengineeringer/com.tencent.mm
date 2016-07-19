@@ -1,35 +1,30 @@
 package com.tencent.mm.ar;
 
-import android.content.Context;
-import android.content.Intent;
-import com.tencent.mm.sdk.platformtools.y;
-import com.tencent.mm.ui.MMWizardActivity;
+import com.tencent.mm.a.e;
+import com.tencent.mm.compatible.util.f;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
 
 final class c$1
-  implements a
+  implements ah.a
 {
-  c$1(Intent paramIntent, String paramString1, String paramString2, Context paramContext) {}
+  c$1(c paramc) {}
   
-  public final void onDone()
+  public final boolean jK()
   {
-    Intent localIntent;
-    if (val$intent == null)
-    {
-      localIntent = new Intent();
-      str = y.aUJ() + ".plugin." + iTN;
-      if (!iTO.startsWith(".")) {
-        break label104;
-      }
+    long l = e.aA(cdr.filename);
+    v.d("MicroMsg.NetSceneVoiceInput", f.nr() + " onTimerExpired: file:" + cdr.filename + " nowlen:" + l + " oldoff:" + cdr.bWr + " isFin:" + cdr.cbW);
+    if ((l - cdr.bWr < 3300L) && (!cdr.cbW)) {
+      return true;
     }
-    label104:
-    for (String str = str + iTO;; str = iTO)
+    if (cdr.a(cdr.byD, cdr.bkT) == -1)
     {
-      localIntent.setClassName(y.getPackageName(), str);
-      MMWizardActivity.v(val$context, localIntent);
-      return;
-      localIntent = val$intent;
-      break;
+      cdr.afx = (f.np() + 40000);
+      cdr.bkT.onSceneEnd(3, -1, "doScene failed", cdr);
     }
+    return false;
   }
 }
 

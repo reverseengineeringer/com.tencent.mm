@@ -2,13 +2,13 @@ package com.tencent.mm.ui.account.mobile;
 
 import android.widget.EditText;
 import com.tencent.mm.modelsimple.c;
-import com.tencent.mm.sdk.platformtools.ab.a;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.ad.a;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class MobileInputUI$9
-  implements ab.a
+  implements ad.a
 {
-  String daR;
+  String cZx;
   
   MobileInputUI$9(MobileInputUI paramMobileInputUI) {}
   
@@ -17,24 +17,24 @@ final class MobileInputUI$9
     return super.toString() + "|getSimCardNum";
   }
   
-  public final boolean vd()
+  public final boolean vf()
   {
-    daR = c.v(kyc, kyc.aJD);
+    cZx = c.w(kXj, kXj.avX);
     return true;
   }
   
-  public final boolean ve()
+  public final boolean vg()
   {
     EditText localEditText;
-    if (ay.kz(kyc.ksG.getText().trim()))
+    if (be.kf(kXj.kRO.getText().trim()))
     {
-      localEditText = kyc.ksG;
-      if (!ay.kz(daR)) {
+      localEditText = kXj.kRO;
+      if (!be.kf(cZx)) {
         break label60;
       }
     }
     label60:
-    for (String str = "";; str = daR)
+    for (String str = "";; str = cZx)
     {
       localEditText.setText(str);
       return true;

@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 public abstract interface j$a
 {
-  public abstract void bcD();
+  public abstract void bhZ();
 }
 
 /* Location:

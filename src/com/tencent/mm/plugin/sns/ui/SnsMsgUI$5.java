@@ -7,13 +7,13 @@ final class SnsMsgUI$5
   
   public final void run()
   {
-    if (SnsMsgUI.d(hfU) == null) {
+    if (SnsMsgUI.d(huL) == null) {
       return;
     }
-    synchronized (SnsMsgUI.d(hfU))
+    synchronized (SnsMsgUI.d(huL))
     {
-      SnsMsgUI.d(hfU).a(null, null);
-      SnsMsgUI.q(hfU);
+      SnsMsgUI.d(huL).a(null, null);
+      SnsMsgUI.q(huL);
       return;
     }
   }

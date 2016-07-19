@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lrt:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+.field final synthetic lRX:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 422
-    iput-object p1, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$5;->lrt:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$5;->lRX:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,12 +41,12 @@
 
     .prologue
     .line 425
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$5;->lrt:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$5;->lRX:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->q(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)Z
 
     .line 426
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$5;->lrt:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactAddUI$5;->lRX:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->finish()V
 

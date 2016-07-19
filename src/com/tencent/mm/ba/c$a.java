@@ -1,49 +1,27 @@
 package com.tencent.mm.ba;
 
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory.Options;
+import com.tencent.mm.compatible.g.a.a;
+import com.tencent.mm.svg.b.a;
 
 public final class c$a
+  implements a.a
 {
-  int aJm;
-  String className;
-  int kjd;
-  int kje;
-  String savePath;
+  a krG = new a();
   
-  public c$a(String paramString, int paramInt1, int paramInt2, int paramInt3)
+  public final Bitmap decodeResource(Resources paramResources, int paramInt, BitmapFactory.Options paramOptions)
   {
-    className = paramString;
-    aJm = paramInt1;
-    kjd = paramInt2;
-    kje = paramInt3;
-    StringBuilder localStringBuilder1 = new StringBuilder();
-    if (ay.kz(paramString))
+    if (krG.d(paramResources, paramInt))
     {
-      localStringBuilder1.append(c.kiX).append("WEIXIN_").append(System.currentTimeMillis()).append(".trace");
-      u.i("!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0=", "TRACE startMethod path %s traceSize : %d", new Object[] { localStringBuilder1.toString(), Integer.valueOf(paramInt2) });
-      savePath = localStringBuilder1.toString();
-      return;
+      float f = 0.0F;
+      if (paramOptions != null) {
+        f = inDensity / 160.0F;
+      }
+      return a.b(paramResources, paramInt, f);
     }
-    StringBuilder localStringBuilder2 = localStringBuilder1.append(c.kiX).append(paramString).append("_");
-    paramString = "";
-    switch (paramInt1)
-    {
-    }
-    for (;;)
-    {
-      localStringBuilder2.append(paramString).append(".trace");
-      break;
-      paramString = "onResume";
-      continue;
-      paramString = "onCreate";
-      continue;
-      paramString = "onPause";
-      continue;
-      paramString = "onScrool";
-      continue;
-      paramString = "all";
-    }
+    return null;
   }
 }
 

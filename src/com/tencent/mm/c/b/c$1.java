@@ -1,8 +1,8 @@
 package com.tencent.mm.c.b;
 
 import com.tencent.mm.c.c.b;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class c$1
   implements f.a
@@ -11,19 +11,19 @@ final class c$1
   
   public final void c(int paramInt, byte[] paramArrayOfByte)
   {
-    Object localObject = aqA;
-    aqp += 1;
-    if ((aqA.aqr) && (System.currentTimeMillis() - aqA.aqk <= 1000L) && (aqA.aqp - 10 > (System.currentTimeMillis() - aqA.aqk) / aqA.aqd))
+    Object localObject = abS;
+    abH += 1;
+    if ((abS.abJ) && (System.currentTimeMillis() - abS.abC <= 1000L) && (abS.abH - 10 > (System.currentTimeMillis() - abS.abC) / abS.abv))
     {
-      localObject = h.fUJ;
-      h.b(151L, 0L, 1L, false);
-      localObject = h.fUJ;
-      h.b(151L, 4L, 1L, false);
-      u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "return too many data, force stop, %d, %d", new Object[] { Integer.valueOf(aqA.aqp), Long.valueOf((System.currentTimeMillis() - aqA.aqk) / aqA.aqd) });
-      aqA.aqq = true;
+      localObject = g.gdY;
+      g.b(151L, 0L, 1L, false);
+      localObject = g.gdY;
+      g.b(151L, 4L, 1L, false);
+      v.e("MicroMsg.MMPcmRecorder", "return too many data, force stop, %d, %d", new Object[] { Integer.valueOf(abS.abH), Long.valueOf((System.currentTimeMillis() - abS.abC) / abS.abv) });
+      abS.abI = true;
     }
-    if (aqA.aqw != null) {
-      aqA.aqw.h(paramArrayOfByte, paramInt);
+    if (abS.abO != null) {
+      abS.abO.h(paramArrayOfByte, paramInt);
     }
     int m;
     int i;
@@ -32,15 +32,15 @@ final class c$1
     int j;
     if (paramInt > 0)
     {
-      localObject = aqA;
-      if ((!aqm) || (-2 != aqa))
+      localObject = abS;
+      if ((!abE) || (-2 != abs))
       {
-        m = paramInt / aql;
+        m = paramInt / abD;
         i = 5;
-        if (i <= aqn + m)
+        if (i <= abF + m)
         {
-          k = (i - aqn - 1) * aql;
-          n = aql + k;
+          k = (i - abF - 1) * abD;
+          n = abD + k;
           if (k >= 0)
           {
             j = k;
@@ -48,35 +48,35 @@ final class c$1
               break label638;
             }
           }
-          u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "error start: %d, end: %d", new Object[] { Integer.valueOf(k), Integer.valueOf(n) });
+          v.e("MicroMsg.MMPcmRecorder", "error start: %d, end: %d", new Object[] { Integer.valueOf(k), Integer.valueOf(n) });
         }
-        aqn = ((aqn + m) % 5);
-        if (aqa == 20)
+        abF = ((abF + m) % 5);
+        if (abs == 20)
         {
-          apY = 6;
-          u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DATAZERO_ERROR");
-          if ((apZ != -1) || (aqb != -1)) {
+          abq = 6;
+          v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DATAZERO_ERROR");
+          if ((abr != -1) || (abt != -1)) {
             break label683;
           }
-          apY = 11;
-          u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DATAZERO_DISTORTION_READRET_ERROR");
+          abq = 11;
+          v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DATAZERO_DISTORTION_READRET_ERROR");
           label383:
-          h localh = h.fUJ;
-          h.b(151L, 0L, 1L, false);
-          localh = h.fUJ;
-          h.b(151L, 5L, 1L, false);
-          aqa = -2;
-          ((c)localObject).lO();
+          g localg = g.gdY;
+          g.b(151L, 0L, 1L, false);
+          localg = g.gdY;
+          g.b(151L, 5L, 1L, false);
+          abs = -2;
+          ((c)localObject).jZ();
         }
       }
     }
-    if (aqA.aqf)
+    if (abS.abx)
     {
       if (paramInt <= 0) {
         break label799;
       }
-      localObject = aqA;
-      if (apZ != -1)
+      localObject = abS;
+      if (abr != -1)
       {
         j = 0;
         i = 0;
@@ -96,24 +96,24 @@ final class c$1
           if (k < 5) {
             break label735;
           }
-          apZ += 1;
+          abr += 1;
         }
-        if (apZ > 100)
+        if (abr > 100)
         {
-          apY = 7;
-          u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DISTORTION_ERROR");
-          if ((aqa != -2) || (aqb != -1)) {
+          abq = 7;
+          v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DISTORTION_ERROR");
+          if ((abs != -2) || (abt != -1)) {
             break label746;
           }
-          apY = 11;
-          u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DATAZERO_DISTORTION_READRET_ERROR");
+          abq = 11;
+          v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DATAZERO_DISTORTION_READRET_ERROR");
           label592:
-          paramArrayOfByte = h.fUJ;
-          h.b(151L, 0L, 1L, false);
-          paramArrayOfByte = h.fUJ;
-          h.b(151L, 6L, 1L, false);
-          ((c)localObject).lO();
-          apZ = -1;
+          paramArrayOfByte = g.gdY;
+          g.b(151L, 0L, 1L, false);
+          paramArrayOfByte = g.gdY;
+          g.b(151L, 6L, 1L, false);
+          ((c)localObject).jZ();
+          abr = -1;
         }
       }
     }
@@ -134,67 +134,67 @@ final class c$1
             break;
           }
         } while (paramArrayOfByte[j] == 0);
-        aqa = -1;
-        aqm = true;
-        aqa += 1;
+        abs = -1;
+        abE = true;
+        abs += 1;
         i += 5;
         break;
-        if (apZ == -1)
+        if (abr == -1)
         {
-          apY = 8;
-          u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DATAZERO_DISTORTION_ERROR");
+          abq = 8;
+          v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DATAZERO_DISTORTION_ERROR");
           break label383;
         }
-        if (aqb != -1) {
+        if (abt != -1) {
           break label383;
         }
-        apY = 9;
-        u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DATAZERO_READRET_ERROR");
+        abq = 9;
+        v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DATAZERO_READRET_ERROR");
         break label383;
         i += 1;
         j = k;
         break label459;
-        if (aqa == -2)
+        if (abs == -2)
         {
-          apY = 8;
-          u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DATAZERO_DISTORTION_ERROR");
+          abq = 8;
+          v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DATAZERO_DISTORTION_ERROR");
           break label592;
         }
-        if (aqb != -1) {
+        if (abt != -1) {
           break label592;
         }
-        apY = 10;
-        u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DISTORTION_READRET_ERROR");
+        abq = 10;
+        v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DISTORTION_READRET_ERROR");
         break label592;
-        paramArrayOfByte = aqA;
-      } while ((aqb == -1) || (paramInt >= 0));
-      aqb += 1;
-    } while (aqb < 50);
-    apY = 5;
-    u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_READRET_ERROR");
-    if ((aqa == -2) && (apZ == -1))
+        paramArrayOfByte = abS;
+      } while ((abt == -1) || (paramInt >= 0));
+      abt += 1;
+    } while (abt < 50);
+    abq = 5;
+    v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_READRET_ERROR");
+    if ((abs == -2) && (abr == -1))
     {
-      apY = 11;
-      u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DATAZERO_DISTORTION_READRET_ERROR");
+      abq = 11;
+      v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DATAZERO_DISTORTION_READRET_ERROR");
     }
     for (;;)
     {
-      localObject = h.fUJ;
-      h.b(151L, 0L, 1L, false);
-      localObject = h.fUJ;
-      h.b(151L, 7L, 1L, false);
-      paramArrayOfByte.lO();
-      aqb = -1;
+      localObject = g.gdY;
+      g.b(151L, 0L, 1L, false);
+      localObject = g.gdY;
+      g.b(151L, 7L, 1L, false);
+      paramArrayOfByte.jZ();
+      abt = -1;
       return;
-      if (aqa == -2)
+      if (abs == -2)
       {
-        apY = 9;
-        u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DATAZERO_READRET_ERROR");
+        abq = 9;
+        v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DATAZERO_READRET_ERROR");
       }
-      else if (apZ == -1)
+      else if (abr == -1)
       {
-        apY = 10;
-        u.e("!32@/B4Tb64lLpJ9BY7/AxE8KqlzjdhE0nS4", "[error] RECORDER_DISTORTION_READRET_ERROR");
+        abq = 10;
+        v.e("MicroMsg.MMPcmRecorder", "[error] RECORDER_DISTORTION_READRET_ERROR");
       }
     }
   }

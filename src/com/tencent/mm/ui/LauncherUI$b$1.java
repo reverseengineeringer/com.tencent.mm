@@ -1,6 +1,6 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.chatting.ChattingUI.a;
 
 final class LauncherUI$b$1
@@ -11,14 +11,14 @@ final class LauncherUI$b$1
   public final void run()
   {
     boolean bool = true;
-    if (LauncherUI.h(knC.knl) == null) {}
+    if (LauncherUI.g(kMJ.kMs) == null) {}
     for (;;)
     {
-      u.d("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "on select image ActivityResult. after creat chattingUI, chatting fragment is null? %B", new Object[] { Boolean.valueOf(bool) });
-      if (LauncherUI.h(knC.knl) != null)
+      v.d("MicroMsg.LauncherUI", "on select image ActivityResult. after creat chattingUI, chatting fragment is null? %B", new Object[] { Boolean.valueOf(bool) });
+      if (LauncherUI.g(kMJ.kMs) != null)
       {
-        u.d("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "on select image ActivityResult. do post activity result");
-        LauncherUI.h(knC.knl).onActivityResult(knC.auo & 0xFFFF, knC.arU, knC.aup);
+        v.d("MicroMsg.LauncherUI", "on select image ActivityResult. do post activity result");
+        LauncherUI.g(kMJ.kMs).onActivityResult(kMJ.agb & 0xFFFF, kMJ.adJ, kMJ.agc);
       }
       return;
       bool = false;

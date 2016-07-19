@@ -11,14 +11,14 @@ public final class c$b
     return 2;
   }
   
-  public final void l(Bundle paramBundle)
+  public final void n(Bundle paramBundle)
   {
-    super.l(paramBundle);
+    super.n(paramBundle);
   }
   
-  public final void m(Bundle paramBundle)
+  public final void o(Bundle paramBundle)
   {
-    super.m(paramBundle);
+    super.o(paramBundle);
   }
 }
 

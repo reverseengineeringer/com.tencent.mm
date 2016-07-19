@@ -12,21 +12,21 @@
 
 
 # instance fields
-.field public ehh:Ljava/lang/String;
+.field public ekS:Ljava/lang/String;
 
-.field elm:Ljava/lang/String;
+.field eqa:Ljava/lang/String;
 
-.field public iCq:Ljava/lang/String;
+.field public iZe:Ljava/lang/String;
 
-.field iCr:Ljava/lang/String;
+.field iZf:Ljava/lang/String;
 
-.field iCs:I
+.field iZg:I
 
-.field iCt:Z
+.field iZh:Z
 
-.field public iCu:Z
+.field public iZi:Z
 
-.field public iCv:Z
+.field public iZj:Z
 
 .field mFileName:Ljava/lang/String;
 
@@ -46,7 +46,7 @@
     .line 5
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCq:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iZe:Ljava/lang/String;
 
     .line 6
     const-string/jumbo v0, ""
@@ -56,29 +56,29 @@
     .line 7
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCr:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iZf:Ljava/lang/String;
 
     .line 8
-    iput v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCs:I
+    iput v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iZg:I
 
     .line 9
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->ehh:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->ekS:Ljava/lang/String;
 
     .line 10
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->elm:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->eqa:Ljava/lang/String;
 
     .line 11
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCt:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iZh:Z
 
     .line 12
-    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCu:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iZi:Z
 
     .line 13
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCv:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iZj:Z
 
     .line 17
     return-void

@@ -19,12 +19,21 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public aBn:F
+.field public anF:F
 
-.field public bRR:F
+.field public bLq:F
 
 
 # direct methods
@@ -32,7 +41,7 @@
     .locals 1
 
     .prologue
-    .line 305
+    .line 337
     new-instance v0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData$1;
 
     invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData$1;-><init>()V
@@ -48,16 +57,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 268
+    .line 300
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 269
-    iput v0, p0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->aBn:F
+    .line 301
+    iput v0, p0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->anF:F
 
-    .line 270
-    iput v0, p0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->bRR:F
+    .line 302
+    iput v0, p0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->bLq:F
 
-    .line 271
+    .line 303
     return-void
 .end method
 
@@ -65,16 +74,16 @@
     .locals 0
 
     .prologue
-    .line 273
+    .line 305
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 274
-    iput p1, p0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->aBn:F
+    .line 306
+    iput p1, p0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->anF:F
 
-    .line 275
-    iput p2, p0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->bRR:F
+    .line 307
+    iput p2, p0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->bLq:F
 
-    .line 276
+    .line 308
     return-void
 .end method
 
@@ -84,7 +93,7 @@
     .locals 1
 
     .prologue
-    .line 296
+    .line 328
     const/4 v0, 0x0
 
     return v0
@@ -98,24 +107,24 @@
 
     const v3, 0x358637bd    # 1.0E-6f
 
-    .line 285
+    .line 317
     instance-of v1, p1, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;
 
     if-nez v1, :cond_1
 
-    .line 290
+    .line 322
     :cond_0
     :goto_0
     return v0
 
-    .line 289
+    .line 321
     :cond_1
     check-cast p1, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;
 
-    .line 290
-    iget v1, p0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->aBn:F
+    .line 322
+    iget v1, p0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->anF:F
 
-    iget v2, p1, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->aBn:F
+    iget v2, p1, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->anF:F
 
     sub-float/2addr v1, v2
 
@@ -127,9 +136,9 @@
 
     if-gez v1, :cond_0
 
-    iget v1, p0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->bRR:F
+    iget v1, p0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->bLq:F
 
-    iget v2, p1, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->bRR:F
+    iget v2, p1, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->bLq:F
 
     sub-float/2addr v1, v2
 
@@ -152,14 +161,14 @@
     .prologue
     const v2, 0x461c4000    # 10000.0f
 
-    .line 280
-    iget v0, p0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->aBn:F
+    .line 312
+    iget v0, p0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->anF:F
 
     mul-float/2addr v0, v2
 
     float-to-int v0, v0
 
-    iget v1, p0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->bRR:F
+    iget v1, p0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->bLq:F
 
     mul-float/2addr v1, v2
 
@@ -174,16 +183,16 @@
     .locals 1
 
     .prologue
-    .line 301
-    iget v0, p0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->aBn:F
+    .line 333
+    iget v0, p0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->anF:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 302
-    iget v0, p0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->bRR:F
+    .line 334
+    iget v0, p0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper$LatLongData;->bLq:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 303
+    .line 335
     return-void
 .end method

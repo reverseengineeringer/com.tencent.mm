@@ -10,33 +10,33 @@ import java.util.Set;
 
 final class j
 {
-  private static j lSq;
-  Map lSr = new HashMap();
-  SharedPreferences lSs;
+  private static j muf;
+  Map<String, Object> mug = new HashMap();
+  SharedPreferences muh;
   
   private j(Context paramContext)
   {
-    lSs = paramContext.getSharedPreferences("tbs_download_config", 4);
+    muh = paramContext.getSharedPreferences("tbs_download_config", 4);
   }
   
-  public static j eU(Context paramContext)
+  public static j eW(Context paramContext)
   {
     try
     {
-      if (lSq == null) {
-        lSq = new j(paramContext);
+      if (muf == null) {
+        muf = new j(paramContext);
       }
-      paramContext = lSq;
+      paramContext = muf;
       return paramContext;
     }
     finally {}
   }
   
-  public final long blI()
+  public final long brM()
   {
     try
     {
-      int i = lSs.getInt("tbs_download_maxflow", 0);
+      int i = muh.getInt("tbs_download_maxflow", 0);
       int j = i;
       if (i == 0) {
         j = 20;
@@ -51,11 +51,25 @@ final class j
     }
   }
   
-  public final long blJ()
+  public final long brN()
   {
     try
     {
-      int i = lSs.getInt("tbs_download_min_free_space", 0);
+      long l = muh.getLong("retry_interval", 86400L);
+      return l;
+    }
+    finally
+    {
+      localObject = finally;
+      throw ((Throwable)localObject);
+    }
+  }
+  
+  public final long brO()
+  {
+    try
+    {
+      int i = muh.getInt("tbs_download_min_free_space", 0);
       int j = i;
       if (i == 0) {
         j = 70;
@@ -70,11 +84,11 @@ final class j
     }
   }
   
-  public final int blK()
+  public final int brP()
   {
     try
     {
-      int i = lSs.getInt("tbs_download_success_max_retrytimes", 0);
+      int i = muh.getInt("tbs_download_success_max_retrytimes", 0);
       int j = i;
       if (i == 0) {
         j = 3;
@@ -88,11 +102,11 @@ final class j
     }
   }
   
-  public final int blL()
+  public final int brQ()
   {
     try
     {
-      int i = lSs.getInt("tbs_download_failed_max_retrytimes", 0);
+      int i = muh.getInt("tbs_download_failed_max_retrytimes", 0);
       int j = i;
       if (i == 0) {
         j = 100;
@@ -106,11 +120,11 @@ final class j
     }
   }
   
-  public final long blM()
+  public final long brR()
   {
     try
     {
-      long l1 = lSs.getLong("tbs_single_timeout", 0L);
+      long l1 = muh.getLong("tbs_single_timeout", 0L);
       long l2 = l1;
       if (l1 == 0L) {
         l2 = 1200000L;
@@ -132,13 +146,13 @@ final class j
       Object localObject2;
       try
       {
-        SharedPreferences.Editor localEditor = lSs.edit();
-        Iterator localIterator = lSr.keySet().iterator();
+        SharedPreferences.Editor localEditor = muh.edit();
+        Iterator localIterator = mug.keySet().iterator();
         if (!localIterator.hasNext()) {
           break label199;
         }
         str = (String)localIterator.next();
-        localObject2 = lSr.get(str);
+        localObject2 = mug.get(str);
         if ((localObject2 instanceof String))
         {
           localEditor.putString(str, (String)localObject2);
@@ -169,7 +183,7 @@ final class j
         continue;
         label199:
         ((SharedPreferences.Editor)localObject1).commit();
-        lSr.clear();
+        mug.clear();
       }
     }
   }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/p2" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/chk" android:background="@drawable/act" android:layout_width="@dimen/l8" android:layout_height="@dimen/l8" android:layout_marginTop="@dimen/ct" />
+    <TextView android:textSize="@dimen/cx" android:textColor="@color/ak" android:gravity="center" android:id="@id/chm" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hf" android:text="@string/d1j" />
+    <TextView android:textSize="@dimen/i8" android:textColor="@color/ak" android:gravity="center" android:id="@id/chn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hb" android:text="@string/d1i" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/j7">
+        <com.tencent.mm.ui.widget.MMSwitchBtn android:layout_gravity="center|right" android:id="@id/ds" android:focusable="false" android:clickable="false" android:layout_width="70.0dip" android:layout_height="wrap_content" android:layout_marginRight="2.0dip" />
+    </LinearLayout>
+    <RelativeLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:textSize="@dimen/cu" android:id="@id/cho" android:padding="@dimen/cp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hb" android:layout_marginRight="@dimen/hb" android:text="@string/d1g" style="@style/MMSolidGreenLargeButton" />
+    </RelativeLayout>
+</LinearLayout>

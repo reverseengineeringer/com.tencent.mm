@@ -22,9 +22,10 @@ import com.tencent.mm.modelfriend.a.b;
 import com.tencent.mm.modelfriend.ac;
 import com.tencent.mm.modelfriend.m.a;
 import com.tencent.mm.modelfriend.x;
+import com.tencent.mm.platformtools.l;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.c;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.MMWizardActivity;
 import com.tencent.mm.ui.friend.InviteFriendUI;
@@ -35,40 +36,40 @@ import java.util.List;
 
 public class MobileFriendUI
   extends MMActivity
-  implements com.tencent.mm.r.d
+  implements com.tencent.mm.t.d
 {
-  private TextView cHr = null;
-  private ListView coJ;
-  private View coL;
-  private ProgressDialog coM = null;
-  String coN;
-  a kPr;
-  private ac kPs;
-  private TextView ksq = null;
+  private TextView cEv = null;
+  private ListView cjX;
+  private View cjZ;
+  private ProgressDialog cka = null;
+  String ckb;
+  private TextView kRy = null;
+  a loH;
+  private ac loI;
   
-  private void getData()
+  private void amS()
   {
-    if (!com.tencent.mm.modelfriend.m.yC())
+    if (!com.tencent.mm.modelfriend.m.yP())
     {
-      localObject = koJ.kpc;
-      getString(2131430877);
-      coM = com.tencent.mm.ui.base.g.a((Context)localObject, getString(2131428799), true, new DialogInterface.OnCancelListener()
+      localObject = kNN.kOg;
+      getString(2131231028);
+      cka = com.tencent.mm.ui.base.g.a((Context)localObject, getString(2131233842), true, new DialogInterface.OnCancelListener()
       {
         public final void onCancel(DialogInterface paramAnonymousDialogInterface)
         {
           if (MobileFriendUI.a(MobileFriendUI.this) != null) {
-            com.tencent.mm.model.ah.tE().c(MobileFriendUI.a(MobileFriendUI.this));
+            com.tencent.mm.model.ah.tF().c(MobileFriendUI.a(MobileFriendUI.this));
           }
         }
       });
-      if (kPr.getCount() != 0) {
+      if (loH.getCount() != 0) {
         break label88;
       }
       if ((!com.tencent.mm.modelfriend.a.a(new a.b()
       {
-        public final void aU(boolean paramAnonymousBoolean)
+        public final void aA(boolean paramAnonymousBoolean)
         {
-          u.i("!32@/B4Tb64lLpLFDma4Qh7ELOVLkIWClC8Q", "syncAddrBookAndUpload onSyncEnd suc:%b", new Object[] { Boolean.valueOf(paramAnonymousBoolean) });
+          v.i("MicroMsg.MobileFriendUI", "syncAddrBookAndUpload onSyncEnd suc:%b", new Object[] { Boolean.valueOf(paramAnonymousBoolean) });
           if (!paramAnonymousBoolean)
           {
             if (MobileFriendUI.b(MobileFriendUI.this) != null)
@@ -79,103 +80,103 @@ public class MobileFriendUI
             return;
           }
           System.currentTimeMillis();
-          ac localac = new ac(com.tencent.mm.modelfriend.m.yK(), com.tencent.mm.modelfriend.m.yJ());
-          com.tencent.mm.model.ah.tE().d(localac);
+          ac localac = new ac(com.tencent.mm.modelfriend.m.yX(), com.tencent.mm.modelfriend.m.yW());
+          com.tencent.mm.model.ah.tF().a(localac, 0);
         }
-      })) && (coM != null))
+      })) && (cka != null))
       {
-        coM.dismiss();
-        coM = null;
+        cka.dismiss();
+        cka = null;
       }
     }
     return;
     label88:
-    Object localObject = com.tencent.mm.modelfriend.m.yK();
-    List localList = com.tencent.mm.modelfriend.m.yJ();
+    Object localObject = com.tencent.mm.modelfriend.m.yX();
+    List localList = com.tencent.mm.modelfriend.m.yW();
     if ((((List)localObject).size() != 0) || (localList.size() != 0))
     {
-      kPs = new ac(com.tencent.mm.modelfriend.m.yK(), com.tencent.mm.modelfriend.m.yJ());
-      com.tencent.mm.model.ah.tE().d(kPs);
+      loI = new ac(com.tencent.mm.modelfriend.m.yX(), com.tencent.mm.modelfriend.m.yW());
+      com.tencent.mm.model.ah.tF().a(loI, 0);
       return;
     }
     localObject = new x();
-    com.tencent.mm.model.ah.tE().d((com.tencent.mm.r.j)localObject);
+    com.tencent.mm.model.ah.tF().a((com.tencent.mm.t.j)localObject, 0);
   }
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    cHr = ((TextView)findViewById(2131169185));
-    cHr.setText(2131428797);
-    ksq = ((TextView)findViewById(2131169186));
-    ksq.setText(2131428798);
-    coL = findViewById(2131167148);
-    coJ = ((ListView)findViewById(2131167146));
+    cEv = ((TextView)findViewById(2131756864));
+    cEv.setText(2131233840);
+    kRy = ((TextView)findViewById(2131756865));
+    kRy.setText(2131233853);
+    cjZ = findViewById(2131756852);
+    cjX = ((ListView)findViewById(2131756850));
     Object localObject = new r(true, true);
-    lxA = new r.b()
+    lYp = new r.b()
     {
-      public final void Gd() {}
+      public final void GA() {}
       
-      public final void Ge() {}
+      public final void GB() {}
       
-      public final void Gf() {}
+      public final void GC() {}
       
-      public final void Gg() {}
+      public final void GD() {}
       
-      public final boolean kE(String paramAnonymousString)
+      public final boolean ln(String paramAnonymousString)
       {
         return false;
       }
       
-      public final void kF(String paramAnonymousString)
+      public final void lo(String paramAnonymousString)
       {
-        MobileFriendUI.a(MobileFriendUI.this, ay.kx(paramAnonymousString));
+        MobileFriendUI.a(MobileFriendUI.this, be.lh(paramAnonymousString));
         paramAnonymousString = MobileFriendUI.this;
-        if (kPr != null) {
-          kPr.pH(coN);
+        if (loH != null) {
+          loH.qY(ckb);
         }
       }
     };
     a((r)localObject);
     boolean bool;
-    if (f.uO().fw("2") != null)
+    if (f.uQ().fJ("2") != null)
     {
-      localObject = uOfw"2"value;
+      localObject = uQfJ"2"value;
       if (((String)localObject).equals("0"))
       {
         bool = false;
-        e.fA("2");
+        e.fN("2");
       }
     }
     for (;;)
     {
-      u.i("!32@/B4Tb64lLpLFDma4Qh7ELOVLkIWClC8Q", "ABTest Type, NEW(%B)", new Object[] { Boolean.valueOf(bool) });
+      v.i("MicroMsg.MobileFriendUI", "ABTest Type, NEW(%B)", new Object[] { Boolean.valueOf(bool) });
       if (!bool) {}
-      for (kPr = new b(this, new i.a()
+      for (loH = new b(this, new i.a()
           {
-            public final void Gh()
+            public final void GE()
             {
               MobileFriendUI localMobileFriendUI = MobileFriendUI.this;
               MobileFriendUI.d(MobileFriendUI.this).getCount();
               MobileFriendUI.e(localMobileFriendUI);
             }
             
-            public final void Gi() {}
-          });; kPr = new c(this, new i.a()
+            public final void GF() {}
+          });; loH = new c(this, new i.a()
           {
-            public final void Gh()
+            public final void GE()
             {
               MobileFriendUI localMobileFriendUI = MobileFriendUI.this;
               MobileFriendUI.d(MobileFriendUI.this).getCount();
               MobileFriendUI.e(localMobileFriendUI);
             }
             
-            public final void Gi() {}
+            public final void GF() {}
           }))
       {
-        coJ.setAdapter(kPr);
-        coJ.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        cjX.setAdapter(loH);
+        cjX.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
-          public final void onItemClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+          public final void onItemClick(AdapterView<?> paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
           {
             if (paramAnonymousInt < MobileFriendUI.f(MobileFriendUI.this).getHeaderViewsCount()) {}
             do
@@ -190,16 +191,16 @@ public class MobileFriendUI
             paramAnonymousView = new Intent(MobileFriendUI.this, InviteFriendUI.class);
             paramAnonymousView.putExtra("friend_type", 1);
             paramAnonymousView.putExtra("friend_user_name", paramAnonymousAdapterView.getUsername());
-            paramAnonymousView.putExtra("friend_num", paramAnonymousAdapterView.yp());
-            paramAnonymousView.putExtra("friend_nick", paramAnonymousAdapterView.yj());
-            paramAnonymousView.putExtra("friend_weixin_nick", paramAnonymousAdapterView.ym());
+            paramAnonymousView.putExtra("friend_num", paramAnonymousAdapterView.yB());
+            paramAnonymousView.putExtra("friend_nick", paramAnonymousAdapterView.yv());
+            paramAnonymousView.putExtra("friend_weixin_nick", paramAnonymousAdapterView.yy());
             paramAnonymousView.putExtra("friend_scene", 13);
             startActivity(paramAnonymousView);
           }
         });
-        kPr.a(new a.a()
+        loH.a(new a.a()
         {
-          public final void qm(int paramAnonymousInt)
+          public final void se(int paramAnonymousInt)
           {
             if (paramAnonymousInt > 0)
             {
@@ -209,26 +210,26 @@ public class MobileFriendUI
             MobileFriendUI.g(MobileFriendUI.this).setVisibility(0);
           }
         });
-        if ((com.tencent.mm.modelfriend.m.yD() != m.a.bMB) && (com.tencent.mm.modelfriend.m.yD() != m.a.bMC))
+        if ((com.tencent.mm.modelfriend.m.yQ() != m.a.bFV) && (com.tencent.mm.modelfriend.m.yQ() != m.a.bFW))
         {
-          coL = findViewById(2131167148);
-          coL.setVisibility(0);
-          coL.setOnClickListener(new View.OnClickListener()
+          cjZ = findViewById(2131756852);
+          cjZ.setVisibility(0);
+          cjZ.setOnClickListener(new View.OnClickListener()
           {
             public final void onClick(View paramAnonymousView)
             {
-              paramAnonymousView = new Intent(koJ.kpc, BindMContactIntroUI.class);
+              paramAnonymousView = new Intent(kNN.kOg, BindMContactIntroUI.class);
               paramAnonymousView.putExtra("key_upload_scene", 6);
               MMWizardActivity.v(MobileFriendUI.this, paramAnonymousView);
             }
           });
-          coJ.setVisibility(8);
+          cjX.setVisibility(8);
         }
         b(new MenuItem.OnMenuItemClickListener()
         {
           public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
           {
-            age();
+            aiI();
             finish();
             return true;
           }
@@ -240,23 +241,23 @@ public class MobileFriendUI
             BackwardSupportUtil.c.a(MobileFriendUI.f(MobileFriendUI.this));
           }
         };
-        if ((!com.tencent.mm.model.h.sE()) || (com.tencent.mm.modelfriend.m.yC())) {
-          com.tencent.mm.ui.base.g.a(this, 2131428659, 2131430877, 2131430888, 2131430884, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+        if ((!com.tencent.mm.model.h.sG()) || (com.tencent.mm.modelfriend.m.yP())) {
+          com.tencent.mm.ui.base.g.a(this, 2131231246, 2131231028, 2131230967, 2131230873, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
           {
             public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
             {
-              com.tencent.mm.plugin.report.service.h.fUJ.g(11438, new Object[] { Integer.valueOf(6) });
-              u.i("!32@/B4Tb64lLpLFDma4Qh7ELOVLkIWClC8Q", "[cpan] kv report logid:%d scene:%d", new Object[] { Integer.valueOf(11438), Integer.valueOf(6) });
-              com.tencent.mm.model.ah.tD().rn().set(12322, Boolean.valueOf(true));
-              com.tencent.mm.platformtools.m.d(true, true);
+              com.tencent.mm.plugin.report.service.g.gdY.h(11438, new Object[] { Integer.valueOf(6) });
+              v.i("MicroMsg.MobileFriendUI", "[cpan] kv report logid:%d scene:%d", new Object[] { Integer.valueOf(11438), Integer.valueOf(6) });
+              com.tencent.mm.model.ah.tE().ro().set(12322, Boolean.valueOf(true));
+              l.d(true, true);
               MobileFriendUI.h(MobileFriendUI.this);
             }
           }, new DialogInterface.OnClickListener()
           {
             public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
             {
-              com.tencent.mm.model.ah.tD().rn().set(12322, Boolean.valueOf(false));
-              com.tencent.mm.platformtools.m.d(false, true);
+              com.tencent.mm.model.ah.tE().ro().set(12322, Boolean.valueOf(false));
+              l.d(false, true);
               finish();
             }
           });
@@ -275,62 +276,33 @@ public class MobileFriendUI
     }
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
-  {
-    u.i("!32@/B4Tb64lLpLFDma4Qh7ELOVLkIWClC8Q", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
-    if ((paramj.getType() == 32) && (coM != null))
-    {
-      coM.dismiss();
-      coM = null;
-    }
-    if ((paramInt1 != 0) || (paramInt2 != 0)) {
-      u.e("!32@/B4Tb64lLpLFDma4Qh7ELOVLkIWClC8Q", "onSceneEnd: errType = " + paramInt1 + ", errCode = " + paramInt2);
-    }
-    if (paramj.getType() == 133)
-    {
-      paramString = new x();
-      com.tencent.mm.model.ah.tE().d(paramString);
-    }
-    if ((paramInt1 == 0) && (paramInt2 == 0))
-    {
-      if (paramj.getType() == 32) {
-        com.tencent.mm.modelsimple.d.aX(getApplicationContext());
-      }
-      kPr.a(null, null);
-    }
-    while (paramj.getType() != 32) {
-      return;
-    }
-    Toast.makeText(this, 2131428800, 0).show();
-  }
-  
   protected final int getLayoutId()
   {
-    return 2131363098;
+    return 2130904074;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    qb(2131428796);
-    zqbCw.cj("qqlist", "update addr_upload2 set reserved4=0");
-    com.tencent.mm.model.ah.tE().a(32, this);
-    com.tencent.mm.model.ah.tE().a(133, this);
-    Gb();
-    boolean bool = com.tencent.mm.pluginsdk.g.a.a(this, "android.permission.READ_CONTACTS", 768, null, null);
-    u.d("!32@/B4Tb64lLpLFDma4Qh7ELOVLkIWClC8Q", "summerper checkPermission checkContacts[%b]", new Object[] { Boolean.valueOf(bool) });
+    rR(2131233844);
+    zDbvG.cx("qqlist", "update addr_upload2 set reserved4=0");
+    com.tencent.mm.model.ah.tF().a(32, this);
+    com.tencent.mm.model.ah.tF().a(133, this);
+    Gy();
+    boolean bool = com.tencent.mm.pluginsdk.h.a.a(this, "android.permission.READ_CONTACTS", 768, null, null);
+    v.d("MicroMsg.MobileFriendUI", "summerper checkPermission checkContacts[%b]", new Object[] { Boolean.valueOf(bool) });
     if (!bool) {
       return;
     }
-    getData();
+    amS();
   }
   
   public void onDestroy()
   {
-    e.fB("2");
-    com.tencent.mm.model.ah.tE().b(32, this);
-    com.tencent.mm.model.ah.tE().b(133, this);
-    kPr.adW();
+    e.fO("2");
+    com.tencent.mm.model.ah.tF().b(32, this);
+    com.tencent.mm.model.ah.tF().b(133, this);
+    loH.closeCursor();
     super.onDestroy();
   }
   
@@ -341,7 +313,7 @@ public class MobileFriendUI
   
   public void onRequestPermissionsResult(int paramInt, String[] paramArrayOfString, int[] paramArrayOfInt)
   {
-    u.d("!32@/B4Tb64lLpLFDma4Qh7ELOVLkIWClC8Q", "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(paramArrayOfInt[0]), Long.valueOf(Thread.currentThread().getId()) });
+    v.d("MicroMsg.MobileFriendUI", "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(paramArrayOfInt[0]), Long.valueOf(Thread.currentThread().getId()) });
     switch (paramInt)
     {
     default: 
@@ -349,10 +321,10 @@ public class MobileFriendUI
     }
     if (paramArrayOfInt[0] == 0)
     {
-      getData();
+      amS();
       return;
     }
-    com.tencent.mm.ui.base.g.a(this, getString(2131429594), getString(2131429588), getString(2131429589), getString(2131430409), false, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+    com.tencent.mm.ui.base.g.a(this, getString(2131234137), getString(2131234146), getString(2131233448), getString(2131231427), false, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
@@ -371,7 +343,36 @@ public class MobileFriendUI
   protected void onResume()
   {
     super.onResume();
-    kPr.notifyDataSetChanged();
+    loH.notifyDataSetChanged();
+  }
+  
+  public void onSceneEnd(int paramInt1, int paramInt2, String paramString, com.tencent.mm.t.j paramj)
+  {
+    v.i("MicroMsg.MobileFriendUI", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
+    if ((paramj.getType() == 32) && (cka != null))
+    {
+      cka.dismiss();
+      cka = null;
+    }
+    if ((paramInt1 != 0) || (paramInt2 != 0)) {
+      v.e("MicroMsg.MobileFriendUI", "onSceneEnd: errType = " + paramInt1 + ", errCode = " + paramInt2);
+    }
+    if (paramj.getType() == 133)
+    {
+      paramString = new x();
+      com.tencent.mm.model.ah.tF().a(paramString, 0);
+    }
+    if ((paramInt1 == 0) && (paramInt2 == 0))
+    {
+      if (paramj.getType() == 32) {
+        com.tencent.mm.modelsimple.d.aT(getApplicationContext());
+      }
+      loH.a(null, null);
+    }
+    while (paramj.getType() != 32) {
+      return;
+    }
+    Toast.makeText(this, 2131233841, 0).show();
   }
 }
 

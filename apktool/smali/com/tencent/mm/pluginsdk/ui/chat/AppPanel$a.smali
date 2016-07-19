@@ -15,44 +15,47 @@
 
 
 # virtual methods
-.method public abstract aiA()V
+.method public abstract akY()V
 .end method
 
-.method public abstract aiB()V
+.method public abstract akZ()V
 .end method
 
-.method public abstract aiC()V
+.method public abstract ala()V
 .end method
 
-.method public abstract air()V
+.method public abstract alb()V
 .end method
 
-.method public abstract ais()V
+.method public abstract alc()V
 .end method
 
-.method public abstract ait()V
+.method public abstract ald()V
 .end method
 
-.method public abstract aiu()V
+.method public abstract ale()V
 .end method
 
-.method public abstract aiv()V
+.method public abstract alf()V
 .end method
 
-.method public abstract aiw()V
+.method public abstract alg()V
 .end method
 
-.method public abstract aix()V
+.method public abstract alh()V
 .end method
 
-.method public abstract aiy()V
+.method public abstract ali()V
 .end method
 
-.method public abstract aiz()V
+.method public abstract alj()V
+.end method
+
+.method public abstract alk()V
 .end method
 
 .method public abstract c(Lcom/tencent/mm/pluginsdk/model/app/f;)V
 .end method
 
-.method public abstract iy(I)V
+.method public abstract jH(I)V
 .end method

@@ -51,6 +51,12 @@
 .method public abstract getCityCode()Ljava/lang/String;
 .end method
 
+.method public abstract getCoordinateType()I
+.end method
+
+.method public abstract getDirection()D
+.end method
+
 .method public abstract getDistrict()Ljava/lang/String;
 .end method
 
@@ -73,12 +79,24 @@
 .end method
 
 .method public abstract getPoiList()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/map/geolocation/TencentPoi;",
+            ">;"
+        }
+    .end annotation
 .end method
 
 .method public abstract getProvider()Ljava/lang/String;
 .end method
 
 .method public abstract getProvince()Ljava/lang/String;
+.end method
+
+.method public abstract getRssi()I
 .end method
 
 .method public abstract getSpeed()F

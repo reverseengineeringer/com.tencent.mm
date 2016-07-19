@@ -1,7 +1,9 @@
 package com.tencent.mm.pluginsdk.ui.tools;
 
+import android.graphics.Bitmap;
+
 final class g$4
-  extends g.c
+  extends g.c<String, Bitmap>
 {
   g$4(g paramg)
   {

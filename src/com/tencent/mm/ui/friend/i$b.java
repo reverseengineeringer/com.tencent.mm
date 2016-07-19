@@ -1,7 +1,7 @@
 package com.tencent.mm.ui.friend;
 
 public final class i$b
-  extends Enum
+  extends Enum<b>
 {}
 
 /* Location:

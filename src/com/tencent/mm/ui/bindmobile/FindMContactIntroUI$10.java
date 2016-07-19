@@ -3,7 +3,7 @@ package com.tencent.mm.ui.bindmobile;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 
 final class FindMContactIntroUI$10
   implements DialogInterface.OnCancelListener
@@ -12,10 +12,10 @@ final class FindMContactIntroUI$10
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    if (FindMContactIntroUI.i(kOZ) != null)
+    if (FindMContactIntroUI.i(lop) != null)
     {
-      ah.tE().b(431, FindMContactIntroUI.i(kOZ));
-      FindMContactIntroUI.j(kOZ);
+      ah.tF().b(431, FindMContactIntroUI.i(lop));
+      FindMContactIntroUI.j(lop);
     }
   }
 }

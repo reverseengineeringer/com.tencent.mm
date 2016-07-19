@@ -3,7 +3,7 @@ package com.tencent.mm.plugin.sns.ui;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class TouchImageView$2
   implements View.OnTouchListener
@@ -12,11 +12,11 @@ final class TouchImageView$2
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    if (!TouchImageView.a(hmQ)) {}
+    if (!TouchImageView.a(hDa)) {}
     for (;;)
     {
       return false;
-      TouchImageView localTouchImageView = hmQ;
+      TouchImageView localTouchImageView = hDa;
       switch (paramMotionEvent.getAction())
       {
       }
@@ -25,9 +25,9 @@ final class TouchImageView$2
         return true;
         paramView.setPressed(true);
         paramView.invalidate();
-        gWl.removeCallbacks(gWm);
+        hjH.removeCallbacks(hjI);
         continue;
-        gWl.post(gWm);
+        hjH.post(hjI);
       }
     }
   }

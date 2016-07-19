@@ -13,23 +13,32 @@
     name = "b"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/tencent/mm/plugin/sight/encode/a/b$b;",
+        ">;"
+    }
+.end annotation
+
 
 # static fields
-.field public static final enum gzL:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+.field public static final enum gGn:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
-.field public static final enum gzM:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+.field public static final enum gGo:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
-.field public static final enum gzN:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+.field public static final enum gGp:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
-.field public static final enum gzO:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+.field public static final enum gGq:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
-.field public static final enum gzP:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+.field public static final enum gGr:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
-.field public static final enum gzQ:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+.field public static final enum gGs:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
-.field public static final enum gzR:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+.field public static final enum gGt:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
-.field private static final synthetic gzS:[Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+.field private static final synthetic gGu:[Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
 
 # direct methods
@@ -54,7 +63,7 @@
 
     invoke-direct {v0, v1, v3}, Lcom/tencent/mm/plugin/sight/encode/a/b$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzL:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    sput-object v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gGn:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     .line 9
     new-instance v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;
@@ -63,7 +72,7 @@
 
     invoke-direct {v0, v1, v4}, Lcom/tencent/mm/plugin/sight/encode/a/b$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzM:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    sput-object v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gGo:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     .line 10
     new-instance v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;
@@ -72,7 +81,7 @@
 
     invoke-direct {v0, v1, v5}, Lcom/tencent/mm/plugin/sight/encode/a/b$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzN:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    sput-object v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gGp:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     .line 11
     new-instance v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;
@@ -81,7 +90,7 @@
 
     invoke-direct {v0, v1, v6}, Lcom/tencent/mm/plugin/sight/encode/a/b$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzO:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    sput-object v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gGq:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     .line 12
     new-instance v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;
@@ -90,7 +99,7 @@
 
     invoke-direct {v0, v1, v7}, Lcom/tencent/mm/plugin/sight/encode/a/b$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzP:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    sput-object v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gGr:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     .line 13
     new-instance v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;
@@ -101,7 +110,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/plugin/sight/encode/a/b$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzQ:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    sput-object v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gGs:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     .line 14
     new-instance v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;
@@ -112,52 +121,57 @@
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/plugin/sight/encode/a/b$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzR:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    sput-object v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gGt:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     .line 7
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
-    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzL:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gGn:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzM:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gGo:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzN:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gGp:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     aput-object v1, v0, v5
 
-    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzO:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gGq:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     aput-object v1, v0, v6
 
-    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzP:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gGr:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     aput-object v1, v0, v7
 
     const/4 v1, 0x5
 
-    sget-object v2, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzQ:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    sget-object v2, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gGs:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    sget-object v2, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzR:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    sget-object v2, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gGt:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzS:[Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    sput-object v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gGu:[Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .prologue
     .line 7
@@ -187,7 +201,7 @@
 
     .prologue
     .line 7
-    sget-object v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzS:[Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    sget-object v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gGu:[Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
     invoke-virtual {v0}, [Lcom/tencent/mm/plugin/sight/encode/a/b$b;->clone()Ljava/lang/Object;
 

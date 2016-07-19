@@ -1,26 +1,30 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.alx;
-import com.tencent.mm.protocal.b.en;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.protocal.b.ch;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class j$a
-  extends h.c
-  implements h.a
+  extends k.c
+  implements k.a
 {
-  public en iUP = new en();
+  public ch jrY = new ch();
+  public byte[] jrZ;
   
-  public final byte[] tY()
+  public final int getCmdId()
   {
-    iUJ = z.aTv();
-    iUP.jbx = new alx().aO(ay.aVA());
-    iUP.jGS = h.a(this);
-    return iUP.toByteArray();
+    return 1000;
   }
   
-  public final int tZ()
+  public final byte[] tZ()
   {
-    return 145;
+    jrY.kfq = k.a(this);
+    v.d("MicroMsg.MMBakchatCreateQRcodeOffline.Req", "key:%s  AddrCount:%s  AddrList:%s, PCName:%s, PCAcctName:%s, Scene:%s, DataSize:%s, WifiName:%s, Tickit:%s", new Object[] { jrZ, Integer.valueOf(jrY.jxl), jrY.jxm, jrY.jxn, jrY.jxo, Integer.valueOf(jrY.jtN), Long.valueOf(jrY.cmO), jrY.jxp, jrY.jxq });
+    return jrY.toByteArray();
+  }
+  
+  public final int ua()
+  {
+    return 1000;
   }
 }
 

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+.field final synthetic lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 189
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$4;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$4;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,19 +41,19 @@
 
     .prologue
     .line 193
-    const-string/jumbo v0, "!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA"
+    const-string/jumbo v0, "MicroMsg.MMTagPanel"
 
     const-string/jumbo v1, "on edittext click"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 194
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$4;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$4;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->bcY()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->biA()V
 
     .line 195
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$4;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$4;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->e(Lcom/tencent/mm/ui/base/MMTagPanel;)Lcom/tencent/mm/ui/base/MMTagPanel$a;
 
@@ -62,13 +62,13 @@
     if-eqz v0, :cond_0
 
     .line 196
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$4;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$4;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->e(Lcom/tencent/mm/ui/base/MMTagPanel;)Lcom/tencent/mm/ui/base/MMTagPanel$a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/base/MMTagPanel$a;->SS()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/base/MMTagPanel$a;->Ul()V
 
     .line 198
     :cond_0

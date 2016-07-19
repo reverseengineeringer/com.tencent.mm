@@ -1,20 +1,26 @@
 package com.tencent.mm.ui.conversation;
 
-import android.widget.AbsListView;
-import android.widget.AbsListView.OnScrollListener;
-import com.tencent.mm.ab.a.a;
-import com.tencent.mm.ab.n;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemLongClickListener;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.tools.m;
 
 final class BizChatConversationUI$a$12
-  implements AbsListView.OnScrollListener
+  implements AdapterView.OnItemLongClickListener
 {
-  BizChatConversationUI$a$12(BizChatConversationUI.a parama) {}
+  BizChatConversationUI$a$12(BizChatConversationUI.a parama, m paramm) {}
   
-  public final void onScroll(AbsListView paramAbsListView, int paramInt1, int paramInt2, int paramInt3) {}
-  
-  public final void onScrollStateChanged(AbsListView paramAbsListView, int paramInt)
+  public final boolean onItemLongClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    n.As().dz(paramInt);
+    if (paramInt < BizChatConversationUI.a.e(lOo).getHeaderViewsCount())
+    {
+      v.w("MicroMsg.BizChatConversationFmUI", "on header view long click, ignore");
+      return true;
+    }
+    int i = BizChatConversationUI.a.e(lOo).getHeaderViewsCount();
+    cED.a(paramView, paramInt - i, paramLong, lOo, BizChatConversationUI.a.f(lOo));
+    return true;
   }
 }
 

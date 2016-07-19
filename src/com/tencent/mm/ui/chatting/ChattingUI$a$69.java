@@ -1,55 +1,24 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.h.a;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.model.c;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.k;
-import com.tencent.mm.storage.q;
-import com.tencent.mm.t.a.a;
-import com.tencent.mm.t.l;
-import com.tencent.mm.t.n;
+import android.content.ComponentName;
+import android.content.Intent;
+import android.os.MessageQueue.IdleHandler;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.d.e;
 
 final class ChattingUI$a$69
-  implements a.a
+  implements MessageQueue.IdleHandler
 {
   ChattingUI$a$69(ChattingUI.a parama) {}
   
-  public final void a(boolean paramBoolean, final String paramString)
+  public final boolean queueIdle()
   {
-    boolean bool = true;
-    if ((!paramBoolean) || (paramString == null) || (laF.kRI == null) || (!paramString.equals(laF.kRI.field_username)))
-    {
-      if (laF.kRI == null) {}
-      for (;;)
-      {
-        u.i("!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/", "updateBizAttrs failed, succ(%b), username(%s), talker(isNull : %s).", new Object[] { Boolean.valueOf(paramBoolean), paramString, Boolean.valueOf(bool) });
-        return;
-        bool = false;
-      }
-    }
-    final k localk = ah.tD().rq().Ep(paramString);
-    if ((localk == null) || ((int)bvi == 0))
-    {
-      u.i("!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/", "Get contact from db return null.(username : %s)", new Object[] { paramString });
-      return;
-    }
-    ab.j(new Runnable()
-    {
-      public final void run()
-      {
-        if ((laF.kRI == null) || (!paramString.equals(laF.kRI.field_username))) {}
-        while (!ChattingUI.a.D(laF)) {
-          return;
-        }
-        u.d("!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/", "try to refresh footer.");
-        laF.kRI = localk;
-        ChattingUI.a.a(laF, lbe);
-        ChattingUI.a.a(laF, laF.kRI);
-      }
-    });
+    v.i("MicroMsg.ChattingUI", "now try to activity the tools process");
+    Intent localIntent = new Intent();
+    localIntent.setComponent(new ComponentName(d.e.kJT, "com.tencent.mm.booter.MMReceivers$ToolsProcessReceiver"));
+    localIntent.putExtra("tools_process_action_code_key", "com.tencent.mm.intent.ACTION_START_TOOLS_PROCESS");
+    lAY.sendBroadcast(localIntent);
+    return false;
   }
 }
 

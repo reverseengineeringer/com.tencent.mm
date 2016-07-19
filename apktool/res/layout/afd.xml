@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" style="@style/MMPreferencePage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/rb" android:background="@color/ow" android:paddingTop="@dimen/ct" android:paddingBottom="@dimen/cy" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/j_" android:id="@id/dq" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/hr" />
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:id="@id/f6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/hr" />
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/cv" android:id="@id/coy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" />
+                <TextView android:textSize="@dimen/hg" android:textColor="@color/j_" android:id="@id/bon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/coy" />
+            </RelativeLayout>
+            <View android:background="@color/m2" android:layout_width="fill_parent" android:layout_height="@dimen/dz" android:layout_marginTop="@dimen/he" />
+            <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/j7" android:layout_weight="1.0" style="@style/MMFullLineItem">
+                <TextView android:id="@id/coz" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:singleLine="false" android:layout_weight="1.0" style="@style/MMFontPreferenceLarge" />
+                <com.tencent.mm.ui.widget.MMSwitchBtn android:layout_gravity="center|right" android:id="@id/ds" android:focusable="false" android:focusableInTouchMode="true" android:clickable="false" android:layout_width="70.0dip" android:layout_height="fill_parent" android:layout_marginRight="@dimen/hx" />
+            </LinearLayout>
+            <View android:background="@color/m2" android:layout_width="fill_parent" android:layout_height="@dimen/dz" />
+        </LinearLayout>
+        <com.tencent.mm.plugin.wallet.ui.ListViewInScrollView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/hb" android:layout_below="@id/rb" android:overScrollMode="never" style="@style/MMList" />
+        <RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="@dimen/ct" android:paddingBottom="@dimen/cy" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@android:id/list"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <Button android:id="@id/a6d" android:layout_width="fill_parent" android:layout_marginTop="@dimen/hb" style="@style/WalletLineButton" />
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:id="@id/cp0" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hr" android:layout_below="@id/a6d" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <TextView android:textColor="@color/hc" android:id="@id/bhn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/hr" android:layout_weight="1.0" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</ScrollView>

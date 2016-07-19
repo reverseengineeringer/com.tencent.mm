@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public bok:I
+.field public bci:I
 
 
 # direct methods
@@ -18,12 +18,12 @@
     .line 25
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/booter/notification/a/b;->bok:I
+    iput v0, p0, Lcom/tencent/mm/booter/notification/a/b;->bci:I
 
     return-void
 .end method
 
-.method private static av(Landroid/content/Context;)Z
+.method private static as(Landroid/content/Context;)Z
     .locals 1
 
     .prologue
@@ -52,7 +52,7 @@
     goto :goto_0
 .end method
 
-.method private static bH(I)Z
+.method private static bZ(I)Z
     .locals 1
 
     .prologue
@@ -79,7 +79,7 @@
 
     .prologue
     .line 32
-    invoke-static {}, Lcom/tencent/mm/g/g;->pg()Z
+    invoke-static {}, Lcom/tencent/mm/h/g;->ny()Z
 
     move-result v0
 
@@ -96,7 +96,7 @@
     invoke-direct {p4}, Landroid/app/Notification;-><init>()V
 
     :cond_0
-    const-string/jumbo v1, "!44@/B4Tb64lLpKR3MWtFvfaIIW4hD7TCSUsYlTMvr0zwDk="
+    const-string/jumbo v1, "MicroMsg.NotificationDefaults"
 
     const-string/jumbo v2, "begin initDefaults, isNeedSound: %B, isNeedShake: %B, n.defaults: %d, n.vibrate: %s, n.sound: %s"
 
@@ -146,22 +146,22 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     if-eqz p3, :cond_1
 
-    sget-object v1, Lcom/tencent/mm/sdk/platformtools/ay;->cnZ:[J
+    sget-object v1, Lcom/tencent/mm/sdk/platformtools/be;->cjl:[J
 
     iput-object v1, p4, Landroid/app/Notification;->vibrate:[J
 
     :cond_1
     if-eqz p2, :cond_2
 
-    invoke-static {}, Lcom/tencent/mm/g/g;->pk()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/h/g;->nC()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {p1}, Lcom/tencent/mm/booter/notification/a/b;->av(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/tencent/mm/booter/notification/a/b;->as(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -173,13 +173,13 @@
 
     iput-object v2, p4, Landroid/app/Notification;->sound:Landroid/net/Uri;
 
-    invoke-static {}, Lcom/tencent/mm/booter/notification/a/f$a;->nG()Lcom/tencent/mm/booter/notification/a/f;
+    invoke-static {}, Lcom/tencent/mm/booter/notification/a/f$a;->lU()Lcom/tencent/mm/booter/notification/a/f;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/booter/notification/a/f;->cR(Ljava/lang/String;)V
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/booter/notification/a/f;->cY(Ljava/lang/String;)V
 
-    const-string/jumbo v2, "!44@/B4Tb64lLpKR3MWtFvfaIIW4hD7TCSUsYlTMvr0zwDk="
+    const-string/jumbo v2, "MicroMsg.NotificationDefaults"
 
     const-string/jumbo v3, "initDefaults, wireOn & playSound by ourselves: %s(if null play follow system notification sound)"
 
@@ -191,11 +191,11 @@
 
     aput-object v1, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_2
     :goto_0
-    const-string/jumbo v1, "!44@/B4Tb64lLpKR3MWtFvfaIIW4hD7TCSUsYlTMvr0zwDk="
+    const-string/jumbo v1, "MicroMsg.NotificationDefaults"
 
     const-string/jumbo v2, "end initDefaults, defaults: %d, n.vibrate: %s, n.sound: %s"
 
@@ -227,11 +227,11 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iput v0, p0, Lcom/tencent/mm/booter/notification/a/b;->bok:I
+    iput v0, p0, Lcom/tencent/mm/booter/notification/a/b;->bci:I
 
-    iget v0, p0, Lcom/tencent/mm/booter/notification/a/b;->bok:I
+    iget v0, p0, Lcom/tencent/mm/booter/notification/a/b;->bci:I
 
     .line 36
     :goto_1
@@ -241,7 +241,7 @@
     :cond_3
     if-eqz v1, :cond_4
 
-    sget-object v0, Lcom/tencent/mm/ui/d$d;->buD:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/ui/d$d;->bjg:Ljava/lang/String;
 
     if-eq v1, v0, :cond_4
 
@@ -262,7 +262,7 @@
 
     .line 36
     :cond_5
-    const-string/jumbo v0, "!44@/B4Tb64lLpKR3MWtFvfaIIW4hD7TCSUsYlTMvr0zwDk="
+    const-string/jumbo v0, "MicroMsg.NotificationDefaults"
 
     const-string/jumbo v1, "begin initDefaults, isNeedSound: %B, isNeedShake: %B, n.defaults: %d, n.vibrate: %s, n.sound: %s"
 
@@ -308,7 +308,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 v1, 0x0
 
@@ -320,7 +320,7 @@
 
     if-eqz p2, :cond_10
 
-    invoke-static {p1}, Lcom/tencent/mm/booter/notification/a/b;->av(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/tencent/mm/booter/notification/a/b;->as(Landroid/content/Context;)Z
 
     move-result v4
 
@@ -338,7 +338,7 @@
     or-int/lit8 v0, v0, 0x2
 
     :cond_6
-    invoke-static {}, Lcom/tencent/mm/g/g;->pk()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/h/g;->nC()Ljava/lang/String;
 
     move-result-object v1
 
@@ -354,12 +354,12 @@
 
     if-eqz v4, :cond_7
 
-    sget-object v1, Lcom/tencent/mm/ui/d$d;->buD:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/ui/d$d;->bjg:Ljava/lang/String;
 
     :cond_7
-    sget-object v4, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v4, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget v4, v4, Lcom/tencent/mm/compatible/d/j;->brU:I
+    iget v4, v4, Lcom/tencent/mm/compatible/d/j;->bfV:I
 
     const/4 v5, 0x2
 
@@ -385,12 +385,12 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p1, v0}, Lcom/tencent/mm/sdk/platformtools/ay;->j(Landroid/content/Context;Z)V
+    invoke-static {p1, v0}, Lcom/tencent/mm/sdk/platformtools/be;->j(Landroid/content/Context;Z)V
 
     const/4 v0, 0x1
 
     :goto_5
-    invoke-static {v2}, Lcom/tencent/mm/booter/notification/a/b;->bH(I)Z
+    invoke-static {v2}, Lcom/tencent/mm/booter/notification/a/b;->bZ(I)Z
 
     move-result v4
 
@@ -400,11 +400,11 @@
 
     and-int/lit8 v3, v2, -0x2
 
-    invoke-static {}, Lcom/tencent/mm/booter/notification/a/f$a;->nG()Lcom/tencent/mm/booter/notification/a/f;
+    invoke-static {}, Lcom/tencent/mm/booter/notification/a/f$a;->lU()Lcom/tencent/mm/booter/notification/a/f;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/booter/notification/a/f;->cR(Ljava/lang/String;)V
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/booter/notification/a/f;->cY(Ljava/lang/String;)V
 
     const/4 v2, 0x1
 
@@ -421,19 +421,19 @@
 
     and-int/lit8 v2, v2, -0x2
 
-    invoke-static {}, Lcom/tencent/mm/booter/notification/a/f$a;->nG()Lcom/tencent/mm/booter/notification/a/f;
+    invoke-static {}, Lcom/tencent/mm/booter/notification/a/f$a;->lU()Lcom/tencent/mm/booter/notification/a/f;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/notification/a/f;->cR(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/booter/notification/a/f;->cY(Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
     :cond_8
     :goto_7
-    iput v2, p0, Lcom/tencent/mm/booter/notification/a/b;->bok:I
+    iput v2, p0, Lcom/tencent/mm/booter/notification/a/b;->bci:I
 
-    const-string/jumbo v2, "!44@/B4Tb64lLpKR3MWtFvfaIIW4hD7TCSUsYlTMvr0zwDk="
+    const-string/jumbo v2, "MicroMsg.NotificationDefaults"
 
     const-string/jumbo v4, "end initDefaults, n.defaults: %d, n.vibrate: %s, n.sound: %s, soundUri: %s, headset&Play: %B, DeviceInfo.mCommonInfo.mmnotify is Enable: %B, isMMShake: %B, isMMPlaySound: %B"
 
@@ -503,9 +503,9 @@
 
     aput-object v0, v7, v1
 
-    invoke-static {v2, v4, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v4, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget v0, p0, Lcom/tencent/mm/booter/notification/a/b;->bok:I
+    iget v0, p0, Lcom/tencent/mm/booter/notification/a/b;->bci:I
 
     goto/16 :goto_1
 
@@ -531,7 +531,7 @@
     goto :goto_4
 
     :cond_c
-    invoke-static {v2}, Lcom/tencent/mm/booter/notification/a/b;->bH(I)Z
+    invoke-static {v2}, Lcom/tencent/mm/booter/notification/a/b;->bZ(I)Z
 
     move-result v4
 

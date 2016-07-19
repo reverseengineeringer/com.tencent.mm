@@ -40,7 +40,7 @@
     return-void
 .end method
 
-.method public static Z(Landroid/os/IBinder;)Lcom/tencent/mm/network/i;
+.method public static B(Landroid/os/IBinder;)Lcom/tencent/mm/network/i;
     .locals 2
 
     .prologue
@@ -129,7 +129,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/network/p$a;->ab(Landroid/os/IBinder;)Lcom/tencent/mm/network/p;
+    invoke-static {v1}, Lcom/tencent/mm/network/p$a;->D(Landroid/os/IBinder;)Lcom/tencent/mm/network/p;
 
     move-result-object v1
 

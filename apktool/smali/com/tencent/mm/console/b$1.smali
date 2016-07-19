@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/console/b;->u(Landroid/content/Context;Ljava/lang/String;)Z
+    value = Lcom/tencent/mm/console/b;->v(Landroid/content/Context;Ljava/lang/String;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic buT:Ljava/lang/String;
+.field final synthetic bjv:Ljava/lang/String;
 
-.field final synthetic buU:I
+.field final synthetic bjw:I
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 324
-    iput-object p1, p0, Lcom/tencent/mm/console/b$1;->buT:Ljava/lang/String;
+    .line 289
+    iput-object p1, p0, Lcom/tencent/mm/console/b$1;->bjv:Ljava/lang/String;
 
-    iput p2, p0, Lcom/tencent/mm/console/b$1;->buU:I
+    iput p2, p0, Lcom/tencent/mm/console/b$1;->bjw:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,8 +46,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 328
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 293
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
@@ -55,28 +55,28 @@
 
     const-string/jumbo v2, ""
 
-    invoke-virtual {v0, v1, v2, v3, v3}, Lcom/tencent/mm/r/m;->a(ILjava/lang/String;IZ)V
+    invoke-virtual {v0, v1, v2, v3, v3}, Lcom/tencent/mm/t/m;->a(ILjava/lang/String;IZ)V
 
-    .line 329
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->appenderFlush()V
+    .line 294
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->appenderFlush()V
 
-    .line 330
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 295
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/4 v1, 0x2
 
-    iget-object v2, p0, Lcom/tencent/mm/console/b$1;->buT:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/console/b$1;->bjv:Ljava/lang/String;
 
-    iget v3, p0, Lcom/tencent/mm/console/b$1;->buU:I
+    iget v3, p0, Lcom/tencent/mm/console/b$1;->bjw:I
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v4
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/tencent/mm/r/m;->a(ILjava/lang/String;IZ)V
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/tencent/mm/t/m;->a(ILjava/lang/String;IZ)V
 
-    .line 331
+    .line 296
     return-void
 .end method

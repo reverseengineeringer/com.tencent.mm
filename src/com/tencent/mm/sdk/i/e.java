@@ -3,8 +3,8 @@ package com.tencent.mm.sdk.i;
 import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -18,59 +18,112 @@ import junit.framework.Assert;
 public class e
   implements f.a
 {
-  private static e jYZ;
-  static int[] jZa = { 19, 16, 13, 10, 0, -2, -4, -5, -6, -8 };
-  static long jZb = 0L;
-  static long jZc = 0L;
-  private static b jZd;
-  private static a jZe;
-  private static b jZf;
-  volatile boolean ayG = false;
-  private boolean ayd = false;
-  private f jYR = new f(jYS + 2, TimeUnit.SECONDS, jYT, this);
-  private int jYS = aVV();
-  private PriorityBlockingQueue jYT = new PriorityBlockingQueue(33);
-  private LinkedList jYU = new LinkedList();
-  private ArrayList jYV = new ArrayList();
-  private HashMap jYW = new HashMap();
-  private ArrayList jYX = new ArrayList();
-  private c jYY;
+  private static b kzA;
+  private static a kzB;
+  private static b kzC;
+  private static e kzw;
+  static int[] kzx = { 19, 16, 13, 10, 0, -2, -4, -5, -6, -8 };
+  static long kzy = 0L;
+  static long kzz = 0L;
+  volatile boolean akI = false;
+  private boolean akf = false;
+  private f kzo = new f(kzp + 2, TimeUnit.SECONDS, kzq, this);
+  private int kzp = bbi();
+  private PriorityBlockingQueue<Runnable> kzq = new PriorityBlockingQueue(33);
+  private LinkedList<g> kzr = new LinkedList();
+  private ArrayList<g> kzs = new ArrayList();
+  private HashMap<g, Thread> kzt = new HashMap();
+  private ArrayList<c> kzu = new ArrayList();
+  private c kzv;
   Object lock = new Object();
   
   private e()
   {
-    HandlerThread localHandlerThread = DJ("THREAD_POOL_HANDLER");
+    HandlerThread localHandlerThread = FY("THREAD_POOL_HANDLER");
     localHandlerThread.start();
-    jYY = new c(localHandlerThread.getLooper());
+    kzv = new c(localHandlerThread.getLooper());
+  }
+  
+  public static void B(Runnable paramRunnable)
+  {
+    e locale = bbh();
+    synchronized (lock)
+    {
+      Thread localThread = locale.C(paramRunnable);
+      if (localThread != null)
+      {
+        localThread.interrupt();
+        return;
+      }
+      locale.I(paramRunnable);
+    }
+  }
+  
+  private Thread C(Runnable paramRunnable)
+  {
+    if (paramRunnable == null) {
+      return null;
+    }
+    for (;;)
+    {
+      synchronized (lock)
+      {
+        Iterator localIterator = kzt.keySet().iterator();
+        if (localIterator != null)
+        {
+          if (!localIterator.hasNext()) {
+            break label99;
+          }
+          g localg = (g)localIterator.next();
+          if ((localg == null) || (!kvW.equals(paramRunnable))) {
+            continue;
+          }
+          paramRunnable = localg;
+          if (paramRunnable != null)
+          {
+            paramRunnable = (Thread)kzt.get(paramRunnable);
+            return paramRunnable;
+          }
+        }
+      }
+      return null;
+      label99:
+      paramRunnable = null;
+    }
+  }
+  
+  public static void D(Runnable paramRunnable)
+  {
+    bbh().E(paramRunnable);
   }
   
   /* Error */
-  private void A(Runnable paramRunnable)
+  private void E(Runnable paramRunnable)
   {
     // Byte code:
-    //   0: ldc -123
+    //   0: ldc -62
     //   2: aload_1
-    //   3: invokestatic 139	junit/framework/Assert:assertNotNull	(Ljava/lang/String;Ljava/lang/Object;)V
+    //   3: invokestatic 200	junit/framework/Assert:assertNotNull	(Ljava/lang/String;Ljava/lang/Object;)V
     //   6: aconst_null
     //   7: astore_2
     //   8: aload_0
-    //   9: getfield 88	com/tencent/mm/sdk/i/e:lock	Ljava/lang/Object;
+    //   9: getfield 93	com/tencent/mm/sdk/i/e:lock	Ljava/lang/Object;
     //   12: astore_3
     //   13: aload_3
     //   14: monitorenter
     //   15: aload_0
     //   16: aload_1
-    //   17: invokespecial 143	com/tencent/mm/sdk/i/e:D	(Ljava/lang/Runnable;)Z
+    //   17: invokespecial 203	com/tencent/mm/sdk/i/e:H	(Ljava/lang/Runnable;)Z
     //   20: ifeq +18 -> 38
     //   23: new 8	com/tencent/mm/sdk/i/e$a
     //   26: dup
     //   27: aload_0
     //   28: aload_1
-    //   29: invokespecial 146	com/tencent/mm/sdk/i/e$a:<init>	(Lcom/tencent/mm/sdk/i/e;Ljava/lang/Runnable;)V
+    //   29: invokespecial 206	com/tencent/mm/sdk/i/e$a:<init>	(Lcom/tencent/mm/sdk/i/e;Ljava/lang/Runnable;)V
     //   32: astore_2
     //   33: aload_0
     //   34: aload_2
-    //   35: invokespecial 149	com/tencent/mm/sdk/i/e:b	(Lcom/tencent/mm/sdk/i/c;)V
+    //   35: invokespecial 209	com/tencent/mm/sdk/i/e:b	(Lcom/tencent/mm/sdk/i/c;)V
     //   38: aload_3
     //   39: monitorexit
     //   40: aload_2
@@ -78,12 +131,12 @@ public class e
     //   44: aload_1
     //   45: monitorenter
     //   46: aload_0
-    //   47: getfield 86	com/tencent/mm/sdk/i/e:jYX	Ljava/util/ArrayList;
+    //   47: getfield 91	com/tencent/mm/sdk/i/e:kzu	Ljava/util/ArrayList;
     //   50: aload_2
-    //   51: invokevirtual 153	java/util/ArrayList:contains	(Ljava/lang/Object;)Z
+    //   51: invokevirtual 212	java/util/ArrayList:contains	(Ljava/lang/Object;)Z
     //   54: ifeq +15 -> 69
     //   57: aload_1
-    //   58: invokevirtual 156	java/lang/Object:wait	()V
+    //   58: invokevirtual 215	java/lang/Object:wait	()V
     //   61: aload_1
     //   62: monitorexit
     //   63: return
@@ -92,9 +145,9 @@ public class e
     //   66: monitorexit
     //   67: aload_1
     //   68: athrow
-    //   69: ldc -98
-    //   71: ldc -96
-    //   73: invokestatic 166	com/tencent/mm/sdk/platformtools/u:d	(Ljava/lang/String;Ljava/lang/String;)V
+    //   69: ldc -39
+    //   71: ldc -37
+    //   73: invokestatic 225	com/tencent/mm/sdk/platformtools/v:d	(Ljava/lang/String;Ljava/lang/String;)V
     //   76: goto -15 -> 61
     //   79: astore_2
     //   80: aload_1
@@ -119,10 +172,10 @@ public class e
     //   80	82	79	finally
   }
   
-  public static void B(Runnable paramRunnable)
+  public static void F(Runnable paramRunnable)
   {
     int j = 1;
-    e locale = aVU();
+    e locale = bbh();
     Assert.assertNotNull("join arg runnable is null!", paramRunnable);
     if (5000L < 0L) {
       throw new IllegalArgumentException();
@@ -140,7 +193,7 @@ public class e
       if ((j | i) == 0) {
         break label72;
       }
-      locale.A(paramRunnable);
+      locale.E(paramRunnable);
       return;
       i = 0;
       break;
@@ -153,17 +206,17 @@ public class e
     {
       synchronized (lock)
       {
-        if (locale.D(paramRunnable))
+        if (locale.H(paramRunnable))
         {
           locala = new a(locale, paramRunnable);
-          aVU().b(locala);
+          bbh().b(locala);
         }
         if (locala == null) {
           break;
         }
         try
         {
-          if (jYX.contains(locala))
+          if (kzu.contains(locala))
           {
             paramRunnable.wait(5000L, 0);
             return;
@@ -171,36 +224,41 @@ public class e
         }
         finally {}
       }
-      u.d("!32@/B4Tb64lLpL7MdpMpTymZahD5UnJi4bB", "|MMThreadPool joinTask runnable is not in observerList, just removed!");
+      v.d("MicroMsg.ThreadPool", "|MMThreadPool joinTask runnable is not in observerList, just removed!");
     }
   }
   
-  public static boolean C(Runnable paramRunnable)
+  public static HandlerThread FY(String paramString)
   {
-    return aVU().D(paramRunnable);
+    return bbm().aX(paramString, 0);
   }
   
-  private boolean D(Runnable paramRunnable)
+  public static boolean G(Runnable paramRunnable)
+  {
+    return bbh().H(paramRunnable);
+  }
+  
+  private boolean H(Runnable paramRunnable)
   {
     if (paramRunnable == null) {
       return false;
     }
     synchronized (lock)
     {
-      Iterator localIterator = jYV.iterator();
+      Iterator localIterator = kzs.iterator();
       g localg;
       while ((localIterator != null) && (localIterator.hasNext()))
       {
         localg = (g)localIterator.next();
-        if ((localg != null) && (jWd.equals(paramRunnable))) {
+        if ((localg != null) && (kvW.equals(paramRunnable))) {
           return true;
         }
       }
-      localIterator = jYW.keySet().iterator();
+      localIterator = kzt.keySet().iterator();
       while ((localIterator != null) && (localIterator.hasNext()))
       {
         localg = (g)localIterator.next();
-        if ((localg != null) && (jWd.equals(paramRunnable))) {
+        if ((localg != null) && (kvW.equals(paramRunnable))) {
           return true;
         }
       }
@@ -208,12 +266,7 @@ public class e
     }
   }
   
-  public static HandlerThread DJ(String paramString)
-  {
-    return aVZ().aN(paramString, 0);
-  }
-  
-  private boolean E(Runnable paramRunnable)
+  private boolean I(Runnable paramRunnable)
   {
     if (paramRunnable == null) {
       return false;
@@ -222,21 +275,21 @@ public class e
     {
       synchronized (lock)
       {
-        Iterator localIterator = jYV.iterator();
+        Iterator localIterator = kzs.iterator();
         if (localIterator != null)
         {
           if (!localIterator.hasNext()) {
             break label98;
           }
           g localg = (g)localIterator.next();
-          if ((localg == null) || (!jWd.equals(paramRunnable))) {
+          if ((localg == null) || (!kvW.equals(paramRunnable))) {
             continue;
           }
           localIterator.remove();
           paramRunnable = localg;
           if (paramRunnable != null)
           {
-            jYR.remove(paramRunnable);
+            kzo.remove(paramRunnable);
             return true;
           }
         }
@@ -249,33 +302,76 @@ public class e
   
   public static void a(c paramc)
   {
-    aVU().b(paramc);
+    bbh().b(paramc);
   }
   
   public static void a(Runnable paramRunnable, String paramString)
   {
-    aVU().c(paramRunnable, paramString, 5);
+    bbh().c(paramRunnable, paramString, 5);
   }
   
-  public static HandlerThread aO(String paramString, int paramInt)
+  public static HandlerThread aY(String paramString, int paramInt)
   {
-    return aVZ().aN(paramString, paramInt);
+    return bbm().aX(paramString, paramInt);
   }
   
-  public static e aVU()
+  private void b(c paramc)
   {
-    if (jYZ == null) {}
+    synchronized (lock)
+    {
+      if (!kzu.contains(paramc)) {
+        kzu.add(paramc);
+      }
+      return;
+    }
+  }
+  
+  public static void b(Runnable paramRunnable, String paramString)
+  {
+    e locale = bbh();
+    synchronized (lock)
+    {
+      paramRunnable = new g(paramRunnable, paramString, Integer.MAX_VALUE, true, kzC);
+      kzs.add(paramRunnable);
+      kzo.execute(paramRunnable);
+      if ((kzo.getActiveCount() >= kzp) && (kzp < bbi() * 2))
+      {
+        kzp += 1;
+        kzo.setCorePoolSize(kzp);
+        kzo.setMaximumPoolSize(kzp);
+        v.i("MicroMsg.ThreadPool", "|MMThreadPool postAtFront expand core pool size=" + kzp);
+        paramString = new ArrayList(kzu).iterator();
+      }
+      while (paramString.hasNext())
+      {
+        paramString.next();
+        Runnable localRunnable = kvW;
+        continue;
+        locale.bbj();
+      }
+    }
+    locale.hl(false);
+  }
+  
+  public static void b(Runnable paramRunnable, String paramString, int paramInt)
+  {
+    bbh().c(paramRunnable, paramString, paramInt);
+  }
+  
+  public static e bbh()
+  {
+    if (kzw == null) {}
     try
     {
-      if (jYZ == null) {
-        jYZ = new e();
+      if (kzw == null) {
+        kzw = new e();
       }
-      return jYZ;
+      return kzw;
     }
     finally {}
   }
   
-  private static int aVV()
+  private static int bbi()
   {
     int i = Runtime.getRuntime().availableProcessors() * 4 + 2;
     if (i > 32) {
@@ -284,90 +380,47 @@ public class e
     return i;
   }
   
-  private void aVW()
+  private void bbj()
   {
-    if (jYR.getCorePoolSize() < jYS)
+    if (kzo.getCorePoolSize() < kzp)
     {
-      jYR.setCorePoolSize(jYS);
-      jYR.setMaximumPoolSize(jYS);
+      kzo.setCorePoolSize(kzp);
+      kzo.setMaximumPoolSize(kzp);
     }
   }
   
-  public static void aVX()
+  public static void bbk()
   {
-    aVU().gL(true);
+    bbh().hl(true);
   }
   
-  private static b aVY()
+  private static b bbl()
   {
-    if (jZd == null) {
-      jZd = new b(jZf);
+    if (kzA == null) {
+      kzA = new b(kzC);
     }
-    return jZd;
+    return kzA;
   }
   
-  private static a aVZ()
+  private static a bbm()
   {
-    if (jZe == null) {
-      jZe = new a(jZf);
+    if (kzB == null) {
+      kzB = new a(kzC);
     }
-    return jZe;
-  }
-  
-  private void b(c paramc)
-  {
-    synchronized (lock)
-    {
-      if (!jYX.contains(paramc)) {
-        jYX.add(paramc);
-      }
-      return;
-    }
-  }
-  
-  public static void b(Runnable paramRunnable, String paramString)
-  {
-    e locale = aVU();
-    synchronized (lock)
-    {
-      paramRunnable = new g(paramRunnable, paramString, Integer.MAX_VALUE, true, jZf);
-      jYV.add(paramRunnable);
-      jYR.execute(paramRunnable);
-      if ((jYR.getActiveCount() >= jYS) && (jYS < aVV() * 2))
-      {
-        jYS += 1;
-        jYR.setCorePoolSize(jYS);
-        jYR.setMaximumPoolSize(jYS);
-        u.i("!32@/B4Tb64lLpL7MdpMpTymZahD5UnJi4bB", "|MMThreadPool postAtFront expand core pool size=" + jYS);
-        paramString = new ArrayList(jYX).iterator();
-      }
-      while (paramString.hasNext())
-      {
-        paramString.next();
-        Runnable localRunnable = jWd;
-        continue;
-        locale.aVW();
-      }
-    }
-    locale.gL(false);
-  }
-  
-  public static void b(Runnable paramRunnable, String paramString, int paramInt)
-  {
-    aVU().c(paramRunnable, paramString, paramInt);
+    return kzB;
   }
   
   public static Thread c(Runnable paramRunnable, String paramString)
   {
-    return aVY().a(paramRunnable, paramString, 5);
+    return bbl().a(paramRunnable, paramString, 5);
   }
   
   public static void c(c paramc)
   {
-    e locale = aVU();
+    e locale = bbh();
     synchronized (lock)
     {
-      jYX.remove(paramc);
+      kzu.remove(paramc);
       return;
     }
   }
@@ -376,21 +429,21 @@ public class e
   {
     synchronized (lock)
     {
-      paramRunnable = new g(paramRunnable, paramString, paramInt, true, jZf);
-      jYU.add(paramRunnable);
-      jYV.add(paramRunnable);
-      jYY.sendEmptyMessage(1);
-      gL(false);
+      paramRunnable = new g(paramRunnable, paramString, paramInt, true, kzC);
+      kzr.add(paramRunnable);
+      kzs.add(paramRunnable);
+      kzv.sendEmptyMessage(1);
+      hl(false);
       return;
     }
   }
   
   public static Thread d(Runnable paramRunnable, String paramString, int paramInt)
   {
-    return aVY().a(paramRunnable, paramString, paramInt);
+    return bbl().a(paramRunnable, paramString, paramInt);
   }
   
-  private void gL(boolean paramBoolean)
+  private void hl(boolean paramBoolean)
   {
     if (!paramBoolean) {
       return;
@@ -398,93 +451,91 @@ public class e
     g localg;
     synchronized (lock)
     {
-      u.i("!32@/B4Tb64lLpL7MdpMpTymZahD5UnJi4bB", "------------------------------------------");
-      Iterator localIterator1 = jYU.iterator();
+      v.i("MicroMsg.ThreadPool", "------------------------------------------");
+      Iterator localIterator1 = kzr.iterator();
       if ((localIterator1 != null) && (localIterator1.hasNext()))
       {
         localg = (g)localIterator1.next();
-        u.i("!32@/B4Tb64lLpL7MdpMpTymZahD5UnJi4bB", "|MMThreadPool adding task{" + localg + "}");
+        v.i("MicroMsg.ThreadPool", "|MMThreadPool adding task{" + localg + "}");
       }
     }
-    u.i("!32@/B4Tb64lLpL7MdpMpTymZahD5UnJi4bB", "-----------");
-    Iterator localIterator2 = jYV.iterator();
+    v.i("MicroMsg.ThreadPool", "-----------");
+    Iterator localIterator2 = kzs.iterator();
     if (localIterator2 != null) {
       while (localIterator2.hasNext())
       {
         localg = (g)localIterator2.next();
-        u.i("!32@/B4Tb64lLpL7MdpMpTymZahD5UnJi4bB", "|MMThreadPool waiting task{" + localg + "}");
+        v.i("MicroMsg.ThreadPool", "|MMThreadPool waiting task{" + localg + "}");
       }
     }
-    u.i("!32@/B4Tb64lLpL7MdpMpTymZahD5UnJi4bB", "-----------");
-    localIterator2 = jYW.keySet().iterator();
+    v.i("MicroMsg.ThreadPool", "-----------");
+    localIterator2 = kzt.keySet().iterator();
     if (localIterator2 != null) {
       while (localIterator2.hasNext())
       {
         localg = (g)localIterator2.next();
-        u.i("!32@/B4Tb64lLpL7MdpMpTymZahD5UnJi4bB", "|MMThreadPool running task{" + localg + "}");
+        v.i("MicroMsg.ThreadPool", "|MMThreadPool running task{" + localg + "}");
       }
     }
-    u.i("!32@/B4Tb64lLpL7MdpMpTymZahD5UnJi4bB", "-----------");
-    u.i("!32@/B4Tb64lLpL7MdpMpTymZahD5UnJi4bB", "|MMThreadPool poolSize=" + jYR.getPoolSize() + "|activeCount=" + jYR.getActiveCount() + "|corePoolSize=" + jYR.getPoolSize() + "|largestPoolSize=" + jYR.getLargestPoolSize() + "|maximuPoolSize=" + jYR.getMaximumPoolSize());
-    u.i("!32@/B4Tb64lLpL7MdpMpTymZahD5UnJi4bB", "------------------------------------------");
+    v.i("MicroMsg.ThreadPool", "-----------");
+    v.i("MicroMsg.ThreadPool", "|MMThreadPool poolSize=" + kzo.getPoolSize() + "|activeCount=" + kzo.getActiveCount() + "|corePoolSize=" + kzo.getPoolSize() + "|largestPoolSize=" + kzo.getLargestPoolSize() + "|maximuPoolSize=" + kzo.getMaximumPoolSize());
+    v.i("MicroMsg.ThreadPool", "------------------------------------------");
   }
   
   public static boolean remove(Runnable paramRunnable)
   {
-    return aVU().E(paramRunnable);
+    return bbh().I(paramRunnable);
   }
   
-  public static void x(Runnable paramRunnable)
+  public final void A(Runnable paramRunnable)
   {
-    e locale = aVU();
-    synchronized (lock)
-    {
-      Thread localThread = locale.y(paramRunnable);
-      if (localThread != null)
-      {
-        localThread.interrupt();
-        return;
-      }
-      locale.E(paramRunnable);
-    }
-  }
-  
-  private Thread y(Runnable paramRunnable)
-  {
-    if (paramRunnable == null) {
-      return null;
-    }
     for (;;)
     {
       synchronized (lock)
       {
-        Iterator localIterator = jYW.keySet().iterator();
+        paramRunnable = (g)paramRunnable;
+        Iterator localIterator = kzt.keySet().iterator();
         if (localIterator != null)
         {
           if (!localIterator.hasNext()) {
-            break label99;
+            break label251;
           }
           g localg = (g)localIterator.next();
-          if ((localg == null) || (!jWd.equals(paramRunnable))) {
+          if ((localg == null) || (!localg.equals(paramRunnable))) {
             continue;
           }
-          paramRunnable = localg;
-          if (paramRunnable != null)
+          localIterator.remove();
+          i = 1;
+          if (i != 0)
           {
-            paramRunnable = (Thread)jYW.get(paramRunnable);
-            return paramRunnable;
+            localIterator = new ArrayList(kzu).iterator();
+            if (localIterator.hasNext()) {
+              ((c)localIterator.next()).l(kvW);
+            }
           }
         }
       }
-      return null;
-      label99:
-      paramRunnable = null;
+      int i = kzo.getActiveCount();
+      int j = kzo.getQueue().size();
+      int k = kzo.getCorePoolSize();
+      if ((i == 1) && (j == 0))
+      {
+        if (k > 0)
+        {
+          kzp = bbi();
+          kzo.setCorePoolSize(0);
+          kzo.setMaximumPoolSize(kzp + 2);
+        }
+        paramRunnable = new ArrayList(kzu).iterator();
+        while (paramRunnable.hasNext()) {
+          paramRunnable.next();
+        }
+        akf = false;
+      }
+      return;
+      label251:
+      i = 0;
     }
-  }
-  
-  public static void z(Runnable paramRunnable)
-  {
-    aVU().A(paramRunnable);
   }
   
   public final void beforeExecute(Thread paramThread, Runnable paramRunnable)
@@ -496,7 +547,7 @@ public class e
       int j;
       synchronized (lock)
       {
-        localObject2 = jYV.iterator();
+        localObject2 = kzs.iterator();
         if (localObject2 == null) {
           break label216;
         }
@@ -506,7 +557,7 @@ public class e
         {
           i = 1;
           paramThread.setPriority(i);
-          paramThread.setName(jWe);
+          paramThread.setName(kvX);
           if (!((Iterator)localObject2).hasNext()) {
             break label220;
           }
@@ -519,9 +570,9 @@ public class e
           if (i == 0) {
             break label216;
           }
-          jYW.put(paramRunnable, paramThread);
-          paramThread = new ArrayList(jYX);
-          if (ayd) {
+          kzt.put(paramRunnable, paramThread);
+          paramThread = new ArrayList(kzu);
+          if (akf) {
             break label181;
           }
           localObject2 = paramThread.iterator();
@@ -536,12 +587,12 @@ public class e
         i = j;
         continue;
         label181:
-        ayd = true;
+        akf = true;
         paramThread = paramThread.iterator();
         while (paramThread.hasNext())
         {
           paramThread.next();
-          localObject2 = jWd;
+          localObject2 = kvW;
         }
         label216:
         return;
@@ -551,73 +602,22 @@ public class e
     }
   }
   
-  public final void w(Runnable paramRunnable)
-  {
-    for (;;)
-    {
-      synchronized (lock)
-      {
-        paramRunnable = (g)paramRunnable;
-        Iterator localIterator = jYW.keySet().iterator();
-        if (localIterator != null)
-        {
-          if (!localIterator.hasNext()) {
-            break label251;
-          }
-          g localg = (g)localIterator.next();
-          if ((localg == null) || (!localg.equals(paramRunnable))) {
-            continue;
-          }
-          localIterator.remove();
-          i = 1;
-          if (i != 0)
-          {
-            localIterator = new ArrayList(jYX).iterator();
-            if (localIterator.hasNext()) {
-              ((c)localIterator.next()).k(jWd);
-            }
-          }
-        }
-      }
-      int i = jYR.getActiveCount();
-      int j = jYR.getQueue().size();
-      int k = jYR.getCorePoolSize();
-      if ((i == 1) && (j == 0))
-      {
-        if (k > 0)
-        {
-          jYS = aVV();
-          jYR.setCorePoolSize(0);
-          jYR.setMaximumPoolSize(jYS + 2);
-        }
-        paramRunnable = new ArrayList(jYX).iterator();
-        while (paramRunnable.hasNext()) {
-          paramRunnable.next();
-        }
-        ayd = false;
-      }
-      return;
-      label251:
-      i = 0;
-    }
-  }
-  
   final class a
     implements c
   {
-    private final Runnable jZg;
+    private final Runnable kzD;
     
     public a(Runnable paramRunnable)
     {
-      jZg = paramRunnable;
+      kzD = paramRunnable;
     }
     
-    public final void k(Runnable arg1)
+    public final void l(Runnable arg1)
     {
-      if (???.equals(jZg)) {
-        synchronized (jZg)
+      if (???.equals(kzD)) {
+        synchronized (kzD)
         {
-          jZg.notifyAll();
+          kzD.notifyAll();
           e.c(this);
           return;
         }
@@ -628,7 +628,7 @@ public class e
   public static abstract interface b {}
   
   final class c
-    extends aa
+    extends ac
   {
     public c(Looper paramLooper)
     {
@@ -643,20 +643,20 @@ public class e
         return;
       }
       removeMessages(what);
-      if (ayG)
+      if (akI)
       {
         long l = System.currentTimeMillis();
         e locale;
-        if ((e.axn() > 0L) && (Math.abs(e.aWa() - l) > e.axn()))
+        if ((e.azP() > 0L) && (Math.abs(e.DH() - l) > e.azP()))
         {
-          u.i("!32@/B4Tb64lLpL7MdpMpTymZahD5UnJi4bB", "|MMThreadPool thread pool is auto wakeup");
+          v.i("MicroMsg.ThreadPool", "|MMThreadPool thread pool is auto wakeup");
           locale = e.this;
         }
         synchronized (lock)
         {
-          ayG = false;
-          e.jZc = 0L;
-          e.jZb = 0L;
+          akI = false;
+          e.kzz = 0L;
+          e.kzy = 0L;
           sendEmptyMessageDelayed(1, 1000L);
           return;
         }

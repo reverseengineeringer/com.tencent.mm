@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tencent.mm.plugin.sns.ui.PhotosContent android:id="@id/cae" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.plugin.sns.ui.MaskImageView android:id="@id/caf" android:layout_width="73.0dip" android:layout_height="73.0dip" android:layout_margin="1.0dip" android:scaleType="centerCrop" android:maxHeight="160.0dip" />
+</com.tencent.mm.plugin.sns.ui.PhotosContent>

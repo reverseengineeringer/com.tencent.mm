@@ -12,10 +12,10 @@ final class SendAppMessageWrapperUI$2
   {
     if (paramBoolean)
     {
-      SendAppMessageWrapperUI.a(lBv, amU, paramString, paramInt);
+      SendAppMessageWrapperUI.a(mcn, ZJ, paramString, paramInt);
       return;
     }
-    SendAppMessageWrapperUI.d(lBv);
+    SendAppMessageWrapperUI.d(mcn);
   }
 }
 

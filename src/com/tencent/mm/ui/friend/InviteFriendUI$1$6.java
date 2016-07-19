@@ -8,10 +8,10 @@ final class InviteFriendUI$1$6
 {
   InviteFriendUI$1$6(InviteFriendUI.1 param1) {}
   
-  public final void ic(boolean paramBoolean)
+  public final void iG(boolean paramBoolean)
   {
     if (paramBoolean) {
-      ah.zy().s(InviteFriendUI.d(lrP.lrM), 1);
+      ah.zL().q(InviteFriendUI.d(lSt.lSq), 1);
     }
   }
 }

@@ -14,7 +14,7 @@ final class f$a$a
     mRemote = paramIBinder;
   }
   
-  public final d EJ()
+  public final d Fe()
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -23,7 +23,7 @@ final class f$a$a
       localParcel1.writeInterfaceToken("com.tencent.mm.network.IDispatcher_AIDL");
       mRemote.transact(3, localParcel1, localParcel2, 0);
       localParcel2.readException();
-      d locald = d.a.W(localParcel2.readStrongBinder());
+      d locald = d.a.y(localParcel2.readStrongBinder());
       return locald;
     }
     finally
@@ -33,7 +33,7 @@ final class f$a$a
     }
   }
   
-  public final void EK()
+  public final void Ff()
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -51,7 +51,7 @@ final class f$a$a
     }
   }
   
-  public final h EL()
+  public final h Fg()
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -60,7 +60,7 @@ final class f$a$a
       localParcel1.writeInterfaceToken("com.tencent.mm.network.IDispatcher_AIDL");
       mRemote.transact(16, localParcel1, localParcel2, 0);
       localParcel2.readException();
-      h localh = h.a.Y(localParcel2.readStrongBinder());
+      h localh = h.a.A(localParcel2.readStrongBinder());
       return localh;
     }
     finally
@@ -148,7 +148,7 @@ final class f$a$a
     //   51	84	101	finally
   }
   
-  public final int a(boolean paramBoolean, List paramList)
+  public final int a(boolean paramBoolean, List<String> paramList)
   {
     int i = 0;
     Parcel localParcel1 = Parcel.obtain();
@@ -214,7 +214,7 @@ final class f$a$a
     //   14: aload_1
     //   15: ifnull +43 -> 58
     //   18: aload_1
-    //   19: invokeinterface 97 1 0
+    //   19: invokeinterface 99 1 0
     //   24: astore_1
     //   25: aload_2
     //   26: aload_1
@@ -271,7 +271,7 @@ final class f$a$a
     //   14: aload_1
     //   15: ifnull +43 -> 58
     //   18: aload_1
-    //   19: invokeinterface 101 1 0
+    //   19: invokeinterface 103 1 0
     //   24: astore_1
     //   25: aload_2
     //   26: aload_1
@@ -328,7 +328,7 @@ final class f$a$a
     //   14: aload_1
     //   15: ifnull +43 -> 58
     //   18: aload_1
-    //   19: invokeinterface 105 1 0
+    //   19: invokeinterface 107 1 0
     //   24: astore_1
     //   25: aload_2
     //   26: aload_1
@@ -385,7 +385,7 @@ final class f$a$a
     //   14: aload_1
     //   15: ifnull +43 -> 58
     //   18: aload_1
-    //   19: invokeinterface 109 1 0
+    //   19: invokeinterface 111 1 0
     //   24: astore_1
     //   25: aload_2
     //   26: aload_1
@@ -429,7 +429,7 @@ final class f$a$a
   }
   
   /* Error */
-  public final void a(com.tencent.mm.protocal.y paramy)
+  public final void a(com.tencent.mm.protocal.ab paramab)
   {
     // Byte code:
     //   0: invokestatic 27	android/os/Parcel:obtain	()Landroid/os/Parcel;
@@ -442,7 +442,7 @@ final class f$a$a
     //   14: aload_1
     //   15: ifnull +42 -> 57
     //   18: aload_1
-    //   19: invokeinterface 113 1 0
+    //   19: invokeinterface 115 1 0
     //   24: astore_1
     //   25: aload_2
     //   26: aload_1
@@ -475,7 +475,7 @@ final class f$a$a
     // Local variable table:
     //   start	length	slot	name	signature
     //   0	73	0	this	a
-    //   0	73	1	paramy	com.tencent.mm.protocal.y
+    //   0	73	1	paramab	com.tencent.mm.protocal.ab
     //   3	65	2	localParcel1	Parcel
     //   7	57	3	localParcel2	Parcel
     // Exception table:
@@ -516,7 +516,12 @@ final class f$a$a
     }
   }
   
-  public final void aO(boolean paramBoolean)
+  public final IBinder asBinder()
+  {
+    return mRemote;
+  }
+  
+  public final void at(boolean paramBoolean)
   {
     int i = 0;
     Parcel localParcel1 = Parcel.obtain();
@@ -539,7 +544,7 @@ final class f$a$a
     }
   }
   
-  public final void aP(boolean paramBoolean)
+  public final void au(boolean paramBoolean)
   {
     int i = 0;
     Parcel localParcel1 = Parcel.obtain();
@@ -562,7 +567,7 @@ final class f$a$a
     }
   }
   
-  public final void aQ(boolean paramBoolean)
+  public final void av(boolean paramBoolean)
   {
     int i = 0;
     Parcel localParcel1 = Parcel.obtain();
@@ -585,24 +590,21 @@ final class f$a$a
     }
   }
   
-  public final IBinder asBinder()
+  public final void aw(boolean paramBoolean)
   {
-    return mRemote;
-  }
-  
-  public final int c(String paramString, List paramList)
-  {
+    int i = 0;
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
     try
     {
       localParcel1.writeInterfaceToken("com.tencent.mm.network.IDispatcher_AIDL");
-      localParcel1.writeString(paramString);
-      mRemote.transact(17, localParcel1, localParcel2, 0);
+      if (paramBoolean) {
+        i = 1;
+      }
+      localParcel1.writeInt(i);
+      mRemote.transact(34, localParcel1, localParcel2, 0);
       localParcel2.readException();
-      int i = localParcel2.readInt();
-      localParcel2.readStringList(paramList);
-      return i;
+      return;
     }
     finally
     {
@@ -652,7 +654,28 @@ final class f$a$a
     }
   }
   
-  public final int f(int paramInt, byte[] paramArrayOfByte)
+  public final int d(String paramString, List<String> paramList)
+  {
+    Parcel localParcel1 = Parcel.obtain();
+    Parcel localParcel2 = Parcel.obtain();
+    try
+    {
+      localParcel1.writeInterfaceToken("com.tencent.mm.network.IDispatcher_AIDL");
+      localParcel1.writeString(paramString);
+      mRemote.transact(17, localParcel1, localParcel2, 0);
+      localParcel2.readException();
+      int i = localParcel2.readInt();
+      localParcel2.readStringList(paramList);
+      return i;
+    }
+    finally
+    {
+      localParcel2.recycle();
+      localParcel1.recycle();
+    }
+  }
+  
+  public final int g(int paramInt, byte[] paramArrayOfByte)
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -735,7 +758,7 @@ final class f$a$a
     }
   }
   
-  public final void gg(String paramString)
+  public final void gt(String paramString)
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -754,7 +777,7 @@ final class f$a$a
     }
   }
   
-  public final void gh(String paramString)
+  public final void gu(String paramString)
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -907,7 +930,7 @@ final class f$a$a
     }
   }
   
-  public final boolean vM()
+  public final boolean vO()
   {
     boolean bool = false;
     Parcel localParcel1 = Parcel.obtain();
@@ -930,7 +953,7 @@ final class f$a$a
     }
   }
   
-  public final void vY()
+  public final void wa()
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();

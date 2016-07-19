@@ -2,9 +2,9 @@ package com.tencent.mm.modelvoice;
 
 public final class g
 {
-  public int anQ = 0;
-  public int anV = 0;
+  public int acr = 0;
   public byte[] buf = null;
+  public int cbK = 0;
   public int ret = 0;
 }
 

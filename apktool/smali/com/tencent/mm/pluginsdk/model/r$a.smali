@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field public iAH:I
+.field public iXh:I
 
-.field public iAI:I
+.field public iXi:I
 
-.field public iAJ:Ljava/lang/String;
+.field public iXj:Ljava/lang/String;
 
-.field public iAK:I
+.field public iXk:I
 
-.field public iAL:Ljava/lang/String;
+.field public iXl:Ljava/lang/String;
 
 
 # direct methods

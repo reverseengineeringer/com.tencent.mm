@@ -8,7 +8,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
 import com.tencent.mm.storage.h;
 
 final class ContactsSyncUI$a$3
@@ -18,8 +18,8 @@ final class ContactsSyncUI$a$3
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ah.tD().rn().set(12322, Boolean.valueOf(false));
-    coH.coG.getSharedPreferences(y.aUK(), 0).edit().putBoolean("upload_contacts_already_displayed", true).commit();
+    ah.tE().ro().set(12322, Boolean.valueOf(false));
+    cjV.cjS.getSharedPreferences(aa.aZO(), 0).edit().putBoolean("upload_contacts_already_displayed", true).commit();
     if ((val$context instanceof Activity)) {
       ((Activity)val$context).finish();
     }

@@ -10,12 +10,12 @@ public class c
     return String.format("https://api.twitter.com/oauth/authorize?oauth_token=%s", new Object[] { token });
   }
   
-  public String boD()
+  public String bvB()
   {
     return "http://api.twitter.com/oauth/request_token";
   }
   
-  public String boE()
+  public String bvC()
   {
     return "http://api.twitter.com/oauth/access_token";
   }
@@ -23,12 +23,12 @@ public class c
   public static class a
     extends c
   {
-    public final String boD()
+    public final String bvB()
     {
       return "https://api.twitter.com/oauth/request_token";
     }
     
-    public final String boE()
+    public final String bvC()
     {
       return "https://api.twitter.com/oauth/access_token";
     }

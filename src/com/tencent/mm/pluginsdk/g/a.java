@@ -1,101 +1,60 @@
 package com.tencent.mm.pluginsdk.g;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.os.Build.VERSION;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.base.g;
+import android.os.Bundle;
+import android.text.TextUtils;
+import com.tencent.mm.sdk.platformtools.v;
+import java.util.HashMap;
 
 public final class a
 {
-  public static boolean a(Activity paramActivity, final String paramString1, final int paramInt, String paramString2, String paramString3)
+  public static Bundle Bx(String paramString)
   {
-    if ((Build.VERSION.SDK_INT < 23) && (!"MNC".equals(Build.VERSION.CODENAME))) {
-      return true;
-    }
-    for (;;)
+    Bundle localBundle = new Bundle();
+    localBundle.putInt("key_scene", 1);
+    paramString = paramString.split("&");
+    if ((paramString == null) || (paramString.length == 0))
     {
-      try
-      {
-        int i = android.support.v4.content.a.b(paramActivity, paramString1);
-        if (i == 0) {
-          break;
-        }
-        if (!ay.kz(paramString3))
-        {
-          g.a(paramActivity, paramString3, paramString2, false, new DialogInterface.OnClickListener()
-          {
-            public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
-            {
-              paramAnonymousDialogInterface.dismiss();
-              paramAnonymousDialogInterface = an;
-              String str = paramString1;
-              paramAnonymousInt = paramInt;
-              android.support.v4.app.a.a(paramAnonymousDialogInterface, new String[] { str }, paramAnonymousInt);
-            }
-          });
-          return false;
-        }
-      }
-      catch (Exception paramActivity)
-      {
-        u.e("!44@/B4Tb64lLpKRWbkIOVEIGWRz/ZgL8rDZ506X222/Mts=", "check mpermission exception:%s.", new Object[] { paramActivity });
-        return true;
-      }
-      android.support.v4.app.a.a(paramActivity, new String[] { paramString1 }, paramInt);
+      v.e("MicroMsg.MallManager", "getWapPayBundle arrKeys == null || arrKeys.length == 0");
+      return localBundle;
     }
+    HashMap localHashMap = new HashMap();
+    int i = 0;
+    while (i < paramString.length)
+    {
+      Object localObject = paramString[i];
+      if (!TextUtils.isEmpty((CharSequence)localObject))
+      {
+        localObject = ((String)localObject).split("=");
+        if ((localObject != null) && (localObject.length == 2)) {
+          localHashMap.put(localObject[0], localObject[1]);
+        }
+      }
+      i += 1;
+    }
+    localBundle.putString("_wxapi_payreq_appid", c("appid", localHashMap));
+    localBundle.putString("_wxapi_payreq_partnerid", c("partnerid", localHashMap));
+    localBundle.putString("_wxapi_payreq_prepayid", c("prepayid", localHashMap));
+    localBundle.putString("_wxapi_payreq_noncestr", c("noncestr", localHashMap));
+    localBundle.putString("_wxapi_payreq_timestamp", c("timestamp", localHashMap));
+    localBundle.putString("_wxapi_payreq_packagevalue", c("package", localHashMap));
+    localBundle.putString("_wxapi_payreq_sign", c("sign", localHashMap));
+    localBundle.putString("_wxapi_payreq_sign_type", c("signtype", localHashMap));
+    localBundle.putString("_wxapi_payreq_extdata", c("extdata", localHashMap));
+    localBundle.putString("_wxapi_payoptions_callback_classname", "");
+    localBundle.putInt("_wxapi_payoptions_callback_flags", -1);
+    return localBundle;
   }
   
-  public static boolean aL(Context paramContext, String paramString)
+  private static String c(String paramString, HashMap<String, String> paramHashMap)
   {
-    int i;
-    try
+    String str = (String)paramHashMap.get(paramString);
+    paramHashMap = str;
+    if (TextUtils.isEmpty(str))
     {
-      i = android.support.v4.content.a.b(paramContext, paramString);
-      if (i != 0) {
-        return false;
-      }
+      v.e("MicroMsg.MallManager", "getWapPayKey key: " + paramString + " value is empty");
+      paramHashMap = "";
     }
-    catch (Exception paramContext)
-    {
-      u.e("!44@/B4Tb64lLpKRWbkIOVEIGWRz/ZgL8rDZ506X222/Mts=", "check mpermission exception:%s.", new Object[] { paramContext });
-      return false;
-    }
-    String str = null;
-    if (paramString.equals("android.permission.READ_CONTACTS"))
-    {
-      str = "android.permission.WRITE_CONTACTS";
-      if (ay.kz(str)) {
-        break label98;
-      }
-    }
-    label96:
-    label98:
-    for (;;)
-    {
-      try
-      {
-        i = android.support.v4.content.a.b(paramContext, str);
-        if (i != 0) {
-          break label96;
-        }
-        return true;
-      }
-      catch (Exception paramContext)
-      {
-        u.e("!44@/B4Tb64lLpKRWbkIOVEIGWRz/ZgL8rDZ506X222/Mts=", "check mpermission otherPermisson exception:%s.", new Object[] { paramContext });
-        return false;
-      }
-      if (!paramString.equals("android.permission.WRITE_CONTACTS")) {
-        break;
-      }
-      str = "android.permission.READ_CONTACTS";
-      break;
-      return false;
-    }
+    return paramHashMap;
   }
 }
 

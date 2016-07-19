@@ -1,7 +1,7 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class i$1
   implements Runnable
@@ -10,20 +10,20 @@ final class i$1
   
   public final void run()
   {
-    if (i.a(koH) != 0)
+    if (i.a(kNL) != 0)
     {
-      u.v("!32@/B4Tb64lLpLoWFlKjeNWAb26tvInbzty", "ashutest:: onResetCursorJobRun, current AbsListViewScrollType %d, post resetCursorJob, retryTimes %d", new Object[] { Integer.valueOf(i.a(koH)), Integer.valueOf(i.b(koH)) });
-      i.d(koH).removeCallbacks(i.c(koH));
-      if (20 > i.e(koH))
+      v.v("MicroMsg.MListAdapter", "ashutest:: onResetCursorJobRun, current AbsListViewScrollType %d, post resetCursorJob, retryTimes %d", new Object[] { Integer.valueOf(i.a(kNL)), Integer.valueOf(i.b(kNL)) });
+      i.d(kNL).removeCallbacks(i.c(kNL));
+      if (20 > i.e(kNL))
       {
-        i.d(koH).postDelayed(i.c(koH), 100L);
+        i.d(kNL).postDelayed(i.c(kNL), 100L);
         return;
       }
-      u.w("!32@/B4Tb64lLpLoWFlKjeNWAb26tvInbzty", "ashutest:: onResetCursorJobRun, current AbsListViewScrollType %d, do resetCursorJob, retryTimes %d", new Object[] { Integer.valueOf(i.a(koH)), Integer.valueOf(i.e(koH)) });
+      v.w("MicroMsg.MListAdapter", "ashutest:: onResetCursorJobRun, current AbsListViewScrollType %d, do resetCursorJob, retryTimes %d", new Object[] { Integer.valueOf(i.a(kNL)), Integer.valueOf(i.e(kNL)) });
     }
-    u.d("!32@/B4Tb64lLpLoWFlKjeNWAb26tvInbzty", "ashutest:: do resetCursorJob");
-    i.f(koH);
-    i.g(koH);
+    v.d("MicroMsg.MListAdapter", "ashutest:: do resetCursorJob");
+    i.f(kNL);
+    i.g(kNL);
   }
 }
 

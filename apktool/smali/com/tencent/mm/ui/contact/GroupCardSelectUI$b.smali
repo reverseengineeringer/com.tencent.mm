@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field bMr:Landroid/widget/ImageView;
+.field bFL:Landroid/widget/ImageView;
 
-.field eIN:Landroid/widget/TextView;
+.field eQC:Landroid/widget/TextView;
 
-.field ftO:Landroid/widget/CheckBox;
+.field fCT:Landroid/widget/CheckBox;
 
-.field final synthetic lkC:Lcom/tencent/mm/ui/contact/GroupCardSelectUI;
+.field final synthetic lKN:Lcom/tencent/mm/ui/contact/GroupCardSelectUI;
 
-.field lkD:Landroid/widget/TextView;
+.field lKO:Landroid/widget/TextView;
 
 
 # direct methods
@@ -32,7 +32,7 @@
 
     .prologue
     .line 217
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI$b;->lkC:Lcom/tencent/mm/ui/contact/GroupCardSelectUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI$b;->lKN:Lcom/tencent/mm/ui/contact/GroupCardSelectUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

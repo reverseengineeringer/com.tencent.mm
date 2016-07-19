@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/oq" android:paddingLeft="10.0dip" style="@style/MMListItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <ImageView android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/bn_" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="6.0dip" android:src="@drawable/a4b" />
+        <TextView android:textColor="@color/ow" android:gravity="center_vertical" android:id="@id/bna" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:shadowColor="@color/ak" android:shadowDx="1.2" android:shadowDy="1.2" android:shadowRadius="1.0" android:drawablePadding="3.0dip" style="@style/MMFontPreferenceLarge" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/bn8" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <TextView android:textColor="@color/ow" android:layout_gravity="center_vertical" android:id="@id/bnb" android:maxWidth="100.0dip" style="@style/MMFontPreferenceSmall" />
+    </LinearLayout>
+</RelativeLayout>

@@ -3,17 +3,17 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ui/widget/DragSortListView$i;
+.implements Lcom/tencent/mm/ui/widget/DragSortListView$h;
 
 
 # instance fields
-.field private cUz:Landroid/widget/ListView;
+.field private cSm:Landroid/widget/ListView;
 
-.field private dvk:Landroid/widget/ImageView;
+.field private dvD:Landroid/widget/ImageView;
 
-.field private lGy:Landroid/graphics/Bitmap;
+.field private mhM:Landroid/graphics/Bitmap;
 
-.field lGz:I
+.field mhN:I
 
 
 # direct methods
@@ -27,10 +27,10 @@
     .line 21
     const/high16 v0, -0x1000000
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/e;->lGz:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/e;->mhN:I
 
     .line 26
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/e;->cUz:Landroid/widget/ListView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/widget/e;->cSm:Landroid/widget/ListView;
 
     .line 27
     return-void
@@ -38,7 +38,7 @@
 
 
 # virtual methods
-.method public final aP(Landroid/view/View;)V
+.method public final aU(Landroid/view/View;)V
     .locals 2
 
     .prologue
@@ -50,12 +50,12 @@
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 83
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/e;->lGy:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/e;->mhM:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     .line 84
-    iput-object v1, p0, Lcom/tencent/mm/ui/widget/e;->lGy:Landroid/graphics/Bitmap;
+    iput-object v1, p0, Lcom/tencent/mm/ui/widget/e;->mhM:Landroid/graphics/Bitmap;
 
     .line 85
     return-void
@@ -69,16 +69,16 @@
     return-void
 .end method
 
-.method public final sh(I)Landroid/view/View;
+.method public final ul(I)Landroid/view/View;
     .locals 4
 
     .prologue
     const/4 v3, 0x0
 
     .line 41
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/e;->cUz:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/e;->cSm:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/e;->cUz:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/e;->cSm:Landroid/widget/ListView;
 
     invoke-virtual {v1}, Landroid/widget/ListView;->getHeaderViewsCount()I
 
@@ -86,7 +86,7 @@
 
     add-int/2addr v1, p1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/e;->cUz:Landroid/widget/ListView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/e;->cSm:Landroid/widget/ListView;
 
     invoke-virtual {v2}, Landroid/widget/ListView;->getFirstVisiblePosition()I
 
@@ -126,20 +126,20 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/widget/e;->lGy:Landroid/graphics/Bitmap;
+    iput-object v1, p0, Lcom/tencent/mm/ui/widget/e;->mhM:Landroid/graphics/Bitmap;
 
     .line 54
     invoke-virtual {v0, v3}, Landroid/view/View;->setDrawingCacheEnabled(Z)V
 
     .line 56
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/e;->dvk:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/e;->dvD:Landroid/widget/ImageView;
 
     if-nez v1, :cond_1
 
     .line 57
     new-instance v1, Landroid/widget/ImageView;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/e;->cUz:Landroid/widget/ListView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/e;->cSm:Landroid/widget/ListView;
 
     invoke-virtual {v2}, Landroid/widget/ListView;->getContext()Landroid/content/Context;
 
@@ -147,30 +147,30 @@
 
     invoke-direct {v1, v2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/widget/e;->dvk:Landroid/widget/ImageView;
+    iput-object v1, p0, Lcom/tencent/mm/ui/widget/e;->dvD:Landroid/widget/ImageView;
 
     .line 59
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/e;->dvk:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/e;->dvD:Landroid/widget/ImageView;
 
-    iget v2, p0, Lcom/tencent/mm/ui/widget/e;->lGz:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/e;->mhN:I
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setBackgroundColor(I)V
 
     .line 60
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/e;->dvk:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/e;->dvD:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v3, v3, v3, v3}, Landroid/widget/ImageView;->setPadding(IIII)V
 
     .line 61
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/e;->dvk:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/e;->dvD:Landroid/widget/ImageView;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/e;->lGy:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/e;->mhM:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 62
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/e;->dvk:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/e;->dvD:Landroid/widget/ImageView;
 
     new-instance v2, Landroid/view/ViewGroup$LayoutParams;
 
@@ -187,7 +187,7 @@
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 64
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/e;->dvk:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/e;->dvD:Landroid/widget/ImageView;
 
     goto :goto_0
 .end method

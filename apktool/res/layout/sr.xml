@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/az1" android:background="@drawable/gu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginBottom="@dimen/i7" android:layout_alignParentBottom="true" android:onClick="onClick"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="center|left" android:id="@id/az6" android:background="@raw/gallery_booter_at_pos_image_grid_icon" android:layout_width="40.0dip" android:layout_height="@dimen/mq" />
+</FrameLayout>

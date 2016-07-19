@@ -1,79 +1,72 @@
 package com.tencent.mm.an;
 
-import com.tencent.mm.d.b.bw;
-import com.tencent.mm.sdk.h.c.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import java.lang.reflect.Field;
-import java.util.Map;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.pluginsdk.k.a.b;
+import com.tencent.mm.protocal.b.avu;
+import com.tencent.mm.protocal.b.avv;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.d;
 
 public final class f
-  extends bw
+  extends b
 {
-  protected static c.a aot;
+  private a bkQ;
+  private d bkT;
   
-  static
+  public f()
   {
-    c.a locala = new c.a();
-    ceD = new Field[8];
-    blR = new String[9];
-    StringBuilder localStringBuilder = new StringBuilder();
-    blR[0] = "localId";
-    jYx.put("localId", "INTEGER PRIMARY KEY ");
-    localStringBuilder.append(" localId INTEGER PRIMARY KEY ");
-    localStringBuilder.append(", ");
-    jYw = "localId";
-    blR[1] = "fileName";
-    jYx.put("fileName", "TEXT");
-    localStringBuilder.append(" fileName TEXT");
-    localStringBuilder.append(", ");
-    blR[2] = "fileNameHash";
-    jYx.put("fileNameHash", "INTEGER");
-    localStringBuilder.append(" fileNameHash INTEGER");
-    localStringBuilder.append(", ");
-    blR[3] = "fileMd5";
-    jYx.put("fileMd5", "TEXT default '' ");
-    localStringBuilder.append(" fileMd5 TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[4] = "fileLength";
-    jYx.put("fileLength", "LONG default '0' ");
-    localStringBuilder.append(" fileLength LONG default '0' ");
-    localStringBuilder.append(", ");
-    blR[5] = "fileStatus";
-    jYx.put("fileStatus", "INTEGER default '0' ");
-    localStringBuilder.append(" fileStatus INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    blR[6] = "fileDuration";
-    jYx.put("fileDuration", "INTEGER default '0' ");
-    localStringBuilder.append(" fileDuration INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    blR[7] = "createTime";
-    jYx.put("createTime", "LONG default '0' ");
-    localStringBuilder.append(" createTime LONG default '0' ");
-    blR[8] = "rowid";
-    jYy = localStringBuilder.toString();
-    aot = locala;
+    Object localObject = new a.a();
+    byl = new avu();
+    bym = new avv();
+    uri = "/cgi-bin/micromsg-bin/updatesoterloginauthkey";
+    byj = 620;
+    byn = 0;
+    byo = 0;
+    bkQ = ((a.a)localObject).vA();
+    localObject = (avu)bkQ.byh.byq;
+    kmg = "";
+    kmf = "";
+    jtN = 620;
   }
   
-  public final void h(String paramString, long paramLong)
+  public final void Dl()
   {
-    StringBuilder localStringBuilder = new StringBuilder();
-    localStringBuilder.append(paramString);
-    localStringBuilder.append("localId=").append(field_localId).append(", ");
-    localStringBuilder.append("filename=").append(field_fileName).append(", ");
-    localStringBuilder.append("filenamehash=").append(field_fileNameHash).append(", ");
-    localStringBuilder.append("filelength=").append(field_fileLength).append(", ");
-    localStringBuilder.append("filemd5=").append(field_fileMd5).append(", ");
-    localStringBuilder.append("filestatus=").append(field_fileStatus);
-    if (paramLong > 0L) {
-      localStringBuilder.append(", use ").append(ay.ao(paramLong)).append("ms");
+    if (bkT != null) {
+      bkT.onSceneEnd(4, -1, "", this);
     }
-    u.i("!32@/B4Tb64lLpJ8NKLwSZ2/LqaAhkgA6Bm/", localStringBuilder.toString());
   }
   
-  protected final c.a ls()
+  public final int a(e parame, d paramd)
   {
-    return aot;
+    bkT = paramd;
+    return a(parame, bkQ, this);
+  }
+  
+  public final void b(int paramInt1, int paramInt2, String paramString)
+  {
+    if (bkT != null) {
+      bkT.onSceneEnd(3, paramInt2, paramString, this);
+    }
+  }
+  
+  public final void b(int paramInt1, int paramInt2, String paramString, o paramo)
+  {
+    if (bkT != null) {
+      bkT.onSceneEnd(paramInt1, paramInt2, paramString, this);
+    }
+  }
+  
+  public final int getType()
+  {
+    return 620;
+  }
+  
+  public final d vL()
+  {
+    return bkT;
   }
 }
 

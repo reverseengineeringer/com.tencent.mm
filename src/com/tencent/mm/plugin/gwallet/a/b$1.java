@@ -15,52 +15,52 @@ final class b$1
   
   public final void onServiceConnected(ComponentName paramComponentName, IBinder paramIBinder)
   {
-    b.pv("Billing service connected.");
-    exL.exD = a.a.b(paramIBinder);
-    paramComponentName = exL.mContext.getPackageName();
+    b.qL("Billing service connected.");
+    eEf.eDX = a.a.b(paramIBinder);
+    paramComponentName = eEf.mContext.getPackageName();
     try
     {
-      b.pv("Checking for in-app billing 3 support.");
-      int i = exL.exD.b(3, paramComponentName, "inapp");
+      b.qL("Checking for in-app billing 3 support.");
+      int i = eEf.eDX.b(3, paramComponentName, "inapp");
       if (i != 0)
       {
-        if (exK != null) {
-          exK.a(new c(i, "Error checking for billing v3 support."));
+        if (eEe != null) {
+          eEe.a(new c(i, "Error checking for billing v3 support."));
         }
-        exL.exG = false;
+        eEf.eEa = false;
         return;
       }
-      b.pv("In-app billing version 3 supported for " + paramComponentName);
-      i = exL.exD.b(3, paramComponentName, "subs");
+      b.qL("In-app billing version 3 supported for " + paramComponentName);
+      i = eEf.eDX.b(3, paramComponentName, "subs");
       if (i == 0)
       {
-        b.pv("Subscriptions AVAILABLE.");
-        exL.exG = true;
+        b.qL("Subscriptions AVAILABLE.");
+        eEf.eEa = true;
       }
       for (;;)
       {
-        exL.exF = true;
-        if (exK == null) {
+        eEf.eDZ = true;
+        if (eEe == null) {
           break;
         }
-        exK.a(new c(0, "Setup successful."));
+        eEe.a(new c(0, "Setup successful."));
         return;
-        b.pv("Subscriptions NOT AVAILABLE. Response: " + i);
+        b.qL("Subscriptions NOT AVAILABLE. Response: " + i);
       }
       return;
     }
     catch (RemoteException paramComponentName)
     {
-      if (exK != null) {
-        exK.a(new c(64535, "RemoteException while setting up in-app billing."));
+      if (eEe != null) {
+        eEe.a(new c(64535, "RemoteException while setting up in-app billing."));
       }
     }
   }
   
   public final void onServiceDisconnected(ComponentName paramComponentName)
   {
-    b.pv("Billing service disconnected.");
-    exL.exD = null;
+    b.qL("Billing service disconnected.");
+    eEf.eDX = null;
   }
 }
 

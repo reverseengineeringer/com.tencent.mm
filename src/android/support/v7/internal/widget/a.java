@@ -18,12 +18,12 @@ import com.tencent.mm.R.b;
 abstract class a
   extends ViewGroup
 {
-  protected ActionBarContainer jf;
-  protected ActionMenuView mR;
-  protected ActionMenuPresenter mS;
-  protected boolean mT;
-  protected boolean mU;
-  protected int mV;
+  protected ActionBarContainer jw;
+  protected ActionMenuView nh;
+  protected ActionMenuPresenter ni;
+  protected boolean nj;
+  protected boolean nk;
+  protected int nl;
   
   a(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -59,7 +59,13 @@ abstract class a
     return Math.max(0, paramInt1 - paramView.getMeasuredWidth() + 0);
   }
   
-  public void C(int paramInt)
+  public void H(int paramInt)
+  {
+    nl = paramInt;
+    requestLayout();
+  }
+  
+  public void I(int paramInt)
   {
     clearAnimation();
     Object localObject;
@@ -71,21 +77,31 @@ abstract class a
       }
     }
     label71:
-    for (int i = 2130837609;; i = 2130837610)
+    for (int i = 2130968576;; i = 2130968577)
     {
       localObject = AnimationUtils.loadAnimation((Context)localObject, i);
       startAnimation((Animation)localObject);
       setVisibility(paramInt);
-      if ((jf != null) && (mR != null))
+      if ((jw != null) && (nh != null))
       {
-        mR.startAnimation((Animation)localObject);
-        mR.setVisibility(paramInt);
+        nh.startAnimation((Animation)localObject);
+        nh.setVisibility(paramInt);
       }
       return;
     }
   }
   
-  public void bI()
+  public void a(ActionBarContainer paramActionBarContainer)
+  {
+    jw = paramActionBarContainer;
+  }
+  
+  public int bI()
+  {
+    return getVisibility();
+  }
+  
+  public void bJ()
   {
     post(new Runnable()
     {
@@ -96,33 +112,23 @@ abstract class a
     });
   }
   
-  public boolean bJ()
+  public boolean bK()
   {
-    return (mS != null) && (mS.kD);
-  }
-  
-  public int getAnimatedVisibility()
-  {
-    return getVisibility();
-  }
-  
-  public int getContentHeight()
-  {
-    return mV;
+    return (ni != null) && (ni.kU);
   }
   
   public boolean hideOverflowMenu()
   {
-    if (mS != null) {
-      return mS.hideOverflowMenu();
+    if (ni != null) {
+      return ni.hideOverflowMenu();
     }
     return false;
   }
   
   public boolean isOverflowMenuShowing()
   {
-    if (mS != null) {
-      return mS.isOverflowMenuShowing();
+    if (ni != null) {
+      return ni.isOverflowMenuShowing();
     }
     return false;
   }
@@ -132,36 +138,15 @@ abstract class a
     if (Build.VERSION.SDK_INT >= 8) {
       super.onConfigurationChanged(paramConfiguration);
     }
-    paramConfiguration = getContext().obtainStyledAttributes(null, R.b.ActionBar, 2130772113, 0);
-    setContentHeight(paramConfiguration.getLayoutDimension(2, 0));
+    paramConfiguration = getContext().obtainStyledAttributes(null, R.b.Wf, 2130771972, 0);
+    H(paramConfiguration.getLayoutDimension(0, 0));
     paramConfiguration.recycle();
-    if (mU) {
-      setSplitActionBar(getContext().getResources().getBoolean(2131689474));
+    if (nk) {
+      x(getContext().getResources().getBoolean(2131558402));
     }
-    if (mS != null) {
-      mS.aQ();
+    if (ni != null) {
+      ni.aQ();
     }
-  }
-  
-  public void setContentHeight(int paramInt)
-  {
-    mV = paramInt;
-    requestLayout();
-  }
-  
-  public void setSplitActionBar(boolean paramBoolean)
-  {
-    mT = paramBoolean;
-  }
-  
-  public void setSplitView(ActionBarContainer paramActionBarContainer)
-  {
-    jf = paramActionBarContainer;
-  }
-  
-  public void setSplitWhenNarrow(boolean paramBoolean)
-  {
-    mU = paramBoolean;
   }
   
   public void setVisibility(int paramInt)
@@ -173,10 +158,20 @@ abstract class a
   
   public boolean showOverflowMenu()
   {
-    if (mS != null) {
-      return mS.showOverflowMenu();
+    if (ni != null) {
+      return ni.showOverflowMenu();
     }
     return false;
+  }
+  
+  public void x(boolean paramBoolean)
+  {
+    nj = paramBoolean;
+  }
+  
+  public void y(boolean paramBoolean)
+  {
+    nk = paramBoolean;
   }
 }
 

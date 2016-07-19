@@ -8,12 +8,21 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public fUL:J
+.field public gdw:Z
 
-.field public fUh:Z
+.field public gea:J
 
 .field public key:J
 
@@ -46,7 +55,7 @@
 .end method
 
 .method protected constructor <init>(Landroid/os/Parcel;)V
-    .locals 3
+    .locals 4
 
     .prologue
     const/4 v0, 0x1
@@ -57,23 +66,23 @@
     .line 87
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p0, Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;->fUL:J
+    iput-wide v2, p0, Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;->gea:J
 
     .line 88
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p0, Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;->key:J
+    iput-wide v2, p0, Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;->key:J
 
     .line 89
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p0, Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;->value:J
+    iput-wide v2, p0, Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;->value:J
 
     .line 90
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -83,7 +92,7 @@
     if-ne v1, v0, :cond_0
 
     :goto_0
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;->fUh:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;->gdw:Z
 
     .line 91
     return-void
@@ -112,7 +121,7 @@
 
     .prologue
     .line 78
-    iget-wide v0, p0, Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;->fUL:J
+    iget-wide v0, p0, Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;->gea:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
@@ -127,7 +136,7 @@
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
     .line 81
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;->fUh:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;->gdw:Z
 
     if-eqz v0, :cond_0
 

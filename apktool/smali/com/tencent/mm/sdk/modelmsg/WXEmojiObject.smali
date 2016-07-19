@@ -9,7 +9,7 @@
 # static fields
 .field private static final CONTENT_LENGTH_LIMIT:I = 0xa00000
 
-.field private static final TAG:Ljava/lang/String; = "!44@/B4Tb64lLpKbvaoYwgBifwJtObW4pYnf2Gs+DAkLhRM="
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.SDK.WXEmojiObject"
 
 
 # instance fields
@@ -145,11 +145,11 @@
 
     .line 94
     :cond_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpKbvaoYwgBifwJtObW4pYnf2Gs+DAkLhRM="
+    const-string/jumbo v1, "MicroMsg.SDK.WXEmojiObject"
 
     const-string/jumbo v2, "checkArgs fail, both arguments is null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 108
     :goto_0
@@ -168,11 +168,11 @@
     if-le v1, v2, :cond_3
 
     .line 99
-    const-string/jumbo v1, "!44@/B4Tb64lLpKbvaoYwgBifwJtObW4pYnf2Gs+DAkLhRM="
+    const-string/jumbo v1, "MicroMsg.SDK.WXEmojiObject"
 
     const-string/jumbo v2, "checkArgs fail, emojiData is too large"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -191,11 +191,11 @@
     if-le v1, v2, :cond_4
 
     .line 104
-    const-string/jumbo v1, "!44@/B4Tb64lLpKbvaoYwgBifwJtObW4pYnf2Gs+DAkLhRM="
+    const-string/jumbo v1, "MicroMsg.SDK.WXEmojiObject"
 
     const-string/jumbo v2, "checkArgs fail, emojiSize is too large"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 

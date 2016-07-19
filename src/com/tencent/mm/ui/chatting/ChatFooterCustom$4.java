@@ -9,9 +9,9 @@ final class ChatFooterCustom$4
 {
   ChatFooterCustom$4(ChatFooterCustom paramChatFooterCustom) {}
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    kRP.onClick(paramView);
+    lrR.onClick(paramView);
   }
 }
 

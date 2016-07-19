@@ -2,150 +2,209 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/tencent/mm/plugin/sns/d/b$b;
-
-
-# instance fields
-.field public gHT:Lcom/tencent/mm/sdk/c/c;
-
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public static b(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DecodeResultLogger;)Lcom/tencent/mm/memory/n;
+    .locals 9
 
     .prologue
-    .line 23
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 30
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    .line 33
-    new-instance v0, Lcom/tencent/mm/plugin/sns/c/a$1;
+    move-result-wide v2
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/c/a$1;-><init>(Lcom/tencent/mm/plugin/sns/c/a;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/c/a;->gHT:Lcom/tencent/mm/sdk/c/c;
-
-    .line 24
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    const-string/jumbo v1, "SnsImageDownloaded"
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/c/a;->gHT:Lcom/tencent/mm/sdk/c/c;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
-
-    .line 25
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->aze()Lcom/tencent/mm/plugin/sns/d/b;
+    .line 32
+    :try_start_0
+    invoke-static {}, Lcom/tencent/mm/memory/l;->qR()Lcom/tencent/mm/memory/l;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sns/d/b;->a(Lcom/tencent/mm/plugin/sns/d/b$b;)V
+    invoke-virtual {v0, p0, p1, p2}, Lcom/tencent/mm/memory/l;->a(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DecodeResultLogger;)Landroid/graphics/Bitmap;
 
-    .line 26
-    return-void
-.end method
+    move-result-object v0
 
+    .line 33
+    if-eqz v0, :cond_0
 
-# virtual methods
-.method public final R(Ljava/lang/String;Z)V
-    .locals 0
+    .line 34
+    invoke-static {p0, v0}, Lcom/tencent/mm/plugin/sns/data/i;->p(Ljava/lang/String;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .prologue
-    .line 80
-    return-void
-.end method
+    move-result-object v0
 
-.method public final S(Ljava/lang/String;Z)V
-    .locals 0
+    .line 36
+    :cond_0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    .prologue
-    .line 90
-    return-void
-.end method
+    move-result-wide v4
 
-.method public final axE()V
-    .locals 0
+    .line 37
+    const-string/jumbo v1, "MicroMsg.SnsBitmapUtil"
 
-    .prologue
-    .line 85
-    return-void
-.end method
+    const-string/jumbo v6, "decodeWithRotateByExif used %dms bitmap: %s"
 
-.method public final ur(Ljava/lang/String;)V
-    .locals 4
+    const/4 v7, 0x2
 
-    .prologue
-    .line 68
-    const-string/jumbo v0, "!56@/B4Tb64lLpKLxeMowbLUcEMgP46qAVtfbqgCosr1nInzRShX/HEPeQ=="
+    new-array v7, v7, [Ljava/lang/Object;
 
-    const-string/jumbo v1, "onThumbFinish mediaId=%s"
+    const/4 v8, 0x0
+
+    sub-long v2, v4, v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    aput-object v2, v7, v8
 
     const/4 v2, 0x1
 
-    new-array v2, v2, [Ljava/lang/Object;
+    aput-object v0, v7, v2
 
-    const/4 v3, 0x0
+    invoke-static {v1, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    aput-object p1, v2, v3
+    .line 38
+    invoke-static {v0}, Lcom/tencent/mm/memory/n;->f(Landroid/graphics/Bitmap;)Lcom/tencent/mm/memory/n;
+    :try_end_0
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    move-result-object v0
 
-    .line 69
-    new-instance v0, Lcom/tencent/mm/d/a/lo;
+    .line 42
+    :goto_0
+    return-object v0
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/lo;-><init>()V
+    .line 39
+    :catch_0
+    move-exception v0
 
-    .line 70
-    iget-object v1, v0, Lcom/tencent/mm/d/a/lo;->aHV:Lcom/tencent/mm/d/a/lo$a;
+    .line 40
+    invoke-static {}, Lcom/tencent/mm/bd/a;->bew()V
 
-    const/4 v2, 0x2
+    .line 41
+    const-string/jumbo v1, "MicroMsg.SnsBitmapUtil"
 
-    iput v2, v1, Lcom/tencent/mm/d/a/lo$a;->atF:I
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 71
-    iget-object v1, v0, Lcom/tencent/mm/d/a/lo;->aHV:Lcom/tencent/mm/d/a/lo$a;
+    const-string/jumbo v3, "OutOfMemoryError e "
 
-    iput-object p1, v1, Lcom/tencent/mm/d/a/lo$a;->mediaId:Ljava/lang/String;
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 72
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayV()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/OutOfMemoryError;->getMessage()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-static {v1, p1}, Lcom/tencent/mm/plugin/sns/d/am;->bp(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v0
 
-    .line 73
-    iget-object v2, v0, Lcom/tencent/mm/d/a/lo;->aHV:Lcom/tencent/mm/d/a/lo$a;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 42
+    const/4 v0, 0x0
 
-    move-result-object v1
+    goto :goto_0
+.end method
 
-    invoke-static {p1}, Lcom/tencent/mm/plugin/sns/data/h;->uc(Ljava/lang/String;)Ljava/lang/String;
+.method public static c(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DecodeResultLogger;)Landroid/graphics/Bitmap;
+    .locals 9
 
-    move-result-object v3
+    .prologue
+    .line 48
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-wide v2
 
-    move-result-object v1
+    .line 50
+    :try_start_0
+    invoke-static {}, Lcom/tencent/mm/memory/l;->qR()Lcom/tencent/mm/memory/l;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
+    invoke-virtual {v0, p0, p1, p2}, Lcom/tencent/mm/memory/l;->a(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DecodeResultLogger;)Landroid/graphics/Bitmap;
 
-    iput-object v1, v2, Lcom/tencent/mm/d/a/lo$a;->path:Ljava/lang/String;
+    move-result-object v0
 
-    .line 74
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 51
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    .line 52
+    invoke-static {p0, v0}, Lcom/tencent/mm/plugin/sns/data/i;->p(Ljava/lang/String;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .line 75
-    return-void
+    move-result-object v0
+
+    .line 54
+    :cond_0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v4
+
+    .line 55
+    const-string/jumbo v1, "MicroMsg.SnsBitmapUtil"
+
+    const-string/jumbo v6, "decodeWithRotateByExif used %dms bitmap: %s"
+
+    const/4 v7, 0x2
+
+    new-array v7, v7, [Ljava/lang/Object;
+
+    const/4 v8, 0x0
+
+    sub-long v2, v4, v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    aput-object v2, v7, v8
+
+    const/4 v2, 0x1
+
+    aput-object v0, v7, v2
+
+    invoke-static {v1, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 60
+    :goto_0
+    return-object v0
+
+    .line 57
+    :catch_0
+    move-exception v0
+
+    .line 58
+    invoke-static {}, Lcom/tencent/mm/bd/a;->bew()V
+
+    .line 59
+    const-string/jumbo v1, "MicroMsg.SnsBitmapUtil"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "OutOfMemoryError e "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/OutOfMemoryError;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 60
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

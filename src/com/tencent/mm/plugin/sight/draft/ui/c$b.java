@@ -6,15 +6,15 @@ import java.lang.ref.WeakReference;
 final class c$b
   implements Runnable
 {
-  String buL;
-  Bitmap efe;
-  WeakReference gzK;
+  String DF;
+  Bitmap eiG;
+  WeakReference<c> gGm;
   
   public final void run()
   {
-    c localc = (c)gzK.get();
+    c localc = (c)gGm.get();
     if (localc != null) {
-      localc.o(buL, efe);
+      localc.o(DF, eiG);
     }
   }
 }

@@ -4,52 +4,52 @@ import android.os.Looper;
 
 public abstract class g
 {
-  public final h jYB = new h() {};
-  private final h jYC = new h() {};
+  public final h<a, i> kyY = new h() {};
+  private final h<Object, String> kyZ = new h() {};
   
-  public final void DI(String paramString)
-  {
-    paramString = new i(paramString);
-    jYB.aw(paramString);
-    jYB.Ep();
-  }
-  
-  public final void Ep()
+  public final void EJ()
   {
     i locali = new i("*");
-    jYB.aw(locali);
-    jYB.Ep();
+    kyY.aR(locali);
+    kyY.EJ();
+  }
+  
+  public final void FX(String paramString)
+  {
+    paramString = new i(paramString);
+    kyY.aR(paramString);
+    kyY.EJ();
   }
   
   public final void a(String paramString, int paramInt, Object paramObject)
   {
     i locali = new i();
-    asJ = paramString;
-    jYK = paramInt;
+    aev = paramString;
+    kzh = paramInt;
     obj = paramObject;
-    jYL = this;
-    jYB.aw(locali);
-    jYB.Ep();
+    kzi = this;
+    kyY.aR(locali);
+    kyY.EJ();
   }
   
   public final void c(a parama)
   {
-    jYB.a(parama, Looper.getMainLooper());
+    kyY.a(parama, Looper.getMainLooper());
   }
   
   public final void d(a parama)
   {
-    jYB.remove(parama);
+    kyY.remove(parama);
   }
   
   public void lock()
   {
-    jYB.lock();
+    kyY.lock();
   }
   
   public void unlock()
   {
-    jYB.unlock();
+    kyY.unlock();
   }
   
   public static abstract interface a

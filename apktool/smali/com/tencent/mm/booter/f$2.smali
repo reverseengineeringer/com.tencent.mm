@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/r/d;
+.implements Lcom/tencent/mm/t/d;
 
 
 # annotations
@@ -30,12 +30,12 @@
 
 
 # virtual methods
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+.method public final onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
     .locals 5
 
     .prologue
     .line 268
-    const-string/jumbo v0, "!32@/B4Tb64lLpKz2WqBZk0UFFSRH4ZtiDb/"
+    const-string/jumbo v0, "MicroMsg.NotifySyncMgr"
 
     const-string/jumbo v1, "onGYNetEnd: %d [%d,%d,%s]"
 
@@ -75,7 +75,7 @@
 
     aput-object p3, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 269
     return-void

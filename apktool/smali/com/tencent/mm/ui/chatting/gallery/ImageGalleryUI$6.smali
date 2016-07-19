@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+.field final synthetic lGY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1579
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$6;->lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    .line 1613
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$6;->lGY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,14 +40,14 @@
     .locals 2
 
     .prologue
-    .line 1591
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$6;->lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    .line 1625
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$6;->lGY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->r(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;)Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->t(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;)Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->s(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;)Landroid/view/View;
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->u(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;)Landroid/view/View;
 
     move-result-object v0
 
@@ -57,28 +57,28 @@
 
     if-eqz v0, :cond_0
 
-    .line 1599
+    .line 1633
     :goto_0
     return-void
 
-    .line 1595
+    .line 1629
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$6;->lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$6;->lGY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->t(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->aM(Landroid/view/View;)V
-
-    .line 1596
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$6;->lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->r(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;)Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->v(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->u(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;)Landroid/view/View;
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->aQ(Landroid/view/View;)V
+
+    .line 1630
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$6;->lGY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->t(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;)Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->w(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;)Landroid/view/View;
 
     move-result-object v0
 
@@ -86,15 +86,15 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1597
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$6;->lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    .line 1631
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$6;->lGY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->p(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;)V
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->r(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;)V
 
-    .line 1598
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$6;->lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    .line 1632
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$6;->lGY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->q(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;)V
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->s(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;)V
 
     goto :goto_0
 .end method
@@ -103,7 +103,7 @@
     .locals 0
 
     .prologue
-    .line 1587
+    .line 1621
     return-void
 .end method
 
@@ -111,6 +111,6 @@
     .locals 0
 
     .prologue
-    .line 1583
+    .line 1617
     return-void
 .end method

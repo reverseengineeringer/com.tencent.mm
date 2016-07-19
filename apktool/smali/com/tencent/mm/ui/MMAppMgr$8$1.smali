@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/MMAppMgr$8;->lj()Z
+    value = Lcom/tencent/mm/ui/MMAppMgr$8;->jK()Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kqc:Lcom/tencent/mm/ui/MMAppMgr$8;
+.field final synthetic kPi:Lcom/tencent/mm/ui/MMAppMgr$8;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 297
-    iput-object p1, p0, Lcom/tencent/mm/ui/MMAppMgr$8$1;->kqc:Lcom/tencent/mm/ui/MMAppMgr$8;
+    .line 314
+    iput-object p1, p0, Lcom/tencent/mm/ui/MMAppMgr$8$1;->kPi:Lcom/tencent/mm/ui/MMAppMgr$8;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,63 +40,67 @@
     .locals 2
 
     .prologue
-    .line 301
-    invoke-static {}, Lcom/tencent/mm/modelvoice/m;->Ey()Lcom/tencent/mm/c/b/i;
+    .line 318
+    invoke-static {}, Lcom/tencent/mm/modelvoice/m;->ES()Lcom/tencent/mm/c/b/i;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/tencent/mm/c/b/i;->run()V
 
-    .line 302
-    invoke-static {}, Lcom/tencent/mm/an/j;->Ec()Lcom/tencent/mm/an/q$a;
+    .line 319
+    invoke-static {}, Lcom/tencent/mm/aq/n;->Eu()Lcom/tencent/mm/aq/u$a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/an/q$a;->run()V
+    invoke-virtual {v0}, Lcom/tencent/mm/aq/u$a;->run()V
 
-    .line 303
-    invoke-static {}, Lcom/tencent/mm/ab/n;->Am()Lcom/tencent/mm/ab/h;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ab/h;->run()V
-
-    .line 306
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/aj;->aPU()Lcom/tencent/mm/pluginsdk/model/app/ai$a;
+    .line 320
+    invoke-static {}, Lcom/tencent/mm/ae/n;->Aw()Lcom/tencent/mm/ae/h;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/model/app/ai$a;->run()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ae/h;->run()V
 
-    .line 307
-    invoke-static {}, Lcom/tencent/mm/app/plugin/voicereminder/a/d;->lq()Lcom/tencent/mm/app/plugin/voicereminder/a/j;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/app/plugin/voicereminder/a/j;->run()V
-
-    .line 308
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    new-instance v1, Lcom/tencent/mm/d/a/me;
-
-    invoke-direct {v1}, Lcom/tencent/mm/d/a/me;-><init>()V
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
-
-    .line 309
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 323
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/al;->aUD()Lcom/tencent/mm/pluginsdk/model/app/ak$a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rp()Lcom/tencent/mm/ag/c;
+    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/model/app/ak$a;->run()V
+
+    .line 324
+    sget-object v0, Lcom/tencent/mm/model/z$a;->btz:Lcom/tencent/mm/model/z$g;
+
+    if-eqz v0, :cond_0
+
+    .line 325
+    sget-object v0, Lcom/tencent/mm/model/z$a;->btz:Lcom/tencent/mm/model/z$g;
+
+    invoke-interface {v0}, Lcom/tencent/mm/model/z$g;->tb()V
+
+    .line 327
+    :cond_0
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    new-instance v1, Lcom/tencent/mm/e/a/mr;
+
+    invoke-direct {v1}, Lcom/tencent/mm/e/a/mr;-><init>()V
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
+
+    .line 328
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/aj/c;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ag/c;->b(Lcom/tencent/mm/ag/b$q;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/aj/c;->b(Lcom/tencent/mm/aj/b$q;)V
 
-    .line 311
+    .line 330
     return-void
 .end method

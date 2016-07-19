@@ -22,13 +22,13 @@
 
     .prologue
     .line 105
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -92,13 +92,13 @@
     move-exception v0
 
     .line 118
-    const-string/jumbo v1, "!44@/B4Tb64lLpJlA7B6REc/zShVqjCVepSQzf0nXVT1zJU="
+    const-string/jumbo v1, "MicroMsg.QrCodeURLHelper"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 121
     const-string/jumbo p0, ""
@@ -117,7 +117,7 @@
     const/4 v0, 0x0
 
     .line 126
-    const-string/jumbo v2, "!44@/B4Tb64lLpJlA7B6REc/zShVqjCVepSQzf0nXVT1zJU="
+    const-string/jumbo v2, "MicroMsg.QrCodeURLHelper"
 
     const-string/jumbo v3, "tryHandleEvents, url:%s"
 
@@ -125,10 +125,10 @@
 
     aput-object p2, v4, v0
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 127
-    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -208,7 +208,7 @@
     goto :goto_1
 .end method
 
-.method public final ba(Ljava/lang/String;)Z
+.method public final bf(Ljava/lang/String;)Z
     .locals 2
 
     .prologue
@@ -251,7 +251,7 @@
     goto :goto_0
 .end method
 
-.method public final o(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+.method public final p(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 12
 
     .prologue
@@ -263,7 +263,7 @@
 
     .line 26
     .line 28
-    invoke-static {p1, p2}, Lcom/tencent/mm/pluginsdk/ui/d/a;->aP(Landroid/content/Context;Ljava/lang/String;)Ljava/util/ArrayList;
+    invoke-static {p1, p2}, Lcom/tencent/mm/pluginsdk/ui/d/a;->aN(Landroid/content/Context;Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -378,7 +378,7 @@
 
     .line 54
     :goto_4
-    const-string/jumbo v0, "!44@/B4Tb64lLpJlA7B6REc/zShVqjCVepSQzf0nXVT1zJU="
+    const-string/jumbo v0, "MicroMsg.QrCodeURLHelper"
 
     const-string/jumbo v1, "formatQRString, result:%s"
 
@@ -386,7 +386,7 @@
 
     aput-object p2, v2, v10
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 

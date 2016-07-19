@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ldw:Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;
+.field final synthetic lDM:Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1217
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar$1;->ldw:Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;
+    .line 1576
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar$1;->lDM:Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,11 +40,11 @@
     .locals 1
 
     .prologue
-    .line 1221
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar$1;->ldw:Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;
+    .line 1580
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar$1;->lDM:Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->invalidate()V
 
-    .line 1222
+    .line 1581
     return-void
 .end method

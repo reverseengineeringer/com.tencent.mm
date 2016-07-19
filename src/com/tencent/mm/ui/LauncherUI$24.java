@@ -1,11 +1,9 @@
 package com.tencent.mm.ui;
 
-import android.content.Intent;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.base.OnLayoutChangedLinearLayout;
-import com.tencent.mm.ui.chatting.ChattingUI.a;
-import com.tencent.mm.ui.tools.TestTimeForChatting;
-import com.tencent.mm.ui.widget.f;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.platformtools.s;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.h;
 
 final class LauncherUI$24
   implements Runnable
@@ -14,34 +12,21 @@ final class LauncherUI$24
   
   public final void run()
   {
-    knl.kmQ = false;
-    if (knl.isFinishing()) {
-      return;
+    if (!ah.rg()) {
+      v.w("MicroMsg.UnreadCountHelper", "getAddrTabUnreadCount, but mmcore not ready");
     }
-    if (LauncherUI.p(knl) == null) {}
-    for (boolean bool = false;; bool = LauncherUI.p(knl).isShown())
+    for (int i = 0;; i = s.f((Integer)ah.tE().ro().get(143618, null)))
     {
-      u.i("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "ashutest::startChatting, ishow:%b", new Object[] { Boolean.valueOf(bool) });
-      Intent localIntent = new Intent().putExtra("Chat_User", knl.kmJ);
-      if (knl.kmK != null) {
-        localIntent.putExtras(knl.kmK);
+      if (LauncherUI.a(kMs) != null) {
+        LauncherUI.a(kMs).rF(i);
       }
-      localIntent.putExtra("img_gallery_enter_from_chatting_ui", true);
-      LauncherUI.a(knl, localIntent);
-      LauncherUI.z(knl).setOnChattingLayoutChangedListener(LauncherUI.A(knl));
-      LauncherUI.p(knl).setVisibility(0);
-      knl.baw();
-      if (!LauncherUI.h(knl).bbg()) {
-        break;
-      }
-      f.a(knl);
       return;
     }
   }
   
   public final String toString()
   {
-    return super.toString() + "|startChattingRunnable";
+    return super.toString() + "|setAddressTagUnread";
   }
 }
 

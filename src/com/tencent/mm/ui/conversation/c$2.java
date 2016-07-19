@@ -1,9 +1,7 @@
 package com.tencent.mm.ui.conversation;
 
-import com.tencent.mm.model.ah;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.platformtools.s;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class c$2
   implements Runnable
@@ -12,19 +10,19 @@ final class c$2
   
   public final void run()
   {
-    if (!ah.rh())
+    if (!com.tencent.mm.model.ah.rg())
     {
-      c.g(loD).aUF();
-      u.e("!44@/B4Tb64lLpJN/RyYD3u7HIqvfOQFnQw777RTG6BmS5Y=", "dkpno handleDataChange acc has not ready");
+      c.g(lOT).aZJ();
+      v.e("MicroMsg.ConversationAdapter", "dkpno handleDataChange acc has not ready");
       return;
     }
-    long l = t.FS();
-    c.h(loD);
-    l = t.an(l) * 3L;
-    u.d("!44@/B4Tb64lLpJN/RyYD3u7HIqvfOQFnQw777RTG6BmS5Y=", "dkpno handleDataChange guest:%d old:%d needNotify:%b", new Object[] { Long.valueOf(l), Long.valueOf(c.bhG()), Boolean.valueOf(c.e(loD)) });
-    c.dT((l + c.bhG()) / 2L);
-    c.i(loD);
-    c.g(loD).ds(c.bhG());
+    long l = s.Gp();
+    c.h(lOT);
+    l = s.au(l) * 3L;
+    v.d("MicroMsg.ConversationAdapter", "dkpno handleDataChange guest:%d old:%d needNotify:%b", new Object[] { Long.valueOf(l), Long.valueOf(c.bnx()), Boolean.valueOf(c.e(lOT)) });
+    c.ek((l + c.bnx()) / 2L);
+    c.i(lOT);
+    c.g(lOT).dJ(c.bnx());
   }
 }
 

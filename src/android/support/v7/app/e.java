@@ -16,64 +16,64 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import java.util.ArrayList;
 
 class e
   extends ActionBar
 {
-  private ArrayList ce = new ArrayList();
-  private ActionBarActivity iG;
-  private Context iZ;
-  private ActionBarOverlayLayout ja;
-  private ActionBarContainer jb;
-  private ViewGroup jc;
-  private ActionBarView jd;
-  private ActionBarContextView je;
-  private ActionBarContainer jf;
-  private ScrollingTabContainerView jg;
-  private int jh = -1;
-  private boolean ji;
-  private ArrayList jj = new ArrayList();
-  private int jk;
-  private boolean jl;
-  private int jm = 0;
-  private boolean jn;
-  private boolean jo;
-  boolean jp;
-  private boolean jq = true;
-  private boolean jr;
-  private ActionBar.a js;
+  private ArrayList<Object> cs = new ArrayList();
+  private ActionBarActivity iX;
+  private ArrayList<Object> jA = new ArrayList();
+  private int jB;
+  private boolean jC;
+  private int jD = 0;
+  private boolean jE;
+  private boolean jF;
+  boolean jG;
+  private boolean jH = true;
+  private boolean jI;
+  private ActionBar.a jJ;
+  private Context jq;
+  private ActionBarOverlayLayout jr;
+  private ActionBarContainer js;
+  private ViewGroup jt;
+  private ActionBarView ju;
+  private ActionBarContextView jv;
+  private ActionBarContainer jw;
+  private ScrollingTabContainerView jx;
+  private int jy = -1;
+  private boolean jz;
   Context mContext;
-  final aa mHandler = new aa();
+  final ac mHandler = new ac();
   
   public e(ActionBarActivity paramActionBarActivity, ActionBar.a parama)
   {
-    iG = paramActionBarActivity;
+    iX = paramActionBarActivity;
     mContext = paramActionBarActivity;
-    js = parama;
-    paramActionBarActivity = iG;
-    ja = ((ActionBarOverlayLayout)paramActionBarActivity.findViewById(2131169542));
-    if (ja != null) {
-      ja.setActionBar(this);
+    jJ = parama;
+    paramActionBarActivity = iX;
+    jr = ((ActionBarOverlayLayout)paramActionBarActivity.findViewById(2131755161));
+    if (jr != null) {
+      jr.iY = this;
     }
-    jd = ((ActionBarView)paramActionBarActivity.findViewById(2131169535));
-    je = ((ActionBarContextView)paramActionBarActivity.findViewById(2131169536));
-    jb = ((ActionBarContainer)paramActionBarActivity.findViewById(2131169534));
-    jc = ((ViewGroup)paramActionBarActivity.findViewById(2131169543));
-    if (jc == null) {
-      jc = jb;
+    ju = ((ActionBarView)paramActionBarActivity.findViewById(2131755158));
+    jv = ((ActionBarContextView)paramActionBarActivity.findViewById(2131755159));
+    js = ((ActionBarContainer)paramActionBarActivity.findViewById(2131755157));
+    jt = ((ViewGroup)paramActionBarActivity.findViewById(2131755162));
+    if (jt == null) {
+      jt = js;
     }
-    jf = ((ActionBarContainer)paramActionBarActivity.findViewById(2131169537));
-    if ((jd == null) || (je == null) || (jb == null)) {
+    jw = ((ActionBarContainer)paramActionBarActivity.findViewById(2131755160));
+    if ((ju == null) || (jv == null) || (js == null)) {
       throw new IllegalStateException(getClass().getSimpleName() + " can only be used with a compatible window decor layout");
     }
-    jd.setContextView(je);
-    if (jd.bO())
+    ju.jv = jv;
+    if (ju.bP())
     {
       i = 1;
-      jk = i;
-      if ((jd.getDisplayOptions() & 0x4) == 0) {
+      jB = i;
+      if ((ju.nU & 0x4) == 0) {
         break label346;
       }
     }
@@ -81,16 +81,16 @@ class e
     for (int i = 1;; i = 0)
     {
       if (i != 0) {
-        ji = true;
+        jz = true;
       }
-      paramActionBarActivity = a.m(mContext);
+      paramActionBarActivity = a.k(mContext);
       if ((paramActionBarActivity.aZ()) || (i != 0)) {
         bool = true;
       }
       setHomeButtonEnabled(bool);
-      o(paramActionBarActivity.aY());
-      paramActionBarActivity = iG.getTitle();
-      jd.setTitle(paramActionBarActivity);
+      n(paramActionBarActivity.aY());
+      paramActionBarActivity = iX.getTitle();
+      ju.setTitle(paramActionBarActivity);
       return;
       i = 0;
       break;
@@ -99,26 +99,31 @@ class e
   
   private void setDisplayOptions(int paramInt1, int paramInt2)
   {
-    int i = jd.getDisplayOptions();
+    int i = ju.nU;
     if ((paramInt2 & 0x4) != 0) {
-      ji = true;
+      jz = true;
     }
-    jd.setDisplayOptions(i & (paramInt2 ^ 0xFFFFFFFF) | paramInt1 & paramInt2);
+    ju.setDisplayOptions(i & (paramInt2 ^ 0xFFFFFFFF) | paramInt1 & paramInt2);
+  }
+  
+  public final void aI()
+  {
+    setCustomView(LayoutInflater.from(getThemedContext()).inflate(2130903070, ju, false));
   }
   
   public final void aJ()
   {
-    setCustomView(LayoutInflater.from(getThemedContext()).inflate(2131363238, jd, false));
+    ju.setIcon(2130839751);
   }
   
   public final void aK()
   {
-    jd.setIcon(2130968578);
+    setDisplayOptions(0, 2);
   }
   
   public final void aL()
   {
-    setDisplayOptions(0, 2);
+    setDisplayOptions(0, 8);
   }
   
   public final void aM()
@@ -130,21 +135,21 @@ class e
   {
     int k = 1;
     int j = 1;
-    boolean bool1 = jn;
-    boolean bool2 = jo;
+    boolean bool1 = jE;
+    boolean bool2 = jF;
     label77:
     Animation localAnimation;
-    if ((!jp) && ((bool1) || (bool2)))
+    if ((!jG) && ((bool1) || (bool2)))
     {
       i = 0;
       if (i == 0) {
         break label169;
       }
-      if (!jq)
+      if (!jH)
       {
-        jq = true;
-        jc.clearAnimation();
-        if (jc.getVisibility() != 0)
+        jH = true;
+        jt.clearAnimation();
+        if (jt.getVisibility() != 0)
         {
           if (!aX()) {
             break label164;
@@ -152,18 +157,18 @@ class e
           i = j;
           if (i != 0)
           {
-            localAnimation = AnimationUtils.loadAnimation(mContext, 2130837608);
-            jc.startAnimation(localAnimation);
+            localAnimation = AnimationUtils.loadAnimation(mContext, 2130968579);
+            jt.startAnimation(localAnimation);
           }
-          jc.setVisibility(0);
-          if ((jf != null) && (jf.getVisibility() != 0))
+          jt.setVisibility(0);
+          if ((jw != null) && (jw.getVisibility() != 0))
           {
             if (i != 0)
             {
-              localAnimation = AnimationUtils.loadAnimation(mContext, 2130837611);
-              jf.startAnimation(localAnimation);
+              localAnimation = AnimationUtils.loadAnimation(mContext, 2130968578);
+              jw.startAnimation(localAnimation);
             }
-            jf.setVisibility(0);
+            jw.setVisibility(0);
           }
         }
       }
@@ -179,114 +184,114 @@ class e
         break;
         i = 0;
         break label77;
-      } while (!jq);
-      jq = false;
-      jc.clearAnimation();
-    } while (jc.getVisibility() == 8);
+      } while (!jH);
+      jH = false;
+      jt.clearAnimation();
+    } while (jt.getVisibility() == 8);
     if (aX()) {}
     for (int i = k;; i = 0)
     {
       if (i != 0)
       {
-        localAnimation = AnimationUtils.loadAnimation(mContext, 2130837607);
-        jc.startAnimation(localAnimation);
+        localAnimation = AnimationUtils.loadAnimation(mContext, 2130968581);
+        jt.startAnimation(localAnimation);
       }
-      jc.setVisibility(8);
-      if ((jf == null) || (jf.getVisibility() == 8)) {
+      jt.setVisibility(8);
+      if ((jw == null) || (jw.getVisibility() == 8)) {
         break;
       }
       if (i != 0)
       {
-        localAnimation = AnimationUtils.loadAnimation(mContext, 2130837606);
-        jf.startAnimation(localAnimation);
+        localAnimation = AnimationUtils.loadAnimation(mContext, 2130968580);
+        jw.startAnimation(localAnimation);
       }
-      jf.setVisibility(8);
+      jw.setVisibility(8);
       return;
     }
   }
   
   boolean aX()
   {
-    return jr;
+    return jI;
   }
   
   public final View getCustomView()
   {
-    return jd.getCustomNavigationView();
+    return ju.ob;
   }
   
   public final int getDisplayOptions()
   {
-    return jd.getDisplayOptions();
+    return ju.nU;
   }
   
   public final int getHeight()
   {
-    return jb.getHeight();
+    return js.getHeight();
   }
   
   public final Context getThemedContext()
   {
     int i;
-    if (iZ == null)
+    if (jq == null)
     {
       TypedValue localTypedValue = new TypedValue();
-      mContext.getTheme().resolveAttribute(2130772115, localTypedValue, true);
+      mContext.getTheme().resolveAttribute(2130771976, localTypedValue, true);
       i = resourceId;
       if (i == 0) {
         break label61;
       }
     }
     label61:
-    for (iZ = new ContextThemeWrapper(mContext, i);; iZ = mContext) {
-      return iZ;
+    for (jq = new ContextThemeWrapper(mContext, i);; jq = mContext) {
+      return jq;
     }
   }
   
   public final CharSequence getTitle()
   {
-    return jd.getTitle();
+    return ju.kD;
   }
   
   public void hide()
   {
-    if (!jn)
+    if (!jE)
     {
-      jn = true;
+      jE = true;
       aW();
     }
   }
   
   public final boolean isShowing()
   {
-    return jq;
+    return jH;
   }
   
-  final void o(boolean paramBoolean)
+  final void n(boolean paramBoolean)
   {
     boolean bool = true;
-    jl = paramBoolean;
+    jC = paramBoolean;
     int i;
     label46:
     label65:
     ActionBarView localActionBarView;
-    if (!jl)
+    if (!jC)
     {
-      jd.setEmbeddedTabView(null);
-      jb.setTabContainer(jg);
-      if (jd.getNavigationMode() != 2) {
+      ju.b(null);
+      js.a(jx);
+      if (ju.nT != 2) {
         break label113;
       }
       i = 1;
-      if (jg != null)
+      if (jx != null)
       {
         if (i == 0) {
           break label118;
         }
-        jg.setVisibility(0);
+        jx.setVisibility(0);
       }
-      localActionBarView = jd;
-      if ((jl) || (i == 0)) {
+      localActionBarView = ju;
+      if ((jC) || (i == 0)) {
         break label130;
       }
     }
@@ -295,38 +300,38 @@ class e
     label130:
     for (paramBoolean = bool;; paramBoolean = false)
     {
-      localActionBarView.setCollapsable(paramBoolean);
+      ok = paramBoolean;
       return;
-      jb.setTabContainer(null);
-      jd.setEmbeddedTabView(jg);
+      js.a(null);
+      ju.b(jx);
       break;
       i = 0;
       break label46;
-      jg.setVisibility(8);
+      jx.setVisibility(8);
       break label65;
     }
   }
   
-  public final void p(boolean paramBoolean)
+  public final void o(boolean paramBoolean)
   {
-    jr = paramBoolean;
+    jI = paramBoolean;
     if (!paramBoolean)
     {
-      jc.clearAnimation();
-      if (jf != null) {
-        jf.clearAnimation();
+      jt.clearAnimation();
+      if (jw != null) {
+        jw.clearAnimation();
       }
     }
   }
   
   public final void setBackgroundDrawable(Drawable paramDrawable)
   {
-    jb.setPrimaryBackground(paramDrawable);
+    js.b(paramDrawable);
   }
   
   public final void setCustomView(View paramView)
   {
-    jd.setCustomNavigationView(paramView);
+    ju.F(paramView);
   }
   
   public final void setDisplayHomeAsUpEnabled(boolean paramBoolean)
@@ -342,36 +347,26 @@ class e
   public final void setDisplayOptions(int paramInt)
   {
     if ((paramInt & 0x4) != 0) {
-      ji = true;
+      jz = true;
     }
-    jd.setDisplayOptions(paramInt);
-  }
-  
-  public final void setDisplayShowTitleEnabled(boolean paramBoolean)
-  {
-    if (paramBoolean) {}
-    for (int i = 8;; i = 0)
-    {
-      setDisplayOptions(i, 8);
-      return;
-    }
+    ju.setDisplayOptions(paramInt);
   }
   
   public final void setHomeButtonEnabled(boolean paramBoolean)
   {
-    jd.setHomeButtonEnabled(paramBoolean);
+    ju.setHomeButtonEnabled(paramBoolean);
   }
   
   public final void setLogo(Drawable paramDrawable)
   {
-    jd.setLogo(paramDrawable);
+    ju.setLogo(paramDrawable);
   }
   
   public void show()
   {
-    if (jn)
+    if (jE)
     {
-      jn = false;
+      jE = false;
       aW();
     }
   }

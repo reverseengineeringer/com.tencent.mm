@@ -2,12 +2,12 @@ package com.tencent.mm.plugin.sns.ui;
 
 final class SnsInfoFlip$a
 {
-  long gPU = -1L;
-  int gPV;
-  int heT = -1;
-  long heU = -1L;
-  long heV = -1L;
-  String heW;
+  long gXT = -1L;
+  int gXU;
+  int htK = -1;
+  long htL = -1L;
+  long htM = -1L;
+  String htN;
   int networkType;
   
   SnsInfoFlip$a(SnsInfoFlip paramSnsInfoFlip) {}

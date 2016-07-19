@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/LoginIndepPass;->Gb()V
+    value = Lcom/tencent/mm/ui/account/LoginIndepPass;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ktE:Lcom/tencent/mm/ui/account/LoginIndepPass;
+.field final synthetic kSL:Lcom/tencent/mm/ui/account/LoginIndepPass;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 226
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$12;->ktE:Lcom/tencent/mm/ui/account/LoginIndepPass;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$12;->kSL:Lcom/tencent/mm/ui/account/LoginIndepPass;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,12 +45,12 @@
     .line 230
     const-string/jumbo v0, "L200_100"
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kC(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->ll(Ljava/lang/String;)V
 
     .line 232
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$12;->ktE:Lcom/tencent/mm/ui/account/LoginIndepPass;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$12;->kSL:Lcom/tencent/mm/ui/account/LoginIndepPass;
 
     const-class v2, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
@@ -67,12 +67,12 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 235
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$12;->ktE:Lcom/tencent/mm/ui/account/LoginIndepPass;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$12;->kSL:Lcom/tencent/mm/ui/account/LoginIndepPass;
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/account/LoginIndepPass;->startActivity(Landroid/content/Intent;)V
 
     .line 236
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$12;->ktE:Lcom/tencent/mm/ui/account/LoginIndepPass;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$12;->kSL:Lcom/tencent/mm/ui/account/LoginIndepPass;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/account/LoginIndepPass;->finish()V
 

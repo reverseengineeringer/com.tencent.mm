@@ -12,35 +12,41 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1a
+    accessFlags = 0x12
     name = "a"
 .end annotation
 
 
+# instance fields
+.field final synthetic kte:Lcom/tencent/mm/sandbox/updater/d;
+
+
 # direct methods
-.method private constructor <init>()V
+.method private constructor <init>(Lcom/tencent/mm/sandbox/updater/d;)V
     .locals 0
 
     .prologue
-    .line 164
+    .line 201
+    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/d$a;->kte:Lcom/tencent/mm/sandbox/updater/d;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(B)V
+.method synthetic constructor <init>(Lcom/tencent/mm/sandbox/updater/d;B)V
     .locals 0
 
     .prologue
-    .line 164
-    invoke-direct {p0}, Lcom/tencent/mm/sandbox/updater/d$a;-><init>()V
+    .line 201
+    invoke-direct {p0, p1}, Lcom/tencent/mm/sandbox/updater/d$a;-><init>(Lcom/tencent/mm/sandbox/updater/d;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDownloadFinish(I)V
+.method public final qW(I)V
     .locals 9
 
     .prologue
@@ -50,8 +56,8 @@
 
     const/4 v6, 0x0
 
-    .line 170
-    const-string/jumbo v0, "!32@/B4Tb64lLpLvZ25C9TZu30Db4xS89/BP"
+    .line 207
+    const-string/jumbo v0, "MicroMsg.MyTbsListener"
 
     const-string/jumbo v1, "onDownloadFinish, result = %d"
 
@@ -63,34 +69,34 @@
 
     aput-object v3, v2, v6
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 171
+    .line 208
     const/4 v0, 0x5
 
-    invoke-static {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/tools/j;->be(II)V
+    invoke-static {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/tools/j;->bi(II)V
 
-    .line 173
+    .line 210
     const/16 v0, 0x6e
 
     if-eq p1, v0, :cond_0
 
-    .line 175
+    .line 212
     const/16 v0, 0x64
 
     if-ne p1, v0, :cond_2
 
-    .line 176
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 213
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/4 v1, 0x3
 
-    invoke-virtual {v0, v8, v1}, Lcom/tencent/mm/plugin/report/service/h;->aQ(II)V
+    invoke-virtual {v0, v8, v1}, Lcom/tencent/mm/plugin/report/service/g;->aY(II)V
 
-    .line 187
+    .line 224
     :cond_0
     :goto_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -100,44 +106,44 @@
 
     move-result-object v0
 
-    .line 188
+    .line 225
     if-eqz v0, :cond_1
 
-    .line 189
-    const-string/jumbo v1, "!32@/B4Tb64lLpLvZ25C9TZu30Db4xS89/BP"
+    .line 226
+    const-string/jumbo v1, "MicroMsg.MyTbsListener"
 
     const-string/jumbo v2, "tbs has download finished, save to sharedpreference"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 190
+    .line 227
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 191
+    .line 228
     const-string/jumbo v1, "tbs_download_finished"
 
     invoke-interface {v0, v1, v7}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 192
+    .line 229
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x8
 
     if-le v1, v2, :cond_3
 
-    .line 193
+    .line 230
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 198
+    .line 235
     :cond_1
     :goto_1
     return-void
 
-    .line 182
+    .line 219
     :cond_2
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0x40
 
@@ -145,26 +151,18 @@
 
     const-wide/16 v4, 0x1
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
     goto :goto_0
 
-    .line 195
+    .line 232
     :cond_3
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     goto :goto_1
 .end method
 
-.method public final onDownloadProgress(I)V
-    .locals 0
-
-    .prologue
-    .line 220
-    return-void
-.end method
-
-.method public final onInstallFinish(I)V
+.method public final qX(I)V
     .locals 7
 
     .prologue
@@ -172,8 +170,8 @@
 
     const/4 v6, 0x0
 
-    .line 202
-    const-string/jumbo v0, "!32@/B4Tb64lLpLvZ25C9TZu30Db4xS89/BP"
+    .line 239
+    const-string/jumbo v0, "MicroMsg.MyTbsListener"
 
     const-string/jumbo v1, "onInstallFinish, result = %d"
 
@@ -187,12 +185,12 @@
 
     aput-object v3, v2, v6
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 203
-    invoke-static {v4, p1}, Lcom/tencent/mm/pluginsdk/ui/tools/j;->be(II)V
+    .line 240
+    invoke-static {v4, p1}, Lcom/tencent/mm/pluginsdk/ui/tools/j;->bi(II)V
 
-    .line 205
+    .line 242
     const/16 v0, 0xc8
 
     if-eq p1, v0, :cond_0
@@ -201,21 +199,26 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 206
+    .line 243
     :cond_0
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/4 v1, 0x7
 
-    invoke-virtual {v0, v1, v4}, Lcom/tencent/mm/plugin/report/service/h;->aQ(II)V
+    invoke-virtual {v0, v1, v4}, Lcom/tencent/mm/plugin/report/service/g;->aY(II)V
 
-    .line 215
+    .line 248
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/d$a;->kte:Lcom/tencent/mm/sandbox/updater/d;
+
+    invoke-static {v0}, Lcom/tencent/mm/sandbox/updater/d;->a(Lcom/tencent/mm/sandbox/updater/d;)V
+
+    .line 254
     :goto_0
     return-void
 
-    .line 212
+    .line 251
     :cond_1
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0x40
 
@@ -223,7 +226,15 @@
 
     const-wide/16 v4, 0x1
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
     goto :goto_0
+.end method
+
+.method public final qY(I)V
+    .locals 0
+
+    .prologue
+    .line 258
+    return-void
 .end method

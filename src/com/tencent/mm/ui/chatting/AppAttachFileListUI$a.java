@@ -1,9 +1,11 @@
 package com.tencent.mm.ui.chatting;
 
 import android.os.AsyncTask;
+import com.tencent.mm.storage.ai;
+import java.util.List;
 
 final class AppAttachFileListUI$a
-  extends AsyncTask
+  extends AsyncTask<Integer, Integer, List<ai>>
 {
   private AppAttachFileListUI$a(AppAttachFileListUI paramAppAttachFileListUI) {}
 }

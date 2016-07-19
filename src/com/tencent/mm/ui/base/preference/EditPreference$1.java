@@ -12,15 +12,15 @@ final class EditPreference$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (EditPreference.a(kLf) != null) {
-      EditPreference.a(kLf).dismiss();
+    if (EditPreference.a(lku) != null) {
+      EditPreference.a(lku).dismiss();
     }
-    kLf.value = kLe.getText().toString();
-    if (EditPreference.b(kLf) != null) {
-      EditPreference.b(kLf).bdp();
+    lku.value = lkt.getText().toString();
+    if (EditPreference.b(lku) != null) {
+      EditPreference.b(lku).biW();
     }
-    if (EditPreference.c(kLf) != null) {
-      EditPreference.c(kLf).a(kLf, EditPreference.d(kLf));
+    if (EditPreference.c(lku) != null) {
+      EditPreference.c(lku).a(lku, EditPreference.d(lku));
     }
   }
 }

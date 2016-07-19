@@ -10,7 +10,7 @@ final class BindMContactIntroUI$22
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    BindMContactIntroUI.c(kOs);
+    BindMContactIntroUI.c(lnI);
     return true;
   }
 }

@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field aJD:Ljava/lang/String;
+.field avX:Ljava/lang/String;
 
-.field bUu:Ljava/lang/String;
+.field bNV:Ljava/lang/String;
 
-.field eCk:I
+.field eIJ:I
 
-.field eCl:Ljava/lang/String;
+.field eIK:Ljava/lang/String;
 
 
 # direct methods
@@ -22,16 +22,16 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 315
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/d;->bUu:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/d;->bNV:Ljava/lang/String;
 
     .line 316
-    iput-object p2, p0, Lcom/tencent/mm/ui/tools/d;->aJD:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/ui/tools/d;->avX:Ljava/lang/String;
 
     .line 317
-    iput p3, p0, Lcom/tencent/mm/ui/tools/d;->eCk:I
+    iput p3, p0, Lcom/tencent/mm/ui/tools/d;->eIJ:I
 
     .line 318
-    iput-object p4, p0, Lcom/tencent/mm/ui/tools/d;->eCl:Ljava/lang/String;
+    iput-object p4, p0, Lcom/tencent/mm/ui/tools/d;->eIK:Ljava/lang/String;
 
     .line 320
     return-void

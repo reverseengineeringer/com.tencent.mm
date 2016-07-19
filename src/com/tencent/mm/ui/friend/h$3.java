@@ -10,7 +10,7 @@ final class h$3
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    lsw.lsv.ic(true);
+    lTa.lSZ.iG(true);
   }
 }
 

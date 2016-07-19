@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/gallery/j;->bgS()Lcom/tencent/mm/ui/chatting/gallery/j;
+    value = Lcom/tencent/mm/ui/chatting/gallery/j;->bmA()Lcom/tencent/mm/ui/chatting/gallery/j;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lhq:Lcom/tencent/mm/ui/chatting/gallery/j;
+.field final synthetic lHB:Lcom/tencent/mm/ui/chatting/gallery/j;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 200
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1;->lhq:Lcom/tencent/mm/ui/chatting/gallery/j;
+    .line 202
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1;->lHB:Lcom/tencent/mm/ui/chatting/gallery/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,47 +36,29 @@
 
 
 # virtual methods
-.method public final Xq()V
+.method public final Zb()V
     .locals 0
 
     .prologue
-    .line 206
+    .line 208
     return-void
 .end method
 
-.method public final aA(II)I
-    .locals 1
-
-    .prologue
-    .line 271
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final aB(II)V
-    .locals 0
-
-    .prologue
-    .line 277
-    return-void
-.end method
-
-.method public final az(II)V
+.method public final aE(II)V
     .locals 3
 
     .prologue
-    .line 210
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1;->lhq:Lcom/tencent/mm/ui/chatting/gallery/j;
+    .line 212
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1;->lHB:Lcom/tencent/mm/ui/chatting/gallery/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/j;->hfd:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/j;->htU:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->stop()V
 
-    .line 211
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1;->lhq:Lcom/tencent/mm/ui/chatting/gallery/j;
+    .line 213
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1;->lHB:Lcom/tencent/mm/ui/chatting/gallery/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/j;->hfd:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/j;->htU:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     check-cast v0, Landroid/view/View;
 
@@ -86,12 +68,12 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 213
+    .line 215
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->avE()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->axV()Ljava/lang/String;
 
     move-result-object v2
 
@@ -127,7 +109,7 @@
 
     const-string/jumbo v2, ""
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -139,7 +121,7 @@
 
     move-result-object v1
 
-    .line 215
+    .line 217
     invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v1
@@ -152,19 +134,19 @@
 
     const-string/jumbo v2, "FullScreenPlaySight"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/b/b;->q(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/b/b;->o(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 217
+    .line 219
     new-instance v1, Lcom/tencent/mm/ui/chatting/gallery/j$1$1;
 
     invoke-direct {v1, p0, v0}, Lcom/tencent/mm/ui/chatting/gallery/j$1$1;-><init>(Lcom/tencent/mm/ui/chatting/gallery/j$1;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
-    .line 241
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1;->lhq:Lcom/tencent/mm/ui/chatting/gallery/j;
+    .line 243
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1;->lHB:Lcom/tencent/mm/ui/chatting/gallery/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/chatting/gallery/j;->lgX:Ljava/util/HashMap;
+    iget-object v1, v1, Lcom/tencent/mm/ui/chatting/gallery/j;->lHj:Ljava/util/HashMap;
 
     const/4 v2, 0x1
 
@@ -174,25 +156,43 @@
 
     invoke-virtual {v1, v0, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 242
+    .line 244
     return-void
 .end method
 
-.method public final lG()V
+.method public final aF(II)I
+    .locals 1
+
+    .prologue
+    .line 273
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final aG(II)V
+    .locals 0
+
+    .prologue
+    .line 279
+    return-void
+.end method
+
+.method public final jQ()V
     .locals 2
 
     .prologue
-    .line 246
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1;->lhq:Lcom/tencent/mm/ui/chatting/gallery/j;
+    .line 248
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1;->lHB:Lcom/tencent/mm/ui/chatting/gallery/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/j;->hfd:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/j;->htU:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->start()Z
 
-    .line 248
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1;->lhq:Lcom/tencent/mm/ui/chatting/gallery/j;
+    .line 250
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1;->lHB:Lcom/tencent/mm/ui/chatting/gallery/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/j;->hfh:Landroid/view/View;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/j;->htY:Landroid/view/View;
 
     new-instance v1, Lcom/tencent/mm/ui/chatting/gallery/j$1$2;
 
@@ -200,6 +200,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    .line 266
+    .line 268
     return-void
 .end method

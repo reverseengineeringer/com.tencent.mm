@@ -19,17 +19,17 @@
 
 
 # instance fields
-.field private eut:Ljava/lang/String;
+.field private eAL:Ljava/lang/String;
 
-.field kDb:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$c;
+.field lcg:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$c;
 
-.field kDc:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$b;
+.field lch:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$b;
 
-.field kDd:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$d;
+.field lci:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$d;
 
-.field private kDe:Landroid/widget/EditText;
+.field private lcj:Landroid/widget/EditText;
 
-.field kDf:I
+.field lck:I
 
 .field mIndex:I
 
@@ -50,10 +50,10 @@
     .line 71
     const/4 v0, 0x4
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->kDf:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->lck:I
 
     .line 75
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->kDe:Landroid/widget/EditText;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->lcj:Landroid/widget/EditText;
 
     .line 76
     return-void
@@ -72,27 +72,27 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->eut:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->eAL:Ljava/lang/String;
 
     .line 112
     const-string/jumbo v1, ""
 
     .line 113
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->kDd:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$d;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->lci:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$d;
 
     if-eqz v2, :cond_0
 
     .line 114
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->kDd:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$d;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->lci:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$d;
 
-    invoke-interface {v2}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$d;->bcw()V
+    invoke-interface {v2}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$d;->bhL()V
 
     :cond_0
     move v2, v0
 
     .line 116
     :goto_0
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->eut:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->eAL:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -104,7 +104,7 @@
     add-int/lit8 v2, v2, 0x1
 
     .line 118
-    iget v3, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->kDf:I
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->lck:I
 
     if-gt v2, v3, :cond_1
 
@@ -117,7 +117,7 @@
 
     move-result-object v1
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->eut:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->eAL:Ljava/lang/String;
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->charAt(I)C
 
@@ -138,17 +138,17 @@
 
     .line 124
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->kDf:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->lck:I
 
     if-le v2, v0, :cond_2
 
     .line 125
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->kDe:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->lcj:Landroid/widget/EditText;
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 126
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->kDe:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->lcj:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -158,21 +158,21 @@
 
     .line 128
     :cond_2
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->kDf:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->lck:I
 
     if-lt v2, v0, :cond_3
 
     .line 129
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->kDb:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->lcg:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$c;
 
     if-eqz v0, :cond_3
 
     .line 130
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->kDb:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->lcg:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$c;
 
     iget v1, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->mIndex:I
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$c;->qD(I)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$c;->sw(I)V
 
     .line 133
     :cond_3
@@ -196,7 +196,7 @@
 
     if-ne p2, v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->kDe:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->lcj:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -217,16 +217,16 @@
     if-nez v0, :cond_0
 
     .line 138
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->kDc:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->lch:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$b;
 
     if-eqz v0, :cond_0
 
     .line 139
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->kDc:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->lch:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$b;
 
     iget v1, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;->mIndex:I
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$b;->qC(I)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$b;->sv(I)V
 
     .line 142
     :cond_0

@@ -1,8 +1,10 @@
 package com.tencent.mm.ui.chatting;
 
+import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
-import com.tencent.mm.r.e;
-import com.tencent.mm.r.j;
+import com.tencent.mm.t.e;
+import com.tencent.mm.t.j;
 
 final class AppAttachDownloadUI$4
   implements e
@@ -14,7 +16,13 @@ final class AppAttachDownloadUI$4
     if (paramInt2 == 0) {}
     for (float f = 0.0F;; f = paramInt1 * 100.0F / paramInt2)
     {
-      AppAttachDownloadUI.g(kQa).setProgress((int)f);
+      if ((paramInt1 < paramInt2) && (AppAttachDownloadUI.g(lpP).getVisibility() != 0))
+      {
+        AppAttachDownloadUI.g(lpP).setVisibility(0);
+        AppAttachDownloadUI.h(lpP).setVisibility(8);
+        AppAttachDownloadUI.i(lpP).setVisibility(0);
+      }
+      AppAttachDownloadUI.j(lpP).setProgress((int)f);
       return;
     }
   }

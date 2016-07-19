@@ -4,7 +4,7 @@ import android.os.Bundle;
 import com.tencent.mm.modelfriend.ah;
 import com.tencent.mm.modelfriend.c;
 import com.tencent.mm.pluginsdk.l;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 @URISpanHandlerSet.a
 class URISpanHandlerSet$PhoneEmailUriSpanHandler
@@ -32,19 +32,19 @@ class URISpanHandlerSet$PhoneEmailUriSpanHandler
       if (paramb != null)
       {
         localBundle.putString("Contact_User", paramb);
-        paramb = ah.zq().hq(paramb);
-        if ((paramb == null) || (ay.kz(paramb.yh()))) {
+        paramb = ah.zD().hI(paramb);
+        if ((paramb == null) || (be.kf(paramb.yt()))) {
           break label144;
         }
       }
-      for (paramb = ay.ky(paramb.yp()).replace(" ", "");; paramb = null)
+      for (paramb = be.li(paramb.yB()).replace(" ", "");; paramb = null)
       {
         localBundle.putString("Contact_Mobile_MD5", paramb);
         localBundle.putInt("fromScene", 1);
-        com.tencent.mm.pluginsdk.ui.d.g.a(URISpanHandlerSet.a(ang), url, null, localBundle);
+        com.tencent.mm.pluginsdk.ui.d.g.a(URISpanHandlerSet.a(ZU), url, null, localBundle);
         return true;
         if (type == 24) {
-          com.tencent.mm.pluginsdk.ui.d.g.b(URISpanHandlerSet.a(ang), url, null);
+          com.tencent.mm.pluginsdk.ui.d.g.b(URISpanHandlerSet.a(ZU), url, null);
         }
         return false;
       }
@@ -56,12 +56,12 @@ class URISpanHandlerSet$PhoneEmailUriSpanHandler
     return false;
   }
   
-  final com.tencent.mm.pluginsdk.ui.applet.g bb(String paramString)
+  final com.tencent.mm.pluginsdk.ui.applet.g bg(String paramString)
   {
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 25, 24 };
   }

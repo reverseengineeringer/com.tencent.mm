@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field final jA:Landroid/view/MenuInflater;
+.field final jR:Landroid/view/MenuInflater;
 
-.field final jB:Landroid/view/ActionMode;
+.field final jS:Landroid/view/ActionMode;
 
 
 # direct methods
@@ -18,14 +18,14 @@
     invoke-direct {p0}, Landroid/support/v7/a/a;-><init>()V
 
     .line 35
-    iput-object p2, p0, Landroid/support/v7/internal/view/b;->jB:Landroid/view/ActionMode;
+    iput-object p2, p0, Landroid/support/v7/internal/view/b;->jS:Landroid/view/ActionMode;
 
     .line 36
     new-instance v0, Landroid/support/v7/internal/view/c;
 
     invoke-direct {v0, p1}, Landroid/support/v7/internal/view/c;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Landroid/support/v7/internal/view/b;->jA:Landroid/view/MenuInflater;
+    iput-object v0, p0, Landroid/support/v7/internal/view/b;->jR:Landroid/view/MenuInflater;
 
     .line 37
     return-void
@@ -38,7 +38,7 @@
 
     .prologue
     .line 81
-    iget-object v0, p0, Landroid/support/v7/internal/view/b;->jB:Landroid/view/ActionMode;
+    iget-object v0, p0, Landroid/support/v7/internal/view/b;->jS:Landroid/view/ActionMode;
 
     invoke-virtual {v0}, Landroid/view/ActionMode;->finish()V
 
@@ -51,7 +51,7 @@
 
     .prologue
     .line 86
-    iget-object v0, p0, Landroid/support/v7/internal/view/b;->jB:Landroid/view/ActionMode;
+    iget-object v0, p0, Landroid/support/v7/internal/view/b;->jS:Landroid/view/ActionMode;
 
     invoke-virtual {v0}, Landroid/view/ActionMode;->getMenu()Landroid/view/Menu;
 
@@ -69,7 +69,7 @@
 
     .prologue
     .line 56
-    iget-object v0, p0, Landroid/support/v7/internal/view/b;->jB:Landroid/view/ActionMode;
+    iget-object v0, p0, Landroid/support/v7/internal/view/b;->jS:Landroid/view/ActionMode;
 
     invoke-virtual {v0, p1}, Landroid/view/ActionMode;->setTitleOptionalHint(Z)V
 

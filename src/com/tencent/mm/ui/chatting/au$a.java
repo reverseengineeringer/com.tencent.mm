@@ -1,64 +1,52 @@
 package com.tencent.mm.ui.chatting;
 
+import android.graphics.Color;
+import android.graphics.PorterDuff.Mode;
+import android.graphics.drawable.Drawable;
+import android.view.MotionEvent;
 import android.view.View;
-import com.tencent.mm.ab.a.c.g;
-import com.tencent.mm.ab.a.d.b;
-import com.tencent.mm.ab.p;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import android.view.View.OnTouchListener;
+import android.widget.ImageView;
 
-final class au$a
-  implements g
+public final class au$a
+  implements View.OnTouchListener
 {
-  public final void a(String paramString, View paramView, b paramb)
+  private int dt;
+  
+  public au$a()
   {
-    if (bUf != 2) {
-      return;
-    }
-    u.d("!44@/B4Tb64lLpKwUcOR+EdWcnV0HAtjP+spb90wXEMFBs0=", "onImageLoadFinish, url:%s, contentType: %s", new Object[] { paramString, aKX });
-    if ((p.Aw()) && (!ay.kz(aKX)) && (p.hV(paramString)) && (aKX.equals("image/webp"))) {}
-    for (boolean bool = true;; bool = false)
-    {
-      int i = status;
-      u.d("!44@/B4Tb64lLpKwUcOR+EdWcnV0HAtjP+spb90wXEMFBs0=", "onImageLoadFinish, isDownloadWebp: %b, status: %d", new Object[] { Boolean.valueOf(bool), Integer.valueOf(i) });
-      switch (i)
-      {
-      case 2: 
-      default: 
-        return;
-      case 0: 
-        if (!bool) {
-          break;
-        }
-        paramString = h.fUJ;
-        h.b(86L, 13L, 1L, false);
-        return;
-      case 1: 
-        paramString = h.fUJ;
-        h.b(86L, 2L, 1L, false);
-        if (!bool) {
-          break;
-        }
-        paramString = h.fUJ;
-        h.b(86L, 15L, 1L, false);
-        return;
-      case 3: 
-        if (!bool) {
-          break;
-        }
-        paramString = h.fUJ;
-        h.b(86L, 14L, 1L, false);
-        return;
-      }
-    }
+    this(Color.argb(255, 136, 136, 136));
   }
   
-  public final void ie(String paramString)
+  private au$a(int paramInt)
   {
-    u.d("!44@/B4Tb64lLpKwUcOR+EdWcnV0HAtjP+spb90wXEMFBs0=", "onImageLoadStart, url: %s", new Object[] { paramString });
-    paramString = h.fUJ;
-    h.b(86L, 0L, 1L, false);
+    dt = paramInt;
+  }
+  
+  public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
+  {
+    int i = paramMotionEvent.getAction();
+    if ((paramView instanceof ImageView))
+    {
+      paramView = ((ImageView)paramView).getDrawable();
+      if (paramView != null)
+      {
+        if (i != 0) {
+          break label49;
+        }
+        paramView.setColorFilter(dt, PorterDuff.Mode.MULTIPLY);
+      }
+    }
+    for (;;)
+    {
+      return false;
+      paramView = paramView.getBackground();
+      break;
+      label49:
+      if ((i == 3) || (i == 1)) {
+        paramView.clearColorFilter();
+      }
+    }
   }
 }
 

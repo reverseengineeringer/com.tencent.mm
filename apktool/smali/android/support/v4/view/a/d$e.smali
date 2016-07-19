@@ -30,7 +30,7 @@
 
 
 # virtual methods
-.method public ax()Ljava/lang/Object;
+.method public aw()Ljava/lang/Object;
     .locals 1
 
     .prologue

@@ -4,25 +4,55 @@
 
 
 # static fields
-.field private static khR:Ljava/lang/String;
+.field private static kIr:Ljava/lang/String;
 
-.field protected static khS:I
+.field protected static kIs:I
 
-.field private static khT:Ljava/lang/String;
+.field private static kIt:Ljava/lang/String;
 
-.field private static khU:Ljava/util/Map;
+.field private static kIu:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Integer;",
+            "Lcom/tencent/mm/svg/c;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private static khV:Ljava/util/Map;
+.field private static kIv:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Integer;",
+            "Landroid/graphics/Picture;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private static khW:Ljava/util/Map;
+.field private static kIw:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Landroid/graphics/Picture;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private static khX:Ljava/lang/Float;
+.field private static kIx:Ljava/lang/Float;
 
 
 # instance fields
-.field private khP:Landroid/util/TypedValue;
+.field private kIp:Landroid/util/TypedValue;
 
-.field private khQ:[B
+.field private kIq:[B
 
 
 # direct methods
@@ -33,38 +63,38 @@
     .line 37
     const-string/jumbo v0, ".svg.code.drawable"
 
-    sput-object v0, Lcom/tencent/mm/svg/b/a;->khR:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/svg/b/a;->kIr:Ljava/lang/String;
 
     .line 39
     const/4 v0, 0x3
 
-    sput v0, Lcom/tencent/mm/svg/b/a;->khS:I
+    sput v0, Lcom/tencent/mm/svg/b/a;->kIs:I
 
     .line 41
     const-string/jumbo v0, ""
 
-    sput-object v0, Lcom/tencent/mm/svg/b/a;->khT:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/svg/b/a;->kIt:Ljava/lang/String;
 
     .line 280
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/svg/b/a;->khU:Ljava/util/Map;
+    sput-object v0, Lcom/tencent/mm/svg/b/a;->kIu:Ljava/util/Map;
 
     .line 281
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/svg/b/a;->khV:Ljava/util/Map;
+    sput-object v0, Lcom/tencent/mm/svg/b/a;->kIv:Ljava/util/Map;
 
     .line 282
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/svg/b/a;->khW:Ljava/util/Map;
+    sput-object v0, Lcom/tencent/mm/svg/b/a;->kIw:Ljava/util/Map;
 
     return-void
 .end method
@@ -81,24 +111,24 @@
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/svg/b/a;->khP:Landroid/util/TypedValue;
+    iput-object v0, p0, Lcom/tencent/mm/svg/b/a;->kIp:Landroid/util/TypedValue;
 
     .line 35
     const/4 v0, 0x0
 
     new-array v0, v0, [B
 
-    iput-object v0, p0, Lcom/tencent/mm/svg/b/a;->khQ:[B
+    iput-object v0, p0, Lcom/tencent/mm/svg/b/a;->kIq:[B
 
     return-void
 .end method
 
-.method public static Af(Ljava/lang/String;)V
+.method public static Cf(Ljava/lang/String;)V
     .locals 0
 
     .prologue
     .line 44
-    sput-object p0, Lcom/tencent/mm/svg/b/a;->khT:Ljava/lang/String;
+    sput-object p0, Lcom/tencent/mm/svg/b/a;->kIt:Ljava/lang/String;
 
     .line 45
     return-void
@@ -123,13 +153,13 @@
     if-nez p1, :cond_0
 
     .line 366
-    const-string/jumbo v1, "!32@/B4Tb64lLpJPxrpt4WNeSHulGavoslgt"
+    const-string/jumbo v1, "MicroMsg.SVGCompat"
 
     const-string/jumbo v2, "fromCodeToPicture code is null!"
 
     new-array v3, v4, [Ljava/lang/Object;
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/svg/d/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/svg/c/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 381
     :goto_0
@@ -137,11 +167,11 @@
 
     .line 370
     :cond_0
-    sget-object v1, Lcom/tencent/mm/svg/b/a;->khX:Ljava/lang/Float;
+    sget-object v1, Lcom/tencent/mm/svg/b/a;->kIx:Ljava/lang/Float;
 
     if-nez v1, :cond_1
 
-    sget v1, Lcom/tencent/mm/svg/b/a;->khS:I
+    sget v1, Lcom/tencent/mm/svg/b/a;->kIs:I
 
     int-to-float v1, v1
 
@@ -151,10 +181,10 @@
 
     move-result-object v1
 
-    sput-object v1, Lcom/tencent/mm/svg/b/a;->khX:Ljava/lang/Float;
+    sput-object v1, Lcom/tencent/mm/svg/b/a;->kIx:Ljava/lang/Float;
 
     :cond_1
-    sget-object v1, Lcom/tencent/mm/svg/b/a;->khX:Ljava/lang/Float;
+    sget-object v1, Lcom/tencent/mm/svg/b/a;->kIx:Ljava/lang/Float;
 
     invoke-virtual {v1}, Ljava/lang/Float;->floatValue()F
 
@@ -165,7 +195,7 @@
     .line 372
     new-array v2, v4, [Ljava/lang/Object;
 
-    invoke-virtual {p1, v4, v2}, Lcom/tencent/mm/svg/c;->h(I[Ljava/lang/Object;)I
+    invoke-virtual {p1, v4, v2}, Lcom/tencent/mm/svg/c;->i(I[Ljava/lang/Object;)I
 
     move-result v2
 
@@ -176,7 +206,7 @@
     .line 373
     new-array v3, v4, [Ljava/lang/Object;
 
-    invoke-virtual {p1, v5, v3}, Lcom/tencent/mm/svg/c;->h(I[Ljava/lang/Object;)I
+    invoke-virtual {p1, v5, v3}, Lcom/tencent/mm/svg/c;->i(I[Ljava/lang/Object;)I
 
     move-result v3
 
@@ -210,7 +240,7 @@
 
     aput-object v1, v3, v5
 
-    invoke-virtual {p1, v6, v3}, Lcom/tencent/mm/svg/c;->h(I[Ljava/lang/Object;)I
+    invoke-virtual {p1, v6, v3}, Lcom/tencent/mm/svg/c;->i(I[Ljava/lang/Object;)I
 
     .line 378
     invoke-virtual {v2}, Landroid/graphics/Canvas;->restore()V
@@ -235,7 +265,7 @@
     if-nez p1, :cond_4
 
     .line 94
-    const-string/jumbo v0, "!32@/B4Tb64lLpJPxrpt4WNeSHulGavoslgt"
+    const-string/jumbo v0, "MicroMsg.SVGCompat"
 
     const-string/jumbo v1, "getSVGDrawable a invalid resource!!! %s"
 
@@ -247,19 +277,19 @@
 
     aput-object v3, v2, v8
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/svg/d/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/svg/c/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 95
-    const-string/jumbo v0, "!32@/B4Tb64lLpJPxrpt4WNeSHulGavoslgt"
+    const-string/jumbo v0, "MicroMsg.SVGCompat"
 
     const-string/jumbo v1, "Why no log??"
 
     new-array v2, v8, [Ljava/lang/Object;
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/svg/d/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/svg/c/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 96
-    const-string/jumbo v1, "!32@/B4Tb64lLpJPxrpt4WNeSHulGavoslgt"
+    const-string/jumbo v1, "MicroMsg.SVGCompat"
 
     const-string/jumbo v2, "The stack : %s"
 
@@ -287,7 +317,7 @@
     :goto_0
     aput-object v0, v3, v8
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/svg/d/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/svg/c/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 97
     new-instance v0, Lcom/tencent/mm/svg/b/c;
@@ -415,7 +445,7 @@
 
     .line 100
     :cond_4
-    invoke-static {}, Lcom/tencent/mm/svg/d/b;->aZa()Z
+    invoke-static {}, Lcom/tencent/mm/svg/c/b;->ber()Z
 
     move-result v0
 
@@ -434,13 +464,13 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/tencent/mm/svg/b/a;->khT:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/svg/b/a;->kIt:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    sget-object v1, Lcom/tencent/mm/svg/b/a;->khR:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/svg/b/a;->kIr:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -489,7 +519,7 @@
 
     move-result-object v4
 
-    sget-object v0, Lcom/tencent/mm/svg/b/a;->khW:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/svg/b/a;->kIw:Ljava/util/Map;
 
     invoke-interface {v0, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -507,7 +537,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/tencent/mm/svg/b/a;->khW:Ljava/util/Map;
+    sget-object v1, Lcom/tencent/mm/svg/b/a;->kIw:Ljava/util/Map;
 
     invoke-interface {v1, v4, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -528,7 +558,7 @@
     goto :goto_3
 
     :cond_8
-    sget-object v0, Lcom/tencent/mm/svg/b/a;->khV:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/svg/b/a;->kIv:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -550,7 +580,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/tencent/mm/svg/b/a;->khV:Ljava/util/Map;
+    sget-object v1, Lcom/tencent/mm/svg/b/a;->kIv:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -583,7 +613,7 @@
 
     .line 326
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/svg/b/a;->khU:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/svg/b/a;->kIu:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -596,7 +626,7 @@
     if-eqz v0, :cond_0
 
     .line 327
-    sget-object v0, Lcom/tencent/mm/svg/b/a;->khU:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/svg/b/a;->kIu:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -622,7 +652,7 @@
     if-nez v0, :cond_1
 
     .line 331
-    const-string/jumbo v0, "!32@/B4Tb64lLpJPxrpt4WNeSHulGavoslgt"
+    const-string/jumbo v0, "MicroMsg.SVGCompat"
 
     const-string/jumbo v3, "Get SVGCodeDrawable failed. Reason : resource not found"
 
@@ -630,7 +660,7 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/svg/d/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/svg/c/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v1
 
@@ -691,7 +721,7 @@
     check-cast v0, Lcom/tencent/mm/svg/c;
 
     .line 345
-    sget-object v3, Lcom/tencent/mm/svg/b/a;->khU:Ljava/util/Map;
+    sget-object v3, Lcom/tencent/mm/svg/b/a;->kIu:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -711,7 +741,7 @@
 
     move-object v0, v2
 
-    const-string/jumbo v2, "!32@/B4Tb64lLpJPxrpt4WNeSHulGavoslgt"
+    const-string/jumbo v2, "MicroMsg.SVGCompat"
 
     const-string/jumbo v3, "Get SVGCodeDrawable failed. Reason : ClassNotFoundException %s"
 
@@ -719,7 +749,7 @@
 
     aput-object v0, v4, v6
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/svg/d/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/svg/c/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v1
 
@@ -761,7 +791,7 @@
     :catch_1
     move-exception v0
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJPxrpt4WNeSHulGavoslgt"
+    const-string/jumbo v0, "MicroMsg.SVGCompat"
 
     const-string/jumbo v3, "Get SVGCodeDrawable failed. Reason : InstantiationException %s"
 
@@ -769,7 +799,7 @@
 
     aput-object v2, v4, v6
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/svg/d/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/svg/c/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v1
 
@@ -780,7 +810,7 @@
     :catch_2
     move-exception v0
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJPxrpt4WNeSHulGavoslgt"
+    const-string/jumbo v0, "MicroMsg.SVGCompat"
 
     const-string/jumbo v3, "Get SVGCodeDrawable failed. Reason : IllegalAccessException %s"
 
@@ -788,22 +818,12 @@
 
     aput-object v2, v4, v6
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/svg/d/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/svg/c/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v1
 
     .line 357
     goto/16 :goto_0
-.end method
-
-.method public static aYR()Ljava/util/Map;
-    .locals 1
-
-    .prologue
-    .line 168
-    sget-object v0, Lcom/tencent/mm/svg/b/a;->khU:Ljava/util/Map;
-
-    return-object v0
 .end method
 
 .method public static b(Landroid/content/res/Resources;IF)Landroid/graphics/Bitmap;
@@ -903,6 +923,26 @@
     goto :goto_0
 .end method
 
+.method public static bek()Ljava/util/Map;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Integer;",
+            "Lcom/tencent/mm/svg/c;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 168
+    sget-object v0, Lcom/tencent/mm/svg/b/a;->kIu:Ljava/util/Map;
+
+    return-object v0
+.end method
+
 .method public static c(Landroid/content/res/Resources;I)Landroid/graphics/drawable/Drawable;
     .locals 1
 
@@ -976,23 +1016,23 @@
 
     invoke-static {v0}, Lcom/tencent/mm/svg/WeChatSVG;->parse(Ljava/lang/String;)J
 
-    move-result-wide v3
+    move-result-wide v4
 
     .line 246
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
-    cmp-long v0, v3, v5
+    cmp-long v0, v4, v6
 
     if-nez v0, :cond_4
 
     .line 247
-    const-string/jumbo v0, "!32@/B4Tb64lLpJPxrpt4WNeSHulGavoslgt"
+    const-string/jumbo v0, "MicroMsg.SVGCompat"
 
     const-string/jumbo v1, "Parse SVG failed."
 
     new-array v3, v8, [Ljava/lang/Object;
 
-    invoke-static {v0, v1, v3}, Lcom/tencent/mm/svg/d/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v3}, Lcom/tencent/mm/svg/c/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v2
 
@@ -1006,7 +1046,7 @@
     move-exception v0
 
     :try_start_2
-    const-string/jumbo v0, "!32@/B4Tb64lLpJPxrpt4WNeSHulGavoslgt"
+    const-string/jumbo v0, "MicroMsg.SVGCompat"
 
     const-string/jumbo v1, "Get SVGPictureDrawable failed. Reason : IOException"
 
@@ -1014,7 +1054,7 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    invoke-static {v0, v1, v4}, Lcom/tencent/mm/svg/d/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v4}, Lcom/tencent/mm/svg/c/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -1053,9 +1093,9 @@
 
     .line 252
     :cond_4
-    invoke-static {v3, v4}, Lcom/tencent/mm/svg/WeChatSVG;->getViewPort(J)[F
+    invoke-static {v4, v5}, Lcom/tencent/mm/svg/WeChatSVG;->getViewPort(J)[F
 
-    move-result-object v5
+    move-result-object v3
 
     .line 254
     invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
@@ -1065,9 +1105,9 @@
     iget v6, v0, Landroid/util/DisplayMetrics;->density:F
 
     .line 256
-    aget v0, v5, v8
+    aget v0, v3, v8
 
-    sget v7, Lcom/tencent/mm/svg/b/a;->khS:I
+    sget v7, Lcom/tencent/mm/svg/b/a;->kIs:I
 
     int-to-float v7, v7
 
@@ -1085,34 +1125,34 @@
     mul-float/2addr v0, v7
 
     .line 257
-    aget v5, v5, v10
+    aget v3, v3, v10
 
-    sget v7, Lcom/tencent/mm/svg/b/a;->khS:I
+    sget v7, Lcom/tencent/mm/svg/b/a;->kIs:I
 
     int-to-float v7, v7
 
-    div-float/2addr v5, v7
+    div-float/2addr v3, v7
 
-    mul-float/2addr v5, v6
+    mul-float/2addr v3, v6
 
     cmpl-float v6, p2, v9
 
     if-lez v6, :cond_6
 
     :goto_5
-    mul-float v1, v5, p2
+    mul-float v1, v3, p2
 
     .line 259
-    new-instance v5, Landroid/graphics/Picture;
+    new-instance v3, Landroid/graphics/Picture;
 
-    invoke-direct {v5}, Landroid/graphics/Picture;-><init>()V
+    invoke-direct {v3}, Landroid/graphics/Picture;-><init>()V
 
     .line 260
     float-to-int v6, v0
 
     float-to-int v7, v1
 
-    invoke-virtual {v5, v6, v7}, Landroid/graphics/Picture;->beginRecording(II)Landroid/graphics/Canvas;
+    invoke-virtual {v3, v6, v7}, Landroid/graphics/Picture;->beginRecording(II)Landroid/graphics/Canvas;
 
     move-result-object v6
 
@@ -1125,26 +1165,26 @@
 
     int-to-float v1, v1
 
-    invoke-static {v3, v4, v6, v0, v1}, Lcom/tencent/mm/svg/WeChatSVG;->renderViewPort(JLandroid/graphics/Canvas;FF)I
+    invoke-static {v4, v5, v6, v0, v1}, Lcom/tencent/mm/svg/WeChatSVG;->renderViewPort(JLandroid/graphics/Canvas;FF)I
 
     move-result v1
 
     .line 265
-    invoke-virtual {v5}, Landroid/graphics/Picture;->endRecording()V
+    invoke-virtual {v3}, Landroid/graphics/Picture;->endRecording()V
 
     .line 268
-    invoke-static {v3, v4}, Lcom/tencent/mm/svg/WeChatSVG;->release(J)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/svg/WeChatSVG;->release(J)V
 
     .line 270
     new-instance v0, Lcom/tencent/mm/svg/b/c;
 
-    invoke-direct {v0, v5, p1}, Lcom/tencent/mm/svg/b/c;-><init>(Landroid/graphics/Picture;I)V
+    invoke-direct {v0, v3, p1}, Lcom/tencent/mm/svg/b/c;-><init>(Landroid/graphics/Picture;I)V
 
     .line 272
     if-gez v1, :cond_1
 
     .line 273
-    const-string/jumbo v0, "!32@/B4Tb64lLpJPxrpt4WNeSHulGavoslgt"
+    const-string/jumbo v0, "MicroMsg.SVGCompat"
 
     const-string/jumbo v3, "Render SVG failed. Reason : %s"
 
@@ -1156,7 +1196,7 @@
 
     aput-object v1, v4, v8
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/svg/d/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/svg/c/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v2
 
@@ -1192,7 +1232,7 @@
     goto :goto_3
 .end method
 
-.method protected static f(Landroid/graphics/drawable/Drawable;)Landroid/view/View;
+.method protected static g(Landroid/graphics/drawable/Drawable;)Landroid/view/View;
     .locals 2
 
     .prologue
@@ -1265,13 +1305,13 @@
     if-eqz v2, :cond_1
 
     .line 149
-    iget-object v3, p0, Lcom/tencent/mm/svg/b/a;->khQ:[B
+    iget-object v3, p0, Lcom/tencent/mm/svg/b/a;->kIq:[B
 
     monitor-enter v3
 
     .line 151
     :try_start_1
-    iget-object v2, p0, Lcom/tencent/mm/svg/b/a;->khP:Landroid/util/TypedValue;
+    iget-object v2, p0, Lcom/tencent/mm/svg/b/a;->kIp:Landroid/util/TypedValue;
 
     .line 152
     if-nez v2, :cond_0
@@ -1281,7 +1321,7 @@
 
     invoke-direct {v2}, Landroid/util/TypedValue;-><init>()V
 
-    iput-object v2, p0, Lcom/tencent/mm/svg/b/a;->khP:Landroid/util/TypedValue;
+    iput-object v2, p0, Lcom/tencent/mm/svg/b/a;->kIp:Landroid/util/TypedValue;
 
     .line 155
     :cond_0
@@ -1319,13 +1359,13 @@
     move-exception v0
 
     .line 145
-    const-string/jumbo v2, "!32@/B4Tb64lLpJPxrpt4WNeSHulGavoslgt"
+    const-string/jumbo v2, "MicroMsg.SVGCompat"
 
     const-string/jumbo v3, "resource not found"
 
     new-array v4, v1, [Ljava/lang/Object;
 
-    invoke-static {v2, v0, v3, v4}, Lcom/tencent/mm/svg/d/c;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v3, v4}, Lcom/tencent/mm/svg/c/c;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 

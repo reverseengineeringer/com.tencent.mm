@@ -1,12 +1,15 @@
 package com.tencent.mm.performance.c;
 
-public abstract interface a$a
+import java.lang.ref.WeakReference;
+
+final class a$a
 {
-  public abstract void a(long paramLong1, long paramLong2, long paramLong3);
+  public WeakReference<Object> cgc;
+  public WeakReference<Object> cgd;
+  public long cge;
+  public long cgf = 0L;
   
-  public abstract void b(long paramLong1, long paramLong2, long paramLong3);
-  
-  public abstract void c(long paramLong1, long paramLong2, long paramLong3);
+  private a$a(a parama) {}
 }
 
 /* Location:

@@ -1,5 +1,5 @@
-.class public final Lcom/tencent/mm/ui/e/a/c$a;
-.super Lcom/tencent/mm/ui/e/a/a$a;
+.class public interface abstract Lcom/tencent/mm/ui/e/a/c$a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
@@ -9,30 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x609
     name = "a"
 .end annotation
 
 
-# instance fields
-.field public cMt:Landroid/view/View;
+# virtual methods
+.method public abstract a(Lcom/tencent/mm/ui/e/a/b;)V
+.end method
 
-.field public cNV:Landroid/widget/ImageView;
+.method public abstract a(Lcom/tencent/mm/ui/e/a/d;)V
+.end method
 
-.field public fKK:Landroid/widget/TextView;
+.method public abstract i(Landroid/os/Bundle;)V
+.end method
 
-.field final synthetic ltq:Lcom/tencent/mm/ui/e/a/c;
-
-
-# direct methods
-.method public constructor <init>(Lcom/tencent/mm/ui/e/a/c;)V
-    .locals 0
-
-    .prologue
-    .line 60
-    iput-object p1, p0, Lcom/tencent/mm/ui/e/a/c$a;->ltq:Lcom/tencent/mm/ui/e/a/c;
-
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/e/a/a$a;-><init>(Lcom/tencent/mm/ui/e/a/a;)V
-
-    return-void
+.method public abstract onCancel()V
 .end method

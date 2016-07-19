@@ -11,7 +11,7 @@ final class ArtistHeader$1$1
   
   public final void onClick(View paramView)
   {
-    ArtistHeader.a(gWe.gWd).dismiss();
+    ArtistHeader.a(hjA.hjz).dismiss();
   }
 }
 

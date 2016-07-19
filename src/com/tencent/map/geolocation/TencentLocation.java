@@ -32,6 +32,10 @@ public abstract interface TencentLocation
   
   public abstract String getCityCode();
   
+  public abstract int getCoordinateType();
+  
+  public abstract double getDirection();
+  
   public abstract String getDistrict();
   
   public abstract long getElapsedRealtime();
@@ -46,11 +50,13 @@ public abstract interface TencentLocation
   
   public abstract String getNation();
   
-  public abstract List getPoiList();
+  public abstract List<TencentPoi> getPoiList();
   
   public abstract String getProvider();
   
   public abstract String getProvince();
+  
+  public abstract int getRssi();
   
   public abstract float getSpeed();
   

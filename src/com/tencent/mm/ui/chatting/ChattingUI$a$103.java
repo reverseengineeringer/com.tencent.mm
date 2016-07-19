@@ -1,53 +1,41 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.ui.tools.r.b;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.base.MMPullDownView;
+import com.tencent.mm.ui.base.MMPullDownView.g;
 
 final class ChattingUI$a$103
-  implements r.b
+  implements MMPullDownView.g
 {
-  private int lbu = 0;
-  
   ChattingUI$a$103(ChattingUI.a parama) {}
   
-  public final void Gd()
+  public final void akX()
   {
-    new aa().post(new Runnable()
+    v.d("MicroMsg.ChattingUI", "onTopLoadData talker[%s]", new Object[] { lAY.lrK.field_username });
+    if ((lAY.lsG) || (ChattingUI.a.Y(lAY)) || (ChattingUI.a.V(lAY))) {
+      lAY.lsL.lvR = true;
+    }
+    if (lAY.lsL.bkf())
     {
-      public final void run()
-      {
-        ChattingUI.a.Q(laF);
-      }
-    });
-  }
-  
-  public final void Ge() {}
-  
-  public final void Gf() {}
-  
-  public final void Gg() {}
-  
-  public final boolean kE(String paramString)
-  {
-    return false;
-  }
-  
-  public final void kF(String paramString)
-  {
-    if (ay.kz(paramString))
+      v.i("MicroMsg.ChattingUI", "pullDownView showTopAll on set position %d, set pullDownView.getTopHeight() %d", new Object[] { Integer.valueOf(1), Integer.valueOf(XlAY).leO) });
+      ChattingUI.b.a(ChattingUI.a.e(lAY), 1, XlAY).leO, false);
+      ChattingUI.a.X(lAY).hY(true);
+    }
+    int j;
+    do
     {
-      lbu = 0;
-      laF.rj(-1);
       return;
-    }
-    if (paramString.length() > lbu) {
-      h.fUJ.g(10451, new Object[] { Integer.valueOf(1) });
-    }
-    lbu = paramString.length();
-    h.fUJ.g(10456, new Object[] { Integer.valueOf(1) });
-    ChattingUI.a.ad(laF).pH(paramString);
+      i = lAY.lsL.getCount();
+      lAY.lsL.td(18);
+      lAY.lsL.a(null, null);
+      j = lAY.lsL.getCount();
+      v.d("MicroMsg.ChattingUI", "onTopLoadData talker[%s], nowCount:%d, preCount:%d", new Object[] { lAY.lrK.field_username, Integer.valueOf(j), Integer.valueOf(i) });
+    } while (j <= i);
+    int i = j - i;
+    lAY.lsL.te(i);
+    v.i("MicroMsg.ChattingUI", "pullDownView nowCount > preCount on set position %d, set pullDownView.getTopHeight() %d", new Object[] { Integer.valueOf(i + 1), Integer.valueOf(ChattingUI.a.ag(lAY) + XlAY).leO) });
+    ChattingUI.b.a(ChattingUI.a.e(lAY), i + 1, ChattingUI.a.ag(lAY) + XlAY).leO, false);
   }
 }
 

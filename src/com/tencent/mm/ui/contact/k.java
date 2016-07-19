@@ -11,99 +11,99 @@ import android.view.View.OnTouchListener;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.tencent.mm.am.f;
-import com.tencent.mm.am.g;
-import com.tencent.mm.am.l;
-import com.tencent.mm.d.a.dx;
-import com.tencent.mm.d.a.dx.b;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.ap.f;
+import com.tencent.mm.ap.g;
+import com.tencent.mm.ap.l;
+import com.tencent.mm.e.a.ec;
+import com.tencent.mm.e.a.ec.b;
+import com.tencent.mm.platformtools.s;
 import com.tencent.mm.pluginsdk.ui.a.b;
 import com.tencent.mm.pluginsdk.ui.d.e;
-import com.tencent.mm.q.n;
+import com.tencent.mm.s.n;
 import com.tencent.mm.sdk.h.g.a;
 import com.tencent.mm.sdk.h.i;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.storage.ag.b;
-import com.tencent.mm.storage.ag.e;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai.b;
+import com.tencent.mm.storage.ai.e;
 import com.tencent.mm.storage.h;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.MaskLayout;
+import com.tencent.mm.ui.tools.u;
 import java.util.ArrayList;
 import java.util.List;
 
 public final class k
   extends RelativeLayout
 {
-  public static Boolean lko = Boolean.valueOf(true);
-  private View cTx = null;
+  public static Boolean lKz = Boolean.valueOf(true);
+  private View cQS = null;
   private Context context = null;
   private boolean isVisible = true;
-  private View lkp = null;
-  private final af lkq = new af(new af.a()
+  private View lKA = null;
+  private final com.tencent.mm.sdk.platformtools.ah lKB = new com.tencent.mm.sdk.platformtools.ah(new ah.a()
   {
-    public final boolean lj()
+    public final boolean jK()
     {
-      com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpISOYcLaKm7W93grpYn2xfC5yJeWqznlqY=", "refresh timer expired, update");
-      k.bhm();
+      v.d("MicroMsg.FMessageContactView", "refresh timer expired, update");
+      k.bmW();
       k.a(k.this);
       return false;
     }
   }, true);
-  g.a lkr = new g.a()
+  g.a lKC = new g.a()
   {
     public final void a(String paramAnonymousString, i paramAnonymousi)
     {
-      com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpISOYcLaKm7W93grpYn2xfC5yJeWqznlqY=", "onNotifyChange, fmsg change");
-      if (!k.b(k.this).aVf()) {
-        k.b(k.this).aUF();
+      v.d("MicroMsg.FMessageContactView", "onNotifyChange, fmsg change");
+      if (!k.b(k.this).baj()) {
+        k.b(k.this).aZJ();
       }
       paramAnonymousString = k.b(k.this);
       if (k.c(k.this)) {}
       for (long l = 500L;; l = 1000L)
       {
-        paramAnonymousString.ds(l);
+        paramAnonymousString.dJ(l);
         return;
       }
     }
   };
-  private boolean lks = false;
+  boolean lKD = false;
   
   public k(Context paramContext)
   {
     super(paramContext);
     context = paramContext;
-    l.DL().c(lkr);
-    bhl();
+    l.Ec().c(lKC);
+    bmV();
     init();
   }
   
-  private static void bhl()
+  private static void bmV()
   {
-    int i = l.DL().DA();
-    com.tencent.mm.sdk.platformtools.u.v("!44@/B4Tb64lLpISOYcLaKm7W93grpYn2xfC5yJeWqznlqY=", "updateAddressTabUnread, newCount update to = %d", new Object[] { Integer.valueOf(i) });
+    int i = l.Ec().DQ();
+    v.v("MicroMsg.FMessageContactView", "updateAddressTabUnread, newCount update to = %d", new Object[] { Integer.valueOf(i) });
     if (i > 0) {
-      ah.tD().rn().set(143618, Integer.valueOf(i));
+      com.tencent.mm.model.ah.tE().ro().set(143618, Integer.valueOf(i));
     }
   }
   
   private void init()
   {
-    Object localObject2 = l.DL();
-    com.tencent.mm.sdk.platformtools.u.v("!56@/B4Tb64lLpISOYcLaKm7W1MgEqPseCy9QPmiDx7GliPzP4+iO8J0Gw==", "getNewLimit, limit = %d", new Object[] { Integer.valueOf(4) });
+    Object localObject2 = l.Ec();
+    v.v("MicroMsg.FMessageConversationStorage", "getNewLimit, limit = %d", new Object[] { Integer.valueOf(4) });
     Object localObject1 = new ArrayList();
     Object localObject3 = "select * from fmessage_conversation  where isNew = 1 ORDER BY lastModifiedTime DESC limit 4";
-    localObject2 = aoX.rawQuery((String)localObject3, null);
+    localObject2 = bkP.rawQuery((String)localObject3, null);
     int i = ((Cursor)localObject2).getCount();
-    com.tencent.mm.sdk.platformtools.u.d("!56@/B4Tb64lLpISOYcLaKm7W1MgEqPseCy9QPmiDx7GliPzP4+iO8J0Gw==", "getNewLimit, count = %d", new Object[] { Integer.valueOf(i) });
+    v.d("MicroMsg.FMessageConversationStorage", "getNewLimit, count = %d", new Object[] { Integer.valueOf(i) });
     if (i <= 0)
     {
-      com.tencent.mm.sdk.platformtools.u.d("!56@/B4Tb64lLpISOYcLaKm7W1MgEqPseCy9QPmiDx7GliPzP4+iO8J0Gw==", "getNewLimit, cursor count is zero");
+      v.d("MicroMsg.FMessageConversationStorage", "getNewLimit, cursor count is zero");
       ((Cursor)localObject2).close();
       i = ((List)localObject1).size();
-      com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpISOYcLaKm7W93grpYn2xfC5yJeWqznlqY=", "init new fconv size = %d (max is 4)", new Object[] { Integer.valueOf(i) });
+      v.d("MicroMsg.FMessageContactView", "init new fconv size = %d (max is 4)", new Object[] { Integer.valueOf(i) });
       removeAllViews();
       if (i > 0) {
         break label424;
@@ -111,231 +111,232 @@ public final class k
       if (context != null) {
         break label337;
       }
-      com.tencent.mm.sdk.platformtools.u.w("!44@/B4Tb64lLpISOYcLaKm7W93grpYn2xfC5yJeWqznlqY=", "initNoNew failed. context is null.");
+      v.w("MicroMsg.FMessageContactView", "initNoNew failed. context is null.");
       label153:
-      localObject1 = cTx.findViewById(2131165608);
+      localObject1 = cQS.findViewById(2131756895);
       if (localObject1 != null) {
         if (!isVisible) {
-          break label1326;
+          break label1336;
         }
       }
     }
     label337:
     label424:
     label485:
-    label723:
-    label951:
-    label1015:
-    label1326:
+    label576:
+    label727:
+    label732:
+    label963:
+    label1025:
+    label1336:
     for (i = 0;; i = 8)
     {
       ((View)localObject1).setVisibility(i);
-      lkp.setOnTouchListener(new View.OnTouchListener()
+      lKA.setOnTouchListener(new View.OnTouchListener()
       {
         public final boolean onTouch(View paramAnonymousView, MotionEvent paramAnonymousMotionEvent)
         {
           if ((k.d(k.this) instanceof MMActivity)) {
-            ((MMActivity)k.d(k.this)).age();
+            ((MMActivity)k.d(k.this)).aiI();
           }
           return false;
         }
       });
-      i = l.DL().DA();
-      com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpISOYcLaKm7W93grpYn2xfC5yJeWqznlqY=", "init totalNewSize = %d", new Object[] { Integer.valueOf(i) });
-      localObject1 = (TextView)cTx.findViewById(2131165613);
-      ((TextView)localObject1).setBackgroundResource(com.tencent.mm.ui.tools.u.eB(context));
+      i = l.Ec().DQ();
+      v.d("MicroMsg.FMessageContactView", "init totalNewSize = %d", new Object[] { Integer.valueOf(i) });
+      localObject1 = (TextView)cQS.findViewById(2131756898);
+      ((TextView)localObject1).setBackgroundResource(u.eE(context));
       if (i > 0) {
-        break label1332;
+        break label1342;
       }
       ((TextView)localObject1).setVisibility(8);
-      lko = Boolean.valueOf(false);
+      lKz = Boolean.valueOf(false);
       return;
       if (!((Cursor)localObject2).moveToFirst()) {
         break;
       }
       while (!((Cursor)localObject2).isAfterLast())
       {
-        localObject3 = new com.tencent.mm.am.b();
-        ((com.tencent.mm.am.b)localObject3).c((Cursor)localObject2);
+        localObject3 = new com.tencent.mm.ap.b();
+        ((com.tencent.mm.ap.b)localObject3).b((Cursor)localObject2);
         ((Cursor)localObject2).moveToNext();
-        if (!ay.kz(field_talker)) {
+        if (!be.kf(field_talker)) {
           ((List)localObject1).add(localObject3);
         }
       }
       break;
-      cTx = View.inflate(context, 2131361945, this);
-      lkp = cTx.findViewById(2131165609);
-      cTx.setOnClickListener(new View.OnClickListener()
+      cQS = View.inflate(context, 2130903614, this);
+      lKA = cQS.findViewById(2131756896);
+      cQS.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
-          com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpISOYcLaKm7W93grpYn2xfC5yJeWqznlqY=", "initNoNew, goto FMessageConversationUI");
-          com.tencent.mm.ar.c.c(k.d(k.this), "subapp", ".ui.friend.FMessageConversationUI", new Intent());
+          v.d("MicroMsg.FMessageContactView", "initNoNew, goto FMessageConversationUI");
+          com.tencent.mm.av.c.c(k.d(k.this), "subapp", ".ui.friend.FMessageConversationUI", new Intent());
         }
       });
-      localObject1 = (MaskLayout)cTx.findViewById(2131165610);
-      n.vb();
-      localObject2 = com.tencent.mm.q.d.fX("fmessage");
-      ((ImageView)((MaskLayout)localObject1).getContentView()).setImageBitmap((Bitmap)localObject2);
+      localObject1 = (MaskLayout)cQS.findViewById(2131756897);
+      n.vd();
+      localObject2 = com.tencent.mm.s.d.gk("fmessage");
+      ((ImageView)view).setImageBitmap((Bitmap)localObject2);
       break label153;
       if (i == 1)
       {
-        localObject3 = (com.tencent.mm.am.b)((List)localObject1).get(0);
+        localObject2 = (com.tencent.mm.ap.b)((List)localObject1).get(0);
         if (context == null)
         {
-          com.tencent.mm.sdk.platformtools.u.w("!44@/B4Tb64lLpISOYcLaKm7W93grpYn2xfC5yJeWqznlqY=", "initSingleNew failed. context is null.");
+          v.w("MicroMsg.FMessageContactView", "initSingleNew failed. context is null.");
           break label153;
         }
-        TextView localTextView;
+        Object localObject4;
         Context localContext;
-        int k;
-        if (com.tencent.mm.aw.a.da(context))
+        boolean bool;
+        if (com.tencent.mm.az.a.cY(context))
         {
-          cTx = View.inflate(context, 2131361913, this);
-          ((TextView)cTx.findViewById(2131165611)).setText(e.a(context, field_displayName));
-          localTextView = (TextView)cTx.findViewById(2131165612);
-          localObject1 = l.DK().jz(field_talker);
+          cQS = View.inflate(context, 2130903617, this);
+          ((TextView)cQS.findViewById(2131756902)).setText(e.a(context, field_displayName));
+          localObject3 = (TextView)cQS.findViewById(2131756903);
+          localObject4 = l.Eb().jT(field_talker);
           localContext = context;
           i = field_type;
           int j = field_addScene;
-          localObject2 = field_msgContent;
-          k = field_isSend;
-          com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpISOYcLaKm7W/BeKpl7Eo/rew2ISNFCVQs=", "getDigest, fmsgType = %d, fmsgScene = %d, fmsgContent = %s, isSend = %d", new Object[] { Integer.valueOf(i), Integer.valueOf(j), localObject2, Integer.valueOf(k) });
+          localObject1 = field_msgContent;
+          if (((f)localObject4).DT()) {
+            break label727;
+          }
+          bool = true;
+          v.d("MicroMsg.FMessageProvider", "getDigest, fmsgType = %d, fmsgScene = %d, fmsgContent = %s, isSend = %b", new Object[] { Integer.valueOf(i), Integer.valueOf(j), localObject1, Boolean.valueOf(bool) });
           if (i != 0) {
-            break label951;
+            break label963;
           }
-          if (localObject2 != null) {
-            break label723;
+          if (localObject1 != null) {
+            break label732;
           }
-          com.tencent.mm.sdk.platformtools.u.e("!44@/B4Tb64lLpISOYcLaKm7W/BeKpl7Eo/rew2ISNFCVQs=", "getDigest fail, fmsgContent is null");
+          v.e("MicroMsg.FMessageProvider", "getDigest fail, fmsgContent is null");
           localObject1 = null;
-          if (!t.kz((String)localObject1)) {
-            break label1015;
+          if (!s.kf((String)localObject1)) {
+            break label1025;
           }
-          localTextView.setVisibility(8);
+          ((TextView)localObject3).setVisibility(8);
         }
         for (;;)
         {
-          lkp = cTx.findViewById(2131165608);
-          cTx.setOnClickListener(new View.OnClickListener()
+          lKA = cQS.findViewById(2131756895);
+          cQS.setOnClickListener(new View.OnClickListener()
           {
             public final void onClick(View paramAnonymousView)
             {
-              com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpISOYcLaKm7W93grpYn2xfC5yJeWqznlqY=", "initSingleNew, not goto ContactInfoUI, goto FMessageConversationUI");
-              ah.tD().rn().set(143618, Integer.valueOf(0));
-              com.tencent.mm.ar.c.c(k.d(k.this), "subapp", ".ui.friend.FMessageConversationUI", new Intent());
+              v.d("MicroMsg.FMessageContactView", "initSingleNew, not goto ContactInfoUI, goto FMessageConversationUI");
+              com.tencent.mm.model.ah.tE().ro().set(143618, Integer.valueOf(0));
+              com.tencent.mm.av.c.c(k.d(k.this), "subapp", ".ui.friend.FMessageConversationUI", new Intent());
             }
           });
-          a.b.b((ImageView)((MaskLayout)cTx.findViewById(2131165610)).getContentView(), field_talker);
+          a.b.a((ImageView)cQS.findViewById(2131756897)).view, field_talker);
           break;
-          cTx = View.inflate(context, 2131361955, this);
+          cQS = View.inflate(context, 2130903616, this);
           break label485;
-          localObject1 = ag.b.EQ((String)localObject2);
-          switch (asc)
+          bool = false;
+          break label576;
+          localObject1 = ai.b.Hf((String)localObject1);
+          switch (scene)
           {
           default: 
-            localObject1 = localContext.getString(2131427958);
+            localObject1 = localContext.getString(2131231659);
             break;
           case 4: 
-            localObject1 = localContext.getString(2131427954);
+            localObject1 = localContext.getString(2131231650);
             break;
           case 10: 
           case 11: 
-            localObject2 = new dx();
-            axR.axO = kfL;
-            axR.axP = kfM;
-            com.tencent.mm.sdk.c.a.jUF.j((com.tencent.mm.sdk.c.b)localObject2);
-            localObject1 = localContext.getString(2131427956, new Object[] { ay.ad(axS.axT, "") });
+            localObject4 = new ec();
+            ajZ.ajW = kGe;
+            ajZ.ajX = kGf;
+            com.tencent.mm.sdk.c.a.kug.y((com.tencent.mm.sdk.c.b)localObject4);
+            localObject1 = localContext.getString(2131231655, new Object[] { be.ab(aka.akb, "") });
             break;
           case 31: 
-            localObject1 = localContext.getString(2131427952);
+            localObject1 = localContext.getString(2131231666);
             break;
           case 32: 
-            localObject1 = localContext.getString(2131427948);
+            localObject1 = localContext.getString(2131231660);
             break;
           case 58: 
           case 59: 
           case 60: 
-            localObject1 = localContext.getString(2131428711);
+            localObject1 = localContext.getString(2131231653);
             break;
-            localObject1 = localObject2;
-            if (k == 1) {
+            if (bool) {
               break;
             }
-            localObject1 = ag.e.ET((String)localObject2);
+            localObject1 = ai.e.Hi((String)localObject1);
             if ((content != null) && (!content.trim().equals("")))
             {
               localObject1 = content;
               break;
             }
-            localObject1 = localContext.getString(2131431052);
+            localObject1 = localContext.getString(2131232812);
             break;
-            localTextView.setText((CharSequence)localObject1);
+            ((TextView)localObject3).setText((CharSequence)localObject1);
           }
         }
       }
       if (context == null)
       {
-        com.tencent.mm.sdk.platformtools.u.w("!44@/B4Tb64lLpISOYcLaKm7W93grpYn2xfC5yJeWqznlqY=", "initMultiNew failed. context is null.");
+        v.w("MicroMsg.FMessageContactView", "initMultiNew failed. context is null.");
         break label153;
       }
-      cTx = View.inflate(context, 2131361917, this);
+      cQS = View.inflate(context, 2130903615, this);
       i = ((List)localObject1).size();
-      com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpISOYcLaKm7W93grpYn2xfC5yJeWqznlqY=", "initMultiNew, newList size = %d", new Object[] { Integer.valueOf(i) });
-      localObject2 = (com.tencent.mm.am.b)((List)localObject1).get(0);
-      localObject3 = (MaskLayout)cTx.findViewById(2131165610);
-      a.b.b((ImageView)((MaskLayout)localObject3).getContentView(), field_talker);
+      v.d("MicroMsg.FMessageContactView", "initMultiNew, newList size = %d", new Object[] { Integer.valueOf(i) });
+      localObject2 = (com.tencent.mm.ap.b)((List)localObject1).get(0);
+      localObject3 = (MaskLayout)cQS.findViewById(2131756897);
+      a.b.a((ImageView)view, field_talker);
       ((MaskLayout)localObject3).setVisibility(0);
-      localObject2 = (com.tencent.mm.am.b)((List)localObject1).get(1);
-      localObject3 = (MaskLayout)cTx.findViewById(2131165620);
-      a.b.b((ImageView)((MaskLayout)localObject3).getContentView(), field_talker);
+      localObject2 = (com.tencent.mm.ap.b)((List)localObject1).get(1);
+      localObject3 = (MaskLayout)cQS.findViewById(2131756899);
+      a.b.a((ImageView)view, field_talker);
       ((MaskLayout)localObject3).setVisibility(0);
       if (i > 2)
       {
-        localObject2 = (com.tencent.mm.am.b)((List)localObject1).get(2);
-        localObject3 = (MaskLayout)cTx.findViewById(2131165621);
-        a.b.b((ImageView)((MaskLayout)localObject3).getContentView(), field_talker);
+        localObject2 = (com.tencent.mm.ap.b)((List)localObject1).get(2);
+        localObject3 = (MaskLayout)cQS.findViewById(2131756900);
+        a.b.a((ImageView)view, field_talker);
         ((MaskLayout)localObject3).setVisibility(0);
       }
       if (i > 3)
       {
-        localObject1 = (com.tencent.mm.am.b)((List)localObject1).get(3);
-        localObject2 = (MaskLayout)cTx.findViewById(2131165622);
-        a.b.b((ImageView)((MaskLayout)localObject2).getContentView(), field_talker);
+        localObject1 = (com.tencent.mm.ap.b)((List)localObject1).get(3);
+        localObject2 = (MaskLayout)cQS.findViewById(2131756901);
+        a.b.a((ImageView)view, field_talker);
         ((MaskLayout)localObject2).setVisibility(0);
       }
-      lkp = cTx.findViewById(2131165608);
-      lkp.setOnClickListener(new View.OnClickListener()
+      lKA = cQS.findViewById(2131756895);
+      lKA.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
-          com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpISOYcLaKm7W93grpYn2xfC5yJeWqznlqY=", "initMultiNew, goto FMessageConversationUI");
-          ah.tD().rn().set(143618, Integer.valueOf(0));
-          com.tencent.mm.ar.c.c(k.d(k.this), "subapp", ".ui.friend.FMessageConversationUI", new Intent());
+          v.d("MicroMsg.FMessageContactView", "initMultiNew, goto FMessageConversationUI");
+          com.tencent.mm.model.ah.tE().ro().set(143618, Integer.valueOf(0));
+          com.tencent.mm.av.c.c(k.d(k.this), "subapp", ".ui.friend.FMessageConversationUI", new Intent());
         }
       });
       break label153;
     }
-    label1332:
+    label1342:
     ((TextView)localObject1).setVisibility(0);
-    lko = Boolean.valueOf(true);
+    lKz = Boolean.valueOf(true);
     if (i > 99)
     {
-      ((TextView)localObject1).setText(getContext().getString(2131431112));
+      ((TextView)localObject1).setText(getContext().getString(2131235738));
       return;
     }
     ((TextView)localObject1).setText(String.valueOf(i));
   }
   
-  public final void setFrontground(boolean paramBoolean)
-  {
-    lks = paramBoolean;
-  }
-  
   public final void setVisible(boolean paramBoolean)
   {
-    com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpISOYcLaKm7W93grpYn2xfC5yJeWqznlqY=", "setVisible visible = " + paramBoolean);
-    View localView = cTx.findViewById(2131165608);
+    v.d("MicroMsg.FMessageContactView", "setVisible visible = " + paramBoolean);
+    View localView = cQS.findViewById(2131756895);
     if (localView != null) {
       if (!paramBoolean) {
         break label53;

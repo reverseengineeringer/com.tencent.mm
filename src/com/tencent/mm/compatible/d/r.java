@@ -1,68 +1,66 @@
 package com.tencent.mm.compatible.d;
 
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class r
 {
-  private static r bsU;
-  public a bsV;
+  private static r bha;
+  public a bhb;
   
   public static void A(int paramInt1, int paramInt2)
   {
-    u.d("!44@/B4Tb64lLpLiQ7OrT4MAaUxp47ndvAyj3xaq2CE45Xw=", "putInt(%s, %s), process : %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), y.aQC() });
-    if (oMbsV != null) {
-      oMbsV.A(paramInt1, paramInt2);
+    v.d("MicroMsg.ExdeviceCfgHelper", "putInt(%s, %s), process : %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), aa.aVm() });
+    if (ncbhb != null) {
+      ncbhb.A(paramInt1, paramInt2);
     }
   }
   
   public static int getInt(int paramInt1, int paramInt2)
   {
-    u.d("!44@/B4Tb64lLpLiQ7OrT4MAaUxp47ndvAyj3xaq2CE45Xw=", "getInt(%s, %s), process : %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), y.aQC() });
+    v.d("MicroMsg.ExdeviceCfgHelper", "getInt(%s, %s), process : %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), aa.aVm() });
     int i = paramInt2;
-    if (oMbsV != null) {
-      i = oMbsV.getInt(paramInt1, paramInt2);
+    if (ncbhb != null) {
+      i = ncbhb.getInt(paramInt1, paramInt2);
     }
     return i;
   }
   
   public static long getLong(int paramInt, long paramLong)
   {
-    u.d("!44@/B4Tb64lLpLiQ7OrT4MAaUxp47ndvAyj3xaq2CE45Xw=", "getLong(%s, %s), process : %s", new Object[] { Integer.valueOf(paramInt), Long.valueOf(paramLong), y.aQC() });
+    v.d("MicroMsg.ExdeviceCfgHelper", "getLong(%s, %s), process : %s", new Object[] { Integer.valueOf(paramInt), Long.valueOf(paramLong), aa.aVm() });
     long l = paramLong;
-    if (oMbsV != null) {
-      l = oMbsV.getLong(paramInt, paramLong);
+    if (ncbhb != null) {
+      l = ncbhb.getLong(paramInt, paramLong);
     }
     return l;
   }
   
-  public static void j(int paramInt, long paramLong)
+  public static void h(int paramInt, long paramLong)
   {
-    u.d("!44@/B4Tb64lLpLiQ7OrT4MAaUxp47ndvAyj3xaq2CE45Xw=", "putLong(%s, %s), process : %s", new Object[] { Integer.valueOf(paramInt), Long.valueOf(paramLong), y.aQC() });
-    if (oMbsV != null) {
-      oMbsV.j(paramInt, paramLong);
+    v.d("MicroMsg.ExdeviceCfgHelper", "putLong(%s, %s), process : %s", new Object[] { Integer.valueOf(paramInt), Long.valueOf(paramLong), aa.aVm() });
+    if (ncbhb != null) {
+      ncbhb.h(paramInt, paramLong);
     }
   }
   
-  public static r oM()
+  public static r nc()
   {
-    if (bsU == null) {
-      bsU = new r();
+    if (bha == null) {
+      bha = new r();
     }
-    return bsU;
+    return bha;
   }
   
   public final void a(a parama)
   {
-    u.d("!44@/B4Tb64lLpLiQ7OrT4MAaUxp47ndvAyj3xaq2CE45Xw=", "setCfgAccessible, process : %s", new Object[] { y.aQC() });
-    bsV = parama;
+    v.d("MicroMsg.ExdeviceCfgHelper", "setCfgAccessible, process : %s", new Object[] { aa.aVm() });
+    bhb = parama;
   }
   
   public static abstract interface a
   {
     public abstract void A(int paramInt1, int paramInt2);
-    
-    public abstract void g(int paramInt, String paramString);
     
     public abstract int getInt(int paramInt1, int paramInt2);
     
@@ -70,7 +68,9 @@ public final class r
     
     public abstract String getString(int paramInt, String paramString);
     
-    public abstract void j(int paramInt, long paramLong);
+    public abstract void h(int paramInt, long paramLong);
+    
+    public abstract void h(int paramInt, String paramString);
   }
 }
 

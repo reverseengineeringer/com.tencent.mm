@@ -1,13 +1,13 @@
 package com.tencent.mm.ui.chatting;
 
 final class ChattingUI$a$100
-  implements cr.a
+  implements cs.a
 {
   ChattingUI$a$100(ChattingUI.a parama) {}
   
-  public final void re(int paramInt)
+  public final void tg(int paramInt)
   {
-    laF.rj(paramInt);
+    lAY.tl(paramInt);
   }
 }
 

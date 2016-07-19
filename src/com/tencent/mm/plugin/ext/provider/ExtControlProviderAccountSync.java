@@ -5,21 +5,21 @@ import android.content.UriMatcher;
 import android.database.Cursor;
 import android.net.Uri;
 import com.jg.JgClassChecked;
-import com.tencent.mm.d.a.dp;
+import com.tencent.mm.e.a.dt;
 import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 @JgClassChecked(author=32, fComment="checked", lastDate="20141016", reviewer=20, vComment={com.jg.EType.PROVIDERCHECK})
 public class ExtControlProviderAccountSync
   extends ExtContentProviderBase
 {
-  private static final UriMatcher dKS;
+  private static final UriMatcher dMB;
   
   static
   {
     UriMatcher localUriMatcher = new UriMatcher(-1);
-    dKS = localUriMatcher;
+    dMB = localUriMatcher;
     localUriMatcher.addURI("com.tencent.mm.plugin.ext.AccountSync", "accountSync", 1);
   }
   
@@ -45,44 +45,44 @@ public class ExtControlProviderAccountSync
   
   public Cursor query(Uri paramUri, String[] paramArrayOfString1, String paramString1, String[] paramArrayOfString2, String paramString2)
   {
-    u.d("!56@/B4Tb64lLpKAQbqlkU5I8g2Hz7jQ3a3mNolTgwNhfsh5cEwcQwk2+A==", "query()");
-    a(paramUri, getContext(), dKS);
+    v.d("MicroMsg.ExtControlAccountSyncProvider", "query()");
+    a(paramUri, getContext(), dMB);
     if (paramUri == null)
     {
-      gK(3);
+      hJ(3);
       return null;
     }
-    if ((ay.kz(dKL)) || (ay.kz(Vw())))
+    if ((be.kf(dMu)) || (be.kf(Xd())))
     {
-      gK(3);
+      hJ(3);
       return null;
     }
-    if (!Vx())
+    if (!Xe())
     {
-      gK(1);
-      return cBg;
+      hJ(1);
+      return cyb;
     }
-    if (!bx(getContext()))
+    if (!bs(getContext()))
     {
-      u.w("!56@/B4Tb64lLpKAQbqlkU5I8g2Hz7jQ3a3mNolTgwNhfsh5cEwcQwk2+A==", "invalid appid ! return null");
-      gK(2);
+      v.w("MicroMsg.ExtControlAccountSyncProvider", "invalid appid ! return null");
+      hJ(2);
       return null;
     }
-    switch (dKS.match(paramUri))
+    switch (dMB.match(paramUri))
     {
     default: 
-      gK(3);
+      hJ(3);
       return null;
     }
-    u.i("!56@/B4Tb64lLpKAQbqlkU5I8g2Hz7jQ3a3mNolTgwNhfsh5cEwcQwk2+A==", "startContactSync()");
-    paramUri = new dp();
-    if (a.jUF.j(paramUri))
+    v.i("MicroMsg.ExtControlAccountSyncProvider", "startContactSync()");
+    paramUri = new dt();
+    if (a.kug.y(paramUri))
     {
-      gK(0);
+      hJ(0);
       return null;
     }
-    u.e("!56@/B4Tb64lLpKAQbqlkU5I8g2Hz7jQ3a3mNolTgwNhfsh5cEwcQwk2+A==", "AccountHelper == null");
-    gK(4);
+    v.e("MicroMsg.ExtControlAccountSyncProvider", "AccountHelper == null");
+    hJ(4);
     return null;
   }
   

@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ui/chatting/cr$a;
+.implements Lcom/tencent/mm/ui/chatting/cs$a;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;->blc()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.field final synthetic lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 4821
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$100;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 4959
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$100;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,15 +36,15 @@
 
 
 # virtual methods
-.method public final re(I)V
+.method public final tg(I)V
     .locals 1
 
     .prologue
-    .line 4825
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$100;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 4963
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$100;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->rj(I)V
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->tl(I)V
 
-    .line 4826
+    .line 4964
     return-void
 .end method

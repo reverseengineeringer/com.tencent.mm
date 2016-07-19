@@ -1,15 +1,15 @@
 package com.tencent.mm.network;
 
 import com.tencent.mm.compatible.util.d;
-import com.tencent.mm.sdk.platformtools.at;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.az;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
 final class r$4
-  extends at
+  extends az<Object>
 {
   r$4(r paramr, int paramInt1, int paramInt2, String paramString, boolean paramBoolean)
   {
@@ -19,27 +19,27 @@ final class r$4
   protected final Object run()
   {
     Object localObject;
-    if (anq == 3)
+    if (aae == 3)
     {
       localObject = new Date();
-      ((Date)localObject).setTime(ay.FS() - 86400000L * ciX);
+      ((Date)localObject).setTime(be.Gp() - 86400000L * ceo);
       SimpleDateFormat localSimpleDateFormat = new SimpleDateFormat("yyyyMMdd", Locale.getDefault());
-      Java2C.uploadFile(d.bxe + "crash_" + localSimpleDateFormat.format((Date)localObject) + ".txt", bDO, "");
+      Java2C.uploadFile(d.bpg + "crash_" + localSimpleDateFormat.format((Date)localObject) + ".txt", bwZ, "");
     }
     for (;;)
     {
       return null;
-      if (anq == 2)
+      if (aae == 2)
       {
-        u.appenderFlush();
-        int i = ciX;
-        boolean bool = ciY;
-        localObject = bDO;
+        v.appenderFlush();
+        int i = ceo;
+        boolean bool = cep;
+        localObject = bwZ;
         Java2C.uploadLog(new int[] { i }, bool, (String)localObject, "");
       }
       else
       {
-        u.appenderFlush();
+        v.appenderFlush();
       }
     }
   }

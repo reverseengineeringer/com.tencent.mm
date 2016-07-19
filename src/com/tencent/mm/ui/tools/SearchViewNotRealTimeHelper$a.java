@@ -2,13 +2,13 @@ package com.tencent.mm.ui.tools;
 
 public abstract interface SearchViewNotRealTimeHelper$a
 {
-  public abstract void KY();
+  public abstract void LM();
   
-  public abstract void KZ();
+  public abstract void LN();
   
-  public abstract boolean kE(String paramString);
+  public abstract boolean ln(String paramString);
   
-  public abstract void lq(String paramString);
+  public abstract void mb(String paramString);
 }
 
 /* Location:

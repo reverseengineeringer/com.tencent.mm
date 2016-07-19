@@ -96,7 +96,7 @@ public final class b$a$a
     return mRemote;
   }
   
-  public final void d(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+  public final void b(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();

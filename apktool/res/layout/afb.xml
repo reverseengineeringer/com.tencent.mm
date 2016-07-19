@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="#fffefefe" android:paddingLeft="0.0dip" android:layout_width="fill_parent" android:layout_height="110.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#fffefefe" android:layout_width="fill_parent" android:layout_height="110.0dip">
+        <com.tencent.mm.pluginsdk.ui.applet.CdnImageView android:id="@id/cot" android:layout_width="47.0dip" android:layout_height="47.0dip" android:layout_marginLeft="0.0dip" android:layout_marginRight="10.0dip" android:layout_centerVertical="true" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/cou" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/cot" android:layout_centerVertical="true">
+            <TextView android:textSize="13.0dip" android:textColor="#ff000000" android:ellipsize="end" android:gravity="center|left" android:id="@id/cov" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="3.0dip" android:maxWidth="175.0dip" android:lines="1" />
+            <TextView android:textSize="20.0dip" android:textColor="#ff000000" android:ellipsize="end" android:gravity="center|left" android:id="@id/cow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="175.0dip" android:lines="1" />
+        </LinearLayout>
+        <TextView android:textSize="14.0sp" android:textColor="#ff21b100" android:gravity="center_vertical" android:id="@id/cox" android:background="@drawable/bb" android:paddingLeft="20.0dip" android:paddingTop="7.0dip" android:paddingRight="20.0dip" android:paddingBottom="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/j6" android:text="立即领取" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

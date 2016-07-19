@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 55
+    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
     .locals 1
 
     .prologue
-    .line 64
+    .line 65
     check-cast p1, Landroid/widget/Scroller;
 
     invoke-virtual {p1}, Landroid/widget/Scroller;->isFinished()Z
@@ -48,7 +48,7 @@
     .locals 1
 
     .prologue
-    .line 69
+    .line 70
     check-cast p1, Landroid/widget/Scroller;
 
     invoke-virtual {p1}, Landroid/widget/Scroller;->getCurrX()I
@@ -62,7 +62,7 @@
     .locals 1
 
     .prologue
-    .line 74
+    .line 75
     check-cast p1, Landroid/widget/Scroller;
 
     invoke-virtual {p1}, Landroid/widget/Scroller;->getCurrY()I
@@ -76,7 +76,7 @@
     .locals 1
 
     .prologue
-    .line 84
+    .line 85
     check-cast p1, Landroid/widget/Scroller;
 
     invoke-virtual {p1}, Landroid/widget/Scroller;->computeScrollOffset()Z
@@ -90,12 +90,12 @@
     .locals 0
 
     .prologue
-    .line 112
+    .line 113
     check-cast p1, Landroid/widget/Scroller;
 
     invoke-virtual {p1}, Landroid/widget/Scroller;->abortAnimation()V
 
-    .line 113
+    .line 114
     return-void
 .end method
 
@@ -103,7 +103,7 @@
     .locals 1
 
     .prologue
-    .line 134
+    .line 135
     check-cast p1, Landroid/widget/Scroller;
 
     invoke-virtual {p1}, Landroid/widget/Scroller;->getFinalX()I
@@ -117,7 +117,7 @@
     .locals 1
 
     .prologue
-    .line 139
+    .line 140
     check-cast p1, Landroid/widget/Scroller;
 
     invoke-virtual {p1}, Landroid/widget/Scroller;->getFinalY()I
@@ -131,7 +131,7 @@
     .locals 6
 
     .prologue
-    .line 95
+    .line 96
     move-object v0, p1
 
     check-cast v0, Landroid/widget/Scroller;
@@ -148,7 +148,7 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/Scroller;->startScroll(IIIII)V
 
-    .line 96
+    .line 97
     return-void
 .end method
 
@@ -156,7 +156,7 @@
     .locals 1
 
     .prologue
-    .line 58
+    .line 59
     if-eqz p2, :cond_0
 
     new-instance v0, Landroid/widget/Scroller;

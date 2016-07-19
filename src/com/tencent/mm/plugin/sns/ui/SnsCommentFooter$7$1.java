@@ -11,7 +11,7 @@ final class SnsCommentFooter$7$1
   
   public final void onAnimationEnd(Animation paramAnimation)
   {
-    SnsCommentFooter.j(hdL.hdG).setImageResource(2130969783);
+    SnsCommentFooter.j(hsy.hst).setImageResource(2130838035);
   }
   
   public final void onAnimationRepeat(Animation paramAnimation) {}

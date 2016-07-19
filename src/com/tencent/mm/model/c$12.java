@@ -1,20 +1,15 @@
 package com.tencent.mm.model;
 
-import java.util.Iterator;
-import java.util.List;
+import com.tencent.mm.bc.g.a;
 
 final class c$12
-  implements Runnable
+  implements g.a
 {
   c$12(c paramc) {}
   
-  public final void run()
-  {
-    Iterator localIterator = c.b(bzL).iterator();
-    while (localIterator.hasNext()) {
-      ((ad)localIterator.next()).tf();
-    }
-  }
+  public final void sa() {}
+  
+  public final void sb() {}
 }
 
 /* Location:

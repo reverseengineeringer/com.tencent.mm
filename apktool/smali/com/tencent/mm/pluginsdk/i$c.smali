@@ -18,5 +18,5 @@
 .method public abstract a(Landroid/content/Context;Lcom/tencent/mm/pluginsdk/ui/applet/g;Lcom/tencent/mm/pluginsdk/ui/d/b;)Z
 .end method
 
-.method public abstract p(Landroid/content/Context;Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
+.method public abstract q(Landroid/content/Context;Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
 .end method

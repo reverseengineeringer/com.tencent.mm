@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class MMAppMgr$7
   implements DialogInterface.OnClickListener
@@ -21,7 +21,7 @@ final class MMAppMgr$7
     }
     catch (Exception paramDialogInterface)
     {
-      u.printErrStackTrace("!32@/B4Tb64lLpINZTHnqdV5XF5PuPz9mv0P", paramDialogInterface, "showLbsTipsAlert", new Object[0]);
+      v.printErrStackTrace("MicroMsg.MMAppMgr", paramDialogInterface, "showLbsTipsAlert", new Object[0]);
     }
   }
 }

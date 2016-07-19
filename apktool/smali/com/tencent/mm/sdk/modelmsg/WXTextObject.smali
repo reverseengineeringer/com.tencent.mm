@@ -9,7 +9,7 @@
 # static fields
 .field private static final LENGTH_LIMIT:I = 0x2800
 
-.field private static final TAG:Ljava/lang/String; = "!44@/B4Tb64lLpKTQHlmUvaQNfesKh/fmod7zG0Z1fkch64="
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.SDK.WXTextObject"
 
 
 # instance fields
@@ -75,11 +75,11 @@
 
     .line 64
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpKTQHlmUvaQNfesKh/fmod7zG0Z1fkch64="
+    const-string/jumbo v0, "MicroMsg.SDK.WXTextObject"
 
     const-string/jumbo v1, "checkArgs fail, text is invalid"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 65
     const/4 v0, 0x0

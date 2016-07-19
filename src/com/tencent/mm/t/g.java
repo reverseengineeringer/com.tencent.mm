@@ -1,37 +1,39 @@
 package com.tencent.mm.t;
 
-import com.tencent.mm.d.b.j;
-import com.tencent.mm.sdk.h.c.a;
-import java.lang.reflect.Field;
-import java.util.Map;
-
-public final class g
-  extends j
+public abstract interface g
 {
-  protected static c.a aot;
+  public abstract void a(a parama);
   
-  static
+  public abstract void a(b paramb);
+  
+  public abstract boolean bi(String paramString);
+  
+  public abstract boolean cancel();
+  
+  public abstract String getFileName();
+  
+  public abstract int getMaxAmplitude();
+  
+  public abstract boolean jW();
+  
+  public abstract int ke();
+  
+  public abstract boolean kf();
+  
+  public abstract long kg();
+  
+  public abstract int ki();
+  
+  public abstract void reset();
+  
+  public static abstract interface a
   {
-    c.a locala = new c.a();
-    ceD = new Field[2];
-    blR = new String[3];
-    StringBuilder localStringBuilder = new StringBuilder();
-    blR[0] = "brandUserName";
-    jYx.put("brandUserName", "TEXT PRIMARY KEY ");
-    localStringBuilder.append(" brandUserName TEXT PRIMARY KEY ");
-    localStringBuilder.append(", ");
-    jYw = "brandUserName";
-    blR[1] = "userId";
-    jYx.put("userId", "TEXT");
-    localStringBuilder.append(" userId TEXT");
-    blR[2] = "rowid";
-    jYy = localStringBuilder.toString();
-    aot = locala;
+    public abstract void onError();
   }
   
-  protected final c.a ls()
+  public static abstract interface b
   {
-    return aot;
+    public abstract void vB();
   }
 }
 

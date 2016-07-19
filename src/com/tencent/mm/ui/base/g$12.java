@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.widget.EditText;
-import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.ad;
 import com.tencent.mm.ui.MMActivity;
 
 final class g$12
@@ -15,18 +15,18 @@ final class g$12
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     boolean bool = true;
-    if (ibo != null) {
-      bool = ibo.i(ibp.getText().toString().trim());
+    if (iva != null) {
+      bool = iva.r(ivb.getText().toString().trim());
     }
     if (bool)
     {
       paramDialogInterface.dismiss();
       if ((val$context instanceof MMActivity)) {
-        ab.j(new Runnable()
+        ad.k(new Runnable()
         {
           public final void run()
           {
-            ((MMActivity)val$context).age();
+            ((MMActivity)val$context).aiI();
           }
         });
       }

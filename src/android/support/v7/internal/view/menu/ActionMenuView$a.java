@@ -2,9 +2,9 @@ package android.support.v7.internal.view.menu;
 
 public abstract interface ActionMenuView$a
 {
-  public abstract boolean be();
-  
   public abstract boolean bf();
+  
+  public abstract boolean bg();
 }
 
 /* Location:

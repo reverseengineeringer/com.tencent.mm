@@ -1,32 +1,21 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.widget.RelativeLayout;
+import com.tencent.mm.kiss.android.CursorVending.a;
+import com.tencent.mm.plugin.report.service.f;
 
 final class SnsTimeLineUI$25
-  implements Runnable
+  implements CursorVending.a
 {
   SnsTimeLineUI$25(SnsTimeLineUI paramSnsTimeLineUI) {}
   
-  public final void run()
+  public final void pP()
   {
-    if (SnsTimeLineUI.z(hkJ) == null)
-    {
-      RelativeLayout localRelativeLayout = (RelativeLayout)hkJ.findViewById(2131166057);
-      SnsTimeLineUI.a(hkJ, new ac(localRelativeLayout, ghkJ).gRh, hkJ, new ac.a()
-      {
-        public final void WT()
-        {
-          SnsTimeLineUI.A(hkJ);
-        }
-        
-        public final void aBm()
-        {
-          SnsTimeLineUI.D(hkJ);
-        }
-      }));
-    }
-    SnsTimeLineUI.D(hkJ);
-    SnsTimeLineUI.z(hkJ).aBk();
+    f.lr(14);
+  }
+  
+  public final void pQ()
+  {
+    f.ls(14);
   }
 }
 

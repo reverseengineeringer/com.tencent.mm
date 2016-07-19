@@ -11,13 +11,13 @@ final class a$2
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramDialogInterface = lBs;
-    if (apf != null)
+    paramDialogInterface = mck;
+    if (fTL != null)
     {
-      apf.dismiss();
-      apf = null;
+      fTL.dismiss();
+      fTL = null;
     }
-    lBr.bjj();
+    mcj.bph();
   }
 }
 

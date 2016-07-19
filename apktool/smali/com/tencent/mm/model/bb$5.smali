@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic bCO:Lcom/tencent/mm/model/bb;
+.field final synthetic bvY:Lcom/tencent/mm/model/bb;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 422
-    iput-object p1, p0, Lcom/tencent/mm/model/bb$5;->bCO:Lcom/tencent/mm/model/bb;
+    iput-object p1, p0, Lcom/tencent/mm/model/bb$5;->bvY:Lcom/tencent/mm/model/bb;
 
     const/4 v0, 0x0
 
@@ -36,7 +36,7 @@
 
 # virtual methods
 .method public final a(Lcom/tencent/mm/model/az;)Z
-    .locals 5
+    .locals 6
 
     .prologue
     const/4 v0, 0x0
@@ -44,21 +44,21 @@
     .line 426
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-wide v3, p1, Lcom/tencent/mm/model/az;->bCG:J
+    iget-wide v4, p1, Lcom/tencent/mm/model/az;->bvQ:J
 
-    sub-long/2addr v1, v3
+    sub-long/2addr v2, v4
 
-    const-wide/32 v3, 0x1b7740
+    const-wide/32 v4, 0x1b7740
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-lez v1, :cond_0
 
-    iget-object v1, p1, Lcom/tencent/mm/model/az;->bCF:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/model/az;->bvP:Ljava/lang/String;
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/be;->getInt(Ljava/lang/String;I)I
 
     move-result v1
 
@@ -67,21 +67,21 @@
     .line 427
     iget v0, p1, Lcom/tencent/mm/model/az;->key:I
 
-    iget-object v1, p1, Lcom/tencent/mm/model/az;->bCF:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/model/az;->bvP:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/model/bb;->n(ILjava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/model/bb;->o(ILjava/lang/String;)V
 
     .line 428
     const-string/jumbo v0, "0"
 
-    iput-object v0, p1, Lcom/tencent/mm/model/az;->bCF:Ljava/lang/String;
+    iput-object v0, p1, Lcom/tencent/mm/model/az;->bvP:Ljava/lang/String;
 
     .line 429
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    iput-wide v0, p1, Lcom/tencent/mm/model/az;->bCG:J
+    iput-wide v0, p1, Lcom/tencent/mm/model/az;->bvQ:J
 
     .line 430
     const/4 v0, 0x1

@@ -4,7 +4,7 @@ import java.util.EnumSet;
 
 final class g
 {
-  static boolean a(String paramString1, int paramInt1, String paramString2, int paramInt2, EnumSet paramEnumSet)
+  static boolean a(String paramString1, int paramInt1, String paramString2, int paramInt2, EnumSet<a> paramEnumSet)
   {
     int j;
     int i;
@@ -14,7 +14,7 @@ final class g
     {
       if (paramInt1 >= paramString1.length())
       {
-        if ((paramEnumSet.contains(a.caC)) && (paramString2.charAt(paramInt2) == '/')) {
+        if ((paramEnumSet.contains(a.bUl)) && (paramString2.charAt(paramInt2) == '/')) {
           return true;
         }
         return paramInt2 == paramString2.length();
@@ -35,7 +35,7 @@ final class g
         if (paramInt2 >= paramString2.length()) {
           return false;
         }
-        if ((paramString2.charAt(paramInt2) == '/') && (paramEnumSet.contains(a.caA))) {
+        if ((paramString2.charAt(paramInt2) == '/') && (paramEnumSet.contains(a.bUj))) {
           return false;
         }
         if (a(paramString2, paramInt2, paramEnumSet)) {
@@ -63,18 +63,18 @@ final class g
       }
       if (paramInt1 == paramString1.length())
       {
-        if (paramEnumSet.contains(a.caA)) {
-          return (paramEnumSet.contains(a.caC)) || (paramString2.indexOf('/', paramInt2) == -1);
+        if (paramEnumSet.contains(a.bUj)) {
+          return (paramEnumSet.contains(a.bUl)) || (paramString2.indexOf('/', paramInt2) == -1);
         }
         return true;
       }
       j = paramInt2;
-      EnumSet localEnumSet = paramEnumSet;
+      EnumSet<a> localEnumSet = paramEnumSet;
       if (k == 47)
       {
         j = paramInt2;
         localEnumSet = paramEnumSet;
-        if (paramEnumSet.contains(a.caA))
+        if (paramEnumSet.contains(a.bUj))
         {
           j = paramString2.indexOf('/', paramInt2);
           paramInt2 = j;
@@ -84,17 +84,17 @@ final class g
           return false;
         }
       }
-      while ((paramString2.charAt(j) != '/') || (!paramEnumSet.contains(a.caA)))
+      while ((paramString2.charAt(j) != '/') || (!paramEnumSet.contains(a.bUj)))
       {
         j += 1;
         localEnumSet = paramEnumSet;
         if (j < paramString2.length())
         {
           paramEnumSet = localEnumSet;
-          if (localEnumSet.contains(a.caB))
+          if (localEnumSet.contains(a.bUk))
           {
             paramEnumSet = EnumSet.copyOf(localEnumSet);
-            paramEnumSet.remove(a.caB);
+            paramEnumSet.remove(a.bUk);
           }
           if (a(paramString1, paramInt1, paramString2, j, paramEnumSet)) {
             return true;
@@ -105,7 +105,7 @@ final class g
       if (paramInt2 >= paramString2.length()) {
         return false;
       }
-      if ((paramString2.charAt(paramInt2) == '/') && (paramEnumSet.contains(a.caA))) {
+      if ((paramString2.charAt(paramInt2) == '/') && (paramEnumSet.contains(a.bUj))) {
         return false;
       }
       if (a(paramString2, paramInt2, paramEnumSet)) {
@@ -142,7 +142,7 @@ final class g
       for (paramInt1 = j + 1;; paramInt1 = j)
       {
         char c4 = c1;
-        if (paramEnumSet.contains(a.caD)) {
+        if (paramEnumSet.contains(a.bUm)) {
           c4 = Character.toLowerCase(c1);
         }
         k = 0;
@@ -157,7 +157,7 @@ final class g
         c1 = paramString1.charAt(paramInt1);
         if (c1 != ']')
         {
-          if ((c1 != '\\') || (paramEnumSet.contains(a.caz))) {
+          if ((c1 != '\\') || (paramEnumSet.contains(a.bUi))) {
             break label937;
           }
           paramInt1 = m + 1;
@@ -166,13 +166,13 @@ final class g
         }
         for (;;)
         {
-          if ((c1 == '/') && (paramEnumSet.contains(a.caA)))
+          if ((c1 == '/') && (paramEnumSet.contains(a.bUj)))
           {
             paramInt1 = 0;
             break label472;
           }
           char c2 = c1;
-          if (paramEnumSet.contains(a.caD)) {
+          if (paramEnumSet.contains(a.bUm)) {
             c2 = Character.toLowerCase(c1);
           }
           if ((paramString1.charAt(m) == '-') && (m + 1 < paramString1.length()))
@@ -181,7 +181,7 @@ final class g
             if (c1 != ']')
             {
               paramInt1 = m + 2;
-              if ((c1 != '\\') || (paramEnumSet.contains(a.caz))) {
+              if ((c1 != '\\') || (paramEnumSet.contains(a.bUi))) {
                 break label931;
               }
               if (paramInt1 >= paramString1.length())
@@ -195,7 +195,7 @@ final class g
           }
           for (;;)
           {
-            if (paramEnumSet.contains(a.caD)) {}
+            if (paramEnumSet.contains(a.bUm)) {}
             for (char c3 = Character.toLowerCase(c1);; c3 = c1)
             {
               paramInt1 = m;
@@ -224,7 +224,7 @@ final class g
               break label472;
               paramInt2 += 1;
               break;
-              if (paramEnumSet.contains(a.caz)) {
+              if (paramEnumSet.contains(a.bUi)) {
                 break label100;
               }
               if (j >= paramString1.length())
@@ -236,7 +236,7 @@ final class g
               paramInt1 = j + 1;
               c1 = paramString1.charAt(j);
               break label107;
-              if ((c1 != paramString2.charAt(paramInt2)) && ((!paramEnumSet.contains(a.caD)) || (Character.toLowerCase(c1) != Character.toLowerCase(paramString2.charAt(paramInt2))))) {
+              if ((c1 != paramString2.charAt(paramInt2)) && ((!paramEnumSet.contains(a.bUm)) || (Character.toLowerCase(c1) != Character.toLowerCase(paramString2.charAt(paramInt2))))) {
                 return false;
               }
               paramInt2 += 1;
@@ -251,16 +251,19 @@ final class g
     }
   }
   
-  private static boolean a(String paramString, int paramInt, EnumSet paramEnumSet)
+  private static boolean a(String paramString, int paramInt, EnumSet<a> paramEnumSet)
   {
     if (paramInt > paramString.length() - 1) {}
-    while (((paramInt != 0) && ((!paramEnumSet.contains(a.caA)) || (paramString.charAt(paramInt - 1) != '/'))) || (paramString.charAt(paramInt) != '.') || (!paramEnumSet.contains(a.caB))) {
+    while (((paramInt != 0) && ((!paramEnumSet.contains(a.bUj)) || (paramString.charAt(paramInt - 1) != '/'))) || (paramString.charAt(paramInt) != '.') || (!paramEnumSet.contains(a.bUk))) {
       return false;
     }
     return true;
   }
   
-  public static enum a {}
+  public static enum a
+  {
+    private a() {}
+  }
 }
 
 /* Location:

@@ -15,19 +15,19 @@
 
 
 # instance fields
-.field public aFT:Ljava/lang/String;
-
-.field public aGj:Ljava/lang/String;
-
-.field public alS:Ljava/lang/String;
+.field public YH:Ljava/lang/String;
 
 .field public appId:Ljava/lang/String;
 
-.field public asc:I
+.field public arZ:Ljava/lang/String;
 
-.field public iMt:I
+.field public asp:Ljava/lang/String;
 
-.field public iMu:Ljava/lang/String;
+.field public jjq:I
+
+.field public jjr:Ljava/lang/String;
+
+.field public scene:I
 
 
 # direct methods
@@ -35,7 +35,7 @@
     .locals 0
 
     .prologue
-    .line 257
+    .line 255
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

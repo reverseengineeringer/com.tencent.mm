@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ui/base/n$b;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/ui/chatting/w;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/ui/chatting/w;->b(Landroid/content/Context;Ljava/util/List;ZLjava/lang/String;Lcom/tencent/mm/ui/chatting/dm;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic val$context:Landroid/content/Context;
+.field final synthetic lsl:Lcom/tencent/mm/ui/chatting/dm;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;)V
+.method constructor <init>(Lcom/tencent/mm/ui/chatting/dm;)V
     .locals 0
 
     .prologue
-    .line 109
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/w$2;->val$context:Landroid/content/Context;
+    .line 97
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/w$2;->lsl:Lcom/tencent/mm/ui/chatting/dm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,89 +36,23 @@
 
 
 # virtual methods
-.method public final a(Landroid/widget/TextView;Landroid/view/MenuItem;)V
-    .locals 3
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 2
 
     .prologue
-    .line 113
-    if-eqz p1, :cond_1
+    .line 100
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/w$2;->lsl:Lcom/tencent/mm/ui/chatting/dm;
 
-    .line 114
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-interface {p2}, Landroid/view/MenuItem;->getTitle()Ljava/lang/CharSequence;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/storage/q;->Ep(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
-
-    move-result-object v0
-
-    .line 115
     if-eqz v0, :cond_0
 
-    iget-wide v1, v0, Lcom/tencent/mm/h/a;->bvi:J
+    .line 101
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/w$2;->lsl:Lcom/tencent/mm/ui/chatting/dm;
 
-    long-to-int v1, v1
+    sget v1, Lcom/tencent/mm/ui/chatting/dm$a;->lCU:I
 
-    if-gtz v1, :cond_2
+    invoke-interface {v0}, Lcom/tencent/mm/ui/chatting/dm;->bkm()V
 
-    .line 116
+    .line 103
     :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-interface {p2}, Landroid/view/MenuItem;->getTitle()Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 121
-    :cond_1
-    :goto_0
     return-void
-
-    .line 118
-    :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/w$2;->val$context:Landroid/content/Context;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->qy()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcom/tencent/mm/pluginsdk/ui/d/e;->a(Landroid/content/Context;Ljava/lang/CharSequence;)Landroid/text/SpannableString;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    goto :goto_0
 .end method

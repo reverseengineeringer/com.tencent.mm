@@ -14,8 +14,8 @@ final class LoginUI$5
     if (parame == null) {
       return;
     }
-    parame = parame.vW();
-    int i = tDuin;
+    parame = parame.vY();
+    int i = tEuin;
     parame.i(new byte[0], i);
   }
 }

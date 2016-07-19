@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.modelsearch.f;
 import com.tencent.mm.modelsearch.m;
 
@@ -21,15 +21,15 @@ public class e$b
   
   public View a(Context paramContext, ViewGroup paramViewGroup)
   {
-    if (com.tencent.mm.aw.a.da(paramContext)) {}
-    for (paramContext = LayoutInflater.from(paramContext).inflate(2131363040, paramViewGroup, false);; paramContext = LayoutInflater.from(paramContext).inflate(2131363057, paramViewGroup, false))
+    if (com.tencent.mm.az.a.cY(paramContext)) {}
+    for (paramContext = LayoutInflater.from(paramContext).inflate(2130904324, paramViewGroup, false);; paramContext = LayoutInflater.from(paramContext).inflate(2130904323, paramViewGroup, false))
     {
-      paramViewGroup = (e.a)lnb.awR();
-      czS = ((ImageView)paramContext.findViewById(2131165293));
-      cNT = ((TextView)paramContext.findViewById(2131165340));
-      cOd = ((TextView)paramContext.findViewById(2131165341));
-      cMt = paramContext.findViewById(2131167176);
-      czW = ((CheckBox)paramContext.findViewById(2131165695));
+      paramViewGroup = (e.a)lNw.azo();
+      cui = ((ImageView)paramContext.findViewById(2131755444));
+      cuj = ((TextView)paramContext.findViewById(2131755331));
+      cuk = ((TextView)paramContext.findViewById(2131755333));
+      cJf = paramContext.findViewById(2131758184);
+      cul = ((CheckBox)paramContext.findViewById(2131755446));
       paramContext.setTag(paramViewGroup);
       return paramContext;
     }
@@ -41,54 +41,51 @@ public class e$b
     parama1 = (e)parama1;
     if ((username != null) && (username.length() > 0))
     {
-      com.tencent.mm.pluginsdk.ui.a.b.b(czS, username);
-      f.a(cKS, cNT);
-      f.a(ghW, cOd);
-      if (!lnb.lkT) {
-        break label213;
+      com.tencent.mm.pluginsdk.ui.a.b.a(cui, username);
+      f.a(cHV, cuj);
+      f.a(gsw, cuk);
+      if (!lNw.lLe) {
+        break label185;
       }
       if (!paramBoolean1) {
-        break label193;
+        break label165;
       }
-      czW.setChecked(true);
-      czW.setEnabled(false);
+      cul.setChecked(true);
+      cul.setEnabled(false);
       label93:
-      czW.setVisibility(0);
+      cul.setVisibility(0);
       label101:
-      if (!lnb.cLD) {
-        break label225;
+      if (!lNw.cIG) {
+        break label197;
       }
-      cMt.setBackgroundResource(2130970303);
+      cJf.setBackgroundResource(2130838073);
     }
     for (;;)
     {
-      if (cId.field_deleteFlag == 1)
+      if (cFh.field_deleteFlag == 1)
       {
-        cOd.setVisibility(0);
-        cOd.setText(paramContext.getString(2131428346));
-      }
-      if (lnb.cNY != null) {
-        m.b(lnb.aEy, lnb.cNY, 1);
+        cuk.setVisibility(0);
+        cuk.setText(paramContext.getString(2131230797));
       }
       return;
-      czS.setImageResource(2130970523);
+      cui.setImageResource(2130838112);
       break;
-      label193:
-      czW.setChecked(paramBoolean2);
-      czW.setEnabled(true);
+      label165:
+      cul.setChecked(paramBoolean2);
+      cul.setEnabled(true);
       break label93;
-      label213:
-      czW.setVisibility(8);
+      label185:
+      cul.setVisibility(8);
       break label101;
-      label225:
-      cMt.setBackgroundResource(2130970354);
+      label197:
+      cJf.setBackgroundResource(2130838071);
     }
   }
   
-  public final boolean bhz()
+  public final boolean bnp()
   {
-    if (lnb.cNY != null) {
-      m.b(lnb.aEy, lnb.cNY, 1);
+    if (lNw.cKY != null) {
+      m.b(lNw.aqC, lNw.cKY, 1);
     }
     return false;
   }

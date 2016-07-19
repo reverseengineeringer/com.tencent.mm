@@ -18,25 +18,25 @@
 .method public abstract a(Lcom/tencent/mm/pluginsdk/i$w;)V
 .end method
 
-.method public abstract aED()S
+.method public abstract aHI()V
 .end method
 
-.method public abstract aEE()S
+.method public abstract aHZ()Z
 .end method
 
-.method public abstract aEF()Z
+.method public abstract aIa()V
 .end method
 
-.method public abstract aEg()V
+.method public abstract aIf()S
 .end method
 
-.method public abstract aEx()Z
+.method public abstract aIg()S
 .end method
 
-.method public abstract aEy()V
+.method public abstract aIh()Z
 .end method
 
-.method public abstract as(Ljava/lang/String;I)V
+.method public abstract au(Ljava/lang/String;I)V
 .end method
 
 .method public abstract b(Lcom/tencent/mm/pluginsdk/i$w;)V

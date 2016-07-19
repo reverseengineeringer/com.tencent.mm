@@ -15,152 +15,152 @@ import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.ah.k;
-import com.tencent.mm.d.a.jo;
-import com.tencent.mm.d.a.mt;
-import com.tencent.mm.d.a.mt.b;
-import com.tencent.mm.g.e;
+import com.tencent.mm.e.a.jt;
+import com.tencent.mm.e.a.ng;
+import com.tencent.mm.e.a.ng.b;
+import com.tencent.mm.h.e;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.ax;
+import com.tencent.mm.plugin.report.service.f;
 import com.tencent.mm.pluginsdk.d;
 import com.tencent.mm.pluginsdk.i.ai;
 import com.tencent.mm.pluginsdk.i.o.a;
-import com.tencent.mm.r.m;
 import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.storage.j.a;
 import com.tencent.mm.ui.contact.SelectContactUI;
 import com.tencent.mm.ui.contact.VoipAddressUI;
 import com.tencent.mm.ui.tools.ShareImageRedirectUI;
+import com.tencent.mm.ui.tools.u;
 
 public final class s
   extends com.tencent.mm.ui.tools.s
 {
-  private static final int[] kra = { 2, 1, 4, 10, 3, Integer.MAX_VALUE, 20 };
-  private LayoutInflater hI;
-  private SparseArray kqW;
-  private a kqY;
-  r kqZ = null;
+  private static final int[] kQh = { 2, 1, 4, 10, 3, Integer.MAX_VALUE, 20 };
+  private LayoutInflater ib;
+  private SparseArray<c> kQd;
+  private a kQf;
+  r kQg = null;
   private Context mContext;
   
   public s(ActionBarActivity paramActionBarActivity)
   {
     super(paramActionBarActivity);
     mContext = paramActionBarActivity;
-    hI = LayoutInflater.from(paramActionBarActivity);
-    ih(false);
-    kqZ = r.bbs();
+    ib = LayoutInflater.from(paramActionBarActivity);
+    iP(false);
+    kQg = r.bgE();
   }
   
-  public static d qk(int paramInt)
+  public static d sb(int paramInt)
   {
-    Context localContext = y.getContext();
+    Context localContext = aa.getContext();
     switch (paramInt)
     {
     default: 
       return null;
     case 1: 
-      if (LauncherUI.klZ.booleanValue()) {
-        return new d(1, localContext.getString(2131429450), "", 2130903556, 2131231161);
+      if (LauncherUI.kLA.booleanValue()) {
+        return new d(1, localContext.getString(2131233822), "", 2131165660, 2131690046);
       }
-      return new d(1, localContext.getString(2131429450), "", 2130903463, 0);
+      return new d(1, localContext.getString(2131233822), "", 2131165661, 0);
     case 2: 
-      if (LauncherUI.kma.booleanValue()) {
-        return new d(2, localContext.getString(2131429447), "", 2130903567, 2131231161);
+      if (LauncherUI.kLB.booleanValue()) {
+        return new d(2, localContext.getString(2131233825), "", 2131165687, 2131690046);
       }
-      return new d(2, localContext.getString(2131429447), "", 2130903604, 0);
+      return new d(2, localContext.getString(2131233825), "", 2131165688, 0);
     case 3: 
-      return new d(3, localContext.getString(2131429451), "", 2130903482, 0);
+      return new d(3, localContext.getString(2131233826), "", 2131165289, 0);
     case 4: 
-      if (1 == ay.getInt(com.tencent.mm.g.h.pS().getValue("VOIPCallType"), 0)) {
-        return new d(4, localContext.getString(2131429448), "", 2130903441, 0);
+      if (1 == be.getInt(com.tencent.mm.h.h.om().getValue("VOIPCallType"), 0)) {
+        return new d(4, localContext.getString(2131233827), "", 2131165723, 0);
       }
-      return new d(4, localContext.getString(2131429449), "", 2130903461, 0);
+      return new d(4, localContext.getString(2131233823), "", 2131165664, 0);
     case 5: 
-      return new d(5, localContext.getString(2131428031), "", 2130903579, 0);
+      return new d(5, localContext.getString(2131235054), "", 2131165703, 0);
     case 6: 
-      return new d(6, localContext.getString(2131428035), "", 2130903443, 0);
+      return new d(6, localContext.getString(2131235035), "", 2131165681, 0);
     case 7: 
-      return new d(7, localContext.getString(2131428033), "", 2130903529, 0);
+      return new d(7, localContext.getString(2131235037), "", 2131165671, 0);
     case 8: 
-      return new d(8, localContext.getString(2131432848), "", 2130903487, 0);
+      return new d(8, localContext.getString(2131232264), "", 2131165679, 0);
     case 9: 
-      return new d(9, localContext.getString(2131428110), "", 2130903619, 0);
+      return new d(9, localContext.getString(2131235057), "", 2131165698, 0);
     case 10: 
-      return new d(10, localContext.getString(2131428591), "", 2130903534, 0);
+      return new d(10, localContext.getString(2131232744), "", 2131165705, 0);
     case 11: 
-      return new d(11, localContext.getString(2131433001), "", 2130903620, 0);
+      return new d(11, localContext.getString(2131235412), "", 2131165697, 0);
     case 12: 
-      return new d(12, localContext.getString(2131429354), "", 2130903518, 0);
+      return new d(12, localContext.getString(2131233111), "", 2131165685, 0);
     case 13: 
-      return new d(13, localContext.getString(2131431689), "", 2130903431, 0);
+      return new d(13, localContext.getString(2131235273), "", 2131165719, 0);
     case 14: 
-      return new d(14, localContext.getString(2131431146), "", 2130903456, 0);
+      return new d(14, localContext.getString(2131233994), "", 2131165699, 0);
     case 15: 
-      return new d(15, localContext.getString(2131428952), "", 2130903437, 0);
+      return new d(15, localContext.getString(2131231362), "", 2131165666, 0);
     case 16: 
-      return new d(16, localContext.getString(2131428131), "", 2130903577, 0);
+      return new d(16, localContext.getString(2131234947), "", 2131165725, 0);
     case 17: 
-      return new d(17, localContext.getString(2131429006), "", 2130903522, 0);
+      return new d(17, localContext.getString(2131233807), "", 2131165689, 0);
     case 18: 
-      return new d(18, localContext.getString(2131432640), "", 2130903542, 0);
+      return new d(18, localContext.getString(2131232746), "", 2131165707, 0);
     case 19: 
-      return new d(19, localContext.getString(2131430632), "", 2130903601, 0);
+      return new d(19, localContext.getString(2131232749), "", 2131165192, 0);
     case 20: 
-      return new d(20, localContext.getString(2131428321), "", 2130903504, 0);
+      return new d(20, localContext.getString(2131230847), "", 2131165780, 0);
     case 2147483647: 
-      return new d(Integer.MAX_VALUE, localContext.getString(2131428195), "", 2130903488, 0);
+      return new d(Integer.MAX_VALUE, localContext.getString(2131234996), "", 2131165682, 0);
     }
-    return new d(2147483646, "TIT", "", 2130903529, 0);
+    return new d(2147483646, "TIT", "", 2131165671, 0);
   }
   
-  protected final BaseAdapter Li()
+  protected final BaseAdapter Mc()
   {
-    if (kqY == null) {
-      kqY = new a((byte)0);
+    if (kQf == null) {
+      kQf = new a((byte)0);
     }
-    return kqY;
+    return kQf;
   }
   
   public final boolean bH()
   {
     int j = 0;
-    kqZ.hn(false);
-    if (kqZ.kqW.size() != 0) {
-      kqW = kqZ.kqW;
+    kQg.hL(false);
+    if (kQg.kQd.size() != 0) {
+      kQd = kQg.kQd;
     }
     try
     {
-      if (((Boolean)ah.tD().rn().a(j.a.kcA, Boolean.valueOf(false))).booleanValue())
+      if (((Boolean)ah.tE().ro().a(j.a.kDg, Boolean.valueOf(false))).booleanValue())
       {
         int i = j;
-        while (i < kqW.size())
+        while (i < kQd.size())
         {
-          j = kqW.get(i)).krf.kri;
+          j = kQd.get(i)).kQm.kQp;
           if (j != 2147483646)
           {
             i += 1;
             continue;
-            com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpLc8OeKfE5/C2SWmOQZlG2rej9zXeTaz5M=", "dyna plus config is null, we use default one");
-            if (kqW != null) {
-              kqW.clear();
+            com.tencent.mm.sdk.platformtools.v.d("MicroMsg.PlusSubMenuHelper", "dyna plus config is null, we use default one");
+            if (kQd != null) {
+              kQd.clear();
             }
             for (;;)
             {
               i = 0;
-              while (i < kra.length)
+              while (i < kQh.length)
               {
-                c localc = new c(qk(kra[i]));
-                kqW.put(i, localc);
+                c localc = new c(sb(kQh[i]));
+                kQd.put(i, localc);
                 i += 1;
               }
-              kqW = new SparseArray();
+              kQd = new SparseArray();
             }
           }
         }
-        if (i == kqW.size()) {
-          kqW.put(kqW.size(), new c(qk(2147483646)));
+        if (i == kQd.size()) {
+          kQd.put(kQd.size(), new c(sb(2147483646)));
         }
       }
     }
@@ -168,21 +168,21 @@ public final class s
     {
       for (;;) {}
     }
-    if (kqY != null) {
-      kqY.notifyDataSetChanged();
+    if (kQf != null) {
+      kQf.notifyDataSetChanged();
     }
     return super.bH();
   }
   
-  public final void onItemClick(AdapterView paramAdapterView, final View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, final View paramView, int paramInt, long paramLong)
   {
     int i = 1;
     boolean bool2 = false;
     if ((mContext instanceof ActionBarActivity)) {
-      ((ActionBarActivity)mContext).G();
+      ((ActionBarActivity)mContext).F();
     }
-    int j = kqW.get(paramInt)).krf.kri;
-    com.tencent.mm.plugin.report.service.h.fUJ.g(11104, new Object[] { Integer.valueOf(j) });
+    int j = kQd.get(paramInt)).kQm.kQp;
+    com.tencent.mm.plugin.report.service.g.gdY.h(11104, new Object[] { Integer.valueOf(j) });
     switch (j)
     {
     default: 
@@ -199,35 +199,36 @@ public final class s
     case 11: 
       for (;;)
       {
-        kqZ.qj(j);
+        kQg.sa(j);
         dismiss();
         return;
-        com.tencent.mm.ar.c.c(mContext, "subapp", ".ui.pluginapp.AddMoreFriendsUI", new Intent());
+        com.tencent.mm.av.c.c(mContext, "subapp", ".ui.pluginapp.AddMoreFriendsUI", new Intent());
         continue;
         paramAdapterView = new Intent(mContext, SelectContactUI.class);
-        paramAdapterView.putExtra("titile", mContext.getString(2131428316));
+        paramAdapterView.putExtra("titile", mContext.getString(2131230848));
         paramAdapterView.putExtra("list_type", 0);
-        paramAdapterView.putExtra("list_attr", com.tencent.mm.ui.contact.r.n(new int[] { com.tencent.mm.ui.contact.r.llA, 256, 512 }));
+        paramAdapterView.putExtra("list_attr", com.tencent.mm.ui.contact.r.n(new int[] { com.tencent.mm.ui.contact.r.lLN, 256, 512 }));
+        paramAdapterView.putExtra("scene", 7);
         mContext.startActivity(paramAdapterView);
         continue;
         paramAdapterView = new Intent(mContext, ShareImageRedirectUI.class);
         mContext.startActivity(paramAdapterView);
         continue;
-        paramAdapterView = new mt();
-        aJb.aJd = true;
-        com.tencent.mm.sdk.c.a.jUF.j(paramAdapterView);
-        paramAdapterView = aJc.aJf;
-        if (!ay.kz(paramAdapterView))
+        paramAdapterView = new ng();
+        avv.avx = true;
+        com.tencent.mm.sdk.c.a.kug.y(paramAdapterView);
+        paramAdapterView = avw.avz;
+        if (!be.kf(paramAdapterView))
         {
-          com.tencent.mm.sdk.platformtools.u.v("!44@/B4Tb64lLpLc8OeKfE5/C2SWmOQZlG2rej9zXeTaz5M=", "Talkroom is on: " + paramAdapterView);
-          com.tencent.mm.ui.base.g.a(mContext, mContext.getString(2131429249), "", mContext.getString(2131430888), mContext.getString(2131430884), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+          com.tencent.mm.sdk.platformtools.v.v("MicroMsg.PlusSubMenuHelper", "Talkroom is on: " + paramAdapterView);
+          com.tencent.mm.ui.base.g.b(mContext, mContext.getString(2131235642), "", mContext.getString(2131230967), mContext.getString(2131230873), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
           {
             public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
             {
-              mt localmt = new mt();
-              aJb.aJe = true;
-              com.tencent.mm.sdk.c.a.jUF.j(localmt);
-              VoipAddressUI.eq(s.c(s.this));
+              ng localng = new ng();
+              avv.avy = true;
+              com.tencent.mm.sdk.c.a.kug.y(localng);
+              VoipAddressUI.et(s.c(s.this));
               paramAnonymousDialogInterface.dismiss();
             }
           }, new DialogInterface.OnClickListener()
@@ -240,131 +241,126 @@ public final class s
         }
         else
         {
-          VoipAddressUI.eq(mContext);
+          VoipAddressUI.et(mContext);
           continue;
-          if (!ah.tD().isSDCardAvailable())
+          if (!ah.tE().isSDCardAvailable())
           {
-            com.tencent.mm.ui.base.s.em(mContext);
+            com.tencent.mm.ui.base.s.ep(mContext);
           }
           else
           {
-            paramAdapterView = (String)ah.tD().rn().get(2, null);
+            paramAdapterView = (String)ah.tE().ro().get(2, null);
             paramView = new Intent();
             paramView.putExtra("sns_userName", paramAdapterView);
             paramView.setFlags(536870912);
             paramView.addFlags(67108864);
-            paramInt = ay.b((Integer)ah.tD().rn().get(68389, null), 0);
-            ah.tD().rn().set(68389, Integer.valueOf(paramInt + 1));
-            com.tencent.mm.ar.c.c(mContext, "sns", ".ui.SnsUserUI", paramView);
+            paramInt = be.b((Integer)ah.tE().ro().get(68389, null), 0);
+            ah.tE().ro().set(68389, Integer.valueOf(paramInt + 1));
+            com.tencent.mm.av.c.c(mContext, "sns", ".ui.SnsUserUI", paramView);
             continue;
-            com.tencent.mm.ar.c.u(mContext, "favorite", ".ui.FavoriteIndexUI");
+            com.tencent.mm.av.c.v(mContext, "favorite", ".ui.FavoriteIndexUI");
             continue;
-            com.tencent.mm.ar.c.c(mContext, "mall", ".ui.MallIndexUI", new Intent());
-            if (ah.tD().isSDCardAvailable())
+            com.tencent.mm.av.c.c(mContext, "mall", ".ui.MallIndexUI", new Intent());
+            continue;
+            paramAdapterView = new Intent();
+            paramAdapterView.putExtra("preceding_scence", 2);
+            com.tencent.mm.av.c.c(mContext, "emoji", ".ui.v2.EmojiStoreV2UI", paramAdapterView);
+            continue;
+            com.tencent.mm.av.c.c(mContext, "setting", ".ui.setting.SelfQRCodeUI", new Intent());
+            continue;
+            com.tencent.mm.plugin.report.service.g.gdY.h(11265, new Object[] { Integer.valueOf(3) });
+            if ((!com.tencent.mm.aq.v.bb(mContext)) && (!com.tencent.mm.ah.a.aN(mContext)))
             {
-              paramAdapterView = new k(11);
-              ah.tE().d(paramAdapterView);
+              com.tencent.mm.av.c.v(mContext, "scanner", ".ui.BaseScanUI");
               continue;
-              paramAdapterView = new Intent();
-              paramAdapterView.putExtra("preceding_scence", 2);
-              com.tencent.mm.ar.c.c(mContext, "emoji", ".ui.v2.EmojiStoreV2UI", paramAdapterView);
-              continue;
-              com.tencent.mm.ar.c.c(mContext, "setting", ".ui.setting.SelfQRCodeUI", new Intent());
-              continue;
-              com.tencent.mm.plugin.report.service.h.fUJ.g(11265, new Object[] { Integer.valueOf(3) });
-              if ((!com.tencent.mm.an.r.be(mContext)) && (!com.tencent.mm.ae.a.aR(mContext)))
-              {
-                com.tencent.mm.ar.c.u(mContext, "scanner", ".ui.BaseScanUI");
-                continue;
-                if (ah.tD().isSDCardAvailable()) {
-                  break;
-                }
-                com.tencent.mm.ui.base.s.em(mContext);
+              if (ah.tE().isSDCardAvailable()) {
+                break;
               }
+              com.tencent.mm.ui.base.s.ep(mContext);
             }
           }
         }
       }
-      com.tencent.mm.plugin.report.service.g.kd(10);
-      paramAdapterView = (String)ah.tD().rn().get(68377, null);
-      ah.tD().rn().set(68377, "");
+      f.lr(10);
+      paramAdapterView = (String)ah.tE().ro().get(68377, null);
+      ah.tE().ro().set(68377, "");
       paramView = new Intent();
       paramView.putExtra("sns_timeline_NeedFirstLoadint", true);
-      if (ay.kz(paramAdapterView)) {
+      if (be.kf(paramAdapterView)) {
         break;
       }
     }
     for (boolean bool1 = false;; bool1 = true)
     {
-      if (i.ai.izc != null) {
-        if (i.ai.izc.DE() > 0) {
+      if (i.ai.iVy != null) {
+        if (i.ai.iVy.DV() > 0) {
           bool1 = bool2;
         }
       }
       for (;;)
       {
         paramView.putExtra("sns_resume_state", bool1);
-        com.tencent.mm.ar.c.c(mContext, "sns", ".ui.SnsTimeLineUI", paramView);
+        com.tencent.mm.av.c.c(mContext, "sns", ".ui.SnsTimeLineUI", paramView);
         break;
         continue;
-        if (!ah.tD().isSDCardAvailable())
+        if (!ah.tE().isSDCardAvailable())
         {
-          com.tencent.mm.ui.base.s.em(mContext);
+          com.tencent.mm.ui.base.s.ep(mContext);
           break;
         }
-        com.tencent.mm.ar.c.u(mContext, "game", ".ui.GameCenterUI");
-        new aa().postDelayed(new Runnable()
+        com.tencent.mm.av.c.v(mContext, "game", ".ui.GameCenterUI");
+        new ac().postDelayed(new Runnable()
         {
           public final void run()
           {
             Intent localIntent = new Intent();
-            localIntent.setComponent(new ComponentName(d.e.kjL, "com.tencent.mm.booter.MMReceivers$ToolsProcessReceiver"));
+            localIntent.setComponent(new ComponentName(d.e.kJT, "com.tencent.mm.booter.MMReceivers$ToolsProcessReceiver"));
             localIntent.putExtra("tools_process_action_code_key", "com.tencent.mm.intent.ACTION_START_TOOLS_PROCESS");
             s.c(s.this).sendBroadcast(localIntent);
           }
         }, 100L);
         break;
-        com.tencent.mm.sdk.c.a.jUF.j(new jo());
-        com.tencent.mm.ar.c.u(mContext, "shake", ".ui.ShakeReportUI");
+        com.tencent.mm.sdk.c.a.kug.y(new jt());
+        com.tencent.mm.av.c.v(mContext, "shake", ".ui.ShakeReportUI");
         break;
-        if (!ay.d((Boolean)ah.tD().rn().get(4103, null)))
+        if (!be.c((Boolean)ah.tE().ro().get(4103, null)))
         {
-          com.tencent.mm.ar.c.u(mContext, "nearby", ".ui.NearbyFriendsIntroUI");
+          com.tencent.mm.av.c.v(mContext, "nearby", ".ui.NearbyFriendsIntroUI");
           break;
         }
-        paramAdapterView = ax.uD();
+        paramAdapterView = ax.uF();
         if (paramAdapterView == null)
         {
-          com.tencent.mm.ar.c.u(mContext, "nearby", ".ui.NearbyPersonalInfoUI");
+          com.tencent.mm.av.c.v(mContext, "nearby", ".ui.NearbyPersonalInfoUI");
           break;
         }
-        paramView = ay.ky(paramAdapterView.getProvince());
-        paramInt = ay.b(Integer.valueOf(aSu), 0);
-        if ((ay.kz(paramView)) || (paramInt == 0))
+        paramView = be.li(paramAdapterView.getProvince());
+        paramInt = be.b(Integer.valueOf(aFd), 0);
+        if ((be.kf(paramView)) || (paramInt == 0))
         {
-          com.tencent.mm.ar.c.u(mContext, "nearby", ".ui.NearbyPersonalInfoUI");
+          com.tencent.mm.av.c.v(mContext, "nearby", ".ui.NearbyPersonalInfoUI");
           break;
         }
-        paramAdapterView = (Boolean)ah.tD().rn().get(4104, null);
+        paramAdapterView = (Boolean)ah.tE().ro().get(4104, null);
         if ((paramAdapterView == null) || (!paramAdapterView.booleanValue()))
         {
-          paramAdapterView = LauncherUI.bat();
+          paramAdapterView = LauncherUI.bfJ();
           if (paramAdapterView != null) {
-            paramAdapterView.Gi("tab_find_friend");
+            paramAdapterView.Ix("tab_find_friend");
           }
-          com.tencent.mm.ap.a.cC(mContext);
+          com.tencent.mm.at.a.cy(mContext);
           break;
         }
-        paramAdapterView = View.inflate(mContext, 2131363038, null);
-        paramView = (CheckBox)paramAdapterView.findViewById(2131169056);
+        paramAdapterView = View.inflate(mContext, 2130903825, null);
+        paramView = (CheckBox)paramAdapterView.findViewById(2131757500);
         paramView.setChecked(false);
-        com.tencent.mm.ui.base.g.a(mContext, mContext.getString(2131430877), paramAdapterView, new DialogInterface.OnClickListener()
+        com.tencent.mm.ui.base.g.a(mContext, mContext.getString(2131231028), paramAdapterView, new DialogInterface.OnClickListener()
         {
           public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
           {
             if (paramView != null)
             {
-              paramAnonymousDialogInterface = ah.tD().rn();
+              paramAnonymousDialogInterface = ah.tE().ro();
               if (paramView.isChecked()) {
                 break label62;
               }
@@ -373,53 +369,55 @@ public final class s
             for (boolean bool = true;; bool = false)
             {
               paramAnonymousDialogInterface.set(4104, Boolean.valueOf(bool));
-              paramAnonymousDialogInterface = LauncherUI.bat();
+              paramAnonymousDialogInterface = LauncherUI.bfJ();
               if (paramAnonymousDialogInterface != null) {
-                paramAnonymousDialogInterface.Gi("tab_find_friend");
+                paramAnonymousDialogInterface.Ix("tab_find_friend");
               }
-              com.tencent.mm.ap.a.cC(s.c(s.this));
+              com.tencent.mm.at.a.cy(s.c(s.this));
               return;
             }
           }
         }, null);
         break;
-        paramAdapterView = ax.uC();
-        if ((ay.b(Integer.valueOf(aSu), 0) <= 0) || (ay.kz(paramAdapterView.getProvince())))
+        paramAdapterView = ax.uE();
+        if ((be.b(Integer.valueOf(aFd), 0) <= 0) || (be.kf(paramAdapterView.getProvince())))
         {
-          com.tencent.mm.ar.c.u(mContext, "bottle", ".ui.BottleWizardStep1");
+          com.tencent.mm.av.c.v(mContext, "bottle", ".ui.BottleWizardStep1");
           break;
         }
-        com.tencent.mm.ar.c.u(mContext, "bottle", ".ui.BottleBeachUI");
+        com.tencent.mm.av.c.v(mContext, "bottle", ".ui.BottleBeachUI");
         break;
-        if (com.tencent.mm.model.c.cv(tDbzI))
+        if (com.tencent.mm.model.c.da(tEbsL))
         {
-          com.tencent.mm.ar.c.u(mContext, "webwx", ".ui.WebWXLogoutUI");
+          com.tencent.mm.av.c.v(mContext, "webwx", ".ui.WebWXLogoutUI");
           break;
         }
-        com.tencent.mm.ar.c.u(mContext, "webwx", ".ui.WebWeiXinIntroductionUI");
+        com.tencent.mm.av.c.v(mContext, "webwx", ".ui.WebWeiXinIntroductionUI");
         break;
-        if ((com.tencent.mm.model.h.sm() & 0x10000) == 0) {}
+        if ((com.tencent.mm.model.h.so() & 0x10000) == 0) {}
         for (paramInt = i;; paramInt = 0)
         {
           if (paramInt == 0) {
-            break label1420;
+            break label1403;
           }
-          com.tencent.mm.ar.c.u(mContext, "masssend", ".ui.MassSendHistoryUI");
+          com.tencent.mm.av.c.v(mContext, "masssend", ".ui.MassSendHistoryUI");
           break;
         }
-        label1420:
-        com.tencent.mm.ar.c.c(mContext, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", "masssendapp"));
+        label1403:
+        com.tencent.mm.av.c.c(mContext, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", "masssendapp"));
         break;
-        com.tencent.mm.ar.c.u(mContext, "radar", ".ui.RadarSearchUI");
+        com.tencent.mm.av.c.v(mContext, "radar", ".ui.RadarSearchUI");
         break;
-        com.tencent.mm.ar.c.u(mContext, "pwdgroup", ".ui.FacingCreateChatRoomAllInOneUI");
+        com.tencent.mm.av.c.v(mContext, "pwdgroup", ".ui.FacingCreateChatRoomAllInOneUI");
         break;
-        com.tencent.mm.plugin.report.service.h.fUJ.O(10919, "1-6");
-        d.cH(mContext);
+        com.tencent.mm.plugin.report.service.g.gdY.X(10919, "1-6");
+        d.cD(mContext);
         break;
-        com.tencent.mm.ar.c.c(mContext, "wallet", ".trading.WalletPayOrCollectUI", null);
+        com.tencent.mm.av.c.c(mContext, "wallet", ".trading.WalletPayOrCollectUI", null);
         break;
-        com.tencent.mm.ar.c.c(mContext, "offline", ".ui.WalletOfflineEntranceUI", new Intent());
+        paramAdapterView = new Intent();
+        paramAdapterView.putExtra("key_from_scene", 2);
+        com.tencent.mm.av.c.c(mContext, "offline", ".ui.WalletOfflineEntranceUI", paramAdapterView);
         break;
       }
     }
@@ -448,29 +446,29 @@ public final class s
     public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
     {
       paramView = (s.c)s.a(s.this).get(paramInt);
-      paramViewGroup = s.b(s.this).inflate(2131363271, paramViewGroup, false);
-      Object localObject = (TextView)paramViewGroup.findViewById(2131165460);
-      if (!ay.kz(krf.krg)) {
-        ((TextView)localObject).setText(krf.krg);
+      paramViewGroup = s.b(s.this).inflate(2130904063, paramViewGroup, false);
+      Object localObject = (TextView)paramViewGroup.findViewById(2131755172);
+      if (!be.kf(kQm.kQn)) {
+        ((TextView)localObject).setText(kQm.kQn);
       }
-      if (krf.textColor > 0) {
-        ((TextView)localObject).setTextColor(com.tencent.mm.aw.a.w(y.getContext(), krf.textColor));
+      if (kQm.textColor > 0) {
+        ((TextView)localObject).setTextColor(com.tencent.mm.az.a.A(aa.getContext(), kQm.textColor));
       }
-      localObject = (ImageView)paramViewGroup.findViewById(2131166684);
+      localObject = (ImageView)paramViewGroup.findViewById(2131755171);
       TextView localTextView;
       View localView;
-      if (krf.icon > 0)
+      if (kQm.icon > 0)
       {
         ((ImageView)localObject).setVisibility(0);
-        ((ImageView)localObject).setImageResource(agetkrf.icon);
-        if (!ay.kz(krf.krh)) {
-          ((ImageView)localObject).setContentDescription(krf.krh);
+        ((ImageView)localObject).setImageResource(agetkQm.icon);
+        if (!be.kf(kQm.kQo)) {
+          ((ImageView)localObject).setContentDescription(kQm.kQo);
         }
-        localObject = paramViewGroup.findViewById(2131166754);
-        localTextView = (TextView)paramViewGroup.findViewById(2131169505);
-        localTextView.setBackgroundResource(com.tencent.mm.ui.tools.u.eB(s.c(s.this)));
-        localView = paramViewGroup.findViewById(2131167203);
-        if (!krd) {
+        localObject = paramViewGroup.findViewById(2131756538);
+        localTextView = (TextView)paramViewGroup.findViewById(2131758148);
+        localTextView.setBackgroundResource(u.eE(s.c(s.this)));
+        localView = paramViewGroup.findViewById(2131757412);
+        if (!kQk) {
           break label254;
         }
         ((View)localObject).setVisibility(0);
@@ -480,21 +478,21 @@ public final class s
         if (paramInt != getCount() - 1) {
           break label351;
         }
-        paramViewGroup.setBackgroundResource(2130970274);
+        paramViewGroup.setBackgroundResource(2130839419);
         return paramViewGroup;
         ((ImageView)localObject).setVisibility(8);
         break;
         label254:
-        if (aCK > 0)
+        if (apd > 0)
         {
           localTextView.setVisibility(0);
-          if (aCK > 99) {
-            localTextView.setText(2131431112);
+          if (apd > 99) {
+            localTextView.setText(2131235738);
           } else {
-            localTextView.setText(aCK);
+            localTextView.setText(apd);
           }
         }
-        else if (kre)
+        else if (kQl)
         {
           localView.setVisibility(0);
         }
@@ -506,16 +504,16 @@ public final class s
         }
       }
       label351:
-      paramViewGroup.setBackgroundResource(2130970248);
+      paramViewGroup.setBackgroundResource(2130839418);
       return paramViewGroup;
     }
   }
   
   public static final class b
   {
-    int ccb;
+    int bVQ;
     int id;
-    int krc;
+    int kQj;
     int order;
     
     public b(int paramInt1, int paramInt2, int paramInt3)
@@ -526,39 +524,39 @@ public final class s
     public b(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
     {
       id = paramInt1;
-      krc = paramInt2;
-      ccb = paramInt3;
+      kQj = paramInt2;
+      bVQ = paramInt3;
       order = paramInt4;
     }
   }
   
   public static final class c
   {
-    int aCK = 0;
-    boolean krd = false;
-    boolean kre = false;
-    s.d krf;
+    int apd = 0;
+    boolean kQk = false;
+    boolean kQl = false;
+    s.d kQm;
     
     public c(s.d paramd)
     {
-      krf = paramd;
+      kQm = paramd;
     }
   }
   
   public static final class d
   {
     int icon;
-    String krg;
-    String krh;
-    int kri;
+    String kQn;
+    String kQo;
+    int kQp;
     int textColor;
     
     public d(int paramInt1, String paramString1, String paramString2, int paramInt2, int paramInt3)
     {
-      krg = paramString1;
-      krh = paramString2;
+      kQn = paramString1;
+      kQo = paramString2;
       icon = paramInt2;
-      kri = paramInt1;
+      kQp = paramInt1;
       textColor = paramInt3;
     }
   }

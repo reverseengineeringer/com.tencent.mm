@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iST:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;
+.field final synthetic jqf:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 52
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView$1;->iST:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView$1;->jqf:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/plugin/sight/decode/a/b;I)V
+.method public final d(Lcom/tencent/mm/plugin/sight/decode/a/b;I)V
     .locals 2
 
     .prologue
@@ -48,18 +48,18 @@
     if-ne v0, p2, :cond_1
 
     .line 57
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView$1;->iST:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView$1;->jqf:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gyx:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gEU:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
 
     if-eqz v0, :cond_0
 
     .line 58
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView$1;->iST:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView$1;->jqf:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gyx:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gEU:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
 
-    invoke-interface {v0, v1, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/f$a;->az(II)V
+    invoke-interface {v0, v1, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/f$a;->aE(II)V
 
     .line 65
     :cond_0
@@ -71,18 +71,18 @@
     if-nez p2, :cond_0
 
     .line 61
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView$1;->iST:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView$1;->jqf:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gyx:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gEU:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
 
     if-eqz v0, :cond_0
 
     .line 62
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView$1;->iST:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView$1;->jqf:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gyx:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gEU:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/f$a;->lG()V
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/f$a;->jQ()V
 
     goto :goto_0
 .end method

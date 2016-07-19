@@ -1,23 +1,25 @@
 package com.tencent.mm.plugin.sns.data;
 
-import com.tencent.mm.protocal.b.add;
-import com.tencent.mm.storage.i.a;
+import com.tencent.mm.protocal.b.adw;
+import java.util.LinkedList;
+import java.util.List;
 
 public final class e
 {
-  public add aHW;
-  public String buL;
-  public i.a gHB;
-  public int requestType;
+  public List<adw> eKF = new LinkedList();
+  public String gOE;
+  public int gOF;
   
   public e() {}
   
-  public e(add paramadd, int paramInt, String paramString, i.a parama)
+  public e(adw paramadw)
   {
-    aHW = paramadd;
-    requestType = paramInt;
-    gHB = parama;
-    buL = paramString;
+    eKF.add(paramadw);
+  }
+  
+  public e(List<adw> paramList)
+  {
+    eKF = paramList;
   }
 }
 

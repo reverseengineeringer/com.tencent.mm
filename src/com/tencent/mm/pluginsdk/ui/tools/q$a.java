@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.tools;
 
 public abstract interface q$a
 {
-  public abstract void yM(String paramString);
+  public abstract void At(String paramString);
 }
 
 /* Location:

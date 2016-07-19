@@ -12,11 +12,11 @@
 
 
 # instance fields
-.field private kHH:Z
+.field private lgJ:Z
 
-.field private kHI:Lcom/tencent/mm/ui/base/MMTextView$a;
+.field public lgK:Lcom/tencent/mm/ui/base/MMTextView$a;
 
-.field private kHJ:Landroid/view/GestureDetector;
+.field private lgL:Landroid/view/GestureDetector;
 
 
 # direct methods
@@ -32,13 +32,13 @@
     .line 24
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTextView;->kHH:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTextView;->lgJ:Z
 
     .line 25
-    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMTextView;->kHI:Lcom/tencent/mm/ui/base/MMTextView$a;
+    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMTextView;->lgK:Lcom/tencent/mm/ui/base/MMTextView$a;
 
     .line 26
-    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMTextView;->kHJ:Landroid/view/GestureDetector;
+    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMTextView;->lgL:Landroid/view/GestureDetector;
 
     .line 35
     invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMTextView;->init()V
@@ -59,13 +59,13 @@
     .line 24
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTextView;->kHH:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTextView;->lgJ:Z
 
     .line 25
-    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMTextView;->kHI:Lcom/tencent/mm/ui/base/MMTextView$a;
+    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMTextView;->lgK:Lcom/tencent/mm/ui/base/MMTextView$a;
 
     .line 26
-    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMTextView;->kHJ:Landroid/view/GestureDetector;
+    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMTextView;->lgL:Landroid/view/GestureDetector;
 
     .line 40
     invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMTextView;->init()V
@@ -79,7 +79,7 @@
 
     .prologue
     .line 17
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTextView;->kHI:Lcom/tencent/mm/ui/base/MMTextView$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTextView;->lgK:Lcom/tencent/mm/ui/base/MMTextView$a;
 
     return-object v0
 .end method
@@ -101,7 +101,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTextView;->kHJ:Landroid/view/GestureDetector;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTextView;->lgL:Landroid/view/GestureDetector;
 
     .line 53
     return-void
@@ -114,16 +114,16 @@
 
     .prologue
     .line 86
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ/g4sb0pugm9RTv6dIAy2a"
+    const-string/jumbo v0, "MicroMsg.MMTextView"
 
     const-string/jumbo v1, "cancelLongPress , should ignore Action Up Event next time"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 87
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTextView;->kHH:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTextView;->lgJ:Z
 
     .line 89
     invoke-super {p0}, Landroid/widget/TextView;->cancelLongPress()V
@@ -148,7 +148,7 @@
     .line 58
     if-ne v3, v0, :cond_1
 
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/MMTextView;->kHH:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/MMTextView;->lgJ:Z
 
     if-eqz v2, :cond_1
 
@@ -159,11 +159,11 @@
     if-eqz v2, :cond_2
 
     .line 60
-    const-string/jumbo v1, "!32@/B4Tb64lLpJ/g4sb0pugm9RTv6dIAy2a"
+    const-string/jumbo v1, "MicroMsg.MMTextView"
 
     const-string/jumbo v2, "ignore Action Up Event this time"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 77
     :cond_0
@@ -181,20 +181,20 @@
     if-nez v3, :cond_3
 
     .line 64
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMTextView;->kHH:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMTextView;->lgJ:Z
 
     .line 69
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTextView;->kHI:Lcom/tencent/mm/ui/base/MMTextView$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTextView;->lgK:Lcom/tencent/mm/ui/base/MMTextView$a;
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTextView;->kHJ:Landroid/view/GestureDetector;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTextView;->lgL:Landroid/view/GestureDetector;
 
     if-eqz v0, :cond_4
 
     .line 70
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTextView;->kHJ:Landroid/view/GestureDetector;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTextView;->lgL:Landroid/view/GestureDetector;
 
     invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -222,16 +222,16 @@
 
     .prologue
     .line 94
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ/g4sb0pugm9RTv6dIAy2a"
+    const-string/jumbo v0, "MicroMsg.MMTextView"
 
     const-string/jumbo v1, "performLongClick , should ignore Action Up Event next time"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 95
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTextView;->kHH:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTextView;->lgJ:Z
 
     .line 96
     invoke-super {p0}, Landroid/widget/TextView;->performLongClick()Z
@@ -239,15 +239,4 @@
     move-result v0
 
     return v0
-.end method
-
-.method public setOnDoubleClickLitsener(Lcom/tencent/mm/ui/base/MMTextView$a;)V
-    .locals 0
-
-    .prologue
-    .line 81
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTextView;->kHI:Lcom/tencent/mm/ui/base/MMTextView$a;
-
-    .line 82
-    return-void
 .end method

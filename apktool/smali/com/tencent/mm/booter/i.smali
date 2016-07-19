@@ -22,7 +22,7 @@
     invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
 
     .line 21
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tu()Lcom/tencent/mm/storage/g;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/storage/g;
 
     move-result-object v0
 
@@ -34,7 +34,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Integer;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/lang/Integer;I)I
 
     move-result v3
 
@@ -45,17 +45,17 @@
     if-ge v0, v3, :cond_0
 
     .line 23
-    new-instance v4, Lcom/tencent/mm/protocal/b/aas;
+    new-instance v4, Lcom/tencent/mm/protocal/b/abh;
 
-    invoke-direct {v4}, Lcom/tencent/mm/protocal/b/aas;-><init>()V
+    invoke-direct {v4}, Lcom/tencent/mm/protocal/b/abh;-><init>()V
 
     .line 24
-    iput v8, v4, Lcom/tencent/mm/protocal/b/aas;->fUk:I
+    iput v8, v4, Lcom/tencent/mm/protocal/b/abh;->gdy:I
 
     .line 25
     const-string/jumbo v5, "0"
 
-    iput-object v5, v4, Lcom/tencent/mm/protocal/b/aas;->fUt:Ljava/lang/String;
+    iput-object v5, v4, Lcom/tencent/mm/protocal/b/abh;->gdI:Ljava/lang/String;
 
     .line 26
     invoke-virtual {v2, v4}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
@@ -67,7 +67,7 @@
 
     .line 29
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tu()Lcom/tencent/mm/storage/g;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/storage/g;
 
     move-result-object v0
 
@@ -79,7 +79,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Integer;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/lang/Integer;I)I
 
     move-result v3
 
@@ -90,17 +90,17 @@
     if-ge v0, v3, :cond_1
 
     .line 31
-    new-instance v4, Lcom/tencent/mm/protocal/b/aas;
+    new-instance v4, Lcom/tencent/mm/protocal/b/abh;
 
-    invoke-direct {v4}, Lcom/tencent/mm/protocal/b/aas;-><init>()V
+    invoke-direct {v4}, Lcom/tencent/mm/protocal/b/abh;-><init>()V
 
     .line 32
-    iput v8, v4, Lcom/tencent/mm/protocal/b/aas;->fUk:I
+    iput v8, v4, Lcom/tencent/mm/protocal/b/abh;->gdy:I
 
     .line 33
     const-string/jumbo v5, "1"
 
-    iput-object v5, v4, Lcom/tencent/mm/protocal/b/aas;->fUt:Ljava/lang/String;
+    iput-object v5, v4, Lcom/tencent/mm/protocal/b/abh;->gdI:Ljava/lang/String;
 
     .line 34
     invoke-virtual {v2, v4}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
@@ -122,7 +122,7 @@
     invoke-static {v2}, Lcom/tencent/mm/model/bb;->a(Ljava/util/LinkedList;)V
 
     .line 40
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tu()Lcom/tencent/mm/storage/g;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/storage/g;
 
     move-result-object v0
 
@@ -133,7 +133,7 @@
     invoke-virtual {v0, v6, v2}, Lcom/tencent/mm/storage/g;->set(ILjava/lang/Object;)V
 
     .line 41
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tu()Lcom/tencent/mm/storage/g;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/storage/g;
 
     move-result-object v0
 

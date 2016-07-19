@@ -2,9 +2,9 @@ package com.tencent.mm.plugin.sight.decode.ui;
 
 public abstract interface b
 {
-  public abstract void avV();
+  public abstract void ays();
   
-  public abstract void kW(int paramInt);
+  public abstract void md(int paramInt);
 }
 
 /* Location:

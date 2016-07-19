@@ -6,9 +6,9 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
-import com.tencent.mm.g.e;
-import com.tencent.mm.g.h;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.h.e;
+import com.tencent.mm.h.h;
+import com.tencent.mm.sdk.platformtools.be;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -16,7 +16,12 @@ import java.util.regex.Pattern;
 public final class u
   extends q
 {
-  public final String FG()
+  public final boolean By(String paramString)
+  {
+    return (paramString != null) && ("com.tencent.map".equals(paramString));
+  }
+  
+  public final String Gb()
   {
     return "http://softroute.map.qq.com/downloadfile?cid=00008&referer=wx_client";
   }
@@ -37,25 +42,25 @@ public final class u
     return paramContext.toString();
   }
   
-  public final String aPk()
+  public final String aTQ()
   {
     return "TencentMap.apk";
   }
   
-  public final r.a aPl()
+  public final r.a aTR()
   {
     r.a locala = new r.a();
-    iAI = 2131429476;
-    String str = h.pS().getValue("QQMapDownloadTips");
-    if (!ay.kz(str)) {
-      iAJ = str;
+    iXi = 2131235679;
+    String str = h.om().getValue("QQMapDownloadTips");
+    if (!be.kf(str)) {
+      iXj = str;
     }
-    iAK = 2131429475;
-    iAH = 2130970089;
+    iXk = 2131235680;
+    iXh = 2130838498;
     return locala;
   }
   
-  public final boolean cK(Context paramContext)
+  public final boolean cH(Context paramContext)
   {
     Object localObject = new Intent("android.intent.action.VIEW", Uri.parse("sosomap://type=nav"));
     paramContext = paramContext.getPackageManager().queryIntentActivities((Intent)localObject, 0);
@@ -73,11 +78,6 @@ public final class u
       }
     }
     return false;
-  }
-  
-  public final boolean zC(String paramString)
-  {
-    return (paramString != null) && ("com.tencent.map".equals(paramString));
   }
 }
 

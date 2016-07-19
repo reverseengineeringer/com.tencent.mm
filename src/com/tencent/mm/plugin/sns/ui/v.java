@@ -1,93 +1,28 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.text.Layout;
-import android.text.Spannable;
-import android.view.MotionEvent;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnTouchListener;
-import android.widget.TextView;
-import com.tencent.mm.pluginsdk.ui.d.j;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import b.a.d.i;
+import com.tencent.mm.pointers.PInt;
+import com.tencent.mm.protocal.b.acn;
+import java.util.List;
 
-public final class v
-  implements View.OnTouchListener
+public abstract interface v
 {
-  private static j gZs;
-  private static TextView gZt;
+  public abstract boolean a(int paramInt1, int paramInt2, i parami, String paramString1, List<String> paramList1, acn paramacn, int paramInt3, boolean paramBoolean, List<String> paramList2, PInt paramPInt, String paramString2);
   
-  public static void aBg()
-  {
-    if (gZs != null)
-    {
-      gZsiQe = false;
-      gZt.invalidate();
-      gZt = null;
-      gZs = null;
-    }
-  }
+  public abstract boolean a(int paramInt, Intent paramIntent);
   
-  public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
-  {
-    paramView = (TextView)paramView;
-    paramView.getTag();
-    Object localObject = paramView.getText();
-    Layout localLayout = paramView.getLayout();
-    if (((localObject instanceof Spannable)) && (localLayout != null))
-    {
-      localObject = (Spannable)localObject;
-      int i = paramMotionEvent.getAction();
-      paramView.invalidate();
-      if ((i == 1) || (i == 0) || (i == 2))
-      {
-        i = (int)paramMotionEvent.getX();
-        int j = (int)paramMotionEvent.getY();
-        int k = paramView.getTotalPaddingLeft();
-        int m = paramView.getTotalPaddingTop();
-        int n = paramView.getScrollX();
-        int i1 = paramView.getScrollY();
-        localLayout = paramView.getLayout();
-        j = localLayout.getOffsetForHorizontal(localLayout.getLineForVertical(j - m + i1), i - k + n);
-        i = paramMotionEvent.getAction();
-        paramMotionEvent = (j[])((Spannable)localObject).getSpans(j, j, j.class);
-        j = paramMotionEvent.length - 1;
-        u.d("!44@/B4Tb64lLpJSmN0H86h8ceWxwYMprexaS5ywGPeQZYY=", " action span Len: " + paramMotionEvent.length);
-        if (paramMotionEvent.length != 0) {
-          if (i == 1)
-          {
-            paramMotionEvent[j].onClick(paramView);
-            new aa().postDelayed(new Runnable()
-            {
-              public final void run() {}
-            }, 300L);
-            i = 1;
-          }
-        }
-        while (i != 0)
-        {
-          return true;
-          if ((i == 0) || (i == 2) || (i == 3))
-          {
-            aBg();
-            gZs = paramMotionEvent[j];
-            gZt = paramView;
-            iQe = true;
-            paramView.invalidate();
-            i = 1;
-            continue;
-            aBg();
-          }
-          else
-          {
-            i = 0;
-          }
-        }
-      }
-      aBg();
-      return false;
-    }
-    return false;
-  }
+  public abstract boolean aDO();
+  
+  public abstract View aDP();
+  
+  public abstract boolean aDQ();
+  
+  public abstract void p(Bundle paramBundle);
+  
+  public abstract void q(Bundle paramBundle);
 }
 
 /* Location:

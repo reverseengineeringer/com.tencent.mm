@@ -1,11 +1,11 @@
 package com.tencent.mm.ui.chatting;
 
-import android.widget.TextView;
-
 final class di
 {
-  TextView lcA;
-  TextView lcB;
+  String lCN;
+  String lCO;
+  int lCP = -16777216;
+  int lCQ = -16777216;
 }
 
 /* Location:

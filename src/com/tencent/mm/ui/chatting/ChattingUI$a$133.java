@@ -1,29 +1,17 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.Intent;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.ui.widget.DrawedCallBackLinearLayout.a;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import com.tencent.mm.pluginsdk.model.h;
 
 final class ChattingUI$a$133
-  implements DrawedCallBackLinearLayout.a
+  implements DialogInterface.OnCancelListener
 {
-  ChattingUI$a$133(ChattingUI.a parama, Intent paramIntent, String paramString, int paramInt) {}
+  ChattingUI$a$133(ChattingUI.a parama, h paramh) {}
   
-  public final void kw()
+  public final void onCancel(DialogInterface paramDialogInterface)
   {
-    ah.tv().d(new Runnable()
-    {
-      public final void run()
-      {
-        ah.tv().aUW();
-        ChattingUI.a.a(laF, eYZ, lbF);
-        if (laF.kYe != null) {
-          laF.kYe.e(ao, eYZ);
-        }
-        ah.tv().aUY();
-      }
-    }, 100L);
+    lBY.aTU();
   }
 }
 

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kXU:Lcom/tencent/mm/ui/chatting/ChattingUI;
+.field final synthetic lyl:Lcom/tencent/mm/ui/chatting/ChattingUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 11166
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$11;->kXU:Lcom/tencent/mm/ui/chatting/ChattingUI;
+    .line 11135
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$11;->lyl:Lcom/tencent/mm/ui/chatting/ChattingUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,9 +40,9 @@
     .locals 0
 
     .prologue
-    .line 11170
+    .line 11139
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 11171
+    .line 11140
     return-void
 .end method

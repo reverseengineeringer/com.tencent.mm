@@ -27,17 +27,15 @@ public class MMBitmapFactory$KVStatHelper
     Object localObject2 = "";
     long l2 = -1L;
     Object localObject1;
-    long l1;
     if ((paramObject instanceof File))
     {
       localObject1 = (File)paramObject;
       if ((!((File)localObject1).exists()) || (!((File)localObject1).isFile())) {
         break label314;
       }
-      paramObject = ay.ky(g.g((File)localObject1));
-      l1 = ((File)localObject1).length();
+      paramObject = be.li(g.g((File)localObject1));
     }
-    for (;;)
+    for (long l1 = ((File)localObject1).length();; l1 = -1L)
     {
       localObject1 = paramObject;
       for (;;)
@@ -47,9 +45,9 @@ public class MMBitmapFactory$KVStatHelper
         if ((paramObject instanceof String))
         {
           String str2 = (String)paramObject;
-          l1 = l2;
           localObject1 = localObject2;
-          if (FileOp.ax(str2))
+          l1 = l2;
+          if (FileOp.aB(str2))
           {
             localObject1 = null;
             try
@@ -62,21 +60,21 @@ public class MMBitmapFactory$KVStatHelper
               String str1;
               paramObject = paramObject;
               paramObject = null;
-              l1 = l2;
               localObject1 = localObject2;
+              l1 = l2;
               if (paramObject == null) {
                 continue;
               }
               try
               {
                 ((InputStream)paramObject).close();
-                l1 = l2;
                 localObject1 = localObject2;
+                l1 = l2;
               }
               catch (Exception paramObject)
               {
-                l1 = l2;
                 localObject1 = localObject2;
+                l1 = l2;
               }
               continue;
             }
@@ -92,12 +90,12 @@ public class MMBitmapFactory$KVStatHelper
           {
             ((InputStream)localObject1).close();
             throw ((Throwable)paramObject);
-            l1 = l2;
             localObject1 = localObject2;
+            l1 = l2;
             if ((paramObject instanceof byte[]))
             {
               paramObject = (byte[])paramObject;
-              localObject1 = g.m((byte[])paramObject);
+              localObject1 = g.j((byte[])paramObject);
               l1 = paramObject.length;
             }
           }
@@ -108,7 +106,6 @@ public class MMBitmapFactory$KVStatHelper
         }
       }
       label314:
-      l1 = -1L;
       paramObject = "";
     }
   }

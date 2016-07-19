@@ -1,9 +1,9 @@
 package com.tencent.mm.modelcdntran;
 
-import com.tencent.mm.sdk.platformtools.ah;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.Map;
 
 final class b$5
@@ -13,41 +13,43 @@ final class b$5
   
   public final void run()
   {
-    Object localObject = (f)bKE.bKz.get(bKH);
+    int i = 0;
+    Object localObject = (f)bDY.bDT.get(bEb);
     if (localObject == null) {
-      u.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", " task in jni get info failed mediaid:%s", new Object[] { bKH });
+      v.e("MicroMsg.CdnTransportService", " task in jni get info failed mediaid:%s", new Object[] { bEb });
     }
     long l;
     do
     {
       return;
-      if (bKI != null)
+      if (bEc != null)
       {
-        bKI.mediaId = bKH;
-        u.i("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "MTL: total:%d, cur:%d, mtl:%b", new Object[] { Integer.valueOf(bKI.field_toltalLength), Integer.valueOf(bKI.field_finishedLength), Boolean.valueOf(bKI.field_mtlnotify) });
+        bEc.mediaId = bEb;
+        v.i("MicroMsg.CdnTransportService", "MTL: total:%d, cur:%d, mtl:%b", new Object[] { Integer.valueOf(bEc.field_toltalLength), Integer.valueOf(bEc.field_finishedLength), Boolean.valueOf(bEc.field_mtlnotify) });
       }
-      if (bKJ != null) {
-        bKJ.mediaId = bKH;
+      if (bEd != null) {
+        bEd.mediaId = bEb;
       }
-      if (bLh == null) {
+      if (bEB == null) {
         break;
       }
-      l = ay.FS();
-    } while ((bKJ == null) && (bKI != null) && (!bKI.field_mtlnotify) && (ah.getNetWorkType(y.getContext()) == -1));
+      l = be.Gp();
+    } while ((bEd == null) && (bEc != null) && (!bEc.field_mtlnotify) && (ak.getNetWorkType(aa.getContext()) == -1));
     field_lastProgressCallbackTime = l;
-    bLh.a(bKH, 0, bKI, bKJ);
-    localObject = bKI;
+    bEB.a(bEb, 0, bEc, bEd, field_onlycheckexist);
+    localObject = bEc;
     if ((localObject != null) && (field_finishedLength != field_toltalLength)) {}
-    for (int i = 0;; i = 1)
+    for (;;)
     {
       if (i != 0) {
-        bKE.bKA.remove(bKH);
+        bDY.bDU.remove(bEb);
       }
-      if (bKJ == null) {
+      if (bEd == null) {
         break;
       }
-      bKE.bKz.remove(bKH);
+      bDY.bDT.remove(bEb);
       return;
+      i = 1;
     }
   }
   

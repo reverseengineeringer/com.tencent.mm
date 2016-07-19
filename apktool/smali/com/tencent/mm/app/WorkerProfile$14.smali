@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/app/WorkerProfile;->ah(Z)I
+    value = Lcom/tencent/mm/app/WorkerProfile;->M(Z)I
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -13,9 +13,18 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/g;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic amC:Lcom/tencent/mm/app/WorkerProfile;
+.field final synthetic Zr:Lcom/tencent/mm/app/WorkerProfile;
 
 
 # direct methods
@@ -23,252 +32,205 @@
     .locals 1
 
     .prologue
-    .line 1231
-    iput-object p1, p0, Lcom/tencent/mm/app/WorkerProfile$14;->amC:Lcom/tencent/mm/app/WorkerProfile;
+    .line 1233
+    iput-object p1, p0, Lcom/tencent/mm/app/WorkerProfile$14;->Zr:Lcom/tencent/mm/app/WorkerProfile;
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/g;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/app/WorkerProfile$14;->kum:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
-    .locals 11
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
+    .locals 12
 
     .prologue
-    const/4 v10, 0x2
+    const/4 v11, 0x2
+
+    const/4 v4, 0x1
 
     const/4 v1, 0x0
 
-    const/4 v5, 0x1
+    const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    .line 1233
+    check-cast p1, Lcom/tencent/mm/e/a/g;
 
-    .line 1235
-    check-cast p1, Lcom/tencent/mm/d/a/kj;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/g;->adS:Lcom/tencent/mm/e/a/g$a;
 
-    .line 1236
-    iget-object v0, p1, Lcom/tencent/mm/d/a/kj;->aGL:Lcom/tencent/mm/d/a/kj$a;
+    iget-object v7, v0, Lcom/tencent/mm/e/a/g$a;->context:Landroid/content/Context;
 
-    iget-object v6, v0, Lcom/tencent/mm/d/a/kj$a;->context:Landroid/content/Context;
+    if-nez v7, :cond_0
 
-    .line 1237
-    if-nez v6, :cond_0
+    const-string/jumbo v0, "MicroMsg.WorkerProfile"
 
-    .line 1238
-    const-string/jumbo v0, "!32@/B4Tb64lLpKJUHFjVVLDtjoRkfkHVaSq"
+    const-string/jumbo v1, "add card to wx event, context is null"
 
-    const-string/jumbo v1, "context is null"
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    move v0, v3
 
-    move v0, v4
-
-    .line 1281
     :goto_0
     return v0
 
-    .line 1242
     :cond_0
-    iget-object v0, p1, Lcom/tencent/mm/d/a/kj;->aGL:Lcom/tencent/mm/d/a/kj$a;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/g;->adS:Lcom/tencent/mm/e/a/g$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/a/kj$a;->asa:[Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/g$a;->adT:[Ljava/lang/String;
 
-    .line 1245
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_3
 
     array-length v2, v0
 
-    if-lez v2, :cond_5
+    if-lez v2, :cond_3
 
-    .line 1247
-    aget-object v2, v0, v4
+    aget-object v2, v0, v3
 
-    .line 1248
-    iget-object v3, p1, Lcom/tencent/mm/d/a/kj;->aGL:Lcom/tencent/mm/d/a/kj$a;
+    iget-object v5, p1, Lcom/tencent/mm/e/a/g;->adS:Lcom/tencent/mm/e/a/g$a;
 
-    iget-object v3, v3, Lcom/tencent/mm/d/a/kj$a;->context:Landroid/content/Context;
+    iget-object v5, v5, Lcom/tencent/mm/e/a/g$a;->context:Landroid/content/Context;
 
-    aget-object v0, v0, v4
+    aget-object v0, v0, v3
 
-    invoke-static {v3, v0}, Lcom/tencent/mm/pluginsdk/model/app/p;->aJ(Landroid/content/Context;Ljava/lang/String;)[Landroid/content/pm/Signature;
+    invoke-static {v5, v0}, Lcom/tencent/mm/pluginsdk/model/app/p;->aI(Landroid/content/Context;Ljava/lang/String;)[Landroid/content/pm/Signature;
 
     move-result-object v0
 
-    .line 1249
-    aget-object v0, v0, v4
+    aget-object v0, v0, v3
 
     invoke-virtual {v0}, Landroid/content/pm/Signature;->toByteArray()[B
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/a/g;->j([B)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1254
     :goto_1
-    iget-object v3, p1, Lcom/tencent/mm/d/a/kj;->aGL:Lcom/tencent/mm/d/a/kj$a;
+    iget-object v5, p1, Lcom/tencent/mm/e/a/g;->adS:Lcom/tencent/mm/e/a/g$a;
 
-    iget-object v7, v3, Lcom/tencent/mm/d/a/kj$a;->selectionArgs:[Ljava/lang/String;
+    iget-object v8, v5, Lcom/tencent/mm/e/a/g$a;->selectionArgs:[Ljava/lang/String;
 
-    .line 1255
-    if-eqz v7, :cond_1
+    if-eqz v8, :cond_2
 
-    array-length v3, v7
+    array-length v5, v8
 
-    if-gtz v3, :cond_2
+    if-le v5, v4, :cond_2
 
-    .line 1256
-    :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpKJUHFjVVLDtjoRkfkHVaSq"
+    aget-object v5, v8, v3
 
-    const-string/jumbo v1, "args is null"
+    aget-object v6, v8, v4
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    move v0, v4
-
-    .line 1257
-    goto :goto_0
-
-    .line 1260
-    :cond_2
-    if-eqz v7, :cond_4
-
-    array-length v3, v7
-
-    if-le v3, v5, :cond_4
-
-    .line 1261
-    aget-object v3, v7, v4
-
-    .line 1262
-    aget-object v1, v7, v5
-
-    .line 1265
     :goto_2
-    const-string/jumbo v7, "!32@/B4Tb64lLpKJUHFjVVLDtjoRkfkHVaSq"
+    if-eqz v8, :cond_1
 
-    const-string/jumbo v8, "open webview, appid = %s, url = %s"
+    array-length v9, v8
 
-    new-array v9, v10, [Ljava/lang/Object;
+    if-le v9, v11, :cond_1
 
-    aput-object v3, v9, v4
+    aget-object v1, v8, v11
 
-    aput-object v1, v9, v5
+    :cond_1
+    const-string/jumbo v8, "MicroMsg.WorkerProfile"
 
-    invoke-static {v7, v8, v9}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const-string/jumbo v9, "carlist = %s, appid = %s, transcation = %s"
 
-    .line 1266
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    const/4 v10, 0x3
 
-    move-result v7
+    new-array v10, v10, [Ljava/lang/Object;
 
-    if-nez v7, :cond_3
+    aput-object v6, v10, v3
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    aput-object v5, v10, v4
 
-    move-result v7
+    aput-object v1, v10, v11
 
-    if-nez v7, :cond_3
+    invoke-static {v8, v9, v10}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1267
-    const-string/jumbo v7, "weixin://dl/businessWebview/link?appid=%s&url=%s"
-
-    new-array v8, v10, [Ljava/lang/Object;
-
-    aput-object v3, v8, v4
-
-    aput-object v1, v8, v5
-
-    invoke-static {v7, v8}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 1268
-    const-string/jumbo v3, "!32@/B4Tb64lLpKJUHFjVVLDtjoRkfkHVaSq"
-
-    const-string/jumbo v7, "url format = %s"
-
-    new-array v8, v5, [Ljava/lang/Object;
-
-    aput-object v1, v8, v4
-
-    invoke-static {v3, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 1269
     new-instance v3, Landroid/content/Intent;
 
-    const-class v4, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;
+    const-class v8, Lcom/tencent/mm/plugin/base/stub/WXBizEntryActivity;
 
-    invoke-direct {v3, v6, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    invoke-direct {v3, v7, v8}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 1270
-    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    const/high16 v8, 0x10000000
 
-    move-result-object v1
+    invoke-virtual {v3, v8}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    invoke-virtual {v3, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+    move-result-object v8
 
-    .line 1271
-    const/high16 v1, 0x10000000
+    const/high16 v9, 0x8000000
 
-    invoke-virtual {v3, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    invoke-virtual {v8, v9}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    move-result-object v1
+    move-result-object v8
 
-    const/high16 v4, 0x8000000
+    const/high16 v9, 0x4000000
 
-    invoke-virtual {v1, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    invoke-virtual {v8, v9}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    move-result-object v1
+    const-string/jumbo v8, "key_in_card_list"
 
-    const/high16 v4, 0x4000000
+    invoke-virtual {v3, v8, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-virtual {v1, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    const-string/jumbo v6, "key_package_name"
 
-    .line 1272
-    const-string/jumbo v1, "key_package_name"
+    invoke-virtual {v3, v6, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-virtual {v3, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    const-string/jumbo v2, "key_sign"
 
-    .line 1273
-    const-string/jumbo v1, "translate_link_scene"
+    invoke-virtual {v3, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-virtual {v3, v1, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    const-string/jumbo v0, "key_from_scene"
 
-    .line 1274
-    const-string/jumbo v1, "key_package_signature"
+    const/16 v2, 0x8
 
-    invoke-virtual {v3, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v3, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1275
-    invoke-virtual {v6, v3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    const-string/jumbo v0, "key_command_id"
 
-    move v0, v5
+    const/16 v2, 0x9
 
-    .line 1276
-    goto/16 :goto_0
+    invoke-virtual {v3, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    :cond_3
+    const-string/jumbo v0, "key_app_id"
+
+    invoke-virtual {v3, v0, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string/jumbo v0, "key_transaction"
+
+    invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-virtual {v7, v3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
     move v0, v4
 
-    .line 1281
     goto/16 :goto_0
 
-    :cond_4
-    move-object v3, v1
+    :cond_2
+    move-object v5, v1
+
+    move-object v6, v1
 
     goto :goto_2
 
-    :cond_5
+    :cond_3
     move-object v0, v1
 
     move-object v2, v1
 
-    goto/16 :goto_1
+    goto :goto_1
 .end method

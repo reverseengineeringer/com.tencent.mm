@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kMI:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
+.field final synthetic llX:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 60
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$2;->kMI:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$2;->llX:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,17 +41,17 @@
 
     .prologue
     .line 64
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$2;->kMI:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$2;->llX:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, v0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     const/4 v1, 0x1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$2;->kMI:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$2;->llX:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
 
-    const v3, 0x7f0b0554
+    const v3, 0x7f081395
 
     invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;->getString(I)Ljava/lang/String;
 
@@ -59,17 +59,17 @@
 
     const-string/jumbo v3, ""
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$2;->kMI:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
+    iget-object v4, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$2;->llX:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
 
-    const v5, 0x7f0b0552
+    const v5, 0x7f081394
 
     invoke-virtual {v4, v5}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$2;->kMI:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
+    iget-object v5, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$2;->llX:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
 
-    const v6, 0x7f0b0de4
+    const v6, 0x7f080099
 
     invoke-virtual {v5, v6}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;->getString(I)Ljava/lang/String;
 

@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field private eMY:Ljava/lang/String;
+.field public eUR:Ljava/lang/String;
 
-.field private hju:C
+.field private hyj:C
 
 
 # direct methods
@@ -20,12 +20,12 @@
     .line 16
     const/4 v0, 0x0
 
-    iput-char v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hju:C
+    iput-char v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hyj:C
 
     .line 17
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->eMY:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->eUR:Ljava/lang/String;
 
     .line 24
     return-void
@@ -51,17 +51,17 @@
     const/4 v2, 0x3
 
     .line 45
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->brZ:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->bga:I
 
     const/4 v1, 0x1
 
     if-eq v0, v1, :cond_0
 
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->brZ:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->bga:I
 
     const/4 v1, -0x1
 
@@ -75,7 +75,7 @@
     .line 50
     const/4 v0, 0x0
 
-    iput-char v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hju:C
+    iput-char v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hyj:C
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -88,7 +88,7 @@
     move-exception v0
 
     .line 52
-    iget-char v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hju:C
+    iget-char v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hyj:C
 
     if-ge v1, v2, :cond_2
 
@@ -136,13 +136,13 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/text/SpannableStringBuilder;->insert(ILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    iget-char v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hju:C
+    iget-char v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hyj:C
 
     add-int/lit8 v0, v0, 0x1
 
     int-to-char v0, v0
 
-    iput-char v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hju:C
+    iput-char v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hyj:C
 
     :goto_1
     invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->setText(Ljava/lang/CharSequence;)V
@@ -157,7 +157,7 @@
     :catch_1
     move-exception v0
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSN/oq413YsGYGykLPernY"
+    const-string/jumbo v0, "MicroMsg.SnsTextView"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -165,9 +165,9 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->eMY:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->eUR:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -179,10 +179,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 57
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->eMY:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->eUR:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -190,13 +190,13 @@
     invoke-virtual {p0, p1, p2}, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->onMeasure(II)V
 
     .line 59
-    iget-char v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hju:C
+    iget-char v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hyj:C
 
     add-int/lit8 v0, v0, 0x1
 
     int-to-char v0, v0
 
-    iput-char v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hju:C
+    iput-char v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hyj:C
 
     goto :goto_0
 
@@ -205,7 +205,7 @@
     const/16 v0, 0x64
 
     :try_start_2
-    iput-char v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hju:C
+    iput-char v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hyj:C
     :try_end_2
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_2 .. :try_end_2} :catch_1
 
@@ -213,12 +213,12 @@
 
     .line 61
     :cond_2
-    iget-char v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hju:C
+    iget-char v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hyj:C
 
     if-ne v1, v2, :cond_3
 
     .line 62
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSN/oq413YsGYGykLPernY"
+    const-string/jumbo v0, "MicroMsg.SnsTextView"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -226,9 +226,9 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->eMY:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->eUR:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -240,10 +240,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 63
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->eMY:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->eUR:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -251,13 +251,13 @@
     invoke-virtual {p0, p1, p2}, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->onMeasure(II)V
 
     .line 65
-    iget-char v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hju:C
+    iget-char v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hyj:C
 
     add-int/lit8 v0, v0, 0x1
 
     int-to-char v0, v0
 
-    iput-char v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hju:C
+    iput-char v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->hyj:C
 
     goto/16 :goto_0
 
@@ -283,15 +283,4 @@
 
     .line 31
     return v0
-.end method
-
-.method public setOriginText(Ljava/lang/String;)V
-    .locals 0
-
-    .prologue
-    .line 93
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTextView;->eMY:Ljava/lang/String;
-
-    .line 94
-    return-void
 .end method

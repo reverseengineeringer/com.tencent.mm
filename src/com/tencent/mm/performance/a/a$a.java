@@ -14,6 +14,14 @@ public abstract class a$a
   
   public void d(Activity paramActivity, Intent paramIntent) {}
   
+  public void f(Activity paramActivity) {}
+  
+  public void g(Activity paramActivity) {}
+  
+  public void h(Activity paramActivity) {}
+  
+  public void i(Activity paramActivity) {}
+  
   public void j(Activity paramActivity) {}
   
   public void k(Activity paramActivity) {}
@@ -25,14 +33,6 @@ public abstract class a$a
   public void n(Activity paramActivity) {}
   
   public void o(Activity paramActivity) {}
-  
-  public void p(Activity paramActivity) {}
-  
-  public void q(Activity paramActivity) {}
-  
-  public void r(Activity paramActivity) {}
-  
-  public void s(Activity paramActivity) {}
 }
 
 /* Location:

@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field apb:Ljava/lang/String;
+.field ajT:Ljava/lang/String;
 
-.field bvP:Z
+.field ble:Z
 
-.field cId:Lcom/tencent/mm/storage/k;
+.field cFh:Lcom/tencent/mm/storage/k;
 
-.field final synthetic loD:Lcom/tencent/mm/ui/conversation/c;
+.field final synthetic lOT:Lcom/tencent/mm/ui/conversation/c;
 
-.field loS:Ljava/lang/Integer;
+.field lPi:Ljava/lang/Integer;
 
 
 # direct methods
@@ -36,24 +36,24 @@
     const/4 v0, 0x0
 
     .line 502
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/c$e;->loD:Lcom/tencent/mm/ui/conversation/c;
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/c$e;->lOT:Lcom/tencent/mm/ui/conversation/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 493
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/conversation/c$e;->bvP:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/conversation/c$e;->ble:Z
 
     .line 503
-    iput-object v0, p0, Lcom/tencent/mm/ui/conversation/c$e;->apb:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/conversation/c$e;->ajT:Ljava/lang/String;
 
     .line 504
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/conversation/c$e;->bvP:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/conversation/c$e;->ble:Z
 
     .line 505
-    iput-object v0, p0, Lcom/tencent/mm/ui/conversation/c$e;->cId:Lcom/tencent/mm/storage/k;
+    iput-object v0, p0, Lcom/tencent/mm/ui/conversation/c$e;->cFh:Lcom/tencent/mm/storage/k;
 
     .line 506
-    iput-object v0, p0, Lcom/tencent/mm/ui/conversation/c$e;->loS:Ljava/lang/Integer;
+    iput-object v0, p0, Lcom/tencent/mm/ui/conversation/c$e;->lPi:Ljava/lang/Integer;
 
     .line 507
     return-void

@@ -1,18 +1,18 @@
 package com.tencent.mm.modelmulti;
 
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
 
 final class b$2
   implements d
 {
   b$2(b paramb) {}
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    u.i("!32@/B4Tb64lLpJrvhSFsrTjwqCVRhOvuJ3+", "NetSceneNotifyData onSceneEnd: %d, %d, %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
-    bFy = true;
+    v.i("MicroMsg.NetPushSync", "NetSceneNotifyData onSceneEnd: %d, %d, %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
+    byJ = true;
   }
 }
 

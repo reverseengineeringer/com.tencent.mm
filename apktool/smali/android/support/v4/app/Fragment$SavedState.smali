@@ -19,10 +19,19 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Landroid/support/v4/app/Fragment$SavedState;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field final ba:Landroid/os/Bundle;
+.field final bo:Landroid/os/Bundle;
 
 
 # direct methods
@@ -48,7 +57,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 310
-    iput-object p1, p0, Landroid/support/v4/app/Fragment$SavedState;->ba:Landroid/os/Bundle;
+    iput-object p1, p0, Landroid/support/v4/app/Fragment$SavedState;->bo:Landroid/os/Bundle;
 
     .line 311
     return-void
@@ -66,7 +75,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v4/app/Fragment$SavedState;->ba:Landroid/os/Bundle;
+    iput-object v0, p0, Landroid/support/v4/app/Fragment$SavedState;->bo:Landroid/os/Bundle;
 
     .line 315
     return-void
@@ -89,7 +98,7 @@
 
     .prologue
     .line 327
-    iget-object v0, p0, Landroid/support/v4/app/Fragment$SavedState;->ba:Landroid/os/Bundle;
+    iget-object v0, p0, Landroid/support/v4/app/Fragment$SavedState;->bo:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 

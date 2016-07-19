@@ -1,11 +1,11 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.protocal.b.ho;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.c;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.t.a;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.protocal.b.hx;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.a.c;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.t.a;
 
 final class CheckCanSubscribeBizUI$2
   implements t.a
@@ -14,24 +14,24 @@ final class CheckCanSubscribeBizUI$2
   
   public final int a(int paramInt1, int paramInt2, String paramString, a parama, j paramj)
   {
-    parama = (ho)bEX.bFf;
-    CheckCanSubscribeBizUI.a(kjH, jgb);
-    if ((paramInt1 == 0) && (paramInt2 == 0) && (!ay.kz(jgb)) && (!ay.kz(ekt)))
+    parama = (hx)byi.byq;
+    CheckCanSubscribeBizUI.a(kJP, jDY);
+    if ((paramInt1 == 0) && (paramInt2 == 0) && (!be.kf(jDY)) && (!be.kf(eph)))
     {
-      CheckCanSubscribeBizUI.b(kjH, ekt);
-      CheckCanSubscribeBizUI.c(kjH, jgc);
-      CheckCanSubscribeBizUI.b(kjH);
+      CheckCanSubscribeBizUI.b(kJP, eph);
+      CheckCanSubscribeBizUI.c(kJP, jDZ);
+      CheckCanSubscribeBizUI.b(kJP);
       return 0;
     }
-    if (n.a.b(kjH, paramInt1, paramInt2, paramString, 7))
+    if (n.a.a(kJP, paramInt1, paramInt2, paramString, 7))
     {
-      kjH.setResult(5);
-      kjH.finish();
+      kJP.setResult(5);
+      kJP.finish();
       return 0;
     }
-    CheckCanSubscribeBizUI.c(kjH);
-    kjH.setResult(3);
-    kjH.finish();
+    CheckCanSubscribeBizUI.c(kJP);
+    kJP.setResult(3);
+    kJP.finish();
     return 0;
   }
 }

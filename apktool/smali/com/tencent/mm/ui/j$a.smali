@@ -15,25 +15,27 @@
 
 
 # instance fields
-.field asK:Z
+.field age:Z
 
-.field aur:Z
+.field dWe:Landroid/view/View$OnLongClickListener;
 
-.field dTW:Landroid/view/View$OnLongClickListener;
+.field gez:Landroid/view/MenuItem$OnMenuItemClickListener;
 
-.field fVg:Landroid/view/MenuItem$OnMenuItemClickListener;
+.field kOH:I
 
-.field kpD:I
+.field kOI:I
 
-.field kpE:I
+.field kOJ:Landroid/graphics/drawable/Drawable;
 
-.field kpF:Landroid/view/View;
+.field kOK:Landroid/view/View;
 
-.field kpG:Landroid/view/View;
+.field kOL:Landroid/view/View;
 
-.field kpH:I
+.field kOM:I
 
 .field text:Ljava/lang/String;
+
+.field visible:Z
 
 
 # direct methods
@@ -43,24 +45,24 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 119
+    .line 116
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 120
+    .line 117
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/j$a;->kpD:I
+    iput v0, p0, Lcom/tencent/mm/ui/j$a;->kOH:I
 
-    .line 122
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/j$a;->aur:Z
+    .line 120
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/j$a;->age:Z
 
-    .line 123
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/j$a;->asK:Z
+    .line 121
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/j$a;->visible:Z
 
-    .line 127
-    sget v0, Lcom/tencent/mm/ui/j$b;->kpI:I
+    .line 125
+    sget v0, Lcom/tencent/mm/ui/j$b;->kON:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/j$a;->kpH:I
+    iput v0, p0, Lcom/tencent/mm/ui/j$a;->kOM:I
 
     return-void
 .end method

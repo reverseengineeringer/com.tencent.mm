@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic cOT:Ljava/util/ArrayList;
+.field final synthetic cMi:Ljava/util/ArrayList;
 
-.field final synthetic cmn:Ljava/lang/String;
+.field final synthetic cht:Ljava/lang/String;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 1063
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/g$6;->cmn:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/g$6;->cht:Ljava/lang/String;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/base/g$6;->cOT:Ljava/util/ArrayList;
+    iput-object p2, p0, Lcom/tencent/mm/ui/base/g$6;->cMi:Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
 
     .prologue
     .line 1067
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$6;->cmn:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$6;->cht:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lcom/tencent/mm/ui/base/l;->setHeaderTitle(Ljava/lang/CharSequence;)Landroid/view/ContextMenu;
 
@@ -55,7 +55,7 @@
     move v1, v0
 
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$6;->cOT:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$6;->cMi:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -64,7 +64,7 @@
     if-ge v1, v0, :cond_0
 
     .line 1069
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$6;->cOT:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$6;->cMi:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 

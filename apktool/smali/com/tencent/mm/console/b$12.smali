@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/console/b;->u(Landroid/content/Context;Ljava/lang/String;)Z
+    value = Lcom/tencent/mm/console/b;->v(Landroid/content/Context;Ljava/lang/String;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic buV:Landroid/content/Context;
+.field final synthetic bjJ:Ljava/lang/String;
 
-.field final synthetic buY:Ljava/lang/String;
+.field final synthetic bjx:Landroid/content/Context;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 908
-    iput-object p1, p0, Lcom/tencent/mm/console/b$12;->buV:Landroid/content/Context;
+    .line 654
+    iput-object p1, p0, Lcom/tencent/mm/console/b$12;->bjx:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/tencent/mm/console/b$12;->buY:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/console/b$12;->bjJ:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
 # virtual methods
 .method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 3
+    .locals 2
 
     .prologue
-    .line 911
-    iget-object v0, p0, Lcom/tencent/mm/console/b$12;->buV:Landroid/content/Context;
+    .line 657
+    iget-object v0, p0, Lcom/tencent/mm/console/b$12;->bjx:Landroid/content/Context;
 
     const-string/jumbo v1, "clipboard"
 
@@ -55,24 +55,11 @@
 
     check-cast v0, Landroid/text/ClipboardManager;
 
-    .line 912
-    iget-object v1, p0, Lcom/tencent/mm/console/b$12;->buY:Ljava/lang/String;
+    .line 658
+    iget-object v1, p0, Lcom/tencent/mm/console/b$12;->bjJ:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/text/ClipboardManager;->setText(Ljava/lang/CharSequence;)V
 
-    .line 913
-    iget-object v0, p0, Lcom/tencent/mm/console/b$12;->buV:Landroid/content/Context;
-
-    const v1, 0x7f0b0cb5
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    .line 915
+    .line 659
     return-void
 .end method

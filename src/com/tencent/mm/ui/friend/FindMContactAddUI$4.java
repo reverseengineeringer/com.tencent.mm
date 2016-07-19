@@ -11,9 +11,9 @@ final class FindMContactAddUI$4
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    lrt.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
-    FindMContactAddUI.q(lrt);
-    lrt.finish();
+    lRX.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
+    FindMContactAddUI.q(lRX);
+    lRX.finish();
   }
 }
 

@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic gxY:Landroid/view/View;
+.field final synthetic gEv:Landroid/view/View;
 
-.field final synthetic gxZ:Landroid/graphics/Bitmap;
+.field final synthetic gEw:Landroid/graphics/Bitmap;
 
-.field final synthetic gya:Lcom/tencent/mm/plugin/sight/decode/a/b$k;
+.field final synthetic gEx:Lcom/tencent/mm/plugin/sight/decode/a/b$k;
 
 
 # direct methods
@@ -30,12 +30,12 @@
     .locals 0
 
     .prologue
-    .line 717
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$k$1;->gya:Lcom/tencent/mm/plugin/sight/decode/a/b$k;
+    .line 753
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$k$1;->gEx:Lcom/tencent/mm/plugin/sight/decode/a/b$k;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$k$1;->gxY:Landroid/view/View;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$k$1;->gEv:Landroid/view/View;
 
-    iput-object p3, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$k$1;->gxZ:Landroid/graphics/Bitmap;
+    iput-object p3, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$k$1;->gEw:Landroid/graphics/Bitmap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,17 +48,17 @@
     .locals 3
 
     .prologue
-    .line 721
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$k$1;->gxY:Landroid/view/View;
+    .line 757
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$k$1;->gEv:Landroid/view/View;
 
     new-instance v1, Landroid/graphics/drawable/BitmapDrawable;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$k$1;->gxZ:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$k$1;->gEw:Landroid/graphics/Bitmap;
 
     invoke-direct {v1, v2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/graphics/Bitmap;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 722
+    .line 758
     return-void
 .end method

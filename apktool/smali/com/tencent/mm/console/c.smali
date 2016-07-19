@@ -4,7 +4,17 @@
 
 
 # static fields
-.field public static final bvd:Ljava/util/Map;
+.field public static final bjM:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/console/b$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -17,7 +27,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/console/c;->bvd:Ljava/util/Map;
+    sput-object v0, Lcom/tencent/mm/console/c;->bjM:Ljava/util/Map;
 
     .line 34
     new-instance v0, Lcom/tencent/mm/console/c;
@@ -25,35 +35,35 @@
     invoke-direct {v0}, Lcom/tencent/mm/console/c;-><init>()V
 
     .line 35
-    sget-object v1, Lcom/tencent/mm/console/c;->bvd:Ljava/util/Map;
+    sget-object v1, Lcom/tencent/mm/console/c;->bjM:Ljava/util/Map;
 
     const-string/jumbo v2, "//assert"
 
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 36
-    sget-object v1, Lcom/tencent/mm/console/c;->bvd:Ljava/util/Map;
+    sget-object v1, Lcom/tencent/mm/console/c;->bjM:Ljava/util/Map;
 
     const-string/jumbo v2, "//netassert"
 
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 37
-    sget-object v1, Lcom/tencent/mm/console/c;->bvd:Ljava/util/Map;
+    sget-object v1, Lcom/tencent/mm/console/c;->bjM:Ljava/util/Map;
 
     const-string/jumbo v2, "//jniassert"
 
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 38
-    sget-object v1, Lcom/tencent/mm/console/c;->bvd:Ljava/util/Map;
+    sget-object v1, Lcom/tencent/mm/console/c;->bjM:Ljava/util/Map;
 
     const-string/jumbo v2, "//jnipushassert"
 
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 39
-    sget-object v1, Lcom/tencent/mm/console/c;->bvd:Ljava/util/Map;
+    sget-object v1, Lcom/tencent/mm/console/c;->bjM:Ljava/util/Map;
 
     const-string/jumbo v2, "//pushassert"
 
@@ -73,7 +83,7 @@
     .line 43
     const/4 v0, 0x5
 
-    iput v0, p0, Lcom/tencent/mm/console/c;->bvc:I
+    iput v0, p0, Lcom/tencent/mm/console/c;->bjL:I
 
     .line 44
     return-void
@@ -81,7 +91,7 @@
 
 
 # virtual methods
-.method public final aG(Landroid/content/Context;)Z
+.method public final aD(Landroid/content/Context;)Z
     .locals 5
 
     .prologue
@@ -92,7 +102,7 @@
     .line 49
     const-string/jumbo v2, "//assert"
 
-    iget-object v3, p0, Lcom/tencent/mm/console/c;->bvb:[Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/console/c;->ajd:[Ljava/lang/String;
 
     aget-object v3, v3, v1
 
@@ -141,7 +151,7 @@
     :cond_0
     const-string/jumbo v2, "//netassert"
 
-    iget-object v3, p0, Lcom/tencent/mm/console/c;->bvb:[Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/console/c;->ajd:[Ljava/lang/String;
 
     aget-object v3, v3, v1
 
@@ -162,7 +172,7 @@
     :cond_1
     const-string/jumbo v2, "//jniassert"
 
-    iget-object v3, p0, Lcom/tencent/mm/console/c;->bvb:[Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/console/c;->ajd:[Ljava/lang/String;
 
     aget-object v3, v3, v1
 
@@ -183,7 +193,7 @@
     :cond_2
     const-string/jumbo v2, "//jnipushassert"
 
-    iget-object v3, p0, Lcom/tencent/mm/console/c;->bvb:[Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/console/c;->ajd:[Ljava/lang/String;
 
     aget-object v3, v3, v1
 
@@ -196,7 +206,7 @@
     .line 62
     const/4 v1, 0x2
 
-    invoke-static {v1}, Lcom/tencent/mm/modelstat/WatchDogPushReceiver;->eb(I)V
+    invoke-static {v1}, Lcom/tencent/mm/modelstat/WatchDogPushReceiver;->eI(I)V
 
     goto :goto_0
 
@@ -204,7 +214,7 @@
     :cond_3
     const-string/jumbo v2, "//pushassert"
 
-    iget-object v3, p0, Lcom/tencent/mm/console/c;->bvb:[Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/console/c;->ajd:[Ljava/lang/String;
 
     aget-object v3, v3, v1
 
@@ -215,7 +225,7 @@
     if-eqz v2, :cond_4
 
     .line 66
-    invoke-static {v0}, Lcom/tencent/mm/modelstat/WatchDogPushReceiver;->eb(I)V
+    invoke-static {v0}, Lcom/tencent/mm/modelstat/WatchDogPushReceiver;->eI(I)V
 
     goto :goto_0
 

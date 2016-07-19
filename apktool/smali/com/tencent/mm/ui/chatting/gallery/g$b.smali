@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract bgx()V
+.method public abstract bmg()V
 .end method
 
 .method public abstract clear()V

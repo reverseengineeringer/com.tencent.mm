@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+.field final synthetic kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 704
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$9;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 705
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$9;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,6 +40,6 @@
     .locals 0
 
     .prologue
-    .line 708
+    .line 709
     return-void
 .end method

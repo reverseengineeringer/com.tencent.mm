@@ -1,5 +1,5 @@
 .class public final Landroid/support/v4/app/p$b;
-.super Landroid/support/v4/app/p$p;
+.super Landroid/support/v4/app/p$o;
 .source "SourceFile"
 
 
@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field cD:Landroid/graphics/Bitmap;
+.field cT:Landroid/graphics/Bitmap;
 
-.field cE:Landroid/graphics/Bitmap;
+.field cU:Landroid/graphics/Bitmap;
 
-.field cF:Z
+.field cV:Z
 
 
 # direct methods
@@ -27,9 +27,9 @@
     .locals 0
 
     .prologue
-    .line 1573
-    invoke-direct {p0}, Landroid/support/v4/app/p$p;-><init>()V
+    .line 1564
+    invoke-direct {p0}, Landroid/support/v4/app/p$o;-><init>()V
 
-    .line 1574
+    .line 1565
     return-void
 .end method

@@ -1,16 +1,17 @@
 package com.tencent.mm.ui;
 
+import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnLongClickListener;
+import android.view.View.OnClickListener;
 
 final class j$10
-  implements View.OnLongClickListener
+  implements View.OnClickListener
 {
-  j$10(j paramj, j.a parama) {}
+  j$10(j paramj, MenuItem paramMenuItem, j.a parama) {}
   
-  public final boolean onLongClick(View paramView)
+  public final void onClick(View paramView)
   {
-    return j.a(kpx, paramView, kpC);
+    j.a(kOB, kOF, kOG);
   }
 }
 

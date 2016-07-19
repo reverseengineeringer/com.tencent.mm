@@ -4,15 +4,15 @@
 
 
 # static fields
-.field private static buA:I
+.field private static biX:I
 
-.field private static buB:I
+.field private static biY:I
 
-.field private static bux:I
+.field private static biZ:Z
 
-.field private static buy:I
+.field private static bja:I
 
-.field private static buz:Z
+.field private static bjb:I
 
 
 # direct methods
@@ -23,139 +23,26 @@
     const/4 v1, -0x1
 
     .line 33
-    sput v1, Lcom/tencent/mm/compatible/util/h;->bux:I
+    sput v1, Lcom/tencent/mm/compatible/util/h;->biX:I
 
     .line 39
-    sput v1, Lcom/tencent/mm/compatible/util/h;->buy:I
+    sput v1, Lcom/tencent/mm/compatible/util/h;->biY:I
 
     .line 45
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/tencent/mm/compatible/util/h;->buz:Z
+    sput-boolean v0, Lcom/tencent/mm/compatible/util/h;->biZ:Z
 
     .line 159
-    sput v1, Lcom/tencent/mm/compatible/util/h;->buA:I
+    sput v1, Lcom/tencent/mm/compatible/util/h;->bja:I
 
     .line 184
-    sput v1, Lcom/tencent/mm/compatible/util/h;->buB:I
+    sput v1, Lcom/tencent/mm/compatible/util/h;->bjb:I
 
     return-void
 .end method
 
-.method public static final aA(Landroid/content/Context;)I
-    .locals 1
-
-    .prologue
-    .line 168
-    sget-boolean v0, Lcom/tencent/mm/compatible/util/h;->buz:Z
-
-    if-nez v0, :cond_2
-
-    .line 170
-    sget v0, Lcom/tencent/mm/compatible/util/h;->buA:I
-
-    if-lez v0, :cond_0
-
-    .line 171
-    sget v0, Lcom/tencent/mm/compatible/util/h;->buA:I
-
-    .line 180
-    :goto_0
-    return v0
-
-    .line 174
-    :cond_0
-    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aD(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 176
-    const/16 v0, 0x474
-
-    goto :goto_0
-
-    .line 178
-    :cond_1
-    const/16 v0, 0x17c
-
-    invoke-static {p0, v0}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/compatible/util/h;->buA:I
-
-    goto :goto_0
-
-    .line 180
-    :cond_2
-    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aB(Landroid/content/Context;)I
-
-    move-result v0
-
-    goto :goto_0
-.end method
-
-.method public static final aB(Landroid/content/Context;)I
-    .locals 1
-
-    .prologue
-    .line 193
-    sget v0, Lcom/tencent/mm/compatible/util/h;->buB:I
-
-    if-lez v0, :cond_0
-
-    .line 194
-    sget v0, Lcom/tencent/mm/compatible/util/h;->buB:I
-
-    .line 202
-    :goto_0
-    return v0
-
-    .line 197
-    :cond_0
-    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aD(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 199
-    sget v0, Lcom/tencent/mm/compatible/util/h;->buB:I
-
-    mul-int/lit8 v0, v0, 0x3
-
-    goto :goto_0
-
-    .line 202
-    :cond_1
-    const/16 v0, 0xe6
-
-    invoke-static {p0, v0}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/compatible/util/h;->buB:I
-
-    goto :goto_0
-.end method
-
-.method public static final aC(Landroid/content/Context;)I
-    .locals 1
-
-    .prologue
-    .line 241
-    const/4 v0, -0x1
-
-    invoke-static {p0, v0}, Lcom/tencent/mm/compatible/util/h;->c(Landroid/content/Context;I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method private static final aD(Landroid/content/Context;)Z
+.method private static final aA(Landroid/content/Context;)Z
     .locals 1
 
     .prologue
@@ -163,7 +50,7 @@
     if-nez p0, :cond_0
 
     .line 250
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
@@ -182,7 +69,7 @@
     goto :goto_0
 .end method
 
-.method public static aE(Landroid/content/Context;)Z
+.method public static aB(Landroid/content/Context;)Z
     .locals 4
 
     .prologue
@@ -191,7 +78,7 @@
     const/4 v0, 0x1
 
     .line 309
-    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aF(Landroid/content/Context;)[I
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aC(Landroid/content/Context;)[I
 
     move-result-object v2
 
@@ -220,7 +107,7 @@
     goto :goto_1
 .end method
 
-.method private static aF(Landroid/content/Context;)[I
+.method private static aC(Landroid/content/Context;)[I
     .locals 5
 
     .prologue
@@ -232,7 +119,7 @@
     if-nez p0, :cond_1
 
     .line 328
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -315,22 +202,22 @@
     goto :goto_0
 .end method
 
-.method public static final az(Landroid/content/Context;)I
+.method public static final aw(Landroid/content/Context;)I
     .locals 3
 
     .prologue
     .line 75
-    sget-boolean v0, Lcom/tencent/mm/compatible/util/h;->buz:Z
+    sget-boolean v0, Lcom/tencent/mm/compatible/util/h;->biZ:Z
 
     if-nez v0, :cond_3
 
     .line 76
-    sget v0, Lcom/tencent/mm/compatible/util/h;->bux:I
+    sget v0, Lcom/tencent/mm/compatible/util/h;->biX:I
 
     if-lez v0, :cond_0
 
     .line 77
-    sget v0, Lcom/tencent/mm/compatible/util/h;->bux:I
+    sget v0, Lcom/tencent/mm/compatible/util/h;->biX:I
 
     .line 82
     :goto_0
@@ -338,17 +225,17 @@
 
     .line 79
     :cond_0
-    sget-boolean v0, Lcom/tencent/mm/compatible/util/h;->buz:Z
+    sget-boolean v0, Lcom/tencent/mm/compatible/util/h;->biZ:Z
 
     if-nez v0, :cond_2
 
-    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aD(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aA(Landroid/content/Context;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUM()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZQ()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -363,7 +250,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUM()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZQ()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -371,7 +258,7 @@
 
     const/16 v2, 0xe6
 
-    invoke-static {p0, v2}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {p0, v2}, Lcom/tencent/mm/az/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v2
 
@@ -379,12 +266,12 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/compatible/util/h;->bux:I
+    sput v0, Lcom/tencent/mm/compatible/util/h;->biX:I
 
     goto :goto_0
 
     :cond_2
-    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aB(Landroid/content/Context;)I
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->ay(Landroid/content/Context;)I
 
     move-result v0
 
@@ -392,14 +279,127 @@
 
     .line 82
     :cond_3
-    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aB(Landroid/content/Context;)I
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->ay(Landroid/content/Context;)I
 
     move-result v0
 
     goto :goto_0
 .end method
 
-.method public static final b(Landroid/content/Context;I)Z
+.method public static final ax(Landroid/content/Context;)I
+    .locals 1
+
+    .prologue
+    .line 168
+    sget-boolean v0, Lcom/tencent/mm/compatible/util/h;->biZ:Z
+
+    if-nez v0, :cond_2
+
+    .line 170
+    sget v0, Lcom/tencent/mm/compatible/util/h;->bja:I
+
+    if-lez v0, :cond_0
+
+    .line 171
+    sget v0, Lcom/tencent/mm/compatible/util/h;->bja:I
+
+    .line 180
+    :goto_0
+    return v0
+
+    .line 174
+    :cond_0
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aA(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 176
+    const/16 v0, 0x474
+
+    goto :goto_0
+
+    .line 178
+    :cond_1
+    const/16 v0, 0x17c
+
+    invoke-static {p0, v0}, Lcom/tencent/mm/az/a;->fromDPToPix(Landroid/content/Context;I)I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/compatible/util/h;->bja:I
+
+    goto :goto_0
+
+    .line 180
+    :cond_2
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->ay(Landroid/content/Context;)I
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public static final ay(Landroid/content/Context;)I
+    .locals 1
+
+    .prologue
+    .line 193
+    sget v0, Lcom/tencent/mm/compatible/util/h;->bjb:I
+
+    if-lez v0, :cond_0
+
+    .line 194
+    sget v0, Lcom/tencent/mm/compatible/util/h;->bjb:I
+
+    .line 202
+    :goto_0
+    return v0
+
+    .line 197
+    :cond_0
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aA(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 199
+    sget v0, Lcom/tencent/mm/compatible/util/h;->bjb:I
+
+    mul-int/lit8 v0, v0, 0x3
+
+    goto :goto_0
+
+    .line 202
+    :cond_1
+    const/16 v0, 0xe6
+
+    invoke-static {p0, v0}, Lcom/tencent/mm/az/a;->fromDPToPix(Landroid/content/Context;I)I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/compatible/util/h;->bjb:I
+
+    goto :goto_0
+.end method
+
+.method public static final az(Landroid/content/Context;)I
+    .locals 1
+
+    .prologue
+    .line 241
+    const/4 v0, -0x1
+
+    invoke-static {p0, v0}, Lcom/tencent/mm/compatible/util/h;->e(Landroid/content/Context;I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static final d(Landroid/content/Context;I)Z
     .locals 5
 
     .prologue
@@ -408,7 +408,7 @@
     const/4 v1, 0x0
 
     .line 134
-    sget v2, Lcom/tencent/mm/compatible/util/h;->bux:I
+    sget v2, Lcom/tencent/mm/compatible/util/h;->biX:I
 
     if-ne v2, p1, :cond_0
 
@@ -418,7 +418,7 @@
 
     .line 138
     :cond_0
-    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aD(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aA(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -440,10 +440,10 @@
 
     .line 154
     :cond_2
-    sput p1, Lcom/tencent/mm/compatible/util/h;->bux:I
+    sput p1, Lcom/tencent/mm/compatible/util/h;->biX:I
 
     .line 155
-    const-string/jumbo v2, "!32@/B4Tb64lLpKpI+tgWEEQMW53kLRAnwLT"
+    const-string/jumbo v2, "MicroMsg.KeyBordUtil"
 
     const-string/jumbo v3, "save keybord: %d"
 
@@ -455,10 +455,10 @@
 
     aput-object v4, v0, v1
 
-    invoke-static {v2, v3, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 156
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUM()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZQ()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -479,17 +479,17 @@
     goto :goto_0
 .end method
 
-.method public static final c(Landroid/content/Context;I)I
+.method public static final e(Landroid/content/Context;I)I
     .locals 4
 
     .prologue
     .line 213
-    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aB(Landroid/content/Context;)I
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->ay(Landroid/content/Context;)I
 
     move-result v1
 
     .line 215
-    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aE(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aB(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -505,7 +505,7 @@
     double-to-int v0, v0
 
     .line 217
-    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aF(Landroid/content/Context;)[I
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aC(Landroid/content/Context;)[I
 
     move-result-object v1
 
@@ -530,13 +530,13 @@
     :cond_1
     if-gtz p1, :cond_2
 
-    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->az(Landroid/content/Context;)I
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aw(Landroid/content/Context;)I
 
     move-result p1
 
     .line 227
     :cond_2
-    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aA(Landroid/content/Context;)I
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->ax(Landroid/content/Context;)I
 
     move-result v0
 
@@ -558,7 +558,7 @@
     goto :goto_0
 .end method
 
-.method public static final i(Landroid/app/Activity;)V
+.method public static final e(Landroid/app/Activity;)V
     .locals 6
     .annotation build Landroid/annotation/TargetApi;
         value = 0xb
@@ -642,7 +642,7 @@
 
     sub-int/2addr v0, v1
 
-    sput v0, Lcom/tencent/mm/compatible/util/h;->buy:I
+    sput v0, Lcom/tencent/mm/compatible/util/h;->biY:I
 
     goto :goto_0
 
@@ -680,25 +680,25 @@
     goto :goto_1
 .end method
 
-.method public static pb()V
+.method public static nt()V
     .locals 1
 
     .prologue
     .line 48
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/tencent/mm/compatible/util/h;->buz:Z
+    sput-boolean v0, Lcom/tencent/mm/compatible/util/h;->biZ:Z
 
     .line 49
     return-void
 .end method
 
-.method public static final pc()I
+.method public static final nu()I
     .locals 1
 
     .prologue
     .line 113
-    sget v0, Lcom/tencent/mm/compatible/util/h;->buy:I
+    sget v0, Lcom/tencent/mm/compatible/util/h;->biY:I
 
     return v0
 .end method

@@ -4,19 +4,19 @@
 
 
 # static fields
-.field public static lQK:I
+.field public static msx:I
 
 
 # instance fields
-.field private lQL:[B
+.field private msA:I
 
-.field public lQM:[B
+.field public msB:I
 
-.field private lQN:I
+.field public msC:Lcom/tencent/qqpinyin/voicerecoapi/TRSpeexNative;
 
-.field public lQO:I
+.field private msy:[B
 
-.field public lQP:Lcom/tencent/qqpinyin/voicerecoapi/TRSpeexNative;
+.field public msz:[B
 
 
 # direct methods
@@ -27,7 +27,7 @@
     .line 19
     const/16 v0, 0x7d0
 
-    sput v0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQK:I
+    sput v0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msx:I
 
     return-void
 .end method
@@ -44,23 +44,23 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 20
-    iput-object v1, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQL:[B
+    iput-object v1, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msy:[B
 
     .line 21
-    iput-object v1, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQM:[B
+    iput-object v1, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msz:[B
 
     .line 23
-    iput v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQN:I
+    iput v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msA:I
 
     .line 24
-    iput v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQO:I
+    iput v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msB:I
 
     .line 26
     new-instance v0, Lcom/tencent/qqpinyin/voicerecoapi/TRSpeexNative;
 
     invoke-direct {v0}, Lcom/tencent/qqpinyin/voicerecoapi/TRSpeexNative;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQP:Lcom/tencent/qqpinyin/voicerecoapi/TRSpeexNative;
+    iput-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msC:Lcom/tencent/qqpinyin/voicerecoapi/TRSpeexNative;
 
     .line 3
     return-void
@@ -68,12 +68,12 @@
 
 
 # virtual methods
-.method public final blf()I
+.method public final brj()I
     .locals 2
 
     .prologue
     .line 34
-    iget v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQN:I
+    iget v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msA:I
 
     if-eqz v0, :cond_1
 
@@ -87,7 +87,7 @@
 
     .line 38
     :cond_1
-    iget-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQP:Lcom/tencent/qqpinyin/voicerecoapi/TRSpeexNative;
+    iget-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msC:Lcom/tencent/qqpinyin/voicerecoapi/TRSpeexNative;
 
     invoke-virtual {v0}, Lcom/tencent/qqpinyin/voicerecoapi/TRSpeexNative;->nativeTRSpeexInit()I
 
@@ -99,16 +99,16 @@
     if-eq v0, v1, :cond_0
 
     .line 42
-    iput v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQN:I
+    iput v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msA:I
 
     .line 43
-    sget v0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQK:I
+    sget v0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msx:I
 
     mul-int/lit8 v0, v0, 0xa
 
     new-array v0, v0, [B
 
-    iput-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQL:[B
+    iput-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msy:[B
 
     .line 45
     const/4 v0, 0x0
@@ -116,12 +116,12 @@
     goto :goto_0
 .end method
 
-.method public final blg()I
+.method public final brk()I
     .locals 2
 
     .prologue
     .line 90
-    iget v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQN:I
+    iget v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msA:I
 
     if-nez v0, :cond_0
 
@@ -136,12 +136,12 @@
     :cond_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQL:[B
+    iput-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msy:[B
 
     .line 95
-    iget-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQP:Lcom/tencent/qqpinyin/voicerecoapi/TRSpeexNative;
+    iget-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msC:Lcom/tencent/qqpinyin/voicerecoapi/TRSpeexNative;
 
-    iget v1, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQN:I
+    iget v1, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msA:I
 
     invoke-virtual {v0, v1}, Lcom/tencent/qqpinyin/voicerecoapi/TRSpeexNative;->nativeTRSpeexRelease(I)I
 
@@ -150,19 +150,19 @@
     .line 96
     const/4 v1, 0x0
 
-    iput v1, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQN:I
+    iput v1, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msA:I
 
     goto :goto_0
 .end method
 
-.method public final x([BI)[B
+.method public final y([BI)[B
     .locals 6
 
     .prologue
     const/4 v3, 0x0
 
     .line 62
-    iget v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQN:I
+    iget v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msA:I
 
     if-nez v0, :cond_0
 
@@ -195,13 +195,13 @@
 
     .line 69
     :cond_2
-    iget-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQP:Lcom/tencent/qqpinyin/voicerecoapi/TRSpeexNative;
+    iget-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msC:Lcom/tencent/qqpinyin/voicerecoapi/TRSpeexNative;
 
     .line 70
-    iget v1, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQN:I
+    iget v1, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msA:I
 
     .line 71
-    iget-object v5, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQL:[B
+    iget-object v5, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msy:[B
 
     move-object v2, p1
 
@@ -238,7 +238,7 @@
     new-array v0, v1, [B
 
     .line 79
-    iget-object v2, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->lQL:[B
+    iget-object v2, p0, Lcom/tencent/qqpinyin/voicerecoapi/a;->msy:[B
 
     invoke-static {v2, v3, v0, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 

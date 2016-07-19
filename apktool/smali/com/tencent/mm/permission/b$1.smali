@@ -13,9 +13,18 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/iq;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic clE:Lcom/tencent/mm/permission/b;
+.field final synthetic cgI:Lcom/tencent/mm/permission/b;
 
 
 # direct methods
@@ -24,18 +33,28 @@
 
     .prologue
     .line 82
-    iput-object p1, p0, Lcom/tencent/mm/permission/b$1;->clE:Lcom/tencent/mm/permission/b;
+    iput-object p1, p0, Lcom/tencent/mm/permission/b$1;->cgI:Lcom/tencent/mm/permission/b;
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/iq;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/permission/b$1;->kum:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 11
 
     .prologue
@@ -43,50 +62,28 @@
 
     const/4 v3, 0x0
 
-    .line 86
-    if-eqz p1, :cond_0
+    .line 82
+    check-cast p1, Lcom/tencent/mm/e/a/iq;
 
-    instance-of v0, p1, Lcom/tencent/mm/d/a/il;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/iq;->aqt:Lcom/tencent/mm/e/a/iq$a;
 
-    if-nez v0, :cond_1
+    iget-boolean v0, v0, Lcom/tencent/mm/e/a/iq$a;->aqv:Z
 
-    .line 87
-    :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpL0qTj+UKAbT3of3Pv5i+ze"
+    if-ne v2, v0, :cond_f
 
-    const-string/jumbo v1, "wrong event callback"
+    iget-object v0, p1, Lcom/tencent/mm/e/a/iq;->aqt:Lcom/tencent/mm/e/a/iq$a;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    iget v0, v0, Lcom/tencent/mm/e/a/iq$a;->type:I
 
-    .line 109
-    :goto_0
-    return v3
-
-    .line 91
-    :cond_1
-    check-cast p1, Lcom/tencent/mm/d/a/il;
-
-    .line 93
-    iget-object v0, p1, Lcom/tencent/mm/d/a/il;->aEp:Lcom/tencent/mm/d/a/il$a;
-
-    iget-boolean v0, v0, Lcom/tencent/mm/d/a/il$a;->aEr:Z
-
-    if-ne v2, v0, :cond_11
-
-    .line 96
-    iget-object v0, p1, Lcom/tencent/mm/d/a/il;->aEp:Lcom/tencent/mm/d/a/il$a;
-
-    iget v0, v0, Lcom/tencent/mm/d/a/il$a;->type:I
-
-    invoke-static {v0}, Lcom/tencent/mm/permission/b;->ej(I)Z
+    invoke-static {v0}, Lcom/tencent/mm/permission/b;->eS(I)Z
 
     move-result v0
 
-    if-nez v0, :cond_10
-
-    sget-object v0, Lcom/tencent/mm/compatible/e/a;->btO:Ljava/lang/Boolean;
-
     if-nez v0, :cond_e
+
+    sget-object v0, Lcom/tencent/mm/compatible/e/a;->bhR:Ljava/lang/Boolean;
+
+    if-nez v0, :cond_c
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -100,7 +97,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v5, Lcom/tencent/mm/compatible/util/d;->bxa:Ljava/lang/String;
+    sget-object v5, Lcom/tencent/mm/compatible/util/d;->bpc:Ljava/lang/String;
 
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -130,13 +127,13 @@
 
     move-result-object v1
 
-    :cond_2
-    :goto_1
+    :cond_0
+    :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_3
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -150,13 +147,13 @@
 
     sget-object v7, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
-    iget-object v8, v0, Lcom/tencent/mm/compatible/e/a$b;->btT:Ljava/lang/String;
+    iget-object v8, v0, Lcom/tencent/mm/compatible/e/a$b;->bhW:Ljava/lang/String;
 
     invoke-static {v7, v8, v5, v6}, Lcom/tencent/mm/compatible/e/a;->a(Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/pointers/PInt;Lcom/tencent/mm/pointers/PBool;)Z
 
     move-result v7
 
-    if-eqz v7, :cond_3
+    if-eqz v7, :cond_1
 
     sget-object v7, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
@@ -166,7 +163,7 @@
 
     move-result v7
 
-    if-eqz v7, :cond_3
+    if-eqz v7, :cond_1
 
     sget-object v7, Landroid/os/Build$VERSION;->RELEASE:Ljava/lang/String;
 
@@ -174,50 +171,50 @@
 
     invoke-static {v7, v8, v5, v6}, Lcom/tencent/mm/compatible/e/a;->a(Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/pointers/PInt;Lcom/tencent/mm/pointers/PBool;)Z
 
-    :cond_3
+    :cond_1
     iget-boolean v7, v6, Lcom/tencent/mm/pointers/PBool;->value:Z
 
-    if-eqz v7, :cond_2
+    if-eqz v7, :cond_0
 
     iget v7, v5, Lcom/tencent/mm/pointers/PInt;->value:I
 
-    if-lez v7, :cond_2
+    if-lez v7, :cond_0
 
-    iget v0, v0, Lcom/tencent/mm/compatible/e/a$b;->btR:I
+    iget v0, v0, Lcom/tencent/mm/compatible/e/a$b;->bhU:I
 
-    if-ne v2, v0, :cond_4
+    if-ne v2, v0, :cond_2
 
     move v0, v2
 
-    :goto_2
+    :goto_1
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/compatible/e/a;->btO:Ljava/lang/Boolean;
+    sput-object v0, Lcom/tencent/mm/compatible/e/a;->bhR:Ljava/lang/Boolean;
+
+    goto :goto_0
+
+    :cond_2
+    move v0, v3
 
     goto :goto_1
 
-    :cond_4
-    move v0, v3
+    :cond_3
+    sget-object v0, Lcom/tencent/mm/compatible/e/a;->bhR:Ljava/lang/Boolean;
 
-    goto :goto_2
+    if-eqz v0, :cond_4
 
-    :cond_5
-    sget-object v0, Lcom/tencent/mm/compatible/e/a;->btO:Ljava/lang/Boolean;
-
-    if-eqz v0, :cond_6
-
-    sget-object v0, Lcom/tencent/mm/compatible/e/a;->btO:Ljava/lang/Boolean;
+    sget-object v0, Lcom/tencent/mm/compatible/e/a;->bhR:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    if-eq v2, v0, :cond_e
+    if-eq v2, v0, :cond_c
 
-    :cond_6
-    invoke-static {v3}, Lcom/tencent/mm/compatible/e/a;->ay(Z)Ljava/util/List;
+    :cond_4
+    invoke-static {v3}, Lcom/tencent/mm/compatible/e/a;->ab(Z)Ljava/util/List;
 
     move-result-object v0
 
@@ -225,12 +222,12 @@
 
     move-result-object v7
 
-    :cond_7
+    :cond_5
     invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_d
 
     invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -244,13 +241,13 @@
 
     move-result-object v8
 
-    :cond_8
-    :goto_3
+    :cond_6
+    :goto_2
     invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_b
 
     invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -264,61 +261,61 @@
 
     iget-object v9, v1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    iget-object v10, v0, Lcom/tencent/mm/compatible/e/a$a;->alS:Ljava/lang/String;
+    iget-object v10, v0, Lcom/tencent/mm/compatible/e/a$a;->YH:Ljava/lang/String;
 
     invoke-static {v9, v10, v5, v6}, Lcom/tencent/mm/compatible/e/a;->a(Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/pointers/PInt;Lcom/tencent/mm/pointers/PBool;)Z
 
     move-result v9
 
-    if-eqz v9, :cond_9
+    if-eqz v9, :cond_7
 
-    iget v9, v0, Lcom/tencent/mm/compatible/e/a$a;->btP:I
+    iget v9, v0, Lcom/tencent/mm/compatible/e/a$a;->bhS:I
 
-    if-nez v9, :cond_a
+    if-nez v9, :cond_8
 
-    iget v9, v0, Lcom/tencent/mm/compatible/e/a$a;->btQ:I
+    iget v9, v0, Lcom/tencent/mm/compatible/e/a$a;->bhT:I
 
-    if-nez v9, :cond_a
+    if-nez v9, :cond_8
 
     iput-boolean v2, v6, Lcom/tencent/mm/pointers/PBool;->value:Z
 
-    :cond_9
-    :goto_4
+    :cond_7
+    :goto_3
     iget-boolean v9, v6, Lcom/tencent/mm/pointers/PBool;->value:Z
 
-    if-eqz v9, :cond_8
+    if-eqz v9, :cond_6
 
     iget v9, v5, Lcom/tencent/mm/pointers/PInt;->value:I
 
-    if-lez v9, :cond_8
+    if-lez v9, :cond_6
 
-    iget v0, v0, Lcom/tencent/mm/compatible/e/a$a;->btR:I
+    iget v0, v0, Lcom/tencent/mm/compatible/e/a$a;->bhU:I
 
-    if-ne v2, v0, :cond_c
+    if-ne v2, v0, :cond_a
 
     move v0, v2
 
-    :goto_5
+    :goto_4
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/compatible/e/a;->btO:Ljava/lang/Boolean;
+    sput-object v0, Lcom/tencent/mm/compatible/e/a;->bhR:Ljava/lang/Boolean;
 
-    goto :goto_3
+    goto :goto_2
 
-    :cond_a
-    iget v9, v0, Lcom/tencent/mm/compatible/e/a$a;->btP:I
-
-    iget v10, v1, Landroid/content/pm/PackageInfo;->versionCode:I
-
-    if-gt v9, v10, :cond_b
-
-    iget v9, v0, Lcom/tencent/mm/compatible/e/a$a;->btQ:I
+    :cond_8
+    iget v9, v0, Lcom/tencent/mm/compatible/e/a$a;->bhS:I
 
     iget v10, v1, Landroid/content/pm/PackageInfo;->versionCode:I
 
-    if-lt v9, v10, :cond_b
+    if-gt v9, v10, :cond_9
+
+    iget v9, v0, Lcom/tencent/mm/compatible/e/a$a;->bhT:I
+
+    iget v10, v1, Landroid/content/pm/PackageInfo;->versionCode:I
+
+    if-lt v9, v10, :cond_9
 
     iget v9, v5, Lcom/tencent/mm/pointers/PInt;->value:I
 
@@ -328,108 +325,102 @@
 
     iput-boolean v2, v6, Lcom/tencent/mm/pointers/PBool;->value:Z
 
+    goto :goto_3
+
+    :cond_9
+    iput-boolean v3, v6, Lcom/tencent/mm/pointers/PBool;->value:Z
+
+    goto :goto_3
+
+    :cond_a
+    move v0, v3
+
     goto :goto_4
 
     :cond_b
-    iput-boolean v3, v6, Lcom/tencent/mm/pointers/PBool;->value:Z
+    sget-object v0, Lcom/tencent/mm/compatible/e/a;->bhR:Ljava/lang/Boolean;
 
-    goto :goto_4
+    if-eqz v0, :cond_5
+
+    sget-object v0, Lcom/tencent/mm/compatible/e/a;->bhR:Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-ne v2, v0, :cond_5
 
     :cond_c
-    move v0, v3
-
-    goto :goto_5
-
-    :cond_d
-    sget-object v0, Lcom/tencent/mm/compatible/e/a;->btO:Ljava/lang/Boolean;
-
-    if-eqz v0, :cond_7
-
-    sget-object v0, Lcom/tencent/mm/compatible/e/a;->btO:Ljava/lang/Boolean;
+    :goto_5
+    sget-object v0, Lcom/tencent/mm/compatible/e/a;->bhR:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    if-ne v2, v0, :cond_7
+    if-eqz v0, :cond_e
 
-    :cond_e
-    :goto_6
-    sget-object v0, Lcom/tencent/mm/compatible/e/a;->btO:Ljava/lang/Boolean;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/iq;->aqu:Lcom/tencent/mm/e/a/iq$b;
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-object v1, p1, Lcom/tencent/mm/e/a/iq;->aqt:Lcom/tencent/mm/e/a/iq$a;
 
-    move-result v0
-
-    if-eqz v0, :cond_10
-
-    .line 97
-    iget-object v0, p1, Lcom/tencent/mm/d/a/il;->aEq:Lcom/tencent/mm/d/a/il$b;
-
-    iget-object v1, p1, Lcom/tencent/mm/d/a/il;->aEp:Lcom/tencent/mm/d/a/il$a;
-
-    iget v1, v1, Lcom/tencent/mm/d/a/il$a;->type:I
+    iget v1, v1, Lcom/tencent/mm/e/a/iq$a;->type:I
 
     invoke-static {v1, v2}, Lcom/tencent/mm/permission/b;->r(IZ)Z
 
     move-result v1
 
-    iput-boolean v1, v0, Lcom/tencent/mm/d/a/il$b;->aEt:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/e/a/iq$b;->aqx:Z
 
-    .line 98
-    iget-object v0, p1, Lcom/tencent/mm/d/a/il;->aEp:Lcom/tencent/mm/d/a/il$a;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/iq;->aqt:Lcom/tencent/mm/e/a/iq$a;
 
-    iget v0, v0, Lcom/tencent/mm/d/a/il$a;->type:I
+    iget v0, v0, Lcom/tencent/mm/e/a/iq$a;->type:I
 
     invoke-static {v0, v3, v2}, Lcom/tencent/mm/permission/b;->b(IZZ)V
 
-    goto/16 :goto_0
+    :goto_6
+    return v3
 
-    .line 96
-    :cond_f
-    sget-object v0, Lcom/tencent/mm/compatible/e/a;->btO:Ljava/lang/Boolean;
+    :cond_d
+    sget-object v0, Lcom/tencent/mm/compatible/e/a;->bhR:Ljava/lang/Boolean;
 
-    if-nez v0, :cond_e
+    if-nez v0, :cond_c
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/compatible/e/a;->btO:Ljava/lang/Boolean;
+    sput-object v0, Lcom/tencent/mm/compatible/e/a;->bhR:Ljava/lang/Boolean;
 
-    goto :goto_6
+    goto :goto_5
 
-    .line 100
-    :cond_10
-    iget-object v0, p1, Lcom/tencent/mm/d/a/il;->aEq:Lcom/tencent/mm/d/a/il$b;
+    :cond_e
+    iget-object v0, p1, Lcom/tencent/mm/e/a/iq;->aqu:Lcom/tencent/mm/e/a/iq$b;
 
-    iput-boolean v3, v0, Lcom/tencent/mm/d/a/il$b;->aEt:Z
+    iput-boolean v3, v0, Lcom/tencent/mm/e/a/iq$b;->aqx:Z
 
-    .line 101
-    iget-object v0, p1, Lcom/tencent/mm/d/a/il;->aEp:Lcom/tencent/mm/d/a/il$a;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/iq;->aqt:Lcom/tencent/mm/e/a/iq$a;
 
-    iget v0, v0, Lcom/tencent/mm/d/a/il$a;->type:I
+    iget v0, v0, Lcom/tencent/mm/e/a/iq$a;->type:I
 
     invoke-static {v0, v2, v3}, Lcom/tencent/mm/permission/b;->b(IZZ)V
 
-    goto/16 :goto_0
+    goto :goto_6
 
-    .line 105
-    :cond_11
-    iget-object v0, p1, Lcom/tencent/mm/d/a/il;->aEq:Lcom/tencent/mm/d/a/il$b;
+    :cond_f
+    iget-object v0, p1, Lcom/tencent/mm/e/a/iq;->aqu:Lcom/tencent/mm/e/a/iq$b;
 
-    iput-boolean v3, v0, Lcom/tencent/mm/d/a/il$b;->aEt:Z
+    iput-boolean v3, v0, Lcom/tencent/mm/e/a/iq$b;->aqx:Z
 
-    .line 106
-    iget-object v0, p1, Lcom/tencent/mm/d/a/il;->aEp:Lcom/tencent/mm/d/a/il$a;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/iq;->aqt:Lcom/tencent/mm/e/a/iq$a;
 
-    iget v0, v0, Lcom/tencent/mm/d/a/il$a;->type:I
+    iget v0, v0, Lcom/tencent/mm/e/a/iq$a;->type:I
 
-    iget-object v1, p1, Lcom/tencent/mm/d/a/il;->aEp:Lcom/tencent/mm/d/a/il$a;
+    iget-object v1, p1, Lcom/tencent/mm/e/a/iq;->aqt:Lcom/tencent/mm/e/a/iq$a;
 
-    iget-boolean v1, v1, Lcom/tencent/mm/d/a/il$a;->aEs:Z
+    iget-boolean v1, v1, Lcom/tencent/mm/e/a/iq$a;->aqw:Z
 
     invoke-static {v0, v3, v1}, Lcom/tencent/mm/permission/b;->b(IZZ)V
 
-    goto/16 :goto_0
+    goto :goto_6
 .end method

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bDA:Lcom/tencent/mm/model/c/c;
+.field final synthetic bwK:Lcom/tencent/mm/model/c/c;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 56
-    iput-object p1, p0, Lcom/tencent/mm/model/c/c$1;->bDA:Lcom/tencent/mm/model/c/c;
+    iput-object p1, p0, Lcom/tencent/mm/model/c/c$1;->bwK:Lcom/tencent/mm/model/c/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,21 +36,21 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/r/c$a;)V
+.method public final a(Lcom/tencent/mm/t/c$a;)V
     .locals 4
 
     .prologue
     .line 59
-    iget-object v0, p1, Lcom/tencent/mm/r/c$a;->bFh:Lcom/tencent/mm/protocal/b/aj;
+    iget-object v0, p1, Lcom/tencent/mm/t/c$a;->bys:Lcom/tencent/mm/protocal/b/am;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aj;->iXv:Lcom/tencent/mm/protocal/b/aly;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/am;->juZ:Lcom/tencent/mm/protocal/b/amj;
 
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/n;->a(Lcom/tencent/mm/protocal/b/aly;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/m;->a(Lcom/tencent/mm/protocal/b/amj;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 60
-    const-string/jumbo v1, "!44@/B4Tb64lLpIAhUt0Bg2QTrCYuQNsxDPAb2p/0kUCEio="
+    const-string/jumbo v1, "MicroMsg.SubCoreNewABTest"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -66,15 +66,15 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 61
-    invoke-static {v0}, Lcom/tencent/mm/model/c/a;->fE(Ljava/lang/String;)Ljava/util/List;
+    invoke-static {v0}, Lcom/tencent/mm/model/c/a;->fR(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
     .line 62
-    invoke-static {}, Lcom/tencent/mm/model/c/c;->uZ()Lcom/tencent/mm/storage/b;
+    invoke-static {}, Lcom/tencent/mm/model/c/c;->vb()Lcom/tencent/mm/storage/b;
 
     move-result-object v1
 

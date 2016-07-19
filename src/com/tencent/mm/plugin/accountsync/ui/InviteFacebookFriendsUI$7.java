@@ -2,20 +2,18 @@ package com.tencent.mm.plugin.accountsync.ui;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
-import com.tencent.mm.model.ah;
 import com.tencent.mm.modelfriend.x;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.t.m;
 
 final class InviteFacebookFriendsUI$7
   implements DialogInterface.OnCancelListener
 {
-  InviteFacebookFriendsUI$7(InviteFacebookFriendsUI paramInviteFacebookFriendsUI, af paramaf, x paramx) {}
+  InviteFacebookFriendsUI$7(InviteFacebookFriendsUI paramInviteFacebookFriendsUI, com.tencent.mm.sdk.platformtools.ah paramah, x paramx) {}
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    coS.aUF();
-    ah.tE().c(coR);
+    ckg.aZJ();
+    com.tencent.mm.model.ah.tF().c(ckf);
   }
 }
 

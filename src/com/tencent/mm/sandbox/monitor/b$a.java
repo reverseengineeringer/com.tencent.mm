@@ -1,13 +1,13 @@
 package com.tencent.mm.sandbox.monitor;
 
 import android.os.Build;
-import com.tencent.mm.protocal.b;
+import com.tencent.mm.protocal.c;
 
 final class b$a
 {
-  public String iWI;
-  public boolean jSD;
-  public final String platform = b.bwR + "_" + b.iUf + "_" + Build.CPU_ABI;
+  public String iAO;
+  public boolean krX;
+  public final String platform = c.boS + "_" + c.jry + "_" + Build.CPU_ABI;
   public String tag;
   public long timestamp;
   public String username;
@@ -17,14 +17,14 @@ final class b$a
     username = paramString1;
     tag = paramString2;
     timestamp = paramLong;
-    iWI = paramString3;
-    jSD = false;
-    jSD = paramBoolean;
+    iAO = paramString3;
+    krX = false;
+    krX = paramBoolean;
   }
   
   public final String toString()
   {
-    return username + "," + platform + "," + tag + ",time_" + timestamp + ",error_" + iWI;
+    return username + "," + platform + "," + tag + ",time_" + timestamp + ",error_" + iAO;
   }
 }
 

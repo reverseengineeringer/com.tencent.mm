@@ -10,10 +10,10 @@ final class NewTaskUI$3
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    if (NewTaskUI.lxi != null)
+    if (NewTaskUI.lXW != null)
     {
-      NewTaskUI.lxi = null;
-      lxl.finish();
+      NewTaskUI.lXW = null;
+      lXZ.finish();
     }
   }
 }

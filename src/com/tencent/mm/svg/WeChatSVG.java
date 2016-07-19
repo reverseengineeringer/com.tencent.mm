@@ -1,13 +1,13 @@
 package com.tencent.mm.svg;
 
 import android.graphics.Canvas;
-import com.tencent.mm.svg.d.b;
+import com.tencent.mm.svg.c.b;
 
 public class WeChatSVG
 {
   static
   {
-    if (b.aZa())
+    if (b.ber())
     {
       System.loadLibrary("wechatsvg");
       nativeInit();

@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import com.tencent.mm.d.b.bg;
+import com.tencent.mm.e.b.bj;
 import java.util.ArrayList;
 
 final class AppAttachFileListUI$2
@@ -12,12 +12,12 @@ final class AppAttachFileListUI$2
 {
   AppAttachFileListUI$2(AppAttachFileListUI paramAppAttachFileListUI) {}
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    paramAdapterView = new Intent(kQj, AppAttachDownloadUI.class);
-    paramAdapterView.putExtra("app_msg_id", akQj).get(paramInt)).aFR.field_msgId);
+    paramAdapterView = new Intent(lpY, AppAttachDownloadUI.class);
+    paramAdapterView.putExtra("app_msg_id", alpY).get(paramInt)).arX.field_msgId);
     paramAdapterView.setFlags(67108864);
-    kQj.startActivity(paramAdapterView);
+    lpY.startActivity(paramAdapterView);
   }
 }
 

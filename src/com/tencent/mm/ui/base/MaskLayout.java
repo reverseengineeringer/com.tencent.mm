@@ -10,14 +10,14 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import com.tencent.mm.R.b;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class MaskLayout
   extends RelativeLayout
 {
-  private ImageView dVm;
-  private Drawable kIw;
-  private View view;
+  private ImageView dXt;
+  private Drawable lhM;
+  public View view;
   
   public MaskLayout(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -27,24 +27,24 @@ public class MaskLayout
   public MaskLayout(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.MaskLayout, paramInt, 0);
-    kIw = paramContext.getDrawable(0);
+    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.WM, paramInt, 0);
+    lhM = paramContext.getDrawable(0);
     paramContext.recycle();
   }
   
-  private void qJ(int paramInt)
+  private void sH(int paramInt)
   {
-    removeView(dVm);
+    removeView(dXt);
     RelativeLayout.LayoutParams localLayoutParams2 = new RelativeLayout.LayoutParams(-2, -2);
     RelativeLayout.LayoutParams localLayoutParams1 = localLayoutParams2;
-    switch (1.kIx[(paramInt - 1)])
+    switch (1.lhN[(paramInt - 1)])
     {
     default: 
       localLayoutParams1 = new RelativeLayout.LayoutParams(-1, -1);
     }
     for (;;)
     {
-      addView(dVm, localLayoutParams1);
+      addView(dXt, localLayoutParams1);
       return;
       localLayoutParams2.addRule(12);
       localLayoutParams2.addRule(11);
@@ -59,53 +59,42 @@ public class MaskLayout
     }
   }
   
-  public final void d(Bitmap paramBitmap, int paramInt)
+  public final void biG()
   {
-    qJ(paramInt);
-    dVm.setImageBitmap(paramBitmap);
+    sH(a.lhS);
+    dXt.setImageDrawable(null);
   }
   
-  public View getContentView()
+  public final void c(Bitmap paramBitmap, int paramInt)
   {
-    return view;
+    sH(paramInt);
+    dXt.setImageBitmap(paramBitmap);
   }
   
   public void onFinishInflate()
   {
     super.onFinishInflate();
-    view = findViewById(2131165377);
+    view = findViewById(2131755262);
     if (view == null)
     {
-      u.d("!32@/B4Tb64lLpIrPcdvz+HPJK/coyuoK30x", "%s", new Object[] { "not found view by id, new one" });
+      v.d("MicroMsg.MaskLayout", "%s", new Object[] { "not found view by id, new one" });
       view = new View(getContext());
       RelativeLayout.LayoutParams localLayoutParams = new RelativeLayout.LayoutParams(-1, -1);
       localLayoutParams.addRule(13);
       view.setLayoutParams(localLayoutParams);
       addView(view);
     }
-    dVm = new ImageView(getContext());
-    dVm.setLayoutParams(new RelativeLayout.LayoutParams(-1, -1));
-    dVm.setImageDrawable(kIw);
-    addView(dVm);
-  }
-  
-  public void setMaskBitmap(Bitmap paramBitmap)
-  {
-    qJ(a.kIC);
-    dVm.setImageBitmap(paramBitmap);
-  }
-  
-  public void setMaskDrawable(Drawable paramDrawable)
-  {
-    qJ(a.kIC);
-    dVm.setImageDrawable(paramDrawable);
+    dXt = new ImageView(getContext());
+    dXt.setLayoutParams(new RelativeLayout.LayoutParams(-1, -1));
+    dXt.setImageDrawable(lhM);
+    addView(dXt);
   }
   
   public static enum a
   {
-    public static int[] bde()
+    public static int[] biH()
     {
-      return (int[])kID.clone();
+      return (int[])lhT.clone();
     }
   }
 }

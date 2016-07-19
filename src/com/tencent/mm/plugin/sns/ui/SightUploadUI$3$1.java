@@ -1,6 +1,6 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.d.a.lj;
+import com.tencent.mm.e.a.lp;
 import com.tencent.mm.sdk.c.a;
 import com.tencent.mm.ui.base.g.c;
 
@@ -9,20 +9,20 @@ final class SightUploadUI$3$1
 {
   SightUploadUI$3$1(SightUploadUI.3 param3) {}
   
-  public final void eu(int paramInt)
+  public final void fg(int paramInt)
   {
     switch (paramInt)
     {
     default: 
       return;
     }
-    lj locallj = new lj();
-    aHJ.type = 0;
-    aHJ.aHO = true;
-    aHJ.aHL = true;
-    a.jUF.j(locallj);
-    hbe.hbd.age();
-    hbe.hbd.finish();
+    lp locallp = new lp();
+    atZ.type = 0;
+    atZ.aue = true;
+    atZ.aub = true;
+    a.kug.y(locallp);
+    hoF.hoE.aiI();
+    hoF.hoE.finish();
   }
 }
 

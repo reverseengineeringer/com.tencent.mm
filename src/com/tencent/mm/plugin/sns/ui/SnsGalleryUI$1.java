@@ -7,7 +7,7 @@ final class SnsGalleryUI$1
   
   public final void run()
   {
-    hea.hbH.aAZ();
+    hsL.hqx.aDU();
   }
 }
 

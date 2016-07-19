@@ -2,19 +2,7 @@ package com.tencent.mm.compatible.d;
 
 public final class x
 {
-  public boolean btq;
-  public boolean btr;
-  
-  public x()
-  {
-    reset();
-  }
-  
-  public final void reset()
-  {
-    btq = false;
-    btr = false;
-  }
+  public boolean avj = false;
 }
 
 /* Location:

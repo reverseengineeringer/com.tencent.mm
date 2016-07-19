@@ -12,12 +12,14 @@ import com.tencent.mm.sdk.platformtools.d;
 public class TabIconView
   extends ImageView
 {
-  private Paint cIZ;
-  private Bitmap krs;
-  private Bitmap krt;
-  private Rect kru;
-  private Rect krv;
-  private int krw = 0;
+  private Paint cGd;
+  private Bitmap kQA;
+  private Bitmap kQB;
+  private Rect kQC;
+  private Rect kQD;
+  private Rect kQE;
+  private int kQF = 0;
+  private Bitmap kQz;
   
   public TabIconView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -29,36 +31,48 @@ public class TabIconView
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  public final void i(int paramInt1, int paramInt2, boolean paramBoolean)
+  public final void e(int paramInt1, int paramInt2, int paramInt3, boolean paramBoolean)
   {
-    if (paramBoolean) {
-      krs = d.pl(paramInt1);
-    }
-    for (krt = d.pl(paramInt2);; krt = d.pk(paramInt2))
+    if (paramBoolean)
     {
-      kru = new Rect(0, 0, krs.getWidth(), krs.getHeight());
-      krv = new Rect(0, 0, krt.getWidth(), krt.getHeight());
-      cIZ = new Paint(1);
+      kQz = d.rb(paramInt1);
+      kQA = d.rb(paramInt3);
+    }
+    for (kQB = d.rb(paramInt2);; kQB = d.ra(paramInt2))
+    {
+      kQC = new Rect(0, 0, kQz.getWidth(), kQz.getHeight());
+      kQD = new Rect(0, 0, kQA.getWidth(), kQA.getHeight());
+      kQE = new Rect(0, 0, kQB.getWidth(), kQB.getHeight());
+      cGd = new Paint(1);
       return;
-      krs = d.pk(paramInt1);
+      kQz = d.ra(paramInt1);
+      kQA = d.ra(paramInt3);
     }
   }
   
   protected void onDraw(Canvas paramCanvas)
   {
     super.onDraw(paramCanvas);
-    if (cIZ == null) {
+    if (cGd == null) {
       return;
     }
-    cIZ.setAlpha(255 - krw);
-    paramCanvas.drawBitmap(krt, null, krv, cIZ);
-    cIZ.setAlpha(krw);
-    paramCanvas.drawBitmap(krs, null, kru, cIZ);
+    if (kQF < 128)
+    {
+      cGd.setAlpha(255 - kQF * 2);
+      paramCanvas.drawBitmap(kQA, null, kQD, cGd);
+      cGd.setAlpha(kQF * 2);
+      paramCanvas.drawBitmap(kQB, null, kQE, cGd);
+      return;
+    }
+    cGd.setAlpha(255 - kQF * 2);
+    paramCanvas.drawBitmap(kQB, null, kQE, cGd);
+    cGd.setAlpha(kQF * 2);
+    paramCanvas.drawBitmap(kQz, null, kQC, cGd);
   }
   
-  public void setFocusAlpha(int paramInt)
+  public final void sc(int paramInt)
   {
-    krw = paramInt;
+    kQF = paramInt;
     invalidate();
   }
 }

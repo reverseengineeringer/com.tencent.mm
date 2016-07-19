@@ -12,7 +12,7 @@ final class MobileInputUI$2
   public final boolean onEditorAction(TextView paramTextView, int paramInt, KeyEvent paramKeyEvent)
   {
     if ((paramInt == 6) || (paramInt == 5)) {
-      return MobileInputUI.c(kyc);
+      return MobileInputUI.c(kXj);
     }
     return false;
   }

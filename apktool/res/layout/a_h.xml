@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/a58" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/ow" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/c9s" android:background="@drawable/op" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="40.0dip">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/bnd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j8" android:src="@drawable/o1" />
+            <TextView android:textColor="@color/gn" android:ellipsize="end" android:layout_gravity="center" android:id="@id/c9t" android:paddingLeft="@dimen/hj" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cs3" android:maxLines="1" android:layout_weight="1.0" />
+            <TextView android:id="@id/c9u" android:layout_marginTop="@dimen/j8" android:layout_marginRight="@dimen/i7" android:layout_marginBottom="@dimen/j8" android:text="@string/cs2" style="@style/MMSolidWhiteSmallButton" />
+        </LinearLayout>
+        <ListView android:id="@id/c9v" android:background="@null" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/i7" android:layout_marginRight="@dimen/i7" android:listSelector="@drawable/it" android:cacheColorHint="#00000000" android:divider="@null" android:layout_weight="1.0" />
+        <com.tencent.mm.plugin.sns.ui.SnsCommentFooter android:id="@id/a5b" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

@@ -15,10 +15,10 @@
 
 
 # virtual methods
-.method public abstract PP()Z
+.method public abstract Re()Z
 .end method
 
-.method public abstract PQ()Z
+.method public abstract Rf()Z
 .end method
 
 .method public abstract a(Ljava/lang/String;Ljava/lang/String;IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/tencent/mm/storage/a/c;
@@ -27,16 +27,16 @@
 .method public abstract a(Landroid/content/Context;Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;Ljava/lang/String;)Ljava/lang/String;
 .end method
 
-.method public abstract a(Landroid/content/Context;Lcom/tencent/mm/storage/ag;)V
+.method public abstract a(Landroid/content/Context;Lcom/tencent/mm/storage/ai;)V
 .end method
 
-.method public abstract a(Ljava/lang/String;Lcom/tencent/mm/storage/a/c;Lcom/tencent/mm/storage/ag;)V
+.method public abstract a(Ljava/lang/String;Lcom/tencent/mm/storage/a/c;Lcom/tencent/mm/storage/ai;)V
 .end method
 
 .method public abstract a(Landroid/content/Context;Lcom/tencent/mm/storage/a/c;I)Z
 .end method
 
-.method public abstract a(Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Lcom/tencent/mm/r/c$a;)Z
+.method public abstract a(Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Lcom/tencent/mm/t/c$a;)Z
 .end method
 
 .method public abstract a(Lcom/tencent/mm/storage/a/c;)[B
@@ -60,38 +60,49 @@
 .method public abstract extractForeground([III)Z
 .end method
 
-.method public abstract l(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
+.method public abstract j(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
 .end method
 
-.method public abstract mD(Ljava/lang/String;)Lcom/tencent/mm/storage/a/c;
+.method public abstract nA(Ljava/lang/String;)Z
 .end method
 
-.method public abstract mE(Ljava/lang/String;)Z
+.method public abstract nB(Ljava/lang/String;)Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/storage/a/c;",
+            ">;"
+        }
+    .end annotation
 .end method
 
-.method public abstract mF(Ljava/lang/String;)Ljava/util/List;
+.method public abstract nC(Ljava/lang/String;)Ljava/lang/String;
 .end method
 
-.method public abstract mG(Ljava/lang/String;)Ljava/lang/String;
+.method public abstract nD(Ljava/lang/String;)Z
 .end method
 
-.method public abstract mH(Ljava/lang/String;)Z
+.method public abstract nE(Ljava/lang/String;)Ljava/lang/String;
 .end method
 
-.method public abstract mI(Ljava/lang/String;)Ljava/lang/String;
+.method public abstract nF(Ljava/lang/String;)Ljava/lang/String;
 .end method
 
-.method public abstract mJ(Ljava/lang/String;)Ljava/lang/String;
+.method public abstract nG(Ljava/lang/String;)Ljava/lang/String;
 .end method
 
-.method public abstract mK(Ljava/lang/String;)Ljava/lang/String;
+.method public abstract nH(Ljava/lang/String;)I
 .end method
 
-.method public abstract mL(Ljava/lang/String;)I
+.method public abstract nI(Ljava/lang/String;)Ljava/lang/String;
 .end method
 
-.method public abstract mM(Ljava/lang/String;)Ljava/lang/String;
+.method public abstract nJ(Ljava/lang/String;)V
 .end method
 
-.method public abstract mN(Ljava/lang/String;)V
+.method public abstract nz(Ljava/lang/String;)Lcom/tencent/mm/storage/a/c;
 .end method

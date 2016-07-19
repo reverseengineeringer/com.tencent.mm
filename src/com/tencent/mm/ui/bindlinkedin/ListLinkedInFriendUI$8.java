@@ -10,11 +10,11 @@ final class ListLinkedInFriendUI$8
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ListLinkedInFriendUI.i(kOk);
+    ListLinkedInFriendUI.i(lnA);
     if (paramDialogInterface != null) {
       paramDialogInterface.dismiss();
     }
-    ListLinkedInFriendUI.d(kOk);
+    ListLinkedInFriendUI.d(lnA);
   }
 }
 

@@ -15,7 +15,16 @@
 
 
 # instance fields
-.field gzC:Ljava/util/List;
+.field gGe:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/plugin/sight/draft/ui/b$e;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -31,7 +40,7 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b$f;->gzC:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b$f;->gGe:Ljava/util/List;
 
     return-void
 .end method

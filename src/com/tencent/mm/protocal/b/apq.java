@@ -1,101 +1,66 @@
 package com.tencent.mm.protocal.b;
 
-import a.a.a.b;
 import java.util.LinkedList;
 
 public final class apq
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public aqi jJp;
-  public aly jJq;
+  public LinkedList<String> khw = new LinkedList();
+  public LinkedList<String> khx = new LinkedList();
+  public LinkedList<Integer> khy = new LinkedList();
+  public LinkedList<Integer> khz = new LinkedList();
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (jJp == null) {
-        throw new b("Not all required fields were included: SnsObject");
-      }
-      if (jJp != null)
-      {
-        paramVarArgs.cj(1, jJp.kn());
-        jJp.a(paramVarArgs);
-      }
-      if (jJq != null)
-      {
-        paramVarArgs.cj(2, jJq.kn());
-        jJq.a(paramVarArgs);
-      }
+      paramVarArgs.d(1, 1, khw);
+      paramVarArgs.d(2, 1, khx);
+      paramVarArgs.d(3, 2, khy);
+      paramVarArgs.d(4, 2, khz);
       return 0;
     }
     if (paramInt == 1) {
-      if (jJp == null) {
-        break label454;
-      }
+      return a.a.a.a.c(1, 1, khw) + 0 + a.a.a.a.c(2, 1, khx) + a.a.a.a.c(3, 2, khy) + a.a.a.a.c(4, 2, khz);
     }
-    label454:
-    for (paramInt = a.a.a.a.ch(1, jJp.kn()) + 0;; paramInt = 0)
+    if (paramInt == 2)
     {
-      int i = paramInt;
-      if (jJq != null) {
-        i = paramInt + a.a.a.a.ch(2, jJq.kn());
+      paramVarArgs = (byte[])paramVarArgs[0];
+      khw.clear();
+      khx.clear();
+      khy.clear();
+      khz.clear();
+      paramVarArgs = new a.a.a.a.a(paramVarArgs, jrk);
+      for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
+        if (!super.a(paramVarArgs, this, paramInt)) {
+          paramVarArgs.bve();
+        }
       }
-      return i;
-      if (paramInt == 2)
-      {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
-          if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
-          }
-        }
-        if (jJp != null) {
-          break;
-        }
-        throw new b("Not all required fields were included: SnsObject");
-      }
-      if (paramInt == 3)
-      {
-        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
-        apq localapq = (apq)paramVarArgs[1];
-        paramInt = ((Integer)paramVarArgs[2]).intValue();
-        Object localObject2;
-        boolean bool;
-        switch (paramInt)
-        {
-        default: 
-          return -1;
-        case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-          i = paramVarArgs.size();
-          paramInt = 0;
-          while (paramInt < i)
-          {
-            localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new aqi();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-            for (bool = true; bool; bool = ((aqi)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
-            jJp = ((aqi)localObject1);
-            paramInt += 1;
-          }
-        }
-        paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-        i = paramVarArgs.size();
-        paramInt = 0;
-        while (paramInt < i)
-        {
-          localObject2 = (byte[])paramVarArgs.get(paramInt);
-          localObject1 = new aly();
-          localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-          for (bool = true; bool; bool = ((aly)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
-          jJq = ((aly)localObject1);
-          paramInt += 1;
-        }
-        break;
-      }
-      return -1;
+      return 0;
     }
+    if (paramInt == 3)
+    {
+      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+      apq localapq = (apq)paramVarArgs[1];
+      switch (((Integer)paramVarArgs[2]).intValue())
+      {
+      default: 
+        return -1;
+      case 1: 
+        khw.add(mMY.readString());
+        return 0;
+      case 2: 
+        khx.add(mMY.readString());
+        return 0;
+      case 3: 
+        khy.add(Integer.valueOf(mMY.id()));
+        return 0;
+      }
+      khz.add(Integer.valueOf(mMY.id()));
+      return 0;
+    }
+    return -1;
   }
 }
 

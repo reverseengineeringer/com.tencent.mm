@@ -10,7 +10,7 @@ final class MMAutoCompleteTextView$3
   
   public final void onFocusChange(View paramView, boolean paramBoolean)
   {
-    MMAutoCompleteTextView.b(kCY);
+    MMAutoCompleteTextView.b(lcd);
   }
 }
 

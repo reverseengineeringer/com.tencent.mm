@@ -4,7 +4,65 @@
 
 
 # direct methods
-.method private static au(Ljava/lang/String;)[B
+.method private static a([BLjava/lang/String;)[B
+    .locals 3
+
+    .prologue
+    .line 278
+    :try_start_0
+    new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
+
+    invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v1
+
+    const-string/jumbo v2, "AES"
+
+    invoke-direct {v0, v1, v2}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
+
+    .line 279
+    const-string/jumbo v1, "AES/ECB/PKCS5Padding"
+
+    invoke-static {v1}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+
+    move-result-object v1
+
+    .line 280
+    const/4 v2, 0x2
+
+    invoke-virtual {v1, v2, v0}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
+
+    .line 281
+    invoke-virtual {v1, p0}, Ljavax/crypto/Cipher;->doFinal([B)[B
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    .line 286
+    :goto_0
+    return-object v0
+
+    .line 283
+    :catch_0
+    move-exception v0
+
+    .line 284
+    const-string/jumbo v1, "MicroMsg.AESUtils"
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 286
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method private static ay(Ljava/lang/String;)[B
     .locals 6
 
     .prologue
@@ -99,65 +157,7 @@
     goto :goto_0
 .end method
 
-.method private static c([BLjava/lang/String;)[B
-    .locals 3
-
-    .prologue
-    .line 278
-    :try_start_0
-    new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
-
-    invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v1
-
-    const-string/jumbo v2, "AES"
-
-    invoke-direct {v0, v1, v2}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
-
-    .line 279
-    const-string/jumbo v1, "AES/ECB/PKCS5Padding"
-
-    invoke-static {v1}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
-
-    move-result-object v1
-
-    .line 280
-    const/4 v2, 0x2
-
-    invoke-virtual {v1, v2, v0}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
-
-    .line 281
-    invoke-virtual {v1, p0}, Ljavax/crypto/Cipher;->doFinal([B)[B
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    .line 286
-    :goto_0
-    return-object v0
-
-    .line 283
-    :catch_0
-    move-exception v0
-
-    .line 284
-    const-string/jumbo v1, "!32@/B4Tb64lLpJxeqvX38nFlhZ4ZHYt2ISy"
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 286
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+.method public static g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 7
 
     .prologue
@@ -166,7 +166,7 @@
     .line 170
     const-string/jumbo v1, "AES/CBC/PKCS7Padding"
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -296,12 +296,12 @@
     return v0
 .end method
 
-.method public static n(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.method public static m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
     .prologue
     .line 254
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -319,11 +319,11 @@
     :try_start_0
     new-instance v0, Ljava/lang/String;
 
-    invoke-static {p0}, Lcom/tencent/mm/a/a;->au(Ljava/lang/String;)[B
+    invoke-static {p0}, Lcom/tencent/mm/a/a;->ay(Ljava/lang/String;)[B
 
     move-result-object v1
 
-    invoke-static {v1, p1}, Lcom/tencent/mm/a/a;->c([BLjava/lang/String;)[B
+    invoke-static {v1, p1}, Lcom/tencent/mm/a/a;->a([BLjava/lang/String;)[B
 
     move-result-object v1
 
@@ -341,13 +341,13 @@
     move-exception v0
 
     .line 261
-    const-string/jumbo v1, "!32@/B4Tb64lLpJxeqvX38nFlhZ4ZHYt2ISy"
+    const-string/jumbo v1, "MicroMsg.AESUtils"
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

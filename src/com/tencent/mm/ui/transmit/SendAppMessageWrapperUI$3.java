@@ -10,8 +10,8 @@ final class SendAppMessageWrapperUI$3
   
   public final void a(boolean paramBoolean, String paramString, int paramInt)
   {
-    lBv.setResult(-1, new Intent().putExtra("Select_stay_in_wx", true));
-    lBv.finish();
+    mcn.setResult(-1, new Intent().putExtra("Select_stay_in_wx", true));
+    mcn.finish();
   }
 }
 

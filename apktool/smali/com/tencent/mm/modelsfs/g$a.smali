@@ -13,19 +13,28 @@
     name = "a"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/tencent/mm/modelsfs/g$a;",
+        ">;"
+    }
+.end annotation
+
 
 # static fields
-.field public static final enum caA:Lcom/tencent/mm/modelsfs/g$a;
+.field public static final enum bUi:Lcom/tencent/mm/modelsfs/g$a;
 
-.field public static final enum caB:Lcom/tencent/mm/modelsfs/g$a;
+.field public static final enum bUj:Lcom/tencent/mm/modelsfs/g$a;
 
-.field public static final enum caC:Lcom/tencent/mm/modelsfs/g$a;
+.field public static final enum bUk:Lcom/tencent/mm/modelsfs/g$a;
 
-.field public static final enum caD:Lcom/tencent/mm/modelsfs/g$a;
+.field public static final enum bUl:Lcom/tencent/mm/modelsfs/g$a;
 
-.field private static final synthetic caE:[Lcom/tencent/mm/modelsfs/g$a;
+.field public static final enum bUm:Lcom/tencent/mm/modelsfs/g$a;
 
-.field public static final enum caz:Lcom/tencent/mm/modelsfs/g$a;
+.field private static final synthetic bUn:[Lcom/tencent/mm/modelsfs/g$a;
 
 
 # direct methods
@@ -50,7 +59,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/modelsfs/g$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/modelsfs/g$a;->caz:Lcom/tencent/mm/modelsfs/g$a;
+    sput-object v0, Lcom/tencent/mm/modelsfs/g$a;->bUi:Lcom/tencent/mm/modelsfs/g$a;
 
     .line 16
     new-instance v0, Lcom/tencent/mm/modelsfs/g$a;
@@ -59,7 +68,7 @@
 
     invoke-direct {v0, v1, v3}, Lcom/tencent/mm/modelsfs/g$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/modelsfs/g$a;->caA:Lcom/tencent/mm/modelsfs/g$a;
+    sput-object v0, Lcom/tencent/mm/modelsfs/g$a;->bUj:Lcom/tencent/mm/modelsfs/g$a;
 
     .line 18
     new-instance v0, Lcom/tencent/mm/modelsfs/g$a;
@@ -68,7 +77,7 @@
 
     invoke-direct {v0, v1, v4}, Lcom/tencent/mm/modelsfs/g$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/modelsfs/g$a;->caB:Lcom/tencent/mm/modelsfs/g$a;
+    sput-object v0, Lcom/tencent/mm/modelsfs/g$a;->bUk:Lcom/tencent/mm/modelsfs/g$a;
 
     .line 20
     new-instance v0, Lcom/tencent/mm/modelsfs/g$a;
@@ -77,7 +86,7 @@
 
     invoke-direct {v0, v1, v5}, Lcom/tencent/mm/modelsfs/g$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/modelsfs/g$a;->caC:Lcom/tencent/mm/modelsfs/g$a;
+    sput-object v0, Lcom/tencent/mm/modelsfs/g$a;->bUl:Lcom/tencent/mm/modelsfs/g$a;
 
     .line 22
     new-instance v0, Lcom/tencent/mm/modelsfs/g$a;
@@ -86,40 +95,45 @@
 
     invoke-direct {v0, v1, v6}, Lcom/tencent/mm/modelsfs/g$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/modelsfs/g$a;->caD:Lcom/tencent/mm/modelsfs/g$a;
+    sput-object v0, Lcom/tencent/mm/modelsfs/g$a;->bUm:Lcom/tencent/mm/modelsfs/g$a;
 
     .line 11
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/tencent/mm/modelsfs/g$a;
 
-    sget-object v1, Lcom/tencent/mm/modelsfs/g$a;->caz:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v1, Lcom/tencent/mm/modelsfs/g$a;->bUi:Lcom/tencent/mm/modelsfs/g$a;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/tencent/mm/modelsfs/g$a;->caA:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v1, Lcom/tencent/mm/modelsfs/g$a;->bUj:Lcom/tencent/mm/modelsfs/g$a;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/tencent/mm/modelsfs/g$a;->caB:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v1, Lcom/tencent/mm/modelsfs/g$a;->bUk:Lcom/tencent/mm/modelsfs/g$a;
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/tencent/mm/modelsfs/g$a;->caC:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v1, Lcom/tencent/mm/modelsfs/g$a;->bUl:Lcom/tencent/mm/modelsfs/g$a;
 
     aput-object v1, v0, v5
 
-    sget-object v1, Lcom/tencent/mm/modelsfs/g$a;->caD:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v1, Lcom/tencent/mm/modelsfs/g$a;->bUm:Lcom/tencent/mm/modelsfs/g$a;
 
     aput-object v1, v0, v6
 
-    sput-object v0, Lcom/tencent/mm/modelsfs/g$a;->caE:[Lcom/tencent/mm/modelsfs/g$a;
+    sput-object v0, Lcom/tencent/mm/modelsfs/g$a;->bUn:[Lcom/tencent/mm/modelsfs/g$a;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .prologue
     .line 11
@@ -149,7 +163,7 @@
 
     .prologue
     .line 11
-    sget-object v0, Lcom/tencent/mm/modelsfs/g$a;->caE:[Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v0, Lcom/tencent/mm/modelsfs/g$a;->bUn:[Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-virtual {v0}, [Lcom/tencent/mm/modelsfs/g$a;->clone()Ljava/lang/Object;
 

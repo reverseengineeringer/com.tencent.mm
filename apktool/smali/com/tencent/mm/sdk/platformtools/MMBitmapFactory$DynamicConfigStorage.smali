@@ -24,25 +24,23 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
     .prologue
-    .line 217
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 279
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     const-string/jumbo v1, "pref_MMBitmapFactory_dyncfg"
 
-    const/4 v2, 0x4
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aj;->aS(Landroid/content/Context;Ljava/lang/String;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
     sput-object v0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DynamicConfigStorage;->mPref:Landroid/content/SharedPreferences;
 
-    .line 219
+    .line 281
     const-string/jumbo v0, "pref_key_is_enable_MMBitmapFactory"
 
     sput-object v0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DynamicConfigStorage;->PREF_KEY_IS_ENABLE_MM_BITMAP_FACTORY:Ljava/lang/String;
@@ -54,7 +52,7 @@
     .locals 0
 
     .prologue
-    .line 215
+    .line 277
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -64,26 +62,26 @@
     .locals 5
 
     .prologue
-    .line 226
+    .line 288
     invoke-static {}, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DynamicConfigStorage;->reload()V
 
-    .line 228
+    .line 290
     sget-object v0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DynamicConfigStorage;->mPref:Landroid/content/SharedPreferences;
 
     if-nez v0, :cond_0
 
-    .line 229
-    const-string/jumbo v0, "!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20="
+    .line 291
+    const-string/jumbo v0, "MicroMsg.MMBitmapFactory"
 
     const-string/jumbo v1, "SharedPreferences in DynamicConfigStorage initialize failed."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 235
+    .line 297
     :goto_0
     return p1
 
-    .line 233
+    .line 295
     :cond_0
     sget-object v0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DynamicConfigStorage;->mPref:Landroid/content/SharedPreferences;
 
@@ -91,8 +89,8 @@
 
     move-result p1
 
-    .line 234
-    const-string/jumbo v0, "!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20="
+    .line 296
+    const-string/jumbo v0, "MicroMsg.MMBitmapFactory"
 
     const-string/jumbo v1, "DynamicConfigStorage, getValue:%b"
 
@@ -108,31 +106,29 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
 .method private static reload()V
-    .locals 3
+    .locals 2
 
     .prologue
-    .line 222
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 284
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     const-string/jumbo v1, "pref_MMBitmapFactory_dyncfg"
 
-    const/4 v2, 0x4
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aj;->aS(Landroid/content/Context;Ljava/lang/String;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
     sput-object v0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DynamicConfigStorage;->mPref:Landroid/content/SharedPreferences;
 
-    .line 223
+    .line 285
     return-void
 .end method
 
@@ -140,23 +136,23 @@
     .locals 2
 
     .prologue
-    .line 240
+    .line 302
     sget-object v0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DynamicConfigStorage;->mPref:Landroid/content/SharedPreferences;
 
     if-nez v0, :cond_0
 
-    .line 241
-    const-string/jumbo v0, "!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20="
+    .line 303
+    const-string/jumbo v0, "MicroMsg.MMBitmapFactory"
 
     const-string/jumbo v1, "SharedPreferences in DynamicConfigStorage initialize failed."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 248
+    .line 310
     :goto_0
     return-void
 
-    .line 245
+    .line 307
     :cond_0
     sget-object v0, Lcom/tencent/mm/sdk/platformtools/MMBitmapFactory$DynamicConfigStorage;->mPref:Landroid/content/SharedPreferences;
 
@@ -164,10 +160,10 @@
 
     move-result-object v0
 
-    .line 246
+    .line 308
     invoke-interface {v0, p0, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 247
+    .line 309
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     goto :goto_0

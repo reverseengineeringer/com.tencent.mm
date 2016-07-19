@@ -11,7 +11,7 @@ final class SnsMsgUI$7
   
   public final int I(View paramView)
   {
-    return SnsMsgUI.b(hfU).getPositionForView(paramView);
+    return SnsMsgUI.b(huL).getPositionForView(paramView);
   }
 }
 

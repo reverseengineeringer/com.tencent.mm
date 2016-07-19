@@ -2,21 +2,21 @@ package com.tencent.mm.app.plugin;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.t.l;
-import com.tencent.mm.t.n;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.v.m;
+import com.tencent.mm.v.o;
 
 final class URISpanHandlerSet$DeeplinkUriSpanHandler$1
   implements DialogInterface.OnClickListener
 {
-  URISpanHandlerSet$DeeplinkUriSpanHandler$1(URISpanHandlerSet.DeeplinkUriSpanHandler paramDeeplinkUriSpanHandler, l paraml, String paramString1, String paramString2) {}
+  URISpanHandlerSet$DeeplinkUriSpanHandler$1(URISpanHandlerSet.DeeplinkUriSpanHandler paramDeeplinkUriSpanHandler, m paramm, String paramString1, String paramString2) {}
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramInt = anh.field_brandFlag;
-    anh.field_brandFlag |= 0x1;
-    u.i("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "shield biz msg %s, %s, old = %d, new = %d", new Object[] { ani, anj, Integer.valueOf(paramInt), Integer.valueOf(anh.field_brandFlag) });
-    n.e(anh);
+    paramInt = ZV.field_brandFlag;
+    ZV.field_brandFlag |= 0x1;
+    v.i("MicroMsg.URISpanHandlerSet", "shield biz msg %s, %s, old = %d, new = %d", new Object[] { ZW, ZX, Integer.valueOf(paramInt), Integer.valueOf(ZV.field_brandFlag) });
+    o.e(ZV);
   }
 }
 

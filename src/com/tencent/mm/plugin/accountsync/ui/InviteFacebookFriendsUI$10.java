@@ -5,16 +5,16 @@ import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.ag.b.i;
-import com.tencent.mm.ag.b.i.a;
+import com.tencent.mm.aj.b.i;
+import com.tencent.mm.aj.b.i.a;
 import com.tencent.mm.modelfriend.q;
 import com.tencent.mm.modelfriend.r;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.g;
-import com.tencent.mm.ui.d.a.b;
-import com.tencent.mm.ui.d.a.c.a;
-import com.tencent.mm.ui.d.a.d;
+import com.tencent.mm.ui.e.a.b;
+import com.tencent.mm.ui.e.a.c.a;
+import com.tencent.mm.ui.e.a.d;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,10 +25,10 @@ final class InviteFacebookFriendsUI$10
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    com.tencent.mm.ui.d.a.c localc = new com.tencent.mm.ui.d.a.c("290293790992170");
+    com.tencent.mm.ui.e.a.c localc = new com.tencent.mm.ui.e.a.c("290293790992170");
     Bundle localBundle = new Bundle();
-    localBundle.putString("message", coP.getString(2131429165));
-    final long[] arrayOfLong = InviteFacebookFriendsUI.a(coP).Gj();
+    localBundle.putString("message", ckd.getString(2131232568));
+    final long[] arrayOfLong = InviteFacebookFriendsUI.a(ckd).GG();
     paramMenuItem = Long.toString(arrayOfLong[0]);
     int i = 1;
     while (i < arrayOfLong.length)
@@ -38,24 +38,24 @@ final class InviteFacebookFriendsUI$10
       i += 1;
     }
     localBundle.putString("to", paramMenuItem);
-    localc.a(coP, "apprequests", localBundle, new c.a()
+    localc.a(ckd, "apprequests", localBundle, new c.a()
     {
       public final void a(b paramAnonymousb)
       {
-        u.e("!56@/B4Tb64lLpI1xvkrLEXBhhg96dI0eWcb0x/iHQfmkIg6em4Z80TVkw==", "fbinvite error");
+        v.e("MicroMsg.InviteFacebookFriendsUI", "fbinvite error");
       }
       
       public final void a(d paramAnonymousd)
       {
-        u.e("!56@/B4Tb64lLpI1xvkrLEXBhhg96dI0eWcb0x/iHQfmkIg6em4Z80TVkw==", "fbinvite error");
+        v.e("MicroMsg.InviteFacebookFriendsUI", "fbinvite error");
       }
       
-      public final void g(Bundle paramAnonymousBundle)
+      public final void i(Bundle paramAnonymousBundle)
       {
-        u.i("!56@/B4Tb64lLpI1xvkrLEXBhhg96dI0eWcb0x/iHQfmkIg6em4Z80TVkw==", "fbinvite oncomplete");
+        v.i("MicroMsg.InviteFacebookFriendsUI", "fbinvite oncomplete");
         paramAnonymousBundle = new ArrayList();
         paramAnonymousBundle.add(new b.i.a(33, Integer.toString(arrayOfLong.length)));
-        com.tencent.mm.model.ah.tD().rp().b(new b.i(paramAnonymousBundle));
+        com.tencent.mm.model.ah.tE().rq().b(new b.i(paramAnonymousBundle));
         paramAnonymousBundle = arrayOfLong;
         int j = paramAnonymousBundle.length;
         int i = 0;
@@ -64,29 +64,29 @@ final class InviteFacebookFriendsUI$10
           long l = paramAnonymousBundle[i];
           q localq = new q();
           username = Long.toString(l);
-          bMG = 5;
-          bIs = ((int)ay.FR());
-          com.tencent.mm.modelfriend.ah.zu().a(localq);
+          bGa = 5;
+          bBD = ((int)be.Go());
+          com.tencent.mm.modelfriend.ah.zH().a(localq);
           i += 1;
         }
-        g.a(coP, 2131428257, 2131430877, 2131430901, 2131430902, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+        g.a(ckd, 2131232570, 2131231028, 2131231050, 2131230966, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
         {
           public final void onClick(DialogInterface paramAnonymous2DialogInterface, int paramAnonymous2Int)
           {
-            InviteFacebookFriendsUI.a(coP).Gk();
+            InviteFacebookFriendsUI.a(ckd).GH();
           }
         }, new DialogInterface.OnClickListener()
         {
           public final void onClick(DialogInterface paramAnonymous2DialogInterface, int paramAnonymous2Int)
           {
-            coP.finish();
+            ckd.finish();
           }
         });
       }
       
       public final void onCancel()
       {
-        u.e("!56@/B4Tb64lLpI1xvkrLEXBhhg96dI0eWcb0x/iHQfmkIg6em4Z80TVkw==", "fbinvite cancle");
+        v.e("MicroMsg.InviteFacebookFriendsUI", "fbinvite cancle");
       }
     });
     return true;

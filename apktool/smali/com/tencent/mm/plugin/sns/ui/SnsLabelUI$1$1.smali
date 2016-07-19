@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic hfB:I
+.field final synthetic hus:I
 
-.field final synthetic hfC:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$1;
+.field final synthetic hut:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$1;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 232
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$1$1;->hfC:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$1;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$1$1;->hut:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$1;
 
-    iput p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$1$1;->hfB:I
+    iput p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$1$1;->hus:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,17 +45,17 @@
 
     .prologue
     .line 236
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$1$1;->hfC:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$1;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$1$1;->hut:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$1;->hfA:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$1;->hur:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->g(Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;)Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$1$1;->hfB:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$1$1;->hus:I
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->qs(I)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->sk(I)Z
 
     .line 237
     return-void

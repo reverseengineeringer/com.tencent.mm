@@ -2,41 +2,41 @@ package com.tencent.mm.modelfriend;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 public final class r
   extends com.tencent.mm.sdk.h.g
 {
-  public static final String[] aoY = { "CREATE TABLE IF NOT EXISTS invitefriendopen ( username text  PRIMARY KEY , friendtype int  , updatetime int  , reserved1 int  , reserved2 int  , reserved3 text  , reserved4 text  ) " };
-  private com.tencent.mm.az.g bCw;
+  public static final String[] bkN = { "CREATE TABLE IF NOT EXISTS invitefriendopen ( username text  PRIMARY KEY , friendtype int  , updatetime int  , reserved1 int  , reserved2 int  , reserved3 text  , reserved4 text  ) " };
+  private com.tencent.mm.bc.g bvG;
   
-  public r(com.tencent.mm.az.g paramg)
+  public r(com.tencent.mm.bc.g paramg)
   {
-    bCw = paramg;
+    bvG = paramg;
   }
   
   public final boolean a(q paramq)
   {
-    if (hA(paramq.getUsername()))
+    if (hS(paramq.getUsername()))
     {
-      aou = -1;
-      ContentValues localContentValues = paramq.lX();
-      if (bCw.update("invitefriendopen", localContentValues, "username=?", new String[] { paramq.getUsername() }) <= 0) {}
+      aqQ = -1;
+      ContentValues localContentValues = paramq.kn();
+      if (bvG.update("invitefriendopen", localContentValues, "username=?", new String[] { paramq.getUsername() }) <= 0) {}
     }
     do
     {
       return true;
       return false;
-      aou = -1;
-      paramq = paramq.lX();
-    } while ((int)bCw.insert("invitefriendopen", "username", paramq) != -1);
+      aqQ = -1;
+      paramq = paramq.kn();
+    } while ((int)bvG.insert("invitefriendopen", "username", paramq) != -1);
     return false;
   }
   
-  public final boolean hA(String paramString)
+  public final boolean hS(String paramString)
   {
-    paramString = "select invitefriendopen.username,invitefriendopen.friendtype,invitefriendopen.updatetime,invitefriendopen.reserved1,invitefriendopen.reserved2,invitefriendopen.reserved3,invitefriendopen.reserved4 from invitefriendopen   where invitefriendopen.username = \"" + ay.kx(paramString) + "\"";
-    paramString = bCw.rawQuery(paramString, null);
+    paramString = "select invitefriendopen.username,invitefriendopen.friendtype,invitefriendopen.updatetime,invitefriendopen.reserved1,invitefriendopen.reserved2,invitefriendopen.reserved3,invitefriendopen.reserved4 from invitefriendopen   where invitefriendopen.username = \"" + be.lh(paramString) + "\"";
+    paramString = bvG.rawQuery(paramString, null);
     if (paramString.getCount() > 0) {}
     for (boolean bool = true;; bool = false)
     {

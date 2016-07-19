@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static volatile akh:Lcom/tencent/c/a/a/p;
+.field private static volatile Wa:Lcom/tencent/c/a/a/p;
 
 
 # instance fields
-.field private aki:Z
+.field private Wb:Z
 
 .field private context:Landroid/content/Context;
 
@@ -21,7 +21,7 @@
     .line 74
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/c/a/a/p;->akh:Lcom/tencent/c/a/a/p;
+    sput-object v0, Lcom/tencent/c/a/a/p;->Wa:Lcom/tencent/c/a/a/p;
 
     return-void
 .end method
@@ -41,7 +41,7 @@
     iput-object v1, p0, Lcom/tencent/c/a/a/p;->context:Landroid/content/Context;
 
     .line 76
-    iput-boolean v0, p0, Lcom/tencent/c/a/a/p;->aki:Z
+    iput-boolean v0, p0, Lcom/tencent/c/a/a/p;->Wb:Z
 
     .line 79
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -57,11 +57,11 @@
     const-string/jumbo v1, "android.permission.WRITE_SETTINGS"
 
     .line 81
-    invoke-static {v0, v1}, Lcom/tencent/c/a/a/s;->j(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Lcom/tencent/c/a/a/s;->k(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/c/a/a/p;->aki:Z
+    iput-boolean v0, p0, Lcom/tencent/c/a/a/p;->Wb:Z
 
     .line 83
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -123,7 +123,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/c/a/a/p;->aki:Z
+    iput-boolean v0, p0, Lcom/tencent/c/a/a/p;->Wb:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -138,12 +138,12 @@
     goto :goto_0
 .end method
 
-.method public static R(Landroid/content/Context;)Lcom/tencent/c/a/a/p;
+.method public static N(Landroid/content/Context;)Lcom/tencent/c/a/a/p;
     .locals 2
 
     .prologue
     .line 98
-    sget-object v0, Lcom/tencent/c/a/a/p;->akh:Lcom/tencent/c/a/a/p;
+    sget-object v0, Lcom/tencent/c/a/a/p;->Wa:Lcom/tencent/c/a/a/p;
 
     if-nez v0, :cond_1
 
@@ -154,7 +154,7 @@
 
     .line 100
     :try_start_0
-    sget-object v0, Lcom/tencent/c/a/a/p;->akh:Lcom/tencent/c/a/a/p;
+    sget-object v0, Lcom/tencent/c/a/a/p;->Wa:Lcom/tencent/c/a/a/p;
 
     if-nez v0, :cond_0
 
@@ -163,7 +163,7 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/c/a/a/p;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/tencent/c/a/a/p;->akh:Lcom/tencent/c/a/a/p;
+    sput-object v0, Lcom/tencent/c/a/a/p;->Wa:Lcom/tencent/c/a/a/p;
 
     .line 99
     :cond_0
@@ -173,7 +173,7 @@
 
     .line 105
     :cond_1
-    sget-object v0, Lcom/tencent/c/a/a/p;->akh:Lcom/tencent/c/a/a/p;
+    sget-object v0, Lcom/tencent/c/a/a/p;->Wa:Lcom/tencent/c/a/a/p;
 
     return-object v0
 
@@ -191,12 +191,12 @@
 
 
 # virtual methods
-.method public final m(Ljava/lang/String;Ljava/lang/String;)Z
+.method public final l(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 1
 
     .prologue
     .line 13
-    iget-boolean v0, p0, Lcom/tencent/c/a/a/p;->aki:Z
+    iget-boolean v0, p0, Lcom/tencent/c/a/a/p;->Wb:Z
 
     if-eqz v0, :cond_0
 

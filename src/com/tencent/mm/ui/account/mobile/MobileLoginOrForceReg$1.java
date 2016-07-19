@@ -3,10 +3,10 @@ package com.tencent.mm.ui.account.mobile;
 import android.graphics.Bitmap;
 import android.os.Message;
 import android.widget.ImageView;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class MobileLoginOrForceReg$1
-  extends aa
+  extends ac
 {
   MobileLoginOrForceReg$1(MobileLoginOrForceReg paramMobileLoginOrForceReg) {}
   
@@ -15,7 +15,7 @@ final class MobileLoginOrForceReg$1
     if (obj != null)
     {
       paramMessage = (Bitmap)obj;
-      MobileLoginOrForceReg.a(kyq).setImageBitmap(paramMessage);
+      MobileLoginOrForceReg.a(kXx).setImageBitmap(paramMessage);
     }
   }
 }

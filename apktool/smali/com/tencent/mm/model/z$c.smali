@@ -21,11 +21,11 @@
 
 
 # virtual methods
-.method public abstract G(Ljava/lang/String;Ljava/lang/String;)V
+.method public abstract D(Ljava/lang/String;Ljava/lang/String;)V
 .end method
 
 .method public abstract a(Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/model/z$c$a;)V
 .end method
 
-.method public abstract eZ(Ljava/lang/String;)V
+.method public abstract fl(Ljava/lang/String;)V
 .end method

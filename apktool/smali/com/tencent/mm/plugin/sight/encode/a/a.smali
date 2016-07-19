@@ -13,7 +13,7 @@
 
 
 # virtual methods
-.method public abstract R(ILjava/lang/String;)I
+.method public abstract Z(ILjava/lang/String;)I
 .end method
 
 .method public abstract a(Lcom/tencent/mm/plugin/sight/encode/a/a$a;)I
@@ -22,8 +22,8 @@
 .method public abstract a(Lcom/tencent/mm/plugin/sight/encode/a/a$b;)I
 .end method
 
-.method public abstract awk()I
+.method public abstract ayI()I
 .end method
 
-.method public abstract awl()V
+.method public abstract ayJ()V
 .end method

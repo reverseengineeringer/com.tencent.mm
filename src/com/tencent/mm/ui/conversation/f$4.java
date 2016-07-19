@@ -1,36 +1,59 @@
 package com.tencent.mm.ui.conversation;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.sdk.platformtools.u;
+import android.widget.ListView;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.e.a;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 
 final class f$4
-  implements DialogInterface.OnClickListener
+  implements e.a
 {
-  f$4(SharedPreferences paramSharedPreferences, boolean paramBoolean, int paramInt1, int paramInt2) {}
+  f$4(f paramf) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final void GE()
   {
-    lqA.edit().putInt("show_rating_flag", 4).commit();
-    if (lqB)
+    f.n(lQP);
+    d locald;
+    if (f.e(lQP) != null)
     {
-      lqA.edit().putBoolean("show_rating_again", false).commit();
-      h.fUJ.g(11216, new Object[] { Integer.valueOf(3), Integer.valueOf(lqC), Integer.valueOf(lqD) });
+      locald = f.e(lQP);
+      if ((lNW != null) && (lPC != null) && (!lPC.isEmpty())) {}
+    }
+    else
+    {
+      f.c(lQP).post(new Runnable()
+      {
+        public final void run()
+        {
+          f.c(lQP, f.e(lQP).getCount());
+          com.tencent.mm.plugin.report.service.f.ls(12);
+        }
+      });
+      return;
+    }
+    if (lPD)
+    {
+      lNW.clear();
+      lPD = false;
     }
     for (;;)
     {
-      if (paramDialogInterface != null) {
-        paramDialogInterface.dismiss();
+      lPC.clear();
+      break;
+      v.d("MicroMsg.ConversationWithCacheAdapter", "dealWithConversationEvents size %d", new Object[] { Integer.valueOf(lPC.size()) });
+      Iterator localIterator = lPC.iterator();
+      while (localIterator.hasNext()) {
+        lNW.remove(localIterator.next());
       }
-      f.bhW();
-      return;
-      u.d("!56@/B4Tb64lLpKfk9dhVjv2t13FMeWGyuWHyNH8f+koYe5udsWe+5WrMg==", "[oneliang]need to show rating dialog again.");
-      lqA.edit().putBoolean("show_rating_again", true).commit();
-      h.fUJ.g(11216, new Object[] { Integer.valueOf(6), Integer.valueOf(lqC), Integer.valueOf(lqD) });
     }
+  }
+  
+  public final void GF()
+  {
+    com.tencent.mm.plugin.report.service.f.lr(12);
+    f.m(lQP);
   }
 }
 

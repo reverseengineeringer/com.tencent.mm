@@ -1,10 +1,10 @@
 package com.tencent.mm.plugin.gwallet;
 
 import com.tencent.mm.plugin.gwallet.a.b;
-import com.tencent.mm.sdk.platformtools.ab.a;
+import com.tencent.mm.sdk.platformtools.ad.a;
 
 final class GWalletQueryProvider$1$1
-  implements ab.a
+  implements ad.a
 {
   GWalletQueryProvider$1$1(GWalletQueryProvider.1 param1) {}
   
@@ -13,18 +13,18 @@ final class GWalletQueryProvider$1$1
     return super.toString() + "|onIabSetupFinished";
   }
   
-  public final boolean vd()
+  public final boolean vf()
   {
-    GWalletQueryProvider.d(exx.exw);
+    GWalletQueryProvider.d(eDR.eDQ);
     return true;
   }
   
-  public final boolean ve()
+  public final boolean vg()
   {
-    if (GWalletQueryProvider.b(exx.exw) != null) {
-      GWalletQueryProvider.b(exx.exw).dispose();
+    if (GWalletQueryProvider.b(eDR.eDQ) != null) {
+      GWalletQueryProvider.b(eDR.eDQ).dispose();
     }
-    GWalletQueryProvider.c(exx.exw);
+    GWalletQueryProvider.c(eDR.eDQ);
     return true;
   }
 }

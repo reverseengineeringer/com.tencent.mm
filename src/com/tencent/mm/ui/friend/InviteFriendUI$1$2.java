@@ -15,7 +15,7 @@ final class InviteFriendUI$1$2
   public final void a(TextView paramTextView, MenuItem paramMenuItem)
   {
     paramMenuItem = paramMenuItem.getTitle();
-    paramTextView.setText(((ResolveInfo)lrN.get(paramMenuItem)).loadLabel(lrO).toString());
+    paramTextView.setText(((ResolveInfo)lSr.get(paramMenuItem)).loadLabel(lSs).toString());
   }
 }
 

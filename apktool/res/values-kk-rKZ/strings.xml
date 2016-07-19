@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">%1$s пайдалану үшін Android Wear қолданбасын жаңарту қажет.</string>
+    <string name="b">Android Wear қолданбасын жаңартпасаңыз, %1$s іске қосылмайды.</string>
+    <string name="c">Android Wear қолданбасын жаңарту</string>
+    <string name="d">%1$s үшін қазір істемей тұрған бір немесе бірнеше Google Play қызметі қажет. Көмек алу үшін әзірлеушіге хабарласыңыз.</string>
+    <string name="e">Google Play қызметтерін қосу</string>
+    <string name="f">Google Play қызметтерін қосқанша %1$s жұмыс істемейді.</string>
+    <string name="g">Google Play қызметтерін қосу</string>
+    <string name="h">%1$s арқылы сұралған</string>
+    <string name="i">Google Play қызметтерін алу</string>
+    <string name="j">Google Play қызметтері телефонда болмағандықтан, %1$s іске қосылмайды.</string>
+    <string name="k">Google Play қызметтері планшетте болмағандықтан, %1$s іске қосылмайды.</string>
+    <string name="l">Google Play қызметтерін алу</string>
+    <string name="m">Бұл құрылғыда көрсетілген тіркелгі жоқ. Басқа тіркелгіні таңдаңыз.</string>
+    <string name="n">Жарамсыз тіркелгі</string>
+    <string name="o">Қолданба Google Play қызметтерін қосуды қажет етеді.</string>
+    <string name="p">Google Play қызметтеріне қосылу үшін деректер байланысы талап етіледі.</string>
+    <string name="q">Желі қатесі</string>
+    <string name="r">Қолданба Google Play қызметтерін жаңартуды талап етеді.</string>
+    <string name="s">Google Play қызметтерінің қатесі</string>
+    <string name="t">Көрсетілген есептік жазбаға кіру кезіндегі қате. Басқа есептік жазбаны таңдаңыз.</string>
+    <string name="u">Кіру сәтсіз аяқталды</string>
+    <string name="v">Google Play қызметтерімен белгісіз мәселе.</string>
+    <string name="w">%1$s құрылғыңыз қолдау көрсетпейтін Google Play қызметтеріне негізделген. Көмек алу үшін өндірушіге хабарласыңыз.</string>
+    <string name="x">Google Play қызметтері</string>
+    <string name="y">Жаңарту</string>
+    <string name="z">Google Play қызметтерін жаңартпасаңыз, %1$s іске қосылмайды.</string>
+    <string name="a0">Google Play қызметтерін жаңарту</string>
+    <string name="a1">Қазіргі уақытта жаңартылып жатқан Google Play қызметтерінсіз %1$s іске қосылмайды.</string>
+    <string name="a2">Google Play қызметтері жаңартылуда</string>
+    <string name="a3">Телефонда ашу</string>
+    <string name="a4">Кіру</string>
+    <string name="a5">Google арқылы кіру</string>
+</resources>

@@ -16,19 +16,17 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import com.tencent.mm.model.f;
 import com.tencent.mm.model.i;
-import com.tencent.mm.platformtools.t;
 import com.tencent.mm.pluginsdk.ui.a.b;
 import com.tencent.mm.pluginsdk.ui.d.e;
 import com.tencent.mm.sdk.h.d;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.k;
-import com.tencent.mm.storage.s;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.j;
 import com.tencent.mm.ui.j.b;
@@ -40,31 +38,31 @@ import java.util.List;
 public class GroupCardSelectUI
   extends MMActivity
 {
-  private TextView cHr;
-  private List faT;
-  private a lkA;
-  private HashMap lkB;
-  private boolean lku = true;
-  private boolean lkv;
-  private boolean lkw = false;
-  private List lkx = null;
-  private int lky;
-  private ListView lkz;
+  private TextView cEv;
+  private List<k> fjr;
+  private boolean lKF = true;
+  private boolean lKG;
+  private boolean lKH = false;
+  private List<String> lKI = null;
+  private int lKJ;
+  private ListView lKK;
+  private a lKL;
+  private HashMap<String, Long> lKM;
   
-  private void Nk()
+  private void PH()
   {
     StringBuilder localStringBuilder;
-    if (lkw)
+    if (lKH)
     {
-      localStringBuilder = new StringBuilder().append(getString(2131430888));
-      if (lkx.size() <= 0) {
+      localStringBuilder = new StringBuilder().append(getString(2131230967));
+      if (lKI.size() <= 0) {
         break label75;
       }
     }
     label75:
-    for (String str = String.format("(%s)", new Object[] { Integer.valueOf(lkx.size()) });; str = "")
+    for (String str = String.format("(%s)", new Object[] { Integer.valueOf(lKI.size()) });; str = "")
     {
-      ad(1, str);
+      an(1, str);
       return;
     }
   }
@@ -72,26 +70,26 @@ public class GroupCardSelectUI
   private void a(int paramInt, k paramk, long paramLong)
   {
     int i = 0;
-    while ((i < paramInt) && (paramLong <= ((Long)lkB.get(faT.get(i)).field_username)).longValue())) {
+    while ((i < paramInt) && (paramLong <= ((Long)lKM.get(fjr.get(i)).field_username)).longValue())) {
       i += 1;
     }
-    faT.add(i, paramk);
+    fjr.add(i, paramk);
   }
   
-  private void bhn()
+  private void bmX()
   {
-    Object localObject2 = ah.tD().rt();
+    Object localObject2 = ah.tE().ru();
     long l = System.currentTimeMillis();
     Object localObject1 = new HashMap();
-    localObject2 = aoX.query("rconversation", new String[] { "username", "conversationTime" }, null, null, null, null, null);
+    localObject2 = bkP.query("rconversation", new String[] { "username", "conversationTime" }, null, null, null, null, null);
     if (((Cursor)localObject2).getCount() <= 0) {
       ((Cursor)localObject2).close();
     }
     for (;;)
     {
-      lkB = ((HashMap)localObject1);
-      faT = new LinkedList();
-      localObject1 = i.sO();
+      lKM = ((HashMap)localObject1);
+      fjr = new LinkedList();
+      localObject1 = i.sN();
       if (((List)localObject1).size() != 0) {
         break;
       }
@@ -103,7 +101,7 @@ public class GroupCardSelectUI
       for (;;)
       {
         if (i == 0) {
-          break label201;
+          break label202;
         }
         ((HashMap)localObject1).put(((Cursor)localObject2).getString(0), Long.valueOf(((Cursor)localObject2).getLong(1)));
         ((Cursor)localObject2).moveToNext();
@@ -114,29 +112,29 @@ public class GroupCardSelectUI
           i = 1;
         }
       }
-      label201:
+      label202:
       ((Cursor)localObject2).close();
-      u.d("!44@/B4Tb64lLpJN/RyYD3u7HK+YneAQ/0gN4D0Emw3Mmi8=", "kevin getALLTimeIndex:" + (System.currentTimeMillis() - l));
+      v.d("MicroMsg.ConversationStorage", "kevin getALLTimeIndex:" + (System.currentTimeMillis() - l));
     }
     localObject2 = ((List)localObject1).iterator();
     int i = 0;
     while (((Iterator)localObject2).hasNext())
     {
       k localk = (k)((Iterator)localObject2).next();
-      if (!lkB.containsKey(field_username))
+      if (!lKM.containsKey(field_username))
       {
-        if (!com.tencent.mm.h.a.ce(field_type)) {
-          break label352;
+        if (!com.tencent.mm.i.a.cy(field_type)) {
+          break label353;
         }
-        faT.add(localk);
+        fjr.add(localk);
       }
       else
       {
-        a(i, localk, ((Long)lkB.get(field_username)).longValue());
+        a(i, localk, ((Long)lKM.get(field_username)).longValue());
         i += 1;
       }
     }
-    label352:
+    label353:
     for (;;)
     {
       break;
@@ -145,28 +143,28 @@ public class GroupCardSelectUI
     }
   }
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    lkz = ((ListView)findViewById(2131165709));
-    lkA = new a();
-    lkz.setAdapter(lkA);
-    lkz.setOnItemClickListener(new AdapterView.OnItemClickListener()
+    lKK = ((ListView)findViewById(2131757300));
+    lKL = new a();
+    lKK.setAdapter(lKL);
+    lKK.setOnItemClickListener(new AdapterView.OnItemClickListener()
     {
-      public final void onItemClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+      public final void onItemClick(AdapterView<?> paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
       {
         paramAnonymousAdapterView = (k)GroupCardSelectUI.a(GroupCardSelectUI.this).getItem(paramAnonymousInt);
         if (paramAnonymousAdapterView == null)
         {
-          u.v("!44@/B4Tb64lLpKSz7OttbgzNc1GdsToXDwkLPcahtAkCew=", "onItemClick contact null");
+          v.v("MicroMsg.GroupCardSelectUI", "onItemClick contact null");
           return;
         }
         GroupCardSelectUI.a(GroupCardSelectUI.this, paramAnonymousAdapterView);
         GroupCardSelectUI.b(GroupCardSelectUI.this);
       }
     });
-    cHr = ((TextView)findViewById(2131165710));
-    if (lkA.getCount() <= 0) {
-      cHr.setVisibility(0);
+    cEv = ((TextView)findViewById(2131757301));
+    if (lKL.getCount() <= 0) {
+      cEv.setVisibility(0);
     }
     for (;;)
     {
@@ -179,50 +177,50 @@ public class GroupCardSelectUI
         }
       });
       return;
-      cHr.setVisibility(8);
+      cEv.setVisibility(8);
     }
   }
   
   protected final int getLayoutId()
   {
-    return 2131361976;
+    return 2130903756;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    Gj(getString(2131428334));
-    lku = getIntent().getBooleanExtra("group_select_type", true);
-    lkv = getIntent().getBooleanExtra("group_select_need_result", false);
-    lkw = getIntent().getBooleanExtra("group_multi_select", false);
-    if (lkw)
+    Ah(getString(2131230843));
+    lKF = getIntent().getBooleanExtra("group_select_type", true);
+    lKG = getIntent().getBooleanExtra("group_select_need_result", false);
+    lKH = getIntent().getBooleanExtra("group_multi_select", false);
+    if (lKH)
     {
       paramBundle = getIntent().getStringExtra("already_select_contact");
-      if (!ay.kz(paramBundle)) {
+      if (!be.kf(paramBundle)) {
         break label160;
       }
     }
     label160:
-    for (lkx = new LinkedList();; lkx = t.h(paramBundle.split(",")))
+    for (lKI = new LinkedList();; lKI = com.tencent.mm.platformtools.s.g(paramBundle.split(",")))
     {
-      lky = getIntent().getIntExtra("max_limit_num", 0);
-      bhn();
-      Gb();
-      if (lkw)
+      lKJ = getIntent().getIntExtra("max_limit_num", 0);
+      bmX();
+      Gy();
+      if (lKH)
       {
-        a(1, getString(2131430888), new MenuItem.OnMenuItemClickListener()
+        a(1, getString(2131230967), new MenuItem.OnMenuItemClickListener()
         {
           public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
           {
             paramAnonymousMenuItem = new Intent();
-            paramAnonymousMenuItem.putExtra("Select_Conv_User", ay.b(GroupCardSelectUI.e(GroupCardSelectUI.this), ","));
+            paramAnonymousMenuItem.putExtra("Select_Conv_User", be.b(GroupCardSelectUI.e(GroupCardSelectUI.this), ","));
             setResult(-1, paramAnonymousMenuItem);
             finish();
             return true;
           }
-        }, j.b.kpJ);
+        }, j.b.kOO);
         M(1, true);
-        Nk();
+        PH();
       }
       return;
     }
@@ -270,42 +268,42 @@ public class GroupCardSelectUI
       if (paramView == null)
       {
         paramView = new GroupCardSelectUI.b(GroupCardSelectUI.this);
-        localView = View.inflate(GroupCardSelectUI.this, 2131361963, null);
-        eIN = ((TextView)localView.findViewById(2131165694));
-        lkD = ((TextView)localView.findViewById(2131165693));
-        bMr = ((ImageView)localView.findViewById(2131165692));
-        ftO = ((CheckBox)localView.findViewById(2131165695));
+        localView = View.inflate(GroupCardSelectUI.this, 2130903757, null);
+        eQC = ((TextView)localView.findViewById(2131757304));
+        lKO = ((TextView)localView.findViewById(2131757303));
+        bFL = ((ImageView)localView.findViewById(2131757302));
+        fCT = ((CheckBox)localView.findViewById(2131755446));
         localView.setTag(paramView);
         paramViewGroup = paramView;
       }
       for (;;)
       {
-        a.b.b(bMr, field_username);
-        lkD.setText(e.a(GroupCardSelectUI.this, i.dY(field_username), com.tencent.mm.aw.a.z(koJ.kpc, 2131034564)));
-        eIN.setText("(" + f.dM(field_username) + ")");
+        a.b.a(bFL, field_username);
+        lKO.setText(e.a(GroupCardSelectUI.this, i.ej(field_username), com.tencent.mm.az.a.D(kNN.kOg, 2131427667)));
+        eQC.setText("(" + f.dV(field_username) + ")");
         if (GroupCardSelectUI.d(GroupCardSelectUI.this))
         {
-          ftO.setVisibility(0);
+          fCT.setVisibility(0);
           if (!GroupCardSelectUI.e(GroupCardSelectUI.this).contains(field_username)) {
             break;
           }
-          ftO.setChecked(true);
+          fCT.setChecked(true);
         }
         return localView;
         paramViewGroup = (GroupCardSelectUI.b)paramView.getTag();
         localView = paramView;
       }
-      ftO.setChecked(false);
+      fCT.setChecked(false);
       return localView;
     }
   }
   
   final class b
   {
-    ImageView bMr;
-    TextView eIN;
-    CheckBox ftO;
-    TextView lkD;
+    ImageView bFL;
+    TextView eQC;
+    CheckBox fCT;
+    TextView lKO;
     
     b() {}
   }

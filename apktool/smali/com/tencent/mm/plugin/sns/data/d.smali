@@ -4,11 +4,17 @@
 
 
 # instance fields
-.field public eEr:Ljava/util/List;
-
-.field public gHA:I
-
-.field public gHz:Ljava/lang/String;
+.field public gOD:Ljava/util/concurrent/ConcurrentHashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/ConcurrentHashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/CharSequence;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -16,60 +22,68 @@
     .locals 1
 
     .prologue
-    .line 25
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
-    new-instance v0, Ljava/util/LinkedList;
+    .line 14
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/data/d;->eEr:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/data/d;->gOD:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 27
     return-void
 .end method
 
-.method public constructor <init>(Lcom/tencent/mm/protocal/b/add;)V
-    .locals 1
+
+# virtual methods
+.method public final a(Lcom/tencent/mm/protocal/b/aqk;Ljava/lang/CharSequence;)V
+    .locals 4
 
     .prologue
-    .line 29
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 17
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/data/d;->gOD:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 21
-    new-instance v0, Ljava/util/LinkedList;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/data/d;->eEr:Ljava/util/List;
+    iget v2, p1, Lcom/tencent/mm/protocal/b/aqk;->khU:I
 
-    .line 30
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/data/d;->eEr:Ljava/util/List;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    move-result-object v1
 
-    .line 31
-    return-void
-.end method
+    const-string/jumbo v2, "-"
 
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 1
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .prologue
-    .line 33
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v1
 
-    .line 21
-    new-instance v0, Ljava/util/LinkedList;
+    iget-wide v2, p1, Lcom/tencent/mm/protocal/b/aqk;->khX:J
 
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/data/d;->eEr:Ljava/util/List;
+    move-result-object v1
 
-    .line 34
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/data/d;->eEr:Ljava/util/List;
+    const-string/jumbo v2, "-"
 
-    .line 35
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aqk;->fBO:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 18
     return-void
 .end method

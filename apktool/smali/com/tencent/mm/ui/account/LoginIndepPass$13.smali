@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/LoginIndepPass;->Gb()V
+    value = Lcom/tencent/mm/ui/account/LoginIndepPass;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ktE:Lcom/tencent/mm/ui/account/LoginIndepPass;
+.field final synthetic kSL:Lcom/tencent/mm/ui/account/LoginIndepPass;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 243
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$13;->ktE:Lcom/tencent/mm/ui/account/LoginIndepPass;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$13;->kSL:Lcom/tencent/mm/ui/account/LoginIndepPass;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,13 +41,13 @@
 
     .prologue
     .line 247
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$13;->ktE:Lcom/tencent/mm/ui/account/LoginIndepPass;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$13;->kSL:Lcom/tencent/mm/ui/account/LoginIndepPass;
 
-    invoke-static {}, Lcom/tencent/mm/ui/account/f;->bbE()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/ui/account/f;->bgQ()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {}, Lcom/tencent/mm/ui/account/f;->bbF()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/ui/account/f;->bgR()Ljava/lang/String;
 
     move-result-object v2
 

@@ -1,45 +1,54 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.alq;
-import com.tencent.mm.protocal.b.alx;
-import com.tencent.mm.protocal.b.dd;
-import com.tencent.mm.protocal.b.vt;
-import com.tencent.mm.protocal.b.vu;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.protocal.b.ami;
+import com.tencent.mm.protocal.b.dg;
+import com.tencent.mm.protocal.b.ic;
+import com.tencent.mm.protocal.b.id;
+import com.tencent.mm.protocal.b.ma;
+import com.tencent.mm.protocal.b.mb;
+import com.tencent.mm.protocal.b.mc;
+import com.tencent.mm.sdk.platformtools.be;
 
 public final class q
 {
   public static final class a
-    extends h.c
-    implements h.a
+    extends k.c
+    implements k.a
   {
-    public vt iVe = new vt();
+    public final mb jsw = new mb();
     
-    public final byte[] tY()
+    public a()
     {
-      iUJ = z.aTv();
-      iVe.jbx = new alx().aO(ay.aVA());
-      iVe.jGS = h.a(this);
-      return iVe.toByteArray();
+      bq(0);
+      jsw.jHX = new ma();
+      jsw.jHX.jHV = new ic();
+      jsw.jHW = new mc();
     }
     
-    public final int tZ()
+    public final byte[] tZ()
     {
-      return 429;
+      jsg = ac.aYs();
+      jsw.jHX.kfq = k.a(this);
+      jsw.jHW.jzd = new ami().aV(be.baN());
+      return jsw.toByteArray();
+    }
+    
+    public final int ua()
+    {
+      return 722;
     }
   }
   
   public static final class b
-    extends h.d
-    implements h.b
+    extends k.d
+    implements k.b
   {
-    public vu iVf = new vu();
+    public final id jsx = new id();
     
-    public final int y(byte[] paramArrayOfByte)
+    public final int D(byte[] paramArrayOfByte)
     {
-      iVf = ((vu)new vu().am(paramArrayOfByte));
-      h.a(this, iVf.jHj);
-      return iVf.jHj.iZL;
+      jsx.au(paramArrayOfByte);
+      return jsx.kfH.jxr;
     }
   }
 }

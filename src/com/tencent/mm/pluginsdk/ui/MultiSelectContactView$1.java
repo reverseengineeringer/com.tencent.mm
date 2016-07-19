@@ -14,9 +14,9 @@ final class MultiSelectContactView$1
   
   public final void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
   {
-    MultiSelectContactView.a(iHi);
-    if (MultiSelectContactView.b(iHi) != null) {
-      MultiSelectContactView.b(iHi).AD(paramCharSequence.toString());
+    MultiSelectContactView.a(jed);
+    if (MultiSelectContactView.b(jed) != null) {
+      MultiSelectContactView.b(jed).CE(paramCharSequence.toString());
     }
   }
 }

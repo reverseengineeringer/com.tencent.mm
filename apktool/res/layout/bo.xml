@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:background="#ffececec" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="#ffececec" style="@style/NavPage">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@color/ow" android:paddingTop="60.0dip" android:paddingBottom="60.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0dip" android:textColor="@color/j_" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lz" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:layout_gravity="left" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="48.0dip">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip">
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@raw/bakmove_step1" />
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/aed" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center|top" android:layout_gravity="center|top" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="16.0dip" android:textColor="@color/j_" android:layout_gravity="center|left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lw" />
+                        <TextView android:textSize="12.0dip" android:textColor="#ff999999" android:layout_gravity="center|left" android:id="@id/l9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="wifi" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="left" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip">
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@raw/bakmove_step2" />
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/aed" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center|top" android:layout_gravity="center|top" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="16.0dip" android:textColor="@color/j_" android:layout_gravity="center|left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lx" />
+                        <TextView android:textSize="12.0dip" android:textColor="@color/kb" android:layout_gravity="center|left" android:id="@id/l7" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/bc6" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="left" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip">
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@raw/bakmove_step3" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center|top" android:layout_gravity="center|top" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="16.0dip" android:textColor="@color/j_" android:layout_gravity="center|left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ly" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="196.0dip" android:layout_weight="1.0">
+            <FrameLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/l_" android:layout_width="120.0dip" android:layout_height="120.0dip" android:src="@drawable/ack" android:scaleType="centerInside" />
+                <ProgressBar android:layout_gravity="center" android:id="@id/la" android:layout_width="25.0dip" android:layout_height="25.0dip" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

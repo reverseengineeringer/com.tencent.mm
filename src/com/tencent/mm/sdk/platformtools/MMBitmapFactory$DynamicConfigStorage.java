@@ -1,6 +1,5 @@
 package com.tencent.mm.sdk.platformtools;
 
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
@@ -8,31 +7,31 @@ class MMBitmapFactory$DynamicConfigStorage
 {
   public static String PREF_KEY_IS_ENABLE_MM_BITMAP_FACTORY = "pref_key_is_enable_MMBitmapFactory";
   private static final String PREF_NAME = "pref_MMBitmapFactory_dyncfg";
-  private static SharedPreferences mPref = y.getContext().getSharedPreferences("pref_MMBitmapFactory_dyncfg", 4);
+  private static SharedPreferences mPref = aj.aS(aa.getContext(), "pref_MMBitmapFactory_dyncfg");
   
   public static boolean getValue(String paramString, boolean paramBoolean)
   {
     
     if (mPref == null)
     {
-      u.w("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "SharedPreferences in DynamicConfigStorage initialize failed.");
+      v.w("MicroMsg.MMBitmapFactory", "SharedPreferences in DynamicConfigStorage initialize failed.");
       return paramBoolean;
     }
     paramBoolean = mPref.getBoolean(paramString, paramBoolean);
-    u.d("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "DynamicConfigStorage, getValue:%b", new Object[] { Boolean.valueOf(paramBoolean) });
+    v.d("MicroMsg.MMBitmapFactory", "DynamicConfigStorage, getValue:%b", new Object[] { Boolean.valueOf(paramBoolean) });
     return paramBoolean;
   }
   
   private static void reload()
   {
-    mPref = y.getContext().getSharedPreferences("pref_MMBitmapFactory_dyncfg", 4);
+    mPref = aj.aS(aa.getContext(), "pref_MMBitmapFactory_dyncfg");
   }
   
   public static void setValue(String paramString, boolean paramBoolean)
   {
     if (mPref == null)
     {
-      u.w("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "SharedPreferences in DynamicConfigStorage initialize failed.");
+      v.w("MicroMsg.MMBitmapFactory", "SharedPreferences in DynamicConfigStorage initialize failed.");
       return;
     }
     SharedPreferences.Editor localEditor = mPref.edit();

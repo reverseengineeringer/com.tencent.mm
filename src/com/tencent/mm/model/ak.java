@@ -1,61 +1,61 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.protocal.b.alq;
-import com.tencent.mm.protocal.b.alx;
-import com.tencent.mm.protocal.b.dd;
-import com.tencent.mm.protocal.b.ws;
-import com.tencent.mm.protocal.b.wt;
-import com.tencent.mm.protocal.h;
-import com.tencent.mm.protocal.h.a;
-import com.tencent.mm.protocal.h.b;
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.h.d;
-import com.tencent.mm.protocal.z;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.protocal.ac;
+import com.tencent.mm.protocal.b.amb;
+import com.tencent.mm.protocal.b.ami;
+import com.tencent.mm.protocal.b.dg;
+import com.tencent.mm.protocal.b.xd;
+import com.tencent.mm.protocal.b.xe;
+import com.tencent.mm.protocal.k;
+import com.tencent.mm.protocal.k.a;
+import com.tencent.mm.protocal.k.b;
+import com.tencent.mm.protocal.k.c;
+import com.tencent.mm.protocal.k.d;
+import com.tencent.mm.sdk.platformtools.be;
 
 public final class ak
 {
   public static final class a
-    extends h.c
-    implements h.a
+    extends k.c
+    implements k.a
   {
-    public ws bBp = new ws();
+    public xd buu = new xd();
     
     public final int getCmdId()
     {
       return 0;
     }
     
-    public final byte[] tY()
+    public final byte[] tZ()
     {
-      iUJ = z.aTv();
-      bBp.jbx = new alx().aO(ay.aVA());
-      bBp.jGS = h.a(this);
-      return bBp.toByteArray();
+      jsg = ac.aYs();
+      buu.jzd = new ami().aV(be.baN());
+      buu.kfq = k.a(this);
+      return buu.toByteArray();
     }
     
-    public final int tZ()
+    public final int ua()
     {
       return 616;
     }
   }
   
   public static final class b
-    extends h.d
-    implements h.b
+    extends k.d
+    implements k.b
   {
-    public wt bBq = new wt();
+    public xe buv = new xe();
+    
+    public final int D(byte[] paramArrayOfByte)
+    {
+      buv = ((xe)new xe().au(paramArrayOfByte));
+      k.a(this, buv.kfH);
+      return buv.kfH.jxr;
+    }
     
     public final int getCmdId()
     {
       return 0;
-    }
-    
-    public final int y(byte[] paramArrayOfByte)
-    {
-      bBq = ((wt)new wt().am(paramArrayOfByte));
-      h.a(this, bBq.jHj);
-      return bBq.jHj.iZL;
     }
   }
 }

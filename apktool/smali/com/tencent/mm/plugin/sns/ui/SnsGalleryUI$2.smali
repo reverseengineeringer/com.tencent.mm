@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsGalleryUI;->Gb()V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsGalleryUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hea:Lcom/tencent/mm/plugin/sns/ui/SnsGalleryUI;
+.field final synthetic hsL:Lcom/tencent/mm/plugin/sns/ui/SnsGalleryUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 140
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsGalleryUI$2;->hea:Lcom/tencent/mm/plugin/sns/ui/SnsGalleryUI;
+    .line 142
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsGalleryUI$2;->hsL:Lcom/tencent/mm/plugin/sns/ui/SnsGalleryUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,14 +40,14 @@
     .locals 1
 
     .prologue
-    .line 144
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsGalleryUI$2;->hea:Lcom/tencent/mm/plugin/sns/ui/SnsGalleryUI;
+    .line 146
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsGalleryUI$2;->hsL:Lcom/tencent/mm/plugin/sns/ui/SnsGalleryUI;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsBaseGalleryUI;->hbH:Lcom/tencent/mm/plugin/sns/ui/o;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsBaseGalleryUI;->hqx:Lcom/tencent/mm/plugin/sns/ui/q;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/o;->aAZ()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/q;->aDU()V
 
-    .line 145
+    .line 147
     const/4 v0, 0x1
 
     return v0

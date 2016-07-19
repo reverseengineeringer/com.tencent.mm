@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class SQLiteDebug$PagerStats
 {
-  public ArrayList dbStats;
+  public ArrayList<SQLiteDebug.DbStats> dbStats;
   public int largestMemAlloc;
   public int memoryUsed;
   public int pageCacheOverflow;

@@ -4,64 +4,64 @@ import android.content.ContentProviderOperation;
 import android.content.ContentResolver;
 import android.content.OperationApplicationException;
 import android.os.RemoteException;
-import com.tencent.mm.pluginsdk.g.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.pluginsdk.h.a;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.ArrayList;
 
 public final class b$a
 {
-  private final String TAG = "!32@/B4Tb64lLpKVM3BoHNnBHzbUE4f2XdPA";
-  private final ContentResolver caJ;
-  ArrayList caK;
+  private final String TAG = "MicroMsg.BatchOperation";
+  private final ContentResolver bUs;
+  ArrayList<ContentProviderOperation> bUt;
   
   public b$a(b paramb, ContentResolver paramContentResolver)
   {
-    caJ = paramContentResolver;
-    caK = new ArrayList();
+    bUs = paramContentResolver;
+    bUt = new ArrayList();
   }
   
   public final void a(ContentProviderOperation paramContentProviderOperation)
   {
-    caK.add(paramContentProviderOperation);
+    bUt.add(paramContentProviderOperation);
   }
   
   public final void execute()
   {
-    if (caK.size() == 0)
+    if (bUt.size() == 0)
     {
-      u.d("!32@/B4Tb64lLpKVM3BoHNnBHzbUE4f2XdPA", "no batch operation");
+      v.d("MicroMsg.BatchOperation", "no batch operation");
       return;
     }
-    if (!a.aL(b.a(caL), "android.permission.READ_CONTACTS"))
+    if (!a.aK(b.a(bUu), "android.permission.READ_CONTACTS"))
     {
-      u.e("!32@/B4Tb64lLpKVM3BoHNnBHzbUE4f2XdPA", "no contact permission");
+      v.e("MicroMsg.BatchOperation", "no contact permission");
       return;
     }
     try
     {
-      caJ.applyBatch("com.android.contacts", caK);
-      caK.clear();
+      bUs.applyBatch("com.android.contacts", bUt);
+      bUt.clear();
       return;
     }
     catch (OperationApplicationException localOperationApplicationException)
     {
       for (;;)
       {
-        u.e("!32@/B4Tb64lLpKVM3BoHNnBHzbUE4f2XdPA", "apply batch operation failed", new Object[] { localOperationApplicationException.toString() });
+        v.e("MicroMsg.BatchOperation", "apply batch operation failed", new Object[] { localOperationApplicationException.toString() });
       }
     }
     catch (RemoteException localRemoteException)
     {
       for (;;)
       {
-        u.e("!32@/B4Tb64lLpKVM3BoHNnBHzbUE4f2XdPA", "apply batch operation failed", new Object[] { localRemoteException.toString() });
+        v.e("MicroMsg.BatchOperation", "apply batch operation failed", new Object[] { localRemoteException.toString() });
       }
     }
     catch (Exception localException)
     {
       for (;;)
       {
-        u.e("!32@/B4Tb64lLpKVM3BoHNnBHzbUE4f2XdPA", "apply batch operation failed", new Object[] { localException.toString() });
+        v.e("MicroMsg.BatchOperation", "apply batch operation failed", new Object[] { localException.toString() });
       }
     }
   }

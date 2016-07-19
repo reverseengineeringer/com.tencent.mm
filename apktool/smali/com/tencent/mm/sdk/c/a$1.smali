@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic cQw:Lcom/tencent/mm/sdk/c/b;
+.field final synthetic kui:Lcom/tencent/mm/sdk/c/b;
 
-.field final synthetic jUH:Lcom/tencent/mm/sdk/c/a;
+.field final synthetic kuj:Lcom/tencent/mm/sdk/c/a;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 82
-    iput-object p1, p0, Lcom/tencent/mm/sdk/c/a$1;->jUH:Lcom/tencent/mm/sdk/c/a;
+    .line 80
+    iput-object p1, p0, Lcom/tencent/mm/sdk/c/a$1;->kuj:Lcom/tencent/mm/sdk/c/a;
 
-    iput-object p2, p0, Lcom/tencent/mm/sdk/c/a$1;->cQw:Lcom/tencent/mm/sdk/c/b;
+    iput-object p2, p0, Lcom/tencent/mm/sdk/c/a$1;->kui:Lcom/tencent/mm/sdk/c/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,13 +44,13 @@
     .locals 2
 
     .prologue
-    .line 85
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 83
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    iget-object v1, p0, Lcom/tencent/mm/sdk/c/a$1;->cQw:Lcom/tencent/mm/sdk/c/b;
+    iget-object v1, p0, Lcom/tencent/mm/sdk/c/a$1;->kui:Lcom/tencent/mm/sdk/c/b;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
-    .line 86
+    .line 84
     return-void
 .end method

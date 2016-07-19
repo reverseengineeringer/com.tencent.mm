@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iAg:Lcom/tencent/mm/pluginsdk/model/h;
+.field final synthetic iWF:Lcom/tencent/mm/pluginsdk/model/h;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 92
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/h$1;->iAg:Lcom/tencent/mm/pluginsdk/model/h;
+    .line 102
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/h$1;->iWF:Lcom/tencent/mm/pluginsdk/model/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,31 +40,31 @@
     .locals 2
 
     .prologue
-    .line 95
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/h$1;->iAg:Lcom/tencent/mm/pluginsdk/model/h;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/h$1;->iWF:Lcom/tencent/mm/pluginsdk/model/h;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/model/h;->e(Lcom/tencent/mm/pluginsdk/model/h;)Lcom/tencent/mm/pluginsdk/model/h$a;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/h$1;->iAg:Lcom/tencent/mm/pluginsdk/model/h;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/h$1;->iWF:Lcom/tencent/mm/pluginsdk/model/h;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/model/h;->a(Lcom/tencent/mm/pluginsdk/model/h;)Ljava/util/List;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/h$1;->iAg:Lcom/tencent/mm/pluginsdk/model/h;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/h$1;->iWF:Lcom/tencent/mm/pluginsdk/model/h;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/model/h;->b(Lcom/tencent/mm/pluginsdk/model/h;)Ljava/util/List;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/h$1;->iAg:Lcom/tencent/mm/pluginsdk/model/h;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/h$1;->iWF:Lcom/tencent/mm/pluginsdk/model/h;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/model/h;->c(Lcom/tencent/mm/pluginsdk/model/h;)Ljava/util/List;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/h$1;->iAg:Lcom/tencent/mm/pluginsdk/model/h;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/h$1;->iWF:Lcom/tencent/mm/pluginsdk/model/h;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/model/h;->d(Lcom/tencent/mm/pluginsdk/model/h;)Ljava/util/List;
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/model/h$a;->aPr()V
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/model/h$a;->aTX()V
 
-    .line 96
+    .line 106
     return-void
 .end method

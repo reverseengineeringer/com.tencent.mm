@@ -1,77 +1,158 @@
 package com.tencent.mm.x;
 
-import android.os.Message;
-import com.tencent.mm.d.b.bg;
-import com.tencent.mm.model.ar;
-import com.tencent.mm.model.c;
-import com.tencent.mm.model.i;
-import com.tencent.mm.network.e;
-import com.tencent.mm.network.o;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j.b;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag;
-import junit.framework.Assert;
+import com.tencent.mm.h.e;
+import com.tencent.mm.h.h;
+import com.tencent.mm.pointers.PString;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
 
 public final class a
-  extends com.tencent.mm.r.j
-  implements com.tencent.mm.network.j
 {
-  private d anM;
-  private ag ask = new ag();
-  private aa handler = new aa()
+  private static boolean a(String paramString, PString paramPString)
   {
-    public final void handleMessage(Message paramAnonymousMessage)
-    {
-      a(999, 0, 0, "", null, null);
-    }
-  };
-  
-  public a(String paramString1, String paramString2)
-  {
-    ask.bk(1);
-    ask.setTalker(paramString1);
-    ask.v(ar.fm(paramString1));
-    ask.bl(1);
-    ask.setContent(paramString2);
-    ask.setType(i.eK(paramString1));
-    long l = com.tencent.mm.model.ah.tD().rs().E(ask);
-    if (l != -1L) {}
+    if (be.kf(paramString)) {}
     for (;;)
     {
-      Assert.assertTrue(bool);
-      u.i("!44@/B4Tb64lLpK+IBX8XDgnvsPvmyRJXaBBy0B7+2aqDGs=", "new msg inserted to db , local id = " + l);
-      return;
-      bool = false;
+      return false;
+      try
+      {
+        int j = yd();
+        paramString = paramString.split(";");
+        int i = 0;
+        while (i < paramString.length)
+        {
+          String[] arrayOfString1 = paramString[i].split(",");
+          String[] arrayOfString2 = arrayOfString1[0].split("-");
+          String[] arrayOfString3 = arrayOfString2[0].split(":");
+          int k = be.FG(arrayOfString3[0]);
+          int m = be.FG(arrayOfString3[1]);
+          arrayOfString2 = arrayOfString2[1].split(":");
+          int n = be.FG(arrayOfString2[0]);
+          if (f(m + k * 60, be.FG(arrayOfString2[1]) + n * 60, j))
+          {
+            value = arrayOfString1[1];
+            return true;
+          }
+          i += 1;
+        }
+        return false;
+      }
+      catch (Exception paramString)
+      {
+        v.e("MicroMsg.BusyTimeControlLogic", "checkNeedToControl-result error : " + paramString.toString());
+      }
     }
   }
   
-  public final int a(e parame, d paramd)
+  private static boolean f(int paramInt1, int paramInt2, int paramInt3)
   {
-    anM = paramd;
-    u.i("!44@/B4Tb64lLpK+IBX8XDgnvsPvmyRJXaBBy0B7+2aqDGs=", "send local msg, msgId = " + ask.field_msgId);
-    handler.sendEmptyMessageDelayed(0, 500L);
-    return 999;
+    if (paramInt1 < paramInt2) {
+      if ((paramInt3 >= paramInt2) || (paramInt3 < paramInt1)) {}
+    }
+    while (((paramInt3 <= 1440) && (paramInt3 >= paramInt1)) || ((paramInt3 < paramInt2) && (paramInt3 >= 0)))
+    {
+      return true;
+      return false;
+    }
+    return false;
   }
   
-  protected final int a(o paramo)
+  public static boolean hE(String paramString)
   {
-    return j.b.bFI;
+    if (be.kf(paramString)) {}
+    for (;;)
+    {
+      return false;
+      try
+      {
+        int j = yd();
+        paramString = paramString.split(";");
+        int i = 0;
+        while (i < paramString.length)
+        {
+          String[] arrayOfString1 = paramString[i].split("-");
+          String[] arrayOfString2 = arrayOfString1[0].split(":");
+          int k = be.FG(arrayOfString2[0]);
+          int m = be.FG(arrayOfString2[1]);
+          arrayOfString1 = arrayOfString1[1].split(":");
+          int n = be.FG(arrayOfString1[0]);
+          boolean bool = f(m + k * 60, be.FG(arrayOfString1[1]) + n * 60, j);
+          if (bool) {
+            return true;
+          }
+          i += 1;
+        }
+        return false;
+      }
+      catch (Exception paramString)
+      {
+        v.e("MicroMsg.BusyTimeControlLogic", "checkNeedToControl error : " + paramString.toString());
+      }
+    }
   }
   
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
+  public static int yb()
   {
-    u.i("!44@/B4Tb64lLpK+IBX8XDgnvsPvmyRJXaBBy0B7+2aqDGs=", "recv local msg, msgId = " + ask.field_msgId);
-    ask.bk(2);
-    ask.v(ar.d(ask.field_talker, System.currentTimeMillis() / 1000L));
-    com.tencent.mm.model.ah.tD().rs().a(ask.field_msgId, ask);
-    anM.a(0, 0, paramString, this);
+    String str = h.om().getValue("C2CSightTimeLength");
+    v.i("MicroMsg.BusyTimeControlLogic", "C2CSightTimeLength value: " + str);
+    PString localPString = new PString();
+    if (a(str, localPString)) {
+      try
+      {
+        v.i("MicroMsg.BusyTimeControlLogic", "it is busy time now, need control C2C short video max record time: " + value);
+        int i = Integer.parseInt(value);
+        return i * 1000;
+      }
+      catch (NumberFormatException localNumberFormatException)
+      {
+        v.e("MicroMsg.BusyTimeControlLogic", localNumberFormatException.toString());
+      }
+    }
+    return 6500;
   }
   
-  public final int getType()
+  public static int yc()
   {
-    return 522;
+    String str = h.om().getValue("SnsSightTimeLength");
+    v.i("MicroMsg.BusyTimeControlLogic", "SnsSightTimeLength value: " + str);
+    PString localPString = new PString();
+    if (a(str, localPString)) {
+      try
+      {
+        v.i("MicroMsg.BusyTimeControlLogic", "it is busy time now, need control SNS short video max record time: " + value);
+        int i = Integer.parseInt(value);
+        return i * 1000;
+      }
+      catch (NumberFormatException localNumberFormatException)
+      {
+        v.e("MicroMsg.BusyTimeControlLogic", localNumberFormatException.toString());
+      }
+    }
+    return 6500;
+  }
+  
+  private static int yd()
+  {
+    String[] arrayOfString = new SimpleDateFormat("HH:mm").format(new Date()).split(":");
+    int i = be.FG(arrayOfString[0]);
+    int j = be.FG(arrayOfString[1]) + i * 60 - ((int)ye() - 8) * 60;
+    if (j < 0) {
+      i = j + 1440;
+    }
+    do
+    {
+      return i;
+      i = j;
+    } while (j < 1440);
+    return j - 1440;
+  }
+  
+  public static long ye()
+  {
+    return (int)(TimeZone.getDefault().getRawOffset() / 60000L) / 60L;
   }
 }
 

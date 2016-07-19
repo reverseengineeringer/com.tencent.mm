@@ -2,11 +2,11 @@ package com.tencent.mm.pluginsdk;
 
 public final class i$ak
 {
-  public static i.af.a izi;
+  public static i.af.a iVE;
   
-  public static i.af.a aPe()
+  public static i.af.a aTG()
   {
-    return izi;
+    return iVE;
   }
 }
 

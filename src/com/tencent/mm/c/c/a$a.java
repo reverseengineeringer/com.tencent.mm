@@ -2,7 +2,7 @@ package com.tencent.mm.c.c;
 
 public final class a$a
 {
-  public long arz = 0L;
+  public long adh = 0L;
   public int count = 0;
 }
 

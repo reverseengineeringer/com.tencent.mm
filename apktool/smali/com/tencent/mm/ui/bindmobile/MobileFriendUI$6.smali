@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;->Gb()V
+    value = Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+.field final synthetic loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 395
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$6;->kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$6;->loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,11 +43,11 @@
     const/4 v3, 0x0
 
     .line 400
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -62,10 +62,10 @@
     .line 401
     const/4 v0, 0x1
 
-    invoke-static {v3, v0}, Lcom/tencent/mm/platformtools/m;->d(ZZ)V
+    invoke-static {v3, v0}, Lcom/tencent/mm/platformtools/l;->d(ZZ)V
 
     .line 402
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$6;->kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$6;->loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;->finish()V
 

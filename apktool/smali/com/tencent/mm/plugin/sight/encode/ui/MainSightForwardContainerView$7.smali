@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gCI:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
+.field final synthetic gJj:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 542
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$7;->gCI:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
+    .line 548
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$7;->gJj:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,13 +40,13 @@
     .locals 0
 
     .prologue
-    .line 546
+    .line 552
     if-eqz p1, :cond_0
 
-    .line 547
+    .line 553
     invoke-virtual {p1}, Landroid/media/MediaPlayer;->release()V
 
-    .line 549
+    .line 555
     :cond_0
     return-void
 .end method

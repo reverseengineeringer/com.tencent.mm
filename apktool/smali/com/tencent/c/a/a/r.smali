@@ -4,13 +4,23 @@
 
 
 # static fields
-.field private static akl:Lcom/tencent/c/a/a/r;
+.field private static We:Lcom/tencent/c/a/a/r;
 
 
 # instance fields
-.field private akj:Ljava/util/Map;
+.field private Wc:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Integer;",
+            "Lcom/tencent/c/a/a/q;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private akk:I
+.field private Wd:I
 
 
 # direct methods
@@ -21,7 +31,7 @@
     .line 38
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/c/a/a/r;->akl:Lcom/tencent/c/a/a/r;
+    sput-object v0, Lcom/tencent/c/a/a/r;->We:Lcom/tencent/c/a/a/r;
 
     return-void
 .end method
@@ -36,12 +46,12 @@
     .line 24
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/c/a/a/r;->akj:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/c/a/a/r;->Wc:Ljava/util/Map;
 
     .line 25
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/c/a/a/r;->akk:I
+    iput v0, p0, Lcom/tencent/c/a/a/r;->Wd:I
 
     .line 29
     new-instance v0, Ljava/util/HashMap;
@@ -50,10 +60,10 @@
 
     invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
 
-    iput-object v0, p0, Lcom/tencent/c/a/a/r;->akj:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/c/a/a/r;->Wc:Ljava/util/Map;
 
     .line 30
-    iget-object v0, p0, Lcom/tencent/c/a/a/r;->akj:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/c/a/a/r;->Wc:Ljava/util/Map;
 
     const/4 v1, 0x1
 
@@ -70,7 +80,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 32
-    iget-object v0, p0, Lcom/tencent/c/a/a/r;->akj:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/c/a/a/r;->Wc:Ljava/util/Map;
 
     const/4 v1, 0x2
 
@@ -87,7 +97,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 34
-    iget-object v0, p0, Lcom/tencent/c/a/a/r;->akj:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/c/a/a/r;->Wc:Ljava/util/Map;
 
     const/4 v1, 0x4
 
@@ -107,7 +117,7 @@
     return-void
 .end method
 
-.method static declared-synchronized S(Landroid/content/Context;)Lcom/tencent/c/a/a/r;
+.method static declared-synchronized O(Landroid/content/Context;)Lcom/tencent/c/a/a/r;
     .locals 2
 
     .prologue
@@ -117,7 +127,7 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/tencent/c/a/a/r;->akl:Lcom/tencent/c/a/a/r;
+    sget-object v0, Lcom/tencent/c/a/a/r;->We:Lcom/tencent/c/a/a/r;
 
     if-nez v0, :cond_0
 
@@ -126,11 +136,11 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/c/a/a/r;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/tencent/c/a/a/r;->akl:Lcom/tencent/c/a/a/r;
+    sput-object v0, Lcom/tencent/c/a/a/r;->We:Lcom/tencent/c/a/a/r;
 
     .line 44
     :cond_0
-    sget-object v0, Lcom/tencent/c/a/a/r;->akl:Lcom/tencent/c/a/a/r;
+    sget-object v0, Lcom/tencent/c/a/a/r;->We:Lcom/tencent/c/a/a/r;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -147,8 +157,18 @@
     throw v0
 .end method
 
-.method private i(Ljava/util/List;)Lcom/tencent/c/a/a/a;
+.method private l(Ljava/util/List;)Lcom/tencent/c/a/a/a;
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;)",
+            "Lcom/tencent/c/a/a/a;"
+        }
+    .end annotation
 
     .prologue
     .line 115
@@ -188,7 +208,7 @@
     check-cast v0, Ljava/lang/Integer;
 
     .line 117
-    iget-object v2, p0, Lcom/tencent/c/a/a/r;->akj:Ljava/util/Map;
+    iget-object v2, p0, Lcom/tencent/c/a/a/r;->Wc:Ljava/util/Map;
 
     invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -200,7 +220,7 @@
     if-eqz v0, :cond_0
 
     .line 119
-    invoke-virtual {v0}, Lcom/tencent/c/a/a/q;->ki()Lcom/tencent/c/a/a/a;
+    invoke-virtual {v0}, Lcom/tencent/c/a/a/q;->iJ()Lcom/tencent/c/a/a/a;
 
     move-result-object v0
 
@@ -217,7 +237,7 @@
 
     .prologue
     .line 145
-    iget-object v0, p0, Lcom/tencent/c/a/a/r;->akj:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/c/a/a/r;->Wc:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -262,7 +282,7 @@
 
     .prologue
     .line 156
-    iget-object v0, p0, Lcom/tencent/c/a/a/r;->akj:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/c/a/a/r;->Wc:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -302,78 +322,7 @@
     goto :goto_0
 .end method
 
-.method final h(Ljava/util/List;)Lcom/tencent/c/a/a/g;
-    .locals 3
-
-    .prologue
-    .line 68
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-ltz v0, :cond_1
-
-    .line 69
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    .line 79
-    :cond_1
-    new-instance v0, Lcom/tencent/c/a/a/g;
-
-    invoke-direct {v0}, Lcom/tencent/c/a/a/g;-><init>()V
-
-    :goto_0
-    return-object v0
-
-    .line 69
-    :cond_2
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    .line 70
-    iget-object v2, p0, Lcom/tencent/c/a/a/r;->akj:Ljava/util/Map;
-
-    invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/c/a/a/q;
-
-    .line 71
-    if-eqz v0, :cond_0
-
-    .line 72
-    invoke-virtual {v0}, Lcom/tencent/c/a/a/q;->kh()Lcom/tencent/c/a/a/g;
-
-    move-result-object v0
-
-    .line 73
-    if-eqz v0, :cond_0
-
-    iget-object v2, v0, Lcom/tencent/c/a/a/g;->ajR:Ljava/lang/String;
-
-    invoke-static {v2}, Lcom/tencent/c/a/a/s;->at(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    goto :goto_0
-.end method
-
-.method final kh()Lcom/tencent/c/a/a/g;
+.method final iI()Lcom/tencent/c/a/a/g;
     .locals 6
 
     .prologue
@@ -420,14 +369,14 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    invoke-virtual {p0, v0}, Lcom/tencent/c/a/a/r;->h(Ljava/util/List;)Lcom/tencent/c/a/a/g;
+    invoke-virtual {p0, v0}, Lcom/tencent/c/a/a/r;->k(Ljava/util/List;)Lcom/tencent/c/a/a/g;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method final ki()Lcom/tencent/c/a/a/a;
+.method final iJ()Lcom/tencent/c/a/a/a;
     .locals 5
 
     .prologue
@@ -465,9 +414,90 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    invoke-direct {p0, v0}, Lcom/tencent/c/a/a/r;->i(Ljava/util/List;)Lcom/tencent/c/a/a/a;
+    invoke-direct {p0, v0}, Lcom/tencent/c/a/a/r;->l(Ljava/util/List;)Lcom/tencent/c/a/a/a;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method final k(Ljava/util/List;)Lcom/tencent/c/a/a/g;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;)",
+            "Lcom/tencent/c/a/a/g;"
+        }
+    .end annotation
+
+    .prologue
+    .line 68
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ltz v0, :cond_1
+
+    .line 69
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 79
+    :cond_1
+    new-instance v0, Lcom/tencent/c/a/a/g;
+
+    invoke-direct {v0}, Lcom/tencent/c/a/a/g;-><init>()V
+
+    :goto_0
+    return-object v0
+
+    .line 69
+    :cond_2
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    .line 70
+    iget-object v2, p0, Lcom/tencent/c/a/a/r;->Wc:Ljava/util/Map;
+
+    invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/c/a/a/q;
+
+    .line 71
+    if-eqz v0, :cond_0
+
+    .line 72
+    invoke-virtual {v0}, Lcom/tencent/c/a/a/q;->iI()Lcom/tencent/c/a/a/g;
+
+    move-result-object v0
+
+    .line 73
+    if-eqz v0, :cond_0
+
+    iget-object v2, v0, Lcom/tencent/c/a/a/g;->VK:Ljava/lang/String;
+
+    invoke-static {v2}, Lcom/tencent/c/a/a/s;->ax(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    goto :goto_0
 .end method

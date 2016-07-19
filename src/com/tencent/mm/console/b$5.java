@@ -2,34 +2,47 @@ package com.tencent.mm.console;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.model.w;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.base.g;
+import android.widget.Toast;
+import com.tencent.mm.plugin.dbbackup.b;
+import com.tencent.mm.sdk.platformtools.ad;
 
 final class b$5
-  implements w
+  implements b
 {
-  b$5(ProgressDialog paramProgressDialog, Context paramContext) {}
+  b$5(boolean paramBoolean, long paramLong, ProgressDialog paramProgressDialog, Context paramContext) {}
   
-  public final void cd(int paramInt)
+  private void dz(final String paramString)
   {
-    u.i("!44@/B4Tb64lLpJLD/TSzHAWHSAf/GG2c9mYEhKZ1EHpY7c=", "ipxx progress:%d", new Object[] { Integer.valueOf(paramInt) });
-    if (paramInt < 0)
+    ad.k(new Runnable()
     {
-      ah.a(null);
-      buX.dismiss();
-      g.e(val$context, 2131429577, 2131430877);
+      public final void run()
+      {
+        if (bjE != null) {
+          bjE.dismiss();
+        }
+        Toast.makeText(val$context, paramString, 0).show();
+      }
+    });
+  }
+  
+  public final void onError()
+  {
+    dz("Database backup failed.");
+  }
+  
+  public final void oq()
+  {
+    if (bjC) {}
+    for (String str = "incremental";; str = "new")
+    {
+      dz(String.format("Database (%s) backup succeeded, elapsed %.2f seconds.", new Object[] { str, Float.valueOf((float)(System.nanoTime() - bjD) / 1.0E9F) }));
       return;
     }
-    if (paramInt >= 100)
-    {
-      ah.a(null);
-      buX.dismiss();
-      g.e(val$context, 2131429578, 2131430877);
-      return;
-    }
-    buX.setMessage(val$context.getString(2131429576) + paramInt + "%");
+  }
+  
+  public final void or()
+  {
+    dz("Database backup canceled.");
   }
 }
 

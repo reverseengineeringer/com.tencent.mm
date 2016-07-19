@@ -18,7 +18,7 @@ final class SnsStrangerCommentDetailUI$a$2
   {
     Intent localIntent = new Intent();
     localIntent.putExtra("Contact_User", paramView.getTag().toString());
-    a.coa.d(localIntent, SnsStrangerCommentDetailUI.a.a(hiS));
+    a.cjo.d(localIntent, SnsStrangerCommentDetailUI.a.a(hxH));
   }
 }
 

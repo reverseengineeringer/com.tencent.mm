@@ -7,7 +7,7 @@ import com.tencent.mm.model.ah;
 import com.tencent.mm.pluginsdk.l;
 import com.tencent.mm.pluginsdk.ui.applet.g;
 import com.tencent.mm.pluginsdk.ui.d.b;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.storage.h;
 import com.tencent.mm.ui.MMWizardActivity;
 import com.tencent.mm.ui.bindmobile.BindMContactIntroUI;
@@ -30,47 +30,47 @@ class URISpanHandlerSet$SetSafeDeviceUriSpanHandler
   {
     if (paramString.equals("weixin://setting/account/safedevice"))
     {
-      paramString = (String)ah.tD().rn().get(6, "");
-      paraml = (String)ah.tD().rn().get(4097, "");
-      if (!ay.kz(paramString))
+      paramString = (String)ah.tE().ro().get(6, "");
+      paraml = (String)ah.tE().ro().get(4097, "");
+      if (!be.kf(paramString))
       {
         paramString = new Intent();
-        if ((URISpanHandlerSet.a(ang) instanceof Service)) {
+        if ((URISpanHandlerSet.a(ZU) instanceof Service)) {
           paramString.addFlags(268435456);
         }
-        com.tencent.mm.ar.c.u(URISpanHandlerSet.a(ang), "safedevice", ".ui.MySafeDeviceListUI");
+        com.tencent.mm.av.c.v(URISpanHandlerSet.a(ZU), "safedevice", ".ui.MySafeDeviceListUI");
       }
       for (;;)
       {
         return true;
-        if (!ay.kz(paraml))
+        if (!be.kf(paraml))
         {
-          paramString = new Intent(URISpanHandlerSet.a(ang), BindMContactIntroUI.class);
+          paramString = new Intent(URISpanHandlerSet.a(ZU), BindMContactIntroUI.class);
           paramString.putExtra("is_bind_for_safe_device", true);
-          if ((URISpanHandlerSet.a(ang) instanceof Service)) {
+          if ((URISpanHandlerSet.a(ZU) instanceof Service)) {
             paramString.addFlags(268435456);
           }
-          MMWizardActivity.v(URISpanHandlerSet.a(ang), paramString);
+          MMWizardActivity.v(URISpanHandlerSet.a(ZU), paramString);
         }
         else
         {
           paramString = new Intent();
-          if ((URISpanHandlerSet.a(ang) instanceof Service)) {
+          if ((URISpanHandlerSet.a(ZU) instanceof Service)) {
             paramString.addFlags(268435456);
           }
-          com.tencent.mm.ar.c.a(URISpanHandlerSet.a(ang), "safedevice", ".ui.BindSafeDeviceUI", paramString);
+          com.tencent.mm.av.c.a(URISpanHandlerSet.a(ZU), "safedevice", ".ui.BindSafeDeviceUI", paramString);
         }
       }
     }
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[0];
   }

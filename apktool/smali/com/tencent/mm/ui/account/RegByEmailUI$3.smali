@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic ksf:Lcom/tencent/mm/modelfriend/w;
+.field final synthetic kRn:Lcom/tencent/mm/modelfriend/w;
 
-.field final synthetic kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+.field final synthetic kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 308
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$3;->kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$3;->kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$3;->ksf:Lcom/tencent/mm/modelfriend/w;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$3;->kRn:Lcom/tencent/mm/modelfriend/w;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,13 +45,13 @@
 
     .prologue
     .line 312
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$3;->ksf:Lcom/tencent/mm/modelfriend/w;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$3;->kRn:Lcom/tencent/mm/modelfriend/w;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
     .line 313
     return-void

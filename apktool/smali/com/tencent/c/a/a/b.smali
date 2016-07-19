@@ -12,13 +12,13 @@
 
 
 # static fields
-.field static ajA:Lcom/tencent/c/a/a/b$a;
+.field static Vs:Lcom/tencent/c/a/a/b$a;
 
 
 # instance fields
-.field ajB:Ljava/lang/Integer;
+.field Vt:Ljava/lang/Integer;
 
-.field ajC:Ljava/lang/String;
+.field Vu:Ljava/lang/String;
 
 
 # direct methods
@@ -32,14 +32,14 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 170
-    iput-object v0, p0, Lcom/tencent/c/a/a/b;->ajB:Ljava/lang/Integer;
+    iput-object v0, p0, Lcom/tencent/c/a/a/b;->Vt:Ljava/lang/Integer;
 
     .line 174
-    iput-object v0, p0, Lcom/tencent/c/a/a/b;->ajC:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/c/a/a/b;->Vu:Ljava/lang/String;
 
     .line 185
     :try_start_0
-    invoke-static {p1}, Lcom/tencent/c/a/a/b;->P(Landroid/content/Context;)Lcom/tencent/c/a/a/b$a;
+    invoke-static {p1}, Lcom/tencent/c/a/a/b;->L(Landroid/content/Context;)Lcom/tencent/c/a/a/b$a;
 
     .line 188
     const-string/jumbo v0, "phone"
@@ -63,15 +63,15 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/c/a/a/b;->ajB:Ljava/lang/Integer;
+    iput-object v0, p0, Lcom/tencent/c/a/a/b;->Vt:Ljava/lang/Integer;
 
     .line 192
     :cond_0
-    invoke-static {p1}, Lcom/tencent/c/a/a/s;->ab(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/c/a/a/s;->X(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/c/a/a/b;->ajC:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/c/a/a/b;->Vu:Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -85,7 +85,7 @@
     goto :goto_0
 .end method
 
-.method private static declared-synchronized P(Landroid/content/Context;)Lcom/tencent/c/a/a/b$a;
+.method private static declared-synchronized L(Landroid/content/Context;)Lcom/tencent/c/a/a/b$a;
     .locals 4
 
     .prologue
@@ -95,7 +95,7 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/tencent/c/a/a/b;->ajA:Lcom/tencent/c/a/a/b$a;
+    sget-object v0, Lcom/tencent/c/a/a/b;->Vs:Lcom/tencent/c/a/a/b$a;
 
     if-nez v0, :cond_0
 
@@ -110,11 +110,11 @@
 
     invoke-direct {v0, v2, v3}, Lcom/tencent/c/a/a/b$a;-><init>(Landroid/content/Context;B)V
 
-    sput-object v0, Lcom/tencent/c/a/a/b;->ajA:Lcom/tencent/c/a/a/b$a;
+    sput-object v0, Lcom/tencent/c/a/a/b;->Vs:Lcom/tencent/c/a/a/b$a;
 
     .line 180
     :cond_0
-    sget-object v0, Lcom/tencent/c/a/a/b;->ajA:Lcom/tencent/c/a/a/b$a;
+    sget-object v0, Lcom/tencent/c/a/a/b;->Vs:Lcom/tencent/c/a/a/b$a;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

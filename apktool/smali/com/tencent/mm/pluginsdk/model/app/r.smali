@@ -9,15 +9,15 @@
 # instance fields
 .field private appId:Ljava/lang/String;
 
-.field private cbf:I
+.field private bUR:I
 
-.field private handler:Lcom/tencent/mm/sdk/platformtools/aa;
+.field private handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
 .field private url:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lcom/tencent/mm/sdk/platformtools/aa;Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(Lcom/tencent/mm/sdk/platformtools/ac;Ljava/lang/String;ILjava/lang/String;)V
     .locals 2
 
     .prologue
@@ -27,7 +27,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 217
-    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/model/app/r;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/model/app/r;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
     .line 218
     iput-object v1, p0, Lcom/tencent/mm/pluginsdk/model/app/r;->appId:Ljava/lang/String;
@@ -35,19 +35,19 @@
     .line 219
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/model/app/r;->cbf:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/model/app/r;->bUR:I
 
     .line 220
     iput-object v1, p0, Lcom/tencent/mm/pluginsdk/model/app/r;->url:Ljava/lang/String;
 
     .line 223
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/app/r;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/app/r;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
     .line 224
     iput-object p2, p0, Lcom/tencent/mm/pluginsdk/model/app/r;->appId:Ljava/lang/String;
 
     .line 225
-    iput p3, p0, Lcom/tencent/mm/pluginsdk/model/app/r;->cbf:I
+    iput p3, p0, Lcom/tencent/mm/pluginsdk/model/app/r;->bUR:I
 
     .line 226
     iput-object p4, p0, Lcom/tencent/mm/pluginsdk/model/app/r;->url:Ljava/lang/String;
@@ -96,7 +96,7 @@
     :cond_1
     iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/r;->url:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->Du(Ljava/lang/String;)[B
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->FJ(Ljava/lang/String;)[B
 
     move-result-object v0
 
@@ -105,7 +105,7 @@
 
     iget-object v2, p0, Lcom/tencent/mm/pluginsdk/model/app/r;->appId:Ljava/lang/String;
 
-    iget v3, p0, Lcom/tencent/mm/pluginsdk/model/app/r;->cbf:I
+    iget v3, p0, Lcom/tencent/mm/pluginsdk/model/app/r;->bUR:I
 
     invoke-direct {v1, v2, v3, v0}, Lcom/tencent/mm/pluginsdk/model/app/t;-><init>(Ljava/lang/String;I[B)V
 
@@ -118,9 +118,9 @@
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     .line 240
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/app/r;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/app/r;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/platformtools/aa;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/platformtools/ac;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_0
 .end method

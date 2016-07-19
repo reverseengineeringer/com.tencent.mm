@@ -1,12 +1,8 @@
 package com.tencent.mm.pluginsdk.ui.tools;
 
-import com.tencent.mm.ae.a;
-import com.tencent.mm.an.r;
-import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.ah.a;
 import com.tencent.mm.pluginsdk.ui.VoiceSearchLayout.a;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
-import com.tencent.mm.ui.tools.g;
+import com.tencent.mm.sdk.platformtools.aa;
 
 final class n$1
   implements VoiceSearchLayout.a
@@ -15,35 +11,35 @@ final class n$1
   
   public final void a(boolean paramBoolean, String[] paramArrayOfString, long paramLong)
   {
-    u.d("!44@/B4Tb64lLpKCGRi+LcyHSIxOnXE6bSAHMOhyEEusEOY=", "on voice search return, success %B, voice id %d", new Object[] { Boolean.valueOf(paramBoolean), Long.valueOf(paramLong) });
-    if (iTk.iTi != null) {
-      iTk.iTi.a(paramBoolean, paramArrayOfString, paramLong, iTk.iTh);
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.VoiceSearchViewHelper", "on voice search return, success %B, voice id %d", new Object[] { Boolean.valueOf(paramBoolean), Long.valueOf(paramLong) });
+    if (jqx.jqv != null) {
+      jqx.jqv.a(paramBoolean, paramArrayOfString, paramLong, jqx.jqu);
     }
   }
   
-  public final void aRk()
+  public final void aVW()
   {
-    if ((r.bf(y.getContext())) || (a.aR(y.getContext()))) {}
+    if ((com.tencent.mm.aq.v.bc(aa.getContext())) || (a.aN(aa.getContext()))) {}
     do
     {
       return;
-      u.d("!44@/B4Tb64lLpKCGRi+LcyHSIxOnXE6bSAHMOhyEEusEOY=", "on voice search start");
-      h.fUJ.g(10453, new Object[] { Integer.valueOf(iTk.iTg), Integer.valueOf(3) });
-    } while (iTk.iTi == null);
-    iTk.iTi.KR();
+      com.tencent.mm.sdk.platformtools.v.d("MicroMsg.VoiceSearchViewHelper", "on voice search start");
+      com.tencent.mm.plugin.report.service.g.gdY.h(10453, new Object[] { Integer.valueOf(jqx.jqt), Integer.valueOf(3) });
+    } while (jqx.jqv == null);
+    jqx.jqv.LD();
   }
   
-  public final void aRl()
+  public final void aVX()
   {
-    u.d("!44@/B4Tb64lLpKCGRi+LcyHSIxOnXE6bSAHMOhyEEusEOY=", "on voice search cancel");
-    h.fUJ.g(10453, new Object[] { Integer.valueOf(iTk.iTg), Integer.valueOf(4) });
-    if (iTk.lxz != null)
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.VoiceSearchViewHelper", "on voice search cancel");
+    com.tencent.mm.plugin.report.service.g.gdY.h(10453, new Object[] { Integer.valueOf(jqx.jqt), Integer.valueOf(4) });
+    if (jqx.lYo != null)
     {
-      iTk.lxz.setEditTextEnabled(true);
-      iTk.lxz.setStatusBtnEnabled(true);
+      jqx.lYo.iJ(true);
+      jqx.lYo.iK(true);
     }
-    if (iTk.iTi != null) {
-      iTk.iTi.KS();
+    if (jqx.jqv != null) {
+      jqx.jqv.LE();
     }
   }
 }

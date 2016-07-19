@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->Gb()V
+    value = Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lcm:Lcom/tencent/mm/ui/chatting/ImageDownloadUI;
+.field final synthetic lCD:Lcom/tencent/mm/ui/chatting/ImageDownloadUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 112
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI$1;->lcm:Lcom/tencent/mm/ui/chatting/ImageDownloadUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI$1;->lCD:Lcom/tencent/mm/ui/chatting/ImageDownloadUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,20 +41,20 @@
 
     .prologue
     .line 116
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI$1;->lcm:Lcom/tencent/mm/ui/chatting/ImageDownloadUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI$1;->lCD:Lcom/tencent/mm/ui/chatting/ImageDownloadUI;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->a(Lcom/tencent/mm/ui/chatting/ImageDownloadUI;)Lcom/tencent/mm/ab/j;
+    invoke-static {v1}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->a(Lcom/tencent/mm/ui/chatting/ImageDownloadUI;)Lcom/tencent/mm/ae/j;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
     .line 117
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI$1;->lcm:Lcom/tencent/mm/ui/chatting/ImageDownloadUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ImageDownloadUI$1;->lCD:Lcom/tencent/mm/ui/chatting/ImageDownloadUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/ImageDownloadUI;->finish()V
 

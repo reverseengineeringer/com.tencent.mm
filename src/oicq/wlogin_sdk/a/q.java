@@ -5,7 +5,7 @@ public final class q
 {
   public q()
   {
-    mbE = 276;
+    mNI = 276;
   }
 }
 

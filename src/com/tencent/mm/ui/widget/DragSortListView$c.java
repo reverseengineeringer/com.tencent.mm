@@ -2,7 +2,7 @@ package com.tencent.mm.ui.widget;
 
 public abstract interface DragSortListView$c
 {
-  public abstract float G(float paramFloat);
+  public abstract float F(float paramFloat);
 }
 
 /* Location:

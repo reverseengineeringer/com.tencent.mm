@@ -1,20 +1,38 @@
 package android.support.v4.view;
 
+import android.graphics.Paint;
 import android.view.View;
-import android.view.View.AccessibilityDelegate;
+import android.view.ViewParent;
 
-class m$e
-  extends m.d
+abstract interface m$e
 {
-  public final void a(View paramView, a parama)
-  {
-    paramView.setAccessibilityDelegate((View.AccessibilityDelegate)et);
-  }
+  public abstract void a(View paramView, int paramInt1, int paramInt2, int paramInt3, int paramInt4);
   
-  public final boolean a(View paramView, int paramInt)
-  {
-    return paramView.canScrollHorizontally(paramInt);
-  }
+  public abstract void a(View paramView, int paramInt, Paint paramPaint);
+  
+  public abstract void a(View paramView, Paint paramPaint);
+  
+  public abstract void a(View paramView, a parama);
+  
+  public abstract void a(View paramView, Runnable paramRunnable);
+  
+  public abstract boolean a(View paramView, int paramInt);
+  
+  public abstract void b(View paramView, int paramInt);
+  
+  public abstract int f(View paramView);
+  
+  public abstract void g(View paramView);
+  
+  public abstract int h(View paramView);
+  
+  public abstract int j(View paramView);
+  
+  public abstract int k(View paramView);
+  
+  public abstract ViewParent l(View paramView);
+  
+  public abstract boolean m(View paramView);
 }
 
 /* Location:

@@ -7,6 +7,13 @@
 .field public static final WxSVGCode:Z = true
 
 .field public static final WxSVGRawClass:Ljava/lang/Class;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/Class",
+            "<*>;"
+        }
+    .end annotation
+.end field
 
 .field public static final WxSVGVersion:I = 0x5
 

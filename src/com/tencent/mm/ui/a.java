@@ -2,74 +2,74 @@ package com.tencent.mm.ui;
 
 import android.os.Bundle;
 import android.view.KeyEvent;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.preference.i;
 
 public abstract class a
   extends i
   implements h
 {
-  private boolean kjf;
-  private boolean kjg;
-  private boolean kjh;
-  private boolean kji;
-  protected boolean kjj = false;
-  protected boolean kjk = false;
-  protected boolean kjl;
-  private Bundle kjm;
+  private Bundle hpz;
+  private boolean kJo;
+  private boolean kJp;
+  private boolean kJq;
+  private boolean kJr;
+  protected boolean kJs = false;
+  protected boolean kJt = false;
+  protected boolean kJu;
   
-  protected abstract void aZj();
+  protected abstract void beA();
   
-  protected abstract void aZk();
+  protected abstract void beB();
   
-  protected abstract void aZl();
+  protected abstract void beC();
   
-  protected abstract void aZm();
+  protected abstract void beD();
   
-  protected abstract void aZn();
+  protected abstract void beE();
   
-  protected abstract void aZo();
+  protected abstract void beF();
   
-  public final void aZs()
+  public final void beJ()
   {
-    aZq();
-    kjh = true;
+    beH();
+    kJq = true;
   }
   
-  public final void aZu()
+  public final void beL()
   {
-    kjk = true;
+    kJt = true;
   }
   
-  public final void aZv()
+  public final void beM()
   {
-    if (!kjj) {
+    if (!kJs) {
       return;
     }
-    if (kjg)
+    if (kJp)
     {
-      aZj();
-      kjg = false;
+      beA();
+      kJp = false;
     }
     for (;;)
     {
       long l = System.currentTimeMillis();
-      if (kjh)
+      if (kJq)
       {
-        aZr();
-        kjh = false;
+        beI();
+        kJq = false;
       }
-      aZk();
-      u.d("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN " + toString() + " OnTabResume last : " + (System.currentTimeMillis() - l));
-      kji = true;
-      kjj = false;
+      beB();
+      v.d("MicroMsg.INIT", "KEVIN " + toString() + " OnTabResume last : " + (System.currentTimeMillis() - l));
+      kJr = true;
+      kJs = false;
       return;
-      if (kjf)
+      if (kJo)
       {
-        aZo();
-        aZj();
-        u.v("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN tab onRecreate ");
-        kjf = false;
+        beF();
+        beA();
+        v.v("MicroMsg.INIT", "KEVIN tab onRecreate ");
+        kJo = false;
       }
     }
   }
@@ -77,13 +77,13 @@ public abstract class a
   public void onActivityCreated(Bundle paramBundle)
   {
     super.onActivityCreated(paramBundle);
-    kjm = paramBundle;
-    kjg = true;
+    hpz = paramBundle;
+    kJp = true;
   }
   
   public void onDestroy()
   {
-    aZo();
+    beF();
     super.onDestroy();
   }
   
@@ -95,55 +95,55 @@ public abstract class a
     return super.onKeyDown(paramInt, paramKeyEvent);
   }
   
-  public void onPause()
+  public final void onPause()
   {
     super.onPause();
-    kjl = true;
-    if (kjl)
+    kJu = true;
+    if (kJu)
     {
-      if (!kji) {
-        kjl = false;
+      if (!kJr) {
+        kJu = false;
       }
     }
     else {
       return;
     }
     long l = System.currentTimeMillis();
-    aZm();
-    u.d("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN " + toString() + " onTabPause last : " + (System.currentTimeMillis() - l));
-    kji = false;
-    kjl = false;
+    beD();
+    v.d("MicroMsg.INIT", "KEVIN " + toString() + " onTabPause last : " + (System.currentTimeMillis() - l));
+    kJr = false;
+    kJu = false;
   }
   
-  public void onResume()
+  public final void onResume()
   {
     super.onResume();
-    aZt();
-    LauncherUI localLauncherUI = LauncherUI.bat();
-    if ((localLauncherUI == null) || (!klI)) {}
+    beK();
+    LauncherUI localLauncherUI = LauncherUI.bfJ();
+    if ((localLauncherUI == null) || (!kLj)) {}
     do
     {
       return;
-      kjj = true;
-    } while (!kjk);
-    aZv();
-    kjk = false;
+      kJs = true;
+    } while (!kJt);
+    beM();
+    kJt = false;
   }
   
-  public void onStart()
+  public final void onStart()
   {
     super.onStart();
-    LauncherUI localLauncherUI = LauncherUI.bat();
-    if ((localLauncherUI == null) || (!klI)) {
+    LauncherUI localLauncherUI = LauncherUI.bfJ();
+    if ((localLauncherUI == null) || (!kLj)) {
       return;
     }
-    aZl();
+    beC();
   }
   
-  public void onStop()
+  public final void onStop()
   {
     super.onStop();
-    aZn();
+    beE();
   }
 }
 

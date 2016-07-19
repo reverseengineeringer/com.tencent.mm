@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->a(Lcom/tencent/mm/protocal/b/add;ILjava/lang/String;)V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->a(Lcom/tencent/mm/protocal/b/adw;ILjava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+.field final synthetic htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 377
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$3;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    .line 404
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$3;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,8 +40,8 @@
     .locals 2
 
     .prologue
-    .line 380
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$3;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    .line 407
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$3;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->d(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
@@ -49,8 +49,8 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->fd(Z)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->fm(Z)V
 
-    .line 381
+    .line 408
     return-void
 .end method

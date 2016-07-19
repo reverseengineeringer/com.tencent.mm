@@ -10,17 +10,17 @@ final class j$3
   
   public final void onClick(View paramView)
   {
-    paramView = bMp;
-    int i = bMq;
-    if (asN == 1) {
-      bMl[i] = 0;
+    paramView = bFJ;
+    int i = bFK;
+    if (aex == 1) {
+      bFF[i] = 0;
     }
     for (;;)
     {
       paramView.notifyDataSetChanged();
       return;
-      if (asN == 2) {
-        bMl[i] = 0;
+      if (aex == 2) {
+        bFF[i] = 0;
       }
     }
   }

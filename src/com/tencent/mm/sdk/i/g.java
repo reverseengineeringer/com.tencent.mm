@@ -4,17 +4,17 @@ import android.os.Debug;
 import junit.framework.Assert;
 
 final class g
-  implements Comparable, Runnable
+  implements Comparable<g>, Runnable
 {
-  private static final String cdM;
-  private static int jZj = 1000;
-  final Runnable jWd;
-  final String jWe;
-  long jWi;
-  long jWk;
-  long jWl;
-  final boolean jZk;
-  e.b jZl;
+  private static final String bYN;
+  private static int kzG = 1000;
+  final Runnable kvW;
+  final String kvX;
+  long kwb;
+  long kwd;
+  long kwe;
+  final boolean kzH;
+  e.b kzI;
   final int priority;
   boolean started = false;
   
@@ -28,34 +28,34 @@ final class g
     localStringBuilder.append("|usedTime = %d");
     localStringBuilder.append("|cpuTime = %d");
     localStringBuilder.append("|started = %b");
-    cdM = localStringBuilder.toString();
+    bYN = localStringBuilder.toString();
   }
   
   g(Runnable paramRunnable, String paramString, int paramInt, boolean paramBoolean, e.b paramb)
   {
     Assert.assertNotNull("ThreadTask arg task is null!", paramRunnable);
     Assert.assertNotNull("ThreadTask arg name is null!", paramString);
-    jWd = paramRunnable;
-    jWe = paramString;
+    kvW = paramRunnable;
+    kvX = paramString;
     priority = paramInt;
-    jZk = paramBoolean;
-    jWi = System.currentTimeMillis();
-    jZl = paramb;
+    kzH = paramBoolean;
+    kwb = System.currentTimeMillis();
+    kzI = paramb;
   }
   
   public final void run()
   {
-    jWk = System.currentTimeMillis();
-    jWl = Debug.threadCpuTimeNanos();
+    kwd = System.currentTimeMillis();
+    kwe = Debug.threadCpuTimeNanos();
     started = true;
-    jWd.run();
-    jWk = (System.currentTimeMillis() - jWk);
-    jWl = (Debug.threadCpuTimeNanos() - jWl);
+    kvW.run();
+    kwd = (System.currentTimeMillis() - kwd);
+    kwe = (Debug.threadCpuTimeNanos() - kwe);
   }
   
   public final String toString()
   {
-    return String.format(cdM, new Object[] { jWe, Integer.valueOf(priority), Boolean.valueOf(jZk), Long.valueOf(jWi), Long.valueOf(jWk), Long.valueOf(jWl), Boolean.valueOf(started) });
+    return String.format(bYN, new Object[] { kvX, Integer.valueOf(priority), Boolean.valueOf(kzH), Long.valueOf(kwb), Long.valueOf(kwd), Long.valueOf(kwe), Boolean.valueOf(started) });
   }
 }
 

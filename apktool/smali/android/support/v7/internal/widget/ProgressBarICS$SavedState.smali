@@ -16,6 +16,15 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Landroid/support/v7/internal/widget/ProgressBarICS$SavedState;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields

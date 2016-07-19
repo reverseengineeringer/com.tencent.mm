@@ -5,30 +5,24 @@ import android.view.ViewGroup;
 
 public final class o
 {
-  static final c fy = new d();
+  static final b fU = new c();
   
   static
   {
-    int i = Build.VERSION.SDK_INT;
-    if (i >= 14)
+    if (Build.VERSION.SDK_INT >= 14)
     {
-      fy = new b();
-      return;
-    }
-    if (i >= 11)
-    {
-      fy = new a();
+      fU = new a();
       return;
     }
   }
   
   public static void a(ViewGroup paramViewGroup)
   {
-    fy.a(paramViewGroup, false);
+    fU.a(paramViewGroup, false);
   }
   
-  static class a
-    extends o.d
+  static final class a
+    extends o.c
   {
     public final void a(ViewGroup paramViewGroup, boolean paramBoolean)
     {
@@ -36,17 +30,13 @@ public final class o
     }
   }
   
-  static final class b
-    extends o.a
-  {}
-  
-  static abstract interface c
+  static abstract interface b
   {
     public abstract void a(ViewGroup paramViewGroup, boolean paramBoolean);
   }
   
-  static class d
-    implements o.c
+  static class c
+    implements o.b
   {
     public void a(ViewGroup paramViewGroup, boolean paramBoolean) {}
   }

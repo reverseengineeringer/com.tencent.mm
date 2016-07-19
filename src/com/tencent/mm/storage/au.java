@@ -1,53 +1,44 @@
 package com.tencent.mm.storage;
 
-import com.tencent.mm.d.b.ar;
-import com.tencent.mm.sdk.g.ae.a;
-import java.lang.reflect.Field;
-import java.util.Map;
+import com.tencent.mm.bc.f.a;
+import com.tencent.mm.sdk.h.c.a;
+import com.tencent.mm.sdk.h.d;
 
 public final class au
-  extends ar
+  extends com.tencent.mm.sdk.h.f<at>
+  implements f.a
 {
-  protected static ae.a aqp;
+  public static final String[] bkN = { com.tencent.mm.sdk.h.f.a(at.bjR, "VoiceTransText") };
+  public d bkP;
   
-  static
+  public au(d paramd)
   {
-    ae.a locala = new ae.a();
-    bNX = new Field[6];
-    bbY = new String[7];
-    StringBuilder localStringBuilder = new StringBuilder();
-    bbY[0] = "appId";
-    ibX.put("appId", "TEXT PRIMARY KEY ");
-    localStringBuilder.append(" appId TEXT PRIMARY KEY ");
-    localStringBuilder.append(", ");
-    ibW = "appId";
-    bbY[1] = "packageName";
-    ibX.put("packageName", "TEXT");
-    localStringBuilder.append(" packageName TEXT");
-    localStringBuilder.append(", ");
-    bbY[2] = "status";
-    ibX.put("status", "INTEGER default '0' ");
-    localStringBuilder.append(" status INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    bbY[3] = "sceneFlag";
-    ibX.put("sceneFlag", "INTEGER default '0' ");
-    localStringBuilder.append(" sceneFlag INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    bbY[4] = "msgTypeFlag";
-    ibX.put("msgTypeFlag", "INTEGER default '0' ");
-    localStringBuilder.append(" msgTypeFlag INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    bbY[5] = "msgState";
-    ibX.put("msgState", "INTEGER default '0' ");
-    localStringBuilder.append(" msgState INTEGER default '0' ");
-    bbY[6] = "rowid";
-    ibY = localStringBuilder.toString();
-    aqp = locala;
+    this(paramd, at.bjR, "VoiceTransText");
   }
   
-  protected final ae.a lX()
+  private au(d paramd, c.a parama, String paramString)
   {
-    return aqp;
+    super(paramd, parama, paramString, null);
+    bkP = paramd;
+  }
+  
+  public final int a(com.tencent.mm.bc.f paramf)
+  {
+    if (paramf != null) {
+      bkP = paramf;
+    }
+    return 0;
+  }
+  
+  public final boolean a(at paramat)
+  {
+    if (paramat == null) {}
+    do
+    {
+      return false;
+      paramat = paramat.kn();
+    } while (bkP.replace("VoiceTransText", "msgId", paramat) < 0L);
+    return true;
   }
 }
 

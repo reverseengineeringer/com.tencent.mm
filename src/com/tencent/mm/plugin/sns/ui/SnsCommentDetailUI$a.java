@@ -14,13 +14,13 @@ final class SnsCommentDetailUI$a
   
   public final void onClick(View paramView)
   {
-    ihda).hmq.onClick(paramView);
+    ihrN).hCx.onClick(paramView);
   }
   
   public final void updateDrawState(TextPaint paramTextPaint)
   {
-    int i = hda.getResources().getColor(2131230724);
-    if (iQe)
+    int i = hrN.getResources().getColor(2131689956);
+    if (jnm)
     {
       bgColor = i;
       return;

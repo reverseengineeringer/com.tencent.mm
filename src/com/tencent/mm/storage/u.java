@@ -3,77 +3,78 @@ package com.tencent.mm.storage;
 import com.tencent.mm.a.e;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
 final class u
 {
-  protected final long kfm = 86400L;
-  private t kfn = new t();
+  protected final long kFt = 86400L;
+  private t kFu = new t();
   
   public u()
   {
-    byte[] arrayOfByte = e.d(tDcachePath + "checkmsgid.ini", 0, -1);
-    if (!ay.J(arrayOfByte)) {}
+    byte[] arrayOfByte = e.d(tEcachePath + "checkmsgid.ini", 0, -1);
+    if (!be.P(arrayOfByte)) {}
     try
     {
-      kfn.am(arrayOfByte);
-      if (aWQ()) {
-        aWP();
+      kFu.au(arrayOfByte);
+      if (bce()) {
+        bcd();
       }
       return;
     }
     catch (IOException localIOException)
     {
-      com.tencent.mm.sdk.platformtools.u.w("!32@/B4Tb64lLpIeyFFi+7ORKM25zAgrDjCa", "DelSvrIDs parse Error");
-      com.tencent.mm.sdk.platformtools.u.e("!32@/B4Tb64lLpIeyFFi+7ORKM25zAgrDjCa", "exception:%s", new Object[] { ay.b(localIOException) });
+      v.w("MicroMsg.DelSvrIdMgr", "DelSvrIDs parse Error");
+      v.e("MicroMsg.DelSvrIdMgr", "exception:%s", new Object[] { be.f(localIOException) });
     }
   }
   
-  private void aWP()
+  private void bcd()
   {
     try
     {
-      kfn.kfi.clear();
-      kfn.kfh.clear();
-      kfn.kfg.clear();
-      byte[] arrayOfByte = kfn.toByteArray();
-      e.b(tDcachePath + "checkmsgid.ini", arrayOfByte, arrayOfByte.length);
+      kFu.kFp.clear();
+      kFu.kFo.clear();
+      kFu.kFn.clear();
+      byte[] arrayOfByte = kFu.toByteArray();
+      e.b(tEcachePath + "checkmsgid.ini", arrayOfByte, arrayOfByte.length);
       return;
     }
     catch (IOException localIOException)
     {
-      com.tencent.mm.sdk.platformtools.u.e("!32@/B4Tb64lLpIeyFFi+7ORKM25zAgrDjCa", "exception:%s", new Object[] { ay.b(localIOException) });
+      v.e("MicroMsg.DelSvrIdMgr", "exception:%s", new Object[] { be.f(localIOException) });
     }
   }
   
-  private boolean aWQ()
+  private boolean bce()
   {
     boolean bool = false;
-    com.tencent.mm.sdk.platformtools.u.v("!32@/B4Tb64lLpIeyFFi+7ORKM25zAgrDjCa", "checkOldData todayIndex:%d, t0Size:%d, t1Size:%d, t2Size:%d", new Object[] { Integer.valueOf(kfn.kff), Integer.valueOf(kfn.kfj.size()), Integer.valueOf(kfn.kfk.size()), Integer.valueOf(kfn.kfl.size()) });
-    int i = (int)(ay.FR() / 86400L);
-    int j = kfn.kff;
-    kfn.kff = i;
+    v.v("MicroMsg.DelSvrIdMgr", "checkOldData todayIndex:%d, t0Size:%d, t1Size:%d, t2Size:%d", new Object[] { Integer.valueOf(kFu.kFm), Integer.valueOf(kFu.kFq.size()), Integer.valueOf(kFu.kFr.size()), Integer.valueOf(kFu.kFs.size()) });
+    int i = (int)(be.Go() / 86400L);
+    int j = kFu.kFm;
+    kFu.kFm = i;
     switch (i - j)
     {
     default: 
-      kfn.kfl.clear();
-      kfn.kfk.clear();
-      kfn.kfj.clear();
+      kFu.kFs.clear();
+      kFu.kFr.clear();
+      kFu.kFq.clear();
       bool = true;
     case 0: 
       return bool;
     case 1: 
-      kfn.kfl = kfn.kfk;
-      kfn.kfk = kfn.kfj;
-      kfn.kfj.clear();
+      kFu.kFs = kFu.kFr;
+      kFu.kFr = kFu.kFq;
+      kFu.kFq.clear();
       return true;
     }
-    kfn.kfl = kfn.kfj;
-    kfn.kfk.clear();
-    kfn.kfj.clear();
+    kFu.kFs = kFu.kFq;
+    kFu.kFr.clear();
+    kFu.kFq.clear();
     return true;
   }
   
@@ -83,23 +84,23 @@ final class u
       return;
     }
     if (paramBoolean) {
-      aWQ();
+      bce();
     }
     paramInt -= (int)(paramLong2 / 86400L);
     switch (paramInt)
     {
     default: 
-      com.tencent.mm.sdk.platformtools.u.e("!32@/B4Tb64lLpIeyFFi+7ORKM25zAgrDjCa", "should not add to thease lists, dayIndex:%d", new Object[] { Integer.valueOf(paramInt) });
+      v.e("MicroMsg.DelSvrIdMgr", "should not add to thease lists, dayIndex:%d", new Object[] { Integer.valueOf(paramInt) });
     }
     while (paramBoolean)
     {
-      aWP();
+      bcd();
       return;
-      kfn.kfj.add(Long.valueOf(paramLong1));
+      kFu.kFq.add(Long.valueOf(paramLong1));
       continue;
-      kfn.kfk.add(Long.valueOf(paramLong1));
+      kFu.kFr.add(Long.valueOf(paramLong1));
       continue;
-      kfn.kfl.add(Long.valueOf(paramLong1));
+      kFu.kFs.add(Long.valueOf(paramLong1));
     }
   }
   
@@ -108,26 +109,26 @@ final class u
     a(paramInt, paramLong1, paramLong2, true);
   }
   
-  protected final void d(List paramList1, List paramList2)
+  protected final void d(List<Integer> paramList, List<Long> paramList1)
   {
-    com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpIeyFFi+7ORKM25zAgrDjCa", "add size:%d", new Object[] { Integer.valueOf(paramList1.size()) });
-    aWQ();
-    int j = (int)(ay.FR() / 86400L);
+    v.i("MicroMsg.DelSvrIdMgr", "add size:%d", new Object[] { Integer.valueOf(paramList.size()) });
+    bce();
+    int j = (int)(be.Go() / 86400L);
     int i = 0;
-    while (i < paramList1.size())
+    while (i < paramList.size())
     {
-      a(j, ((Integer)paramList1.get(i)).intValue(), ((Long)paramList2.get(i)).longValue(), false);
+      a(j, ((Integer)paramList.get(i)).intValue(), ((Long)paramList1.get(i)).longValue(), false);
       i += 1;
     }
-    aWP();
+    bcd();
   }
   
-  protected final boolean dw(long paramLong)
+  protected final boolean dN(long paramLong)
   {
-    if (aWQ()) {
-      aWP();
+    if (bce()) {
+      bcd();
     }
-    return (kfn.kfj.contains(Long.valueOf(paramLong))) || (kfn.kfk.contains(Long.valueOf(paramLong))) || (kfn.kfl.contains(Long.valueOf(paramLong)));
+    return (kFu.kFq.contains(Long.valueOf(paramLong))) || (kFu.kFr.contains(Long.valueOf(paramLong))) || (kFu.kFs.contains(Long.valueOf(paramLong)));
   }
 }
 

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract fg(Z)V
+.method public abstract ft(Z)V
 .end method

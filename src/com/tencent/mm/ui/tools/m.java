@@ -18,7 +18,7 @@ import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMFragmentActivity;
 import com.tencent.mm.ui.base.k;
 import com.tencent.mm.ui.base.l;
@@ -33,62 +33,62 @@ import java.util.List;
 public final class m
   implements AdapterView.OnItemClickListener
 {
-  private LayoutInflater hI;
-  private k hld;
-  public n.c hle;
-  public n.d hlf;
-  private l hlg;
-  private a lwL;
-  public n.a lwM;
-  public n.b lwN;
+  private k hoR;
+  public n.c hoS;
+  public n.d hoT;
+  private l hoU;
+  private LayoutInflater ib;
+  public n.b lXA;
+  private a lXy;
+  public n.a lXz;
   private Context mContext;
   
   public m(Context paramContext)
   {
     mContext = paramContext;
-    hI = LayoutInflater.from(paramContext);
-    hld = new k(paramContext);
-    hlg = new l();
+    ib = LayoutInflater.from(paramContext);
+    hoR = new k(paramContext);
+    hoU = new l();
   }
   
   public final void a(View paramView, int paramInt, long paramLong, View.OnCreateContextMenuListener paramOnCreateContextMenuListener, n.d paramd)
   {
-    if (((mContext instanceof MMFragmentActivity)) && (mContext).kqt))
+    if (((mContext instanceof MMFragmentActivity)) && (mContext).kPy))
     {
-      u.w("!44@/B4Tb64lLpLsoKMPiL0xLC429fVkFuxXeqosDHFYUTE=", "is swiping, PASS openContextMenuForAdapterView");
+      v.w("MicroMsg.MMSubMenuHelper", "is swiping, PASS openContextMenuForAdapterView");
       return;
     }
-    hlg.clear();
+    hoU.clear();
     AdapterView.AdapterContextMenuInfo localAdapterContextMenuInfo = new AdapterView.AdapterContextMenuInfo(paramView, paramInt, paramLong);
-    paramOnCreateContextMenuListener.onCreateContextMenu(hlg, paramView, localAdapterContextMenuInfo);
-    paramView = hlg.kFt.iterator();
+    paramOnCreateContextMenuListener.onCreateContextMenu(hoU, paramView, localAdapterContextMenuInfo);
+    paramView = hoU.lex.iterator();
     while (paramView.hasNext()) {
-      nextkFw = localAdapterContextMenuInfo;
+      nextleA = localAdapterContextMenuInfo;
     }
-    biF();
-    hlf = paramd;
+    boB();
+    hoT = paramd;
   }
   
   public final void a(View paramView, final View.OnCreateContextMenuListener paramOnCreateContextMenuListener, n.d paramd)
   {
-    hlf = paramd;
-    u.v("!44@/B4Tb64lLpLsoKMPiL0xLC429fVkFuxXeqosDHFYUTE=", "registerForContextMenu");
+    hoT = paramd;
+    v.v("MicroMsg.MMSubMenuHelper", "registerForContextMenu");
     if ((paramView instanceof AbsListView))
     {
-      u.v("!44@/B4Tb64lLpLsoKMPiL0xLC429fVkFuxXeqosDHFYUTE=", "registerForContextMenu AbsListView");
+      v.v("MicroMsg.MMSubMenuHelper", "registerForContextMenu AbsListView");
       ((AbsListView)paramView).setOnItemLongClickListener(new AdapterView.OnItemLongClickListener()
       {
-        public final boolean onItemLongClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+        public final boolean onItemLongClick(AdapterView<?> paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
         {
           m.a(m.this).clear();
-          u.v("!44@/B4Tb64lLpLsoKMPiL0xLC429fVkFuxXeqosDHFYUTE=", "registerForContextMenu AbsListView long click");
+          v.v("MicroMsg.MMSubMenuHelper", "registerForContextMenu AbsListView long click");
           paramAnonymousAdapterView = new AdapterView.AdapterContextMenuInfo(paramAnonymousView, paramAnonymousInt, paramAnonymousLong);
           paramOnCreateContextMenuListener.onCreateContextMenu(m.a(m.this), paramAnonymousView, paramAnonymousAdapterView);
-          paramAnonymousView = akFt.iterator();
+          paramAnonymousView = alex.iterator();
           while (paramAnonymousView.hasNext()) {
-            nextkFw = paramAnonymousAdapterView;
+            nextleA = paramAnonymousAdapterView;
           }
-          biF();
+          boB();
           return true;
         }
       });
@@ -96,29 +96,29 @@ public final class m
     }
     if ((paramView instanceof MMWebView))
     {
-      u.v("!44@/B4Tb64lLpLsoKMPiL0xLC429fVkFuxXeqosDHFYUTE=", "registerForContextMenu for webview");
+      v.v("MicroMsg.MMSubMenuHelper", "registerForContextMenu for webview");
       paramView.setOnLongClickListener(new View.OnLongClickListener()
       {
         public final boolean onLongClick(View paramAnonymousView)
         {
-          u.v("!44@/B4Tb64lLpLsoKMPiL0xLC429fVkFuxXeqosDHFYUTE=", "registerForContextMenu normal view long click");
+          v.v("MicroMsg.MMSubMenuHelper", "registerForContextMenu normal view long click");
           m.a(m.this).clear();
           paramOnCreateContextMenuListener.onCreateContextMenu(m.a(m.this), paramAnonymousView, null);
-          biF();
+          boB();
           return m.a(m.this).size() > 0;
         }
       });
       return;
     }
-    u.v("!44@/B4Tb64lLpLsoKMPiL0xLC429fVkFuxXeqosDHFYUTE=", "registerForContextMenu normal view");
+    v.v("MicroMsg.MMSubMenuHelper", "registerForContextMenu normal view");
     paramView.setOnLongClickListener(new View.OnLongClickListener()
     {
       public final boolean onLongClick(View paramAnonymousView)
       {
-        u.v("!44@/B4Tb64lLpLsoKMPiL0xLC429fVkFuxXeqosDHFYUTE=", "registerForContextMenu normal view long click");
+        v.v("MicroMsg.MMSubMenuHelper", "registerForContextMenu normal view long click");
         m.a(m.this).clear();
         paramOnCreateContextMenuListener.onCreateContextMenu(m.a(m.this), paramAnonymousView, null);
-        biF();
+        boB();
         return true;
       }
     });
@@ -126,63 +126,63 @@ public final class m
   
   public final void b(View paramView, View.OnCreateContextMenuListener paramOnCreateContextMenuListener, n.d paramd)
   {
-    if (((mContext instanceof MMFragmentActivity)) && (mContext).kqt))
+    if (((mContext instanceof MMFragmentActivity)) && (mContext).kPy))
     {
-      u.w("!44@/B4Tb64lLpLsoKMPiL0xLC429fVkFuxXeqosDHFYUTE=", "is swiping, PASS openContextMenu");
+      v.w("MicroMsg.MMSubMenuHelper", "is swiping, PASS openContextMenu");
       return;
     }
-    hlg.clear();
-    paramOnCreateContextMenuListener.onCreateContextMenu(hlg, paramView, null);
-    biF();
-    hlf = paramd;
+    hoU.clear();
+    paramOnCreateContextMenuListener.onCreateContextMenu(hoU, paramView, null);
+    boB();
+    hoT = paramd;
   }
   
-  public final Dialog biF()
+  public final Dialog boB()
   {
-    if (hle != null)
+    if (hoS != null)
     {
-      hlg.clear();
-      hlg = new l();
-      hle.a(hlg);
+      hoU.clear();
+      hoU = new l();
+      hoS.a(hoU);
     }
-    if (hlg.bcJ())
+    if (hoU.big())
     {
-      u.w("!44@/B4Tb64lLpLsoKMPiL0xLC429fVkFuxXeqosDHFYUTE=", "show, menu empty");
+      v.w("MicroMsg.MMSubMenuHelper", "show, menu empty");
       return null;
     }
-    if (lwL == null) {
-      lwL = new a((byte)0);
+    if (lXy == null) {
+      lXy = new a((byte)0);
     }
-    hld.cTk = lwL;
-    hld.iRx = this;
-    hld.setTitle(hlg.lW);
-    hld.show();
-    return hld;
+    hoR.cQB = lXy;
+    hoR.joG = this;
+    hoR.setTitle(hoU.mm);
+    hoR.show();
+    return hoR;
   }
   
   public final void d(DialogInterface.OnCancelListener paramOnCancelListener)
   {
-    hld.setOnCancelListener(paramOnCancelListener);
+    hoR.setOnCancelListener(paramOnCancelListener);
   }
   
   public final void dismiss()
   {
-    if (hld.isShowing()) {
-      hld.dismiss();
+    if (hoR.isShowing()) {
+      hoR.dismiss();
     }
   }
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    paramAdapterView = (com.tencent.mm.ui.base.m)hlg.kFt.get(paramInt);
+    paramAdapterView = (com.tencent.mm.ui.base.m)hoU.lex.get(paramInt);
     if (paramAdapterView.performClick())
     {
-      u.i("!44@/B4Tb64lLpLsoKMPiL0xLC429fVkFuxXeqosDHFYUTE=", "onItemClick menu item has listener");
+      v.i("MicroMsg.MMSubMenuHelper", "onItemClick menu item has listener");
       dismiss();
       return;
     }
-    if (hlf != null) {
-      hlf.d(paramAdapterView, paramInt);
+    if (hoT != null) {
+      hoT.d(paramAdapterView, paramInt);
     }
     dismiss();
   }
@@ -212,24 +212,24 @@ public final class m
       MenuItem localMenuItem;
       if (paramView == null)
       {
-        paramView = m.b(m.this).inflate(2131363245, paramViewGroup, false);
+        paramView = m.b(m.this).inflate(2130903974, paramViewGroup, false);
         paramViewGroup = new a((byte)0);
-        cVH = ((TextView)paramView.findViewById(2131165460));
-        fAr = ((ImageView)paramView.findViewById(2131166684));
+        cTU = ((TextView)paramView.findViewById(2131755172));
+        fJv = ((ImageView)paramView.findViewById(2131755171));
         paramView.setTag(paramViewGroup);
         localMenuItem = m.a(m.this).getItem(paramInt);
-        cVH.setText(localMenuItem.getTitle());
+        cTU.setText(localMenuItem.getTitle());
         Drawable localDrawable = m.a(m.this).getItem(paramInt).getIcon();
         if (localDrawable == null) {
           break label168;
         }
-        fAr.setVisibility(0);
-        fAr.setImageDrawable(localDrawable);
+        fJv.setVisibility(0);
+        fJv.setImageDrawable(localDrawable);
       }
       for (;;)
       {
         if (m.d(m.this) != null) {
-          m.d(m.this).a(cVH, localMenuItem);
+          m.d(m.this).a(cTU, localMenuItem);
         }
         return paramView;
         paramViewGroup = (a)paramView.getTag();
@@ -237,20 +237,20 @@ public final class m
         label168:
         if (m.c(m.this) != null)
         {
-          fAr.setVisibility(0);
-          m.c(m.this).a(fAr, localMenuItem);
+          fJv.setVisibility(0);
+          m.c(m.this).a(fJv, localMenuItem);
         }
         else
         {
-          fAr.setVisibility(8);
+          fJv.setVisibility(8);
         }
       }
     }
     
     private final class a
     {
-      TextView cVH;
-      ImageView fAr;
+      TextView cTU;
+      ImageView fJv;
       
       private a() {}
     }

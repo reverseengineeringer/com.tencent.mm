@@ -3,7 +3,7 @@ package com.tencent.mm.dbsupport.newcursor;
 public final class g
 {
   /* Error */
-  public static void qI()
+  public static void pm()
   {
     // Byte code:
     //   0: lconst_0

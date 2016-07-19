@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract fj(Z)V
+.method public abstract da(Z)V
 .end method

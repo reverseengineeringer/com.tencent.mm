@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.base.stub;
 
 import com.tencent.mm.model.as.a;
 import com.tencent.mm.network.e;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class WXCommProvider$5$1
   implements as.a
@@ -11,8 +11,8 @@ final class WXCommProvider$5$1
   
   public final void a(e parame)
   {
-    u.i("!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph", "checkIsLogin onSceneEnd() hasLogin:%s", new Object[] { Boolean.valueOf(WXCommProvider.cBi) });
-    cBo.at(Boolean.valueOf(true));
+    v.i("MicroMsg.WXCommProvider", "checkIsLogin onSceneEnd() hasLogin:%s", new Object[] { Boolean.valueOf(WXCommProvider.cyd) });
+    cyj.aO(Boolean.valueOf(true));
   }
 }
 

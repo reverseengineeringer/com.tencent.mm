@@ -4,11 +4,11 @@ import java.io.ByteArrayOutputStream;
 
 public abstract interface f$a
 {
-  public abstract int a(String paramString, int paramInt, keep_ProgressInfo paramkeep_ProgressInfo, keep_SceneResult paramkeep_SceneResult);
+  public abstract int a(String paramString, int paramInt, keep_ProgressInfo paramkeep_ProgressInfo, keep_SceneResult paramkeep_SceneResult, boolean paramBoolean);
   
   public abstract void a(String paramString, ByteArrayOutputStream paramByteArrayOutputStream);
   
-  public abstract byte[] i(String paramString, byte[] paramArrayOfByte);
+  public abstract byte[] h(String paramString, byte[] paramArrayOfByte);
 }
 
 /* Location:

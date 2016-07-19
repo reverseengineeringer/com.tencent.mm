@@ -46,16 +46,6 @@
     return-object p1
 .end method
 
-.method public final a(Landroid/view/MenuItem;)Landroid/view/View;
-    .locals 1
-
-    .prologue
-    .line 131
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
 .method public final a(Landroid/view/MenuItem;I)V
     .locals 0
 

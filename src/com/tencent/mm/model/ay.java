@@ -1,45 +1,45 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.platformtools.n;
-import com.tencent.mm.protocal.b.aj;
-import com.tencent.mm.r.c.a;
-import com.tencent.mm.r.c.b;
-import com.tencent.mm.sdk.platformtools.q;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.platformtools.m;
+import com.tencent.mm.protocal.b.am;
+import com.tencent.mm.sdk.platformtools.r;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
 import com.tencent.mm.storage.h;
+import com.tencent.mm.t.c.a;
+import com.tencent.mm.t.c.b;
 import java.util.Map;
 import junit.framework.Assert;
 
 public final class ay
-  implements com.tencent.mm.r.c
+  implements com.tencent.mm.t.c
 {
   public final c.b b(c.a parama)
   {
     boolean bool2 = true;
-    parama = bFh;
+    parama = bys;
     if (parama != null)
     {
       bool1 = true;
       Assert.assertTrue(bool1);
-      if (iXv == null) {
-        break label95;
+      if (juZ == null) {
+        break label94;
       }
     }
-    label95:
+    label94:
     for (boolean bool1 = bool2;; bool1 = false)
     {
       Assert.assertTrue(bool1);
-      parama = (String)q.J(n.a(iXv), "tips", null).get(".tips.tip.url");
-      u.v("!44@/B4Tb64lLpKlRg6vINul8YyaOL4ccEjxhNngZRwSf28=", "url:" + parama);
-      ah.tD().rn().set(12308, parama);
+      parama = (String)r.cr(m.a(juZ), "tips").get(".tips.tip.url");
+      v.v("MicroMsg.SoftwareMsgExtension", "url:" + parama);
+      ah.tE().ro().set(12308, parama);
       return null;
       bool1 = false;
       break;
     }
   }
   
-  public final void d(ag paramag) {}
+  public final void d(ai paramai) {}
 }
 
 /* Location:

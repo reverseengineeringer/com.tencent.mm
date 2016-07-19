@@ -2,17 +2,17 @@ package com.tencent.mm.ui.tools;
 
 final class d
 {
-  String aJD;
-  String bUu;
-  int eCk;
-  String eCl;
+  String avX;
+  String bNV;
+  int eIJ;
+  String eIK;
   
   public d(String paramString1, String paramString2, int paramInt, String paramString3)
   {
-    bUu = paramString1;
-    aJD = paramString2;
-    eCk = paramInt;
-    eCl = paramString3;
+    bNV = paramString1;
+    avX = paramString2;
+    eIJ = paramInt;
+    eIK = paramString3;
   }
 }
 

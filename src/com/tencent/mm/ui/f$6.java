@@ -1,24 +1,17 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.d.a.gc;
-import com.tencent.mm.pluginsdk.c.a;
-import com.tencent.mm.sdk.c.b;
-import com.tencent.mm.sdk.platformtools.u;
+import android.view.View;
+import android.view.animation.AnimationUtils;
 
 final class f$6
-  extends a
+  implements Runnable
 {
-  f$6(f paramf)
-  {
-    super(0);
-  }
+  f$6(f paramf, View paramView) {}
   
-  public final void g(b paramb)
+  public final void run()
   {
-    u.d("!44@/B4Tb64lLpLZlZzKaYOI/yivpFQ+kVwcf+qE8n6dW1E=", "onMStorageNotifyEvent " + id);
-    if ((paramb instanceof gc)) {
-      f.c(klo);
-    }
+    kKW.setVisibility(8);
+    kKW.startAnimation(AnimationUtils.loadAnimation(kKO.kNN.kOg, 2130968613));
   }
 }
 

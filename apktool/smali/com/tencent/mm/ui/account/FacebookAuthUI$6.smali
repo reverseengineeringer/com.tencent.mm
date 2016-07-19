@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/FacebookAuthUI;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/account/FacebookAuthUI;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ksk:Lcom/tencent/mm/ui/account/FacebookAuthUI;
+.field final synthetic kRs:Lcom/tencent/mm/ui/account/FacebookAuthUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 329
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookAuthUI$6;->ksk:Lcom/tencent/mm/ui/account/FacebookAuthUI;
+    .line 330
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookAuthUI$6;->kRs:Lcom/tencent/mm/ui/account/FacebookAuthUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,6 +40,6 @@
     .locals 0
 
     .prologue
-    .line 333
+    .line 334
     return-void
 .end method

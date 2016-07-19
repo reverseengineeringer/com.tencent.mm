@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.util.Log;
-import com.tencent.smtt.a.r;
+import com.tencent.smtt.utils.TbsLog;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -15,10 +15,10 @@ import java.util.Arrays;
 
 public final class h
 {
-  private static h lSi = null;
-  private a lSf = null;
-  private boolean lSg = false;
-  private final int lSh = 3;
+  private static h mtX = null;
+  private a mtU = null;
+  private boolean mtV = false;
+  private final int mtW = 3;
   
   private static FileLock a(FileOutputStream paramFileOutputStream)
   {
@@ -39,9 +39,9 @@ public final class h
     return null;
   }
   
-  private static File bg(Context paramContext, String paramString)
+  private static File bf(Context paramContext, String paramString)
   {
-    m.blT();
+    m.brX();
     paramContext = m.fl(paramContext);
     if (paramContext == null) {
       return null;
@@ -59,17 +59,17 @@ public final class h
     return null;
   }
   
-  public static h bly()
+  public static h brC()
   {
-    if (lSi == null) {
-      lSi = new h();
+    if (mtX == null) {
+      mtX = new h();
     }
-    return lSi;
+    return mtX;
   }
   
-  private static FileOutputStream eS(Context paramContext)
+  private static FileOutputStream eU(Context paramContext)
   {
-    paramContext = bg(paramContext, "tbs_report_lock.txt");
+    paramContext = bf(paramContext, "tbs_report_lock.txt");
     if (paramContext != null) {
       try
       {
@@ -81,67 +81,73 @@ public final class h
     return null;
   }
   
-  final void N(Context paramContext, int paramInt)
+  final void S(Context paramContext, int paramInt)
   {
     a(paramContext, paramInt, null);
-    r.e("loaderror", String.valueOf(paramInt));
+    TbsLog.e("loaderror", String.valueOf(paramInt));
   }
   
   final void a(Context paramContext, int paramInt, Throwable paramThrowable)
   {
     if ((paramInt == 404) || (paramInt == 402) || (paramInt == 401)) {}
     Object localObject1;
-    for (lSg = false;; lSg = true)
+    for (mtV = false;; mtV = true)
     {
-      if ((lSg == true) && (lSf != null) && (lSf.empty())) {
-        lSg = false;
+      if ((mtV == true) && (mtU != null) && (mtU.empty())) {
+        mtV = false;
       }
-      if (!lSg) {
-        break label364;
+      if (!mtV) {
+        break label468;
       }
-      if (lSf == null) {
-        break label365;
+      if (mtU == null) {
+        break label469;
       }
-      localObject1 = lSf;
-      if (lSn <= lSk - 1) {
+      localObject1 = mtU;
+      if (muc <= mtZ - 1) {
         break;
       }
       throw new IndexOutOfBoundsException("sequeue is full");
     }
-    Object localObject2 = lSl;
-    int i = lSn;
-    lSn = (i + 1);
+    Object localObject2 = mua;
+    int i = muc;
+    muc = (i + 1);
     localObject2[i] = paramInt;
-    label155:
+    label266:
     Object localObject3;
     String str1;
     String str2;
     if (paramThrowable != null)
     {
-      localObject1 = o.fp(paramContext);
-      if (paramThrowable == null)
+      localObject2 = o.fp(paramContext);
+      if (paramThrowable == null) {
+        break label531;
+      }
+      if ((q.fr(mContext)) || (paramInt == 310) || (paramInt == 327) || (paramInt == 326) || (paramInt == 328))
       {
-        paramThrowable = "";
-        lTe = paramThrowable;
-        ((o)localObject1).am(paramInt, lTe);
+        localObject1 = "msg: " + paramThrowable.getMessage() + "; err: " + paramThrowable + "; cause: " + Log.getStackTraceString(paramThrowable.getCause());
+        paramThrowable = (Throwable)localObject1;
+        if (((String)localObject1).length() > 1024) {
+          paramThrowable = ((String)localObject1).substring(0, 1024);
+        }
+        muW = paramThrowable;
+        ((o)localObject2).aw(paramInt, muW);
       }
     }
     else if (paramInt == 405)
     {
-      paramThrowable = eS(paramContext);
+      paramThrowable = eU(paramContext);
       if (paramThrowable != null)
       {
         localObject1 = a(paramThrowable);
         if (localObject1 != null)
         {
           localObject3 = paramContext.getSharedPreferences("tbs_load_stat_flag", 4);
-          localObject2 = lSf.toString();
+          localObject2 = mtU.toString();
           str1 = ((SharedPreferences)localObject3).getString((String)localObject2, "");
-          m.blT();
-          paramInt = m.fe(paramContext);
+          paramInt = m.brX().ff(paramContext);
           str2 = String.valueOf(paramInt) + ";";
           if (((SharedPreferences)localObject3).contains((String)localObject2)) {
-            break label411;
+            break label541;
           }
           paramInt = 1;
         }
@@ -151,7 +157,7 @@ public final class h
     {
       if (paramInt != 0)
       {
-        o.fp(paramContext).am(300, (String)localObject2);
+        o.fp(paramContext).aw(300, (String)localObject2);
         paramContext = str1 + str2;
         localObject3 = ((SharedPreferences)localObject3).edit();
         ((SharedPreferences.Editor)localObject3).putString((String)localObject2, paramContext);
@@ -168,20 +174,28 @@ public final class h
         try
         {
           paramThrowable.close();
-          blz();
-          label364:
+          brD();
+          label468:
           return;
-          label365:
-          lSf = new a(paramInt);
+          label469:
+          mtU = new a(paramInt);
           break;
-          paramThrowable = Log.getStackTraceString(paramThrowable);
-          if (paramThrowable.length() > 1024)
-          {
-            paramThrowable = paramThrowable.substring(0, 1024);
-            break label155;
+          if (paramThrowable == null) {
+            paramThrowable = "";
           }
-          break label155;
-          label411:
+          for (;;)
+          {
+            muW = paramThrowable;
+            break;
+            paramThrowable = Log.getStackTraceString(paramThrowable);
+            if (paramThrowable.length() > 1024) {
+              paramThrowable = paramThrowable.substring(0, 1024);
+            }
+          }
+          label531:
+          muW = "NULL";
+          break label266;
+          label541:
           if (!str1.contains(str2))
           {
             paramInt = 1;
@@ -198,35 +212,35 @@ public final class h
     }
   }
   
-  final void blz()
+  final void brD()
   {
-    if (lSf != null)
+    if (mtU != null)
     {
-      a locala = lSf;
-      Arrays.fill(lSl, 0);
-      lSm = 0;
-      lSn = 0;
+      a locala = mtU;
+      Arrays.fill(mua, 0);
+      mub = 0;
+      muc = 0;
     }
-    lSg = false;
+    mtV = false;
   }
   
   public final class a
   {
-    private int lSj = 10;
-    int lSk = 3;
-    int[] lSl = new int[lSk];
-    int lSm = 0;
-    int lSn = 0;
+    private int mtY = 10;
+    int mtZ = 3;
+    int[] mua = new int[mtZ];
+    int mub = 0;
+    int muc = 0;
     
     public a(int paramInt)
     {
-      lSl[0] = paramInt;
-      lSn += 1;
+      mua[0] = paramInt;
+      muc += 1;
     }
     
     public final boolean empty()
     {
-      return lSn == lSm;
+      return muc == mub;
     }
     
     public final String toString()
@@ -235,10 +249,10 @@ public final class h
         return "";
       }
       StringBuilder localStringBuilder = new StringBuilder("[");
-      int i = lSm;
-      while (i < lSn)
+      int i = mub;
+      while (i < muc)
       {
-        localStringBuilder.append(String.valueOf(lSl[i]) + ",");
+        localStringBuilder.append(String.valueOf(mua[i]) + ",");
         i += 1;
       }
       i = localStringBuilder.length();

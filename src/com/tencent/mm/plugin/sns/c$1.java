@@ -1,19 +1,19 @@
 package com.tencent.mm.plugin.sns;
 
-import com.tencent.mm.d.a.kd;
+import com.tencent.mm.e.a.kj;
 import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah.a;
 
 final class c$1
-  implements af.a
+  implements ah.a
 {
   c$1(c paramc) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    kd localkd = new kd();
-    aGD.aAt = null;
-    a.jUF.j(localkd);
+    kj localkj = new kj();
+    asM.amz = null;
+    a.kug.y(localkj);
     return false;
   }
 }

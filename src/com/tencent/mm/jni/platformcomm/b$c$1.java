@@ -3,8 +3,8 @@ package com.tencent.mm.jni.platformcomm;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class b$c$1
   extends BroadcastReceiver
@@ -12,7 +12,7 @@ final class b$c$1
   public final void onReceive(Context paramContext, Intent paramIntent)
   {
     paramContext = paramIntent.getAction();
-    if (ay.kz(paramContext)) {}
+    if (be.kf(paramContext)) {}
     String str1;
     String str2;
     long l;
@@ -27,16 +27,16 @@ final class b$c$1
           i = paramIntent.getIntExtra("pid", 0);
         } while (i == 0);
         str1 = paramIntent.getStringExtra("processName");
-      } while ((ay.kz(str1)) || (!str1.equals(ay.d(y.getContext(), i))));
+      } while ((be.kf(str1)) || (!str1.equals(be.f(aa.getContext(), i))));
       str2 = paramIntent.getStringExtra("traceMsg");
       l = paramIntent.getLongExtra("tick", 0L);
       if ("com.tencent.mm.ACTION.note_tracemsg_lock".equals(paramContext))
       {
-        b.c.d(str1, str2, l);
+        b.c.c(str1, str2, l);
         return;
       }
     } while (!"com.tencent.mm.ACTION.note_tracemsg_unlock".equals(paramContext));
-    b.c.e(str1, str2, l);
+    b.c.d(str1, str2, l);
   }
 }
 

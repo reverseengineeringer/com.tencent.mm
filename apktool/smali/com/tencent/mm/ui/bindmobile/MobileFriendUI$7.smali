@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+.field final synthetic loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 495
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$7;->kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$7;->loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 499
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$7;->kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$7;->loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
     new-instance v1, Landroid/content/Intent;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$7;->kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$7;->loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
     const-class v3, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
 

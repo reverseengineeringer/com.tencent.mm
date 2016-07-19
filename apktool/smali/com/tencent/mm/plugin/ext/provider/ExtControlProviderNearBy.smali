@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/q/d$a;
+.implements Lcom/tencent/mm/s/d$a;
 
 
 # annotations
@@ -19,39 +19,57 @@
 
 
 # static fields
-.field private static final dLr:Landroid/content/UriMatcher;
+.field private static final dMZ:Landroid/content/UriMatcher;
 
-.field private static dLt:Z
+.field private static dNb:Z
 
-.field private static dLu:Lcom/tencent/mm/sdk/platformtools/af;
+.field private static dNc:Lcom/tencent/mm/sdk/platformtools/ah;
 
-.field private static final ec:[Ljava/lang/String;
+.field private static final es:[Ljava/lang/String;
 
 
 # instance fields
-.field private bJd:Lcom/tencent/mm/modelgeo/c;
+.field private bCq:Lcom/tencent/mm/modelgeo/c;
 
-.field private bmY:Lcom/tencent/mm/modelgeo/a$a;
+.field private baF:Lcom/tencent/mm/modelgeo/a$a;
 
-.field private cZx:Lcom/tencent/mm/pluginsdk/c/b;
+.field private cYd:Lcom/tencent/mm/pluginsdk/c/b;
 
-.field private dLj:I
+.field private dMR:I
 
-.field private dLk:Ljava/util/List;
+.field private dMS:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/protocal/b/abq;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private dLl:Lcom/tencent/mm/az/d;
+.field private dMT:Lcom/tencent/mm/bc/d;
 
-.field private dLm:Ljava/util/Set;
+.field private dMU:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private dLn:Ljava/util/concurrent/CountDownLatch;
+.field private dMV:Ljava/util/concurrent/CountDownLatch;
 
-.field private dLo:Ljava/util/concurrent/CountDownLatch;
+.field private dMW:Ljava/util/concurrent/CountDownLatch;
 
-.field private dLp:Lcom/tencent/mm/protocal/b/abb;
+.field private dMX:Lcom/tencent/mm/protocal/b/abq;
 
-.field private dLq:Z
+.field private dMY:Z
 
-.field private dLs:Z
+.field private dNa:Z
 
 
 # direct methods
@@ -94,7 +112,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->ec:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->es:[Ljava/lang/String;
 
     .line 73
     new-instance v0, Landroid/content/UriMatcher;
@@ -104,7 +122,7 @@
     invoke-direct {v0, v1}, Landroid/content/UriMatcher;-><init>(I)V
 
     .line 74
-    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLr:Landroid/content/UriMatcher;
+    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMZ:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.plugin.ext.NearBy"
 
@@ -113,7 +131,7 @@
     invoke-virtual {v0, v1, v2, v4}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 75
-    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLr:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMZ:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.plugin.ext.NearBy"
 
@@ -122,7 +140,7 @@
     invoke-virtual {v0, v1, v2, v5}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 76
-    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLr:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMZ:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.plugin.ext.NearBy"
 
@@ -131,18 +149,18 @@
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 79
-    sput-boolean v3, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLt:Z
+    sput-boolean v3, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dNb:Z
 
     .line 80
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/af;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ah;
 
     new-instance v1, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$1;
 
     invoke-direct {v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$1;-><init>()V
 
-    invoke-direct {v0, v1, v3}, Lcom/tencent/mm/sdk/platformtools/af;-><init>(Lcom/tencent/mm/sdk/platformtools/af$a;Z)V
+    invoke-direct {v0, v1, v3}, Lcom/tencent/mm/sdk/platformtools/ah;-><init>(Lcom/tencent/mm/sdk/platformtools/ah$a;Z)V
 
-    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLu:Lcom/tencent/mm/sdk/platformtools/af;
+    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dNc:Lcom/tencent/mm/sdk/platformtools/ah;
 
     return-void
 .end method
@@ -157,43 +175,43 @@
     .line 70
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLs:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dNa:Z
 
     .line 283
     new-instance v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;-><init>(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->cZx:Lcom/tencent/mm/pluginsdk/c/b;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->cYd:Lcom/tencent/mm/pluginsdk/c/b;
 
     .line 319
     new-instance v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$4;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$4;-><init>(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->bmY:Lcom/tencent/mm/modelgeo/a$a;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->baF:Lcom/tencent/mm/modelgeo/a$a;
 
     return-void
 .end method
 
-.method static synthetic CP()Z
+.method static synthetic Da()Z
     .locals 1
 
     .prologue
     .line 44
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLt:Z
+    sput-boolean v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dNb:Z
 
     return v0
 .end method
 
-.method private VA()V
+.method private Xi()V
     .locals 5
 
     .prologue
     .line 360
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLm:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMU:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
@@ -202,7 +220,7 @@
     if-lez v0, :cond_1
 
     .line 361
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLm:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMU:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -223,7 +241,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 362
-    const-string/jumbo v2, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v2, "MicroMsg.ExtControlProviderNearBy"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -239,28 +257,28 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 363
-    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->nU(Ljava/lang/String;)Lcom/tencent/mm/protocal/b/abb;
+    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->pe(Ljava/lang/String;)Lcom/tencent/mm/protocal/b/abq;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLp:Lcom/tencent/mm/protocal/b/abb;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMX:Lcom/tencent/mm/protocal/b/abq;
 
     .line 364
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLp:Lcom/tencent/mm/protocal/b/abb;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMX:Lcom/tencent/mm/protocal/b/abq;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLp:Lcom/tencent/mm/protocal/b/abb;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMX:Lcom/tencent/mm/protocal/b/abq;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/abb;->eiB:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/abq;->emC:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
     .line 365
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLl:Lcom/tencent/mm/az/d;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMT:Lcom/tencent/mm/bc/d;
 
     const/4 v2, 0x5
 
@@ -268,9 +286,9 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLp:Lcom/tencent/mm/protocal/b/abb;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMX:Lcom/tencent/mm/protocal/b/abq;
 
-    iget-object v4, v4, Lcom/tencent/mm/protocal/b/abb;->iVW:Ljava/lang/String;
+    iget-object v4, v4, Lcom/tencent/mm/protocal/b/abq;->jtx:Ljava/lang/String;
 
     aput-object v4, v2, v3
 
@@ -282,25 +300,25 @@
 
     const/4 v3, 0x2
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLp:Lcom/tencent/mm/protocal/b/abb;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMX:Lcom/tencent/mm/protocal/b/abq;
 
-    iget-object v4, v4, Lcom/tencent/mm/protocal/b/abb;->jxf:Ljava/lang/String;
+    iget-object v4, v4, Lcom/tencent/mm/protocal/b/abq;->jVL:Ljava/lang/String;
 
     aput-object v4, v2, v3
 
     const/4 v3, 0x3
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLp:Lcom/tencent/mm/protocal/b/abb;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMX:Lcom/tencent/mm/protocal/b/abq;
 
-    iget-object v4, v4, Lcom/tencent/mm/protocal/b/abb;->bLP:Ljava/lang/String;
+    iget-object v4, v4, Lcom/tencent/mm/protocal/b/abq;->bFj:Ljava/lang/String;
 
     aput-object v4, v2, v3
 
     const/4 v3, 0x4
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLp:Lcom/tencent/mm/protocal/b/abb;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMX:Lcom/tencent/mm/protocal/b/abq;
 
-    iget v4, v4, Lcom/tencent/mm/protocal/b/abb;->bLM:I
+    iget v4, v4, Lcom/tencent/mm/protocal/b/abq;->bFg:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -308,17 +326,17 @@
 
     aput-object v4, v2, v3
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/az/d;->addRow([Ljava/lang/Object;)V
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/bc/d;->addRow([Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 370
     :cond_1
-    const-string/jumbo v0, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderNearBy"
 
     const-string/jumbo v1, "all user has got avatar"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 372
     :cond_2
@@ -330,7 +348,7 @@
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->bJd:Lcom/tencent/mm/modelgeo/c;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->bCq:Lcom/tencent/mm/modelgeo/c;
 
     return-object v0
 .end method
@@ -340,7 +358,7 @@
 
     .prologue
     .line 44
-    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->bJd:Lcom/tencent/mm/modelgeo/c;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->bCq:Lcom/tencent/mm/modelgeo/c;
 
     return-object p1
 .end method
@@ -350,7 +368,7 @@
 
     .prologue
     .line 44
-    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLk:Ljava/util/List;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMS:Ljava/util/List;
 
     return-object p1
 .end method
@@ -360,31 +378,31 @@
 
     .prologue
     .line 44
-    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLo:Ljava/util/concurrent/CountDownLatch;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMW:Ljava/util/concurrent/CountDownLatch;
 
     return-object p1
 .end method
 
-.method private a(Lcom/tencent/mm/protocal/b/abb;)V
-    .locals 6
+.method private a(Lcom/tencent/mm/protocal/b/abq;)V
+    .locals 7
 
     .prologue
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     .line 260
     if-eqz p1, :cond_0
 
-    iget-object v0, p1, Lcom/tencent/mm/protocal/b/abb;->eiB:Ljava/lang/String;
+    iget-object v0, p1, Lcom/tencent/mm/protocal/b/abq;->emC:Ljava/lang/String;
 
     if-nez v0, :cond_2
 
     .line 261
     :cond_0
-    const-string/jumbo v0, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderNearBy"
 
     const-string/jumbo v1, "lbsContactInfo is null or lbsContactInfo\'s userName is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 281
     :cond_1
@@ -393,23 +411,23 @@
 
     .line 265
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLm:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMU:Ljava/util/Set;
 
-    iget-object v1, p1, Lcom/tencent/mm/protocal/b/abb;->eiB:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/protocal/b/abq;->emC:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 266
-    iget-object v0, p1, Lcom/tencent/mm/protocal/b/abb;->eiB:Ljava/lang/String;
+    iget-object v0, p1, Lcom/tencent/mm/protocal/b/abq;->emC:Ljava/lang/String;
 
     const/4 v1, -0x1
 
-    invoke-static {v0, v5, v1}, Lcom/tencent/mm/q/b;->a(Ljava/lang/String;ZI)Landroid/graphics/Bitmap;
+    invoke-static {v0, v6, v1}, Lcom/tencent/mm/s/b;->a(Ljava/lang/String;ZI)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
     .line 267
-    const-string/jumbo v0, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderNearBy"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -417,13 +435,13 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLo:Ljava/util/concurrent/CountDownLatch;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMW:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v3}, Ljava/util/concurrent/CountDownLatch;->getCount()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -431,17 +449,17 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 268
     if-eqz v1, :cond_1
 
     .line 269
-    const-string/jumbo v0, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderNearBy"
 
     const-string/jumbo v2, "countDownLatchGet countDown now"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 270
     new-instance v2, Ljava/io/ByteArrayOutputStream;
@@ -449,7 +467,7 @@
     invoke-direct {v2}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
     .line 271
-    new-array v0, v5, [B
+    new-array v0, v6, [B
 
     .line 272
     sget-object v3, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
@@ -469,22 +487,22 @@
 
     .line 276
     :cond_3
-    iget-object v2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLm:Ljava/util/Set;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMU:Ljava/util/Set;
 
-    iget-object v3, p1, Lcom/tencent/mm/protocal/b/abb;->eiB:Ljava/lang/String;
+    iget-object v3, p1, Lcom/tencent/mm/protocal/b/abq;->emC:Ljava/lang/String;
 
     invoke-interface {v2, v3}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     .line 277
-    iget-object v2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLl:Lcom/tencent/mm/az/d;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMT:Lcom/tencent/mm/bc/d;
 
     const/4 v3, 0x5
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    iget-object v4, p1, Lcom/tencent/mm/protocal/b/abb;->iVW:Ljava/lang/String;
+    iget-object v4, p1, Lcom/tencent/mm/protocal/b/abq;->jtx:Ljava/lang/String;
 
-    aput-object v4, v3, v5
+    aput-object v4, v3, v6
 
     const/4 v4, 0x1
 
@@ -492,19 +510,19 @@
 
     const/4 v0, 0x2
 
-    iget-object v4, p1, Lcom/tencent/mm/protocal/b/abb;->jxf:Ljava/lang/String;
+    iget-object v4, p1, Lcom/tencent/mm/protocal/b/abq;->jVL:Ljava/lang/String;
 
     aput-object v4, v3, v0
 
     const/4 v0, 0x3
 
-    iget-object v4, p1, Lcom/tencent/mm/protocal/b/abb;->bLP:Ljava/lang/String;
+    iget-object v4, p1, Lcom/tencent/mm/protocal/b/abq;->bFj:Ljava/lang/String;
 
     aput-object v4, v3, v0
 
     const/4 v0, 0x4
 
-    iget v4, p1, Lcom/tencent/mm/protocal/b/abb;->bLM:I
+    iget v4, p1, Lcom/tencent/mm/protocal/b/abq;->bFg:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -512,7 +530,7 @@
 
     aput-object v4, v3, v0
 
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/az/d;->addRow([Ljava/lang/Object;)V
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/bc/d;->addRow([Ljava/lang/Object;)V
 
     .line 279
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
@@ -525,7 +543,7 @@
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->bmY:Lcom/tencent/mm/modelgeo/a$a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->baF:Lcom/tencent/mm/modelgeo/a$a;
 
     return-object v0
 .end method
@@ -535,13 +553,13 @@
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLn:Ljava/util/concurrent/CountDownLatch;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMV:Ljava/util/concurrent/CountDownLatch;
 
     return-object v0
 .end method
 
-.method private static cj(Z)V
-    .locals 3
+.method private static cb(Z)V
+    .locals 4
 
     .prologue
     .line 90
@@ -550,14 +568,14 @@
     .line 91
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLt:Z
+    sput-boolean v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dNb:Z
 
     .line 92
-    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLu:Lcom/tencent/mm/sdk/platformtools/af;
+    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dNc:Lcom/tencent/mm/sdk/platformtools/ah;
 
-    const-wide/16 v1, 0x3a98
+    const-wide/16 v2, 0x3a98
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;->ds(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ah;->dJ(J)V
 
     .line 96
     :goto_0
@@ -565,11 +583,11 @@
 
     .line 94
     :cond_0
-    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLu:Lcom/tencent/mm/sdk/platformtools/af;
+    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dNc:Lcom/tencent/mm/sdk/platformtools/ah;
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;->ds(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ah;->dJ(J)V
 
     goto :goto_0
 .end method
@@ -579,7 +597,7 @@
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLk:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMS:Ljava/util/List;
 
     return-object v0
 .end method
@@ -589,28 +607,28 @@
 
     .prologue
     .line 44
-    invoke-static {}, Lcom/tencent/mm/q/n;->vb()Lcom/tencent/mm/q/d;
+    invoke-static {}, Lcom/tencent/mm/s/n;->vd()Lcom/tencent/mm/s/d;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/q/d;->a(Lcom/tencent/mm/q/d$a;)V
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/s/d;->a(Lcom/tencent/mm/s/d$a;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLl:Lcom/tencent/mm/az/d;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMT:Lcom/tencent/mm/bc/d;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/tencent/mm/az/d;
+    new-instance v0, Lcom/tencent/mm/bc/d;
 
-    sget-object v1, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->ec:[Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->es:[Ljava/lang/String;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/az/d;-><init>([Ljava/lang/String;B)V
+    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/bc/d;-><init>([Ljava/lang/String;B)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLl:Lcom/tencent/mm/az/d;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMT:Lcom/tencent/mm/bc/d;
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLk:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMS:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -627,14 +645,14 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/abb;
+    check-cast v0, Lcom/tencent/mm/protocal/b/abq;
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->a(Lcom/tencent/mm/protocal/b/abb;)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->a(Lcom/tencent/mm/protocal/b/abq;)V
 
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLo:Ljava/util/concurrent/CountDownLatch;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMW:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
@@ -650,42 +668,46 @@
     const/4 v1, 0x0
 
     .line 44
-    const-string/jumbo v2, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v2, "MicroMsg.ExtControlProviderNearBy"
 
     const-string/jumbo v3, "stop()"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    const-string/jumbo v0, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderNearBy"
 
     const-string/jumbo v1, "!MMCore.hasSetUin()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    const-string/jumbo v2, "NetSceneLbsFind"
+    const-class v2, Lcom/tencent/mm/e/a/hj;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->cZx:Lcom/tencent/mm/pluginsdk/c/b;
+    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->cYd:Lcom/tencent/mm/pluginsdk/c/b;
 
     invoke-static {v2, v3}, Lcom/tencent/mm/pluginsdk/c/b;->b(Ljava/lang/String;Lcom/tencent/mm/pluginsdk/c/b;)V
 
-    const-string/jumbo v2, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v2, "MicroMsg.ExtControlProviderNearBy"
 
     const-string/jumbo v3, "releaseLbsManager(), lbsManager == null ? [%s]"
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->bJd:Lcom/tencent/mm/modelgeo/c;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->bCq:Lcom/tencent/mm/modelgeo/c;
 
     if-nez v5, :cond_2
 
@@ -696,15 +718,15 @@
 
     aput-object v0, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->bJd:Lcom/tencent/mm/modelgeo/c;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->bCq:Lcom/tencent/mm/modelgeo/c;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->bJd:Lcom/tencent/mm/modelgeo/c;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->bCq:Lcom/tencent/mm/modelgeo/c;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->bmY:Lcom/tencent/mm/modelgeo/a$a;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->baF:Lcom/tencent/mm/modelgeo/a$a;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/modelgeo/c;->c(Lcom/tencent/mm/modelgeo/a$a;)V
 
@@ -721,7 +743,7 @@
 
     .prologue
     .line 44
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLs:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dNa:Z
 
     return v0
 .end method
@@ -733,7 +755,7 @@
     .line 44
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLs:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dNa:Z
 
     return v0
 .end method
@@ -743,12 +765,12 @@
 
     .prologue
     .line 44
-    iget v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLj:I
+    iget v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMR:I
 
     return v0
 .end method
 
-.method private nU(Ljava/lang/String;)Lcom/tencent/mm/protocal/b/abb;
+.method private pe(Ljava/lang/String;)Lcom/tencent/mm/protocal/b/abq;
     .locals 4
 
     .prologue
@@ -765,11 +787,11 @@
 
     .line 246
     :cond_0
-    const-string/jumbo v0, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderNearBy"
 
     const-string/jumbo v2, "username is null or nill"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -779,7 +801,7 @@
 
     .line 250
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLk:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMS:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -796,10 +818,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/abb;
+    check-cast v0, Lcom/tencent/mm/protocal/b/abq;
 
     .line 251
-    iget-object v3, v0, Lcom/tencent/mm/protocal/b/abb;->eiB:Ljava/lang/String;
+    iget-object v3, v0, Lcom/tencent/mm/protocal/b/abq;->emC:Ljava/lang/String;
 
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -828,12 +850,72 @@
     return v0
 .end method
 
-.method public final fZ(Ljava/lang/String;)V
+.method public final getType(Landroid/net/Uri;)Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    const/4 v1, -0x1
+
+    .line 380
+    iput v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMR:I
+
+    .line 381
+    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMZ:Landroid/content/UriMatcher;
+
+    invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
+
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 392
+    iput v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMR:I
+
+    .line 394
+    :goto_0
+    const/4 v0, 0x0
+
+    return-object v0
+
+    .line 383
+    :pswitch_0
+    const/4 v0, 0x1
+
+    iput v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMR:I
+
+    goto :goto_0
+
+    .line 386
+    :pswitch_1
+    const/4 v0, 0x3
+
+    iput v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMR:I
+
+    goto :goto_0
+
+    .line 389
+    :pswitch_2
+    const/4 v0, 0x4
+
+    iput v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMR:I
+
+    goto :goto_0
+
+    .line 381
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+    .end packed-switch
+.end method
+
+.method public final gm(Ljava/lang/String;)V
     .locals 3
 
     .prologue
     .line 350
-    const-string/jumbo v0, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderNearBy"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -849,19 +931,19 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 351
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLq:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMY:Z
 
     if-eqz v0, :cond_0
 
     .line 352
-    const-string/jumbo v0, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderNearBy"
 
     const-string/jumbo v1, "has finished"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 357
     :goto_0
@@ -869,78 +951,18 @@
 
     .line 355
     :cond_0
-    invoke-direct {p0, p1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->nU(Ljava/lang/String;)Lcom/tencent/mm/protocal/b/abb;
+    invoke-direct {p0, p1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->pe(Ljava/lang/String;)Lcom/tencent/mm/protocal/b/abq;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->a(Lcom/tencent/mm/protocal/b/abb;)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->a(Lcom/tencent/mm/protocal/b/abq;)V
 
     .line 356
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLo:Ljava/util/concurrent/CountDownLatch;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMW:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     goto :goto_0
-.end method
-
-.method public final getType(Landroid/net/Uri;)Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    const/4 v1, -0x1
-
-    .line 380
-    iput v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLj:I
-
-    .line 381
-    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLr:Landroid/content/UriMatcher;
-
-    invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
-
-    move-result v0
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 392
-    iput v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLj:I
-
-    .line 394
-    :goto_0
-    const/4 v0, 0x0
-
-    return-object v0
-
-    .line 383
-    :pswitch_0
-    const/4 v0, 0x1
-
-    iput v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLj:I
-
-    goto :goto_0
-
-    .line 386
-    :pswitch_1
-    const/4 v0, 0x3
-
-    iput v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLj:I
-
-    goto :goto_0
-
-    .line 389
-    :pswitch_2
-    const/4 v0, 0x4
-
-    iput v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLj:I
-
-    goto :goto_0
-
-    .line 381
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
 .end method
 
 .method public final insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
@@ -978,7 +1000,7 @@
     const/4 v4, 0x0
 
     .line 105
-    const-string/jumbo v1, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderNearBy"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -994,7 +1016,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 106
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->getContext()Landroid/content/Context;
@@ -1009,7 +1031,7 @@
     if-nez p1, :cond_0
 
     .line 108
-    invoke-virtual {p0, v6}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->gK(I)V
+    invoke-virtual {p0, v6}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->hJ(I)V
 
     .line 177
     :goto_0
@@ -1017,19 +1039,19 @@
 
     .line 111
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKL:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dMu:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->Vw()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->Xd()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -1037,49 +1059,49 @@
 
     .line 112
     :cond_1
-    invoke-virtual {p0, v6}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->gK(I)V
+    invoke-virtual {p0, v6}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->hJ(I)V
 
     goto :goto_0
 
     .line 115
     :cond_2
-    sget-boolean v1, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLt:Z
+    sget-boolean v1, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dNb:Z
 
     if-eqz v1, :cond_3
 
     .line 116
-    const-string/jumbo v1, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderNearBy"
 
     const-string/jumbo v2, "isDoingRequest, return null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 117
     const/4 v1, 0x5
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->gK(I)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->hJ(I)V
 
     goto :goto_0
 
     .line 120
     :cond_3
-    invoke-static {v5}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->cj(Z)V
+    invoke-static {v5}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->cb(Z)V
 
     .line 122
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->Vx()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->Xe()Z
 
     move-result v1
 
     if-nez v1, :cond_4
 
     .line 123
-    invoke-static {v4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->cj(Z)V
+    invoke-static {v4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->cb(Z)V
 
     .line 124
-    invoke-virtual {p0, v5}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->gK(I)V
+    invoke-virtual {p0, v5}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->hJ(I)V
 
     .line 125
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->cBg:Landroid/database/MatrixCursor;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->cyb:Landroid/database/MatrixCursor;
 
     goto :goto_0
 
@@ -1089,32 +1111,32 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->bx(Landroid/content/Context;)Z
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->bs(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_5
 
     .line 129
-    const-string/jumbo v1, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderNearBy"
 
     const-string/jumbo v2, "invalid appid ! return null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 130
-    invoke-static {v4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->cj(Z)V
+    invoke-static {v4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->cb(Z)V
 
     .line 131
     const/4 v1, 0x2
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->gK(I)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->hJ(I)V
 
     goto :goto_0
 
     .line 135
     :cond_5
-    const-string/jumbo v1, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderNearBy"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1122,7 +1144,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLj:I
+    iget v3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMR:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1132,28 +1154,28 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 137
     invoke-virtual {p0, p1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->getType(Landroid/net/Uri;)Ljava/lang/String;
 
     .line 138
-    iget v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLj:I
+    iget v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMR:I
 
     if-gez v1, :cond_6
 
     .line 139
-    const-string/jumbo v1, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderNearBy"
 
     const-string/jumbo v2, "unkown uri, return null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 140
-    invoke-static {v4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->cj(Z)V
+    invoke-static {v4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->cb(Z)V
 
     .line 141
-    invoke-virtual {p0, v6}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->gK(I)V
+    invoke-virtual {p0, v6}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->hJ(I)V
 
     goto/16 :goto_0
 
@@ -1164,17 +1186,17 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLk:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMS:Ljava/util/List;
 
-    new-instance v0, Lcom/tencent/mm/az/d;
+    new-instance v0, Lcom/tencent/mm/bc/d;
 
-    sget-object v1, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->ec:[Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->es:[Ljava/lang/String;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/az/d;-><init>([Ljava/lang/String;B)V
+    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/bc/d;-><init>([Ljava/lang/String;B)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLl:Lcom/tencent/mm/az/d;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMT:Lcom/tencent/mm/bc/d;
 
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
@@ -1182,162 +1204,166 @@
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLn:Ljava/util/concurrent/CountDownLatch;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMV:Ljava/util/concurrent/CountDownLatch;
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLo:Ljava/util/concurrent/CountDownLatch;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMW:Ljava/util/concurrent/CountDownLatch;
 
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLm:Ljava/util/Set;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMU:Ljava/util/Set;
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLk:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMS:Ljava/util/List;
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLq:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMY:Z
 
     .line 147
-    const-string/jumbo v0, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderNearBy"
 
     const-string/jumbo v1, "start()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v0
 
     if-nez v0, :cond_9
 
-    const-string/jumbo v0, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderNearBy"
 
     const-string/jumbo v1, "!MMCore.hasSetUin()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 148
     :goto_1
-    const-string/jumbo v0, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderNearBy"
 
     const-string/jumbo v1, "wait for get lbs info"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 149
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLn:Ljava/util/concurrent/CountDownLatch;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMV:Ljava/util/concurrent/CountDownLatch;
 
-    const-wide/16 v1, 0x3a98
+    const-wide/16 v2, 0x3a98
 
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v1, v2, v3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
+    invoke-virtual {v0, v2, v3, v1}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
 
     move-result v0
 
     if-nez v0, :cond_7
 
     .line 150
-    const-string/jumbo v0, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderNearBy"
 
     const-string/jumbo v1, "countDownLatchWait time out"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 153
     :cond_7
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLo:Ljava/util/concurrent/CountDownLatch;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMW:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_a
 
     .line 154
-    const-string/jumbo v0, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderNearBy"
 
     const-string/jumbo v1, "get lbs info success, wait for get lbs friend"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 155
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLo:Ljava/util/concurrent/CountDownLatch;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMW:Ljava/util/concurrent/CountDownLatch;
 
-    const-wide/16 v1, 0x3a98
+    const-wide/16 v2, 0x3a98
 
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v1, v2, v3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
+    invoke-virtual {v0, v2, v3, v1}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
 
     move-result v0
 
     if-nez v0, :cond_8
 
     .line 156
-    const-string/jumbo v0, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderNearBy"
 
     const-string/jumbo v1, "countDownLatchGet time out"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 167
     :cond_8
     :goto_2
-    invoke-static {v4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->cj(Z)V
+    invoke-static {v4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->cb(Z)V
 
     .line 168
-    invoke-static {}, Lcom/tencent/mm/q/n;->vb()Lcom/tencent/mm/q/d;
+    invoke-static {}, Lcom/tencent/mm/s/n;->vd()Lcom/tencent/mm/s/d;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/q/d;->b(Lcom/tencent/mm/q/d$a;)V
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/s/d;->b(Lcom/tencent/mm/s/d$a;)V
 
-    iput-boolean v5, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLq:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMY:Z
 
     .line 170
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->VA()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->Xi()V
 
     .line 171
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLl:Lcom/tencent/mm/az/d;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMT:Lcom/tencent/mm/bc/d;
 
     if-eqz v0, :cond_b
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLl:Lcom/tencent/mm/az/d;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMT:Lcom/tencent/mm/bc/d;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/az/d;->getCount()I
+    invoke-virtual {v0}, Lcom/tencent/mm/bc/d;->getCount()I
 
     move-result v0
 
     if-lez v0, :cond_b
 
     .line 172
-    invoke-virtual {p0, v4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->gK(I)V
+    invoke-virtual {p0, v4}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->hJ(I)V
 
     .line 176
     :goto_3
-    const-string/jumbo v0, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderNearBy"
 
     const-string/jumbo v1, "return now"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 177
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dLl:Lcom/tencent/mm/az/d;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->dMT:Lcom/tencent/mm/bc/d;
 
     goto/16 :goto_0
 
     .line 147
     :cond_9
     :try_start_1
-    const-string/jumbo v0, "NetSceneLbsFind"
+    const-class v0, Lcom/tencent/mm/e/a/hj;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->cZx:Lcom/tencent/mm/pluginsdk/c/b;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->cYd:Lcom/tencent/mm/pluginsdk/c/b;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/c/b;->a(Ljava/lang/String;Lcom/tencent/mm/pluginsdk/c/b;)V
 
@@ -1345,7 +1371,7 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$2;-><init>(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -1356,27 +1382,27 @@
     move-exception v0
 
     .line 162
-    const-string/jumbo v1, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v1, "MicroMsg.ExtControlProviderNearBy"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 163
-    invoke-virtual {p0, v7}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->gK(I)V
+    invoke-virtual {p0, v7}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->hJ(I)V
 
     goto :goto_2
 
     .line 159
     :cond_a
     :try_start_2
-    const-string/jumbo v0, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderNearBy"
 
     const-string/jumbo v1, "not init countDownGet. return null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -1384,7 +1410,7 @@
 
     .line 174
     :cond_b
-    invoke-virtual {p0, v7}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->gK(I)V
+    invoke-virtual {p0, v7}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->hJ(I)V
 
     goto :goto_3
 .end method

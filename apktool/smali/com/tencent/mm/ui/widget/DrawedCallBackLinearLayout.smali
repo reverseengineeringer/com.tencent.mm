@@ -16,7 +16,7 @@
 
 .field public final TAG:Ljava/lang/String;
 
-.field private lEX:Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout$a;
+.field public mfM:Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout$a;
 
 
 # direct methods
@@ -33,7 +33,7 @@
     iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout;->DEBUG:Z
 
     .line 13
-    const-string/jumbo v0, "!44@/B4Tb64lLpItTdpuA6oxWS/W5hNAWFGiw97iJPQYJL0="
+    const-string/jumbo v0, "MicroMsg.TestTimeForChatting"
 
     iput-object v0, p0, Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout;->TAG:Ljava/lang/String;
 
@@ -54,7 +54,7 @@
     iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout;->DEBUG:Z
 
     .line 13
-    const-string/jumbo v0, "!44@/B4Tb64lLpItTdpuA6oxWS/W5hNAWFGiw97iJPQYJL0="
+    const-string/jumbo v0, "MicroMsg.TestTimeForChatting"
 
     iput-object v0, p0, Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout;->TAG:Ljava/lang/String;
 
@@ -78,7 +78,7 @@
     iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout;->DEBUG:Z
 
     .line 13
-    const-string/jumbo v0, "!44@/B4Tb64lLpItTdpuA6oxWS/W5hNAWFGiw97iJPQYJL0="
+    const-string/jumbo v0, "MicroMsg.TestTimeForChatting"
 
     iput-object v0, p0, Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout;->TAG:Ljava/lang/String;
 
@@ -96,19 +96,19 @@
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
     .line 48
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout;->lEX:Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout;->mfM:Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout$a;
 
     if-eqz v0, :cond_0
 
     .line 49
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout;->lEX:Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout;->mfM:Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout$a;->kw()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout$a;->iZ()V
 
     .line 50
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout;->lEX:Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout;->mfM:Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout$a;
 
     .line 52
     :cond_0
@@ -123,16 +123,5 @@
     invoke-super/range {p0 .. p5}, Landroid/widget/LinearLayout;->onLayout(ZIIII)V
 
     .line 42
-    return-void
-.end method
-
-.method public setListener(Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout$a;)V
-    .locals 0
-
-    .prologue
-    .line 59
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout;->lEX:Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout$a;
-
-    .line 60
     return-void
 .end method

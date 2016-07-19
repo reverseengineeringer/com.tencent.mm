@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/widget/AdapterView$OnItemClickListener;
+
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
@@ -12,194 +15,219 @@
 
 
 # instance fields
-.field asc:I
+.field hBc:Lcom/tencent/mm/plugin/sns/ui/au$a;
 
-.field coc:Lcom/tencent/mm/ui/base/p;
+.field hoR:Lcom/tencent/mm/ui/base/k;
 
-.field context:Landroid/content/Context;
+.field hoS:Lcom/tencent/mm/ui/base/n$c;
 
-.field gXl:Lcom/tencent/mm/plugin/sns/d/ac;
+.field hoT:Lcom/tencent/mm/ui/base/n$d;
 
-.field public hhi:Landroid/view/View$OnClickListener;
+.field hoU:Lcom/tencent/mm/ui/base/l;
 
-.field hmp:Lcom/tencent/mm/plugin/sns/ui/au$a;
+.field private hoW:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/CharSequence;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public hmq:Landroid/view/View$OnClickListener;
+.field private hoX:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public hmr:Landroid/view/View$OnClickListener;
+.field private ib:Landroid/view/LayoutInflater;
 
-.field public hms:Landroid/view/View$OnClickListener;
-
-.field public hmt:Landroid/view/View$OnClickListener;
-
-.field public hmu:Landroid/view/View$OnClickListener;
-
-.field public hmv:Landroid/view/View$OnClickListener;
-
-.field public hmw:Landroid/view/View$OnClickListener;
-
-.field public hmx:Landroid/view/View$OnClickListener;
-
-.field public hmy:Landroid/view/View$OnClickListener;
+.field private mContext:Landroid/content/Context;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/tencent/mm/plugin/sns/ui/au$a;ILcom/tencent/mm/plugin/sns/d/ac;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
     .prologue
-    .line 67
+    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
-    const/4 v0, 0x0
+    .line 37
+    new-instance v0, Ljava/util/HashMap;
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->asc:I
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 118
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/au$1;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hoW:Ljava/util/HashMap;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/au$1;-><init>(Lcom/tencent/mm/plugin/sns/ui/au;)V
+    .line 38
+    new-instance v0, Ljava/util/HashMap;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hhi:Landroid/view/View$OnClickListener;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 243
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/au$3;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hoX:Ljava/util/HashMap;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/au$3;-><init>(Lcom/tencent/mm/plugin/sns/ui/au;)V
+    .line 41
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/au;->mContext:Landroid/content/Context;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hmq:Landroid/view/View$OnClickListener;
+    .line 42
+    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    .line 291
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/au$4;
+    move-result-object v0
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/au$4;-><init>(Lcom/tencent/mm/plugin/sns/ui/au;)V
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->ib:Landroid/view/LayoutInflater;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hmr:Landroid/view/View$OnClickListener;
+    .line 43
+    new-instance v0, Lcom/tencent/mm/ui/base/k;
 
-    .line 358
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/au$5;
+    invoke-direct {v0, p1}, Lcom/tencent/mm/ui/base/k;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/au$5;-><init>(Lcom/tencent/mm/plugin/sns/ui/au;)V
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hoR:Lcom/tencent/mm/ui/base/k;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hms:Landroid/view/View$OnClickListener;
+    .line 44
+    new-instance v0, Lcom/tencent/mm/ui/base/l;
 
-    .line 385
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/au$6;
+    invoke-direct {v0}, Lcom/tencent/mm/ui/base/l;-><init>()V
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/au$6;-><init>(Lcom/tencent/mm/plugin/sns/ui/au;)V
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hoU:Lcom/tencent/mm/ui/base/l;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hmt:Landroid/view/View$OnClickListener;
-
-    .line 412
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/au$7;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/au$7;-><init>(Lcom/tencent/mm/plugin/sns/ui/au;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hmu:Landroid/view/View$OnClickListener;
-
-    .line 437
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/au$8;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/au$8;-><init>(Lcom/tencent/mm/plugin/sns/ui/au;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hmv:Landroid/view/View$OnClickListener;
-
-    .line 461
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/au$9;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/au$9;-><init>(Lcom/tencent/mm/plugin/sns/ui/au;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hmw:Landroid/view/View$OnClickListener;
-
-    .line 519
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/au$10;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/au$10;-><init>(Lcom/tencent/mm/plugin/sns/ui/au;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hmx:Landroid/view/View$OnClickListener;
-
-    .line 546
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/au$2;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/au$2;-><init>(Lcom/tencent/mm/plugin/sns/ui/au;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hmy:Landroid/view/View$OnClickListener;
-
-    .line 68
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/au;->context:Landroid/content/Context;
-
-    .line 69
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hmp:Lcom/tencent/mm/plugin/sns/ui/au$a;
-
-    .line 70
-    iput p3, p0, Lcom/tencent/mm/plugin/sns/ui/au;->asc:I
-
-    .line 71
-    iput-object p4, p0, Lcom/tencent/mm/plugin/sns/ui/au;->gXl:Lcom/tencent/mm/plugin/sns/d/ac;
-
-    .line 72
+    .line 45
     return-void
 .end method
 
-.method protected static sQ(Ljava/lang/String;)Z
-    .locals 3
+.method static synthetic a(Lcom/tencent/mm/plugin/sns/ui/au;)Lcom/tencent/mm/ui/base/l;
+    .locals 1
 
     .prologue
-    .line 592
-    new-instance v0, Lcom/tencent/mm/d/a/gr;
+    .line 26
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hoU:Lcom/tencent/mm/ui/base/l;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/gr;-><init>()V
+    return-object v0
+.end method
 
-    .line 593
-    iget-object v1, v0, Lcom/tencent/mm/d/a/gr;->aBL:Lcom/tencent/mm/d/a/gr$a;
+.method static synthetic b(Lcom/tencent/mm/plugin/sns/ui/au;)Landroid/view/LayoutInflater;
+    .locals 1
 
-    const/4 v2, -0x2
+    .prologue
+    .line 26
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->ib:Landroid/view/LayoutInflater;
 
-    iput v2, v1, Lcom/tencent/mm/d/a/gr$a;->action:I
+    return-object v0
+.end method
 
-    .line 594
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+.method static synthetic c(Lcom/tencent/mm/plugin/sns/ui/au;)Ljava/util/HashMap;
+    .locals 1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    .prologue
+    .line 26
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hoW:Ljava/util/HashMap;
 
-    .line 595
-    iget-object v0, v0, Lcom/tencent/mm/d/a/gr;->aBM:Lcom/tencent/mm/d/a/gr$b;
+    return-object v0
+.end method
 
-    iget-object v0, v0, Lcom/tencent/mm/d/a/gr$b;->aBN:Lcom/tencent/mm/protocal/b/aeo;
+.method static synthetic d(Lcom/tencent/mm/plugin/sns/ui/au;)Ljava/util/HashMap;
+    .locals 1
 
-    .line 596
+    .prologue
+    .line 26
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hoX:Ljava/util/HashMap;
+
+    return-object v0
+.end method
+
+.method private dismiss()V
+    .locals 1
+
+    .prologue
+    .line 84
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hoR:Lcom/tencent/mm/ui/base/k;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/k;->isShowing()Z
+
+    move-result v0
+
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lcom/tencent/mm/af/b;->c(Lcom/tencent/mm/protocal/b/aeo;)Z
+    .line 85
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hoR:Lcom/tencent/mm/ui/base/k;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/k;->dismiss()V
+
+    .line 87
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 71
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hoU:Lcom/tencent/mm/ui/base/l;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/l;->lex:Ljava/util/List;
+
+    invoke-interface {v0, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/ui/base/m;
+
+    .line 72
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/m;->performClick()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aeo;->jBq:Ljava/lang/String;
+    .line 73
+    const-string/jumbo v0, "MicroMsg.SnsTimelineListMenu"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string/jumbo v1, "onItemClick menu item has listener"
 
-    move-result v0
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v0, :cond_0
+    .line 74
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/au;->dismiss()V
 
-    invoke-static {}, Lcom/tencent/mm/af/b;->Bs()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 598
-    const/4 v0, 0x1
-
-    .line 600
+    .line 81
     :goto_0
-    return v0
+    return-void
 
+    .line 77
     :cond_0
-    const/4 v0, 0x0
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hoT:Lcom/tencent/mm/ui/base/n$d;
+
+    if-eqz v1, :cond_1
+
+    .line 78
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/au;->hoT:Lcom/tencent/mm/ui/base/n$d;
+
+    invoke-interface {v1, v0, p3}, Lcom/tencent/mm/ui/base/n$d;->d(Landroid/view/MenuItem;I)V
+
+    .line 80
+    :cond_1
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/au;->dismiss()V
 
     goto :goto_0
 .end method

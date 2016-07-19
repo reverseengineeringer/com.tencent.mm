@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic bKv:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
+.field final synthetic bDP:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
 
 .field public field_authkey:[B
 
@@ -47,39 +47,39 @@
 
     const/4 v0, 0x0
 
-    .line 412
-    iput-object p1, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$b;->bKv:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
+    .line 420
+    iput-object p1, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$b;->bDP:Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 414
+    .line 422
     iput-object v1, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$b;->field_frontips:[Ljava/lang/String;
 
-    .line 415
+    .line 423
     iput-object v1, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$b;->field_zoneips:[Ljava/lang/String;
 
-    .line 416
+    .line 424
     iput-object v1, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$b;->field_authkey:[B
 
-    .line 417
+    .line 425
     iput v0, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$b;->field_ver:I
 
-    .line 419
+    .line 427
     iput v0, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$b;->field_uin:I
 
-    .line 420
+    .line 428
     iput v0, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$b;->field_frontid:I
 
-    .line 421
+    .line 429
     iput v0, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$b;->field_zoneid:I
 
-    .line 423
+    .line 431
     iput v0, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$b;->field_nettype:I
 
-    .line 424
+    .line 432
     iput-object v1, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$b;->field_frontports:[I
 
-    .line 425
+    .line 433
     iput-object v1, p0, Lcom/tencent/mm/modelcdntran/CdnTransportEngine$b;->field_zoneports:[I
 
     return-void

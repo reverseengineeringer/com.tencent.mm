@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kzc:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+.field final synthetic kYj:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 332
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$5;->kzc:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$5;->kYj:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 335
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->v(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->E(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 

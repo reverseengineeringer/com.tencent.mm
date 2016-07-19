@@ -10,7 +10,7 @@ final class LoginUI$1
   
   public final void afterTextChanged(Editable paramEditable)
   {
-    LoginUI.a(ktY);
+    LoginUI.a(kTf);
   }
   
   public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}

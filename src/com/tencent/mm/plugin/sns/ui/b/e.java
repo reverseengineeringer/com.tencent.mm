@@ -6,110 +6,111 @@ import android.view.Display;
 import android.view.View;
 import android.view.ViewStub;
 import android.view.WindowManager;
-import com.tencent.mm.plugin.sns.h.k;
+import com.tencent.mm.plugin.sns.e.ad;
 import com.tencent.mm.plugin.sns.ui.PhotosContent;
 import com.tencent.mm.plugin.sns.ui.TagImageView;
-import com.tencent.mm.plugin.sns.ui.ai;
-import com.tencent.mm.plugin.sns.ui.an;
+import com.tencent.mm.plugin.sns.ui.am;
+import com.tencent.mm.plugin.sns.ui.aq;
+import com.tencent.mm.plugin.sns.ui.as;
 import com.tencent.mm.plugin.sns.ui.c.b;
 import com.tencent.mm.pluginsdk.f;
-import com.tencent.mm.protocal.b.atp;
-import com.tencent.mm.protocal.b.ba;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.i.a;
+import com.tencent.mm.protocal.b.auf;
+import com.tencent.mm.protocal.b.bd;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.z;
 import com.tencent.mm.ui.tools.m;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public final class e
   extends a
 {
-  private int hcC;
-  private int hcD = 103;
-  private int mScreenHeight;
-  private int mScreenWidth;
+  private int hro;
+  private int hrp = 103;
   
-  public final void a(a.b paramb, int paramInt1, k paramk, atp paramatp, int paramInt2, an paraman)
+  public final void a(a.b paramb, int paramInt1, as paramas, auf paramauf, int paramInt2, aq paramaq)
   {
-    hoa.setVisibility(0);
-    String str;
-    if (jMw == null)
+    hEw.setVisibility(0);
+    Object localObject;
+    if (klh == null)
     {
-      str = null;
-      if (!ay.kz(str)) {
-        if (!hjS.containsKey(str)) {
-          break label161;
+      localObject = null;
+      if (!be.kf((String)localObject)) {
+        if (!hyx.containsKey(localObject)) {
+          break label170;
         }
       }
     }
-    for (boolean bool = ((Boolean)hjS.get(str)).booleanValue();; bool = true)
+    for (boolean bool = ((Boolean)hyx.get(localObject)).booleanValue();; bool = true)
     {
       if (bool) {
-        com.tencent.mm.plugin.sns.b.a.cob.a(jx, str, eiB, jMB, field_snsId);
+        com.tencent.mm.plugin.sns.b.a.cjp.a(jO, (String)localObject, emC, klm, hAm);
       }
-      paraman = hcq;
-      paramb = hoa;
-      str = paramk.aAl();
-      int i = jx.hashCode();
-      paramk.lN(32);
-      paraman.a(paramb, paramatp, str, i, paramInt2, paramInt1, hbM, i.a.kal);
+      paramaq = hrc;
+      paramb = hEw;
+      paramas = hlg;
+      int i = jO.hashCode();
+      bool = hqC;
+      localObject = z.bcg();
+      fxK = fyR;
+      paramaq.a(paramb, paramauf, paramas, i, paramInt2, paramInt1, bool, (z)localObject);
       return;
-      str = jMw.iXW;
+      localObject = klh.jvB;
       break;
-      label161:
-      bool = com.tencent.mm.plugin.sns.b.a.cob.aU(str);
-      hjS.put(str, Boolean.valueOf(bool));
+      label170:
+      bool = com.tencent.mm.plugin.sns.b.a.cjp.aZ((String)localObject);
+      hyx.put(localObject, Boolean.valueOf(bool));
     }
   }
   
-  public final void c(a.b paramb)
+  public final void d(a.b paramb)
   {
     Object localObject = new DisplayMetrics();
-    jx.getWindowManager().getDefaultDisplay().getMetrics((DisplayMetrics)localObject);
-    u.i("!44@9DU/RFsdGl/HD4dGUIBijetgLqMk0f1CfzeI955N7NE=", "viewtype " + eLV);
-    mScreenWidth = widthPixels;
-    mScreenHeight = heightPixels;
-    int i;
-    if (mScreenHeight < mScreenWidth)
-    {
-      i = mScreenHeight;
-      mScreenWidth = i;
-      hcC = ((mScreenWidth - com.tencent.mm.aw.a.fromDPToPix(jx, hcD)) / 3);
-      if (eLV != 2) {
-        break label248;
+    jO.getWindowManager().getDefaultDisplay().getMetrics((DisplayMetrics)localObject);
+    v.i("MiroMsg.PhotoTimeLineItem", "viewtype " + cTv);
+    hro = ad.aBO();
+    if (hEf != null) {
+      if (cTv == 2)
+      {
+        hEf.setLayoutResource(2130904495);
+        if (!hEg) {
+          hEw = ((PhotosContent)hEf.inflate());
+        }
       }
-      hnK.setLayoutResource(2131362842);
     }
-    for (;;)
+    for (hEg = true;; hEg = true)
     {
-      if (!hnL)
+      hEw.hmU.clear();
+      int i = 0;
+      while (i < am.huW[cTv])
       {
-        hoa = ((PhotosContent)hnK.inflate());
-        hnL = true;
-      }
-      i = 0;
-      while (i < ai.hgg[eLV])
-      {
-        localObject = (TagImageView)hoa.findViewById(ai.hgk[i]);
-        hoa.a((TagImageView)localObject);
-        ((TagImageView)localObject).setOnClickListener(gRM.gRg.hac);
-        gRM.dRJ.a((View)localObject, gRM.gRg.hpe, gRM.gRg.hoQ);
+        localObject = (TagImageView)hEw.findViewById(am.hva[i]);
+        hEw.a((TagImageView)localObject);
+        ((TagImageView)localObject).setOnClickListener(gZP.gZj.hnu);
+        gZP.dTR.a((View)localObject, gZP.gZj.hFB, gZP.gZj.hFn);
         i += 1;
       }
-      i = mScreenWidth;
-      break;
-      label248:
-      if (eLV == 3) {
-        hnK.setLayoutResource(2131362921);
-      } else if (eLV == 4) {
-        hnK.setLayoutResource(2131362868);
-      } else if (eLV == 5) {
-        hnK.setLayoutResource(2131362814);
-      } else {
-        u.e("!44@9DU/RFsdGl/HD4dGUIBijetgLqMk0f1CfzeI955N7NE=", "error viewtyoe in photo item  " + eLV);
+      if (cTv == 3)
+      {
+        hEf.setLayoutResource(2130904492);
+        break;
       }
+      if (cTv == 4)
+      {
+        hEf.setLayoutResource(2130904493);
+        break;
+      }
+      if (cTv == 5)
+      {
+        hEf.setLayoutResource(2130904494);
+        break;
+      }
+      v.e("MiroMsg.PhotoTimeLineItem", "error viewtyoe in photo item  " + cTv);
+      break;
+      hEw = ((PhotosContent)hDZ.findViewById(2131759262));
     }
-    hoa.setImageViewWidth(hcC);
+    hEw.nk(hro);
   }
   
   public static final class a

@@ -2,15 +2,15 @@ package com.tencent.mm.b;
 
 public final class a$a
 {
-  static final long akz = "Micromsg".hashCode();
-  public int akA = 0;
+  static final long Xs = "Micromsg".hashCode();
+  public int Xt = 0;
   
   public a$a(int paramInt)
   {
-    akA = paramInt;
+    Xt = paramInt;
   }
   
-  static byte[] m(long paramLong)
+  static byte[] n(long paramLong)
   {
     byte[] arrayOfByte = new byte[8];
     int i = 0;
@@ -24,7 +24,7 @@ public final class a$a
     }
   }
   
-  public static a t(byte[] paramArrayOfByte)
+  public static a p(byte[] paramArrayOfByte)
   {
     if (paramArrayOfByte.length == 8)
     {
@@ -34,7 +34,7 @@ public final class a$a
       {
         if (i >= paramArrayOfByte.length)
         {
-          if (l >> 32 != akz) {
+          if (l >> 32 != Xs) {
             break;
           }
           return new a((int)l);

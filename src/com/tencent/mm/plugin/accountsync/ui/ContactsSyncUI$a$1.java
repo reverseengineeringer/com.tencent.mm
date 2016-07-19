@@ -8,10 +8,10 @@ final class ContactsSyncUI$a$1
 {
   ContactsSyncUI$a$1(ContactsSyncUI.a parama) {}
   
-  public final void h(Bundle paramBundle)
+  public final void j(Bundle paramBundle)
   {
-    ContactsSyncUI localContactsSyncUI = coH.coG;
-    coD = paramBundle;
+    ContactsSyncUI localContactsSyncUI = cjV.cjS;
+    cjR = paramBundle;
     localContactsSyncUI.finish();
   }
 }

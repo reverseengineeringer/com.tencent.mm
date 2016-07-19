@@ -16,68 +16,66 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.ExifHelper;
 import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.ah;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.ui.base.o;
-import com.tencent.mm.ui.v;
 import java.util.ArrayList;
 
 public final class i
 {
-  ImageView aAF = null;
+  ImageView amO = null;
   Bitmap bitmap = null;
-  SharedPreferences bxg;
-  private View cMt = null;
+  SharedPreferences bpi;
+  private View cJf = null;
   Context context;
-  View eOa;
-  View iHc;
-  private h iMk;
-  g iMl;
-  o iMm;
-  boolean iMn = true;
-  h.a iMo;
-  a iMp;
+  View eVS;
+  View jdX;
+  private h jjh;
+  g jji;
+  o jjj;
+  boolean jjk = true;
+  h.a jjl;
+  a jjm;
   
   public i(Context paramContext, View paramView1, View paramView2, a parama)
   {
     context = paramContext;
-    iHc = paramView1;
-    eOa = paramView2;
-    iMk = new h(context);
-    bxg = paramContext.getSharedPreferences(y.aUK(), 0);
-    iMp = parama;
-    cMt = View.inflate(context, 2131363043, null);
-    aAF = ((ImageView)cMt.findViewById(2131169059));
-    iMm = new o(cMt, -2, -2, true);
-    iMm.setBackgroundDrawable(new ColorDrawable(0));
-    iMm.setOutsideTouchable(true);
-    cMt.setOnClickListener(new View.OnClickListener()
+    jdX = paramView1;
+    eVS = paramView2;
+    jjh = new h(context);
+    bpi = paramContext.getSharedPreferences(aa.aZO(), 0);
+    jjm = parama;
+    cJf = View.inflate(context, 2130903265, null);
+    amO = ((ImageView)cJf.findViewById(2131755965));
+    jjj = new o(cJf, -2, -2, true);
+    jjj.setBackgroundDrawable(new ColorDrawable(0));
+    jjj.setOutsideTouchable(true);
+    cJf.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
-        if ((iMp != null) && (iMl != null)) {
-          iMp.AI(iMl.iMj);
+        if ((jjm != null) && (jji != null)) {
+          jjm.CO(jji.jjg);
         }
-        iMm.dismiss();
+        jjj.dismiss();
       }
     });
   }
   
-  public final String aSl()
+  public final String aXd()
   {
     for (;;)
     {
       try
       {
-        if (iMk == null)
+        if (jjh == null)
         {
-          u.d("!44@/B4Tb64lLpKYgkPW7g2h7ZPkZDASCTQgMn5vbr5V3XA=", "because of imageQuery == null");
+          com.tencent.mm.sdk.platformtools.v.d("MicroMsg.RecentImageBubble", "because of imageQuery == null");
           localObject1 = null;
-          iMl = ((g)localObject1);
-          localObject1 = iMl;
+          jji = ((g)localObject1);
+          localObject1 = jji;
           if (localObject1 == null)
           {
             localObject1 = null;
@@ -86,45 +84,45 @@ public final class i
         }
         else
         {
-          localObject1 = iMk.aSk();
+          localObject1 = jjh.aXc();
           if ((localObject1 == null) || (((ArrayList)localObject1).size() == 0))
           {
-            u.d("!44@/B4Tb64lLpKYgkPW7g2h7ZPkZDASCTQgMn5vbr5V3XA=", "because of items == null || items.size() == 0");
+            com.tencent.mm.sdk.platformtools.v.d("MicroMsg.RecentImageBubble", "because of items == null || items.size() == 0");
             localObject1 = null;
             continue;
           }
           g localg = (g)((ArrayList)localObject1).get(0);
           if (localg != null)
           {
-            if (ay.am(edh) >= 0L) {
+            if (be.at(egI) >= 0L) {
               break label288;
             }
             i = 1;
             if (i != 0)
             {
-              u.e("!44@/B4Tb64lLpKYgkPW7g2h7ZPkZDASCTQgMn5vbr5V3XA=", "we found u have a future pic that lead to forbid this featur. file : %s", new Object[] { iMj });
+              com.tencent.mm.sdk.platformtools.v.e("MicroMsg.RecentImageBubble", "we found u have a future pic that lead to forbid this featur. file : %s", new Object[] { jjg });
               localObject1 = null;
               continue;
             }
           }
-          if ((localg != null) && (iMj != null) && (iMj.startsWith(com.tencent.mm.compatible.util.d.buk)))
+          if ((localg != null) && (jjg != null) && (jjg.startsWith(com.tencent.mm.compatible.util.d.biK)))
           {
             localObject1 = null;
             continue;
           }
           if (localg != null)
           {
-            if (ay.am(edh) > 30L) {
+            if (be.at(egI) > 30L) {
               break label293;
             }
             i = 1;
             if (i != 0)
             {
               localObject1 = localg;
-              if (!bxg.getString("chattingui_recent_shown_image_path", "").equals(iMj)) {
+              if (!bpi.getString("chattingui_recent_shown_image_path", "").equals(jjg)) {
                 continue;
               }
-              u.d("!44@/B4Tb64lLpKYgkPW7g2h7ZPkZDASCTQgMn5vbr5V3XA=", "because of recentImage.equals(imageItem.orginalPath)");
+              com.tencent.mm.sdk.platformtools.v.d("MicroMsg.RecentImageBubble", "because of recentImage.equals(imageItem.orginalPath)");
               localObject1 = null;
               continue;
             }
@@ -133,15 +131,15 @@ public final class i
             break label298;
           }
           bool = true;
-          u.d("!44@/B4Tb64lLpKYgkPW7g2h7ZPkZDASCTQgMn5vbr5V3XA=", "because of checkAddDate(addDate) == false, or imageItem == null : %s", new Object[] { Boolean.valueOf(bool) });
+          com.tencent.mm.sdk.platformtools.v.d("MicroMsg.RecentImageBubble", "because of checkAddDate(addDate) == false, or imageItem == null : %s", new Object[] { Boolean.valueOf(bool) });
           localObject1 = null;
           continue;
         }
-        Object localObject1 = iMl.ayz;
-        if (iMl.ayz != null) {
+        Object localObject1 = jji.akB;
+        if (jji.akB != null) {
           continue;
         }
-        localObject1 = iMl.iMj;
+        localObject1 = jji.jjg;
         continue;
         i = 0;
       }
@@ -156,14 +154,14 @@ public final class i
     }
   }
   
-  final float oH(int paramInt)
+  final float qq(int paramInt)
   {
     return TypedValue.applyDimension(1, paramInt, context.getResources().getDisplayMetrics());
   }
   
   public static abstract interface a
   {
-    public abstract void AI(String paramString);
+    public abstract void CO(String paramString);
   }
 }
 

@@ -1,13 +1,13 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.az.g.b;
+import com.tencent.mm.bc.g.b;
 
 final class ah$10
   implements g.b
 {
-  public final String[] lr()
+  public final String[] kE()
   {
-    return ae.aoY;
+    return l.bkN;
   }
 }
 

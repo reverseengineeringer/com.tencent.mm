@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/ui/f$11;
-.super Lcom/tencent/mm/sdk/c/c;
+.super Lcom/tencent/mm/pluginsdk/c/a;
 .source "SourceFile"
 
 
@@ -15,43 +15,39 @@
 
 
 # instance fields
-.field final synthetic klo:Lcom/tencent/mm/ui/f;
+.field final synthetic kKO:Lcom/tencent/mm/ui/f;
 
 
 # direct methods
 .method constructor <init>(Lcom/tencent/mm/ui/f;)V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 258
-    iput-object p1, p0, Lcom/tencent/mm/ui/f$11;->klo:Lcom/tencent/mm/ui/f;
+    .line 240
+    iput-object p1, p0, Lcom/tencent/mm/ui/f$11;->kKO:Lcom/tencent/mm/ui/f;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/c/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
+.method public final v(Lcom/tencent/mm/sdk/c/b;)V
     .locals 1
 
     .prologue
-    .line 262
-    instance-of v0, p1, Lcom/tencent/mm/d/a/lc;
+    .line 244
+    instance-of v0, p1, Lcom/tencent/mm/e/a/fb;
 
     if-eqz v0, :cond_0
 
-    .line 263
-    iget-object v0, p0, Lcom/tencent/mm/ui/f$11;->klo:Lcom/tencent/mm/ui/f;
+    .line 247
+    iget-object v0, p0, Lcom/tencent/mm/ui/f$11;->kKO:Lcom/tencent/mm/ui/f;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/f;->c(Lcom/tencent/mm/ui/f;)V
+    invoke-static {v0}, Lcom/tencent/mm/ui/f;->e(Lcom/tencent/mm/ui/f;)V
 
-    .line 265
+    .line 249
     :cond_0
-    const/4 v0, 0x0
-
-    return v0
+    return-void
 .end method

@@ -13,7 +13,7 @@ final class RegSetInfoUI$3
   {
     if ((paramInt == 6) || (paramInt == 5))
     {
-      RegSetInfoUI.q(kwh);
+      RegSetInfoUI.q(kVo);
       return true;
     }
     return false;

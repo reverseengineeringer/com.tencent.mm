@@ -3,7 +3,7 @@ package com.tencent.mm.plugin.gwallet.a;
 public final class a
   extends Exception
 {
-  c exC;
+  c eDW;
   
   public a(int paramInt, String paramString)
   {
@@ -18,7 +18,7 @@ public final class a
   private a(c paramc, Exception paramException)
   {
     super(mMessage, paramException);
-    exC = paramc;
+    eDW = paramc;
   }
   
   public a(String paramString, Exception paramException)

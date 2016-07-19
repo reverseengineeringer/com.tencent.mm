@@ -3,7 +3,7 @@ package com.tencent.mm.performance.wxperformancetool;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import com.tencent.mm.performance.e.a;
+import com.tencent.mm.performance.d.a;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -24,16 +24,16 @@ final class b$1
     do
     {
       return;
-      paramMessage = acls).clt.iterator();
+      paramMessage = acgw).cgx.iterator();
       while (paramMessage.hasNext())
       {
         a locala = (a)paramMessage.next();
-        if (locala.Fu()) {
-          locala.Ft();
+        if (locala.FR()) {
+          locala.FQ();
         }
       }
-    } while (b.b(cls));
-    cls.mHandler.sendEmptyMessageDelayed(1, b.clq);
+    } while (b.b(cgw));
+    cgw.mHandler.sendEmptyMessageDelayed(1, b.cgu);
   }
 }
 

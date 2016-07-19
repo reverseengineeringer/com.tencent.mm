@@ -10,8 +10,8 @@ final class TalkRoomPopupNav$1
   
   public final void onClick(View paramView)
   {
-    if (TalkRoomPopupNav.a(kKA) != null) {
-      TalkRoomPopupNav.a(kKA).bdl();
+    if (TalkRoomPopupNav.a(ljQ) != null) {
+      TalkRoomPopupNav.a(ljQ).biT();
     }
   }
 }

@@ -4,19 +4,19 @@
 
 
 # instance fields
-.field public cNT:Landroid/widget/TextView;
+.field public cuj:Landroid/widget/TextView;
 
-.field private kjn:Landroid/view/View;
+.field private kJA:Landroid/widget/ImageView;
 
-.field private kjo:Landroid/widget/ImageView;
+.field private kJv:Landroid/view/View;
 
-.field public kjp:Landroid/widget/TextView;
+.field private kJw:Landroid/widget/ImageView;
 
-.field private kjq:Landroid/widget/ImageView;
+.field public kJx:Landroid/widget/TextView;
 
-.field public kjr:Landroid/widget/ImageView;
+.field private kJy:Landroid/widget/ImageView;
 
-.field private kjs:Landroid/widget/ImageView;
+.field public kJz:Landroid/widget/ImageView;
 
 
 # direct methods
@@ -28,7 +28,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 31
-    const v0, 0x7f0710d5
+    const v0, 0x7f1000c3
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -36,10 +36,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/b;->cNT:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/b;->cuj:Landroid/widget/TextView;
 
     .line 32
-    const v0, 0x7f0710d6
+    const v0, 0x7f1000c4
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -47,10 +47,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/b;->kjp:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/b;->kJx:Landroid/widget/TextView;
 
     .line 33
-    const v0, 0x7f0710d7
+    const v0, 0x7f1000c5
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -58,10 +58,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/b;->kjq:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/b;->kJy:Landroid/widget/ImageView;
 
     .line 34
-    const v0, 0x7f0710d8
+    const v0, 0x7f1000c6
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -69,10 +69,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/b;->kjr:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/b;->kJz:Landroid/widget/ImageView;
 
     .line 35
-    const v0, 0x7f0710d9
+    const v0, 0x7f1000c7
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -80,19 +80,19 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/b;->kjs:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/b;->kJA:Landroid/widget/ImageView;
 
     .line 36
-    const v0, 0x7f0710d3
+    const v0, 0x7f1000c1
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/b;->kjn:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/b;->kJv:Landroid/view/View;
 
     .line 37
-    const v0, 0x7f0710d4
+    const v0, 0x7f1000c2
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -100,7 +100,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/b;->kjo:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/b;->kJw:Landroid/widget/ImageView;
 
     .line 38
     return-void
@@ -108,12 +108,12 @@
 
 
 # virtual methods
-.method public final b(Landroid/view/View$OnClickListener;)V
+.method public final g(Landroid/view/View$OnClickListener;)V
     .locals 1
 
     .prologue
     .line 105
-    iget-object v0, p0, Lcom/tencent/mm/ui/b;->kjn:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b;->kJv:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -121,12 +121,12 @@
     return-void
 .end method
 
-.method public final gQ(Z)V
+.method public final hq(Z)V
     .locals 2
 
     .prologue
     .line 92
-    iget-object v1, p0, Lcom/tencent/mm/ui/b;->kjq:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/b;->kJy:Landroid/widget/ImageView;
 
     if-eqz p1, :cond_0
 
@@ -145,12 +145,12 @@
     goto :goto_0
 .end method
 
-.method public final gR(Z)V
+.method public final hr(Z)V
     .locals 2
 
     .prologue
     .line 100
-    iget-object v1, p0, Lcom/tencent/mm/ui/b;->kjs:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/b;->kJA:Landroid/widget/ImageView;
 
     if-eqz p1, :cond_0
 
@@ -174,7 +174,7 @@
 
     .prologue
     .line 41
-    iget-object v0, p0, Lcom/tencent/mm/ui/b;->cNT:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/b;->cuj:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 

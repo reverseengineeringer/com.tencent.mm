@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/sandbox/updater/UpdaterService;->aUm()Z
+    value = Lcom/tencent/mm/sandbox/updater/UpdaterService;->aZl()Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic jUt:Lcom/tencent/mm/sandbox/updater/UpdaterService;
+.field final synthetic ktU:Lcom/tencent/mm/sandbox/updater/UpdaterService;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 221
-    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService$2;->jUt:Lcom/tencent/mm/sandbox/updater/UpdaterService;
+    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService$2;->ktU:Lcom/tencent/mm/sandbox/updater/UpdaterService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 225
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService$2;->jUt:Lcom/tencent/mm/sandbox/updater/UpdaterService;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/UpdaterService$2;->ktU:Lcom/tencent/mm/sandbox/updater/UpdaterService;
 
     invoke-virtual {v0}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->stopSelf()V
 

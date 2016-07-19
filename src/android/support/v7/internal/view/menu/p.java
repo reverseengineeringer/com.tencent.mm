@@ -11,56 +11,56 @@ public final class p
   extends f
   implements SubMenu
 {
-  f mP;
-  private h mQ;
+  f nf;
+  private h ng;
   
   public p(Context paramContext, f paramf, h paramh)
   {
     super(paramContext);
-    mP = paramf;
-    mQ = paramh;
+    nf = paramf;
+    ng = paramh;
   }
   
   public final void a(f.a parama)
   {
-    mP.a(parama);
+    nf.a(parama);
   }
   
   public final boolean a(f paramf, MenuItem paramMenuItem)
   {
-    return (super.a(paramf, paramMenuItem)) || (mP.a(paramf, paramMenuItem));
+    return (super.a(paramf, paramMenuItem)) || (nf.a(paramf, paramMenuItem));
   }
   
   public final boolean bp()
   {
-    return mP.bp();
+    return nf.bp();
   }
   
   public final boolean bq()
   {
-    return mP.bq();
+    return nf.bq();
   }
   
   public final f bx()
   {
-    return mP;
+    return nf;
   }
   
   public final void clearHeader() {}
   
   public final boolean f(h paramh)
   {
-    return mP.f(paramh);
+    return nf.f(paramh);
   }
   
   public final boolean g(h paramh)
   {
-    return mP.g(paramh);
+    return nf.g(paramh);
   }
   
   public final MenuItem getItem()
   {
-    return mQ;
+    return ng;
   }
   
   public final SubMenu setHeaderIcon(int paramInt)
@@ -95,19 +95,19 @@ public final class p
   
   public final SubMenu setIcon(int paramInt)
   {
-    mQ.setIcon(paramInt);
+    ng.setIcon(paramInt);
     return this;
   }
   
   public final SubMenu setIcon(Drawable paramDrawable)
   {
-    mQ.setIcon(paramDrawable);
+    ng.setIcon(paramDrawable);
     return this;
   }
   
   public final void setQwertyMode(boolean paramBoolean)
   {
-    mP.setQwertyMode(paramBoolean);
+    nf.setQwertyMode(paramBoolean);
   }
 }
 

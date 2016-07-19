@@ -8,14 +8,23 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public fUh:Z
+.field public gdK:J
 
-.field public fUv:J
+.field public gdL:Z
 
-.field public fUw:Z
+.field public gdw:Z
 
 .field public value:Ljava/lang/String;
 
@@ -47,7 +56,7 @@
 .end method
 
 .method protected constructor <init>(Landroid/os/Parcel;)V
-    .locals 5
+    .locals 6
 
     .prologue
     const/4 v2, 0x0
@@ -60,9 +69,9 @@
     .line 46
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    iput-wide v3, p0, Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;->fUv:J
+    iput-wide v4, p0, Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;->gdK:J
 
     .line 47
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -81,7 +90,7 @@
     move v0, v1
 
     :goto_0
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;->fUw:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;->gdL:Z
 
     .line 49
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -91,7 +100,7 @@
     if-ne v0, v1, :cond_1
 
     :goto_1
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;->fUh:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;->gdw:Z
 
     .line 50
     return-void
@@ -122,7 +131,7 @@
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
-    .locals 5
+    .locals 6
 
     .prologue
     const/4 v1, 0x1
@@ -130,9 +139,9 @@
     const/4 v2, 0x0
 
     .line 39
-    iget-wide v3, p0, Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;->fUv:J
+    iget-wide v4, p0, Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;->gdK:J
 
-    invoke-virtual {p1, v3, v4}, Landroid/os/Parcel;->writeLong(J)V
+    invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
     .line 40
     iget-object v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;->value:Ljava/lang/String;
@@ -140,7 +149,7 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 41
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;->fUw:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;->gdL:Z
 
     if-eqz v0, :cond_0
 
@@ -150,7 +159,7 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 42
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;->fUh:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;->gdw:Z
 
     if-eqz v0, :cond_1
 

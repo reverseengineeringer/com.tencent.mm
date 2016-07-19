@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kvr:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$3;
+.field final synthetic kUy:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$3;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 154
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$3$1;->kvr:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$3;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$3$1;->kUy:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 160
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$3$1;->kvr:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$3;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$3$1;->kUy:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$3;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$3;->kvq:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$3;->kUx:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->finish()V
 

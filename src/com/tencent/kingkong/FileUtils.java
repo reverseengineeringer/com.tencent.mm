@@ -137,59 +137,59 @@ public class FileUtils
     //   29: invokevirtual 103	java/io/InputStream:read	([B)I
     //   32: istore_2
     //   33: iload_2
-    //   34: ifge +20 -> 54
+    //   34: iflt +31 -> 65
     //   37: aload_1
-    //   38: invokevirtual 106	java/io/FileOutputStream:flush	()V
-    //   41: aload_1
-    //   42: invokevirtual 110	java/io/FileOutputStream:getFD	()Ljava/io/FileDescriptor;
-    //   45: invokevirtual 115	java/io/FileDescriptor:sync	()V
+    //   38: aload_3
+    //   39: iconst_0
+    //   40: iload_2
+    //   41: invokevirtual 107	java/io/FileOutputStream:write	([BII)V
+    //   44: goto -17 -> 27
+    //   47: astore_0
     //   48: aload_1
-    //   49: invokevirtual 116	java/io/FileOutputStream:close	()V
-    //   52: iconst_1
-    //   53: ireturn
-    //   54: aload_1
-    //   55: aload_3
-    //   56: iconst_0
-    //   57: iload_2
-    //   58: invokevirtual 120	java/io/FileOutputStream:write	([BII)V
-    //   61: goto -34 -> 27
-    //   64: astore_0
+    //   49: invokevirtual 110	java/io/FileOutputStream:flush	()V
+    //   52: aload_1
+    //   53: invokevirtual 114	java/io/FileOutputStream:getFD	()Ljava/io/FileDescriptor;
+    //   56: invokevirtual 119	java/io/FileDescriptor:sync	()V
+    //   59: aload_1
+    //   60: invokevirtual 120	java/io/FileOutputStream:close	()V
+    //   63: aload_0
+    //   64: athrow
     //   65: aload_1
-    //   66: invokevirtual 106	java/io/FileOutputStream:flush	()V
+    //   66: invokevirtual 110	java/io/FileOutputStream:flush	()V
     //   69: aload_1
-    //   70: invokevirtual 110	java/io/FileOutputStream:getFD	()Ljava/io/FileDescriptor;
-    //   73: invokevirtual 115	java/io/FileDescriptor:sync	()V
+    //   70: invokevirtual 114	java/io/FileOutputStream:getFD	()Ljava/io/FileDescriptor;
+    //   73: invokevirtual 119	java/io/FileDescriptor:sync	()V
     //   76: aload_1
-    //   77: invokevirtual 116	java/io/FileOutputStream:close	()V
-    //   80: aload_0
-    //   81: athrow
-    //   82: astore_0
-    //   83: iconst_0
-    //   84: ireturn
-    //   85: astore_0
-    //   86: goto -38 -> 48
-    //   89: astore_3
-    //   90: goto -14 -> 76
+    //   77: invokevirtual 120	java/io/FileOutputStream:close	()V
+    //   80: iconst_1
+    //   81: ireturn
+    //   82: astore_3
+    //   83: goto -24 -> 59
+    //   86: astore_0
+    //   87: goto -11 -> 76
+    //   90: astore_0
+    //   91: iconst_0
+    //   92: ireturn
     // Local variable table:
     //   start	length	slot	name	signature
     //   0	93	0	paramInputStream	InputStream
     //   0	93	1	paramFile	File
-    //   32	26	2	i	int
-    //   26	30	3	arrayOfByte	byte[]
-    //   89	1	3	localIOException	IOException
+    //   32	9	2	i	int
+    //   26	13	3	arrayOfByte	byte[]
+    //   82	1	3	localIOException	IOException
     // Exception table:
     //   from	to	target	type
-    //   21	27	64	finally
-    //   27	33	64	finally
-    //   54	61	64	finally
-    //   0	12	82	java/io/IOException
-    //   12	21	82	java/io/IOException
-    //   37	41	82	java/io/IOException
-    //   48	52	82	java/io/IOException
-    //   65	69	82	java/io/IOException
-    //   76	82	82	java/io/IOException
-    //   41	48	85	java/io/IOException
-    //   69	76	89	java/io/IOException
+    //   21	27	47	finally
+    //   27	33	47	finally
+    //   37	44	47	finally
+    //   52	59	82	java/io/IOException
+    //   69	76	86	java/io/IOException
+    //   0	12	90	java/io/IOException
+    //   12	21	90	java/io/IOException
+    //   48	52	90	java/io/IOException
+    //   59	65	90	java/io/IOException
+    //   65	69	90	java/io/IOException
+    //   76	80	90	java/io/IOException
   }
   
   public static void deleteOlderFiles(File paramFile, int paramInt, long paramLong)
@@ -242,11 +242,11 @@ public class FileUtils
       {
         l = paramFile.length();
         if (paramInt > 0) {
-          break label460;
+          break label456;
         }
         if ((l > 0L) && (paramInt == 0))
         {
-          break label460;
+          break label456;
           paramFile = new byte[i + 1];
           paramInt = localBufferedInputStream.read(paramFile);
           if (paramInt <= 0) {
@@ -278,9 +278,8 @@ public class FileUtils
             localObject = new byte[k];
           }
           int k = localBufferedInputStream.read((byte[])localObject);
-          int m = localObject.length;
-          if (k == m) {
-            break label451;
+          if (k == localObject.length) {
+            break label447;
           }
           if ((paramFile == null) && (k <= 0)) {
             return "";
@@ -295,7 +294,7 @@ public class FileUtils
             System.arraycopy(paramFile, k, paramFile, 0, paramFile.length - k);
             System.arraycopy(localObject, 0, paramFile, paramFile.length - k, k);
             i = j;
-            break label490;
+            break label486;
             paramFile = new String(paramFile);
             return paramFile;
             paramFile = paramString + new String(paramFile);
@@ -322,12 +321,12 @@ public class FileUtils
         localBufferedInputStream.close();
         localFileInputStream.close();
       }
-      break label490;
-      label451:
+      break label486;
+      label447:
       localFile = paramFile;
       paramFile = (File)localObject;
       continue;
-      label460:
+      label456:
       i = paramInt;
       if (l > 0L) {
         if (paramInt != 0)
@@ -339,7 +338,7 @@ public class FileUtils
         {
           i = (int)l;
           continue;
-          label490:
+          label486:
           if (paramString != null) {
             if (i != 0) {}
           }

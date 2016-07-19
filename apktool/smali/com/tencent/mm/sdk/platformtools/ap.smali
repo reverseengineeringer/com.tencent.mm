@@ -3,238 +3,383 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/sdk/platformtools/ap$b;,
+        Lcom/tencent/mm/sdk/platformtools/ap$a;
+    }
+.end annotation
+
+
+# instance fields
+.field aqh:Z
+
+.field public kxw:Ljava/util/concurrent/LinkedBlockingQueue;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/LinkedBlockingQueue",
+            "<",
+            "Lcom/tencent/mm/sdk/platformtools/ap$a;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private kxx:I
+
+.field kxy:Ljava/util/Vector;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Vector",
+            "<",
+            "Lcom/tencent/mm/sdk/platformtools/ap$b;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field kxz:Lcom/tencent/mm/sdk/platformtools/ac;
+
+.field lock:Ljava/lang/Object;
+
+.field name:Ljava/lang/String;
+
+.field priority:I
+
+
 # direct methods
-.method public static CY(Ljava/lang/String;)Ljava/util/Map;
-    .locals 7
+.method public constructor <init>(ILjava/lang/String;)V
+    .locals 1
 
     .prologue
+    .line 44
+    const/4 v0, 0x1
+
+    invoke-direct {p0, p1, p2, v0}, Lcom/tencent/mm/sdk/platformtools/ap;-><init>(ILjava/lang/String;I)V
+
+    .line 45
+    return-void
+.end method
+
+.method public constructor <init>(ILjava/lang/String;I)V
+    .locals 1
+
+    .prologue
+    .line 48
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/tencent/mm/sdk/platformtools/ap;-><init>(ILjava/lang/String;ILandroid/os/Looper;)V
+
+    .line 49
+    return-void
+.end method
+
+.method public constructor <init>(ILjava/lang/String;ILandroid/os/Looper;)V
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    .line 51
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 28
+    new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
+
+    invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/ap;->kxw:Ljava/util/concurrent/LinkedBlockingQueue;
+
+    .line 32
+    iput-boolean v1, p0, Lcom/tencent/mm/sdk/platformtools/ap;->aqh:Z
+
+    .line 34
+    iput v2, p0, Lcom/tencent/mm/sdk/platformtools/ap;->kxx:I
+
+    .line 35
+    iput v2, p0, Lcom/tencent/mm/sdk/platformtools/ap;->priority:I
+
     .line 36
-    if-eqz p0, :cond_0
+    const-string/jumbo v0, ""
 
-    const-string/jumbo v0, "~SEMI_XML~"
+    iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/ap;->name:Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    .line 38
+    new-array v0, v1, [B
+
+    iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/ap;->lock:Ljava/lang/Object;
+
+    .line 40
+    new-instance v0, Ljava/util/Vector;
+
+    invoke-direct {v0}, Ljava/util/Vector;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/ap;->kxy:Ljava/util/Vector;
+
+    .line 52
+    iput p3, p0, Lcom/tencent/mm/sdk/platformtools/ap;->kxx:I
+
+    .line 53
+    iput-object p2, p0, Lcom/tencent/mm/sdk/platformtools/ap;->name:Ljava/lang/String;
+
+    .line 54
+    iput p1, p0, Lcom/tencent/mm/sdk/platformtools/ap;->priority:I
+
+    .line 56
+    if-nez p4, :cond_0
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    .line 57
+    invoke-static {}, Landroid/os/Looper;->prepare()V
+
+    .line 58
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object p4
+
+    .line 60
+    :cond_0
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ap$1;
+
+    invoke-direct {v0, p0, p4}, Lcom/tencent/mm/sdk/platformtools/ap$1;-><init>(Lcom/tencent/mm/sdk/platformtools/ap;Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/ap;->kxz:Lcom/tencent/mm/sdk/platformtools/ac;
+
+    .line 70
+    return-void
+.end method
+
+
+# virtual methods
+.method public final bar()Z
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/ap;->kxy:Ljava/util/Vector;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/ap;->kxy:Ljava/util/Vector;
+
+    invoke-virtual {v0}, Ljava/util/Vector;->size()I
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
-    .line 37
+    .line 106
     :cond_0
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    .line 55
-    :cond_1
+    .line 108
     :goto_0
-    return-object v0
+    return v0
 
-    .line 40
-    :cond_2
-    const/16 v0, 0xa
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 41
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    .line 42
-    const/4 v1, 0x0
-
-    .line 43
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    add-int/lit8 v3, v3, -0x4
-
-    .line 44
-    :goto_1
-    if-ge v1, v3, :cond_1
-
-    .line 47
-    add-int/lit8 v4, v1, 0x1
-
-    :try_start_0
-    invoke-virtual {v2, v1}, Ljava/lang/String;->charAt(I)C
-
-    move-result v1
-
-    shl-int/lit8 v1, v1, 0x10
-
-    add-int/lit8 v5, v4, 0x1
-
-    invoke-virtual {v2, v4}, Ljava/lang/String;->charAt(I)C
-
-    move-result v4
-
-    add-int/2addr v1, v4
-
-    .line 48
-    add-int/2addr v1, v5
-
-    invoke-virtual {v2, v5, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 49
-    add-int/lit8 v5, v1, 0x1
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->charAt(I)C
-
-    move-result v1
-
-    shl-int/lit8 v1, v1, 0x10
-
-    add-int/lit8 v6, v5, 0x1
-
-    invoke-virtual {v2, v5}, Ljava/lang/String;->charAt(I)C
-
-    move-result v5
-
-    add-int/2addr v1, v5
-
-    .line 50
-    add-int/2addr v1, v6
-
-    invoke-virtual {v2, v6, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 52
-    invoke-interface {v0, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v1
+    :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method public static P(Ljava/util/Map;)Ljava/lang/String;
-    .locals 7
+.method public final c(Lcom/tencent/mm/sdk/platformtools/ap$a;)I
+    .locals 5
 
     .prologue
-    .line 12
-    if-nez p0, :cond_0
-
-    .line 13
     const/4 v0, 0x0
 
-    .line 32
-    :goto_0
-    return-object v0
+    .line 81
+    if-nez p1, :cond_1
 
-    .line 16
+    .line 82
+    const-string/jumbo v0, "QueueWorkerThread.QueueWorkerThread"
+
+    const-string/jumbo v1, "add empty thread object"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 83
+    const/4 v0, -0x1
+
+    .line 100
     :cond_0
+    :goto_0
+    return v0
+
+    .line 87
+    :cond_1
+    :try_start_0
+    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/ap;->kxw:Ljava/util/concurrent/LinkedBlockingQueue;
+
+    const-wide/16 v2, 0x1
+
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v1, p1, v2, v3, v4}, Ljava/util/concurrent/LinkedBlockingQueue;->offer(Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    .line 88
+    const-string/jumbo v0, "QueueWorkerThread.QueueWorkerThread"
+
+    const-string/jumbo v1, "add To Queue failed"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 89
+    const/4 v0, -0x2
+
+    goto :goto_0
+
+    .line 91
+    :catch_0
+    move-exception v0
+
+    .line 92
+    const-string/jumbo v1, "QueueWorkerThread.QueueWorkerThread"
+
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    const-string/jumbo v3, "add To Queue failed :"
 
-    .line 17
-    const-string/jumbo v0, "~SEMI_XML~"
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 19
-    invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v3
-
-    .line 20
-    :cond_1
-    :goto_1
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 21
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Map$Entry;
-
-    .line 22
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    .line 23
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    .line 24
-    if-eqz v0, :cond_1
-
-    .line 25
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    .line 26
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v5
-
-    .line 27
-    shr-int/lit8 v6, v4, 0x10
-
-    int-to-char v6, v6
-
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    int-to-char v4, v4
-
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 28
-    shr-int/lit8 v1, v5, 0x10
-
-    int-to-char v1, v1
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    int-to-char v4, v5
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_1
-
-    .line 32
-    :cond_2
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    .line 93
+    const/4 v0, -0x3
 
     goto :goto_0
+
+    .line 97
+    :cond_2
+    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/ap;->kxy:Ljava/util/Vector;
+
+    invoke-virtual {v1}, Ljava/util/Vector;->size()I
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/ap;->kxw:Ljava/util/concurrent/LinkedBlockingQueue;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/LinkedBlockingQueue;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    iget v1, p0, Lcom/tencent/mm/sdk/platformtools/ap;->kxx:I
+
+    iget-object v2, p0, Lcom/tencent/mm/sdk/platformtools/ap;->kxy:Ljava/util/Vector;
+
+    invoke-virtual {v2}, Ljava/util/Vector;->size()I
+
+    move-result v2
+
+    if-le v1, v2, :cond_0
+
+    .line 98
+    :cond_3
+    new-instance v1, Lcom/tencent/mm/sdk/platformtools/ap$b;
+
+    invoke-direct {v1, p0, v0}, Lcom/tencent/mm/sdk/platformtools/ap$b;-><init>(Lcom/tencent/mm/sdk/platformtools/ap;B)V
+
+    invoke-virtual {v1}, Lcom/tencent/mm/sdk/platformtools/ap$b;->start()V
+
+    goto :goto_0
+.end method
+
+.method public final hj(Z)V
+    .locals 3
+
+    .prologue
+    .line 113
+    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/ap;->lock:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    .line 114
+    :try_start_0
+    iput-boolean p1, p0, Lcom/tencent/mm/sdk/platformtools/ap;->aqh:Z
+
+    .line 115
+    if-nez p1, :cond_0
+
+    .line 116
+    iget-object v2, p0, Lcom/tencent/mm/sdk/platformtools/ap;->lock:Ljava/lang/Object;
+
+    monitor-enter v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    .line 117
+    :try_start_1
+    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/ap;->lock:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
+
+    .line 118
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 120
+    :cond_0
+    :try_start_2
+    monitor-exit v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    return-void
+
+    .line 118
+    :catchall_0
+    move-exception v0
+
+    :try_start_3
+    monitor-exit v2
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :try_start_4
+    throw v0
+
+    .line 120
+    :catchall_1
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    throw v0
 .end method

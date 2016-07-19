@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bmw:Lcom/tencent/mm/booter/d;
+.field final synthetic bac:Lcom/tencent/mm/booter/d;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 220
-    iput-object p1, p0, Lcom/tencent/mm/booter/d$3;->bmw:Lcom/tencent/mm/booter/d;
+    iput-object p1, p0, Lcom/tencent/mm/booter/d$3;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,16 +41,16 @@
 
     .prologue
     .line 224
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$3;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$3;->bac:Lcom/tencent/mm/booter/d;
 
-    invoke-static {v0}, Lcom/tencent/mm/booter/d;->d(Lcom/tencent/mm/booter/d;)Lcom/tencent/mm/sdk/platformtools/af;
+    invoke-static {v0}, Lcom/tencent/mm/booter/d;->d(Lcom/tencent/mm/booter/d;)Lcom/tencent/mm/sdk/platformtools/ah;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/af;->aUF()V
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ah;->aZJ()V
 
     .line 226
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$3;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$3;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-static {v0}, Lcom/tencent/mm/booter/d;->c(Lcom/tencent/mm/booter/d;)Ljava/util/List;
 
@@ -78,7 +78,7 @@
     if-eqz v0, :cond_0
 
     .line 228
-    const-string/jumbo v2, "!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei"
+    const-string/jumbo v2, "MicroMsg.DownloadPlayer"
 
     const-string/jumbo v3, "on pause call back: %s"
 
@@ -94,7 +94,7 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 229
     invoke-interface {v0}, Lcom/tencent/mm/model/v;->onPause()V

@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field kkh:I
+.field kKp:I
 
-.field final synthetic kki:Lcom/tencent/mm/ui/e$e;
+.field final synthetic kKq:Lcom/tencent/mm/ui/e$e;
 
 
 # direct methods
@@ -26,13 +26,13 @@
 
     .prologue
     .line 955
-    iput-object p1, p0, Lcom/tencent/mm/ui/e$e$a;->kki:Lcom/tencent/mm/ui/e$e;
+    iput-object p1, p0, Lcom/tencent/mm/ui/e$e$a;->kKq:Lcom/tencent/mm/ui/e$e;
 
     .line 956
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 957
-    iput p2, p0, Lcom/tencent/mm/ui/e$e$a;->kkh:I
+    iput p2, p0, Lcom/tencent/mm/ui/e$e$a;->kKp:I
 
     .line 958
     return-void

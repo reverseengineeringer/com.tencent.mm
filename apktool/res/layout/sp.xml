@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/aa5" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ayz" android:background="@color/ak" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.tencent.mm.ui.base.MMViewPager android:id="@id/a9y" android:background="@null" android:focusable="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:spacing="0.0dip" android:layout_below="@id/az0" android:unselectedAlpha="1.2" />
+    <RelativeLayout android:id="@id/aab" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/ms" android:layout_alignParentBottom="true">
+        <ViewStub android:id="@id/az1" android:layout="@layout/sr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hb" android:layout_marginBottom="@dimen/he" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:onClick="onClick" />
+        <ViewStub android:id="@id/az2" android:layout="@layout/st" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/he" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        <ViewStub android:id="@id/az3" android:layout="@layout/su" android:layout_width="fill_parent" android:layout_height="@dimen/ms" android:layout_alignParentBottom="true" />
+        <ViewStub android:id="@id/az4" android:layout="@layout/ss" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/hb" android:layout_marginBottom="@dimen/he" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:onClick="onClick" />
+    </RelativeLayout>
+    <ViewStub android:id="@id/az0" android:visibility="gone" android:layout="@layout/t2" android:layout_width="fill_parent" android:layout_height="@dimen/du" android:layout_alignParentTop="true" />
+</RelativeLayout>

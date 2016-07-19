@@ -16,9 +16,19 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/tencent/mm/modelsearch/m$g;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic bZt:Ljava/util/Map;
+.field final synthetic bTc:Ljava/util/Map;
 
 
 # direct methods
@@ -26,8 +36,8 @@
     .locals 0
 
     .prologue
-    .line 101
-    iput-object p1, p0, Lcom/tencent/mm/modelsearch/FTSUtils$1;->bZt:Ljava/util/Map;
+    .line 107
+    iput-object p1, p0, Lcom/tencent/mm/modelsearch/FTSUtils$1;->bTc:Ljava/util/Map;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,12 +50,12 @@
     .locals 3
 
     .prologue
-    .line 101
+    .line 107
     check-cast p1, Lcom/tencent/mm/modelsearch/m$g;
 
     check-cast p2, Lcom/tencent/mm/modelsearch/m$g;
 
-    iget-object v0, p0, Lcom/tencent/mm/modelsearch/FTSUtils$1;->bZt:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/modelsearch/FTSUtils$1;->bTc:Ljava/util/Map;
 
     iget v1, p1, Lcom/tencent/mm/modelsearch/m$g;->type:I
 

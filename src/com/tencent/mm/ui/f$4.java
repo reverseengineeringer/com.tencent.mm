@@ -1,57 +1,56 @@
 package com.tencent.mm.ui;
 
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.view.View;
-import com.tencent.mm.ab.a.c.g;
-import com.tencent.mm.ab.a.d.b;
-import com.tencent.mm.d.a.iv;
-import com.tencent.mm.d.a.iv.a;
-import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.ae.a.c.g;
+import com.tencent.mm.ae.a.d.b;
+import com.tencent.mm.e.a.ja;
+import com.tencent.mm.e.a.ja.a;
+import com.tencent.mm.sdk.platformtools.ad;
 import com.tencent.mm.ui.base.preference.IconPreference;
 
 final class f$4
   implements g
 {
-  f$4(f paramf, IconPreference paramIconPreference, String paramString1, int paramInt, String paramString2, String paramString3, iv paramiv, String paramString4) {}
+  f$4(f paramf, IconPreference paramIconPreference, String paramString1, int paramInt, String paramString2, String paramString3, ja paramja) {}
   
   public final void a(String paramString, View paramView, b paramb)
   {
     if ((status == 0) && (bitmap != null))
     {
-      ab.j(new Runnable()
+      ad.k(new Runnable()
       {
         public final void run()
         {
-          f.a(klo, true);
-          klp.u(gMv);
-          f.a(klp, 8, 0, false, 0, 0, 0);
-          f.a(klo, amV, hWn, klq, bCX, klr.aEY.asN);
+          f.a(kKO, true);
+          kKP.E(kKT);
+          f.a(kKP, 8, 8, false, 0, 0, 0);
+          f.a(kKO, ZK, ipT, kKQ, bwh, kKR.ard.aex);
         }
       });
       return;
     }
-    ab.j(new Runnable()
+    ad.k(new Runnable()
     {
       public final void run()
       {
-        f.a(klo, true);
-        IconPreference localIconPreference = (IconPreference)f.a(klo).GB("more_tab_game_recommend");
-        localIconPreference.y(klt, -1, Color.parseColor("#8c8c8c"));
-        f.a(localIconPreference, 8, 0, true, 8, 8, 8);
-        f.a(klo, amV, hWn, klq, bCX, 2);
+        f.a(kKO, true);
+        IconPreference localIconPreference = (IconPreference)f.a(kKO).IR("more_tab_game_recommend");
+        localIconPreference.ah(kKO.getString(2131230964), 2130838891);
+        f.a(localIconPreference, 0, 8, false, 8, 8, 8);
+        f.a(kKO, ZK, ipT, kKQ, bwh, 1);
       }
     });
   }
   
-  public final void ie(String paramString)
+  public final void iv(String paramString)
   {
-    ab.j(new Runnable()
+    ad.k(new Runnable()
     {
       public final void run()
       {
-        f.a(klo, false);
-        f.a((IconPreference)f.a(klo).GB("more_tab_game_recommend"), 8, 8, false, 8, 8, 8);
+        f.a(kKO, false);
+        f.a((IconPreference)f.a(kKO).IR("more_tab_game_recommend"), 8, 8, false, 8, 8, 8);
       }
     });
   }

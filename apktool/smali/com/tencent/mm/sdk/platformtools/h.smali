@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method private static CF(Ljava/lang/String;)Ljava/lang/String;
+.method private static ES(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
     .prologue
@@ -15,7 +15,7 @@
     const/4 v2, 0x2
 
     .line 22
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -76,7 +76,7 @@
     goto :goto_0
 .end method
 
-.method public static CG(Ljava/lang/String;)Z
+.method public static ET(Ljava/lang/String;)Z
     .locals 3
 
     .prologue
@@ -188,7 +188,7 @@
     const/4 v1, 0x0
 
     .line 70
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -218,14 +218,14 @@
     if-ne p4, v2, :cond_4
 
     .line 78
-    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/h;->CF(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/h;->ES(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 83
     :cond_2
     :goto_1
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -251,7 +251,7 @@
     .line 88
     if-eqz p5, :cond_3
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/h;->CG(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/h;->ET(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -267,7 +267,7 @@
 
     move-result-object v0
 
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->li(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -279,7 +279,7 @@
 
     move-result-object v0
 
-    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/be;->li(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -300,7 +300,7 @@
     if-ne p4, v2, :cond_2
 
     .line 81
-    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -315,11 +315,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/a/g;->j([B)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/h;->CF(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/h;->ES(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -373,13 +373,13 @@
     move-result-object v0
 
     .line 104
-    invoke-static {v6}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v6}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -422,12 +422,12 @@
     .line 113
     const/4 v1, 0x0
 
-    invoke-static {v6, v0, v1}, Lcom/tencent/mm/sdk/platformtools/j;->i(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-static {v6, v0, v1}, Lcom/tencent/mm/sdk/platformtools/j;->l(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     goto :goto_0
 .end method
 
-.method public static b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.method public static c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 7
 
     .prologue

@@ -15,14 +15,14 @@
 
 
 # virtual methods
-.method public abstract ahA()V
+.method public abstract akl()V
 .end method
 
-.method public abstract ahB()V
+.method public abstract akm()V
 .end method
 
 .method public abstract append(Ljava/lang/String;)V
 .end method
 
-.method public abstract dr(Z)V
+.method public abstract dq(Z)V
 .end method

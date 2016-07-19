@@ -2,19 +2,19 @@ package com.tencent.mm.pluginsdk;
 
 public abstract interface i$q
 {
-  public abstract boolean aDA();
+  public abstract boolean aGY();
   
-  public abstract void aDB();
+  public abstract boolean aGZ();
   
-  public abstract void aDC();
+  public abstract void aHa();
   
-  public abstract void aDF();
+  public abstract void aHb();
   
-  public abstract String aDH();
+  public abstract void aHe();
   
-  public abstract i.h aDI();
+  public abstract String aHg();
   
-  public abstract boolean aDz();
+  public abstract i.h aHh();
 }
 
 /* Location:

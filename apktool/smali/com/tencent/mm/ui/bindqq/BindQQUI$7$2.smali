@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kPw:Lcom/tencent/mm/ui/bindqq/BindQQUI$7;
+.field final synthetic loM:Lcom/tencent/mm/ui/bindqq/BindQQUI$7;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 168
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/BindQQUI$7$2;->kPw:Lcom/tencent/mm/ui/bindqq/BindQQUI$7;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/BindQQUI$7$2;->loM:Lcom/tencent/mm/ui/bindqq/BindQQUI$7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,27 +53,29 @@
 
     .line 174
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindqq/BindQQUI$7$2;->kPw:Lcom/tencent/mm/ui/bindqq/BindQQUI$7;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindqq/BindQQUI$7$2;->loM:Lcom/tencent/mm/ui/bindqq/BindQQUI$7;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/bindqq/BindQQUI$7;->kPv:Lcom/tencent/mm/ui/bindqq/BindQQUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/bindqq/BindQQUI$7;->loL:Lcom/tencent/mm/ui/bindqq/BindQQUI;
 
     new-instance v1, Lcom/tencent/mm/modelsimple/h;
 
-    sget v2, Lcom/tencent/mm/modelsimple/h;->caQ:I
+    sget v2, Lcom/tencent/mm/modelsimple/h;->bUz:I
 
     invoke-direct {v1, v2}, Lcom/tencent/mm/modelsimple/h;-><init>(I)V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    const/4 v3, 0x0
 
-    const v1, 0x7f0b0ddd
+    invoke-virtual {v2, v1, v3}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
+
+    const v1, 0x7f080134
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/bindqq/BindQQUI;->getString(I)Ljava/lang/String;
 
-    const v1, 0x7f0b0389
+    const v1, 0x7f0810d3
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/bindqq/BindQQUI;->getString(I)Ljava/lang/String;
 
@@ -89,11 +91,13 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/bindqq/BindQQUI;->coc:Lcom/tencent/mm/ui/base/p;
+    iput-object v1, v0, Lcom/tencent/mm/ui/bindqq/BindQQUI;->cjq:Lcom/tencent/mm/ui/base/p;
 
     goto :goto_0
 
     .line 172
+    nop
+
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

@@ -2,7 +2,7 @@ package com.tencent.mm.ui.account;
 
 import android.view.View;
 import android.view.View.OnFocusChangeListener;
-import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.sdk.platformtools.ah;
 
 final class RegSetInfoUI$31
   implements View.OnFocusChangeListener
@@ -13,8 +13,8 @@ final class RegSetInfoUI$31
   {
     if (paramBoolean)
     {
-      RegSetInfoUI.r(kwh);
-      RegSetInfoUI.m(kwh).ds(200L);
+      RegSetInfoUI.r(kVo);
+      RegSetInfoUI.m(kVo).dJ(200L);
     }
   }
 }

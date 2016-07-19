@@ -1,54 +1,64 @@
 package com.tencent.mm.protocal.b;
 
 public final class atq
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public long jMD;
-  public long jME;
-  public int jMF;
+  public String bqM;
+  public String tag;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.A(1, jMD);
-      paramVarArgs.A(2, jME);
-      paramVarArgs.ci(3, jMF);
+      if (tag != null) {
+        paramVarArgs.e(1, tag);
+      }
+      if (bqM != null) {
+        paramVarArgs.e(2, bqM);
+      }
       return 0;
     }
     if (paramInt == 1) {
-      return a.a.a.a.z(1, jMD) + 0 + a.a.a.a.z(2, jME) + a.a.a.a.cg(3, jMF);
-    }
-    if (paramInt == 2)
-    {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.bog();
-        }
+      if (tag == null) {
+        break label234;
       }
-      return 0;
     }
-    if (paramInt == 3)
+    label234:
+    for (paramInt = a.a.a.b.b.a.f(1, tag) + 0;; paramInt = 0)
     {
-      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-      atq localatq = (atq)paramVarArgs[1];
-      switch (((Integer)paramVarArgs[2]).intValue())
+      int i = paramInt;
+      if (bqM != null) {
+        i = paramInt + a.a.a.b.b.a.f(2, bqM);
+      }
+      return i;
+      if (paramInt == 2)
       {
-      default: 
-        return -1;
-      case 1: 
-        jMD = maU.jD();
-        return 0;
-      case 2: 
-        jME = maU.jD();
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bve();
+          }
+        }
+        break;
+      }
+      if (paramInt == 3)
+      {
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        atq localatq = (atq)paramVarArgs[1];
+        switch (((Integer)paramVarArgs[2]).intValue())
+        {
+        default: 
+          return -1;
+        case 1: 
+          tag = mMY.readString();
+          return 0;
+        }
+        bqM = mMY.readString();
         return 0;
       }
-      jMF = maU.jC();
-      return 0;
+      return -1;
     }
-    return -1;
   }
 }
 

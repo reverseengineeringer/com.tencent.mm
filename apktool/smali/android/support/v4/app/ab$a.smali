@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract ac()Landroid/content/Intent;
+.method public abstract aa()Landroid/content/Intent;
 .end method

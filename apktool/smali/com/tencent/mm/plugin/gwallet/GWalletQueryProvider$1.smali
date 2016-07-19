@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic exw:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
+.field final synthetic eDQ:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 104
-    iput-object p1, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;->exw:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;->eDQ:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,21 +41,21 @@
 
     .prologue
     .line 106
-    const-string/jumbo v0, "!44@/B4Tb64lLpJlq3g3dssAoZZ5jyUwqm48qdJiAhkom5Q="
+    const-string/jumbo v0, "MicroMsg.GWalletQueryProvider"
 
     const-string/jumbo v1, "Setup finished."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 108
-    invoke-virtual {p1}, Lcom/tencent/mm/plugin/gwallet/a/c;->isSuccess()Z
+    invoke-virtual {p1}, Lcom/tencent/mm/plugin/gwallet/a/c;->ep()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 110
-    const-string/jumbo v0, "!44@/B4Tb64lLpJlq3g3dssAoZZ5jyUwqm48qdJiAhkom5Q="
+    const-string/jumbo v0, "MicroMsg.GWalletQueryProvider"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -71,15 +71,15 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 111
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;->exw:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;->eDQ:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;->a(Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;)Z
 
     .line 112
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;->exw:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;->eDQ:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;->b(Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;)Lcom/tencent/mm/plugin/gwallet/a/b;
 
@@ -88,7 +88,7 @@
     if-eqz v0, :cond_0
 
     .line 113
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;->exw:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;->eDQ:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;->b(Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;)Lcom/tencent/mm/plugin/gwallet/a/b;
 
@@ -98,7 +98,7 @@
 
     .line 114
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;->exw:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;->eDQ:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;->c(Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;)Lcom/tencent/mm/plugin/gwallet/a/b;
 
@@ -108,7 +108,7 @@
 
     .line 116
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/sdk/platformtools/ab;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tw()Lcom/tencent/mm/sdk/platformtools/ad;
 
     move-result-object v0
 
@@ -116,7 +116,7 @@
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1$1;-><init>(Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ab;->a(Lcom/tencent/mm/sdk/platformtools/ab$a;)I
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ad;->a(Lcom/tencent/mm/sdk/platformtools/ad$a;)I
 
     goto :goto_0
 .end method

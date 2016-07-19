@@ -19,10 +19,19 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Landroid/support/v7/internal/view/menu/ActionMenuPresenter$SavedState;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public kW:I
+.field public ln:I
 
 
 # direct methods
@@ -63,7 +72,7 @@
 
     move-result v0
 
-    iput v0, p0, Landroid/support/v7/internal/view/menu/ActionMenuPresenter$SavedState;->kW:I
+    iput v0, p0, Landroid/support/v7/internal/view/menu/ActionMenuPresenter$SavedState;->ln:I
 
     .line 549
     return-void
@@ -86,7 +95,7 @@
 
     .prologue
     .line 558
-    iget v0, p0, Landroid/support/v7/internal/view/menu/ActionMenuPresenter$SavedState;->kW:I
+    iget v0, p0, Landroid/support/v7/internal/view/menu/ActionMenuPresenter$SavedState;->ln:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 

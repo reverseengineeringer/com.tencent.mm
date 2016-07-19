@@ -1,59 +1,65 @@
 package com.tencent.mm.protocal.b;
 
-import a.a.a.b;
+import java.util.LinkedList;
 
 public final class alz
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public int jHy;
-  private boolean jHz;
+  public int Type;
+  public LinkedList<alu> kfF = new LinkedList();
   
-  private alz aTA()
+  protected final int a(int paramInt, Object... paramVarArgs)
   {
-    if (!jHz) {
-      throw new b("Not all required fields were included (false = not included in message),  uiVal:" + jHz);
-    }
-    return this;
-  }
-  
-  public final void a(a.a.a.c.a parama)
-  {
-    parama.ci(1, jHy);
-  }
-  
-  public final boolean a(a.a.a.a.a parama, com.tencent.mm.at.a parama1, int paramInt)
-  {
-    parama1 = (alz)parama1;
-    switch (paramInt)
+    if (paramInt == 0)
     {
-    default: 
-      return false;
+      paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
+      paramVarArgs.cw(1, Type);
+      paramVarArgs.d(2, 8, kfF);
+      return 0;
     }
-    parama1.pi(maU.jC());
-    return true;
-  }
-  
-  public final int kn()
-  {
-    return a.a.a.a.cg(1, jHy) + 0 + 0;
-  }
-  
-  public final alz pi(int paramInt)
-  {
-    jHy = paramInt;
-    jHz = true;
-    return this;
-  }
-  
-  public final byte[] toByteArray()
-  {
-    aTA();
-    return super.toByteArray();
-  }
-  
-  public final String toString()
-  {
-    return new StringBuilder(String.valueOf(new StringBuilder(String.valueOf("")).append(getClass().getName()).append("(").toString())).append("uiVal = ").append(jHy).append("   ").toString() + ")";
+    if (paramInt == 1) {
+      return a.a.a.a.cu(1, Type) + 0 + a.a.a.a.c(2, 8, kfF);
+    }
+    if (paramInt == 2)
+    {
+      paramVarArgs = (byte[])paramVarArgs[0];
+      kfF.clear();
+      paramVarArgs = new a.a.a.a.a(paramVarArgs, jrk);
+      for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
+        if (!super.a(paramVarArgs, this, paramInt)) {
+          paramVarArgs.bve();
+        }
+      }
+      return 0;
+    }
+    if (paramInt == 3)
+    {
+      Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
+      alz localalz = (alz)paramVarArgs[1];
+      paramInt = ((Integer)paramVarArgs[2]).intValue();
+      switch (paramInt)
+      {
+      default: 
+        return -1;
+      case 1: 
+        Type = mMY.id();
+        return 0;
+      }
+      paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+      int i = paramVarArgs.size();
+      paramInt = 0;
+      while (paramInt < i)
+      {
+        Object localObject2 = (byte[])paramVarArgs.get(paramInt);
+        localObject1 = new alu();
+        localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+        for (boolean bool = true; bool; bool = ((alu)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, com.tencent.mm.ax.a.a((a.a.a.a.a)localObject2))) {}
+        kfF.add(localObject1);
+        paramInt += 1;
+      }
+      return 0;
+    }
+    return -1;
   }
 }
 

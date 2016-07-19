@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lmM:Lcom/tencent/mm/ui/contact/VoipAddressUI;
+.field final synthetic lNc:Lcom/tencent/mm/ui/contact/VoipAddressUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 253
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI$4;->lmM:Lcom/tencent/mm/ui/contact/VoipAddressUI;
+    .line 252
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI$4;->lNc:Lcom/tencent/mm/ui/contact/VoipAddressUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,8 +40,8 @@
     .locals 3
 
     .prologue
-    .line 256
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI$4;->lmM:Lcom/tencent/mm/ui/contact/VoipAddressUI;
+    .line 255
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI$4;->lNc:Lcom/tencent/mm/ui/contact/VoipAddressUI;
 
     new-instance v1, Landroid/content/Intent;
 
@@ -51,6 +51,6 @@
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->startActivity(Landroid/content/Intent;)V
 
-    .line 257
+    .line 256
     return-void
 .end method

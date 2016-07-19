@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lgQ:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$14;
+.field final synthetic lHc:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$14;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 738
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$14$2;->lgQ:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$14;
+    .line 753
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$14$2;->lHc:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$14;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,20 +42,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 741
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$14$2;->lgQ:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$14;
+    .line 756
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$14$2;->lHc:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$14;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$14;->lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$14;->lGY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->finish()V
 
-    .line 742
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$14$2;->lgQ:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$14;
+    .line 757
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$14$2;->lHc:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$14;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$14;->lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$14;->lGY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
     invoke-virtual {v0, v1, v1}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->overridePendingTransition(II)V
 
-    .line 743
+    .line 758
     return-void
 .end method

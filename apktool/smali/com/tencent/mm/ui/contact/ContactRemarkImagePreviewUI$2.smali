@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->Gb()V
+    value = Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ljp:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;
+.field final synthetic lJA:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 230
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$2;->ljp:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;
+    .line 231
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$2;->lJA:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,11 +42,11 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 234
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$2;->ljp:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;
+    .line 235
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI$2;->lJA:Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;->a(Lcom/tencent/mm/ui/contact/ContactRemarkImagePreviewUI;Z)V
 
-    .line 235
+    .line 236
     return v1
 .end method

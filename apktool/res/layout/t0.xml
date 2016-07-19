@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/aa5" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.ui.base.MMViewPager android:id="@id/a9y" android:focusable="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:spacing="0.0dip" android:unselectedAlpha="1.2" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/aa7" android:background="@color/p" android:layout_width="fill_parent" android:layout_height="@dimen/j7">
+        <ImageButton android:id="@id/azu" android:background="@null" android:paddingLeft="@dimen/hb" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="20.0dip" android:src="@raw/round_selector_normal" />
+        <TextView android:textSize="@dimen/i8" android:textColor="@color/r" android:gravity="center_vertical" android:id="@id/azv" android:paddingLeft="@dimen/j8" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/axs" />
+        <View android:id="@id/azw" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/azx" android:background="@null" android:paddingLeft="@dimen/hb" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@raw/big_selecter_unselected_icon" />
+        <TextView android:textSize="@dimen/i8" android:textColor="@color/r" android:gravity="center_vertical" android:id="@id/azy" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/hb" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/de" />
+    </LinearLayout>
+</FrameLayout>

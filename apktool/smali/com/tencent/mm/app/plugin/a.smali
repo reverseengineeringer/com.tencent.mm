@@ -11,7 +11,7 @@
     .locals 0
 
     .prologue
-    .line 26
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,34 +27,34 @@
 
     const/4 v2, 0x0
 
-    .line 71
+    .line 70
     if-nez p1, :cond_0
 
-    .line 72
-    const-string/jumbo v0, "!44@/B4Tb64lLpKQNpMPOOK3Iz7ANJyNbQWRahxy27/ny08="
+    .line 71
+    const-string/jumbo v0, "MicroMsg.MMURIJumpHandler"
 
     const-string/jumbo v1, "jumpToUIInternal, context is null!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 83
+    .line 82
     :goto_0
     return v2
 
-    .line 75
+    .line 74
     :cond_0
     if-nez p2, :cond_1
 
-    .line 76
-    const-string/jumbo v0, "!44@/B4Tb64lLpKQNpMPOOK3Iz7ANJyNbQWRahxy27/ny08="
+    .line 75
+    const-string/jumbo v0, "MicroMsg.MMURIJumpHandler"
 
     const-string/jumbo v1, "jumpToUIInternal url is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 79
+    .line 78
     :cond_1
     const-string/jumbo v0, "weixin://openSpecificView/"
 
@@ -64,7 +64,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 80
+    .line 79
     new-array v0, v2, [Ljava/lang/Object;
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/tencent/mm/app/plugin/a;->b(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/Object;)Z
@@ -73,13 +73,13 @@
 
     goto :goto_0
 
-    .line 83
+    .line 82
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/app/plugin/e;->lf()Lcom/tencent/mm/app/plugin/e;
+    invoke-static {}, Lcom/tencent/mm/app/plugin/e;->jG()Lcom/tencent/mm/app/plugin/e;
 
     move-result-object v3
 
-    const-string/jumbo v4, "!32@/B4Tb64lLpLEFJxLgdI367x8TT6QVFmB"
+    const-string/jumbo v4, "MicroMsg.URISpanHandler"
 
     const-string/jumbo v5, "handleUriJump, url:%s, isAllowScanQrCode:%b, callback==null:%b, mHighPriorityHandlerList.size:%d, mNormalPriorityHandlerList.size: %d, mLowPriorityHandlerList.size: %d"
 
@@ -110,7 +110,7 @@
 
     const/4 v0, 0x3
 
-    iget-object v7, v3, Lcom/tencent/mm/app/plugin/e;->anc:Ljava/util/ArrayList;
+    iget-object v7, v3, Lcom/tencent/mm/app/plugin/e;->ZR:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
@@ -124,7 +124,7 @@
 
     const/4 v0, 0x4
 
-    iget-object v7, v3, Lcom/tencent/mm/app/plugin/e;->ane:Ljava/util/ArrayList;
+    iget-object v7, v3, Lcom/tencent/mm/app/plugin/e;->ZS:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
@@ -138,7 +138,7 @@
 
     const/4 v0, 0x5
 
-    iget-object v7, v3, Lcom/tencent/mm/app/plugin/e;->anf:Ljava/util/ArrayList;
+    iget-object v7, v3, Lcom/tencent/mm/app/plugin/e;->ZT:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
@@ -150,17 +150,17 @@
 
     aput-object v7, v6, v0
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     if-nez p1, :cond_4
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpLEFJxLgdI367x8TT6QVFmB"
+    const-string/jumbo v0, "MicroMsg.URISpanHandler"
 
     const-string/jumbo v1, "handleUriJump, context is null!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, v3, Lcom/tencent/mm/app/plugin/e;->anb:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v0, v3, Lcom/tencent/mm/app/plugin/e;->ZQ:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     iput-object v8, v0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->mContext:Landroid/content/Context;
 
@@ -174,34 +174,34 @@
     :cond_4
     iput-object p1, v3, Lcom/tencent/mm/app/plugin/e;->mContext:Landroid/content/Context;
 
-    iget-object v0, v3, Lcom/tencent/mm/app/plugin/e;->anb:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v0, v3, Lcom/tencent/mm/app/plugin/e;->ZQ:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     iget-object v4, v3, Lcom/tencent/mm/app/plugin/e;->mContext:Landroid/content/Context;
 
     iput-object v4, v0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->mContext:Landroid/content/Context;
 
-    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpLEFJxLgdI367x8TT6QVFmB"
+    const-string/jumbo v0, "MicroMsg.URISpanHandler"
 
     const-string/jumbo v1, "handleUriJump, url is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-object v8, v3, Lcom/tencent/mm/app/plugin/e;->mContext:Landroid/content/Context;
 
-    iget-object v0, v3, Lcom/tencent/mm/app/plugin/e;->anb:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v0, v3, Lcom/tencent/mm/app/plugin/e;->ZQ:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     iput-object v8, v0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->mContext:Landroid/content/Context;
 
     goto/16 :goto_0
 
     :cond_5
-    iget-object v0, v3, Lcom/tencent/mm/app/plugin/e;->anc:Ljava/util/ArrayList;
+    iget-object v0, v3, Lcom/tencent/mm/app/plugin/e;->ZR:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -226,7 +226,7 @@
 
     if-eqz v5, :cond_6
 
-    const-string/jumbo v4, "!32@/B4Tb64lLpLEFJxLgdI367x8TT6QVFmB"
+    const-string/jumbo v4, "MicroMsg.URISpanHandler"
 
     const-string/jumbo v5, "handleUriJump, %s handle"
 
@@ -242,11 +242,11 @@
 
     aput-object v0, v6, v2
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     iput-object v8, v3, Lcom/tencent/mm/app/plugin/e;->mContext:Landroid/content/Context;
 
-    iget-object v0, v3, Lcom/tencent/mm/app/plugin/e;->anb:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v0, v3, Lcom/tencent/mm/app/plugin/e;->ZQ:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     iput-object v8, v0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->mContext:Landroid/content/Context;
 
@@ -255,7 +255,7 @@
     goto/16 :goto_0
 
     :cond_7
-    iget-object v0, v3, Lcom/tencent/mm/app/plugin/e;->ane:Ljava/util/ArrayList;
+    iget-object v0, v3, Lcom/tencent/mm/app/plugin/e;->ZS:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -280,7 +280,7 @@
 
     if-eqz v5, :cond_8
 
-    const-string/jumbo v4, "!32@/B4Tb64lLpLEFJxLgdI367x8TT6QVFmB"
+    const-string/jumbo v4, "MicroMsg.URISpanHandler"
 
     const-string/jumbo v5, "handleUriJump, %s handle"
 
@@ -296,11 +296,11 @@
 
     aput-object v0, v6, v2
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     iput-object v8, v3, Lcom/tencent/mm/app/plugin/e;->mContext:Landroid/content/Context;
 
-    iget-object v0, v3, Lcom/tencent/mm/app/plugin/e;->anb:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v0, v3, Lcom/tencent/mm/app/plugin/e;->ZQ:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     iput-object v8, v0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->mContext:Landroid/content/Context;
 
@@ -309,7 +309,7 @@
     goto/16 :goto_0
 
     :cond_9
-    iget-object v0, v3, Lcom/tencent/mm/app/plugin/e;->anf:Ljava/util/ArrayList;
+    iget-object v0, v3, Lcom/tencent/mm/app/plugin/e;->ZT:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -334,7 +334,7 @@
 
     if-eqz v5, :cond_a
 
-    const-string/jumbo v4, "!32@/B4Tb64lLpLEFJxLgdI367x8TT6QVFmB"
+    const-string/jumbo v4, "MicroMsg.URISpanHandler"
 
     const-string/jumbo v5, "handleUriJump, %s handle"
 
@@ -350,11 +350,11 @@
 
     aput-object v0, v6, v2
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     iput-object v8, v3, Lcom/tencent/mm/app/plugin/e;->mContext:Landroid/content/Context;
 
-    iget-object v0, v3, Lcom/tencent/mm/app/plugin/e;->anb:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v0, v3, Lcom/tencent/mm/app/plugin/e;->ZQ:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     iput-object v8, v0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->mContext:Landroid/content/Context;
 
@@ -365,15 +365,15 @@
     :cond_b
     iput-object v8, v3, Lcom/tencent/mm/app/plugin/e;->mContext:Landroid/content/Context;
 
-    iget-object v0, v3, Lcom/tencent/mm/app/plugin/e;->anb:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v0, v3, Lcom/tencent/mm/app/plugin/e;->ZQ:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     iput-object v8, v0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpLEFJxLgdI367x8TT6QVFmB"
+    const-string/jumbo v0, "MicroMsg.URISpanHandler"
 
     const-string/jumbo v1, "handleUriJump, nothing handle"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 .end method
@@ -384,7 +384,7 @@
     .locals 1
 
     .prologue
-    .line 32
+    .line 31
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/tencent/mm/app/plugin/a;->a(Landroid/content/Context;Ljava/lang/String;ZLcom/tencent/mm/pluginsdk/l;)Z
@@ -398,7 +398,7 @@
     .locals 6
 
     .prologue
-    .line 62
+    .line 61
     const/4 v4, 0x0
 
     move-object v0, p0
@@ -426,22 +426,22 @@
 
     const/4 v0, 0x0
 
-    .line 43
+    .line 42
     if-nez p1, :cond_1
 
-    .line 44
-    const-string/jumbo v1, "!44@/B4Tb64lLpKQNpMPOOK3Iz7ANJyNbQWRahxy27/ny08="
+    .line 43
+    const-string/jumbo v1, "MicroMsg.MMURIJumpHandler"
 
     const-string/jumbo v2, "jumpToURLWithCallback, context is null!"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 56
+    .line 55
     :cond_0
     :goto_0
     return v0
 
-    .line 47
+    .line 46
     :cond_1
     const-string/jumbo v2, "http"
 
@@ -451,7 +451,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 48
+    .line 47
     new-instance v2, Landroid/content/Intent;
 
     const-string/jumbo v3, "android.intent.action.VIEW"
@@ -474,14 +474,14 @@
     :goto_1
     move v0, v1
 
-    .line 49
+    .line 48
     goto :goto_0
 
-    .line 48
+    .line 47
     :catch_0
     move-exception v2
 
-    const-string/jumbo v3, "!44@/B4Tb64lLpKQNpMPOOK3Iz7ANJyNbQWRahxy27/ny08="
+    const-string/jumbo v3, "MicroMsg.MMURIJumpHandler"
 
     const-string/jumbo v4, "openLinkInBrowser fail:%s"
 
@@ -493,21 +493,21 @@
 
     aput-object v2, v5, v0
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
-    .line 51
+    .line 50
     :cond_2
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/tencent/mm/app/plugin/a;->b(Landroid/content/Context;Ljava/lang/String;ZLcom/tencent/mm/pluginsdk/l;)Z
 
     move-result v2
 
-    .line 52
+    .line 51
     if-nez v2, :cond_0
 
-    .line 53
-    const-string/jumbo v2, "!44@/B4Tb64lLpKQNpMPOOK3Iz7ANJyNbQWRahxy27/ny08="
+    .line 52
+    const-string/jumbo v2, "MicroMsg.MMURIJumpHandler"
 
     const-string/jumbo v3, "jumpToUI failed, uri:%s"
 
@@ -515,7 +515,7 @@
 
     aput-object p2, v1, v0
 
-    invoke-static {v2, v3, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -524,7 +524,7 @@
     .locals 6
 
     .prologue
-    .line 67
+    .line 66
     const/4 v5, 0x0
 
     move-object v0, p0
@@ -556,46 +556,46 @@
 
     const/4 v2, 0x0
 
-    .line 98
+    .line 97
     if-nez p2, :cond_1
 
-    .line 99
-    const-string/jumbo v0, "!44@/B4Tb64lLpKQNpMPOOK3Iz7ANJyNbQWRahxy27/ny08="
+    .line 98
+    const-string/jumbo v0, "MicroMsg.MMURIJumpHandler"
 
     const-string/jumbo v1, "openSpecificUI uri is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 192
+    .line 189
     :cond_0
     :goto_0
     return v2
 
-    .line 102
+    .line 101
     :cond_1
     if-nez p1, :cond_2
 
-    .line 103
-    const-string/jumbo v0, "!44@/B4Tb64lLpKQNpMPOOK3Iz7ANJyNbQWRahxy27/ny08="
+    .line 102
+    const-string/jumbo v0, "MicroMsg.MMURIJumpHandler"
 
     const-string/jumbo v1, "openSpecificUI, context is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 107
+    .line 106
     :cond_2
     new-instance v3, Landroid/content/Intent;
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 108
+    .line 107
     const/high16 v0, 0x10000000
 
     invoke-virtual {v3, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 110
+    .line 109
     const-string/jumbo v0, "weixin://openSpecificView/"
 
     const-string/jumbo v1, ""
@@ -604,22 +604,22 @@
 
     move-result-object v1
 
-    .line 111
+    .line 110
     const/4 v0, 0x0
 
-    .line 112
+    .line 111
     if-eqz p3, :cond_3
 
     array-length v5, p3
 
     if-lez v5, :cond_3
 
-    .line 113
+    .line 112
     aget-object v0, p3, v2
 
     check-cast v0, Landroid/os/Bundle;
 
-    .line 116
+    .line 115
     :cond_3
     const-string/jumbo v5, "contacts"
 
@@ -629,15 +629,15 @@
 
     if-eqz v5, :cond_4
 
-    .line 117
+    .line 116
     invoke-virtual {v3, v6}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 118
+    .line 117
     const-string/jumbo v0, "preferred_tab"
 
     invoke-virtual {v3, v0, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 119
+    .line 118
     const-class v0, Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-virtual {v3, p1, v0}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
@@ -649,10 +649,10 @@
     :goto_1
     move v2, v4
 
-    .line 192
+    .line 189
     goto :goto_0
 
-    .line 120
+    .line 119
     :cond_4
     const-string/jumbo v5, "newfriend"
 
@@ -662,16 +662,16 @@
 
     if-eqz v5, :cond_5
 
-    .line 121
+    .line 120
     const-string/jumbo v0, "subapp"
 
     const-string/jumbo v1, ".ui.friend.FMessageConversationUI"
 
-    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     goto :goto_1
 
-    .line 122
+    .line 121
     :cond_5
     const-string/jumbo v5, "addfriend"
 
@@ -681,16 +681,16 @@
 
     if-eqz v5, :cond_6
 
-    .line 123
+    .line 122
     const-string/jumbo v0, "subapp"
 
     const-string/jumbo v1, ".ui.pluginapp.AddMoreFriendsUI"
 
-    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     goto :goto_1
 
-    .line 124
+    .line 123
     :cond_6
     const-string/jumbo v5, "searchbrand"
 
@@ -700,28 +700,28 @@
 
     if-eqz v5, :cond_7
 
-    .line 125
+    .line 124
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 126
+    .line 125
     const-string/jumbo v1, "Contact_Scene"
 
     const/16 v2, 0x27
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 127
+    .line 126
     const-string/jumbo v1, "brandservice"
 
     const-string/jumbo v2, ".ui.SearchOrRecommendBizUI"
 
-    invoke-static {p1, v1, v2, v0}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {p1, v1, v2, v0}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     goto :goto_1
 
-    .line 128
+    .line 127
     :cond_7
     const-string/jumbo v5, "discover"
 
@@ -731,15 +731,15 @@
 
     if-eqz v5, :cond_8
 
-    .line 129
+    .line 128
     invoke-virtual {v3, v6}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 130
+    .line 129
     const-string/jumbo v0, "preferred_tab"
 
     invoke-virtual {v3, v0, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 131
+    .line 130
     const-class v0, Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-virtual {v3, p1, v0}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
@@ -750,7 +750,7 @@
 
     goto :goto_1
 
-    .line 132
+    .line 131
     :cond_8
     const-string/jumbo v5, "timeline"
 
@@ -760,16 +760,16 @@
 
     if-eqz v5, :cond_9
 
-    .line 133
+    .line 132
     const-string/jumbo v0, "sns"
 
     const-string/jumbo v1, ".ui.SnsTimeLineUI"
 
-    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     goto :goto_1
 
-    .line 134
+    .line 133
     :cond_9
     const-string/jumbo v5, "scan"
 
@@ -779,16 +779,16 @@
 
     if-eqz v5, :cond_a
 
-    .line 135
+    .line 134
     const-string/jumbo v0, "scanner"
 
     const-string/jumbo v1, ".ui.BaseScanUI"
 
-    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     goto/16 :goto_1
 
-    .line 136
+    .line 135
     :cond_a
     const-string/jumbo v5, "myprofile"
 
@@ -798,16 +798,16 @@
 
     if-eqz v5, :cond_b
 
-    .line 137
+    .line 136
     const-string/jumbo v0, "setting"
 
     const-string/jumbo v1, ".ui.setting.SettingsPersonalInfoUI"
 
-    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     goto/16 :goto_1
 
-    .line 138
+    .line 137
     :cond_b
     const-string/jumbo v5, "myaccount"
 
@@ -817,16 +817,16 @@
 
     if-eqz v5, :cond_c
 
-    .line 139
+    .line 138
     const-string/jumbo v0, "setting"
 
     const-string/jumbo v1, ".ui.setting.SettingsAccountInfoUI"
 
-    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     goto/16 :goto_1
 
-    .line 140
+    .line 139
     :cond_c
     const-string/jumbo v5, "bindphone"
 
@@ -836,7 +836,7 @@
 
     if-eqz v5, :cond_d
 
-    .line 141
+    .line 140
     const-class v0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
 
     invoke-virtual {v3, p1, v0}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
@@ -847,7 +847,7 @@
 
     goto/16 :goto_1
 
-    .line 142
+    .line 141
     :cond_d
     const-string/jumbo v5, "privacy"
 
@@ -857,16 +857,16 @@
 
     if-eqz v5, :cond_e
 
-    .line 143
+    .line 142
     const-string/jumbo v0, "setting"
 
     const-string/jumbo v1, ".ui.setting.SettingsPrivacyUI"
 
-    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     goto/16 :goto_1
 
-    .line 144
+    .line 143
     :cond_e
     const-string/jumbo v5, "general"
 
@@ -876,16 +876,16 @@
 
     if-eqz v5, :cond_f
 
-    .line 145
+    .line 144
     const-string/jumbo v0, "setting"
 
     const-string/jumbo v1, ".ui.setting.SettingsAboutSystemUI"
 
-    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     goto/16 :goto_1
 
-    .line 146
+    .line 145
     :cond_f
     const-string/jumbo v5, "invitevoip"
 
@@ -895,12 +895,12 @@
 
     if-eqz v5, :cond_10
 
-    .line 147
-    invoke-static {p1}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->eq(Landroid/content/Context;)V
+    .line 146
+    invoke-static {p1}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->et(Landroid/content/Context;)V
 
     goto/16 :goto_1
 
-    .line 149
+    .line 148
     :cond_10
     const-string/jumbo v5, "expose"
 
@@ -910,65 +910,57 @@
 
     if-eqz v5, :cond_11
 
-    .line 151
+    .line 149
     const-string/jumbo v1, ""
 
-    .line 152
+    .line 150
     if-eqz v0, :cond_17
 
+    .line 151
+    const-string/jumbo v1, "url"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     .line 153
-    const-string/jumbo v1, "webview_scene"
+    :goto_2
+    const-string/jumbo v1, "k_expose_url"
 
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v1
+    invoke-virtual {v3, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 154
-    const-string/jumbo v2, "url"
-
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
 
     move-result-object v0
+
+    .line 155
+    const-string/jumbo v1, "k_username"
+
+    invoke-virtual {v3, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 156
-    :goto_2
-    const-string/jumbo v2, "k_expose_url"
+    const-string/jumbo v0, "showShare"
 
-    invoke-virtual {v3, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v3, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 157
-    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
+    const-string/jumbo v0, "rawUrl"
 
-    move-result-object v0
+    const-string/jumbo v1, "https://weixin110.qq.com/security/readtemplate?t=weixin_report/w_type&scene=34"
+
+    invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 158
-    const-string/jumbo v2, "k_username"
+    const-string/jumbo v0, "webview"
 
-    invoke-virtual {v3, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    const-string/jumbo v1, ".ui.tools.WebViewUI"
 
-    .line 159
-    const-string/jumbo v0, "k_expose_scene"
-
-    const/16 v2, 0x22
-
-    invoke-virtual {v3, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 160
-    const-string/jumbo v0, "k_expose_web_scene"
-
-    invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 161
-    const-class v0, Lcom/tencent/mm/ui/ExposeWithProofUI;
-
-    invoke-virtual {v3, p1, v0}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
-
-    .line 162
-    invoke-virtual {p1, v3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     goto/16 :goto_1
 
-    .line 163
+    .line 159
     :cond_11
     const-string/jumbo v5, "shakecard"
 
@@ -978,20 +970,20 @@
 
     if-eqz v5, :cond_12
 
-    .line 164
+    .line 160
     const-string/jumbo v1, ""
 
-    .line 165
+    .line 161
     if-eqz v0, :cond_16
 
-    .line 166
+    .line 162
     const-string/jumbo v1, "extinfo"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 168
+    .line 164
     :goto_3
     const-string/jumbo v1, "key_shake_card_from_scene"
 
@@ -999,26 +991,26 @@
 
     invoke-virtual {v3, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 169
+    .line 165
     const-string/jumbo v1, "shake_card"
 
     invoke-virtual {v3, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 170
+    .line 166
     const-string/jumbo v1, "key_shake_card_ext_info"
 
     invoke-virtual {v3, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 171
+    .line 167
     const-string/jumbo v0, "shake"
 
     const-string/jumbo v1, ".ui.ShakeReportUI"
 
-    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     goto/16 :goto_1
 
-    .line 172
+    .line 168
     :cond_12
     const-string/jumbo v5, "cardlistview"
 
@@ -1028,16 +1020,16 @@
 
     if-eqz v5, :cond_13
 
-    .line 173
+    .line 170
     const-string/jumbo v0, "card"
 
-    const-string/jumbo v1, ".ui.CardIndexUI"
+    const-string/jumbo v1, ".ui.CardHomePageUI"
 
-    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {p1, v0, v1, v3}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     goto/16 :goto_1
 
-    .line 174
+    .line 171
     :cond_13
     const-string/jumbo v3, "uploadlog"
 
@@ -1047,13 +1039,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 175
-    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
+    .line 172
+    invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 176
-    invoke-static {v1}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+    .line 173
+    invoke-static {v1}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -1061,7 +1053,7 @@
 
     const-string/jumbo v1, "weixin"
 
-    .line 179
+    .line 176
     :cond_14
     :try_start_0
     const-string/jumbo v3, "extinfo"
@@ -1076,21 +1068,21 @@
 
     move-result v0
 
-    .line 182
+    .line 179
     :goto_4
-    const-string/jumbo v5, "!44@/B4Tb64lLpKQNpMPOOK3Iz7ANJyNbQWRahxy27/ny08="
+    const-string/jumbo v5, "MicroMsg.MMURIJumpHandler"
 
     const-string/jumbo v6, "upload log from jsapi, before upload, is-login:%b, time:%d"
 
     new-array v7, v7, [Ljava/lang/Object;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v3
 
     if-eqz v3, :cond_15
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tM()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tN()Z
 
     move-result v3
 
@@ -1111,26 +1103,26 @@
 
     aput-object v2, v7, v4
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 184
+    .line 181
     new-instance v2, Landroid/content/Intent;
 
     const-class v3, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
 
     invoke-direct {v2, p1, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 185
+    .line 182
     const-string/jumbo v3, "key_user"
 
     invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 186
+    .line 183
     const-string/jumbo v1, "key_time"
 
     invoke-virtual {v2, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 187
+    .line 184
     invoke-virtual {p1, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     goto/16 :goto_1
@@ -1145,7 +1137,7 @@
     :cond_15
     move v3, v2
 
-    .line 182
+    .line 179
     goto :goto_5
 
     :cond_16
@@ -1155,8 +1147,6 @@
 
     :cond_17
     move-object v0, v1
-
-    move v1, v2
 
     goto/16 :goto_2
 .end method

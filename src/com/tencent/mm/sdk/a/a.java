@@ -4,8 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import com.tencent.mm.a.g;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class a
 {
@@ -13,22 +13,22 @@ public final class a
   {
     if (paramContext == null)
     {
-      u.e("!44@/B4Tb64lLpIcVJc/YDTTqHums7mERtmpK2BGs1em8ao=", "send fail, invalid argument");
+      v.e("MicroMsg.SDK.MMessageAct", "send fail, invalid argument");
       return false;
     }
-    if (ay.kz(jUy))
+    if (be.kf(ktZ))
     {
-      u.e("!44@/B4Tb64lLpIcVJc/YDTTqHums7mERtmpK2BGs1em8ao=", "send fail, invalid targetPkgName, targetPkgName = " + jUy);
+      v.e("MicroMsg.SDK.MMessageAct", "send fail, invalid targetPkgName, targetPkgName = " + ktZ);
       return false;
     }
-    if (ay.kz(jUz)) {
-      jUz = (jUy + ".wxapi.WXEntryActivity");
+    if (be.kf(kua)) {
+      kua = (ktZ + ".wxapi.WXEntryActivity");
     }
-    u.d("!44@/B4Tb64lLpIcVJc/YDTTqHums7mERtmpK2BGs1em8ao=", "send, targetPkgName = " + jUy + ", targetClassName = " + jUz);
+    v.d("MicroMsg.SDK.MMessageAct", "send, targetPkgName = " + ktZ + ", targetClassName = " + kua);
     Intent localIntent = new Intent();
-    localIntent.setClassName(jUy, jUz);
-    if (jUA != null) {
-      localIntent.putExtras(jUA);
+    localIntent.setClassName(ktZ, kua);
+    if (kub != null) {
+      localIntent.putExtras(kub);
     }
     String str1 = paramContext.getPackageName();
     localIntent.putExtra("_mmessage_sdkVersion", 587333634);
@@ -42,7 +42,7 @@ public final class a
     localStringBuffer.append(587333634);
     localStringBuffer.append(str1);
     localStringBuffer.append("mMcShCsTr");
-    localIntent.putExtra("_mmessage_checksum", g.m(localStringBuffer.toString().substring(1, 9).getBytes()).getBytes());
+    localIntent.putExtra("_mmessage_checksum", g.j(localStringBuffer.toString().substring(1, 9).getBytes()).getBytes());
     if (flags == -1) {
       localIntent.addFlags(268435456).addFlags(134217728);
     }
@@ -51,12 +51,12 @@ public final class a
       try
       {
         paramContext.startActivity(localIntent);
-        u.d("!44@/B4Tb64lLpIcVJc/YDTTqHums7mERtmpK2BGs1em8ao=", "send mm message, intent=" + localIntent);
+        v.d("MicroMsg.SDK.MMessageAct", "send mm message, intent=" + localIntent);
         return true;
       }
       catch (Exception paramContext)
       {
-        u.e("!44@/B4Tb64lLpIcVJc/YDTTqHums7mERtmpK2BGs1em8ao=", "send fail, ex = %s", new Object[] { paramContext.getMessage() });
+        v.e("MicroMsg.SDK.MMessageAct", "send fail, ex = %s", new Object[] { paramContext.getMessage() });
       }
       localIntent.setFlags(flags);
     }
@@ -67,13 +67,13 @@ public final class a
   {
     public String content;
     public int flags = -1;
-    public Bundle jUA;
-    public String jUy;
-    public String jUz;
+    public String ktZ;
+    public String kua;
+    public Bundle kub;
     
     public final String toString()
     {
-      return "targetPkgName:" + jUy + ", targetClassName:" + jUz + ", content:" + content + ", flags:" + flags + ", bundle:" + jUA;
+      return "targetPkgName:" + ktZ + ", targetClassName:" + kua + ", content:" + content + ", flags:" + flags + ", bundle:" + kub;
     }
   }
 }

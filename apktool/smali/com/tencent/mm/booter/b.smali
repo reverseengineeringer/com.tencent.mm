@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static q(Landroid/content/Context;Ljava/lang/String;)Z
+.method public static r(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 4
 
     .prologue
@@ -19,11 +19,11 @@
 
     if-eqz v1, :cond_0
 
-    sget-boolean v1, Lcom/tencent/mm/sdk/platformtools/f;->jVe:Z
+    sget-boolean v1, Lcom/tencent/mm/sdk/platformtools/f;->kuK:Z
 
     if-eqz v1, :cond_1
 
-    sget-boolean v1, Lcom/tencent/mm/sdk/platformtools/f;->jVd:Z
+    sget-boolean v1, Lcom/tencent/mm/sdk/platformtools/f;->kuJ:Z
 
     if-eqz v1, :cond_1
 
@@ -47,11 +47,11 @@
     if-eqz v1, :cond_1
 
     .line 34
-    const-string/jumbo v0, "!44@/B4Tb64lLpIzvC/moQitzF+fhNaOymSkEyY1qkrbh9E="
+    const-string/jumbo v0, "MicroMsg.CoreServiceHelper"
 
     const-string/jumbo v1, "fully exited, no need to start service"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 35
     const/4 v0, 0x0
@@ -62,7 +62,7 @@
 
     .line 39
     :cond_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpIzvC/moQitzF+fhNaOymSkEyY1qkrbh9E="
+    const-string/jumbo v1, "MicroMsg.CoreServiceHelper"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -78,7 +78,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 40
     new-instance v1, Landroid/content/Intent;

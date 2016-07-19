@@ -5,7 +5,7 @@ import android.view.View.OnClickListener;
 
 abstract class PreviewImageView$a
 {
-  View.OnClickListener hac = new View.OnClickListener()
+  View.OnClickListener hnu = new View.OnClickListener()
   {
     public final void onClick(View paramAnonymousView)
     {
@@ -13,11 +13,11 @@ abstract class PreviewImageView$a
         return;
       }
       int i = ((Integer)paramAnonymousView.getTag()).intValue();
-      lX(i);
+      nm(i);
     }
   };
   
-  public abstract void lX(int paramInt);
+  public abstract void nm(int paramInt);
 }
 
 /* Location:

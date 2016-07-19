@@ -2,17 +2,17 @@ package com.tencent.mm.ui.contact;
 
 public final class c$a
 {
-  public String lhu = "@all.contact.without.chatroom";
-  public boolean liK = false;
-  public boolean liL = false;
-  public boolean liM = false;
-  public boolean liN = false;
-  public boolean liO = false;
-  public String liP;
-  public String liQ;
-  public boolean liR = false;
-  public String liS = "";
-  public String liT = "";
+  public String lHF = "@all.contact.without.chatroom";
+  public boolean lIV = false;
+  public boolean lIW = false;
+  public boolean lIX = false;
+  public boolean lIY = false;
+  public boolean lIZ = false;
+  public String lJa;
+  public String lJb;
+  public boolean lJc = false;
+  public String lJd = "";
+  public String lJe = "";
 }
 
 /* Location:

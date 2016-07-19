@@ -1,26 +1,25 @@
 package com.tencent.mm.plugin.base.stub;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Toast;
 import com.jg.JgClassChecked;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
+import com.tencent.mm.e.a.eu;
 import com.tencent.mm.model.h;
-import com.tencent.mm.modelsimple.ag;
+import com.tencent.mm.modelsimple.ae;
 import com.tencent.mm.pluginsdk.d.a;
-import com.tencent.mm.pluginsdk.f.a;
 import com.tencent.mm.pluginsdk.ui.AutoLoginActivity;
 import com.tencent.mm.pluginsdk.ui.AutoLoginActivity.a;
-import com.tencent.mm.protocal.b.aub;
-import com.tencent.mm.r.j;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.p;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.aur;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.q;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.j;
 import com.tencent.mm.ui.CheckSmsCanAddCardUI;
-import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.s;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,11 +28,11 @@ import java.util.List;
 public class WXCustomSchemeEntryActivity
   extends AutoLoginActivity
 {
-  private List cBp;
+  private List<String> cyk;
   
-  protected final void a(AutoLoginActivity.a parama, final Intent paramIntent)
+  protected final void a(AutoLoginActivity.a parama, Intent paramIntent)
   {
-    switch (5.cBe[parama.ordinal()])
+    switch (5.cxZ[parama.ordinal()])
     {
     }
     for (;;)
@@ -49,33 +48,29 @@ public class WXCustomSchemeEntryActivity
         if (parama != null)
         {
           if (paramIntent == null) {
-            break label656;
+            break label688;
           }
-          i = p.a(paramIntent, "translate_link_scene", 2);
-          if (!com.tencent.mm.pluginsdk.d.zr(parama.toString())) {
-            break label299;
+          i = q.a(paramIntent, "translate_link_scene", 2);
+          if (!com.tencent.mm.pluginsdk.d.Bn(parama.toString())) {
+            break label277;
           }
-          if (!com.tencent.mm.pluginsdk.d.m(parama)) {
-            break label195;
+          if (!com.tencent.mm.pluginsdk.d.i(parama)) {
+            break label185;
           }
-          boolean bool = com.tencent.mm.pluginsdk.d.n(parama);
-          u.i("!56@/B4Tb64lLpKUD59tt9HYgnQK1gK8394TZ6LLy7AynRSs8Qq4562X/A==", "isTicketLink uri:%s, %b", new Object[] { parama.toString(), Boolean.valueOf(bool) });
+          boolean bool = com.tencent.mm.pluginsdk.d.j(parama);
+          v.i("MicroMsg.WXCustomSchemeEntryActivity", "isTicketLink uri:%s, %b", new Object[] { parama.toString(), Boolean.valueOf(bool) });
           if (bool)
           {
-            paramIntent = g.a(this, "", true, null);
             com.tencent.mm.pluginsdk.d.a(this, parama.toString(), i, new d.a()
             {
               public final void a(int paramAnonymousInt1, int paramAnonymousInt2, String paramAnonymousString, j paramAnonymousj, boolean paramAnonymousBoolean)
               {
-                u.i("!56@/B4Tb64lLpKUD59tt9HYgnQK1gK8394TZ6LLy7AynRSs8Qq4562X/A==", "DeepLinkHelper.DeepLinkCallback, %d, %d, %s, %b", new Object[] { Integer.valueOf(paramAnonymousInt1), Integer.valueOf(paramAnonymousInt2), paramAnonymousString, Boolean.valueOf(paramAnonymousBoolean) });
-                if ((paramIntent != null) && (paramIntent.isShowing())) {
-                  paramIntent.dismiss();
-                }
-                if ((paramAnonymousj != null) && (paramAnonymousInt1 != 0) && (paramAnonymousInt2 != 0) && ((paramAnonymousj instanceof ag)))
+                v.i("MicroMsg.WXCustomSchemeEntryActivity", "DeepLinkHelper.DeepLinkCallback, %d, %d, %s, %b", new Object[] { Integer.valueOf(paramAnonymousInt1), Integer.valueOf(paramAnonymousInt2), paramAnonymousString, Boolean.valueOf(paramAnonymousBoolean) });
+                if ((paramAnonymousj != null) && (paramAnonymousInt1 != 0) && (paramAnonymousInt2 != 0) && ((paramAnonymousj instanceof ae)))
                 {
-                  paramAnonymousString = ((ag)paramAnonymousj).CM();
+                  paramAnonymousString = ((ae)paramAnonymousj).CZ();
                   if ((paramAnonymousString != null) && (!isFinishing())) {
-                    s.makeText(WXCustomSchemeEntryActivity.this, getString(2131430877) + " : " + ay.ky(jMS), 0).show();
+                    s.makeText(WXCustomSchemeEntryActivity.this, getString(2131231028) + " : " + be.li(klC), 0).show();
                   }
                 }
                 finish();
@@ -93,7 +88,7 @@ public class WXCustomSchemeEntryActivity
       {
         for (;;)
         {
-          u.e("!56@/B4Tb64lLpKUD59tt9HYgnQK1gK8394TZ6LLy7AynRSs8Qq4562X/A==", "post login get url from intent failed : %s", new Object[] { parama.getMessage() });
+          v.e("MicroMsg.WXCustomSchemeEntryActivity", "post login get url from intent failed : %s", new Object[] { parama.getMessage() });
           parama = null;
           continue;
           com.tencent.mm.pluginsdk.d.a(this, parama.toString(), i, new d.a()
@@ -103,30 +98,27 @@ public class WXCustomSchemeEntryActivity
               finish();
             }
           });
-          label195:
-          label299:
-          label601:
-          label654:
+          label185:
+          label277:
+          label603:
+          label633:
+          label686:
           for (;;)
           {
             i = 0;
             break;
-            if (com.tencent.mm.pluginsdk.d.zs(parama.toString()))
+            if (com.tencent.mm.pluginsdk.d.Bo(parama.toString()))
             {
-              localObject = g.a(this, "", true, null);
               com.tencent.mm.pluginsdk.d.a(this, parama.toString(), i, new d.a()
               {
                 public final void a(int paramAnonymousInt1, int paramAnonymousInt2, String paramAnonymousString, j paramAnonymousj, boolean paramAnonymousBoolean)
                 {
-                  u.i("!56@/B4Tb64lLpKUD59tt9HYgnQK1gK8394TZ6LLy7AynRSs8Qq4562X/A==", "DeepLinkHelper.DeepLinkCallback, %d, %d, %s, %b", new Object[] { Integer.valueOf(paramAnonymousInt1), Integer.valueOf(paramAnonymousInt2), paramAnonymousString, Boolean.valueOf(paramAnonymousBoolean) });
-                  if ((localObject != null) && (localObject.isShowing())) {
-                    localObject.dismiss();
-                  }
-                  if ((paramAnonymousj != null) && (paramAnonymousInt1 != 0) && (paramAnonymousInt2 != 0) && ((paramAnonymousj instanceof ag)))
+                  v.i("MicroMsg.WXCustomSchemeEntryActivity", "DeepLinkHelper.DeepLinkCallback, %d, %d, %s, %b", new Object[] { Integer.valueOf(paramAnonymousInt1), Integer.valueOf(paramAnonymousInt2), paramAnonymousString, Boolean.valueOf(paramAnonymousBoolean) });
+                  if ((paramAnonymousj != null) && (paramAnonymousInt1 != 0) && (paramAnonymousInt2 != 0) && ((paramAnonymousj instanceof ae)))
                   {
-                    paramAnonymousString = ((ag)paramAnonymousj).CM();
+                    paramAnonymousString = ((ae)paramAnonymousj).CZ();
                     if ((paramAnonymousString != null) && (!isFinishing())) {
-                      s.makeText(WXCustomSchemeEntryActivity.this, getString(2131430877) + " : " + ay.ky(jMS), 0).show();
+                      s.makeText(WXCustomSchemeEntryActivity.this, getString(2131231028) + " : " + be.li(klC), 0).show();
                     }
                   }
                   finish();
@@ -135,8 +127,8 @@ public class WXCustomSchemeEntryActivity
               i = 1;
               break;
             }
-            paramIntent = h.sc();
-            u.i("!56@/B4Tb64lLpKUD59tt9HYgnQK1gK8394TZ6LLy7AynRSs8Qq4562X/A==", "not TicketLink uri:%s", new Object[] { parama.toString() });
+            paramIntent = h.se();
+            v.i("MicroMsg.WXCustomSchemeEntryActivity", "not TicketLink uri:%s", new Object[] { parama.toString() });
             com.tencent.mm.pluginsdk.d.a(this, parama.toString(), paramIntent, 23, parama.toString(), new d.a()
             {
               public final void a(int paramAnonymousInt1, int paramAnonymousInt2, String paramAnonymousString, j paramAnonymousj, boolean paramAnonymousBoolean)
@@ -145,73 +137,86 @@ public class WXCustomSchemeEntryActivity
               }
             });
             continue;
-            String str2 = parama.getScheme();
-            final Object localObject = parama.getHost();
-            String str1 = parama.getQuery();
-            u.i("!56@/B4Tb64lLpKUD59tt9HYgnQK1gK8394TZ6LLy7AynRSs8Qq4562X/A==", "scheme is %s, host is %s, query is %s", new Object[] { str2, localObject, str1 });
-            if ((!ay.kz((String)localObject)) && (cBp.contains(localObject)))
+            Object localObject = parama.getScheme();
+            String str1 = parama.getHost();
+            String str2 = parama.getQuery();
+            v.i("MicroMsg.WXCustomSchemeEntryActivity", "scheme is %s, host is %s, query is %s", new Object[] { localObject, str1, str2 });
+            if ((!be.kf(str1)) && (cyk.contains(str1)))
             {
-              if ((((String)localObject).equals("cardpackage")) && (!ay.kz(parama.getQueryParameter("encrystr"))))
+              if ((str1.equals("cardpackage")) && (!be.kf(parama.getQueryParameter("encrystr"))))
               {
                 paramIntent.setClass(this, CheckSmsCanAddCardUI.class);
                 startActivity(paramIntent);
               }
-              if (((String)localObject).equals("connectToFreeWifi"))
+              if (str1.equals("connectToFreeWifi"))
               {
-                if ((ay.kz(str1)) || (!str1.startsWith("apKey="))) {
-                  break label601;
+                if ((be.kf(str2)) || (!str2.startsWith("apKey="))) {
+                  break label633;
                 }
-                paramIntent = parama.getQueryParameter("apKey");
-                u.i("!56@/B4Tb64lLpKUD59tt9HYgnQK1gK8394TZ6LLy7AynRSs8Qq4562X/A==", "apKey value = %s", new Object[] { paramIntent });
-                str2 = parama.getQueryParameter("ticket");
-                if ((!ay.kz(paramIntent)) && (paramIntent.length() < 1024))
+                localObject = parama.getQueryParameter("apKey");
+                v.i("MicroMsg.WXCustomSchemeEntryActivity", "apKey value = %s", new Object[] { localObject });
+                String str3 = parama.getQueryParameter("ticket");
+                if ((!be.kf((String)localObject)) && (((String)localObject).length() < 1024))
                 {
-                  Intent localIntent = new Intent();
-                  localIntent.putExtra("free_wifi_schema_uri", parama.toString());
-                  localIntent.putExtra("free_wifi_ap_key", paramIntent);
-                  localIntent.putExtra("free_wifi_source", 5);
-                  if (!ay.kz(str2)) {
-                    localIntent.putExtra("free_wifi_schema_ticket", str2);
+                  paramIntent = new Intent();
+                  paramIntent.putExtra("free_wifi_schema_uri", parama.toString());
+                  paramIntent.putExtra("free_wifi_ap_key", (String)localObject);
+                  paramIntent.putExtra("free_wifi_source", 5);
+                  paramIntent.putExtra("free_wifi_threeone_startup_type", 1);
+                  if (!be.kf(str3)) {
+                    paramIntent.putExtra("free_wifi_schema_ticket", str3);
                   }
-                  localIntent.addFlags(67108864);
-                  c.c(this, "freewifi", ".ui.FreeWifiEntryUI", localIntent);
+                  if ((!((String)localObject).startsWith("_")) && (!be.kf(str3))) {
+                    break label603;
+                  }
+                  paramIntent.addFlags(67108864);
+                  c.c(this, "freewifi", ".ui.FreeWifiEntryUI", paramIntent);
                 }
               }
               for (;;)
               {
-                if ((!((String)localObject).equals("wap")) || (!parama.toString().startsWith("weixin://wap/pay"))) {
-                  break label654;
+                if ((!str1.equals("wap")) || (!parama.toString().startsWith("weixin://wap/pay"))) {
+                  break label686;
                 }
-                u.i("!56@/B4Tb64lLpKUD59tt9HYgnQK1gK8394TZ6LLy7AynRSs8Qq4562X/A==", "postLogin for WX_WAP_PAY");
-                if (TextUtils.isEmpty(str1)) {
+                v.i("MicroMsg.WXCustomSchemeEntryActivity", "postLogin for WX_WAP_PAY");
+                if (TextUtils.isEmpty(str2)) {
                   break;
                 }
-                com.tencent.mm.pluginsdk.wallet.d.a(this, a.zB(str1), false);
+                com.tencent.mm.pluginsdk.wallet.d.a(this, com.tencent.mm.pluginsdk.g.a.Bx(str2), false);
                 break;
+                localObject = new eu();
+                als.intent = paramIntent;
+                com.tencent.mm.sdk.c.a.kug.y((b)localObject);
+                continue;
                 if (parama.toString().startsWith("weixin://connectToFreeWifi/friendWifi"))
                 {
                   paramIntent = new Intent();
                   paramIntent.putExtra("key_connected_router", parama.toString());
                   c.c(this, "exdevice", ".ui.ExdeviceConnectedRouterActivateStateUI", paramIntent);
-                  u.i("!56@/B4Tb64lLpKUD59tt9HYgnQK1gK8394TZ6LLy7AynRSs8Qq4562X/A==", "Jump to ExdeviceConnectedRouterUi.");
+                  v.i("MicroMsg.WXCustomSchemeEntryActivity", "Jump to ExdeviceConnectedRouterUi.");
                 }
               }
             }
           }
-          label656:
+          label688:
           int i = 2;
         }
       }
     }
   }
   
-  protected final boolean m(Intent paramIntent)
+  protected final int getLayoutId()
+  {
+    return 2130903159;
+  }
+  
+  protected final boolean n(Intent paramIntent)
   {
     try
     {
       paramIntent = getIntent().getData();
       if (paramIntent != null) {
-        if (com.tencent.mm.pluginsdk.d.zr(paramIntent.toString())) {
+        if (com.tencent.mm.pluginsdk.d.Bn(paramIntent.toString())) {
           return true;
         }
       }
@@ -227,35 +232,35 @@ public class WXCustomSchemeEntryActivity
         {
           for (;;)
           {
-            u.e("!56@/B4Tb64lLpKUD59tt9HYgnQK1gK8394TZ6LLy7AynRSs8Qq4562X/A==", "get url from intent failed : %s", new Object[] { paramIntent.getMessage() });
+            v.e("MicroMsg.WXCustomSchemeEntryActivity", "get url from intent failed : %s", new Object[] { paramIntent.getMessage() });
             paramIntent = null;
           }
           str3 = paramIntent.getScheme();
           str1 = paramIntent.getHost();
           str2 = paramIntent.getQuery();
-          u.i("!56@/B4Tb64lLpKUD59tt9HYgnQK1gK8394TZ6LLy7AynRSs8Qq4562X/A==", "uri is %s,scheme is %s, host is %s, query is %s", new Object[] { paramIntent.toString(), str3, str1, str2 });
-          if ((ay.kz(str1)) || (!cBp.contains(str1))) {
+          v.i("MicroMsg.WXCustomSchemeEntryActivity", "uri is %s,scheme is %s, host is %s, query is %s", new Object[] { paramIntent.toString(), str3, str1, str2 });
+          if ((be.kf(str1)) || (!cyk.contains(str1))) {
             break label305;
           }
-          u.i("!56@/B4Tb64lLpKUD59tt9HYgnQK1gK8394TZ6LLy7AynRSs8Qq4562X/A==", "match the host : %s", new Object[] { str1 });
+          v.i("MicroMsg.WXCustomSchemeEntryActivity", "match the host : %s", new Object[] { str1 });
           if (!str1.equals("cardpackage")) {
             break;
           }
           str3 = paramIntent.getQueryParameter("encrystr");
-          u.i("!56@/B4Tb64lLpKUD59tt9HYgnQK1gK8394TZ6LLy7AynRSs8Qq4562X/A==", "card encrypt value = %s", new Object[] { str3 });
-        } while ((!ay.kz(str3)) && (str3.length() < 1024));
+          v.i("MicroMsg.WXCustomSchemeEntryActivity", "card encrypt value = %s", new Object[] { str3 });
+        } while ((!be.kf(str3)) && (str3.length() < 1024));
         if (!str1.equals("connectToFreeWifi")) {
           break;
         }
-        if ((ay.kz(str2)) || (!str2.startsWith("apKey=")) || (str2.length() <= 6)) {
+        if ((be.kf(str2)) || (!str2.startsWith("apKey=")) || (str2.length() <= 6)) {
           break label290;
         }
         str2 = str2.substring(6);
-        u.i("!56@/B4Tb64lLpKUD59tt9HYgnQK1gK8394TZ6LLy7AynRSs8Qq4562X/A==", "apKey value = %s", new Object[] { str2 });
-      } while ((!ay.kz(str2)) && (str2.length() < 1024));
+        v.i("MicroMsg.WXCustomSchemeEntryActivity", "apKey value = %s", new Object[] { str2 });
+      } while ((!be.kf(str2)) && (str2.length() < 1024));
       while ((str1.equals("wap")) && (paramIntent.toString().startsWith("weixin://wap/pay")))
       {
-        u.i("!56@/B4Tb64lLpKUD59tt9HYgnQK1gK8394TZ6LLy7AynRSs8Qq4562X/A==", "preLogin for WX_WAP_PAY");
+        v.i("MicroMsg.WXCustomSchemeEntryActivity", "preLogin for WX_WAP_PAY");
         return true;
         label290:
         if (paramIntent.toString().startsWith("weixin://connectToFreeWifi/friendWifi")) {
@@ -270,12 +275,13 @@ public class WXCustomSchemeEntryActivity
   
   public void onCreate(Bundle paramBundle)
   {
-    u.i("!56@/B4Tb64lLpKUD59tt9HYgnQK1gK8394TZ6LLy7AynRSs8Qq4562X/A==", "onCreate");
-    cBp = new ArrayList();
-    cBp.add("cardpackage");
-    cBp.add("connectToFreeWifi");
-    cBp.add("wap");
+    v.i("MicroMsg.WXCustomSchemeEntryActivity", "onCreate");
+    cyk = new ArrayList();
+    cyk.add("cardpackage");
+    cyk.add("connectToFreeWifi");
+    cyk.add("wap");
     super.onCreate(paramBundle);
+    rP(0);
   }
 }
 

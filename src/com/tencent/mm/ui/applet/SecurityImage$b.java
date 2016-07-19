@@ -2,9 +2,9 @@ package com.tencent.mm.ui.applet;
 
 public abstract class SecurityImage$b
 {
-  public SecurityImage kzR;
+  public SecurityImage kYX;
   
-  public abstract void bby();
+  public abstract void bgK();
 }
 
 /* Location:

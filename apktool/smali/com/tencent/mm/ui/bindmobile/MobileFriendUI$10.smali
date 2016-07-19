@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;->getData()V
+    value = Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;->amS()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+.field final synthetic loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 137
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$10;->kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$10;->loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,12 +36,14 @@
 
 
 # virtual methods
-.method public final aU(Z)V
+.method public final aA(Z)V
     .locals 5
 
     .prologue
+    const/4 v4, 0x0
+
     .line 140
-    const-string/jumbo v0, "!32@/B4Tb64lLpLFDma4Qh7ELOVLkIWClC8Q"
+    const-string/jumbo v0, "MicroMsg.MobileFriendUI"
 
     const-string/jumbo v1, "syncAddrBookAndUpload onSyncEnd suc:%b"
 
@@ -49,21 +51,19 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    const/4 v3, 0x0
-
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v4
+    move-result-object v3
 
-    aput-object v4, v2, v3
+    aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 141
     if-nez p1, :cond_1
 
     .line 142
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$10;->kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$10;->loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;->b(Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;)Landroid/app/ProgressDialog;
 
@@ -72,7 +72,7 @@
     if-eqz v0, :cond_0
 
     .line 143
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$10;->kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$10;->loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;->b(Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;)Landroid/app/ProgressDialog;
 
@@ -81,7 +81,7 @@
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
     .line 144
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$10;->kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$10;->loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;->c(Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;)Landroid/app/ProgressDialog;
 
@@ -97,22 +97,22 @@
     .line 149
     new-instance v0, Lcom/tencent/mm/modelfriend/ac;
 
-    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yK()Ljava/util/List;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yX()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yJ()Ljava/util/List;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yW()Ljava/util/List;
 
     move-result-object v2
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/modelfriend/ac;-><init>(Ljava/util/List;Ljava/util/List;)V
 
     .line 150
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    invoke-virtual {v1, v0, v4}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
     goto :goto_0
 .end method

@@ -11,10 +11,10 @@ final class MemoryLeakActivity$3
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((MemoryLeakActivity.b(clo) != null) && (MemoryLeakActivity.b(clo).isShowing())) {
-      MemoryLeakActivity.b(clo).dismiss();
+    if ((MemoryLeakActivity.b(cgr) != null) && (MemoryLeakActivity.b(cgr).isShowing())) {
+      MemoryLeakActivity.b(cgr).dismiss();
     }
-    clo.finish();
+    cgr.finish();
   }
 }
 

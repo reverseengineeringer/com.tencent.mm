@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private hP:Z
+.field public ij:Z
 
 
 # direct methods
@@ -18,7 +18,7 @@
     .line 13
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/CustomViewPager;->hP:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/CustomViewPager;->ij:Z
 
     .line 21
     return-void
@@ -31,7 +31,7 @@
 
     .prologue
     .line 29
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/CustomViewPager;->hP:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/CustomViewPager;->ij:Z
 
     if-nez v0, :cond_0
 
@@ -58,7 +58,7 @@
     const/4 v0, 0x0
 
     .line 38
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/CustomViewPager;->hP:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/CustomViewPager;->ij:Z
 
     if-nez v1, :cond_0
 
@@ -82,24 +82,13 @@
     move-exception v1
 
     .line 44
-    const-string/jumbo v2, "!44@/B4Tb64lLpKAr1qZju0bSpWJ7plvP2lewUUwPO20jzI="
+    const-string/jumbo v2, "MicroMsg.CustomViewPager"
 
     const-string/jumbo v3, "get a Exception"
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
-.end method
-
-.method public setCanSlide(Z)V
-    .locals 0
-
-    .prologue
-    .line 24
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/CustomViewPager;->hP:Z
-
-    .line 25
-    return-void
 .end method

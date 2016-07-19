@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$1;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.super Lcom/tencent/mm/sdk/platformtools/ac;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic kyq:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
+.field final synthetic kXx:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
 
 
 # direct methods
@@ -24,9 +24,9 @@
 
     .prologue
     .line 97
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$1;->kyq:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$1;->kXx:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
 
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
     return-void
 .end method
@@ -48,7 +48,7 @@
     check-cast v0, Landroid/graphics/Bitmap;
 
     .line 101
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$1;->kyq:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$1;->kXx:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;->a(Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg;)Landroid/widget/ImageView;
 

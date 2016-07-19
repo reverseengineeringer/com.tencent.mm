@@ -14,10 +14,10 @@ public final class k
   @TargetApi(14)
   public static final void a(View paramView, long paramLong, float paramFloat1, float paramFloat2)
   {
-    if ((paramView == null) || (c.bV(14))) {
+    if ((paramView == null) || (c.cn(14))) {
       return;
     }
-    Animator localAnimator = (Animator)paramView.getTag(2131165230);
+    Animator localAnimator = (Animator)paramView.getTag(2131755052);
     if (localAnimator != null) {
       localAnimator.cancel();
     }
@@ -28,10 +28,10 @@ public final class k
   @TargetApi(14)
   public static final void a(View paramView, long paramLong, float paramFloat, a parama)
   {
-    if ((paramView == null) || (c.bV(14))) {
+    if ((paramView == null) || (c.cn(14))) {
       return;
     }
-    Animator localAnimator = (Animator)paramView.getTag(2131165230);
+    Animator localAnimator = (Animator)paramView.getTag(2131755052);
     if (localAnimator != null) {
       localAnimator.cancel();
     }
@@ -45,12 +45,12 @@ public final class k
     {
       public final void onAnimationCancel(Animator paramAnonymousAnimator)
       {
-        lwh.biD();
+        lWT.boz();
       }
       
       public final void onAnimationEnd(Animator paramAnonymousAnimator)
       {
-        lwh.onAnimationEnd();
+        lWT.onAnimationEnd();
       }
       
       public final void onAnimationRepeat(Animator paramAnonymousAnimator) {}
@@ -62,29 +62,29 @@ public final class k
   @TargetApi(11)
   public static void a(View paramView, Animator.AnimatorListener paramAnimatorListener)
   {
-    if ((paramView == null) || (c.bV(11))) {
+    if ((paramView == null) || (c.cn(11))) {
       return;
     }
-    Animator localAnimator = (Animator)paramView.getTag(2131165230);
+    Animator localAnimator = (Animator)paramView.getTag(2131755052);
     if (localAnimator != null) {
       localAnimator.cancel();
     }
-    localAnimator = AnimatorInflater.loadAnimator(paramView.getContext(), 2131623939);
+    localAnimator = AnimatorInflater.loadAnimator(paramView.getContext(), 2131034112);
     localAnimator.setTarget(paramView);
     if (paramAnimatorListener != null) {
       localAnimator.addListener(paramAnimatorListener);
     }
     localAnimator.start();
-    paramView.setTag(2131165230, localAnimator);
+    paramView.setTag(2131755052, localAnimator);
   }
   
   @TargetApi(11)
   public static final void e(View paramView, float paramFloat)
   {
-    if ((paramView == null) || (c.bV(11))) {
+    if ((paramView == null) || (c.cn(11))) {
       return;
     }
-    Animator localAnimator = (Animator)paramView.getTag(2131165230);
+    Animator localAnimator = (Animator)paramView.getTag(2131755052);
     if (localAnimator != null) {
       localAnimator.cancel();
     }
@@ -95,10 +95,10 @@ public final class k
   @TargetApi(14)
   public static final void f(View paramView, float paramFloat)
   {
-    if ((paramView == null) || (c.bV(14))) {
+    if ((paramView == null) || (c.cn(14))) {
       return;
     }
-    Animator localAnimator = (Animator)paramView.getTag(2131165230);
+    Animator localAnimator = (Animator)paramView.getTag(2131755052);
     if (localAnimator != null) {
       localAnimator.cancel();
     }
@@ -109,7 +109,7 @@ public final class k
   
   public static abstract interface a
   {
-    public abstract void biD();
+    public abstract void boz();
     
     public abstract void onAnimationEnd();
   }

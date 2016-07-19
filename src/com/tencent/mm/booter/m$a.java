@@ -1,42 +1,42 @@
 package com.tencent.mm.booter;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class m$a
 {
-  int bng;
-  int bnh = 1;
-  int bni;
-  int bnj;
-  int bnk;
+  int baN;
+  int baO = 1;
+  int baP;
+  int baQ;
+  int baR;
   
-  public final boolean cH(String paramString)
+  public final boolean cN(String paramString)
   {
     paramString = paramString.split(",");
     if ((paramString == null) || (paramString.length != 5))
     {
-      u.e("!32@/B4Tb64lLpIUGQfqwvb6Vvq1+gSmGxdU", "error format");
+      v.e("MicroMsg.ProcessReport", "error format");
       return false;
     }
     try
     {
-      bng = Integer.parseInt(paramString[0]);
-      bnh = Integer.parseInt(paramString[1]);
-      bni = Integer.parseInt(paramString[2]);
-      bnj = Integer.parseInt(paramString[3]);
-      bnk = Integer.parseInt(paramString[4]);
+      baN = Integer.parseInt(paramString[0]);
+      baO = Integer.parseInt(paramString[1]);
+      baP = Integer.parseInt(paramString[2]);
+      baQ = Integer.parseInt(paramString[3]);
+      baR = Integer.parseInt(paramString[4]);
       return true;
     }
     catch (Exception paramString)
     {
-      u.e("!32@/B4Tb64lLpIUGQfqwvb6Vvq1+gSmGxdU", "ParseFrom parse failed");
+      v.e("MicroMsg.ProcessReport", "ParseFrom parse failed");
     }
     return false;
   }
   
   public final String toString()
   {
-    return String.format("%d,%d,%d,%d,%d", new Object[] { Integer.valueOf(bng), Integer.valueOf(bnh), Integer.valueOf(bni), Integer.valueOf(bnj), Integer.valueOf(bnk) });
+    return String.format("%d,%d,%d,%d,%d", new Object[] { Integer.valueOf(baN), Integer.valueOf(baO), Integer.valueOf(baP), Integer.valueOf(baQ), Integer.valueOf(baR) });
   }
 }
 

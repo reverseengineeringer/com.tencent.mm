@@ -1,17 +1,32 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.view.View;
+import android.widget.ListView;
+import com.tencent.mm.ui.base.MMPullDownView;
+import java.util.List;
 
-final class av$a
+public abstract interface av$a
 {
-  View gFN = null;
-  String gRB;
+  public abstract void D(int paramInt, boolean paramBoolean);
   
-  public av$a(av paramav, String paramString, View paramView)
-  {
-    gRB = paramString;
-    gFN = paramView;
-  }
+  public abstract void a(int paramInt, List<Integer> paramList1, List<Integer> paramList2);
+  
+  public abstract void aFH();
+  
+  public abstract ListView aFI();
+  
+  public abstract MMPullDownView aFJ();
+  
+  public abstract boolean aFK();
+  
+  public abstract void aFL();
+  
+  public abstract void aFM();
+  
+  public abstract void aFN();
+  
+  public abstract void fo(boolean paramBoolean);
+  
+  public abstract int getType();
 }
 
 /* Location:

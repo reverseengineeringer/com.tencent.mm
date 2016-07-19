@@ -22,7 +22,7 @@
 
 
 # static fields
-.field private static bZB:Lcom/tencent/mm/modelsearch/m$f;
+.field private static bTk:Lcom/tencent/mm/modelsearch/m$f;
 
 
 # direct methods
@@ -35,12 +35,12 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/modelsearch/m$f;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sput-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
     return-void
 .end method
 
-.method public static BW()V
+.method public static Cd()V
     .locals 9
 
     .prologue
@@ -49,9 +49,9 @@
     const/4 v2, 0x0
 
     .line 380
-    sget-object v3, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v3, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v3, Lcom/tencent/mm/modelsearch/m$f;->bZH:Ljava/util/LinkedList;
+    iget-object v0, v3, Lcom/tencent/mm/modelsearch/m$f;->bTq:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
@@ -75,20 +75,20 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, v3, Lcom/tencent/mm/modelsearch/m$f;->bZH:Ljava/util/LinkedList;
+    iget-object v0, v3, Lcom/tencent/mm/modelsearch/m$f;->bTq:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz"
+    const-string/jumbo v0, "MicroMsg.FTS.IFTSPlugin"
 
     const-string/jumbo v1, "Destroy Native Logic"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     move v1, v2
 
     :goto_1
-    iget-object v0, v3, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v3, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
@@ -96,13 +96,13 @@
 
     if-ge v1, v0, :cond_1
 
-    iget-object v0, v3, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v3, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v0
 
-    iget-object v4, v3, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v4, v3, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -125,7 +125,7 @@
     :catch_0
     move-exception v4
 
-    const-string/jumbo v5, "!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz"
+    const-string/jumbo v5, "MicroMsg.FTS.IFTSPlugin"
 
     const-string/jumbo v6, "Destroy Native Logic name=%s \nexception=%s"
 
@@ -141,65 +141,65 @@
 
     const/4 v0, 0x1
 
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v7, v0
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_2
 
     :cond_1
-    iget-object v0, v3, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v3, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    iput-object v8, v3, Lcom/tencent/mm/modelsearch/m$f;->bZF:Lcom/tencent/mm/modelsearch/j;
+    iput-object v8, v3, Lcom/tencent/mm/modelsearch/m$f;->bTo:Lcom/tencent/mm/modelsearch/j;
 
-    iput-object v8, v3, Lcom/tencent/mm/modelsearch/m$f;->bZG:Lcom/tencent/mm/modelsearch/o;
+    iput-object v8, v3, Lcom/tencent/mm/modelsearch/m$f;->bTp:Lcom/tencent/mm/modelsearch/o;
 
     .line 381
     return-void
 .end method
 
-.method public static BX()Lcom/tencent/mm/modelsearch/j;
+.method public static Ce()Lcom/tencent/mm/modelsearch/j;
     .locals 1
 
     .prologue
     .line 384
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZF:Lcom/tencent/mm/modelsearch/j;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTo:Lcom/tencent/mm/modelsearch/j;
 
     return-object v0
 .end method
 
-.method public static BY()Lcom/tencent/mm/modelsearch/o;
+.method public static Cf()Lcom/tencent/mm/modelsearch/o;
     .locals 1
 
     .prologue
     .line 388
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZG:Lcom/tencent/mm/modelsearch/o;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTp:Lcom/tencent/mm/modelsearch/o;
 
     return-object v0
 .end method
 
-.method public static BZ()Z
+.method public static Cg()Z
     .locals 2
 
     .prologue
     .line 392
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v1, v0, Lcom/tencent/mm/modelsearch/m$f;->bZF:Lcom/tencent/mm/modelsearch/j;
+    iget-object v1, v0, Lcom/tencent/mm/modelsearch/m$f;->bTo:Lcom/tencent/mm/modelsearch/j;
 
     if-eqz v1, :cond_0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZG:Lcom/tencent/mm/modelsearch/o;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTp:Lcom/tencent/mm/modelsearch/o;
 
     if-eqz v0, :cond_0
 
@@ -214,7 +214,7 @@
     goto :goto_0
 .end method
 
-.method private static Ca()Z
+.method private static Ch()Z
     .locals 5
 
     .prologue
@@ -223,36 +223,36 @@
     const/4 v1, 0x0
 
     .line 400
-    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->BZ()Z
+    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Cg()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
     .line 401
-    sget-object v1, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v1, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v1, v1, Lcom/tencent/mm/modelsearch/m$f;->bZG:Lcom/tencent/mm/modelsearch/o;
+    iget-object v1, v1, Lcom/tencent/mm/modelsearch/m$f;->bTp:Lcom/tencent/mm/modelsearch/o;
 
-    invoke-interface {v1}, Lcom/tencent/mm/modelsearch/o;->Ce()Z
+    invoke-interface {v1}, Lcom/tencent/mm/modelsearch/o;->Cl()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
     .line 404
-    sget-object v1, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v1, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v1, v1, Lcom/tencent/mm/modelsearch/m$f;->bZG:Lcom/tencent/mm/modelsearch/o;
+    iget-object v1, v1, Lcom/tencent/mm/modelsearch/m$f;->bTp:Lcom/tencent/mm/modelsearch/o;
 
     invoke-interface {v1}, Lcom/tencent/mm/modelsearch/o;->start()V
 
     .line 405
-    const-string/jumbo v1, "!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz"
+    const-string/jumbo v1, "MicroMsg.FTS.IFTSPlugin"
 
     const-string/jumbo v2, "start fts task daemon on IFTSPlugin"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 410
     :cond_0
@@ -261,23 +261,23 @@
 
     .line 409
     :cond_1
-    const-string/jumbo v2, "!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz"
+    const-string/jumbo v2, "MicroMsg.FTS.IFTSPlugin"
 
     const-string/jumbo v3, "FTSContext is not ready %s"
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->aVJ()Lcom/tencent/mm/sdk/platformtools/ad;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->baX()Lcom/tencent/mm/sdk/platformtools/af;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/tencent/mm/sdk/platformtools/ad;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/tencent/mm/sdk/platformtools/af;->toString()Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v0, v1
 
-    invoke-static {v2, v3, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -285,25 +285,25 @@
     goto :goto_0
 .end method
 
-.method public static Cb()V
+.method public static Ci()V
     .locals 8
 
     .prologue
     const/4 v2, 0x0
 
     .line 418
-    sget-object v3, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v3, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz"
+    const-string/jumbo v0, "MicroMsg.FTS.IFTSPlugin"
 
     const-string/jumbo v1, "Create Native Logic"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     move v1, v2
 
     :goto_0
-    iget-object v0, v3, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v3, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
@@ -311,13 +311,13 @@
 
     if-ge v1, v0, :cond_0
 
-    iget-object v0, v3, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v3, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v0
 
-    iget-object v4, v3, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v4, v3, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -340,7 +340,7 @@
     :catch_0
     move-exception v4
 
-    const-string/jumbo v5, "!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz"
+    const-string/jumbo v5, "MicroMsg.FTS.IFTSPlugin"
 
     const-string/jumbo v6, "Create Native Logic name=%s \nexception=%s"
 
@@ -356,13 +356,13 @@
 
     const/4 v0, 0x1
 
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v7, v0
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
@@ -371,26 +371,49 @@
     return-void
 .end method
 
-.method public static Cc()Ljava/util/LinkedList;
+.method public static Cj()Ljava/util/LinkedList;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/LinkedList",
+            "<",
+            "Lcom/tencent/mm/modelsearch/k;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 442
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZH:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTq:Ljava/util/LinkedList;
 
     return-object v0
 .end method
 
-.method public static a(Ljava/lang/String;ILcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;Ljava/util/HashSet;)Lcom/tencent/mm/modelsearch/m$k;
+.method public static a(Ljava/lang/String;ILcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;Ljava/util/HashSet;)Lcom/tencent/mm/modelsearch/m$k;
     .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "I",
+            "Lcom/tencent/mm/modelsearch/m$j;",
+            "Lcom/tencent/mm/sdk/platformtools/ac;",
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Lcom/tencent/mm/modelsearch/m$k;"
+        }
+    .end annotation
 
     .prologue
     const/4 v1, 0x3
 
     .line 524
-    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ca()Z
+    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ch()Z
 
     move-result v0
 
@@ -411,7 +434,7 @@
 
     move-object v5, p3
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)V
 
     .line 527
     const-string/jumbo v1, "FTSExceptionHandler"
@@ -424,9 +447,9 @@
 
     .line 529
     :cond_0
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->indexOfKey(I)I
 
@@ -435,9 +458,9 @@
     if-ltz v0, :cond_1
 
     .line 530
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -446,7 +469,7 @@
     check-cast v0, Lcom/tencent/mm/modelsearch/l;
 
     .line 531
-    invoke-static {p0, p1, p4, p2, p3}, Lcom/tencent/mm/modelsearch/m$i;->a(Ljava/lang/String;ILjava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)Lcom/tencent/mm/modelsearch/m$i;
+    invoke-static {p0, p1, p4, p2, p3}, Lcom/tencent/mm/modelsearch/m$i;->a(Ljava/lang/String;ILjava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)Lcom/tencent/mm/modelsearch/m$i;
 
     move-result-object v1
 
@@ -458,7 +481,7 @@
 
     .line 533
     :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz"
+    const-string/jumbo v0, "MicroMsg.FTS.IFTSPlugin"
 
     const-string/jumbo v1, "Not Found Message Logic, LogicArraySize=%d"
 
@@ -468,9 +491,9 @@
 
     const/4 v3, 0x0
 
-    sget-object v4, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v4, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v4, v4, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v4, v4, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v4}, Landroid/util/SparseArray;->size()I
 
@@ -482,7 +505,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 534
     new-instance v0, Lcom/tencent/mm/modelsearch/e;
@@ -499,7 +522,7 @@
 
     move-object v5, p3
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)V
 
     .line 536
     const-string/jumbo v1, "FTSExceptionHandler"
@@ -509,8 +532,21 @@
     goto :goto_0
 .end method
 
-.method public static a(Ljava/lang/String;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;Ljava/util/HashSet;)Lcom/tencent/mm/modelsearch/m$k;
+.method public static a(Ljava/lang/String;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;Ljava/util/HashSet;)Lcom/tencent/mm/modelsearch/m$k;
     .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/modelsearch/m$j;",
+            "Lcom/tencent/mm/sdk/platformtools/ac;",
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Lcom/tencent/mm/modelsearch/m$k;"
+        }
+    .end annotation
 
     .prologue
     const/4 v1, 0x5
@@ -518,7 +554,7 @@
     const/4 v4, 0x0
 
     .line 470
-    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ca()Z
+    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ch()Z
 
     move-result v0
 
@@ -539,7 +575,7 @@
 
     move-object v5, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)V
 
     .line 473
     const-string/jumbo v1, "FTSExceptionHandler"
@@ -552,9 +588,9 @@
 
     .line 475
     :cond_0
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->indexOfKey(I)I
 
@@ -563,9 +599,9 @@
     if-ltz v0, :cond_1
 
     .line 476
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -574,7 +610,7 @@
     check-cast v0, Lcom/tencent/mm/modelsearch/l;
 
     .line 477
-    invoke-static {p0, v4, p3, p1, p2}, Lcom/tencent/mm/modelsearch/m$i;->a(Ljava/lang/String;ILjava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)Lcom/tencent/mm/modelsearch/m$i;
+    invoke-static {p0, v4, p3, p1, p2}, Lcom/tencent/mm/modelsearch/m$i;->a(Ljava/lang/String;ILjava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)Lcom/tencent/mm/modelsearch/m$i;
 
     move-result-object v1
 
@@ -586,7 +622,7 @@
 
     .line 479
     :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz"
+    const-string/jumbo v0, "MicroMsg.FTS.IFTSPlugin"
 
     const-string/jumbo v1, "Not Found Game Logic, LogicArraySize=%d"
 
@@ -594,9 +630,9 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    sget-object v3, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v3, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v3, v3, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v3, v3, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v3}, Landroid/util/SparseArray;->size()I
 
@@ -608,7 +644,7 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 480
     new-instance v0, Lcom/tencent/mm/modelsearch/e;
@@ -625,7 +661,7 @@
 
     move-object v5, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)V
 
     .line 482
     const-string/jumbo v1, "FTSExceptionHandler"
@@ -635,8 +671,23 @@
     goto :goto_0
 .end method
 
-.method public static a(Ljava/lang/String;Ljava/lang/String;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)Lcom/tencent/mm/modelsearch/m$k;
+.method public static a(Ljava/lang/String;Ljava/lang/String;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)Lcom/tencent/mm/modelsearch/m$k;
     .locals 10
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/util/Comparator",
+            "<",
+            "Lcom/tencent/mm/modelsearch/m$g;",
+            ">;",
+            "Lcom/tencent/mm/modelsearch/m$j;",
+            "Lcom/tencent/mm/sdk/platformtools/ac;",
+            ")",
+            "Lcom/tencent/mm/modelsearch/m$k;"
+        }
+    .end annotation
 
     .prologue
     const/4 v1, 0x3
@@ -646,7 +697,7 @@
     const/4 v2, 0x0
 
     .line 613
-    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ca()Z
+    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ch()Z
 
     move-result v0
 
@@ -667,7 +718,7 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)V
 
     .line 616
     const-string/jumbo v1, "FTSExceptionHandler"
@@ -680,9 +731,9 @@
 
     .line 618
     :cond_0
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->indexOfKey(I)I
 
@@ -691,9 +742,9 @@
     if-ltz v0, :cond_1
 
     .line 619
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -718,7 +769,7 @@
     move-object v8, p4
 
     .line 620
-    invoke-static/range {v0 .. v8}, Lcom/tencent/mm/modelsearch/m$i;->a(Ljava/lang/String;Ljava/lang/String;[I[IILjava/util/HashSet;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)Lcom/tencent/mm/modelsearch/m$i;
+    invoke-static/range {v0 .. v8}, Lcom/tencent/mm/modelsearch/m$i;->a(Ljava/lang/String;Ljava/lang/String;[I[IILjava/util/HashSet;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)Lcom/tencent/mm/modelsearch/m$i;
 
     move-result-object v0
 
@@ -730,7 +781,7 @@
 
     .line 622
     :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz"
+    const-string/jumbo v0, "MicroMsg.FTS.IFTSPlugin"
 
     const-string/jumbo v1, "Not Found Message Logic, LogicArraySize=%d"
 
@@ -738,9 +789,9 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    sget-object v3, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v3, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v3, v3, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v3, v3, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v3}, Landroid/util/SparseArray;->size()I
 
@@ -752,7 +803,7 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 623
     new-instance v0, Lcom/tencent/mm/modelsearch/e;
@@ -769,7 +820,7 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)V
 
     .line 625
     const-string/jumbo v1, "FTSExceptionHandler"
@@ -779,8 +830,22 @@
     goto :goto_0
 .end method
 
-.method public static a(Ljava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)Lcom/tencent/mm/modelsearch/m$k;
+.method public static a(Ljava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)Lcom/tencent/mm/modelsearch/m$k;
     .locals 10
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Lcom/tencent/mm/modelsearch/m$j;",
+            "Lcom/tencent/mm/sdk/platformtools/ac;",
+            ")",
+            "Lcom/tencent/mm/modelsearch/m$k;"
+        }
+    .end annotation
 
     .prologue
     const/4 v2, 0x2
@@ -788,7 +853,7 @@
     const/4 v1, 0x0
 
     .line 589
-    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ca()Z
+    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ch()Z
 
     move-result v0
 
@@ -809,7 +874,7 @@
 
     move-object v5, p3
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)V
 
     .line 592
     const-string/jumbo v1, "FTSExceptionHandler"
@@ -822,9 +887,9 @@
 
     .line 594
     :cond_0
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v2}, Landroid/util/SparseArray;->indexOfKey(I)I
 
@@ -833,9 +898,9 @@
     if-ltz v0, :cond_1
 
     .line 595
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -862,7 +927,7 @@
 
     move-object v8, p3
 
-    invoke-static/range {v0 .. v8}, Lcom/tencent/mm/modelsearch/m$i;->a(Ljava/lang/String;Ljava/lang/String;[I[IILjava/util/HashSet;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)Lcom/tencent/mm/modelsearch/m$i;
+    invoke-static/range {v0 .. v8}, Lcom/tencent/mm/modelsearch/m$i;->a(Ljava/lang/String;Ljava/lang/String;[I[IILjava/util/HashSet;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)Lcom/tencent/mm/modelsearch/m$i;
 
     move-result-object v0
 
@@ -874,7 +939,7 @@
 
     .line 598
     :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz"
+    const-string/jumbo v0, "MicroMsg.FTS.IFTSPlugin"
 
     const-string/jumbo v2, "Not Found Contact Logic, LogicArraySize=%d"
 
@@ -884,9 +949,9 @@
 
     const/4 v4, 0x0
 
-    sget-object v5, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v5, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v5, v5, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v5, v5, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v5}, Landroid/util/SparseArray;->size()I
 
@@ -898,7 +963,7 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v1
 
@@ -906,8 +971,23 @@
     goto :goto_0
 .end method
 
-.method public static a(Ljava/lang/String;[IILjava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)Lcom/tencent/mm/modelsearch/m$k;
+.method public static a(Ljava/lang/String;[IILjava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)Lcom/tencent/mm/modelsearch/m$k;
     .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "[II",
+            "Ljava/util/Comparator",
+            "<",
+            "Lcom/tencent/mm/modelsearch/m$g;",
+            ">;",
+            "Lcom/tencent/mm/modelsearch/m$j;",
+            "Lcom/tencent/mm/sdk/platformtools/ac;",
+            ")",
+            "Lcom/tencent/mm/modelsearch/m$k;"
+        }
+    .end annotation
 
     .prologue
     .line 542
@@ -929,15 +1009,33 @@
 
     move-object v7, p5
 
-    invoke-static/range {v0 .. v7}, Lcom/tencent/mm/modelsearch/m;->a(Ljava/lang/String;[I[IILjava/util/HashSet;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)Lcom/tencent/mm/modelsearch/m$k;
+    invoke-static/range {v0 .. v7}, Lcom/tencent/mm/modelsearch/m;->a(Ljava/lang/String;[I[IILjava/util/HashSet;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)Lcom/tencent/mm/modelsearch/m$k;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static a(Ljava/lang/String;[IILjava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;Ljava/util/HashSet;)Lcom/tencent/mm/modelsearch/m$k;
+.method public static a(Ljava/lang/String;[IILjava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;Ljava/util/HashSet;)Lcom/tencent/mm/modelsearch/m$k;
     .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "[II",
+            "Ljava/util/Comparator",
+            "<",
+            "Lcom/tencent/mm/modelsearch/m$g;",
+            ">;",
+            "Lcom/tencent/mm/modelsearch/m$j;",
+            "Lcom/tencent/mm/sdk/platformtools/ac;",
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Lcom/tencent/mm/modelsearch/m$k;"
+        }
+    .end annotation
 
     .prologue
     .line 547
@@ -957,21 +1055,21 @@
 
     move-object v7, p5
 
-    invoke-static/range {v0 .. v7}, Lcom/tencent/mm/modelsearch/m;->a(Ljava/lang/String;[I[IILjava/util/HashSet;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)Lcom/tencent/mm/modelsearch/m$k;
+    invoke-static/range {v0 .. v7}, Lcom/tencent/mm/modelsearch/m;->a(Ljava/lang/String;[I[IILjava/util/HashSet;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)Lcom/tencent/mm/modelsearch/m$k;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static a(Ljava/lang/String;[ILcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;I)Lcom/tencent/mm/modelsearch/m$k;
+.method public static a(Ljava/lang/String;[ILcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;I)Lcom/tencent/mm/modelsearch/m$k;
     .locals 6
 
     .prologue
     const/4 v2, 0x1
 
     .line 452
-    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ca()Z
+    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ch()Z
 
     move-result v0
 
@@ -992,7 +1090,7 @@
 
     move-object v5, p3
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)V
 
     .line 455
     const-string/jumbo v1, "FTSExceptionHandler"
@@ -1005,9 +1103,9 @@
 
     .line 457
     :cond_0
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v2}, Landroid/util/SparseArray;->indexOfKey(I)I
 
@@ -1016,9 +1114,9 @@
     if-ltz v0, :cond_1
 
     .line 458
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -1031,19 +1129,19 @@
 
     invoke-direct {v1}, Lcom/tencent/mm/modelsearch/m$i;-><init>()V
 
-    iput-object p0, v1, Lcom/tencent/mm/modelsearch/m$i;->aEy:Ljava/lang/String;
+    iput-object p0, v1, Lcom/tencent/mm/modelsearch/m$i;->aqC:Ljava/lang/String;
 
-    iput-object p1, v1, Lcom/tencent/mm/modelsearch/m$i;->bZU:[I
+    iput-object p1, v1, Lcom/tencent/mm/modelsearch/m$i;->bTD:[I
 
     const/4 v2, 0x3
 
-    iput v2, v1, Lcom/tencent/mm/modelsearch/m$i;->bYu:I
+    iput v2, v1, Lcom/tencent/mm/modelsearch/m$i;->bSd:I
 
-    iput-object p2, v1, Lcom/tencent/mm/modelsearch/m$i;->bYr:Lcom/tencent/mm/modelsearch/m$j;
+    iput-object p2, v1, Lcom/tencent/mm/modelsearch/m$i;->bSa:Lcom/tencent/mm/modelsearch/m$j;
 
-    iput-object p3, v1, Lcom/tencent/mm/modelsearch/m$i;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object p3, v1, Lcom/tencent/mm/modelsearch/m$i;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    iput p4, v1, Lcom/tencent/mm/modelsearch/m$i;->asc:I
+    iput p4, v1, Lcom/tencent/mm/modelsearch/m$i;->scene:I
 
     invoke-interface {v0, v1}, Lcom/tencent/mm/modelsearch/l;->a(Lcom/tencent/mm/modelsearch/m$i;)Lcom/tencent/mm/modelsearch/o$a;
 
@@ -1053,7 +1151,7 @@
 
     .line 461
     :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz"
+    const-string/jumbo v0, "MicroMsg.FTS.IFTSPlugin"
 
     const-string/jumbo v1, "Not Found TopHits Logic, LogicArraySize=%d"
 
@@ -1061,9 +1159,9 @@
 
     const/4 v3, 0x0
 
-    sget-object v4, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v4, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v4, v4, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v4, v4, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v4}, Landroid/util/SparseArray;->size()I
 
@@ -1075,7 +1173,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 462
     new-instance v0, Lcom/tencent/mm/modelsearch/e;
@@ -1092,7 +1190,7 @@
 
     move-object v5, p3
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)V
 
     .line 464
     const-string/jumbo v1, "FTSExceptionHandler"
@@ -1102,8 +1200,27 @@
     goto :goto_0
 .end method
 
-.method public static a(Ljava/lang/String;[ILjava/util/HashSet;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)Lcom/tencent/mm/modelsearch/m$k;
+.method public static a(Ljava/lang/String;[ILjava/util/HashSet;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)Lcom/tencent/mm/modelsearch/m$k;
     .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "[I",
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/Comparator",
+            "<",
+            "Lcom/tencent/mm/modelsearch/m$g;",
+            ">;",
+            "Lcom/tencent/mm/modelsearch/m$j;",
+            "Lcom/tencent/mm/sdk/platformtools/ac;",
+            ")",
+            "Lcom/tencent/mm/modelsearch/m$k;"
+        }
+    .end annotation
 
     .prologue
     const/4 v2, 0x0
@@ -1111,7 +1228,7 @@
     const/4 v1, 0x2
 
     .line 573
-    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ca()Z
+    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ch()Z
 
     move-result v0
 
@@ -1132,7 +1249,7 @@
 
     move-object v5, p5
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)V
 
     .line 576
     const-string/jumbo v1, "FTSExceptionHandler"
@@ -1145,9 +1262,9 @@
 
     .line 578
     :cond_0
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->indexOfKey(I)I
 
@@ -1156,9 +1273,9 @@
     if-ltz v0, :cond_1
 
     .line 579
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -1183,7 +1300,7 @@
 
     move-object v7, p5
 
-    invoke-static/range {v0 .. v7}, Lcom/tencent/mm/modelsearch/m$i;->b(Ljava/lang/String;[I[IILjava/util/HashSet;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)Lcom/tencent/mm/modelsearch/m$i;
+    invoke-static/range {v0 .. v7}, Lcom/tencent/mm/modelsearch/m$i;->b(Ljava/lang/String;[I[IILjava/util/HashSet;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)Lcom/tencent/mm/modelsearch/m$i;
 
     move-result-object v0
 
@@ -1195,7 +1312,7 @@
 
     .line 582
     :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz"
+    const-string/jumbo v0, "MicroMsg.FTS.IFTSPlugin"
 
     const-string/jumbo v1, "Not Found Contact Logic, LogicArraySize=%d"
 
@@ -1205,9 +1322,9 @@
 
     const/4 v4, 0x0
 
-    sget-object v5, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v5, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v5, v5, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v5, v5, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v5}, Landroid/util/SparseArray;->size()I
 
@@ -1219,7 +1336,7 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v0, v1, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v2
 
@@ -1227,14 +1344,33 @@
     goto :goto_0
 .end method
 
-.method private static a(Ljava/lang/String;[I[IILjava/util/HashSet;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)Lcom/tencent/mm/modelsearch/m$k;
+.method private static a(Ljava/lang/String;[I[IILjava/util/HashSet;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)Lcom/tencent/mm/modelsearch/m$k;
     .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "[I[II",
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/Comparator",
+            "<",
+            "Lcom/tencent/mm/modelsearch/m$g;",
+            ">;",
+            "Lcom/tencent/mm/modelsearch/m$j;",
+            "Lcom/tencent/mm/sdk/platformtools/ac;",
+            ")",
+            "Lcom/tencent/mm/modelsearch/m$k;"
+        }
+    .end annotation
 
     .prologue
     const/4 v1, 0x2
 
     .line 557
-    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ca()Z
+    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ch()Z
 
     move-result v0
 
@@ -1255,7 +1391,7 @@
 
     move-object v5, p7
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)V
 
     .line 560
     const-string/jumbo v1, "FTSExceptionHandler"
@@ -1268,9 +1404,9 @@
 
     .line 562
     :cond_0
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->indexOfKey(I)I
 
@@ -1279,9 +1415,9 @@
     if-ltz v0, :cond_1
 
     .line 563
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -1290,7 +1426,7 @@
     check-cast v0, Lcom/tencent/mm/modelsearch/l;
 
     .line 564
-    invoke-static/range {p0 .. p7}, Lcom/tencent/mm/modelsearch/m$i;->b(Ljava/lang/String;[I[IILjava/util/HashSet;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)Lcom/tencent/mm/modelsearch/m$i;
+    invoke-static/range {p0 .. p7}, Lcom/tencent/mm/modelsearch/m$i;->b(Ljava/lang/String;[I[IILjava/util/HashSet;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)Lcom/tencent/mm/modelsearch/m$i;
 
     move-result-object v1
 
@@ -1302,7 +1438,7 @@
 
     .line 566
     :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz"
+    const-string/jumbo v0, "MicroMsg.FTS.IFTSPlugin"
 
     const-string/jumbo v1, "Not Found Contact Logic, LogicArraySize=%d"
 
@@ -1312,9 +1448,9 @@
 
     const/4 v3, 0x0
 
-    sget-object v4, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v4, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v4, v4, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v4, v4, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v4}, Landroid/util/SparseArray;->size()I
 
@@ -1326,7 +1462,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 567
     const/4 v0, 0x0
@@ -1334,8 +1470,23 @@
     goto :goto_0
 .end method
 
-.method public static a(Ljava/lang/String;[I[ILjava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)Lcom/tencent/mm/modelsearch/m$k;
+.method public static a(Ljava/lang/String;[I[ILjava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)Lcom/tencent/mm/modelsearch/m$k;
     .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "[I[I",
+            "Ljava/util/Comparator",
+            "<",
+            "Lcom/tencent/mm/modelsearch/m$g;",
+            ">;",
+            "Lcom/tencent/mm/modelsearch/m$j;",
+            "Lcom/tencent/mm/sdk/platformtools/ac;",
+            ")",
+            "Lcom/tencent/mm/modelsearch/m$k;"
+        }
+    .end annotation
 
     .prologue
     .line 552
@@ -1357,7 +1508,7 @@
 
     move-object v7, p5
 
-    invoke-static/range {v0 .. v7}, Lcom/tencent/mm/modelsearch/m;->a(Ljava/lang/String;[I[IILjava/util/HashSet;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)Lcom/tencent/mm/modelsearch/m$k;
+    invoke-static/range {v0 .. v7}, Lcom/tencent/mm/modelsearch/m;->a(Ljava/lang/String;[I[IILjava/util/HashSet;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)Lcom/tencent/mm/modelsearch/m$k;
 
     move-result-object v0
 
@@ -1375,9 +1526,9 @@
     const/4 v5, 0x0
 
     .line 414
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v1, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v1, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p0}, Landroid/util/SparseArray;->indexOfKey(I)I
 
@@ -1385,7 +1536,7 @@
 
     if-ltz v1, :cond_0
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz"
+    const-string/jumbo v1, "MicroMsg.FTS.IFTSPlugin"
 
     const-string/jumbo v2, "Aready Exist Logic, type=%d, name=%s"
 
@@ -1403,10 +1554,10 @@
 
     aput-object v4, v3, v6
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :goto_0
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p0, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -1415,7 +1566,7 @@
 
     .line 414
     :cond_0
-    const-string/jumbo v1, "!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz"
+    const-string/jumbo v1, "MicroMsg.FTS.IFTSPlugin"
 
     const-string/jumbo v2, "Register Logic type=%d, name=%s"
 
@@ -1433,7 +1584,7 @@
 
     aput-object v4, v3, v6
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -1443,15 +1594,15 @@
 
     .prologue
     .line 376
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
 
-    iput-object p0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZF:Lcom/tencent/mm/modelsearch/j;
+    iput-object p0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTo:Lcom/tencent/mm/modelsearch/j;
 
-    iput-object p1, v0, Lcom/tencent/mm/modelsearch/m$f;->bZG:Lcom/tencent/mm/modelsearch/o;
+    iput-object p1, v0, Lcom/tencent/mm/modelsearch/m$f;->bTp:Lcom/tencent/mm/modelsearch/o;
 
     .line 377
     :cond_0
@@ -1463,13 +1614,13 @@
 
     .prologue
     .line 430
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v1, v0, Lcom/tencent/mm/modelsearch/m$f;->bZH:Ljava/util/LinkedList;
+    iget-object v1, v0, Lcom/tencent/mm/modelsearch/m$f;->bTq:Ljava/util/LinkedList;
 
     invoke-virtual {v1, p0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZH:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTq:Ljava/util/LinkedList;
 
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
@@ -1482,7 +1633,7 @@
 
     .prologue
     .line 638
-    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ca()Z
+    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ch()Z
 
     move-result v0
 
@@ -1500,9 +1651,9 @@
     if-eqz v0, :cond_0
 
     .line 642
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZG:Lcom/tencent/mm/modelsearch/o;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTp:Lcom/tencent/mm/modelsearch/o;
 
     check-cast p0, Lcom/tencent/mm/modelsearch/o$a;
 
@@ -1511,8 +1662,21 @@
     goto :goto_0
 .end method
 
-.method public static b(Ljava/lang/String;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;Ljava/util/HashSet;)Lcom/tencent/mm/modelsearch/m$k;
+.method public static b(Ljava/lang/String;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;Ljava/util/HashSet;)Lcom/tencent/mm/modelsearch/m$k;
     .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/modelsearch/m$j;",
+            "Lcom/tencent/mm/sdk/platformtools/ac;",
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Lcom/tencent/mm/modelsearch/m$k;"
+        }
+    .end annotation
 
     .prologue
     const/4 v1, 0x6
@@ -1520,7 +1684,7 @@
     const/4 v4, 0x0
 
     .line 488
-    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ca()Z
+    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ch()Z
 
     move-result v0
 
@@ -1541,7 +1705,7 @@
 
     move-object v5, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)V
 
     .line 491
     const-string/jumbo v1, "FTSExceptionHandler"
@@ -1554,9 +1718,9 @@
 
     .line 493
     :cond_0
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->indexOfKey(I)I
 
@@ -1565,9 +1729,9 @@
     if-ltz v0, :cond_1
 
     .line 494
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -1576,7 +1740,7 @@
     check-cast v0, Lcom/tencent/mm/modelsearch/l;
 
     .line 495
-    invoke-static {p0, v4, p3, p1, p2}, Lcom/tencent/mm/modelsearch/m$i;->a(Ljava/lang/String;ILjava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)Lcom/tencent/mm/modelsearch/m$i;
+    invoke-static {p0, v4, p3, p1, p2}, Lcom/tencent/mm/modelsearch/m$i;->a(Ljava/lang/String;ILjava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)Lcom/tencent/mm/modelsearch/m$i;
 
     move-result-object v1
 
@@ -1588,7 +1752,7 @@
 
     .line 497
     :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz"
+    const-string/jumbo v0, "MicroMsg.FTS.IFTSPlugin"
 
     const-string/jumbo v1, "Not Found Favorite Logic, LogicArraySize=%d"
 
@@ -1596,9 +1760,9 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    sget-object v3, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v3, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v3, v3, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v3, v3, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v3}, Landroid/util/SparseArray;->size()I
 
@@ -1610,7 +1774,7 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 498
     new-instance v0, Lcom/tencent/mm/modelsearch/e;
@@ -1627,7 +1791,7 @@
 
     move-object v5, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)V
 
     .line 500
     const-string/jumbo v1, "FTSExceptionHandler"
@@ -1644,16 +1808,16 @@
     const/4 v1, 0x1
 
     .line 647
-    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ca()Z
+    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ch()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 648
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->indexOfKey(I)I
 
@@ -1662,9 +1826,9 @@
     if-ltz v0, :cond_0
 
     .line 649
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -1680,8 +1844,21 @@
     return-void
 .end method
 
-.method public static c(Ljava/lang/String;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;Ljava/util/HashSet;)Lcom/tencent/mm/modelsearch/m$k;
+.method public static c(Ljava/lang/String;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;Ljava/util/HashSet;)Lcom/tencent/mm/modelsearch/m$k;
     .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/modelsearch/m$j;",
+            "Lcom/tencent/mm/sdk/platformtools/ac;",
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Lcom/tencent/mm/modelsearch/m$k;"
+        }
+    .end annotation
 
     .prologue
     const/4 v1, 0x4
@@ -1689,7 +1866,7 @@
     const/4 v4, 0x0
 
     .line 506
-    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ca()Z
+    invoke-static {}, Lcom/tencent/mm/modelsearch/m;->Ch()Z
 
     move-result v0
 
@@ -1710,7 +1887,7 @@
 
     move-object v5, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)V
 
     .line 509
     const-string/jumbo v1, "FTSExceptionHandler"
@@ -1723,9 +1900,9 @@
 
     .line 511
     :cond_0
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->indexOfKey(I)I
 
@@ -1734,9 +1911,9 @@
     if-ltz v0, :cond_1
 
     .line 512
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -1745,7 +1922,7 @@
     check-cast v0, Lcom/tencent/mm/modelsearch/l;
 
     .line 513
-    invoke-static {p0, v4, p3, p1, p2}, Lcom/tencent/mm/modelsearch/m$i;->a(Ljava/lang/String;ILjava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)Lcom/tencent/mm/modelsearch/m$i;
+    invoke-static {p0, v4, p3, p1, p2}, Lcom/tencent/mm/modelsearch/m$i;->a(Ljava/lang/String;ILjava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)Lcom/tencent/mm/modelsearch/m$i;
 
     move-result-object v1
 
@@ -1757,7 +1934,7 @@
 
     .line 515
     :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz"
+    const-string/jumbo v0, "MicroMsg.FTS.IFTSPlugin"
 
     const-string/jumbo v1, "Not Found Feature Logic, LogicArraySize=%d"
 
@@ -1765,9 +1942,9 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    sget-object v3, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v3, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v3, v3, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v3, v3, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v3}, Landroid/util/SparseArray;->size()I
 
@@ -1779,7 +1956,7 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 516
     new-instance v0, Lcom/tencent/mm/modelsearch/e;
@@ -1796,7 +1973,7 @@
 
     move-object v5, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/aa;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/e;-><init>(ILjava/lang/String;Ljava/util/HashSet;Lcom/tencent/mm/modelsearch/m$j;Lcom/tencent/mm/sdk/platformtools/ac;)V
 
     .line 518
     const-string/jumbo v1, "FTSExceptionHandler"
@@ -1806,14 +1983,14 @@
     goto :goto_0
 .end method
 
-.method public static dK(I)V
+.method public static er(I)V
     .locals 7
 
     .prologue
     .line 426
-    sget-object v1, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v1, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
-    iget-object v0, v1, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v1, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p0}, Landroid/util/SparseArray;->indexOfKey(I)I
 
@@ -1821,7 +1998,7 @@
 
     if-ltz v0, :cond_0
 
-    iget-object v0, v1, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v1, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -1836,7 +2013,7 @@
 
     :cond_0
     :goto_0
-    iget-object v0, v1, Lcom/tencent/mm/modelsearch/m$f;->bZI:Landroid/util/SparseArray;
+    iget-object v0, v1, Lcom/tencent/mm/modelsearch/m$f;->bTr:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p0}, Landroid/util/SparseArray;->remove(I)V
 
@@ -1847,7 +2024,7 @@
     :catch_0
     move-exception v2
 
-    const-string/jumbo v3, "!32@/B4Tb64lLpKz+OLw7dBGoMGyKbFBZaXz"
+    const-string/jumbo v3, "MicroMsg.FTS.IFTSPlugin"
 
     const-string/jumbo v4, "Destroy Native Logic name=%s \nexception=%s"
 
@@ -1865,27 +2042,27 @@
 
     const/4 v0, 0x1
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v2
 
     aput-object v2, v5, v0
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method public static dL(I)V
+.method public static es(I)V
     .locals 5
 
     .prologue
     .line 434
-    sget-object v2, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v2, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
     const/4 v1, 0x0
 
-    iget-object v0, v2, Lcom/tencent/mm/modelsearch/m$f;->bZH:Ljava/util/LinkedList;
+    iget-object v0, v2, Lcom/tencent/mm/modelsearch/m$f;->bTq:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
@@ -1920,7 +2097,7 @@
 
     invoke-interface {v1}, Lcom/tencent/mm/modelsearch/k;->destroy()V
 
-    iget-object v0, v2, Lcom/tencent/mm/modelsearch/m$f;->bZH:Ljava/util/LinkedList;
+    iget-object v0, v2, Lcom/tencent/mm/modelsearch/m$f;->bTq:Ljava/util/LinkedList;
 
     invoke-virtual {v0, v1}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
@@ -1934,16 +2111,16 @@
     goto :goto_1
 .end method
 
-.method public static dM(I)Lcom/tencent/mm/modelsearch/k;
+.method public static et(I)Lcom/tencent/mm/modelsearch/k;
     .locals 4
 
     .prologue
     .line 438
-    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bZB:Lcom/tencent/mm/modelsearch/m$f;
+    sget-object v0, Lcom/tencent/mm/modelsearch/m;->bTk:Lcom/tencent/mm/modelsearch/m$f;
 
     const/4 v1, 0x0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bZH:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/m$f;->bTq:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 

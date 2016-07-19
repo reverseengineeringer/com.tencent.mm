@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field private bxg:Landroid/content/SharedPreferences;
+.field private bpi:Landroid/content/SharedPreferences;
 
-.field private dOw:Z
+.field private dQe:Z
 
-.field public gWB:Landroid/widget/ListView;
+.field public eLC:Landroid/widget/ListView;
 
-.field private hyq:Z
+.field private hQe:Z
 
-.field public kLL:Lcom/tencent/mm/ui/base/preference/h;
+.field public lla:Lcom/tencent/mm/ui/base/preference/h;
 
 
 # direct methods
@@ -26,10 +26,10 @@
     invoke-direct {p0}, Lcom/tencent/mm/ui/o;-><init>()V
 
     .line 26
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/i;->dOw:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/i;->dQe:Z
 
     .line 27
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/i;->hyq:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/i;->hQe:Z
 
     return-void
 .end method
@@ -39,7 +39,7 @@
 
     .prologue
     .line 19
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/i;->hyq:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/i;->hQe:Z
 
     return v0
 .end method
@@ -49,7 +49,7 @@
 
     .prologue
     .line 19
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/preference/i;->hyq:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/preference/i;->hQe:Z
 
     return p1
 .end method
@@ -59,12 +59,12 @@
 
     .prologue
     .line 19
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->bxg:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->bpi:Landroid/content/SharedPreferences;
 
     return-object v0
 .end method
 
-.method public static bds()Z
+.method public static biZ()Z
     .locals 1
 
     .prologue
@@ -81,7 +81,7 @@
     .line 19
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/i;->dOw:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/i;->dQe:Z
 
     return v0
 .end method
@@ -91,7 +91,7 @@
 
     .prologue
     .line 19
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->kLL:Lcom/tencent/mm/ui/base/preference/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->lla:Lcom/tencent/mm/ui/base/preference/h;
 
     return-object v0
 .end method
@@ -101,14 +101,14 @@
 
     .prologue
     .line 19
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->gWB:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->eLC:Landroid/widget/ListView;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public abstract Gn()I
+.method public abstract GK()I
 .end method
 
 .method public abstract a(Lcom/tencent/mm/ui/base/preference/f;Lcom/tencent/mm/ui/base/preference/Preference;)Z
@@ -119,7 +119,7 @@
 
     .prologue
     .line 33
-    const v0, 0x7f0a0593
+    const v0, 0x7f0303dc
 
     return v0
 .end method
@@ -136,7 +136,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/g;->y()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v1
 
@@ -158,24 +158,24 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/preference/i;->Gg(Ljava/lang/String;)Landroid/content/SharedPreferences;
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/preference/i;->Iv(Ljava/lang/String;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->bxg:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->bpi:Landroid/content/SharedPreferences;
 
     .line 62
     new-instance v0, Lcom/tencent/mm/ui/base/preference/h;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, p0, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/i;->bxg:Landroid/content/SharedPreferences;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/i;->bpi:Landroid/content/SharedPreferences;
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/h;-><init>(Landroid/content/Context;Landroid/content/SharedPreferences;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->kLL:Lcom/tencent/mm/ui/base/preference/h;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->lla:Lcom/tencent/mm/ui/base/preference/h;
 
     .line 63
     const v0, 0x102000a
@@ -186,10 +186,10 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->gWB:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->eLC:Landroid/widget/ListView;
 
     .line 65
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->kLL:Lcom/tencent/mm/ui/base/preference/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->lla:Lcom/tencent/mm/ui/base/preference/h;
 
     new-instance v1, Lcom/tencent/mm/ui/base/preference/i$1;
 
@@ -198,7 +198,7 @@
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/preference/h;->b(Lcom/tencent/mm/ui/base/preference/Preference$a;)V
 
     .line 127
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/preference/i;->Gn()I
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/preference/i;->GK()I
 
     move-result v0
 
@@ -208,20 +208,20 @@
     if-eq v0, v1, :cond_0
 
     .line 129
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/i;->kLL:Lcom/tencent/mm/ui/base/preference/h;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/i;->lla:Lcom/tencent/mm/ui/base/preference/h;
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/base/preference/h;->addPreferencesFromResource(I)V
 
     .line 132
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->gWB:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->eLC:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/i;->kLL:Lcom/tencent/mm/ui/base/preference/h;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/i;->lla:Lcom/tencent/mm/ui/base/preference/h;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 133
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->gWB:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->eLC:Landroid/widget/ListView;
 
     new-instance v1, Lcom/tencent/mm/ui/base/preference/i$2;
 
@@ -230,7 +230,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 206
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->gWB:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->eLC:Landroid/widget/ListView;
 
     new-instance v1, Lcom/tencent/mm/ui/base/preference/i$3;
 
@@ -242,7 +242,7 @@
     return-void
 .end method
 
-.method public onContextItemSelected(Landroid/view/MenuItem;)Z
+.method public final onContextItemSelected(Landroid/view/MenuItem;)Z
     .locals 1
 
     .prologue
@@ -262,7 +262,7 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/o;->onResume()V
 
     .line 50
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->kLL:Lcom/tencent/mm/ui/base/preference/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->lla:Lcom/tencent/mm/ui/base/preference/h;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/preference/h;->notifyDataSetChanged()V
 

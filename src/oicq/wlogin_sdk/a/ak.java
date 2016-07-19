@@ -5,7 +5,7 @@ public final class ak
 {
   public ak()
   {
-    mbE = 356;
+    mNI = 356;
   }
 }
 

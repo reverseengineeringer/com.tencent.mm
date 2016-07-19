@@ -7,23 +7,23 @@ final class AtSomeoneInBizChatUI$2
 {
   AtSomeoneInBizChatUI$2(AtSomeoneInBizChatUI paramAtSomeoneInBizChatUI) {}
   
-  public final void Gd() {}
+  public final void GA() {}
   
-  public final void Ge() {}
+  public final void GB() {}
   
-  public final void Gf() {}
+  public final void GC() {}
   
-  public final void Gg() {}
+  public final void GD() {}
   
-  public final boolean kE(String paramString)
+  public final boolean ln(String paramString)
   {
     return false;
   }
   
-  public final void kF(String paramString)
+  public final void lo(String paramString)
   {
-    AtSomeoneInBizChatUI.a locala = AtSomeoneInBizChatUI.a(kRd);
-    dbI = paramString;
+    AtSomeoneInBizChatUI.a locala = AtSomeoneInBizChatUI.a(lrg);
+    dao = paramString;
     locala.a(null, null);
   }
 }

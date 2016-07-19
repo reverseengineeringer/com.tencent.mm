@@ -4,28 +4,28 @@ import android.os.Bundle;
 
 public abstract class b
 {
-  public String cAU;
-  public String csg;
+  public String cnK;
+  public String cxP;
   public int errCode;
-  public String iBD;
+  public String iYn;
   
   public abstract int getType();
   
-  public void l(Bundle paramBundle)
+  public void n(Bundle paramBundle)
   {
     paramBundle.putInt("_wxapi_command_type", getType());
     paramBundle.putInt("_wxapi_baseresp_errcode", errCode);
-    paramBundle.putString("_wxapi_baseresp_errstr", csg);
-    paramBundle.putString("_wxapi_baseresp_transaction", iBD);
-    paramBundle.putString("_wxapi_baseresp_openId", cAU);
+    paramBundle.putString("_wxapi_baseresp_errstr", cnK);
+    paramBundle.putString("_wxapi_baseresp_transaction", iYn);
+    paramBundle.putString("_wxapi_baseresp_openId", cxP);
   }
   
-  public void m(Bundle paramBundle)
+  public void o(Bundle paramBundle)
   {
     errCode = paramBundle.getInt("_wxapi_baseresp_errcode");
-    csg = paramBundle.getString("_wxapi_baseresp_errstr");
-    iBD = paramBundle.getString("_wxapi_baseresp_transaction");
-    cAU = paramBundle.getString("_wxapi_baseresp_openId");
+    cnK = paramBundle.getString("_wxapi_baseresp_errstr");
+    iYn = paramBundle.getString("_wxapi_baseresp_transaction");
+    cxP = paramBundle.getString("_wxapi_baseresp_openId");
   }
 }
 

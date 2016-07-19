@@ -1,423 +1,236 @@
 package com.tencent.mm.pluginsdk.model.app;
 
-import android.database.Cursor;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.model.c;
-import com.tencent.mm.pluginsdk.i.a;
-import com.tencent.mm.pluginsdk.i.r;
-import com.tencent.mm.protocal.b.acf;
-import com.tencent.mm.protocal.b.acg;
-import com.tencent.mm.protocal.b.vw;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.c;
-import com.tencent.mm.r.j;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
-import com.tencent.mm.storage.h;
-import java.util.ArrayList;
-import java.util.Iterator;
+import android.os.HandlerThread;
+import android.os.SystemClock;
+import com.tencent.mm.compatible.util.f.a;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
+import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.List;
+import java.util.Map;
+import java.util.Queue;
 
 public final class ak
-  implements s, com.tencent.mm.r.d
 {
-  private static ak iBT;
-  public String bXM;
-  public boolean iBU = false;
-  public boolean iBV = false;
-  private List iBW = new LinkedList();
-  public long iBX;
-  private final int iBY = 20;
-  public int iBZ = 0;
-  public long iCa;
-  
-  private static void a(f paramf, acg paramacg)
+  public static final class a
+    implements d
   {
-    field_appName = jyk;
-    field_appName_en = jyg;
-    field_appName_tw = jyh;
-    aOl = jyi;
-    aNo = true;
-    aOm = jyj;
-    aNo = true;
-    aOn = jyn;
-    aNo = true;
-    field_serviceAppInfoFlag = jym;
-    field_serviceAppType = jyl;
-    aOo = jyo;
-    aNo = true;
-    field_serviceShowFlag = jyp;
-  }
-  
-  private static void a(i parami, List paramList)
-  {
-    if ((parami == null) || (paramList == null) || (paramList.size() <= 0)) {}
-    label47:
-    do
+    private static int acW = 0;
+    Queue<Long> acO = new LinkedList();
+    Queue<Long> acP = new LinkedList();
+    Map<Long, f.a> acQ = new HashMap();
+    private boolean acR = false;
+    private boolean acS = false;
+    private boolean acT = false;
+    int acU = 0;
+    private long acV = 0L;
+    f.a acX = new f.a();
+    private com.tencent.mm.sdk.platformtools.ah acY = new com.tencent.mm.sdk.platformtools.ah(twkvy.getLooper(), new ah.a()
     {
-      return;
-      u.d("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "removeExpiredServiceApp");
-      localObject1 = new ArrayList();
-      if (i.a.iyG != null) {
-        break;
-      }
-      u.e("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "getAllServices, getISubCorePluginBase() == null");
-      u.d("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "oldList %d", new Object[] { Integer.valueOf(((List)localObject1).size()) });
-    } while (((List)localObject1).size() <= 0);
-    Object localObject1 = ((List)localObject1).iterator();
-    label90:
-    label287:
-    for (;;)
-    {
-      Object localObject2;
-      Object localObject3;
-      if (((Iterator)localObject1).hasNext())
+      public final boolean jK()
       {
-        localObject2 = (f)((Iterator)localObject1).next();
-        if (field_appId != null)
+        ak.a.h(ak.a.this);
+        return false;
+      }
+      
+      public final String toString()
+      {
+        return super.toString() + "|scenePusher";
+      }
+    }, false);
+    
+    public a()
+    {
+      com.tencent.mm.model.ah.tF().a(220, this);
+      com.tencent.mm.model.ah.tF().a(221, this);
+      com.tencent.mm.model.ah.tF().a(222, this);
+    }
+    
+    public static void c(long paramLong, String paramString1, String paramString2)
+    {
+      com.tencent.mm.model.ah.tF().a(new af(paramLong, paramString1, paramString2), 0);
+    }
+    
+    public static void dn(long paramLong)
+    {
+      com.tencent.mm.model.ah.tF().a(new af(paramLong, null, null), 0);
+    }
+    
+    private void kj()
+    {
+      acQ.clear();
+      acO.clear();
+      acP.clear();
+      acS = false;
+      acR = false;
+      acT = false;
+      v.d("MicroMsg.SceneAppMsg", "Finish service use time(ms):" + acX.ns());
+    }
+    
+    public static void l(long paramLong, String paramString)
+    {
+      com.tencent.mm.model.ah.tF().a(new af(paramLong, paramString, null), 0);
+    }
+    
+    protected final void finalize()
+    {
+      com.tencent.mm.model.ah.tF().b(220, this);
+      com.tencent.mm.model.ah.tF().b(221, this);
+      com.tencent.mm.model.ah.tF().b(222, this);
+      super.finalize();
+    }
+    
+    public final void onSceneEnd(final int paramInt1, final int paramInt2, String paramString, final j paramj)
+    {
+      v.d("MicroMsg.SceneAppMsg", "onSceneEnd type:%d errType:%d errCode:%d", new Object[] { Integer.valueOf(paramj.getType()), Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+      com.tencent.mm.model.ah.tw().t(new Runnable()
+      {
+        public final void run()
         {
-          localObject3 = paramList.iterator();
-          String str;
-          do
+          ak.a.je();
+          int i;
+          long l1;
+          long l2;
+          if (paramj.getType() == 222)
           {
-            if (!((Iterator)localObject3).hasNext()) {
-              break;
-            }
-            str = (String)((Iterator)localObject3).next();
-          } while (!field_appId.equals(str));
-        }
-      }
-      else
-      {
-        for (int i = 1;; i = 0)
-        {
-          if (i != 0) {
-            break label287;
-          }
-          boolean bool = parami.b((f)localObject2, new String[0]);
-          u.d("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "delete old service : %s, %s", new Object[] { field_appId, Boolean.valueOf(bool) });
-          break label90;
-          break;
-          localObject2 = i.a.iyG.aOY();
-          if (localObject2 == null) {
-            break label47;
-          }
-          while (((Cursor)localObject2).moveToNext())
-          {
-            localObject3 = new f();
-            ((f)localObject3).c((Cursor)localObject2);
-            if (!ay.kz(field_openId)) {
-              ((List)localObject1).add(localObject3);
-            }
-          }
-          ((Cursor)localObject2).close();
-          break label47;
-        }
-      }
-    }
-  }
-  
-  public static void aH(String paramString, int paramInt)
-  {
-    u.i("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "get service app, offset = %d, lang = %s", new Object[] { Integer.valueOf(paramInt), paramString });
-    paramString = new ab(paramInt, paramString);
-    ah.tE().d(paramString);
-  }
-  
-  public static ak aPW()
-  {
-    if (iBT == null) {
-      iBT = new ak();
-    }
-    return iBT;
-  }
-  
-  public final void a(int paramInt1, int paramInt2, String paramString, v paramv)
-  {
-    if (!ah.rh()) {}
-    do
-    {
-      return;
-      iBU = false;
-      u.d("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "Suggestion onSceneEnd errType=%s errCode=%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
-      if (paramv == null)
-      {
-        u.e("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "scene == null");
-        return;
-      }
-    } while ((paramInt1 != 0) || (paramInt2 != 0));
-    switch (paramv.getType())
-    {
-    default: 
-      return;
-    }
-    paramString = (ac)paramv;
-    u.d("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "get suggestion appList, AppCount = %s", new Object[] { Integer.valueOf(dyc.bEX.bFf).jtt) });
-    paramString = iBp;
-    if ((paramString == null) || (paramString.size() <= 0))
-    {
-      u.w("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "empty suggestAppList");
-      return;
-    }
-    if ((y.getContext() == null) || (i.a.iyG == null))
-    {
-      u.e("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "wrong environment");
-      return;
-    }
-    paramv = new LinkedList();
-    Object localObject1 = paramString.iterator();
-    f localf;
-    Object localObject2;
-    Object localObject3;
-    if (((Iterator)localObject1).hasNext())
-    {
-      localf = (f)((Iterator)localObject1).next();
-      localObject2 = field_appName;
-      localObject3 = field_packageName;
-      String str1 = field_signature;
-      String str2 = aOb;
-      if (aOa != null) {}
-      for (boolean bool = true;; bool = false)
-      {
-        u.d("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "suggestion appName=%s, packageName=%s, signature [%s], introUrl [%s], has iconUrl [%s]", new Object[] { localObject2, localObject3, str1, str2, Boolean.valueOf(bool) });
-        paramv.add(field_appId);
-        break;
-      }
-    }
-    i.a.iyG.P(paramv);
-    localObject1 = g.cO(y.getContext());
-    if (((List)localObject1).size() > 0)
-    {
-      paramv = i.a.iyG.aOX();
-      localObject1 = ((List)localObject1).iterator();
-    }
-    label509:
-    for (;;)
-    {
-      if (((Iterator)localObject1).hasNext())
-      {
-        localf = (f)((Iterator)localObject1).next();
-        if (field_appId != null)
-        {
-          localObject2 = paramString.iterator();
-          do
-          {
-            if (!((Iterator)localObject2).hasNext()) {
-              break;
-            }
-            localObject3 = (f)((Iterator)localObject2).next();
-          } while ((field_appId == null) || (!field_appId.equals(field_appId)));
-        }
-      }
-      else
-      {
-        for (paramInt1 = 1;; paramInt1 = 0)
-        {
-          if (paramInt1 != 0) {
-            break label509;
-          }
-          if (g.a(y.getContext(), localf)) {}
-          for (field_status = 1;; field_status = 4)
-          {
-            paramv.a(localf, new String[0]);
-            break;
-          }
-          ah.tD().rn().setLong(352275, System.currentTimeMillis());
-          iBX = System.currentTimeMillis();
-          return;
-        }
-      }
-    }
-  }
-  
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
-  {
-    if (!ah.rh())
-    {
-      u.e("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "getServiceAppList onSceneEnd account not ready");
-      iBZ = 0;
-      iBW.clear();
-      return;
-    }
-    iBV = false;
-    if (paramj == null)
-    {
-      u.e("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "scene == null");
-      iBZ = 0;
-      iBW.clear();
-      return;
-    }
-    if ((paramInt1 != 0) || (paramInt2 != 0))
-    {
-      u.e("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "getServiceAppList onSceneEnd : errType = %d, errCode = %d, errMsg = %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
-      iBZ = 0;
-      iBW.clear();
-      return;
-    }
-    u.i("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "getServiceAppList onSceneEnd : errType = %d, errCode = %d, errMsg = %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
-    paramString = (ab)paramj;
-    if ((anN != null) && (anN.bEX.bFf != null)) {}
-    for (paramString = (acf)anN.bEX.bFf; paramString == null; paramString = null)
-    {
-      u.e("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "resp == null");
-      iBZ = 0;
-      iBW.clear();
-      return;
-    }
-    if ((jyf == null) || (jyf.size() <= 0))
-    {
-      u.e("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "Service_appinfo empty");
-      a(i.a.iyG.aOX(), iBW);
-      iBZ = 0;
-      iBW.clear();
-      ah.tD().rn().setLong(352276, System.currentTimeMillis());
-      iCa = System.currentTimeMillis();
-      return;
-    }
-    u.i("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "offset = %d, count = %s", new Object[] { Integer.valueOf(iBZ), Integer.valueOf(jyf.size()) });
-    i locali = i.a.iyG.aOX();
-    LinkedList localLinkedList = new LinkedList();
-    Iterator localIterator = jyf.iterator();
-    label509:
-    label1015:
-    while (localIterator.hasNext())
-    {
-      acg localacg = (acg)localIterator.next();
-      u.v("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "service info: %s, %s, %s, %s, %s, %s", new Object[] { jyk, Integer.valueOf(jyl), Integer.valueOf(jyp), Integer.valueOf(jyo), Integer.valueOf(jym), dkU });
-      if (!ay.kz(dkU))
-      {
-        iBW.add(dkU);
-        f localf = g.ai(dkU, true);
-        boolean bool;
-        if (localf != null) {
-          if (field_serviceAppInfoFlag != jym)
-          {
-            paramInt1 = 1;
-            paramj = localf;
-            if (paramInt1 != 0)
+            v.d("MicroMsg.SceneAppMsg", "onSceneEnd  SendAppMsg errtype:" + paramInt1 + " errCode:" + paramInt2);
+            i = 0;
+            l1 = -1L;
+            long l3 = 0L;
+            l2 = l3;
+            if (l1 != -1L)
             {
-              paramj = aOm;
-              String str = aOl;
-              a(localf, localacg);
-              bool = locali.a(localf, new String[0]);
-              if (!ay.ky(paramj).equals(ay.ky(jyj)))
+              l2 = l3;
+              if (acQ.get(Long.valueOf(l1)) != null)
               {
-                u.i("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "update serviceApp.app_icon_url_list" + ay.ky(jyj));
-                aj.aPP().aE(field_appId, 5);
+                l2 = ((f.a)acQ.get(Long.valueOf(l1))).ns();
+                acQ.remove(Long.valueOf(l1));
               }
-              if (!ay.ky(str).equals(ay.ky(jyi)))
+            }
+            v.d("MicroMsg.SceneAppMsg", "onSceneEnd SceneType:" + paramj.getType() + " errtype:" + paramInt1 + " errCode:" + paramInt2 + " retCode:" + i + " rowid:" + l1 + " time:" + l2);
+            if ((paramInt1 != 3) || (i == 0)) {
+              break label623;
+            }
+            ak.a.c(ak.a.this);
+            label243:
+            v.d("MicroMsg.SceneAppMsg", "onSceneEnd  inCnt:" + ak.a.acW + " stop:" + ak.a.d(ak.a.this) + " running:" + ak.a.e(ak.a.this) + " recving:" + ak.a.f(ak.a.this) + " sending:" + ak.a.g(ak.a.this));
+            if (ak.a.d(ak.a.this) <= 0) {
+              break label642;
+            }
+            ak.a.h(ak.a.this);
+          }
+          for (;;)
+          {
+            ak.a.jf();
+            return;
+            if (paramj.getType() == 221)
+            {
+              ak.a.a(ak.a.this);
+              l1 = paramjgoK;
+              i = paramjafx;
+              break;
+            }
+            if (paramj.getType() == 220)
+            {
+              ak.a.b(ak.a.this);
+              l2 = paramjgoK;
+              int k = paramjafx;
+              Object localObject = (ai)paramj;
+              if (iXM == null)
               {
-                u.i("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "update serviceApp.app_icon_url_panel" + ay.ky(jyi));
-                aj.aPP().aE(field_appId, 4);
+                localObject = null;
+                label459:
+                if (be.kf(paramjbKT)) {
+                  break label586;
+                }
               }
-              u.i("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "update app: AppID = %s, ret = %s", new Object[] { dkU, Boolean.valueOf(bool) });
-              paramj = localf;
+              label586:
+              for (int j = 1;; j = 0)
+              {
+                i = k;
+                l1 = l2;
+                if (j != 0) {
+                  break;
+                }
+                i = k;
+                l1 = l2;
+                if (be.kf((String)localObject)) {
+                  break;
+                }
+                b localb = new b();
+                al.Jk().b(l2, localb);
+                i = k;
+                l1 = l2;
+                if (kyS != l2) {
+                  break;
+                }
+                l.k(field_msgInfoId, (String)localObject);
+                v.d("MicroMsg.SceneAppMsg", "onSceneEnd, finish update app attach, start send app msg");
+                ak.a.dn(field_msgInfoId);
+                i = k;
+                l1 = l2;
+                break;
+                localObject = iXM.field_mediaSvrId;
+                break label459;
+              }
+            }
+            v.e("MicroMsg.SceneAppMsg", "onSceneEnd Error SceneType:" + paramj.getType());
+            ak.a.jf();
+            return;
+            label623:
+            if (paramInt1 == 0) {
+              break label243;
+            }
+            ak.a.a(ak.a.this, 0);
+            break label243;
+            label642:
+            if ((!ak.a.g(ak.a.this)) && (!ak.a.f(ak.a.this))) {
+              ak.a.i(ak.a.this);
             }
           }
         }
-        for (;;)
+        
+        public final String toString()
         {
-          if (!ay.kz(field_openId)) {
-            break label1015;
-          }
-          localLinkedList.add(dkU);
-          break;
-          if (field_serviceAppType != jyl)
-          {
-            paramInt1 = 1;
-            break label509;
-          }
-          if (aOo != jyo)
-          {
-            paramInt1 = 1;
-            break label509;
-          }
-          if (field_serviceShowFlag != jyp)
-          {
-            paramInt1 = 1;
-            break label509;
-          }
-          if (!ay.ky(field_appName).equals(ay.ky(jyk)))
-          {
-            paramInt1 = 1;
-            break label509;
-          }
-          if (!ay.ky(field_appName_en).equals(ay.ky(jyg)))
-          {
-            paramInt1 = 1;
-            break label509;
-          }
-          if (!ay.ky(field_appName_tw).equals(ay.ky(jyh)))
-          {
-            paramInt1 = 1;
-            break label509;
-          }
-          if (!ay.ky(aOm).equals(ay.ky(jyj)))
-          {
-            paramInt1 = 1;
-            break label509;
-          }
-          if (!ay.ky(aOl).equals(ay.ky(jyi)))
-          {
-            paramInt1 = 1;
-            break label509;
-          }
-          if (!ay.ky(aOn).equals(ay.ky(jyn)))
-          {
-            paramInt1 = 1;
-            break label509;
-          }
-          paramInt1 = 0;
-          break label509;
-          paramj = new f();
-          field_appId = dkU;
-          a(paramj, localacg);
-          bool = locali.m(paramj);
-          u.i("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "insert app: AppID = %s, ret = %s", new Object[] { dkU, Boolean.valueOf(bool) });
+          return super.toString() + "|onSceneEnd";
         }
-      }
+      });
     }
-    if (localLinkedList.size() > 0)
+    
+    public final void run()
     {
-      u.d("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "needGetOpenIdList %d", new Object[] { Integer.valueOf(localLinkedList.size()) });
-      aj.aPV().bl(localLinkedList);
+      com.tencent.mm.model.ah.tw().t(new Runnable()
+      {
+        public final void run()
+        {
+          long l = System.currentTimeMillis() - ak.a.j(ak.a.this);
+          v.d("MicroMsg.SceneAppMsg", "summerbig Try Run service runningFlag:" + ak.a.e(ak.a.this) + " timeWait:" + l + " sending:" + ak.a.g(ak.a.this) + " recving:" + ak.a.f(ak.a.this));
+          if (ak.a.e(ak.a.this))
+          {
+            if (l < 180000L) {
+              return;
+            }
+            v.e("MicroMsg.SceneAppMsg", "summerbig ERR: Try Run service runningFlag:" + ak.a.e(ak.a.this) + " timeWait:" + l + ">=MAX_TIME_WAIT sending:" + ak.a.g(ak.a.this) + " recving:" + ak.a.f(ak.a.this));
+          }
+          ak.a.k(ak.a.this);
+          ak.a.b(ak.a.this);
+          ak.a.a(ak.a.this, 4);
+          ak.a.a(ak.a.this);
+          acX.biW = SystemClock.elapsedRealtime();
+          ak.a.l(ak.a.this).dJ(10L);
+        }
+        
+        public final String toString()
+        {
+          return super.toString() + "|run";
+        }
+      });
     }
-    if (jyf.size() == 20)
-    {
-      iBZ += 20;
-      aH(bXM, iBZ);
-    }
-    for (;;)
-    {
-      ah.tD().rn().setLong(352276, System.currentTimeMillis());
-      iCa = System.currentTimeMillis();
-      return;
-      a(locali, iBW);
-      iBZ = 0;
-      iBW.clear();
-    }
-  }
-  
-  public final void aPX()
-  {
-    if (!ah.rh()) {
-      return;
-    }
-    aj.abv().a(4, this);
-    ah.tE().a(1060, this);
-  }
-  
-  public final void aPY()
-  {
-    if (!ah.rh()) {
-      return;
-    }
-    aj.abv().b(4, this);
-    ah.tE().b(1060, this);
-    iBU = false;
-    iBV = false;
   }
 }
 

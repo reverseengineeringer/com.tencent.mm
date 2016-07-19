@@ -11,13 +11,8 @@ final class LauncherUI$40
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    Intent localIntent = new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS");
-    localIntent.addFlags(268435456);
-    knl.startActivity(localIntent);
     paramDialogInterface.dismiss();
-    LauncherUI.f(knl, true);
-    MMAppMgr.b(knl, true);
-    knl.finish();
+    kMs.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
   }
 }
 

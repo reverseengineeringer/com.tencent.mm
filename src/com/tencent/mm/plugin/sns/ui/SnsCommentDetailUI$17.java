@@ -11,7 +11,7 @@ final class SnsCommentDetailUI$17
   
   public final void onClick(View paramView)
   {
-    BackwardSupportUtil.c.a(SnsCommentDetailUI.d(hda));
+    BackwardSupportUtil.c.a(SnsCommentDetailUI.d(hrN));
   }
 }
 

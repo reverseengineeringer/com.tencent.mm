@@ -4,13 +4,13 @@ import android.app.ProgressDialog;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelfriend.aa;
 import com.tencent.mm.pluginsdk.a;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ab.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad.a;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 import java.util.List;
 
 final class FindMContactLearmMoreUI$5
-  implements ab.a
+  implements ad.a
 {
   FindMContactLearmMoreUI$5(FindMContactLearmMoreUI paramFindMContactLearmMoreUI) {}
   
@@ -19,16 +19,16 @@ final class FindMContactLearmMoreUI$5
     return super.toString() + "|doUpload";
   }
   
-  public final boolean vd()
+  public final boolean vf()
   {
     try
     {
-      FindMContactLearmMoreUI.a(kPd, a.cE(kPd));
+      FindMContactLearmMoreUI.a(lot, a.cA(lot));
       StringBuilder localStringBuilder = new StringBuilder("tigerreg mobileList size ");
-      if (FindMContactLearmMoreUI.j(kPd) == null) {}
-      for (int i = 0;; i = FindMContactLearmMoreUI.j(kPd).size())
+      if (FindMContactLearmMoreUI.j(lot) == null) {}
+      for (int i = 0;; i = FindMContactLearmMoreUI.j(lot).size())
       {
-        u.d("!56@/B4Tb64lLpIaEkywMHoqAF50wwoU6aq9UNpxJDP2H8v06EipWcMmmw==", i);
+        v.d("MicroMsg.FindMContactLearmMoreUI", i);
         break;
       }
       return true;
@@ -36,23 +36,21 @@ final class FindMContactLearmMoreUI$5
     catch (Exception localException) {}
   }
   
-  public final boolean ve()
+  public final boolean vg()
   {
-    if ((FindMContactLearmMoreUI.j(kPd) != null) && (FindMContactLearmMoreUI.j(kPd).size() != 0))
+    if ((FindMContactLearmMoreUI.j(lot) != null) && (FindMContactLearmMoreUI.j(lot).size() != 0))
     {
-      FindMContactLearmMoreUI.a(kPd, new aa(FindMContactLearmMoreUI.h(kPd), FindMContactLearmMoreUI.j(kPd)));
-      ah.tE().d(FindMContactLearmMoreUI.k(kPd));
-    }
-    for (;;)
-    {
+      FindMContactLearmMoreUI.a(lot, new aa(FindMContactLearmMoreUI.h(lot), FindMContactLearmMoreUI.j(lot)));
+      ah.tF().a(FindMContactLearmMoreUI.k(lot), 0);
       return false;
-      if (FindMContactLearmMoreUI.c(kPd) != null)
-      {
-        FindMContactLearmMoreUI.c(kPd).dismiss();
-        FindMContactLearmMoreUI.d(kPd);
-      }
-      FindMContactLearmMoreUI.b(kPd);
     }
+    if (FindMContactLearmMoreUI.c(lot) != null)
+    {
+      FindMContactLearmMoreUI.c(lot).dismiss();
+      FindMContactLearmMoreUI.d(lot);
+    }
+    FindMContactLearmMoreUI.b(lot);
+    return false;
   }
 }
 

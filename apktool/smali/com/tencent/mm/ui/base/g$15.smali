@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kCG:Ljava/lang/ref/WeakReference;
+.field final synthetic lbL:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 832
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/g$15;->kCG:Ljava/lang/ref/WeakReference;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/g$15;->lbL:Ljava/lang/ref/WeakReference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 836
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$15;->kCG:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$15;->lbL:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 

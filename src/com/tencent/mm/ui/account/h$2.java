@@ -2,11 +2,11 @@ package com.tencent.mm.ui.account;
 
 import android.os.Bundle;
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.d.a.a.a;
-import com.tencent.mm.ui.d.a.d;
-import com.tencent.mm.ui.d.a.f;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.e.a.a.a;
+import com.tencent.mm.ui.e.a.d;
+import com.tencent.mm.ui.e.a.f;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -17,22 +17,22 @@ final class h$2
 {
   h$2(h paramh) {}
   
-  public final void Gp(String paramString)
+  public final void IE(String paramString)
   {
     if ((paramString == null) || (paramString.length() == 0))
     {
-      u.e("!44@/B4Tb64lLpLASVHfQRzXfIKtwR0LMq/9o2AZ+OSS5lE=", "response is null or nil");
-      h.a(kuh, 1, "response is null or nil");
+      v.e("MicroMsg.RefreshTokenRunner", "response is null or nil");
+      h.a(kTo, 1, "response is null or nil");
       return;
     }
     Object localObject;
     if ((paramString.contains("access_token")) && (paramString.length() > 12)) {
       try
       {
-        paramString = f.Hq(paramString);
+        paramString = f.JF(paramString);
         if (paramString.containsKey("access_token"))
         {
-          localObject = kuh;
+          localObject = kTo;
           Message localMessage = Message.obtain();
           what = 2;
           localMessage.setData(paramString);
@@ -42,7 +42,7 @@ final class h$2
       }
       catch (Exception paramString)
       {
-        h.a(kuh, 2, "decodeUrl fail");
+        h.a(kTo, 2, "decodeUrl fail");
         return;
       }
     }
@@ -56,8 +56,8 @@ final class h$2
       }
       catch (Exception paramString)
       {
-        u.e("!44@/B4Tb64lLpLASVHfQRzXfIKtwR0LMq/9o2AZ+OSS5lE=", "parseJson exception : " + paramString.getMessage());
-        h.a(kuh, 2, "parseJson error");
+        v.e("MicroMsg.RefreshTokenRunner", "parseJson exception : " + paramString.getMessage());
+        h.a(kTo, 2, "parseJson error");
         return;
         localObject = paramString;
         if (paramString.equals("true")) {
@@ -72,9 +72,9 @@ final class h$2
       }
       catch (d paramString)
       {
-        paramString = "errCode = " + cFW + ", errType = " + lqX + ", errMsg = " + paramString.getMessage();
-        u.e("!44@/B4Tb64lLpLASVHfQRzXfIKtwR0LMq/9o2AZ+OSS5lE=", "parseJson facebookerror, " + paramString);
-        h.a(kuh, 3, paramString);
+        paramString = "errCode = " + cCZ + ", errType = " + lRC + ", errMsg = " + paramString.getMessage();
+        v.e("MicroMsg.RefreshTokenRunner", "parseJson facebookerror, " + paramString);
+        h.a(kTo, 3, paramString);
         return;
       }
       if ((paramString.has("error_code")) && (paramString.has("error_msg"))) {
@@ -92,20 +92,20 @@ final class h$2
   
   public final void a(FileNotFoundException paramFileNotFoundException)
   {
-    u.e("!44@/B4Tb64lLpLASVHfQRzXfIKtwR0LMq/9o2AZ+OSS5lE=", "onFileNotFoundException");
-    h.a(kuh, 2, paramFileNotFoundException.getMessage());
+    v.e("MicroMsg.RefreshTokenRunner", "onFileNotFoundException");
+    h.a(kTo, 2, paramFileNotFoundException.getMessage());
   }
   
   public final void a(IOException paramIOException)
   {
-    u.e("!44@/B4Tb64lLpLASVHfQRzXfIKtwR0LMq/9o2AZ+OSS5lE=", "onIOException");
-    h.a(kuh, 2, paramIOException.getMessage());
+    v.e("MicroMsg.RefreshTokenRunner", "onIOException");
+    h.a(kTo, 2, paramIOException.getMessage());
   }
   
   public final void a(MalformedURLException paramMalformedURLException)
   {
-    u.e("!44@/B4Tb64lLpLASVHfQRzXfIKtwR0LMq/9o2AZ+OSS5lE=", "onMalformedURLException");
-    h.a(kuh, 2, paramMalformedURLException.getMessage());
+    v.e("MicroMsg.RefreshTokenRunner", "onMalformedURLException");
+    h.a(kTo, 2, paramMalformedURLException.getMessage());
   }
 }
 

@@ -4,23 +4,23 @@
 
 
 # static fields
-.field public static final llA:I
+.field public static final lLL:I
 
-.field public static final llB:I
+.field public static final lLM:I
 
-.field public static final llC:I
+.field public static final lLN:I
 
-.field public static final llD:I
+.field public static final lLO:I
 
-.field public static final llE:I
+.field public static final lLP:I
 
-.field public static final llF:I
+.field public static final lLQ:I
 
-.field public static final llG:I
+.field public static final lLR:I
 
-.field public static final lly:I
+.field public static final lLS:I
 
-.field public static final llz:I
+.field public static final lLT:I
 
 
 # direct methods
@@ -49,7 +49,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/ui/contact/r;->lly:I
+    sput v0, Lcom/tencent/mm/ui/contact/r;->lLL:I
 
     .line 25
     const/4 v0, 0x6
@@ -62,7 +62,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/ui/contact/r;->llz:I
+    sput v0, Lcom/tencent/mm/ui/contact/r;->lLM:I
 
     .line 33
     const/4 v0, 0x6
@@ -75,12 +75,12 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/ui/contact/r;->llA:I
+    sput v0, Lcom/tencent/mm/ui/contact/r;->lLN:I
 
     .line 41
     new-array v0, v5, [I
 
-    sget v1, Lcom/tencent/mm/ui/contact/r;->lly:I
+    sget v1, Lcom/tencent/mm/ui/contact/r;->lLL:I
 
     aput v1, v0, v2
 
@@ -100,7 +100,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/ui/contact/r;->llB:I
+    sput v0, Lcom/tencent/mm/ui/contact/r;->lLO:I
 
     .line 47
     new-array v0, v5, [I
@@ -111,12 +111,12 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/ui/contact/r;->llC:I
+    sput v0, Lcom/tencent/mm/ui/contact/r;->lLP:I
 
     .line 53
     new-array v0, v5, [I
 
-    sget v1, Lcom/tencent/mm/ui/contact/r;->lly:I
+    sget v1, Lcom/tencent/mm/ui/contact/r;->lLL:I
 
     aput v1, v0, v2
 
@@ -136,14 +136,14 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/ui/contact/r;->llD:I
+    sput v0, Lcom/tencent/mm/ui/contact/r;->lLQ:I
 
     .line 59
     const/4 v0, 0x5
 
     new-array v0, v0, [I
 
-    sget v1, Lcom/tencent/mm/ui/contact/r;->lly:I
+    sget v1, Lcom/tencent/mm/ui/contact/r;->lLL:I
 
     aput v1, v0, v2
 
@@ -167,7 +167,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/ui/contact/r;->llE:I
+    sput v0, Lcom/tencent/mm/ui/contact/r;->lLR:I
 
     .line 66
     const/4 v0, 0x6
@@ -180,12 +180,12 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/ui/contact/r;->llF:I
+    sput v0, Lcom/tencent/mm/ui/contact/r;->lLS:I
 
     .line 74
     new-array v0, v4, [I
 
-    sget v1, Lcom/tencent/mm/ui/contact/r;->llz:I
+    sget v1, Lcom/tencent/mm/ui/contact/r;->lLM:I
 
     aput v1, v0, v2
 
@@ -197,7 +197,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/ui/contact/r;->llG:I
+    sput v0, Lcom/tencent/mm/ui/contact/r;->lLT:I
 
     return-void
 
@@ -254,7 +254,19 @@
     .end array-data
 .end method
 
-.method public static aW(II)Z
+.method public static bX(II)I
+    .locals 1
+
+    .prologue
+    .line 131
+    xor-int/lit8 v0, p1, -0x1
+
+    and-int/2addr v0, p0
+
+    return v0
+.end method
+
+.method public static be(II)Z
     .locals 1
 
     .prologue
@@ -274,20 +286,17 @@
     goto :goto_0
 .end method
 
-.method public static bR(II)I
-    .locals 1
-
-    .prologue
-    .line 131
-    xor-int/lit8 v0, p1, -0x1
-
-    and-int/2addr v0, p0
-
-    return v0
-.end method
-
-.method public static bhu()Ljava/util/HashSet;
+.method public static bnf()Ljava/util/HashSet;
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 78
@@ -304,8 +313,17 @@
     return-object v0
 .end method
 
-.method public static bhv()Ljava/util/HashSet;
+.method public static bng()Ljava/util/HashSet;
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 89
@@ -324,7 +342,7 @@
     invoke-virtual {v1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     .line 93
-    sget-object v2, Lcom/tencent/mm/model/i;->bAc:[Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/model/i;->btf:[Ljava/lang/String;
 
     array-length v3, v2
 
@@ -483,8 +501,17 @@
     return-object v1
 .end method
 
-.method public static h(Ljava/util/HashSet;)V
+.method public static g(Ljava/util/HashSet;)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
     .line 85

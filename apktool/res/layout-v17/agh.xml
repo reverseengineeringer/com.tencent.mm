@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ae1" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="bottom" android:orientation="horizontal" android:background="@drawable/aei" android:paddingLeft="6.0dip" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="6.0dip" style="@style/MMFooter">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/crr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_alignParentRight="true" android:layout_marginStart="6.0dip" android:layout_alignParentEnd="true">
+            <Button android:textColor="@color/j_" android:id="@id/crs" android:background="@drawable/cj" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:layout_width="wrap_content" android:layout_height="@dimen/d_" android:minWidth="@dimen/db" android:text="@string/a1_" />
+            <Button android:textColor="@color/ow" android:id="@id/crt" android:background="@drawable/b6" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/d_" android:minWidth="@dimen/db" android:text="@string/a1_" />
+        </LinearLayout>
+        <RelativeLayout android:gravity="bottom" android:orientation="horizontal" android:background="@drawable/aj4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/crr" android:layout_toStartOf="@id/crr">
+            <ImageButton android:id="@id/cru" android:background="@null" android:padding="@dimen/j8" android:layout_width="@dimen/d_" android:layout_height="@dimen/d_" android:layout_marginLeft="@dimen/cp" android:layout_marginBottom="@dimen/i9" android:src="@drawable/d5" android:layout_alignParentRight="true" android:contentDescription="@string/wu" android:layout_marginStart="@dimen/cp" android:layout_alignParentEnd="true" />
+            <com.tencent.mm.ui.widget.MMEditText android:textColor="@color/ak" android:id="@id/crv" android:background="@null" android:layout_width="fill_parent" android:layout_marginBottom="@dimen/i9" android:maxHeight="@dimen/d6" android:minHeight="@dimen/d7" android:singleLine="false" android:layout_toLeftOf="@id/cru" android:inputType="textCapSentences|textMultiLine" android:textCursorDrawable="@drawable/q1" android:layout_toStartOf="@id/cru" style="@style/MMEditText" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

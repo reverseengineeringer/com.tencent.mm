@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/r/d;
+.implements Lcom/tencent/mm/t/d;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bUQ:Lcom/tencent/mm/modelmulti/b;
+.field final synthetic bOr:Lcom/tencent/mm/modelmulti/b;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 417
-    iput-object p1, p0, Lcom/tencent/mm/modelmulti/b$2;->bUQ:Lcom/tencent/mm/modelmulti/b;
+    iput-object p1, p0, Lcom/tencent/mm/modelmulti/b$2;->bOr:Lcom/tencent/mm/modelmulti/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,14 +36,14 @@
 
 
 # virtual methods
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+.method public final onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
     .locals 6
 
     .prologue
     const/4 v5, 0x1
 
     .line 421
-    const-string/jumbo v0, "!32@/B4Tb64lLpJrvhSFsrTjwqCVRhOvuJ3+"
+    const-string/jumbo v0, "MicroMsg.NetPushSync"
 
     const-string/jumbo v1, "NetSceneNotifyData onSceneEnd: %d, %d, %s"
 
@@ -69,10 +69,10 @@
 
     aput-object p3, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 422
-    iput-boolean v5, p4, Lcom/tencent/mm/r/j;->bFy:Z
+    iput-boolean v5, p4, Lcom/tencent/mm/t/j;->byJ:Z
 
     .line 423
     return-void

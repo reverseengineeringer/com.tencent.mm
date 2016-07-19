@@ -13,9 +13,19 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/pluginsdk/ui/tools/g$c",
+        "<",
+        "Ljava/lang/String;",
+        "Landroid/graphics/Bitmap;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+.field final synthetic jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
 
 # direct methods
@@ -23,8 +33,8 @@
     .locals 1
 
     .prologue
-    .line 119
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$4;->iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+    .line 117
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$4;->jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
     const/4 v0, 0x1
 
@@ -35,10 +45,10 @@
 
 
 # virtual methods
-.method protected final bridge synthetic as(Ljava/lang/Object;)V
+.method protected final bridge synthetic aL(Ljava/lang/Object;)V
     .locals 0
 
     .prologue
-    .line 119
+    .line 117
     return-void
 .end method

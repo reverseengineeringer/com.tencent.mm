@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lcom/tencent/mm/model/as$a;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/LauncherUI;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/ui/LauncherUI;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic knl:Lcom/tencent/mm/ui/LauncherUI;
+.field final synthetic kMs:Lcom/tencent/mm/ui/LauncherUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 5501
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$48;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 1866
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$48;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,24 +36,31 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 3
+.method public final a(Lcom/tencent/mm/network/e;)V
+    .locals 1
 
     .prologue
-    .line 5505
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    .line 1870
+    if-eqz p1, :cond_0
 
-    .line 5506
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$48;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    invoke-interface {p1}, Lcom/tencent/mm/network/e;->vY()Lcom/tencent/mm/network/c;
 
-    new-instance v1, Landroid/content/Intent;
+    move-result-object v0
 
-    const-string/jumbo v2, "android.settings.MANAGE_APPLICATIONS_SETTINGS"
+    if-nez v0, :cond_1
 
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->startActivity(Landroid/content/Intent;)V
-
-    .line 5507
+    .line 1874
+    :cond_0
+    :goto_0
     return-void
+
+    .line 1873
+    :cond_1
+    invoke-interface {p1}, Lcom/tencent/mm/network/e;->vY()Lcom/tencent/mm/network/c;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/tencent/mm/network/c;->reset()V
+
+    goto :goto_0
 .end method

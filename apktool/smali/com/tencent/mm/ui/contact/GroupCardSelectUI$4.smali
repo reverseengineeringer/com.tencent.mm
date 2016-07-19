@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lkC:Lcom/tencent/mm/ui/contact/GroupCardSelectUI;
+.field final synthetic lKN:Lcom/tencent/mm/ui/contact/GroupCardSelectUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 313
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI$4;->lkC:Lcom/tencent/mm/ui/contact/GroupCardSelectUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI$4;->lKN:Lcom/tencent/mm/ui/contact/GroupCardSelectUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

@@ -12,10 +12,10 @@ import android.widget.TextView;
 import com.tencent.mm.a.g;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.pluginsdk.ui.a.b;
-import com.tencent.mm.protocal.b.abu;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.acj;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.applet.b.a;
 import com.tencent.mm.ui.applet.b.b;
 import java.util.ArrayList;
@@ -26,60 +26,60 @@ import java.util.List;
 public final class j
   extends BaseAdapter
 {
-  int asN = 1;
-  public LinkedList bMh = new LinkedList();
-  private LinkedList bMi = new LinkedList();
-  public List bMj;
-  private List bMk = new LinkedList();
-  public int[] bMl;
-  private a bMm;
-  public com.tencent.mm.ui.applet.b bMn = new com.tencent.mm.ui.applet.b(new b.a()
+  int aex = 1;
+  public LinkedList<acj> bFB = new LinkedList();
+  private LinkedList<acj> bFC = new LinkedList();
+  public List<String[]> bFD;
+  private List<String[]> bFE = new LinkedList();
+  public int[] bFF;
+  private a bFG;
+  public com.tencent.mm.ui.applet.b bFH = new com.tencent.mm.ui.applet.b(new b.a()
   {
-    public final Bitmap hw(String paramAnonymousString)
+    public final Bitmap hO(String paramAnonymousString)
     {
-      return com.tencent.mm.q.b.a(paramAnonymousString, false, -1);
+      return com.tencent.mm.s.b.a(paramAnonymousString, false, -1);
     }
   });
-  private b.b bMo = null;
+  private b.b bFI = null;
   private Context context;
   
   public j(Context paramContext, a parama, int paramInt)
   {
     context = paramContext;
-    asN = paramInt;
-    bMm = parama;
-    bMl = new int[bMh.size()];
+    aex = paramInt;
+    bFG = parama;
+    bFF = new int[bFB.size()];
   }
   
-  private void a(abu paramabu, String[] paramArrayOfString)
+  private void a(acj paramacj, String[] paramArrayOfString)
   {
-    Iterator localIterator = bMi.iterator();
+    Iterator localIterator = bFC.iterator();
     while (localIterator.hasNext())
     {
-      abu localabu = (abu)localIterator.next();
-      if ((fUt != null) && (fUt != null) && (fUt.equals(fUt)))
+      acj localacj = (acj)localIterator.next();
+      if ((gdI != null) && (gdI != null) && (gdI.equals(gdI)))
       {
-        u.d("!32@/B4Tb64lLpKtUZnUqFd8jYERHC2aCXs9", "tigerreg mobile already added");
+        v.d("MicroMsg.FriendAdapter", "tigerreg mobile already added");
         return;
       }
     }
-    bMi.add(paramabu);
-    paramabu = paramArrayOfString[2];
+    bFC.add(paramacj);
+    paramacj = paramArrayOfString[2];
     paramArrayOfString = paramArrayOfString[1];
-    bMk.add(new String[] { paramabu, paramArrayOfString });
+    bFE.add(new String[] { paramacj, paramArrayOfString });
   }
   
-  public final void aV(boolean paramBoolean)
+  public final void aB(boolean paramBoolean)
   {
     int i;
     int[] arrayOfInt;
     int j;
-    if (asN == 1)
+    if (aex == 1)
     {
       i = 0;
-      if (i < bMl.length)
+      if (i < bFF.length)
       {
-        arrayOfInt = bMl;
+        arrayOfInt = bFF;
         if (paramBoolean) {}
         for (j = 1;; j = 0)
         {
@@ -89,12 +89,12 @@ public final class j
         }
       }
     }
-    else if (asN == 2)
+    else if (aex == 2)
     {
       i = 0;
-      if (i < bMl.length)
+      if (i < bFF.length)
       {
-        arrayOfInt = bMl;
+        arrayOfInt = bFF;
         if (paramBoolean) {}
         for (j = 2;; j = 0)
         {
@@ -107,79 +107,265 @@ public final class j
     notifyDataSetChanged();
   }
   
-  public final void db(int paramInt)
+  public final void dG(int paramInt)
   {
-    if (asN == 1) {
-      bMl[paramInt] = 1;
+    if (aex == 1) {
+      bFF[paramInt] = 1;
     }
     for (;;)
     {
       notifyDataSetChanged();
       return;
-      if (asN == 2) {
-        bMl[paramInt] = 2;
+      if (aex == 2) {
+        bFF[paramInt] = 2;
       }
     }
   }
   
-  public final abu dc(int paramInt)
+  public final acj dH(int paramInt)
   {
-    return (abu)bMh.get(paramInt);
+    return (acj)bFB.get(paramInt);
   }
   
-  public final void e(LinkedList paramLinkedList)
+  public final void e(LinkedList<acj> paramLinkedList)
   {
     if (paramLinkedList != null)
     {
-      bMi.clear();
-      bMh.clear();
-      bMk.clear();
-      Iterator localIterator1 = bMj.iterator();
+      bFC.clear();
+      bFB.clear();
+      bFE.clear();
+      Iterator localIterator1 = bFD.iterator();
       while (localIterator1.hasNext())
       {
         String[] arrayOfString = (String[])localIterator1.next();
         Iterator localIterator2 = paramLinkedList.iterator();
         while (localIterator2.hasNext())
         {
-          abu localabu = (abu)localIterator2.next();
-          if (asN == 1)
+          acj localacj = (acj)localIterator2.next();
+          if (aex == 1)
           {
-            if (((cqT == 1) || (cqT == 0)) && (!ay.kz(arrayOfString[2])) && (fUt.equals(g.m(arrayOfString[2].getBytes())))) {
-              a(localabu, arrayOfString);
+            if (((cmu == 1) || (cmu == 0)) && (!be.kf(arrayOfString[2])) && (gdI.equals(g.j(arrayOfString[2].getBytes())))) {
+              a(localacj, arrayOfString);
             }
           }
-          else if ((asN == 2) && (cqT == 2) && (!ay.kz(arrayOfString[2])) && (fUt.equals(g.m(arrayOfString[2].getBytes())))) {
-            a(localabu, arrayOfString);
+          else if ((aex == 2) && (cmu == 2) && (!be.kf(arrayOfString[2])) && (gdI.equals(g.j(arrayOfString[2].getBytes())))) {
+            a(localacj, arrayOfString);
           }
         }
       }
     }
-    bMl = new int[bMi.size()];
-    bMh.addAll(bMi);
-    bMi.clear();
+    bFF = new int[bFC.size()];
+    bFB.addAll(bFC);
+    bFC.clear();
   }
   
   public final int getCount()
   {
-    return bMh.size();
+    return bFB.size();
   }
   
   public final long getItemId(int paramInt)
   {
-    return ((abu)bMh.get(paramInt)).hashCode();
+    return ((acj)bFB.get(paramInt)).hashCode();
   }
   
-  public final int getSelectCount()
+  public final View getView(final int paramInt, View paramView, ViewGroup paramViewGroup)
+  {
+    if (aex == 1)
+    {
+      if (bFI == null) {
+        bFI = new b.b()
+        {
+          public final String dI(int paramAnonymousInt)
+          {
+            if ((paramAnonymousInt < 0) || (paramAnonymousInt >= getCount())) {
+              v.e("MicroMsg.FriendAdapter", "pos is invalid");
+            }
+            acj localacj;
+            do
+            {
+              return null;
+              localacj = dH(paramAnonymousInt);
+            } while (localacj == null);
+            return emC;
+          }
+          
+          public final int yM()
+          {
+            return getCount();
+          }
+        };
+      }
+      if (bFH != null) {
+        bFH.a(paramInt, bFI);
+      }
+    }
+    acj localacj = (acj)bFB.get(paramInt);
+    b localb;
+    if (paramView == null)
+    {
+      localb = new b();
+      if (aex == 1)
+      {
+        paramView = View.inflate(context, 2130903600, null);
+        bFM = ((TextView)paramView.findViewById(2131756858));
+        bFN = ((TextView)paramView.findViewById(2131756863));
+        bFO = ((Button)paramView.findViewById(2131756861));
+        bFP = ((Button)paramView.findViewById(2131756862));
+        bFL = ((ImageView)paramView.findViewById(2131756857));
+        bFQ = ((TextView)paramView.findViewById(2131756859));
+        bFR = ((TextView)paramView.findViewById(2131756860));
+        paramView.setTag(localb);
+        paramViewGroup = localb;
+        bFR.setOnClickListener(new View.OnClickListener()
+        {
+          public final void onClick(View paramAnonymousView)
+          {
+            paramAnonymousView = j.this;
+            int i = paramInt;
+            if (aex == 1) {
+              bFF[i] = 0;
+            }
+            for (;;)
+            {
+              paramAnonymousView.notifyDataSetChanged();
+              return;
+              if (aex == 2) {
+                bFF[i] = 0;
+              }
+            }
+          }
+        });
+        if (aex != 1) {
+          break label501;
+        }
+        if (be.kf(((String[])bFE.get(paramInt))[1])) {
+          break label460;
+        }
+        bFM.setText(((String[])bFE.get(paramInt))[1]);
+        label265:
+        bFO.setOnClickListener(new View.OnClickListener()
+        {
+          public final void onClick(View paramAnonymousView)
+          {
+            dG(paramInt);
+          }
+        });
+        a.b.a(bFL, emC);
+        label293:
+        switch (bFF[paramInt])
+        {
+        }
+      }
+    }
+    label460:
+    label501:
+    do
+    {
+      return paramView;
+      paramViewGroup = localb;
+      if (aex != 2) {
+        break;
+      }
+      paramView = View.inflate(context, 2130903601, null);
+      bFM = ((TextView)paramView.findViewById(2131756858));
+      bFN = ((TextView)paramView.findViewById(2131756863));
+      bFO = ((Button)paramView.findViewById(2131756861));
+      bFP = ((Button)paramView.findViewById(2131756862));
+      bFQ = ((TextView)paramView.findViewById(2131756859));
+      bFR = ((TextView)paramView.findViewById(2131756860));
+      paramView.setTag(localb);
+      paramViewGroup = localb;
+      break;
+      paramViewGroup = (b)paramView.getTag();
+      break;
+      if (be.kf(jtx))
+      {
+        bFM.setText(emC);
+        break label265;
+      }
+      bFM.setText(jtx);
+      break label265;
+      if (aex != 2) {
+        break label293;
+      }
+      bFM.setText(((String[])bFE.get(paramInt))[1]);
+      bFP.setOnClickListener(new View.OnClickListener()
+      {
+        public final void onClick(View paramAnonymousView)
+        {
+          dG(paramInt);
+        }
+      });
+      break label293;
+      bFO.setVisibility(8);
+      bFN.setVisibility(0);
+      bFQ.setVisibility(0);
+      bFR.setVisibility(0);
+      return paramView;
+      bFO.setVisibility(8);
+      bFN.setVisibility(0);
+      bFQ.setVisibility(0);
+      bFR.setVisibility(0);
+      return paramView;
+      bFO.setVisibility(8);
+      bFP.setVisibility(8);
+      bFN.setVisibility(0);
+      bFQ.setVisibility(0);
+      bFR.setVisibility(0);
+      return paramView;
+      if (aex == 1)
+      {
+        bFN.setVisibility(8);
+        bFO.setVisibility(0);
+        bFP.setVisibility(8);
+        bFQ.setVisibility(8);
+        bFR.setVisibility(8);
+        return paramView;
+      }
+    } while (aex != 2);
+    bFN.setVisibility(8);
+    bFO.setVisibility(8);
+    bFP.setVisibility(0);
+    bFQ.setVisibility(8);
+    bFR.setVisibility(8);
+    return paramView;
+  }
+  
+  public final void hN(String paramString)
+  {
+    ArrayList localArrayList = new ArrayList();
+    int i = 0;
+    while (i < bFE.size())
+    {
+      if (bFF[i] == 2) {
+        localArrayList.add(((String[])bFE.get(i))[0]);
+      }
+      i += 1;
+    }
+    paramString = new ab(paramString, localArrayList);
+    ah.tF().a(paramString, 0);
+  }
+  
+  public final void notifyDataSetChanged()
+  {
+    super.notifyDataSetChanged();
+    if (bFG != null) {
+      bFG.notifyDataSetChanged();
+    }
+  }
+  
+  public final int yK()
   {
     int k = 0;
-    int[] arrayOfInt = bMl;
+    int[] arrayOfInt = bFF;
     int m = arrayOfInt.length;
     int j = 0;
     if (j < m)
     {
       int n = arrayOfInt[j];
       int i;
-      if (asN == 1)
+      if (aex == 1)
       {
         i = k;
         if (n == 1) {
@@ -192,7 +378,7 @@ public final class j
         k = i;
         break;
         i = k;
-        if (asN == 2)
+        if (aex == 2)
         {
           i = k;
           if (n == 2) {
@@ -204,210 +390,24 @@ public final class j
     return k;
   }
   
-  public final View getView(final int paramInt, View paramView, ViewGroup paramViewGroup)
+  public final boolean yL()
   {
-    if (asN == 1)
-    {
-      if (bMo == null) {
-        bMo = new b.b()
-        {
-          public final String dd(int paramAnonymousInt)
-          {
-            if ((paramAnonymousInt < 0) || (paramAnonymousInt >= getCount())) {
-              u.e("!32@/B4Tb64lLpKtUZnUqFd8jYERHC2aCXs9", "pos is invalid");
-            }
-            abu localabu;
-            do
-            {
-              return null;
-              localabu = dc(paramAnonymousInt);
-            } while (localabu == null);
-            return eiB;
-          }
-          
-          public final int yz()
-          {
-            return getCount();
-          }
-        };
-      }
-      if (bMn != null) {
-        bMn.a(paramInt, bMo);
-      }
-    }
-    abu localabu = (abu)bMh.get(paramInt);
-    b localb;
-    if (paramView == null)
-    {
-      localb = new b();
-      if (asN == 1)
-      {
-        paramView = View.inflate(context, 2131363169, null);
-        bMs = ((TextView)paramView.findViewById(2131169227));
-        bMt = ((TextView)paramView.findViewById(2131169390));
-        bMu = ((Button)paramView.findViewById(2131169388));
-        bMv = ((Button)paramView.findViewById(2131169389));
-        bMr = ((ImageView)paramView.findViewById(2131169398));
-        bMw = ((TextView)paramView.findViewById(2131169386));
-        bMx = ((TextView)paramView.findViewById(2131169387));
-        paramView.setTag(localb);
-        paramViewGroup = localb;
-        bMx.setOnClickListener(new View.OnClickListener()
-        {
-          public final void onClick(View paramAnonymousView)
-          {
-            paramAnonymousView = j.this;
-            int i = paramInt;
-            if (asN == 1) {
-              bMl[i] = 0;
-            }
-            for (;;)
-            {
-              paramAnonymousView.notifyDataSetChanged();
-              return;
-              if (asN == 2) {
-                bMl[i] = 0;
-              }
-            }
-          }
-        });
-        if (asN != 1) {
-          break label501;
-        }
-        if (ay.kz(((String[])bMk.get(paramInt))[1])) {
-          break label460;
-        }
-        bMs.setText(((String[])bMk.get(paramInt))[1]);
-        label265:
-        bMu.setOnClickListener(new View.OnClickListener()
-        {
-          public final void onClick(View paramAnonymousView)
-          {
-            db(paramInt);
-          }
-        });
-        a.b.b(bMr, eiB);
-        label293:
-        switch (bMl[paramInt])
-        {
-        }
-      }
-    }
-    label460:
-    label501:
-    do
-    {
-      return paramView;
-      paramViewGroup = localb;
-      if (asN != 2) {
-        break;
-      }
-      paramView = View.inflate(context, 2131363164, null);
-      bMs = ((TextView)paramView.findViewById(2131169227));
-      bMt = ((TextView)paramView.findViewById(2131169390));
-      bMu = ((Button)paramView.findViewById(2131169388));
-      bMv = ((Button)paramView.findViewById(2131169389));
-      bMw = ((TextView)paramView.findViewById(2131169386));
-      bMx = ((TextView)paramView.findViewById(2131169387));
-      paramView.setTag(localb);
-      paramViewGroup = localb;
-      break;
-      paramViewGroup = (b)paramView.getTag();
-      break;
-      if (ay.kz(iVW))
-      {
-        bMs.setText(eiB);
-        break label265;
-      }
-      bMs.setText(iVW);
-      break label265;
-      if (asN != 2) {
-        break label293;
-      }
-      bMs.setText(((String[])bMk.get(paramInt))[1]);
-      bMv.setOnClickListener(new View.OnClickListener()
-      {
-        public final void onClick(View paramAnonymousView)
-        {
-          db(paramInt);
-        }
-      });
-      break label293;
-      bMu.setVisibility(8);
-      bMt.setVisibility(0);
-      bMw.setVisibility(0);
-      bMx.setVisibility(0);
-      return paramView;
-      bMu.setVisibility(8);
-      bMt.setVisibility(0);
-      bMw.setVisibility(0);
-      bMx.setVisibility(0);
-      return paramView;
-      bMu.setVisibility(8);
-      bMv.setVisibility(8);
-      bMt.setVisibility(0);
-      bMw.setVisibility(0);
-      bMx.setVisibility(0);
-      return paramView;
-      if (asN == 1)
-      {
-        bMt.setVisibility(8);
-        bMu.setVisibility(0);
-        bMv.setVisibility(8);
-        bMw.setVisibility(8);
-        bMx.setVisibility(8);
-        return paramView;
-      }
-    } while (asN != 2);
-    bMt.setVisibility(8);
-    bMu.setVisibility(8);
-    bMv.setVisibility(0);
-    bMw.setVisibility(8);
-    bMx.setVisibility(8);
-    return paramView;
-  }
-  
-  public final void hv(String paramString)
-  {
-    ArrayList localArrayList = new ArrayList();
-    int i = 0;
-    while (i < bMk.size())
-    {
-      if (bMl[i] == 2) {
-        localArrayList.add(((String[])bMk.get(i))[0]);
-      }
-      i += 1;
-    }
-    paramString = new ab(paramString, localArrayList);
-    ah.tE().d(paramString);
-  }
-  
-  public final void notifyDataSetChanged()
-  {
-    super.notifyDataSetChanged();
-    if (bMm != null) {
-      bMm.notifyDataSetChanged();
-    }
-  }
-  
-  public final boolean yy()
-  {
-    if ((bMl == null) || (bMl.length == 0)) {}
+    if ((bFF == null) || (bFF.length == 0)) {}
     int i;
     int j;
     do
     {
       return false;
       i = 0;
-      if (i >= bMl.length) {
+      if (i >= bFF.length) {
         break label68;
       }
-      j = bMl[i];
-      if (asN != 1) {
+      j = bFF[i];
+      if (aex != 1) {
         break;
       }
     } while (j == 0);
-    while ((asN != 2) || (j != 0))
+    while ((aex != 2) || (j != 0))
     {
       i += 1;
       break;
@@ -424,13 +424,13 @@ public final class j
   
   static final class b
   {
-    ImageView bMr;
-    TextView bMs;
-    TextView bMt;
-    Button bMu;
-    Button bMv;
-    TextView bMw;
-    TextView bMx;
+    ImageView bFL;
+    TextView bFM;
+    TextView bFN;
+    Button bFO;
+    Button bFP;
+    TextView bFQ;
+    TextView bFR;
   }
 }
 

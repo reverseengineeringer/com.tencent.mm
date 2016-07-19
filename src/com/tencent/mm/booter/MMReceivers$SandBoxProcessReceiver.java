@@ -4,8 +4,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Process;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.smtt.sdk.QbSdk;
 
 public class MMReceivers$SandBoxProcessReceiver
@@ -16,9 +16,9 @@ public class MMReceivers$SandBoxProcessReceiver
     if ((paramContext == null) || (paramIntent == null)) {
       return;
     }
-    u.i("!44@/B4Tb64lLpIbcv7LUFwb8fO6LC9lzg/XujQa6ypc0dU=", "onReceive");
+    v.i("MicroMsg.SandBoxProcessReceiver", "onReceive");
     QbSdk.reset(paramContext);
-    ab.e(new Runnable()
+    ad.e(new Runnable()
     {
       public final void run()
       {

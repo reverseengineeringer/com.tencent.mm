@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/MMAppMgr;->h(Landroid/app/Activity;)V
+    value = Lcom/tencent/mm/ui/MMAppMgr;->d(Landroid/app/Activity;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic cms:Landroid/app/Activity;
+.field final synthetic chx:Landroid/app/Activity;
 
-.field final synthetic hpA:Landroid/content/SharedPreferences;
+.field final synthetic kPg:Landroid/widget/CheckBox;
 
-.field final synthetic kqb:Landroid/widget/CheckBox;
+.field final synthetic kPh:Landroid/content/SharedPreferences;
 
 
 # direct methods
@@ -30,12 +30,12 @@
     .locals 0
 
     .prologue
-    .line 911
-    iput-object p1, p0, Lcom/tencent/mm/ui/MMAppMgr$2;->kqb:Landroid/widget/CheckBox;
+    .line 953
+    iput-object p1, p0, Lcom/tencent/mm/ui/MMAppMgr$2;->kPg:Landroid/widget/CheckBox;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/MMAppMgr$2;->hpA:Landroid/content/SharedPreferences;
+    iput-object p2, p0, Lcom/tencent/mm/ui/MMAppMgr$2;->kPh:Landroid/content/SharedPreferences;
 
-    iput-object p3, p0, Lcom/tencent/mm/ui/MMAppMgr$2;->cms:Landroid/app/Activity;
+    iput-object p3, p0, Lcom/tencent/mm/ui/MMAppMgr$2;->chx:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,8 +50,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 915
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMAppMgr$2;->kqb:Landroid/widget/CheckBox;
+    .line 957
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMAppMgr$2;->kPg:Landroid/widget/CheckBox;
 
     invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -59,33 +59,33 @@
 
     if-eqz v0, :cond_0
 
-    .line 916
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMAppMgr$2;->hpA:Landroid/content/SharedPreferences;
+    .line 958
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMAppMgr$2;->kPh:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 917
+    .line 959
     const-string/jumbo v1, "gprs_alert"
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 918
+    .line 960
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 920
+    .line 962
     :cond_0
-    sput-boolean v2, Lcom/tencent/mm/sdk/platformtools/f;->jVd:Z
+    sput-boolean v2, Lcom/tencent/mm/sdk/platformtools/f;->kuJ:Z
 
-    .line 921
+    .line 963
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 922
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMAppMgr$2;->cms:Landroid/app/Activity;
+    .line 964
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMAppMgr$2;->chx:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/MMAppMgr;->ec(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/tencent/mm/ui/MMAppMgr;->ed(Landroid/content/Context;)V
 
-    .line 923
+    .line 965
     return-void
 .end method

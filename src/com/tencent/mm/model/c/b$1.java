@@ -1,11 +1,11 @@
 package com.tencent.mm.model.c;
 
-import com.tencent.mm.protocal.b.pe;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.c;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.t.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.pn;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.a.c;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.t.a;
 
 final class b$1
   implements t.a
@@ -14,20 +14,21 @@ final class b$1
   {
     if ((paramInt1 != 0) || (paramInt2 != 0))
     {
-      u.e("!32@/B4Tb64lLpKfsnXedoHFNvolZcmK6lBp", "Update Error: %d, %d, next update will be performed %d(s) later", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(86400) });
-      b.pd();
-      b.cP(86400);
-      b.uW();
+      v.e("MicroMsg.ABTestUpdater", "Update Error: %d, %d, next update will be performed %d(s) later", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(86400) });
+      b.nv();
+      b.dv(86400);
+      b.uY();
       return 0;
     }
-    paramString = (pe)bEX.bFf;
-    b.pd();
-    b.cQ(jjK);
-    b.cP(jpi);
-    b.p(jph);
-    b.uW();
-    u.i("!32@/B4Tb64lLpKfsnXedoHFNvolZcmK6lBp", "Update Interval: %d", new Object[] { Integer.valueOf(jpi) });
-    b.uX();
+    paramString = (pn)byi.byq;
+    b.nv();
+    b.dw(jHR);
+    b.dv(jNj);
+    b.t(jNk);
+    b.u(jNi);
+    b.uY();
+    v.i("MicroMsg.ABTestUpdater", "Update Interval: %d", new Object[] { Integer.valueOf(jNj) });
+    b.uZ();
     return 0;
   }
 }

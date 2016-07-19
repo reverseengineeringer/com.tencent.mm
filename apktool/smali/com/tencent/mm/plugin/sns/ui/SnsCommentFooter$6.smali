@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->setOnCommentSendImp(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$c;)V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$c;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+.field final synthetic hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-.field final synthetic hdI:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$c;
+.field final synthetic hsv:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$c;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 561
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;->hdI:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$c;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;->hsv:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
 
     .prologue
     .line 564
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;)Lcom/tencent/mm/ui/widget/MMEditText;
 
@@ -55,17 +55,17 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/g/b;->pt()I
+    invoke-static {}, Lcom/tencent/mm/h/b;->nL()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/a/c;->rZ(I)Lcom/tencent/mm/ui/tools/a/c;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/a/c;->ud(I)Lcom/tencent/mm/ui/tools/a/c;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lcom/tencent/mm/ui/tools/a/c;->lzG:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/ui/tools/a/c;->mav:Z
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6$1;
 

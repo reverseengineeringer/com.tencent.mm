@@ -31,7 +31,7 @@ class URISpanHandlerSet$VerifyContactUriSpanHandler
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     if (paramString.trim().startsWith("weixin://findfriend/verifycontact")) {
       return new g(paramString, 4, null);
@@ -39,7 +39,7 @@ class URISpanHandlerSet$VerifyContactUriSpanHandler
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 4 };
   }

@@ -5,74 +5,78 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.tencent.mm.an.f;
-import com.tencent.mm.an.g.a;
-import com.tencent.mm.an.g.d;
-import com.tencent.mm.an.j;
+import com.tencent.mm.aq.j;
+import com.tencent.mm.aq.k;
+import com.tencent.mm.aq.k.a;
+import com.tencent.mm.aq.k.d;
+import com.tencent.mm.aq.l;
+import com.tencent.mm.aq.n;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.plugin.sight.draft.ui.SightDraftContainerView;
 import com.tencent.mm.plugin.sight.draft.ui.a;
 import com.tencent.mm.plugin.sight.draft.ui.b.d;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.sight.encode.a.h;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.base.g;
 
 final class ChattingSightContainerView$2
   implements a
 {
   ChattingSightContainerView$2(ChattingSightContainerView paramChattingSightContainerView) {}
   
-  public final void a(f paramf)
+  public final void a(j paramj)
   {
-    Object localObject = j.Ee();
-    String str = ChattingSightContainerView.a(gBF);
+    Object localObject = n.Ew();
+    String str = ChattingSightContainerView.a(gIh);
     int i = field_fileNameHash;
-    paramf = new g.a()
+    paramj = new k.a()
     {
-      public final void ec(int paramAnonymousInt)
+      public final void eK(int paramAnonymousInt)
       {
-        u.i("!56@/B4Tb64lLpKwUcOR+EdWcqTX9DHwPoekDqTih72bviWMKwaxVrupIQ==", "send sight result %d", new Object[] { Integer.valueOf(paramAnonymousInt) });
+        v.i("MicroMsg.ChattingSightContainerView", "send sight result %d", new Object[] { Integer.valueOf(paramAnonymousInt) });
         switch (paramAnonymousInt)
         {
         default: 
-          com.tencent.mm.ui.base.g.ba(gBF.getContext(), gBF.getResources().getString(2131430520));
+          g.aZ(gIh.getContext(), gIh.getResources().getString(2131235353));
         }
       }
     };
-    localObject = new g.d((com.tencent.mm.an.g)localObject, (byte)0);
-    apb = str;
-    cfy = i;
-    cfx = paramf;
-    ah.tv().r((Runnable)localObject);
-    ChattingSightContainerView.b(gBF).awg();
+    localObject = new k.d((k)localObject, (byte)0);
+    ajT = str;
+    caK = i;
+    caJ = paramj;
+    ah.tw().t((Runnable)localObject);
+    ChattingSightContainerView.b(gIh).ayE();
   }
   
   public final void a(b.d paramd)
   {
-    if (b.d.gzw == paramd)
+    if (b.d.gFY == paramd)
     {
-      ((TextView)gBF.findViewById(2131169091)).setText(2131430524);
-      gBF.findViewById(2131169091).setVisibility(0);
-      gBF.findViewById(2131169088).setVisibility(0);
-      gBF.findViewById(2131169090).setVisibility(8);
+      ((TextView)gIh.findViewById(2131756170)).setText(2131235350);
+      gIh.findViewById(2131756170).setVisibility(0);
+      gIh.findViewById(2131755219).setVisibility(0);
+      gIh.findViewById(2131756169).setVisibility(8);
     }
     for (;;)
     {
-      j.Eb().DU();
+      n.Et().En();
       return;
-      ((TextView)gBF.findViewById(2131169091)).setText(2131430523);
-      gBF.findViewById(2131169091).setVisibility(8);
-      gBF.findViewById(2131169088).setVisibility(8);
-      gBF.findViewById(2131169090).setVisibility(0);
+      ((TextView)gIh.findViewById(2131756170)).setText(2131235351);
+      gIh.findViewById(2131756170).setVisibility(8);
+      gIh.findViewById(2131755219).setVisibility(8);
+      gIh.findViewById(2131756169).setVisibility(0);
     }
   }
   
-  public final void awc()
+  public final void ayA()
   {
-    ChattingSightContainerView.c(gBF);
-    ChattingSightContainerView.d(gBF).setVisibility(8);
-    ChattingSightContainerView.e(gBF).setVisibility(0);
-    ChattingSightContainerView.f(gBF).awv();
-    ChattingSightContainerView.g(gBF).awO();
+    ChattingSightContainerView.c(gIh);
+    ChattingSightContainerView.d(gIh).setVisibility(8);
+    ChattingSightContainerView.e(gIh).setVisibility(0);
+    ChattingSightContainerView.f(gIh).ayU();
+    ChattingSightContainerView.g(gIh).azl();
   }
 }
 

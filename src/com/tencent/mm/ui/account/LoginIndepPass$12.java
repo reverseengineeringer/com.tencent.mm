@@ -13,12 +13,12 @@ final class LoginIndepPass$12
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    b.kC("L200_100");
-    paramMenuItem = new Intent(ktE, MobileInputUI.class);
+    b.ll("L200_100");
+    paramMenuItem = new Intent(kSL, MobileInputUI.class);
     paramMenuItem.putExtra("mobile_input_purpose", 1);
     paramMenuItem.addFlags(67108864);
-    ktE.startActivity(paramMenuItem);
-    ktE.finish();
+    kSL.startActivity(paramMenuItem);
+    kSL.finish();
     return true;
   }
 }

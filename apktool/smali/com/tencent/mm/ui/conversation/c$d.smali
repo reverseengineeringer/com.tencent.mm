@@ -15,39 +15,39 @@
 
 
 # instance fields
-.field public eLV:I
+.field public cTv:I
 
-.field public iCR:Z
+.field public iZF:Z
 
-.field public kTp:Z
+.field public lNY:Z
 
-.field public lnC:Z
+.field final synthetic lOT:Lcom/tencent/mm/ui/conversation/c;
 
-.field final synthetic loD:Lcom/tencent/mm/ui/conversation/c;
+.field public lOW:Ljava/lang/CharSequence;
 
-.field public loG:Ljava/lang/CharSequence;
+.field public lOX:Ljava/lang/CharSequence;
 
-.field public loH:Ljava/lang/CharSequence;
+.field public lOY:I
 
-.field public loI:I
+.field public lOZ:I
 
-.field public loJ:I
+.field public lPa:I
 
-.field public loK:I
+.field public lPb:Z
 
-.field public loL:Z
+.field public lPc:Z
 
-.field public loM:Z
+.field public lPd:Z
 
-.field public loN:Z
+.field public lPe:Z
 
-.field public loO:Z
+.field public lPf:Z
 
-.field public loP:Z
+.field public lPg:Z
 
-.field public loQ:Z
+.field public lPh:I
 
-.field public loR:I
+.field public ltv:Z
 
 .field public nickName:Ljava/lang/CharSequence;
 
@@ -58,7 +58,7 @@
 
     .prologue
     .line 1042
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/c$d;->loD:Lcom/tencent/mm/ui/conversation/c;
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/c$d;->lOT:Lcom/tencent/mm/ui/conversation/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

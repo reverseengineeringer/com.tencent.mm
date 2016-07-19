@@ -1,14 +1,17 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.az.g.b;
-import com.tencent.mm.storage.h;
+import com.tencent.mm.compatible.d.p;
+import com.tencent.mm.sdk.h.g.a;
+import com.tencent.mm.sdk.h.i;
 
 final class c$14
-  implements g.b
+  implements g.a
 {
-  public final String[] lr()
+  c$14(c paramc) {}
+  
+  public final void a(String paramString, i parami)
   {
-    return h.aoY;
+    p.dh(paramString);
   }
 }
 

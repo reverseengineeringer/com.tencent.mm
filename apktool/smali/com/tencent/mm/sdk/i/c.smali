@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract k(Ljava/lang/Runnable;)V
+.method public abstract l(Ljava/lang/Runnable;)V
 .end method

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView style="@style/MMScroll">
+        <RelativeLayout android:id="@id/ajb" style="@style/MMBody">
+            <ImageView android:id="@id/ajc" android:layout_width="@dimen/cq" android:layout_height="@dimen/cq" android:layout_marginRight="@dimen/hb" android:src="@drawable/xr" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:contentDescription="@string/im" />
+            <TextView android:id="@id/ajd" android:layout_toRightOf="@id/ajc" style="@style/MMFontPreferenceLarge" />
+            <TextView android:id="@id/b0_" android:layout_toRightOf="@id/ajc" android:layout_below="@id/ajd" style="@style/MMFontPreferenceSmall" />
+            <TextView android:textSize="@dimen/i8" android:textColor="#ff707070" android:gravity="center" android:id="@id/aje" android:background="@drawable/a1f" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j8" android:layout_below="@id/ajc" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="27.0dip" android:minHeight="@dimen/i2" android:layout_below="@id/aje">
+                <Button android:id="@id/ajf" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/b5x" android:layout_weight="1.0" style="@style/MMSolidGreenLargeButton" />
+                <View android:id="@id/b0a" android:layout_width="@dimen/j8" android:layout_height="fill_parent" />
+                <Button android:id="@id/b0b" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/b60" android:layout_weight="1.0" style="@style/MMSolidWhiteLargeButton" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

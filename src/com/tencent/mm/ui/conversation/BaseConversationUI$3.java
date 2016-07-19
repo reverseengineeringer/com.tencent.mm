@@ -1,7 +1,7 @@
 package com.tencent.mm.ui.conversation;
 
 import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.ad;
 import com.tencent.mm.ui.chatting.ChattingUI.a;
 import com.tencent.mm.ui.tools.TestTimeForChatting;
 
@@ -12,16 +12,16 @@ final class BaseConversationUI$3
   
   public final void run()
   {
-    ah.tv().aUY();
-    ab.pq(0);
-    if ((BaseConversationUI.a(lnn) != null) && (BaseConversationUI.d(lnn) != null))
+    ah.tw().bac();
+    ad.rh(0);
+    if ((BaseConversationUI.a(lNH) != null) && (BaseConversationUI.d(lNH) != null))
     {
-      BaseConversationUI.a(lnn).biP();
-      dlnn).ePD = true;
-      BaseConversationUI.d(lnn).bfc();
-      BaseConversationUI.d(lnn).hN(false);
+      BaseConversationUI.a(lNH).boM();
+      dlNH).eXw = true;
+      BaseConversationUI.d(lNH).bkL();
+      BaseConversationUI.d(lNH).iq(false);
     }
-    BaseConversationUI.e(lnn);
+    BaseConversationUI.e(lNH);
   }
   
   public final String toString()

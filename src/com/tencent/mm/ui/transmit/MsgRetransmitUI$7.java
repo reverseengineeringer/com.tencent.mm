@@ -2,7 +2,6 @@ package com.tencent.mm.ui.transmit;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.ui.base.h;
 
 final class MsgRetransmitUI$7
   implements DialogInterface.OnClickListener
@@ -11,9 +10,7 @@ final class MsgRetransmitUI$7
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (MsgRetransmitUI.a(lAT) != null) {
-      MsgRetransmitUI.a(lAT).cancel();
-    }
+    mbK.finish();
   }
 }
 

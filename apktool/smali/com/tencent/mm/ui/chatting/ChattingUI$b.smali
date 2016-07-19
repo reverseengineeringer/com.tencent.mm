@@ -25,16 +25,16 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 11012
+    .line 11017
     if-nez p0, :cond_0
 
-    .line 11025
+    .line 11030
     :goto_0
     return-void
 
-    .line 11016
+    .line 11021
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/"
+    const-string/jumbo v0, "MicroMsg.ChattingUI"
 
     const-string/jumbo v1, "setSelectionFromTop position %s smooth %s"
 
@@ -56,12 +56,12 @@
 
     aput-object v3, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 11018
+    .line 11023
     invoke-virtual {p0, p1, v5}, Landroid/widget/ListView;->setItemChecked(IZ)V
 
-    .line 11020
+    .line 11025
     invoke-virtual {p0, p1, p2}, Landroid/widget/ListView;->setSelectionFromTop(II)V
 
     goto :goto_0
@@ -73,16 +73,16 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 10996
+    .line 11001
     if-nez p0, :cond_0
 
-    .line 11009
+    .line 11014
     :goto_0
     return-void
 
-    .line 11000
+    .line 11005
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/"
+    const-string/jumbo v0, "MicroMsg.ChattingUI"
 
     const-string/jumbo v1, "setSelection position %s smooth %s"
 
@@ -104,12 +104,12 @@
 
     aput-object v3, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 11002
+    .line 11007
     invoke-virtual {p0, p1, v5}, Landroid/widget/ListView;->setItemChecked(IZ)V
 
-    .line 11004
+    .line 11009
     invoke-virtual {p0, p1}, Landroid/widget/ListView;->setSelection(I)V
 
     goto :goto_0

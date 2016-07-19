@@ -4,8 +4,8 @@ import com.tencent.smtt.export.external.interfaces.IX5WebBackForwardList;
 
 public class WebBackForwardList
 {
-  private IX5WebBackForwardList lTG = null;
-  private android.webkit.WebBackForwardList lTH = null;
+  private IX5WebBackForwardList mvC = null;
+  private android.webkit.WebBackForwardList mvD = null;
   
   static WebBackForwardList a(android.webkit.WebBackForwardList paramWebBackForwardList)
   {
@@ -13,7 +13,7 @@ public class WebBackForwardList
       return null;
     }
     WebBackForwardList localWebBackForwardList = new WebBackForwardList();
-    lTH = paramWebBackForwardList;
+    mvD = paramWebBackForwardList;
     return localWebBackForwardList;
   }
   
@@ -23,40 +23,40 @@ public class WebBackForwardList
       return null;
     }
     WebBackForwardList localWebBackForwardList = new WebBackForwardList();
-    lTG = paramIX5WebBackForwardList;
+    mvC = paramIX5WebBackForwardList;
     return localWebBackForwardList;
   }
   
   public int getCurrentIndex()
   {
-    if (lTG != null) {
-      return lTG.getCurrentIndex();
+    if (mvC != null) {
+      return mvC.getCurrentIndex();
     }
-    return lTH.getCurrentIndex();
+    return mvD.getCurrentIndex();
   }
   
   public WebHistoryItem getCurrentItem()
   {
-    if (lTG != null) {
-      return WebHistoryItem.a(lTG.getCurrentItem());
+    if (mvC != null) {
+      return WebHistoryItem.a(mvC.getCurrentItem());
     }
-    return WebHistoryItem.a(lTH.getCurrentItem());
+    return WebHistoryItem.a(mvD.getCurrentItem());
   }
   
   public WebHistoryItem getItemAtIndex(int paramInt)
   {
-    if (lTG != null) {
-      return WebHistoryItem.a(lTG.getItemAtIndex(paramInt));
+    if (mvC != null) {
+      return WebHistoryItem.a(mvC.getItemAtIndex(paramInt));
     }
-    return WebHistoryItem.a(lTH.getItemAtIndex(paramInt));
+    return WebHistoryItem.a(mvD.getItemAtIndex(paramInt));
   }
   
   public int getSize()
   {
-    if (lTG != null) {
-      return lTG.getSize();
+    if (mvC != null) {
+      return mvC.getSize();
     }
-    return lTH.getSize();
+    return mvD.getSize();
   }
 }
 

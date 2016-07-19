@@ -1,34 +1,35 @@
 package com.tencent.mm.plugin.base.stub;
 
 import android.content.Intent;
-import com.tencent.mm.ar.c;
+import android.os.Bundle;
+import com.tencent.mm.av.c;
 import com.tencent.mm.pluginsdk.ui.AutoLoginActivity;
 import com.tencent.mm.pluginsdk.ui.AutoLoginActivity.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.CheckCanSubscribeBizUI;
 
 public class WXBizEntryActivity
   extends AutoLoginActivity
 {
-  private int cBc;
+  private int cxX;
   
   protected final void a(AutoLoginActivity.a parama, Intent paramIntent)
   {
-    u.i("!44@/B4Tb64lLpLmiqXBWxF8nHbYzsEPWL7VUAH2Od3wLxg=", "postLogin, loginResult = " + parama);
+    v.i("MicroMsg.WXBizEntryActivity", "postLogin, loginResult = " + parama);
     if (getIntent() != null) {
-      cBc = getIntent().getIntExtra("key_command_id", 0);
+      cxX = getIntent().getIntExtra("key_command_id", 0);
     }
-    switch (2.cBe[parama.ordinal()])
+    switch (2.cxZ[parama.ordinal()])
     {
     default: 
-      u.e("!44@/B4Tb64lLpLmiqXBWxF8nHbYzsEPWL7VUAH2Od3wLxg=", "postLogin, unknown login result = " + parama);
+      v.e("MicroMsg.WXBizEntryActivity", "postLogin, unknown login result = " + parama);
     }
     for (;;)
     {
       finish();
       return;
-      u.i("!44@/B4Tb64lLpLmiqXBWxF8nHbYzsEPWL7VUAH2Od3wLxg=", "req type = %d", new Object[] { Integer.valueOf(cBc) });
-      switch (cBc)
+      v.i("MicroMsg.WXBizEntryActivity", "req type = %d", new Object[] { Integer.valueOf(cxX) });
+      switch (cxX)
       {
       case 10: 
       case 12: 
@@ -43,6 +44,10 @@ public class WXBizEntryActivity
         return;
       case 9: 
         c.a(this, "card", ".ui.CardAddEntranceUI", getIntent(), false);
+        finish();
+        return;
+      case 16: 
+        c.a(this, "card", ".ui.CardListSelectedUI", getIntent(), false);
         finish();
         return;
       case 11: 
@@ -60,7 +65,7 @@ public class WXBizEntryActivity
       }
       new a(this, getIntent().getStringExtra("key_app_id"), getIntent().getStringExtra("open_id"), new d.a()
       {
-        public final void bq(boolean paramAnonymousBoolean)
+        public final void aY(boolean paramAnonymousBoolean)
         {
           if (paramAnonymousBoolean) {
             c.a(WXBizEntryActivity.this, "game", ".ui.CreateOrJoinChatroomUI", getIntent(), false);
@@ -69,18 +74,29 @@ public class WXBizEntryActivity
           {
             finish();
             return;
-            u.e("!44@/B4Tb64lLpLmiqXBWxF8nHbYzsEPWL7VUAH2Od3wLxg=", "openIdCheck false");
+            v.e("MicroMsg.WXBizEntryActivity", "openIdCheck false");
           }
         }
-      }).Jz();
+      }).Ki();
       return;
-      u.e("!44@/B4Tb64lLpLmiqXBWxF8nHbYzsEPWL7VUAH2Od3wLxg=", "postLogin fail, loginResult = " + parama);
+      v.e("MicroMsg.WXBizEntryActivity", "postLogin fail, loginResult = " + parama);
     }
   }
   
-  protected final boolean m(Intent paramIntent)
+  protected final int getLayoutId()
+  {
+    return 2130903159;
+  }
+  
+  protected final boolean n(Intent paramIntent)
   {
     return true;
+  }
+  
+  public void onCreate(Bundle paramBundle)
+  {
+    super.onCreate(paramBundle);
+    rP(0);
   }
 }
 

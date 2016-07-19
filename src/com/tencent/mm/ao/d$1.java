@@ -1,57 +1,26 @@
 package com.tencent.mm.ao;
 
-import com.tencent.mm.c.b.g.a;
-import com.tencent.mm.c.c.a;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.qqpinyin.voicerecoapi.c;
+import android.os.MessageQueue.IdleHandler;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.sdk.platformtools.ap;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 
-final class d$1
-  implements com.tencent.mm.c.b.c.a
+public final class d$1
+  implements MessageQueue.IdleHandler
 {
-  d$1(d paramd) {}
+  public d$1(d paramd) {}
   
-  public final void B(int paramInt1, int paramInt2) {}
-  
-  public final void d(byte[] paramArrayOfByte, int paramInt)
+  public final boolean queueIdle()
   {
-    u.d("!32@/B4Tb64lLpJjyqE6YDnAp3o91K/Zm7/t", "OnRecPcmDataReady len: %d", new Object[] { Integer.valueOf(paramInt) });
-    com.tencent.qqpinyin.voicerecoapi.c.a locala = new com.tencent.qqpinyin.voicerecoapi.c.a();
-    short[] arrayOfShort = new short[paramInt / 2];
-    int i = 0;
-    while (i < paramInt / 2)
+    if (tFforeground)
     {
-      arrayOfShort[i] = ((short)(paramArrayOfByte[(i * 2)] & 0xFF | paramArrayOfByte[(i * 2 + 1)] << 8));
-      i += 1;
+      v.w("MicroMsg.SpeexUploadCore", "skiped resume speex uploader, not foreground");
+      return false;
     }
-    if (cim.cik != null) {
-      cim.cik.a(arrayOfShort, paramInt / 2, locala);
-    }
-    d.a(cim, arrayOfShort, paramInt / 2);
-    if (cim.cij != null) {}
-    for (paramInt = cim.cij.a(new g.a(paramArrayOfByte, paramInt), 0);; paramInt = -1)
-    {
-      if (-1 == paramInt)
-      {
-        d.a(cim);
-        u.e("!32@/B4Tb64lLpJjyqE6YDnAp3o91K/Zm7/t", "write to file failed");
-      }
-      do
-      {
-        return;
-        paramArrayOfByte = cim;
-        cie = (paramInt + cie);
-        if ((cim.cie > 3300) && (!cim.cif))
-        {
-          u.d("!32@/B4Tb64lLpJjyqE6YDnAp3o91K/Zm7/t", "sendEmptyMessage(0)");
-          cim.handler.sendEmptyMessage(0);
-          cim.cif = true;
-        }
-      } while ((lQS != 2) && (lQS != 3));
-      u.i("!32@/B4Tb64lLpJjyqE6YDnAp3o91K/Zm7/t", "state.vad_flag: " + lQS);
-      d.a(cim);
-      return;
-    }
+    v.d("MicroMsg.SpeexUploadCore", "now resume speex uploader");
+    d.a(bWO).hj(false);
+    return false;
   }
 }
 

@@ -1,20 +1,15 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.d.a.bg;
-import com.tencent.mm.sdk.c.a;
+import com.tencent.mm.storage.ai;
 
 final class cm$3
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  cm$3(cm paramcm) {}
+  cm$3(cm paramcm, ai paramai) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final void run()
   {
-    paramDialogInterface = new bg();
-    auq.aur = false;
-    a.jUF.j(paramDialogInterface);
+    lwj.lrn.a(bKB, false);
   }
 }
 

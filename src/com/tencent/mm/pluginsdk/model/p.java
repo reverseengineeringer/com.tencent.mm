@@ -6,25 +6,23 @@ import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.graphics.BitmapFactory;
 import android.util.DisplayMetrics;
-import com.tencent.mm.a.g;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.platformtools.j;
-import com.tencent.mm.platformtools.j.a;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.platformtools.i;
+import com.tencent.mm.platformtools.i.a;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.sdk.platformtools.d;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class p
-  implements j
+  implements i
 {
-  private boolean ayj;
-  private long ctK = 0L;
-  private long ctL = 0L;
-  private String fFV;
-  private boolean iAF;
+  private boolean akl;
+  private long cpo = 0L;
+  private long cpp = 0L;
+  private String fOW;
+  private boolean iXf;
   private int type;
   private String url;
   
@@ -32,72 +30,77 @@ public final class p
   {
     url = paramString1;
     type = paramInt;
-    fFV = paramString2;
-    ayj = paramBoolean;
+    fOW = paramString2;
+    akl = paramBoolean;
   }
   
-  public static String k(String paramString1, int paramInt, String paramString2)
+  public static String h(String paramString1, int paramInt, String paramString2)
   {
-    if (ah.rh()) {
-      return String.format("%s/ReaderApp_%d%s_%s", new Object[] { ah.tD().rx(), Integer.valueOf(paramInt), paramString2, g.m(paramString1.getBytes()) });
+    if (ah.rg()) {
+      return String.format("%s/ReaderApp_%d%s_%s", new Object[] { ah.tE().rz(), Integer.valueOf(paramInt), paramString2, com.tencent.mm.a.g.j(paramString1.getBytes()) });
     }
     return "";
   }
   
-  public final String FF()
+  public final String Ga()
   {
-    return k(url, type, fFV);
+    return h(url, type, fOW);
   }
   
-  public final String FG()
+  public final String Gb()
   {
-    if (com.tencent.mm.ab.p.Aw()) {
-      return com.tencent.mm.ab.p.hU(url);
+    if (com.tencent.mm.ae.p.AG()) {
+      return com.tencent.mm.ae.p.in(url);
     }
     return url;
   }
   
-  public final String FH()
+  public final String Gc()
   {
     return url;
   }
   
-  public final boolean FI()
+  public final String Gd()
+  {
+    return url + fOW;
+  }
+  
+  public final boolean Ge()
   {
     return false;
   }
   
-  public final boolean FJ()
+  public final boolean Gf()
   {
-    return ayj;
+    return akl;
   }
   
-  public final Bitmap FK()
+  public final Bitmap Gg()
   {
-    return BitmapFactory.decodeResource(y.getContext().getResources(), 2130970478);
+    return BitmapFactory.decodeResource(aa.getContext().getResources(), 2130838923);
   }
   
-  public final void FL()
+  public final void Gh()
   {
-    ctK = ay.FS();
-    if (iAF)
+    cpo = be.Gp();
+    if (iXf)
     {
-      u.d("!56@/B4Tb64lLpIeqqjD22RSX6pYxTSKVSHcFGcHMImkpwmTanK6wm6EGA==", "beforeGetPicFromNet, from biz msg");
-      h localh = h.fUJ;
-      h.b(86L, 0L, 1L, false);
+      v.d("MicroMsg.ReaaderAppGetPicStrategy", "beforeGetPicFromNet, from biz msg");
+      com.tencent.mm.plugin.report.service.g localg = com.tencent.mm.plugin.report.service.g.gdY;
+      com.tencent.mm.plugin.report.service.g.b(86L, 0L, 1L, false);
     }
   }
   
-  public final Bitmap a(Bitmap paramBitmap, j.a parama)
+  public final Bitmap a(Bitmap paramBitmap, i.a parama)
   {
     int i = 100;
     Object localObject = paramBitmap;
     a locala;
-    if (j.a.clV == parama)
+    if (i.a.cgY == parama)
     {
-      localObject = fFV;
+      localObject = fOW;
       locala = new a();
-      parama = y.getContext();
+      parama = aa.getContext();
       if (parama == null) {
         break label229;
       }
@@ -121,17 +124,17 @@ public final class p
       {
         w = j;
         h = i;
-        u.d("!56@/B4Tb64lLpIeqqjD22RSX6pYxTSKVSHcFGcHMImkpwmTanK6wm6EGA==", locala.toString());
+        v.d("MicroMsg.ReaaderAppGetPicStrategy", locala.toString());
         localObject = d.c(paramBitmap, w, h);
         try
         {
-          u.d("!56@/B4Tb64lLpIeqqjD22RSX6pYxTSKVSHcFGcHMImkpwmTanK6wm6EGA==", "handlerBitmap, path:%s", new Object[] { FF() });
-          d.a((Bitmap)localObject, 100, Bitmap.CompressFormat.PNG, FF(), false);
+          v.d("MicroMsg.ReaaderAppGetPicStrategy", "handlerBitmap, path:%s", new Object[] { Ga() });
+          d.a((Bitmap)localObject, 100, Bitmap.CompressFormat.PNG, Ga(), false);
           return (Bitmap)localObject;
         }
         catch (Exception paramBitmap)
         {
-          u.e("!56@/B4Tb64lLpIeqqjD22RSX6pYxTSKVSHcFGcHMImkpwmTanK6wm6EGA==", "save image %s fail", new Object[] { url });
+          v.e("MicroMsg.ReaaderAppGetPicStrategy", "save image %s fail", new Object[] { url });
           return (Bitmap)localObject;
         }
         i = (int)(50.0F * density);
@@ -150,40 +153,35 @@ public final class p
     }
   }
   
-  public final void a(j.a parama, String paramString)
+  public final void a(i.a parama, String paramString)
   {
-    if ((parama == j.a.clV) && (iAF) && (com.tencent.mm.ab.p.Aw()) && (!ay.kz(paramString)) && (com.tencent.mm.ab.p.hV(FG())) && (paramString.equals("image/webp")))
+    if ((parama == i.a.cgY) && (iXf) && (com.tencent.mm.ae.p.AG()) && (!be.kf(paramString)) && (com.tencent.mm.ae.p.io(Gb())) && (paramString.equals("image/webp")))
     {
-      u.d("!56@/B4Tb64lLpIeqqjD22RSX6pYxTSKVSHcFGcHMImkpwmTanK6wm6EGA==", "decode download webp picture failed");
-      parama = h.fUJ;
-      h.b(86L, 14L, 1L, false);
+      v.d("MicroMsg.ReaaderAppGetPicStrategy", "decode download webp picture failed");
+      parama = com.tencent.mm.plugin.report.service.g.gdY;
+      com.tencent.mm.plugin.report.service.g.b(86L, 14L, 1L, false);
     }
   }
   
-  public final String getCacheKey()
+  public final void z(String paramString, boolean paramBoolean)
   {
-    return url + fFV;
-  }
-  
-  public final void v(String paramString, boolean paramBoolean)
-  {
-    ctL = ay.FS();
-    if ((com.tencent.mm.ab.p.Aw()) && (!ay.kz(paramString)) && (com.tencent.mm.ab.p.hV(FG())) && (paramString.equals("image/webp"))) {}
+    cpp = be.Gp();
+    if ((com.tencent.mm.ae.p.AG()) && (!be.kf(paramString)) && (com.tencent.mm.ae.p.io(Gb())) && (paramString.equals("image/webp"))) {}
     for (int i = 1;; i = 0)
     {
-      if (iAF)
+      if (iXf)
       {
         if (paramBoolean) {
           break label101;
         }
-        u.d("!56@/B4Tb64lLpIeqqjD22RSX6pYxTSKVSHcFGcHMImkpwmTanK6wm6EGA==", "afterGetPicFromNet, download biz image failed");
-        paramString = h.fUJ;
-        h.b(86L, 2L, 1L, false);
+        v.d("MicroMsg.ReaaderAppGetPicStrategy", "afterGetPicFromNet, download biz image failed");
+        paramString = com.tencent.mm.plugin.report.service.g.gdY;
+        com.tencent.mm.plugin.report.service.g.b(86L, 2L, 1L, false);
         if (i != 0)
         {
-          u.d("!56@/B4Tb64lLpIeqqjD22RSX6pYxTSKVSHcFGcHMImkpwmTanK6wm6EGA==", "afterGetPicFromNet, download biz webp image failed");
-          paramString = h.fUJ;
-          h.b(86L, 15L, 1L, false);
+          v.d("MicroMsg.ReaaderAppGetPicStrategy", "afterGetPicFromNet, download biz webp image failed");
+          paramString = com.tencent.mm.plugin.report.service.g.gdY;
+          com.tencent.mm.plugin.report.service.g.b(86L, 15L, 1L, false);
         }
       }
       label101:
@@ -191,16 +189,16 @@ public final class p
       do
       {
         return;
-        l = ctL - ctK;
-        u.d("!56@/B4Tb64lLpIeqqjD22RSX6pYxTSKVSHcFGcHMImkpwmTanK6wm6EGA==", "afterGetPicFromNet, download biz image success, used %d", new Object[] { Long.valueOf(l) });
-        paramString = h.fUJ;
-        h.b(86L, 4L, l, false);
+        l = cpp - cpo;
+        v.d("MicroMsg.ReaaderAppGetPicStrategy", "afterGetPicFromNet, download biz image success, used %d", new Object[] { Long.valueOf(l) });
+        paramString = com.tencent.mm.plugin.report.service.g.gdY;
+        com.tencent.mm.plugin.report.service.g.b(86L, 4L, l, false);
       } while (i == 0);
-      u.d("!56@/B4Tb64lLpIeqqjD22RSX6pYxTSKVSHcFGcHMImkpwmTanK6wm6EGA==", "afterGetPicFromNet, download biz webp image success");
-      paramString = h.fUJ;
-      h.b(86L, 17L, l, false);
-      paramString = h.fUJ;
-      h.b(86L, 13L, 1L, false);
+      v.d("MicroMsg.ReaaderAppGetPicStrategy", "afterGetPicFromNet, download biz webp image success");
+      paramString = com.tencent.mm.plugin.report.service.g.gdY;
+      com.tencent.mm.plugin.report.service.g.b(86L, 17L, l, false);
+      paramString = com.tencent.mm.plugin.report.service.g.gdY;
+      com.tencent.mm.plugin.report.service.g.b(86L, 13L, 1L, false);
       return;
     }
   }

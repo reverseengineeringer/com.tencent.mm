@@ -15,47 +15,47 @@
 
 
 # instance fields
-.field ajh:Ljava/lang/String;
+.field UX:Ljava/lang/String;
 
-.field final synthetic dKB:Lcom/tencent/mm/plugin/ext/b/c;
+.field final synthetic dMc:Lcom/tencent/mm/plugin/ext/b/c;
 
-.field dKC:Lcom/tencent/mm/protocal/b/amk;
+.field dMd:Lcom/tencent/mm/protocal/b/amv;
 
-.field dKD:Lcom/tencent/mm/protocal/b/ami;
+.field dMe:Lcom/tencent/mm/protocal/b/amt;
 
 
 # direct methods
-.method public constructor <init>(Lcom/tencent/mm/plugin/ext/b/c;Ljava/lang/String;Lcom/tencent/mm/protocal/b/amk;Lcom/tencent/mm/protocal/b/ami;)V
+.method public constructor <init>(Lcom/tencent/mm/plugin/ext/b/c;Ljava/lang/String;Lcom/tencent/mm/protocal/b/amv;Lcom/tencent/mm/protocal/b/amt;)V
     .locals 2
 
     .prologue
     const/4 v1, 0x0
 
-    .line 303
-    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/b/c$a;->dKB:Lcom/tencent/mm/plugin/ext/b/c;
+    .line 298
+    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/b/c$a;->dMc:Lcom/tencent/mm/plugin/ext/b/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 299
+    .line 294
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/b/c$a;->ajh:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/b/c$a;->UX:Ljava/lang/String;
+
+    .line 295
+    iput-object v1, p0, Lcom/tencent/mm/plugin/ext/b/c$a;->dMd:Lcom/tencent/mm/protocal/b/amv;
+
+    .line 296
+    iput-object v1, p0, Lcom/tencent/mm/plugin/ext/b/c$a;->dMe:Lcom/tencent/mm/protocal/b/amt;
+
+    .line 299
+    iput-object p2, p0, Lcom/tencent/mm/plugin/ext/b/c$a;->UX:Ljava/lang/String;
 
     .line 300
-    iput-object v1, p0, Lcom/tencent/mm/plugin/ext/b/c$a;->dKC:Lcom/tencent/mm/protocal/b/amk;
+    iput-object p3, p0, Lcom/tencent/mm/plugin/ext/b/c$a;->dMd:Lcom/tencent/mm/protocal/b/amv;
 
     .line 301
-    iput-object v1, p0, Lcom/tencent/mm/plugin/ext/b/c$a;->dKD:Lcom/tencent/mm/protocal/b/ami;
+    iput-object p4, p0, Lcom/tencent/mm/plugin/ext/b/c$a;->dMe:Lcom/tencent/mm/protocal/b/amt;
 
-    .line 304
-    iput-object p2, p0, Lcom/tencent/mm/plugin/ext/b/c$a;->ajh:Ljava/lang/String;
-
-    .line 305
-    iput-object p3, p0, Lcom/tencent/mm/plugin/ext/b/c$a;->dKC:Lcom/tencent/mm/protocal/b/amk;
-
-    .line 306
-    iput-object p4, p0, Lcom/tencent/mm/plugin/ext/b/c$a;->dKD:Lcom/tencent/mm/protocal/b/ami;
-
-    .line 307
+    .line 302
     return-void
 .end method

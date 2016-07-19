@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/j3" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/b32" android:background="@null" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@null" android:cacheColorHint="#00000000" android:divider="#ffd8d8d8" android:dividerHeight="@dimen/dz" android:layout_weight="1.0" />
+    <TextView android:textSize="@dimen/cu" android:textColor="@color/pu" android:gravity="center" android:id="@id/b33" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="60.0dip" android:text="@string/b8y" android:layout_centerVertical="true" />
+</RelativeLayout>

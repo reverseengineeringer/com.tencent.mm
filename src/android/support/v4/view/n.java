@@ -5,20 +5,20 @@ import android.view.ViewConfiguration;
 
 public final class n
 {
-  static final c fx = new a();
+  static final c fT = new a();
   
   static
   {
     if (Build.VERSION.SDK_INT >= 11)
     {
-      fx = new b();
+      fT = new b();
       return;
     }
   }
   
   public static int a(ViewConfiguration paramViewConfiguration)
   {
-    return fx.a(paramViewConfiguration);
+    return fT.a(paramViewConfiguration);
   }
   
   static final class a

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingBottom="0.0dip" android:layout_marginBottom="0.0dip" style="@style/MMBody">
+        <ImageView android:id="@id/aob" android:background="@drawable/fs" android:layout_width="80.0dip" android:layout_height="80.0dip" android:layout_marginTop="60.0dip" android:src="@drawable/z4" style="@style/FreeWifiIconIV" />
+        <TextView android:textSize="22.0sp" android:ellipsize="end" android:id="@id/aoc" android:layout_marginTop="20.0dip" android:text="@string/awm" android:singleLine="true" style="@style/FreeWifiWelcomeMsgTV" />
+        <TextView android:id="@id/aod" android:layout_marginTop="10.0dip" android:text="@string/awm" style="@style/FreeWifiSSIDNameTV" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_margin="0.0dip" android:layout_marginTop="@dimen/fs" style="@style/MMLine">
+            <TextView android:id="@id/aoe" android:visibility="invisible" android:text="@string/avm" style="@style/FreeWifiConnectFailTips" />
+            <Button android:textSize="15.0sp" android:id="@id/aof" android:layout_width="220.0dip" android:layout_marginTop="70.0dip" android:minHeight="34.0dip" android:text="@string/a4g" style="@style/FreeWifiWatingConnectBtn" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_marginTop="20.0dip" style="@style/MMLine">
+            <TextView android:text="@string/awn" style="@style/FreeWifiUseWithAgreementTV" />
+            <Button android:id="@id/aog" android:layout_height="20.0dip" android:text="@string/awq" style="@style/FreeWifiUseWithAgeementBtn" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/aoh" android:visibility="gone" android:layout_marginTop="2.0dip" style="@style/MMLine">
+            <TextView android:textSize="10.0dip" android:text="@string/awp" style="@style/FreeWifiUseWithAgreementTV" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_marginBottom="15.0dip" style="@style/MMLine">
+        <ImageView android:layout_width="114.0dip" android:layout_height="18.0dip" android:src="@drawable/z_" />
+    </LinearLayout>
+</LinearLayout>

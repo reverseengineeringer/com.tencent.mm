@@ -1,9 +1,10 @@
 package com.tencent.mm.model;
 
 import android.database.Cursor;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.aj;
 import java.util.Iterator;
 import java.util.List;
 
@@ -14,32 +15,32 @@ public final class ar$4
   
   public final void run()
   {
-    Iterator localIterator = bBM.iterator();
+    Iterator localIterator = buU.iterator();
     while (localIterator.hasNext())
     {
       String str = (String)localIterator.next();
-      Cursor localCursor = ah.tD().rs().Ff(str);
+      Cursor localCursor = ah.tE().rt().Hw(str);
       if (localCursor != null)
       {
         if (localCursor.moveToFirst()) {
-          while ((!localCursor.isAfterLast()) && ((bBH == null) || (!bBH.ui())))
+          while ((!localCursor.isAfterLast()) && ((buP == null) || (!buP.uj())))
           {
-            ag localag = new ag();
-            localag.c(localCursor);
-            ar.f(localag);
+            ai localai = new ai();
+            localai.b(localCursor);
+            ar.f(localai);
             localCursor.moveToNext();
           }
         }
         localCursor.close();
-        u.v("!44@/B4Tb64lLpLj7S4izLo0fBMWNYO9d/rc0VQyi6V1H5o=", "delete msgs %s, %d", new Object[] { str, Integer.valueOf(ah.tD().rs().Fd(str)) });
+        v.v("MicroMsg.MsgInfoStorageLogic", "delete msgs %s, %d", new Object[] { str, Integer.valueOf(ah.tE().rt().Hu(str)) });
       }
     }
-    ab.j(new Runnable()
+    ad.k(new Runnable()
     {
       public final void run()
       {
-        if (bBH != null) {
-          bBH.uh();
+        if (buP != null) {
+          buP.ui();
         }
       }
     });

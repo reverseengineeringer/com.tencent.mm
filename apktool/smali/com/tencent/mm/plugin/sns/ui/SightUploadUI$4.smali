@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->Gb()V
+    value = Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hbd:Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;
+.field final synthetic hoE:Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 140
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI$4;->hbd:Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;
+    .line 148
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI$4;->hoE:Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,8 +42,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 144
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI$4;->hbd:Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;
+    .line 152
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI$4;->hoE:Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->isFinishing()Z
 
@@ -51,15 +51,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 191
+    .line 202
     :goto_0
     return v3
 
-    .line 149
+    .line 157
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI$4;->hbd:Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI$4;->hoE:Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI$4;->hbd:Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI$4;->hoE:Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->a(Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;)Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
@@ -75,19 +75,17 @@
 
     invoke-static {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->a(Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 150
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI$4;->hbd:Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;
+    .line 158
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI$4;->hoE:Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->a(Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;)Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->getPasterLen()I
+    iget v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hsG:I
 
-    move-result v0
-
-    .line 160
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI$4;->hbd:Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;
+    .line 159
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI$4;->hoE:Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->a(Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;)Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
@@ -97,17 +95,17 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcom/tencent/mm/g/b;->ps()I
+    invoke-static {}, Lcom/tencent/mm/h/b;->nK()I
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/tools/a/c;->rZ(I)Lcom/tencent/mm/ui/tools/a/c;
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/tools/a/c;->ud(I)Lcom/tencent/mm/ui/tools/a/c;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
-    iput-boolean v2, v1, Lcom/tencent/mm/ui/tools/a/c;->lzG:Z
+    iput-boolean v2, v1, Lcom/tencent/mm/ui/tools/a/c;->mav:Z
 
     new-instance v2, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI$4$1;
 

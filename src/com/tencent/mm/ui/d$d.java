@@ -2,7 +2,7 @@ package com.tencent.mm.ui;
 
 public final class d$d
 {
-  public static final String buD = null;
+  public static final String bjg = null;
 }
 
 /* Location:

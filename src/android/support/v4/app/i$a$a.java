@@ -13,6 +13,24 @@ final class i$a$a
     mRemote = paramIBinder;
   }
   
+  public final void a(String paramString1, int paramInt, String paramString2)
+  {
+    Parcel localParcel = Parcel.obtain();
+    try
+    {
+      localParcel.writeInterfaceToken("android.support.v4.app.INotificationSideChannel");
+      localParcel.writeString(paramString1);
+      localParcel.writeInt(paramInt);
+      localParcel.writeString(paramString2);
+      mRemote.transact(2, localParcel, null, 1);
+      return;
+    }
+    finally
+    {
+      localParcel.recycle();
+    }
+  }
+  
   /* Error */
   public final void a(String paramString1, int paramInt, String paramString2, android.app.Notification paramNotification)
   {
@@ -39,17 +57,17 @@ final class i$a$a
     //   41: aload 4
     //   43: aload 5
     //   45: iconst_0
-    //   46: invokevirtual 45	android/app/Notification:writeToParcel	(Landroid/os/Parcel;I)V
+    //   46: invokevirtual 55	android/app/Notification:writeToParcel	(Landroid/os/Parcel;I)V
     //   49: aload_0
     //   50: getfield 18	android/support/v4/app/i$a$a:mRemote	Landroid/os/IBinder;
     //   53: iconst_1
     //   54: aload 5
     //   56: aconst_null
     //   57: iconst_1
-    //   58: invokeinterface 51 5 0
+    //   58: invokeinterface 45 5 0
     //   63: pop
     //   64: aload 5
-    //   66: invokevirtual 54	android/os/Parcel:recycle	()V
+    //   66: invokevirtual 48	android/os/Parcel:recycle	()V
     //   69: return
     //   70: aload 5
     //   72: iconst_0
@@ -57,7 +75,7 @@ final class i$a$a
     //   76: goto -27 -> 49
     //   79: astore_1
     //   80: aload 5
-    //   82: invokevirtual 54	android/os/Parcel:recycle	()V
+    //   82: invokevirtual 48	android/os/Parcel:recycle	()V
     //   85: aload_1
     //   86: athrow
     // Local variable table:
@@ -79,24 +97,6 @@ final class i$a$a
   public final IBinder asBinder()
   {
     return mRemote;
-  }
-  
-  public final void b(String paramString1, int paramInt, String paramString2)
-  {
-    Parcel localParcel = Parcel.obtain();
-    try
-    {
-      localParcel.writeInterfaceToken("android.support.v4.app.INotificationSideChannel");
-      localParcel.writeString(paramString1);
-      localParcel.writeInt(paramInt);
-      localParcel.writeString(paramString2);
-      mRemote.transact(2, localParcel, null, 1);
-      return;
-    }
-    finally
-    {
-      localParcel.recycle();
-    }
   }
   
   public final void i(String paramString)

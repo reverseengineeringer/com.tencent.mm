@@ -1,15 +1,15 @@
 package com.tencent.mm.ui.tools;
 
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah.a;
 
 final class CropImageNewUI$7
-  implements af.a
+  implements ah.a
 {
   CropImageNewUI$7(CropImageNewUI paramCropImageNewUI) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    CropImageNewUI.j(luq).biA();
+    CropImageNewUI.j(lVs).bow();
     return true;
   }
 }

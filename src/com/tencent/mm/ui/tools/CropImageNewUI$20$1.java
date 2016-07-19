@@ -10,8 +10,8 @@ final class CropImageNewUI$20$1
   
   public final void a(l paraml)
   {
-    paraml.bL(0, 2131428851);
-    paraml.bL(1, 2131428852);
+    paraml.bR(0, 2131232157);
+    paraml.bR(1, 2131232161);
   }
 }
 

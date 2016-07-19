@@ -15,10 +15,10 @@ final class q
 {
   public static void a(Notification.Builder paramBuilder, s.a parama)
   {
-    Notification.Action.Builder localBuilder = new Notification.Action.Builder(parama.getIcon(), parama.getTitle(), parama.X());
-    if (parama.Y() != null)
+    Notification.Action.Builder localBuilder = new Notification.Action.Builder(parama.getIcon(), parama.getTitle(), parama.W());
+    if (parama.X() != null)
     {
-      RemoteInput[] arrayOfRemoteInput = x.a(parama.Y());
+      RemoteInput[] arrayOfRemoteInput = x.a(parama.X());
       int j = arrayOfRemoteInput.length;
       int i = 0;
       while (i < j)
@@ -36,10 +36,10 @@ final class q
   public static final class a
     implements n, o
   {
-    Notification.Builder dw;
+    Notification.Builder dM;
     Bundle mExtras;
     
-    public a(Context paramContext, Notification paramNotification, CharSequence paramCharSequence1, CharSequence paramCharSequence2, CharSequence paramCharSequence3, RemoteViews paramRemoteViews, int paramInt1, PendingIntent paramPendingIntent1, PendingIntent paramPendingIntent2, Bitmap paramBitmap, int paramInt2, int paramInt3, boolean paramBoolean1, boolean paramBoolean2, boolean paramBoolean3, int paramInt4, CharSequence paramCharSequence4, boolean paramBoolean4, ArrayList paramArrayList, Bundle paramBundle, String paramString1, boolean paramBoolean5, String paramString2)
+    public a(Context paramContext, Notification paramNotification, CharSequence paramCharSequence1, CharSequence paramCharSequence2, CharSequence paramCharSequence3, RemoteViews paramRemoteViews, int paramInt1, PendingIntent paramPendingIntent1, PendingIntent paramPendingIntent2, Bitmap paramBitmap, int paramInt2, int paramInt3, boolean paramBoolean1, boolean paramBoolean2, boolean paramBoolean3, int paramInt4, CharSequence paramCharSequence4, boolean paramBoolean4, ArrayList<String> paramArrayList, Bundle paramBundle, String paramString1, boolean paramBoolean5, String paramString2)
     {
       paramContext = new Notification.Builder(paramContext).setWhen(when).setShowWhen(paramBoolean2).setSmallIcon(icon, iconLevel).setContent(contentView).setTicker(tickerText, paramRemoteViews).setSound(sound, audioStreamType).setVibrate(vibrate).setLights(ledARGB, ledOnMS, ledOffMS);
       if ((flags & 0x2) != 0)
@@ -67,7 +67,7 @@ final class q
       label339:
       for (paramBoolean2 = true;; paramBoolean2 = false)
       {
-        dw = paramContext.setFullScreenIntent(paramPendingIntent2, paramBoolean2).setLargeIcon(paramBitmap).setNumber(paramInt1).setUsesChronometer(paramBoolean3).setPriority(paramInt4).setProgress(paramInt2, paramInt3, paramBoolean1).setLocalOnly(paramBoolean4).setGroup(paramString1).setGroupSummary(paramBoolean5).setSortKey(paramString2);
+        dM = paramContext.setFullScreenIntent(paramPendingIntent2, paramBoolean2).setLargeIcon(paramBitmap).setNumber(paramInt1).setUsesChronometer(paramBoolean3).setPriority(paramInt4).setProgress(paramInt2, paramInt3, paramBoolean1).setLocalOnly(paramBoolean4).setGroup(paramString1).setGroupSummary(paramBoolean5).setSortKey(paramString2);
         mExtras = new Bundle();
         if (paramBundle != null) {
           mExtras.putAll(paramBundle);
@@ -85,14 +85,14 @@ final class q
       }
     }
     
-    public final Notification.Builder V()
+    public final Notification.Builder U()
     {
-      return dw;
+      return dM;
     }
     
     public final void a(s.a parama)
     {
-      q.a(dw, parama);
+      q.a(dM, parama);
     }
   }
 }

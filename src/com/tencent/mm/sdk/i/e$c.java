@@ -2,11 +2,11 @@ package com.tencent.mm.sdk.i;
 
 import android.os.Looper;
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class e$c
-  extends aa
+  extends ac
 {
   public e$c(e parame, Looper paramLooper)
   {
@@ -21,25 +21,25 @@ final class e$c
       return;
     }
     removeMessages(what);
-    if (jZh.ayG)
+    if (kzE.akI)
     {
       long l = System.currentTimeMillis();
       e locale;
-      if ((e.axn() > 0L) && (Math.abs(e.aWa() - l) > e.axn()))
+      if ((e.azP() > 0L) && (Math.abs(e.DH() - l) > e.azP()))
       {
-        u.i("!32@/B4Tb64lLpL7MdpMpTymZahD5UnJi4bB", "|MMThreadPool thread pool is auto wakeup");
-        locale = jZh;
+        v.i("MicroMsg.ThreadPool", "|MMThreadPool thread pool is auto wakeup");
+        locale = kzE;
       }
       synchronized (lock)
       {
-        ayG = false;
-        e.jZc = 0L;
-        e.jZb = 0L;
+        akI = false;
+        e.kzz = 0L;
+        e.kzy = 0L;
         sendEmptyMessageDelayed(1, 1000L);
         return;
       }
     }
-    e.a(jZh);
+    e.a(kzE);
   }
 }
 

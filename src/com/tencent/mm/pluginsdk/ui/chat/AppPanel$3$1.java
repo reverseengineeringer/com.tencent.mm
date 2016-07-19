@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.chat;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.d.a.mt;
+import com.tencent.mm.e.a.ng;
 import com.tencent.mm.sdk.c.a;
 
 final class AppPanel$3$1
@@ -12,10 +12,10 @@ final class AppPanel$3$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    mt localmt = new mt();
-    aJb.aJe = true;
-    a.jUF.j(localmt);
-    AppPanel.k(iKj.iKi).air();
+    ng localng = new ng();
+    avv.avy = true;
+    a.kug.y(localng);
+    AppPanel.k(jhf.jhe).akY();
     paramDialogInterface.dismiss();
   }
 }

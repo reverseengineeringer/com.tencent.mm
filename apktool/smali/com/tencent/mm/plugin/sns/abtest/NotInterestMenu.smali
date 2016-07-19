@@ -14,17 +14,17 @@
 
 
 # static fields
-.field private static gFh:[I
+.field private static gLJ:[I
 
 
 # instance fields
-.field private gER:Lcom/tencent/mm/plugin/sns/h/k;
+.field private gLI:Landroid/widget/ListView;
 
-.field private gFg:Landroid/widget/ListView;
+.field gLK:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$c;
 
-.field private gFi:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$c;
+.field gLL:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$b;
 
-.field private gFj:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$b;
+.field gLs:Lcom/tencent/mm/plugin/sns/i/k;
 
 .field private mContext:Landroid/content/Context;
 
@@ -41,7 +41,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gFh:[I
+    sput-object v0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gLJ:[I
 
     return-void
 
@@ -49,9 +49,9 @@
 
     :array_0
     .array-data 4
-        0x7f0b16f7
-        0x7f0b16f8
-        0x7f0b16f9
+        0x7f081275
+        0x7f081273
+        0x7f081274
     .end array-data
 .end method
 
@@ -68,13 +68,13 @@
     iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->mContext:Landroid/content/Context;
 
     .line 36
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gER:Lcom/tencent/mm/plugin/sns/h/k;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gLs:Lcom/tencent/mm/plugin/sns/i/k;
 
     .line 48
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gFi:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$c;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gLK:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$c;
 
     .line 49
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gFj:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$b;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gLL:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$b;
 
     .line 53
     iput-object p1, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->mContext:Landroid/content/Context;
@@ -99,13 +99,13 @@
     iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->mContext:Landroid/content/Context;
 
     .line 36
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gER:Lcom/tencent/mm/plugin/sns/h/k;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gLs:Lcom/tencent/mm/plugin/sns/i/k;
 
     .line 48
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gFi:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$c;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gLK:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$c;
 
     .line 49
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gFj:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$b;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gLL:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$b;
 
     .line 60
     iput-object p1, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->mContext:Landroid/content/Context;
@@ -122,17 +122,17 @@
 
     .prologue
     .line 18
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gFj:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gLL:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$b;
 
     return-object v0
 .end method
 
-.method static synthetic axp()[I
+.method static synthetic azR()[I
     .locals 1
 
     .prologue
     .line 18
-    sget-object v0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gFh:[I
+    sget-object v0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gLJ:[I
 
     return-object v0
 .end method
@@ -142,17 +142,17 @@
 
     .prologue
     .line 18
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gFi:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$c;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gLK:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$c;
 
     return-object v0
 .end method
 
-.method static synthetic c(Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;)Lcom/tencent/mm/plugin/sns/h/k;
+.method static synthetic c(Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;)Lcom/tencent/mm/plugin/sns/i/k;
     .locals 1
 
     .prologue
     .line 18
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gER:Lcom/tencent/mm/plugin/sns/h/k;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gLs:Lcom/tencent/mm/plugin/sns/i/k;
 
     return-object v0
 .end method
@@ -174,16 +174,16 @@
     .line 87
     iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/p;->ee(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {v0}, Lcom/tencent/mm/ui/p;->ef(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f0a0462
+    const v1, 0x7f030439
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     .line 89
-    const v0, 0x7f070df2
+    const v0, 0x7f100cdd
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->findViewById(I)Landroid/view/View;
 
@@ -191,10 +191,10 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gFg:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gLI:Landroid/widget/ListView;
 
     .line 90
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gFg:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gLI:Landroid/widget/ListView;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$a;
 
@@ -203,7 +203,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 91
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gFg:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gLI:Landroid/widget/ListView;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$1;
 
@@ -212,40 +212,5 @@
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 113
-    return-void
-.end method
-
-
-# virtual methods
-.method public setOnClickMenuListener(Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$b;)V
-    .locals 0
-
-    .prologue
-    .line 79
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gFj:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$b;
-
-    .line 80
-    return-void
-.end method
-
-.method public setOnSelectMenuItemListener(Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$c;)V
-    .locals 0
-
-    .prologue
-    .line 75
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gFi:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$c;
-
-    .line 76
-    return-void
-.end method
-
-.method public setSnsInfo(Lcom/tencent/mm/plugin/sns/h/k;)V
-    .locals 0
-
-    .prologue
-    .line 83
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu;->gER:Lcom/tencent/mm/plugin/sns/h/k;
-
-    .line 84
     return-void
 .end method

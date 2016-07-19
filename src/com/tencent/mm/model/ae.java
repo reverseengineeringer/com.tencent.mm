@@ -1,18 +1,19 @@
 package com.tencent.mm.model;
 
+import com.tencent.mm.bc.g.b;
 import java.util.HashMap;
 
 public abstract interface ae
 {
-  public abstract void aN(int paramInt);
-  
-  public abstract void ai(boolean paramBoolean);
-  
   public abstract void aj(boolean paramBoolean);
   
-  public abstract HashMap lo();
+  public abstract void ak(boolean paramBoolean);
   
-  public abstract void lp();
+  public abstract void cu(int paramInt);
+  
+  public abstract void ok();
+  
+  public abstract HashMap<Integer, g.b> ol();
 }
 
 /* Location:

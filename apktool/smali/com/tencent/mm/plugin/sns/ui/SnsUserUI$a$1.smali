@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hmf:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$a;
+.field final synthetic hCk:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 295
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$a$1;->hmf:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$a;
+    .line 491
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$a$1;->hCk:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,40 +36,44 @@
 
 
 # virtual methods
-.method public final eu(I)V
+.method public final fg(I)V
     .locals 2
 
     .prologue
-    .line 299
+    .line 495
     packed-switch p1, :pswitch_data_0
 
-    .line 308
+    .line 504
     :goto_0
     return-void
 
-    .line 301
+    .line 497
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$a$1;->hmf:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$a$1;->hCk:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$a;->hme:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$a;->hCj:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->k(Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;)Lcom/tencent/mm/plugin/sns/ui/av;
+
+    move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->lZ(I)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/av;->nB(I)Z
 
     goto :goto_0
 
-    .line 305
+    .line 501
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$a$1;->hmf:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$a$1;->hCk:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$a;->hme:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$a;->hCj:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->d(Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->l(Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;)V
 
     goto :goto_0
 
-    .line 299
+    .line 495
     nop
 
     :pswitch_data_0

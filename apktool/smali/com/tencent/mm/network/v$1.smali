@@ -18,32 +18,32 @@
 
 
 # instance fields
-.field final synthetic cjA:J
+.field final synthetic ceQ:Z
 
-.field final synthetic cjB:Ljava/lang/String;
+.field final synthetic ceR:J
 
-.field final synthetic cjC:Z
+.field final synthetic ceS:Ljava/lang/String;
 
-.field final synthetic cjD:Lcom/tencent/mm/network/v;
+.field final synthetic ceT:Z
 
-.field final synthetic cjz:Z
+.field final synthetic ceU:Lcom/tencent/mm/network/v;
 
 
 # direct methods
 .method constructor <init>(Lcom/tencent/mm/network/v;ZJLjava/lang/String;Z)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 15
-    iput-object p1, p0, Lcom/tencent/mm/network/v$1;->cjD:Lcom/tencent/mm/network/v;
+    iput-object p1, p0, Lcom/tencent/mm/network/v$1;->ceU:Lcom/tencent/mm/network/v;
 
-    iput-boolean p2, p0, Lcom/tencent/mm/network/v$1;->cjz:Z
+    iput-boolean p2, p0, Lcom/tencent/mm/network/v$1;->ceQ:Z
 
-    iput-wide p3, p0, Lcom/tencent/mm/network/v$1;->cjA:J
+    iput-wide p3, p0, Lcom/tencent/mm/network/v$1;->ceR:J
 
-    iput-object p5, p0, Lcom/tencent/mm/network/v$1;->cjB:Ljava/lang/String;
+    iput-object p5, p0, Lcom/tencent/mm/network/v$1;->ceS:Ljava/lang/String;
 
-    iput-boolean p6, p0, Lcom/tencent/mm/network/v$1;->cjC:Z
+    iput-boolean p6, p0, Lcom/tencent/mm/network/v$1;->ceT:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,16 +57,16 @@
 
     .prologue
     .line 18
-    iget-boolean v0, p0, Lcom/tencent/mm/network/v$1;->cjz:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/network/v$1;->ceQ:Z
 
     if-eqz v0, :cond_0
 
     .line 19
-    iget-wide v0, p0, Lcom/tencent/mm/network/v$1;->cjA:J
+    iget-wide v0, p0, Lcom/tencent/mm/network/v$1;->ceR:J
 
-    iget-object v2, p0, Lcom/tencent/mm/network/v$1;->cjB:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/network/v$1;->ceS:Ljava/lang/String;
 
-    iget-boolean v3, p0, Lcom/tencent/mm/network/v$1;->cjC:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/network/v$1;->ceT:Z
 
     invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/plugin/report/service/KVReportJni$KVReportJava2C;->writeImportKvData(JLjava/lang/String;Z)V
 
@@ -76,11 +76,11 @@
 
     .line 21
     :cond_0
-    iget-wide v0, p0, Lcom/tencent/mm/network/v$1;->cjA:J
+    iget-wide v0, p0, Lcom/tencent/mm/network/v$1;->ceR:J
 
-    iget-object v2, p0, Lcom/tencent/mm/network/v$1;->cjB:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/network/v$1;->ceS:Ljava/lang/String;
 
-    iget-boolean v3, p0, Lcom/tencent/mm/network/v$1;->cjC:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/network/v$1;->ceT:Z
 
     invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/plugin/report/service/KVReportJni$KVReportJava2C;->writeKvData(JLjava/lang/String;Z)V
 

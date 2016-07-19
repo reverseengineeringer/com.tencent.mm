@@ -1,30 +1,19 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.d.a.gx;
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.model.c;
-import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.e;
-import com.tencent.mm.storage.f;
+import com.tencent.mm.model.as.a;
+import com.tencent.mm.network.e;
 
 final class ChattingUI$a$67
-  implements Runnable
+  implements as.a
 {
   ChattingUI$a$67(ChattingUI.a parama) {}
   
-  public final void run()
+  public final void a(e parame)
   {
-    e locale = ah.tD().rw().DT(laF.kRI.field_username);
-    if ((locale != null) && (locale.aWk()))
-    {
-      u.d("!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/", "cpan[doScene NetSceneGetChatroomMemberDetail]");
-      gx localgx = new gx();
-      aCo.aCm = laF.kRI.field_username;
-      aCo.aCp = locale.aWj();
-      a.jUF.j(localgx);
+    if (parame == null) {
+      return;
     }
+    ChattingUI.a.a(lAY, parame);
   }
 }
 

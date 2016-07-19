@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/LauncherUI;->bay()V
+    value = Lcom/tencent/mm/ui/LauncherUI;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic knl:Lcom/tencent/mm/ui/LauncherUI;
+.field final synthetic kMs:Lcom/tencent/mm/ui/LauncherUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 4010
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$27;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 4184
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$27;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,68 +36,15 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 1
 
     .prologue
-    .line 4014
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    .line 4189
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$27;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    move-result-wide v0
+    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->F(Lcom/tencent/mm/ui/LauncherUI;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/LauncherUI$27;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-static {v2}, Lcom/tencent/mm/ui/LauncherUI;->E(Lcom/tencent/mm/ui/LauncherUI;)J
-
-    move-result-wide v2
-
-    sub-long/2addr v0, v2
-
-    const-wide/16 v2, 0x12c
-
-    cmp-long v0, v0, v2
-
-    if-gez v0, :cond_0
-
-    .line 4016
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$27;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->F(Lcom/tencent/mm/ui/LauncherUI;)Ljava/util/LinkedList;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Runnable;
-
-    .line 4017
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
-    goto :goto_0
-
-    .line 4020
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$27;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v1
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/LauncherUI;->a(Lcom/tencent/mm/ui/LauncherUI;J)J
-
-    .line 4021
+    .line 4190
     return-void
 .end method

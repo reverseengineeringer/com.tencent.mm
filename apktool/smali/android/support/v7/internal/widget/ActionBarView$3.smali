@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic oh:Landroid/support/v7/internal/widget/ActionBarView;
+.field final synthetic ox:Landroid/support/v7/internal/widget/ActionBarView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 160
-    iput-object p1, p0, Landroid/support/v7/internal/widget/ActionBarView$3;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iput-object p1, p0, Landroid/support/v7/internal/widget/ActionBarView$3;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,13 +41,13 @@
 
     .prologue
     .line 162
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$3;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ActionBarView$3;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
-    iget-object v0, v0, Landroid/support/v7/internal/widget/ActionBarView;->od:Landroid/view/Window$Callback;
+    iget-object v0, v0, Landroid/support/v7/internal/widget/ActionBarView;->ot:Landroid/view/Window$Callback;
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, Landroid/support/v7/internal/widget/ActionBarView$3;->oh:Landroid/support/v7/internal/widget/ActionBarView;
+    iget-object v2, p0, Landroid/support/v7/internal/widget/ActionBarView$3;->ox:Landroid/support/v7/internal/widget/ActionBarView;
 
     invoke-static {v2}, Landroid/support/v7/internal/widget/ActionBarView;->b(Landroid/support/v7/internal/widget/ActionBarView;)Landroid/support/v7/internal/view/menu/a;
 

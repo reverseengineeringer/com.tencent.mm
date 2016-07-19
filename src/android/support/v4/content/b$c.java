@@ -3,7 +3,7 @@ package android.support.v4.content;
 import android.content.ComponentName;
 import android.content.Intent;
 
-class b$c
+final class b$c
   extends b.b
 {
   public final Intent makeMainActivity(ComponentName paramComponentName)

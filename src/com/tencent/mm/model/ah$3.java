@@ -1,8 +1,8 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 import com.tencent.mm.storage.q.a;
@@ -16,35 +16,35 @@ final class ah$3
   public final void a(q paramq, k paramk)
   {
     String str = field_username;
-    if (k.Ec(field_username)) {
-      paramk.setUsername(k.Ee(field_username));
+    if (k.eb(field_username)) {
+      paramk.setUsername(k.Gs(field_username));
     }
-    if (ay.kz(paramk.md())) {
-      paramk.bI(com.tencent.mm.platformtools.c.ks(field_nickname));
+    if (be.kf(paramk.kt())) {
+      paramk.bD(com.tencent.mm.platformtools.c.lb(field_nickname));
     }
-    if (ay.kz(paramk.me())) {
-      paramk.bJ(com.tencent.mm.platformtools.c.kr(field_nickname));
+    if (be.kf(paramk.ku())) {
+      paramk.bE(com.tencent.mm.platformtools.c.la(field_nickname));
     }
-    if (ay.kz(field_conRemarkPYShort)) {
-      paramk.bM(com.tencent.mm.platformtools.c.ks(field_conRemark));
+    if (be.kf(field_conRemarkPYShort)) {
+      paramk.bH(com.tencent.mm.platformtools.c.lb(field_conRemark));
     }
-    if (ay.kz(field_conRemarkPYFull)) {
-      paramk.bL(com.tencent.mm.platformtools.c.kr(field_conRemark));
+    if (be.kf(field_conRemarkPYFull)) {
+      paramk.bG(com.tencent.mm.platformtools.c.la(field_conRemark));
     }
     if (i.c(paramk))
     {
-      paramk.aT(43);
-      paramk.bI(com.tencent.mm.platformtools.c.ks(paramk.qy()));
-      paramk.bJ(com.tencent.mm.platformtools.c.kr(paramk.qy()));
-      paramk.bL(com.tencent.mm.platformtools.c.kr(paramk.qz()));
-      paramk.bM(paramk.qz());
+      paramk.bj(43);
+      paramk.bD(com.tencent.mm.platformtools.c.lb(paramk.pb()));
+      paramk.bE(com.tencent.mm.platformtools.c.la(paramk.pb()));
+      paramk.bG(com.tencent.mm.platformtools.c.la(paramk.pc()));
+      paramk.bH(paramk.pc());
       return;
     }
-    if (i.eI(str))
+    if (i.eU(str))
     {
-      paramk.qa();
-      paramk.aY(4);
-      paramk.aT(33);
+      paramk.oy();
+      paramk.bo(4);
+      paramk.bj(33);
       if (paramk != null) {
         break label315;
       }
@@ -53,21 +53,21 @@ final class ah$3
     for (paramq = new k();; paramq = paramk)
     {
       paramq.setUsername(str);
-      paramq.qa();
+      paramq.oy();
       o.v(paramq);
-      paramq.qg();
-      if (paramk.qq()) {
-        paramk.aT(paramk.pY());
+      paramq.oF();
+      if (paramk.oT()) {
+        paramk.bj(paramk.ov());
       }
-      if (i.ey(str))
+      if (i.eK(str))
       {
-        u.i("!24@/B4Tb64lLpKk+n5Gbwo3Rw==", "update official account helper showhead %d", new Object[] { Integer.valueOf(31) });
-        paramk.aT(31);
+        v.i("MicroMsg.MMCore", "update official account helper showhead %d", new Object[] { Integer.valueOf(31) });
+        paramk.bj(31);
       }
-      if (paramk.qp()) {
-        ah.tD().rt().c(new String[] { str }, "@blacklist");
+      if (paramk.oS()) {
+        ah.tE().ru().c(new String[] { str }, "@blacklist");
       }
-      u.d("!24@/B4Tb64lLpKk+n5Gbwo3Rw==", "onPreInsertContact2: %s, %s", new Object[] { field_username, paramk.md() });
+      v.d("MicroMsg.MMCore", "onPreInsertContact2: %s, %s", new Object[] { field_username, paramk.kt() });
       return;
     }
   }

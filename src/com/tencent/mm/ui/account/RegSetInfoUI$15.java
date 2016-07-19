@@ -9,8 +9,8 @@ final class RegSetInfoUI$15
   
   public final void run()
   {
-    RegSetInfoUI.a(kwh).clearFocus();
-    RegSetInfoUI.a(kwh).requestFocus();
+    RegSetInfoUI.a(kVo).clearFocus();
+    RegSetInfoUI.a(kVo).requestFocus();
   }
 }
 

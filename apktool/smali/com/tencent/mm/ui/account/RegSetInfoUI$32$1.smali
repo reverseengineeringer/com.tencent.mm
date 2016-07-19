@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kwu:Lcom/tencent/mm/ui/account/RegSetInfoUI$32;
+.field final synthetic kVB:Lcom/tencent/mm/ui/account/RegSetInfoUI$32;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 381
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$32$1;->kwu:Lcom/tencent/mm/ui/account/RegSetInfoUI$32;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$32$1;->kVB:Lcom/tencent/mm/ui/account/RegSetInfoUI$32;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 385
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$32$1;->kwu:Lcom/tencent/mm/ui/account/RegSetInfoUI$32;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$32$1;->kVB:Lcom/tencent/mm/ui/account/RegSetInfoUI$32;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/RegSetInfoUI$32;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/RegSetInfoUI$32;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->a(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Landroid/widget/EditText;
 
@@ -52,9 +52,9 @@
     invoke-virtual {v0}, Landroid/widget/EditText;->clearFocus()V
 
     .line 386
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$32$1;->kwu:Lcom/tencent/mm/ui/account/RegSetInfoUI$32;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$32$1;->kVB:Lcom/tencent/mm/ui/account/RegSetInfoUI$32;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/RegSetInfoUI$32;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/RegSetInfoUI$32;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->a(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Landroid/widget/EditText;
 

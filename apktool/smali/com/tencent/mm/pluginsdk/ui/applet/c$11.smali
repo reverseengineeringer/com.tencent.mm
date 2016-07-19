@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iIg:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
+.field final synthetic jfd:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 1081
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$11;->iIg:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$11;->jfd:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,12 +43,12 @@
     const/4 v2, 0x0
 
     .line 1085
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$11;->iIg:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$11;->jfd:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
     if-eqz v0, :cond_0
 
     .line 1086
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$11;->iIg:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/c$11;->jfd:Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
     const/4 v1, 0x0
 

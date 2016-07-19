@@ -4,7 +4,7 @@ import android.app.PendingIntent;
 
 public abstract class s$b
 {
-  abstract y.a Z();
+  abstract y.a Y();
   
   abstract long getLatestTimestamp();
   

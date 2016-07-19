@@ -4,10 +4,13 @@
 
 
 # virtual methods
-.method public abstract X(II)Z
+.method public abstract Z(II)Z
 .end method
 
 .method public abstract beginTransaction()V
+.end method
+
+.method public abstract c(JJ)J
 .end method
 
 .method public abstract commit()V
@@ -16,10 +19,7 @@
 .method public abstract compileStatement(Ljava/lang/String;)Lcom/tencent/kingkong/database/SQLiteStatement;
 .end method
 
-.method public abstract d(JJ)J
-.end method
-
-.method public abstract e(JJ)V
+.method public abstract d(JJ)V
 .end method
 
 .method public abstract execSQL(Ljava/lang/String;)V
@@ -28,7 +28,7 @@
 .method public abstract execSQL(Ljava/lang/String;[Ljava/lang/Object;)V
 .end method
 
-.method public abstract iB(Ljava/lang/String;)Z
+.method public abstract iS(Ljava/lang/String;)Z
 .end method
 
 .method public abstract inTransaction()Z

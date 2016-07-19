@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/tencent/smtt/export/external/interfaces/JsPromptResult;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 # interfaces
 .implements Lcom/tencent/smtt/export/external/interfaces/JsResult;

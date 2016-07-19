@@ -6,11 +6,11 @@ public abstract interface c
 {
   public abstract void a(a parama);
   
-  public abstract void ag(Context paramContext);
+  public abstract void ac(Context paramContext);
   
-  public abstract void f(int paramInt, String paramString);
+  public abstract void g(int paramInt, String paramString);
   
-  public abstract void q(String paramString1, String paramString2);
+  public abstract void o(String paramString1, String paramString2);
 }
 
 /* Location:

@@ -3,10 +3,10 @@
 
 
 # virtual methods
-.method public abstract a()Lct/an;
+.method public abstract a()Lct/ak;
 .end method
 
-.method public abstract a(Ljava/lang/String;)Lct/u$a;
+.method public abstract a(Ljava/lang/String;)Lct/t$a;
 .end method
 
 .method public abstract a(Ljava/util/List;)V

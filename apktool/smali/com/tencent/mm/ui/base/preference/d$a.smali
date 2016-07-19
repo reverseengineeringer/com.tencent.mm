@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field ftN:Landroid/widget/TextView;
+.field fCS:Landroid/widget/TextView;
 
-.field ftO:Landroid/widget/CheckBox;
+.field fCT:Landroid/widget/CheckBox;
 
-.field ftP:Landroid/widget/RadioButton;
+.field fCU:Landroid/widget/RadioButton;
 
 
 # direct methods

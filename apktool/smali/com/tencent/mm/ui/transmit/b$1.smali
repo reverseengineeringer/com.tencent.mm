@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/transmit/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILcom/tencent/mm/protocal/b/ask;ZZ)V
+    value = Lcom/tencent/mm/ui/transmit/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILcom/tencent/mm/protocal/b/ata;ZZLjava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic lBw:Lcom/tencent/mm/ui/transmit/b;
+.field final synthetic lDP:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$a;
 
-.field final synthetic ldz:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$a;
+.field final synthetic mco:Lcom/tencent/mm/ui/transmit/b;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 69
-    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/b$1;->lBw:Lcom/tencent/mm/ui/transmit/b;
+    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/b$1;->mco:Lcom/tencent/mm/ui/transmit/b;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/transmit/b$1;->ldz:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$a;
+    iput-object p2, p0, Lcom/tencent/mm/ui/transmit/b$1;->lDP:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,11 +45,11 @@
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/b$1;->ldz:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/b$1;->lDP:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$a;
 
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$a;->lAV:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$a;->mbO:Z
 
     .line 74
     return-void

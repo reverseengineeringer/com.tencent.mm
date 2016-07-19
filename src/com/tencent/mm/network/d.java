@@ -8,37 +8,33 @@ import android.os.Parcel;
 public abstract interface d
   extends IInterface
 {
-  public abstract int A(byte[] paramArrayOfByte);
+  public abstract int F(byte[] paramArrayOfByte);
   
-  public abstract void F(byte[] paramArrayOfByte);
+  public abstract void L(byte[] paramArrayOfByte);
   
-  public abstract void G(byte[] paramArrayOfByte);
+  public abstract void M(byte[] paramArrayOfByte);
   
-  public abstract void aN(boolean paramBoolean);
+  public abstract void as(boolean paramBoolean);
   
-  public abstract void ba(int paramInt);
+  public abstract void bq(int paramInt);
+  
+  public abstract void g(String paramString, byte[] paramArrayOfByte);
   
   public abstract String getUsername();
   
-  public abstract byte[] gf(String paramString);
-  
-  public abstract void h(String paramString, byte[] paramArrayOfByte);
+  public abstract byte[] gs(String paramString);
   
   public abstract void i(byte[] paramArrayOfByte, int paramInt);
   
-  public abstract void kj(String paramString);
+  public abstract void kT(String paramString);
   
   public abstract void reset();
   
-  public abstract int rg();
+  public abstract int rf();
   
   public abstract void setUsername(String paramString);
   
-  public abstract byte[] tq();
-  
-  public abstract byte[] vR();
-  
-  public abstract boolean vS();
+  public abstract byte[] tr();
   
   public abstract byte[] vT();
   
@@ -46,7 +42,11 @@ public abstract interface d
   
   public abstract byte[] vV();
   
-  public abstract String wo();
+  public abstract boolean vW();
+  
+  public abstract byte[] vX();
+  
+  public abstract String wq();
   
   public static abstract class a
     extends Binder
@@ -57,7 +57,7 @@ public abstract interface d
       attachInterface(this, "com.tencent.mm.network.IAccInfo_AIDL");
     }
     
-    public static d W(IBinder paramIBinder)
+    public static d y(IBinder paramIBinder)
     {
       if (paramIBinder == null) {
         return null;
@@ -98,7 +98,7 @@ public abstract interface d
         return true;
       case 3: 
         paramParcel1.enforceInterface("com.tencent.mm.network.IAccInfo_AIDL");
-        ba(paramParcel1.readInt());
+        bq(paramParcel1.readInt());
         paramParcel2.writeNoException();
         return true;
       case 4: 
@@ -108,12 +108,12 @@ public abstract interface d
         return true;
       case 5: 
         paramParcel1.enforceInterface("com.tencent.mm.network.IAccInfo_AIDL");
-        F(paramParcel1.createByteArray());
+        L(paramParcel1.createByteArray());
         paramParcel2.writeNoException();
         return true;
       case 6: 
         paramParcel1.enforceInterface("com.tencent.mm.network.IAccInfo_AIDL");
-        G(paramParcel1.createByteArray());
+        M(paramParcel1.createByteArray());
         paramParcel2.writeNoException();
         return true;
       case 7: 
@@ -124,31 +124,31 @@ public abstract interface d
         return true;
       case 8: 
         paramParcel1.enforceInterface("com.tencent.mm.network.IAccInfo_AIDL");
-        paramParcel1 = tq();
+        paramParcel1 = tr();
         paramParcel2.writeNoException();
         paramParcel2.writeByteArray(paramParcel1);
         return true;
       case 9: 
         paramParcel1.enforceInterface("com.tencent.mm.network.IAccInfo_AIDL");
-        paramParcel1 = vR();
+        paramParcel1 = vT();
         paramParcel2.writeNoException();
         paramParcel2.writeByteArray(paramParcel1);
         return true;
       case 10: 
         paramParcel1.enforceInterface("com.tencent.mm.network.IAccInfo_AIDL");
-        paramParcel1 = vT();
+        paramParcel1 = vV();
         paramParcel2.writeNoException();
         paramParcel2.writeByteArray(paramParcel1);
         return true;
       case 11: 
         paramParcel1.enforceInterface("com.tencent.mm.network.IAccInfo_AIDL");
-        paramInt1 = rg();
+        paramInt1 = rf();
         paramParcel2.writeNoException();
         paramParcel2.writeInt(paramInt1);
         return true;
       case 12: 
         paramParcel1.enforceInterface("com.tencent.mm.network.IAccInfo_AIDL");
-        bool = vS();
+        bool = vU();
         paramParcel2.writeNoException();
         paramInt1 = i;
         if (bool) {
@@ -158,12 +158,12 @@ public abstract interface d
         return true;
       case 13: 
         paramParcel1.enforceInterface("com.tencent.mm.network.IAccInfo_AIDL");
-        h(paramParcel1.readString(), paramParcel1.createByteArray());
+        g(paramParcel1.readString(), paramParcel1.createByteArray());
         paramParcel2.writeNoException();
         return true;
       case 14: 
         paramParcel1.enforceInterface("com.tencent.mm.network.IAccInfo_AIDL");
-        paramParcel1 = gf(paramParcel1.readString());
+        paramParcel1 = gs(paramParcel1.readString());
         paramParcel2.writeNoException();
         paramParcel2.writeByteArray(paramParcel1);
         return true;
@@ -172,12 +172,12 @@ public abstract interface d
         if (paramParcel1.readInt() != 0) {
           bool = true;
         }
-        aN(bool);
+        as(bool);
         paramParcel2.writeNoException();
         return true;
       case 16: 
         paramParcel1.enforceInterface("com.tencent.mm.network.IAccInfo_AIDL");
-        bool = vU();
+        bool = vW();
         paramParcel2.writeNoException();
         paramInt1 = j;
         if (bool) {
@@ -187,24 +187,24 @@ public abstract interface d
         return true;
       case 17: 
         paramParcel1.enforceInterface("com.tencent.mm.network.IAccInfo_AIDL");
-        paramParcel1 = wo();
+        paramParcel1 = wq();
         paramParcel2.writeNoException();
         paramParcel2.writeString(paramParcel1);
         return true;
       case 18: 
         paramParcel1.enforceInterface("com.tencent.mm.network.IAccInfo_AIDL");
-        kj(paramParcel1.readString());
+        kT(paramParcel1.readString());
         paramParcel2.writeNoException();
         return true;
       case 19: 
         paramParcel1.enforceInterface("com.tencent.mm.network.IAccInfo_AIDL");
-        paramInt1 = A(paramParcel1.createByteArray());
+        paramInt1 = F(paramParcel1.createByteArray());
         paramParcel2.writeNoException();
         paramParcel2.writeInt(paramInt1);
         return true;
       }
       paramParcel1.enforceInterface("com.tencent.mm.network.IAccInfo_AIDL");
-      paramParcel1 = vV();
+      paramParcel1 = vX();
       paramParcel2.writeNoException();
       paramParcel2.writeByteArray(paramParcel1);
       return true;
@@ -220,7 +220,7 @@ public abstract interface d
         mRemote = paramIBinder;
       }
       
-      public final int A(byte[] paramArrayOfByte)
+      public final int F(byte[] paramArrayOfByte)
       {
         Parcel localParcel1 = Parcel.obtain();
         Parcel localParcel2 = Parcel.obtain();
@@ -240,7 +240,7 @@ public abstract interface d
         }
       }
       
-      public final void F(byte[] paramArrayOfByte)
+      public final void L(byte[] paramArrayOfByte)
       {
         Parcel localParcel1 = Parcel.obtain();
         Parcel localParcel2 = Parcel.obtain();
@@ -259,7 +259,7 @@ public abstract interface d
         }
       }
       
-      public final void G(byte[] paramArrayOfByte)
+      public final void M(byte[] paramArrayOfByte)
       {
         Parcel localParcel1 = Parcel.obtain();
         Parcel localParcel2 = Parcel.obtain();
@@ -278,7 +278,7 @@ public abstract interface d
         }
       }
       
-      public final void aN(boolean paramBoolean)
+      public final void as(boolean paramBoolean)
       {
         int i = 0;
         Parcel localParcel1 = Parcel.obtain();
@@ -306,7 +306,7 @@ public abstract interface d
         return mRemote;
       }
       
-      public final void ba(int paramInt)
+      public final void bq(int paramInt)
       {
         Parcel localParcel1 = Parcel.obtain();
         Parcel localParcel2 = Parcel.obtain();
@@ -315,6 +315,26 @@ public abstract interface d
           localParcel1.writeInterfaceToken("com.tencent.mm.network.IAccInfo_AIDL");
           localParcel1.writeInt(paramInt);
           mRemote.transact(3, localParcel1, localParcel2, 0);
+          localParcel2.readException();
+          return;
+        }
+        finally
+        {
+          localParcel2.recycle();
+          localParcel1.recycle();
+        }
+      }
+      
+      public final void g(String paramString, byte[] paramArrayOfByte)
+      {
+        Parcel localParcel1 = Parcel.obtain();
+        Parcel localParcel2 = Parcel.obtain();
+        try
+        {
+          localParcel1.writeInterfaceToken("com.tencent.mm.network.IAccInfo_AIDL");
+          localParcel1.writeString(paramString);
+          localParcel1.writeByteArray(paramArrayOfByte);
+          mRemote.transact(13, localParcel1, localParcel2, 0);
           localParcel2.readException();
           return;
         }
@@ -344,7 +364,7 @@ public abstract interface d
         }
       }
       
-      public final byte[] gf(String paramString)
+      public final byte[] gs(String paramString)
       {
         Parcel localParcel1 = Parcel.obtain();
         Parcel localParcel2 = Parcel.obtain();
@@ -356,26 +376,6 @@ public abstract interface d
           localParcel2.readException();
           paramString = localParcel2.createByteArray();
           return paramString;
-        }
-        finally
-        {
-          localParcel2.recycle();
-          localParcel1.recycle();
-        }
-      }
-      
-      public final void h(String paramString, byte[] paramArrayOfByte)
-      {
-        Parcel localParcel1 = Parcel.obtain();
-        Parcel localParcel2 = Parcel.obtain();
-        try
-        {
-          localParcel1.writeInterfaceToken("com.tencent.mm.network.IAccInfo_AIDL");
-          localParcel1.writeString(paramString);
-          localParcel1.writeByteArray(paramArrayOfByte);
-          mRemote.transact(13, localParcel1, localParcel2, 0);
-          localParcel2.readException();
-          return;
         }
         finally
         {
@@ -404,7 +404,7 @@ public abstract interface d
         }
       }
       
-      public final void kj(String paramString)
+      public final void kT(String paramString)
       {
         Parcel localParcel1 = Parcel.obtain();
         Parcel localParcel2 = Parcel.obtain();
@@ -441,7 +441,7 @@ public abstract interface d
         }
       }
       
-      public final int rg()
+      public final int rf()
       {
         Parcel localParcel1 = Parcel.obtain();
         Parcel localParcel2 = Parcel.obtain();
@@ -479,7 +479,7 @@ public abstract interface d
         }
       }
       
-      public final byte[] tq()
+      public final byte[] tr()
       {
         Parcel localParcel1 = Parcel.obtain();
         Parcel localParcel2 = Parcel.obtain();
@@ -498,7 +498,7 @@ public abstract interface d
         }
       }
       
-      public final byte[] vR()
+      public final byte[] vT()
       {
         Parcel localParcel1 = Parcel.obtain();
         Parcel localParcel2 = Parcel.obtain();
@@ -517,7 +517,7 @@ public abstract interface d
         }
       }
       
-      public final boolean vS()
+      public final boolean vU()
       {
         boolean bool = false;
         Parcel localParcel1 = Parcel.obtain();
@@ -540,7 +540,7 @@ public abstract interface d
         }
       }
       
-      public final byte[] vT()
+      public final byte[] vV()
       {
         Parcel localParcel1 = Parcel.obtain();
         Parcel localParcel2 = Parcel.obtain();
@@ -559,7 +559,7 @@ public abstract interface d
         }
       }
       
-      public final boolean vU()
+      public final boolean vW()
       {
         boolean bool = false;
         Parcel localParcel1 = Parcel.obtain();
@@ -582,7 +582,7 @@ public abstract interface d
         }
       }
       
-      public final byte[] vV()
+      public final byte[] vX()
       {
         Parcel localParcel1 = Parcel.obtain();
         Parcel localParcel2 = Parcel.obtain();
@@ -601,7 +601,7 @@ public abstract interface d
         }
       }
       
-      public final String wo()
+      public final String wq()
       {
         Parcel localParcel1 = Parcel.obtain();
         Parcel localParcel2 = Parcel.obtain();

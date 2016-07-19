@@ -1,34 +1,19 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.widget.ListView;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.storage.h;
 
 final class aw$1
-  implements Runnable
+  implements DialogInterface.OnDismissListener
 {
-  aw$1(aw paramaw) {}
-  
-  public final void run()
+  public final void onDismiss(DialogInterface paramDialogInterface)
   {
-    if ((hmN.gWB != null) && (hmN.gWB.getCount() > hmN.position))
-    {
-      int j = hmN.gWE.getTop();
-      u.d("!56@/B4Tb64lLpKrDzi69O5I2aq965KYeg3mKhByxKp1S2RFnuACj6WZIw==", "limitCount: " + hmN.hmI + " footerHeight:" + hmN.gWE.getHeight() + " listOriginalBottom: " + hmN.hco);
-      if ((aw.a(hmN) > 0) && ((hmN.hdw != j) || (j > hmN.hco - 200) || (hmN.gWB.getBottom() > hmN.hco - hmN.gWE.getHeight() - 150)))
-      {
-        i = 10;
-        if (hmN.hmI == 0) {
-          i = 200;
-        }
-        new aa().postDelayed(this, i);
-      }
-      hmN.hdw = j;
-      int i = hmN.hdw - hmN.hmG - hmN.hmE;
-      u.d("!56@/B4Tb64lLpKrDzi69O5I2aq965KYeg3mKhByxKp1S2RFnuACj6WZIw==", "itemH:" + hmN.hmE + " footerTop" + hmN.hdw + " list.bottom:" + hmN.gWB.getBottom() + " position: " + hmN.position + " topselection: " + i);
-      u.d("!56@/B4Tb64lLpKrDzi69O5I2aq965KYeg3mKhByxKp1S2RFnuACj6WZIw==", "list.getTop(): " + hmN.gWB.getTop() + " marginTop: " + hmN.hmG + " footerTop " + hmN.hdw);
-      hmN.gWB.setSelectionFromTop(hmN.position + hmN.gWB.getHeaderViewsCount(), i);
-    }
+    int i = be.b((Integer)ah.tE().ro().get(68385, null), 0);
+    ah.tE().ro().set(68385, Integer.valueOf(i + 1));
   }
 }
 

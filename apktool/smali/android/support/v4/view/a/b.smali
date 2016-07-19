@@ -14,11 +14,11 @@
 
 
 # static fields
-.field private static final gM:Landroid/support/v4/view/a/b$a;
+.field private static final hh:Landroid/support/v4/view/a/b$a;
 
 
 # instance fields
-.field public final gN:Ljava/lang/Object;
+.field public final hi:Ljava/lang/Object;
 
 
 # direct methods
@@ -38,7 +38,7 @@
 
     invoke-direct {v0}, Landroid/support/v4/view/a/b$b;-><init>()V
 
-    sput-object v0, Landroid/support/v4/view/a/b;->gM:Landroid/support/v4/view/a/b$a;
+    sput-object v0, Landroid/support/v4/view/a/b;->hh:Landroid/support/v4/view/a/b$a;
 
     .line 94
     :goto_0
@@ -50,7 +50,7 @@
 
     invoke-direct {v0}, Landroid/support/v4/view/a/b$c;-><init>()V
 
-    sput-object v0, Landroid/support/v4/view/a/b;->gM:Landroid/support/v4/view/a/b$a;
+    sput-object v0, Landroid/support/v4/view/a/b;->hh:Landroid/support/v4/view/a/b$a;
 
     goto :goto_0
 .end method
@@ -63,13 +63,13 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 100
-    sget-object v0, Landroid/support/v4/view/a/b;->gM:Landroid/support/v4/view/a/b$a;
+    sget-object v0, Landroid/support/v4/view/a/b;->hh:Landroid/support/v4/view/a/b$a;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/a/b$a;->a(Landroid/support/v4/view/a/b;)Ljava/lang/Object;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v4/view/a/b;->gN:Ljava/lang/Object;
+    iput-object v0, p0, Landroid/support/v4/view/a/b;->hi:Ljava/lang/Object;
 
     .line 101
     return-void
@@ -83,13 +83,13 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 110
-    iput-object p1, p0, Landroid/support/v4/view/a/b;->gN:Ljava/lang/Object;
+    iput-object p1, p0, Landroid/support/v4/view/a/b;->hi:Ljava/lang/Object;
 
     .line 111
     return-void
 .end method
 
-.method public static as()Landroid/support/v4/view/a/a;
+.method public static ar()Landroid/support/v4/view/a/a;
     .locals 1
 
     .prologue
@@ -99,7 +99,7 @@
     return-object v0
 .end method
 
-.method public static at()Z
+.method public static as()Z
     .locals 1
 
     .prologue
@@ -109,8 +109,17 @@
     return v0
 .end method
 
-.method public static au()Ljava/util/List;
+.method public static at()Ljava/util/List;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Landroid/support/v4/view/a/a;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 179

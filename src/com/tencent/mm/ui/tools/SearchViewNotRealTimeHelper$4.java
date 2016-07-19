@@ -2,7 +2,7 @@ package com.tencent.mm.ui.tools;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SearchViewNotRealTimeHelper$4
   implements View.OnClickListener
@@ -11,12 +11,12 @@ final class SearchViewNotRealTimeHelper$4
   
   public final void onClick(View paramView)
   {
-    u.v("!56@/B4Tb64lLpLefBCxqnmMg3WMfx9nFLyovQojYDyB2OJFMJ1DPCcm+g==", "home btn click");
-    if (SearchViewNotRealTimeHelper.c(lxN) != null) {
-      SearchViewNotRealTimeHelper.c(lxN).KZ();
+    v.v("MicroMsg.SearchViewNotRealTimeHelper", "home btn click");
+    if (SearchViewNotRealTimeHelper.c(lYC) != null) {
+      SearchViewNotRealTimeHelper.c(lYC).LN();
     }
-    if (SearchViewNotRealTimeHelper.e(lxN) != null) {
-      SearchViewNotRealTimeHelper.e(lxN).bil();
+    if (SearchViewNotRealTimeHelper.e(lYC) != null) {
+      SearchViewNotRealTimeHelper.e(lYC).boi();
     }
   }
 }

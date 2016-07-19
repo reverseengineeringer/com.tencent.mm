@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/ow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="16.0dip">
+        <RelativeLayout android:id="@id/b2f" android:background="@drawable/m_" android:paddingLeft="@dimen/aa" android:clickable="true" android:layout_width="fill_parent" android:layout_height="64.0dip">
+            <ImageView android:id="@id/l4" android:layout_width="@dimen/q0" android:layout_height="@dimen/q0" android:src="@raw/ip_call_account_entrance" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/b2g" android:paddingTop="4.0dip" android:paddingBottom="3.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/a9" android:layout_toRightOf="@id/l4" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/i8" android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/b8u" android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center|right" android:orientation="horizontal" android:id="@id/b2h" android:paddingRight="14.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="75.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <TextView android:textSize="14.0sp" android:textColor="#ffb2b2b2" android:id="@id/b2i" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:singleLine="true" />
+                <ImageView android:layout_gravity="center" android:id="@id/b2j" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/oy" />
+            </LinearLayout>
+        </RelativeLayout>
+        <ImageView android:background="#26000000" android:layout_width="fill_parent" android:layout_height="@dimen/dz" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_weight="2.0">
+            <LinearLayout android:gravity="center" android:id="@id/b2k" android:background="@drawable/m_" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:layout_width="25.0dip" android:layout_height="25.0dip" android:src="@raw/ipcall_contacts_icon" />
+                <TextView android:textSize="16.0sp" android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/b6q" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="center_vertical" android:background="#26000000" android:layout_width="@dimen/dz" android:layout_height="40.0dip" />
+            <LinearLayout android:gravity="center" android:id="@id/b2l" android:background="@drawable/m_" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:layout_width="25.0dip" android:layout_height="25.0dip" android:src="@raw/ip_call_dial_entrance" />
+                <TextView android:textSize="16.0sp" android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/b75" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:background="#26000000" android:layout_width="fill_parent" android:layout_height="@dimen/dz" />
+    </LinearLayout>
+</LinearLayout>

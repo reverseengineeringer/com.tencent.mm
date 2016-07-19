@@ -4,8 +4,8 @@ import android.media.AudioTrack;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnErrorListener;
 import com.tencent.mm.compatible.util.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class j$2
   implements MediaPlayer.OnErrorListener
@@ -14,37 +14,37 @@ final class j$2
   
   public final boolean onError(MediaPlayer paramMediaPlayer, int paramInt1, int paramInt2)
   {
-    u.d("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "onError");
-    if (chA.apl != null) {
-      chA.apl.oV();
+    v.d("MicroMsg.SpeexPlayer", "onError");
+    if (ccR.aaD != null) {
+      ccR.aaD.nn();
     }
-    if (chA.chm != null) {
-      chA.chm.onError();
+    if (ccR.ccD != null) {
+      ccR.ccD.onError();
     }
     try
     {
-      chA.status = -1;
-      if (chA.chk != null)
+      ccR.status = -1;
+      if (ccR.ccB != null)
       {
-        chA.chk.stop();
-        chA.chk.release();
-        chA.chk = null;
+        ccR.ccB.stop();
+        ccR.ccB.release();
+        ccR.ccB = null;
       }
       try
       {
-        j.a(chA);
+        j.a(ccR);
         return false;
       }
       catch (InterruptedException paramMediaPlayer)
       {
-        u.e("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "exception:%s", new Object[] { ay.b(paramMediaPlayer) });
+        v.e("MicroMsg.SpeexPlayer", "exception:%s", new Object[] { be.f(paramMediaPlayer) });
         return false;
       }
       return false;
     }
     catch (Exception paramMediaPlayer)
     {
-      u.e("!32@/B4Tb64lLpIhRvBTRu3E+v293mD6cw6R", "setErrorListener File[" + chA.anC + "] ErrMsg[" + paramMediaPlayer.getStackTrace() + "]");
+      v.e("MicroMsg.SpeexPlayer", "setErrorListener File[" + ccR.aaq + "] ErrMsg[" + paramMediaPlayer.getStackTrace() + "]");
     }
   }
 }

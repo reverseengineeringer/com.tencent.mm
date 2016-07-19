@@ -6,9 +6,9 @@ import android.widget.TextView;
 
 final class d$a
 {
-  TextView ftN;
-  CheckBox ftO;
-  RadioButton ftP;
+  TextView fCS;
+  CheckBox fCT;
+  RadioButton fCU;
 }
 
 /* Location:

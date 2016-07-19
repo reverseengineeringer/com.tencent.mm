@@ -1,6 +1,7 @@
 package com.tencent.mm.plugin.sns.ui;
 
 import android.widget.TextView;
+import com.tencent.mm.plugin.sns.ui.widget.SnsPostDescPreloadTextView;
 
 final class CollapsibleTextView$1
   implements Runnable
@@ -9,11 +10,11 @@ final class CollapsibleTextView$1
   
   public final void run()
   {
-    if ((gXu.gXm != null) && ((gXu.gXm.getTag() instanceof aj)) && (gXu.gXm.getTag()).gPn.equals(CollapsibleTextView.a(gXu))))
+    if ((hkG.hky != null) && ((hkG.hky.getTag() instanceof an)) && (hkG.hky.getTag()).auk.equals(CollapsibleTextView.a(hkG))))
     {
-      gXu.gXm.setMaxLines(6);
-      gXu.gXo.setVisibility(0);
-      gXu.gXo.setText(CollapsibleTextView.b(gXu));
+      hkG.hky.setMaxLines(6);
+      hkG.hkA.setVisibility(0);
+      hkG.hkA.setText(CollapsibleTextView.b(hkG));
     }
   }
 }

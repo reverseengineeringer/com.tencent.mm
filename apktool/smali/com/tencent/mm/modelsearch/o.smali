@@ -12,7 +12,7 @@
 
 
 # virtual methods
-.method public abstract Ce()Z
+.method public abstract Cl()Z
 .end method
 
 .method public abstract a(ILcom/tencent/mm/modelsearch/o$a;)Lcom/tencent/mm/modelsearch/o$a;

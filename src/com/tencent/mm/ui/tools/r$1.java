@@ -1,45 +1,45 @@
 package com.tencent.mm.ui.tools;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class r$1
   implements ActionBarSearchView.b
 {
   r$1(r paramr) {}
   
-  public final void AD(String paramString)
+  public final void CE(String paramString)
   {
-    if (!lxI.lxv) {
-      u.v(lxI.TAG, "onSearchTextChange %s, but not in searching", new Object[] { paramString });
+    if (!lYx.lYk) {
+      v.v(lYx.TAG, "onSearchTextChange %s, but not in searching", new Object[] { paramString });
     }
-    while (lxI.lxA == null) {
+    while (lYx.lYp == null) {
       return;
     }
-    lxI.lxA.kF(paramString);
+    lYx.lYp.lo(paramString);
   }
   
-  public final void Gf()
+  public final void GC()
   {
-    if (lxI.lxA != null) {
-      lxI.lxA.Gf();
+    if (lYx.lYp != null) {
+      lYx.lYp.GC();
     }
   }
   
-  public final void bim()
+  public final void boj()
   {
-    if (lxI.lxA != null) {
-      lxI.lxA.Gg();
+    if (lYx.lYp != null) {
+      lYx.lYp.GD();
     }
   }
   
-  public final void bin()
+  public final void bok()
   {
-    if (!lxI.lxv)
+    if (!lYx.lYk)
     {
-      u.v(lxI.TAG, "onVoiceSearchRequired, but not in searching");
+      v.v(lYx.TAG, "onVoiceSearchRequired, but not in searching");
       return;
     }
-    lxI.aSU();
+    lYx.aXN();
   }
 }
 

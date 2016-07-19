@@ -4,7 +4,7 @@ public abstract interface MobileInputUI$b
 {
   public abstract void a(MobileInputUI paramMobileInputUI);
   
-  public abstract void qp(int paramInt);
+  public abstract void sh(int paramInt);
   
   public abstract void start();
   

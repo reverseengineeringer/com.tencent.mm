@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hnc:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
+.field final synthetic hDx:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 233
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;->hnc:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
+    .line 290
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;->hDx:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,20 +42,20 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 236
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;->hnc:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
+    .line 293
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;->hDx:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;->hnc:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;->hDx:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;->f(Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;)Z
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;->j(Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;->hnc:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;->hDx:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;->g(Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;)[Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;->k(Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;)[Ljava/lang/String;
 
     move-result-object v0
 
@@ -66,14 +66,14 @@
 
     invoke-static {v1, v3, v0, v3, v2}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/ui/base/g$c;)Landroid/app/Dialog;
 
-    .line 259
+    .line 316
     return-void
 
-    .line 236
+    .line 293
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;->hnc:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;->hDx:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;->h(Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;)[Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;->l(Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;)[Ljava/lang/String;
 
     move-result-object v0
 

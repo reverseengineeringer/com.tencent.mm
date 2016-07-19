@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public kzR:Lcom/tencent/mm/ui/applet/SecurityImage;
+.field public kYX:Lcom/tencent/mm/ui/applet/SecurityImage;
 
 
 # direct methods
@@ -31,5 +31,5 @@
 
 
 # virtual methods
-.method public abstract bby()V
+.method public abstract bgK()V
 .end method

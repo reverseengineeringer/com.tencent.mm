@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/white" android:paddingLeft="@dimen/hb" android:paddingTop="@dimen/hb" android:paddingRight="@dimen/hb" android:paddingBottom="@dimen/hb" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/h4" android:textColor="@color/ha" android:gravity="center|left" android:id="@id/cp1" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="@string/dbs" android:layout_alignBottom="@id/co9" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <TextView android:textSize="@dimen/h4" android:textColor="#ff111111" android:gravity="center|right" android:id="@id/co9" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/cp1" />
+    <TextView android:textSize="@dimen/h4" android:textColor="@color/ha" android:gravity="center|left" android:id="@id/coe" android:layout_width="90.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/db4" android:layout_below="@id/cp1" android:layout_alignParentLeft="true" />
+    <TextView android:textSize="@dimen/h4" android:textColor="#ff111111" android:gravity="center|right" android:id="@id/cof" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/coe" android:layout_below="@id/co9" android:layout_alignTop="@id/coe" android:lineSpacingExtra="6.0dip" />
+</RelativeLayout>

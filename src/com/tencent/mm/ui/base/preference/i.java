@@ -17,53 +17,53 @@ import com.tencent.mm.ui.o;
 public abstract class i
   extends o
 {
-  private SharedPreferences bxg;
-  private boolean dOw = false;
-  public ListView gWB;
-  private boolean hyq = false;
-  public h kLL;
+  private SharedPreferences bpi;
+  private boolean dQe = false;
+  public ListView eLC;
+  private boolean hQe = false;
+  public h lla;
   
-  public static boolean bds()
+  public static boolean biZ()
   {
     return false;
   }
   
-  public abstract int Gn();
+  public abstract int GK();
   
   public abstract boolean a(f paramf, Preference paramPreference);
   
   protected final int getLayoutId()
   {
-    return 2131363219;
+    return 2130904028;
   }
   
   public void onActivityCreated(Bundle paramBundle)
   {
     super.onActivityCreated(paramBundle);
-    bxg = Gg(getActivity().getPackageName() + "_preferences");
-    kLL = new h(koJ.kpc, bxg);
-    gWB = ((ListView)findViewById(16908298));
-    kLL.b(new Preference.a()
+    bpi = Iv(y().getPackageName() + "_preferences");
+    lla = new h(kNN.kOg, bpi);
+    eLC = ((ListView)findViewById(16908298));
+    lla.b(new Preference.a()
     {
       public final boolean a(Preference paramAnonymousPreference, Object paramAnonymousObject)
       {
-        if ((!i.a(i.this)) && (paramAnonymousPreference.isEnabled()) && (kMm))
+        if ((!i.a(i.this)) && (paramAnonymousPreference.isEnabled()) && (llB))
         {
           i.a(i.this, true);
           if (!(paramAnonymousPreference instanceof CheckBoxPreference)) {
             break label155;
           }
           paramAnonymousObject = (CheckBoxPreference)paramAnonymousPreference;
-          kKS = ((CheckBoxPreference)paramAnonymousObject).isChecked();
-          if (kMo) {
-            i.b(i.this).edit().putBoolean(cln, ((CheckBoxPreference)paramAnonymousObject).isChecked()).commit();
+          lkh = ((CheckBoxPreference)paramAnonymousObject).isChecked();
+          if (llD) {
+            i.b(i.this).edit().putBoolean(cgq, ((CheckBoxPreference)paramAnonymousObject).isChecked()).commit();
           }
           i.c(i.this);
         }
         label155:
         for (int i = 1;; i = 0)
         {
-          if (cln != null) {
+          if (cgq != null) {
             a(i.d(i.this), paramAnonymousPreference);
           }
           if (i != 0) {
@@ -74,14 +74,14 @@ public abstract class i
         }
       }
     });
-    int i = Gn();
+    int i = GK();
     if (i != -1) {
-      kLL.addPreferencesFromResource(i);
+      lla.addPreferencesFromResource(i);
     }
-    gWB.setAdapter(kLL);
-    gWB.setOnItemClickListener(new AdapterView.OnItemClickListener()
+    eLC.setAdapter(lla);
+    eLC.setOnItemClickListener(new AdapterView.OnItemClickListener()
     {
-      public final void onItemClick(final AdapterView paramAnonymousAdapterView, final View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+      public final void onItemClick(final AdapterView<?> paramAnonymousAdapterView, final View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
       {
         if (paramAnonymousInt < i.e(i.this).getHeaderViewsCount()) {}
         do
@@ -91,18 +91,18 @@ public abstract class i
             return;
             int i = i.e(i.this).getHeaderViewsCount();
             paramAnonymousAdapterView = (Preference)i.d(i.this).getItem(paramAnonymousInt - i);
-          } while ((!paramAnonymousAdapterView.isEnabled()) || (!kMm) || ((paramAnonymousAdapterView instanceof CheckBoxPreference)));
+          } while ((!paramAnonymousAdapterView.isEnabled()) || (!llB) || ((paramAnonymousAdapterView instanceof CheckBoxPreference)));
           if ((paramAnonymousAdapterView instanceof DialogPreference))
           {
             paramAnonymousView = (DialogPreference)paramAnonymousAdapterView;
             paramAnonymousView.showDialog();
-            kLa = new DialogPreference.a()
+            lkp = new DialogPreference.a()
             {
-              public final void bdp()
+              public final void biW()
               {
                 i.c(i.this);
-                if (paramAnonymousViewkMo) {
-                  i.b(i.this).edit().putString(paramAnonymousAdapterViewcln, paramAnonymousView.getValue()).commit();
+                if (paramAnonymousViewllD) {
+                  i.b(i.this).edit().putString(paramAnonymousAdapterViewcgq, paramAnonymousView.getValue()).commit();
                 }
                 i.d(i.this).notifyDataSetChanged();
               }
@@ -112,25 +112,25 @@ public abstract class i
           {
             paramAnonymousView = (EditPreference)paramAnonymousAdapterView;
             paramAnonymousView.showDialog();
-            kLc = new EditPreference.a()
+            lkr = new EditPreference.a()
             {
-              public final void bdp()
+              public final void biW()
               {
                 i.c(i.this);
-                if (paramAnonymousViewkMo) {
-                  i.b(i.this).edit().putString(paramAnonymousAdapterViewcln, paramAnonymousViewvalue).commit();
+                if (paramAnonymousViewllD) {
+                  i.b(i.this).edit().putString(paramAnonymousAdapterViewcgq, paramAnonymousViewvalue).commit();
                 }
                 i.d(i.this).notifyDataSetChanged();
               }
             };
           }
-        } while (cln == null);
+        } while (cgq == null);
         a(i.d(i.this), paramAnonymousAdapterView);
       }
     });
-    gWB.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener()
+    eLC.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener()
     {
-      public final boolean onItemLongClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+      public final boolean onItemLongClick(AdapterView<?> paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
       {
         if (paramAnonymousInt < i.e(i.this).getHeaderViewsCount()) {
           return false;
@@ -139,12 +139,12 @@ public abstract class i
         i.d(i.this).getItem(paramAnonymousInt - i);
         i.d(i.this);
         i.e(i.this);
-        return i.bds();
+        return i.biZ();
       }
     });
   }
   
-  public boolean onContextItemSelected(MenuItem paramMenuItem)
+  public final boolean onContextItemSelected(MenuItem paramMenuItem)
   {
     return super.onContextItemSelected(paramMenuItem);
   }
@@ -152,7 +152,7 @@ public abstract class i
   public void onResume()
   {
     super.onResume();
-    kLL.notifyDataSetChanged();
+    lla.notifyDataSetChanged();
   }
 }
 

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hiw:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
+.field final synthetic hxl:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 154
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter$5;->hiw:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter$5;->hxl:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final ahA()V
+.method public final akl()V
     .locals 0
 
     .prologue
@@ -44,22 +44,20 @@
     return-void
 .end method
 
-.method public final ahB()V
+.method public final akm()V
     .locals 4
 
     .prologue
     const/16 v3, 0x43
 
     .line 165
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter$5;->hiw:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter$5;->hxl:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->b(Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;)Lcom/tencent/mm/ui/widget/MMEditText;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/MMEditText;->getInputConnection()Landroid/view/inputmethod/InputConnection;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/tencent/mm/ui/widget/MMEditText;->mfQ:Landroid/view/inputmethod/InputConnection;
 
     new-instance v1, Landroid/view/KeyEvent;
 
@@ -70,15 +68,13 @@
     invoke-interface {v0, v1}, Landroid/view/inputmethod/InputConnection;->sendKeyEvent(Landroid/view/KeyEvent;)Z
 
     .line 166
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter$5;->hiw:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter$5;->hxl:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->b(Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;)Lcom/tencent/mm/ui/widget/MMEditText;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/MMEditText;->getInputConnection()Landroid/view/inputmethod/InputConnection;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/tencent/mm/ui/widget/MMEditText;->mfQ:Landroid/view/inputmethod/InputConnection;
 
     new-instance v1, Landroid/view/KeyEvent;
 
@@ -98,13 +94,13 @@
     .prologue
     .line 172
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter$5;->hiw:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter$5;->hxl:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->b(Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;)Lcom/tencent/mm/ui/widget/MMEditText;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/widget/MMEditText;->HO(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/widget/MMEditText;->Kd(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -119,7 +115,7 @@
     goto :goto_0
 .end method
 
-.method public final dr(Z)V
+.method public final dq(Z)V
     .locals 0
 
     .prologue

@@ -1,6 +1,7 @@
 package com.tencent.mm.plugin.sns.ui;
 
 import android.content.Context;
+import android.os.Looper;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,136 +9,140 @@ import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TextView.BufferType;
-import com.tencent.mm.plugin.sns.h.k;
 import com.tencent.mm.plugin.sns.ui.c.b;
-import com.tencent.mm.pluginsdk.ui.d.e;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.sns.ui.widget.SnsPostDescPreloadTextView;
+import com.tencent.mm.pluginsdk.ui.d.h;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.p;
 import java.util.HashMap;
 
 public class CollapsibleTextView
   extends LinearLayout
 {
-  private String axC;
+  private String ajJ;
+  private String auk;
   private Context context;
-  private boolean gHq = false;
-  private String gPn;
-  private int gWp = 0;
-  protected SnsTextView gXm;
-  protected SnsTextView gXn;
-  protected TextView gXo;
-  private boolean gXp = true;
-  private String gXq;
-  private String gXr;
-  private HashMap gXs;
-  private Runnable gXt = new Runnable()
+  private boolean gOv = false;
+  private ac handler = new ac(Looper.getMainLooper());
+  private int hjL = 0;
+  protected TextView hkA;
+  private boolean hkB = true;
+  private String hkC;
+  private String hkD;
+  private HashMap<String, Integer> hkE;
+  private Runnable hkF = new Runnable()
   {
     public final void run()
     {
-      if ((gXm != null) && ((gXm.getTag() instanceof aj)) && (gXm.getTag()).gPn.equals(CollapsibleTextView.a(CollapsibleTextView.this))))
+      if ((hky != null) && ((hky.getTag() instanceof an)) && (hky.getTag()).auk.equals(CollapsibleTextView.a(CollapsibleTextView.this))))
       {
-        gXm.setMaxLines(6);
-        gXo.setVisibility(0);
-        gXo.setText(CollapsibleTextView.b(CollapsibleTextView.this));
+        hky.setMaxLines(6);
+        hkA.setVisibility(0);
+        hkA.setText(CollapsibleTextView.b(CollapsibleTextView.this));
       }
     }
   };
-  private aa handler = new aa();
+  protected SnsPostDescPreloadTextView hky;
+  protected SnsTextView hkz;
   private CharSequence text;
   
   public CollapsibleTextView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
     context = paramContext;
-    gXq = context.getString(2131433040);
-    gXr = context.getString(2131433039);
-    paramContext = p.ee(context).inflate(2131362924, this);
+    hkC = context.getString(2131235408);
+    hkD = context.getString(2131235407);
+    paramContext = p.ef(context).inflate(2130903358, this);
     paramContext.setPadding(0, -3, 0, 0);
-    gXm = ((SnsTextView)paramContext.findViewById(2131165341));
-    gXo = ((TextView)paramContext.findViewById(2131168680));
-    gXn = ((SnsTextView)paramContext.findViewById(2131168785));
+    hky = ((SnsPostDescPreloadTextView)paramContext.findViewById(2131755333));
+    hkA = ((TextView)paramContext.findViewById(2131756222));
+    hkz = ((SnsTextView)paramContext.findViewById(2131756221));
   }
   
-  public final void a(int paramInt, CharSequence paramCharSequence, TextView.BufferType paramBufferType, HashMap paramHashMap, k paramk, an paraman, String paramString, boolean paramBoolean)
+  public final void a(int paramInt, CharSequence paramCharSequence, TextView.BufferType paramBufferType, HashMap<String, Integer> paramHashMap, String paramString1, String paramString2, aq paramaq, String paramString3, boolean paramBoolean)
   {
-    gXs = paramHashMap;
+    context = adL;
+    hkE = paramHashMap;
     text = paramCharSequence;
-    gHq = paramBoolean;
-    axC = paramk.aAl();
-    gPn = paramk.aAf();
-    gWp = paramInt;
-    gXn.setOriginText(paramString);
-    paramk = new aj(gPn, false, false, 1);
+    gOv = paramBoolean;
+    ajJ = paramString1;
+    auk = paramString2;
+    hjL = paramInt;
+    hkC = context.getString(2131235408);
+    hkD = context.getString(2131235407);
+    hkz.eUR = paramString3;
+    paramString2 = new an(auk, false, false, 1);
     if (paramInt == 0)
     {
-      gXm.setText(paramString);
-      gXn.setVisibility(8);
-      gXo.setVisibility(0);
-      gXm.setVisibility(0);
-      e.a(gXm, 2);
-      gXm.setTag(paramk);
-      if (paramHashMap.get(axC) == null)
+      hky.setText(paramString3);
+      hkz.setVisibility(8);
+      hkA.setVisibility(0);
+      hky.setVisibility(0);
+      paramCharSequence = new h(context);
+      hky.setOnTouchListener(paramCharSequence);
+      hky.setTag(paramString2);
+      if (paramHashMap.get(paramString1) == null)
       {
-        gXp = false;
-        gXo.setVisibility(8);
-        gXm.setMaxLines(7);
+        hkB = false;
+        hkA.setVisibility(8);
+        hky.setMaxLines(7);
         return;
       }
-      gXp = true;
-      switch (((Integer)paramHashMap.get(axC)).intValue())
+      hkB = true;
+      switch (((Integer)paramHashMap.get(paramString1)).intValue())
       {
       default: 
         return;
       case 0: 
-        gXo.setVisibility(8);
+        hkA.setVisibility(8);
         return;
       case 1: 
-        gXm.setMaxLines(6);
-        gXo.setVisibility(0);
-        gXo.setText(gXq);
+        hky.setMaxLines(6);
+        hkA.setVisibility(0);
+        hkA.setText(hkC);
         return;
       }
-      gXm.setMaxLines(Integer.MAX_VALUE);
-      gXo.setVisibility(0);
-      gXo.setText(gXr);
+      hky.setMaxLines(Integer.MAX_VALUE);
+      hkA.setVisibility(0);
+      hkA.setText(hkD);
       return;
     }
-    gXn.setText(paramCharSequence, paramBufferType);
-    gXn.setTag(paramk);
-    gXn.setVisibility(0);
-    gXo.setVisibility(8);
-    gXm.setVisibility(8);
-    gXn.setOnClickListener(gRg.hpj);
+    hkz.setText(paramCharSequence, paramBufferType);
+    hkz.setTag(paramString2);
+    hkz.setVisibility(0);
+    hkA.setVisibility(8);
+    hky.setVisibility(8);
+    hkz.setOnClickListener(gZj.hFG);
   }
   
-  public int getSpreadHeight()
+  public final int aDN()
   {
-    u.i("!44@/B4Tb64lLpKdZdqXmE3ffB9CB2u2tCIBL1PtadUVY0Y=", "count:" + gXm.getLineCount() + "  height:" + gXm.getLineHeight());
-    return (gXm.getLineCount() - 6) * gXm.getLineHeight();
+    v.i("MicroMsg.CollapsibleTextView", "count:" + hky.getLineCount() + "  height:" + hky.getLineHeight());
+    return (hky.getLineCount() - 6) * hky.getLineHeight();
+  }
+  
+  public final void d(View.OnClickListener paramOnClickListener)
+  {
+    if (hkA != null) {
+      hkA.setOnClickListener(paramOnClickListener);
+    }
   }
   
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
-    if ((gWp != 0) || (gHq) || (gXp)) {
+    if ((hjL != 0) || (gOv) || (hkB)) {
       return;
     }
-    gXp = true;
-    if (gXm.getLineCount() <= 6)
+    hkB = true;
+    if (hky.getLineCount() <= 6)
     {
-      gXs.put(axC, Integer.valueOf(0));
+      hkE.put(ajJ, Integer.valueOf(0));
       return;
     }
-    gXs.put(axC, Integer.valueOf(1));
-    handler.post(gXt);
-  }
-  
-  public void setOpClickListener(View.OnClickListener paramOnClickListener)
-  {
-    if (gXo != null) {
-      gXo.setOnClickListener(paramOnClickListener);
-    }
+    hkE.put(ajJ, Integer.valueOf(1));
+    handler.post(hkF);
   }
 }
 

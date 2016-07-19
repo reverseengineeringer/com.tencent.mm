@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/LoginHistoryUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/LoginHistoryUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+.field final synthetic kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 510
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$26;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$26;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 514
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$26;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$26;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->Zi()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->aby()V
 
     .line 515
     return-void

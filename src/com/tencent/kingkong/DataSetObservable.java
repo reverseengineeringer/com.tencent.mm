@@ -3,18 +3,19 @@ package com.tencent.kingkong;
 import java.util.ArrayList;
 
 public class DataSetObservable
-  extends Observable
+  extends Observable<DataSetObserver>
 {
   public void notifyChanged()
   {
     synchronized (mObservers)
     {
       int i = mObservers.size() - 1;
-      if (i < 0) {
-        return;
+      while (i >= 0)
+      {
+        ((DataSetObserver)mObservers.get(i)).onChanged();
+        i -= 1;
       }
-      ((DataSetObserver)mObservers.get(i)).onChanged();
-      i -= 1;
+      return;
     }
   }
   
@@ -23,11 +24,12 @@ public class DataSetObservable
     synchronized (mObservers)
     {
       int i = mObservers.size() - 1;
-      if (i < 0) {
-        return;
+      while (i >= 0)
+      {
+        ((DataSetObserver)mObservers.get(i)).onInvalidated();
+        i -= 1;
       }
-      ((DataSetObserver)mObservers.get(i)).onInvalidated();
-      i -= 1;
+      return;
     }
   }
 }

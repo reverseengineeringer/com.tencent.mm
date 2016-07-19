@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic chj:Lcom/tencent/mm/modelvoice/i$a;
+.field final synthetic ccA:Lcom/tencent/mm/modelvoice/i$a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 381
-    iput-object p1, p0, Lcom/tencent/mm/modelvoice/i$a$1;->chj:Lcom/tencent/mm/modelvoice/i$a;
+    iput-object p1, p0, Lcom/tencent/mm/modelvoice/i$a$1;->ccA:Lcom/tencent/mm/modelvoice/i$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 384
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -51,15 +51,15 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/modelvoice/i$a$1;->chj:Lcom/tencent/mm/modelvoice/i$a;
+    iget-object v2, p0, Lcom/tencent/mm/modelvoice/i$a$1;->ccA:Lcom/tencent/mm/modelvoice/i$a;
 
-    iget-object v2, v2, Lcom/tencent/mm/modelvoice/i$a;->chi:Lcom/tencent/mm/modelvoice/i;
+    iget-object v2, v2, Lcom/tencent/mm/modelvoice/i$a;->ccz:Lcom/tencent/mm/modelvoice/i;
 
     invoke-static {v2}, Lcom/tencent/mm/modelvoice/i;->i(Lcom/tencent/mm/modelvoice/i;)Lcom/tencent/mm/c/c/b;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/tencent/mm/c/c/b;->arA:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/c/c/b;->adi:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

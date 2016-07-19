@@ -1,9 +1,9 @@
-.class final Lcom/tencent/mm/model/c$15;
+.class public final Lcom/tencent/mm/model/c$15;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/az/g$b;
+.implements Ljava/io/FilenameFilter;
 
 
 # annotations
@@ -12,17 +12,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
+# instance fields
+.field final synthetic bsO:Lcom/tencent/mm/model/c;
+
+
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>(Lcom/tencent/mm/model/c;)V
     .locals 0
 
     .prologue
-    .line 1216
+    .line 561
+    iput-object p1, p0, Lcom/tencent/mm/model/c$15;->bsO:Lcom/tencent/mm/model/c;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,12 +36,16 @@
 
 
 # virtual methods
-.method public final lr()[Ljava/lang/String;
+.method public final accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 1
 
     .prologue
-    .line 1219
-    sget-object v0, Lcom/tencent/mm/storage/q;->aoY:[Ljava/lang/String;
+    .line 564
+    const-string/jumbo v0, "EnMicroMsg.dberr"
 
-    return-object v0
+    invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
 .end method

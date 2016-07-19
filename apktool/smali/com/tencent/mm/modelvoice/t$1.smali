@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/modelvoice/t;->bp(Ljava/lang/String;)Z
+    value = Lcom/tencent/mm/modelvoice/t;->bh(Ljava/lang/String;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic chQ:Lcom/tencent/mm/modelvoice/t;
+.field final synthetic cdh:Lcom/tencent/mm/modelvoice/t;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 67
-    iput-object p1, p0, Lcom/tencent/mm/modelvoice/t$1;->chQ:Lcom/tencent/mm/modelvoice/t;
+    iput-object p1, p0, Lcom/tencent/mm/modelvoice/t$1;->cdh:Lcom/tencent/mm/modelvoice/t;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,27 +41,27 @@
 
     .prologue
     .line 70
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/t$1;->chQ:Lcom/tencent/mm/modelvoice/t;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/t$1;->cdh:Lcom/tencent/mm/modelvoice/t;
 
-    invoke-static {v0}, Lcom/tencent/mm/modelvoice/t;->a(Lcom/tencent/mm/modelvoice/t;)Lcom/tencent/mm/r/g$a;
+    invoke-static {v0}, Lcom/tencent/mm/modelvoice/t;->a(Lcom/tencent/mm/modelvoice/t;)Lcom/tencent/mm/t/g$a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 71
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/t$1;->chQ:Lcom/tencent/mm/modelvoice/t;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/t$1;->cdh:Lcom/tencent/mm/modelvoice/t;
 
-    invoke-static {v0}, Lcom/tencent/mm/modelvoice/t;->a(Lcom/tencent/mm/modelvoice/t;)Lcom/tencent/mm/r/g$a;
+    invoke-static {v0}, Lcom/tencent/mm/modelvoice/t;->a(Lcom/tencent/mm/modelvoice/t;)Lcom/tencent/mm/t/g$a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/r/g$a;->onError()V
+    invoke-interface {v0}, Lcom/tencent/mm/t/g$a;->onError()V
 
     .line 74
     :cond_0
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/t$1;->chQ:Lcom/tencent/mm/modelvoice/t;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/t$1;->cdh:Lcom/tencent/mm/modelvoice/t;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/t;->b(Lcom/tencent/mm/modelvoice/t;)Lcom/tencent/mm/c/b/b;
 
@@ -70,7 +70,7 @@
     invoke-virtual {v0}, Lcom/tencent/mm/c/b/b;->release()V
 
     .line 75
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/t$1;->chQ:Lcom/tencent/mm/modelvoice/t;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/t$1;->cdh:Lcom/tencent/mm/modelvoice/t;
 
     invoke-static {v0}, Lcom/tencent/mm/modelvoice/t;->c(Lcom/tencent/mm/modelvoice/t;)I
     :try_end_0
@@ -85,7 +85,7 @@
     move-exception v0
 
     .line 77
-    const-string/jumbo v1, "!24@J/TNaXmTnT2mD815LCdsDw=="
+    const-string/jumbo v1, "VoiceRecorder"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -93,9 +93,9 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/tencent/mm/modelvoice/t$1;->chQ:Lcom/tencent/mm/modelvoice/t;
+    iget-object v3, p0, Lcom/tencent/mm/modelvoice/t$1;->cdh:Lcom/tencent/mm/modelvoice/t;
 
-    iget-object v3, v3, Lcom/tencent/mm/modelvoice/t;->anC:Ljava/lang/String;
+    iget-object v3, v3, Lcom/tencent/mm/modelvoice/t;->aaq:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -125,7 +125,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

@@ -1,129 +1,234 @@
 package com.tencent.mm.sdk.platformtools;
 
-import android.os.Debug;
-import android.os.Handler;
 import android.os.Process;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
+import com.tencent.mm.sdk.b.a;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import java.util.HashMap;
+import java.util.Map;
+import junit.framework.Assert;
 
 public final class ag
-  implements Runnable
+  implements Thread.UncaughtExceptionHandler
 {
-  private static final String jWp;
-  private static final String jWq;
-  long endTime;
-  final Handler handler;
-  String jVH;
-  final Runnable jWd;
-  final String jWe;
-  final Object jWf;
-  long jWg;
-  final a jWh;
-  long jWi;
-  long jWj;
-  long jWk;
-  long jWl;
-  long jWm;
-  long jWn;
-  float jWo = -1.0F;
-  int priority;
-  boolean started = false;
-  final Thread thread;
+  private static ag kvK = null;
+  private c kvL = null;
+  private a kvM = null;
+  public a kvN = null;
+  public Map<String, b> kvO = new HashMap();
+  private Thread.UncaughtExceptionHandler kvP = null;
+  private boolean kvQ = false;
   
-  static
+  private ag()
   {
-    StringBuilder localStringBuilder = new StringBuilder();
-    localStringBuilder.append("taskName = %s");
-    localStringBuilder.append("|token = %s");
-    localStringBuilder.append("|handler = %s");
-    localStringBuilder.append("|threadName = %s");
-    localStringBuilder.append("|threadId = %d");
-    localStringBuilder.append("|priority = %d");
-    localStringBuilder.append("|addTime = %d");
-    localStringBuilder.append("|delayTime = %d");
-    localStringBuilder.append("|usedTime = %d");
-    localStringBuilder.append("|cpuTime = %d");
-    localStringBuilder.append("|started = %b");
-    jWp = localStringBuilder.toString();
-    localStringBuilder = new StringBuilder();
-    localStringBuilder.append("taskName = %s");
-    localStringBuilder.append(" | addTime = %s");
-    localStringBuilder.append(" | endTime = %s");
-    localStringBuilder.append(" | usedTime = %d");
-    localStringBuilder.append(" | cpuTime = %d");
-    localStringBuilder.append(" | threadCpuTime = %d");
-    localStringBuilder.append(" | totalCpuTime = %d");
-    localStringBuilder.append(" | threadCpuRate = %.1f");
-    jWq = localStringBuilder.toString();
+    Thread.setDefaultUncaughtExceptionHandler(this);
   }
   
-  ag(Thread paramThread, Handler paramHandler, Runnable paramRunnable, Object paramObject, a parama)
+  private static String Fh(String paramString)
   {
-    thread = paramThread;
-    if (paramThread != null)
-    {
-      jVH = paramThread.getName();
-      jWg = paramThread.getId();
-      priority = paramThread.getPriority();
+    if (paramString == null) {
+      paramString = null;
     }
-    handler = paramHandler;
-    jWd = paramRunnable;
-    paramHandler = paramRunnable.getClass().getName();
-    paramRunnable = paramRunnable.toString();
-    paramThread = paramHandler;
-    if (!ay.kz(paramRunnable))
+    label66:
+    for (;;)
     {
-      int i = paramRunnable.indexOf('|');
-      paramThread = paramHandler;
-      if (i > 0) {
-        paramThread = paramHandler + "_" + paramRunnable.substring(i + 1);
+      return paramString;
+      char[] arrayOfChar = paramString.toCharArray();
+      if (arrayOfChar == null) {
+        return null;
+      }
+      int i = 0;
+      if (i < arrayOfChar.length) {
+        if (arrayOfChar[i] > '') {
+          arrayOfChar[i] = '\000';
+        }
+      }
+      for (int j = 1;; j = 0)
+      {
+        if (j == 0) {
+          break label66;
+        }
+        return new String(arrayOfChar, 0, i);
+        i += 1;
+        break;
       }
     }
-    jWe = paramThread;
-    jWf = paramObject;
-    jWh = parama;
-    jWi = System.currentTimeMillis();
   }
   
-  public final String dump(boolean paramBoolean)
+  public static void a(a parama)
   {
-    if (paramBoolean) {
-      return String.format(jWp, new Object[] { jWe, jWf, handler, jVH, Long.valueOf(jWg), Integer.valueOf(priority), Long.valueOf(jWi), Long.valueOf(jWj), Long.valueOf(jWk), Long.valueOf(jWl), Boolean.valueOf(started) });
-    }
-    return String.format(jWq, new Object[] { jWe, new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date(jWi)), new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date(endTime)), Long.valueOf(jWk), Long.valueOf(jWl), Long.valueOf(jWm), Long.valueOf(jWn), Float.valueOf(jWo) });
-  }
-  
-  public final void run()
-  {
-    int i = Process.myTid();
-    new StringBuilder("/proc/self/task/").append(i).append("/stat");
-    jWk = System.currentTimeMillis();
-    jWl = Debug.threadCpuTimeNanos();
-    jWm = -1L;
-    jWn = -1L;
-    started = true;
-    jWd.run();
-    jWm = (-1L - jWm);
-    jWn = (-1L - jWn);
-    endTime = System.currentTimeMillis();
-    jWk = (endTime - jWk);
-    jWl = ((Debug.threadCpuTimeNanos() - jWl) / 1000000L);
-    if (jWn != 0L) {
-      jWo = ((float)(100L * jWm) / (float)jWn);
-    }
-    if (jWh != null)
+    try
     {
-      jWh.a(jWd, this);
-      jWh.a(this, thread, jWk, jWl, jWo);
+      if (kvK == null) {
+        kvK = new ag();
+      }
+      kvKkvM = parama;
+      return;
     }
+    finally {}
+  }
+  
+  public static void a(a parama)
+  {
+    try
+    {
+      if (kvK == null) {
+        kvK = new ag();
+      }
+      kvKkvN = parama;
+      return;
+    }
+    finally {}
+  }
+  
+  public static void a(c paramc)
+  {
+    try
+    {
+      if (kvK == null) {
+        kvK = new ag();
+      }
+      kvKkvL = paramc;
+      return;
+    }
+    finally {}
+  }
+  
+  public static void a(String paramString, b paramb)
+  {
+    try
+    {
+      if (kvK == null) {
+        kvK = new ag();
+      }
+      kvKkvO.put(paramString, paramb);
+      return;
+    }
+    finally {}
+  }
+  
+  /* Error */
+  public static String g(Throwable paramThrowable)
+  {
+    // Byte code:
+    //   0: new 93	java/io/ByteArrayOutputStream
+    //   3: dup
+    //   4: invokespecial 94	java/io/ByteArrayOutputStream:<init>	()V
+    //   7: astore_1
+    //   8: new 96	java/io/PrintStream
+    //   11: dup
+    //   12: aload_1
+    //   13: invokespecial 99	java/io/PrintStream:<init>	(Ljava/io/OutputStream;)V
+    //   16: astore_2
+    //   17: aload_0
+    //   18: invokevirtual 105	java/lang/Throwable:getCause	()Ljava/lang/Throwable;
+    //   21: ifnull +11 -> 32
+    //   24: aload_0
+    //   25: invokevirtual 105	java/lang/Throwable:getCause	()Ljava/lang/Throwable;
+    //   28: astore_0
+    //   29: goto -12 -> 17
+    //   32: aload_0
+    //   33: aload_2
+    //   34: invokevirtual 109	java/lang/Throwable:printStackTrace	(Ljava/io/PrintStream;)V
+    //   37: aload_1
+    //   38: invokevirtual 113	java/io/ByteArrayOutputStream:toString	()Ljava/lang/String;
+    //   41: invokestatic 115	com/tencent/mm/sdk/platformtools/ag:Fh	(Ljava/lang/String;)Ljava/lang/String;
+    //   44: astore_0
+    //   45: aload_1
+    //   46: invokevirtual 118	java/io/ByteArrayOutputStream:close	()V
+    //   49: aload_0
+    //   50: areturn
+    //   51: astore_0
+    //   52: aload_1
+    //   53: invokevirtual 118	java/io/ByteArrayOutputStream:close	()V
+    //   56: aload_0
+    //   57: athrow
+    //   58: astore_1
+    //   59: aload_0
+    //   60: areturn
+    //   61: astore_1
+    //   62: goto -6 -> 56
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	65	0	paramThrowable	Throwable
+    //   7	46	1	localByteArrayOutputStream	ByteArrayOutputStream
+    //   58	1	1	localIOException1	java.io.IOException
+    //   61	1	1	localIOException2	java.io.IOException
+    //   16	18	2	localPrintStream	PrintStream
+    // Exception table:
+    //   from	to	target	type
+    //   17	29	51	finally
+    //   32	45	51	finally
+    //   45	49	58	java/io/IOException
+    //   52	56	61	java/io/IOException
+  }
+  
+  public static void m(String paramString1, String paramString2, boolean paramBoolean)
+  {
+    try
+    {
+      a(paramString1, new b()
+      {
+        public final String bah()
+        {
+          return "subinfo=" + kvR;
+        }
+      });
+      Assert.assertTrue(paramString1, paramBoolean);
+      return;
+    }
+    finally
+    {
+      paramString1 = finally;
+      throw paramString1;
+    }
+  }
+  
+  public final void uncaughtException(Thread paramThread, Throwable paramThrowable)
+  {
+    if (kvQ) {
+      return;
+    }
+    kvQ = true;
+    try
+    {
+      ByteArrayOutputStream localByteArrayOutputStream = new ByteArrayOutputStream();
+      PrintStream localPrintStream = new PrintStream(localByteArrayOutputStream);
+      for (paramThread = paramThrowable; paramThread.getCause() != null; paramThread = paramThread.getCause()) {}
+      paramThread.printStackTrace(localPrintStream);
+      paramThread = Fh(localByteArrayOutputStream.toString());
+      if ((kvM != null) && (paramThread != null)) {
+        kvM.ft(paramThread);
+      }
+      if ((kvL != null) && (paramThread != null))
+      {
+        kvL.a(this, paramThread, paramThrowable);
+        kvN.iW();
+      }
+      localByteArrayOutputStream.close();
+      v.appenderClose();
+    }
+    catch (Exception paramThread)
+    {
+      for (;;) {}
+    }
+    Process.killProcess(Process.myPid());
+    System.exit(0);
   }
   
   public static abstract interface a
   {
-    public abstract void a(Runnable paramRunnable, ag paramag);
-    
-    public abstract void a(Runnable paramRunnable, Thread paramThread, long paramLong1, long paramLong2, float paramFloat);
+    public abstract void iW();
+  }
+  
+  public static abstract interface b
+  {
+    public abstract String bah();
+  }
+  
+  public static abstract interface c
+  {
+    public abstract void a(ag paramag, String paramString, Throwable paramThrowable);
   }
 }
 

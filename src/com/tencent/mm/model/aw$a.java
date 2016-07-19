@@ -2,69 +2,69 @@ package com.tencent.mm.model;
 
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class aw$a
 {
-  private int bCA;
-  private int bCy;
-  private int bCz;
+  private int bvI;
+  private int bvJ;
+  private int bvK;
   private int id;
-  
-  public final a cK(int paramInt)
-  {
-    bCy = paramInt;
-    return this;
-  }
-  
-  public final a cL(int paramInt)
-  {
-    bCz = paramInt;
-    return this;
-  }
-  
-  public final a cM(int paramInt)
-  {
-    bCA = paramInt;
-    return this;
-  }
   
   public final boolean commit()
   {
-    SharedPreferences.Editor localEditor = aw.a(aw.uB()).edit();
+    SharedPreferences.Editor localEditor = aw.a(aw.uD()).edit();
     if (id > 0)
     {
-      localEditor.putInt("!44@/B4Tb64lLpIq8/rz82HB73s3T0aShOZicGQMdPpMx80=style_id", id);
-      if (bCy <= 0) {
+      localEditor.putInt("MicroMsg.RegStyleStoragestyle_id", id);
+      if (bvI <= 0) {
         break label171;
       }
-      localEditor.putInt("!44@/B4Tb64lLpIq8/rz82HB73s3T0aShOZicGQMdPpMx80=new_flow", bCy);
+      localEditor.putInt("MicroMsg.RegStyleStoragenew_flow", bvI);
       label52:
-      if (bCz <= 0) {
+      if (bvJ <= 0) {
         break label183;
       }
-      localEditor.putInt("!44@/B4Tb64lLpIq8/rz82HB73s3T0aShOZicGQMdPpMx80=has_password", bCz);
+      localEditor.putInt("MicroMsg.RegStyleStoragehas_password", bvJ);
       label72:
-      if (bCA <= 0) {
+      if (bvK <= 0) {
         break label195;
       }
-      localEditor.putInt("!44@/B4Tb64lLpIq8/rz82HB73s3T0aShOZicGQMdPpMx80=has_AVATAR", bCA);
+      localEditor.putInt("MicroMsg.RegStyleStoragehas_AVATAR", bvK);
     }
     for (;;)
     {
-      u.i("!44@/B4Tb64lLpIq8/rz82HB73s3T0aShOZicGQMdPpMx80=", "id: " + id + " newFlow: " + bCy + "hasPassword:" + bCz + "hasAvatar:" + bCA);
+      v.i("MicroMsg.RegStyleStorage", "id: " + id + " newFlow: " + bvI + "hasPassword:" + bvJ + "hasAvatar:" + bvK);
       return localEditor.commit();
-      localEditor.remove("!44@/B4Tb64lLpIq8/rz82HB73s3T0aShOZicGQMdPpMx80=style_id");
+      localEditor.remove("MicroMsg.RegStyleStoragestyle_id");
       break;
       label171:
-      localEditor.remove("!44@/B4Tb64lLpIq8/rz82HB73s3T0aShOZicGQMdPpMx80=new_flow");
+      localEditor.remove("MicroMsg.RegStyleStoragenew_flow");
       break label52;
       label183:
-      localEditor.remove("!44@/B4Tb64lLpIq8/rz82HB73s3T0aShOZicGQMdPpMx80=has_password");
+      localEditor.remove("MicroMsg.RegStyleStoragehas_password");
       break label72;
       label195:
-      localEditor.remove("!44@/B4Tb64lLpIq8/rz82HB73s3T0aShOZicGQMdPpMx80=has_AVATAR");
+      localEditor.remove("MicroMsg.RegStyleStoragehas_AVATAR");
     }
+  }
+  
+  public final a dq(int paramInt)
+  {
+    bvI = paramInt;
+    return this;
+  }
+  
+  public final a dr(int paramInt)
+  {
+    bvJ = paramInt;
+    return this;
+  }
+  
+  public final a ds(int paramInt)
+  {
+    bvK = paramInt;
+    return this;
   }
 }
 

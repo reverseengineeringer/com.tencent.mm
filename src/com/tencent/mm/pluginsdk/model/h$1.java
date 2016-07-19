@@ -7,12 +7,12 @@ final class h$1
   
   public final void run()
   {
-    h.a locala = h.e(iAg);
-    h.a(iAg);
-    h.b(iAg);
-    h.c(iAg);
-    h.d(iAg);
-    locala.aPr();
+    h.a locala = h.e(iWF);
+    h.a(iWF);
+    h.b(iWF);
+    h.c(iWF);
+    h.d(iWF);
+    locala.aTX();
   }
 }
 

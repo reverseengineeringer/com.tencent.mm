@@ -3,19 +3,31 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/az/f$a;
+.implements Lcom/tencent/mm/bc/f$a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/h/f",
+        "<",
+        "Lcom/tencent/mm/storage/a/c;",
+        ">;",
+        "Lcom/tencent/mm/bc/f$a;"
+    }
+.end annotation
 
 
 # static fields
-.field public static final aoY:[Ljava/lang/String;
+.field public static final bkN:[Ljava/lang/String;
 
-.field private static cAP:[C
+.field private static cxK:[C
 
-.field private static khf:[I
+.field private static kHF:[I
 
 
 # instance fields
-.field public aoX:Lcom/tencent/mm/sdk/h/d;
+.field public bkP:Lcom/tencent/mm/sdk/h/d;
 
 
 # direct methods
@@ -30,7 +42,7 @@
 
     const/4 v1, 0x0
 
-    sget-object v2, Lcom/tencent/mm/storage/a/c;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    sget-object v2, Lcom/tencent/mm/storage/a/c;->bjR:Lcom/tencent/mm/sdk/h/c$a;
 
     const-string/jumbo v3, "EmojiInfo"
 
@@ -40,29 +52,29 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/storage/a/f;->aoY:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/storage/a/f;->bkN:[Ljava/lang/String;
 
-    .line 1365
+    .line 1427
     const/4 v0, 0x3
 
     new-array v0, v0, [I
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/tencent/mm/storage/a/f;->khf:[I
+    sput-object v0, Lcom/tencent/mm/storage/a/f;->kHF:[I
 
-    .line 1886
+    .line 1948
     const/16 v0, 0x10
 
     new-array v0, v0, [C
 
     fill-array-data v0, :array_1
 
-    sput-object v0, Lcom/tencent/mm/storage/a/f;->cAP:[C
+    sput-object v0, Lcom/tencent/mm/storage/a/f;->cxK:[C
 
     return-void
 
-    .line 1365
+    .line 1427
     nop
 
     :array_0
@@ -72,7 +84,7 @@
         0x8
     .end array-data
 
-    .line 1886
+    .line 1948
     :array_1
     .array-data 2
         0x30s
@@ -99,7 +111,7 @@
 
     .prologue
     .line 115
-    sget-object v0, Lcom/tencent/mm/storage/a/c;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    sget-object v0, Lcom/tencent/mm/storage/a/c;->bjR:Lcom/tencent/mm/sdk/h/c$a;
 
     const-string/jumbo v1, "EmojiInfo"
 
@@ -108,27 +120,27 @@
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/tencent/mm/sdk/h/f;-><init>(Lcom/tencent/mm/sdk/h/d;Lcom/tencent/mm/sdk/h/c$a;Ljava/lang/String;[Ljava/lang/String;)V
 
     .line 116
-    iput-object p1, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iput-object p1, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     .line 118
     return-void
 .end method
 
-.method private static P([B)Ljava/lang/String;
+.method private static W([B)Ljava/lang/String;
     .locals 4
 
     .prologue
-    .line 1889
+    .line 1951
     if-nez p0, :cond_0
 
-    .line 1890
+    .line 1952
     const/4 v0, 0x0
 
-    .line 1897
+    .line 1959
     :goto_0
     return-object v0
 
-    .line 1892
+    .line 1954
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -138,7 +150,7 @@
 
     invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 1893
+    .line 1955
     const/4 v0, 0x0
 
     :goto_1
@@ -146,8 +158,8 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 1894
-    sget-object v2, Lcom/tencent/mm/storage/a/f;->cAP:[C
+    .line 1956
+    sget-object v2, Lcom/tencent/mm/storage/a/f;->cxK:[C
 
     aget-byte v3, p0, v0
 
@@ -159,8 +171,8 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 1895
-    sget-object v2, Lcom/tencent/mm/storage/a/f;->cAP:[C
+    .line 1957
+    sget-object v2, Lcom/tencent/mm/storage/a/f;->cxK:[C
 
     aget-byte v3, p0, v0
 
@@ -170,12 +182,12 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 1893
+    .line 1955
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 1897
+    .line 1959
     :cond_1
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -186,21 +198,32 @@
 
 .method private static a([Ljava/io/InputStream;)Ljava/util/List;
     .locals 13
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([",
+            "Ljava/io/InputStream;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/storage/a/c;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     const/4 v2, 0x0
 
-    .line 848
+    .line 847
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 850
+    .line 849
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v0
 
-    .line 852
+    .line 851
     :try_start_0
     invoke-virtual {v0}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
@@ -208,26 +231,26 @@
 
     move v1, v2
 
-    .line 856
+    .line 855
     :goto_0
     if-gtz v1, :cond_4
 
     aget-object v0, p0, v1
 
-    .line 857
+    .line 856
     if-eqz v0, :cond_3
 
-    .line 858
+    .line 857
     invoke-virtual {v7, v0}, Ljavax/xml/parsers/DocumentBuilder;->parse(Ljava/io/InputStream;)Lorg/w3c/dom/Document;
 
     move-result-object v0
 
-    .line 862
+    .line 861
     invoke-interface {v0}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
     move-result-object v0
 
-    .line 863
+    .line 862
     const-string/jumbo v3, "catalog"
 
     invoke-interface {v0, v3}, Lorg/w3c/dom/Element;->getElementsByTagName(Ljava/lang/String;)Lorg/w3c/dom/NodeList;
@@ -236,7 +259,7 @@
 
     move v5, v2
 
-    .line 865
+    .line 864
     :goto_1
     invoke-interface {v8}, Lorg/w3c/dom/NodeList;->getLength()I
 
@@ -244,14 +267,14 @@
 
     if-ge v5, v0, :cond_3
 
-    .line 868
+    .line 867
     invoke-interface {v8, v5}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v0
 
     check-cast v0, Lorg/w3c/dom/Element;
 
-    .line 869
+    .line 868
     const-string/jumbo v3, "id"
 
     invoke-interface {v0, v3}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -266,7 +289,7 @@
 
     move-result v9
 
-    .line 879
+    .line 878
     const-string/jumbo v3, "emoji"
 
     invoke-interface {v0, v3}, Lorg/w3c/dom/Element;->getElementsByTagName(Ljava/lang/String;)Lorg/w3c/dom/NodeList;
@@ -275,7 +298,7 @@
 
     move v3, v2
 
-    .line 880
+    .line 879
     :goto_2
     invoke-interface {v10}, Lorg/w3c/dom/NodeList;->getLength()I
 
@@ -283,27 +306,27 @@
 
     if-ge v3, v0, :cond_2
 
-    .line 881
+    .line 880
     new-instance v11, Lcom/tencent/mm/storage/a/c;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rF()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rH()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {v11, v0}, Lcom/tencent/mm/storage/a/c;-><init>(Ljava/lang/String;)V
 
-    .line 882
+    .line 881
     invoke-interface {v10, v3}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v0
 
     check-cast v0, Lorg/w3c/dom/Element;
 
-    .line 883
+    .line 882
     const-string/jumbo v4, "md5"
 
     invoke-interface {v0, v4}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -312,24 +335,24 @@
 
     iput-object v4, v11, Lcom/tencent/mm/storage/a/c;->field_md5:Ljava/lang/String;
 
-    .line 885
-    invoke-virtual {v11}, Lcom/tencent/mm/storage/a/c;->aYz()Z
+    .line 884
+    invoke-virtual {v11}, Lcom/tencent/mm/storage/a/c;->bdS()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 886
+    .line 885
     iput v9, v11, Lcom/tencent/mm/storage/a/c;->field_catalog:I
 
-    .line 887
+    .line 886
     invoke-static {v9}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v4
 
     iput-object v4, v11, Lcom/tencent/mm/storage/a/c;->field_groupId:Ljava/lang/String;
 
-    .line 888
+    .line 887
     const-string/jumbo v4, "name"
 
     invoke-interface {v0, v4}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -338,7 +361,7 @@
 
     iput-object v4, v11, Lcom/tencent/mm/storage/a/c;->field_name:Ljava/lang/String;
 
-    .line 889
+    .line 888
     const-string/jumbo v4, "type"
 
     invoke-interface {v0, v4}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -355,7 +378,7 @@
 
     iput v4, v11, Lcom/tencent/mm/storage/a/c;->field_type:I
 
-    .line 890
+    .line 889
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getFirstChild()Lorg/w3c/dom/Node;
 
     move-result-object v0
@@ -370,15 +393,15 @@
 
     move-result-object v4
 
-    .line 891
+    .line 890
     :goto_3
     iget v0, v11, Lcom/tencent/mm/storage/a/c;->field_type:I
 
-    sget v12, Lcom/tencent/mm/storage/a/c;->kgS:I
+    sget v12, Lcom/tencent/mm/storage/a/c;->kHr:I
 
     if-ne v0, v12, :cond_5
 
-    .line 892
+    .line 891
     new-instance v0, Ljava/lang/String;
 
     const/4 v12, 0x0
@@ -389,14 +412,14 @@
 
     invoke-direct {v0, v4}, Ljava/lang/String;-><init>([B)V
 
-    .line 894
+    .line 893
     :goto_4
     iput-object v0, v11, Lcom/tencent/mm/storage/a/c;->field_content:Ljava/lang/String;
 
-    .line 895
+    .line 894
     invoke-interface {v6, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 880
+    .line 879
     :cond_0
     add-int/lit8 v0, v3, 0x1
 
@@ -404,7 +427,7 @@
 
     goto :goto_2
 
-    .line 890
+    .line 889
     :cond_1
     const-string/jumbo v4, ""
     :try_end_0
@@ -412,7 +435,7 @@
 
     goto :goto_3
 
-    .line 866
+    .line 865
     :cond_2
     add-int/lit8 v0, v5, 0x1
 
@@ -420,7 +443,7 @@
 
     goto/16 :goto_1
 
-    .line 856
+    .line 855
     :cond_3
     add-int/lit8 v0, v1, 0x1
 
@@ -428,12 +451,12 @@
 
     goto/16 :goto_0
 
-    .line 901
+    .line 900
     :catch_0
     move-exception v0
 
-    .line 902
-    const-string/jumbo v1, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    .line 901
+    const-string/jumbo v1, "MicroMsg.emoji.EmojiInfoStorage"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -453,9 +476,9 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 905
+    .line 904
     :cond_4
     return-object v6
 
@@ -466,7 +489,7 @@
 .end method
 
 .method private l(Lcom/tencent/mm/storage/a/c;)Z
-    .locals 5
+    .locals 6
 
     .prologue
     const/4 v0, 0x0
@@ -474,7 +497,7 @@
     .line 341
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->aYz()Z
+    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->bdS()Z
 
     move-result v1
 
@@ -482,11 +505,11 @@
 
     .line 342
     :cond_0
-    const-string/jumbo v1, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v1, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v2, "insert assertion!, invalid emojiInfo"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 352
     :cond_1
@@ -495,12 +518,12 @@
 
     .line 346
     :cond_2
-    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->lX()Landroid/content/ContentValues;
+    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->kn()Landroid/content/ContentValues;
 
     move-result-object v1
 
     .line 347
-    iget-object v2, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v2, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v3, "EmojiInfo"
 
@@ -508,27 +531,27 @@
 
     invoke-interface {v2, v3, v4, v1}, Lcom/tencent/mm/sdk/h/d;->replace(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
     .line 348
-    const-wide/16 v3, -0x1
+    const-wide/16 v4, -0x1
 
-    cmp-long v3, v1, v3
+    cmp-long v1, v2, v4
 
-    if-eqz v3, :cond_3
+    if-eqz v1, :cond_3
 
     .line 349
-    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->yh()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->yt()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {p0, v3}, Lcom/tencent/mm/storage/a/f;->DI(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/storage/a/f;->FX(Ljava/lang/String;)V
 
     .line 352
     :cond_3
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-ltz v1, :cond_1
 
@@ -537,7 +560,46 @@
     goto :goto_0
 .end method
 
-.method private pK(I)I
+.method private rB(I)Z
+    .locals 7
+
+    .prologue
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    .line 740
+    iget-object v2, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    const-string/jumbo v3, "EmojiInfo"
+
+    const-string/jumbo v4, "catalog=?"
+
+    new-array v5, v0, [Ljava/lang/String;
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    aput-object v6, v5, v1
+
+    invoke-interface {v2, v3, v4, v5}, Lcom/tencent/mm/sdk/h/d;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+
+    move-result v2
+
+    .line 741
+    if-ltz v2, :cond_0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    move v0, v1
+
+    goto :goto_0
+.end method
+
+.method private rz(I)I
     .locals 8
 
     .prologue
@@ -569,7 +631,7 @@
 
     .line 509
     :try_start_0
-    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     invoke-interface {v4, v1, v3}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
@@ -612,7 +674,7 @@
 
     .line 514
     :try_start_1
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v4, "exception:%s"
 
@@ -622,16 +684,16 @@
 
     const/4 v6, 0x0
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v7
 
     aput-object v7, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 515
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -651,7 +713,7 @@
 
     move-result-object v1
 
-    invoke-static {v3, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -676,55 +738,20 @@
     throw v0
 .end method
 
-.method private pM(I)Z
-    .locals 7
-
-    .prologue
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    .line 741
-    iget-object v2, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
-
-    const-string/jumbo v3, "EmojiInfo"
-
-    const-string/jumbo v4, "catalog=?"
-
-    new-array v5, v0, [Ljava/lang/String;
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v6
-
-    aput-object v6, v5, v1
-
-    invoke-interface {v2, v3, v4, v5}, Lcom/tencent/mm/sdk/h/d;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
-
-    move-result v2
-
-    .line 742
-    if-ltz v2, :cond_0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    move v0, v1
-
-    goto :goto_0
-.end method
-
 
 # virtual methods
-.method public final FP(Ljava/lang/String;)Lcom/tencent/mm/storage/a/c;
+.method public final Ig(Ljava/lang/String;)Lcom/tencent/mm/storage/a/c;
     .locals 10
 
     .prologue
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
     const/4 v8, 0x0
 
     .line 427
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -740,11 +767,15 @@
 
     .line 428
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v0, "MicroMsg.emoji.EmojiInfoStorage"
 
-    const-string/jumbo v1, "md5 is null or invalue."
+    const-string/jumbo v1, "md5 is null or invalue. md5:%s"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    new-array v2, v2, [Ljava/lang/Object;
+
+    aput-object p1, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v8
 
@@ -756,7 +787,7 @@
     .line 434
     :cond_2
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v0, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v1, "EmojiInfo"
 
@@ -798,11 +829,11 @@
     .line 436
     new-instance v2, Lcom/tencent/mm/storage/a/c;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rF()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rH()Ljava/lang/String;
 
     move-result-object v0
 
@@ -813,7 +844,7 @@
 
     .line 437
     :try_start_2
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/storage/a/c;->c(Landroid/database/Cursor;)V
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/storage/a/c;->b(Landroid/database/Cursor;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
@@ -840,7 +871,7 @@
     .line 440
     :goto_2
     :try_start_3
-    const-string/jumbo v2, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v2, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v3, "[getByMd5]Exception:%s"
 
@@ -856,7 +887,7 @@
 
     aput-object v1, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -920,7 +951,7 @@
     goto :goto_1
 .end method
 
-.method public final FQ(Ljava/lang/String;)I
+.method public final Ih(Ljava/lang/String;)I
     .locals 8
 
     .prologue
@@ -948,7 +979,7 @@
 
     .line 535
     :try_start_0
-    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     invoke-interface {v4, v1, v3}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
@@ -991,7 +1022,7 @@
 
     .line 540
     :try_start_1
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v4, "exception:%s"
 
@@ -1001,16 +1032,16 @@
 
     const/4 v6, 0x0
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v7
 
     aput-object v7, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 541
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1030,7 +1061,7 @@
 
     move-result-object v1
 
-    invoke-static {v3, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -1055,20 +1086,20 @@
     throw v0
 .end method
 
-.method public final FR(Ljava/lang/String;)Z
+.method public final Ii(Ljava/lang/String;)Z
     .locals 5
 
     .prologue
     const/4 v0, 0x0
 
-    .line 1518
+    .line 1580
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 1521
+    .line 1583
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string/jumbo v2, "groupId = \'"
@@ -1089,9 +1120,9 @@
 
     move-result-object v1
 
-    .line 1523
+    .line 1585
     :try_start_0
-    iget-object v2, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v2, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v3, "EmojiInfo"
 
@@ -1107,17 +1138,17 @@
 
     const/4 v0, 0x1
 
-    .line 1528
+    .line 1590
     :cond_0
     :goto_0
     return v0
 
-    .line 1524
+    .line 1586
     :catch_0
     move-exception v1
 
-    .line 1525
-    const-string/jumbo v2, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    .line 1587
+    const-string/jumbo v2, "MicroMsg.emoji.EmojiInfoStorage"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1137,18 +1168,27 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public final U(Ljava/util/LinkedList;)Z
+.method public final Y(Ljava/util/LinkedList;)Z
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/LinkedList",
+            "<",
+            "Ljava/lang/String;",
+            ">;)Z"
+        }
+    .end annotation
 
     .prologue
     const/4 v0, 0x0
 
-    .line 1708
+    .line 1770
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/util/LinkedList;->size()I
@@ -1157,21 +1197,21 @@
 
     if-gtz v1, :cond_1
 
-    .line 1709
+    .line 1771
     :cond_0
-    const-string/jumbo v1, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v1, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v2, "[cpan] updateNeedUploadEmojiList failed. list is null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1731
+    .line 1793
     :goto_0
     return v0
 
-    .line 1712
+    .line 1774
     :cond_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v1, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v2, "[cpan] updateNeedUploadEmojiList list size :%d."
 
@@ -1189,61 +1229,61 @@
 
     aput-object v4, v3, v0
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1713
+    .line 1775
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1714
+    .line 1776
     const-string/jumbo v1, "UPDATE"
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1715
+    .line 1777
     const-string/jumbo v1, " EmojiInfo "
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1716
+    .line 1778
     const-string/jumbo v1, " SET "
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1717
+    .line 1779
     const-string/jumbo v1, "needupload"
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1718
+    .line 1780
     const-string/jumbo v1, "="
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1719
-    sget v1, Lcom/tencent/mm/storage/a/c;->khc:I
+    .line 1781
+    sget v1, Lcom/tencent/mm/storage/a/c;->kHC:I
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 1720
+    .line 1782
     const-string/jumbo v1, " where "
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1721
+    .line 1783
     const-string/jumbo v1, "md5"
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1722
+    .line 1784
     const-string/jumbo v1, " IN ("
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move v1, v0
 
-    .line 1723
+    .line 1785
     :goto_1
     invoke-virtual {p1}, Ljava/util/LinkedList;->size()I
 
@@ -1251,7 +1291,7 @@
 
     if-ge v1, v0, :cond_3
 
-    .line 1724
+    .line 1786
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string/jumbo v0, "\'"
@@ -1280,7 +1320,7 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1725
+    .line 1787
     invoke-virtual {p1}, Ljava/util/LinkedList;->size()I
 
     move-result v0
@@ -1289,12 +1329,12 @@
 
     if-ge v1, v0, :cond_2
 
-    .line 1726
+    .line 1788
     const-string/jumbo v0, ","
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1723
+    .line 1785
     :cond_2
     add-int/lit8 v0, v1, 0x1
 
@@ -1302,23 +1342,23 @@
 
     goto :goto_1
 
-    .line 1729
+    .line 1791
     :cond_3
     const-string/jumbo v0, ")"
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1730
-    const-string/jumbo v0, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    .line 1792
+    const-string/jumbo v0, "MicroMsg.emoji.EmojiInfoStorage"
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1731
-    iget-object v0, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    .line 1793
+    iget-object v0, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v1, "EmojiInfo"
 
@@ -1326,14 +1366,14 @@
 
     move-result-object v2
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/sdk/h/d;->cj(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/sdk/h/d;->cx(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
     goto/16 :goto_0
 .end method
 
-.method public final a(Lcom/tencent/mm/az/f;)I
+.method public final a(Lcom/tencent/mm/bc/f;)I
     .locals 1
 
     .prologue
@@ -1341,7 +1381,7 @@
     if-eqz p1, :cond_0
 
     .line 128
-    iput-object p1, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iput-object p1, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     .line 130
     :cond_0
@@ -1435,11 +1475,11 @@
 
     .line 302
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v0, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v2, "create assertion!, invalid md5"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 311
     :cond_1
@@ -1457,11 +1497,11 @@
     if-gtz v0, :cond_5
 
     :cond_3
-    const-string/jumbo v0, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v0, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v2, "create assertion!, invalid md5"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -1477,7 +1517,7 @@
     .line 308
     const-string/jumbo v1, "create_emoji_info_notify"
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/storage/a/f;->DI(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/storage/a/f;->FX(Ljava/lang/String;)V
 
     move-object v1, v0
 
@@ -1486,7 +1526,7 @@
 
     .line 305
     :cond_5
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/storage/a/f;->FP(Ljava/lang/String;)Lcom/tencent/mm/storage/a/c;
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/storage/a/f;->Ig(Ljava/lang/String;)Lcom/tencent/mm/storage/a/c;
 
     move-result-object v0
 
@@ -1494,11 +1534,11 @@
 
     new-instance v0, Lcom/tencent/mm/storage/a/c;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rF()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rH()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1515,7 +1555,7 @@
 
     iput p5, v0, Lcom/tencent/mm/storage/a/c;->field_size:I
 
-    sget v2, Lcom/tencent/mm/storage/a/c;->kgV:I
+    sget v2, Lcom/tencent/mm/storage/a/c;->kHu:I
 
     iput v2, v0, Lcom/tencent/mm/storage/a/c;->field_state:I
 
@@ -1548,44 +1588,44 @@
 
     const/4 v1, 0x0
 
+    .line 781
     .line 782
-    .line 783
     iget v0, p2, Lcom/tencent/mm/storage/a/c;->field_catalog:I
 
-    sget v2, Lcom/tencent/mm/storage/a/c;->kgK:I
+    sget v2, Lcom/tencent/mm/storage/a/c;->kHj:I
 
     if-eq v0, v2, :cond_0
 
     iget v0, p2, Lcom/tencent/mm/storage/a/c;->field_catalog:I
 
-    sget v2, Lcom/tencent/mm/storage/a/c;->kgN:I
+    sget v2, Lcom/tencent/mm/storage/a/c;->kHm:I
 
     if-eq v0, v2, :cond_0
 
     iget v0, p2, Lcom/tencent/mm/storage/a/c;->field_catalog:I
 
-    sget v2, Lcom/tencent/mm/storage/a/c;->kgM:I
+    sget v2, Lcom/tencent/mm/storage/a/c;->kHl:I
 
     if-ne v0, v2, :cond_4
 
-    .line 784
+    .line 783
     :cond_0
     const/4 v2, 0x0
 
-    .line 788
+    .line 787
     :try_start_0
     invoke-virtual {p2}, Lcom/tencent/mm/storage/a/c;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/tencent/mm/storage/a/c;->aX(Landroid/content/Context;Ljava/lang/String;)Ljava/io/InputStream;
+    invoke-static {p1, v0}, Lcom/tencent/mm/storage/a/c;->aW(Landroid/content/Context;Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object v2
 
-    .line 789
+    .line 788
     if-eqz v2, :cond_6
 
-    .line 790
+    .line 789
     invoke-virtual {v2}, Ljava/io/InputStream;->available()I
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
@@ -1593,17 +1633,17 @@
 
     move-result v0
 
-    .line 795
+    .line 794
     :goto_0
     if-eqz v2, :cond_1
 
-    .line 797
+    .line 796
     :try_start_1
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 807
+    .line 806
     :cond_1
     :goto_1
     if-eqz v0, :cond_2
@@ -1612,44 +1652,44 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 808
+    .line 807
     iput v0, p2, Lcom/tencent/mm/storage/a/c;->field_size:I
 
-    .line 809
+    .line 808
     invoke-virtual {p0, p2}, Lcom/tencent/mm/storage/a/f;->m(Lcom/tencent/mm/storage/a/c;)Z
 
-    .line 812
+    .line 811
     :cond_2
     return-void
 
-    .line 798
+    .line 797
     :catch_0
     move-exception v2
 
-    .line 799
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    .line 798
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v4, "exception:%s"
 
     new-array v5, v7, [Ljava/lang/Object;
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v2
 
     aput-object v2, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
-    .line 792
+    .line 791
     :catch_1
     move-exception v0
 
-    .line 793
+    .line 792
     :try_start_2
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v4, "exception:%s"
 
@@ -1659,20 +1699,20 @@
 
     const/4 v6, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 795
+    .line 794
     if-eqz v2, :cond_5
 
-    .line 797
+    .line 796
     :try_start_3
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_3
@@ -1680,84 +1720,84 @@
 
     move v0, v1
 
-    .line 800
+    .line 799
     goto :goto_1
 
-    .line 798
+    .line 797
     :catch_2
     move-exception v0
 
-    .line 799
-    const-string/jumbo v2, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    .line 798
+    const-string/jumbo v2, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v3, "exception:%s"
 
     new-array v4, v7, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
-    .line 800
+    .line 799
     goto :goto_1
 
-    .line 795
+    .line 794
     :catchall_0
     move-exception v0
 
     if-eqz v2, :cond_3
 
-    .line 797
+    .line 796
     :try_start_4
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 800
+    .line 799
     :cond_3
     :goto_2
     throw v0
 
-    .line 798
+    .line 797
     :catch_3
     move-exception v2
 
-    .line 799
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    .line 798
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v4, "exception:%s"
 
     new-array v5, v7, [Ljava/lang/Object;
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v2
 
     aput-object v2, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_2
 
-    .line 804
+    .line 803
     :cond_4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p2, Lcom/tencent/mm/storage/a/c;->fCf:Ljava/lang/String;
+    iget-object v1, p2, Lcom/tencent/mm/storage/a/c;->fLj:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lcom/tencent/mm/storage/a/c;->yh()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/tencent/mm/storage/a/c;->yt()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1769,7 +1809,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/a/e;->aw(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/tencent/mm/a/e;->aA(Ljava/lang/String;)I
 
     move-result v0
 
@@ -1800,1075 +1840,22 @@
     return v0
 .end method
 
-.method public final aYD()Ljava/util/List;
-    .locals 5
-
-    .prologue
-    .line 613
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 614
-    const-string/jumbo v1, "select  * from EmojiInfo where catalog=?  or catalog=? and state!=? order by reserved3 asc"
-
-    .line 625
-    const/4 v2, 0x3
-
-    new-array v2, v2, [Ljava/lang/String;
-
-    const/4 v3, 0x0
-
-    sget v4, Lcom/tencent/mm/storage/a/a;->kgH:I
-
-    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x1
-
-    sget v4, Lcom/tencent/mm/storage/a/a;->kgI:I
-
-    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x2
-
-    sget v4, Lcom/tencent/mm/storage/a/c;->kgY:I
-
-    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    .line 627
-    iget-object v3, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
-
-    invoke-interface {v3, v1, v2}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    .line 628
-    invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
-
-    move-result v2
-
-    if-lez v2, :cond_1
-
-    .line 629
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
-
-    .line 632
-    :cond_0
-    new-instance v2, Lcom/tencent/mm/storage/a/c;
-
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/tencent/mm/model/c;->rF()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Lcom/tencent/mm/storage/a/c;-><init>(Ljava/lang/String;)V
-
-    .line 633
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/storage/a/c;->c(Landroid/database/Cursor;)V
-
-    .line 634
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 636
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    .line 638
-    :cond_1
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    .line 639
-    return-object v0
-.end method
-
-.method public final aYE()Ljava/util/List;
-    .locals 7
-
-    .prologue
-    const/4 v3, 0x1
-
-    const/4 v6, 0x0
-
-    .line 673
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    .line 674
-    const/4 v1, 0x0
-
-    .line 675
-    const-string/jumbo v0, "select md5 from EmojiInfo where catalog=?"
-
-    .line 676
-    new-array v3, v3, [Ljava/lang/String;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget v5, Lcom/tencent/mm/storage/a/a;->kgI:I
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v3, v6
-
-    .line 678
-    :try_start_0
-    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
-
-    invoke-interface {v4, v0, v3}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    .line 679
-    if-eqz v1, :cond_1
-
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 681
-    :cond_0
-    const/4 v0, 0x0
-
-    invoke-interface {v1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 682
-    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 683
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 688
-    :cond_1
-    if-eqz v1, :cond_2
-
-    .line 689
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    .line 692
-    :cond_2
-    :goto_0
-    return-object v2
-
-    .line 685
-    :catch_0
-    move-exception v0
-
-    .line 686
-    :try_start_1
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
-
-    const-string/jumbo v4, "get download custom emoji MD5 list failed :%s"
-
-    const/4 v5, 0x1
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    const/4 v6, 0x0
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v5, v6
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 688
-    if-eqz v1, :cond_2
-
-    .line 689
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    goto :goto_0
-
-    .line 688
-    :catchall_0
-    move-exception v0
-
-    if-eqz v1, :cond_3
-
-    .line 689
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    :cond_3
-    throw v0
-.end method
-
-.method public final aYF()Ljava/util/List;
-    .locals 8
-
-    .prologue
-    const/4 v7, 0x1
-
-    const/4 v6, 0x0
-
-    .line 701
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    .line 702
-    const/4 v1, 0x0
-
-    .line 703
-    const-string/jumbo v0, "select md5 from EmojiInfo where catalog=? and source=?"
-
-    .line 704
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Ljava/lang/String;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget v5, Lcom/tencent/mm/storage/a/a;->kgI:I
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v3, v6
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget v5, Lcom/tencent/mm/storage/a/c;->kha:I
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v3, v7
-
-    .line 706
-    :try_start_0
-    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
-
-    invoke-interface {v4, v0, v3}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    .line 707
-    if-eqz v1, :cond_1
-
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 709
-    :cond_0
-    const/4 v0, 0x0
-
-    invoke-interface {v1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 710
-    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 711
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 716
-    :cond_1
-    if-eqz v1, :cond_2
-
-    .line 717
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    .line 720
-    :cond_2
-    :goto_0
-    return-object v2
-
-    .line 713
-    :catch_0
-    move-exception v0
-
-    .line 714
-    :try_start_1
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
-
-    const-string/jumbo v4, "get download custom emoji MD5 list failed :%s"
-
-    const/4 v5, 0x1
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    const/4 v6, 0x0
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v5, v6
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 716
-    if-eqz v1, :cond_2
-
-    .line 717
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    goto :goto_0
-
-    .line 716
-    :catchall_0
-    move-exception v0
-
-    if-eqz v1, :cond_3
-
-    .line 717
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    :cond_3
-    throw v0
-.end method
-
-.method public final aYG()Ljava/util/List;
-    .locals 7
-
-    .prologue
-    const/4 v6, 0x1
-
-    const/4 v5, 0x0
-
-    .line 1602
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    .line 1603
-    const/4 v1, 0x0
-
-    .line 1604
-    const-string/jumbo v0, "select md5 from EmojiInfo where catalog=? or temp=?"
-
-    .line 1605
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Ljava/lang/String;
-
-    const-string/jumbo v4, "85"
-
-    aput-object v4, v3, v5
-
-    const-string/jumbo v4, "2"
-
-    aput-object v4, v3, v6
-
-    .line 1607
-    :try_start_0
-    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
-
-    invoke-interface {v4, v0, v3}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    .line 1608
-    if-eqz v1, :cond_1
-
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 1610
-    :cond_0
-    const/4 v0, 0x0
-
-    invoke-interface {v1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 1611
-    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 1612
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 1617
-    :cond_1
-    if-eqz v1, :cond_2
-
-    .line 1618
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    .line 1621
-    :cond_2
-    :goto_0
-    return-object v2
-
-    .line 1614
-    :catch_0
-    move-exception v0
-
-    .line 1615
-    :try_start_1
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
-
-    const-string/jumbo v4, "get need to sync emoji MD5 list failed :%s"
-
-    const/4 v5, 0x1
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    const/4 v6, 0x0
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v5, v6
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 1617
-    if-eqz v1, :cond_2
-
-    .line 1618
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    goto :goto_0
-
-    .line 1617
-    :catchall_0
-    move-exception v0
-
-    if-eqz v1, :cond_3
-
-    .line 1618
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    :cond_3
-    throw v0
-.end method
-
-.method public final aYH()I
-    .locals 7
-
-    .prologue
-    const/4 v5, 0x1
-
-    const/4 v0, 0x0
-
-    .line 1625
-    .line 1626
-    const/4 v2, 0x0
-
-    .line 1627
-    const-string/jumbo v1, "select md5 from EmojiInfo where catalog=? or temp=?"
-
-    .line 1628
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Ljava/lang/String;
-
-    const-string/jumbo v4, "85"
-
-    aput-object v4, v3, v0
-
-    const-string/jumbo v4, "2"
-
-    aput-object v4, v3, v5
-
-    .line 1630
-    :try_start_0
-    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
-
-    invoke-interface {v4, v1, v3}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v2
-
-    .line 1631
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 1632
-    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-result v0
-
-    .line 1637
-    :cond_0
-    if-eqz v2, :cond_1
-
-    .line 1638
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    .line 1641
-    :cond_1
-    :goto_0
-    return v0
-
-    .line 1634
-    :catch_0
-    move-exception v1
-
-    .line 1635
-    :try_start_1
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
-
-    const-string/jumbo v4, "get need to sync emoji MD5 list failed :%s"
-
-    const/4 v5, 0x1
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    const/4 v6, 0x0
-
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object v1
-
-    aput-object v1, v5, v6
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 1637
-    if-eqz v2, :cond_1
-
-    .line 1638
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    goto :goto_0
-
-    .line 1637
-    :catchall_0
-    move-exception v0
-
-    if-eqz v2, :cond_2
-
-    .line 1638
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    :cond_2
-    throw v0
-.end method
-
-.method public final aYI()Ljava/util/ArrayList;
-    .locals 7
-
-    .prologue
-    const/4 v6, 0x1
-
-    const/4 v5, 0x0
-
-    .line 1736
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    .line 1737
-    const/4 v1, 0x0
-
-    .line 1738
-    const-string/jumbo v0, "select md5 from EmojiInfo where needupload=? and catalog=?"
-
-    .line 1739
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Ljava/lang/String;
-
-    sget v4, Lcom/tencent/mm/storage/a/c;->khc:I
-
-    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v3, v5
-
-    sget v4, Lcom/tencent/mm/storage/a/a;->kgI:I
-
-    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v3, v6
-
-    .line 1741
-    :try_start_0
-    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
-
-    invoke-interface {v4, v0, v3}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    .line 1742
-    if-eqz v1, :cond_1
-
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 1744
-    :cond_0
-    const/4 v0, 0x0
-
-    invoke-interface {v1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 1745
-    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 1746
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 1751
-    :cond_1
-    if-eqz v1, :cond_2
-
-    .line 1752
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    .line 1755
-    :cond_2
-    :goto_0
-    return-object v2
-
-    .line 1748
-    :catch_0
-    move-exception v0
-
-    .line 1749
-    :try_start_1
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
-
-    const-string/jumbo v4, "get need upload emoji MD5 list failed :%s"
-
-    const/4 v5, 0x1
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    const/4 v6, 0x0
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v5, v6
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 1751
-    if-eqz v1, :cond_2
-
-    .line 1752
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    goto :goto_0
-
-    .line 1751
-    :catchall_0
-    move-exception v0
-
-    if-eqz v1, :cond_3
-
-    .line 1752
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    :cond_3
-    throw v0
-.end method
-
-.method public final aYJ()I
-    .locals 7
-
-    .prologue
-    const/4 v3, 0x1
-
-    const/4 v0, 0x0
-
-    .line 1795
-    .line 1796
-    const/4 v2, 0x0
-
-    .line 1797
-    const-string/jumbo v1, "select reserved3 from EmojiInfo where catalog=? order by reserved3 desc limit 1"
-
-    .line 1798
-    new-array v3, v3, [Ljava/lang/String;
-
-    sget v4, Lcom/tencent/mm/storage/a/a;->kgI:I
-
-    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v3, v0
-
-    .line 1800
-    :try_start_0
-    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
-
-    invoke-interface {v4, v1, v3}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v2
-
-    .line 1801
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 1802
-    const/4 v1, 0x0
-
-    invoke-interface {v2, v1}, Landroid/database/Cursor;->getInt(I)I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-result v0
-
-    .line 1807
-    :cond_0
-    if-eqz v2, :cond_1
-
-    .line 1808
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    .line 1812
-    :cond_1
-    :goto_0
-    return v0
-
-    .line 1804
-    :catch_0
-    move-exception v1
-
-    .line 1805
-    :try_start_1
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
-
-    const-string/jumbo v4, "getCustomEmojiMaxIndex :%s"
-
-    const/4 v5, 0x1
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    const/4 v6, 0x0
-
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object v1
-
-    aput-object v1, v5, v6
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 1807
-    if-eqz v2, :cond_1
-
-    .line 1808
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    goto :goto_0
-
-    .line 1807
-    :catchall_0
-    move-exception v0
-
-    if-eqz v2, :cond_2
-
-    .line 1808
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    :cond_2
-    throw v0
-.end method
-
-.method public final aYK()Ljava/util/ArrayList;
-    .locals 7
-
-    .prologue
-    const/4 v1, 0x0
-
-    const/4 v5, 0x1
-
-    const/4 v4, 0x0
-
-    .line 1821
-    .line 1822
-    const-string/jumbo v0, "SELECT * FROM EmojiInfo WHERE catalog =?  OR catalog=? OR groupId IS NOT NULL"
-
-    .line 1823
-    const/4 v2, 0x2
-
-    new-array v2, v2, [Ljava/lang/String;
-
-    sget v3, Lcom/tencent/mm/storage/a/a;->kgI:I
-
-    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    aput-object v3, v2, v4
-
-    sget v3, Lcom/tencent/mm/storage/a/a;->kgJ:I
-
-    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    aput-object v3, v2, v5
-
-    .line 1825
-    :try_start_0
-    iget-object v3, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
-
-    invoke-interface {v3, v0, v2}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-result-object v2
-
-    .line 1827
-    if-eqz v2, :cond_3
-
-    :try_start_1
-    invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 1828
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 1830
-    :cond_0
-    new-instance v3, Lcom/tencent/mm/storage/a/c;
-
-    invoke-direct {v3}, Lcom/tencent/mm/storage/a/c;-><init>()V
-
-    .line 1831
-    invoke-virtual {v3, v2}, Lcom/tencent/mm/storage/a/c;->c(Landroid/database/Cursor;)V
-
-    .line 1832
-    iget v4, v3, Lcom/tencent/mm/storage/a/c;->field_reserved4:I
-
-    sget v5, Lcom/tencent/mm/storage/a/c;->khd:I
-
-    and-int/2addr v4, v5
-
-    sget v5, Lcom/tencent/mm/storage/a/c;->khd:I
-
-    if-eq v4, v5, :cond_1
-
-    .line 1833
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 1835
-    :cond_1
-    invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    .line 1841
-    if-eqz v2, :cond_2
-
-    .line 1842
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    .line 1846
-    :cond_2
-    :goto_0
-    return-object v0
-
-    .line 1841
-    :cond_3
-    if-eqz v2, :cond_4
-
-    .line 1842
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    :cond_4
-    :goto_1
-    move-object v0, v1
-
-    .line 1846
-    goto :goto_0
-
-    .line 1838
-    :catch_0
-    move-exception v0
-
-    move-object v2, v1
-
-    .line 1839
-    :goto_2
-    :try_start_2
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
-
-    const-string/jumbo v4, "getAllStoreAndCustomEmoji :%s"
-
-    const/4 v5, 0x1
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    const/4 v6, 0x0
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v5, v6
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    .line 1841
-    if-eqz v2, :cond_4
-
-    .line 1842
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    goto :goto_1
-
-    .line 1841
-    :catchall_0
-    move-exception v0
-
-    move-object v2, v1
-
-    :goto_3
-    if-eqz v2, :cond_5
-
-    .line 1842
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    :cond_5
-    throw v0
-
-    .line 1841
-    :catchall_1
-    move-exception v0
-
-    goto :goto_3
-
-    .line 1838
-    :catch_1
-    move-exception v0
-
-    goto :goto_2
-.end method
-
-.method public final bI(Ljava/util/List;)Z
+.method public final bR(Ljava/util/List;)Z
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)Z"
+        }
+    .end annotation
 
     .prologue
     const/4 v0, 0x0
 
-    .line 1071
+    .line 1070
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -2877,105 +1864,105 @@
 
     if-gtz v1, :cond_1
 
-    .line 1108
+    .line 1107
     :cond_0
     :goto_0
     return v0
 
-    .line 1073
+    .line 1072
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1074
+    .line 1073
     const-string/jumbo v1, "UPDATE"
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1075
+    .line 1074
     const-string/jumbo v1, " EmojiInfo "
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1076
+    .line 1075
     const-string/jumbo v1, " SET "
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1081
+    .line 1080
     const-string/jumbo v1, "catalog"
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1082
+    .line 1081
     const-string/jumbo v1, "="
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1084
-    sget v1, Lcom/tencent/mm/storage/a/c;->kgJ:I
+    .line 1083
+    sget v1, Lcom/tencent/mm/storage/a/c;->kHi:I
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 1085
+    .line 1084
     const-string/jumbo v1, ","
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1086
+    .line 1085
     const-string/jumbo v1, "source"
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1087
+    .line 1086
     const-string/jumbo v1, "="
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1088
-    sget v1, Lcom/tencent/mm/storage/a/c;->kgZ:I
+    .line 1087
+    sget v1, Lcom/tencent/mm/storage/a/c;->kHz:I
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 1089
+    .line 1088
     const-string/jumbo v1, ","
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1090
+    .line 1089
     const-string/jumbo v1, "needupload"
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1091
+    .line 1090
     const-string/jumbo v1, "="
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1092
-    sget v1, Lcom/tencent/mm/storage/a/c;->khb:I
+    .line 1091
+    sget v1, Lcom/tencent/mm/storage/a/c;->kHB:I
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 1093
+    .line 1092
     const-string/jumbo v1, " where "
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1094
+    .line 1093
     const-string/jumbo v1, "md5"
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1095
+    .line 1094
     const-string/jumbo v1, " IN ("
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move v1, v0
 
-    .line 1096
+    .line 1095
     :goto_1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -2983,7 +1970,7 @@
 
     if-ge v1, v0, :cond_3
 
-    .line 1097
+    .line 1096
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string/jumbo v0, "\'"
@@ -3012,7 +1999,7 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1098
+    .line 1097
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -3021,12 +2008,12 @@
 
     if-ge v1, v0, :cond_2
 
-    .line 1099
+    .line 1098
     const-string/jumbo v0, ","
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1096
+    .line 1095
     :cond_2
     add-int/lit8 v0, v1, 0x1
 
@@ -3034,23 +2021,23 @@
 
     goto :goto_1
 
-    .line 1102
+    .line 1101
     :cond_3
     const-string/jumbo v0, ")"
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1103
-    const-string/jumbo v0, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    .line 1102
+    const-string/jumbo v0, "MicroMsg.emoji.EmojiInfoStorage"
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1104
-    iget-object v0, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    .line 1103
+    iget-object v0, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v1, "EmojiInfo"
 
@@ -3058,58 +2045,1778 @@
 
     move-result-object v2
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/sdk/h/d;->cj(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/sdk/h/d;->cx(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 1105
+    .line 1104
     const-string/jumbo v0, "delete_emoji_info_notify"
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/a/f;->DI(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/a/f;->FX(Ljava/lang/String;)V
 
-    .line 1108
+    .line 1107
     :cond_4
     const/4 v0, 0x1
 
     goto/16 :goto_0
 .end method
 
-.method public final dW(Landroid/content/Context;)Z
+.method public final bS(Ljava/util/List;)Z
+    .locals 18
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)Z"
+        }
+    .end annotation
+
+    .prologue
+    .line 1111
+    const-string/jumbo v2, "MicroMsg.emoji.EmojiInfoStorage"
+
+    const-string/jumbo v3, "[cpan] begin topCustomEmojiByMd5"
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1112
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v8
+
+    .line 1113
+    if-eqz p1, :cond_0
+
+    invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    if-gtz v2, :cond_1
+
+    .line 1114
+    :cond_0
+    const-string/jumbo v2, "MicroMsg.emoji.EmojiInfoStorage"
+
+    const-string/jumbo v3, "[cpan] topCustomEmojiByMd5 failed. list is null"
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1115
+    const/4 v2, 0x0
+
+    .line 1170
+    :goto_0
+    return v2
+
+    .line 1117
+    :cond_1
+    invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/storage/a/f;->bdW()Ljava/util/List;
+
+    move-result-object v7
+
+    .line 1118
+    const/4 v4, 0x0
+
+    .line 1119
+    const-wide/16 v2, -0x1
+
+    .line 1120
+    move-object/from16 v0, p0
+
+    iget-object v5, v0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    instance-of v5, v5, Lcom/tencent/mm/bc/g;
+
+    if-eqz v5, :cond_b
+
+    .line 1121
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    check-cast v2, Lcom/tencent/mm/bc/g;
+
+    .line 1122
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Thread;->getId()J
+
+    move-result-wide v4
+
+    invoke-virtual {v2, v4, v5}, Lcom/tencent/mm/bc/g;->dY(J)J
+
+    move-result-wide v4
+
+    move-object v3, v2
+
+    .line 1124
+    :goto_1
+    const/4 v2, 0x1
+
+    .line 1125
+    invoke-interface/range {p1 .. p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v10
+
+    move v6, v2
+
+    :goto_2
+    invoke-interface {v10}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    .line 1126
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/storage/a/f;->Ig(Ljava/lang/String;)Lcom/tencent/mm/storage/a/c;
+
+    move-result-object v11
+
+    .line 1127
+    if-eqz v11, :cond_4
+
+    invoke-virtual {v11}, Lcom/tencent/mm/storage/a/c;->yt()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-static {v12}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v12
+
+    if-nez v12, :cond_4
+
+    .line 1128
+    iput v6, v11, Lcom/tencent/mm/storage/a/c;->field_reserved3:I
+
+    .line 1129
+    invoke-interface {v7}, Ljava/util/List;->isEmpty()Z
+
+    move-result v12
+
+    if-nez v12, :cond_2
+
+    .line 1130
+    invoke-interface {v7, v2}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    .line 1132
+    :cond_2
+    add-int/lit8 v6, v6, 0x1
+
+    .line 1133
+    invoke-virtual {v11}, Lcom/tencent/mm/storage/a/c;->kn()Landroid/content/ContentValues;
+
+    move-result-object v2
+
+    .line 1134
+    move-object/from16 v0, p0
+
+    iget-object v11, v0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    const-string/jumbo v12, "EmojiInfo"
+
+    const-string/jumbo v13, "md5"
+
+    invoke-interface {v11, v12, v13, v2}, Lcom/tencent/mm/sdk/h/d;->replace(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
+
+    move-result-wide v12
+
+    .line 1135
+    const-wide/16 v14, 0x0
+
+    cmp-long v2, v12, v14
+
+    if-gez v2, :cond_4
+
+    .line 1136
+    if-eqz v3, :cond_3
+
+    .line 1137
+    invoke-virtual {v3, v4, v5}, Lcom/tencent/mm/bc/g;->dZ(J)I
+
+    .line 1139
+    :cond_3
+    const-string/jumbo v2, "MicroMsg.emoji.EmojiInfoStorage"
+
+    const-string/jumbo v3, "[cpan] end topCustomEmojiByMd5 user time:%d faild "
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v6
+
+    sub-long/2addr v6, v8
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 1140
+    const/4 v2, 0x0
+
+    goto/16 :goto_0
+
+    :cond_4
+    move v2, v6
+
+    move v6, v2
+
+    .line 1143
+    goto :goto_2
+
+    .line 1144
+    :cond_5
+    invoke-interface {v7}, Ljava/util/List;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_8
+
+    .line 1145
+    invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v7
+
+    :cond_6
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_8
+
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    .line 1146
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/storage/a/f;->Ig(Ljava/lang/String;)Lcom/tencent/mm/storage/a/c;
+
+    move-result-object v2
+
+    .line 1147
+    if-eqz v2, :cond_6
+
+    invoke-virtual {v2}, Lcom/tencent/mm/storage/a/c;->yt()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-static {v10}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v10
+
+    if-nez v10, :cond_6
+
+    .line 1148
+    iput v6, v2, Lcom/tencent/mm/storage/a/c;->field_reserved3:I
+
+    .line 1149
+    add-int/lit8 v6, v6, 0x1
+
+    .line 1150
+    invoke-virtual {v2}, Lcom/tencent/mm/storage/a/c;->kn()Landroid/content/ContentValues;
+
+    move-result-object v2
+
+    .line 1151
+    move-object/from16 v0, p0
+
+    iget-object v10, v0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    const-string/jumbo v11, "EmojiInfo"
+
+    const-string/jumbo v12, "md5"
+
+    invoke-interface {v10, v11, v12, v2}, Lcom/tencent/mm/sdk/h/d;->replace(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
+
+    move-result-wide v10
+
+    .line 1152
+    const-wide/16 v12, 0x0
+
+    cmp-long v2, v10, v12
+
+    if-gez v2, :cond_6
+
+    .line 1153
+    if-eqz v3, :cond_7
+
+    .line 1154
+    invoke-virtual {v3, v4, v5}, Lcom/tencent/mm/bc/g;->dZ(J)I
+
+    .line 1156
+    :cond_7
+    const-string/jumbo v2, "MicroMsg.emoji.EmojiInfoStorage"
+
+    const-string/jumbo v3, "[cpan] end topCustomEmojiByMd5 user time:%d faild "
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v6
+
+    sub-long/2addr v6, v8
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 1157
+    const/4 v2, 0x0
+
+    goto/16 :goto_0
+
+    .line 1163
+    :cond_8
+    if-eqz v3, :cond_9
+
+    .line 1164
+    invoke-virtual {v3, v4, v5}, Lcom/tencent/mm/bc/g;->dZ(J)I
+
+    .line 1167
+    :cond_9
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
+
+    const-string/jumbo v4, "[cpan] end topCustomEmojiByMd5 user time:%d succes. size:%d"
+
+    const/4 v2, 0x2
+
+    new-array v5, v2, [Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v6
+
+    sub-long/2addr v6, v8
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    aput-object v6, v5, v2
+
+    const/4 v6, 0x1
+
+    if-nez p1, :cond_a
+
+    const/4 v2, 0x0
+
+    :goto_3
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    aput-object v2, v5, v6
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 1170
+    const/4 v2, 0x1
+
+    goto/16 :goto_0
+
+    .line 1167
+    :cond_a
+    invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    goto :goto_3
+
+    :cond_b
+    move-wide/from16 v16, v2
+
+    move-object v3, v4
+
+    move-wide/from16 v4, v16
+
+    goto/16 :goto_1
+.end method
+
+.method public final bT(Ljava/util/List;)Z
+    .locals 11
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/protocal/b/li;",
+            ">;)Z"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v5, 0x1
+
+    const/4 v4, 0x0
+
+    .line 1985
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 1986
+    :cond_0
+    const-string/jumbo v0, "MicroMsg.emoji.EmojiInfoStorage"
+
+    const-string/jumbo v1, "updateEmojiURL failed. empty list"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2014
+    :goto_0
+    return v4
+
+    .line 1989
+    :cond_1
+    const-string/jumbo v0, "MicroMsg.emoji.EmojiInfoStorage"
+
+    const-string/jumbo v1, "updateEmojiURL size:%d"
+
+    new-array v2, v5, [Ljava/lang/Object;
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v4
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 1991
+    const/4 v2, 0x0
+
+    .line 1992
+    const-wide/16 v0, -0x1
+
+    .line 1993
+    iget-object v3, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    instance-of v3, v3, Lcom/tencent/mm/bc/g;
+
+    if-eqz v3, :cond_4
+
+    .line 1994
+    iget-object v0, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    check-cast v0, Lcom/tencent/mm/bc/g;
+
+    .line 1995
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Thread;->getId()J
+
+    move-result-wide v2
+
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/bc/g;->dY(J)J
+
+    move-result-wide v2
+
+    .line 1996
+    const-string/jumbo v1, "MicroMsg.emoji.EmojiInfoStorage"
+
+    const-string/jumbo v6, "surround updateEmojiURL in a transaction, ticket = %d"
+
+    new-array v7, v5, [Ljava/lang/Object;
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v8
+
+    aput-object v8, v7, v4
+
+    invoke-static {v1, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    move-object v1, v0
+
+    .line 1999
+    :goto_1
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge v4, v0, :cond_2
+
+    .line 2000
+    invoke-interface {p1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/protocal/b/li;
+
+    .line 2001
+    iget-object v6, v0, Lcom/tencent/mm/protocal/b/li;->jGJ:Ljava/lang/String;
+
+    invoke-virtual {p0, v6}, Lcom/tencent/mm/storage/a/f;->Ig(Ljava/lang/String;)Lcom/tencent/mm/storage/a/c;
+
+    move-result-object v6
+
+    .line 2002
+    iget-object v7, v0, Lcom/tencent/mm/protocal/b/li;->emu:Ljava/lang/String;
+
+    iput-object v7, v6, Lcom/tencent/mm/storage/a/c;->field_cdnUrl:Ljava/lang/String;
+
+    .line 2003
+    iget-object v7, v0, Lcom/tencent/mm/protocal/b/li;->jGL:Ljava/lang/String;
+
+    iput-object v7, v6, Lcom/tencent/mm/storage/a/c;->field_encrypturl:Ljava/lang/String;
+
+    .line 2004
+    iget-object v7, v0, Lcom/tencent/mm/protocal/b/li;->jGM:Ljava/lang/String;
+
+    iput-object v7, v6, Lcom/tencent/mm/storage/a/c;->field_aeskey:Ljava/lang/String;
+
+    .line 2005
+    iget-object v7, v0, Lcom/tencent/mm/protocal/b/li;->jGK:Ljava/lang/String;
+
+    iput-object v7, v6, Lcom/tencent/mm/storage/a/c;->field_designerID:Ljava/lang/String;
+
+    .line 2006
+    iget-object v7, v0, Lcom/tencent/mm/protocal/b/li;->fzw:Ljava/lang/String;
+
+    iput-object v7, v6, Lcom/tencent/mm/storage/a/c;->field_thumbUrl:Ljava/lang/String;
+
+    .line 2007
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/li;->jwt:Ljava/lang/String;
+
+    iput-object v0, v6, Lcom/tencent/mm/storage/a/c;->field_groupId:Ljava/lang/String;
+
+    .line 2008
+    invoke-virtual {p0, v6}, Lcom/tencent/mm/storage/a/f;->m(Lcom/tencent/mm/storage/a/c;)Z
+
+    .line 1999
+    add-int/lit8 v0, v4, 0x1
+
+    move v4, v0
+
+    goto :goto_1
+
+    .line 2010
+    :cond_2
+    if-eqz v1, :cond_3
+
+    .line 2011
+    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/bc/g;->dZ(J)I
+
+    .line 2012
+    const-string/jumbo v0, "MicroMsg.emoji.EmojiInfoStorage"
+
+    const-string/jumbo v1, "end updateList transaction"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_3
+    move v4, v5
+
+    .line 2014
+    goto/16 :goto_0
+
+    :cond_4
+    move-wide v9, v0
+
+    move-object v1, v2
+
+    move-wide v2, v9
+
+    goto :goto_1
+.end method
+
+.method public final bdV()Ljava/util/List;
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/storage/a/c;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 612
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    .line 613
+    const-string/jumbo v1, "select  * from EmojiInfo where catalog=?  or catalog=? and state!=? order by reserved3 asc"
+
+    .line 624
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    sget v4, Lcom/tencent/mm/storage/a/a;->kHg:I
+
+    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x1
+
+    sget v4, Lcom/tencent/mm/storage/a/a;->kHh:I
+
+    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x2
+
+    sget v4, Lcom/tencent/mm/storage/a/c;->kHx:I
+
+    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    .line 626
+    iget-object v3, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    invoke-interface {v3, v1, v2}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v1
+
+    .line 627
+    invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
+
+    move-result v2
+
+    if-lez v2, :cond_1
+
+    .line 628
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
+
+    .line 631
+    :cond_0
+    new-instance v2, Lcom/tencent/mm/storage/a/c;
+
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/tencent/mm/model/c;->rH()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Lcom/tencent/mm/storage/a/c;-><init>(Ljava/lang/String;)V
+
+    .line 632
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/storage/a/c;->b(Landroid/database/Cursor;)V
+
+    .line 633
+    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 635
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    .line 637
+    :cond_1
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    .line 638
+    return-object v0
+.end method
+
+.method public final bdW()Ljava/util/List;
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v3, 0x1
+
+    const/4 v6, 0x0
+
+    .line 672
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    .line 673
+    const/4 v1, 0x0
+
+    .line 674
+    const-string/jumbo v0, "select md5 from EmojiInfo where catalog=?  order by reserved3 asc"
+
+    .line 675
+    new-array v3, v3, [Ljava/lang/String;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget v5, Lcom/tencent/mm/storage/a/a;->kHh:I
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v3, v6
+
+    .line 677
+    :try_start_0
+    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    invoke-interface {v4, v0, v3}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v1
+
+    .line 678
+    if-eqz v1, :cond_1
+
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 680
+    :cond_0
+    const/4 v0, 0x0
+
+    invoke-interface {v1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 681
+    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 682
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 687
+    :cond_1
+    if-eqz v1, :cond_2
+
+    .line 688
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    .line 691
+    :cond_2
+    :goto_0
+    return-object v2
+
+    .line 684
+    :catch_0
+    move-exception v0
+
+    .line 685
+    :try_start_1
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
+
+    const-string/jumbo v4, "get download custom emoji MD5 list failed :%s"
+
+    const/4 v5, 0x1
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v5, v6
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 687
+    if-eqz v1, :cond_2
+
+    .line 688
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    goto :goto_0
+
+    .line 687
+    :catchall_0
+    move-exception v0
+
+    if-eqz v1, :cond_3
+
+    .line 688
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_3
+    throw v0
+.end method
+
+.method public final bdX()Ljava/util/List;
+    .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v7, 0x1
+
+    const/4 v6, 0x0
+
+    .line 700
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    .line 701
+    const/4 v1, 0x0
+
+    .line 702
+    const-string/jumbo v0, "select md5 from EmojiInfo where catalog=? and source=?"
+
+    .line 703
+    const/4 v3, 0x2
+
+    new-array v3, v3, [Ljava/lang/String;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget v5, Lcom/tencent/mm/storage/a/a;->kHh:I
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v3, v6
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget v5, Lcom/tencent/mm/storage/a/c;->kHA:I
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v3, v7
+
+    .line 705
+    :try_start_0
+    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    invoke-interface {v4, v0, v3}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v1
+
+    .line 706
+    if-eqz v1, :cond_1
+
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 708
+    :cond_0
+    const/4 v0, 0x0
+
+    invoke-interface {v1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 709
+    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 710
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 715
+    :cond_1
+    if-eqz v1, :cond_2
+
+    .line 716
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    .line 719
+    :cond_2
+    :goto_0
+    return-object v2
+
+    .line 712
+    :catch_0
+    move-exception v0
+
+    .line 713
+    :try_start_1
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
+
+    const-string/jumbo v4, "get download custom emoji MD5 list failed :%s"
+
+    const/4 v5, 0x1
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v5, v6
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 715
+    if-eqz v1, :cond_2
+
+    .line 716
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    goto :goto_0
+
+    .line 715
+    :catchall_0
+    move-exception v0
+
+    if-eqz v1, :cond_3
+
+    .line 716
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_3
+    throw v0
+.end method
+
+.method public final bdY()Ljava/util/List;
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v6, 0x1
+
+    const/4 v5, 0x0
+
+    .line 1664
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    .line 1665
+    const/4 v1, 0x0
+
+    .line 1666
+    const-string/jumbo v0, "select md5 from EmojiInfo where catalog=? or temp=?"
+
+    .line 1667
+    const/4 v3, 0x2
+
+    new-array v3, v3, [Ljava/lang/String;
+
+    const-string/jumbo v4, "85"
+
+    aput-object v4, v3, v5
+
+    const-string/jumbo v4, "2"
+
+    aput-object v4, v3, v6
+
+    .line 1669
+    :try_start_0
+    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    invoke-interface {v4, v0, v3}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v1
+
+    .line 1670
+    if-eqz v1, :cond_1
+
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 1672
+    :cond_0
+    const/4 v0, 0x0
+
+    invoke-interface {v1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 1673
+    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 1674
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 1679
+    :cond_1
+    if-eqz v1, :cond_2
+
+    .line 1680
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    .line 1683
+    :cond_2
+    :goto_0
+    return-object v2
+
+    .line 1676
+    :catch_0
+    move-exception v0
+
+    .line 1677
+    :try_start_1
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
+
+    const-string/jumbo v4, "get need to sync emoji MD5 list failed :%s"
+
+    const/4 v5, 0x1
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v5, v6
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 1679
+    if-eqz v1, :cond_2
+
+    .line 1680
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    goto :goto_0
+
+    .line 1679
+    :catchall_0
+    move-exception v0
+
+    if-eqz v1, :cond_3
+
+    .line 1680
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_3
+    throw v0
+.end method
+
+.method public final bdZ()I
+    .locals 7
+
+    .prologue
+    const/4 v5, 0x1
+
+    const/4 v0, 0x0
+
+    .line 1687
+    .line 1688
+    const/4 v2, 0x0
+
+    .line 1689
+    const-string/jumbo v1, "select md5 from EmojiInfo where catalog=? or temp=?"
+
+    .line 1690
+    const/4 v3, 0x2
+
+    new-array v3, v3, [Ljava/lang/String;
+
+    const-string/jumbo v4, "85"
+
+    aput-object v4, v3, v0
+
+    const-string/jumbo v4, "2"
+
+    aput-object v4, v3, v5
+
+    .line 1692
+    :try_start_0
+    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    invoke-interface {v4, v1, v3}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v2
+
+    .line 1693
+    if-eqz v2, :cond_0
+
+    invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 1694
+    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result v0
+
+    .line 1699
+    :cond_0
+    if-eqz v2, :cond_1
+
+    .line 1700
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+
+    .line 1703
+    :cond_1
+    :goto_0
+    return v0
+
+    .line 1696
+    :catch_0
+    move-exception v1
+
+    .line 1697
+    :try_start_1
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
+
+    const-string/jumbo v4, "get need to sync emoji MD5 list failed :%s"
+
+    const/4 v5, 0x1
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v1
+
+    aput-object v1, v5, v6
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 1699
+    if-eqz v2, :cond_1
+
+    .line 1700
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+
+    goto :goto_0
+
+    .line 1699
+    :catchall_0
+    move-exception v0
+
+    if-eqz v2, :cond_2
+
+    .line 1700
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+
+    :cond_2
+    throw v0
+.end method
+
+.method public final bea()Ljava/util/ArrayList;
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v6, 0x1
+
+    const/4 v5, 0x0
+
+    .line 1798
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    .line 1799
+    const/4 v1, 0x0
+
+    .line 1800
+    const-string/jumbo v0, "select md5 from EmojiInfo where needupload=? and catalog=?"
+
+    .line 1801
+    const/4 v3, 0x2
+
+    new-array v3, v3, [Ljava/lang/String;
+
+    sget v4, Lcom/tencent/mm/storage/a/c;->kHC:I
+
+    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v3, v5
+
+    sget v4, Lcom/tencent/mm/storage/a/a;->kHh:I
+
+    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v3, v6
+
+    .line 1803
+    :try_start_0
+    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    invoke-interface {v4, v0, v3}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v1
+
+    .line 1804
+    if-eqz v1, :cond_1
+
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 1806
+    :cond_0
+    const/4 v0, 0x0
+
+    invoke-interface {v1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 1807
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 1808
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 1813
+    :cond_1
+    if-eqz v1, :cond_2
+
+    .line 1814
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    .line 1817
+    :cond_2
+    :goto_0
+    return-object v2
+
+    .line 1810
+    :catch_0
+    move-exception v0
+
+    .line 1811
+    :try_start_1
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
+
+    const-string/jumbo v4, "get need upload emoji MD5 list failed :%s"
+
+    const/4 v5, 0x1
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v5, v6
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 1813
+    if-eqz v1, :cond_2
+
+    .line 1814
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    goto :goto_0
+
+    .line 1813
+    :catchall_0
+    move-exception v0
+
+    if-eqz v1, :cond_3
+
+    .line 1814
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_3
+    throw v0
+.end method
+
+.method public final beb()I
+    .locals 7
+
+    .prologue
+    const/4 v3, 0x1
+
+    const/4 v0, 0x0
+
+    .line 1857
+    .line 1858
+    const/4 v2, 0x0
+
+    .line 1859
+    const-string/jumbo v1, "select reserved3 from EmojiInfo where catalog=? order by reserved3 desc limit 1"
+
+    .line 1860
+    new-array v3, v3, [Ljava/lang/String;
+
+    sget v4, Lcom/tencent/mm/storage/a/a;->kHh:I
+
+    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v3, v0
+
+    .line 1862
+    :try_start_0
+    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    invoke-interface {v4, v1, v3}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v2
+
+    .line 1863
+    if-eqz v2, :cond_0
+
+    invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 1864
+    const/4 v1, 0x0
+
+    invoke-interface {v2, v1}, Landroid/database/Cursor;->getInt(I)I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result v0
+
+    .line 1869
+    :cond_0
+    if-eqz v2, :cond_1
+
+    .line 1870
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+
+    .line 1874
+    :cond_1
+    :goto_0
+    return v0
+
+    .line 1866
+    :catch_0
+    move-exception v1
+
+    .line 1867
+    :try_start_1
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
+
+    const-string/jumbo v4, "getCustomEmojiMaxIndex :%s"
+
+    const/4 v5, 0x1
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v1
+
+    aput-object v1, v5, v6
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 1869
+    if-eqz v2, :cond_1
+
+    .line 1870
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+
+    goto :goto_0
+
+    .line 1869
+    :catchall_0
+    move-exception v0
+
+    if-eqz v2, :cond_2
+
+    .line 1870
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+
+    :cond_2
+    throw v0
+.end method
+
+.method public final bec()Ljava/util/ArrayList;
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/storage/a/c;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v1, 0x0
+
+    const/4 v5, 0x1
+
+    const/4 v4, 0x0
+
+    .line 1883
+    .line 1884
+    const-string/jumbo v0, "SELECT * FROM EmojiInfo WHERE catalog =?  OR catalog=? OR groupId IS NOT NULL"
+
+    .line 1885
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    sget v3, Lcom/tencent/mm/storage/a/a;->kHh:I
+
+    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v2, v4
+
+    sget v3, Lcom/tencent/mm/storage/a/a;->kHi:I
+
+    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v2, v5
+
+    .line 1887
+    :try_start_0
+    iget-object v3, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    invoke-interface {v3, v0, v2}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result-object v2
+
+    .line 1889
+    if-eqz v2, :cond_3
+
+    :try_start_1
+    invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 1890
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    .line 1892
+    :cond_0
+    new-instance v3, Lcom/tencent/mm/storage/a/c;
+
+    invoke-direct {v3}, Lcom/tencent/mm/storage/a/c;-><init>()V
+
+    .line 1893
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/storage/a/c;->b(Landroid/database/Cursor;)V
+
+    .line 1894
+    iget v4, v3, Lcom/tencent/mm/storage/a/c;->field_reserved4:I
+
+    sget v5, Lcom/tencent/mm/storage/a/c;->kHD:I
+
+    and-int/2addr v4, v5
+
+    sget v5, Lcom/tencent/mm/storage/a/c;->kHD:I
+
+    if-eq v4, v5, :cond_1
+
+    .line 1895
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 1897
+    :cond_1
+    invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    .line 1903
+    if-eqz v2, :cond_2
+
+    .line 1904
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+
+    .line 1908
+    :cond_2
+    :goto_0
+    return-object v0
+
+    .line 1903
+    :cond_3
+    if-eqz v2, :cond_4
+
+    .line 1904
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+
+    :cond_4
+    :goto_1
+    move-object v0, v1
+
+    .line 1908
+    goto :goto_0
+
+    .line 1900
+    :catch_0
+    move-exception v0
+
+    move-object v2, v1
+
+    .line 1901
+    :goto_2
+    :try_start_2
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
+
+    const-string/jumbo v4, "getAllStoreAndCustomEmoji :%s"
+
+    const/4 v5, 0x1
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v5, v6
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 1903
+    if-eqz v2, :cond_4
+
+    .line 1904
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+
+    goto :goto_1
+
+    .line 1903
+    :catchall_0
+    move-exception v0
+
+    move-object v2, v1
+
+    :goto_3
+    if-eqz v2, :cond_5
+
+    .line 1904
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+
+    :cond_5
+    throw v0
+
+    .line 1903
+    :catchall_1
+    move-exception v0
+
+    goto :goto_3
+
+    .line 1900
+    :catch_1
+    move-exception v0
+
+    goto :goto_2
+.end method
+
+.method public final dX(Landroid/content/Context;)Z
     .locals 12
 
     .prologue
     .line 135
-    const-string/jumbo v0, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v0, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v1, "[oneliang]init"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 136
     const-string/jumbo v0, "86cb157e9c44b2c9934e4e430790776d"
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/a/f;->FP(Ljava/lang/String;)Lcom/tencent/mm/storage/a/c;
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/a/f;->Ig(Ljava/lang/String;)Lcom/tencent/mm/storage/a/c;
 
     move-result-object v0
 
     .line 137
     const-string/jumbo v1, "68f9864ca5c0a5d823ed7184e113a4aa"
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/storage/a/f;->FP(Ljava/lang/String;)Lcom/tencent/mm/storage/a/c;
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/storage/a/f;->Ig(Ljava/lang/String;)Lcom/tencent/mm/storage/a/c;
 
     move-result-object v1
 
     .line 139
-    sget v2, Lcom/tencent/mm/storage/a/c;->kgL:I
+    sget v2, Lcom/tencent/mm/storage/a/c;->kHk:I
 
-    invoke-direct {p0, v2}, Lcom/tencent/mm/storage/a/f;->pK(I)I
+    invoke-direct {p0, v2}, Lcom/tencent/mm/storage/a/f;->rz(I)I
 
     move-result v2
 
     .line 141
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v4, "[oneliang]init,group art custom catalog count:%d"
 
@@ -3125,14 +3832,14 @@
 
     aput-object v7, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 143
     if-nez v0, :cond_1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/tencent/mm/storage/a/c;->getContent()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/tencent/mm/storage/a/c;->kA()Ljava/lang/String;
 
     move-result-object v0
 
@@ -3149,32 +3856,32 @@
 
     .line 146
     :cond_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v0, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v1, "[oneliang]init,delete all group for very old version"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 147
-    sget v0, Lcom/tencent/mm/storage/a/c;->kgK:I
+    sget v0, Lcom/tencent/mm/storage/a/c;->kHj:I
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/storage/a/f;->pM(I)Z
+    invoke-direct {p0, v0}, Lcom/tencent/mm/storage/a/f;->rB(I)Z
 
     .line 148
-    sget v0, Lcom/tencent/mm/storage/a/c;->kgN:I
+    sget v0, Lcom/tencent/mm/storage/a/c;->kHm:I
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/storage/a/f;->pM(I)Z
+    invoke-direct {p0, v0}, Lcom/tencent/mm/storage/a/f;->rB(I)Z
 
     .line 149
-    sget v0, Lcom/tencent/mm/storage/a/c;->kgM:I
+    sget v0, Lcom/tencent/mm/storage/a/c;->kHl:I
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/storage/a/f;->pM(I)Z
+    invoke-direct {p0, v0}, Lcom/tencent/mm/storage/a/f;->rB(I)Z
 
     .line 161
     :cond_2
     const-string/jumbo v0, "9bd1281af3a31710a45b84d736363691"
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/a/f;->FP(Ljava/lang/String;)Lcom/tencent/mm/storage/a/c;
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/a/f;->Ig(Ljava/lang/String;)Lcom/tencent/mm/storage/a/c;
 
     move-result-object v0
 
@@ -3183,37 +3890,37 @@
 
     iget v0, v0, Lcom/tencent/mm/storage/a/c;->field_catalog:I
 
-    sget v1, Lcom/tencent/mm/storage/a/c;->kgK:I
+    sget v1, Lcom/tencent/mm/storage/a/c;->kHj:I
 
     if-ne v0, v1, :cond_3
 
     .line 163
-    const-string/jumbo v0, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v0, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v1, "[oneliang]init,delete all group for 5.0"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 164
-    sget v0, Lcom/tencent/mm/storage/a/c;->kgK:I
+    sget v0, Lcom/tencent/mm/storage/a/c;->kHj:I
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/storage/a/f;->pM(I)Z
+    invoke-direct {p0, v0}, Lcom/tencent/mm/storage/a/f;->rB(I)Z
 
     .line 165
-    sget v0, Lcom/tencent/mm/storage/a/c;->kgN:I
+    sget v0, Lcom/tencent/mm/storage/a/c;->kHm:I
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/storage/a/f;->pM(I)Z
+    invoke-direct {p0, v0}, Lcom/tencent/mm/storage/a/f;->rB(I)Z
 
     .line 166
-    sget v0, Lcom/tencent/mm/storage/a/c;->kgM:I
+    sget v0, Lcom/tencent/mm/storage/a/c;->kHl:I
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/storage/a/f;->pM(I)Z
+    invoke-direct {p0, v0}, Lcom/tencent/mm/storage/a/f;->rB(I)Z
 
     .line 170
     :cond_3
     const-string/jumbo v0, "icon_002_cover.png"
 
-    invoke-static {p1, v0}, Lcom/tencent/mm/storage/a/c;->aX(Landroid/content/Context;Ljava/lang/String;)Ljava/io/InputStream;
+    invoke-static {p1, v0}, Lcom/tencent/mm/storage/a/c;->aW(Landroid/content/Context;Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object v0
 
@@ -3221,26 +3928,26 @@
     if-eqz v0, :cond_4
 
     .line 172
-    const-string/jumbo v1, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v1, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v2, "[oneliang]init,delete all group for 5.1,update emoji tuzi  for 4.4"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 173
-    sget v1, Lcom/tencent/mm/storage/a/c;->kgK:I
+    sget v1, Lcom/tencent/mm/storage/a/c;->kHj:I
 
-    invoke-direct {p0, v1}, Lcom/tencent/mm/storage/a/f;->pM(I)Z
+    invoke-direct {p0, v1}, Lcom/tencent/mm/storage/a/f;->rB(I)Z
 
     .line 174
-    sget v1, Lcom/tencent/mm/storage/a/c;->kgN:I
+    sget v1, Lcom/tencent/mm/storage/a/c;->kHm:I
 
-    invoke-direct {p0, v1}, Lcom/tencent/mm/storage/a/f;->pM(I)Z
+    invoke-direct {p0, v1}, Lcom/tencent/mm/storage/a/f;->rB(I)Z
 
     .line 175
-    sget v1, Lcom/tencent/mm/storage/a/c;->kgM:I
+    sget v1, Lcom/tencent/mm/storage/a/c;->kHl:I
 
-    invoke-direct {p0, v1}, Lcom/tencent/mm/storage/a/f;->pM(I)Z
+    invoke-direct {p0, v1}, Lcom/tencent/mm/storage/a/f;->rB(I)Z
 
     .line 178
     :cond_4
@@ -3255,9 +3962,9 @@
     .line 187
     :cond_5
     :goto_0
-    sget v0, Lcom/tencent/mm/storage/a/c;->kgK:I
+    sget v0, Lcom/tencent/mm/storage/a/c;->kHj:I
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/storage/a/f;->pK(I)I
+    invoke-direct {p0, v0}, Lcom/tencent/mm/storage/a/f;->rz(I)I
 
     move-result v0
 
@@ -3276,11 +3983,11 @@
 
     .line 194
     :try_start_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v0, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v2, "[oneliang]init,parse xml start."
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 195
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -3317,7 +4024,7 @@
     move-result-wide v6
 
     .line 202
-    const-string/jumbo v0, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v0, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v4, "[oneliang]parse xml time: %d ms"
 
@@ -3335,7 +4042,7 @@
 
     aput-object v2, v8, v9
 
-    invoke-static {v0, v4, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v4, v8}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 204
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -3360,15 +4067,15 @@
 
     const-wide/16 v2, -0x1
 
-    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
-    instance-of v4, v4, Lcom/tencent/mm/az/g;
+    instance-of v4, v4, Lcom/tencent/mm/bc/g;
 
     if-eqz v4, :cond_c
 
-    iget-object v0, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v0, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
-    check-cast v0, Lcom/tencent/mm/az/g;
+    check-cast v0, Lcom/tencent/mm/bc/g;
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -3378,7 +4085,7 @@
 
     move-result-wide v2
 
-    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/az/g;->dH(J)J
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/bc/g;->dY(J)J
 
     move-result-wide v2
 
@@ -3402,11 +4109,11 @@
 
     check-cast v0, Lcom/tencent/mm/storage/a/c;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/a/c;->lX()Landroid/content/ContentValues;
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/a/c;->kn()Landroid/content/ContentValues;
 
     move-result-object v0
 
-    iget-object v8, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v8, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v9, "EmojiInfo"
 
@@ -3424,7 +4131,7 @@
 
     if-eqz v4, :cond_8
 
-    invoke-virtual {v4, v2, v3}, Lcom/tencent/mm/az/g;->dI(J)I
+    invoke-virtual {v4, v2, v3}, Lcom/tencent/mm/bc/g;->dZ(J)I
 
     .line 208
     :cond_8
@@ -3434,7 +4141,7 @@
     move-result-wide v2
 
     .line 209
-    const-string/jumbo v0, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v0, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v4, "insert time: %d ms"
 
@@ -3452,14 +4159,14 @@
 
     aput-object v2, v5, v8
 
-    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 210
-    const-string/jumbo v0, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v0, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v2, "[oneliang]init,parse xml end."
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -3485,7 +4192,7 @@
     if-eqz v4, :cond_8
 
     :try_start_3
-    invoke-virtual {v4, v2, v3}, Lcom/tencent/mm/az/g;->dI(J)I
+    invoke-virtual {v4, v2, v3}, Lcom/tencent/mm/bc/g;->dZ(J)I
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -3498,7 +4205,7 @@
 
     .line 213
     :try_start_4
-    const-string/jumbo v2, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v2, "MicroMsg.emoji.EmojiInfoStorage"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -3518,7 +4225,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
@@ -3538,7 +4245,7 @@
     move-exception v0
 
     .line 222
-    const-string/jumbo v1, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v1, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v2, "exception:%s"
 
@@ -3548,13 +4255,13 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_4
 
@@ -3563,7 +4270,7 @@
     move-exception v0
 
     .line 222
-    const-string/jumbo v1, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v1, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v2, "exception:%s"
 
@@ -3573,13 +4280,13 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_4
 
@@ -3606,7 +4313,7 @@
     move-exception v1
 
     .line 222
-    const-string/jumbo v2, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v2, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v3, "exception:%s"
 
@@ -3616,13 +4323,13 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v1
 
     aput-object v1, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_5
 
@@ -3637,176 +4344,6 @@
     goto/16 :goto_2
 .end method
 
-.method public final gO(Z)I
-    .locals 8
-
-    .prologue
-    const/4 v6, 0x1
-
-    const/4 v0, 0x0
-
-    .line 581
-    .line 582
-    const/4 v2, 0x0
-
-    .line 583
-    const-string/jumbo v3, "select count(*)  from EmojiInfo where catalog=? "
-
-    .line 584
-    new-array v1, v6, [Ljava/lang/String;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget v5, Lcom/tencent/mm/storage/a/a;->kgI:I
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v1, v0
-
-    .line 585
-    if-eqz p1, :cond_0
-
-    .line 586
-    const-string/jumbo v3, "select  count(*) from EmojiInfo where catalog=?  or catalog=?"
-
-    .line 587
-    const/4 v1, 0x2
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    sget v4, Lcom/tencent/mm/storage/a/a;->kgH:I
-
-    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v1, v0
-
-    sget v4, Lcom/tencent/mm/storage/a/a;->kgI:I
-
-    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v1, v6
-
-    .line 590
-    :cond_0
-    :try_start_0
-    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
-
-    invoke-interface {v4, v3, v1}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v2
-
-    .line 591
-    invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
-
-    .line 592
-    if-eqz v2, :cond_1
-
-    invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 593
-    const/4 v1, 0x0
-
-    invoke-interface {v2, v1}, Landroid/database/Cursor;->getInt(I)I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-result v0
-
-    .line 599
-    :cond_1
-    if-eqz v2, :cond_2
-
-    .line 600
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    .line 603
-    :cond_2
-    :goto_0
-    return v0
-
-    .line 595
-    :catch_0
-    move-exception v1
-
-    .line 596
-    :try_start_1
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
-
-    const-string/jumbo v4, "exception:%s"
-
-    const/4 v5, 0x1
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    const/4 v6, 0x0
-
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object v7
-
-    aput-object v7, v5, v6
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 597
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
-
-    const-string/jumbo v4, "[countCustomEmoji]Exception:%s"
-
-    const/4 v5, 0x1
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    aput-object v1, v5, v6
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 599
-    if-eqz v2, :cond_2
-
-    .line 600
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    goto :goto_0
-
-    .line 599
-    :catchall_0
-    move-exception v0
-
-    if-eqz v2, :cond_3
-
-    .line 600
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    :cond_3
-    throw v0
-.end method
-
 .method public final getKey()Ljava/lang/String;
     .locals 7
 
@@ -3817,20 +4354,20 @@
 
     const/4 v4, 0x0
 
-    .line 1851
-    .line 1853
+    .line 1913
+    .line 1915
     const-string/jumbo v0, "SELECT md5 FROM EmojiInfo WHERE catalog =?"
 
-    .line 1854
+    .line 1916
     new-array v2, v2, [Ljava/lang/String;
 
     const-string/jumbo v3, "153"
 
     aput-object v3, v2, v4
 
-    .line 1856
+    .line 1918
     :try_start_0
-    iget-object v3, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v3, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     invoke-interface {v3, v0, v2}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
     :try_end_0
@@ -3839,7 +4376,7 @@
 
     move-result-object v2
 
-    .line 1857
+    .line 1919
     if-eqz v2, :cond_1
 
     :try_start_1
@@ -3849,15 +4386,15 @@
 
     if-eqz v0, :cond_1
 
-    .line 1858
+    .line 1920
     const/4 v0, 0x0
 
     invoke-interface {v2, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1859
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    .line 1921
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -3865,7 +4402,7 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->Dz(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->FO(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -3877,23 +4414,23 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1877
+    .line 1939
     if-eqz v2, :cond_0
 
-    .line 1878
+    .line 1940
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    .line 1881
+    .line 1943
     :cond_0
     :goto_0
     return-object v0
 
-    .line 1862
+    .line 1924
     :cond_1
     :try_start_2
     const-string/jumbo v0, "AES"
@@ -3938,7 +4475,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/storage/a/f;->P([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/storage/a/f;->W([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -3974,25 +4511,25 @@
 
     invoke-virtual {v3, v4}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 1863
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    .line 1925
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_2
 
-    .line 1864
+    .line 1926
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/a/g;->j([B)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1866
+    .line 1928
     :cond_2
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -4000,7 +4537,7 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->Dz(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->FO(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -4012,22 +4549,22 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1867
+    .line 1929
     new-instance v3, Lcom/tencent/mm/storage/a/c;
 
     invoke-direct {v3}, Lcom/tencent/mm/storage/a/c;-><init>()V
 
-    .line 1868
+    .line 1930
     iput-object v0, v3, Lcom/tencent/mm/storage/a/c;->field_md5:Ljava/lang/String;
 
-    .line 1869
+    .line 1931
     const/16 v4, 0x99
 
     iput v4, v3, Lcom/tencent/mm/storage/a/c;->field_catalog:I
 
-    .line 1870
+    .line 1932
     invoke-direct {p0, v3}, Lcom/tencent/mm/storage/a/f;->l(Lcom/tencent/mm/storage/a/c;)Z
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
@@ -4037,38 +4574,38 @@
 
     if-eqz v3, :cond_3
 
-    .line 1871
+    .line 1933
     if-eqz v2, :cond_0
 
-    .line 1878
+    .line 1940
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
     goto/16 :goto_0
 
-    .line 1877
+    .line 1939
     :cond_3
     if-eqz v2, :cond_4
 
-    .line 1878
+    .line 1940
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
     :cond_4
     :goto_1
     move-object v0, v1
 
-    .line 1881
+    .line 1943
     goto/16 :goto_0
 
-    .line 1874
+    .line 1936
     :catch_0
     move-exception v0
 
     move-object v2, v1
 
-    .line 1875
+    .line 1937
     :goto_2
     :try_start_3
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v4, "createKey :%s"
 
@@ -4078,25 +4615,25 @@
 
     const/4 v6, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 1877
+    .line 1939
     if-eqz v2, :cond_4
 
-    .line 1878
+    .line 1940
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
     goto :goto_1
 
-    .line 1877
+    .line 1939
     :catchall_0
     move-exception v0
 
@@ -4105,19 +4642,19 @@
     :goto_3
     if-eqz v2, :cond_5
 
-    .line 1878
+    .line 1940
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
     :cond_5
     throw v0
 
-    .line 1877
+    .line 1939
     :catchall_1
     move-exception v0
 
     goto :goto_3
 
-    .line 1874
+    .line 1936
     :catch_1
     move-exception v0
 
@@ -4135,292 +4672,445 @@
 .end method
 
 .method public final h(Ljava/util/List;Ljava/lang/String;)Z
-    .locals 15
+    .locals 13
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/storage/a/c;",
+            ">;",
+            "Ljava/lang/String;",
+            ")Z"
+        }
+    .end annotation
 
     .prologue
-    .line 1444
-    invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
+    const/4 v6, 0x1
 
-    move-result v1
+    const/4 v5, 0x0
 
-    if-gtz v1, :cond_0
+    .line 1506
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
-    .line 1445
-    const-string/jumbo v1, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    move-result v0
 
-    const-string/jumbo v2, "insert emoji list faild. list is null or size is 0."
+    if-gtz v0, :cond_0
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    .line 1507
+    const-string/jumbo v0, "MicroMsg.emoji.EmojiInfoStorage"
 
-    .line 1446
-    const/4 v1, 0x0
+    const-string/jumbo v1, "insert emoji list faild. list is null or size is 0."
 
-    .line 1488
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1550
     :goto_0
-    return v1
+    return v5
 
-    .line 1448
+    .line 1510
     :cond_0
-    const-string/jumbo v1, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v0, "MicroMsg.emoji.EmojiInfoStorage"
 
-    const-string/jumbo v2, "insertEmojiList groupId:%s size:%d"
+    const-string/jumbo v1, "insertEmojiList groupId:%s size:%d"
 
-    const/4 v3, 0x2
+    const/4 v2, 0x2
 
-    new-array v3, v3, [Ljava/lang/Object;
+    new-array v2, v2, [Ljava/lang/Object;
 
-    const/4 v4, 0x0
+    aput-object p2, v2, v5
 
-    aput-object p2, v3, v4
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
-    const/4 v4, 0x1
+    move-result v3
 
-    invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result v5
+    move-result-object v3
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    aput-object v3, v2, v6
 
-    move-result-object v5
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    aput-object v5, v3, v4
+    .line 1511
+    const/4 v2, 0x0
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 1512
+    const-wide/16 v0, -0x1
 
-    .line 1449
-    const/4 v3, 0x0
+    .line 1513
+    iget-object v3, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
-    .line 1450
-    const-wide/16 v1, -0x1
+    instance-of v3, v3, Lcom/tencent/mm/bc/g;
 
-    .line 1451
-    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    if-eqz v3, :cond_5
 
-    instance-of v4, v4, Lcom/tencent/mm/az/g;
+    .line 1514
+    iget-object v0, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
-    if-eqz v4, :cond_5
+    check-cast v0, Lcom/tencent/mm/bc/g;
 
-    .line 1452
-    iget-object v1, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
-
-    check-cast v1, Lcom/tencent/mm/az/g;
-
-    .line 1453
+    .line 1515
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Thread;->getId()J
-
-    move-result-wide v2
-
-    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/az/g;->dH(J)J
-
-    move-result-wide v2
-
-    move-object v5, v1
-
-    move-wide v13, v2
-
-    move-wide v3, v13
-
-    .line 1457
-    :goto_1
-    move-object/from16 v0, p2
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/a/f;->mF(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 1458
-    new-instance v6, Ljava/util/HashMap;
+    invoke-virtual {v1}, Ljava/lang/Thread;->getId()J
 
-    invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
+    move-result-wide v2
 
-    .line 1459
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/bc/g;->dY(J)J
+
+    move-result-wide v2
+
+    move-object v4, v0
+
+    .line 1519
+    :goto_1
+    invoke-virtual {p0, p2}, Lcom/tencent/mm/storage/a/f;->nB(Ljava/lang/String;)Ljava/util/List;
+
+    move-result-object v0
+
+    .line 1520
+    new-instance v7, Ljava/util/HashMap;
+
+    invoke-direct {v7}, Ljava/util/HashMap;-><init>()V
+
+    .line 1521
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_2
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/storage/a/c;
+
+    .line 1522
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/a/c;->yt()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-interface {v7, v8, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_2
+
+    :cond_1
+    move v1, v5
+
+    .line 1525
+    :goto_3
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge v1, v0, :cond_2
+
+    .line 1526
+    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/storage/a/c;
+
+    .line 1527
+    iput v5, v0, Lcom/tencent/mm/storage/a/c;->field_temp:I
+
+    .line 1531
+    iget-object v8, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    const-string/jumbo v9, "EmojiInfo"
+
+    const-string/jumbo v10, "md5"
+
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/a/c;->kn()Landroid/content/ContentValues;
+
+    move-result-object v11
+
+    invoke-interface {v8, v9, v10, v11}, Lcom/tencent/mm/sdk/h/d;->replace(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
+
+    .line 1532
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/a/c;->yt()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v7, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 1525
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_3
+
+    .line 1536
+    :cond_2
+    invoke-interface {v7}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v7
+
+    .line 1537
+    :goto_4
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 1538
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    .line 1539
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    .line 1540
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/storage/a/c;
+
+    .line 1542
+    iput v6, v0, Lcom/tencent/mm/storage/a/c;->field_temp:I
+
+    .line 1543
+    iget-object v8, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    const-string/jumbo v9, "EmojiInfo"
+
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/a/c;->kn()Landroid/content/ContentValues;
+
+    move-result-object v10
+
+    const-string/jumbo v11, "md5=?"
+
+    new-array v12, v6, [Ljava/lang/String;
+
+    aput-object v1, v12, v5
+
+    invoke-interface {v8, v9, v10, v11, v12}, Lcom/tencent/mm/sdk/h/d;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+
+    .line 1544
+    const-string/jumbo v1, "MicroMsg.emoji.EmojiInfoStorage"
+
+    const-string/jumbo v8, "jacks modify excess emoji to %s"
+
+    new-array v9, v6, [Ljava/lang/Object;
+
+    iget-object v0, v0, Lcom/tencent/mm/storage/a/c;->field_groupId:Ljava/lang/String;
+
+    aput-object v0, v9, v5
+
+    invoke-static {v1, v8, v9}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_4
+
+    .line 1547
+    :cond_3
+    if-eqz v4, :cond_4
+
+    .line 1548
+    invoke-virtual {v4, v2, v3}, Lcom/tencent/mm/bc/g;->dZ(J)I
+
+    :cond_4
+    move v5, v6
+
+    .line 1550
+    goto/16 :goto_0
+
+    :cond_5
+    move-object v4, v2
+
+    move-wide v2, v0
+
+    goto/16 :goto_1
+.end method
+
+.method public final ho(Z)I
+    .locals 8
+
+    .prologue
+    const/4 v6, 0x1
+
+    const/4 v0, 0x0
+
+    .line 581
+    .line 582
+    const/4 v2, 0x0
+
+    .line 583
+    const-string/jumbo v3, "select count(*)  from EmojiInfo where catalog=? "
+
+    .line 584
+    new-array v1, v6, [Ljava/lang/String;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget v5, Lcom/tencent/mm/storage/a/a;->kHh:I
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v1, v0
+
+    .line 585
+    if-eqz p1, :cond_0
+
+    .line 586
+    const-string/jumbo v3, "select  count(*) from EmojiInfo where catalog=?  or catalog=?"
+
+    .line 587
+    const/4 v1, 0x2
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    sget v4, Lcom/tencent/mm/storage/a/a;->kHg:I
+
+    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v1, v0
+
+    sget v4, Lcom/tencent/mm/storage/a/a;->kHh:I
+
+    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v1, v6
+
+    .line 590
+    :cond_0
+    :try_start_0
+    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    invoke-interface {v4, v3, v1}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v2
 
-    :goto_2
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    .line 591
+    if-eqz v2, :cond_1
+
+    invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 592
+    const/4 v1, 0x0
 
-    move-result-object v1
+    invoke-interface {v2, v1}, Landroid/database/Cursor;->getInt(I)I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    check-cast v1, Lcom/tencent/mm/storage/a/c;
+    move-result v0
 
-    .line 1460
-    invoke-virtual {v1}, Lcom/tencent/mm/storage/a/c;->yh()Ljava/lang/String;
+    .line 598
+    :cond_1
+    if-eqz v2, :cond_2
+
+    .line 599
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+
+    .line 602
+    :cond_2
+    :goto_0
+    return v0
+
+    .line 594
+    :catch_0
+    move-exception v1
+
+    .line 595
+    :try_start_1
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
+
+    const-string/jumbo v4, "exception:%s"
+
+    const/4 v5, 0x1
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-interface {v6, v7, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    aput-object v7, v5, v6
 
-    goto :goto_2
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1463
-    :cond_1
-    const/4 v1, 0x0
+    .line 596
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
 
-    move v2, v1
+    const-string/jumbo v4, "[countCustomEmoji]Exception:%s"
 
-    :goto_3
-    invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
+    const/4 v5, 0x1
 
-    move-result v1
+    new-array v5, v5, [Ljava/lang/Object;
 
-    if-ge v2, v1, :cond_2
+    const/4 v6, 0x0
 
-    .line 1464
-    move-object/from16 v0, p1
-
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Lcom/tencent/mm/storage/a/c;
+    aput-object v1, v5, v6
 
-    .line 1465
-    const/4 v7, 0x0
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iput v7, v1, Lcom/tencent/mm/storage/a/c;->field_temp:I
+    .line 598
+    if-eqz v2, :cond_2
 
-    .line 1469
-    iget-object v7, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    .line 599
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    const-string/jumbo v8, "EmojiInfo"
+    goto :goto_0
 
-    const-string/jumbo v9, "md5"
+    .line 598
+    :catchall_0
+    move-exception v0
 
-    invoke-virtual {v1}, Lcom/tencent/mm/storage/a/c;->lX()Landroid/content/ContentValues;
+    if-eqz v2, :cond_3
 
-    move-result-object v10
+    .line 599
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    invoke-interface {v7, v8, v9, v10}, Lcom/tencent/mm/sdk/h/d;->replace(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
-
-    .line 1470
-    invoke-virtual {v1}, Lcom/tencent/mm/storage/a/c;->yh()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {v6, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 1463
-    add-int/lit8 v1, v2, 0x1
-
-    move v2, v1
-
-    goto :goto_3
-
-    .line 1474
-    :cond_2
-    invoke-interface {v6}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
-
-    .line 1475
-    :goto_4
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    .line 1476
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/Map$Entry;
-
-    .line 1477
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    .line 1478
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/tencent/mm/storage/a/c;
-
-    .line 1480
-    const/4 v7, 0x1
-
-    iput v7, v1, Lcom/tencent/mm/storage/a/c;->field_temp:I
-
-    .line 1481
-    iget-object v7, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
-
-    const-string/jumbo v8, "EmojiInfo"
-
-    invoke-virtual {v1}, Lcom/tencent/mm/storage/a/c;->lX()Landroid/content/ContentValues;
-
-    move-result-object v9
-
-    const-string/jumbo v10, "md5=?"
-
-    const/4 v11, 0x1
-
-    new-array v11, v11, [Ljava/lang/String;
-
-    const/4 v12, 0x0
-
-    aput-object v2, v11, v12
-
-    invoke-interface {v7, v8, v9, v10, v11}, Lcom/tencent/mm/sdk/h/d;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
-
-    .line 1482
-    const-string/jumbo v2, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
-
-    const-string/jumbo v7, "jacks modify excess emoji to %s"
-
-    const/4 v8, 0x1
-
-    new-array v8, v8, [Ljava/lang/Object;
-
-    const/4 v9, 0x0
-
-    iget-object v1, v1, Lcom/tencent/mm/storage/a/c;->field_groupId:Ljava/lang/String;
-
-    aput-object v1, v8, v9
-
-    invoke-static {v2, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_4
-
-    .line 1485
     :cond_3
-    if-eqz v5, :cond_4
-
-    .line 1486
-    invoke-virtual {v5, v3, v4}, Lcom/tencent/mm/az/g;->dI(J)I
-
-    .line 1488
-    :cond_4
-    const/4 v1, 0x1
-
-    goto/16 :goto_0
-
-    :cond_5
-    move-object v5, v3
-
-    move-wide v3, v1
-
-    goto/16 :goto_1
+    throw v0
 .end method
 
 .method public final k(Lcom/tencent/mm/storage/a/c;)Lcom/tencent/mm/storage/a/c;
@@ -4430,17 +5120,17 @@
     const/4 v0, 0x0
 
     .line 271
-    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->yh()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->yt()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->yh()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->yt()Ljava/lang/String;
 
     move-result-object v1
 
@@ -4452,11 +5142,11 @@
 
     .line 272
     :cond_0
-    const-string/jumbo v1, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v1, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v2, "create assertion!, invalid md5"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object p1, v0
 
@@ -4475,7 +5165,7 @@
     .line 278
     const-string/jumbo v0, "create_emoji_info_notify"
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/a/f;->DI(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/a/f;->FX(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -4497,7 +5187,7 @@
     .line 393
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->aYz()Z
+    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->bdS()Z
 
     move-result v2
 
@@ -4505,11 +5195,11 @@
 
     .line 394
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v0, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v2, "insert assertion!, invalid emojiInfo"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -4520,11 +5210,11 @@
 
     .line 398
     :cond_2
-    iget-object v2, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v2, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v3, "EmojiInfo"
 
-    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->lX()Landroid/content/ContentValues;
+    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->kn()Landroid/content/ContentValues;
 
     move-result-object v4
 
@@ -4532,7 +5222,7 @@
 
     new-array v6, v0, [Ljava/lang/String;
 
-    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->yh()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->yt()Ljava/lang/String;
 
     move-result-object v7
 
@@ -4546,16 +5236,16 @@
     if-lez v2, :cond_3
 
     .line 400
-    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->yh()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->yt()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {p0, v3}, Lcom/tencent/mm/storage/a/f;->DI(Ljava/lang/String;)V
+    invoke-virtual {p0, v3}, Lcom/tencent/mm/storage/a/f;->FX(Ljava/lang/String;)V
 
     .line 401
     const-string/jumbo v3, "event_update_emoji"
 
-    invoke-virtual {p0, v3}, Lcom/tencent/mm/storage/a/f;->DI(Ljava/lang/String;)V
+    invoke-virtual {p0, v3}, Lcom/tencent/mm/storage/a/f;->FX(Ljava/lang/String;)V
 
     .line 404
     :cond_3
@@ -4566,7 +5256,71 @@
     goto :goto_0
 .end method
 
-.method public final mE(Ljava/lang/String;)Z
+.method public final n(Lcom/tencent/mm/storage/a/c;)Z
+    .locals 8
+
+    .prologue
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    .line 408
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->bdS()Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    .line 409
+    :cond_0
+    const-string/jumbo v0, "MicroMsg.emoji.EmojiInfoStorage"
+
+    const-string/jumbo v2, "insert assertion!, invalid emojiInfo"
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    move v0, v1
+
+    .line 413
+    :cond_1
+    :goto_0
+    return v0
+
+    .line 412
+    :cond_2
+    iget-object v2, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    const-string/jumbo v3, "EmojiInfo"
+
+    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->kn()Landroid/content/ContentValues;
+
+    move-result-object v4
+
+    const-string/jumbo v5, "md5=?"
+
+    new-array v6, v0, [Ljava/lang/String;
+
+    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->yt()Ljava/lang/String;
+
+    move-result-object v7
+
+    aput-object v7, v6, v1
+
+    invoke-interface {v2, v3, v4, v5, v6}, Lcom/tencent/mm/sdk/h/d;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+
+    move-result v2
+
+    .line 413
+    if-gtz v2, :cond_1
+
+    move v0, v1
+
+    goto :goto_0
+.end method
+
+.method public final nA(Ljava/lang/String;)Z
     .locals 9
 
     .prologue
@@ -4606,7 +5360,7 @@
 
     .line 237
     :try_start_0
-    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v4, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const/4 v5, 0x2
 
@@ -4618,7 +5372,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget v8, Lcom/tencent/mm/storage/a/c;->kgJ:I
+    sget v8, Lcom/tencent/mm/storage/a/c;->kHi:I
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -4632,7 +5386,7 @@
 
     const/4 v6, 0x1
 
-    invoke-static {p1}, Lcom/tencent/mm/az/g;->dw(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/bc/g;->dF(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -4682,7 +5436,7 @@
 
     .line 242
     :try_start_1
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -4702,7 +5456,7 @@
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -4727,24 +5481,35 @@
     throw v0
 .end method
 
-.method public final mF(Ljava/lang/String;)Ljava/util/List;
+.method public final nB(Ljava/lang/String;)Ljava/util/List;
     .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/storage/a/c;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 1025
+    .line 1024
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1037
+    .line 1036
     const-string/jumbo v0, "select * from EmojiInfo where groupId=? and temp=? order by idx asc"
 
-    .line 1038
+    .line 1037
     const/4 v1, 0x0
 
-    .line 1042
+    .line 1041
     :try_start_0
-    iget-object v3, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v3, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const/4 v4, 0x2
 
@@ -4764,7 +5529,7 @@
 
     move-result-object v1
 
-    .line 1043
+    .line 1042
     if-eqz v1, :cond_1
 
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
@@ -4773,27 +5538,27 @@
 
     if-eqz v0, :cond_1
 
-    .line 1046
+    .line 1045
     :cond_0
     new-instance v0, Lcom/tencent/mm/storage/a/c;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/tencent/mm/model/c;->rF()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/tencent/mm/model/c;->rH()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-direct {v0, v3}, Lcom/tencent/mm/storage/a/c;-><init>(Ljava/lang/String;)V
 
-    .line 1047
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/storage/a/c;->c(Landroid/database/Cursor;)V
+    .line 1046
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/storage/a/c;->b(Landroid/database/Cursor;)V
 
-    .line 1048
+    .line 1047
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1050
+    .line 1049
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -4803,25 +5568,25 @@
 
     if-nez v0, :cond_0
 
-    .line 1055
+    .line 1054
     :cond_1
     if-eqz v1, :cond_2
 
-    .line 1056
+    .line 1055
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 1059
+    .line 1058
     :cond_2
     :goto_0
     return-object v2
 
-    .line 1052
+    .line 1051
     :catch_0
     move-exception v0
 
-    .line 1053
+    .line 1052
     :try_start_1
-    const-string/jumbo v3, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
+    const-string/jumbo v3, "MicroMsg.emoji.EmojiInfoStorage"
 
     const-string/jumbo v4, "[getEmojiListByGroupId] Exception:%s"
 
@@ -4837,103 +5602,39 @@
 
     aput-object v0, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1055
+    .line 1054
     if-eqz v1, :cond_2
 
-    .line 1056
+    .line 1055
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 1055
+    .line 1054
     :catchall_0
     move-exception v0
 
     if-eqz v1, :cond_3
 
-    .line 1056
+    .line 1055
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     :cond_3
     throw v0
 .end method
 
-.method public final n(Lcom/tencent/mm/storage/a/c;)Z
-    .locals 8
-
-    .prologue
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    .line 408
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->aYz()Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    .line 409
-    :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpKW6XSoHkFWULQuFhd8yLOyJ6UPPid1Otg="
-
-    const-string/jumbo v2, "insert assertion!, invalid emojiInfo"
-
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    move v0, v1
-
-    .line 413
-    :cond_1
-    :goto_0
-    return v0
-
-    .line 412
-    :cond_2
-    iget-object v2, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
-
-    const-string/jumbo v3, "EmojiInfo"
-
-    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->lX()Landroid/content/ContentValues;
-
-    move-result-object v4
-
-    const-string/jumbo v5, "md5=?"
-
-    new-array v6, v0, [Ljava/lang/String;
-
-    invoke-virtual {p1}, Lcom/tencent/mm/storage/a/c;->yh()Ljava/lang/String;
-
-    move-result-object v7
-
-    aput-object v7, v6, v1
-
-    invoke-interface {v2, v3, v4, v5, v6}, Lcom/tencent/mm/sdk/h/d;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
-
-    move-result v2
-
-    .line 413
-    if-gtz v2, :cond_1
-
-    move v0, v1
-
-    goto :goto_0
-.end method
-
-.method public final pL(I)Landroid/database/Cursor;
+.method public final rA(I)Landroid/database/Cursor;
     .locals 8
 
     .prologue
     const/4 v2, 0x0
 
-    .line 725
-    iget-object v0, p0, Lcom/tencent/mm/storage/a/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+    .line 724
+    iget-object v0, p0, Lcom/tencent/mm/storage/a/f;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v1, "EmojiInfo"
 

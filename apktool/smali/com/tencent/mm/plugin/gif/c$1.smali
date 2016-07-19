@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic exe:Lcom/tencent/mm/plugin/gif/c;
+.field final synthetic eDw:Lcom/tencent/mm/plugin/gif/c;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 59
-    iput-object p1, p0, Lcom/tencent/mm/plugin/gif/c$1;->exe:Lcom/tencent/mm/plugin/gif/c;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/gif/c$1;->eDw:Lcom/tencent/mm/plugin/gif/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
 
     move-result-wide v0
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/gif/c$1;->exe:Lcom/tencent/mm/plugin/gif/c;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/gif/c$1;->eDw:Lcom/tencent/mm/plugin/gif/c;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/gif/c;->a(Lcom/tencent/mm/plugin/gif/c;)J
 
@@ -56,7 +56,7 @@
     if-ltz v0, :cond_0
 
     .line 63
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gif/c$1;->exe:Lcom/tencent/mm/plugin/gif/c;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gif/c$1;->eDw:Lcom/tencent/mm/plugin/gif/c;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/gif/c;->invalidateSelf()V
 

@@ -4,55 +4,55 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface.OnDismissListener;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.w;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.base.g;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.base.h;
 
 final class JSAPIUploadLogHelperUI$3
   implements w
 {
   JSAPIUploadLogHelperUI$3(JSAPIUploadLogHelperUI paramJSAPIUploadLogHelperUI, ProgressDialog paramProgressDialog, DialogInterface.OnDismissListener paramOnDismissListener) {}
   
-  public final void cd(int paramInt)
+  public final void cx(int paramInt)
   {
     if (paramInt < 0)
     {
-      u.e("!44@/B4Tb64lLpLSYdQkqWTex1ccbn3Cc8CqdS1RwcelhYo=", "uploadLog call by jsapi, error happened, percent:%d", new Object[] { Integer.valueOf(paramInt) });
+      v.e("MicroMsg.JSAPIUploadLogHelperUI", "uploadLog call by jsapi, error happened, percent:%d", new Object[] { Integer.valueOf(paramInt) });
       ah.a(null);
-      if (buX != null) {
-        buX.dismiss();
+      if (bjH != null) {
+        bjH.dismiss();
       }
-      ??? = g.e(klC, 2131429577, 2131430877);
+      ??? = com.tencent.mm.ui.base.g.f(kLd, 2131235755, 2131231028);
       if (??? != null) {
-        ((com.tencent.mm.ui.base.h)???).setOnDismissListener(klD);
+        ((h)???).setOnDismissListener(kLe);
       }
-      synchronized (JSAPIUploadLogHelperUI.a(klC))
+      synchronized (JSAPIUploadLogHelperUI.a(kLd))
       {
-        JSAPIUploadLogHelperUI.ax(false);
+        JSAPIUploadLogHelperUI.aa(false);
         return;
       }
     }
     if (paramInt >= 100)
     {
-      u.i("!44@/B4Tb64lLpLSYdQkqWTex1ccbn3Cc8CqdS1RwcelhYo=", "uploadLog call by jsapi done.");
+      v.i("MicroMsg.JSAPIUploadLogHelperUI", "uploadLog call by jsapi done.");
       ah.a(null);
-      if (buX != null) {
-        buX.dismiss();
+      if (bjH != null) {
+        bjH.dismiss();
       }
-      ??? = g.e(klC, 2131429578, 2131430877);
+      ??? = com.tencent.mm.ui.base.g.f(kLd, 2131235759, 2131231028);
       if (??? != null) {
-        ((com.tencent.mm.ui.base.h)???).setOnDismissListener(klD);
+        ((h)???).setOnDismissListener(kLe);
       }
       long l = System.currentTimeMillis() / 1000L;
-      com.tencent.mm.plugin.report.service.h.fUJ.g(12975, new Object[] { Long.valueOf(l) });
-      synchronized (JSAPIUploadLogHelperUI.a(klC))
+      com.tencent.mm.plugin.report.service.g.gdY.h(12975, new Object[] { Long.valueOf(l) });
+      synchronized (JSAPIUploadLogHelperUI.a(kLd))
       {
-        JSAPIUploadLogHelperUI.ax(false);
+        JSAPIUploadLogHelperUI.aa(false);
         return;
       }
     }
-    u.i("!44@/B4Tb64lLpLSYdQkqWTex1ccbn3Cc8CqdS1RwcelhYo=", "uploadLog call by jsapi, ipxx progress:%d", new Object[] { Integer.valueOf(paramInt) });
-    if (buX != null) {
-      buX.setMessage(klC.getString(2131429576) + paramInt + "%");
+    v.i("MicroMsg.JSAPIUploadLogHelperUI", "uploadLog call by jsapi, ipxx progress:%d", new Object[] { Integer.valueOf(paramInt) });
+    if (bjH != null) {
+      bjH.setMessage(kLd.getString(2131235756) + paramInt + "%");
     }
   }
 }

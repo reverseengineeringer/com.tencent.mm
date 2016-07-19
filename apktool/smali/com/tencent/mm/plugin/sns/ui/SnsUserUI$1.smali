@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hme:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
+.field final synthetic hCj:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 56
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$1;->hme:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
+    .line 71
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$1;->hCj:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,24 +40,24 @@
     .locals 1
 
     .prologue
-    .line 59
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$1;->hme:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
+    .line 74
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$1;->hCj:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;)Lcom/tencent/mm/plugin/sns/ui/ak;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/ak;->aCl()V
-
-    .line 60
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$1;->hme:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;)Lcom/tencent/mm/plugin/sns/ui/ak;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;)Lcom/tencent/mm/plugin/sns/ui/ao;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/ak;->aCk()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/ao;->addSize()V
 
-    .line 61
+    .line 75
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$1;->hCj:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;)Lcom/tencent/mm/plugin/sns/ui/ao;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/ao;->aDX()V
+
+    .line 76
     return-void
 .end method

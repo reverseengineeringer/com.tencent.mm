@@ -1,40 +1,54 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
-import android.content.DialogInterface.OnClickListener;
-import android.support.v7.app.ActionBarActivity;
-import com.tencent.mm.d.a.gw;
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.ui.base.g;
-import com.tencent.mm.ui.j;
-import com.tencent.mm.ui.o;
-import java.util.LinkedList;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.modelsimple.ad;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.v.an;
+import com.tencent.mm.v.d;
+import com.tencent.mm.v.f;
+import com.tencent.mm.v.i;
 
 final class ChattingUI$a$45
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  ChattingUI$a$45(ChattingUI.a parama, LinkedList paramLinkedList, int paramInt) {}
+  ChattingUI$a$45(ChattingUI.a parama) {}
   
-  public final void onClick(final DialogInterface paramDialogInterface, int paramInt)
+  public final void run()
   {
-    paramDialogInterface = new gw();
-    ChattingUI.a locala = laF;
-    ActionBarActivity localActionBarActivity = laF.koJ.kpc;
-    laF.getString(2131430877);
-    ChattingUI.a.a(locala, g.a(localActionBarActivity, laF.getString(2131432680), true, new DialogInterface.OnCancelListener()
+    long l = System.currentTimeMillis();
+    if ((lAY.jfA) && (lAY.cXq != null) && (lAY.lrK != null))
     {
-      public final void onCancel(DialogInterface paramAnonymousDialogInterface)
+      ChattingUI.a.aB(lAY);
+      an.xR();
+      d locald = lAY.cXq;
+      if (c.da(tEbsL))
       {
-        paramDialogInterfaceaCk.aBY = true;
-        a.jUF.j(paramDialogInterface);
+        String str = String.format("%s;%s;%d", new Object[] { field_brandUserName, field_bizChatServId, Long.valueOf(System.currentTimeMillis() / 1000L) });
+        ad.a(field_brandUserName, 7, "EnterpriseChatStatus", str);
+        v.d("MicroMsg.BizChatStatusNotifyService", "enterChat:arg:%s", new Object[] { str });
       }
-    }));
-    aCk.aCm = laF.kRI.field_username;
-    aCk.aCn = laR;
-    aCk.asc = cmr;
-    a.jUF.j(paramDialogInterface);
+      if (lAY.lyY)
+      {
+        if (lAY.cXq.ww())
+        {
+          an.xN();
+          i.M(lAY.cXq.field_bizChatServId, lAY.lrK.field_username);
+        }
+      }
+      else {
+        ChattingUI.a.aC(lAY);
+      }
+    }
+    for (;;)
+    {
+      v.d("MicroMsg.ChattingUI", "willen test  updateBizChatInfo use time:%s", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+      return;
+      f.f(lAY.cXq);
+      break;
+      v.i("MicroMsg.ChattingUI", "bizChatInfo:%s  talker:%s", new Object[] { lAY.cXq, lAY.lrK });
+    }
   }
 }
 

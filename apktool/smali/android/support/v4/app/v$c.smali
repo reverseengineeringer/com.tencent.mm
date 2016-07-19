@@ -30,6 +30,16 @@
 
 
 # virtual methods
+.method public Z()I
+    .locals 1
+
+    .prologue
+    .line 138
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
 .method public a(Landroid/app/NotificationManager;Ljava/lang/String;I)V
     .locals 0
 
@@ -50,14 +60,4 @@
 
     .line 134
     return-void
-.end method
-
-.method public ab()I
-    .locals 1
-
-    .prologue
-    .line 138
-    const/4 v0, 0x1
-
-    return v0
 .end method

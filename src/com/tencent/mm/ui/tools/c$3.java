@@ -6,18 +6,18 @@ import com.tencent.mm.ui.base.p;
 final class c$3
   implements ar.a
 {
-  public final void uh()
+  public final void ui()
   {
-    if (c.biv() != null)
+    if (c.bjL() != null)
     {
-      c.biv().dismiss();
-      c.biw();
+      c.bjL().dismiss();
+      c.bos();
     }
   }
   
-  public final boolean ui()
+  public final boolean uj()
   {
-    return c.biu();
+    return c.bor();
   }
 }
 

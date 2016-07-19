@@ -1,143 +1,138 @@
 package com.tencent.mm.ui.chatting;
 
 import android.content.Context;
-import com.tencent.mm.a.e;
-import com.tencent.mm.d.b.bg;
-import com.tencent.mm.d.b.p;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import com.tencent.mm.bc.g;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.model.ah;
 import com.tencent.mm.model.ar;
-import com.tencent.mm.model.h;
-import com.tencent.mm.model.i;
-import com.tencent.mm.pluginsdk.i.a;
-import com.tencent.mm.pluginsdk.i.f;
-import com.tencent.mm.pluginsdk.model.app.l;
-import com.tencent.mm.pluginsdk.ui.chat.j;
-import com.tencent.mm.sdk.modelmsg.WXEmojiObject;
-import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
-import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag;
-import com.tencent.mm.storage.k;
-import com.tencent.mm.storage.w;
-import com.tencent.mm.ui.base.s;
-import java.io.FileInputStream;
+import com.tencent.mm.model.c;
+import com.tencent.mm.platformtools.s;
+import com.tencent.mm.pluginsdk.i.n;
+import com.tencent.mm.pluginsdk.ui.a.b;
+import com.tencent.mm.pluginsdk.ui.d.e;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.aj;
 
 public final class cs
-  implements j
+  extends com.tencent.mm.ui.i<ai>
 {
-  private k cId;
-  private Context context;
-  private String kSG;
-  private boolean kXF = true;
-  private boolean kXG = true;
+  private String ajT;
+  private String bxU;
+  private boolean kZE;
+  private String lxe;
+  a lxf;
   
-  public cs(Context paramContext, k paramk, String paramString)
+  public cs(Context paramContext, ai paramai, String paramString1, String paramString2, boolean paramBoolean)
   {
-    context = paramContext;
-    cId = paramk;
-    kSG = paramString;
-    if (k.Ec(kSG)) {
-      kXG = false;
+    super(paramContext, paramai);
+    ajT = paramString1;
+    bxU = paramString2;
+    kZE = paramBoolean;
+  }
+  
+  private String T(ai paramai)
+  {
+    if (field_isSend == 1) {
+      return bxU;
     }
-    if (k.Ea(kSG)) {
-      kXF = false;
+    return ajT;
+  }
+  
+  private CharSequence U(ai paramai)
+  {
+    if (field_createTime == Long.MAX_VALUE) {
+      return "";
     }
-    if (k.DY(kSG)) {
-      kXF = false;
+    return n.c(context, field_createTime, true);
+  }
+  
+  public final void GH()
+  {
+    aj localaj = ah.tE().rt();
+    String str1 = ajT;
+    String str2 = lxe;
+    str1 = "SELECT * FROM " + localaj.HJ(str1) + " WHERE" + localaj.Hl(str1) + "AND content LIKE '%" + str2 + "%' AND type = 1";
+    str1 = str1 + " ORDER BY createTime DESC";
+    setCursor(bvG.rawQuery(str1, null));
+    if ((lxf != null) && (!s.kf(lxe))) {
+      lxf.tg(getCount());
     }
-    if ((cId != null) && (k.Ec(cId.field_username))) {
-      paramContext = kSG;
+    super.notifyDataSetChanged();
+  }
+  
+  protected final void GI()
+  {
+    closeCursor();
+    GH();
+  }
+  
+  public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
+  {
+    if (paramView == null)
+    {
+      paramView = View.inflate(context, 2130904296, null);
+      paramViewGroup = new b((byte)0);
+      cui = ((ImageView)paramView.findViewById(2131755444));
+      cEo = ((TextView)paramView.findViewById(2131756387));
+      cEp = ((TextView)paramView.findViewById(2131756388));
+      lxg = ((TextView)paramView.findViewById(2131757008));
+      paramView.setTag(paramViewGroup);
     }
+    Object localObject;
     for (;;)
     {
-      if (i.dS(paramContext)) {
-        kXG = false;
-      }
-      return;
-      if (cId == null) {
-        paramContext = null;
-      } else {
-        paramContext = cId.field_username;
-      }
-    }
-  }
-  
-  public final boolean aiE()
-  {
-    return kXG;
-  }
-  
-  public final boolean aiF()
-  {
-    return kXF;
-  }
-  
-  public final void i(com.tencent.mm.storage.a.c paramc)
-  {
-    if (!com.tencent.mm.model.ah.tD().isSDCardAvailable()) {
-      s.em(context);
-    }
-    while (paramc == null) {
-      return;
-    }
-    if ((cId.field_username.equals("medianote")) && ((h.sg() & 0x4000) == 0)) {}
-    for (int i = 1; i != 0; i = 0)
-    {
-      field_start = 0;
-      field_state = com.tencent.mm.storage.a.c.kgX;
-      i.a.aOT().c(paramc);
-      localObject = new ag();
-      ((ag)localObject).setType(47);
-      ((ag)localObject).setTalker("medianote");
-      ((ag)localObject).bl(1);
-      if (paramc.aPB()) {
-        ((ag)localObject).setContent(w.a(h.sc(), 0L, false, paramc.yh(), false, ""));
-      }
-      ((ag)localObject).cn(paramc.yh());
-      ((ag)localObject).v(ar.fm(field_talker));
-      ((ag)localObject).bk(2);
-      com.tencent.mm.model.ah.tD().rs().E((ag)localObject);
-      return;
-    }
-    i.f localf = i.a.aOT();
-    if (ay.kz(kSG)) {}
-    for (Object localObject = cId.field_username;; localObject = kSG)
-    {
-      localf.a((String)localObject, paramc, null);
-      return;
-    }
-  }
-  
-  public final void j(com.tencent.mm.storage.a.c paramc)
-  {
-    if (!com.tencent.mm.model.ah.tD().isSDCardAvailable())
-    {
-      s.em(context);
-      return;
-    }
-    WXMediaMessage localWXMediaMessage = new WXMediaMessage();
-    String str = com.tencent.mm.model.ah.tD().rF() + paramc.yh();
-    if (e.ax(str + "_thumb"))
-    {
-      int i = e.aw(str + "_thumb");
-      thumbData = e.c(str + "_thumb", 0, i);
-    }
-    for (;;)
-    {
-      mediaObject = new WXEmojiObject(str);
-      l.a(localWXMediaMessage, field_app_id, null, kSG, 1, paramc.yh());
-      return;
-      try
+      localObject = (ai)getItem(paramInt);
+      if (localObject != null)
       {
-        FileInputStream localFileInputStream = new FileInputStream(str);
-        localWXMediaMessage.setThumbImage(BackwardSupportUtil.b.a(localFileInputStream, 1.0F, 0, 0));
-        localFileInputStream.close();
+        if ((!kZE) || (field_isSend != 0)) {
+          break;
+        }
+        String str1 = field_content;
+        String str2 = ar.fx(str1);
+        if (!s.kf(str2))
+        {
+          a.b.a(cui, str2);
+          cEo.setText(e.a(context, com.tencent.mm.model.i.ej(str2), cEo.getTextSize()));
+        }
+        cEp.setText(U((ai)localObject));
+        localObject = ar.fy(str1);
+        lxg.setText(e.a(context, (CharSequence)localObject, lxg.getTextSize()));
       }
-      catch (Exception localException)
-      {
-        u.e("!56@/B4Tb64lLpKwUcOR+EdWcu7PiWmfoYexugycOHFP7DE5W5RdqSk+Cw==", "sendAppMsgEmoji Fail cause there is no thumb");
-      }
+      return paramView;
+      paramViewGroup = (b)paramView.getTag();
     }
+    a.b.a(cui, T((ai)localObject));
+    cEo.setText(e.a(context, com.tencent.mm.model.i.ej(T((ai)localObject)), cEo.getTextSize()));
+    cEp.setText(U((ai)localObject));
+    lxg.setText(e.a(context, field_content, lxg.getTextSize()));
+    return paramView;
+  }
+  
+  public final void qY(String paramString)
+  {
+    lxe = paramString;
+    if (!s.kf(lxe))
+    {
+      closeCursor();
+      GH();
+    }
+  }
+  
+  public static abstract interface a
+  {
+    public abstract void tg(int paramInt);
+  }
+  
+  private static final class b
+  {
+    public TextView cEo;
+    public TextView cEp;
+    public ImageView cui;
+    public TextView lxg;
   }
 }
 

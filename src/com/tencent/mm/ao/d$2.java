@@ -1,55 +1,37 @@
 package com.tencent.mm.ao;
 
-import android.os.Message;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import android.os.Looper;
+import android.os.MessageQueue;
+import android.os.MessageQueue.IdleHandler;
+import com.tencent.mm.sdk.platformtools.ap.a;
 
 final class d$2
-  extends aa
+  implements Runnable
 {
   d$2(d paramd) {}
   
-  public final void handleMessage(Message paramMessage)
+  public final void run()
   {
-    if (what == 2) {
-      if (cim.cii != null) {
-        cim.cii.EG();
-      }
-    }
-    label142:
-    label168:
-    do
+    Looper.myQueue().addIdleHandler(new MessageQueue.IdleHandler()
     {
-      return;
-      if (what == 0)
+      public final boolean queueIdle()
       {
-        if (d.b(cim) == 0)
+        bWO.b(new ap.a()
         {
-          u.d("!32@/B4Tb64lLpJjyqE6YDnAp3o91K/Zm7/t", "addSceneEndListener MMFunc_UploadInputVoice");
-          ah.tE().a(349, cim);
-          if (d.b(cim) != 0) {
-            break label168;
+          public final boolean vf()
+          {
+            return true;
           }
-          if (d.c(cim)) {
-            break label142;
+          
+          public final boolean vg()
+          {
+            d.b(bWO);
+            return false;
           }
-          d.a(cim, new c(d.d(cim), 0));
-        }
-        for (;;)
-        {
-          ah.tE().d(d.e(cim));
-          return;
-          ah.tE().a(206, cim);
-          break;
-          d.a(cim, new c(d.d(cim), 1));
-          continue;
-          d.a(cim, new b(d.d(cim), d.b(cim)));
-        }
+        });
+        return false;
       }
-    } while ((what != 3) || (cim.cii == null));
-    cim.cii.a(new String[0], -1L);
+    });
   }
 }
 

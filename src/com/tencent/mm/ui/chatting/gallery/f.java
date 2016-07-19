@@ -1,28 +1,29 @@
 package com.tencent.mm.ui.chatting.gallery;
 
-import com.tencent.mm.sdk.platformtools.am;
+import android.graphics.Bitmap;
+import com.tencent.mm.sdk.platformtools.ap;
 import java.util.HashMap;
 import java.util.LinkedList;
 
 public final class f
 {
-  private am bJm = new am(1, "chatting-image-gallery-preload-loader");
-  public LinkedList dS = new LinkedList();
-  protected com.tencent.mm.a.f eeZ = new com.tencent.mm.a.f(4, new com.tencent.mm.a.f.a() {});
-  private boolean efc = false;
-  private int fs = 0;
-  protected HashMap lfZ = new HashMap();
+  private ap bCz = new ap(1, "chatting-image-gallery-preload-loader");
+  public LinkedList<String> ei = new LinkedList();
+  protected com.tencent.mm.a.f<String, Bitmap> eiB = new com.tencent.mm.a.f(4, new com.tencent.mm.a.f.a() {});
+  private boolean eiE = false;
+  private int fO = 0;
+  protected HashMap<String, Long> lGm = new HashMap();
   
-  public final void aak()
+  public final void acE()
   {
-    com.tencent.mm.a.f localf = eeZ;
+    com.tencent.mm.a.f localf = eiB;
     new Object() {};
-    localf.kl();
+    localf.iM();
   }
   
   private static final class a
   {
-    public static f lgb = new f();
+    public static f lGo = new f();
   }
 }
 

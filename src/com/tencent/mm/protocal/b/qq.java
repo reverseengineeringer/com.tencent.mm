@@ -3,52 +3,52 @@ package com.tencent.mm.protocal.b;
 import java.util.LinkedList;
 
 public final class qq
-  extends adk
+  extends alt
 {
-  public String hig;
-  public String hpe;
+  public String jAb;
+  public String jAh;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hLO != null)
+      if (kfq != null)
       {
-        paramVarArgs.bN(1, hLO.kS());
-        hLO.a(paramVarArgs);
+        paramVarArgs.cx(1, kfq.iO());
+        kfq.a(paramVarArgs);
       }
-      if (hpe != null) {
-        paramVarArgs.U(2, hpe);
+      if (jAh != null) {
+        paramVarArgs.e(2, jAh);
       }
-      if (hig != null) {
-        paramVarArgs.U(3, hig);
+      if (jAb != null) {
+        paramVarArgs.e(3, jAb);
       }
       return 0;
     }
     if (paramInt == 1) {
-      if (hLO == null) {
+      if (kfq == null) {
         break label383;
       }
     }
     label383:
-    for (int i = a.a.a.a.bJ(1, hLO.kS()) + 0;; i = 0)
+    for (int i = a.a.a.a.cv(1, kfq.iO()) + 0;; i = 0)
     {
       paramInt = i;
-      if (hpe != null) {
-        paramInt = i + a.a.a.b.b.a.T(2, hpe);
+      if (jAh != null) {
+        paramInt = i + a.a.a.b.b.a.f(2, jAh);
       }
       i = paramInt;
-      if (hig != null) {
-        i = paramInt + a.a.a.b.b.a.T(3, hig);
+      if (jAb != null) {
+        i = paramInt + a.a.a.b.b.a.f(3, jAb);
       }
       return i;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = adk.a(paramVarArgs); paramInt > 0; paramInt = adk.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = alt.a(paramVarArgs); paramInt > 0; paramInt = alt.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bve();
           }
         }
         break;
@@ -63,23 +63,23 @@ public final class qq
         default: 
           return -1;
         case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).pL(paramInt);
+          paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
           i = paramVarArgs.size();
           paramInt = 0;
           while (paramInt < i)
           {
             Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new cj();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, hfZ);
-            for (boolean bool = true; bool; bool = ((cj)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.al.a)localObject1, adk.a((a.a.a.a.a)localObject2))) {}
-            hLO = ((cj)localObject1);
+            localObject1 = new df();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+            for (boolean bool = true; bool; bool = ((df)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, alt.a((a.a.a.a.a)localObject2))) {}
+            kfq = ((df)localObject1);
             paramInt += 1;
           }
         case 2: 
-          hpe = jMD.readString();
+          jAh = mMY.readString();
           return 0;
         }
-        hig = jMD.readString();
+        jAb = mMY.readString();
         return 0;
       }
       return -1;

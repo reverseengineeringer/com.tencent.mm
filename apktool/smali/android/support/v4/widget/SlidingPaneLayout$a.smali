@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private final ht:Landroid/graphics/Rect;
+.field private final hM:Landroid/graphics/Rect;
 
-.field final synthetic ia:Landroid/support/v4/widget/SlidingPaneLayout;
+.field final synthetic iu:Landroid/support/v4/widget/SlidingPaneLayout;
 
 
 # direct methods
@@ -26,7 +26,7 @@
 
     .prologue
     .line 1395
-    iput-object p1, p0, Landroid/support/v4/widget/SlidingPaneLayout$a;->ia:Landroid/support/v4/widget/SlidingPaneLayout;
+    iput-object p1, p0, Landroid/support/v4/widget/SlidingPaneLayout$a;->iu:Landroid/support/v4/widget/SlidingPaneLayout;
 
     invoke-direct {p0}, Landroid/support/v4/view/a;-><init>()V
 
@@ -35,7 +35,7 @@
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$a;->ht:Landroid/graphics/Rect;
+    iput-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$a;->hM:Landroid/graphics/Rect;
 
     return-void
 .end method
@@ -45,7 +45,7 @@
 
     .prologue
     .line 1444
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$a;->ia:Landroid/support/v4/widget/SlidingPaneLayout;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$a;->iu:Landroid/support/v4/widget/SlidingPaneLayout;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/widget/SlidingPaneLayout;->C(Landroid/view/View;)Z
 
@@ -69,7 +69,7 @@
     invoke-super {p0, p1, v0}, Landroid/support/v4/view/a;->a(Landroid/view/View;Landroid/support/v4/view/a/a;)V
 
     .line 1402
-    iget-object v1, p0, Landroid/support/v4/widget/SlidingPaneLayout$a;->ht:Landroid/graphics/Rect;
+    iget-object v1, p0, Landroid/support/v4/widget/SlidingPaneLayout$a;->hM:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/support/v4/view/a/a;->getBoundsInParent(Landroid/graphics/Rect;)V
 
@@ -151,17 +151,17 @@
 
     invoke-virtual {p2, v1}, Landroid/support/v4/view/a/a;->addAction(I)V
 
-    sget-object v1, Landroid/support/v4/view/a/a;->gK:Landroid/support/v4/view/a/a$b;
+    sget-object v1, Landroid/support/v4/view/a/a;->hf:Landroid/support/v4/view/a/a$b;
 
-    iget-object v2, v0, Landroid/support/v4/view/a/a;->gL:Ljava/lang/Object;
+    iget-object v2, v0, Landroid/support/v4/view/a/a;->hg:Ljava/lang/Object;
 
     invoke-interface {v1, v2}, Landroid/support/v4/view/a/a$b;->w(Ljava/lang/Object;)I
 
     move-result v1
 
-    sget-object v2, Landroid/support/v4/view/a/a;->gK:Landroid/support/v4/view/a/a$b;
+    sget-object v2, Landroid/support/v4/view/a/a;->hf:Landroid/support/v4/view/a/a$b;
 
-    iget-object v3, p2, Landroid/support/v4/view/a/a;->gL:Ljava/lang/Object;
+    iget-object v3, p2, Landroid/support/v4/view/a/a;->hg:Ljava/lang/Object;
 
     invoke-interface {v2, v3, v1}, Landroid/support/v4/view/a/a$b;->c(Ljava/lang/Object;I)V
 
@@ -197,7 +197,7 @@
 
     .line 1415
     :cond_0
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$a;->ia:Landroid/support/v4/widget/SlidingPaneLayout;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$a;->iu:Landroid/support/v4/widget/SlidingPaneLayout;
 
     invoke-virtual {v0}, Landroid/support/v4/widget/SlidingPaneLayout;->getChildCount()I
 
@@ -210,7 +210,7 @@
     if-ge v0, v1, :cond_2
 
     .line 1417
-    iget-object v2, p0, Landroid/support/v4/widget/SlidingPaneLayout$a;->ia:Landroid/support/v4/widget/SlidingPaneLayout;
+    iget-object v2, p0, Landroid/support/v4/widget/SlidingPaneLayout$a;->iu:Landroid/support/v4/widget/SlidingPaneLayout;
 
     invoke-virtual {v2, v0}, Landroid/support/v4/widget/SlidingPaneLayout;->getChildAt(I)Landroid/view/View;
 

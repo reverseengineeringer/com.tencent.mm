@@ -5,34 +5,34 @@ import android.view.KeyEvent;
 
 public final class f
 {
-  static final d eC = new a();
+  static final c eY = new a();
   
   static
   {
     if (Build.VERSION.SDK_INT >= 11)
     {
-      eC = new c();
+      eY = new b();
       return;
     }
   }
   
   public static boolean a(KeyEvent paramKeyEvent)
   {
-    return eC.metaStateHasModifiers(paramKeyEvent.getMetaState(), 1);
+    return eY.metaStateHasModifiers(paramKeyEvent.getMetaState(), 1);
   }
   
   public static boolean b(KeyEvent paramKeyEvent)
   {
-    return eC.metaStateHasNoModifiers(paramKeyEvent.getMetaState());
+    return eY.metaStateHasNoModifiers(paramKeyEvent.getMetaState());
   }
   
   public static void c(KeyEvent paramKeyEvent)
   {
-    eC.c(paramKeyEvent);
+    eY.c(paramKeyEvent);
   }
   
   static class a
-    implements f.d
+    implements f.c
   {
     private static int b(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5)
     {
@@ -99,18 +99,14 @@ public final class f
     }
   }
   
-  static class b
+  static final class b
     extends f.a
   {
     public final void c(KeyEvent paramKeyEvent)
     {
       paramKeyEvent.startTracking();
     }
-  }
-  
-  static final class c
-    extends f.b
-  {
+    
     public final boolean metaStateHasModifiers(int paramInt1, int paramInt2)
     {
       return KeyEvent.metaStateHasModifiers(paramInt1, 1);
@@ -127,7 +123,7 @@ public final class f
     }
   }
   
-  static abstract interface d
+  static abstract interface c
   {
     public abstract void c(KeyEvent paramKeyEvent);
     

@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract uh()V
+.method public abstract ui()V
 .end method
 
-.method public abstract ui()Z
+.method public abstract uj()Z
 .end method

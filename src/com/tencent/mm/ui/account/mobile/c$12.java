@@ -3,7 +3,7 @@ package com.tencent.mm.ui.account.mobile;
 import android.content.Intent;
 import com.tencent.mm.plugin.a.a;
 import com.tencent.mm.pluginsdk.g;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class c$12
   implements Runnable
@@ -12,11 +12,11 @@ final class c$12
   
   public final void run()
   {
-    u.d("!44@/B4Tb64lLpKsMp00pgLFBmZKkAE77UfTgxohSwLgerQ=", "onSceneEnd, in runnable");
-    Intent localIntent = a.coa.ak(kxQ.kxM);
+    v.d("MicroMsg.MobileInputLoginLogic", "onSceneEnd, in runnable");
+    Intent localIntent = a.cjo.ag(kWX.kWT);
     localIntent.addFlags(67108864);
-    kxQ.kxM.startActivity(localIntent);
-    kxQ.kxM.finish();
+    kWX.kWT.startActivity(localIntent);
+    kWX.kWT.finish();
   }
 }
 

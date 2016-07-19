@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/sandbox/monitor/a;->aTL()I
+    value = Lcom/tencent/mm/sandbox/monitor/a;->aYI()I
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

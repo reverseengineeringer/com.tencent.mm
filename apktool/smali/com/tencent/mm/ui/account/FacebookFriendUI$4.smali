@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/FacebookFriendUI;->af(Ljava/lang/String;Ljava/lang/String;)V
+    value = Lcom/tencent/mm/ui/account/FacebookFriendUI;->ad(Ljava/lang/String;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+.field final synthetic kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 364
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$4;->ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$4;->kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,11 +43,11 @@
     .line 368
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$4;->ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$4;->kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, v1, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     const-class v2, Lcom/tencent/mm/ui/account/FacebookAuthUI;
 
@@ -61,16 +61,16 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 370
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$4;->ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$4;->kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, v1, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v1, v0}, Landroid/support/v7/app/ActionBarActivity;->startActivity(Landroid/content/Intent;)V
 
     .line 371
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$4;->ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$4;->kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/account/FacebookFriendUI;->finish()V
 

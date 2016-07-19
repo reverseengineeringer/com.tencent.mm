@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tencent.mm.ui.base.MaskLayout android:id="@id/zd" android:focusable="false" style="@style/ChattingUIAvatarMaskFrom"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/gu" android:focusable="false" style="@style/ChattingUIAvatarFrom" />
+    <ViewStub android:id="@id/ze" android:layout="@layout/fg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</com.tencent.mm.ui.base.MaskLayout>

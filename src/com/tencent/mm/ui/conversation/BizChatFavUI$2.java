@@ -1,21 +1,26 @@
 package com.tencent.mm.ui.conversation;
 
-import android.view.MenuItem;
-import com.tencent.mm.ui.base.n.d;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.ListView;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.tools.m;
 
 final class BizChatFavUI$2
-  implements n.d
+  implements AdapterView.OnItemLongClickListener
 {
-  BizChatFavUI$2(BizChatFavUI paramBizChatFavUI) {}
+  BizChatFavUI$2(BizChatFavUI paramBizChatFavUI, m paramm) {}
   
-  public final void d(MenuItem paramMenuItem, int paramInt)
+  public final boolean onItemLongClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    switch (paramMenuItem.getItemId())
+    if (paramInt < BizChatFavUI.e(lOv).getHeaderViewsCount())
     {
-    default: 
-      return;
+      v.w("MicroMsg.BizChatFavUI", "on header view long click, ignore");
+      return true;
     }
-    BizChatFavUI.b(lnW, BizChatFavUI.f(lnW));
+    cED.a(paramView, paramInt, paramLong, lOv, BizChatFavUI.g(lOv));
+    return true;
   }
 }
 

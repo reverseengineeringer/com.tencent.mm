@@ -3,32 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/tencent/mm/bc/g$b;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/model/c;->I(II)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/model/c;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
 .end annotation
 
 
-# instance fields
-.field final synthetic bzL:Lcom/tencent/mm/model/c;
-
-
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/model/c;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 666
-    iput-object p1, p0, Lcom/tencent/mm/model/c$13;->bzL:Lcom/tencent/mm/model/c;
-
+    .line 1391
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,15 +30,12 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final kE()[Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 669
-    iget-object v0, p0, Lcom/tencent/mm/model/c$13;->bzL:Lcom/tencent/mm/model/c;
+    .line 1394
+    sget-object v0, Lcom/tencent/mm/storage/ad;->bkN:[Ljava/lang/String;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rl()V
-
-    .line 671
-    return-void
+    return-object v0
 .end method

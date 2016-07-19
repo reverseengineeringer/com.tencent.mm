@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+.field final synthetic kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1100
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$15;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    .line 1105
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$15;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,6 +40,6 @@
     .locals 0
 
     .prologue
-    .line 1105
+    .line 1110
     return-void
 .end method

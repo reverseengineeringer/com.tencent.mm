@@ -1,17 +1,30 @@
 package com.tencent.mm.ui;
 
-import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
+import com.tencent.mm.az.a;
 
 final class j$9
-  implements View.OnClickListener
+  implements LayoutListenerView.a
 {
-  j$9(j paramj, MenuItem paramMenuItem, j.a parama) {}
+  private final int kOE = a.fromDPToPix(j.c(kOB), 100);
   
-  public final void onClick(View paramView)
+  j$9(j paramj) {}
+  
+  public final void onSizeChanged(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
-    j.a(kpx, kpB, kpC);
+    if (j.f(kOB)) {}
+    do
+    {
+      do
+      {
+        return;
+      } while ((paramInt1 == 0) || (paramInt2 == 0) || (paramInt3 == 0) || (paramInt4 == 0) || (paramInt1 != paramInt3));
+      if ((paramInt2 > paramInt4) && (paramInt2 - paramInt4 > kOE))
+      {
+        j.g(kOB);
+        return;
+      }
+    } while ((paramInt4 <= paramInt2) || (paramInt4 - paramInt2 <= kOE));
+    j.h(kOB);
   }
 }
 

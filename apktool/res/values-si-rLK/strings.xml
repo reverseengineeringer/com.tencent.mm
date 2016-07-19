@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">%1$s හට Android Wear යෙදුමට යාවත්කාලීන කිරීමක් අවශ්‍යයි.</string>
+    <string name="b">Android Wear යෙදුම ඔබ යාවත්කාලීන කළේ නැති නම් %1$s ධාවනය කළ නොහැක.</string>
+    <string name="c">Android Wear යාවත්කාලීන කරන්න</string>
+    <string name="d">%1$s සඳහා දැනට නොපවතින Google Play සේවා එකක් හෝ කිහිපයක් අවශ්‍යයි. කරුණාකර සහාය සඳහා සංවර්ධක සම්බන්ධ කරගන්න.</string>
+    <string name="e">Google Play සේවාවන් සබල කරන්න</string>
+    <string name="f">ඔබ Google Play සේවාවන් සබල කරන්නේ නම් මිස %1$s වැඩ නොකරනු ඇත.</string>
+    <string name="g">Google Play සේවාවන් සබල කරන්න</string>
+    <string name="h">%1$s විසින් ඉල්ලා ඇත</string>
+    <string name="i">Google Play සේවාවන් ලබා ගන්න</string>
+    <string name="j">ඔබගේ දුරකථනයේ නැති Google Play සේවාවන් නොමැතිව %1$s ධාවනය නොවනු ඇත.</string>
+    <string name="k">ඔබගේ ටැබ්ලටයේ නැති Google Play සේවාවන් නොමැතිව %1$s ධාවනය නොවනු ඇත.</string>
+    <string name="l">Google Play සේවාවන් ලබා ගන්න</string>
+    <string name="m">නියම කර දැක්වූ ගිණුම මෙම උපාංගය මත නොපවතී. කරුණාකර වෙනත් ගිණුමක් තෝරන්න.</string>
+    <string name="n">වලංගු නොවන ගිණුම</string>
+    <string name="o">යෙදුමකට Google Play සේවාවන් සබලව තිබීම අවශ්‍යය.</string>
+    <string name="p">Google Play සේවාවන් වෙත සබැඳීමට දත්ත සබැඳුමක් අවශ්‍යය.</string>
+    <string name="q">ජාල දෝෂය</string>
+    <string name="r">යෙදුමකට Google Play සේවාවන් සඳහා යාවත්කාලීනයක් අවශ්‍යය.</string>
+    <string name="s">Google Play සේවා දෝෂය</string>
+    <string name="t">විශේෂිත ගිණුම පුරනය කිරීමේදී දෝෂයක්. කරුණාකර වෙනස් ගිණුමක් තෝරන්න.</string>
+    <string name="u">පුරනය වීම අසාර්ථක විය</string>
+    <string name="v">Google Play සේවාවන් සමග නොදන්නා ගැටලුවක්.</string>
+    <string name="w">%1$s Google Play සේවාවන් මත යැපෙන අතර, එය වෙත ඔබගේ උපාංගය සහාය නොදක්වයි. කරුණාකර සහාය සඳහා නිෂ්පාදකයා අමතන්න.</string>
+    <string name="x">Google Play සේවා</string>
+    <string name="y">යාවත්කාලීන කරන්න</string>
+    <string name="z">Google Play සේවා යාවත්කාලීන කරන්නේ නොමැතිව %1$s ධාවනය නොවේ.</string>
+    <string name="a0">Google Play සේවාවන් යාවත්කාලීන කරන්න</string>
+    <string name="a1">දැනට යාවත්කාලීන වන Google Play සේවා නොමැතිව %1$s ධාවනය නොවේ.</string>
+    <string name="a2">Google Play සේවා යාවත්කාලීන වේ</string>
+    <string name="a3">දුරකථනය තුළ විවෘත කරන්න</string>
+    <string name="a4">පිවිසෙන්න</string>
+    <string name="a5">Google සමගින් පුරනය වන්න</string>
+</resources>

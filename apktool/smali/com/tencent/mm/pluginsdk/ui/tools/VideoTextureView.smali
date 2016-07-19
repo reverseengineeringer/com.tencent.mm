@@ -13,33 +13,37 @@
 
 
 # instance fields
-.field private bsY:I
+.field private bhj:I
 
-.field private bsZ:I
+.field private bhk:I
 
-.field private gDN:Landroid/media/MediaPlayer;
+.field private gDL:Landroid/view/Surface;
 
-.field private gxn:Landroid/view/Surface;
+.field private gEU:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
 
-.field private gyx:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
+.field private gKo:Landroid/media/MediaPlayer;
 
-.field private iSU:Ljava/lang/String;
+.field private jqg:Ljava/lang/String;
 
-.field private iSV:Z
+.field private jqh:Z
 
-.field private iSW:Z
+.field private jqi:Z
 
-.field iSX:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
+.field jqj:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
 
-.field iSY:Landroid/media/MediaPlayer$OnPreparedListener;
+.field jqk:Landroid/media/MediaPlayer$OnPreparedListener;
 
-.field private iSZ:Landroid/media/MediaPlayer$OnCompletionListener;
+.field private jql:Landroid/media/MediaPlayer$OnCompletionListener;
 
-.field private iTa:Landroid/media/MediaPlayer$OnErrorListener;
+.field private jqm:Landroid/media/MediaPlayer$OnErrorListener;
 
-.field iTd:Landroid/view/TextureView$SurfaceTextureListener;
+.field private jqp:J
 
-.field private qu:I
+.field jqq:Landroid/view/TextureView$SurfaceTextureListener;
+
+.field private qH:I
+
+.field private startTime:J
 
 
 # direct methods
@@ -47,12 +51,12 @@
     .locals 1
 
     .prologue
-    .line 88
+    .line 91
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 89
+    .line 92
     return-void
 .end method
 
@@ -60,75 +64,83 @@
     .locals 1
 
     .prologue
-    .line 92
+    .line 95
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 93
+    .line 96
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 3
+    .locals 6
 
     .prologue
+    const-wide/16 v4, 0x0
+
     const/4 v0, 0x0
 
     const/4 v2, 0x1
 
     const/4 v1, 0x0
 
-    .line 96
+    .line 99
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/ui/base/MMTextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 29
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gxn:Landroid/view/Surface;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDL:Landroid/view/Surface;
 
     .line 30
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
-    .line 169
+    .line 38
+    iput-wide v4, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->startTime:J
+
+    .line 39
+    iput-wide v4, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqp:J
+
+    .line 180
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSX:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqj:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
 
-    .line 179
+    .line 190
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$2;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$2;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSY:Landroid/media/MediaPlayer$OnPreparedListener;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqk:Landroid/media/MediaPlayer$OnPreparedListener;
 
-    .line 206
+    .line 217
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$3;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$3;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSZ:Landroid/media/MediaPlayer$OnCompletionListener;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jql:Landroid/media/MediaPlayer$OnCompletionListener;
 
-    .line 215
+    .line 227
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$4;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$4;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iTa:Landroid/media/MediaPlayer$OnErrorListener;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqm:Landroid/media/MediaPlayer$OnErrorListener;
 
-    .line 226
+    .line 238
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$5;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$5;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iTd:Landroid/view/TextureView$SurfaceTextureListener;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqq:Landroid/view/TextureView$SurfaceTextureListener;
 
-    .line 97
-    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bsY:I
+    .line 100
+    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bhj:I
 
-    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bsZ:I
+    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bhk:I
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iTd:Landroid/view/TextureView$SurfaceTextureListener;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqq:Landroid/view/TextureView$SurfaceTextureListener;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
 
@@ -138,7 +150,7 @@
 
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->requestFocus()Z
 
-    .line 98
+    .line 101
     return-void
 .end method
 
@@ -147,7 +159,7 @@
 
     .prologue
     .line 20
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bsY:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bhj:I
 
     return v0
 .end method
@@ -157,9 +169,19 @@
 
     .prologue
     .line 20
-    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bsY:I
+    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bhj:I
 
     return p1
+.end method
+
+.method static synthetic a(Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;J)J
+    .locals 1
+
+    .prologue
+    .line 20
+    iput-wide p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqp:J
+
+    return-wide p1
 .end method
 
 .method static synthetic a(Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;Landroid/view/Surface;)Landroid/view/Surface;
@@ -167,12 +189,12 @@
 
     .prologue
     .line 20
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gxn:Landroid/view/Surface;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDL:Landroid/view/Surface;
 
     return-object p1
 .end method
 
-.method private aSS()V
+.method private aXL()V
     .locals 6
 
     .prologue
@@ -180,151 +202,151 @@
 
     const/4 v5, 0x0
 
-    .line 134
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSU:Ljava/lang/String;
+    .line 145
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqg:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 166
+    .line 177
     :goto_0
     return-void
 
-    .line 140
+    .line 151
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_1
 
-    .line 141
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 152
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
 
-    .line 142
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 153
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
-    .line 143
+    .line 154
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
-    .line 146
+    .line 157
     :cond_1
     :try_start_0
     new-instance v0, Landroid/media/MediaPlayer;
 
     invoke-direct {v0}, Landroid/media/MediaPlayer;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
-    .line 147
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 158
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSY:Landroid/media/MediaPlayer$OnPreparedListener;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqk:Landroid/media/MediaPlayer$OnPreparedListener;
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnPreparedListener(Landroid/media/MediaPlayer$OnPreparedListener;)V
 
-    .line 148
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 159
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSX:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqj:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnVideoSizeChangedListener(Landroid/media/MediaPlayer$OnVideoSizeChangedListener;)V
 
-    .line 149
+    .line 160
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSV:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqh:Z
 
-    .line 150
-    const-string/jumbo v0, "!44@/B4Tb64lLpLHiNiACdo+aX3iR1A7B9vCqhbg6Ep6IDU="
+    .line 161
+    const-string/jumbo v0, "MicroMsg.VideoTextureView"
 
     const-string/jumbo v1, "reset duration to -1 in openVideo"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 151
+    .line 162
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->qu:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->qH:I
 
-    .line 152
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 163
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSZ:Landroid/media/MediaPlayer$OnCompletionListener;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jql:Landroid/media/MediaPlayer$OnCompletionListener;
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
 
-    .line 153
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 164
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iTa:Landroid/media/MediaPlayer$OnErrorListener;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqm:Landroid/media/MediaPlayer$OnErrorListener;
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnErrorListener(Landroid/media/MediaPlayer$OnErrorListener;)V
 
-    .line 154
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 165
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSU:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqg:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setDataSource(Ljava/lang/String;)V
 
-    .line 155
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 166
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gxn:Landroid/view/Surface;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDL:Landroid/view/Surface;
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setSurface(Landroid/view/Surface;)V
 
-    .line 156
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 167
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setAudioStreamType(I)V
 
-    .line 157
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 168
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setScreenOnWhilePlaying(Z)V
 
-    .line 158
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 169
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->prepareAsync()V
 
-    .line 159
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 170
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getVideoHeight()I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bsZ:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bhk:I
 
-    .line 160
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 171
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getVideoWidth()I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bsY:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bhj:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 163
+    .line 174
     :catch_0
     move-exception v0
 
-    .line 164
-    const-string/jumbo v1, "!44@/B4Tb64lLpLHiNiACdo+aX3iR1A7B9vCqhbg6Ep6IDU="
+    .line 175
+    const-string/jumbo v1, "MicroMsg.VideoTextureView"
 
     const-string/jumbo v2, "prepare async error %s"
 
@@ -336,7 +358,7 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 .end method
@@ -346,7 +368,7 @@
 
     .prologue
     .line 20
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bsZ:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bhk:I
 
     return v0
 .end method
@@ -356,7 +378,7 @@
 
     .prologue
     .line 20
-    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bsZ:I
+    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bhk:I
 
     return p1
 .end method
@@ -366,11 +388,11 @@
 
     .prologue
     .line 20
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bsZ:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bhk:I
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bsY:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bhj:I
 
     if-nez v0, :cond_1
 
@@ -379,11 +401,11 @@
     return-void
 
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bsY:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bhj:I
 
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bsZ:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->bhk:I
 
-    const-string/jumbo v1, "!44@/B4Tb64lLpLHiNiACdo+aX3iR1A7B9vCqhbg6Ep6IDU="
+    const-string/jumbo v1, "MicroMsg.VideoTextureView"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -409,9 +431,9 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string/jumbo v1, "!44@/B4Tb64lLpLHiNiACdo+aX3iR1A7B9vCqhbg6Ep6IDU="
+    const-string/jumbo v1, "MicroMsg.VideoTextureView"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -445,7 +467,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->getWidth()I
 
@@ -490,7 +512,7 @@
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    const-string/jumbo v1, "!44@/B4Tb64lLpLHiNiACdo+aX3iR1A7B9vCqhbg6Ep6IDU="
+    const-string/jumbo v1, "MicroMsg.VideoTextureView"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -498,7 +520,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v3}, Landroid/media/MediaPlayer;->getVideoWidth()I
 
@@ -514,7 +536,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v3}, Landroid/media/MediaPlayer;->getVideoHeight()I
 
@@ -528,9 +550,9 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string/jumbo v1, "!44@/B4Tb64lLpLHiNiACdo+aX3iR1A7B9vCqhbg6Ep6IDU="
+    const-string/jumbo v1, "MicroMsg.VideoTextureView"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -560,7 +582,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 .end method
@@ -572,7 +594,7 @@
     .line 20
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSV:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqh:Z
 
     return v0
 .end method
@@ -582,7 +604,7 @@
 
     .prologue
     .line 20
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gyx:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gEU:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
 
     return-object v0
 .end method
@@ -592,7 +614,7 @@
 
     .prologue
     .line 20
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSW:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqi:Z
 
     return v0
 .end method
@@ -602,7 +624,7 @@
 
     .prologue
     .line 20
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     return-object v0
 .end method
@@ -614,7 +636,7 @@
     .line 20
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSW:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqi:Z
 
     return v0
 .end method
@@ -624,7 +646,7 @@
 
     .prologue
     .line 20
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqh:Z
 
     return v0
 .end method
@@ -636,7 +658,7 @@
     .line 20
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     return-object v0
 .end method
@@ -646,18 +668,76 @@
 
     .prologue
     .line 20
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->aSS()V
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->aXL()V
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final a(Lcom/tencent/mm/pluginsdk/ui/tools/f$a;)V
+    .locals 0
+
+    .prologue
+    .line 326
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gEU:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
+
+    .line 327
+    return-void
+.end method
+
+.method public final axW()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 124
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqg:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final ayx()D
+    .locals 2
+
+    .prologue
+    .line 365
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public final ew(Z)V
+    .locals 1
+
+    .prologue
+    .line 319
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
+
+    if-eqz v0, :cond_0
+
+    .line 320
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0, p1}, Landroid/media/MediaPlayer;->setLooping(Z)V
+
+    .line 322
+    :cond_0
+    return-void
+.end method
+
+.method public final ex(Z)V
+    .locals 0
+
+    .prologue
+    .line 375
+    return-void
+.end method
+
 .method public final f(Landroid/content/Context;Z)Z
     .locals 1
 
     .prologue
-    .line 339
+    .line 354
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->start()Z
 
     move-result v0
@@ -665,35 +745,27 @@
     return v0
 .end method
 
-.method public final g(D)V
-    .locals 0
-
-    .prologue
-    .line 356
-    return-void
-.end method
-
-.method public getCurrentPosition()I
+.method public final getCurrentPosition()I
     .locals 1
 
     .prologue
-    .line 290
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 303
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqh:Z
 
     if-eqz v0, :cond_0
 
-    .line 291
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 304
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getCurrentPosition()I
 
     move-result v0
 
-    .line 293
+    .line 306
     :goto_0
     return v0
 
@@ -703,99 +775,79 @@
     goto :goto_0
 .end method
 
-.method public getDuration()I
+.method public final getDuration()I
     .locals 1
 
     .prologue
-    .line 277
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 290
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_1
 
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqh:Z
 
     if-eqz v0, :cond_1
 
-    .line 278
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->qu:I
+    .line 291
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->qH:I
 
     if-lez v0, :cond_0
 
-    .line 279
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->qu:I
+    .line 292
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->qH:I
 
-    .line 285
+    .line 298
     :goto_0
     return v0
 
-    .line 281
+    .line 294
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getDuration()I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->qu:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->qH:I
 
-    .line 282
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->qu:I
+    .line 295
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->qH:I
 
     goto :goto_0
 
-    .line 284
+    .line 297
     :cond_1
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->qu:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->qH:I
 
-    .line 285
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->qu:I
+    .line 298
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->qH:I
 
     goto :goto_0
-.end method
-
-.method public getLastProgresstime()D
-    .locals 2
-
-    .prologue
-    .line 350
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public getVideoPath()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 121
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSU:Ljava/lang/String;
-
-    return-object v0
 .end method
 
 .method public final isPlaying()Z
     .locals 1
 
     .prologue
-    .line 298
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 311
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqh:Z
 
     if-eqz v0, :cond_0
 
-    .line 299
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 312
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
 
     move-result v0
 
-    .line 301
+    .line 314
     :goto_0
     return v0
 
@@ -805,11 +857,19 @@
     goto :goto_0
 .end method
 
+.method public final j(D)V
+    .locals 0
+
+    .prologue
+    .line 371
+    return-void
+.end method
+
 .method public final onDetach()V
     .locals 0
 
     .prologue
-    .line 320
+    .line 333
     return-void
 .end method
 
@@ -817,17 +877,17 @@
     .locals 1
 
     .prologue
-    .line 267
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 280
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqh:Z
 
     if-eqz v0, :cond_0
 
-    .line 268
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 281
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
 
@@ -835,171 +895,279 @@
 
     if-eqz v0, :cond_0
 
-    .line 269
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 282
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->pause()V
 
-    .line 272
+    .line 285
     :cond_0
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSW:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqi:Z
 
-    .line 273
+    .line 286
     return-void
 .end method
 
-.method public setLoop(Z)V
+.method public final setVideoPath(Ljava/lang/String;)V
     .locals 1
 
     .prologue
-    .line 306
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
-
-    if-eqz v0, :cond_0
-
-    .line 307
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
-
-    invoke-virtual {v0, p1}, Landroid/media/MediaPlayer;->setLooping(Z)V
-
-    .line 309
-    :cond_0
-    return-void
-.end method
-
-.method public setPlayProgressCallback(Z)V
-    .locals 0
-
-    .prologue
-    .line 360
-    return-void
-.end method
-
-.method public setThumb(Landroid/graphics/Bitmap;)V
-    .locals 0
-
-    .prologue
-    .line 346
-    return-void
-.end method
-
-.method public setVideoCallback(Lcom/tencent/mm/pluginsdk/ui/tools/f$a;)V
-    .locals 0
-
-    .prologue
-    .line 313
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gyx:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
-
-    .line 314
-    return-void
-.end method
-
-.method public setVideoPath(Ljava/lang/String;)V
-    .locals 1
-
-    .prologue
-    .line 113
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSU:Ljava/lang/String;
-
-    .line 114
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSW:Z
-
-    .line 115
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->aSS()V
-
     .line 116
-    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->requestLayout()V
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqg:Ljava/lang/String;
 
     .line 117
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqi:Z
+
+    .line 118
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->aXL()V
+
+    .line 119
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->requestLayout()V
+
+    .line 120
     return-void
 .end method
 
 .method public final start()Z
-    .locals 2
+    .locals 8
 
     .prologue
-    const/4 v1, 0x1
+    const/4 v7, 0x0
 
-    .line 324
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    const/4 v6, 0x1
 
-    if-eqz v0, :cond_0
+    .line 337
+    iget-wide v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->startTime:J
 
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSV:Z
+    const-wide/16 v2, 0x0
 
-    if-eqz v0, :cond_0
+    cmp-long v0, v0, v2
 
-    .line 325
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0}, Landroid/media/MediaPlayer;->start()V
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Go()J
 
-    .line 326
-    const/4 v0, 0x0
+    move-result-wide v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSW:Z
-
-    .line 334
     :goto_0
-    return v1
+    iput-wide v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->startTime:J
 
-    .line 327
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 338
+    const-string/jumbo v0, "MicroMsg.VideoTextureView"
 
-    if-nez v0, :cond_1
+    const-string/jumbo v1, "start %d"
 
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSV:Z
+    new-array v2, v6, [Ljava/lang/Object;
+
+    iget-wide v4, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->startTime:J
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    aput-object v3, v2, v7
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 339
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_1
 
-    .line 328
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSW:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqh:Z
 
-    .line 329
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->aSS()V
+    if-eqz v0, :cond_1
 
-    .line 330
+    .line 340
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->start()V
+
+    .line 341
+    iput-boolean v7, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqi:Z
+
+    .line 349
+    :goto_1
+    return v6
+
+    .line 337
+    :cond_0
+    iget-wide v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->startTime:J
+
+    goto :goto_0
+
+    .line 342
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
+
+    if-nez v0, :cond_2
+
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqh:Z
+
+    if-eqz v0, :cond_2
+
+    .line 343
+    iput-boolean v6, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqi:Z
+
+    .line 344
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->aXL()V
+
+    .line 345
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->requestLayout()V
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 332
-    :cond_1
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->iSW:Z
+    .line 347
+    :cond_2
+    iput-boolean v6, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqi:Z
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
 .method public final stop()V
-    .locals 1
+    .locals 10
 
     .prologue
-    .line 126
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 129
+    iget-wide v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqp:J
 
-    if-eqz v0, :cond_0
+    const-wide/16 v2, 0x0
 
-    .line 127
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_3
+
+    iget-wide v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->jqp:J
+
+    iget-wide v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->startTime:J
+
+    sub-long/2addr v0, v2
+
+    .line 130
+    :goto_0
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Go()J
+
+    move-result-wide v2
+
+    iget-wide v4, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->startTime:J
+
+    sub-long v4, v2, v4
+
+    .line 131
+    cmp-long v2, v0, v4
+
+    if-lez v2, :cond_4
+
+    move-wide v2, v4
+
+    :goto_1
+    long-to-int v2, v2
+
+    mul-int/lit16 v2, v2, 0x3e8
+
+    .line 132
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->getDuration()I
+
+    move-result v3
+
+    if-le v2, v3, :cond_0
+
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->getDuration()I
+
+    move-result v2
+
+    .line 133
+    :cond_0
+    const-string/jumbo v3, "MicroMsg.VideoTextureView"
+
+    const-string/jumbo v6, "stop : dur:%d stop:%d comp:%d"
+
+    const/4 v7, 0x3
+
+    new-array v7, v7, [Ljava/lang/Object;
+
+    const/4 v8, 0x0
+
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->getDuration()I
+
+    move-result v9
+
+    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    aput-object v9, v7, v8
+
+    const/4 v8, 0x1
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    aput-object v4, v7, v8
+
+    const/4 v4, 0x2
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    aput-object v0, v7, v4
+
+    invoke-static {v3, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 134
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gEU:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
+
+    if-eqz v0, :cond_1
+
+    .line 135
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gEU:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
+
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->getDuration()I
+
+    move-result v1
+
+    invoke-interface {v0, v2, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/f$a;->aF(II)I
+
+    .line 137
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
+
+    if-eqz v0, :cond_2
+
+    .line 138
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
 
-    .line 128
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    .line 139
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
-    .line 129
+    .line 140
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gDN:Landroid/media/MediaPlayer;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->gKo:Landroid/media/MediaPlayer;
+
+    .line 142
+    :cond_2
+    return-void
+
+    .line 129
+    :cond_3
+    const-wide/32 v0, 0x7fffffff
+
+    goto :goto_0
+
+    :cond_4
+    move-wide v2, v0
 
     .line 131
-    :cond_0
-    return-void
+    goto :goto_1
 .end method

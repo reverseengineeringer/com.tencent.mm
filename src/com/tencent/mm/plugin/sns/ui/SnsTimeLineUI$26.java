@@ -1,24 +1,43 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.os.SystemClock;
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.kiss.app.Interactor;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.ak.a;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SnsTimeLineUI$26
-  implements View.OnClickListener
+  implements TestTimeForSns.a
 {
   SnsTimeLineUI$26(SnsTimeLineUI paramSnsTimeLineUI) {}
   
-  public final void onClick(View paramView)
+  public final void iZ()
   {
-    if (SystemClock.elapsedRealtime() - SnsTimeLineUI.E(hkJ) < 300L) {
-      SnsTimeLineUI.y(hkJ);
-    }
-    SnsTimeLineUI.a(hkJ, SystemClock.elapsedRealtime());
-    ad.ZP().removeCallbacks(SnsTimeLineUI.F(hkJ));
-    SnsTimeLineUI.F(hkJ).run();
+    v.i("MicroMsg.SnsTimeLineUI", "sns has drawed");
+    SnsTimeLineUI.u(hzE).post(new Runnable()
+    {
+      public final void run()
+      {
+        if ((SnsTimeLineUI.a(hzE) == null) || (SnsTimeLineUI.u(hzE) == null))
+        {
+          v.i("MicroMsg.SnsTimeLineUI", "onViewDrawed is error");
+          return;
+        }
+        SnsTimeLineUI.u(hzE).setListener(null);
+        SnsTimeLineUI.a(hzE, SnsTimeLineUI.y(hzE));
+        if (SnsTimeLineUI.z(hzE))
+        {
+          v.w("MicroMsg.SnsTimeLineUI", "too fast that it finish");
+          return;
+        }
+        if (SnsTimeLineUI.q(hzE)) {
+          ad.getSnsServer().p(aBNgXB, -1);
+        }
+        if (!SnsTimeLineUI.q(hzE)) {
+          hzE.pT().immediateCall("doFpList", new Object[] { SnsTimeLineUI.m(hzE), Boolean.valueOf(SnsTimeLineUI.n(hzE)), Boolean.valueOf(SnsTimeLineUI.r(hzE)), Integer.valueOf(SnsTimeLineUI.o(hzE)) });
+        }
+        SnsTimeLineUI.a(hzE, false);
+      }
+    });
   }
 }
 

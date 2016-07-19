@@ -30,7 +30,7 @@
 
 
 # virtual methods
-.method public final setSingleLineAllCaps(Landroid/widget/TextView;)V
+.method public final a(Landroid/widget/TextView;)V
     .locals 0
 
     .prologue

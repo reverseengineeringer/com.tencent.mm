@@ -10,8 +10,8 @@
 .method public abstract b(Lcom/tencent/mm/model/r;)V
 .end method
 
-.method public abstract mr()V
+.method public abstract kF()V
 .end method
 
-.method public abstract ms()V
+.method public abstract kG()V
 .end method

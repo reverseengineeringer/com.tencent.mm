@@ -1,78 +1,84 @@
 package com.tencent.mm.bb;
 
-import com.tencent.mm.compatible.util.d;
-import com.tencent.mm.sdk.platformtools.ao;
-import com.tencent.mm.sdk.platformtools.ay;
-import java.io.File;
+import java.util.LinkedList;
 
 public final class a
+  extends com.tencent.mm.ax.a
 {
-  private static String bxb = "";
+  public long ajD;
+  public LinkedList<d> kzJ = new LinkedList();
+  public LinkedList<c> kzK = new LinkedList();
   
-  public static String bkA()
+  protected final int a(int paramInt, Object... paramVarArgs)
   {
-    if (ao.aVo() > 1048576L) {}
-    for (File localFile = new File(bkz(), "wenote/res");; localFile = new File(d.bxd, "wenote/res")) {
-      return localFile.getAbsolutePath();
+    if (paramInt == 0)
+    {
+      paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
+      paramVarArgs.z(1, ajD);
+      paramVarArgs.d(2, 8, kzJ);
+      paramVarArgs.d(3, 8, kzK);
+      return 0;
     }
-  }
-  
-  public static String bkB()
-  {
-    File localFile = new File(bkz(), "wenote/res");
-    if (new File(localFile, "WNNote.zip").exists()) {
-      return localFile.getAbsolutePath();
+    if (paramInt == 1) {
+      return a.a.a.a.y(1, ajD) + 0 + a.a.a.a.c(2, 8, kzJ) + a.a.a.a.c(3, 8, kzK);
     }
-    localFile = new File(d.bxd, "wenote/res");
-    if (new File(localFile, "WNNote.zip").exists()) {
-      return localFile.getAbsolutePath();
+    if (paramInt == 2)
+    {
+      paramVarArgs = (byte[])paramVarArgs[0];
+      kzJ.clear();
+      kzK.clear();
+      paramVarArgs = new a.a.a.a.a(paramVarArgs, jrk);
+      for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
+        if (!super.a(paramVarArgs, this, paramInt)) {
+          paramVarArgs.bve();
+        }
+      }
+      return 0;
     }
-    return "";
-  }
-  
-  public static String bkC()
-  {
-    File localFile = new File(bkz(), "wenote/loc/data");
-    if (!localFile.exists()) {
-      localFile.mkdirs();
+    if (paramInt == 3)
+    {
+      Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
+      a locala = (a)paramVarArgs[1];
+      paramInt = ((Integer)paramVarArgs[2]).intValue();
+      Object localObject2;
+      boolean bool;
+      switch (paramInt)
+      {
+      default: 
+        return -1;
+      case 1: 
+        ajD = mMY.ie();
+        return 0;
+      case 2: 
+        paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+        i = paramVarArgs.size();
+        paramInt = 0;
+        while (paramInt < i)
+        {
+          localObject2 = (byte[])paramVarArgs.get(paramInt);
+          localObject1 = new d();
+          localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+          for (bool = true; bool; bool = ((d)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, com.tencent.mm.ax.a.a((a.a.a.a.a)localObject2))) {}
+          kzJ.add(localObject1);
+          paramInt += 1;
+        }
+        return 0;
+      }
+      paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+      int i = paramVarArgs.size();
+      paramInt = 0;
+      while (paramInt < i)
+      {
+        localObject2 = (byte[])paramVarArgs.get(paramInt);
+        localObject1 = new c();
+        localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+        for (bool = true; bool; bool = ((c)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, com.tencent.mm.ax.a.a((a.a.a.a.a)localObject2))) {}
+        kzK.add(localObject1);
+        paramInt += 1;
+      }
+      return 0;
     }
-    return localFile.getAbsolutePath();
-  }
-  
-  public static String bkD()
-  {
-    StringBuilder localStringBuilder = new StringBuilder();
-    File localFile = new File(bkz(), "wenote/html/upload");
-    if (!localFile.exists()) {
-      localFile.mkdirs();
-    }
-    return localFile.getAbsolutePath() + "/wenoteupload.htm";
-  }
-  
-  public static String bkE()
-  {
-    File localFile = new File(bkz(), "wenote/image/localpath");
-    if (!localFile.exists()) {
-      localFile.mkdirs();
-    }
-    return localFile.getAbsolutePath();
-  }
-  
-  public static String bkF()
-  {
-    File localFile = new File(bkz(), "wenote/voice/data");
-    if (!localFile.exists()) {
-      localFile.mkdirs();
-    }
-    return localFile.getAbsolutePath();
-  }
-  
-  private static String bkz()
-  {
-    if (ay.kz(bxb)) {
-      bxb = d.bxb.replace("/data/user/0", "/data/data");
-    }
-    return bxb;
+    return -1;
   }
 }
 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/a96" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:id="@id/vf" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip">
+        <ImageView android:id="@id/vg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/l2" />
+        <TextView android:textSize="14.0dip" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/cqv" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/cc6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:layout_marginBottom="8.0dip">
+        <TextView android:layout_gravity="center" android:background="@drawable/a5e" android:layout_width="wrap_content" android:layout_height="2.0dip" android:layout_marginLeft="60.0dip" android:layout_weight="1.0" />
+        <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/csm" />
+        <TextView android:layout_gravity="center" android:background="@drawable/a5e" android:layout_width="wrap_content" android:layout_height="2.0dip" android:layout_marginRight="60.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:id="@id/vh" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_marginTop="25.0dip" android:layout_marginBottom="5.0dip">
+        <ImageView android:gravity="center" android:layout_gravity="center" android:background="@drawable/a5d" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

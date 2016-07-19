@@ -3,43 +3,31 @@ package android.support.v4.view;
 import android.view.MotionEvent;
 
 final class i$a
-  implements i.c
+  implements i.b
 {
   public final int a(MotionEvent paramMotionEvent, int paramInt)
   {
-    if (paramInt == 0) {
-      return 0;
-    }
-    return -1;
+    return paramMotionEvent.findPointerIndex(paramInt);
   }
   
   public final int b(MotionEvent paramMotionEvent, int paramInt)
   {
-    if (paramInt == 0) {
-      return 0;
-    }
-    throw new IndexOutOfBoundsException("Pre-Eclair does not support multiple pointers");
+    return paramMotionEvent.getPointerId(paramInt);
   }
   
   public final float c(MotionEvent paramMotionEvent, int paramInt)
   {
-    if (paramInt == 0) {
-      return paramMotionEvent.getX();
-    }
-    throw new IndexOutOfBoundsException("Pre-Eclair does not support multiple pointers");
+    return paramMotionEvent.getX(paramInt);
   }
   
   public final float d(MotionEvent paramMotionEvent, int paramInt)
   {
-    if (paramInt == 0) {
-      return paramMotionEvent.getY();
-    }
-    throw new IndexOutOfBoundsException("Pre-Eclair does not support multiple pointers");
+    return paramMotionEvent.getY(paramInt);
   }
   
   public final int f(MotionEvent paramMotionEvent)
   {
-    return 1;
+    return paramMotionEvent.getPointerCount();
   }
 }
 

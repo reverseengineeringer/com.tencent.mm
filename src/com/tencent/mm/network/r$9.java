@@ -1,9 +1,9 @@
 package com.tencent.mm.network;
 
-import com.tencent.mm.sdk.platformtools.at;
+import com.tencent.mm.sdk.platformtools.az;
 
 final class r$9
-  extends at
+  extends az<Object>
 {
   r$9(r paramr, Object paramObject, String paramString1, String paramString2, String paramString3, String paramString4)
   {
@@ -12,7 +12,7 @@ final class r$9
   
   public final Object run()
   {
-    Java2C.setDebugIP(cjh, cji, cjj, cjk);
+    Java2C.setDebugIP(cey, cez, ceA, ceB);
     Java2C.onNetworkChange();
     return null;
   }

@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/tencent/smtt/sdk/WebView$PictureListener;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # annotations

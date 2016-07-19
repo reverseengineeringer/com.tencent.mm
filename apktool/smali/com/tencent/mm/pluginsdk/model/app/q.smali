@@ -6,7 +6,7 @@
 # instance fields
 .field public appId:Ljava/lang/String;
 
-.field public cbf:I
+.field public bUR:I
 
 
 # direct methods
@@ -21,7 +21,7 @@
     iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/app/q;->appId:Ljava/lang/String;
 
     .line 192
-    iput p2, p0, Lcom/tencent/mm/pluginsdk/model/app/q;->cbf:I
+    iput p2, p0, Lcom/tencent/mm/pluginsdk/model/app/q;->bUR:I
 
     .line 193
     return-void
@@ -63,9 +63,9 @@
 
     if-eqz v1, :cond_0
 
-    iget v1, p1, Lcom/tencent/mm/pluginsdk/model/app/q;->cbf:I
+    iget v1, p1, Lcom/tencent/mm/pluginsdk/model/app/q;->bUR:I
 
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/model/app/q;->cbf:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/model/app/q;->bUR:I
 
     if-ne v1, v2, :cond_0
 
@@ -89,7 +89,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/pluginsdk/model/app/q;->cbf:I
+    iget v1, p0, Lcom/tencent/mm/pluginsdk/model/app/q;->bUR:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

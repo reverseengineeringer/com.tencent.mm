@@ -10,7 +10,7 @@ final class PermissionWarningDialog$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    clK.finish();
+    cgO.finish();
   }
 }
 

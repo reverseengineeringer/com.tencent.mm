@@ -12,10 +12,22 @@
 
 
 # virtual methods
-.method public abstract f(Landroid/content/Context;Z)Z
+.method public abstract a(Lcom/tencent/mm/pluginsdk/ui/tools/f$a;)V
 .end method
 
-.method public abstract g(D)V
+.method public abstract axW()Ljava/lang/String;
+.end method
+
+.method public abstract ayx()D
+.end method
+
+.method public abstract ew(Z)V
+.end method
+
+.method public abstract ex(Z)V
+.end method
+
+.method public abstract f(Landroid/content/Context;Z)Z
 .end method
 
 .method public abstract getCurrentPosition()I
@@ -24,31 +36,16 @@
 .method public abstract getDuration()I
 .end method
 
-.method public abstract getLastProgresstime()D
-.end method
-
-.method public abstract getVideoPath()Ljava/lang/String;
-.end method
-
 .method public abstract isPlaying()Z
+.end method
+
+.method public abstract j(D)V
 .end method
 
 .method public abstract onDetach()V
 .end method
 
 .method public abstract pause()V
-.end method
-
-.method public abstract setLoop(Z)V
-.end method
-
-.method public abstract setPlayProgressCallback(Z)V
-.end method
-
-.method public abstract setThumb(Landroid/graphics/Bitmap;)V
-.end method
-
-.method public abstract setVideoCallback(Lcom/tencent/mm/pluginsdk/ui/tools/f$a;)V
 .end method
 
 .method public abstract setVideoPath(Ljava/lang/String;)V

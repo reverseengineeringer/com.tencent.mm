@@ -4,7 +4,7 @@ import android.content.res.Resources;
 import android.text.TextPaint;
 import android.text.style.ClickableSpan;
 import android.view.View;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.j;
 
@@ -15,12 +15,12 @@ final class RegByMobileRegAIOUI$19
   
   public final void onClick(View paramView)
   {
-    ay.C(kuT.koJ.kpc, kuT.getString(2131432244));
+    be.D(kUa.kNN.kOg, kUa.getString(2131235761));
   }
   
   public final void updateDrawState(TextPaint paramTextPaint)
   {
-    paramTextPaint.setColor(kuT.getResources().getColor(2131231118));
+    paramTextPaint.setColor(kUa.getResources().getColor(2131689770));
     paramTextPaint.setUnderlineText(true);
   }
 }

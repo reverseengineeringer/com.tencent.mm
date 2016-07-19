@@ -15,11 +15,20 @@
 
 
 # virtual methods
-.method public abstract at()Z
+.method public abstract as()Z
 .end method
 
-.method public abstract au()Ljava/util/List;
+.method public abstract at()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
 .end method
 
-.method public abstract av()Ljava/lang/Object;
+.method public abstract au()Ljava/lang/Object;
 .end method

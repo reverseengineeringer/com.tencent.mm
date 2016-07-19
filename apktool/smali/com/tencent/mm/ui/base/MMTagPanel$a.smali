@@ -15,23 +15,23 @@
 
 
 # virtual methods
-.method public abstract SS()V
+.method public abstract Ul()V
 .end method
 
-.method public abstract f(ZI)V
+.method public abstract e(ZI)V
 .end method
 
-.method public abstract ne(Ljava/lang/String;)V
+.method public abstract om(Ljava/lang/String;)V
 .end method
 
-.method public abstract nf(Ljava/lang/String;)V
+.method public abstract on(Ljava/lang/String;)V
 .end method
 
-.method public abstract ng(Ljava/lang/String;)V
+.method public abstract oo(Ljava/lang/String;)V
 .end method
 
-.method public abstract nh(Ljava/lang/String;)V
+.method public abstract op(Ljava/lang/String;)V
 .end method
 
-.method public abstract ni(Ljava/lang/String;)V
+.method public abstract oq(Ljava/lang/String;)V
 .end method

@@ -13,9 +13,18 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/em;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic iCD:Lcom/tencent/mm/pluginsdk/model/downloader/j;
+.field final synthetic iZr:Lcom/tencent/mm/pluginsdk/model/downloader/j;
 
 
 # direct methods
@@ -24,208 +33,191 @@
 
     .prologue
     .line 77
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/j$1;->iCD:Lcom/tencent/mm/pluginsdk/model/downloader/j;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/j$1;->iZr:Lcom/tencent/mm/pluginsdk/model/downloader/j;
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/em;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/j$1;->kum:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 10
 
     .prologue
-    const/4 v0, 0x1
+    const/4 v9, 0x0
 
-    const/4 v1, 0x0
+    const/4 v8, 0x1
 
-    .line 80
-    iget-object v2, p1, Lcom/tencent/mm/sdk/c/b;->id:Ljava/lang/String;
+    .line 77
+    check-cast p1, Lcom/tencent/mm/e/a/em;
 
-    const-string/jumbo v3, "FileDownloadCallback"
+    iget-object v0, p1, Lcom/tencent/mm/e/a/em;->akZ:Lcom/tencent/mm/e/a/em$a;
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget v0, v0, Lcom/tencent/mm/e/a/em$a;->ala:I
 
-    move-result v2
+    sparse-switch v0, :sswitch_data_0
 
-    if-eqz v2, :cond_0
-
-    .line 81
-    check-cast p1, Lcom/tencent/mm/d/a/ei;
-
-    .line 82
-    iget-object v2, p1, Lcom/tencent/mm/d/a/ei;->ayX:Lcom/tencent/mm/d/a/ei$a;
-
-    iget v2, v2, Lcom/tencent/mm/d/a/ei$a;->ayY:I
-
-    sparse-switch v2, :sswitch_data_0
-
-    .line 116
     :goto_0
     :sswitch_0
-    return v0
+    return v8
 
-    .line 84
     :sswitch_1
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/j$1;->iCD:Lcom/tencent/mm/pluginsdk/model/downloader/j;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/j$1;->iZr:Lcom/tencent/mm/pluginsdk/model/downloader/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/model/downloader/j;->iCo:Lcom/tencent/mm/pluginsdk/model/downloader/a;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/downloader/j;->iYY:Lcom/tencent/mm/pluginsdk/model/downloader/a;
 
-    iget-object v2, p1, Lcom/tencent/mm/d/a/ei;->ayX:Lcom/tencent/mm/d/a/ei$a;
+    iget-object v1, p1, Lcom/tencent/mm/e/a/em;->akZ:Lcom/tencent/mm/e/a/em$a;
 
-    iget-wide v2, v2, Lcom/tencent/mm/d/a/ei$a;->id:J
+    iget-wide v2, v1, Lcom/tencent/mm/e/a/em$a;->id:J
 
-    iget-object v4, p1, Lcom/tencent/mm/d/a/ei;->ayX:Lcom/tencent/mm/d/a/ei$a;
+    iget-object v1, p1, Lcom/tencent/mm/e/a/em;->akZ:Lcom/tencent/mm/e/a/em$a;
 
-    iget-object v4, v4, Lcom/tencent/mm/d/a/ei$a;->path:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/e/a/em$a;->path:Ljava/lang/String;
 
-    invoke-virtual {v1, v2, v3, v4}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->k(JLjava/lang/String;)V
+    invoke-virtual {v0, v2, v3, v1}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->m(JLjava/lang/String;)V
 
     goto :goto_0
 
-    .line 88
     :sswitch_2
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/j$1;->iCD:Lcom/tencent/mm/pluginsdk/model/downloader/j;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/j$1;->iZr:Lcom/tencent/mm/pluginsdk/model/downloader/j;
 
-    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/model/downloader/j;->iCo:Lcom/tencent/mm/pluginsdk/model/downloader/a;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/downloader/j;->iYY:Lcom/tencent/mm/pluginsdk/model/downloader/a;
 
-    iget-object v3, p1, Lcom/tencent/mm/d/a/ei;->ayX:Lcom/tencent/mm/d/a/ei$a;
+    iget-object v1, p1, Lcom/tencent/mm/e/a/em;->akZ:Lcom/tencent/mm/e/a/em$a;
 
-    iget-wide v3, v3, Lcom/tencent/mm/d/a/ei$a;->id:J
+    iget-wide v2, v1, Lcom/tencent/mm/e/a/em$a;->id:J
 
-    const-string/jumbo v5, "!56@/B4Tb64lLpKVQlIh1YRBXzdWPJKtG776lZ8EhHWW4u4+NDTrwItS9A=="
+    const-string/jumbo v1, "MicroMsg.FileDownloaderCallbackManager"
 
-    const-string/jumbo v6, "notifyTaskPaused: %d"
+    const-string/jumbo v4, "notifyTaskPaused: %d"
 
-    new-array v7, v0, [Ljava/lang/Object;
+    new-array v5, v8, [Ljava/lang/Object;
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v8
+    move-result-object v6
 
-    aput-object v8, v7, v1
+    aput-object v6, v5, v9
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     new-instance v1, Lcom/tencent/mm/pluginsdk/model/downloader/a$6;
 
-    invoke-direct {v1, v2, v3, v4}, Lcom/tencent/mm/pluginsdk/model/downloader/a$6;-><init>(Lcom/tencent/mm/pluginsdk/model/downloader/a;J)V
+    invoke-direct {v1, v0, v2, v3}, Lcom/tencent/mm/pluginsdk/model/downloader/a$6;-><init>(Lcom/tencent/mm/pluginsdk/model/downloader/a;J)V
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
     goto :goto_0
 
-    .line 95
     :sswitch_3
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/j$1;->iCD:Lcom/tencent/mm/pluginsdk/model/downloader/j;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/j$1;->iZr:Lcom/tencent/mm/pluginsdk/model/downloader/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/model/downloader/j;->iCo:Lcom/tencent/mm/pluginsdk/model/downloader/a;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/downloader/j;->iYY:Lcom/tencent/mm/pluginsdk/model/downloader/a;
 
-    iget-object v2, p1, Lcom/tencent/mm/d/a/ei;->ayX:Lcom/tencent/mm/d/a/ei$a;
+    iget-object v1, p1, Lcom/tencent/mm/e/a/em;->akZ:Lcom/tencent/mm/e/a/em$a;
 
-    iget-wide v2, v2, Lcom/tencent/mm/d/a/ei$a;->id:J
+    iget-wide v2, v1, Lcom/tencent/mm/e/a/em$a;->id:J
 
-    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->cY(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->dp(J)V
 
     goto :goto_0
 
-    .line 99
     :sswitch_4
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/j$1;->iCD:Lcom/tencent/mm/pluginsdk/model/downloader/j;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/j$1;->iZr:Lcom/tencent/mm/pluginsdk/model/downloader/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/model/downloader/j;->iCo:Lcom/tencent/mm/pluginsdk/model/downloader/a;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/downloader/j;->iYY:Lcom/tencent/mm/pluginsdk/model/downloader/a;
 
-    iget-object v2, p1, Lcom/tencent/mm/d/a/ei;->ayX:Lcom/tencent/mm/d/a/ei$a;
+    iget-object v1, p1, Lcom/tencent/mm/e/a/em;->akZ:Lcom/tencent/mm/e/a/em$a;
 
-    iget-wide v2, v2, Lcom/tencent/mm/d/a/ei$a;->id:J
+    iget-wide v2, v1, Lcom/tencent/mm/e/a/em$a;->id:J
 
-    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->cX(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->do(J)V
 
     goto :goto_0
 
-    .line 103
     :sswitch_5
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/c;->aQc()Lcom/tencent/mm/pluginsdk/model/downloader/c;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/c;->aUL()Lcom/tencent/mm/pluginsdk/model/downloader/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/model/downloader/c;->aUN()Lcom/tencent/mm/pluginsdk/model/downloader/l;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/model/downloader/c;->aQe()Lcom/tencent/mm/pluginsdk/model/downloader/l;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lcom/tencent/mm/pluginsdk/model/downloader/c;->iCj:Lcom/tencent/mm/pluginsdk/model/downloader/l;
+    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/model/downloader/c;->iYT:Lcom/tencent/mm/pluginsdk/model/downloader/l;
 
     goto :goto_0
 
-    .line 107
     :sswitch_6
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/j$1;->iCD:Lcom/tencent/mm/pluginsdk/model/downloader/j;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/j$1;->iZr:Lcom/tencent/mm/pluginsdk/model/downloader/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/model/downloader/j;->iCo:Lcom/tencent/mm/pluginsdk/model/downloader/a;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/downloader/j;->iYY:Lcom/tencent/mm/pluginsdk/model/downloader/a;
 
-    iget-object v2, p1, Lcom/tencent/mm/d/a/ei;->ayX:Lcom/tencent/mm/d/a/ei$a;
+    iget-object v1, p1, Lcom/tencent/mm/e/a/em;->akZ:Lcom/tencent/mm/e/a/em$a;
 
-    iget-wide v2, v2, Lcom/tencent/mm/d/a/ei$a;->id:J
+    iget-wide v2, v1, Lcom/tencent/mm/e/a/em$a;->id:J
 
-    new-instance v4, Lcom/tencent/mm/pluginsdk/model/downloader/a$7;
+    new-instance v1, Lcom/tencent/mm/pluginsdk/model/downloader/a$7;
 
-    invoke-direct {v4, v1, v2, v3}, Lcom/tencent/mm/pluginsdk/model/downloader/a$7;-><init>(Lcom/tencent/mm/pluginsdk/model/downloader/a;J)V
+    invoke-direct {v1, v0, v2, v3}, Lcom/tencent/mm/pluginsdk/model/downloader/a$7;-><init>(Lcom/tencent/mm/pluginsdk/model/downloader/a;J)V
 
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
     goto :goto_0
 
-    .line 111
     :sswitch_7
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/j$1;->iCD:Lcom/tencent/mm/pluginsdk/model/downloader/j;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/j$1;->iZr:Lcom/tencent/mm/pluginsdk/model/downloader/j;
 
-    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/model/downloader/j;->iCo:Lcom/tencent/mm/pluginsdk/model/downloader/a;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/downloader/j;->iYY:Lcom/tencent/mm/pluginsdk/model/downloader/a;
 
-    iget-object v3, p1, Lcom/tencent/mm/d/a/ei;->ayX:Lcom/tencent/mm/d/a/ei$a;
+    iget-object v1, p1, Lcom/tencent/mm/e/a/em;->akZ:Lcom/tencent/mm/e/a/em$a;
 
-    iget-wide v3, v3, Lcom/tencent/mm/d/a/ei$a;->id:J
+    iget-wide v2, v1, Lcom/tencent/mm/e/a/em$a;->id:J
 
-    iget-object v5, p1, Lcom/tencent/mm/d/a/ei;->ayX:Lcom/tencent/mm/d/a/ei$a;
+    iget-object v1, p1, Lcom/tencent/mm/e/a/em;->akZ:Lcom/tencent/mm/e/a/em$a;
 
-    iget-object v5, v5, Lcom/tencent/mm/d/a/ei$a;->path:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/e/a/em$a;->path:Ljava/lang/String;
 
-    const-string/jumbo v6, "!56@/B4Tb64lLpKVQlIh1YRBXzdWPJKtG776lZ8EhHWW4u4+NDTrwItS9A=="
+    const-string/jumbo v4, "MicroMsg.FileDownloaderCallbackManager"
 
-    const-string/jumbo v7, "notifyTaskStarted: %d, %s"
+    const-string/jumbo v5, "notifyTaskStarted: %d, %s"
 
-    const/4 v8, 0x2
+    const/4 v6, 0x2
 
-    new-array v8, v8, [Ljava/lang/Object;
+    new-array v6, v6, [Ljava/lang/Object;
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v9
+    move-result-object v7
 
-    aput-object v9, v8, v1
+    aput-object v7, v6, v9
 
-    aput-object v5, v8, v0
+    aput-object v1, v6, v8
 
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    new-instance v1, Lcom/tencent/mm/pluginsdk/model/downloader/a$2;
+    new-instance v4, Lcom/tencent/mm/pluginsdk/model/downloader/a$2;
 
-    invoke-direct {v1, v2, v3, v4, v5}, Lcom/tencent/mm/pluginsdk/model/downloader/a$2;-><init>(Lcom/tencent/mm/pluginsdk/model/downloader/a;JLjava/lang/String;)V
+    invoke-direct {v4, v0, v2, v3, v1}, Lcom/tencent/mm/pluginsdk/model/downloader/a$2;-><init>(Lcom/tencent/mm/pluginsdk/model/downloader/a;JLjava/lang/String;)V
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
     goto/16 :goto_0
 
-    :cond_0
-    move v0, v1
-
-    .line 116
-    goto/16 :goto_0
-
-    .line 82
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

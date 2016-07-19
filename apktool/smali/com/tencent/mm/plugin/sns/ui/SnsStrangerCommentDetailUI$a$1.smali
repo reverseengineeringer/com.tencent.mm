@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hiS:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a;
+.field final synthetic hxH:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 416
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a$1;->hiS:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a;
+    .line 417
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a$1;->hxH:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,15 +40,15 @@
     .locals 4
 
     .prologue
-    .line 419
+    .line 420
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 420
-    const-string/jumbo v1, "!56@/B4Tb64lLpKq4kzQEmWfvWlP1B6VxlvUA5NJce3mTcriiJ7E+LoT7Q=="
+    .line 421
+    const-string/jumbo v1, "MicroMsg.SnsStrangerCommentDetailUI"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -64,22 +64,22 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 421
+    .line 422
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 424
+    .line 425
     const-string/jumbo v2, "Contact_User"
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 427
-    sget-object v0, Lcom/tencent/mm/plugin/sns/b/a;->coa:Lcom/tencent/mm/pluginsdk/g;
+    .line 428
+    sget-object v0, Lcom/tencent/mm/plugin/sns/b/a;->cjo:Lcom/tencent/mm/pluginsdk/g;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a$1;->hiS:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a$1;->hxH:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a;->a(Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$a;)Landroid/app/Activity;
 
@@ -87,6 +87,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/g;->d(Landroid/content/Intent;Landroid/content/Context;)V
 
-    .line 428
+    .line 429
     return-void
 .end method

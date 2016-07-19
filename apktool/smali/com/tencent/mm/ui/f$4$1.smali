@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/f$4;->ie(Ljava/lang/String;)V
+    value = Lcom/tencent/mm/ui/f$4;->iv(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic klu:Lcom/tencent/mm/ui/f$4;
+.field final synthetic kKS:Lcom/tencent/mm/ui/f$4;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1348
-    iput-object p1, p0, Lcom/tencent/mm/ui/f$4$1;->klu:Lcom/tencent/mm/ui/f$4;
+    .line 1286
+    iput-object p1, p0, Lcom/tencent/mm/ui/f$4$1;->kKS:Lcom/tencent/mm/ui/f$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,17 +44,17 @@
 
     const/16 v1, 0x8
 
-    .line 1351
-    iget-object v0, p0, Lcom/tencent/mm/ui/f$4$1;->klu:Lcom/tencent/mm/ui/f$4;
+    .line 1290
+    iget-object v0, p0, Lcom/tencent/mm/ui/f$4$1;->kKS:Lcom/tencent/mm/ui/f$4;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/f$4;->klo:Lcom/tencent/mm/ui/f;
+    iget-object v0, v0, Lcom/tencent/mm/ui/f$4;->kKO:Lcom/tencent/mm/ui/f;
 
     invoke-static {v0, v3}, Lcom/tencent/mm/ui/f;->a(Lcom/tencent/mm/ui/f;Z)Z
 
-    .line 1352
-    iget-object v0, p0, Lcom/tencent/mm/ui/f$4$1;->klu:Lcom/tencent/mm/ui/f$4;
+    .line 1291
+    iget-object v0, p0, Lcom/tencent/mm/ui/f$4$1;->kKS:Lcom/tencent/mm/ui/f$4;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/f$4;->klo:Lcom/tencent/mm/ui/f;
+    iget-object v0, v0, Lcom/tencent/mm/ui/f$4;->kKO:Lcom/tencent/mm/ui/f;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/f;->a(Lcom/tencent/mm/ui/f;)Lcom/tencent/mm/ui/base/preference/f;
 
@@ -62,7 +62,7 @@
 
     const-string/jumbo v2, "more_tab_game_recommend"
 
-    invoke-interface {v0, v2}, Lcom/tencent/mm/ui/base/preference/f;->GB(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
+    invoke-interface {v0, v2}, Lcom/tencent/mm/ui/base/preference/f;->IR(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
 
     move-result-object v0
 
@@ -76,9 +76,9 @@
 
     move v6, v1
 
-    .line 1353
+    .line 1292
     invoke-static/range {v0 .. v6}, Lcom/tencent/mm/ui/f;->a(Lcom/tencent/mm/ui/base/preference/IconPreference;IIZIII)V
 
-    .line 1356
+    .line 1295
     return-void
 .end method

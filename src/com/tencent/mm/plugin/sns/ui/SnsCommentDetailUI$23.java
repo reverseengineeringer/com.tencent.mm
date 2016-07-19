@@ -1,38 +1,14 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.d.a.ma;
-import com.tencent.mm.d.a.ma.a;
-import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.e.a.mn;
 import com.tencent.mm.sdk.c.c;
 
 final class SnsCommentDetailUI$23
-  extends c
+  extends c<mn>
 {
   SnsCommentDetailUI$23(SnsCommentDetailUI paramSnsCommentDetailUI)
   {
-    super(0);
-  }
-  
-  public final boolean a(b paramb)
-  {
-    String str;
-    if ((paramb instanceof ma))
-    {
-      paramb = (ma)paramb;
-      str = aIo.id;
-      if (aIo.type != 1) {
-        break label41;
-      }
-      SnsCommentDetailUI.d(hda, str);
-    }
-    for (;;)
-    {
-      return false;
-      label41:
-      if (aIo.type == 2) {
-        SnsCommentDetailUI.e(hda, str);
-      }
-    }
+    kum = mn.class.getName().hashCode();
   }
 }
 

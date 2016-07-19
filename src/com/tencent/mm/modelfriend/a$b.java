@@ -2,7 +2,7 @@ package com.tencent.mm.modelfriend;
 
 public abstract interface a$b
 {
-  public abstract void aU(boolean paramBoolean);
+  public abstract void aA(boolean paramBoolean);
 }
 
 /* Location:

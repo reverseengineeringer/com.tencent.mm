@@ -9,12 +9,12 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.pluginsdk.h.m;
+import com.tencent.mm.plugin.luckymoney.c.n;
 import com.tencent.mm.pluginsdk.ui.a.b;
-import com.tencent.mm.protocal.b.alx;
-import com.tencent.mm.protocal.b.aqf;
-import com.tencent.mm.protocal.b.ye;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.ami;
+import com.tencent.mm.protocal.b.aqq;
+import com.tencent.mm.protocal.b.yr;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 import com.tencent.mm.wallet_core.ui.e;
@@ -27,26 +27,26 @@ import java.util.List;
 public final class c
   extends BaseAdapter
 {
-  private final String TAG = "!56@rCd+AtvtPe29S2BZE6cyIwV6dceXPzgOVS9VjM4EOSqJxSW6GwKi3w==";
-  List eVw = new LinkedList();
-  private int eYu = 1;
-  private LayoutInflater hI;
+  private final String TAG = "SnsLuckyMoneyReceivedRecordListAdapter";
+  List<aqq> fdH = new LinkedList();
+  private int fgO = 1;
+  private LayoutInflater ib;
   private Context mContext;
   
   public c(Context paramContext)
   {
     mContext = paramContext;
-    hI = LayoutInflater.from(paramContext);
+    ib = LayoutInflater.from(paramContext);
   }
   
-  private aqf ls(int paramInt)
+  private aqq mA(int paramInt)
   {
-    return (aqf)eVw.get(paramInt);
+    return (aqq)fdH.get(paramInt);
   }
   
   public final int getCount()
   {
-    return eVw.size();
+    return fdH.size();
   }
   
   public final long getItemId(int paramInt)
@@ -59,28 +59,28 @@ public final class c
     View localView;
     if (paramView == null)
     {
-      localView = hI.inflate(2131362853, paramViewGroup, false);
+      localView = ib.inflate(2130904449, paramViewGroup, false);
       paramViewGroup = new a();
-      dfg = ((ImageView)localView.findViewById(2131167753));
-      eWF = ((TextView)localView.findViewById(2131167754));
-      eWG = ((TextView)localView.findViewById(2131167757));
-      eVj = ((TextView)localView.findViewById(2131167758));
-      eYA = ((TextView)localView.findViewById(2131167760));
+      ddG = ((ImageView)localView.findViewById(2131757747));
+      feT = ((TextView)localView.findViewById(2131757748));
+      feU = ((TextView)localView.findViewById(2131757751));
+      fdu = ((TextView)localView.findViewById(2131757752));
+      fgU = ((TextView)localView.findViewById(2131757754));
       localView.setTag(paramViewGroup);
     }
     for (;;)
     {
-      aqf localaqf = ls(paramInt);
-      k localk = ah.tD().rq().Ep(iYA);
+      aqq localaqq = mA(paramInt);
+      k localk = ah.tE().rr().GD(jwf);
       label145:
       long l1;
       Object localObject;
-      if (iYA != null)
+      if (jwf != null)
       {
-        a.b.k(dfg, iYA);
-        TextView localTextView = eWG;
+        a.b.k(ddG, jwf);
+        TextView localTextView = feU;
         paramView = mContext;
-        l1 = fpL * 1000L;
+        l1 = fyR * 1000L;
         localObject = new GregorianCalendar();
         if (l1 >= 3600000L) {
           break label358;
@@ -88,29 +88,29 @@ public final class c
         paramView = "";
         label189:
         localTextView.setText(paramView);
-        eWG.setVisibility(0);
+        feU.setVisibility(0);
         if (localk == null) {
           break label479;
         }
-        com.tencent.mm.plugin.luckymoney.c.n.a(mContext, eWF, localk.qz());
+        n.a(mContext, feT, localk.pc());
         label224:
-        paramView = new ye();
+        paramView = new yr();
       }
       try
       {
-        if ((jJB != null) && (jJB.jHs > 0))
+        if ((khY != null) && (khY.kfQ > 0))
         {
-          paramView.am(com.tencent.mm.platformtools.n.a(jJB));
-          if (eRY > 0L)
+          paramView.au(com.tencent.mm.platformtools.m.a(khY));
+          if (axj > 0L)
           {
-            paramView = mContext.getString(2131430670, new Object[] { e.k(eRY / 100.0D) });
-            eVj.setText(paramView);
-            eYA.setVisibility(8);
+            paramView = mContext.getString(2131233632, new Object[] { e.n(axj / 100.0D) });
+            fdu.setText(paramView);
+            fgU.setVisibility(8);
             return localView;
             paramViewGroup = (a)paramView.getTag();
             localView = paramView;
             continue;
-            u.e("!56@rCd+AtvtPe29S2BZE6cyIwV6dceXPzgOVS9VjM4EOSqJxSW6GwKi3w==", "the contact is null,by username:%s", new Object[] { iYA });
+            v.e("SnsLuckyMoneyReceivedRecordListAdapter", "the contact is null,by username:%s", new Object[] { jwf });
             break label145;
             label358:
             long l2 = l1 - new GregorianCalendar(((GregorianCalendar)localObject).get(1), ((GregorianCalendar)localObject).get(2), ((GregorianCalendar)localObject).get(5)).getTimeInMillis();
@@ -121,40 +121,40 @@ public final class c
             }
             localObject = new Time();
             ((Time)localObject).set(l1);
-            paramView = m.a(paramView.getString(2131430466, new Object[] { " " }), (Time)localObject).toString();
+            paramView = com.tencent.mm.pluginsdk.i.m.a(paramView.getString(2131232838, new Object[] { " " }), (Time)localObject).toString();
             break label189;
             label479:
-            u.e("!56@rCd+AtvtPe29S2BZE6cyIwV6dceXPzgOVS9VjM4EOSqJxSW6GwKi3w==", "the contact is null,by username:%s", new Object[] { iYA });
+            v.e("SnsLuckyMoneyReceivedRecordListAdapter", "the contact is null,by username:%s", new Object[] { jwf });
             break label224;
           }
-          eVj.setVisibility(8);
-          eYA.setVisibility(0);
+          fdu.setVisibility(8);
+          fgU.setVisibility(0);
           return localView;
         }
       }
       catch (Exception paramView)
       {
-        u.e("!56@rCd+AtvtPe29S2BZE6cyIwV6dceXPzgOVS9VjM4EOSqJxSW6GwKi3w==", paramView.getMessage() + "hbBuffer is error");
-        eVj.setVisibility(8);
-        eYA.setVisibility(8);
-        dfg.setVisibility(8);
-        eWF.setVisibility(8);
-        eWG.setVisibility(8);
+        v.e("SnsLuckyMoneyReceivedRecordListAdapter", paramView.getMessage() + "hbBuffer is error");
+        fdu.setVisibility(8);
+        fgU.setVisibility(8);
+        ddG.setVisibility(8);
+        feT.setVisibility(8);
+        feU.setVisibility(8);
         return localView;
       }
     }
-    eVj.setVisibility(8);
-    eYA.setVisibility(0);
+    fdu.setVisibility(8);
+    fgU.setVisibility(0);
     return localView;
   }
   
   final class a
   {
-    ImageView dfg;
-    TextView eVj;
-    TextView eWF;
-    TextView eWG;
-    TextView eYA;
+    ImageView ddG;
+    TextView fdu;
+    TextView feT;
+    TextView feU;
+    TextView fgU;
     
     a() {}
   }

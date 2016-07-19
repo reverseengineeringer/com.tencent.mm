@@ -23,7 +23,7 @@ class WebView$SystemWebView
   public WebView$SystemWebView(WebView paramWebView, Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    CookieSyncManager.createInstance(WebView.b(paramWebView)).startSync();
+    CookieSyncManager.createInstance(WebView.d(paramWebView)).startSync();
     try
     {
       paramWebView = Class.forName("android.webkit.WebViewWorker").getDeclaredMethod("getHandler", new Class[0]);
@@ -39,7 +39,7 @@ class WebView$SystemWebView
   {
     if (this$0.mWebViewCallbackClient != null)
     {
-      this$0.mWebViewCallbackClient.aNA();
+      this$0.mWebViewCallbackClient.aRn();
       return;
     }
     super.computeScroll();
@@ -50,10 +50,10 @@ class WebView$SystemWebView
     try
     {
       super.dispatchDraw(paramCanvas);
-      if ((!WebView.bme()) && (WebView.bmf() != null))
+      if ((!WebView.bgH()) && (WebView.bsh() != null))
       {
         paramCanvas.save();
-        paramCanvas.drawPaint(WebView.bmf());
+        paramCanvas.drawPaint(WebView.bsh());
         paramCanvas.restore();
       }
       return;
@@ -64,7 +64,7 @@ class WebView$SystemWebView
   public boolean dispatchTouchEvent(MotionEvent paramMotionEvent)
   {
     if (this$0.mWebViewCallbackClient != null) {
-      return this$0.mWebViewCallbackClient.p(paramMotionEvent);
+      return this$0.mWebViewCallbackClient.o(paramMotionEvent);
     }
     return super.dispatchTouchEvent(paramMotionEvent);
   }
@@ -83,7 +83,7 @@ class WebView$SystemWebView
   public boolean onInterceptTouchEvent(MotionEvent paramMotionEvent)
   {
     if (this$0.mWebViewCallbackClient != null) {
-      return this$0.mWebViewCallbackClient.q(paramMotionEvent);
+      return this$0.mWebViewCallbackClient.p(paramMotionEvent);
     }
     return super.onInterceptTouchEvent(paramMotionEvent);
   }
@@ -92,7 +92,7 @@ class WebView$SystemWebView
   public void onOverScrolled(int paramInt1, int paramInt2, boolean paramBoolean1, boolean paramBoolean2)
   {
     if (this$0.mWebViewCallbackClient != null) {
-      this$0.mWebViewCallbackClient.b(paramInt1, paramInt2, paramBoolean1, paramBoolean2);
+      this$0.mWebViewCallbackClient.a(paramInt1, paramInt2, paramBoolean1, paramBoolean2);
     }
     while (Build.VERSION.SDK_INT < 9) {
       return;
@@ -104,7 +104,7 @@ class WebView$SystemWebView
   {
     if (this$0.mWebViewCallbackClient != null)
     {
-      this$0.mWebViewCallbackClient.k(paramInt1, paramInt2, paramInt3, paramInt4);
+      this$0.mWebViewCallbackClient.j(paramInt1, paramInt2, paramInt3, paramInt4);
       return;
     }
     super.onScrollChanged(paramInt1, paramInt2, paramInt3, paramInt4);
@@ -118,7 +118,7 @@ class WebView$SystemWebView
       requestFocus();
     }
     if (this$0.mWebViewCallbackClient != null) {
-      return this$0.mWebViewCallbackClient.o(paramMotionEvent);
+      return this$0.mWebViewCallbackClient.n(paramMotionEvent);
     }
     try
     {

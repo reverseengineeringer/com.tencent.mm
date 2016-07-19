@@ -13,11 +13,11 @@ import android.os.Looper;
 import android.os.RemoteException;
 import android.provider.ContactsContract.Data;
 import android.provider.ContactsContract.RawContacts;
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.g.e;
-import com.tencent.mm.g.h;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.h.e;
+import com.tencent.mm.h.h;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.q;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,10 +28,10 @@ import java.util.Map;
 public final class b
   implements Runnable
 {
-  private String aBe;
-  private Account caG;
-  private a caH;
-  private Looper caI;
+  private String anw;
+  private Account bUp;
+  private a bUq;
+  private Looper bUr;
   private Context mContext;
   private String username;
   
@@ -48,13 +48,13 @@ public final class b
   public b(Context paramContext, Account paramAccount, String paramString1, String paramString2)
   {
     mContext = paramContext;
-    caG = paramAccount;
+    bUp = paramAccount;
     username = paramString1;
-    aBe = paramString2;
-    u.i("!44@/B4Tb64lLpLSOpQlr7qYXTiZp5uLNFEb0T3I5Eq6Cf8=", "username = " + paramString1 + ", " + paramString2);
+    anw = paramString2;
+    v.i("MicroMsg.ContactsOperations", "username = " + paramString1 + ", " + paramString2);
   }
   
-  private void Ck()
+  private void Cr()
   {
     Object localObject2;
     for (;;)
@@ -62,16 +62,16 @@ public final class b
       Object localObject5;
       try
       {
-        if (!com.tencent.mm.model.ah.rh())
+        if (!com.tencent.mm.model.ah.rg())
         {
-          u.d("!44@/B4Tb64lLpLSOpQlr7qYXTiZp5uLNFEb0T3I5Eq6Cf8=", "account not ready, quit this operation");
+          v.d("MicroMsg.ContactsOperations", "account not ready, quit this operation");
           quit();
           return;
         }
-        localObject5 = com.tencent.mm.modelfriend.ah.zq().hs("select  *  from addr_upload2 where ( addr_upload2.username IS NOT NULL AND addr_upload2.status!=\"0\" AND addr_upload2.username!=\"" + ay.kx("") + "\" )");
+        localObject5 = com.tencent.mm.modelfriend.ah.zD().hK("select  *  from addr_upload2 where ( addr_upload2.username IS NOT NULL AND addr_upload2.status!=\"0\" AND addr_upload2.username!=\"" + be.lh("") + "\" )");
         if (((List)localObject5).size() == 0)
         {
-          u.e("!44@/B4Tb64lLpLSOpQlr7qYXTiZp5uLNFEb0T3I5Eq6Cf8=", "there is no wechat friend in this phone");
+          v.e("MicroMsg.ContactsOperations", "there is no wechat friend in this phone");
           quit();
           continue;
         }
@@ -79,9 +79,9 @@ public final class b
       }
       finally {}
       HashMap localHashMap;
-      localObject2 = ContactsContract.RawContacts.CONTENT_URI.buildUpon().appendQueryParameter("account_name", caG.name).appendQueryParameter("account_type", caG.type).build();
-      if (!com.tencent.mm.pluginsdk.g.a.aL(mContext, "android.permission.READ_CONTACTS")) {
-        u.e("!44@/B4Tb64lLpLSOpQlr7qYXTiZp5uLNFEb0T3I5Eq6Cf8=", "no contact permission");
+      localObject2 = ContactsContract.RawContacts.CONTENT_URI.buildUpon().appendQueryParameter("account_name", bUp.name).appendQueryParameter("account_type", bUp.type).build();
+      if (!com.tencent.mm.pluginsdk.h.a.aK(mContext, "android.permission.READ_CONTACTS")) {
+        v.e("MicroMsg.ContactsOperations", "no contact permission");
       } else {
         for (;;)
         {
@@ -98,24 +98,24 @@ public final class b
             String str;
             boolean bool;
             localObject2 = null;
-            u.printErrStackTrace("!44@/B4Tb64lLpLSOpQlr7qYXTiZp5uLNFEb0T3I5Eq6Cf8=", localException1, "", new Object[] { "" });
+            v.printErrStackTrace("MicroMsg.ContactsOperations", localException1, "", new Object[] { "" });
             Object localObject4 = localObject2;
             continue;
-            localObject2 = ((com.tencent.mm.modelfriend.b)localObject7).yj();
+            localObject2 = ((com.tencent.mm.modelfriend.b)localObject7).yv();
             continue;
-            iZ(bLL);
+            jr(bFf);
             continue;
-            caH.execute();
+            bUq.execute();
             quit();
           }
           try
           {
-            u.e("!44@/B4Tb64lLpLSOpQlr7qYXTiZp5uLNFEb0T3I5Eq6Cf8=", "query get no user");
+            v.e("MicroMsg.ContactsOperations", "query get no user");
             localObject3 = localObject2;
             if (localObject3 != null) {
               ((Cursor)localObject3).close();
             }
-            if ((ja("vnd.android.cursor.item/vnd.com.tencent.mm.chatting.voip.video")) || (ja("vnd.android.cursor.item/vnd.com.tencent.mm.chatting.voip"))) {
+            if ((js("vnd.android.cursor.item/vnd.com.tencent.mm.chatting.voip.video")) || (js("vnd.android.cursor.item/vnd.com.tencent.mm.chatting.voip"))) {
               break label526;
             }
             i = 1;
@@ -126,32 +126,32 @@ public final class b
             i = 0;
             continue;
           }
-          caH = new a(mContext.getContentResolver());
+          bUq = new a(mContext.getContentResolver());
           localObject3 = ((List)localObject5).iterator();
           if (!((Iterator)localObject3).hasNext()) {
             continue;
           }
           localObject7 = (com.tencent.mm.modelfriend.b)((Iterator)localObject3).next();
           localObject5 = ((com.tencent.mm.modelfriend.b)localObject7).getUsername();
-          localObject6 = com.tencent.mm.model.ah.tD().rq().Ep((String)localObject5);
-          if ((localObject6 == null) || (!com.tencent.mm.h.a.ce(field_type))) {
+          localObject6 = com.tencent.mm.model.ah.tE().rr().GD((String)localObject5);
+          if ((localObject6 == null) || (!com.tencent.mm.i.a.cy(field_type))) {
             continue;
           }
-          if (!ay.kz(((com.tencent.mm.modelfriend.b)localObject7).yj())) {
+          if (!be.kf(((com.tencent.mm.modelfriend.b)localObject7).yv())) {
             continue;
           }
-          localObject2 = ((com.tencent.mm.modelfriend.b)localObject7).ym();
-          str = ((com.tencent.mm.modelfriend.b)localObject7).yp();
-          localObject7 = bLL;
-          localObject6 = aSE;
+          localObject2 = ((com.tencent.mm.modelfriend.b)localObject7).yy();
+          str = ((com.tencent.mm.modelfriend.b)localObject7).yB();
+          localObject7 = bFf;
+          localObject6 = aFn;
           if ((localHashMap.get(localObject7) == null) || (i != 0))
           {
             if (localHashMap.get(localObject7) != null) {
-              iZ((String)localObject7);
+              jr((String)localObject7);
             }
             b((String)localObject2, str, (String)localObject7, (String)localObject5);
           }
-          caH.execute();
+          bUq.execute();
           continue;
           localObject3 = localObject2;
           if (((Cursor)localObject2).moveToFirst())
@@ -169,35 +169,35 @@ public final class b
   
   private void b(String paramString1, String paramString2, String paramString3, String paramString4)
   {
-    u.d("!44@/B4Tb64lLpLSOpQlr7qYXTiZp5uLNFEb0T3I5Eq6Cf8=", "add wechat contact: displayname:" + paramString1 + ", phoneNum:" + paramString2 + ", " + paramString3 + ", username:" + paramString4);
+    v.d("MicroMsg.ContactsOperations", "add wechat contact: displayname:" + paramString1 + ", phoneNum:" + paramString2 + ", " + paramString3 + ", username:" + paramString4);
     paramString4 = ContentProviderOperation.newInsert(ContactsContract.RawContacts.CONTENT_URI);
-    paramString4.withValue("account_name", caG.name);
-    paramString4.withValue("account_type", caG.type);
+    paramString4.withValue("account_name", bUp.name);
+    paramString4.withValue("account_type", bUp.type);
     paramString4.withValue("sync1", paramString3);
-    caH.a(paramString4.build());
+    bUq.a(paramString4.build());
     paramString4 = ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI);
     paramString4.withValueBackReference("raw_contact_id", 0);
     paramString4.withValue("mimetype", "vnd.android.cursor.item/name");
     paramString4.withValue("data1", paramString1);
-    caH.a(paramString4.build());
+    bUq.a(paramString4.build());
     paramString1 = ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI);
     paramString1.withValueBackReference("raw_contact_id", 0);
     paramString1.withValue("mimetype", "vnd.android.cursor.item/vnd.com.tencent.mm.chatting.profile");
     paramString1.withValue("data1", paramString2);
-    paramString1.withValue("data2", mContext.getString(2131431735));
-    paramString1.withValue("data3", mContext.getString(2131429319));
+    paramString1.withValue("data2", mContext.getString(2131230958));
+    paramString1.withValue("data3", mContext.getString(2131232128));
     paramString1.withValue("data4", paramString3);
-    caH.a(paramString1.build());
-    if ("1".equals(h.pS().getValue("VOIPCallType")))
+    bUq.a(paramString1.build());
+    if ("1".equals(h.om().getValue("VOIPCallType")))
     {
       paramString1 = ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI);
       paramString1.withValueBackReference("raw_contact_id", 0);
       paramString1.withValue("mimetype", "vnd.android.cursor.item/vnd.com.tencent.mm.chatting.voip.video");
       paramString1.withValue("data1", paramString2);
-      paramString1.withValue("data2", mContext.getString(2131431735));
-      paramString1.withValue("data3", mContext.getString(2131429320));
+      paramString1.withValue("data2", mContext.getString(2131230958));
+      paramString1.withValue("data3", mContext.getString(2131232130));
       paramString1.withValue("data4", paramString3);
-      caH.a(paramString1.build());
+      bUq.a(paramString1.build());
     }
     for (;;)
     {
@@ -205,40 +205,40 @@ public final class b
       paramString1.withValueBackReference("raw_contact_id", 0);
       paramString1.withValue("mimetype", "vnd.android.cursor.item/vnd.com.tencent.mm.plugin.sns.timeline");
       paramString1.withValue("data1", paramString2);
-      paramString1.withValue("data2", mContext.getString(2131431735));
-      paramString1.withValue("data3", mContext.getString(2131429322));
+      paramString1.withValue("data2", mContext.getString(2131230958));
+      paramString1.withValue("data3", mContext.getString(2131232131));
       paramString1.withValue("data4", paramString3);
-      caH.a(paramString1.build());
+      bUq.a(paramString1.build());
       paramString1 = ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI);
       paramString1.withValueBackReference("raw_contact_id", 0);
       paramString1.withValue("mimetype", "vnd.android.cursor.item/vnd.com.tencent.mm.chatting.voiceaction");
       paramString1.withValue("data1", paramString2);
-      paramString1.withValue("data2", mContext.getString(2131431735));
+      paramString1.withValue("data2", mContext.getString(2131230958));
       paramString1.withValue("data3", "");
       paramString1.withValue("data4", paramString3);
-      caH.a(paramString1.build());
+      bUq.a(paramString1.build());
       return;
       paramString1 = ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI);
       paramString1.withValueBackReference("raw_contact_id", 0);
       paramString1.withValue("mimetype", "vnd.android.cursor.item/vnd.com.tencent.mm.chatting.voip");
       paramString1.withValue("data1", paramString2);
-      paramString1.withValue("data2", mContext.getString(2131431735));
-      paramString1.withValue("data3", mContext.getString(2131429321));
+      paramString1.withValue("data2", mContext.getString(2131230958));
+      paramString1.withValue("data3", mContext.getString(2131232129));
       paramString1.withValue("data4", paramString3);
-      caH.a(paramString1.build());
+      bUq.a(paramString1.build());
     }
   }
   
-  private void iZ(String paramString)
+  private void jr(String paramString)
   {
-    if (ay.kz(paramString))
+    if (be.kf(paramString))
     {
-      u.e("!44@/B4Tb64lLpLSOpQlr7qYXTiZp5uLNFEb0T3I5Eq6Cf8=", "delete wechat contact fail, phoneNum5 is null");
+      v.e("MicroMsg.ContactsOperations", "delete wechat contact fail, phoneNum5 is null");
       return;
     }
-    if (!com.tencent.mm.pluginsdk.g.a.aL(mContext, "android.permission.READ_CONTACTS"))
+    if (!com.tencent.mm.pluginsdk.h.a.aK(mContext, "android.permission.READ_CONTACTS"))
     {
-      u.e("!44@/B4Tb64lLpLSOpQlr7qYXTiZp5uLNFEb0T3I5Eq6Cf8=", "no contact permission");
+      v.e("MicroMsg.ContactsOperations", "no contact permission");
       return;
     }
     try
@@ -246,7 +246,7 @@ public final class b
       paramString = mContext.getContentResolver().query(ContactsContract.Data.CONTENT_URI, new String[] { "contact_id", "_id" }, "(mimetype= ? or mimetype= ? or mimetype= ? or mimetype= ? or mimetype= ?) AND data4 = ?", new String[] { "vnd.android.cursor.item/vnd.com.tencent.mm.chatting.profile", "vnd.android.cursor.item/vnd.com.tencent.mm.plugin.sns.timeline", "vnd.android.cursor.item/vnd.com.tencent.mm.chatting.voip", "vnd.android.cursor.item/vnd.com.tencent.mm.chatting.voip.video", "vnd.android.cursor.item/vnd.com.tencent.mm.chatting.voiceaction", paramString }, null);
       if (paramString == null)
       {
-        u.e("!44@/B4Tb64lLpLSOpQlr7qYXTiZp5uLNFEb0T3I5Eq6Cf8=", "get null cursor");
+        v.e("MicroMsg.ContactsOperations", "get null cursor");
         return;
       }
     }
@@ -254,7 +254,7 @@ public final class b
     {
       for (;;)
       {
-        u.e("!44@/B4Tb64lLpLSOpQlr7qYXTiZp5uLNFEb0T3I5Eq6Cf8=", "query fail, match error %s \n %s", new Object[] { paramString.getMessage(), ay.b(paramString) });
+        v.e("MicroMsg.ContactsOperations", "query fail, match error %s \n %s", new Object[] { paramString.getMessage(), be.f(paramString) });
         paramString = null;
       }
     }
@@ -274,7 +274,7 @@ public final class b
             continue;
           }
           str2 = paramString.getString(i);
-          if ((!ay.kz(str1)) && (!ay.kz(str2)))
+          if ((!be.kf(str1)) && (!be.kf(str2)))
           {
             mContext.getContentResolver().delete(ContactsContract.Data.CONTENT_URI, "_id = ?", new String[] { str2 });
             mContext.getContentResolver().delete(ContactsContract.RawContacts.CONTENT_URI, "contact_id = ? AND account_type = ?", new String[] { str1, "com.tencent.mm.account" });
@@ -289,7 +289,7 @@ public final class b
       {
         String str1;
         String str2;
-        u.e("!44@/B4Tb64lLpLSOpQlr7qYXTiZp5uLNFEb0T3I5Eq6Cf8=", "delete wechat contact failed : " + localException.getMessage());
+        v.e("MicroMsg.ContactsOperations", "delete wechat contact failed : " + localException.getMessage());
         continue;
       }
       paramString.close();
@@ -300,11 +300,11 @@ public final class b
     }
   }
   
-  private boolean ja(String paramString)
+  private boolean js(String paramString)
   {
     boolean bool2 = false;
-    if (!com.tencent.mm.pluginsdk.g.a.aL(mContext, "android.permission.READ_CONTACTS")) {
-      u.e("!44@/B4Tb64lLpLSOpQlr7qYXTiZp5uLNFEb0T3I5Eq6Cf8=", "no contact permission");
+    if (!com.tencent.mm.pluginsdk.h.a.aK(mContext, "android.permission.READ_CONTACTS")) {
+      v.e("MicroMsg.ContactsOperations", "no contact permission");
     }
     for (;;)
     {
@@ -323,7 +323,7 @@ public final class b
             if (localCursor.getCount() <= 0) {
               break label153;
             }
-            u.d("!44@/B4Tb64lLpLSOpQlr7qYXTiZp5uLNFEb0T3I5Eq6Cf8=", "has minetype:" + paramString);
+            v.d("MicroMsg.ContactsOperations", "has minetype:" + paramString);
             bool1 = true;
             bool2 = bool1;
             if (localCursor == null) {
@@ -339,7 +339,7 @@ public final class b
           }
           paramString = paramString;
           localCursor = null;
-          u.e("!44@/B4Tb64lLpLSOpQlr7qYXTiZp5uLNFEb0T3I5Eq6Cf8=", "hasMIMEType search failed : " + paramString.getMessage());
+          v.e("MicroMsg.ContactsOperations", "hasMIMEType search failed : " + paramString.getMessage());
           boolean bool1 = true;
           continue;
           label153:
@@ -351,136 +351,136 @@ public final class b
   
   private void quit()
   {
-    if (caI != null) {
-      caI.quit();
+    if (bUr != null) {
+      bUr.quit();
     }
   }
   
   public final void run()
   {
     Looper.prepare();
-    caI = Looper.myLooper();
+    bUr = Looper.myLooper();
     long l = System.currentTimeMillis();
-    u.i("!44@/B4Tb64lLpLSOpQlr7qYXTiZp5uLNFEb0T3I5Eq6Cf8=", "start time:" + l);
-    if ((ay.kz(username)) && (ay.kz(aBe))) {
-      Ck();
+    v.i("MicroMsg.ContactsOperations", "start time:" + l);
+    if ((be.kf(username)) && (be.kf(anw))) {
+      Cr();
     }
     for (;;)
     {
-      u.i("!44@/B4Tb64lLpLSOpQlr7qYXTiZp5uLNFEb0T3I5Eq6Cf8=", "end time:" + System.currentTimeMillis());
+      v.i("MicroMsg.ContactsOperations", "end time:" + System.currentTimeMillis());
       Looper.loop();
       return;
-      if (!ay.kz(aBe)) {
+      if (!be.kf(anw)) {
         break;
       }
-      localb = com.tencent.mm.modelfriend.ah.zq().hq(username);
-      if ((localb != null) && (!ay.kz(bLL))) {
-        iZ(bLL);
+      localb = com.tencent.mm.modelfriend.ah.zD().hI(username);
+      if ((localb != null) && (!be.kf(bFf))) {
+        jr(bFf);
       }
       quit();
     }
-    com.tencent.mm.modelfriend.b localb = com.tencent.mm.modelfriend.ah.zq().hq(username);
-    if ((localb == null) || (ay.kz(bLL))) {
-      localb = com.tencent.mm.modelfriend.ah.zq().hq(aBe);
+    com.tencent.mm.modelfriend.b localb = com.tencent.mm.modelfriend.ah.zD().hI(username);
+    if ((localb == null) || (be.kf(bFf))) {
+      localb = com.tencent.mm.modelfriend.ah.zD().hI(anw);
     }
     for (;;)
     {
-      if ((localb != null) && (!ay.kz(bLL))) {
+      if ((localb != null) && (!be.kf(bFf))) {
         try
         {
-          if (!com.tencent.mm.pluginsdk.g.a.aL(mContext, "android.permission.READ_CONTACTS")) {
-            u.e("!44@/B4Tb64lLpLSOpQlr7qYXTiZp5uLNFEb0T3I5Eq6Cf8=", "no contact permission");
+          if (!com.tencent.mm.pluginsdk.h.a.aK(mContext, "android.permission.READ_CONTACTS")) {
+            v.e("MicroMsg.ContactsOperations", "no contact permission");
           }
         }
         catch (Exception localException)
         {
-          u.printErrStackTrace("!44@/B4Tb64lLpLSOpQlr7qYXTiZp5uLNFEb0T3I5Eq6Cf8=", localException, "", new Object[] { "" });
+          v.printErrStackTrace("MicroMsg.ContactsOperations", localException, "", new Object[] { "" });
         }
       }
       for (;;)
       {
         quit();
         break;
-        Object localObject1 = ContactsContract.RawContacts.CONTENT_URI.buildUpon().appendQueryParameter("account_name", caG.name).appendQueryParameter("account_type", caG.type).build();
+        Object localObject1 = ContactsContract.RawContacts.CONTENT_URI.buildUpon().appendQueryParameter("account_name", bUp.name).appendQueryParameter("account_type", bUp.type).build();
         Object localObject2 = mContext.getContentResolver();
-        String str = "deleted=\"0\" AND sync1=\"" + bLL + "\"";
+        String str = "deleted=\"0\" AND sync1=\"" + bFf + "\"";
         localObject2 = ((ContentResolver)localObject2).query((Uri)localObject1, new String[] { "sync1", "_id" }, str, null, null);
         if ((localObject2 == null) || (((Cursor)localObject2).getCount() == 0)) {
-          if (!ay.kz(localException.yj())) {
+          if (!be.kf(localException.yv())) {
             break label424;
           }
         }
         label424:
-        for (localObject1 = localException.ym();; localObject1 = localException.yj())
+        for (localObject1 = localException.yy();; localObject1 = localException.yv())
         {
-          caH = new a(mContext.getContentResolver());
-          b((String)localObject1, localException.yp(), bLL, username);
-          caH.execute();
+          bUq = new a(mContext.getContentResolver());
+          b((String)localObject1, localException.yB(), bFf, username);
+          bUq.execute();
           if (localObject2 == null) {
             break;
           }
           ((Cursor)localObject2).close();
           break;
         }
-        u.d("!44@/B4Tb64lLpLSOpQlr7qYXTiZp5uLNFEb0T3I5Eq6Cf8=", "query addrupload is null " + username);
+        v.d("MicroMsg.ContactsOperations", "query addrupload is null " + username);
       }
     }
   }
   
   public final class a
   {
-    private final String TAG = "!32@/B4Tb64lLpKVM3BoHNnBHzbUE4f2XdPA";
-    private final ContentResolver caJ;
-    ArrayList caK;
+    private final String TAG = "MicroMsg.BatchOperation";
+    private final ContentResolver bUs;
+    ArrayList<ContentProviderOperation> bUt;
     
     public a(ContentResolver paramContentResolver)
     {
-      caJ = paramContentResolver;
-      caK = new ArrayList();
+      bUs = paramContentResolver;
+      bUt = new ArrayList();
     }
     
     public final void a(ContentProviderOperation paramContentProviderOperation)
     {
-      caK.add(paramContentProviderOperation);
+      bUt.add(paramContentProviderOperation);
     }
     
     public final void execute()
     {
-      if (caK.size() == 0)
+      if (bUt.size() == 0)
       {
-        u.d("!32@/B4Tb64lLpKVM3BoHNnBHzbUE4f2XdPA", "no batch operation");
+        v.d("MicroMsg.BatchOperation", "no batch operation");
         return;
       }
-      if (!com.tencent.mm.pluginsdk.g.a.aL(b.a(b.this), "android.permission.READ_CONTACTS"))
+      if (!com.tencent.mm.pluginsdk.h.a.aK(b.a(b.this), "android.permission.READ_CONTACTS"))
       {
-        u.e("!32@/B4Tb64lLpKVM3BoHNnBHzbUE4f2XdPA", "no contact permission");
+        v.e("MicroMsg.BatchOperation", "no contact permission");
         return;
       }
       try
       {
-        caJ.applyBatch("com.android.contacts", caK);
-        caK.clear();
+        bUs.applyBatch("com.android.contacts", bUt);
+        bUt.clear();
         return;
       }
       catch (OperationApplicationException localOperationApplicationException)
       {
         for (;;)
         {
-          u.e("!32@/B4Tb64lLpKVM3BoHNnBHzbUE4f2XdPA", "apply batch operation failed", new Object[] { localOperationApplicationException.toString() });
+          v.e("MicroMsg.BatchOperation", "apply batch operation failed", new Object[] { localOperationApplicationException.toString() });
         }
       }
       catch (RemoteException localRemoteException)
       {
         for (;;)
         {
-          u.e("!32@/B4Tb64lLpKVM3BoHNnBHzbUE4f2XdPA", "apply batch operation failed", new Object[] { localRemoteException.toString() });
+          v.e("MicroMsg.BatchOperation", "apply batch operation failed", new Object[] { localRemoteException.toString() });
         }
       }
       catch (Exception localException)
       {
         for (;;)
         {
-          u.e("!32@/B4Tb64lLpKVM3BoHNnBHzbUE4f2XdPA", "apply batch operation failed", new Object[] { localException.toString() });
+          v.e("MicroMsg.BatchOperation", "apply batch operation failed", new Object[] { localException.toString() });
         }
       }
     }

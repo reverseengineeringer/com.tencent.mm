@@ -2,17 +2,17 @@ package com.tencent.mm.pluginsdk;
 
 public final class i$ag
 {
-  private static i.ad iyW;
-  public static boolean iyX = false;
+  private static i.ad iVs;
+  public static boolean iVt = false;
   
   public static void a(i.ad paramad)
   {
-    iyW = paramad;
+    iVs = paramad;
   }
   
-  public static i.ad aPc()
+  public static i.ad aTE()
   {
-    return iyW;
+    return iVs;
   }
 }
 

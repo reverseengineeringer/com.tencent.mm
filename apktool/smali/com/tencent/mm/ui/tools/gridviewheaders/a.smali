@@ -4,15 +4,15 @@
 
 
 # static fields
-.field private static lyN:Lcom/tencent/mm/ui/tools/gridviewheaders/a;
+.field private static lZB:Lcom/tencent/mm/ui/tools/gridviewheaders/a;
 
 
 # instance fields
-.field private lyK:J
+.field public lZA:J
 
-.field public lyL:J
+.field private lZy:J
 
-.field public lyM:J
+.field public lZz:J
 
 
 # direct methods
@@ -62,7 +62,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/a;->lyL:J
+    iput-wide v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/a;->lZz:J
 
     .line 48
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
@@ -93,7 +93,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/a;->lyM:J
+    iput-wide v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/a;->lZA:J
 
     .line 57
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
@@ -104,7 +104,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/a;->lyK:J
+    iput-wide v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/a;->lZy:J
 
     .line 59
     return-void
@@ -132,12 +132,12 @@
     return-wide v0
 .end method
 
-.method public static biT()Lcom/tencent/mm/ui/tools/gridviewheaders/a;
+.method public static boQ()Lcom/tencent/mm/ui/tools/gridviewheaders/a;
     .locals 2
 
     .prologue
     .line 29
-    sget-object v0, Lcom/tencent/mm/ui/tools/gridviewheaders/a;->lyN:Lcom/tencent/mm/ui/tools/gridviewheaders/a;
+    sget-object v0, Lcom/tencent/mm/ui/tools/gridviewheaders/a;->lZB:Lcom/tencent/mm/ui/tools/gridviewheaders/a;
 
     if-nez v0, :cond_0
 
@@ -152,7 +152,7 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/a;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/ui/tools/gridviewheaders/a;->lyN:Lcom/tencent/mm/ui/tools/gridviewheaders/a;
+    sput-object v0, Lcom/tencent/mm/ui/tools/gridviewheaders/a;->lZB:Lcom/tencent/mm/ui/tools/gridviewheaders/a;
 
     .line 32
     monitor-exit v1
@@ -161,7 +161,7 @@
 
     .line 34
     :cond_0
-    sget-object v0, Lcom/tencent/mm/ui/tools/gridviewheaders/a;->lyN:Lcom/tencent/mm/ui/tools/gridviewheaders/a;
+    sget-object v0, Lcom/tencent/mm/ui/tools/gridviewheaders/a;->lZB:Lcom/tencent/mm/ui/tools/gridviewheaders/a;
 
     return-object v0
 
@@ -188,14 +188,14 @@
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/a;->lyL:J
+    iget-wide v2, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/a;->lZz:J
 
     cmp-long v0, v0, v2
 
     if-ltz v0, :cond_0
 
     .line 79
-    const v0, 0x7f0b084d
+    const v0, 0x7f081365
 
     invoke-virtual {p2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -211,14 +211,14 @@
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/a;->lyM:J
+    iget-wide v2, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/a;->lZA:J
 
     cmp-long v0, v0, v2
 
     if-ltz v0, :cond_1
 
     .line 81
-    const v0, 0x7f0b084e
+    const v0, 0x7f081364
 
     invoke-virtual {p2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

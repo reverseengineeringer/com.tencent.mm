@@ -6,14 +6,12 @@ import android.os.Looper;
 import android.os.Message;
 import android.view.View;
 import android.widget.ImageView;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.ah;
 import com.tencent.mm.ui.base.o;
-import com.tencent.mm.ui.v;
 
 final class i$2
-  extends aa
+  extends ac
 {
   i$2(i parami, Looper paramLooper)
   {
@@ -22,11 +20,11 @@ final class i$2
   
   public final void handleMessage(Message paramMessage)
   {
-    paramMessage = iMq;
-    if ((aAF == null) || (iMl == null) || (bitmap == null) || (iMm == null) || (iHc == null) || (eOa == null)) {
+    paramMessage = jjn;
+    if ((amO == null) || (jji == null) || (bitmap == null) || (jjj == null) || (jdX == null) || (eVS == null)) {
       return;
     }
-    aAF.setImageBitmap(bitmap);
+    amO.setImageBitmap(bitmap);
     int k;
     int j;
     label79:
@@ -35,23 +33,23 @@ final class i$2
     int n;
     int m;
     Rect localRect;
-    if (iMn)
+    if (jjk)
     {
       k = 83;
-      if (!iMn) {
+      if (!jjk) {
         break label216;
       }
       j = 0;
-      if (iMo == null) {
+      if (jjl == null) {
         break label222;
       }
-      i = iMo.getYFromBottom();
+      i = jjl.aWW();
       n = j;
       m = i;
       if (Build.VERSION.SDK_INT >= 21)
       {
-        localRect = v.bbw();
-        if (!iMn) {
+        localRect = com.tencent.mm.ui.v.bgI();
+        if (!jjk) {
           break label233;
         }
         j = 0;
@@ -60,10 +58,10 @@ final class i$2
     for (;;)
     {
       m = i + bottom;
-      u.i("!44@/B4Tb64lLpKYgkPW7g2h7ZPkZDASCTQgMn5vbr5V3XA=", "recent bubble navbar height %s %s", new Object[] { Integer.valueOf(right), Integer.valueOf(bottom) });
+      com.tencent.mm.sdk.platformtools.v.i("MicroMsg.RecentImageBubble", "recent bubble navbar height %s %s", new Object[] { Integer.valueOf(right), Integer.valueOf(bottom) });
       n = j;
-      iMm.showAtLocation(iHc, k, n, m);
-      new af(new i.4(paramMessage), false).ds(10000L);
+      jjj.showAtLocation(jdX, k, n, m);
+      new ah(new i.4(paramMessage), false).dJ(10000L);
       return;
       k = 85;
       break;
@@ -71,7 +69,7 @@ final class i$2
       j = 10;
       break label79;
       label222:
-      i = eOa.getHeight();
+      i = eVS.getHeight();
       break label96;
       label233:
       j += right;

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ltv:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
+.field final synthetic lUw:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 43
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI$1;->ltv:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI$1;->lUw:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 46
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI$1;->ltv:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI$1;->lUw:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;->a(Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;)V
 

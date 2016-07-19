@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingLeft="20.0dip" android:paddingRight="20.0dip" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:id="@id/jd" android:layout_marginTop="20.0dip" android:hint="@string/jb" style="@style/MMLineEditPass" />
+    <EditText android:id="@id/k6" android:layout_marginTop="20.0dip" android:hint="@string/jc" style="@style/MMLineEditPass" />
+    <Button android:id="@id/jz" android:layout_marginTop="20.0dip" android:text="@string/kx" style="@style/MMSolidGreenLargeButton" />
+</LinearLayout>

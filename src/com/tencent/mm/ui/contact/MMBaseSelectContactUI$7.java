@@ -2,7 +2,7 @@ package com.tencent.mm.ui.contact;
 
 import com.tencent.mm.pluginsdk.i.a;
 import com.tencent.mm.pluginsdk.i.e;
-import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.ad;
 
 final class MMBaseSelectContactUI$7
   implements Runnable
@@ -11,13 +11,13 @@ final class MMBaseSelectContactUI$7
   
   public final void run()
   {
-    MMBaseSelectContactUI.a(lle, i.a.aOW().aeA());
-    MMBaseSelectContactUI.j(lle);
-    ab.j(new Runnable()
+    MMBaseSelectContactUI.a(lLr, i.a.aTy().ahe());
+    MMBaseSelectContactUI.j(lLr);
+    ad.k(new Runnable()
     {
       public final void run()
       {
-        MMBaseSelectContactUI.k(lle);
+        MMBaseSelectContactUI.k(lLr);
       }
     });
   }

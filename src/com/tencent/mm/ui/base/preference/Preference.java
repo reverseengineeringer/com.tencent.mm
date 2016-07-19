@@ -19,32 +19,32 @@ import com.tencent.mm.ui.p;
 import java.util.List;
 
 public class Preference
-  implements Comparable
+  implements Comparable<Preference>
 {
-  public int cXo = -1;
-  public String cln;
-  private boolean euc = true;
-  private int[] fn = { 2130771990, 2130772052 };
-  private CharSequence fyV;
-  private a kMh;
-  private int kMi = Integer.MAX_VALUE;
-  private int kMj;
-  private int kMk;
-  private String kMl;
-  boolean kMm = true;
-  private boolean kMn;
-  public boolean kMo = true;
-  String kMp;
-  private Object kMq;
-  private boolean kMr = true;
-  private boolean kMs = true;
-  int kMt = 2131363286;
-  int kMu;
-  private boolean kMv = false;
-  private List kMw;
-  private CharSequence km;
-  public int kr;
-  public Drawable kv;
+  public int cVM = -1;
+  public String cgq;
+  private boolean eAu = true;
+  private CharSequence fHZ;
+  private int[] fJ = { 2130772035, 2130772027 };
+  private CharSequence kD;
+  public int kI;
+  public Drawable kM;
+  private String llA;
+  boolean llB = true;
+  private boolean llC;
+  public boolean llD = true;
+  String llE;
+  private Object llF;
+  private boolean llG = true;
+  private boolean llH = true;
+  int llI = 2130903981;
+  int llJ;
+  private boolean llK = false;
+  private List<Preference> llL;
+  private a llw;
+  private int llx = Integer.MAX_VALUE;
+  private int lly;
+  private int llz;
   public final Context mContext;
   
   public Preference(Context paramContext)
@@ -60,13 +60,13 @@ public class Preference
   public Preference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     mContext = paramContext;
-    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.Preference, paramInt, 0);
+    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.WS, paramInt, 0);
     paramInt = paramAttributeSet.getIndexCount();
     if (paramInt >= 0)
     {
       int i = paramAttributeSet.getIndex(paramInt);
       if (i == 6) {
-        kr = paramAttributeSet.getResourceId(i, 0);
+        kI = paramAttributeSet.getResourceId(i, 0);
       }
       for (;;)
       {
@@ -74,73 +74,73 @@ public class Preference
         break;
         if (i == 7)
         {
-          cln = paramAttributeSet.getString(i);
-        }
-        else if (i == 0)
-        {
-          kMj = paramAttributeSet.getResourceId(i, 0);
-          km = paramAttributeSet.getString(i);
-          if (kMj != 0) {
-            km = paramContext.getString(kMj);
-          }
+          cgq = paramAttributeSet.getString(i);
         }
         else if (i == 5)
         {
-          fyV = paramAttributeSet.getString(i);
-          kMk = paramAttributeSet.getResourceId(i, 0);
-          if (kMk != 0) {
-            fyV = paramContext.getString(kMk);
+          lly = paramAttributeSet.getResourceId(i, 0);
+          kD = paramAttributeSet.getString(i);
+          if (lly != 0) {
+            kD = paramContext.getString(lly);
+          }
+        }
+        else if (i == 4)
+        {
+          fHZ = paramAttributeSet.getString(i);
+          llz = paramAttributeSet.getResourceId(i, 0);
+          if (llz != 0) {
+            fHZ = paramContext.getString(llz);
           }
         }
         else if (i == 8)
         {
-          kMi = paramAttributeSet.getInt(i, kMi);
-        }
-        else if (i == 2)
-        {
-          kMl = paramAttributeSet.getString(i);
-        }
-        else if (i == 3)
-        {
-          kMt = paramAttributeSet.getResourceId(i, kMt);
-        }
-        else if (i == 9)
-        {
-          kMu = paramAttributeSet.getResourceId(i, kMu);
+          llx = paramAttributeSet.getInt(i, llx);
         }
         else if (i == 1)
         {
-          euc = paramAttributeSet.getBoolean(i, true);
+          llA = paramAttributeSet.getString(i);
+        }
+        else if (i == 2)
+        {
+          llI = paramAttributeSet.getResourceId(i, llI);
+        }
+        else if (i == 9)
+        {
+          llJ = paramAttributeSet.getResourceId(i, llJ);
+        }
+        else if (i == 0)
+        {
+          eAu = paramAttributeSet.getBoolean(i, true);
         }
         else if (i == 10)
         {
-          kMm = paramAttributeSet.getBoolean(i, true);
+          llB = paramAttributeSet.getBoolean(i, true);
         }
-        else if (i == 4)
+        else if (i == 3)
         {
-          kMo = paramAttributeSet.getBoolean(i, kMo);
+          llD = paramAttributeSet.getBoolean(i, llD);
         }
         else if (i == 11)
         {
-          kMp = paramAttributeSet.getString(i);
+          llE = paramAttributeSet.getString(i);
         }
         else if (i == 12)
         {
-          kMq = null;
+          llF = null;
         }
         else if (i == 13)
         {
-          kMs = paramAttributeSet.getBoolean(i, kMs);
+          llH = paramAttributeSet.getBoolean(i, llH);
         }
       }
     }
     paramAttributeSet.recycle();
     if (!getClass().getName().startsWith("android.preference")) {
-      kMv = true;
+      llK = true;
     }
   }
   
-  private void d(View paramView, boolean paramBoolean)
+  private void e(View paramView, boolean paramBoolean)
   {
     paramView.setEnabled(paramBoolean);
     if ((paramView instanceof ViewGroup))
@@ -149,7 +149,7 @@ public class Preference
       int i = paramView.getChildCount() - 1;
       while (i >= 0)
       {
-        d(paramView.getChildAt(i), paramBoolean);
+        e(paramView.getChildAt(i), paramBoolean);
         i -= 1;
       }
     }
@@ -157,7 +157,7 @@ public class Preference
   
   private void notifyDependencyChange(boolean paramBoolean)
   {
-    List localList = kMw;
+    List localList = llL;
     if (localList == null) {
       return;
     }
@@ -168,7 +168,7 @@ public class Preference
     if (i < j)
     {
       localPreference = (Preference)localList.get(i);
-      if (kMr == paramBoolean) {
+      if (llG == paramBoolean) {
         if (paramBoolean) {
           break label85;
         }
@@ -177,7 +177,7 @@ public class Preference
     label85:
     for (boolean bool = true;; bool = false)
     {
-      kMr = bool;
+      llG = bool;
       localPreference.notifyDependencyChange(localPreference.shouldDisableDependents());
       localPreference.notifyChanged();
       i += 1;
@@ -193,25 +193,25 @@ public class Preference
   
   public void a(a parama)
   {
-    kMh = parama;
+    llw = parama;
   }
   
   public final boolean callChangeListener(Object paramObject)
   {
-    if (kMh == null) {
+    if (llw == null) {
       return true;
     }
-    return kMh.a(this, paramObject);
+    return llw.a(this, paramObject);
   }
   
   public CharSequence getSummary()
   {
-    return fyV;
+    return fHZ;
   }
   
   public CharSequence getTitle()
   {
-    return km;
+    return kD;
   }
   
   public View getView(View paramView, ViewGroup paramViewGroup)
@@ -226,7 +226,7 @@ public class Preference
   
   public final boolean isEnabled()
   {
-    return (euc) && (kMr);
+    return (eAu) && (llG);
   }
   
   public void notifyChanged() {}
@@ -248,31 +248,31 @@ public class Preference
         ((TextView)localObject).setVisibility(0);
       }
       ((TextView)localObject).setText(getSummary());
-      if (cXo != -1) {
-        ((TextView)localObject).setTextColor(cXo);
+      if (cVM != -1) {
+        ((TextView)localObject).setTextColor(cVM);
       }
     }
     localObject = (ImageView)paramView.findViewById(16908294);
     if (localObject != null)
     {
-      if ((kr != 0) || (kv != null))
+      if ((kI != 0) || (kM != null))
       {
-        if (kv == null) {
-          kv = mContext.getResources().getDrawable(kr);
+        if (kM == null) {
+          kM = mContext.getResources().getDrawable(kI);
         }
-        if (kv != null) {
-          ((ImageView)localObject).setImageDrawable(kv);
+        if (kM != null) {
+          ((ImageView)localObject).setImageDrawable(kM);
         }
       }
-      if (kv == null) {
+      if (kM == null) {
         break label201;
       }
     }
     for (;;)
     {
       ((ImageView)localObject).setVisibility(i);
-      if (kMs) {
-        d(paramView, isEnabled());
+      if (llH) {
+        e(paramView, isEnabled());
       }
       return;
       label183:
@@ -288,13 +288,13 @@ public class Preference
   
   public View onCreateView(ViewGroup paramViewGroup)
   {
-    LayoutInflater localLayoutInflater = p.ee(mContext);
-    paramViewGroup = localLayoutInflater.inflate(kMt, paramViewGroup, false);
+    LayoutInflater localLayoutInflater = p.ef(mContext);
+    paramViewGroup = localLayoutInflater.inflate(llI, paramViewGroup, false);
     ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(16908312);
     if (localViewGroup != null)
     {
-      if (kMu != 0) {
-        localLayoutInflater.inflate(kMu, localViewGroup);
+      if (llJ != 0) {
+        localLayoutInflater.inflate(llJ, localViewGroup);
       }
     }
     else {
@@ -306,9 +306,9 @@ public class Preference
   
   public final void setEnabled(boolean paramBoolean)
   {
-    if (euc != paramBoolean)
+    if (eAu != paramBoolean)
     {
-      euc = paramBoolean;
+      eAu = paramBoolean;
       notifyDependencyChange(shouldDisableDependents());
       notifyChanged();
     }
@@ -316,22 +316,22 @@ public class Preference
   
   public final void setKey(String paramString)
   {
-    cln = paramString;
-    if (kMn)
+    cgq = paramString;
+    if (llC)
     {
       int i;
-      if (!TextUtils.isEmpty(cln)) {
+      if (!TextUtils.isEmpty(cgq)) {
         i = 1;
       }
       while (i == 0) {
-        if (cln == null)
+        if (cgq == null)
         {
           throw new IllegalStateException("Preference does not have a key assigned.");
           i = 0;
         }
         else
         {
-          kMn = true;
+          llC = true;
         }
       }
     }
@@ -339,17 +339,17 @@ public class Preference
   
   public final void setLayoutResource(int paramInt)
   {
-    if (paramInt != kMt) {
-      kMv = true;
+    if (paramInt != llI) {
+      llK = true;
     }
-    kMt = paramInt;
+    llI = paramInt;
   }
   
   public final void setSelectable(boolean paramBoolean)
   {
-    if (kMm != paramBoolean)
+    if (llB != paramBoolean)
     {
-      kMm = paramBoolean;
+      llB = paramBoolean;
       notifyChanged();
     }
   }
@@ -361,9 +361,9 @@ public class Preference
   
   public void setSummary(CharSequence paramCharSequence)
   {
-    if (((paramCharSequence == null) && (fyV != null)) || ((paramCharSequence != null) && (!paramCharSequence.equals(fyV))))
+    if (((paramCharSequence == null) && (fHZ != null)) || ((paramCharSequence != null) && (!paramCharSequence.equals(fHZ))))
     {
-      fyV = paramCharSequence;
+      fHZ = paramCharSequence;
       notifyChanged();
     }
   }
@@ -371,25 +371,25 @@ public class Preference
   public void setTitle(int paramInt)
   {
     setTitle(mContext.getString(paramInt));
-    kMj = paramInt;
+    lly = paramInt;
   }
   
   public void setTitle(CharSequence paramCharSequence)
   {
-    if (((paramCharSequence == null) && (km != null)) || ((paramCharSequence != null) && (!paramCharSequence.equals(km))))
+    if (((paramCharSequence == null) && (kD != null)) || ((paramCharSequence != null) && (!paramCharSequence.equals(kD))))
     {
-      kMj = 0;
-      km = paramCharSequence;
+      lly = 0;
+      kD = paramCharSequence;
       notifyChanged();
     }
   }
   
   public final void setWidgetLayoutResource(int paramInt)
   {
-    if (paramInt != kMu) {
-      kMv = true;
+    if (paramInt != llJ) {
+      llK = true;
     }
-    kMu = paramInt;
+    llJ = paramInt;
   }
   
   public String toString()
@@ -412,7 +412,7 @@ public class Preference
   public static class BaseSavedState
     extends AbsSavedState
   {
-    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+    public static final Parcelable.Creator<BaseSavedState> CREATOR = new Parcelable.Creator() {};
     
     public BaseSavedState(Parcel paramParcel)
     {

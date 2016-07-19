@@ -1,67 +1,104 @@
 package com.tencent.mm.s;
 
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b.us;
-import com.tencent.mm.protocal.b.ut;
-import com.tencent.mm.q.a;
-import com.tencent.mm.q.a.a;
-import com.tencent.mm.q.a.b;
-import com.tencent.mm.q.a.c;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.sdk.platformtools.t;
+import android.database.Cursor;
+import com.tencent.mm.bc.g;
+import com.tencent.mm.model.c;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.v;
+import java.util.ArrayList;
+import java.util.List;
 
 public final class m
-  extends j
-  implements r
 {
-  private d apI;
-  public a apJ;
-  public String bwo;
+  private static List<String> bxV = null;
+  private static int bxW = 0;
+  private static a bxX = new a(new b());
   
-  public m(String paramString1, String paramString2)
+  public static void c(Runnable paramRunnable)
   {
-    Object localObject = new a.a();
-    bsW = new us();
-    bsX = new ut();
-    uri = "/cgi-bin/mmkf-bin/kfgetbindlist";
-    bsV = 674;
-    bsY = 0;
-    bsZ = 0;
-    apJ = ((a.a)localObject).vh();
-    localObject = (us)apJ.bsT.btb;
-    hDH = paramString1;
-    hDI = paramString2;
-    bwo = paramString1;
-  }
-  
-  public final int a(com.tencent.mm.network.m paramm, d paramd)
-  {
-    apI = paramd;
-    t.i("!44@/B4Tb64lLpK+IBX8XDgnvuYrpYU0uKs5lXB8DVMKuyE=", "do scene");
-    return a(paramm, apJ, this);
-  }
-  
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
-  {
-    t.i("!44@/B4Tb64lLpK+IBX8XDgnvuYrpYU0uKs5lXB8DVMKuyE=", "onGYNetEnd code(%d, %d)", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3) });
-    if (apI != null) {
-      apI.a(paramInt2, paramInt3, paramString, this);
+    ArrayList localArrayList = null;
+    if (!com.tencent.mm.model.ah.rg()) {
+      return;
+    }
+    Cursor localCursor = vubvG.rawQuery("select username from img_flag where username not in (select username from rcontact ) and username not like \"%@qqim\" and username not like \"%@bottle\";", null);
+    int j = localCursor.getCount();
+    if (j == 0) {
+      localCursor.close();
+    }
+    for (;;)
+    {
+      bxV = localArrayList;
+      if ((localArrayList == null) || (bxV.size() <= 0)) {
+        break;
+      }
+      bxXbxY.bxZ = paramRunnable;
+      bxX.dJ(10L);
+      return;
+      localArrayList = new ArrayList();
+      localCursor.moveToFirst();
+      int i = 0;
+      while (i < j)
+      {
+        localCursor.moveToPosition(i);
+        localArrayList.add(localCursor.getString(0));
+        i += 1;
+      }
+      localCursor.close();
     }
   }
   
-  public final int getType()
+  public static void vo()
   {
-    return 674;
+    bxW = 0;
+    bxX.aZJ();
   }
   
-  public final ut wO()
+  static final class a
+    extends com.tencent.mm.sdk.platformtools.ah
   {
-    if ((apJ != null) && (apJ.bsU.btb != null)) {
-      return (ut)apJ.bsU.btb;
+    final m.b bxY;
+    
+    public a(m.b paramb)
+    {
+      super(true);
+      bxY = paramb;
     }
-    return null;
+  }
+  
+  static final class b
+    implements ah.a
+  {
+    Runnable bxZ;
+    
+    public final boolean jK()
+    {
+      int j = m.vp().size();
+      v.e("MicroMsg.RemoveAvatarTask", "RemoveOldAvatar left count:" + j);
+      if ((j <= 2000) || (m.vq() >= 300))
+      {
+        if (bxZ != null) {
+          bxZ.run();
+        }
+        m.vr();
+        return false;
+      }
+      long l = tEbsy.dY(Thread.currentThread().getId());
+      int i = j - 1;
+      while (i >= j - 30)
+      {
+        m.vs();
+        String str = (String)m.vp().get(i);
+        m.vp().remove(i);
+        n.vd();
+        d.o(str, false);
+        n.vd();
+        d.o(str, true);
+        n.vu().gr(str);
+        i -= 1;
+      }
+      tEbsy.dZ(l);
+      return true;
+    }
   }
 }
 

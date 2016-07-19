@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gvp:I
+.field final synthetic imL:I
 
 .field final synthetic val$context:Landroid/content/Context;
 
@@ -29,7 +29,7 @@
 
     .prologue
     .line 50
-    iput p1, p0, Lcom/tencent/mm/ui/account/e$1;->gvp:I
+    iput p1, p0, Lcom/tencent/mm/ui/account/e$1;->imL:I
 
     iput-object p2, p0, Lcom/tencent/mm/ui/account/e$1;->val$context:Landroid/content/Context;
 
@@ -45,7 +45,7 @@
 
     .prologue
     .line 54
-    iget v0, p0, Lcom/tencent/mm/ui/account/e$1;->gvp:I
+    iget v0, p0, Lcom/tencent/mm/ui/account/e$1;->imL:I
 
     and-int/lit8 v0, v0, 0x1
 
@@ -56,7 +56,7 @@
 
     iget-object v1, p0, Lcom/tencent/mm/ui/account/e$1;->val$context:Landroid/content/Context;
 
-    const v2, 0x7f0b01a0
+    const v2, 0x7f080e2a
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -66,7 +66,7 @@
 
     .line 57
     :cond_0
-    iget v0, p0, Lcom/tencent/mm/ui/account/e$1;->gvp:I
+    iget v0, p0, Lcom/tencent/mm/ui/account/e$1;->imL:I
 
     and-int/lit8 v0, v0, 0x2
 
@@ -77,7 +77,7 @@
 
     iget-object v1, p0, Lcom/tencent/mm/ui/account/e$1;->val$context:Landroid/content/Context;
 
-    const v2, 0x7f0b01a2
+    const v2, 0x7f080e2b
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -87,7 +87,7 @@
 
     .line 60
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/ui/account/e$1;->gvp:I
+    iget v0, p0, Lcom/tencent/mm/ui/account/e$1;->imL:I
 
     and-int/lit8 v0, v0, 0x4
 
@@ -98,7 +98,7 @@
 
     iget-object v1, p0, Lcom/tencent/mm/ui/account/e$1;->val$context:Landroid/content/Context;
 
-    const v2, 0x7f0b01a1
+    const v2, 0x7f080e29
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -108,7 +108,7 @@
 
     .line 63
     :cond_2
-    iget v0, p0, Lcom/tencent/mm/ui/account/e$1;->gvp:I
+    iget v0, p0, Lcom/tencent/mm/ui/account/e$1;->imL:I
 
     and-int/lit8 v0, v0, 0x8
 
@@ -119,7 +119,7 @@
 
     iget-object v1, p0, Lcom/tencent/mm/ui/account/e$1;->val$context:Landroid/content/Context;
 
-    const v2, 0x7f0b0375
+    const v2, 0x7f080b00
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

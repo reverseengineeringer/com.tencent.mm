@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/support/v4/app/v$i;
+.implements Landroid/support/v4/app/v$h;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final dJ:Z
+.field final dZ:Z
 
 .field final id:I
 
@@ -32,26 +32,26 @@
     .locals 1
 
     .prologue
-    .line 602
+    .line 597
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 603
+    .line 598
     iput-object p1, p0, Landroid/support/v4/app/v$a;->packageName:Ljava/lang/String;
 
-    .line 604
+    .line 599
     iput p2, p0, Landroid/support/v4/app/v$a;->id:I
 
-    .line 605
+    .line 600
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/support/v4/app/v$a;->tag:Ljava/lang/String;
 
-    .line 606
+    .line 601
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroid/support/v4/app/v$a;->dJ:Z
+    iput-boolean v0, p0, Landroid/support/v4/app/v$a;->dZ:Z
 
-    .line 607
+    .line 602
     return-void
 .end method
 
@@ -61,21 +61,21 @@
     .locals 3
 
     .prologue
-    .line 611
-    iget-boolean v0, p0, Landroid/support/v4/app/v$a;->dJ:Z
+    .line 606
+    iget-boolean v0, p0, Landroid/support/v4/app/v$a;->dZ:Z
 
     if-eqz v0, :cond_0
 
-    .line 612
+    .line 607
     iget-object v0, p0, Landroid/support/v4/app/v$a;->packageName:Ljava/lang/String;
 
     invoke-interface {p1, v0}, Landroid/support/v4/app/i;->i(Ljava/lang/String;)V
 
-    .line 616
+    .line 611
     :goto_0
     return-void
 
-    .line 614
+    .line 609
     :cond_0
     iget-object v0, p0, Landroid/support/v4/app/v$a;->packageName:Ljava/lang/String;
 
@@ -83,7 +83,7 @@
 
     iget-object v2, p0, Landroid/support/v4/app/v$a;->tag:Ljava/lang/String;
 
-    invoke-interface {p1, v0, v1, v2}, Landroid/support/v4/app/i;->b(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-interface {p1, v0, v1, v2}, Landroid/support/v4/app/i;->a(Ljava/lang/String;ILjava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -92,14 +92,14 @@
     .locals 3
 
     .prologue
-    .line 619
+    .line 614
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "CancelTask["
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 620
+    .line 615
     const-string/jumbo v1, "packageName:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -110,7 +110,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 621
+    .line 616
     const-string/jumbo v1, ", id:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -121,7 +121,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 622
+    .line 617
     const-string/jumbo v1, ", tag:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -132,23 +132,23 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 623
+    .line 618
     const-string/jumbo v1, ", all:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    iget-boolean v2, p0, Landroid/support/v4/app/v$a;->dJ:Z
+    iget-boolean v2, p0, Landroid/support/v4/app/v$a;->dZ:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 624
+    .line 619
     const-string/jumbo v1, "]"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 625
+    .line 620
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/a7h" android:background="@color/l6" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/PopupBgWithoutShadow">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/hi" android:paddingTop="@dimen/hi" android:paddingRight="@dimen/hi" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/dx" android:id="@id/a7l" android:layout_marginBottom="@dimen/hb" android:text="hello" style="@style/ConfirmDialogTitle" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/hb">
+                <com.tencent.mm.ui.MMImageView android:id="@id/a7e" android:layout_width="@dimen/hz" android:layout_height="@dimen/hz" android:src="@drawable/xr" style="@style/ConfirmDialogThumb" />
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.tencent.mm.ui.base.NoMeasuredTextView android:textColor="@color/j_" android:ellipsize="end" android:gravity="left" android:id="@id/a7f" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j8" android:layout_marginTop="0.0dip" android:layout_marginRight="0.0dip" android:text="message" android:singleLine="true" style="@style/ConfirmDialogTitle" />
+                    <TextView android:textSize="@dimen/h4" android:id="@id/a7r" android:layout_marginLeft="@dimen/j8" android:layout_marginTop="@dimen/cp" style="@style/ConfirmDialogMessage" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <include layout="@layout/confirm_dialog_footer_btn" />
+    </LinearLayout>
+</LinearLayout>

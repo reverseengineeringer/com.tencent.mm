@@ -8,22 +8,20 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 3
+    .locals 2
 
     .prologue
     .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 14
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "UpdateWeChat"
+    new-instance v1, Lcom/tencent/mm/sandbox/updater/g;
 
-    new-instance v2, Lcom/tencent/mm/sandbox/updater/g;
+    invoke-direct {v1}, Lcom/tencent/mm/sandbox/updater/g;-><init>()V
 
-    invoke-direct {v2}, Lcom/tencent/mm/sandbox/updater/g;-><init>()V
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->d(Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 15
     return-void

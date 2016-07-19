@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field kqE:Landroid/nfc/NfcAdapter;
+.field final synthetic kPA:Lcom/tencent/mm/ui/MMFragmentActivity;
 
-.field kqF:[Landroid/content/IntentFilter;
+.field kPJ:Landroid/nfc/NfcAdapter;
 
-.field kqG:[[Ljava/lang/String;
+.field kPK:[Landroid/content/IntentFilter;
 
-.field final synthetic kqv:Lcom/tencent/mm/ui/MMFragmentActivity;
+.field kPL:[[Ljava/lang/String;
 
-.field mPendingIntent:Landroid/app/PendingIntent;
+.field xZ:Landroid/app/PendingIntent;
 
 
 # direct methods
@@ -31,8 +31,8 @@
     .locals 0
 
     .prologue
-    .line 575
-    iput-object p1, p0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kqv:Lcom/tencent/mm/ui/MMFragmentActivity;
+    .line 596
+    iput-object p1, p0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kPA:Lcom/tencent/mm/ui/MMFragmentActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
     .locals 0
 
     .prologue
-    .line 575
+    .line 596
     invoke-direct {p0, p1}, Lcom/tencent/mm/ui/MMFragmentActivity$b;-><init>(Lcom/tencent/mm/ui/MMFragmentActivity;)V
 
     return-void

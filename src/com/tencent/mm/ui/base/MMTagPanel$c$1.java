@@ -9,7 +9,7 @@ final class MMTagPanel$c$1
   
   public final void run()
   {
-    MMTagPanel.e(kHA.kHq).f(MMTagPanel.h(kHA.kHq), i.ai(MMTagPanel.c.a(kHA), ""));
+    MMTagPanel.e(lgC.lgs).e(MMTagPanel.h(lgC.lgs), i.as(MMTagPanel.c.a(lgC), ""));
   }
 }
 

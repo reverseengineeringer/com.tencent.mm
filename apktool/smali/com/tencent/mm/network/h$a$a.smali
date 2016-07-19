@@ -38,7 +38,7 @@
 
 
 # virtual methods
-.method public final EM()I
+.method public final Fh()I
     .locals 5
 
     .prologue
@@ -98,7 +98,7 @@
     throw v0
 .end method
 
-.method public final EN()V
+.method public final Fi()V
     .locals 5
 
     .prologue
@@ -153,8 +153,8 @@
     throw v0
 .end method
 
-.method public final EO()J
-    .locals 5
+.method public final Fj()J
+    .locals 6
 
     .prologue
     .line 177
@@ -190,7 +190,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-wide v3
+    move-result-wide v4
 
     .line 187
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
@@ -199,7 +199,7 @@
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     .line 190
-    return-wide v3
+    return-wide v4
 
     .line 187
     :catchall_0

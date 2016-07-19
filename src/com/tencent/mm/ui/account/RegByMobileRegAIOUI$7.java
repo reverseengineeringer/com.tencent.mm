@@ -12,7 +12,7 @@ final class RegByMobileRegAIOUI$7
   
   public final void onClick(View paramView)
   {
-    a.cob.g(kuT);
+    a.cjp.c(kUa);
   }
 }
 

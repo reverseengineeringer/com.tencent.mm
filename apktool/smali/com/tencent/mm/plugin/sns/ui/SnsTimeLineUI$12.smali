@@ -13,9 +13,18 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/oa;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+.field final synthetic hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
 
 # direct methods
@@ -23,50 +32,44 @@
     .locals 1
 
     .prologue
-    .line 182
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$12;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+    .line 204
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$12;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/oa;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$12;->kum:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 2
 
     .prologue
-    .line 185
-    const-string/jumbo v0, "!32@/B4Tb64lLpIApwzsVfw/GSpHowATRrWf"
+    .line 204
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$12;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
-    const-string/jumbo v1, "shakeLuckyTriggerQueryPushTipsListener: query has push tips"
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->pT()Lcom/tencent/mm/kiss/app/Interactor;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
-    .line 186
-    new-instance v0, Lcom/tencent/mm/d/a/le;
+    const/4 v1, 0x1
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/le;-><init>()V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/kiss/app/Interactor;->request(I)V
 
-    .line 187
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
-
-    .line 188
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$12;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
-
-    iget-object v0, v0, Lcom/tencent/mm/d/a/le;->aHF:Lcom/tencent/mm/d/a/le$a;
-
-    iget-object v0, v0, Lcom/tencent/mm/d/a/le$a;->aHG:Ljava/lang/String;
-
-    invoke-static {v1, v0}, Lcom/tencent/mm/pluginsdk/ui/j;->aO(Landroid/content/Context;Ljava/lang/String;)V
-
-    .line 189
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     return v0
 .end method

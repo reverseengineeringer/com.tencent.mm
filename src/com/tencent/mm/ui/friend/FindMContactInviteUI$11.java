@@ -11,7 +11,7 @@ final class FindMContactInviteUI$11
   
   public final void onClick(View paramView)
   {
-    BackwardSupportUtil.c.a(FindMContactInviteUI.i(lrv));
+    BackwardSupportUtil.c.a(FindMContactInviteUI.i(lRZ));
   }
 }
 

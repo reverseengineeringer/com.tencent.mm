@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+.field final synthetic kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 332
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$4;->kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$4;->kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,19 +41,19 @@
 
     .prologue
     .line 336
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$4;->kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$4;->kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/account/RegByEmailUI;->finish()V
 
     .line 337
     const-string/jumbo v0, "L2_signup"
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kC(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->ll(Ljava/lang/String;)V
 
     .line 338
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$4;->kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$4;->kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
     const-class v2, Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
@@ -62,7 +62,7 @@
     .line 339
     const-string/jumbo v1, "email_address"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$4;->kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$4;->kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/account/RegByEmailUI;->g(Lcom/tencent/mm/ui/account/RegByEmailUI;)Ljava/lang/String;
 
@@ -71,7 +71,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 340
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$4;->kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$4;->kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/account/RegByEmailUI;->startActivity(Landroid/content/Intent;)V
 

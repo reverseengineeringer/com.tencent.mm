@@ -4,7 +4,7 @@ import com.tencent.mm.model.ah;
 import com.tencent.mm.model.as;
 import com.tencent.mm.model.as.a;
 import com.tencent.mm.network.e;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 
 final class WelcomeSelectView$4
   implements Runnable
@@ -13,10 +13,10 @@ final class WelcomeSelectView$4
   
   public final void run()
   {
-    ah.tE().d(new as(new as.a()
+    ah.tF().a(new as(new as.a()
     {
       public final void a(e paramAnonymouse) {}
-    }, "launch normal"));
+    }, "launch normal"), 0);
   }
 }
 

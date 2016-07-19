@@ -14,7 +14,7 @@ final class DisasterUI$1
   {
     paramView = new Intent("android.intent.action.VIEW");
     paramView.setData(Uri.parse(val$url));
-    lvn.startActivity(paramView);
+    lWp.startActivity(paramView);
   }
 }
 

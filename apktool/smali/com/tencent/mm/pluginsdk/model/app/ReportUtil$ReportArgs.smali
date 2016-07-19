@@ -19,16 +19,25 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public cAU:Ljava/lang/String;
+.field public cxP:Ljava/lang/String;
 
-.field public cAX:Ljava/lang/String;
+.field public cxS:Ljava/lang/String;
 
 .field public errCode:I
 
-.field public iBD:Ljava/lang/String;
+.field public iYn:Ljava/lang/String;
 
 
 # direct methods
@@ -68,7 +77,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cAX:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cxS:Ljava/lang/String;
 
     .line 49
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -82,14 +91,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->iBD:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->iYn:Ljava/lang/String;
 
     .line 51
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cAU:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cxP:Ljava/lang/String;
 
     .line 52
     return-void
@@ -122,7 +131,7 @@
 
     .prologue
     .line 27
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cAX:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cxS:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
@@ -132,12 +141,12 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 29
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->iBD:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->iYn:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 30
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cAU:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cxP:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

@@ -6,7 +6,17 @@
 # static fields
 .field private static CHARSET:Ljava/lang/String;
 
-.field private static final meq:Ljava/util/Map;
+.field private static final mQu:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -50,7 +60,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lb/a/g/c;->meq:Ljava/util/Map;
+    sput-object v0, Lb/a/g/c;->mQu:Ljava/util/Map;
 
     .line 12
     return-void
@@ -63,7 +73,7 @@
     .line 52
     const-string/jumbo v0, "Cannot decode null object"
 
-    invoke-static {p0, v0}, Lb/a/g/d;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lb/a/g/d;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 55
     :try_start_0
@@ -112,7 +122,7 @@
     .line 28
     const-string/jumbo v0, "Cannot encode null object"
 
-    invoke-static {p0, v0}, Lb/a/g/d;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lb/a/g/d;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 29
     :try_start_0
@@ -125,7 +135,7 @@
     move-result-object v0
 
     .line 38
-    sget-object v1, Lb/a/g/c;->meq:Ljava/util/Map;
+    sget-object v1, Lb/a/g/c;->mQu:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 

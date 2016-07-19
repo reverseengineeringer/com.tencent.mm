@@ -4,11 +4,13 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import com.tencent.mm.ar.c;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.av.c;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.model.h;
 import com.tencent.mm.model.i;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.MMAppMgr;
@@ -21,26 +23,26 @@ final class VoiceSearchResultUI$2
 {
   VoiceSearchResultUI$2(VoiceSearchResultUI paramVoiceSearchResultUI) {}
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
     int i;
     Object localObject;
-    if (!VoiceSearchResultUI.a(lCE))
+    if (!VoiceSearchResultUI.a(mdu))
     {
-      paramAdapterView = com.tencent.mm.plugin.report.service.h.fUJ;
-      paramView = new StringBuilder().append(VoiceSearchResultUI.b(lCE)).append(",").append(VoiceSearchResultUI.c(lCE)).append(",");
-      if (VoiceSearchResultUI.d(lCE) == null)
+      paramAdapterView = g.gdY;
+      paramView = new StringBuilder().append(VoiceSearchResultUI.b(mdu)).append(",").append(VoiceSearchResultUI.c(mdu)).append(",");
+      if (VoiceSearchResultUI.d(mdu) == null)
       {
         i = 0;
-        paramAdapterView.O(10452, i + "," + paramInt);
+        paramAdapterView.X(10452, i + "," + paramInt);
       }
     }
     else
     {
-      localObject = VoiceSearchResultUI.f(lCE).fL(paramInt);
-      paramAdapterView = lCE;
+      localObject = VoiceSearchResultUI.f(mdu).gC(paramInt);
+      paramAdapterView = mdu;
       paramView = field_username;
-      localObject = ((k)localObject).qz();
+      localObject = ((k)localObject).pc();
       if ((paramView != null) && (paramView.length() > 0)) {
         break label146;
       }
@@ -52,10 +54,10 @@ final class VoiceSearchResultUI$2
       do
       {
         return;
-        i = VoiceSearchResultUI.d(lCE).length;
+        i = VoiceSearchResultUI.d(mdu).length;
         break;
-        u.d("!44@/B4Tb64lLpKCGRi+LcyHSL2bHGvRI18mEYwKXSwUqfk=", "dealSelectContact " + paramView);
-        if (asN == 3)
+        v.d("MicroMsg.VoiceSearchResultUI", "dealSelectContact " + paramView);
+        if (aex == 3)
         {
           localObject = new Intent();
           ((Intent)localObject).putExtra("Select_Conv_User", paramView);
@@ -63,20 +65,20 @@ final class VoiceSearchResultUI$2
           paramAdapterView.finish();
           return;
         }
-        if ((asN != 1) && (!i.eJ(paramView)) && (!i.ea(paramView)) && (!i.dn(paramView)) && (!i.dT(paramView)) && (!VoiceSearchResultUI.HN((String)localObject))) {
+        if ((aex != 1) && (!i.eV(paramView)) && (!i.el(paramView)) && (!i.du(paramView)) && (!i.ee(paramView)) && (!VoiceSearchResultUI.Kc((String)localObject))) {
           break label1016;
         }
-        if (asN != 1) {
+        if (aex != 1) {
           break label356;
         }
         localObject = new Intent();
         ((Intent)localObject).putExtra("Contact_User", paramView);
-        if (i.dT(paramView)) {
+        if (i.ee(paramView)) {
           ((Intent)localObject).putExtra("Is_group_card", true);
         }
       } while ((paramView == null) || (paramView.length() <= 0));
       e.a((Intent)localObject, paramView);
-      if (lCD)
+      if (mdt)
       {
         paramAdapterView.a(ChattingUI.class, new Intent().putExtra("Chat_User", paramView).putExtra("finish_direct", true));
         paramAdapterView.finish();
@@ -84,48 +86,48 @@ final class VoiceSearchResultUI$2
       }
       c.c(paramAdapterView, "profile", ".ui.ContactInfoUI", (Intent)localObject);
       return;
-    } while (asN != 2);
-    if (ay.kz(paramView))
+    } while (aex != 2);
+    if (be.kf(paramView))
     {
-      u.e("!44@/B4Tb64lLpKCGRi+LcyHSL2bHGvRI18mEYwKXSwUqfk=", "username is null " + paramView);
+      v.e("MicroMsg.VoiceSearchResultUI", "username is null " + paramView);
       return;
     }
-    if (i.ee(paramView))
+    if (i.eq(paramView))
     {
-      if (com.tencent.mm.model.h.su())
+      if (h.sw())
       {
         paramView = new Intent().putExtra("finish_direct", true);
-        c.c(koJ.kpc, "tmessage", ".ui.TConversationUI", paramView);
+        c.c(kNN.kOg, "tmessage", ".ui.TConversationUI", paramView);
         return;
       }
       c.c(paramAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramView));
       return;
     }
-    if (i.eg(paramView))
+    if (i.es(paramView))
     {
-      if (com.tencent.mm.model.h.sr())
+      if (h.st())
       {
         paramView = new Intent().putExtra("finish_direct", true);
-        c.c(koJ.kpc, "qmessage", ".ui.QConversationUI", paramView);
+        c.c(kNN.kOg, "qmessage", ".ui.QConversationUI", paramView);
         return;
       }
       c.c(paramAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramView));
       return;
     }
-    if (i.ef(paramView))
+    if (i.er(paramView))
     {
       c.c(paramAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramView));
       return;
     }
-    if (i.ek(paramView))
+    if (i.ew(paramView))
     {
       MMAppMgr.cancelNotification(paramView);
       c.c(paramAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramView));
       return;
     }
-    if (i.ec(paramView))
+    if (i.eo(paramView))
     {
-      if (com.tencent.mm.model.h.sD())
+      if (h.sF())
       {
         paramAdapterView.a(ChattingUI.class, new Intent().putExtra("Chat_User", paramView).putExtra("finish_direct", true));
         return;
@@ -133,9 +135,9 @@ final class VoiceSearchResultUI$2
       c.c(paramAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramView));
       return;
     }
-    if (i.ep(paramView))
+    if (i.eB(paramView))
     {
-      if (com.tencent.mm.model.h.sy())
+      if (h.sA())
       {
         paramView = new Intent();
         paramView.putExtra("type", 20);
@@ -145,9 +147,9 @@ final class VoiceSearchResultUI$2
       c.c(paramAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramView));
       return;
     }
-    if (i.ex(paramView))
+    if (i.eJ(paramView))
     {
-      if (com.tencent.mm.model.h.sz())
+      if (h.sB())
       {
         paramView = new Intent();
         paramView.putExtra("type", 11);
@@ -157,14 +159,14 @@ final class VoiceSearchResultUI$2
       c.c(paramAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramView));
       return;
     }
-    if (i.eh(paramView))
+    if (i.et(paramView))
     {
       c.c(paramAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramView));
       return;
     }
-    if (i.ei(paramView))
+    if (i.eu(paramView))
     {
-      if (com.tencent.mm.model.h.sB())
+      if (h.sD())
       {
         c.c(paramAdapterView, "masssend", ".ui.MassSendHistoryUI", new Intent().putExtra("finish_direct", true));
         return;
@@ -172,9 +174,9 @@ final class VoiceSearchResultUI$2
       c.c(paramAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramView));
       return;
     }
-    if (i.eo(paramView))
+    if (i.eA(paramView))
     {
-      if (com.tencent.mm.model.h.sv())
+      if (h.sx())
       {
         paramAdapterView.a(ChattingUI.class, new Intent().putExtra("Chat_User", paramView).putExtra("finish_direct", true));
         return;
@@ -182,7 +184,7 @@ final class VoiceSearchResultUI$2
       c.c(paramAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramView));
       return;
     }
-    if ((i.em(paramView)) || (i.en(paramView)) || (i.ej(paramView)) || (i.eq(paramView)) || (i.er(paramView)) || (i.ed(paramView)) || (i.eA(paramView)))
+    if ((i.ey(paramView)) || (i.ez(paramView)) || (i.ev(paramView)) || (i.eC(paramView)) || (i.eD(paramView)) || (i.ep(paramView)) || (i.eM(paramView)))
     {
       c.c(paramAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramView));
       return;

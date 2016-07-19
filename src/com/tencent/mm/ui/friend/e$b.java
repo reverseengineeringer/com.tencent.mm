@@ -8,28 +8,28 @@ import android.widget.TextView;
 
 final class e$b
 {
-  TextView bMs;
-  ImageView coY;
-  ProgressBar czd;
-  TextView eEo;
-  int kPi;
-  View kPj;
-  String lrZ;
+  TextView bFM;
+  ImageView ckm;
+  ProgressBar cwb;
+  TextView eKo;
+  String lSD;
+  int loy;
+  View loz;
   int status;
   
   public e$b(final e parame, View paramView)
   {
-    coY = ((ImageView)paramView.findViewById(2131167114));
-    bMs = ((TextView)paramView.findViewById(2131167115));
-    kPj = paramView.findViewById(2131169383);
-    eEo = ((TextView)paramView.findViewById(2131169384));
-    czd = ((ProgressBar)paramView.findViewById(2131169385));
-    kPj.setOnClickListener(new View.OnClickListener()
+    ckm = ((ImageView)paramView.findViewById(2131756733));
+    bFM = ((TextView)paramView.findViewById(2131756734));
+    loz = paramView.findViewById(2131758485);
+    eKo = ((TextView)paramView.findViewById(2131758486));
+    cwb = ((ProgressBar)paramView.findViewById(2131758487));
+    loz.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
-        if (e.b(lrX) != null) {
-          e.b(lrX).e(kPi, lrZ, status);
+        if (e.b(lSB) != null) {
+          e.b(lSB).e(loy, lSD, status);
         }
       }
     });

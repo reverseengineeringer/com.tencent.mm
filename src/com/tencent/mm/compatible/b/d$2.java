@@ -3,7 +3,7 @@ package com.tencent.mm.compatible.b;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class d$2
   extends BroadcastReceiver
@@ -12,9 +12,9 @@ final class d$2
   
   public final void onReceive(Context paramContext, Intent paramIntent)
   {
-    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt onReceive action[ BluetoothDevice.ACTION_ACL_CONNECTED ] ");
-    d.ax(true);
-    bpB.bN(3);
+    v.d("MicroMsg.MMAudioManager", "dkbt onReceive action[ BluetoothDevice.ACTION_ACL_CONNECTED ] ");
+    d.aa(true);
+    bdB.cf(3);
   }
 }
 

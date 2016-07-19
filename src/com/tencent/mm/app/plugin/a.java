@@ -4,15 +4,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.h;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.platformtools.s;
 import com.tencent.mm.pluginsdk.i.ae;
 import com.tencent.mm.pluginsdk.l;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.ExposeWithProofUI;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.JSAPIUploadLogHelperUI;
 import com.tencent.mm.ui.LauncherUI;
 import com.tencent.mm.ui.MMWizardActivity;
@@ -28,78 +27,78 @@ public final class a
   {
     if (paramContext == null)
     {
-      u.e("!44@/B4Tb64lLpKQNpMPOOK3Iz7ANJyNbQWRahxy27/ny08=", "jumpToUIInternal, context is null!");
+      v.e("MicroMsg.MMURIJumpHandler", "jumpToUIInternal, context is null!");
       return false;
     }
     if (paramString == null)
     {
-      u.e("!44@/B4Tb64lLpKQNpMPOOK3Iz7ANJyNbQWRahxy27/ny08=", "jumpToUIInternal url is null");
+      v.e("MicroMsg.MMURIJumpHandler", "jumpToUIInternal url is null");
       return false;
     }
     if (paramString.startsWith("weixin://openSpecificView/")) {
       return b(paramContext, paramString, new Object[0]);
     }
-    e locale = e.lf();
+    e locale = e.jG();
     if (paraml == null) {}
     for (boolean bool = true;; bool = false)
     {
-      u.d("!32@/B4Tb64lLpLEFJxLgdI367x8TT6QVFmB", "handleUriJump, url:%s, isAllowScanQrCode:%b, callback==null:%b, mHighPriorityHandlerList.size:%d, mNormalPriorityHandlerList.size: %d, mLowPriorityHandlerList.size: %d", new Object[] { paramString, Boolean.valueOf(paramBoolean), Boolean.valueOf(bool), Integer.valueOf(anc.size()), Integer.valueOf(ane.size()), Integer.valueOf(anf.size()) });
+      v.d("MicroMsg.URISpanHandler", "handleUriJump, url:%s, isAllowScanQrCode:%b, callback==null:%b, mHighPriorityHandlerList.size:%d, mNormalPriorityHandlerList.size: %d, mLowPriorityHandlerList.size: %d", new Object[] { paramString, Boolean.valueOf(paramBoolean), Boolean.valueOf(bool), Integer.valueOf(ZR.size()), Integer.valueOf(ZS.size()), Integer.valueOf(ZT.size()) });
       if (paramContext != null) {
         break;
       }
-      u.e("!32@/B4Tb64lLpLEFJxLgdI367x8TT6QVFmB", "handleUriJump, context is null!");
-      anb.mContext = null;
+      v.e("MicroMsg.URISpanHandler", "handleUriJump, context is null!");
+      ZQ.mContext = null;
       return false;
     }
     mContext = paramContext;
-    anb.mContext = mContext;
-    if (ay.kz(paramString))
+    ZQ.mContext = mContext;
+    if (be.kf(paramString))
     {
-      u.d("!32@/B4Tb64lLpLEFJxLgdI367x8TT6QVFmB", "handleUriJump, url is null");
+      v.d("MicroMsg.URISpanHandler", "handleUriJump, url is null");
       mContext = null;
-      anb.mContext = null;
+      ZQ.mContext = null;
       return false;
     }
-    paramContext = anc.iterator();
+    paramContext = ZR.iterator();
     URISpanHandlerSet.BaseUriSpanHandler localBaseUriSpanHandler;
     while (paramContext.hasNext())
     {
       localBaseUriSpanHandler = (URISpanHandlerSet.BaseUriSpanHandler)paramContext.next();
       if (localBaseUriSpanHandler.a(paramString, paramBoolean, paraml, paramBundle))
       {
-        u.d("!32@/B4Tb64lLpLEFJxLgdI367x8TT6QVFmB", "handleUriJump, %s handle", new Object[] { localBaseUriSpanHandler.getClass().getName() });
+        v.d("MicroMsg.URISpanHandler", "handleUriJump, %s handle", new Object[] { localBaseUriSpanHandler.getClass().getName() });
         mContext = null;
-        anb.mContext = null;
+        ZQ.mContext = null;
         return true;
       }
     }
-    paramContext = ane.iterator();
+    paramContext = ZS.iterator();
     while (paramContext.hasNext())
     {
       localBaseUriSpanHandler = (URISpanHandlerSet.BaseUriSpanHandler)paramContext.next();
       if (localBaseUriSpanHandler.a(paramString, paramBoolean, paraml, paramBundle))
       {
-        u.d("!32@/B4Tb64lLpLEFJxLgdI367x8TT6QVFmB", "handleUriJump, %s handle", new Object[] { localBaseUriSpanHandler.getClass().getName() });
+        v.d("MicroMsg.URISpanHandler", "handleUriJump, %s handle", new Object[] { localBaseUriSpanHandler.getClass().getName() });
         mContext = null;
-        anb.mContext = null;
+        ZQ.mContext = null;
         return true;
       }
     }
-    paramContext = anf.iterator();
+    paramContext = ZT.iterator();
     while (paramContext.hasNext())
     {
       localBaseUriSpanHandler = (URISpanHandlerSet.BaseUriSpanHandler)paramContext.next();
       if (localBaseUriSpanHandler.a(paramString, paramBoolean, paraml, paramBundle))
       {
-        u.d("!32@/B4Tb64lLpLEFJxLgdI367x8TT6QVFmB", "handleUriJump, %s handle", new Object[] { localBaseUriSpanHandler.getClass().getName() });
+        v.d("MicroMsg.URISpanHandler", "handleUriJump, %s handle", new Object[] { localBaseUriSpanHandler.getClass().getName() });
         mContext = null;
-        anb.mContext = null;
+        ZQ.mContext = null;
         return true;
       }
     }
     mContext = null;
-    anb.mContext = null;
-    u.d("!32@/B4Tb64lLpLEFJxLgdI367x8TT6QVFmB", "handleUriJump, nothing handle");
+    ZQ.mContext = null;
+    v.d("MicroMsg.URISpanHandler", "handleUriJump, nothing handle");
     return false;
   }
   
@@ -116,7 +115,7 @@ public final class a
   public final boolean a(Context paramContext, String paramString, boolean paramBoolean, l paraml)
   {
     if (paramContext == null) {
-      u.e("!44@/B4Tb64lLpKQNpMPOOK3Iz7ANJyNbQWRahxy27/ny08=", "jumpToURLWithCallback, context is null!");
+      v.e("MicroMsg.MMURIJumpHandler", "jumpToURLWithCallback, context is null!");
     }
     do
     {
@@ -134,12 +133,12 @@ public final class a
         {
           for (;;)
           {
-            u.e("!44@/B4Tb64lLpKQNpMPOOK3Iz7ANJyNbQWRahxy27/ny08=", "openLinkInBrowser fail:%s", new Object[] { paramContext.getMessage() });
+            v.e("MicroMsg.MMURIJumpHandler", "openLinkInBrowser fail:%s", new Object[] { paramContext.getMessage() });
           }
         }
       }
     } while (b(paramContext, paramString, paramBoolean, paraml));
-    u.w("!44@/B4Tb64lLpKQNpMPOOK3Iz7ANJyNbQWRahxy27/ny08=", "jumpToUI failed, uri:%s", new Object[] { paramString });
+    v.w("MicroMsg.MMURIJumpHandler", "jumpToUI failed, uri:%s", new Object[] { paramString });
     return false;
   }
   
@@ -152,12 +151,12 @@ public final class a
   {
     if (paramString == null)
     {
-      u.d("!44@/B4Tb64lLpKQNpMPOOK3Iz7ANJyNbQWRahxy27/ny08=", "openSpecificUI uri is null");
+      v.d("MicroMsg.MMURIJumpHandler", "openSpecificUI uri is null");
       return false;
     }
     if (paramContext == null)
     {
-      u.e("!44@/B4Tb64lLpKQNpMPOOK3Iz7ANJyNbQWRahxy27/ny08=", "openSpecificUI, context is null");
+      v.e("MicroMsg.MMURIJumpHandler", "openSpecificUI, context is null");
       return false;
     }
     Intent localIntent = new Intent();
@@ -235,33 +234,29 @@ public final class a
         if (!str2.equalsIgnoreCase("invitevoip")) {
           break;
         }
-        VoipAddressUI.eq(paramContext);
+        VoipAddressUI.et(paramContext);
       }
     }
-    int i;
-    if (str2.equalsIgnoreCase("expose"))
-    {
+    if (str2.equalsIgnoreCase("expose")) {
       if (paramString == null) {
-        break label773;
+        break label760;
       }
-      i = paramString.getInt("webview_scene");
-      paramString = paramString.getString("url");
     }
-    for (;;)
+    label754:
+    label760:
+    for (paramString = paramString.getString("url");; paramString = "")
     {
       localIntent.putExtra("k_expose_url", paramString);
-      localIntent.putExtra("k_username", h.sc());
-      localIntent.putExtra("k_expose_scene", 34);
-      localIntent.putExtra("k_expose_web_scene", i);
-      localIntent.setClass(paramContext, ExposeWithProofUI.class);
-      paramContext.startActivity(localIntent);
+      localIntent.putExtra("k_username", h.se());
+      localIntent.putExtra("showShare", false);
+      localIntent.putExtra("rawUrl", "https://weixin110.qq.com/security/readtemplate?t=weixin_report/w_type&scene=34");
+      c.c(paramContext, "webview", ".ui.tools.WebViewUI", localIntent);
       break label117;
       if (str2.equalsIgnoreCase("shakecard")) {
         if (paramString == null) {
-          break label767;
+          break label754;
         }
       }
-      label767:
       for (paramString = paramString.getString("extinfo");; paramString = "")
       {
         localIntent.putExtra("key_shake_card_from_scene", 3);
@@ -271,24 +266,24 @@ public final class a
         break label117;
         if (str2.equalsIgnoreCase("cardlistview"))
         {
-          c.c(paramContext, "card", ".ui.CardIndexUI", localIntent);
+          c.c(paramContext, "card", ".ui.CardHomePageUI", localIntent);
           break label117;
         }
         if (!str2.equalsIgnoreCase("uploadlog")) {
           break;
         }
-        str1 = h.sc();
+        str1 = h.se();
         paramVarArgs = str1;
-        if (t.kz(str1)) {
+        if (s.kf(str1)) {
           paramVarArgs = "weixin";
         }
         try
         {
           i = Integer.parseInt(paramString.getString("extinfo"));
-          if ((ah.rh()) && (!ah.tM()))
+          if ((ah.rg()) && (!ah.tN()))
           {
             bool = true;
-            u.i("!44@/B4Tb64lLpKQNpMPOOK3Iz7ANJyNbQWRahxy27/ny08=", "upload log from jsapi, before upload, is-login:%b, time:%d", new Object[] { Boolean.valueOf(bool), Integer.valueOf(i) });
+            v.i("MicroMsg.MMURIJumpHandler", "upload log from jsapi, before upload, is-login:%b, time:%d", new Object[] { Boolean.valueOf(bool), Integer.valueOf(i) });
             paramString = new Intent(paramContext, JSAPIUploadLogHelperUI.class);
             paramString.putExtra("key_user", paramVarArgs);
             paramString.putExtra("key_time", i);
@@ -299,15 +294,12 @@ public final class a
         {
           for (;;)
           {
-            i = 0;
+            int i = 0;
             continue;
             boolean bool = false;
           }
         }
       }
-      label773:
-      paramString = "";
-      i = 0;
     }
   }
 }

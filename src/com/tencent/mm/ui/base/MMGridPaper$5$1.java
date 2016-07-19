@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.base;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class MMGridPaper$5$1
   implements Runnable
@@ -9,15 +9,15 @@ final class MMGridPaper$5$1
   
   public final void run()
   {
-    MMGridPaperGridView localMMGridPaperGridView = (MMGridPaperGridView)kEz.kEx.kDV.getChildAt(kEz.kEx.kDV.getChildCount() - 1);
-    int i = kEy - (kEz.kEx.kDV.getChildCount() >> 1);
-    u.i("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "move up, old index[%d], new index[%d]", new Object[] { Integer.valueOf(kEz.kEx.kDV.getChildCount() - 1), Integer.valueOf(i) });
-    kEz.kEx.kDV.removeViewAt(kEz.kEx.kDV.getChildCount() - 1);
-    localMMGridPaperGridView.a(i, kEz.kEx.kEf, kEz.kEx.dgj, kEz.kEx.kDW);
-    kEz.kEx.kDV.addView(localMMGridPaperGridView, 0);
-    i = kEz.kEx.kDV.getChildCount();
-    kEz.kEx.kDV.qE(i >> 1);
-    MMGridPaper.a(kEz.kEx, -1);
+    MMGridPaperGridView localMMGridPaperGridView = (MMGridPaperGridView)ldC.ldA.lcZ.getChildAt(ldC.ldA.lcZ.getChildCount() - 1);
+    int i = ldB - (ldC.ldA.lcZ.getChildCount() >> 1);
+    v.i("MicroMsg.MMGridPaper", "move up, old index[%d], new index[%d]", new Object[] { Integer.valueOf(ldC.ldA.lcZ.getChildCount() - 1), Integer.valueOf(i) });
+    ldC.ldA.lcZ.removeViewAt(ldC.ldA.lcZ.getChildCount() - 1);
+    localMMGridPaperGridView.a(i, ldC.ldA.ldj, ldC.ldA.dfn, ldC.ldA.lda);
+    ldC.ldA.lcZ.addView(localMMGridPaperGridView, 0);
+    i = ldC.ldA.lcZ.getChildCount();
+    ldC.ldA.lcZ.sz(i >> 1);
+    MMGridPaper.a(ldC.ldA, -1);
   }
 }
 

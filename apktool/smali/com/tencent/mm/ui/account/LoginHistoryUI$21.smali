@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/LoginHistoryUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/LoginHistoryUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+.field final synthetic kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 416
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$21;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$21;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,18 +36,18 @@
 
 
 # virtual methods
-.method public final bJ(II)V
+.method public final bP(II)V
     .locals 4
 
     .prologue
     .line 420
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$21;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$21;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->b(Lcom/tencent/mm/ui/account/LoginHistoryUI;)Lcom/tencent/mm/ui/account/MMKeyboardUperView;
 
     move-result-object v0
 
-    const-string/jumbo v1, "!44@/B4Tb64lLpICoG9rhJuc+TFgjqHr5i5P3+F8OjrD0os="
+    const-string/jumbo v1, "MicroMsg.MMKeyboardUperView"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -73,7 +73,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget v1, v0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->defaultHeight:I
 
@@ -88,9 +88,9 @@
 
     if-ne p1, v1, :cond_1
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->kuc:Landroid/view/View;
+    iget-object v1, v0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->kTj:Landroid/view/View;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->kue:Ljava/lang/Runnable;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->kTl:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
@@ -100,9 +100,9 @@
 
     .line 420
     :cond_1
-    iget-object v1, v0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->kuc:Landroid/view/View;
+    iget-object v1, v0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->kTj:Landroid/view/View;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->kud:Ljava/lang/Runnable;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->kTk:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 

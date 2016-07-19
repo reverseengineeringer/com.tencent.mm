@@ -11,7 +11,7 @@ final class ChatroomContactUI$8
   
   public final int I(View paramView)
   {
-    return ChatroomContactUI.b(ljg).getPositionForView(paramView);
+    return ChatroomContactUI.b(lJr).getPositionForView(paramView);
   }
 }
 

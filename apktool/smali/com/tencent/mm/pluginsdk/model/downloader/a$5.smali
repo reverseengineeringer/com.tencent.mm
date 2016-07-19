@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/pluginsdk/model/downloader/a;->cY(J)V
+    value = Lcom/tencent/mm/pluginsdk/model/downloader/a;->dp(J)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic gPj:J
+.field final synthetic gXl:J
 
-.field final synthetic iCh:Lcom/tencent/mm/pluginsdk/model/downloader/a;
+.field final synthetic iYR:Lcom/tencent/mm/pluginsdk/model/downloader/a;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 106
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/a$5;->iCh:Lcom/tencent/mm/pluginsdk/model/downloader/a;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/a$5;->iYR:Lcom/tencent/mm/pluginsdk/model/downloader/a;
 
-    iput-wide p2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/a$5;->gPj:J
+    iput-wide p2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/a$5;->gXl:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,14 +45,14 @@
 
     .prologue
     .line 109
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->aQa()Ljava/util/Vector;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->aUJ()Ljava/util/Vector;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 110
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->aQa()Ljava/util/Vector;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->aUJ()Ljava/util/Vector;
 
     move-result-object v0
 
@@ -74,7 +74,7 @@
     check-cast v0, Lcom/tencent/mm/pluginsdk/model/downloader/k;
 
     .line 111
-    iget-wide v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/a$5;->gPj:J
+    iget-wide v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/a$5;->gXl:J
 
     invoke-interface {v0, v2, v3}, Lcom/tencent/mm/pluginsdk/model/downloader/k;->onTaskFailed(J)V
 
@@ -82,20 +82,20 @@
 
     .line 114
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->aQb()Lcom/tencent/mm/pluginsdk/model/downloader/k;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->aUK()Lcom/tencent/mm/pluginsdk/model/downloader/k;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 115
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->aQb()Lcom/tencent/mm/pluginsdk/model/downloader/k;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->aUK()Lcom/tencent/mm/pluginsdk/model/downloader/k;
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/a$5;->gPj:J
+    iget-wide v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/a$5;->gXl:J
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/model/downloader/k;->onTaskFailed(J)V
+    invoke-interface {v0, v2, v3}, Lcom/tencent/mm/pluginsdk/model/downloader/k;->onTaskFailed(J)V
 
     .line 117
     :cond_1

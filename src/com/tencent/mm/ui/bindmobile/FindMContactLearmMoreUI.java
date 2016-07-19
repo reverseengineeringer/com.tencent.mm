@@ -15,14 +15,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.tencent.mm.model.c;
 import com.tencent.mm.modelfriend.aa;
+import com.tencent.mm.platformtools.l;
 import com.tencent.mm.plugin.a.b;
-import com.tencent.mm.protocal.b.abu;
-import com.tencent.mm.r.d;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ab.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.acj;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.ad.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.h;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.MMWizardActivity;
 import com.tencent.mm.ui.base.g;
@@ -34,34 +36,34 @@ import java.util.List;
 public class FindMContactLearmMoreUI
   extends MMWizardActivity
 {
-  private String aBH;
-  private List bMj = null;
-  private d ccZ = null;
-  private String ccq = null;
-  private ProgressDialog coM = null;
-  private aa kOK;
-  private Button kPb;
-  private TextView kPc;
-  private String kuX = "";
-  private int kuY = 2;
+  private String anZ;
+  private List<String[]> bFD = null;
+  private d bWN = null;
+  private String bWf = null;
+  private ProgressDialog cka = null;
+  private String kUe = "";
+  private int kUf = 2;
+  private aa loa;
+  private Button lor;
+  private TextView los;
   
-  private void aqG()
+  private void atH()
   {
-    age();
-    bbm();
+    aiI();
+    bgy();
   }
   
-  private void bdE()
+  private void bjl()
   {
-    boolean bool = com.tencent.mm.pluginsdk.g.a.a(this, "android.permission.READ_CONTACTS", 768, null, null);
-    u.d("!56@/B4Tb64lLpIaEkywMHoqAF50wwoU6aq9UNpxJDP2H8v06EipWcMmmw==", "summerper checkPermission checkContacts[%b],stack[%s]", new Object[] { Boolean.valueOf(bool), ay.aVJ() });
+    boolean bool = com.tencent.mm.pluginsdk.h.a.a(this, "android.permission.READ_CONTACTS", 768, null, null);
+    v.d("MicroMsg.FindMContactLearmMoreUI", "summerper checkPermission checkContacts[%b],stack[%s]", new Object[] { Boolean.valueOf(bool), be.baX() });
     if (!bool) {
       return;
     }
-    Object localObject = com.tencent.mm.model.ah.tE();
+    Object localObject = com.tencent.mm.model.ah.tF();
     d local3 = new d()
     {
-      public final void a(int paramAnonymousInt1, int paramAnonymousInt2, String paramAnonymousString, com.tencent.mm.r.j paramAnonymousj)
+      public final void onSceneEnd(int paramAnonymousInt1, int paramAnonymousInt2, String paramAnonymousString, com.tencent.mm.t.j paramAnonymousj)
       {
         if (FindMContactLearmMoreUI.c(FindMContactLearmMoreUI.this) != null)
         {
@@ -70,12 +72,12 @@ public class FindMContactLearmMoreUI
         }
         if (FindMContactLearmMoreUI.e(FindMContactLearmMoreUI.this) != null)
         {
-          com.tencent.mm.model.ah.tE().b(431, FindMContactLearmMoreUI.e(FindMContactLearmMoreUI.this));
+          com.tencent.mm.model.ah.tF().b(431, FindMContactLearmMoreUI.e(FindMContactLearmMoreUI.this));
           FindMContactLearmMoreUI.f(FindMContactLearmMoreUI.this);
         }
         if ((paramAnonymousInt1 == 0) && (paramAnonymousInt2 == 0))
         {
-          paramAnonymousString = ((aa)paramAnonymousj).zc();
+          paramAnonymousString = ((aa)paramAnonymousj).zp();
           com.tencent.mm.modelfriend.ah.f(paramAnonymousString);
           if ((paramAnonymousString == null) || (paramAnonymousString.size() <= 0)) {
             break label362;
@@ -84,10 +86,10 @@ public class FindMContactLearmMoreUI
           paramAnonymousInt1 = 0;
           while (paramAnonymousj.hasNext())
           {
-            abu localabu = (abu)paramAnonymousj.next();
-            if (localabu != null)
+            acj localacj = (acj)paramAnonymousj.next();
+            if (localacj != null)
             {
-              if (cqT != 1) {
+              if (cmu != 1) {
                 break label359;
               }
               paramAnonymousInt1 += 1;
@@ -102,11 +104,11 @@ public class FindMContactLearmMoreUI
           if (paramAnonymousString == null) {}
           for (int i = 0;; i = paramAnonymousString.size())
           {
-            u.d("!56@/B4Tb64lLpIaEkywMHoqAF50wwoU6aq9UNpxJDP2H8v06EipWcMmmw==", "tigerreg data size=%d, addcount=%s", new Object[] { Integer.valueOf(i), Integer.valueOf(paramAnonymousInt1) });
+            v.d("MicroMsg.FindMContactLearmMoreUI", "tigerreg data size=%d, addcount=%s", new Object[] { Integer.valueOf(i), Integer.valueOf(paramAnonymousInt1) });
             if ((FindMContactLearmMoreUI.g(FindMContactLearmMoreUI.this) == null) || (!FindMContactLearmMoreUI.g(FindMContactLearmMoreUI.this).contains("1")) || (paramAnonymousInt2 == 0)) {
               break label305;
             }
-            b.kC("R300_300_phone");
+            b.ll("R300_300_phone");
             paramAnonymousString = new Intent(FindMContactLearmMoreUI.this, FindMContactAddUI.class);
             paramAnonymousString.putExtra("regsetinfo_ticket", FindMContactLearmMoreUI.h(FindMContactLearmMoreUI.this));
             paramAnonymousString.putExtra("regsetinfo_NextStep", FindMContactLearmMoreUI.g(FindMContactLearmMoreUI.this));
@@ -120,7 +122,7 @@ public class FindMContactLearmMoreUI
           label305:
           FindMContactLearmMoreUI.b(FindMContactLearmMoreUI.this);
           return;
-          Toast.makeText(FindMContactLearmMoreUI.this, getString(2131427526, new Object[] { Integer.valueOf(paramAnonymousInt1), Integer.valueOf(paramAnonymousInt2) }), 0).show();
+          Toast.makeText(FindMContactLearmMoreUI.this, getString(2131230907, new Object[] { Integer.valueOf(paramAnonymousInt1), Integer.valueOf(paramAnonymousInt2) }), 0).show();
           FindMContactLearmMoreUI.b(FindMContactLearmMoreUI.this);
           return;
           label359:
@@ -131,38 +133,38 @@ public class FindMContactLearmMoreUI
         }
       }
     };
-    ccZ = local3;
-    ((com.tencent.mm.r.m)localObject).a(431, local3);
-    localObject = koJ.kpc;
-    getString(2131430877);
-    coM = g.a((Context)localObject, getString(2131428926), true, new DialogInterface.OnCancelListener()
+    bWN = local3;
+    ((m)localObject).a(431, local3);
+    localObject = kNN.kOg;
+    getString(2131231028);
+    cka = g.a((Context)localObject, getString(2131236696), true, new DialogInterface.OnCancelListener()
     {
       public final void onCancel(DialogInterface paramAnonymousDialogInterface)
       {
         if (FindMContactLearmMoreUI.e(FindMContactLearmMoreUI.this) != null)
         {
-          com.tencent.mm.model.ah.tE().b(431, FindMContactLearmMoreUI.e(FindMContactLearmMoreUI.this));
+          com.tencent.mm.model.ah.tF().b(431, FindMContactLearmMoreUI.e(FindMContactLearmMoreUI.this));
           FindMContactLearmMoreUI.f(FindMContactLearmMoreUI.this);
         }
       }
     });
-    com.tencent.mm.model.ah.tv().a(new ab.a()
+    com.tencent.mm.model.ah.tw().a(new ad.a()
     {
       public final String toString()
       {
         return super.toString() + "|doUpload";
       }
       
-      public final boolean vd()
+      public final boolean vf()
       {
         try
         {
-          FindMContactLearmMoreUI.a(FindMContactLearmMoreUI.this, com.tencent.mm.pluginsdk.a.cE(FindMContactLearmMoreUI.this));
+          FindMContactLearmMoreUI.a(FindMContactLearmMoreUI.this, com.tencent.mm.pluginsdk.a.cA(FindMContactLearmMoreUI.this));
           StringBuilder localStringBuilder = new StringBuilder("tigerreg mobileList size ");
           if (FindMContactLearmMoreUI.j(FindMContactLearmMoreUI.this) == null) {}
           for (int i = 0;; i = FindMContactLearmMoreUI.j(FindMContactLearmMoreUI.this).size())
           {
-            u.d("!56@/B4Tb64lLpIaEkywMHoqAF50wwoU6aq9UNpxJDP2H8v06EipWcMmmw==", i);
+            v.d("MicroMsg.FindMContactLearmMoreUI", i);
             break;
           }
           return true;
@@ -170,79 +172,77 @@ public class FindMContactLearmMoreUI
         catch (Exception localException) {}
       }
       
-      public final boolean ve()
+      public final boolean vg()
       {
         if ((FindMContactLearmMoreUI.j(FindMContactLearmMoreUI.this) != null) && (FindMContactLearmMoreUI.j(FindMContactLearmMoreUI.this).size() != 0))
         {
           FindMContactLearmMoreUI.a(FindMContactLearmMoreUI.this, new aa(FindMContactLearmMoreUI.h(FindMContactLearmMoreUI.this), FindMContactLearmMoreUI.j(FindMContactLearmMoreUI.this)));
-          com.tencent.mm.model.ah.tE().d(FindMContactLearmMoreUI.k(FindMContactLearmMoreUI.this));
-        }
-        for (;;)
-        {
+          com.tencent.mm.model.ah.tF().a(FindMContactLearmMoreUI.k(FindMContactLearmMoreUI.this), 0);
           return false;
-          if (FindMContactLearmMoreUI.c(FindMContactLearmMoreUI.this) != null)
-          {
-            FindMContactLearmMoreUI.c(FindMContactLearmMoreUI.this).dismiss();
-            FindMContactLearmMoreUI.d(FindMContactLearmMoreUI.this);
-          }
-          FindMContactLearmMoreUI.b(FindMContactLearmMoreUI.this);
         }
+        if (FindMContactLearmMoreUI.c(FindMContactLearmMoreUI.this) != null)
+        {
+          FindMContactLearmMoreUI.c(FindMContactLearmMoreUI.this).dismiss();
+          FindMContactLearmMoreUI.d(FindMContactLearmMoreUI.this);
+        }
+        FindMContactLearmMoreUI.b(FindMContactLearmMoreUI.this);
+        return false;
       }
     });
-    com.tencent.mm.platformtools.m.d(true, false);
-    com.tencent.mm.modelfriend.a.yc();
+    l.d(true, false);
+    com.tencent.mm.modelfriend.a.yo();
   }
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    qb(2131428714);
-    kPb = ((Button)findViewById(2131168090));
-    kPc = ((TextView)findViewById(2131165394));
-    kPb.setOnClickListener(new View.OnClickListener()
+    rR(2131232788);
+    lor = ((Button)findViewById(2131756876));
+    los = ((TextView)findViewById(2131756875));
+    lor.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
-        com.tencent.mm.model.ah.tD().rn().set(12322, Boolean.valueOf(true));
-        com.tencent.mm.platformtools.m.d(true, false);
+        com.tencent.mm.model.ah.tE().ro().set(12322, Boolean.valueOf(true));
+        l.d(true, false);
         FindMContactLearmMoreUI.a(FindMContactLearmMoreUI.this);
       }
     });
-    kPc.setOnClickListener(new View.OnClickListener()
+    los.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
-        com.tencent.mm.model.ah.tD().rn().set(12322, Boolean.valueOf(false));
-        com.tencent.mm.platformtools.m.d(false, false);
+        com.tencent.mm.model.ah.tE().ro().set(12322, Boolean.valueOf(false));
+        l.d(false, false);
         FindMContactLearmMoreUI.b(FindMContactLearmMoreUI.this);
       }
     });
-    com.tencent.mm.model.ah.tD().rn().set(12323, Boolean.valueOf(true));
-    aBH = ((String)com.tencent.mm.model.ah.tD().rn().get(6, null));
-    if ((aBH == null) || (aBH.equals(""))) {
-      aBH = ((String)com.tencent.mm.model.ah.tD().rn().get(4097, null));
+    com.tencent.mm.model.ah.tE().ro().set(12323, Boolean.valueOf(true));
+    anZ = ((String)com.tencent.mm.model.ah.tE().ro().get(6, null));
+    if ((anZ == null) || (anZ.equals(""))) {
+      anZ = ((String)com.tencent.mm.model.ah.tE().ro().get(4097, null));
     }
   }
   
   protected final int getLayoutId()
   {
-    return 2131363102;
+    return 2130903606;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    ccq = getIntent().getStringExtra("regsetinfo_ticket");
-    kuX = getIntent().getStringExtra("regsetinfo_NextStep");
-    kuY = getIntent().getIntExtra("regsetinfo_NextStyle", 2);
-    Gb();
+    bWf = getIntent().getStringExtra("regsetinfo_ticket");
+    kUe = getIntent().getStringExtra("regsetinfo_NextStep");
+    kUf = getIntent().getIntExtra("regsetinfo_NextStyle", 2);
+    Gy();
   }
   
   public void onDestroy()
   {
-    if (ccZ != null)
+    if (bWN != null)
     {
-      com.tencent.mm.model.ah.tE().b(431, ccZ);
-      ccZ = null;
+      com.tencent.mm.model.ah.tF().b(431, bWN);
+      bWN = null;
     }
     super.onDestroy();
   }
@@ -251,7 +251,7 @@ public class FindMContactLearmMoreUI
   {
     if ((paramInt == 4) && (paramKeyEvent.getRepeatCount() == 0))
     {
-      aqG();
+      atH();
       return true;
     }
     return super.onKeyDown(paramInt, paramKeyEvent);
@@ -260,12 +260,12 @@ public class FindMContactLearmMoreUI
   protected void onPause()
   {
     super.onPause();
-    b.b(false, com.tencent.mm.model.ah.tx() + "," + getClass().getName() + ",RE300_600," + com.tencent.mm.model.ah.fd("RE300_600") + ",2");
+    b.b(false, com.tencent.mm.model.ah.ty() + "," + getClass().getName() + ",RE300_600," + com.tencent.mm.model.ah.fq("RE300_600") + ",2");
   }
   
   public void onRequestPermissionsResult(int paramInt, String[] paramArrayOfString, int[] paramArrayOfInt)
   {
-    u.d("!56@/B4Tb64lLpIaEkywMHoqAF50wwoU6aq9UNpxJDP2H8v06EipWcMmmw==", "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(paramArrayOfInt[0]), Long.valueOf(Thread.currentThread().getId()) });
+    v.d("MicroMsg.FindMContactLearmMoreUI", "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(paramArrayOfInt[0]), Long.valueOf(Thread.currentThread().getId()) });
     switch (paramInt)
     {
     default: 
@@ -273,10 +273,10 @@ public class FindMContactLearmMoreUI
     }
     if (paramArrayOfInt[0] == 0)
     {
-      bdE();
+      bjl();
       return;
     }
-    g.a(this, getString(2131429594), getString(2131429588), getString(2131429589), getString(2131430409), false, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+    g.a(this, getString(2131234137), getString(2131234146), getString(2131233448), getString(2131231427), false, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
@@ -295,8 +295,8 @@ public class FindMContactLearmMoreUI
   protected void onResume()
   {
     super.onResume();
-    b.kB("R300_100_phone");
-    b.b(true, com.tencent.mm.model.ah.tx() + "," + getClass().getName() + ",RE300_600," + com.tencent.mm.model.ah.fd("RE300_600") + ",1");
+    b.lk("R300_100_phone");
+    b.b(true, com.tencent.mm.model.ah.ty() + "," + getClass().getName() + ",RE300_600," + com.tencent.mm.model.ah.fq("RE300_600") + ",1");
   }
 }
 

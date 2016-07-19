@@ -10,7 +10,7 @@ final class ShareImageSelectorUI$4
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    lBC.finish();
+    mcu.finish();
   }
 }
 

@@ -1,26 +1,26 @@
 package com.tencent.mm.ui.base;
 
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah.a;
 
 final class s$1
-  implements af.a
+  implements ah.a
 {
   s$1(s params) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    if (s.a(kHN) == -1L)
+    if (s.a(lgP) == -1L)
     {
-      kHN.show();
+      lgP.show();
       return true;
     }
-    s.b(kHN);
-    if (s.c(kHN) >= 0)
+    s.b(lgP);
+    if (s.c(lgP) >= 0)
     {
-      kHN.show();
+      lgP.show();
       return true;
     }
-    kHN.cancel();
+    lgP.cancel();
     return false;
   }
 }

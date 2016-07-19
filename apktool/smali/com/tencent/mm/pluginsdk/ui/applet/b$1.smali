@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iId:Lcom/tencent/mm/pluginsdk/ui/applet/b;
+.field final synthetic jfa:Lcom/tencent/mm/pluginsdk/ui/applet/b;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 105
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$1;->iId:Lcom/tencent/mm/pluginsdk/ui/applet/b;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$1;->jfa:Lcom/tencent/mm/pluginsdk/ui/applet/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,25 +41,25 @@
 
     .prologue
     .line 109
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$1;->iId:Lcom/tencent/mm/pluginsdk/ui/applet/b;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$1;->jfa:Lcom/tencent/mm/pluginsdk/ui/applet/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/b;->dfT:Landroid/app/ProgressDialog;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/b;->deV:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_0
 
     .line 110
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$1;->iId:Lcom/tencent/mm/pluginsdk/ui/applet/b;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$1;->jfa:Lcom/tencent/mm/pluginsdk/ui/applet/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/b;->dfT:Landroid/app/ProgressDialog;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/b;->deV:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
     .line 111
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$1;->iId:Lcom/tencent/mm/pluginsdk/ui/applet/b;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$1;->jfa:Lcom/tencent/mm/pluginsdk/ui/applet/b;
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/applet/b;->dfT:Landroid/app/ProgressDialog;
+    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/applet/b;->deV:Landroid/app/ProgressDialog;
 
     .line 113
     :cond_0

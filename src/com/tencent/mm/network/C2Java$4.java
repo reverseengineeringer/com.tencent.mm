@@ -5,7 +5,7 @@ final class C2Java$4
 {
   public final void run()
   {
-    z.Fi().onNotify(0, 39, null);
+    z.FE().onNotify(0, 39, null);
   }
 }
 

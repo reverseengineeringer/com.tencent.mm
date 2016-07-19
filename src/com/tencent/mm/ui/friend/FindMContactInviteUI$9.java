@@ -13,11 +13,11 @@ final class FindMContactInviteUI$9
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    if (FindMContactInviteUI.b(lrv) != null)
+    if (FindMContactInviteUI.b(lRZ) != null)
     {
-      paramView = FindMContactInviteUI.b(lrv);
-      if (bMn != null) {
-        bMn.onTouchEvent(paramMotionEvent);
+      paramView = FindMContactInviteUI.b(lRZ);
+      if (bFH != null) {
+        bFH.onTouchEvent(paramMotionEvent);
       }
     }
     return false;

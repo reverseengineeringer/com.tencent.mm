@@ -7,13 +7,13 @@ public class SQLiteFullException
 {
   public SQLiteFullException()
   {
-    g.qI();
+    g.pm();
   }
   
   public SQLiteFullException(String paramString)
   {
     super(paramString);
-    g.qI();
+    g.pm();
   }
 }
 

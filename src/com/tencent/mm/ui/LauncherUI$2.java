@@ -1,20 +1,38 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.model.as.a;
-import com.tencent.mm.network.c;
-import com.tencent.mm.network.e;
+import com.tencent.mm.o.a;
+import com.tencent.mm.o.a.a;
+import com.tencent.mm.o.c;
+import com.tencent.mm.storage.j.a;
 
 final class LauncherUI$2
-  implements as.a
+  implements a.a
 {
   LauncherUI$2(LauncherUI paramLauncherUI) {}
   
-  public final void a(e parame)
+  public final void a(j.a parama) {}
+  
+  public final void cN(int paramInt)
   {
-    if ((parame == null) || (parame.vW() == null)) {
-      return;
+    if ((paramInt == 262145) || (paramInt == 262156) || (paramInt == 262152)) {
+      LauncherUI.j(kMs);
     }
-    parame.vW().reset();
+    if ((paramInt == 262147) || (paramInt == 262149)) {
+      LauncherUI.j(kMs);
+    }
+  }
+  
+  public final void cO(int paramInt)
+  {
+    if (paramInt == 266241) {
+      LauncherUI.j(kMs);
+    }
+    if (paramInt == 266244)
+    {
+      c.pE().H(262147, 266241);
+      c.pE().H(262149, 266241);
+      LauncherUI.j(kMs);
+    }
   }
 }
 

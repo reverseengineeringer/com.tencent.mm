@@ -1,21 +1,22 @@
 package com.tencent.mm.model.a;
 
+import com.tencent.mm.bc.g.b;
 import com.tencent.mm.model.ae;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.bc;
 import com.tencent.mm.model.c;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.h;
 import java.util.HashMap;
 
 public class f
   implements ae
 {
-  private b bDr = null;
+  private b bwB = null;
   
-  private static f uN()
+  private static f uP()
   {
-    f localf2 = (f)ah.tk().fu(f.class.getName());
+    f localf2 = (f)ah.tl().fH(f.class.getName());
     if (localf2 == null)
     {
       f localf1 = localf2;
@@ -23,7 +24,7 @@ public class f
       try
       {
         localf1 = new f();
-        ah.tk().a(f.class.getName(), localf1);
+        ah.tl().a(f.class.getName(), localf1);
         return localf1;
       }
       finally {}
@@ -31,53 +32,53 @@ public class f
     return localf2;
   }
   
-  public static b uO()
+  public static b uQ()
   {
-    if (tDuin == 0) {
+    if (tEuin == 0) {
       throw new com.tencent.mm.model.b();
     }
-    if (uNbDr == null) {
-      uNbDr = new b();
+    if (uPbwB == null) {
+      uPbwB = new b();
     }
-    return uNbDr;
+    return uPbwB;
   }
   
-  public final void aN(int paramInt) {}
-  
-  public final void ai(boolean paramBoolean)
+  public final void aj(boolean paramBoolean)
   {
-    b localb = uO();
+    b localb = uQ();
     long l = System.currentTimeMillis();
     try
     {
-      localb.fx((String)ah.tD().rn().get(328193, null));
-      if (localb.uM()) {
-        e.fz(bDl.bDh);
+      localb.fK((String)ah.tE().ro().get(328193, null));
+      if (localb.uO()) {
+        e.fM(bwv.bwr);
       }
-      u.i("!44@/B4Tb64lLpIVNY5fjkqzOO0SLO/wAi9vvy4PwGgLhrk=", "[Abtest] init use time:%d", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+      v.i("MicroMsg.abtest.AbTestManager", "[Abtest] init use time:%d", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
       return;
     }
     catch (Exception localException)
     {
       for (;;)
       {
-        u.e("!44@/B4Tb64lLpIVNY5fjkqzOO0SLO/wAi9vvy4PwGgLhrk=", "[Abtest] updateAbTestCase exception:%s", new Object[] { localException.toString() });
+        v.e("MicroMsg.abtest.AbTestManager", "[Abtest] updateAbTestCase exception:%s", new Object[] { localException.toString() });
       }
     }
   }
   
-  public final void aj(boolean paramBoolean) {}
+  public final void ak(boolean paramBoolean) {}
   
-  public final HashMap lo()
+  public final void cu(int paramInt) {}
+  
+  public final void ok()
   {
-    return null;
+    b localb = uQ();
+    bww = null;
+    bwv = null;
   }
   
-  public final void lp()
+  public final HashMap<Integer, g.b> ol()
   {
-    b localb = uO();
-    bDm = null;
-    bDl = null;
+    return null;
   }
 }
 

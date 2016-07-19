@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic luq:Lcom/tencent/mm/ui/tools/CropImageNewUI;
+.field final synthetic lVs:Lcom/tencent/mm/ui/tools/CropImageNewUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 687
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$23;->luq:Lcom/tencent/mm/ui/tools/CropImageNewUI;
+    .line 689
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$23;->lVs:Lcom/tencent/mm/ui/tools/CropImageNewUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,8 +42,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 690
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$23;->luq:Lcom/tencent/mm/ui/tools/CropImageNewUI;
+    .line 692
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$23;->lVs:Lcom/tencent/mm/ui/tools/CropImageNewUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/CropImageNewUI;->getIntent()Landroid/content/Intent;
 
@@ -57,18 +57,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 691
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$23;->luq:Lcom/tencent/mm/ui/tools/CropImageNewUI;
+    .line 693
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$23;->lVs:Lcom/tencent/mm/ui/tools/CropImageNewUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/CropImageNewUI;->finish()V
 
-    .line 698
+    .line 700
     :goto_0
     return-void
 
-    .line 694
+    .line 696
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$23;->luq:Lcom/tencent/mm/ui/tools/CropImageNewUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$23;->lVs:Lcom/tencent/mm/ui/tools/CropImageNewUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/CropImageNewUI;->e(Lcom/tencent/mm/ui/tools/CropImageNewUI;)Lcom/tencent/mm/ui/tools/FilterImageView;
 
@@ -78,8 +78,8 @@
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/FilterImageView;->setVisibility(I)V
 
-    .line 695
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$23;->luq:Lcom/tencent/mm/ui/tools/CropImageNewUI;
+    .line 697
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$23;->lVs:Lcom/tencent/mm/ui/tools/CropImageNewUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/CropImageNewUI;->p(Lcom/tencent/mm/ui/tools/CropImageNewUI;)Landroid/widget/LinearLayout;
 
@@ -87,14 +87,14 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 696
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$23;->luq:Lcom/tencent/mm/ui/tools/CropImageNewUI;
+    .line 698
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$23;->lVs:Lcom/tencent/mm/ui/tools/CropImageNewUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/CropImageNewUI;->q(Lcom/tencent/mm/ui/tools/CropImageNewUI;)Landroid/widget/ImageView;
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$23;->luq:Lcom/tencent/mm/ui/tools/CropImageNewUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$23;->lVs:Lcom/tencent/mm/ui/tools/CropImageNewUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/CropImageNewUI;->q(Lcom/tencent/mm/ui/tools/CropImageNewUI;)Landroid/widget/ImageView;
 
@@ -112,8 +112,8 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 697
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$23;->luq:Lcom/tencent/mm/ui/tools/CropImageNewUI;
+    .line 699
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageNewUI$23;->lVs:Lcom/tencent/mm/ui/tools/CropImageNewUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/CropImageNewUI;->j(Lcom/tencent/mm/ui/tools/CropImageNewUI;)Lcom/tencent/mm/ui/tools/CropImageView;
 

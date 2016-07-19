@@ -2,14 +2,15 @@ package com.tencent.mm.model;
 
 public final class z$a
 {
-  public static z.c bAs;
-  public static z.e bAt;
-  public static z.d bAu;
-  public static z.b bAv;
+  public static z.c btv;
+  public static z.f btw;
+  public static z.d btx;
+  public static z.b bty;
+  public static z.g btz;
   
-  public static z.c ta()
+  public static z.c sZ()
   {
-    return bAs;
+    return btv;
   }
 }
 

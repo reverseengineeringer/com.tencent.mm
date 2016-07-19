@@ -10,8 +10,8 @@ final class m$1
   
   public final void onClick(View paramView)
   {
-    if (m.a(iMH) != null) {
-      m.a(iMH).aSi();
+    if (m.a(jjE) != null) {
+      m.a(jjE).aWZ();
     }
   }
 }

@@ -10,7 +10,7 @@ final class BindQQUI$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    BindQQUI.a(kPv);
+    BindQQUI.a(loL);
     return true;
   }
 }

@@ -3,25 +3,25 @@ package com.tencent.mm.plugin.accountsync.model;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelfriend.a.b;
 import com.tencent.mm.modelfriend.ac;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class ContactsSyncService$1
   implements a.b
 {
   ContactsSyncService$1(ContactsSyncService paramContactsSyncService) {}
   
-  public final void aU(boolean paramBoolean)
+  public final void aA(boolean paramBoolean)
   {
-    u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "performSync end, succ:%b", new Object[] { Boolean.valueOf(paramBoolean) });
+    v.i("MicroMsg.ContactsSyncService", "performSync end, succ:%b", new Object[] { Boolean.valueOf(paramBoolean) });
     if (!paramBoolean)
     {
-      ContactsSyncService.a(coz);
+      ContactsSyncService.a(cjN);
       return;
     }
-    ah.tE().a(133, coz);
+    ah.tF().a(133, cjN);
     System.currentTimeMillis();
-    ac localac = new ac(com.tencent.mm.modelfriend.m.yK(), com.tencent.mm.modelfriend.m.yJ());
-    ah.tE().d(localac);
+    ac localac = new ac(com.tencent.mm.modelfriend.m.yX(), com.tencent.mm.modelfriend.m.yW());
+    ah.tF().a(localac, 0);
   }
 }
 

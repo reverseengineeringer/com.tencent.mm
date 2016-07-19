@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic ktw:Lcom/tencent/mm/modelsimple/t;
+.field final synthetic kSE:Lcom/tencent/mm/modelsimple/r;
 
-.field final synthetic kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+.field final synthetic kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/account/SimpleLoginUI;Lcom/tencent/mm/modelsimple/t;)V
+.method constructor <init>(Lcom/tencent/mm/ui/account/SimpleLoginUI;Lcom/tencent/mm/modelsimple/r;)V
     .locals 0
 
     .prologue
     .line 212
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$7;->kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$7;->kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$7;->ktw:Lcom/tencent/mm/modelsimple/t;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$7;->kSE:Lcom/tencent/mm/modelsimple/r;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,13 +45,13 @@
 
     .prologue
     .line 216
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$7;->ktw:Lcom/tencent/mm/modelsimple/t;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$7;->kSE:Lcom/tencent/mm/modelsimple/r;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
     .line 217
     return-void

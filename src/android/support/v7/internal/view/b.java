@@ -10,28 +10,28 @@ import android.view.MenuInflater;
 public final class b
   extends a
 {
-  final MenuInflater jA;
-  final ActionMode jB;
+  final MenuInflater jR;
+  final ActionMode jS;
   
   public b(Context paramContext, ActionMode paramActionMode)
   {
-    jB = paramActionMode;
-    jA = new c(paramContext);
+    jS = paramActionMode;
+    jR = new c(paramContext);
   }
   
   public final void finish()
   {
-    jB.finish();
+    jS.finish();
   }
   
   public final Menu getMenu()
   {
-    return n.a(jB.getMenu());
+    return n.a(jS.getMenu());
   }
   
   public final void setTitleOptionalHint(boolean paramBoolean)
   {
-    jB.setTitleOptionalHint(paramBoolean);
+    jS.setTitleOptionalHint(paramBoolean);
   }
 }
 

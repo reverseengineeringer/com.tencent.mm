@@ -3,7 +3,7 @@ package com.tencent.mm.modelsearch;
 import java.util.Comparator;
 
 final class f$1
-  implements Comparator
+  implements Comparator<String>
 {}
 
 /* Location:

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic eZ:Landroid/support/v4/view/PagerTabStrip;
+.field final synthetic fw:Landroid/support/v4/view/PagerTabStrip;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 103
-    iput-object p1, p0, Landroid/support/v4/view/PagerTabStrip$1;->eZ:Landroid/support/v4/view/PagerTabStrip;
+    iput-object p1, p0, Landroid/support/v4/view/PagerTabStrip$1;->fw:Landroid/support/v4/view/PagerTabStrip;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,21 +41,19 @@
 
     .prologue
     .line 106
-    iget-object v0, p0, Landroid/support/v4/view/PagerTabStrip$1;->eZ:Landroid/support/v4/view/PagerTabStrip;
+    iget-object v0, p0, Landroid/support/v4/view/PagerTabStrip$1;->fw:Landroid/support/v4/view/PagerTabStrip;
 
-    iget-object v0, v0, Landroid/support/v4/view/PagerTabStrip;->fa:Landroid/support/v4/view/ViewPager;
+    iget-object v0, v0, Landroid/support/v4/view/PagerTabStrip;->fx:Landroid/support/v4/view/ViewPager;
 
-    iget-object v1, p0, Landroid/support/v4/view/PagerTabStrip$1;->eZ:Landroid/support/v4/view/PagerTabStrip;
+    iget-object v1, p0, Landroid/support/v4/view/PagerTabStrip$1;->fw:Landroid/support/v4/view/PagerTabStrip;
 
-    iget-object v1, v1, Landroid/support/v4/view/PagerTabStrip;->fa:Landroid/support/v4/view/ViewPager;
+    iget-object v1, v1, Landroid/support/v4/view/PagerTabStrip;->fx:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v1}, Landroid/support/v4/view/ViewPager;->getCurrentItem()I
-
-    move-result v1
+    iget v1, v1, Landroid/support/v4/view/ViewPager;->gc:I
 
     add-int/lit8 v1, v1, -0x1
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->setCurrentItem(I)V
+    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->s(I)V
 
     .line 107
     return-void

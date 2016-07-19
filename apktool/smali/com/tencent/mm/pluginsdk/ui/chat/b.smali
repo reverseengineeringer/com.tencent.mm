@@ -4,32 +4,32 @@
 
 
 # virtual methods
-.method public abstract aii()Z
+.method public abstract akP()Z
 .end method
 
-.method public abstract aik()Z
+.method public abstract akR()Z
 .end method
 
-.method public abstract ail()Z
+.method public abstract akS()Z
 .end method
 
-.method public abstract aim()V
+.method public abstract akT()V
 .end method
 
-.method public abstract ain()V
+.method public abstract akU()V
 .end method
 
-.method public abstract aio()V
+.method public abstract akV()V
 .end method
 
-.method public abstract ds(Z)V
+.method public abstract dr(Z)V
 .end method
 
 .method public abstract onPause()V
 .end method
 
-.method public abstract qW(Ljava/lang/String;)Z
+.method public abstract release()V
 .end method
 
-.method public abstract release()V
+.method public abstract sr(Ljava/lang/String;)Z
 .end method

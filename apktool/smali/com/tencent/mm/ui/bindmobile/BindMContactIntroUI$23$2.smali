@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kOw:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23;
+.field final synthetic lnM:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 208
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23$2;->kOw:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23$2;->lnM:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,9 +53,9 @@
 
     .line 213
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23$2;->kOw:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23$2;->lnM:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23;->kOs:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23;->lnI:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;->d(Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;)V
 
@@ -75,15 +75,15 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 218
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23$2;->kOw:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23$2;->lnM:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23;->kOs:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
+    iget-object v1, v1, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$23;->lnI:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
 
     const-string/jumbo v2, "setting"
 
     const-string/jumbo v3, ".ui.setting.SettingsPrivacyUI"
 
-    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     goto :goto_0
 

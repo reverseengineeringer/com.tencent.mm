@@ -1,18 +1,24 @@
 package com.tencent.mm.ui;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.tencent.mm.plugin.report.service.g;
 
 final class LauncherUI$42
-  implements DialogInterface.OnClickListener
+  implements View.OnClickListener
 {
   LauncherUI$42(LauncherUI paramLauncherUI) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final void onClick(View paramView)
   {
-    paramDialogInterface.dismiss();
-    knl.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
+    g.gdY.X(10919, "0");
+    LauncherUI.d(kMs);
+    if (LauncherUI.kLA.booleanValue()) {
+      LauncherUI.a(kMs, Boolean.valueOf(true), Boolean.valueOf(true));
+    }
+    if (LauncherUI.kLB.booleanValue()) {
+      LauncherUI.a(kMs, Boolean.valueOf(true), Boolean.valueOf(false));
+    }
   }
 }
 

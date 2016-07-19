@@ -44,7 +44,7 @@
     if-ne v1, v2, :cond_2
 
     .line 20
-    sget-object v1, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v1, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     new-array v2, v3, [Ljava/lang/Object;
 
@@ -54,7 +54,7 @@
 
     aput-object v3, v2, v4
 
-    invoke-virtual {v1, v5, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v1, v5, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     .line 24
     :cond_0
@@ -86,7 +86,7 @@
     if-ne v1, v2, :cond_0
 
     .line 22
-    sget-object v1, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v1, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     new-array v2, v3, [Ljava/lang/Object;
 
@@ -96,7 +96,7 @@
 
     aput-object v3, v2, v4
 
-    invoke-virtual {v1, v5, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v1, v5, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method

@@ -2,7 +2,7 @@ package com.tencent.mm.ui.tools;
 
 import android.os.Message;
 import android.view.MotionEvent;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import java.util.TimerTask;
 
 final class CropImageView$3$1
@@ -12,13 +12,13 @@ final class CropImageView$3$1
   
   public final void run()
   {
-    if (CropImageView.z(luW.luU))
+    if (CropImageView.z(lVY.lVW))
     {
       Message localMessage = new Message();
       what = 4661;
-      obj = luV;
-      CropImageView.l(luW.luU).sendMessage(localMessage);
-      CropImageView.c(luW.luU, false);
+      obj = lVX;
+      CropImageView.l(lVY.lVW).sendMessage(localMessage);
+      CropImageView.c(lVY.lVW, false);
     }
   }
 }

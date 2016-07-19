@@ -1,22 +1,22 @@
 package com.tencent.mm.ui.bindlinkedin;
 
 import android.app.Dialog;
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah.a;
 
 final class ListLinkedInFriendUI$10
-  implements af.a
+  implements ah.a
 {
   ListLinkedInFriendUI$10(ListLinkedInFriendUI paramListLinkedInFriendUI) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    if (ListLinkedInFriendUI.j(kOk) != null)
+    if (ListLinkedInFriendUI.j(lnA) != null)
     {
-      ListLinkedInFriendUI.j(kOk).dismiss();
-      ListLinkedInFriendUI.k(kOk);
+      ListLinkedInFriendUI.j(lnA).dismiss();
+      ListLinkedInFriendUI.k(lnA);
     }
-    ListLinkedInFriendUI.i(kOk);
-    ListLinkedInFriendUI.d(kOk);
+    ListLinkedInFriendUI.i(lnA);
+    ListLinkedInFriendUI.d(lnA);
     return false;
   }
 }

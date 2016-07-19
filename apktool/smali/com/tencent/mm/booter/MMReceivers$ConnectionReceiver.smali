@@ -51,7 +51,7 @@
 
     .line 41
     :cond_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew="
+    const-string/jumbo v0, "MicroMsg.ConnectionReceiver"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -75,28 +75,28 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 42
     const-string/jumbo v0, "connection"
 
-    invoke-static {p1, v0}, Lcom/tencent/mm/booter/b;->q(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v0}, Lcom/tencent/mm/booter/b;->r(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
     .line 44
-    invoke-static {p1}, Lcom/tencent/mm/booter/MMReceivers$AlarmReceiver;->as(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/tencent/mm/booter/MMReceivers$AlarmReceiver;->ap(Landroid/content/Context;)V
 
     .line 45
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->appenderFlush()V
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->appenderFlush()V
 
     goto :goto_0
 
     .line 49
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/network/z;->Ff()Lcom/tencent/mm/network/z$a;
+    invoke-static {}, Lcom/tencent/mm/network/z;->FB()Lcom/tencent/mm/network/z$a;
 
     move-result-object v0
 
@@ -136,14 +136,14 @@
 
     .line 61
     :cond_3
-    const-string/jumbo v1, "!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew="
+    const-string/jumbo v1, "MicroMsg.ConnectionReceiver"
 
     const-string/jumbo v2, "NetworkAvailable: false"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 62
-    invoke-static {}, Lcom/tencent/mm/network/z;->Ff()Lcom/tencent/mm/network/z$a;
+    invoke-static {}, Lcom/tencent/mm/network/z;->FB()Lcom/tencent/mm/network/z$a;
 
     move-result-object v1
 
@@ -159,7 +159,7 @@
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->getSubtypeName()Ljava/lang/String;
 
     :cond_5
-    invoke-interface {v1, v2}, Lcom/tencent/mm/network/z$a;->ao(Z)V
+    invoke-interface {v1, v2}, Lcom/tencent/mm/network/z$a;->R(Z)V
 
     goto :goto_0
 
@@ -167,11 +167,11 @@
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew="
+    const-string/jumbo v0, "MicroMsg.ConnectionReceiver"
 
     const-string/jumbo v2, "getActiveNetworkInfo failed."
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -179,14 +179,14 @@
 
     .line 65
     :cond_6
-    const-string/jumbo v1, "!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew="
+    const-string/jumbo v1, "MicroMsg.ConnectionReceiver"
 
     const-string/jumbo v2, "NetworkAvailable: true"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 66
-    invoke-static {}, Lcom/tencent/mm/network/z;->Ff()Lcom/tencent/mm/network/z$a;
+    invoke-static {}, Lcom/tencent/mm/network/z;->FB()Lcom/tencent/mm/network/z$a;
 
     move-result-object v1
 
@@ -196,7 +196,7 @@
 
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->getSubtypeName()Ljava/lang/String;
 
-    invoke-interface {v1, v2}, Lcom/tencent/mm/network/z$a;->ao(Z)V
+    invoke-interface {v1, v2}, Lcom/tencent/mm/network/z$a;->R(Z)V
 
     goto/16 :goto_0
 .end method

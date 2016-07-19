@@ -1,14 +1,15 @@
 package com.tencent.mm.modelmulti;
 
+import com.tencent.mm.protocal.b.am;
 import java.util.LinkedList;
 
 final class a$b
 {
-  int bPb = 0;
-  String bUD;
-  int bUG = 0;
-  LinkedList bUH = new LinkedList();
-  boolean bUI = true;
+  int bIw = 0;
+  String bOe;
+  int bOh = 0;
+  LinkedList<am> bOi = new LinkedList();
+  boolean bOj = true;
   
   a$b(a parama) {}
 }

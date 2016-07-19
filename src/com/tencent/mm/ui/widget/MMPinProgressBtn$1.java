@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.widget;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class MMPinProgressBtn$1
   implements Runnable
@@ -9,20 +9,20 @@ final class MMPinProgressBtn$1
   
   public final void run()
   {
-    if (lFl.getVisibility() != 0)
+    if (mgb.getVisibility() != 0)
     {
-      u.i("!44@/B4Tb64lLpKIBJ9Tuq9FD5Dg5gDMesCqWRQeWfcTBvw=", "cur progress bar not visiable, stop auto pregress");
+      v.i("MicroMsg.MMPinProgressBtn", "cur progress bar not visiable, stop auto pregress");
       return;
     }
-    MMPinProgressBtn.a(lFl);
-    if (MMPinProgressBtn.b(lFl) >= MMPinProgressBtn.c(lFl))
+    MMPinProgressBtn.a(mgb);
+    if (MMPinProgressBtn.b(mgb) >= MMPinProgressBtn.c(mgb))
     {
-      MMPinProgressBtn.d(lFl);
-      u.i("!44@/B4Tb64lLpKIBJ9Tuq9FD5Dg5gDMesCqWRQeWfcTBvw=", "match auto progress max, return");
+      MMPinProgressBtn.d(mgb);
+      v.i("MicroMsg.MMPinProgressBtn", "match auto progress max, return");
       return;
     }
-    lFl.invalidate();
-    lFl.postDelayed(MMPinProgressBtn.e(lFl), 200L);
+    mgb.invalidate();
+    mgb.postDelayed(MMPinProgressBtn.e(mgb), 200L);
   }
 }
 

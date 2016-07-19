@@ -28,15 +28,17 @@ import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import com.tencent.mm.model.ah;
+import com.tencent.mm.plugin.report.service.g;
 import com.tencent.mm.pluginsdk.model.app.p;
 import com.tencent.mm.pluginsdk.model.downloader.d.a;
 import com.tencent.mm.pluginsdk.model.downloader.k;
 import com.tencent.mm.pluginsdk.model.q;
 import com.tencent.mm.pluginsdk.model.r;
 import com.tencent.mm.pluginsdk.model.r.a;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.sdk.platformtools.f;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.h;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.i;
 import com.tencent.mm.ui.j;
@@ -49,113 +51,112 @@ import java.util.List;
 public class AppChooserUI
   extends MMActivity
 {
-  private int asc = 0;
-  private PackageManager iQJ;
-  a iQK;
-  private Intent iQL = null;
-  private int iQM;
-  private String iQN = null;
-  private Bundle iQO = null;
-  private q iQP = null;
-  private ArrayList iQQ = null;
-  private c iQR = null;
-  private c iQS = new c();
-  private List iQT;
-  private String iQU;
-  private int iQV;
-  private int iQW;
-  private boolean iQX = false;
-  private boolean iQY = false;
-  private boolean iQZ = false;
-  private long iRa;
-  private e iRb;
-  private AdapterView.OnItemClickListener iRc = new AdapterView.OnItemClickListener()
+  private PackageManager jnT;
+  a jnU;
+  private Intent jnV = null;
+  private int jnW;
+  private String jnX = null;
+  private Bundle jnY = null;
+  private q jnZ = null;
+  private ArrayList<String> joa = null;
+  private c job = null;
+  private c joc = new c();
+  private List<c> jod;
+  private String joe;
+  private int jof;
+  private int jog;
+  private boolean joh = false;
+  private boolean joi = false;
+  private boolean joj = false;
+  private long jok;
+  private e jol;
+  private AdapterView.OnItemClickListener jom = new AdapterView.OnItemClickListener()
   {
-    public final void onItemClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+    public final void onItemClick(AdapterView<?> paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
     {
       if (AppChooserUI.a(AppChooserUI.this) != null)
       {
-        AppChooserUI.a(AppChooserUI.this, AppChooserUI.a(AppChooserUI.this).oM(paramAnonymousInt));
+        AppChooserUI.a(AppChooserUI.this, AppChooserUI.a(AppChooserUI.this).qz(paramAnonymousInt));
         AppChooserUI.a(AppChooserUI.this).notifyDataSetChanged();
         if ((AppChooserUI.b(AppChooserUI.this) != null) && (AppChooserUI.b(AppChooserUI.this).isShowing()))
         {
-          if ((AppChooserUI.c(AppChooserUI.this) == null) || (!ciRp) || ((ciRs) && ((ciRq) || (AppChooserUI.d(AppChooserUI.this) >= AppChooserUI.e(AppChooserUI.this))))) {
+          if ((AppChooserUI.c(AppChooserUI.this) == null) || (!cjoz) || ((ceEy) && ((cjoA) || (AppChooserUI.d(AppChooserUI.this) >= AppChooserUI.e(AppChooserUI.this))))) {
             break label249;
           }
-          AppChooserUI.b(AppChooserUI.this).gB(false);
+          AppChooserUI.b(AppChooserUI.this).gZ(false);
         }
       }
       for (;;)
       {
-        if (((AppChooserUI.f(AppChooserUI.this) == 6) || (AppChooserUI.g(AppChooserUI.this) == 2)) && (AppChooserUI.c(AppChooserUI.this) != null) && (ciRm != null))
+        if (((AppChooserUI.f(AppChooserUI.this) == 6) || (AppChooserUI.g(AppChooserUI.this) == 2)) && (AppChooserUI.c(AppChooserUI.this) != null) && (cjow != null))
         {
-          AppChooserUI.a(AppChooserUI.this, ciRm.activityInfo.packageName, false);
-          com.tencent.mm.plugin.report.service.h.fUJ.g(12809, new Object[] { Integer.valueOf(4), ciRm.activityInfo.packageName });
+          AppChooserUI.a(AppChooserUI.this, cjow.activityInfo.packageName, false);
+          g.gdY.h(12809, new Object[] { Integer.valueOf(4), cjow.activityInfo.packageName });
         }
         return;
         label249:
-        AppChooserUI.b(AppChooserUI.this).gB(true);
+        AppChooserUI.b(AppChooserUI.this).gZ(true);
       }
     }
   };
-  private View.OnClickListener iRd = new View.OnClickListener()
+  private View.OnClickListener jon = new View.OnClickListener()
   {
     public final void onClick(View paramAnonymousView)
     {
-      if ((AppChooserUI.c(AppChooserUI.this) != null) && (ciRm != null))
+      if ((AppChooserUI.c(AppChooserUI.this) != null) && (cjow != null))
       {
-        ah.tD().rn().set(AppChooserUI.a(AppChooserUI.this, 274528), ciRm.activityInfo.packageName);
-        AppChooserUI.a(AppChooserUI.this, ciRm.activityInfo.packageName, true);
+        ah.tE().ro().set(AppChooserUI.a(AppChooserUI.this, 274528), cjow.activityInfo.packageName);
+        AppChooserUI.a(AppChooserUI.this, cjow.activityInfo.packageName, true);
       }
     }
   };
-  private View.OnClickListener iRe = new View.OnClickListener()
+  private View.OnClickListener joo = new View.OnClickListener()
   {
     public final void onClick(View paramAnonymousView)
     {
-      if ((AppChooserUI.c(AppChooserUI.this) != null) && (ciRm != null)) {
-        AppChooserUI.a(AppChooserUI.this, ciRm.activityInfo.packageName, false);
+      if ((AppChooserUI.c(AppChooserUI.this) != null) && (cjow != null)) {
+        AppChooserUI.a(AppChooserUI.this, cjow.activityInfo.packageName, false);
       }
     }
   };
-  private View.OnClickListener iRf = new View.OnClickListener()
+  private View.OnClickListener jop = new View.OnClickListener()
   {
     public final void onClick(View paramAnonymousView)
     {
-      u.i("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "mDownloadOnClickListener");
+      v.i("MicroMsg.AppChooserUI", "mDownloadOnClickListener");
       int i;
       if (AppChooserUI.a(AppChooserUI.this) != null)
       {
-        i = aiRj;
-        if (i != AppChooserUI.f.iRz) {
+        i = ajot;
+        if (i != AppChooserUI.f.joI) {
           break label298;
         }
         if ((AppChooserUI.b(AppChooserUI.this) != null) && (AppChooserUI.b(AppChooserUI.this).isShowing()))
         {
-          aiRj = AppChooserUI.f.iRA;
+          ajot = AppChooserUI.f.joJ;
           AppChooserUI.a(AppChooserUI.this).notifyDataSetChanged();
         }
         paramAnonymousView = new d.a();
         if (AppChooserUI.f(AppChooserUI.this) != 1) {
           break label245;
         }
-        paramAnonymousView.Ac("http://mdc.html5.qq.com/d/directdown.jsp?channel_id=10375");
-        paramAnonymousView.Ad(AppChooserUI.h(AppChooserUI.this).aPk());
-        paramAnonymousView.oh(1);
-        paramAnonymousView.gj(true);
-        com.tencent.mm.pluginsdk.model.downloader.c.aQc().a(iCw);
-        r.aPt();
-        r.oe(AppChooserUI.g(AppChooserUI.this));
+        paramAnonymousView.Cc("http://mdc.html5.qq.com/d/directdown.jsp?channel_id=10375");
+        paramAnonymousView.Cd(AppChooserUI.h(AppChooserUI.this).aTQ());
+        paramAnonymousView.pM(1);
+        paramAnonymousView.gH(true);
+        com.tencent.mm.pluginsdk.model.downloader.c.aUL().a(iZk);
+        r.aTZ();
+        r.pK(AppChooserUI.g(AppChooserUI.this));
         if (AppChooserUI.g(AppChooserUI.this) == 0)
         {
           if (!AppChooserUI.i(AppChooserUI.this)) {
             break label262;
           }
-          com.tencent.mm.plugin.report.service.h.fUJ.g(11168, new Object[] { Integer.valueOf(4), Integer.valueOf(AppChooserUI.f(AppChooserUI.this)) });
+          g.gdY.h(11168, new Object[] { Integer.valueOf(4), Integer.valueOf(AppChooserUI.f(AppChooserUI.this)) });
         }
         label208:
         if (AppChooserUI.g(AppChooserUI.this) == 1) {
-          com.tencent.mm.plugin.report.service.h.fUJ.g(12809, new Object[] { Integer.valueOf(5), "" });
+          g.gdY.h(12809, new Object[] { Integer.valueOf(5), "" });
         }
       }
       label245:
@@ -169,52 +170,52 @@ public class AppChooserUI
           do
           {
             return;
-            paramAnonymousView.Ac(AppChooserUI.h(AppChooserUI.this).FG());
+            paramAnonymousView.Cc(AppChooserUI.h(AppChooserUI.this).Gb());
             break;
-            com.tencent.mm.plugin.report.service.h.fUJ.g(11168, new Object[] { Integer.valueOf(3), Integer.valueOf(AppChooserUI.f(AppChooserUI.this)) });
+            g.gdY.h(11168, new Object[] { Integer.valueOf(3), Integer.valueOf(AppChooserUI.f(AppChooserUI.this)) });
             break label208;
-          } while (i != AppChooserUI.f.iRB);
+          } while (i != AppChooserUI.f.joK);
           paramAnonymousView = AppChooserUI.this;
           long l = AppChooserUI.j(AppChooserUI.this);
-          u.i("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "installRecommendApp");
-          Object localObject = aQccHpath;
-          u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "filepath:%s", new Object[] { localObject });
+          v.i("MicroMsg.AppChooserUI", "installRecommendApp");
+          Object localObject = aULcWpath;
+          v.d("MicroMsg.AppChooserUI", "filepath:%s", new Object[] { localObject });
           localObject = new File((String)localObject);
-          if (p.c(koJ.kpc, Uri.fromFile((File)localObject))) {
+          if (p.c(kNN.kOg, Uri.fromFile((File)localObject))) {
             break label426;
           }
-          ah.tD().rn().set(paramAnonymousView.oL(274560), Long.valueOf(0L));
-        } while (iQK == null);
-        iQK.iRj = AppChooserUI.f.iRz;
-        iQK.notifyDataSetChanged();
+          ah.tE().ro().set(paramAnonymousView.qy(274560), Long.valueOf(0L));
+        } while (jnU == null);
+        jnU.jot = AppChooserUI.f.joI;
+        jnU.notifyDataSetChanged();
         return;
-      } while (iQK == null);
-      iQK.iRj = AppChooserUI.f.iRB;
-      iQK.notifyDataSetChanged();
+      } while (jnU == null);
+      jnU.jot = AppChooserUI.f.joK;
+      jnU.notifyDataSetChanged();
     }
   };
-  private DialogInterface.OnDismissListener iRg = new DialogInterface.OnDismissListener()
+  private DialogInterface.OnDismissListener joq = new DialogInterface.OnDismissListener()
   {
     public final void onDismiss(DialogInterface paramAnonymousDialogInterface)
     {
       finish();
     }
   };
-  private k iRh = new k()
+  private k jor = new k()
   {
-    public final void bu(long paramAnonymousLong) {}
+    public final void bF(long paramAnonymousLong) {}
     
-    public final void bv(long paramAnonymousLong) {}
+    public final void bG(long paramAnonymousLong) {}
     
-    public final void c(long paramAnonymousLong, String paramAnonymousString)
+    public final void d(long paramAnonymousLong, String paramAnonymousString)
     {
-      u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "onTaskFinished downloadId: %d, savedPath: %s", new Object[] { Long.valueOf(paramAnonymousLong), paramAnonymousString });
-      if ((!ay.kz(paramAnonymousString)) && (com.tencent.mm.a.e.ax(paramAnonymousString)))
+      v.d("MicroMsg.AppChooserUI", "onTaskFinished downloadId: %d, savedPath: %s", new Object[] { Long.valueOf(paramAnonymousLong), paramAnonymousString });
+      if ((!be.kf(paramAnonymousString)) && (com.tencent.mm.a.e.aB(paramAnonymousString)))
       {
-        ah.tD().rn().set(AppChooserUI.a(AppChooserUI.this, 274560), Long.valueOf(AppChooserUI.j(AppChooserUI.this)));
+        ah.tE().ro().set(AppChooserUI.a(AppChooserUI.this, 274560), Long.valueOf(AppChooserUI.j(AppChooserUI.this)));
         if ((AppChooserUI.a(AppChooserUI.this) != null) && (AppChooserUI.j(AppChooserUI.this) == paramAnonymousLong))
         {
-          aiRj = AppChooserUI.f.iRB;
+          ajot = AppChooserUI.f.joK;
           AppChooserUI.a(AppChooserUI.this).notifyDataSetChanged();
         }
       }
@@ -222,77 +223,78 @@ public class AppChooserUI
     
     public final void onTaskFailed(long paramAnonymousLong)
     {
-      u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "onTaskFailed downloadId:%s", new Object[] { Long.valueOf(paramAnonymousLong) });
-      ah.tD().rn().set(AppChooserUI.a(AppChooserUI.this, 274560), Long.valueOf(0L));
+      v.d("MicroMsg.AppChooserUI", "onTaskFailed downloadId:%s", new Object[] { Long.valueOf(paramAnonymousLong) });
+      ah.tE().ro().set(AppChooserUI.a(AppChooserUI.this, 274560), Long.valueOf(0L));
       if (AppChooserUI.a(AppChooserUI.this) != null)
       {
-        aiRj = AppChooserUI.f.iRz;
+        ajot = AppChooserUI.f.joI;
         AppChooserUI.a(AppChooserUI.this).notifyDataSetChanged();
       }
     }
     
     public final void onTaskPaused(long paramAnonymousLong)
     {
-      u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "onTaskPaused downloadId:%s", new Object[] { Long.valueOf(paramAnonymousLong) });
-      ah.tD().rn().set(AppChooserUI.a(AppChooserUI.this, 274560), Long.valueOf(0L));
+      v.d("MicroMsg.AppChooserUI", "onTaskPaused downloadId:%s", new Object[] { Long.valueOf(paramAnonymousLong) });
+      ah.tE().ro().set(AppChooserUI.a(AppChooserUI.this, 274560), Long.valueOf(0L));
       if (AppChooserUI.a(AppChooserUI.this) != null)
       {
-        aiRj = AppChooserUI.f.iRz;
+        ajot = AppChooserUI.f.joI;
         AppChooserUI.a(AppChooserUI.this).notifyDataSetChanged();
       }
     }
     
     public final void onTaskRemoved(long paramAnonymousLong)
     {
-      u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "onTaskRemove downloadId:%s", new Object[] { Long.valueOf(paramAnonymousLong) });
+      v.d("MicroMsg.AppChooserUI", "onTaskRemove downloadId:%s", new Object[] { Long.valueOf(paramAnonymousLong) });
     }
     
     public final void onTaskStarted(long paramAnonymousLong, String paramAnonymousString)
     {
       AppChooserUI.a(AppChooserUI.this, paramAnonymousLong);
-      ah.tD().rn().set(AppChooserUI.a(AppChooserUI.this, 274560), Long.valueOf(AppChooserUI.j(AppChooserUI.this)));
-      u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "onTaskStarted downloadId:%s savedFilePath:%s", new Object[] { String.valueOf(paramAnonymousLong), paramAnonymousString });
+      ah.tE().ro().set(AppChooserUI.a(AppChooserUI.this, 274560), Long.valueOf(AppChooserUI.j(AppChooserUI.this)));
+      v.d("MicroMsg.AppChooserUI", "onTaskStarted downloadId:%s savedFilePath:%s", new Object[] { String.valueOf(paramAnonymousLong), paramAnonymousString });
     }
   };
   private String mimeType = null;
+  private int scene = 0;
   
   private static Drawable a(Resources paramResources, int paramInt)
   {
     try
     {
-      paramResources = com.tencent.mm.ax.a.b(paramResources, paramInt);
+      paramResources = com.tencent.mm.ba.a.b(paramResources, paramInt);
       return paramResources;
     }
     catch (Resources.NotFoundException paramResources) {}
     return null;
   }
   
-  private List a(Intent paramIntent, boolean paramBoolean, ArrayList paramArrayList)
+  private List<c> a(Intent paramIntent, boolean paramBoolean, ArrayList<String> paramArrayList)
   {
     ArrayList localArrayList = new ArrayList();
-    paramIntent = iQJ.queryIntentActivities(paramIntent, 65536);
-    Object localObject = iQP.aPl();
+    paramIntent = jnT.queryIntentActivities(paramIntent, 65536);
+    Object localObject = jnZ.aTR();
     label103:
     int j;
     int i;
     int k;
-    if (!ay.kz(iAJ))
+    if (!be.kf(iXj))
     {
-      iQN = iAJ;
-      if (iAH > 0) {
-        iQS.iRo = getResources().getDrawable(iAH);
+      jnX = iXj;
+      if (iXh > 0) {
+        joc.joy = getResources().getDrawable(iXh);
       }
-      if (iAK <= 0) {
+      if (iXk <= 0) {
         break label385;
       }
-      iQS.iRn = getResources().getString(iAK);
-      iQS.iRp = true;
-      iQS.iRq = iQX;
-      if (iQX) {
-        iQS.iRs = true;
+      joc.jox = getResources().getString(iXk);
+      joc.joz = true;
+      joc.joA = joh;
+      if (joh) {
+        joc.eEy = true;
       }
-      if (iQY) {
-        iQS.iRr = true;
+      if (joi) {
+        joc.joB = true;
       }
       j = 0;
       i = 0;
@@ -311,7 +313,7 @@ public class AppChooserUI
       if (j >= m) {
         break label437;
       }
-      u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "cpan name:%s", new Object[] { getactivityInfo.name });
+      v.d("MicroMsg.AppChooserUI", "cpan name:%s", new Object[] { getactivityInfo.name });
       localObject = (ResolveInfo)paramIntent.get(j);
       if (localObject == null) {
         break label434;
@@ -320,15 +322,15 @@ public class AppChooserUI
       if ((paramArrayList != null) && (!paramArrayList.isEmpty()) && (!paramArrayList.contains(str))) {
         break label434;
       }
-      if (!iQP.zC(str)) {
+      if (!jnZ.By(str)) {
         break label400;
       }
-      iQS.iRm = ((ResolveInfo)localObject);
-      iQS.iRs = true;
-      if (((paramBoolean) || (!iQX)) && ((paramBoolean) || (!iQS.iRs))) {
+      joc.jow = ((ResolveInfo)localObject);
+      joc.eEy = true;
+      if (((paramBoolean) || (!joh)) && ((paramBoolean) || (!joc.eEy))) {
         break label434;
       }
-      localArrayList.add(0, iQS);
+      localArrayList.add(0, joc);
       i = 1;
     }
     label385:
@@ -338,26 +340,26 @@ public class AppChooserUI
     {
       j += 1;
       break label190;
-      if (iAI <= 0) {
+      if (iXi <= 0) {
         break;
       }
-      iQN = getResources().getString(iAI);
+      jnX = getResources().getString(iXi);
       break;
-      iQS.iRn = iAL;
+      joc.jox = iXl;
       break label103;
-      localArrayList.add(new c((ResolveInfo)localObject, iQP.a(koJ.kpc, (ResolveInfo)localObject)));
+      localArrayList.add(new c((ResolveInfo)localObject, jnZ.a(kNN.kOg, (ResolveInfo)localObject)));
     }
     label437:
     if ((paramBoolean) && (k == 0))
     {
-      if ((iQM != 0) || (mimeType == null)) {
+      if ((jnW != 0) || (mimeType == null)) {
         break label631;
       }
-      localArrayList.add(0, iQS);
-      if (!iQY) {
+      localArrayList.add(0, joc);
+      if (!joi) {
         break label598;
       }
-      com.tencent.mm.plugin.report.service.h.fUJ.g(11168, new Object[] { Integer.valueOf(2), Integer.valueOf(asc) });
+      g.gdY.h(11168, new Object[] { Integer.valueOf(2), Integer.valueOf(scene) });
     }
     for (;;)
     {
@@ -366,28 +368,28 @@ public class AppChooserUI
       while (i >= 0)
       {
         paramArrayList = (c)localArrayList.get(i);
-        if (iRm != null)
+        if (jow != null)
         {
-          paramArrayList = iRm.activityInfo.packageName;
-          if ((!ay.kz(paramArrayList)) && (!paramIntent.add(paramArrayList))) {
+          paramArrayList = jow.activityInfo.packageName;
+          if ((!be.kf(paramArrayList)) && (!paramIntent.add(paramArrayList))) {
             localArrayList.remove(i);
           }
         }
         i -= 1;
       }
       label598:
-      com.tencent.mm.plugin.report.service.h.fUJ.g(11168, new Object[] { Integer.valueOf(1), Integer.valueOf(asc) });
+      g.gdY.h(11168, new Object[] { Integer.valueOf(1), Integer.valueOf(scene) });
       continue;
       label631:
-      localArrayList.add(0, iQS);
+      localArrayList.add(0, joc);
     }
     return localArrayList;
   }
   
-  private boolean aSL()
+  private boolean aXE()
   {
-    u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "mShouldShowRecommendApp %s | mAppRecommendCount %d | mAppMaxRecommendCount %d | isOverseasUser %s", new Object[] { Boolean.valueOf(iQZ), Integer.valueOf(iQV), Integer.valueOf(iQW), Boolean.valueOf(ay.AL()) });
-    return (iQZ) && (iQV < iQW) && (!ay.AL()) && (f.akC != 1);
+    v.d("MicroMsg.AppChooserUI", "mShouldShowRecommendApp %s | mAppRecommendCount %d | mAppMaxRecommendCount %d | isOverseasUser %s", new Object[] { Boolean.valueOf(joj), Integer.valueOf(jof), Integer.valueOf(jog), Boolean.valueOf(be.AX()) });
+    return (joj) && (jof < jog) && (!be.AX()) && (f.Xv != 1);
   }
   
   private Drawable b(ResolveInfo paramResolveInfo)
@@ -397,7 +399,7 @@ public class AppChooserUI
       Drawable localDrawable;
       if ((resolvePackageName != null) && (icon != 0))
       {
-        localDrawable = a(iQJ.getResourcesForApplication(resolvePackageName), icon);
+        localDrawable = a(jnT.getResourcesForApplication(resolvePackageName), icon);
         if (localDrawable != null) {
           return localDrawable;
         }
@@ -405,7 +407,7 @@ public class AppChooserUI
       int i = paramResolveInfo.getIconResource();
       if (i != 0)
       {
-        localDrawable = a(iQJ.getResourcesForApplication(activityInfo.packageName), i);
+        localDrawable = a(jnT.getResourcesForApplication(activityInfo.packageName), i);
         if (localDrawable != null) {
           return ???;
         }
@@ -415,11 +417,11 @@ public class AppChooserUI
     {
       for (;;)
       {
-        u.e("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "Couldn't find resources for package", new Object[] { localNameNotFoundException });
+        v.e("MicroMsg.AppChooserUI", "Couldn't find resources for package", new Object[] { localNameNotFoundException });
       }
       return localNameNotFoundException;
     }
-    return paramResolveInfo.loadIcon(iQJ);
+    return paramResolveInfo.loadIcon(jnT);
   }
   
   private void c(int paramInt, String paramString, boolean paramBoolean)
@@ -427,7 +429,7 @@ public class AppChooserUI
     Intent localIntent = new Intent();
     localIntent.putExtra("selectpkg", paramString);
     localIntent.putExtra("isalways", paramBoolean);
-    localIntent.putExtra("transferback", iQO);
+    localIntent.putExtra("transferback", jnY);
     setResult(paramInt, localIntent);
     finish();
   }
@@ -435,14 +437,6 @@ public class AppChooserUI
   protected final int getLayoutId()
   {
     return -1;
-  }
-  
-  final int oL(int paramInt)
-  {
-    if (mimeType != null) {
-      return iQM + paramInt + mimeType.hashCode();
-    }
-    return iQM + paramInt;
   }
   
   public void onBackPressed()
@@ -454,45 +448,45 @@ public class AppChooserUI
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    r.aPt();
-    r.ob(iQM);
+    r.aTZ();
+    r.pH(jnW);
     paramBundle = getIntent();
     Object localObject = paramBundle.getParcelableExtra("targetintent");
     if (!(localObject instanceof Intent))
     {
-      u.w("ChooseActivity", "Target is not an intent: " + localObject);
+      v.w("ChooseActivity", "Target is not an intent: " + localObject);
       c(0, null, false);
       return;
     }
-    iQL = ((Intent)localObject);
+    jnV = ((Intent)localObject);
     localObject = paramBundle.getStringExtra("title");
-    iQM = paramBundle.getIntExtra("type", 0);
-    iQO = paramBundle.getBundleExtra("transferback");
-    iQQ = paramBundle.getStringArrayListExtra("targetwhitelist");
-    iQY = paramBundle.getBooleanExtra("needupate", false);
+    jnW = paramBundle.getIntExtra("type", 0);
+    jnY = paramBundle.getBundleExtra("transferback");
+    joa = paramBundle.getStringArrayListExtra("targetwhitelist");
+    joi = paramBundle.getBooleanExtra("needupate", false);
     mimeType = paramBundle.getStringExtra("mimetype");
-    asc = paramBundle.getIntExtra("scene", 0);
+    scene = paramBundle.getIntExtra("scene", 0);
     int i;
-    if (ah.rh())
+    if (ah.rg())
     {
-      iQU = ((String)ah.tD().rn().get(oL(274528), ""));
-      if ((TextUtils.isEmpty(iQU)) || (!p.m(koJ.kpc, iQU)) || ((iQQ != null) && (!iQQ.isEmpty()) && (!iQQ.contains(iQU)))) {
+      joe = ((String)ah.tE().ro().get(qy(274528), ""));
+      if ((TextUtils.isEmpty(joe)) || (!p.n(kNN.kOg, joe)) || ((joa != null) && (!joa.isEmpty()) && (!joa.contains(joe)))) {
         break label975;
       }
-      Intent localIntent = new Intent(iQL);
-      localIntent.setPackage(iQU);
-      if (!ay.n(this, localIntent)) {
+      Intent localIntent = new Intent(jnV);
+      localIntent.setPackage(joe);
+      if (!be.n(this, localIntent)) {
         break label318;
       }
       i = 1;
     }
     for (;;)
     {
-      if ((i != 0) && (asc != 6))
+      if ((i != 0) && (scene != 6))
       {
-        c(-1, iQU, true);
+        c(-1, joe, true);
         return;
-        u.e("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "acc not ready");
+        v.e("MicroMsg.AppChooserUI", "acc not ready");
         c(4097, null, false);
         return;
         label318:
@@ -500,39 +494,39 @@ public class AppChooserUI
       }
       else
       {
-        iQJ = getPackageManager();
-        iQK = new a();
-        r.aPt();
-        iQP = r.l(iQM, paramBundle.getBundleExtra("key_recommend_params"));
-        iQX = iQP.cK(koJ.kpc);
-        iQV = ((Integer)ah.tD().rn().get(274496 + iQM, Integer.valueOf(0))).intValue();
-        r.aPt();
-        iQW = r.oa(iQM);
-        u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "jiaminchen mRecommendAppAvailable is %s, mAppRecommendCount is %d", new Object[] { String.valueOf(iQX), Integer.valueOf(iQV) });
-        iQZ = true;
-        if (iQV >= iQW)
+        jnT = getPackageManager();
+        jnU = new a();
+        r.aTZ();
+        jnZ = r.m(jnW, paramBundle.getBundleExtra("key_recommend_params"));
+        joh = jnZ.cH(kNN.kOg);
+        jof = ((Integer)ah.tE().ro().get(274496 + jnW, Integer.valueOf(0))).intValue();
+        r.aTZ();
+        jog = r.pG(jnW);
+        v.d("MicroMsg.AppChooserUI", "jiaminchen mRecommendAppAvailable is %s, mAppRecommendCount is %d", new Object[] { String.valueOf(joh), Integer.valueOf(jof) });
+        joj = true;
+        if (jof >= jog)
         {
           i = 1;
-          iQT = a(iQL, aSL(), iQQ);
-          if ((i == 0) && (!iQX)) {
-            ah.tD().rn().set(274496 + iQM, Integer.valueOf(iQV + 1));
+          jod = a(jnV, aXE(), joa);
+          if ((i == 0) && (!joh)) {
+            ah.tE().ro().set(274496 + jnW, Integer.valueOf(jof + 1));
           }
-          if (!iQX) {
+          if (!joh) {
             break label635;
           }
-          r.aPt();
-          r.od(iQM);
+          r.aTZ();
+          r.pJ(jnW);
         }
         for (;;)
         {
-          if ((iQT != null) && (iQT.size() == 1) && ((!aSL()) || (iQX)))
+          if ((jod != null) && (jod.size() == 1) && ((!aXE()) || (joh)))
           {
-            paramBundle = (c)iQT.get(0);
+            paramBundle = (c)jod.get(0);
             if (paramBundle != null)
             {
-              if (iRm != null)
+              if (jow != null)
               {
-                c(-1, iRm.activityInfo.packageName, false);
+                c(-1, jow.activityInfo.packageName, false);
                 return;
                 i = 0;
                 break;
@@ -540,8 +534,8 @@ public class AppChooserUI
                 if (i != 0) {
                   continue;
                 }
-                r.aPt();
-                r.oc(iQM);
+                r.aTZ();
+                r.pI(jnW);
                 continue;
               }
               c(4098, null, false);
@@ -551,33 +545,33 @@ public class AppChooserUI
             return;
           }
         }
-        qa(8);
-        if ((iQT != null) && (!iQT.isEmpty()))
+        rP(8);
+        if ((jod != null) && (!jod.isEmpty()))
         {
-          iQK.dfX = iQT;
-          iRa = ((Long)ah.tD().rn().get(oL(274560), Long.valueOf(0L))).longValue();
-          paramBundle = com.tencent.mm.pluginsdk.model.downloader.c.aQc().cH(iRa);
-          u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "downloadId:" + iRa + ", status:" + status);
-          if ((3 == status) && (com.tencent.mm.a.e.ax(path)) && (iQK != null))
+          jnU.deZ = jod;
+          jok = ((Long)ah.tE().ro().get(qy(274560), Long.valueOf(0L))).longValue();
+          paramBundle = com.tencent.mm.pluginsdk.model.downloader.c.aUL().cW(jok);
+          v.d("MicroMsg.AppChooserUI", "downloadId:" + jok + ", status:" + status);
+          if ((3 == status) && (com.tencent.mm.a.e.aB(path)) && (jnU != null))
           {
-            iQK.iRj = f.iRB;
-            iQK.notifyDataSetChanged();
+            jnU.jot = f.joK;
+            jnU.notifyDataSetChanged();
           }
-          iRb = new e(koJ.kpc);
-          iRb.setTitle((CharSequence)localObject);
-          iRb.iRx = iRc;
-          iRb.iRe = iRe;
-          iRb.iRy = iRd;
-          iRb.cTk = iQK;
-          iRb.setOnDismissListener(iRg);
-          iRb.show();
-          if ((!iQY) && (iQX) && (i == 0))
+          jol = new e(kNN.kOg);
+          jol.setTitle((CharSequence)localObject);
+          jol.joG = jom;
+          jol.joo = joo;
+          jol.joH = jon;
+          jol.cQB = jnU;
+          jol.setOnDismissListener(joq);
+          jol.show();
+          if ((!joi) && (joh) && (i == 0))
           {
-            iQR = iQS;
-            iRb.gB(true);
+            job = joc;
+            jol.gZ(true);
           }
-          com.tencent.mm.pluginsdk.model.downloader.c.aQc();
-          com.tencent.mm.pluginsdk.model.downloader.a.a(iRh);
+          com.tencent.mm.pluginsdk.model.downloader.c.aUL();
+          com.tencent.mm.pluginsdk.model.downloader.a.a(jor);
           return;
         }
         c(4097, null, false);
@@ -591,41 +585,49 @@ public class AppChooserUI
   protected void onDestroy()
   {
     super.onDestroy();
-    com.tencent.mm.pluginsdk.model.downloader.c.aQc();
-    com.tencent.mm.pluginsdk.model.downloader.a.b(iRh);
-    if (iRb != null) {
-      iRb.dismiss();
+    com.tencent.mm.pluginsdk.model.downloader.c.aUL();
+    com.tencent.mm.pluginsdk.model.downloader.a.b(jor);
+    if (jol != null) {
+      jol.dismiss();
     }
   }
   
   protected void onResume()
   {
     super.onResume();
-    if ((iQY) && (iQL != null) && (iQP.u(this, iQL)))
+    if ((joi) && (jnV != null) && (jnZ.u(this, jnV)))
     {
-      u.i("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "user installed lasted recommend app");
-      iQY = false;
-      iQS.iRr = false;
+      v.i("MicroMsg.AppChooserUI", "user installed lasted recommend app");
+      joi = false;
+      joc.joB = false;
     }
-    iQX = iQP.cK(koJ.kpc);
-    iQT = a(iQL, aSL(), iQQ);
-    if ((iQX) && (iQR == null))
+    joh = jnZ.cH(kNN.kOg);
+    jod = a(jnV, aXE(), joa);
+    if ((joh) && (job == null))
     {
-      iQR = iQS;
-      iRb.gB(true);
+      job = joc;
+      jol.gZ(true);
     }
-    if (iQK != null)
+    if (jnU != null)
     {
-      iQK.dfX = iQT;
-      iQK.notifyDataSetChanged();
+      jnU.deZ = jod;
+      jnU.notifyDataSetChanged();
     }
+  }
+  
+  final int qy(int paramInt)
+  {
+    if (mimeType != null) {
+      return jnW + paramInt + mimeType.hashCode();
+    }
+    return jnW + paramInt;
   }
   
   final class a
     extends BaseAdapter
   {
-    List dfX = new ArrayList();
-    int iRj = AppChooserUI.f.iRz;
+    List<AppChooserUI.c> deZ = new ArrayList();
+    int jot = AppChooserUI.f.joI;
     
     public a()
     {
@@ -634,10 +636,10 @@ public class AppChooserUI
     
     public final int getCount()
     {
-      if (dfX == null) {
+      if (deZ == null) {
         return 0;
       }
-      return dfX.size();
+      return deZ.size();
     }
     
     public final long getItemId(int paramInt)
@@ -652,44 +654,44 @@ public class AppChooserUI
       boolean bool;
       if ((paramView == null) || (paramView.getTag() == null))
       {
-        paramView = LayoutInflater.from(koJ.kpc).inflate(2131363031, null);
+        paramView = LayoutInflater.from(kNN.kOg).inflate(2130903092, null);
         paramViewGroup = new AppChooserUI.b(AppChooserUI.this, paramView);
         paramView.setTag(paramViewGroup);
-        localc1 = oM(paramInt);
-        if (iRo == null) {
+        localc1 = qz(paramInt);
+        if (joy == null) {
           new AppChooserUI.d(AppChooserUI.this).execute(new AppChooserUI.c[] { localc1 });
         }
-        esD.setImageDrawable(iRo);
-        esE.setText(iRn);
-        if ((localc1 == null) || ((iRp) && (!iRq) && ((!iRp) || (!iRs) || (AppChooserUI.d(AppChooserUI.this) < AppChooserUI.e(AppChooserUI.this)))) || (iRr)) {
+        exW.setImageDrawable(joy);
+        exX.setText(jox);
+        if ((localc1 == null) || ((joz) && (!joA) && ((!joz) || (!eEy) || (AppChooserUI.d(AppChooserUI.this) < AppChooserUI.e(AppChooserUI.this)))) || (joB)) {
           break label417;
         }
-        iRk.setVisibility(8);
-        iRl.setVisibility(0);
-        Object localObject = iRl;
+        jou.setVisibility(8);
+        jov.setVisibility(0);
+        Object localObject = jov;
         AppChooserUI.c localc2 = AppChooserUI.c(AppChooserUI.this);
         if (!(localc2 instanceof AppChooserUI.c)) {
           break label411;
         }
         localc2 = (AppChooserUI.c)localc2;
-        if (((iRm == null) || (iRm == null) || (!iRm.activityInfo.packageName.equals(iRm.activityInfo.packageName))) && ((!iRp) || (!iRp))) {
+        if (((jow == null) || (jow == null) || (!jow.activityInfo.packageName.equals(jow.activityInfo.packageName))) && ((!joz) || (!joz))) {
           break label411;
         }
         bool = true;
         label287:
         ((RadioButton)localObject).setChecked(bool);
         label294:
-        if (!iRp) {
+        if (!joz) {
           break label598;
         }
         if (AppChooserUI.f(AppChooserUI.this) != 4) {
           break label578;
         }
-        esG.setText(2131429472);
+        exZ.setText(2131234240);
         label322:
-        localObject = esG;
+        localObject = exZ;
         paramInt = i;
-        if (ay.kz(AppChooserUI.l(AppChooserUI.this))) {
+        if (be.kf(AppChooserUI.l(AppChooserUI.this))) {
           paramInt = 8;
         }
         ((TextView)localObject).setVisibility(paramInt);
@@ -697,7 +699,7 @@ public class AppChooserUI
       for (;;)
       {
         if ((AppChooserUI.f(AppChooserUI.this) != 6) && (AppChooserUI.c(AppChooserUI.this) != null) && (AppChooserUI.c(AppChooserUI.this).equals(localc1))) {
-          iRl.setChecked(true);
+          jov.setChecked(true);
         }
         return paramView;
         paramViewGroup = (AppChooserUI.b)paramView.getTag();
@@ -706,98 +708,98 @@ public class AppChooserUI
         bool = false;
         break label287;
         label417:
-        iRk.setVisibility(0);
-        iRl.setVisibility(8);
-        iRk.setOnClickListener(AppChooserUI.k(AppChooserUI.this));
-        if (iRj == AppChooserUI.f.iRz)
+        jou.setVisibility(0);
+        jov.setVisibility(8);
+        jou.setOnClickListener(AppChooserUI.k(AppChooserUI.this));
+        if (jot == AppChooserUI.f.joI)
         {
-          if (iRr) {
-            iRk.setText(2131430952);
+          if (joB) {
+            jou.setText(2131230963);
           }
           for (;;)
           {
-            iRk.setEnabled(true);
+            jou.setEnabled(true);
             break;
-            iRk.setText(2131430948);
+            jou.setText(2131230888);
           }
         }
-        if (iRj == AppChooserUI.f.iRA)
+        if (jot == AppChooserUI.f.joJ)
         {
-          iRk.setText(2131430949);
-          iRk.setEnabled(false);
+          jou.setText(2131230894);
+          jou.setEnabled(false);
           break label294;
         }
-        if (iRj != AppChooserUI.f.iRB) {
+        if (jot != AppChooserUI.f.joK) {
           break label294;
         }
-        if (iRr) {
-          iRk.setText(2131430954);
+        if (joB) {
+          jou.setText(2131231030);
         }
         for (;;)
         {
-          iRk.setEnabled(true);
+          jou.setEnabled(true);
           break;
-          iRk.setText(2131430953);
+          jou.setText(2131231029);
         }
         label578:
-        esG.setText(ay.ky(AppChooserUI.l(AppChooserUI.this)));
+        exZ.setText(be.li(AppChooserUI.l(AppChooserUI.this)));
         break label322;
         label598:
-        esG.setVisibility(8);
+        exZ.setVisibility(8);
       }
     }
     
-    public final AppChooserUI.c oM(int paramInt)
+    public final AppChooserUI.c qz(int paramInt)
     {
-      if (dfX == null) {
+      if (deZ == null) {
         return null;
       }
-      return (AppChooserUI.c)dfX.get(paramInt);
+      return (AppChooserUI.c)deZ.get(paramInt);
     }
   }
   
   final class b
   {
-    ImageView esD;
-    TextView esE;
-    TextView esG;
-    TextView iRk;
-    RadioButton iRl;
+    ImageView exW;
+    TextView exX;
+    TextView exZ;
+    TextView jou;
+    RadioButton jov;
     
     public b(View paramView)
     {
-      esD = ((ImageView)paramView.findViewById(2131169035));
-      esE = ((TextView)paramView.findViewById(2131167381));
-      esG = ((TextView)paramView.findViewById(2131169036));
-      iRk = ((TextView)paramView.findViewById(2131169037));
-      iRl = ((RadioButton)paramView.findViewById(2131169038));
+      exW = ((ImageView)paramView.findViewById(2131755302));
+      exX = ((TextView)paramView.findViewById(2131755303));
+      exZ = ((TextView)paramView.findViewById(2131755304));
+      jou = ((TextView)paramView.findViewById(2131755305));
+      jov = ((RadioButton)paramView.findViewById(2131755306));
     }
   }
   
   final class c
   {
-    ResolveInfo iRm;
-    CharSequence iRn;
-    Drawable iRo;
-    boolean iRp;
-    boolean iRq;
-    boolean iRr;
-    boolean iRs;
+    boolean eEy;
+    boolean joA;
+    boolean joB;
+    ResolveInfo jow;
+    CharSequence jox;
+    Drawable joy;
+    boolean joz;
     
     public c() {}
     
     public c(ResolveInfo paramResolveInfo, CharSequence paramCharSequence)
     {
-      iRm = paramResolveInfo;
-      iRn = paramCharSequence;
-      iRp = false;
-      iRq = true;
-      iRr = false;
+      jow = paramResolveInfo;
+      jox = paramCharSequence;
+      joz = false;
+      joA = true;
+      joB = false;
     }
   }
   
   final class d
-    extends AsyncTask
+    extends AsyncTask<AppChooserUI.c, Void, AppChooserUI.c>
   {
     d() {}
   }
@@ -805,41 +807,41 @@ public class AppChooserUI
   final class e
     extends i
   {
-    private View cRn;
-    BaseAdapter cTk;
-    View.OnClickListener iRe;
-    private ListView iRt;
-    private Button iRu;
-    private Button iRv;
-    private View iRw;
-    AdapterView.OnItemClickListener iRx;
-    View.OnClickListener iRy;
-    private TextView lv;
+    private View cOS;
+    BaseAdapter cQB;
+    private ListView joC;
+    private Button joD;
+    private Button joE;
+    private View joF;
+    AdapterView.OnItemClickListener joG;
+    View.OnClickListener joH;
+    View.OnClickListener joo;
+    private TextView lL;
     private Context mContext;
     private String mTitle;
     
     public e(Context paramContext)
     {
-      super(2131100061);
+      super(2131493483);
       mContext = paramContext;
-      cRn = View.inflate(mContext, 2131363089, null);
-      lv = ((TextView)cRn.findViewById(2131169161));
-      iRt = ((ListView)cRn.findViewById(2131169163));
-      iRu = ((Button)cRn.findViewById(2131169165));
-      iRv = ((Button)cRn.findViewById(2131169167));
-      iRw = cRn.findViewById(2131169162);
+      cOS = View.inflate(mContext, 2130903091, null);
+      lL = ((TextView)cOS.findViewById(2131755295));
+      joC = ((ListView)cOS.findViewById(2131755297));
+      joD = ((Button)cOS.findViewById(2131755299));
+      joE = ((Button)cOS.findViewById(2131755301));
+      joF = cOS.findViewById(2131755296);
       if ((AppChooserUI.f(AppChooserUI.this) == 6) || (AppChooserUI.g(AppChooserUI.this) == 2)) {
-        cRn.findViewById(2131169164).setVisibility(8);
+        cOS.findViewById(2131755298).setVisibility(8);
       }
     }
     
-    public final void gB(boolean paramBoolean)
+    public final void gZ(boolean paramBoolean)
     {
-      if (iRu != null) {
-        iRu.setEnabled(paramBoolean);
+      if (joD != null) {
+        joD.setEnabled(paramBoolean);
       }
-      if (iRv != null) {
-        iRv.setEnabled(paramBoolean);
+      if (joE != null) {
+        joE.setEnabled(paramBoolean);
       }
     }
     
@@ -851,7 +853,7 @@ public class AppChooserUI
     protected final void onCreate(Bundle paramBundle)
     {
       super.onCreate(paramBundle);
-      setContentView(cRn);
+      setContentView(cOS);
     }
     
     public final void setTitle(CharSequence paramCharSequence)
@@ -866,30 +868,30 @@ public class AppChooserUI
     
     public final void show()
     {
-      if (ay.kz(mTitle))
+      if (be.kf(mTitle))
       {
-        iRw.setVisibility(8);
-        lv.setVisibility(8);
+        joF.setVisibility(8);
+        lL.setVisibility(8);
       }
       for (;;)
       {
-        if (iRx != null) {
-          iRt.setOnItemClickListener(iRx);
+        if (joG != null) {
+          joC.setOnItemClickListener(joG);
         }
-        if (cTk != null) {
-          iRt.setAdapter(cTk);
+        if (cQB != null) {
+          joC.setAdapter(cQB);
         }
-        if (iRu != null) {
-          iRu.setOnClickListener(iRy);
+        if (joD != null) {
+          joD.setOnClickListener(joH);
         }
-        if (iRv != null) {
-          iRv.setOnClickListener(iRe);
+        if (joE != null) {
+          joE.setOnClickListener(joo);
         }
         super.show();
         return;
-        iRw.setVisibility(0);
-        lv.setVisibility(0);
-        lv.setText(mTitle);
+        joF.setVisibility(0);
+        lL.setVisibility(0);
+        lL.setText(mTitle);
       }
     }
   }

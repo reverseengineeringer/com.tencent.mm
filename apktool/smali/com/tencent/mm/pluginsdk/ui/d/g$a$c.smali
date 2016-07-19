@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field cVH:Landroid/widget/TextView;
+.field cTU:Landroid/widget/TextView;
 
-.field final synthetic iPS:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
+.field final synthetic jmZ:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
 
 
 # direct methods
@@ -25,8 +25,8 @@
     .locals 0
 
     .prologue
-    .line 470
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$a$c;->iPS:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
+    .line 472
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$a$c;->jmZ:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,7 +37,7 @@
     .locals 0
 
     .prologue
-    .line 470
+    .line 472
     invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/d/g$a$c;-><init>(Lcom/tencent/mm/pluginsdk/ui/d/g$a;)V
 
     return-void

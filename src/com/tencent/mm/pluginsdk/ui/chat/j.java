@@ -5,9 +5,9 @@ import com.tencent.mm.storage.a.c;
 public abstract interface j
   extends f
 {
-  public abstract boolean aiE();
+  public abstract boolean alm();
   
-  public abstract boolean aiF();
+  public abstract boolean aln();
   
   public abstract void i(c paramc);
   

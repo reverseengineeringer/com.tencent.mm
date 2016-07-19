@@ -1,38 +1,20 @@
 package com.tencent.mm.plugin.sns.ui.c;
 
-import android.app.Activity;
-import android.content.Intent;
+import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.h.k;
-import com.tencent.mm.plugin.sns.h.l;
-import com.tencent.mm.plugin.sns.ui.SnsSingleTextViewUI;
-import com.tencent.mm.plugin.sns.ui.aj;
-import com.tencent.mm.protocal.b.atp;
+import android.view.View.OnTouchListener;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class b$10
-  implements View.OnClickListener
+  implements View.OnTouchListener
 {
   b$10(b paramb) {}
   
-  public final void onClick(View paramView)
+  public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    if ((paramView.getTag() instanceof aj))
-    {
-      paramView = (aj)paramView.getTag();
-      paramView = ad.azi().vn(gPn);
-      if (paramView != null) {}
-    }
-    else
-    {
-      return;
-    }
-    Intent localIntent = new Intent();
-    localIntent.putExtra("sns_text_show", azRjMu);
-    localIntent.putExtra("sns_local_id", paramView.aAl());
-    localIntent.setClass(hpo.asX, SnsSingleTextViewUI.class);
-    hpo.asX.startActivity(localIntent);
+    v.d("MicroMsg.TimelineClickListener", "v " + paramView.getId() + "  ");
+    hFM.ab(paramView);
+    return false;
   }
 }
 

@@ -11,7 +11,7 @@ final class SightDraftContainerView$1
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    gzG.awg();
+    gGi.ayE();
     return false;
   }
 }

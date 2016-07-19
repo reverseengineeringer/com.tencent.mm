@@ -9,38 +9,38 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public final class ab
-  implements Iterable
+  implements Iterable<Intent>
 {
-  private static final b dZ = new c();
-  public final ArrayList ea = new ArrayList();
-  public final Context eb;
+  private static final b ep = new c();
+  public final ArrayList<Intent> eq = new ArrayList();
+  public final Context er;
   
   static
   {
     if (Build.VERSION.SDK_INT >= 11)
     {
-      dZ = new d();
+      ep = new d();
       return;
     }
   }
   
   private ab(Context paramContext)
   {
-    eb = paramContext;
+    er = paramContext;
   }
   
-  public static ab k(Context paramContext)
+  public static ab i(Context paramContext)
   {
     return new ab(paramContext);
   }
   
   public final ab a(ComponentName paramComponentName)
   {
-    int i = ea.size();
+    int i = eq.size();
     try
     {
-      for (paramComponentName = l.a(eb, paramComponentName); paramComponentName != null; paramComponentName = l.a(eb, paramComponentName.getComponent())) {
-        ea.add(i, paramComponentName);
+      for (paramComponentName = l.a(er, paramComponentName); paramComponentName != null; paramComponentName = l.a(er, paramComponentName.getComponent())) {
+        eq.add(i, paramComponentName);
       }
       return this;
     }
@@ -50,14 +50,14 @@ public final class ab
     }
   }
   
-  public final Iterator iterator()
+  public final Iterator<Intent> iterator()
   {
-    return ea.iterator();
+    return eq.iterator();
   }
   
   public static abstract interface a
   {
-    public abstract Intent ac();
+    public abstract Intent aa();
   }
   
   static abstract interface b {}

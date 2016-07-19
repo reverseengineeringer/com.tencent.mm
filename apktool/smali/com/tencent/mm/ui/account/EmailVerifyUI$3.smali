@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/EmailVerifyUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/EmailVerifyUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ksd:Lcom/tencent/mm/ui/account/EmailVerifyUI;
+.field final synthetic kRl:Lcom/tencent/mm/ui/account/EmailVerifyUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 122
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI$3;->ksd:Lcom/tencent/mm/ui/account/EmailVerifyUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI$3;->kRl:Lcom/tencent/mm/ui/account/EmailVerifyUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->ty()Ljava/lang/String;
 
     move-result-object v1
 
@@ -79,7 +79,7 @@
 
     const-string/jumbo v1, "R500_250"
 
-    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fq(Ljava/lang/String;)I
 
     move-result v1
 
@@ -97,18 +97,18 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kD(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->lm(Ljava/lang/String;)V
 
     .line 129
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI$3;->ksd:Lcom/tencent/mm/ui/account/EmailVerifyUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI$3;->kRl:Lcom/tencent/mm/ui/account/EmailVerifyUI;
 
-    const v1, 0x7f0b016c
+    const v1, 0x7f080e3f
 
-    const v2, 0x7f0b0163
+    const v2, 0x7f080e35
 
-    const v3, 0x7f0b0de8
+    const v3, 0x7f0800f7
 
-    const v4, 0x7f0b0de4
+    const v4, 0x7f080099
 
     new-instance v5, Lcom/tencent/mm/ui/account/EmailVerifyUI$3$1;
 

@@ -4,46 +4,60 @@
 
 
 # instance fields
-.field private kaa:Landroid/util/SparseArray;
+.field private kAw:Landroid/util/SparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/SparseArray",
+            "<",
+            "Lcom/tencent/mm/ui/contact/a/a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public lkS:Lcom/tencent/mm/ui/contact/l;
+.field public lLd:Lcom/tencent/mm/ui/contact/l;
 
-.field private lkT:Z
+.field private lLe:Z
+
+.field scene:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/tencent/mm/ui/contact/l;Z)V
+.method public constructor <init>(Lcom/tencent/mm/ui/contact/l;ZI)V
     .locals 1
 
     .prologue
-    .line 24
+    .line 25
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 25
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/m;->lkS:Lcom/tencent/mm/ui/contact/l;
-
     .line 26
-    iput-boolean p2, p0, Lcom/tencent/mm/ui/contact/m;->lkT:Z
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/m;->lLd:Lcom/tencent/mm/ui/contact/l;
 
     .line 27
+    iput-boolean p2, p0, Lcom/tencent/mm/ui/contact/m;->lLe:Z
+
+    .line 28
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/m;->kaa:Landroid/util/SparseArray;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/m;->kAw:Landroid/util/SparseArray;
 
-    .line 28
+    .line 29
+    iput p3, p0, Lcom/tencent/mm/ui/contact/m;->scene:I
+
+    .line 30
     return-void
 .end method
 
 
 # virtual methods
-.method public awQ()Z
+.method public azn()Z
     .locals 1
 
     .prologue
-    .line 35
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/m;->lkT:Z
+    .line 37
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/m;->lLe:Z
 
     return v0
 .end method
@@ -52,7 +66,7 @@
     .locals 1
 
     .prologue
-    .line 68
+    .line 70
     const/4 v0, 0x0
 
     return v0
@@ -62,17 +76,17 @@
     .locals 1
 
     .prologue
-    .line 118
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/m;->kaa:Landroid/util/SparseArray;
+    .line 120
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/m;->kAw:Landroid/util/SparseArray;
 
     if-eqz v0, :cond_0
 
-    .line 119
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/m;->kaa:Landroid/util/SparseArray;
+    .line 121
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/m;->kAw:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 121
+    .line 123
     :cond_0
     return-void
 .end method
@@ -81,10 +95,10 @@
     .locals 0
 
     .prologue
-    .line 124
+    .line 126
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/m;->clearCache()V
 
-    .line 125
+    .line 127
     return-void
 .end method
 
@@ -93,7 +107,7 @@
 
     .prologue
     .line 16
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/contact/m;->rM(I)Lcom/tencent/mm/ui/contact/a/a;
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/contact/m;->tO(I)Lcom/tencent/mm/ui/contact/a/a;
 
     move-result-object v0
 
@@ -104,7 +118,7 @@
     .locals 2
 
     .prologue
-    .line 73
+    .line 75
     const-wide/16 v0, -0x1
 
     return-wide v0
@@ -114,28 +128,28 @@
     .locals 5
 
     .prologue
-    .line 78
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/contact/m;->rM(I)Lcom/tencent/mm/ui/contact/a/a;
+    .line 80
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/contact/m;->tO(I)Lcom/tencent/mm/ui/contact/a/a;
 
     move-result-object v0
 
-    .line 79
+    .line 81
     if-eqz v0, :cond_0
 
-    .line 80
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/contact/m;->rM(I)Lcom/tencent/mm/ui/contact/a/a;
+    .line 82
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/contact/m;->tO(I)Lcom/tencent/mm/ui/contact/a/a;
 
     move-result-object v0
 
-    iget v0, v0, Lcom/tencent/mm/ui/contact/a/a;->eLV:I
+    iget v0, v0, Lcom/tencent/mm/ui/contact/a/a;->cTv:I
 
-    .line 84
+    .line 86
     :goto_0
     return v0
 
-    .line 82
+    .line 84
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpJo7Gkqq5Uobf4F3yk8Md2LqW4ziHKSE2s="
+    const-string/jumbo v0, "MicroMsg.MMSelectContactAdapter"
 
     const-string/jumbo v1, "getItemViewType: get data item fail, return unkown Type, totalCount=%d | position = %s"
 
@@ -163,9 +177,9 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 84
+    .line 86
     const/4 v0, -0x1
 
     goto :goto_0
@@ -175,20 +189,20 @@
     .locals 6
 
     .prologue
-    .line 95
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/contact/m;->rM(I)Lcom/tencent/mm/ui/contact/a/a;
+    .line 97
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/contact/m;->tO(I)Lcom/tencent/mm/ui/contact/a/a;
 
     move-result-object v3
 
-    .line 96
+    .line 98
     if-nez p2, :cond_0
 
-    .line 98
-    invoke-virtual {v3}, Lcom/tencent/mm/ui/contact/a/a;->ajt()Lcom/tencent/mm/ui/contact/a/a$b;
+    .line 100
+    invoke-virtual {v3}, Lcom/tencent/mm/ui/contact/a/a;->amb()Lcom/tencent/mm/ui/contact/a/a$b;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/m;->lkS:Lcom/tencent/mm/ui/contact/l;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/m;->lLd:Lcom/tencent/mm/ui/contact/l;
 
     invoke-interface {v1}, Lcom/tencent/mm/ui/contact/l;->getActivity()Landroid/app/Activity;
 
@@ -198,7 +212,7 @@
 
     move-result-object p2
 
-    .line 101
+    .line 103
     :cond_0
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -206,54 +220,54 @@
 
     check-cast v2, Lcom/tencent/mm/ui/contact/a/a$a;
 
-    .line 102
+    .line 104
     invoke-static {v2}, Ljunit/framework/Assert;->assertNotNull(Ljava/lang/Object;)V
 
-    .line 104
-    iget-boolean v0, v3, Lcom/tencent/mm/ui/contact/a/a;->lmN:Z
+    .line 106
+    iget-boolean v0, v3, Lcom/tencent/mm/ui/contact/a/a;->lNd:Z
 
     if-nez v0, :cond_1
 
-    .line 105
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/m;->lkS:Lcom/tencent/mm/ui/contact/l;
+    .line 107
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/m;->lLd:Lcom/tencent/mm/ui/contact/l;
 
     invoke-interface {v0}, Lcom/tencent/mm/ui/contact/l;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-virtual {v3, v0}, Lcom/tencent/mm/ui/contact/a/a;->er(Landroid/content/Context;)V
+    invoke-virtual {v3, v0}, Lcom/tencent/mm/ui/contact/a/a;->eu(Landroid/content/Context;)V
 
-    .line 106
+    .line 108
     const/4 v0, 0x1
 
-    iput-boolean v0, v3, Lcom/tencent/mm/ui/contact/a/a;->lmN:Z
+    iput-boolean v0, v3, Lcom/tencent/mm/ui/contact/a/a;->lNd:Z
 
-    .line 109
+    .line 111
     :cond_1
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/m;->awQ()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/m;->azn()Z
 
     move-result v0
 
-    iput-boolean v0, v3, Lcom/tencent/mm/ui/contact/a/a;->lkT:Z
+    iput-boolean v0, v3, Lcom/tencent/mm/ui/contact/a/a;->lLe:Z
 
-    .line 111
-    invoke-virtual {v3}, Lcom/tencent/mm/ui/contact/a/a;->ajt()Lcom/tencent/mm/ui/contact/a/a$b;
+    .line 113
+    invoke-virtual {v3}, Lcom/tencent/mm/ui/contact/a/a;->amb()Lcom/tencent/mm/ui/contact/a/a$b;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/m;->lkS:Lcom/tencent/mm/ui/contact/l;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/m;->lLd:Lcom/tencent/mm/ui/contact/l;
 
     invoke-interface {v1}, Lcom/tencent/mm/ui/contact/l;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/contact/m;->lkS:Lcom/tencent/mm/ui/contact/l;
+    iget-object v4, p0, Lcom/tencent/mm/ui/contact/m;->lLd:Lcom/tencent/mm/ui/contact/l;
 
     invoke-interface {v4, v3}, Lcom/tencent/mm/ui/contact/l;->b(Lcom/tencent/mm/ui/contact/a/a;)Z
 
     move-result v4
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/contact/m;->lkS:Lcom/tencent/mm/ui/contact/l;
+    iget-object v5, p0, Lcom/tencent/mm/ui/contact/m;->lLd:Lcom/tencent/mm/ui/contact/l;
 
     invoke-interface {v5, v3}, Lcom/tencent/mm/ui/contact/l;->a(Lcom/tencent/mm/ui/contact/a/a;)Z
 
@@ -261,7 +275,7 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/ui/contact/a/a$b;->a(Landroid/content/Context;Lcom/tencent/mm/ui/contact/a/a$a;Lcom/tencent/mm/ui/contact/a/a;ZZ)V
 
-    .line 114
+    .line 116
     return-object p2
 .end method
 
@@ -269,30 +283,30 @@
     .locals 1
 
     .prologue
-    .line 90
+    .line 92
     const/4 v0, 0x4
 
     return v0
 .end method
 
-.method public final hX(Z)V
+.method public final iA(Z)V
     .locals 0
 
     .prologue
-    .line 39
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/contact/m;->lkT:Z
+    .line 41
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/contact/m;->lLe:Z
 
-    .line 40
+    .line 42
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/m;->notifyDataSetChanged()V
 
-    .line 41
+    .line 43
     return-void
 .end method
 
-.method public abstract iH(I)Lcom/tencent/mm/ui/contact/a/a;
+.method public abstract jQ(I)Lcom/tencent/mm/ui/contact/a/a;
 .end method
 
-.method public final rM(I)Lcom/tencent/mm/ui/contact/a/a;
+.method public final tO(I)Lcom/tencent/mm/ui/contact/a/a;
     .locals 7
 
     .prologue
@@ -300,11 +314,11 @@
 
     const/4 v5, 0x0
 
-    .line 45
+    .line 47
     const/4 v0, 0x0
 
-    .line 46
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/m;->kaa:Landroid/util/SparseArray;
+    .line 48
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/m;->kAw:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->indexOfKey(I)I
 
@@ -312,8 +326,8 @@
 
     if-ltz v1, :cond_0
 
-    .line 47
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/m;->kaa:Landroid/util/SparseArray;
+    .line 49
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/m;->kAw:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -321,11 +335,11 @@
 
     check-cast v0, Lcom/tencent/mm/ui/contact/a/a;
 
-    .line 63
+    .line 65
     :goto_0
     return-object v0
 
-    .line 49
+    .line 51
     :cond_0
     if-ltz p1, :cond_2
 
@@ -335,28 +349,28 @@
 
     if-ge p1, v1, :cond_2
 
-    .line 50
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/contact/m;->iH(I)Lcom/tencent/mm/ui/contact/a/a;
+    .line 52
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/contact/m;->jQ(I)Lcom/tencent/mm/ui/contact/a/a;
 
     move-result-object v0
 
-    .line 51
+    .line 53
     if-eqz v0, :cond_1
 
-    .line 52
+    .line 54
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/m;->c(Lcom/tencent/mm/ui/contact/a/a;)Z
 
     move-result v1
 
-    iput-boolean v1, v0, Lcom/tencent/mm/ui/contact/a/a;->cLD:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/ui/contact/a/a;->cIG:Z
 
-    .line 53
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/m;->kaa:Landroid/util/SparseArray;
+    .line 55
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/m;->kAw:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 54
-    const-string/jumbo v1, "!44@/B4Tb64lLpJo7Gkqq5Uobf4F3yk8Md2LqW4ziHKSE2s="
+    .line 56
+    const-string/jumbo v1, "MicroMsg.MMSelectContactAdapter"
 
     const-string/jumbo v2, "put item to cache viewType=%d|position=%d"
 
@@ -364,7 +378,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    iget v4, v0, Lcom/tencent/mm/ui/contact/a/a;->eLV:I
+    iget v4, v0, Lcom/tencent/mm/ui/contact/a/a;->cTv:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -378,13 +392,13 @@
 
     aput-object v4, v3, v6
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 57
+    .line 59
     :cond_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpJo7Gkqq5Uobf4F3yk8Md2LqW4ziHKSE2s="
+    const-string/jumbo v1, "MicroMsg.MMSelectContactAdapter"
 
     const-string/jumbo v2, "createDataItem Occur error !!!!!!!!! position = %d"
 
@@ -396,13 +410,13 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 60
+    .line 62
     :cond_2
-    const-string/jumbo v1, "!44@/B4Tb64lLpJo7Gkqq5Uobf4F3yk8Md2LqW4ziHKSE2s="
+    const-string/jumbo v1, "MicroMsg.MMSelectContactAdapter"
 
     const-string/jumbo v2, "getItem Occur error !!!!!!!!! position = %d"
 
@@ -414,7 +428,7 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method

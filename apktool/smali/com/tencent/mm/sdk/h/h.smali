@@ -3,12 +3,41 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        "E:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
 # instance fields
-.field private jYE:I
+.field public kzb:I
 
-.field private final jYF:Ljava/util/Hashtable;
+.field private final kzc:Ljava/util/Hashtable;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Hashtable",
+            "<TT;",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private final jYG:Ljava/util/HashSet;
+.field private final kzd:Ljava/util/HashSet;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashSet",
+            "<TE;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -16,36 +45,43 @@
     .locals 1
 
     .prologue
-    .line 25
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
+    .line 28
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/sdk/h/h;->jYE:I
+    iput v0, p0, Lcom/tencent/mm/sdk/h/h;->kzb:I
 
-    .line 31
+    .line 30
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/h/h;->jYF:Ljava/util/Hashtable;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/h/h;->kzc:Ljava/util/Hashtable;
 
-    .line 32
+    .line 31
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/h/h;->jYG:Ljava/util/HashSet;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/h/h;->kzd:Ljava/util/HashSet;
 
     return-void
 .end method
 
-.method private declared-synchronized aVS()Ljava/util/Vector;
+.method private declared-synchronized bbf()Ljava/util/Vector;
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Vector",
+            "<TT;>;"
+        }
+    .end annotation
 
     .prologue
-    .line 93
+    .line 97
     monitor-enter p0
 
     :try_start_0
@@ -53,8 +89,8 @@
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
 
-    .line 94
-    iget-object v1, p0, Lcom/tencent/mm/sdk/h/h;->jYF:Ljava/util/Hashtable;
+    .line 98
+    iget-object v1, p0, Lcom/tencent/mm/sdk/h/h;->kzc:Ljava/util/Hashtable;
 
     invoke-virtual {v1}, Ljava/util/Hashtable;->keySet()Ljava/util/Set;
 
@@ -64,12 +100,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 95
+    .line 99
     monitor-exit p0
 
     return-object v0
 
-    .line 93
+    .line 97
     :catchall_0
     move-exception v0
 
@@ -78,61 +114,61 @@
     throw v0
 .end method
 
-.method private aVT()V
+.method private bbg()V
     .locals 9
 
     .prologue
-    .line 121
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/h/h;->aVS()Ljava/util/Vector;
+    .line 125
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/h/h;->bbf()Ljava/util/Vector;
 
     move-result-object v0
 
-    .line 123
+    .line 127
     invoke-virtual {v0}, Ljava/util/Vector;->size()I
 
     move-result v1
 
     if-gtz v1, :cond_1
 
-    .line 124
-    iget-object v0, p0, Lcom/tencent/mm/sdk/h/h;->jYG:Ljava/util/HashSet;
+    .line 128
+    iget-object v0, p0, Lcom/tencent/mm/sdk/h/h;->kzd:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
-    .line 166
+    .line 170
     :cond_0
     return-void
 
-    .line 128
+    .line 132
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/sdk/h/h;->jYG:Ljava/util/HashSet;
+    iget-object v1, p0, Lcom/tencent/mm/sdk/h/h;->kzd:Ljava/util/HashSet;
 
     monitor-enter v1
 
-    .line 130
+    .line 134
     :try_start_0
     new-instance v3, Ljava/util/ArrayList;
 
-    iget-object v2, p0, Lcom/tencent/mm/sdk/h/h;->jYG:Ljava/util/HashSet;
+    iget-object v2, p0, Lcom/tencent/mm/sdk/h/h;->kzd:Ljava/util/HashSet;
 
     invoke-direct {v3, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 131
-    iget-object v2, p0, Lcom/tencent/mm/sdk/h/h;->jYG:Ljava/util/HashSet;
+    .line 135
+    iget-object v2, p0, Lcom/tencent/mm/sdk/h/h;->kzd:Ljava/util/HashSet;
 
     invoke-virtual {v2}, Ljava/util/HashSet;->clear()V
 
-    .line 132
+    .line 136
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 134
+    .line 138
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
-    .line 135
+    .line 139
     invoke-virtual {v0}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -148,14 +184,14 @@
 
     move-result-object v6
 
-    .line 136
-    iget-object v0, p0, Lcom/tencent/mm/sdk/h/h;->jYF:Ljava/util/Hashtable;
+    .line 140
+    iget-object v0, p0, Lcom/tencent/mm/sdk/h/h;->kzc:Ljava/util/Hashtable;
 
     invoke-virtual {v0, v6}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 137
+    .line 141
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v7
@@ -172,51 +208,51 @@
 
     move-result-object v8
 
-    .line 138
+    .line 142
     if-eqz v8, :cond_3
 
-    .line 139
+    .line 143
     if-eqz v1, :cond_3
 
-    .line 143
+    .line 147
     instance-of v0, v1, Landroid/os/Looper;
 
     if-eqz v0, :cond_5
 
     move-object v0, v1
 
-    .line 147
+    .line 151
     check-cast v0, Landroid/os/Looper;
 
-    .line 148
+    .line 152
     invoke-interface {v4, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/tencent/mm/sdk/platformtools/aa;
+    check-cast v2, Lcom/tencent/mm/sdk/platformtools/ac;
 
-    .line 149
+    .line 153
     if-nez v2, :cond_4
 
-    .line 150
-    new-instance v2, Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 154
+    new-instance v2, Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-direct {v2, v0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v2, v0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
-    .line 151
+    .line 155
     invoke-interface {v4, v0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 154
+    .line 158
     :cond_4
     new-instance v0, Lcom/tencent/mm/sdk/h/h$1;
 
     invoke-direct {v0, p0, v6, v8}, Lcom/tencent/mm/sdk/h/h$1;-><init>(Lcom/tencent/mm/sdk/h/h;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
-    .line 132
+    .line 136
     :catchall_0
     move-exception v0
 
@@ -227,21 +263,21 @@
 
     throw v0
 
-    .line 162
+    .line 166
     :cond_5
-    invoke-virtual {p0, v6, v8}, Lcom/tencent/mm/sdk/h/h;->g(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {p0, v6, v8}, Lcom/tencent/mm/sdk/h/h;->k(Ljava/lang/Object;Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final Ep()V
+.method public final EJ()V
     .locals 1
 
     .prologue
-    .line 115
-    iget v0, p0, Lcom/tencent/mm/sdk/h/h;->jYE:I
+    .line 119
+    iget v0, p0, Lcom/tencent/mm/sdk/h/h;->kzb:I
 
     if-lez v0, :cond_1
 
@@ -250,14 +286,14 @@
     :goto_0
     if-nez v0, :cond_0
 
-    .line 116
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/h/h;->aVT()V
+    .line 120
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/h/h;->bbg()V
 
-    .line 118
+    .line 122
     :cond_0
     return-void
 
-    .line 115
+    .line 119
     :cond_1
     const/4 v0, 0x0
 
@@ -266,13 +302,20 @@
 
 .method public declared-synchronized a(Ljava/lang/Object;Landroid/os/Looper;)V
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;",
+            "Landroid/os/Looper;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
-    .line 67
+    .line 71
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/h/h;->jYF:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/h/h;->kzc:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->containsKey(Ljava/lang/Object;)Z
 
@@ -280,27 +323,27 @@
 
     if-nez v0, :cond_0
 
-    .line 68
+    .line 72
     if-eqz p2, :cond_1
 
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/sdk/h/h;->jYF:Ljava/util/Hashtable;
+    .line 73
+    iget-object v0, p0, Lcom/tencent/mm/sdk/h/h;->kzc:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 74
+    .line 78
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 71
+    .line 75
     :cond_1
     :try_start_1
-    iget-object v0, p0, Lcom/tencent/mm/sdk/h/h;->jYF:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/h/h;->kzc:Ljava/util/Hashtable;
 
     new-instance v1, Ljava/lang/Object;
 
@@ -312,7 +355,7 @@
 
     goto :goto_0
 
-    .line 67
+    .line 71
     :catchall_0
     move-exception v0
 
@@ -321,18 +364,23 @@
     throw v0
 .end method
 
-.method public final aw(Ljava/lang/Object;)Z
+.method public final aR(Ljava/lang/Object;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TE;)Z"
+        }
+    .end annotation
 
     .prologue
-    .line 106
-    iget-object v1, p0, Lcom/tencent/mm/sdk/h/h;->jYG:Ljava/util/HashSet;
+    .line 110
+    iget-object v1, p0, Lcom/tencent/mm/sdk/h/h;->kzd:Ljava/util/HashSet;
 
     monitor-enter v1
 
-    .line 107
+    .line 111
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/h/h;->jYG:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/h/h;->kzd:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
@@ -342,7 +390,7 @@
 
     return v0
 
-    .line 108
+    .line 112
     :catchall_0
     move-exception v0
 
@@ -353,44 +401,54 @@
     throw v0
 .end method
 
-.method public abstract g(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public abstract k(Ljava/lang/Object;Ljava/lang/Object;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;TE;)V"
+        }
+    .end annotation
 .end method
 
 .method public final lock()V
     .locals 1
 
     .prologue
-    .line 38
-    iget v0, p0, Lcom/tencent/mm/sdk/h/h;->jYE:I
+    .line 37
+    iget v0, p0, Lcom/tencent/mm/sdk/h/h;->kzb:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/sdk/h/h;->jYE:I
+    iput v0, p0, Lcom/tencent/mm/sdk/h/h;->kzb:I
 
-    .line 39
+    .line 38
     return-void
 .end method
 
 .method public final declared-synchronized remove(Ljava/lang/Object;)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 82
+    .line 86
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/h/h;->jYF:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/h/h;->kzc:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 83
+    .line 87
     monitor-exit p0
 
     return-void
 
-    .line 82
+    .line 86
     :catchall_0
     move-exception v0
 
@@ -403,22 +461,22 @@
     .locals 1
 
     .prologue
-    .line 89
+    .line 93
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/h/h;->jYF:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/h/h;->kzc:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->clear()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 90
+    .line 94
     monitor-exit p0
 
     return-void
 
-    .line 89
+    .line 93
     :catchall_0
     move-exception v0
 
@@ -431,27 +489,27 @@
     .locals 1
 
     .prologue
-    .line 45
-    iget v0, p0, Lcom/tencent/mm/sdk/h/h;->jYE:I
+    .line 44
+    iget v0, p0, Lcom/tencent/mm/sdk/h/h;->kzb:I
 
     add-int/lit8 v0, v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/sdk/h/h;->jYE:I
+    iput v0, p0, Lcom/tencent/mm/sdk/h/h;->kzb:I
 
-    .line 46
-    iget v0, p0, Lcom/tencent/mm/sdk/h/h;->jYE:I
+    .line 45
+    iget v0, p0, Lcom/tencent/mm/sdk/h/h;->kzb:I
 
     if-gtz v0, :cond_0
 
-    .line 47
+    .line 46
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/sdk/h/h;->jYE:I
+    iput v0, p0, Lcom/tencent/mm/sdk/h/h;->kzb:I
 
-    .line 48
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/h/h;->aVT()V
+    .line 47
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/h/h;->bbg()V
 
-    .line 50
+    .line 49
     :cond_0
     return-void
 .end method

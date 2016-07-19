@@ -4,17 +4,17 @@ import android.os.SystemClock;
 
 public final class f
 {
-  public static int oX()
+  public static int np()
   {
     return new Throwable().getStackTrace()[1].getLineNumber();
   }
   
-  public static String oY()
+  public static String nq()
   {
     return new Throwable().getStackTrace()[1].toString();
   }
   
-  public static String oZ()
+  public static String nr()
   {
     StackTraceElement localStackTraceElement = new Throwable().getStackTrace()[1];
     int i = localStackTraceElement.getMethodName().lastIndexOf('.');
@@ -23,11 +23,11 @@ public final class f
   
   public static final class a
   {
-    public long buw = SystemClock.elapsedRealtime();
+    public long biW = SystemClock.elapsedRealtime();
     
-    public final long pa()
+    public final long ns()
     {
-      return SystemClock.elapsedRealtime() - buw;
+      return SystemClock.elapsedRealtime() - biW;
     }
   }
 }

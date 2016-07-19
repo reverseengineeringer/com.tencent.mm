@@ -15,13 +15,13 @@
 
 
 # virtual methods
-.method public abstract EM()I
+.method public abstract Fh()I
 .end method
 
-.method public abstract EN()V
+.method public abstract Fi()V
 .end method
 
-.method public abstract EO()J
+.method public abstract Fj()J
 .end method
 
 .method public abstract c(Lcom/tencent/mm/network/m;)Z

@@ -1,16 +1,16 @@
 package com.tencent.smtt.sdk;
 
-import com.tencent.smtt.a.e.a;
-import com.tencent.smtt.a.r;
+import com.tencent.smtt.utils.TbsLog;
+import com.tencent.smtt.utils.f.a;
 
 final class o$2
-  implements e.a
+  implements f.a
 {
   o$2(o paramo) {}
   
-  public final void su(int paramInt)
+  public final void uz(int paramInt)
   {
-    r.i("TbsDownload", "[TbsApkDownloadStat.reportTbsLog] httpResponseCode=" + paramInt);
+    TbsLog.i("TbsDownload", "[TbsApkDownloadStat.reportTbsLog] httpResponseCode=" + paramInt);
   }
 }
 

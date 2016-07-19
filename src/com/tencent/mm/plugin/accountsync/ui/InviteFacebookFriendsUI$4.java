@@ -11,20 +11,20 @@ final class InviteFacebookFriendsUI$4
 {
   InviteFacebookFriendsUI$4(InviteFacebookFriendsUI paramInviteFacebookFriendsUI) {}
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    if (InviteFacebookFriendsUI.a(coP).Gj().length >= 50)
+    if (InviteFacebookFriendsUI.a(ckd).GG().length >= 50)
     {
-      g.e(coP, 2131428256, 2131430877);
+      g.f(ckd, 2131232571, 2131231028);
       return;
     }
-    InviteFacebookFriendsUI.a(coP).ep(paramInt - InviteFacebookFriendsUI.b(coP).getHeaderViewsCount());
-    if (InviteFacebookFriendsUI.a(coP).Gj().length > 0)
+    InviteFacebookFriendsUI.a(ckd).fb(paramInt - InviteFacebookFriendsUI.b(ckd).getHeaderViewsCount());
+    if (InviteFacebookFriendsUI.a(ckd).GG().length > 0)
     {
-      coP.hh(true);
+      ckd.hF(true);
       return;
     }
-    coP.hh(false);
+    ckd.hF(false);
   }
 }
 

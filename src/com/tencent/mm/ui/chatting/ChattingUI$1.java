@@ -10,7 +10,7 @@ final class ChattingUI$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ChattingUI.a.a((ChattingUI.a)kXU.kXR, dFW, kXS, kXT);
+    ChattingUI.a.a((ChattingUI.a)lyl.lyh, cJR, lyj, lyk);
   }
 }
 

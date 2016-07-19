@@ -13,13 +13,13 @@
 
 
 # virtual methods
+.method public abstract N(Z)V
+.end method
+
 .method public abstract a(Lcom/tencent/mm/modelvoice/d$a;)V
 .end method
 
 .method public abstract a(Lcom/tencent/mm/modelvoice/d$b;)V
-.end method
-
-.method public abstract ak(Z)V
 .end method
 
 .method public abstract c(Ljava/lang/String;ZI)Z
@@ -31,17 +31,17 @@
 .method public abstract isPlaying()Z
 .end method
 
-.method public abstract lB()Z
+.method public abstract jL()Z
 .end method
 
-.method public abstract lE()D
+.method public abstract jO()D
 .end method
 
-.method public abstract lv()Z
+.method public abstract jW()Z
 .end method
 
 .method public abstract pause()Z
 .end method
 
-.method public abstract s(Ljava/lang/String;Z)Z
+.method public abstract w(Ljava/lang/String;Z)Z
 .end method

@@ -4,19 +4,19 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import com.tencent.mm.model.a.b;
 import com.tencent.mm.model.a.f;
-import com.tencent.mm.q.n;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.s.n;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.ArrayList;
 import java.util.List;
 
 public class aq
 {
-  private static aq bBA;
-  public b bBz;
+  private static aq buF;
+  public b buE;
   
-  private static boolean b(String paramString, List paramList)
+  private static boolean c(String paramString, List<Integer> paramList)
   {
-    Object localObject = ah.tD().dF("banner");
+    Object localObject = ah.tE().dO("banner");
     if (localObject == null) {
       return false;
     }
@@ -31,14 +31,14 @@ public class aq
     return ((SharedPreferences.Editor)localObject).commit();
   }
   
-  private static List fh(String paramString)
+  private static List<Integer> fu(String paramString)
   {
-    SharedPreferences localSharedPreferences = ah.tD().dF("banner");
+    SharedPreferences localSharedPreferences = ah.tE().dO("banner");
     Object localObject;
     if (localSharedPreferences == null)
     {
       localObject = null;
-      return (List)localObject;
+      return (List<Integer>)localObject;
     }
     int j = localSharedPreferences.getInt(paramString + "ArraySize", 0);
     ArrayList localArrayList = new ArrayList(j);
@@ -54,21 +54,21 @@ public class aq
     }
   }
   
-  public static aq ua()
+  public static aq ub()
   {
     try
     {
-      if (bBA == null) {
-        bBA = new aq();
+      if (buF == null) {
+        buF = new aq();
       }
-      return bBA;
+      return buF;
     }
     finally {}
   }
   
-  public static ap ub()
+  public static ap uc()
   {
-    Object localObject = ah.tD().dF("banner");
+    Object localObject = ah.tE().dO("banner");
     if (localObject == null) {
       return null;
     }
@@ -101,32 +101,32 @@ public class aq
               do
               {
                 return new ap(i, j, (String)localObject);
-                k = uc();
-              } while ((k != a.bBD) && (k != a.bBE) && (!f.uO().uM()));
-              if (f.uO().uM()) {
-                u.i("!44@kCDfVf11b5NCeprZfz972Ag4FJNFWg5rdvaK4iyvyKU=", "has abtest case. ignore bind bind contacts banner.");
+                k = ud();
+              } while ((k != a.buI) && (k != a.buJ) && (!f.uQ().uO()));
+              if (f.uQ().uO()) {
+                v.i("MicorMsg.MainFrameBannerStorage", "has abtest case. ignore bind bind contacts banner.");
               }
               for (;;)
               {
                 return null;
-                u.i("!44@kCDfVf11b5NCeprZfz972Ag4FJNFWg5rdvaK4iyvyKU=", "already Bind the Mobile");
+                v.i("MicorMsg.MainFrameBannerStorage", "already Bind the Mobile");
               }
-              n.vr();
-            } while (!n.vv());
-            u.i("!44@kCDfVf11b5NCeprZfz972Ag4FJNFWg5rdvaK4iyvyKU=", "avatar already existed");
+              n.vt();
+            } while (!n.vx());
+            v.i("MicorMsg.MainFrameBannerStorage", "avatar already existed");
             return null;
-          } while ((uc() != a.bBD) && (!f.uO().uM()));
-          if (f.uO().uM()) {
-            u.i("!44@kCDfVf11b5NCeprZfz972Ag4FJNFWg5rdvaK4iyvyKU=", "has abtest case. ignore bind upload contacts banner.");
+          } while ((ud() != a.buI) && (!f.uQ().uO()));
+          if (f.uQ().uO()) {
+            v.i("MicorMsg.MainFrameBannerStorage", "has abtest case. ignore bind upload contacts banner.");
           }
           for (;;)
           {
             return null;
-            u.i("!44@kCDfVf11b5NCeprZfz972Ag4FJNFWg5rdvaK4iyvyKU=", "already upload the contacts");
+            v.i("MicorMsg.MainFrameBannerStorage", "already upload the contacts");
           }
-          str = (String)ah.tD().rn().get(208903, null);
+          str = (String)ah.tE().ro().get(208903, null);
         } while ((str == null) || (str.length() <= 0));
-        u.i("!44@kCDfVf11b5NCeprZfz972Ag4FJNFWg5rdvaK4iyvyKU=", "already bind Google Account");
+        v.i("MicorMsg.MainFrameBannerStorage", "already bind Google Account");
         return null;
       case 10000: 
       case 57005: 
@@ -137,16 +137,16 @@ public class aq
     return null;
   }
   
-  public static int uc()
+  public static int ud()
   {
     for (;;)
     {
       try
       {
-        localObject3 = (String)ah.tD().rn().get(4097, "");
-        String str = (String)ah.tD().rn().get(6, "");
-        boolean bool = h.sE();
-        u.d("!44@kCDfVf11b5NCeprZfz972Ag4FJNFWg5rdvaK4iyvyKU=", "isUpload " + bool + " stat " + h.sg());
+        localObject3 = (String)ah.tE().ro().get(4097, "");
+        String str = (String)ah.tE().ro().get(6, "");
+        boolean bool = h.sG();
+        v.d("MicorMsg.MainFrameBannerStorage", "isUpload " + bool + " stat " + h.si());
         if (localObject3 != null)
         {
           Object localObject1 = localObject3;
@@ -160,22 +160,22 @@ public class aq
               break label155;
             }
             if ((localObject1 == null) && (localObject3 == null)) {
-              return a.bBB;
+              return a.buG;
             }
             if ((localObject1 != null) && (localObject3 == null)) {
-              return a.bBC;
+              return a.buH;
             }
             if (bool) {
-              return a.bBD;
+              return a.buI;
             }
-            int i = a.bBE;
+            int i = a.buJ;
             return i;
           }
         }
       }
       catch (Exception localException)
       {
-        return a.bBB;
+        return a.buG;
       }
       Object localObject2 = null;
       continue;
@@ -184,9 +184,9 @@ public class aq
     }
   }
   
-  public final void M(int paramInt1, int paramInt2)
+  public final void O(int paramInt1, int paramInt2)
   {
-    Object localObject = ah.tD().dF("banner");
+    Object localObject = ah.tE().dO("banner");
     if (localObject == null) {}
     for (;;)
     {
@@ -195,18 +195,18 @@ public class aq
       switch (paramInt2)
       {
       }
-      while (bBz != null)
+      while (buE != null)
       {
-        bBz.ud();
+        buE.ue();
         return;
         ((SharedPreferences.Editor)localObject).remove("CurrentType").remove("CurrentShowType").remove("CurrentData").commit();
         continue;
         ((SharedPreferences.Editor)localObject).remove("CurrentType").remove("CurrentShowType").remove("CurrentData").commit();
-        localObject = fh("HistoryInfo");
+        localObject = fu("HistoryInfo");
         if (!((List)localObject).contains(Integer.valueOf(paramInt1))) {
           ((List)localObject).add(Integer.valueOf(paramInt1));
         }
-        b("HistoryInfo", (List)localObject);
+        c("HistoryInfo", (List)localObject);
         continue;
         if (paramInt1 == 3) {
           ((SharedPreferences.Editor)localObject).remove("CurrentType").remove("CurrentShowType").remove("CurrentData").commit();
@@ -221,14 +221,14 @@ public class aq
     boolean bool1 = true;
     if (type == 10000)
     {
-      paramap = ah.tD().dF("banner");
+      paramap = ah.tE().dO("banner");
       if (paramap != null) {
         paramap.edit().clear().commit();
       }
       bool2 = bool1;
-      if (bBz != null)
+      if (buE != null)
       {
-        bBz.ud();
+        buE.ue();
         bool2 = bool1;
       }
       return bool2;
@@ -236,31 +236,31 @@ public class aq
     if (type == 57005) {
       return false;
     }
-    Object localObject = ah.tD().dF("banner");
+    Object localObject = ah.tE().dO("banner");
     if (localObject == null) {
       return false;
     }
     localObject = ((SharedPreferences)localObject).edit();
-    ap localap = ub();
-    if (!fh("HistoryInfo").contains(Integer.valueOf(type))) {}
+    ap localap = uc();
+    if (!fu("HistoryInfo").contains(Integer.valueOf(type))) {}
     for (bool1 = bool2;; bool1 = false)
     {
-      if ((localap != null) && (asN == 2))
+      if ((localap != null) && (aex == 2))
       {
-        List localList = fh("HistoryInfo");
+        List localList = fu("HistoryInfo");
         if (!localList.contains(Integer.valueOf(type))) {
           localList.add(Integer.valueOf(type));
         }
-        b("HistoryInfo", localList);
+        c("HistoryInfo", localList);
       }
       if (bool1) {
-        ((SharedPreferences.Editor)localObject).putInt("CurrentType", type).putInt("CurrentShowType", asN).putString("CurrentData", data).commit();
+        ((SharedPreferences.Editor)localObject).putInt("CurrentType", type).putInt("CurrentShowType", aex).putString("CurrentData", data).commit();
       }
       bool2 = bool1;
-      if (bBz == null) {
+      if (buE == null) {
         break;
       }
-      bBz.ud();
+      buE.ue();
       return bool1;
     }
   }
@@ -269,7 +269,7 @@ public class aq
   
   public static abstract interface b
   {
-    public abstract void ud();
+    public abstract void ue();
   }
 }
 

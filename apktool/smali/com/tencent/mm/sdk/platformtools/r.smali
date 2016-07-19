@@ -3,830 +3,401 @@
 .source "SourceFile"
 
 
-# instance fields
-.field private jVl:Ljava/nio/ByteBuffer;
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/sdk/platformtools/r$a;
+    }
+.end annotation
 
-.field private jVm:Z
+
+# static fields
+.field private static kuU:Z
+
+.field private static kuV:Ljava/lang/ThreadLocal;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ThreadLocal",
+            "<",
+            "Lorg/xmlpull/v1/XmlPullParser;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
-    .line 8
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 26
+    const/4 v0, 0x0
 
-    .line 9
+    sput-boolean v0, Lcom/tencent/mm/sdk/platformtools/r;->kuU:Z
+
+    .line 117
+    new-instance v0, Ljava/lang/ThreadLocal;
+
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+
+    sput-object v0, Lcom/tencent/mm/sdk/platformtools/r;->kuV:Ljava/lang/ThreadLocal;
+
     return-void
 .end method
 
-.method private pn(I)I
-    .locals 4
+.method public static EX(Ljava/lang/String;)Ljava/util/Map;
+    .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    const/4 v3, 0x0
+    const/4 v8, 0x2
 
-    .line 128
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
+    const/4 v2, 0x0
 
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->limit()I
+    .line 35
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
+    if-gtz v0, :cond_2
 
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->position()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    if-le v0, p1, :cond_0
-
-    .line 134
-    :goto_0
-    return v3
-
-    .line 131
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->limit()I
-
-    move-result v0
-
-    add-int/lit16 v0, v0, 0x1000
-
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    .line 132
-    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->position()I
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v3, v2}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
-
-    .line 133
-    iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    goto :goto_0
-.end method
-
-
-# virtual methods
-.method public final CL(Ljava/lang/String;)I
-    .locals 4
-
-    .prologue
-    const/4 v3, 0x0
-
-    .line 179
-    iget-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVm:Z
-
-    if-nez v0, :cond_0
-
-    .line 180
-    new-instance v0, Ljava/lang/Exception;
-
-    const-string/jumbo v1, "Buffer For Parse"
-
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 182
+    .line 36
     :cond_0
     const/4 v0, 0x0
 
-    .line 183
-    if-eqz p1, :cond_1
-
-    .line 184
-    invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v0
-
-    .line 186
+    .line 65
     :cond_1
-    if-nez v0, :cond_2
-
-    .line 187
-    new-array v0, v3, [B
-
-    .line 189
-    :cond_2
-    array-length v1, v0
-
-    const/16 v2, 0x800
-
-    if-le v1, v2, :cond_3
-
-    .line 190
-    new-instance v0, Ljava/lang/Exception;
-
-    const-string/jumbo v1, "Buffer String Length Error"
-
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 193
-    :cond_3
-    array-length v1, v0
-
-    add-int/lit8 v1, v1, 0x2
-
-    invoke-direct {p0, v1}, Lcom/tencent/mm/sdk/platformtools/r;->pn(I)I
-
-    .line 194
-    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    array-length v2, v0
-
-    int-to-short v2, v2
-
-    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
-
-    .line 195
-    array-length v1, v0
-
-    if-lez v1, :cond_4
-
-    .line 196
-    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
-
-    .line 198
-    :cond_4
-    return v3
-.end method
-
-.method public final aS([B)I
-    .locals 4
-
-    .prologue
-    const/4 v0, -0x1
-
-    const/4 v1, 0x0
-
-    .line 31
-    if-eqz p1, :cond_0
-
-    array-length v2, p1
-
-    if-nez v2, :cond_1
-
-    :cond_0
-    move v2, v0
-
-    .line 32
     :goto_0
-    if-eqz v2, :cond_4
-
-    .line 33
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    .line 40
-    :goto_1
-    return v0
-
-    .line 31
-    :cond_1
-    aget-byte v2, p1, v1
-
-    const/16 v3, 0x7b
-
-    if-eq v2, v3, :cond_2
-
-    const/4 v2, -0x2
-
-    goto :goto_0
-
-    :cond_2
-    array-length v2, p1
-
-    add-int/lit8 v2, v2, -0x1
-
-    aget-byte v2, p1, v2
-
-    const/16 v3, 0x7d
-
-    if-eq v2, v3, :cond_3
-
-    const/4 v2, -0x3
-
-    goto :goto_0
-
-    :cond_3
-    move v2, v1
-
-    goto :goto_0
-
-    .line 37
-    :cond_4
-    invoke-static {p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    .line 38
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    return-object v0
 
     .line 39
-    iput-boolean v1, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVm:Z
-
-    move v0, v1
-
-    .line 40
-    goto :goto_1
-.end method
-
-.method public final aT([B)I
-    .locals 4
-
-    .prologue
-    const/4 v3, 0x0
-
-    .line 156
-    iget-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVm:Z
-
-    if-nez v0, :cond_0
-
-    .line 157
-    new-instance v0, Ljava/lang/Exception;
-
-    const-string/jumbo v1, "Buffer For Parse"
-
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 159
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 160
-    if-eqz p1, :cond_1
-
-    move-object v0, p1
-
-    .line 163
-    :cond_1
-    if-nez v0, :cond_2
-
-    .line 164
-    new-array v0, v3, [B
-
-    .line 166
     :cond_2
-    array-length v1, v0
+    new-instance v0, Ljava/util/HashMap;
 
-    const/16 v2, 0x800
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    if-le v1, v2, :cond_3
+    .line 41
+    const-string/jumbo v1, "\n"
 
-    .line 167
-    new-instance v0, Ljava/lang/Exception;
+    invoke-virtual {p0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    const-string/jumbo v1, "Buffer String Length Error"
+    move-result-object v3
 
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+    .line 42
+    array-length v4, v3
 
-    throw v0
+    move v1, v2
 
-    .line 170
+    :goto_1
+    if-ge v1, v4, :cond_4
+
+    aget-object v5, v3, v1
+
+    .line 43
+    if-eqz v5, :cond_3
+
+    invoke-virtual {v5}, Ljava/lang/String;->length()I
+
+    move-result v6
+
+    if-lez v6, :cond_3
+
+    .line 44
+    invoke-virtual {v5}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string/jumbo v6, "="
+
+    invoke-virtual {v5, v6, v8}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 48
+    if-eqz v5, :cond_3
+
+    array-length v6, v5
+
+    if-lt v6, v8, :cond_3
+
+    .line 49
+    aget-object v6, v5, v2
+
+    .line 54
+    const/4 v7, 0x1
+
+    aget-object v5, v5, v7
+
+    .line 55
+    if-eqz v6, :cond_3
+
+    invoke-virtual {v6}, Ljava/lang/String;->length()I
+
+    move-result v7
+
+    if-lez v7, :cond_3
+
+    const-string/jumbo v7, "^[a-zA-Z0-9_.]*"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_3
+
+    .line 56
+    invoke-interface {v0, v6, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 42
     :cond_3
-    array-length v1, v0
+    add-int/lit8 v1, v1, 0x1
 
-    add-int/lit8 v1, v1, 0x2
+    goto :goto_1
 
-    invoke-direct {p0, v1}, Lcom/tencent/mm/sdk/platformtools/r;->pn(I)I
-
-    .line 171
-    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    array-length v2, v0
-
-    int-to-short v2, v2
-
-    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
-
-    .line 172
-    array-length v1, v0
-
-    if-lez v1, :cond_4
-
-    .line 173
-    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
-
-    .line 175
+    .line 62
     :cond_4
-    return v3
+    sget-boolean v1, Lcom/tencent/mm/sdk/platformtools/r;->kuU:Z
+
+    if-eqz v1, :cond_1
+
+    .line 63
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/r;->O(Ljava/util/Map;)V
+
+    goto :goto_0
 .end method
 
-.method public final aUt()V
-    .locals 3
+.method private static O(Ljava/util/Map;)V
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 98
-    iget-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVm:Z
-
-    if-eqz v0, :cond_0
-
-    .line 99
-    new-instance v0, Ljava/lang/Exception;
-
-    const-string/jumbo v1, "Buffer For Build"
-
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 101
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
+    .line 105
+    invoke-interface {p0}, Ljava/util/Map;->size()I
 
     move-result v0
 
-    .line 102
-    const/16 v1, 0x800
-
-    if-le v0, v1, :cond_1
-
-    .line 103
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    .line 104
-    new-instance v0, Ljava/lang/Exception;
-
-    const-string/jumbo v1, "Buffer String Length Error"
-
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    if-gtz v0, :cond_1
 
     .line 106
-    :cond_1
-    if-nez v0, :cond_2
+    const-string/jumbo v0, "MicroMsg.SDK.KVConfig"
 
-    .line 110
-    :goto_0
+    const-string/jumbo v1, "empty values"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 115
+    :cond_0
     return-void
 
-    .line 109
-    :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    iget-object v2, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->position()I
-
-    move-result v2
-
-    add-int/2addr v0, v2
-
-    invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    goto :goto_0
-.end method
-
-.method public final aUu()Z
-    .locals 3
-
-    .prologue
-    const/4 v0, 0x1
-
-    .line 116
-    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->limit()I
-
-    move-result v1
-
-    iget-object v2, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->position()I
-
-    move-result v2
-
-    sub-int/2addr v1, v2
-
-    if-gt v1, v0, :cond_0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final aUv()I
-    .locals 2
-
-    .prologue
-    .line 121
-    const/16 v0, 0x1000
-
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+    .line 110
+    :cond_1
+    invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    .line 122
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
+    move-result-object v2
 
-    const/16 v1, 0x7b
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    .line 123
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVm:Z
-
-    .line 124
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final aUw()[B
-    .locals 4
-
-    .prologue
-    const/4 v3, 0x0
-
-    .line 202
-    iget-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVm:Z
-
-    if-nez v0, :cond_0
-
-    .line 203
-    new-instance v0, Ljava/lang/Exception;
-
-    const-string/jumbo v1, "Buffer For Parse"
-
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 205
-    :cond_0
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/platformtools/r;->pn(I)I
-
-    .line 206
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    .line 207
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->position()I
+    .line 111
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    new-array v0, v0, [B
+    if-eqz v0, :cond_0
 
-    .line 208
-    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
+    .line 112
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    .line 113
+    const-string/jumbo v3, "MicroMsg.SDK.KVConfig"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v1, "key="
+
+    invoke-direct {v4, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
 
-    array-length v2, v0
+    check-cast v1, Ljava/lang/String;
 
-    invoke-static {v1, v3, v0, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 209
-    return-object v0
-.end method
+    move-result-object v1
 
-.method public final dq(J)I
-    .locals 2
+    const-string/jumbo v4, " value="
 
-    .prologue
-    .line 147
-    iget-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVm:Z
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-nez v0, :cond_0
+    move-result-object v1
 
-    .line 148
-    new-instance v0, Ljava/lang/Exception;
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    const-string/jumbo v1, "Buffer For Parse"
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+    check-cast v0, Ljava/lang/String;
 
-    throw v0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 150
-    :cond_0
-    const/16 v0, 0x8
+    move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/platformtools/r;->pn(I)I
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 151
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
+    move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
-
-    .line 152
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final getBuffer()[B
-    .locals 4
-
-    .prologue
-    const/4 v3, 0x0
-
-    .line 58
-    iget-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVm:Z
-
-    if-eqz v0, :cond_0
-
-    .line 59
-    new-instance v0, Ljava/lang/Exception;
-
-    const-string/jumbo v1, "Buffer For Build"
-
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 61
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v1
-
-    .line 62
-    const/16 v0, 0x800
-
-    if-le v1, v0, :cond_1
-
-    .line 63
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    .line 64
-    new-instance v0, Ljava/lang/Exception;
-
-    const-string/jumbo v1, "Buffer String Length Error"
-
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 66
-    :cond_1
-    if-nez v1, :cond_2
-
-    .line 67
-    new-array v0, v3, [B
-
-    .line 71
-    :goto_0
-    return-object v0
-
-    .line 69
-    :cond_2
-    new-array v0, v1, [B
-
-    .line 70
-    iget-object v2, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v2, v0, v3, v1}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
+    invoke-static {v3, v0}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public final getInt()I
-    .locals 2
+.method static synthetic aZv()Ljava/lang/ThreadLocal;
+    .locals 1
 
     .prologue
-    .line 44
-    iget-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVm:Z
+    .line 22
+    sget-object v0, Lcom/tencent/mm/sdk/platformtools/r;->kuV:Ljava/lang/ThreadLocal;
 
-    if-eqz v0, :cond_0
-
-    .line 45
-    new-instance v0, Ljava/lang/Exception;
-
-    const-string/jumbo v1, "Buffer For Build"
-
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 47
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getInt()I
-
-    move-result v0
-
-    return v0
+    return-object v0
 .end method
 
-.method public final getLong()J
-    .locals 2
+.method public static cr(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 51
-    iget-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVm:Z
-
-    if-eqz v0, :cond_0
-
-    .line 52
-    new-instance v0, Ljava/lang/Exception;
-
-    const-string/jumbo v1, "Buffer For Build"
-
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 54
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getLong()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final getString()Ljava/lang/String;
-    .locals 4
-
-    .prologue
-    .line 75
-    iget-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVm:Z
-
-    if-eqz v0, :cond_0
-
-    .line 76
-    new-instance v0, Ljava/lang/Exception;
-
-    const-string/jumbo v1, "Buffer For Build"
-
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 78
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v0
-
-    .line 79
-    const/16 v1, 0x800
-
-    if-le v0, v1, :cond_1
-
-    .line 80
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
+    const/4 v4, 0x1
 
-    .line 81
-    new-instance v0, Ljava/lang/Exception;
+    const/4 v5, 0x0
 
-    const-string/jumbo v1, "Buffer String Length Error"
+    .line 82
+    if-nez p0, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    const/4 v1, -0x1
 
     .line 83
-    :cond_1
-    if-nez v0, :cond_2
+    :goto_0
+    if-gez v1, :cond_1
 
     .line 84
-    const-string/jumbo v0, ""
+    const-string/jumbo v1, "MicroMsg.SDK.KVConfig"
 
-    .line 88
-    :goto_0
+    const-string/jumbo v2, "can not find the tag <%s>"
+
+    new-array v3, v4, [Ljava/lang/Object;
+
+    aput-object p1, v3, v5
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 96
+    :goto_1
     return-object v0
 
-    .line 86
-    :cond_2
-    new-array v1, v0, [B
+    .line 82
+    :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 87
-    iget-object v2, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
+    const-string/jumbo v2, "<"
 
-    const/4 v3, 0x0
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v1, v3, v0}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 88
-    new-instance v0, Ljava/lang/String;
+    move-result-object v1
 
-    const-string/jumbo v2, "UTF-8"
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
+    move-result-object v1
 
-    goto :goto_0
-.end method
-
-.method public final pm(I)V
-    .locals 2
-
-    .prologue
-    .line 93
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->position()I
+    invoke-virtual {p0, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v1
 
-    add-int/2addr v1, p1
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    .line 88
+    :cond_1
+    if-lez v1, :cond_2
+
+    .line 89
+    invoke-virtual {p0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 93
+    :cond_2
+    :try_start_0
+    new-instance v1, Lcom/tencent/mm/sdk/platformtools/r$a;
+
+    invoke-direct {v1, p0, p1}, Lcom/tencent/mm/sdk/platformtools/r$a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Lcom/tencent/mm/sdk/platformtools/r$a;->aZw()Ljava/util/Map;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    goto :goto_1
 
     .line 94
-    return-void
-.end method
+    :catch_0
+    move-exception v1
 
-.method public final po(I)I
-    .locals 2
+    .line 95
+    const-string/jumbo v2, "MicroMsg.SDK.KVConfig"
 
-    .prologue
-    .line 138
-    iget-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVm:Z
+    const-string/jumbo v3, "[ %s ]"
 
-    if-nez v0, :cond_0
+    new-array v4, v4, [Ljava/lang/Object;
 
-    .line 139
-    new-instance v0, Ljava/lang/Exception;
+    aput-object p0, v4, v5
 
-    const-string/jumbo v1, "Buffer For Parse"
+    invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 141
-    :cond_0
-    const/4 v0, 0x4
-
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/platformtools/r;->pn(I)I
-
-    .line 142
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/r;->jVl:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
-
-    .line 143
-    const/4 v0, 0x0
-
-    return v0
+    goto :goto_1
 .end method

@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->setMMEditText(Lcom/tencent/mm/ui/widget/MMEditText;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hlP:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+.field final synthetic hBQ:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 64
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter$1;->hlP:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter$1;->hBQ:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 69
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter$1;->hlP:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter$1;->hBQ:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->getVisibility()I
 
@@ -52,7 +52,7 @@
     if-ne v0, v1, :cond_0
 
     .line 70
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter$1;->hlP:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter$1;->hBQ:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
     const/4 v1, 0x0
 
@@ -60,16 +60,16 @@
 
     .line 72
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter$1;->hlP:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter$1;->hBQ:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->aCR()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->aFY()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 74
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter$1;->hlP:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter$1;->hBQ:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->a(Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;)V
 

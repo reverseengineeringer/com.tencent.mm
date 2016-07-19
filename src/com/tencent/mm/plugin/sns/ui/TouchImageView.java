@@ -9,21 +9,21 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
 import android.widget.ImageView;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import junit.framework.Assert;
 
 public class TouchImageView
   extends ImageView
 {
   private int a = 90;
-  private boolean aur = true;
+  private boolean age = true;
   private int b = 0;
   private int g = 0;
-  aa gWl;
-  Runnable gWm;
-  private Rect hmO = new Rect();
-  private Paint hmP = new Paint();
+  private Rect hCY = new Rect();
+  private Paint hCZ = new Paint();
+  ac hjH;
+  Runnable hjI;
   private int r = 0;
   
   public TouchImageView(Context paramContext)
@@ -40,8 +40,8 @@ public class TouchImageView
   
   private void init()
   {
-    gWl = new aa();
-    gWm = new Runnable()
+    hjH = new ac();
+    hjI = new Runnable()
     {
       public final void run()
       {
@@ -66,9 +66,9 @@ public class TouchImageView
             return true;
             paramAnonymousView.setPressed(true);
             paramAnonymousView.invalidate();
-            gWl.removeCallbacks(gWm);
+            hjH.removeCallbacks(hjI);
             continue;
-            gWl.post(gWm);
+            hjH.post(hjI);
           }
         }
       }
@@ -78,13 +78,13 @@ public class TouchImageView
   protected void onAttachedToWindow()
   {
     super.onAttachedToWindow();
-    u.d("!32@/B4Tb64lLpKeOb+ZJIF+Li0jeXmJpA9V", "onAttachedToWindow");
+    v.d("MicroMsg.MaskImageView", "onAttachedToWindow");
   }
   
   protected void onDetachedFromWindow()
   {
     super.onDetachedFromWindow();
-    u.d("!32@/B4Tb64lLpKeOb+ZJIF+Li0jeXmJpA9V", "onDetachedFromWindow");
+    v.d("MicroMsg.MaskImageView", "onDetachedFromWindow");
   }
   
   protected void onDraw(Canvas paramCanvas)
@@ -92,23 +92,18 @@ public class TouchImageView
     super.onDraw(paramCanvas);
     if (isPressed())
     {
-      hmO.left = getPaddingLeft();
-      hmO.top = getPaddingTop();
-      hmO.right = (getWidth() - getPaddingRight());
-      hmO.bottom = (getHeight() - getPaddingBottom());
-      hmP.setARGB(a, r, g, b);
-      paramCanvas.drawRect(hmO, hmP);
+      hCY.left = getPaddingLeft();
+      hCY.top = getPaddingTop();
+      hCY.right = (getWidth() - getPaddingRight());
+      hCY.bottom = (getHeight() - getPaddingBottom());
+      hCZ.setARGB(a, r, g, b);
+      paramCanvas.drawRect(hCY, hCZ);
     }
   }
   
   public void setOnTouchListener(View.OnTouchListener paramOnTouchListener)
   {
     Assert.assertTrue(false);
-  }
-  
-  public void settouchEnable(boolean paramBoolean)
-  {
-    aur = paramBoolean;
   }
 }
 

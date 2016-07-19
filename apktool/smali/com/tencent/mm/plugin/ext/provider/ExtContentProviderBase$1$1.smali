@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic dKR:Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase$1;
+.field final synthetic dMA:Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase$1;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 189
-    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase$1$1;->dKR:Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase$1;
+    .line 202
+    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase$1$1;->dMA:Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,20 +40,20 @@
     .locals 2
 
     .prologue
-    .line 192
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8mZxJJ4JsPX28ihhHV6igVo="
+    .line 205
+    const-string/jumbo v0, "MicroMsg.ExtContentProviderBase"
 
     const-string/jumbo v1, "checkIsLogin() onSceneEnd()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 193
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase$1$1;->dKR:Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase$1;
+    .line 206
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase$1$1;->dMA:Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase$1;->dKP:Lcom/tencent/mm/pluginsdk/d/a/a;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase$1;->dMy:Lcom/tencent/mm/pluginsdk/d/a/a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/d/a/a;->countDown()V
 
-    .line 194
+    .line 207
     return-void
 .end method

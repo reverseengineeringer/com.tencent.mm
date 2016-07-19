@@ -50,7 +50,7 @@ public class SFSContext
   
   private static native long nativeInit(String paramString);
   
-  private static native int nativeList(long paramLong, String paramString, List paramList);
+  private static native int nativeList(long paramLong, String paramString, List<FileEntry> paramList);
   
   private static native long nativeOpenRead(long paramLong, String paramString);
   
@@ -70,20 +70,6 @@ public class SFSContext
   
   private static native boolean nativeUnlink(long paramLong, String paramString);
   
-  public final boolean bo(String paramString)
-  {
-    if (mNativePtr == 0L) {
-      throw new IllegalArgumentException("Reuse already released SFSContext.");
-    }
-    String str = paramString;
-    if (f.iT(paramString))
-    {
-      f.iV(paramString);
-      str = f.iU(paramString);
-    }
-    return nativeUnlink(mNativePtr, str);
-  }
-  
   protected void finalize()
   {
     if (mNativePtr != 0L) {
@@ -92,16 +78,16 @@ public class SFSContext
     super.finalize();
   }
   
-  public final OutputStream iI(String paramString)
+  public final OutputStream iZ(String paramString)
   {
     if (mNativePtr == 0L) {
       throw new IllegalArgumentException("Reuse already released SFSContext.");
     }
     long l1;
-    if (f.iT(paramString))
+    if (f.jk(paramString))
     {
-      l1 = f.iV(paramString);
-      paramString = f.iU(paramString);
+      l1 = f.jm(paramString);
+      paramString = f.jl(paramString);
     }
     for (;;)
     {
@@ -117,7 +103,7 @@ public class SFSContext
     }
   }
   
-  public final List iW(String paramString)
+  public final List<FileEntry> jn(String paramString)
   {
     if (mNativePtr == 0L) {
       throw new IllegalArgumentException("Reuse already released SFSContext.");
@@ -129,18 +115,32 @@ public class SFSContext
     return localArrayList;
   }
   
-  public final FileEntry iX(String paramString)
+  public final FileEntry jo(String paramString)
   {
     if (mNativePtr == 0L) {
       throw new IllegalArgumentException("Reuse already released SFSContext.");
     }
     String str = paramString;
-    if (f.iT(paramString))
+    if (f.jk(paramString))
     {
-      f.iV(paramString);
-      str = f.iU(paramString);
+      f.jm(paramString);
+      str = f.jl(paramString);
     }
     return nativeStat(mNativePtr, str);
+  }
+  
+  public final boolean jp(String paramString)
+  {
+    if (mNativePtr == 0L) {
+      throw new IllegalArgumentException("Reuse already released SFSContext.");
+    }
+    String str = paramString;
+    if (f.jk(paramString))
+    {
+      f.jm(paramString);
+      str = f.jl(paramString);
+    }
+    return nativeUnlink(mNativePtr, str);
   }
   
   public final InputStream openRead(String paramString)
@@ -149,10 +149,10 @@ public class SFSContext
       throw new IllegalArgumentException("Reuse already released SFSContext.");
     }
     long l1;
-    if (f.iT(paramString))
+    if (f.jk(paramString))
     {
-      l1 = f.iV(paramString);
-      paramString = f.iU(paramString);
+      l1 = f.jm(paramString);
+      paramString = f.jl(paramString);
     }
     for (;;)
     {
@@ -177,7 +177,7 @@ public class SFSContext
   public static class Builder
     implements Parcelable
   {
-    public static final Parcelable.Creator CREATOR = new Parcelable.Creator()
+    public static final Parcelable.Creator<Builder> CREATOR = new Parcelable.Creator()
     {
       public final SFSContext.Builder createFromParcel(Parcel paramAnonymousParcel)
       {
@@ -189,7 +189,7 @@ public class SFSContext
         return new SFSContext.Builder[paramAnonymousInt];
       }
     };
-    HashMap mConf;
+    HashMap<Integer, Object> mConf;
     String mName;
     
     public Builder()

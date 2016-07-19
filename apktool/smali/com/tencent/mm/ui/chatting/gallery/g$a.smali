@@ -15,7 +15,7 @@
 
 
 # static fields
-.field private static final lge:Lcom/tencent/mm/ui/chatting/gallery/g;
+.field private static final lGr:Lcom/tencent/mm/ui/chatting/gallery/g;
 
 
 # direct methods
@@ -30,17 +30,17 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/ui/chatting/gallery/g;-><init>(B)V
 
-    sput-object v0, Lcom/tencent/mm/ui/chatting/gallery/g$a;->lge:Lcom/tencent/mm/ui/chatting/gallery/g;
+    sput-object v0, Lcom/tencent/mm/ui/chatting/gallery/g$a;->lGr:Lcom/tencent/mm/ui/chatting/gallery/g;
 
     return-void
 .end method
 
-.method static synthetic bgA()Lcom/tencent/mm/ui/chatting/gallery/g;
+.method static synthetic bmi()Lcom/tencent/mm/ui/chatting/gallery/g;
     .locals 1
 
     .prologue
     .line 24
-    sget-object v0, Lcom/tencent/mm/ui/chatting/gallery/g$a;->lge:Lcom/tencent/mm/ui/chatting/gallery/g;
+    sget-object v0, Lcom/tencent/mm/ui/chatting/gallery/g$a;->lGr:Lcom/tencent/mm/ui/chatting/gallery/g;
 
     return-object v0
 .end method

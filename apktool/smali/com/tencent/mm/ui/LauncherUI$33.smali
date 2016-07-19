@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/LauncherUI;->gX(Z)V
+    value = Lcom/tencent/mm/ui/LauncherUI;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic knl:Lcom/tencent/mm/ui/LauncherUI;
+.field final synthetic cyg:I
 
-.field final synthetic knv:Z
+.field final synthetic kMs:Lcom/tencent/mm/ui/LauncherUI;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/LauncherUI;Z)V
+.method constructor <init>(Lcom/tencent/mm/ui/LauncherUI;I)V
     .locals 0
 
     .prologue
-    .line 1175
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$33;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 4572
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$33;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    iput-boolean p2, p0, Lcom/tencent/mm/ui/LauncherUI$33;->knv:Z
+    iput p2, p0, Lcom/tencent/mm/ui/LauncherUI$33;->cyg:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,58 +40,45 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 3
 
     .prologue
     const/4 v2, 0x1
 
-    .line 1178
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$33;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 4575
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->c(Lcom/tencent/mm/ui/LauncherUI;)Lcom/tencent/mm/ui/s;
+    .line 4576
+    iget v0, p0, Lcom/tencent/mm/ui/LauncherUI$33;->cyg:I
 
-    move-result-object v0
+    const/16 v1, 0x406
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/s;->bH()Z
+    if-ne v0, v1, :cond_0
 
-    .line 1179
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/LauncherUI$33;->knv:Z
+    invoke-static {}, Lcom/tencent/mm/af/b;->AX()Z
 
-    if-eqz v0, :cond_0
+    move-result v0
 
-    .line 1180
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$33;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    if-nez v0, :cond_1
 
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/LauncherUI;->a(Lcom/tencent/mm/ui/LauncherUI;Ljava/lang/Boolean;Ljava/lang/Boolean;)V
-
-    .line 1184
-    :goto_0
-    return-void
-
-    .line 1182
+    .line 4577
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$33;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$33;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v0, v2}, Lcom/tencent/mm/ui/LauncherUI;->d(Lcom/tencent/mm/ui/LauncherUI;Z)Z
 
-    move-result-object v1
+    .line 4578
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$33;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    const/4 v2, 0x0
+    invoke-static {v0, v2}, Lcom/tencent/mm/ui/MMAppMgr;->a(Landroid/content/Context;Z)V
 
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    .line 4579
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$33;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    move-result-object v2
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/LauncherUI;->finish()V
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/LauncherUI;->a(Lcom/tencent/mm/ui/LauncherUI;Ljava/lang/Boolean;Ljava/lang/Boolean;)V
-
-    goto :goto_0
+    .line 4582
+    :cond_1
+    return-void
 .end method

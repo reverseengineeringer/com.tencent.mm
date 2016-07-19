@@ -7,51 +7,51 @@ import android.widget.EdgeEffect;
 
 public final class c
 {
-  private static final c hF = new a();
-  private Object hE;
+  private static final c hY = new a();
+  private Object hX;
   
   static
   {
     if (Build.VERSION.SDK_INT >= 14)
     {
-      hF = new b();
+      hY = new b();
       return;
     }
   }
   
   public c(Context paramContext)
   {
-    hE = hF.l(paramContext);
+    hX = hY.j(paramContext);
   }
   
-  public final boolean aE()
+  public final boolean aD()
   {
-    return hF.C(hE);
+    return hY.C(hX);
   }
   
   public final boolean draw(Canvas paramCanvas)
   {
-    return hF.a(hE, paramCanvas);
+    return hY.a(hX, paramCanvas);
   }
   
-  public final boolean f(float paramFloat)
+  public final boolean e(float paramFloat)
   {
-    return hF.a(hE, paramFloat);
+    return hY.a(hX, paramFloat);
   }
   
   public final void finish()
   {
-    hF.B(hE);
+    hY.B(hX);
   }
   
   public final boolean isFinished()
   {
-    return hF.A(hE);
+    return hY.A(hX);
   }
   
   public final void setSize(int paramInt1, int paramInt2)
   {
-    hF.a(hE, paramInt1, paramInt2);
+    hY.a(hX, paramInt1, paramInt2);
   }
   
   static final class a
@@ -81,7 +81,7 @@ public final class c
       return false;
     }
     
-    public final Object l(Context paramContext)
+    public final Object j(Context paramContext)
     {
       return null;
     }
@@ -123,7 +123,7 @@ public final class c
       return ((EdgeEffect)paramObject).draw(paramCanvas);
     }
     
-    public final Object l(Context paramContext)
+    public final Object j(Context paramContext)
     {
       return new EdgeEffect(paramContext);
     }
@@ -143,7 +143,7 @@ public final class c
     
     public abstract boolean a(Object paramObject, Canvas paramCanvas);
     
-    public abstract Object l(Context paramContext);
+    public abstract Object j(Context paramContext);
   }
 }
 

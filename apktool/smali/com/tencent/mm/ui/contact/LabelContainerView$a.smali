@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract SQ()V
+.method public abstract Uj()V
 .end method
 
-.method public abstract SR()V
+.method public abstract Uk()V
 .end method

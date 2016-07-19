@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/ak$a;
+.implements Lcom/tencent/mm/sdk/platformtools/an$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic blD:Lcom/tencent/mm/booter/a;
+.field final synthetic aZf:Lcom/tencent/mm/booter/a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 39
-    iput-object p1, p0, Lcom/tencent/mm/booter/a$1;->blD:Lcom/tencent/mm/booter/a;
+    iput-object p1, p0, Lcom/tencent/mm/booter/a$1;->aZf:Lcom/tencent/mm/booter/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final bx(I)V
+.method public final bP(I)V
     .locals 2
 
     .prologue
@@ -49,31 +49,31 @@
 
     .line 45
     :pswitch_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpI7uCMufYgkMolJsZYezO/Lsg5Y9fbkrg4="
+    const-string/jumbo v0, "MicroMsg.BackgroundPlayer"
 
     const-string/jumbo v1, "call end"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 46
-    iget-object v0, p0, Lcom/tencent/mm/booter/a$1;->blD:Lcom/tencent/mm/booter/a;
+    iget-object v0, p0, Lcom/tencent/mm/booter/a$1;->aZf:Lcom/tencent/mm/booter/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/booter/a;->mr()V
+    invoke-virtual {v0}, Lcom/tencent/mm/booter/a;->kF()V
 
     goto :goto_0
 
     .line 51
     :pswitch_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpI7uCMufYgkMolJsZYezO/Lsg5Y9fbkrg4="
+    const-string/jumbo v0, "MicroMsg.BackgroundPlayer"
 
     const-string/jumbo v1, "call start"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 52
-    iget-object v0, p0, Lcom/tencent/mm/booter/a$1;->blD:Lcom/tencent/mm/booter/a;
+    iget-object v0, p0, Lcom/tencent/mm/booter/a$1;->aZf:Lcom/tencent/mm/booter/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/booter/a;->ms()V
+    invoke-virtual {v0}, Lcom/tencent/mm/booter/a;->kG()V
 
     goto :goto_0
 

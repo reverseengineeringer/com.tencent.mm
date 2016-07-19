@@ -10,8 +10,8 @@ final class b$2
   
   public final void run()
   {
-    if (coe.coc != null) {
-      coe.coc.setMessage(coe.context.getString(2131430943) + cof + "%");
+    if (cjs.cjq != null) {
+      cjs.cjq.setMessage(cjs.context.getString(2131230948) + cjt + "%");
     }
   }
 }

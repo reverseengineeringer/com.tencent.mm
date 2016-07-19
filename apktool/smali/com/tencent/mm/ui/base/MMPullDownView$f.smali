@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract B(F)V
+.method public abstract aFO()V
 .end method
 
-.method public abstract aCK()V
+.method public abstract y(F)V
 .end method

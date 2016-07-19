@@ -21,11 +21,11 @@
 .method public abstract a(Lcom/tencent/mm/pluginsdk/ui/h;)V
 .end method
 
-.method public abstract aL(Ljava/lang/String;)Landroid/graphics/Bitmap;
+.method public abstract aQ(Ljava/lang/String;)Landroid/graphics/Bitmap;
 .end method
 
-.method public abstract aM(Ljava/lang/String;)Landroid/graphics/Bitmap;
+.method public abstract aR(Ljava/lang/String;)Landroid/graphics/Bitmap;
 .end method
 
-.method public abstract kp()Landroid/graphics/Bitmap;
+.method public abstract iS()Landroid/graphics/Bitmap;
 .end method

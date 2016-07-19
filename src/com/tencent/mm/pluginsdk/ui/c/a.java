@@ -1,40 +1,40 @@
 package com.tencent.mm.pluginsdk.ui.c;
 
 import com.tencent.mm.plugin.sight.base.SightVideoJNI;
-import com.tencent.mm.sdk.platformtools.ah;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class a
   extends com.tencent.mm.ui.tools.a.a
 {
-  private String gxe;
-  private a iML;
-  public int mSize = 104857600;
+  public int eM = 104857600;
+  private String gDC;
+  private a jjQ;
   
   private a(String paramString)
   {
-    gxe = paramString;
+    gDC = paramString;
   }
   
-  public static a AK(String paramString)
+  public static a CQ(String paramString)
   {
     return new a(paramString);
   }
   
-  public final int aSp()
+  public final int aXi()
   {
-    return aSq();
+    return aXj();
   }
   
-  protected final int aSq()
+  protected final int aXj()
   {
-    if (ay.kz(gxe)) {
-      u.w("!44@/B4Tb64lLpKN1sQ+P5w+hi17h4teZKb0JWAkVqFiAao=", "dz[check video but path is null or nil]");
+    if (be.kf(gDC)) {
+      v.w("MicroMsg.VideoBoundaryCheck", "dz[check video but path is null or nil]");
     }
-    boolean bool = ah.dx(y.getContext());
-    String str = gxe;
+    boolean bool = ak.dy(aa.getContext());
+    String str = gDC;
     int i;
     if (bool)
     {
@@ -45,16 +45,16 @@ public final class a
       }
     }
     label172:
-    for (double d = 60000.0D;; d = mSize)
+    for (double d = 60000.0D;; d = eM)
     {
       i = SightVideoJNI.shouldRemuxing(str, 660, 500, i, d, 1000000);
-      u.i("!44@/B4Tb64lLpKN1sQ+P5w+hi17h4teZKb0JWAkVqFiAao=", "check should remuxing, ret %d", new Object[] { Integer.valueOf(i) });
+      v.i("MicroMsg.VideoBoundaryCheck", "check should remuxing, ret %d", new Object[] { Integer.valueOf(i) });
       switch (i)
       {
       default: 
-        u.e("!44@/B4Tb64lLpKN1sQ+P5w+hi17h4teZKb0JWAkVqFiAao=", "unknown check type %d", new Object[] { Integer.valueOf(i) });
+        v.e("MicroMsg.VideoBoundaryCheck", "unknown check type %d", new Object[] { Integer.valueOf(i) });
         return 1;
-        i = mSize;
+        i = eM;
         break label39;
       }
     }
@@ -62,14 +62,14 @@ public final class a
     return 1;
   }
   
-  protected final void aSr()
+  protected final void aXk()
   {
-    if (iML == null)
+    if (jjQ == null)
     {
-      u.w("!44@/B4Tb64lLpKN1sQ+P5w+hi17h4teZKb0JWAkVqFiAao=", "dz[callback is null]");
+      v.w("MicroMsg.VideoBoundaryCheck", "dz[callback is null]");
       return;
     }
-    aSq();
+    aXj();
   }
   
   public static abstract interface a {}

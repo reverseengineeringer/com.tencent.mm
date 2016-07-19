@@ -21,105 +21,108 @@ import com.tencent.mm.network.o;
 import com.tencent.mm.plugin.a.a;
 import com.tencent.mm.plugin.a.b;
 import com.tencent.mm.pluginsdk.f;
-import com.tencent.mm.protocal.b.kv;
-import com.tencent.mm.protocal.b.kw;
-import com.tencent.mm.protocal.m.a;
-import com.tencent.mm.protocal.m.b;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.lg;
+import com.tencent.mm.protocal.b.lh;
+import com.tencent.mm.protocal.p.a;
+import com.tencent.mm.protocal.p.b;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.MMActivity;
+import com.tencent.mm.ui.base.MMAutoSwitchEditText;
 import com.tencent.mm.ui.base.MMAutoSwitchEditTextView;
 import com.tencent.mm.ui.base.MMAutoSwitchEditTextView.a;
 import com.tencent.mm.ui.base.MMAutoSwitchEditTextView.b;
 import com.tencent.mm.ui.base.g;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class EmailVerifyUI
   extends MMActivity
   implements d
 {
-  private ProgressDialog coM = null;
-  private String fVw;
-  private TextView krT;
-  private TextView krU;
-  private MMAutoSwitchEditTextView krV;
-  private Button krW;
-  private Button krX;
-  private String krY;
-  private String krZ;
-  private String ksa;
-  private String ksb;
-  private boolean ksc = false;
+  private ProgressDialog cka = null;
+  private String geP;
+  private TextView kRb;
+  private TextView kRc;
+  private MMAutoSwitchEditTextView kRd;
+  private Button kRe;
+  private Button kRf;
+  private String kRg;
+  private String kRh;
+  private String kRi;
+  private String kRj;
+  private boolean kRk = false;
   
   private void goBack()
   {
-    b.kC(fVw);
+    b.ll(geP);
     finish();
   }
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    qb(2131427673);
-    krT = ((TextView)findViewById(2131167058));
-    String str = getString(2131427676);
-    krT.setText(Html.fromHtml(str));
-    krU = ((TextView)findViewById(2131167059));
-    krY = getIntent().getStringExtra("email_address");
-    if (!ay.kz(krY))
+    rR(2131234376);
+    kRb = ((TextView)findViewById(2131759389));
+    String str = getString(2131234359);
+    kRb.setText(Html.fromHtml(str));
+    kRc = ((TextView)findViewById(2131759390));
+    kRg = getIntent().getStringExtra("email_address");
+    if (!be.kf(kRg))
     {
-      krU.setText(krY);
-      ksa = getIntent().getStringExtra("password");
-      krZ = getIntent().getStringExtra("email_login_page");
-      u.i("!32@/B4Tb64lLpIOS9lfUKA2PejJbq3tJ/Tl", "user register:email add:[%s], password not allowed to printf, login page:[%s]", new Object[] { krY, krZ });
-      krV = ((MMAutoSwitchEditTextView)findViewById(2131167060));
-      krV.setOnInputFinished(new MMAutoSwitchEditTextView.a()
+      kRc.setText(kRg);
+      kRi = getIntent().getStringExtra("password");
+      kRh = getIntent().getStringExtra("email_login_page");
+      v.i("MicroMsg.EmailVerifyUI", "user register:email add:[%s], password not allowed to printf, login page:[%s]", new Object[] { kRg, kRh });
+      kRd = ((MMAutoSwitchEditTextView)findViewById(2131759391));
+      kRd.lcq = new MMAutoSwitchEditTextView.a()
       {
-        public final void Go(String paramAnonymousString)
+        public final void ID(String paramAnonymousString)
         {
-          bC(true);
+          bp(true);
           EmailVerifyUI.a(EmailVerifyUI.this, paramAnonymousString);
         }
-      });
-      krV.setOnTextChanged(new MMAutoSwitchEditTextView.b()
+      };
+      kRd.lcr = new MMAutoSwitchEditTextView.b()
       {
-        public final void bbz()
+        public final void bgL()
         {
-          bC(false);
+          bp(false);
         }
-      });
-      krX = ((Button)findViewById(2131167062));
-      krX.setOnClickListener(new View.OnClickListener()
+      };
+      kRf = ((Button)findViewById(2131759393));
+      kRf.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
-          b.kD(ah.tx() + "," + getClass().getName() + ",R500_250," + ah.fd("R500_250") + ",3");
-          g.a(EmailVerifyUI.this, 2131427692, 2131427683, 2131430888, 2131430884, new DialogInterface.OnClickListener()
+          b.lm(ah.ty() + "," + getClass().getName() + ",R500_250," + ah.fq("R500_250") + ",3");
+          g.a(EmailVerifyUI.this, 2131234367, 2131234357, 2131230967, 2131230873, new DialogInterface.OnClickListener()
           {
             public final void onClick(final DialogInterface paramAnonymous2DialogInterface, int paramAnonymous2Int)
             {
               paramAnonymous2DialogInterface = new w(EmailVerifyUI.a(EmailVerifyUI.this), EmailVerifyUI.b(EmailVerifyUI.this));
-              ah.tE().d(paramAnonymous2DialogInterface);
+              ah.tF().a(paramAnonymous2DialogInterface, 0);
               EmailVerifyUI localEmailVerifyUI1 = EmailVerifyUI.this;
               EmailVerifyUI localEmailVerifyUI2 = EmailVerifyUI.this;
-              getString(2131430877);
-              EmailVerifyUI.a(localEmailVerifyUI1, g.a(localEmailVerifyUI2, getString(2131427693), true, new DialogInterface.OnCancelListener()
+              getString(2131231028);
+              EmailVerifyUI.a(localEmailVerifyUI1, g.a(localEmailVerifyUI2, getString(2131234375), true, new DialogInterface.OnCancelListener()
               {
                 public final void onCancel(DialogInterface paramAnonymous3DialogInterface)
                 {
-                  ah.tE().c(paramAnonymous2DialogInterface);
+                  ah.tF().c(paramAnonymous2DialogInterface);
                 }
               }));
             }
           }, null);
         }
       });
-      krW = ((Button)findViewById(2131167061));
-      if ((!ay.kz(krZ)) && (!ay.kz(krY))) {
+      kRe = ((Button)findViewById(2131759392));
+      if ((!be.kf(kRh)) && (!be.kf(kRg))) {
         break label295;
       }
-      krW.setVisibility(8);
+      kRe.setVisibility(8);
     }
     for (;;)
     {
@@ -131,126 +134,64 @@ public class EmailVerifyUI
           return true;
         }
       });
-      a(0, getString(2131430895), new MenuItem.OnMenuItemClickListener()
+      a(0, getString(2131230965), new MenuItem.OnMenuItemClickListener()
       {
         public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
         {
-          EmailVerifyUI.b(EmailVerifyUI.this, EmailVerifyUI.e(EmailVerifyUI.this).getText());
-          if ((!ay.kz(EmailVerifyUI.f(EmailVerifyUI.this))) && (EmailVerifyUI.f(EmailVerifyUI.this).length() == 12)) {
-            EmailVerifyUI.a(EmailVerifyUI.this, EmailVerifyUI.f(EmailVerifyUI.this));
+          EmailVerifyUI localEmailVerifyUI = EmailVerifyUI.this;
+          Object localObject = EmailVerifyUI.e(EmailVerifyUI.this);
+          paramAnonymousMenuItem = "";
+          localObject = lco.iterator();
+          if (((Iterator)localObject).hasNext())
+          {
+            MMAutoSwitchEditText localMMAutoSwitchEditText = (MMAutoSwitchEditText)((Iterator)localObject).next();
+            if (be.kf(localMMAutoSwitchEditText.getText().toString().trim())) {
+              break label154;
+            }
+            paramAnonymousMenuItem = paramAnonymousMenuItem + localMMAutoSwitchEditText.getText().toString().trim();
           }
+          label154:
           for (;;)
           {
-            return true;
-            bC(false);
+            break;
+            EmailVerifyUI.b(localEmailVerifyUI, paramAnonymousMenuItem);
+            if ((!be.kf(EmailVerifyUI.f(EmailVerifyUI.this))) && (EmailVerifyUI.f(EmailVerifyUI.this).length() == 12)) {
+              EmailVerifyUI.a(EmailVerifyUI.this, EmailVerifyUI.f(EmailVerifyUI.this));
+            }
+            for (;;)
+            {
+              return true;
+              bp(false);
+            }
           }
         }
       });
-      bC(false);
+      bp(false);
       return;
-      u.w("!32@/B4Tb64lLpIOS9lfUKA2PejJbq3tJ/Tl", "email add is null or nill");
+      v.w("MicroMsg.EmailVerifyUI", "email add is null or nill");
       break;
       label295:
-      krW.setVisibility(0);
-      krW.setOnClickListener(new View.OnClickListener()
+      kRe.setVisibility(0);
+      kRe.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
-          ay.C(EmailVerifyUI.this, EmailVerifyUI.c(EmailVerifyUI.this));
+          be.D(EmailVerifyUI.this, EmailVerifyUI.c(EmailVerifyUI.this));
         }
       });
     }
-  }
-  
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
-  {
-    u.i("!32@/B4Tb64lLpIOS9lfUKA2PejJbq3tJ/Tl", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
-    ksc = false;
-    if ((coM != null) && (coM.isShowing()))
-    {
-      coM.dismiss();
-      coM = null;
-    }
-    if (paramj.getType() != 481) {
-      u.e("!32@/B4Tb64lLpIOS9lfUKA2PejJbq3tJ/Tl", "error cgi type callback:[%d]", new Object[] { Integer.valueOf(paramj.getType()) });
-    }
-    int j;
-    label551:
-    do
-    {
-      for (;;)
-      {
-        return;
-        j = bGh.vA()).iUX.iZE;
-        if ((paramInt1 == 0) && (paramInt2 == 0))
-        {
-          if (j == 2)
-          {
-            b.kC("R200_900_email");
-            paramString = new Intent(this, RegSetInfoUI.class);
-            paramString.putExtra("regsetinfo_ticket", bGh.tX()).iUY.jiB);
-            paramString.putExtra("regsetinfo_user", krY);
-            paramString.putExtra("regsetinfo_ismobile", 3);
-            paramString.putExtra("regsetinfo_NextStyle", ((w)paramj).yU());
-            paramString.putExtra("regsetinfo_pwd", ksa);
-            paramString.putExtra("regsetinfo_bind_email", krY);
-            startActivity(paramString);
-            return;
-          }
-          if (j == 1)
-          {
-            b.kD(ah.tx() + "," + getClass().getName() + ",R22_resend_email_code_alert," + ah.fd("R22_resend_email_code_alert") + ",3");
-            g.ba(this, getString(2131427681));
-            return;
-          }
-          u.e("!32@/B4Tb64lLpIOS9lfUKA2PejJbq3tJ/Tl", "err opcode");
-          return;
-        }
-        int i;
-        if (a.cob.a(this, paramInt1, paramInt2, paramString)) {
-          i = 1;
-        }
-        while (i == 0)
-        {
-          if (j != 2) {
-            break label551;
-          }
-          Toast.makeText(this, getString(2131427682, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
-          return;
-          switch (paramInt2)
-          {
-          default: 
-            i = 0;
-            break;
-          case -32: 
-            g.a(this, 2131427688, 2131427683, null);
-            b.kD(ah.tx() + "," + getClass().getName() + ",R500_260," + ah.fd("R500_260") + ",3");
-            i = 1;
-            break;
-          case -33: 
-            g.a(this, 2131427689, 2131427683, null);
-            i = 1;
-            break;
-          case -34: 
-            Toast.makeText(this, 2131427690, 0).show();
-            i = 1;
-          }
-        }
-      }
-    } while (j != 1);
-    Toast.makeText(this, getString(2131427680, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
   }
   
   protected final int getLayoutId()
   {
-    return 2131362430;
+    return 2130904548;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    Gb();
-    fVw = b.FX();
+    Gy();
+    geP = b.Gu();
   }
   
   public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
@@ -266,16 +207,95 @@ public class EmailVerifyUI
   protected void onPause()
   {
     super.onPause();
-    ah.tE().b(481, this);
-    b.b(false, ah.tx() + "," + getClass().getName() + ",R500_200," + ah.fd("R500_200") + ",2");
+    ah.tF().b(481, this);
+    b.b(false, ah.ty() + "," + getClass().getName() + ",R500_200," + ah.fq("R500_200") + ",2");
   }
   
   protected void onResume()
   {
     super.onResume();
-    ah.tE().a(481, this);
-    b.b(true, ah.tx() + "," + getClass().getName() + ",R500_200," + ah.fd("R500_200") + ",1");
-    b.kB("R500_200");
+    ah.tF().a(481, this);
+    b.b(true, ah.ty() + "," + getClass().getName() + ",R500_200," + ah.fq("R500_200") + ",1");
+    b.lk("R500_200");
+  }
+  
+  public void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
+  {
+    v.i("MicroMsg.EmailVerifyUI", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
+    kRk = false;
+    if ((cka != null) && (cka.isShowing()))
+    {
+      cka.dismiss();
+      cka = null;
+    }
+    if (paramj.getType() != 481) {
+      v.e("MicroMsg.EmailVerifyUI", "error cgi type callback:[%d]", new Object[] { Integer.valueOf(paramj.getType()) });
+    }
+    int j;
+    label555:
+    do
+    {
+      for (;;)
+      {
+        return;
+        j = bzs.vC()).jsu.jxj;
+        if ((paramInt1 == 0) && (paramInt2 == 0))
+        {
+          if (j == 2)
+          {
+            b.ll("R200_900_email");
+            paramString = new Intent(this, RegSetInfoUI.class);
+            paramString.putExtra("regsetinfo_ticket", bzs.tY()).jsv.jGI);
+            paramString.putExtra("regsetinfo_user", kRg);
+            paramString.putExtra("regsetinfo_ismobile", 3);
+            paramString.putExtra("regsetinfo_NextStyle", ((w)paramj).zh());
+            paramString.putExtra("regsetinfo_pwd", kRi);
+            paramString.putExtra("regsetinfo_bind_email", kRg);
+            startActivity(paramString);
+            return;
+          }
+          if (j == 1)
+          {
+            b.lm(ah.ty() + "," + getClass().getName() + ",R22_resend_email_code_alert," + ah.fq("R22_resend_email_code_alert") + ",3");
+            g.aZ(this, getString(2131234369));
+            return;
+          }
+          v.e("MicroMsg.EmailVerifyUI", "err opcode");
+          return;
+        }
+        int i;
+        if (a.cjp.a(this, paramInt1, paramInt2, paramString)) {
+          i = 1;
+        }
+        while (i == 0)
+        {
+          if (j != 2) {
+            break label555;
+          }
+          Toast.makeText(this, getString(2131234377, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
+          return;
+          switch (paramInt2)
+          {
+          default: 
+            i = 0;
+            break;
+          case -32: 
+            g.a(this, 2131234358, 2131234357, null);
+            b.lm(ah.ty() + "," + getClass().getName() + ",R500_260," + ah.fq("R500_260") + ",3");
+            i = 1;
+            break;
+          case -33: 
+            g.a(this, 2131234356, 2131234357, null);
+            i = 1;
+            break;
+          case -34: 
+            Toast.makeText(this, 2131234355, 0).show();
+            i = 1;
+          }
+        }
+      }
+    } while (j != 1);
+    Toast.makeText(this, getString(2131234368, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
   }
 }
 

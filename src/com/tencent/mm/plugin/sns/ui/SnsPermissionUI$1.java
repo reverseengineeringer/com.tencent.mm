@@ -11,9 +11,9 @@ final class SnsPermissionUI$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    hgS.age();
-    hgS.setResult(-1, new Intent());
-    hgS.finish();
+    hvH.aiI();
+    hvH.setResult(-1, new Intent());
+    hvH.finish();
     return true;
   }
 }

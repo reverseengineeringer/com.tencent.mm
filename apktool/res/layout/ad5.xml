@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:form="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:background="@color/j3" android:paddingLeft="@dimen/i7" android:paddingTop="@dimen/hb" android:paddingRight="@dimen/i7" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/chd" android:background="@drawable/act" android:layout_width="@dimen/l8" android:layout_height="@dimen/l8" android:layout_marginTop="@dimen/hf" />
+        <TextView android:textSize="@dimen/i8" android:textColor="@color/ak" android:gravity="center" android:id="@id/che" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hb" android:text="@string/d0j" />
+        <Button android:id="@id/chf" android:visibility="visible" android:layout_marginTop="@dimen/he" android:layout_marginBottom="@dimen/j8" android:text="@string/d0k" style="@style/MMSolidGreenLargeButton" />
+        <Button android:id="@id/chg" android:visibility="visible" android:layout_marginTop="@dimen/he" android:layout_marginBottom="@dimen/j8" android:text="@string/d0i" style="@style/MMSolidGreenLargeButton" />
+    </LinearLayout>
+</RelativeLayout>

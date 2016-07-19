@@ -1,0 +1,54 @@
+package com.tencent.mm.pluginsdk.i;
+
+import android.app.Activity;
+import android.widget.Toast;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.j;
+
+public final class i
+  extends b
+{
+  public i(Activity paramActivity)
+  {
+    super(paramActivity);
+  }
+  
+  public final boolean b(o paramo)
+  {
+    v.d("MicroMsg.ErrorMsgBoxProcessor", "handleOpenUrl");
+    Toast.makeText(aeH, content, 0).show();
+    return true;
+  }
+  
+  public final boolean c(o paramo)
+  {
+    v.d("MicroMsg.ErrorMsgBoxProcessor", "handleIgnore");
+    Toast.makeText(aeH, content, 0).show();
+    return true;
+  }
+  
+  public final boolean d(o paramo)
+  {
+    v.d("MicroMsg.ErrorMsgBoxProcessor", "handleFalseLast");
+    Toast.makeText(aeH, content, 0).show();
+    return true;
+  }
+  
+  public final boolean e(o paramo)
+  {
+    v.d("MicroMsg.ErrorMsgBoxProcessor", "handleFalseCancel");
+    Toast.makeText(aeH, content, 0).show();
+    return true;
+  }
+  
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
+  {
+    v.i("MicroMsg.ErrorMsgBoxProcessor", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
+  }
+}
+
+/* Location:
+ * Qualified Name:     com.tencent.mm.pluginsdk.i.i
+ * Java Class Version: 6 (50.0)
+ * JD-Core Version:    0.7.1
+ */

@@ -1,6 +1,6 @@
 package com.tencent.mm.plugin.accountsync.ui;
 
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.ui.tools.r.b;
 
 final class InviteFacebookFriendsUI$1
@@ -8,29 +8,29 @@ final class InviteFacebookFriendsUI$1
 {
   InviteFacebookFriendsUI$1(InviteFacebookFriendsUI paramInviteFacebookFriendsUI) {}
   
-  public final void Gd() {}
+  public final void GA() {}
   
-  public final void Ge() {}
+  public final void GB() {}
   
-  public final void Gf() {}
+  public final void GC() {}
   
-  public final void Gg() {}
+  public final void GD() {}
   
-  public final boolean kE(String paramString)
+  public final boolean ln(String paramString)
   {
     return false;
   }
   
-  public final void kF(String paramString)
+  public final void lo(String paramString)
   {
-    InviteFacebookFriendsUI.a(coP, ay.kx(paramString));
-    paramString = coP;
-    if (coK != null)
+    InviteFacebookFriendsUI.a(ckd, be.lh(paramString));
+    paramString = ckd;
+    if (cjY != null)
     {
-      InviteFacebookFriendsUI.a locala = coK;
-      coW = ay.kx(coN.trim());
-      locala.adW();
-      locala.Gk();
+      InviteFacebookFriendsUI.a locala = cjY;
+      ckk = be.lh(ckb.trim());
+      locala.closeCursor();
+      locala.GH();
     }
   }
 }

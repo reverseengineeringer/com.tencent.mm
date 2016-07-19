@@ -1,19 +1,16 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.model.as.a;
-import com.tencent.mm.network.e;
+import com.tencent.mm.sdk.platformtools.ah.a;
 
 final class ChattingUI$a$53
-  implements as.a
+  implements ah.a
 {
   ChattingUI$a$53(ChattingUI.a parama) {}
   
-  public final void a(e parame)
+  public final boolean jK()
   {
-    if (parame == null) {
-      return;
-    }
-    parame.stopSignalling();
+    lAY.lsL.a(null, null);
+    return true;
   }
 }
 

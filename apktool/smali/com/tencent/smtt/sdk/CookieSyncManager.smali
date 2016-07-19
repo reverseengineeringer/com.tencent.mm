@@ -1,48 +1,41 @@
 .class public Lcom/tencent/smtt/sdk/CookieSyncManager;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # static fields
-.field private static lQZ:Landroid/webkit/CookieSyncManager;
+.field private static msM:Landroid/webkit/CookieSyncManager;
 
-.field private static lRa:Lcom/tencent/smtt/sdk/CookieSyncManager;
+.field private static msN:Lcom/tencent/smtt/sdk/CookieSyncManager;
 
 
 # direct methods
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
     const/4 v5, 0x0
 
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
-    invoke-static {v5}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
+    invoke-static {v5}, Lcom/tencent/smtt/sdk/d;->jb(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
-    .line 54
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->bln()Z
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->brr()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 56
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->blm()Lcom/tencent/smtt/sdk/t;
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->brq()Lcom/tencent/smtt/sdk/t;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/t;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/t;->mvz:Lcom/tencent/smtt/export/external/DexLoader;
 
-    .line 57
     const-string/jumbo v1, "com.tencent.tbs.tbsshell.WebCoreProxy"
 
     const-string/jumbo v2, "cookieSyncManager_createInstance"
@@ -59,7 +52,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/tencent/smtt/export/external/DexLoader;->invokeStaticMethod(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 60
     :cond_0
     return-void
 .end method
@@ -67,8 +59,6 @@
 .method public static declared-synchronized createInstance(Landroid/content/Context;)Lcom/tencent/smtt/sdk/CookieSyncManager;
     .locals 3
 
-    .prologue
-    .line 29
     const-class v1, Lcom/tencent/smtt/sdk/CookieSyncManager;
 
     monitor-enter v1
@@ -78,14 +68,12 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/smtt/sdk/CookieSyncManager;->lQZ:Landroid/webkit/CookieSyncManager;
+    sput-object v0, Lcom/tencent/smtt/sdk/CookieSyncManager;->msM:Landroid/webkit/CookieSyncManager;
 
-    .line 31
-    sget-object v0, Lcom/tencent/smtt/sdk/CookieSyncManager;->lRa:Lcom/tencent/smtt/sdk/CookieSyncManager;
+    sget-object v0, Lcom/tencent/smtt/sdk/CookieSyncManager;->msN:Lcom/tencent/smtt/sdk/CookieSyncManager;
 
     if-nez v0, :cond_0
 
-    .line 33
     new-instance v0, Lcom/tencent/smtt/sdk/CookieSyncManager;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -94,11 +82,10 @@
 
     invoke-direct {v0, v2}, Lcom/tencent/smtt/sdk/CookieSyncManager;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/tencent/smtt/sdk/CookieSyncManager;->lRa:Lcom/tencent/smtt/sdk/CookieSyncManager;
+    sput-object v0, Lcom/tencent/smtt/sdk/CookieSyncManager;->msN:Lcom/tencent/smtt/sdk/CookieSyncManager;
 
-    .line 35
     :cond_0
-    sget-object v0, Lcom/tencent/smtt/sdk/CookieSyncManager;->lRa:Lcom/tencent/smtt/sdk/CookieSyncManager;
+    sget-object v0, Lcom/tencent/smtt/sdk/CookieSyncManager;->msN:Lcom/tencent/smtt/sdk/CookieSyncManager;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -106,7 +93,6 @@
 
     return-object v0
 
-    .line 29
     :catchall_0
     move-exception v0
 
@@ -118,18 +104,15 @@
 .method public static declared-synchronized getInstance()Lcom/tencent/smtt/sdk/CookieSyncManager;
     .locals 3
 
-    .prologue
-    .line 44
     const-class v1, Lcom/tencent/smtt/sdk/CookieSyncManager;
 
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/tencent/smtt/sdk/CookieSyncManager;->lRa:Lcom/tencent/smtt/sdk/CookieSyncManager;
+    sget-object v0, Lcom/tencent/smtt/sdk/CookieSyncManager;->msN:Lcom/tencent/smtt/sdk/CookieSyncManager;
 
     if-nez v0, :cond_0
 
-    .line 46
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v2, "CookieSyncManager::createInstance() needs to be called before CookieSyncManager::getInstance()"
@@ -140,7 +123,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 44
     :catchall_0
     move-exception v0
 
@@ -148,10 +130,9 @@
 
     throw v0
 
-    .line 48
     :cond_0
     :try_start_1
-    sget-object v0, Lcom/tencent/smtt/sdk/CookieSyncManager;->lRa:Lcom/tencent/smtt/sdk/CookieSyncManager;
+    sget-object v0, Lcom/tencent/smtt/sdk/CookieSyncManager;->msN:Lcom/tencent/smtt/sdk/CookieSyncManager;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -165,31 +146,26 @@
 .method public startSync()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 103
-    invoke-static {v4}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
+    invoke-static {v4}, Lcom/tencent/smtt/sdk/d;->jb(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
-    .line 104
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->bln()Z
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->brr()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 106
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->blm()Lcom/tencent/smtt/sdk/t;
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->brq()Lcom/tencent/smtt/sdk/t;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/t;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/t;->mvz:Lcom/tencent/smtt/export/external/DexLoader;
 
-    .line 107
     const-string/jumbo v1, "com.tencent.tbs.tbsshell.WebCoreProxy"
 
     const-string/jumbo v2, "cookieSyncManager_startSync"
@@ -200,17 +176,14 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/tencent/smtt/export/external/DexLoader;->invokeStaticMethod(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 127
     :goto_0
     return-void
 
-    .line 112
     :cond_0
-    sget-object v0, Lcom/tencent/smtt/sdk/CookieSyncManager;->lQZ:Landroid/webkit/CookieSyncManager;
+    sget-object v0, Lcom/tencent/smtt/sdk/CookieSyncManager;->msM:Landroid/webkit/CookieSyncManager;
 
     invoke-virtual {v0}, Landroid/webkit/CookieSyncManager;->startSync()V
 
-    .line 116
     :try_start_0
     const-string/jumbo v0, "android.webkit.WebSyncManager"
 
@@ -218,20 +191,17 @@
 
     move-result-object v0
 
-    .line 117
     const-string/jumbo v1, "mSyncThread"
 
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
-    .line 118
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 119
-    sget-object v1, Lcom/tencent/smtt/sdk/CookieSyncManager;->lQZ:Landroid/webkit/CookieSyncManager;
+    sget-object v1, Lcom/tencent/smtt/sdk/CookieSyncManager;->msM:Landroid/webkit/CookieSyncManager;
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -239,7 +209,6 @@
 
     check-cast v0, Ljava/lang/Thread;
 
-    .line 120
     new-instance v1, Lcom/tencent/smtt/sdk/SQLiteUncaughtExceptionHandler;
 
     invoke-direct {v1}, Lcom/tencent/smtt/sdk/SQLiteUncaughtExceptionHandler;-><init>()V
@@ -250,7 +219,6 @@
 
     goto :goto_0
 
-    .line 127
     :catch_0
     move-exception v0
 
@@ -260,31 +228,26 @@
 .method public stopSync()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 85
-    invoke-static {v4}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
+    invoke-static {v4}, Lcom/tencent/smtt/sdk/d;->jb(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
-    .line 86
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->bln()Z
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->brr()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 88
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->blm()Lcom/tencent/smtt/sdk/t;
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->brq()Lcom/tencent/smtt/sdk/t;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/t;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/t;->mvz:Lcom/tencent/smtt/export/external/DexLoader;
 
-    .line 89
     const-string/jumbo v1, "com.tencent.tbs.tbsshell.WebCoreProxy"
 
     const-string/jumbo v2, "cookieSyncManager_stopSync"
@@ -295,13 +258,11 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/tencent/smtt/export/external/DexLoader;->invokeStaticMethod(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 96
     :goto_0
     return-void
 
-    .line 94
     :cond_0
-    sget-object v0, Lcom/tencent/smtt/sdk/CookieSyncManager;->lQZ:Landroid/webkit/CookieSyncManager;
+    sget-object v0, Lcom/tencent/smtt/sdk/CookieSyncManager;->msM:Landroid/webkit/CookieSyncManager;
 
     invoke-virtual {v0}, Landroid/webkit/CookieSyncManager;->stopSync()V
 
@@ -311,31 +272,26 @@
 .method public sync()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 67
-    invoke-static {v4}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
+    invoke-static {v4}, Lcom/tencent/smtt/sdk/d;->jb(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
-    .line 68
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->bln()Z
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->brr()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 70
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->blm()Lcom/tencent/smtt/sdk/t;
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->brq()Lcom/tencent/smtt/sdk/t;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/t;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/t;->mvz:Lcom/tencent/smtt/export/external/DexLoader;
 
-    .line 71
     const-string/jumbo v1, "com.tencent.tbs.tbsshell.WebCoreProxy"
 
     const-string/jumbo v2, "cookieSyncManager_Sync"
@@ -346,13 +302,11 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/tencent/smtt/export/external/DexLoader;->invokeStaticMethod(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 78
     :goto_0
     return-void
 
-    .line 76
     :cond_0
-    sget-object v0, Lcom/tencent/smtt/sdk/CookieSyncManager;->lQZ:Landroid/webkit/CookieSyncManager;
+    sget-object v0, Lcom/tencent/smtt/sdk/CookieSyncManager;->msM:Landroid/webkit/CookieSyncManager;
 
     invoke-virtual {v0}, Landroid/webkit/CookieSyncManager;->sync()V
 

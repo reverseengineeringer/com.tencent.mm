@@ -5,34 +5,37 @@ import android.app.Application;
 import android.app.Application.ActivityLifecycleCallbacks;
 import android.os.Bundle;
 import android.os.Process;
-import android.support.a.a;
 import com.tencent.mm.compatible.d.l;
+import com.tencent.mm.compatible.loader.e;
 import com.tencent.mm.compatible.util.i;
+import com.tencent.mm.d.a;
 import com.tencent.mm.modelsfs.FileOp;
-import com.tencent.mm.platformtools.r;
+import com.tencent.mm.platformtools.q;
+import com.tencent.mm.sdk.b.b;
 import com.tencent.mm.sdk.platformtools.MMBitmapFactory;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.xlog.Xlog;
 import com.tencent.smtt.sdk.WebView;
+import com.tencent.tinker.loader.app.TinkerApplication;
 import java.util.Locale;
 
 public final class ToolsProfile
-  extends com.tencent.mm.compatible.loader.h
+  extends e
 {
-  public static final String alg = y.getPackageName() + ":tools";
-  private static int ama = 0;
+  private static int YP = 0;
+  public static final String Yf = aa.getPackageName() + ":tools";
   private static Locale locale;
   
   public final void aQ()
   {
-    Locale localLocale = MMActivity.dS(btM.getBaseContext());
-    u.d("!32@/B4Tb64lLpIkgs39Nqw598Se1kGoMRt/", "onConfigurationChanged, locale = " + locale.toString() + ", n = " + localLocale.toString());
+    Locale localLocale = MMActivity.dT(bhP.getBaseContext());
+    v.d("MicroMsg.ToolsProfile", "onConfigurationChanged, locale = " + locale.toString() + ", n = " + localLocale.toString());
     if (!localLocale.equals(locale))
     {
-      u.w("!32@/B4Tb64lLpIkgs39Nqw598Se1kGoMRt/", "language changed, restart process");
+      v.w("MicroMsg.ToolsProfile", "language changed, restart process");
       System.exit(-1);
     }
   }
@@ -42,9 +45,9 @@ public final class ToolsProfile
     long l = System.currentTimeMillis();
     Object localObject = ToolsProfile.class.getClassLoader();
     i.b("stlport_shared", (ClassLoader)localObject);
-    com.tencent.mm.booter.c localc = com.tencent.mm.booter.c.an(btM.getBaseContext());
-    a.a(y.getContext(), true);
-    h.aP(alg);
+    com.tencent.mm.booter.c localc = com.tencent.mm.booter.c.ak(bhP.getBaseContext());
+    a.b(aa.getContext(), true);
+    g.aU(Yf);
     i.setupBrokenLibraryHandler();
     Xlog.init();
     i.b("kkdb", (ClassLoader)localObject);
@@ -52,46 +55,49 @@ public final class ToolsProfile
     i.b("wechatImgTools", (ClassLoader)localObject);
     i.b("FFmpeg", (ClassLoader)localObject);
     i.b("wechatpack", (ClassLoader)localObject);
-    int i = l.ok();
+    int i = l.mA();
     if ((i & 0x400) != 0)
     {
-      u.i("!32@/B4Tb64lLpIkgs39Nqw598Se1kGoMRt/", "load wechatsight_v7a, core number: %d", new Object[] { Integer.valueOf(i >> 12) });
+      v.i("MicroMsg.ToolsProfile", "load wechatsight_v7a, core number: %d", new Object[] { Integer.valueOf(i >> 12) });
       i.b("wechatsight_v7a", (ClassLoader)localObject);
-      if (i >> 12 >= 4) {
-        com.tencent.mm.plugin.sight.base.a.gwQ = 3;
+      if (i >> 12 >= 4)
+      {
+        com.tencent.mm.plugin.sight.base.a.gDi = 3;
+        com.tencent.mm.plugin.sight.base.a.gDj = 3;
+        com.tencent.mm.plugin.sight.base.a.gDk = 544000;
       }
     }
     for (;;)
     {
-      locale = MMActivity.dS(btM.getBaseContext());
-      MMApplicationWrapper.a(btM);
-      localc.cv("TOOL");
-      r.cmz = ay.a(localc.cw(".com.tencent.mm.debug.test.display_errcode"), false);
-      r.cmA = ay.a(localc.cw(".com.tencent.mm.debug.test.display_msgstate"), false);
-      r.cmB = ay.a(localc.cw(".com.tencent.mm.debug.test.network.simulate_fault"), false);
-      r.cmC = ay.a(localc.cw(".com.tencent.mm.debug.test.network.force_touch"), false);
-      r.cmD = ay.a(localc.cw(".com.tencent.mm.debug.test.outputToSdCardlog"), false);
-      r.cmE = ay.a(localc.cw(".com.tencent.mm.debug.test.crashIsExit"), false);
-      r.cmI = ay.a(localc.cw(".com.tencent.mm.debug.test.album_show_info"), false);
-      r.cmJ = ay.a(localc.cw(".com.tencent.mm.debug.test.location_help"), false);
-      r.cmM = ay.a(localc.cw(".com.tencent.mm.debug.test.force_soso"), false);
-      r.cmN = ay.a(localc.cw(".com.tencent.mm.debug.test.simulatePostServerError"), false);
-      r.cmO = ay.a(localc.cw(".com.tencent.mm.debug.test.simulateUploadServerError"), false);
-      r.cmP = ay.a(localc.cw(".com.tencent.mm.debug.test.snsNotwirteThumb"), false);
-      r.cmS = ay.a(localc.cw(".com.tencent.mm.debug.test.filterfpnp"), false);
-      r.cmT = ay.a(localc.cw(".com.tencent.mm.debug.test.testForPull"), false);
-      i = ay.b(localc.getInteger(".com.tencent.mm.debug.test.cdnDownloadThread"), 0);
-      r.cmQ = i;
-      if ((i != 4) && (r.cmQ > 0))
+      locale = MMActivity.dT(bhP.getBaseContext());
+      MMApplicationWrapper.initSVGPreload(bhP);
+      localc.cA("TOOL");
+      q.chE = be.a(localc.cB(".com.tencent.mm.debug.test.display_errcode"), false);
+      q.chF = be.a(localc.cB(".com.tencent.mm.debug.test.display_msgstate"), false);
+      q.chG = be.a(localc.cB(".com.tencent.mm.debug.test.network.simulate_fault"), false);
+      q.chH = be.a(localc.cB(".com.tencent.mm.debug.test.network.force_touch"), false);
+      q.chI = be.a(localc.cB(".com.tencent.mm.debug.test.outputToSdCardlog"), false);
+      q.chJ = be.a(localc.cB(".com.tencent.mm.debug.test.crashIsExit"), false);
+      q.chN = be.a(localc.cB(".com.tencent.mm.debug.test.album_show_info"), false);
+      q.chO = be.a(localc.cB(".com.tencent.mm.debug.test.location_help"), false);
+      q.chR = be.a(localc.cB(".com.tencent.mm.debug.test.force_soso"), false);
+      q.chS = be.a(localc.cB(".com.tencent.mm.debug.test.simulatePostServerError"), false);
+      q.chT = be.a(localc.cB(".com.tencent.mm.debug.test.simulateUploadServerError"), false);
+      q.chU = be.a(localc.cB(".com.tencent.mm.debug.test.snsNotwirteThumb"), false);
+      q.chX = be.a(localc.cB(".com.tencent.mm.debug.test.filterfpnp"), false);
+      q.chY = be.a(localc.cB(".com.tencent.mm.debug.test.testForPull"), false);
+      i = be.b(localc.getInteger(".com.tencent.mm.debug.test.cdnDownloadThread"), 0);
+      q.chV = i;
+      if ((i != 4) && (q.chV > 0))
       {
-        com.tencent.mm.storage.i.kaj = r.cmQ;
-        u.e("!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX", "cdn thread num " + r.cmQ);
+        com.tencent.mm.storage.i.kAF = q.chV;
+        v.e("MicroMsg.Debugger", "cdn thread num " + q.chV);
       }
-      r.cmR = ay.a(localc.cw(".com.tencent.mm.debug.test.logShowSnsItemXml"), false);
+      q.chW = be.a(localc.cB(".com.tencent.mm.debug.test.logShowSnsItemXml"), false);
       try
       {
         i = Integer.decode(localc.getString(".com.tencent.mm.debug.log.setversion")).intValue();
-        com.tencent.mm.protocal.b.oR(i);
+        com.tencent.mm.protocal.c.qE(i);
         new StringBuilder("set up test protocal version = ").append(Integer.toHexString(i));
       }
       catch (Exception localException4)
@@ -99,13 +105,13 @@ public final class ToolsProfile
         try
         {
           localObject = localc.getString(".com.tencent.mm.debug.log.setapilevel");
-          if (!ay.kz((String)localObject))
+          if (!be.kf((String)localObject))
           {
-            com.tencent.mm.protocal.b.bwR = "android-" + (String)localObject;
-            com.tencent.mm.protocal.b.iUa = "android-" + (String)localObject;
-            com.tencent.mm.protocal.b.iUc = (String)localObject;
-            com.tencent.mm.sdk.b.b.Cy((String)localObject);
-            new StringBuilder("set up test protocal apilevel = ").append(com.tencent.mm.protocal.b.bwR).append(" ").append(com.tencent.mm.sdk.b.b.aUp());
+            com.tencent.mm.protocal.c.boS = "android-" + (String)localObject;
+            com.tencent.mm.protocal.c.jrt = "android-" + (String)localObject;
+            com.tencent.mm.protocal.c.jrv = (String)localObject;
+            b.EL((String)localObject);
+            new StringBuilder("set up test protocal apilevel = ").append(com.tencent.mm.protocal.c.boS).append(" ").append(b.aZp());
           }
         }
         catch (Exception localException4)
@@ -113,14 +119,14 @@ public final class ToolsProfile
           try
           {
             i = Integer.decode(localc.getString(".com.tencent.mm.debug.log.setuin")).intValue();
-            new StringBuilder("set up test protocal uin old: ").append(com.tencent.mm.protocal.b.iUe).append(" new: ").append(i);
-            com.tencent.mm.protocal.b.iUe = i;
+            new StringBuilder("set up test protocal uin old: ").append(com.tencent.mm.protocal.c.jrx).append(" new: ").append(i);
+            com.tencent.mm.protocal.c.jrx = i;
           }
           catch (Exception localException4)
           {
             try
             {
-              blQ = Integer.decode(localc.getString(".com.tencent.mm.debug.log.setchannel")).intValue();
+              aZw = Integer.decode(localc.getString(".com.tencent.mm.debug.log.setchannel")).intValue();
             }
             catch (Exception localException4)
             {
@@ -128,36 +134,36 @@ public final class ToolsProfile
               {
                 for (;;)
                 {
-                  boolean bool1 = ay.a(localc.cw(".com.tencent.mm.debug.report.debugmodel"), false);
-                  boolean bool2 = ay.a(localc.cw(".com.tencent.mm.debug.report.kvstat"), false);
-                  boolean bool3 = ay.a(localc.cw(".com.tencent.mm.debug.report.clientpref"), false);
-                  boolean bool4 = ay.a(localc.cw(".com.tencent.mm.debug.report.useraction"), false);
-                  com.tencent.mm.plugin.report.a.c.a(bool1, bool2, bool3, bool4);
+                  boolean bool1 = be.a(localc.cB(".com.tencent.mm.debug.report.debugmodel"), false);
+                  boolean bool2 = be.a(localc.cB(".com.tencent.mm.debug.report.kvstat"), false);
+                  boolean bool3 = be.a(localc.cB(".com.tencent.mm.debug.report.clientpref"), false);
+                  boolean bool4 = be.a(localc.cB(".com.tencent.mm.debug.report.useraction"), false);
+                  com.tencent.mm.plugin.report.a.c.b(bool1, bool2, bool3, bool4);
                   new StringBuilder("try control report : debugModel[").append(bool1).append("],kv[").append(bool2).append("], clientPref[").append(bool3).append("], useraction[").append(bool4).append("]");
-                  r.cng = ay.ad(localc.getString(".com.tencent.mm.debug.jsapi.permission"), "");
-                  u.d("!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX", "Test.jsapiPermission = " + r.cng);
-                  r.cnh = ay.ad(localc.getString(".com.tencent.mm.debug.generalcontrol.permission"), "");
-                  u.d("!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX", "Test.generalCtrl = " + r.cnh);
-                  r.cni = ay.a(localc.cw(".com.tencent.mm.debug.skiploadurlcheck"), false);
-                  u.d("!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX", "Test.skipLoadUrlCheck = " + r.cni);
-                  r.cnj = ay.a(localc.cw(".com.tencent.mm.debug.forcex5webview"), false);
-                  u.d("!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX", "Test.forceX5WebView = " + r.cnj);
-                  if ((com.tencent.mm.compatible.util.c.bU(14)) && (MMApplication.alv != null)) {
-                    MMApplication.alv.registerActivityLifecycleCallbacks(new Application.ActivityLifecycleCallbacks()
+                  q.cil = be.ab(localc.getString(".com.tencent.mm.debug.jsapi.permission"), "");
+                  v.d("MicroMsg.Debugger", "Test.jsapiPermission = " + q.cil);
+                  q.cim = be.ab(localc.getString(".com.tencent.mm.debug.generalcontrol.permission"), "");
+                  v.d("MicroMsg.Debugger", "Test.generalCtrl = " + q.cim);
+                  q.cin = be.a(localc.cB(".com.tencent.mm.debug.skiploadurlcheck"), false);
+                  v.d("MicroMsg.Debugger", "Test.skipLoadUrlCheck = " + q.cin);
+                  q.cio = be.a(localc.cB(".com.tencent.mm.debug.forcex5webview"), false);
+                  v.d("MicroMsg.Debugger", "Test.forceX5WebView = " + q.cio);
+                  if ((com.tencent.mm.compatible.util.c.cm(14)) && (MMApplicationLifeCycle.applicationLifeCycle != null)) {
+                    MMApplicationLifeCycle.applicationLifeCycle.getApplication().registerActivityLifecycleCallbacks(new Application.ActivityLifecycleCallbacks()
                     {
                       public final void onActivityCreated(Activity paramAnonymousActivity, Bundle paramAnonymousBundle)
                       {
-                        ToolsProfile.kE();
+                        ToolsProfile.je();
                       }
                       
                       public final void onActivityDestroyed(Activity paramAnonymousActivity)
                       {
-                        ToolsProfile.kF();
-                        u.d("!32@/B4Tb64lLpIkgs39Nqw598Se1kGoMRt/", "onActivityDestroyed, after destroy, activityInstanceNum = %d", new Object[] { Integer.valueOf(ToolsProfile.aa()) });
-                        if (ToolsProfile.aa() == 0)
+                        ToolsProfile.jf();
+                        v.d("MicroMsg.ToolsProfile", "onActivityDestroyed, after destroy, activityInstanceNum = %d", new Object[] { Integer.valueOf(ToolsProfile.YP) });
+                        if (ToolsProfile.YP == 0)
                         {
                           boolean bool = WebView.getTbsNeedReboot();
-                          u.i("!32@/B4Tb64lLpIkgs39Nqw598Se1kGoMRt/", "onActivityDestroyed, tbsNeedReboot = %b", new Object[] { Boolean.valueOf(bool) });
+                          v.i("MicroMsg.ToolsProfile", "onActivityDestroyed, tbsNeedReboot = %b", new Object[] { Boolean.valueOf(bool) });
                           if (bool) {
                             Process.killProcess(Process.myPid());
                           }
@@ -177,32 +183,36 @@ public final class ToolsProfile
                   }
                   FileOp.init(false);
                   MMBitmapFactory.init();
-                  u.i("!32@/B4Tb64lLpIkgs39Nqw598Se1kGoMRt/", "start time check toolsprofile use time = " + (System.currentTimeMillis() - l));
+                  v.i("MicroMsg.ToolsProfile", "start time check toolsprofile use time = " + (System.currentTimeMillis() - l));
                   return;
-                  com.tencent.mm.plugin.sight.base.a.gwQ = 1;
+                  com.tencent.mm.plugin.sight.base.a.gDi = 1;
+                  com.tencent.mm.plugin.sight.base.a.gDj = 1;
+                  com.tencent.mm.plugin.sight.base.a.gDk = 640000;
                   break;
-                  u.i("!32@/B4Tb64lLpIkgs39Nqw598Se1kGoMRt/", "load wechatsight");
+                  v.i("MicroMsg.ToolsProfile", "load wechatsight");
                   i.b("wechatsight", (ClassLoader)localObject);
-                  com.tencent.mm.plugin.sight.base.a.gwQ = 1;
+                  com.tencent.mm.plugin.sight.base.a.gDi = 1;
+                  com.tencent.mm.plugin.sight.base.a.gDj = 1;
+                  com.tencent.mm.plugin.sight.base.a.gDk = 640000;
                   break;
                   localException1 = localException1;
-                  u.i("!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX", "no debugger was got");
+                  v.i("MicroMsg.Debugger", "no debugger was got");
                   continue;
                   localException2 = localException2;
-                  u.i("!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX", "no debugger was got");
+                  v.i("MicroMsg.Debugger", "no debugger was got");
                   continue;
                   localException3 = localException3;
-                  u.i("!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX", "no debugger was got");
+                  v.i("MicroMsg.Debugger", "no debugger was got");
                   continue;
                   localException4 = localException4;
-                  u.i("!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX", "no debugger was got");
+                  v.i("MicroMsg.Debugger", "no debugger was got");
                 }
               }
               catch (Exception localException5)
               {
                 for (;;)
                 {
-                  u.i("!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX", "no debugger was got");
+                  v.i("MicroMsg.Debugger", "no debugger was got");
                 }
               }
             }
@@ -214,7 +224,7 @@ public final class ToolsProfile
   
   public final String toString()
   {
-    return alg;
+    return Yf;
   }
 }
 

@@ -2,11 +2,11 @@ package com.tencent.mm.ui.base;
 
 public abstract interface MMHorList$a
 {
-  public abstract void aEI();
+  public abstract void aIk();
   
-  public abstract void aEJ();
+  public abstract void aIl();
   
-  public abstract void ahf();
+  public abstract void ajK();
 }
 
 /* Location:

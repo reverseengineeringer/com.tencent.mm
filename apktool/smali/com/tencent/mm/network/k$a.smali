@@ -109,7 +109,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/network/p$a;->ab(Landroid/os/IBinder;)Lcom/tencent/mm/network/p;
+    invoke-static {v0}, Lcom/tencent/mm/network/p$a;->D(Landroid/os/IBinder;)Lcom/tencent/mm/network/p;
 
     move-result-object v5
 

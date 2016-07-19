@@ -4,48 +4,59 @@ import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import com.tencent.mm.storage.ag;
+import android.widget.TextView;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.pluginsdk.i.n;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.ui.j;
+import com.tencent.mm.ui.o;
 
 final class ch
-  extends cc
+  extends ab
 {
   public ch()
   {
-    super(43);
+    super(25);
   }
   
   public final View a(LayoutInflater paramLayoutInflater, View paramView)
   {
-    Object localObject;
+    View localView;
     if ((paramView != null) && (paramView.getTag() != null))
     {
-      localObject = paramView;
-      if (getTagtype == eLV) {}
+      localView = paramView;
+      if (getTagtype == cTv) {}
     }
     else
     {
-      localObject = new ax(paramLayoutInflater, 2131361838);
-      ((View)localObject).setTag(new ed(eLV).aI((View)localObject));
+      localView = paramLayoutInflater.inflate(2130903335, null);
+      localView.setTag(new ee(cTv).aM(localView));
     }
-    return (View)localObject;
+    return localView;
   }
   
-  public final void a(aa.a parama, int paramInt, ChattingUI.a parama1, ag paramag, String paramString)
+  public final void a(ab.a parama, int paramInt, ChattingUI.a parama1, ai paramai, String paramString)
   {
-    ed.a((ed)parama, paramag, false, paramInt, parama1);
+    dXd.setVisibility(0);
+    dXd.setText(n.k(kNN.kOg, field_createTime));
   }
   
-  public final boolean a(ContextMenu paramContextMenu, View paramView, ag paramag)
-  {
-    return false;
-  }
-  
-  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ag paramag)
+  public final boolean a(ContextMenu paramContextMenu, View paramView, ai paramai)
   {
     return false;
   }
   
-  public final boolean a(View paramView, ChattingUI.a parama, ag paramag)
+  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ai paramai)
+  {
+    return false;
+  }
+  
+  public final boolean a(View paramView, ChattingUI.a parama, ai paramai)
+  {
+    return false;
+  }
+  
+  protected final boolean bjZ()
   {
     return false;
   }

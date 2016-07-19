@@ -12,8 +12,8 @@ final class RegByMobileRegAIOUI$11
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    b.b(false, ah.tx() + "," + kuT.getClass().getName() + ",RE200_200," + ah.fd("RE200_200") + ",2");
-    b.kC("RE200_100");
+    b.b(false, ah.ty() + "," + kUa.getClass().getName() + ",RE200_200," + ah.fq("RE200_200") + ",2");
+    b.ll("RE200_100");
   }
 }
 

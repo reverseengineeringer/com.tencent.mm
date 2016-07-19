@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+.field final synthetic lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 332
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$10;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    .line 331
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$10;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,8 +42,8 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 335
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 334
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v1, 0x2b84
 
@@ -57,17 +57,17 @@
 
     aput-object v3, v2, v4
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
-    .line 336
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$10;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    .line 335
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$10;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
     const-string/jumbo v1, "pwdgroup"
 
     const-string/jumbo v2, ".ui.FacingCreateChatRoomAllInOneUI"
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ar/c;->u(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/av/c;->v(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 338
+    .line 337
     return-void
 .end method

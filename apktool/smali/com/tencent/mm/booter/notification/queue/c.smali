@@ -52,7 +52,7 @@
     move-result-wide v2
 
     .line 37
-    const-string/jumbo v5, "!44@/B4Tb64lLpKR3MWtFvfaIKHn+eBcObF9B5r+XbtqMAg="
+    const-string/jumbo v5, "MicroMsg.NotificationQueueTool"
 
     const-string/jumbo v6, "serialize consume: %s"
 
@@ -70,18 +70,18 @@
 
     aput-object v0, v7, v8
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 38
     return-object v4
 .end method
 
-.method public static cO(Ljava/lang/String;)Ljava/io/Serializable;
+.method public static cV(Ljava/lang/String;)Ljava/io/Serializable;
     .locals 9
 
     .prologue
     .line 42
-    invoke-static {p0}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -98,7 +98,7 @@
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     .line 47
     const-string/jumbo v0, "UTF-8"
@@ -108,7 +108,7 @@
     move-result-object v0
 
     .line 48
-    new-instance v3, Ljava/io/ByteArrayInputStream;
+    new-instance v1, Ljava/io/ByteArrayInputStream;
 
     const-string/jumbo v4, "ISO-8859-1"
 
@@ -116,12 +116,12 @@
 
     move-result-object v0
 
-    invoke-direct {v3, v0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+    invoke-direct {v1, v0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
     .line 49
     new-instance v4, Ljava/io/ObjectInputStream;
 
-    invoke-direct {v4, v3}, Ljava/io/ObjectInputStream;-><init>(Ljava/io/InputStream;)V
+    invoke-direct {v4, v1}, Ljava/io/ObjectInputStream;-><init>(Ljava/io/InputStream;)V
 
     .line 50
     invoke-virtual {v4}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
@@ -134,15 +134,15 @@
     invoke-virtual {v4}, Ljava/io/ObjectInputStream;->close()V
 
     .line 52
-    invoke-virtual {v3}, Ljava/io/ByteArrayInputStream;->close()V
+    invoke-virtual {v1}, Ljava/io/ByteArrayInputStream;->close()V
 
     .line 53
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
     .line 54
-    const-string/jumbo v5, "!44@/B4Tb64lLpKR3MWtFvfaIKHn+eBcObF9B5r+XbtqMAg="
+    const-string/jumbo v1, "MicroMsg.NotificationQueueTool"
 
     const-string/jumbo v6, "de serialize consume: %s"
 
@@ -152,15 +152,15 @@
 
     const/4 v8, 0x0
 
-    sub-long v1, v3, v1
+    sub-long v2, v4, v2
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v1
+    move-result-object v2
 
-    aput-object v1, v7, v8
+    aput-object v2, v7, v8
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method

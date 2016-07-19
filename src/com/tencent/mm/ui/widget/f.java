@@ -1,42 +1,42 @@
 package com.tencent.mm.ui.widget;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.lang.ref.WeakReference;
 import java.util.Iterator;
 import java.util.LinkedList;
 
 public final class f
 {
-  private static LinkedList lGA = new LinkedList();
+  private static LinkedList<WeakReference<a>> mhO = new LinkedList();
   
-  public static void I(float paramFloat)
+  public static void H(float paramFloat)
   {
-    if (lGA.size() <= 0)
+    if (mhO.size() <= 0)
     {
-      u.w("!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE=", "notifySwipe callback stack empty!, scrollParent:%f", new Object[] { Float.valueOf(paramFloat) });
+      v.w("MicroMsg.SwipeBackHelper", "notifySwipe callback stack empty!, scrollParent:%f", new Object[] { Float.valueOf(paramFloat) });
       return;
     }
-    a locala = (a)((WeakReference)lGA.get(0)).get();
+    a locala = (a)((WeakReference)mhO.get(0)).get();
     if (locala == null)
     {
-      u.w("!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE=", "notifySwipe null, scrollParent:%f", new Object[] { Float.valueOf(paramFloat) });
+      v.w("MicroMsg.SwipeBackHelper", "notifySwipe null, scrollParent:%f", new Object[] { Float.valueOf(paramFloat) });
       return;
     }
-    locala.D(paramFloat);
-    u.v("!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE=", "notifySwipe scrollParent:%f, callback:%s ", new Object[] { Float.valueOf(paramFloat), locala });
+    locala.B(paramFloat);
+    v.v("MicroMsg.SwipeBackHelper", "notifySwipe scrollParent:%f, callback:%s ", new Object[] { Float.valueOf(paramFloat), locala });
   }
   
   public static void a(a parama)
   {
-    u.d("!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE=", "pushCallback size %d, %s", new Object[] { Integer.valueOf(lGA.size()), parama });
+    v.d("MicroMsg.SwipeBackHelper", "pushCallback size %d, %s", new Object[] { Integer.valueOf(mhO.size()), parama });
     parama = new WeakReference(parama);
-    lGA.add(0, parama);
+    mhO.add(0, parama);
   }
   
   public static boolean b(a parama)
   {
-    int j = lGA.size();
-    u.d("!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE=", "popCallback size %d, %s", new Object[] { Integer.valueOf(j), parama });
+    int j = mhO.size();
+    v.d("MicroMsg.SwipeBackHelper", "popCallback size %d, %s", new Object[] { Integer.valueOf(j), parama });
     if (parama == null) {
       return true;
     }
@@ -44,20 +44,20 @@ public final class f
     int i = 0;
     for (;;)
     {
-      if (i < lGA.size())
+      if (i < mhO.size())
       {
-        if (parama == ((WeakReference)lGA.get(i)).get())
+        if (parama == ((WeakReference)mhO.get(i)).get())
         {
-          lGA.remove(i);
-          u.d("!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE=", "popCallback directly, index %d", new Object[] { Integer.valueOf(i) });
+          mhO.remove(i);
+          v.d("MicroMsg.SwipeBackHelper", "popCallback directly, index %d", new Object[] { Integer.valueOf(i) });
         }
       }
       else
       {
-        if ((parama.baF()) || (localLinkedList.size() != j)) {
+        if ((parama.bfT()) || (localLinkedList.size() != j)) {
           break;
         }
-        u.d("!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE=", "popCallback Fail! Maybe Top Activity");
+        v.d("MicroMsg.SwipeBackHelper", "popCallback Fail! Maybe Top Activity");
         return false;
       }
       localLinkedList.add(0, Integer.valueOf(i));
@@ -67,11 +67,11 @@ public final class f
     if (localIterator.hasNext())
     {
       parama = (Integer)localIterator.next();
-      parama = (WeakReference)lGA.remove(parama.intValue());
+      parama = (WeakReference)mhO.remove(parama.intValue());
       if (parama != null) {}
       for (parama = parama.get();; parama = "NULL-CALLBACK")
       {
-        u.d("!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE=", "popCallback, popup %s", new Object[] { parama });
+        v.d("MicroMsg.SwipeBackHelper", "popCallback, popup %s", new Object[] { parama });
         break;
       }
     }
@@ -80,26 +80,26 @@ public final class f
   
   public static void l(boolean paramBoolean, int paramInt)
   {
-    if (lGA.size() <= 0)
+    if (mhO.size() <= 0)
     {
-      u.w("!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE=", "notifySettle callback stack empty!, open:%B, speed:%d", new Object[] { Boolean.valueOf(paramBoolean), Integer.valueOf(paramInt) });
+      v.w("MicroMsg.SwipeBackHelper", "notifySettle callback stack empty!, open:%B, speed:%d", new Object[] { Boolean.valueOf(paramBoolean), Integer.valueOf(paramInt) });
       return;
     }
-    a locala = (a)((WeakReference)lGA.get(0)).get();
+    a locala = (a)((WeakReference)mhO.get(0)).get();
     if (locala == null)
     {
-      u.w("!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE=", "notifySettle null, open:%B, speed:%d", new Object[] { Boolean.valueOf(paramBoolean), Integer.valueOf(paramInt) });
+      v.w("MicroMsg.SwipeBackHelper", "notifySettle null, open:%B, speed:%d", new Object[] { Boolean.valueOf(paramBoolean), Integer.valueOf(paramInt) });
       return;
     }
     locala.j(paramBoolean, paramInt);
-    u.v("!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE=", "notifySettle, open:%B speed:%d callback:%s", new Object[] { Boolean.valueOf(paramBoolean), Integer.valueOf(paramInt), locala });
+    v.v("MicroMsg.SwipeBackHelper", "notifySettle, open:%B speed:%d callback:%s", new Object[] { Boolean.valueOf(paramBoolean), Integer.valueOf(paramInt), locala });
   }
   
   public static abstract interface a
   {
-    public abstract void D(float paramFloat);
+    public abstract void B(float paramFloat);
     
-    public abstract boolean baF();
+    public abstract boolean bfT();
     
     public abstract void j(boolean paramBoolean, int paramInt);
   }

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+.field final synthetic ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 265
-    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 264
+    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-direct {p0, p1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BaseUriSpanHandler;-><init>(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)V
 
@@ -40,10 +40,10 @@
     .locals 10
 
     .prologue
-    .line 306
+    .line 305
     iget v0, p1, Lcom/tencent/mm/pluginsdk/ui/applet/g;->type:I
 
-    .line 307
+    .line 306
     const/16 v1, 0x17
 
     if-eq v0, v1, :cond_0
@@ -60,71 +60,73 @@
 
     if-ne v0, v1, :cond_9
 
-    .line 308
+    .line 307
     :cond_0
-    const-class v0, Lcom/tencent/mm/storage/ad;
+    const-class v0, Lcom/tencent/mm/storage/ae;
 
-    invoke-virtual {p1, v0}, Lcom/tencent/mm/pluginsdk/ui/applet/g;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lcom/tencent/mm/pluginsdk/ui/applet/g;->d(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
     move-object v8, v0
 
-    check-cast v8, Lcom/tencent/mm/storage/ad;
+    check-cast v8, Lcom/tencent/mm/storage/ae;
 
-    .line 309
+    .line 308
     if-eqz p2, :cond_1
 
-    .line 310
+    .line 309
     invoke-interface {p2, p1}, Lcom/tencent/mm/pluginsdk/ui/d/b;->a(Lcom/tencent/mm/pluginsdk/ui/applet/g;)Ljava/lang/Object;
 
-    .line 312
+    .line 311
     :cond_1
     if-nez v8, :cond_2
 
-    .line 313
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 312
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f0b02b7
+    const v2, 0x7f080ac6
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v2, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v2}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v2
 
-    const v3, 0x7f0b0ddd
+    const v3, 0x7f080134
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->y(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/tencent/mm/ui/base/h;
+    const/4 v3, 0x1
 
-    .line 314
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/ui/base/g;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Z)Lcom/tencent/mm/ui/base/h;
+
+    .line 313
     const/4 v0, 0x0
 
-    .line 337
+    .line 336
     :goto_0
     return v0
 
-    .line 317
+    .line 316
     :cond_2
-    invoke-virtual {v8}, Lcom/tencent/mm/storage/ad;->getType()Ljava/lang/String;
+    invoke-virtual {v8}, Lcom/tencent/mm/storage/ae;->getType()Ljava/lang/String;
 
     move-result-object v0
 
@@ -136,18 +138,18 @@
 
     if-eqz v0, :cond_3
 
-    .line 318
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 317
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rv()Lcom/tencent/mm/storage/al;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rx()Lcom/tencent/mm/storage/an;
 
     move-result-object v0
 
     const-string/jumbo v1, "@t.qq.com"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/storage/al;->FD(Ljava/lang/String;)Lcom/tencent/mm/storage/ak;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/storage/an;->HT(Ljava/lang/String;)Lcom/tencent/mm/storage/am;
 
     move-result-object v0
 
@@ -158,42 +160,44 @@
     :goto_1
     if-nez v0, :cond_3
 
-    .line 319
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 318
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f0b02b7
+    const v2, 0x7f080ac6
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v2, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v2}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v2
 
-    const v3, 0x7f0b0ddd
+    const v3, 0x7f080134
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->y(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/tencent/mm/ui/base/h;
+    const/4 v3, 0x1
 
-    .line 322
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/ui/base/g;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Z)Lcom/tencent/mm/ui/base/h;
+
+    .line 321
     :cond_3
-    invoke-virtual {v8}, Lcom/tencent/mm/storage/ad;->getType()Ljava/lang/String;
+    invoke-virtual {v8}, Lcom/tencent/mm/storage/ae;->getType()Ljava/lang/String;
 
     move-result-object v0
 
@@ -205,12 +209,12 @@
 
     if-eqz v0, :cond_6
 
-    .line 323
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 322
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rv()Lcom/tencent/mm/storage/al;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rx()Lcom/tencent/mm/storage/an;
 
     move-result-object v0
 
@@ -218,7 +222,7 @@
 
     invoke-direct {v9}, Ljava/util/LinkedList;-><init>()V
 
-    iget-object v0, v0, Lcom/tencent/mm/storage/al;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v0, v0, Lcom/tencent/mm/storage/an;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v1, "role_info"
 
@@ -261,11 +265,11 @@
 
     if-nez v1, :cond_5
 
-    new-instance v1, Lcom/tencent/mm/storage/ak;
+    new-instance v1, Lcom/tencent/mm/storage/am;
 
-    invoke-direct {v1}, Lcom/tencent/mm/storage/ak;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/storage/am;-><init>()V
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/storage/ak;->c(Landroid/database/Cursor;)V
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/storage/am;->b(Landroid/database/Cursor;)V
 
     invoke-interface {v9, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -273,13 +277,13 @@
 
     goto :goto_2
 
-    .line 318
+    .line 317
     :cond_4
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 323
+    .line 322
     :cond_5
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
@@ -304,9 +308,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/storage/ak;
+    check-cast v0, Lcom/tencent/mm/storage/am;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ak;->PN()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/am;->Rc()Z
 
     move-result v0
 
@@ -317,47 +321,49 @@
     :goto_4
     if-nez v0, :cond_6
 
-    .line 324
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 323
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f0b02b7
+    const v2, 0x7f080ac6
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v2, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v2}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v2
 
-    const v3, 0x7f0b0ddd
+    const v3, 0x7f080134
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->y(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/tencent/mm/ui/base/h;
+    const/4 v3, 0x1
 
-    .line 327
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/ui/base/g;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Z)Lcom/tencent/mm/ui/base/h;
+
+    .line 326
     :cond_6
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 328
-    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 327
+    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -367,10 +373,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 329
+    .line 328
     const-string/jumbo v1, "Contact_GroupFilter_Type"
 
-    invoke-virtual {v8}, Lcom/tencent/mm/storage/ad;->getType()Ljava/lang/String;
+    invoke-virtual {v8}, Lcom/tencent/mm/storage/ae;->getType()Ljava/lang/String;
 
     move-result-object v2
 
@@ -380,7 +386,7 @@
 
     const-string/jumbo v2, "Contact_GroupFilter_Str"
 
-    invoke-virtual {v8}, Lcom/tencent/mm/storage/ad;->aWT()Ljava/lang/String;
+    invoke-virtual {v8}, Lcom/tencent/mm/storage/ae;->bcm()Ljava/lang/String;
 
     move-result-object v3
 
@@ -390,19 +396,19 @@
 
     const-string/jumbo v2, "Contact_GroupFilter_DisplayName"
 
-    invoke-virtual {v8}, Lcom/tencent/mm/storage/ad;->qy()Ljava/lang/String;
+    invoke-virtual {v8}, Lcom/tencent/mm/storage/ae;->pb()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 330
+    .line 329
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 331
-    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 330
+    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -410,12 +416,12 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 332
+    .line 331
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 323
+    .line 322
     :cond_7
     add-int/lit8 v0, v1, 0x1
 
@@ -428,7 +434,7 @@
 
     goto :goto_4
 
-    .line 337
+    .line 336
     :cond_9
     const/4 v0, 0x0
 
@@ -439,9 +445,9 @@
     .locals 5
 
     .prologue
-    const v2, 0x7f0b0043
+    const v2, 0x7f0809a0
 
-    .line 342
+    .line 341
     const-string/jumbo v0, "weixin://contacts/microblog/"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -466,9 +472,9 @@
 
     if-eqz v0, :cond_4
 
-    .line 343
+    .line 342
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -478,11 +484,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/model/n;->eY(Ljava/lang/String;)Lcom/tencent/mm/storage/ad;
+    invoke-static {v0}, Lcom/tencent/mm/model/n;->fk(Ljava/lang/String;)Lcom/tencent/mm/storage/ae;
 
     move-result-object v0
 
-    .line 344
+    .line 343
     const-string/jumbo v1, "weixin://contacts/microblog/"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -491,24 +497,24 @@
 
     if-eqz v1, :cond_1
 
-    .line 345
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 344
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0b0044
+    const v1, 0x7f08099f
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/model/n;->eY(Ljava/lang/String;)Lcom/tencent/mm/storage/ad;
+    invoke-static {v0}, Lcom/tencent/mm/model/n;->fk(Ljava/lang/String;)Lcom/tencent/mm/storage/ae;
 
     move-result-object v0
 
-    .line 347
+    .line 346
     :cond_1
     const-string/jumbo v1, "weixin://contacts/micromessenger/"
 
@@ -518,8 +524,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 348
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 347
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -529,11 +535,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/model/n;->eY(Ljava/lang/String;)Lcom/tencent/mm/storage/ad;
+    invoke-static {v0}, Lcom/tencent/mm/model/n;->fk(Ljava/lang/String;)Lcom/tencent/mm/storage/ae;
 
     move-result-object v0
 
-    .line 350
+    .line 349
     :cond_2
     const-string/jumbo v1, "weixin://contacts/all/"
 
@@ -543,31 +549,31 @@
 
     if-eqz v1, :cond_3
 
-    .line 351
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 350
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0b0042
+    const v1, 0x7f08099c
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/model/n;->eY(Ljava/lang/String;)Lcom/tencent/mm/storage/ad;
+    invoke-static {v0}, Lcom/tencent/mm/model/n;->fk(Ljava/lang/String;)Lcom/tencent/mm/storage/ae;
 
     move-result-object v0
 
-    .line 353
+    .line 352
     :cond_3
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 354
-    iget-object v2, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 353
+    iget-object v2, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v2}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -577,10 +583,10 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 355
+    .line 354
     const-string/jumbo v2, "Contact_GroupFilter_Type"
 
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ad;->getType()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ae;->getType()Ljava/lang/String;
 
     move-result-object v3
 
@@ -590,7 +596,7 @@
 
     const-string/jumbo v3, "Contact_GroupFilter_Str"
 
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ad;->aWT()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ae;->bcm()Ljava/lang/String;
 
     move-result-object v4
 
@@ -600,21 +606,21 @@
 
     const-string/jumbo v3, "Contact_GroupFilter_DisplayName"
 
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ad;->qy()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ae;->pb()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v2, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 356
+    .line 355
     const/high16 v0, 0x10000000
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 357
+    .line 356
     const/4 v0, 0x1
 
-    .line 359
+    .line 358
     :goto_0
     return v0
 
@@ -624,7 +630,7 @@
     goto :goto_0
 .end method
 
-.method final bb(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
+.method final bg(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
     .locals 7
 
     .prologue
@@ -632,8 +638,8 @@
 
     const/4 v2, 0x0
 
+    .line 268
     .line 269
-    .line 270
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -646,20 +652,20 @@
 
     if-eqz v0, :cond_1
 
-    .line 271
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 270
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0b0042
+    const v1, 0x7f08099c
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    new-instance v0, Lcom/tencent/mm/storage/ad;
+    new-instance v0, Lcom/tencent/mm/storage/ae;
 
     const-string/jumbo v1, "@all.android"
 
@@ -667,21 +673,21 @@
 
     move v6, v5
 
-    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/storage/ad;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
+    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/storage/ae;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
 
-    .line 272
+    .line 271
     new-instance v2, Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
     const/16 v1, 0x17
 
     invoke-direct {v2, p1, v1, v0}, Lcom/tencent/mm/pluginsdk/ui/applet/g;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 291
+    .line 290
     :cond_0
     :goto_0
     return-object v2
 
-    .line 273
+    .line 272
     :cond_1
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -695,24 +701,24 @@
 
     if-eqz v0, :cond_2
 
-    .line 274
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 273
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0b0044
+    const v1, 0x7f08099f
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/model/n;->eY(Ljava/lang/String;)Lcom/tencent/mm/storage/ad;
+    invoke-static {v0}, Lcom/tencent/mm/model/n;->fk(Ljava/lang/String;)Lcom/tencent/mm/storage/ae;
 
     move-result-object v0
 
-    .line 275
+    .line 274
     new-instance v2, Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
     const/16 v1, 0x16
@@ -721,7 +727,7 @@
 
     goto :goto_0
 
-    .line 276
+    .line 275
     :cond_2
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -735,20 +741,20 @@
 
     if-eqz v0, :cond_3
 
-    .line 277
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 276
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0b0043
+    const v1, 0x7f0809a0
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    new-instance v0, Lcom/tencent/mm/storage/ad;
+    new-instance v0, Lcom/tencent/mm/storage/ae;
 
     const-string/jumbo v1, "@micromsg.qq.com"
 
@@ -756,9 +762,9 @@
 
     move v6, v5
 
-    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/storage/ad;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
+    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/storage/ae;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
 
-    .line 278
+    .line 277
     new-instance v2, Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
     const/4 v1, 0x2
@@ -767,7 +773,7 @@
 
     goto :goto_0
 
-    .line 279
+    .line 278
     :cond_3
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -781,7 +787,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 280
+    .line 279
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -802,26 +808,26 @@
 
     move-result-object v0
 
-    .line 281
+    .line 280
     const-string/jumbo v1, "/"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 282
+    .line 281
     const/4 v3, -0x1
 
     if-eq v1, v3, :cond_0
 
-    .line 285
+    .line 284
     add-int/lit8 v1, v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 286
+    .line 285
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string/jumbo v2, "@"
@@ -836,24 +842,24 @@
 
     move-result-object v0
 
-    .line 287
-    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 286
+    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$ContactUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f0b0045
+    const v2, 0x7f08099e
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/model/n;->F(Ljava/lang/String;Ljava/lang/String;)Lcom/tencent/mm/storage/ad;
+    invoke-static {v0, v1}, Lcom/tencent/mm/model/n;->C(Ljava/lang/String;Ljava/lang/String;)Lcom/tencent/mm/storage/ae;
 
     move-result-object v0
 
-    .line 289
+    .line 288
     new-instance v2, Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
     const/16 v1, 0x15
@@ -863,11 +869,11 @@
     goto/16 :goto_0
 .end method
 
-.method final lg()[I
+.method final jH()[I
     .locals 1
 
     .prologue
-    .line 301
+    .line 300
     const/4 v0, 0x4
 
     new-array v0, v0, [I

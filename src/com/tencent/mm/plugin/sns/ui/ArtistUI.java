@@ -9,47 +9,49 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import android.widget.ListView;
+import android.widget.TextView;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.plugin.sns.b.a;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.b;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.b;
 import com.tencent.mm.pluginsdk.f;
-import com.tencent.mm.protocal.b.bp;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.l;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.protocal.b.bs;
+import com.tencent.mm.protocal.b.bt;
+import com.tencent.mm.sdk.platformtools.aa;
 import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.z;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.l;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.p;
 
 public class ArtistUI
   extends MMActivity
-  implements d
+  implements com.tencent.mm.t.d
 {
-  private SharedPreferences bxg;
-  private p coc = null;
-  private ListView dby;
-  private String eJi = "";
-  private c gWh;
-  private ArtistHeader gWi;
-  private j gWj = null;
+  private SharedPreferences bpi;
+  private p cjq = null;
+  private ListView dae;
+  private String eQW = "";
+  private d hjD;
+  private ArtistHeader hjE;
+  private j hjF = null;
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    qb(2131433083);
-    getString(2131430877);
-    coc = com.tencent.mm.ui.base.g.a(this, getString(2131430943), true, new DialogInterface.OnCancelListener()
+    rR(2131235141);
+    getString(2131231028);
+    cjq = com.tencent.mm.ui.base.g.a(this, getString(2131230948), true, new DialogInterface.OnCancelListener()
     {
       public final void onCancel(DialogInterface paramAnonymousDialogInterface) {}
     });
-    dby = ((ListView)findViewById(2131168538));
-    a.cob.af(false);
-    gWh = new c(this, eJi, new c.b()new c.a
+    dae = ((ListView)findViewById(2131759080));
+    a.cjp.K(false);
+    hjD = new d(this, eQW, new d.b()new d.a
     {
-      public final void lT(int paramAnonymousInt)
+      public final void ng(int paramAnonymousInt)
       {
         Intent localIntent = new Intent();
         localIntent.putExtra("sns_gallery_is_artist", true);
@@ -59,39 +61,55 @@ public class ArtistUI
         localIntent.setClass(ArtistUI.this, ArtistBrowseUI.class);
         startActivity(localIntent);
       }
-    }, new c.a()
+    }, new d.a()
     {
-      public final void a(bp paramAnonymousbp)
+      public final void a(bs paramAnonymousbs)
       {
+        ArtistHeader localArtistHeader;
         if (ArtistUI.b(ArtistUI.this) != null)
         {
           ArtistUI.b(ArtistUI.this).setVisibility(0);
-          ArtistUI.b(ArtistUI.this).setUserName(paramAnonymousbp);
-          paramAnonymousbp = ehZ;
-          if ((paramAnonymousbp != null) && (!paramAnonymousbp.equals(""))) {
-            ArtistUI.c(ArtistUI.this).edit().putString("artist_name", paramAnonymousbp).commit();
+          localArtistHeader = ArtistUI.b(ArtistUI.this);
+          if (paramAnonymousbs != null) {
+            break label115;
+          }
+          v.e("MicroMsg.ArtistHeader", "userName or selfName is null ");
+        }
+        for (;;)
+        {
+          paramAnonymousbs = elW;
+          if ((paramAnonymousbs != null) && (!paramAnonymousbs.equals(""))) {
+            ArtistUI.c(ArtistUI.this).edit().putString("artist_name", paramAnonymousbs).commit();
           }
           if (ArtistUI.d(ArtistUI.this) != null) {
             ArtistUI.d(ArtistUI.this).notifyDataSetChanged();
           }
+          ArtistUI.e(ArtistUI.this).dismiss();
+          return;
+          label115:
+          hjr = paramAnonymousbs;
+          ad.aBG().b(jwr.jws, hjw.ckm, context.hashCode(), z.kFU);
+          hjw.hjB.setText(elW);
+          hjw.cuI.setText(jwq);
+          hjw.eLK.setText(aez);
+          hjw.hjC.setText(jwp);
         }
-        ArtistUI.e(ArtistUI.this).dismiss();
       }
       
-      public final void aAN()
+      public final void aDD()
       {
         if ((ArtistUI.f(ArtistUI.this) == null) && (ArtistUI.e(ArtistUI.this) != null))
         {
-          u.d("!32@/B4Tb64lLpJC+sbDDDsy3CAlXrK84I2H", "onNothingBgGet");
-          a.cob.af(true);
+          v.d("MicroMsg.ArtistUI", "onNothingBgGet");
+          a.cjp.K(true);
         }
       }
     });
-    gWi = new ArtistHeader(this);
-    dby.addHeaderView(gWi);
-    dby.setAdapter(gWh);
-    gWh.notifyDataSetChanged();
-    gWi.setVisibility(8);
+    hjE = new ArtistHeader(this);
+    dae.addHeaderView(hjE);
+    dae.setAdapter(hjD);
+    hjD.notifyDataSetChanged();
+    hjE.setVisibility(8);
     b(new MenuItem.OnMenuItemClickListener()
     {
       public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
@@ -102,42 +120,16 @@ public class ArtistUI
     });
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
-  {
-    if ((!(paramj instanceof l)) || (((l)paramj).vJ() != 4)) {
-      u.d("!32@/B4Tb64lLpJC+sbDDDsy3CAlXrK84I2H", "another scene");
-    }
-    do
-    {
-      return;
-      u.i("!32@/B4Tb64lLpJC+sbDDDsy3CAlXrK84I2H", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString + " type = " + paramj.getType() + " @" + hashCode());
-      if ((paramInt1 == 0) && (paramInt2 == 0)) {
-        break;
-      }
-    } while ((paramj.getType() != 159) || (coc == null));
-    coc.dismiss();
-    return;
-    switch (paramj.getType())
-    {
-    default: 
-      return;
-    }
-    if (gWh != null) {
-      gWh.Gk();
-    }
-    gWj = null;
-  }
-  
   protected final int getLayoutId()
   {
-    return 2131362826;
+    return 2130904418;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    String str = t.d(getSharedPreferences(y.aUK(), 0));
-    u.d("!32@/B4Tb64lLpJC+sbDDDsy3CAlXrK84I2H", "filterLan temp " + str);
+    String str = u.d(getSharedPreferences(aa.aZO(), 0));
+    v.d("MicroMsg.ArtistUI", "filterLan temp " + str);
     paramBundle = str;
     if (!str.equals("zh_CN"))
     {
@@ -152,13 +144,13 @@ public class ArtistUI
     }
     for (;;)
     {
-      eJi = paramBundle;
-      u.d("!32@/B4Tb64lLpJC+sbDDDsy3CAlXrK84I2H", "lan " + eJi);
-      ah.tE().a(159, this);
-      bxg = getSharedPreferences(y.aUK(), 0);
-      Gb();
-      paramBundle = gWi;
-      ad.aze().a(paramBundle);
+      eQW = paramBundle;
+      v.d("MicroMsg.ArtistUI", "lan " + eQW);
+      ah.tF().a(159, this);
+      bpi = getSharedPreferences(aa.aZO(), 0);
+      Gy();
+      paramBundle = hjE;
+      ad.aBE().a(paramBundle);
       return;
       label139:
       if (str.equals("zh_HK")) {
@@ -172,16 +164,16 @@ public class ArtistUI
   protected void onDestroy()
   {
     super.onDestroy();
-    if (coc != null) {
-      coc = null;
+    if (cjq != null) {
+      cjq = null;
     }
-    if (gWi != null)
+    if (hjE != null)
     {
-      ArtistHeader localArtistHeader = gWi;
-      ad.aze().b(localArtistHeader);
+      ArtistHeader localArtistHeader = hjE;
+      ad.aBE().b(localArtistHeader);
     }
-    ad.azg().L(this);
-    ah.tE().b(159, this);
+    ad.aBG().G(this);
+    ah.tF().b(159, this);
   }
   
   protected void onPause()
@@ -192,6 +184,32 @@ public class ArtistUI
   protected void onResume()
   {
     super.onResume();
+  }
+  
+  public void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
+  {
+    if ((!(paramj instanceof l)) || (((l)paramj).vM() != 4)) {
+      v.d("MicroMsg.ArtistUI", "another scene");
+    }
+    do
+    {
+      return;
+      v.i("MicroMsg.ArtistUI", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString + " type = " + paramj.getType() + " @" + hashCode());
+      if ((paramInt1 == 0) && (paramInt2 == 0)) {
+        break;
+      }
+    } while ((paramj.getType() != 159) || (cjq == null));
+    cjq.dismiss();
+    return;
+    switch (paramj.getType())
+    {
+    default: 
+      return;
+    }
+    if (hjD != null) {
+      hjD.GH();
+    }
+    hjF = null;
   }
 }
 

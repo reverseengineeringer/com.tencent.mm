@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field ayh:Landroid/widget/ImageView;
+.field akj:Landroid/widget/ImageView;
 
-.field efe:Landroid/graphics/Bitmap;
+.field eiG:Landroid/graphics/Bitmap;
 
-.field final synthetic iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+.field final synthetic jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
 
 # direct methods
@@ -30,8 +30,8 @@
     .locals 0
 
     .prologue
-    .line 403
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;->iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+    .line 401
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;->jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,7 +42,7 @@
     .locals 0
 
     .prologue
-    .line 403
+    .line 401
     invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/g;)V
 
     return-void
@@ -56,17 +56,17 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 410
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;->ayh:Landroid/widget/ImageView;
+    .line 408
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;->akj:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
 
-    .line 411
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;->efe:Landroid/graphics/Bitmap;
+    .line 409
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;->eiG:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;->efe:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;->eiG:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
@@ -74,34 +74,34 @@
 
     if-eqz v0, :cond_1
 
-    .line 412
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;->ayh:Landroid/widget/ImageView;
+    .line 410
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;->akj:Landroid/widget/ImageView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->c(Landroid/widget/ImageView;)V
 
-    .line 417
+    .line 415
     :cond_0
     :goto_0
-    iput-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;->ayh:Landroid/widget/ImageView;
+    iput-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;->akj:Landroid/widget/ImageView;
 
-    .line 418
-    iput-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;->efe:Landroid/graphics/Bitmap;
+    .line 416
+    iput-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;->eiG:Landroid/graphics/Bitmap;
 
-    .line 419
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;->iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+    .line 417
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;->jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/g;->iSk:Lcom/tencent/mm/pluginsdk/ui/tools/g$a;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/g;->jpt:Lcom/tencent/mm/pluginsdk/ui/tools/g$a;
 
     invoke-virtual {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/g$a;->v(Ljava/lang/Object;)V
 
-    .line 420
+    .line 418
     return-void
 
-    .line 414
+    .line 412
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;->ayh:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;->akj:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;->efe:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$e;->eiG:Landroid/graphics/Bitmap;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/g$d;->b(Landroid/widget/ImageView;Landroid/graphics/Bitmap;)V
 

@@ -10,7 +10,7 @@ final class FacebookLoginUI$5
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    FacebookLoginUI.c(ksx);
+    FacebookLoginUI.c(kRF);
     return true;
   }
 }

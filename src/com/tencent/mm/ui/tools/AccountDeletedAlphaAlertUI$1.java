@@ -10,7 +10,7 @@ final class AccountDeletedAlphaAlertUI$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    AccountDeletedAlphaAlertUI.a(ltv);
+    AccountDeletedAlphaAlertUI.a(lUw);
   }
 }
 

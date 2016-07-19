@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/jni/platformcomm/a;->aI(Landroid/content/Context;)V
+    value = Lcom/tencent/mm/jni/platformcomm/a;->aF(Landroid/content/Context;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

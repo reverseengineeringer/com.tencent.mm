@@ -9,8 +9,8 @@ final class MMKeyboardUperView$1
   
   public final void run()
   {
-    kuf.fullScroll(130);
-    MMKeyboardUperView.a(kuf).setVisibility(4);
+    kTm.fullScroll(130);
+    MMKeyboardUperView.a(kTm).setVisibility(4);
   }
 }
 

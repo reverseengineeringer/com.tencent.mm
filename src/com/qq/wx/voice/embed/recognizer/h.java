@@ -17,11 +17,11 @@ final class h
       return;
     case 100: 
       int i = paramMessage.getData().getInt("errorCode");
-      ajo.ajq.aF(i);
+      Ve.Vg.aX(i);
       return;
     }
     paramMessage = (a)obj;
-    ajo.ajq.a(paramMessage);
+    Ve.Vg.a(paramMessage);
   }
 }
 

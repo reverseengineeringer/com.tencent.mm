@@ -2,37 +2,37 @@ package com.tencent.mm.plugin.accountsync.b;
 
 import android.content.Context;
 import android.content.res.AssetManager;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.q;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.r;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.HashMap;
 import java.util.Map;
 
 public final class a
 {
-  public static a cop = new a();
-  private Map coq;
+  public static a cjD = new a();
+  private Map<String, String> cjE;
   
-  public final Map bm(Context paramContext)
+  public final Map<String, String> bh(Context paramContext)
   {
     for (;;)
     {
       int i;
       try
       {
-        paramContext = ay.g(paramContext.getAssets().open("config/EmailAddress.xml"));
-        if (ay.kz(paramContext)) {
+        paramContext = be.k(paramContext.getAssets().open("config/EmailAddress.xml"));
+        if (be.kf(paramContext)) {
           return null;
         }
-        Map localMap = q.J(paramContext, "config", null);
+        Map localMap = r.cr(paramContext, "config");
         if ((localMap == null) || (localMap.isEmpty()))
         {
-          u.d("!32@/B4Tb64lLpJwOMBN3Ft5hVOpzvJV0XFH", "values null");
+          v.d("MicroMsg.EmailFormater", "values null");
           return null;
         }
-        if (coq == null)
+        if (cjE == null)
         {
-          coq = new HashMap();
+          cjE = new HashMap();
           i = 0;
           Object localObject = new StringBuilder(".config.format");
           if (i == 0)
@@ -46,28 +46,28 @@ public final class a
             localObject = (String)localObject + ".loginpage";
             paramContext = (String)localMap.get(paramContext);
             localObject = (String)localMap.get(localObject);
-            if ((ay.kz(paramContext)) || (ay.kz((String)localObject))) {
-              break label251;
+            if ((be.kf(paramContext)) || (be.kf((String)localObject))) {
+              break label250;
             }
-            coq.put(paramContext, localObject);
-            break label251;
+            cjE.put(paramContext, localObject);
+            break label250;
           }
         }
         else
         {
-          return coq;
+          return cjE;
         }
         paramContext = Integer.valueOf(i);
         continue;
-        paramContext = coq;
+        paramContext = cjE;
         return paramContext;
       }
       catch (Exception paramContext)
       {
-        u.e("!32@/B4Tb64lLpJwOMBN3Ft5hVOpzvJV0XFH", "parse email failed:[%s]", new Object[] { paramContext.getMessage() });
+        v.e("MicroMsg.EmailFormater", "parse email failed:[%s]", new Object[] { paramContext.getMessage() });
         return null;
       }
-      label251:
+      label250:
       i += 1;
     }
   }

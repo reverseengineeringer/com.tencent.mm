@@ -10,27 +10,27 @@ final class bb$17
   
   public final void a(az paramaz, Object... paramVarArgs)
   {
-    bCF = paramVarArgs[0];
+    bvP = paramVarArgs[0];
   }
   
   public final boolean a(az paramaz)
   {
-    if ((System.currentTimeMillis() - bCG > 3600000L) && (bCF.length() > 0))
+    if ((System.currentTimeMillis() - bvQ > 3600000L) && (bvP.length() > 0))
     {
-      bb.n(key, bCF);
-      bCF = "";
-      bCG = System.currentTimeMillis();
+      bb.o(key, bvP);
+      bvP = "";
+      bvQ = System.currentTimeMillis();
       return true;
     }
     return false;
   }
   
-  public final az c(int paramInt, Object... paramVarArgs)
+  public final az d(int paramInt, Object... paramVarArgs)
   {
     az localaz = new az();
     key = paramInt;
-    bCF = paramVarArgs[0];
-    bCG = 0L;
+    bvP = paramVarArgs[0];
+    bvQ = 0L;
     return localaz;
   }
 }

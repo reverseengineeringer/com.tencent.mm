@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.animation.Interpolator;
 import android.widget.OverScroller;
 
-class e$c
+final class e$c
   implements e.a
 {
   public final boolean A(Object paramObject)

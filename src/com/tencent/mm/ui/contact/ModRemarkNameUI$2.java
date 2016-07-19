@@ -10,20 +10,20 @@ final class ModRemarkNameUI$2
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    switch (ModRemarkNameUI.b(llQ))
+    switch (ModRemarkNameUI.b(lMe))
     {
     }
     for (;;)
     {
       return true;
-      ModRemarkNameUI.c(llQ);
+      ModRemarkNameUI.c(lMe);
       continue;
-      ModRemarkNameUI.d(llQ);
+      ModRemarkNameUI.d(lMe);
       continue;
-      ModRemarkNameUI.e(llQ);
+      ModRemarkNameUI.e(lMe);
       continue;
-      ModRemarkNameUI.f(llQ);
-      ModRemarkNameUI.g(llQ);
+      ModRemarkNameUI.f(lMe);
+      ModRemarkNameUI.g(lMe);
     }
   }
 }

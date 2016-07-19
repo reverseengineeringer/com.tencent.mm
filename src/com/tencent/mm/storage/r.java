@@ -1,12 +1,12 @@
 package com.tencent.mm.storage;
 
-import com.tencent.mm.d.b.bg;
+import com.tencent.mm.e.b.bj;
 
 public final class r
-  extends com.tencent.mm.i.a
-  implements com.tencent.mm.dbsupport.newcursor.a
+  extends com.tencent.mm.j.a
+  implements com.tencent.mm.dbsupport.newcursor.a<String>
 {
-  public ag kfa;
+  public ai kFh;
   
   public r() {}
   
@@ -24,16 +24,17 @@ public final class r
     case 6: 
     case 8: 
     case 9: 
+    case 11: 
     default: 
       return;
     case 0: 
-      bi((int)paramLong);
+      bz((int)paramLong);
       return;
     case 1: 
-      bk((int)paramLong);
+      bB((int)paramLong);
       return;
     case 2: 
-      bl((int)paramLong);
+      bC((int)paramLong);
       return;
     case 3: 
       p(paramLong);
@@ -41,23 +42,53 @@ public final class r
     case 7: 
       q(paramLong);
       return;
+    case 10: 
+      bE((int)paramLong);
+      return;
     }
-    bn((int)paramLong);
+    bF((int)paramLong);
+  }
+  
+  public final void C(ai paramai)
+  {
+    bB(field_status);
+    bC(field_isSend);
+    if (paramai.bcC()) {}
+    label80:
+    for (;;)
+    {
+      long l = field_createTime;
+      for (r localr = this;; localr = this)
+      {
+        localr.p(l);
+        if (!paramai.bcw()) {
+          break;
+        }
+        setContent(paramai.bcO());
+        return;
+        if (field_status != 1) {
+          break label80;
+        }
+        l = Long.MAX_VALUE;
+      }
+      setContent(field_content);
+      return;
+    }
   }
   
   public final void e(int paramInt, byte[] paramArrayOfByte) {}
   
-  public final void k(int paramInt, long paramLong)
+  public final void i(int paramInt, long paramLong)
   {
     x(paramInt, paramLong);
   }
   
-  public final void l(int paramInt, long paramLong)
+  public final void j(int paramInt, long paramLong)
   {
     x(paramInt, paramLong);
   }
   
-  public final void l(int paramInt, String paramString)
+  public final void m(int paramInt, String paramString)
   {
     switch (paramInt)
     {
@@ -84,45 +115,19 @@ public final class r
     ch(paramString);
   }
   
-  public final void qC() {}
+  public final void pg() {}
   
-  public final void wr()
+  public final void wt()
   {
-    bk(0);
-    bl(0);
+    bB(0);
+    bC(0);
     setContent("");
     cd("0");
-    bi(0);
+    bz(0);
     r(0L);
+    bH(0);
     super.ce("");
     super.cf("");
-  }
-  
-  public final void z(ag paramag)
-  {
-    bk(field_status);
-    bl(field_isSend);
-    if (paramag.aXh()) {}
-    label80:
-    for (;;)
-    {
-      long l = field_createTime;
-      for (r localr = this;; localr = this)
-      {
-        localr.p(l);
-        if (!paramag.aXb()) {
-          break;
-        }
-        setContent(paramag.aXt());
-        return;
-        if (field_status != 1) {
-          break label80;
-        }
-        l = Long.MAX_VALUE;
-      }
-      setContent(field_content);
-      return;
-    }
   }
 }
 

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic haC:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+.field final synthetic hnU:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 85
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget$1;->haC:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget$1;->hnU:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
     .line 94
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget$1;->haC:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget$1;->hnU:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->a(Lcom/tencent/mm/plugin/sns/ui/RangeWidget;)Landroid/app/Activity;
 
@@ -56,7 +56,7 @@
     .line 95
     const-string/jumbo v1, "KLabel_range_index"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget$1;->haC:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget$1;->hnU:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->b(Lcom/tencent/mm/plugin/sns/ui/RangeWidget;)I
 
@@ -67,7 +67,7 @@
     .line 96
     const-string/jumbo v1, "Klabel_name_list"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget$1;->haC:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget$1;->hnU:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->c(Lcom/tencent/mm/plugin/sns/ui/RangeWidget;)Ljava/lang/String;
 
@@ -78,7 +78,7 @@
     .line 97
     const-string/jumbo v1, "Ktag_rangeFilterprivate"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget$1;->haC:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget$1;->hnU:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->d(Lcom/tencent/mm/plugin/sns/ui/RangeWidget;)Z
 
@@ -89,14 +89,14 @@
     .line 98
     const-string/jumbo v1, "k_sns_label_ui_style"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget$1;->haC:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget$1;->hnU:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
     iget v2, v2, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->style:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 99
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget$1;->haC:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget$1;->hnU:Lcom/tencent/mm/plugin/sns/ui/RangeWidget;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->a(Lcom/tencent/mm/plugin/sns/ui/RangeWidget;)Landroid/app/Activity;
 

@@ -1,12 +1,12 @@
 package com.tencent.mm.ui.chatting;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.Message;
 import android.widget.TextView;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class ChattingSendDataToDeviceUI$1
-  extends Handler
+  extends ac
 {
   ChattingSendDataToDeviceUI$1(ChattingSendDataToDeviceUI paramChattingSendDataToDeviceUI) {}
   
@@ -18,7 +18,7 @@ final class ChattingSendDataToDeviceUI$1
     default: 
       return;
     }
-    ChattingSendDataToDeviceUI.c(kXv).setText(paramMessage.getData().getString("data"));
+    ChattingSendDataToDeviceUI.c(lxJ).setText(paramMessage.getData().getString("data"));
   }
 }
 

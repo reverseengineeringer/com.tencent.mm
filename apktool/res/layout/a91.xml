@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SurfaceView android:layout_gravity="center" android:id="@id/c6z" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/short_video_base_recoder_view" />
+</merge>

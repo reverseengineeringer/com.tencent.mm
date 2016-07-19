@@ -11,22 +11,17 @@ import android.widget.FrameLayout;
 public class ActionBarOverlayLayout
   extends FrameLayout
 {
-  static final int[] nC = { 2130772116 };
-  private ActionBar iH;
-  private int nA;
-  private final Rect nB = new Rect(0, 0, 0, 0);
+  static final int[] nS = { 2130771970 };
+  public ActionBar iY;
+  private int nQ;
+  private final Rect nR = new Rect(0, 0, 0, 0);
   
   public ActionBarOverlayLayout(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    paramContext = getContext().getTheme().obtainStyledAttributes(nC);
-    nA = paramContext.getDimensionPixelSize(0, 0);
+    paramContext = getContext().getTheme().obtainStyledAttributes(nS);
+    nQ = paramContext.getDimensionPixelSize(0, 0);
     paramContext.recycle();
-  }
-  
-  public void setActionBar(ActionBar paramActionBar)
-  {
-    iH = paramActionBar;
   }
 }
 

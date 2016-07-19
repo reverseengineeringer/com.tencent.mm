@@ -3,23 +3,23 @@ package com.tencent.mm.ui.base;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.lang.ref.WeakReference;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 public final class b
 {
-  public static int Gw(String paramString)
+  public static int IK(String paramString)
   {
-    paramString = Gx(paramString);
+    paramString = IL(paramString);
     if (paramString != null) {
-      return h(paramString);
+      return j(paramString);
     }
     return 0;
   }
   
-  private static Class Gx(String paramString)
+  private static Class<?> IL(String paramString)
   {
     try
     {
@@ -28,12 +28,12 @@ public final class b
     }
     catch (ClassNotFoundException localClassNotFoundException)
     {
-      u.e("!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i", "Class %s not found in dex", new Object[] { paramString });
+      v.e("MicroMsg.ActivityUtil", "Class %s not found in dex", new Object[] { paramString });
     }
     return null;
   }
   
-  public static void W(Activity paramActivity)
+  public static void S(Activity paramActivity)
   {
     try
     {
@@ -44,35 +44,35 @@ public final class b
     }
     catch (Throwable paramActivity)
     {
-      u.printErrStackTrace("!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i", paramActivity, "call convertActivityFromTranslucent Fail: %s", new Object[] { paramActivity.getMessage() });
+      v.printErrStackTrace("MicroMsg.ActivityUtil", paramActivity, "call convertActivityFromTranslucent Fail: %s", new Object[] { paramActivity.getMessage() });
     }
   }
   
-  public static void ei(Context paramContext)
+  public static void em(Context paramContext)
   {
     if ((paramContext == null) || (!(paramContext instanceof Activity))) {
       return;
     }
-    ((Activity)paramContext).overridePendingTransition(2130837592, 2130837587);
+    ((Activity)paramContext).overridePendingTransition(2130968627, 2130968585);
   }
   
-  public static void ej(Context paramContext)
+  public static void en(Context paramContext)
   {
     if ((paramContext == null) || (!(paramContext instanceof Activity))) {
       return;
     }
-    ((Activity)paramContext).overridePendingTransition(2130837587, 2130837600);
+    ((Activity)paramContext).overridePendingTransition(2130968585, 2130968628);
   }
   
-  public static void ek(Context paramContext)
+  public static void eo(Context paramContext)
   {
     if ((paramContext == null) || (!(paramContext instanceof Activity))) {
       return;
     }
-    ((Activity)paramContext).overridePendingTransition(2130837587, 2130837587);
+    ((Activity)paramContext).overridePendingTransition(2130968585, 2130968585);
   }
   
-  public static int h(Class paramClass)
+  public static int j(Class<?> paramClass)
   {
     Object localObject;
     do
@@ -82,14 +82,14 @@ public final class b
         return ((a)localObject).value();
       }
       localObject = paramClass.getSuperclass();
-      paramClass = (Class)localObject;
+      paramClass = (Class<?>)localObject;
     } while (localObject != null);
     return 0;
   }
   
-  public static boolean i(Class paramClass)
+  public static boolean k(Class<?> paramClass)
   {
-    return (h(paramClass) & 0x1) == 0;
+    return (j(paramClass) & 0x1) == 0;
   }
   
   public static void w(Context paramContext, Intent paramIntent)
@@ -98,31 +98,31 @@ public final class b
     while (!paramIntent.getBooleanExtra("animation_pop_in", false)) {
       return;
     }
-    ((Activity)paramContext).overridePendingTransition(2130837592, 2130837587);
+    ((Activity)paramContext).overridePendingTransition(2130968627, 2130968585);
   }
   
   public static abstract interface a
   {
-    public abstract void hu(boolean paramBoolean);
+    public abstract void hS(boolean paramBoolean);
   }
   
   private static final class b
     implements InvocationHandler
   {
-    public WeakReference kBn;
+    public WeakReference<b.a> las;
     
     public final Object invoke(Object paramObject, Method paramMethod, Object[] paramArrayOfObject)
     {
       boolean bool2 = false;
-      if (kBn == null)
+      if (las == null)
       {
-        u.i("!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i", "swipe invoke fail, callbackRef NULL!");
+        v.i("MicroMsg.ActivityUtil", "swipe invoke fail, callbackRef NULL!");
         return null;
       }
-      paramObject = (b.a)kBn.get();
+      paramObject = (b.a)las.get();
       if (paramObject == null)
       {
-        u.i("!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i", "swipe invoke fail, callback NULL!");
+        v.i("MicroMsg.ActivityUtil", "swipe invoke fail, callback NULL!");
         return null;
       }
       boolean bool1 = bool2;
@@ -137,7 +137,7 @@ public final class b
           }
         }
       }
-      ((b.a)paramObject).hu(bool1);
+      ((b.a)paramObject).hS(bool1);
       return null;
     }
   }

@@ -6,11 +6,10 @@ import android.content.SharedPreferences.Editor;
 import android.os.RemoteException;
 import android.os.SystemClock;
 import com.tencent.mm.a.o;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.protocal.e;
-import com.tencent.mm.protocal.f;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.platformtools.q;
+import com.tencent.mm.protocal.h;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class C2Java$1
   implements Runnable
@@ -19,12 +18,12 @@ final class C2Java$1
   
   public final void run()
   {
-    y localy = z.Fh();
-    int j = aoU;
-    int m = aoV;
-    String str3 = bGb;
-    int i1 = cis;
-    byte[] arrayOfByte = bGr;
+    y localy = z.FD();
+    int j = ada;
+    int m = adb;
+    String str3 = bzm;
+    int i1 = cdJ;
+    byte[] arrayOfByte = bzC;
     int n = -1;
     for (;;)
     {
@@ -33,49 +32,49 @@ final class C2Java$1
       int k;
       p localp;
       k localk;
-      synchronized (cjG)
+      synchronized (ceX)
       {
-        i2 = localy.eh(i1);
+        i2 = localy.eQ(i1);
         if (-1 == i2)
         {
-          u.e("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "mmcgi onGYNetEnd GET FROM QUEUE failed. native:[%d,%d] msg:%s hashCode:%d ", new Object[] { Integer.valueOf(j), Integer.valueOf(m), str3, Integer.valueOf(i1) });
+          v.e("MicroMsg.MMNativeNetTaskAdapter", "mmcgi onGYNetEnd GET FROM QUEUE failed. native:[%d,%d] msg:%s hashCode:%d ", new Object[] { Integer.valueOf(j), Integer.valueOf(m), str3, Integer.valueOf(i1) });
           return;
-          u.f("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "c2JavaErrorType not exits c_errType:%d", new Object[] { Integer.valueOf(j) });
+          v.f("MicroMsg.MMNativeNetTaskAdapter", "c2JavaErrorType not exits c_errType:%d", new Object[] { Integer.valueOf(j) });
           break label1963;
           j = m;
           k = i;
-          if (!FccjX)
+          if (!Fycfp)
           {
             j = m;
             k = i;
             if (i == 1)
             {
-              u.i("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "network not available");
+              v.i("MicroMsg.MMNativeNetTaskAdapter", "network not available");
               k = 2;
               j = -1;
             }
           }
-          localp = cjG[i2].cjK;
-          localk = cjG[i2].cjL;
-          long l = cjG[i2].startTime;
-          cjG[i2] = null;
+          localp = ceX[i2].cfb;
+          localk = ceX[i2].cfc;
+          long l = ceX[i2].startTime;
+          ceX[i2] = null;
           if (k == 0)
           {
             i = k;
             try
             {
-              if (localp.wg().wj() == 0) {
+              if (localp.wi().wl() == 0) {
                 break label1896;
               }
               i = 4;
-              k = localp.wg().wj();
+              k = localp.wi().wl();
               j = k;
               i = 4;
             }
             catch (RemoteException localRemoteException5)
             {
               r localr;
-              f localf;
+              h localh;
               k = n;
               continue;
             }
@@ -84,15 +83,15 @@ final class C2Java$1
               k = localp.getType();
               try
               {
-                localr = z.Fg();
+                localr = z.FC();
                 try
                 {
-                  u.d("!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb", "summerauth onGYNetEnd threadId: 0" + " errType: " + i + " errCode: " + j + " errMsg: " + str3 + " rr: " + localp + " type: " + localp.getType() + " netIdGetCertBeforeAutoAuth: " + ciQ);
+                  v.d("MicroMsg.AutoAuth", "summerauth onGYNetEnd threadId: 0" + " errType: " + i + " errCode: " + j + " errMsg: " + str3 + " rr: " + localp + " type: " + localp.getType() + " netIdGetCertBeforeAutoAuth: " + ceh);
                   if (j == 0) {
                     continue;
                   }
-                  ciH += 1;
-                  localf = localp.wg();
+                  cdY += 1;
+                  localh = localp.wi();
                   m = localp.getType();
                   switch (m)
                   {
@@ -100,17 +99,17 @@ final class C2Java$1
                 }
                 catch (RemoteException localRemoteException1)
                 {
-                  u.e("!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb", "exception:%s", new Object[] { ay.b(localRemoteException1) });
+                  v.e("MicroMsg.AutoAuth", "exception:%s", new Object[] { be.f(localRemoteException1) });
                   continue;
                 }
-                m = localp.vF();
-                u.i("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "mmcgi onGYNetEnd type:%d time:%d hash[%d,%d] [%d,%d][%s]", new Object[] { Integer.valueOf(k), Long.valueOf(ay.an(l)), Integer.valueOf(i1), Integer.valueOf(m), Integer.valueOf(i), Integer.valueOf(j), str3 });
+                m = localp.vI();
+                v.i("MicroMsg.MMNativeNetTaskAdapter", "mmcgi onGYNetEnd type:%d time:%d hash[%d,%d] [%d,%d][%s]", new Object[] { Integer.valueOf(k), Long.valueOf(be.au(l)), Integer.valueOf(i1), Integer.valueOf(m), Integer.valueOf(i), Integer.valueOf(j), str3 });
                 if ((4 == i) && ((-1 == j) || (-2 == j) || (-24 == j) || (-34 == j))) {
-                  z.Fe().post(new y.1(localy, k, j));
+                  z.FA().post(new y.1(localy, k, j));
                 }
                 try
                 {
-                  String str1 = localp.wg().wi();
+                  String str1 = localp.wi().wk();
                   if ((str1 == null) || (str1.length() <= 0)) {
                     break label1856;
                   }
@@ -119,8 +118,8 @@ final class C2Java$1
                 }
                 catch (Exception localException)
                 {
-                  u.e("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "onGYNetEnd cb %s", new Object[] { localException.getMessage() });
-                  u.e("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "exception:%s", new Object[] { ay.b(localException) });
+                  v.e("MicroMsg.MMNativeNetTaskAdapter", "onGYNetEnd cb %s", new Object[] { localException.getMessage() });
+                  v.e("MicroMsg.MMNativeNetTaskAdapter", "exception:%s", new Object[] { be.f(localException) });
                   return;
                 }
                 i = 0;
@@ -164,15 +163,15 @@ final class C2Java$1
             if (localp.getType() == 10) {
               continue;
             }
-            ciH = 0;
+            cdY = 0;
             continue;
-            u.e("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "exception:%s", new Object[] { ay.b(localRemoteException2) });
+            v.e("MicroMsg.MMNativeNetTaskAdapter", "exception:%s", new Object[] { be.f(localRemoteException2) });
             m = 0;
             continue;
-            u.i("!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb", "summerauth end type: %d, ret:[%d,%d][%s]", new Object[] { Integer.valueOf(localp.getType()), Integer.valueOf(i), Integer.valueOf(j), str3 });
-            if ((localf.wj() != 0) || (i != 0) || (j != 0)) {
+            v.i("MicroMsg.AutoAuth", "summerauth end type: %d, ret:[%d,%d][%s]", new Object[] { Integer.valueOf(localp.getType()), Integer.valueOf(i), Integer.valueOf(j), str3 });
+            if ((localh.wl() != 0) || (i != 0) || (j != 0)) {
               if (localp.getType() == 126) {
-                u.e("!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb", "net.end: reg err: type=" + localp.getType() + " err=" + i + "," + j + " errmsg=" + str3);
+                v.e("MicroMsg.AutoAuth", "net.end: reg err: type=" + localp.getType() + " err=" + i + "," + j + " errmsg=" + str3);
               }
             }
           }
@@ -185,38 +184,38 @@ final class C2Java$1
       case -213: 
       case -205: 
       case -100: 
-        com.tencent.mm.sdk.platformtools.y.getContext().getSharedPreferences("auth_hold_prefs", 0).edit().putBoolean("auth_ishold", true).commit();
+        com.tencent.mm.sdk.platformtools.aa.getContext().getSharedPreferences("auth_hold_prefs", 0).edit().putBoolean("auth_ishold", true).commit();
         Object localObject2;
         if (j == 65323)
         {
-          localObject2 = h.fUJ;
-          h.b(148L, 31L, 1L, false);
+          localObject2 = com.tencent.mm.plugin.report.service.g.gdY;
+          com.tencent.mm.plugin.report.service.g.b(148L, 31L, 1L, false);
         }
         else if (j == -100)
         {
-          localObject2 = h.fUJ;
-          h.b(148L, 32L, 1L, false);
+          localObject2 = com.tencent.mm.plugin.report.service.g.gdY;
+          com.tencent.mm.plugin.report.service.g.b(148L, 32L, 1L, false);
         }
         else if (j == 65331)
         {
-          localObject2 = h.fUJ;
-          h.b(148L, 33L, 1L, false);
+          localObject2 = com.tencent.mm.plugin.report.service.g.gdY;
+          com.tencent.mm.plugin.report.service.g.b(148L, 33L, 1L, false);
           continue;
-          m = localp.wh();
-          u.i("!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb", "summerauth accinfo doAuthEnd type:%d, ret:%d loginDecodeFailedTry:%d", new Object[] { Integer.valueOf(localp.getType()), Integer.valueOf(m), Integer.valueOf(cbn) });
+          m = localp.wj();
+          v.i("MicroMsg.AutoAuth", "summerauth accinfo doAuthEnd type:%d, ret:%d loginDecodeFailedTry:%d", new Object[] { Integer.valueOf(localp.getType()), Integer.valueOf(m), Integer.valueOf(bVa) });
           String str2;
           Object localObject3;
           if (m == 2)
           {
             if (localp.getType() == 702)
             {
-              localObject2 = h.fUJ;
-              h.b(148L, 34L, 1L, false);
-              cbn += 1;
-              if (cbn > 1)
+              localObject2 = com.tencent.mm.plugin.report.service.g.gdY;
+              com.tencent.mm.plugin.report.service.g.b(148L, 34L, 1L, false);
+              bVa += 1;
+              if (bVa > 1)
               {
-                u.w("!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb", "summerauth loginDecodeFailedTry beyond 1 no more try!");
-                localr.d(i, j, "auth_decode_failed_" + ay.ad(str3, ""));
+                v.w("MicroMsg.AutoAuth", "summerauth loginDecodeFailedTry beyond 1 no more try!");
+                localr.c(i, j, "auth_decode_failed_" + be.ab(str3, ""));
               }
               else
               {
@@ -224,53 +223,53 @@ final class C2Java$1
                 {
                   try
                   {
-                    m = localf.rg();
-                    localObject2 = localf.wk();
-                    if (ay.J((byte[])localObject2))
+                    m = localh.rf();
+                    localObject2 = localh.wm();
+                    if (be.P((byte[])localObject2))
                     {
                       localObject2 = "";
-                      if (!ay.J(arrayOfByte)) {
+                      if (!be.P(arrayOfByte)) {
                         break label1357;
                       }
                       str2 = "";
                       if (!r.d((String)localObject2, str2, m)) {
                         break label1367;
                       }
-                      ciM.bGA = arrayOfByte;
-                      localp.a(ciN, 0, 0);
+                      ced.bzL = arrayOfByte;
+                      localp.a(cee, 0, 0);
                     }
                   }
                   catch (RemoteException localRemoteException3)
                   {
-                    u.printErrStackTrace("!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb", localRemoteException3, "summerauth save serverid aak failed 1 cookie:" + ay.aW(arrayOfByte), new Object[0]);
-                    u.appenderFlush();
+                    v.printErrStackTrace("MicroMsg.AutoAuth", localRemoteException3, "summerauth save serverid aak failed 1 cookie:" + be.bd(arrayOfByte), new Object[0]);
+                    v.appenderFlush();
                     throw localRemoteException3;
                   }
-                  localObject3 = ay.aW(localRemoteException3);
+                  localObject3 = be.bd(localRemoteException3);
                   continue;
                   label1357:
-                  str2 = ay.aW(arrayOfByte);
+                  str2 = be.bd(arrayOfByte);
                   continue;
                   label1367:
-                  u.w("!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb", "summerauth save serverid aak failed 1");
+                  v.w("MicroMsg.AutoAuth", "summerauth save serverid aak failed 1");
                 }
               }
             }
           }
           else
           {
-            cbn = 0;
-            e locale = localp.wf();
+            bVa = 0;
+            com.tencent.mm.protocal.g localg = localp.wh();
             try
             {
-              u.i("!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb", "summerauth accinfo %d: username:%s, wxusername:%s, ticket:%s, session:%s, uin:%d", new Object[] { Integer.valueOf(localp.getType()), locale.getUserName(), localf.wo(), ay.Dz(ay.I(localf.wk())), ay.Dz(ay.I(localf.tq())), Integer.valueOf(localf.rg()) });
-              m = localf.rg();
-              localObject3 = localf.wk();
-              if (ay.J((byte[])localObject3))
+              v.i("MicroMsg.AutoAuth", "summerauth accinfo %d: username:%s, wxusername:%s, ticket:%s, session:%s, uin:%d", new Object[] { Integer.valueOf(localp.getType()), localg.getUserName(), localh.wq(), be.FO(be.O(localh.wm())), be.FO(be.O(localh.tr())), Integer.valueOf(localh.rf()) });
+              m = localh.rf();
+              localObject3 = localh.wm();
+              if (be.P((byte[])localObject3))
               {
                 localObject3 = "";
                 label1515:
-                if (!ay.J(arrayOfByte)) {
+                if (!be.P(arrayOfByte)) {
                   break label1649;
                 }
                 str2 = "";
@@ -278,26 +277,26 @@ final class C2Java$1
                 if (!r.d((String)localObject3, str2, m)) {
                   break label1659;
                 }
-                ciM.bGA = arrayOfByte;
-                ciM.username = locale.getUserName();
-                ciM.ciq = localf.wo();
-                ciM.i(localf.tq(), localf.rg());
-                ciM.cip = localf.vT();
-                o.getString(localf.rg());
+                ced.bzL = arrayOfByte;
+                ced.username = localg.getUserName();
+                ced.cdH = localh.wq();
+                ced.i(localh.tr(), localh.rf());
+                ced.cdG = localh.vV();
+                o.getString(localh.rf());
               }
               for (;;)
               {
-                u.i("!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb", "summerauth decode and save ok!");
+                v.i("MicroMsg.AutoAuth", "summerauth decode and save ok!");
                 break;
-                localObject3 = ay.aW((byte[])localObject3);
+                localObject3 = be.bd((byte[])localObject3);
                 break label1515;
                 label1649:
-                str2 = ay.aW(arrayOfByte);
+                str2 = be.bd(arrayOfByte);
                 break label1528;
                 label1659:
-                localObject3 = h.fUJ;
-                h.b(148L, 35L, 1L, false);
-                u.w("!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb", "summerauth save serverid aak failed 2");
+                localObject3 = com.tencent.mm.plugin.report.service.g.gdY;
+                com.tencent.mm.plugin.report.service.g.b(148L, 35L, 1L, false);
+                v.w("MicroMsg.AutoAuth", "summerauth save serverid aak failed 2");
               }
               if (i != 0) {
                 break label1781;
@@ -305,30 +304,30 @@ final class C2Java$1
             }
             catch (RemoteException localRemoteException4)
             {
-              u.printErrStackTrace("!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb", localRemoteException4, "summerauth save serverid aak failed 2 cookie:" + ay.aW(arrayOfByte), new Object[0]);
-              u.appenderFlush();
+              v.printErrStackTrace("MicroMsg.AutoAuth", localRemoteException4, "summerauth save serverid aak failed 2 cookie:" + be.bd(arrayOfByte), new Object[0]);
+              v.appenderFlush();
               throw localRemoteException4;
             }
             if (j == 0)
             {
-              com.tencent.mm.protocal.z.v(localp.wg().wl(), localp.wg().wm(), localp.wg().wn());
-              ciP = SystemClock.elapsedRealtime();
+              com.tencent.mm.protocal.ac.t(localp.wi().wn(), localp.wi().wo(), localp.wi().wp());
+              ceg = SystemClock.elapsedRealtime();
             }
             label1781:
-            if ((com.tencent.mm.platformtools.r.cnl == 10003) && (com.tencent.mm.platformtools.r.cnm > 0))
+            if ((q.ciq == 10003) && (q.cir > 0))
             {
-              if (com.tencent.mm.platformtools.r.cnm <= 1) {
-                com.tencent.mm.platformtools.r.cnm = 0;
+              if (q.cir <= 1) {
+                q.cir = 0;
               }
               m = 4;
-              com.tencent.mm.protocal.z.v("", "", 0);
+              com.tencent.mm.protocal.ac.t("", "", 0);
               label1820:
-              if (ciQ != -1)
+              if (ceh != -1)
               {
                 if ((m == 0) && (j == 0)) {
                   localr.a(localp, 0, 0);
                 }
-                ciQ = -1;
+                ceh = -1;
                 continue;
                 label1856:
                 localk.a(i2, i, j, str3, localp, arrayOfByte);

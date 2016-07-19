@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kOZ:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
+.field final synthetic lop:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 173
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$5;->kOZ:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$5;->lop:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 177
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
     .line 178
     const-string/jumbo v0, "R200_100"
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kC(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->ll(Ljava/lang/String;)V
 
     .line 180
     new-instance v0, Landroid/content/Intent;
@@ -79,7 +79,7 @@
     .line 183
     const-string/jumbo v1, "regsetinfo_ticket"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$5;->kOZ:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$5;->lop:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;->c(Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;)Ljava/lang/String;
 
@@ -90,7 +90,7 @@
     .line 184
     const-string/jumbo v1, "regsetinfo_NextStep"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$5;->kOZ:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$5;->lop:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;->d(Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;)Ljava/lang/String;
 
@@ -101,7 +101,7 @@
     .line 185
     const-string/jumbo v1, "regsetinfo_NextStyle"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$5;->kOZ:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$5;->lop:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;->e(Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;)I
 
@@ -110,16 +110,16 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 187
-    sget-object v1, Lcom/tencent/mm/plugin/a/a;->coa:Lcom/tencent/mm/pluginsdk/g;
+    sget-object v1, Lcom/tencent/mm/plugin/a/a;->cjo:Lcom/tencent/mm/pluginsdk/g;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$5;->kOZ:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$5;->lop:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
 
     invoke-interface {v1, v2, v0}, Lcom/tencent/mm/pluginsdk/g;->a(Lcom/tencent/mm/ui/MMWizardActivity;Landroid/content/Intent;)V
 
     .line 188
     const-string/jumbo v0, "R300_300_phone"
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kC(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->ll(Ljava/lang/String;)V
 
     .line 189
     const/4 v0, 0x0
@@ -128,7 +128,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->ty()Ljava/lang/String;
 
     move-result-object v2
 
@@ -142,7 +142,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$5;->kOZ:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$5;->lop:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -164,7 +164,7 @@
 
     const-string/jumbo v2, "R300_200_phone"
 
-    invoke-static {v2}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/tencent/mm/model/ah;->fq(Ljava/lang/String;)I
 
     move-result v2
 

@@ -13,11 +13,11 @@
 
 
 # instance fields
-.field public cKS:Ljava/lang/CharSequence;
+.field public cHV:Ljava/lang/CharSequence;
 
-.field private lnc:Lcom/tencent/mm/ui/contact/a/f$b;
+.field private lNx:Lcom/tencent/mm/ui/contact/a/f$b;
 
-.field lnd:Lcom/tencent/mm/ui/contact/a/f$a;
+.field lNy:Lcom/tencent/mm/ui/contact/a/f$a;
 
 .field public username:Ljava/lang/String;
 
@@ -37,14 +37,14 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/contact/a/f$b;-><init>(Lcom/tencent/mm/ui/contact/a/f;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/a/f;->lnc:Lcom/tencent/mm/ui/contact/a/f$b;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/a/f;->lNx:Lcom/tencent/mm/ui/contact/a/f$b;
 
     .line 108
     new-instance v0, Lcom/tencent/mm/ui/contact/a/f$a;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/contact/a/f$a;-><init>(Lcom/tencent/mm/ui/contact/a/f;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/a/f;->lnd:Lcom/tencent/mm/ui/contact/a/f$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/a/f;->lNy:Lcom/tencent/mm/ui/contact/a/f$a;
 
     .line 32
     return-void
@@ -52,39 +52,39 @@
 
 
 # virtual methods
-.method public final ajt()Lcom/tencent/mm/ui/contact/a/a$b;
+.method public final amb()Lcom/tencent/mm/ui/contact/a/a$b;
     .locals 1
 
     .prologue
     .line 105
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/a/f;->lnc:Lcom/tencent/mm/ui/contact/a/f$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/a/f;->lNx:Lcom/tencent/mm/ui/contact/a/f$b;
 
     return-object v0
 .end method
 
-.method protected final awR()Lcom/tencent/mm/ui/contact/a/a$a;
+.method protected final azo()Lcom/tencent/mm/ui/contact/a/a$a;
     .locals 1
 
     .prologue
     .line 111
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/a/f;->lnd:Lcom/tencent/mm/ui/contact/a/f$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/a/f;->lNy:Lcom/tencent/mm/ui/contact/a/f$a;
 
     return-object v0
 .end method
 
-.method public er(Landroid/content/Context;)V
+.method public eu(Landroid/content/Context;)V
     .locals 2
 
     .prologue
     .line 92
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/a/a;->cFh:Lcom/tencent/mm/storage/k;
 
     if-nez v0, :cond_0
 
     .line 93
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/a/f;->cKS:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/a/f;->cHV:Ljava/lang/CharSequence;
 
     .line 94
     const-string/jumbo v0, ""
@@ -97,16 +97,16 @@
 
     .line 97
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/a/a;->cFh:Lcom/tencent/mm/storage/k;
 
     invoke-static {v0}, Lcom/tencent/mm/model/i;->d(Lcom/tencent/mm/storage/k;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 98
-    const v1, 0x7f0501c4
+    const v1, 0x7f0b0153
 
-    invoke-static {p1, v1}, Lcom/tencent/mm/aw/a;->z(Landroid/content/Context;I)I
+    invoke-static {p1, v1}, Lcom/tencent/mm/az/a;->D(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -114,12 +114,12 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/a/f;->cKS:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/a/f;->cHV:Ljava/lang/CharSequence;
 
     .line 99
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/a/a;->cFh:Lcom/tencent/mm/storage/k;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/tencent/mm/ui/contact/a/f;->username:Ljava/lang/String;
 

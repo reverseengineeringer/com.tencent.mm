@@ -1,18 +1,20 @@
 package com.tencent.mm.ui.chatting;
 
-import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 final class cz
+  extends ab.a
 {
-  TextView cVH;
-  TextView enn;
-  View fNj;
-  TextView kRx;
-  View lbZ;
-  LinearLayout lca;
-  View lcb;
+  LinearLayout fRM;
+  da lCo = new da();
+  dn lCp = new dn();
+  public ImageView lqK;
+  
+  public cz(int paramInt)
+  {
+    super(paramInt);
+  }
 }
 
 /* Location:

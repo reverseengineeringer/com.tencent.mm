@@ -4,11 +4,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.widget.EditText;
-import com.tencent.mm.model.ah;
 import com.tencent.mm.pluginsdk.model.l;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.h;
 
@@ -19,27 +17,27 @@ final class i$2
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (iJp.apf != null)
+    if (jgl.fTL != null)
     {
-      iJp.apf.dismiss();
-      iJp.apf = null;
+      jgl.fTL.dismiss();
+      jgl.fTL = null;
     }
-    new af(new af.a()
+    new com.tencent.mm.sdk.platformtools.ah(new ah.a()
     {
-      public final boolean lj()
+      public final boolean jK()
       {
-        if (iJp.fKJ != null)
+        if (jgl.fTM != null)
         {
-          i locali = iJp;
-          String str = iJp.fEO.getText().toString().trim();
+          i locali = jgl;
+          String str = jgl.fNQ.getText().toString().trim();
           Context localContext = context;
-          context.getString(2131430877);
-          coc = g.a(localContext, context.getString(2131431087), true, new i.5(locali));
-          ah.tE().d(new l(2, iJn, fJy, str, ""));
+          context.getString(2131231028);
+          cjq = g.a(localContext, context.getString(2131234901), true, new i.5(locali));
+          com.tencent.mm.model.ah.tF().a(new l(2, jgj, fSA, str, ""), 0);
         }
         return false;
       }
-    }, false).ds(500L);
+    }, false).dJ(500L);
   }
 }
 

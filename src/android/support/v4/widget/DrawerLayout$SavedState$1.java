@@ -3,7 +3,7 @@ package android.support.v4.widget;
 import android.os.Parcelable.Creator;
 
 final class DrawerLayout$SavedState$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<DrawerLayout.SavedState>
 {}
 
 /* Location:

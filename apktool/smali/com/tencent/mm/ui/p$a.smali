@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field kqJ:Landroid/view/LayoutInflater;
+.field kPO:Landroid/view/LayoutInflater;
 
 
 # direct methods
@@ -51,7 +51,7 @@
 
     .line 91
     :try_start_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/p$a;->kqJ:Landroid/view/LayoutInflater;
+    iget-object v1, p0, Lcom/tencent/mm/ui/p$a;->kPO:Landroid/view/LayoutInflater;
 
     invoke-virtual {v1, p1, p2, p3}, Landroid/view/LayoutInflater;->createView(Ljava/lang/String;Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/view/View;
     :try_end_0
@@ -156,7 +156,7 @@
 
     move-object v1, v0
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/p$a;->kqJ:Landroid/view/LayoutInflater;
+    iget-object v3, p0, Lcom/tencent/mm/ui/p$a;->kPO:Landroid/view/LayoutInflater;
 
     invoke-virtual {v1, v3}, Landroid/view/ViewStub;->setLayoutInflater(Landroid/view/LayoutInflater;)V
 
@@ -363,10 +363,18 @@
 
     move-result v1
 
+    if-nez v1, :cond_2
+
+    const-string/jumbo v1, "com.tencent.mm.kiss.widget.textview.PLSysTextView"
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
     if-eqz v1, :cond_7
 
     :cond_2
-    invoke-static {p2}, Lcom/tencent/mm/aw/a;->cY(Landroid/content/Context;)F
+    invoke-static {p2}, Lcom/tencent/mm/az/a;->cW(Landroid/content/Context;)F
 
     move-result v3
 
@@ -403,7 +411,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/tencent/mm/aw/a;->getDensity(Landroid/content/Context;)F
+    invoke-static {v5}, Lcom/tencent/mm/az/a;->getDensity(Landroid/content/Context;)F
 
     move-result v5
 
@@ -417,15 +425,15 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/tencent/mm/ax/e;->a(Landroid/content/res/AssetManager;)Lcom/tencent/mm/ax/e;
+    invoke-static {v3}, Lcom/tencent/mm/ba/e;->a(Landroid/content/res/AssetManager;)Lcom/tencent/mm/ba/e;
 
-    invoke-static {}, Lcom/tencent/mm/ax/e;->aTH()Z
+    invoke-static {}, Lcom/tencent/mm/ba/e;->aYE()Z
 
     move-result v3
 
     if-eqz v3, :cond_7
 
-    sget-object v3, Lcom/tencent/mm/ui/p;->kqH:[I
+    sget-object v3, Lcom/tencent/mm/ui/p;->kPM:[I
 
     invoke-virtual {p2, p3, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -434,7 +442,7 @@
     move v3, v4
 
     :goto_2
-    sget-object v6, Lcom/tencent/mm/ui/p;->kqH:[I
+    sget-object v6, Lcom/tencent/mm/ui/p;->kPM:[I
 
     array-length v6, v6
 
@@ -448,7 +456,7 @@
 
     if-eqz v6, :cond_4
 
-    sget-object v7, Lcom/tencent/mm/ui/p;->kqH:[I
+    sget-object v7, Lcom/tencent/mm/ui/p;->kPM:[I
 
     aget v7, v7, v3
 
@@ -468,7 +476,7 @@
 
     .line 48
     :cond_5
-    iget-object v1, p0, Lcom/tencent/mm/ui/p$a;->kqJ:Landroid/view/LayoutInflater;
+    iget-object v1, p0, Lcom/tencent/mm/ui/p$a;->kPO:Landroid/view/LayoutInflater;
 
     const/4 v3, 0x0
 
@@ -480,7 +488,7 @@
 
     .line 55
     :cond_6
-    sget-object v7, Lcom/tencent/mm/ui/p;->kqH:[I
+    sget-object v7, Lcom/tencent/mm/ui/p;->kPM:[I
 
     aget v7, v7, v3
 
@@ -501,7 +509,7 @@
     :catch_0
     move-exception v1
 
-    const-string/jumbo v1, "!44@/B4Tb64lLpLCvsNADamW+r1BiimaWqA8nTkjwpfB0XE="
+    const-string/jumbo v1, "MicroMsg.MMLayoutInflater"
 
     const-string/jumbo v3, "[cpan] class not found. name:%s. Use default Inflate."
 
@@ -509,7 +517,7 @@
 
     aput-object p1, v5, v4
 
-    invoke-static {v1, v3, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v3, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 66
     :cond_7
@@ -534,7 +542,7 @@
     :catch_1
     move-exception v1
 
-    const-string/jumbo v1, "!44@/B4Tb64lLpLCvsNADamW+r1BiimaWqA8nTkjwpfB0XE="
+    const-string/jumbo v1, "MicroMsg.MMLayoutInflater"
 
     const-string/jumbo v3, "[cpan] Inflate failed. name:%s. Use default Inflate."
 
@@ -542,7 +550,7 @@
 
     aput-object p1, v5, v4
 
-    invoke-static {v1, v3, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v3, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_4
 
@@ -578,7 +586,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/tencent/mm/aw/a;->getDensity(Landroid/content/Context;)F
+    invoke-static {v5}, Lcom/tencent/mm/az/a;->getDensity(Landroid/content/Context;)F
 
     move-result v5
 
@@ -592,15 +600,15 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/tencent/mm/ax/e;->a(Landroid/content/res/AssetManager;)Lcom/tencent/mm/ax/e;
+    invoke-static {v3}, Lcom/tencent/mm/ba/e;->a(Landroid/content/res/AssetManager;)Lcom/tencent/mm/ba/e;
 
-    invoke-static {}, Lcom/tencent/mm/ax/e;->aTH()Z
+    invoke-static {}, Lcom/tencent/mm/ba/e;->aYE()Z
 
     move-result v3
 
     if-eqz v3, :cond_7
 
-    sget-object v3, Lcom/tencent/mm/ui/p;->kqH:[I
+    sget-object v3, Lcom/tencent/mm/ui/p;->kPM:[I
 
     invoke-virtual {p2, p3, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -609,7 +617,7 @@
     move v3, v4
 
     :goto_5
-    sget-object v6, Lcom/tencent/mm/ui/p;->kqH:[I
+    sget-object v6, Lcom/tencent/mm/ui/p;->kPM:[I
 
     array-length v6, v6
 
@@ -623,7 +631,7 @@
 
     if-eqz v6, :cond_b
 
-    sget-object v7, Lcom/tencent/mm/ui/p;->kqH:[I
+    sget-object v7, Lcom/tencent/mm/ui/p;->kPM:[I
 
     aget v7, v7, v3
 
@@ -642,7 +650,7 @@
     goto :goto_5
 
     :cond_c
-    sget-object v7, Lcom/tencent/mm/ui/p;->kqH:[I
+    sget-object v7, Lcom/tencent/mm/ui/p;->kPM:[I
 
     aget v7, v7, v3
 
@@ -752,7 +760,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/tencent/mm/aw/a;->getDensity(Landroid/content/Context;)F
+    invoke-static {v5}, Lcom/tencent/mm/az/a;->getDensity(Landroid/content/Context;)F
 
     move-result v5
 
@@ -766,15 +774,15 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/tencent/mm/ax/e;->a(Landroid/content/res/AssetManager;)Lcom/tencent/mm/ax/e;
+    invoke-static {v3}, Lcom/tencent/mm/ba/e;->a(Landroid/content/res/AssetManager;)Lcom/tencent/mm/ba/e;
 
-    invoke-static {}, Lcom/tencent/mm/ax/e;->aTH()Z
+    invoke-static {}, Lcom/tencent/mm/ba/e;->aYE()Z
 
     move-result v3
 
     if-eqz v3, :cond_7
 
-    sget-object v3, Lcom/tencent/mm/ui/p;->kqH:[I
+    sget-object v3, Lcom/tencent/mm/ui/p;->kPM:[I
 
     invoke-virtual {p2, p3, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -783,7 +791,7 @@
     move v3, v4
 
     :goto_7
-    sget-object v6, Lcom/tencent/mm/ui/p;->kqH:[I
+    sget-object v6, Lcom/tencent/mm/ui/p;->kPM:[I
 
     array-length v6, v6
 
@@ -797,7 +805,7 @@
 
     if-eqz v6, :cond_11
 
-    sget-object v7, Lcom/tencent/mm/ui/p;->kqH:[I
+    sget-object v7, Lcom/tencent/mm/ui/p;->kPM:[I
 
     aget v7, v7, v3
 
@@ -816,7 +824,7 @@
     goto :goto_7
 
     :cond_12
-    sget-object v7, Lcom/tencent/mm/ui/p;->kqH:[I
+    sget-object v7, Lcom/tencent/mm/ui/p;->kPM:[I
 
     aget v7, v7, v3
 
@@ -869,7 +877,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/tencent/mm/aw/a;->getDensity(Landroid/content/Context;)F
+    invoke-static {v5}, Lcom/tencent/mm/az/a;->getDensity(Landroid/content/Context;)F
 
     move-result v5
 
@@ -883,15 +891,15 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/tencent/mm/ax/e;->a(Landroid/content/res/AssetManager;)Lcom/tencent/mm/ax/e;
+    invoke-static {v3}, Lcom/tencent/mm/ba/e;->a(Landroid/content/res/AssetManager;)Lcom/tencent/mm/ba/e;
 
-    invoke-static {}, Lcom/tencent/mm/ax/e;->aTH()Z
+    invoke-static {}, Lcom/tencent/mm/ba/e;->aYE()Z
 
     move-result v3
 
     if-eqz v3, :cond_7
 
-    sget-object v3, Lcom/tencent/mm/ui/p;->kqH:[I
+    sget-object v3, Lcom/tencent/mm/ui/p;->kPM:[I
 
     invoke-virtual {p2, p3, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -900,7 +908,7 @@
     move v3, v4
 
     :goto_9
-    sget-object v6, Lcom/tencent/mm/ui/p;->kqH:[I
+    sget-object v6, Lcom/tencent/mm/ui/p;->kPM:[I
 
     array-length v6, v6
 
@@ -914,7 +922,7 @@
 
     if-eqz v6, :cond_16
 
-    sget-object v7, Lcom/tencent/mm/ui/p;->kqH:[I
+    sget-object v7, Lcom/tencent/mm/ui/p;->kPM:[I
 
     aget v7, v7, v3
 
@@ -933,7 +941,7 @@
     goto :goto_9
 
     :cond_17
-    sget-object v7, Lcom/tencent/mm/ui/p;->kqH:[I
+    sget-object v7, Lcom/tencent/mm/ui/p;->kPM:[I
 
     aget v7, v7, v3
 
@@ -980,15 +988,15 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/tencent/mm/ax/e;->a(Landroid/content/res/AssetManager;)Lcom/tencent/mm/ax/e;
+    invoke-static {v3}, Lcom/tencent/mm/ba/e;->a(Landroid/content/res/AssetManager;)Lcom/tencent/mm/ba/e;
 
-    invoke-static {}, Lcom/tencent/mm/ax/e;->aTH()Z
+    invoke-static {}, Lcom/tencent/mm/ba/e;->aYE()Z
 
     move-result v3
 
     if-eqz v3, :cond_7
 
-    sget-object v3, Lcom/tencent/mm/ui/p;->kqI:[I
+    sget-object v3, Lcom/tencent/mm/ui/p;->kPN:[I
 
     invoke-virtual {p2, p3, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -997,7 +1005,7 @@
     move v3, v4
 
     :goto_b
-    sget-object v6, Lcom/tencent/mm/ui/p;->kqI:[I
+    sget-object v6, Lcom/tencent/mm/ui/p;->kPN:[I
 
     array-length v6, v6
 
@@ -1011,7 +1019,7 @@
 
     if-eqz v6, :cond_1b
 
-    sget-object v7, Lcom/tencent/mm/ui/p;->kqI:[I
+    sget-object v7, Lcom/tencent/mm/ui/p;->kPN:[I
 
     aget v7, v7, v3
 
@@ -1050,7 +1058,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/tencent/mm/aw/a;->getDensity(Landroid/content/Context;)F
+    invoke-static {v5}, Lcom/tencent/mm/az/a;->getDensity(Landroid/content/Context;)F
 
     move-result v5
 
@@ -1064,7 +1072,7 @@
 
     .line 58
     :cond_1e
-    const-string/jumbo v1, "!44@/B4Tb64lLpLCvsNADamW+r1BiimaWqA8nTkjwpfB0XE="
+    const-string/jumbo v1, "MicroMsg.MMLayoutInflater"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1080,7 +1088,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catch Ljava/lang/ClassNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
     .catch Landroid/view/InflateException; {:try_start_2 .. :try_end_2} :catch_1

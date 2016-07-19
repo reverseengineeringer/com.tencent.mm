@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic kqp:Lcom/tencent/mm/ui/o;
+.field final synthetic kPu:Lcom/tencent/mm/ui/o;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 46
-    iput-object p1, p0, Lcom/tencent/mm/ui/o$1;->kqp:Lcom/tencent/mm/ui/o;
+    iput-object p1, p0, Lcom/tencent/mm/ui/o$1;->kPu:Lcom/tencent/mm/ui/o;
 
     invoke-direct {p0}, Lcom/tencent/mm/ui/j;-><init>()V
 
@@ -33,59 +33,58 @@
 
 
 # virtual methods
-.method protected final aNa()V
+.method protected final N(Landroid/view/View;)V
+    .locals 1
+
+    .prologue
+    .line 55
+    iget-object v0, p0, Lcom/tencent/mm/ui/o$1;->kPu:Lcom/tencent/mm/ui/o;
+
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/o;->N(Landroid/view/View;)V
+
+    .line 56
+    return-void
+.end method
+
+.method public final aAK()V
+    .locals 1
+
+    .prologue
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/ui/o$1;->kPu:Lcom/tencent/mm/ui/o;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/o;->aAK()V
+
+    .line 71
+    return-void
+.end method
+
+.method protected final aQL()V
     .locals 0
 
     .prologue
     .line 75
-    invoke-static {}, Lcom/tencent/mm/ui/o;->aNa()V
+    invoke-static {}, Lcom/tencent/mm/ui/o;->aQL()V
 
     .line 76
     return-void
 .end method
 
-.method public final aZY()Z
-    .locals 1
-
-    .prologue
-    .line 90
-    iget-object v0, p0, Lcom/tencent/mm/ui/o$1;->kqp:Lcom/tencent/mm/ui/o;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/o;->aZY()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method protected final amX()Ljava/lang/String;
+.method protected final apN()Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 60
-    iget-object v0, p0, Lcom/tencent/mm/ui/o$1;->kqp:Lcom/tencent/mm/ui/o;
+    iget-object v0, p0, Lcom/tencent/mm/ui/o$1;->kPu:Lcom/tencent/mm/ui/o;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/o;->amX()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/o;->apN()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final ayk()V
-    .locals 1
-
-    .prologue
-    .line 70
-    iget-object v0, p0, Lcom/tencent/mm/ui/o$1;->kqp:Lcom/tencent/mm/ui/o;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/o;->ayk()V
-
-    .line 71
-    return-void
-.end method
-
-.method protected final baL()Z
+.method protected final bfX()Z
     .locals 1
 
     .prologue
@@ -95,31 +94,32 @@
     return v0
 .end method
 
-.method protected final baY()Landroid/view/View;
+.method public final bfr()Z
+    .locals 1
+
+    .prologue
+    .line 90
+    iget-object v0, p0, Lcom/tencent/mm/ui/o$1;->kPu:Lcom/tencent/mm/ui/o;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/o;->bfr()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method protected final bgi()Landroid/view/View;
     .locals 1
 
     .prologue
     .line 65
-    iget-object v0, p0, Lcom/tencent/mm/ui/o$1;->kqp:Lcom/tencent/mm/ui/o;
+    iget-object v0, p0, Lcom/tencent/mm/ui/o$1;->kPu:Lcom/tencent/mm/ui/o;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/o;->baY()Landroid/view/View;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/o;->bgi()Landroid/view/View;
 
     move-result-object v0
 
     return-object v0
-.end method
-
-.method protected final dealContentView(Landroid/view/View;)V
-    .locals 1
-
-    .prologue
-    .line 55
-    iget-object v0, p0, Lcom/tencent/mm/ui/o$1;->kqp:Lcom/tencent/mm/ui/o;
-
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/o;->dealContentView(Landroid/view/View;)V
-
-    .line 56
-    return-void
 .end method
 
 .method protected final getClassName()Ljava/lang/String;
@@ -127,7 +127,7 @@
 
     .prologue
     .line 80
-    iget-object v0, p0, Lcom/tencent/mm/ui/o$1;->kqp:Lcom/tencent/mm/ui/o;
+    iget-object v0, p0, Lcom/tencent/mm/ui/o$1;->kPu:Lcom/tencent/mm/ui/o;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -145,7 +145,7 @@
 
     .prologue
     .line 50
-    iget-object v0, p0, Lcom/tencent/mm/ui/o$1;->kqp:Lcom/tencent/mm/ui/o;
+    iget-object v0, p0, Lcom/tencent/mm/ui/o$1;->kPu:Lcom/tencent/mm/ui/o;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/o;->getLayoutId()I
 

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kFn:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+.field final synthetic ler:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 931
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$1;->kFn:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$1;->ler:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 934
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$1;->kFn:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$1;->ler:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->pY:Landroid/view/View;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMListPopupWindow;->qm:Landroid/view/View;
 
     .line 935
     if-eqz v0, :cond_0
@@ -55,7 +55,7 @@
     if-eqz v0, :cond_0
 
     .line 936
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$1;->kFn:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$1;->ler:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->show()V
 

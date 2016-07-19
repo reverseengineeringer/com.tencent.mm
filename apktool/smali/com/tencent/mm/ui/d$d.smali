@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final buD:Ljava/lang/String;
+.field public static final bjg:Ljava/lang/String;
 
 
 # direct methods
@@ -23,10 +23,10 @@
     .locals 1
 
     .prologue
-    .line 3705
+    .line 3898
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/ui/d$d;->buD:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/ui/d$d;->bjg:Ljava/lang/String;
 
     return-void
 .end method

@@ -9,18 +9,18 @@ final class MMListPopupWindow$2
 {
   MMListPopupWindow$2(MMListPopupWindow paramMMListPopupWindow) {}
   
-  public final void onItemSelected(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemSelected(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
     if (paramInt != -1)
     {
-      paramAdapterView = MMListPopupWindow.a(kFn);
+      paramAdapterView = MMListPopupWindow.a(ler);
       if (paramAdapterView != null) {
         MMListPopupWindow.a.a(paramAdapterView, false);
       }
     }
   }
   
-  public final void onNothingSelected(AdapterView paramAdapterView) {}
+  public final void onNothingSelected(AdapterView<?> paramAdapterView) {}
 }
 
 /* Location:

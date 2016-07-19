@@ -1,55 +1,37 @@
 package com.tencent.mm.ui;
 
-import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
-import android.view.animation.AnimationUtils;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.base.OnLayoutChangedLinearLayout.a;
-import com.tencent.mm.ui.chatting.ChattingUI.a;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class LauncherUI$21
-  implements OnLayoutChangedLinearLayout.a
+  implements Animation.AnimationListener
 {
   LauncherUI$21(LauncherUI paramLauncherUI) {}
   
-  public final void baH()
+  public final void onAnimationEnd(Animation paramAnimation)
   {
-    if (LauncherUI.u(knl) == null)
+    ah.tw().bac();
+    ad.rh(0);
+    if (LauncherUI.A(kMs))
     {
-      LauncherUI.a(knl, AnimationUtils.loadAnimation(knl, MMFragmentActivity.a.kqw));
-      LauncherUI.u(knl).setAnimationListener(new Animation.AnimationListener()
-      {
-        public final void onAnimationEnd(Animation paramAnonymousAnimation)
-        {
-          u.i("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "klem animationEnd");
-          LauncherUI.w(knl);
-          knl.D(1.0F);
-        }
-        
-        public final void onAnimationRepeat(Animation paramAnonymousAnimation) {}
-        
-        public final void onAnimationStart(Animation paramAnonymousAnimation)
-        {
-          u.i("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "klem onAnimationStart");
-          LauncherUI.v(knl);
-          LauncherUI.c(knl, false);
-        }
-      });
+      v.i("MicroMsg.LauncherUI", "start  setAppTagUnreadNow");
+      kMs.bfA();
     }
-    if (LauncherUI.x(knl))
-    {
-      LauncherUI.h(knl).getView().startAnimation(LauncherUI.u(knl));
-      LauncherUI.y(knl);
-    }
-    for (;;)
-    {
-      zknl).kKf = null;
-      u.i("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "klem CHATTING ONLAYOUT ");
-      return;
-      LauncherUI.v(knl);
-      LauncherUI.w(knl);
-    }
+    LauncherUI.s(kMs);
+    v.i("MicroMsg.LauncherUI", "klem pop out onAnimationEnd");
+  }
+  
+  public final void onAnimationRepeat(Animation paramAnimation) {}
+  
+  public final void onAnimationStart(Animation paramAnimation)
+  {
+    ah.tw().aZZ();
+    ad.rh(-8);
+    v.i("MicroMsg.LauncherUI", "klem pop out onAnimationStart");
+    LauncherUI.c(kMs, true);
   }
 }
 

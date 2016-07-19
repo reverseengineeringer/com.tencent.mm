@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method static T(Landroid/content/Context;)Z
+.method static P(Landroid/content/Context;)Z
     .locals 2
 
     .prologue
@@ -66,7 +66,7 @@
     goto :goto_0
 .end method
 
-.method static U(Landroid/content/Context;)Ljava/lang/String;
+.method static Q(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -74,7 +74,7 @@
     :try_start_0
     const-string/jumbo v0, "android.permission.READ_PHONE_STATE"
 
-    invoke-static {p0, v0}, Lcom/tencent/c/a/a/s;->j(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v0}, Lcom/tencent/c/a/a/s;->k(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
@@ -113,14 +113,14 @@
     goto :goto_0
 .end method
 
-.method static V(Landroid/content/Context;)Ljava/lang/String;
+.method static R(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
 
     .prologue
     .line 190
     const-string/jumbo v0, "android.permission.ACCESS_WIFI_STATE"
 
-    invoke-static {p0, v0}, Lcom/tencent/c/a/a/s;->j(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v0}, Lcom/tencent/c/a/a/s;->k(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
@@ -189,7 +189,7 @@
     goto :goto_0
 .end method
 
-.method private static W(Landroid/content/Context;)Landroid/net/wifi/WifiInfo;
+.method private static S(Landroid/content/Context;)Landroid/net/wifi/WifiInfo;
     .locals 2
 
     .prologue
@@ -198,7 +198,7 @@
     const-string/jumbo v0, "android.permission.ACCESS_WIFI_STATE"
 
     .line 209
-    invoke-static {p0, v0}, Lcom/tencent/c/a/a/s;->j(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v0}, Lcom/tencent/c/a/a/s;->k(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
@@ -237,13 +237,13 @@
     goto :goto_0
 .end method
 
-.method static X(Landroid/content/Context;)Ljava/lang/String;
+.method static T(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 230
     :try_start_0
-    invoke-static {p0}, Lcom/tencent/c/a/a/s;->W(Landroid/content/Context;)Landroid/net/wifi/WifiInfo;
+    invoke-static {p0}, Lcom/tencent/c/a/a/s;->S(Landroid/content/Context;)Landroid/net/wifi/WifiInfo;
 
     move-result-object v0
 
@@ -270,13 +270,13 @@
     goto :goto_0
 .end method
 
-.method static Y(Landroid/content/Context;)Ljava/lang/String;
+.method static U(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 248
     :try_start_0
-    invoke-static {p0}, Lcom/tencent/c/a/a/s;->W(Landroid/content/Context;)Landroid/net/wifi/WifiInfo;
+    invoke-static {p0}, Lcom/tencent/c/a/a/s;->S(Landroid/content/Context;)Landroid/net/wifi/WifiInfo;
 
     move-result-object v0
 
@@ -303,7 +303,7 @@
     goto :goto_0
 .end method
 
-.method static Z(Landroid/content/Context;)Lorg/json/JSONArray;
+.method static V(Landroid/content/Context;)Lorg/json/JSONArray;
     .locals 7
 
     .prologue
@@ -311,7 +311,7 @@
     :try_start_0
     const-string/jumbo v0, "android.permission.INTERNET"
 
-    invoke-static {p0, v0}, Lcom/tencent/c/a/a/s;->j(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v0}, Lcom/tencent/c/a/a/s;->k(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
@@ -321,7 +321,7 @@
     const-string/jumbo v0, "android.permission.ACCESS_NETWORK_STATE"
 
     .line 261
-    invoke-static {p0, v0}, Lcom/tencent/c/a/a/s;->j(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v0}, Lcom/tencent/c/a/a/s;->k(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
@@ -440,54 +440,8 @@
     goto :goto_1
 .end method
 
-.method static a(Lcom/tencent/c/a/a/g;Lcom/tencent/c/a/a/g;)Lcom/tencent/c/a/a/g;
-    .locals 1
-
-    .prologue
-    .line 75
-    if-eqz p0, :cond_2
-
-    if-eqz p1, :cond_2
-
-    .line 76
-    invoke-virtual {p0, p1}, Lcom/tencent/c/a/a/g;->a(Lcom/tencent/c/a/a/g;)I
-
-    move-result v0
-
-    if-ltz v0, :cond_1
-
-    .line 84
-    :cond_0
-    :goto_0
-    return-object p0
-
-    :cond_1
-    move-object p0, p1
-
-    .line 76
-    goto :goto_0
-
-    .line 78
-    :cond_2
-    if-nez p0, :cond_0
-
-    .line 81
-    if-eqz p1, :cond_3
-
-    move-object p0, p1
-
-    .line 82
-    goto :goto_0
-
-    .line 84
-    :cond_3
-    const/4 p0, 0x0
-
-    goto :goto_0
-.end method
-
-.method static aa(Landroid/content/Context;)Ljava/lang/String;
-    .locals 7
+.method static W(Landroid/content/Context;)Ljava/lang/String;
+    .locals 8
 
     .prologue
     const/4 v0, 0x0
@@ -498,7 +452,7 @@
     const-string/jumbo v1, "android.permission.WRITE_EXTERNAL_STORAGE"
 
     .line 307
-    invoke-static {p0, v1}, Lcom/tencent/c/a/a/s;->j(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v1}, Lcom/tencent/c/a/a/s;->k(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -544,68 +498,68 @@
 
     move-result v1
 
-    int-to-long v3, v1
+    int-to-long v4, v1
 
     .line 317
     invoke-virtual {v2}, Landroid/os/StatFs;->getBlockSize()I
 
     move-result v1
 
-    int-to-long v5, v1
+    int-to-long v6, v1
 
     .line 316
-    mul-long/2addr v3, v5
+    mul-long/2addr v4, v6
 
     .line 317
-    const-wide/32 v5, 0xf4240
+    const-wide/32 v6, 0xf4240
 
     .line 316
-    div-long/2addr v3, v5
+    div-long/2addr v4, v6
 
     .line 318
     invoke-virtual {v2}, Landroid/os/StatFs;->getAvailableBlocks()I
 
     move-result v1
 
-    int-to-long v5, v1
+    int-to-long v6, v1
 
     .line 319
     invoke-virtual {v2}, Landroid/os/StatFs;->getBlockSize()I
 
     move-result v1
 
-    int-to-long v1, v1
+    int-to-long v2, v1
 
     .line 318
-    mul-long/2addr v1, v5
+    mul-long/2addr v2, v6
 
     .line 319
-    const-wide/32 v5, 0xf4240
+    const-wide/32 v6, 0xf4240
 
     .line 318
-    div-long/2addr v1, v5
+    div-long/2addr v2, v6
 
     .line 320
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-direct {v5, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string/jumbo v1, "/"
+    const-string/jumbo v2, "/"
 
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
     .line 321
-    invoke-static {v3, v4}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    invoke-static {v4, v5}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v2
 
@@ -631,7 +585,7 @@
     goto :goto_0
 .end method
 
-.method static ab(Landroid/content/Context;)Ljava/lang/String;
+.method static X(Landroid/content/Context;)Ljava/lang/String;
     .locals 4
 
     .prologue
@@ -642,7 +596,7 @@
     :try_start_0
     const-string/jumbo v0, "android.permission.INTERNET"
 
-    invoke-static {p0, v0}, Lcom/tencent/c/a/a/s;->j(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v0}, Lcom/tencent/c/a/a/s;->k(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
@@ -652,7 +606,7 @@
     const-string/jumbo v0, "android.permission.ACCESS_NETWORK_STATE"
 
     .line 368
-    invoke-static {p0, v0}, Lcom/tencent/c/a/a/s;->j(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v0}, Lcom/tencent/c/a/a/s;->k(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
@@ -758,7 +712,53 @@
     goto :goto_0
 .end method
 
-.method static as(Ljava/lang/String;)Z
+.method static a(Lcom/tencent/c/a/a/g;Lcom/tencent/c/a/a/g;)Lcom/tencent/c/a/a/g;
+    .locals 1
+
+    .prologue
+    .line 75
+    if-eqz p0, :cond_2
+
+    if-eqz p1, :cond_2
+
+    .line 76
+    invoke-virtual {p0, p1}, Lcom/tencent/c/a/a/g;->a(Lcom/tencent/c/a/a/g;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_1
+
+    .line 84
+    :cond_0
+    :goto_0
+    return-object p0
+
+    :cond_1
+    move-object p0, p1
+
+    .line 76
+    goto :goto_0
+
+    .line 78
+    :cond_2
+    if-nez p0, :cond_0
+
+    .line 81
+    if-eqz p1, :cond_3
+
+    move-object p0, p1
+
+    .line 82
+    goto :goto_0
+
+    .line 84
+    :cond_3
+    const/4 p0, 0x0
+
+    goto :goto_0
+.end method
+
+.method static aw(Ljava/lang/String;)Z
     .locals 1
 
     .prologue
@@ -789,7 +789,7 @@
     goto :goto_0
 .end method
 
-.method static at(Ljava/lang/String;)Z
+.method static ax(Ljava/lang/String;)Z
     .locals 2
 
     .prologue
@@ -826,7 +826,7 @@
 
     .prologue
     .line 126
-    invoke-static {p2}, Lcom/tencent/c/a/a/s;->as(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/tencent/c/a/a/s;->aw(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1079,47 +1079,7 @@
     goto :goto_0
 .end method
 
-.method static j(Landroid/content/Context;Ljava/lang/String;)Z
-    .locals 3
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 98
-    .line 100
-    :try_start_0
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v1
-
-    .line 102
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 101
-    invoke-virtual {v1, p1, v2}, Landroid/content/pm/PackageManager;->checkPermission(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const/4 v0, 0x1
-
-    .line 104
-    :cond_0
-    :goto_0
-    return v0
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_0
-.end method
-
-.method static kj()Ljava/lang/String;
+.method static iK()Ljava/lang/String;
     .locals 8
 
     .prologue
@@ -1216,6 +1176,46 @@
     move-exception v0
 
     const-string/jumbo v0, ""
+
+    goto :goto_0
+.end method
+
+.method static k(Landroid/content/Context;Ljava/lang/String;)Z
+    .locals 3
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 98
+    .line 100
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    .line 102
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 101
+    invoke-virtual {v1, p1, v2}, Landroid/content/pm/PackageManager;->checkPermission(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 104
+    :cond_0
+    :goto_0
+    return v0
+
+    :catch_0
+    move-exception v1
 
     goto :goto_0
 .end method

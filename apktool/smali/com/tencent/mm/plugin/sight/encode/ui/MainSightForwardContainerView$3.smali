@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gCI:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
+.field final synthetic gJj:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 178
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$3;->gCI:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
+    .line 179
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$3;->gJj:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,8 +40,8 @@
     .locals 1
 
     .prologue
-    .line 182
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$3;->gCI:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
+    .line 183
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$3;->gJj:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->a(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;)Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
@@ -49,6 +49,6 @@
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->show()V
 
-    .line 183
+    .line 184
     return-void
 .end method

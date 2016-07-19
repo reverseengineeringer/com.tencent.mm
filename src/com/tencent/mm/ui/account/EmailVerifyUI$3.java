@@ -8,7 +8,7 @@ import android.view.View.OnClickListener;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelfriend.w;
 import com.tencent.mm.plugin.a.b;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.base.g;
 
 final class EmailVerifyUI$3
@@ -18,21 +18,21 @@ final class EmailVerifyUI$3
   
   public final void onClick(View paramView)
   {
-    b.kD(ah.tx() + "," + getClass().getName() + ",R500_250," + ah.fd("R500_250") + ",3");
-    g.a(ksd, 2131427692, 2131427683, 2131430888, 2131430884, new DialogInterface.OnClickListener()
+    b.lm(ah.ty() + "," + getClass().getName() + ",R500_250," + ah.fq("R500_250") + ",3");
+    g.a(kRl, 2131234367, 2131234357, 2131230967, 2131230873, new DialogInterface.OnClickListener()
     {
       public final void onClick(final DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
-        paramAnonymousDialogInterface = new w(EmailVerifyUI.a(ksd), EmailVerifyUI.b(ksd));
-        ah.tE().d(paramAnonymousDialogInterface);
-        EmailVerifyUI localEmailVerifyUI1 = ksd;
-        EmailVerifyUI localEmailVerifyUI2 = ksd;
-        ksd.getString(2131430877);
-        EmailVerifyUI.a(localEmailVerifyUI1, g.a(localEmailVerifyUI2, ksd.getString(2131427693), true, new DialogInterface.OnCancelListener()
+        paramAnonymousDialogInterface = new w(EmailVerifyUI.a(kRl), EmailVerifyUI.b(kRl));
+        ah.tF().a(paramAnonymousDialogInterface, 0);
+        EmailVerifyUI localEmailVerifyUI1 = kRl;
+        EmailVerifyUI localEmailVerifyUI2 = kRl;
+        kRl.getString(2131231028);
+        EmailVerifyUI.a(localEmailVerifyUI1, g.a(localEmailVerifyUI2, kRl.getString(2131234375), true, new DialogInterface.OnCancelListener()
         {
           public final void onCancel(DialogInterface paramAnonymous2DialogInterface)
           {
-            ah.tE().c(paramAnonymousDialogInterface);
+            ah.tF().c(paramAnonymousDialogInterface);
           }
         }));
       }

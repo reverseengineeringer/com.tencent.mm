@@ -12,23 +12,32 @@
 
 
 # static fields
-.field private static final irL:[C
+.field private static final iNt:[C
 
-.field private static final irM:[Ljava/lang/String;
+.field private static final iNu:[Ljava/lang/String;
 
-.field private static final ldj:Ljava/lang/String;
+.field private static final lDA:Ljava/lang/String;
 
 
 # instance fields
+.field private boG:F
+
 .field private context:Landroid/content/Context;
 
-.field private eEB:F
+.field private lDx:Ljava/lang/String;
 
-.field private kRI:Lcom/tencent/mm/storage/k;
+.field private lrK:Lcom/tencent/mm/storage/k;
 
-.field private kSn:Ljava/util/List;
-
-.field private ldg:Ljava/lang/String;
+.field private lsp:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/storage/ai;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -49,7 +58,7 @@
 
     const-string/jumbo v2, "this.id + \'@@\' + this.src"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/pluginsdk/ui/tools/q;->bX(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/tencent/mm/pluginsdk/ui/tools/q;->ck(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -67,14 +76,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ldj:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lDA:Ljava/lang/String;
 
     .line 52
     new-array v0, v3, [C
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->irL:[C
+    sput-object v0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->iNt:[C
 
     .line 53
     new-array v0, v3, [Ljava/lang/String;
@@ -115,7 +124,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->irM:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->iNu:[Ljava/lang/String;
 
     return-void
 
@@ -133,6 +142,18 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/util/List;Lcom/tencent/mm/storage/k;)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/storage/ai;",
+            ">;",
+            "Lcom/tencent/mm/storage/k;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
     const/4 v0, 0x0
@@ -141,30 +162,30 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 39
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ldg:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lDx:Ljava/lang/String;
 
     .line 40
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->kRI:Lcom/tencent/mm/storage/k;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lrK:Lcom/tencent/mm/storage/k;
 
     .line 54
     const/high16 v0, 0x3f800000    # 1.0f
 
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->eEB:F
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->boG:F
 
     .line 84
     iput-object p1, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
 
     .line 85
-    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->kSn:Ljava/util/List;
+    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lsp:Ljava/util/List;
 
     .line 86
-    iput-object p3, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->kRI:Lcom/tencent/mm/storage/k;
+    iput-object p3, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lrK:Lcom/tencent/mm/storage/k;
 
     .line 87
     return-void
 .end method
 
-.method private static Dp(Ljava/lang/String;)Ljava/lang/String;
+.method private static FE(Ljava/lang/String;)Ljava/lang/String;
     .locals 8
 
     .prologue
@@ -206,7 +227,7 @@
     const/4 v0, 0x1
 
     .line 68
-    sget-object v2, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->irL:[C
+    sget-object v2, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->iNt:[C
 
     array-length v2, v2
 
@@ -216,14 +237,14 @@
     if-ltz v2, :cond_1
 
     .line 69
-    sget-object v7, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->irL:[C
+    sget-object v7, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->iNt:[C
 
     aget-char v7, v7, v2
 
     if-ne v7, v6, :cond_3
 
     .line 71
-    sget-object v0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->irM:[Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->iNu:[Ljava/lang/String;
 
     aget-object v0, v0, v2
 
@@ -261,7 +282,7 @@
     goto :goto_0
 .end method
 
-.method private ac(Lcom/tencent/mm/storage/ag;)Ljava/lang/String;
+.method private ag(Lcom/tencent/mm/storage/ai;)Ljava/lang/String;
     .locals 5
 
     .prologue
@@ -269,9 +290,9 @@
     const/4 v0, 0x0
 
     .line 305
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->kRI:Lcom/tencent/mm/storage/k;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lrK:Lcom/tencent/mm/storage/k;
 
-    iget-object v1, v1, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     const-string/jumbo v2, "@chatroom"
 
@@ -282,50 +303,50 @@
     if-nez v1, :cond_2
 
     .line 306
-    iget-object v0, p1, Lcom/tencent/mm/d/b/bg;->field_talker:Ljava/lang/String;
+    iget-object v0, p1, Lcom/tencent/mm/e/b/bj;->field_talker:Ljava/lang/String;
 
     .line 307
-    invoke-static {v0}, Lcom/tencent/mm/model/i;->dY(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/model/i;->ej(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 316
     :cond_0
     :goto_0
-    iget v1, p1, Lcom/tencent/mm/d/b/bg;->field_isSend:I
+    iget v1, p1, Lcom/tencent/mm/e/b/bj;->field_isSend:I
 
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_1
 
     .line 317
-    const-string/jumbo v0, "!44@/B4Tb64lLpIGnfVXnKYnmBgOb8pGVvusGTuwjXWeNHk="
+    const-string/jumbo v0, "MicroMsg.QQMailHistoryExporter"
 
     const-string/jumbo v1, "isSend"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 318
-    invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/h;->sg()Ljava/lang/String;
 
     move-result-object v0
 
     .line 322
     :cond_1
-    iget-wide v1, p1, Lcom/tencent/mm/d/b/bg;->field_createTime:J
+    iget-wide v2, p1, Lcom/tencent/mm/e/b/bj;->field_createTime:J
 
     .line 323
-    new-instance v3, Ljava/text/SimpleDateFormat;
+    new-instance v1, Ljava/text/SimpleDateFormat;
 
     const-string/jumbo v4, "HH:mm"
 
-    invoke-direct {v3, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
     new-instance v4, Ljava/util/Date;
 
-    invoke-direct {v4, v1, v2}, Ljava/util/Date;-><init>(J)V
+    invoke-direct {v4, v2, v3}, Ljava/util/Date;-><init>(J)V
 
-    invoke-virtual {v3, v4}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+    invoke-virtual {v1, v4}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -356,10 +377,10 @@
 
     .line 309
     :cond_2
-    iget-object v1, p1, Lcom/tencent/mm/d/b/bg;->field_content:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/e/b/bj;->field_content:Ljava/lang/String;
 
     .line 310
-    invoke-static {v1}, Lcom/tencent/mm/model/ar;->fj(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/model/ar;->fw(Ljava/lang/String;)I
 
     move-result v2
 
@@ -380,14 +401,14 @@
     move-result-object v0
 
     .line 313
-    invoke-static {v0}, Lcom/tencent/mm/model/i;->dY(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/model/i;->ej(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method private bgk()Ljava/lang/String;
+.method private blU()Ljava/lang/String;
     .locals 6
 
     .prologue
@@ -396,9 +417,9 @@
     const/4 v4, 0x0
 
     .line 130
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->kRI:Lcom/tencent/mm/storage/k;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lrK:Lcom/tencent/mm/storage/k;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     const-string/jumbo v1, "@chatroom"
 
@@ -411,7 +432,7 @@
     .line 132
     iget-object v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
 
-    const v1, 0x7f0b025f
+    const v1, 0x7f081046
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -421,19 +442,19 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->kRI:Lcom/tencent/mm/storage/k;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lrK:Lcom/tencent/mm/storage/k;
 
-    invoke-virtual {v2}, Lcom/tencent/mm/storage/k;->qy()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/tencent/mm/storage/k;->pb()Ljava/lang/String;
 
     move-result-object v2
 
     aput-object v2, v1, v4
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v2
 
@@ -457,22 +478,22 @@
 
     .line 134
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->kRI:Lcom/tencent/mm/storage/k;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lrK:Lcom/tencent/mm/storage/k;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/b/p;->field_nickname:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/e/b/p;->field_nickname:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 136
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->kRI:Lcom/tencent/mm/storage/k;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lrK:Lcom/tencent/mm/storage/k;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/model/f;->dK(Ljava/lang/String;)Ljava/util/List;
+    invoke-static {v0}, Lcom/tencent/mm/model/f;->dT(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
 
@@ -500,7 +521,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 139
-    invoke-static {v0}, Lcom/tencent/mm/model/i;->dY(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/model/i;->ej(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -548,7 +569,7 @@
     :goto_2
     iget-object v1, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
 
-    const v2, 0x7f0b0260
+    const v2, 0x7f081045
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -566,16 +587,16 @@
 
     .line 144
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->kRI:Lcom/tencent/mm/storage/k;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lrK:Lcom/tencent/mm/storage/k;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->qy()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->pb()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_2
 .end method
 
-.method private static dQ(J)Ljava/lang/String;
+.method private static eg(J)Ljava/lang/String;
     .locals 2
 
     .prologue
@@ -600,28 +621,28 @@
 
 
 # virtual methods
-.method public final bgj()Ljava/lang/String;
-    .locals 14
+.method public final blT()Ljava/lang/String;
+    .locals 15
 
     .prologue
-    const/4 v13, 0x4
+    const/4 v14, 0x4
 
-    const/4 v12, 0x3
+    const/4 v13, 0x3
 
-    const/4 v11, 0x2
+    const/4 v12, 0x2
 
     const/4 v4, 0x0
 
     const/4 v3, 0x1
 
     .line 91
-    const-string/jumbo v0, "!44@/B4Tb64lLpIGnfVXnKYnmBgOb8pGVvusGTuwjXWeNHk="
+    const-string/jumbo v0, "MicroMsg.QQMailHistoryExporter"
 
     const-string/jumbo v1, "selectItems.size = %d"
 
     new-array v2, v3, [Ljava/lang/Object;
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->kSn:Ljava/util/List;
+    iget-object v5, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lsp:Ljava/util/List;
 
     invoke-interface {v5}, Ljava/util/List;->size()I
 
@@ -633,12 +654,12 @@
 
     aput-object v5, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 93
     iget-object v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/tencent/mm/aw/a;->da(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/tencent/mm/az/a;->cY(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -647,11 +668,11 @@
     .line 94
     iget-object v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/tencent/mm/aw/a;->cY(Landroid/content/Context;)F
+    invoke-static {v0}, Lcom/tencent/mm/az/a;->cW(Landroid/content/Context;)F
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->eEB:F
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->boG:F
 
     .line 97
     :cond_0
@@ -667,9 +688,9 @@
     .line 99
     const-string/jumbo v0, "<p style=\"font-size:%fem;\">Dear:</p> <br> <p style=\"text-indent:2em; font-size:%fem;\">%s</p> <br>"
 
-    new-array v1, v12, [Ljava/lang/Object;
+    new-array v1, v13, [Ljava/lang/Object;
 
-    iget v2, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->eEB:F
+    iget v2, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->boG:F
 
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -677,7 +698,7 @@
 
     aput-object v2, v1, v4
 
-    iget v2, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->eEB:F
+    iget v2, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->boG:F
 
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -685,11 +706,11 @@
 
     aput-object v2, v1, v3
 
-    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->bgk()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->blU()Ljava/lang/String;
 
     move-result-object v2
 
-    aput-object v2, v1, v11
+    aput-object v2, v1, v12
 
     invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -698,7 +719,7 @@
     invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 101
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->kSn:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lsp:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -715,28 +736,28 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/storage/ag;
+    check-cast v0, Lcom/tencent/mm/storage/ai;
 
     .line 102
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ldg:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lDx:Ljava/lang/String;
 
     if-nez v1, :cond_2
 
     .line 103
-    iget-wide v1, v0, Lcom/tencent/mm/d/b/bg;->field_createTime:J
+    iget-wide v8, v0, Lcom/tencent/mm/e/b/bj;->field_createTime:J
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->dQ(J)Ljava/lang/String;
+    invoke-static {v8, v9}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->eg(J)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ldg:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lDx:Ljava/lang/String;
 
     .line 104
     const-string/jumbo v1, "<p style=\"text-align:center; font-size:%fem;\"><span style=\"color:#b8b8b8;\">\u2014\u2014\u2014\u2014\u2014  %s  \u2014\u2014\u2014\u2014\u2014</span></p>\n \n"
 
-    new-array v2, v11, [Ljava/lang/Object;
+    new-array v2, v12, [Ljava/lang/Object;
 
-    iget v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->eEB:F
+    iget v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->boG:F
 
     invoke-static {v7}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -744,7 +765,7 @@
 
     aput-object v7, v2, v4
 
-    iget-object v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ldg:Ljava/lang/String;
+    iget-object v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lDx:Ljava/lang/String;
 
     aput-object v7, v2, v3
 
@@ -757,14 +778,14 @@
     .line 113
     :cond_1
     :goto_1
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ag;->aXf()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ai;->bcA()Z
 
     move-result v1
 
     if-eqz v1, :cond_6
 
     .line 115
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ag;->aXf()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ai;->bcA()Z
 
     move-result v1
 
@@ -772,15 +793,15 @@
 
     const/4 v1, 0x0
 
-    iget v2, v0, Lcom/tencent/mm/d/b/bg;->field_isSend:I
+    iget v2, v0, Lcom/tencent/mm/e/b/bj;->field_isSend:I
 
     if-ne v2, v3, :cond_3
 
     const-string/jumbo v1, "<p style=\"font-size:%fem;\"><b>%s</b></p>\n  <p style=\"font-size:%fem;\">%s</p>\n <p style=\"line-height:1.5em;\"></p>\n"
 
-    new-array v2, v13, [Ljava/lang/Object;
+    new-array v2, v14, [Ljava/lang/Object;
 
-    iget v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->eEB:F
+    iget v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->boG:F
 
     invoke-static {v7}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -788,27 +809,27 @@
 
     aput-object v7, v2, v4
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ac(Lcom/tencent/mm/storage/ag;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ag(Lcom/tencent/mm/storage/ai;)Ljava/lang/String;
 
     move-result-object v7
 
     aput-object v7, v2, v3
 
-    iget v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->eEB:F
+    iget v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->boG:F
 
     invoke-static {v7}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v7
 
-    aput-object v7, v2, v11
+    aput-object v7, v2, v12
 
-    iget-object v0, v0, Lcom/tencent/mm/d/b/bg;->field_content:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/e/b/bj;->field_content:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->Dp(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->FE(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    aput-object v0, v2, v12
+    aput-object v0, v2, v13
 
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -821,14 +842,14 @@
 
     .line 106
     :cond_2
-    iget-wide v1, v0, Lcom/tencent/mm/d/b/bg;->field_createTime:J
+    iget-wide v8, v0, Lcom/tencent/mm/e/b/bj;->field_createTime:J
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->dQ(J)Ljava/lang/String;
+    invoke-static {v8, v9}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->eg(J)Ljava/lang/String;
 
     move-result-object v1
 
     .line 107
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ldg:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lDx:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -837,7 +858,7 @@
     if-nez v2, :cond_1
 
     .line 108
-    iput-object v1, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ldg:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lDx:Ljava/lang/String;
 
     .line 109
     const-string/jumbo v1, "<br>"
@@ -847,9 +868,9 @@
     .line 110
     const-string/jumbo v1, "<p style=\"text-align:center; font-size:%fem;\"><span style=\"color:#b8b8b8;\">\u2014\u2014\u2014\u2014\u2014  %s  \u2014\u2014\u2014\u2014\u2014</span></p>\n \n"
 
-    new-array v2, v11, [Ljava/lang/Object;
+    new-array v2, v12, [Ljava/lang/Object;
 
-    iget v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->eEB:F
+    iget v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->boG:F
 
     invoke-static {v7}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -857,7 +878,7 @@
 
     aput-object v7, v2, v4
 
-    iget-object v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ldg:Ljava/lang/String;
+    iget-object v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lDx:Ljava/lang/String;
 
     aput-object v7, v2, v3
 
@@ -871,9 +892,9 @@
 
     .line 115
     :cond_3
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->kRI:Lcom/tencent/mm/storage/k;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lrK:Lcom/tencent/mm/storage/k;
 
-    iget-object v2, v2, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     const-string/jumbo v7, "@chatroom"
 
@@ -885,9 +906,9 @@
 
     const-string/jumbo v1, "<p style=\"font-size:%fem;\"><b>%s</b></p>\n  <p style=\"font-size:%fem;\">%s</p>\n <p style=\"line-height:1.5em;\"></p>\n"
 
-    new-array v2, v13, [Ljava/lang/Object;
+    new-array v2, v14, [Ljava/lang/Object;
 
-    iget v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->eEB:F
+    iget v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->boG:F
 
     invoke-static {v7}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -895,27 +916,27 @@
 
     aput-object v7, v2, v4
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ac(Lcom/tencent/mm/storage/ag;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ag(Lcom/tencent/mm/storage/ai;)Ljava/lang/String;
 
     move-result-object v7
 
     aput-object v7, v2, v3
 
-    iget v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->eEB:F
+    iget v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->boG:F
 
     invoke-static {v7}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v7
 
-    aput-object v7, v2, v11
+    aput-object v7, v2, v12
 
-    iget-object v0, v0, Lcom/tencent/mm/d/b/bg;->field_content:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/e/b/bj;->field_content:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->Dp(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->FE(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    aput-object v0, v2, v12
+    aput-object v0, v2, v13
 
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -924,9 +945,9 @@
     goto :goto_2
 
     :cond_4
-    iget-object v2, v0, Lcom/tencent/mm/d/b/bg;->field_content:Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/e/b/bj;->field_content:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/tencent/mm/model/ar;->fj(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/tencent/mm/model/ar;->fw(Ljava/lang/String;)I
 
     move-result v2
 
@@ -936,9 +957,9 @@
 
     const-string/jumbo v1, "<p style=\"font-size:%fem;\"><b>%s</b></p>\n  <p style=\"font-size:%fem;\">%s</p>\n <p style=\"line-height:1.5em;\"></p>\n"
 
-    new-array v7, v13, [Ljava/lang/Object;
+    new-array v7, v14, [Ljava/lang/Object;
 
-    iget v8, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->eEB:F
+    iget v8, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->boG:F
 
     invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -946,21 +967,21 @@
 
     aput-object v8, v7, v4
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ac(Lcom/tencent/mm/storage/ag;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ag(Lcom/tencent/mm/storage/ai;)Ljava/lang/String;
 
     move-result-object v8
 
     aput-object v8, v7, v3
 
-    iget v8, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->eEB:F
+    iget v8, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->boG:F
 
     invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v8
 
-    aput-object v8, v7, v11
+    aput-object v8, v7, v12
 
-    iget-object v0, v0, Lcom/tencent/mm/d/b/bg;->field_content:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/e/b/bj;->field_content:Ljava/lang/String;
 
     add-int/lit8 v2, v2, 0x1
 
@@ -972,11 +993,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->Dp(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->FE(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    aput-object v0, v7, v12
+    aput-object v0, v7, v13
 
     invoke-static {v1, v7}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -991,39 +1012,39 @@
 
     .line 116
     :cond_6
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ag;->aXc()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ai;->bcx()Z
 
     move-result v1
 
     if-eqz v1, :cond_9
 
     .line 118
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ag;->aXc()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ai;->bcx()Z
 
     move-result v1
 
     if-eqz v1, :cond_8
 
-    iget-wide v1, v0, Lcom/tencent/mm/d/b/bg;->field_msgId:J
+    iget-wide v8, v0, Lcom/tencent/mm/e/b/bj;->field_msgId:J
 
-    iget-wide v7, v0, Lcom/tencent/mm/d/b/bg;->field_msgSvrId:J
+    iget-wide v10, v0, Lcom/tencent/mm/e/b/bj;->field_msgSvrId:J
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/ui/chatting/de;->dO(J)Ljava/lang/String;
+    invoke-static {v8, v9}, Lcom/tencent/mm/ui/chatting/df;->ee(J)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_7
 
-    invoke-static {v7, v8}, Lcom/tencent/mm/ui/chatting/de;->dP(J)Ljava/lang/String;
+    invoke-static {v10, v11}, Lcom/tencent/mm/ui/chatting/df;->ef(J)Ljava/lang/String;
 
     move-result-object v1
 
     :cond_7
-    const-string/jumbo v2, "!44@/B4Tb64lLpIGnfVXnKYnmBgOb8pGVvusGTuwjXWeNHk="
+    const-string/jumbo v2, "MicroMsg.QQMailHistoryExporter"
 
     const-string/jumbo v7, "hdPath[%s]"
 
@@ -1031,9 +1052,9 @@
 
     aput-object v1, v8, v4
 
-    invoke-static {v2, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v7, v8}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -1053,29 +1074,29 @@
 
     move-result-object v2
 
-    sget-object v7, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ldj:Ljava/lang/String;
+    sget-object v7, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lDA:Ljava/lang/String;
 
-    new-array v8, v13, [Ljava/lang/Object;
+    new-array v8, v14, [Ljava/lang/Object;
 
-    iget-wide v9, v0, Lcom/tencent/mm/d/b/bg;->field_msgId:J
+    iget-wide v10, v0, Lcom/tencent/mm/e/b/bj;->field_msgId:J
 
-    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v9
 
     aput-object v9, v8, v4
 
-    iget-wide v9, v0, Lcom/tencent/mm/d/b/bg;->field_msgSvrId:J
+    iget-wide v10, v0, Lcom/tencent/mm/e/b/bj;->field_msgSvrId:J
 
-    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v9
 
     aput-object v9, v8, v3
 
-    aput-object v2, v8, v11
+    aput-object v2, v8, v12
 
-    aput-object v1, v8, v12
+    aput-object v1, v8, v13
 
     invoke-static {v7, v8}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1083,9 +1104,9 @@
 
     const-string/jumbo v2, "<p style=\"font-size:%fem;\"><b>%s</b></p>\n  <p style=\"font-size:%fem;\">%s</p>\n <p style=\"line-height:1.5em;\"></p>\n"
 
-    new-array v7, v13, [Ljava/lang/Object;
+    new-array v7, v14, [Ljava/lang/Object;
 
-    iget v8, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->eEB:F
+    iget v8, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->boG:F
 
     invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -1093,21 +1114,21 @@
 
     aput-object v8, v7, v4
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ac(Lcom/tencent/mm/storage/ag;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ag(Lcom/tencent/mm/storage/ai;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v7, v3
 
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->eEB:F
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->boG:F
 
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
 
-    aput-object v0, v7, v11
+    aput-object v0, v7, v12
 
-    aput-object v1, v7, v12
+    aput-object v1, v7, v13
 
     invoke-static {v2, v7}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1127,7 +1148,7 @@
     :cond_9
     const/4 v1, 0x0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ag;->aWW()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ai;->bcp()Z
 
     move-result v2
 
@@ -1139,7 +1160,7 @@
 
     iget-object v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
 
-    const v8, 0x7f0b024c
+    const v8, 0x7f0805db
 
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1153,7 +1174,7 @@
 
     :cond_a
     :goto_4
-    const-string/jumbo v2, "!44@/B4Tb64lLpIGnfVXnKYnmBgOb8pGVvusGTuwjXWeNHk="
+    const-string/jumbo v2, "MicroMsg.QQMailHistoryExporter"
 
     const-string/jumbo v7, "formatOtherMsg, msgStr = %s"
 
@@ -1161,13 +1182,13 @@
 
     aput-object v1, v8, v4
 
-    invoke-static {v2, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v7, v8}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const-string/jumbo v2, "<p style=\"font-size:%fem;\"><b>%s</b></p>\n  <p style=\"font-size:%fem;\">%s</p>\n <p style=\"line-height:1.5em;\"></p>\n"
 
-    new-array v7, v13, [Ljava/lang/Object;
+    new-array v7, v14, [Ljava/lang/Object;
 
-    iget v8, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->eEB:F
+    iget v8, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->boG:F
 
     invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -1175,21 +1196,21 @@
 
     aput-object v8, v7, v4
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ac(Lcom/tencent/mm/storage/ag;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ag(Lcom/tencent/mm/storage/ai;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v7, v3
 
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->eEB:F
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->boG:F
 
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
 
-    aput-object v0, v7, v11
+    aput-object v0, v7, v12
 
-    aput-object v1, v7, v12
+    aput-object v1, v7, v13
 
     invoke-static {v2, v7}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1200,19 +1221,19 @@
     goto/16 :goto_0
 
     :cond_b
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ag;->aWY()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ai;->bct()Z
 
     move-result v2
 
     if-eqz v2, :cond_d
 
-    iget v1, v0, Lcom/tencent/mm/d/b/bg;->field_isSend:I
+    iget v1, v0, Lcom/tencent/mm/e/b/bj;->field_isSend:I
 
     if-ne v1, v3, :cond_c
 
     iget-object v1, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
 
-    const v2, 0x7f0b024d
+    const v2, 0x7f0805d9
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1223,7 +1244,7 @@
     :cond_c
     iget-object v1, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
 
-    const v2, 0x7f0b024e
+    const v2, 0x7f0805d8
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1232,31 +1253,31 @@
     goto :goto_4
 
     :cond_d
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ag;->aXe()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ai;->bcz()Z
 
     move-result v2
 
     if-eqz v2, :cond_e
 
-    new-instance v1, Lcom/tencent/mm/d/a/gh;
+    new-instance v1, Lcom/tencent/mm/e/a/gs;
 
-    invoke-direct {v1}, Lcom/tencent/mm/d/a/gh;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/e/a/gs;-><init>()V
 
-    iget-object v2, v1, Lcom/tencent/mm/d/a/gh;->aBq:Lcom/tencent/mm/d/a/gh$a;
+    iget-object v2, v1, Lcom/tencent/mm/e/a/gs;->anI:Lcom/tencent/mm/e/a/gs$a;
 
-    iput v3, v2, Lcom/tencent/mm/d/a/gh$a;->aBl:I
+    iput v3, v2, Lcom/tencent/mm/e/a/gs$a;->anD:I
 
-    iget-object v2, v1, Lcom/tencent/mm/d/a/gh;->aBq:Lcom/tencent/mm/d/a/gh$a;
+    iget-object v2, v1, Lcom/tencent/mm/e/a/gs;->anI:Lcom/tencent/mm/e/a/gs$a;
 
-    iput-object v0, v2, Lcom/tencent/mm/d/a/gh$a;->ask:Lcom/tencent/mm/storage/ag;
+    iput-object v0, v2, Lcom/tencent/mm/e/a/gs$a;->aec:Lcom/tencent/mm/storage/ai;
 
-    sget-object v2, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v2, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
-    iget-object v1, v1, Lcom/tencent/mm/d/a/gh;->aBr:Lcom/tencent/mm/d/a/gh$b;
+    iget-object v1, v1, Lcom/tencent/mm/e/a/gs;->anJ:Lcom/tencent/mm/e/a/gs$b;
 
-    iget-object v1, v1, Lcom/tencent/mm/d/a/gh$b;->aBt:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/e/a/gs$b;->anL:Ljava/lang/String;
 
     const-string/jumbo v2, "[%s]"
 
@@ -1271,7 +1292,7 @@
     goto :goto_4
 
     :cond_e
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ag;->aWU()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ai;->bcn()Z
 
     move-result v2
 
@@ -1279,11 +1300,11 @@
 
     const-string/jumbo v2, ""
 
-    iget-object v1, v0, Lcom/tencent/mm/d/b/bg;->field_content:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/e/b/bj;->field_content:Ljava/lang/String;
 
-    iget-object v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->kRI:Lcom/tencent/mm/storage/k;
+    iget-object v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lrK:Lcom/tencent/mm/storage/k;
 
-    iget-object v7, v7, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v7, v7, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     const-string/jumbo v8, "@chatroom"
 
@@ -1293,15 +1314,15 @@
 
     if-eqz v7, :cond_f
 
-    const-string/jumbo v7, "!44@/B4Tb64lLpIGnfVXnKYnmBgOb8pGVvusGTuwjXWeNHk="
+    const-string/jumbo v7, "MicroMsg.QQMailHistoryExporter"
 
     const-string/jumbo v8, "chatroom msg, parse it"
 
-    invoke-static {v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v7, v0, Lcom/tencent/mm/d/b/bg;->field_content:Ljava/lang/String;
+    iget-object v7, v0, Lcom/tencent/mm/e/b/bj;->field_content:Ljava/lang/String;
 
-    invoke-static {v7}, Lcom/tencent/mm/model/ar;->fj(Ljava/lang/String;)I
+    invoke-static {v7}, Lcom/tencent/mm/model/ar;->fw(Ljava/lang/String;)I
 
     move-result v7
 
@@ -1309,7 +1330,7 @@
 
     if-eq v7, v8, :cond_f
 
-    iget-object v1, v0, Lcom/tencent/mm/d/b/bg;->field_content:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/e/b/bj;->field_content:Ljava/lang/String;
 
     add-int/lit8 v7, v7, 0x1
 
@@ -1321,26 +1342,26 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->Dp(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->FE(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     :cond_f
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->Dq(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->FF(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/n/a$a;->dz(Ljava/lang/String;)Lcom/tencent/mm/n/a$a;
+    invoke-static {v1}, Lcom/tencent/mm/p/a$a;->dI(Ljava/lang/String;)Lcom/tencent/mm/p/a$a;
 
     move-result-object v7
 
     if-nez v7, :cond_10
 
-    const-string/jumbo v1, "!44@/B4Tb64lLpIGnfVXnKYnmBgOb8pGVvusGTuwjXWeNHk="
+    const-string/jumbo v1, "MicroMsg.QQMailHistoryExporter"
 
     const-string/jumbo v2, "appmsg content is null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v1, "[%s]"
 
@@ -1348,7 +1369,7 @@
 
     iget-object v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
 
-    const v8, 0x7f0b0251
+    const v8, 0x7f0805d1
 
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1363,9 +1384,9 @@
     goto/16 :goto_4
 
     :cond_10
-    iget-object v1, v7, Lcom/tencent/mm/n/a$a;->appId:Ljava/lang/String;
+    iget-object v1, v7, Lcom/tencent/mm/p/a$a;->appId:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lcom/tencent/mm/pluginsdk/model/app/g;->ai(Ljava/lang/String;Z)Lcom/tencent/mm/pluginsdk/model/app/f;
+    invoke-static {v1, v3}, Lcom/tencent/mm/pluginsdk/model/app/g;->ar(Ljava/lang/String;Z)Lcom/tencent/mm/pluginsdk/model/app/f;
 
     move-result-object v8
 
@@ -1373,14 +1394,14 @@
 
     iget-object v1, v8, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appName:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_12
 
     :cond_11
-    iget-object v1, v7, Lcom/tencent/mm/n/a$a;->appName:Ljava/lang/String;
+    iget-object v1, v7, Lcom/tencent/mm/p/a$a;->appName:Ljava/lang/String;
 
     :goto_5
     iget-object v9, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
@@ -1389,7 +1410,7 @@
 
     move-result-object v8
 
-    iget v1, v0, Lcom/tencent/mm/d/b/bg;->field_type:I
+    iget v1, v0, Lcom/tencent/mm/e/b/bj;->field_type:I
 
     const v9, 0x1000031
 
@@ -1400,13 +1421,13 @@
     :goto_6
     if-eqz v1, :cond_15
 
-    invoke-static {v8}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v8}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_14
 
-    iget-object v1, v7, Lcom/tencent/mm/n/a$a;->title:Ljava/lang/String;
+    iget-object v1, v7, Lcom/tencent/mm/p/a$a;->title:Ljava/lang/String;
 
     goto/16 :goto_4
 
@@ -1423,11 +1444,11 @@
     :cond_14
     const-string/jumbo v1, "[%s: %s]"
 
-    new-array v2, v11, [Ljava/lang/Object;
+    new-array v2, v12, [Ljava/lang/Object;
 
     aput-object v8, v2, v4
 
-    iget-object v7, v7, Lcom/tencent/mm/n/a$a;->title:Ljava/lang/String;
+    iget-object v7, v7, Lcom/tencent/mm/p/a$a;->title:Ljava/lang/String;
 
     aput-object v7, v2, v3
 
@@ -1438,17 +1459,17 @@
     goto/16 :goto_4
 
     :cond_15
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ag;->aXk()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ai;->bcF()Z
 
     move-result v1
 
     if-eqz v1, :cond_16
 
-    invoke-static {v0, v7}, Lcom/tencent/mm/ui/chatting/de;->a(Lcom/tencent/mm/storage/ag;Lcom/tencent/mm/n/a$a;)Ljava/lang/String;
+    invoke-static {v0, v7}, Lcom/tencent/mm/ui/chatting/df;->a(Lcom/tencent/mm/storage/ai;Lcom/tencent/mm/p/a$a;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v7
 
@@ -1468,29 +1489,29 @@
 
     move-result-object v2
 
-    sget-object v7, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ldj:Ljava/lang/String;
+    sget-object v7, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lDA:Ljava/lang/String;
 
-    new-array v8, v13, [Ljava/lang/Object;
+    new-array v8, v14, [Ljava/lang/Object;
 
-    iget-wide v9, v0, Lcom/tencent/mm/d/b/bg;->field_msgId:J
+    iget-wide v10, v0, Lcom/tencent/mm/e/b/bj;->field_msgId:J
 
-    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v9
 
     aput-object v9, v8, v4
 
-    iget-wide v9, v0, Lcom/tencent/mm/d/b/bg;->field_msgSvrId:J
+    iget-wide v10, v0, Lcom/tencent/mm/e/b/bj;->field_msgSvrId:J
 
-    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v9
 
     aput-object v9, v8, v3
 
-    aput-object v2, v8, v11
+    aput-object v2, v8, v12
 
-    aput-object v1, v8, v12
+    aput-object v1, v8, v13
 
     invoke-static {v7, v8}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1499,7 +1520,7 @@
     goto/16 :goto_4
 
     :cond_16
-    iget v1, v7, Lcom/tencent/mm/n/a$a;->type:I
+    iget v1, v7, Lcom/tencent/mm/p/a$a;->type:I
 
     packed-switch v1, :pswitch_data_0
 
@@ -1510,7 +1531,7 @@
 
     iget-object v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
 
-    const v8, 0x7f0b0251
+    const v8, 0x7f0805d1
 
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1525,9 +1546,9 @@
     goto/16 :goto_4
 
     :pswitch_1
-    iget-object v1, v7, Lcom/tencent/mm/n/a$a;->description:Ljava/lang/String;
+    iget-object v1, v7, Lcom/tencent/mm/p/a$a;->description:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -1535,11 +1556,11 @@
 
     const-string/jumbo v1, "[%s: %s]"
 
-    new-array v2, v11, [Ljava/lang/Object;
+    new-array v2, v12, [Ljava/lang/Object;
 
     iget-object v8, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
 
-    const v9, 0x7f0b0254
+    const v9, 0x7f0805d7
 
     invoke-virtual {v8, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1547,7 +1568,7 @@
 
     aput-object v8, v2, v4
 
-    iget-object v7, v7, Lcom/tencent/mm/n/a$a;->title:Ljava/lang/String;
+    iget-object v7, v7, Lcom/tencent/mm/p/a$a;->title:Ljava/lang/String;
 
     aput-object v7, v2, v3
 
@@ -1560,11 +1581,11 @@
     :cond_17
     const-string/jumbo v1, "[%s: %s-%s]"
 
-    new-array v2, v12, [Ljava/lang/Object;
+    new-array v2, v13, [Ljava/lang/Object;
 
     iget-object v8, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
 
-    const v9, 0x7f0b0254
+    const v9, 0x7f0805d7
 
     invoke-virtual {v8, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1572,13 +1593,13 @@
 
     aput-object v8, v2, v4
 
-    iget-object v8, v7, Lcom/tencent/mm/n/a$a;->title:Ljava/lang/String;
+    iget-object v8, v7, Lcom/tencent/mm/p/a$a;->title:Ljava/lang/String;
 
     aput-object v8, v2, v3
 
-    iget-object v7, v7, Lcom/tencent/mm/n/a$a;->description:Ljava/lang/String;
+    iget-object v7, v7, Lcom/tencent/mm/p/a$a;->description:Ljava/lang/String;
 
-    aput-object v7, v2, v11
+    aput-object v7, v2, v12
 
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1593,7 +1614,7 @@
 
     iget-object v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
 
-    const v8, 0x7f0b0252
+    const v8, 0x7f0805d4
 
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1608,9 +1629,9 @@
     goto/16 :goto_4
 
     :pswitch_3
-    iget-object v1, v7, Lcom/tencent/mm/n/a$a;->description:Ljava/lang/String;
+    iget-object v1, v7, Lcom/tencent/mm/p/a$a;->description:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -1618,11 +1639,11 @@
 
     const-string/jumbo v1, "[%s: %s]"
 
-    new-array v2, v11, [Ljava/lang/Object;
+    new-array v2, v12, [Ljava/lang/Object;
 
     iget-object v8, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
 
-    const v9, 0x7f0b0255
+    const v9, 0x7f0805d5
 
     invoke-virtual {v8, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1630,7 +1651,7 @@
 
     aput-object v8, v2, v4
 
-    iget-object v7, v7, Lcom/tencent/mm/n/a$a;->title:Ljava/lang/String;
+    iget-object v7, v7, Lcom/tencent/mm/p/a$a;->title:Ljava/lang/String;
 
     aput-object v7, v2, v3
 
@@ -1643,11 +1664,11 @@
     :cond_18
     const-string/jumbo v1, "[%s: %s-%s(%s)]"
 
-    new-array v2, v13, [Ljava/lang/Object;
+    new-array v2, v14, [Ljava/lang/Object;
 
     iget-object v8, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
 
-    const v9, 0x7f0b0255
+    const v9, 0x7f0805d5
 
     invoke-virtual {v8, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1655,23 +1676,23 @@
 
     aput-object v8, v2, v4
 
-    iget-object v8, v7, Lcom/tencent/mm/n/a$a;->title:Ljava/lang/String;
+    iget-object v8, v7, Lcom/tencent/mm/p/a$a;->title:Ljava/lang/String;
 
     aput-object v8, v2, v3
 
-    iget-object v7, v7, Lcom/tencent/mm/n/a$a;->description:Ljava/lang/String;
+    iget-object v7, v7, Lcom/tencent/mm/p/a$a;->description:Ljava/lang/String;
 
-    aput-object v7, v2, v11
+    aput-object v7, v2, v12
 
     iget-object v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
 
-    const v8, 0x7f0b0256
+    const v8, 0x7f0805d2
 
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    aput-object v7, v2, v12
+    aput-object v7, v2, v13
 
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1680,11 +1701,11 @@
     goto/16 :goto_4
 
     :pswitch_4
-    invoke-static {v0, v7}, Lcom/tencent/mm/ui/chatting/de;->a(Lcom/tencent/mm/storage/ag;Lcom/tencent/mm/n/a$a;)Ljava/lang/String;
+    invoke-static {v0, v7}, Lcom/tencent/mm/ui/chatting/df;->a(Lcom/tencent/mm/storage/ai;Lcom/tencent/mm/p/a$a;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v7
 
@@ -1704,29 +1725,29 @@
 
     move-result-object v2
 
-    sget-object v7, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->ldj:Ljava/lang/String;
+    sget-object v7, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->lDA:Ljava/lang/String;
 
-    new-array v8, v13, [Ljava/lang/Object;
+    new-array v8, v14, [Ljava/lang/Object;
 
-    iget-wide v9, v0, Lcom/tencent/mm/d/b/bg;->field_msgId:J
+    iget-wide v10, v0, Lcom/tencent/mm/e/b/bj;->field_msgId:J
 
-    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v9
 
     aput-object v9, v8, v4
 
-    iget-wide v9, v0, Lcom/tencent/mm/d/b/bg;->field_msgSvrId:J
+    iget-wide v10, v0, Lcom/tencent/mm/e/b/bj;->field_msgSvrId:J
 
-    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v9
 
     aput-object v9, v8, v3
 
-    aput-object v2, v8, v11
+    aput-object v2, v8, v12
 
-    aput-object v1, v8, v12
+    aput-object v1, v8, v13
 
     invoke-static {v7, v8}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1735,24 +1756,24 @@
     goto/16 :goto_4
 
     :pswitch_5
-    invoke-static {v8}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v8}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_19
 
-    iget-object v1, v7, Lcom/tencent/mm/n/a$a;->title:Ljava/lang/String;
+    iget-object v1, v7, Lcom/tencent/mm/p/a$a;->title:Ljava/lang/String;
 
     goto/16 :goto_4
 
     :cond_19
     const-string/jumbo v1, "[%s: %s]"
 
-    new-array v2, v11, [Ljava/lang/Object;
+    new-array v2, v12, [Ljava/lang/Object;
 
     aput-object v8, v2, v4
 
-    iget-object v7, v7, Lcom/tencent/mm/n/a$a;->title:Ljava/lang/String;
+    iget-object v7, v7, Lcom/tencent/mm/p/a$a;->title:Ljava/lang/String;
 
     aput-object v7, v2, v3
 
@@ -1765,13 +1786,13 @@
     :pswitch_6
     const-string/jumbo v1, "[%s: %s]"
 
-    new-array v2, v11, [Ljava/lang/Object;
+    new-array v2, v12, [Ljava/lang/Object;
 
-    iget-object v8, v7, Lcom/tencent/mm/n/a$a;->title:Ljava/lang/String;
+    iget-object v8, v7, Lcom/tencent/mm/p/a$a;->title:Ljava/lang/String;
 
     aput-object v8, v2, v4
 
-    iget-object v7, v7, Lcom/tencent/mm/n/a$a;->url:Ljava/lang/String;
+    iget-object v7, v7, Lcom/tencent/mm/p/a$a;->url:Ljava/lang/String;
 
     aput-object v7, v2, v3
 
@@ -1782,35 +1803,35 @@
     goto/16 :goto_4
 
     :cond_1a
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ag;->aXd()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ai;->bcy()Z
 
     move-result v2
 
     if-eqz v2, :cond_1b
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rs()Lcom/tencent/mm/storage/ah;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/aj;
 
     move-result-object v1
 
-    iget-object v2, v0, Lcom/tencent/mm/d/b/bg;->field_content:Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/e/b/bj;->field_content:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/ah;->Fj(Ljava/lang/String;)Lcom/tencent/mm/storage/ag$b;
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/aj;->HA(Ljava/lang/String;)Lcom/tencent/mm/storage/ai$b;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/tencent/mm/storage/ag$b;->bNn:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/storage/ai$b;->bGH:Ljava/lang/String;
 
     const-string/jumbo v2, "[%s: %s]"
 
-    new-array v7, v11, [Ljava/lang/Object;
+    new-array v7, v12, [Ljava/lang/Object;
 
     iget-object v8, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
 
-    const v9, 0x7f0b024f
+    const v9, 0x7f0805d3
 
     invoke-virtual {v8, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1827,7 +1848,7 @@
     goto/16 :goto_4
 
     :cond_1b
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ag;->aXg()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ai;->bcB()Z
 
     move-result v2
 
@@ -1835,11 +1856,11 @@
 
     const-string/jumbo v1, "[%s: %s(%s)]"
 
-    new-array v2, v12, [Ljava/lang/Object;
+    new-array v2, v13, [Ljava/lang/Object;
 
     iget-object v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
 
-    const v8, 0x7f0b0250
+    const v8, 0x7f0805da
 
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1849,11 +1870,11 @@
 
     new-instance v7, Ljava/io/File;
 
-    invoke-static {}, Lcom/tencent/mm/an/j;->Ea()Lcom/tencent/mm/an/n;
+    invoke-static {}, Lcom/tencent/mm/aq/n;->Es()Lcom/tencent/mm/aq/r;
 
-    iget-object v8, v0, Lcom/tencent/mm/d/b/bg;->field_imgPath:Ljava/lang/String;
+    iget-object v8, v0, Lcom/tencent/mm/e/b/bj;->field_imgPath:Ljava/lang/String;
 
-    invoke-static {v8}, Lcom/tencent/mm/an/n;->jL(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v8}, Lcom/tencent/mm/aq/r;->kp(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1867,13 +1888,13 @@
 
     iget-object v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
 
-    const v8, 0x7f0b0256
+    const v8, 0x7f0805d2
 
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    aput-object v7, v2, v11
+    aput-object v7, v2, v12
 
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1882,13 +1903,13 @@
     goto/16 :goto_4
 
     :cond_1c
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ag;->aXi()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ai;->bcD()Z
 
     move-result v2
 
     if-nez v2, :cond_1d
 
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ag;->aXj()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ai;->bcE()Z
 
     move-result v2
 
@@ -1901,7 +1922,7 @@
 
     iget-object v7, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter;->context:Landroid/content/Context;
 
-    const v8, 0x7f0b0252
+    const v8, 0x7f0805d4
 
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

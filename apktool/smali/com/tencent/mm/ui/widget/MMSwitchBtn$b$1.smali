@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic lFL:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
+.field final synthetic mgY:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
 
-.field final synthetic lFM:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
+.field final synthetic mgZ:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 196
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b$1;->lFM:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
+    iput-object p1, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b$1;->mgZ:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b$1;->lFL:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
+    iput-object p2, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b$1;->mgY:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,15 +49,15 @@
     const/4 v0, 0x1
 
     .line 213
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b$1;->lFM:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b$1;->mgZ:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->lFK:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
+    iget-object v2, v2, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->mgX:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/widget/MMSwitchBtn;->a(Lcom/tencent/mm/ui/widget/MMSwitchBtn;)Z
 
     move-result v3
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b$1;->lFM:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b$1;->mgZ:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
 
     iget v2, v2, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->direction:I
 
@@ -69,11 +69,11 @@
     if-eq v3, v2, :cond_0
 
     .line 214
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b$1;->lFM:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b$1;->mgZ:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->lFK:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
+    iget-object v2, v2, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->mgX:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b$1;->lFM:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
+    iget-object v3, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b$1;->mgZ:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
 
     iget v3, v3, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->direction:I
 
@@ -83,9 +83,9 @@
     invoke-static {v2, v0}, Lcom/tencent/mm/ui/widget/MMSwitchBtn;->a(Lcom/tencent/mm/ui/widget/MMSwitchBtn;Z)Z
 
     .line 215
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b$1;->lFM:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b$1;->mgZ:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->lFK:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
+    iget-object v0, v0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->mgX:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
 
     new-instance v1, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b$1$1;
 
@@ -95,9 +95,9 @@
 
     .line 225
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b$1;->lFM:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b$1;->mgZ:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->lFK:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
+    iget-object v0, v0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->mgX:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/widget/MMSwitchBtn;->c(Lcom/tencent/mm/ui/widget/MMSwitchBtn;)Z
 

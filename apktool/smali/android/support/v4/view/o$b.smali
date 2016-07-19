@@ -1,5 +1,5 @@
-.class final Landroid/support/v4/view/o$b;
-.super Landroid/support/v4/view/o$a;
+.class interface abstract Landroid/support/v4/view/o$b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
@@ -9,18 +9,11 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x608
     name = "b"
 .end annotation
 
 
-# direct methods
-.method constructor <init>()V
-    .locals 0
-
-    .prologue
-    .line 55
-    invoke-direct {p0}, Landroid/support/v4/view/o$a;-><init>()V
-
-    return-void
+# virtual methods
+.method public abstract a(Landroid/view/ViewGroup;Z)V
 .end method

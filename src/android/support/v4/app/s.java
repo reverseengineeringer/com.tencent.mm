@@ -7,9 +7,9 @@ final class s
 {
   public static abstract class a
   {
-    protected abstract PendingIntent X();
+    protected abstract PendingIntent W();
     
-    protected abstract y.a[] Y();
+    protected abstract y.a[] X();
     
     protected abstract Bundle getExtras();
     
@@ -22,7 +22,7 @@ final class s
   
   public static abstract class b
   {
-    abstract y.a Z();
+    abstract y.a Y();
     
     abstract long getLatestTimestamp();
     

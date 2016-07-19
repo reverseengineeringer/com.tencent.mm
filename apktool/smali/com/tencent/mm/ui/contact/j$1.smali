@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lkn:Lcom/tencent/mm/ui/contact/j;
+.field final synthetic lKy:Lcom/tencent/mm/ui/contact/j;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 45
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/j$1;->lkn:Lcom/tencent/mm/ui/contact/j;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/j$1;->lKy:Lcom/tencent/mm/ui/contact/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -55,7 +55,7 @@
     .line 51
     const-string/jumbo v1, "enterprise_biz_name"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/j$1;->lkn:Lcom/tencent/mm/ui/contact/j;
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/j$1;->lKy:Lcom/tencent/mm/ui/contact/j;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/contact/j;->a(Lcom/tencent/mm/ui/contact/j;)Ljava/lang/String;
 
@@ -70,9 +70,9 @@
 
     const-string/jumbo v2, "brandservice"
 
-    const-string/jumbo v3, ".ui.EnterpriseNewBizListUI"
+    const-string/jumbo v3, ".ui.EnterpriseBizContactListUI"
 
-    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     .line 53
     return-void

@@ -8,7 +8,7 @@ import android.os.Build.VERSION;
 import android.text.TextUtils;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
 import com.tencent.mm.storage.h;
 import java.net.URLEncoder;
 import java.util.List;
@@ -16,14 +16,7 @@ import org.apache.http.NameValuePair;
 
 public final class n
 {
-  public static boolean aM(Context paramContext)
-  {
-    Intent localIntent1 = new Intent("com.google.android.gms.common.account.CHOOSE_ACCOUNT");
-    Intent localIntent2 = new Intent("com.tencent.mm.gms.ACTION_CHOOSE_ACCOUNT");
-    return (paramContext.getPackageManager().resolveActivity(localIntent2, 0) != null) && (paramContext.getPackageManager().resolveActivity(localIntent1, 0) != null) && (Build.VERSION.SDK_INT >= 8) && (!paramContext.getSharedPreferences(y.aUK(), 0).getBoolean("googleauth", false));
-  }
-  
-  public static String w(List paramList)
+  public static String B(List<NameValuePair> paramList)
   {
     StringBuilder localStringBuilder = new StringBuilder();
     int j = paramList.size();
@@ -47,9 +40,16 @@ public final class n
     return localStringBuilder.toString();
   }
   
-  public static boolean yL()
+  public static boolean aJ(Context paramContext)
   {
-    return !TextUtils.isEmpty((String)ah.tD().rn().get(208903, null));
+    Intent localIntent1 = new Intent("com.google.android.gms.common.account.CHOOSE_ACCOUNT");
+    Intent localIntent2 = new Intent("com.tencent.mm.gms.ACTION_CHOOSE_ACCOUNT");
+    return (paramContext.getPackageManager().resolveActivity(localIntent2, 0) != null) && (paramContext.getPackageManager().resolveActivity(localIntent1, 0) != null) && (Build.VERSION.SDK_INT >= 8) && (!paramContext.getSharedPreferences(aa.aZO(), 0).getBoolean("googleauth", false));
+  }
+  
+  public static boolean yY()
+  {
+    return !TextUtils.isEmpty((String)ah.tE().ro().get(208903, null));
   }
 }
 

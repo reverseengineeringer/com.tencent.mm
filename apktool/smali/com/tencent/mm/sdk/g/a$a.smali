@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public jUV:Ljava/lang/String;
+.field public kuB:Ljava/lang/String;
 
-.field public jUW:I
+.field public kuC:I
 
 
 # direct methods
@@ -31,7 +31,7 @@
     .line 164
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/sdk/g/a$a;->jUW:I
+    iput v0, p0, Lcom/tencent/mm/sdk/g/a$a;->kuC:I
 
     .line 166
     return-void
@@ -39,29 +39,29 @@
 
 
 # virtual methods
-.method public final m(Landroid/os/Bundle;)V
+.method public final o(Landroid/os/Bundle;)V
     .locals 2
 
     .prologue
     .line 174
     const-string/jumbo v0, "_wxapi_payoptions_callback_classname"
 
-    invoke-static {p1, v0}, Lcom/tencent/mm/sdk/platformtools/p;->c(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lcom/tencent/mm/sdk/platformtools/q;->c(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/g/a$a;->jUV:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/g/a$a;->kuB:Ljava/lang/String;
 
     .line 175
     const-string/jumbo v0, "_wxapi_payoptions_callback_flags"
 
     const/4 v1, -0x1
 
-    invoke-static {p1, v0, v1}, Lcom/tencent/mm/sdk/platformtools/p;->a(Landroid/os/Bundle;Ljava/lang/String;I)I
+    invoke-static {p1, v0, v1}, Lcom/tencent/mm/sdk/platformtools/q;->a(Landroid/os/Bundle;Ljava/lang/String;I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/sdk/g/a$a;->jUW:I
+    iput v0, p0, Lcom/tencent/mm/sdk/g/a$a;->kuC:I
 
     .line 176
     return-void

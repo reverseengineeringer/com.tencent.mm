@@ -16,9 +16,19 @@
     name = "c"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroid/support/v7/internal/view/menu/d",
+        "<",
+        "Landroid/support/v4/view/g$e;",
+        ">;",
+        "Landroid/view/MenuItem$OnActionExpandListener;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic mA:Landroid/support/v7/internal/view/menu/i;
+.field final synthetic mQ:Landroid/support/v7/internal/view/menu/i;
 
 
 # direct methods
@@ -27,7 +37,7 @@
 
     .prologue
     .line 358
-    iput-object p1, p0, Landroid/support/v7/internal/view/menu/i$c;->mA:Landroid/support/v7/internal/view/menu/i;
+    iput-object p1, p0, Landroid/support/v7/internal/view/menu/i$c;->mQ:Landroid/support/v7/internal/view/menu/i;
 
     .line 359
     invoke-direct {p0, p2}, Landroid/support/v7/internal/view/menu/d;-><init>(Ljava/lang/Object;)V
@@ -43,15 +53,15 @@
 
     .prologue
     .line 369
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/i$c;->lr:Ljava/lang/Object;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/i$c;->lI:Ljava/lang/Object;
 
     check-cast v0, Landroid/support/v4/view/g$e;
 
-    iget-object v1, p0, Landroid/support/v7/internal/view/menu/i$c;->mA:Landroid/support/v7/internal/view/menu/i;
+    iget-object v1, p0, Landroid/support/v7/internal/view/menu/i$c;->mQ:Landroid/support/v7/internal/view/menu/i;
 
     invoke-virtual {v1, p1}, Landroid/support/v7/internal/view/menu/i;->f(Landroid/view/MenuItem;)Landroid/support/v4/a/a/b;
 
-    invoke-interface {v0}, Landroid/support/v4/view/g$e;->ag()Z
+    invoke-interface {v0}, Landroid/support/v4/view/g$e;->ae()Z
 
     move-result v0
 
@@ -63,15 +73,15 @@
 
     .prologue
     .line 364
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/i$c;->lr:Ljava/lang/Object;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/i$c;->lI:Ljava/lang/Object;
 
     check-cast v0, Landroid/support/v4/view/g$e;
 
-    iget-object v1, p0, Landroid/support/v7/internal/view/menu/i$c;->mA:Landroid/support/v7/internal/view/menu/i;
+    iget-object v1, p0, Landroid/support/v7/internal/view/menu/i$c;->mQ:Landroid/support/v7/internal/view/menu/i;
 
     invoke-virtual {v1, p1}, Landroid/support/v7/internal/view/menu/i;->f(Landroid/view/MenuItem;)Landroid/support/v4/a/a/b;
 
-    invoke-interface {v0}, Landroid/support/v4/view/g$e;->af()Z
+    invoke-interface {v0}, Landroid/support/v4/view/g$e;->ad()Z
 
     move-result v0
 

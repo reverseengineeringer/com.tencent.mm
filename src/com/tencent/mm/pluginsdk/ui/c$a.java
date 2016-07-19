@@ -5,52 +5,52 @@ import android.graphics.Bitmap;
 public final class c$a
   implements h.a
 {
-  public Bitmap cNy = null;
-  private h.a fzj;
+  public Bitmap cKz = null;
+  private h.a fIn;
   
   public c$a(h.a parama)
   {
-    fzj = parama;
+    fIn = parama;
   }
   
   public final Bitmap a(String paramString, int paramInt1, int paramInt2, int paramInt3)
   {
-    if (fzj != null) {
-      return fzj.a(paramString, paramInt1, paramInt2, paramInt3);
+    if (fIn != null) {
+      return fIn.a(paramString, paramInt1, paramInt2, paramInt3);
     }
     return null;
   }
   
   public final void a(h paramh)
   {
-    if (fzj != null) {
-      fzj.a(paramh);
+    if (fIn != null) {
+      fIn.a(paramh);
     }
   }
   
-  public final Bitmap aL(String paramString)
+  public final Bitmap aQ(String paramString)
   {
-    if (fzj != null) {
-      return fzj.aL(paramString);
+    if (fIn != null) {
+      return fIn.aQ(paramString);
     }
     return null;
   }
   
-  public final Bitmap aM(String paramString)
+  public final Bitmap aR(String paramString)
   {
-    if (fzj != null) {
-      return fzj.aM(paramString);
+    if (fIn != null) {
+      return fIn.aR(paramString);
     }
     return null;
   }
   
-  public final Bitmap kp()
+  public final Bitmap iS()
   {
-    if ((cNy != null) && (!cNy.isRecycled())) {
-      return cNy;
+    if ((cKz != null) && (!cKz.isRecycled())) {
+      return cKz;
     }
-    if (fzj != null) {
-      return fzj.kp();
+    if (fIn != null) {
+      return fIn.iS();
     }
     return null;
   }

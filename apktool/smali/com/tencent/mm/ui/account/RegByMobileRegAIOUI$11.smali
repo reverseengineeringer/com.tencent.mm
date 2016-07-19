@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+.field final synthetic kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 822
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$11;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 823
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$11;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,14 +40,14 @@
     .locals 3
 
     .prologue
-    .line 826
+    .line 827
     const/4 v0, 0x0
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->ty()Ljava/lang/String;
 
     move-result-object v2
 
@@ -61,7 +61,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$11;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$11;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -83,7 +83,7 @@
 
     const-string/jumbo v2, "RE200_200"
 
-    invoke-static {v2}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/tencent/mm/model/ah;->fq(Ljava/lang/String;)I
 
     move-result v2
 
@@ -103,11 +103,11 @@
 
     invoke-static {v0, v1}, Lcom/tencent/mm/plugin/a/b;->b(ZLjava/lang/String;)V
 
-    .line 828
+    .line 829
     const-string/jumbo v0, "RE200_100"
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kC(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->ll(Ljava/lang/String;)V
 
-    .line 829
+    .line 830
     return-void
 .end method

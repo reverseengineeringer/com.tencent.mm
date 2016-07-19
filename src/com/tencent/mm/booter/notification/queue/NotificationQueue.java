@@ -6,47 +6,47 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
 import com.tencent.mm.booter.notification.NotificationItem;
-import com.tencent.mm.g.g;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.h.g;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.Iterator;
 import java.util.LinkedList;
 
 public final class NotificationQueue
 {
-  public ParcelNotificationQueue bof;
+  public ParcelNotificationQueue bcd;
   
   private void save()
   {
-    if (bof == null) {}
+    if (bcd == null) {}
     do
     {
       return;
-      u.d("!56@/B4Tb64lLpKR3MWtFvfaIHuH+HeZXdznaJLAz8pn/3qwN9XZWiBzgg==", "jacks save: %d", new Object[] { Integer.valueOf(bof.size()) });
-    } while (!bof.isEmpty());
-    g.pf().edit().putString("com.tencent.preference.notification.queue", "").commit();
-    if (bof == null) {
+      v.d("MicroMsg.NotificationCustomQueue", "jacks save: %d", new Object[] { Integer.valueOf(bcd.size()) });
+    } while (!bcd.isEmpty());
+    g.nx().edit().putString("com.tencent.preference.notification.queue", "").commit();
+    if (bcd == null) {
       restore();
     }
-    u.d("!56@/B4Tb64lLpKR3MWtFvfaIHuH+HeZXdznaJLAz8pn/3qwN9XZWiBzgg==", "jacks _reset: %d", new Object[] { Integer.valueOf(bof.size()) });
+    v.d("MicroMsg.NotificationCustomQueue", "jacks _reset: %d", new Object[] { Integer.valueOf(bcd.size()) });
   }
   
-  public final NotificationItem bG(int paramInt)
+  public final NotificationItem bY(int paramInt)
   {
     for (;;)
     {
       try
       {
-        if (bof == null) {
+        if (bcd == null) {
           restore();
         }
-        Iterator localIterator = bof.iterator();
+        Iterator localIterator = bcd.iterator();
         if (localIterator.hasNext())
         {
           NotificationItem localNotificationItem = (NotificationItem)localIterator.next();
           if (id != paramInt) {
             continue;
           }
-          if ((localNotificationItem != null) && (bof.remove(localNotificationItem))) {
+          if ((localNotificationItem != null) && (bcd.remove(localNotificationItem))) {
             save();
           }
           return localNotificationItem;
@@ -61,10 +61,10 @@ public final class NotificationQueue
   {
     try
     {
-      if (bof == null) {
+      if (bcd == null) {
         restore();
       }
-      boolean bool = bof.remove(paramNotificationItem);
+      boolean bool = bcd.remove(paramNotificationItem);
       if (bool) {
         save();
       }
@@ -77,10 +77,10 @@ public final class NotificationQueue
   {
     try
     {
-      if (bof == null) {
+      if (bcd == null) {
         restore();
       }
-      boolean bool = bof.add(paramNotificationItem);
+      boolean bool = bcd.add(paramNotificationItem);
       if (bool) {
         save();
       }
@@ -93,21 +93,21 @@ public final class NotificationQueue
   {
     try
     {
-      u.d("!56@/B4Tb64lLpKR3MWtFvfaIHuH+HeZXdznaJLAz8pn/3qwN9XZWiBzgg==", "jacks _restore");
-      if (bof == null) {
-        bof = new ParcelNotificationQueue();
+      v.d("MicroMsg.NotificationCustomQueue", "jacks _restore");
+      if (bcd == null) {
+        bcd = new ParcelNotificationQueue();
       }
-      u.d("!56@/B4Tb64lLpKR3MWtFvfaIHuH+HeZXdznaJLAz8pn/3qwN9XZWiBzgg==", "jacks _restore: %d", new Object[] { Integer.valueOf(bof.size()) });
+      v.d("MicroMsg.NotificationCustomQueue", "jacks _restore: %d", new Object[] { Integer.valueOf(bcd.size()) });
       return;
     }
     finally {}
   }
   
   public static class ParcelNotificationQueue
-    extends LinkedList
+    extends LinkedList<NotificationItem>
     implements Parcelable
   {
-    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+    public static final Parcelable.Creator<ParcelNotificationQueue> CREATOR = new Parcelable.Creator() {};
     
     public int describeContents()
     {

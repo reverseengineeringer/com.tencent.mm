@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="@dimen/i7" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/acx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ha" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/af0" android:paddingLeft="@dimen/i7" android:paddingTop="@dimen/i7" android:paddingRight="@dimen/hj" android:paddingBottom="@dimen/i7" android:layout_width="96.0dip" android:layout_height="96.0dip" android:src="@drawable/icon" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/hj" android:paddingRight="@dimen/i7" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/cn" android:layout_gravity="left" android:id="@id/acr" android:paddingBottom="@dimen/j8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="{小崽子ss剧场}" style="@style/MMFontTitleInList" />
+            <TextView android:layout_gravity="left" android:id="@id/af1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="{小崽子ss剧场}" style="@style/MMFontTipInList" />
+        </LinearLayout>
+        <FrameLayout android:layout_gravity="center_vertical" android:paddingLeft="@dimen/i7" android:layout_width="wrap_content" android:layout_height="32.0dip">
+            <Button android:id="@id/af2" android:layout_width="wrap_content" android:layout_height="32.0dip" android:maxWidth="100.0dip" android:text="@string/ae_" style="@style/MMSolidGreenSmallButton" />
+            <ProgressBar android:layout_gravity="center_vertical" android:id="@id/acw" android:visibility="gone" android:layout_width="80.0dip" android:layout_height="wrap_content" style="@style/MMEmojiDownloadProgressHorizontal" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

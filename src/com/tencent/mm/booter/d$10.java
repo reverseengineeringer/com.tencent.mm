@@ -3,9 +3,7 @@ package com.tencent.mm.booter;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.util.SparseArray;
-import com.tencent.mm.model.v;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ah;
 import java.util.Iterator;
 import java.util.List;
 
@@ -16,53 +14,53 @@ final class d$10
   
   public final void onCompletion(MediaPlayer arg1)
   {
-    if (d.a(bmw) == null) {}
+    if (d.a(bac) == null) {}
     do
     {
       return;
-      u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "completed currentPoint: %d", new Object[] { Integer.valueOf(d.i(bmw)) });
-      d.a(bmw).release();
-      d.j(bmw);
-      if (d.k(bmw) == null)
+      com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "completed currentPoint: %d", new Object[] { Integer.valueOf(d.i(bac)) });
+      d.a(bac).release();
+      d.j(bac);
+      if (d.k(bac) == null)
       {
-        bmw.mL();
-        d.d(bmw).aUF();
+        bac.kY();
+        d.d(bac).aZJ();
       }
-      synchronized (d.b(bmw))
+      synchronized (d.b(bac))
       {
-        Iterator localIterator = d.c(bmw).iterator();
+        Iterator localIterator = d.c(bac).iterator();
         while (localIterator.hasNext())
         {
-          v localv = (v)localIterator.next();
-          if ((localv != null) && (d.k(bmw) == null))
+          com.tencent.mm.model.v localv = (com.tencent.mm.model.v)localIterator.next();
+          if ((localv != null) && (d.k(bac) == null))
           {
-            u.d("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "on finish call back: %s", new Object[] { localv.toString() });
+            com.tencent.mm.sdk.platformtools.v.d("MicroMsg.DownloadPlayer", "on finish call back: %s", new Object[] { localv.toString() });
             localv.onFinish();
           }
         }
       }
-      d.l(bmw);
-    } while ((!d.m(bmw)) || (d.k(bmw) != null));
-    u.d("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "NEXT MUSIC PLAY.");
-    ??? = bmw;
+      d.l(bac);
+    } while ((!d.m(bac)) || (d.k(bac) != null));
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.DownloadPlayer", "NEXT MUSIC PLAY.");
+    ??? = bac;
     currentIndex += 1;
-    if (bmv > 0)
+    if (bab > 0)
     {
-      if (currentIndex >= bmp.size()) {
+      if (currentIndex >= aZV.size()) {
         currentIndex = 0;
       }
-      if (currentIndex == bmv)
+      if (currentIndex == bab)
       {
-        bmv = -1;
+        bab = -1;
         return;
       }
     }
-    if (???.mF() == null)
+    if (???.kS() == null)
     {
       currentIndex -= 1;
       return;
     }
-    ???.mK();
+    ???.kX();
   }
 }
 

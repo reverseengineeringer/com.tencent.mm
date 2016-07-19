@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;
-.super Lcom/tencent/mm/sdk/platformtools/at;
+.super Lcom/tencent/mm/sdk/platformtools/az;
 .source "SourceFile"
 
 
@@ -13,17 +13,26 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/platformtools/az",
+        "<",
+        "Landroid/database/Cursor;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic cBj:Lcom/tencent/mm/plugin/base/stub/WXCommProvider;
+.field final synthetic cye:Lcom/tencent/mm/plugin/base/stub/WXCommProvider;
 
-.field final synthetic cBk:Landroid/net/Uri;
+.field final synthetic cyf:Landroid/net/Uri;
 
-.field final synthetic cBl:I
+.field final synthetic cyg:I
 
-.field final synthetic cBm:[Ljava/lang/String;
+.field final synthetic cyh:[Ljava/lang/String;
 
-.field final synthetic cBn:Landroid/database/MatrixCursor;
+.field final synthetic cyi:Landroid/database/MatrixCursor;
 
 
 # direct methods
@@ -31,22 +40,22 @@
     .locals 3
 
     .prologue
-    .line 416
-    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cBj:Lcom/tencent/mm/plugin/base/stub/WXCommProvider;
+    .line 458
+    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cye:Lcom/tencent/mm/plugin/base/stub/WXCommProvider;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cBk:Landroid/net/Uri;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cyf:Landroid/net/Uri;
 
-    iput p3, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cBl:I
+    iput p3, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cyg:I
 
-    iput-object p4, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cBm:[Ljava/lang/String;
+    iput-object p4, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cyh:[Ljava/lang/String;
 
-    iput-object p5, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cBn:Landroid/database/MatrixCursor;
+    iput-object p5, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cyi:Landroid/database/MatrixCursor;
 
     const-wide/16 v0, 0x7d0
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/at;-><init>(JLjava/lang/Object;)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/az;-><init>(JLjava/lang/Object;)V
 
     return-void
 .end method
@@ -63,14 +72,14 @@
 
     const/4 v1, 0x0
 
-    .line 416
-    const-string/jumbo v0, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    .line 458
+    const-string/jumbo v0, "MicroMsg.WXCommProvider"
 
     const-string/jumbo v2, "query, uri = %s, code = %d"
 
     new-array v3, v9, [Ljava/lang/Object;
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cBk:Landroid/net/Uri;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cyf:Landroid/net/Uri;
 
     invoke-virtual {v4}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -78,7 +87,7 @@
 
     aput-object v4, v3, v1
 
-    iget v4, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cBl:I
+    iget v4, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cyg:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -86,19 +95,19 @@
 
     aput-object v4, v3, v8
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget v0, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cBl:I
+    iget v0, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cyg:I
 
     if-eq v0, v8, :cond_0
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    const-string/jumbo v0, "MicroMsg.WXCommProvider"
 
     const-string/jumbo v2, "query fail, invalid code = %d"
 
     new-array v3, v8, [Ljava/lang/Object;
 
-    iget v4, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cBl:I
+    iget v4, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cyg:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -106,7 +115,7 @@
 
     aput-object v4, v3, v1
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 v0, 0x0
 
@@ -114,7 +123,7 @@
     return-object v0
 
     :cond_0
-    iget-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cBm:[Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cyh:[Ljava/lang/String;
 
     array-length v3, v2
 
@@ -125,7 +134,7 @@
 
     aget-object v4, v2, v0
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cBj:Lcom/tencent/mm/plugin/base/stub/WXCommProvider;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cye:Lcom/tencent/mm/plugin/base/stub/WXCommProvider;
 
     invoke-static {v5}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->a(Lcom/tencent/mm/plugin/base/stub/WXCommProvider;)Landroid/content/SharedPreferences;
 
@@ -137,7 +146,7 @@
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cBn:Landroid/database/MatrixCursor;
+    iget-object v6, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cyi:Landroid/database/MatrixCursor;
 
     new-array v7, v9, [Ljava/lang/String;
 
@@ -152,13 +161,13 @@
     goto :goto_1
 
     :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    const-string/jumbo v0, "MicroMsg.WXCommProvider"
 
     const-string/jumbo v2, "query size = %d"
 
     new-array v3, v8, [Ljava/lang/Object;
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cBn:Landroid/database/MatrixCursor;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cyi:Landroid/database/MatrixCursor;
 
     invoke-virtual {v4}, Landroid/database/MatrixCursor;->getCount()I
 
@@ -170,9 +179,9 @@
 
     aput-object v4, v3, v1
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cBn:Landroid/database/MatrixCursor;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->cyi:Landroid/database/MatrixCursor;
 
     goto :goto_0
 .end method

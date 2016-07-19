@@ -9,21 +9,21 @@ final class InviteFacebookFriendsUI$3
 {
   InviteFacebookFriendsUI$3(InviteFacebookFriendsUI paramInviteFacebookFriendsUI, TextView paramTextView) {}
   
-  public final void Gh()
+  public final void GE()
   {
-    if (h.sC())
+    if (h.sE())
     {
-      if (InviteFacebookFriendsUI.a(coP).getCount() == 0) {
-        coQ.setVisibility(0);
+      if (InviteFacebookFriendsUI.a(ckd).getCount() == 0) {
+        cke.setVisibility(0);
       }
     }
     else {
       return;
     }
-    coQ.setVisibility(8);
+    cke.setVisibility(8);
   }
   
-  public final void Gi() {}
+  public final void GF() {}
 }
 
 /* Location:

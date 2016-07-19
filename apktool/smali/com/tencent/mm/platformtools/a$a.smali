@@ -19,7 +19,7 @@
     .locals 2
 
     .prologue
-    .line 76
+    .line 75
     new-instance v0, Lcom/tencent/mm/platformtools/b;
 
     invoke-direct {v0}, Lcom/tencent/mm/platformtools/b;-><init>()V

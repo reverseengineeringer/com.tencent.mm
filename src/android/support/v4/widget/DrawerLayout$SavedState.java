@@ -8,15 +8,15 @@ import android.view.View.BaseSavedState;
 public class DrawerLayout$SavedState
   extends View.BaseSavedState
 {
-  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
-  int hA = 0;
-  int hy = 0;
-  int hz = 0;
+  public static final Parcelable.Creator<SavedState> CREATOR = new Parcelable.Creator() {};
+  int hR = 0;
+  int hS = 0;
+  int hT = 0;
   
   public DrawerLayout$SavedState(Parcel paramParcel)
   {
     super(paramParcel);
-    hy = paramParcel.readInt();
+    hR = paramParcel.readInt();
   }
   
   public DrawerLayout$SavedState(Parcelable paramParcelable)
@@ -27,7 +27,7 @@ public class DrawerLayout$SavedState
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
     super.writeToParcel(paramParcel, paramInt);
-    paramParcel.writeInt(hy);
+    paramParcel.writeInt(hR);
   }
 }
 

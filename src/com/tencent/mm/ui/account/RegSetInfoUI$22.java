@@ -13,12 +13,12 @@ final class RegSetInfoUI$22
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    b.kC("R200_100");
-    paramDialogInterface = new Intent(kwh, MobileInputUI.class);
+    b.ll("R200_100");
+    paramDialogInterface = new Intent(kVo, MobileInputUI.class);
     paramDialogInterface.putExtra("mobile_input_purpose", 2);
     paramDialogInterface.addFlags(67108864);
-    kwh.startActivity(paramDialogInterface);
-    kwh.finish();
+    kVo.startActivity(paramDialogInterface);
+    kVo.finish();
   }
 }
 

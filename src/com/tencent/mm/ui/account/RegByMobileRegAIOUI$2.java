@@ -10,7 +10,7 @@ final class RegByMobileRegAIOUI$2
   
   public final void afterTextChanged(Editable paramEditable)
   {
-    RegByMobileRegAIOUI.b(kuT);
+    RegByMobileRegAIOUI.b(kUa);
   }
   
   public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}

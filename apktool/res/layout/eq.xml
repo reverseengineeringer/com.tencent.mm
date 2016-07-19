@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/rx" layout="@layout/card_widget_ticket_body" />
+    <View android:id="@id/ry" android:background="@drawable/dw" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/cy" android:layout_marginRight="@dimen/cy" android:layout_marginBottom="0.0dip" android:layout_alignBottom="@id/rx" android:layerType="software" />
+    <include android:id="@id/x6" android:background="@drawable/afa" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="78.599976dip" android:layout_below="@id/rx" layout="@layout/card_secondary_field_layout" />
+    <include android:id="@id/x7" android:background="@drawable/afa" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="78.599976dip" android:layout_below="@id/rx" layout="@layout/card_secondary_field_single_layout" />
+    <include android:id="@id/u4" android:background="@drawable/afa" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="78.599976dip" android:layout_below="@id/rx" layout="@layout/card_widget_status_layout" />
+</RelativeLayout>

@@ -12,7 +12,7 @@ final class FindMContactIntroUI$2
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     paramDialogInterface.dismiss();
-    kOZ.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
+    lop.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
   }
 }
 

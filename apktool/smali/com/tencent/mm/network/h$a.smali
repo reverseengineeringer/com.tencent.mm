@@ -40,7 +40,7 @@
     return-void
 .end method
 
-.method public static Y(Landroid/os/IBinder;)Lcom/tencent/mm/network/h;
+.method public static A(Landroid/os/IBinder;)Lcom/tencent/mm/network/h;
     .locals 2
 
     .prologue
@@ -127,7 +127,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 48
-    invoke-virtual {p0}, Lcom/tencent/mm/network/h$a;->EM()I
+    invoke-virtual {p0}, Lcom/tencent/mm/network/h$a;->Fh()I
 
     move-result v0
 
@@ -150,7 +150,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/network/m$a;->aa(Landroid/os/IBinder;)Lcom/tencent/mm/network/m;
+    invoke-static {v2}, Lcom/tencent/mm/network/m$a;->C(Landroid/os/IBinder;)Lcom/tencent/mm/network/m;
 
     move-result-object v2
 
@@ -183,7 +183,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/network/m$a;->aa(Landroid/os/IBinder;)Lcom/tencent/mm/network/m;
+    invoke-static {v2}, Lcom/tencent/mm/network/m$a;->C(Landroid/os/IBinder;)Lcom/tencent/mm/network/m;
 
     move-result-object v2
 
@@ -212,7 +212,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 76
-    invoke-virtual {p0}, Lcom/tencent/mm/network/h$a;->EN()V
+    invoke-virtual {p0}, Lcom/tencent/mm/network/h$a;->Fi()V
 
     .line 77
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -226,7 +226,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 83
-    invoke-virtual {p0}, Lcom/tencent/mm/network/h$a;->EO()J
+    invoke-virtual {p0}, Lcom/tencent/mm/network/h$a;->Fj()J
 
     move-result-wide v2
 

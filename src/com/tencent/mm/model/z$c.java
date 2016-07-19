@@ -2,15 +2,15 @@ package com.tencent.mm.model;
 
 public abstract interface z$c
 {
-  public abstract void G(String paramString1, String paramString2);
+  public abstract void D(String paramString1, String paramString2);
   
   public abstract void a(String paramString1, String paramString2, a parama);
   
-  public abstract void eZ(String paramString);
+  public abstract void fl(String paramString);
   
   public static abstract interface a
   {
-    public abstract void f(String paramString, boolean paramBoolean);
+    public abstract void i(String paramString, boolean paramBoolean);
   }
 }
 

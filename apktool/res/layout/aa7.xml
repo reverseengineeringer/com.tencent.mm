@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/ow" android:paddingBottom="22.0dip" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:gravity="top" android:id="@id/cay" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/ow" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/b7u" android:paddingLeft="@dimen/n6" android:paddingTop="2.0dip" android:paddingRight="@dimen/n6" android:paddingBottom="@dimen/hf" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="60.0dip" android:textColor="@color/ak" android:id="@id/b7v" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/ak" android:id="@id/b7w" android:paddingBottom="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:text="@string/bcn" android:includeFontPadding="false" android:layout_toRightOf="@id/b7v" android:layout_alignBottom="@id/b7v" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/b7x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hb" android:layout_below="@id/b7v">
+                <ImageView android:id="@id/b7y" android:visibility="gone" android:layout_width="@dimen/hb" android:layout_height="@dimen/hb" android:layout_marginRight="@dimen/j_" android:src="@drawable/ajl" />
+                <TextView android:textSize="@dimen/jc" android:textColor="@color/hn" android:id="@id/b7z" android:paddingTop="1.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+            </LinearLayout>
+            <View android:visibility="gone" android:layout_marginTop="29.0dip" android:layout_below="@id/b7v" style="@style/LuckyMoneyDivider" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/b80" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="105.0dip">
+            <ImageView android:id="@id/b81" android:background="@drawable/ak0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+            <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/akf" android:scaleType="fitXY" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/b82" android:paddingLeft="@dimen/n6" android:paddingRight="@dimen/n6" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View style="@style/LuckyMoneyDivider" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <LinearLayout android:id="@id/b84" android:visibility="gone" style="@style/LuckyMoneyBusinessEntrance" />
+                <LinearLayout android:id="@id/b87" android:visibility="gone" style="@style/LuckyMoneyBusinessEntrance" />
+                <LinearLayout android:id="@id/b8_" android:visibility="gone" style="@style/LuckyMoneyBusinessEntrance" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

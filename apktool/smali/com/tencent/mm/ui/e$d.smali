@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract aZL()V
+.method public abstract bfj()V
 .end method

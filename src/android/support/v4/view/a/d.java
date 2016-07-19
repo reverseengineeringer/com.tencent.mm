@@ -5,36 +5,36 @@ import android.view.accessibility.AccessibilityRecord;
 
 public final class d
 {
-  public static final c gR = new e();
-  public final Object gS;
+  public static final c hm = new e();
+  public final Object hn;
   
   static
   {
     if (Build.VERSION.SDK_INT >= 16)
     {
-      gR = new d();
+      hm = new d();
       return;
     }
     if (Build.VERSION.SDK_INT >= 15)
     {
-      gR = new b();
+      hm = new b();
       return;
     }
     if (Build.VERSION.SDK_INT >= 14)
     {
-      gR = new a();
+      hm = new a();
       return;
     }
   }
   
   private d(Object paramObject)
   {
-    gS = paramObject;
+    hn = paramObject;
   }
   
-  public static d aw()
+  public static d av()
   {
-    return new d(gR.ax());
+    return new d(hm.aw());
   }
   
   public final boolean equals(Object paramObject)
@@ -52,27 +52,27 @@ public final class d
           return false;
         }
         paramObject = (d)paramObject;
-        if (gS != null) {
+        if (hn != null) {
           break;
         }
-      } while (gS == null);
+      } while (hn == null);
       return false;
-    } while (gS.equals(gS));
+    } while (hn.equals(hn));
     return false;
   }
   
   public final int hashCode()
   {
-    if (gS == null) {
+    if (hn == null) {
       return 0;
     }
-    return gS.hashCode();
+    return hn.hashCode();
   }
   
   static class a
     extends d.e
   {
-    public final Object ax()
+    public final Object aw()
     {
       return AccessibilityRecord.obtain();
     }
@@ -104,7 +104,7 @@ public final class d
   
   public static abstract interface c
   {
-    public abstract Object ax();
+    public abstract Object aw();
     
     public abstract void d(Object paramObject, int paramInt);
     
@@ -122,7 +122,7 @@ public final class d
   static class e
     implements d.c
   {
-    public Object ax()
+    public Object aw()
     {
       return null;
     }

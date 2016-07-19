@@ -1,24 +1,11 @@
 package ct;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.os.SystemClock;
-
-final class l
-  extends BroadcastReceiver
+public final class l
+  extends Exception
 {
-  l(k paramk) {}
-  
-  public final void onReceive(Context paramContext, Intent paramIntent)
+  public l(String paramString)
   {
-    if (SystemClock.elapsedRealtime() - k.a(a) > 5000L) {}
-    try
-    {
-      p.a().a(new k.b(a, paramContext));
-      return;
-    }
-    catch (Throwable paramContext) {}
+    super(paramString);
   }
 }
 

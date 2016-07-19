@@ -28,7 +28,7 @@
     return-object v0
 .end method
 
-.method public static k(Landroid/content/Context;Ljava/lang/String;)Ljava/security/PublicKey;
+.method public static l(Landroid/content/Context;Ljava/lang/String;)Ljava/security/PublicKey;
     .locals 3
 
     .prologue

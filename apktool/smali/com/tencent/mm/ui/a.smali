@@ -7,21 +7,21 @@
 
 
 # instance fields
-.field private kjf:Z
+.field private hpz:Landroid/os/Bundle;
 
-.field private kjg:Z
+.field private kJo:Z
 
-.field private kjh:Z
+.field private kJp:Z
 
-.field private kji:Z
+.field private kJq:Z
 
-.field protected kjj:Z
+.field private kJr:Z
 
-.field protected kjk:Z
+.field protected kJs:Z
 
-.field protected kjl:Z
+.field protected kJt:Z
 
-.field private kjm:Landroid/os/Bundle;
+.field protected kJu:Z
 
 
 # direct methods
@@ -35,71 +35,71 @@
     invoke-direct {p0}, Lcom/tencent/mm/ui/base/preference/i;-><init>()V
 
     .line 53
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/a;->kjj:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/a;->kJs:Z
 
     .line 54
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/a;->kjk:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/a;->kJt:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected abstract aZj()V
+.method protected abstract beA()V
 .end method
 
-.method protected abstract aZk()V
+.method protected abstract beB()V
 .end method
 
-.method protected abstract aZl()V
+.method protected abstract beC()V
 .end method
 
-.method protected abstract aZm()V
+.method protected abstract beD()V
 .end method
 
-.method protected abstract aZn()V
+.method protected abstract beE()V
 .end method
 
-.method protected abstract aZo()V
+.method protected abstract beF()V
 .end method
 
-.method public final aZs()V
+.method public final beJ()V
     .locals 1
 
     .prologue
     .line 100
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->aZq()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->beH()V
 
     .line 101
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/a;->kjh:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/a;->kJq:Z
 
     .line 102
     return-void
 .end method
 
-.method public final aZu()V
+.method public final beL()V
     .locals 1
 
     .prologue
     .line 152
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/a;->kjk:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/a;->kJt:Z
 
     .line 153
     return-void
 .end method
 
-.method public final aZv()V
+.method public final beM()V
     .locals 7
 
     .prologue
     const/4 v6, 0x0
 
     .line 133
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/a;->kjj:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/a;->kJs:Z
 
     if-nez v0, :cond_0
 
@@ -109,13 +109,13 @@
 
     .line 134
     :cond_0
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/a;->kjg:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/a;->kJp:Z
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->aZj()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->beA()V
 
-    iput-boolean v6, p0, Lcom/tencent/mm/ui/a;->kjg:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/ui/a;->kJp:Z
 
     .line 135
     :cond_1
@@ -125,22 +125,22 @@
     move-result-wide v0
 
     .line 136
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/a;->kjh:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/a;->kJq:Z
 
     if-eqz v2, :cond_2
 
     .line 137
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->aZr()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->beI()V
 
     .line 138
-    iput-boolean v6, p0, Lcom/tencent/mm/ui/a;->kjh:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/ui/a;->kJq:Z
 
     .line 140
     :cond_2
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->aZk()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->beB()V
 
     .line 141
-    const-string/jumbo v2, "!24@/B4Tb64lLpKk4tudMInS/w=="
+    const-string/jumbo v2, "MicroMsg.INIT"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -176,35 +176,35 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 142
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/a;->kji:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/a;->kJr:Z
 
     .line 143
-    iput-boolean v6, p0, Lcom/tencent/mm/ui/a;->kjj:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/ui/a;->kJs:Z
 
     goto :goto_0
 
     .line 134
     :cond_3
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/a;->kjf:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/a;->kJo:Z
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->aZo()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->beF()V
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->aZj()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->beA()V
 
-    const-string/jumbo v0, "!24@/B4Tb64lLpKk4tudMInS/w=="
+    const-string/jumbo v0, "MicroMsg.INIT"
 
     const-string/jumbo v1, "KEVIN tab onRecreate "
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-boolean v6, p0, Lcom/tencent/mm/ui/a;->kjf:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/ui/a;->kJo:Z
 
     goto :goto_1
 .end method
@@ -217,12 +217,12 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/base/preference/i;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 72
-    iput-object p1, p0, Lcom/tencent/mm/ui/a;->kjm:Landroid/os/Bundle;
+    iput-object p1, p0, Lcom/tencent/mm/ui/a;->hpz:Landroid/os/Bundle;
 
     .line 73
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/a;->kjg:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/a;->kJp:Z
 
     .line 75
     return-void
@@ -233,7 +233,7 @@
 
     .prologue
     .line 192
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->aZo()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->beF()V
 
     .line 193
     invoke-super {p0}, Lcom/tencent/mm/ui/base/preference/i;->onDestroy()V
@@ -272,7 +272,7 @@
     goto :goto_0
 .end method
 
-.method public onPause()V
+.method public final onPause()V
     .locals 7
 
     .prologue
@@ -284,18 +284,18 @@
     .line 173
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/a;->kjl:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/a;->kJu:Z
 
     .line 174
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/a;->kjl:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/a;->kJu:Z
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/a;->kji:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/a;->kJr:Z
 
     if-nez v0, :cond_1
 
-    iput-boolean v6, p0, Lcom/tencent/mm/ui/a;->kjl:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/ui/a;->kJu:Z
 
     .line 175
     :cond_0
@@ -308,9 +308,9 @@
 
     move-result-wide v0
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->aZm()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->beD()V
 
-    const-string/jumbo v2, "!24@/B4Tb64lLpKk4tudMInS/w=="
+    const-string/jumbo v2, "MicroMsg.INIT"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -346,16 +346,16 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-boolean v6, p0, Lcom/tencent/mm/ui/a;->kji:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/ui/a;->kJr:Z
 
-    iput-boolean v6, p0, Lcom/tencent/mm/ui/a;->kjl:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/ui/a;->kJu:Z
 
     goto :goto_0
 .end method
 
-.method public onResume()V
+.method public final onResume()V
     .locals 1
 
     .prologue
@@ -363,16 +363,16 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/base/preference/i;->onResume()V
 
     .line 91
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->aZt()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->beK()V
 
     .line 92
-    invoke-static {}, Lcom/tencent/mm/ui/LauncherUI;->bat()Lcom/tencent/mm/ui/LauncherUI;
+    invoke-static {}, Lcom/tencent/mm/ui/LauncherUI;->bfJ()Lcom/tencent/mm/ui/LauncherUI;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, v0, Lcom/tencent/mm/ui/LauncherUI;->klI:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/ui/LauncherUI;->kLj:Z
 
     if-nez v0, :cond_1
 
@@ -385,22 +385,22 @@
     :cond_1
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/a;->kjj:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/a;->kJs:Z
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/a;->kjk:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/a;->kJt:Z
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->aZv()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->beM()V
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/a;->kjk:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/a;->kJt:Z
 
     goto :goto_0
 .end method
 
-.method public onStart()V
+.method public final onStart()V
     .locals 1
 
     .prologue
@@ -408,14 +408,14 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/base/preference/i;->onStart()V
 
     .line 186
-    invoke-static {}, Lcom/tencent/mm/ui/LauncherUI;->bat()Lcom/tencent/mm/ui/LauncherUI;
+    invoke-static {}, Lcom/tencent/mm/ui/LauncherUI;->bfJ()Lcom/tencent/mm/ui/LauncherUI;
 
     move-result-object v0
 
     .line 187
     if-eqz v0, :cond_0
 
-    iget-boolean v0, v0, Lcom/tencent/mm/ui/LauncherUI;->klI:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/ui/LauncherUI;->kLj:Z
 
     if-nez v0, :cond_1
 
@@ -426,12 +426,12 @@
 
     .line 188
     :cond_1
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->aZl()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->beC()V
 
     goto :goto_0
 .end method
 
-.method public onStop()V
+.method public final onStop()V
     .locals 0
 
     .prologue
@@ -439,7 +439,7 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/base/preference/i;->onStop()V
 
     .line 180
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->aZn()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/a;->beE()V
 
     .line 181
     return-void

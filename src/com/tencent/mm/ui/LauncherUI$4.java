@@ -1,35 +1,14 @@
 package com.tencent.mm.ui;
 
-import android.view.View;
-import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.e.a.nr;
 import com.tencent.mm.sdk.c.c;
 
 final class LauncherUI$4
-  extends c
+  extends c<nr>
 {
   LauncherUI$4(LauncherUI paramLauncherUI)
   {
-    super(0);
-  }
-  
-  public final boolean a(b paramb)
-  {
-    if (LauncherUI.i(knl) != null) {
-      LauncherUI.i(knl).post(new Runnable()
-      {
-        public final void run()
-        {
-          LauncherUI.j(knl);
-        }
-        
-        public final String toString()
-        {
-          return super.toString() + "|updatePlusMenuNewTips";
-        }
-      });
-    }
-    knl.baj();
-    return false;
+    kum = nr.class.getName().hashCode();
   }
 }
 

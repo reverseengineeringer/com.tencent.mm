@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bzR:Lcom/tencent/mm/model/d;
+.field final synthetic bsU:Lcom/tencent/mm/model/d;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 115
-    iput-object p1, p0, Lcom/tencent/mm/model/d$b;->bzR:Lcom/tencent/mm/model/d;
+    iput-object p1, p0, Lcom/tencent/mm/model/d$b;->bsU:Lcom/tencent/mm/model/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final bT(I)V
+.method public final cl(I)V
     .locals 2
 
     .prologue
@@ -55,11 +55,11 @@
 
     .line 148
     :pswitch_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpKIvgnNzDIfLOmAua1hOQXldT/A4qy1crA="
+    const-string/jumbo v0, "MicroMsg.AudioHelperTool"
 
     const-string/jumbo v1, "jacks UNKNOW_AUDIOFOCUS_LOSS DEFAULT"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 151
     :cond_0
@@ -68,97 +68,97 @@
 
     .line 121
     :pswitch_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpKIvgnNzDIfLOmAua1hOQXldT/A4qy1crA="
+    const-string/jumbo v0, "MicroMsg.AudioHelperTool"
 
     const-string/jumbo v1, "jacks AUDIOFOCUS_GAIN"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 122
-    iget-object v0, p0, Lcom/tencent/mm/model/d$b;->bzR:Lcom/tencent/mm/model/d;
+    iget-object v0, p0, Lcom/tencent/mm/model/d$b;->bsU:Lcom/tencent/mm/model/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/model/d;->bzP:Lcom/tencent/mm/model/d$a;
+    iget-object v0, v0, Lcom/tencent/mm/model/d;->bsS:Lcom/tencent/mm/model/d$a;
 
     if-eqz v0, :cond_0
 
     .line 123
-    iget-object v0, p0, Lcom/tencent/mm/model/d$b;->bzR:Lcom/tencent/mm/model/d;
+    iget-object v0, p0, Lcom/tencent/mm/model/d$b;->bsU:Lcom/tencent/mm/model/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/model/d;->bzP:Lcom/tencent/mm/model/d$a;
+    iget-object v0, v0, Lcom/tencent/mm/model/d;->bsS:Lcom/tencent/mm/model/d$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/model/d$a;->mM()V
+    invoke-interface {v0}, Lcom/tencent/mm/model/d$a;->kZ()V
 
     goto :goto_0
 
     .line 128
     :pswitch_2
-    const-string/jumbo v0, "!44@/B4Tb64lLpKIvgnNzDIfLOmAua1hOQXldT/A4qy1crA="
+    const-string/jumbo v0, "MicroMsg.AudioHelperTool"
 
     const-string/jumbo v1, "jacks AUDIOFOCUS_LOSS"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 129
-    iget-object v0, p0, Lcom/tencent/mm/model/d$b;->bzR:Lcom/tencent/mm/model/d;
+    iget-object v0, p0, Lcom/tencent/mm/model/d$b;->bsU:Lcom/tencent/mm/model/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/model/d;->bzP:Lcom/tencent/mm/model/d$a;
+    iget-object v0, v0, Lcom/tencent/mm/model/d;->bsS:Lcom/tencent/mm/model/d$a;
 
     if-eqz v0, :cond_0
 
     .line 130
-    iget-object v0, p0, Lcom/tencent/mm/model/d$b;->bzR:Lcom/tencent/mm/model/d;
+    iget-object v0, p0, Lcom/tencent/mm/model/d$b;->bsU:Lcom/tencent/mm/model/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/model/d;->bzP:Lcom/tencent/mm/model/d$a;
+    iget-object v0, v0, Lcom/tencent/mm/model/d;->bsS:Lcom/tencent/mm/model/d$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/model/d$a;->mN()V
+    invoke-interface {v0}, Lcom/tencent/mm/model/d$a;->la()V
 
     goto :goto_0
 
     .line 135
     :pswitch_3
-    const-string/jumbo v0, "!44@/B4Tb64lLpKIvgnNzDIfLOmAua1hOQXldT/A4qy1crA="
+    const-string/jumbo v0, "MicroMsg.AudioHelperTool"
 
     const-string/jumbo v1, "jacks AUDIOFOCUS_LOSS_TRANSIENT"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 136
-    iget-object v0, p0, Lcom/tencent/mm/model/d$b;->bzR:Lcom/tencent/mm/model/d;
+    iget-object v0, p0, Lcom/tencent/mm/model/d$b;->bsU:Lcom/tencent/mm/model/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/model/d;->bzP:Lcom/tencent/mm/model/d$a;
+    iget-object v0, v0, Lcom/tencent/mm/model/d;->bsS:Lcom/tencent/mm/model/d$a;
 
     if-eqz v0, :cond_0
 
     .line 137
-    iget-object v0, p0, Lcom/tencent/mm/model/d$b;->bzR:Lcom/tencent/mm/model/d;
+    iget-object v0, p0, Lcom/tencent/mm/model/d$b;->bsU:Lcom/tencent/mm/model/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/model/d;->bzP:Lcom/tencent/mm/model/d$a;
+    iget-object v0, v0, Lcom/tencent/mm/model/d;->bsS:Lcom/tencent/mm/model/d$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/model/d$a;->mO()V
+    invoke-interface {v0}, Lcom/tencent/mm/model/d$a;->lb()V
 
     goto :goto_0
 
     .line 142
     :pswitch_4
-    const-string/jumbo v0, "!44@/B4Tb64lLpKIvgnNzDIfLOmAua1hOQXldT/A4qy1crA="
+    const-string/jumbo v0, "MicroMsg.AudioHelperTool"
 
     const-string/jumbo v1, "jacks AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 143
-    iget-object v0, p0, Lcom/tencent/mm/model/d$b;->bzR:Lcom/tencent/mm/model/d;
+    iget-object v0, p0, Lcom/tencent/mm/model/d$b;->bsU:Lcom/tencent/mm/model/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/model/d;->bzP:Lcom/tencent/mm/model/d$a;
+    iget-object v0, v0, Lcom/tencent/mm/model/d;->bsS:Lcom/tencent/mm/model/d$a;
 
     if-eqz v0, :cond_0
 
     .line 144
-    iget-object v0, p0, Lcom/tencent/mm/model/d$b;->bzR:Lcom/tencent/mm/model/d;
+    iget-object v0, p0, Lcom/tencent/mm/model/d$b;->bsU:Lcom/tencent/mm/model/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/model/d;->bzP:Lcom/tencent/mm/model/d$a;
+    iget-object v0, v0, Lcom/tencent/mm/model/d;->bsS:Lcom/tencent/mm/model/d$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/model/d$a;->mP()V
+    invoke-interface {v0}, Lcom/tencent/mm/model/d$a;->lc()V
 
     goto :goto_0
 

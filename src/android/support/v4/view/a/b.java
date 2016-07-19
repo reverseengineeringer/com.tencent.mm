@@ -6,39 +6,39 @@ import java.util.List;
 
 public final class b
 {
-  private static final a gM = new c();
-  public final Object gN;
+  private static final a hh = new c();
+  public final Object hi;
   
   static
   {
     if (Build.VERSION.SDK_INT >= 16)
     {
-      gM = new b();
+      hh = new b();
       return;
     }
   }
   
   public b()
   {
-    gN = gM.a(this);
+    hi = hh.a(this);
   }
   
   public b(Object paramObject)
   {
-    gN = paramObject;
+    hi = paramObject;
   }
   
-  public static a as()
+  public static a ar()
   {
     return null;
   }
   
-  public static boolean at()
+  public static boolean as()
   {
     return false;
   }
   
-  public static List au()
+  public static List<a> at()
   {
     return null;
   }
@@ -55,21 +55,21 @@ public final class b
     {
       new c.1(new c.a()
       {
-        public final boolean at()
+        public final boolean as()
         {
-          return b.at();
+          return b.as();
         }
         
-        public final List au()
+        public final List<Object> at()
         {
-          b.au();
+          b.at();
           new ArrayList();
           throw new NullPointerException();
         }
         
-        public final Object av()
+        public final Object au()
         {
-          b.as();
+          b.ar();
           return null;
         }
       });

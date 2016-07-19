@@ -4,6 +4,7 @@ import android.app.Notification;
 import android.app.Notification.Builder;
 import android.app.PendingIntent;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.widget.RemoteViews;
 
 final class p$l
@@ -11,49 +12,52 @@ final class p$l
 {
   public final Notification b(p.d paramd)
   {
-    Object localObject2 = mContext;
-    Notification localNotification = dg;
-    Object localObject1 = cH;
-    CharSequence localCharSequence1 = cI;
-    CharSequence localCharSequence2 = cN;
-    RemoteViews localRemoteViews = cL;
-    int i = cO;
-    PendingIntent localPendingIntent2 = cJ;
-    PendingIntent localPendingIntent1 = cK;
-    paramd = cM;
-    localObject2 = new Notification.Builder((Context)localObject2).setWhen(when).setSmallIcon(icon, iconLevel).setContent(contentView).setTicker(tickerText, localRemoteViews).setSound(sound, audioStreamType).setVibrate(vibrate).setLights(ledARGB, ledOnMS, ledOffMS);
+    Context localContext = mContext;
+    Notification localNotification = dw;
+    CharSequence localCharSequence1 = cX;
+    CharSequence localCharSequence2 = cY;
+    CharSequence localCharSequence3 = dd;
+    RemoteViews localRemoteViews = db;
+    int i = de;
+    PendingIntent localPendingIntent2 = cZ;
+    PendingIntent localPendingIntent1 = da;
+    Bitmap localBitmap = dc;
+    int j = dk;
+    int k = dl;
+    boolean bool2 = dm;
+    paramd = new Notification.Builder(localContext).setWhen(when).setSmallIcon(icon, iconLevel).setContent(contentView).setTicker(tickerText, localRemoteViews).setSound(sound, audioStreamType).setVibrate(vibrate).setLights(ledARGB, ledOnMS, ledOffMS);
     if ((flags & 0x2) != 0)
     {
-      bool = true;
-      localObject2 = ((Notification.Builder)localObject2).setOngoing(bool);
+      bool1 = true;
+      paramd = paramd.setOngoing(bool1);
       if ((flags & 0x8) == 0) {
-        break label284;
+        break label312;
       }
-      bool = true;
-      label180:
-      localObject2 = ((Notification.Builder)localObject2).setOnlyAlertOnce(bool);
+      bool1 = true;
+      label198:
+      paramd = paramd.setOnlyAlertOnce(bool1);
       if ((flags & 0x10) == 0) {
-        break label289;
+        break label318;
       }
-      bool = true;
-      label201:
-      localObject1 = ((Notification.Builder)localObject2).setAutoCancel(bool).setDefaults(defaults).setContentTitle((CharSequence)localObject1).setContentText(localCharSequence1).setContentInfo(localCharSequence2).setContentIntent(localPendingIntent2).setDeleteIntent(deleteIntent);
+      bool1 = true;
+      label219:
+      paramd = paramd.setAutoCancel(bool1).setDefaults(defaults).setContentTitle(localCharSequence1).setContentText(localCharSequence2).setContentInfo(localCharSequence3).setContentIntent(localPendingIntent2).setDeleteIntent(deleteIntent);
       if ((flags & 0x80) == 0) {
-        break label294;
+        break label324;
       }
     }
-    label284:
-    label289:
-    label294:
-    for (boolean bool = true;; bool = false)
+    label312:
+    label318:
+    label324:
+    for (boolean bool1 = true;; bool1 = false)
     {
-      return ((Notification.Builder)localObject1).setFullScreenIntent(localPendingIntent1, bool).setLargeIcon(paramd).setNumber(i).getNotification();
-      bool = false;
+      return paramd.setFullScreenIntent(localPendingIntent1, bool1).setLargeIcon(localBitmap).setNumber(i).setProgress(j, k, bool2).getNotification();
+      bool1 = false;
       break;
-      bool = false;
-      break label180;
-      bool = false;
-      break label201;
+      bool1 = false;
+      break label198;
+      bool1 = false;
+      break label219;
     }
   }
 }

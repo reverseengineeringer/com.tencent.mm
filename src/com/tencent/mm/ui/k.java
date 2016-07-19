@@ -17,70 +17,77 @@ public final class k
   extends j
   implements b.a
 {
-  private ActionBar iH;
-  public o kqf = null;
-  public b kqg;
+  private ActionBar iY;
+  public o kPk = null;
+  public b kPl;
   
-  public final void G()
+  public final void F()
   {
-    kqg.G();
+    kPl.F();
   }
   
-  protected final void aNa()
+  protected final void N(View paramView)
   {
-    if (kqf != null) {
-      o.aNa();
+    if (kPk != null) {
+      kPk.N(paramView);
+    }
+  }
+  
+  public final void aAK()
+  {
+    if (kPk != null) {
+      kPk.aAK();
     }
   }
   
   public final ActionBar aP()
   {
-    if (iH == null) {
-      iH = kqg.aO();
+    if (iY == null) {
+      iY = kPl.aO();
     }
-    return iH;
+    return iY;
   }
   
-  protected final String amX()
+  protected final void aQL()
   {
-    if (kqf != null) {
-      return kqf.amX();
+    if (kPk != null) {
+      o.aQL();
+    }
+  }
+  
+  protected final String apN()
+  {
+    if (kPk != null) {
+      return kPk.apN();
     }
     return null;
   }
   
-  public final void ayk()
-  {
-    if (kqf != null) {
-      kqf.ayk();
-    }
-  }
-  
   public final boolean b(Menu paramMenu)
   {
-    kqf.onPrepareOptionsMenu(paramMenu);
+    kPk.onPrepareOptionsMenu(paramMenu);
     return true;
   }
   
-  protected final boolean baL()
+  protected final boolean bfX()
   {
     return false;
   }
   
-  protected final View baY()
+  protected final View bgi()
   {
-    if (kqf != null) {
-      return kqf.baY();
+    if (kPk != null) {
+      return kPk.bgi();
     }
     return null;
   }
   
   public final boolean c(Menu paramMenu)
   {
-    o localo = kqf;
-    b localb = kqg;
+    o localo = kPk;
+    b localb = kPl;
     ActionBar localActionBar;
-    if (iI == null)
+    if (iZ == null)
     {
       localActionBar = localb.aP();
       if (localActionBar == null) {
@@ -88,9 +95,9 @@ public final class k
       }
     }
     label55:
-    for (iI = new android.support.v7.internal.view.c(localActionBar.getThemedContext());; iI = new android.support.v7.internal.view.c(jx))
+    for (iZ = new android.support.v7.internal.view.c(localActionBar.getThemedContext());; iZ = new android.support.v7.internal.view.c(jO))
     {
-      localo.onCreateOptionsMenu(paramMenu, iI);
+      localo.onCreateOptionsMenu(paramMenu, iZ);
       return true;
     }
   }
@@ -100,56 +107,49 @@ public final class k
     return super.onOptionsItemSelected(paramMenuItem);
   }
   
-  protected final void dealContentView(View paramView)
-  {
-    if (kqf != null) {
-      kqf.dealContentView(paramView);
-    }
-  }
-  
   protected final String getClassName()
   {
-    return kqf.getClass().getName();
+    return kPk.getClass().getName();
   }
   
   protected final int getLayoutId()
   {
-    if (kqf != null) {
-      return kqf.getLayoutId();
+    if (kPk != null) {
+      return kPk.getLayoutId();
     }
     return -1;
   }
   
   public final ActionMode startActionMode(ActionMode.Callback paramCallback)
   {
-    b localb = kqg;
+    b localb = kPl;
     if (paramCallback == null) {
       throw new IllegalArgumentException("ActionMode callback can not be null.");
     }
-    if (kzn != null) {
-      kzn.finish();
+    if (kYu != null) {
+      kYu.finish();
     }
     com.tencent.mm.ui.b.c localc = (com.tencent.mm.ui.b.c)localb.aP();
     if (localc != null)
     {
-      if (kzq != null) {
-        kzq.finish();
+      if (kYx != null) {
+        kYx.finish();
       }
-      je.bN();
+      jv.bO();
       paramCallback = new c.b(localc, paramCallback);
-      if (!kzv.bcj()) {
+      if (!kYC.bhv()) {
         break label133;
       }
       paramCallback.invalidate();
-      je.a(kzv);
-      localc.hs(true);
-      je.sendAccessibilityEvent(32);
-      kzq = kzv;
+      jv.a(kYC);
+      localc.hQ(true);
+      jv.sendAccessibilityEvent(32);
+      kYx = kYC;
     }
     for (;;)
     {
-      kzn = paramCallback;
-      return kzn;
+      kYu = paramCallback;
+      return kYu;
       label133:
       paramCallback = null;
     }

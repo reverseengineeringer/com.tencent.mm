@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kFn:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+.field final synthetic ler:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 1379
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$b;->kFn:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$b;->ler:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,7 +51,7 @@
 
     .prologue
     .line 1382
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$b;->kFn:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$b;->ler:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->clearListSelection()V
 

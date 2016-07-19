@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/ui/base/s$2;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.super Lcom/tencent/mm/sdk/platformtools/ac;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic kHO:Lcom/tencent/mm/ui/base/o;
+.field final synthetic lgQ:Lcom/tencent/mm/ui/base/o;
 
 
 # direct methods
@@ -24,9 +24,9 @@
 
     .prologue
     .line 169
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/s$2;->kHO:Lcom/tencent/mm/ui/base/o;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/s$2;->lgQ:Lcom/tencent/mm/ui/base/o;
 
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
     return-void
 .end method
@@ -38,12 +38,12 @@
 
     .prologue
     .line 173
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/s$2;->kHO:Lcom/tencent/mm/ui/base/o;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/s$2;->lgQ:Lcom/tencent/mm/ui/base/o;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/o;->dismiss()V
 
     .line 174
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/platformtools/aa;->handleMessage(Landroid/os/Message;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/platformtools/ac;->handleMessage(Landroid/os/Message;)V
 
     .line 175
     return-void

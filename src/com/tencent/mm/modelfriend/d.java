@@ -1,38 +1,34 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.ag.b.m;
-import com.tencent.mm.d.a.q;
-import com.tencent.mm.d.a.q.a;
+import com.tencent.mm.aj.b.m;
+import com.tencent.mm.e.a.s;
+import com.tencent.mm.e.a.s.a;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.c.b;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class d
-  extends com.tencent.mm.sdk.c.c
+  extends com.tencent.mm.sdk.c.c<s>
 {
-  public d()
+  d()
   {
-    super(0);
+    kum = s.class.getName().hashCode();
   }
   
-  public final boolean a(b paramb)
+  private static boolean a(s params)
   {
-    if (!(paramb instanceof q)) {
-      u.f("!56@/B4Tb64lLpIqcrJBKv7GGpaIJVKtF1au3qNBtibJ6VVaWk4rYzgWDw==", "not bind qq event");
-    }
-    while (asx.asz != 0) {
-      return false;
-    }
+    if (aej.ael == 0) {}
     try
     {
-      int i = com.tencent.mm.model.h.sm() | 0x1000;
-      ah.tD().rn().set(34, Integer.valueOf(i));
-      ah.tD().rp().b(new b.m("", "", "", "", "", "", "", "", i, "", ""));
-      u.d("!56@/B4Tb64lLpIqcrJBKv7GGpaIJVKtF1au3qNBtibJ6VVaWk4rYzgWDw==", "doClearQQFriendHelper succ ");
+      int i = com.tencent.mm.model.h.so() | 0x1000;
+      ah.tE().ro().set(34, Integer.valueOf(i));
+      ah.tE().rq().b(new b.m("", "", "", "", "", "", "", "", i, "", ""));
+      v.d("MicroMsg.FriendBindQQ.EventListener", "doClearQQFriendHelper succ ");
       return false;
     }
-    catch (Exception paramb) {}
-    return false;
+    catch (Exception params)
+    {
+      for (;;) {}
+    }
   }
 }
 

@@ -11,8 +11,8 @@ final class EditPreference$2
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (EditPreference.a(kLf) != null) {
-      EditPreference.a(kLf).dismiss();
+    if (EditPreference.a(lku) != null) {
+      EditPreference.a(lku).dismiss();
     }
   }
 }

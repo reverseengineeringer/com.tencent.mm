@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic bmw:Lcom/tencent/mm/booter/d;
+.field final synthetic bac:Lcom/tencent/mm/booter/d;
 
-.field final synthetic bmz:Ljava/io/FileDescriptor;
+.field final synthetic baf:Ljava/io/FileDescriptor;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 827
-    iput-object p1, p0, Lcom/tencent/mm/booter/d$9;->bmw:Lcom/tencent/mm/booter/d;
+    iput-object p1, p0, Lcom/tencent/mm/booter/d$9;->bac:Lcom/tencent/mm/booter/d;
 
-    iput-object p2, p0, Lcom/tencent/mm/booter/d$9;->bmz:Ljava/io/FileDescriptor;
+    iput-object p2, p0, Lcom/tencent/mm/booter/d$9;->baf:Ljava/io/FileDescriptor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,9 +45,9 @@
 
     .prologue
     .line 830
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$9;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$9;->bac:Lcom/tencent/mm/booter/d;
 
-    iget-object v1, p0, Lcom/tencent/mm/booter/d$9;->bmz:Ljava/io/FileDescriptor;
+    iget-object v1, p0, Lcom/tencent/mm/booter/d$9;->baf:Ljava/io/FileDescriptor;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/booter/d;->a(Lcom/tencent/mm/booter/d;Ljava/io/FileDescriptor;)Z
 

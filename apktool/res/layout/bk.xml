@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/kn" android:layout_width="160.0dip" android:layout_height="160.0dip" android:layout_marginTop="30.0dip" android:src="@drawable/aby" android:scaleType="centerInside" />
+    <TextView android:textSize="30.0dip" android:textColor="@color/j_" android:gravity="center" android:id="@id/kr" android:paddingLeft="@dimen/cy" android:paddingRight="@dimen/cy" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/mj" />
+    <TextView android:textSize="14.0dip" android:textColor="#ff999999" android:id="@id/ks" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="86M/1024M" />
+    <ProgressBar android:id="@id/kt" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="12.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="12.0dip" android:max="100" android:progress="0" style="?android:attr/progressBarStyleHorizontal" />
+    <Button android:id="@id/kp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/e0" android:layout_marginTop="10.0dip" android:layout_marginRight="@dimen/e0" android:text="@string/io" style="@style/MMSolidGreenLargeButton" />
+    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="14.0dip" android:textColor="#ff999999" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/ku" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip" android:text="@string/m9" />
+    </LinearLayout>
+</LinearLayout>

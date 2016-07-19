@@ -45,29 +45,7 @@
     goto :goto_0
 .end method
 
-.method public static aDK()Z
-    .locals 2
-
-    .prologue
-    .line 21
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/4 v1, 0x5
-
-    if-lt v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static b(Landroid/graphics/PointF;Landroid/view/MotionEvent;)V
+.method public static a(Landroid/graphics/PointF;Landroid/view/MotionEvent;)V
     .locals 5
 
     .prologue
@@ -120,12 +98,34 @@
     goto :goto_0
 .end method
 
+.method public static aHm()Z
+    .locals 2
+
+    .prologue
+    .line 21
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/4 v1, 0x5
+
+    if-lt v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public static e(Landroid/view/MotionEvent;I)F
     .locals 1
 
     .prologue
     .line 61
-    invoke-static {p0}, Lcom/tencent/mm/ui/base/f;->m(Landroid/view/MotionEvent;)Z
+    invoke-static {p0}, Lcom/tencent/mm/ui/base/f;->l(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
@@ -157,7 +157,7 @@
 
     .prologue
     .line 69
-    invoke-static {p0}, Lcom/tencent/mm/ui/base/f;->m(Landroid/view/MotionEvent;)Z
+    invoke-static {p0}, Lcom/tencent/mm/ui/base/f;->l(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
@@ -184,14 +184,14 @@
     goto :goto_0
 .end method
 
-.method private static m(Landroid/view/MotionEvent;)Z
+.method private static l(Landroid/view/MotionEvent;)Z
     .locals 3
 
     .prologue
     const/4 v0, 0x0
 
     .line 25
-    invoke-static {}, Lcom/tencent/mm/ui/base/f;->aDK()Z
+    invoke-static {}, Lcom/tencent/mm/ui/base/f;->aHm()Z
 
     move-result v1
 
@@ -213,7 +213,7 @@
     return v0
 .end method
 
-.method public static n(Landroid/view/MotionEvent;)F
+.method public static m(Landroid/view/MotionEvent;)F
     .locals 4
 
     .prologue
@@ -266,7 +266,7 @@
 
     .prologue
     .line 77
-    invoke-static {}, Lcom/tencent/mm/ui/base/f;->aDK()Z
+    invoke-static {}, Lcom/tencent/mm/ui/base/f;->aHm()Z
 
     move-result v0
 

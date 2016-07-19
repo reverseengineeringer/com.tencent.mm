@@ -16,13 +16,23 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/tencent/mm/plugin/sns/ui/a/a$c;",
+        ">;"
+    }
+.end annotation
+
 
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 371
+    .line 374
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,14 +44,14 @@
     .locals 4
 
     .prologue
-    .line 371
+    .line 374
     check-cast p1, Lcom/tencent/mm/plugin/sns/ui/a/a$c;
 
     check-cast p2, Lcom/tencent/mm/plugin/sns/ui/a/a$c;
 
-    iget-wide v0, p1, Lcom/tencent/mm/plugin/sns/ui/a/a$c;->cfW:J
+    iget-wide v0, p1, Lcom/tencent/mm/plugin/sns/ui/a/a$c;->cbi:J
 
-    iget-wide v2, p2, Lcom/tencent/mm/plugin/sns/ui/a/a$c;->cfW:J
+    iget-wide v2, p2, Lcom/tencent/mm/plugin/sns/ui/a/a$c;->cbi:J
 
     cmp-long v0, v0, v2
 
@@ -53,9 +63,9 @@
     return v0
 
     :cond_0
-    iget-wide v0, p1, Lcom/tencent/mm/plugin/sns/ui/a/a$c;->cfW:J
+    iget-wide v0, p1, Lcom/tencent/mm/plugin/sns/ui/a/a$c;->cbi:J
 
-    iget-wide v2, p2, Lcom/tencent/mm/plugin/sns/ui/a/a$c;->cfW:J
+    iget-wide v2, p2, Lcom/tencent/mm/plugin/sns/ui/a/a$c;->cbi:J
 
     cmp-long v0, v0, v2
 

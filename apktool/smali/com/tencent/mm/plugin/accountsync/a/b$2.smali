@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/accountsync/a/b;->a(IILcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/plugin/accountsync/a/b;->a(IILcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic coe:Lcom/tencent/mm/plugin/accountsync/a/b;
+.field final synthetic cjs:Lcom/tencent/mm/plugin/accountsync/a/b;
 
-.field final synthetic cof:I
+.field final synthetic cjt:I
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 82
-    iput-object p1, p0, Lcom/tencent/mm/plugin/accountsync/a/b$2;->coe:Lcom/tencent/mm/plugin/accountsync/a/b;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/accountsync/a/b$2;->cjs:Lcom/tencent/mm/plugin/accountsync/a/b;
 
-    iput p2, p0, Lcom/tencent/mm/plugin/accountsync/a/b$2;->cof:I
+    iput p2, p0, Lcom/tencent/mm/plugin/accountsync/a/b$2;->cjt:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,26 +45,26 @@
 
     .prologue
     .line 85
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/a/b$2;->coe:Lcom/tencent/mm/plugin/accountsync/a/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/a/b$2;->cjs:Lcom/tencent/mm/plugin/accountsync/a/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/accountsync/a/b;->coc:Lcom/tencent/mm/ui/base/p;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/accountsync/a/b;->cjq:Lcom/tencent/mm/ui/base/p;
 
     if-eqz v0, :cond_0
 
     .line 86
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/a/b$2;->coe:Lcom/tencent/mm/plugin/accountsync/a/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/a/b$2;->cjs:Lcom/tencent/mm/plugin/accountsync/a/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/accountsync/a/b;->coc:Lcom/tencent/mm/ui/base/p;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/accountsync/a/b;->cjq:Lcom/tencent/mm/ui/base/p;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/accountsync/a/b$2;->coe:Lcom/tencent/mm/plugin/accountsync/a/b;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/accountsync/a/b$2;->cjs:Lcom/tencent/mm/plugin/accountsync/a/b;
 
     iget-object v2, v2, Lcom/tencent/mm/plugin/accountsync/a/b;->context:Landroid/content/Context;
 
-    const v3, 0x7f0b0e1f
+    const v3, 0x7f0800e4
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -74,7 +74,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/tencent/mm/plugin/accountsync/a/b$2;->cof:I
+    iget v2, p0, Lcom/tencent/mm/plugin/accountsync/a/b$2;->cjt:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

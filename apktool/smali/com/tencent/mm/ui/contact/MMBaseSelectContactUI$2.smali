@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->Gb()V
+    value = Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+.field final synthetic lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 172
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$2;->lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+    .line 176
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$2;->lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,12 +40,12 @@
     .locals 1
 
     .prologue
-    .line 175
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$2;->lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+    .line 179
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$2;->lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->ahG()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->LR()V
 
-    .line 176
+    .line 180
     const/4 v0, 0x1
 
     return v0

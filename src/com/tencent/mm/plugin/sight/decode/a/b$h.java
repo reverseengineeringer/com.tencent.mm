@@ -1,106 +1,106 @@
 package com.tencent.mm.plugin.sight.decode.a;
 
-import com.tencent.mm.an.j;
+import com.tencent.mm.aq.n;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import com.tencent.mm.plugin.sight.base.SightVideoJNI;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.h;
 import java.util.Map;
 
 final class b$h
   implements Runnable
 {
-  volatile boolean gxQ = false;
+  volatile boolean foD = false;
   
   private b$h(b paramb) {}
   
   public final void run()
   {
-    if (b.c(gxL)) {
-      u.e("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "is bad fps, do nothing when open file");
+    if (b.c(gEj)) {
+      v.e("MicroMsg.SightPlayController", "is bad fps, do nothing when open file");
     }
     for (;;)
     {
       return;
-      b localb = gxL;
-      String str = b.a(gxL);
-      if (1 == b.d(gxL)) {}
+      b localb = gEj;
+      String str = b.a(gEj);
+      if (1 == b.d(gEj)) {}
       for (int i = 0;; i = 1)
       {
-        b.b(localb, SightVideoJNI.openFile(str, i, 1, false));
-        if (b.e(gxL) >= 0) {
+        b.a(localb, SightVideoJNI.openFile(str, i, 1, false));
+        if (b.e(gEj) >= 0) {
           break label166;
         }
-        u.w("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "#0x%x-#0x%x error video id %d, path %s", new Object[] { Integer.valueOf(hashCode()), Integer.valueOf(gxL.hashCode()), Integer.valueOf(b.e(gxL)), b.a(gxL) });
-        gxL.k(null);
-        if (b.b(gxL) == null) {
+        v.w("MicroMsg.SightPlayController", "#0x%x-#0x%x error video id %d, path %s", new Object[] { Integer.valueOf(hashCode()), Integer.valueOf(gEj.hashCode()), Integer.valueOf(b.e(gEj)), b.a(gEj) });
+        gEj.p(null);
+        if (b.b(gEj) == null) {
           break;
         }
-        b.b(gxL).a(gxL, -1);
+        b.b(gEj).d(gEj, -1);
         return;
       }
       label166:
-      if (((Boolean)ah.tD().rn().get(344065, Boolean.valueOf(false))).booleanValue())
+      if (((Boolean)ah.tE().ro().get(344065, Boolean.valueOf(false))).booleanValue())
       {
-        if (b.f(gxL) == null) {
-          b.a(gxL, new b.j(gxL, (byte)0));
+        if (b.f(gEj) == null) {
+          b.a(gEj, new b.j(gEj, (byte)0));
         }
-        b.g(gxL).removeCallbacks(b.f(gxL));
-        b.g(gxL).post(b.f(gxL));
+        b.g(gEj).removeCallbacks(b.f(gEj));
+        b.g(gEj).post(b.f(gEj));
       }
-      i = Math.max(1, SightVideoJNI.getVideoWidth(b.e(gxL)));
-      int j = Math.max(1, SightVideoJNI.getVideoHeight(b.e(gxL)));
-      if (b.d(gxL) == 0)
+      i = Math.max(1, SightVideoJNI.getVideoWidth(b.e(gEj)));
+      int j = Math.max(1, SightVideoJNI.getVideoHeight(b.e(gEj)));
+      if (b.d(gEj) == 0)
       {
         if ((i * j >= 1048576) || (i <= 0) || (j <= 0))
         {
-          u.e("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "get error info videoWidth %d height  %d", new Object[] { Integer.valueOf(i), Integer.valueOf(j) });
+          v.e("MicroMsg.SightPlayController", "get error info videoWidth %d height  %d", new Object[] { Integer.valueOf(i), Integer.valueOf(j) });
           return;
         }
-        b.a(gxL, i, j);
+        b.a(gEj, i, j);
       }
-      b.h(gxL);
+      b.h(gEj);
       if ((Float.compare(i / j, 5.0F) > 0) || (Float.compare(j / i, 5.0F) > 0))
       {
-        u.w("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "ERROR Video size %d, %d", new Object[] { Integer.valueOf(i), Integer.valueOf(j) });
-        if (!ay.kz(b.a(gxL))) {
-          b.avN().put(b.a(gxL), Integer.valueOf(2));
+        v.w("MicroMsg.SightPlayController", "ERROR Video size %d, %d", new Object[] { Integer.valueOf(i), Integer.valueOf(j) });
+        if (!be.kf(b.a(gEj))) {
+          b.ayi().put(b.a(gEj), Integer.valueOf(2));
         }
-        b.b(gxL, 0L);
-        b.c(gxL, b.e(gxL));
-        b.b(gxL, -1);
-        b.a(gxL, "");
-        b.b(gxL, "ERROR#PATH");
-        b.a(gxL, null);
-        gxQ = true;
-        if (b.b(gxL) != null) {
-          b.b(gxL).a(gxL, -1);
+        b.a(gEj, 0L);
+        b.b(gEj, b.e(gEj));
+        b.a(gEj, -1);
+        b.a(gEj, "");
+        b.b(gEj, "ERROR#PATH");
+        b.a(gEj, null);
+        foD = true;
+        if (b.b(gEj) != null) {
+          b.b(gEj).d(gEj, -1);
         }
       }
       else
       {
-        gxL.aB(i, j);
-        if (1 == b.d(gxL))
+        gEj.aG(i, j);
+        if (1 == b.d(gEj))
         {
-          b.a(gxL, new b.b(gxL, (byte)0));
-          b.a(gxL, null);
-          if (!gxQ) {
-            j.b(b.i(gxL), 0L);
+          b.a(gEj, new b.b(gEj, (byte)0));
+          b.a(gEj, null);
+          if (!foD) {
+            n.b(b.i(gEj), 0L);
           }
         }
-        while (gxQ)
+        while (foD)
         {
-          u.e("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "#0x%x-#0x%x open file end, match stop %B", new Object[] { Integer.valueOf(gxL.hashCode()), Integer.valueOf(hashCode()), Boolean.valueOf(gxQ) });
+          v.e("MicroMsg.SightPlayController", "#0x%x-#0x%x open file end, match stop %B", new Object[] { Integer.valueOf(gEj.hashCode()), Integer.valueOf(hashCode()), Boolean.valueOf(foD) });
           return;
-          b.a(gxL, new b.b(gxL, (byte)0));
-          b.a(gxL, new b.c(gxL, (byte)0));
-          igxL).gxR = b.j(gxL);
-          jgxL).gxU = b.i(gxL);
-          if (!gxQ) {
-            j.b(b.i(gxL), 0L);
+          b.a(gEj, new b.b(gEj, (byte)0));
+          b.a(gEj, new b.c(gEj, (byte)0));
+          igEj).gEo = b.j(gEj);
+          jgEj).gEr = b.i(gEj);
+          if (!foD) {
+            n.b(b.i(gEj), 0L);
           }
         }
       }

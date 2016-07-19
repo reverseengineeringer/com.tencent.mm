@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public buL:Ljava/lang/String;
+.field public DF:Ljava/lang/String;
 
 .field public text:Ljava/lang/String;
 

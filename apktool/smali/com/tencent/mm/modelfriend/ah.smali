@@ -7,43 +7,64 @@
 
 
 # static fields
-.field private static bly:Ljava/util/HashMap;
+.field private static aZa:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Lcom/tencent/mm/bc/g$b;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field private bNA:Lcom/tencent/mm/modelfriend/ag;
+.field private bGQ:Lcom/tencent/mm/modelfriend/c;
 
-.field private bNB:Lcom/tencent/mm/modelfriend/r;
+.field private bGR:Lcom/tencent/mm/modelfriend/i;
 
-.field private bNC:Lcom/tencent/mm/modelfriend/p;
+.field private bGS:Lcom/tencent/mm/modelfriend/l;
 
-.field private bND:Lcom/tencent/mm/modelfriend/e;
+.field private bGT:Lcom/tencent/mm/modelfriend/ae;
 
-.field private bNE:Ljava/util/LinkedList;
+.field private bGU:Lcom/tencent/mm/modelfriend/ag;
 
-.field private bNF:Lcom/tencent/mm/modelfriend/d;
+.field private bGV:Lcom/tencent/mm/modelfriend/r;
 
-.field private bNG:Lcom/tencent/mm/modelfriend/f;
+.field private bGW:Lcom/tencent/mm/modelfriend/p;
 
-.field private bNH:Lcom/tencent/mm/modelfriend/g;
+.field private bGX:Lcom/tencent/mm/modelfriend/e;
 
-.field private bNI:Lcom/tencent/mm/sdk/c/c;
+.field private bGY:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList",
+            "<",
+            "Lcom/tencent/mm/protocal/b/acj;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private bNJ:Lcom/tencent/mm/sdk/c/c;
+.field private bGZ:Lcom/tencent/mm/modelfriend/d;
 
-.field private bNK:Lcom/tencent/mm/sdk/c/c;
+.field private bHa:Lcom/tencent/mm/modelfriend/f;
 
-.field private bNL:Lcom/tencent/mm/modelfriend/t;
+.field private bHb:Lcom/tencent/mm/modelfriend/g;
 
-.field private bNw:Lcom/tencent/mm/modelfriend/c;
+.field private bHc:Lcom/tencent/mm/sdk/c/c;
 
-.field private bNx:Lcom/tencent/mm/modelfriend/i;
+.field private bHd:Lcom/tencent/mm/sdk/c/c;
 
-.field private bNy:Lcom/tencent/mm/modelfriend/l;
+.field private bHe:Lcom/tencent/mm/sdk/c/c;
 
-.field private bNz:Lcom/tencent/mm/modelfriend/ae;
+.field private bHf:Lcom/tencent/mm/modelfriend/t;
 
-.field private bna:Lcom/tencent/mm/sdk/c/c;
+.field private bHg:Lcom/tencent/mm/sdk/c/c;
+
+.field private bHh:Lcom/tencent/mm/sdk/c/c;
 
 
 # direct methods
@@ -57,28 +78,9 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 210
-    sput-object v0, Lcom/tencent/mm/modelfriend/ah;->bly:Ljava/util/HashMap;
+    sput-object v0, Lcom/tencent/mm/modelfriend/ah;->aZa:Ljava/util/HashMap;
 
     const-string/jumbo v1, "ADDR_UPLOAD_TABLE"
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    new-instance v2, Lcom/tencent/mm/modelfriend/ah$7;
-
-    invoke-direct {v2}, Lcom/tencent/mm/modelfriend/ah$7;-><init>()V
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 217
-    sget-object v0, Lcom/tencent/mm/modelfriend/ah;->bly:Ljava/util/HashMap;
-
-    const-string/jumbo v1, "FACE_BOOK_FIREND_TABLE"
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
@@ -94,10 +96,10 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 224
-    sget-object v0, Lcom/tencent/mm/modelfriend/ah;->bly:Ljava/util/HashMap;
+    .line 217
+    sget-object v0, Lcom/tencent/mm/modelfriend/ah;->aZa:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "FRIEND_EXT_TABLE"
+    const-string/jumbo v1, "FACE_BOOK_FIREND_TABLE"
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
@@ -113,10 +115,10 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 231
-    sget-object v0, Lcom/tencent/mm/modelfriend/ah;->bly:Ljava/util/HashMap;
+    .line 224
+    sget-object v0, Lcom/tencent/mm/modelfriend/ah;->aZa:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "QQ_GROUP_TABLE"
+    const-string/jumbo v1, "FRIEND_EXT_TABLE"
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
@@ -132,10 +134,10 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 238
-    sget-object v0, Lcom/tencent/mm/modelfriend/ah;->bly:Ljava/util/HashMap;
+    .line 231
+    sget-object v0, Lcom/tencent/mm/modelfriend/ah;->aZa:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "QQ_LIST_TABLE"
+    const-string/jumbo v1, "QQ_GROUP_TABLE"
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
@@ -151,10 +153,10 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 245
-    sget-object v0, Lcom/tencent/mm/modelfriend/ah;->bly:Ljava/util/HashMap;
+    .line 238
+    sget-object v0, Lcom/tencent/mm/modelfriend/ah;->aZa:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "INVITEFRIENDOPEN_TABLE"
+    const-string/jumbo v1, "QQ_LIST_TABLE"
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
@@ -170,8 +172,27 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 245
+    sget-object v0, Lcom/tencent/mm/modelfriend/ah;->aZa:Ljava/util/HashMap;
+
+    const-string/jumbo v1, "INVITEFRIENDOPEN_TABLE"
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/tencent/mm/modelfriend/ah$13;
+
+    invoke-direct {v2}, Lcom/tencent/mm/modelfriend/ah$13;-><init>()V
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 252
-    sget-object v0, Lcom/tencent/mm/modelfriend/ah;->bly:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/modelfriend/ah;->aZa:Ljava/util/HashMap;
 
     const-string/jumbo v1, "GOOGLE_FRIEND_TABLE"
 
@@ -190,7 +211,7 @@
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 260
-    sget-object v0, Lcom/tencent/mm/modelfriend/ah;->bly:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/modelfriend/ah;->aZa:Ljava/util/HashMap;
 
     const-string/jumbo v1, "LINKEDIN_FRIEND_TABLE"
 
@@ -224,71 +245,87 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/modelfriend/e;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ah;->bND:Lcom/tencent/mm/modelfriend/e;
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ah;->bGX:Lcom/tencent/mm/modelfriend/e;
 
     .line 39
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ah;->bNE:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ah;->bGY:Ljava/util/LinkedList;
 
     .line 41
     new-instance v0, Lcom/tencent/mm/modelfriend/d;
 
     invoke-direct {v0}, Lcom/tencent/mm/modelfriend/d;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ah;->bNF:Lcom/tencent/mm/modelfriend/d;
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ah;->bGZ:Lcom/tencent/mm/modelfriend/d;
 
     .line 42
     new-instance v0, Lcom/tencent/mm/modelfriend/f;
 
     invoke-direct {v0}, Lcom/tencent/mm/modelfriend/f;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ah;->bNG:Lcom/tencent/mm/modelfriend/f;
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ah;->bHa:Lcom/tencent/mm/modelfriend/f;
 
     .line 43
     new-instance v0, Lcom/tencent/mm/modelfriend/g;
 
     invoke-direct {v0}, Lcom/tencent/mm/modelfriend/g;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ah;->bNH:Lcom/tencent/mm/modelfriend/g;
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ah;->bHb:Lcom/tencent/mm/modelfriend/g;
 
     .line 45
     new-instance v0, Lcom/tencent/mm/modelfriend/ah$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/modelfriend/ah$1;-><init>(Lcom/tencent/mm/modelfriend/ah;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ah;->bNI:Lcom/tencent/mm/sdk/c/c;
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ah;->bHc:Lcom/tencent/mm/sdk/c/c;
 
     .line 56
-    new-instance v0, Lcom/tencent/mm/modelfriend/ah$5;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/modelfriend/ah$5;-><init>(Lcom/tencent/mm/modelfriend/ah;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ah;->bNJ:Lcom/tencent/mm/sdk/c/c;
-
-    .line 70
     new-instance v0, Lcom/tencent/mm/modelfriend/ah$6;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/modelfriend/ah$6;-><init>(Lcom/tencent/mm/modelfriend/ah;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ah;->bNK:Lcom/tencent/mm/sdk/c/c;
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ah;->bHd:Lcom/tencent/mm/sdk/c/c;
+
+    .line 70
+    new-instance v0, Lcom/tencent/mm/modelfriend/ah$7;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/modelfriend/ah$7;-><init>(Lcom/tencent/mm/modelfriend/ah;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ah;->bHe:Lcom/tencent/mm/sdk/c/c;
 
     .line 274
     new-instance v0, Lcom/tencent/mm/modelfriend/ah$4;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/modelfriend/ah$4;-><init>(Lcom/tencent/mm/modelfriend/ah;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ah;->bna:Lcom/tencent/mm/sdk/c/c;
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ah;->bHg:Lcom/tencent/mm/sdk/c/c;
+
+    .line 287
+    new-instance v0, Lcom/tencent/mm/modelfriend/ah$5;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/modelfriend/ah$5;-><init>(Lcom/tencent/mm/modelfriend/ah;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ah;->bHh:Lcom/tencent/mm/sdk/c/c;
 
     return-void
 .end method
 
 .method public static f(Ljava/util/LinkedList;)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/LinkedList",
+            "<",
+            "Lcom/tencent/mm/protocal/b/acj;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
     .line 161
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
@@ -305,22 +342,22 @@
 
     .line 164
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
-    iput-object p0, v0, Lcom/tencent/mm/modelfriend/ah;->bNE:Ljava/util/LinkedList;
+    iput-object p0, v0, Lcom/tencent/mm/modelfriend/ah;->bGY:Ljava/util/LinkedList;
 
     .line 165
     return-void
 .end method
 
-.method private static zp()Lcom/tencent/mm/modelfriend/ah;
+.method private static zC()Lcom/tencent/mm/modelfriend/ah;
     .locals 3
 
     .prologue
     .line 92
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tk()Lcom/tencent/mm/model/bc;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tl()Lcom/tencent/mm/model/bc;
 
     move-result-object v0
 
@@ -330,7 +367,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/model/bc;->fu(Ljava/lang/String;)Lcom/tencent/mm/model/ae;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/model/bc;->fH(Ljava/lang/String;)Lcom/tencent/mm/model/ae;
 
     move-result-object v0
 
@@ -345,7 +382,7 @@
     invoke-direct {v0}, Lcom/tencent/mm/modelfriend/ah;-><init>()V
 
     .line 95
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tk()Lcom/tencent/mm/model/bc;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tl()Lcom/tencent/mm/model/bc;
 
     move-result-object v1
 
@@ -362,12 +399,12 @@
     return-object v0
 .end method
 
-.method public static zq()Lcom/tencent/mm/modelfriend/c;
+.method public static zD()Lcom/tencent/mm/modelfriend/c;
     .locals 3
 
     .prologue
     .line 101
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
@@ -384,48 +421,48 @@
 
     .line 104
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bNw:Lcom/tencent/mm/modelfriend/c;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bGQ:Lcom/tencent/mm/modelfriend/c;
 
     if-nez v0, :cond_1
 
     .line 105
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
     new-instance v1, Lcom/tencent/mm/modelfriend/c;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/tencent/mm/model/c;->bzA:Lcom/tencent/mm/az/g;
+    iget-object v2, v2, Lcom/tencent/mm/model/c;->bsy:Lcom/tencent/mm/bc/g;
 
-    invoke-direct {v1, v2}, Lcom/tencent/mm/modelfriend/c;-><init>(Lcom/tencent/mm/az/g;)V
+    invoke-direct {v1, v2}, Lcom/tencent/mm/modelfriend/c;-><init>(Lcom/tencent/mm/bc/g;)V
 
-    iput-object v1, v0, Lcom/tencent/mm/modelfriend/ah;->bNw:Lcom/tencent/mm/modelfriend/c;
+    iput-object v1, v0, Lcom/tencent/mm/modelfriend/ah;->bGQ:Lcom/tencent/mm/modelfriend/c;
 
     .line 107
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bNw:Lcom/tencent/mm/modelfriend/c;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bGQ:Lcom/tencent/mm/modelfriend/c;
 
     return-object v0
 .end method
 
-.method public static zr()Lcom/tencent/mm/modelfriend/i;
+.method public static zE()Lcom/tencent/mm/modelfriend/i;
     .locals 3
 
     .prologue
     .line 111
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
@@ -442,48 +479,48 @@
 
     .line 114
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bNx:Lcom/tencent/mm/modelfriend/i;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bGR:Lcom/tencent/mm/modelfriend/i;
 
     if-nez v0, :cond_1
 
     .line 115
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
     new-instance v1, Lcom/tencent/mm/modelfriend/i;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/tencent/mm/model/c;->bzA:Lcom/tencent/mm/az/g;
+    iget-object v2, v2, Lcom/tencent/mm/model/c;->bsy:Lcom/tencent/mm/bc/g;
 
-    invoke-direct {v1, v2}, Lcom/tencent/mm/modelfriend/i;-><init>(Lcom/tencent/mm/az/g;)V
+    invoke-direct {v1, v2}, Lcom/tencent/mm/modelfriend/i;-><init>(Lcom/tencent/mm/bc/g;)V
 
-    iput-object v1, v0, Lcom/tencent/mm/modelfriend/ah;->bNx:Lcom/tencent/mm/modelfriend/i;
+    iput-object v1, v0, Lcom/tencent/mm/modelfriend/ah;->bGR:Lcom/tencent/mm/modelfriend/i;
 
     .line 117
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bNx:Lcom/tencent/mm/modelfriend/i;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bGR:Lcom/tencent/mm/modelfriend/i;
 
     return-object v0
 .end method
 
-.method public static zs()Lcom/tencent/mm/modelfriend/l;
+.method public static zF()Lcom/tencent/mm/modelfriend/l;
     .locals 3
 
     .prologue
     .line 121
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
@@ -500,48 +537,48 @@
 
     .line 124
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bNy:Lcom/tencent/mm/modelfriend/l;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bGS:Lcom/tencent/mm/modelfriend/l;
 
     if-nez v0, :cond_1
 
     .line 125
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
     new-instance v1, Lcom/tencent/mm/modelfriend/l;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/tencent/mm/model/c;->bzA:Lcom/tencent/mm/az/g;
+    iget-object v2, v2, Lcom/tencent/mm/model/c;->bsy:Lcom/tencent/mm/bc/g;
 
-    invoke-direct {v1, v2}, Lcom/tencent/mm/modelfriend/l;-><init>(Lcom/tencent/mm/az/g;)V
+    invoke-direct {v1, v2}, Lcom/tencent/mm/modelfriend/l;-><init>(Lcom/tencent/mm/bc/g;)V
 
-    iput-object v1, v0, Lcom/tencent/mm/modelfriend/ah;->bNy:Lcom/tencent/mm/modelfriend/l;
+    iput-object v1, v0, Lcom/tencent/mm/modelfriend/ah;->bGS:Lcom/tencent/mm/modelfriend/l;
 
     .line 127
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bNy:Lcom/tencent/mm/modelfriend/l;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bGS:Lcom/tencent/mm/modelfriend/l;
 
     return-object v0
 .end method
 
-.method public static zt()Lcom/tencent/mm/modelfriend/ae;
+.method public static zG()Lcom/tencent/mm/modelfriend/ae;
     .locals 3
 
     .prologue
     .line 131
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
@@ -558,48 +595,48 @@
 
     .line 134
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bNz:Lcom/tencent/mm/modelfriend/ae;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bGT:Lcom/tencent/mm/modelfriend/ae;
 
     if-nez v0, :cond_1
 
     .line 135
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
     new-instance v1, Lcom/tencent/mm/modelfriend/ae;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/tencent/mm/model/c;->bzA:Lcom/tencent/mm/az/g;
+    iget-object v2, v2, Lcom/tencent/mm/model/c;->bsy:Lcom/tencent/mm/bc/g;
 
-    invoke-direct {v1, v2}, Lcom/tencent/mm/modelfriend/ae;-><init>(Lcom/tencent/mm/az/g;)V
+    invoke-direct {v1, v2}, Lcom/tencent/mm/modelfriend/ae;-><init>(Lcom/tencent/mm/bc/g;)V
 
-    iput-object v1, v0, Lcom/tencent/mm/modelfriend/ah;->bNz:Lcom/tencent/mm/modelfriend/ae;
+    iput-object v1, v0, Lcom/tencent/mm/modelfriend/ah;->bGT:Lcom/tencent/mm/modelfriend/ae;
 
     .line 137
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bNz:Lcom/tencent/mm/modelfriend/ae;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bGT:Lcom/tencent/mm/modelfriend/ae;
 
     return-object v0
 .end method
 
-.method public static zu()Lcom/tencent/mm/modelfriend/r;
+.method public static zH()Lcom/tencent/mm/modelfriend/r;
     .locals 3
 
     .prologue
     .line 141
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
@@ -616,48 +653,48 @@
 
     .line 144
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bNB:Lcom/tencent/mm/modelfriend/r;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bGV:Lcom/tencent/mm/modelfriend/r;
 
     if-nez v0, :cond_1
 
     .line 145
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
     new-instance v1, Lcom/tencent/mm/modelfriend/r;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/tencent/mm/model/c;->bzA:Lcom/tencent/mm/az/g;
+    iget-object v2, v2, Lcom/tencent/mm/model/c;->bsy:Lcom/tencent/mm/bc/g;
 
-    invoke-direct {v1, v2}, Lcom/tencent/mm/modelfriend/r;-><init>(Lcom/tencent/mm/az/g;)V
+    invoke-direct {v1, v2}, Lcom/tencent/mm/modelfriend/r;-><init>(Lcom/tencent/mm/bc/g;)V
 
-    iput-object v1, v0, Lcom/tencent/mm/modelfriend/ah;->bNB:Lcom/tencent/mm/modelfriend/r;
+    iput-object v1, v0, Lcom/tencent/mm/modelfriend/ah;->bGV:Lcom/tencent/mm/modelfriend/r;
 
     .line 147
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bNB:Lcom/tencent/mm/modelfriend/r;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bGV:Lcom/tencent/mm/modelfriend/r;
 
     return-object v0
 .end method
 
-.method public static zv()Lcom/tencent/mm/modelfriend/ag;
+.method public static zI()Lcom/tencent/mm/modelfriend/ag;
     .locals 3
 
     .prologue
     .line 151
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
@@ -674,48 +711,57 @@
 
     .line 154
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bNA:Lcom/tencent/mm/modelfriend/ag;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bGU:Lcom/tencent/mm/modelfriend/ag;
 
     if-nez v0, :cond_1
 
     .line 155
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
     new-instance v1, Lcom/tencent/mm/modelfriend/ag;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/tencent/mm/model/c;->bzA:Lcom/tencent/mm/az/g;
+    iget-object v2, v2, Lcom/tencent/mm/model/c;->bsy:Lcom/tencent/mm/bc/g;
 
-    invoke-direct {v1, v2}, Lcom/tencent/mm/modelfriend/ag;-><init>(Lcom/tencent/mm/az/g;)V
+    invoke-direct {v1, v2}, Lcom/tencent/mm/modelfriend/ag;-><init>(Lcom/tencent/mm/bc/g;)V
 
-    iput-object v1, v0, Lcom/tencent/mm/modelfriend/ah;->bNA:Lcom/tencent/mm/modelfriend/ag;
+    iput-object v1, v0, Lcom/tencent/mm/modelfriend/ah;->bGU:Lcom/tencent/mm/modelfriend/ag;
 
     .line 157
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bNA:Lcom/tencent/mm/modelfriend/ag;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bGU:Lcom/tencent/mm/modelfriend/ag;
 
     return-object v0
 .end method
 
-.method public static zw()Ljava/util/LinkedList;
+.method public static zJ()Ljava/util/LinkedList;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/LinkedList",
+            "<",
+            "Lcom/tencent/mm/protocal/b/acj;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 168
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
@@ -732,21 +778,21 @@
 
     .line 171
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bNE:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bGY:Ljava/util/LinkedList;
 
     return-object v0
 .end method
 
-.method public static zx()V
+.method public static zK()V
     .locals 2
 
     .prologue
     .line 175
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
@@ -763,24 +809,24 @@
 
     .line 178
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/tencent/mm/modelfriend/ah;->bNE:Ljava/util/LinkedList;
+    iput-object v1, v0, Lcom/tencent/mm/modelfriend/ah;->bGY:Ljava/util/LinkedList;
 
     .line 179
     return-void
 .end method
 
-.method public static zy()Lcom/tencent/mm/modelfriend/p;
+.method public static zL()Lcom/tencent/mm/modelfriend/p;
     .locals 3
 
     .prologue
-    .line 320
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 323
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
@@ -788,57 +834,57 @@
 
     if-nez v0, :cond_0
 
-    .line 321
+    .line 324
     new-instance v0, Lcom/tencent/mm/model/b;
 
     invoke-direct {v0}, Lcom/tencent/mm/model/b;-><init>()V
 
     throw v0
 
-    .line 323
+    .line 326
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bNC:Lcom/tencent/mm/modelfriend/p;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bGW:Lcom/tencent/mm/modelfriend/p;
 
     if-nez v0, :cond_1
 
-    .line 324
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    .line 327
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
     new-instance v1, Lcom/tencent/mm/modelfriend/p;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/tencent/mm/model/c;->bzA:Lcom/tencent/mm/az/g;
+    iget-object v2, v2, Lcom/tencent/mm/model/c;->bsy:Lcom/tencent/mm/bc/g;
 
     invoke-direct {v1, v2}, Lcom/tencent/mm/modelfriend/p;-><init>(Lcom/tencent/mm/sdk/h/d;)V
 
-    iput-object v1, v0, Lcom/tencent/mm/modelfriend/ah;->bNC:Lcom/tencent/mm/modelfriend/p;
+    iput-object v1, v0, Lcom/tencent/mm/modelfriend/ah;->bGW:Lcom/tencent/mm/modelfriend/p;
 
-    .line 326
+    .line 329
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bNC:Lcom/tencent/mm/modelfriend/p;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bGW:Lcom/tencent/mm/modelfriend/p;
 
     return-object v0
 .end method
 
-.method public static zz()Lcom/tencent/mm/modelfriend/t;
+.method public static zM()Lcom/tencent/mm/modelfriend/t;
     .locals 3
 
     .prologue
-    .line 330
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 333
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
@@ -846,54 +892,144 @@
 
     if-nez v0, :cond_0
 
-    .line 331
+    .line 334
     new-instance v0, Lcom/tencent/mm/model/b;
 
     invoke-direct {v0}, Lcom/tencent/mm/model/b;-><init>()V
 
     throw v0
 
-    .line 333
+    .line 336
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bNL:Lcom/tencent/mm/modelfriend/t;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bHf:Lcom/tencent/mm/modelfriend/t;
 
     if-nez v0, :cond_1
 
-    .line 334
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    .line 337
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
     new-instance v1, Lcom/tencent/mm/modelfriend/t;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/tencent/mm/model/c;->bzA:Lcom/tencent/mm/az/g;
+    iget-object v2, v2, Lcom/tencent/mm/model/c;->bsy:Lcom/tencent/mm/bc/g;
 
     invoke-direct {v1, v2}, Lcom/tencent/mm/modelfriend/t;-><init>(Lcom/tencent/mm/sdk/h/d;)V
 
-    iput-object v1, v0, Lcom/tencent/mm/modelfriend/ah;->bNL:Lcom/tencent/mm/modelfriend/t;
+    iput-object v1, v0, Lcom/tencent/mm/modelfriend/ah;->bHf:Lcom/tencent/mm/modelfriend/t;
 
-    .line 336
+    .line 339
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zp()Lcom/tencent/mm/modelfriend/ah;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zC()Lcom/tencent/mm/modelfriend/ah;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bNL:Lcom/tencent/mm/modelfriend/t;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ah;->bHf:Lcom/tencent/mm/modelfriend/t;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final aN(I)V
+.method public final aj(Z)V
+    .locals 2
+
+    .prologue
+    .line 302
+    const/16 v0, 0x2a
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ah;->bGX:Lcom/tencent/mm/modelfriend/e;
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/t/c$c;->a(Ljava/lang/Object;Lcom/tencent/mm/t/c;)V
+
+    .line 304
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ah;->bHg:Lcom/tencent/mm/sdk/c/c;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->d(Lcom/tencent/mm/sdk/c/c;)Z
+
+    .line 305
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ah;->bHh:Lcom/tencent/mm/sdk/c/c;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->d(Lcom/tencent/mm/sdk/c/c;)Z
+
+    .line 306
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ah;->bHe:Lcom/tencent/mm/sdk/c/c;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->d(Lcom/tencent/mm/sdk/c/c;)Z
+
+    .line 307
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ah;->bGZ:Lcom/tencent/mm/modelfriend/d;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->d(Lcom/tencent/mm/sdk/c/c;)Z
+
+    .line 308
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ah;->bHa:Lcom/tencent/mm/modelfriend/f;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->d(Lcom/tencent/mm/sdk/c/c;)Z
+
+    .line 309
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ah;->bHb:Lcom/tencent/mm/modelfriend/g;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->d(Lcom/tencent/mm/sdk/c/c;)Z
+
+    .line 311
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ah;->bHc:Lcom/tencent/mm/sdk/c/c;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->d(Lcom/tencent/mm/sdk/c/c;)Z
+
+    .line 313
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ah;->bHd:Lcom/tencent/mm/sdk/c/c;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->d(Lcom/tencent/mm/sdk/c/c;)Z
+
+    .line 315
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zD()Lcom/tencent/mm/modelfriend/c;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iVq:Lcom/tencent/mm/pluginsdk/i$b;
+
+    .line 316
+    return-void
+.end method
+
+.method public final ak(Z)V
+    .locals 0
+
+    .prologue
+    .line 320
+    return-void
+.end method
+
+.method public final cu(I)V
     .locals 0
 
     .prologue
@@ -901,199 +1037,67 @@
     return-void
 .end method
 
-.method public final ai(Z)V
+.method public final ok()V
     .locals 3
 
     .prologue
-    .line 299
-    const/16 v0, 0x2a
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ah;->bND:Lcom/tencent/mm/modelfriend/e;
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/r/c$c;->a(Ljava/lang/Object;Lcom/tencent/mm/r/c;)V
-
-    .line 301
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    const-string/jumbo v1, "SetLocalQQMobile"
-
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ah;->bna:Lcom/tencent/mm/sdk/c/c;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
-
-    .line 302
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    const-string/jumbo v1, "AddFMessageCardClick"
-
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ah;->bna:Lcom/tencent/mm/sdk/c/c;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
-
-    .line 303
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    const-string/jumbo v1, "GetContactUsernameByMobile"
-
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ah;->bNK:Lcom/tencent/mm/sdk/c/c;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
-
-    .line 304
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    const-string/jumbo v1, "BindQQ"
-
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ah;->bNF:Lcom/tencent/mm/modelfriend/d;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
-
-    .line 305
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    const-string/jumbo v1, "FMessageMobileFilter"
-
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ah;->bNG:Lcom/tencent/mm/modelfriend/f;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
-
-    .line 306
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    const-string/jumbo v1, "FMsgGetName"
-
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ah;->bNH:Lcom/tencent/mm/modelfriend/g;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
-
-    .line 308
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    const-string/jumbo v1, "CheckCanSyncAddrBook"
-
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ah;->bNI:Lcom/tencent/mm/sdk/c/c;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
-
-    .line 310
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    const-string/jumbo v1, "GetMFriend"
-
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ah;->bNJ:Lcom/tencent/mm/sdk/c/c;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
-
-    .line 312
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zq()Lcom/tencent/mm/modelfriend/c;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iyU:Lcom/tencent/mm/pluginsdk/i$b;
-
-    .line 313
-    return-void
-.end method
-
-.method public final aj(Z)V
-    .locals 0
-
-    .prologue
-    .line 317
-    return-void
-.end method
-
-.method public final lo()Ljava/util/HashMap;
-    .locals 1
-
-    .prologue
-    .line 271
-    sget-object v0, Lcom/tencent/mm/modelfriend/ah;->bly:Ljava/util/HashMap;
-
-    return-object v0
-.end method
-
-.method public final lp()V
-    .locals 4
-
-    .prologue
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     .line 183
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "SetLocalQQMobile"
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ah;->bHg:Lcom/tencent/mm/sdk/c/c;
 
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ah;->bna:Lcom/tencent/mm/sdk/c/c;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->e(Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 184
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "AddFMessageCardClick"
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ah;->bHh:Lcom/tencent/mm/sdk/c/c;
 
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ah;->bna:Lcom/tencent/mm/sdk/c/c;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->e(Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 185
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "GetContactUsernameByMobile"
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ah;->bHe:Lcom/tencent/mm/sdk/c/c;
 
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ah;->bNK:Lcom/tencent/mm/sdk/c/c;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->e(Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 186
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "BindQQ"
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ah;->bGZ:Lcom/tencent/mm/modelfriend/d;
 
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ah;->bNF:Lcom/tencent/mm/modelfriend/d;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->e(Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 187
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "FMessageMobileFilter"
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ah;->bHa:Lcom/tencent/mm/modelfriend/f;
 
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ah;->bNG:Lcom/tencent/mm/modelfriend/f;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->e(Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 188
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "FMsgGetName"
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ah;->bHb:Lcom/tencent/mm/modelfriend/g;
 
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ah;->bNH:Lcom/tencent/mm/modelfriend/g;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->e(Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 190
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "CheckCanSyncAddrBook"
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ah;->bHc:Lcom/tencent/mm/sdk/c/c;
 
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ah;->bNI:Lcom/tencent/mm/sdk/c/c;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->e(Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 192
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "GetMFriend"
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ah;->bHd:Lcom/tencent/mm/sdk/c/c;
 
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/ah;->bNJ:Lcom/tencent/mm/sdk/c/c;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->e(Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 196
     const/16 v0, 0x2a
@@ -1102,14 +1106,34 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/r/c$c;->W(Ljava/lang/Object;)V
+    invoke-static {v0}, Lcom/tencent/mm/t/c$c;->aq(Ljava/lang/Object;)V
 
     .line 197
-    iput-object v3, p0, Lcom/tencent/mm/modelfriend/ah;->bNE:Ljava/util/LinkedList;
+    iput-object v2, p0, Lcom/tencent/mm/modelfriend/ah;->bGY:Ljava/util/LinkedList;
 
     .line 199
-    sput-object v3, Lcom/tencent/mm/pluginsdk/i$a;->iyU:Lcom/tencent/mm/pluginsdk/i$b;
+    sput-object v2, Lcom/tencent/mm/pluginsdk/i$a;->iVq:Lcom/tencent/mm/pluginsdk/i$b;
 
     .line 200
     return-void
+.end method
+
+.method public final ol()Ljava/util/HashMap;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Lcom/tencent/mm/bc/g$b;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 271
+    sget-object v0, Lcom/tencent/mm/modelfriend/ah;->aZa:Ljava/util/HashMap;
+
+    return-object v0
 .end method

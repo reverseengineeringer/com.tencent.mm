@@ -1,11 +1,11 @@
 package com.tencent.mm.model.c;
 
 import com.tencent.mm.model.bd.b;
-import com.tencent.mm.platformtools.n;
-import com.tencent.mm.protocal.b.aj;
-import com.tencent.mm.r.c.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.platformtools.m;
+import com.tencent.mm.protocal.b.am;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.b;
+import com.tencent.mm.t.c.a;
 
 final class c$1
   implements bd.b
@@ -14,10 +14,10 @@ final class c$1
   
   public final void a(c.a parama)
   {
-    parama = n.a(bFh.iXv);
-    u.d("!44@/B4Tb64lLpIAhUt0Bg2QTrCYuQNsxDPAb2p/0kUCEio=", "Message content: %s" + parama);
-    parama = a.fE(parama);
-    c.uZ().f(parama, 1);
+    parama = m.a(bys.juZ);
+    v.d("MicroMsg.SubCoreNewABTest", "Message content: %s" + parama);
+    parama = a.fR(parama);
+    c.vb().f(parama, 1);
   }
 }
 

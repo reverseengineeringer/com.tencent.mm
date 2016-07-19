@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$4;->a(Lcom/tencent/mm/sdk/c/b;)Z
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$4;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gCB:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$4;
+.field final synthetic gJc:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$4;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 819
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$4$1;->gCB:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$4;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$4$1;->gJc:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 822
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$4$1;->gCB:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$4;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$4$1;->gJc:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$4;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$4;->gCA:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView$4;->gJb:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->awH()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightContainerView;->azh()V
 
     .line 824
     return-void

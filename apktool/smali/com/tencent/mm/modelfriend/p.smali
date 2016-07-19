@@ -3,17 +3,29 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/az/f$a;
+.implements Lcom/tencent/mm/bc/f$a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/h/f",
+        "<",
+        "Lcom/tencent/mm/modelfriend/o;",
+        ">;",
+        "Lcom/tencent/mm/bc/f$a;"
+    }
+.end annotation
 
 
 # static fields
-.field public static final aoY:[Ljava/lang/String;
+.field public static final bkN:[Ljava/lang/String;
 
 
 # instance fields
-.field public aoX:Lcom/tencent/mm/sdk/h/d;
+.field public bFY:Lcom/tencent/mm/sdk/h/j;
 
-.field public bME:Lcom/tencent/mm/sdk/h/j;
+.field public bkP:Lcom/tencent/mm/sdk/h/d;
 
 
 # direct methods
@@ -28,7 +40,7 @@
 
     const/4 v1, 0x0
 
-    sget-object v2, Lcom/tencent/mm/modelfriend/o;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    sget-object v2, Lcom/tencent/mm/modelfriend/o;->bjR:Lcom/tencent/mm/sdk/h/c$a;
 
     const-string/jumbo v3, "GoogleFriend"
 
@@ -38,7 +50,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/modelfriend/p;->aoY:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/modelfriend/p;->bkN:[Ljava/lang/String;
 
     return-void
 .end method
@@ -48,7 +60,7 @@
 
     .prologue
     .line 54
-    sget-object v0, Lcom/tencent/mm/modelfriend/o;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    sget-object v0, Lcom/tencent/mm/modelfriend/o;->bjR:Lcom/tencent/mm/sdk/h/c$a;
 
     const-string/jumbo v1, "GoogleFriend"
 
@@ -61,10 +73,10 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/modelfriend/p$1;-><init>(Lcom/tencent/mm/modelfriend/p;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelfriend/p;->bME:Lcom/tencent/mm/sdk/h/j;
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/p;->bFY:Lcom/tencent/mm/sdk/h/j;
 
     .line 55
-    iput-object p1, p0, Lcom/tencent/mm/modelfriend/p;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iput-object p1, p0, Lcom/tencent/mm/modelfriend/p;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     .line 57
     return-void
@@ -75,7 +87,7 @@
 
     .prologue
     .line 19
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/p;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/p;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     return-object v0
 .end method
@@ -96,12 +108,12 @@
 
     .line 76
     :cond_1
-    invoke-virtual {p1}, Lcom/tencent/mm/modelfriend/o;->lX()Landroid/content/ContentValues;
+    invoke-virtual {p1}, Lcom/tencent/mm/modelfriend/o;->kn()Landroid/content/ContentValues;
 
     move-result-object v1
 
     .line 77
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/p;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v2, p0, Lcom/tencent/mm/modelfriend/p;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v3, "GoogleFriend"
 
@@ -109,9 +121,9 @@
 
     invoke-interface {v2, v3, v4, v1}, Lcom/tencent/mm/sdk/h/d;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     .line 78
     if-lez v1, :cond_0
@@ -123,7 +135,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/az/f;)I
+.method public final a(Lcom/tencent/mm/bc/f;)I
     .locals 1
 
     .prologue
@@ -131,7 +143,7 @@
     if-eqz p1, :cond_0
 
     .line 67
-    iput-object p1, p0, Lcom/tencent/mm/modelfriend/p;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iput-object p1, p0, Lcom/tencent/mm/modelfriend/p;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     .line 69
     :cond_0
@@ -171,7 +183,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kx(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->lh(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -189,7 +201,7 @@
 
     move-result-object v0
 
-    iget-object v3, p0, Lcom/tencent/mm/modelfriend/p;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v3, p0, Lcom/tencent/mm/modelfriend/p;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const/4 v4, 0x0
 
@@ -228,12 +240,12 @@
 
     .line 152
     :cond_2
-    invoke-virtual {p1}, Lcom/tencent/mm/modelfriend/o;->lX()Landroid/content/ContentValues;
+    invoke-virtual {p1}, Lcom/tencent/mm/modelfriend/o;->kn()Landroid/content/ContentValues;
 
     move-result-object v0
 
     .line 153
-    iget-object v3, p0, Lcom/tencent/mm/modelfriend/p;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v3, p0, Lcom/tencent/mm/modelfriend/p;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v4, "GoogleFriend"
 
@@ -273,7 +285,7 @@
     if-lez v0, :cond_3
 
     .line 155
-    invoke-virtual {p0}, Lcom/tencent/mm/modelfriend/p;->Ep()V
+    invoke-virtual {p0}, Lcom/tencent/mm/modelfriend/p;->EJ()V
 
     .line 157
     :cond_3
@@ -292,18 +304,18 @@
     const-string/jumbo v0, " delete from GoogleFriend"
 
     .line 209
-    iget-object v1, p0, Lcom/tencent/mm/modelfriend/p;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/p;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v2, "GoogleFriend"
 
-    invoke-interface {v1, v2, v0}, Lcom/tencent/mm/sdk/h/d;->cj(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-interface {v1, v2, v0}, Lcom/tencent/mm/sdk/h/d;->cx(Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 210
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/p;->bME:Lcom/tencent/mm/sdk/h/j;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/p;->bFY:Lcom/tencent/mm/sdk/h/j;
 
     const/4 v1, 0x5
 
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/p;->bME:Lcom/tencent/mm/sdk/h/j;
+    iget-object v2, p0, Lcom/tencent/mm/modelfriend/p;->bFY:Lcom/tencent/mm/sdk/h/j;
 
     const-string/jumbo v3, ""
 
@@ -313,8 +325,27 @@
     return-void
 .end method
 
-.method public final g(Ljava/util/ArrayList;)Z
+.method public final getTableName()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 61
+    const-string/jumbo v0, "GoogleFriend"
+
+    return-object v0
+.end method
+
+.method public final h(Ljava/util/ArrayList;)Z
     .locals 11
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/modelfriend/o;",
+            ">;)Z"
+        }
+    .end annotation
 
     .prologue
     const/4 v5, 0x1
@@ -329,11 +360,11 @@
     if-gtz v0, :cond_0
 
     .line 83
-    const-string/jumbo v0, "!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw=="
+    const-string/jumbo v0, "MicroMsg.GoogleContact.GoogleFriendUI"
 
     const-string/jumbo v1, "insertList . list is null."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 104
     :goto_0
@@ -347,16 +378,16 @@
     const-wide/16 v0, -0x1
 
     .line 88
-    iget-object v3, p0, Lcom/tencent/mm/modelfriend/p;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v3, p0, Lcom/tencent/mm/modelfriend/p;->bkP:Lcom/tencent/mm/sdk/h/d;
 
-    instance-of v3, v3, Lcom/tencent/mm/az/g;
+    instance-of v3, v3, Lcom/tencent/mm/bc/g;
 
     if-eqz v3, :cond_3
 
     .line 89
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/p;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/p;->bkP:Lcom/tencent/mm/sdk/h/d;
 
-    check-cast v0, Lcom/tencent/mm/az/g;
+    check-cast v0, Lcom/tencent/mm/bc/g;
 
     .line 90
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -365,28 +396,28 @@
 
     invoke-virtual {v1}, Ljava/lang/Thread;->getId()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/az/g;->dH(J)J
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/bc/g;->dY(J)J
 
-    move-result-wide v1
+    move-result-wide v2
 
     .line 91
-    const-string/jumbo v3, "!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw=="
+    const-string/jumbo v1, "MicroMsg.GoogleContact.GoogleFriendUI"
 
     const-string/jumbo v6, "surround insertList in a transaction, ticket = %d"
 
     new-array v7, v5, [Ljava/lang/Object;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v8
 
     aput-object v8, v7, v4
 
-    invoke-static {v3, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    move-object v3, v0
+    move-object v1, v0
 
     .line 94
     :goto_1
@@ -414,25 +445,25 @@
 
     .line 98
     :cond_1
-    if-eqz v3, :cond_2
+    if-eqz v1, :cond_2
 
     .line 99
-    invoke-virtual {v3, v1, v2}, Lcom/tencent/mm/az/g;->dI(J)I
+    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/bc/g;->dZ(J)I
 
     .line 100
-    const-string/jumbo v0, "!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw=="
+    const-string/jumbo v0, "MicroMsg.GoogleContact.GoogleFriendUI"
 
     const-string/jumbo v1, "end updateList transaction"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 103
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/p;->bME:Lcom/tencent/mm/sdk/h/j;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/p;->bFY:Lcom/tencent/mm/sdk/h/j;
 
     const/4 v1, 0x2
 
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/p;->bME:Lcom/tencent/mm/sdk/h/j;
+    iget-object v2, p0, Lcom/tencent/mm/modelfriend/p;->bFY:Lcom/tencent/mm/sdk/h/j;
 
     const-string/jumbo v3, ""
 
@@ -444,26 +475,16 @@
     goto :goto_0
 
     :cond_3
-    move-object v3, v2
-
     move-wide v9, v0
 
-    move-wide v1, v9
+    move-object v1, v2
+
+    move-wide v2, v9
 
     goto :goto_1
 .end method
 
-.method public final getTableName()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 61
-    const-string/jumbo v0, "GoogleFriend"
-
-    return-object v0
-.end method
-
-.method public final hz(Ljava/lang/String;)Landroid/database/Cursor;
+.method public final hR(Ljava/lang/String;)Landroid/database/Cursor;
     .locals 4
 
     .prologue
@@ -514,7 +535,7 @@
 
     .line 145
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/modelfriend/p;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/p;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -539,7 +560,7 @@
     return-object v0
 .end method
 
-.method public final s(Ljava/lang/String;I)Z
+.method public final q(Ljava/lang/String;I)Z
     .locals 3
 
     .prologue
@@ -581,18 +602,18 @@
     move-result-object v0
 
     .line 186
-    iget-object v1, p0, Lcom/tencent/mm/modelfriend/p;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/p;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v2, "GoogleFriend"
 
-    invoke-interface {v1, v2, v0}, Lcom/tencent/mm/sdk/h/d;->cj(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-interface {v1, v2, v0}, Lcom/tencent/mm/sdk/h/d;->cx(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public final t(Ljava/lang/String;I)Z
+.method public final r(Ljava/lang/String;I)Z
     .locals 3
 
     .prologue
@@ -647,11 +668,11 @@
     move-result-object v0
 
     .line 193
-    iget-object v1, p0, Lcom/tencent/mm/modelfriend/p;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/p;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v2, "GoogleFriend"
 
-    invoke-interface {v1, v2, v0}, Lcom/tencent/mm/sdk/h/d;->cj(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-interface {v1, v2, v0}, Lcom/tencent/mm/sdk/h/d;->cx(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 

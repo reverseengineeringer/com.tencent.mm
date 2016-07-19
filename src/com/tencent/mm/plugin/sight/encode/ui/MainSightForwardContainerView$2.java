@@ -10,7 +10,7 @@ public final class MainSightForwardContainerView$2
   
   public final void onClick(View paramView)
   {
-    gCI.avw();
+    gJj.azm();
   }
 }
 

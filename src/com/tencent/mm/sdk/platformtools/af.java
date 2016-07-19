@@ -1,94 +1,76 @@
 package com.tencent.mm.sdk.platformtools;
 
-import android.os.Looper;
-import android.os.Message;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
-public class af
-  extends aa
+public final class af
 {
-  private static int jVp;
-  private final boolean jVZ;
-  private final int jVq;
-  private long jWa = 0L;
-  private boolean jWb = false;
-  private final a jWc;
-  
-  public af(Looper paramLooper, a parama, boolean paramBoolean)
+  public static String baf()
   {
-    super(paramLooper);
-    jWc = parama;
-    jVq = aVe();
-    jVZ = paramBoolean;
-    if (paramLooper.getThread().getName().equals("initThread")) {
-      u.e("!32@/B4Tb64lLpJ3oymw8esUtPFfOasFF0r7", "MTimerHandler can not init handler with initThread looper, stack %s", new Object[] { ay.aVJ() });
+    try
+    {
+      Object localObject = new Throwable().getStackTrace();
+      if ((localObject != null) && (localObject.length >= 3))
+      {
+        String str = localObject[2].getClassName().substring(15);
+        str = str + ":" + localObject[2].getMethodName();
+        localObject = str + "(" + localObject[2].getLineNumber() + ")";
+        return (String)localObject;
+      }
     }
-  }
-  
-  public af(a parama, boolean paramBoolean)
-  {
-    jWc = parama;
-    jVq = aVe();
-    jVZ = paramBoolean;
-    if (getLooper().getThread().getName().equals("initThread")) {
-      u.e("!32@/B4Tb64lLpJ3oymw8esUtPFfOasFF0r7", "MTimerHandler can not init handler with initThread looper, stack %s", new Object[] { ay.aVJ() });
+    catch (Throwable localThrowable)
+    {
+      v.e("MicroMsg.Util.MMStack", "getCaller e:%s", new Object[] { f(localThrowable) });
+      return "";
     }
+    return "";
   }
   
-  private static int aVe()
+  public static String bag()
   {
-    if (jVp >= 8192) {
-      jVp = 0;
+    StackTraceElement[] arrayOfStackTraceElement = new Throwable().getStackTrace();
+    if ((arrayOfStackTraceElement == null) || (arrayOfStackTraceElement.length < 4)) {
+      return "";
     }
-    int i = jVp + 1;
-    jVp = i;
-    return i;
-  }
-  
-  public final void aUF()
-  {
-    removeMessages(jVq);
-    jWb = true;
-  }
-  
-  public final boolean aVf()
-  {
-    return (jWb) || (!hasMessages(jVq));
-  }
-  
-  public final void ds(long paramLong)
-  {
-    jWa = paramLong;
-    aUF();
-    jWb = false;
-    sendEmptyMessageDelayed(jVq, paramLong);
-  }
-  
-  protected void finalize()
-  {
-    aUF();
-    super.finalize();
-  }
-  
-  public void handleMessage(Message paramMessage)
-  {
-    if ((what != jVq) || (jWc == null)) {}
-    while ((!jWc.lj()) || (!jVZ) || (jWb)) {
-      return;
+    StringBuilder localStringBuilder = new StringBuilder();
+    int i = 3;
+    while (i < arrayOfStackTraceElement.length)
+    {
+      if ((arrayOfStackTraceElement[i].getClassName().contains("com.tencent.mm")) && (!arrayOfStackTraceElement[i].getClassName().contains("sdk.platformtools.Log")))
+      {
+        localStringBuilder.append("[");
+        localStringBuilder.append(arrayOfStackTraceElement[i].getClassName().substring(15));
+        localStringBuilder.append(":");
+        localStringBuilder.append(arrayOfStackTraceElement[i].getMethodName());
+        localStringBuilder.append("(" + arrayOfStackTraceElement[i].getLineNumber() + ")]");
+      }
+      i += 1;
     }
-    sendEmptyMessageDelayed(jVq, jWa);
+    return localStringBuilder.toString();
   }
   
-  public String toString()
+  public static String f(Throwable paramThrowable)
   {
-    if (jWc == null) {
-      return "MTimerHandler(" + getClass().getName() + "){mCallBack = null}";
+    if (paramThrowable == null) {
+      return "";
     }
-    return "MTimerHandler(" + getClass().getName() + "){mCallBack = " + jWc.getClass().getName() + "}";
+    try
+    {
+      ByteArrayOutputStream localByteArrayOutputStream = new ByteArrayOutputStream();
+      PrintStream localPrintStream = new PrintStream(localByteArrayOutputStream);
+      paramThrowable.printStackTrace(localPrintStream);
+      paramThrowable = localByteArrayOutputStream.toString();
+      localPrintStream.close();
+      localByteArrayOutputStream.close();
+      return paramThrowable;
+    }
+    catch (Exception paramThrowable) {}
+    return "";
   }
   
-  public static abstract interface a
+  public final String toString()
   {
-    public abstract boolean lj();
+    return bag();
   }
 }
 

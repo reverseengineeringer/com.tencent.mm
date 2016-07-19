@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/SimpleLoginUI$3;->FY()V
+    value = Lcom/tencent/mm/ui/account/SimpleLoginUI$3;->Gv()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kwM:Lcom/tencent/mm/ui/account/SimpleLoginUI$3;
+.field final synthetic kVT:Lcom/tencent/mm/ui/account/SimpleLoginUI$3;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 435
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$3$1;->kwM:Lcom/tencent/mm/ui/account/SimpleLoginUI$3;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$3$1;->kVT:Lcom/tencent/mm/ui/account/SimpleLoginUI$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,14 +36,14 @@
 
 
 # virtual methods
-.method public final aEY()V
+.method public final oq()V
     .locals 1
 
     .prologue
     .line 439
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$3$1;->kwM:Lcom/tencent/mm/ui/account/SimpleLoginUI$3;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$3$1;->kVT:Lcom/tencent/mm/ui/account/SimpleLoginUI$3;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/SimpleLoginUI$3;->kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/SimpleLoginUI$3;->kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/account/SimpleLoginUI;->finish()V
 

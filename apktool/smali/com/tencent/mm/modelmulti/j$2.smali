@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/af$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ah$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/modelmulti/j;->AO()Z
+    value = Lcom/tencent/mm/modelmulti/j;->Ba()Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic bVH:Lcom/tencent/mm/modelmulti/j;
+.field final synthetic bPi:Lcom/tencent/mm/modelmulti/j;
 
-.field final synthetic bVI:Lcom/tencent/mm/modelmulti/j$a;
+.field final synthetic bPj:Lcom/tencent/mm/modelmulti/j$a;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 323
-    iput-object p1, p0, Lcom/tencent/mm/modelmulti/j$2;->bVH:Lcom/tencent/mm/modelmulti/j;
+    .line 327
+    iput-object p1, p0, Lcom/tencent/mm/modelmulti/j$2;->bPi:Lcom/tencent/mm/modelmulti/j;
 
-    iput-object p2, p0, Lcom/tencent/mm/modelmulti/j$2;->bVI:Lcom/tencent/mm/modelmulti/j$a;
+    iput-object p2, p0, Lcom/tencent/mm/modelmulti/j$2;->bPj:Lcom/tencent/mm/modelmulti/j$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,19 +40,19 @@
 
 
 # virtual methods
-.method public final lj()Z
+.method public final jK()Z
     .locals 11
 
     .prologue
     const/4 v6, 0x0
 
-    .line 327
-    iget-object v0, p0, Lcom/tencent/mm/modelmulti/j$2;->bVH:Lcom/tencent/mm/modelmulti/j;
+    .line 331
+    iget-object v0, p0, Lcom/tencent/mm/modelmulti/j$2;->bPi:Lcom/tencent/mm/modelmulti/j;
 
     invoke-static {v0}, Lcom/tencent/mm/modelmulti/j;->a(Lcom/tencent/mm/modelmulti/j;)Z
 
-    .line 328
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 332
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0x63
 
@@ -60,16 +60,16 @@
 
     const-wide/16 v4, 0x1
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
-    .line 329
-    iget-object v4, p0, Lcom/tencent/mm/modelmulti/j$2;->bVH:Lcom/tencent/mm/modelmulti/j;
+    .line 333
+    iget-object v4, p0, Lcom/tencent/mm/modelmulti/j$2;->bPi:Lcom/tencent/mm/modelmulti/j;
 
     const/4 v5, -0x1
 
     const-string/jumbo v8, ""
 
-    iget-object v9, p0, Lcom/tencent/mm/modelmulti/j$2;->bVI:Lcom/tencent/mm/modelmulti/j$a;
+    iget-object v9, p0, Lcom/tencent/mm/modelmulti/j$2;->bPj:Lcom/tencent/mm/modelmulti/j$a;
 
     const/4 v10, 0x0
 
@@ -77,6 +77,6 @@
 
     invoke-virtual/range {v4 .. v10}, Lcom/tencent/mm/modelmulti/j;->a(IIILjava/lang/String;Lcom/tencent/mm/network/o;[B)V
 
-    .line 330
+    .line 334
     return v6
 .end method

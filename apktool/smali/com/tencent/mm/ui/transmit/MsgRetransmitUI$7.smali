@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lAT:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
+.field final synthetic mbK:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 639
-    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$7;->lAT:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
+    .line 574
+    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$7;->mbK:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,25 +40,11 @@
     .locals 1
 
     .prologue
-    .line 643
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$7;->lAT:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
+    .line 578
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$7;->mbK:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;->a(Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;)Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;->finish()V
 
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 644
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI$7;->lAT:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;->a(Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;)Lcom/tencent/mm/ui/base/h;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->cancel()V
-
-    .line 646
-    :cond_0
+    .line 579
     return-void
 .end method

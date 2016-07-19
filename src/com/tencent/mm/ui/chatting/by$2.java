@@ -1,25 +1,37 @@
 package com.tencent.mm.ui.chatting;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.tencent.mm.d.b.bg;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.z.a;
+import com.tencent.mm.model.z.g;
+import com.tencent.mm.pluginsdk.model.app.z;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 
 final class by$2
-  implements View.OnClickListener
+  implements d
 {
-  by$2(by paramby, ag paramag, int paramInt) {}
+  by$2(by paramby, ai paramai, String paramString, int paramInt) {}
   
-  public final void onClick(View paramView)
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    if (t.kz(kUW.field_imgPath))
-    {
-      u.d("!56@/B4Tb64lLpKwUcOR+EdWcgrQWCeRaP+fpwTv6y+mNLvWE+WR3rr02g==", "filename is null");
-      return;
+    v.d("MicroMsg.ChattingItemVoiceRemindConfirm", "errType " + paramInt1 + " errCode " + paramInt2 + "  scene " + paramj.getType());
+    boolean bool = false;
+    if (z.a.btz != null) {
+      bool = z.a.btz.G(lvc.field_msgId);
     }
-    kVe.kTe.kSE.kVo.d(kUX, kUW);
+    if ((!bool) && (paramInt1 == 0) && (paramInt2 == 0) && (((z)paramj).getMediaId().equals(bEb)))
+    {
+      paramString = ai.E(lvc);
+      paramString.cs(lvc.field_reserved);
+      paramString.t(-1L);
+      lve.ltl.lsL.lvu.c(lvd, paramString);
+    }
+    ah.tF().b(221, lve.bWN);
+    lve.bWN = null;
   }
 }
 

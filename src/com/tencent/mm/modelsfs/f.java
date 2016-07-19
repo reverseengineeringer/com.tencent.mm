@@ -1,6 +1,6 @@
 package com.tencent.mm.modelsfs;
 
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 public final class f
 {
@@ -12,12 +12,12 @@ public final class f
     return String.format(paramString + ";?enc=%d", new Object[] { Long.valueOf(paramLong) });
   }
   
-  public static boolean iT(String paramString)
+  public static boolean jk(String paramString)
   {
     return paramString.lastIndexOf(";?enc=") > 0;
   }
   
-  public static String iU(String paramString)
+  public static String jl(String paramString)
   {
     int i = paramString.lastIndexOf(";?enc=");
     String str = paramString;
@@ -27,11 +27,11 @@ public final class f
     return str;
   }
   
-  public static long iV(String paramString)
+  public static long jm(String paramString)
   {
     int i = paramString.lastIndexOf(";?enc=");
     if (i > 0) {
-      return ay.Ds(paramString.substring(i + 6));
+      return be.FH(paramString.substring(i + 6));
     }
     return 0L;
   }

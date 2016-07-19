@@ -8,18 +8,18 @@ import java.util.ArrayList;
 class BroadCastData
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
-  ArrayList fTY = new ArrayList();
-  ArrayList fTZ = new ArrayList();
-  ArrayList fUa = new ArrayList();
+  public static final Parcelable.Creator<BroadCastData> CREATOR = new Parcelable.Creator() {};
+  ArrayList<KVReportDataInfo> gds = new ArrayList();
+  ArrayList<StIDKeyDataInfo> gdt = new ArrayList();
+  ArrayList<GroupIDKeyDataInfo> gdu = new ArrayList();
   
   public BroadCastData() {}
   
   protected BroadCastData(Parcel paramParcel)
   {
-    paramParcel.readTypedList(fTY, KVReportDataInfo.CREATOR);
-    paramParcel.readTypedList(fTZ, StIDKeyDataInfo.CREATOR);
-    paramParcel.readTypedList(fUa, GroupIDKeyDataInfo.CREATOR);
+    paramParcel.readTypedList(gds, KVReportDataInfo.CREATOR);
+    paramParcel.readTypedList(gdt, StIDKeyDataInfo.CREATOR);
+    paramParcel.readTypedList(gdu, GroupIDKeyDataInfo.CREATOR);
   }
   
   public BroadCastData(BroadCastData paramBroadCastData)
@@ -27,9 +27,9 @@ class BroadCastData
     if (paramBroadCastData == null) {
       return;
     }
-    fTY = new ArrayList(fTY);
-    fTZ = new ArrayList(fTZ);
-    fUa = new ArrayList(fUa);
+    gds = new ArrayList(gds);
+    gdt = new ArrayList(gdt);
+    gdu = new ArrayList(gdu);
   }
   
   public int describeContents()
@@ -39,9 +39,9 @@ class BroadCastData
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    paramParcel.writeTypedList(fTY);
-    paramParcel.writeTypedList(fTZ);
-    paramParcel.writeTypedList(fUa);
+    paramParcel.writeTypedList(gds);
+    paramParcel.writeTypedList(gdt);
+    paramParcel.writeTypedList(gdu);
   }
 }
 

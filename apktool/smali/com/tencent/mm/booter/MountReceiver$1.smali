@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/booter/MountReceiver$1;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.super Lcom/tencent/mm/sdk/platformtools/ac;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic bmE:Lcom/tencent/mm/booter/MountReceiver;
+.field final synthetic bak:Lcom/tencent/mm/booter/MountReceiver;
 
 
 # direct methods
@@ -24,9 +24,9 @@
 
     .prologue
     .line 32
-    iput-object p1, p0, Lcom/tencent/mm/booter/MountReceiver$1;->bmE:Lcom/tencent/mm/booter/MountReceiver;
+    iput-object p1, p0, Lcom/tencent/mm/booter/MountReceiver$1;->bak:Lcom/tencent/mm/booter/MountReceiver;
 
-    invoke-direct {p0, p2}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {p0, p2}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
     return-void
 .end method
@@ -42,7 +42,7 @@
     const/4 v1, 0x0
 
     .line 35
-    const-string/jumbo v2, "!32@/B4Tb64lLpL+FWZRD8Ro5jXlpJB9munM"
+    const-string/jumbo v2, "MicroMsg.MountReceiver"
 
     const-string/jumbo v3, "dkmount action:%s hasuin:%b ContextNull:%b SdcardFull:%b"
 
@@ -50,7 +50,7 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    iget-object v5, p0, Lcom/tencent/mm/booter/MountReceiver$1;->bmE:Lcom/tencent/mm/booter/MountReceiver;
+    iget-object v5, p0, Lcom/tencent/mm/booter/MountReceiver$1;->bak:Lcom/tencent/mm/booter/MountReceiver;
 
     invoke-static {v5}, Lcom/tencent/mm/booter/MountReceiver;->a(Lcom/tencent/mm/booter/MountReceiver;)Ljava/lang/String;
 
@@ -58,7 +58,7 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v5
 
@@ -70,7 +70,7 @@
 
     const/4 v5, 0x2
 
-    iget-object v6, p0, Lcom/tencent/mm/booter/MountReceiver$1;->bmE:Lcom/tencent/mm/booter/MountReceiver;
+    iget-object v6, p0, Lcom/tencent/mm/booter/MountReceiver$1;->bak:Lcom/tencent/mm/booter/MountReceiver;
 
     invoke-static {v6}, Lcom/tencent/mm/booter/MountReceiver;->b(Lcom/tencent/mm/booter/MountReceiver;)Landroid/content/Context;
 
@@ -87,7 +87,7 @@
 
     const/4 v0, 0x3
 
-    invoke-static {}, Lcom/tencent/mm/platformtools/t;->FV()Z
+    invoke-static {}, Lcom/tencent/mm/platformtools/s;->Gs()Z
 
     move-result v1
 
@@ -97,10 +97,10 @@
 
     aput-object v1, v4, v0
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 37
-    iget-object v0, p0, Lcom/tencent/mm/booter/MountReceiver$1;->bmE:Lcom/tencent/mm/booter/MountReceiver;
+    iget-object v0, p0, Lcom/tencent/mm/booter/MountReceiver$1;->bak:Lcom/tencent/mm/booter/MountReceiver;
 
     invoke-static {v0}, Lcom/tencent/mm/booter/MountReceiver;->b(Lcom/tencent/mm/booter/MountReceiver;)Landroid/content/Context;
 
@@ -121,20 +121,20 @@
 
     .line 40
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/platformtools/t;->FV()Z
+    invoke-static {}, Lcom/tencent/mm/platformtools/s;->Gs()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 43
-    iget-object v0, p0, Lcom/tencent/mm/booter/MountReceiver$1;->bmE:Lcom/tencent/mm/booter/MountReceiver;
+    iget-object v0, p0, Lcom/tencent/mm/booter/MountReceiver$1;->bak:Lcom/tencent/mm/booter/MountReceiver;
 
     invoke-static {v0}, Lcom/tencent/mm/booter/MountReceiver;->b(Lcom/tencent/mm/booter/MountReceiver;)Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/s;->en(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/s;->eq(Landroid/content/Context;)V
 
     goto :goto_1
 .end method

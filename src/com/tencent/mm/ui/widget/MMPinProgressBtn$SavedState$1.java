@@ -3,7 +3,7 @@ package com.tencent.mm.ui.widget;
 import android.os.Parcelable.Creator;
 
 final class MMPinProgressBtn$SavedState$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<MMPinProgressBtn.SavedState>
 {}
 
 /* Location:

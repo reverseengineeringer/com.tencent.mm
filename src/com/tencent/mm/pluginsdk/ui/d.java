@@ -8,8 +8,8 @@ import java.util.ArrayList;
 public final class d
   implements AbsListView.OnScrollListener
 {
-  private AbsListView.OnScrollListener iFY;
-  private ArrayList iFZ = new ArrayList();
+  private AbsListView.OnScrollListener jcT;
+  private ArrayList<WeakReference<a>> jcU = new ArrayList();
   
   public d()
   {
@@ -18,15 +18,15 @@ public final class d
   
   public d(AbsListView.OnScrollListener paramOnScrollListener)
   {
-    iFY = paramOnScrollListener;
+    jcT = paramOnScrollListener;
   }
   
-  private void gk(boolean paramBoolean)
+  private void gI(boolean paramBoolean)
   {
     int i = 0;
-    if (i < iFZ.size())
+    if (i < jcU.size())
     {
-      Object localObject = (WeakReference)iFZ.get(i);
+      Object localObject = (WeakReference)jcU.get(i);
       if (localObject != null)
       {
         localObject = (a)((WeakReference)localObject).get();
@@ -38,37 +38,37 @@ public final class d
       {
         i += 1;
         break;
-        iFZ.remove(i);
+        jcU.remove(i);
         continue;
-        iFZ.remove(i);
+        jcU.remove(i);
       }
     }
   }
   
   public final void a(a parama)
   {
-    iFZ.add(new WeakReference(parama));
+    jcU.add(new WeakReference(parama));
   }
   
   public final void onScroll(AbsListView paramAbsListView, int paramInt1, int paramInt2, int paramInt3)
   {
-    if (iFY != null) {
-      iFY.onScroll(paramAbsListView, paramInt1, paramInt2, paramInt3);
+    if (jcT != null) {
+      jcT.onScroll(paramAbsListView, paramInt1, paramInt2, paramInt3);
     }
   }
   
   public final void onScrollStateChanged(AbsListView paramAbsListView, int paramInt)
   {
     if (paramInt == 2) {
-      gk(true);
+      gI(true);
     }
     for (;;)
     {
-      if (iFY != null) {
-        iFY.onScrollStateChanged(paramAbsListView, paramInt);
+      if (jcT != null) {
+        jcT.onScrollStateChanged(paramAbsListView, paramInt);
       }
       return;
-      gk(false);
+      gI(false);
     }
   }
   

@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.tools.m;
 
 final class SnsMsgUI$12
@@ -12,14 +12,14 @@ final class SnsMsgUI$12
 {
   SnsMsgUI$12(SnsMsgUI paramSnsMsgUI, m paramm) {}
   
-  public final boolean onItemLongClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final boolean onItemLongClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    if (paramInt < SnsMsgUI.b(hfU).getHeaderViewsCount())
+    if (paramInt < SnsMsgUI.b(huL).getHeaderViewsCount())
     {
-      u.w("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "on header view long click, ignore");
+      v.w("MicroMsg.SnsMsgUI", "on header view long click, ignore");
       return true;
     }
-    cHz.a(paramView, paramInt, paramLong, hfU, SnsMsgUI.i(hfU));
+    cED.a(paramView, paramInt, paramLong, huL, SnsMsgUI.i(huL));
     return true;
   }
 }

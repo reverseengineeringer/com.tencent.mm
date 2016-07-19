@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="right" style="@style/ChattingUIContent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/bg" android:layout_width="153.0dip" android:layout_height="188.0dip">
+        <ImageView android:layout_width="153.0dip" android:layout_height="188.0dip" android:src="@drawable/akv" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/a0s" android:paddingLeft="0.0dip" android:paddingTop="0.0dip" android:paddingRight="5.0dip" android:paddingBottom="0.0dip" android:layout_width="153.0dip" android:layout_height="188.0dip">
+            <ImageView android:layout_width="83.0dip" android:layout_height="33.0dip" android:layout_marginTop="40.0dip" android:src="@drawable/al2" />
+            <RelativeLayout android:gravity="bottom|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="10.0dip" android:layout_weight="1.0">
+                <com.tencent.mm.ui.base.MMTextView android:textSize="14.0dip" android:textColor="#ffffe2b1" android:ellipsize="end" android:id="@id/a1e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:layout_marginBottom="16.0dip" android:singleLine="true" android:includeFontPadding="false" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <include layout="@layout/chatting_item_avatar_to" />
+</LinearLayout>

@@ -13,9 +13,9 @@ final class ModRemarkNameUI$5
   
   public final void onClick(View paramView)
   {
-    ModRemarkNameUI.a(llQ).setText(ljX.yj());
-    ModRemarkNameUI.a(llQ).setSelection(ModRemarkNameUI.a(llQ).getText().length());
-    ModRemarkNameUI.k(llQ).setVisibility(8);
+    ModRemarkNameUI.a(lMe).setText(lKi.yv());
+    ModRemarkNameUI.a(lMe).setSelection(ModRemarkNameUI.a(lMe).getText().length());
+    ModRemarkNameUI.k(lMe).setVisibility(8);
   }
 }
 

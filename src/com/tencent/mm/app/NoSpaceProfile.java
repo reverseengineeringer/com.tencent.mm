@@ -1,14 +1,15 @@
 package com.tencent.mm.app;
 
+import com.tencent.mm.compatible.loader.e;
 import com.tencent.mm.compatible.util.i;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.xlog.Xlog;
 
 public class NoSpaceProfile
-  extends com.tencent.mm.compatible.loader.h
+  extends e
 {
-  public static final String alg = y.getPackageName() + ":nospace";
+  public static final String Yf = aa.getPackageName() + ":nospace";
   
   public final void aQ() {}
   
@@ -16,10 +17,10 @@ public class NoSpaceProfile
   {
     i.b("stlport_shared", PusherProfile.class.getClassLoader());
     Xlog.init();
-    h.aP(alg);
+    g.aU(Yf);
     i.setupBrokenLibraryHandler();
-    ay.dS(y.getContext());
-    MMApplicationWrapper.a(btM);
+    be.dT(aa.getContext());
+    MMApplicationWrapper.initSVGPreload(bhP);
   }
 }
 

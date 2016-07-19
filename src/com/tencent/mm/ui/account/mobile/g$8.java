@@ -13,12 +13,12 @@ final class g$8
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    b.kC("L200_100");
-    paramDialogInterface = new Intent(kyD.kyy, MobileInputUI.class);
+    b.ll("L200_100");
+    paramDialogInterface = new Intent(kXK.kXF, MobileInputUI.class);
     paramDialogInterface.putExtra("mobile_input_purpose", 1);
     paramDialogInterface.addFlags(67108864);
-    kyD.kyy.startActivity(paramDialogInterface);
-    b.kD(ah.tx() + "," + getClass().getName() + ",L200_900_phone," + ah.fd("L200_900_phone") + ",2");
+    kXK.kXF.startActivity(paramDialogInterface);
+    b.lm(ah.ty() + "," + getClass().getName() + ",L200_900_phone," + ah.fq("L200_900_phone") + ",2");
   }
 }
 

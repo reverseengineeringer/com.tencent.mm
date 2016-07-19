@@ -1,216 +1,457 @@
 .class final Lct/bo;
-.super Lct/bn;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field private static final a:Ljava/util/Comparator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Comparator",
+            "<",
+            "Landroid/net/wifi/ScanResult;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field private a:Landroid/util/SparseArray;
+.field private b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/CopyOnWriteArrayList",
+            "<",
+            "Landroid/net/wifi/ScanResult;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private c:J
+
+.field private d:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method static constructor <clinit>()V
     .locals 1
 
     .prologue
-    .line 19
-    const-string/jumbo v0, "check cell"
+    .line 16
+    new-instance v0, Lct/bo$1;
 
-    invoke-direct {p0, p1, v0}, Lct/bn;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0}, Lct/bo$1;-><init>()V
 
-    .line 20
-    new-instance v0, Landroid/util/SparseArray;
+    sput-object v0, Lct/bo;->a:Ljava/util/Comparator;
 
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
-
-    iput-object v0, p0, Lct/bo;->a:Landroid/util/SparseArray;
-
-    .line 21
     return-void
+.end method
+
+.method constructor <init>()V
+    .locals 2
+
+    .prologue
+    .line 33
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 34
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object v0, p0, Lct/bo;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    .line 35
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lct/bo;->c:J
+
+    .line 36
+    return-void
+.end method
+
+.method private constructor <init>(Ljava/util/List;JJ)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Landroid/net/wifi/ScanResult;",
+            ">;JJ)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 38
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 39
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>(Ljava/util/Collection;)V
+
+    iput-object v0, p0, Lct/bo;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    .line 40
+    iget-object v0, p0, Lct/bo;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-static {v0}, Lct/bo;->a(Ljava/util/concurrent/CopyOnWriteArrayList;)Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lct/bo;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    .line 41
+    iput-wide p2, p0, Lct/bo;->c:J
+
+    .line 42
+    iput-wide p4, p0, Lct/bo;->d:J
+
+    .line 43
+    return-void
+.end method
+
+.method private static a(Ljava/util/concurrent/CopyOnWriteArrayList;)Ljava/util/concurrent/CopyOnWriteArrayList;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/concurrent/CopyOnWriteArrayList",
+            "<",
+            "Landroid/net/wifi/ScanResult;",
+            ">;)",
+            "Ljava/util/concurrent/CopyOnWriteArrayList",
+            "<",
+            "Landroid/net/wifi/ScanResult;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 55
+    :try_start_0
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 56
+    sget-object v0, Lct/bo;->a:Ljava/util/Comparator;
+
+    invoke-static {v1, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+
+    .line 57
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>(Ljava/util/Collection;)V
+    :try_end_0
+    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object p0, v0
+
+    .line 62
+    :goto_0
+    return-object p0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+
+    .line 61
+    :catch_1
+    move-exception v0
+
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
-
-    .prologue
-    .line 25
-    invoke-super {p0}, Lct/bn;->a()V
-
-    .line 26
-    iget-object v0, p0, Lct/bo;->a:Landroid/util/SparseArray;
-
-    invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
-
-    .line 27
-    return-void
-.end method
-
-.method protected final a(Landroid/os/Bundle;)Z
+.method public final a(Lct/bo;)Lct/bo;
     .locals 10
+    .param p1    # Lct/bo;
+        .annotation build Lorg/eclipse/jdt/annotation/Nullable;
+        .end annotation
+    .end param
 
     .prologue
-    const/4 v8, 0x1
+    const/4 v3, 0x1
 
-    const/4 v9, 0x0
+    const/4 v4, 0x0
 
-    .line 34
-    const-string/jumbo v0, "lac"
+    .line 124
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+    iget-object v0, p1, Lct/bo;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    move-result v1
-
-    .line 35
-    const-string/jumbo v0, "cid"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v3
-
-    .line 37
-    const-string/jumbo v0, "location"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v0
-
-    move-object v2, v0
-
-    check-cast v2, Landroid/location/Location;
-
-    .line 38
-    if-eqz v1, :cond_0
-
-    if-nez v3, :cond_1
-
-    :cond_0
-    move v0, v9
-
-    .line 59
-    :goto_0
-    return v0
-
-    .line 42
-    :cond_1
-    add-int/lit8 v0, v3, 0x10
-
-    shl-int/2addr v1, v0
-
-    .line 43
-    iget-object v0, p0, Lct/bo;->a:Landroid/util/SparseArray;
-
-    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v6, v0
-
-    check-cast v6, Landroid/util/Pair;
-
-    .line 45
-    if-nez v6, :cond_3
-
-    .line 46
-    invoke-virtual {v2}, Landroid/location/Location;->getLatitude()D
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v0
-
-    invoke-virtual {v2}, Landroid/location/Location;->getLongitude()D
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
-
-    move-result-object v0
-
-    .line 47
-    iget-object v2, p0, Lct/bo;->a:Landroid/util/SparseArray;
-
-    invoke-virtual {v2, v1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    .line 48
-    iget-object v0, p0, Lct/bo;->a:Landroid/util/SparseArray;
-
-    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->size()I
 
     move-result v0
 
-    const/16 v1, 0x140
+    if-nez v0, :cond_1
 
-    if-le v0, v1, :cond_2
+    :cond_0
+    move v0, v3
 
-    iget-object v0, p0, Lct/bo;->a:Landroid/util/SparseArray;
+    :goto_0
+    if-eqz v0, :cond_2
 
-    iget-object v1, p0, Lct/bo;->a:Landroid/util/SparseArray;
+    .line 125
+    new-instance v0, Lct/bo;
 
-    invoke-virtual {v1, v9}, Landroid/util/SparseArray;->keyAt(I)I
+    iget-object v1, p0, Lct/bo;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    move-result v1
+    iget-wide v2, p0, Lct/bo;->c:J
 
-    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->delete(I)V
+    iget-wide v4, p0, Lct/bo;->d:J
 
-    :cond_2
-    move v0, v8
+    invoke-direct/range {v0 .. v5}, Lct/bo;-><init>(Ljava/util/List;JJ)V
 
-    .line 49
+    .line 151
+    :goto_1
+    return-object v0
+
+    :cond_1
+    move v0, v4
+
+    .line 124
     goto :goto_0
 
-    .line 52
-    :cond_3
-    invoke-virtual {v2}, Landroid/location/Location;->getLatitude()D
+    .line 127
+    :cond_2
+    iget-wide v0, p0, Lct/bo;->d:J
 
-    move-result-wide v0
+    iget-wide v6, p1, Lct/bo;->d:J
 
-    .line 53
-    invoke-virtual {v2}, Landroid/location/Location;->getLongitude()D
+    cmp-long v0, v0, v6
 
-    move-result-wide v2
+    if-lez v0, :cond_5
 
-    .line 54
-    iget-object v4, v6, Landroid/util/Pair;->first:Ljava/lang/Object;
+    .line 131
+    iget-object v1, p1, Lct/bo;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    check-cast v4, Ljava/lang/Double;
+    .line 132
+    iget-object v0, p0, Lct/bo;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-virtual {v4}, Ljava/lang/Double;->doubleValue()D
+    .line 139
+    :goto_2
+    new-instance v2, Lct/bo;
 
-    move-result-wide v4
+    invoke-direct {v2}, Lct/bo;-><init>()V
 
-    .line 55
-    iget-object v6, v6, Landroid/util/Pair;->second:Ljava/lang/Object;
+    .line 140
+    iget-object v5, v2, Lct/bo;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    check-cast v6, Ljava/lang/Double;
+    .line 142
+    iget-wide v6, p0, Lct/bo;->c:J
 
-    invoke-virtual {v6}, Ljava/lang/Double;->doubleValue()D
+    iget-wide v8, p1, Lct/bo;->c:J
+
+    invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v6
 
-    .line 56
-    invoke-static/range {v0 .. v7}, Lct/b$a;->a(DDDD)D
+    iput-wide v6, v2, Lct/bo;->c:J
 
-    move-result-wide v0
+    .line 143
+    iget-wide v6, p0, Lct/bo;->d:J
 
-    .line 59
-    const-wide v2, 0x40b7700000000000L    # 6000.0
+    iget-wide v8, p1, Lct/bo;->d:J
 
-    cmpg-double v0, v0, v2
+    invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->max(JJ)J
 
-    if-gez v0, :cond_4
+    move-result-wide v6
 
-    move v0, v8
+    iput-wide v6, v2, Lct/bo;->d:J
 
-    goto :goto_0
+    .line 145
+    invoke-virtual {v5, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->addAll(Ljava/util/Collection;)Z
+
+    .line 146
+    invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v6
+
+    :cond_3
+    :goto_3
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, Landroid/net/wifi/ScanResult;
+
+    .line 147
+    iget-object v7, v1, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
+
+    iget-object v0, v2, Lct/bo;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v8
 
     :cond_4
-    move v0, v9
+    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
 
-    goto :goto_0
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/net/wifi/ScanResult;
+
+    iget-object v0, v0, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
+
+    invoke-virtual {v0, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    move v0, v3
+
+    :goto_4
+    if-nez v0, :cond_3
+
+    .line 148
+    invoke-virtual {v5, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_3
+
+    .line 135
+    :cond_5
+    iget-object v1, p0, Lct/bo;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    .line 136
+    iget-object v0, p1, Lct/bo;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    goto :goto_2
+
+    :cond_6
+    move v0, v4
+
+    .line 147
+    goto :goto_4
+
+    :cond_7
+    move-object v0, v2
+
+    .line 151
+    goto :goto_1
+.end method
+
+.method public final a()Ljava/util/concurrent/CopyOnWriteArrayList;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/concurrent/CopyOnWriteArrayList",
+            "<",
+            "Landroid/net/wifi/ScanResult;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 74
+    iget-object v0, p0, Lct/bo;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    return-object v0
+.end method
+
+.method public final a(J)V
+    .locals 1
+
+    .prologue
+    .line 65
+    iput-wide p1, p0, Lct/bo;->c:J
+
+    .line 66
+    return-void
+.end method
+
+.method public final a(Ljava/util/List;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Landroid/net/wifi/ScanResult;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 46
+    iget-object v0, p0, Lct/bo;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->clear()V
+
+    .line 47
+    iget-object v0, p0, Lct/bo;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->addAll(Ljava/util/Collection;)Z
+
+    .line 48
+    iget-object v0, p0, Lct/bo;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-static {v0}, Lct/bo;->a(Ljava/util/concurrent/CopyOnWriteArrayList;)Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lct/bo;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    .line 50
+    return-void
+.end method
+
+.method public final b()V
+    .locals 1
+
+    .prologue
+    .line 78
+    iget-object v0, p0, Lct/bo;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->clear()V
+
+    .line 79
+    return-void
+.end method
+
+.method public final b(J)V
+    .locals 1
+
+    .prologue
+    .line 69
+    iput-wide p1, p0, Lct/bo;->d:J
+
+    .line 70
+    return-void
+.end method
+
+.method public final c()I
+    .locals 1
+
+    .prologue
+    .line 114
+    iget-object v0, p0, Lct/bo;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->size()I
+
+    move-result v0
+
+    return v0
 .end method

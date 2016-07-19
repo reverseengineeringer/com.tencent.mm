@@ -1,19 +1,17 @@
 package com.tencent.mm.ui.chatting;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.tencent.mm.ui.base.o;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.tencent.mm.aq.q;
 
 final class cn$6
-  implements View.OnClickListener
+  implements DialogInterface.OnClickListener
 {
-  cn$6(cn paramcn) {}
+  cn$6(cn paramcn, q paramq) {}
   
-  public final void onClick(View paramView)
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((kWm.cWm != null) && (kWm.cWm.isShowing())) {
-      kWm.cWm.dismiss();
-    }
+    cn.a(lwl, lwm.cbm, lwm.getFileName());
   }
 }
 

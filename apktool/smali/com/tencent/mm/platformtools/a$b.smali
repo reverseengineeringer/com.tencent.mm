@@ -15,42 +15,53 @@
 
 
 # direct methods
-.method public static kq(Ljava/lang/String;)I
-    .locals 3
+.method public static a(Landroid/widget/ListView;)V
+    .locals 4
 
     .prologue
-    const/4 v0, 0x0
+    const/16 v3, 0xa
 
-    .line 217
-    sget-boolean v1, Lcom/tencent/mm/platformtools/a;->clN:Z
+    const/16 v2, 0x8
 
-    if-nez v1, :cond_1
+    const/4 v1, 0x0
 
-    .line 224
-    :cond_0
-    :goto_0
-    return v0
+    .line 142
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 220
-    :cond_1
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    if-lt v0, v2, :cond_2
 
-    const/4 v2, 0x5
+    .line 143
+    new-instance v0, Lcom/tencent/mm/platformtools/o;
 
-    if-lt v1, v2, :cond_0
+    invoke-direct {v0}, Lcom/tencent/mm/platformtools/o;-><init>()V
 
-    sget-boolean v1, Lcom/tencent/mm/platformtools/a;->clN:Z
-
-    if-eqz v1, :cond_0
-
-    .line 221
-    new-instance v0, Lcom/tencent/mm/platformtools/d;
-
-    invoke-direct {v0}, Lcom/tencent/mm/platformtools/d;-><init>()V
-
-    invoke-static {p0}, Lcom/tencent/mm/platformtools/d;->kq(Ljava/lang/String;)I
+    invoke-virtual {p0}, Landroid/widget/ListView;->getFirstVisiblePosition()I
 
     move-result v0
+
+    if-le v0, v3, :cond_0
+
+    invoke-virtual {p0, v3}, Landroid/widget/ListView;->setSelection(I)V
+
+    :cond_0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    if-lt v0, v2, :cond_1
+
+    invoke-virtual {p0, v1}, Landroid/widget/ListView;->smoothScrollToPosition(I)V
+
+    .line 147
+    :cond_1
+    :goto_0
+    return-void
+
+    .line 145
+    :cond_2
+    new-instance v0, Lcom/tencent/mm/platformtools/n;
+
+    invoke-direct {v0}, Lcom/tencent/mm/platformtools/n;-><init>()V
+
+    invoke-virtual {p0, v1}, Landroid/widget/ListView;->setSelection(I)V
 
     goto :goto_0
 .end method

@@ -3,7 +3,7 @@ package com.tencent.mm.sdk.modelmsg;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 
@@ -12,7 +12,7 @@ public class WXImageObject
 {
   private static final int CONTENT_LENGTH_LIMIT = 10485760;
   private static final int PATH_LENGTH_LIMIT = 10240;
-  private static final String TAG = "!44@/B4Tb64lLpIyQij4HtGFZMINqfKLk3xCSNB+M4PcHh0=";
+  private static final String TAG = "MicroMsg.SDK.WXImageObject";
   public byte[] imageData;
   public String imagePath;
   
@@ -51,22 +51,22 @@ public class WXImageObject
   {
     if (((imageData == null) || (imageData.length == 0)) && ((imagePath == null) || (imagePath.length() == 0)))
     {
-      u.e("!44@/B4Tb64lLpIyQij4HtGFZMINqfKLk3xCSNB+M4PcHh0=", "checkArgs fail, all arguments are null");
+      v.e("MicroMsg.SDK.WXImageObject", "checkArgs fail, all arguments are null");
       return false;
     }
     if ((imageData != null) && (imageData.length > 10485760))
     {
-      u.e("!44@/B4Tb64lLpIyQij4HtGFZMINqfKLk3xCSNB+M4PcHh0=", "checkArgs fail, content is too large");
+      v.e("MicroMsg.SDK.WXImageObject", "checkArgs fail, content is too large");
       return false;
     }
     if ((imagePath != null) && (imagePath.length() > 10240))
     {
-      u.e("!44@/B4Tb64lLpIyQij4HtGFZMINqfKLk3xCSNB+M4PcHh0=", "checkArgs fail, path is invalid");
+      v.e("MicroMsg.SDK.WXImageObject", "checkArgs fail, path is invalid");
       return false;
     }
     if ((imagePath != null) && (getFileSize(imagePath) > 10485760))
     {
-      u.e("!44@/B4Tb64lLpIyQij4HtGFZMINqfKLk3xCSNB+M4PcHh0=", "checkArgs fail, image content is too large");
+      v.e("MicroMsg.SDK.WXImageObject", "checkArgs fail, image content is too large");
       return false;
     }
     return true;

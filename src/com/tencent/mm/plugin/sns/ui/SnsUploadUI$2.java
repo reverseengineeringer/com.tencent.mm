@@ -3,7 +3,7 @@ package com.tencent.mm.plugin.sns.ui;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SnsUploadUI$2
   implements View.OnTouchListener
@@ -12,11 +12,11 @@ final class SnsUploadUI$2
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    u.d("!32@/B4Tb64lLpJ9RADwjweyFoah/b/e2Uej", "upload_content onTouch");
-    hlY.age();
-    if (SnsUploadUI.b(hlY).aCR())
+    v.d("MicroMsg.SnsUploadUI", "upload_content onTouch");
+    hCb.aiI();
+    if (SnsUploadUI.b(hCb).aFY())
     {
-      SnsUploadUI.b(hlY).aCS();
+      SnsUploadUI.b(hCb).aFZ();
       return true;
     }
     return false;

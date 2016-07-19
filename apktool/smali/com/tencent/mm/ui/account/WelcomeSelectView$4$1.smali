@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kwT:Lcom/tencent/mm/ui/account/WelcomeSelectView$4;
+.field final synthetic kWa:Lcom/tencent/mm/ui/account/WelcomeSelectView$4;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 219
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/WelcomeSelectView$4$1;->kwT:Lcom/tencent/mm/ui/account/WelcomeSelectView$4;
+    .line 222
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/WelcomeSelectView$4$1;->kWa:Lcom/tencent/mm/ui/account/WelcomeSelectView$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,6 +40,6 @@
     .locals 0
 
     .prologue
-    .line 224
+    .line 227
     return-void
 .end method

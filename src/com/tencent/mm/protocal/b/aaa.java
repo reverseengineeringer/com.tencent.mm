@@ -1,71 +1,80 @@
 package com.tencent.mm.protocal.b;
 
 import a.a.a.b;
-import java.util.LinkedList;
 
 public final class aaa
-  extends alq
+  extends com.tencent.mm.ax.a
 {
+  public String jUR;
+  public String jUS;
+  public String jUT;
+  
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (jHj == null) {
-        throw new b("Not all required fields were included: BaseResponse");
+      if (jUR == null) {
+        throw new b("Not all required fields were included: linkedin_id");
       }
-      if (jHj != null)
-      {
-        paramVarArgs.cj(1, jHj.kn());
-        jHj.a(paramVarArgs);
+      if (jUR != null) {
+        paramVarArgs.e(1, jUR);
+      }
+      if (jUS != null) {
+        paramVarArgs.e(2, jUS);
+      }
+      if (jUT != null) {
+        paramVarArgs.e(3, jUT);
       }
       return 0;
     }
     if (paramInt == 1) {
-      if (jHj == null) {
-        break label305;
+      if (jUR == null) {
+        break label321;
       }
     }
-    label305:
-    for (paramInt = a.a.a.a.ch(1, jHj.kn()) + 0;; paramInt = 0)
+    label321:
+    for (int i = a.a.a.b.b.a.f(1, jUR) + 0;; i = 0)
     {
-      return paramInt;
+      paramInt = i;
+      if (jUS != null) {
+        paramInt = i + a.a.a.b.b.a.f(2, jUS);
+      }
+      i = paramInt;
+      if (jUT != null) {
+        i = paramInt + a.a.a.b.b.a.f(3, jUT);
+      }
+      return i;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = alq.a(paramVarArgs); paramInt > 0; paramInt = alq.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
-        if (jHj != null) {
+        if (jUR != null) {
           break;
         }
-        throw new b("Not all required fields were included: BaseResponse");
+        throw new b("Not all required fields were included: linkedin_id");
       }
       if (paramInt == 3)
       {
-        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
         aaa localaaa = (aaa)paramVarArgs[1];
-        paramInt = ((Integer)paramVarArgs[2]).intValue();
-        switch (paramInt)
+        switch (((Integer)paramVarArgs[2]).intValue())
         {
         default: 
           return -1;
+        case 1: 
+          jUR = mMY.readString();
+          return 0;
+        case 2: 
+          jUS = mMY.readString();
+          return 0;
         }
-        paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-        int i = paramVarArgs.size();
-        paramInt = 0;
-        while (paramInt < i)
-        {
-          Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-          localObject1 = new dd();
-          localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-          for (boolean bool = true; bool; bool = ((dd)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, alq.a((a.a.a.a.a)localObject2))) {}
-          jHj = ((dd)localObject1);
-          paramInt += 1;
-        }
-        break;
+        jUT = mMY.readString();
+        return 0;
       }
       return -1;
     }

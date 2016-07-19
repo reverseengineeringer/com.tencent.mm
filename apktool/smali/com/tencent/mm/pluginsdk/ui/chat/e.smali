@@ -12,4 +12,4 @@
 
 
 # static fields
-.field public static iMh:Lcom/tencent/mm/pluginsdk/ui/chat/e$a;
+.field public static jje:Lcom/tencent/mm/pluginsdk/ui/chat/e$a;

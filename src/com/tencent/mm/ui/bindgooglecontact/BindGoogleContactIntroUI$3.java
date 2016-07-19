@@ -10,7 +10,7 @@ final class BindGoogleContactIntroUI$3
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    kMI.finish();
+    llX.finish();
     return true;
   }
 }

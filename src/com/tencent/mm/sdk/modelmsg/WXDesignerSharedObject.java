@@ -2,12 +2,12 @@ package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
 import android.text.TextUtils;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class WXDesignerSharedObject
   implements WXMediaMessage.b
 {
-  private static final String TAG = "!56@/B4Tb64lLpKbvaoYwgBif4k4YzGLjyyWXGsruMsGSha3hI/nuh+94w==";
+  private static final String TAG = "MicroMsg.SDK.WXEmojiSharedObject";
   public String designerName;
   public String designerRediretctUrl;
   public int designerUIN;
@@ -28,7 +28,7 @@ public class WXDesignerSharedObject
   {
     if ((designerUIN == 0) || (TextUtils.isEmpty(thumburl)) || (TextUtils.isEmpty(url)))
     {
-      u.e("!56@/B4Tb64lLpKbvaoYwgBif4k4YzGLjyyWXGsruMsGSha3hI/nuh+94w==", "checkArgs fail, packageid or thumburl is invalid");
+      v.e("MicroMsg.SDK.WXEmojiSharedObject", "checkArgs fail, packageid or thumburl is invalid");
       return false;
     }
     return true;

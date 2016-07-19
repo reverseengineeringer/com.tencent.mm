@@ -2,7 +2,7 @@ package com.tencent.mm.ui.bindlinkedin;
 
 public abstract interface a$a
 {
-  public abstract void bP(int paramInt1, int paramInt2);
+  public abstract void bV(int paramInt1, int paramInt2);
 }
 
 /* Location:

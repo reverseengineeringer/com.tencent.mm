@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract KH()V
+.method public abstract Lt()V
 .end method
 
-.method public abstract aRe()V
+.method public abstract aVQ()V
 .end method

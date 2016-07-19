@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iId:Lcom/tencent/mm/pluginsdk/ui/applet/b;
+.field final synthetic jfa:Lcom/tencent/mm/pluginsdk/ui/applet/b;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 322
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$5;->iId:Lcom/tencent/mm/pluginsdk/ui/applet/b;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$5;->jfa:Lcom/tencent/mm/pluginsdk/ui/applet/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,18 +41,18 @@
 
     .prologue
     .line 326
-    const-string/jumbo v0, "!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw="
+    const-string/jumbo v0, "MicroMsg.AddContactDialog"
 
     const-string/jumbo v1, "doAddContact fail, contact not biz"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 327
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$5;->iId:Lcom/tencent/mm/pluginsdk/ui/applet/b;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$5;->jfa:Lcom/tencent/mm/pluginsdk/ui/applet/b;
 
     const/4 v1, -0x1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/b;->cd(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/b;->cx(I)V
 
     .line 328
     return-void

@@ -1,83 +1,79 @@
 package com.tencent.mm.aa;
 
+import android.os.Message;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.ar;
+import com.tencent.mm.model.c;
+import com.tencent.mm.model.i;
 import com.tencent.mm.network.e;
 import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b.eh;
-import com.tencent.mm.protocal.b.ei;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.d;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.aj;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j.b;
+import junit.framework.Assert;
 
 public final class a
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  public static int bPg = 0;
-  public static int bPh = 1;
-  public static int bPi = -85;
-  private d anM;
-  private final com.tencent.mm.r.a anN;
-  private int bPj = -1;
-  private String bPk;
-  private int bPl = 0;
-  
-  public a(int paramInt1, String paramString, int paramInt2)
+  private ai aec = new ai();
+  private d bkT;
+  private ac handler = new ac()
   {
-    switch (1.bPm[(paramInt1 - 1)])
+    public final void handleMessage(Message paramAnonymousMessage)
     {
+      a(999, 0, 0, "", null, null);
     }
+  };
+  
+  public a(String paramString1, String paramString2)
+  {
+    aec.bB(1);
+    aec.cr(paramString1);
+    aec.v(ar.fz(paramString1));
+    aec.bC(1);
+    aec.setContent(paramString2);
+    aec.setType(i.eW(paramString1));
+    long l = ah.tE().rt().H(aec);
+    if (l != -1L) {}
     for (;;)
     {
-      bPk = paramString;
-      bPl = paramInt2;
-      paramString = new com.tencent.mm.r.a.a();
-      bFa = new eh();
-      bFb = new ei();
-      uri = "/cgi-bin/micromsg-bin/bindgooglecontact";
-      bEY = 487;
-      bFc = 0;
-      bFd = 0;
-      anN = paramString.vy();
+      Assert.assertTrue(bool);
+      v.i("MicroMsg.NetSceneSendMsgFake", "new msg inserted to db , local id = " + l);
       return;
-      bPj = 1;
-      continue;
-      bPj = 2;
+      bool = false;
     }
   }
   
   public final int a(e parame, d paramd)
   {
-    u.i("!76@/B4Tb64lLpKHrGLZvbPyiBIPb+9i/+Gz73fnVukCcLy0RLMamaPrhe9Iy/jdhpZSEYm54712ix4=", "doScene");
-    anM = paramd;
-    paramd = (eh)anN.bEW.bFf;
-    iZE = bPj;
-    jbd = bPk;
-    jbe = bPl;
-    return a(parame, anN, this);
+    bkT = paramd;
+    v.i("MicroMsg.NetSceneSendMsgFake", "send local msg, msgId = " + aec.field_msgId);
+    handler.sendEmptyMessageDelayed(0, 500L);
+    return 999;
+  }
+  
+  protected final int a(o paramo)
+  {
+    return j.b.byT;
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    u.i("!76@/B4Tb64lLpKHrGLZvbPyiBIPb+9i/+Gz73fnVukCcLy0RLMamaPrhe9Iy/jdhpZSEYm54712ix4=", "NetId:%d, ErrType:%d, ErrCode:%d, errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString });
-    if ((paramInt2 != 0) || (paramInt3 != 0))
-    {
-      anM.a(paramInt2, paramInt3, paramString, this);
-      return;
-    }
-    anM.a(paramInt2, paramInt3, paramString, this);
+    v.i("MicroMsg.NetSceneSendMsgFake", "recv local msg, msgId = " + aec.field_msgId);
+    aec.bB(2);
+    aec.v(ar.d(aec.field_talker, System.currentTimeMillis() / 1000L));
+    ah.tE().rt().a(aec.field_msgId, aec);
+    bkT.onSceneEnd(0, 0, paramString, this);
   }
   
   public final int getType()
   {
-    return 487;
-  }
-  
-  public static enum a
-  {
-    public static int[] zN()
-    {
-      return (int[])bPp.clone();
-    }
+    return 522;
   }
 }
 

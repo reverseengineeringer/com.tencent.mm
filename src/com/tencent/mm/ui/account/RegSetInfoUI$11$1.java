@@ -3,18 +3,18 @@ package com.tencent.mm.ui.account;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.modelsimple.v;
-import com.tencent.mm.r.m;
+import com.tencent.mm.modelsimple.t;
+import com.tencent.mm.t.m;
 
 final class RegSetInfoUI$11$1
   implements DialogInterface.OnCancelListener
 {
-  RegSetInfoUI$11$1(RegSetInfoUI.11 param11, v paramv) {}
+  RegSetInfoUI$11$1(RegSetInfoUI.11 param11, t paramt) {}
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    ah.tE().c(kwi);
-    ah.tE().b(126, kwp.kwh);
+    ah.tF().c(kVp);
+    ah.tF().b(126, kVw.kVo);
   }
 }
 

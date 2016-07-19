@@ -1,8 +1,8 @@
 package com.tencent.mm.c.b;
 
 import android.os.SystemClock;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ah;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class i$2
   implements Runnable
@@ -11,21 +11,21 @@ final class i$2
   
   public final void run()
   {
-    long l = System.currentTimeMillis() - i.j(arv);
-    u.d("!44@/B4Tb64lLpJjyqE6YDnAp4yx32s8/BqPmq6RdxNqkkU=", "Try Run service runningFlag:" + i.e(arv) + " timeWait:" + l + " sending:" + i.g(arv) + " recving:" + i.f(arv));
-    if (i.e(arv))
+    long l = System.currentTimeMillis() - i.j(adc);
+    v.d("MicroMsg.SceneVoiceService", "Try Run service runningFlag:" + i.e(adc) + " timeWait:" + l + " sending:" + i.g(adc) + " recving:" + i.f(adc));
+    if (i.e(adc))
     {
       if (l < 60000L) {
         return;
       }
-      u.e("!44@/B4Tb64lLpJjyqE6YDnAp4yx32s8/BqPmq6RdxNqkkU=", "ERR: Try Run service runningFlag:" + i.e(arv) + " timeWait:" + l + ">=MAX_TIME_WAIT sending:" + i.g(arv) + " recving:" + i.f(arv));
+      v.e("MicroMsg.SceneVoiceService", "ERR: Try Run service runningFlag:" + i.e(adc) + " timeWait:" + l + ">=MAX_TIME_WAIT sending:" + i.g(adc) + " recving:" + i.f(adc));
     }
-    i.k(arv);
-    i.b(arv);
-    i.a(arv, 3);
-    i.a(arv);
-    arv.aoR.buw = SystemClock.elapsedRealtime();
-    i.l(arv).ds(10L);
+    i.k(adc);
+    i.b(adc);
+    i.a(adc, 3);
+    i.a(adc);
+    adc.acX.biW = SystemClock.elapsedRealtime();
+    i.l(adc).dJ(10L);
   }
   
   public final String toString()

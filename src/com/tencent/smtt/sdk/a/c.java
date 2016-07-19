@@ -4,6 +4,7 @@ import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
@@ -14,6 +15,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import java.io.File;
+import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -21,14 +23,59 @@ import java.util.Set;
 
 public final class c
 {
-  public static int a(Context paramContext, String paramString1, HashMap paramHashMap, String paramString2)
+  public static int a(Context paramContext, String paramString1, HashMap<String, String> paramHashMap, String paramString2)
   {
+    j = 0;
     StringBuilder localStringBuilder = new StringBuilder();
-    localStringBuilder.append("mttbrowser://url=").append(paramString1).append(",product=TBS,packagename=").append(paramContext.getPackageName()).append(",from=").append(paramString2).append(",version=1.5.0.1069");
-    return b(paramContext, localStringBuilder.toString(), paramHashMap);
+    for (;;)
+    {
+      try
+      {
+        localObject = paramContext.getPackageManager();
+        if (localObject == null) {
+          continue;
+        }
+        localObject = ((PackageManager)localObject).getPackageInfo("com.tencent.mtt", 0);
+        if (localObject == null) {
+          continue;
+        }
+        i = versionCode;
+        if (i <= 601000) {
+          continue;
+        }
+        i = 1;
+      }
+      catch (Throwable localThrowable)
+      {
+        Object localObject;
+        int i = 0;
+        continue;
+        String str = "";
+        continue;
+        i = 0;
+        continue;
+      }
+      try
+      {
+        localObject = URLEncoder.encode(paramString1, "UTF-8");
+        if (i != 0) {
+          paramString1 = (String)localObject;
+        }
+      }
+      catch (Exception localException)
+      {
+        i = j;
+      }
+    }
+    if (i != 0)
+    {
+      localObject = ",encoded=1";
+      localStringBuilder.append("mttbrowser://url=").append(paramString1).append(",product=TBS,packagename=").append(paramContext.getPackageName()).append(",from=").append(paramString2).append(",version=2.1.2.1082").append((String)localObject);
+      return b(paramContext, localStringBuilder.toString(), paramHashMap);
+    }
   }
   
-  public static boolean a(Context paramContext, String paramString1, int paramInt, String paramString2, HashMap paramHashMap, Bundle paramBundle)
+  public static boolean a(Context paramContext, String paramString1, int paramInt, String paramString2, HashMap<String, String> paramHashMap, Bundle paramBundle)
   {
     try
     {
@@ -56,7 +103,7 @@ public final class c
       {
         localIntent.putExtra("key_reader_sdk_format", paramString2);
         localIntent.setData(Uri.fromFile(paramHashMap));
-        localIntent.putExtra("loginType", fJ(paramContext.getApplicationContext()));
+        localIntent.putExtra("loginType", fL(paramContext.getApplicationContext()));
         if (paramBundle != null) {
           localIntent.putExtra("key_reader_sdk_extrals", paramBundle);
         }
@@ -71,7 +118,7 @@ public final class c
     catch (Exception paramContext) {}
   }
   
-  public static boolean a(Context paramContext, String paramString, HashMap paramHashMap)
+  public static boolean a(Context paramContext, String paramString, HashMap<String, String> paramHashMap)
   {
     Object localObject = Uri.parse(paramString);
     paramString = new Intent("android.intent.action.VIEW");
@@ -92,7 +139,7 @@ public final class c
     }
     try
     {
-      paramString.putExtra("loginType", fJ(paramContext));
+      paramString.putExtra("loginType", fL(paramContext));
       paramString.setComponent(new ComponentName("com.tencent.mtt", "com.tencent.mtt.browser.video.H5VideoThrdcallActivity"));
       paramContext.startActivity(paramString);
       i = 1;
@@ -116,7 +163,7 @@ public final class c
     return false;
   }
   
-  public static int b(Context paramContext, String paramString, HashMap paramHashMap)
+  public static int b(Context paramContext, String paramString, HashMap<String, String> paramHashMap)
   {
     if (paramContext == null) {
       return 3;
@@ -155,20 +202,20 @@ public final class c
         bool = ((String)localObject1).toLowerCase().contains("://");
       }
     }
-    Object localObject2 = fK(paramContext);
-    if (iAB == -1) {
+    Object localObject2 = fM(paramContext);
+    if (iXb == -1) {
       return 4;
     }
-    if ((iAB == 2) && (iAC < 33)) {
+    if ((iXb == 2) && (iXc < 33)) {
       return 5;
     }
     paramString = new Intent("android.intent.action.VIEW");
-    if (iAB == 2) {
-      if ((iAC >= 33) && (iAC <= 39)) {
+    if (iXb == 2) {
+      if ((iXc >= 33) && (iXc <= 39)) {
         paramString.setClassName("com.tencent.mtt", "com.tencent.mtt.MainActivity");
       }
     }
-    label624:
+    label630:
     for (;;)
     {
       paramString.setData((Uri)localObject1);
@@ -188,54 +235,54 @@ public final class c
               {
                 paramString.putExtra((String)localObject2, str);
                 continue;
-                if ((iAC >= 40) && (iAC <= 45))
+                if ((iXc >= 40) && (iXc <= 45))
                 {
                   paramString.setClassName("com.tencent.mtt", "com.tencent.mtt.SplashActivity");
                   break;
                 }
-                if (iAC < 46) {
-                  break label624;
+                if (iXc < 46) {
+                  break label630;
                 }
                 paramString = new Intent("com.tencent.QQBrowser.action.VIEW");
                 localObject2 = e(paramContext, (Uri)localObject1);
                 if ((localObject2 != null) && (!TextUtils.isEmpty(classname))) {
-                  paramString.setClassName(iAE, classname);
+                  paramString.setClassName(iXe, classname);
                 }
                 break;
-                if (iAB == 1)
+                if (iXb == 1)
                 {
-                  if (iAC == 1)
+                  if (iXc == 1)
                   {
                     paramString.setClassName("com.tencent.qbx5", "com.tencent.qbx5.MainActivity");
                     break;
                   }
-                  if (iAC != 2) {
-                    break label624;
+                  if (iXc != 2) {
+                    break label630;
                   }
                   paramString.setClassName("com.tencent.qbx5", "com.tencent.qbx5.SplashActivity");
                   break;
                 }
-                if (iAB == 0)
+                if (iXb == 0)
                 {
-                  if ((iAC >= 4) && (iAC <= 6))
+                  if ((iXc >= 4) && (iXc <= 6))
                   {
                     paramString.setClassName("com.tencent.qbx", "com.tencent.qbx.SplashActivity");
                     break;
                   }
-                  if (iAC <= 6) {
-                    break label624;
+                  if (iXc <= 6) {
+                    break label630;
                   }
                   paramString = new Intent("com.tencent.QQBrowser.action.VIEW");
                   localObject2 = e(paramContext, (Uri)localObject1);
                   if ((localObject2 != null) && (!TextUtils.isEmpty(classname))) {
-                    paramString.setClassName(iAE, classname);
+                    paramString.setClassName(iXe, classname);
                   }
                   break;
                 }
                 paramString = new Intent("com.tencent.QQBrowser.action.VIEW");
                 localObject2 = e(paramContext, (Uri)localObject1);
                 if ((localObject2 != null) && (!TextUtils.isEmpty(classname))) {
-                  paramString.setClassName(iAE, classname);
+                  paramString.setClassName(iXe, classname);
                 }
                 break;
               }
@@ -245,7 +292,7 @@ public final class c
       }
       try
       {
-        paramString.putExtra("loginType", fJ(paramContext));
+        paramString.putExtra("loginType", fL(paramContext));
         paramString.addFlags(268435456);
         paramContext.startActivity(paramString);
         return 0;
@@ -274,19 +321,19 @@ public final class c
       if (str.contains("com.tencent.mtt"))
       {
         classname = activityInfo.name;
-        iAE = activityInfo.packageName;
+        iXe = activityInfo.packageName;
         return paramContext;
       }
       if (str.contains("com.tencent.qbx"))
       {
         classname = activityInfo.name;
-        iAE = activityInfo.packageName;
+        iXe = activityInfo.packageName;
       }
     }
     return paramContext;
   }
   
-  private static int fJ(Context paramContext)
+  private static int fL(Context paramContext)
   {
     int i = 26;
     paramContext = getApplicationInfoprocessName;
@@ -306,9 +353,13 @@ public final class c
     return 24;
   }
   
-  private static a fK(Context paramContext)
+  private static a fM(Context paramContext)
   {
+    boolean bool = paramContext.getApplicationContext().getSharedPreferences("x5_proxy_setting", 0).getBoolean("qb_install_status", false);
     locala = new a();
+    if (bool) {
+      return locala;
+    }
     for (;;)
     {
       try
@@ -319,11 +370,11 @@ public final class c
         {
           localObject6 = localPackageManager.getPackageInfo("com.tencent.mtt", 0);
           localObject1 = localObject6;
-          iAB = 2;
+          iXb = 2;
           localObject1 = localObject6;
           packageName = "com.tencent.mtt";
           localObject1 = localObject6;
-          iAD = "ADRQB_";
+          iXd = "ADRQB_";
           Object localObject3 = localObject6;
           if (localObject6 != null)
           {
@@ -332,11 +383,11 @@ public final class c
             if (versionCode > 420000)
             {
               localObject1 = localObject6;
-              iAC = versionCode;
+              iXc = versionCode;
               localObject1 = localObject6;
-              iAD += versionName.replaceAll("\\.", "");
+              iXd += versionName.replaceAll("\\.", "");
               localObject1 = localObject6;
-              lUB = versionName.replaceAll("\\.", "");
+              mwt = versionName.replaceAll("\\.", "");
               return locala;
             }
           }
@@ -360,11 +411,11 @@ public final class c
       {
         localObject1 = localPackageManager.getPackageInfo("com.tencent.qbx", 0);
         localObject4 = localObject1;
-        iAB = 0;
+        iXb = 0;
         localObject4 = localObject1;
         packageName = "com.tencent.qbx";
         localObject4 = localObject1;
-        iAD = "ADRQBX_";
+        iXd = "ADRQBX_";
         paramContext = (Context)localObject1;
       }
       catch (PackageManager.NameNotFoundException localNameNotFoundException1)
@@ -373,11 +424,11 @@ public final class c
         {
           localPackageInfo1 = localPackageManager.getPackageInfo("com.tencent.qbx5", 0);
           localObject4 = localPackageInfo1;
-          iAB = 1;
+          iXb = 1;
           localObject4 = localPackageInfo1;
           packageName = "com.tencent.qbx5";
           localObject4 = localPackageInfo1;
-          iAD = "ADRQBX5_";
+          iXd = "ADRQBX5_";
           paramContext = localPackageInfo1;
         }
         catch (PackageManager.NameNotFoundException localNameNotFoundException2)
@@ -389,9 +440,9 @@ public final class c
             localObject2 = localObject4;
             packageName = "com.tencent.mtt";
             localObject2 = localObject4;
-            iAB = 2;
+            iXb = 2;
             localObject2 = localObject4;
-            iAD = "ADRQB_";
+            iXd = "ADRQB_";
             paramContext = (Context)localObject4;
           }
           catch (PackageManager.NameNotFoundException localNameNotFoundException4)
@@ -402,9 +453,9 @@ public final class c
               localObject2 = localPackageInfo2;
               packageName = "com.tencent.mtt.x86";
               localObject2 = localPackageInfo2;
-              iAB = 2;
+              iXb = 2;
               localObject2 = localPackageInfo2;
-              iAD = "ADRQB_";
+              iXd = "ADRQB_";
               paramContext = localPackageInfo2;
             }
             catch (Exception localException)
@@ -419,17 +470,17 @@ public final class c
                 }
                 paramContext = (Context)localObject2;
                 localObject5 = localObject2;
-                if (TextUtils.isEmpty(iAE)) {
+                if (TextUtils.isEmpty(iXe)) {
                   continue;
                 }
                 localObject5 = localObject2;
-                paramContext = localPackageManager.getPackageInfo(iAE, 0);
+                paramContext = localPackageManager.getPackageInfo(iXe, 0);
                 localObject5 = paramContext;
-                packageName = iAE;
+                packageName = iXe;
                 localObject5 = paramContext;
-                iAB = 2;
+                iXb = 2;
                 localObject5 = paramContext;
-                iAD = "ADRQB_";
+                iXd = "ADRQB_";
               }
               catch (Exception paramContext)
               {
@@ -442,26 +493,26 @@ public final class c
     }
     if (paramContext != null)
     {
-      iAC = versionCode;
-      iAD += versionName.replaceAll("\\.", "");
-      lUB = versionName.replaceAll("\\.", "");
+      iXc = versionCode;
+      iXd += versionName.replaceAll("\\.", "");
+      mwt = versionName.replaceAll("\\.", "");
     }
     return locala;
   }
   
   public static final class a
   {
-    public int iAB = -1;
-    public int iAC = -1;
-    public String iAD = "";
-    public String lUB = "0";
+    public int iXb = -1;
+    public int iXc = -1;
+    public String iXd = "";
+    public String mwt = "0";
     public String packageName = null;
   }
   
   private static final class b
   {
     public String classname = "";
-    public String iAE = "";
+    public String iXe = "";
   }
 }
 

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic aps:Lcom/tencent/mm/c/a/a$1;
+.field final synthetic aaK:Lcom/tencent/mm/c/a/a$1;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 286
-    iput-object p1, p0, Lcom/tencent/mm/c/a/a$1$1;->aps:Lcom/tencent/mm/c/a/a$1;
+    .line 300
+    iput-object p1, p0, Lcom/tencent/mm/c/a/a$1$1;->aaK:Lcom/tencent/mm/c/a/a$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,15 +40,15 @@
     .locals 1
 
     .prologue
-    .line 290
-    iget-object v0, p0, Lcom/tencent/mm/c/a/a$1$1;->aps:Lcom/tencent/mm/c/a/a$1;
+    .line 304
+    iget-object v0, p0, Lcom/tencent/mm/c/a/a$1$1;->aaK:Lcom/tencent/mm/c/a/a$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/c/a/a$1;->apr:Lcom/tencent/mm/c/a/a;
+    iget-object v0, v0, Lcom/tencent/mm/c/a/a$1;->aaJ:Lcom/tencent/mm/c/a/a;
 
-    iget-object v0, v0, Lcom/tencent/mm/c/a/a;->app:Lcom/tencent/mm/r/f$b;
+    iget-object v0, v0, Lcom/tencent/mm/c/a/a;->aaH:Lcom/tencent/mm/t/f$b;
 
-    invoke-interface {v0}, Lcom/tencent/mm/r/f$b;->onError()V
+    invoke-interface {v0}, Lcom/tencent/mm/t/f$b;->onError()V
 
-    .line 291
+    .line 305
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/af$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ah$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iJs:Lcom/tencent/mm/pluginsdk/ui/applet/j;
+.field final synthetic jgo:Lcom/tencent/mm/pluginsdk/ui/applet/j;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 35
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j$1;->iJs:Lcom/tencent/mm/pluginsdk/ui/applet/j;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j$1;->jgo:Lcom/tencent/mm/pluginsdk/ui/applet/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,30 +36,30 @@
 
 
 # virtual methods
-.method public final lj()Z
+.method public final jK()Z
     .locals 5
 
     .prologue
     .line 39
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j$1;->iJs:Lcom/tencent/mm/pluginsdk/ui/applet/j;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j$1;->jgo:Lcom/tencent/mm/pluginsdk/ui/applet/j;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j$1;->iJs:Lcom/tencent/mm/pluginsdk/ui/applet/j;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j$1;->jgo:Lcom/tencent/mm/pluginsdk/ui/applet/j;
 
     iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/j;->context:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j$1;->iJs:Lcom/tencent/mm/pluginsdk/ui/applet/j;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j$1;->jgo:Lcom/tencent/mm/pluginsdk/ui/applet/j;
 
     iget-object v2, v2, Lcom/tencent/mm/pluginsdk/ui/applet/j;->context:Landroid/content/Context;
 
-    const v3, 0x7f0b0ddd
+    const v3, 0x7f080134
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j$1;->iJs:Lcom/tencent/mm/pluginsdk/ui/applet/j;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j$1;->jgo:Lcom/tencent/mm/pluginsdk/ui/applet/j;
 
     iget-object v2, v2, Lcom/tencent/mm/pluginsdk/ui/applet/j;->context:Landroid/content/Context;
 
-    const v3, 0x7f0b0e1d
+    const v3, 0x7f080149
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -75,7 +75,7 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->eaF:Lcom/tencent/mm/ui/base/p;
+    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->eed:Lcom/tencent/mm/ui/base/p;
 
     .line 47
     const/4 v0, 0x0

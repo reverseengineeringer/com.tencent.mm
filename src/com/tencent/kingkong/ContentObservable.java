@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class ContentObservable
-  extends Observable
+  extends Observable<ContentObserver>
 {
   @Deprecated
   public void dispatchChange(boolean paramBoolean)
@@ -18,15 +18,13 @@ public class ContentObservable
     synchronized (mObservers)
     {
       Iterator localIterator = mObservers.iterator();
-      ContentObserver localContentObserver;
-      do
+      while (localIterator.hasNext())
       {
-        if (!localIterator.hasNext()) {
-          return;
+        ContentObserver localContentObserver = (ContentObserver)localIterator.next();
+        if ((!paramBoolean) || (localContentObserver.deliverSelfNotifications())) {
+          localContentObserver.dispatchChanges(paramBoolean, paramUri);
         }
-        localContentObserver = (ContentObserver)localIterator.next();
-      } while ((paramBoolean) && (!localContentObserver.deliverSelfNotifications()));
-      localContentObserver.dispatchChanges(paramBoolean, paramUri);
+      }
     }
   }
   
@@ -36,10 +34,9 @@ public class ContentObservable
     synchronized (mObservers)
     {
       Iterator localIterator = mObservers.iterator();
-      if (!localIterator.hasNext()) {
-        return;
+      if (localIterator.hasNext()) {
+        ((ContentObserver)localIterator.next()).onChange(paramBoolean, null);
       }
-      ((ContentObserver)localIterator.next()).onChange(paramBoolean, null);
     }
   }
   

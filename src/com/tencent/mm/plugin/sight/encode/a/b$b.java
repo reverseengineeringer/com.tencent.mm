@@ -1,6 +1,9 @@
 package com.tencent.mm.plugin.sight.encode.a;
 
-public enum b$b {}
+public enum b$b
+{
+  private b$b() {}
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.plugin.sight.encode.a.b.b

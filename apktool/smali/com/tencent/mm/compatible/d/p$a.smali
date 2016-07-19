@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/compatible/d/p;->oK()I
+    value = Lcom/tencent/mm/compatible/d/p;->na()I
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 416
+    .line 447
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
     .locals 2
 
     .prologue
-    .line 419
+    .line 450
     const-string/jumbo v0, "cpu[0-9]+"
 
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -47,10 +47,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 420
+    .line 451
     const/4 v0, 0x1
 
-    .line 422
+    .line 453
     :goto_0
     return v0
 

@@ -7,9 +7,9 @@ final class f$3
   
   public final void run()
   {
-    f localf = bQ;
-    FragmentActivity localFragmentActivity = bQ.mActivity;
-    localf.e(bR, bS);
+    f localf = ce;
+    FragmentActivity localFragmentActivity = ce.aS;
+    localf.c(cf, cg);
   }
 }
 

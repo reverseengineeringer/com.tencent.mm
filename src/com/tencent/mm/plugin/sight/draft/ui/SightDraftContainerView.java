@@ -11,8 +11,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ListView;
 import android.widget.TextView;
 import com.tencent.mm.a.f;
-import com.tencent.mm.an.h;
-import com.tencent.mm.an.j;
+import com.tencent.mm.aq.l;
+import com.tencent.mm.aq.n;
 import com.tencent.mm.sdk.h.d;
 import com.tencent.mm.ui.base.g;
 import java.util.Set;
@@ -20,9 +20,9 @@ import java.util.Set;
 public class SightDraftContainerView
   extends ListView
 {
-  private boolean gzD;
-  private a gzE;
-  private b gzF;
+  private boolean gGf;
+  public a gGg;
+  public b gGh;
   
   public SightDraftContainerView(Context paramContext)
   {
@@ -42,18 +42,18 @@ public class SightDraftContainerView
     init();
   }
   
-  private boolean awh()
+  private boolean ayF()
   {
     boolean bool = false;
-    Cursor localCursor = EbaoX.rawQuery("SELECT COUNT(localId) FROM SightDraftInfo WHERE fileStatus = 6", null);
+    Cursor localCursor = EtbkP.rawQuery("SELECT COUNT(localId) FROM SightDraftInfo WHERE fileStatus = 6", null);
     if (localCursor == null)
     {
       i = 0;
       if (i > 0)
       {
-        j.Eb().DV();
-        gzF.a(null, null);
-        g.ba(getContext(), getResources().getString(2131430522));
+        n.Et().Eo();
+        gGh.a(null, null);
+        g.aZ(getContext(), getResources().getString(2131235358));
         bool = true;
       }
       return bool;
@@ -68,23 +68,23 @@ public class SightDraftContainerView
   
   private boolean b(b.d paramd)
   {
-    if (gzF == null) {
+    if (gGh == null) {
       return false;
     }
-    return gzF.a(paramd, true);
+    return gGh.a(paramd, true);
   }
   
   private void init()
   {
-    setBackgroundColor(getResources().getColor(2131231101));
-    setSelector(2131231114);
-    int i = getResources().getDimensionPixelSize(2131034577);
-    int j = getResources().getDimensionPixelSize(2131034580);
+    setBackgroundColor(getResources().getColor(2131689519));
+    setSelector(2131690001);
+    int i = getResources().getDimensionPixelSize(2131427704);
+    int j = getResources().getDimensionPixelSize(2131427634);
     TextView localTextView = new TextView(getContext());
-    localTextView.setText(2131430525);
-    localTextView.setTextSize(0, com.tencent.mm.aw.a.z(getContext(), 2131034565));
+    localTextView.setText(2131235356);
+    localTextView.setTextSize(0, com.tencent.mm.az.a.D(getContext(), 2131427626));
     localTextView.setGravity(17);
-    localTextView.setTextColor(getResources().getColor(2131231152));
+    localTextView.setTextColor(getResources().getColor(2131689745));
     localTextView.setTextSize(1, 11.0F);
     localTextView.setPadding(0, i, 0, j);
     addFooterView(localTextView);
@@ -92,51 +92,51 @@ public class SightDraftContainerView
     {
       public final boolean onTouch(View paramAnonymousView, MotionEvent paramAnonymousMotionEvent)
       {
-        awg();
+        ayE();
         return false;
       }
     });
   }
   
-  public final void awe()
+  public final void ayC()
   {
-    if (gzD)
+    if (gGf)
     {
-      gzF.gzo = 12;
-      gzF.a(b.d.gzv, false);
-      gzF.a(null, null);
+      gGh.gFR = 12;
+      gGh.a(b.d.gFX, false);
+      gGh.a(null, null);
       setSelection(0);
       return;
     }
-    gzD = true;
-    gzF = new b(getContext(), gzE);
-    gzF.gzo = 12;
-    setAdapter(gzF);
+    gGf = true;
+    gGh = new b(getContext(), gGg);
+    gGh.gFR = 12;
+    setAdapter(gGh);
   }
   
-  public final void awf()
+  public final void ayD()
   {
     clearAnimation();
-    startAnimation(AnimationUtils.loadAnimation(getContext(), 2130837569));
+    startAnimation(AnimationUtils.loadAnimation(getContext(), 2130968656));
   }
   
-  public final boolean awg()
+  public final boolean ayE()
   {
-    if (gzF == null) {
+    if (gGh == null) {
       return false;
     }
-    b localb = gzF;
+    b localb = gGh;
     localb.a(null);
-    return gzh.awd();
+    return gFK.ayB();
   }
   
-  public final void awi()
+  public final void ayG()
   {
-    if (gzF == null) {
+    if (gGh == null) {
       return;
     }
-    if (b.d.gzv == gzF.gzl) {}
-    for (b.d locald = b.d.gzw;; locald = b.d.gzv)
+    if (b.d.gFX == gGh.gFO) {}
+    for (b.d locald = b.d.gFY;; locald = b.d.gFX)
     {
       b(locald);
       return;
@@ -145,23 +145,23 @@ public class SightDraftContainerView
   
   public final void clearCache()
   {
-    if (gzF == null) {
+    if (gGh == null) {
       return;
     }
-    b localb = gzF;
-    c localc = gzs;
-    gzI = null;
-    gzH.clear();
-    gzk.clear();
+    b localb = gGh;
+    c localc = gFU;
+    gGk = null;
+    gGj.clear();
+    gFN.clear();
   }
   
-  public final boolean eH(boolean paramBoolean)
+  public final boolean ez(boolean paramBoolean)
   {
     boolean bool = true;
     if (paramBoolean)
     {
-      awh();
-      b(b.d.gzv);
+      ayF();
+      b(b.d.gFX);
     }
     do
     {
@@ -172,24 +172,11 @@ public class SightDraftContainerView
         {
           return paramBoolean;
           paramBoolean = bool;
-        } while (awh());
+        } while (ayF());
         paramBoolean = bool;
-      } while (b(b.d.gzv));
-    } while (!awg());
+      } while (b(b.d.gFX));
+    } while (!ayE());
     return true;
-  }
-  
-  public void setSightDraftCallback(a parama)
-  {
-    gzE = parama;
-  }
-  
-  public void setTipsResId(int paramInt)
-  {
-    if (gzF == null) {
-      return;
-    }
-    gzF.gzn = paramInt;
   }
 }
 

@@ -18,29 +18,29 @@ import android.view.View;
 public final class a
   implements b
 {
-  private final int kj;
-  private final int kk;
-  private final int kl;
-  private CharSequence km;
-  private CharSequence kn;
-  private char ko;
-  private char kp;
-  private Drawable kq;
-  private int kr = 0;
-  private MenuItem.OnMenuItemClickListener ks;
-  private int kt = 16;
+  private final int cE;
+  private final int kA;
+  private final int kB;
+  private final int kC;
+  private CharSequence kD;
+  private CharSequence kE;
+  private char kF;
+  private char kG;
+  private Drawable kH;
+  private int kI = 0;
+  private MenuItem.OnMenuItemClickListener kJ;
+  private int kK = 16;
   private Context mContext;
-  private final int mId;
   private Intent mIntent;
   
   public a(Context paramContext, CharSequence paramCharSequence)
   {
     mContext = paramContext;
-    mId = 16908332;
-    kj = 0;
-    kk = 0;
-    kl = 0;
-    km = paramCharSequence;
+    cE = 16908332;
+    kA = 0;
+    kB = 0;
+    kC = 0;
+    kD = paramCharSequence;
   }
   
   public final b a(d paramd)
@@ -75,17 +75,17 @@ public final class a
   
   public final char getAlphabeticShortcut()
   {
-    return kp;
+    return kG;
   }
   
   public final int getGroupId()
   {
-    return kj;
+    return kA;
   }
   
   public final Drawable getIcon()
   {
-    return kq;
+    return kH;
   }
   
   public final Intent getIntent()
@@ -95,7 +95,7 @@ public final class a
   
   public final int getItemId()
   {
-    return mId;
+    return cE;
   }
   
   public final ContextMenu.ContextMenuInfo getMenuInfo()
@@ -105,12 +105,12 @@ public final class a
   
   public final char getNumericShortcut()
   {
-    return ko;
+    return kF;
   }
   
   public final int getOrder()
   {
-    return kl;
+    return kC;
   }
   
   public final SubMenu getSubMenu()
@@ -120,12 +120,12 @@ public final class a
   
   public final CharSequence getTitle()
   {
-    return km;
+    return kD;
   }
   
   public final CharSequence getTitleCondensed()
   {
-    return kn;
+    return kE;
   }
   
   public final boolean hasSubMenu()
@@ -140,22 +140,22 @@ public final class a
   
   public final boolean isCheckable()
   {
-    return (kt & 0x1) != 0;
+    return (kK & 0x1) != 0;
   }
   
   public final boolean isChecked()
   {
-    return (kt & 0x2) != 0;
+    return (kK & 0x2) != 0;
   }
   
   public final boolean isEnabled()
   {
-    return (kt & 0x10) != 0;
+    return (kK & 0x10) != 0;
   }
   
   public final boolean isVisible()
   {
-    return (kt & 0x8) == 0;
+    return (kK & 0x8) == 0;
   }
   
   public final MenuItem setActionProvider(ActionProvider paramActionProvider)
@@ -165,54 +165,54 @@ public final class a
   
   public final MenuItem setAlphabeticShortcut(char paramChar)
   {
-    kp = paramChar;
+    kG = paramChar;
     return this;
   }
   
   public final MenuItem setCheckable(boolean paramBoolean)
   {
-    int j = kt;
+    int j = kK;
     if (paramBoolean) {}
     for (int i = 1;; i = 0)
     {
-      kt = (i | j & 0xFFFFFFFE);
+      kK = (i | j & 0xFFFFFFFE);
       return this;
     }
   }
   
   public final MenuItem setChecked(boolean paramBoolean)
   {
-    int j = kt;
+    int j = kK;
     if (paramBoolean) {}
     for (int i = 2;; i = 0)
     {
-      kt = (i | j & 0xFFFFFFFD);
+      kK = (i | j & 0xFFFFFFFD);
       return this;
     }
   }
   
   public final MenuItem setEnabled(boolean paramBoolean)
   {
-    int j = kt;
+    int j = kK;
     if (paramBoolean) {}
     for (int i = 16;; i = 0)
     {
-      kt = (i | j & 0xFFFFFFEF);
+      kK = (i | j & 0xFFFFFFEF);
       return this;
     }
   }
   
   public final MenuItem setIcon(int paramInt)
   {
-    kr = paramInt;
-    kq = mContext.getResources().getDrawable(paramInt);
+    kI = paramInt;
+    kH = mContext.getResources().getDrawable(paramInt);
     return this;
   }
   
   public final MenuItem setIcon(Drawable paramDrawable)
   {
-    kq = paramDrawable;
-    kr = 0;
+    kH = paramDrawable;
+    kI = 0;
     return this;
   }
   
@@ -224,7 +224,7 @@ public final class a
   
   public final MenuItem setNumericShortcut(char paramChar)
   {
-    ko = paramChar;
+    kF = paramChar;
     return this;
   }
   
@@ -235,14 +235,14 @@ public final class a
   
   public final MenuItem setOnMenuItemClickListener(MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener)
   {
-    ks = paramOnMenuItemClickListener;
+    kJ = paramOnMenuItemClickListener;
     return this;
   }
   
   public final MenuItem setShortcut(char paramChar1, char paramChar2)
   {
-    ko = paramChar1;
-    kp = paramChar2;
+    kF = paramChar1;
+    kG = paramChar2;
     return this;
   }
   
@@ -250,29 +250,29 @@ public final class a
   
   public final MenuItem setTitle(int paramInt)
   {
-    km = mContext.getResources().getString(paramInt);
+    kD = mContext.getResources().getString(paramInt);
     return this;
   }
   
   public final MenuItem setTitle(CharSequence paramCharSequence)
   {
-    km = paramCharSequence;
+    kD = paramCharSequence;
     return this;
   }
   
   public final MenuItem setTitleCondensed(CharSequence paramCharSequence)
   {
-    kn = paramCharSequence;
+    kE = paramCharSequence;
     return this;
   }
   
   public final MenuItem setVisible(boolean paramBoolean)
   {
-    int j = kt;
+    int j = kK;
     if (paramBoolean) {}
     for (int i = 0;; i = 8)
     {
-      kt = (i | j & 0x8);
+      kK = (i | j & 0x8);
       return this;
     }
   }

@@ -4,7 +4,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelfriend.u;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 
 final class LoginIndepPass$11$1$1
   implements DialogInterface.OnCancelListener
@@ -13,8 +13,8 @@ final class LoginIndepPass$11$1$1
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    ah.tE().c(ktH);
-    ah.tE().b(701, ktI.ktG.ktE);
+    ah.tF().c(kSO);
+    ah.tF().b(701, kSP.kSN.kSL);
   }
 }
 

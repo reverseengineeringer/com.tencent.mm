@@ -10,7 +10,7 @@ final class j$4
   
   public final void onClick(View paramView)
   {
-    bMp.db(bMq);
+    bFJ.dG(bFK);
   }
 }
 

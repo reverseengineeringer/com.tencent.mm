@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -12,31 +12,31 @@ import java.util.Set;
 public class JsapiPermissionWrapper
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
-  public static final JsapiPermissionWrapper iUp = new JsapiPermissionWrapper(1);
-  public static final JsapiPermissionWrapper iUq = new JsapiPermissionWrapper(2);
-  public static final JsapiPermissionWrapper iUr = new JsapiPermissionWrapper(3);
-  public static final JsapiPermissionWrapper iUs = new JsapiPermissionWrapper(4);
-  public byte[] iUt = null;
-  private int iUu = 0;
-  private Set iUv;
-  private Set iUw;
+  public static final Parcelable.Creator<JsapiPermissionWrapper> CREATOR = new Parcelable.Creator() {};
+  public static final JsapiPermissionWrapper jrI = new JsapiPermissionWrapper(1);
+  public static final JsapiPermissionWrapper jrJ = new JsapiPermissionWrapper(2);
+  public static final JsapiPermissionWrapper jrK = new JsapiPermissionWrapper(3);
+  public static final JsapiPermissionWrapper jrL = new JsapiPermissionWrapper(4);
+  public byte[] jrM = null;
+  private int jrN = 0;
+  private Set<Integer> jrO;
+  private Set<Integer> jrP;
   
   public JsapiPermissionWrapper()
   {
-    iUt = null;
+    jrM = null;
   }
   
   public JsapiPermissionWrapper(int paramInt)
   {
-    iUu = paramInt;
-    iUt = new byte[0];
+    jrN = paramInt;
+    jrM = new byte[0];
   }
   
   private JsapiPermissionWrapper(Parcel paramParcel)
   {
-    iUt = paramParcel.createByteArray();
-    iUu = paramParcel.readInt();
+    jrM = paramParcel.createByteArray();
+    jrN = paramParcel.readInt();
     l(paramParcel.createIntArray());
     m(paramParcel.createIntArray());
   }
@@ -45,23 +45,23 @@ public class JsapiPermissionWrapper
   {
     if (paramArrayOfByte == null)
     {
-      iUt = null;
+      jrM = null;
       return;
     }
-    iUt = paramArrayOfByte;
+    jrM = paramArrayOfByte;
   }
   
-  public static boolean aTp()
+  public static boolean aYm()
   {
     return true;
   }
   
-  private int[] aTq()
+  private int[] aYn()
   {
-    if (iUv != null)
+    if (jrO != null)
     {
-      int[] arrayOfInt = new int[iUv.size()];
-      Iterator localIterator = iUv.iterator();
+      int[] arrayOfInt = new int[jrO.size()];
+      Iterator localIterator = jrO.iterator();
       int i = 0;
       if (localIterator.hasNext())
       {
@@ -79,12 +79,12 @@ public class JsapiPermissionWrapper
     return new int[0];
   }
   
-  private int[] aTr()
+  private int[] aYo()
   {
-    if (iUw != null)
+    if (jrP != null)
     {
-      int[] arrayOfInt = new int[iUw.size()];
-      Iterator localIterator = iUw.iterator();
+      int[] arrayOfInt = new int[jrP.size()];
+      Iterator localIterator = jrP.iterator();
       int i = 0;
       if (localIterator.hasNext())
       {
@@ -114,17 +114,17 @@ public class JsapiPermissionWrapper
     {
       return false;
       paramObject = (JsapiPermissionWrapper)paramObject;
-      if (iUt == iUt) {
+      if (jrM == jrM) {
         return true;
       }
-    } while ((iUt == null) || (iUt == null) || (iUt.length != iUt.length));
+    } while ((jrM == null) || (jrM == null) || (jrM.length != jrM.length));
     int i = 0;
     for (;;)
     {
-      if (i >= iUt.length) {
+      if (i >= jrM.length) {
         break label87;
       }
-      if (iUt[i] != iUt[i]) {
+      if (jrM[i] != jrM[i]) {
         break;
       }
       i += 1;
@@ -133,60 +133,60 @@ public class JsapiPermissionWrapper
     return true;
   }
   
-  public final void l(Bundle paramBundle)
-  {
-    paramBundle.putByteArray("jsapi_perm_wrapper_bytes", iUt);
-    paramBundle.putInt("jsapi_perm_wrapper_hardcodePermission", iUu);
-    paramBundle.putIntArray("jsapi_perm_wrapper_blacklist", aTq());
-    paramBundle.putIntArray("jsapi_perm_wrapper_whitelist", aTr());
-  }
-  
   public final void l(int[] paramArrayOfInt)
   {
-    if (iUv == null) {
-      iUv = new HashSet();
+    if (jrO == null) {
+      jrO = new HashSet();
     }
     while ((paramArrayOfInt != null) && (paramArrayOfInt.length > 0))
     {
       int i = 0;
       while (i < paramArrayOfInt.length)
       {
-        iUv.add(Integer.valueOf(paramArrayOfInt[i]));
+        jrO.add(Integer.valueOf(paramArrayOfInt[i]));
         i += 1;
       }
-      iUv.clear();
+      jrO.clear();
     }
-  }
-  
-  public final void m(Bundle paramBundle)
-  {
-    iUt = paramBundle.getByteArray("jsapi_perm_wrapper_bytes");
-    iUu = paramBundle.getInt("jsapi_perm_wrapper_hardcodePermission");
-    l(paramBundle.getIntArray("jsapi_perm_wrapper_blacklist"));
-    m(paramBundle.getIntArray("jsapi_perm_wrapper_whitelist"));
   }
   
   public final void m(int[] paramArrayOfInt)
   {
-    if (iUw == null) {
-      iUw = new HashSet();
+    if (jrP == null) {
+      jrP = new HashSet();
     }
     while ((paramArrayOfInt != null) && (paramArrayOfInt.length > 0))
     {
       int i = 0;
       while (i < paramArrayOfInt.length)
       {
-        iUw.add(Integer.valueOf(paramArrayOfInt[i]));
+        jrP.add(Integer.valueOf(paramArrayOfInt[i]));
         i += 1;
       }
-      iUw.clear();
+      jrP.clear();
     }
   }
   
-  public final int oS(int paramInt)
+  public final void n(Bundle paramBundle)
+  {
+    paramBundle.putByteArray("jsapi_perm_wrapper_bytes", jrM);
+    paramBundle.putInt("jsapi_perm_wrapper_hardcodePermission", jrN);
+    paramBundle.putIntArray("jsapi_perm_wrapper_blacklist", aYn());
+    paramBundle.putIntArray("jsapi_perm_wrapper_whitelist", aYo());
+  }
+  
+  public final void o(Bundle paramBundle)
+  {
+    jrM = paramBundle.getByteArray("jsapi_perm_wrapper_bytes");
+    jrN = paramBundle.getInt("jsapi_perm_wrapper_hardcodePermission");
+    l(paramBundle.getIntArray("jsapi_perm_wrapper_blacklist"));
+    m(paramBundle.getIntArray("jsapi_perm_wrapper_whitelist"));
+  }
+  
+  public final int qF(int paramInt)
   {
     int i;
-    if ((iUw != null) && (iUw.contains(Integer.valueOf(paramInt))))
+    if ((jrP != null) && (jrP.contains(Integer.valueOf(paramInt))))
     {
       i = 1;
       if (i == 0) {
@@ -211,53 +211,53 @@ public class JsapiPermissionWrapper
               return 1;
               i = 0;
               break;
-              if ((iUv != null) && (iUv.contains(Integer.valueOf(paramInt)))) {}
+              if ((jrO != null) && (jrO.contains(Integer.valueOf(paramInt)))) {}
               for (i = 1; i != 0; i = 0) {
                 return 0;
               }
-              if (iUu != 1) {
+              if (jrN != 1) {
                 break label112;
               }
             } while ((paramInt != 34) && (paramInt != 75));
-            u.i("!44@/B4Tb64lLpJGrp3jueSX7a0O+uIaXB6eg8mTj+F44r0=", "on reserved bytes control : %d", new Object[] { Integer.valueOf(paramInt) });
+            v.i("MicroMsg.JsapiPermissionWrapper", "on reserved bytes control : %d", new Object[] { Integer.valueOf(paramInt) });
             return 0;
-            if (iUu != 2) {
+            if (jrN != 2) {
               break label128;
             }
           } while (paramInt == -3);
           return 0;
-          if (iUu != 3) {
+          if (jrN != 3) {
             break label174;
           }
         } while ((paramInt != 34) && (paramInt != 75) && (paramInt != 23));
-        u.i("!44@/B4Tb64lLpJGrp3jueSX7a0O+uIaXB6eg8mTj+F44r0=", "on reserved bytes control : %d", new Object[] { Integer.valueOf(paramInt) });
+        v.i("MicroMsg.JsapiPermissionWrapper", "on reserved bytes control : %d", new Object[] { Integer.valueOf(paramInt) });
         return 0;
-        if (iUu != 4) {
+        if (jrN != 4) {
           break label214;
         }
       } while ((paramInt != 34) && (paramInt != 75));
-      u.i("!44@/B4Tb64lLpJGrp3jueSX7a0O+uIaXB6eg8mTj+F44r0=", "hy: on reserved bytes control : %d", new Object[] { Integer.valueOf(paramInt) });
+      v.i("MicroMsg.JsapiPermissionWrapper", "hy: on reserved bytes control : %d", new Object[] { Integer.valueOf(paramInt) });
       return 0;
     } while ((paramInt == -2) || (paramInt == -3));
-    if ((iUt == null) || (paramInt < 0) || (paramInt >= iUt.length)) {
+    if ((jrM == null) || (paramInt < 0) || (paramInt >= jrM.length)) {
       return 0;
     }
-    return iUt[paramInt];
+    return jrM[paramInt];
   }
   
-  public final boolean oT(int paramInt)
+  public final boolean qG(int paramInt)
   {
-    return oS(paramInt) == 1;
+    return qF(paramInt) == 1;
   }
   
   public String toString()
   {
-    if (iUt == null) {
+    if (jrM == null) {
       return "null";
     }
     long l = System.currentTimeMillis();
     Object localObject = new StringBuilder(180);
-    byte[] arrayOfByte = iUt;
+    byte[] arrayOfByte = jrM;
     int j = arrayOfByte.length;
     int i = 0;
     while (i < j)
@@ -266,16 +266,16 @@ public class JsapiPermissionWrapper
       i += 1;
     }
     localObject = ((StringBuilder)localObject).toString();
-    u.d("!44@/B4Tb64lLpJGrp3jueSX7a0O+uIaXB6eg8mTj+F44r0=", "toString cost %s", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+    v.d("MicroMsg.JsapiPermissionWrapper", "toString cost %s", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
     return (String)localObject;
   }
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    paramParcel.writeByteArray(iUt);
-    paramParcel.writeInt(iUu);
-    paramParcel.writeIntArray(aTq());
-    paramParcel.writeIntArray(aTr());
+    paramParcel.writeByteArray(jrM);
+    paramParcel.writeInt(jrN);
+    paramParcel.writeIntArray(aYn());
+    paramParcel.writeIntArray(aYo());
   }
 }
 

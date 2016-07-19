@@ -26,12 +26,13 @@
     .locals 0
 
     .prologue
-    .line 60
+    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 62
     iput-object p1, p0, Lcom/tencent/kingkong/support/ICancellationSignal$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
+    .line 63
     return-void
 .end method
 
@@ -78,17 +79,15 @@
     .line 80
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 82
+    .line 81
     return-void
 
-    .line 79
+    .line 80
     :catchall_0
     move-exception v0
 
-    .line 80
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 81
     throw v0
 .end method
 

@@ -6,7 +6,7 @@ import org.xmlpull.v1.XmlPullParserFactory;
 
 final class a
 {
-  public static BindWordingContent iY(String paramString)
+  public static BindWordingContent jq(String paramString)
   {
     BindWordingContent localBindWordingContent = new BindWordingContent("", "");
     Object localObject = XmlPullParserFactory.newInstance();
@@ -54,12 +54,12 @@ final class a
               if (paramString.equalsIgnoreCase("type")) {
                 try
                 {
-                  caF = Integer.valueOf(str2);
+                  bUo = Integer.valueOf(str2);
                   localObject = paramString;
                 }
                 catch (Exception localException)
                 {
-                  caF = Integer.valueOf(0);
+                  bUo = Integer.valueOf(0);
                   String str1 = paramString;
                 }
               }

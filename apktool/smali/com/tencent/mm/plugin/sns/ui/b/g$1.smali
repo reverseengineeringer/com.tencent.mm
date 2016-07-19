@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hoJ:Lcom/tencent/mm/plugin/sns/ui/b/g;
+.field final synthetic hFf:Lcom/tencent/mm/plugin/sns/ui/b/g;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 85
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/b/g$1;->hoJ:Lcom/tencent/mm/plugin/sns/ui/b/g;
+    .line 102
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/b/g$1;->hFf:Lcom/tencent/mm/plugin/sns/ui/b/g;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,10 +36,10 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/plugin/sight/decode/a/b;I)V
+.method public final d(Lcom/tencent/mm/plugin/sight/decode/a/b;I)V
     .locals 0
 
     .prologue
-    .line 89
+    .line 106
     return-void
 .end method

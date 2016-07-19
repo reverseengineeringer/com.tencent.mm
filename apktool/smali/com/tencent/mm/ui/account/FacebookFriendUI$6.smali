@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/FacebookFriendUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/FacebookFriendUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+.field final synthetic kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 167
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$6;->ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$6;->kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final qm(I)V
+.method public final se(I)V
     .locals 2
 
     .prologue
@@ -44,7 +44,7 @@
     if-lez p1, :cond_0
 
     .line 172
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$6;->ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$6;->kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/FacebookFriendUI;->d(Lcom/tencent/mm/ui/account/FacebookFriendUI;)Landroid/widget/TextView;
 
@@ -60,7 +60,7 @@
 
     .line 174
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$6;->ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$6;->kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/FacebookFriendUI;->d(Lcom/tencent/mm/ui/account/FacebookFriendUI;)Landroid/widget/TextView;
 

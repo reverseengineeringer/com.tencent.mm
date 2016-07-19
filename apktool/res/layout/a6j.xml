@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/c13" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="24.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+        <TextView android:textSize="18.0dip" android:textColor="#ffffffff" android:gravity="center" android:id="@id/c14" android:layout_width="wrap_content" android:layout_height="24.0dip" android:layout_marginRight="8.0dip" />
+        <ImageView android:id="@id/c15" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="2.0dip" android:src="@drawable/lx" android:contentDescription="@string/c7f" />
+    </LinearLayout>
+    <com.tencent.mm.plugin.scanner.ui.HighlightRectSideView android:id="@id/c16" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:textSize="@dimen/h4" android:textColor="#ffa5a5a5" android:id="@id/c17" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/c7j" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

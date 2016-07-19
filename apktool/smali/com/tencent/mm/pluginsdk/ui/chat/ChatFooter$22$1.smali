@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22;->AE(Ljava/lang/String;)V
+    value = Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22;->CF(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic iLQ:Ljava/lang/String;
+.field final synthetic jiN:Ljava/lang/String;
 
-.field final synthetic iLR:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22;
+.field final synthetic jiO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 513
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22$1;->iLR:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22$1;->jiO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22;
 
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22$1;->iLQ:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22$1;->jiN:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,11 +47,11 @@
     const/4 v0, 0x1
 
     .line 516
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22$1;->iLQ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22$1;->jiN:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22$1;->iLR:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22$1;->jiO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22;
 
-    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->c(Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;)Ljava/lang/String;
 
@@ -62,14 +62,14 @@
     move-result v1
 
     .line 517
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22$1;->iLR:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22$1;->jiO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22;
 
-    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
     if-eqz v1, :cond_0
 
     :goto_0
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22$1;->iLQ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$22$1;->jiN:Ljava/lang/String;
 
     invoke-static {v2, v0, v1}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->a(Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;ILjava/lang/String;)V
 

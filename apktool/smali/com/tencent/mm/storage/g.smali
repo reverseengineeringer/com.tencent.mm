@@ -4,13 +4,23 @@
 
 
 # instance fields
-.field private bsv:Z
+.field private bgz:Z
 
 .field private filePath:Ljava/lang/String;
 
-.field public kae:Z
+.field public kAA:Z
 
 .field private values:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -24,7 +34,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 19
-    iput-boolean v3, p0, Lcom/tencent/mm/storage/g;->bsv:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/storage/g;->bgz:Z
 
     .line 20
     const-string/jumbo v0, ""
@@ -32,7 +42,7 @@
     iput-object v0, p0, Lcom/tencent/mm/storage/g;->filePath:Ljava/lang/String;
 
     .line 21
-    iput-boolean v3, p0, Lcom/tencent/mm/storage/g;->kae:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/storage/g;->kAA:Z
 
     .line 25
     new-instance v0, Ljava/io/File;
@@ -46,7 +56,7 @@
     if-nez v0, :cond_0
 
     .line 26
-    const-string/jumbo v0, "!44@/B4Tb64lLpLs275/1YaieNmxjNVioOPWC6jb4zyZKLc="
+    const-string/jumbo v0, "MicroMsg.ConfigFileStorage"
 
     const-string/jumbo v1, "ConfigFileStorage not exit path[%s]"
 
@@ -56,23 +66,23 @@
 
     aput-object p1, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 28
     :cond_0
     iput-object p1, p0, Lcom/tencent/mm/storage/g;->filePath:Ljava/lang/String;
 
     .line 29
-    invoke-direct {p0}, Lcom/tencent/mm/storage/g;->aWo()V
+    invoke-direct {p0}, Lcom/tencent/mm/storage/g;->bbB()V
 
     .line 30
-    iput-boolean v3, p0, Lcom/tencent/mm/storage/g;->bsv:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/storage/g;->bgz:Z
 
     .line 31
     return-void
 .end method
 
-.method private declared-synchronized aWo()V
+.method private declared-synchronized bbB()V
     .locals 8
 
     .prologue
@@ -102,7 +112,7 @@
     move-result v2
 
     .line 69
-    const-string/jumbo v3, "!44@/B4Tb64lLpLs275/1YaieNmxjNVioOPWC6jb4zyZKLc="
+    const-string/jumbo v3, "MicroMsg.ConfigFileStorage"
 
     const-string/jumbo v4, "ConfigFileStorage openCfg not exit path[%s], created[%b]"
 
@@ -124,7 +134,7 @@
 
     aput-object v2, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 71
     :cond_0
@@ -146,7 +156,7 @@
     iput-object v0, p0, Lcom/tencent/mm/storage/g;->values:Ljava/util/Map;
 
     .line 73
-    const-string/jumbo v0, "!44@/B4Tb64lLpLs275/1YaieNmxjNVioOPWC6jb4zyZKLc="
+    const-string/jumbo v0, "MicroMsg.ConfigFileStorage"
 
     const-string/jumbo v2, "ConfigFileStorage openCfg file len == 0 path[%s]"
 
@@ -160,7 +170,7 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -202,7 +212,7 @@
     iput-object v0, p0, Lcom/tencent/mm/storage/g;->values:Ljava/util/Map;
 
     .line 80
-    const-string/jumbo v0, "!44@/B4Tb64lLpLs275/1YaieNmxjNVioOPWC6jb4zyZKLc="
+    const-string/jumbo v0, "MicroMsg.ConfigFileStorage"
 
     const-string/jumbo v1, "openCfg end, keys count:%d"
 
@@ -224,12 +234,12 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 81
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/storage/g;->kae:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/storage/g;->kAA:Z
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_5
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
@@ -268,7 +278,7 @@
     iput-object v3, p0, Lcom/tencent/mm/storage/g;->values:Ljava/util/Map;
 
     .line 84
-    const-string/jumbo v3, "!44@/B4Tb64lLpLs275/1YaieNmxjNVioOPWC6jb4zyZKLc="
+    const-string/jumbo v3, "MicroMsg.ConfigFileStorage"
 
     const-string/jumbo v4, "openCfg Exception!"
 
@@ -276,12 +286,12 @@
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    invoke-static {v3, v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 85
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/storage/g;->kae:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/storage/g;->kAA:Z
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_4
 
@@ -393,7 +403,7 @@
     goto :goto_1
 .end method
 
-.method private declared-synchronized oj()V
+.method private declared-synchronized mz()V
     .locals 9
 
     .prologue
@@ -404,7 +414,7 @@
 
     .line 102
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gp()J
 
     move-result-wide v4
 
@@ -437,7 +447,7 @@
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->flush()V
 
     .line 107
-    const-string/jumbo v0, "!44@/B4Tb64lLpLs275/1YaieNmxjNVioOPWC6jb4zyZKLc="
+    const-string/jumbo v0, "MicroMsg.ConfigFileStorage"
 
     const-string/jumbo v2, "writeCfg end, keys count:%d time:%d"
 
@@ -467,7 +477,7 @@
 
     const/4 v7, 0x1
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/ay;->an(J)J
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/be;->au(J)J
 
     move-result-wide v4
 
@@ -477,7 +487,7 @@
 
     aput-object v4, v6, v7
 
-    invoke-static {v0, v2, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v6}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_4
     .catchall {:try_start_2 .. :try_end_2} :catchall_3
@@ -508,7 +518,7 @@
     .line 109
     :goto_1
     :try_start_4
-    const-string/jumbo v3, "!44@/B4Tb64lLpLs275/1YaieNmxjNVioOPWC6jb4zyZKLc="
+    const-string/jumbo v3, "MicroMsg.ConfigFileStorage"
 
     const-string/jumbo v4, "exception:%s"
 
@@ -518,16 +528,16 @@
 
     const/4 v6, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v7
 
     aput-object v7, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 110
-    const-string/jumbo v3, "!44@/B4Tb64lLpLs275/1YaieNmxjNVioOPWC6jb4zyZKLc="
+    const-string/jumbo v3, "MicroMsg.ConfigFileStorage"
 
     const-string/jumbo v4, "writeCfg"
 
@@ -535,7 +545,7 @@
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    invoke-static {v3, v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_4
 
@@ -776,7 +786,7 @@
 .end method
 
 .method public final declared-synchronized getLong(IJ)J
-    .locals 1
+    .locals 2
 
     .prologue
     .line 148
@@ -835,12 +845,12 @@
     invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 35
-    iget-boolean v0, p0, Lcom/tencent/mm/storage/g;->bsv:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/storage/g;->bgz:Z
 
     if-nez v0, :cond_0
 
     .line 36
-    invoke-direct {p0}, Lcom/tencent/mm/storage/g;->oj()V
+    invoke-direct {p0}, Lcom/tencent/mm/storage/g;->mz()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -890,7 +900,7 @@
 .end method
 
 .method public final declared-synchronized setLong(IJ)V
-    .locals 1
+    .locals 2
 
     .prologue
     .line 144

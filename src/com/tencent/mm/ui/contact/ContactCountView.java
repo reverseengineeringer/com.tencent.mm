@@ -7,23 +7,23 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-import com.tencent.mm.h.a;
+import com.tencent.mm.i.a;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import com.tencent.mm.model.h;
 import com.tencent.mm.model.i;
 import com.tencent.mm.sdk.h.d;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.q;
 
 public class ContactCountView
   extends FrameLayout
 {
-  private boolean asK = true;
-  private View cTx;
+  private View cQS;
   private int count = 0;
-  private TextView eEb;
-  private int lji = 1;
+  private TextView eKc;
+  int lJt = 1;
+  private boolean visible = true;
   
   public ContactCountView(Context paramContext)
   {
@@ -39,38 +39,38 @@ public class ContactCountView
   
   private void init()
   {
-    inflate(getContext(), 2131361802, this);
+    inflate(getContext(), 2130903379, this);
   }
   
-  public final void bhb()
+  public final void bmK()
   {
-    Object localObject2 = i.bAc;
+    Object localObject2 = i.btf;
     label126:
     String str1;
     int i;
-    if (lji == 1)
+    if (lJt == 1)
     {
-      count = ah.tD().rq().b((String[])localObject2, new String[] { h.sc(), "weixin", "helper_entry", "filehelper" });
-      u.d("!44@/B4Tb64lLpLSOpQlr7qYXSk7cqwPRO/WN0MHMKg7BqI=", "contact count %d", new Object[] { Integer.valueOf(count) });
-      if (eEb != null)
+      count = ah.tE().rr().b((String[])localObject2, new String[] { h.se(), "weixin", "helper_entry", "filehelper" });
+      v.d("MicroMsg.ContactCountView", "contact count %d", new Object[] { Integer.valueOf(count) });
+      if (eKc != null)
       {
-        if (lji == 1) {
-          eEb.setText(getContext().getResources().getQuantityString(2131755016, count, new Object[] { Integer.valueOf(count) }));
+        if (lJt == 1) {
+          eKc.setText(getContext().getResources().getQuantityString(2131361793, count, new Object[] { Integer.valueOf(count) }));
         }
       }
       else {
-        setVisible(asK);
+        setVisible(visible);
       }
     }
     else
     {
-      Object localObject1 = ah.tD().rq();
-      str1 = h.sc();
+      Object localObject1 = ah.tE().rr();
+      str1 = h.se();
       StringBuilder localStringBuilder = new StringBuilder();
       localStringBuilder.append("select count(username) from rcontact where ");
-      localStringBuilder.append("type & ").append(a.qk()).append(" !=0 and ");
-      localStringBuilder.append("type & ").append(a.qn()).append(" =0 and ");
-      localStringBuilder.append("type & ").append(a.ql()).append(" =0 and ");
+      localStringBuilder.append("type & ").append(a.oN()).append(" !=0 and ");
+      localStringBuilder.append("type & ").append(a.oQ()).append(" =0 and ");
+      localStringBuilder.append("type & ").append(a.oO()).append(" =0 and ");
       localStringBuilder.append("verifyFlag & 8").append(" = 0 and ");
       localStringBuilder.append("( username like '%@chatroom')");
       if ((localObject2 != null) && (localObject2.length > 0))
@@ -92,7 +92,7 @@ public class ContactCountView
         i += 1;
       }
       str1 = localStringBuilder.toString();
-      localObject1 = aoX.rawQuery(str1, null);
+      localObject1 = bkP.rawQuery(str1, null);
       if (localObject1 == null) {
         break label481;
       }
@@ -102,10 +102,10 @@ public class ContactCountView
     }
     for (;;)
     {
-      u.v("!32@/B4Tb64lLpLSOpQlr7qYXa3KX0iP+QzT", "getChatroomContactCount, sql:%s, result:%d", new Object[] { str1, Integer.valueOf(i) });
+      v.v("MicroMsg.ContactStorage", "getChatroomContactCount, sql:%s, result:%d", new Object[] { str1, Integer.valueOf(i) });
       count = i;
       break;
-      eEb.setText(getContext().getResources().getQuantityString(2131755017, count, new Object[] { Integer.valueOf(count) }));
+      eKc.setText(getContext().getResources().getQuantityString(2131361792, count, new Object[] { Integer.valueOf(count) }));
       break label126;
       label481:
       i = 0;
@@ -114,28 +114,23 @@ public class ContactCountView
   
   protected void onMeasure(int paramInt1, int paramInt2)
   {
-    u.d("!44@/B4Tb64lLpLSOpQlr7qYXSk7cqwPRO/WN0MHMKg7BqI=", "onMeasure");
-    if (cTx == null)
+    v.d("MicroMsg.ContactCountView", "onMeasure");
+    if (cQS == null)
     {
-      cTx = ((FrameLayout)findViewById(2131165274));
-      eEb = ((TextView)findViewById(2131165275));
+      cQS = ((FrameLayout)findViewById(2131756283));
+      eKc = ((TextView)findViewById(2131756284));
     }
-    bhb();
+    bmK();
     super.onMeasure(paramInt1, paramInt2);
   }
   
-  public void setContactType(int paramInt)
+  public final void setVisible(boolean paramBoolean)
   {
-    lji = paramInt;
-  }
-  
-  public void setVisible(boolean paramBoolean)
-  {
-    asK = paramBoolean;
+    visible = paramBoolean;
     View localView;
-    if (cTx != null)
+    if (cQS != null)
     {
-      localView = cTx;
+      localView = cQS;
       if ((!paramBoolean) || (count <= 0)) {
         break label36;
       }

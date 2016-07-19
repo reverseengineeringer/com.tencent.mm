@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field aEZ:Ljava/lang/String;
+.field are:Ljava/lang/String;
 
-.field lvE:Lcom/tencent/mm/ui/tools/FilterImageView$b;
+.field lWG:Lcom/tencent/mm/ui/tools/FilterImageView$b;
 
-.field lvF:Ljava/lang/String;
+.field lWH:Ljava/lang/String;
 
-.field lvG:I
+.field lWI:I
 
-.field lvH:I
+.field lWJ:I
 
-.field lvI:I
+.field lWK:I
 
 
 # direct methods
@@ -37,22 +37,22 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 310
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/FilterImageView$c;->lvE:Lcom/tencent/mm/ui/tools/FilterImageView$b;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/FilterImageView$c;->lWG:Lcom/tencent/mm/ui/tools/FilterImageView$b;
 
     .line 311
-    iput-object p2, p0, Lcom/tencent/mm/ui/tools/FilterImageView$c;->lvF:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/ui/tools/FilterImageView$c;->lWH:Ljava/lang/String;
 
     .line 312
-    iput p3, p0, Lcom/tencent/mm/ui/tools/FilterImageView$c;->lvG:I
+    iput p3, p0, Lcom/tencent/mm/ui/tools/FilterImageView$c;->lWI:I
 
     .line 313
-    iput p4, p0, Lcom/tencent/mm/ui/tools/FilterImageView$c;->lvH:I
+    iput p4, p0, Lcom/tencent/mm/ui/tools/FilterImageView$c;->lWJ:I
 
     .line 314
-    iput-object p5, p0, Lcom/tencent/mm/ui/tools/FilterImageView$c;->aEZ:Ljava/lang/String;
+    iput-object p5, p0, Lcom/tencent/mm/ui/tools/FilterImageView$c;->are:Ljava/lang/String;
 
     .line 315
-    iput p6, p0, Lcom/tencent/mm/ui/tools/FilterImageView$c;->lvI:I
+    iput p6, p0, Lcom/tencent/mm/ui/tools/FilterImageView$c;->lWK:I
 
     .line 316
     return-void

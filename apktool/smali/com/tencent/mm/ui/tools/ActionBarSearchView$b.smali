@@ -15,14 +15,14 @@
 
 
 # virtual methods
-.method public abstract AD(Ljava/lang/String;)V
+.method public abstract CE(Ljava/lang/String;)V
 .end method
 
-.method public abstract Gf()V
+.method public abstract GC()V
 .end method
 
-.method public abstract bim()V
+.method public abstract boj()V
 .end method
 
-.method public abstract bin()V
+.method public abstract bok()V
 .end method

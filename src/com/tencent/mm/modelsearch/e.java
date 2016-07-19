@@ -1,6 +1,6 @@
 package com.tencent.mm.modelsearch;
 
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -9,19 +9,19 @@ public final class e
   extends m.k
   implements Runnable
 {
-  String aEy;
-  HashSet bYt;
-  m.j bZf;
+  String aqC;
+  m.j bSO;
+  HashSet<String> bSc;
   private int errorCode;
-  private aa handler;
+  private ac handler;
   
-  public e(int paramInt, String paramString, HashSet paramHashSet, m.j paramj, aa paramaa)
+  public e(int paramInt, String paramString, HashSet<String> paramHashSet, m.j paramj, ac paramac)
   {
     errorCode = paramInt;
-    aEy = paramString;
-    bZf = paramj;
-    handler = paramaa;
-    bYt = paramHashSet;
+    aqC = paramString;
+    bSO = paramj;
+    handler = paramac;
+    bSc = paramHashSet;
   }
   
   public final void run()
@@ -32,17 +32,17 @@ public final class e
       {
         final LinkedList localLinkedList = new LinkedList();
         final String[] arrayOfString = new String[1];
-        arrayOfString[0] = aEy;
+        arrayOfString[0] = aqC;
         if (handler == null)
         {
-          bZf.a(this, localLinkedList, bYt, arrayOfString, aEy);
+          bSO.a(this, localLinkedList, bSc, arrayOfString, aqC);
           return;
         }
         handler.post(new Runnable()
         {
           public final void run()
           {
-            bZf.a(e.this, localLinkedList, bYt, arrayOfString, aEy);
+            bSO.a(e.this, localLinkedList, bSc, arrayOfString, aqC);
           }
         });
         return;

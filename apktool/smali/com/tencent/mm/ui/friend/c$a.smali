@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract ib(Z)V
+.method public abstract iF(Z)V
 .end method

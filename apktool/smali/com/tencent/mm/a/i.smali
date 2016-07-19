@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field public akv:[B
+.field public Xo:[B
 
-.field public akw:I
+.field public Xp:I
 
 
 # direct methods
@@ -20,14 +20,14 @@
     .line 253
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/a/i;->akw:I
+    iput v0, p0, Lcom/tencent/mm/a/i;->Xp:I
 
     .line 254
     const/16 v0, 0x100
 
     new-array v0, v0, [B
 
-    iput-object v0, p0, Lcom/tencent/mm/a/i;->akv:[B
+    iput-object v0, p0, Lcom/tencent/mm/a/i;->Xo:[B
 
     .line 255
     return-void
@@ -43,7 +43,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 258
-    iput v1, p0, Lcom/tencent/mm/a/i;->akw:I
+    iput v1, p0, Lcom/tencent/mm/a/i;->Xp:I
 
     .line 259
     const/4 v0, 0x1
@@ -52,7 +52,7 @@
 
     aput-byte p1, v0, v1
 
-    iput-object v0, p0, Lcom/tencent/mm/a/i;->akv:[B
+    iput-object v0, p0, Lcom/tencent/mm/a/i;->Xo:[B
 
     .line 260
     return-void
@@ -68,10 +68,10 @@
     .line 263
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/a/i;->akw:I
+    iput v0, p0, Lcom/tencent/mm/a/i;->Xp:I
 
     .line 264
-    iput-object p1, p0, Lcom/tencent/mm/a/i;->akv:[B
+    iput-object p1, p0, Lcom/tencent/mm/a/i;->Xo:[B
 
     .line 265
     return-void

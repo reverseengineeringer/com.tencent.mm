@@ -7,7 +7,7 @@ import java.util.Date;
 final class SQLiteConnection$Operation
 {
   private static final SimpleDateFormat sDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
-  public ArrayList mBindArgs;
+  public ArrayList<Object> mBindArgs;
   public int mCookie;
   public long mEndTime;
   public Exception mException;
@@ -41,43 +41,41 @@ final class SQLiteConnection$Operation
   public final void describe(StringBuilder paramStringBuilder, boolean paramBoolean)
   {
     paramStringBuilder.append(mKind);
-    if (mFinished) {
-      paramStringBuilder.append(" took ").append(mEndTime - mStartTime).append("ms");
-    }
     int i;
-    for (;;)
+    label122:
+    Object localObject;
+    if (mFinished)
     {
+      paramStringBuilder.append(" took ").append(mEndTime - mStartTime).append("ms");
       paramStringBuilder.append(" - ").append(getStatus());
       if (mSql != null) {
-        paramStringBuilder.append(", sql=\"").append(SQLiteConnection.access$1(mSql)).append("\"");
+        paramStringBuilder.append(", sql=\"").append(SQLiteConnection.access$300(mSql)).append("\"");
       }
-      if ((paramBoolean) && (mBindArgs != null) && (mBindArgs.size() != 0))
-      {
-        paramStringBuilder.append(", bindArgs=[");
-        int j = mBindArgs.size();
-        i = 0;
-        if (i < j) {
-          break;
-        }
-        paramStringBuilder.append("]");
+      if ((!paramBoolean) || (mBindArgs == null) || (mBindArgs.size() == 0)) {
+        break label260;
       }
-      if ((mException != null) && (mException.getMessage() != null)) {
-        paramStringBuilder.append(", exception=\"").append(mException.getMessage()).append("\"");
+      paramStringBuilder.append(", bindArgs=[");
+      int j = mBindArgs.size();
+      i = 0;
+      if (i >= j) {
+        break label253;
       }
-      return;
-      paramStringBuilder.append(" started ").append(System.currentTimeMillis() - mStartTime).append("ms ago");
-    }
-    Object localObject = mBindArgs.get(i);
-    if (i != 0) {
-      paramStringBuilder.append(", ");
-    }
-    if (localObject == null) {
+      localObject = mBindArgs.get(i);
+      if (i != 0) {
+        paramStringBuilder.append(", ");
+      }
+      if (localObject != null) {
+        break label194;
+      }
       paramStringBuilder.append("null");
     }
     for (;;)
     {
       i += 1;
+      break label122;
+      paramStringBuilder.append(" started ").append(System.currentTimeMillis() - mStartTime).append("ms ago");
       break;
+      label194:
       if ((localObject instanceof byte[])) {
         paramStringBuilder.append("<byte[]>");
       } else if ((localObject instanceof String)) {
@@ -85,6 +83,12 @@ final class SQLiteConnection$Operation
       } else {
         paramStringBuilder.append(localObject);
       }
+    }
+    label253:
+    paramStringBuilder.append("]");
+    label260:
+    if ((mException != null) && (mException.getMessage() != null)) {
+      paramStringBuilder.append(", exception=\"").append(mException.getMessage()).append("\"");
     }
   }
 }

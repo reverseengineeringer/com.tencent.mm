@@ -6,8 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/tencent/kingkong/ContentObserver$NotificationRunnable;,
-        Lcom/tencent/kingkong/ContentObserver$Transport;
+        Lcom/tencent/kingkong/ContentObserver$Transport;,
+        Lcom/tencent/kingkong/ContentObserver$NotificationRunnable;
     }
 .end annotation
 
@@ -113,7 +113,7 @@
 
     return-object v0
 
-    .line 48
+    .line 53
     :catchall_0
     move-exception v0
 
@@ -173,7 +173,7 @@
 
     return-object v0
 
-    .line 63
+    .line 70
     :catchall_0
     move-exception v0
 

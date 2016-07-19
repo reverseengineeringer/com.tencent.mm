@@ -7,16 +7,16 @@ import android.widget.TextView;
 
 public final class c$a
 {
-  public CheckBox edK;
-  public View edL;
-  public ImageView gpY;
-  public View iGr;
-  public ImageView lfc;
-  public View lfd;
-  public TextView lfe;
-  public TextView lff;
-  public View lfg;
-  public View lfh;
+  public CheckBox ehl;
+  public View ehm;
+  public ImageView gAq;
+  public View jdm;
+  public ImageView lFo;
+  public View lFp;
+  public TextView lFq;
+  public TextView lFr;
+  public View lFs;
+  public View lFt;
 }
 
 /* Location:

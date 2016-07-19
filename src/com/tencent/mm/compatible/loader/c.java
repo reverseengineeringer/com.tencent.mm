@@ -1,103 +1,109 @@
 package com.tencent.mm.compatible.loader;
 
-public final class c
+import java.lang.reflect.Field;
+
+public final class c<T>
 {
-  static final Object en = new Object();
-  long[] btu;
-  boolean eo;
-  Object[] eq;
-  int mSize;
+  private boolean bhH;
+  public Field bhI;
+  private String classname;
+  private String fieldName;
+  public Object obj;
   
-  static int a(long[] paramArrayOfLong, int paramInt, long paramLong)
+  public c(Object paramObject, String paramString)
   {
-    int j = -1;
-    int i = paramInt + 0;
-    while (i - j > 1)
-    {
-      int k = (i + j) / 2;
-      if (paramArrayOfLong[k] < paramLong) {
-        j = k;
-      } else {
-        i = k;
-      }
+    if (paramObject == null) {
+      throw new IllegalArgumentException("obj cannot be null");
     }
-    if (i == paramInt + 0) {
-      paramInt = paramInt + 0 ^ 0xFFFFFFFF;
-    }
-    do
-    {
-      return paramInt;
-      paramInt = i;
-    } while (paramArrayOfLong[i] == paramLong);
-    return i ^ 0xFFFFFFFF;
+    obj = paramObject;
+    fieldName = paramString;
+    classname = null;
   }
   
-  public final void put(long paramLong, Object paramObject)
+  private void prepare()
   {
-    int i = a(btu, mSize, paramLong);
-    if (i >= 0)
-    {
-      eq[i] = paramObject;
+    if (bhH) {
       return;
     }
-    int j = i ^ 0xFFFFFFFF;
-    if ((j < mSize) && (eq[j] == en))
-    {
-      btu[j] = paramLong;
-      eq[j] = paramObject;
-      return;
-    }
-    i = j;
-    long[] arrayOfLong;
-    Object[] arrayOfObject;
-    if (eo)
-    {
-      i = j;
-      if (mSize >= btu.length)
+    bhH = true;
+    Class localClass = obj.getClass();
+    while (localClass != null) {
+      try
       {
-        int m = mSize;
-        arrayOfLong = btu;
-        arrayOfObject = eq;
-        i = 0;
-        int k;
-        for (j = 0; i < m; j = k)
+        Field localField1 = localClass.getDeclaredField(fieldName);
+        localField1.setAccessible(true);
+        bhI = localField1;
+        return;
+      }
+      catch (Exception localException1)
+      {
+        for (;;)
         {
-          Object localObject = arrayOfObject[i];
-          k = j;
-          if (localObject != en)
+          try
           {
-            if (i != j)
+            if ((classname != null) && (!classname.equals("")))
             {
-              arrayOfLong[j] = arrayOfLong[i];
-              arrayOfObject[j] = localObject;
+              Field[] arrayOfField = localClass.getDeclaredFields();
+              int j = arrayOfField.length;
+              i = 0;
+              if (i < j)
+              {
+                Field localField2 = arrayOfField[i];
+                if (!localField2.getType().getName().equals(classname)) {
+                  continue;
+                }
+                localField2.setAccessible(true);
+                bhI = localField2;
+              }
             }
-            k = j + 1;
           }
+          catch (Exception localException2)
+          {
+            int i;
+            continue;
+          }
+          localClass = localClass.getSuperclass();
+          break;
           i += 1;
         }
-        eo = false;
-        mSize = j;
-        i = a(btu, mSize, paramLong) ^ 0xFFFFFFFF;
+      }
+      finally
+      {
+        localClass.getSuperclass();
       }
     }
-    if (mSize >= btu.length)
-    {
-      j = a.m(mSize + 1);
-      arrayOfLong = new long[j];
-      arrayOfObject = new Object[j];
-      System.arraycopy(btu, 0, arrayOfLong, 0, btu.length);
-      System.arraycopy(eq, 0, arrayOfObject, 0, eq.length);
-      btu = arrayOfLong;
-      eq = arrayOfObject;
+  }
+  
+  public final T get()
+  {
+    prepare();
+    if (bhI == null) {
+      throw new NoSuchFieldException();
     }
-    if (mSize - i != 0)
+    try
     {
-      System.arraycopy(btu, i, btu, i + 1, mSize - i);
-      System.arraycopy(eq, i, eq, i + 1, mSize - i);
+      Object localObject = bhI.get(obj);
+      return (T)localObject;
     }
-    btu[i] = paramLong;
-    eq[i] = paramObject;
-    mSize += 1;
+    catch (ClassCastException localClassCastException)
+    {
+      throw new IllegalArgumentException("unable to cast object");
+    }
+  }
+  
+  public final boolean nf()
+  {
+    prepare();
+    return bhI != null;
+  }
+  
+  public final void set(T paramT)
+  {
+    prepare();
+    if (bhI == null) {
+      throw new NoSuchFieldException();
+    }
+    bhI.set(obj, paramT);
   }
 }
 

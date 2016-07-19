@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field private aAF:Landroid/widget/ImageView;
+.field private amO:Landroid/widget/ImageView;
 
-.field protected cSi:Landroid/widget/LinearLayout;
+.field protected cPS:Landroid/widget/LinearLayout;
 
-.field protected cSj:Landroid/widget/LinearLayout;
+.field protected cPT:Landroid/widget/LinearLayout;
 
 .field private context:Landroid/content/Context;
 
-.field protected gZk:Landroid/widget/LinearLayout;
+.field protected hmw:Landroid/widget/LinearLayout;
 
 
 # direct methods
@@ -67,14 +67,14 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0435
+    const v1, 0x7f030590
 
     invoke-virtual {v0, v1, p0, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v1
 
     .line 37
-    const v0, 0x7f0708db
+    const v0, 0x7f100330
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->findViewById(I)Landroid/view/View;
 
@@ -82,10 +82,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->aAF:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->amO:Landroid/widget/ImageView;
 
     .line 39
-    const v0, 0x7f070305
+    const v0, 0x7f10032f
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -93,10 +93,10 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->cSi:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->cPS:Landroid/widget/LinearLayout;
 
     .line 40
-    const v0, 0x7f0708dc
+    const v0, 0x7f100331
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -104,10 +104,10 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->cSj:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->cPT:Landroid/widget/LinearLayout;
 
     .line 41
-    const v0, 0x7f070d82
+    const v0, 0x7f10106f
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -115,22 +115,22 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->gZk:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->hmw:Landroid/widget/LinearLayout;
 
     .line 43
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->cSi:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->cPS:Landroid/widget/LinearLayout;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 44
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->cSj:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->cPT:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 45
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->gZk:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->hmw:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
@@ -148,9 +148,9 @@
     invoke-direct/range {v0 .. v6}, Landroid/view/animation/RotateAnimation;-><init>(FFIFIF)V
 
     .line 49
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
+    invoke-virtual {v0, v2, v3}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 50
     const/4 v1, -0x1
@@ -166,7 +166,7 @@
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
     .line 53
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->aAF:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->amO:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
@@ -176,7 +176,7 @@
 
 
 # virtual methods
-.method public final eW(Z)V
+.method public final ff(Z)V
     .locals 3
 
     .prologue
@@ -185,7 +185,7 @@
     const/16 v1, 0x8
 
     .line 57
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->cSi:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->cPS:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
@@ -193,12 +193,12 @@
     if-eqz p1, :cond_0
 
     .line 59
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->gZk:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->hmw:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 60
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->cSj:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->cPT:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
@@ -208,12 +208,12 @@
 
     .line 62
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->cSj:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->cPT:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 63
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->gZk:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LoadingMoreView;->hmw:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 

@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private bnm:J
+.field private bbk:J
 
 
 # direct methods
@@ -18,12 +18,12 @@
     .line 19
     const-wide/16 v0, -0x1
 
-    iput-wide v0, p0, Lcom/tencent/mm/booter/TrafficStatsReceiver;->bnm:J
+    iput-wide v0, p0, Lcom/tencent/mm/booter/TrafficStatsReceiver;->bbk:J
 
     return-void
 .end method
 
-.method public static at(Landroid/content/Context;)V
+.method public static aq(Landroid/content/Context;)V
     .locals 8
 
     .prologue
@@ -65,7 +65,7 @@
     invoke-virtual/range {v0 .. v6}, Landroid/app/AlarmManager;->setRepeating(IJJLandroid/app/PendingIntent;)V
 
     .line 58
-    const-string/jumbo v0, "!32@/B4Tb64lLpIoz7uBiEqQZRJ3HTj6KKrA"
+    const-string/jumbo v0, "MicroMsg.TrafficStats"
 
     const-string/jumbo v1, "Register alarm, interval: %d ms"
 
@@ -79,13 +79,13 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 59
     return-void
 .end method
 
-.method public static au(Landroid/content/Context;)V
+.method public static ar(Landroid/content/Context;)V
     .locals 4
 
     .prologue
@@ -124,182 +124,186 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 18
+    .locals 19
 
     .prologue
     .line 23
-    const-string/jumbo v1, "!32@/B4Tb64lLpIoz7uBiEqQZRJ3HTj6KKrA"
+    const-string/jumbo v2, "MicroMsg.TrafficStats"
 
-    const-string/jumbo v2, "onRecieve"
+    const-string/jumbo v3, "onRecieve"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 24
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     .line 25
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ax;->update()V
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bd;->update()V
 
     .line 27
     move-object/from16 v0, p0
 
-    iget-wide v3, v0, Lcom/tencent/mm/booter/TrafficStatsReceiver;->bnm:J
+    iget-wide v4, v0, Lcom/tencent/mm/booter/TrafficStatsReceiver;->bbk:J
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
-    cmp-long v3, v3, v5
+    cmp-long v4, v4, v6
 
-    if-ltz v3, :cond_0
+    if-ltz v4, :cond_0
 
     .line 28
     move-object/from16 v0, p0
 
-    iget-wide v3, v0, Lcom/tencent/mm/booter/TrafficStatsReceiver;->bnm:J
+    iget-wide v4, v0, Lcom/tencent/mm/booter/TrafficStatsReceiver;->bbk:J
 
-    sub-long v3, v1, v3
+    sub-long v4, v2, v4
 
     .line 29
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ax;->aVv()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bd;->baI()J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ax;->aVu()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bd;->baH()J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    add-long/2addr v5, v7
+    add-long/2addr v6, v8
 
     .line 30
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ax;->aVt()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bd;->baG()J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ax;->aVs()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bd;->baF()J
 
-    move-result-wide v9
+    move-result-wide v10
 
-    add-long/2addr v7, v9
+    add-long/2addr v8, v10
 
     .line 31
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ax;->aVz()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bd;->baM()J
 
-    move-result-wide v9
+    move-result-wide v10
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ax;->aVy()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bd;->baL()J
 
-    move-result-wide v11
+    move-result-wide v12
 
-    add-long/2addr v9, v11
+    add-long/2addr v10, v12
 
     .line 32
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ax;->aVz()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bd;->baM()J
 
-    move-result-wide v11
+    move-result-wide v12
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ax;->aVy()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bd;->baL()J
 
-    move-result-wide v13
+    move-result-wide v14
 
-    add-long/2addr v11, v13
+    add-long/2addr v12, v14
 
     .line 34
-    const-string/jumbo v13, "!32@/B4Tb64lLpIoz7uBiEqQZRJ3HTj6KKrA"
+    const-string/jumbo v14, "MicroMsg.TrafficStats"
 
-    const-string/jumbo v14, "Time: %d ms, System - [Mobile: %d, Wifi: %d, Speed: %.2f], WeChat - [Mobile: %d, Wifi: %d, Speed: %.2f]"
+    const-string/jumbo v15, "Time: %d ms, System - [Mobile: %d, Wifi: %d, Speed: %.2f], WeChat - [Mobile: %d, Wifi: %d, Speed: %.2f]"
 
-    const/4 v15, 0x7
+    const/16 v16, 0x7
 
-    new-array v15, v15, [Ljava/lang/Object;
+    move/from16 v0, v16
 
-    const/16 v16, 0x0
+    new-array v0, v0, [Ljava/lang/Object;
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-object/from16 v16, v0
 
-    move-result-object v17
+    const/16 v17, 0x0
 
-    aput-object v17, v15, v16
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const/16 v16, 0x1
+    move-result-object v18
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    aput-object v18, v16, v17
 
-    move-result-object v17
+    const/16 v17, 0x1
 
-    aput-object v17, v15, v16
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const/16 v16, 0x2
+    move-result-object v18
 
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    aput-object v18, v16, v17
 
-    move-result-object v17
+    const/16 v17, 0x2
 
-    aput-object v17, v15, v16
+    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const/16 v16, 0x3
+    move-result-object v18
 
-    add-long/2addr v5, v7
+    aput-object v18, v16, v17
 
-    long-to-double v5, v5
+    const/16 v17, 0x3
 
-    const-wide/16 v7, 0x3e8
-
-    div-long v7, v3, v7
-
-    long-to-double v7, v7
-
-    div-double/2addr v5, v7
-
-    invoke-static {v5, v6}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v5
-
-    aput-object v5, v15, v16
-
-    const/4 v5, 0x4
-
-    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v6
-
-    aput-object v6, v15, v5
-
-    const/4 v5, 0x5
-
-    invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v6
-
-    aput-object v6, v15, v5
-
-    const/4 v5, 0x6
-
-    add-long v6, v9, v11
+    add-long/2addr v6, v8
 
     long-to-double v6, v6
 
     const-wide/16 v8, 0x3e8
 
-    div-long/2addr v3, v8
+    div-long v8, v4, v8
 
-    long-to-double v3, v3
+    long-to-double v8, v8
 
-    div-double v3, v6, v3
+    div-double/2addr v6, v8
 
-    invoke-static {v3, v4}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-static {v6, v7}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    move-result-object v3
+    move-result-object v6
 
-    aput-object v3, v15, v5
+    aput-object v6, v16, v17
 
-    invoke-static {v13, v14, v15}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const/4 v6, 0x4
+
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v7
+
+    aput-object v7, v16, v6
+
+    const/4 v6, 0x5
+
+    invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v7
+
+    aput-object v7, v16, v6
+
+    const/4 v6, 0x6
+
+    add-long v8, v10, v12
+
+    long-to-double v8, v8
+
+    const-wide/16 v10, 0x3e8
+
+    div-long/2addr v4, v10
+
+    long-to-double v4, v4
+
+    div-double v4, v8, v4
+
+    invoke-static {v4, v5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v4
+
+    aput-object v4, v16, v6
+
+    invoke-static/range {v14 .. v16}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 40
     :cond_0
     move-object/from16 v0, p0
 
-    iput-wide v1, v0, Lcom/tencent/mm/booter/TrafficStatsReceiver;->bnm:J
+    iput-wide v2, v0, Lcom/tencent/mm/booter/TrafficStatsReceiver;->bbk:J
 
     .line 47
     return-void

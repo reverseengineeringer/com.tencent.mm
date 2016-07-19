@@ -4,23 +4,23 @@
 
 
 # static fields
-.field private static ktP:Lcom/tencent/mm/ui/account/f;
+.field private static kSW:Lcom/tencent/mm/ui/account/f;
 
 
 # instance fields
-.field public cbh:Ljava/lang/String;
+.field public bUU:Ljava/lang/String;
 
-.field public ktJ:Ljava/lang/String;
+.field public kSQ:Ljava/lang/String;
 
-.field public ktK:Ljava/lang/String;
+.field public kSR:Ljava/lang/String;
 
-.field public ktL:Ljava/lang/String;
+.field public kSS:Ljava/lang/String;
 
-.field public ktM:Ljava/lang/String;
+.field public kST:Ljava/lang/String;
 
-.field public ktN:[B
+.field public kSU:[B
 
-.field public ktO:I
+.field public kSV:I
 
 
 # direct methods
@@ -31,7 +31,7 @@
     .line 19
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/ui/account/f;->ktP:Lcom/tencent/mm/ui/account/f;
+    sput-object v0, Lcom/tencent/mm/ui/account/f;->kSW:Lcom/tencent/mm/ui/account/f;
 
     return-void
 .end method
@@ -46,27 +46,27 @@
     invoke-direct {p0}, Lcom/tencent/mm/ui/applet/SecurityImage$b;-><init>()V
 
     .line 11
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/f;->cbh:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/f;->bUU:Ljava/lang/String;
 
     .line 12
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/f;->ktJ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/f;->kSQ:Ljava/lang/String;
 
     .line 13
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/f;->ktK:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/f;->kSR:Ljava/lang/String;
 
     .line 14
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/f;->ktL:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/f;->kSS:Ljava/lang/String;
 
     .line 15
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/f;->ktM:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/f;->kST:Ljava/lang/String;
 
     .line 16
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/f;->ktN:[B
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/f;->kSU:[B
 
     .line 17
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/account/f;->ktO:I
+    iput v0, p0, Lcom/tencent/mm/ui/account/f;->kSV:I
 
     return-void
 .end method
@@ -76,25 +76,25 @@
 
     .prologue
     .line 40
-    sput-object p0, Lcom/tencent/mm/ui/account/f;->ktP:Lcom/tencent/mm/ui/account/f;
+    sput-object p0, Lcom/tencent/mm/ui/account/f;->kSW:Lcom/tencent/mm/ui/account/f;
 
     .line 41
     return-void
 .end method
 
-.method public static bbE()Ljava/lang/String;
+.method public static bgQ()Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 44
-    sget-object v0, Lcom/tencent/mm/ui/account/f;->ktP:Lcom/tencent/mm/ui/account/f;
+    sget-object v0, Lcom/tencent/mm/ui/account/f;->kSW:Lcom/tencent/mm/ui/account/f;
 
     if-eqz v0, :cond_0
 
     .line 45
-    sget-object v0, Lcom/tencent/mm/ui/account/f;->ktP:Lcom/tencent/mm/ui/account/f;
+    sget-object v0, Lcom/tencent/mm/ui/account/f;->kSW:Lcom/tencent/mm/ui/account/f;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/f;->cbh:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/f;->bUU:Ljava/lang/String;
 
     .line 47
     :goto_0
@@ -106,19 +106,19 @@
     goto :goto_0
 .end method
 
-.method public static bbF()Ljava/lang/String;
+.method public static bgR()Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 51
-    sget-object v0, Lcom/tencent/mm/ui/account/f;->ktP:Lcom/tencent/mm/ui/account/f;
+    sget-object v0, Lcom/tencent/mm/ui/account/f;->kSW:Lcom/tencent/mm/ui/account/f;
 
     if-eqz v0, :cond_0
 
     .line 52
-    sget-object v0, Lcom/tencent/mm/ui/account/f;->ktP:Lcom/tencent/mm/ui/account/f;
+    sget-object v0, Lcom/tencent/mm/ui/account/f;->kSW:Lcom/tencent/mm/ui/account/f;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/f;->ktJ:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/f;->kSQ:Ljava/lang/String;
 
     .line 55
     :goto_0
@@ -132,33 +132,31 @@
 
 
 # virtual methods
-.method public final bby()V
+.method public final bgK()V
     .locals 11
 
     .prologue
     const/4 v7, 0x0
 
     .line 23
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/f;->ktK:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/f;->kSR:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 24
-    new-instance v0, Lcom/tencent/mm/modelsimple/t;
+    new-instance v0, Lcom/tencent/mm/modelsimple/r;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/f;->cbh:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/f;->bUU:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/f;->ktK:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/f;->kSR:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/f;->kzR:Lcom/tencent/mm/ui/applet/SecurityImage;
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/f;->kYX:Lcom/tencent/mm/ui/applet/SecurityImage;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/ui/applet/SecurityImage;->getSecCodeType()I
-
-    move-result v3
+    iget v3, v3, Lcom/tencent/mm/ui/applet/SecurityImage;->kSV:I
 
     const-string/jumbo v4, ""
 
@@ -172,14 +170,14 @@
 
     move v9, v7
 
-    invoke-direct/range {v0 .. v10}, Lcom/tencent/mm/modelsimple/t;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ZZ)V
+    invoke-direct/range {v0 .. v10}, Lcom/tencent/mm/modelsimple/r;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ZZ)V
 
     .line 26
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    invoke-virtual {v1, v0, v7}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
     .line 32
     :goto_0
@@ -187,17 +185,15 @@
 
     .line 28
     :cond_0
-    new-instance v0, Lcom/tencent/mm/modelsimple/t;
+    new-instance v0, Lcom/tencent/mm/modelsimple/r;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/f;->cbh:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/f;->bUU:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/f;->ktJ:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/f;->kSQ:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/f;->kzR:Lcom/tencent/mm/ui/applet/SecurityImage;
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/f;->kYX:Lcom/tencent/mm/ui/applet/SecurityImage;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/ui/applet/SecurityImage;->getSecCodeType()I
-
-    move-result v3
+    iget v3, v3, Lcom/tencent/mm/ui/applet/SecurityImage;->kSV:I
 
     const-string/jumbo v4, ""
 
@@ -211,14 +207,14 @@
 
     move v10, v7
 
-    invoke-direct/range {v0 .. v10}, Lcom/tencent/mm/modelsimple/t;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ZZ)V
+    invoke-direct/range {v0 .. v10}, Lcom/tencent/mm/modelsimple/r;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ZZ)V
 
     .line 30
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    invoke-virtual {v1, v0, v7}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
     goto :goto_0
 .end method

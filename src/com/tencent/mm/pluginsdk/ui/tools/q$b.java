@@ -2,9 +2,9 @@ package com.tencent.mm.pluginsdk.ui.tools;
 
 import android.content.Context;
 import android.widget.Toast;
-import com.tencent.mm.sdk.platformtools.am.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ap.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -12,18 +12,18 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 final class q$b
-  implements am.a
+  implements ap.a
 {
-  private static Pattern iTq = Pattern.compile("image/[A-Za-z0-9]+");
-  private static Pattern iTr = Pattern.compile("filename=[A-Za-z0-9@.]+.[A-Za-z0-9]+");
-  private int auE;
-  private String bYm;
+  private static Pattern jqI = Pattern.compile("image/[A-Za-z0-9]+");
+  private static Pattern jqJ = Pattern.compile("filename=[A-Za-z0-9@.]+.[A-Za-z0-9]+");
+  private int agr;
+  private String bRV;
   private Context context;
-  private String iTs;
-  private String iTt;
-  private boolean iTu;
-  private q.a iTv;
   private String imagePath;
+  private String jqK;
+  private String jqL;
+  private boolean jqM;
+  private q.a jqN;
   
   public q$b(Context paramContext, String paramString1, String paramString2, boolean paramBoolean)
   {
@@ -33,33 +33,33 @@ final class q$b
   public q$b(Context paramContext, String paramString1, String paramString2, boolean paramBoolean, int paramInt, q.a parama)
   {
     context = paramContext;
-    bYm = paramString1;
-    iTt = paramString2;
-    iTu = paramBoolean;
-    auE = paramInt;
-    iTv = parama;
+    bRV = paramString1;
+    jqL = paramString2;
+    jqM = paramBoolean;
+    agr = paramInt;
+    jqN = parama;
   }
   
   private void a(String paramString1, String paramString2, InputStream paramInputStream)
   {
-    u.i("!32@/B4Tb64lLpJLnjolkGdCeaEhhwktoazg", "contentType = %s, dispositionType = %s", new Object[] { paramString1, paramString2 });
+    v.i("MicroMsg.WebViewUtil", "contentType = %s, dispositionType = %s", new Object[] { paramString1, paramString2 });
     Object localObject2 = null;
     Object localObject1 = localObject2;
-    if (!ay.kz(paramString1))
+    if (!be.kf(paramString1))
     {
-      paramString1 = iTq.matcher(paramString1);
+      paramString1 = jqI.matcher(paramString1);
       localObject1 = localObject2;
       if (paramString1.find()) {
         localObject1 = paramString1.group().substring(paramString1.group().lastIndexOf('/') + 1);
       }
     }
     paramString1 = (String)localObject1;
-    if (ay.kz((String)localObject1))
+    if (be.kf((String)localObject1))
     {
       paramString1 = (String)localObject1;
-      if (!ay.kz(paramString2))
+      if (!be.kf(paramString2))
       {
-        paramString2 = iTr.matcher(paramString2);
+        paramString2 = jqJ.matcher(paramString2);
         paramString1 = (String)localObject1;
         if (paramString2.find()) {
           paramString1 = paramString2.group().substring(paramString2.group().lastIndexOf('.') + 1);
@@ -68,18 +68,18 @@ final class q$b
     }
     paramString2 = paramString1;
     int i;
-    if (ay.kz(paramString1))
+    if (be.kf(paramString1))
     {
-      paramString1 = new o(bYm);
-      i = dtS.lastIndexOf('.');
+      paramString1 = new o(bRV);
+      i = SZ.lastIndexOf('.');
       if (i != -1) {
         break label221;
       }
     }
     label221:
-    for (paramString2 = "jpg";; paramString2 = dtS.substring(i + 1))
+    for (paramString2 = "jpg";; paramString2 = SZ.substring(i + 1))
     {
-      imagePath = k.kt(paramString2);
+      imagePath = k.lc(paramString2);
       paramString1 = new FileOutputStream(imagePath);
       paramString2 = new byte[' '];
       for (;;)
@@ -95,10 +95,10 @@ final class q$b
     {
       paramString1.flush();
       paramString1.close();
-      if (auE == 0)
+      if (agr == 0)
       {
-        iTs = context.getString(2131428844, new Object[] { k.FD() });
-        k.d(imagePath, context);
+        jqK = context.getString(2131232150, new Object[] { k.FY() });
+        k.c(imagePath, context);
       }
       return;
     }
@@ -106,7 +106,7 @@ final class q$b
     {
       for (;;)
       {
-        u.e("!32@/B4Tb64lLpJLnjolkGdCeaEhhwktoazg", "close os failed : %s", new Object[] { paramString1.getMessage() });
+        v.e("MicroMsg.WebViewUtil", "close os failed : %s", new Object[] { paramString1.getMessage() });
       }
     }
   }
@@ -126,7 +126,7 @@ final class q$b
   }
   
   /* Error */
-  public final boolean vd()
+  public final boolean vf()
   {
     // Byte code:
     //   0: aconst_null
@@ -142,36 +142,36 @@ final class q$b
     //   14: iconst_0
     //   15: istore_1
     //   16: aload_0
-    //   17: getfield 57	com/tencent/mm/pluginsdk/ui/tools/q$b:iTu	Z
+    //   17: getfield 57	com/tencent/mm/pluginsdk/ui/tools/q$b:jqM	Z
     //   20: ifne +18 -> 38
     //   23: aload_0
     //   24: aload_0
     //   25: getfield 51	com/tencent/mm/pluginsdk/ui/tools/q$b:context	Landroid/content/Context;
     //   28: ldc -81
     //   30: invokevirtual 177	android/content/Context:getString	(I)Ljava/lang/String;
-    //   33: putfield 154	com/tencent/mm/pluginsdk/ui/tools/q$b:iTs	Ljava/lang/String;
+    //   33: putfield 154	com/tencent/mm/pluginsdk/ui/tools/q$b:jqK	Ljava/lang/String;
     //   36: iconst_1
     //   37: ireturn
     //   38: aload_0
-    //   39: getfield 53	com/tencent/mm/pluginsdk/ui/tools/q$b:bYm	Ljava/lang/String;
-    //   42: invokestatic 81	com/tencent/mm/sdk/platformtools/ay:kz	(Ljava/lang/String;)Z
+    //   39: getfield 53	com/tencent/mm/pluginsdk/ui/tools/q$b:bRV	Ljava/lang/String;
+    //   42: invokestatic 81	com/tencent/mm/sdk/platformtools/be:kf	(Ljava/lang/String;)Z
     //   45: ifeq +5 -> 50
     //   48: iconst_0
     //   49: ireturn
     //   50: aload_0
-    //   51: getfield 53	com/tencent/mm/pluginsdk/ui/tools/q$b:bYm	Ljava/lang/String;
+    //   51: getfield 53	com/tencent/mm/pluginsdk/ui/tools/q$b:bRV	Ljava/lang/String;
     //   54: astore_2
     //   55: iconst_0
-    //   56: invokestatic 183	com/tencent/smtt/sdk/d:is	(Z)Lcom/tencent/smtt/sdk/d;
+    //   56: invokestatic 183	com/tencent/smtt/sdk/d:jb	(Z)Lcom/tencent/smtt/sdk/d;
     //   59: astore 8
     //   61: aload 8
     //   63: ifnull +139 -> 202
     //   66: aload 8
-    //   68: invokevirtual 186	com/tencent/smtt/sdk/d:bln	()Z
+    //   68: invokevirtual 186	com/tencent/smtt/sdk/d:brr	()Z
     //   71: ifeq +131 -> 202
     //   74: aload 8
-    //   76: invokevirtual 190	com/tencent/smtt/sdk/d:blm	()Lcom/tencent/smtt/sdk/t;
-    //   79: getfield 196	com/tencent/smtt/sdk/t:mDexLoader	Lcom/tencent/smtt/export/external/DexLoader;
+    //   76: invokevirtual 190	com/tencent/smtt/sdk/d:brq	()Lcom/tencent/smtt/sdk/t;
+    //   79: getfield 196	com/tencent/smtt/sdk/t:mvz	Lcom/tencent/smtt/export/external/DexLoader;
     //   82: ldc -58
     //   84: ldc -56
     //   86: iconst_1
@@ -195,7 +195,7 @@ final class q$b
     //   115: new 210	java/net/URL
     //   118: dup
     //   119: aload_0
-    //   120: getfield 53	com/tencent/mm/pluginsdk/ui/tools/q$b:bYm	Ljava/lang/String;
+    //   120: getfield 53	com/tencent/mm/pluginsdk/ui/tools/q$b:bRV	Ljava/lang/String;
     //   123: invokespecial 211	java/net/URL:<init>	(Ljava/lang/String;)V
     //   126: invokevirtual 215	java/net/URL:openConnection	()Ljava/net/URLConnection;
     //   129: checkcast 217	javax/net/ssl/HttpsURLConnection
@@ -210,7 +210,7 @@ final class q$b
     //   145: aload_2
     //   146: ldc -32
     //   148: aload_0
-    //   149: getfield 55	com/tencent/mm/pluginsdk/ui/tools/q$b:iTt	Ljava/lang/String;
+    //   149: getfield 55	com/tencent/mm/pluginsdk/ui/tools/q$b:jqL	Ljava/lang/String;
     //   152: invokevirtual 228	javax/net/ssl/HttpsURLConnection:setRequestProperty	(Ljava/lang/String;Ljava/lang/String;)V
     //   155: aload 7
     //   157: astore_3
@@ -225,7 +225,7 @@ final class q$b
     //   173: getfield 51	com/tencent/mm/pluginsdk/ui/tools/q$b:context	Landroid/content/Context;
     //   176: ldc -23
     //   178: invokevirtual 177	android/content/Context:getString	(I)Ljava/lang/String;
-    //   181: putfield 154	com/tencent/mm/pluginsdk/ui/tools/q$b:iTs	Ljava/lang/String;
+    //   181: putfield 154	com/tencent/mm/pluginsdk/ui/tools/q$b:jqK	Ljava/lang/String;
     //   184: aload_2
     //   185: aconst_null
     //   186: invokestatic 235	com/tencent/mm/pluginsdk/ui/tools/q$b:a	(Ljava/net/HttpURLConnection;Ljava/io/InputStream;)V
@@ -275,7 +275,7 @@ final class q$b
     //   269: aload 4
     //   271: invokevirtual 163	java/lang/Exception:getMessage	()Ljava/lang/String;
     //   274: aastore
-    //   275: invokestatic 166	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   275: invokestatic 166	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   278: aload_3
     //   279: aload_2
     //   280: invokestatic 235	com/tencent/mm/pluginsdk/ui/tools/q$b:a	(Ljava/net/HttpURLConnection;Ljava/io/InputStream;)V
@@ -295,7 +295,7 @@ final class q$b
     //   305: new 210	java/net/URL
     //   308: dup
     //   309: aload_0
-    //   310: getfield 53	com/tencent/mm/pluginsdk/ui/tools/q$b:bYm	Ljava/lang/String;
+    //   310: getfield 53	com/tencent/mm/pluginsdk/ui/tools/q$b:bRV	Ljava/lang/String;
     //   313: invokespecial 211	java/net/URL:<init>	(Ljava/lang/String;)V
     //   316: invokevirtual 215	java/net/URL:openConnection	()Ljava/net/URLConnection;
     //   319: checkcast 169	java/net/HttpURLConnection
@@ -306,7 +306,7 @@ final class q$b
     //   329: aload_2
     //   330: ldc -32
     //   332: aload_0
-    //   333: getfield 55	com/tencent/mm/pluginsdk/ui/tools/q$b:iTt	Ljava/lang/String;
+    //   333: getfield 55	com/tencent/mm/pluginsdk/ui/tools/q$b:jqL	Ljava/lang/String;
     //   336: invokevirtual 263	java/net/HttpURLConnection:setRequestProperty	(Ljava/lang/String;Ljava/lang/String;)V
     //   339: aload_2
     //   340: invokevirtual 264	java/net/HttpURLConnection:getResponseCode	()I
@@ -317,7 +317,7 @@ final class q$b
     //   351: getfield 51	com/tencent/mm/pluginsdk/ui/tools/q$b:context	Landroid/content/Context;
     //   354: ldc -23
     //   356: invokevirtual 177	android/content/Context:getString	(I)Ljava/lang/String;
-    //   359: putfield 154	com/tencent/mm/pluginsdk/ui/tools/q$b:iTs	Ljava/lang/String;
+    //   359: putfield 154	com/tencent/mm/pluginsdk/ui/tools/q$b:jqK	Ljava/lang/String;
     //   362: aload_2
     //   363: aconst_null
     //   364: invokestatic 235	com/tencent/mm/pluginsdk/ui/tools/q$b:a	(Ljava/net/HttpURLConnection;Ljava/io/InputStream;)V
@@ -353,7 +353,7 @@ final class q$b
     //   420: aload_2
     //   421: invokevirtual 163	java/lang/Exception:getMessage	()Ljava/lang/String;
     //   424: aastore
-    //   425: invokestatic 166	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   425: invokestatic 166	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   428: aload 4
     //   430: aload_3
     //   431: invokestatic 235	com/tencent/mm/pluginsdk/ui/tools/q$b:a	(Ljava/net/HttpURLConnection;Ljava/io/InputStream;)V
@@ -495,19 +495,19 @@ final class q$b
     //   231	245	545	java/lang/Exception
   }
   
-  public final boolean ve()
+  public final boolean vg()
   {
-    if (1 == auE)
+    if (1 == agr)
     {
-      iTv.yM(imagePath);
+      jqN.At(imagePath);
       return true;
     }
-    if (!ay.kz(iTs))
+    if (!be.kf(jqK))
     {
-      Toast.makeText(context, iTs, 1).show();
+      Toast.makeText(context, jqK, 1).show();
       return true;
     }
-    Toast.makeText(context, context.getString(2131428937), 1).show();
+    Toast.makeText(context, context.getString(2131236699), 1).show();
     return true;
   }
 }

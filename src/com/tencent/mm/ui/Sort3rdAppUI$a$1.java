@@ -1,6 +1,6 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.pluginsdk.model.app.aj;
+import com.tencent.mm.pluginsdk.model.app.al;
 import com.tencent.mm.pluginsdk.model.app.f;
 import com.tencent.mm.pluginsdk.model.app.i;
 import com.tencent.mm.ui.widget.MMSwitchBtn.a;
@@ -10,17 +10,17 @@ final class Sort3rdAppUI$a$1
 {
   Sort3rdAppUI$a$1(Sort3rdAppUI.a parama, f paramf) {}
   
-  public final void fg(boolean paramBoolean)
+  public final void ft(boolean paramBoolean)
   {
     f localf;
     if (paramBoolean) {
-      localf = krp;
+      localf = kQw;
     }
     for (field_appInfoFlag &= 0xBFFF;; field_appInfoFlag |= 0x4000)
     {
-      aj.aPR().a(krp, new String[0]);
+      al.aUA().a(kQw, new String[0]);
       return;
-      localf = krp;
+      localf = kQw;
     }
   }
 }

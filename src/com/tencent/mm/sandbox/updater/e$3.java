@@ -1,6 +1,6 @@
 package com.tencent.mm.sandbox.updater;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class e$3
   implements Runnable
@@ -9,9 +9,9 @@ final class e$3
   
   public final void run()
   {
-    u.d("!44@/B4Tb64lLpIoz7uBiEqQZS70cVT/Q61Ax49vraaHmec=", "onDownstreamTraffic downstream : %s", new Object[] { Long.valueOf(jTQ) });
-    e.b(jTO, Math.max(0L, jTQ));
-    e.a(jTO, false);
+    v.d("MicroMsg.TrafficStatistic", "onDownstreamTraffic downstream : %s", new Object[] { Long.valueOf(kto) });
+    e.b(ktm, Math.max(0L, kto));
+    e.a(ktm, false);
   }
 }
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/permission/PermissionWarningDialog;->FB()V
+    value = Lcom/tencent/mm/permission/PermissionWarningDialog;->FX()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic clK:Lcom/tencent/mm/permission/PermissionWarningDialog;
+.field final synthetic cgO:Lcom/tencent/mm/permission/PermissionWarningDialog;
 
-.field final synthetic clL:Z
+.field final synthetic cgP:Z
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 97
-    iput-object p1, p0, Lcom/tencent/mm/permission/PermissionWarningDialog$2;->clK:Lcom/tencent/mm/permission/PermissionWarningDialog;
+    iput-object p1, p0, Lcom/tencent/mm/permission/PermissionWarningDialog$2;->cgO:Lcom/tencent/mm/permission/PermissionWarningDialog;
 
-    iput-boolean p2, p0, Lcom/tencent/mm/permission/PermissionWarningDialog$2;->clL:Z
+    iput-boolean p2, p0, Lcom/tencent/mm/permission/PermissionWarningDialog$2;->cgP:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,12 +45,12 @@
 
     .prologue
     .line 100
-    iget-boolean v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog$2;->clL:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog$2;->cgP:Z
 
-    invoke-static {v0}, Lcom/tencent/mm/permission/b;->bg(Z)V
+    invoke-static {v0}, Lcom/tencent/mm/permission/b;->aO(Z)V
 
     .line 101
-    iget-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog$2;->clK:Lcom/tencent/mm/permission/PermissionWarningDialog;
+    iget-object v0, p0, Lcom/tencent/mm/permission/PermissionWarningDialog$2;->cgO:Lcom/tencent/mm/permission/PermissionWarningDialog;
 
     invoke-virtual {v0}, Lcom/tencent/mm/permission/PermissionWarningDialog;->finish()V
 

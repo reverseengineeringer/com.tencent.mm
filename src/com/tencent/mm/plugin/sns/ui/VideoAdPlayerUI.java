@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Looper;
 import android.view.View;
@@ -13,31 +15,29 @@ import android.view.Window;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
-import android.widget.Toast;
-import com.tencent.mm.a.e;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelsfs.FileOp;
-import com.tencent.mm.n.a.a;
+import com.tencent.mm.p.a.a;
 import com.tencent.mm.plugin.sight.decode.ui.AdVideoPlayerLoadingBar;
 import com.tencent.mm.plugin.sight.decode.ui.VideoPlayView;
 import com.tencent.mm.plugin.sight.decode.ui.VideoPlayView.5;
 import com.tencent.mm.plugin.sight.decode.ui.VideoPlayView.6;
 import com.tencent.mm.plugin.sight.decode.ui.VideoPlayView.a;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.am;
-import com.tencent.mm.plugin.sns.d.b;
-import com.tencent.mm.plugin.sns.d.b.a;
-import com.tencent.mm.plugin.sns.d.b.b;
-import com.tencent.mm.plugin.sns.data.h;
+import com.tencent.mm.plugin.sns.a.a.i.a;
+import com.tencent.mm.plugin.sns.a.a.i.c;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.al;
+import com.tencent.mm.plugin.sns.e.b;
+import com.tencent.mm.plugin.sns.e.b.a;
+import com.tencent.mm.plugin.sns.e.b.b;
 import com.tencent.mm.pluginsdk.model.app.l;
-import com.tencent.mm.pluginsdk.ui.tools.f;
-import com.tencent.mm.protocal.b.add;
-import com.tencent.mm.r.m;
+import com.tencent.mm.protocal.b.adw;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.i.a;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.z;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.g.c;
 import java.util.Set;
@@ -47,176 +47,242 @@ public class VideoAdPlayerUI
   extends MMActivity
   implements b.a, b.b
 {
-  private String ayA = "";
-  private String ayz = "";
-  private String bTF = "";
-  private com.tencent.mm.model.d bmh;
-  private String byV = "";
-  private String byW = "";
-  private String gFU = "";
-  private boolean gHq = false;
-  private String gHs = "";
-  private com.tencent.mm.plugin.sns.a.a.g hij = new com.tencent.mm.plugin.sns.a.a.g("VideoAdPlayerUI");
-  private VideoPlayView hmS;
-  private com.tencent.mm.modelsns.a hmT = null;
-  private String hmU = "";
-  private int hmV = 0;
-  private String hmW = "";
-  private String hmX = "";
-  private boolean hmY = false;
-  private add hmZ = null;
-  private String[] hna = null;
-  private String[] hnb = null;
+  private com.tencent.mm.model.d aZN;
+  private String akB = "";
+  private String akC = "";
+  private String atH;
+  private String bNe = "";
+  private String brP = "";
+  private String brQ = "";
+  private String bssid;
+  private String gMw = "";
+  private boolean gOv = false;
+  private boolean giD = false;
+  private VideoPlayView hDc;
+  private com.tencent.mm.modelsns.a hDd = null;
+  private String hDe = "";
+  private int hDf = 0;
+  private String hDg = "";
+  public String hDh = "";
+  public String hDi = "";
+  private int hDj = 0;
+  private int hDk = 0;
+  private String hDl = "";
+  private String hDm;
+  private String hDn = "";
+  private long hDo = 0L;
+  private int hDp = 0;
+  private int hDq = 0;
+  private boolean hDr = false;
+  private adw hDs = null;
+  private String hDt;
+  private int hDu;
+  private String[] hDv = null;
+  private String[] hDw = null;
+  private com.tencent.mm.plugin.sns.a.a.g hwY = new com.tencent.mm.plugin.sns.a.a.g("VideoAdPlayerUI");
   private String mediaId = "";
+  private String ssid;
   private String url = "";
   
-  private void mg(int paramInt)
+  private void ny(int paramInt)
   {
-    if (!gHq) {
+    if (!gOv) {
       return;
     }
-    hij.lk(hmS.getDuration());
-    hij.gGR.gHn = ay.FT();
-    com.tencent.mm.plugin.sns.a.a.a.a locala = hij.gGR;
+    hwY.mt(hDc.getDuration());
+    hwY.gNs.gOs = be.Gq();
+    com.tencent.mm.plugin.sns.a.a.a.a locala = hwY.gNs;
     if (paramInt == 2) {}
     for (paramInt = 2;; paramInt = 1)
     {
-      gHm = paramInt;
-      hij.gGR.gHl = 2;
-      u.i("!32@/B4Tb64lLpKQpS0z/gOJ2TnD2B50r7Ry", "duration  orient " + hij.gGR.gHm);
+      gOr = paramInt;
+      hwY.gNs.gOq = 2;
+      v.i("MicroMsg.VideoPlayerUI", "duration  orient " + hwY.gNs.gOr);
       return;
     }
   }
   
-  protected final int Kj()
+  protected final int KT()
   {
     return 4;
   }
   
-  public final void R(String paramString, boolean paramBoolean) {}
+  public final void X(String paramString, boolean paramBoolean) {}
   
-  public final void S(String paramString, boolean paramBoolean)
+  public final void Y(String paramString, boolean paramBoolean)
   {
-    u.i("!32@/B4Tb64lLpKQpS0z/gOJ2TnD2B50r7Ry", "onSightFinish " + paramString);
-    hmS.setIsDownloading(false);
-    hmS.setVideoPath(bTF);
-    hmS.g(hmS.getLastProgresstime());
-    hmS.setLoop(false);
-    if ((gHq) && (!ay.kz(paramString)) && (hmZ != null) && (paramString.equals(hmZ.iXW)) && (FileOp.ax(bTF))) {
-      hij.gGN = 1;
+    v.i("MicroMsg.VideoPlayerUI", "onSightFinish " + paramString);
+    hDc.cvK = false;
+    hDc.setVideoPath(bNe);
+    hDc.j(hDc.ayx());
+    hDc.ew(false);
+    if ((gOv) && (!be.kf(paramString)) && (hDs != null) && (paramString.equals(hDs.jvB)) && (FileOp.aB(bNe))) {
+      hwY.gNo = 1;
     }
   }
   
-  public final void axE() {}
+  public final void aAf() {}
   
-  public final void bm(String paramString1, String paramString2)
+  public final void bt(String paramString1, String paramString2)
   {
-    u.i("!32@/B4Tb64lLpKQpS0z/gOJ2TnD2B50r7Ry", "isPlaying " + hmS.isPlaying());
-    if (hmS.isPlaying()) {
+    v.i("MicroMsg.VideoPlayerUI", "isPlaying " + hDc.isPlaying());
+    if (hDc.isPlaying()) {
       return;
     }
-    hmS.setLoop(false);
-    if (paramString2.equals(hmS.getVideoPath()))
+    hDc.ew(false);
+    if (paramString2.equals(hDc.bNe))
     {
-      hmS.g(hmS.getLastProgresstime());
-      hmS.start();
-      u.i("!32@/B4Tb64lLpKQpS0z/gOJ2TnD2B50r7Ry", "onSightProgressstart " + paramString1 + " path: " + paramString2);
+      hDc.j(hDc.ayx());
+      hDc.start();
+      v.i("MicroMsg.VideoPlayerUI", "onSightProgressstart " + paramString1 + " path: " + paramString2);
       return;
     }
-    hmS.setVideoPath(paramString2);
-    hmS.g(hmS.getLastProgresstime());
-    u.i("!32@/B4Tb64lLpKQpS0z/gOJ2TnD2B50r7Ry", "onSightProgresssetVideoPath " + paramString1 + " path: " + paramString2);
+    hDc.setVideoPath(paramString2);
+    hDc.j(hDc.ayx());
+    v.i("MicroMsg.VideoPlayerUI", "onSightProgresssetVideoPath " + paramString1 + " path: " + paramString2);
   }
   
   protected final int getLayoutId()
   {
-    return 2131362918;
+    return 2130904552;
   }
   
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
   {
-    u.i("!32@/B4Tb64lLpKQpS0z/gOJ2TnD2B50r7Ry", "onActivityResult %d", new Object[] { Integer.valueOf(paramInt1) });
-    a.a locala;
-    Object localObject;
+    v.i("MicroMsg.VideoPlayerUI", "onActivityResult %d", new Object[] { Integer.valueOf(paramInt1) });
+    Object localObject2;
+    Object localObject1;
     label130:
     int i;
     if (4097 == paramInt1)
     {
       if (-1 != paramInt2) {
-        break label393;
+        break label791;
       }
-      String str = paramIntent.getStringExtra("Select_Conv_User");
-      u.i("!32@/B4Tb64lLpKQpS0z/gOJ2TnD2B50r7Ry", "send sight to %s", new Object[] { str });
-      locala = new a.a();
-      title = hmW;
+      String str1 = paramIntent.getStringExtra("Select_Conv_User");
+      v.i("MicroMsg.VideoPlayerUI", "send sight to %s", new Object[] { str1 });
+      localObject2 = new a.a();
+      title = hDg;
       type = 4;
-      if (!ay.kz(hmZ.eiq)) {
-        break label358;
+      if (be.kf(hDs.emu)) {
+        break label742;
       }
-      url = hmZ.eiq;
-      if (!ay.kz(hmZ.jzD)) {
-        break label373;
+      url = hDs.emu;
+      if (!be.kf(hDs.jYq)) {
+        break label757;
       }
-      localObject = hmZ.jzt;
-      thumburl = ((String)localObject);
-      byS = hmZ.jzA;
-      byT = hmZ.hmV;
-      byU = hmW;
-      byW = byW;
-      byV = byV;
-      byX = ayA;
-      localObject = FileOp.c(ayz, 0, -1);
-      if (localObject != null) {
-        break label385;
+      localObject1 = hDs.jYg;
+      thumburl = ((String)localObject1);
+      brM = hDs.jYn;
+      brN = hDs.hDf;
+      brO = hDg;
+      brQ = brQ;
+      brP = brP;
+      brR = akC;
+      brS = hDh;
+      brT = hDi;
+      atH = atH;
+      localObject1 = FileOp.c(akB, 0, -1);
+      if (localObject1 != null) {
+        break label769;
       }
       i = 0;
-      label216:
-      u.i("!32@/B4Tb64lLpKQpS0z/gOJ2TnD2B50r7Ry", "read buf size %d", new Object[] { Integer.valueOf(i) });
-      l.a(locala, "", str, "", (byte[])localObject);
-      Toast.makeText(this, getString(2131428860), 1).show();
-      if (gHq)
+      label243:
+      v.i("MicroMsg.VideoPlayerUI", "read buf size %d", new Object[] { Integer.valueOf(i) });
+      l.a((a.a)localObject2, "", "", str1, "", (byte[])localObject1);
+      int j;
+      if (hDu != 0)
       {
-        localObject = new com.tencent.mm.plugin.sns.a.a.c(gFU, 12, 6, "", 2);
-        ah.tE().d((com.tencent.mm.r.j)localObject);
+        j = hwY.gNs.gOo;
+        i = j;
+        if (giD)
+        {
+          i = j;
+          if (hwY.gNs.gOs != 0L) {
+            i = j + (int)(be.av(hwY.gNs.gOs) / 1000L);
+          }
+        }
+        localObject1 = new com.tencent.mm.modelstat.e(13228, "1,3," + i + "," + ssid + "," + bssid + "," + be.Go() + "," + hDt + "," + hDf, (int)be.Go());
+        ah.tF().a((com.tencent.mm.t.j)localObject1, 0);
+      }
+      com.tencent.mm.ui.snackbar.a.g(this, getString(2131233265));
+      if (gOv)
+      {
+        localObject1 = new com.tencent.mm.plugin.sns.a.a.c(gMw, 12, 6, "", 2);
+        ah.tF().a((com.tencent.mm.t.j)localObject1, 0);
+      }
+      if (hDk != 0)
+      {
+        boolean bool = com.tencent.mm.model.i.du(str1);
+        if (!bool) {
+          break label777;
+        }
+        localObject1 = i.c.gOa;
+        label532:
+        localObject2 = hDi;
+        String str2 = hDh;
+        j = hDj;
+        int k = hDk;
+        String str3 = hDl;
+        String str4 = hDm;
+        String str5 = hDn;
+        long l = hDo;
+        int m = hDp;
+        int n = hDq;
+        if (!bool) {
+          break label785;
+        }
+        i = com.tencent.mm.model.f.dV(str1);
+        label604:
+        com.tencent.mm.plugin.sns.a.a.i.a((i.c)localObject1, (String)localObject2, str2, j, k, str3, str4, str5, l, m, n, i);
       }
     }
-    label302:
+    label631:
     if (4098 == paramInt1)
     {
-      if (-1 != paramInt1) {
-        break label432;
+      if (hDk != 0) {
+        com.tencent.mm.plugin.sns.a.a.i.a(i.c.gOb, hDi, hDh, hDj, hDk, hDl, hDm, hDn, hDo, hDp, hDq, 0);
       }
-      if (gHq)
+      if (-1 != paramInt1) {
+        break label831;
+      }
+      if (gOv)
       {
-        localObject = new com.tencent.mm.plugin.sns.a.a.c(gFU, 15, 6, "", 2);
-        ah.tE().d((com.tencent.mm.r.j)localObject);
+        localObject1 = new com.tencent.mm.plugin.sns.a.a.c(gMw, 15, 6, "", 2);
+        ah.tF().a((com.tencent.mm.t.j)localObject1, 0);
       }
     }
     for (;;)
     {
       super.onActivityResult(paramInt1, paramInt2, paramIntent);
       return;
-      label358:
-      url = hmZ.jzA;
+      label742:
+      url = hDs.jYn;
       break;
-      label373:
-      localObject = hmZ.jzD;
+      label757:
+      localObject1 = hDs.jYq;
       break label130;
-      label385:
-      i = localObject.length;
-      break label216;
-      label393:
-      if (!gHq) {
-        break label302;
+      label769:
+      i = localObject1.length;
+      break label243;
+      label777:
+      localObject1 = i.c.gNZ;
+      break label532;
+      label785:
+      i = 0;
+      break label604;
+      label791:
+      if (!gOv) {
+        break label631;
       }
-      localObject = new com.tencent.mm.plugin.sns.a.a.c(gFU, 13, 6, "", 2);
-      ah.tE().d((com.tencent.mm.r.j)localObject);
-      break label302;
-      label432:
-      if (gHq)
+      localObject1 = new com.tencent.mm.plugin.sns.a.a.c(gMw, 13, 6, "", 2);
+      ah.tF().a((com.tencent.mm.t.j)localObject1, 0);
+      break label631;
+      label831:
+      if (gOv)
       {
-        localObject = new com.tencent.mm.plugin.sns.a.a.c(gFU, 16, 6, "", 2);
-        ah.tE().d((com.tencent.mm.r.j)localObject);
+        localObject1 = new com.tencent.mm.plugin.sns.a.a.c(gMw, 16, 6, "", 2);
+        ah.tF().a((com.tencent.mm.t.j)localObject1, 0);
       }
     }
   }
@@ -224,9 +290,9 @@ public class VideoAdPlayerUI
   public void onConfigurationChanged(Configuration paramConfiguration)
   {
     super.onConfigurationChanged(paramConfiguration);
-    VideoPlayView localVideoPlayView = hmS;
-    u.i("!32@/B4Tb64lLpKQpS0z/gOJ2Vq6wExBF/3X", "onConfigurationChanged " + orientation + " " + gzc);
-    if (gzc != orientation)
+    VideoPlayView localVideoPlayView = hDc;
+    v.i("MicroMsg.VideoPlayView", "onConfigurationChanged " + orientation + " " + gFF);
+    if (gFF != orientation)
     {
       if (orientation != 1) {
         break label107;
@@ -235,11 +301,11 @@ public class VideoAdPlayerUI
     }
     for (;;)
     {
-      gzc = orientation;
-      if (gzc == 2) {
-        dMC.setVisibility(8);
+      gFF = orientation;
+      if (gFF == 2) {
+        dOk.setVisibility(8);
       }
-      mg(orientation);
+      ny(orientation);
       return;
       label107:
       localVideoPlayView.update(2);
@@ -249,146 +315,183 @@ public class VideoAdPlayerUI
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    baT();
+    kNN.bgn();
     getWindow().setFlags(1024, 1024);
-    hna = new String[] { getString(2131433238), getString(2131433240), getString(2131433239) };
-    hnb = new String[] { getString(2131433238), getString(2131433240) };
-    bmh = new com.tencent.mm.model.d();
-    hmT = com.tencent.mm.modelsns.a.k(getIntent());
-    gHs = getIntent().getStringExtra("KSnsLocalId");
-    bTF = getIntent().getStringExtra("KFullVideoPath");
-    hmU = getIntent().getStringExtra("KStremVideoUrl");
-    ayA = getIntent().getStringExtra("KThumUrl");
+    hDv = new String[] { getString(2131235385), getString(2131235386), getString(2131235384) };
+    hDw = new String[] { getString(2131235385), getString(2131235386) };
+    aZN = new com.tencent.mm.model.d();
+    hDd = com.tencent.mm.modelsns.a.l(getIntent());
+    bNe = getIntent().getStringExtra("KFullVideoPath");
+    hDe = getIntent().getStringExtra("KStremVideoUrl");
+    akC = getIntent().getStringExtra("KThumUrl");
     mediaId = getIntent().getStringExtra("KMediaId");
-    gHq = getIntent().getBooleanExtra("IsAd", false);
+    gOv = getIntent().getBooleanExtra("IsAd", false);
     url = getIntent().getStringExtra("KUrl");
-    hmW = ay.ad(getIntent().getStringExtra("KMediaTitle"), "");
-    hmV = getIntent().getIntExtra("KMediaVideoTime", 0);
-    hmX = getIntent().getStringExtra("KFromUserName");
-    hmY = getIntent().getBooleanExtra("KBlockFav", false);
-    byV = getIntent().getStringExtra("StreamWording");
-    byW = getIntent().getStringExtra("StremWebUrl");
-    gFU = ay.ad(getIntent().getStringExtra("KViewId"), "");
-    hmZ = new add();
-    hmZ.jzt = ayA;
-    hmZ.jzA = hmU;
-    hmZ.iXW = mediaId;
-    hmZ.eiq = url;
-    hmZ.jzs = 1;
-    hmZ.hmV = hmV;
-    hij.gGP = ay.FT();
-    u.i("!32@/B4Tb64lLpKQpS0z/gOJ2TnD2B50r7Ry", "init streamvideo " + hmZ.iXW + " attachurl:" + hmZ.jzA + " videoattachTotalTime:" + hmZ.hmV + " streamvideowording: " + byV + " streamvideoweburl: " + byW + " mediaTitle: " + hmW + " thumburl " + ayA);
+    hDg = be.ab(getIntent().getStringExtra("KMediaTitle"), "");
+    hDf = getIntent().getIntExtra("KMediaVideoTime", 0);
+    hDr = getIntent().getBooleanExtra("KBlockFav", false);
+    brP = getIntent().getStringExtra("StreamWording");
+    brQ = getIntent().getStringExtra("StremWebUrl");
+    hDh = getIntent().getStringExtra("KSta_StremVideoAduxInfo");
+    hDi = getIntent().getStringExtra("KSta_StremVideoPublishId");
+    hDj = getIntent().getIntExtra("KSta_SourceType", 0);
+    hDk = getIntent().getIntExtra("KSta_Scene", 0);
+    hDl = getIntent().getStringExtra("KSta_FromUserName");
+    hDm = getIntent().getStringExtra("KSta_ChatName");
+    hDn = getIntent().getStringExtra("KSta_SnSId");
+    hDo = getIntent().getLongExtra("KSta_MsgId", 0L);
+    hDp = getIntent().getIntExtra("KSta_FavID", 0);
+    hDq = getIntent().getIntExtra("KSta_ChatroomMembercount", 0);
+    atH = getIntent().getStringExtra("KSta_SnsStatExtStr");
+    gMw = be.ab(getIntent().getStringExtra("KViewId"), "");
+    hDt = be.ab(getIntent().getStringExtra("ReportArgs"), "");
+    hDu = getIntent().getIntExtra("NeedReportData", 0);
+    if (hDu != 0)
+    {
+      paramBundle = ((WifiManager)getSystemService("wifi")).getConnectionInfo();
+      ssid = paramBundle.getSSID();
+      bssid = paramBundle.getBSSID();
+    }
+    hDs = new adw();
+    hDs.jYg = akC;
+    hDs.jYn = hDe;
+    hDs.jvB = mediaId;
+    hDs.emu = url;
+    hDs.jYf = 1;
+    hDs.hDf = hDf;
+    hwY.gNq = be.Gq();
+    v.i("MicroMsg.VideoPlayerUI", "init streamvideo " + hDs.jvB + " attachurl:" + hDs.jYn + " videoattachTotalTime:" + hDs.hDf + " streamvideowording: " + brP + " streamvideoweburl: " + brQ + " mediaTitle: " + hDg + " thumburl " + akC + " streamvideoaduxinfo " + hDh + " streamvideopublishid " + hDi);
     Object localObject1;
-    if (ay.kz(bTF))
+    if (be.kf(bNe))
     {
-      paramBundle = am.bp(ad.ayV(), hmZ.iXW);
-      localObject1 = h.j(hmZ);
-      bTF = (paramBundle + (String)localObject1);
+      paramBundle = al.bx(ad.aBw(), hDs.jvB);
+      localObject1 = com.tencent.mm.plugin.sns.data.i.j(hDs);
+      bNe = (paramBundle + (String)localObject1);
     }
-    if ((ay.kz(ayz)) || (!e.ax(ayz)))
+    if ((be.kf(akB)) || (!com.tencent.mm.a.e.aB(akB)))
     {
-      paramBundle = "attach" + hmZ.iXW;
-      localObject1 = am.bp(ad.ayV(), paramBundle);
-      ayz = ((String)localObject1 + h.uc(paramBundle));
+      paramBundle = "attach" + hDs.jvB;
+      localObject1 = al.bx(ad.aBw(), paramBundle);
+      akB = ((String)localObject1 + com.tencent.mm.plugin.sns.data.i.vi(paramBundle));
     }
-    if (!e.ax(ayz)) {}
+    if (!com.tencent.mm.a.e.aB(akB)) {}
     try
     {
-      paramBundle = new add();
-      paramBundle.am(hmZ.toByteArray());
-      iXW = ("attach" + iXW);
-      localObject1 = new com.tencent.mm.plugin.sns.data.d(hmZ);
-      gHA = 1;
-      gHz = hmZ.iXW;
-      ad.aze().a(paramBundle, 7, (com.tencent.mm.plugin.sns.data.d)localObject1, i.a.kat);
+      paramBundle = new adw();
+      paramBundle.au(hDs.toByteArray());
+      jvB = ("attach" + jvB);
+      localObject1 = new com.tencent.mm.plugin.sns.data.e(hDs);
+      gOF = 1;
+      gOE = hDs.jvB;
+      ad.aBE().a(paramBundle, 7, (com.tencent.mm.plugin.sns.data.e)localObject1, z.kFU);
       getWindow().addFlags(128);
-      hmS = ((VideoPlayView)findViewById(2131168772));
-      paramBundle = hmS;
-      localObject1 = new AdVideoPlayerLoadingBar(koJ.kpc);
+      hDc = ((VideoPlayView)findViewById(2131759402));
+      paramBundle = hDc;
+      localObject1 = new AdVideoPlayerLoadingBar(kNN.kOg);
       Object localObject2 = new RelativeLayout.LayoutParams(-1, -2);
       ((RelativeLayout.LayoutParams)localObject2).addRule(12);
-      bottomMargin = BackwardSupportUtil.b.a(paramBundle.getContext(), paramBundle.getContext().getResources().getDimension(2131034590));
-      gyS = ((com.tencent.mm.plugin.sight.decode.ui.a)localObject1);
-      dTz.setPlayProgressCallback(true);
-      paramBundle.addView((View)gyS, (ViewGroup.LayoutParams)localObject2);
-      gyS.setIplaySeekCallback(new VideoPlayView.5(paramBundle));
-      gyS.setOnPlayButtonClickListener(new VideoPlayView.6(paramBundle));
-      gyS.setIsPlay(dTz.isPlaying());
-      if (gyS != null) {
-        ((View)gyS).setVisibility(8);
+      bottomMargin = BackwardSupportUtil.b.a(paramBundle.getContext(), paramBundle.getContext().getResources().getDimension(2131427656));
+      gFs = ((com.tencent.mm.plugin.sight.decode.ui.a)localObject1);
+      dVH.ex(true);
+      paramBundle.addView((View)gFs, (ViewGroup.LayoutParams)localObject2);
+      gFs.a(new VideoPlayView.5(paramBundle));
+      gFs.c(new VideoPlayView.6(paramBundle));
+      gFs.eu(dVH.isPlaying());
+      if (gFs != null) {
+        ((View)gFs).setVisibility(8);
       }
-      ((com.tencent.mm.plugin.sight.decode.ui.a)localObject1).kU(0);
-      hmS.setVideoPlayViewEvent(new VideoPlayView.a()
+      ((com.tencent.mm.plugin.sight.decode.ui.a)localObject1).ma(0);
+      hDc.gFq = new VideoPlayView.a()
       {
-        public final void awa()
+        public final void ayy()
         {
-          VideoAdPlayerUI.c(VideoAdPlayerUI.this).aH(false);
-          com.tencent.mm.plugin.sns.a.a.a.a locala = agGR;
-          gHj += (int)ay.ao(agGR.gHn);
+          VideoAdPlayerUI.c(VideoAdPlayerUI.this).am(false);
+          com.tencent.mm.plugin.sns.a.a.a.a locala = agNs;
+          gOo += (int)be.av(agNs.gOs);
+          VideoAdPlayerUI.a(VideoAdPlayerUI.this, false);
         }
         
-        public final void awb()
+        public final void ayz()
         {
-          u.i("!32@/B4Tb64lLpKQpS0z/gOJ2TnD2B50r7Ry", "onPlayCompletion");
-          com.tencent.mm.plugin.sns.a.a.a.a locala = agGR;
-          gHi += 1;
+          v.i("MicroMsg.VideoPlayerUI", "onPlayCompletion");
+          Object localObject = agNs;
+          gOn += 1;
+          VideoAdPlayerUI.a(VideoAdPlayerUI.this, false);
+          if (VideoAdPlayerUI.d(VideoAdPlayerUI.this) != 0)
+          {
+            localObject = new com.tencent.mm.modelstat.e(13227, "1,2," + VideoAdPlayerUI.h(VideoAdPlayerUI.this) + "," + VideoAdPlayerUI.e(VideoAdPlayerUI.this) + "," + VideoAdPlayerUI.f(VideoAdPlayerUI.this) + "," + be.Go() + "," + VideoAdPlayerUI.g(VideoAdPlayerUI.this) + "," + VideoAdPlayerUI.h(VideoAdPlayerUI.this), (int)be.Go());
+            ah.tF().a((com.tencent.mm.t.j)localObject, 0);
+          }
         }
         
-        public final void eG(boolean paramAnonymousBoolean)
+        public final void ey(boolean paramAnonymousBoolean)
         {
-          com.tencent.mm.plugin.sns.a.a.a.a locala;
+          Object localObject;
           if (paramAnonymousBoolean)
           {
-            locala = agGR;
+            localObject = agNs;
             if (getResources().getConfiguration().orientation != 2) {
-              break label118;
+              break label239;
             }
           }
-          label118:
+          label239:
           for (int i = 2;; i = 1)
           {
-            gHm = i;
-            agGR.gHn = ay.FT();
-            agGR.gHl = 2;
-            agGR.gHj = 0;
-            agGR.gHn = ay.FT();
+            gOr = i;
+            agNs.gOs = be.Gq();
+            agNs.gOq = 2;
+            agNs.gOo = 0;
+            agNs.gOs = be.Gq();
             VideoAdPlayerUI.c(VideoAdPlayerUI.this).a(VideoAdPlayerUI.b(VideoAdPlayerUI.this));
+            if (VideoAdPlayerUI.d(VideoAdPlayerUI.this) != 0)
+            {
+              localObject = new com.tencent.mm.modelstat.e(13227, "1,1,0," + VideoAdPlayerUI.e(VideoAdPlayerUI.this) + "," + VideoAdPlayerUI.f(VideoAdPlayerUI.this) + "," + be.Go() + "," + VideoAdPlayerUI.g(VideoAdPlayerUI.this) + "," + VideoAdPlayerUI.h(VideoAdPlayerUI.this), (int)be.Go());
+              ah.tF().a((com.tencent.mm.t.j)localObject, 0);
+            }
+            VideoAdPlayerUI.a(VideoAdPlayerUI.this, true);
             return;
           }
         }
         
-        public final void kY(int paramAnonymousInt)
+        public final void mf(int paramAnonymousInt)
         {
-          if (VideoAdPlayerUI.d(VideoAdPlayerUI.this) == 0)
+          if (VideoAdPlayerUI.h(VideoAdPlayerUI.this) == 0)
           {
             VideoAdPlayerUI.a(VideoAdPlayerUI.this, paramAnonymousInt);
-            ehmV = paramAnonymousInt;
+            ihDf = paramAnonymousInt;
           }
         }
-      });
-      hmS.setVideoTotalTime(hmZ.hmV);
-      if (e.ax(bTF))
+      };
+      paramBundle = hDc;
+      int i = hDs.hDf;
+      if (gFs.ayo() != i) {
+        gFs.mb(i);
+      }
+      if (com.tencent.mm.a.e.aB(bNe))
       {
-        hij.gGN = 1;
-        hmS.setVideoPath(bTF);
-        hmS.setLeftButtonOnClickListener(new View.OnClickListener()
+        hwY.gNo = 1;
+        hDc.setVideoPath(bNe);
+        paramBundle = hDc;
+        localObject1 = new View.OnClickListener()
         {
           public final void onClick(View paramAnonymousView)
           {
             finish();
           }
-        });
-        hmS.setRightButtonOnCliclListener(new View.OnClickListener()
+        };
+        gFw.setOnClickListener((View.OnClickListener)localObject1);
+        paramBundle = hDc;
+        localObject1 = new View.OnClickListener()
         {
           public final void onClick(View paramAnonymousView)
           {
             VideoAdPlayerUI localVideoAdPlayerUI = VideoAdPlayerUI.this;
-            if (VideoAdPlayerUI.f(VideoAdPlayerUI.this)) {}
-            for (paramAnonymousView = VideoAdPlayerUI.g(VideoAdPlayerUI.this);; paramAnonymousView = VideoAdPlayerUI.h(VideoAdPlayerUI.this))
+            if (VideoAdPlayerUI.j(VideoAdPlayerUI.this)) {}
+            for (paramAnonymousView = VideoAdPlayerUI.k(VideoAdPlayerUI.this);; paramAnonymousView = VideoAdPlayerUI.l(VideoAdPlayerUI.this))
             {
               com.tencent.mm.ui.base.g.a(localVideoAdPlayerUI, null, paramAnonymousView, null, new g.c()
               {
-                public final void eu(int paramAnonymous2Int)
+                public final void fg(int paramAnonymous2Int)
                 {
                   switch (paramAnonymous2Int)
                   {
@@ -398,48 +501,77 @@ public class VideoAdPlayerUI
                     Intent localIntent = new Intent();
                     localIntent.putExtra("Select_Conv_Type", 3);
                     localIntent.putExtra("select_is_ret", true);
-                    com.tencent.mm.ar.c.a(VideoAdPlayerUI.this, ".ui.transmit.SelectConversationUI", localIntent, 4097);
+                    com.tencent.mm.av.c.a(VideoAdPlayerUI.this, ".ui.transmit.SelectConversationUI", localIntent, 4097);
                     return;
                   case 1: 
-                    VideoAdPlayerUI.i(VideoAdPlayerUI.this);
+                    VideoAdPlayerUI.m(VideoAdPlayerUI.this);
                     return;
                   }
-                  VideoAdPlayerUI.j(VideoAdPlayerUI.this);
+                  VideoAdPlayerUI.n(VideoAdPlayerUI.this);
                 }
               });
               return;
             }
           }
-        });
-        paramBundle = hmS;
-        localObject1 = byV;
+        };
+        gFx.setOnClickListener((View.OnClickListener)localObject1);
+        paramBundle = hDc;
+        localObject1 = brP;
         localObject2 = new View.OnClickListener()
         {
           public final void onClick(final View paramAnonymousView)
           {
+            if (VideoAdPlayerUI.o(VideoAdPlayerUI.this) != 0) {
+              com.tencent.mm.plugin.sns.a.a.i.a(i.a.gNM, hDi, hDh, VideoAdPlayerUI.p(VideoAdPlayerUI.this), VideoAdPlayerUI.o(VideoAdPlayerUI.this), VideoAdPlayerUI.q(VideoAdPlayerUI.this), VideoAdPlayerUI.r(VideoAdPlayerUI.this), VideoAdPlayerUI.s(VideoAdPlayerUI.this), VideoAdPlayerUI.t(VideoAdPlayerUI.this), VideoAdPlayerUI.u(VideoAdPlayerUI.this), VideoAdPlayerUI.v(VideoAdPlayerUI.this));
+            }
+            if (VideoAdPlayerUI.d(VideoAdPlayerUI.this) != 0)
+            {
+              int j = agNs.gOo;
+              int i = j;
+              if (VideoAdPlayerUI.w(VideoAdPlayerUI.this))
+              {
+                i = j;
+                if (agNs.gOs != 0L) {
+                  i = j + (int)(be.av(agNs.gOs) / 1000L);
+                }
+              }
+              paramAnonymousView = new com.tencent.mm.modelstat.e(13228, "1,1," + i + "," + VideoAdPlayerUI.e(VideoAdPlayerUI.this) + "," + VideoAdPlayerUI.f(VideoAdPlayerUI.this) + "," + be.Go() + "," + VideoAdPlayerUI.g(VideoAdPlayerUI.this) + "," + VideoAdPlayerUI.h(VideoAdPlayerUI.this), (int)be.Go());
+              ah.tF().a(paramAnonymousView, 0);
+            }
             finish();
             paramAnonymousView = new Intent();
-            paramAnonymousView.putExtra("jsapiargs", new Bundle());
-            paramAnonymousView.putExtra("rawUrl", VideoAdPlayerUI.k(VideoAdPlayerUI.this));
+            Object localObject = new Bundle();
+            ((Bundle)localObject).putString("key_snsad_statextstr", VideoAdPlayerUI.x(VideoAdPlayerUI.this));
+            paramAnonymousView.putExtra("jsapiargs", (Bundle)localObject);
+            paramAnonymousView.putExtra("rawUrl", VideoAdPlayerUI.y(VideoAdPlayerUI.this));
             paramAnonymousView.putExtra("useJs", true);
-            if (VideoAdPlayerUI.l(VideoAdPlayerUI.this))
+            if (VideoAdPlayerUI.z(VideoAdPlayerUI.this))
             {
-              com.tencent.mm.plugin.sns.a.a.c localc = new com.tencent.mm.plugin.sns.a.a.c(VideoAdPlayerUI.m(VideoAdPlayerUI.this), 18, 6, "", 2);
-              ah.tE().d(localc);
+              localObject = new com.tencent.mm.plugin.sns.a.a.c(VideoAdPlayerUI.A(VideoAdPlayerUI.this), 18, 6, "", 2);
+              ah.tF().a((com.tencent.mm.t.j)localObject, 0);
             }
-            new aa(Looper.getMainLooper()).post(new Runnable()
+            new ac(Looper.getMainLooper()).post(new Runnable()
             {
               public final void run()
               {
-                com.tencent.mm.plugin.sns.b.a.coa.j(paramAnonymousView, VideoAdPlayerUI.this);
+                com.tencent.mm.plugin.sns.b.a.cjo.j(paramAnonymousView, VideoAdPlayerUI.this);
               }
             });
           }
         };
-        gyV = ((String)localObject1);
-        gyU.setText((CharSequence)localObject1);
-        gyU.setOnClickListener((View.OnClickListener)localObject2);
-        hmS.avZ();
+        gFv = ((String)localObject1);
+        gFu.setText((CharSequence)localObject1);
+        gFu.setOnClickListener((View.OnClickListener)localObject2);
+        hDc.ayw();
+        if (getIntent().getIntExtra("ShareBtnHidden", 0) != 0)
+        {
+          paramBundle = hDc;
+          if (gFx != null)
+          {
+            gFy = false;
+            gFx.setVisibility(4);
+          }
+        }
         return;
       }
     }
@@ -447,11 +579,11 @@ public class VideoAdPlayerUI
     {
       for (;;)
       {
-        u.e("!32@/B4Tb64lLpKQpS0z/gOJ2TnD2B50r7Ry", "error for download thumb");
+        v.e("MicroMsg.VideoPlayerUI", "error for download thumb");
         continue;
-        hmS.dtU.setVisibility(0);
-        hmS.setIsDownloading(true);
-        ad.aze().a(hmZ, 6, null, i.a.kat);
+        hDc.duj.setVisibility(0);
+        hDc.cvK = true;
+        ad.aBE().a(hDs, 6, null, z.kFU);
       }
     }
   }
@@ -460,10 +592,28 @@ public class VideoAdPlayerUI
   {
     super.onDestroy();
     getWindow().clearFlags(128);
-    if (gHq)
+    if (hDk != 0) {
+      com.tencent.mm.plugin.sns.a.a.i.a(i.a.gNO, hDi, hDh, hDj, hDk, hDl, hDm, hDn, hDo, hDp, hDq);
+    }
+    Object localObject;
+    if (gOv)
     {
-      String str = hij.axw();
-      ah.tE().d(new com.tencent.mm.plugin.sns.a.a.d(gFU, 6, hij.gGO, null, null, 2, str));
+      localObject = hwY.azY();
+      ah.tF().a(new com.tencent.mm.plugin.sns.a.a.d(gMw, 6, hwY.gNp, null, null, 2, (String)localObject), 0);
+    }
+    if (hDu != 0)
+    {
+      int j = hwY.gNs.gOo;
+      int i = j;
+      if (giD)
+      {
+        i = j;
+        if (hwY.gNs.gOs != 0L) {
+          i = j + (int)(be.av(hwY.gNs.gOs) / 1000L);
+        }
+      }
+      localObject = new com.tencent.mm.modelstat.e(13228, "1,2," + i + "," + ssid + "," + bssid + "," + be.Go() + "," + hDt + "," + hDf, (int)be.Go());
+      ah.tF().a((com.tencent.mm.t.j)localObject, 0);
     }
   }
   
@@ -471,28 +621,28 @@ public class VideoAdPlayerUI
   {
     super.onPause();
     int i = getResourcesgetConfigurationorientation;
-    u.i("!32@/B4Tb64lLpKQpS0z/gOJ2TnD2B50r7Ry", "onpause  " + i);
-    mg(i);
-    if ((hmS != null) && (hmS.isPlaying())) {
-      hmS.kX(-1);
+    v.i("MicroMsg.VideoPlayerUI", "onpause  " + i);
+    ny(i);
+    if ((hDc != null) && (hDc.isPlaying())) {
+      hDc.me(-1);
     }
-    if (hmS != null)
+    if (hDc != null)
     {
-      u.i("!32@/B4Tb64lLpKQpS0z/gOJ2TnD2B50r7Ry", "onDetach");
-      hmS.onDetach();
+      v.i("MicroMsg.VideoPlayerUI", "onDetach");
+      hDc.onDetach();
     }
-    azegLT.remove(this);
-    ad.aze().b(this);
+    aBEgTC.remove(this);
+    ad.aBE().b(this);
   }
   
   protected void onResume()
   {
     super.onResume();
-    azegLT.add(this);
-    ad.aze().a(this);
+    aBEgTC.add(this);
+    ad.aBE().a(this);
   }
   
-  public final void ur(String paramString) {}
+  public final void vw(String paramString) {}
 }
 
 /* Location:

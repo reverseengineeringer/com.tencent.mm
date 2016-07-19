@@ -5,72 +5,72 @@ import android.database.Cursor;
 
 public final class ad
 {
-  int aou = -1;
-  int bNc = 0;
-  int bNd = 0;
-  int bNe = 0;
-  int bNf = 0;
-  int bNg = 0;
-  int bNh = 0;
-  String bNi = "";
-  String bNj = "";
+  int aqQ = -1;
+  int bGA = 0;
+  int bGB = 0;
+  String bGC = "";
+  String bGD = "";
+  int bGw = 0;
+  int bGx = 0;
+  int bGy = 0;
+  int bGz = 0;
   
-  public final void c(Cursor paramCursor)
+  public final void b(Cursor paramCursor)
   {
-    bNc = paramCursor.getInt(0);
-    bNd = paramCursor.getInt(1);
-    bNe = paramCursor.getInt(2);
-    bNf = paramCursor.getInt(3);
-    bNg = paramCursor.getInt(4);
-    bNh = paramCursor.getInt(5);
-    bNi = paramCursor.getString(6);
-    bNj = paramCursor.getString(7);
+    bGw = paramCursor.getInt(0);
+    bGx = paramCursor.getInt(1);
+    bGy = paramCursor.getInt(2);
+    bGz = paramCursor.getInt(3);
+    bGA = paramCursor.getInt(4);
+    bGB = paramCursor.getInt(5);
+    bGC = paramCursor.getString(6);
+    bGD = paramCursor.getString(7);
   }
   
-  public final ContentValues zd()
+  public final ContentValues zq()
   {
     ContentValues localContentValues = new ContentValues();
-    if ((aou & 0x1) != 0) {
-      localContentValues.put("grouopid", Integer.valueOf(bNc));
+    if ((aqQ & 0x1) != 0) {
+      localContentValues.put("grouopid", Integer.valueOf(bGw));
     }
-    if ((aou & 0x2) != 0) {
-      localContentValues.put("membernum", Integer.valueOf(bNd));
+    if ((aqQ & 0x2) != 0) {
+      localContentValues.put("membernum", Integer.valueOf(bGx));
     }
-    if ((aou & 0x4) != 0) {
-      localContentValues.put("weixinnum", Integer.valueOf(bNe));
+    if ((aqQ & 0x4) != 0) {
+      localContentValues.put("weixinnum", Integer.valueOf(bGy));
     }
-    if ((aou & 0x8) != 0) {
-      localContentValues.put("insert_time", Integer.valueOf(bNf));
+    if ((aqQ & 0x8) != 0) {
+      localContentValues.put("insert_time", Integer.valueOf(bGz));
     }
-    if ((aou & 0x10) != 0) {
-      localContentValues.put("lastupdate_time", Integer.valueOf(bNg));
+    if ((aqQ & 0x10) != 0) {
+      localContentValues.put("lastupdate_time", Integer.valueOf(bGA));
     }
-    if ((aou & 0x20) != 0) {
-      localContentValues.put("needupdate", Integer.valueOf(bNh));
+    if ((aqQ & 0x20) != 0) {
+      localContentValues.put("needupdate", Integer.valueOf(bGB));
     }
-    if ((aou & 0x40) != 0) {
-      localContentValues.put("updatekey", ze());
+    if ((aqQ & 0x40) != 0) {
+      localContentValues.put("updatekey", zr());
     }
-    if ((aou & 0x80) != 0) {
-      localContentValues.put("groupname", zf());
+    if ((aqQ & 0x80) != 0) {
+      localContentValues.put("groupname", zs());
     }
     return localContentValues;
   }
   
-  public final String ze()
+  public final String zr()
   {
-    if (bNi == null) {
+    if (bGC == null) {
       return "";
     }
-    return bNi;
+    return bGC;
   }
   
-  public final String zf()
+  public final String zs()
   {
-    if (bNj == null) {
+    if (bGD == null) {
       return "";
     }
-    return bNj;
+    return bGD;
   }
 }
 

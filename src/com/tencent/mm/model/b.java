@@ -3,18 +3,18 @@ package com.tencent.mm.model;
 public final class b
   extends RuntimeException
 {
-  private final int bzj;
+  private final int bsg;
   
   public b()
   {
-    super(ah.tj());
-    bzj = 0;
+    super(ah.tk());
+    bsg = 0;
   }
   
   public b(byte paramByte)
   {
-    super(ah.tj());
-    bzj = 1;
+    super(ah.tk());
+    bsg = 1;
   }
 }
 

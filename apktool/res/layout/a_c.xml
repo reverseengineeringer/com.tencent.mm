@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/g6" android:background="@color/m5" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/c9b" android:layout_width="fill_parent" android:layout_height="30.0dip" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/c9c" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+        <TextView android:textSize="20.0dip" android:textColor="@color/m7" android:gravity="top" android:layout_gravity="top" android:id="@id/c9d" android:visibility="gone" android:layout_width="73.0dip" android:layout_height="wrap_content" android:layout_marginLeft="13.0dip" android:text="Landscape" android:shadowColor="#ff000000" android:shadowDx="1.2" android:shadowDy="1.2" android:shadowRadius="1.5" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/m7" android:gravity="top" android:layout_gravity="top" android:id="@id/c9e" android:layout_width="73.0dip" android:layout_height="wrap_content" android:layout_marginLeft="13.0dip" android:text="Landscape" android:shadowColor="#ff000000" android:shadowDx="1.2" android:shadowDy="1.2" android:shadowRadius="1.5" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip">
+            <ImageView android:id="@id/c9f" android:layout_width="73.0dip" android:layout_height="73.0dip" android:scaleType="fitXY" />
+            <ImageView android:id="@id/c9g" android:layout_width="73.0dip" android:layout_height="73.0dip" android:layout_marginLeft="5.0dip" android:scaleType="fitXY" />
+            <ImageView android:id="@id/c9h" android:layout_width="73.0dip" android:layout_height="73.0dip" android:layout_marginLeft="5.0dip" android:scaleType="fitXY" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

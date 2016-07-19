@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/bro" style="@style/MallProductText" />
+    <com.tencent.mm.plugin.product.ui.MaxGridView android:gravity="center" android:id="@id/brp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:horizontalSpacing="12.0dip" android:verticalSpacing="12.0dip" android:numColumns="auto_fit" />
+</LinearLayout>

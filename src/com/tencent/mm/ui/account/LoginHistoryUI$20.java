@@ -2,7 +2,7 @@ package com.tencent.mm.ui.account;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class LoginHistoryUI$20
   implements DialogInterface.OnClickListener
@@ -11,8 +11,8 @@ final class LoginHistoryUI$20
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    u.i("!32@/B4Tb64lLpKxsTbPEeLD3A+BAp2nPFbL", "db dangerous and auto logout");
-    LoginHistoryUI.a(ktx);
+    v.i("MicroMsg.LoginHistoryUI", "db dangerous and auto logout");
+    LoginHistoryUI.a(kSF);
   }
 }
 

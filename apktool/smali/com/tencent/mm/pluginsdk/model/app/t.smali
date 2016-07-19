@@ -6,7 +6,7 @@
 # instance fields
 .field public appId:Ljava/lang/String;
 
-.field public cbf:I
+.field public bUR:I
 
 .field public data:[B
 
@@ -23,7 +23,7 @@
     iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/app/t;->appId:Ljava/lang/String;
 
     .line 247
-    iput p2, p0, Lcom/tencent/mm/pluginsdk/model/app/t;->cbf:I
+    iput p2, p0, Lcom/tencent/mm/pluginsdk/model/app/t;->bUR:I
 
     .line 248
     iput-object p3, p0, Lcom/tencent/mm/pluginsdk/model/app/t;->data:[B

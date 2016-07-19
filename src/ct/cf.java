@@ -1,244 +1,184 @@
 package ct;
 
-import com.tencent.map.geolocation.TencentLocation;
-import com.tencent.map.geolocation.TencentLocationUtils;
-import java.util.LinkedList;
-import java.util.ListIterator;
+import android.location.Location;
+import android.net.wifi.ScanResult;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import org.eclipse.jdt.annotation.Nullable;
+import org.json.JSONObject;
 
 public final class cf
 {
-  private int a = 10;
-  private int b = 4;
-  private LinkedList c = new LinkedList();
-  private bs d = new bs();
+  public static int a = 0;
+  private final ch b;
+  private final cd c;
+  private final ce d;
   
-  private boolean a(a parama, bj parambj)
+  public cf(ch paramch, cd paramcd, ce paramce)
   {
-    boolean bool;
-    if (parambj == null)
-    {
-      bool = true;
-      return bool;
+    b = paramch;
+    c = paramcd;
+    d = paramce;
+  }
+  
+  private String b(int paramInt, String paramString, bg parambg)
+  {
+    if (parambg == null) {
+      return null;
     }
     for (;;)
     {
-      int i;
-      int k;
       try
       {
-        if (d == 1)
+        Object localObject4;
+        bh localbh;
+        if (c == null)
         {
-          if ((c == null) || ((c != null) && (c.size() == 0)) || ((!db.a(parambj)) && (!db.b(parambj)))) {
-            break label270;
+          bool = true;
+          localObject2 = b;
+          if (localObject2 == null) {
+            break label1045;
           }
-          if (c - c.getLast()).c < 120000L)
+          if (((ch)localObject2).a() == null)
           {
-            bool = false;
-            break;
+            break label1045;
+            localObject4 = b.a.a(c, bool);
+            localObject2 = d;
+            if (localObject2 != null) {
+              continue;
+            }
+            localObject2 = "{}";
+            localbh = parambg.g();
+            if (localbh != null) {
+              continue;
+            }
+            return null;
           }
         }
-        if (c.size() >= b)
+        else
         {
-          i = 1;
-          if (i == 0) {
-            continue;
+          if (a == c.e) {
+            break label1053;
           }
-          i = 0;
-          parambj = c.listIterator(c.size());
-          int j = 0;
-          if (!parambj.hasPrevious()) {
-            break label261;
-          }
-          a locala = (a)parambj.previous();
-          if (b.a.a(a, b, a, b) / ((Math.abs(c - c) + 1L) / 1000.0D) <= 40.0D) {
-            continue;
-          }
-          k = 0;
-          break label276;
-          label209:
-          j += 1;
-          k = b;
-          if (j <= k) {
-            break label264;
-          }
-          if (i <= 1) {
-            continue;
-          }
-          bool = false;
-          break;
+          bool = true;
+          a = c.e;
+          continue;
         }
-        i = 0;
+        Object localObject1 = new StringBuilder();
+        ((StringBuilder)localObject1).append("[");
+        if ((((ch)localObject2).a() == null) || (((ch)localObject2).a().size() <= 0))
+        {
+          ((StringBuilder)localObject1).append("]");
+          localObject1 = ((StringBuilder)localObject1).toString();
+          continue;
+        }
+        Object localObject2 = ((ch)localObject2).a();
+        Object localObject3 = ((List)localObject2).iterator();
+        int i = 0;
+        if (((Iterator)localObject3).hasNext())
+        {
+          localObject4 = (ScanResult)((Iterator)localObject3).next();
+          ((List)localObject2).size();
+          if (i > 0) {
+            ((StringBuilder)localObject1).append(",");
+          }
+          ((StringBuilder)localObject1).append("{\"mac\":\"").append(BSSID).append("\",");
+          ((StringBuilder)localObject1).append("\"rssi\":").append(level).append("}");
+          i += 1;
+          continue;
+        }
+        ((StringBuilder)localObject1).append("]");
+        localObject1 = ((StringBuilder)localObject1).toString();
         continue;
-        k = 1;
-        break label276;
-        bool = true;
-        break;
-      }
-      finally {}
-      label261:
-      continue;
-      label264:
-      continue;
-      label270:
-      label276:
-      do
-      {
-        break label209;
-        bool = true;
-        break;
-      } while (k != 0);
-      i += 1;
-    }
-  }
-  
-  public final void a()
-  {
-    try
-    {
-      c.clear();
-      bs localbs = d;
-      c = -1.0D;
-      d = -1.0D;
-      e = -1.0D;
-      a = -1.0F;
-      b = -1L;
-      return;
-    }
-    finally
-    {
-      localObject = finally;
-      throw ((Throwable)localObject);
-    }
-  }
-  
-  public final void a(TencentLocation paramTencentLocation)
-  {
-    try
-    {
-      c.add(a.a(paramTencentLocation));
-      if (c.size() > a) {
-        c.removeFirst();
-      }
-      return;
-    }
-    finally
-    {
-      paramTencentLocation = finally;
-      throw paramTencentLocation;
-    }
-  }
-  
-  public final void a(cu paramcu)
-  {
-    try
-    {
-      double d1;
-      bs localbs;
-      double d3;
-      double d4;
-      double d2;
-      long l3;
-      if (paramcu.getProvider().equalsIgnoreCase("gps"))
-      {
-        d1 = paramcu.getSpeed();
-        localbs = d;
-        d3 = paramcu.getLatitude();
-        d4 = paramcu.getLongitude();
-        d2 = paramcu.getAccuracy();
-        l3 = paramcu.getTime();
-        if (d2 >= 1.0D) {
-          break label375;
-        }
-        d2 = 1.0D;
-      }
-      for (;;)
-      {
-        a = ((float)d1);
-        if (e < 0.0D)
+        localObject3 = a;
+        Object localObject5 = new StringBuilder();
+        double d1 = b.a.a(((Location)localObject3).getLatitude(), 6);
+        double d2 = b.a.a(((Location)localObject3).getLongitude(), 6);
+        double d3 = b.a.a(((Location)localObject3).getAltitude(), 1);
+        double d4 = b.a.a(((Location)localObject3).getAccuracy(), 1);
+        double d5 = b.a.a(((Location)localObject3).getBearing(), 1);
+        double d6 = b.a.a(((Location)localObject3).getSpeed(), 1);
+        ((StringBuilder)localObject5).append("{");
+        ((StringBuilder)localObject5).append("\"latitude\":");
+        ((StringBuilder)localObject5).append(d1);
+        ((StringBuilder)localObject5).append(",\"longitude\":");
+        ((StringBuilder)localObject5).append(d2);
+        ((StringBuilder)localObject5).append(",\"additional\":");
+        ((StringBuilder)localObject5).append("\"" + d3 + "," + d4 + "," + d5 + "," + d6 + "," + b + "\"");
+        ((StringBuilder)localObject5).append("}");
+        localObject2 = ((StringBuilder)localObject5).toString();
+        continue;
+        localObject3 = new HashMap();
+        ((HashMap)localObject3).put("imei", localbh.a());
+        ((HashMap)localObject3).put("imsi", localbh.b());
+        ((HashMap)localObject3).put("phonenum", b.a.a(e));
+        ((HashMap)localObject3).put("qq", b.a.a(g));
+        ((HashMap)localObject3).put("mac", localbh.c().toLowerCase(Locale.ENGLISH));
+        a.a();
+        localObject5 = new JSONObject((Map)localObject3).toString();
+        if (n == null)
         {
-          b = l3;
-          c = d3;
-          d = d4;
+          localObject3 = new StringBuilder(100);
+          ((StringBuilder)localObject3).append(localbh.a()).append("_").append(localbh.b()).append("_").append(localbh.c()).append("_QQGeoLocation");
+          n = b.a.c(((StringBuilder)localObject3).toString());
         }
-        for (e = (d2 * d2);; e = ((1.0D - d1) * e))
+        String str2 = n;
+        cu.a();
+        i = cu.a(a);
+        String str1 = cw.d(parambg);
+        localObject3 = j;
+        parambg = (bg)localObject3;
+        if (localObject3 != null) {
+          parambg = ((String)localObject3).replace("\"", "");
+        }
+        localObject3 = parambg;
+        if (parambg != null) {
+          localObject3 = parambg.replace("|", "");
+        }
+        localObject3 = (String)localObject3 + "_" + i;
+        StringBuilder localStringBuilder = new StringBuilder("{\"version\":\"");
+        if (q == null)
         {
-          paramcu.a(d.c, d.d);
-          do
-          {
-            return;
-          } while ((c == null) || ((c != null) && (c.size() == 0)));
-          d1 = b.a.a(c.getLast()).a, c.getLast()).b, paramcu.getLatitude(), paramcu.getLongitude()) / ((Math.abs(paramcu.getTime() - c.getLast()).c) + 1L) / 1000.0D);
-          break;
-          long l2 = l3 - b;
-          long l1 = l2;
-          if (l2 < 1L) {
-            l1 = 1L;
-          }
-          if (l1 > 0L)
-          {
-            d1 = e;
-            e = ((float)l1 * a + d1);
-            b = l3;
-          }
-          d1 = 1.03D * e / (d2 * d2 + e * 1.03D);
-          c += (d3 - c) * d1;
-          d += (d4 - d) * d1;
+          parambg = "None";
+          parambg = parambg + "\",\"address\":" + paramInt;
+          paramString = parambg + ",\"source\":203,\"access_token\":\"" + str2 + "\",\"app_name\":\"" + paramString + "\",\"app_label\":\"" + (String)localObject3 + "\",\"bearing\":1";
+          paramString = paramString + ",\"control\":2";
+          paramString = paramString + ",\"pstat\":" + i;
+          paramString = paramString + ",\"wlan\":" + str1;
+          return paramString + ",\"attribute\":" + (String)localObject5 + ",\"location\":" + (String)localObject2 + ",\"cells\":" + (String)localObject4 + ",\"wifis\":" + (String)localObject1 + "}";
         }
+        parambg = q;
+        continue;
+        localObject1 = "[]";
       }
-    }
-    finally {}
-  }
-  
-  public final boolean a(TencentLocation paramTencentLocation, bj parambj)
-  {
-    try
-    {
-      boolean bool = a(a.a(paramTencentLocation), parambj);
-      return bool;
-    }
-    finally
-    {
-      paramTencentLocation = finally;
-      throw paramTencentLocation;
+      catch (Exception paramString)
+      {
+        return null;
+      }
+      label1045:
+      continue;
+      label1053:
+      boolean bool = false;
     }
   }
   
-  static final class a
+  @Nullable
+  public final ce a()
   {
-    double a;
-    double b;
-    long c;
-    int d;
-    
-    static a a(TencentLocation paramTencentLocation)
-    {
-      int i = 2;
-      a locala = new a();
-      a = paramTencentLocation.getLatitude();
-      b = paramTencentLocation.getLongitude();
-      c = paramTencentLocation.getTime();
-      paramTencentLocation.getSpeed();
-      if (TencentLocationUtils.isFromGps(paramTencentLocation))
-      {
-        if (paramTencentLocation.getAccuracy() < 100.0F) {
-          i = 3;
-        }
-        d = i;
-        return locala;
-      }
-      if (paramTencentLocation.getAccuracy() < 500.0F) {}
-      for (;;)
-      {
-        d = i;
-        return locala;
-        i = 1;
-      }
-    }
-    
-    public final String toString()
-    {
-      return "[" + a + "," + b + "]";
-    }
+    return d;
+  }
+  
+  public final String a(int paramInt, String paramString, bg parambg)
+  {
+    return b(paramInt, paramString, parambg);
+  }
+  
+  public final boolean b()
+  {
+    return d != null;
   }
 }
 

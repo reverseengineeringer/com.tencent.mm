@@ -14,16 +14,16 @@ final class CropImageNewUI$20
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = new n(luq);
-    hle = new n.c()
+    paramMenuItem = new n(lVs);
+    hoS = new n.c()
     {
       public final void a(l paramAnonymousl)
       {
-        paramAnonymousl.bL(0, 2131428851);
-        paramAnonymousl.bL(1, 2131428852);
+        paramAnonymousl.bR(0, 2131232157);
+        paramAnonymousl.bR(1, 2131232161);
       }
     };
-    hlf = new n.d()
+    hoT = new n.d()
     {
       public final void d(MenuItem paramAnonymousMenuItem, int paramAnonymousInt)
       {
@@ -33,17 +33,17 @@ final class CropImageNewUI$20
           return;
         case 0: 
           paramAnonymousMenuItem = new Intent();
-          paramAnonymousMenuItem.putExtra("CropImage_OutputPath", luq.getIntent().getStringExtra("CropImage_OutputPath"));
+          paramAnonymousMenuItem.putExtra("CropImage_OutputPath", lVs.getIntent().getStringExtra("CropImage_OutputPath"));
           paramAnonymousMenuItem.putExtra("OP_CODE", 1);
-          luq.setResult(-1, paramAnonymousMenuItem);
-          luq.finish();
+          lVs.setResult(-1, paramAnonymousMenuItem);
+          lVs.finish();
           return;
         }
         paramAnonymousMenuItem = new Intent();
-        paramAnonymousMenuItem.putExtra("CropImage_OutputPath", luq.getIntent().getStringExtra("CropImage_OutputPath"));
+        paramAnonymousMenuItem.putExtra("CropImage_OutputPath", lVs.getIntent().getStringExtra("CropImage_OutputPath"));
         paramAnonymousMenuItem.putExtra("OP_CODE", 2);
-        luq.setResult(-1, paramAnonymousMenuItem);
-        luq.finish();
+        lVs.setResult(-1, paramAnonymousMenuItem);
+        lVs.finish();
       }
     };
     paramMenuItem.bH();

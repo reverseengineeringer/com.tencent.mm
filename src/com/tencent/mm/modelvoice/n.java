@@ -1,12 +1,12 @@
 package com.tencent.mm.modelvoice;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.k;
 
 public final class n
 {
-  public String cfR;
-  public boolean cfS;
+  public String cbd;
+  public boolean cbe;
   public long time;
   
   public n(String paramString)
@@ -20,29 +20,29 @@ public final class n
           str = paramString.substring(0, paramString.length() - 1);
         }
         paramString = str.split(":");
-        if ((paramString.length == 4) && (k.Ec(paramString[0])))
+        if ((paramString.length == 4) && (k.eb(paramString[0])))
         {
           i = 1;
           if (paramString.length > i) {
-            cfR = paramString[i];
+            cbd = paramString[i];
           }
           if (paramString.length > i + 1) {
             time = Long.parseLong(paramString[(i + 1)]);
           }
           if (paramString.length > i + 2) {
-            cfS = paramString[(i + 2)].equals("1");
+            cbe = paramString[(i + 2)].equals("1");
           }
           return;
         }
       }
       catch (Exception paramString)
       {
-        if (cfR == null) {
-          cfR = "";
+        if (cbd == null) {
+          cbd = "";
         }
-        cfS = false;
+        cbe = false;
         time = 0L;
-        u.e("!32@/B4Tb64lLpLuTfcKnpSMB7/OhLfNVcYh", "VoiceContent parse failed.");
+        v.e("MicroMsg.VoiceContent", "VoiceContent parse failed.");
         return;
       }
       int i = 0;

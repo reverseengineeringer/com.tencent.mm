@@ -1,11 +1,14 @@
 .class final Lcom/tencent/mm/ui/chatting/cn$1;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcom/tencent/mm/model/z$c$a;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/ui/chatting/cn;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/ui/chatting/cn;->onClick(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kWm:Lcom/tencent/mm/ui/chatting/cn;
+.field final synthetic lwl:Lcom/tencent/mm/ui/chatting/cn;
 
 
 # direct methods
@@ -23,80 +26,20 @@
     .locals 0
 
     .prologue
-    .line 1475
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/cn$1;->kWm:Lcom/tencent/mm/ui/chatting/cn;
+    .line 155
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/cn$1;->lwl:Lcom/tencent/mm/ui/chatting/cn;
 
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
-    .locals 5
+.method public final i(Ljava/lang/String;Z)V
+    .locals 0
 
     .prologue
-    const/4 v3, 0x0
-
-    .line 1478
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/View;
-
-    .line 1479
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/cn$1;->kWm:Lcom/tencent/mm/ui/chatting/cn;
-
-    iget v1, v1, Lcom/tencent/mm/ui/chatting/cn;->imc:I
-
-    invoke-virtual {v0}, Landroid/view/View;->getScrollY()I
-
-    move-result v2
-
-    if-eq v1, v2, :cond_0
-
-    .line 1480
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/cn$1;->kWm:Lcom/tencent/mm/ui/chatting/cn;
-
-    const/4 v2, 0x1
-
-    iput-boolean v2, v1, Lcom/tencent/mm/ui/chatting/cn;->hup:Z
-
-    .line 1481
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/cn$1;->kWm:Lcom/tencent/mm/ui/chatting/cn;
-
-    iget-object v1, v1, Lcom/tencent/mm/ui/chatting/cn;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
-
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/cn$1;->kWm:Lcom/tencent/mm/ui/chatting/cn;
-
-    iget-object v2, v2, Lcom/tencent/mm/ui/chatting/cn;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
-
-    invoke-virtual {v2, v3, v0}, Lcom/tencent/mm/sdk/platformtools/aa;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object v2
-
-    const-wide/16 v3, 0x5
-
-    invoke-virtual {v1, v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/aa;->sendMessageDelayed(Landroid/os/Message;J)Z
-
-    .line 1482
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/cn$1;->kWm:Lcom/tencent/mm/ui/chatting/cn;
-
-    invoke-virtual {v0}, Landroid/view/View;->getScrollY()I
-
-    move-result v0
-
-    iput v0, v1, Lcom/tencent/mm/ui/chatting/cn;->imc:I
-
-    .line 1486
-    :goto_0
+    .line 159
     return-void
-
-    .line 1484
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/cn$1;->kWm:Lcom/tencent/mm/ui/chatting/cn;
-
-    iput-boolean v3, v0, Lcom/tencent/mm/ui/chatting/cn;->hup:Z
-
-    goto :goto_0
 .end method

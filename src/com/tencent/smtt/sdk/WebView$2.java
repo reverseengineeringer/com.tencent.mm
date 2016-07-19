@@ -1,62 +1,16 @@
 package com.tencent.smtt.sdk;
 
-import android.content.Context;
-import android.content.Intent;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Toast;
-import com.tencent.smtt.a.r;
-import java.io.PrintWriter;
-import java.io.StringWriter;
+import android.webkit.WebView.FindListener;
+import com.tencent.smtt.export.external.interfaces.IX5WebViewBase.FindListener;
 
 class WebView$2
-  implements View.OnClickListener
+  implements WebView.FindListener
 {
-  WebView$2(WebView paramWebView, Context paramContext) {}
+  WebView$2(WebView paramWebView, IX5WebViewBase.FindListener paramFindListener) {}
   
-  public void onClick(View paramView)
+  public void onFindResultReceived(int paramInt1, int paramInt2, boolean paramBoolean)
   {
-    paramView = new Intent("com.tencent.smtt.installtbs");
-    paramView.setPackage("com.tencent.tbssuite");
-    paramView.putExtra("dest_package_name", val$context.getPackageName());
-    val$context.sendBroadcast(paramView);
-    Toast.makeText(val$context, "#正在准备安装", 0).show();
-    new Thread(new Runnable()
-    {
-      public void run()
-      {
-        final boolean bool = false;
-        int i = 0;
-        for (;;)
-        {
-          i += 1;
-          if ((i < 10) && (!bool)) {}
-          try
-          {
-            Thread.sleep(1000L);
-            bool = k.eW(val$context);
-          }
-          catch (Throwable localThrowable)
-          {
-            StringWriter localStringWriter = new StringWriter();
-            localThrowable.printStackTrace(new PrintWriter(localStringWriter));
-            r.e("webview", "install tbs exceptions:" + localStringWriter.toString());
-          }
-        }
-        this$0.getView().post(new Runnable()
-        {
-          public void run()
-          {
-            String str = "无法安装，请检查是否放入了正确的TBS内核!";
-            if (bool) {
-              str = "安装中，请等待...";
-            }
-            Toast.makeText(val$context, "#" + str, 0).show();
-          }
-        });
-        return;
-      }
-    }).start();
+    val$listener.onFindResultReceived(paramInt1, paramInt2, paramBoolean);
   }
 }
 

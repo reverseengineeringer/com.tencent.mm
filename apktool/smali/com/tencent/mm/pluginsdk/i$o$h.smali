@@ -18,8 +18,8 @@
 .method public abstract a(Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
 .end method
 
-.method public abstract azE()V
+.method public abstract aCf()V
 .end method
 
-.method public abstract br(Ljava/lang/String;Ljava/lang/String;)Z
+.method public abstract bz(Ljava/lang/String;Ljava/lang/String;)Z
 .end method

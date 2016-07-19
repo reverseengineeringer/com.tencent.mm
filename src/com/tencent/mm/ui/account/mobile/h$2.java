@@ -4,7 +4,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelfriend.v;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 
 final class h$2
   implements DialogInterface.OnCancelListener
@@ -13,8 +13,8 @@ final class h$2
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    ah.tE().c(kxH);
-    ah.tE().b(132, kyF);
+    ah.tF().c(kWO);
+    ah.tF().b(132, kXM);
   }
 }
 

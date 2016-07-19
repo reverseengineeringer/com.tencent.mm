@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk;
 
 public abstract interface l
 {
-  public abstract Object aPf();
+  public abstract Object aTH();
 }
 
 /* Location:

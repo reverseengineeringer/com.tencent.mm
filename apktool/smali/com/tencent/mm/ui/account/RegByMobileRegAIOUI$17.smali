@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic kuq:[I
+.field static final synthetic kTx:[I
 
 
 # direct methods
@@ -23,8 +23,8 @@
     .locals 3
 
     .prologue
-    .line 1130
-    invoke-static {}, Lcom/tencent/mm/ui/account/SetPwdUI$a;->bbW()[I
+    .line 1131
+    invoke-static {}, Lcom/tencent/mm/ui/account/SetPwdUI$a;->bhi()[I
 
     move-result-object v0
 
@@ -32,12 +32,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$17;->kuq:[I
+    sput-object v0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$17;->kTx:[I
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$17;->kuq:[I
+    sget-object v0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$17;->kTx:[I
 
-    sget v1, Lcom/tencent/mm/ui/account/SetPwdUI$a;->kwB:I
+    sget v1, Lcom/tencent/mm/ui/account/SetPwdUI$a;->kVI:I
 
     add-int/lit8 v1, v1, -0x1
 
@@ -49,9 +49,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$17;->kuq:[I
+    sget-object v0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$17;->kTx:[I
 
-    sget v1, Lcom/tencent/mm/ui/account/SetPwdUI$a;->kwC:I
+    sget v1, Lcom/tencent/mm/ui/account/SetPwdUI$a;->kVJ:I
 
     add-int/lit8 v1, v1, -0x1
 
@@ -63,9 +63,9 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$17;->kuq:[I
+    sget-object v0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$17;->kTx:[I
 
-    sget v1, Lcom/tencent/mm/ui/account/SetPwdUI$a;->kwE:I
+    sget v1, Lcom/tencent/mm/ui/account/SetPwdUI$a;->kVL:I
 
     add-int/lit8 v1, v1, -0x1
 
@@ -77,9 +77,9 @@
 
     :goto_2
     :try_start_3
-    sget-object v0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$17;->kuq:[I
+    sget-object v0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$17;->kTx:[I
 
-    sget v1, Lcom/tencent/mm/ui/account/SetPwdUI$a;->kwD:I
+    sget v1, Lcom/tencent/mm/ui/account/SetPwdUI$a;->kVK:I
 
     add-int/lit8 v1, v1, -0x1
 

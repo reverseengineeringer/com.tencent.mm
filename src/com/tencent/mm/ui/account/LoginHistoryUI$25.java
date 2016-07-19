@@ -12,12 +12,12 @@ final class LoginHistoryUI$25
   
   public final void afterTextChanged(Editable paramEditable)
   {
-    if (LoginHistoryUI.c(ktx).getText().toString().length() > 0)
+    if (LoginHistoryUI.c(kSF).getText().toString().length() > 0)
     {
-      ktx.kth.setEnabled(true);
+      kSF.kSp.setEnabled(true);
       return;
     }
-    ktx.kth.setEnabled(false);
+    kSF.kSp.setEnabled(false);
   }
   
   public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}

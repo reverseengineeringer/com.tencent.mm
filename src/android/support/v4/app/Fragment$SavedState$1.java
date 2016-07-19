@@ -3,7 +3,7 @@ package android.support.v4.app;
 import android.os.Parcelable.Creator;
 
 final class Fragment$SavedState$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<Fragment.SavedState>
 {}
 
 /* Location:

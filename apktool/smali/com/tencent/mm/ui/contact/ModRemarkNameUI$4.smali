@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->Gb()V
+    value = Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+.field final synthetic lMe:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 285
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$4;->llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$4;->lMe:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 290
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$4;->llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$4;->lMe:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->h(Lcom/tencent/mm/ui/contact/ModRemarkNameUI;)Landroid/view/View;
 
@@ -52,7 +52,7 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 291
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$4;->llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$4;->lMe:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->i(Lcom/tencent/mm/ui/contact/ModRemarkNameUI;)Landroid/widget/TextView;
 
@@ -63,7 +63,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 292
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$4;->llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$4;->lMe:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->j(Lcom/tencent/mm/ui/contact/ModRemarkNameUI;)Landroid/widget/EditText;
 
@@ -72,9 +72,9 @@
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
     .line 293
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$4;->llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$4;->lMe:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->apz()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->asv()V
 
     .line 294
     return-void

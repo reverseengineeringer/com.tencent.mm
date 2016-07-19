@@ -6,8 +6,8 @@ import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.aw.a;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.az.a;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.model.f;
 import com.tencent.mm.model.i;
 import com.tencent.mm.pluginsdk.ui.a.b;
@@ -24,12 +24,12 @@ final class GroupCardSelectUI$a
   
   public final int getCount()
   {
-    return GroupCardSelectUI.c(lkC).size();
+    return GroupCardSelectUI.c(lKN).size();
   }
   
   public final Object getItem(int paramInt)
   {
-    return GroupCardSelectUI.c(lkC).get(paramInt);
+    return GroupCardSelectUI.c(lKN).get(paramInt);
   }
   
   public final long getItemId(int paramInt)
@@ -39,37 +39,37 @@ final class GroupCardSelectUI$a
   
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
-    k localk = (k)GroupCardSelectUI.c(lkC).get(paramInt);
+    k localk = (k)GroupCardSelectUI.c(lKN).get(paramInt);
     View localView;
     if (paramView == null)
     {
-      paramView = new GroupCardSelectUI.b(lkC);
-      localView = View.inflate(lkC, 2131361963, null);
-      eIN = ((TextView)localView.findViewById(2131165694));
-      lkD = ((TextView)localView.findViewById(2131165693));
-      bMr = ((ImageView)localView.findViewById(2131165692));
-      ftO = ((CheckBox)localView.findViewById(2131165695));
+      paramView = new GroupCardSelectUI.b(lKN);
+      localView = View.inflate(lKN, 2130903757, null);
+      eQC = ((TextView)localView.findViewById(2131757304));
+      lKO = ((TextView)localView.findViewById(2131757303));
+      bFL = ((ImageView)localView.findViewById(2131757302));
+      fCT = ((CheckBox)localView.findViewById(2131755446));
       localView.setTag(paramView);
       paramViewGroup = paramView;
     }
     for (;;)
     {
-      a.b.b(bMr, field_username);
-      lkD.setText(e.a(lkC, i.dY(field_username), a.z(lkC.koJ.kpc, 2131034564)));
-      eIN.setText("(" + f.dM(field_username) + ")");
-      if (GroupCardSelectUI.d(lkC))
+      a.b.a(bFL, field_username);
+      lKO.setText(e.a(lKN, i.ej(field_username), a.D(lKN.kNN.kOg, 2131427667)));
+      eQC.setText("(" + f.dV(field_username) + ")");
+      if (GroupCardSelectUI.d(lKN))
       {
-        ftO.setVisibility(0);
-        if (!GroupCardSelectUI.e(lkC).contains(field_username)) {
+        fCT.setVisibility(0);
+        if (!GroupCardSelectUI.e(lKN).contains(field_username)) {
           break;
         }
-        ftO.setChecked(true);
+        fCT.setChecked(true);
       }
       return localView;
       paramViewGroup = (GroupCardSelectUI.b)paramView.getTag();
       localView = paramView;
     }
-    ftO.setChecked(false);
+    fCT.setChecked(false);
     return localView;
   }
 }

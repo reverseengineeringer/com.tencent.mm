@@ -56,28 +56,28 @@
     .locals 1
 
     .prologue
-    .line 106
+    .line 105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 104
+    .line 103
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->mContext:Landroid/content/Context;
 
-    .line 107
+    .line 106
     if-nez p1, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     :goto_0
     iput-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->mContext:Landroid/content/Context;
 
-    .line 108
+    .line 107
     return-void
 
-    .line 107
+    .line 106
     :cond_0
     iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->mContext:Landroid/content/Context;
 
@@ -88,7 +88,7 @@
     .locals 1
 
     .prologue
-    .line 86
+    .line 85
     iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->mContext:Landroid/content/Context;
 
     return-object v0

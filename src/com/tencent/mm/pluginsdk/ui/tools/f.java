@@ -1,35 +1,32 @@
 package com.tencent.mm.pluginsdk.ui.tools;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 
 public abstract interface f
 {
-  public abstract boolean f(Context paramContext, boolean paramBoolean);
+  public abstract void a(a parama);
   
-  public abstract void g(double paramDouble);
+  public abstract String axW();
+  
+  public abstract double ayx();
+  
+  public abstract void ew(boolean paramBoolean);
+  
+  public abstract void ex(boolean paramBoolean);
+  
+  public abstract boolean f(Context paramContext, boolean paramBoolean);
   
   public abstract int getCurrentPosition();
   
   public abstract int getDuration();
   
-  public abstract double getLastProgresstime();
-  
-  public abstract String getVideoPath();
-  
   public abstract boolean isPlaying();
+  
+  public abstract void j(double paramDouble);
   
   public abstract void onDetach();
   
   public abstract void pause();
-  
-  public abstract void setLoop(boolean paramBoolean);
-  
-  public abstract void setPlayProgressCallback(boolean paramBoolean);
-  
-  public abstract void setThumb(Bitmap paramBitmap);
-  
-  public abstract void setVideoCallback(a parama);
   
   public abstract void setVideoPath(String paramString);
   
@@ -39,15 +36,15 @@ public abstract interface f
   
   public static abstract interface a
   {
-    public abstract void Xq();
+    public abstract void Zb();
     
-    public abstract int aA(int paramInt1, int paramInt2);
+    public abstract void aE(int paramInt1, int paramInt2);
     
-    public abstract void aB(int paramInt1, int paramInt2);
+    public abstract int aF(int paramInt1, int paramInt2);
     
-    public abstract void az(int paramInt1, int paramInt2);
+    public abstract void aG(int paramInt1, int paramInt2);
     
-    public abstract void lG();
+    public abstract void jQ();
   }
 }
 

@@ -1,33 +1,46 @@
 package com.tencent.mm.ui.chatting.gallery;
 
 import com.tencent.mm.model.ah;
-import com.tencent.mm.plugin.report.service.h;
 import com.tencent.mm.pluginsdk.ui.tools.f;
 import com.tencent.mm.pluginsdk.ui.tools.f.a;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.base.g;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class j$3
   implements f.a
 {
   j$3(j paramj) {}
   
-  public final void Xq() {}
+  public final void Zb() {}
   
-  public final int aA(final int paramInt1, final int paramInt2)
+  public final void aE(int paramInt1, int paramInt2)
   {
-    u.i("!44@/B4Tb64lLpJSmuQVFTi9B0ynMnS76y+/Pqewi8jmiJ0=", "dkvideo onplaytime:%d total:%d,%d size:%d cnt:%d user:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(lhq.lhn), Integer.valueOf(paramInt2), Integer.valueOf(lhq.lho), Integer.valueOf(lhq.lhp), lhq.bxn });
-    ah.tv().r(new Runnable()
+    lHB.lHn.stop();
+    ad.k(new Runnable()
     {
       public final void run()
       {
-        h localh = h.fUJ;
-        int j = lhq.lho;
+        lHB.iw(false);
+        com.tencent.mm.ui.base.g.f(lHB.lET.lEz, 2131235819, 2131231739);
+        lHB.lET.ty(lHB.bQx);
+        com.tencent.mm.plugin.report.service.g.gdY.h(12084, new Object[] { Integer.valueOf(lHB.lHz), Integer.valueOf(lHB.hfL * 1000), Integer.valueOf(0), Integer.valueOf(4), lHB.asv, Integer.valueOf(lHB.lHA), lHB.fMU, Long.valueOf(lHB.cbi) });
+      }
+    });
+  }
+  
+  public final int aF(final int paramInt1, final int paramInt2)
+  {
+    v.i("MicroMsg.ImageGalleryViewHolder", "dkvideo onplaytime:%d total:%d,%d size:%d cnt:%d user:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(lHB.hfL), Integer.valueOf(paramInt2), Integer.valueOf(lHB.lHz), Integer.valueOf(lHB.lHA), lHB.asv });
+    ah.tw().t(new Runnable()
+    {
+      public final void run()
+      {
+        com.tencent.mm.plugin.report.service.g localg = com.tencent.mm.plugin.report.service.g.gdY;
+        int j = lHB.lHz;
         if (paramInt2 <= 0) {}
-        for (int i = lhq.lhn * 1000;; i = paramInt2)
+        for (int i = lHB.hfL * 1000;; i = paramInt2)
         {
-          localh.g(12084, new Object[] { Integer.valueOf(j), Integer.valueOf(i), Integer.valueOf(paramInt1), Integer.valueOf(1), lhq.bxn, Integer.valueOf(lhq.lhp) });
+          localg.h(12084, new Object[] { Integer.valueOf(j), Integer.valueOf(i), Integer.valueOf(paramInt1), Integer.valueOf(1), lHB.asv, Integer.valueOf(lHB.lHA), lHB.fMU, Long.valueOf(lHB.cbi) });
           return;
         }
       }
@@ -35,30 +48,16 @@ final class j$3
     return 0;
   }
   
-  public final void aB(int paramInt1, int paramInt2) {}
+  public final void aG(int paramInt1, int paramInt2) {}
   
-  public final void az(int paramInt1, int paramInt2)
+  public final void jQ()
   {
-    lhq.lhb.stop();
-    ab.j(new Runnable()
+    ad.k(new Runnable()
     {
       public final void run()
       {
-        lhq.hT(false);
-        g.e(lhq.leH.lem, 2131428868, 2131427941);
-        lhq.leH.rw(lhq.dfq);
-      }
-    });
-  }
-  
-  public final void lG()
-  {
-    ab.j(new Runnable()
-    {
-      public final void run()
-      {
-        lhq.leH.lem.hS(true);
-        lhq.leH.rw(lhq.dfq);
+        lHB.lET.lEz.iv(true);
+        lHB.lET.ty(lHB.bQx);
       }
     });
   }

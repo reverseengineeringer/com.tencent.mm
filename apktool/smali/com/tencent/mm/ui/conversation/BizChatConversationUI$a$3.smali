@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ui/base/n$d;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+.field final synthetic lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 418
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$3;->lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+    .line 529
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$3;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,91 +36,88 @@
 
 
 # virtual methods
-.method public final d(Landroid/view/MenuItem;I)V
+.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 3
 
     .prologue
-    .line 422
-    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
+    .line 534
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$3;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
 
-    move-result v0
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 441
-    :goto_0
-    return-void
-
-    .line 424
-    :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$3;->lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$3;->lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
-
-    invoke-static {v1}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->g(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)J
-
-    move-result-wide v1
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->b(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;J)V
-
-    goto :goto_0
-
-    .line 428
-    :pswitch_1
-    invoke-static {}, Lcom/tencent/mm/t/aj;->xI()Lcom/tencent/mm/t/c;
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->l(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Lcom/tencent/mm/ui/tools/n;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$3;->lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+    if-eqz v0, :cond_0
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->g(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)J
+    .line 535
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$3;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
 
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/t/c;->K(J)Lcom/tencent/mm/t/b;
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->l(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Lcom/tencent/mm/ui/tools/n;
 
     move-result-object v0
 
-    .line 429
-    const/4 v1, 0x1
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/n;->dismiss()V
 
-    iput v1, v0, Lcom/tencent/mm/t/b;->field_unReadCount:I
+    .line 536
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$3;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
 
-    .line 431
     const/4 v1, 0x0
 
-    iput v1, v0, Lcom/tencent/mm/t/b;->field_atCount:I
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->a(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;Lcom/tencent/mm/ui/tools/n;)Lcom/tencent/mm/ui/tools/n;
 
-    .line 432
-    invoke-static {}, Lcom/tencent/mm/t/aj;->xI()Lcom/tencent/mm/t/c;
+    .line 538
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$3;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
 
-    move-result-object v1
+    new-instance v1, Lcom/tencent/mm/ui/tools/n;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/t/c;->b(Lcom/tencent/mm/t/b;)Z
+    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$3;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
 
-    goto :goto_0
+    iget-object v2, v2, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
 
-    .line 437
-    :pswitch_2
-    invoke-static {}, Lcom/tencent/mm/t/aj;->xI()Lcom/tencent/mm/t/c;
+    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
+
+    invoke-direct {v1, v2}, Lcom/tencent/mm/ui/tools/n;-><init>(Landroid/content/Context;)V
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->a(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;Lcom/tencent/mm/ui/tools/n;)Lcom/tencent/mm/ui/tools/n;
+
+    .line 539
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$3;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->l(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Lcom/tencent/mm/ui/tools/n;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$3;->lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+    new-instance v1, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$3$1;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->g(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)J
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$3$1;-><init>(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$3;)V
 
-    move-result-wide v1
+    iput-object v1, v0, Lcom/tencent/mm/ui/tools/n;->hoS:Lcom/tencent/mm/ui/base/n$c;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/t/c;->M(J)Z
+    .line 549
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$3;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
 
-    goto :goto_0
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->l(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Lcom/tencent/mm/ui/tools/n;
 
-    .line 422
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
+    move-result-object v0
+
+    new-instance v1, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$3$2;
+
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$3$2;-><init>(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$3;)V
+
+    iput-object v1, v0, Lcom/tencent/mm/ui/tools/n;->hoT:Lcom/tencent/mm/ui/base/n$d;
+
+    .line 587
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$3;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->l(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Lcom/tencent/mm/ui/tools/n;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/n;->bH()Z
+
+    .line 588
+    const/4 v0, 0x0
+
+    return v0
 .end method

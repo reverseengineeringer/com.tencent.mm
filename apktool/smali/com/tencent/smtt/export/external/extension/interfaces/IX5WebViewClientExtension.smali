@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewClientExtension;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # static fields
@@ -26,7 +25,9 @@
 
 .field public static final FRAME_LOADTYPE_SAME:I = 0x6
 
-.field public static final FRAME_LOADTYPE_STANDARD:I
+.field public static final FRAME_LOADTYPE_STANDARD:I = 0x0
+
+.field public static final HTMLTYPE_JS_SCROLLTO:I = 0x1
 
 
 # virtual methods
@@ -40,6 +41,9 @@
 .end method
 
 .method public abstract hideAddressBar()V
+.end method
+
+.method public abstract notifyAutoAudioPlay(Ljava/lang/String;Lcom/tencent/smtt/export/external/interfaces/JsResult;)Z
 .end method
 
 .method public abstract onDoubleTapStart()V
@@ -61,6 +65,9 @@
 .end method
 
 .method public abstract onInterceptTouchEvent(Landroid/view/MotionEvent;Landroid/view/View;)Z
+.end method
+
+.method public abstract onMetricsSavedCountReceived(Ljava/lang/String;ZJLjava/lang/String;I)V
 .end method
 
 .method public abstract onMiscCallBack(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Object;
@@ -90,6 +97,12 @@
 .method public abstract onReportAdFilterInfo(IILjava/lang/String;Z)V
 .end method
 
+.method public abstract onReportHtmlInfo(ILjava/lang/String;)V
+.end method
+
+.method public abstract onResponseReceived(Lcom/tencent/smtt/export/external/interfaces/WebResourceRequest;Lcom/tencent/smtt/export/external/interfaces/WebResourceResponse;I)V
+.end method
+
 .method public abstract onScrollChanged(IIII)V
 .end method
 
@@ -100,6 +113,9 @@
 .end method
 
 .method public abstract onShowListBox([Ljava/lang/String;[I[II)V
+.end method
+
+.method public abstract onShowLongClickPopupMenu()Z
 .end method
 
 .method public abstract onShowMutilListBox([Ljava/lang/String;[I[I[I)V
@@ -133,4 +149,7 @@
 .end method
 
 .method public abstract preShouldOverrideUrlLoading(Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;Ljava/lang/String;)Z
+.end method
+
+.method public abstract showTranslateBubble(ILjava/lang/String;Ljava/lang/String;I)V
 .end method

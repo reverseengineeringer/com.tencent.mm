@@ -9,14 +9,14 @@ final class MMListPopupWindow$c
   
   public final void onChanged()
   {
-    if (kFn.cWm.isShowing()) {
-      kFn.show();
+    if (ler.cUC.isShowing()) {
+      ler.show();
     }
   }
   
   public final void onInvalidated()
   {
-    kFn.dismiss();
+    ler.dismiss();
   }
 }
 

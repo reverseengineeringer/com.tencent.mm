@@ -1,115 +1,158 @@
 package com.tencent.mm.sandbox.updater;
 
+import android.app.Notification;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Build.VERSION;
-import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.plugin.report.service.g;
 import com.tencent.mm.pluginsdk.ui.tools.j;
-import com.tencent.mm.sdk.platformtools.ah;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
-import com.tencent.smtt.a.r;
-import com.tencent.smtt.a.s;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.smtt.sdk.QbSdk;
 import com.tencent.smtt.sdk.WebView;
 import com.tencent.smtt.sdk.k;
 import com.tencent.smtt.sdk.n;
+import com.tencent.smtt.utils.TbsLog;
+import com.tencent.smtt.utils.s;
 
 public final class d
   implements a
 {
-  private a jTG = null;
+  private Notification hNQ = null;
+  private Intent intent = new Intent();
+  private a kta = null;
+  private int ktb = 999;
+  private boolean ktc = false;
+  private boolean ktd = false;
   
   static
   {
-    r.a(new s()
+    TbsLog.setTbsLogClient(new s()
     {
+      public final void BF(String paramAnonymousString)
+      {
+        v.i("TBSDownloadMgr.TbsLogClient", "TbsLogClient: " + paramAnonymousString);
+      }
+      
+      public final void d(String paramAnonymousString1, String paramAnonymousString2)
+      {
+        v.d(paramAnonymousString1, paramAnonymousString2);
+      }
+      
       public final void e(String paramAnonymousString1, String paramAnonymousString2)
       {
-        u.e(paramAnonymousString1, paramAnonymousString2);
+        v.e(paramAnonymousString1, paramAnonymousString2);
       }
       
       public final void i(String paramAnonymousString1, String paramAnonymousString2)
       {
-        u.i(paramAnonymousString1, paramAnonymousString2);
+        v.i(paramAnonymousString1, paramAnonymousString2);
+      }
+      
+      public final void v(String paramAnonymousString1, String paramAnonymousString2)
+      {
+        v.v(paramAnonymousString1, paramAnonymousString2);
       }
       
       public final void w(String paramAnonymousString1, String paramAnonymousString2)
       {
-        u.w(paramAnonymousString1, paramAnonymousString2);
-      }
-      
-      public final void zJ(String paramAnonymousString)
-      {
-        u.i("!44@y/WeowghBR7ZwJxLKHC/LiE0wVshXmviX6hKal35lGw=", "TbsLogClient: " + paramAnonymousString);
+        v.w(paramAnonymousString1, paramAnonymousString2);
       }
     });
   }
   
-  public static d aTW()
+  public static d aYT()
   {
-    return b.jTH;
+    return b.ktf;
   }
   
-  public final boolean H(Intent paramIntent)
+  private void aYU()
   {
-    if (k.Wa())
+    k.eX(aa.getContext());
+    SharedPreferences localSharedPreferences = aa.getContext().getSharedPreferences("com.tencent.mm_webview_x5_preferences", 4);
+    if (localSharedPreferences != null)
     {
-      u.i("!32@/B4Tb64lLpIJVt6DCBjdbrlEqNC/374A", "TBS already downloading, ignore duplicated request");
+      v.i("MicroMsg.TBSDownloadMgr", "now start download,hasDownloadOverSea over sea = %b, is now oversea = %b", new Object[] { Boolean.valueOf(ktd), Boolean.valueOf(ktc) });
+      if ((ktd) || (ktc)) {
+        localSharedPreferences.edit().putBoolean("tbs_download_oversea", true).commit();
+      }
+    }
+  }
+  
+  public final boolean M(Intent paramIntent)
+  {
+    intent = paramIntent;
+    if (intent.getIntExtra("intent_extra_download_type", 1) == 2) {}
+    for (boolean bool1 = true;; bool1 = false)
+    {
+      ktc = bool1;
+      paramIntent = aa.getContext().getSharedPreferences("com.tencent.mm_webview_x5_preferences", 4);
+      if (paramIntent != null) {
+        ktd = paramIntent.getBoolean("tbs_download_oversea", false);
+      }
+      v.i("MicroMsg.TBSDownloadMgr", "isOverSea = %b, hasDownloadOverSea = %b", new Object[] { Boolean.valueOf(ktc), Boolean.valueOf(ktd) });
+      if (!k.XI()) {
+        break;
+      }
+      v.i("MicroMsg.TBSDownloadMgr", "TBS already downloading, ignore duplicated request");
       return true;
     }
-    paramIntent = y.getContext();
+    paramIntent = aa.getContext();
     int i = WebView.getTbsCoreVersion(paramIntent);
-    boolean bool1 = k.eX(paramIntent);
-    boolean bool2 = ah.dB(paramIntent);
-    u.i("!32@/B4Tb64lLpIJVt6DCBjdbrlEqNC/374A", "TBS download, tbsCoreVersion = %d, needDownload = %b, isWifi = %b", new Object[] { Integer.valueOf(i), Boolean.valueOf(bool1), Boolean.valueOf(bool2) });
-    if ((bool2) && (bool1))
+    bool1 = k.p(paramIntent, ktc | ktd);
+    boolean bool2 = ak.dC(paramIntent);
+    boolean bool3 = intent.getBooleanExtra("intent_extra_download_ignore_network_type", false);
+    v.i("MicroMsg.TBSDownloadMgr", "TBS download, tbsCoreVersion = %d, needDownload = %b, isWifi = %b, ignoreNetworkType = %b", new Object[] { Integer.valueOf(i), Boolean.valueOf(bool1), Boolean.valueOf(bool2), Boolean.valueOf(bool3) });
+    if (((bool2) || (bool3)) && (bool1))
     {
-      if (jTG == null)
+      if (kta == null)
       {
-        jTG = new a((byte)0);
-        QbSdk.setTbsListener(jTG);
-        j.lp(2);
+        kta = new a((byte)0);
+        QbSdk.setTbsListener(kta);
+        j.id(2);
       }
-      k.eY(paramIntent);
-      j.lp(3);
+      aYU();
+      j.id(3);
       return true;
     }
     return false;
   }
   
-  public final void gF(boolean paramBoolean)
+  public final void hd(boolean paramBoolean)
   {
-    if (jTG == null) {
-      u.w("!32@/B4Tb64lLpIJVt6DCBjdbrlEqNC/374A", "TBS download not inited, ignore");
+    if (kta == null) {
+      v.w("MicroMsg.TBSDownloadMgr", "TBS download not inited, ignore");
     }
     boolean bool1;
+    boolean bool3;
     do
     {
       return;
-      Context localContext = y.getContext();
-      bool1 = k.Wa();
-      boolean bool2 = k.eX(localContext);
-      u.i("!32@/B4Tb64lLpIJVt6DCBjdbrlEqNC/374A", "setNetStatChanged, isWifi = %b, downloading = %b, needDownload = %b", new Object[] { Boolean.valueOf(paramBoolean), Boolean.valueOf(bool1), Boolean.valueOf(bool2) });
-      if ((paramBoolean) && (!bool1) && (bool2))
+      Context localContext = aa.getContext();
+      bool1 = k.XI();
+      boolean bool2 = k.p(localContext, ktc | ktd);
+      bool3 = intent.getBooleanExtra("intent_extra_download_ignore_network_type", false);
+      v.i("MicroMsg.TBSDownloadMgr", "setNetStatChanged, isWifi = %b, downloading = %b, needDownload = %b, ignoreNetworkType = %b", new Object[] { Boolean.valueOf(paramBoolean), Boolean.valueOf(bool1), Boolean.valueOf(bool2), Boolean.valueOf(bool3) });
+      if (((paramBoolean) || (bool3)) && (!bool1) && (bool2))
       {
-        k.eY(localContext);
-        j.lp(3);
+        aYU();
+        j.id(3);
         return;
       }
-    } while ((paramBoolean) || (!bool1));
+    } while ((paramBoolean) || (bool3) || (!bool1));
     k.stopDownload();
-    j.lp(4);
+    j.id(4);
   }
   
   public final boolean isBusy()
   {
     boolean bool1 = false;
-    boolean bool3 = k.Wa();
+    boolean bool3 = k.XI();
     boolean bool2 = QbSdk.getTBSInstalling();
-    u.i("!32@/B4Tb64lLpIJVt6DCBjdbrlEqNC/374A", "isBusy isDownloading = %b, isInstalling = %b", new Object[] { Boolean.valueOf(bool3), Boolean.valueOf(bool2) });
+    v.i("MicroMsg.TBSDownloadMgr", "isBusy isDownloading = %b, isInstalling = %b", new Object[] { Boolean.valueOf(bool3), Boolean.valueOf(bool2) });
     if ((bool3) || (bool2)) {
       bool1 = true;
     }
@@ -118,30 +161,32 @@ public final class d
   
   public final void onDestroy()
   {
-    u.i("!32@/B4Tb64lLpIJVt6DCBjdbrlEqNC/374A", "onDestroy");
+    v.i("MicroMsg.TBSDownloadMgr", "onDestroy");
   }
   
-  private static final class a
+  private final class a
     implements n
   {
-    public final void onDownloadFinish(int paramInt)
+    private a() {}
+    
+    public final void qW(int paramInt)
     {
-      u.i("!32@/B4Tb64lLpLvZ25C9TZu30Db4xS89/BP", "onDownloadFinish, result = %d", new Object[] { Integer.valueOf(paramInt) });
-      j.be(5, paramInt);
+      v.i("MicroMsg.MyTbsListener", "onDownloadFinish, result = %d", new Object[] { Integer.valueOf(paramInt) });
+      j.bi(5, paramInt);
       if (paramInt != 110)
       {
         if (paramInt != 100) {
           break label96;
         }
-        h.fUJ.aQ(4, 3);
+        g.gdY.aY(4, 3);
       }
       Object localObject;
       for (;;)
       {
-        localObject = y.getContext().getSharedPreferences("com.tencent.mm_webview_x5_preferences", 4);
+        localObject = aa.getContext().getSharedPreferences("com.tencent.mm_webview_x5_preferences", 4);
         if (localObject != null)
         {
-          u.i("!32@/B4Tb64lLpLvZ25C9TZu30Db4xS89/BP", "tbs has download finished, save to sharedpreference");
+          v.i("MicroMsg.MyTbsListener", "tbs has download finished, save to sharedpreference");
           localObject = ((SharedPreferences)localObject).edit();
           ((SharedPreferences.Editor)localObject).putBoolean("tbs_download_finished", true);
           if (Build.VERSION.SDK_INT <= 8) {
@@ -151,31 +196,32 @@ public final class d
         }
         return;
         label96:
-        localObject = h.fUJ;
-        h.b(64L, 3L, 1L, false);
+        localObject = g.gdY;
+        g.b(64L, 3L, 1L, false);
       }
       ((SharedPreferences.Editor)localObject).commit();
     }
     
-    public final void onDownloadProgress(int paramInt) {}
-    
-    public final void onInstallFinish(int paramInt)
+    public final void qX(int paramInt)
     {
-      u.i("!32@/B4Tb64lLpLvZ25C9TZu30Db4xS89/BP", "onInstallFinish, result = %d", new Object[] { Integer.valueOf(paramInt) });
-      j.be(6, paramInt);
+      v.i("MicroMsg.MyTbsListener", "onInstallFinish, result = %d", new Object[] { Integer.valueOf(paramInt) });
+      j.bi(6, paramInt);
       if ((paramInt == 200) || (paramInt == 220))
       {
-        h.fUJ.aQ(7, 6);
+        g.gdY.aY(7, 6);
+        d.a(d.this);
         return;
       }
-      h localh = h.fUJ;
-      h.b(64L, 6L, 1L, false);
+      g localg = g.gdY;
+      g.b(64L, 6L, 1L, false);
     }
+    
+    public final void qY(int paramInt) {}
   }
   
   private static final class b
   {
-    public static final d jTH = new d((byte)0);
+    public static final d ktf = new d((byte)0);
   }
 }
 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/c8e" android:background="@color/ak" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/alr" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <ProgressBar android:gravity="center" android:layout_gravity="center" android:id="@id/b02" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_centerInParent="true" style="@style/mediumCustomProgressBar" />
+    <RelativeLayout android:id="@id/cgt" android:background="@color/z" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <FrameLayout android:id="@id/cgu" android:padding="10.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true">
+            <ImageView android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@raw/actionbar_quit_webview_icon" />
+        </FrameLayout>
+        <ImageView android:id="@id/cgv" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/jc" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <include layout="@layout/sight_player_tip" />
+</RelativeLayout>

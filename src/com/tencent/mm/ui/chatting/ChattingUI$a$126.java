@@ -1,50 +1,45 @@
 package com.tencent.mm.ui.chatting;
 
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
-import android.view.animation.AnimationUtils;
-import android.view.animation.TranslateAnimation;
-import com.tencent.mm.ui.base.TalkRoomPopupNav;
-import com.tencent.mm.ui.j;
-import com.tencent.mm.ui.o;
+import android.widget.ListView;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.tools.q;
 
 final class ChattingUI$a$126
   implements Runnable
 {
-  ChattingUI$a$126(ChattingUI.a parama) {}
+  ChattingUI$a$126(ChattingUI.a parama, int paramInt) {}
   
   public final void run()
   {
-    if ((ChattingUI.a.am(laF) != null) && (ChattingUI.a.am(laF).getVisibility() == 0)) {
-      ChattingUI.a.d(laF, 1);
-    }
-    for (;;)
+    v.d("MicroMsg.ChattingUI", "dz: scroll to select:%d", new Object[] { Integer.valueOf(lBU) });
+    q localq = new q(ChattingUI.a.e(lAY));
+    int j = lBU;
+    fzP.removeCallbacks(localq);
+    lYd = System.currentTimeMillis();
+    lYi = 0;
+    int i = fzP.getFirstVisiblePosition();
+    int k = fzP.getChildCount() + i - 1;
+    if (j <= i)
     {
-      TranslateAnimation localTranslateAnimation = new TranslateAnimation(ChattingUI.a.ao(laF).getWidth(), 0.0F, 0.0F, 0.0F);
-      localTranslateAnimation.setDuration(300L);
-      localTranslateAnimation.setInterpolator(AnimationUtils.loadInterpolator(laF.koJ.kpc, 17432581));
-      ChattingUI.a.ao(laF).startAnimation(localTranslateAnimation);
-      localTranslateAnimation.setAnimationListener(new Animation.AnimationListener()
-      {
-        public final void onAnimationEnd(Animation paramAnonymousAnimation)
-        {
-          ChattingUI.a.ao(laF).setClickable(true);
-        }
-        
-        public final void onAnimationRepeat(Animation paramAnonymousAnimation) {}
-        
-        public final void onAnimationStart(Animation paramAnonymousAnimation)
-        {
-          ChattingUI.a.ao(laF).setClickable(false);
-        }
-      });
-      return;
-      if (ChattingUI.a.an(laF)) {
-        ChattingUI.a.d(laF, 3);
-      } else {
-        ChattingUI.a.d(laF, 0);
+      i = i - j + 1;
+      mMode = 2;
+      if (i <= 0) {
+        break label164;
       }
+    }
+    label164:
+    for (lYg = (1000 / i);; lYg = 1000)
+    {
+      lYe = j;
+      lYf = -1;
+      fzP.post(localq);
+      do
+      {
+        return;
+      } while (j < k);
+      i = j - k + 1;
+      mMode = 1;
+      break;
     }
   }
 }

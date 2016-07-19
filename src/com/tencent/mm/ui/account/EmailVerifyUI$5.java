@@ -10,7 +10,7 @@ final class EmailVerifyUI$5
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    EmailVerifyUI.d(ksd);
+    EmailVerifyUI.d(kRl);
     return true;
   }
 }

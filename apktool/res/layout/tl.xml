@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/g9" android:paddingLeft="@dimen/i7" android:paddingRight="@dimen/jv" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/MMListCatalog" />
+    <FrameLayout android:orientation="horizontal" android:background="@drawable/m_" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ga" android:background="@drawable/t5" android:paddingLeft="@dimen/i7" android:layout_width="fill_parent" android:layout_height="@dimen/j7">
+            <TextView android:id="@id/gi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/MMFontTitleInList" />
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/h_" android:id="@id/ge" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

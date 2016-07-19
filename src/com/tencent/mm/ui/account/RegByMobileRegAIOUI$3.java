@@ -3,7 +3,7 @@ package com.tencent.mm.ui.account;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
-import com.tencent.mm.sdk.platformtools.ai;
+import com.tencent.mm.sdk.platformtools.al;
 import com.tencent.mm.ui.base.MMFormInputView;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.tools.a.c;
@@ -16,27 +16,27 @@ final class RegByMobileRegAIOUI$3
   
   public final void onClick(View paramView)
   {
-    paramView = c.a(RegByMobileRegAIOUI.i(kuT).getContentEditText()).bV(1, 32);
-    lzG = true;
+    paramView = c.a(ikUa).fNQ).cc(1, 32);
+    mav = true;
     paramView.a(new c.a()
     {
-      public final void Om()
+      public final void Px()
       {
-        g.e(kuT, 2131428199, 2131428198);
+        g.f(kUa, 2131235044, 2131235047);
       }
       
-      public final void On()
+      public final void Py()
       {
-        g.e(kuT, 2131428200, 2131428198);
+        g.f(kUa, 2131235045, 2131235047);
       }
       
-      public final void mm(String paramAnonymousString)
+      public final void ng(String paramAnonymousString)
       {
-        RegByMobileRegAIOUI.a(kuT, RegByMobileRegAIOUI.e(kuT).getText().toString().trim());
-        RegByMobileRegAIOUI.b(kuT, ai.CX(RegByMobileRegAIOUI.f(kuT).getText().toString()));
-        paramAnonymousString = RegByMobileRegAIOUI.g(kuT) + RegByMobileRegAIOUI.h(kuT);
-        kuT.age();
-        RegByMobileRegAIOUI.c(kuT, paramAnonymousString);
+        RegByMobileRegAIOUI.a(kUa, RegByMobileRegAIOUI.e(kUa).getText().toString().trim());
+        RegByMobileRegAIOUI.b(kUa, al.Fl(RegByMobileRegAIOUI.f(kUa).getText().toString()));
+        paramAnonymousString = RegByMobileRegAIOUI.g(kUa) + RegByMobileRegAIOUI.h(kUa);
+        kUa.aiI();
+        RegByMobileRegAIOUI.c(kUa, paramAnonymousString);
       }
     });
   }

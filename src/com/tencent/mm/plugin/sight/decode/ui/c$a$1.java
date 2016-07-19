@@ -11,7 +11,7 @@ final class c$a$1
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     paramDialogInterface.dismiss();
-    gyL.dismiss();
+    gFk.dismiss();
   }
 }
 

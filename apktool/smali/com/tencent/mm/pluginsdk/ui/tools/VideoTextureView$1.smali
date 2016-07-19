@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iTe:Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;
+.field final synthetic jqr:Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 169
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$1;->iTe:Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;
+    .line 180
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$1;->jqr:Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,8 +40,8 @@
     .locals 3
 
     .prologue
-    .line 172
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$1;->iTe:Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;
+    .line 183
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$1;->jqr:Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;
 
     invoke-virtual {p1}, Landroid/media/MediaPlayer;->getVideoWidth()I
 
@@ -49,8 +49,8 @@
 
     invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->a(Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;I)I
 
-    .line 173
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$1;->iTe:Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;
+    .line 184
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$1;->jqr:Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;
 
     invoke-virtual {p1}, Landroid/media/MediaPlayer;->getVideoHeight()I
 
@@ -58,8 +58,8 @@
 
     invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->b(Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;I)I
 
-    .line 174
-    const-string/jumbo v0, "!44@/B4Tb64lLpLHiNiACdo+aX3iR1A7B9vCqhbg6Ep6IDU="
+    .line 185
+    const-string/jumbo v0, "MicroMsg.VideoTextureView"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -67,7 +67,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$1;->iTe:Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$1;->jqr:Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->a(Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;)I
 
@@ -83,7 +83,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$1;->iTe:Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$1;->jqr:Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->b(Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;)I
 
@@ -103,13 +103,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 175
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$1;->iTe:Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;
+    .line 186
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView$1;->jqr:Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;->c(Lcom/tencent/mm/pluginsdk/ui/tools/VideoTextureView;)V
 
-    .line 176
+    .line 187
     return-void
 .end method

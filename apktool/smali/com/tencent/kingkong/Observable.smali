@@ -3,8 +3,26 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
 # instance fields
 .field protected final mObservers:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<TT;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -22,7 +40,6 @@
 
     iput-object v0, p0, Lcom/tencent/kingkong/Observable;->mObservers:Ljava/util/ArrayList;
 
-    .line 29
     return-void
 .end method
 
@@ -30,6 +47,11 @@
 # virtual methods
 .method public registerObserver(Ljava/lang/Object;)V
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
 
     .prologue
     .line 44
@@ -87,7 +109,7 @@
 
     throw v0
 
-    .line 47
+    .line 52
     :catchall_0
     move-exception v0
 
@@ -104,7 +126,7 @@
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 47
+    .line 52
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -127,7 +149,7 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 79
+    .line 81
     monitor-exit v1
 
     return-void
@@ -144,6 +166,11 @@
 
 .method public unregisterObserver(Ljava/lang/Object;)V
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
 
     .prologue
     .line 63
@@ -204,7 +231,7 @@
 
     throw v0
 
-    .line 66
+    .line 72
     :catchall_0
     move-exception v0
 
@@ -221,7 +248,7 @@
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 66
+    .line 72
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

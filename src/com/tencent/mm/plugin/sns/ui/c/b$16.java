@@ -1,63 +1,46 @@
 package com.tencent.mm.plugin.sns.ui.c;
 
-import android.app.Activity;
-import android.content.Context;
-import android.view.ContextMenu;
-import android.view.ContextMenu.ContextMenuInfo;
 import android.view.View;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.h.l;
-import com.tencent.mm.plugin.sns.ui.m;
-import com.tencent.mm.protocal.b.atp;
-import com.tencent.mm.protocal.b.iv;
+import android.view.View.OnClickListener;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.p;
+import com.tencent.mm.plugin.sns.i.a;
+import com.tencent.mm.plugin.sns.i.k;
+import com.tencent.mm.plugin.sns.i.l;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 
 final class b$16
-  extends c
+  implements View.OnClickListener
 {
   b$16(b paramb) {}
   
-  public final void a(ContextMenu paramContextMenu, View paramView, ContextMenu.ContextMenuInfo paramContextMenuInfo)
+  public final void onClick(View paramView)
   {
-    paramContextMenuInfo = paramView.getTag();
-    if ((paramContextMenuInfo instanceof m))
-    {
-      paramContextMenuInfo = (m)paramContextMenuInfo;
-      atp localatp = gXI;
-      if (com.tencent.mm.ar.c.yf("favorite")) {
-        switch (jMx.jhv)
-        {
-        default: 
-          paramContextMenu.add(0, 3, 0, paramView.getContext().getString(2131431054));
-        }
-      }
-    }
-    for (;;)
-    {
-      paramContextMenu.add(0, 6, 0, hpo.asX.getString(2131433028));
-      com.tencent.mm.plugin.sns.abtest.a.a(paramContextMenu, ad.azi().vo(gHs));
+    v.i("MicroMsg.TimelineClickListener", "unlike click");
+    hFM.aDM();
+    paramView = (com.tencent.mm.plugin.sns.data.b)paramView.getTag();
+    k localk = ad.aBI().wA(agV);
+    if (localk == null) {
       return;
-      paramContextMenu.add(0, 4, 0, paramView.getContext().getString(2131431054));
-      continue;
-      paramContextMenu.add(0, 5, 0, paramView.getContext().getString(2131431054));
-      continue;
-      paramContextMenu.add(0, 9, 0, paramView.getContext().getString(2131431054));
     }
-  }
-  
-  public final boolean af(View paramView)
-  {
-    Object localObject = paramView.getTag();
-    if ((localObject instanceof m))
+    if (localk.na(32))
     {
-      localObject = (m)localObject;
-      atp localatp = gXI;
-      if ((jMx.jhv == 10) || (jMx.jhv == 17)) {
-        return false;
+      paramView = localk.aDd();
+      if (paramView != null) {
+        break label114;
       }
-      hpo.hoQ.a(paramView, gHs, localatp);
-      return true;
     }
-    return false;
+    label114:
+    for (paramView = "";; paramView = gMw)
+    {
+      g.gdY.h(11855, new Object[] { Integer.valueOf(1), Integer.valueOf(3), paramView });
+      paramView = new p(field_snsId, 8);
+      ah.tF().a(paramView, 0);
+      return;
+    }
   }
 }
 

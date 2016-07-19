@@ -1,28 +1,45 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.n.a.a;
-import com.tencent.mm.pluginsdk.i.a;
-import com.tencent.mm.pluginsdk.i.p;
-import com.tencent.mm.pluginsdk.model.app.af;
-import com.tencent.mm.pluginsdk.model.app.w;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.tencent.mm.compatible.util.f;
+import com.tencent.mm.pluginsdk.model.app.ak.a;
+import com.tencent.mm.pluginsdk.model.app.al;
+import com.tencent.mm.pluginsdk.model.app.b;
+import com.tencent.mm.pluginsdk.model.app.c;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class l$2
-  implements DialogInterface.OnClickListener
+  implements View.OnClickListener
 {
-  l$2(l paraml, a.a parama, String paramString, int paramInt) {}
+  l$2(Boolean paramBoolean, long paramLong, String paramString) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final void onClick(View paramView)
   {
-    paramDialogInterface = new w(2, new af(kQZ.appId, 0, "1"));
-    l.a(kQX, paramDialogInterface);
-    paramDialogInterface = i.a.iyK;
-    if (paramDialogInterface != null)
+    b localb;
+    if (!lqX.booleanValue())
     {
-      l.a(kQX).getActivity();
-      paramDialogInterface.a(kRa, kQZ.appId, kQZ.type, kRb, kQZ.mediaTagName, 1);
+      long l = ftV;
+      paramView = lqY;
+      localb = al.Jk().dj(l);
+      if (localb == null) {
+        v.e("MicroMsg.AppMsgLogic", "ERR:" + f.nr() + " getinfo failed: " + paramView);
+      }
     }
+    else
+    {
+      return;
+    }
+    if (field_status != 105L)
+    {
+      v.e("MicroMsg.AppMsgLogic", "ERR:" + f.nr() + " get status failed: " + paramView + " status:" + field_status);
+      return;
+    }
+    field_status = 101L;
+    field_lastModifyTime = be.Go();
+    al.Jk().a(localb, new String[0]);
+    al.aUD().run();
   }
 }
 

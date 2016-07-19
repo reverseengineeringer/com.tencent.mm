@@ -1,6 +1,6 @@
 package com.tencent.mm.network;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class C2Java$8
   implements Runnable
@@ -9,14 +9,14 @@ final class C2Java$8
   
   public final void run()
   {
-    int i = C2Java.access$000(ciE.actionId);
+    int i = C2Java.access$000(cdV.actionId);
     if (i == 0)
     {
-      u.e("C2Java", "ActionId Can not convert");
+      v.e("C2Java", "ActionId Can not convert");
       return;
     }
     new MMNativeNetComm.ReportInfo();
-    ciE.actionId = i;
+    cdV.actionId = i;
   }
 }
 

@@ -2,8 +2,8 @@ package com.tencent.mm.ui.contact;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.ArrayList;
 
 final class SelectLabelContactUI$1
@@ -13,9 +13,9 @@ final class SelectLabelContactUI$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = new ArrayList(SelectLabelContactUI.a(lmr));
-    u.i("!44@/B4Tb64lLpKoY55HdaUCtqT2I08XVRNif1ohy8/Do0k=", "SelectUser: %s", new Object[] { paramMenuItem.toString() });
-    SelectLabelContactUI.a(lmr, ay.b(paramMenuItem, ","));
+    paramMenuItem = new ArrayList(SelectLabelContactUI.a(lMG));
+    v.i("MicroMsg.SelectLabelContactUI", "SelectUser: %s", new Object[] { paramMenuItem.toString() });
+    SelectLabelContactUI.a(lMG, be.b(paramMenuItem, ","));
     return true;
   }
 }

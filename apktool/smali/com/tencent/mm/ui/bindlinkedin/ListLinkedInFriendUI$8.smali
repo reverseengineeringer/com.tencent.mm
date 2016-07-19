@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kOk:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
+.field final synthetic lnA:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 283
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$8;->kOk:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$8;->lnA:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 285
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$8;->kOk:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$8;->lnA:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;->i(Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;)V
 
@@ -53,7 +53,7 @@
 
     .line 289
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$8;->kOk:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$8;->lnA:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;->d(Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;)Z
 

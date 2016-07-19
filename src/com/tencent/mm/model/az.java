@@ -1,10 +1,10 @@
 package com.tencent.mm.model;
 
 public final class az
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public String bCF;
-  public long bCG;
+  public String bvP;
+  public long bvQ;
   public int key;
   
   protected final int a(int paramInt, Object... paramVarArgs)
@@ -12,28 +12,28 @@ public final class az
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.ci(1, key);
-      if (bCF != null) {
-        paramVarArgs.d(2, bCF);
+      paramVarArgs.cw(1, key);
+      if (bvP != null) {
+        paramVarArgs.e(2, bvP);
       }
-      paramVarArgs.A(3, bCG);
+      paramVarArgs.z(3, bvQ);
       return 0;
     }
     if (paramInt == 1)
     {
-      int i = a.a.a.a.cg(1, key) + 0;
+      int i = a.a.a.a.cu(1, key) + 0;
       paramInt = i;
-      if (bCF != null) {
-        paramInt = i + a.a.a.b.b.a.e(2, bCF);
+      if (bvP != null) {
+        paramInt = i + a.a.a.b.b.a.f(2, bvP);
       }
-      return paramInt + a.a.a.a.z(3, bCG);
+      return paramInt + a.a.a.a.y(3, bvQ);
     }
     if (paramInt == 2)
     {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+      for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
         if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.bog();
+          paramVarArgs.bve();
         }
       }
       return 0;
@@ -47,13 +47,13 @@ public final class az
       default: 
         return -1;
       case 1: 
-        key = maU.jC();
+        key = mMY.id();
         return 0;
       case 2: 
-        bCF = maU.readString();
+        bvP = mMY.readString();
         return 0;
       }
-      bCG = maU.jD();
+      bvQ = mMY.ie();
       return 0;
     }
     return -1;

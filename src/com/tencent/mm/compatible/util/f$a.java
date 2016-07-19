@@ -4,11 +4,11 @@ import android.os.SystemClock;
 
 public final class f$a
 {
-  public long buw = SystemClock.elapsedRealtime();
+  public long biW = SystemClock.elapsedRealtime();
   
-  public final long pa()
+  public final long ns()
   {
-    return SystemClock.elapsedRealtime() - buw;
+    return SystemClock.elapsedRealtime() - biW;
   }
 }
 

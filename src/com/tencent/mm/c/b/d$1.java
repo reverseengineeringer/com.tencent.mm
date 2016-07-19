@@ -2,7 +2,7 @@ package com.tencent.mm.c.b;
 
 import android.media.AudioRecord;
 import android.media.AudioRecord.OnRecordPositionUpdateListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.Arrays;
 
 final class d$1
@@ -14,31 +14,31 @@ final class d$1
   
   public final void onPeriodicNotification(AudioRecord paramAudioRecord)
   {
-    if (aqG.aqV) {}
+    if (abY.acn) {}
     int i;
     do
     {
       do
       {
         return;
-      } while (aqG.aqs == null);
-      if ((aqG.aqe) || (aqG.aqB == null)) {
-        aqG.aqB = new byte[aqG.aqD];
+      } while (abY.abK == null);
+      if ((abY.abw) || (abY.abT == null)) {
+        abY.abT = new byte[abY.abV];
       }
-      int j = aqG.aqs.read(aqG.aqB, 0, aqG.aqD);
-      u.d("!56@/B4Tb64lLpLd7hlw6y+1ySBfLlWWvoJ8IrbIM/Of1OSEqUpWJTRUbg==", "OnRecordPositionUpdateListener, read ret: " + j);
-      if (aqG.aqz != null) {
-        aqG.aqz.c(j, aqG.aqB);
+      int j = abY.abK.read(abY.abT, 0, abY.abV);
+      v.d("MicroMsg.RecordModeAsyncCallback", "OnRecordPositionUpdateListener, read ret: " + j);
+      if (abY.abR != null) {
+        abY.abR.c(j, abY.abT);
       }
       i = j;
-      if (j > aqG.aqB.length) {
-        i = aqG.aqB.length;
+      if (j > abY.abT.length) {
+        i = abY.abT.length;
       }
-      if ((aqG.aqE) && (i > 0)) {
-        Arrays.fill(aqG.aqB, 0, i, (byte)0);
+      if ((abY.abW) && (i > 0)) {
+        Arrays.fill(abY.abT, 0, i, (byte)0);
       }
-    } while ((aqG.aqt == null) || (i <= 0));
-    aqG.aqt.d(aqG.aqB, i);
+    } while ((abY.abL == null) || (i <= 0));
+    abY.abL.d(abY.abT, i);
   }
 }
 

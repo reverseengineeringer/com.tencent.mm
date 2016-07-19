@@ -1,5 +1,7 @@
 package com.tencent.mm.network;
 
+import com.tencent.mm.sdk.platformtools.be;
+
 final class r$2
   implements Runnable
 {
@@ -7,7 +9,7 @@ final class r$2
   
   public final void run()
   {
-    z.Fh().e(4, -100, "hit push hold!!");
+    z.FD().d(4, -100, "hit push hold!!" + be.baX());
   }
 }
 

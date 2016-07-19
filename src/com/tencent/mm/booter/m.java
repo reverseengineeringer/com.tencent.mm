@@ -6,48 +6,46 @@ import android.content.SharedPreferences.Editor;
 import android.os.Looper;
 import android.os.Process;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.protocal.b;
+import com.tencent.mm.protocal.c;
 import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.sdk.platformtools.f;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
-import com.tencent.mm.storage.g;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class m
 {
-  static long bne = 0L;
+  static long baL = 0L;
   
-  public static void aq(boolean paramBoolean)
+  public static void T(boolean paramBoolean)
   {
     if (paramBoolean)
     {
-      k("mm_proc_startup", 2);
+      h("mm_proc_startup", 2);
       return;
     }
-    k("push_proc_startup", 1);
+    h("push_proc_startup", 1);
   }
   
-  private static void cF(String paramString)
+  private static void cL(String paramString)
   {
-    paramString = y.getContext().getSharedPreferences(paramString, 0);
+    paramString = aa.getContext().getSharedPreferences(paramString, 0);
     Object localObject = paramString.getString("startup_info", "").split("=");
     if ((localObject == null) || (localObject.length == 0)) {
       return;
     }
     a locala = new a();
-    if (locala.cH(localObject[(localObject.length - 1)]))
+    if (locala.cN(localObject[(localObject.length - 1)]))
     {
-      bnh = 2;
+      baO = 2;
       localObject[(localObject.length - 1)] = locala.toString();
     }
-    localObject = e((String[])localObject);
-    u.d("!32@/B4Tb64lLpIUGQfqwvb6Vvq1+gSmGxdU", "uerExit new info %s", new Object[] { localObject });
+    localObject = d((String[])localObject);
+    v.d("MicroMsg.ProcessReport", "uerExit new info %s", new Object[] { localObject });
     paramString.edit().putString("startup_info", (String)localObject).commit();
   }
   
-  private static String e(String[] paramArrayOfString)
+  private static String d(String[] paramArrayOfString)
   {
     String str1 = "";
     int j = 1;
@@ -70,102 +68,102 @@ public final class m
     return str1;
   }
   
-  private static void k(String paramString, int paramInt)
+  private static void h(String paramString, int paramInt)
   {
-    SharedPreferences localSharedPreferences = y.getContext().getSharedPreferences(paramString, 0);
+    SharedPreferences localSharedPreferences = aa.getContext().getSharedPreferences(paramString, 0);
     paramString = localSharedPreferences.getString("startup_info", "").split("=");
     if ((paramString != null) && (paramString.length > 0))
     {
       localObject = new a();
-      if (((a)localObject).cH(paramString[(paramString.length - 1)]))
+      if (((a)localObject).cN(paramString[(paramString.length - 1)]))
       {
-        bnk = Process.myPid();
+        baR = Process.myPid();
         paramString[(paramString.length - 1)] = ((a)localObject).toString();
       }
     }
     Object localObject = new a();
-    bng = paramInt;
-    bni = Process.myPid();
-    bnj = ((int)ay.FR());
-    String str = e(paramString);
+    baN = paramInt;
+    baP = Process.myPid();
+    baQ = ((int)be.Go());
+    String str = d(paramString);
     localObject = ((a)localObject).toString();
     paramString = (String)localObject;
     if (str.length() > 0) {
       paramString = str + "=" + (String)localObject;
     }
-    u.d("!32@/B4Tb64lLpIUGQfqwvb6Vvq1+gSmGxdU", "startProc new info %s", new Object[] { paramString });
+    v.d("MicroMsg.ProcessReport", "startProc new info %s", new Object[] { paramString });
     localSharedPreferences.edit().putString("startup_info", paramString).commit();
   }
   
-  public static void kO()
+  public static void jo()
   {
-    cF("mm_proc_startup");
-    cF("push_proc_startup");
+    cL("mm_proc_startup");
+    cL("push_proc_startup");
   }
   
-  public static void nk()
+  public static void ly()
   {
-    if ((bne != 0L) && (ay.ao(bne) < 3600000L)) {
+    if ((baL != 0L) && (be.av(baL) < 3600000L)) {
       return;
     }
-    int i = ((Integer)ah.tu().get(37, Integer.valueOf(0))).intValue();
-    if (b.iUf != i)
+    int i = ((Integer)ah.tv().get(37, Integer.valueOf(0))).intValue();
+    if (c.jry != i)
     {
-      ah.tu().set(37, Integer.valueOf(b.iUf));
-      new aa(Looper.getMainLooper()).post(new Runnable()
+      ah.tv().set(37, Integer.valueOf(c.jry));
+      new ac(Looper.getMainLooper()).post(new Runnable()
       {
         public final void run()
         {
-          h.fUJ.O(10675, bnf + "," + f.akC);
+          com.tencent.mm.plugin.report.service.g.gdY.X(10675, baM + "," + f.Xv);
         }
       });
     }
-    bne = ay.FT();
-    new aa(Looper.getMainLooper()).post(new Runnable()
+    baL = be.Gq();
+    new ac(Looper.getMainLooper()).post(new Runnable()
     {
       public final void run()
       {
-        m.cG("mm_proc_startup");
-        m.cG("push_proc_startup");
+        m.cM("mm_proc_startup");
+        m.cM("push_proc_startup");
       }
     });
   }
   
   static final class a
   {
-    int bng;
-    int bnh = 1;
-    int bni;
-    int bnj;
-    int bnk;
+    int baN;
+    int baO = 1;
+    int baP;
+    int baQ;
+    int baR;
     
-    public final boolean cH(String paramString)
+    public final boolean cN(String paramString)
     {
       paramString = paramString.split(",");
       if ((paramString == null) || (paramString.length != 5))
       {
-        u.e("!32@/B4Tb64lLpIUGQfqwvb6Vvq1+gSmGxdU", "error format");
+        v.e("MicroMsg.ProcessReport", "error format");
         return false;
       }
       try
       {
-        bng = Integer.parseInt(paramString[0]);
-        bnh = Integer.parseInt(paramString[1]);
-        bni = Integer.parseInt(paramString[2]);
-        bnj = Integer.parseInt(paramString[3]);
-        bnk = Integer.parseInt(paramString[4]);
+        baN = Integer.parseInt(paramString[0]);
+        baO = Integer.parseInt(paramString[1]);
+        baP = Integer.parseInt(paramString[2]);
+        baQ = Integer.parseInt(paramString[3]);
+        baR = Integer.parseInt(paramString[4]);
         return true;
       }
       catch (Exception paramString)
       {
-        u.e("!32@/B4Tb64lLpIUGQfqwvb6Vvq1+gSmGxdU", "ParseFrom parse failed");
+        v.e("MicroMsg.ProcessReport", "ParseFrom parse failed");
       }
       return false;
     }
     
     public final String toString()
     {
-      return String.format("%d,%d,%d,%d,%d", new Object[] { Integer.valueOf(bng), Integer.valueOf(bnh), Integer.valueOf(bni), Integer.valueOf(bnj), Integer.valueOf(bnk) });
+      return String.format("%d,%d,%d,%d,%d", new Object[] { Integer.valueOf(baN), Integer.valueOf(baO), Integer.valueOf(baP), Integer.valueOf(baQ), Integer.valueOf(baR) });
     }
   }
 }

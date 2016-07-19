@@ -13,7 +13,23 @@
     name = "a"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<K:",
+        "Ljava/lang/Object;",
+        "O:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
 
 # virtual methods
-.method public abstract e(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public abstract h(Ljava/lang/Object;Ljava/lang/Object;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;TO;)V"
+        }
+    .end annotation
 .end method

@@ -5,23 +5,23 @@ import java.util.TimerTask;
 final class e$a
   extends TimerTask
 {
-  private int aqR = aqU.aqD * 2;
-  private int aqS = aqU.aqD;
-  byte[] aqT = new byte[aqR];
+  private int acj = acm.abV * 2;
+  private int ack = acm.abV;
+  byte[] acl = new byte[acj];
   
   e$a(e parame) {}
   
   public final void run()
   {
     int j;
-    if (!aqU.aqV)
+    if (!acm.acn)
     {
-      j = (int)(0.8D * aqU.lP());
+      j = (int)(0.8D * acm.ka());
       i = j;
-      if (j < aqU.aqD * 8) {
-        i = aqU.aqD * 8;
+      if (j < acm.abV * 8) {
+        i = acm.abV * 8;
       }
-      if (aqU.lQ() <= i) {
+      if (acm.kb() <= i) {
         break label130;
       }
     }
@@ -31,9 +31,9 @@ final class e$a
       j = 0;
       while (j < i)
       {
-        int k = aqU.g(aqT, aqS);
-        if ((aqU.aqK != null) && (k == 0)) {
-          aqU.aqK.d(aqT, aqS);
+        int k = acm.g(acl, ack);
+        if ((acm.acc != null) && (k == 0)) {
+          acm.acc.d(acl, ack);
         }
         j += 1;
       }

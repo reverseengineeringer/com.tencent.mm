@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field public aIr:Ljava/lang/String;
+.field public auL:Ljava/lang/String;
 
-.field public cbR:Ljava/lang/String;
+.field public bVG:Ljava/lang/String;
 
-.field public cbS:J
+.field public bVH:J
 
-.field public eLV:I
+.field public cTv:I
 
 .field public position:I
 
@@ -30,30 +30,30 @@
 
 # direct methods
 .method public constructor <init>(JLjava/lang/String;ILjava/lang/String;IJ)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 452
+    .line 460
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 453
+    .line 461
     iput-wide p1, p0, Lcom/tencent/mm/plugin/sns/a/a/f$a;->time:J
 
-    .line 454
-    iput-object p3, p0, Lcom/tencent/mm/plugin/sns/a/a/f$a;->aIr:Ljava/lang/String;
+    .line 462
+    iput-object p3, p0, Lcom/tencent/mm/plugin/sns/a/a/f$a;->auL:Ljava/lang/String;
 
-    .line 455
+    .line 463
     iput p4, p0, Lcom/tencent/mm/plugin/sns/a/a/f$a;->position:I
 
-    .line 456
-    iput-object p5, p0, Lcom/tencent/mm/plugin/sns/a/a/f$a;->cbR:Ljava/lang/String;
+    .line 464
+    iput-object p5, p0, Lcom/tencent/mm/plugin/sns/a/a/f$a;->bVG:Ljava/lang/String;
 
-    .line 457
-    iput-wide p7, p0, Lcom/tencent/mm/plugin/sns/a/a/f$a;->cbS:J
+    .line 465
+    iput-wide p7, p0, Lcom/tencent/mm/plugin/sns/a/a/f$a;->bVH:J
 
-    .line 458
-    iput p6, p0, Lcom/tencent/mm/plugin/sns/a/a/f$a;->eLV:I
+    .line 466
+    iput p6, p0, Lcom/tencent/mm/plugin/sns/a/a/f$a;->cTv:I
 
-    .line 459
+    .line 467
     return-void
 .end method

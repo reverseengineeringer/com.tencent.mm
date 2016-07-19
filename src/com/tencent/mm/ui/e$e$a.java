@@ -2,11 +2,11 @@ package com.tencent.mm.ui;
 
 final class e$e$a
 {
-  int kkh;
+  int kKp;
   
   public e$e$a(e.e parame, int paramInt)
   {
-    kkh = paramInt;
+    kKp = paramInt;
   }
 }
 

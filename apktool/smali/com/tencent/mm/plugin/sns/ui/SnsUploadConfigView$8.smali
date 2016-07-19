@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hlL:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+.field final synthetic hBN:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 147
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$8;->hlL:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$8;->hBN:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 151
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$8;->hlL:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$8;->hBN:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$8;->hlL:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$8;->hBN:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->g(Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;)Z
 
@@ -57,7 +57,7 @@
     invoke-static {v1, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->c(Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;Z)Z
 
     .line 152
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$8;->hlL:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$8;->hBN:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->g(Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;)Z
 
@@ -66,13 +66,13 @@
     if-eqz v0, :cond_0
 
     .line 153
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$8;->hlL:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$8;->hBN:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->e(Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;)Z
 
     .line 155
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$8;->hlL:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$8;->hBN:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->h(Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;)V
 

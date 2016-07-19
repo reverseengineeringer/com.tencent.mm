@@ -15,25 +15,25 @@
 
 
 # instance fields
-.field public edK:Landroid/widget/CheckBox;
+.field public ehl:Landroid/widget/CheckBox;
 
-.field public edL:Landroid/view/View;
+.field public ehm:Landroid/view/View;
 
-.field public gpY:Landroid/widget/ImageView;
+.field public gAq:Landroid/widget/ImageView;
 
-.field public iGr:Landroid/view/View;
+.field public jdm:Landroid/view/View;
 
-.field public lfc:Landroid/widget/ImageView;
+.field public lFo:Landroid/widget/ImageView;
 
-.field public lfd:Landroid/view/View;
+.field public lFp:Landroid/view/View;
 
-.field public lfe:Landroid/widget/TextView;
+.field public lFq:Landroid/widget/TextView;
 
-.field public lff:Landroid/widget/TextView;
+.field public lFr:Landroid/widget/TextView;
 
-.field public lfg:Landroid/view/View;
+.field public lFs:Landroid/view/View;
 
-.field public lfh:Landroid/view/View;
+.field public lFt:Landroid/view/View;
 
 
 # direct methods

@@ -2,13 +2,13 @@ package com.tencent.mm.plugin.gwallet.a;
 
 import android.content.Intent;
 import android.os.RemoteException;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import org.json.JSONException;
 
 public final class b$3
   implements Runnable
 {
-  public b$3(b paramb, String paramString, aa paramaa, b.b paramb1) {}
+  public b$3(b paramb, String paramString, ac paramac, b.b paramb1) {}
   
   public final void run()
   {
@@ -16,7 +16,7 @@ public final class b$3
     final Intent localIntent = new Intent();
     try
     {
-      int i = b.a(exL, localIntent, exQ);
+      int i = b.a(eEf, localIntent, eEk);
       if (i != 0) {
         localc1 = new c(i, "Error refreshing inventory (querying owned items).");
       }
@@ -35,12 +35,12 @@ public final class b$3
         c localc3 = new c(64534, "Error parsing JSON response while refreshing inventory.");
       }
     }
-    localIntent.putExtra("RESPONSE_CODE", exV);
-    cIj.post(new Runnable()
+    localIntent.putExtra("RESPONSE_CODE", eEp);
+    cFn.post(new Runnable()
     {
       public final void run()
       {
-        exR.b(localc1, localIntent);
+        eEl.b(localc1, localIntent);
       }
     });
   }

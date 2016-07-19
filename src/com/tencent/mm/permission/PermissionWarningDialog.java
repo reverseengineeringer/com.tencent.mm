@@ -5,7 +5,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMBaseActivity;
 import com.tencent.mm.ui.base.h;
 import com.tencent.mm.ui.base.h.a;
@@ -14,12 +14,12 @@ import com.tencent.mm.ui.base.w;
 public class PermissionWarningDialog
   extends MMBaseActivity
 {
-  private h clm = null;
+  private h cgp = null;
   
-  private void FB()
+  private void FX()
   {
     if (getIntent() == null) {
-      u.e("!56@/B4Tb64lLpL0qTj+UKAbT9E1G/8lWEUtG3edpBIBqfS1enk1zHm2kg==", "Intent is null");
+      v.e("MicroMsg.PermissionWarningDialog", "Intent is null");
     }
     Bundle localBundle;
     int i;
@@ -29,42 +29,42 @@ public class PermissionWarningDialog
       localBundle = getIntent().getExtras();
       if (localBundle == null)
       {
-        u.e("!56@/B4Tb64lLpL0qTj+UKAbT9E1G/8lWEUtG3edpBIBqfS1enk1zHm2kg==", "invalid params");
+        v.e("MicroMsg.PermissionWarningDialog", "invalid params");
         return;
       }
       i = localBundle.getInt("warning_type", 0);
       if (1 == i)
       {
         locala = new h.a(this);
-        locala.Gy(localBundle.getString("warning_title"));
-        locala.Gz(localBundle.getString("warning_content"));
-        locala.b(2131429546, new DialogInterface.OnClickListener()
+        locala.IM(localBundle.getString("warning_title"));
+        locala.IN(localBundle.getString("warning_content"));
+        locala.b(2131230939, new DialogInterface.OnClickListener()
         {
           public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
           {
             finish();
           }
         });
-        clm = locala.bcu();
-        clm.setCanceledOnTouchOutside(false);
-        clm.show();
+        cgp = locala.bhJ();
+        cgp.setCanceledOnTouchOutside(false);
+        cgp.show();
         return;
       }
     } while (2 != i);
     h.a locala = new h.a(this);
     final boolean bool1 = localBundle.getBoolean("warning_filter", false);
     final boolean bool2 = localBundle.getBoolean("warning_due2Exception", false);
-    locala.qz(2131429556);
-    locala.Gz(getString(2131429554));
-    locala.b(getString(2131430884), new DialogInterface.OnClickListener()
+    locala.ss(2131230981);
+    locala.IN(getString(2131230976));
+    locala.b(getString(2131230873), new DialogInterface.OnClickListener()
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
-        b.bg(bool2);
+        b.aO(bool2);
         finish();
       }
     });
-    locala.a(getString(2131429555), new DialogInterface.OnClickListener()
+    locala.a(getString(2131230970), new DialogInterface.OnClickListener()
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
@@ -72,9 +72,9 @@ public class PermissionWarningDialog
         finish();
       }
     });
-    clm = locala.bcu();
-    clm.setCanceledOnTouchOutside(false);
-    clm.show();
+    cgp = locala.bhJ();
+    cgp.setCanceledOnTouchOutside(false);
+    cgp.show();
   }
   
   public static void a(Context paramContext, boolean paramBoolean1, boolean paramBoolean2)
@@ -87,7 +87,7 @@ public class PermissionWarningDialog
     paramContext.startActivity(localIntent);
   }
   
-  public static void j(Context paramContext, String paramString1, String paramString2)
+  public static void h(Context paramContext, String paramString1, String paramString2)
   {
     Intent localIntent = new Intent(paramContext, PermissionWarningDialog.class);
     localIntent.putExtra("warning_type", 1);
@@ -101,19 +101,19 @@ public class PermissionWarningDialog
   {
     super.onCreate(paramBundle);
     requestWindowFeature(1);
-    FB();
+    FX();
   }
   
   protected void onNewIntent(Intent paramIntent)
   {
     super.onNewIntent(paramIntent);
     setIntent(paramIntent);
-    if (clm != null)
+    if (cgp != null)
     {
-      clm.dismiss();
-      clm = null;
+      cgp.dismiss();
+      cgp = null;
     }
-    FB();
+    FX();
   }
   
   protected void onPause()

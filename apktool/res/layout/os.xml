@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/anw" android:background="@color/ow" android:focusable="true" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@null" android:transcriptMode="disabled" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="0.0px" />
+    <include android:id="@id/anx" android:visibility="gone" layout="@layout/fmessage_conversation_empty_a" />
+    <include android:id="@id/any" android:visibility="gone" layout="@layout/fmessage_conversation_empty_b" />
+</FrameLayout>

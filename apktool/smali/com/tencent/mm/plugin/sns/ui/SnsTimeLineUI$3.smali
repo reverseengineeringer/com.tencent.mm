@@ -1,14 +1,11 @@
 .class final Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$3;
-.super Ljava/lang/Object;
+.super Lcom/tencent/mm/sdk/c/c;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->aCF()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,50 +13,67 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/ex;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+.field final synthetic hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
 
 # direct methods
 .method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 1269
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$3;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+    .line 309
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$3;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
+
+    const-class v0, Lcom/tencent/mm/e/a/ex;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$3;->kum:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final bridge synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
+    .locals 3
 
     .prologue
-    .line 1272
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$3;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+    .line 309
+    check-cast p1, Lcom/tencent/mm/e/a/ex;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->h(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Lcom/tencent/mm/plugin/sns/lucky/b/n;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/ex;->alw:Lcom/tencent/mm/e/a/ex$a;
 
-    move-result-object v0
+    iget v0, v0, Lcom/tencent/mm/e/a/ex$a;->alz:I
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/lucky/b/n;->axS()V
+    iget-object v1, p1, Lcom/tencent/mm/e/a/ex;->alw:Lcom/tencent/mm/e/a/ex$a;
 
-    .line 1273
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$3;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+    iget v1, v1, Lcom/tencent/mm/e/a/ex$a;->aly:I
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->j(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Lcom/tencent/mm/plugin/sns/lucky/view/LuckyTimelineTip;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$3;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
-    move-result-object v0
+    invoke-static {v2, v0, v1, p1}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;IILcom/tencent/mm/e/a/ex;)V
 
-    const/16 v1, 0x8
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/lucky/view/LuckyTimelineTip;->setVisibility(I)V
-
-    .line 1274
-    return-void
+    return v0
 .end method

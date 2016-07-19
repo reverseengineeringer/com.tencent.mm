@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract DE()I
+.method public abstract DV()I
 .end method

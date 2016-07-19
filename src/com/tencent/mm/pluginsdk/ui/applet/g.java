@@ -1,13 +1,13 @@
 package com.tencent.mm.pluginsdk.ui.applet;
 
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 public final class g
 {
   public int backgroundColor;
   public Object data;
   public int end;
-  public String gZd;
+  public String hmp;
   public int linkColor;
   public int start;
   public int type;
@@ -20,10 +20,10 @@ public final class g
     type = paramInt;
   }
   
-  public final Object c(Class paramClass)
+  public final <T> T d(Class<T> paramClass)
   {
     if (paramClass.isInstance(data)) {
-      return paramClass.cast(data);
+      return (T)paramClass.cast(data);
     }
     return null;
   }
@@ -40,7 +40,7 @@ public final class g
   {
     int j = super.hashCode();
     int i = j;
-    if (!ay.kz(url)) {
+    if (!be.kf(url)) {
       i = j + url.hashCode();
     }
     j = i + type + end + start;

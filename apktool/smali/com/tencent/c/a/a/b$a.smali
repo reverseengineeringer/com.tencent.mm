@@ -15,29 +15,29 @@
 
 
 # instance fields
-.field Ro:I
+.field VA:Ljava/lang/String;
 
-.field ajD:Ljava/lang/String;
+.field VB:Ljava/lang/String;
 
-.field ajE:Ljava/lang/String;
+.field VC:Ljava/lang/String;
 
-.field ajF:Landroid/util/DisplayMetrics;
+.field VD:Ljava/lang/String;
 
-.field ajG:I
+.field VE:I
 
-.field ajH:Ljava/lang/String;
+.field VF:Ljava/lang/String;
 
-.field ajI:Ljava/lang/String;
+.field VG:Ljava/lang/String;
 
-.field ajJ:Ljava/lang/String;
+.field Vv:Ljava/lang/String;
 
-.field ajK:Ljava/lang/String;
+.field Vw:Ljava/lang/String;
 
-.field ajL:Ljava/lang/String;
+.field Vx:Landroid/util/DisplayMetrics;
 
-.field ajM:Ljava/lang/String;
+.field Vy:I
 
-.field ajN:Ljava/lang/String;
+.field Vz:Ljava/lang/String;
 
 .field ctx:Landroid/content/Context;
 
@@ -65,12 +65,12 @@
     .line 33
     const-string/jumbo v0, "2.21"
 
-    iput-object v0, p0, Lcom/tencent/c/a/a/b$a;->ajE:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/c/a/a/b$a;->Vw:Ljava/lang/String;
 
     .line 41
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iput v0, p0, Lcom/tencent/c/a/a/b$a;->ajG:I
+    iput v0, p0, Lcom/tencent/c/a/a/b$a;->Vy:I
 
     .line 45
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
@@ -80,7 +80,7 @@
     .line 49
     sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/tencent/c/a/a/b$a;->ajH:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/c/a/a/b$a;->Vz:Ljava/lang/String;
 
     .line 53
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
@@ -91,15 +91,15 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/c/a/a/b$a;->ajI:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/c/a/a/b$a;->VA:Ljava/lang/String;
 
     .line 57
     const-string/jumbo v0, "WX"
 
-    iput-object v0, p0, Lcom/tencent/c/a/a/b$a;->ajJ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/c/a/a/b$a;->VB:Ljava/lang/String;
 
     .line 72
-    iput v2, p0, Lcom/tencent/c/a/a/b$a;->Ro:I
+    iput v2, p0, Lcom/tencent/c/a/a/b$a;->VE:I
 
     .line 85
     iput-object v1, p0, Lcom/tencent/c/a/a/b$a;->packageName:Ljava/lang/String;
@@ -108,10 +108,10 @@
     iput-object v1, p0, Lcom/tencent/c/a/a/b$a;->ctx:Landroid/content/Context;
 
     .line 90
-    iput-object v1, p0, Lcom/tencent/c/a/a/b$a;->ajM:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/c/a/a/b$a;->VF:Ljava/lang/String;
 
     .line 91
-    iput-object v1, p0, Lcom/tencent/c/a/a/b$a;->ajN:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/c/a/a/b$a;->VG:Ljava/lang/String;
 
     .line 94
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -144,7 +144,7 @@
     .line 98
     iget-object v0, v0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/tencent/c/a/a/b$a;->ajD:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/c/a/a/b$a;->Vv:Ljava/lang/String;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -154,7 +154,7 @@
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/c/a/a/b$a;->ajF:Landroid/util/DisplayMetrics;
+    iput-object v0, p0, Lcom/tencent/c/a/a/b$a;->Vx:Landroid/util/DisplayMetrics;
 
     .line 103
     iget-object v0, p0, Lcom/tencent/c/a/a/b$a;->ctx:Landroid/content/Context;
@@ -178,7 +178,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/c/a/a/b$a;->ajF:Landroid/util/DisplayMetrics;
+    iget-object v1, p0, Lcom/tencent/c/a/a/b$a;->Vx:Landroid/util/DisplayMetrics;
 
     invoke-virtual {v0, v1}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
@@ -186,7 +186,7 @@
     const-string/jumbo v0, "android.permission.READ_PHONE_STATE"
 
     .line 106
-    invoke-static {p1, v0}, Lcom/tencent/c/a/a/s;->j(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v0}, Lcom/tencent/c/a/a/s;->k(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
@@ -211,7 +211,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/tencent/c/a/a/b$a;->ajK:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/c/a/a/b$a;->VC:Ljava/lang/String;
 
     .line 112
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;
@@ -235,11 +235,11 @@
     .line 116
     iget-object v0, p0, Lcom/tencent/c/a/a/b$a;->ctx:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/tencent/c/a/a/s;->aa(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/c/a/a/s;->W(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/c/a/a/b$a;->ajL:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/c/a/a/b$a;->VD:Ljava/lang/String;
 
     .line 117
     iget-object v0, p0, Lcom/tencent/c/a/a/b$a;->ctx:Landroid/content/Context;
@@ -251,11 +251,11 @@
     iput-object v0, p0, Lcom/tencent/c/a/a/b$a;->packageName:Ljava/lang/String;
 
     .line 118
-    invoke-static {}, Lcom/tencent/c/a/a/s;->kj()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/c/a/a/s;->iK()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/c/a/a/b$a;->ajN:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/c/a/a/b$a;->VG:Ljava/lang/String;
 
     .line 120
     return-void

@@ -1,5 +1,5 @@
 .class public final Landroid/support/v4/app/p$g;
-.super Landroid/support/v4/app/p$p;
+.super Landroid/support/v4/app/p$o;
 .source "SourceFile"
 
 
@@ -15,7 +15,16 @@
 
 
 # instance fields
-.field ds:Ljava/util/ArrayList;
+.field dI:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/CharSequence;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -23,16 +32,16 @@
     .locals 1
 
     .prologue
-    .line 1702
-    invoke-direct {p0}, Landroid/support/v4/app/p$p;-><init>()V
+    .line 1693
+    invoke-direct {p0}, Landroid/support/v4/app/p$o;-><init>()V
 
-    .line 1700
+    .line 1691
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v4/app/p$g;->ds:Ljava/util/ArrayList;
+    iput-object v0, p0, Landroid/support/v4/app/p$g;->dI:Ljava/util/ArrayList;
 
-    .line 1703
+    .line 1694
     return-void
 .end method

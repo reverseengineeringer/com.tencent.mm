@@ -5,28 +5,28 @@ import oicq.wlogin_sdk.tools.util;
 public final class ao
   extends a
 {
-  int mdd = 0;
-  int mde = 0;
+  int mPh = 0;
+  int mPi = 0;
   
   public ao()
   {
-    mbE = 2;
+    mNI = 2;
   }
   
-  public final byte[] o(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2)
+  public final byte[] n(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2)
   {
-    mdd = (paramArrayOfByte1.length + 6 + paramArrayOfByte2.length);
-    byte[] arrayOfByte = new byte[mdd];
-    util.m(arrayOfByte, 0, mde);
-    util.m(arrayOfByte, 2, paramArrayOfByte1.length);
+    mPh = (paramArrayOfByte1.length + 6 + paramArrayOfByte2.length);
+    byte[] arrayOfByte = new byte[mPh];
+    util.o(arrayOfByte, 0, mPi);
+    util.o(arrayOfByte, 2, paramArrayOfByte1.length);
     System.arraycopy(paramArrayOfByte1, 0, arrayOfByte, 4, paramArrayOfByte1.length);
     int i = paramArrayOfByte1.length + 4;
-    util.m(arrayOfByte, i, paramArrayOfByte2.length);
+    util.o(arrayOfByte, i, paramArrayOfByte2.length);
     System.arraycopy(paramArrayOfByte2, 0, arrayOfByte, i + 2, paramArrayOfByte2.length);
-    super.sL(mbE);
-    super.A(arrayOfByte, mdd);
-    super.bos();
-    return super.boo();
+    super.vE(mNI);
+    super.B(arrayOfByte, mPh);
+    super.bvq();
+    return super.bvm();
   }
 }
 

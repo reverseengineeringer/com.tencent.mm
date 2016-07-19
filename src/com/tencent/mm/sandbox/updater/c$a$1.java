@@ -3,7 +3,7 @@ package com.tencent.mm.sandbox.updater;
 import android.os.Looper;
 import com.tencent.mm.a.e;
 import com.tencent.mm.sandbox.b.a;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -11,8 +11,8 @@ import java.io.OutputStream;
 final class c$a$1
   extends OutputStream
 {
-  private aa handler = new aa(Looper.getMainLooper());
-  private ByteArrayOutputStream jTC = new ByteArrayOutputStream();
+  private ac handler = new ac(Looper.getMainLooper());
+  private ByteArrayOutputStream ksW = new ByteArrayOutputStream();
   
   c$a$1(c.a parama) {}
   
@@ -23,29 +23,29 @@ final class c$a$1
   
   public final void write(byte[] paramArrayOfByte, final int paramInt1, int paramInt2)
   {
-    jTC.write(paramArrayOfByte, paramInt1, paramInt2);
-    if ((jTC.size() < 131072) && (c.a.a(jTD) + jTC.size() < c.a.b(jTD))) {}
+    ksW.write(paramArrayOfByte, paramInt1, paramInt2);
+    if ((ksW.size() < 131072) && (c.a.a(ksX) + ksW.size() < c.a.b(ksX))) {}
     do
     {
       return;
-      paramInt1 = jTC.size();
-      paramInt2 = e.a(jTD.jTv.aTM(), jTC.toByteArray(), paramInt1);
-      jTC.reset();
+      paramInt1 = ksW.size();
+      paramInt2 = e.a(ksX.ksP.aYJ(), ksW.toByteArray(), paramInt1);
+      ksW.reset();
       if (paramInt2 != 0) {
         throw new IOException("appendToFile failed :" + paramInt2);
       }
-      c.a.a(jTD, paramInt1);
+      c.a.a(ksX, paramInt1);
       handler.post(new Runnable()
       {
         public final void run()
         {
-          if (c.a.a(jTD) <= c.a.b(jTD)) {
-            c.a.c(jTD).J(c.a.b(jTD), c.a.a(jTD));
+          if (c.a.a(ksX) <= c.a.b(ksX)) {
+            c.a.c(ksX).L(c.a.b(ksX), c.a.a(ksX));
           }
-          c.a.c(jTD).dp(paramInt1);
+          c.a.c(ksX).dG(paramInt1);
         }
       });
-    } while (!c.a(jTD.jTv));
+    } while (!c.a(ksX.ksP));
     throw new IOException("manual force cancel!");
   }
 }

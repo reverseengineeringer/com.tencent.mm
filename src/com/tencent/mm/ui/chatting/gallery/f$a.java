@@ -2,7 +2,7 @@ package com.tencent.mm.ui.chatting.gallery;
 
 public final class f$a
 {
-  public static f lgb = new f();
+  public static f lGo = new f();
 }
 
 /* Location:

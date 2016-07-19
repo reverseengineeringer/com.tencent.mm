@@ -1,392 +1,630 @@
 package com.tencent.mm.t;
 
-import android.database.Cursor;
-import com.tencent.mm.az.g;
-import com.tencent.mm.d.b.bg;
-import com.tencent.mm.d.b.t;
-import com.tencent.mm.model.c;
-import com.tencent.mm.model.i;
-import com.tencent.mm.model.y;
-import com.tencent.mm.sdk.h.d;
-import com.tencent.mm.sdk.h.f;
-import com.tencent.mm.sdk.h.h;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag;
-import com.tencent.mm.storage.k;
-import com.tencent.mm.storage.q;
-import com.tencent.mm.storage.s;
+import android.os.Looper;
+import android.os.Message;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.h;
+import com.tencent.mm.sdk.b.b;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
+import java.util.Set;
+import java.util.Vector;
+import junit.framework.Assert;
 
 public final class m
-  extends f
+  implements d
 {
-  public static final String[] aLn = { "CREATE  INDEX IF NOT EXISTS type_username_index ON bizinfo ( type,username ) ", "CREATE  INDEX IF NOT EXISTS  username_acceptType_index ON bizinfo ( username,acceptType ) " };
-  public static final String[] aoY = { f.a(l.aot, "bizinfo") };
-  public static Map bIR = new HashMap();
-  private final h bGU = new h() {};
-  
-  public m(d paramd)
+  private static m byY = null;
+  private static int bzi = 1;
+  public ad btF = null;
+  public e byZ;
+  private Vector<j> bza = new Vector();
+  private Vector<j> bzb = new Vector();
+  private final Map<Integer, Set<d>> bzc = new HashMap();
+  private Boolean bzd = null;
+  private final a bze;
+  private long bzf = 21600000L;
+  private boolean bzg = false;
+  private com.tencent.mm.sdk.platformtools.ah bzh = new com.tencent.mm.sdk.platformtools.ah(Looper.getMainLooper(), new ah.a()
   {
-    super(paramd, l.aot, "bizinfo", aLn);
-  }
-  
-  public static List cY(int paramInt)
-  {
-    Object localObject = new StringBuilder();
-    ((StringBuilder)localObject).append("select bizinfo.username");
-    ((StringBuilder)localObject).append(" from rcontact, bizinfo");
-    ((StringBuilder)localObject).append(" where bizinfo.specialType").append(" = 1");
-    ((StringBuilder)localObject).append(" and rcontact.username").append(" = bizinfo.username");
-    ((StringBuilder)localObject).append(" and (rcontact.verifyFlag").append(" & ").append(k.aWr()).append(") != 0 ");
-    ((StringBuilder)localObject).append(" and (rcontact.type").append(" & 1) != 0 ");
-    localObject = ((StringBuilder)localObject).toString();
-    u.i("!32@/B4Tb64lLpJBvWFKDfNn3fDJZ/Q78pVI", "getSpecialInternalBizUsernames sql %s", new Object[] { localObject });
-    localObject = tDbzA.rawQuery((String)localObject, null);
-    LinkedList localLinkedList = new LinkedList();
-    if (localObject != null)
+    public final boolean jK()
     {
-      if (((Cursor)localObject).moveToFirst()) {
-        do
+      boolean bool2 = false;
+      if (m.a(m.this) == null) {
+        return false;
+      }
+      v.v("MicroMsg.NetSceneQueue", "onQueueIdle, running=%d, waiting=%d, foreground=%b", new Object[] { Integer.valueOf(m.b(m.this).size()), Integer.valueOf(m.c(m.this).size()), Boolean.valueOf(m.d(m.this)) });
+      m.a locala = m.a(m.this);
+      m localm = m.this;
+      boolean bool1 = bool2;
+      if (m.e(m.this))
+      {
+        bool1 = bool2;
+        if (m.b(m.this).isEmpty())
         {
-          localLinkedList.add(((Cursor)localObject).getString(((Cursor)localObject).getColumnIndex("username")));
-        } while (((Cursor)localObject).moveToNext());
-      }
-      ((Cursor)localObject).close();
-    }
-    return localLinkedList;
-  }
-  
-  public static List gM(String paramString)
-  {
-    Object localObject = new StringBuilder();
-    ((StringBuilder)localObject).append("select bizinfo.username");
-    ((StringBuilder)localObject).append(" from bizinfo");
-    ((StringBuilder)localObject).append(" where bizinfo.type").append(" = 3");
-    ((StringBuilder)localObject).append(" and bizinfo.enterpriseFather").append(" = '").append(paramString).append("'");
-    paramString = ((StringBuilder)localObject).toString();
-    u.i("!32@/B4Tb64lLpJBvWFKDfNn3fDJZ/Q78pVI", "getEnterpriseChildNameList sql %s", new Object[] { paramString });
-    paramString = tDbzA.rawQuery(paramString, null);
-    if (paramString == null) {
-      return null;
-    }
-    localObject = new LinkedList();
-    if (paramString.moveToFirst()) {
-      do
-      {
-        ((List)localObject).add(paramString.getString(0));
-      } while (paramString.moveToNext());
-    }
-    paramString.close();
-    return (List)localObject;
-  }
-  
-  public static List gN(String paramString)
-  {
-    Object localObject = new StringBuilder();
-    ((StringBuilder)localObject).append("select bizinfo.username");
-    ((StringBuilder)localObject).append(" from rcontact, bizinfo");
-    ((StringBuilder)localObject).append(" where bizinfo.type").append(" = 3");
-    ((StringBuilder)localObject).append(" and rcontact.username").append(" = bizinfo.username");
-    ((StringBuilder)localObject).append(" and (rcontact.verifyFlag").append(" & ").append(k.aWr()).append(") != 0 ");
-    ((StringBuilder)localObject).append(" and (rcontact.type").append(" & 1) != 0 ");
-    ((StringBuilder)localObject).append(" and bizinfo.enterpriseFather").append(" = '").append(paramString).append("'");
-    ((StringBuilder)localObject).append(" and (bizinfo.bitFlag").append(" & 1) == 0 ");
-    paramString = ((StringBuilder)localObject).toString();
-    u.i("!32@/B4Tb64lLpJBvWFKDfNn3fDJZ/Q78pVI", "getEnterpriseChildNameList sql %s", new Object[] { paramString });
-    paramString = tDbzA.rawQuery(paramString, null);
-    if (paramString == null) {
-      return null;
-    }
-    localObject = new LinkedList();
-    if (paramString.moveToFirst()) {
-      do
-      {
-        ((List)localObject).add(paramString.getString(0));
-      } while (paramString.moveToNext());
-    }
-    paramString.close();
-    return (List)localObject;
-  }
-  
-  public static String gO(String paramString)
-  {
-    if (ay.kz(paramString))
-    {
-      u.w("!32@/B4Tb64lLpJBvWFKDfNn3fDJZ/Q78pVI", "getBizChatBrandUserName userName is null");
-      paramString = null;
-    }
-    do
-    {
-      return paramString;
-      if ((bIR == null) || (!bIR.containsKey(paramString))) {
-        break label74;
-      }
-      localObject = (String)bIR.get(paramString);
-      if ((ay.kz((String)localObject)) || (!i.dZ((String)localObject))) {
-        break;
-      }
-      paramString = (String)localObject;
-    } while (n.gW((String)localObject));
-    return null;
-    label74:
-    if (!n.gV(paramString))
-    {
-      u.w("!32@/B4Tb64lLpJBvWFKDfNn3fDJZ/Q78pVI", "getBizChatBrandUserName not EnterpriseFatherBiz");
-      return null;
-    }
-    aj.xF();
-    Object localObject = gM(paramString).iterator();
-    while (((Iterator)localObject).hasNext())
-    {
-      String str = (String)((Iterator)localObject).next();
-      if ((i.dZ(str)) && (n.gW(str)))
-      {
-        if (bIR == null) {
-          bIR = new HashMap();
-        }
-        bIR.put(paramString, str);
-        return str;
-      }
-    }
-    return null;
-  }
-  
-  public static boolean gP(String paramString)
-  {
-    boolean bool3 = false;
-    boolean bool1 = false;
-    boolean bool2 = bool1;
-    if (!ay.kz(paramString))
-    {
-      if (n.gX(paramString)) {
-        break label24;
-      }
-      bool2 = bool1;
-    }
-    label24:
-    do
-    {
-      return bool2;
-      Object localObject1 = n.gS(paramString);
-      Object localObject2;
-      if ((((l)localObject1).aR(false) != null) && (((l)localObject1).aR(false).xb() != null) && (!ay.kz(aRxbbIB)))
-      {
-        com.tencent.mm.model.ah.tD().rt();
-        localObject2 = s.EM(aRxbbIB);
-        if ((localObject2 != null) && (field_username.equals(paramString)) && (field_unReadCount > 0)) {
-          com.tencent.mm.model.ah.tD().rt().EC(aRxbbIB);
+          bool1 = bool2;
+          if (m.c(m.this).isEmpty()) {
+            bool1 = true;
+          }
         }
       }
-      localObject1 = com.tencent.mm.model.ah.tD().rs().Fg(paramString);
-      ((Cursor)localObject1).moveToFirst();
-      for (bool1 = bool3; !((Cursor)localObject1).isAfterLast(); bool1 = true)
+      locala.a(localm, bool1);
+      return true;
+    }
+  }, true);
+  public boolean foreground = false;
+  private final ac handler = new ac(Looper.getMainLooper())
+  {
+    public final void handleMessage(Message paramAnonymousMessage)
+    {
+      a((j)obj, 0);
+    }
+  };
+  private final Object lock = new Object();
+  
+  private m(a parama)
+  {
+    bze = parama;
+  }
+  
+  public static m a(a parama)
+  {
+    if (byY == null) {
+      byY = new m(parama);
+    }
+    return byY;
+  }
+  
+  private void a(final int paramInt1, final int paramInt2, final String paramString, final j paramj)
+  {
+    handler.post(new Runnable()
+    {
+      public final void run()
       {
-        localObject2 = new ag();
-        ((ag)localObject2).c((Cursor)localObject1);
-        ((ag)localObject2).bk(4);
-        u.d("!32@/B4Tb64lLpJBvWFKDfNn3fDJZ/Q78pVI", "writeOpLog: msgSvrId = " + field_msgSvrId + " status = " + field_status);
-        ((Cursor)localObject1).moveToNext();
-      }
-      ((Cursor)localObject1).close();
-      bool2 = bool1;
-    } while (!bool1);
-    com.tencent.mm.model.ah.tD().rt().EC(paramString);
-    com.tencent.mm.model.ah.tD().rs().Fe(paramString);
-    return bool1;
-  }
-  
-  public static void gQ(String paramString)
-  {
-    if ((ay.kz(paramString)) || (!n.gX(paramString))) {
-      return;
-    }
-    com.tencent.mm.model.ah.kU().cK(paramString);
-    com.tencent.mm.model.ah.kU().kL();
-  }
-  
-  public static void gR(String paramString)
-  {
-    if ((ay.kz(paramString)) || (!n.gX(paramString))) {
-      return;
-    }
-    com.tencent.mm.model.ah.kU().cK("");
-  }
-  
-  public static String xd()
-  {
-    StringBuffer localStringBuffer = new StringBuffer();
-    localStringBuffer.append("rcontact.showHead asc, ");
-    localStringBuffer.append(" case when length(rcontact.conRemarkPYFull) > 0 then upper(").append("rcontact.conRemarkPYFull) ");
-    localStringBuffer.append(" else upper(rcontact.quanPin) end asc, ");
-    localStringBuffer.append(" case when length(rcontact.conRemark) > 0 then upper(").append("rcontact.conRemark) ");
-    localStringBuffer.append(" else upper(rcontact.quanPin) end asc, ");
-    localStringBuffer.append(" upper(rcontact.quanPin) asc, ");
-    localStringBuffer.append(" upper(rcontact.nickname) asc, ");
-    localStringBuffer.append(" upper(rcontact.username) asc ");
-    return localStringBuffer.toString();
-  }
-  
-  public static String xe()
-  {
-    StringBuffer localStringBuffer = new StringBuffer();
-    localStringBuffer.append("rcontact.type & ").append(2048).append(" desc, ");
-    localStringBuffer.append("rcontact.showHead asc, ");
-    localStringBuffer.append(" case when length(rcontact.conRemarkPYFull) > 0 then upper(").append("rcontact.conRemarkPYFull) ");
-    localStringBuffer.append(" else upper(rcontact.quanPin) end asc, ");
-    localStringBuffer.append(" case when length(rcontact.conRemark) > 0 then upper(").append("rcontact.conRemark) ");
-    localStringBuffer.append(" else upper(rcontact.quanPin) end asc, ");
-    localStringBuffer.append(" upper(rcontact.quanPin) asc, ");
-    localStringBuffer.append(" upper(rcontact.nickname) asc, ");
-    localStringBuffer.append(" upper(rcontact.username) asc ");
-    return localStringBuffer.toString();
-  }
-  
-  public final void a(a parama)
-  {
-    bGU.a(parama, null);
-  }
-  
-  public final void b(a parama)
-  {
-    if (bGU != null) {
-      bGU.remove(parama);
-    }
-  }
-  
-  public final boolean c(l paraml)
-  {
-    field_updateTime = System.currentTimeMillis();
-    paraml.wA();
-    u.v("!32@/B4Tb64lLpJBvWFKDfNn3fDJZ/Q78pVI", "username is %s, %s, %d, %s, %s, %s, %d", new Object[] { field_username, field_brandList, Integer.valueOf(field_brandFlag), field_brandInfo, field_extInfo, field_brandIconURL, Long.valueOf(field_updateTime) });
-    Object localObject = paraml.aR(false);
-    if (localObject != null)
-    {
-      localObject = ((l.c)localObject).wT();
-      if (localObject != null) {
-        field_specialType = bIr;
-      }
-    }
-    boolean bool = super.a(paraml);
-    if ((bool) && (!i.dn(field_username)))
-    {
-      localObject = new m.a.b();
-      bIY = field_username;
-      bHY = paraml.wB();
-      bIX = m.a.a.bIT;
-      bIZ = paraml;
-      bGU.aw(localObject);
-      bGU.Ep();
-    }
-    return bool;
-  }
-  
-  public final List cW(int paramInt)
-  {
-    Object localObject = String.format(Locale.US, "select %s from %s where %s & %d > 0", new Object[] { "username", "bizinfo", "acceptType", Integer.valueOf(paramInt) });
-    u.i("!32@/B4Tb64lLpJBvWFKDfNn3fDJZ/Q78pVI", "getList: sql[%s]", new Object[] { localObject });
-    long l = ay.FT();
-    localObject = rawQuery((String)localObject, new String[0]);
-    LinkedList localLinkedList = new LinkedList();
-    if (localObject != null)
-    {
-      if (((Cursor)localObject).moveToFirst()) {
-        do
+        Set localSet = (Set)m.i(m.this).get(Integer.valueOf(paramj.getType()));
+        Object localObject;
+        d locald;
+        if ((localSet != null) && (localSet.size() > 0))
         {
-          localLinkedList.add(((Cursor)localObject).getString(0));
-        } while (((Cursor)localObject).moveToNext());
+          localObject = new HashSet();
+          ((Set)localObject).addAll(localSet);
+          localObject = ((Set)localObject).iterator();
+          while (((Iterator)localObject).hasNext())
+          {
+            locald = (d)((Iterator)localObject).next();
+            if ((locald != null) && (localSet.contains(locald))) {
+              locald.onSceneEnd(paramInt1, paramInt2, paramString, paramj);
+            }
+          }
+        }
+        localSet = (Set)m.i(m.this).get(Integer.valueOf(-1));
+        if ((localSet != null) && (localSet.size() > 0))
+        {
+          localObject = new HashSet();
+          ((Set)localObject).addAll(localSet);
+          localObject = ((Set)localObject).iterator();
+          while (((Iterator)localObject).hasNext())
+          {
+            locald = (d)((Iterator)localObject).next();
+            if ((locald != null) && (localSet.contains(locald))) {
+              locald.onSceneEnd(paramInt1, paramInt2, paramString, paramj);
+            }
+          }
+        }
       }
-      ((Cursor)localObject).close();
-      u.i("!32@/B4Tb64lLpJBvWFKDfNn3fDJZ/Q78pVI", "getMyAcceptList: type[%d], use time[%d ms]", new Object[] { Integer.valueOf(paramInt), Long.valueOf(ay.ao(l)) });
-      return com.tencent.mm.model.ah.tD().rq().bE(localLinkedList);
-    }
-    u.i("!32@/B4Tb64lLpJBvWFKDfNn3fDJZ/Q78pVI", "getMyAcceptList: cursor not null, type[%d], use time[%d ms]", new Object[] { Integer.valueOf(paramInt), Long.valueOf(ay.ao(l)) });
-    return localLinkedList;
+    });
   }
   
-  public final int cX(int paramInt)
+  private void b(final j paramj, int paramInt)
   {
-    long l = System.currentTimeMillis();
-    String str = String.format(Locale.US, "select count(*) from %s where %s & %d > 0", new Object[] { "bizinfo", "acceptType", Integer.valueOf(paramInt) });
-    Cursor localCursor = rawQuery(str, new String[0]);
-    if (localCursor != null)
+    boolean bool = vS();
+    int j = bza.size();
+    int k = paramj.getType();
+    int m = paramj.hashCode();
+    int n = paramj.vI();
+    int i1 = bzb.size();
+    int i;
+    if (byZ == null)
     {
-      paramInt = localCursor.getCount();
-      localCursor.close();
+      i = 0;
+      v.i("MicroMsg.NetSceneQueue", "doSceneImp start: mmcgi type:%d hash[%d,%d] run:%d wait:%d afterSec:%d canDo:%b autoauth:%d", new Object[] { Integer.valueOf(k), Integer.valueOf(m), Integer.valueOf(n), Integer.valueOf(j), Integer.valueOf(i1), Integer.valueOf(paramInt), Boolean.valueOf(bool), Integer.valueOf(i) });
+      if ((paramInt != 0) || (!bool) || (byZ == null)) {
+        break label323;
+      }
     }
+    label323:
+    do
+    {
+      for (;;)
+      {
+        synchronized (lock)
+        {
+          bza.add(paramj);
+          if (j == bza.size()) {
+            v.w("MicroMsg.NetSceneQueue", "doSceneImp mmcgi  Add to runningQueue wrong  type:%d hash:%d run:[%d ,%d] wait:%d ", new Object[] { Integer.valueOf(paramj.getType()), Integer.valueOf(paramj.hashCode()), Integer.valueOf(j), Integer.valueOf(bza.size()), Integer.valueOf(bzb.size()) });
+          }
+          btF.t(new Runnable()
+          {
+            public final void run()
+            {
+              int k = 0;
+              paramjbyI = m.this;
+              int j;
+              if (m.f(m.this) != null)
+              {
+                j = paramj.a(m.f(m.this), m.this);
+                if (j >= 0) {}
+              }
+              for (int i = j;; i = 0)
+              {
+                int m = paramj.getType();
+                int n = paramj.hashCode();
+                int i1 = paramj.vI();
+                int i2 = m.b(m.this).size();
+                int i3 = m.c(m.this).size();
+                if (m.f(m.this) == null) {
+                  j = k;
+                }
+                for (;;)
+                {
+                  v.w("MicroMsg.NetSceneQueue", "doscene mmcgi Failed type:%d hash[%d,%d] run:%d wait:%d ret:%d autoauth:%d", new Object[] { Integer.valueOf(m), Integer.valueOf(n), Integer.valueOf(i1), Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i), Integer.valueOf(j) });
+                  paramjbyI = null;
+                  synchronized (m.g(m.this))
+                  {
+                    m.b(m.this).remove(paramj);
+                    m.h(m.this).post(new Runnable()
+                    {
+                      public final void run()
+                      {
+                        onSceneEnd(3, -1, "doScene failed", acZ);
+                      }
+                    });
+                    return;
+                    j = m.f(m.this).hashCode();
+                  }
+                }
+                k = paramj.getType();
+                m = paramj.hashCode();
+                n = paramj.vI();
+                i1 = m.b(m.this).size();
+                i2 = m.c(m.this).size();
+                if (m.f(m.this) == null) {}
+                for (i = 0;; i = m.f(m.this).hashCode())
+                {
+                  v.i("MicroMsg.NetSceneQueue", "On doscene  mmcgi type:%d hash[%d,%d] run:%d wait:%d ret:%d autoauth:%d", new Object[] { Integer.valueOf(k), Integer.valueOf(m), Integer.valueOf(n), Integer.valueOf(i1), Integer.valueOf(i2), Integer.valueOf(j), Integer.valueOf(i) });
+                  paramjbyJ = false;
+                  return;
+                }
+              }
+            }
+            
+            public final String toString()
+            {
+              return super.toString() + "|doSceneImp_" + paramj + "_type=" + paramj.getType();
+            }
+          });
+          if (byZ != null) {
+            break label565;
+          }
+          if ((bze != null) && (!com.tencent.mm.model.ah.tL())) {
+            break;
+          }
+          v.e("MicroMsg.NetSceneQueue", "prepare dispatcher failed, queue idle:%s, acc accInitializing:[%b]", new Object[] { bze, Boolean.valueOf(com.tencent.mm.model.ah.tL()) });
+          return;
+          i = byZ.hashCode();
+        }
+        if (paramInt > 0)
+        {
+          ??? = Message.obtain();
+          obj = paramj;
+          handler.sendMessageDelayed((Message)???, paramInt);
+          v.i("MicroMsg.NetSceneQueue", "timed: type=" + paramj.getType() + " id=" + paramj.hashCode() + " cur_after_sec=" + paramInt);
+        }
+        else
+        {
+          v.i("MicroMsg.NetSceneQueue", "waited: type=" + paramj.getType() + " id=" + paramj.hashCode() + " cur_waiting_cnt=" + bzb.size());
+          synchronized (lock)
+          {
+            bzb.add(paramj);
+            v.i("MicroMsg.NetSceneQueue", "waitingQueue_size = " + bzb.size());
+          }
+        }
+      }
+      bze.jD();
+      new com.tencent.mm.sdk.platformtools.ah(Looper.getMainLooper(), new ah.a()
+      {
+        private long bzn = 10L;
+        
+        public final boolean jK()
+        {
+          if (m.f(m.this) == null)
+          {
+            long l = bzn;
+            bzn = (l - 1L);
+            if (l > 0L) {
+              return true;
+            }
+          }
+          m.j(m.this);
+          return false;
+        }
+      }, true).dJ(bzi * 100);
+    } while (bzi >= 512);
+    bzi *= 2;
+    return;
+    label565:
+    bzi = 1;
+  }
+  
+  private boolean e(j paramj)
+  {
+    int i = paramj.getType();
+    if (paramj.vE()) {
+      synchronized (lock)
+      {
+        Iterator localIterator = bza.iterator();
+        j localj;
+        while (localIterator.hasNext())
+        {
+          localj = (j)localIterator.next();
+          if (localj.getType() == i)
+          {
+            v.i("MicroMsg.NetSceneQueue", "forbid in running: type=" + paramj.getType() + " id=" + paramj.hashCode() + " cur_running_cnt=" + bza.size());
+            if (paramj.b(localj)) {
+              return true;
+            }
+            if (paramj.a(localj))
+            {
+              v.e("MicroMsg.NetSceneQueue", "forbid in running diagnostic: type=" + paramj.getType() + " id=" + paramj.hashCode() + " cur_running_cnt=" + bza.size() + " ---" + localj.hashCode());
+              if (!foreground)
+              {
+                v.e("MicroMsg.NetSceneQueue", "forbid in running diagnostic: type=" + paramj.getType() + "acinfo[" + localj.getInfo() + "] scinfo[" + paramj.getInfo() + "]");
+                v.appenderFlush();
+                Assert.assertTrue("NetsceneQueue forbid in running diagnostic: type=" + paramj.getType(), false);
+              }
+              c(localj);
+              return true;
+            }
+            return false;
+          }
+        }
+        localIterator = bzb.iterator();
+        while (localIterator.hasNext())
+        {
+          localj = (j)localIterator.next();
+          if (localj.getType() == i)
+          {
+            v.i("MicroMsg.NetSceneQueue", "forbid in waiting: type=" + paramj.getType() + " id=" + paramj.hashCode() + " cur_waiting_cnt=" + bzb.size());
+            if (paramj.b(localj)) {
+              return true;
+            }
+            if (paramj.a(localj))
+            {
+              v.e("MicroMsg.NetSceneQueue", "forbid in waiting diagnostic: type=" + paramj.getType() + " id=" + paramj.hashCode() + " cur_waiting_cnt=" + bzb.size() + " ---" + localj.hashCode());
+              if (!foreground)
+              {
+                v.appenderFlush();
+                Assert.assertTrue("NetsceneQueue forbid in waiting diagnostic: type=" + paramj.getType(), false);
+              }
+              c(localj);
+              return true;
+            }
+            return false;
+          }
+        }
+      }
+    }
+    return true;
+  }
+  
+  private void vR()
+  {
     for (;;)
     {
-      u.i("!32@/B4Tb64lLpJBvWFKDfNn3fDJZ/Q78pVI", "getMyAcceptListCount: sql[%s], ret[%d], costTime[%d]", new Object[] { str, Integer.valueOf(paramInt), Long.valueOf(System.currentTimeMillis() - l) });
-      return paramInt;
-      paramInt = 0;
+      int j;
+      synchronized (lock)
+      {
+        if (bzb.size() > 0)
+        {
+          j localj = (j)bzb.get(0);
+          int i = priority;
+          j = 1;
+          if (j < bzb.size())
+          {
+            if (bzb.get(j)).priority > i)
+            {
+              bzb.get(j);
+              if (vS())
+              {
+                localj = (j)bzb.get(j);
+                i = priority;
+              }
+            }
+          }
+          else
+          {
+            bzb.remove(localj);
+            v.i("MicroMsg.NetSceneQueue", "waiting2running waitingQueue_size = " + bzb.size());
+            b(localj, 0);
+          }
+        }
+        else
+        {
+          return;
+        }
+      }
+      j += 1;
     }
   }
   
-  public final boolean d(l paraml)
+  private boolean vS()
   {
-    field_updateTime = System.currentTimeMillis();
-    paraml.wA();
-    Object localObject = paraml.aR(false);
-    if (localObject != null)
+    return bza.size() < 20;
+  }
+  
+  public final void a(int paramInt, d paramd)
+  {
+    synchronized (bzc)
     {
-      localObject = ((l.c)localObject).wT();
-      if (localObject != null) {
-        field_specialType = bIr;
+      if (!bzc.containsKey(Integer.valueOf(paramInt))) {
+        bzc.put(Integer.valueOf(paramInt), new HashSet());
+      }
+      if (!((Set)bzc.get(Integer.valueOf(paramInt))).contains(paramd)) {
+        ((Set)bzc.get(Integer.valueOf(paramInt))).add(paramd);
+      }
+      return;
+    }
+  }
+  
+  public final void a(int paramInt1, String paramString, int paramInt2, boolean paramBoolean)
+  {
+    if (byZ == null)
+    {
+      v.e("MicroMsg.NetSceneQueue", "logUtil autoAuth  == null");
+      return;
+    }
+    byZ.a(paramInt1, paramString, paramInt2, paramBoolean);
+  }
+  
+  public final boolean a(j paramj, int paramInt)
+  {
+    if ((paramj != null) || (paramInt >= 0))
+    {
+      bool = true;
+      Assert.assertTrue(bool);
+      if (btF == null) {
+        break label45;
       }
     }
-    boolean bool = super.b(paraml);
-    if ((bool) && (!i.dn(field_username)))
+    label45:
+    for (boolean bool = true;; bool = false)
     {
-      localObject = new m.a.b();
-      bIY = field_username;
-      bHY = paraml.wB();
-      bIX = m.a.a.bIV;
-      bIZ = paraml;
-      bGU.aw(localObject);
-      bGU.Ep();
+      Assert.assertTrue("worker thread has not been set", bool);
+      if (e(paramj)) {
+        break label50;
+      }
+      return false;
+      bool = false;
+      break;
     }
-    return bool;
+    label50:
+    b(paramj, paramInt);
+    return true;
   }
   
-  public final l gK(String paramString)
+  public final void aq(boolean paramBoolean)
   {
-    l locall = new l();
-    field_username = paramString;
-    super.c(locall, new String[0]);
-    return locall;
+    bzg = paramBoolean;
+    if (!bzg)
+    {
+      bzh.aZJ();
+      return;
+    }
+    v.e("MicroMsg.NetSceneQueue", "the working process is ready to be killed");
+    bzh.dJ(bzf);
   }
   
-  public final void gL(String paramString)
+  public final void ar(boolean paramBoolean)
   {
-    l locall = new l();
-    field_username = paramString;
-    u.i("!32@/B4Tb64lLpJBvWFKDfNn3fDJZ/Q78pVI", "delete biz ret = %b, username = %s", new Object[] { Boolean.valueOf(super.b(locall, new String[] { "username" })), paramString });
-    m.a.b localb = new m.a.b();
-    bIY = paramString;
-    bIX = m.a.a.bIU;
-    bIZ = locall;
-    bGU.aw(localb);
-    bGU.Ep();
+    foreground = paramBoolean;
+    bzd = Boolean.valueOf(paramBoolean);
+    b.ar(paramBoolean);
+    if (byZ == null)
+    {
+      v.e("MicroMsg.NetSceneQueue", "setForeground autoAuth  == null");
+      return;
+    }
+    byZ.at(paramBoolean);
+  }
+  
+  public final void b(int paramInt, d paramd)
+  {
+    try
+    {
+      synchronized (bzc)
+      {
+        if (bzc.get(Integer.valueOf(paramInt)) != null) {
+          ((Set)bzc.get(Integer.valueOf(paramInt))).remove(paramd);
+        }
+        return;
+      }
+    }
+    catch (Exception paramd)
+    {
+      for (;;) {}
+    }
+  }
+  
+  public final void b(e parame)
+  {
+    byZ = parame;
+    parame.at(foreground);
+    vR();
+  }
+  
+  public final void c(j paramj)
+  {
+    if (paramj == null) {
+      return;
+    }
+    v.j("MicroMsg.NetSceneQueue", "cancel sceneHashCode:%d", new Object[] { Integer.valueOf(paramj.hashCode()) });
+    paramj.cancel();
+    synchronized (lock)
+    {
+      bzb.remove(paramj);
+      bza.remove(paramj);
+      return;
+    }
+  }
+  
+  public final void cancel(final int paramInt)
+  {
+    v.j("MicroMsg.NetSceneQueue", "cancel sceneHashCode:%d", new Object[] { Integer.valueOf(paramInt) });
+    btF.t(new Runnable()
+    {
+      public final void run()
+      {
+        m.a(m.this, paramInt);
+      }
+      
+      public final String toString()
+      {
+        return super.toString() + "|cancelImp_" + paramInt;
+      }
+    });
+  }
+  
+  public final boolean d(j paramj)
+  {
+    return a(paramj, 0);
+  }
+  
+  public final String getNetworkServerIp()
+  {
+    if (byZ != null) {
+      return byZ.getNetworkServerIp();
+    }
+    return "unknown";
+  }
+  
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
+  {
+    int i = 0;
+    byJ = true;
+    for (;;)
+    {
+      synchronized (lock)
+      {
+        bza.remove(paramj);
+        int j = paramj.getType();
+        int k = paramj.hashCode();
+        int m = paramj.vI();
+        int n = bza.size();
+        int i1 = bzb.size();
+        if (byZ == null)
+        {
+          v.i("MicroMsg.NetSceneQueue", "onSceneEnd mmcgi type:%d hash[%d,%d] run:%d wait:%d autoauth:%d [%d,%d,%s]", new Object[] { Integer.valueOf(j), Integer.valueOf(k), Integer.valueOf(m), Integer.valueOf(n), Integer.valueOf(i1), Integer.valueOf(i), Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
+          vR();
+          a(paramInt1, paramInt2, paramString, paramj);
+          if ((bzg) && (bza.isEmpty()) && (bzb.isEmpty())) {
+            bzh.dJ(bzf);
+          }
+          return;
+        }
+      }
+      i = byZ.hashCode();
+    }
+  }
+  
+  public final void reset()
+  {
+    if (byZ != null) {
+      byZ.reset();
+    }
+    vP();
+    Vector localVector = bzb;
+    bzb = new Vector();
+    Iterator localIterator = localVector.iterator();
+    while (localIterator.hasNext())
+    {
+      j localj = (j)localIterator.next();
+      v.i("MicroMsg.NetSceneQueue", "reset::cancel scene " + localj.getType());
+      localj.cancel();
+      a(3, -1, "doScene failed clearWaitingQueue", localj);
+    }
+    localVector.clear();
+  }
+  
+  public final int vN()
+  {
+    try
+    {
+      if ((byZ != null) && (byZ.vZ() != null)) {
+        return byZ.vZ().Fh();
+      }
+      v.e("MicroMsg.NetSceneQueue", "[arthurdan.getNetworkStatus] Notice!!! autoAuth and autoAuth.getNetworkEvent() is null!!!!");
+    }
+    catch (Exception localException)
+    {
+      for (;;)
+      {
+        v.e("MicroMsg.NetSceneQueue", "exception:%s", new Object[] { be.f(localException) });
+      }
+    }
+    if (!ak.dt(aa.getContext())) {
+      return 0;
+    }
+    return 1;
+  }
+  
+  public final boolean vO()
+  {
+    if (byZ != null) {
+      return byZ.vO();
+    }
+    return true;
+  }
+  
+  public final void vP()
+  {
+    Vector localVector = bza;
+    bza = new Vector();
+    Iterator localIterator = localVector.iterator();
+    while (localIterator.hasNext())
+    {
+      j localj = (j)localIterator.next();
+      v.i("MicroMsg.NetSceneQueue", "reset::cancel scene " + localj.getType());
+      localj.cancel();
+      a(3, -1, "doScene failed clearRunningQueue", localj);
+    }
+    localVector.clear();
+  }
+  
+  public final void vQ()
+  {
+    v.i("MicroMsg.NetSceneQueue", "resetDispatcher");
+    if (byZ != null)
+    {
+      byZ.reset();
+      byZ = null;
+    }
   }
   
   public static abstract interface a
   {
-    public abstract void a(b paramb);
+    public abstract void a(m paramm, boolean paramBoolean);
     
-    public static enum a {}
-    
-    public static final class b
-    {
-      public boolean bHY;
-      public int bIX;
-      public String bIY;
-      public l bIZ;
-    }
+    public abstract void jD();
   }
 }
 

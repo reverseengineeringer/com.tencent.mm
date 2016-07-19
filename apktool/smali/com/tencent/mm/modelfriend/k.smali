@@ -4,17 +4,17 @@
 
 
 # instance fields
-.field aSD:I
+.field public aFd:I
 
-.field aSE:Ljava/lang/String;
+.field aFm:I
 
-.field aSF:Ljava/lang/String;
+.field aFn:Ljava/lang/String;
 
-.field aSG:Ljava/lang/String;
+.field aFo:Ljava/lang/String;
 
-.field public aSu:I
+.field aFp:Ljava/lang/String;
 
-.field aou:I
+.field aqQ:I
 
 .field username:Ljava/lang/String;
 
@@ -32,28 +32,28 @@
     .line 54
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/modelfriend/k;->aou:I
+    iput v0, p0, Lcom/tencent/mm/modelfriend/k;->aqQ:I
 
     .line 73
     const-string/jumbo v0, ""
 
     iput-object v0, p0, Lcom/tencent/mm/modelfriend/k;->username:Ljava/lang/String;
 
-    iput v1, p0, Lcom/tencent/mm/modelfriend/k;->aSu:I
+    iput v1, p0, Lcom/tencent/mm/modelfriend/k;->aFd:I
 
-    iput v1, p0, Lcom/tencent/mm/modelfriend/k;->aSD:I
-
-    const-string/jumbo v0, ""
-
-    iput-object v0, p0, Lcom/tencent/mm/modelfriend/k;->aSF:Ljava/lang/String;
+    iput v1, p0, Lcom/tencent/mm/modelfriend/k;->aFm:I
 
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/modelfriend/k;->aSG:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/k;->aFo:Ljava/lang/String;
 
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/modelfriend/k;->aSE:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/k;->aFp:Ljava/lang/String;
+
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/k;->aFn:Ljava/lang/String;
 
     .line 74
     return-void
@@ -81,7 +81,7 @@
     goto :goto_0
 .end method
 
-.method public final lX()Landroid/content/ContentValues;
+.method public final kn()Landroid/content/ContentValues;
     .locals 3
 
     .prologue
@@ -91,7 +91,7 @@
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
     .line 112
-    iget v0, p0, Lcom/tencent/mm/modelfriend/k;->aou:I
+    iget v0, p0, Lcom/tencent/mm/modelfriend/k;->aqQ:I
 
     and-int/lit8 v0, v0, 0x1
 
@@ -108,7 +108,7 @@
 
     .line 115
     :cond_0
-    iget v0, p0, Lcom/tencent/mm/modelfriend/k;->aou:I
+    iget v0, p0, Lcom/tencent/mm/modelfriend/k;->aqQ:I
 
     and-int/lit8 v0, v0, 0x2
 
@@ -117,7 +117,7 @@
     .line 116
     const-string/jumbo v0, "sex"
 
-    iget v2, p0, Lcom/tencent/mm/modelfriend/k;->aSu:I
+    iget v2, p0, Lcom/tencent/mm/modelfriend/k;->aFd:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -127,7 +127,7 @@
 
     .line 118
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/modelfriend/k;->aou:I
+    iget v0, p0, Lcom/tencent/mm/modelfriend/k;->aqQ:I
 
     and-int/lit8 v0, v0, 0x4
 
@@ -136,7 +136,7 @@
     .line 119
     const-string/jumbo v0, "personalcard"
 
-    iget v2, p0, Lcom/tencent/mm/modelfriend/k;->aSD:I
+    iget v2, p0, Lcom/tencent/mm/modelfriend/k;->aFm:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -146,7 +146,7 @@
 
     .line 121
     :cond_2
-    iget v0, p0, Lcom/tencent/mm/modelfriend/k;->aou:I
+    iget v0, p0, Lcom/tencent/mm/modelfriend/k;->aqQ:I
 
     and-int/lit8 v0, v0, 0x8
 
@@ -155,7 +155,7 @@
     .line 122
     const-string/jumbo v2, "province"
 
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/k;->aSF:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/k;->aFo:Ljava/lang/String;
 
     if-nez v0, :cond_6
 
@@ -166,7 +166,7 @@
 
     .line 124
     :cond_3
-    iget v0, p0, Lcom/tencent/mm/modelfriend/k;->aou:I
+    iget v0, p0, Lcom/tencent/mm/modelfriend/k;->aqQ:I
 
     and-int/lit8 v0, v0, 0x10
 
@@ -175,7 +175,7 @@
     .line 125
     const-string/jumbo v2, "city"
 
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/k;->aSG:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/k;->aFp:Ljava/lang/String;
 
     if-nez v0, :cond_7
 
@@ -186,7 +186,7 @@
 
     .line 127
     :cond_4
-    iget v0, p0, Lcom/tencent/mm/modelfriend/k;->aou:I
+    iget v0, p0, Lcom/tencent/mm/modelfriend/k;->aqQ:I
 
     and-int/lit8 v0, v0, 0x20
 
@@ -195,7 +195,7 @@
     .line 128
     const-string/jumbo v2, "signature"
 
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/k;->aSE:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/k;->aFn:Ljava/lang/String;
 
     if-nez v0, :cond_8
 
@@ -210,19 +210,19 @@
 
     .line 122
     :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/k;->aSF:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/k;->aFo:Ljava/lang/String;
 
     goto :goto_0
 
     .line 125
     :cond_7
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/k;->aSG:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/k;->aFp:Ljava/lang/String;
 
     goto :goto_1
 
     .line 128
     :cond_8
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/k;->aSE:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/k;->aFn:Ljava/lang/String;
 
     goto :goto_2
 .end method

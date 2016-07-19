@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.chat;
 
 import android.content.Context;
 import android.content.Intent;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import java.util.ArrayList;
 
 final class ChatFooter$23
@@ -10,25 +10,25 @@ final class ChatFooter$23
 {
   ChatFooter$23(ChatFooter paramChatFooter, Context paramContext) {}
   
-  public final void AI(String paramString)
+  public final void CO(String paramString)
   {
     Intent localIntent = new Intent();
     ArrayList localArrayList = new ArrayList(1);
     localArrayList.add(paramString);
-    if (ChatFooter.d(iLO) != null) {
-      localIntent.putExtra("GalleryUI_FromUser", ChatFooter.d(iLO));
+    if (ChatFooter.d(jiL) != null) {
+      localIntent.putExtra("GalleryUI_FromUser", ChatFooter.d(jiL));
     }
-    if (ChatFooter.e(iLO) != null) {
-      localIntent.putExtra("GalleryUI_ToUser", ChatFooter.e(iLO));
+    if (ChatFooter.e(jiL) != null) {
+      localIntent.putExtra("GalleryUI_ToUser", ChatFooter.e(jiL));
     }
     localIntent.putExtra("query_source_type", 3);
     localIntent.putExtra("preview_image", true);
     localIntent.putStringArrayListExtra("preview_image_list", localArrayList);
     localIntent.putExtra("max_select_count", 1);
     localIntent.addFlags(67108864);
-    if (ChatFooter.f(iLO) != null)
+    if (ChatFooter.f(jiL) != null)
     {
-      c.a(ChatFooter.f(iLO), "gallery", ".ui.GalleryEntryUI", localIntent, 217);
+      c.a(ChatFooter.f(jiL), "gallery", ".ui.GalleryEntryUI", localIntent, 217);
       return;
     }
     c.a(val$context, "gallery", ".ui.GalleryEntryUI", localIntent, 217);

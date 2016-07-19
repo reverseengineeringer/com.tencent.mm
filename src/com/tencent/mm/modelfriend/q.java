@@ -4,13 +4,13 @@ import android.content.ContentValues;
 
 public final class q
 {
-  int aou = -1;
-  private int bCs = 0;
-  private String bCu = "";
-  private String bCv = "";
-  public int bIs = 0;
-  public int bMG = 0;
-  private int bMH = 0;
+  int aqQ = -1;
+  public int bBD = 0;
+  public int bGa = 0;
+  private int bGb = 0;
+  private int bvC = 0;
+  private String bvE = "";
+  private String bvF = "";
   public String username = "";
   
   public final String getUsername()
@@ -21,43 +21,43 @@ public final class q
     return username;
   }
   
-  public final ContentValues lX()
+  public final ContentValues kn()
   {
     ContentValues localContentValues = new ContentValues();
-    if ((aou & 0x1) != 0) {
+    if ((aqQ & 0x1) != 0) {
       localContentValues.put("username", getUsername());
     }
-    if ((aou & 0x2) != 0) {
-      localContentValues.put("friendtype", Integer.valueOf(bMG));
+    if ((aqQ & 0x2) != 0) {
+      localContentValues.put("friendtype", Integer.valueOf(bGa));
     }
-    if ((aou & 0x4) != 0) {
-      localContentValues.put("updatetime", Integer.valueOf(bIs));
+    if ((aqQ & 0x4) != 0) {
+      localContentValues.put("updatetime", Integer.valueOf(bBD));
     }
-    if ((aou & 0x8) != 0) {
-      localContentValues.put("reserved1", Integer.valueOf(bCs));
+    if ((aqQ & 0x8) != 0) {
+      localContentValues.put("reserved1", Integer.valueOf(bvC));
     }
-    if ((aou & 0x10) != 0) {
-      localContentValues.put("reserved2", Integer.valueOf(bMH));
+    if ((aqQ & 0x10) != 0) {
+      localContentValues.put("reserved2", Integer.valueOf(bGb));
     }
-    if ((aou & 0x20) != 0)
+    if ((aqQ & 0x20) != 0)
     {
-      if (bCu == null)
+      if (bvE == null)
       {
         str = "";
         localContentValues.put("reserved3", str);
       }
     }
-    else if ((aou & 0x40) != 0) {
-      if (bCv != null) {
+    else if ((aqQ & 0x40) != 0) {
+      if (bvF != null) {
         break label181;
       }
     }
     label181:
-    for (String str = "";; str = bCv)
+    for (String str = "";; str = bvF)
     {
       localContentValues.put("reserved4", str);
       return localContentValues;
-      str = bCu;
+      str = bvE;
       break;
     }
   }

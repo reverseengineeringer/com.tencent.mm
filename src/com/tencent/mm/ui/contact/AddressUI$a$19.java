@@ -1,25 +1,21 @@
 package com.tencent.mm.ui.contact;
 
-import android.content.Intent;
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.tencent.mm.ar.c;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.ui.j;
-import com.tencent.mm.ui.o;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.base.MMSlideDelView.e;
 
 final class AddressUI$a$19
-  implements View.OnClickListener
+  implements MMSlideDelView.e
 {
   AddressUI$a$19(AddressUI.a parama) {}
   
-  public final void onClick(View paramView)
+  public final void at(Object paramObject)
   {
-    paramView = new Intent();
-    paramView.putExtra("Invite_friends", true);
-    c.c(liu.koJ.kpc, "subapp", ".ui.pluginapp.AddMoreFriendsUI", paramView);
-    paramView = h.fUJ;
-    h.b(224L, 1L, 1L, false);
+    if (paramObject == null)
+    {
+      v.e("MicroMsg.AddressUI", "onItemDel object null");
+      return;
+    }
+    AddressUI.a.a(lIF, paramObject.toString());
   }
 }
 

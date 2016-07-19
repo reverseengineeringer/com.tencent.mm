@@ -1,103 +1,70 @@
 package com.tencent.mm.protocal.b;
 
+import java.util.LinkedList;
+
 public final class ni
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public String byS;
-  public String byU;
-  public String byV;
-  public String byW;
-  public String byX;
-  public int jmL;
+  public long jIN;
+  public long jIO;
+  public LinkedList<aug> jIP = new LinkedList();
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (byS != null) {
-        paramVarArgs.d(1, byS);
-      }
-      paramVarArgs.ci(2, jmL);
-      if (byV != null) {
-        paramVarArgs.d(3, byV);
-      }
-      if (byW != null) {
-        paramVarArgs.d(4, byW);
-      }
-      if (byU != null) {
-        paramVarArgs.d(5, byU);
-      }
-      if (byX != null) {
-        paramVarArgs.d(6, byX);
-      }
+      paramVarArgs.z(1, jIN);
+      paramVarArgs.z(2, jIO);
+      paramVarArgs.d(3, 8, jIP);
       return 0;
     }
     if (paramInt == 1) {
-      if (byS == null) {
-        break label438;
-      }
+      return a.a.a.a.y(1, jIN) + 0 + a.a.a.a.y(2, jIO) + a.a.a.a.c(3, 8, jIP);
     }
-    label438:
-    for (paramInt = a.a.a.b.b.a.e(1, byS) + 0;; paramInt = 0)
+    if (paramInt == 2)
     {
-      int i = paramInt + a.a.a.a.cg(2, jmL);
-      paramInt = i;
-      if (byV != null) {
-        paramInt = i + a.a.a.b.b.a.e(3, byV);
-      }
-      i = paramInt;
-      if (byW != null) {
-        i = paramInt + a.a.a.b.b.a.e(4, byW);
-      }
-      paramInt = i;
-      if (byU != null) {
-        paramInt = i + a.a.a.b.b.a.e(5, byU);
-      }
-      i = paramInt;
-      if (byX != null) {
-        i = paramInt + a.a.a.b.b.a.e(6, byX);
-      }
-      return i;
-      if (paramInt == 2)
-      {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
-          if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
-          }
+      paramVarArgs = (byte[])paramVarArgs[0];
+      jIP.clear();
+      paramVarArgs = new a.a.a.a.a(paramVarArgs, jrk);
+      for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
+        if (!super.a(paramVarArgs, this, paramInt)) {
+          paramVarArgs.bve();
         }
-        break;
       }
-      if (paramInt == 3)
+      return 0;
+    }
+    if (paramInt == 3)
+    {
+      Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
+      ni localni = (ni)paramVarArgs[1];
+      paramInt = ((Integer)paramVarArgs[2]).intValue();
+      switch (paramInt)
       {
-        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-        ni localni = (ni)paramVarArgs[1];
-        switch (((Integer)paramVarArgs[2]).intValue())
-        {
-        default: 
-          return -1;
-        case 1: 
-          byS = maU.readString();
-          return 0;
-        case 2: 
-          jmL = maU.jC();
-          return 0;
-        case 3: 
-          byV = maU.readString();
-          return 0;
-        case 4: 
-          byW = maU.readString();
-          return 0;
-        case 5: 
-          byU = maU.readString();
-          return 0;
-        }
-        byX = maU.readString();
+      default: 
+        return -1;
+      case 1: 
+        jIN = mMY.ie();
+        return 0;
+      case 2: 
+        jIO = mMY.ie();
         return 0;
       }
-      return -1;
+      paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+      int i = paramVarArgs.size();
+      paramInt = 0;
+      while (paramInt < i)
+      {
+        Object localObject2 = (byte[])paramVarArgs.get(paramInt);
+        localObject1 = new aug();
+        localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+        for (boolean bool = true; bool; bool = ((aug)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, com.tencent.mm.ax.a.a((a.a.a.a.a)localObject2))) {}
+        jIP.add(localObject1);
+        paramInt += 1;
+      }
+      return 0;
     }
+    return -1;
   }
 }
 

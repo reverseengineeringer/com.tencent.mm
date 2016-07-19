@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hnd:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;
+.field final synthetic hDy:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 236
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3$1;->hnd:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;
+    .line 293
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3$1;->hDy:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,71 +36,71 @@
 
 
 # virtual methods
-.method public final eu(I)V
+.method public final fg(I)V
     .locals 4
 
     .prologue
-    .line 240
+    .line 297
     packed-switch p1, :pswitch_data_0
 
-    .line 257
+    .line 314
     :goto_0
     return-void
 
-    .line 242
+    .line 299
     :pswitch_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 243
+    .line 300
     const-string/jumbo v1, "Select_Conv_Type"
 
     const/4 v2, 0x3
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 245
+    .line 302
     const-string/jumbo v1, "select_is_ret"
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 246
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3$1;->hnd:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;
+    .line 303
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3$1;->hDy:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;->hnc:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;->hDx:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
 
     const-string/jumbo v2, ".ui.transmit.SelectConversationUI"
 
     const/16 v3, 0x1001
 
-    invoke-static {v1, v2, v0, v3}, Lcom/tencent/mm/ar/c;->a(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;I)V
+    invoke-static {v1, v2, v0, v3}, Lcom/tencent/mm/av/c;->a(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;I)V
 
     goto :goto_0
 
-    .line 251
+    .line 308
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3$1;->hnd:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3$1;->hDy:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;->hnc:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;->hDx:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;->i(Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;->m(Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;)V
 
     goto :goto_0
 
-    .line 254
+    .line 311
     :pswitch_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3$1;->hnd:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3$1;->hDy:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;->hnc:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$3;->hDx:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;->j(Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;->n(Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;)V
 
     goto :goto_0
 
-    .line 240
+    .line 297
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

@@ -13,27 +13,36 @@
     name = "b"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/tencent/mm/ui/j$b;",
+        ">;"
+    }
+.end annotation
+
 
 # static fields
-.field public static final enum kpI:I
+.field public static final enum kON:I
 
-.field public static final enum kpJ:I
+.field public static final enum kOO:I
 
-.field public static final enum kpK:I
+.field public static final enum kOP:I
 
-.field public static final enum kpL:I
+.field public static final enum kOQ:I
 
-.field public static final enum kpM:I
+.field public static final enum kOR:I
 
-.field public static final enum kpN:I
+.field public static final enum kOS:I
 
-.field public static final enum kpO:I
+.field public static final enum kOT:I
 
-.field public static final enum kpP:I
+.field public static final enum kOU:I
 
-.field public static final enum kpQ:I
+.field public static final enum kOV:I
 
-.field private static final synthetic kpR:[I
+.field private static final synthetic kOW:[I
 
 
 # direct methods
@@ -51,83 +60,83 @@
 
     const/4 v3, 0x1
 
-    .line 116
-    sput v3, Lcom/tencent/mm/ui/j$b;->kpI:I
+    .line 113
+    sput v3, Lcom/tencent/mm/ui/j$b;->kON:I
 
-    sput v4, Lcom/tencent/mm/ui/j$b;->kpJ:I
+    sput v4, Lcom/tencent/mm/ui/j$b;->kOO:I
 
-    sput v5, Lcom/tencent/mm/ui/j$b;->kpK:I
+    sput v5, Lcom/tencent/mm/ui/j$b;->kOP:I
 
-    sput v6, Lcom/tencent/mm/ui/j$b;->kpL:I
+    sput v6, Lcom/tencent/mm/ui/j$b;->kOQ:I
 
-    sput v7, Lcom/tencent/mm/ui/j$b;->kpM:I
+    sput v7, Lcom/tencent/mm/ui/j$b;->kOR:I
 
     const/4 v0, 0x6
 
-    sput v0, Lcom/tencent/mm/ui/j$b;->kpN:I
+    sput v0, Lcom/tencent/mm/ui/j$b;->kOS:I
 
     const/4 v0, 0x7
 
-    sput v0, Lcom/tencent/mm/ui/j$b;->kpO:I
+    sput v0, Lcom/tencent/mm/ui/j$b;->kOT:I
 
     const/16 v0, 0x8
 
-    sput v0, Lcom/tencent/mm/ui/j$b;->kpP:I
+    sput v0, Lcom/tencent/mm/ui/j$b;->kOU:I
 
     const/16 v0, 0x9
 
-    sput v0, Lcom/tencent/mm/ui/j$b;->kpQ:I
+    sput v0, Lcom/tencent/mm/ui/j$b;->kOV:I
 
-    .line 115
+    .line 112
     const/16 v0, 0x9
 
     new-array v0, v0, [I
 
     const/4 v1, 0x0
 
-    sget v2, Lcom/tencent/mm/ui/j$b;->kpI:I
+    sget v2, Lcom/tencent/mm/ui/j$b;->kON:I
 
     aput v2, v0, v1
 
-    sget v1, Lcom/tencent/mm/ui/j$b;->kpJ:I
+    sget v1, Lcom/tencent/mm/ui/j$b;->kOO:I
 
     aput v1, v0, v3
 
-    sget v1, Lcom/tencent/mm/ui/j$b;->kpK:I
+    sget v1, Lcom/tencent/mm/ui/j$b;->kOP:I
 
     aput v1, v0, v4
 
-    sget v1, Lcom/tencent/mm/ui/j$b;->kpL:I
+    sget v1, Lcom/tencent/mm/ui/j$b;->kOQ:I
 
     aput v1, v0, v5
 
-    sget v1, Lcom/tencent/mm/ui/j$b;->kpM:I
+    sget v1, Lcom/tencent/mm/ui/j$b;->kOR:I
 
     aput v1, v0, v6
 
-    sget v1, Lcom/tencent/mm/ui/j$b;->kpN:I
+    sget v1, Lcom/tencent/mm/ui/j$b;->kOS:I
 
     aput v1, v0, v7
 
     const/4 v1, 0x6
 
-    sget v2, Lcom/tencent/mm/ui/j$b;->kpO:I
+    sget v2, Lcom/tencent/mm/ui/j$b;->kOT:I
 
     aput v2, v0, v1
 
     const/4 v1, 0x7
 
-    sget v2, Lcom/tencent/mm/ui/j$b;->kpP:I
+    sget v2, Lcom/tencent/mm/ui/j$b;->kOU:I
 
     aput v2, v0, v1
 
     const/16 v1, 0x8
 
-    sget v2, Lcom/tencent/mm/ui/j$b;->kpQ:I
+    sget v2, Lcom/tencent/mm/ui/j$b;->kOV:I
 
     aput v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/ui/j$b;->kpR:[I
+    sput-object v0, Lcom/tencent/mm/ui/j$b;->kOW:[I
 
     return-void
 .end method

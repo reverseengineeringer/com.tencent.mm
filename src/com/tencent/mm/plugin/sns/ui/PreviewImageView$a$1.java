@@ -14,7 +14,7 @@ final class PreviewImageView$a$1
       return;
     }
     int i = ((Integer)paramView.getTag()).intValue();
-    had.lX(i);
+    hnv.nm(i);
   }
 }
 

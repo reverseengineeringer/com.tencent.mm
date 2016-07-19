@@ -13,13 +13,13 @@ final class MMTagPanel$8
   {
     if (((Integer)paramView.getTag()).intValue() == 0)
     {
-      kHq.a((TextView)paramView, true, false);
-      if (MMTagPanel.e(kHq) != null) {
+      lgs.a((TextView)paramView, true, false);
+      if (MMTagPanel.e(lgs) != null) {
         paramView.post(new Runnable()
         {
           public final void run()
           {
-            MMTagPanel.e(kHq).nf(((TextView)paramView).getText().toString());
+            MMTagPanel.e(lgs).on(((TextView)paramView).getText().toString());
           }
         });
       }
@@ -29,42 +29,42 @@ final class MMTagPanel$8
       do
       {
         return;
-        if ((MMTagPanel.f(kHq)) && (!MMTagPanel.c(kHq))) {
+        if ((MMTagPanel.f(lgs)) && (!MMTagPanel.c(lgs))) {
           break;
         }
-        kHq.a((TextView)paramView, false, false);
-      } while (MMTagPanel.e(kHq) == null);
+        lgs.a((TextView)paramView, false, false);
+      } while (MMTagPanel.e(lgs) == null);
       paramView.post(new Runnable()
       {
         public final void run()
         {
-          MMTagPanel.e(kHq).ne(((TextView)paramView).getText().toString());
+          MMTagPanel.e(lgs).om(((TextView)paramView).getText().toString());
         }
       });
       return;
-      if (MMTagPanel.d(kHq) == null)
+      if (MMTagPanel.d(lgs) == null)
       {
-        MMTagPanel.a(kHq, MMTagPanel.a(kHq, ((TextView)paramView).getText().toString()));
-        kHq.a(dkHq).kHC, false, true);
+        MMTagPanel.a(lgs, MMTagPanel.a(lgs, ((TextView)paramView).getText().toString()));
+        lgs.a(dlgs).lgE, false, true);
         return;
       }
-      if (dkHq).kHC != paramView) {
+      if (dlgs).lgE != paramView) {
         break;
       }
-      MMTagPanel.a(kHq, null);
-      kHq.a((TextView)paramView, false, false);
-    } while (MMTagPanel.e(kHq) == null);
+      MMTagPanel.a(lgs, null);
+      lgs.a((TextView)paramView, false, false);
+    } while (MMTagPanel.e(lgs) == null);
     paramView.post(new Runnable()
     {
       public final void run()
       {
-        MMTagPanel.e(kHq).ne(((TextView)paramView).getText().toString());
+        MMTagPanel.e(lgs).om(((TextView)paramView).getText().toString());
       }
     });
     return;
-    kHq.bcY();
-    MMTagPanel.a(kHq, MMTagPanel.a(kHq, ((TextView)paramView).getText().toString()));
-    kHq.a(dkHq).kHC, false, true);
+    lgs.biA();
+    MMTagPanel.a(lgs, MMTagPanel.a(lgs, ((TextView)paramView).getText().toString()));
+    lgs.a(dlgs).lgE, false, true);
   }
 }
 

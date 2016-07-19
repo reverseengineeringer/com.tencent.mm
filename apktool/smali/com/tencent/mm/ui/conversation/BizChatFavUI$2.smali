@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ui/base/n$d;
+.implements Landroid/widget/AdapterView$OnItemLongClickListener;
 
 
 # annotations
@@ -18,16 +18,20 @@
 
 
 # instance fields
-.field final synthetic lnW:Lcom/tencent/mm/ui/conversation/BizChatFavUI;
+.field final synthetic cED:Lcom/tencent/mm/ui/tools/m;
+
+.field final synthetic lOv:Lcom/tencent/mm/ui/conversation/BizChatFavUI;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/conversation/BizChatFavUI;)V
+.method constructor <init>(Lcom/tencent/mm/ui/conversation/BizChatFavUI;Lcom/tencent/mm/ui/tools/m;)V
     .locals 0
 
     .prologue
-    .line 322
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizChatFavUI$2;->lnW:Lcom/tencent/mm/ui/conversation/BizChatFavUI;
+    .line 268
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizChatFavUI$2;->lOv:Lcom/tencent/mm/ui/conversation/BizChatFavUI;
+
+    iput-object p2, p0, Lcom/tencent/mm/ui/conversation/BizChatFavUI$2;->cED:Lcom/tencent/mm/ui/tools/m;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,38 +40,64 @@
 
 
 # virtual methods
-.method public final d(Landroid/view/MenuItem;I)V
-    .locals 3
+.method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
+    .locals 10
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)Z"
+        }
+    .end annotation
 
     .prologue
-    .line 326
-    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
+    const/4 v8, 0x1
+
+    .line 272
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatFavUI$2;->lOv:Lcom/tencent/mm/ui/conversation/BizChatFavUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatFavUI;->e(Lcom/tencent/mm/ui/conversation/BizChatFavUI;)Landroid/widget/ListView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/ListView;->getHeaderViewsCount()I
 
     move-result v0
 
-    packed-switch v0, :pswitch_data_0
+    if-ge p3, v0, :cond_0
 
-    .line 332
+    .line 273
+    const-string/jumbo v0, "MicroMsg.BizChatFavUI"
+
+    const-string/jumbo v1, "on header view long click, ignore"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 277
     :goto_0
-    return-void
+    return v8
 
-    .line 328
-    :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatFavUI$2;->lnW:Lcom/tencent/mm/ui/conversation/BizChatFavUI;
+    .line 276
+    :cond_0
+    iget-object v1, p0, Lcom/tencent/mm/ui/conversation/BizChatFavUI$2;->cED:Lcom/tencent/mm/ui/tools/m;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/conversation/BizChatFavUI$2;->lnW:Lcom/tencent/mm/ui/conversation/BizChatFavUI;
+    iget-object v6, p0, Lcom/tencent/mm/ui/conversation/BizChatFavUI$2;->lOv:Lcom/tencent/mm/ui/conversation/BizChatFavUI;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/conversation/BizChatFavUI;->f(Lcom/tencent/mm/ui/conversation/BizChatFavUI;)J
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatFavUI$2;->lOv:Lcom/tencent/mm/ui/conversation/BizChatFavUI;
 
-    move-result-wide v1
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatFavUI;->g(Lcom/tencent/mm/ui/conversation/BizChatFavUI;)Lcom/tencent/mm/ui/base/n$d;
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/conversation/BizChatFavUI;->b(Lcom/tencent/mm/ui/conversation/BizChatFavUI;J)V
+    move-result-object v7
+
+    move-object v2, p2
+
+    move v3, p3
+
+    move-wide v4, p4
+
+    invoke-virtual/range {v1 .. v7}, Lcom/tencent/mm/ui/tools/m;->a(Landroid/view/View;IJLandroid/view/View$OnCreateContextMenuListener;Lcom/tencent/mm/ui/base/n$d;)V
 
     goto :goto_0
-
-    .line 326
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -9,12 +9,12 @@ final class v$1
   
   public final void run()
   {
-    if (cjz)
+    if (ceQ)
     {
-      KVReportJni.KVReportJava2C.writeImportKvData(cjA, cjB, cjC);
+      KVReportJni.KVReportJava2C.writeImportKvData(ceR, ceS, ceT);
       return;
     }
-    KVReportJni.KVReportJava2C.writeKvData(cjA, cjB, cjC);
+    KVReportJni.KVReportJava2C.writeKvData(ceR, ceS, ceT);
   }
   
   public final String toString()

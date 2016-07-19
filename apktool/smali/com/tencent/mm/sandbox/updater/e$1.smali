@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/af$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ah$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic jTO:Lcom/tencent/mm/sandbox/updater/e;
+.field final synthetic ktm:Lcom/tencent/mm/sandbox/updater/e;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 786
-    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/e$1;->jTO:Lcom/tencent/mm/sandbox/updater/e;
+    .line 834
+    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/e$1;->ktm:Lcom/tencent/mm/sandbox/updater/e;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,17 +36,17 @@
 
 
 # virtual methods
-.method public final lj()Z
+.method public final jK()Z
     .locals 2
 
     .prologue
     const/4 v1, 0x1
 
-    .line 789
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/e$1;->jTO:Lcom/tencent/mm/sandbox/updater/e;
+    .line 837
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/e$1;->ktm:Lcom/tencent/mm/sandbox/updater/e;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/sandbox/updater/e;->a(Lcom/tencent/mm/sandbox/updater/e;Z)V
 
-    .line 790
+    .line 838
     return v1
 .end method

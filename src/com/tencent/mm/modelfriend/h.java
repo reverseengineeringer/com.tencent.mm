@@ -5,42 +5,42 @@ import android.database.Cursor;
 
 public final class h
 {
-  int aSD = 0;
-  String aSE = "";
-  String aSF = "";
-  String aSG = "";
-  int aSu = 0;
-  public long aSw = 0L;
-  private String aSx = "";
-  String aji = "";
-  int aou = -1;
-  String bLF = "";
-  String bLG = "";
-  String bMf = "";
-  int bMg = 0;
-  String baB = "";
+  String UY = "";
+  int aFd = 0;
+  public long aFf = 0L;
+  private String aFg = "";
+  int aFm = 0;
+  String aFn = "";
+  String aFo = "";
+  String aFp = "";
+  String aOa = "";
+  int aqQ = -1;
+  String bEZ = "";
+  int bFA = 0;
+  String bFa = "";
+  String bFz = "";
   public int status = 0;
   private int type = 0;
   String username = "";
   
-  public final void c(Cursor paramCursor)
+  public final void b(Cursor paramCursor)
   {
-    aSw = paramCursor.getLong(0);
-    bMf = paramCursor.getString(1);
-    bMg = paramCursor.getInt(2);
+    aFf = paramCursor.getLong(0);
+    bFz = paramCursor.getString(1);
+    bFA = paramCursor.getInt(2);
     status = paramCursor.getInt(3);
     username = paramCursor.getString(4);
-    aji = paramCursor.getString(5);
-    bLF = paramCursor.getString(6);
-    bLG = paramCursor.getString(7);
-    aSu = paramCursor.getInt(8);
-    aSD = paramCursor.getInt(9);
-    aSF = paramCursor.getString(10);
-    aSG = paramCursor.getString(11);
-    aSE = paramCursor.getString(12);
-    baB = paramCursor.getString(13);
+    UY = paramCursor.getString(5);
+    bEZ = paramCursor.getString(6);
+    bFa = paramCursor.getString(7);
+    aFd = paramCursor.getInt(8);
+    aFm = paramCursor.getInt(9);
+    aFo = paramCursor.getString(10);
+    aFp = paramCursor.getString(11);
+    aFn = paramCursor.getString(12);
+    aOa = paramCursor.getString(13);
     type = paramCursor.getInt(14);
-    aSx = paramCursor.getString(15);
+    aFg = paramCursor.getString(15);
   }
   
   public final String getUsername()
@@ -51,30 +51,30 @@ public final class h
     return username;
   }
   
-  public final ContentValues lX()
+  public final ContentValues kn()
   {
     ContentValues localContentValues = new ContentValues();
-    if ((aou & 0x1) != 0) {
-      localContentValues.put("fbid", Long.valueOf(aSw));
+    if ((aqQ & 0x1) != 0) {
+      localContentValues.put("fbid", Long.valueOf(aFf));
     }
-    if ((aou & 0x2) != 0) {
-      localContentValues.put("fbname", yw());
+    if ((aqQ & 0x2) != 0) {
+      localContentValues.put("fbname", yI());
     }
-    if ((aou & 0x4) != 0) {
-      localContentValues.put("fbimgkey", Integer.valueOf(bMg));
+    if ((aqQ & 0x4) != 0) {
+      localContentValues.put("fbimgkey", Integer.valueOf(bFA));
     }
-    if ((aou & 0x8) != 0) {
+    if ((aqQ & 0x8) != 0) {
       localContentValues.put("status", Integer.valueOf(status));
     }
-    if ((aou & 0x10) != 0) {
+    if ((aqQ & 0x10) != 0) {
       localContentValues.put("username", getUsername());
     }
-    if ((aou & 0x20) != 0) {
-      localContentValues.put("nickname", ym());
+    if ((aqQ & 0x20) != 0) {
+      localContentValues.put("nickname", yy());
     }
-    if ((aou & 0x40) != 0)
+    if ((aqQ & 0x40) != 0)
     {
-      if (bLF == null)
+      if (bEZ == null)
       {
         str = "";
         localContentValues.put("nicknamepyinitial", str);
@@ -82,62 +82,62 @@ public final class h
     }
     else
     {
-      if ((aou & 0x80) != 0)
+      if ((aqQ & 0x80) != 0)
       {
-        if (bLG != null) {
+        if (bFa != null) {
           break label410;
         }
         str = "";
         label182:
         localContentValues.put("nicknamequanpin", str);
       }
-      if ((aou & 0x100) != 0) {
-        localContentValues.put("sex", Integer.valueOf(aSu));
+      if ((aqQ & 0x100) != 0) {
+        localContentValues.put("sex", Integer.valueOf(aFd));
       }
-      if ((aou & 0x200) != 0) {
-        localContentValues.put("personalcard", Integer.valueOf(aSD));
+      if ((aqQ & 0x200) != 0) {
+        localContentValues.put("personalcard", Integer.valueOf(aFm));
       }
-      if ((aou & 0x400) != 0)
+      if ((aqQ & 0x400) != 0)
       {
-        if (aSF != null) {
+        if (aFo != null) {
           break label418;
         }
         str = "";
         label258:
         localContentValues.put("province", str);
       }
-      if ((aou & 0x800) != 0)
+      if ((aqQ & 0x800) != 0)
       {
-        if (aSG != null) {
+        if (aFp != null) {
           break label426;
         }
         str = "";
         label286:
         localContentValues.put("city", str);
       }
-      if ((aou & 0x1000) != 0)
+      if ((aqQ & 0x1000) != 0)
       {
-        if (aSE != null) {
+        if (aFn != null) {
           break label434;
         }
         str = "";
         label314:
         localContentValues.put("signature", str);
       }
-      if ((aou & 0x2000) != 0)
+      if ((aqQ & 0x2000) != 0)
       {
-        if (baB != null) {
+        if (aOa != null) {
           break label442;
         }
         str = "";
         label342:
         localContentValues.put("alias", str);
       }
-      if ((aou & 0x4000) != 0) {
+      if ((aqQ & 0x4000) != 0) {
         localContentValues.put("type", Integer.valueOf(type));
       }
-      if ((aou & 0x8000) != 0) {
-        if (aSx != null) {
+      if ((aqQ & 0x8000) != 0) {
+        if (aFg != null) {
           break label450;
         }
       }
@@ -148,39 +148,39 @@ public final class h
     label434:
     label442:
     label450:
-    for (String str = "";; str = aSx)
+    for (String str = "";; str = aFg)
     {
       localContentValues.put("email", str);
       return localContentValues;
-      str = bLF;
+      str = bEZ;
       break;
-      str = bLG;
+      str = bFa;
       break label182;
-      str = aSF;
+      str = aFo;
       break label258;
-      str = aSG;
+      str = aFp;
       break label286;
-      str = aSE;
+      str = aFn;
       break label314;
-      str = baB;
+      str = aOa;
       break label342;
     }
   }
   
-  public final String ym()
+  public final String yI()
   {
-    if (aji == null) {
+    if (bFz == null) {
       return "";
     }
-    return aji;
+    return bFz;
   }
   
-  public final String yw()
+  public final String yy()
   {
-    if (bMf == null) {
+    if (UY == null) {
       return "";
     }
-    return bMf;
+    return UY;
   }
 }
 

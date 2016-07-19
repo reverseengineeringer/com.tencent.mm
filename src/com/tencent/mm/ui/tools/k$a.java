@@ -2,7 +2,7 @@ package com.tencent.mm.ui.tools;
 
 public abstract interface k$a
 {
-  public abstract void biD();
+  public abstract void boz();
   
   public abstract void onAnimationEnd();
 }

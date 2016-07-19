@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/af$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ah$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kOk:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
+.field final synthetic lnA:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 301
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$10;->kOk:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$10;->lnA:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,12 +36,12 @@
 
 
 # virtual methods
-.method public final lj()Z
+.method public final jK()Z
     .locals 1
 
     .prologue
     .line 303
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$10;->kOk:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$10;->lnA:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;->j(Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;)Landroid/app/Dialog;
 
@@ -50,7 +50,7 @@
     if-eqz v0, :cond_0
 
     .line 304
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$10;->kOk:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$10;->lnA:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;->j(Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;)Landroid/app/Dialog;
 
@@ -59,18 +59,18 @@
     invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
     .line 305
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$10;->kOk:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$10;->lnA:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;->k(Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;)Landroid/app/Dialog;
 
     .line 307
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$10;->kOk:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$10;->lnA:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;->i(Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;)V
 
     .line 308
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$10;->kOk:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$10;->lnA:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;->d(Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;)Z
 

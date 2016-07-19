@@ -3,705 +3,358 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/sdk/platformtools/y$b;,
+        Lcom/tencent/mm/sdk/platformtools/y$a;
+    }
+.end annotation
+
+
 # static fields
-.field private static alS:Ljava/lang/String;
+.field public static aZj:Lcom/tencent/mm/sdk/platformtools/y$b;
 
-.field private static context:Landroid/content/Context;
+.field private static kvi:I
 
-.field private static jVA:Ljava/lang/String;
+.field public static kvm:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Integer;",
+            "Lcom/tencent/mm/sdk/platformtools/y;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private static jVB:Z
+.field private static kvo:Z
 
-.field public static jVC:Z
+.field public static kvp:Z
 
-.field private static jVD:Landroid/app/ActivityManager;
 
-.field private static jVz:Ljava/lang/String;
+# instance fields
+.field public ifj:J
 
-.field private static lL:Landroid/content/res/Resources;
+.field public final kvj:I
 
-.field private static processName:Ljava/lang/String;
+.field private final kvk:Z
+
+.field public kvl:J
+
+.field private final kvn:Lcom/tencent/mm/sdk/platformtools/y$a;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
     .prologue
-    const/4 v2, 0x0
+    .line 24
+    new-instance v0, Ljava/util/HashMap;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 16
-    sput-object v1, Lcom/tencent/mm/sdk/platformtools/y;->context:Landroid/content/Context;
+    sput-object v0, Lcom/tencent/mm/sdk/platformtools/y;->kvm:Ljava/util/Map;
 
-    .line 17
-    const-string/jumbo v0, "com.tencent.mm"
+    .line 39
+    const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/sdk/platformtools/y;->jVz:Ljava/lang/String;
+    sput-boolean v0, Lcom/tencent/mm/sdk/platformtools/y;->kvo:Z
 
-    .line 18
-    const-string/jumbo v0, "com.tencent.mm"
+    return-void
+.end method
 
-    sput-object v0, Lcom/tencent/mm/sdk/platformtools/y;->alS:Ljava/lang/String;
+.method public constructor <init>(Lcom/tencent/mm/sdk/platformtools/y$a;)V
+    .locals 2
 
-    .line 19
-    const-string/jumbo v0, "com.tencent.mm.ui.LauncherUI"
+    .prologue
+    const-wide/16 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/sdk/platformtools/y;->jVA:Ljava/lang/String;
-
-    .line 20
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->alS:Ljava/lang/String;
-
-    sput-object v0, Lcom/tencent/mm/sdk/platformtools/y;->processName:Ljava/lang/String;
+    .line 54
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 21
-    sput-boolean v2, Lcom/tencent/mm/sdk/platformtools/y;->jVB:Z
+    iput-wide v0, p0, Lcom/tencent/mm/sdk/platformtools/y;->kvl:J
 
     .line 22
-    sput-boolean v2, Lcom/tencent/mm/sdk/platformtools/y;->jVC:Z
+    iput-wide v0, p0, Lcom/tencent/mm/sdk/platformtools/y;->ifj:J
 
-    .line 23
-    sput-object v1, Lcom/tencent/mm/sdk/platformtools/y;->lL:Landroid/content/res/Resources;
+    .line 55
+    const-string/jumbo v0, "bumper not initialized"
 
-    .line 24
-    sput-object v1, Lcom/tencent/mm/sdk/platformtools/y;->jVD:Landroid/app/ActivityManager;
+    sget-boolean v1, Lcom/tencent/mm/sdk/platformtools/y;->kvo:Z
 
-    return-void
-.end method
+    invoke-static {v0, v1}, Ljunit/framework/Assert;->assertTrue(Ljava/lang/String;Z)V
 
-.method public static CP(Ljava/lang/String;)V
-    .locals 0
+    .line 57
+    iput-object p1, p0, Lcom/tencent/mm/sdk/platformtools/y;->kvn:Lcom/tencent/mm/sdk/platformtools/y$a;
 
-    .prologue
-    .line 128
-    sput-object p0, Lcom/tencent/mm/sdk/platformtools/y;->processName:Ljava/lang/String;
+    .line 58
+    const/4 v0, 0x1
 
-    .line 129
-    return-void
-.end method
+    iput-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/y;->kvk:Z
 
-.method public static a(Landroid/content/res/Resources;)V
-    .locals 0
+    .line 59
+    sget v0, Lcom/tencent/mm/sdk/platformtools/y;->kvi:I
 
-    .prologue
-    .line 197
-    sput-object p0, Lcom/tencent/mm/sdk/platformtools/y;->lL:Landroid/content/res/Resources;
-
-    .line 198
-    return-void
-.end method
-
-.method public static aQC()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 124
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->processName:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public static aUH()Z
-    .locals 1
-
-    .prologue
-    .line 31
-    sget-boolean v0, Lcom/tencent/mm/sdk/platformtools/y;->jVB:Z
-
-    return v0
-.end method
-
-.method public static aUI()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 34
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->jVA:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public static aUJ()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 68
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->jVz:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public static aUK()Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    .line 72
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v1, Lcom/tencent/mm/sdk/platformtools/y;->alS:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "_preferences"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method private static aUL()Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    .line 80
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v1, Lcom/tencent/mm/sdk/platformtools/y;->alS:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "_preferences_exdevice_"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static aUM()Landroid/content/SharedPreferences;
-    .locals 3
-
-    .prologue
-    .line 84
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->context:Landroid/content/Context;
-
-    if-eqz v0, :cond_0
-
-    .line 85
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->context:Landroid/content/Context;
-
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 87
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static aUN()Landroid/content/SharedPreferences;
-    .locals 3
-
-    .prologue
-    .line 92
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->context:Landroid/content/Context;
-
-    if-eqz v0, :cond_0
-
-    .line 93
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->context:Landroid/content/Context;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v2, Lcom/tencent/mm/sdk/platformtools/y;->alS:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "_preferences_tools"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 95
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static aUO()Landroid/content/SharedPreferences;
-    .locals 3
-
-    .prologue
-    .line 100
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->context:Landroid/content/Context;
-
-    if-eqz v0, :cond_1
-
-    .line 101
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0xb
+    const/16 v1, 0x2000
 
     if-lt v0, v1, :cond_0
 
-    .line 102
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->context:Landroid/content/Context;
-
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUL()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x4
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 107
-    :goto_0
-    return-object v0
-
-    .line 104
-    :cond_0
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->context:Landroid/content/Context;
-
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUL()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 107
-    :cond_1
     const/4 v0, 0x0
 
-    goto :goto_0
-.end method
-
-.method public static aUP()Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    .line 112
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v1, Lcom/tencent/mm/sdk/platformtools/y;->alS:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "_tmp_preferences"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static aUQ()Z
-    .locals 2
-
-    .prologue
-    .line 132
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->processName:Ljava/lang/String;
-
-    .line 133
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 134
-    :cond_0
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->alS:Ljava/lang/String;
-
-    .line 137
-    :cond_1
-    sget-object v1, Lcom/tencent/mm/sdk/platformtools/y;->alS:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static aUR()Z
-    .locals 2
-
-    .prologue
-    .line 141
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->processName:Ljava/lang/String;
-
-    .line 142
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 143
-    :cond_0
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->alS:Ljava/lang/String;
-
-    .line 145
-    :cond_1
-    const-string/jumbo v1, "com.tencent.mm:push"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static aUS()Z
-    .locals 2
-
-    .prologue
-    .line 149
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->processName:Ljava/lang/String;
-
-    .line 150
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 151
-    :cond_0
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->alS:Ljava/lang/String;
-
-    .line 153
-    :cond_1
-    const-string/jumbo v1, "com.tencent.mm:tools"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static aUT()Z
-    .locals 2
-
-    .prologue
-    .line 157
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->processName:Ljava/lang/String;
-
-    .line 158
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 159
-    :cond_0
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->alS:Ljava/lang/String;
-
-    .line 161
-    :cond_1
-    const-string/jumbo v1, "com.tencent.mm:exdevice"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static aUU()Z
-    .locals 5
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 165
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->context:Landroid/content/Context;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->alS:Ljava/lang/String;
-
-    if-nez v0, :cond_1
+    sput v0, Lcom/tencent/mm/sdk/platformtools/y;->kvi:I
 
     :cond_0
-    move v0, v1
+    sget v0, Lcom/tencent/mm/sdk/platformtools/y;->kvi:I
 
-    .line 189
+    add-int/lit8 v0, v0, 0x1
+
+    sput v0, Lcom/tencent/mm/sdk/platformtools/y;->kvi:I
+
+    iput v0, p0, Lcom/tencent/mm/sdk/platformtools/y;->kvj:I
+
+    .line 60
+    return-void
+.end method
+
+.method public static a(Lcom/tencent/mm/sdk/platformtools/y$b;)V
+    .locals 1
+
+    .prologue
+    .line 44
+    const/4 v0, 0x1
+
+    sput-boolean v0, Lcom/tencent/mm/sdk/platformtools/y;->kvo:Z
+
+    .line 45
+    sput-object p0, Lcom/tencent/mm/sdk/platformtools/y;->aZj:Lcom/tencent/mm/sdk/platformtools/y$b;
+
+    .line 46
+    return-void
+.end method
+
+.method public static aZI()J
+    .locals 16
+
+    .prologue
+    const-wide v4, 0x7fffffffffffffffL
+
+    const-wide/16 v8, 0x0
+
+    const/4 v10, 0x0
+
+    .line 74
+    sput-boolean v10, Lcom/tencent/mm/sdk/platformtools/y;->kvp:Z
+
+    .line 76
+    new-instance v11, Ljava/util/LinkedList;
+
+    invoke-direct {v11}, Ljava/util/LinkedList;-><init>()V
+
+    .line 79
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    .line 80
+    sget-object v1, Lcom/tencent/mm/sdk/platformtools/y;->kvm:Ljava/util/Map;
+
+    invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
+
+    .line 83
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v12
+
+    move-wide v2, v4
+
     :goto_0
-    return v0
-
-    .line 167
-    :cond_1
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->jVD:Landroid/app/ActivityManager;
-
-    if-nez v0, :cond_2
-
-    .line 168
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->context:Landroid/content/Context;
-
-    const-string/jumbo v2, "activity"
-
-    invoke-virtual {v0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/ActivityManager;
-
-    sput-object v0, Lcom/tencent/mm/sdk/platformtools/y;->jVD:Landroid/app/ActivityManager;
-
-    .line 172
-    :cond_2
-    :try_start_0
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->jVD:Landroid/app/ActivityManager;
-
-    invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
-
-    move-result-object v0
-
-    .line 175
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_3
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v12}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v12}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/app/ActivityManager$RunningAppProcessInfo;
+    check-cast v0, Ljava/lang/Integer;
 
-    .line 176
-    iget-object v0, v0, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
+    .line 84
+    sget-object v1, Lcom/tencent/mm/sdk/platformtools/y;->kvm:Ljava/util/Map;
 
-    .line 177
-    sget-object v3, Lcom/tencent/mm/sdk/platformtools/y;->alS:Ljava/lang/String;
+    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_1
+    move-result-object v1
 
-    move-result v0
+    check-cast v1, Lcom/tencent/mm/sdk/platformtools/y;
 
-    if-eqz v0, :cond_3
+    .line 85
+    if-eqz v1, :cond_7
 
-    .line 178
-    const/4 v0, 0x1
+    .line 86
+    iget-wide v6, v1, Lcom/tencent/mm/sdk/platformtools/y;->kvl:J
+
+    invoke-static {v6, v7}, Lcom/tencent/mm/sdk/platformtools/be;->av(J)J
+
+    move-result-wide v6
+
+    .line 87
+    cmp-long v13, v6, v8
+
+    if-gez v13, :cond_0
+
+    move-wide v6, v8
+
+    .line 91
+    :cond_0
+    iget-wide v14, v1, Lcom/tencent/mm/sdk/platformtools/y;->ifj:J
+
+    cmp-long v13, v6, v14
+
+    if-lez v13, :cond_3
+
+    .line 92
+    iget-object v6, v1, Lcom/tencent/mm/sdk/platformtools/y;->kvn:Lcom/tencent/mm/sdk/platformtools/y$a;
+
+    invoke-interface {v6}, Lcom/tencent/mm/sdk/platformtools/y$a;->jK()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_1
+
+    iget-boolean v6, v1, Lcom/tencent/mm/sdk/platformtools/y;->kvk:Z
+
+    if-nez v6, :cond_2
+
+    .line 93
+    :cond_1
+    invoke-interface {v11, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 97
+    :goto_1
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gq()J
+
+    move-result-wide v6
+
+    iput-wide v6, v1, Lcom/tencent/mm/sdk/platformtools/y;->kvl:J
 
     goto :goto_0
 
-    .line 181
-    :catch_0
-    move-exception v0
+    .line 95
+    :cond_2
+    iget-wide v2, v1, Lcom/tencent/mm/sdk/platformtools/y;->ifj:J
 
-    .line 182
-    const-string/jumbo v2, "!44@/B4Tb64lLpIS+EmmM2BObaDFJ1Sw501WMp8gAMPZi0c="
+    goto :goto_1
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    .line 100
+    :cond_3
+    iget-wide v14, v1, Lcom/tencent/mm/sdk/platformtools/y;->ifj:J
 
-    const-string/jumbo v4, "isMMProcessExist Exception: "
+    sub-long/2addr v14, v6
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    cmp-long v0, v14, v2
 
-    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+    if-gez v0, :cond_7
 
-    move-result-object v0
+    .line 101
+    iget-wide v0, v1, Lcom/tencent/mm/sdk/platformtools/y;->ifj:J
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sub-long v2, v0, v6
 
-    move-result-object v0
+    move-wide v0, v2
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :goto_2
+    move-wide v2, v0
 
-    move-result-object v0
-
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    move v0, v1
-
-    .line 183
-    goto :goto_0
-
-    .line 184
-    :catch_1
-    move-exception v0
-
-    .line 185
-    const-string/jumbo v2, "!44@/B4Tb64lLpIS+EmmM2BObaDFJ1Sw501WMp8gAMPZi0c="
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v4, "isMMProcessExist Error: "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/lang/Error;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    move v0, v1
-
-    .line 186
+    .line 105
     goto :goto_0
 
     :cond_4
-    move v0, v1
+    move v0, v10
 
-    .line 189
-    goto :goto_0
+    .line 107
+    :goto_3
+    invoke-interface {v11}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_5
+
+    .line 108
+    sget-object v1, Lcom/tencent/mm/sdk/platformtools/y;->kvm:Ljava/util/Map;
+
+    invoke-interface {v11, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    invoke-interface {v1, v6}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 107
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_3
+
+    .line 111
+    :cond_5
+    sget-boolean v0, Lcom/tencent/mm/sdk/platformtools/y;->kvp:Z
+
+    if-nez v0, :cond_6
+
+    cmp-long v0, v2, v4
+
+    if-nez v0, :cond_6
+
+    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->aZj:Lcom/tencent/mm/sdk/platformtools/y$b;
+
+    if-eqz v0, :cond_6
+
+    .line 112
+    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->aZj:Lcom/tencent/mm/sdk/platformtools/y$b;
+
+    invoke-interface {v0}, Lcom/tencent/mm/sdk/platformtools/y$b;->cancel()V
+
+    .line 113
+    const-string/jumbo v0, "MicroMsg.MAlarmHandler"
+
+    const-string/jumbo v1, "cancel bumper for no more handler"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 116
+    :cond_6
+    return-wide v2
+
+    :cond_7
+    move-wide v0, v2
+
+    goto :goto_2
 .end method
 
-.method public static gI(Z)V
-    .locals 0
+.method public static dI(J)Z
+    .locals 12
 
     .prologue
-    .line 27
-    sput-boolean p0, Lcom/tencent/mm/sdk/platformtools/y;->jVB:Z
+    const-wide/16 v6, 0x0
 
-    .line 28
-    return-void
-.end method
-
-.method public static getContext()Landroid/content/Context;
-    .locals 1
-
-    .prologue
-    .line 50
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->context:Landroid/content/Context;
-
-    return-object v0
-.end method
-
-.method public static getPackageName()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 59
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->alS:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public static getResources()Landroid/content/res/Resources;
-    .locals 1
-
-    .prologue
-    .line 193
-    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->lL:Landroid/content/res/Resources;
-
-    return-object v0
-.end method
-
-.method public static setContext(Landroid/content/Context;)V
-    .locals 3
-
-    .prologue
-    .line 43
-    sput-object p0, Lcom/tencent/mm/sdk/platformtools/y;->context:Landroid/content/Context;
-
-    .line 44
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/tencent/mm/sdk/platformtools/y;->alS:Ljava/lang/String;
-
-    .line 46
-    const-string/jumbo v0, "!44@/B4Tb64lLpIS+EmmM2BObaDFJ1Sw501WMp8gAMPZi0c="
+    .line 146
+    const-string/jumbo v0, "MicroMsg.MAlarmHandler"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v2, "setup application context for package: "
+    const-string/jumbo v2, "check need prepare: check="
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v2, Lcom/tencent/mm/sdk/platformtools/y;->alS:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -709,8 +362,154 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 47
+    .line 147
+    const-wide v0, 0x7fffffffffffffffL
+
+    .line 148
+    sget-object v2, Lcom/tencent/mm/sdk/platformtools/y;->kvm:Ljava/util/Map;
+
+    invoke-interface {v2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v8
+
+    move-wide v2, v0
+
+    .line 149
+    :goto_0
+    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 150
+    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    .line 151
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/sdk/platformtools/y;
+
+    .line 152
+    if-eqz v0, :cond_4
+
+    .line 153
+    iget-wide v4, v0, Lcom/tencent/mm/sdk/platformtools/y;->kvl:J
+
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/be;->av(J)J
+
+    move-result-wide v4
+
+    .line 154
+    cmp-long v1, v4, v6
+
+    if-gez v1, :cond_0
+
+    move-wide v4, v6
+
+    .line 158
+    :cond_0
+    iget-wide v10, v0, Lcom/tencent/mm/sdk/platformtools/y;->ifj:J
+
+    cmp-long v1, v4, v10
+
+    if-lez v1, :cond_1
+
+    .line 159
+    iget-wide v0, v0, Lcom/tencent/mm/sdk/platformtools/y;->ifj:J
+
+    move-wide v2, v0
+
+    goto :goto_0
+
+    .line 162
+    :cond_1
+    iget-wide v10, v0, Lcom/tencent/mm/sdk/platformtools/y;->ifj:J
+
+    sub-long/2addr v10, v4
+
+    cmp-long v1, v10, v2
+
+    if-gez v1, :cond_4
+
+    .line 163
+    iget-wide v0, v0, Lcom/tencent/mm/sdk/platformtools/y;->ifj:J
+
+    sub-long v2, v0, v4
+
+    move-wide v0, v2
+
+    :goto_1
+    move-wide v2, v0
+
+    .line 167
+    goto :goto_0
+
+    .line 169
+    :cond_2
+    cmp-long v0, v2, p0
+
+    if-lez v0, :cond_3
+
+    const/4 v0, 0x1
+
+    :goto_2
+    return v0
+
+    :cond_3
+    const/4 v0, 0x0
+
+    goto :goto_2
+
+    :cond_4
+    move-wide v0, v2
+
+    goto :goto_1
+.end method
+
+
+# virtual methods
+.method public final aZJ()V
+    .locals 2
+
+    .prologue
+    .line 138
+    sget-object v0, Lcom/tencent/mm/sdk/platformtools/y;->kvm:Ljava/util/Map;
+
+    iget v1, p0, Lcom/tencent/mm/sdk/platformtools/y;->kvj:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 139
+    return-void
+.end method
+
+.method protected final finalize()V
+    .locals 0
+
+    .prologue
+    .line 50
+    invoke-virtual {p0}, Lcom/tencent/mm/sdk/platformtools/y;->aZJ()V
+
+    .line 51
+    invoke-super {p0}, Ljava/lang/Object;->finalize()V
+
+    .line 52
     return-void
 .end method

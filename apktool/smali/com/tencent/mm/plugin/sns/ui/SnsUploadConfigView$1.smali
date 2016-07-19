@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hlL:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+.field final synthetic hBN:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
 .field final synthetic val$context:Landroid/content/Context;
 
@@ -29,7 +29,7 @@
 
     .prologue
     .line 120
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$1;->hlL:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$1;->hBN:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
     iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$1;->val$context:Landroid/content/Context;
 
@@ -45,7 +45,7 @@
 
     .prologue
     .line 124
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$1;->hlL:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$1;->hBN:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->a(Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;)Z
 
@@ -53,7 +53,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$1;->hlL:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$1;->hBN:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->b(Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;)Z
 
@@ -64,11 +64,11 @@
     .line 125
     iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$1;->val$context:Landroid/content/Context;
 
-    const v1, 0x7f0b16b7
+    const v1, 0x7f0812e8
 
-    const v2, 0x7f0b0ddd
+    const v2, 0x7f080134
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->f(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
     .line 130
     :goto_0
@@ -76,9 +76,9 @@
 
     .line 128
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$1;->hlL:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$1;->hBN:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$1;->hlL:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$1;->hBN:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->a(Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;)Z
 
@@ -92,7 +92,7 @@
     invoke-static {v1, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->a(Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;Z)Z
 
     .line 129
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$1;->hlL:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView$1;->hBN:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->c(Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;)V
 

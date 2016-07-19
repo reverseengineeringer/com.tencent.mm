@@ -4,17 +4,17 @@
 
 
 # instance fields
-.field private arW:Lcom/tencent/mm/ui/MMActivity;
+.field private adL:Lcom/tencent/mm/ui/MMActivity;
 
-.field private dlN:Ljava/lang/String;
+.field private dlu:Ljava/lang/String;
 
-.field private dlO:I
+.field private dlv:I
 
-.field private dlP:I
+.field private dlw:I
 
-.field private hbC:Landroid/widget/TextView;
+.field private hqs:Landroid/widget/TextView;
 
-.field hbD:Ljava/lang/String;
+.field hqt:Ljava/lang/String;
 
 .field private mTitle:Ljava/lang/String;
 
@@ -32,7 +32,7 @@
     .line 33
     check-cast p1, Lcom/tencent/mm/ui/MMActivity;
 
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->arW:Lcom/tencent/mm/ui/MMActivity;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->adL:Lcom/tencent/mm/ui/MMActivity;
 
     .line 34
     return-void
@@ -48,7 +48,7 @@
     .line 17
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->dlN:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->dlu:Ljava/lang/String;
 
     .line 18
     const-string/jumbo v0, ""
@@ -58,35 +58,35 @@
     .line 19
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->dlO:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->dlv:I
 
     .line 20
     const/16 v0, 0x8
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->dlP:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->dlw:I
 
     .line 22
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->hbC:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->hqs:Landroid/widget/TextView;
 
     .line 23
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->hbD:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->hqt:Ljava/lang/String;
 
     .line 38
     check-cast p1, Lcom/tencent/mm/ui/MMActivity;
 
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->arW:Lcom/tencent/mm/ui/MMActivity;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->adL:Lcom/tencent/mm/ui/MMActivity;
 
     .line 39
-    const v0, 0x7f0a05d6
+    const v0, 0x7f0303ad
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->setLayoutResource(I)V
 
     .line 40
-    const v0, 0x7f0a05a4
+    const v0, 0x7f0303f3
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->setWidgetLayoutResource(I)V
 
@@ -96,20 +96,20 @@
 
 
 # virtual methods
-.method public final aBA()V
+.method public final aEx()V
     .locals 5
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->hbC:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->hqs:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->hbD:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->hqt:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->hbD:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->hqt:Ljava/lang/String;
 
     const-string/jumbo v1, ""
 
@@ -119,14 +119,14 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->arW:Lcom/tencent/mm/ui/MMActivity;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->adL:Lcom/tencent/mm/ui/MMActivity;
 
     if-eqz v0, :cond_0
 
     .line 45
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->arW:Lcom/tencent/mm/ui/MMActivity;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->adL:Lcom/tencent/mm/ui/MMActivity;
 
-    const v1, 0x7f0b167c
+    const v1, 0x7f081141
 
     const/4 v2, 0x1
 
@@ -134,7 +134,7 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->hbD:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->hqt:Ljava/lang/String;
 
     aput-object v4, v2, v3
 
@@ -143,7 +143,7 @@
     move-result-object v0
 
     .line 46
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->hbC:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->hqs:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -160,7 +160,7 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/base/preference/Preference;->onBindView(Landroid/view/View;)V
 
     .line 66
-    const v0, 0x7f0710c7
+    const v0, 0x7f100bfe
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -168,10 +168,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->hbC:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->hqs:Landroid/widget/TextView;
 
     .line 67
-    const v0, 0x7f070ee3
+    const v0, 0x7f100bfd
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -184,7 +184,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 68
-    const v0, 0x7f07069c
+    const v0, 0x7f100bff
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -196,28 +196,28 @@
     if-eqz v0, :cond_0
 
     .line 70
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->dlP:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->dlw:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 71
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->dlN:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->dlu:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 72
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->dlO:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->dlv:I
 
     const/4 v2, -0x1
 
     if-eq v1, v2, :cond_0
 
     .line 73
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->arW:Lcom/tencent/mm/ui/MMActivity;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->adL:Lcom/tencent/mm/ui/MMActivity;
 
-    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->dlO:I
+    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->dlv:I
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/aw/a;->y(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v1, v2}, Lcom/tencent/mm/az/a;->C(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -225,7 +225,7 @@
 
     .line 76
     :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->aBA()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->aEx()V
 
     .line 77
     return-void
@@ -252,7 +252,7 @@
     check-cast v0, Landroid/view/LayoutInflater;
 
     .line 55
-    const v1, 0x7f0700c1
+    const v1, 0x7f1000fe
 
     invoke-virtual {v2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -264,9 +264,9 @@
     invoke-virtual {v1}, Landroid/view/ViewGroup;->removeAllViews()V
 
     .line 57
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->arW:Lcom/tencent/mm/ui/MMActivity;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->adL:Lcom/tencent/mm/ui/MMActivity;
 
-    const v4, 0x7f0b1678
+    const v4, 0x7f081142
 
     invoke-virtual {v3, v4}, Lcom/tencent/mm/ui/MMActivity;->getString(I)Ljava/lang/String;
 
@@ -275,7 +275,7 @@
     iput-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->mTitle:Ljava/lang/String;
 
     .line 58
-    const v3, 0x7f0a05b7
+    const v3, 0x7f0303af
 
     invoke-virtual {v0, v3, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 

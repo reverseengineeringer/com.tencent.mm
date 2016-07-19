@@ -7,7 +7,7 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "!44@/B4Tb64lLpI5eDqK2Q2vWEl+K5iffebz/j79EavVBUE="
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.SDK.WXLocationObject"
 
 
 # instance fields
@@ -31,7 +31,7 @@
 .end method
 
 .method public constructor <init>(DD)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 44
@@ -60,22 +60,22 @@
 .end method
 
 .method public serialize(Landroid/os/Bundle;)V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 51
     const-string/jumbo v0, "_wxlocationobject_lat"
 
-    iget-wide v1, p0, Lcom/tencent/mm/sdk/modelmsg/WXLocationObject;->lat:D
+    iget-wide v2, p0, Lcom/tencent/mm/sdk/modelmsg/WXLocationObject;->lat:D
 
-    invoke-virtual {p1, v0, v1, v2}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
+    invoke-virtual {p1, v0, v2, v3}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
 
     .line 52
     const-string/jumbo v0, "_wxlocationobject_lng"
 
-    iget-wide v1, p0, Lcom/tencent/mm/sdk/modelmsg/WXLocationObject;->lng:D
+    iget-wide v2, p0, Lcom/tencent/mm/sdk/modelmsg/WXLocationObject;->lng:D
 
-    invoke-virtual {p1, v0, v1, v2}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
+    invoke-virtual {p1, v0, v2, v3}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
 
     .line 53
     return-void

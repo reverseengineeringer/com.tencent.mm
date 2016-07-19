@@ -10,7 +10,7 @@ final class SnsLabelUI$8
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    SnsLabelUI.k(hfA);
+    SnsLabelUI.k(hur);
   }
 }
 

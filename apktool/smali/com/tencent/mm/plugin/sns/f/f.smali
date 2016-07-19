@@ -1,214 +1,272 @@
 .class public final Lcom/tencent/mm/plugin/sns/f/f;
-.super Lcom/tencent/mm/at/a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public gSI:I
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/plugin/sns/f/f$a;
+    }
+.end annotation
 
-.field public gSK:J
+
+# static fields
+.field public static final hat:Ljava/util/regex/Pattern;
+
+.field public static hau:[Ljava/lang/String;
+
+.field public static hav:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/plugin/sns/f/f$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 11
-    invoke-direct {p0}, Lcom/tencent/mm/at/a;-><init>()V
+    .line 17
+    const-string/jumbo v0, "\\{([\\s\\S]*?)\\}"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/tencent/mm/plugin/sns/f/f;->hat:Ljava/util/regex/Pattern;
+
+    .line 18
+    const/4 v0, 0x3
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    const-string/jumbo v2, "{sex"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x1
+
+    const-string/jumbo v2, "{username"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x2
+
+    const-string/jumbo v2, "{richtext"
+
+    aput-object v2, v0, v1
+
+    sput-object v0, Lcom/tencent/mm/plugin/sns/f/f;->hau:[Ljava/lang/String;
+
+    .line 19
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v0, Lcom/tencent/mm/plugin/sns/f/f;->hav:Ljava/util/HashMap;
 
     return-void
 .end method
 
-
-# virtual methods
-.method protected final varargs a(I[Ljava/lang/Object;)I
+.method public static a(Lcom/tencent/mm/plugin/sns/f/d$a;)Ljava/lang/String;
     .locals 7
 
     .prologue
-    const/4 v4, -0x1
+    const/4 v2, 0x0
 
-    const/4 v6, 0x2
+    .line 26
+    sget-object v0, Lcom/tencent/mm/plugin/sns/f/f;->hav:Ljava/util/HashMap;
 
-    const/4 v5, 0x1
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/f/d$a;->hap:Ljava/lang/String;
 
-    const/4 v3, 0x0
-
-    .line 16
-    if-nez p1, :cond_0
-
-    .line 17
-    aget-object v0, p2, v3
-
-    check-cast v0, La/a/a/c/a;
-
-    .line 18
-    iget-wide v1, p0, Lcom/tencent/mm/plugin/sns/f/f;->gSK:J
-
-    invoke-virtual {v0, v5, v1, v2}, La/a/a/c/a;->A(IJ)V
-
-    .line 19
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/f/f;->gSI:I
-
-    invoke-virtual {v0, v6, v1}, La/a/a/c/a;->ci(II)V
-
-    move v0, v3
-
-    .line 59
-    :goto_0
-    return v0
-
-    .line 22
-    :cond_0
-    if-ne p1, v5, :cond_1
-
-    .line 23
-    iget-wide v0, p0, Lcom/tencent/mm/plugin/sns/f/f;->gSK:J
-
-    invoke-static {v5, v0, v1}, La/a/a/a;->z(IJ)I
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
-    add-int/lit8 v0, v0, 0x0
+    if-eqz v0, :cond_1
 
-    .line 25
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/f/f;->gSI:I
+    .line 27
+    sget-object v0, Lcom/tencent/mm/plugin/sns/f/f;->hav:Ljava/util/HashMap;
 
-    invoke-static {v6, v1}, La/a/a/a;->cg(II)I
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/f/d$a;->hap:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/plugin/sns/f/f$a;
+
+    .line 28
+    sget-object v1, Lcom/tencent/mm/plugin/sns/f/f$a;->haw:Lcom/tencent/mm/plugin/sns/f/f$a;
+
+    if-ne v0, v1, :cond_0
+
+    .line 29
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/f/d$a;->hap:Ljava/lang/String;
+
+    .line 64
+    :goto_0
+    return-object v0
+
+    .line 31
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/f/d$a;->hao:Ljava/lang/String;
+
+    goto :goto_0
+
+    .line 34
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/f/d$a;->hap:Ljava/lang/String;
+
+    .line 35
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
-    add-int/2addr v0, v1
+    if-eqz v1, :cond_2
 
-    .line 26
+    .line 36
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/f/d$a;->hao:Ljava/lang/String;
+
     goto :goto_0
-
-    .line 28
-    :cond_1
-    if-ne p1, v6, :cond_4
-
-    .line 29
-    aget-object v0, p2, v3
-
-    check-cast v0, [B
-
-    check-cast v0, [B
-
-    .line 30
-    new-instance v1, La/a/a/a/a;
-
-    sget-object v2, Lcom/tencent/mm/plugin/sns/f/f;->iTR:La/a/a/a/a/b;
-
-    invoke-direct {v1, v0, v2}, La/a/a/a/a;-><init>([BLa/a/a/a/a/b;)V
-
-    .line 31
-    invoke-static {v1}, Lcom/tencent/mm/at/a;->a(La/a/a/a/a;)I
-
-    move-result v0
-
-    .line 33
-    :goto_1
-    if-lez v0, :cond_3
-
-    .line 34
-    invoke-super {p0, v1, p0, v0}, Lcom/tencent/mm/at/a;->a(La/a/a/a/a;Lcom/tencent/mm/at/a;I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    .line 35
-    invoke-virtual {v1}, La/a/a/a/a;->bog()V
-
-    .line 37
-    :cond_2
-    invoke-static {v1}, Lcom/tencent/mm/at/a;->a(La/a/a/a/a;)I
-
-    move-result v0
-
-    goto :goto_1
-
-    :cond_3
-    move v0, v3
 
     .line 40
-    goto :goto_0
+    :cond_2
+    sget-object v1, Lcom/tencent/mm/plugin/sns/f/f;->hat:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v1, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v1
+
+    .line 41
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
 
     .line 42
-    :cond_4
-    const/4 v0, 0x3
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->groupCount()I
 
-    if-ne p1, v0, :cond_5
+    move-result v3
 
     .line 43
-    aget-object v0, p2, v3
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
 
-    check-cast v0, La/a/a/a/a;
+    move-result-object v4
 
     .line 44
-    aget-object v1, p2, v5
+    const-string/jumbo v1, "MicroMsg.SnsAbTestUtil"
 
-    check-cast v1, Lcom/tencent/mm/plugin/sns/f/f;
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v6, "hello matcher group() "
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string/jumbo v5, " "
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 45
-    aget-object v2, p2, v6
+    const-string/jumbo v1, ""
 
-    check-cast v2, Ljava/lang/Integer;
+    invoke-virtual {v0, v4, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    move-result-object v0
 
-    move-result v2
+    move v1, v2
 
-    .line 46
-    packed-switch v2, :pswitch_data_0
+    .line 48
+    :goto_1
+    sget-object v3, Lcom/tencent/mm/plugin/sns/f/f;->hau:[Ljava/lang/String;
 
-    move v0, v4
+    array-length v3, v3
+
+    if-ge v1, v3, :cond_5
+
+    .line 49
+    sget-object v3, Lcom/tencent/mm/plugin/sns/f/f;->hau:[Ljava/lang/String;
+
+    aget-object v3, v3, v1
+
+    .line 50
+    invoke-virtual {v4, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v3
+
+    if-ltz v3, :cond_3
+
+    .line 51
+    const/4 v1, 0x1
+
+    .line 55
+    :goto_2
+    if-nez v1, :cond_2
 
     .line 56
+    sget-object v0, Lcom/tencent/mm/plugin/sns/f/f;->hav:Ljava/util/HashMap;
+
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/f/d$a;->hap:Ljava/lang/String;
+
+    sget-object v2, Lcom/tencent/mm/plugin/sns/f/f$a;->hax:Lcom/tencent/mm/plugin/sns/f/f$a;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 57
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/f/d$a;->hao:Ljava/lang/String;
+
     goto :goto_0
 
     .line 48
-    :pswitch_0
-    iget-object v0, v0, La/a/a/a/a;->maU:La/a/a/b/a/a;
+    :cond_3
+    add-int/lit8 v1, v1, 0x1
 
-    invoke-virtual {v0}, La/a/a/b/a/a;->jD()J
+    goto :goto_1
 
-    move-result-wide v4
+    .line 63
+    :cond_4
+    sget-object v0, Lcom/tencent/mm/plugin/sns/f/f;->hav:Ljava/util/HashMap;
 
-    iput-wide v4, v1, Lcom/tencent/mm/plugin/sns/f/f;->gSK:J
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/f/d$a;->hap:Ljava/lang/String;
 
-    move v0, v3
+    sget-object v2, Lcom/tencent/mm/plugin/sns/f/f$a;->haw:Lcom/tencent/mm/plugin/sns/f/f$a;
 
-    .line 49
-    goto :goto_0
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 52
-    :pswitch_1
-    iget-object v0, v0, La/a/a/a/a;->maU:La/a/a/b/a/a;
+    .line 64
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/f/d$a;->hap:Ljava/lang/String;
 
-    invoke-virtual {v0}, La/a/a/b/a/a;->jC()I
-
-    move-result v0
-
-    iput v0, v1, Lcom/tencent/mm/plugin/sns/f/f;->gSI:I
-
-    move v0, v3
-
-    .line 53
     goto :goto_0
 
     :cond_5
-    move v0, v4
+    move v1, v2
 
-    .line 59
-    goto :goto_0
-
-    .line 46
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    goto :goto_2
 .end method

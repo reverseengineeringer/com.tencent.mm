@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk;
 
 public abstract interface i$z
 {
-  public abstract void zy(String paramString);
+  public abstract void Bu(String paramString);
 }
 
 /* Location:

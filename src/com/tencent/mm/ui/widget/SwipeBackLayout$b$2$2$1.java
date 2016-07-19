@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.widget;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SwipeBackLayout$b$2$2$1
   implements Runnable
@@ -9,13 +9,13 @@ final class SwipeBackLayout$b$2$2$1
   
   public final void run()
   {
-    if (SwipeBackLayout.g(lGT.lGS.lGQ.lGP) != null)
+    if (SwipeBackLayout.g(mih.mig.mie.mid) != null)
     {
-      SwipeBackLayout.g(lGT.lGS.lGQ.lGP).aNg();
-      u.d("!44@/B4Tb64lLpK0aWizdgE60RZj+63liLyIPH/0AOVXUq4=", "ashutest:: on onSwipeBack");
+      SwipeBackLayout.g(mih.mig.mie.mid).aEs();
+      v.d("MicroMsg.SwipeBackLayout", "ashutest:: on onSwipeBack");
     }
-    f.I(1.0F);
-    SwipeBackLayout.b(lGT.lGS.lGQ.lGP, false);
+    f.H(1.0F);
+    SwipeBackLayout.b(mih.mig.mie.mid, false);
   }
 }
 

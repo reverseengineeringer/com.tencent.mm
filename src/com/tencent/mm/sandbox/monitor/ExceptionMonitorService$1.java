@@ -1,6 +1,6 @@
 package com.tencent.mm.sandbox.monitor;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class ExceptionMonitorService$1
   implements Runnable
@@ -9,8 +9,8 @@ final class ExceptionMonitorService$1
   
   public final void run()
   {
-    u.d("!44@/B4Tb64lLpIdghwcJC06L5mX8ZGnQwd6K21Nn76yszs=", "stopSelf");
-    jSJ.stopSelf();
+    v.d("MicroMsg.CrashMonitorService", "stopSelf");
+    ksd.stopSelf();
   }
 }
 

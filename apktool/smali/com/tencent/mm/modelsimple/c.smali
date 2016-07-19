@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static aT(Landroid/content/Context;)Ljava/lang/String;
+.method public static aP(Landroid/content/Context;)Ljava/lang/String;
     .locals 10
     .annotation build Landroid/annotation/TargetApi;
         value = 0xe
@@ -18,21 +18,21 @@
     const/4 v6, 0x0
 
     .line 269
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v0, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v1, "Get name of a contacts record or profile."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 270
     if-nez p0, :cond_0
 
     .line 271
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v0, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v1, "context is null."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 315
     :goto_0
@@ -47,18 +47,18 @@
     .line 277
     const-string/jumbo v1, "android.permission.READ_CONTACTS"
 
-    invoke-static {p0, v1}, Lcom/tencent/mm/pluginsdk/g/a;->aL(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v1}, Lcom/tencent/mm/pluginsdk/h/a;->aK(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
     .line 278
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v0, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v1, "no contact permission"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -66,18 +66,18 @@
     :cond_1
     const/16 v1, 0xe
 
-    invoke-static {v1}, Lcom/tencent/mm/compatible/util/e;->bU(I)Z
+    invoke-static {v1}, Lcom/tencent/mm/compatible/util/e;->cm(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_6
 
     .line 283
-    const-string/jumbo v1, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v1, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v2, "The Android API version is higher than 14."
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 285
     :try_start_0
@@ -130,7 +130,7 @@
     move-result-object v1
 
     .line 294
-    const-string/jumbo v3, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v3, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v4, "Have got name from profile, name is %s"
 
@@ -138,7 +138,7 @@
 
     aput-object v1, v5, v8
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 296
     :goto_2
@@ -148,34 +148,34 @@
 
     .line 299
     :goto_3
-    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
     .line 300
-    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->bc(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->aY(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {p0, v1}, Lcom/tencent/mm/modelsimple/c;->w(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v1}, Lcom/tencent/mm/modelsimple/c;->x(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     .line 301
-    invoke-static {v5}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v5}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
     .line 302
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v0, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v1, "contactId is null."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -183,11 +183,11 @@
     :catch_0
     move-exception v1
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v1, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v2, "query crashed"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v2, v6
 
@@ -237,7 +237,7 @@
     move-result-object v7
 
     .line 310
-    const-string/jumbo v1, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v1, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v2, "Have got name from contacts, name is %s"
 
@@ -245,7 +245,7 @@
 
     aput-object v7, v3, v8
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 312
     :cond_3
@@ -268,7 +268,7 @@
     goto :goto_3
 .end method
 
-.method public static aU(Landroid/content/Context;)Landroid/graphics/Bitmap;
+.method public static aQ(Landroid/content/Context;)Landroid/graphics/Bitmap;
     .locals 13
     .annotation build Landroid/annotation/TargetApi;
         value = 0xe
@@ -276,21 +276,21 @@
 
     .prologue
     .line 326
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v0, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v1, "Get bitmap of a contacts record or profile."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 327
     if-nez p0, :cond_0
 
     .line 328
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v0, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v1, "context is null."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 329
     const/4 v1, 0x0
@@ -311,18 +311,18 @@
     .line 334
     const-string/jumbo v1, "android.permission.READ_CONTACTS"
 
-    invoke-static {p0, v1}, Lcom/tencent/mm/pluginsdk/g/a;->aL(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v1}, Lcom/tencent/mm/pluginsdk/h/a;->aK(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
     .line 337
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v0, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v1, "no contact permission"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 338
     const/4 v1, 0x0
@@ -336,18 +336,18 @@
     .line 341
     const/16 v1, 0xe
 
-    invoke-static {v1}, Lcom/tencent/mm/compatible/util/e;->bU(I)Z
+    invoke-static {v1}, Lcom/tencent/mm/compatible/util/e;->cm(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_6
 
     .line 342
-    const-string/jumbo v1, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v1, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v2, "The Android API version is higher than 14."
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 344
     :try_start_0
@@ -449,19 +449,19 @@
     if-eqz v1, :cond_13
 
     .line 362
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ah;->dB(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ak;->dC(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ah;->dA(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ak;->dB(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ah;->dy(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ak;->dz(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -469,11 +469,11 @@
 
     .line 363
     :cond_2
-    const-string/jumbo v1, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v1, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v3, "The network status is wifi or 3G or 4G."
 
-    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 364
     const-string/jumbo v1, "data_sync1"
@@ -487,7 +487,7 @@
     move-result-object v1
 
     .line 365
-    const-string/jumbo v3, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v3, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v4, "get sync avatar url : [%s]"
 
@@ -499,10 +499,10 @@
 
     aput-object v1, v5, v7
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 366
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -516,7 +516,7 @@
     move-result v3
 
     .line 368
-    const-string/jumbo v4, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v4, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v5, "check is exist https download url :[%d]"
 
@@ -532,7 +532,7 @@
 
     aput-object v9, v7, v8
 
-    invoke-static {v4, v5, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 369
     if-ltz v3, :cond_3
@@ -543,12 +543,12 @@
     move-result-object v3
 
     .line 371
-    invoke-static {v3}, Lcom/tencent/mm/modelsimple/c;->jb(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-static {v3}, Lcom/tencent/mm/modelsimple/c;->jt(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
     .line 372
-    const-string/jumbo v4, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v4, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v5, "Get image from google sync account in profile,url:[%s]"
 
@@ -560,7 +560,7 @@
 
     aput-object v3, v6, v7
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 373
     if-eqz v1, :cond_4
@@ -580,11 +580,11 @@
     :catch_0
     move-exception v1
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v1, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v2, "query crashed"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -592,11 +592,11 @@
     :catch_1
     move-exception v1
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v1, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v2, "query crashed"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v2, v7
 
@@ -624,7 +624,7 @@
     move-result-object v3
 
     .line 383
-    const-string/jumbo v4, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v4, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v5, "get bitmap data is null : [%b]"
 
@@ -634,7 +634,7 @@
 
     const/4 v7, 0x0
 
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->J([B)Z
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/be;->P([B)Z
 
     move-result v8
 
@@ -644,21 +644,21 @@
 
     aput-object v8, v6, v7
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 384
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->J([B)Z
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/be;->P([B)Z
 
     move-result v4
 
     if-nez v4, :cond_5
 
     .line 385
-    const-string/jumbo v1, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v1, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v4, "Get image from profile personal icon."
 
-    invoke-static {v1, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 386
     const/4 v1, 0x0
@@ -689,27 +689,27 @@
 
     .line 398
     :cond_7
-    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->bc(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->aY(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {p0, v1}, Lcom/tencent/mm/modelsimple/c;->w(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v1}, Lcom/tencent/mm/modelsimple/c;->x(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v9
+    move-result-object v7
 
     .line 399
-    invoke-static {v9}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_9
 
     .line 400
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v0, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v1, "contactId is null."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 401
     const/4 v1, 0x0
@@ -750,7 +750,7 @@
 
     const/4 v5, 0x0
 
-    aput-object v9, v4, v5
+    aput-object v7, v4, v5
 
     const/4 v5, 0x0
 
@@ -770,22 +770,22 @@
 
     .line 408
     :goto_5
-    const-wide/16 v7, 0x0
+    const-wide/16 v8, 0x0
 
     .line 409
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ah;->dB(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ak;->dC(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_a
 
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ah;->dA(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ak;->dB(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_a
 
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ah;->dy(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ak;->dz(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -793,11 +793,11 @@
 
     .line 410
     :cond_a
-    const-string/jumbo v1, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v1, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v2, "The network status is wifi or 3G or 4G."
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 411
     const-string/jumbo v1, "raw_contact_id"
@@ -879,7 +879,7 @@
     move-result-object v2
 
     .line 419
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -901,7 +901,7 @@
     move-result-object v2
 
     .line 423
-    invoke-static {v2}, Lcom/tencent/mm/modelsimple/c;->jb(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-static {v2}, Lcom/tencent/mm/modelsimple/c;->jt(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v6
 
@@ -915,7 +915,7 @@
     if-nez v3, :cond_d
 
     .line 425
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v0, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v3, "Get image from google sync account in contacts,url:[%s]"
 
@@ -927,7 +927,7 @@
 
     aput-object v2, v4, v5
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 426
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
@@ -949,11 +949,11 @@
 
     .line 436
     :cond_e
-    const-string/jumbo v1, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v1, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v2, "Get bitmap from contacts icon."
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 437
     const-string/jumbo v1, "photo_id"
@@ -970,10 +970,10 @@
     .line 439
     invoke-interface {v10, v1}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-wide v1
+    move-result-wide v2
 
     .line 440
-    const-string/jumbo v3, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v1, "MicroMsg.ContactsUtil"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -981,7 +981,7 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v4, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
@@ -989,20 +989,20 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 442
     :goto_7
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-lez v1, :cond_f
 
     .line 443
     sget-object v1, Landroid/provider/ContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
-    invoke-static {v9}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    invoke-static {v7}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v2
 
@@ -1030,11 +1030,11 @@
     if-nez v2, :cond_10
 
     .line 447
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v0, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v2, "Get image from contacts through google account."
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v6, v1
 
@@ -1062,7 +1062,7 @@
     goto/16 :goto_5
 
     :cond_12
-    move-wide v1, v7
+    move-wide v2, v8
 
     goto :goto_7
 
@@ -1072,7 +1072,7 @@
     goto/16 :goto_3
 .end method
 
-.method private static jb(Ljava/lang/String;)Landroid/graphics/Bitmap;
+.method private static jt(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 11
 
     .prologue
@@ -1083,7 +1083,7 @@
     const/4 v9, 0x0
 
     .line 467
-    const-string/jumbo v1, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v1, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v2, "Get bitmap by HTTPS request. url = %s"
 
@@ -1091,21 +1091,21 @@
 
     aput-object p0, v3, v9
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 468
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 469
-    const-string/jumbo v1, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v1, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v2, "url is null or nil."
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 525
     :cond_0
@@ -1128,11 +1128,11 @@
     if-nez v2, :cond_2
 
     .line 474
-    const-string/jumbo v1, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v1, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v2, "this is not the correct https url."
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1154,7 +1154,7 @@
 
     .line 484
     :try_start_1
-    iget-object v3, v2, Lcom/tencent/mm/network/t;->cjx:Ljavax/net/ssl/HttpsURLConnection;
+    iget-object v3, v2, Lcom/tencent/mm/network/t;->ceO:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v3}, Ljavax/net/ssl/HttpsURLConnection;->getInputStream()Ljava/io/InputStream;
     :try_end_1
@@ -1169,7 +1169,7 @@
 
     .line 491
     :try_start_2
-    const-string/jumbo v5, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v5, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v6, "getInputStream failed. url:%s"
 
@@ -1181,7 +1181,7 @@
 
     aput-object v1, v7, v8
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_8
@@ -1189,7 +1189,7 @@
 
     .line 492
     :try_start_3
-    iget-object v1, v2, Lcom/tencent/mm/network/t;->cjx:Ljavax/net/ssl/HttpsURLConnection;
+    iget-object v1, v2, Lcom/tencent/mm/network/t;->ceO:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v1}, Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
 
@@ -1212,7 +1212,7 @@
     move-exception v1
 
     .line 521
-    const-string/jumbo v2, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v2, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v3, "disconnect failed, IOException : %s"
 
@@ -1224,7 +1224,7 @@
 
     aput-object v1, v4, v9
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -1263,7 +1263,7 @@
     .line 504
     :goto_2
     :try_start_5
-    const-string/jumbo v5, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v5, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v6, "connect failed or url analyse failed, IOException : %s"
 
@@ -1279,7 +1279,7 @@
 
     aput-object v1, v7, v8
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
@@ -1288,7 +1288,7 @@
 
     .line 512
     :try_start_6
-    iget-object v1, v2, Lcom/tencent/mm/network/t;->cjx:Ljavax/net/ssl/HttpsURLConnection;
+    iget-object v1, v2, Lcom/tencent/mm/network/t;->ceO:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v1}, Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
 
@@ -1312,7 +1312,7 @@
     move-exception v1
 
     .line 521
-    const-string/jumbo v2, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v2, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v3, "disconnect failed, IOException : %s"
 
@@ -1324,7 +1324,7 @@
 
     aput-object v1, v4, v9
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
@@ -1336,7 +1336,7 @@
     move-result-object v1
 
     .line 500
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/d;->aQ([B)Landroid/graphics/Bitmap;
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/d;->aX([B)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -1349,7 +1349,7 @@
 
     .line 511
     :try_start_8
-    iget-object v1, v2, Lcom/tencent/mm/network/t;->cjx:Ljavax/net/ssl/HttpsURLConnection;
+    iget-object v1, v2, Lcom/tencent/mm/network/t;->ceO:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v1}, Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
 
@@ -1368,7 +1368,7 @@
     move-exception v1
 
     .line 521
-    const-string/jumbo v2, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v2, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v3, "disconnect failed, IOException : %s"
 
@@ -1380,7 +1380,7 @@
 
     aput-object v1, v4, v9
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
@@ -1395,7 +1395,7 @@
     .line 507
     :goto_3
     :try_start_9
-    const-string/jumbo v5, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v5, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v6, "connect failed or url analyse failed, Exception : %s"
 
@@ -1411,7 +1411,7 @@
 
     aput-object v1, v7, v8
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
@@ -1420,7 +1420,7 @@
 
     .line 512
     :try_start_a
-    iget-object v1, v2, Lcom/tencent/mm/network/t;->cjx:Ljavax/net/ssl/HttpsURLConnection;
+    iget-object v1, v2, Lcom/tencent/mm/network/t;->ceO:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v1}, Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
 
@@ -1444,7 +1444,7 @@
     move-exception v1
 
     .line 521
-    const-string/jumbo v2, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v2, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v3, "disconnect failed, IOException : %s"
 
@@ -1456,7 +1456,7 @@
 
     aput-object v1, v4, v9
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
@@ -1476,7 +1476,7 @@
 
     .line 512
     :try_start_b
-    iget-object v1, v2, Lcom/tencent/mm/network/t;->cjx:Ljavax/net/ssl/HttpsURLConnection;
+    iget-object v1, v2, Lcom/tencent/mm/network/t;->ceO:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v1}, Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
 
@@ -1502,7 +1502,7 @@
     move-exception v1
 
     .line 521
-    const-string/jumbo v2, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v2, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v3, "disconnect failed, IOException : %s"
 
@@ -1514,7 +1514,7 @@
 
     aput-object v1, v4, v9
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_5
 
@@ -1564,7 +1564,7 @@
     goto/16 :goto_2
 .end method
 
-.method public static v(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+.method public static w(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 14
     .annotation build Landroid/annotation/TargetApi;
         value = 0xe
@@ -1582,7 +1582,7 @@
     const/4 v8, 0x0
 
     .line 62
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v0, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v1, "Get phone number. country code : %s"
 
@@ -1590,17 +1590,17 @@
 
     aput-object p1, v2, v8
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 63
     if-nez p0, :cond_0
 
     .line 64
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v0, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v1, "The context is null."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 222
     :goto_0
@@ -1634,7 +1634,7 @@
 
     .line 77
     :try_start_2
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -1650,7 +1650,7 @@
     .line 80
     :goto_1
     :try_start_3
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -1674,7 +1674,7 @@
 
     .line 87
     :goto_2
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -1686,12 +1686,12 @@
     move-result-object v1
 
     .line 90
-    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/ai;->cf(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v6}, Lcom/tencent/mm/sdk/platformtools/al;->cs(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 91
-    const-string/jumbo v2, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v2, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v3, "get num : %s, extract country code  : %s, iso : %s"
 
@@ -1705,10 +1705,10 @@
 
     aput-object v6, v4, v12
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 93
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -1737,7 +1737,7 @@
     move-result-object v0
 
     .line 95
-    const-string/jumbo v1, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v1, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v2, "after deal, the num is %s"
 
@@ -1745,15 +1745,15 @@
 
     aput-object v0, v3, v8
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 98
     :goto_4
-    const-string/jumbo v1, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v1, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v2, "Got phone number by TelephonyManager."
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v9, v0
 
@@ -1769,11 +1769,11 @@
     move-object v1, v9
 
     :goto_5
-    const-string/jumbo v2, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v2, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v3, "get line number got exception"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v6, v0
 
@@ -1791,18 +1791,18 @@
     :cond_3
     const-string/jumbo v0, "android.permission.READ_CONTACTS"
 
-    invoke-static {p0, v0}, Lcom/tencent/mm/pluginsdk/g/a;->aL(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v0}, Lcom/tencent/mm/pluginsdk/h/a;->aK(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
     .line 113
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v0, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v1, "no contact permission"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -1815,18 +1815,18 @@
     .line 121
     const/16 v1, 0xe
 
-    invoke-static {v1}, Lcom/tencent/mm/compatible/util/e;->bV(I)Z
+    invoke-static {v1}, Lcom/tencent/mm/compatible/util/e;->cn(I)Z
 
     move-result v1
 
     if-nez v1, :cond_13
 
     .line 122
-    const-string/jumbo v1, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v1, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v2, "The device os API version is higher than 14."
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 124
     :try_start_4
@@ -1885,7 +1885,7 @@
     .line 133
     :goto_6
     :try_start_6
-    const-string/jumbo v3, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v3, "MicroMsg.ContactsUtil"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1901,7 +1901,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_6
 
@@ -1994,7 +1994,7 @@
 
     .line 151
     :try_start_9
-    const-string/jumbo v3, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v3, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v4, "Have got phone number from profile ,number is [%s]"
 
@@ -2006,7 +2006,7 @@
 
     aput-object v1, v5, v10
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 154
     :goto_8
@@ -2032,23 +2032,23 @@
 
     .line 171
     :goto_a
-    invoke-static {v10}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v10}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_9
 
     .line 172
-    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->bc(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->aY(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {p0, v1}, Lcom/tencent/mm/modelsimple/c;->w(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v1}, Lcom/tencent/mm/modelsimple/c;->x(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
     .line 174
-    invoke-static {v11}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v11}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -2102,7 +2102,7 @@
 
     .line 182
     :goto_c
-    const-string/jumbo v2, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v2, "MicroMsg.ContactsUtil"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2118,7 +2118,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 183
     if-lez v1, :cond_9
@@ -2171,14 +2171,14 @@
     move-result-object v10
 
     .line 189
-    invoke-static {v10}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v10}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_d
 
     .line 190
-    const-string/jumbo v1, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v1, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v2, "have got phone number from contacts ,number is [%s]"
 
@@ -2186,7 +2186,7 @@
 
     aput-object v10, v3, v8
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 195
     :cond_8
@@ -2195,19 +2195,19 @@
 
     .line 203
     :cond_9
-    invoke-static {v10}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v10}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_c
 
     .line 204
-    invoke-static {v10, v6}, Lcom/tencent/mm/sdk/platformtools/ai;->cf(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v10, v6}, Lcom/tencent/mm/sdk/platformtools/al;->cs(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 205
-    const-string/jumbo v1, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v1, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v2, "get phone num : %s, extract country code  : %s iso : %s"
 
@@ -2221,10 +2221,10 @@
 
     aput-object v6, v3, v12
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 207
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -2270,7 +2270,7 @@
 
     .line 219
     :cond_b
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v0, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v1, "after deal, the phone num is %s"
 
@@ -2278,7 +2278,7 @@
 
     aput-object v10, v2, v8
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_c
     move-object v9, v10
@@ -2295,11 +2295,11 @@
     move-object v2, v9
 
     :goto_f
-    const-string/jumbo v3, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v3, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v4, "query crashed"
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v10, v2
 
@@ -2314,11 +2314,11 @@
     move-object v2, v10
 
     :goto_10
-    const-string/jumbo v3, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v3, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v4, "query crashed"
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_9
 
@@ -2432,7 +2432,7 @@
     goto/16 :goto_1
 .end method
 
-.method private static w(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+.method private static x(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 8
 
     .prologue
@@ -2443,7 +2443,7 @@
     const/4 v7, 0x0
 
     .line 231
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v0, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v1, "Get contactId by email, email = %s"
 
@@ -2451,17 +2451,17 @@
 
     aput-object p1, v2, v7
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 232
     if-nez p0, :cond_0
 
     .line 233
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v0, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v1, "context is null."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 259
     :goto_0
@@ -2469,18 +2469,18 @@
 
     .line 236
     :cond_0
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 237
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v0, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v1, "email is null."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -2551,14 +2551,14 @@
     move-result-object v6
 
     .line 247
-    invoke-static {v6}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v6}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
     .line 248
-    const-string/jumbo v0, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v0, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v2, "Have got contactId ,contactId is [%s]"
 
@@ -2570,7 +2570,7 @@
 
     aput-object v6, v3, v4
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -2614,13 +2614,13 @@
 
     .line 256
     :goto_3
-    const-string/jumbo v2, "!32@/B4Tb64lLpLSOpQlr7qYXRHsd4oF45L0"
+    const-string/jumbo v2, "MicroMsg.ContactsUtil"
 
     const-string/jumbo v3, "getContactIdByEmail error"
 
     new-array v4, v7, [Ljava/lang/Object;
 
-    invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_2
 

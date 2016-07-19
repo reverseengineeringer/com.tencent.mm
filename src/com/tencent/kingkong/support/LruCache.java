@@ -6,12 +6,12 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-public class LruCache
+public class LruCache<K, V>
 {
   private int createCount;
   private int evictionCount;
   private int hitCount;
-  private final LinkedHashMap map;
+  private final LinkedHashMap<K, V> map;
   private int maxSize;
   private int missCount;
   private int putCount;
@@ -26,16 +26,16 @@ public class LruCache
     map = new LinkedHashMap(0, 0.75F, true);
   }
   
-  private int safeSizeOf(Object paramObject1, Object paramObject2)
+  private int safeSizeOf(K paramK, V paramV)
   {
-    int i = sizeOf(paramObject1, paramObject2);
+    int i = sizeOf(paramK, paramV);
     if (i < 0) {
-      throw new IllegalStateException("Negative size: " + paramObject1 + "=" + paramObject2);
+      throw new IllegalStateException("Negative size: " + paramK + "=" + paramV);
     }
     return i;
   }
   
-  protected Object create(Object paramObject)
+  protected V create(K paramK)
   {
     return null;
   }
@@ -54,7 +54,7 @@ public class LruCache
     }
   }
   
-  public void entryRemoved(boolean paramBoolean, Object paramObject1, Object paramObject2, Object paramObject3) {}
+  public void entryRemoved(boolean paramBoolean, K paramK, V paramV1, V paramV2) {}
   
   public final void evictAll()
   {
@@ -75,22 +75,22 @@ public class LruCache
     }
   }
   
-  public final Object get(Object paramObject)
+  public final V get(K paramK)
   {
-    if (paramObject == null) {
+    if (paramK == null) {
       throw new NullPointerException("key == null");
     }
     Object localObject1;
     try
     {
-      localObject1 = map.get(paramObject);
+      localObject1 = map.get(paramK);
       if (localObject1 != null)
       {
         hitCount += 1;
-        return localObject1;
+        return (V)localObject1;
       }
       missCount += 1;
-      localObject1 = create(paramObject);
+      localObject1 = create(paramK);
       if (localObject1 == null) {
         return null;
       }
@@ -99,23 +99,23 @@ public class LruCache
     try
     {
       createCount += 1;
-      Object localObject2 = map.put(paramObject, localObject1);
+      Object localObject2 = map.put(paramK, localObject1);
       if (localObject2 != null) {
-        map.put(paramObject, localObject2);
+        map.put(paramK, localObject2);
       }
       for (;;)
       {
         if (localObject2 == null) {
           break;
         }
-        entryRemoved(false, paramObject, localObject1, localObject2);
-        return localObject2;
-        size += safeSizeOf(paramObject, localObject1);
+        entryRemoved(false, paramK, localObject1, localObject2);
+        return (V)localObject2;
+        size += safeSizeOf(paramK, localObject1);
       }
       trimToSize(maxSize);
     }
     finally {}
-    return localObject1;
+    return (V)localObject1;
   }
   
   public final int hitCount()
@@ -160,24 +160,24 @@ public class LruCache
     }
   }
   
-  public final Object put(Object paramObject1, Object paramObject2)
+  public final V put(K paramK, V paramV)
   {
-    if ((paramObject1 == null) || (paramObject2 == null)) {
+    if ((paramK == null) || (paramV == null)) {
       throw new NullPointerException("key == null || value == null");
     }
     try
     {
       putCount += 1;
-      size += safeSizeOf(paramObject1, paramObject2);
-      Object localObject = map.put(paramObject1, paramObject2);
+      size += safeSizeOf(paramK, paramV);
+      Object localObject = map.put(paramK, paramV);
       if (localObject != null) {
-        size -= safeSizeOf(paramObject1, localObject);
+        size -= safeSizeOf(paramK, localObject);
       }
       if (localObject != null) {
-        entryRemoved(false, paramObject1, localObject, paramObject2);
+        entryRemoved(false, paramK, localObject, paramV);
       }
       trimToSize(maxSize);
-      return localObject;
+      return (V)localObject;
     }
     finally {}
   }
@@ -196,21 +196,21 @@ public class LruCache
     }
   }
   
-  public final Object remove(Object paramObject)
+  public final V remove(K paramK)
   {
-    if (paramObject == null) {
+    if (paramK == null) {
       throw new NullPointerException("key == null");
     }
     try
     {
-      Object localObject = map.remove(paramObject);
+      Object localObject = map.remove(paramK);
       if (localObject != null) {
-        size -= safeSizeOf(paramObject, localObject);
+        size -= safeSizeOf(paramK, localObject);
       }
       if (localObject != null) {
-        entryRemoved(false, paramObject, localObject, null);
+        entryRemoved(false, paramK, localObject, null);
       }
-      return localObject;
+      return (V)localObject;
     }
     finally {}
   }
@@ -243,12 +243,12 @@ public class LruCache
     }
   }
   
-  protected int sizeOf(Object paramObject1, Object paramObject2)
+  protected int sizeOf(K paramK, V paramV)
   {
     return 1;
   }
   
-  public final Map snapshot()
+  public final Map<K, V> snapshot()
   {
     try
     {

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.ui.widget.MMWebView android:id="@id/ml" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/mm" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/b1j" />
+</FrameLayout>

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hdZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+.field final synthetic hsK:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 43
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText$1;->hdZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText$1;->hsK:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -52,7 +52,7 @@
     if-eqz p1, :cond_0
 
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText$1;->hdZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText$1;->hsK:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
@@ -72,7 +72,7 @@
     const/16 v2, 0x1e
 
     .line 47
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText$1;->hdZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText$1;->hsK:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
@@ -91,13 +91,13 @@
     .line 56
     :cond_1
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText$1;->hdZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText$1;->hsK:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->a(Lcom/tencent/mm/plugin/sns/ui/SnsEditText;)I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText$1;->hdZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText$1;->hsK:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->b(Lcom/tencent/mm/plugin/sns/ui/SnsEditText;)I
 
@@ -136,7 +136,7 @@
 
     .line 59
     :cond_3
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText$1;->hdZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText$1;->hsK:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -145,7 +145,7 @@
     invoke-static {v1, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->b(Lcom/tencent/mm/plugin/sns/ui/SnsEditText;I)I
 
     .line 60
-    const-string/jumbo v1, "!32@/B4Tb64lLpK78ssMyUxGWQLv4Av3wmU/"
+    const-string/jumbo v1, "MicroMsg.SnsEditText"
 
     const-string/jumbo v2, "parsterLen: %d %d"
 
@@ -167,7 +167,7 @@
 
     const/4 v0, 0x1
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText$1;->hdZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText$1;->hsK:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-static {v4}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->c(Lcom/tencent/mm/plugin/sns/ui/SnsEditText;)I
 
@@ -179,7 +179,7 @@
 
     aput-object v4, v3, v0
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

@@ -31,14 +31,14 @@ public final class ReportUtil
     }
     localObject2 = new f();
     field_appId = ((String)localObject1);
-    aj.aPR().c((c)localObject2, new String[0]);
+    al.aUA().c((c)localObject2, new String[0]);
     localObject1 = new ReportArgs();
-    cAX = field_packageName;
+    cxS = field_packageName;
     errCode = paramInt;
     Object localObject3 = new c.a();
-    ((c.a)localObject3).m(paramBundle);
-    iBD = iBD;
-    cAU = field_openId;
+    ((c.a)localObject3).o(paramBundle);
+    iYn = iYn;
+    cxP = field_openId;
     return (ReportArgs)localObject1;
   }
   
@@ -46,34 +46,34 @@ public final class ReportUtil
   {
     Object localObject = new c.b();
     errCode = errCode;
-    iBD = iBD;
-    cAU = cAU;
+    iYn = iYn;
+    cxP = cxP;
     Bundle localBundle = new Bundle();
-    ((c.b)localObject).l(localBundle);
-    p.H(localBundle);
+    ((c.b)localObject).n(localBundle);
+    p.N(localBundle);
     localObject = new a.a();
-    jUy = cAX;
-    jUA = localBundle;
+    ktZ = cxS;
+    kub = localBundle;
     a.a(paramContext, (a.a)localObject);
   }
   
   public static class ReportArgs
     implements Parcelable
   {
-    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
-    public String cAU;
-    public String cAX;
+    public static final Parcelable.Creator<ReportArgs> CREATOR = new Parcelable.Creator() {};
+    public String cxP;
+    public String cxS;
     public int errCode;
-    public String iBD;
+    public String iYn;
     
     public ReportArgs() {}
     
     private ReportArgs(Parcel paramParcel)
     {
-      cAX = paramParcel.readString();
+      cxS = paramParcel.readString();
       errCode = paramParcel.readInt();
-      iBD = paramParcel.readString();
-      cAU = paramParcel.readString();
+      iYn = paramParcel.readString();
+      cxP = paramParcel.readString();
     }
     
     public int describeContents()
@@ -83,10 +83,10 @@ public final class ReportUtil
     
     public void writeToParcel(Parcel paramParcel, int paramInt)
     {
-      paramParcel.writeString(cAX);
+      paramParcel.writeString(cxS);
       paramParcel.writeInt(errCode);
-      paramParcel.writeString(iBD);
-      paramParcel.writeString(cAU);
+      paramParcel.writeString(iYn);
+      paramParcel.writeString(cxP);
     }
   }
 }

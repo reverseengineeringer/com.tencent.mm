@@ -2,43 +2,43 @@ package com.tencent.mm.ui;
 
 public abstract interface c
 {
-  public abstract void aZw();
+  public abstract void a(a parama);
   
   public abstract void b(int paramInt, float paramFloat);
   
-  public abstract void gS(boolean paramBoolean);
+  public abstract void beN();
   
-  public abstract void gT(boolean paramBoolean);
+  public abstract int beO();
   
-  public abstract int getContactTabUnread();
+  public abstract int beP();
   
-  public abstract int getCurIdx();
+  public abstract int beQ();
   
-  public abstract int getFriendTabUnread();
+  public abstract int beR();
   
-  public abstract int getMainTabUnread();
+  public abstract boolean beS();
   
-  public abstract boolean getSettingsPoint();
+  public abstract boolean beT();
   
-  public abstract int getSettingsTabUnread();
+  public abstract int beU();
   
-  public abstract boolean getShowFriendPoint();
+  public abstract void hn(int paramInt);
   
-  public abstract void pP(int paramInt);
+  public abstract void hs(boolean paramBoolean);
   
-  public abstract void pQ(int paramInt);
+  public abstract void ht(boolean paramBoolean);
   
-  public abstract void pR(int paramInt);
+  public abstract void rE(int paramInt);
   
-  public abstract void pS(int paramInt);
+  public abstract void rF(int paramInt);
   
-  public abstract void setOnTabClickListener(a parama);
+  public abstract void rG(int paramInt);
   
-  public abstract void setTo(int paramInt);
+  public abstract void rH(int paramInt);
   
   public static abstract interface a
   {
-    public abstract void gr(int paramInt);
+    public abstract void ho(int paramInt);
   }
 }
 

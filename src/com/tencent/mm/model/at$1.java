@@ -7,25 +7,25 @@ final class at$1
   public final void run()
   {
     // Byte code:
-    //   0: invokestatic 22	com/tencent/mm/model/ah:rh	()Z
+    //   0: invokestatic 22	com/tencent/mm/model/ah:rg	()Z
     //   3: ifne +4 -> 7
     //   6: return
     //   7: invokestatic 28	java/lang/System:currentTimeMillis	()J
     //   10: lstore_2
-    //   11: invokestatic 34	com/tencent/mm/sdk/platformtools/y:getContext	()Landroid/content/Context;
+    //   11: invokestatic 34	com/tencent/mm/sdk/platformtools/aa:getContext	()Landroid/content/Context;
     //   14: astore 7
     //   16: aload 7
     //   18: invokevirtual 40	android/content/Context:getApplicationInfo	()Landroid/content/pm/ApplicationInfo;
     //   21: getfield 46	android/content/pm/ApplicationInfo:sourceDir	Ljava/lang/String;
     //   24: astore 8
     //   26: aload 8
-    //   28: invokestatic 50	com/tencent/mm/model/ah:tD	()Lcom/tencent/mm/model/c;
+    //   28: invokestatic 50	com/tencent/mm/model/ah:tE	()Lcom/tencent/mm/model/c;
     //   31: getfield 56	com/tencent/mm/model/c:uin	I
     //   34: invokestatic 62	com/tencent/mm/model/NorMsgSource:checkSoftType	(Ljava/lang/String;I)[B
     //   37: astore 6
     //   39: aload 7
     //   41: aload 8
-    //   43: invokestatic 50	com/tencent/mm/model/ah:tD	()Lcom/tencent/mm/model/c;
+    //   43: invokestatic 50	com/tencent/mm/model/ah:tE	()Lcom/tencent/mm/model/c;
     //   46: getfield 56	com/tencent/mm/model/c:uin	I
     //   49: invokestatic 66	com/tencent/mm/model/NorMsgSource:checkSoftType2	(Landroid/content/Context;Ljava/lang/String;I)[B
     //   52: astore 8
@@ -149,7 +149,7 @@ final class at$1
     //   253: dup
     //   254: iconst_0
     //   255: aload 7
-    //   257: invokestatic 112	com/tencent/mm/sdk/platformtools/ay:ky	(Ljava/lang/String;)Ljava/lang/String;
+    //   257: invokestatic 112	com/tencent/mm/sdk/platformtools/be:li	(Ljava/lang/String;)Ljava/lang/String;
     //   260: aastore
     //   261: invokestatic 78	java/lang/String:format	(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
     //   264: invokevirtual 85	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -173,9 +173,9 @@ final class at$1
     //   304: ldc 126
     //   306: invokevirtual 85	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   309: invokevirtual 91	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   312: invokestatic 132	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
-    //   315: invokestatic 50	com/tencent/mm/model/ah:tD	()Lcom/tencent/mm/model/c;
-    //   318: invokevirtual 136	com/tencent/mm/model/c:rn	()Lcom/tencent/mm/storage/h;
+    //   312: invokestatic 132	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   315: invokestatic 50	com/tencent/mm/model/ah:tE	()Lcom/tencent/mm/model/c;
+    //   318: invokevirtual 136	com/tencent/mm/model/c:ro	()Lcom/tencent/mm/storage/h;
     //   321: bipush 79
     //   323: aload 6
     //   325: invokevirtual 142	com/tencent/mm/storage/h:set	(ILjava/lang/Object;)V
@@ -186,7 +186,7 @@ final class at$1
     //   335: ldc -112
     //   337: iconst_0
     //   338: anewarray 4	java/lang/Object
-    //   341: invokestatic 148	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   341: invokestatic 148	com/tencent/mm/sdk/platformtools/v:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   344: return
     //   345: new 80	java/lang/StringBuilder
     //   348: dup
@@ -217,9 +217,9 @@ final class at$1
     //   399: dup
     //   400: iconst_0
     //   401: aload 7
-    //   403: invokestatic 156	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   403: invokestatic 156	com/tencent/mm/sdk/platformtools/be:f	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   406: aastore
-    //   407: invokestatic 160	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   407: invokestatic 160	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   410: goto -134 -> 276
     // Local variable table:
     //   start	length	slot	name	signature

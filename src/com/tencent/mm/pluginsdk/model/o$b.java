@@ -3,7 +3,7 @@ package com.tencent.mm.pluginsdk.model;
 final class o$b
 {
   public String classname = "";
-  public String iAE = "";
+  public String iXe = "";
 }
 
 /* Location:

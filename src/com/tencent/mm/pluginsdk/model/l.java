@@ -4,14 +4,14 @@ import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import com.tencent.mm.network.e;
 import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b.axf;
-import com.tencent.mm.protocal.b.axg;
-import com.tencent.mm.protocal.b.axh;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.a.c;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.axy;
+import com.tencent.mm.protocal.b.axz;
+import com.tencent.mm.protocal.b.aya;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.a.c;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -19,87 +19,87 @@ import java.util.Map;
 import junit.framework.Assert;
 
 public final class l
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private com.tencent.mm.r.d anM;
-  public final a anN;
-  public int axL = 0;
-  public String bPr;
-  public List iAo = null;
-  public String iAp;
-  private List iAq = null;
+  public int ajS = 0;
+  public String bIM;
+  public final a bkQ;
+  private com.tencent.mm.t.d bkT;
+  public List<String> iWO = null;
+  public String iWP;
+  private List<String> iWQ = null;
   
   private l(int paramInt1, String paramString1, String paramString2, int paramInt2)
   {
     Assert.assertTrue("This NetSceneVerifyUser init MUST use opcode == MM_VERIFYUSER_VERIFYOK", true);
-    iAo = new LinkedList();
-    iAo.add(paramString1);
-    axL = 3;
+    iWO = new LinkedList();
+    iWO.add(paramString1);
+    ajS = 3;
     Object localObject = new a.a();
-    bFa = new axg();
-    bFb = new axh();
+    byl = new axz();
+    bym = new aya();
     uri = "/cgi-bin/micromsg-bin/verifyuser";
-    bEY = 137;
-    bFc = 44;
-    bFd = 1000000044;
-    anN = ((a.a)localObject).vy();
-    localObject = (axg)anN.bEW.bFf;
-    iZE = 3;
-    jtn = "";
+    byj = 137;
+    byn = 44;
+    byo = 1000000044;
+    bkQ = ((a.a)localObject).vA();
+    localObject = (axz)bkQ.byh.byq;
+    jxj = 3;
+    jRI = "";
     LinkedList localLinkedList = new LinkedList();
-    axf localaxf = new axf();
-    fUt = paramString1;
-    jPj = paramString2;
-    jpd = ah.tD().rV().DP(paramString1);
-    jHl = null;
-    localLinkedList.add(localaxf);
-    jPo = localLinkedList;
-    jPn = localLinkedList.size();
+    axy localaxy = new axy();
+    gdI = paramString1;
+    koc = paramString2;
+    jNd = ah.tE().rX().Ge(paramString1);
+    kfJ = null;
+    localLinkedList.add(localaxy);
+    koh = localLinkedList;
+    kog = localLinkedList.size();
     paramString1 = new LinkedList();
     paramString1.add(Integer.valueOf(paramInt2));
-    jPq = paramString1;
-    jPp = paramString1.size();
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvjTi6XprtAzYGM0KIh//1dw=", "dkverify scene:%d user:%d ticket:%s, atispamTicket:%s", new Object[] { Integer.valueOf(jPo.size()), Integer.valueOf(jPq.size()), paramString2, jpd });
+    koj = paramString1;
+    koi = paramString1.size();
+    v.d("MicroMsg.NetSceneVerifyUser", "dkverify scene:%d user:%d ticket:%s, atispamTicket:%s", new Object[] { Integer.valueOf(koh.size()), Integer.valueOf(koj.size()), paramString2, jNd });
   }
   
-  public l(int paramInt, List paramList1, List paramList2, String paramString1, String paramString2)
+  public l(int paramInt, List<String> paramList, List<Integer> paramList1, String paramString1, String paramString2)
   {
-    this(paramInt, paramList1, paramList2, paramString1, paramString2, null, null);
+    this(paramInt, paramList, paramList1, paramString1, paramString2, null, null);
   }
   
-  public l(int paramInt, List paramList1, List paramList2, String paramString1, String paramString2, Map paramMap, String paramString3)
+  public l(int paramInt, List<String> paramList, List<Integer> paramList1, String paramString1, String paramString2, Map<String, Integer> paramMap, String paramString3)
   {
     boolean bool;
     Object localObject;
     LinkedList localLinkedList;
     label160:
-    axf localaxf;
+    axy localaxy;
     if (paramInt != 3)
     {
       bool = true;
       Assert.assertTrue("This NetSceneVerifyUser init NEVER use opcode == MM_VERIFYUSER_VERIFYOK", bool);
-      axL = paramInt;
-      iAo = paramList1;
+      ajS = paramInt;
+      iWO = paramList;
       localObject = new a.a();
-      bFa = new axg();
-      bFb = new axh();
+      byl = new axz();
+      bym = new aya();
       uri = "/cgi-bin/micromsg-bin/verifyuser";
-      bEY = 137;
-      bFc = 44;
-      bFd = 1000000044;
-      anN = ((a.a)localObject).vy();
-      localObject = (axg)anN.bEW.bFf;
-      iZE = paramInt;
-      jtn = paramString1;
-      iAp = paramString1;
+      byj = 137;
+      byn = 44;
+      byo = 1000000044;
+      bkQ = ((a.a)localObject).vA();
+      localObject = (axz)bkQ.byh.byq;
+      jxj = paramInt;
+      jRI = paramString1;
+      iWP = paramString1;
       localLinkedList = new LinkedList();
       paramInt = 0;
-      if (paramInt >= paramList1.size()) {
+      if (paramInt >= paramList.size()) {
         break label329;
       }
-      localaxf = new axf();
-      fUt = ((String)paramList1.get(paramInt));
+      localaxy = new axy();
+      gdI = ((String)paramList.get(paramInt));
       if (paramString2 != null) {
         break label322;
       }
@@ -107,29 +107,29 @@ public final class l
     label322:
     for (paramString1 = "";; paramString1 = paramString2)
     {
-      jPj = paramString1;
-      paramString1 = ah.tD().rV();
-      String str = fUt;
-      ((Integer)paramList2.get(paramInt)).intValue();
-      jpd = paramString1.DP(str);
-      jHl = paramString3;
-      if ((paramMap != null) && (paramMap.containsKey(fUt))) {
-        jPk = ((Integer)paramMap.get(fUt)).intValue();
+      koc = paramString1;
+      paramString1 = ah.tE().rX();
+      String str = gdI;
+      ((Integer)paramList1.get(paramInt)).intValue();
+      jNd = paramString1.Ge(str);
+      kfJ = paramString3;
+      if ((paramMap != null) && (paramMap.containsKey(gdI))) {
+        kod = ((Integer)paramMap.get(gdI)).intValue();
       }
-      localLinkedList.add(localaxf);
+      localLinkedList.add(localaxy);
       paramInt += 1;
       break label160;
       bool = false;
       break;
     }
     label329:
-    jPo = localLinkedList;
-    jPn = localLinkedList.size();
-    paramList1 = new LinkedList();
-    paramList1.addAll(paramList2);
-    jPq = paramList1;
-    jPp = paramList1.size();
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvjTi6XprtAzYGM0KIh//1dw=", "dkverify scene:%d user:%d", new Object[] { Integer.valueOf(jPo.size()), Integer.valueOf(jPq.size()) });
+    koh = localLinkedList;
+    kog = localLinkedList.size();
+    paramList = new LinkedList();
+    paramList.addAll(paramList1);
+    koj = paramList;
+    koi = paramList.size();
+    v.d("MicroMsg.NetSceneVerifyUser", "dkverify scene:%d user:%d", new Object[] { Integer.valueOf(koh.size()), Integer.valueOf(koj.size()) });
   }
   
   public l(String paramString1, String paramString2, int paramInt)
@@ -137,36 +137,36 @@ public final class l
     this(3, paramString1, paramString2, paramInt);
   }
   
-  public final int a(e parame, com.tencent.mm.r.d paramd)
+  public final int a(e parame, com.tencent.mm.t.d paramd)
   {
-    anM = paramd;
-    return a(parame, anN, this);
+    bkT = paramd;
+    return a(parame, bkQ, this);
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
     if ((paramInt2 != 0) || (paramInt3 != 0)) {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvjTi6XprtAzYGM0KIh//1dw=", "errType:%d, errCode:%d", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3) });
+      v.e("MicroMsg.NetSceneVerifyUser", "errType:%d, errCode:%d", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3) });
     }
-    anM.a(paramInt2, paramInt3, paramString, this);
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
   }
   
-  public final String aPs()
+  public final String aTY()
   {
-    if ((anN != null) && (anN.bEX != null)) {
-      return anN.bEX.bFf).eiB;
+    if ((bkQ != null) && (bkQ.byi != null)) {
+      return bkQ.byi.byq).emC;
     }
     return "";
   }
   
-  public final void bQ(String paramString1, String paramString2)
+  public final void bZ(String paramString1, String paramString2)
   {
-    Iterator localIterator = anN.bEW.bFf).jPo.iterator();
+    Iterator localIterator = bkQ.byh.byq).koh.iterator();
     while (localIterator.hasNext())
     {
-      axf localaxf = (axf)localIterator.next();
-      jPl = paramString1;
-      jPm = paramString2;
+      axy localaxy = (axy)localIterator.next();
+      koe = paramString1;
+      kof = paramString2;
     }
   }
   

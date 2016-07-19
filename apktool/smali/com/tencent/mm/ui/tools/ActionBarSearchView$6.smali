@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ltH:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+.field final synthetic lUJ:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 160
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$6;->ltH:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+    .line 164
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$6;->lUJ:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,30 +42,30 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 164
+    .line 168
     const/16 v0, 0x43
 
     if-ne p2, v0, :cond_3
 
-    .line 165
-    const-string/jumbo v0, "!44@/B4Tb64lLpL4/IPflj+tleANqnL7qi1AFYpzfZUCVoE="
+    .line 169
+    const-string/jumbo v0, "MicroMsg.ActionBarSearchView"
 
     const-string/jumbo v2, "on back key click."
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 166
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$6;->ltH:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+    .line 170
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$6;->lUJ:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->b(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Lcom/tencent/mm/ui/tools/v;
 
     move-result-object v2
 
-    iget-boolean v0, v2, Lcom/tencent/mm/ui/tools/v;->lys:Z
+    iget-boolean v0, v2, Lcom/tencent/mm/ui/tools/v;->lZg:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v2, Lcom/tencent/mm/ui/tools/v;->lyq:Ljava/lang/ref/WeakReference;
+    iget-object v0, v2, Lcom/tencent/mm/ui/tools/v;->lZe:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -75,18 +75,18 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v3, v2, Lcom/tencent/mm/ui/tools/v;->lyp:Ljava/util/List;
+    iget-object v3, v2, Lcom/tencent/mm/ui/tools/v;->lZd:Ljava/util/List;
 
     if-nez v3, :cond_1
 
     :cond_0
     move v0, v1
 
-    .line 168
+    .line 172
     :goto_0
     return v0
 
-    .line 166
+    .line 170
     :cond_1
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -102,13 +102,13 @@
 
     if-ne v4, v5, :cond_2
 
-    invoke-virtual {v2, v4}, Lcom/tencent/mm/ui/tools/v;->rS(I)Lcom/tencent/mm/ui/tools/v$b;
+    invoke-virtual {v2, v4}, Lcom/tencent/mm/ui/tools/v;->tW(I)Lcom/tencent/mm/ui/tools/v$b;
 
     move-result-object v2
 
     if-eqz v2, :cond_2
 
-    iget-boolean v4, v2, Lcom/tencent/mm/ui/tools/v$b;->lyB:Z
+    iget-boolean v4, v2, Lcom/tencent/mm/ui/tools/v$b;->lZp:Z
 
     if-eqz v4, :cond_2
 
@@ -140,6 +140,6 @@
     :cond_3
     move v0, v1
 
-    .line 168
+    .line 172
     goto :goto_0
 .end method

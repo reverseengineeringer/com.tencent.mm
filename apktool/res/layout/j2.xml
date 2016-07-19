@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/a_m" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:minHeight="@dimen/ha"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="@dimen/i0" android:layout_height="@dimen/i0" android:layout_marginLeft="@dimen/i7" android:layout_marginRight="@dimen/j_">
+        <ImageView android:id="@id/l4" android:layout_width="@dimen/hy" android:layout_height="@dimen/hy" android:src="@raw/default_avatar" android:layout_centerVertical="true" />
+        <TextView android:id="@id/g7" android:visibility="gone" android:layout_marginRight="@dimen/j_" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/UnreadCountTipsStyle" />
+        <ImageView android:id="@id/a_n" android:visibility="gone" android:layout_marginTop="@dimen/i9" android:layout_marginRight="@dimen/cp" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/UnreadDotStyle" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="@dimen/i7">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="24.0dip">
+            <LinearLayout android:gravity="top" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.tencent.mm.ui.base.NoMeasuredTextView android:textSize="@dimen/i8" android:textColor="@color/j_" android:ellipsize="end" android:gravity="center|left" android:id="@id/a_o" android:tag="nickname_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/MMFontTitleInList" />
+            </LinearLayout>
+            <com.tencent.mm.ui.base.NoMeasuredTextView android:textSize="@dimen/h4" android:textColor="@color/h_" android:gravity="center|right" android:id="@id/a_p" android:tag="update_time_tv" android:layout_width="@dimen/dr" android:layout_height="wrap_content" style="@style/MMFontTimeInList" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:minHeight="22.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.tencent.mm.ui.base.NoMeasuredTextView android:textSize="14.0dip" android:textColor="@color/h6" android:ellipsize="end" android:gravity="center|left" android:id="@id/a_q" android:tag="last_msg_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="{lastmsg}" style="@style/MMFontTipInList" />
+            </LinearLayout>
+            <LinearLayout android:gravity="bottom|center|right" android:layout_width="40.0dip" android:layout_height="fill_parent">
+                <ImageView android:gravity="right" android:layout_gravity="center|right" android:id="@id/a_r" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@raw/chat_mute_notify_normal" />
+                <ImageView android:gravity="center|right" android:layout_gravity="center_vertical" android:id="@id/a_s" android:paddingLeft="@dimen/j_" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@raw/talk_room_mic_idle" android:contentDescription="@string/d_" />
+                <ImageView android:gravity="center|right" android:layout_gravity="center|right" android:id="@id/a_t" android:paddingLeft="@dimen/j_" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@raw/location_share_icon" android:contentDescription="@string/d_" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

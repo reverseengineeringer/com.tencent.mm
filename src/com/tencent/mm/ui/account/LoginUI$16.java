@@ -13,7 +13,7 @@ final class LoginUI$16
   {
     if ((66 == paramInt) && (paramKeyEvent.getAction() == 0))
     {
-      LoginUI.c(ktY);
+      LoginUI.c(kTf);
       return true;
     }
     return false;

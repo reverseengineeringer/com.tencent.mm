@@ -1,14 +1,18 @@
 package com.tencent.mm.ui.chatting;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.t.m;
+
 final class m$1$1
-  implements Runnable
+  implements DialogInterface.OnCancelListener
 {
   m$1$1(m.1 param1) {}
   
-  public final void run()
+  public final void onCancel(DialogInterface paramDialogInterface)
   {
-    kRs.kRr.hH(false);
-    kRs.kRr.bdM();
+    ah.tF().b(1030, lrb.lra);
   }
 }
 

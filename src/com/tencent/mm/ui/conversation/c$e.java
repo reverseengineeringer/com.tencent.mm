@@ -4,10 +4,10 @@ import com.tencent.mm.storage.k;
 
 final class c$e
 {
-  String apb = null;
-  boolean bvP = false;
-  k cId = null;
-  Integer loS = null;
+  String ajT = null;
+  boolean ble = false;
+  k cFh = null;
+  Integer lPi = null;
   
   public c$e(c paramc) {}
 }

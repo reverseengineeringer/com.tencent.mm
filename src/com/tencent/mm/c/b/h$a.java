@@ -2,35 +2,35 @@ package com.tencent.mm.c.b;
 
 import android.os.Message;
 import com.tencent.mm.modelvoice.q;
-import com.tencent.mm.r.g.b;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.g.b;
 
 final class h$a
   implements Runnable
 {
-  aa handler;
+  ac handler;
   
   public h$a(final h paramh)
   {
-    handler = new aa()
+    handler = new ac()
     {
       public final void handleMessage(Message paramAnonymousMessage)
       {
-        if (ars.arm <= 0) {
+        if (acL.acF <= 0) {
           return;
         }
         paramAnonymousMessage = new StringBuilder("On Part :");
-        if (ars.aro == null) {}
+        if (acL.acH == null) {}
         for (boolean bool = true;; bool = false)
         {
-          u.d("!44@/B4Tb64lLpJjyqE6YDnApwOwHOAz5sGPSEN1mjztZrA=", bool);
-          ars.arm = 2;
-          if (ars.aro == null) {
+          v.d("MicroMsg.SceneVoice.Recorder", bool);
+          acL.acF = 2;
+          if (acL.acH == null) {
             break;
           }
-          ars.aro.vz();
+          acL.acH.vB();
           return;
         }
       }
@@ -40,33 +40,33 @@ final class h$a
   public final void run()
   {
     boolean bool = true;
-    synchronized (ars)
+    synchronized (acL)
     {
-      if (ars.arb == null)
+      if (acL.acu == null)
       {
-        u.e("!44@/B4Tb64lLpJjyqE6YDnApwOwHOAz5sGPSEN1mjztZrA=", "Stop Record Failed recorder == null");
+        v.e("MicroMsg.SceneVoice.Recorder", "Stop Record Failed recorder == null");
         return;
       }
-      String str = ars.mFileName;
-      if (!ars.arl) {}
+      String str = acL.mFileName;
+      if (!acL.acE) {}
       for (;;)
       {
-        str = q.u(str, bool);
-        u.d("!44@/B4Tb64lLpJjyqE6YDnApwOwHOAz5sGPSEN1mjztZrA=", "Thread Started Record, fullPath: %s, useSpeex: %s", new Object[] { str, Boolean.valueOf(ars.arl) });
-        if (ars.arb.bp(str)) {
+        str = q.y(str, bool);
+        v.d("MicroMsg.SceneVoice.Recorder", "Thread Started Record, fullPath: %s, useSpeex: %s", new Object[] { str, Boolean.valueOf(acL.acE) });
+        if (acL.acu.bh(str)) {
           break;
         }
-        q.bg(ars.mFileName);
-        ars.mFileName = null;
-        ars.arb = null;
-        u.e("!44@/B4Tb64lLpJjyqE6YDnApwOwHOAz5sGPSEN1mjztZrA=", "Thread Start Record  Error fileName[" + ars.mFileName + "]");
-        ars.ari = ay.FT();
-        u.d("!44@/B4Tb64lLpJjyqE6YDnApwOwHOAz5sGPSEN1mjztZrA=", "Thread Started Record fileName[" + ars.mFileName + "] time:" + ay.ao(ars.arh));
+        q.kP(acL.mFileName);
+        acL.mFileName = null;
+        acL.acu = null;
+        v.e("MicroMsg.SceneVoice.Recorder", "Thread Start Record  Error fileName[" + acL.mFileName + "]");
+        acL.acB = be.Gq();
+        v.d("MicroMsg.SceneVoice.Recorder", "Thread Started Record fileName[" + acL.mFileName + "] time:" + be.av(acL.acA));
         handler.sendEmptyMessageDelayed(0, 1L);
         return;
         bool = false;
       }
-      ars.arc.requestFocus();
+      acL.acv.requestFocus();
     }
   }
 }

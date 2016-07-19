@@ -1,7 +1,7 @@
 package com.tencent.mm.plugin.sns.ui;
 
 import android.app.Dialog;
-import com.tencent.mm.plugin.sns.h.k;
+import com.tencent.mm.plugin.sns.i.k;
 import com.tencent.mm.plugin.sns.lucky.b.w;
 import com.tencent.mm.plugin.sns.lucky.ui.b;
 import com.tencent.mm.ui.MMActivity;
@@ -12,18 +12,18 @@ final class SnsCommentDetailUI$11
 {
   SnsCommentDetailUI$11(SnsCommentDetailUI paramSnsCommentDetailUI, k paramk) {}
   
-  public final void aBL()
+  public final void aEH()
   {
-    if (!w.ut(hdb.aAl())) {
-      if ((SnsCommentDetailUI.q(hda) == null) || (!SnsCommentDetailUI.q(hda).isShowing())) {}
+    if (!w.vy(hrO.aCX())) {
+      if ((SnsCommentDetailUI.q(hrN) == null) || (!SnsCommentDetailUI.q(hrN).isShowing())) {}
     }
-    while (chda).eYQ)
+    while (chrN).fhk)
     {
       return;
-      SnsCommentDetailUI.a(hda, b.d(hda.koJ.kpc, hda.hcX.lW(0)));
+      SnsCommentDetailUI.a(hrN, b.d(hrN.kNN.kOg, hrN.hrK.nl(0)));
       return;
     }
-    SnsCommentDetailUI.r(hda);
+    SnsCommentDetailUI.r(hrN);
   }
 }
 

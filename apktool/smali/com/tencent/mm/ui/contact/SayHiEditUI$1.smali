@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/contact/SayHiEditUI;->Gb()V
+    value = Lcom/tencent/mm/ui/contact/SayHiEditUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic dFW:Ljava/lang/String;
+.field final synthetic cJR:Ljava/lang/String;
 
-.field final synthetic fzb:I
+.field final synthetic fIf:I
 
-.field final synthetic llS:Lcom/tencent/mm/ui/contact/SayHiEditUI;
+.field final synthetic lMh:Lcom/tencent/mm/ui/contact/SayHiEditUI;
 
 
 # direct methods
@@ -30,12 +30,12 @@
     .locals 0
 
     .prologue
-    .line 68
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->llS:Lcom/tencent/mm/ui/contact/SayHiEditUI;
+    .line 69
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->lMh:Lcom/tencent/mm/ui/contact/SayHiEditUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->dFW:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->cJR:Ljava/lang/String;
 
-    iput p3, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->fzb:I
+    iput p3, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->fIf:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,31 +45,33 @@
 
 # virtual methods
 .method public final onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 6
+    .locals 7
 
     .prologue
-    .line 72
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->llS:Lcom/tencent/mm/ui/contact/SayHiEditUI;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/SayHiEditUI;->age()V
+    const/4 v6, 0x0
 
     .line 73
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->lMh:Lcom/tencent/mm/ui/contact/SayHiEditUI;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/SayHiEditUI;->aiI()V
+
+    .line 74
     new-instance v2, Ljava/util/LinkedList;
 
     invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
 
-    .line 74
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->dFW:Ljava/lang/String;
+    .line 75
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->cJR:Ljava/lang/String;
 
     invoke-virtual {v2, v0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 75
+    .line 76
     new-instance v3, Ljava/util/LinkedList;
 
     invoke-direct {v3}, Ljava/util/LinkedList;-><init>()V
 
-    .line 76
-    iget v0, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->fzb:I
+    .line 77
+    iget v0, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->fIf:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -77,14 +79,14 @@
 
     invoke-virtual {v3, v0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 77
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->llS:Lcom/tencent/mm/ui/contact/SayHiEditUI;
+    .line 78
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->lMh:Lcom/tencent/mm/ui/contact/SayHiEditUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/SayHiEditUI;->a(Lcom/tencent/mm/ui/contact/SayHiEditUI;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 78
+    .line 79
     new-instance v0, Lcom/tencent/mm/pluginsdk/model/l;
 
     const/4 v1, 0x2
@@ -93,31 +95,31 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/pluginsdk/model/l;-><init>(ILjava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 79
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 80
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    invoke-virtual {v1, v0, v6}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
-    .line 80
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->llS:Lcom/tencent/mm/ui/contact/SayHiEditUI;
+    .line 81
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->lMh:Lcom/tencent/mm/ui/contact/SayHiEditUI;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->llS:Lcom/tencent/mm/ui/contact/SayHiEditUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->lMh:Lcom/tencent/mm/ui/contact/SayHiEditUI;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v2, v2, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->llS:Lcom/tencent/mm/ui/contact/SayHiEditUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->lMh:Lcom/tencent/mm/ui/contact/SayHiEditUI;
 
-    const v4, 0x7f0b0ddd
+    const v4, 0x7f080134
 
     invoke-virtual {v3, v4}, Lcom/tencent/mm/ui/contact/SayHiEditUI;->getString(I)Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->llS:Lcom/tencent/mm/ui/contact/SayHiEditUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;->lMh:Lcom/tencent/mm/ui/contact/SayHiEditUI;
 
-    const v4, 0x7f0b0eaf
+    const v4, 0x7f081055
 
     invoke-virtual {v3, v4}, Lcom/tencent/mm/ui/contact/SayHiEditUI;->getString(I)Ljava/lang/String;
 
@@ -135,8 +137,6 @@
 
     invoke-static {v1, v0}, Lcom/tencent/mm/ui/contact/SayHiEditUI;->a(Lcom/tencent/mm/ui/contact/SayHiEditUI;Landroid/app/ProgressDialog;)Landroid/app/ProgressDialog;
 
-    .line 87
-    const/4 v0, 0x0
-
-    return v0
+    .line 88
+    return v6
 .end method

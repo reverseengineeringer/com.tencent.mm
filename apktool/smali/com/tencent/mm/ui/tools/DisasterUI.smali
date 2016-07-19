@@ -16,7 +16,7 @@
 
 
 # virtual methods
-.method public final aNj()Z
+.method public final aQR()Z
     .locals 1
 
     .prologue
@@ -31,7 +31,7 @@
 
     .prologue
     .line 49
-    const v0, 0x7f0a0012
+    const v0, 0x7f030182
 
     return v0
 .end method
@@ -44,7 +44,7 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 22
-    const-string/jumbo v0, "!32@/B4Tb64lLpKLlbgMS2DoQqCWOqvTA8sH"
+    const-string/jumbo v0, "MicroMsg.DisasterUI"
 
     const-string/jumbo v1, "onCreate :%d"
 
@@ -64,7 +64,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 24
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/DisasterUI;->getIntent()Landroid/content/Intent;
@@ -89,7 +89,7 @@
     move-result-object v2
 
     .line 27
-    const v0, 0x7f07006a
+    const v0, 0x7f1005a1
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/DisasterUI;->findViewById(I)Landroid/view/View;
 
@@ -100,7 +100,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 28
-    const v0, 0x7f07006b
+    const v0, 0x7f1005a2
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/DisasterUI;->findViewById(I)Landroid/view/View;
 
@@ -113,13 +113,13 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 37
-    const v0, 0x7f0b0204
+    const v0, 0x7f0809f9
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/DisasterUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/DisasterUI;->Gj(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/DisasterUI;->Ah(Ljava/lang/String;)V
 
     .line 38
     new-instance v0, Lcom/tencent/mm/ui/tools/DisasterUI$2;

@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic cBa:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
+.field final synthetic chs:Landroid/os/Bundle;
 
-.field final synthetic cBb:Lcom/tencent/mm/sdk/modelmsg/c$a;
+.field final synthetic cxV:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
 
-.field final synthetic cmm:Landroid/os/Bundle;
+.field final synthetic cxW:Lcom/tencent/mm/sdk/modelmsg/c$a;
 
 
 # direct methods
@@ -31,11 +31,11 @@
 
     .prologue
     .line 191
-    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$2;->cBa:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$2;->cxV:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$2;->cmm:Landroid/os/Bundle;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$2;->chs:Landroid/os/Bundle;
 
-    iput-object p3, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$2;->cBb:Lcom/tencent/mm/sdk/modelmsg/c$a;
+    iput-object p3, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$2;->cxW:Lcom/tencent/mm/sdk/modelmsg/c$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,19 +44,19 @@
 
 
 # virtual methods
-.method public final bq(Z)V
+.method public final aY(Z)V
     .locals 4
 
     .prologue
     .line 195
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$2;->cBa:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$2;->cxV:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/base/stub/UIEntryStub;->isFinishing()Z
 
     move-result v0
 
     .line 196
-    const-string/jumbo v1, "!32@/B4Tb64lLpLQqVsArFw5OxJ/b8BKWyrY"
+    const-string/jumbo v1, "MicroMsg.UIEntryStub"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -82,7 +82,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 197
     if-eqz p1, :cond_0
@@ -92,14 +92,14 @@
     .line 198
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$2;->cBa:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$2;->cxV:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
 
     const-class v2, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 199
-    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$2;->cmm:Landroid/os/Bundle;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$2;->chs:Landroid/os/Bundle;
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
@@ -113,20 +113,20 @@
     .line 201
     const-string/jumbo v1, "SendAppMessageWrapper_Scene"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$2;->cBb:Lcom/tencent/mm/sdk/modelmsg/c$a;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$2;->cxW:Lcom/tencent/mm/sdk/modelmsg/c$a;
 
-    iget v2, v2, Lcom/tencent/mm/sdk/modelmsg/c$a;->asc:I
+    iget v2, v2, Lcom/tencent/mm/sdk/modelmsg/c$a;->scene:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 202
-    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$2;->cBa:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$2;->cxV:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/base/stub/UIEntryStub;->startActivity(Landroid/content/Intent;)V
 
     .line 204
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$2;->cBa:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/UIEntryStub$2;->cxV:Lcom/tencent/mm/plugin/base/stub/UIEntryStub;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/base/stub/UIEntryStub;->finish()V
 

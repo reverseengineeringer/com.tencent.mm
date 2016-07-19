@@ -29,7 +29,7 @@ public abstract class q$a
       return true;
     }
     paramParcel1.enforceInterface("com.tencent.mm.network.IWorkerCallback_AIDL");
-    boolean bool = ks();
+    boolean bool = iV();
     paramParcel2.writeNoException();
     if (bool) {}
     for (paramInt1 = 1;; paramInt1 = 0)
@@ -55,7 +55,7 @@ public abstract class q$a
     }
     
     /* Error */
-    public final boolean ks()
+    public final boolean iV()
     {
       // Byte code:
       //   0: iconst_1

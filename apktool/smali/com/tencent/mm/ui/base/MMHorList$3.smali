@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic kFg:Lcom/tencent/mm/ui/base/MMHorList;
+.field final synthetic lej:Lcom/tencent/mm/ui/base/MMHorList;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 467
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
 
@@ -38,9 +38,9 @@
 
     .prologue
     .line 472
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMHorList;->bcq()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMHorList;->bhF()Z
 
     move-result v0
 
@@ -52,9 +52,9 @@
 
     .prologue
     .line 478
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
-    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/base/MMHorList;->E(F)Z
+    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/base/MMHorList;->C(F)Z
 
     move-result v0
 
@@ -66,14 +66,14 @@
 
     .prologue
     .line 483
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     float-to-int v1, p3
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/MMHorList;->a(Lcom/tencent/mm/ui/base/MMHorList;I)I
 
     .line 485
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMHorList;->requestLayout()V
 
@@ -98,7 +98,7 @@
     move v6, v0
 
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMHorList;->getChildCount()I
 
@@ -107,7 +107,7 @@
     if-ge v6, v0, :cond_1
 
     .line 495
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-virtual {v0, v6}, Lcom/tencent/mm/ui/base/MMHorList;->getChildAt(I)Landroid/view/View;
 
@@ -156,7 +156,7 @@
     if-eqz v0, :cond_2
 
     .line 502
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMHorList;->c(Lcom/tencent/mm/ui/base/MMHorList;)Landroid/widget/AdapterView$OnItemClickListener;
 
@@ -165,15 +165,15 @@
     if-eqz v0, :cond_0
 
     .line 503
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMHorList;->c(Lcom/tencent/mm/ui/base/MMHorList;)Landroid/widget/AdapterView$OnItemClickListener;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-static {v3}, Lcom/tencent/mm/ui/base/MMHorList;->d(Lcom/tencent/mm/ui/base/MMHorList;)I
 
@@ -183,13 +183,13 @@
 
     add-int/2addr v3, v6
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-static {v4}, Lcom/tencent/mm/ui/base/MMHorList;->e(Lcom/tencent/mm/ui/base/MMHorList;)Landroid/widget/ListAdapter;
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-static {v5}, Lcom/tencent/mm/ui/base/MMHorList;->d(Lcom/tencent/mm/ui/base/MMHorList;)I
 
@@ -207,7 +207,7 @@
 
     .line 505
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMHorList;->f(Lcom/tencent/mm/ui/base/MMHorList;)Landroid/widget/AdapterView$OnItemSelectedListener;
 
@@ -216,15 +216,15 @@
     if-eqz v0, :cond_1
 
     .line 506
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMHorList;->f(Lcom/tencent/mm/ui/base/MMHorList;)Landroid/widget/AdapterView$OnItemSelectedListener;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-static {v3}, Lcom/tencent/mm/ui/base/MMHorList;->d(Lcom/tencent/mm/ui/base/MMHorList;)I
 
@@ -234,13 +234,13 @@
 
     add-int/2addr v3, v6
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-static {v4}, Lcom/tencent/mm/ui/base/MMHorList;->e(Lcom/tencent/mm/ui/base/MMHorList;)Landroid/widget/ListAdapter;
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMHorList$3;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-static {v5}, Lcom/tencent/mm/ui/base/MMHorList;->d(Lcom/tencent/mm/ui/base/MMHorList;)I
 

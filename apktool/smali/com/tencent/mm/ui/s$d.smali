@@ -17,11 +17,11 @@
 # instance fields
 .field icon:I
 
-.field krg:Ljava/lang/String;
+.field kQn:Ljava/lang/String;
 
-.field krh:Ljava/lang/String;
+.field kQo:Ljava/lang/String;
 
-.field kri:I
+.field kQp:I
 
 .field textColor:I
 
@@ -35,16 +35,16 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 213
-    iput-object p2, p0, Lcom/tencent/mm/ui/s$d;->krg:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/ui/s$d;->kQn:Ljava/lang/String;
 
     .line 214
-    iput-object p3, p0, Lcom/tencent/mm/ui/s$d;->krh:Ljava/lang/String;
+    iput-object p3, p0, Lcom/tencent/mm/ui/s$d;->kQo:Ljava/lang/String;
 
     .line 215
     iput p4, p0, Lcom/tencent/mm/ui/s$d;->icon:I
 
     .line 216
-    iput p1, p0, Lcom/tencent/mm/ui/s$d;->kri:I
+    iput p1, p0, Lcom/tencent/mm/ui/s$d;->kQp:I
 
     .line 217
     iput p5, p0, Lcom/tencent/mm/ui/s$d;->textColor:I

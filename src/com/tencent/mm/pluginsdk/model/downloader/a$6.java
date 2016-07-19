@@ -10,15 +10,15 @@ final class a$6
   
   public final void run()
   {
-    if (a.aQa() != null)
+    if (a.aUJ() != null)
     {
-      Iterator localIterator = a.aQa().iterator();
+      Iterator localIterator = a.aUJ().iterator();
       while (localIterator.hasNext()) {
-        ((k)localIterator.next()).onTaskPaused(gPj);
+        ((k)localIterator.next()).onTaskPaused(gXl);
       }
     }
-    if (a.aQb() != null) {
-      a.aQb().onTaskPaused(gPj);
+    if (a.aUK() != null) {
+      a.aUK().onTaskPaused(gXl);
     }
   }
 }

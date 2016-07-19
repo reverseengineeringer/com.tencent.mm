@@ -6,8 +6,8 @@ import android.content.Intent;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import com.tencent.mm.model.y;
-import com.tencent.mm.sdk.platformtools.p;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.q;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.s;
 
 public class MMAutoMessageHeardReceiver
@@ -15,13 +15,13 @@ public class MMAutoMessageHeardReceiver
 {
   public void onReceive(Context paramContext, Intent paramIntent)
   {
-    paramContext = p.g(paramIntent, "key_username");
+    paramContext = q.g(paramIntent, "key_username");
     if (paramContext == null) {
       return;
     }
-    u.i("!64@/B4Tb64lLpJYWR0wzx4Vma/Smbu3SvmOcxkDwA+D7y4hGJqqFeF7XchOuFbsmY6u", "username %s heard", new Object[] { paramContext });
-    ah.kU().cancelNotification(paramContext);
-    ah.tD().rt().EC(paramContext);
+    v.i("MicroMsg.auto.MMAutoMessageHeardReceiver", "username %s heard", new Object[] { paramContext });
+    ah.jv().cancelNotification(paramContext);
+    ah.tE().ru().GQ(paramContext);
   }
 }
 

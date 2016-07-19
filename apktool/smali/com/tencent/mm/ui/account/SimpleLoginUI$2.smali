@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/SimpleLoginUI;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/account/SimpleLoginUI;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+.field final synthetic kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 413
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$2;->kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$2;->kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,7 +49,7 @@
 
     .line 420
     :cond_0
-    invoke-interface {p1}, Lcom/tencent/mm/network/e;->vW()Lcom/tencent/mm/network/c;
+    invoke-interface {p1}, Lcom/tencent/mm/network/e;->vY()Lcom/tencent/mm/network/c;
 
     move-result-object v0
 
@@ -57,7 +57,7 @@
 
     new-array v1, v1, [B
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 

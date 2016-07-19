@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/app/plugin/d;->o(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    value = Lcom/tencent/mm/app/plugin/d;->p(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,9 +16,19 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/tencent/mm/pluginsdk/ui/applet/g;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic amZ:Lcom/tencent/mm/app/plugin/d;
+.field final synthetic ZO:Lcom/tencent/mm/app/plugin/d;
 
 
 # direct methods
@@ -27,7 +37,7 @@
 
     .prologue
     .line 33
-    iput-object p1, p0, Lcom/tencent/mm/app/plugin/d$1;->amZ:Lcom/tencent/mm/app/plugin/d;
+    iput-object p1, p0, Lcom/tencent/mm/app/plugin/d$1;->ZO:Lcom/tencent/mm/app/plugin/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

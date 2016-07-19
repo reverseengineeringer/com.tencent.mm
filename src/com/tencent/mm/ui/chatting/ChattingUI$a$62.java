@@ -1,19 +1,29 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.sdk.h.g.a;
-import com.tencent.mm.sdk.h.i;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.e.a.hi;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.sdk.c.a;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.e;
+import com.tencent.mm.storage.f;
 
 final class ChattingUI$a$62
-  implements g.a
+  implements Runnable
 {
   ChattingUI$a$62(ChattingUI.a parama) {}
   
-  public final void a(String paramString, i parami)
+  public final void run()
   {
-    u.d("!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/", "onBGChange event:%s", new Object[] { paramString });
-    if ((paramString != null) && ((paramString.equals(laF.getTalkerUserName())) || (paramString.equals("*")))) {
-      ChattingUI.a.A(laF);
+    e locale = ah.tE().ry().Gi(lAY.lrK.field_username);
+    if ((locale != null) && (locale.bbx()))
+    {
+      v.d("MicroMsg.ChattingUI", "cpan[doScene NetSceneGetChatroomMemberDetail]");
+      hi localhi = new hi();
+      aoH.aoF = lAY.lrK.field_username;
+      aoH.aoI = locale.bbw();
+      a.kug.y(localhi);
     }
   }
 }

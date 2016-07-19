@@ -15,27 +15,27 @@
 
 
 # instance fields
-.field aAF:Landroid/widget/ImageView;
+.field amO:Landroid/widget/ImageView;
 
-.field aHM:Ljava/lang/String;
+.field auc:Ljava/lang/String;
 
-.field ePc:Landroid/widget/TextView;
+.field eWV:Landroid/widget/TextView;
 
-.field epr:Landroid/widget/ProgressBar;
+.field eup:Landroid/widget/ProgressBar;
 
-.field hfb:Landroid/view/View;
+.field htS:Landroid/view/View;
 
-.field hfc:Landroid/widget/FrameLayout;
+.field htT:Landroid/widget/FrameLayout;
 
-.field hfd:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+.field htU:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
-.field hfe:Landroid/widget/ImageView;
+.field htV:Landroid/widget/ImageView;
 
-.field hff:Landroid/widget/ImageView;
+.field htW:Landroid/widget/ImageView;
 
-.field hfg:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
+.field htX:Lcom/tencent/mm/ui/widget/MMPinProgressBtn;
 
-.field hfh:Landroid/view/View;
+.field htY:Landroid/view/View;
 
 .field position:I
 
@@ -45,13 +45,13 @@
     .locals 1
 
     .prologue
-    .line 1019
+    .line 1119
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1031
+    .line 1131
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$d;->aHM:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$d;->auc:Ljava/lang/String;
 
     return-void
 .end method

@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic izK:[I
+.field static final synthetic iWi:[I
 
 
 # direct methods
@@ -32,12 +32,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/model/a$1;->izK:[I
+    sput-object v0, Lcom/tencent/mm/pluginsdk/model/a$1;->iWi:[I
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$1;->izK:[I
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$1;->iWi:[I
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/model/a$a;->izL:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/model/a$a;->iWj:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/model/a$a;->ordinal()I
 
@@ -51,9 +51,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$1;->izK:[I
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$1;->iWi:[I
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/model/a$a;->izM:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/model/a$a;->iWk:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/model/a$a;->ordinal()I
 
@@ -67,9 +67,9 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$1;->izK:[I
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$1;->iWi:[I
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/model/a$a;->izN:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/model/a$a;->iWl:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/model/a$a;->ordinal()I
 
@@ -83,9 +83,9 @@
 
     :goto_2
     :try_start_3
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$1;->izK:[I
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$1;->iWi:[I
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/model/a$a;->izO:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/model/a$a;->iWm:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/model/a$a;->ordinal()I
 
@@ -99,9 +99,9 @@
 
     :goto_3
     :try_start_4
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$1;->izK:[I
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/a$1;->iWi:[I
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/model/a$a;->izP:Lcom/tencent/mm/pluginsdk/model/a$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/model/a$a;->iWn:Lcom/tencent/mm/pluginsdk/model/a$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/model/a$a;->ordinal()I
 

@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic clo:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
+.field final synthetic cgr:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
 
-.field final synthetic clp:Ljava/lang/String;
+.field final synthetic cgs:Ljava/lang/String;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 52
-    iput-object p1, p0, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity$2;->clo:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
+    iput-object p1, p0, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity$2;->cgr:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
 
-    iput-object p2, p0, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity$2;->clp:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity$2;->cgs:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,12 +45,12 @@
 
     .prologue
     .line 56
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity$2;->clp:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity$2;->cgs:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/ba/a;->Gc(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/bd/a;->It(Ljava/lang/String;)Ljava/lang/String;
 
     .line 57
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity$2;->clo:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity$2;->cgr:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
 
     invoke-static {v0}, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;->b(Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;)Lcom/tencent/mm/ui/base/h;
 
@@ -58,7 +58,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity$2;->clo:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity$2;->cgr:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
 
     invoke-static {v0}, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;->b(Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;)Lcom/tencent/mm/ui/base/h;
 
@@ -71,7 +71,7 @@
     if-eqz v0, :cond_0
 
     .line 58
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity$2;->clo:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity$2;->cgr:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
 
     invoke-static {v0}, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;->b(Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;)Lcom/tencent/mm/ui/base/h;
 
@@ -81,7 +81,7 @@
 
     .line 60
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity$2;->clo:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity$2;->cgr:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
 
     invoke-virtual {v0}, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;->finish()V
 

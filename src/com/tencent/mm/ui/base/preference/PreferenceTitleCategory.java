@@ -21,8 +21,8 @@ public class PreferenceTitleCategory
   public PreferenceTitleCategory(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    if (kMt != 2131363209) {
-      setLayoutResource(2131363216);
+    if (llI != 2130904038) {
+      setLayoutResource(2130904036);
     }
   }
   

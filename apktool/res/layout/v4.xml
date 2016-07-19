@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:paddingBottom="@dimen/cy" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_gravity="center_horizontal" android:id="@id/b5l" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:minWidth="150.0dip" layout="@layout/lucky_sns_money_num_input_view" />
+    <TextView android:textSize="@dimen/h4" android:textColor="@color/hc" android:layout_gravity="center_horizontal" android:id="@id/b5m" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j8" android:text="@string/bcd" />
+    <Button android:id="@id/b5n" android:layout_marginTop="35.0dip" android:text="@string/bcc" style="@style/MMSolidRedLargeButton" />
+</LinearLayout>

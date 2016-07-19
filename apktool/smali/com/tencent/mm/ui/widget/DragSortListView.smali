@@ -6,645 +6,787 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/tencent/mm/ui/widget/DragSortListView$f;,
+        Lcom/tencent/mm/ui/widget/DragSortListView$e;,
         Lcom/tencent/mm/ui/widget/DragSortListView$d;,
         Lcom/tencent/mm/ui/widget/DragSortListView$c;,
-        Lcom/tencent/mm/ui/widget/DragSortListView$e;,
-        Lcom/tencent/mm/ui/widget/DragSortListView$m;,
-        Lcom/tencent/mm/ui/widget/DragSortListView$h;,
-        Lcom/tencent/mm/ui/widget/DragSortListView$b;,
-        Lcom/tencent/mm/ui/widget/DragSortListView$i;,
         Lcom/tencent/mm/ui/widget/DragSortListView$l;,
         Lcom/tencent/mm/ui/widget/DragSortListView$g;,
+        Lcom/tencent/mm/ui/widget/DragSortListView$b;,
+        Lcom/tencent/mm/ui/widget/DragSortListView$h;,
         Lcom/tencent/mm/ui/widget/DragSortListView$k;,
-        Lcom/tencent/mm/ui/widget/DragSortListView$n;,
+        Lcom/tencent/mm/ui/widget/DragSortListView$f;,
         Lcom/tencent/mm/ui/widget/DragSortListView$j;,
+        Lcom/tencent/mm/ui/widget/DragSortListView$m;,
+        Lcom/tencent/mm/ui/widget/DragSortListView$i;,
         Lcom/tencent/mm/ui/widget/DragSortListView$a;
     }
 .end annotation
 
 
 # instance fields
-.field private hun:I
+.field private hMb:I
 
-.field private ij:I
+.field private iC:I
 
-.field private lDA:I
+.field private mdW:Landroid/view/View;
 
-.field private lDB:I
+.field private mdX:Landroid/graphics/Point;
 
-.field private lDC:I
+.field private mdY:Landroid/graphics/Point;
 
-.field private lDD:[Landroid/view/View;
+.field private mdZ:I
 
-.field private lDE:Lcom/tencent/mm/ui/widget/DragSortListView$d;
+.field private meA:F
 
-.field private lDF:F
+.field private meB:F
 
-.field private lDG:F
+.field private meC:F
 
-.field private lDH:I
+.field private meD:F
 
-.field private lDI:I
+.field private meE:Lcom/tencent/mm/ui/widget/DragSortListView$c;
 
-.field private lDJ:F
+.field private meF:I
 
-.field private lDK:F
+.field private meG:I
 
-.field private lDL:F
+.field private meH:I
 
-.field private lDM:F
+.field private meI:I
 
-.field private lDN:F
+.field private meJ:I
 
-.field private lDO:Lcom/tencent/mm/ui/widget/DragSortListView$c;
+.field private meK:Z
 
-.field private lDP:I
+.field meL:Z
 
-.field private lDQ:I
+.field meM:Lcom/tencent/mm/ui/widget/DragSortListView$h;
 
-.field private lDR:I
+.field private meN:Landroid/view/MotionEvent;
 
-.field private lDS:I
+.field private meO:I
 
-.field private lDT:I
+.field private meP:F
 
-.field private lDU:Z
+.field private meQ:F
 
-.field lDV:Z
+.field private meR:Lcom/tencent/mm/ui/widget/DragSortListView$a;
 
-.field lDW:Lcom/tencent/mm/ui/widget/DragSortListView$i;
+.field private meS:Z
 
-.field private lDX:Landroid/view/MotionEvent;
+.field private meT:Lcom/tencent/mm/ui/widget/DragSortListView$e;
 
-.field private lDY:I
+.field private meU:Z
 
-.field private lDZ:F
+.field private meV:Lcom/tencent/mm/ui/widget/DragSortListView$i;
 
-.field private lDg:Landroid/view/View;
+.field private meW:Lcom/tencent/mm/ui/widget/DragSortListView$k;
 
-.field private lDh:Landroid/graphics/Point;
+.field private meX:Lcom/tencent/mm/ui/widget/DragSortListView$j;
 
-.field private lDi:Landroid/graphics/Point;
+.field private meY:Lcom/tencent/mm/ui/widget/DragSortListView$f;
 
-.field private lDj:I
+.field meZ:Z
 
-.field private lDk:Z
+.field private mea:Z
 
-.field private lDl:F
+.field private meb:F
 
-.field private lDm:F
+.field private mec:F
 
-.field private lDn:I
+.field private med:I
 
-.field private lDo:I
+.field private mee:I
 
-.field private lDp:I
+.field private mef:I
 
-.field private lDq:Z
+.field private meg:Z
 
-.field private lDr:I
+.field private meh:I
 
-.field private lDs:I
+.field private mei:I
 
-.field private lDt:I
+.field private mej:I
 
-.field private lDu:I
+.field private mek:I
 
-.field private lDv:I
+.field private mel:I
 
-.field private lDw:Lcom/tencent/mm/ui/widget/DragSortListView$b;
+.field private mem:Lcom/tencent/mm/ui/widget/DragSortListView$b;
 
-.field private lDx:Lcom/tencent/mm/ui/widget/DragSortListView$h;
+.field public men:Lcom/tencent/mm/ui/widget/DragSortListView$g;
 
-.field private lDy:Lcom/tencent/mm/ui/widget/DragSortListView$m;
+.field public meo:Lcom/tencent/mm/ui/widget/DragSortListView$l;
 
-.field lDz:Z
+.field mep:Z
 
-.field private lEa:F
+.field private meq:I
 
-.field private lEb:Lcom/tencent/mm/ui/widget/DragSortListView$a;
+.field private mer:I
 
-.field private lEc:Z
+.field private mes:I
 
-.field private lEd:Lcom/tencent/mm/ui/widget/DragSortListView$f;
+.field private met:[Landroid/view/View;
 
-.field private lEe:Z
+.field private meu:Lcom/tencent/mm/ui/widget/DragSortListView$d;
 
-.field private lEf:Lcom/tencent/mm/ui/widget/DragSortListView$j;
+.field private mev:F
 
-.field private lEg:Lcom/tencent/mm/ui/widget/DragSortListView$l;
+.field private mew:F
 
-.field private lEh:Lcom/tencent/mm/ui/widget/DragSortListView$k;
+.field private mex:I
 
-.field private lEi:Lcom/tencent/mm/ui/widget/DragSortListView$g;
+.field private mey:I
 
-.field lEj:Z
+.field private mez:F
 
-.field private lEk:F
+.field private mfa:F
 
-.field lEl:Z
+.field mfb:Z
 
-.field private lEm:Z
+.field private mfc:Z
 
-.field private mZ:I
+.field private np:I
 
-.field private na:Z
+.field private nq:Z
 
-.field private pX:Landroid/database/DataSetObserver;
+.field private ql:Landroid/database/DataSetObserver;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 15
+    .locals 16
 
     .prologue
     .line 441
     invoke-direct/range {p0 .. p2}, Landroid/widget/ListView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 74
-    new-instance v1, Landroid/graphics/Point;
+    new-instance v2, Landroid/graphics/Point;
 
-    invoke-direct {v1}, Landroid/graphics/Point;-><init>()V
+    invoke-direct {v2}, Landroid/graphics/Point;-><init>()V
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDh:Landroid/graphics/Point;
+    move-object/from16 v0, p0
+
+    iput-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdX:Landroid/graphics/Point;
 
     .line 76
-    new-instance v1, Landroid/graphics/Point;
+    new-instance v2, Landroid/graphics/Point;
 
-    invoke-direct {v1}, Landroid/graphics/Point;-><init>()V
+    invoke-direct {v2}, Landroid/graphics/Point;-><init>()V
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDi:Landroid/graphics/Point;
+    move-object/from16 v0, p0
+
+    iput-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdY:Landroid/graphics/Point;
 
     .line 86
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDk:Z
+    move-object/from16 v0, p0
+
+    iput-boolean v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mea:Z
 
     .line 97
-    const/high16 v1, 0x3f800000    # 1.0f
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDl:F
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meb:F
 
     .line 98
-    const/high16 v1, 0x3f800000    # 1.0f
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDm:F
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mec:F
 
     .line 123
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDq:Z
+    move-object/from16 v0, p0
+
+    iput-boolean v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meg:Z
 
     .line 178
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDz:Z
+    move-object/from16 v0, p0
+
+    iput-boolean v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mep:Z
 
     .line 189
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
 
     .line 196
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDA:I
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meq:I
 
     .line 212
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mZ:I
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->np:I
 
     .line 218
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    new-array v1, v1, [Landroid/view/View;
+    new-array v2, v2, [Landroid/view/View;
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDD:[Landroid/view/View;
+    move-object/from16 v0, p0
+
+    iput-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->met:[Landroid/view/View;
 
     .line 230
-    const v1, 0x3eaaaaab
+    const v2, 0x3eaaaaab
 
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDF:F
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mev:F
 
     .line 237
-    const v1, 0x3eaaaaab
+    const v2, 0x3eaaaaab
 
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDG:F
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mew:F
 
     .line 261
-    const/high16 v1, 0x3f000000    # 0.5f
+    const/high16 v2, 0x3f000000    # 0.5f
 
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDN:F
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meD:F
 
     .line 269
-    new-instance v1, Lcom/tencent/mm/ui/widget/DragSortListView$1;
+    new-instance v2, Lcom/tencent/mm/ui/widget/DragSortListView$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/widget/DragSortListView$1;-><init>(Lcom/tencent/mm/ui/widget/DragSortListView;)V
+    move-object/from16 v0, p0
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDO:Lcom/tencent/mm/ui/widget/DragSortListView$c;
+    invoke-direct {v2, v0}, Lcom/tencent/mm/ui/widget/DragSortListView$1;-><init>(Lcom/tencent/mm/ui/widget/DragSortListView;)V
+
+    move-object/from16 v0, p0
+
+    iput-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meE:Lcom/tencent/mm/ui/widget/DragSortListView$c;
 
     .line 333
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDT:I
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meJ:I
 
     .line 339
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDU:Z
+    move-object/from16 v0, p0
+
+    iput-boolean v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meK:Z
 
     .line 344
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDV:Z
+    move-object/from16 v0, p0
+
+    iput-boolean v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meL:Z
 
     .line 349
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDW:Lcom/tencent/mm/ui/widget/DragSortListView$i;
+    move-object/from16 v0, p0
+
+    iput-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meM:Lcom/tencent/mm/ui/widget/DragSortListView$h;
 
     .line 369
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDY:I
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meO:I
 
     .line 376
-    const/high16 v1, 0x3e800000    # 0.25f
+    const/high16 v2, 0x3e800000    # 0.25f
 
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDZ:F
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meP:F
 
     .line 385
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEa:F
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meQ:F
 
     .line 398
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEc:Z
+    move-object/from16 v0, p0
+
+    iput-boolean v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meS:Z
 
     .line 408
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->na:Z
+    move-object/from16 v0, p0
+
+    iput-boolean v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->nq:Z
 
     .line 415
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEe:Z
+    move-object/from16 v0, p0
+
+    iput-boolean v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meU:Z
 
     .line 429
-    new-instance v1, Lcom/tencent/mm/ui/widget/DragSortListView$j;
+    new-instance v2, Lcom/tencent/mm/ui/widget/DragSortListView$i;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/widget/DragSortListView$j;-><init>(Lcom/tencent/mm/ui/widget/DragSortListView;)V
+    move-object/from16 v0, p0
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEf:Lcom/tencent/mm/ui/widget/DragSortListView$j;
+    invoke-direct {v2, v0}, Lcom/tencent/mm/ui/widget/DragSortListView$i;-><init>(Lcom/tencent/mm/ui/widget/DragSortListView;)V
+
+    move-object/from16 v0, p0
+
+    iput-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meV:Lcom/tencent/mm/ui/widget/DragSortListView$i;
 
     .line 438
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEk:F
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mfa:F
 
     .line 1655
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEl:Z
+    move-object/from16 v0, p0
+
+    iput-boolean v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mfb:Z
 
     .line 2137
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEm:Z
+    move-object/from16 v0, p0
+
+    iput-boolean v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mfc:Z
 
     .line 443
-    const/16 v2, 0x96
+    const/16 v3, 0x96
 
     .line 445
-    const/16 v1, 0x96
+    const/16 v2, 0x96
 
     .line 447
-    if-eqz p2, :cond_2
+    if-eqz p2, :cond_3
 
     .line 448
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getContext()Landroid/content/Context;
+    invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getContext()Landroid/content/Context;
 
-    move-result-object v1
+    move-result-object v2
 
-    sget-object v2, Lcom/tencent/mm/R$b;->DragSortListView:[I
-
-    const/4 v3, 0x0
+    sget-object v3, Lcom/tencent/mm/R$b;->Wu:[I
 
     const/4 v4, 0x0
 
+    const/4 v5, 0x0
+
     move-object/from16 v0, p2
 
-    invoke-virtual {v1, v0, v2, v3, v4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+    invoke-virtual {v2, v0, v3, v4, v5}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
-    move-result-object v10
+    move-result-object v11
 
     .line 450
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v10, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
-
-    move-result v2
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
-
-    move-result v1
-
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDA:I
-
-    .line 452
-    const/4 v1, 0x5
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v10, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result v1
-
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEc:Z
-
-    .line 454
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEc:Z
-
-    if-eqz v1, :cond_0
-
-    .line 455
-    new-instance v1, Lcom/tencent/mm/ui/widget/DragSortListView$f;
-
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/widget/DragSortListView$f;-><init>(Lcom/tencent/mm/ui/widget/DragSortListView;)V
-
-    iput-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEd:Lcom/tencent/mm/ui/widget/DragSortListView$f;
-
-    .line 459
-    :cond_0
-    const/4 v1, 0x6
-
-    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDl:F
-
-    invoke-virtual {v10, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v1
-
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDl:F
-
-    .line 460
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDl:F
-
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDm:F
-
-    .line 462
-    const/16 v1, 0xa
-
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDz:Z
-
-    invoke-virtual {v10, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result v1
-
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDz:Z
-
-    .line 464
-    const/4 v1, 0x0
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    const/high16 v3, 0x3f800000    # 1.0f
-
-    const/4 v4, 0x7
-
-    const/high16 v5, 0x3f400000    # 0.75f
-
-    invoke-virtual {v10, v4, v5}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v4
-
-    sub-float/2addr v3, v4
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->min(FF)F
-
-    move-result v2
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->max(FF)F
-
-    move-result v1
-
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDZ:F
-
-    .line 466
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDZ:F
-
-    const/4 v2, 0x0
-
-    cmpl-float v1, v1, v2
-
-    if-lez v1, :cond_5
-
-    const/4 v1, 0x1
-
-    :goto_0
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDq:Z
-
-    .line 468
-    const/4 v1, 0x1
-
-    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDF:F
-
-    invoke-virtual {v10, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v1
-
-    .line 470
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/widget/DragSortListView;->setDragScrollStart(F)V
-
-    .line 472
-    const/4 v1, 0x2
-
-    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDN:F
-
-    invoke-virtual {v10, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v1
-
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDN:F
-
-    .line 474
-    const/16 v1, 0x8
-
-    const/16 v2, 0x96
-
-    invoke-virtual {v10, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v9
-
-    .line 476
-    const/16 v1, 0x9
-
-    const/16 v2, 0x96
-
-    invoke-virtual {v10, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v8
-
-    .line 478
-    const/16 v1, 0x11
-
     const/4 v2, 0x1
 
-    invoke-virtual {v10, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    const/4 v3, 0x0
 
-    move-result v1
+    const/4 v4, 0x1
 
-    .line 480
-    if-eqz v1, :cond_1
-
-    .line 481
-    const/16 v1, 0xc
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v10, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result v11
-
-    .line 482
-    const/4 v1, 0x4
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v10, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v5
-
-    .line 483
-    const/16 v1, 0xb
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v10, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result v12
-
-    .line 484
-    const/16 v1, 0xd
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v10, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v4
-
-    .line 485
-    const/16 v1, 0xe
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v10, v1, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
+    invoke-virtual {v11, v3, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v3
 
-    .line 486
-    const/16 v1, 0xf
+    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
 
+    move-result v2
+
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meq:I
+
+    .line 452
+    const/4 v2, 0x5
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v11, v2, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result v2
+
+    move-object/from16 v0, p0
+
+    iput-boolean v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meS:Z
+
+    .line 454
+    move-object/from16 v0, p0
+
+    iget-boolean v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meS:Z
+
+    if-eqz v2, :cond_0
+
+    .line 455
+    new-instance v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;
+
+    move-object/from16 v0, p0
+
+    invoke-direct {v2, v0}, Lcom/tencent/mm/ui/widget/DragSortListView$e;-><init>(Lcom/tencent/mm/ui/widget/DragSortListView;)V
+
+    move-object/from16 v0, p0
+
+    iput-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meT:Lcom/tencent/mm/ui/widget/DragSortListView$e;
+
+    .line 459
+    :cond_0
+    const/4 v2, 0x6
+
+    move-object/from16 v0, p0
+
+    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meb:F
+
+    invoke-virtual {v11, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meb:F
+
+    .line 460
+    move-object/from16 v0, p0
+
+    iget v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meb:F
+
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mec:F
+
+    .line 462
+    const/16 v2, 0xa
+
+    move-object/from16 v0, p0
+
+    iget-boolean v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mep:Z
+
+    invoke-virtual {v11, v2, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result v2
+
+    move-object/from16 v0, p0
+
+    iput-boolean v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mep:Z
+
+    .line 464
     const/4 v2, 0x0
 
-    invoke-virtual {v10, v1, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
+    const/high16 v3, 0x3f800000    # 1.0f
 
-    move-result v7
+    const/high16 v4, 0x3f800000    # 1.0f
 
-    .line 487
-    const/16 v1, 0x10
+    const/4 v5, 0x7
 
-    const/4 v2, 0x0
+    const/high16 v6, 0x3f400000    # 0.75f
 
-    invoke-virtual {v10, v1, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
+    invoke-virtual {v11, v5, v6}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v5
+
+    sub-float/2addr v4, v5
+
+    invoke-static {v3, v4}, Ljava/lang/Math;->min(FF)F
+
+    move-result v3
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->max(FF)F
+
+    move-result v2
+
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meP:F
+
+    .line 466
+    move-object/from16 v0, p0
+
+    iget v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meP:F
+
+    const/4 v3, 0x0
+
+    cmpl-float v2, v2, v3
+
+    if-lez v2, :cond_6
+
+    const/4 v2, 0x1
+
+    :goto_0
+    move-object/from16 v0, p0
+
+    iput-boolean v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meg:Z
+
+    .line 468
+    const/4 v2, 0x1
+
+    move-object/from16 v0, p0
+
+    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mev:F
+
+    invoke-virtual {v11, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    .line 470
+    const/high16 v3, 0x3f000000    # 0.5f
+
+    cmpl-float v3, v2, v3
+
+    if-lez v3, :cond_7
+
+    const/high16 v3, 0x3f000000    # 0.5f
+
+    move-object/from16 v0, p0
+
+    iput v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mew:F
+
+    :goto_1
+    const/high16 v3, 0x3f000000    # 0.5f
+
+    cmpl-float v3, v2, v3
+
+    if-lez v3, :cond_8
+
+    const/high16 v2, 0x3f000000    # 0.5f
+
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mev:F
+
+    :goto_2
+    invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getHeight()I
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-direct/range {p0 .. p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpz()V
+
+    .line 472
+    :cond_1
+    const/4 v2, 0x2
+
+    move-object/from16 v0, p0
+
+    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meD:F
+
+    invoke-virtual {v11, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meD:F
+
+    .line 474
+    const/16 v2, 0x8
+
+    const/16 v3, 0x96
+
+    invoke-virtual {v11, v2, v3}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v10
+
+    .line 476
+    const/16 v2, 0x9
+
+    const/16 v3, 0x96
+
+    invoke-virtual {v11, v2, v3}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v9
+
+    .line 478
+    const/16 v2, 0x11
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v11, v2, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result v2
+
+    .line 480
+    if-eqz v2, :cond_2
+
+    .line 481
+    const/16 v2, 0xc
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v11, v2, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result v12
+
+    .line 482
+    const/4 v2, 0x4
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v11, v2, v3}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v6
 
-    .line 488
-    const/4 v1, 0x3
+    .line 483
+    const/16 v2, 0xb
 
-    const/high16 v2, -0x1000000
+    const/4 v3, 0x1
 
-    invoke-virtual {v10, v1, v2}, Landroid/content/res/TypedArray;->getColor(II)I
+    invoke-virtual {v11, v2, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v13
 
+    .line 484
+    const/16 v2, 0xd
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v11, v2, v3}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v5
+
+    .line 485
+    const/16 v2, 0xe
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v11, v2, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v4
+
+    .line 486
+    const/16 v2, 0xf
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v11, v2, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v8
+
+    .line 487
+    const/16 v2, 0x10
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v11, v2, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v7
+
+    .line 488
+    const/4 v2, 0x3
+
+    const/high16 v3, -0x1000000
+
+    invoke-virtual {v11, v2, v3}, Landroid/content/res/TypedArray;->getColor(II)I
+
+    move-result v14
+
     .line 490
-    new-instance v1, Lcom/tencent/mm/ui/widget/a;
+    new-instance v2, Lcom/tencent/mm/ui/widget/a;
 
-    move-object v2, p0
+    move-object/from16 v3, p0
 
-    invoke-direct/range {v1 .. v7}, Lcom/tencent/mm/ui/widget/a;-><init>(Lcom/tencent/mm/ui/widget/DragSortListView;IIIII)V
+    invoke-direct/range {v2 .. v8}, Lcom/tencent/mm/ui/widget/a;-><init>(Lcom/tencent/mm/ui/widget/DragSortListView;IIIII)V
 
     .line 491
-    iput-boolean v11, v1, Lcom/tencent/mm/ui/widget/a;->lCK:Z
+    iput-boolean v12, v2, Lcom/tencent/mm/ui/widget/a;->mdA:Z
 
     .line 492
-    iput-boolean v12, v1, Lcom/tencent/mm/ui/widget/a;->lCJ:Z
+    iput-boolean v13, v2, Lcom/tencent/mm/ui/widget/a;->mdz:Z
 
     .line 493
-    iput v13, v1, Lcom/tencent/mm/ui/widget/e;->lGz:I
+    iput v14, v2, Lcom/tencent/mm/ui/widget/e;->mhN:I
 
     .line 495
-    iput-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDW:Lcom/tencent/mm/ui/widget/DragSortListView$i;
+    move-object/from16 v0, p0
+
+    iput-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meM:Lcom/tencent/mm/ui/widget/DragSortListView$h;
 
     .line 496
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/widget/DragSortListView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/widget/DragSortListView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 499
-    :cond_1
-    invoke-virtual {v10}, Landroid/content/res/TypedArray;->recycle()V
-
-    move v1, v8
+    :cond_2
+    invoke-virtual {v11}, Landroid/content/res/TypedArray;->recycle()V
 
     move v2, v9
 
+    move v3, v10
+
     .line 502
-    :cond_2
-    new-instance v3, Lcom/tencent/mm/ui/widget/DragSortListView$d;
+    :cond_3
+    new-instance v4, Lcom/tencent/mm/ui/widget/DragSortListView$d;
 
-    invoke-direct {v3, p0}, Lcom/tencent/mm/ui/widget/DragSortListView$d;-><init>(Lcom/tencent/mm/ui/widget/DragSortListView;)V
+    move-object/from16 v0, p0
 
-    iput-object v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDE:Lcom/tencent/mm/ui/widget/DragSortListView$d;
+    invoke-direct {v4, v0}, Lcom/tencent/mm/ui/widget/DragSortListView$d;-><init>(Lcom/tencent/mm/ui/widget/DragSortListView;)V
+
+    move-object/from16 v0, p0
+
+    iput-object v4, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meu:Lcom/tencent/mm/ui/widget/DragSortListView$d;
 
     .line 504
-    if-lez v2, :cond_3
+    if-lez v3, :cond_4
 
     .line 506
-    new-instance v3, Lcom/tencent/mm/ui/widget/DragSortListView$l;
+    new-instance v4, Lcom/tencent/mm/ui/widget/DragSortListView$k;
 
-    invoke-direct {v3, p0, v2}, Lcom/tencent/mm/ui/widget/DragSortListView$l;-><init>(Lcom/tencent/mm/ui/widget/DragSortListView;I)V
+    move-object/from16 v0, p0
 
-    iput-object v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEg:Lcom/tencent/mm/ui/widget/DragSortListView$l;
+    invoke-direct {v4, v0, v3}, Lcom/tencent/mm/ui/widget/DragSortListView$k;-><init>(Lcom/tencent/mm/ui/widget/DragSortListView;I)V
+
+    move-object/from16 v0, p0
+
+    iput-object v4, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meW:Lcom/tencent/mm/ui/widget/DragSortListView$k;
 
     .line 509
-    :cond_3
-    if-lez v1, :cond_4
+    :cond_4
+    if-lez v2, :cond_5
 
     .line 510
-    new-instance v2, Lcom/tencent/mm/ui/widget/DragSortListView$g;
+    new-instance v3, Lcom/tencent/mm/ui/widget/DragSortListView$f;
 
-    invoke-direct {v2, p0, v1}, Lcom/tencent/mm/ui/widget/DragSortListView$g;-><init>(Lcom/tencent/mm/ui/widget/DragSortListView;I)V
+    move-object/from16 v0, p0
 
-    iput-object v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEi:Lcom/tencent/mm/ui/widget/DragSortListView$g;
+    invoke-direct {v3, v0, v2}, Lcom/tencent/mm/ui/widget/DragSortListView$f;-><init>(Lcom/tencent/mm/ui/widget/DragSortListView;I)V
+
+    move-object/from16 v0, p0
+
+    iput-object v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meY:Lcom/tencent/mm/ui/widget/DragSortListView$f;
 
     .line 513
-    :cond_4
-    const-wide/16 v1, 0x0
+    :cond_5
+    const-wide/16 v2, 0x0
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    const/4 v5, 0x3
-
-    const/4 v6, 0x0
+    const/4 v6, 0x3
 
     const/4 v7, 0x0
 
@@ -662,27 +804,50 @@
 
     const/4 v14, 0x0
 
-    invoke-static/range {v1 .. v14}, Landroid/view/MotionEvent;->obtain(JJIFFFFIFFII)Landroid/view/MotionEvent;
+    const/4 v15, 0x0
 
-    move-result-object v1
+    invoke-static/range {v2 .. v15}, Landroid/view/MotionEvent;->obtain(JJIFFFFIFFII)Landroid/view/MotionEvent;
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDX:Landroid/view/MotionEvent;
+    move-result-object v2
+
+    move-object/from16 v0, p0
+
+    iput-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meN:Landroid/view/MotionEvent;
 
     .line 516
-    new-instance v1, Lcom/tencent/mm/ui/widget/DragSortListView$2;
+    new-instance v2, Lcom/tencent/mm/ui/widget/DragSortListView$2;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/widget/DragSortListView$2;-><init>(Lcom/tencent/mm/ui/widget/DragSortListView;)V
+    move-object/from16 v0, p0
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->pX:Landroid/database/DataSetObserver;
+    invoke-direct {v2, v0}, Lcom/tencent/mm/ui/widget/DragSortListView$2;-><init>(Lcom/tencent/mm/ui/widget/DragSortListView;)V
+
+    move-object/from16 v0, p0
+
+    iput-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->ql:Landroid/database/DataSetObserver;
 
     .line 533
     return-void
 
     .line 466
-    :cond_5
-    const/4 v1, 0x0
+    :cond_6
+    const/4 v2, 0x0
 
     goto/16 :goto_0
+
+    .line 470
+    :cond_7
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mew:F
+
+    goto/16 :goto_1
+
+    :cond_8
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mev:F
+
+    goto/16 :goto_2
 .end method
 
 .method static synthetic a(Lcom/tencent/mm/ui/widget/DragSortListView;)F
@@ -690,7 +855,7 @@
 
     .prologue
     .line 60
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDN:F
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meD:F
 
     return v0
 .end method
@@ -700,7 +865,7 @@
 
     .prologue
     .line 60
-    iput p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEk:F
+    iput p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mfa:F
 
     return p1
 .end method
@@ -710,7 +875,7 @@
 
     .prologue
     .line 60
-    iput p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDt:I
+    iput p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mej:I
 
     return p1
 .end method
@@ -778,7 +943,7 @@
     move-result v1
 
     .line 728
-    iget v6, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v6, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     if-le p1, v6, :cond_1
 
@@ -836,15 +1001,15 @@
     move-result-object v1
 
     .line 1850
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     if-eq p1, v0, :cond_5
 
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     if-eq p1, v0, :cond_5
 
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
     if-eq p1, v0, :cond_5
 
@@ -865,17 +1030,17 @@
 
     .line 1862
     :cond_0
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     if-eq p1, v0, :cond_1
 
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
     if-ne p1, v0, :cond_2
 
     .line 1863
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     if-ge p1, v0, :cond_6
 
@@ -886,7 +1051,7 @@
 
     const/16 v1, 0x50
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/b;->setGravity(I)V
+    iput v1, v0, Lcom/tencent/mm/ui/widget/b;->fE:I
 
     .line 1872
     :cond_2
@@ -899,11 +1064,11 @@
     const/4 v0, 0x0
 
     .line 1875
-    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     if-ne p1, v2, :cond_3
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
     if-eqz v2, :cond_3
 
@@ -927,7 +1092,7 @@
 
     move-result v0
 
-    invoke-direct {p0, p1, v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bX(II)I
+    invoke-direct {p0, p1, v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->ce(II)I
 
     move-result v0
 
@@ -935,7 +1100,7 @@
 
     .line 1865
     :cond_6
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     if-le p1, v0, :cond_2
 
@@ -946,7 +1111,7 @@
 
     const/16 v1, 0x30
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/b;->setGravity(I)V
+    iput v1, v0, Lcom/tencent/mm/ui/widget/b;->fE:I
 
     goto :goto_1
 .end method
@@ -968,7 +1133,7 @@
 
     .prologue
     .line 60
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->na:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->nq:Z
 
     return p1
 .end method
@@ -980,20 +1145,20 @@
     const/4 v0, 0x0
 
     .line 1548
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
     if-eqz v1, :cond_1
 
     .line 1549
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDE:Lcom/tencent/mm/ui/widget/DragSortListView$d;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meu:Lcom/tencent/mm/ui/widget/DragSortListView$d;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/widget/DragSortListView$d;->bjF()V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/widget/DragSortListView$d;->bpD()V
 
     .line 1551
     if-eqz p1, :cond_2
 
     .line 1552
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getHeaderViewsCount()I
 
@@ -1001,30 +1166,30 @@
 
     sub-int/2addr v1, v2
 
-    invoke-virtual {p0, v1, p2}, Lcom/tencent/mm/ui/widget/DragSortListView;->e(IF)V
+    invoke-virtual {p0, v1, p2}, Lcom/tencent/mm/ui/widget/DragSortListView;->d(IF)V
 
     .line 1561
     :goto_0
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEc:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meS:Z
 
     if-eqz v1, :cond_0
 
     .line 1562
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEd:Lcom/tencent/mm/ui/widget/DragSortListView$f;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meT:Lcom/tencent/mm/ui/widget/DragSortListView$e;
 
-    iget-boolean v2, v1, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEC:Z
+    iget-boolean v2, v1, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfr:Z
 
     if-eqz v2, :cond_0
 
-    iget-object v2, v1, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v2, v1, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v3, "</DSLVStates>\n"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/widget/DragSortListView$f;->flush()V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/widget/DragSortListView$e;->flush()V
 
-    iput-boolean v0, v1, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEC:Z
+    iput-boolean v0, v1, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfr:Z
 
     .line 1565
     :cond_0
@@ -1036,25 +1201,25 @@
 
     .line 1554
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEi:Lcom/tencent/mm/ui/widget/DragSortListView$g;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meY:Lcom/tencent/mm/ui/widget/DragSortListView$f;
 
     if-eqz v1, :cond_3
 
     .line 1555
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEi:Lcom/tencent/mm/ui/widget/DragSortListView$g;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meY:Lcom/tencent/mm/ui/widget/DragSortListView$f;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/widget/DragSortListView$g;->start()V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/widget/DragSortListView$f;->start()V
 
     goto :goto_0
 
     .line 1557
     :cond_3
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjy()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpw()V
 
     goto :goto_0
 .end method
 
-.method private aO(Landroid/view/View;)V
+.method private aT(Landroid/view/View;)V
     .locals 5
 
     .prologue
@@ -1082,7 +1247,7 @@
 
     .line 2064
     :cond_0
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mZ:I
+    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->np:I
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getListPaddingLeft()I
 
@@ -1135,11 +1300,11 @@
 
     .prologue
     .line 60
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEk:F
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mfa:F
 
     add-float/2addr v0, p1
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEk:F
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mfa:F
 
     return v0
 .end method
@@ -1151,7 +1316,7 @@
     const/4 v0, 0x0
 
     .line 1936
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     if-ne p1, v1, :cond_1
 
@@ -1223,7 +1388,7 @@
 
     .line 1958
     :cond_5
-    invoke-direct {p0, p2}, Lcom/tencent/mm/ui/widget/DragSortListView;->aO(Landroid/view/View;)V
+    invoke-direct {p0, p2}, Lcom/tencent/mm/ui/widget/DragSortListView;->aT(Landroid/view/View;)V
 
     .line 1959
     invoke-virtual {p2}, Landroid/view/View;->getMeasuredHeight()I
@@ -1238,7 +1403,7 @@
 
     .prologue
     .line 60
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
 
     return v0
 .end method
@@ -1248,7 +1413,7 @@
 
     .prologue
     .line 60
-    iput p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
+    iput p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
 
     return p1
 .end method
@@ -1267,459 +1432,7 @@
     return v0
 .end method
 
-.method private bW(II)I
-    .locals 6
-
-    .prologue
-    .line 877
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getHeaderViewsCount()I
-
-    move-result v0
-
-    .line 878
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getFooterViewsCount()I
-
-    move-result v1
-
-    .line 884
-    if-le p1, v0, :cond_0
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getCount()I
-
-    move-result v0
-
-    sub-int/2addr v0, v1
-
-    if-lt p1, v0, :cond_1
-
-    :cond_0
-    move v0, p2
-
-    .line 931
-    :goto_0
-    return v0
-
-    .line 888
-    :cond_1
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getDividerHeight()I
-
-    move-result v0
-
-    .line 892
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDB:I
-
-    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDA:I
-
-    sub-int/2addr v1, v2
-
-    .line 893
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/widget/DragSortListView;->sf(I)I
-
-    move-result v2
-
-    .line 894
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/widget/DragSortListView;->sd(I)I
-
-    move-result v3
-
-    .line 899
-    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
-
-    iget v5, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
-
-    if-gt v4, v5, :cond_5
-
-    .line 902
-    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
-
-    if-ne p1, v4, :cond_4
-
-    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
-
-    iget v5, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
-
-    if-eq v4, v5, :cond_4
-
-    .line 903
-    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
-
-    if-ne p1, v4, :cond_3
-
-    .line 904
-    add-int v1, p2, v3
-
-    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDB:I
-
-    sub-int p2, v1, v3
-
-    .line 925
-    :cond_2
-    :goto_1
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
-
-    if-gt p1, v1, :cond_7
-
-    .line 926
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDB:I
-
-    sub-int v0, v1, v0
-
-    add-int/lit8 v1, p1, -0x1
-
-    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/widget/DragSortListView;->sf(I)I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    div-int/lit8 v0, v0, 0x2
-
-    add-int/2addr v0, p2
-
-    goto :goto_0
-
-    .line 906
-    :cond_3
-    sub-int/2addr v3, v2
-
-    .line 907
-    add-int/2addr v3, p2
-
-    sub-int p2, v3, v1
-
-    .line 908
-    goto :goto_1
-
-    .line 909
-    :cond_4
-    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
-
-    if-le p1, v3, :cond_2
-
-    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
-
-    if-gt p1, v3, :cond_2
-
-    .line 910
-    sub-int/2addr p2, v1
-
-    goto :goto_1
-
-    .line 916
-    :cond_5
-    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
-
-    if-le p1, v4, :cond_6
-
-    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
-
-    if-gt p1, v4, :cond_6
-
-    .line 917
-    add-int/2addr p2, v1
-
-    goto :goto_1
-
-    .line 918
-    :cond_6
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
-
-    if-ne p1, v1, :cond_2
-
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
-
-    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
-
-    if-eq v1, v4, :cond_2
-
-    .line 919
-    sub-int v1, v3, v2
-
-    .line 920
-    add-int/2addr p2, v1
-
-    goto :goto_1
-
-    .line 928
-    :cond_7
-    sub-int v0, v2, v0
-
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDB:I
-
-    sub-int/2addr v0, v1
-
-    div-int/lit8 v0, v0, 0x2
-
-    add-int/2addr v0, p2
-
-    goto :goto_0
-.end method
-
-.method private bX(II)I
-    .locals 4
-
-    .prologue
-    .line 1971
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getDividerHeight()I
-
-    .line 1973
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDq:Z
-
-    if-eqz v0, :cond_1
-
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
-
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
-
-    if-eq v0, v1, :cond_1
-
-    const/4 v0, 0x1
-
-    .line 1974
-    :goto_0
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDB:I
-
-    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDA:I
-
-    sub-int/2addr v1, v2
-
-    .line 1975
-    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEa:F
-
-    int-to-float v3, v1
-
-    mul-float/2addr v2, v3
-
-    float-to-int v2, v2
-
-    .line 1979
-    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
-
-    if-ne p1, v3, :cond_5
-
-    .line 1980
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
-
-    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
-
-    if-ne v1, v3, :cond_3
-
-    .line 1981
-    if-eqz v0, :cond_2
-
-    .line 1982
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDA:I
-
-    add-int p2, v2, v0
-
-    .line 2005
-    :cond_0
-    :goto_1
-    return p2
-
-    .line 1973
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    .line 1984
-    :cond_2
-    iget p2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDB:I
-
-    goto :goto_1
-
-    .line 1986
-    :cond_3
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
-
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
-
-    if-ne v0, v1, :cond_4
-
-    .line 1988
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDB:I
-
-    sub-int p2, v0, v2
-
-    goto :goto_1
-
-    .line 1990
-    :cond_4
-    iget p2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDA:I
-
-    goto :goto_1
-
-    .line 1992
-    :cond_5
-    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
-
-    if-ne p1, v3, :cond_7
-
-    .line 1993
-    if-eqz v0, :cond_6
-
-    .line 1994
-    add-int/2addr p2, v2
-
-    goto :goto_1
-
-    .line 1996
-    :cond_6
-    add-int/2addr p2, v1
-
-    goto :goto_1
-
-    .line 1998
-    :cond_7
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
-
-    if-ne p1, v0, :cond_0
-
-    .line 2000
-    add-int v0, p2, v1
-
-    sub-int p2, v0, v2
-
-    goto :goto_1
-.end method
-
-.method private bjA()V
-    .locals 3
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 1625
-    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDY:I
-
-    .line 1626
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDV:Z
-
-    .line 1627
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
-
-    const/4 v1, 0x3
-
-    if-ne v0, v1, :cond_0
-
-    .line 1628
-    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
-
-    .line 1630
-    :cond_0
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDl:F
-
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDm:F
-
-    .line 1631
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEl:Z
-
-    .line 1632
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEf:Lcom/tencent/mm/ui/widget/DragSortListView$j;
-
-    iget-object v1, v0, Lcom/tencent/mm/ui/widget/DragSortListView$j;->lEH:Landroid/util/SparseIntArray;
-
-    invoke-virtual {v1}, Landroid/util/SparseIntArray;->clear()V
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/widget/DragSortListView$j;->lEI:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    .line 1633
-    return-void
-.end method
-
-.method private bjB()V
-    .locals 6
-
-    .prologue
-    .line 1798
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getPaddingTop()I
-
-    move-result v0
-
-    .line 1799
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getHeight()I
-
-    move-result v1
-
-    sub-int/2addr v1, v0
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getPaddingBottom()I
-
-    move-result v2
-
-    sub-int/2addr v1, v2
-
-    .line 1800
-    int-to-float v2, v1
-
-    .line 1802
-    int-to-float v3, v0
-
-    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDF:F
-
-    mul-float/2addr v4, v2
-
-    add-float/2addr v3, v4
-
-    iput v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDK:F
-
-    .line 1803
-    int-to-float v3, v0
-
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    iget v5, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDG:F
-
-    sub-float/2addr v4, v5
-
-    mul-float/2addr v2, v4
-
-    add-float/2addr v2, v3
-
-    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDJ:F
-
-    .line 1805
-    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDK:F
-
-    float-to-int v2, v2
-
-    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDH:I
-
-    .line 1806
-    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDJ:F
-
-    float-to-int v2, v2
-
-    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDI:I
-
-    .line 1808
-    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDK:F
-
-    int-to-float v3, v0
-
-    sub-float/2addr v2, v3
-
-    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDL:F
-
-    .line 1809
-    add-int/2addr v0, v1
-
-    int-to-float v0, v0
-
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDJ:F
-
-    sub-float/2addr v0, v1
-
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDM:F
-
-    .line 1810
-    return-void
-.end method
-
-.method private bjC()V
+.method private bpA()V
     .locals 6
 
     .prologue
@@ -1795,74 +1508,74 @@
     return-void
 .end method
 
-.method private bjD()V
+.method private bpB()V
     .locals 1
 
     .prologue
     .line 2075
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
     .line 2076
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->aO(Landroid/view/View;)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->aT(Landroid/view/View;)V
 
     .line 2077
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDB:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mer:I
 
     .line 2078
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDB:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mer:I
 
     div-int/lit8 v0, v0, 0x2
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDC:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mes:I
 
     .line 2080
     :cond_0
     return-void
 .end method
 
-.method private bjE()V
+.method private bpC()V
     .locals 2
 
     .prologue
     .line 2375
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
     .line 2376
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 2377
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDW:Lcom/tencent/mm/ui/widget/DragSortListView$i;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meM:Lcom/tencent/mm/ui/widget/DragSortListView$h;
 
     if-eqz v0, :cond_0
 
     .line 2378
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDW:Lcom/tencent/mm/ui/widget/DragSortListView$i;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meM:Lcom/tencent/mm/ui/widget/DragSortListView$h;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/widget/DragSortListView$i;->aP(Landroid/view/View;)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/widget/DragSortListView$h;->aU(Landroid/view/View;)V
 
     .line 2380
     :cond_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
     .line 2381
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->invalidate()V
@@ -1872,47 +1585,47 @@
     return-void
 .end method
 
-.method private bjx()V
+.method private bpv()V
     .locals 1
 
     .prologue
     const/4 v0, -0x1
 
     .line 1448
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     .line 1449
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     .line 1450
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
     .line 1451
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDn:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->med:I
 
     .line 1452
     return-void
 .end method
 
-.method private bjy()V
+.method private bpw()V
     .locals 4
 
     .prologue
     .line 1457
     const/4 v0, 0x2
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
 
     .line 1459
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDx:Lcom/tencent/mm/ui/widget/DragSortListView$h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->men:Lcom/tencent/mm/ui/widget/DragSortListView$g;
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDn:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->med:I
 
     if-ltz v0, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDn:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->med:I
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getCount()I
 
@@ -1926,40 +1639,40 @@
     move-result v0
 
     .line 1461
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDx:Lcom/tencent/mm/ui/widget/DragSortListView$h;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->men:Lcom/tencent/mm/ui/widget/DragSortListView$g;
 
-    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     sub-int/2addr v2, v0
 
-    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDn:I
+    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->med:I
 
     sub-int v0, v3, v0
 
-    invoke-interface {v1, v2, v0}, Lcom/tencent/mm/ui/widget/DragSortListView$h;->at(II)V
+    invoke-interface {v1, v2, v0}, Lcom/tencent/mm/ui/widget/DragSortListView$g;->ay(II)V
 
     .line 1464
     :cond_0
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjE()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpC()V
 
     .line 1466
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjz()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpx()V
 
     .line 1467
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjx()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpv()V
 
     .line 1468
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjC()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpA()V
 
     .line 1471
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meL:Z
 
     if-eqz v0, :cond_1
 
     .line 1472
     const/4 v0, 0x3
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
 
     .line 1476
     :goto_0
@@ -1969,12 +1682,12 @@
     :cond_1
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
 
     goto :goto_0
 .end method
 
-.method private bjz()V
+.method private bpx()V
     .locals 3
 
     .prologue
@@ -1986,7 +1699,7 @@
     move-result v1
 
     .line 1511
-    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     if-ge v2, v1, :cond_1
 
@@ -2020,12 +1733,147 @@
     return-void
 .end method
 
+.method private bpy()V
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 1625
+    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meO:I
+
+    .line 1626
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meL:Z
+
+    .line 1627
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
+
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_0
+
+    .line 1628
+    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
+
+    .line 1630
+    :cond_0
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meb:F
+
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mec:F
+
+    .line 1631
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mfb:Z
+
+    .line 1632
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meV:Lcom/tencent/mm/ui/widget/DragSortListView$i;
+
+    iget-object v1, v0, Lcom/tencent/mm/ui/widget/DragSortListView$i;->mfw:Landroid/util/SparseIntArray;
+
+    invoke-virtual {v1}, Landroid/util/SparseIntArray;->clear()V
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/widget/DragSortListView$i;->mfx:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    .line 1633
+    return-void
+.end method
+
+.method private bpz()V
+    .locals 6
+
+    .prologue
+    .line 1798
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getPaddingTop()I
+
+    move-result v0
+
+    .line 1799
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getHeight()I
+
+    move-result v1
+
+    sub-int/2addr v1, v0
+
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getPaddingBottom()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    .line 1800
+    int-to-float v2, v1
+
+    .line 1802
+    int-to-float v3, v0
+
+    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mev:F
+
+    mul-float/2addr v4, v2
+
+    add-float/2addr v3, v4
+
+    iput v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meA:F
+
+    .line 1803
+    int-to-float v3, v0
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    iget v5, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mew:F
+
+    sub-float/2addr v4, v5
+
+    mul-float/2addr v2, v4
+
+    add-float/2addr v2, v3
+
+    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mez:F
+
+    .line 1805
+    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meA:F
+
+    float-to-int v2, v2
+
+    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mex:I
+
+    .line 1806
+    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mez:F
+
+    float-to-int v2, v2
+
+    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mey:I
+
+    .line 1808
+    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meA:F
+
+    int-to-float v3, v0
+
+    sub-float/2addr v2, v3
+
+    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meB:F
+
+    .line 1809
+    add-int/2addr v0, v1
+
+    int-to-float v0, v0
+
+    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mez:F
+
+    sub-float/2addr v0, v1
+
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meC:F
+
+    .line 1810
+    return-void
+.end method
+
 .method static synthetic c(Lcom/tencent/mm/ui/widget/DragSortListView;)I
     .locals 1
 
     .prologue
     .line 60
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDt:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mej:I
 
     return v0
 .end method
@@ -2039,49 +1887,49 @@
 
     move-object/from16 v0, p0
 
-    iput-boolean v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->na:Z
+    iput-boolean v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->nq:Z
 
     .line 2286
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDW:Lcom/tencent/mm/ui/widget/DragSortListView$i;
+    iget-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meM:Lcom/tencent/mm/ui/widget/DragSortListView$h;
 
     if-eqz v2, :cond_0
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDi:Landroid/graphics/Point;
+    iget-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdY:Landroid/graphics/Point;
 
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDP:I
+    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meF:I
 
     move-object/from16 v0, p0
 
-    iget v4, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDQ:I
+    iget v4, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meG:I
 
     invoke-virtual {v2, v3, v4}, Landroid/graphics/Point;->set(II)V
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDW:Lcom/tencent/mm/ui/widget/DragSortListView$i;
+    iget-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meM:Lcom/tencent/mm/ui/widget/DragSortListView$h;
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDh:Landroid/graphics/Point;
+    iget-object v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdX:Landroid/graphics/Point;
 
-    invoke-interface {v2, v3}, Lcom/tencent/mm/ui/widget/DragSortListView$i;->b(Landroid/graphics/Point;)V
+    invoke-interface {v2, v3}, Lcom/tencent/mm/ui/widget/DragSortListView$h;->b(Landroid/graphics/Point;)V
 
     :cond_0
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDh:Landroid/graphics/Point;
+    iget-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdX:Landroid/graphics/Point;
 
     iget v2, v2, Landroid/graphics/Point;->x:I
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDh:Landroid/graphics/Point;
+    iget-object v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdX:Landroid/graphics/Point;
 
     iget v4, v3, Landroid/graphics/Point;->y:I
 
@@ -2091,7 +1939,7 @@
 
     move-object/from16 v0, p0
 
-    iget v5, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDT:I
+    iget v5, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meJ:I
 
     and-int/lit8 v5, v5, 0x1
 
@@ -2101,7 +1949,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDh:Landroid/graphics/Point;
+    iget-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdX:Landroid/graphics/Point;
 
     iput v3, v2, Landroid/graphics/Point;->x:I
 
@@ -2146,7 +1994,7 @@
     :cond_2
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDT:I
+    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meJ:I
 
     and-int/lit8 v3, v3, 0x8
 
@@ -2154,13 +2002,13 @@
 
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     if-gt v6, v3, :cond_3
 
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     sub-int/2addr v3, v6
 
@@ -2222,7 +2070,7 @@
     :cond_4
     move-object/from16 v0, p0
 
-    iget v5, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDT:I
+    iget v5, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meJ:I
 
     and-int/lit8 v5, v5, 0x4
 
@@ -2230,13 +2078,13 @@
 
     move-object/from16 v0, p0
 
-    iget v5, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v5, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     if-lt v7, v5, :cond_5
 
     move-object/from16 v0, p0
 
-    iget v5, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v5, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     sub-int/2addr v5, v6
 
@@ -2259,7 +2107,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDh:Landroid/graphics/Point;
+    iget-object v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdX:Landroid/graphics/Point;
 
     iput v2, v3, Landroid/graphics/Point;->y:I
 
@@ -2267,29 +2115,29 @@
     :goto_1
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDh:Landroid/graphics/Point;
+    iget-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdX:Landroid/graphics/Point;
 
     iget v2, v2, Landroid/graphics/Point;->y:I
 
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDC:I
+    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mes:I
 
     add-int/2addr v2, v3
 
     move-object/from16 v0, p0
 
-    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDj:I
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdZ:I
 
     .line 2288
     move-object/from16 v0, p0
 
-    iget v9, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iget v9, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     .line 2289
     move-object/from16 v0, p0
 
-    iget v10, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iget v10, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
     .line 2291
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getFirstVisiblePosition()I
@@ -2298,7 +2146,7 @@
 
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     sub-int v2, v3, v4
 
@@ -2337,7 +2185,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v3, v5}, Lcom/tencent/mm/ui/widget/DragSortListView;->bW(II)I
+    invoke-direct {v0, v3, v5}, Lcom/tencent/mm/ui/widget/DragSortListView;->cd(II)I
 
     move-result v4
 
@@ -2347,7 +2195,7 @@
 
     move-object/from16 v0, p0
 
-    iget v6, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDj:I
+    iget v6, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdZ:I
 
     if-ge v6, v4, :cond_12
 
@@ -2362,7 +2210,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v2}, Lcom/tencent/mm/ui/widget/DragSortListView;->sd(I)I
+    invoke-direct {v0, v2}, Lcom/tencent/mm/ui/widget/DragSortListView;->uh(I)I
 
     move-result v4
 
@@ -2386,19 +2234,19 @@
 
     move-object/from16 v0, p0
 
-    iget v8, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iget v8, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     move-object/from16 v0, p0
 
-    iget v11, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iget v11, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
     move-object/from16 v0, p0
 
-    iget v12, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEa:F
+    iget v12, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meQ:F
 
     move-object/from16 v0, p0
 
-    iget-boolean v13, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDq:Z
+    iget-boolean v13, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meg:Z
 
     if-eqz v13, :cond_16
 
@@ -2410,7 +2258,7 @@
 
     move-object/from16 v0, p0
 
-    iget v14, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDj:I
+    iget v14, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdZ:I
 
     if-ge v14, v4, :cond_14
 
@@ -2419,7 +2267,7 @@
 
     move-object/from16 v0, p0
 
-    iget v15, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDZ:F
+    iget v15, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meP:F
 
     mul-float/2addr v14, v15
 
@@ -2437,7 +2285,7 @@
 
     move-object/from16 v0, p0
 
-    iget v15, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDj:I
+    iget v15, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdZ:I
 
     if-ge v15, v3, :cond_15
 
@@ -2445,17 +2293,17 @@
 
     move-object/from16 v0, p0
 
-    iput v4, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iput v4, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     move-object/from16 v0, p0
 
-    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
     const/high16 v4, 0x3f000000    # 0.5f
 
     move-object/from16 v0, p0
 
-    iget v13, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDj:I
+    iget v13, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdZ:I
 
     sub-int/2addr v3, v13
 
@@ -2467,22 +2315,22 @@
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEa:F
+    iput v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meQ:F
 
     :goto_5
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     if-ge v3, v5, :cond_17
 
     move-object/from16 v0, p0
 
-    iput v5, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iput v5, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     move-object/from16 v0, p0
 
-    iput v5, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iput v5, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
     move v2, v5
 
@@ -2490,19 +2338,19 @@
     :goto_6
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     if-ne v3, v8, :cond_a
 
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
     if-ne v3, v11, :cond_a
 
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEa:F
+    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meQ:F
 
     cmpl-float v3, v3, v12
 
@@ -2514,13 +2362,13 @@
     :goto_7
     move-object/from16 v0, p0
 
-    iget v4, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDn:I
+    iget v4, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->med:I
 
     if-eq v2, v4, :cond_1f
 
     move-object/from16 v0, p0
 
-    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDn:I
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->med:I
 
     const/4 v3, 0x1
 
@@ -2531,12 +2379,12 @@
     if-eqz v8, :cond_c
 
     .line 2294
-    invoke-direct/range {p0 .. p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjC()V
+    invoke-direct/range {p0 .. p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpA()V
 
     .line 2295
     const/4 v6, 0x0
 
-    invoke-direct/range {p0 .. p1}, Lcom/tencent/mm/ui/widget/DragSortListView;->sf(I)I
+    invoke-direct/range {p0 .. p1}, Lcom/tencent/mm/ui/widget/DragSortListView;->uj(I)I
 
     move-result v4
 
@@ -2548,13 +2396,13 @@
 
     move/from16 v1, p1
 
-    invoke-direct {v0, v1, v4}, Lcom/tencent/mm/ui/widget/DragSortListView;->bX(II)I
+    invoke-direct {v0, v1, v4}, Lcom/tencent/mm/ui/widget/DragSortListView;->ce(II)I
 
     move-result v5
 
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     move/from16 v0, p1
 
@@ -2567,31 +2415,31 @@
     :goto_9
     move-object/from16 v0, p0
 
-    iget v7, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDB:I
+    iget v7, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mer:I
 
     move-object/from16 v0, p0
 
-    iget v11, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v11, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     move-object/from16 v0, p0
 
-    iget v12, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iget v12, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     if-eq v11, v12, :cond_b
 
     move-object/from16 v0, p0
 
-    iget v11, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v11, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     move-object/from16 v0, p0
 
-    iget v12, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iget v12, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
     if-eq v11, v12, :cond_b
 
     move-object/from16 v0, p0
 
-    iget v11, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDA:I
+    iget v11, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meq:I
 
     sub-int/2addr v7, v11
 
@@ -2602,7 +2450,7 @@
 
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iget v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     move/from16 v0, p1
 
@@ -2651,7 +2499,7 @@
 
     move-object/from16 v0, p0
 
-    iput-boolean v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->na:Z
+    iput-boolean v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->nq:Z
 
     .line 2307
     return-void
@@ -2660,7 +2508,7 @@
     :cond_f
     move-object/from16 v0, p0
 
-    iget v5, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDT:I
+    iget v5, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meJ:I
 
     and-int/lit8 v5, v5, 0x2
 
@@ -2670,7 +2518,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDh:Landroid/graphics/Point;
+    iget-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdX:Landroid/graphics/Point;
 
     iput v3, v2, Landroid/graphics/Point;->x:I
 
@@ -2679,7 +2527,7 @@
     :cond_10
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDB:I
+    iget v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mer:I
 
     add-int/2addr v2, v4
 
@@ -2687,11 +2535,11 @@
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDh:Landroid/graphics/Point;
+    iget-object v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdX:Landroid/graphics/Point;
 
     move-object/from16 v0, p0
 
-    iget v4, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDB:I
+    iget v4, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mer:I
 
     sub-int/2addr v3, v4
 
@@ -2707,13 +2555,13 @@
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v2, v5}, Lcom/tencent/mm/ui/widget/DragSortListView;->bW(II)I
+    invoke-direct {v0, v2, v5}, Lcom/tencent/mm/ui/widget/DragSortListView;->cd(II)I
 
     move-result v4
 
     move-object/from16 v0, p0
 
-    iget v6, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDj:I
+    iget v6, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdZ:I
 
     if-ge v6, v4, :cond_8
 
@@ -2756,7 +2604,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v4}, Lcom/tencent/mm/ui/widget/DragSortListView;->sd(I)I
+    invoke-direct {v0, v4}, Lcom/tencent/mm/ui/widget/DragSortListView;->uh(I)I
 
     move-result v5
 
@@ -2764,13 +2612,13 @@
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v4, v6}, Lcom/tencent/mm/ui/widget/DragSortListView;->bW(II)I
+    invoke-direct {v0, v4, v6}, Lcom/tencent/mm/ui/widget/DragSortListView;->cd(II)I
 
     move-result v4
 
     move-object/from16 v0, p0
 
-    iget v11, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDj:I
+    iget v11, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdZ:I
 
     if-lt v11, v4, :cond_8
 
@@ -2792,19 +2640,19 @@
     :cond_15
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDj:I
+    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdZ:I
 
     if-lt v3, v13, :cond_16
 
     move-object/from16 v0, p0
 
-    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     add-int/lit8 v3, v2, 0x1
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iput v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
     const/high16 v3, 0x3f000000    # 0.5f
 
@@ -2812,7 +2660,7 @@
 
     move-object/from16 v0, p0
 
-    iget v15, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDj:I
+    iget v15, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdZ:I
 
     sub-int/2addr v4, v15
 
@@ -2826,25 +2674,25 @@
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEa:F
+    iput v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->meQ:F
 
     goto/16 :goto_5
 
     :cond_16
     move-object/from16 v0, p0
 
-    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     move-object/from16 v0, p0
 
-    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
     goto/16 :goto_5
 
     :cond_17
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iget v3, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getCount()I
 
@@ -2864,11 +2712,11 @@
 
     move-object/from16 v0, p0
 
-    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     move-object/from16 v0, p0
 
-    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iput v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
     goto/16 :goto_6
 
@@ -2880,7 +2728,7 @@
 
     move-object/from16 v0, p0
 
-    iget v4, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iget v4, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     move/from16 v0, p1
 
@@ -2895,7 +2743,7 @@
     :cond_19
     move-object/from16 v0, p0
 
-    iget v4, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iget v4, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
     move/from16 v0, p1
 
@@ -2915,7 +2763,7 @@
     :cond_1b
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iget v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     move/from16 v0, p1
 
@@ -2928,7 +2776,7 @@
     :cond_1c
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iget v2, v0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
     move/from16 v0, p1
 
@@ -2973,12 +2821,329 @@
     return-void
 .end method
 
+.method private cd(II)I
+    .locals 6
+
+    .prologue
+    .line 877
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getHeaderViewsCount()I
+
+    move-result v0
+
+    .line 878
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getFooterViewsCount()I
+
+    move-result v1
+
+    .line 884
+    if-le p1, v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getCount()I
+
+    move-result v0
+
+    sub-int/2addr v0, v1
+
+    if-lt p1, v0, :cond_1
+
+    :cond_0
+    move v0, p2
+
+    .line 931
+    :goto_0
+    return v0
+
+    .line 888
+    :cond_1
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getDividerHeight()I
+
+    move-result v0
+
+    .line 892
+    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mer:I
+
+    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meq:I
+
+    sub-int/2addr v1, v2
+
+    .line 893
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/widget/DragSortListView;->uj(I)I
+
+    move-result v2
+
+    .line 894
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/widget/DragSortListView;->uh(I)I
+
+    move-result v3
+
+    .line 899
+    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
+
+    iget v5, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
+
+    if-gt v4, v5, :cond_5
+
+    .line 902
+    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
+
+    if-ne p1, v4, :cond_4
+
+    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
+
+    iget v5, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
+
+    if-eq v4, v5, :cond_4
+
+    .line 903
+    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
+
+    if-ne p1, v4, :cond_3
+
+    .line 904
+    add-int v1, p2, v3
+
+    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mer:I
+
+    sub-int p2, v1, v3
+
+    .line 925
+    :cond_2
+    :goto_1
+    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
+
+    if-gt p1, v1, :cond_7
+
+    .line 926
+    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mer:I
+
+    sub-int v0, v1, v0
+
+    add-int/lit8 v1, p1, -0x1
+
+    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/widget/DragSortListView;->uj(I)I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    div-int/lit8 v0, v0, 0x2
+
+    add-int/2addr v0, p2
+
+    goto :goto_0
+
+    .line 906
+    :cond_3
+    sub-int/2addr v3, v2
+
+    .line 907
+    add-int/2addr v3, p2
+
+    sub-int p2, v3, v1
+
+    .line 908
+    goto :goto_1
+
+    .line 909
+    :cond_4
+    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
+
+    if-le p1, v3, :cond_2
+
+    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
+
+    if-gt p1, v3, :cond_2
+
+    .line 910
+    sub-int/2addr p2, v1
+
+    goto :goto_1
+
+    .line 916
+    :cond_5
+    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
+
+    if-le p1, v4, :cond_6
+
+    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
+
+    if-gt p1, v4, :cond_6
+
+    .line 917
+    add-int/2addr p2, v1
+
+    goto :goto_1
+
+    .line 918
+    :cond_6
+    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
+
+    if-ne p1, v1, :cond_2
+
+    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
+
+    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
+
+    if-eq v1, v4, :cond_2
+
+    .line 919
+    sub-int v1, v3, v2
+
+    .line 920
+    add-int/2addr p2, v1
+
+    goto :goto_1
+
+    .line 928
+    :cond_7
+    sub-int v0, v2, v0
+
+    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mer:I
+
+    sub-int/2addr v0, v1
+
+    div-int/lit8 v0, v0, 0x2
+
+    add-int/2addr v0, p2
+
+    goto :goto_0
+.end method
+
+.method private ce(II)I
+    .locals 4
+
+    .prologue
+    .line 1971
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getDividerHeight()I
+
+    .line 1973
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meg:Z
+
+    if-eqz v0, :cond_1
+
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
+
+    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v0, 0x1
+
+    .line 1974
+    :goto_0
+    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mer:I
+
+    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meq:I
+
+    sub-int/2addr v1, v2
+
+    .line 1975
+    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meQ:F
+
+    int-to-float v3, v1
+
+    mul-float/2addr v2, v3
+
+    float-to-int v2, v2
+
+    .line 1979
+    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
+
+    if-ne p1, v3, :cond_5
+
+    .line 1980
+    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
+
+    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
+
+    if-ne v1, v3, :cond_3
+
+    .line 1981
+    if-eqz v0, :cond_2
+
+    .line 1982
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meq:I
+
+    add-int p2, v2, v0
+
+    .line 2005
+    :cond_0
+    :goto_1
+    return p2
+
+    .line 1973
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    .line 1984
+    :cond_2
+    iget p2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mer:I
+
+    goto :goto_1
+
+    .line 1986
+    :cond_3
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
+
+    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
+
+    if-ne v0, v1, :cond_4
+
+    .line 1988
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mer:I
+
+    sub-int p2, v0, v2
+
+    goto :goto_1
+
+    .line 1990
+    :cond_4
+    iget p2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meq:I
+
+    goto :goto_1
+
+    .line 1992
+    :cond_5
+    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
+
+    if-ne p1, v3, :cond_7
+
+    .line 1993
+    if-eqz v0, :cond_6
+
+    .line 1994
+    add-int/2addr p2, v2
+
+    goto :goto_1
+
+    .line 1996
+    :cond_6
+    add-int/2addr p2, v1
+
+    goto :goto_1
+
+    .line 1998
+    :cond_7
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
+
+    if-ne p1, v0, :cond_0
+
+    .line 2000
+    add-int v0, p2, v1
+
+    sub-int p2, v0, v2
+
+    goto :goto_1
+.end method
+
 .method static synthetic d(Lcom/tencent/mm/ui/widget/DragSortListView;)I
     .locals 1
 
     .prologue
     .line 60
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDC:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mes:I
 
     return v0
 .end method
@@ -2988,7 +3153,7 @@
 
     .prologue
     .line 60
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDh:Landroid/graphics/Point;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdX:Landroid/graphics/Point;
 
     return-object v0
 .end method
@@ -2998,7 +3163,7 @@
 
     .prologue
     .line 60
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDQ:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meG:I
 
     return v0
 .end method
@@ -3010,7 +3175,7 @@
     .line 60
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->im(Z)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->iU(Z)V
 
     return-void
 .end method
@@ -3020,7 +3185,7 @@
 
     .prologue
     .line 60
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDn:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->med:I
 
     return v0
 .end method
@@ -3030,12 +3195,12 @@
 
     .prologue
     .line 60
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     return v0
 .end method
 
-.method private im(Z)V
+.method private iU(Z)V
     .locals 3
 
     .prologue
@@ -3084,7 +3249,7 @@
 
     .prologue
     .line 60
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDA:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meq:I
 
     return v0
 .end method
@@ -3094,7 +3259,7 @@
 
     .prologue
     .line 60
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDB:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mer:I
 
     return v0
 .end method
@@ -3104,7 +3269,7 @@
 
     .prologue
     .line 60
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjy()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpw()V
 
     return-void
 .end method
@@ -3114,7 +3279,7 @@
 
     .prologue
     .line 60
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     return v0
 .end method
@@ -3124,7 +3289,7 @@
 
     .prologue
     .line 60
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
     return v0
 .end method
@@ -3134,7 +3299,7 @@
 
     .prologue
     .line 60
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEj:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meZ:Z
 
     return v0
 .end method
@@ -3144,7 +3309,7 @@
 
     .prologue
     .line 60
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEk:F
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mfa:F
 
     return v0
 .end method
@@ -3154,7 +3319,7 @@
 
     .prologue
     .line 60
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjE()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpC()V
 
     return-void
 .end method
@@ -3164,7 +3329,7 @@
 
     .prologue
     .line 60
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getHeaderViewsCount()I
 
@@ -3172,7 +3337,7 @@
 
     sub-int/2addr v0, v1
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->se(I)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->ui(I)V
 
     return-void
 .end method
@@ -3182,7 +3347,7 @@
 
     .prologue
     .line 60
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDj:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdZ:I
 
     return v0
 .end method
@@ -3202,14 +3367,14 @@
     if-eqz v0, :cond_0
 
     .line 1638
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDP:I
+    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meF:I
 
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDR:I
+    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meH:I
 
     .line 1639
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDQ:I
+    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meG:I
 
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->hun:I
+    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->hMb:I
 
     .line 1641
     :cond_0
@@ -3219,7 +3384,7 @@
 
     float-to-int v1, v1
 
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDP:I
+    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meF:I
 
     .line 1642
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
@@ -3228,20 +3393,20 @@
 
     float-to-int v1, v1
 
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDQ:I
+    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meG:I
 
     .line 1643
     if-nez v0, :cond_1
 
     .line 1644
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDP:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meF:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDR:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meH:I
 
     .line 1645
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDQ:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meG:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->hun:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->hMb:I
 
     .line 1647
     :cond_1
@@ -3251,11 +3416,11 @@
 
     float-to-int v0, v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDP:I
+    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meF:I
 
     sub-int/2addr v0, v1
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDu:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mek:I
 
     .line 1648
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
@@ -3264,17 +3429,37 @@
 
     float-to-int v0, v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDQ:I
+    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meG:I
 
     sub-int/2addr v0, v1
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDv:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mel:I
 
     .line 1649
     return-void
 .end method
 
-.method private sd(I)I
+.method static synthetic t(Lcom/tencent/mm/ui/widget/DragSortListView;)F
+    .locals 1
+
+    .prologue
+    .line 60
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meA:F
+
+    return v0
+.end method
+
+.method static synthetic u(Lcom/tencent/mm/ui/widget/DragSortListView;)F
+    .locals 1
+
+    .prologue
+    .line 60
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meB:F
+
+    return v0
+.end method
+
+.method private uh(I)I
     .locals 1
 
     .prologue
@@ -3302,55 +3487,55 @@
     return v0
 
     :cond_0
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/widget/DragSortListView;->sf(I)I
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/widget/DragSortListView;->uj(I)I
 
     move-result v0
 
-    invoke-direct {p0, p1, v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bX(II)I
+    invoke-direct {p0, p1, v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->ce(II)I
 
     move-result v0
 
     goto :goto_0
 .end method
 
-.method private se(I)V
+.method private ui(I)V
     .locals 1
 
     .prologue
     .line 1488
     const/4 v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
 
     .line 1491
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDy:Lcom/tencent/mm/ui/widget/DragSortListView$m;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meo:Lcom/tencent/mm/ui/widget/DragSortListView$l;
 
     if-eqz v0, :cond_0
 
     .line 1492
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDy:Lcom/tencent/mm/ui/widget/DragSortListView$m;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meo:Lcom/tencent/mm/ui/widget/DragSortListView$l;
 
-    invoke-interface {v0, p1}, Lcom/tencent/mm/ui/widget/DragSortListView$m;->remove(I)V
+    invoke-interface {v0, p1}, Lcom/tencent/mm/ui/widget/DragSortListView$l;->remove(I)V
 
     .line 1495
     :cond_0
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjE()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpC()V
 
     .line 1497
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjz()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpx()V
 
     .line 1498
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjx()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpv()V
 
     .line 1501
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meL:Z
 
     if-eqz v0, :cond_1
 
     .line 1502
     const/4 v0, 0x3
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
 
     .line 1506
     :goto_0
@@ -3360,12 +3545,12 @@
     :cond_1
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
 
     goto :goto_0
 .end method
 
-.method private sf(I)I
+.method private uj(I)I
     .locals 7
 
     .prologue
@@ -3376,7 +3561,7 @@
     const/4 v5, -0x1
 
     .line 1885
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     if-ne p1, v0, :cond_1
 
@@ -3411,9 +3596,9 @@
 
     .line 1898
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEf:Lcom/tencent/mm/ui/widget/DragSortListView$j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meV:Lcom/tencent/mm/ui/widget/DragSortListView$i;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/widget/DragSortListView$j;->lEH:Landroid/util/SparseIntArray;
+    iget-object v0, v0, Lcom/tencent/mm/ui/widget/DragSortListView$i;->mfw:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, p1, v5}, Landroid/util/SparseIntArray;->get(II)I
 
@@ -3438,7 +3623,7 @@
     move-result v3
 
     .line 1909
-    iget-object v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDD:[Landroid/view/View;
+    iget-object v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->met:[Landroid/view/View;
 
     array-length v4, v4
 
@@ -3447,14 +3632,14 @@
     .line 1910
     new-array v3, v3, [Landroid/view/View;
 
-    iput-object v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDD:[Landroid/view/View;
+    iput-object v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->met:[Landroid/view/View;
 
     .line 1913
     :cond_3
     if-ltz v2, :cond_7
 
     .line 1914
-    iget-object v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDD:[Landroid/view/View;
+    iget-object v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->met:[Landroid/view/View;
 
     aget-object v3, v3, v2
 
@@ -3466,7 +3651,7 @@
     move-result-object v0
 
     .line 1916
-    iget-object v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDD:[Landroid/view/View;
+    iget-object v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->met:[Landroid/view/View;
 
     aput-object v0, v3, v2
 
@@ -3479,9 +3664,9 @@
     move-result v2
 
     .line 1929
-    iget-object v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEf:Lcom/tencent/mm/ui/widget/DragSortListView$j;
+    iget-object v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meV:Lcom/tencent/mm/ui/widget/DragSortListView$i;
 
-    iget-object v0, v3, Lcom/tencent/mm/ui/widget/DragSortListView$j;->lEH:Landroid/util/SparseIntArray;
+    iget-object v0, v3, Lcom/tencent/mm/ui/widget/DragSortListView$i;->mfw:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, p1, v5}, Landroid/util/SparseIntArray;->get(II)I
 
@@ -3491,19 +3676,19 @@
 
     if-ne v0, v5, :cond_8
 
-    iget-object v0, v3, Lcom/tencent/mm/ui/widget/DragSortListView$j;->lEH:Landroid/util/SparseIntArray;
+    iget-object v0, v3, Lcom/tencent/mm/ui/widget/DragSortListView$i;->mfw:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0}, Landroid/util/SparseIntArray;->size()I
 
     move-result v0
 
-    iget v4, v3, Lcom/tencent/mm/ui/widget/DragSortListView$j;->lEJ:I
+    iget v4, v3, Lcom/tencent/mm/ui/widget/DragSortListView$i;->mfy:I
 
     if-ne v0, v4, :cond_4
 
-    iget-object v4, v3, Lcom/tencent/mm/ui/widget/DragSortListView$j;->lEH:Landroid/util/SparseIntArray;
+    iget-object v4, v3, Lcom/tencent/mm/ui/widget/DragSortListView$i;->mfw:Landroid/util/SparseIntArray;
 
-    iget-object v0, v3, Lcom/tencent/mm/ui/widget/DragSortListView$j;->lEI:Ljava/util/ArrayList;
+    iget-object v0, v3, Lcom/tencent/mm/ui/widget/DragSortListView$i;->mfx:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
@@ -3519,11 +3704,11 @@
 
     :cond_4
     :goto_2
-    iget-object v0, v3, Lcom/tencent/mm/ui/widget/DragSortListView$j;->lEH:Landroid/util/SparseIntArray;
+    iget-object v0, v3, Lcom/tencent/mm/ui/widget/DragSortListView$i;->mfw:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, p1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    iget-object v0, v3, Lcom/tencent/mm/ui/widget/DragSortListView$j;->lEI:Ljava/util/ArrayList;
+    iget-object v0, v3, Lcom/tencent/mm/ui/widget/DragSortListView$i;->mfx:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -3539,7 +3724,7 @@
 
     .line 1918
     :cond_6
-    iget-object v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDD:[Landroid/view/View;
+    iget-object v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->met:[Landroid/view/View;
 
     aget-object v2, v3, v2
 
@@ -3559,7 +3744,7 @@
 
     .line 1929
     :cond_8
-    iget-object v0, v3, Lcom/tencent/mm/ui/widget/DragSortListView$j;->lEI:Ljava/util/ArrayList;
+    iget-object v0, v3, Lcom/tencent/mm/ui/widget/DragSortListView$i;->mfx:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -3570,32 +3755,12 @@
     goto :goto_2
 .end method
 
-.method static synthetic t(Lcom/tencent/mm/ui/widget/DragSortListView;)F
-    .locals 1
-
-    .prologue
-    .line 60
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDK:F
-
-    return v0
-.end method
-
-.method static synthetic u(Lcom/tencent/mm/ui/widget/DragSortListView;)F
-    .locals 1
-
-    .prologue
-    .line 60
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDL:F
-
-    return v0
-.end method
-
 .method static synthetic v(Lcom/tencent/mm/ui/widget/DragSortListView;)Lcom/tencent/mm/ui/widget/DragSortListView$c;
     .locals 1
 
     .prologue
     .line 60
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDO:Lcom/tencent/mm/ui/widget/DragSortListView$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meE:Lcom/tencent/mm/ui/widget/DragSortListView$c;
 
     return-object v0
 .end method
@@ -3605,7 +3770,7 @@
 
     .prologue
     .line 60
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDJ:F
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mez:F
 
     return v0
 .end method
@@ -3615,21 +3780,21 @@
 
     .prologue
     .line 60
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDM:F
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meC:F
 
     return v0
 .end method
 
 
 # virtual methods
-.method public final F(F)Z
+.method public final E(F)Z
     .locals 1
 
     .prologue
     const/4 v0, 0x1
 
     .line 1543
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEj:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meZ:Z
 
     .line 1544
     invoke-direct {p0, v0, p1}, Lcom/tencent/mm/ui/widget/DragSortListView;->a(ZF)Z
@@ -3650,21 +3815,21 @@
     const/4 v1, 0x0
 
     .line 2211
-    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
 
     if-nez v2, :cond_0
 
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDV:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meL:Z
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
     if-nez v2, :cond_0
 
     if-eqz p2, :cond_0
 
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDz:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mep:Z
 
     if-nez v2, :cond_2
 
@@ -3700,71 +3865,71 @@
     add-int/2addr v2, p1
 
     .line 2220
-    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     .line 2221
-    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
     .line 2222
-    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     .line 2223
-    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDn:I
+    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->med:I
 
     .line 2226
-    iput v5, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
+    iput v5, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
 
     .line 2227
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDT:I
+    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meJ:I
 
     .line 2228
-    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDT:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meJ:I
 
     or-int/2addr v2, p3
 
-    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDT:I
+    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meJ:I
 
     .line 2230
-    iput-object p2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iput-object p2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
     .line 2231
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjD()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpB()V
 
     .line 2233
-    iput p4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDs:I
+    iput p4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mei:I
 
     .line 2234
-    iput p5, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDt:I
+    iput p5, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mej:I
 
     .line 2235
-    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDQ:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meG:I
 
-    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDS:I
+    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meI:I
 
     .line 2238
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDh:Landroid/graphics/Point;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdX:Landroid/graphics/Point;
 
-    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDP:I
+    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meF:I
 
-    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDs:I
+    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mei:I
 
     sub-int/2addr v3, v4
 
     iput v3, v2, Landroid/graphics/Point;->x:I
 
     .line 2239
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDh:Landroid/graphics/Point;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdX:Landroid/graphics/Point;
 
-    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDQ:I
+    iget v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meG:I
 
-    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDt:I
+    iget v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mej:I
 
     sub-int/2addr v3, v4
 
     iput v3, v2, Landroid/graphics/Point;->y:I
 
     .line 2242
-    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getFirstVisiblePosition()I
 
@@ -3784,26 +3949,26 @@
 
     .line 2248
     :cond_4
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEc:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meS:Z
 
     if-eqz v2, :cond_5
 
     .line 2249
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEd:Lcom/tencent/mm/ui/widget/DragSortListView$f;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meT:Lcom/tencent/mm/ui/widget/DragSortListView$e;
 
-    iget-object v3, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v3, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v4, "<DSLVStates>\n"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput v1, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEB:I
+    iput v1, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfq:I
 
-    iput-boolean v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEC:Z
+    iput-boolean v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfr:Z
 
     .line 2254
     :cond_5
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDY:I
+    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meO:I
 
     packed-switch v1, :pswitch_data_0
 
@@ -3812,20 +3977,20 @@
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->requestLayout()V
 
     .line 2265
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEh:Lcom/tencent/mm/ui/widget/DragSortListView$k;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meX:Lcom/tencent/mm/ui/widget/DragSortListView$j;
 
     if-eqz v1, :cond_1
 
     .line 2266
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEh:Lcom/tencent/mm/ui/widget/DragSortListView$k;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meX:Lcom/tencent/mm/ui/widget/DragSortListView$j;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/widget/DragSortListView$k;->start()V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/widget/DragSortListView$j;->start()V
 
     goto :goto_0
 
     .line 2256
     :pswitch_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDX:Landroid/view/MotionEvent;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meN:Landroid/view/MotionEvent;
 
     invoke-super {p0, v1}, Landroid/widget/ListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -3833,7 +3998,7 @@
 
     .line 2259
     :pswitch_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDX:Landroid/view/MotionEvent;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meN:Landroid/view/MotionEvent;
 
     invoke-super {p0, v1}, Landroid/widget/ListView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -3849,40 +4014,40 @@
     .end packed-switch
 .end method
 
-.method public final bjw()V
+.method public final bpu()V
     .locals 2
 
     .prologue
     .line 1433
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
 
     const/4 v1, 0x4
 
     if-ne v0, v1, :cond_0
 
     .line 1434
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDE:Lcom/tencent/mm/ui/widget/DragSortListView$d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meu:Lcom/tencent/mm/ui/widget/DragSortListView$d;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/DragSortListView$d;->bjF()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/DragSortListView$d;->bpD()V
 
     .line 1435
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjE()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpC()V
 
     .line 1436
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjx()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpv()V
 
     .line 1437
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjC()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpA()V
 
     .line 1439
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meL:Z
 
     if-eqz v0, :cond_1
 
     .line 1440
     const/4 v0, 0x3
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
 
     .line 1445
     :cond_0
@@ -3893,9 +4058,139 @@
     :cond_1
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
 
     goto :goto_0
+.end method
+
+.method public final d(IF)V
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x4
+
+    .line 1373
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
+
+    if-ne v0, v2, :cond_3
+
+    .line 1375
+    :cond_0
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
+
+    if-nez v0, :cond_1
+
+    .line 1377
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getHeaderViewsCount()I
+
+    move-result v0
+
+    add-int/2addr v0, p1
+
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
+
+    .line 1378
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
+
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
+
+    .line 1379
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
+
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
+
+    .line 1380
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
+
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->med:I
+
+    .line 1381
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
+
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getFirstVisiblePosition()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    .line 1382
+    if-eqz v0, :cond_1
+
+    .line 1383
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    .line 1387
+    :cond_1
+    const/4 v0, 0x1
+
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
+
+    .line 1388
+    iput p2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mfa:F
+
+    .line 1390
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meL:Z
+
+    if-eqz v0, :cond_2
+
+    .line 1391
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meO:I
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 1401
+    :cond_2
+    :goto_0
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meW:Lcom/tencent/mm/ui/widget/DragSortListView$k;
+
+    if-eqz v0, :cond_4
+
+    .line 1402
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meW:Lcom/tencent/mm/ui/widget/DragSortListView$k;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/DragSortListView$k;->start()V
+
+    .line 1407
+    :cond_3
+    :goto_1
+    return-void
+
+    .line 1393
+    :pswitch_0
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meN:Landroid/view/MotionEvent;
+
+    invoke-super {p0, v0}, Landroid/widget/ListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
+
+    goto :goto_0
+
+    .line 1396
+    :pswitch_1
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meN:Landroid/view/MotionEvent;
+
+    invoke-super {p0, v0}, Landroid/widget/ListView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
+
+    goto :goto_0
+
+    .line 1404
+    :cond_4
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/widget/DragSortListView;->ui(I)V
+
+    goto :goto_1
+
+    .line 1391
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method
 
 .method protected dispatchDraw(Landroid/graphics/Canvas;)V
@@ -3910,63 +4205,63 @@
     invoke-super {p0, p1}, Landroid/widget/ListView;->dispatchDraw(Landroid/graphics/Canvas;)V
 
     .line 751
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
 
     if-eqz v0, :cond_1
 
     .line 753
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
-    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     if-eq v0, v2, :cond_0
 
     .line 754
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     invoke-direct {p0, v0, p1}, Lcom/tencent/mm/ui/widget/DragSortListView;->a(ILandroid/graphics/Canvas;)V
 
     .line 756
     :cond_0
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
-    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     if-eq v0, v2, :cond_1
 
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
-    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     if-eq v0, v2, :cond_1
 
     .line 757
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
     invoke-direct {p0, v0, p1}, Lcom/tencent/mm/ui/widget/DragSortListView;->a(ILandroid/graphics/Canvas;)V
 
     .line 761
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
     if-eqz v0, :cond_3
 
     .line 763
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
     move-result v2
 
     .line 764
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
     move-result v4
 
     .line 766
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDh:Landroid/graphics/Point;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdX:Landroid/graphics/Point;
 
     iget v0, v0, Landroid/graphics/Point;->x:I
 
@@ -4001,7 +4296,7 @@
     :goto_0
     const/high16 v3, 0x437f0000    # 255.0f
 
-    iget v5, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDm:F
+    iget v5, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mec:F
 
     mul-float/2addr v3, v5
 
@@ -4013,13 +4308,13 @@
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     .line 783
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDh:Landroid/graphics/Point;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdX:Landroid/graphics/Point;
 
     iget v0, v0, Landroid/graphics/Point;->x:I
 
     int-to-float v0, v0
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDh:Landroid/graphics/Point;
+    iget-object v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdX:Landroid/graphics/Point;
 
     iget v3, v3, Landroid/graphics/Point;->y:I
 
@@ -4044,7 +4339,7 @@
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Canvas;->saveLayerAlpha(FFFFII)I
 
     .line 788
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
@@ -4065,170 +4360,6 @@
     goto :goto_0
 .end method
 
-.method public final e(IF)V
-    .locals 3
-
-    .prologue
-    const/4 v2, 0x4
-
-    .line 1373
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
-
-    if-ne v0, v2, :cond_3
-
-    .line 1375
-    :cond_0
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
-
-    if-nez v0, :cond_1
-
-    .line 1377
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getHeaderViewsCount()I
-
-    move-result v0
-
-    add-int/2addr v0, p1
-
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
-
-    .line 1378
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
-
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
-
-    .line 1379
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
-
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
-
-    .line 1380
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
-
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDn:I
-
-    .line 1381
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getFirstVisiblePosition()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v0
-
-    .line 1382
-    if-eqz v0, :cond_1
-
-    .line 1383
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    .line 1387
-    :cond_1
-    const/4 v0, 0x1
-
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
-
-    .line 1388
-    iput p2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEk:F
-
-    .line 1390
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDV:Z
-
-    if-eqz v0, :cond_2
-
-    .line 1391
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDY:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 1401
-    :cond_2
-    :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEg:Lcom/tencent/mm/ui/widget/DragSortListView$l;
-
-    if-eqz v0, :cond_4
-
-    .line 1402
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEg:Lcom/tencent/mm/ui/widget/DragSortListView$l;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/DragSortListView$l;->start()V
-
-    .line 1407
-    :cond_3
-    :goto_1
-    return-void
-
-    .line 1393
-    :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDX:Landroid/view/MotionEvent;
-
-    invoke-super {p0, v0}, Landroid/widget/ListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    goto :goto_0
-
-    .line 1396
-    :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDX:Landroid/view/MotionEvent;
-
-    invoke-super {p0, v0}, Landroid/widget/ListView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-
-    goto :goto_0
-
-    .line 1404
-    :cond_4
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/widget/DragSortListView;->se(I)V
-
-    goto :goto_1
-
-    .line 1391
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public getFloatAlpha()F
-    .locals 1
-
-    .prologue
-    .line 545
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDm:F
-
-    return v0
-.end method
-
-.method public getInputAdapter()Landroid/widget/ListAdapter;
-    .locals 1
-
-    .prologue
-    .line 599
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEb:Lcom/tencent/mm/ui/widget/DragSortListView$a;
-
-    if-nez v0, :cond_0
-
-    .line 600
-    const/4 v0, 0x0
-
-    .line 602
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEb:Lcom/tencent/mm/ui/widget/DragSortListView$a;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/widget/DragSortListView$a;->pL:Landroid/widget/ListAdapter;
-
-    goto :goto_0
-.end method
-
 .method protected layoutChildren()V
     .locals 4
 
@@ -4239,12 +4370,12 @@
     invoke-super {p0}, Landroid/widget/ListView;->layoutChildren()V
 
     .line 2099
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
     .line 2100
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->isLayoutRequested()Z
 
@@ -4252,24 +4383,24 @@
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDk:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mea:Z
 
     if-nez v0, :cond_0
 
     .line 2104
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjD()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpB()V
 
     .line 2106
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I
 
@@ -4278,7 +4409,7 @@
     invoke-virtual {v0, v3, v3, v1, v2}, Landroid/view/View;->layout(IIII)V
 
     .line 2107
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDk:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mea:Z
 
     .line 2109
     :cond_1
@@ -4295,36 +4426,36 @@
     invoke-super {p0, p1}, Landroid/widget/ListView;->onDraw(Landroid/graphics/Canvas;)V
 
     .line 1085
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEc:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meS:Z
 
     if-eqz v0, :cond_4
 
     .line 1086
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEd:Lcom/tencent/mm/ui/widget/DragSortListView$f;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meT:Lcom/tencent/mm/ui/widget/DragSortListView$e;
 
-    iget-boolean v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEC:Z
+    iget-boolean v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfr:Z
 
     if-eqz v0, :cond_4
 
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v3, "<DSLVState>\n"
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getChildCount()I
 
     move-result v3
 
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getFirstVisiblePosition()I
 
     move-result v4
 
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v5, "    <Positions>"
 
@@ -4335,7 +4466,7 @@
     :goto_0
     if-ge v0, v3, :cond_0
 
-    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     add-int v6, v4, v0
 
@@ -4352,13 +4483,13 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v5, "</Positions>\n"
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v5, "    <Tops>"
 
@@ -4369,9 +4500,9 @@
     :goto_1
     if-ge v0, v3, :cond_1
 
-    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
-    iget-object v6, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v6, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
     invoke-virtual {v6, v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getChildAt(I)Landroid/view/View;
 
@@ -4394,13 +4525,13 @@
     goto :goto_1
 
     :cond_1
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v5, "</Tops>\n"
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v5, "    <Bottoms>"
 
@@ -4411,9 +4542,9 @@
     :goto_2
     if-ge v0, v3, :cond_2
 
-    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
-    iget-object v6, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v6, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
     invoke-virtual {v6, v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getChildAt(I)Landroid/view/View;
 
@@ -4436,13 +4567,13 @@
     goto :goto_2
 
     :cond_2
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v5, "</Bottoms>\n"
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v5, "    <FirstExpPos>"
 
@@ -4450,9 +4581,9 @@
 
     move-result-object v0
 
-    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    iget v5, v5, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iget v5, v5, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -4462,7 +4593,7 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v5, "    <FirstExpBlankHeight>"
 
@@ -4470,23 +4601,23 @@
 
     move-result-object v0
 
-    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    iget-object v6, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v6, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    iget v6, v6, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iget v6, v6, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
-    invoke-direct {v5, v6}, Lcom/tencent/mm/ui/widget/DragSortListView;->sd(I)I
+    invoke-direct {v5, v6}, Lcom/tencent/mm/ui/widget/DragSortListView;->uh(I)I
 
     move-result v5
 
-    iget-object v6, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v6, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    iget-object v7, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v7, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    iget v7, v7, Lcom/tencent/mm/ui/widget/DragSortListView;->lDo:I
+    iget v7, v7, Lcom/tencent/mm/ui/widget/DragSortListView;->mee:I
 
-    invoke-direct {v6, v7}, Lcom/tencent/mm/ui/widget/DragSortListView;->sf(I)I
+    invoke-direct {v6, v7}, Lcom/tencent/mm/ui/widget/DragSortListView;->uj(I)I
 
     move-result v6
 
@@ -4500,7 +4631,7 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v5, "    <SecondExpPos>"
 
@@ -4508,9 +4639,9 @@
 
     move-result-object v0
 
-    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    iget v5, v5, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iget v5, v5, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -4520,7 +4651,7 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v5, "    <SecondExpBlankHeight>"
 
@@ -4528,23 +4659,23 @@
 
     move-result-object v0
 
-    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    iget-object v6, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v6, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    iget v6, v6, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iget v6, v6, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
-    invoke-direct {v5, v6}, Lcom/tencent/mm/ui/widget/DragSortListView;->sd(I)I
+    invoke-direct {v5, v6}, Lcom/tencent/mm/ui/widget/DragSortListView;->uh(I)I
 
     move-result v5
 
-    iget-object v6, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v6, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    iget-object v7, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v7, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    iget v7, v7, Lcom/tencent/mm/ui/widget/DragSortListView;->lDp:I
+    iget v7, v7, Lcom/tencent/mm/ui/widget/DragSortListView;->mef:I
 
-    invoke-direct {v6, v7}, Lcom/tencent/mm/ui/widget/DragSortListView;->sf(I)I
+    invoke-direct {v6, v7}, Lcom/tencent/mm/ui/widget/DragSortListView;->uj(I)I
 
     move-result v6
 
@@ -4558,7 +4689,7 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v5, "    <SrcPos>"
 
@@ -4566,9 +4697,9 @@
 
     move-result-object v0
 
-    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    iget v5, v5, Lcom/tencent/mm/ui/widget/DragSortListView;->lDr:I
+    iget v5, v5, Lcom/tencent/mm/ui/widget/DragSortListView;->meh:I
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -4578,7 +4709,7 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v5, "    <SrcHeight>"
 
@@ -4586,11 +4717,11 @@
 
     move-result-object v0
 
-    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    iget v5, v5, Lcom/tencent/mm/ui/widget/DragSortListView;->lDB:I
+    iget v5, v5, Lcom/tencent/mm/ui/widget/DragSortListView;->mer:I
 
-    iget-object v6, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v6, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
     invoke-virtual {v6}, Lcom/tencent/mm/ui/widget/DragSortListView;->getDividerHeight()I
 
@@ -4606,7 +4737,7 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v5, "    <ViewHeight>"
 
@@ -4614,7 +4745,7 @@
 
     move-result-object v0
 
-    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
     invoke-virtual {v5}, Lcom/tencent/mm/ui/widget/DragSortListView;->getHeight()I
 
@@ -4628,7 +4759,7 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v5, "    <LastY>"
 
@@ -4636,9 +4767,9 @@
 
     move-result-object v0
 
-    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    iget v5, v5, Lcom/tencent/mm/ui/widget/DragSortListView;->hun:I
+    iget v5, v5, Lcom/tencent/mm/ui/widget/DragSortListView;->hMb:I
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -4648,7 +4779,7 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v5, "    <FloatY>"
 
@@ -4656,9 +4787,9 @@
 
     move-result-object v0
 
-    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    iget v5, v5, Lcom/tencent/mm/ui/widget/DragSortListView;->lDj:I
+    iget v5, v5, Lcom/tencent/mm/ui/widget/DragSortListView;->mdZ:I
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -4668,7 +4799,7 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v5, "    <ShuffleEdges>"
 
@@ -4679,13 +4810,13 @@
     :goto_3
     if-ge v0, v3, :cond_3
 
-    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v5, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
-    iget-object v6, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v6, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
     add-int v7, v4, v0
 
-    iget-object v8, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v8, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
     invoke-virtual {v8, v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getChildAt(I)Landroid/view/View;
 
@@ -4695,7 +4826,7 @@
 
     move-result v8
 
-    invoke-direct {v6, v7, v8}, Lcom/tencent/mm/ui/widget/DragSortListView;->bW(II)I
+    invoke-direct {v6, v7, v8}, Lcom/tencent/mm/ui/widget/DragSortListView;->cd(II)I
 
     move-result v6
 
@@ -4712,33 +4843,33 @@
     goto :goto_3
 
     :cond_3
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v3, "</ShuffleEdges>\n"
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->em:Ljava/lang/StringBuilder;
+    iget-object v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->eH:Ljava/lang/StringBuilder;
 
     const-string/jumbo v3, "</DSLVState>\n"
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEA:I
+    iget v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfp:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEA:I
+    iput v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfp:I
 
-    iget v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEA:I
+    iget v0, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfp:I
 
     const/16 v3, 0x3e8
 
     if-le v0, v3, :cond_4
 
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/widget/DragSortListView$f;->flush()V
+    invoke-virtual {v2}, Lcom/tencent/mm/ui/widget/DragSortListView$e;->flush()V
 
-    iput v1, v2, Lcom/tencent/mm/ui/widget/DragSortListView$f;->lEA:I
+    iput v1, v2, Lcom/tencent/mm/ui/widget/DragSortListView$e;->mfp:I
 
     .line 1088
     :cond_4
@@ -4754,7 +4885,7 @@
     const/4 v0, 0x1
 
     .line 1659
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDz:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mep:Z
 
     if-nez v1, :cond_0
 
@@ -4772,7 +4903,7 @@
     invoke-direct {p0, p1}, Lcom/tencent/mm/ui/widget/DragSortListView;->s(Landroid/view/MotionEvent;)V
 
     .line 1664
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDU:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meK:Z
 
     .line 1666
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
@@ -4785,22 +4916,22 @@
     if-nez v3, :cond_2
 
     .line 1669
-    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
+    iget v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
 
     if-eqz v1, :cond_1
 
     .line 1671
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEe:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meU:Z
 
     goto :goto_0
 
     .line 1674
     :cond_1
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDV:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meL:Z
 
     .line 1680
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
     if-eqz v1, :cond_5
 
@@ -4816,7 +4947,7 @@
 
     .line 1704
     :cond_3
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDV:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meL:Z
 
     :cond_4
     move v0, v1
@@ -4833,7 +4964,7 @@
     if-eqz v1, :cond_7
 
     .line 1685
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEl:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mfb:Z
 
     move v1, v0
 
@@ -4846,13 +4977,13 @@
     if-eqz v1, :cond_6
 
     .line 1696
-    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDY:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meO:I
 
     goto :goto_1
 
     .line 1692
     :pswitch_1
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjA()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpy()V
 
     goto :goto_1
 
@@ -4860,7 +4991,7 @@
     :cond_6
     const/4 v4, 0x2
 
-    iput v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDY:I
+    iput v4, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meO:I
 
     goto :goto_1
 
@@ -4886,12 +5017,12 @@
     invoke-super {p0, p1, p2}, Landroid/widget/ListView;->onMeasure(II)V
 
     .line 2086
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
     .line 2087
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDg:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdW:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->isLayoutRequested()Z
 
@@ -4900,17 +5031,17 @@
     if-eqz v0, :cond_0
 
     .line 2088
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjD()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpB()V
 
     .line 2090
     :cond_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDk:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mea:Z
 
     .line 2092
     :cond_1
-    iput p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mZ:I
+    iput p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->np:I
 
     .line 2093
     return-void
@@ -4924,7 +5055,7 @@
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/ListView;->onSizeChanged(IIII)V
 
     .line 1815
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjB()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpz()V
 
     .line 1816
     return-void
@@ -4943,12 +5074,12 @@
     const/4 v3, 0x0
 
     .line 1574
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEe:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meU:Z
 
     if-eqz v0, :cond_0
 
     .line 1575
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEe:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meU:Z
 
     .line 1621
     :goto_0
@@ -4956,7 +5087,7 @@
 
     .line 1579
     :cond_0
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDz:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mep:Z
 
     if-nez v0, :cond_1
 
@@ -4969,10 +5100,10 @@
 
     .line 1585
     :cond_1
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDU:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meK:Z
 
     .line 1586
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDU:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meK:Z
 
     .line 1588
     if-nez v0, :cond_2
@@ -4982,7 +5113,7 @@
 
     .line 1593
     :cond_2
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
 
     if-ne v0, v4, :cond_c
 
@@ -5010,30 +5141,30 @@
 
     .line 1594
     :pswitch_0
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
 
     if-ne v0, v4, :cond_5
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjw()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpu()V
 
     :cond_5
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjA()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpy()V
 
     goto :goto_1
 
     :pswitch_1
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
 
     if-ne v0, v4, :cond_6
 
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEj:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meZ:Z
 
     const/4 v0, 0x0
 
     invoke-direct {p0, v3, v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->a(ZF)Z
 
     :cond_6
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjA()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpy()V
 
     goto :goto_1
 
@@ -5050,27 +5181,27 @@
 
     float-to-int v4, v4
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDh:Landroid/graphics/Point;
+    iget-object v5, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdX:Landroid/graphics/Point;
 
-    iget v6, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDs:I
+    iget v6, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mei:I
 
     sub-int/2addr v0, v6
 
     iput v0, v5, Landroid/graphics/Point;->x:I
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDh:Landroid/graphics/Point;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdX:Landroid/graphics/Point;
 
-    iget v5, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDt:I
+    iget v5, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mej:I
 
     sub-int v5, v4, v5
 
     iput v5, v0, Landroid/graphics/Point;->y:I
 
-    invoke-direct {p0, v2}, Lcom/tencent/mm/ui/widget/DragSortListView;->im(Z)V
+    invoke-direct {p0, v2}, Lcom/tencent/mm/ui/widget/DragSortListView;->iU(Z)V
 
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDj:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdZ:I
 
-    iget v5, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDC:I
+    iget v5, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mes:I
 
     add-int/2addr v0, v5
 
@@ -5078,9 +5209,9 @@
 
     move-result v5
 
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDj:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mdZ:I
 
-    iget v6, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDC:I
+    iget v6, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mes:I
 
     sub-int/2addr v0, v6
 
@@ -5088,20 +5219,20 @@
 
     move-result v4
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDE:Lcom/tencent/mm/ui/widget/DragSortListView$d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meu:Lcom/tencent/mm/ui/widget/DragSortListView$d;
 
-    iget-boolean v6, v0, Lcom/tencent/mm/ui/widget/DragSortListView$d;->lEy:Z
+    iget-boolean v6, v0, Lcom/tencent/mm/ui/widget/DragSortListView$d;->mfo:Z
 
     if-eqz v6, :cond_8
 
-    iget v0, v0, Lcom/tencent/mm/ui/widget/DragSortListView$d;->lEw:I
+    iget v0, v0, Lcom/tencent/mm/ui/widget/DragSortListView$d;->mfm:I
 
     :goto_3
-    iget v6, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->hun:I
+    iget v6, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->hMb:I
 
     if-le v5, v6, :cond_9
 
-    iget v6, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDI:I
+    iget v6, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mey:I
 
     if-le v5, v6, :cond_9
 
@@ -5109,14 +5240,14 @@
 
     if-eq v0, v1, :cond_7
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDE:Lcom/tencent/mm/ui/widget/DragSortListView$d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meu:Lcom/tencent/mm/ui/widget/DragSortListView$d;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/DragSortListView$d;->bjF()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/DragSortListView$d;->bpD()V
 
     :cond_7
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDE:Lcom/tencent/mm/ui/widget/DragSortListView$d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meu:Lcom/tencent/mm/ui/widget/DragSortListView$d;
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/widget/DragSortListView$d;->sg(I)V
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/widget/DragSortListView$d;->uk(I)V
 
     goto :goto_1
 
@@ -5126,11 +5257,11 @@
     goto :goto_3
 
     :cond_9
-    iget v6, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->hun:I
+    iget v6, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->hMb:I
 
     if-ge v4, v6, :cond_b
 
-    iget v6, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDH:I
+    iget v6, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mex:I
 
     if-ge v4, v6, :cond_b
 
@@ -5138,41 +5269,41 @@
 
     if-eq v0, v1, :cond_a
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDE:Lcom/tencent/mm/ui/widget/DragSortListView$d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meu:Lcom/tencent/mm/ui/widget/DragSortListView$d;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/DragSortListView$d;->bjF()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/DragSortListView$d;->bpD()V
 
     :cond_a
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDE:Lcom/tencent/mm/ui/widget/DragSortListView$d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meu:Lcom/tencent/mm/ui/widget/DragSortListView$d;
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/widget/DragSortListView$d;->sg(I)V
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/widget/DragSortListView$d;->uk(I)V
 
     goto/16 :goto_1
 
     :cond_b
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDH:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mex:I
 
     if-lt v4, v0, :cond_3
 
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDI:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mey:I
 
     if-gt v5, v0, :cond_3
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDE:Lcom/tencent/mm/ui/widget/DragSortListView$d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meu:Lcom/tencent/mm/ui/widget/DragSortListView$d;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/ui/widget/DragSortListView$d;->lEy:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/ui/widget/DragSortListView$d;->mfo:Z
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDE:Lcom/tencent/mm/ui/widget/DragSortListView$d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meu:Lcom/tencent/mm/ui/widget/DragSortListView$d;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/DragSortListView$d;->bjF()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/DragSortListView$d;->bpD()V
 
     goto/16 :goto_1
 
     .line 1601
     :cond_c
-    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ij:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->iC:I
 
     if-nez v0, :cond_d
 
@@ -5201,13 +5332,13 @@
     if-eqz v0, :cond_4
 
     .line 1616
-    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDY:I
+    iput v2, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meO:I
 
     goto/16 :goto_2
 
     .line 1612
     :pswitch_4
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjA()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpy()V
 
     goto/16 :goto_2
 
@@ -5238,7 +5369,7 @@
 
     .prologue
     .line 2010
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->na:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->nq:Z
 
     if-nez v0, :cond_0
 
@@ -5274,24 +5405,24 @@
 
     invoke-direct {v0, p0, p1}, Lcom/tencent/mm/ui/widget/DragSortListView$a;-><init>(Lcom/tencent/mm/ui/widget/DragSortListView;Landroid/widget/ListAdapter;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEb:Lcom/tencent/mm/ui/widget/DragSortListView$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meR:Lcom/tencent/mm/ui/widget/DragSortListView$a;
 
     .line 573
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->pX:Landroid/database/DataSetObserver;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->ql:Landroid/database/DataSetObserver;
 
     invoke-interface {p1, v0}, Landroid/widget/ListAdapter;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
     .line 575
-    instance-of v0, p1, Lcom/tencent/mm/ui/widget/DragSortListView$h;
+    instance-of v0, p1, Lcom/tencent/mm/ui/widget/DragSortListView$g;
 
     if-eqz v0, :cond_0
 
     move-object v0, p1
 
     .line 576
-    check-cast v0, Lcom/tencent/mm/ui/widget/DragSortListView$h;
+    check-cast v0, Lcom/tencent/mm/ui/widget/DragSortListView$g;
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->setDropListener(Lcom/tencent/mm/ui/widget/DragSortListView$h;)V
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->men:Lcom/tencent/mm/ui/widget/DragSortListView$g;
 
     .line 578
     :cond_0
@@ -5304,23 +5435,23 @@
     .line 579
     check-cast v0, Lcom/tencent/mm/ui/widget/DragSortListView$b;
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->setDragListener(Lcom/tencent/mm/ui/widget/DragSortListView$b;)V
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->mem:Lcom/tencent/mm/ui/widget/DragSortListView$b;
 
     .line 581
     :cond_1
-    instance-of v0, p1, Lcom/tencent/mm/ui/widget/DragSortListView$m;
+    instance-of v0, p1, Lcom/tencent/mm/ui/widget/DragSortListView$l;
 
     if-eqz v0, :cond_2
 
     .line 582
-    check-cast p1, Lcom/tencent/mm/ui/widget/DragSortListView$m;
+    check-cast p1, Lcom/tencent/mm/ui/widget/DragSortListView$l;
 
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/widget/DragSortListView;->setRemoveListener(Lcom/tencent/mm/ui/widget/DragSortListView$m;)V
+    iput-object p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meo:Lcom/tencent/mm/ui/widget/DragSortListView$l;
 
     .line 588
     :cond_2
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEb:Lcom/tencent/mm/ui/widget/DragSortListView$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meR:Lcom/tencent/mm/ui/widget/DragSortListView$a;
 
     invoke-super {p0, v0}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
@@ -5331,161 +5462,7 @@
     :cond_3
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lEb:Lcom/tencent/mm/ui/widget/DragSortListView$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->meR:Lcom/tencent/mm/ui/widget/DragSortListView$a;
 
     goto :goto_0
-.end method
-
-.method public setDragEnabled(Z)V
-    .locals 0
-
-    .prologue
-    .line 2459
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDz:Z
-
-    .line 2460
-    return-void
-.end method
-
-.method public setDragListener(Lcom/tencent/mm/ui/widget/DragSortListView$b;)V
-    .locals 0
-
-    .prologue
-    .line 2444
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDw:Lcom/tencent/mm/ui/widget/DragSortListView$b;
-
-    .line 2445
-    return-void
-.end method
-
-.method public setDragScrollProfile(Lcom/tencent/mm/ui/widget/DragSortListView$c;)V
-    .locals 0
-
-    .prologue
-    .line 2536
-    if-eqz p1, :cond_0
-
-    .line 2537
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDO:Lcom/tencent/mm/ui/widget/DragSortListView$c;
-
-    .line 2539
-    :cond_0
-    return-void
-.end method
-
-.method public setDragScrollStart(F)V
-    .locals 2
-
-    .prologue
-    const/high16 v1, 0x3f000000    # 0.5f
-
-    .line 1720
-    cmpl-float v0, p1, v1
-
-    if-lez v0, :cond_1
-
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDG:F
-
-    :goto_0
-    cmpl-float v0, p1, v1
-
-    if-lez v0, :cond_2
-
-    iput v1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDF:F
-
-    :goto_1
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->getHeight()I
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjB()V
-
-    .line 1721
-    :cond_0
-    return-void
-
-    .line 1720
-    :cond_1
-    iput p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDG:F
-
-    goto :goto_0
-
-    :cond_2
-    iput p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDF:F
-
-    goto :goto_1
-.end method
-
-.method public setDragSortListener(Lcom/tencent/mm/ui/widget/DragSortListView$e;)V
-    .locals 0
-
-    .prologue
-    .line 2524
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/widget/DragSortListView;->setDropListener(Lcom/tencent/mm/ui/widget/DragSortListView$h;)V
-
-    .line 2525
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/widget/DragSortListView;->setDragListener(Lcom/tencent/mm/ui/widget/DragSortListView$b;)V
-
-    .line 2526
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/widget/DragSortListView;->setRemoveListener(Lcom/tencent/mm/ui/widget/DragSortListView$m;)V
-
-    .line 2527
-    return-void
-.end method
-
-.method public setDropListener(Lcom/tencent/mm/ui/widget/DragSortListView$h;)V
-    .locals 0
-
-    .prologue
-    .line 2476
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDx:Lcom/tencent/mm/ui/widget/DragSortListView$h;
-
-    .line 2477
-    return-void
-.end method
-
-.method public setFloatAlpha(F)V
-    .locals 0
-
-    .prologue
-    .line 541
-    iput p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDm:F
-
-    .line 542
-    return-void
-.end method
-
-.method public setFloatViewManager(Lcom/tencent/mm/ui/widget/DragSortListView$i;)V
-    .locals 0
-
-    .prologue
-    .line 2440
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDW:Lcom/tencent/mm/ui/widget/DragSortListView$i;
-
-    .line 2441
-    return-void
-.end method
-
-.method public setMaxScrollSpeed(F)V
-    .locals 0
-
-    .prologue
-    .line 556
-    iput p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDN:F
-
-    .line 557
-    return-void
-.end method
-
-.method public setRemoveListener(Lcom/tencent/mm/ui/widget/DragSortListView$m;)V
-    .locals 0
-
-    .prologue
-    .line 2490
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView;->lDy:Lcom/tencent/mm/ui/widget/DragSortListView$m;
-
-    .line 2491
-    return-void
 .end method

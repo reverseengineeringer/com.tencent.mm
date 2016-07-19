@@ -34,17 +34,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 16
+    .line 17
     sput-boolean v1, Lcom/tencent/mm/xlog/app/XLogSetup;->setup:Z
 
-    .line 17
+    .line 18
     new-instance v0, Lcom/tencent/mm/xlog/Xlog;
 
     invoke-direct {v0}, Lcom/tencent/mm/xlog/Xlog;-><init>()V
 
     sput-object v0, Lcom/tencent/mm/xlog/app/XLogSetup;->xlog:Lcom/tencent/mm/xlog/Xlog;
 
-    .line 26
+    .line 27
     sput-boolean v1, Lcom/tencent/mm/xlog/app/XLogSetup;->hasInit:Z
 
     return-void
@@ -54,7 +54,7 @@
     .locals 0
 
     .prologue
-    .line 12
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -66,7 +66,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 34
+    .line 35
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -75,82 +75,82 @@
 
     if-nez v0, :cond_1
 
-    .line 73
+    .line 74
     :cond_0
     :goto_0
     return-void
 
-    .line 38
+    .line 39
     :cond_1
     sget-boolean v0, Lcom/tencent/mm/xlog/app/XLogSetup;->hasInit:Z
 
     if-nez v0, :cond_2
 
-    .line 39
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 40
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    new-instance v2, Lcom/tencent/mm/sdk/platformtools/aa;
+    new-instance v2, Lcom/tencent/mm/sdk/platformtools/ac;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v2, v3}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->a(Landroid/content/Context;Lcom/tencent/mm/sdk/platformtools/aa;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->a(Landroid/content/Context;Lcom/tencent/mm/sdk/platformtools/ac;)V
 
-    .line 40
+    .line 41
     sput-boolean v1, Lcom/tencent/mm/xlog/app/XLogSetup;->hasInit:Z
 
-    .line 42
+    .line 43
     :cond_2
     sput-object p1, Lcom/tencent/mm/xlog/app/XLogSetup;->version:Ljava/lang/Integer;
 
-    .line 43
+    .line 44
     sput-object p2, Lcom/tencent/mm/xlog/app/XLogSetup;->cachePath:Ljava/lang/String;
 
-    .line 44
+    .line 45
     sput-object p3, Lcom/tencent/mm/xlog/app/XLogSetup;->logPath:Ljava/lang/String;
 
-    .line 45
+    .line 46
     sput-object p4, Lcom/tencent/mm/xlog/app/XLogSetup;->toolsLevel:Ljava/lang/Integer;
 
-    .line 46
+    .line 47
     sput-object p5, Lcom/tencent/mm/xlog/app/XLogSetup;->appendIsSync:Ljava/lang/Boolean;
 
-    .line 47
+    .line 48
     sput-object p6, Lcom/tencent/mm/xlog/app/XLogSetup;->isLogcatOpen:Ljava/lang/Boolean;
 
-    .line 48
+    .line 49
     sput-object p7, Lcom/tencent/mm/xlog/app/XLogSetup;->nameprefix:Ljava/lang/String;
 
-    .line 49
+    .line 50
     sput-boolean p8, Lcom/tencent/mm/xlog/app/XLogSetup;->sAlpha:Z
 
-    .line 50
+    .line 51
     if-eqz p0, :cond_0
 
-    .line 53
+    .line 54
     sget-boolean v0, Lcom/tencent/mm/xlog/app/XLogSetup;->setup:Z
 
     if-nez v0, :cond_0
 
-    .line 56
+    .line 57
     sput-boolean v1, Lcom/tencent/mm/xlog/app/XLogSetup;->setup:Z
 
-    .line 58
+    .line 59
     sget-object v0, Lcom/tencent/mm/xlog/app/XLogSetup;->xlog:Lcom/tencent/mm/xlog/Xlog;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/u;->a(Lcom/tencent/mm/sdk/platformtools/u$a;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/v;->a(Lcom/tencent/mm/sdk/platformtools/v$a;)V
 
-    .line 60
+    .line 61
     sget-object v0, Lcom/tencent/mm/xlog/app/XLogSetup;->appendIsSync:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 62
+    .line 63
     sget-object v0, Lcom/tencent/mm/xlog/app/XLogSetup;->isLogcatOpen:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -159,17 +159,17 @@
 
     invoke-static {v0}, Lcom/tencent/mm/xlog/LogLogicJni;->setConsoleLogOpen(Z)V
 
-    .line 63
+    .line 64
     sget-boolean v0, Lcom/tencent/mm/xlog/app/XLogSetup;->sAlpha:Z
 
     invoke-static {v0}, Lcom/tencent/mm/xlog/LogLogicJni;->setIsAlphaVersion(Z)V
 
-    .line 65
+    .line 66
     sget-object v0, Lcom/tencent/mm/xlog/app/XLogSetup;->toolsLevel:Ljava/lang/Integer;
 
     if-nez v0, :cond_3
 
-    .line 66
+    .line 67
     sget-object v0, Lcom/tencent/mm/xlog/app/XLogSetup;->cachePath:Ljava/lang/String;
 
     sget-object v1, Lcom/tencent/mm/xlog/app/XLogSetup;->logPath:Ljava/lang/String;
@@ -186,7 +186,7 @@
 
     goto :goto_0
 
-    .line 69
+    .line 70
     :cond_3
     sget-object v0, Lcom/tencent/mm/xlog/app/XLogSetup;->toolsLevel:Ljava/lang/Integer;
 
@@ -215,7 +215,7 @@
     .locals 9
 
     .prologue
-    .line 29
+    .line 30
     const/4 v0, 0x1
 
     sget-object v1, Lcom/tencent/mm/xlog/app/XLogSetup;->version:Ljava/lang/Integer;
@@ -236,6 +236,6 @@
 
     invoke-static/range {v0 .. v8}, Lcom/tencent/mm/xlog/app/XLogSetup;->keep_setupXLog(ZLjava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/String;Z)V
 
-    .line 30
+    .line 31
     return-void
 .end method

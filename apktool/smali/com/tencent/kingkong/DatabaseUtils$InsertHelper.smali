@@ -25,6 +25,16 @@
 
 # instance fields
 .field private mColumns:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private final mDb:Lcom/tencent/kingkong/database/SQLiteDatabase;
 
@@ -159,37 +169,14 @@
     .line 1064
     :goto_0
     invoke-interface {v1}, Lcom/tencent/kingkong/Cursor;->moveToNext()Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v0
 
-    if-nez v0, :cond_1
-
-    .line 1086
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Lcom/tencent/kingkong/Cursor;->close()V
-
-    .line 1089
-    :cond_0
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    .line 1091
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tencent/kingkong/DatabaseUtils$InsertHelper;->mInsertSQL:Ljava/lang/String;
-
-    .line 1093
-    return-void
+    if-eqz v0, :cond_4
 
     .line 1065
-    :cond_1
     const/4 v0, 0x1
 
-    :try_start_1
     invoke-interface {v1, v0}, Lcom/tencent/kingkong/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -224,7 +211,7 @@
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 1073
-    if-nez v5, :cond_2
+    if-nez v5, :cond_0
 
     .line 1074
     const-string/jumbo v0, "?"
@@ -237,7 +224,7 @@
 
     move-result v0
 
-    if-ne v2, v0, :cond_4
+    if-ne v2, v0, :cond_2
 
     const-string/jumbo v0, ") "
 
@@ -249,7 +236,7 @@
 
     move-result v0
 
-    if-ne v2, v0, :cond_5
+    if-ne v2, v0, :cond_3
 
     const-string/jumbo v0, ");"
 
@@ -261,10 +248,11 @@
 
     move v2, v0
 
+    .line 1084
     goto :goto_0
 
     .line 1076
-    :cond_2
+    :cond_0
     const-string/jumbo v0, "COALESCE(?, "
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -276,38 +264,56 @@
     const-string/jumbo v0, ")"
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_1
 
-    .line 1085
+    .line 1086
     :catchall_0
     move-exception v0
 
-    .line 1086
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_1
 
     invoke-interface {v1}, Lcom/tencent/kingkong/Cursor;->close()V
 
-    .line 1087
-    :cond_3
+    :cond_1
     throw v0
 
     .line 1081
-    :cond_4
-    :try_start_2
+    :cond_2
+    :try_start_1
     const-string/jumbo v0, ", "
 
     goto :goto_2
 
     .line 1082
-    :cond_5
+    :cond_3
     const-string/jumbo v0, ", "
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_3
+
+    .line 1086
+    :cond_4
+    if-eqz v1, :cond_5
+
+    invoke-interface {v1}, Lcom/tencent/kingkong/Cursor;->close()V
+
+    .line 1089
+    :cond_5
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    .line 1091
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/kingkong/DatabaseUtils$InsertHelper;->mInsertSQL:Ljava/lang/String;
+
+    .line 1093
+    return-void
 .end method
 
 .method private getStatement(Z)Lcom/tencent/kingkong/database/SQLiteStatement;
@@ -434,33 +440,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 1146
-    invoke-virtual {v2}, Lcom/tencent/kingkong/database/SQLiteStatement;->executeInsert()J
-
-    move-result-wide v0
-
-    .line 1147
-    iget-object v2, p0, Lcom/tencent/kingkong/DatabaseUtils$InsertHelper;->mDb:Lcom/tencent/kingkong/database/SQLiteDatabase;
-
-    invoke-virtual {v2}, Lcom/tencent/kingkong/database/SQLiteDatabase;->setTransactionSuccessful()V
-    :try_end_0
-    .catch Lcom/tencent/kingkong/SQLException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 1148
-    iget-object v2, p0, Lcom/tencent/kingkong/DatabaseUtils$InsertHelper;->mDb:Lcom/tencent/kingkong/database/SQLiteDatabase;
-
-    invoke-virtual {v2}, Lcom/tencent/kingkong/database/SQLiteDatabase;->endTransaction()V
-
-    .line 1151
-    :goto_1
-    return-wide v0
-
-    .line 1137
-    :cond_0
-    :try_start_1
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -485,9 +466,9 @@
     move-result-object v0
 
     invoke-static {v2, v1, v0}, Lcom/tencent/kingkong/DatabaseUtils;->bindObjectToProgram(Lcom/tencent/kingkong/database/SQLiteProgram;ILjava/lang/Object;)V
-    :try_end_1
-    .catch Lcom/tencent/kingkong/SQLException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :try_end_0
+    .catch Lcom/tencent/kingkong/SQLException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
@@ -496,7 +477,7 @@
     move-exception v0
 
     .line 1150
-    :try_start_2
+    :try_start_1
     const-string/jumbo v1, "DatabaseUtils"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -534,36 +515,56 @@
     aput-object v0, v3, v4
 
     invoke-static {v1, v2, v3}, Lcom/tencent/kingkong/support/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1153
+    .line 1151
     iget-object v0, p0, Lcom/tencent/kingkong/DatabaseUtils$InsertHelper;->mDb:Lcom/tencent/kingkong/database/SQLiteDatabase;
 
     invoke-virtual {v0}, Lcom/tencent/kingkong/database/SQLiteDatabase;->endTransaction()V
 
-    .line 1151
     const-wide/16 v0, -0x1
+
+    :goto_1
+    return-wide v0
+
+    .line 1146
+    :cond_0
+    :try_start_2
+    invoke-virtual {v2}, Lcom/tencent/kingkong/database/SQLiteStatement;->executeInsert()J
+
+    move-result-wide v0
+
+    .line 1147
+    iget-object v2, p0, Lcom/tencent/kingkong/DatabaseUtils$InsertHelper;->mDb:Lcom/tencent/kingkong/database/SQLiteDatabase;
+
+    invoke-virtual {v2}, Lcom/tencent/kingkong/database/SQLiteDatabase;->setTransactionSuccessful()V
+    :try_end_2
+    .catch Lcom/tencent/kingkong/SQLException; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 1148
+    iget-object v2, p0, Lcom/tencent/kingkong/DatabaseUtils$InsertHelper;->mDb:Lcom/tencent/kingkong/database/SQLiteDatabase;
+
+    invoke-virtual {v2}, Lcom/tencent/kingkong/database/SQLiteDatabase;->endTransaction()V
 
     goto :goto_1
 
-    .line 1152
+    .line 1151
     :catchall_0
     move-exception v0
 
-    .line 1153
     iget-object v1, p0, Lcom/tencent/kingkong/DatabaseUtils$InsertHelper;->mDb:Lcom/tencent/kingkong/database/SQLiteDatabase;
 
     invoke-virtual {v1}, Lcom/tencent/kingkong/database/SQLiteDatabase;->endTransaction()V
 
-    .line 1154
     throw v0
 .end method
 
 
 # virtual methods
 .method public bind(ID)V
-    .locals 1
+    .locals 2
 
     .prologue
     .line 1179
@@ -576,37 +577,37 @@
 .end method
 
 .method public bind(IF)V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 1189
     iget-object v0, p0, Lcom/tencent/kingkong/DatabaseUtils$InsertHelper;->mPreparedStatement:Lcom/tencent/kingkong/database/SQLiteStatement;
 
-    float-to-double v1, p2
+    float-to-double v2, p2
 
-    invoke-virtual {v0, p1, v1, v2}, Lcom/tencent/kingkong/database/SQLiteStatement;->bindDouble(ID)V
+    invoke-virtual {v0, p1, v2, v3}, Lcom/tencent/kingkong/database/SQLiteStatement;->bindDouble(ID)V
 
     .line 1190
     return-void
 .end method
 
 .method public bind(II)V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 1209
     iget-object v0, p0, Lcom/tencent/kingkong/DatabaseUtils$InsertHelper;->mPreparedStatement:Lcom/tencent/kingkong/database/SQLiteStatement;
 
-    int-to-long v1, p2
+    int-to-long v2, p2
 
-    invoke-virtual {v0, p1, v1, v2}, Lcom/tencent/kingkong/database/SQLiteStatement;->bindLong(IJ)V
+    invoke-virtual {v0, p1, v2, v3}, Lcom/tencent/kingkong/database/SQLiteStatement;->bindLong(IJ)V
 
     .line 1210
     return-void
 .end method
 
 .method public bind(IJ)V
-    .locals 1
+    .locals 2
 
     .prologue
     .line 1199
@@ -644,27 +645,25 @@
 .end method
 
 .method public bind(IZ)V
-    .locals 4
+    .locals 3
 
     .prologue
     .line 1219
-    iget-object v1, p0, Lcom/tencent/kingkong/DatabaseUtils$InsertHelper;->mPreparedStatement:Lcom/tencent/kingkong/database/SQLiteStatement;
+    iget-object v2, p0, Lcom/tencent/kingkong/DatabaseUtils$InsertHelper;->mPreparedStatement:Lcom/tencent/kingkong/database/SQLiteStatement;
 
     if-eqz p2, :cond_0
 
-    const/4 v0, 0x1
+    const-wide/16 v0, 0x1
 
     :goto_0
-    int-to-long v2, v0
-
-    invoke-virtual {v1, p1, v2, v3}, Lcom/tencent/kingkong/database/SQLiteStatement;->bindLong(IJ)V
+    invoke-virtual {v2, p1, v0, v1}, Lcom/tencent/kingkong/database/SQLiteStatement;->bindLong(IJ)V
 
     .line 1220
     return-void
 
     .line 1219
     :cond_0
-    const/4 v0, 0x0
+    const-wide/16 v0, 0x0
 
     goto :goto_0
 .end method
@@ -786,7 +785,6 @@
     .line 1297
     iput-object v5, p0, Lcom/tencent/kingkong/DatabaseUtils$InsertHelper;->mPreparedStatement:Lcom/tencent/kingkong/database/SQLiteStatement;
 
-    .line 1294
     :goto_0
     return-wide v0
 
@@ -826,22 +824,18 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1297
+    .line 1294
     iput-object v5, p0, Lcom/tencent/kingkong/DatabaseUtils$InsertHelper;->mPreparedStatement:Lcom/tencent/kingkong/database/SQLiteStatement;
 
-    .line 1294
     const-wide/16 v0, -0x1
 
     goto :goto_0
 
-    .line 1295
     :catchall_0
     move-exception v0
 
-    .line 1297
     iput-object v5, p0, Lcom/tencent/kingkong/DatabaseUtils$InsertHelper;->mPreparedStatement:Lcom/tencent/kingkong/database/SQLiteStatement;
 
-    .line 1298
     throw v0
 .end method
 

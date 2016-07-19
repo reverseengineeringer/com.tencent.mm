@@ -16,6 +16,15 @@
 
 # instance fields
 .field mCursor:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Lcom/tencent/kingkong/AbstractCursor;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -23,19 +32,19 @@
     .locals 1
 
     .prologue
-    .line 432
+    .line 433
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/tencent/kingkong/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 433
+    .line 434
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/tencent/kingkong/AbstractCursor$SelfContentObserver;->mCursor:Ljava/lang/ref/WeakReference;
 
-    .line 434
+    .line 435
     return-void
 .end method
 
@@ -45,7 +54,7 @@
     .locals 1
 
     .prologue
-    .line 438
+    .line 439
     const/4 v0, 0x0
 
     return v0
@@ -55,7 +64,7 @@
     .locals 2
 
     .prologue
-    .line 443
+    .line 444
     iget-object v0, p0, Lcom/tencent/kingkong/AbstractCursor$SelfContentObserver;->mCursor:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -64,15 +73,15 @@
 
     check-cast v0, Lcom/tencent/kingkong/AbstractCursor;
 
-    .line 444
+    .line 445
     if-eqz v0, :cond_0
 
-    .line 445
+    .line 446
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/tencent/kingkong/AbstractCursor;->onChange(Z)V
 
-    .line 447
+    .line 448
     :cond_0
     return-void
 .end method

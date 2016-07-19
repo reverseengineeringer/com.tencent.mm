@@ -1,5 +1,5 @@
-.class Landroid/support/v4/view/o$a;
-.super Landroid/support/v4/view/o$d;
+.class final Landroid/support/v4/view/o$a;
+.super Landroid/support/v4/view/o$c;
 .source "SourceFile"
 
 
@@ -19,8 +19,8 @@
     .locals 0
 
     .prologue
-    .line 48
-    invoke-direct {p0}, Landroid/support/v4/view/o$d;-><init>()V
+    .line 49
+    invoke-direct {p0}, Landroid/support/v4/view/o$c;-><init>()V
 
     return-void
 .end method
@@ -31,11 +31,11 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 52
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setMotionEventSplittingEnabled(Z)V
 
-    .line 52
+    .line 53
     return-void
 .end method

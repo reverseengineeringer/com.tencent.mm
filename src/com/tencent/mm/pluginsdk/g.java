@@ -40,21 +40,19 @@ public abstract interface g
   
   public abstract void a(MMWizardActivity paramMMWizardActivity, Intent paramIntent);
   
-  public abstract void a(boolean paramBoolean1, boolean paramBoolean2, Context paramContext, String paramString, int paramInt1, int paramInt2);
+  public abstract void a(String paramString, Context paramContext);
   
-  public abstract boolean a(Context paramContext, String paramString, Bundle paramBundle);
+  public abstract void a(boolean paramBoolean1, boolean paramBoolean2, Context paramContext, String paramString, int paramInt1, int paramInt2);
   
   public abstract boolean a(Context paramContext, String paramString, Object... paramVarArgs);
   
-  public abstract h aj(Context paramContext);
+  public abstract h af(Context paramContext);
   
-  public abstract Intent ak(Context paramContext);
+  public abstract Intent ag(Context paramContext);
   
-  public abstract void al(Context paramContext);
+  public abstract void ah(Context paramContext);
   
-  public abstract void am(Context paramContext);
-  
-  public abstract void b(Context paramContext, Intent paramIntent);
+  public abstract void ai(Context paramContext);
   
   public abstract void b(Intent paramIntent, Activity paramActivity);
   
@@ -62,7 +60,7 @@ public abstract interface g
   
   public abstract void b(MMWizardActivity paramMMWizardActivity, Intent paramIntent);
   
-  public abstract void b(String paramString, Context paramContext);
+  public abstract boolean b(Context paramContext, String paramString, Bundle paramBundle);
   
   public abstract void c(Context paramContext, Intent paramIntent);
   
@@ -98,11 +96,11 @@ public abstract interface g
   
   public abstract void j(Intent paramIntent, Context paramContext);
   
+  public abstract void jl();
+  
   public abstract void k(Context paramContext, Intent paramIntent);
   
   public abstract void k(Intent paramIntent, Context paramContext);
-  
-  public abstract void kL();
   
   public abstract void l(Context paramContext, Intent paramIntent);
   
@@ -110,9 +108,9 @@ public abstract interface g
   
   public abstract void m(Intent paramIntent, Context paramContext);
   
-  public abstract void n(Context paramContext, String paramString);
-  
   public abstract void n(Intent paramIntent, Context paramContext);
+  
+  public abstract void o(Context paramContext, String paramString);
   
   public abstract void o(Intent paramIntent, Context paramContext);
   

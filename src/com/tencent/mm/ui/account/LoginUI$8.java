@@ -12,7 +12,7 @@ final class LoginUI$8
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    b.kD(ah.tx() + "," + ktY.getClass().getName() + ",R400_100_login," + ah.fd("R400_100_login") + ",2");
+    b.lm(ah.ty() + "," + kTf.getClass().getName() + ",R400_100_login," + ah.fq("R400_100_login") + ",2");
   }
 }
 

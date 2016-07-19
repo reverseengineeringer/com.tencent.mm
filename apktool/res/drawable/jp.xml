@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="500" android:drawable="@raw/multitalk_loading0" />
+    <item android:duration="200" android:drawable="@raw/multitalk_loading1" />
+    <item android:duration="200" android:drawable="@raw/multitalk_loading2" />
+    <item android:duration="200" android:drawable="@raw/multitalk_loading3" />
+    <item android:duration="200" android:drawable="@raw/multitalk_loading4" />
+</animation-list>

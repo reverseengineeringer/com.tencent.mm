@@ -3,7 +3,7 @@ package com.tencent.mm.app.plugin;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.pluginsdk.l;
 import com.tencent.mm.pluginsdk.ui.applet.g;
 import com.tencent.mm.pluginsdk.ui.d.b;
@@ -24,7 +24,7 @@ class URISpanHandlerSet$FriendSearchUriSpanHandler
       if (paramb != null) {
         paramb.a(paramg);
       }
-      c.u(URISpanHandlerSet.a(ang), "subapp", ".ui.pluginapp.ContactSearchUI");
+      c.v(URISpanHandlerSet.a(ZU), "subapp", ".ui.pluginapp.ContactSearchUI");
       return true;
     }
     return false;
@@ -35,16 +35,16 @@ class URISpanHandlerSet$FriendSearchUriSpanHandler
     if (paramString.equals("weixin://findfriend/search"))
     {
       paramString = new Intent();
-      if ((URISpanHandlerSet.a(ang) instanceof Service)) {
+      if ((URISpanHandlerSet.a(ZU) instanceof Service)) {
         paramString.addFlags(268435456);
       }
-      c.c(URISpanHandlerSet.a(ang), "subapp", ".ui.pluginapp.ContactSearchUI", paramString);
+      c.c(URISpanHandlerSet.a(ZU), "subapp", ".ui.pluginapp.ContactSearchUI", paramString);
       return true;
     }
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     if (paramString.trim().startsWith("weixin://findfriend/search")) {
       return new g(paramString, 17, null);
@@ -52,7 +52,7 @@ class URISpanHandlerSet$FriendSearchUriSpanHandler
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 17 };
   }

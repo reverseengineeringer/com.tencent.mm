@@ -10,48 +10,48 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class b
 {
   public static Dialog d(Context paramContext, final View paramView)
   {
-    View localView = LayoutInflater.from(paramContext).inflate(2131362904, null);
+    View localView = LayoutInflater.from(paramContext).inflate(2130903852, null);
     Object localObject;
-    if (t.aUy()) {
+    if (u.aZC()) {
       localObject = "font_1.otf";
     }
     for (;;)
     {
-      TextView localTextView = (TextView)localView.findViewById(2131168736);
-      if (!ay.kz((String)localObject)) {
+      TextView localTextView = (TextView)localView.findViewById(2131757564);
+      if (!be.kf((String)localObject)) {
         localTextView.setTypeface(Typeface.createFromAsset(paramContext.getAssets(), (String)localObject));
       }
-      if (!t.aUx()) {
+      if (!u.aZB()) {
         localTextView.setTextSize(1, 10.0F);
       }
-      localObject = new Dialog(paramContext, 2131100061);
+      localObject = new Dialog(paramContext, 2131493483);
       ((Dialog)localObject).setContentView(localView);
       ((Dialog)localObject).setTitle(null);
       ((Dialog)localObject).setOnCancelListener(new DialogInterface.OnCancelListener()
       {
         public final void onCancel(DialogInterface paramAnonymousDialogInterface)
         {
-          u.i("!44@/B4Tb64lLpLSajhxpVlTMGlBinPXjNgyDjQxfdmLgIY=", "showTipsDialog onCancel");
-          if ((gJF != null) && (gJF.isShowing())) {
-            gJF.dismiss();
+          v.i("MicroMsg.SnsLuckyCommentAlertUI", "showTipsDialog onCancel");
+          if ((gRg != null) && (gRg.isShowing())) {
+            gRg.dismiss();
           }
         }
       });
-      ((TextView)localView.findViewById(2131168738)).setOnClickListener(new View.OnClickListener()
+      ((TextView)localView.findViewById(2131757566)).setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
-          u.i("!44@/B4Tb64lLpLSajhxpVlTMGlBinPXjNgyDjQxfdmLgIY=", "showTipsDialog onClick");
-          if ((gJF != null) && (gJF.isShowing())) {
-            gJF.dismiss();
+          v.i("MicroMsg.SnsLuckyCommentAlertUI", "showTipsDialog onClick");
+          if ((gRg != null) && (gRg.isShowing())) {
+            gRg.dismiss();
           }
           paramAnonymousView = paramView;
           if (paramAnonymousView != null) {
@@ -59,22 +59,22 @@ public final class b
           }
         }
       });
-      paramView = localView.findViewById(2131168734);
+      paramView = localView.findViewById(2131757562);
       int i = BackwardSupportUtil.b.a(paramContext, 10.0F);
-      ay.c(paramView, i, i, i, i);
+      be.c(paramView, i, i, i, i);
       paramView.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
-          u.i("!44@/B4Tb64lLpLSajhxpVlTMGlBinPXjNgyDjQxfdmLgIY=", "showTipsDialog OnClick: close");
-          if ((gJF != null) && (gJF.isShowing())) {
-            gJF.dismiss();
+          v.i("MicroMsg.SnsLuckyCommentAlertUI", "showTipsDialog OnClick: close");
+          if ((gRg != null) && (gRg.isShowing())) {
+            gRg.dismiss();
           }
         }
       });
       ((Dialog)localObject).show();
       return (Dialog)localObject;
-      if (t.aUz()) {
+      if (u.aZD()) {
         localObject = "font_2.otf";
       } else {
         localObject = null;

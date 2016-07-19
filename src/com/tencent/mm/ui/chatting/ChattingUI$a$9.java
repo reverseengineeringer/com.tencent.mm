@@ -2,6 +2,7 @@ package com.tencent.mm.ui.chatting;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import com.tencent.mm.ui.base.h;
 
 final class ChattingUI$a$9
   implements DialogInterface.OnClickListener
@@ -10,8 +11,8 @@ final class ChattingUI$a$9
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (paramDialogInterface != null) {
-      paramDialogInterface.dismiss();
+    if (ChattingUI.a.av(lAY) != null) {
+      ChattingUI.a.av(lAY).dismiss();
     }
   }
 }

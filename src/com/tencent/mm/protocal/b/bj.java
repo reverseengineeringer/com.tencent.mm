@@ -1,85 +1,59 @@
 package com.tencent.mm.protocal.b;
 
-import java.util.LinkedList;
-
 public final class bj
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public int iYp;
-  public int iYq;
-  public int iYx;
-  public bk iYy;
+  public com.tencent.mm.ax.b jvT;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.ci(1, iYp);
-      paramVarArgs.ci(2, iYq);
-      paramVarArgs.ci(3, iYx);
-      if (iYy != null)
-      {
-        paramVarArgs.cj(4, iYy.kn());
-        iYy.a(paramVarArgs);
+      if (jvT == null) {
+        throw new a.a.a.b("Not all required fields were included: Cookies");
       }
-      paramInt = 0;
+      if (jvT != null) {
+        paramVarArgs.b(1, jvT);
+      }
+      return 0;
     }
-    int i;
-    do
+    if (paramInt == 1) {
+      if (jvT == null) {
+        break label207;
+      }
+    }
+    label207:
+    for (paramInt = a.a.a.a.a(1, jvT) + 0;; paramInt = 0)
     {
       return paramInt;
-      if (paramInt != 1) {
-        break;
-      }
-      i = a.a.a.a.cg(1, iYp) + 0 + a.a.a.a.cg(2, iYq) + a.a.a.a.cg(3, iYx);
-      paramInt = i;
-    } while (iYy == null);
-    return i + a.a.a.a.ch(4, iYy.kn());
-    if (paramInt == 2)
-    {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.bog();
+      if (paramInt == 2)
+      {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bve();
+          }
         }
+        if (jvT != null) {
+          break;
+        }
+        throw new a.a.a.b("Not all required fields were included: Cookies");
       }
-      return 0;
-    }
-    if (paramInt == 3)
-    {
-      Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
-      bj localbj = (bj)paramVarArgs[1];
-      paramInt = ((Integer)paramVarArgs[2]).intValue();
-      switch (paramInt)
+      if (paramInt == 3)
       {
-      default: 
-        return -1;
-      case 1: 
-        iYp = maU.jC();
-        return 0;
-      case 2: 
-        iYq = maU.jC();
-        return 0;
-      case 3: 
-        iYx = maU.jC();
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        bj localbj = (bj)paramVarArgs[1];
+        switch (((Integer)paramVarArgs[2]).intValue())
+        {
+        default: 
+          return -1;
+        }
+        jvT = locala.bvd();
         return 0;
       }
-      paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-      i = paramVarArgs.size();
-      paramInt = 0;
-      while (paramInt < i)
-      {
-        Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-        localObject1 = new bk();
-        localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-        for (boolean bool = true; bool; bool = ((bk)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
-        iYy = ((bk)localObject1);
-        paramInt += 1;
-      }
-      return 0;
+      return -1;
     }
-    return -1;
   }
 }
 

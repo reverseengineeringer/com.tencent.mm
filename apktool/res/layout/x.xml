@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.internal.widget.ActionBarContainer android:id="@id/ep" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/MMActionBar.Solid.Custom"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.internal.widget.ActionBarView android:id="@id/eq" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/MMActionBar.Solid.Custom" />
+    <android.support.v7.internal.widget.ActionBarContextView android:id="@id/er" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionModeStyle" />
+</android.support.v7.internal.widget.ActionBarContainer>

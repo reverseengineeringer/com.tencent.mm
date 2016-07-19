@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto"
+  xmlns:android1="http://schemas.android.com/apk/res/android">
+    <NormalIconPreference android:title="@string/aqs" android:icon="@raw/addfriend_icon_linkedin" android:key="find_friends_by_linkedin" />
+    <NormalIconPreference android:title="@string/aqt" android:icon="@raw/find_more_friend_mobile_icon" android:key="find_friends_by_mobile" />
+    <NormalIconPreference android:title="@string/aqp" android:icon="@drawable/z1" android:key="find_friends_by_google_account" />
+    <PreferenceCategory />
+</PreferenceScreen>

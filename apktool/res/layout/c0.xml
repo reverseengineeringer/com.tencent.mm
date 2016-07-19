@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:scrollbars="none" style="@style/MMScroll">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" style="@style/MMBody">
+            <ImageView android:id="@id/ma" android:layout_width="96.0dip" android:layout_height="96.0dip" android:layout_marginBottom="20.0dip" android:src="@drawable/ug" />
+            <TextView android:textColor="#ff000000" android:gravity="center" android:id="@id/mb" android:layout_marginBottom="10.0dip" android:text="@string/of" style="@style/MMTitle" />
+            <TextView android:gravity="center" android:id="@id/mc" android:layout_marginBottom="20.0dip" android:text="@string/oe" style="@style/MMBriefText" />
+            <Button android:textSize="20.0dip" android:id="@id/md" android:text="@string/oi" style="@style/MMSolidGreenLargeButton" />
+            <RelativeLayout android:id="@id/me" android:background="@drawable/aj" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:minHeight="42.0dip">
+                <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/ce1" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/MMBriefText" />
+                <ImageView android:layout_gravity="center|right" android:id="@id/mf" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2.0dip" android:src="@raw/big_selecter_selected_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/mg" android:background="@drawable/ak" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="42.0dip">
+                <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/a8t" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/MMBriefText" />
+                <ImageView android:layout_gravity="center|right" android:id="@id/mh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2.0dip" android:src="@raw/big_selecter_selected_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

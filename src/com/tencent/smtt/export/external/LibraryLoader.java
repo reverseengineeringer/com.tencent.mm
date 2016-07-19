@@ -1,6 +1,7 @@
 package com.tencent.smtt.export.external;
 
 import android.content.Context;
+import android.content.pm.ApplicationInfo;
 import android.os.Build.VERSION;
 import java.io.File;
 import java.util.ArrayList;
@@ -28,19 +29,14 @@ public class LibraryLoader
   
   public static String getNativeLibraryDir(Context paramContext)
   {
-    int i = getSdkVersion();
+    int i = Build.VERSION.SDK_INT;
     if (i >= 9) {
-      return X5Adapter_23.getNativeLibraryDirGB(paramContext);
+      return getApplicationInfonativeLibraryDir;
     }
     if (i >= 4) {
-      return X5Adapter_16.getNativeLibraryDirDonut(paramContext);
+      return getApplicationInfodataDir + "/lib";
     }
     return "/data/data/" + paramContext.getPackageName() + "/lib";
-  }
-  
-  public static int getSdkVersion()
-  {
-    return Integer.parseInt(Build.VERSION.SDK);
   }
   
   public static void loadLibrary(Context paramContext, String paramString)

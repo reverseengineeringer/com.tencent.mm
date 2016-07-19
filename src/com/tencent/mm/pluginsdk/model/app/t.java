@@ -3,13 +3,13 @@ package com.tencent.mm.pluginsdk.model.app;
 final class t
 {
   public String appId;
-  public int cbf;
+  public int bUR;
   public byte[] data;
   
   public t(String paramString, int paramInt, byte[] paramArrayOfByte)
   {
     appId = paramString;
-    cbf = paramInt;
+    bUR = paramInt;
     data = paramArrayOfByte;
   }
 }

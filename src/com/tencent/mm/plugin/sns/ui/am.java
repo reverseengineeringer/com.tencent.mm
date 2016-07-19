@@ -1,358 +1,326 @@
 package com.tencent.mm.plugin.sns.ui;
 
 import android.content.Context;
-import android.database.Cursor;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ListView;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.ai;
-import com.tencent.mm.plugin.sns.d.al.a;
-import com.tencent.mm.plugin.sns.h.a;
-import com.tencent.mm.plugin.sns.h.c;
-import com.tencent.mm.plugin.sns.h.j;
-import com.tencent.mm.plugin.sns.h.k;
-import com.tencent.mm.plugin.sns.h.l;
-import com.tencent.mm.plugin.sns.ui.c.b;
-import com.tencent.mm.protocal.b.apz;
-import com.tencent.mm.protocal.b.aqi;
-import com.tencent.mm.protocal.b.atp;
-import com.tencent.mm.protocal.b.iv;
-import com.tencent.mm.protocal.b.nd;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ah;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
-import com.tencent.mm.ui.MMActivity;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
+import android.widget.FrameLayout.LayoutParams;
+import android.widget.LinearLayout;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.g;
+import com.tencent.mm.protocal.b.adw;
+import com.tencent.mm.protocal.b.ady;
+import com.tencent.mm.protocal.b.auf;
+import com.tencent.mm.protocal.b.je;
+import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.z;
+import com.tencent.mm.ui.widget.QFadeImageView;
+import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.Map.Entry;
-import java.util.Set;
+import java.util.List;
 
 public final class am
-  extends com.tencent.mm.ui.i
-  implements r
 {
-  private static HashMap hjz = new HashMap();
-  an gPl;
-  private f gPm;
-  boolean hjv;
-  private boolean hjw = false;
-  Runnable hjx = new Runnable()
-  {
-    public final void run()
-    {
-      uF("");
-    }
-  };
-  private int hjy = (int)(System.currentTimeMillis() / 1000L);
+  public static int[] huW = { 0, 0, 1, 3, 6, 9 };
+  public static int[] huX = { 2131759151 };
+  public static int[] huY = { 2131759151, 2131759263, 2131759264 };
+  public static int[] huZ = { 2131759151, 2131759263, 2131759264, 2131759265, 2131759266, 2131759267 };
+  public static int[] hva = { 2131759151, 2131759263, 2131759264, 2131759265, 2131759266, 2131759267, 2131759268, 2131759269, 2131759270 };
+  static double hvb = -1.0D;
+  static double hvc = -1.0D;
+  static double hvd = -1.0D;
+  static double hve = -1.0D;
+  static double hvf = -1.0D;
+  private Context context;
+  private LinkedList<LinearLayout> hvg = new LinkedList();
   
-  public am(MMActivity paramMMActivity, ListView paramListView, b paramb, f paramf)
+  public am(Context paramContext)
   {
-    super(paramMMActivity, new k());
-    u.d("!44@/B4Tb64lLpIApwzsVfw/Gb/HGfypX9vzY7E7Bw0cZrs=", "SnsTimeLineAdapter 2");
-    gPm = paramf;
-    gPl = new an(paramMMActivity, paramListView, paramb, paramf, 10, this);
-    gPl.hbM = true;
-    gPl.Ou();
+    context = paramContext;
   }
   
-  public static void aCv()
+  public am(Context paramContext, byte paramByte)
   {
-    Iterator localIterator = hjz.entrySet().iterator();
-    while (localIterator.hasNext())
-    {
-      a locala = (a)((Map.Entry)localIterator.next()).getValue();
-      networkType = com.tencent.mm.plugin.sns.data.h.axC();
-      u.d("!44@/B4Tb64lLpIApwzsVfw/Gb/HGfypX9vzY7E7Bw0cZrs=", "report big pic click, picNum:%d, clickPicNum:%d, firstClickPos:%d, networkType:%d, id:%s", new Object[] { Integer.valueOf(gPV), Integer.valueOf(hjB.size()), Integer.valueOf(hjC), Integer.valueOf(networkType), id });
-      com.tencent.mm.plugin.report.service.h.fUJ.g(11599, new Object[] { Integer.valueOf(gPV), Integer.valueOf(hjB.size()), Integer.valueOf(hjC), Integer.valueOf(networkType), Integer.valueOf(0), id });
-    }
-    hjz.clear();
+    context = paramContext;
   }
   
-  public static void b(k paramk, int paramInt)
+  private static void a(adw paramadw, QFadeImageView paramQFadeImageView, int paramInt, z paramz)
   {
-    if (paramk != null)
+    ad.aBG().b(paramadw, paramQFadeImageView, paramInt, paramz);
+  }
+  
+  private static void a(adw paramadw, QFadeImageView paramQFadeImageView, String paramString, int paramInt1, int paramInt2, boolean paramBoolean1, z paramz, int paramInt3, boolean paramBoolean2)
+  {
+    if (paramQFadeImageView == null)
     {
-      long l = field_snsId;
-      if (hjz.containsKey(Long.valueOf(l)))
+      v.e("MicroMsg.SnsMultiLineImageLineMgr", "");
+      return;
+    }
+    ak localak = new ak();
+    ajJ = paramString;
+    index = 0;
+    paramString = new ArrayList();
+    paramString.add(paramQFadeImageView);
+    hta = paramString;
+    hqC = paramBoolean1;
+    position = paramInt2;
+    paramQFadeImageView.setTag(localak);
+    double d2 = 0.0D;
+    double d1 = 0.0D;
+    label104:
+    double d4;
+    if ((paramInt3 == 11) && (paramBoolean2))
+    {
+      ad.aBG().d(paramadw, paramQFadeImageView, paramInt1, paramz);
+      if (jYj != null)
       {
-        paramk = (a)hjz.get(Long.valueOf(l));
-        if (hjC == 0) {
-          hjC = (paramInt + 1);
-        }
-        if (hjB == null) {
-          hjB = new HashSet();
-        }
-        hjB.add(Integer.valueOf(paramInt + 1));
+        d2 = jYj.jYL;
+        d1 = jYj.jYM;
+      }
+      if ((d2 <= 0.0D) || (d1 <= 0.0D)) {
+        break label394;
+      }
+      d4 = Math.min(hvc / d2, hvc / d1);
+      double d3 = d2 * d4;
+      d4 = d1 * d4;
+      d1 = d4;
+      d2 = d3;
+      if (d3 < hvd)
+      {
+        d1 = 1.0D * hvd / d3;
+        d2 = d3 * d1;
+        d1 = d4 * d1;
+      }
+      d3 = d1;
+      d4 = d2;
+      if (d1 < hvd)
+      {
+        d3 = 1.0D * hvd / d1;
+        d4 = d2 * d3;
+        d3 = d1 * d3;
+      }
+      d2 = d4;
+      if (d4 > hvc) {
+        d2 = hvc;
+      }
+      d1 = d3;
+      d4 = d2;
+      if (d3 > hvc)
+      {
+        d1 = hvc;
+        d4 = d2;
+      }
+      label302:
+      if (d4 >= 1.0D) {
+        break label410;
       }
     }
+    label394:
+    label408:
+    label410:
+    for (d2 = 1.0D;; d2 = d4)
+    {
+      if (d1 < 1.0D) {
+        d1 = 1.0D;
+      }
+      for (;;)
+      {
+        if (!(paramQFadeImageView.getLayoutParams() instanceof FrameLayout.LayoutParams)) {
+          break label408;
+        }
+        paramadw = (FrameLayout.LayoutParams)paramQFadeImageView.getLayoutParams();
+        if ((width == d2) && (height == d1)) {
+          break;
+        }
+        paramQFadeImageView.setLayoutParams(new FrameLayout.LayoutParams((int)d2, (int)d1));
+        return;
+        ad.aBG().c(paramadw, paramQFadeImageView, paramInt1, paramz);
+        break label104;
+        d4 = hvb;
+        d1 = hvb;
+        break label302;
+      }
+      break;
+    }
   }
   
-  public static void z(k paramk)
+  public final void a(PhotosContent paramPhotosContent, auf paramauf, String paramString, int paramInt1, int paramInt2, int paramInt3, boolean paramBoolean, z paramz)
   {
-    int i = 1;
-    long l;
-    a locala;
-    Context localContext;
-    if (paramk != null)
+    Object localObject1 = hva;
+    if ((paramInt2 == 2) || (paramInt2 == 11)) {
+      localObject1 = huX;
+    }
+    int i;
+    for (;;)
     {
-      l = field_snsId;
-      if (!hjz.containsKey(Long.valueOf(l)))
+      paramauf = kli.jFv;
+      if (hvb < 0.0D)
       {
-        locala = new a();
-        if ((paramk.azR() != null) && (azRjMx != null) && (azRjMx.jhv == 1) && (azRjMx.jhw != null) && (azRjMx.jhw.size() > 0))
-        {
-          gPV = azRjMx.jhw.size();
-          hjB = new HashSet();
-          localContext = y.getContext();
-          if (!ah.dx(localContext)) {
-            break label168;
-          }
-        }
+        hvb = BackwardSupportUtil.b.a(context, 160.0F);
+        hvc = BackwardSupportUtil.b.a(context, 200.0F);
+        hvd = BackwardSupportUtil.b.a(context, 44.0F);
+        hve = BackwardSupportUtil.b.a(context, 66.0F);
+        hvf = BackwardSupportUtil.b.a(context, 300.0F);
       }
+      i = paramauf.size();
+      if (i != 0) {
+        break label209;
+      }
+      paramInt1 = 0;
+      while (paramInt1 < localObject1.length)
+      {
+        ad.aBG().V(paramPhotosContent.nl(paramInt1));
+        nlposition = paramInt3;
+        paramInt1 += 1;
+      }
+      if (paramInt2 == 3) {
+        localObject1 = huY;
+      } else if (paramInt2 == 4) {
+        localObject1 = huZ;
+      } else if (paramInt2 == 5) {
+        localObject1 = hva;
+      }
+    }
+    paramPhotosContent.setVisibility(8);
+    return;
+    label209:
+    paramPhotosContent.setVisibility(0);
+    if (i == 1)
+    {
+      i = 1;
+      while (i < localObject1.length)
+      {
+        localObject2 = paramPhotosContent.nl(i);
+        ((QFadeImageView)localObject2).setVisibility(8);
+        ad.aBG().V((View)localObject2);
+        nlposition = paramInt3;
+        i += 1;
+      }
+      paramPhotosContent.nl(0).setVisibility(0);
+      a((adw)paramauf.get(0), paramPhotosContent.nl(0), paramString, paramInt1, paramInt3, paramBoolean, paramz, paramInt2, false);
+      return;
+    }
+    label339:
+    ak localak;
+    if (i == 4)
+    {
+      localObject2 = new ArrayList();
+      paramInt2 = localObject1.length - 1;
+      i = 3;
+      if (paramInt2 >= 0)
+      {
+        localObject1 = paramPhotosContent.nl(paramInt2);
+        position = paramInt3;
+        if ((paramInt2 != 0) && (paramInt2 != 1) && (paramInt2 != 3) && (paramInt2 != 4)) {
+          break label486;
+        }
+        ((TagImageView)localObject1).setVisibility(0);
+        ((List)localObject2).add(localObject1);
+        localak = new ak();
+        ajJ = paramString;
+        index = i;
+        hta = ((List)localObject2);
+        hqC = paramBoolean;
+        position = paramInt3;
+        ((TagImageView)localObject1).setTag(localak);
+        a((adw)paramauf.get(index), (QFadeImageView)localObject1, paramInt1, paramz);
+        i -= 1;
+      }
+      for (;;)
+      {
+        paramInt2 -= 1;
+        break label339;
+        break;
+        label486:
+        ((TagImageView)localObject1).setVisibility(8);
+        ad.aBG().V((View)localObject1);
+      }
+    }
+    Object localObject2 = new ArrayList();
+    paramInt2 = localObject1.length - 1;
+    label520:
+    if (paramInt2 >= 0)
+    {
+      localObject1 = paramPhotosContent.nl(paramInt2);
+      position = paramInt3;
+      if (paramInt2 >= paramauf.size()) {
+        break label649;
+      }
+      ((TagImageView)localObject1).setVisibility(0);
+      ((List)localObject2).add(localObject1);
+      localak = new ak();
+      ajJ = paramString;
+      index = paramInt2;
+      hta = ((List)localObject2);
+      hqC = paramBoolean;
+      position = paramInt3;
+      ((TagImageView)localObject1).setTag(localak);
+      a((adw)paramauf.get(index), (QFadeImageView)localObject1, paramInt1, paramz);
     }
     for (;;)
     {
-      networkType = i;
-      id = azRiXW;
-      hjz.put(Long.valueOf(l), locala);
-      return;
-      label168:
-      if (ah.dA(localContext)) {
-        i = 2;
-      } else if (ah.dy(localContext)) {
-        i = 3;
-      } else if (ah.dB(localContext)) {
-        i = 4;
-      } else {
-        i = 0;
-      }
+      paramInt2 -= 1;
+      break label520;
+      break;
+      label649:
+      ((TagImageView)localObject1).setVisibility(8);
+      ad.aBG().V((View)localObject1);
     }
   }
   
-  public final void Gk()
+  public final void a(PhotosContent paramPhotosContent, auf paramauf, String paramString, int paramInt1, int paramInt2, int paramInt3, boolean paramBoolean1, z paramz, boolean paramBoolean2)
   {
-    Object localObject3 = ad.azi();
-    Object localObject4 = gPl.dLx;
-    Object localObject2 = l.aAz();
-    Object localObject1 = localObject2;
-    if (l.vv((String)localObject4)) {
-      localObject1 = (String)localObject2 + " AND " + ((l)localObject3).vw((String)localObject4);
+    int[] arrayOfInt = hva;
+    if ((paramInt2 == 2) || (paramInt2 == 11)) {
+      arrayOfInt = huX;
     }
-    localObject1 = (String)localObject1 + " AND  (snsId != 0 ) ";
-    localObject1 = (String)localObject1 + l.gUT + " limit 1";
-    localObject2 = aoX.rawQuery((String)localObject1, null);
-    if (((Cursor)localObject2).moveToFirst())
+    for (;;)
     {
-      localObject3 = new k();
-      ((k)localObject3).c((Cursor)localObject2);
-    }
-    for (int i = field_createTime;; i = 0)
-    {
-      ((Cursor)localObject2).close();
-      u.i("!32@/B4Tb64lLpKmGiGWu3jIxXgEPk59yfR9", "getLastTime " + (String)localObject1 + " createtime " + i);
-      u.i("!44@/B4Tb64lLpIApwzsVfw/Gb/HGfypX9vzY7E7Bw0cZrs=", "create time sql " + hjy + " to " + i);
-      int j;
-      if (hjy != i)
+      paramauf = kli.jFv;
+      if (hvb < 0.0D)
       {
-        localObject1 = ad.azj();
-        j = hjy;
-        localObject2 = "select *,rowid from AdSnsInfo  where createTime > " + i + " and createTime <= " + j;
-        localObject2 = (String)localObject2 + " order by  createTime desc";
-        u.d("!44@/B4Tb64lLpLTyHCf3h2tzz+G9YLNrMars6LI+d9+swU=", "getAdInTime " + (String)localObject2);
-        localObject1 = aoX.rawQuery((String)localObject2, null);
-        if ((localObject1 == null) || (!((Cursor)localObject1).moveToFirst())) {}
+        hvb = BackwardSupportUtil.b.a(context, 160.0F);
+        hvc = BackwardSupportUtil.b.a(context, 200.0F);
+        hvd = BackwardSupportUtil.b.a(context, 44.0F);
+        hve = BackwardSupportUtil.b.a(context, 66.0F);
+        hvf = BackwardSupportUtil.b.a(context, 300.0F);
       }
-      label718:
-      label1218:
-      label1235:
-      for (;;)
+      i = paramauf.size();
+      if (i != 0) {
+        break label209;
+      }
+      paramInt1 = 0;
+      while (paramInt1 < arrayOfInt.length)
       {
-        localObject2 = new c();
-        ((c)localObject2).c((Cursor)localObject1);
-        localObject3 = ((c)localObject2).azS();
-        localObject4 = new StringBuilder("ad xml ");
-        Object localObject5 = ((k)localObject3).aAw();
-        StringBuffer localStringBuffer = new StringBuffer();
-        localStringBuffer.append(field_stringSeq);
-        localStringBuffer.append(field_adxml);
-        localStringBuffer.append(" <createtime " + field_createTime + ">");
-        localStringBuffer.append(" <exposuretime " + field_exposureTime + ">");
-        localStringBuffer.append(" <adcreatetime " + field_createAdTime + "> ");
-        localStringBuffer.append(azRjMu);
-        u.d("!44@/B4Tb64lLpIApwzsVfw/Gb/HGfypX9vzY7E7Bw0cZrs=", localStringBuffer.toString());
-        localObject4 = ((k)localObject3).aAr();
-        j = field_createTime;
-        boolean bool = ((k)localObject3).aAh();
-        long l1;
-        int k;
-        if (bool)
-        {
-          l1 = gUd;
-          j = field_exposureTime;
-          l1 *= 60L;
-          long l2 = ay.am(j);
-          if (l2 < l1) {
-            break label1218;
-          }
-          localObject4 = ai.l((k)localObject3);
-          if (field_likeFlag == 0)
-          {
-            localObject4 = jJX.iterator();
-            do
-            {
-              if (!((Iterator)localObject4).hasNext()) {
-                break;
-              }
-              localObject5 = (apz)((Iterator)localObject4).next();
-            } while ((localObject5 == null) || (ay.kz(iYA)) || (gPl == null) || (!iYA.equals(gPl.eNy)));
-          }
-          k = 1;
-          if (k != 0) {
-            break label1218;
-          }
-          ad.azj().delete(field_snsId);
-          u.i("!44@/B4Tb64lLpIApwzsVfw/Gb/HGfypX9vzY7E7Bw0cZrs=", "~~addelete the item " + field_snsId + " exposureTime: " + l1 + " field_createTime: " + field_createTime + " checktime: " + l2 + " gettime: " + j + " isexposure " + bool + " exposureTime " + field_exposureTime + " adCreateTIme:" + field_createAdTime);
-        }
-        for (;;)
-        {
-          if (((Cursor)localObject1).moveToNext()) {
-            break label1235;
-          }
-          u.d("!44@/B4Tb64lLpIApwzsVfw/Gb/HGfypX9vzY7E7Bw0cZrs=", "test for adcount " + ((Cursor)localObject1).getCount());
-          if (localObject1 != null) {
-            ((Cursor)localObject1).close();
-          }
-          hjy = i;
-          localObject3 = ad.azi();
-          localObject4 = gPl.dLx;
-          localObject1 = l.gUR + " from SnsInfo where ";
-          localObject2 = (String)localObject1 + l.bpk();
-          localObject1 = localObject2;
-          if (l.vv((String)localObject4)) {
-            localObject1 = (String)localObject2 + " AND " + ((l)localObject3).vw((String)localObject4);
-          }
-          localObject1 = (String)localObject1 + " AND createTime >= " + i;
-          localObject1 = (String)localObject1 + " UNION ";
-          localObject1 = (String)localObject1 + l.gUR + " from AdSnsInfo where createTime" + " > " + i;
-          localObject1 = (String)localObject1 + l.gUS;
-          u.d("!32@/B4Tb64lLpKmGiGWu3jIxXgEPk59yfR9", "getAdCursorForTimeLine " + (String)localObject1 + " limtiSeq: " + (String)localObject4);
-          setCursor(aoX.rawQuery((String)localObject1, null));
-          notifyDataSetChanged();
-          if (gPm != null) {
-            gPm.aAR();
-          }
-          return;
-          l1 = gUc;
-          j = field_createAdTime;
-          l1 *= 60L;
-          break;
-          k = 0;
-          break label718;
-          if (gPl != null) {
-            f.cD(field_snsId);
-          }
-        }
+        ad.aBG().V(paramPhotosContent.nl(paramInt1));
+        nlposition = paramInt3;
+        paramInt1 += 1;
+      }
+      if (paramInt2 == 3) {
+        arrayOfInt = huY;
+      } else if (paramInt2 == 4) {
+        arrayOfInt = huZ;
+      } else if (paramInt2 == 5) {
+        arrayOfInt = hva;
       }
     }
-  }
-  
-  protected final void Gl()
-  {
-    adW();
-    Gk();
-  }
-  
-  public final void a(String paramString, com.tencent.mm.sdk.h.i parami)
-  {
-    if (!hjv)
-    {
-      ab.t(hjx);
-      ab.e(hjx, 50L);
-      u.i("!44@/B4Tb64lLpIApwzsVfw/Gb/HGfypX9vzY7E7Bw0cZrs=", "UI hasnot show so delay to ui has show ");
-      return;
-    }
-    super.a(paramString, parami);
-  }
-  
-  public final String f(long paramLong, String paramString)
-  {
-    u.d("!44@/B4Tb64lLpIApwzsVfw/Gb/HGfypX9vzY7E7Bw0cZrs=", "updateLitmitSeq " + ad.ayZ().azA());
-    Object localObject = ad.azi();
-    int i;
-    String str;
-    if (paramString.equals(""))
-    {
-      i = ad.ayZ().azA() / 2;
-      localObject = com.tencent.mm.plugin.sns.data.h.bY(((l)localObject).c(paramLong, i, false));
-      str = gPl.haE;
-      if (!str.equals("")) {
-        break label126;
-      }
-      paramString = (String)localObject;
-      label89:
-      localObject = ad.azk().vr("@__weixintimtline").aAb();
-      if (jkO != 0L) {
-        break label145;
-      }
-    }
-    label126:
-    label145:
+    paramPhotosContent.setVisibility(8);
+    label209:
     do
     {
-      return paramString;
-      i = ad.ayZ().azA();
-      break;
-      paramString = (String)localObject;
-      if (((String)localObject).compareTo(str) < 0) {
-        break label89;
-      }
-      paramString = str;
-      break label89;
-      localObject = com.tencent.mm.plugin.sns.data.h.bY(jkO);
-      if (paramString.equals("")) {
-        return (String)localObject;
-      }
-    } while (((String)localObject).compareTo(paramString) <= 0);
-    return (String)localObject;
-  }
-  
-  public final int getItemViewType(int paramInt)
-  {
-    return gPl.getItemViewType(paramInt);
-  }
-  
-  public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
-  {
-    return gPl.f(paramInt, paramView);
-  }
-  
-  public final int getViewTypeCount()
-  {
-    return 12;
-  }
-  
-  public final void uF(String paramString)
-  {
-    super.a(paramString, null);
-  }
-  
-  public final void vW(String paramString)
-  {
-    gPl.haE = paramString;
-  }
-  
-  static final class a
-  {
-    int gPV;
-    HashSet hjB;
-    int hjC;
-    String id;
-    int networkType;
+      return;
+      paramPhotosContent.setVisibility(0);
+    } while (i != 1);
+    int i = 1;
+    while (i < arrayOfInt.length)
+    {
+      TagImageView localTagImageView = paramPhotosContent.nl(i);
+      localTagImageView.setVisibility(8);
+      ad.aBG().V(localTagImageView);
+      nlposition = paramInt3;
+      i += 1;
+    }
+    paramPhotosContent.nl(0).setVisibility(0);
+    a((adw)paramauf.get(0), paramPhotosContent.nl(0), paramString, paramInt1, paramInt3, paramBoolean1, paramz, paramInt2, paramBoolean2);
   }
 }
 

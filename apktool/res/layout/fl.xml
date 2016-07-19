@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/lg" android:paddingTop="@dimen/j8" android:paddingBottom="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hb" android:layout_marginRight="@dimen/hb" android:minHeight="50.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/i8" android:textColor="@color/ak" android:id="@id/dq" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/fn" />
+        <TextView android:textSize="@dimen/jc" android:textColor="@color/g7" android:id="@id/zr" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/fn" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/zs" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginRight="@dimen/j8">
+        <ImageView android:id="@id/zi" android:background="@color/h9" android:layout_width="50.0dip" android:layout_height="50.0dip" android:scaleType="centerCrop" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/zt" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@style/smallCustomProgressBar" />
+        <View android:gravity="center_vertical" android:id="@id/zu" android:background="@raw/msg_state_fail_resend" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

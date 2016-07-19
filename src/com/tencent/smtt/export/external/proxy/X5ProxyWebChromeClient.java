@@ -8,7 +8,7 @@ public abstract class X5ProxyWebChromeClient
 {
   public X5ProxyWebChromeClient(WebViewWizardBase paramWebViewWizardBase)
   {
-    mWebChromeClient = ((IX5WebChromeClient)paramWebViewWizardBase.newInstance(paramWebViewWizardBase.isDynamicMode(), "com.tencent.smtt.webkit.WebChromeClient"));
+    mWebChromeClient = ((IX5WebChromeClient)paramWebViewWizardBase.newInstance("com.tencent.smtt.webkit.WebChromeClient"));
   }
   
   public X5ProxyWebChromeClient(IX5WebChromeClient paramIX5WebChromeClient)

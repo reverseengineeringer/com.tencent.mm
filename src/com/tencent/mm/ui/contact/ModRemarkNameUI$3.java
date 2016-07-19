@@ -10,7 +10,7 @@ final class ModRemarkNameUI$3
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    llQ.finish();
+    lMe.finish();
     return true;
   }
 }

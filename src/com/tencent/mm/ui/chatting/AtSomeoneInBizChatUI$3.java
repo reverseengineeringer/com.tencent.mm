@@ -4,22 +4,22 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import com.tencent.mm.t.j;
+import com.tencent.mm.v.k;
 
 final class AtSomeoneInBizChatUI$3
   implements AdapterView.OnItemClickListener
 {
   AtSomeoneInBizChatUI$3(AtSomeoneInBizChatUI paramAtSomeoneInBizChatUI) {}
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
     paramAdapterView = new Intent();
-    paramView = (j)AtSomeoneInBizChatUI.a(kRd).getItem(paramInt);
-    String str = AtSomeoneInBizChatUI.a(AtSomeoneInBizChatUI.b(kRd), field_userId);
+    paramView = (k)AtSomeoneInBizChatUI.a(lrg).getItem(paramInt);
+    String str = AtSomeoneInBizChatUI.a(AtSomeoneInBizChatUI.b(lrg), field_userId);
     paramAdapterView.putExtra("select_raw_user_name", field_userId);
     paramAdapterView.putExtra("Select_Conv_User", str);
-    kRd.setResult(-1, paramAdapterView);
-    kRd.finish();
+    lrg.setResult(-1, paramAdapterView);
+    lrg.finish();
   }
 }
 

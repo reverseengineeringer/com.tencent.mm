@@ -1,21 +1,16 @@
 package com.tencent.mm.ui.transmit;
 
-import com.tencent.mm.r.e;
-import com.tencent.mm.r.j;
-import com.tencent.mm.ui.base.h;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 final class MsgRetransmitUI$6
-  implements e
+  implements DialogInterface.OnClickListener
 {
-  MsgRetransmitUI$6(MsgRetransmitUI paramMsgRetransmitUI) {}
+  MsgRetransmitUI$6(MsgRetransmitUI paramMsgRetransmitUI, String paramString) {}
   
-  public final void a(int paramInt1, int paramInt2, j paramj)
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((MsgRetransmitUI.a(lAT) == null) || (paramInt2 == 0)) {
-      return;
-    }
-    paramInt1 = (int)(paramInt1 * 100L / paramInt2);
-    MsgRetransmitUI.a(lAT).setMessage(lAT.getString(2131428880, new Object[] { Integer.valueOf(MsgRetransmitUI.b(lAT)), Integer.valueOf(MsgRetransmitUI.c(lAT)), Integer.valueOf(paramInt1) }));
+    MsgRetransmitUI.a(mbK, mbK.getIntent(), bwZ);
   }
 }
 

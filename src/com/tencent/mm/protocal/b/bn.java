@@ -1,51 +1,56 @@
 package com.tencent.mm.protocal.b;
 
+import java.util.LinkedList;
+
 public final class bn
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public int iYD;
-  public int iYE;
-  public int iYF;
+  public LinkedList<bo> jwe = new LinkedList();
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
-      paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.ci(1, iYD);
-      paramVarArgs.ci(2, iYE);
-      paramVarArgs.ci(3, iYF);
+      ((a.a.a.c.a)paramVarArgs[0]).d(1, 8, jwe);
       return 0;
     }
     if (paramInt == 1) {
-      return a.a.a.a.cg(1, iYD) + 0 + a.a.a.a.cg(2, iYE) + a.a.a.a.cg(3, iYF);
+      return a.a.a.a.c(1, 8, jwe) + 0;
     }
     if (paramInt == 2)
     {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+      paramVarArgs = (byte[])paramVarArgs[0];
+      jwe.clear();
+      paramVarArgs = new a.a.a.a.a(paramVarArgs, jrk);
+      for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
         if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.bog();
+          paramVarArgs.bve();
         }
       }
       return 0;
     }
     if (paramInt == 3)
     {
-      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+      Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
       bn localbn = (bn)paramVarArgs[1];
-      switch (((Integer)paramVarArgs[2]).intValue())
+      paramInt = ((Integer)paramVarArgs[2]).intValue();
+      switch (paramInt)
       {
       default: 
         return -1;
-      case 1: 
-        iYD = maU.jC();
-        return 0;
-      case 2: 
-        iYE = maU.jC();
-        return 0;
       }
-      iYF = maU.jC();
+      paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+      int i = paramVarArgs.size();
+      paramInt = 0;
+      while (paramInt < i)
+      {
+        Object localObject2 = (byte[])paramVarArgs.get(paramInt);
+        localObject1 = new bo();
+        localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+        for (boolean bool = true; bool; bool = ((bo)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, com.tencent.mm.ax.a.a((a.a.a.a.a)localObject2))) {}
+        jwe.add(localObject1);
+        paramInt += 1;
+      }
       return 0;
     }
     return -1;

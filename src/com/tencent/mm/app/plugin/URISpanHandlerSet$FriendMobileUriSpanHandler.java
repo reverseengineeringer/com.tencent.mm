@@ -25,8 +25,8 @@ class URISpanHandlerSet$FriendMobileUriSpanHandler
       if (paramb != null) {
         paramb.a(paramg);
       }
-      paramg = new Intent(URISpanHandlerSet.a(ang), MobileFriendUI.class);
-      URISpanHandlerSet.a(ang).startActivity(paramg);
+      paramg = new Intent(URISpanHandlerSet.a(ZU), MobileFriendUI.class);
+      URISpanHandlerSet.a(ZU).startActivity(paramg);
       return true;
     }
     return false;
@@ -36,17 +36,17 @@ class URISpanHandlerSet$FriendMobileUriSpanHandler
   {
     if (paramString.equals("weixin://findfriend/mobile"))
     {
-      paramString = new Intent(URISpanHandlerSet.a(ang), MobileFriendUI.class);
-      if ((URISpanHandlerSet.a(ang) instanceof Service)) {
+      paramString = new Intent(URISpanHandlerSet.a(ZU), MobileFriendUI.class);
+      if ((URISpanHandlerSet.a(ZU) instanceof Service)) {
         paramString.addFlags(268435456);
       }
-      URISpanHandlerSet.a(ang).startActivity(paramString);
+      URISpanHandlerSet.a(ZU).startActivity(paramString);
       return true;
     }
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     if (paramString.trim().startsWith("weixin://findfriend/mobile")) {
       return new g(paramString, 20, null);
@@ -54,7 +54,7 @@ class URISpanHandlerSet$FriendMobileUriSpanHandler
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 20 };
   }

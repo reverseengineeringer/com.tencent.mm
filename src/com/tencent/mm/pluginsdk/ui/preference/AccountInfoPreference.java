@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.aw.a;
-import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.az.a;
+import com.tencent.mm.plugin.report.service.g;
 import com.tencent.mm.pluginsdk.i.n;
 import com.tencent.mm.pluginsdk.ui.a.b;
 import com.tencent.mm.ui.base.NoMeasuredTextView;
@@ -19,12 +19,12 @@ import com.tencent.mm.ui.tools.u;
 public class AccountInfoPreference
   extends Preference
 {
-  public String ajh;
-  public i.n htk = null;
-  public SpannableString iNX;
-  public String iNY;
-  private int iNZ;
-  private View.OnClickListener iOa = null;
+  public String UX;
+  public i.n hKW = null;
+  public SpannableString jlc;
+  public String jld;
+  private int jle;
+  private View.OnClickListener jlf = null;
   
   public AccountInfoPreference(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -39,67 +39,67 @@ public class AccountInfoPreference
   protected final void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    Object localObject = (ImageView)paramView.findViewById(2131165293);
-    if ((ajh != null) && (localObject != null)) {
-      a.b.b((ImageView)localObject, ajh);
+    Object localObject = (ImageView)paramView.findViewById(2131755444);
+    if ((UX != null) && (localObject != null)) {
+      a.b.a((ImageView)localObject, UX);
     }
-    NoMeasuredTextView localNoMeasuredTextView = (NoMeasuredTextView)paramView.findViewById(2131169011);
-    if ((ajh != null) && (localNoMeasuredTextView != null))
+    NoMeasuredTextView localNoMeasuredTextView = (NoMeasuredTextView)paramView.findViewById(2131758178);
+    if ((UX != null) && (localNoMeasuredTextView != null))
     {
-      localNoMeasuredTextView.setShouldEllipsize(true);
-      localNoMeasuredTextView.setTextSize(0, a.z(mContext, 2131034564));
-      localNoMeasuredTextView.setTextColor(a.x(mContext, 2131231135));
-      if (iNX == null)
+      liR = true;
+      localNoMeasuredTextView.j(a.D(mContext, 2131427667));
+      localNoMeasuredTextView.setTextColor(a.B(mContext, 2131689841));
+      if (jlc == null)
       {
-        localObject = ajh;
+        localObject = UX;
         localNoMeasuredTextView.setText((CharSequence)localObject);
       }
     }
     else
     {
-      localObject = (TextView)paramView.findViewById(2131169012);
-      if ((iNY == null) || (localObject == null)) {
-        break label231;
+      localObject = (TextView)paramView.findViewById(2131758179);
+      if ((jld == null) || (localObject == null)) {
+        break label230;
       }
-      ((TextView)localObject).setText(paramView.getResources().getString(2131431007, new Object[] { iNY }));
-      label150:
-      localObject = (TextView)paramView.findViewById(2131166961);
+      ((TextView)localObject).setText(paramView.getResources().getString(2131230865, new Object[] { jld }));
+      label149:
+      localObject = (TextView)paramView.findViewById(2131758106);
       if (localObject != null)
       {
-        if (iNZ <= 99) {
-          break label244;
+        if (jle <= 99) {
+          break label243;
         }
-        ((TextView)localObject).setText(mContext.getString(2131430112));
-        ((TextView)localObject).setBackgroundResource(u.eB(mContext));
+        ((TextView)localObject).setText(mContext.getString(2131236485));
+        ((TextView)localObject).setBackgroundResource(u.eE(mContext));
         ((TextView)localObject).setVisibility(0);
       }
     }
     for (;;)
     {
-      ((ImageView)paramView.findViewById(2131169013)).setOnClickListener(new View.OnClickListener()
+      ((ImageView)paramView.findViewById(2131758180)).setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
           if (AccountInfoPreference.a(AccountInfoPreference.this) != null)
           {
-            h.fUJ.g(11264, new Object[] { Integer.valueOf(1) });
+            g.gdY.h(11264, new Object[] { Integer.valueOf(1) });
             AccountInfoPreference.a(AccountInfoPreference.this).show();
           }
         }
       });
       return;
-      localObject = iNX;
+      localObject = jlc;
       break;
-      label231:
+      label230:
       if (localObject == null) {
-        break label150;
+        break label149;
       }
       ((TextView)localObject).setVisibility(8);
-      break label150;
-      label244:
-      if (iNZ > 0)
+      break label149;
+      label243:
+      if (jle > 0)
       {
-        ((TextView)localObject).setText(iNZ);
+        ((TextView)localObject).setText(jle);
         ((TextView)localObject).setVisibility(0);
       }
       else

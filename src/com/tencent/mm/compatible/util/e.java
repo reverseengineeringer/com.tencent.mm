@@ -2,23 +2,23 @@ package com.tencent.mm.compatible.util;
 
 import android.os.Build.VERSION;
 import android.os.StatFs;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.File;
 
 public final class e
 {
   public static boolean D(long paramLong)
   {
-    if (!oW())
+    if (!no())
     {
-      u.i("!24@/B4Tb64lLpJct1kv8RvO0Q==", "summer isSDCardHaveEnoughSpace sdcard not avail and ret false");
+      v.i("MicroMsg.CUtil", "summer isSDCardHaveEnoughSpace sdcard not avail and ret false");
       return false;
     }
     for (;;)
     {
       try
       {
-        localStatFs = new StatFs(d.bxc);
+        localStatFs = new StatFs(d.bpe);
       }
       catch (Exception localException1)
       {
@@ -48,7 +48,7 @@ public final class e
           if (localStatFs.getFreeBlocks() * l1 >= paramLong) {
             break label143;
           }
-          u.i("!24@/B4Tb64lLpJct1kv8RvO0Q==", "summer isSDCardHaveEnoughSpace needSize: " + paramLong + " not enough and ret false");
+          v.i("MicroMsg.CUtil", "summer isSDCardHaveEnoughSpace needSize: " + paramLong + " not enough and ret false");
           return false;
         }
         catch (Exception localException3)
@@ -60,29 +60,29 @@ public final class e
         l1 = 0L;
       }
       label121:
-      u.e("!24@/B4Tb64lLpJct1kv8RvO0Q==", "isSDCardHaveEnoughSpace", new Object[] { localException1 });
+      v.e("MicroMsg.CUtil", "isSDCardHaveEnoughSpace", new Object[] { localException1 });
       l2 = 0L;
     }
     label143:
     return true;
   }
   
-  public static boolean bU(int paramInt)
+  public static boolean cm(int paramInt)
   {
     return Build.VERSION.SDK_INT >= paramInt;
   }
   
-  public static boolean bV(int paramInt)
+  public static boolean cn(int paramInt)
   {
     return Build.VERSION.SDK_INT < paramInt;
   }
   
-  public static boolean oW()
+  public static boolean no()
   {
     boolean bool2 = false;
     String str = g.getExternalStorageDirectory().getAbsolutePath();
     boolean bool1;
-    if (d.bxc.equalsIgnoreCase(str))
+    if (d.bpe.equalsIgnoreCase(str))
     {
       bool1 = bool2;
       try
@@ -99,18 +99,18 @@ public final class e
       }
       catch (Exception localException1)
       {
-        u.w("!24@/B4Tb64lLpJct1kv8RvO0Q==", "summer isSDCardAvail 1 e: " + localException1.getMessage() + " SDCARD_ROOT: " + d.bxc);
+        v.w("MicroMsg.CUtil", "summer isSDCardAvail 1 e: " + localException1.getMessage() + " SDCARD_ROOT: " + d.bpe);
         return false;
       }
     }
     try
     {
-      bool1 = new File(d.bxc).canWrite();
+      bool1 = new File(d.bpe).canWrite();
       return bool1;
     }
     catch (Exception localException2)
     {
-      u.w("!24@/B4Tb64lLpJct1kv8RvO0Q==", "summer isSDCardAvail 1 e: " + localException2.getMessage() + " SDCARD_ROOT: " + d.bxc);
+      v.w("MicroMsg.CUtil", "summer isSDCardAvail 1 e: " + localException2.getMessage() + " SDCARD_ROOT: " + d.bpe);
     }
     return false;
   }

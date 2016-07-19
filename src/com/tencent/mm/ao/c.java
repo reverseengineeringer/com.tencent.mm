@@ -1,191 +1,460 @@
 package com.tencent.mm.ao;
 
-import com.tencent.mm.a.g;
-import com.tencent.mm.at.b;
-import com.tencent.mm.compatible.util.f;
+import com.tencent.mm.a.e;
+import com.tencent.mm.a.f;
+import com.tencent.mm.ak.n;
+import com.tencent.mm.ak.t;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b.alx;
-import com.tencent.mm.protocal.b.avx;
-import com.tencent.mm.protocal.b.avy;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.a.c;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j.a;
-import com.tencent.mm.r.j.b;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.h;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.r;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.l;
+import com.tencent.mm.t.m;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
 
 public final class c
-  extends a
-  implements com.tencent.mm.network.j
+  implements d
 {
-  d anM;
-  private com.tencent.mm.r.a anN;
-  int anP = 0;
-  boolean anR = false;
-  af anS = new af(new af.a()
+  public static int bWx = 0;
+  private static c bWy;
+  private static final f<Integer, a> brV = new f(5);
+  public boolean bRi = false;
+  private int bRj = 3;
+  
+  public static c Dn()
   {
-    public final boolean lj()
-    {
-      long l = com.tencent.mm.a.e.aw(filename);
-      u.d("!44@/B4Tb64lLpK+IBX8XDgnvhJCUsCY60+wSwM70WFd0Wk=", f.oZ() + " onTimerExpired: file:" + filename + " nowlen:" + l + " oldoff:" + ccD + " isFin:" + anR);
-      if ((l - ccD < 3300L) && (!anR)) {
-        return true;
-      }
-      if (a(bFs, anM) == -1)
-      {
-        anP = (f.oX() + 40000);
-        anM.a(3, -1, "doScene failed", c.this);
-      }
-      return false;
+    if (bWy == null) {
+      bWy = new c();
     }
-  }, true);
-  int ccD = 0;
-  private long chU = -1L;
-  private boolean chV = false;
-  private String[] chX = new String[0];
-  private int chZ = 0;
-  String filename = null;
-  
-  public c(String paramString, int paramInt)
-  {
-    filename = paramString;
-    chZ = paramInt;
+    return bWy;
   }
   
-  public final void EC()
+  public static void Do()
   {
-    anR = true;
+    ah.tE().ro().set(16646145, Integer.valueOf(0));
   }
   
-  public final String[] ED()
+  public static void Dp()
   {
-    return chX;
-  }
-  
-  public final long EE()
-  {
-    return chU;
-  }
-  
-  public final int a(com.tencent.mm.network.e parame, d paramd)
-  {
-    anM = paramd;
-    int k = com.tencent.mm.a.e.aw(filename);
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvhJCUsCY60+wSwM70WFd0Wk=", "read file: %s, filelen: %d, oldoff: %d, isFin: %b", new Object[] { filename, Integer.valueOf(k), Integer.valueOf(ccD), Boolean.valueOf(anR) });
-    if (k <= 0)
-    {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvhJCUsCY60+wSwM70WFd0Wk=", "read failed :" + filename);
-      anP = (f.oX() + 40000);
-      return -1;
+    Integer localInteger2 = Integer.valueOf(be.f((Integer)ah.tE().ro().get(16646145, null)));
+    Integer localInteger1 = localInteger2;
+    if (localInteger2.intValue() < 0) {
+      localInteger1 = Integer.valueOf(0);
     }
-    int j = k - ccD;
-    if (j > 3960) {
-      i = 3960;
+    ah.tE().ro().set(16646145, Integer.valueOf(localInteger1.intValue() + 1));
+  }
+  
+  public static String getPrefix()
+  {
+    switch (bWx)
+    {
+    default: 
+      return "single_";
+    case 0: 
+      return "single_";
+    case 1: 
+      return "chatroom_";
+    }
+    return "app_";
+  }
+  
+  public static int jG(String paramString)
+  {
+    int i = 5;
+    if ((paramString == null) || (paramString.length() == 0)) {
+      return 5;
+    }
+    if ((!paramString.startsWith("single")) || (paramString.startsWith("chatroom"))) {
+      i = 7;
+    }
+    if (paramString.startsWith("app")) {
+      i = 8;
+    }
+    v.d("upload", "type " + i);
+    return i;
+  }
+  
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
+  {
+    if ((!(paramj instanceof l)) || (((l)paramj).vM() != 9)) {
+      v.d("upload", "another scene");
+    }
+    while (paramj.getType() != 159) {
+      return;
+    }
+    if ((paramInt1 == 0) && (paramInt2 == 0)) {
+      ah.tE().ro().set(81944, Long.valueOf(be.Go()));
     }
     for (;;)
     {
-      u.d("!44@/B4Tb64lLpK+IBX8XDgnvhJCUsCY60+wSwM70WFd0Wk=", "read file: %s, filelen: %d, oldoff: %b, isFin:%b, endFlag: %b", new Object[] { filename, Integer.valueOf(k), Boolean.valueOf(anR), Boolean.valueOf(anR), Boolean.valueOf(chV) });
-      paramd = com.tencent.mm.a.e.c(filename, ccD, i);
-      if (paramd != null) {
-        break;
-      }
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvhJCUsCY60+wSwM70WFd0Wk=", f.oZ() + " read failed :" + filename + " read:" + i);
-      anP = (f.oX() + 40000);
-      return -1;
-      if ((j < 3300) && (!anR))
+      release();
+      return;
+      paramInt1 = bRj - 1;
+      bRj = paramInt1;
+      if (paramInt1 < 0)
       {
-        u.e("!44@/B4Tb64lLpK+IBX8XDgnvhJCUsCY60+wSwM70WFd0Wk=", f.oZ() + " read failed :" + filename + "can read:" + j + " isfinish:" + anR);
-        anP = (f.oX() + 40000);
-        return -1;
+        ah.tE().ro().set(81944, Long.valueOf((be.Gp() - 86400000L + 3600000L) / 1000L));
+        bRj = 3;
       }
-      i = j;
-      if (anR)
+    }
+  }
+  
+  public final void release()
+  {
+    bRi = false;
+    ah.tF().b(159, this);
+  }
+  
+  public static final class a
+  {
+    public int aFd = 0;
+    public int bWA = 0;
+    public int bWB = 2;
+    public int bWC = 2;
+    public int bWD = 2;
+    public int bWE = 10240;
+    public int bWF = 10240000;
+    public int bWG = 100;
+    public int bWH = 100;
+    public int bWI = 100;
+    public Random bWJ = new Random();
+    public List<String> bWK = null;
+    public String bWz = "BeiJing;GuangZhou;ShangHai;";
+    
+    public static a Du()
+    {
+      v.d("upload", "parseFromFile");
+      Object localObject1 = t.BE();
+      localObject1 = n.BA() + ((n)localObject1).W(1, 9);
+      int i = e.aA((String)localObject1);
+      if (i == -1)
       {
-        chV = true;
-        i = j;
+        v.e("upload", "read file failed " + i + (String)localObject1);
+        localObject1 = null;
+      }
+      int k;
+      a locala;
+      do
+      {
+        return (a)localObject1;
+        localObject3 = e.c((String)localObject1, 0, i);
+        if (localObject3 == null)
+        {
+          v.e("upload", "read file failed " + i + (String)localObject1);
+          return null;
+        }
+        localObject3 = new String((byte[])localObject3);
+        if (be.kf((String)localObject3)) {
+          return null;
+        }
+        i = ((String)localObject3).indexOf('<');
+        if (i <= 0) {
+          break;
+        }
+        localObject3 = ((String)localObject3).substring(i);
+        k = ((String)localObject3).hashCode();
+        locala = (a)c.Dq().get(Integer.valueOf(k));
+        localObject1 = locala;
+      } while (locala != null);
+      Object localObject3 = r.cr((String)localObject3, "Config");
+      if (localObject3 == null)
+      {
+        v.e("upload", "parse msg failed");
+        return null;
+      }
+      for (;;)
+      {
+        StringBuilder localStringBuilder;
+        int j;
+        try
+        {
+          locala = new a();
+          i = 0;
+          localStringBuilder = new StringBuilder(".Config.Item");
+          if (i == 0)
+          {
+            localObject1 = "";
+            localObject1 = (String)((Map)localObject3).get(localObject1 + ".$key");
+            v.d("upload", "key " + (String)localObject1);
+            if (localObject1 == null) {
+              break label1128;
+            }
+            if (!((String)localObject1).equals("region")) {
+              continue;
+            }
+            localStringBuilder = new StringBuilder(".Config.Item");
+            if (i == 0)
+            {
+              localObject1 = "";
+              bWz = ((String)((Map)localObject3).get(localObject1));
+              if ((bWz == null) || (bWz.length() <= 0)) {
+                break label1433;
+              }
+              localObject1 = bWz.split(";");
+              bWK = new ArrayList();
+              if ((localObject1 == null) || (localObject1.length <= 0)) {
+                break label1433;
+              }
+              j = 0;
+              if (j >= localObject1.length) {
+                break label1433;
+              }
+              if ((localObject1[j] == null) || (localObject1[j].length() <= 0)) {
+                break label1426;
+              }
+              bWK.add(localObject1[j]);
+              break label1426;
+            }
+          }
+          else
+          {
+            localObject1 = Integer.valueOf(i);
+            continue;
+          }
+          localObject1 = Integer.valueOf(i);
+          continue;
+          if (((String)localObject1).equals("sex"))
+          {
+            localStringBuilder = new StringBuilder(".Config.Item");
+            if (i == 0)
+            {
+              localObject1 = "";
+              aFd = be.getInt((String)((Map)localObject3).get(localObject1), 0);
+            }
+            else
+            {
+              localObject1 = Integer.valueOf(i);
+              continue;
+            }
+          }
+          else if (((String)localObject1).equals("rate"))
+          {
+            localStringBuilder = new StringBuilder(".Config.Item");
+            if (i == 0)
+            {
+              localObject1 = "";
+              bWA = be.getInt((String)((Map)localObject3).get(localObject1), 0);
+            }
+          }
+        }
+        catch (Exception localException)
+        {
+          v.e("upload", "exception:%s", new Object[] { be.f(localException) });
+          return null;
+        }
+        Object localObject2 = Integer.valueOf(i);
+        continue;
+        if (((String)localObject2).equals("minsize"))
+        {
+          localStringBuilder = new StringBuilder(".Config.Item");
+          if (i == 0) {}
+          for (localObject2 = "";; localObject2 = Integer.valueOf(i))
+          {
+            bWE = be.getInt((String)((Map)localObject3).get(localObject2), 0);
+            break;
+          }
+        }
+        if (((String)localObject2).equals("maxsize"))
+        {
+          localStringBuilder = new StringBuilder(".Config.Item");
+          if (i == 0) {}
+          for (localObject2 = "";; localObject2 = Integer.valueOf(i))
+          {
+            bWF = be.getInt((String)((Map)localObject3).get(localObject2), 0);
+            break;
+          }
+        }
+        if (((String)localObject2).equals("daycount_single"))
+        {
+          localStringBuilder = new StringBuilder(".Config.Item");
+          if (i == 0) {}
+          for (localObject2 = "";; localObject2 = Integer.valueOf(i))
+          {
+            bWG = be.getInt((String)((Map)localObject3).get(localObject2), 0);
+            break;
+          }
+        }
+        if (((String)localObject2).equals("daycount_chatroom"))
+        {
+          localStringBuilder = new StringBuilder(".Config.Item");
+          if (i == 0) {}
+          for (localObject2 = "";; localObject2 = Integer.valueOf(i))
+          {
+            bWH = be.getInt((String)((Map)localObject3).get(localObject2), 0);
+            break;
+          }
+        }
+        if (((String)localObject2).equals("daycount_app"))
+        {
+          localStringBuilder = new StringBuilder(".Config.Item");
+          if (i == 0) {}
+          for (localObject2 = "";; localObject2 = Integer.valueOf(i))
+          {
+            bWI = be.getInt((String)((Map)localObject3).get(localObject2), 0);
+            break;
+          }
+        }
+        if (((String)localObject2).equals("rate_single"))
+        {
+          localStringBuilder = new StringBuilder(".Config.Item");
+          if (i == 0) {}
+          for (localObject2 = "";; localObject2 = Integer.valueOf(i))
+          {
+            bWB = be.getInt((String)((Map)localObject3).get(localObject2), 0);
+            break;
+          }
+        }
+        if (((String)localObject2).equals("rate_chatroom"))
+        {
+          localStringBuilder = new StringBuilder(".Config.Item");
+          if (i == 0) {}
+          for (localObject2 = "";; localObject2 = Integer.valueOf(i))
+          {
+            bWC = be.getInt((String)((Map)localObject3).get(localObject2), 0);
+            break;
+          }
+        }
+        if (((String)localObject2).equals("rate_app"))
+        {
+          localStringBuilder = new StringBuilder(".Config.Item");
+          if (i == 0) {}
+          for (localObject2 = "";; localObject2 = Integer.valueOf(i))
+          {
+            bWD = be.getInt((String)((Map)localObject3).get(localObject2), 0);
+            break;
+          }
+          label1128:
+          v.d("upload", "sex " + aFd);
+          v.d("upload", "rate_single " + bWB);
+          v.d("upload", "rate_chatroom " + bWC);
+          v.d("upload", "rate_app " + bWD);
+          v.d("upload", "rate " + bWA);
+          v.d("upload", "minsize " + bWE);
+          v.d("upload", "maxsize " + bWF);
+          v.d("upload", "daycount_single " + bWG);
+          v.d("upload", "daycount_chatroom " + bWH);
+          v.d("upload", "daycount_app " + bWI);
+          v.d("upload", "region " + bWz);
+          c.Dq().g(Integer.valueOf(k), locala);
+          return locala;
+          break;
+          label1426:
+          j += 1;
+          continue;
+        }
+        label1433:
+        i += 1;
       }
     }
-    Object localObject = new a.a();
-    bFa = new avx();
-    bFb = new avy();
-    uri = "/cgi-bin/micromsg-bin/uploadinputvoice";
-    bEY = 349;
-    bFc = 158;
-    bFd = 1000000158;
-    anN = ((a.a)localObject).vy();
-    localObject = (avx)anN.bEW.bFf;
-    eiB = ((String)ah.tD().rn().get(2, ""));
-    jaq = new alx().aO(paramd);
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvhJCUsCY60+wSwM70WFd0Wk=", f.oZ() + " read file:" + filename + " readlen:" + paramd.length + " datalen:" + jaq.jHu.toByteArray().length + " dataiLen:" + jaq.jHs + " md5:" + g.m(paramd) + " datamd5:" + g.m(jaq.jHu.toByteArray()));
-    jal = ccD;
-    jNI = chU;
-    if (chV) {}
-    for (int i = 1;; i = 0)
+    
+    public final boolean Dr()
     {
-      jar = i;
-      jNJ = 0;
-      iYJ = 0;
-      jNK = chZ;
-      iYG = 0;
-      u.d("!44@/B4Tb64lLpK+IBX8XDgnvhJCUsCY60+wSwM70WFd0Wk=", "clientId " + chU);
-      return a(parame, anN, this);
-    }
-  }
-  
-  protected final int a(o paramo)
-  {
-    return j.b.bFI;
-  }
-  
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
-  {
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvhJCUsCY60+wSwM70WFd0Wk=", "onGYNetEnd file:" + filename + " errtype:" + paramInt2 + " errCode:" + paramInt3);
-    paramArrayOfByte = (avx)bEW.bFf;
-    paramo = (avy)bEX.bFf;
-    if ((paramInt2 != 0) || (paramInt3 != 0))
-    {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvhJCUsCY60+wSwM70WFd0Wk=", f.oZ() + " onGYNetEnd file:" + filename + " errType:" + paramInt2 + " errCode:" + paramInt3);
-      anM.a(paramInt2, paramInt3, paramString, this);
-      return;
-    }
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvhJCUsCY60+wSwM70WFd0Wk=", f.oZ() + " onGYNetEnd  file:" + filename + " endflag:" + jar);
-    if (jar == 1)
-    {
-      if ((jNL != null) && (jNL.jHu != null)) {
-        chX = new String[] { jNL.jHu.aTg() };
+      boolean bool2 = false;
+      Object localObject2 = com.tencent.mm.model.h.sJ();
+      Object localObject1;
+      boolean bool1;
+      int i;
+      if ("  getRegionCode " + localObject2 != null)
+      {
+        localObject1 = aFu;
+        v.d("upload", (String)localObject1);
+        localObject1 = aFu;
+        bool1 = bool2;
+        if (localObject1 != null)
+        {
+          bool1 = bool2;
+          if (((String)localObject1).length() > 0)
+          {
+            bool1 = bool2;
+            if (bWK != null)
+            {
+              bool1 = bool2;
+              if (bWK.size() > 0)
+              {
+                localObject1 = ((String)localObject1).split("_");
+                bool1 = bool2;
+                if (localObject1 != null)
+                {
+                  bool1 = bool2;
+                  if (localObject1.length > 0) {
+                    i = 0;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
-      anM.a(paramInt2, paramInt3, paramString, this);
-      return;
+      for (;;)
+      {
+        bool1 = bool2;
+        if (i < localObject1.length)
+        {
+          if ((localObject1[i] != null) && (localObject1[i].length() > 0))
+          {
+            localObject2 = bWK.iterator();
+            do
+            {
+              if (!((Iterator)localObject2).hasNext()) {
+                break;
+              }
+            } while (!((String)((Iterator)localObject2).next()).trim().toLowerCase().equals(localObject1[i].trim().toLowerCase()));
+            v.d("upload", "isInRegion");
+            bool1 = true;
+          }
+        }
+        else
+        {
+          return bool1;
+          localObject1 = "";
+          break;
+        }
+        i += 1;
+      }
     }
-    paramInt1 = jal;
-    ccD = (jaq.jHs + paramInt1);
-    if (anR) {}
-    for (long l = 0L;; l = 500L)
+    
+    public final int Ds()
     {
-      u.d("!44@/B4Tb64lLpK+IBX8XDgnvhJCUsCY60+wSwM70WFd0Wk=", "onGYNetEnd file:" + filename + " delay:" + l);
-      anS.ds(l);
-      return;
+      switch (c.bWx)
+      {
+      default: 
+        return bWB;
+      case 0: 
+        return bWB;
+      case 1: 
+        return bWC;
+      }
+      return bWD;
+    }
+    
+    public final int Dt()
+    {
+      switch (c.bWx)
+      {
+      default: 
+        return bWG;
+      case 0: 
+        return bWG;
+      case 1: 
+        return bWH;
+      }
+      return bWI;
     }
   }
   
-  protected final void a(j.a parama)
+  public static final class b
   {
-    anM.a(3, f.oX() + 40000, "ecurityCheckError", this);
-  }
-  
-  public final int getType()
-  {
-    return 349;
-  }
-  
-  protected final int lk()
-  {
-    return 20;
+    public String bUc = "";
+    public int bWo = 0;
+    public int bWp = 0;
+    public int bWq = 0;
   }
 }
 

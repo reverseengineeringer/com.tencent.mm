@@ -1,9 +1,9 @@
 .class public final Lcom/tencent/mm/protocal/i$b;
-.super Lcom/tencent/mm/protocal/h$d;
+.super Lcom/tencent/mm/protocal/i$g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/protocal/h$b;
+.implements Lcom/tencent/mm/protocal/k$b;
 
 
 # annotations
@@ -17,94 +17,164 @@
 .end annotation
 
 
-# instance fields
-.field public iUO:Lcom/tencent/mm/protocal/b/ee;
-
-
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 82
-    invoke-direct {p0}, Lcom/tencent/mm/protocal/h$d;-><init>()V
-
-    .line 83
-    new-instance v0, Lcom/tencent/mm/protocal/b/ee;
-
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/ee;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/protocal/i$b;->iUO:Lcom/tencent/mm/protocal/b/ee;
+    .line 328
+    invoke-direct {p0}, Lcom/tencent/mm/protocal/i$g;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final auE()Z
-    .locals 1
+.method public final D([B)I
+    .locals 6
 
     .prologue
-    .line 99
-    const/4 v0, 0x1
+    const/4 v4, 0x1
 
-    return v0
-.end method
+    const/4 v5, 0x0
 
-.method public final getCmdId()I
-    .locals 1
+    const/4 v1, -0x1
 
-    .prologue
-    .line 94
-    const v0, 0x3b9acb38
+    .line 332
+    :try_start_0
+    iget-object v0, p0, Lcom/tencent/mm/protocal/i$b;->jrV:Lcom/tencent/mm/protocal/b/avd;
 
-    return v0
-.end method
-
-.method public final y([B)I
-    .locals 3
-
-    .prologue
-    .line 87
-    new-instance v0, Lcom/tencent/mm/protocal/b/ee;
-
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/ee;-><init>()V
-
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/protocal/b/ee;->am([B)Lcom/tencent/mm/at/a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/protocal/b/avd;->au([B)Lcom/tencent/mm/ax/a;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/ee;
+    check-cast v0, Lcom/tencent/mm/protocal/b/avd;
 
-    iput-object v0, p0, Lcom/tencent/mm/protocal/i$b;->iUO:Lcom/tencent/mm/protocal/b/ee;
+    iput-object v0, p0, Lcom/tencent/mm/protocal/i$b;->jrV:Lcom/tencent/mm/protocal/b/avd;
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 88
-    const-string/jumbo v0, "!24@/B4Tb64lLpKXSbY2VQERGw=="
+    .line 339
+    iget-object v0, p0, Lcom/tencent/mm/protocal/i$b;->jrV:Lcom/tencent/mm/protocal/b/avd;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/amb;->kfH:Lcom/tencent/mm/protocal/b/dg;
 
-    const-string/jumbo v2, "retcode:"
+    invoke-static {p0, v0}, Lcom/tencent/mm/protocal/k;->a(Lcom/tencent/mm/protocal/k$d;Lcom/tencent/mm/protocal/b/dg;)V
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 340
+    iput v5, p0, Lcom/tencent/mm/protocal/i$g;->jrX:I
 
-    iget-object v2, p0, Lcom/tencent/mm/protocal/i$b;->iUO:Lcom/tencent/mm/protocal/b/ee;
+    .line 342
+    iget-object v0, p0, Lcom/tencent/mm/protocal/i$b;->jrV:Lcom/tencent/mm/protocal/b/avd;
 
-    iget v2, v2, Lcom/tencent/mm/protocal/b/ee;->fmB:I
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/amb;->kfH:Lcom/tencent/mm/protocal/b/dg;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget v0, v0, Lcom/tencent/mm/protocal/b/dg;->jxr:I
 
-    move-result-object v1
+    if-nez v0, :cond_1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 343
+    iget-object v0, p0, Lcom/tencent/mm/protocal/i$b;->jrV:Lcom/tencent/mm/protocal/b/avd;
 
-    move-result-object v1
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/avd;->klV:Lcom/tencent/mm/protocal/b/bz;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    if-eqz v0, :cond_0
 
-    .line 89
-    iget-object v0, p0, Lcom/tencent/mm/protocal/i$b;->iUO:Lcom/tencent/mm/protocal/b/ee;
+    iget-object v0, p0, Lcom/tencent/mm/protocal/i$b;->jrV:Lcom/tencent/mm/protocal/b/avd;
 
-    iget v0, v0, Lcom/tencent/mm/protocal/b/ee;->fmB:I
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/avd;->klV:Lcom/tencent/mm/protocal/b/bz;
 
+    iget v0, v0, Lcom/tencent/mm/protocal/b/bz;->dAs:I
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/mm/protocal/i$b;->jrV:Lcom/tencent/mm/protocal/b/avd;
+
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/avd;->klV:Lcom/tencent/mm/protocal/b/bz;
+
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/bz;->jwC:Lcom/tencent/mm/protocal/b/ami;
+
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/m;->a(Lcom/tencent/mm/protocal/b/ami;)[B
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->P([B)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 344
+    :cond_0
+    const-string/jumbo v0, "MicroMsg.MMAuth"
+
+    const-string/jumbo v2, "retcode 0 but invalid auth sect resp or invalid uin or invalid session"
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 345
+    iget-object v0, p0, Lcom/tencent/mm/protocal/i$b;->jrV:Lcom/tencent/mm/protocal/b/avd;
+
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/amb;->kfH:Lcom/tencent/mm/protocal/b/dg;
+
+    iput v1, v0, Lcom/tencent/mm/protocal/b/dg;->jxr:I
+
+    .line 348
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/protocal/k$d;->jsj:Ljava/lang/String;
+
+    .line 349
+    const-string/jumbo v1, "MicroMsg.MMAuth"
+
+    const-string/jumbo v2, "summerauthkick auto errmsg[%s]"
+
+    new-array v3, v4, [Ljava/lang/Object;
+
+    aput-object v0, v3, v5
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 350
+    invoke-static {v0}, Lcom/tencent/mm/model/ah;->fs(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 352
+    iget-object v0, p0, Lcom/tencent/mm/protocal/i$b;->jrV:Lcom/tencent/mm/protocal/b/avd;
+
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/amb;->kfH:Lcom/tencent/mm/protocal/b/dg;
+
+    iget v0, v0, Lcom/tencent/mm/protocal/b/dg;->jxr:I
+
+    :goto_0
     return v0
+
+    .line 333
+    :catch_0
+    move-exception v0
+
+    .line 334
+    const-string/jumbo v2, "MicroMsg.MMAuth"
+
+    const-string/jumbo v3, "toProtoBuf :%s"
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v4, v5
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 335
+    iget-object v0, p0, Lcom/tencent/mm/protocal/i$b;->jrV:Lcom/tencent/mm/protocal/b/avd;
+
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/amb;->kfH:Lcom/tencent/mm/protocal/b/dg;
+
+    iput v1, v0, Lcom/tencent/mm/protocal/b/dg;->jxr:I
+
+    move v0, v1
+
+    .line 336
+    goto :goto_0
 .end method

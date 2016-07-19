@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public anV:I
+.field public acr:I
 
 .field public buf:[B
 
@@ -31,13 +31,13 @@
     .line 122
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/c/b/g$a;->anV:I
+    iput v0, p0, Lcom/tencent/mm/c/b/g$a;->acr:I
 
     .line 125
     iput-object p1, p0, Lcom/tencent/mm/c/b/g$a;->buf:[B
 
     .line 126
-    iput p2, p0, Lcom/tencent/mm/c/b/g$a;->anV:I
+    iput p2, p0, Lcom/tencent/mm/c/b/g$a;->acr:I
 
     .line 127
     return-void

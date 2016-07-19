@@ -10,7 +10,7 @@ final class SimpleLoginUI$9
   
   public final void onDismiss(DialogInterface paramDialogInterface)
   {
-    SimpleLoginUI.f(kwL);
+    SimpleLoginUI.f(kVS);
   }
 }
 

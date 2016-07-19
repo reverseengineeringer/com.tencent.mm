@@ -4,10 +4,10 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/app/Notification;Z)I
+.method public abstract U(Z)V
 .end method
 
-.method public abstract a(ILandroid/app/PendingIntent;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Bitmap;Ljava/lang/String;)Landroid/app/Notification;
+.method public abstract a(Landroid/app/Notification;Z)I
 .end method
 
 .method public abstract a(Landroid/app/Notification;IILandroid/app/PendingIntent;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Bitmap;Ljava/lang/String;)Landroid/app/Notification;
@@ -16,28 +16,28 @@
 .method public abstract a(Landroid/app/Notification;ILandroid/app/PendingIntent;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Bitmap;Ljava/lang/String;Landroid/app/PendingIntent;Ljava/lang/String;Landroid/app/PendingIntent;Ljava/lang/String;)Landroid/app/Notification;
 .end method
 
-.method public abstract a(ILandroid/app/Notification;Z)V
+.method public abstract a(Landroid/app/PendingIntent;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Bitmap;Ljava/lang/String;)Landroid/app/Notification;
 .end method
 
-.method public abstract ar(Z)V
+.method public abstract a(ILandroid/app/Notification;Z)V
 .end method
 
 .method public abstract b(Landroid/app/Notification;)I
 .end method
 
-.method public abstract bA(I)V
+.method public abstract bR(I)V
 .end method
 
-.method public abstract bB(I)V
+.method public abstract bS(I)V
 .end method
 
-.method public abstract bz(I)V
+.method public abstract bT(I)V
 .end method
 
-.method public abstract cK(Ljava/lang/String;)V
+.method public abstract cR(Ljava/lang/String;)V
 .end method
 
-.method public abstract cL(Ljava/lang/String;)V
+.method public abstract cS(Ljava/lang/String;)V
 .end method
 
 .method public abstract cancel(I)V
@@ -46,29 +46,29 @@
 .method public abstract cancelNotification(Ljava/lang/String;)V
 .end method
 
-.method public abstract i(ILjava/lang/String;)V
+.method public abstract i(Ljava/lang/String;I)V
 .end method
 
-.method public abstract kL()V
+.method public abstract j(ILjava/lang/String;)V
 .end method
 
-.method public abstract l(Ljava/lang/String;I)V
+.method public abstract jl()V
 .end method
 
-.method public abstract nl()Ljava/lang/String;
+.method public abstract lA()V
 .end method
 
-.method public abstract nm()V
+.method public abstract lB()Z
 .end method
 
-.method public abstract nn()Z
+.method public abstract lC()V
 .end method
 
-.method public abstract no()V
+.method public abstract lD()V
+.end method
+
+.method public abstract lz()Ljava/lang/String;
 .end method
 
 .method public abstract notify(ILandroid/app/Notification;)V
-.end method
-
-.method public abstract np()V
 .end method

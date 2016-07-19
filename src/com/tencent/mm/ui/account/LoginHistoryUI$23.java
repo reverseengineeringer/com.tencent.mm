@@ -13,7 +13,7 @@ final class LoginHistoryUI$23
   {
     if ((paramInt == 6) || (paramInt == 5))
     {
-      ktx.Zi();
+      kSF.aby();
       return true;
     }
     return false;

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tencent.mm.plugin.sns.ui.TestTimeForSns android:id="@id/a58" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.ui.KeyboardLinearLayout android:orientation="vertical" android:id="@id/a59" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.tencent.mm.ui.base.MMPullDownView android:id="@id/a5_" android:background="@color/m8" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.tencent.mm.ui.base.MMLoadMoreListView android:id="@id/a5a" android:focusable="true" android:scrollbars="none" android:scrollingCache="false" android:transcriptMode="disabled" android:layout_weight="1.0" style="@style/MMList" />
+        </com.tencent.mm.ui.base.MMPullDownView>
+        <com.tencent.mm.plugin.sns.ui.SnsCommentFooter android:id="@id/a5b" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.tencent.mm.ui.KeyboardLinearLayout>
+</com.tencent.mm.plugin.sns.ui.TestTimeForSns>

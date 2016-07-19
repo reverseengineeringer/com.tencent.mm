@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bmw:Lcom/tencent/mm/booter/d;
+.field final synthetic bac:Lcom/tencent/mm/booter/d;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 871
-    iput-object p1, p0, Lcom/tencent/mm/booter/d$10;->bmw:Lcom/tencent/mm/booter/d;
+    iput-object p1, p0, Lcom/tencent/mm/booter/d$10;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
     const/4 v8, 0x0
 
     .line 876
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-static {v0}, Lcom/tencent/mm/booter/d;->a(Lcom/tencent/mm/booter/d;)Landroid/media/MediaPlayer;
 
@@ -60,13 +60,13 @@
 
     .line 881
     :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei"
+    const-string/jumbo v0, "MicroMsg.DownloadPlayer"
 
     const-string/jumbo v1, "completed currentPoint: %d"
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/tencent/mm/booter/d$10;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v3, p0, Lcom/tencent/mm/booter/d$10;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-static {v3}, Lcom/tencent/mm/booter/d;->i(Lcom/tencent/mm/booter/d;)I
 
@@ -78,10 +78,10 @@
 
     aput-object v3, v2, v8
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 883
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-static {v0}, Lcom/tencent/mm/booter/d;->a(Lcom/tencent/mm/booter/d;)Landroid/media/MediaPlayer;
 
@@ -90,12 +90,12 @@
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
     .line 884
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-static {v0}, Lcom/tencent/mm/booter/d;->j(Lcom/tencent/mm/booter/d;)Landroid/media/MediaPlayer;
 
     .line 886
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-static {v0}, Lcom/tencent/mm/booter/d;->k(Lcom/tencent/mm/booter/d;)Ljava/io/InputStream;
 
@@ -104,22 +104,22 @@
     if-nez v0, :cond_2
 
     .line 889
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bac:Lcom/tencent/mm/booter/d;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/booter/d;->mL()Lcom/tencent/mm/model/u;
+    invoke-virtual {v0}, Lcom/tencent/mm/booter/d;->kY()Lcom/tencent/mm/model/u;
 
     .line 890
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bac:Lcom/tencent/mm/booter/d;
 
-    invoke-static {v0}, Lcom/tencent/mm/booter/d;->d(Lcom/tencent/mm/booter/d;)Lcom/tencent/mm/sdk/platformtools/af;
+    invoke-static {v0}, Lcom/tencent/mm/booter/d;->d(Lcom/tencent/mm/booter/d;)Lcom/tencent/mm/sdk/platformtools/ah;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/af;->aUF()V
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ah;->aZJ()V
 
     .line 893
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-static {v0}, Lcom/tencent/mm/booter/d;->b(Lcom/tencent/mm/booter/d;)Ljava/lang/Object;
 
@@ -129,7 +129,7 @@
 
     .line 894
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-static {v0}, Lcom/tencent/mm/booter/d;->c(Lcom/tencent/mm/booter/d;)Ljava/util/List;
 
@@ -156,7 +156,7 @@
     .line 895
     if-eqz v0, :cond_3
 
-    iget-object v3, p0, Lcom/tencent/mm/booter/d$10;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v3, p0, Lcom/tencent/mm/booter/d$10;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-static {v3}, Lcom/tencent/mm/booter/d;->k(Lcom/tencent/mm/booter/d;)Ljava/io/InputStream;
 
@@ -165,7 +165,7 @@
     if-nez v3, :cond_3
 
     .line 896
-    const-string/jumbo v3, "!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei"
+    const-string/jumbo v3, "MicroMsg.DownloadPlayer"
 
     const-string/jumbo v4, "on finish call back: %s"
 
@@ -181,7 +181,7 @@
 
     aput-object v7, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 897
     invoke-interface {v0}, Lcom/tencent/mm/model/v;->onFinish()V
@@ -205,12 +205,12 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 902
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-static {v0}, Lcom/tencent/mm/booter/d;->l(Lcom/tencent/mm/booter/d;)Z
 
     .line 904
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-static {v0}, Lcom/tencent/mm/booter/d;->m(Lcom/tencent/mm/booter/d;)Z
 
@@ -218,7 +218,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bac:Lcom/tencent/mm/booter/d;
 
     invoke-static {v0}, Lcom/tencent/mm/booter/d;->k(Lcom/tencent/mm/booter/d;)Ljava/io/InputStream;
 
@@ -227,14 +227,14 @@
     if-nez v0, :cond_0
 
     .line 905
-    const-string/jumbo v0, "!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei"
+    const-string/jumbo v0, "MicroMsg.DownloadPlayer"
 
     const-string/jumbo v1, "NEXT MUSIC PLAY."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 906
-    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bmw:Lcom/tencent/mm/booter/d;
+    iget-object v0, p0, Lcom/tencent/mm/booter/d$10;->bac:Lcom/tencent/mm/booter/d;
 
     iget v1, v0, Lcom/tencent/mm/booter/d;->currentIndex:I
 
@@ -242,13 +242,13 @@
 
     iput v1, v0, Lcom/tencent/mm/booter/d;->currentIndex:I
 
-    iget v1, v0, Lcom/tencent/mm/booter/d;->bmv:I
+    iget v1, v0, Lcom/tencent/mm/booter/d;->bab:I
 
     if-lez v1, :cond_6
 
     iget v1, v0, Lcom/tencent/mm/booter/d;->currentIndex:I
 
-    iget-object v2, v0, Lcom/tencent/mm/booter/d;->bmp:Landroid/util/SparseArray;
+    iget-object v2, v0, Lcom/tencent/mm/booter/d;->aZV:Landroid/util/SparseArray;
 
     invoke-virtual {v2}, Landroid/util/SparseArray;->size()I
 
@@ -261,18 +261,18 @@
     :cond_5
     iget v1, v0, Lcom/tencent/mm/booter/d;->currentIndex:I
 
-    iget v2, v0, Lcom/tencent/mm/booter/d;->bmv:I
+    iget v2, v0, Lcom/tencent/mm/booter/d;->bab:I
 
     if-ne v1, v2, :cond_6
 
     const/4 v1, -0x1
 
-    iput v1, v0, Lcom/tencent/mm/booter/d;->bmv:I
+    iput v1, v0, Lcom/tencent/mm/booter/d;->bab:I
 
     goto/16 :goto_0
 
     :cond_6
-    invoke-virtual {v0}, Lcom/tencent/mm/booter/d;->mF()Lcom/tencent/mm/protocal/b/aeo;
+    invoke-virtual {v0}, Lcom/tencent/mm/booter/d;->kS()Lcom/tencent/mm/protocal/b/afj;
 
     move-result-object v1
 
@@ -287,7 +287,7 @@
     goto/16 :goto_0
 
     :cond_7
-    invoke-virtual {v0}, Lcom/tencent/mm/booter/d;->mK()Lcom/tencent/mm/model/u;
+    invoke-virtual {v0}, Lcom/tencent/mm/booter/d;->kX()Lcom/tencent/mm/model/u;
 
     goto/16 :goto_0
 .end method

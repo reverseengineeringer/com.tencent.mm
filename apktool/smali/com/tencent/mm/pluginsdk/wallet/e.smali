@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static fTs:I
+.field private static gcc:I
 
-.field private static ibR:I
+.field private static ivO:I
 
 
 # direct methods
@@ -17,30 +17,30 @@
     const/4 v0, -0x1
 
     .line 11
-    sput v0, Lcom/tencent/mm/pluginsdk/wallet/e;->fTs:I
+    sput v0, Lcom/tencent/mm/pluginsdk/wallet/e;->gcc:I
 
     .line 12
-    sput v0, Lcom/tencent/mm/pluginsdk/wallet/e;->ibR:I
+    sput v0, Lcom/tencent/mm/pluginsdk/wallet/e;->ivO:I
 
     return-void
 .end method
 
-.method public static aML()I
+.method public static aQu()I
     .locals 1
 
     .prologue
     .line 27
-    sget v0, Lcom/tencent/mm/pluginsdk/wallet/e;->ibR:I
+    sget v0, Lcom/tencent/mm/pluginsdk/wallet/e;->ivO:I
 
     return v0
 .end method
 
-.method public static oO(I)V
+.method public static qB(I)V
     .locals 0
 
     .prologue
     .line 23
-    sput p0, Lcom/tencent/mm/pluginsdk/wallet/e;->ibR:I
+    sput p0, Lcom/tencent/mm/pluginsdk/wallet/e;->ivO:I
 
     .line 24
     return-void

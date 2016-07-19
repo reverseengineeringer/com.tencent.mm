@@ -2,13 +2,13 @@ package com.tencent.mm.ui.tools;
 
 public abstract interface l$a
 {
-  public abstract void bge();
+  public abstract void blO();
   
-  public abstract void bgf();
+  public abstract void blP();
   
-  public abstract void bgg();
+  public abstract void blQ();
   
-  public abstract void bgh();
+  public abstract void blR();
 }
 
 /* Location:

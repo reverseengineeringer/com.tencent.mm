@@ -3,7 +3,7 @@ package android.support.v4.view;
 import java.util.Comparator;
 
 final class ViewPager$1
-  implements Comparator
+  implements Comparator<ViewPager.b>
 {}
 
 /* Location:

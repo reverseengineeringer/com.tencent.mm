@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/tools/NewTaskUI;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/tools/NewTaskUI;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lxl:Lcom/tencent/mm/ui/tools/NewTaskUI;
+.field final synthetic lXZ:Lcom/tencent/mm/ui/tools/NewTaskUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 136
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$3;->lxl:Lcom/tencent/mm/ui/tools/NewTaskUI;
+    .line 135
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$3;->lXZ:Lcom/tencent/mm/ui/tools/NewTaskUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,22 +40,22 @@
     .locals 1
 
     .prologue
-    .line 140
-    sget-object v0, Lcom/tencent/mm/ui/tools/NewTaskUI;->lxi:Lcom/tencent/mm/ui/tools/NewTaskUI;
+    .line 139
+    sget-object v0, Lcom/tencent/mm/ui/tools/NewTaskUI;->lXW:Lcom/tencent/mm/ui/tools/NewTaskUI;
 
     if-eqz v0, :cond_0
 
-    .line 141
+    .line 140
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/ui/tools/NewTaskUI;->lxi:Lcom/tencent/mm/ui/tools/NewTaskUI;
+    sput-object v0, Lcom/tencent/mm/ui/tools/NewTaskUI;->lXW:Lcom/tencent/mm/ui/tools/NewTaskUI;
 
-    .line 142
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$3;->lxl:Lcom/tencent/mm/ui/tools/NewTaskUI;
+    .line 141
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$3;->lXZ:Lcom/tencent/mm/ui/tools/NewTaskUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/NewTaskUI;->finish()V
 
-    .line 144
+    .line 143
     :cond_0
     return-void
 .end method

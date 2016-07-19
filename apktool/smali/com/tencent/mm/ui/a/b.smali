@@ -6,7 +6,16 @@
 # instance fields
 .field private final TAG:Ljava/lang/String;
 
-.field private krC:Ljava/util/List;
+.field private kQL:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -18,7 +27,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 21
-    const-string/jumbo v0, "!44@/B4Tb64lLpIdP5qD4tOAzJ8XwC8LkQH47n23jHVKHks="
+    const-string/jumbo v0, "MicroMsg.Accessibility.Tool"
 
     iput-object v0, p0, Lcom/tencent/mm/ui/a/b;->TAG:Ljava/lang/String;
 
@@ -27,7 +36,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/a/b;->krC:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/a/b;->kQL:Ljava/util/List;
 
     .line 25
     return-void
@@ -35,12 +44,12 @@
 
 
 # virtual methods
-.method public final Gn(Ljava/lang/String;)Lcom/tencent/mm/ui/a/b;
+.method public final IC(Ljava/lang/String;)Lcom/tencent/mm/ui/a/b;
     .locals 1
 
     .prologue
     .line 29
-    iget-object v0, p0, Lcom/tencent/mm/ui/a/b;->krC:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/a/b;->kQL:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -48,14 +57,14 @@
     return-object p0
 .end method
 
-.method public final an(Landroid/view/View;)V
+.method public final ar(Landroid/view/View;)V
     .locals 4
 
     .prologue
     .line 37
     if-eqz p1, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/a/b;->krC:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/a/b;->kQL:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -67,7 +76,7 @@
     const-string/jumbo v0, ""
 
     .line 43
-    iget-object v1, p0, Lcom/tencent/mm/ui/a/b;->krC:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/a/b;->kQL:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 

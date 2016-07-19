@@ -1,13 +1,13 @@
 package com.tencent.mm.plugin.ext.provider;
 
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah.a;
 
 final class ExtControlProviderNearBy$1
-  implements af.a
+  implements ah.a
 {
-  public final boolean lj()
+  public final boolean jK()
   {
-    ExtControlProviderNearBy.CP();
+    ExtControlProviderNearBy.Da();
     return false;
   }
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/adj" android:background="@color/ow" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/adk" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/emoji_store_v2_designer_header_item" />
+    <TextView android:textSize="@dimen/cn" android:id="@id/adl" android:paddingLeft="@dimen/i7" android:paddingRight="@dimen/i7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/i7" style="@style/MMFontTitleInList" />
+    <TextView android:textSize="14.0sp" android:textColor="#ff6c6c6c" android:id="@id/adm" android:paddingTop="@dimen/j8" android:paddingBottom="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/i7" android:layout_marginRight="@dimen/i7" android:lineSpacingMultiplier="1.1" />
+    <View android:id="@id/adn" android:background="@drawable/dl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/i7" android:layout_marginRight="@dimen/i7" />
+    <include android:id="@id/adf" layout="@layout/emoji_store_v2_designer_bar" />
+    <include android:id="@id/ado" layout="@layout/emoji_store_v2_designer_product_bar" />
+    <TextView android:id="@id/adp" android:background="@color/lf" android:paddingLeft="@dimen/i7" android:paddingTop="@dimen/hi" android:paddingRight="@dimen/i7" android:paddingBottom="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ag5" style="@style/MMPreference.Catagory" />
+</LinearLayout>

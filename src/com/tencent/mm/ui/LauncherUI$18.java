@@ -1,74 +1,46 @@
 package com.tencent.mm.ui;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
-import android.net.Uri;
-import com.tencent.mm.ar.c;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.protocal.GeneralControlWrapper;
-import com.tencent.mm.protocal.JsapiPermissionWrapper;
-import com.tencent.mm.sdk.platformtools.p;
+import android.annotation.TargetApi;
+import android.graphics.Rect;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.a;
+import android.view.View;
+import android.view.View.OnApplyWindowInsetsListener;
+import android.view.ViewGroup;
+import android.view.WindowInsets;
+import com.tencent.mm.compatible.util.c;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class LauncherUI$18
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  LauncherUI$18(LauncherUI paramLauncherUI) {}
+  LauncherUI$18(LauncherUI paramLauncherUI, int[] paramArrayOfInt, LauncherUI.FitSystemWindowLayoutView paramFitSystemWindowLayoutView, ViewGroup paramViewGroup) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final void run()
   {
-    h.fUJ.g(11584, new Object[] { Integer.valueOf(1) });
-    paramDialogInterface = p.g(knl.getIntent(), "LauncherUI.Show.Update.Url");
-    if (com.tencent.mm.platformtools.t.kz(paramDialogInterface))
-    {
-      paramDialogInterface = new Intent("android.intent.action.VIEW", Uri.parse("https://play.google.com/store/apps/details?id=com.tencent.mm"));
-      paramDialogInterface.setClassName("com.android.vending", "com.android.vending.AssetBrowserActivity");
-      paramDialogInterface.setFlags(268435456);
-      try
-      {
-        knl.startActivity(paramDialogInterface);
-        return;
-      }
-      catch (Exception paramDialogInterface)
-      {
-        paramDialogInterface = new Intent();
-        localObject = com.tencent.mm.sdk.platformtools.t.dn(knl);
-        if (!com.tencent.mm.platformtools.t.kz((String)localObject)) {
-          break label178;
-        }
-      }
-      paramDialogInterface.putExtra("rawUrl", "http://www.wechat.com/en/");
-      for (;;)
-      {
-        paramDialogInterface.putExtra("showShare", false);
-        paramDialogInterface.putExtra("show_bottom", false);
-        paramDialogInterface.putExtra("needRedirect", false);
-        paramDialogInterface.putExtra("neverGetA8Key", true);
-        paramDialogInterface.putExtra("hardcode_jspermission", JsapiPermissionWrapper.iUp);
-        paramDialogInterface.putExtra("hardcode_general_ctrl", GeneralControlWrapper.iUm);
-        c.c(knl, "webview", ".ui.tools.WebViewUI", paramDialogInterface);
-        return;
-        label178:
-        if ((((String)localObject).equals("zh_TW")) || (((String)localObject).equals("zh_HK"))) {
-          paramDialogInterface.putExtra("rawUrl", "http://www.wechat.com/");
-        } else if (((String)localObject).equals("ja")) {
-          paramDialogInterface.putExtra("rawUrl", "http://www.wechat.com/ja/");
-        } else if (((String)localObject).equals("ko")) {
-          paramDialogInterface.putExtra("rawUrl", "http://www.wechat.com/ko/");
-        } else {
-          paramDialogInterface.putExtra("rawUrl", "http://www.wechat.com/en/");
-        }
-      }
+    kMs.iW.aP().getCustomView().getLocationInWindow(kMx);
+    int i = kMx[1];
+    if (i > 0) {
+      LauncherUI.a(kMs, kMy, i, new Rect(0, i, 0, 0), kMz);
     }
-    Object localObject = new Intent();
-    ((Intent)localObject).putExtra("rawUrl", paramDialogInterface);
-    ((Intent)localObject).putExtra("showShare", false);
-    ((Intent)localObject).putExtra("show_bottom", false);
-    ((Intent)localObject).putExtra("needRedirect", false);
-    ((Intent)localObject).putExtra("neverGetA8Key", true);
-    ((Intent)localObject).putExtra("hardcode_jspermission", JsapiPermissionWrapper.iUp);
-    ((Intent)localObject).putExtra("hardcode_general_ctrl", GeneralControlWrapper.iUm);
-    c.c(knl, "webview", ".ui.tools.WebViewUI", (Intent)localObject);
+    while (!c.cm(20)) {
+      return;
+    }
+    kMy.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener()
+    {
+      @TargetApi(20)
+      public final WindowInsets onApplyWindowInsets(View paramAnonymousView, WindowInsets paramAnonymousWindowInsets)
+      {
+        if (paramAnonymousWindowInsets == null) {
+          return paramAnonymousWindowInsets;
+        }
+        v.i("MicroMsg.LauncherUI", "OnApplyWindowInsetsListener %s", new Object[] { paramAnonymousWindowInsets });
+        paramAnonymousWindowInsets.consumeSystemWindowInsets();
+        LauncherUI.a(kMs, kMy, paramAnonymousWindowInsets.getSystemWindowInsetTop(), new Rect(paramAnonymousWindowInsets.getSystemWindowInsetLeft(), paramAnonymousWindowInsets.getSystemWindowInsetTop(), paramAnonymousWindowInsets.getSystemWindowInsetRight(), paramAnonymousWindowInsets.getSystemWindowInsetBottom()), kMz);
+        return paramAnonymousWindowInsets;
+      }
+    });
   }
 }
 

@@ -1,54 +1,59 @@
 package com.tencent.mm.protocal.b;
 
 public final class aly
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public String jHw;
-  public boolean jHx;
+  public int jaq;
+  public int kdv;
+  public int kfA;
+  public int kfy;
   
-  public final aly Cr(String paramString)
+  protected final int a(int paramInt, Object... paramVarArgs)
   {
-    jHw = paramString;
-    jHx = true;
-    return this;
-  }
-  
-  public final void a(a.a.a.c.a parama)
-  {
-    if (jHx) {
-      parama.d(1, jHw);
-    }
-  }
-  
-  public final boolean a(a.a.a.a.a parama, com.tencent.mm.at.a parama1, int paramInt)
-  {
-    parama1 = (aly)parama1;
-    switch (paramInt)
+    if (paramInt == 0)
     {
-    default: 
-      return false;
+      paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
+      paramVarArgs.cw(1, kdv);
+      paramVarArgs.cw(2, kfA);
+      paramVarArgs.cw(3, kfy);
+      paramVarArgs.cw(4, jaq);
+      return 0;
     }
-    parama1.Cr(maU.readString());
-    return true;
-  }
-  
-  public final int kn()
-  {
-    int i = 0;
-    if (jHx) {
-      i = a.a.a.b.b.a.e(1, jHw) + 0;
+    if (paramInt == 1) {
+      return a.a.a.a.cu(1, kdv) + 0 + a.a.a.a.cu(2, kfA) + a.a.a.a.cu(3, kfy) + a.a.a.a.cu(4, jaq);
     }
-    return i + 0;
-  }
-  
-  public final byte[] toByteArray()
-  {
-    return super.toByteArray();
-  }
-  
-  public final String toString()
-  {
-    return jHw;
+    if (paramInt == 2)
+    {
+      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+      for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
+        if (!super.a(paramVarArgs, this, paramInt)) {
+          paramVarArgs.bve();
+        }
+      }
+      return 0;
+    }
+    if (paramInt == 3)
+    {
+      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+      aly localaly = (aly)paramVarArgs[1];
+      switch (((Integer)paramVarArgs[2]).intValue())
+      {
+      default: 
+        return -1;
+      case 1: 
+        kdv = mMY.id();
+        return 0;
+      case 2: 
+        kfA = mMY.id();
+        return 0;
+      case 3: 
+        kfy = mMY.id();
+        return 0;
+      }
+      jaq = mMY.id();
+      return 0;
+    }
+    return -1;
   }
 }
 

@@ -11,9 +11,9 @@ final class FindMContactInviteUI$3
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    lrv.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
-    FindMContactInviteUI.n(lrv);
-    lrv.finish();
+    lRZ.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
+    FindMContactInviteUI.n(lRZ);
+    lRZ.finish();
   }
 }
 

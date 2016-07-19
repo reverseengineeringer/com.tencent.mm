@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/t5" android:padding="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/c3e" android:background="@drawable/xr" android:layout_width="60.0dip" android:layout_height="60.0dip" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j8">
+            <TextView android:textColor="@color/ak" android:id="@id/c3f" android:layout_marginBottom="@dimen/cp" style="@style/ChattingUIFMessageText" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/h4" android:id="@id/c3g" android:paddingRight="2.0dip" android:visibility="visible" style="@style/ChattingUIFMessageText" />
+                <TextView android:textSize="@dimen/h4" android:textColor="#ff609c01" android:id="@id/c3h" style="@style/ChattingUIFMessageText" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/h4" android:textColor="@color/ak" android:paddingLeft="@dimen/j8" android:paddingTop="@dimen/j8" android:paddingRight="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/i7" android:text="@string/cap" />
+</LinearLayout>

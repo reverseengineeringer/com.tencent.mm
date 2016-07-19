@@ -10,8 +10,8 @@ final class InviteFacebookFriendsUI$8
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    coP.age();
-    coP.finish();
+    ckd.aiI();
+    ckd.finish();
     return true;
   }
 }

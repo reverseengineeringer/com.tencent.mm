@@ -10,7 +10,7 @@ final class c$a$1
   
   public final void onClick(View paramView)
   {
-    kzC.kv();
+    kYJ.iY();
   }
 }
 

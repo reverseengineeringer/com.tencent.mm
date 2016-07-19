@@ -11,15 +11,15 @@ final class ContactRemarkInfoModUI$6$1
   
   public final void run()
   {
-    if (!dak)
+    if (!cYQ)
     {
-      g.ba(ljW.ljV, ljW.ljV.getString(2131427526));
-      ContactRemarkInfoModUI.u(ljW.ljV).setVisibility(0);
-      ContactRemarkInfoModUI.v(ljW.ljV).setVisibility(8);
-      ContactRemarkInfoModUI.w(ljW.ljV).setVisibility(8);
+      g.aZ(lKh.lKg, lKh.lKg.getString(2131230907));
+      ContactRemarkInfoModUI.u(lKh.lKg).setVisibility(0);
+      ContactRemarkInfoModUI.v(lKh.lKg).setVisibility(8);
+      ContactRemarkInfoModUI.w(lKh.lKg).setVisibility(8);
       return;
     }
-    ContactRemarkInfoModUI.x(ljW.ljV);
+    ContactRemarkInfoModUI.x(lKh.lKg);
   }
 }
 

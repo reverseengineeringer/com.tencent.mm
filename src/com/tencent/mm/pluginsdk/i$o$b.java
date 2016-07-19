@@ -1,25 +1,25 @@
 package com.tencent.mm.pluginsdk;
 
-import com.tencent.mm.protocal.b.add;
-import com.tencent.mm.protocal.b.arm;
+import com.tencent.mm.protocal.b.adw;
+import com.tencent.mm.protocal.b.ary;
 
 public abstract interface i$o$b
 {
-  public abstract String E(add paramadd);
+  public abstract String E(adw paramadw);
   
-  public abstract boolean V(String paramString, boolean paramBoolean);
+  public abstract boolean a(String paramString, ary paramary);
   
-  public abstract arm W(String paramString, boolean paramBoolean);
+  public abstract void aCP();
   
-  public abstract boolean a(String paramString, arm paramarm);
+  public abstract void aCQ();
   
-  public abstract void aAc();
+  public abstract boolean ab(String paramString, boolean paramBoolean);
   
-  public abstract void aAd();
+  public abstract ary ac(String paramString, boolean paramBoolean);
   
-  public abstract arm b(String paramString, arm paramarm);
+  public abstract ary b(String paramString, ary paramary);
   
-  public abstract arm vs(String paramString);
+  public abstract ary wE(String paramString);
 }
 
 /* Location:

@@ -1,56 +1,49 @@
 package com.tencent.mm.protocal.b;
 
+import a.a.a.b;
 import java.util.LinkedList;
 
 public final class mc
-  extends ali
+  extends com.tencent.mm.ax.a
 {
-  public int iWm;
-  public String jjR;
-  public int jjS;
-  public long jjT;
+  public ami jzd;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (jGS != null)
+      if (jzd == null) {
+        throw new b("Not all required fields were included: RandomEncryKey");
+      }
+      if (jzd != null)
       {
-        paramVarArgs.cj(1, jGS.kn());
-        jGS.a(paramVarArgs);
+        paramVarArgs.cx(1, jzd.iO());
+        jzd.a(paramVarArgs);
       }
-      paramVarArgs.ci(2, jjS);
-      paramVarArgs.A(3, jjT);
-      if (jjR != null) {
-        paramVarArgs.d(4, jjR);
-      }
-      paramVarArgs.ci(5, iWm);
       return 0;
     }
     if (paramInt == 1) {
-      if (jGS == null) {
-        break label441;
+      if (jzd == null) {
+        break label305;
       }
     }
-    label441:
-    for (paramInt = a.a.a.a.ch(1, jGS.kn()) + 0;; paramInt = 0)
+    label305:
+    for (paramInt = a.a.a.a.cv(1, jzd.iO()) + 0;; paramInt = 0)
     {
-      int i = paramInt + a.a.a.a.cg(2, jjS) + a.a.a.a.z(3, jjT);
-      paramInt = i;
-      if (jjR != null) {
-        paramInt = i + a.a.a.b.b.a.e(4, jjR);
-      }
-      return paramInt + a.a.a.a.cg(5, iWm);
+      return paramInt;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = ali.a(paramVarArgs); paramInt > 0; paramInt = ali.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
-        break;
+        if (jzd != null) {
+          break;
+        }
+        throw new b("Not all required fields were included: RandomEncryKey");
       }
       if (paramInt == 3)
       {
@@ -61,31 +54,20 @@ public final class mc
         {
         default: 
           return -1;
-        case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-          i = paramVarArgs.size();
-          paramInt = 0;
-          while (paramInt < i)
-          {
-            Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new dc();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-            for (boolean bool = true; bool; bool = ((dc)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, ali.a((a.a.a.a.a)localObject2))) {}
-            jGS = ((dc)localObject1);
-            paramInt += 1;
-          }
-        case 2: 
-          jjS = maU.jC();
-          return 0;
-        case 3: 
-          jjT = maU.jD();
-          return 0;
-        case 4: 
-          jjR = maU.readString();
-          return 0;
         }
-        iWm = maU.jC();
-        return 0;
+        paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+        int i = paramVarArgs.size();
+        paramInt = 0;
+        while (paramInt < i)
+        {
+          Object localObject2 = (byte[])paramVarArgs.get(paramInt);
+          localObject1 = new ami();
+          localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+          for (boolean bool = true; bool; bool = ((ami)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, com.tencent.mm.ax.a.a((a.a.a.a.a)localObject2))) {}
+          jzd = ((ami)localObject1);
+          paramInt += 1;
+        }
+        break;
       }
       return -1;
     }

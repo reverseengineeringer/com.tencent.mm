@@ -7,7 +7,7 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "!56@/B4Tb64lLpKbvaoYwgBif4k4YzGLjyyWXGsruMsGSha3hI/nuh+94w=="
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.SDK.WXEmojiSharedObject"
 
 
 # instance fields
@@ -86,11 +86,11 @@
 
     .line 66
     :cond_0
-    const-string/jumbo v0, "!56@/B4Tb64lLpKbvaoYwgBif4k4YzGLjyyWXGsruMsGSha3hI/nuh+94w=="
+    const-string/jumbo v0, "MicroMsg.SDK.WXEmojiSharedObject"
 
     const-string/jumbo v1, "checkArgs fail, packageid or thumburl is invalid"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 67
     const/4 v0, 0x0

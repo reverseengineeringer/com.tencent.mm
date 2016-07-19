@@ -14,9 +14,9 @@ final class MobileInputUI$7
   public final void onClick(View paramView)
   {
     paramView = new Intent();
-    paramView.putExtra("country_name", kyc.bUu);
-    paramView.putExtra("couttry_code", kyc.aJD);
-    a.coa.b(paramView, kyc);
+    paramView.putExtra("country_name", kXj.bNV);
+    paramView.putExtra("couttry_code", kXj.avX);
+    a.cjo.b(paramView, kXj);
   }
 }
 

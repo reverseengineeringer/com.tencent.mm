@@ -1,25 +1,27 @@
 package com.tencent.mm.ui.conversation;
 
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.t.b;
-import com.tencent.mm.t.c.a;
-import com.tencent.mm.t.c.a.b;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import com.tencent.mm.v.b;
 
 final class BizChatConversationUI$a$13
-  implements c.a
+  implements AdapterView.OnItemClickListener
 {
   BizChatConversationUI$a$13(BizChatConversationUI.a parama) {}
   
-  public final void a(c.a.b paramb)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    if ((paramb != null) && (bHc != null) && (BizChatConversationUI.a.JT().equals(bHc.field_brandUserName)))
+    if (paramInt < BizChatConversationUI.a.e(lOo).getHeaderViewsCount())
     {
-      u.i("!44@/B4Tb64lLpKy3Chyc6XXOXXrN+2WuSA5l4/ktVQL7f8=", "bizChatExtension bizChatConv change");
-      BizChatConversationUI.a.b(lnN).dS(bHb);
-      if (lnN.klz) {
-        BizChatConversationUI.a.b(lnN).Gk();
+      if (paramInt == 0) {
+        BizChatConversationUI.a.g(lOo);
       }
+      return;
     }
+    int i = BizChatConversationUI.a.e(lOo).getHeaderViewsCount();
+    paramAdapterView = (b)BizChatConversationUI.a.b(lOo).getItem(paramInt - i);
+    BizChatConversationUI.a.b(lOo, field_bizChatId);
   }
 }
 

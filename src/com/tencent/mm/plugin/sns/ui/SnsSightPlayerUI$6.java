@@ -10,7 +10,7 @@ final class SnsSightPlayerUI$6
   
   public final void onClick(View paramView)
   {
-    his.aBF();
+    hxh.aEu();
   }
 }
 

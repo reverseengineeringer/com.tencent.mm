@@ -4,9 +4,9 @@ import android.widget.TextView;
 
 final class e$a
 {
-  TextView czT;
-  TextView czU;
-  TextView eEv;
+  TextView cwP;
+  TextView cwQ;
+  TextView eKK;
 }
 
 /* Location:

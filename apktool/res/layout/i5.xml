@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/a7h" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/hb" android:minHeight="@dimen/hs" android:layout_weight="1.0">
+        <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:ellipsize="end" android:layout_gravity="center" android:id="@id/a7f" android:text="message" android:maxLines="6" style="@style/ConfirmDialogMessage" />
+            </LinearLayout>
+        </ScrollView>
+        <TextView android:id="@id/a7g" android:text="source" style="@style/ConfirmDialogSource" />
+        <com.tencent.mm.ui.base.PasterEditText android:id="@id/a7d" style="@style/ConfirmDialogEditText" />
+    </LinearLayout>
+</LinearLayout>

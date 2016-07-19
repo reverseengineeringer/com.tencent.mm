@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract aod()V
+.method public abstract aqV()V
 .end method
 
-.method public abstract jL(I)V
+.method public abstract kY(I)V
 .end method

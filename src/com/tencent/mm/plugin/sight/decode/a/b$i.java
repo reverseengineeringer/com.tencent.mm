@@ -2,35 +2,35 @@ package com.tencent.mm.plugin.sight.decode.a;
 
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnErrorListener;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class b$i
   implements Runnable
 {
-  double gxF = -1.0D;
-  MediaPlayer gxV;
+  double gEd = -1.0D;
+  MediaPlayer gEs;
   int type;
   
   private b$i(b paramb) {}
   
-  private void avS()
+  private void ayn()
   {
-    u.i("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "stopPlayer");
+    v.i("MicroMsg.SightPlayController", "stopPlayer");
     try
     {
-      if (gxV != null)
+      if (gEs != null)
       {
-        gxV.stop();
-        gxV.release();
-        gxV = null;
+        gEs.stop();
+        gEs.release();
+        gEs = null;
       }
       return;
     }
     catch (Exception localException)
     {
-      u.printErrStackTrace("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", localException, "stop play sound error: %s", new Object[] { localException.getMessage() });
-      gxV = null;
+      v.printErrStackTrace("MicroMsg.SightPlayController", localException, "stop play sound error: %s", new Object[] { localException.getMessage() });
+      gEs = null;
     }
   }
   
@@ -41,7 +41,7 @@ final class b$i
     {
     default: 
       str = "unknown";
-      u.i("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "do play sound, operation %s", new Object[] { str });
+      v.i("MicroMsg.SightPlayController", "do play sound, operation %s", new Object[] { str });
       switch (type)
       {
       }
@@ -60,70 +60,70 @@ final class b$i
       break;
       str = "seek";
       break;
-      avS();
-      if (!ay.kz(b.a(gxL)))
+      ayn();
+      if (!be.kf(b.a(gEj)))
       {
         try
         {
-          gxV = new MediaPlayer();
-          gxV.setDisplay(null);
-          gxV.reset();
-          gxV.setDataSource(b.a(gxL));
-          gxV.setAudioStreamType(3);
-          gxV.setOnErrorListener(new MediaPlayer.OnErrorListener()
+          gEs = new MediaPlayer();
+          gEs.setDisplay(null);
+          gEs.reset();
+          gEs.setDataSource(b.a(gEj));
+          gEs.setAudioStreamType(3);
+          gEs.setOnErrorListener(new MediaPlayer.OnErrorListener()
           {
             public final boolean onError(MediaPlayer paramAnonymousMediaPlayer, int paramAnonymousInt1, int paramAnonymousInt2)
             {
-              u.e("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "on error: play %s ERROR!! %d %d", new Object[] { b.a(gxL), Integer.valueOf(paramAnonymousInt1), Integer.valueOf(paramAnonymousInt2) });
-              gxL.clear();
-              if (b.b(gxL) != null) {
-                b.b(gxL).a(gxL, -1);
+              v.e("MicroMsg.SightPlayController", "on error: play %s ERROR!! %d %d", new Object[] { b.a(gEj), Integer.valueOf(paramAnonymousInt1), Integer.valueOf(paramAnonymousInt2) });
+              gEj.clear();
+              if (b.b(gEj) != null) {
+                b.b(gEj).d(gEj, -1);
               }
               return true;
             }
           });
-          gxV.prepare();
-          gxV.start();
+          gEs.prepare();
+          gEs.start();
           return;
         }
         catch (Exception localException1)
         {
-          u.printErrStackTrace("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", localException1, "play sound error: %s", new Object[] { localException1.getMessage() });
-          u.e("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "on Exception: play %s ERROR!!", new Object[] { b.a(gxL) });
-          gxL.clear();
+          v.printErrStackTrace("MicroMsg.SightPlayController", localException1, "play sound error: %s", new Object[] { localException1.getMessage() });
+          v.e("MicroMsg.SightPlayController", "on Exception: play %s ERROR!!", new Object[] { b.a(gEj) });
+          gEj.clear();
         }
-        if (b.b(gxL) != null)
+        if (b.b(gEj) != null)
         {
-          b.b(gxL).a(gxL, -1);
+          b.b(gEj).d(gEj, -1);
           return;
-          avS();
+          ayn();
           return;
           try
           {
-            if ((gxV == null) || (!gxV.isPlaying())) {
+            if ((gEs == null) || (!gEs.isPlaying())) {
               continue;
             }
-            gxV.pause();
+            gEs.pause();
             return;
           }
           catch (Exception localException2)
           {
-            u.printErrStackTrace("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", localException2, "pause sound error: %s", new Object[] { localException2.getMessage() });
-            avS();
+            v.printErrStackTrace("MicroMsg.SightPlayController", localException2, "pause sound error: %s", new Object[] { localException2.getMessage() });
+            ayn();
             return;
           }
           try
           {
-            if (gxV != null)
+            if (gEs != null)
             {
-              gxV.start();
+              gEs.start();
               return;
             }
           }
           catch (Exception localException3)
           {
-            u.printErrStackTrace("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", localException3, "pause sound error: %s", new Object[] { localException3.getMessage() });
-            avS();
+            v.printErrStackTrace("MicroMsg.SightPlayController", localException3, "pause sound error: %s", new Object[] { localException3.getMessage() });
+            ayn();
             return;
           }
         }
@@ -131,13 +131,13 @@ final class b$i
     }
     try
     {
-      u.i("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "soundplayer seek %f", new Object[] { Double.valueOf(gxF) });
-      gxV.seekTo((int)(gxF * 1000.0D));
+      v.i("MicroMsg.SightPlayController", "soundplayer seek %f", new Object[] { Double.valueOf(gEd) });
+      gEs.seekTo((int)(gEd * 1000.0D));
       return;
     }
     catch (Exception localException4)
     {
-      u.printErrStackTrace("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", localException4, "seek sound error: %s", new Object[] { localException4.getMessage() });
+      v.printErrStackTrace("MicroMsg.SightPlayController", localException4, "seek sound error: %s", new Object[] { localException4.getMessage() });
     }
   }
 }

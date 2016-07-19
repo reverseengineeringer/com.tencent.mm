@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingLeft="@dimen/hb" android:paddingTop="@dimen/he" android:paddingRight="@dimen/hb" android:paddingBottom="@dimen/hb" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@drawable/ed" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.tencent.mm.ui.base.MMClearEditText android:id="@id/byh" android:background="@null" android:paddingLeft="85.0dip" android:hint="@string/bzb" style="@style/MMLineEditText" />
+        <TextView android:textSize="@dimen/i8" android:textColor="@color/ak" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:background="@drawable/jd" android:paddingLeft="10.0dip" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:text="@string/bza" android:singleLine="false" style="@style/MMLineEditText" />
+    </FrameLayout>
+    <FrameLayout android:background="@drawable/ed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hb">
+        <com.tencent.mm.ui.base.MMClearEditText android:id="@id/byi" android:background="@null" android:paddingLeft="85.0dip" android:hint="@string/bzi" android:imeOptions="actionNext" style="@style/MMLineEditPass" />
+        <TextView android:textSize="@dimen/i8" android:textColor="@color/ak" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:background="@drawable/jd" android:paddingLeft="10.0dip" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:text="@string/bzh" android:singleLine="false" style="@style/MMLineEditText" />
+    </FrameLayout>
+    <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_marginTop="@dimen/hb" style="@style/MMLine">
+        <CheckBox android:textSize="@dimen/ja" android:textColor="@color/ak" android:id="@id/bjx" android:checked="true" android:text="@string/b_o" style="@style/RegUICheckBox" />
+        <Button android:textSize="@dimen/ja" android:id="@id/bjy" android:paddingLeft="5.0dip" android:paddingRight="0.0dip" android:paddingBottom="5.0dip" android:text="@string/b_q" style="@style/RegUIHyperText" />
+    </LinearLayout>
+    <Button android:id="@id/a6d" android:layout_marginTop="@dimen/hb" android:text="@string/fu" style="@style/MMSolidGreenLargeButton" />
+    <Button android:layout_gravity="bottom|center|left" android:id="@id/b4o" android:paddingLeft="0.0dip" android:visibility="gone" android:layout_marginLeft="10.0dip" android:text="@string/bbp" style="@style/RegUIHyperText" />
+</LinearLayout>

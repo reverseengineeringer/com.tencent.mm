@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.chat;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.d.a.an;
+import com.tencent.mm.e.a.ao;
 import com.tencent.mm.sdk.c.a;
 
 final class ChatFooter$4
@@ -12,8 +12,8 @@ final class ChatFooter$4
   
   public final void onClick(View paramView)
   {
-    paramView = new an();
-    a.jUF.j(paramView);
+    paramView = new ao();
+    a.kug.y(paramView);
   }
 }
 

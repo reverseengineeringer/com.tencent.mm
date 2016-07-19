@@ -18,7 +18,7 @@
 # instance fields
 .field private context:Landroid/content/Context;
 
-.field private lrj:Lcom/tencent/mm/ui/friend/a$a;
+.field private lRN:Lcom/tencent/mm/ui/friend/a$a;
 
 
 # direct methods
@@ -33,67 +33,67 @@
     iput-object p1, p0, Lcom/tencent/mm/ui/friend/a;->context:Landroid/content/Context;
 
     .line 24
-    iput-object p2, p0, Lcom/tencent/mm/ui/friend/a;->lrj:Lcom/tencent/mm/ui/friend/a$a;
+    iput-object p2, p0, Lcom/tencent/mm/ui/friend/a;->lRN:Lcom/tencent/mm/ui/friend/a$a;
 
     .line 25
     return-void
 .end method
 
-.method static synthetic R(Lcom/tencent/mm/storage/k;)V
+.method static synthetic S(Lcom/tencent/mm/storage/k;)V
     .locals 2
 
     .prologue
     .line 15
-    iget-wide v0, p0, Lcom/tencent/mm/h/a;->bvi:J
+    iget-wide v0, p0, Lcom/tencent/mm/i/a;->bjS:J
 
     long-to-int v0, v0
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/tencent/mm/storage/q;->N(Lcom/tencent/mm/storage/k;)I
 
-    iget-object v0, p0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/storage/q;->Ep(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/storage/q;->GD(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
 
     move-result-object p0
 
     :cond_0
-    iget-wide v0, p0, Lcom/tencent/mm/h/a;->bvi:J
+    iget-wide v0, p0, Lcom/tencent/mm/i/a;->bjS:J
 
     long-to-int v0, v0
 
     if-gtz v0, :cond_2
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpKN6K/THdLZycGl9nHe/htOLw9Mh8NezV0="
+    const-string/jumbo v0, "MicroMsg.AddContactListener"
 
     const-string/jumbo v1, "addContact : insert contact failed"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     :goto_0
@@ -110,7 +110,7 @@
 
     .prologue
     .line 15
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/a;->lrj:Lcom/tencent/mm/ui/friend/a$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/a;->lRN:Lcom/tencent/mm/ui/friend/a$a;
 
     return-object v0
 .end method
@@ -132,28 +132,28 @@
     iget-object v1, v0, Lcom/tencent/mm/ui/friend/a$b;->username:Ljava/lang/String;
 
     .line 31
-    iget v2, v0, Lcom/tencent/mm/ui/friend/a$b;->fvF:I
+    iget v2, v0, Lcom/tencent/mm/ui/friend/a$b;->fEK:I
 
     .line 32
     iget v0, v0, Lcom/tencent/mm/ui/friend/a$b;->position:I
 
     .line 34
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v3}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v3
 
-    invoke-virtual {v3, v1}, Lcom/tencent/mm/storage/q;->Ep(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v3, v1}, Lcom/tencent/mm/storage/q;->GD(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
 
     move-result-object v3
 
     .line 35
-    iget-object v4, v3, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v4, v3, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v4
 

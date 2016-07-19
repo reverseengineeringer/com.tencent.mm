@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field esD:Landroid/widget/ImageView;
+.field exW:Landroid/widget/ImageView;
 
-.field esE:Landroid/widget/TextView;
+.field exX:Landroid/widget/TextView;
 
-.field esG:Landroid/widget/TextView;
+.field exZ:Landroid/widget/TextView;
 
-.field final synthetic iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+.field final synthetic jos:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
-.field iRk:Landroid/widget/TextView;
+.field jou:Landroid/widget/TextView;
 
-.field iRl:Landroid/widget/RadioButton;
+.field jov:Landroid/widget/RadioButton;
 
 
 # direct methods
@@ -34,12 +34,12 @@
 
     .prologue
     .line 917
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$b;->iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$b;->jos:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 918
-    const v0, 0x7f070f0b
+    const v0, 0x7f100126
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -47,10 +47,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$b;->esD:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$b;->exW:Landroid/widget/ImageView;
 
     .line 919
-    const v0, 0x7f070895
+    const v0, 0x7f100127
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -58,10 +58,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$b;->esE:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$b;->exX:Landroid/widget/TextView;
 
     .line 920
-    const v0, 0x7f070f0c
+    const v0, 0x7f100128
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -69,10 +69,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$b;->esG:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$b;->exZ:Landroid/widget/TextView;
 
     .line 921
-    const v0, 0x7f070f0d
+    const v0, 0x7f100129
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -80,10 +80,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$b;->iRk:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$b;->jou:Landroid/widget/TextView;
 
     .line 922
-    const v0, 0x7f070f0e
+    const v0, 0x7f10012a
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -91,7 +91,7 @@
 
     check-cast v0, Landroid/widget/RadioButton;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$b;->iRl:Landroid/widget/RadioButton;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$b;->jov:Landroid/widget/RadioButton;
 
     .line 923
     return-void

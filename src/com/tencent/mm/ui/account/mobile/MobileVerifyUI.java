@@ -32,17 +32,17 @@ import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.aw;
-import com.tencent.mm.pluginsdk.h.o;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ai;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.pluginsdk.i.o;
+import com.tencent.mm.protocal.c;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.al;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.account.RegByMobileSetPwdUI;
 import com.tencent.mm.ui.account.RegByMobileVoiceVerifyUI;
 import com.tencent.mm.ui.applet.SecurityImage;
 import com.tencent.mm.ui.base.MMFormInputView;
-import com.tencent.mm.ui.base.l;
 import com.tencent.mm.ui.base.n.c;
 import com.tencent.mm.ui.base.n.d;
 import com.tencent.mm.ui.j;
@@ -53,54 +53,54 @@ import java.util.TimerTask;
 public class MobileVerifyUI
   extends MMActivity
 {
-  protected String aBH;
-  String aji;
-  int cbB;
-  protected ProgressDialog coM = null;
-  String dWv;
-  String fVw;
-  private Timer hJH;
-  protected Button hPY;
-  private ContentResolver hXb;
-  private String[] hXg;
-  SecurityImage kqh = null;
-  protected boolean ktX = false;
-  private com.tencent.mm.pluginsdk.h.a ktp;
-  private int kvu = 30;
-  protected EditText kxy;
-  protected MMFormInputView kyL;
-  protected TextView kyM;
-  protected TextView kyN;
-  protected TextView kyO;
-  protected ScrollView kyP;
-  private c kyQ;
-  private long kyR = 0L;
-  private boolean kyS = false;
-  private String kyT;
-  private boolean kyU = false;
-  Boolean kyV;
-  Boolean kyW;
-  protected boolean kyX = false;
-  protected boolean kyY = false;
-  protected int kyZ = -1;
-  private int kya;
-  protected TextView kyk;
-  private b kza;
-  String kzb;
+  String UY;
+  protected String anZ;
+  int bVp;
+  protected ProgressDialog cka = null;
+  String dYE;
+  String geP;
+  private Timer ibQ;
+  protected Button iia;
+  private ContentResolver iqI;
+  private String[] iqN;
+  SecurityImage kPm = null;
+  private com.tencent.mm.pluginsdk.i.a kSx;
+  protected boolean kTe = false;
+  private int kUB = 30;
+  protected EditText kWF;
+  protected MMFormInputView kXS;
+  protected TextView kXT;
+  protected TextView kXU;
+  protected TextView kXV;
+  protected ScrollView kXW;
+  private c kXX;
+  private long kXY = 0L;
+  private boolean kXZ = false;
+  private int kXh;
+  protected TextView kXr;
+  private String kYa;
+  private boolean kYb = false;
+  Boolean kYc;
+  Boolean kYd;
+  protected boolean kYe = false;
+  protected boolean kYf = false;
+  protected int kYg = -1;
+  private b kYh;
+  String kYi;
   
-  private void aIP()
+  private void aMv()
   {
-    age();
-    if (kxy.getText().toString().trim().equals(""))
+    aiI();
+    if (kWF.getText().toString().trim().equals(""))
     {
-      com.tencent.mm.ui.base.g.e(this, 2131428613, 2131430877);
+      com.tencent.mm.ui.base.g.f(this, 2131231312, 2131231028);
       return;
     }
-    kza.qq(a.kzj);
+    kYh.si(a.kYq);
   }
   
   /* Error */
-  private void bbZ()
+  private void bhl()
   {
     // Byte code:
     //   0: aconst_null
@@ -111,19 +111,19 @@ public class MobileVerifyUI
     //   10: aload_0
     //   11: aload_0
     //   12: invokevirtual 182	com/tencent/mm/ui/account/mobile/MobileVerifyUI:getContentResolver	()Landroid/content/ContentResolver;
-    //   15: putfield 184	com/tencent/mm/ui/account/mobile/MobileVerifyUI:hXb	Landroid/content/ContentResolver;
+    //   15: putfield 184	com/tencent/mm/ui/account/mobile/MobileVerifyUI:iqI	Landroid/content/ContentResolver;
     //   18: ldc -70
     //   20: astore 6
     //   22: iconst_0
     //   23: istore_1
     //   24: iload_1
     //   25: aload_0
-    //   26: getfield 188	com/tencent/mm/ui/account/mobile/MobileVerifyUI:hXg	[Ljava/lang/String;
+    //   26: getfield 188	com/tencent/mm/ui/account/mobile/MobileVerifyUI:iqN	[Ljava/lang/String;
     //   29: arraylength
     //   30: if_icmpge +96 -> 126
     //   33: iload_1
     //   34: aload_0
-    //   35: getfield 188	com/tencent/mm/ui/account/mobile/MobileVerifyUI:hXg	[Ljava/lang/String;
+    //   35: getfield 188	com/tencent/mm/ui/account/mobile/MobileVerifyUI:iqN	[Ljava/lang/String;
     //   38: arraylength
     //   39: iconst_1
     //   40: isub
@@ -136,7 +136,7 @@ public class MobileVerifyUI
     //   56: ldc -59
     //   58: invokevirtual 195	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   61: aload_0
-    //   62: getfield 188	com/tencent/mm/ui/account/mobile/MobileVerifyUI:hXg	[Ljava/lang/String;
+    //   62: getfield 188	com/tencent/mm/ui/account/mobile/MobileVerifyUI:iqN	[Ljava/lang/String;
     //   65: iload_1
     //   66: aaload
     //   67: invokevirtual 195	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -157,7 +157,7 @@ public class MobileVerifyUI
     //   99: ldc -54
     //   101: invokevirtual 195	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   104: aload_0
-    //   105: getfield 188	com/tencent/mm/ui/account/mobile/MobileVerifyUI:hXg	[Ljava/lang/String;
+    //   105: getfield 188	com/tencent/mm/ui/account/mobile/MobileVerifyUI:iqN	[Ljava/lang/String;
     //   108: iload_1
     //   109: aaload
     //   110: invokevirtual 195	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -189,7 +189,7 @@ public class MobileVerifyUI
     //   174: aload 6
     //   176: invokevirtual 195	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   179: invokevirtual 200	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   182: invokestatic 232	com/tencent/mm/sdk/platformtools/u:v	(Ljava/lang/String;Ljava/lang/String;)V
+    //   182: invokestatic 232	com/tencent/mm/sdk/platformtools/v:v	(Ljava/lang/String;Ljava/lang/String;)V
     //   185: aload 6
     //   187: ifnull +13 -> 200
     //   190: aload 6
@@ -198,7 +198,7 @@ public class MobileVerifyUI
     //   197: ifeq +4 -> 201
     //   200: return
     //   201: aload_0
-    //   202: getfield 184	com/tencent/mm/ui/account/mobile/MobileVerifyUI:hXb	Landroid/content/ContentResolver;
+    //   202: getfield 184	com/tencent/mm/ui/account/mobile/MobileVerifyUI:iqI	Landroid/content/ContentResolver;
     //   205: aload 8
     //   207: iconst_3
     //   208: anewarray 140	java/lang/String
@@ -252,7 +252,7 @@ public class MobileVerifyUI
     //   305: goto +259 -> 564
     //   308: aload_0
     //   309: aconst_null
-    //   310: putfield 266	com/tencent/mm/ui/account/mobile/MobileVerifyUI:kyT	Ljava/lang/String;
+    //   310: putfield 266	com/tencent/mm/ui/account/mobile/MobileVerifyUI:kYa	Ljava/lang/String;
     //   313: iload_1
     //   314: iflt +144 -> 458
     //   317: aload 6
@@ -278,22 +278,22 @@ public class MobileVerifyUI
     //   370: astore 7
     //   372: aload_0
     //   373: aload 7
-    //   375: putfield 266	com/tencent/mm/ui/account/mobile/MobileVerifyUI:kyT	Ljava/lang/String;
+    //   375: putfield 266	com/tencent/mm/ui/account/mobile/MobileVerifyUI:kYa	Ljava/lang/String;
     //   378: aload_0
-    //   379: getfield 107	com/tencent/mm/ui/account/mobile/MobileVerifyUI:kyU	Z
+    //   379: getfield 107	com/tencent/mm/ui/account/mobile/MobileVerifyUI:kYb	Z
     //   382: ifne +76 -> 458
     //   385: aload_0
     //   386: iconst_1
-    //   387: putfield 107	com/tencent/mm/ui/account/mobile/MobileVerifyUI:kyU	Z
+    //   387: putfield 107	com/tencent/mm/ui/account/mobile/MobileVerifyUI:kYb	Z
     //   390: aload_0
-    //   391: getfield 126	com/tencent/mm/ui/account/mobile/MobileVerifyUI:kxy	Landroid/widget/EditText;
+    //   391: getfield 126	com/tencent/mm/ui/account/mobile/MobileVerifyUI:kWF	Landroid/widget/EditText;
     //   394: aload_0
-    //   395: getfield 266	com/tencent/mm/ui/account/mobile/MobileVerifyUI:kyT	Ljava/lang/String;
+    //   395: getfield 266	com/tencent/mm/ui/account/mobile/MobileVerifyUI:kYa	Ljava/lang/String;
     //   398: invokevirtual 301	android/widget/EditText:setText	(Ljava/lang/CharSequence;)V
     //   401: aload_0
-    //   402: invokevirtual 124	com/tencent/mm/ui/account/mobile/MobileVerifyUI:age	()V
+    //   402: invokevirtual 124	com/tencent/mm/ui/account/mobile/MobileVerifyUI:aiI	()V
     //   405: aload_0
-    //   406: getfield 126	com/tencent/mm/ui/account/mobile/MobileVerifyUI:kxy	Landroid/widget/EditText;
+    //   406: getfield 126	com/tencent/mm/ui/account/mobile/MobileVerifyUI:kWF	Landroid/widget/EditText;
     //   409: invokevirtual 132	android/widget/EditText:getText	()Landroid/text/Editable;
     //   412: invokevirtual 138	java/lang/Object:toString	()Ljava/lang/String;
     //   415: invokevirtual 143	java/lang/String:trim	()Ljava/lang/String;
@@ -301,17 +301,17 @@ public class MobileVerifyUI
     //   420: invokevirtual 149	java/lang/String:equals	(Ljava/lang/Object;)Z
     //   423: ifne +35 -> 458
     //   426: aload_0
-    //   427: getfield 101	com/tencent/mm/ui/account/mobile/MobileVerifyUI:coM	Landroid/app/ProgressDialog;
+    //   427: getfield 101	com/tencent/mm/ui/account/mobile/MobileVerifyUI:cka	Landroid/app/ProgressDialog;
     //   430: ifnull +15 -> 445
     //   433: aload_0
-    //   434: getfield 101	com/tencent/mm/ui/account/mobile/MobileVerifyUI:coM	Landroid/app/ProgressDialog;
+    //   434: getfield 101	com/tencent/mm/ui/account/mobile/MobileVerifyUI:cka	Landroid/app/ProgressDialog;
     //   437: invokevirtual 306	android/app/ProgressDialog:dismiss	()V
     //   440: aload_0
     //   441: aconst_null
-    //   442: putfield 101	com/tencent/mm/ui/account/mobile/MobileVerifyUI:coM	Landroid/app/ProgressDialog;
+    //   442: putfield 101	com/tencent/mm/ui/account/mobile/MobileVerifyUI:cka	Landroid/app/ProgressDialog;
     //   445: aload_0
-    //   446: getfield 159	com/tencent/mm/ui/account/mobile/MobileVerifyUI:kza	Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$b;
-    //   449: getstatic 309	com/tencent/mm/ui/account/mobile/MobileVerifyUI$a:kzl	I
+    //   446: getfield 159	com/tencent/mm/ui/account/mobile/MobileVerifyUI:kYh	Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$b;
+    //   449: getstatic 309	com/tencent/mm/ui/account/mobile/MobileVerifyUI$a:kYs	I
     //   452: invokeinterface 166 2 0
     //   457: pop
     //   458: aload 6
@@ -328,7 +328,7 @@ public class MobileVerifyUI
     //   486: ldc -35
     //   488: aload 7
     //   490: invokevirtual 310	java/lang/Exception:toString	()Ljava/lang/String;
-    //   493: invokestatic 312	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   493: invokestatic 313	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   496: aload 6
     //   498: ifnull -298 -> 200
     //   501: aload 6
@@ -391,246 +391,254 @@ public class MobileVerifyUI
     //   445	458	559	java/lang/Exception
   }
   
-  private void bcg()
+  private void bhs()
   {
-    if (!kyS)
+    if (!kXZ)
     {
-      hJH = new Timer();
-      kyS = true;
-      kyR = kvu;
+      ibQ = new Timer();
+      kXZ = true;
+      kXY = kUB;
       TimerTask local1 = new TimerTask()
       {
         public final void run()
         {
-          kyN.post(new Runnable()
+          kXU.post(new Runnable()
           {
             public final void run()
             {
               MobileVerifyUI.b(MobileVerifyUI.this);
               if (MobileVerifyUI.c(MobileVerifyUI.this) >= 0L)
               {
-                kyN.setText(getResources().getQuantityString(2131755014, (int)MobileVerifyUI.c(MobileVerifyUI.this), new Object[] { Integer.valueOf((int)MobileVerifyUI.c(MobileVerifyUI.this)) }));
+                kXU.setText(getResources().getQuantityString(2131361811, (int)MobileVerifyUI.c(MobileVerifyUI.this), new Object[] { Integer.valueOf((int)MobileVerifyUI.c(MobileVerifyUI.this)) }));
                 return;
               }
-              kyN.setVisibility(8);
-              kyM.setVisibility(0);
+              kXU.setVisibility(8);
+              kXT.setVisibility(0);
               MobileVerifyUI.d(MobileVerifyUI.this);
-              kyM.setEnabled(true);
-              kyM.setText(getString(2131427716));
+              kXT.setEnabled(true);
+              kXT.setText(getString(2131233857));
             }
           });
         }
       };
-      hJH.schedule(local1, 1000L, 1000L);
+      ibQ.schedule(local1, 1000L, 1000L);
     }
   }
   
-  private void bch()
+  private void bht()
   {
-    kyU = false;
-    kyM.setEnabled(false);
-    kyN.setVisibility(0);
-    kyN.setText(getResources().getQuantityString(2131755014, kvu, new Object[] { Integer.valueOf(kvu) }));
-    kyM.setVisibility(8);
-    bcg();
-    kza.qq(a.kzk);
-    com.tencent.mm.ui.base.g.ba(this, getString(2131427719));
+    kYb = false;
+    kXT.setEnabled(false);
+    kXU.setVisibility(0);
+    kXU.setText(getResources().getQuantityString(2131361811, kUB, new Object[] { Integer.valueOf(kUB) }));
+    kXT.setVisibility(8);
+    bhs();
+    kYh.si(a.kYr);
+    com.tencent.mm.ui.base.g.aZ(this, getString(2131233839));
   }
   
   private void goBack()
   {
-    com.tencent.mm.plugin.a.b.kC(fVw);
-    if (!kza.qq(a.kzi)) {
+    com.tencent.mm.plugin.a.b.ll(geP);
+    if (!kYh.si(a.kYp)) {
       finish();
     }
   }
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    u.d("!32@/B4Tb64lLpKNhhU94SG29vC9zoVXGkMM", "init getintent mobile:" + aBH);
-    kyL = ((MMFormInputView)findViewById(2131167055));
-    kyL.setImeOption(5);
-    kyL.setInputType(3);
-    kxy = kyL.getContentEditText();
-    kyM = ((TextView)findViewById(2131167056));
-    kyN = ((TextView)findViewById(2131167057));
-    kyk = ((TextView)findViewById(2131167054));
-    kyk.setText(aBH);
-    aBH = ai.CX(aBH);
-    kyM.setText(getString(2131427715));
-    kyO = ((TextView)findViewById(2131167053));
-    hPY = ((Button)findViewById(2131166968));
-    kyP = ((ScrollView)findViewById(2131167052));
-    hXg = getResources().getStringArray(2131558413);
-    Object localObject = getString(2131427666);
-    kyO.setText(Html.fromHtml((String)localObject));
-    localObject = new InputFilter()
+    v.d("MicroMsg.MobileVerifyUI", "init getintent mobile:" + anZ);
+    kXS = ((MMFormInputView)findViewById(2131755524));
+    Object localObject = kXS;
+    if (fNQ != null) {
+      fNQ.setImeOptions(5);
+    }
+    for (;;)
     {
-      public final CharSequence filter(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, Spanned paramAnonymousSpanned, int paramAnonymousInt3, int paramAnonymousInt4)
+      kXS.setInputType(3);
+      kWF = kXS.fNQ;
+      kXT = ((TextView)findViewById(2131758167));
+      kXU = ((TextView)findViewById(2131758168));
+      kXr = ((TextView)findViewById(2131755522));
+      kXr.setText(anZ);
+      anZ = al.Fl(anZ);
+      kXT.setText(getString(2131233858));
+      kXV = ((TextView)findViewById(2131758166));
+      iia = ((Button)findViewById(2131756228));
+      kXW = ((ScrollView)findViewById(2131755535));
+      iqN = getResources().getStringArray(2131296304);
+      localObject = getString(2131234393);
+      kXV.setText(Html.fromHtml((String)localObject));
+      localObject = new InputFilter()
       {
-        return ay.v(paramAnonymousCharSequence);
-      }
-    };
-    kyN.setVisibility(0);
-    kyN.setText(getResources().getQuantityString(2131755014, kvu, new Object[] { Integer.valueOf(kvu) }));
-    bcg();
-    kyU = false;
-    kxy.setFilters(new InputFilter[] { localObject });
-    kxy.addTextChangedListener(new MMEditText.c(kxy, null, 12));
-    hPY.setOnClickListener(new View.OnClickListener()
-    {
-      public final void onClick(View paramAnonymousView)
-      {
-        MobileVerifyUI.e(MobileVerifyUI.this);
-      }
-    });
-    hPY.setEnabled(false);
-    kxy.setTextSize(15.0F);
-    kxy.addTextChangedListener(new TextWatcher()
-    {
-      public final void afterTextChanged(Editable paramAnonymousEditable)
-      {
-        if (ay.kz(kxy.getText().toString()))
+        public final CharSequence filter(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, Spanned paramAnonymousSpanned, int paramAnonymousInt3, int paramAnonymousInt4)
         {
-          kxy.setTextSize(15.0F);
-          kxy.setGravity(16);
+          return be.E(paramAnonymousCharSequence);
         }
-        while ((kxy.getText() != null) && (kxy.getText().toString().length() > 0))
-        {
-          hPY.setEnabled(true);
-          return;
-          kxy.setTextSize(24.0F);
-          kxy.setGravity(16);
-        }
-        hPY.setEnabled(false);
-      }
-      
-      public final void beforeTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
-      
-      public final void onTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
-    });
-    kyM.setOnClickListener(new View.OnClickListener()
-    {
-      private final int kze = 0;
-      private final int kzf = 1;
-      private final int kzg = 2;
-      
-      public final void onClick(View paramAnonymousView)
+      };
+      kXU.setVisibility(0);
+      kXU.setText(getResources().getQuantityString(2131361811, kUB, new Object[] { Integer.valueOf(kUB) }));
+      bhs();
+      kYb = false;
+      kWF.setFilters(new InputFilter[] { localObject });
+      kWF.addTextChangedListener(new MMEditText.c(kWF, null, 12));
+      iia.setOnClickListener(new View.OnClickListener()
       {
-        paramAnonymousView = new com.tencent.mm.ui.tools.m(MobileVerifyUI.this);
-        hle = new n.c()
+        public final void onClick(View paramAnonymousView)
         {
-          public final void a(l paramAnonymous2l)
+          MobileVerifyUI.e(MobileVerifyUI.this);
+        }
+      });
+      iia.setEnabled(false);
+      kWF.setTextSize(15.0F);
+      kWF.addTextChangedListener(new TextWatcher()
+      {
+        public final void afterTextChanged(Editable paramAnonymousEditable)
+        {
+          if (be.kf(kWF.getText().toString()))
           {
-            paramAnonymous2l.b(0, getString(2131427715));
-            if (com.tencent.mm.ac.b.ih(aBH)) {
-              paramAnonymous2l.b(1, getString(2131428638));
-            }
-            if ((MobileVerifyUI.f(MobileVerifyUI.this) == 2) && (kyY)) {
-              paramAnonymous2l.b(2, getString(2131427659));
-            }
+            kWF.setTextSize(15.0F);
+            kWF.setGravity(16);
           }
-        };
-        hlf = new n.d()
-        {
-          public final void d(MenuItem paramAnonymous2MenuItem, int paramAnonymous2Int)
+          while ((kWF.getText() != null) && (kWF.getText().toString().length() > 0))
           {
-            switch (paramAnonymous2MenuItem.getItemId())
+            iia.setEnabled(true);
+            return;
+            kWF.setTextSize(24.0F);
+            kWF.setGravity(16);
+          }
+          iia.setEnabled(false);
+        }
+        
+        public final void beforeTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
+        
+        public final void onTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
+      });
+      kXT.setOnClickListener(new View.OnClickListener()
+      {
+        private final int kYl = 0;
+        private final int kYm = 1;
+        private final int kYn = 2;
+        
+        public final void onClick(View paramAnonymousView)
+        {
+          paramAnonymousView = new com.tencent.mm.ui.tools.m(MobileVerifyUI.this);
+          hoS = new n.c()
+          {
+            public final void a(com.tencent.mm.ui.base.l paramAnonymous2l)
             {
-            default: 
-              return;
-            case 0: 
-              MobileVerifyUI.g(MobileVerifyUI.this);
-              return;
-            }
-            age();
-            if (MobileVerifyUI.f(MobileVerifyUI.this) == 2) {
-              com.tencent.mm.plugin.a.b.kC("R200_500");
-            }
-            for (;;)
-            {
-              paramAnonymous2MenuItem = new Intent(MobileVerifyUI.this, RegByMobileVoiceVerifyUI.class);
-              Bundle localBundle = new Bundle();
-              localBundle.putString("bindmcontact_mobile", aBH);
-              localBundle.putInt("voice_verify_type", MobileVerifyUI.h(MobileVerifyUI.this));
-              paramAnonymous2MenuItem.putExtras(localBundle);
-              startActivity(paramAnonymous2MenuItem);
-              return;
-              if (MobileVerifyUI.f(MobileVerifyUI.this) == 1) {
-                com.tencent.mm.plugin.a.b.kC("L600_400");
-              } else if (MobileVerifyUI.f(MobileVerifyUI.this) == 3) {
-                com.tencent.mm.plugin.a.b.kC("F200_300");
+              paramAnonymous2l.b(0, getString(2131233858));
+              if (com.tencent.mm.af.b.iy(anZ)) {
+                paramAnonymous2l.b(1, getString(2131231315));
+              }
+              if ((MobileVerifyUI.f(MobileVerifyUI.this) == 2) && (kYf)) {
+                paramAnonymous2l.b(2, getString(2131234396));
               }
             }
+          };
+          hoT = new n.d()
+          {
+            public final void d(MenuItem paramAnonymous2MenuItem, int paramAnonymous2Int)
+            {
+              switch (paramAnonymous2MenuItem.getItemId())
+              {
+              default: 
+                return;
+              case 0: 
+                MobileVerifyUI.g(MobileVerifyUI.this);
+                return;
+              }
+              aiI();
+              if (MobileVerifyUI.f(MobileVerifyUI.this) == 2) {
+                com.tencent.mm.plugin.a.b.ll("R200_500");
+              }
+              for (;;)
+              {
+                paramAnonymous2MenuItem = new Intent(MobileVerifyUI.this, RegByMobileVoiceVerifyUI.class);
+                Bundle localBundle = new Bundle();
+                localBundle.putString("bindmcontact_mobile", anZ);
+                localBundle.putInt("voice_verify_type", MobileVerifyUI.h(MobileVerifyUI.this));
+                paramAnonymous2MenuItem.putExtras(localBundle);
+                startActivity(paramAnonymous2MenuItem);
+                return;
+                if (MobileVerifyUI.f(MobileVerifyUI.this) == 1) {
+                  com.tencent.mm.plugin.a.b.ll("L600_400");
+                } else if (MobileVerifyUI.f(MobileVerifyUI.this) == 3) {
+                  com.tencent.mm.plugin.a.b.ll("F200_300");
+                }
+              }
+            }
+          };
+          paramAnonymousView.boB();
+        }
+      });
+      kXT.setEnabled(false);
+      b(new MenuItem.OnMenuItemClickListener()
+      {
+        public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+        {
+          MobileVerifyUI.i(MobileVerifyUI.this);
+          return true;
+        }
+      });
+      kWF.setOnEditorActionListener(new TextView.OnEditorActionListener()
+      {
+        public final boolean onEditorAction(TextView paramAnonymousTextView, int paramAnonymousInt, KeyEvent paramAnonymousKeyEvent)
+        {
+          if ((paramAnonymousInt == 6) || (paramAnonymousInt == 5))
+          {
+            MobileVerifyUI.e(MobileVerifyUI.this);
+            return true;
           }
-        };
-        paramAnonymousView.biF();
-      }
-    });
-    kyM.setEnabled(false);
-    b(new MenuItem.OnMenuItemClickListener()
-    {
-      public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
-      {
-        MobileVerifyUI.i(MobileVerifyUI.this);
-        return true;
-      }
-    });
-    kxy.setOnEditorActionListener(new TextView.OnEditorActionListener()
-    {
-      public final boolean onEditorAction(TextView paramAnonymousTextView, int paramAnonymousInt, KeyEvent paramAnonymousKeyEvent)
-      {
-        if ((paramAnonymousInt == 6) || (paramAnonymousInt == 5))
-        {
-          MobileVerifyUI.e(MobileVerifyUI.this);
-          return true;
+          return false;
         }
-        return false;
-      }
-    });
-    kxy.setOnKeyListener(new View.OnKeyListener()
-    {
-      public final boolean onKey(View paramAnonymousView, int paramAnonymousInt, KeyEvent paramAnonymousKeyEvent)
+      });
+      kWF.setOnKeyListener(new View.OnKeyListener()
       {
-        if ((66 == paramAnonymousInt) && (paramAnonymousKeyEvent.getAction() == 0))
+        public final boolean onKey(View paramAnonymousView, int paramAnonymousInt, KeyEvent paramAnonymousKeyEvent)
         {
-          MobileVerifyUI.e(MobileVerifyUI.this);
-          return true;
+          if ((66 == paramAnonymousInt) && (paramAnonymousKeyEvent.getAction() == 0))
+          {
+            MobileVerifyUI.e(MobileVerifyUI.this);
+            return true;
+          }
+          return false;
         }
-        return false;
-      }
-    });
+      });
+      return;
+      v.e("MicroMsg.MMFormInputView", "contentET is null!");
+    }
   }
   
-  public final void ayk()
+  public final void aAK()
   {
-    if (aNP() == 1)
+    if (aRX() == 1)
     {
-      kyP.scrollTo(0, kyP.getChildAt(0).getMeasuredHeight() - kyP.getMeasuredHeight());
+      kXW.scrollTo(0, kXW.getChildAt(0).getMeasuredHeight() - kXW.getMeasuredHeight());
       return;
     }
-    kyP.scrollTo(0, 0);
+    kXW.scrollTo(0, 0);
   }
   
   protected final int getLayoutId()
   {
-    return 2131362429;
+    return 2130904078;
   }
   
-  protected final void hr(boolean paramBoolean)
+  protected final void hP(boolean paramBoolean)
   {
     Intent localIntent = new Intent(this, RegByMobileSetPwdUI.class);
-    localIntent.putExtra("kintent_hint", getString(2131428222));
+    localIntent.putExtra("kintent_hint", getString(2131235050));
     localIntent.putExtra("kintent_cancelable", paramBoolean);
     startActivityForResult(localIntent, 0);
   }
   
-  protected final boolean m(int paramInt1, int paramInt2, String paramString)
+  protected final boolean k(int paramInt1, int paramInt2, String paramString)
   {
-    Object localObject = com.tencent.mm.e.a.cV(paramString);
-    if ((localObject != null) && (asN != 4))
+    Object localObject = com.tencent.mm.f.a.dc(paramString);
+    if (localObject != null)
     {
-      ((com.tencent.mm.e.a)localObject).a(this, null, null);
+      ((com.tencent.mm.f.a)localObject).a(this, null, null);
       return true;
     }
     if (paramInt1 == 4) {}
@@ -648,43 +656,43 @@ public class MobileVerifyUI
     while (i != 0)
     {
       return true;
-      if (ah.tE().vL() == 6)
+      if (ah.tF().vN() == 6)
       {
-        com.tencent.mm.ui.base.g.e(this, 2131427842, 2131427841);
+        com.tencent.mm.ui.base.g.f(this, 2131234009, 2131234008);
         return true;
       }
-      com.tencent.mm.platformtools.m.bh(this);
+      com.tencent.mm.platformtools.l.be(this);
       return true;
-      Toast.makeText(this, 2131428663, 0).show();
+      Toast.makeText(this, 2131231262, 0).show();
       i = 1;
       continue;
-      Toast.makeText(this, 2131428664, 0).show();
+      Toast.makeText(this, 2131231259, 0).show();
       i = 1;
       continue;
-      Toast.makeText(this, 2131428668, 0).show();
+      Toast.makeText(this, 2131231261, 0).show();
       i = 1;
       continue;
-      Toast.makeText(this, 2131428667, 0).show();
+      Toast.makeText(this, 2131231264, 0).show();
       i = 1;
       continue;
-      com.tencent.mm.ui.base.g.a(this, getString(2131428683), "", new DialogInterface.OnClickListener()
+      com.tencent.mm.ui.base.g.a(this, getString(2131231307), "", new DialogInterface.OnClickListener()
       {
         public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
       });
       i = 1;
       continue;
-      com.tencent.mm.ui.base.g.a(this, 2131428673, 2131428671, new DialogInterface.OnClickListener()
+      com.tencent.mm.ui.base.g.a(this, 2131231305, 2131231311, new DialogInterface.OnClickListener()
       {
         public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
       });
       i = 1;
       continue;
       ah.hold();
-      ActionBarActivity localActionBarActivity = koJ.kpc;
-      if (TextUtils.isEmpty(ah.tN())) {}
-      for (localObject = com.tencent.mm.aw.a.A(koJ.kpc, 2131427786);; localObject = ah.tN())
+      ActionBarActivity localActionBarActivity = kNN.kOg;
+      if (TextUtils.isEmpty(ah.tO())) {}
+      for (localObject = com.tencent.mm.az.a.E(kNN.kOg, 2131233708);; localObject = ah.tO())
       {
-        com.tencent.mm.ui.base.g.a(localActionBarActivity, (String)localObject, koJ.kpc.getString(2131430877), new DialogInterface.OnClickListener()new DialogInterface.OnCancelListener
+        com.tencent.mm.ui.base.g.a(localActionBarActivity, (String)localObject, kNN.kOg.getString(2131231028), new DialogInterface.OnClickListener()new DialogInterface.OnCancelListener
         {
           public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
         }, new DialogInterface.OnCancelListener()
@@ -696,77 +704,77 @@ public class MobileVerifyUI
       }
     }
     paramString = new o(paramInt1, paramInt2, paramString);
-    return ktp.a(this, paramString);
+    return kSx.a(this, paramString);
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    aw.uB();
-    kyW = Boolean.valueOf(true);
-    kya = getIntent().getIntExtra("mobile_verify_purpose", 0);
-    kzb = getIntent().getStringExtra("!32@/B4Tb64lLpKNhhU94SG29vC9zoVXGkMMIntent_sms_code");
-    dWv = getIntent().getStringExtra("kintent_password");
-    aji = getIntent().getStringExtra("kintent_nickname");
-    kyV = Boolean.valueOf(getIntent().getBooleanExtra("kintent_hasavatar", false));
-    ktX = getIntent().getBooleanExtra("from_deep_link", false);
-    switch (kya)
+    aw.uD();
+    kYd = Boolean.valueOf(true);
+    kXh = getIntent().getIntExtra("mobile_verify_purpose", 0);
+    kYi = getIntent().getStringExtra("MicroMsg.MobileVerifyUIIntent_sms_code");
+    dYE = getIntent().getStringExtra("kintent_password");
+    UY = getIntent().getStringExtra("kintent_nickname");
+    kYc = Boolean.valueOf(getIntent().getBooleanExtra("kintent_hasavatar", false));
+    kTe = getIntent().getBooleanExtra("from_deep_link", false);
+    switch (kXh)
     {
     default: 
-      u.e("!32@/B4Tb64lLpKNhhU94SG29vC9zoVXGkMM", "wrong purpose %s", new Object[] { Integer.valueOf(kya) });
+      v.e("MicroMsg.MobileVerifyUI", "wrong purpose %s", new Object[] { Integer.valueOf(kXh) });
       finish();
       return;
     case 1: 
-      kza = new g();
-      paramBundle = getString(2131428609);
-      if (com.tencent.mm.protocal.b.iUg) {
-        paramBundle = getString(2131431735) + getString(2131427771);
+      kYh = new g();
+      paramBundle = getString(2131231290);
+      if (c.jrz) {
+        paramBundle = getString(2131230958) + getString(2131230858);
       }
-      Gj(paramBundle);
-      kvu = getIntent().getIntExtra("mobileverify_countdownsec", 30);
-      kyX = getIntent().getBooleanExtra("mobileverify_fb", false);
-      kyY = getIntent().getBooleanExtra("mobileverify_reg_qq", false);
-      aBH = getIntent().getExtras().getString("bindmcontact_mobile");
-      fVw = com.tencent.mm.plugin.a.b.FX();
-      Gb();
-      kza.a(this);
-      if (kzb != null)
+      Ah(paramBundle);
+      kUB = getIntent().getIntExtra("mobileverify_countdownsec", 30);
+      kYe = getIntent().getBooleanExtra("mobileverify_fb", false);
+      kYf = getIntent().getBooleanExtra("mobileverify_reg_qq", false);
+      anZ = getIntent().getExtras().getString("bindmcontact_mobile");
+      geP = com.tencent.mm.plugin.a.b.Gu();
+      Gy();
+      kYh.a(this);
+      if (kYi != null)
       {
-        kxy.setText(kzb);
-        aIP();
+        kWF.setText(kYi);
+        aMv();
       }
       break;
     }
     for (;;)
     {
-      ktp = new com.tencent.mm.pluginsdk.h.a();
+      kSx = new com.tencent.mm.pluginsdk.i.a();
       return;
-      kza = new i();
-      if ((dWv != null) && (dWv.length() >= 8))
+      kYh = new i();
+      if ((dYE != null) && (dYE.length() >= 8))
       {
-        cbB = 1;
+        bVp = 1;
         break;
       }
-      cbB = 4;
+      bVp = 4;
       break;
-      kza = new f();
+      kYh = new f();
       break;
-      kza = new h();
+      kYh = new h();
       break;
-      kyQ = new c(this);
-      getContentResolver().registerContentObserver(Uri.parse("content://sms/"), true, kyQ);
+      kXX = new c(this);
+      getContentResolver().registerContentObserver(Uri.parse("content://sms/"), true, kXX);
     }
   }
   
   public void onDestroy()
   {
-    if (kyQ != null)
+    if (kXX != null)
     {
-      getContentResolver().unregisterContentObserver(kyQ);
-      kyQ = null;
+      getContentResolver().unregisterContentObserver(kXX);
+      kXX = null;
     }
-    if (ktp != null) {
-      ktp.close();
+    if (kSx != null) {
+      kSx.close();
     }
     super.onDestroy();
   }
@@ -787,9 +795,9 @@ public class MobileVerifyUI
     if (paramIntent != null)
     {
       paramIntent = paramIntent.getStringExtra("nofification_type");
-      u.d("!32@/B4Tb64lLpKNhhU94SG29vC9zoVXGkMM", "[oneliang][notificationType]%s", new Object[] { paramIntent });
+      v.d("MicroMsg.MobileVerifyUI", "[oneliang][notificationType]%s", new Object[] { paramIntent });
       if ((paramIntent != null) && (paramIntent.equals("no_reg_notification"))) {
-        bch();
+        bht();
       }
     }
   }
@@ -797,33 +805,45 @@ public class MobileVerifyUI
   public void onPause()
   {
     super.onPause();
-    kza.stop();
+    kYh.stop();
   }
   
   public void onRequestPermissionsResult(int paramInt, String[] paramArrayOfString, int[] paramArrayOfInt)
   {
-    u.d("!32@/B4Tb64lLpKNhhU94SG29vC9zoVXGkMM", "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(paramArrayOfInt[0]), Long.valueOf(Thread.currentThread().getId()) });
-    switch (paramInt)
-    {
+    int i;
+    if ((paramArrayOfInt == null) || (paramArrayOfInt.length <= 0)) {
+      if (paramArrayOfInt == null)
+      {
+        i = -1;
+        v.w("MicroMsg.MobileVerifyUI", "summerper onRequestPermissionsResult, grantResults length is:%d requestCode:%d, permissions:%s, stack:%s", new Object[] { Integer.valueOf(i), Integer.valueOf(paramInt), paramArrayOfString, be.baX() });
+      }
     }
     do
     {
       return;
+      i = paramArrayOfInt.length;
+      break;
+      v.d("MicroMsg.MobileVerifyUI", "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(paramArrayOfInt[0]), Long.valueOf(Thread.currentThread().getId()) });
+      switch (paramInt)
+      {
+      default: 
+        return;
+      }
     } while (paramArrayOfInt[0] != 0);
-    bbZ();
+    bhl();
   }
   
   public void onResume()
   {
     super.onResume();
-    kza.start();
+    kYh.start();
   }
   
   protected static enum a
   {
-    public static int[] bci()
+    public static int[] bhu()
     {
-      return (int[])kzm.clone();
+      return (int[])kYt.clone();
     }
   }
   
@@ -831,7 +851,7 @@ public class MobileVerifyUI
   {
     public abstract void a(MobileVerifyUI paramMobileVerifyUI);
     
-    public abstract boolean qq(int paramInt);
+    public abstract boolean si(int paramInt);
     
     public abstract void start();
     
@@ -841,12 +861,12 @@ public class MobileVerifyUI
   public final class c
     extends ContentObserver
   {
-    private Activity asX;
+    private Activity aeH;
     
     public c(Activity paramActivity)
     {
       super();
-      asX = paramActivity;
+      aeH = paramActivity;
     }
     
     public final void onChange(boolean paramBoolean)
@@ -854,8 +874,8 @@ public class MobileVerifyUI
       super.onChange(paramBoolean);
       if ((MobileVerifyUI.f(MobileVerifyUI.this) != 3) && (MobileVerifyUI.f(MobileVerifyUI.this) != 1))
       {
-        paramBoolean = com.tencent.mm.pluginsdk.g.a.a(asX, "android.permission.READ_SMS", 2048, "", "");
-        u.d("!32@/B4Tb64lLpKNhhU94SG29vC9zoVXGkMM", "summerper checkPermission checkSMS[%b], stack[%s], activity[%s]", new Object[] { Boolean.valueOf(paramBoolean), ay.aVJ(), asX });
+        paramBoolean = com.tencent.mm.pluginsdk.h.a.a(aeH, "android.permission.READ_SMS", 2048, "", "");
+        v.d("MicroMsg.MobileVerifyUI", "summerper checkPermission checkSMS[%b], stack[%s], activity[%s]", new Object[] { Boolean.valueOf(paramBoolean), be.baX(), aeH });
         if (paramBoolean) {}
       }
       else

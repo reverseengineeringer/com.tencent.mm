@@ -1,8 +1,9 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.modelsimple.n;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
+import com.tencent.mm.modelsimple.m;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
 
 final class u$1
   implements Runnable
@@ -11,17 +12,17 @@ final class u$1
   
   public final void run()
   {
-    new n().a(bMK.bFs, new d()
+    new m().a(bGe.byD, new d()
     {
-      public final void a(int paramAnonymousInt1, int paramAnonymousInt2, String paramAnonymousString, j paramAnonymousj)
+      public final void onSceneEnd(int paramAnonymousInt1, int paramAnonymousInt2, String paramAnonymousString, j paramAnonymousj)
       {
-        com.tencent.mm.sdk.platformtools.u.d("!56@/B4Tb64lLpK+IBX8XDgnvtitwdiFr6yUU+4wykkCPbQfDMqQQ+s8JQ==", "summerauth dkcert getcert type:%d ret [%d,%d]", new Object[] { Integer.valueOf(paramAnonymousj.getType()), Integer.valueOf(paramAnonymousInt1), Integer.valueOf(paramAnonymousInt2) });
+        v.d("MicroMsg.NetSceneBindMobileForReg", "summerauth dkcert getcert type:%d ret [%d,%d]", new Object[] { Integer.valueOf(paramAnonymousj.getType()), Integer.valueOf(paramAnonymousInt1), Integer.valueOf(paramAnonymousInt2) });
         if ((paramAnonymousInt1 != 0) || (paramAnonymousInt2 != 0))
         {
-          bMK.anM.a(paramAnonymousInt1, paramAnonymousInt2, "", bMK);
+          bGe.bkT.onSceneEnd(paramAnonymousInt1, paramAnonymousInt2, "", bGe);
           return;
         }
-        bMK.a(bMK.bFs, bMK.anM);
+        bGe.a(bGe.byD, bGe.bkT);
       }
     });
   }

@@ -3,20 +3,20 @@ package com.tencent.mm.ui.base;
 import android.text.Editable;
 import android.text.TextWatcher;
 
-final class MMAutoCompleteTextView$a
+public final class MMAutoCompleteTextView$a
   implements TextWatcher
 {
-  private String kCZ;
+  private String lce;
   
   public MMAutoCompleteTextView$a(MMAutoCompleteTextView paramMMAutoCompleteTextView, String paramString)
   {
-    kCZ = paramString;
+    lce = paramString;
   }
   
   public final void afterTextChanged(Editable paramEditable)
   {
-    if (paramEditable.toString().endsWith(kCZ)) {
-      kCY.showDropDown();
+    if (paramEditable.toString().endsWith(lce)) {
+      lcd.showDropDown();
     }
   }
   

@@ -4,15 +4,25 @@
 
 
 # static fields
-.field private static bsw:Lcom/tencent/mm/compatible/d/k;
+.field private static bgA:Lcom/tencent/mm/compatible/d/k;
 
 
 # instance fields
-.field private bsv:Z
+.field private bgz:Z
 
 .field private filePath:Ljava/lang/String;
 
 .field private values:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -23,22 +33,22 @@
     .line 20
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/compatible/d/k;->bsw:Lcom/tencent/mm/compatible/d/k;
+    sput-object v0, Lcom/tencent/mm/compatible/d/k;->bgA:Lcom/tencent/mm/compatible/d/k;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;)V
-    .locals 6
+    .locals 7
 
     .prologue
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 17
-    iput-boolean v5, p0, Lcom/tencent/mm/compatible/d/k;->bsv:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/compatible/d/k;->bgz:Z
 
     .line 18
     const-string/jumbo v0, ""
@@ -67,11 +77,11 @@
     :cond_0
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-nez v1, :cond_1
 
@@ -85,7 +95,7 @@
 
     .line 32
     :goto_0
-    iput-boolean v5, p0, Lcom/tencent/mm/compatible/d/k;->bsv:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/compatible/d/k;->bgz:Z
 
     .line 33
     return-void
@@ -129,7 +139,7 @@
     goto :goto_0
 .end method
 
-.method public static declared-synchronized oi()Lcom/tencent/mm/compatible/d/k;
+.method public static declared-synchronized my()Lcom/tencent/mm/compatible/d/k;
     .locals 4
 
     .prologue
@@ -139,7 +149,7 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/compatible/d/k;->bsw:Lcom/tencent/mm/compatible/d/k;
+    sget-object v0, Lcom/tencent/mm/compatible/d/k;->bgA:Lcom/tencent/mm/compatible/d/k;
 
     if-nez v0, :cond_0
 
@@ -150,7 +160,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v3, Lcom/tencent/mm/compatible/util/d;->bxa:Ljava/lang/String;
+    sget-object v3, Lcom/tencent/mm/compatible/util/d;->bpc:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -168,11 +178,11 @@
 
     invoke-direct {v0, v2}, Lcom/tencent/mm/compatible/d/k;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lcom/tencent/mm/compatible/d/k;->bsw:Lcom/tencent/mm/compatible/d/k;
+    sput-object v0, Lcom/tencent/mm/compatible/d/k;->bgA:Lcom/tencent/mm/compatible/d/k;
 
     .line 26
     :cond_0
-    sget-object v0, Lcom/tencent/mm/compatible/d/k;->bsw:Lcom/tencent/mm/compatible/d/k;
+    sget-object v0, Lcom/tencent/mm/compatible/d/k;->bgA:Lcom/tencent/mm/compatible/d/k;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -189,7 +199,7 @@
     throw v0
 .end method
 
-.method private declared-synchronized oj()V
+.method private declared-synchronized mz()V
     .locals 3
 
     .prologue
@@ -248,7 +258,7 @@
 
 
 # virtual methods
-.method public final bR(I)Ljava/lang/Object;
+.method public final cj(I)Ljava/lang/Object;
     .locals 2
 
     .prologue
@@ -309,12 +319,12 @@
     invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 37
-    iget-boolean v0, p0, Lcom/tencent/mm/compatible/d/k;->bsv:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/compatible/d/k;->bgz:Z
 
     if-nez v0, :cond_0
 
     .line 38
-    invoke-direct {p0}, Lcom/tencent/mm/compatible/d/k;->oj()V
+    invoke-direct {p0}, Lcom/tencent/mm/compatible/d/k;->mz()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

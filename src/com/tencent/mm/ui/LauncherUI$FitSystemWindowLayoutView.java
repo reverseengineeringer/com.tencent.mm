@@ -9,16 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.MarginLayoutParams;
 import android.widget.FrameLayout;
-import com.tencent.mm.aw.a;
+import com.tencent.mm.az.a;
 import com.tencent.mm.compatible.util.c;
-import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.tools.TestTimeForChatting;
 
 public class LauncherUI$FitSystemWindowLayoutView
   extends FrameLayout
 {
-  private Rect fKX = new Rect();
-  private ViewGroup knA = null;
+  private Rect fUa = new Rect();
+  public ViewGroup kMH = null;
   
   public LauncherUI$FitSystemWindowLayoutView(Context paramContext)
   {
@@ -33,7 +32,7 @@ public class LauncherUI$FitSystemWindowLayoutView
   @TargetApi(14)
   public boolean fitSystemWindows(Rect paramRect)
   {
-    u.i("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "ashu::fitSystemWindows beg %s", new Object[] { paramRect.toString() });
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.LauncherUI", "ashu::fitSystemWindows beg %s", new Object[] { paramRect.toString() });
     Object localObject1;
     int j;
     int k;
@@ -43,12 +42,12 @@ public class LauncherUI$FitSystemWindowLayoutView
     label223:
     label290:
     boolean bool;
-    if ((knA != null) && ((knA.getLayoutParams() instanceof ViewGroup.MarginLayoutParams)))
+    if ((kMH != null) && ((kMH.getLayoutParams() instanceof ViewGroup.MarginLayoutParams)))
     {
-      localObject1 = (ViewGroup.MarginLayoutParams)knA.getLayoutParams();
+      localObject1 = (ViewGroup.MarginLayoutParams)kMH.getLayoutParams();
       j = bottomMargin;
       k = rightMargin;
-      u.i("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "try to setFitSystemWindowsBottomRightPadding: %d %d", new Object[] { Integer.valueOf(j), Integer.valueOf(k) });
+      com.tencent.mm.sdk.platformtools.v.i("MicroMsg.LauncherUI", "try to setFitSystemWindowsBottomRightPadding: %d %d", new Object[] { Integer.valueOf(j), Integer.valueOf(k) });
       i = 0;
       if (i < getChildCount())
       {
@@ -59,25 +58,25 @@ public class LauncherUI$FitSystemWindowLayoutView
         localObject2 = (TestTimeForChatting)localObject2;
         if ((Float.compare(j, a.fromDPToPix(((TestTimeForChatting)localObject2).getContext(), 48) * 1.5F) > 0) || (j < 0))
         {
-          u.w("!44@/B4Tb64lLpItTdpuA6oxWS/W5hNAWFGiw97iJPQYJL0=", "ERROR bottom padding %d", new Object[] { Integer.valueOf(j) });
-          lyn = 0;
+          com.tencent.mm.sdk.platformtools.v.w("MicroMsg.TestTimeForChatting", "ERROR bottom padding %d", new Object[] { Integer.valueOf(j) });
+          lZb = 0;
           if ((Float.compare(k, a.fromDPToPix(((TestTimeForChatting)localObject2).getContext(), 48) * 1.5F) <= 0) && (k >= 0)) {
             break label405;
           }
-          u.w("!44@/B4Tb64lLpItTdpuA6oxWS/W5hNAWFGiw97iJPQYJL0=", "ERROR right padding %d", new Object[] { Integer.valueOf(j) });
-          lyo = 0;
-          u.i("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "setFitSystemWindowsUseActionBarContainer: %d %d OK", new Object[] { Integer.valueOf(j), Integer.valueOf(k) });
+          com.tencent.mm.sdk.platformtools.v.w("MicroMsg.TestTimeForChatting", "ERROR right padding %d", new Object[] { Integer.valueOf(j) });
+          lZc = 0;
+          com.tencent.mm.sdk.platformtools.v.i("MicroMsg.LauncherUI", "setFitSystemWindowsUseActionBarContainer: %d %d OK", new Object[] { Integer.valueOf(j), Integer.valueOf(k) });
         }
       }
       else
       {
-        v.n(leftMargin, topMargin, rightMargin, bottomMargin);
+        v.m(leftMargin, topMargin, rightMargin, bottomMargin);
       }
     }
     else
     {
-      fKX.set(paramRect);
-      if (!c.bU(14)) {
+      fUa.set(paramRect);
+      if (!c.cm(14)) {
         break label429;
       }
       i = 0;
@@ -94,14 +93,14 @@ public class LauncherUI$FitSystemWindowLayoutView
     }
     for (;;)
     {
-      u.d("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "ashu::fitSystemWindows child ret %B, ApiLevel %d", new Object[] { Boolean.valueOf(bool), Integer.valueOf(Build.VERSION.SDK_INT) });
-      bool = super.fitSystemWindows(fKX);
-      u.d("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "ashu::fitSystemWindows super ret %B", new Object[] { Boolean.valueOf(bool) });
+      com.tencent.mm.sdk.platformtools.v.d("MicroMsg.LauncherUI", "ashu::fitSystemWindows child ret %B, ApiLevel %d", new Object[] { Boolean.valueOf(bool), Integer.valueOf(Build.VERSION.SDK_INT) });
+      bool = super.fitSystemWindows(fUa);
+      com.tencent.mm.sdk.platformtools.v.d("MicroMsg.LauncherUI", "ashu::fitSystemWindows super ret %B", new Object[] { Boolean.valueOf(bool) });
       return bool;
-      lyn = j;
+      lZb = j;
       break label171;
       label405:
-      lyo = k;
+      lZc = k;
       break label223;
       label415:
       i += 1;
@@ -112,11 +111,6 @@ public class LauncherUI$FitSystemWindowLayoutView
       label429:
       bool = false;
     }
-  }
-  
-  public void setActionBarContainer(ViewGroup paramViewGroup)
-  {
-    knA = paramViewGroup;
   }
 }
 

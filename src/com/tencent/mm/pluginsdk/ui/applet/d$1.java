@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.applet;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class d$1
   implements View.OnClickListener
@@ -11,7 +11,7 @@ final class d$1
   
   public final void onClick(View paramView)
   {
-    u.d("!44@/B4Tb64lLpLSOpQlr7qYXXzhEhFJKZisQQbc4kK5pDc=", "OnClickListener = onClick ");
+    v.d("MicroMsg.ContactListArchor", "OnClickListener = onClick ");
   }
 }
 

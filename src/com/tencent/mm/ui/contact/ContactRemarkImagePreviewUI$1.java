@@ -2,7 +2,7 @@ package com.tencent.mm.ui.contact;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.pluginsdk.ui.tools.k;
 import com.tencent.mm.ui.base.l;
 import com.tencent.mm.ui.base.n.c;
@@ -17,21 +17,21 @@ final class ContactRemarkImagePreviewUI$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = new n(ljp);
-    hle = new n.c()
+    paramMenuItem = new n(lJA);
+    hoS = new n.c()
     {
       public final void a(l paramAnonymousl)
       {
-        if (!ContactRemarkImagePreviewUI.a(ljp)) {
-          paramAnonymousl.b(0, ljp.getString(2131430890));
+        if (!ContactRemarkImagePreviewUI.a(lJA)) {
+          paramAnonymousl.b(0, lJA.getString(2131230884));
         }
-        paramAnonymousl.b(1, ljp.getString(2131427823));
-        if (c.yf("favorite")) {
-          paramAnonymousl.b(2, ljp.getString(2131431054));
+        paramAnonymousl.b(1, lJA.getString(2131234713));
+        if (c.zM("favorite")) {
+          paramAnonymousl.b(2, lJA.getString(2131234160));
         }
       }
     };
-    hlf = new n.d()
+    hoT = new n.d()
     {
       public final void d(MenuItem paramAnonymousMenuItem, int paramAnonymousInt)
       {
@@ -40,19 +40,19 @@ final class ContactRemarkImagePreviewUI$1
         default: 
           return;
         case 0: 
-          if (!ContactRemarkImagePreviewUI.b(ljp))
+          if (!ContactRemarkImagePreviewUI.b(lJA))
           {
-            ContactRemarkImagePreviewUI.a(ljp, true);
+            ContactRemarkImagePreviewUI.a(lJA, true);
             return;
           }
-          new File(ContactRemarkImagePreviewUI.c(ljp)).delete();
-          ContactRemarkImagePreviewUI.a(ljp, true);
+          new File(ContactRemarkImagePreviewUI.c(lJA)).delete();
+          ContactRemarkImagePreviewUI.a(lJA, true);
           return;
         case 1: 
-          k.h(ContactRemarkImagePreviewUI.c(ljp), ljp);
+          k.h(ContactRemarkImagePreviewUI.c(lJA), lJA);
           return;
         }
-        ContactRemarkImagePreviewUI.d(ljp);
+        ContactRemarkImagePreviewUI.d(lJA);
       }
     };
     paramMenuItem.bH();

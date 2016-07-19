@@ -2,12 +2,13 @@ package com.tencent.mm.ui.tools;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.os.Looper;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
 import android.widget.ImageButton;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import junit.framework.Assert;
 
 public class MaskImageButton
@@ -16,8 +17,8 @@ public class MaskImageButton
   private int a = 90;
   private int b = 0;
   private int g = 0;
-  private aa gWl = new aa();
-  private Runnable gWm = new Runnable()
+  private ac hjH = new ac(Looper.getMainLooper());
+  private Runnable hjI = new Runnable()
   {
     public final void run()
     {
@@ -25,7 +26,7 @@ public class MaskImageButton
       invalidate();
     }
   };
-  public Object lxa;
+  public Object lXN;
   private int r = 0;
   
   public MaskImageButton(Context paramContext, AttributeSet paramAttributeSet)

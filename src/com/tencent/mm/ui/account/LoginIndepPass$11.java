@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelfriend.u;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.base.g;
 
 final class LoginIndepPass$11
@@ -17,22 +17,22 @@ final class LoginIndepPass$11
   
   public final void onClick(View paramView)
   {
-    g.a(ktE, ktE.getString(2131427665) + LoginIndepPass.c(ktE), ktE.getString(2131427664), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+    g.a(kSL, kSL.getString(2131234414) + LoginIndepPass.c(kSL), kSL.getString(2131234415), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
     {
       public final void onClick(final DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
-        ah.tE().a(145, ktE);
-        paramAnonymousDialogInterface = new u(LoginIndepPass.d(ktE), 16, "", 0, "");
-        ah.tE().d(paramAnonymousDialogInterface);
-        LoginIndepPass localLoginIndepPass1 = ktE;
-        LoginIndepPass localLoginIndepPass2 = ktE;
-        ktE.getString(2131430877);
-        LoginIndepPass.a(localLoginIndepPass1, g.a(localLoginIndepPass2, ktE.getString(2131428233), true, new DialogInterface.OnCancelListener()
+        ah.tF().a(145, kSL);
+        paramAnonymousDialogInterface = new u(LoginIndepPass.d(kSL), 16, "", 0, "");
+        ah.tF().a(paramAnonymousDialogInterface, 0);
+        LoginIndepPass localLoginIndepPass1 = kSL;
+        LoginIndepPass localLoginIndepPass2 = kSL;
+        kSL.getString(2131231028);
+        LoginIndepPass.a(localLoginIndepPass1, g.a(localLoginIndepPass2, kSL.getString(2131235027), true, new DialogInterface.OnCancelListener()
         {
           public final void onCancel(DialogInterface paramAnonymous2DialogInterface)
           {
-            ah.tE().c(paramAnonymousDialogInterface);
-            ah.tE().b(701, ktE);
+            ah.tF().c(paramAnonymousDialogInterface);
+            ah.tF().b(701, kSL);
           }
         }));
       }

@@ -2,7 +2,7 @@ package com.tencent.mm.ui;
 
 abstract interface e$d
 {
-  public abstract void aZL();
+  public abstract void bfj();
 }
 
 /* Location:

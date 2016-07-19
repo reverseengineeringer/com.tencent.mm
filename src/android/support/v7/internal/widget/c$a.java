@@ -8,72 +8,72 @@ import android.widget.Adapter;
 final class c$a
   extends DataSetObserver
 {
-  private Parcelable pC = null;
+  private Parcelable pQ = null;
   
   c$a(c paramc) {}
   
   public final void onChanged()
   {
-    pD.pp = true;
-    pD.pw = pD.pv;
-    pD.pv = pD.getAdapter().getCount();
-    if ((pD.getAdapter().hasStableIds()) && (pC != null) && (pD.pw == 0) && (pD.pv > 0))
+    pR.pD = true;
+    pR.pK = pR.pJ;
+    pR.pJ = pR.getAdapter().getCount();
+    if ((pR.getAdapter().hasStableIds()) && (pQ != null) && (pR.pK == 0) && (pR.pJ > 0))
     {
-      c.a(pD, pC);
-      pC = null;
+      c.a(pR, pQ);
+      pQ = null;
     }
     c localc;
     for (;;)
     {
-      pD.cb();
-      pD.requestLayout();
+      pR.cd();
+      pR.requestLayout();
       return;
-      localc = pD;
+      localc = pR;
       if (localc.getChildCount() > 0)
       {
-        pk = true;
-        pj = pm;
-        if (ps < 0) {
+        py = true;
+        px = pA;
+        if (pG < 0) {
           break;
         }
-        localView = localc.getChildAt(ps - pf);
-        pi = pr;
-        ph = pq;
+        localView = localc.getChildAt(pG - pt);
+        pw = pF;
+        pv = pE;
         if (localView != null) {
-          pg = localView.getTop();
+          pu = localView.getTop();
         }
-        pl = 0;
+        pz = 0;
       }
     }
     View localView = localc.getChildAt(0);
     Adapter localAdapter = localc.getAdapter();
-    if ((pf >= 0) && (pf < localAdapter.getCount())) {}
-    for (pi = localAdapter.getItemId(pf);; pi = -1L)
+    if ((pt >= 0) && (pt < localAdapter.getCount())) {}
+    for (pw = localAdapter.getItemId(pt);; pw = -1L)
     {
-      ph = pf;
+      pv = pt;
       if (localView != null) {
-        pg = localView.getTop();
+        pu = localView.getTop();
       }
-      pl = 1;
+      pz = 1;
       break;
     }
   }
   
   public final void onInvalidated()
   {
-    pD.pp = true;
-    if (pD.getAdapter().hasStableIds()) {
-      pC = c.a(pD);
+    pR.pD = true;
+    if (pR.getAdapter().hasStableIds()) {
+      pQ = c.a(pR);
     }
-    pD.pw = pD.pv;
-    pD.pv = 0;
-    pD.ps = -1;
-    pD.pt = Long.MIN_VALUE;
-    pD.pq = -1;
-    pD.pr = Long.MIN_VALUE;
-    pD.pk = false;
-    pD.cb();
-    pD.requestLayout();
+    pR.pK = pR.pJ;
+    pR.pJ = 0;
+    pR.pG = -1;
+    pR.pH = Long.MIN_VALUE;
+    pR.pE = -1;
+    pR.pF = Long.MIN_VALUE;
+    pR.py = false;
+    pR.cd();
+    pR.requestLayout();
   }
 }
 

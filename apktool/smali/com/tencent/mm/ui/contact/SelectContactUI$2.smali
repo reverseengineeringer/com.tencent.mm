@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+.field final synthetic lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 632
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$2;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    .line 631
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$2;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,47 +40,47 @@
     .locals 2
 
     .prologue
-    .line 635
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$2;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    .line 634
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$2;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/contact/SelectContactUI;->d(Lcom/tencent/mm/ui/contact/SelectContactUI;Z)Z
 
-    .line 636
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$2;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    .line 635
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$2;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/contact/SelectContactUI;->f(Lcom/tencent/mm/ui/contact/SelectContactUI;)Lcom/tencent/mm/d/a/gv;
+    invoke-static {v0}, Lcom/tencent/mm/ui/contact/SelectContactUI;->f(Lcom/tencent/mm/ui/contact/SelectContactUI;)Lcom/tencent/mm/e/a/hg;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 637
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$2;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    .line 636
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$2;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/contact/SelectContactUI;->f(Lcom/tencent/mm/ui/contact/SelectContactUI;)Lcom/tencent/mm/d/a/gv;
+    invoke-static {v0}, Lcom/tencent/mm/ui/contact/SelectContactUI;->f(Lcom/tencent/mm/ui/contact/SelectContactUI;)Lcom/tencent/mm/e/a/hg;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/d/a/gv;->aBZ:Lcom/tencent/mm/d/a/gv$a;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/hg;->aos:Lcom/tencent/mm/e/a/hg$a;
 
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lcom/tencent/mm/d/a/gv$a;->aBY:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/e/a/hg$a;->aor:Z
 
-    .line 638
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 637
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$2;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$2;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/contact/SelectContactUI;->f(Lcom/tencent/mm/ui/contact/SelectContactUI;)Lcom/tencent/mm/d/a/gv;
+    invoke-static {v1}, Lcom/tencent/mm/ui/contact/SelectContactUI;->f(Lcom/tencent/mm/ui/contact/SelectContactUI;)Lcom/tencent/mm/e/a/hg;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
-    .line 640
+    .line 639
     :cond_0
     return-void
 .end method

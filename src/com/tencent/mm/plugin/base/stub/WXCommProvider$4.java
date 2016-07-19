@@ -1,10 +1,10 @@
 package com.tencent.mm.plugin.base.stub;
 
 import android.net.Uri;
-import com.tencent.mm.sdk.platformtools.at;
+import com.tencent.mm.sdk.platformtools.az;
 
 final class WXCommProvider$4
-  extends at
+  extends az<Integer>
 {
   WXCommProvider$4(WXCommProvider paramWXCommProvider, Integer paramInteger, Uri paramUri, int paramInt, String[] paramArrayOfString)
   {

@@ -10,7 +10,7 @@ final class MobileLoginOrForceReg$14
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    MobileLoginOrForceReg.k(kyq);
+    MobileLoginOrForceReg.k(kXx);
     return false;
   }
 }

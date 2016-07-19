@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kLf:Lcom/tencent/mm/ui/base/preference/EditPreference;
+.field final synthetic lku:Lcom/tencent/mm/ui/base/preference/EditPreference;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 99
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/EditPreference$2;->kLf:Lcom/tencent/mm/ui/base/preference/EditPreference;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/EditPreference$2;->lku:Lcom/tencent/mm/ui/base/preference/EditPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 103
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/EditPreference$2;->kLf:Lcom/tencent/mm/ui/base/preference/EditPreference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/EditPreference$2;->lku:Lcom/tencent/mm/ui/base/preference/EditPreference;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/preference/EditPreference;->a(Lcom/tencent/mm/ui/base/preference/EditPreference;)Lcom/tencent/mm/ui/base/h;
 
@@ -50,7 +50,7 @@
     if-eqz v0, :cond_0
 
     .line 104
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/EditPreference$2;->kLf:Lcom/tencent/mm/ui/base/preference/EditPreference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/EditPreference$2;->lku:Lcom/tencent/mm/ui/base/preference/EditPreference;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/preference/EditPreference;->a(Lcom/tencent/mm/ui/base/preference/EditPreference;)Lcom/tencent/mm/ui/base/h;
 

@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field public mcM:I
+.field public mOQ:I
 
-.field public mcN:I
+.field public mOR:I
 
 
 # direct methods
@@ -20,15 +20,15 @@
     invoke-direct {p0}, Loicq/wlogin_sdk/a/a;-><init>()V
 
     .line 6
-    iput v0, p0, Loicq/wlogin_sdk/a/z;->mcM:I
+    iput v0, p0, Loicq/wlogin_sdk/a/z;->mOQ:I
 
     .line 7
-    iput v0, p0, Loicq/wlogin_sdk/a/z;->mcN:I
+    iput v0, p0, Loicq/wlogin_sdk/a/z;->mOR:I
 
     .line 10
     const/16 v0, 0x125
 
-    iput v0, p0, Loicq/wlogin_sdk/a/z;->mbE:I
+    iput v0, p0, Loicq/wlogin_sdk/a/z;->mNI:I
 
     .line 11
     return-void
@@ -36,14 +36,14 @@
 
 
 # virtual methods
-.method public final bot()Ljava/lang/Boolean;
+.method public final bvr()Ljava/lang/Boolean;
     .locals 3
 
     .prologue
     const/4 v2, 0x0
 
     .line 14
-    iget v0, p0, Loicq/wlogin_sdk/a/z;->mco:I
+    iget v0, p0, Loicq/wlogin_sdk/a/z;->mOs:I
 
     const/4 v1, 0x2
 
@@ -60,20 +60,20 @@
 
     .line 16
     :cond_0
-    iget-object v0, p0, Loicq/wlogin_sdk/a/z;->mby:[B
+    iget-object v0, p0, Loicq/wlogin_sdk/a/z;->mNC:[B
 
-    iget v1, p0, Loicq/wlogin_sdk/a/z;->mcn:I
+    iget v1, p0, Loicq/wlogin_sdk/a/z;->mOr:I
 
-    invoke-static {v0, v1}, Loicq/wlogin_sdk/tools/util;->E([BI)I
+    invoke-static {v0, v1}, Loicq/wlogin_sdk/tools/util;->F([BI)I
 
     move-result v0
 
-    iput v0, p0, Loicq/wlogin_sdk/a/z;->mcM:I
+    iput v0, p0, Loicq/wlogin_sdk/a/z;->mOQ:I
 
     .line 17
-    iget v0, p0, Loicq/wlogin_sdk/a/z;->mco:I
+    iget v0, p0, Loicq/wlogin_sdk/a/z;->mOs:I
 
-    iget v1, p0, Loicq/wlogin_sdk/a/z;->mcM:I
+    iget v1, p0, Loicq/wlogin_sdk/a/z;->mOQ:I
 
     add-int/lit8 v1, v1, 0x2
 
@@ -90,21 +90,21 @@
 
     .line 19
     :cond_1
-    iget-object v0, p0, Loicq/wlogin_sdk/a/z;->mby:[B
+    iget-object v0, p0, Loicq/wlogin_sdk/a/z;->mNC:[B
 
-    iget v1, p0, Loicq/wlogin_sdk/a/z;->mcn:I
+    iget v1, p0, Loicq/wlogin_sdk/a/z;->mOr:I
 
     add-int/lit8 v1, v1, 0x2
 
-    iget v2, p0, Loicq/wlogin_sdk/a/z;->mcM:I
+    iget v2, p0, Loicq/wlogin_sdk/a/z;->mOQ:I
 
     add-int/2addr v1, v2
 
-    invoke-static {v0, v1}, Loicq/wlogin_sdk/tools/util;->E([BI)I
+    invoke-static {v0, v1}, Loicq/wlogin_sdk/tools/util;->F([BI)I
 
     move-result v0
 
-    iput v0, p0, Loicq/wlogin_sdk/a/z;->mcN:I
+    iput v0, p0, Loicq/wlogin_sdk/a/z;->mOR:I
 
     .line 20
     const/4 v0, 0x1

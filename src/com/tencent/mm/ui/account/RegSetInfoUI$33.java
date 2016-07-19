@@ -10,7 +10,7 @@ final class RegSetInfoUI$33
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    RegSetInfoUI.x(kwh);
+    RegSetInfoUI.x(kVo);
     return true;
   }
 }

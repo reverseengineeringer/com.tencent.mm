@@ -10,7 +10,7 @@ final class SnsLabelUI$4
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    SnsLabelUI.i(hfA);
+    SnsLabelUI.i(hur);
     return true;
   }
 }

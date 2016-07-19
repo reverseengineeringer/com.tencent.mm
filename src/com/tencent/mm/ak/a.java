@@ -1,40 +1,89 @@
 package com.tencent.mm.ak;
 
-import com.tencent.mm.model.al.a;
-import com.tencent.mm.model.al.b;
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.h.d;
-import com.tencent.mm.r.h;
+import android.content.ContentValues;
+import android.database.Cursor;
 
-final class a
-  extends h
+public final class a
 {
-  al.a cco = new al.a();
-  al.b ccp = new al.b();
+  int aqQ = -1;
+  public int bRh = 0;
+  private String bxD = "";
+  private String bxE = "";
+  private int bxF = 0;
+  private int bxG = 0;
+  private String path = "";
+  public String username = "";
   
-  public final int getType()
+  public final void b(Cursor paramCursor)
   {
-    return 261;
+    username = paramCursor.getString(0);
+    bRh = paramCursor.getInt(1);
+    path = paramCursor.getString(2);
+    bxD = paramCursor.getString(3);
+    bxE = paramCursor.getString(4);
+    bxF = paramCursor.getInt(5);
+    bxG = paramCursor.getInt(6);
   }
   
-  public final String getUri()
+  public final String getUsername()
   {
-    return "/cgi-bin/micromsg-bin/getsoterfingerprintticketrsa";
+    if (username == null) {
+      return "";
+    }
+    return username;
   }
   
-  protected final h.c tW()
+  public final ContentValues kn()
   {
-    return cco;
-  }
-  
-  public final h.d tX()
-  {
-    return ccp;
-  }
-  
-  public final int vx()
-  {
-    return 1;
+    ContentValues localContentValues = new ContentValues();
+    if ((aqQ & 0x1) != 0) {
+      localContentValues.put("username", getUsername());
+    }
+    if ((aqQ & 0x2) != 0) {
+      localContentValues.put("bgflag", Integer.valueOf(bRh));
+    }
+    if ((aqQ & 0x4) != 0)
+    {
+      if (path == null)
+      {
+        str = "";
+        localContentValues.put("path", str);
+      }
+    }
+    else
+    {
+      if ((aqQ & 0x8) != 0)
+      {
+        if (bxD != null) {
+          break label185;
+        }
+        str = "";
+        label95:
+        localContentValues.put("reserved1", str);
+      }
+      if ((aqQ & 0x10) != 0) {
+        if (bxE != null) {
+          break label193;
+        }
+      }
+    }
+    label185:
+    label193:
+    for (String str = "";; str = bxE)
+    {
+      localContentValues.put("reserved2", str);
+      if ((aqQ & 0x20) != 0) {
+        localContentValues.put("reserved3", Integer.valueOf(bxF));
+      }
+      if ((aqQ & 0x40) != 0) {
+        localContentValues.put("reserved4", Integer.valueOf(bxG));
+      }
+      return localContentValues;
+      str = path;
+      break;
+      str = bxD;
+      break label95;
+    }
   }
 }
 

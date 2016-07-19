@@ -1,21 +1,21 @@
 package com.tencent.mm.ui.transmit;
 
-import android.app.ProgressDialog;
-import com.tencent.mm.pluginsdk.model.h.a;
+import com.tencent.mm.t.e;
+import com.tencent.mm.t.j;
+import com.tencent.mm.ui.base.h;
 
 final class MsgRetransmitUI$9
-  implements h.a
+  implements e
 {
   MsgRetransmitUI$9(MsgRetransmitUI paramMsgRetransmitUI) {}
   
-  public final void aPr()
+  public final void a(int paramInt1, int paramInt2, j paramj)
   {
-    if (MsgRetransmitUI.e(lAT) != null)
-    {
-      MsgRetransmitUI.e(lAT).dismiss();
-      MsgRetransmitUI.f(lAT);
+    if ((MsgRetransmitUI.b(mbK) == null) || (paramInt2 == 0)) {
+      return;
     }
-    lAT.finish();
+    paramInt1 = (int)(paramInt1 * 100L / paramInt2);
+    MsgRetransmitUI.b(mbK).setMessage(mbK.getString(2131233892, new Object[] { Integer.valueOf(MsgRetransmitUI.c(mbK)), Integer.valueOf(MsgRetransmitUI.d(mbK)), Integer.valueOf(paramInt1) }));
   }
 }
 

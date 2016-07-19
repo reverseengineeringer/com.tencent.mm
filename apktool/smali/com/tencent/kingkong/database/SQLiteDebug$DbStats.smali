@@ -33,7 +33,7 @@
     .prologue
     const-wide/16 v2, 0x400
 
-    .line 232
+    .line 233
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 234
@@ -57,11 +57,11 @@
     .line 238
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {p7}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v1
+    invoke-virtual {v0, p7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string/jumbo v1, "/"
 

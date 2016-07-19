@@ -1,4 +1,4 @@
-.class final Lcom/tencent/kingkong/database/SQLiteConnectionPool$1;
+.class Lcom/tencent/kingkong/database/SQLiteConnectionPool$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -20,9 +20,9 @@
 # instance fields
 .field final synthetic this$0:Lcom/tencent/kingkong/database/SQLiteConnectionPool;
 
-.field private final synthetic val$nonce:I
+.field final synthetic val$nonce:I
 
-.field private final synthetic val$waiter:Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;
+.field final synthetic val$waiter:Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;
 
 
 # direct methods
@@ -30,14 +30,13 @@
     .locals 0
 
     .prologue
-    .line 1
+    .line 680
     iput-object p1, p0, Lcom/tencent/kingkong/database/SQLiteConnectionPool$1;->this$0:Lcom/tencent/kingkong/database/SQLiteConnectionPool;
 
     iput-object p2, p0, Lcom/tencent/kingkong/database/SQLiteConnectionPool$1;->val$waiter:Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;
 
     iput p3, p0, Lcom/tencent/kingkong/database/SQLiteConnectionPool$1;->val$nonce:I
 
-    .line 680
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,7 @@
 
 
 # virtual methods
-.method public final onCancel()V
+.method public onCancel()V
     .locals 3
 
     .prologue
@@ -53,7 +52,7 @@
     iget-object v0, p0, Lcom/tencent/kingkong/database/SQLiteConnectionPool$1;->this$0:Lcom/tencent/kingkong/database/SQLiteConnectionPool;
 
     # getter for: Lcom/tencent/kingkong/database/SQLiteConnectionPool;->mLock:Ljava/lang/Object;
-    invoke-static {v0}, Lcom/tencent/kingkong/database/SQLiteConnectionPool;->access$0(Lcom/tencent/kingkong/database/SQLiteConnectionPool;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/tencent/kingkong/database/SQLiteConnectionPool;->access$000(Lcom/tencent/kingkong/database/SQLiteConnectionPool;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -75,9 +74,9 @@
     iget-object v2, p0, Lcom/tencent/kingkong/database/SQLiteConnectionPool$1;->val$waiter:Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;
 
     # invokes: Lcom/tencent/kingkong/database/SQLiteConnectionPool;->cancelConnectionWaiterLocked(Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;)V
-    invoke-static {v0, v2}, Lcom/tencent/kingkong/database/SQLiteConnectionPool;->access$1(Lcom/tencent/kingkong/database/SQLiteConnectionPool;Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;)V
+    invoke-static {v0, v2}, Lcom/tencent/kingkong/database/SQLiteConnectionPool;->access$100(Lcom/tencent/kingkong/database/SQLiteConnectionPool;Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;)V
 
-    .line 683
+    .line 687
     :cond_0
     monitor-exit v1
 

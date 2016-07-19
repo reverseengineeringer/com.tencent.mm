@@ -1,6 +1,6 @@
 package com.tencent.mm.modelcdntran;
 
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 public class keep_SceneResult
 {
@@ -11,6 +11,7 @@ public class keep_SceneResult
   public String field_arg;
   public String field_argInfo;
   public boolean field_convert2baseline = false;
+  public boolean field_exist_whencheck = false;
   public String field_fileId;
   public int field_fileLength;
   public String field_fileUrl = "";
@@ -20,6 +21,7 @@ public class keep_SceneResult
   public int field_retCode;
   public byte[] field_sKeyrespbuf;
   public String field_thumbUrl = "";
+  public String field_thumbfilemd5 = "";
   public int field_thumbimgLength;
   public String field_toUser;
   public String field_transInfo;
@@ -43,7 +45,7 @@ public class keep_SceneResult
   
   public String toString()
   {
-    String str2 = String.format("id:%s file:%s aeskey:%d filelen:%d midlen:%d thlen:%d transInfo:%s retCode:%d toUser:%s arg:%s videoFileId:%s argInfo:%s hitcache:%d needsend:%b msgid:%d convert2baseline:%b thumbUrl:%s fileUrl:%s", new Object[] { mediaId, field_fileId, Integer.valueOf(ay.ky(field_aesKey).length()), Integer.valueOf(field_fileLength), Integer.valueOf(field_midimgLength), Integer.valueOf(field_thumbimgLength), field_transInfo, Integer.valueOf(field_retCode), field_toUser, field_arg, field_videoFileId, field_argInfo, Integer.valueOf(field_UploadHitCacheType), Boolean.valueOf(field_needSendMsgField), Integer.valueOf(0), Boolean.valueOf(field_convert2baseline), field_thumbUrl, field_fileUrl });
+    String str2 = String.format("id:%s file:%s filelen:%d midlen:%d thlen:%d transInfo:%s retCode:%d toUser:%s arg:%s videoFileId:%s argInfo:%s hitcache:%d needsend:%b msgid:%d convert2baseline:%b thumbUrl:%s fileUrl:%s filemd5:%s thumbfilemd5:%s, exist_whencheck[%b], aesKey[%s]", new Object[] { mediaId, field_fileId, Integer.valueOf(field_fileLength), Integer.valueOf(field_midimgLength), Integer.valueOf(field_thumbimgLength), field_transInfo, Integer.valueOf(field_retCode), field_toUser, field_arg, field_videoFileId, field_argInfo, Integer.valueOf(field_UploadHitCacheType), Boolean.valueOf(field_needSendMsgField), Integer.valueOf(0), Boolean.valueOf(field_convert2baseline), field_thumbUrl, field_fileUrl, field_filemd5, field_thumbfilemd5, Boolean.valueOf(field_exist_whencheck), be.FO(field_aesKey) });
     String str1 = str2;
     if (field_sKeyrespbuf != null) {
       str1 = str2 + String.format("skeyrespbuf:%s", new Object[] { bytesToHex(field_sKeyrespbuf) });

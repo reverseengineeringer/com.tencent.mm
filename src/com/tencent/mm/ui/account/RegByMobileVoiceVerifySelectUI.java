@@ -5,10 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.ac.b;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.af.b;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
 import com.tencent.mm.ui.base.preference.MMPreference;
 import com.tencent.mm.ui.base.preference.Preference;
 import com.tencent.mm.ui.base.preference.PreferenceCategory;
@@ -18,30 +18,30 @@ public class RegByMobileVoiceVerifySelectUI
   extends MMPreference
   implements d
 {
-  private f cpb;
-  private String glJ;
-  private LanguagePreference.a[] kvl;
+  private f ckp;
+  private String gwe;
+  private LanguagePreference.a[] kUs;
   
-  public static String Gt(String paramString)
+  public static String II(String paramString)
   {
-    LanguagePreference.a[] arrayOfa = bbM();
-    paramString = b.ii(paramString);
+    LanguagePreference.a[] arrayOfa = bgY();
+    paramString = b.iz(paramString);
     int j = arrayOfa.length;
     int i = 0;
     while (i < j)
     {
       LanguagePreference.a locala = arrayOfa[i];
-      if (ksE.equalsIgnoreCase(paramString)) {
-        return ksC;
+      if (kRM.equalsIgnoreCase(paramString)) {
+        return kRK;
       }
       i += 1;
     }
     return "English";
   }
   
-  private static LanguagePreference.a[] bbM()
+  private static LanguagePreference.a[] bgY()
   {
-    String[] arrayOfString1 = y.getContext().getString(2131428646).trim().split(",");
+    String[] arrayOfString1 = aa.getContext().getString(2131231313).trim().split(",");
     LanguagePreference.a[] arrayOfa = new LanguagePreference.a[arrayOfString1.length];
     int i = 0;
     while (i < arrayOfString1.length)
@@ -53,58 +53,56 @@ public class RegByMobileVoiceVerifySelectUI
     return arrayOfa;
   }
   
-  protected final void Gb()
+  public final int GK()
   {
-    age();
-    glJ = getIntent().getExtras().getString("voice_verify_code");
-    qb(2131428643);
+    return 2130903151;
+  }
+  
+  protected final void Gy()
+  {
+    aiI();
+    gwe = getIntent().getExtras().getString("voice_verify_code");
+    rR(2131231319);
     b(new MenuItem.OnMenuItemClickListener()
     {
       public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
       {
-        age();
+        aiI();
         finish();
         return true;
       }
     });
-    kvl = bbM();
-    if ((kvl == null) || (kvl.length <= 0)) {}
+    kUs = bgY();
+    if ((kUs == null) || (kUs.length <= 0)) {}
     for (;;)
     {
       return;
-      cpb.removeAll();
+      ckp.removeAll();
       Object localObject = new PreferenceCategory(this);
-      cpb.a((Preference)localObject);
-      localObject = kvl;
+      ckp.a((Preference)localObject);
+      localObject = kUs;
       int j = localObject.length;
       int i = 0;
       while (i < j)
       {
         LanguagePreference.a locala = localObject[i];
-        if (ksE.equalsIgnoreCase(glJ)) {
-          ksF = true;
+        if (kRM.equalsIgnoreCase(gwe)) {
+          kRN = true;
         }
         LanguagePreference localLanguagePreference = new LanguagePreference(this);
         localLanguagePreference.a(locala);
-        localLanguagePreference.setKey(ksE);
-        cpb.a(localLanguagePreference);
+        localLanguagePreference.setKey(kRM);
+        ckp.a(localLanguagePreference);
         i += 1;
       }
     }
   }
   
-  public final int Gn()
-  {
-    return 2131362436;
-  }
-  
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj) {}
-  
   public final boolean a(f paramf, Preference paramPreference)
   {
     if ((paramPreference instanceof LanguagePreference))
     {
-      paramf = ksB;
+      paramf = kRJ;
       if (paramf != null) {}
     }
     else
@@ -113,8 +111,8 @@ public class RegByMobileVoiceVerifySelectUI
     }
     paramPreference = new Intent();
     Bundle localBundle = new Bundle();
-    localBundle.putString("voice_verify_language", ksC);
-    localBundle.putString("voice_verify_code", ksE);
+    localBundle.putString("voice_verify_language", kRK);
+    localBundle.putString("voice_verify_code", kRM);
     paramPreference.putExtras(localBundle);
     setResult(0, paramPreference);
     finish();
@@ -124,14 +122,16 @@ public class RegByMobileVoiceVerifySelectUI
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    cpb = kLL;
-    Gb();
+    ckp = lla;
+    Gy();
   }
   
   protected void onDestroy()
   {
     super.onDestroy();
   }
+  
+  public void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj) {}
 }
 
 /* Location:

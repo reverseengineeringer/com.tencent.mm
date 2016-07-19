@@ -3,24 +3,24 @@ package com.tencent.mm.dbsupport.newcursor;
 import java.util.ArrayList;
 
 final class j$1
-  extends b
+  extends b<a>
 {
   j$1(j paramj) {}
   
-  public final ArrayList d(ArrayList paramArrayList)
+  public final ArrayList<a> e(ArrayList<Object> paramArrayList)
   {
-    j localj = bvH;
-    if (bvC != null) {
-      return bvC.d(paramArrayList);
+    j localj = bkA;
+    if (bkv != null) {
+      return bkv.e(paramArrayList);
     }
     return null;
   }
   
-  public final a qD()
+  public final a ph()
   {
-    j localj = bvH;
-    if (bvC != null) {
-      return bvC.qD();
+    j localj = bkA;
+    if (bkv != null) {
+      return bkv.ph();
     }
     return null;
   }

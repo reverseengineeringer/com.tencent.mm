@@ -2,31 +2,31 @@ package com.tencent.mm.c.b;
 
 public abstract class f
 {
-  protected boolean aqV = false;
-  protected int aqW = 0;
-  protected int aqi = -123456789;
-  protected a aqz;
+  protected int abA = -123456789;
+  protected a abR;
+  protected boolean acn = false;
+  protected int aco = 0;
+  
+  public abstract void Q(boolean paramBoolean);
   
   public final void a(a parama)
   {
-    aqz = parama;
+    abR = parama;
   }
   
-  public final void aQ(int paramInt)
+  public final void bg(int paramInt)
   {
-    aqi = paramInt;
+    abA = paramInt;
   }
   
-  public abstract void an(boolean paramBoolean);
+  public abstract void jJ();
   
-  public abstract boolean lN();
+  public abstract boolean jY();
   
-  public final int lR()
+  public final int kc()
   {
-    return aqW;
+    return aco;
   }
-  
-  public abstract void li();
   
   public static abstract interface a
   {

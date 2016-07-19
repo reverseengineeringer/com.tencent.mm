@@ -18,5 +18,5 @@
 .method public abstract isAvailable()Z
 .end method
 
-.method public abstract nK()Z
+.method public abstract lY()Z
 .end method

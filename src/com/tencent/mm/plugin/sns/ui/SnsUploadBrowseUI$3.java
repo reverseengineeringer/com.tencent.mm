@@ -13,12 +13,12 @@ final class SnsUploadBrowseUI$3
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    g.a(hlx, 2131433089, 2131430877, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+    g.a(hBA, 2131235434, 2131231028, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
-        if (hlx.hbK.aBV() == 0) {
-          hlx.aCN();
+        if (hBA.hqA.aEV() == 0) {
+          hBA.aFS();
         }
       }
     }, new DialogInterface.OnClickListener()

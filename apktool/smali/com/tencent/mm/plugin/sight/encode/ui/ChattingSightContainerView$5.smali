@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gBF:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;
+.field final synthetic gIh:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 246
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$5;->gBF:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$5;->gIh:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 250
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$5;->gBF:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$5;->gIh:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->eI(Z)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->eA(Z)V
 
     .line 251
     return-void

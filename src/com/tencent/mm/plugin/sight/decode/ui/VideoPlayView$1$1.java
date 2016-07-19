@@ -1,7 +1,7 @@
 package com.tencent.mm.plugin.sight.decode.ui;
 
 import android.widget.ProgressBar;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class VideoPlayView$1$1
   implements Runnable
@@ -10,24 +10,24 @@ final class VideoPlayView$1$1
   
   public final void run()
   {
-    u.i("!32@/B4Tb64lLpKQpS0z/gOJ2Vq6wExBF/3X", "play time " + gze + " video time " + gzf);
-    if (gzf > 0)
+    v.i("MicroMsg.VideoPlayView", "play time " + gFH + " video time " + gFI);
+    if (gFI > 0)
     {
-      VideoPlayView.a(gzg.gzd, gzf);
-      if ((VideoPlayView.c(gzg.gzd) != null) && (VideoPlayView.h(gzg.gzd))) {
-        VideoPlayView.i(gzg.gzd);
+      VideoPlayView.a(gFJ.gFG, gFI);
+      if ((VideoPlayView.c(gFJ.gFG) != null) && (VideoPlayView.h(gFJ.gFG))) {
+        VideoPlayView.i(gFJ.gFG);
       }
-      VideoPlayView.g(gzg.gzd).kY(gzf);
+      VideoPlayView.g(gFJ.gFG).mf(gFI);
     }
-    if (VideoPlayView.c(gzg.gzd) != null)
+    if (VideoPlayView.c(gFJ.gFG) != null)
     {
-      if (VideoPlayView.c(gzg.gzd).getVideoTotalTime() != gzf) {
-        VideoPlayView.c(gzg.gzd).setVideoTotalTime(gzf);
+      if (VideoPlayView.c(gFJ.gFG).ayo() != gFI) {
+        VideoPlayView.c(gFJ.gFG).mb(gFI);
       }
-      VideoPlayView.c(gzg.gzd).kU(gze);
+      VideoPlayView.c(gFJ.gFG).ma(gFH);
     }
-    if (VideoPlayView.j(gzg.gzd).getVisibility() == 0) {
-      VideoPlayView.j(gzg.gzd).setVisibility(8);
+    if (VideoPlayView.j(gFJ.gFG).getVisibility() == 0) {
+      VideoPlayView.j(gFJ.gFG).setVisibility(8);
     }
   }
 }

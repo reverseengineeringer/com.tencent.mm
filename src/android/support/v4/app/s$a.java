@@ -5,9 +5,9 @@ import android.os.Bundle;
 
 public abstract class s$a
 {
-  protected abstract PendingIntent X();
+  protected abstract PendingIntent W();
   
-  protected abstract y.a[] Y();
+  protected abstract y.a[] X();
   
   protected abstract Bundle getExtras();
   

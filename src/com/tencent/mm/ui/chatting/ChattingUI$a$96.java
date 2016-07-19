@@ -1,24 +1,35 @@
 package com.tencent.mm.ui.chatting;
 
+import android.content.Intent;
 import android.view.View;
-import android.view.View.OnClickListener;
-import com.tencent.mm.pluginsdk.ui.chat.ChatFooter;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.ui.j;
+import com.tencent.mm.ui.o;
 
 final class ChattingUI$a$96
-  implements View.OnClickListener
+  implements AdapterView.OnItemClickListener
 {
-  ChattingUI$a$96(ChattingUI.a parama, Boolean paramBoolean) {}
+  ChattingUI$a$96(ChattingUI.a parama) {}
   
-  public final void onClick(View paramView)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    if (lbt.booleanValue())
+    paramAdapterView = (ai)ChattingUI.a.ae(lAY).getItem(paramInt);
+    if ((paramAdapterView != null) && (!be.kf(field_talker)))
     {
-      ChattingUI.a.a(laF, Boolean.valueOf(true), Boolean.valueOf(true));
-      laF.faQ.aRE();
-      return;
+      g.gdY.h(10450, new Object[] { Integer.valueOf(1) });
+      paramView = new Intent(lAY.kNN.kOg, ChattingUI.class);
+      paramView.putExtra("Chat_User", field_talker);
+      paramView.putExtra("finish_direct", true);
+      paramView.putExtra("show_search_chat_content_result", false);
+      paramView.putExtra("msg_local_id", field_msgId);
+      paramView.putExtra("img_gallery_enter_from_chatting_ui", true);
+      lAY.startActivity(paramView);
     }
-    ChattingUI.a.a(laF, Boolean.valueOf(true), Boolean.valueOf(false));
-    laF.faQ.setMode(2);
   }
 }
 

@@ -10,7 +10,7 @@ final class LoginIndepPass$8
   
   public final void afterTextChanged(Editable paramEditable)
   {
-    LoginIndepPass.b(ktE);
+    LoginIndepPass.b(kSL);
   }
   
   public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}

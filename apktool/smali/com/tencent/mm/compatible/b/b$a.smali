@@ -13,19 +13,28 @@
     name = "a"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/tencent/mm/compatible/b/b$a;",
+        ">;"
+    }
+.end annotation
+
 
 # static fields
-.field public static final enum bpn:Lcom/tencent/mm/compatible/b/b$a;
+.field public static final enum bdm:Lcom/tencent/mm/compatible/b/b$a;
 
-.field public static final enum bpo:Lcom/tencent/mm/compatible/b/b$a;
+.field public static final enum bdn:Lcom/tencent/mm/compatible/b/b$a;
 
-.field public static final enum bpp:Lcom/tencent/mm/compatible/b/b$a;
+.field public static final enum bdo:Lcom/tencent/mm/compatible/b/b$a;
 
-.field public static final enum bpq:Lcom/tencent/mm/compatible/b/b$a;
+.field public static final enum bdp:Lcom/tencent/mm/compatible/b/b$a;
 
-.field public static final enum bpr:Lcom/tencent/mm/compatible/b/b$a;
+.field public static final enum bdq:Lcom/tencent/mm/compatible/b/b$a;
 
-.field private static final synthetic bps:[Lcom/tencent/mm/compatible/b/b$a;
+.field private static final synthetic bdr:[Lcom/tencent/mm/compatible/b/b$a;
 
 
 # direct methods
@@ -50,7 +59,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/compatible/b/b$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bpn:Lcom/tencent/mm/compatible/b/b$a;
+    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bdm:Lcom/tencent/mm/compatible/b/b$a;
 
     .line 13
     new-instance v0, Lcom/tencent/mm/compatible/b/b$a;
@@ -59,7 +68,7 @@
 
     invoke-direct {v0, v1, v3}, Lcom/tencent/mm/compatible/b/b$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bpo:Lcom/tencent/mm/compatible/b/b$a;
+    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bdn:Lcom/tencent/mm/compatible/b/b$a;
 
     .line 14
     new-instance v0, Lcom/tencent/mm/compatible/b/b$a;
@@ -68,7 +77,7 @@
 
     invoke-direct {v0, v1, v4}, Lcom/tencent/mm/compatible/b/b$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bpp:Lcom/tencent/mm/compatible/b/b$a;
+    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bdo:Lcom/tencent/mm/compatible/b/b$a;
 
     .line 15
     new-instance v0, Lcom/tencent/mm/compatible/b/b$a;
@@ -77,7 +86,7 @@
 
     invoke-direct {v0, v1, v5}, Lcom/tencent/mm/compatible/b/b$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bpq:Lcom/tencent/mm/compatible/b/b$a;
+    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bdp:Lcom/tencent/mm/compatible/b/b$a;
 
     .line 16
     new-instance v0, Lcom/tencent/mm/compatible/b/b$a;
@@ -86,40 +95,45 @@
 
     invoke-direct {v0, v1, v6}, Lcom/tencent/mm/compatible/b/b$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bpr:Lcom/tencent/mm/compatible/b/b$a;
+    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bdq:Lcom/tencent/mm/compatible/b/b$a;
 
     .line 11
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/tencent/mm/compatible/b/b$a;
 
-    sget-object v1, Lcom/tencent/mm/compatible/b/b$a;->bpn:Lcom/tencent/mm/compatible/b/b$a;
+    sget-object v1, Lcom/tencent/mm/compatible/b/b$a;->bdm:Lcom/tencent/mm/compatible/b/b$a;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/tencent/mm/compatible/b/b$a;->bpo:Lcom/tencent/mm/compatible/b/b$a;
+    sget-object v1, Lcom/tencent/mm/compatible/b/b$a;->bdn:Lcom/tencent/mm/compatible/b/b$a;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/tencent/mm/compatible/b/b$a;->bpp:Lcom/tencent/mm/compatible/b/b$a;
+    sget-object v1, Lcom/tencent/mm/compatible/b/b$a;->bdo:Lcom/tencent/mm/compatible/b/b$a;
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/tencent/mm/compatible/b/b$a;->bpq:Lcom/tencent/mm/compatible/b/b$a;
+    sget-object v1, Lcom/tencent/mm/compatible/b/b$a;->bdp:Lcom/tencent/mm/compatible/b/b$a;
 
     aput-object v1, v0, v5
 
-    sget-object v1, Lcom/tencent/mm/compatible/b/b$a;->bpr:Lcom/tencent/mm/compatible/b/b$a;
+    sget-object v1, Lcom/tencent/mm/compatible/b/b$a;->bdq:Lcom/tencent/mm/compatible/b/b$a;
 
     aput-object v1, v0, v6
 
-    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bps:[Lcom/tencent/mm/compatible/b/b$a;
+    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bdr:[Lcom/tencent/mm/compatible/b/b$a;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .prologue
     .line 11
@@ -149,7 +163,7 @@
 
     .prologue
     .line 11
-    sget-object v0, Lcom/tencent/mm/compatible/b/b$a;->bps:[Lcom/tencent/mm/compatible/b/b$a;
+    sget-object v0, Lcom/tencent/mm/compatible/b/b$a;->bdr:[Lcom/tencent/mm/compatible/b/b$a;
 
     invoke-virtual {v0}, [Lcom/tencent/mm/compatible/b/b$a;->clone()Ljava/lang/Object;
 

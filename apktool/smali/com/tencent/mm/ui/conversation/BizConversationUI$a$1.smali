@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+.field final synthetic lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 141
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$1;->loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+    .line 130
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$1;->lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,7 +40,7 @@
     .locals 7
 
     .prologue
-    const v6, 0x7f0b0fe7
+    const v6, 0x7f0808d3
 
     const/16 v5, 0xb
 
@@ -48,22 +48,22 @@
 
     const/4 v4, 0x1
 
-    .line 145
-    invoke-static {}, Lcom/tencent/mm/modelsearch/f;->BO()Z
+    .line 134
+    invoke-static {}, Lcom/tencent/mm/modelsearch/f;->BT()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 146
-    new-instance v0, Landroid/content/Intent;
+    .line 135
+    invoke-static {}, Lcom/tencent/mm/modelsearch/f;->BV()Landroid/content/Intent;
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+    move-result-object v0
 
-    .line 147
+    .line 136
     const-string/jumbo v1, "title"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$1;->loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$1;->lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
     invoke-virtual {v2, v6}, Lcom/tencent/mm/ui/conversation/BizConversationUI$a;->getString(I)Ljava/lang/String;
 
@@ -71,10 +71,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 148
+    .line 137
     const-string/jumbo v1, "searchbar_tips"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$1;->loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$1;->lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
     invoke-virtual {v2, v6}, Lcom/tencent/mm/ui/conversation/BizConversationUI$a;->getString(I)Ljava/lang/String;
 
@@ -82,80 +82,61 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 149
-    const-string/jumbo v1, "hardcode_jspermission"
-
-    sget-object v2, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUp:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    .line 150
-    const-string/jumbo v1, "hardcode_general_ctrl"
-
-    sget-object v2, Lcom/tencent/mm/protocal/GeneralControlWrapper;->iUm:Lcom/tencent/mm/protocal/GeneralControlWrapper;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    .line 151
-    const-string/jumbo v1, "neverGetA8Key"
-
-    invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    .line 152
+    .line 138
     const-string/jumbo v1, "KRightBtn"
 
     invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 153
+    .line 139
     const-string/jumbo v1, "ftsneedkeyboard"
 
     invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 154
+    .line 140
     const-string/jumbo v1, "publishIdPrefix"
 
     const-string/jumbo v2, "bs"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 155
+    .line 141
     const-string/jumbo v1, "ftsType"
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 156
+    .line 142
     const-string/jumbo v1, "ftsbizscene"
 
     invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 157
+    .line 143
     const/4 v1, 0x0
 
     invoke-static {v5, v1, v3}, Lcom/tencent/mm/modelsearch/f;->a(IZI)Ljava/util/Map;
 
     move-result-object v1
 
-    .line 159
+    .line 145
     const-string/jumbo v2, "rawUrl"
 
-    invoke-static {v1}, Lcom/tencent/mm/modelsearch/f;->m(Ljava/util/Map;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/modelsearch/f;->j(Ljava/util/Map;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 160
+    .line 146
     const-string/jumbo v1, "key_load_js_without_delay"
 
     invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 161
+    .line 147
     const/high16 v1, 0x4000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 162
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 148
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -163,19 +144,19 @@
 
     const-string/jumbo v3, ".ui.tools.fts.FTSSearchTabWebViewUI"
 
-    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
-    .line 166
+    .line 152
     :goto_0
     return v4
 
-    .line 164
+    .line 150
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpIMw+dFbL21OiX21bsyOnJqkPvIR1gSqXw="
+    const-string/jumbo v0, "MicroMsg.BizConversationUI"
 
     const-string/jumbo v1, "fts h5 template not avail"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.imgenc;
 
 public class MMIMAGEENCJNI
 {
-  public static final String TAG = "!24@MlsgdbJvd2EgUxIUKgxiZA==";
+  public static final String TAG = "MMIMAGEENCJNI";
   
   public static native long free(long paramLong);
   

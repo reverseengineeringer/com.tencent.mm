@@ -1,18 +1,43 @@
 package com.tencent.mm.console;
 
-import com.tencent.mm.model.ah;
-import com.tencent.mm.model.as.a;
-import com.tencent.mm.network.e;
-import com.tencent.mm.r.m;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.widget.Toast;
+import com.tencent.mm.plugin.dbbackup.b;
+import com.tencent.mm.sdk.platformtools.ad;
 
 final class b$6
-  implements as.a
+  implements b
 {
-  b$6(String paramString, int paramInt) {}
+  b$6(long paramLong, ProgressDialog paramProgressDialog, Context paramContext) {}
   
-  public final void a(e parame)
+  private void dz(final String paramString)
   {
-    ah.tE().a(3, buT, buU, ah.rh());
+    ad.k(new Runnable()
+    {
+      public final void run()
+      {
+        if (bjE != null) {
+          bjE.dismiss();
+        }
+        Toast.makeText(val$context, paramString, 0).show();
+      }
+    });
+  }
+  
+  public final void onError()
+  {
+    dz("Database recovery failed.");
+  }
+  
+  public final void oq()
+  {
+    dz(String.format("Database recovery succeeded, elapsed %.2f seconds.", new Object[] { Float.valueOf((float)(System.nanoTime() - bjD) / 1.0E9F) }));
+  }
+  
+  public final void or()
+  {
+    dz("Database recovery canceled.");
   }
 }
 

@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field private bTi:Ljava/lang/ThreadGroup;
+.field private bMH:Ljava/lang/ThreadGroup;
 
-.field private final jYO:Ljava/util/concurrent/atomic/AtomicInteger;
+.field private final kzl:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/i/d;->jYO:Ljava/util/concurrent/atomic/AtomicInteger;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/i/d;->kzl:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 25
     new-instance v0, Ljava/lang/ThreadGroup;
@@ -36,7 +36,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/ThreadGroup;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/i/d;->bTi:Ljava/lang/ThreadGroup;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/i/d;->bMH:Ljava/lang/ThreadGroup;
 
     .line 26
     return-void
@@ -53,7 +53,7 @@
     .line 30
     new-instance v0, Ljava/lang/Thread;
 
-    iget-object v1, p0, Lcom/tencent/mm/sdk/i/d;->bTi:Ljava/lang/ThreadGroup;
+    iget-object v1, p0, Lcom/tencent/mm/sdk/i/d;->bMH:Ljava/lang/ThreadGroup;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -61,7 +61,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/tencent/mm/sdk/i/d;->jYO:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object v3, p0, Lcom/tencent/mm/sdk/i/d;->kzl:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 

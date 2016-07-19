@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/WelcomeView;->ao(Landroid/view/View;)V
+    value = Lcom/tencent/mm/ui/account/WelcomeView;->as(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kwU:Lcom/tencent/mm/ui/account/WelcomeView;
+.field final synthetic kWb:Lcom/tencent/mm/ui/account/WelcomeView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 29
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/WelcomeView$1;->kwU:Lcom/tencent/mm/ui/account/WelcomeView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/WelcomeView$1;->kWb:Lcom/tencent/mm/ui/account/WelcomeView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

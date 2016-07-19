@@ -1,9 +1,20 @@
 .class public interface abstract Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # static fields
+.field public static final HANDLEVIEW_ALIGNMENT_CENTER:I = 0x1
+
+.field public static final HANDLEVIEW_ALIGNMENT_RIGHT:I = 0x2
+
+.field public static final HANDLEVIEW_POSITION_CENTER:I = 0x1
+
+.field public static final HANDLEVIEW_POSITION_RIGHT:I = 0x2
+
+.field public static final HANLDEVIEW_ALIGNMENT_LEFT:I = 0x0
+
+.field public static final HANLDEVIEW_POSITION_LEFT:I = 0x0
+
 .field public static final OVER_SCROLL_ALWAYS:I = 0x0
 
 .field public static final OVER_SCROLL_IF_CONTENT_SCROLLS:I = 0x1
@@ -39,6 +50,9 @@
 .method public abstract doFingerSearchIfNeed()V
 .end method
 
+.method public abstract doTranslateAction(I)V
+.end method
+
 .method public abstract documentAsText(Landroid/os/Message;)V
 .end method
 
@@ -58,6 +72,9 @@
 .end method
 
 .method public abstract exitPluginFullScreen()V
+.end method
+
+.method public abstract focusAndPopupIM(Ljava/lang/String;)V
 .end method
 
 .method public abstract forceSyncOffsetToCore()V
@@ -171,6 +188,9 @@
 .method public abstract leaveSelectionMode()V
 .end method
 
+.method public abstract needSniff()Z
+.end method
+
 .method public abstract onAppExit()V
 .end method
 
@@ -246,6 +266,9 @@
 .method public abstract sendResumeMsg(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
 .end method
 
+.method public abstract setAudioAutoPlayNotify(Z)V
+.end method
+
 .method public abstract setBackFromSystem()V
 .end method
 
@@ -256,6 +279,21 @@
 .end method
 
 .method public abstract setEmbTitleView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+.end method
+
+.method public abstract setForceEnableZoom(Z)V
+.end method
+
+.method public abstract setHandleViewBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;II)V
+.end method
+
+.method public abstract setHandleViewLineColor(II)V
+.end method
+
+.method public abstract setHandleViewLineIsShowing(ZI)V
+.end method
+
+.method public abstract setHandleViewSelectionColor(II)V
 .end method
 
 .method public abstract setHorizontalScrollBarDrawable(Landroid/graphics/drawable/Drawable;)V

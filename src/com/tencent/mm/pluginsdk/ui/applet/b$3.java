@@ -3,7 +3,7 @@ package com.tencent.mm.pluginsdk.ui.applet;
 import android.graphics.Bitmap;
 import android.view.View;
 import android.widget.ImageView;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.sdk.platformtools.d;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.ui.base.h;
@@ -15,15 +15,15 @@ final class b$3
   
   public final void run()
   {
-    ImageView localImageView = (ImageView)iId.iIa.kCH.findViewById(2131169421);
+    ImageView localImageView = (ImageView)jfa.jeX.lbM.findViewById(2131756266);
     if (localImageView != null)
     {
-      Bitmap localBitmap2 = com.tencent.mm.q.b.a(iId.dsm.field_username, false, -1);
+      Bitmap localBitmap2 = com.tencent.mm.s.b.a(jfa.dsC.field_username, false, -1);
       Bitmap localBitmap1 = localBitmap2;
       if (localBitmap2 != null)
       {
         localBitmap1 = localBitmap2;
-        if (iId.dsm.aWp()) {
+        if (jfa.dsC.bbC()) {
           localBitmap1 = d.a(localBitmap2, false, localBitmap2.getWidth() / 2);
         }
       }

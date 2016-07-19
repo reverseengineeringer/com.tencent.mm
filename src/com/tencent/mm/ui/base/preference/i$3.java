@@ -10,16 +10,16 @@ final class i$3
 {
   i$3(i parami) {}
   
-  public final boolean onItemLongClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final boolean onItemLongClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    if (paramInt < i.e(kMb).getHeaderViewsCount()) {
+    if (paramInt < i.e(llq).getHeaderViewsCount()) {
       return false;
     }
-    int i = i.e(kMb).getHeaderViewsCount();
-    i.d(kMb).getItem(paramInt - i);
-    i.d(kMb);
-    i.e(kMb);
-    return i.bds();
+    int i = i.e(llq).getHeaderViewsCount();
+    i.d(llq).getItem(paramInt - i);
+    i.d(llq);
+    i.e(llq);
+    return i.biZ();
   }
 }
 

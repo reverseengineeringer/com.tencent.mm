@@ -7,17 +7,17 @@ final class r$7
 {
   r$7(r paramr) {}
   
-  public final void bil()
+  public final void boi()
   {
-    if (lxI.lxu) {
-      if (lxI.dRe != null) {
-        g.c(lxI.dRe);
+    if (lYx.lYj) {
+      if (lYx.dTj != null) {
+        g.c(lYx.dTj);
       }
     }
-    while (lxI.lxH == null) {
+    while (lYx.lYw == null) {
       return;
     }
-    lxI.lxH.collapseActionView();
+    lYx.lYw.collapseActionView();
   }
 }
 

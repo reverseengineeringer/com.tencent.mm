@@ -10,10 +10,10 @@ final class f$1
   
   public final void onPreviewFrame(byte[] paramArrayOfByte, Camera paramCamera)
   {
-    f.a(gDF).onPreviewFrame(paramArrayOfByte, paramCamera);
-    paramCamera.addCallbackBuffer(f.b(gDF));
+    f.a(gKg).onPreviewFrame(paramArrayOfByte, paramCamera);
+    paramCamera.addCallbackBuffer(f.b(gKg));
     if ((paramArrayOfByte == null) || (paramArrayOfByte.length <= 0)) {
-      f.c(gDF);
+      f.c(gKg);
     }
   }
 }

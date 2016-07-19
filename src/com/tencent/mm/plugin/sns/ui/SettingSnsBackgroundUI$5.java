@@ -10,7 +10,7 @@ final class SettingSnsBackgroundUI$5
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    haX.finish();
+    hoo.finish();
     return true;
   }
 }

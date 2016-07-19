@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/hb" android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.tencent.mm.pluginsdk.ui.applet.CdnImageView android:id="@id/a7e" style="@style/ConfirmDialogThumb" />
+            <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/i8" android:ellipsize="end" android:id="@id/a7f" android:layout_marginTop="0.0dip" android:text="message" android:maxLines="3" style="@style/ConfirmDialogMessage" />
+            </ScrollView>
+        </LinearLayout>
+        <TextView android:id="@id/a7g" android:layout_marginLeft="0.0dip" android:text="source" style="@style/ConfirmDialogSource" />
+        <com.tencent.mm.ui.base.PasterEditText android:id="@id/a7d" style="@style/ConfirmDialogEditText" />
+    </LinearLayout>
+</LinearLayout>

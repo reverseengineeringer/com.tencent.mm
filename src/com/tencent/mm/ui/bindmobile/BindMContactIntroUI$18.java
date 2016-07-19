@@ -5,7 +5,9 @@ import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import com.tencent.mm.modelfriend.m;
 import com.tencent.mm.modelfriend.m.a;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.storage.h;
 
 final class BindMContactIntroUI$18
   implements Runnable
@@ -14,14 +16,14 @@ final class BindMContactIntroUI$18
   
   public final void run()
   {
-    if (m.yB())
+    if (m.yO())
     {
-      BindMContactIntroUI.bdA();
-      BindMContactIntroUI.j(kOs).setText(kOs.getString(2131428649));
-      BindMContactIntroUI.a(kOs, m.a.bMB);
-      boolean bool = ay.a((Boolean)ah.tD().rn().get(12322, Boolean.valueOf(false)), false);
-      if ((BindMContactIntroUI.i(kOs)) && (bool)) {
-        com.tencent.mm.plugin.report.service.h.fUJ.g(11002, new Object[] { Integer.valueOf(3), Integer.valueOf(3) });
+      BindMContactIntroUI.bjh();
+      BindMContactIntroUI.j(lnI).setText(lnI.getString(2131231270));
+      BindMContactIntroUI.a(lnI, m.a.bFV);
+      boolean bool = be.a((Boolean)ah.tE().ro().get(12322, Boolean.valueOf(false)), false);
+      if ((BindMContactIntroUI.i(lnI)) && (bool)) {
+        g.gdY.h(11002, new Object[] { Integer.valueOf(3), Integer.valueOf(3) });
       }
     }
   }

@@ -3,7 +3,7 @@ package com.tencent.mm.modelsfs;
 import android.os.Parcelable.Creator;
 
 final class FileOp$SFSContextRec$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<FileOp.SFSContextRec>
 {}
 
 /* Location:

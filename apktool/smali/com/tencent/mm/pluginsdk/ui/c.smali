@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/q/d$a;
+.implements Lcom/tencent/mm/s/d$a;
 
 
 # annotations
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public iFW:Lcom/tencent/mm/pluginsdk/ui/c$a;
+.field public jcR:Lcom/tencent/mm/pluginsdk/ui/c$a;
 
-.field public iFX:I
+.field public jcS:I
 
 
 # direct methods
@@ -41,7 +41,7 @@
     .line 23
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/c$a;
 
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/a$b;->aQQ()Lcom/tencent/mm/pluginsdk/ui/h$a;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/a$b;->aVA()Lcom/tencent/mm/pluginsdk/ui/h$a;
 
     move-result-object v1
 
@@ -52,11 +52,11 @@
     invoke-direct {p0, v0, p1, v1}, Lcom/tencent/mm/pluginsdk/ui/h;-><init>(Lcom/tencent/mm/pluginsdk/ui/h$a;Ljava/lang/String;Z)V
 
     .line 24
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/c;->fzj:Lcom/tencent/mm/pluginsdk/ui/h$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/c;->fIn:Lcom/tencent/mm/pluginsdk/ui/h$a;
 
     check-cast v0, Lcom/tencent/mm/pluginsdk/ui/c$a;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/c;->iFW:Lcom/tencent/mm/pluginsdk/ui/c$a;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/c;->jcR:Lcom/tencent/mm/pluginsdk/ui/c$a;
 
     .line 25
     return-void

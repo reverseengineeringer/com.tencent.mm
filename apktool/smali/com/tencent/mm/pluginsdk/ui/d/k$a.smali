@@ -17,7 +17,7 @@
 # instance fields
 .field end:I
 
-.field final synthetic iQB:Lcom/tencent/mm/pluginsdk/ui/d/k;
+.field final synthetic jnJ:Lcom/tencent/mm/pluginsdk/ui/d/k;
 
 .field start:I
 
@@ -27,17 +27,17 @@
     .locals 0
 
     .prologue
-    .line 597
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k$a;->iQB:Lcom/tencent/mm/pluginsdk/ui/d/k;
+    .line 601
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k$a;->jnJ:Lcom/tencent/mm/pluginsdk/ui/d/k;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 598
+    .line 602
     iput p2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k$a;->start:I
 
-    .line 599
+    .line 603
     iput p3, p0, Lcom/tencent/mm/pluginsdk/ui/d/k$a;->end:I
 
-    .line 600
+    .line 604
     return-void
 .end method

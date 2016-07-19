@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic fTX:Lcom/tencent/mm/plugin/report/b/f;
+.field final synthetic gdr:Lcom/tencent/mm/plugin/report/b/f;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 33
-    iput-object p1, p0, Lcom/tencent/mm/plugin/report/b/f$1;->fTX:Lcom/tencent/mm/plugin/report/b/f;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/report/b/f$1;->gdr:Lcom/tencent/mm/plugin/report/b/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

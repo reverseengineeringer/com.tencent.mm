@@ -4,8 +4,8 @@ import android.hardware.Camera;
 
 public final class c$a$a
 {
-  public int brw;
-  public Camera brz;
+  public int bfw;
+  public Camera bfz;
 }
 
 /* Location:

@@ -1,14 +1,28 @@
 package com.tencent.mm.platformtools;
 
-import com.tencent.mm.ar.b;
-import com.tencent.mm.sdk.platformtools.u;
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.storage.h;
 
-public final class l$2
-  implements b
+final class l$2
+  implements DialogInterface.OnClickListener
 {
-  public final void b(Exception paramException)
+  l$2(Runnable paramRunnable, Activity paramActivity) {}
+  
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    u.e("!44@9DU/RFsdGl8e3Yxr3KsbFoTdQI3zLyUwqDhl7WcfpS4=", "Load plugin failed");
+    ah.tE().ro().set(12322, Boolean.valueOf(false));
+    l.d(false, false);
+    if (chy != null) {
+      chy.run();
+    }
+    chx.getSharedPreferences(aa.aZO(), 0).edit().putBoolean("login_upload_contacts_already_displayed", true).commit();
   }
 }
 

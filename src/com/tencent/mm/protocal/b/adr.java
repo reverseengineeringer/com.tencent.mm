@@ -4,48 +4,72 @@ import a.a.a.b;
 import java.util.LinkedList;
 
 public final class adr
-  extends com.tencent.mm.at.a
+  extends amb
 {
-  public int cqT;
-  public aly iXb;
+  public String cLY;
+  public int cLZ;
+  public String cMa;
+  public String cNl;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (iXb == null) {
-        throw new b("Not all required fields were included: ChatRoomName");
+      if (kfH == null) {
+        throw new b("Not all required fields were included: BaseResponse");
       }
-      if (iXb != null)
+      if (kfH != null)
       {
-        paramVarArgs.cj(1, iXb.kn());
-        iXb.a(paramVarArgs);
+        paramVarArgs.cx(1, kfH.iO());
+        kfH.a(paramVarArgs);
       }
-      paramVarArgs.ci(2, cqT);
+      if (cLY != null) {
+        paramVarArgs.e(2, cLY);
+      }
+      paramVarArgs.cw(3, cLZ);
+      if (cMa != null) {
+        paramVarArgs.e(4, cMa);
+      }
+      if (cNl != null) {
+        paramVarArgs.e(5, cNl);
+      }
       return 0;
     }
     if (paramInt == 1) {
-      if (iXb == null) {
-        break label344;
+      if (kfH == null) {
+        break label509;
       }
     }
-    label344:
-    for (paramInt = a.a.a.a.ch(1, iXb.kn()) + 0;; paramInt = 0)
+    label509:
+    for (paramInt = a.a.a.a.cv(1, kfH.iO()) + 0;; paramInt = 0)
     {
-      return paramInt + a.a.a.a.cg(2, cqT);
+      int i = paramInt;
+      if (cLY != null) {
+        i = paramInt + a.a.a.b.b.a.f(2, cLY);
+      }
+      i += a.a.a.a.cu(3, cLZ);
+      paramInt = i;
+      if (cMa != null) {
+        paramInt = i + a.a.a.b.b.a.f(4, cMa);
+      }
+      i = paramInt;
+      if (cNl != null) {
+        i = paramInt + a.a.a.b.b.a.f(5, cNl);
+      }
+      return i;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = amb.a(paramVarArgs); paramInt > 0; paramInt = amb.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
-        if (iXb != null) {
+        if (kfH != null) {
           break;
         }
-        throw new b("Not all required fields were included: ChatRoomName");
+        throw new b("Not all required fields were included: BaseResponse");
       }
       if (paramInt == 3)
       {
@@ -57,20 +81,29 @@ public final class adr
         default: 
           return -1;
         case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-          int i = paramVarArgs.size();
+          paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+          i = paramVarArgs.size();
           paramInt = 0;
           while (paramInt < i)
           {
             Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new aly();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-            for (boolean bool = true; bool; bool = ((aly)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
-            iXb = ((aly)localObject1);
+            localObject1 = new dg();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+            for (boolean bool = true; bool; bool = ((dg)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, amb.a((a.a.a.a.a)localObject2))) {}
+            kfH = ((dg)localObject1);
             paramInt += 1;
           }
+        case 2: 
+          cLY = mMY.readString();
+          return 0;
+        case 3: 
+          cLZ = mMY.id();
+          return 0;
+        case 4: 
+          cMa = mMY.readString();
+          return 0;
         }
-        cqT = maU.jC();
+        cNl = mMY.readString();
         return 0;
       }
       return -1;

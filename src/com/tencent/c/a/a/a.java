@@ -5,38 +5,38 @@ import org.json.JSONObject;
 
 final class a
 {
-  public static String BK = "ts";
-  public static String ajx = "times";
-  public static String ajy = "mfreq";
-  public static String ajz = "mdays";
-  long ajt = 0L;
-  int aju = 0;
-  int ajv = 100;
-  int ajw = 3;
+  public static String Vo = "ts";
+  public static String Vp = "times";
+  public static String Vq = "mfreq";
+  public static String Vr = "mdays";
+  long Vk = 0L;
+  int Vl = 0;
+  int Vm = 100;
+  int Vn = 3;
   
   a() {}
   
   a(String paramString)
   {
-    if (!s.as(paramString)) {}
+    if (!s.aw(paramString)) {}
     for (;;)
     {
       return;
       try
       {
         paramString = new JSONObject(paramString);
-        if (!paramString.isNull(BK)) {
-          ajt = paramString.getLong(BK);
+        if (!paramString.isNull(Vo)) {
+          Vk = paramString.getLong(Vo);
         }
-        if (!paramString.isNull(ajy)) {
-          ajv = paramString.getInt(ajy);
+        if (!paramString.isNull(Vq)) {
+          Vm = paramString.getInt(Vq);
         }
-        if (!paramString.isNull(ajx)) {
-          aju = paramString.getInt(ajx);
+        if (!paramString.isNull(Vp)) {
+          Vl = paramString.getInt(Vp);
         }
-        if (!paramString.isNull(ajz))
+        if (!paramString.isNull(Vr))
         {
-          ajw = paramString.getInt(ajz);
+          Vn = paramString.getInt(Vr);
           return;
         }
       }
@@ -49,10 +49,10 @@ final class a
     JSONObject localJSONObject = new JSONObject();
     try
     {
-      localJSONObject.put(BK, ajt);
-      localJSONObject.put(ajx, aju);
-      localJSONObject.put(ajy, ajv);
-      localJSONObject.put(ajz, ajw);
+      localJSONObject.put(Vo, Vk);
+      localJSONObject.put(Vp, Vl);
+      localJSONObject.put(Vq, Vm);
+      localJSONObject.put(Vr, Vn);
       return localJSONObject.toString();
     }
     catch (JSONException localJSONException)

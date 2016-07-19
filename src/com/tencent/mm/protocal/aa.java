@@ -1,132 +1,183 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.pointers.PByteArray;
-import com.tencent.mm.protocal.b.aav;
-import com.tencent.mm.protocal.b.asy;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Set;
+import android.annotation.TargetApi;
+import android.os.Build.VERSION;
+import com.tencent.mm.a.g;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import java.nio.charset.Charset;
+import java.util.Arrays;
+import java.util.Locale;
 
 public final class aa
 {
-  private static Map aM(byte[] paramArrayOfByte)
+  public static final class a
+    extends k.c
+    implements k.a
   {
-    if (ay.J(paramArrayOfByte)) {
-      return null;
-    }
-    try
+    public byte[] bOJ = new byte[0];
+    public byte[] bul;
+    public int jsk;
+    public int netType;
+    public int uin = 0;
+    
+    public final boolean aAi()
     {
-      paramArrayOfByte = (asy)new asy().am(paramArrayOfByte);
-      if (paramArrayOfByte == null) {
-        return null;
-      }
-    }
-    catch (Exception paramArrayOfByte)
-    {
-      return null;
-    }
-    u.d("!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms", "dkpush : keyCount:" + jJd);
-    LinkedList localLinkedList = jJe;
-    if (localLinkedList.size() != jJd) {
-      return null;
-    }
-    HashMap localHashMap = new HashMap();
-    int i = 0;
-    while (i < jJd)
-    {
-      localHashMap.put(Integer.valueOf(getfUk), Long.valueOf(0xFFFFFFFF & getjxa));
-      i += 1;
-    }
-    if (localHashMap.size() != jJd) {
-      return null;
-    }
-    return localHashMap;
-  }
-  
-  public static String aN(byte[] paramArrayOfByte)
-  {
-    if (ay.J(paramArrayOfByte)) {
-      return "";
-    }
-    paramArrayOfByte = aM(paramArrayOfByte);
-    if ((paramArrayOfByte == null) || (paramArrayOfByte.size() <= 0)) {
-      return "";
-    }
-    StringBuffer localStringBuffer = new StringBuffer();
-    localStringBuffer.append(" MsgKey:" + paramArrayOfByte.get(Integer.valueOf(2)));
-    localStringBuffer.append(" profile:" + paramArrayOfByte.get(Integer.valueOf(1)));
-    localStringBuffer.append(" contact:" + paramArrayOfByte.get(Integer.valueOf(3)));
-    localStringBuffer.append(" chatroom:" + paramArrayOfByte.get(Integer.valueOf(11)));
-    localStringBuffer.append(" Bottle:" + paramArrayOfByte.get(Integer.valueOf(7)));
-    localStringBuffer.append(" QContact:" + paramArrayOfByte.get(Integer.valueOf(5)));
-    return localStringBuffer.toString();
-  }
-  
-  public static byte[] k(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2)
-  {
-    if ((paramArrayOfByte1 == null) || (paramArrayOfByte1.length <= 0))
-    {
-      u.d("!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms", "empty old key, use new key");
-      return paramArrayOfByte2;
-    }
-    if ((paramArrayOfByte2 == null) || (paramArrayOfByte2.length <= 0))
-    {
-      u.e("!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms", "newKey is null");
-      return null;
-    }
-    PByteArray localPByteArray = new PByteArray();
-    try
-    {
-      if (!MMProtocalJni.mergeSyncKey(paramArrayOfByte1, paramArrayOfByte2, localPByteArray))
-      {
-        u.e("!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms", "merge key failed");
-        return null;
-      }
-    }
-    catch (IncompatibleClassChangeError paramArrayOfByte1)
-    {
-      u.printErrStackTrace("MicroMsg.Crash", paramArrayOfByte1, "NoSuchMethod MMProtocalJni.mergeSyncKey", new Object[0]);
-      throw ((IncompatibleClassChangeError)new IncompatibleClassChangeError("NoSuchMethod MMProtocalJni.mergeSyncKey").initCause(paramArrayOfByte1));
-    }
-    return value;
-  }
-  
-  public static boolean l(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2)
-  {
-    paramArrayOfByte1 = aM(paramArrayOfByte1);
-    if (paramArrayOfByte1 == null)
-    {
-      u.d("!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms", "dkpush local sync key failed");
       return true;
     }
-    paramArrayOfByte2 = aM(paramArrayOfByte2);
-    if (paramArrayOfByte2 == null)
+    
+    public final void bq(int paramInt)
     {
-      u.e("!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms", "dkpush svr sync key failed");
+      uin = paramInt;
+    }
+    
+    public final int getCmdId()
+    {
+      return 205;
+    }
+    
+    public final byte[] tZ()
+    {
+      int j = uin;
+      if (bOJ == null) {}
+      for (int i = -1;; i = bOJ.length)
+      {
+        v.d("MicroMsg.MMSyncCheck", "toProtoBuf dksynccheck uin:%d keybuf:%d, stack[%s]", new Object[] { Integer.valueOf(j), Integer.valueOf(i), be.baX() });
+        if ((uin != 0) && (!be.P(bOJ))) {
+          break;
+        }
+        return new byte[0];
+      }
+      i = (uin >> 13 & 0x7FFFF | bOJ.length << 19) ^ 0x5601F281;
+      j = 0x5601F281 ^ (bOJ.length >> 13 & 0x7FFFF | uin << 19);
+      byte[] arrayOfByte = new byte[bOJ.length + 32];
+      v.d("MicroMsg.MMSyncCheck", "dksynccheck uin=[%d/%d], keyBufLen=[%d/%d] outBuf=[%d]", new Object[] { Integer.valueOf(uin), Integer.valueOf(i), Integer.valueOf(bOJ.length), Integer.valueOf(j), Integer.valueOf(arrayOfByte.length) });
+      arrayOfByte[0] = ((byte)(i >> 24 & 0xFF));
+      arrayOfByte[1] = ((byte)(i >> 16 & 0xFF));
+      arrayOfByte[2] = ((byte)(i >> 8 & 0xFF));
+      arrayOfByte[3] = ((byte)(i & 0xFF));
+      arrayOfByte[4] = ((byte)(j >> 24 & 0xFF));
+      arrayOfByte[5] = ((byte)(j >> 16 & 0xFF));
+      arrayOfByte[6] = ((byte)(j >> 8 & 0xFF));
+      arrayOfByte[7] = ((byte)(j & 0xFF));
+      System.arraycopy(bOJ, 0, arrayOfByte, 8, bOJ.length);
+      arrayOfByte[(arrayOfByte.length - 24)] = ((byte)(c.jry >> 24 & 0xFF));
+      arrayOfByte[(arrayOfByte.length - 23)] = ((byte)(c.jry >> 16 & 0xFF));
+      arrayOfByte[(arrayOfByte.length - 22)] = ((byte)(c.jry >> 8 & 0xFF));
+      arrayOfByte[(arrayOfByte.length - 21)] = ((byte)(c.jry & 0xFF));
+      String str = Locale.getDefault().toString();
+      Object localObject = str;
+      if (str.length() > 8) {
+        localObject = str.substring(0, 8);
+      }
+      localObject = ((String)localObject).getBytes();
+      System.arraycopy(localObject, 0, arrayOfByte, arrayOfByte.length - 20, localObject.length);
+      v.d("MicroMsg.MMSyncCheck", "language:%x" + Arrays.toString((byte[])localObject));
+      arrayOfByte[(arrayOfByte.length - 12)] = 0;
+      arrayOfByte[(arrayOfByte.length - 11)] = 0;
+      arrayOfByte[(arrayOfByte.length - 10)] = 0;
+      arrayOfByte[(arrayOfByte.length - 9)] = 2;
+      arrayOfByte[(arrayOfByte.length - 8)] = ((byte)(netType >> 24 & 0xFF));
+      arrayOfByte[(arrayOfByte.length - 7)] = ((byte)(netType >> 16 & 0xFF));
+      arrayOfByte[(arrayOfByte.length - 6)] = ((byte)(netType >> 8 & 0xFF));
+      arrayOfByte[(arrayOfByte.length - 5)] = ((byte)(netType & 0xFF));
+      arrayOfByte[(arrayOfByte.length - 4)] = ((byte)(jsk >> 24 & 0xFF));
+      arrayOfByte[(arrayOfByte.length - 3)] = ((byte)(jsk >> 16 & 0xFF));
+      arrayOfByte[(arrayOfByte.length - 2)] = ((byte)(jsk >> 8 & 0xFF));
+      arrayOfByte[(arrayOfByte.length - 1)] = ((byte)(jsk & 0xFF));
+      v.d("MicroMsg.MMSyncCheck", "outbuf:%x" + Arrays.toString(arrayOfByte));
+      bul = g.k(arrayOfByte);
+      return arrayOfByte;
+    }
+    
+    public final int ua()
+    {
+      return 0;
+    }
+    
+    public final boolean wg()
+    {
       return false;
     }
-    Iterator localIterator = paramArrayOfByte2.keySet().iterator();
-    while (localIterator.hasNext())
+  }
+  
+  public static final class b
+    extends k.d
+    implements k.b
+  {
+    private String ark = null;
+    public byte[] bul = null;
+    public long jsM = 7L;
+    private byte[] jsN;
+    
+    public final int D(byte[] paramArrayOfByte)
     {
-      Integer localInteger = (Integer)localIterator.next();
-      Long localLong1 = (Long)paramArrayOfByte1.get(localInteger);
-      Long localLong2 = (Long)paramArrayOfByte2.get(localInteger);
-      if (localLong1 == null)
+      if ((paramArrayOfByte == null) || (paramArrayOfByte.length < 12))
       {
-        u.d("!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms", "dkpush local key null :" + localInteger);
-        return true;
+        StringBuilder localStringBuilder = new StringBuilder("dksynccheck err resp buf:");
+        if (paramArrayOfByte == null) {}
+        for (i = -1;; i = paramArrayOfByte.length)
+        {
+          v.e("MicroMsg.MMSyncCheck", i);
+          return -1;
+        }
       }
-      u.d("!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms", "dkpush local key:" + localInteger + " sv:" + localLong2 + " lv:" + localLong1);
-      if (localLong2.longValue() > localLong1.longValue()) {
-        return true;
+      jsM = (paramArrayOfByte[3] & 0xFF | (paramArrayOfByte[2] & 0xFF) << 8 | (paramArrayOfByte[1] & 0xFF) << 16 | (paramArrayOfByte[0] & 0xFF) << 24);
+      int i = paramArrayOfByte[7] & 0xFF | (paramArrayOfByte[6] & 0xFF) << 8 | (paramArrayOfByte[5] & 0xFF) << 16 | (paramArrayOfByte[4] & 0xFF) << 24;
+      int j = paramArrayOfByte[11] & 0xFF | (paramArrayOfByte[10] & 0xFF) << 8 | (paramArrayOfByte[9] & 0xFF) << 16 | (paramArrayOfByte[8] & 0xFF) << 24;
+      v.d("MicroMsg.MMSyncCheck", " fromProtoBuf oreh synccheck resp selector:%d, redCode:%d, keyLen:%d", new Object[] { Long.valueOf(jsM), Integer.valueOf(i), Integer.valueOf(j) });
+      if (i != 62534)
+      {
+        ark = "";
+        return i;
+      }
+      if ((j != paramArrayOfByte.length - 12) && (j != paramArrayOfByte.length - 12 - 16))
+      {
+        v.e("MicroMsg.MMSyncCheck", " the key len is invalid keyLen:%d, bufLen:%d", new Object[] { Integer.valueOf(j), Integer.valueOf(paramArrayOfByte.length) });
+        return -1;
+      }
+      if (j == paramArrayOfByte.length - 12 - 16)
+      {
+        bul = new byte[16];
+        System.arraycopy(paramArrayOfByte, paramArrayOfByte.length - 16, bul, 0, 16);
+      }
+      jsN = new byte[j];
+      System.arraycopy(paramArrayOfByte, 12, jsN, 0, j);
+      return i;
+    }
+    
+    public final boolean aAi()
+    {
+      return true;
+    }
+    
+    @TargetApi(9)
+    public final String aYr()
+    {
+      if (bul == null) {
+        return "";
+      }
+      byte[] arrayOfByte;
+      if (ark == null)
+      {
+        arrayOfByte = MMProtocalJni.aesDecrypt(jsN, bul);
+        if (be.P(arrayOfByte)) {
+          return "";
+        }
+        if (Build.VERSION.SDK_INT < 9) {
+          break label69;
+        }
+      }
+      label69:
+      for (ark = new String(arrayOfByte, Charset.forName("UTF-8"));; ark = new String(arrayOfByte)) {
+        return ark;
       }
     }
-    u.d("!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms", "dkpush two sync key is the same");
-    return false;
+    
+    public final int getCmdId()
+    {
+      return 1000000205;
+    }
   }
 }
 

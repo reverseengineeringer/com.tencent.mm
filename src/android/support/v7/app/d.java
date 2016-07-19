@@ -20,21 +20,26 @@ import android.view.accessibility.AccessibilityEvent;
 final class d
   extends a
 {
-  Menu iW;
+  Menu jn;
   
   d(ActionBarActivity paramActionBarActivity)
   {
     super(paramActionBarActivity);
   }
   
-  public final void G()
+  public final boolean C(int paramInt)
   {
-    iW = null;
+    return iX.requestWindowFeature(paramInt);
+  }
+  
+  public final void F()
+  {
+    jn = null;
   }
   
   public final ActionBar aO()
   {
-    return new g(iG, iG);
+    return new g(iX, iX);
   }
   
   public final void aQ() {}
@@ -46,7 +51,7 @@ final class d
   
   public final void addContentView(View paramView, ViewGroup.LayoutParams paramLayoutParams)
   {
-    iG.b(paramView, paramLayoutParams);
+    iX.b(paramView, paramLayoutParams);
   }
   
   public final void e(CharSequence paramCharSequence) {}
@@ -64,16 +69,16 @@ final class d
   public final void onCreate(Bundle paramBundle)
   {
     if ("splitActionBarWhenNarrow".equals(aS())) {
-      iG.getWindow().setUiOptions(1, 1);
+      iX.getWindow().setUiOptions(1, 1);
     }
     super.onCreate(paramBundle);
-    if (iJ) {
-      iG.requestWindowFeature(8);
+    if (ja) {
+      iX.requestWindowFeature(8);
     }
-    if (iK) {
-      iG.requestWindowFeature(9);
+    if (jb) {
+      iX.requestWindowFeature(9);
     }
-    paramBundle = iG.getWindow();
+    paramBundle = iX.getWindow();
     paramBundle.setCallback(new a(paramBundle.getCallback()));
   }
   
@@ -81,12 +86,12 @@ final class d
   {
     if ((paramInt == 0) || (paramInt == 8))
     {
-      if (iW == null) {
-        iW = n.a(paramMenu);
+      if (jn == null) {
+        jn = n.a(paramMenu);
       }
-      return iG.a(paramInt, iW);
+      return iX.a(paramInt, jn);
     }
-    return iG.a(paramInt, paramMenu);
+    return iX.a(paramInt, paramMenu);
   }
   
   public final View onCreatePanelView(int paramInt)
@@ -100,7 +105,7 @@ final class d
     if (paramInt == 0) {
       localMenuItem = n.g(paramMenuItem);
     }
-    return iG.a(paramInt, localMenuItem);
+    return iX.a(paramInt, localMenuItem);
   }
   
   public final void onPostResume() {}
@@ -108,158 +113,153 @@ final class d
   public final boolean onPreparePanel(int paramInt, View paramView, Menu paramMenu)
   {
     if ((paramInt == 0) || (paramInt == 8)) {
-      return iG.a(paramInt, paramView, iW);
+      return iX.a(paramInt, paramView, jn);
     }
-    return iG.a(paramInt, paramView, paramMenu);
+    return iX.a(paramInt, paramView, paramMenu);
   }
   
   public final void onStop() {}
   
   public final void setContentView(int paramInt)
   {
-    iG.x(paramInt);
+    iX.D(paramInt);
   }
   
   public final void setContentView(View paramView)
   {
-    iG.D(paramView);
+    iX.D(paramView);
   }
   
   public final void setContentView(View paramView, ViewGroup.LayoutParams paramLayoutParams)
   {
-    iG.a(paramView, paramLayoutParams);
-  }
-  
-  public final boolean y(int paramInt)
-  {
-    return iG.requestWindowFeature(5);
+    iX.a(paramView, paramLayoutParams);
   }
   
   final class a
     implements Window.Callback
   {
-    final Window.Callback iX;
+    final Window.Callback jo;
     
     public a(Window.Callback paramCallback)
     {
-      iX = paramCallback;
+      jo = paramCallback;
     }
     
     public final boolean dispatchGenericMotionEvent(MotionEvent paramMotionEvent)
     {
-      return iX.dispatchGenericMotionEvent(paramMotionEvent);
+      return jo.dispatchGenericMotionEvent(paramMotionEvent);
     }
     
     public final boolean dispatchKeyEvent(KeyEvent paramKeyEvent)
     {
-      return iX.dispatchKeyEvent(paramKeyEvent);
+      return jo.dispatchKeyEvent(paramKeyEvent);
     }
     
     public final boolean dispatchKeyShortcutEvent(KeyEvent paramKeyEvent)
     {
-      return iX.dispatchKeyShortcutEvent(paramKeyEvent);
+      return jo.dispatchKeyShortcutEvent(paramKeyEvent);
     }
     
     public final boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent paramAccessibilityEvent)
     {
-      return iX.dispatchPopulateAccessibilityEvent(paramAccessibilityEvent);
+      return jo.dispatchPopulateAccessibilityEvent(paramAccessibilityEvent);
     }
     
     public final boolean dispatchTouchEvent(MotionEvent paramMotionEvent)
     {
-      return iX.dispatchTouchEvent(paramMotionEvent);
+      return jo.dispatchTouchEvent(paramMotionEvent);
     }
     
     public final boolean dispatchTrackballEvent(MotionEvent paramMotionEvent)
     {
-      return iX.dispatchTrackballEvent(paramMotionEvent);
+      return jo.dispatchTrackballEvent(paramMotionEvent);
     }
     
     public final void onActionModeFinished(ActionMode paramActionMode)
     {
-      iX.onActionModeFinished(paramActionMode);
+      jo.onActionModeFinished(paramActionMode);
       d.this.onActionModeFinished(paramActionMode);
     }
     
     public final void onActionModeStarted(ActionMode paramActionMode)
     {
-      iX.onActionModeStarted(paramActionMode);
+      jo.onActionModeStarted(paramActionMode);
       d.this.onActionModeStarted(paramActionMode);
     }
     
     public final void onAttachedToWindow()
     {
-      iX.onAttachedToWindow();
+      jo.onAttachedToWindow();
     }
     
     public final void onContentChanged()
     {
-      iX.onContentChanged();
+      jo.onContentChanged();
     }
     
     public final boolean onCreatePanelMenu(int paramInt, Menu paramMenu)
     {
-      return iX.onCreatePanelMenu(paramInt, paramMenu);
+      return jo.onCreatePanelMenu(paramInt, paramMenu);
     }
     
     public final View onCreatePanelView(int paramInt)
     {
-      return iX.onCreatePanelView(paramInt);
+      return jo.onCreatePanelView(paramInt);
     }
     
     public final void onDetachedFromWindow()
     {
-      iX.onDetachedFromWindow();
+      jo.onDetachedFromWindow();
     }
     
     public final boolean onMenuItemSelected(int paramInt, MenuItem paramMenuItem)
     {
-      return iX.onMenuItemSelected(paramInt, paramMenuItem);
+      return jo.onMenuItemSelected(paramInt, paramMenuItem);
     }
     
     public final boolean onMenuOpened(int paramInt, Menu paramMenu)
     {
-      return iX.onMenuOpened(paramInt, paramMenu);
+      return jo.onMenuOpened(paramInt, paramMenu);
     }
     
     public final void onPanelClosed(int paramInt, Menu paramMenu)
     {
-      iX.onPanelClosed(paramInt, paramMenu);
+      jo.onPanelClosed(paramInt, paramMenu);
     }
     
     public final boolean onPreparePanel(int paramInt, View paramView, Menu paramMenu)
     {
-      return iX.onPreparePanel(paramInt, paramView, paramMenu);
+      return jo.onPreparePanel(paramInt, paramView, paramMenu);
     }
     
     public final boolean onSearchRequested()
     {
-      return iX.onSearchRequested();
+      return jo.onSearchRequested();
     }
     
     public final boolean onSearchRequested(SearchEvent paramSearchEvent)
     {
-      return iX.onSearchRequested(paramSearchEvent);
+      return jo.onSearchRequested(paramSearchEvent);
     }
     
     public final void onWindowAttributesChanged(WindowManager.LayoutParams paramLayoutParams)
     {
-      iX.onWindowAttributesChanged(paramLayoutParams);
+      jo.onWindowAttributesChanged(paramLayoutParams);
     }
     
     public final void onWindowFocusChanged(boolean paramBoolean)
     {
-      iX.onWindowFocusChanged(paramBoolean);
+      jo.onWindowFocusChanged(paramBoolean);
     }
     
     public final ActionMode onWindowStartingActionMode(ActionMode.Callback paramCallback)
     {
-      return iX.onWindowStartingActionMode(paramCallback);
+      return jo.onWindowStartingActionMode(paramCallback);
     }
     
     public final ActionMode onWindowStartingActionMode(ActionMode.Callback paramCallback, int paramInt)
     {
-      return iX.onWindowStartingActionMode(paramCallback, paramInt);
+      return jo.onWindowStartingActionMode(paramCallback, paramInt);
     }
   }
 }

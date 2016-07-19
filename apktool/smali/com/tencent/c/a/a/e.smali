@@ -4,7 +4,7 @@
 
 
 # static fields
-.field static ajO:J
+.field static VH:J
 
 
 # direct methods
@@ -15,7 +15,7 @@
     .line 19
     const-wide/32 v0, 0x5265c00
 
-    sput-wide v0, Lcom/tencent/c/a/a/e;->ajO:J
+    sput-wide v0, Lcom/tencent/c/a/a/e;->VH:J
 
     .line 26
     return-void

@@ -10,27 +10,45 @@
     }
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/ui/i",
+        "<",
+        "Lcom/tencent/mm/storage/k;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field protected arW:Lcom/tencent/mm/ui/MMActivity;
+.field protected adL:Lcom/tencent/mm/ui/MMActivity;
 
-.field bMn:Lcom/tencent/mm/ui/applet/b;
+.field bFH:Lcom/tencent/mm/ui/applet/b;
 
-.field private bMo:Lcom/tencent/mm/ui/applet/b$b;
+.field private bFI:Lcom/tencent/mm/ui/applet/b$b;
 
-.field protected cHf:Lcom/tencent/mm/ui/base/MMSlideDelView$g;
+.field protected cEj:Lcom/tencent/mm/ui/base/MMSlideDelView$f;
 
-.field protected cHg:Lcom/tencent/mm/ui/base/MMSlideDelView$c;
+.field protected cEk:Lcom/tencent/mm/ui/base/MMSlideDelView$c;
 
-.field protected cHi:Lcom/tencent/mm/ui/base/MMSlideDelView$d;
+.field protected cEm:Lcom/tencent/mm/ui/base/MMSlideDelView$d;
 
-.field protected cvM:Ljava/util/List;
+.field protected crs:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field protected fin:Lcom/tencent/mm/ui/base/MMSlideDelView$f;
+.field protected frj:Lcom/tencent/mm/ui/base/MMSlideDelView$e;
 
-.field iIJ:Lcom/tencent/mm/pluginsdk/ui/d;
+.field jfF:Lcom/tencent/mm/pluginsdk/ui/d;
 
-.field protected lhu:Ljava/lang/String;
+.field protected lHF:Ljava/lang/String;
 
 
 # direct methods
@@ -48,31 +66,31 @@
     invoke-direct {p0, p1, v0}, Lcom/tencent/mm/ui/i;-><init>(Landroid/content/Context;Ljava/lang/Object;)V
 
     .line 42
-    iput-object v1, p0, Lcom/tencent/mm/ui/contact/d;->lhu:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/ui/contact/d;->lHF:Ljava/lang/String;
 
     .line 43
-    iput-object v1, p0, Lcom/tencent/mm/ui/contact/d;->cvM:Ljava/util/List;
+    iput-object v1, p0, Lcom/tencent/mm/ui/contact/d;->crs:Ljava/util/List;
 
     .line 48
-    invoke-static {}, Lcom/tencent/mm/ui/base/MMSlideDelView;->getItemStatusCallBack()Lcom/tencent/mm/ui/base/MMSlideDelView$d;
+    invoke-static {}, Lcom/tencent/mm/ui/base/MMSlideDelView;->bil()Lcom/tencent/mm/ui/base/MMSlideDelView$d;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/d;->cHi:Lcom/tencent/mm/ui/base/MMSlideDelView$d;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/d;->cEm:Lcom/tencent/mm/ui/base/MMSlideDelView$d;
 
     .line 54
-    iput-object v1, p0, Lcom/tencent/mm/ui/contact/d;->bMn:Lcom/tencent/mm/ui/applet/b;
+    iput-object v1, p0, Lcom/tencent/mm/ui/contact/d;->bFH:Lcom/tencent/mm/ui/applet/b;
 
     .line 55
-    iput-object v1, p0, Lcom/tencent/mm/ui/contact/d;->bMo:Lcom/tencent/mm/ui/applet/b$b;
+    iput-object v1, p0, Lcom/tencent/mm/ui/contact/d;->bFI:Lcom/tencent/mm/ui/applet/b$b;
 
     .line 66
     check-cast p1, Lcom/tencent/mm/ui/MMActivity;
 
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/d;->arW:Lcom/tencent/mm/ui/MMActivity;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/d;->adL:Lcom/tencent/mm/ui/MMActivity;
 
     .line 67
-    iput-object p2, p0, Lcom/tencent/mm/ui/contact/d;->lhu:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/ui/contact/d;->lHF:Ljava/lang/String;
 
     .line 69
     new-instance v0, Lcom/tencent/mm/ui/applet/b;
@@ -83,18 +101,18 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/ui/applet/b;-><init>(Lcom/tencent/mm/ui/applet/b$a;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/d;->bMn:Lcom/tencent/mm/ui/applet/b;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/d;->bFH:Lcom/tencent/mm/ui/applet/b;
 
     .line 77
     return-void
 .end method
 
-.method private Q(Lcom/tencent/mm/storage/k;)Ljava/lang/String;
+.method private R(Lcom/tencent/mm/storage/k;)Ljava/lang/String;
     .locals 2
 
     .prologue
     .line 309
-    iget v0, p1, Lcom/tencent/mm/d/b/p;->field_showHead:I
+    iget v0, p1, Lcom/tencent/mm/e/b/p;->field_showHead:I
 
     const/16 v1, 0x1f
 
@@ -109,16 +127,16 @@
 
     .line 312
     :cond_0
-    iget v0, p1, Lcom/tencent/mm/d/b/p;->field_showHead:I
+    iget v0, p1, Lcom/tencent/mm/e/b/p;->field_showHead:I
 
     const/16 v1, 0x2b
 
     if-ne v0, v1, :cond_1
 
     .line 313
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/d;->arW:Lcom/tencent/mm/ui/MMActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/d;->adL:Lcom/tencent/mm/ui/MMActivity;
 
-    const v1, 0x7f0b14ed
+    const v1, 0x7f080f14
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/MMActivity;->getString(I)Ljava/lang/String;
 
@@ -128,7 +146,7 @@
 
     .line 315
     :cond_1
-    iget v0, p1, Lcom/tencent/mm/d/b/p;->field_showHead:I
+    iget v0, p1, Lcom/tencent/mm/e/b/p;->field_showHead:I
 
     int-to-char v0, v0
 
@@ -155,15 +173,15 @@
     .line 297
     if-eqz v0, :cond_0
 
-    iget v1, v0, Lcom/tencent/mm/d/b/p;->field_showHead:I
+    iget v1, v0, Lcom/tencent/mm/e/b/p;->field_showHead:I
 
     if-eq v1, p3, :cond_1
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/contact/d;->Q(Lcom/tencent/mm/storage/k;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/contact/d;->R(Lcom/tencent/mm/storage/k;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -171,7 +189,7 @@
 
     .line 298
     :cond_0
-    iget-object v0, p1, Lcom/tencent/mm/ui/contact/d$a;->ljd:Landroid/view/ViewGroup;
+    iget-object v0, p1, Lcom/tencent/mm/ui/contact/d$a;->lJo:Landroid/view/ViewGroup;
 
     const/4 v1, 0x0
 
@@ -184,7 +202,7 @@
 
 
 # virtual methods
-.method public final declared-synchronized Gk()V
+.method public final declared-synchronized GH()V
     .locals 4
 
     .prologue
@@ -192,26 +210,26 @@
     monitor-enter p0
 
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/d;->lhu:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/d;->lHF:Ljava/lang/String;
 
     const-string/jumbo v2, ""
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/contact/d;->cvM:Ljava/util/List;
+    iget-object v3, p0, Lcom/tencent/mm/ui/contact/d;->crs:Ljava/util/List;
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/storage/q;->c(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Landroid/database/Cursor;
 
     move-result-object v0
 
     .line 144
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/d;->adW()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/d;->closeCursor()V
 
     .line 145
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/d;->setCursor(Landroid/database/Cursor;)V
@@ -235,35 +253,68 @@
     throw v0
 .end method
 
-.method protected final Gl()V
+.method protected final GI()V
     .locals 0
 
     .prologue
     .line 136
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/d;->Gk()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/d;->GH()V
 
     .line 137
     return-void
 .end method
 
-.method public final synthetic a(Ljava/lang/Object;Landroid/database/Cursor;)Ljava/lang/Object;
+.method public final a(Lcom/tencent/mm/ui/base/MMSlideDelView$c;)V
+    .locals 0
+
+    .prologue
+    .line 105
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/d;->cEk:Lcom/tencent/mm/ui/base/MMSlideDelView$c;
+
+    .line 106
+    return-void
+.end method
+
+.method public final a(Lcom/tencent/mm/ui/base/MMSlideDelView$e;)V
+    .locals 0
+
+    .prologue
+    .line 101
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/d;->frj:Lcom/tencent/mm/ui/base/MMSlideDelView$e;
+
+    .line 102
+    return-void
+.end method
+
+.method public final a(Lcom/tencent/mm/ui/base/MMSlideDelView$f;)V
+    .locals 0
+
+    .prologue
+    .line 97
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/d;->cEj:Lcom/tencent/mm/ui/base/MMSlideDelView$f;
+
+    .line 98
+    return-void
+.end method
+
+.method public final synthetic convertFrom(Ljava/lang/Object;Landroid/database/Cursor;)Ljava/lang/Object;
     .locals 2
 
     .prologue
     .line 39
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v0
 
-    invoke-static {p2}, Lcom/tencent/mm/storage/k;->h(Landroid/database/Cursor;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/tencent/mm/storage/k;->f(Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/storage/q;->Ek(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/storage/q;->Gy(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
 
     move-result-object v0
 
@@ -273,13 +324,13 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/storage/k;-><init>()V
 
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/storage/k;->c(Landroid/database/Cursor;)V
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/storage/k;->b(Landroid/database/Cursor;)V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v1
 
@@ -287,17 +338,6 @@
 
     :cond_0
     return-object v0
-.end method
-
-.method public final a(Lcom/tencent/mm/ui/base/MMSlideDelView$f;)V
-    .locals 0
-
-    .prologue
-    .line 101
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/d;->fin:Lcom/tencent/mm/ui/base/MMSlideDelView$f;
-
-    .line 102
-    return-void
 .end method
 
 .method public final getCount()I
@@ -318,11 +358,9 @@
 .end method
 
 .method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 11
+    .locals 10
 
     .prologue
-    const/4 v10, 0x0
-
     const/4 v9, 0x1
 
     const/16 v8, 0x8
@@ -332,7 +370,7 @@
     const/4 v7, 0x0
 
     .line 151
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/d;->bMo:Lcom/tencent/mm/ui/applet/b$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/d;->bFI:Lcom/tencent/mm/ui/applet/b$b;
 
     if-nez v0, :cond_0
 
@@ -341,18 +379,18 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/contact/d$2;-><init>(Lcom/tencent/mm/ui/contact/d;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/d;->bMo:Lcom/tencent/mm/ui/applet/b$b;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/d;->bFI:Lcom/tencent/mm/ui/applet/b$b;
 
     .line 173
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/d;->bMn:Lcom/tencent/mm/ui/applet/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/d;->bFH:Lcom/tencent/mm/ui/applet/b;
 
     if-eqz v0, :cond_1
 
     .line 174
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/d;->bMn:Lcom/tencent/mm/ui/applet/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/d;->bFH:Lcom/tencent/mm/ui/applet/b;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/d;->bMo:Lcom/tencent/mm/ui/applet/b$b;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/d;->bFI:Lcom/tencent/mm/ui/applet/b$b;
 
     invoke-virtual {v0, p1, v1}, Lcom/tencent/mm/ui/applet/b;->a(ILcom/tencent/mm/ui/applet/b$b;)V
 
@@ -361,11 +399,13 @@
     if-nez p2, :cond_4
 
     .line 181
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/d;->arW:Lcom/tencent/mm/ui/MMActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/d;->adL:Lcom/tencent/mm/ui/MMActivity;
 
-    const v1, 0x7f0a0026
+    const v1, 0x7f0300d3
 
-    invoke-static {v0, v1, v10}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p2
 
@@ -375,7 +415,7 @@
     invoke-direct {v1}, Lcom/tencent/mm/ui/contact/d$a;-><init>()V
 
     .line 183
-    const v0, 0x7f07003f
+    const v0, 0x7f100101
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -383,10 +423,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v1, Lcom/tencent/mm/ui/contact/d$a;->czT:Landroid/widget/TextView;
+    iput-object v0, v1, Lcom/tencent/mm/ui/contact/d$a;->cwP:Landroid/widget/TextView;
 
     .line 184
-    const v0, 0x7f0700c0
+    const v0, 0x7f100104
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -394,10 +434,10 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/MaskLayout;
 
-    iput-object v0, v1, Lcom/tencent/mm/ui/contact/d$a;->dbN:Lcom/tencent/mm/ui/base/MaskLayout;
+    iput-object v0, v1, Lcom/tencent/mm/ui/contact/d$a;->dat:Lcom/tencent/mm/ui/base/MaskLayout;
 
     .line 185
-    const v0, 0x7f0700c2
+    const v0, 0x7f10010b
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -405,10 +445,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v1, Lcom/tencent/mm/ui/contact/d$a;->czU:Landroid/widget/TextView;
+    iput-object v0, v1, Lcom/tencent/mm/ui/contact/d$a;->cwQ:Landroid/widget/TextView;
 
     .line 186
-    const v0, 0x7f0700bf
+    const v0, 0x7f100103
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -416,7 +456,7 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    iput-object v0, v1, Lcom/tencent/mm/ui/contact/d$a;->ljd:Landroid/view/ViewGroup;
+    iput-object v0, v1, Lcom/tencent/mm/ui/contact/d$a;->lJo:Landroid/view/ViewGroup;
 
     .line 198
     invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
@@ -452,25 +492,25 @@
     if-nez p1, :cond_7
 
     .line 211
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/contact/d;->Q(Lcom/tencent/mm/storage/k;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/contact/d;->R(Lcom/tencent/mm/storage/k;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 212
-    invoke-static {v1}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_6
 
     .line 213
-    const-string/jumbo v1, "!44@/B4Tb64lLpIELL9O96QoKLI7tZ4uMi2Pv5tXEtMBlz8="
+    const-string/jumbo v1, "MicroMsg.ChatroomContactAdapter"
 
     const-string/jumbo v3, "get display show head return null, user[%s] pos[%d]"
 
     new-array v4, v6, [Ljava/lang/Object;
 
-    iget-object v5, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v5, v0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     aput-object v5, v4, v7
 
@@ -480,10 +520,10 @@
 
     aput-object v5, v4, v9
 
-    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 214
-    iget-object v1, v2, Lcom/tencent/mm/ui/contact/d$a;->czT:Landroid/widget/TextView;
+    iget-object v1, v2, Lcom/tencent/mm/ui/contact/d$a;->cwP:Landroid/widget/TextView;
 
     invoke-virtual {v1, v8}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -498,47 +538,45 @@
     if-nez v1, :cond_2
 
     .line 222
-    iget-object v1, v2, Lcom/tencent/mm/ui/contact/d$a;->ljd:Landroid/view/ViewGroup;
+    iget-object v1, v2, Lcom/tencent/mm/ui/contact/d$a;->lJo:Landroid/view/ViewGroup;
 
     invoke-virtual {v1, v7}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
 
     .line 252
     :cond_2
     :goto_3
-    iget-object v3, v2, Lcom/tencent/mm/ui/contact/d$a;->czU:Landroid/widget/TextView;
+    iget-object v3, v2, Lcom/tencent/mm/ui/contact/d$a;->cwQ:Landroid/widget/TextView;
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/contact/d;->arW:Lcom/tencent/mm/ui/MMActivity;
+    iget-object v4, p0, Lcom/tencent/mm/ui/contact/d;->adL:Lcom/tencent/mm/ui/MMActivity;
 
-    iget-object v1, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/model/i;->eI(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/model/i;->eU(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_b
 
-    const v1, 0x7f080218
+    const v1, 0x7f0f025c
 
     :goto_4
-    invoke-static {v4, v1}, Lcom/tencent/mm/aw/a;->x(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {v4, v1}, Lcom/tencent/mm/az/a;->B(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
     invoke-virtual {v3, v1}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
     .line 257
-    iget-object v1, v2, Lcom/tencent/mm/ui/contact/d$a;->dbN:Lcom/tencent/mm/ui/base/MaskLayout;
+    iget-object v1, v2, Lcom/tencent/mm/ui/contact/d$a;->dat:Lcom/tencent/mm/ui/base/MaskLayout;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/base/MaskLayout;->getContentView()Landroid/view/View;
-
-    move-result-object v1
+    iget-object v1, v1, Lcom/tencent/mm/ui/base/MaskLayout;->view:Landroid/view/View;
 
     check-cast v1, Landroid/widget/ImageView;
 
     .line 258
-    iget-object v3, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v3, v0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lcom/tencent/mm/pluginsdk/ui/a$b;->b(Landroid/widget/ImageView;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcom/tencent/mm/pluginsdk/ui/a$b;->a(Landroid/widget/ImageView;Ljava/lang/String;)V
 
     .line 259
     invoke-virtual {v1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
@@ -548,34 +586,34 @@
     check-cast v1, Lcom/tencent/mm/pluginsdk/ui/a;
 
     .line 260
-    iget-object v3, p0, Lcom/tencent/mm/ui/contact/d;->iIJ:Lcom/tencent/mm/pluginsdk/ui/d;
+    iget-object v3, p0, Lcom/tencent/mm/ui/contact/d;->jfF:Lcom/tencent/mm/pluginsdk/ui/d;
 
     if-eqz v3, :cond_3
 
     .line 261
-    iget-object v3, p0, Lcom/tencent/mm/ui/contact/d;->iIJ:Lcom/tencent/mm/pluginsdk/ui/d;
+    iget-object v3, p0, Lcom/tencent/mm/ui/contact/d;->jfF:Lcom/tencent/mm/pluginsdk/ui/d;
 
     invoke-virtual {v3, v1}, Lcom/tencent/mm/pluginsdk/ui/d;->a(Lcom/tencent/mm/pluginsdk/ui/d$a;)V
 
     .line 266
     :cond_3
-    iget-object v1, v2, Lcom/tencent/mm/ui/contact/d$a;->dbN:Lcom/tencent/mm/ui/base/MaskLayout;
+    iget-object v1, v2, Lcom/tencent/mm/ui/contact/d$a;->dat:Lcom/tencent/mm/ui/base/MaskLayout;
 
-    invoke-virtual {v1, v10}, Lcom/tencent/mm/ui/base/MaskLayout;->setMaskDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/base/MaskLayout;->biG()V
 
     .line 271
     :try_start_0
-    iget-object v1, v2, Lcom/tencent/mm/ui/contact/d$a;->czU:Landroid/widget/TextView;
+    iget-object v1, v2, Lcom/tencent/mm/ui/contact/d$a;->cwQ:Landroid/widget/TextView;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/contact/d;->arW:Lcom/tencent/mm/ui/MMActivity;
+    iget-object v3, p0, Lcom/tencent/mm/ui/contact/d;->adL:Lcom/tencent/mm/ui/MMActivity;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/model/i;->dY(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/model/i;->ej(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v4, v2, Lcom/tencent/mm/ui/contact/d$a;->czU:Landroid/widget/TextView;
+    iget-object v4, v2, Lcom/tencent/mm/ui/contact/d$a;->cwQ:Landroid/widget/TextView;
 
     invoke-virtual {v4}, Landroid/widget/TextView;->getTextSize()F
 
@@ -609,7 +647,7 @@
 
     .line 207
     :cond_5
-    iget v0, v0, Lcom/tencent/mm/d/b/p;->field_showHead:I
+    iget v0, v0, Lcom/tencent/mm/e/b/p;->field_showHead:I
 
     move v1, v0
 
@@ -617,17 +655,17 @@
 
     .line 216
     :cond_6
-    iget-object v3, v2, Lcom/tencent/mm/ui/contact/d$a;->czT:Landroid/widget/TextView;
+    iget-object v3, v2, Lcom/tencent/mm/ui/contact/d$a;->cwP:Landroid/widget/TextView;
 
     invoke-virtual {v3, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 217
-    iget-object v3, v2, Lcom/tencent/mm/ui/contact/d$a;->czT:Landroid/widget/TextView;
+    iget-object v3, v2, Lcom/tencent/mm/ui/contact/d$a;->cwP:Landroid/widget/TextView;
 
     invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 218
-    iget-object v1, v2, Lcom/tencent/mm/ui/contact/d$a;->czT:Landroid/widget/TextView;
+    iget-object v1, v2, Lcom/tencent/mm/ui/contact/d$a;->cwP:Landroid/widget/TextView;
 
     invoke-virtual {v1, v7, v7, v7, v7}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
@@ -637,37 +675,37 @@
     :cond_7
     if-lez p1, :cond_a
 
-    iget v3, v0, Lcom/tencent/mm/d/b/p;->field_showHead:I
+    iget v3, v0, Lcom/tencent/mm/e/b/p;->field_showHead:I
 
     if-eq v3, v1, :cond_a
 
     .line 225
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/contact/d;->Q(Lcom/tencent/mm/storage/k;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/contact/d;->R(Lcom/tencent/mm/storage/k;)Ljava/lang/String;
 
     move-result-object v3
 
     .line 227
-    iget-object v4, v2, Lcom/tencent/mm/ui/contact/d$a;->ljd:Landroid/view/ViewGroup;
+    iget-object v4, v2, Lcom/tencent/mm/ui/contact/d$a;->lJo:Landroid/view/ViewGroup;
 
-    const v5, 0x7f0406f2
+    const v5, 0x7f020237
 
     invoke-virtual {v4, v5}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
 
     .line 229
-    invoke-static {v3}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_8
 
     .line 230
-    const-string/jumbo v3, "!44@/B4Tb64lLpIELL9O96QoKLI7tZ4uMi2Pv5tXEtMBlz8="
+    const-string/jumbo v3, "MicroMsg.ChatroomContactAdapter"
 
     const-string/jumbo v4, "get display show head return null, user[%s] pos[%d]"
 
     new-array v5, v6, [Ljava/lang/Object;
 
-    iget-object v6, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v6, v0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     aput-object v6, v5, v7
 
@@ -677,10 +715,10 @@
 
     aput-object v6, v5, v9
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 231
-    iget-object v3, v2, Lcom/tencent/mm/ui/contact/d$a;->czT:Landroid/widget/TextView;
+    iget-object v3, v2, Lcom/tencent/mm/ui/contact/d$a;->cwP:Landroid/widget/TextView;
 
     invoke-virtual {v3, v8}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -692,31 +730,31 @@
 
     .line 233
     :cond_8
-    iget-object v4, v2, Lcom/tencent/mm/ui/contact/d$a;->czT:Landroid/widget/TextView;
+    iget-object v4, v2, Lcom/tencent/mm/ui/contact/d$a;->cwP:Landroid/widget/TextView;
 
     invoke-virtual {v4, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 234
-    iget-object v4, v2, Lcom/tencent/mm/ui/contact/d$a;->czT:Landroid/widget/TextView;
+    iget-object v4, v2, Lcom/tencent/mm/ui/contact/d$a;->cwP:Landroid/widget/TextView;
 
     invoke-virtual {v4, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 235
-    iget v3, v0, Lcom/tencent/mm/d/b/p;->field_showHead:I
+    iget v3, v0, Lcom/tencent/mm/e/b/p;->field_showHead:I
 
     const/16 v4, 0x20
 
     if-ne v3, v4, :cond_9
 
     .line 236
-    iget-object v3, v2, Lcom/tencent/mm/ui/contact/d$a;->czT:Landroid/widget/TextView;
+    iget-object v3, v2, Lcom/tencent/mm/ui/contact/d$a;->cwP:Landroid/widget/TextView;
 
-    const v4, 0x7f04077b
+    const v4, 0x7f020500
 
     invoke-virtual {v3, v4, v7, v7, v7}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
     .line 237
-    iget-object v3, v2, Lcom/tencent/mm/ui/contact/d$a;->czT:Landroid/widget/TextView;
+    iget-object v3, v2, Lcom/tencent/mm/ui/contact/d$a;->cwP:Landroid/widget/TextView;
 
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setCompoundDrawablePadding(I)V
 
@@ -724,7 +762,7 @@
 
     .line 239
     :cond_9
-    iget-object v3, v2, Lcom/tencent/mm/ui/contact/d$a;->czT:Landroid/widget/TextView;
+    iget-object v3, v2, Lcom/tencent/mm/ui/contact/d$a;->cwP:Landroid/widget/TextView;
 
     invoke-virtual {v3, v7, v7, v7, v7}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
@@ -732,7 +770,7 @@
 
     .line 246
     :cond_a
-    iget-object v3, v2, Lcom/tencent/mm/ui/contact/d$a;->czT:Landroid/widget/TextView;
+    iget-object v3, v2, Lcom/tencent/mm/ui/contact/d$a;->cwP:Landroid/widget/TextView;
 
     invoke-virtual {v3, v8}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -743,7 +781,7 @@
 
     .line 252
     :cond_b
-    const v1, 0x7f080213
+    const v1, 0x7f0f025d
 
     goto/16 :goto_4
 
@@ -751,33 +789,11 @@
     :catch_0
     move-exception v0
 
-    iget-object v0, v2, Lcom/tencent/mm/ui/contact/d$a;->czU:Landroid/widget/TextView;
+    iget-object v0, v2, Lcom/tencent/mm/ui/contact/d$a;->cwQ:Landroid/widget/TextView;
 
     const-string/jumbo v1, ""
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_5
-.end method
-
-.method public final setGetViewPositionCallback(Lcom/tencent/mm/ui/base/MMSlideDelView$c;)V
-    .locals 0
-
-    .prologue
-    .line 105
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/d;->cHg:Lcom/tencent/mm/ui/base/MMSlideDelView$c;
-
-    .line 106
-    return-void
-.end method
-
-.method public final setPerformItemClickListener(Lcom/tencent/mm/ui/base/MMSlideDelView$g;)V
-    .locals 0
-
-    .prologue
-    .line 97
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/d;->cHf:Lcom/tencent/mm/ui/base/MMSlideDelView$g;
-
-    .line 98
-    return-void
 .end method

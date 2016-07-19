@@ -8,27 +8,21 @@ import android.widget.Scroller;
 
 public final class e
 {
-  static final a hK = new b();
-  Object hJ;
+  static final a ie = new b();
+  Object ic;
   
   static
   {
-    int i = Build.VERSION.SDK_INT;
-    if (i >= 14)
+    if (Build.VERSION.SDK_INT >= 14)
     {
-      hK = new d();
-      return;
-    }
-    if (i >= 9)
-    {
-      hK = new c();
+      ie = new c();
       return;
     }
   }
   
   private e(Context paramContext, Interpolator paramInterpolator)
   {
-    hJ = hK.b(paramContext, paramInterpolator);
+    ic = ie.b(paramContext, paramInterpolator);
   }
   
   public static e a(Context paramContext, Interpolator paramInterpolator)
@@ -38,17 +32,17 @@ public final class e
   
   public final void abortAnimation()
   {
-    hK.G(hJ);
+    ie.G(ic);
   }
   
   public final int getCurrX()
   {
-    return hK.D(hJ);
+    return ie.D(ic);
   }
   
   public final int getCurrY()
   {
-    return hK.E(hJ);
+    return ie.E(ic);
   }
   
   static abstract interface a
@@ -124,7 +118,7 @@ public final class e
     }
   }
   
-  static class c
+  static final class c
     implements e.a
   {
     public final boolean A(Object paramObject)
@@ -175,10 +169,6 @@ public final class e
       return new OverScroller(paramContext);
     }
   }
-  
-  static final class d
-    extends e.c
-  {}
 }
 
 /* Location:

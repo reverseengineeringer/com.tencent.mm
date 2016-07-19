@@ -11,7 +11,7 @@ final class j$3
   
   public final void onClick(View paramView)
   {
-    kpz.onMenuItemClick(null);
+    kOD.onMenuItemClick(null);
   }
 }
 

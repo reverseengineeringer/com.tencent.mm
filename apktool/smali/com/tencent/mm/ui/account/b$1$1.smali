@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic aoT:Lcom/tencent/mm/r/j;
+.field final synthetic acZ:Lcom/tencent/mm/t/j;
 
-.field final synthetic krK:Lcom/tencent/mm/ui/account/b$1;
+.field final synthetic kQS:Lcom/tencent/mm/ui/account/b$1;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/account/b$1;Lcom/tencent/mm/r/j;)V
+.method constructor <init>(Lcom/tencent/mm/ui/account/b$1;Lcom/tencent/mm/t/j;)V
     .locals 0
 
     .prologue
     .line 41
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/b$1$1;->krK:Lcom/tencent/mm/ui/account/b$1;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/b$1$1;->kQS:Lcom/tencent/mm/ui/account/b$1;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/b$1$1;->aoT:Lcom/tencent/mm/r/j;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/b$1$1;->acZ:Lcom/tencent/mm/t/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,13 +45,13 @@
 
     .prologue
     .line 45
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/b$1$1;->aoT:Lcom/tencent/mm/r/j;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/b$1$1;->acZ:Lcom/tencent/mm/t/j;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
     .line 46
     return-void

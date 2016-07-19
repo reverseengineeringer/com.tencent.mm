@@ -17,7 +17,7 @@ abstract interface c$c
   
   public abstract boolean a(Object paramObject, Canvas paramCanvas);
   
-  public abstract Object l(Context paramContext);
+  public abstract Object j(Context paramContext);
 }
 
 /* Location:

@@ -1,14 +1,9 @@
 package com.tencent.mm.plugin.sns.h;
 
-public abstract interface e
+public final class e
+  extends f
 {
-  public abstract boolean a(i parami);
-  
-  public abstract boolean azt();
-  
-  public abstract boolean azu();
-  
-  public abstract i uG(String paramString);
+  public static f hdt = new e();
 }
 
 /* Location:

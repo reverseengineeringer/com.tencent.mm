@@ -19,7 +19,7 @@
 
 
 # virtual methods
-.method public final Q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.method public final S(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
     .prologue
@@ -27,12 +27,12 @@
     :try_start_0
     const-string/jumbo v0, "Base string cant be null or empty string"
 
-    invoke-static {p1, v0}, Lb/a/g/d;->cT(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lb/a/g/d;->dg(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 33
     const-string/jumbo v0, "Api secret cant be null or empty string"
 
-    invoke-static {p2, v0}, Lb/a/g/d;->cT(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lb/a/g/d;->dg(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 34
     new-instance v0, Ljava/lang/StringBuilder;
@@ -97,7 +97,7 @@
 
     new-instance v1, Ljava/lang/String;
 
-    invoke-static {v0}, Lb/a/g/a;->by([B)[C
+    invoke-static {v0}, Lb/a/g/a;->bG([B)[C
 
     move-result-object v0
 
@@ -127,7 +127,7 @@
     throw v1
 .end method
 
-.method public final boQ()Ljava/lang/String;
+.method public final bvO()Ljava/lang/String;
     .locals 1
 
     .prologue

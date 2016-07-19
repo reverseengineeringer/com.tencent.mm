@@ -4,8 +4,8 @@ import android.media.AudioTrack;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import com.tencent.mm.compatible.util.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class i$1
   implements MediaPlayer.OnCompletionListener
@@ -14,25 +14,25 @@ final class i$1
   
   public final void onCompletion(MediaPlayer paramMediaPlayer)
   {
-    if (i.a(chi) != null) {
-      i.a(chi).oV();
+    if (i.a(ccz) != null) {
+      i.a(ccz).nn();
     }
     try
     {
-      i.a(chi, 0);
-      if (i.b(chi) != null)
+      i.a(ccz, 0);
+      if (i.b(ccz) != null)
       {
-        u.i("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "mAudioTrack.stop()");
-        i.b(chi).stop();
-        i.b(chi).release();
-        i.c(chi);
+        v.i("MicroMsg.SilkPlayer", "mAudioTrack.stop()");
+        i.b(ccz).stop();
+        i.b(ccz).release();
+        i.c(ccz);
       }
       return;
     }
     catch (Exception paramMediaPlayer)
     {
-      u.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "exception:%s", new Object[] { ay.b(paramMediaPlayer) });
-      u.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "setCompletion File[" + i.d(chi) + "] ErrMsg[" + paramMediaPlayer.getStackTrace() + "]");
+      v.e("MicroMsg.SilkPlayer", "exception:%s", new Object[] { be.f(paramMediaPlayer) });
+      v.e("MicroMsg.SilkPlayer", "setCompletion File[" + i.d(ccz) + "] ErrMsg[" + paramMediaPlayer.getStackTrace() + "]");
     }
   }
 }

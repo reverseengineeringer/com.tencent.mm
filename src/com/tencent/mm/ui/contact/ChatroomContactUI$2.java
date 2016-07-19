@@ -10,7 +10,7 @@ final class ChatroomContactUI$2
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    ljg.finish();
+    lJr.finish();
     return false;
   }
 }

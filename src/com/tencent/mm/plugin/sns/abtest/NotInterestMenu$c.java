@@ -1,6 +1,6 @@
 package com.tencent.mm.plugin.sns.abtest;
 
-import com.tencent.mm.plugin.sns.h.k;
+import com.tencent.mm.plugin.sns.i.k;
 
 public abstract interface NotInterestMenu$c
 {

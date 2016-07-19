@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final bJS:[I
+.field public static final bDk:[I
 
 
 # direct methods
@@ -19,7 +19,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/tencent/mm/modelcdntran/a;->bJS:[I
+    sput-object v0, Lcom/tencent/mm/modelcdntran/a;->bDk:[I
 
     return-void
 

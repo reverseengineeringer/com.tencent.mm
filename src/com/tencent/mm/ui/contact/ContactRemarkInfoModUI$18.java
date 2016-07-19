@@ -3,8 +3,8 @@ package com.tencent.mm.ui.contact;
 import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.aj.c;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.am.c;
+import com.tencent.mm.platformtools.s;
 
 final class ContactRemarkInfoModUI$18
   implements View.OnClickListener
@@ -13,20 +13,20 @@ final class ContactRemarkInfoModUI$18
   
   public final void onClick(View paramView)
   {
-    if (!ContactRemarkInfoModUI.j(ljV)) {
+    if (!ContactRemarkInfoModUI.j(lKg)) {
       return;
     }
-    ContactRemarkInfoModUI.k(ljV);
-    Intent localIntent = new Intent(ljV, ContactRemarkImagePreviewUI.class);
-    localIntent.putExtra("Contact_User", ContactRemarkInfoModUI.l(ljV));
-    if ((!t.kz(ContactRemarkInfoModUI.m(ljV))) && (!ContactRemarkInfoModUI.n(ljV))) {
-      c.BE();
+    ContactRemarkInfoModUI.k(lKg);
+    Intent localIntent = new Intent(lKg, ContactRemarkImagePreviewUI.class);
+    localIntent.putExtra("Contact_User", ContactRemarkInfoModUI.l(lKg));
+    if ((!s.kf(ContactRemarkInfoModUI.m(lKg))) && (!ContactRemarkInfoModUI.n(lKg))) {
+      c.BI();
     }
-    for (paramView = c.it(ContactRemarkInfoModUI.l(ljV));; paramView = ContactRemarkInfoModUI.o(ljV))
+    for (paramView = c.iK(ContactRemarkInfoModUI.l(lKg));; paramView = ContactRemarkInfoModUI.o(lKg))
     {
       localIntent.putExtra("remark_image_path", paramView);
-      localIntent.putExtra("view_temp_remark_image", ContactRemarkInfoModUI.n(ljV));
-      ljV.startActivityForResult(localIntent, 400);
+      localIntent.putExtra("view_temp_remark_image", ContactRemarkInfoModUI.n(lKg));
+      lKg.startActivityForResult(localIntent, 400);
       return;
     }
   }

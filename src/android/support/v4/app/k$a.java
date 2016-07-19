@@ -8,250 +8,175 @@ import java.io.PrintWriter;
 import java.lang.reflect.Modifier;
 
 final class k$a
-  implements c.a
+  implements c.a<Object>
 {
-  boolean bG;
-  final Bundle cp;
-  j.a cq;
-  android.support.v4.content.c cr;
-  boolean cs;
-  boolean ct;
-  boolean cu;
-  boolean cv;
-  boolean cw;
-  a cx;
+  boolean bU;
+  boolean bb;
+  boolean cC;
+  final int cE;
+  final Bundle cF;
+  j.a<Object> cG;
+  android.support.v4.content.c<Object> cH;
+  boolean cI;
+  boolean cJ;
+  boolean cK;
+  boolean cL;
+  boolean cM;
+  a cN;
   Object mData;
-  final int mId;
-  boolean mRetaining;
-  boolean mStarted;
   
-  public k$a(k paramk, int paramInt, Bundle paramBundle, j.a parama)
+  public k$a(int paramInt, Bundle paramBundle, j.a<Object> parama)
   {
-    mId = paramInt;
-    cp = paramBundle;
-    cq = parama;
+    cE = paramBundle;
+    cF = parama;
+    j.a locala;
+    cG = locala;
   }
   
-  public final void a(android.support.v4.content.c paramc, Object paramObject)
+  public final void b(android.support.v4.content.c<Object> paramc, Object paramObject)
   {
     if (k.DEBUG) {
       new StringBuilder("onLoadComplete: ").append(this);
     }
-    if (bG) {}
+    if (bU) {}
     do
     {
       do
       {
         return;
-      } while (cy.cm.get(mId) != this);
-      a locala = cx;
+      } while (cO.cA.get(cE) != this);
+      a locala = cN;
       if (locala != null)
       {
         if (k.DEBUG) {
           new StringBuilder("  Switching to pending loader: ").append(locala);
         }
-        cx = null;
-        cy.cm.put(mId, null);
+        cN = null;
+        cO.cA.put(cE, null);
         destroy();
-        cy.a(locala);
+        cO.a(locala);
         return;
       }
-      if ((mData != paramObject) || (!cs))
+      if ((mData != paramObject) || (!cI))
       {
         mData = paramObject;
-        cs = true;
-        if (mStarted) {
-          b(paramc, paramObject);
+        cI = true;
+        if (cC) {
+          c(paramc, paramObject);
         }
       }
-      paramc = (a)cy.cn.get(mId);
+      paramc = (a)cO.cB.get(cE);
       if ((paramc != null) && (paramc != this))
       {
-        ct = false;
+        cJ = false;
         paramc.destroy();
-        paramc = cy.cn;
-        int i = mId;
-        i = android.support.v4.c.c.a(ep, mSize, i);
-        if ((i >= 0) && (eq[i] != android.support.v4.c.c.en))
+        paramc = cO.cB;
+        int i = cE;
+        i = android.support.v4.c.c.a(eK, eM, i);
+        if ((i >= 0) && (eL[i] != android.support.v4.c.c.eI))
         {
-          eq[i] = android.support.v4.c.c.en;
-          eo = true;
+          eL[i] = android.support.v4.c.c.eI;
+          eJ = true;
         }
       }
-    } while ((cy.mActivity == null) || (cy.O()));
-    cy.mActivity.bb.J();
+    } while ((cO.aS == null) || (cO.N()));
+    cO.aS.bp.I();
   }
   
-  final void b(android.support.v4.content.c paramc, Object paramObject)
+  final void c(android.support.v4.content.c<Object> paramc, Object paramObject)
   {
     String str;
-    if (cq != null)
+    if (cG != null)
     {
-      if (cy.mActivity == null) {
-        break label147;
+      if (cO.aS == null) {
+        break label176;
       }
-      str = cy.mActivity.bb.bH;
-      cy.mActivity.bb.bH = "onLoadFinished";
+      str = cO.aS.bp.bV;
+      cO.aS.bp.bV = "onLoadFinished";
     }
     for (;;)
     {
       try
       {
-        if (k.DEBUG) {
-          new StringBuilder("  onLoadFinished in ").append(paramc).append(": ").append(paramc.dataToString(paramObject));
+        if (k.DEBUG)
+        {
+          StringBuilder localStringBuilder1 = new StringBuilder("  onLoadFinished in ").append(paramc).append(": ");
+          StringBuilder localStringBuilder2 = new StringBuilder(64);
+          a.a(paramObject, localStringBuilder2);
+          localStringBuilder2.append("}");
+          localStringBuilder1.append(localStringBuilder2.toString());
         }
-        cq.onLoadFinished(paramc, paramObject);
-        if (cy.mActivity != null) {
-          cy.mActivity.bb.bH = str;
+        cG.a(paramc, paramObject);
+        if (cO.aS != null) {
+          cO.aS.bp.bV = str;
         }
-        ct = true;
+        cJ = true;
         return;
       }
       finally
       {
-        if (cy.mActivity != null) {
-          cy.mActivity.bb.bH = str;
+        if (cO.aS != null) {
+          cO.aS.bp.bV = str;
         }
       }
-      label147:
+      label176:
       str = null;
     }
   }
   
-  /* Error */
   final void destroy()
   {
-    // Byte code:
-    //   0: aload_0
-    //   1: astore_2
-    //   2: getstatic 50	android/support/v4/app/k:DEBUG	Z
-    //   5: ifeq +17 -> 22
-    //   8: new 52	java/lang/StringBuilder
-    //   11: dup
-    //   12: ldc -91
-    //   14: invokespecial 57	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   17: aload_2
-    //   18: invokevirtual 61	java/lang/StringBuilder:append	(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-    //   21: pop
-    //   22: aload_2
-    //   23: iconst_1
-    //   24: putfield 63	android/support/v4/app/k$a:bG	Z
-    //   27: aload_2
-    //   28: getfield 101	android/support/v4/app/k$a:ct	Z
-    //   31: istore_1
-    //   32: aload_2
-    //   33: iconst_0
-    //   34: putfield 101	android/support/v4/app/k$a:ct	Z
-    //   37: aload_2
-    //   38: getfield 45	android/support/v4/app/k$a:cq	Landroid/support/v4/app/j$a;
-    //   41: ifnull +117 -> 158
-    //   44: aload_2
-    //   45: getfield 167	android/support/v4/app/k$a:cr	Landroid/support/v4/content/c;
-    //   48: ifnull +110 -> 158
-    //   51: aload_2
-    //   52: getfield 91	android/support/v4/app/k$a:cs	Z
-    //   55: ifeq +103 -> 158
-    //   58: iload_1
-    //   59: ifeq +99 -> 158
-    //   62: getstatic 50	android/support/v4/app/k:DEBUG	Z
-    //   65: ifeq +17 -> 82
-    //   68: new 52	java/lang/StringBuilder
-    //   71: dup
-    //   72: ldc -87
-    //   74: invokespecial 57	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   77: aload_2
-    //   78: invokevirtual 61	java/lang/StringBuilder:append	(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-    //   81: pop
-    //   82: aload_2
-    //   83: getfield 36	android/support/v4/app/k$a:cy	Landroid/support/v4/app/k;
-    //   86: getfield 125	android/support/v4/app/k:mActivity	Landroid/support/v4/app/FragmentActivity;
-    //   89: ifnull +163 -> 252
-    //   92: aload_2
-    //   93: getfield 36	android/support/v4/app/k$a:cy	Landroid/support/v4/app/k;
-    //   96: getfield 125	android/support/v4/app/k:mActivity	Landroid/support/v4/app/FragmentActivity;
-    //   99: getfield 135	android/support/v4/app/FragmentActivity:bb	Landroid/support/v4/app/f;
-    //   102: getfield 144	android/support/v4/app/f:bH	Ljava/lang/String;
-    //   105: astore_3
-    //   106: aload_2
-    //   107: getfield 36	android/support/v4/app/k$a:cy	Landroid/support/v4/app/k;
-    //   110: getfield 125	android/support/v4/app/k:mActivity	Landroid/support/v4/app/FragmentActivity;
-    //   113: getfield 135	android/support/v4/app/FragmentActivity:bb	Landroid/support/v4/app/f;
-    //   116: ldc -85
-    //   118: putfield 144	android/support/v4/app/f:bH	Ljava/lang/String;
-    //   121: aload_2
-    //   122: getfield 45	android/support/v4/app/k$a:cq	Landroid/support/v4/app/j$a;
-    //   125: aload_2
-    //   126: getfield 167	android/support/v4/app/k$a:cr	Landroid/support/v4/content/c;
-    //   129: invokeinterface 174 2 0
-    //   134: aload_2
-    //   135: getfield 36	android/support/v4/app/k$a:cy	Landroid/support/v4/app/k;
-    //   138: getfield 125	android/support/v4/app/k:mActivity	Landroid/support/v4/app/FragmentActivity;
-    //   141: ifnull +17 -> 158
-    //   144: aload_2
-    //   145: getfield 36	android/support/v4/app/k$a:cy	Landroid/support/v4/app/k;
-    //   148: getfield 125	android/support/v4/app/k:mActivity	Landroid/support/v4/app/FragmentActivity;
-    //   151: getfield 135	android/support/v4/app/FragmentActivity:bb	Landroid/support/v4/app/f;
-    //   154: aload_3
-    //   155: putfield 144	android/support/v4/app/f:bH	Ljava/lang/String;
-    //   158: aload_2
-    //   159: aconst_null
-    //   160: putfield 45	android/support/v4/app/k$a:cq	Landroid/support/v4/app/j$a;
-    //   163: aload_2
-    //   164: aconst_null
-    //   165: putfield 89	android/support/v4/app/k$a:mData	Ljava/lang/Object;
-    //   168: aload_2
-    //   169: iconst_0
-    //   170: putfield 91	android/support/v4/app/k$a:cs	Z
-    //   173: aload_2
-    //   174: getfield 167	android/support/v4/app/k$a:cr	Landroid/support/v4/content/c;
-    //   177: ifnull +30 -> 207
-    //   180: aload_2
-    //   181: getfield 176	android/support/v4/app/k$a:cw	Z
-    //   184: ifeq +16 -> 200
-    //   187: aload_2
-    //   188: iconst_0
-    //   189: putfield 176	android/support/v4/app/k$a:cw	Z
-    //   192: aload_2
-    //   193: getfield 167	android/support/v4/app/k$a:cr	Landroid/support/v4/content/c;
-    //   196: aload_2
-    //   197: invokevirtual 180	android/support/v4/content/c:unregisterListener	(Landroid/support/v4/content/c$a;)V
-    //   200: aload_2
-    //   201: getfield 167	android/support/v4/app/k$a:cr	Landroid/support/v4/content/c;
-    //   204: invokevirtual 183	android/support/v4/content/c:reset	()V
-    //   207: aload_2
-    //   208: getfield 75	android/support/v4/app/k$a:cx	Landroid/support/v4/app/k$a;
-    //   211: ifnull +40 -> 251
-    //   214: aload_2
-    //   215: getfield 75	android/support/v4/app/k$a:cx	Landroid/support/v4/app/k$a;
-    //   218: astore_2
-    //   219: goto -217 -> 2
-    //   222: astore 4
-    //   224: aload_2
-    //   225: getfield 36	android/support/v4/app/k$a:cy	Landroid/support/v4/app/k;
-    //   228: getfield 125	android/support/v4/app/k:mActivity	Landroid/support/v4/app/FragmentActivity;
-    //   231: ifnull +17 -> 248
-    //   234: aload_2
-    //   235: getfield 36	android/support/v4/app/k$a:cy	Landroid/support/v4/app/k;
-    //   238: getfield 125	android/support/v4/app/k:mActivity	Landroid/support/v4/app/FragmentActivity;
-    //   241: getfield 135	android/support/v4/app/FragmentActivity:bb	Landroid/support/v4/app/f;
-    //   244: aload_3
-    //   245: putfield 144	android/support/v4/app/f:bH	Ljava/lang/String;
-    //   248: aload 4
-    //   250: athrow
-    //   251: return
-    //   252: aconst_null
-    //   253: astore_3
-    //   254: goto -133 -> 121
-    // Local variable table:
-    //   start	length	slot	name	signature
-    //   0	257	0	this	a
-    //   31	28	1	bool	boolean
-    //   1	234	2	locala	a
-    //   105	149	3	str	String
-    //   222	27	4	localObject	Object
-    // Exception table:
-    //   from	to	target	type
-    //   121	134	222	finally
+    a locala = this;
+    if (k.DEBUG) {
+      new StringBuilder("  Destroying: ").append(locala);
+    }
+    bU = true;
+    boolean bool = cJ;
+    cJ = false;
+    Object localObject;
+    if ((cG != null) && (cH != null) && (cI) && (bool))
+    {
+      if (k.DEBUG) {
+        new StringBuilder("  Reseting: ").append(locala);
+      }
+      if (cO.aS == null) {
+        break label237;
+      }
+      localObject = cO.aS.bp.bV;
+      cO.aS.bp.bV = "onLoaderReset";
+    }
+    for (;;)
+    {
+      if (cO.aS != null) {
+        cO.aS.bp.bV = ((String)localObject);
+      }
+      cG = null;
+      mData = null;
+      cI = false;
+      if (cH != null)
+      {
+        if (cM)
+        {
+          cM = false;
+          cH.a(locala);
+        }
+        localObject = cH;
+        ((android.support.v4.content.c)localObject).onReset();
+        eB = true;
+        cC = false;
+        eA = false;
+        eC = false;
+        eD = false;
+      }
+      if (cN != null)
+      {
+        locala = cN;
+        break;
+      }
+      return;
+      label237:
+      localObject = null;
+    }
   }
   
   public final void dump(String paramString, FileDescriptor paramFileDescriptor, PrintWriter paramPrintWriter, String[] paramArrayOfString)
@@ -262,83 +187,93 @@ final class k$a
     {
       paramPrintWriter.print(str);
       paramPrintWriter.print("mId=");
-      paramPrintWriter.print(mId);
+      paramPrintWriter.print(cE);
       paramPrintWriter.print(" mArgs=");
-      paramPrintWriter.println(cp);
+      paramPrintWriter.println(cF);
       paramPrintWriter.print(str);
       paramPrintWriter.print("mCallbacks=");
-      paramPrintWriter.println(cq);
+      paramPrintWriter.println(cG);
       paramPrintWriter.print(str);
       paramPrintWriter.print("mLoader=");
-      paramPrintWriter.println(cr);
-      if (cr != null) {
-        cr.dump(str + "  ", paramFileDescriptor, paramPrintWriter, paramArrayOfString);
+      paramPrintWriter.println(cH);
+      if (cH != null) {
+        cH.dump(str + "  ", paramFileDescriptor, paramPrintWriter, paramArrayOfString);
       }
-      if ((cs) || (ct))
+      if ((cI) || (cJ))
       {
         paramPrintWriter.print(str);
         paramPrintWriter.print("mHaveData=");
-        paramPrintWriter.print(cs);
+        paramPrintWriter.print(cI);
         paramPrintWriter.print("  mDeliveredData=");
-        paramPrintWriter.println(ct);
+        paramPrintWriter.println(cJ);
         paramPrintWriter.print(str);
         paramPrintWriter.print("mData=");
         paramPrintWriter.println(mData);
       }
       paramPrintWriter.print(str);
       paramPrintWriter.print("mStarted=");
-      paramPrintWriter.print(mStarted);
+      paramPrintWriter.print(cC);
       paramPrintWriter.print(" mReportNextStart=");
-      paramPrintWriter.print(cv);
+      paramPrintWriter.print(cL);
       paramPrintWriter.print(" mDestroyed=");
-      paramPrintWriter.println(bG);
+      paramPrintWriter.println(bU);
       paramPrintWriter.print(str);
       paramPrintWriter.print("mRetaining=");
-      paramPrintWriter.print(mRetaining);
+      paramPrintWriter.print(bb);
       paramPrintWriter.print(" mRetainingStarted=");
-      paramPrintWriter.print(cu);
+      paramPrintWriter.print(cK);
       paramPrintWriter.print(" mListenerRegistered=");
-      paramPrintWriter.println(cw);
-      if (cx == null) {
+      paramPrintWriter.println(cM);
+      if (cN == null) {
         break;
       }
       paramPrintWriter.print(str);
       paramPrintWriter.println("Pending Loader ");
-      paramPrintWriter.print(cx);
+      paramPrintWriter.print(cN);
       paramPrintWriter.println(":");
-      paramString = cx;
+      paramString = cN;
       str = str + "  ";
     }
   }
   
   final void start()
   {
-    if ((mRetaining) && (cu)) {
-      mStarted = true;
+    if ((bb) && (cK)) {
+      cC = true;
     }
     do
     {
       do
       {
         return;
-      } while (mStarted);
-      mStarted = true;
+      } while (cC);
+      cC = true;
       if (k.DEBUG) {
         new StringBuilder("  Starting: ").append(this);
       }
-      if ((cr == null) && (cq != null)) {
-        cr = cq.onCreateLoader(mId, cp);
+      if ((cH == null) && (cG != null)) {
+        cH = cG.l(cE);
       }
-    } while (cr == null);
-    if ((cr.getClass().isMemberClass()) && (!Modifier.isStatic(cr.getClass().getModifiers()))) {
-      throw new IllegalArgumentException("Object returned from onCreateLoader must not be a non-static inner member class: " + cr);
+    } while (cH == null);
+    if ((cH.getClass().isMemberClass()) && (!Modifier.isStatic(cH.getClass().getModifiers()))) {
+      throw new IllegalArgumentException("Object returned from onCreateLoader must not be a non-static inner member class: " + cH);
     }
-    if (!cw)
+    if (!cM)
     {
-      cr.registerListener(mId, this);
-      cw = true;
+      localc = cH;
+      int i = cE;
+      if (ez != null) {
+        throw new IllegalStateException("There is already a listener registered");
+      }
+      ez = this;
+      cE = i;
+      cM = true;
     }
-    cr.startLoading();
+    android.support.v4.content.c localc = cH;
+    cC = true;
+    eB = false;
+    eA = false;
+    localc.onStartLoading();
   }
   
   final void stop()
@@ -346,12 +281,14 @@ final class k$a
     if (k.DEBUG) {
       new StringBuilder("  Stopping: ").append(this);
     }
-    mStarted = false;
-    if ((!mRetaining) && (cr != null) && (cw))
+    cC = false;
+    if ((!bb) && (cH != null) && (cM))
     {
-      cw = false;
-      cr.unregisterListener(this);
-      cr.stopLoading();
+      cM = false;
+      cH.a(this);
+      android.support.v4.content.c localc = cH;
+      cC = false;
+      localc.onStopLoading();
     }
   }
   
@@ -361,9 +298,9 @@ final class k$a
     localStringBuilder.append("LoaderInfo{");
     localStringBuilder.append(Integer.toHexString(System.identityHashCode(this)));
     localStringBuilder.append(" #");
-    localStringBuilder.append(mId);
+    localStringBuilder.append(cE);
     localStringBuilder.append(" : ");
-    a.a(cr, localStringBuilder);
+    a.a(cH, localStringBuilder);
     localStringBuilder.append("}}");
     return localStringBuilder.toString();
   }

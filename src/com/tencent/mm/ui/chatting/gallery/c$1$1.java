@@ -12,21 +12,21 @@ final class c$1$1
   
   public final void run()
   {
-    ImageGalleryGridUI localImageGalleryGridUI = lfb.leY;
-    c.a locala = lfb.leZ;
-    if (!lfn.booleanValue())
+    ImageGalleryGridUI localImageGalleryGridUI = lFn.lFk;
+    c.a locala = lFn.lFl;
+    if (!lFz.booleanValue())
     {
-      iGr.setVisibility(8);
+      jdm.setVisibility(8);
       return;
     }
-    lfn = Boolean.valueOf(false);
-    if (!ImageGalleryGridUI.bgt())
+    lFz = Boolean.valueOf(false);
+    if (!ImageGalleryGridUI.bmc())
     {
-      iGr.setVisibility(0);
+      jdm.setVisibility(0);
       return;
     }
-    lfl = new WeakReference(locala);
-    gpY.getViewTreeObserver().addOnPreDrawListener(localImageGalleryGridUI);
+    lFx = new WeakReference(locala);
+    gAq.getViewTreeObserver().addOnPreDrawListener(localImageGalleryGridUI);
   }
 }
 

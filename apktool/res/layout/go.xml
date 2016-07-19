@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/ChattingAppUIContent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/zd" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/ChattingUIAvatarMaskTo" layout="@layout/chatting_item_avatar_to" />
+    <TextView android:id="@id/gv" android:visibility="gone" android:text="{user}" android:layout_toLeftOf="@id/zd" style="@style/ChattingUISenderText" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/o0" android:paddingLeft="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/zd" android:layout_below="@id/gv">
+        <ImageView android:id="@id/a2m" android:layout_marginRight="6.0dip" style="@style/ChattingUIState" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <FrameLayout android:layout_gravity="right" android:id="@id/a0s" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="240.0dip">
+                <ImageView android:layout_gravity="center" android:id="@id/a0z" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon" android:adjustViewBounds="true" android:maxWidth="240.0dip" android:minWidth="100.0dip" android:minHeight="100.0dip" />
+                <ImageView android:id="@id/a16" android:background="@drawable/cl" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/a3e" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/smallCustomProgressBar" />
+                    <TextView android:textColor="#ffffffff" android:id="@id/a3f" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </FrameLayout>
+            <TextView android:ellipsize="end" android:id="@id/a15" android:background="@drawable/a9" android:padding="@dimen/cp" android:layout_marginLeft="0.0dip" android:layout_marginRight="@dimen/j8" android:singleLine="true" style="@style/ChattingItemSourceTextView" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

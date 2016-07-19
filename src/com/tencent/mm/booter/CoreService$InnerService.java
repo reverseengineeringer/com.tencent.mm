@@ -4,7 +4,7 @@ import android.app.Notification;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class CoreService$InnerService
   extends Service
@@ -27,7 +27,7 @@ public class CoreService$InnerService
     {
       for (;;)
       {
-        u.e("!32@/B4Tb64lLpIzvC/moQitzBn6RBAuk+sd", "set service for push exception:%s.", new Object[] { localNullPointerException });
+        v.e("MicroMsg.CoreService", "set service for push exception:%s.", new Object[] { localNullPointerException });
       }
     }
   }

@@ -2,9 +2,9 @@ package com.tencent.mm.plugin.sns.ui;
 
 public abstract interface SnsHeader$a
 {
-  public abstract boolean aBz();
+  public abstract boolean aEQ();
   
-  public abstract boolean cE(long paramLong);
+  public abstract boolean cS(long paramLong);
 }
 
 /* Location:

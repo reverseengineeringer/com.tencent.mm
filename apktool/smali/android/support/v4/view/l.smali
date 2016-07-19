@@ -14,7 +14,7 @@
 
 
 # static fields
-.field static final fv:Landroid/support/v4/view/l$c;
+.field static final fR:Landroid/support/v4/view/l$c;
 
 
 # direct methods
@@ -34,7 +34,7 @@
 
     invoke-direct {v0}, Landroid/support/v4/view/l$b;-><init>()V
 
-    sput-object v0, Landroid/support/v4/view/l;->fv:Landroid/support/v4/view/l$c;
+    sput-object v0, Landroid/support/v4/view/l;->fR:Landroid/support/v4/view/l$c;
 
     .line 72
     :goto_0
@@ -46,7 +46,7 @@
 
     invoke-direct {v0}, Landroid/support/v4/view/l$a;-><init>()V
 
-    sput-object v0, Landroid/support/v4/view/l;->fv:Landroid/support/v4/view/l$c;
+    sput-object v0, Landroid/support/v4/view/l;->fR:Landroid/support/v4/view/l$c;
 
     goto :goto_0
 .end method
@@ -56,7 +56,7 @@
 
     .prologue
     .line 82
-    sget-object v0, Landroid/support/v4/view/l;->fv:Landroid/support/v4/view/l$c;
+    sget-object v0, Landroid/support/v4/view/l;->fR:Landroid/support/v4/view/l$c;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/l$c;->a(Landroid/view/VelocityTracker;I)F
 
@@ -70,7 +70,7 @@
 
     .prologue
     .line 91
-    sget-object v0, Landroid/support/v4/view/l;->fv:Landroid/support/v4/view/l$c;
+    sget-object v0, Landroid/support/v4/view/l;->fR:Landroid/support/v4/view/l$c;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/l$c;->b(Landroid/view/VelocityTracker;I)F
 

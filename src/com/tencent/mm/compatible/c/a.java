@@ -3,7 +3,7 @@ package com.tencent.mm.compatible.c;
 import android.media.AudioManager;
 import com.tencent.mm.compatible.d.j;
 import com.tencent.mm.compatible.d.p;
-import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.an;
 
 public final class a
 {
@@ -13,13 +13,13 @@ public final class a
     do
     {
       return true;
-      if (ak.aKi) {
+      if (an.awC) {
         return false;
       }
-      if ((bsQbrB == 1) || (bsQbrC == -1)) {
+      if ((bgWbfC == 1) || (bgWbfD == -1)) {
         paramAudioManager.setBluetoothScoOn(false);
       }
-    } while ((bsQbrB != 1) && (bsQbrC != -1));
+    } while ((bgWbfC != 1) && (bgWbfD != -1));
     paramAudioManager.stopBluetoothSco();
     return true;
   }

@@ -26,11 +26,11 @@
     if-nez p0, :cond_0
 
     .line 22
-    const-string/jumbo v1, "!44@/B4Tb64lLpIcVJc/YDTTqHums7mERtmpK2BGs1em8ao="
+    const-string/jumbo v1, "MicroMsg.SDK.MMessageAct"
 
     const-string/jumbo v2, "send fail, invalid argument"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 65
     :goto_0
@@ -38,16 +38,16 @@
 
     .line 26
     :cond_0
-    iget-object v2, p1, Lcom/tencent/mm/sdk/a/a$a;->jUy:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/sdk/a/a$a;->ktZ:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
     .line 27
-    const-string/jumbo v1, "!44@/B4Tb64lLpIcVJc/YDTTqHums7mERtmpK2BGs1em8ao="
+    const-string/jumbo v1, "MicroMsg.SDK.MMessageAct"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -55,7 +55,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p1, Lcom/tencent/mm/sdk/a/a$a;->jUy:Ljava/lang/String;
+    iget-object v3, p1, Lcom/tencent/mm/sdk/a/a$a;->ktZ:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -65,15 +65,15 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 31
     :cond_1
-    iget-object v2, p1, Lcom/tencent/mm/sdk/a/a$a;->jUz:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/sdk/a/a$a;->kua:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -84,7 +84,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v3, p1, Lcom/tencent/mm/sdk/a/a$a;->jUy:Ljava/lang/String;
+    iget-object v3, p1, Lcom/tencent/mm/sdk/a/a$a;->ktZ:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -100,11 +100,11 @@
 
     move-result-object v2
 
-    iput-object v2, p1, Lcom/tencent/mm/sdk/a/a$a;->jUz:Ljava/lang/String;
+    iput-object v2, p1, Lcom/tencent/mm/sdk/a/a$a;->kua:Ljava/lang/String;
 
     .line 35
     :cond_2
-    const-string/jumbo v2, "!44@/B4Tb64lLpIcVJc/YDTTqHums7mERtmpK2BGs1em8ao="
+    const-string/jumbo v2, "MicroMsg.SDK.MMessageAct"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -112,7 +112,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p1, Lcom/tencent/mm/sdk/a/a$a;->jUy:Ljava/lang/String;
+    iget-object v4, p1, Lcom/tencent/mm/sdk/a/a$a;->ktZ:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -124,7 +124,7 @@
 
     move-result-object v3
 
-    iget-object v4, p1, Lcom/tencent/mm/sdk/a/a$a;->jUz:Ljava/lang/String;
+    iget-object v4, p1, Lcom/tencent/mm/sdk/a/a$a;->kua:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -134,7 +134,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 37
     new-instance v2, Landroid/content/Intent;
@@ -142,23 +142,23 @@
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
     .line 38
-    iget-object v3, p1, Lcom/tencent/mm/sdk/a/a$a;->jUy:Ljava/lang/String;
+    iget-object v3, p1, Lcom/tencent/mm/sdk/a/a$a;->ktZ:Ljava/lang/String;
 
-    iget-object v4, p1, Lcom/tencent/mm/sdk/a/a$a;->jUz:Ljava/lang/String;
+    iget-object v4, p1, Lcom/tencent/mm/sdk/a/a$a;->kua:Ljava/lang/String;
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 39
-    iget-object v3, p1, Lcom/tencent/mm/sdk/a/a$a;->jUA:Landroid/os/Bundle;
+    iget-object v3, p1, Lcom/tencent/mm/sdk/a/a$a;->kub:Landroid/os/Bundle;
 
     if-eqz v3, :cond_3
 
     .line 40
-    iget-object v3, p1, Lcom/tencent/mm/sdk/a/a$a;->jUA:Landroid/os/Bundle;
+    iget-object v3, p1, Lcom/tencent/mm/sdk/a/a$a;->kub:Landroid/os/Bundle;
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 44
+    .line 43
     :cond_3
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -217,7 +217,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
+    invoke-static {v3}, Lcom/tencent/mm/a/g;->j([B)Ljava/lang/String;
 
     move-result-object v3
 
@@ -253,7 +253,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 64
-    const-string/jumbo v0, "!44@/B4Tb64lLpIcVJc/YDTTqHums7mERtmpK2BGs1em8ao="
+    const-string/jumbo v0, "MicroMsg.SDK.MMessageAct"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -269,7 +269,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -289,7 +289,7 @@
     move-exception v2
 
     .line 60
-    const-string/jumbo v3, "!44@/B4Tb64lLpIcVJc/YDTTqHums7mERtmpK2BGs1em8ao="
+    const-string/jumbo v3, "MicroMsg.SDK.MMessageAct"
 
     const-string/jumbo v4, "send fail, ex = %s"
 
@@ -301,7 +301,7 @@
 
     aput-object v2, v1, v0
 
-    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 .end method

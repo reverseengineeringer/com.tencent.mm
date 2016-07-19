@@ -2,17 +2,9 @@ package com.tencent.mm.t;
 
 public abstract interface m$a
 {
-  public abstract void a(b paramb);
+  public abstract void a(m paramm, boolean paramBoolean);
   
-  public static enum a {}
-  
-  public static final class b
-  {
-    public boolean bHY;
-    public int bIX;
-    public String bIY;
-    public l bIZ;
-  }
+  public abstract void jD();
 }
 
 /* Location:

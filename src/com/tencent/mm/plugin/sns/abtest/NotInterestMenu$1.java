@@ -9,24 +9,24 @@ final class NotInterestMenu$1
 {
   NotInterestMenu$1(NotInterestMenu paramNotInterestMenu) {}
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    if (NotInterestMenu.a(gFk) != null) {
-      NotInterestMenu.a(gFk).axq();
+    if (NotInterestMenu.a(gLM) != null) {
+      NotInterestMenu.a(gLM).azS();
     }
-    if (NotInterestMenu.b(gFk) != null) {}
+    if (NotInterestMenu.b(gLM) != null) {}
     switch (paramInt)
     {
     default: 
       return;
     case 0: 
-      NotInterestMenu.b(gFk).c(NotInterestMenu.c(gFk));
+      NotInterestMenu.b(gLM).c(NotInterestMenu.c(gLM));
       return;
     case 1: 
-      NotInterestMenu.b(gFk).d(NotInterestMenu.c(gFk));
+      NotInterestMenu.b(gLM).d(NotInterestMenu.c(gLM));
       return;
     }
-    NotInterestMenu.b(gFk).e(NotInterestMenu.c(gFk));
+    NotInterestMenu.b(gLM).e(NotInterestMenu.c(gLM));
   }
 }
 

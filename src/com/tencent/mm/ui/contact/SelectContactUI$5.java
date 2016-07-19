@@ -11,7 +11,7 @@ final class SelectContactUI$5
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    SelectContactUI.a(lmm, lmo);
+    SelectContactUI.a(lMB, lMD);
   }
 }
 

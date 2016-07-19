@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sight/decode/ui/c$1;->az(II)V
+    value = Lcom/tencent/mm/plugin/sight/decode/ui/c$1;->aE(II)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic fRQ:Landroid/graphics/Bitmap;
+.field final synthetic fki:Ljava/lang/String;
 
-.field final synthetic fbI:Ljava/lang/String;
+.field final synthetic gFi:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
 
-.field final synthetic gyJ:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
+.field final synthetic gaT:Landroid/graphics/Bitmap;
 
 
 # direct methods
@@ -31,11 +31,11 @@
 
     .prologue
     .line 197
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$1;->gyJ:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$1;->gFi:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$1;->fRQ:Landroid/graphics/Bitmap;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$1;->gaT:Landroid/graphics/Bitmap;
 
-    iput-object p3, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$1;->fbI:Ljava/lang/String;
+    iput-object p3, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$1;->fki:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,11 +49,11 @@
 
     .prologue
     .line 201
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$1;->gyJ:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$1;->gFi:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1;->gyI:Lcom/tencent/mm/plugin/sight/decode/ui/c;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1;->gFh:Lcom/tencent/mm/plugin/sight/decode/ui/c;
 
-    const v1, 0x7f0704fe
+    const v1, 0x7f100723
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/decode/ui/c;->findViewById(I)Landroid/view/View;
 
@@ -62,7 +62,7 @@
     check-cast v0, Landroid/widget/ImageView;
 
     .line 202
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$1;->fRQ:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$1;->gaT:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
@@ -84,7 +84,7 @@
     .line 206
     new-instance v1, Ljava/io/File;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$1;->fbI:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$1;->fki:Ljava/lang/String;
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -98,23 +98,23 @@
 
     .line 208
     :try_start_0
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$1;->gyJ:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$1;->gFi:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/decode/ui/c$1;->gyI:Lcom/tencent/mm/plugin/sight/decode/ui/c;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/decode/ui/c$1;->gFh:Lcom/tencent/mm/plugin/sight/decode/ui/c;
 
     invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/decode/ui/c;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$1;->gyJ:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$1;->gFi:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
 
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sight/decode/ui/c$1;->gyI:Lcom/tencent/mm/plugin/sight/decode/ui/c;
+    iget-object v2, v2, Lcom/tencent/mm/plugin/sight/decode/ui/c$1;->gFh:Lcom/tencent/mm/plugin/sight/decode/ui/c;
 
     invoke-virtual {v2}, Lcom/tencent/mm/plugin/sight/decode/ui/c;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    const v3, 0x7f0b1453
+    const v3, 0x7f0807c8
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -136,26 +136,26 @@
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpKYc17gQ4E+i2zzIzCJ7JpqKkNH7lU5Rrk="
+    const-string/jumbo v0, "MicroMsg.VideoPopupHelper"
 
     const-string/jumbo v1, "startActivity fail, activity not found"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 211
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$1;->gyJ:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$1;->gFi:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1;->gyI:Lcom/tencent/mm/plugin/sight/decode/ui/c;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1;->gFh:Lcom/tencent/mm/plugin/sight/decode/ui/c;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/c;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0b1463
+    const v1, 0x7f080779
 
-    const v2, 0x7f0b1462
+    const v2, 0x7f08077a
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->f(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
     goto :goto_0
 .end method

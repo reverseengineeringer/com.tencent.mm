@@ -3,7 +3,7 @@ package com.tencent.mm.ui.tools;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.view.View;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
 
 final class CropImageNewUI$1
   implements Runnable
@@ -12,21 +12,21 @@ final class CropImageNewUI$1
   
   public final void run()
   {
-    if (!CropImageNewUI.a(luq)) {}
+    if (!CropImageNewUI.a(lVs)) {}
     do
     {
       do
       {
         return;
-        if ((CropImageNewUI.b(luq)) || (CropImageNewUI.c(luq)) || (!luq.getIntent().getBooleanExtra("CropImage_DirectlyIntoFilter", false))) {
+        if ((CropImageNewUI.b(lVs)) || (CropImageNewUI.c(lVs)) || (!lVs.getIntent().getBooleanExtra("CropImage_DirectlyIntoFilter", false))) {
           break;
         }
-        CropImageNewUI.d(luq);
-      } while (luq.getSharedPreferences(y.aUK(), 0).getBoolean("CropImage_Filter_Show", true));
-      CropImageNewUI.e(luq).findViewById(2131169488).setVisibility(4);
+        CropImageNewUI.d(lVs);
+      } while (lVs.getSharedPreferences(aa.aZO(), 0).getBoolean("CropImage_Filter_Show", true));
+      CropImageNewUI.e(lVs).findViewById(2131756403).setVisibility(4);
       return;
-    } while (1 != CropImageNewUI.f(luq));
-    CropImageNewUI.g(luq);
+    } while (1 != CropImageNewUI.f(lVs));
+    CropImageNewUI.g(lVs);
   }
 }
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->Gb()V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hlx:Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;
+.field final synthetic hBA:Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 149
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3;->hlx:Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3;->hBA:Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 154
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3;->hlx:Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3;->hBA:Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI;
 
-    const v1, 0x7f0b1681
+    const v1, 0x7f08126a
 
-    const v2, 0x7f0b0ddd
+    const v2, 0x7f080134
 
     new-instance v3, Lcom/tencent/mm/plugin/sns/ui/SnsUploadBrowseUI$3$1;
 

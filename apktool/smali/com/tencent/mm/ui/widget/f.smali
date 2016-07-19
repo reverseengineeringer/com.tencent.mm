@@ -12,7 +12,18 @@
 
 
 # static fields
-.field private static lGA:Ljava/util/LinkedList;
+.field private static mhO:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList",
+            "<",
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Lcom/tencent/mm/ui/widget/f$a;",
+            ">;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -25,13 +36,13 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/ui/widget/f;->lGA:Ljava/util/LinkedList;
+    sput-object v0, Lcom/tencent/mm/ui/widget/f;->mhO:Ljava/util/LinkedList;
 
     .line 25
     return-void
 .end method
 
-.method public static I(F)V
+.method public static H(F)V
     .locals 7
 
     .prologue
@@ -40,7 +51,7 @@
     const/4 v5, 0x0
 
     .line 72
-    sget-object v0, Lcom/tencent/mm/ui/widget/f;->lGA:Ljava/util/LinkedList;
+    sget-object v0, Lcom/tencent/mm/ui/widget/f;->mhO:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -49,7 +60,7 @@
     if-gtz v0, :cond_0
 
     .line 73
-    const-string/jumbo v0, "!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE="
+    const-string/jumbo v0, "MicroMsg.SwipeBackHelper"
 
     const-string/jumbo v1, "notifySwipe callback stack empty!, scrollParent:%f"
 
@@ -61,7 +72,7 @@
 
     aput-object v3, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 83
     :goto_0
@@ -69,7 +80,7 @@
 
     .line 76
     :cond_0
-    sget-object v0, Lcom/tencent/mm/ui/widget/f;->lGA:Ljava/util/LinkedList;
+    sget-object v0, Lcom/tencent/mm/ui/widget/f;->mhO:Ljava/util/LinkedList;
 
     invoke-virtual {v0, v5}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
@@ -87,7 +98,7 @@
     if-nez v0, :cond_1
 
     .line 78
-    const-string/jumbo v0, "!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE="
+    const-string/jumbo v0, "MicroMsg.SwipeBackHelper"
 
     const-string/jumbo v1, "notifySwipe null, scrollParent:%f"
 
@@ -99,16 +110,16 @@
 
     aput-object v3, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 81
     :cond_1
-    invoke-interface {v0, p0}, Lcom/tencent/mm/ui/widget/f$a;->D(F)V
+    invoke-interface {v0, p0}, Lcom/tencent/mm/ui/widget/f$a;->B(F)V
 
     .line 82
-    const-string/jumbo v1, "!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE="
+    const-string/jumbo v1, "MicroMsg.SwipeBackHelper"
 
     const-string/jumbo v2, "notifySwipe scrollParent:%f, callback:%s "
 
@@ -124,7 +135,7 @@
 
     aput-object v0, v3, v6
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -136,7 +147,7 @@
     const/4 v4, 0x0
 
     .line 28
-    const-string/jumbo v0, "!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE="
+    const-string/jumbo v0, "MicroMsg.SwipeBackHelper"
 
     const-string/jumbo v1, "pushCallback size %d, %s"
 
@@ -144,7 +155,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    sget-object v3, Lcom/tencent/mm/ui/widget/f;->lGA:Ljava/util/LinkedList;
+    sget-object v3, Lcom/tencent/mm/ui/widget/f;->mhO:Ljava/util/LinkedList;
 
     invoke-virtual {v3}, Ljava/util/LinkedList;->size()I
 
@@ -160,7 +171,7 @@
 
     aput-object p0, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 29
     new-instance v0, Ljava/lang/ref/WeakReference;
@@ -168,7 +179,7 @@
     invoke-direct {v0, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     .line 30
-    sget-object v1, Lcom/tencent/mm/ui/widget/f;->lGA:Ljava/util/LinkedList;
+    sget-object v1, Lcom/tencent/mm/ui/widget/f;->mhO:Ljava/util/LinkedList;
 
     invoke-virtual {v1, v4, v0}, Ljava/util/LinkedList;->add(ILjava/lang/Object;)V
 
@@ -185,14 +196,14 @@
     const/4 v2, 0x0
 
     .line 39
-    sget-object v0, Lcom/tencent/mm/ui/widget/f;->lGA:Ljava/util/LinkedList;
+    sget-object v0, Lcom/tencent/mm/ui/widget/f;->mhO:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
     move-result v4
 
     .line 40
-    const-string/jumbo v0, "!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE="
+    const-string/jumbo v0, "MicroMsg.SwipeBackHelper"
 
     const-string/jumbo v1, "popCallback size %d, %s"
 
@@ -208,7 +219,7 @@
 
     aput-object p0, v5, v3
 
-    invoke-static {v0, v1, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 41
     if-nez p0, :cond_0
@@ -229,7 +240,7 @@
 
     .line 46
     :goto_1
-    sget-object v0, Lcom/tencent/mm/ui/widget/f;->lGA:Ljava/util/LinkedList;
+    sget-object v0, Lcom/tencent/mm/ui/widget/f;->mhO:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -238,7 +249,7 @@
     if-ge v1, v0, :cond_1
 
     .line 47
-    sget-object v0, Lcom/tencent/mm/ui/widget/f;->lGA:Ljava/util/LinkedList;
+    sget-object v0, Lcom/tencent/mm/ui/widget/f;->mhO:Ljava/util/LinkedList;
 
     invoke-virtual {v0, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
@@ -254,12 +265,12 @@
     if-ne p0, v0, :cond_2
 
     .line 49
-    sget-object v0, Lcom/tencent/mm/ui/widget/f;->lGA:Ljava/util/LinkedList;
+    sget-object v0, Lcom/tencent/mm/ui/widget/f;->mhO:Ljava/util/LinkedList;
 
     invoke-virtual {v0, v1}, Ljava/util/LinkedList;->remove(I)Ljava/lang/Object;
 
     .line 50
-    const-string/jumbo v0, "!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE="
+    const-string/jumbo v0, "MicroMsg.SwipeBackHelper"
 
     const-string/jumbo v6, "popCallback directly, index %d"
 
@@ -271,11 +282,11 @@
 
     aput-object v1, v7, v2
 
-    invoke-static {v0, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 56
     :cond_1
-    invoke-interface {p0}, Lcom/tencent/mm/ui/widget/f$a;->baF()Z
+    invoke-interface {p0}, Lcom/tencent/mm/ui/widget/f$a;->bfT()Z
 
     move-result v0
 
@@ -288,11 +299,11 @@
     if-ne v0, v4, :cond_3
 
     .line 58
-    const-string/jumbo v0, "!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE="
+    const-string/jumbo v0, "MicroMsg.SwipeBackHelper"
 
     const-string/jumbo v1, "popCallback Fail! Maybe Top Activity"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -331,7 +342,7 @@
     check-cast v0, Ljava/lang/Integer;
 
     .line 64
-    sget-object v4, Lcom/tencent/mm/ui/widget/f;->lGA:Ljava/util/LinkedList;
+    sget-object v4, Lcom/tencent/mm/ui/widget/f;->mhO:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -344,7 +355,7 @@
     check-cast v0, Ljava/lang/ref/WeakReference;
 
     .line 65
-    const-string/jumbo v4, "!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE="
+    const-string/jumbo v4, "MicroMsg.SwipeBackHelper"
 
     const-string/jumbo v6, "popCallback, popup %s"
 
@@ -359,7 +370,7 @@
     :goto_3
     aput-object v0, v7, v2
 
-    invoke-static {v4, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_2
 
@@ -388,7 +399,7 @@
     const/4 v5, 0x0
 
     .line 86
-    sget-object v0, Lcom/tencent/mm/ui/widget/f;->lGA:Ljava/util/LinkedList;
+    sget-object v0, Lcom/tencent/mm/ui/widget/f;->mhO:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -397,7 +408,7 @@
     if-gtz v0, :cond_0
 
     .line 87
-    const-string/jumbo v0, "!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE="
+    const-string/jumbo v0, "MicroMsg.SwipeBackHelper"
 
     const-string/jumbo v1, "notifySettle callback stack empty!, open:%B, speed:%d"
 
@@ -415,7 +426,7 @@
 
     aput-object v3, v2, v6
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 97
     :goto_0
@@ -423,7 +434,7 @@
 
     .line 90
     :cond_0
-    sget-object v0, Lcom/tencent/mm/ui/widget/f;->lGA:Ljava/util/LinkedList;
+    sget-object v0, Lcom/tencent/mm/ui/widget/f;->mhO:Ljava/util/LinkedList;
 
     invoke-virtual {v0, v5}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
@@ -441,7 +452,7 @@
     if-nez v0, :cond_1
 
     .line 92
-    const-string/jumbo v0, "!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE="
+    const-string/jumbo v0, "MicroMsg.SwipeBackHelper"
 
     const-string/jumbo v1, "notifySettle null, open:%B, speed:%d"
 
@@ -459,7 +470,7 @@
 
     aput-object v3, v2, v6
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -468,7 +479,7 @@
     invoke-interface {v0, p0, p1}, Lcom/tencent/mm/ui/widget/f$a;->j(ZI)V
 
     .line 96
-    const-string/jumbo v1, "!44@/B4Tb64lLpK0aWizdgE60RqV5DzE1p+h0ClsfViLMXE="
+    const-string/jumbo v1, "MicroMsg.SwipeBackHelper"
 
     const-string/jumbo v2, "notifySettle, open:%B speed:%d callback:%s"
 
@@ -490,7 +501,7 @@
 
     aput-object v0, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method

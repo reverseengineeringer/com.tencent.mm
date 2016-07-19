@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kvm:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI;
+.field final synthetic kUt:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 90
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI$1;->kvm:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI$1;->kUt:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,12 +41,12 @@
 
     .prologue
     .line 94
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI$1;->kvm:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI$1;->kUt:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI;->age()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI;->aiI()V
 
     .line 95
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI$1;->kvm:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI$1;->kUt:Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI;->finish()V
 

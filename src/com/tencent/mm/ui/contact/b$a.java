@@ -1,6 +1,9 @@
 package com.tencent.mm.ui.contact;
 
-public enum b$a {}
+public enum b$a
+{
+  private b$a() {}
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.ui.contact.b.a

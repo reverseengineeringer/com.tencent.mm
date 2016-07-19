@@ -5,23 +5,23 @@ import oicq.wlogin_sdk.tools.util;
 public final class t
   extends a
 {
-  public int mcK = 0;
+  public int mOO = 0;
   
   public t()
   {
-    mbE = 282;
+    mNI = 282;
   }
   
-  public final Boolean bot()
+  public final Boolean bvr()
   {
-    if (mco < 5) {
+    if (mOs < 5) {
       return Boolean.valueOf(false);
     }
-    int i = util.D(mby, mcn + 2 + 1 + 1);
-    if (mco < i + 5) {
+    int i = util.E(mNC, mOr + 2 + 1 + 1);
+    if (mOs < i + 5) {
       return Boolean.valueOf(false);
     }
-    mcK = i;
+    mOO = i;
     return Boolean.valueOf(true);
   }
 }

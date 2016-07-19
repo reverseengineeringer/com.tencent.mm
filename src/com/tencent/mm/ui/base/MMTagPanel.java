@@ -21,10 +21,10 @@ import android.view.View.OnTouchListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
-import com.tencent.mm.aw.a;
-import com.tencent.mm.ay.g;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.az.a;
+import com.tencent.mm.bb.g;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.tools.i;
 import com.tencent.mm.ui.widget.MMEditText;
 import java.util.ArrayList;
@@ -32,35 +32,33 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 
 public class MMTagPanel
   extends FlowLayout
 {
-  private boolean dRD = false;
-  private int dSs = 2131231135;
-  private int dSt = 2130970372;
-  public boolean frx = true;
-  public LinkedList jni = new LinkedList();
-  public boolean kGY = true;
-  private boolean kGZ = false;
-  public boolean kHa = true;
-  public boolean kHb = false;
-  public boolean kHc = false;
-  private int kHd = 2130970427;
-  private int kHe = 0;
-  private int kHf = 2130970272;
-  private int kHg = 2131231161;
-  private int kHh = 2130970368;
-  private int kHi = 2131231100;
-  private d kHj = null;
-  private LinkedList kHk = new LinkedList();
-  private a kHl;
-  private int kHm;
-  private View kHn;
-  private MMEditText kHo;
-  private View.OnClickListener kHp = new View.OnClickListener()
+  private boolean dTK = false;
+  public int dUA = 2131689841;
+  public int dUB = 2130839433;
+  public boolean fAD = true;
+  public LinkedList<d> jLj = new LinkedList();
+  public boolean lga = true;
+  private boolean lgb = false;
+  public boolean lgc = true;
+  public boolean lgd = false;
+  public boolean lge = false;
+  public int lgf = 2130839423;
+  private int lgg = 0;
+  public int lgh = 2130839427;
+  public int lgi = 2131690046;
+  public int lgj = 2130839430;
+  private int lgk = 2131690049;
+  private d lgl = null;
+  private LinkedList<d> lgm = new LinkedList();
+  public a lgn;
+  private int lgo;
+  private View lgp;
+  public MMEditText lgq;
+  private View.OnClickListener lgr = new View.OnClickListener()
   {
     public final void onClick(final View paramAnonymousView)
     {
@@ -72,7 +70,7 @@ public class MMTagPanel
           {
             public final void run()
             {
-              MMTagPanel.e(MMTagPanel.this).nf(((TextView)paramAnonymousView).getText().toString());
+              MMTagPanel.e(MMTagPanel.this).on(((TextView)paramAnonymousView).getText().toString());
             }
           });
         }
@@ -91,17 +89,17 @@ public class MMTagPanel
         {
           public final void run()
           {
-            MMTagPanel.e(MMTagPanel.this).ne(((TextView)paramAnonymousView).getText().toString());
+            MMTagPanel.e(MMTagPanel.this).om(((TextView)paramAnonymousView).getText().toString());
           }
         });
         return;
         if (MMTagPanel.d(MMTagPanel.this) == null)
         {
           MMTagPanel.a(MMTagPanel.this, MMTagPanel.a(MMTagPanel.this, ((TextView)paramAnonymousView).getText().toString()));
-          a(dkHC, false, true);
+          a(dlgE, false, true);
           return;
         }
-        if (dkHC != paramAnonymousView) {
+        if (dlgE != paramAnonymousView) {
           break;
         }
         MMTagPanel.a(MMTagPanel.this, null);
@@ -111,13 +109,13 @@ public class MMTagPanel
       {
         public final void run()
         {
-          MMTagPanel.e(MMTagPanel.this).ne(((TextView)paramAnonymousView).getText().toString());
+          MMTagPanel.e(MMTagPanel.this).om(((TextView)paramAnonymousView).getText().toString());
         }
       });
       return;
-      bcY();
+      biA();
       MMTagPanel.a(MMTagPanel.this, MMTagPanel.a(MMTagPanel.this, ((TextView)paramAnonymousView).getText().toString()));
-      a(dkHC, false, true);
+      a(dlgE, false, true);
     }
   };
   
@@ -135,16 +133,16 @@ public class MMTagPanel
   
   private void init()
   {
-    kHm = getContext().getResources().getDimensionPixelSize(2131034565);
-    kHn = LayoutInflater.from(getContext()).inflate(2131363285, null);
-    kHo = ((MMEditText)kHn.findViewById(2131166420));
-    kHo.setOnKeyListener(new View.OnKeyListener()
+    lgo = getContext().getResources().getDimensionPixelSize(2131427626);
+    lgp = LayoutInflater.from(getContext()).inflate(2130904066, null);
+    lgq = ((MMEditText)lgp.findViewById(2131755215));
+    lgq.setOnKeyListener(new View.OnKeyListener()
     {
       public final boolean onKey(View paramAnonymousView, int paramAnonymousInt, KeyEvent paramAnonymousKeyEvent)
       {
         if ((paramAnonymousKeyEvent.getAction() == 0) && (67 == paramAnonymousInt))
         {
-          u.d("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "on del click, selection[%d, %d]", new Object[] { Integer.valueOf(MMTagPanel.a(MMTagPanel.this).getSelectionStart()), Integer.valueOf(MMTagPanel.a(MMTagPanel.this).getSelectionEnd()) });
+          v.d("MicroMsg.MMTagPanel", "on del click, selection[%d, %d]", new Object[] { Integer.valueOf(MMTagPanel.a(MMTagPanel.this).getSelectionStart()), Integer.valueOf(MMTagPanel.a(MMTagPanel.this).getSelectionEnd()) });
           if ((MMTagPanel.a(MMTagPanel.this).getSelectionStart() != 0) || (MMTagPanel.a(MMTagPanel.this).getSelectionStart() != MMTagPanel.a(MMTagPanel.this).getSelectionEnd())) {
             break label100;
           }
@@ -160,43 +158,43 @@ public class MMTagPanel
           return false;
           paramAnonymousInt = 0;
           break;
-          Xk();
+          YV();
         } while ((MMTagPanel.b(MMTagPanel.this) == null) || (MMTagPanel.b(MMTagPanel.this).isEmpty()));
         if ((!MMTagPanel.c(MMTagPanel.this)) && (MMTagPanel.d(MMTagPanel.this) == null))
         {
           MMTagPanel.a(MMTagPanel.this, (MMTagPanel.d)MMTagPanel.b(MMTagPanel.this).getLast());
-          a(dkHC, false, true);
+          a(dlgE, false, true);
           MMTagPanel.a(MMTagPanel.this).setCursorVisible(false);
           return false;
         }
-        if ((MMTagPanel.d(MMTagPanel.this) != null) && (MMTagPanel.b(MMTagPanel.this) != null) && (MMTagPanel.b(MMTagPanel.this).getLast() != null) && (!ay.kz(dkHB)) && (!ay.kz(bgetLastkHB)) && (!dkHB.equals(bgetLastkHB)))
+        if ((MMTagPanel.d(MMTagPanel.this) != null) && (MMTagPanel.b(MMTagPanel.this) != null) && (MMTagPanel.b(MMTagPanel.this).getLast() != null) && (!be.kf(dlgD)) && (!be.kf(bgetLastlgD)) && (!dlgD.equals(bgetLastlgD)))
         {
-          u.i("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "change hight");
-          bcY();
+          v.i("MicroMsg.MMTagPanel", "change hight");
+          biA();
           MMTagPanel.a(MMTagPanel.this, (MMTagPanel.d)MMTagPanel.b(MMTagPanel.this).getLast());
-          a(dkHC, false, true);
+          a(dlgE, false, true);
           MMTagPanel.a(MMTagPanel.this).setCursorVisible(false);
           return false;
         }
-        paramAnonymousView = bgetLastkHB;
+        paramAnonymousView = bgetLastlgD;
         removeTag(paramAnonymousView);
         if (MMTagPanel.e(MMTagPanel.this) != null) {
-          MMTagPanel.e(MMTagPanel.this).ng(paramAnonymousView);
+          MMTagPanel.e(MMTagPanel.this).oo(paramAnonymousView);
         }
-        bcY();
+        biA();
         return false;
       }
     });
-    kHo.addTextChangedListener(new TextWatcher()
+    lgq.addTextChangedListener(new TextWatcher()
     {
       public final void afterTextChanged(Editable paramAnonymousEditable)
       {
         paramAnonymousEditable = paramAnonymousEditable.toString();
         if (MMTagPanel.e(MMTagPanel.this) != null) {
-          MMTagPanel.e(MMTagPanel.this).nh(paramAnonymousEditable);
+          MMTagPanel.e(MMTagPanel.this).op(paramAnonymousEditable);
         }
         if (paramAnonymousEditable.length() > 0) {
-          bcY();
+          biA();
         }
       }
       
@@ -204,53 +202,53 @@ public class MMTagPanel
       
       public final void onTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
     });
-    kHo.setOnFocusChangeListener(new View.OnFocusChangeListener()
+    lgq.setOnFocusChangeListener(new View.OnFocusChangeListener()
     {
       public final void onFocusChange(View paramAnonymousView, boolean paramAnonymousBoolean)
       {
-        u.d("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "on edittext focus changed %B", new Object[] { Boolean.valueOf(paramAnonymousBoolean) });
+        v.d("MicroMsg.MMTagPanel", "on edittext focus changed %B", new Object[] { Boolean.valueOf(paramAnonymousBoolean) });
         if ((paramAnonymousBoolean) && (MMTagPanel.e(MMTagPanel.this) != null)) {
-          MMTagPanel.e(MMTagPanel.this).SS();
+          MMTagPanel.e(MMTagPanel.this).Ul();
         }
       }
     });
-    kHo.setOnClickListener(new View.OnClickListener()
+    lgq.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
-        u.d("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "on edittext click");
-        bcY();
+        v.d("MicroMsg.MMTagPanel", "on edittext click");
+        biA();
         if (MMTagPanel.e(MMTagPanel.this) != null) {
-          MMTagPanel.e(MMTagPanel.this).SS();
+          MMTagPanel.e(MMTagPanel.this).Ul();
         }
       }
     });
-    kHo.setOnEditorActionListener(new TextView.OnEditorActionListener()
+    lgq.setOnEditorActionListener(new TextView.OnEditorActionListener()
     {
       public final boolean onEditorAction(TextView paramAnonymousTextView, int paramAnonymousInt, KeyEvent paramAnonymousKeyEvent)
       {
-        u.d("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "on action %d, %s", new Object[] { Integer.valueOf(paramAnonymousInt), paramAnonymousKeyEvent });
+        v.d("MicroMsg.MMTagPanel", "on action %d, %s", new Object[] { Integer.valueOf(paramAnonymousInt), paramAnonymousKeyEvent });
         return false;
       }
     });
     final c localc = new c();
     b localb = new b();
-    kHo.setFilters(new InputFilter[] { localc, localb });
-    bcW();
+    lgq.setFilters(new InputFilter[] { localc, localb });
+    bix();
     setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
-        u.d("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "on panel click, enableEditMode %B", new Object[] { Boolean.valueOf(MMTagPanel.f(MMTagPanel.this)) });
+        v.d("MicroMsg.MMTagPanel", "on panel click, enableEditMode %B", new Object[] { Boolean.valueOf(MMTagPanel.f(MMTagPanel.this)) });
         if (MMTagPanel.f(MMTagPanel.this))
         {
-          bcY();
+          biA();
           MMTagPanel.a(MMTagPanel.this).requestFocus();
           MMTagPanel.a(MMTagPanel.this).setSelection(MMTagPanel.a(MMTagPanel.this).getText().length());
           ((InputMethodManager)getContext().getSystemService("input_method")).showSoftInput(MMTagPanel.a(MMTagPanel.this), 0);
-          u.d("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "on content click");
+          v.d("MicroMsg.MMTagPanel", "on content click");
           if (MMTagPanel.e(MMTagPanel.this) != null) {
-            MMTagPanel.e(MMTagPanel.this).SS();
+            MMTagPanel.e(MMTagPanel.this).Ul();
           }
         }
       }
@@ -261,27 +259,27 @@ public class MMTagPanel
       {
         if (MMTagPanel.g(MMTagPanel.this))
         {
-          paramAnonymousMotionEvent = getEditText();
-          if (!ay.kz(paramAnonymousMotionEvent))
+          paramAnonymousMotionEvent = bit();
+          if (!be.kf(paramAnonymousMotionEvent))
           {
             paramAnonymousView = paramAnonymousMotionEvent;
             if (localc != null)
             {
               paramAnonymousView = paramAnonymousMotionEvent;
-              if (i.HB(paramAnonymousMotionEvent) > localckHx)
+              if (i.JR(paramAnonymousMotionEvent) > localclgz)
               {
-                int i = localckHx - i.HC(paramAnonymousMotionEvent);
+                int i = localclgz - i.JS(paramAnonymousMotionEvent);
                 paramAnonymousView = paramAnonymousMotionEvent;
                 if (i <= paramAnonymousMotionEvent.length()) {
                   paramAnonymousView = paramAnonymousMotionEvent.substring(0, i);
                 }
               }
             }
-            ar(paramAnonymousView, true);
+            aB(paramAnonymousView, true);
             if (MMTagPanel.e(MMTagPanel.this) != null) {
-              MMTagPanel.e(MMTagPanel.this).ni(paramAnonymousView);
+              MMTagPanel.e(MMTagPanel.this).oq(paramAnonymousView);
             }
-            bcT();
+            biu();
           }
         }
         return false;
@@ -289,60 +287,67 @@ public class MMTagPanel
     });
   }
   
-  public void Xk() {}
+  public final void IP(String paramString)
+  {
+    if (lgq != null) {
+      lgq.setHint(paramString);
+    }
+  }
+  
+  public void YV() {}
   
   public final void a(TextView paramTextView, boolean paramBoolean1, boolean paramBoolean2)
   {
-    paramTextView.setTextSize(0, getContext().getResources().getDimension(2131034565) * a.cY(getContext()));
+    paramTextView.setTextSize(0, getContext().getResources().getDimension(2131427626) * a.cW(getContext()));
     if (paramBoolean2)
     {
-      paramTextView.setBackgroundResource(kHh);
-      paramTextView.setTextColor(getResources().getColor(kHi));
-      paramTextView.setCompoundDrawablesWithIntrinsicBounds(0, 0, kHd, 0);
+      paramTextView.setBackgroundResource(lgj);
+      paramTextView.setTextColor(getResources().getColor(lgk));
+      paramTextView.setCompoundDrawablesWithIntrinsicBounds(0, 0, lgf, 0);
       return;
     }
     if (paramBoolean1)
     {
       paramTextView.setTag(Integer.valueOf(1));
-      paramTextView.setBackgroundResource(kHf);
-      paramTextView.setTextColor(getResources().getColor(kHg));
+      paramTextView.setBackgroundResource(lgh);
+      paramTextView.setTextColor(getResources().getColor(lgi));
       paramTextView.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
       return;
     }
     paramTextView.setTag(Integer.valueOf(0));
-    paramTextView.setBackgroundResource(dSt);
-    paramTextView.setTextColor(getResources().getColor(dSs));
+    paramTextView.setBackgroundResource(dUB);
+    paramTextView.setTextColor(getResources().getColor(dUA));
     paramTextView.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
   }
   
   public final void a(d paramd)
   {
-    kHC.setOnClickListener(null);
-    if (kHk.size() >= 16) {
+    lgE.setOnClickListener(null);
+    if (lgm.size() >= 16) {
       return;
     }
-    kHk.add(paramd);
+    lgm.add(paramd);
   }
   
   public final void a(d paramd, String paramString, boolean paramBoolean)
   {
-    kHB = paramString;
-    kHC.setText(g.aWe().f(getContext(), paramString, kHm));
-    TextView localTextView = kHC;
-    if (kGY) {}
-    for (paramString = kHp;; paramString = null)
+    lgD = paramString;
+    lgE.setText(g.bbq().e(getContext(), paramString, lgo));
+    TextView localTextView = lgE;
+    if (lga) {}
+    for (paramString = lgr;; paramString = null)
     {
       localTextView.setOnClickListener(paramString);
-      a(kHC, paramBoolean, false);
+      a(lgE, paramBoolean, false);
       return;
     }
   }
   
-  public final void a(Collection paramCollection, List paramList)
+  public final void a(Collection<String> paramCollection, List<String> paramList)
   {
-    bcM();
-    if (kGZ) {
-      addView(kHn);
+    bij();
+    if (lgb) {
+      addView(lgp);
     }
     if ((paramList == null) || (paramList.isEmpty())) {
       return;
@@ -360,104 +365,143 @@ public class MMTagPanel
     label76:
     for (boolean bool = false;; bool = paramCollection.contains(str))
     {
-      ar(str, bool);
+      aB(str, bool);
       break label40;
       break;
     }
   }
   
-  public final void ar(String paramString, boolean paramBoolean)
+  public final void aB(String paramString, boolean paramBoolean)
   {
-    if (ay.kz(paramString))
+    if (be.kf(paramString))
     {
-      u.w("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "want to add tag, but it is null or empty");
+      v.w("MicroMsg.MMTagPanel", "want to add tag, but it is null or empty");
       return;
     }
     paramString = paramString.trim();
-    u.d("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "want to add tag %s, do remove tag first", new Object[] { paramString });
+    v.d("MicroMsg.MMTagPanel", "want to add tag %s, do remove tag first", new Object[] { paramString });
     removeTag(paramString);
-    Object localObject = jni.iterator();
+    Object localObject = jLj.iterator();
     while (((Iterator)localObject).hasNext()) {
-      if (paramString.equals(nextkHB))
+      if (paramString.equals(nextlgD))
       {
-        u.w("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "want to add tag %s, but it exsited!", new Object[] { paramString });
+        v.w("MicroMsg.MMTagPanel", "want to add tag %s, but it exsited!", new Object[] { paramString });
         return;
       }
     }
-    localObject = bcX();
+    localObject = biz();
     a((d)localObject, paramString, paramBoolean);
-    jni.add(localObject);
-    if (kGZ) {
-      addView(kHC, getChildCount() - 1);
+    jLj.add(localObject);
+    if (lgb) {
+      addView(lgE, getChildCount() - 1);
     }
     for (;;)
     {
-      bcY();
+      biA();
       return;
-      addView(kHC);
+      addView(lgE);
     }
   }
   
-  public final void as(String paramString, boolean paramBoolean)
+  public final void aC(String paramString, boolean paramBoolean)
   {
-    if (ay.kz(paramString))
+    if (be.kf(paramString))
     {
-      u.w("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "want to update tag status, but it is null or empty");
+      v.w("MicroMsg.MMTagPanel", "want to update tag status, but it is null or empty");
       return;
     }
-    Iterator localIterator = jni.iterator();
+    Iterator localIterator = jLj.iterator();
     while (localIterator.hasNext())
     {
       d locald = (d)localIterator.next();
-      if (paramString.equals(kHB))
+      if (paramString.equals(lgD))
       {
         a(locald, paramString, paramBoolean);
-        bcY();
+        biA();
         return;
       }
     }
-    u.w("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "want to update tag %s status, but it not exsited!", new Object[] { paramString });
+    v.w("MicroMsg.MMTagPanel", "want to update tag %s status, but it not exsited!", new Object[] { paramString });
   }
   
-  public void bcM()
+  public final void biA()
   {
-    jni.clear();
+    if (lgq != null)
+    {
+      v.d("MicroMsg.MMTagPanel", "do clear high light info, edittext is focus %B", new Object[] { Boolean.valueOf(lgq.isFocused()) });
+      lgq.setCursorVisible(true);
+    }
+    if (lgl == null) {
+      return;
+    }
+    TextView localTextView = lgl.lgE;
+    if (((Integer)lgl.lgE.getTag()).intValue() == 1) {}
+    for (boolean bool = true;; bool = false)
+    {
+      a(localTextView, bool, false);
+      lgl = null;
+      return;
+    }
+  }
+  
+  public void bij()
+  {
+    jLj.clear();
     removeAllViews();
-    Iterator localIterator = jni.iterator();
+    Iterator localIterator = jLj.iterator();
     while (localIterator.hasNext()) {
       a((d)localIterator.next());
     }
   }
   
-  public final void bcT()
+  public final void bis()
   {
-    if (kHo != null) {
-      kHo.setText("");
+    lgg = 2130839424;
+    if (lgq != null)
+    {
+      a.fromDPToPix(getContext(), 6);
+      getResources().getDimensionPixelSize(2131427666);
+      lgq.setBackgroundResource(lgg);
     }
   }
   
-  public final boolean bcU()
+  public final String bit()
   {
-    if (kHo == null) {
+    if (lgq != null) {
+      return lgq.getText().toString();
+    }
+    return "";
+  }
+  
+  public final void biu()
+  {
+    if (lgq != null) {
+      lgq.setText("");
+    }
+  }
+  
+  public final boolean biv()
+  {
+    if (lgq == null) {
       return false;
     }
-    return kHo.isFocused();
+    return lgq.isFocused();
   }
   
-  public final void bcV()
+  public final void biw()
   {
-    if ((kHo == null) || (kHo.isFocused())) {
+    if ((lgq == null) || (lgq.isFocused())) {
       return;
     }
-    kHo.requestFocus();
+    lgq.requestFocus();
   }
   
-  public final void bcW()
+  public final void bix()
   {
     InputMethodManager localInputMethodManager;
-    if ((kHo != null) && (kHo.isFocused()))
+    if ((lgq != null) && (lgq.isFocused()))
     {
-      u.d("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "do clear edit focus");
+      v.d("MicroMsg.MMTagPanel", "do clear edit focus");
       localInputMethodManager = (InputMethodManager)getContext().getSystemService("input_method");
       if (localInputMethodManager != null) {
         break label44;
@@ -468,112 +512,65 @@ public class MMTagPanel
     do
     {
       return;
-      localIBinder = kHo.getWindowToken();
+      localIBinder = lgq.getWindowToken();
     } while (localIBinder == null);
     localInputMethodManager.hideSoftInputFromWindow(localIBinder, 0);
-    kHo.clearFocus();
+    lgq.clearFocus();
   }
   
-  public final d bcX()
-  {
-    if (!kHk.isEmpty()) {
-      return (d)kHk.removeFirst();
-    }
-    d locald = new d();
-    TextView localTextView = new TextView(getContext());
-    localTextView.setBackgroundResource(dSt);
-    localTextView.setTextColor(getResources().getColor(dSs));
-    localTextView.setTag(Integer.valueOf(0));
-    localTextView.setGravity(17);
-    localTextView.setCompoundDrawablesWithIntrinsicBounds(0, 0, kHd, 0);
-    if (kGY) {}
-    for (View.OnClickListener localOnClickListener = kHp;; localOnClickListener = null)
-    {
-      localTextView.setOnClickListener(localOnClickListener);
-      localTextView.setEllipsize(TextUtils.TruncateAt.END);
-      localTextView.setSingleLine();
-      kHC = localTextView;
-      return locald;
-    }
-  }
-  
-  public final void bcY()
-  {
-    if (kHo != null)
-    {
-      u.d("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "do clear high light info, edittext is focus %B", new Object[] { Boolean.valueOf(kHo.isFocused()) });
-      kHo.setCursorVisible(true);
-    }
-    if (kHj == null) {
-      return;
-    }
-    TextView localTextView = kHj.kHC;
-    if (((Integer)kHj.kHC.getTag()).intValue() == 1) {}
-    for (boolean bool = true;; bool = false)
-    {
-      a(localTextView, bool, false);
-      kHj = null;
-      return;
-    }
-  }
-  
-  public String getEditText()
-  {
-    if (kHo != null) {
-      return kHo.getText().toString();
-    }
-    return "";
-  }
-  
-  public int getTagCount()
-  {
-    return jni.size();
-  }
-  
-  public ArrayList getTagList()
+  public final ArrayList<String> biy()
   {
     ArrayList localArrayList = new ArrayList();
-    Iterator localIterator = jni.iterator();
+    Iterator localIterator = jLj.iterator();
     while (localIterator.hasNext())
     {
       d locald = (d)localIterator.next();
-      if (!ay.kz(kHB)) {
-        localArrayList.add(kHB);
+      if (!be.kf(lgD)) {
+        localArrayList.add(lgD);
       }
     }
     return localArrayList;
   }
   
-  public Set getTagSet()
+  public final d biz()
   {
-    TreeSet localTreeSet = new TreeSet();
-    Iterator localIterator = jni.iterator();
-    while (localIterator.hasNext())
-    {
-      d locald = (d)localIterator.next();
-      if (!ay.kz(kHB)) {
-        localTreeSet.add(kHB);
-      }
+    if (!lgm.isEmpty()) {
+      return (d)lgm.removeFirst();
     }
-    return localTreeSet;
+    d locald = new d();
+    TextView localTextView = new TextView(getContext());
+    localTextView.setBackgroundResource(dUB);
+    localTextView.setTextColor(getResources().getColor(dUA));
+    localTextView.setTag(Integer.valueOf(0));
+    localTextView.setGravity(17);
+    localTextView.setCompoundDrawablesWithIntrinsicBounds(0, 0, lgf, 0);
+    if (lga) {}
+    for (View.OnClickListener localOnClickListener = lgr;; localOnClickListener = null)
+    {
+      localTextView.setOnClickListener(localOnClickListener);
+      localTextView.setEllipsize(TextUtils.TruncateAt.END);
+      localTextView.setSingleLine();
+      lgE = localTextView;
+      return locald;
+    }
   }
   
-  public final void hz(boolean paramBoolean)
+  public final void ib(boolean paramBoolean)
   {
-    if (paramBoolean == kGZ) {}
+    if (paramBoolean == lgb) {}
     do
     {
       return;
-      kGZ = paramBoolean;
-      removeView(kHn);
-    } while (!kGZ);
-    addView(kHn);
-    bcW();
+      lgb = paramBoolean;
+      removeView(lgp);
+    } while (!lgb);
+    addView(lgp);
+    bix();
   }
   
   public boolean onInterceptTouchEvent(MotionEvent paramMotionEvent)
   {
-    if (frx) {
+    if (fAD) {
       return super.onInterceptTouchEvent(paramMotionEvent);
     }
     return true;
@@ -581,141 +578,57 @@ public class MMTagPanel
   
   public final void removeTag(String paramString)
   {
-    if (ay.kz(paramString))
+    if (be.kf(paramString))
     {
-      u.w("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "want to remove tag, but it is null or empty");
+      v.w("MicroMsg.MMTagPanel", "want to remove tag, but it is null or empty");
       return;
     }
-    Iterator localIterator = jni.iterator();
+    Iterator localIterator = jLj.iterator();
     while (localIterator.hasNext())
     {
       d locald = (d)localIterator.next();
-      if (paramString.equals(kHB))
+      if (paramString.equals(lgD))
       {
-        jni.remove(locald);
-        removeView(kHC);
+        jLj.remove(locald);
+        removeView(lgE);
         a(locald);
-        bcY();
+        biA();
         return;
       }
     }
-    u.w("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "want to remove tag %s, but it not exsited!", new Object[] { paramString });
-  }
-  
-  public void setCallBack(a parama)
-  {
-    kHl = parama;
-  }
-  
-  public void setEditHint(String paramString)
-  {
-    if (kHo != null) {
-      kHo.setHint(paramString);
-    }
-  }
-  
-  public void setEditTextColor(int paramInt)
-  {
-    if (kHo != null) {
-      kHo.setTextColor(paramInt);
-    }
-  }
-  
-  public void setEditTextHit(boolean paramBoolean)
-  {
-    if (kHo != null)
-    {
-      if (paramBoolean) {
-        kHo.setHint(2131429493);
-      }
-    }
-    else {
-      return;
-    }
-    kHo.setHint("");
-  }
-  
-  public void setPanelClickable(boolean paramBoolean)
-  {
-    frx = paramBoolean;
-  }
-  
-  public void setTagEditTextBG(int paramInt)
-  {
-    kHe = paramInt;
-    if (kHo != null)
-    {
-      a.fromDPToPix(getContext(), 6);
-      getResources().getDimensionPixelSize(2131034587);
-      kHo.setBackgroundResource(kHe);
-    }
-  }
-  
-  public void setTagHighlineBG(int paramInt)
-  {
-    kHh = paramInt;
-  }
-  
-  public void setTagNormalBG(int paramInt)
-  {
-    dSt = paramInt;
-  }
-  
-  public void setTagNormalTextColorRes(int paramInt)
-  {
-    dSs = paramInt;
-  }
-  
-  public void setTagSelectedBG(int paramInt)
-  {
-    kHf = paramInt;
-  }
-  
-  public void setTagSelectedTextColorRes(int paramInt)
-  {
-    kHg = paramInt;
-  }
-  
-  public void setTagTipsDrawable(int paramInt)
-  {
-    kHd = paramInt;
-  }
-  
-  public void setTaghighlineTextColorRes(int paramInt)
-  {
-    kHi = paramInt;
+    v.w("MicroMsg.MMTagPanel", "want to remove tag %s, but it not exsited!", new Object[] { paramString });
   }
   
   public static abstract interface a
   {
-    public abstract void SS();
+    public abstract void Ul();
     
-    public abstract void f(boolean paramBoolean, int paramInt);
+    public abstract void e(boolean paramBoolean, int paramInt);
     
-    public abstract void ne(String paramString);
+    public abstract void om(String paramString);
     
-    public abstract void nf(String paramString);
+    public abstract void on(String paramString);
     
-    public abstract void ng(String paramString);
+    public abstract void oo(String paramString);
     
-    public abstract void nh(String paramString);
+    public abstract void op(String paramString);
     
-    public abstract void ni(String paramString);
+    public abstract void oq(String paramString);
   }
   
   public final class b
     implements InputFilter
   {
-    List kHt = new LinkedList();
+    List<String> lgv = new LinkedList();
     int mark;
     
     public b() {}
     
     public final CharSequence filter(final CharSequence paramCharSequence, int paramInt1, int paramInt2, Spanned paramSpanned, int paramInt3, int paramInt4)
     {
-      u.d("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "on create tag filter, %s [%d, %d) %s [%d, %d), maxlength[%B]", new Object[] { paramCharSequence, Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramSpanned, Integer.valueOf(paramInt3), Integer.valueOf(paramInt4), Boolean.valueOf(MMTagPanel.h(MMTagPanel.this)) });
+      v.d("MicroMsg.MMTagPanel", "on create tag filter, %s [%d, %d) %s [%d, %d), maxlength[%B]", new Object[] { paramCharSequence, Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramSpanned, Integer.valueOf(paramInt3), Integer.valueOf(paramInt4), Boolean.valueOf(MMTagPanel.h(MMTagPanel.this)) });
       mark = -1;
-      kHt.clear();
+      lgv.clear();
       Object localObject = new char[paramInt2 - paramInt1];
       TextUtils.getChars(paramCharSequence, paramInt1, paramInt2, (char[])localObject, 0);
       if (!MMTagPanel.i(MMTagPanel.this))
@@ -743,7 +656,7 @@ public class MMTagPanel
           {
             public final void run()
             {
-              MMTagPanel.e(MMTagPanel.this).ni(paramCharSequence.toString());
+              MMTagPanel.e(MMTagPanel.this).oq(paramCharSequence.toString());
             }
           });
           return (CharSequence)localObject;
@@ -758,7 +671,7 @@ public class MMTagPanel
           if (-1 != mark) {
             break label370;
           }
-          kHt.add((paramSpanned.subSequence(0, paramInt3).toString() + paramCharSequence.subSequence(paramInt1, i)).trim());
+          lgv.add((paramSpanned.subSequence(0, paramInt3).toString() + paramCharSequence.subSequence(paramInt1, i)).trim());
         }
         for (;;)
         {
@@ -766,15 +679,15 @@ public class MMTagPanel
           i += 1;
           break;
           label370:
-          kHt.add(paramCharSequence.subSequence(mark, i).toString().trim());
+          lgv.add(paramCharSequence.subSequence(mark, i).toString().trim());
         }
       }
-      if (kHt.isEmpty()) {
+      if (lgv.isEmpty()) {
         return null;
       }
       if (MMTagPanel.e(MMTagPanel.this) != null)
       {
-        localObject = kHt.iterator();
+        localObject = lgv.iterator();
         while (((Iterator)localObject).hasNext())
         {
           final String str = (String)((Iterator)localObject).next();
@@ -783,7 +696,7 @@ public class MMTagPanel
             {
               public final void run()
               {
-                MMTagPanel.e(MMTagPanel.this).ni(str.trim());
+                MMTagPanel.e(MMTagPanel.this).oq(str.trim());
               }
             });
           }
@@ -810,20 +723,20 @@ public class MMTagPanel
   public final class c
     implements InputFilter
   {
-    int kHx = 36;
-    private int kHy = 256;
-    private int kHz;
+    private int lgA = 256;
+    private int lgB;
+    int lgz = 36;
     
     public c() {}
     
     public final CharSequence filter(CharSequence paramCharSequence, int paramInt1, int paramInt2, Spanned paramSpanned, int paramInt3, int paramInt4)
     {
-      paramInt1 = i.HB(paramSpanned.toString()) + i.HB(paramCharSequence.toString());
+      paramInt1 = i.JR(paramSpanned.toString()) + i.JR(paramCharSequence.toString());
       if (paramInt4 > paramInt3) {
-        if (paramInt1 - (paramInt4 - paramInt3) > kHx)
+        if (paramInt1 - (paramInt4 - paramInt3) > lgz)
         {
           MMTagPanel.a(MMTagPanel.this, true);
-          kHz = (paramInt1 - (paramInt4 - paramInt3) - kHx);
+          lgB = (paramInt1 - (paramInt4 - paramInt3) - lgz);
         }
       }
       for (;;)
@@ -833,20 +746,20 @@ public class MMTagPanel
           {
             public final void run()
             {
-              MMTagPanel.e(MMTagPanel.this).f(MMTagPanel.h(MMTagPanel.this), i.ai(MMTagPanel.c.a(MMTagPanel.c.this), ""));
+              MMTagPanel.e(MMTagPanel.this).e(MMTagPanel.h(MMTagPanel.this), i.as(MMTagPanel.c.a(MMTagPanel.c.this), ""));
             }
           });
         }
-        if (paramInt1 > kHy) {
+        if (paramInt1 > lgA) {
           paramCharSequence = "";
         }
         return paramCharSequence;
         MMTagPanel.a(MMTagPanel.this, false);
         continue;
-        if (paramInt1 > kHx)
+        if (paramInt1 > lgz)
         {
           MMTagPanel.a(MMTagPanel.this, true);
-          kHz = (paramInt1 - kHx);
+          lgB = (paramInt1 - lgz);
         }
         else
         {
@@ -858,8 +771,8 @@ public class MMTagPanel
   
   public static final class d
   {
-    public String kHB;
-    public TextView kHC;
+    public String lgD;
+    public TextView lgE;
   }
 }
 

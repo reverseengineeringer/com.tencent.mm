@@ -1,14 +1,50 @@
 package android.support.v4.widget;
 
-import android.support.v4.view.m;
 import android.view.View;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
-class SlidingPaneLayout$f
-  implements SlidingPaneLayout.e
+final class SlidingPaneLayout$f
+  extends SlidingPaneLayout.e
 {
-  public void b(SlidingPaneLayout paramSlidingPaneLayout, View paramView)
+  private Method iA;
+  private Field iB;
+  
+  SlidingPaneLayout$f()
   {
-    m.a(paramSlidingPaneLayout, paramView.getLeft(), paramView.getTop(), paramView.getRight(), paramView.getBottom());
+    try
+    {
+      iA = View.class.getDeclaredMethod("getDisplayList", null);
+      try
+      {
+        iB = View.class.getDeclaredField("mRecreateDisplayList");
+        iB.setAccessible(true);
+        return;
+      }
+      catch (NoSuchFieldException localNoSuchFieldException) {}
+    }
+    catch (NoSuchMethodException localNoSuchMethodException)
+    {
+      for (;;) {}
+    }
+  }
+  
+  public final void b(SlidingPaneLayout paramSlidingPaneLayout, View paramView)
+  {
+    if ((iA != null) && (iB != null)) {}
+    try
+    {
+      iB.setBoolean(paramView, true);
+      iA.invoke(paramView, null);
+      super.b(paramSlidingPaneLayout, paramView);
+      return;
+      paramView.invalidate();
+      return;
+    }
+    catch (Exception localException)
+    {
+      for (;;) {}
+    }
   }
 }
 

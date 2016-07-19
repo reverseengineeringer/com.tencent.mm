@@ -4,9 +4,19 @@
 
 
 # static fields
-.field private static jSA:Lcom/tencent/mm/sandbox/c;
+.field private static krU:Lcom/tencent/mm/sandbox/c;
 
-.field private static jSB:Ljava/util/Map;
+.field private static krV:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -17,26 +27,26 @@
     .line 11
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/sandbox/c;->jSA:Lcom/tencent/mm/sandbox/c;
+    sput-object v0, Lcom/tencent/mm/sandbox/c;->krU:Lcom/tencent/mm/sandbox/c;
 
     .line 24
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/sandbox/c;->jSB:Ljava/util/Map;
+    sput-object v0, Lcom/tencent/mm/sandbox/c;->krV:Ljava/util/Map;
 
     return-void
 .end method
 
-.method public static c(ILjava/lang/Object;)V
+.method public static f(ILjava/lang/Object;)V
     .locals 6
 
     .prologue
     const/4 v5, 0x1
 
     .line 27
-    const-string/jumbo v0, "!32@/B4Tb64lLpIbcv7LUFwb8ff/9fEzhTkE"
+    const-string/jumbo v0, "MicroMsg.SandBoxCore"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -72,10 +82,10 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 28
-    sget-object v0, Lcom/tencent/mm/sandbox/c;->jSB:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sandbox/c;->krV:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -88,7 +98,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 29
-    const-string/jumbo v0, "!32@/B4Tb64lLpIbcv7LUFwb8ff/9fEzhTkE"
+    const-string/jumbo v0, "MicroMsg.SandBoxCore"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -96,7 +106,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v2, Lcom/tencent/mm/sandbox/c;->jSB:Ljava/util/Map;
+    sget-object v2, Lcom/tencent/mm/sandbox/c;->krV:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->size()I
 
@@ -110,18 +120,18 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 30
     return-void
 .end method
 
-.method public static d(ILjava/lang/Object;)V
+.method public static g(ILjava/lang/Object;)V
     .locals 5
 
     .prologue
     .line 33
-    const-string/jumbo v0, "!32@/B4Tb64lLpIbcv7LUFwb8ff/9fEzhTkE"
+    const-string/jumbo v0, "MicroMsg.SandBoxCore"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -159,10 +169,10 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 34
-    sget-object v0, Lcom/tencent/mm/sandbox/c;->jSB:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sandbox/c;->krV:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -171,7 +181,7 @@
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 36
-    const-string/jumbo v0, "!32@/B4Tb64lLpIbcv7LUFwb8ff/9fEzhTkE"
+    const-string/jumbo v0, "MicroMsg.SandBoxCore"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -179,7 +189,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v2, Lcom/tencent/mm/sandbox/c;->jSB:Ljava/util/Map;
+    sget-object v2, Lcom/tencent/mm/sandbox/c;->krV:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->size()I
 
@@ -193,10 +203,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 37
-    sget-object v0, Lcom/tencent/mm/sandbox/c;->jSB:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sandbox/c;->krV:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->size()I
 
@@ -212,14 +222,14 @@
     invoke-static {v0}, Landroid/os/Process;->killProcess(I)V
 
     .line 39
-    const-string/jumbo v0, "!32@/B4Tb64lLpIbcv7LUFwb8ff/9fEzhTkE"
+    const-string/jumbo v0, "MicroMsg.SandBoxCore"
 
     const-string/jumbo v1, "Sandbox exit Now."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 40
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->appenderFlushSync()V
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->appenderFlushSync()V
 
     .line 43
     :cond_0

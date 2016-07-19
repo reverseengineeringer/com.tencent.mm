@@ -8,111 +8,144 @@ import android.os.Looper;
 import android.os.MessageQueue;
 import android.os.MessageQueue.IdleHandler;
 import android.os.Process;
+import android.os.StatFs;
 import android.text.TextUtils;
+import com.tencent.mm.aq.n;
+import com.tencent.mm.aq.r;
 import com.tencent.mm.booter.notification.f.a;
-import com.tencent.mm.d.a.gu;
-import com.tencent.mm.d.a.io;
-import com.tencent.mm.d.a.iu;
-import com.tencent.mm.d.a.ka;
+import com.tencent.mm.e.a.hf;
+import com.tencent.mm.e.a.it;
+import com.tencent.mm.e.a.iz;
+import com.tencent.mm.e.a.kg;
+import com.tencent.mm.h.e;
 import com.tencent.mm.jni.platformcomm.WakerLock;
-import com.tencent.mm.model.at;
+import com.tencent.mm.model.ah;
 import com.tencent.mm.model.bb;
+import com.tencent.mm.model.y;
 import com.tencent.mm.model.z.a;
 import com.tencent.mm.model.z.d;
-import com.tencent.mm.modelsimple.aj;
-import com.tencent.mm.modelstat.a.a;
+import com.tencent.mm.modelsimple.ai;
+import com.tencent.mm.modelstat.c.a;
 import com.tencent.mm.network.z;
-import com.tencent.mm.platformtools.r;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.protocal.b.adc;
-import com.tencent.mm.protocal.b.xs;
-import com.tencent.mm.r.m;
+import com.tencent.mm.protocal.b.adv;
+import com.tencent.mm.protocal.b.yf;
 import com.tencent.mm.sdk.platformtools.MMBitmapFactory;
 import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.aj.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.aj;
 import com.tencent.mm.storage.j.a;
-import com.tencent.mm.storage.q;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.MMAppMgr;
+import java.io.File;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.locks.Lock;
 
 final class NotifyReceiver$a
-  implements com.tencent.mm.r.d
+  implements com.tencent.mm.t.d
 {
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, com.tencent.mm.t.j paramj)
   {
-    int i = paramj.hashCode();
-    try
-    {
-      NotifyReceiver.mX().lock();
-      boolean bool2 = NotifyReceiver.mY().contains(Integer.valueOf(i));
-      if (NotifyReceiver.mW() != null)
-      {
-        bool1 = NotifyReceiver.mW().isLocking();
-        label44:
-        u.i("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "NotifyReceiver onSceneEnd syncHash: %d hashInMemo: %b isLocking: %b", new Object[] { Integer.valueOf(i), Boolean.valueOf(bool2), Boolean.valueOf(bool1) });
-        NotifyReceiver.mY().remove(Integer.valueOf(i));
-      }
+    long l = paramj.hashCode();
+    if (paramj.getType() == 268369922) {
+      l = bOo;
     }
-    finally
+    for (;;)
     {
       try
       {
-        boolean bool1;
-        NotifyReceiver.mX().unlock();
-        if (NotifyReceiver.mY().isEmpty()) {}
-        for (;;)
+        NotifyReceiver.lk().lock();
+        i = paramj.getType();
+        boolean bool2 = NotifyReceiver.ll().contains(Long.valueOf(l));
+        if (NotifyReceiver.lj() != null)
         {
-          synchronized (NotifyReceiver.mV())
-          {
-            if (NotifyReceiver.mW() != null) {
-              NotifyReceiver.mW().unLock();
-            }
-            u.i("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "all scene done, unlock wakelock.");
-            switch (paramj.getType())
+          bool1 = NotifyReceiver.lj().isLocking();
+          v.i("MicroMsg.NotifyReceiver", "NotifyReceiver onSceneEnd type:%d syncHash: %d hashInMemo: %b isLocking: %b", new Object[] { Integer.valueOf(i), Long.valueOf(l), Boolean.valueOf(bool2), Boolean.valueOf(bool1) });
+          NotifyReceiver.ll().remove(Long.valueOf(l));
+        }
+      }
+      finally
+      {
+        try
+        {
+          int i;
+          boolean bool1;
+          NotifyReceiver.lk().unlock();
+          if (NotifyReceiver.ll().isEmpty()) {
+            synchronized (NotifyReceiver.li())
             {
-            default: 
-              z(7000L);
-              return;
-              bool1 = false;
-              break label44;
-              paramString = finally;
+              if (NotifyReceiver.lj() != null) {
+                NotifyReceiver.lj().unLock();
+              }
+              v.i("MicroMsg.NotifyReceiver", "all scene done, unlock wakelock.");
+              switch (paramj.getType())
+              {
+              default: 
+                z(7000L);
+                return;
+                bool1 = false;
+                continue;
+                paramString = finally;
+              }
             }
           }
           try
           {
-            NotifyReceiver.mX().unlock();
+            NotifyReceiver.lk().unlock();
             throw paramString;
             paramString = finally;
             throw paramString;
-            u.i("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "rest %d scene undone, keep wakelock.", new Object[] { Integer.valueOf(NotifyReceiver.mY().size()) });
+            v.i("MicroMsg.NotifyReceiver", "rest %d scene undone, keep wakelock.", new Object[] { Integer.valueOf(NotifyReceiver.ll().size()) });
             continue;
-            if ((paramInt1 == 4) && (!tEforeground)) {}
+            if ((paramInt1 == 4) && (!tFforeground)) {}
             switch (paramInt2)
             {
             default: 
               if ((paramInt1 == 0) && (paramInt2 == 0)) {
-                com.tencent.mm.model.ah.kU().kL();
+                ah.jv().jl();
               }
-              if (!com.tencent.mm.model.ah.rh()) {
-                continue;
-              }
-              Looper.myQueue().addIdleHandler(new MessageQueue.IdleHandler()
+              if (ah.rg())
               {
-                public final boolean queueIdle()
+                Looper.myQueue().addIdleHandler(new MessageQueue.IdleHandler()
                 {
-                  NotifyReceiver.a locala = NotifyReceiver.a.this;
-                  com.tencent.mm.model.ah.tv().r(new NotifyReceiver.a.4(locala));
-                  return false;
+                  public final boolean queueIdle()
+                  {
+                    NotifyReceiver.a locala = NotifyReceiver.a.this;
+                    ah.tw().t(new NotifyReceiver.a.4(locala));
+                    return false;
+                  }
+                });
+                if ((paramInt1 == 0) && (paramInt2 == 0) && (com.tencent.mm.model.a.rd())) {
+                  try
+                  {
+                    paramString = tEbsE;
+                    if (bse > -1L) {
+                      bse += 1L;
+                    }
+                    v.i("MicroMsg.AccInfoCacheInWorker", "countNormalCgi :%s ", new Object[] { Long.valueOf(bse) });
+                    if ((bse == 2L) || (bse == 5L))
+                    {
+                      paramj = com.tencent.mm.plugin.report.service.g.gdY;
+                      if (bse == 2L)
+                      {
+                        l = 37L;
+                        com.tencent.mm.plugin.report.service.g.b(226L, l, 1L, false);
+                        com.tencent.mm.plugin.report.service.g.gdY.h(11098, new Object[] { Integer.valueOf(2001), Long.valueOf(bse) });
+                      }
+                    }
+                  }
+                  catch (Throwable paramString)
+                  {
+                    v.e("MicroMsg.AccInfoCacheInWorker", "tryBackupToWorker Exception:%s", new Object[] { be.f(paramString) });
+                  }
                 }
-              });
-              if ((paramInt1 != 0) || (paramInt2 != 0) || (!com.tencent.mm.model.a.re())) {
-                continue;
               }
+              break;
             case -311: 
             case -310: 
             case -205: 
@@ -121,116 +154,90 @@ final class NotifyReceiver$a
             case -6: 
             case -4: 
             case -3: 
+              ah.jv().cS(aa.getContext().getString(2131233709));
+              ah.hold();
+              break;
             case -140: 
+              v.e("MicroMsg.NotifyReceiver", "alpha need whitelist : [%s]", new Object[] { paramString });
+              if (!be.kf(paramString))
+              {
+                ah.jv().cS(paramString);
+                ah.hold();
+              }
+              else
+              {
+                ah.jv().cS(aa.getContext().getString(2131233709));
+              }
+              break;
             case -100: 
+              ah.jv().cS(aa.getContext().getString(2131233708));
+              com.tencent.mm.modelsimple.d.aS(aa.getContext());
+              ah.hold();
+              break;
             case -999999: 
+              new ac().post(new Runnable()
+              {
+                public final void run()
+                {
+                  ah.hold();
+                  MMAppMgr.hI(true);
+                }
+              });
+              break;
             case -17: 
             case -16: 
-              for (;;)
+              paramString = aa.getContext().getSharedPreferences("system_config_prefs", 0);
+              l = paramString.getLong("recomended_update_ignore", -1L);
+              if ((l != -1L) && (be.at(l) < 86400L))
               {
-                try
-                {
-                  label368:
-                  paramString = tDbzF;
-                  if (bzh > -1L) {
-                    bzh += 1L;
-                  }
-                  u.i("!44@/B4Tb64lLpLEGVwVFEpAHktoF8fiVITamsAi0LNQQfI=", "countNormalCgi :%s ", new Object[] { Long.valueOf(bzh) });
-                  if ((bzh != 2L) && (bzh != 5L)) {
-                    break;
-                  }
-                  paramj = com.tencent.mm.plugin.report.service.h.fUJ;
-                  if (bzh != 2L) {
-                    break label817;
-                  }
-                  l = 37L;
-                  com.tencent.mm.plugin.report.service.h.b(226L, l, 1L, false);
-                  com.tencent.mm.plugin.report.service.h.fUJ.g(11098, new Object[] { Integer.valueOf(2001), Long.valueOf(bzh) });
-                }
-                catch (Throwable paramString)
-                {
-                  u.e("!44@/B4Tb64lLpLEGVwVFEpAHktoF8fiVITamsAi0LNQQfI=", "tryBackupToWorker Exception:%s", new Object[] { ay.b(paramString) });
-                }
-                break;
-                com.tencent.mm.model.ah.kU().cL(com.tencent.mm.sdk.platformtools.y.getContext().getString(2131427785));
-                com.tencent.mm.model.ah.hold();
-                break label368;
-                u.e("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "alpha need whitelist : [%s]", new Object[] { paramString });
-                if (!ay.kz(paramString)) {
-                  com.tencent.mm.model.ah.kU().cL(paramString);
-                }
-                for (;;)
-                {
-                  com.tencent.mm.model.ah.hold();
-                  break;
-                  com.tencent.mm.model.ah.kU().cL(com.tencent.mm.sdk.platformtools.y.getContext().getString(2131427785));
-                }
-                com.tencent.mm.model.ah.kU().cL(com.tencent.mm.sdk.platformtools.y.getContext().getString(2131427786));
-                com.tencent.mm.modelsimple.d.aW(com.tencent.mm.sdk.platformtools.y.getContext());
-                com.tencent.mm.model.ah.hold();
-                break label368;
-                new aa().post(new Runnable()
-                {
-                  public final void run()
-                  {
-                    com.tencent.mm.model.ah.hold();
-                    MMAppMgr.hk(true);
-                  }
-                });
-                break label368;
-                paramString = com.tencent.mm.sdk.platformtools.y.getContext().getSharedPreferences("system_config_prefs", 0);
-                long l = paramString.getLong("recomended_update_ignore", -1L);
-                if ((l != -1L) && (ay.am(l) < 86400L))
-                {
-                  u.d("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "skip update notification, last check=" + l);
-                  break label368;
-                }
-                paramj = com.tencent.mm.model.ah.kU();
-                if (paramInt2 == -17) {}
-                for (i = 2;; i = 1)
-                {
-                  paramj.bz(i);
-                  paramString.edit().putLong("recomended_update_ignore", ay.FR()).commit();
-                  break;
-                }
-                label817:
-                l = 38L;
+                v.d("MicroMsg.NotifyReceiver", "skip update notification, last check=" + l);
               }
+              else
+              {
+                paramj = ah.jv();
+                if (paramInt2 == -17)
+                {
+                  i = 2;
+                  paramj.bR(i);
+                  paramString.edit().putLong("recomended_update_ignore", be.Go()).commit();
+                }
+                else
+                {
+                  i = 1;
+                  continue;
+                  l = 38L;
+                }
+              }
+              break;
             }
           }
-          catch (Exception paramj)
-          {
-            for (;;) {}
-          }
+          catch (Exception paramj) {}
         }
-      }
-      catch (Exception localException)
-      {
-        for (;;) {}
+        catch (Exception localException) {}
       }
     }
   }
   
   final void z(long paramLong)
   {
-    if (!z.EZ().getBoolean("is_in_notify_mode", false)) {
+    if (!z.Fv().getBoolean("is_in_notify_mode", false)) {
       return;
     }
-    new aa(Looper.myLooper()).postDelayed(new Runnable()
+    new ac(Looper.myLooper()).postDelayed(new Runnable()
     {
       public final void run()
       {
-        u.i("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "checkKillPorcess, canKillProcess :%b", new Object[] { Boolean.valueOf(NotifyReceiver.mZ()) });
-        synchronized (NotifyReceiver.mT())
+        v.i("MicroMsg.NotifyReceiver", "checkKillPorcess, canKillProcess :%b", new Object[] { Boolean.valueOf(NotifyReceiver.lm()) });
+        synchronized (NotifyReceiver.lg())
         {
-          if (NotifyReceiver.mU() != null) {
-            NotifyReceiver.mU().unLock();
+          if (NotifyReceiver.lh() != null) {
+            NotifyReceiver.lh().unLock();
           }
           NotifyReceiver.a(null);
-          if (NotifyReceiver.mZ())
+          if (NotifyReceiver.lm())
           {
-            f.a.nv().i(-1, null);
-            u.appenderFlushSync();
+            f.a.lJ().j(-1, null);
+            v.appenderFlushSync();
             Process.killProcess(Process.myPid());
           }
           return;

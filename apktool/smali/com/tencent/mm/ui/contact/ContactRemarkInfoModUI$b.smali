@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field private gjm:I
+.field private gtH:I
 
-.field final synthetic ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+.field final synthetic lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
-.field private ljY:Ljava/lang/String;
+.field private lKj:Ljava/lang/String;
 
 
 # direct methods
@@ -31,19 +31,19 @@
 
     .prologue
     .line 141
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 142
     const/16 v0, 0x320
 
-    iput v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->gjm:I
+    iput v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->gtH:I
 
     .line 143
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->ljY:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->lKj:Ljava/lang/String;
 
     return-void
 .end method
@@ -71,25 +71,25 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/tools/i;->ai(ILjava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/tools/i;->as(ILjava/lang/String;)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->gjm:I
+    iput v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->gtH:I
 
     .line 161
-    iget v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->gjm:I
+    iget v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->gtH:I
 
     if-gez v0, :cond_0
 
     .line 162
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->gjm:I
+    iput v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->gtH:I
 
     .line 164
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->a(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;)Landroid/widget/TextView;
 
@@ -98,7 +98,7 @@
     if-eqz v0, :cond_1
 
     .line 165
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->a(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;)Landroid/widget/TextView;
 
@@ -108,7 +108,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget v2, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->gjm:I
+    iget v2, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->gtH:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -122,7 +122,7 @@
 
     .line 168
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->lKg:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->b(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;)V
 

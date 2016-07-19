@@ -8,7 +8,7 @@ public final class a
 {
   public a()
   {
-    com.tencent.mm.sdk.c.a.jUF.b("UpdateWeChat", new com.tencent.mm.sandbox.updater.g());
+    com.tencent.mm.sdk.c.a.kug.d(new com.tencent.mm.sandbox.updater.g());
   }
   
   public final void a(f paramf) {}

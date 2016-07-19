@@ -15,57 +15,57 @@
 
 
 # instance fields
-.field jJ:Landroid/view/Menu;
+.field ka:Landroid/view/Menu;
 
-.field jK:I
-
-.field jL:I
-
-.field jM:I
-
-.field jN:I
-
-.field jO:Z
-
-.field jP:Z
-
-.field jQ:Z
-
-.field jR:I
-
-.field jS:I
-
-.field jT:Ljava/lang/CharSequence;
-
-.field jU:Ljava/lang/CharSequence;
-
-.field jV:I
-
-.field jW:C
-
-.field jX:C
-
-.field jY:I
-
-.field jZ:Z
-
-.field ka:Z
-
-.field kb:Z
+.field kb:I
 
 .field kc:I
 
 .field kd:I
 
-.field ke:Ljava/lang/String;
+.field ke:I
 
-.field kf:Ljava/lang/String;
+.field kf:Z
 
-.field kg:Ljava/lang/String;
+.field kg:Z
 
-.field kh:Landroid/support/v4/view/d;
+.field kh:Z
 
-.field final synthetic ki:Landroid/support/v7/internal/view/c;
+.field ki:I
+
+.field kj:I
+
+.field kk:Ljava/lang/CharSequence;
+
+.field kl:Ljava/lang/CharSequence;
+
+.field km:I
+
+.field kn:C
+
+.field ko:C
+
+.field kp:I
+
+.field kq:Z
+
+.field kr:Z
+
+.field ks:Z
+
+.field kt:I
+
+.field ku:I
+
+.field kv:Ljava/lang/String;
+
+.field kw:Ljava/lang/String;
+
+.field kx:Ljava/lang/String;
+
+.field ky:Landroid/support/v4/view/d;
+
+.field final synthetic kz:Landroid/support/v7/internal/view/c;
 
 
 # direct methods
@@ -74,12 +74,12 @@
 
     .prologue
     .line 312
-    iput-object p1, p0, Landroid/support/v7/internal/view/c$b;->ki:Landroid/support/v7/internal/view/c;
+    iput-object p1, p0, Landroid/support/v7/internal/view/c$b;->kz:Landroid/support/v7/internal/view/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 313
-    iput-object p2, p0, Landroid/support/v7/internal/view/c$b;->jJ:Landroid/view/Menu;
+    iput-object p2, p0, Landroid/support/v7/internal/view/c$b;->ka:Landroid/view/Menu;
 
     .line 315
     invoke-virtual {p0}, Landroid/support/v7/internal/view/c$b;->bb()V
@@ -120,22 +120,22 @@
     const/4 v0, 0x0
 
     .line 319
-    iput v0, p0, Landroid/support/v7/internal/view/c$b;->jK:I
+    iput v0, p0, Landroid/support/v7/internal/view/c$b;->kb:I
 
     .line 320
-    iput v0, p0, Landroid/support/v7/internal/view/c$b;->jL:I
+    iput v0, p0, Landroid/support/v7/internal/view/c$b;->kc:I
 
     .line 321
-    iput v0, p0, Landroid/support/v7/internal/view/c$b;->jM:I
+    iput v0, p0, Landroid/support/v7/internal/view/c$b;->kd:I
 
     .line 322
-    iput v0, p0, Landroid/support/v7/internal/view/c$b;->jN:I
+    iput v0, p0, Landroid/support/v7/internal/view/c$b;->ke:I
 
     .line 323
-    iput-boolean v1, p0, Landroid/support/v7/internal/view/c$b;->jO:Z
+    iput-boolean v1, p0, Landroid/support/v7/internal/view/c$b;->kf:Z
 
     .line 324
-    iput-boolean v1, p0, Landroid/support/v7/internal/view/c$b;->jP:Z
+    iput-boolean v1, p0, Landroid/support/v7/internal/view/c$b;->kg:Z
 
     .line 325
     return-void
@@ -150,25 +150,25 @@
     const/4 v1, 0x1
 
     .line 408
-    iget-boolean v0, p0, Landroid/support/v7/internal/view/c$b;->jZ:Z
+    iget-boolean v0, p0, Landroid/support/v7/internal/view/c$b;->kq:Z
 
     invoke-interface {p1, v0}, Landroid/view/MenuItem;->setChecked(Z)Landroid/view/MenuItem;
 
     move-result-object v0
 
-    iget-boolean v3, p0, Landroid/support/v7/internal/view/c$b;->ka:Z
+    iget-boolean v3, p0, Landroid/support/v7/internal/view/c$b;->kr:Z
 
     invoke-interface {v0, v3}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
     move-result-object v0
 
-    iget-boolean v3, p0, Landroid/support/v7/internal/view/c$b;->kb:Z
+    iget-boolean v3, p0, Landroid/support/v7/internal/view/c$b;->ks:Z
 
     invoke-interface {v0, v3}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
 
     move-result-object v3
 
-    iget v0, p0, Landroid/support/v7/internal/view/c$b;->jY:I
+    iget v0, p0, Landroid/support/v7/internal/view/c$b;->kp:I
 
     if-lez v0, :cond_1
 
@@ -179,46 +179,46 @@
 
     move-result-object v0
 
-    iget-object v3, p0, Landroid/support/v7/internal/view/c$b;->jU:Ljava/lang/CharSequence;
+    iget-object v3, p0, Landroid/support/v7/internal/view/c$b;->kl:Ljava/lang/CharSequence;
 
     invoke-interface {v0, v3}, Landroid/view/MenuItem;->setTitleCondensed(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
 
     move-result-object v0
 
-    iget v3, p0, Landroid/support/v7/internal/view/c$b;->jV:I
+    iget v3, p0, Landroid/support/v7/internal/view/c$b;->km:I
 
     invoke-interface {v0, v3}, Landroid/view/MenuItem;->setIcon(I)Landroid/view/MenuItem;
 
     move-result-object v0
 
-    iget-char v3, p0, Landroid/support/v7/internal/view/c$b;->jW:C
+    iget-char v3, p0, Landroid/support/v7/internal/view/c$b;->kn:C
 
     invoke-interface {v0, v3}, Landroid/view/MenuItem;->setAlphabeticShortcut(C)Landroid/view/MenuItem;
 
     move-result-object v0
 
-    iget-char v3, p0, Landroid/support/v7/internal/view/c$b;->jX:C
+    iget-char v3, p0, Landroid/support/v7/internal/view/c$b;->ko:C
 
     invoke-interface {v0, v3}, Landroid/view/MenuItem;->setNumericShortcut(C)Landroid/view/MenuItem;
 
     .line 417
-    iget v0, p0, Landroid/support/v7/internal/view/c$b;->kc:I
+    iget v0, p0, Landroid/support/v7/internal/view/c$b;->kt:I
 
     if-ltz v0, :cond_0
 
     .line 418
-    iget v0, p0, Landroid/support/v7/internal/view/c$b;->kc:I
+    iget v0, p0, Landroid/support/v7/internal/view/c$b;->kt:I
 
     invoke-static {p1, v0}, Landroid/support/v4/view/g;->a(Landroid/view/MenuItem;I)V
 
     .line 421
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/internal/view/c$b;->kg:Ljava/lang/String;
+    iget-object v0, p0, Landroid/support/v7/internal/view/c$b;->kx:Ljava/lang/String;
 
     if-eqz v0, :cond_3
 
     .line 422
-    iget-object v0, p0, Landroid/support/v7/internal/view/c$b;->ki:Landroid/support/v7/internal/view/c;
+    iget-object v0, p0, Landroid/support/v7/internal/view/c$b;->kz:Landroid/support/v7/internal/view/c;
 
     invoke-static {v0}, Landroid/support/v7/internal/view/c;->a(Landroid/support/v7/internal/view/c;)Landroid/content/Context;
 
@@ -249,13 +249,13 @@
     :cond_2
     new-instance v0, Landroid/support/v7/internal/view/c$a;
 
-    iget-object v3, p0, Landroid/support/v7/internal/view/c$b;->ki:Landroid/support/v7/internal/view/c;
+    iget-object v3, p0, Landroid/support/v7/internal/view/c$b;->kz:Landroid/support/v7/internal/view/c;
 
     invoke-static {v3}, Landroid/support/v7/internal/view/c;->b(Landroid/support/v7/internal/view/c;)Ljava/lang/Object;
 
     move-result-object v3
 
-    iget-object v4, p0, Landroid/support/v7/internal/view/c$b;->kg:Ljava/lang/String;
+    iget-object v4, p0, Landroid/support/v7/internal/view/c$b;->kx:Ljava/lang/String;
 
     invoke-direct {v0, v3, v4}, Landroid/support/v7/internal/view/c$a;-><init>(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -275,29 +275,29 @@
     :goto_1
     if-eqz v0, :cond_4
 
-    iget v3, p0, Landroid/support/v7/internal/view/c$b;->jY:I
+    iget v3, p0, Landroid/support/v7/internal/view/c$b;->kp:I
 
     const/4 v4, 0x2
 
     if-lt v3, v4, :cond_4
 
     .line 432
-    invoke-virtual {v0, v1}, Landroid/support/v7/internal/view/menu/h;->t(Z)V
+    invoke-virtual {v0, v1}, Landroid/support/v7/internal/view/menu/h;->s(Z)V
 
     .line 436
     :cond_4
-    iget-object v0, p0, Landroid/support/v7/internal/view/c$b;->ke:Ljava/lang/String;
+    iget-object v0, p0, Landroid/support/v7/internal/view/c$b;->kv:Ljava/lang/String;
 
     if-eqz v0, :cond_8
 
     .line 437
-    iget-object v0, p0, Landroid/support/v7/internal/view/c$b;->ke:Ljava/lang/String;
+    iget-object v0, p0, Landroid/support/v7/internal/view/c$b;->kv:Ljava/lang/String;
 
     invoke-static {}, Landroid/support/v7/internal/view/c;->ba()[Ljava/lang/Class;
 
     move-result-object v2
 
-    iget-object v3, p0, Landroid/support/v7/internal/view/c$b;->ki:Landroid/support/v7/internal/view/c;
+    iget-object v3, p0, Landroid/support/v7/internal/view/c$b;->kz:Landroid/support/v7/internal/view/c;
 
     invoke-static {v3}, Landroid/support/v7/internal/view/c;->c(Landroid/support/v7/internal/view/c;)[Ljava/lang/Object;
 
@@ -314,7 +314,7 @@
 
     .line 442
     :goto_2
-    iget v0, p0, Landroid/support/v7/internal/view/c$b;->kd:I
+    iget v0, p0, Landroid/support/v7/internal/view/c$b;->ku:I
 
     if-lez v0, :cond_5
 
@@ -322,18 +322,18 @@
     if-nez v1, :cond_5
 
     .line 444
-    iget v0, p0, Landroid/support/v7/internal/view/c$b;->kd:I
+    iget v0, p0, Landroid/support/v7/internal/view/c$b;->ku:I
 
     invoke-static {p1, v0}, Landroid/support/v4/view/g;->b(Landroid/view/MenuItem;I)Landroid/view/MenuItem;
 
     .line 445
     :cond_5
-    iget-object v0, p0, Landroid/support/v7/internal/view/c$b;->kh:Landroid/support/v4/view/d;
+    iget-object v0, p0, Landroid/support/v7/internal/view/c$b;->ky:Landroid/support/v4/view/d;
 
     if-eqz v0, :cond_6
 
     .line 452
-    iget-object v0, p0, Landroid/support/v7/internal/view/c$b;->kh:Landroid/support/v4/view/d;
+    iget-object v0, p0, Landroid/support/v7/internal/view/c$b;->ky:Landroid/support/v4/view/d;
 
     invoke-static {p1, v0}, Landroid/support/v4/view/g;->a(Landroid/view/MenuItem;Landroid/support/v4/view/d;)Landroid/view/MenuItem;
 
@@ -355,11 +355,24 @@
 
 .method final newInstance(Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/String;",
+            "[",
+            "Ljava/lang/Class",
+            "<*>;[",
+            "Ljava/lang/Object;",
+            ")TT;"
+        }
+    .end annotation
 
     .prologue
     .line 476
     :try_start_0
-    iget-object v0, p0, Landroid/support/v7/internal/view/c$b;->ki:Landroid/support/v7/internal/view/c;
+    iget-object v0, p0, Landroid/support/v7/internal/view/c$b;->kz:Landroid/support/v7/internal/view/c;
 
     invoke-static {v0}, Landroid/support/v7/internal/view/c;->a(Landroid/support/v7/internal/view/c;)Landroid/content/Context;
 

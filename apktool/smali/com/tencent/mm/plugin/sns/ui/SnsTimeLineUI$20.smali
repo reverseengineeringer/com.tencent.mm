@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnLongClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+.field final synthetic hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1887
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$20;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+    .line 1108
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$20;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,164 +36,49 @@
 
 
 # virtual methods
-.method public final onLongClick(Landroid/view/View;)Z
-    .locals 8
+.method public final run()V
+    .locals 7
 
     .prologue
-    const/16 v4, 0x1d42
+    .line 1112
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$20;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
-    const/16 v7, 0x9
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$20;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
-    const/4 v6, 0x1
+    const v2, 0x7f080d38
 
-    .line 1890
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
-
-    move-result-object v0
-
-    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v4, v1}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
+    const-string/jumbo v2, ""
 
-    move-result-object v0
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$20;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
-    check-cast v0, Ljava/lang/Boolean;
+    const v4, 0x7f080d39
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    .line 1892
-    if-nez v0, :cond_0
-
-    .line 1893
-    new-instance v0, Landroid/content/Intent;
-
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
-
-    .line 1894
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$20;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
-
-    const-class v2, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
-
-    .line 1895
-    const-string/jumbo v1, "sns_comment_type"
-
-    invoke-virtual {v0, v1, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 1896
-    const-string/jumbo v1, "Ksnsupload_type"
-
-    invoke-virtual {v0, v1, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 1898
-    const/16 v1, 0x2c1
-
-    invoke-static {v1}, Lcom/tencent/mm/modelsns/a;->dQ(I)Lcom/tencent/mm/modelsns/a;
-
-    move-result-object v1
-
-    .line 1899
-    iget v2, v1, Lcom/tencent/mm/modelsns/a;->cbZ:I
-
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/modelsns/a;->dU(I)Lcom/tencent/mm/modelsns/a;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v4
-
-    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$20;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
-    move-result-object v3
+    const v5, 0x7f080099
 
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/modelsns/a;->jg(Ljava/lang/String;)Lcom/tencent/mm/modelsns/a;
+    invoke-virtual {v4, v5}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->getString(I)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v4
 
-    iget v3, v1, Lcom/tencent/mm/modelsns/a;->ccb:I
+    new-instance v5, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$20$1;
 
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/modelsns/a;->dU(I)Lcom/tencent/mm/modelsns/a;
+    invoke-direct {v5, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$20$1;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$20;)V
 
-    move-result-object v2
+    new-instance v6, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$20$2;
 
-    invoke-virtual {v2, v6}, Lcom/tencent/mm/modelsns/a;->dU(I)Lcom/tencent/mm/modelsns/a;
+    invoke-direct {v6, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$20$2;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$20;)V
 
-    .line 1904
-    sget-object v2, Lcom/tencent/mm/plugin/sns/g/c;->gTZ:Lcom/tencent/mm/plugin/sns/g/e;
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/ui/base/g;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/plugin/sns/g/e;->b(Lcom/tencent/mm/modelsns/a;)Lcom/tencent/mm/modelsns/a;
-
-    move-result-object v1
-
-    .line 1905
-    invoke-virtual {v1}, Lcom/tencent/mm/modelsns/a;->CV()Z
-
-    .line 1906
-    const-string/jumbo v2, "intent_key_StatisticsOplog"
-
-    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/modelsns/a;->b(Landroid/content/Intent;Ljava/lang/String;)V
-
-    .line 1907
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$20;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
-
-    invoke-virtual {v1, v0, v7}, Lcom/tencent/mm/ui/MMActivity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    .line 1912
-    :goto_0
-    return v6
-
-    .line 1909
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$20;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
-
-    new-instance v1, Landroid/content/Intent;
-
-    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$20;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
-
-    const-class v3, Lcom/tencent/mm/plugin/sns/ui/SnsLongMsgUI;
-
-    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->startActivity(Landroid/content/Intent;)V
-
-    .line 1910
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v4, v1}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
-
-    goto :goto_0
+    .line 1130
+    return-void
 .end method

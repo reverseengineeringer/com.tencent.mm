@@ -1,88 +1,48 @@
 package com.tencent.mm.ui.tools;
 
-import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
-import java.lang.ref.WeakReference;
+import android.graphics.Matrix;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.ui.base.MultiTouchImageView;
 
-public final class MMGestureGallery$h
-  extends aa
+final class MMGestureGallery$h
+  extends MMGestureGallery.a
 {
-  WeakReference kIn;
-  private long kIo;
-  boolean lwI;
+  float[] lhx = new float[9];
   
-  public MMGestureGallery$h(WeakReference paramWeakReference)
+  public MMGestureGallery$h(MMGestureGallery paramMMGestureGallery)
   {
-    kIn = paramWeakReference;
+    super(paramMMGestureGallery);
   }
   
-  public final void c(int paramInt, long paramLong1, long paramLong2)
+  public final void play()
   {
-    kIo = paramLong2;
-    sendEmptyMessageDelayed(paramInt, paramLong1);
-  }
-  
-  public final void handleMessage(Message paramMessage)
-  {
-    super.handleMessage(paramMessage);
-    removeMessages(what);
-    final MMGestureGallery localMMGestureGallery;
-    if (kIn != null)
-    {
-      localMMGestureGallery = (MMGestureGallery)kIn.get();
-      if (localMMGestureGallery != null)
-      {
-        if (what != 0) {
-          break label95;
-        }
-        if ((MMGestureGallery.i(localMMGestureGallery) == 1) || (lwI))
-        {
-          u.d("!44@/B4Tb64lLpLtADHeupmcR9RkE1hpp/4l1le5KqFDqOc=", "single click over!");
-          if (MMGestureGallery.f(localMMGestureGallery) != null) {
-            MMGestureGallery.c(localMMGestureGallery).post(new Runnable()
-            {
-              public final void run()
-              {
-                MMGestureGallery.f(localMMGestureGallery).aap();
-              }
-            });
-          }
-        }
-        MMGestureGallery.a(localMMGestureGallery, 0);
-      }
-    }
-    label95:
-    do
-    {
-      return;
-      if (what == 1)
-      {
-        if ((MMGestureGallery.z(localMMGestureGallery) != null) && (!MMGestureGallery.z(localMMGestureGallery).aPA()))
-        {
-          MMGestureGallery.z(localMMGestureGallery).play();
-          sendEmptyMessageDelayed(what, kIo);
-          return;
-        }
-        MMGestureGallery.A(localMMGestureGallery);
-        return;
-      }
-      removeMessages(2);
-    } while (MMGestureGallery.B(localMMGestureGallery) == null);
-    MMGestureGallery.c(localMMGestureGallery).post(new Runnable()
+    MMGestureGallery.c(lXp).post(new Runnable()
     {
       public final void run()
       {
-        MMGestureGallery.B(localMMGestureGallery).ahv();
+        MMGestureGallery.a(lXp).getImageMatrix().getValues(lhx);
+        float f2 = lhx[2];
+        float f1 = MMGestureGallery.a(lXp).getScale() * alXp).imageWidth;
+        if (f1 < MMGestureGallery.b(lXp)) {}
+        for (f1 = MMGestureGallery.b(lXp) / 2.0F - f1 / 2.0F;; f1 = 0.0F)
+        {
+          f1 -= f2;
+          if (f1 >= 0.0F) {
+            lhw = true;
+          }
+          for (;;)
+          {
+            MMGestureGallery.a(lXp).p(f1, 0.0F);
+            return;
+            if (Math.abs(f1) <= 5.0F) {
+              lhw = true;
+            } else {
+              f1 = -(float)(Math.abs(f1) - Math.pow(Math.sqrt(Math.abs(f1)) - 1.0D, 2.0D)) * 2.0F;
+            }
+          }
+        }
       }
     });
-  }
-  
-  public final void release()
-  {
-    removeMessages(0);
-    removeMessages(1);
-    removeMessages(2);
   }
 }
 

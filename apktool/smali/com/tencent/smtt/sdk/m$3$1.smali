@@ -1,6 +1,5 @@
 .class final Lcom/tencent/smtt/sdk/m$3$1;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 # interfaces
 .implements Ljava/io/FileFilter;
@@ -18,16 +17,14 @@
 
 
 # instance fields
-.field final synthetic lSM:Lcom/tencent/smtt/sdk/m$3;
+.field final synthetic muE:Lcom/tencent/smtt/sdk/m$3;
 
 
 # direct methods
 .method constructor <init>(Lcom/tencent/smtt/sdk/m$3;)V
     .locals 0
 
-    .prologue
-    .line 1488
-    iput-object p1, p0, Lcom/tencent/smtt/sdk/m$3$1;->lSM:Lcom/tencent/smtt/sdk/m$3;
+    iput-object p1, p0, Lcom/tencent/smtt/sdk/m$3$1;->muE:Lcom/tencent/smtt/sdk/m$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,8 +36,6 @@
 .method public final accept(Ljava/io/File;)Z
     .locals 2
 
-    .prologue
-    .line 1490
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0

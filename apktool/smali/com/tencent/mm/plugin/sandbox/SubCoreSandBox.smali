@@ -8,9 +8,9 @@
 
 
 # static fields
-.field public static fVJ:Z
+.field public static gfc:Z
 
-.field public static fVK:Z
+.field public static gfd:Z
 
 
 # direct methods
@@ -21,10 +21,10 @@
     const/4 v0, 0x0
 
     .line 108
-    sput-boolean v0, Lcom/tencent/mm/plugin/sandbox/SubCoreSandBox;->fVJ:Z
+    sput-boolean v0, Lcom/tencent/mm/plugin/sandbox/SubCoreSandBox;->gfc:Z
 
     .line 109
-    sput-boolean v0, Lcom/tencent/mm/plugin/sandbox/SubCoreSandBox;->fVK:Z
+    sput-boolean v0, Lcom/tencent/mm/plugin/sandbox/SubCoreSandBox;->gfd:Z
 
     return-void
 .end method
@@ -37,7 +37,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 26
-    const-string/jumbo v0, "!32@/B4Tb64lLpIAhUt0Bg2QTjJe839Cfv5c"
+    const-string/jumbo v0, "MicroMsg.SubCoreSandBox"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -57,7 +57,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 27
     return-void
@@ -77,43 +77,12 @@
     return-object v0
 .end method
 
-.method public final aN(I)V
-    .locals 4
-
-    .prologue
-    .line 37
-    const-string/jumbo v0, "!32@/B4Tb64lLpIAhUt0Bg2QTjJe839Cfv5c"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, "SubCoreSandBox clearPluginData at: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 39
-    return-void
-.end method
-
-.method public final ai(Z)V
+.method public final aj(Z)V
     .locals 4
 
     .prologue
     .line 43
-    const-string/jumbo v0, "!32@/B4Tb64lLpIAhUt0Bg2QTjJe839Cfv5c"
+    const-string/jumbo v0, "MicroMsg.SubCoreSandBox"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -133,18 +102,18 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 46
     return-void
 .end method
 
-.method public final aj(Z)V
+.method public final ak(Z)V
     .locals 4
 
     .prologue
     .line 50
-    const-string/jumbo v0, "!32@/B4Tb64lLpIAhUt0Bg2QTjJe839Cfv5c"
+    const-string/jumbo v0, "MicroMsg.SubCoreSandBox"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -164,26 +133,26 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 52
     return-void
 .end method
 
-.method public final aqH()V
+.method public final atI()V
     .locals 1
 
     .prologue
     .line 62
     const/16 v0, 0x10
 
-    invoke-static {v0}, Lcom/tencent/mm/sandbox/updater/Updater;->pj(I)V
+    invoke-static {v0}, Lcom/tencent/mm/sandbox/updater/Updater;->qZ(I)V
 
     .line 63
     return-void
 .end method
 
-.method public final aqI()Lcom/tencent/mm/pluginsdk/i$ac;
+.method public final atJ()Lcom/tencent/mm/pluginsdk/i$ac;
     .locals 2
 
     .prologue
@@ -209,24 +178,24 @@
     return-object v0
 .end method
 
-.method public final bY(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/i$ab;
+.method public final bU(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/i$ab;
     .locals 1
 
     .prologue
     .line 77
-    invoke-static {p1}, Lcom/tencent/mm/sandbox/updater/Updater;->di(Landroid/content/Context;)Lcom/tencent/mm/sandbox/updater/Updater;
+    invoke-static {p1}, Lcom/tencent/mm/sandbox/updater/Updater;->dg(Landroid/content/Context;)Lcom/tencent/mm/sandbox/updater/Updater;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final bZ(Landroid/content/Context;)V
+.method public final bV(Landroid/content/Context;)V
     .locals 0
 
     .prologue
     .line 82
-    invoke-static {p1}, Lcom/tencent/mm/sandbox/updater/Updater;->bZ(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/tencent/mm/sandbox/updater/Updater;->bV(Landroid/content/Context;)V
 
     .line 83
     return-void
@@ -243,32 +212,16 @@
     return-void
 .end method
 
-.method public final dX(Z)V
-    .locals 1
-
-    .prologue
-    .line 112
-    const/4 v0, 0x1
-
-    sput-boolean v0, Lcom/tencent/mm/plugin/sandbox/SubCoreSandBox;->fVJ:Z
-
-    .line 113
-    sput-boolean p1, Lcom/tencent/mm/plugin/sandbox/SubCoreSandBox;->fVK:Z
-
-    .line 114
-    return-void
-.end method
-
-.method public final lo()Ljava/util/HashMap;
+.method public final cu(I)V
     .locals 4
 
     .prologue
-    .line 31
-    const-string/jumbo v0, "!32@/B4Tb64lLpIAhUt0Bg2QTjJe839Cfv5c"
+    .line 37
+    const-string/jumbo v0, "MicroMsg.SubCoreSandBox"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v2, "SubCoreSandBox getBaseDBFactories at: "
+    const-string/jumbo v2, "SubCoreSandBox clearPluginData at: "
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -284,20 +237,34 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 32
-    const/4 v0, 0x0
-
-    return-object v0
+    .line 39
+    return-void
 .end method
 
-.method public final lp()V
+.method public final ea(Z)V
+    .locals 1
+
+    .prologue
+    .line 112
+    const/4 v0, 0x1
+
+    sput-boolean v0, Lcom/tencent/mm/plugin/sandbox/SubCoreSandBox;->gfc:Z
+
+    .line 113
+    sput-boolean p1, Lcom/tencent/mm/plugin/sandbox/SubCoreSandBox;->gfd:Z
+
+    .line 114
+    return-void
+.end method
+
+.method public final ok()V
     .locals 4
 
     .prologue
     .line 56
-    const-string/jumbo v0, "!32@/B4Tb64lLpIAhUt0Bg2QTjJe839Cfv5c"
+    const-string/jumbo v0, "MicroMsg.SubCoreSandBox"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -317,10 +284,53 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 58
     return-void
+.end method
+
+.method public final ol()Ljava/util/HashMap;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Lcom/tencent/mm/bc/g$b;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 31
+    const-string/jumbo v0, "MicroMsg.SubCoreSandBox"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "SubCoreSandBox getBaseDBFactories at: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 32
+    const/4 v0, 0x0
+
+    return-object v0
 .end method
 
 .method public final q(Landroid/content/Context;Landroid/content/Intent;)V
@@ -336,7 +346,7 @@
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
     .line 104
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -347,12 +357,12 @@
     return-void
 .end method
 
-.method public final sM(Ljava/lang/String;)Ljava/lang/String;
+.method public final uo(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 97
-    invoke-static {p1}, Lcom/tencent/mm/sandbox/monitor/c;->sM(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/sandbox/monitor/c;->uo(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

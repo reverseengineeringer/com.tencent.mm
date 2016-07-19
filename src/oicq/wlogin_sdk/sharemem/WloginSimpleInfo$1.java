@@ -3,7 +3,7 @@ package oicq.wlogin_sdk.sharemem;
 import android.os.Parcelable.Creator;
 
 final class WloginSimpleInfo$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<WloginSimpleInfo>
 {}
 
 /* Location:

@@ -12,25 +12,21 @@ final class SightForwardUI$1
 {
   SightForwardUI$1(SightForwardUI paramSightForwardUI) {}
   
-  public final void awK() {}
-  
-  public final void awL() {}
-  
-  public final void eK(boolean paramBoolean)
+  public final void eC(boolean paramBoolean)
   {
     Intent localIntent = new Intent();
-    localIntent.setClass(lBJ.koJ.kpc, LauncherUI.class).addFlags(67108864);
-    lBJ.startActivity(localIntent);
-    lBJ.finish();
+    localIntent.setClass(mcB.kNN.kOg, LauncherUI.class).addFlags(67108864);
+    mcB.startActivity(localIntent);
+    mcB.finish();
   }
   
-  public final void tY(String paramString)
+  public final void ve(String paramString)
   {
-    Intent localIntent = new Intent(lBJ.koJ.kpc, ChattingUI.class);
+    Intent localIntent = new Intent(mcB.kNN.kOg, ChattingUI.class);
     localIntent.addFlags(67108864);
     localIntent.putExtra("Chat_User", paramString);
-    lBJ.startActivity(localIntent);
-    lBJ.finish();
+    mcB.startActivity(localIntent);
+    mcB.finish();
   }
 }
 

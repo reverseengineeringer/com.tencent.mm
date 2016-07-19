@@ -1,7 +1,7 @@
 package com.tencent.mm.pluginsdk.ui.d;
 
-import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.u;
+import android.view.View;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class h$a
   implements Runnable
@@ -10,10 +10,11 @@ final class h$a
   
   public final void run()
   {
-    if ((h.a(iQd) != null) && (h.a(iQd).isPressed()))
+    if ((h.a(jnl) != null) && (h.a(jnl).isPressed()))
     {
-      u.d("!44@/B4Tb64lLpJuU9xFppdi4JAUZb9P6SeKDzd5aaDiunc=", "long pressed timeout");
-      h.b(iQd);
+      v.d("MicroMsg.PressSpanTouchListener", "long pressed timeout");
+      h.b(jnl);
+      jnl.afM();
     }
   }
 }

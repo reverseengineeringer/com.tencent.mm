@@ -1,21 +1,25 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.model.ah;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.u;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.platformtools.s;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
 
 final class by$1
-  implements d
+  implements View.OnClickListener
 {
-  by$1(by paramby) {}
+  by$1(by paramby, ai paramai, int paramInt) {}
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public final void onClick(View paramView)
   {
-    u.d("!56@/B4Tb64lLpKwUcOR+EdWcgrQWCeRaP+fpwTv6y+mNLvWE+WR3rr02g==", "errType " + paramInt1 + " errCode " + paramInt2 + "  scene " + paramj.getType());
-    ah.tE().b(221, kVe.ccZ);
-    kVe.ccZ = null;
+    if (s.kf(lvc.field_imgPath))
+    {
+      v.d("MicroMsg.ChattingItemVoiceRemindConfirm", "filename is null");
+      return;
+    }
+    lve.ltl.lsL.lvu.c(lvd, lvc);
   }
 }
 

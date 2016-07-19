@@ -45,7 +45,7 @@
 
     check-cast v0, Lcom/tencent/mm/ui/MMActivity;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/MMActivity;->apz()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/MMActivity;->asv()V
 
     .line 646
     return-void

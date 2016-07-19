@@ -4,15 +4,49 @@
 
 
 # static fields
-.field private static khK:Lcom/tencent/mm/svg/a;
+.field private static kIk:Lcom/tencent/mm/svg/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/tencent/mm/svg/a",
+            "<",
+            "Landroid/graphics/Paint;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private static khL:Lcom/tencent/mm/svg/a;
+.field private static kIl:Lcom/tencent/mm/svg/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/tencent/mm/svg/a",
+            "<[F>;"
+        }
+    .end annotation
+.end field
 
-.field private static khM:Lcom/tencent/mm/svg/a;
+.field private static kIm:Lcom/tencent/mm/svg/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/tencent/mm/svg/a",
+            "<",
+            "Landroid/graphics/Matrix;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private static khN:Lcom/tencent/mm/svg/a;
+.field private static kIn:Lcom/tencent/mm/svg/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/tencent/mm/svg/a",
+            "<",
+            "Landroid/graphics/Path;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private static final khO:[F
+.field private static final kIo:[F
 
 
 # direct methods
@@ -25,35 +59,35 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/svg/a;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/svg/b;->khK:Lcom/tencent/mm/svg/a;
+    sput-object v0, Lcom/tencent/mm/svg/b;->kIk:Lcom/tencent/mm/svg/a;
 
     .line 138
     new-instance v0, Lcom/tencent/mm/svg/a;
 
     invoke-direct {v0}, Lcom/tencent/mm/svg/a;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/svg/b;->khL:Lcom/tencent/mm/svg/a;
+    sput-object v0, Lcom/tencent/mm/svg/b;->kIl:Lcom/tencent/mm/svg/a;
 
     .line 139
     new-instance v0, Lcom/tencent/mm/svg/a;
 
     invoke-direct {v0}, Lcom/tencent/mm/svg/a;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/svg/b;->khM:Lcom/tencent/mm/svg/a;
+    sput-object v0, Lcom/tencent/mm/svg/b;->kIm:Lcom/tencent/mm/svg/a;
 
     .line 140
     new-instance v0, Lcom/tencent/mm/svg/a;
 
     invoke-direct {v0}, Lcom/tencent/mm/svg/a;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/svg/b;->khN:Lcom/tencent/mm/svg/a;
+    sput-object v0, Lcom/tencent/mm/svg/b;->kIn:Lcom/tencent/mm/svg/a;
 
     .line 167
     const/16 v0, 0x9
 
     new-array v0, v0, [F
 
-    sput-object v0, Lcom/tencent/mm/svg/b;->khO:[F
+    sput-object v0, Lcom/tencent/mm/svg/b;->kIo:[F
 
     return-void
 .end method
@@ -68,9 +102,9 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/svg/b;->khK:Lcom/tencent/mm/svg/a;
+    sget-object v0, Lcom/tencent/mm/svg/b;->kIk:Lcom/tencent/mm/svg/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/svg/a;->aYQ()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/tencent/mm/svg/a;->bej()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -93,7 +127,7 @@
 
     .line 162
     :cond_0
-    sget-object v2, Lcom/tencent/mm/svg/b;->khK:Lcom/tencent/mm/svg/a;
+    sget-object v2, Lcom/tencent/mm/svg/b;->kIk:Lcom/tencent/mm/svg/a;
 
     invoke-virtual {v2, p0, v0}, Lcom/tencent/mm/svg/a;->a(Landroid/os/Looper;Ljava/lang/Object;)V
     :try_end_0
@@ -122,7 +156,7 @@
     throw v0
 .end method
 
-.method protected static declared-synchronized c(Landroid/os/Looper;)V
+.method protected static declared-synchronized b(Landroid/os/Looper;)V
     .locals 2
 
     .prologue
@@ -132,24 +166,24 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/svg/b;->khK:Lcom/tencent/mm/svg/a;
+    sget-object v0, Lcom/tencent/mm/svg/b;->kIk:Lcom/tencent/mm/svg/a;
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/svg/a;->b(Landroid/os/Looper;)V
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/svg/a;->a(Landroid/os/Looper;)V
 
     .line 144
-    sget-object v0, Lcom/tencent/mm/svg/b;->khL:Lcom/tencent/mm/svg/a;
+    sget-object v0, Lcom/tencent/mm/svg/b;->kIl:Lcom/tencent/mm/svg/a;
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/svg/a;->b(Landroid/os/Looper;)V
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/svg/a;->a(Landroid/os/Looper;)V
 
     .line 145
-    sget-object v0, Lcom/tencent/mm/svg/b;->khM:Lcom/tencent/mm/svg/a;
+    sget-object v0, Lcom/tencent/mm/svg/b;->kIm:Lcom/tencent/mm/svg/a;
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/svg/a;->b(Landroid/os/Looper;)V
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/svg/a;->a(Landroid/os/Looper;)V
 
     .line 146
-    sget-object v0, Lcom/tencent/mm/svg/b;->khN:Lcom/tencent/mm/svg/a;
+    sget-object v0, Lcom/tencent/mm/svg/b;->kIn:Lcom/tencent/mm/svg/a;
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/svg/a;->b(Landroid/os/Looper;)V
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/svg/a;->a(Landroid/os/Looper;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -167,7 +201,7 @@
     throw v0
 .end method
 
-.method protected static declared-synchronized d(Landroid/os/Looper;)[F
+.method protected static declared-synchronized c(Landroid/os/Looper;)[F
     .locals 6
 
     .prologue
@@ -177,9 +211,9 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/svg/b;->khL:Lcom/tencent/mm/svg/a;
+    sget-object v0, Lcom/tencent/mm/svg/b;->kIl:Lcom/tencent/mm/svg/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/svg/a;->aYQ()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/tencent/mm/svg/a;->bej()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -195,7 +229,7 @@
 
     .line 176
     :goto_0
-    sget-object v2, Lcom/tencent/mm/svg/b;->khL:Lcom/tencent/mm/svg/a;
+    sget-object v2, Lcom/tencent/mm/svg/b;->kIl:Lcom/tencent/mm/svg/a;
 
     invoke-virtual {v2, p0, v0}, Lcom/tencent/mm/svg/a;->a(Landroid/os/Looper;Ljava/lang/Object;)V
     :try_end_0
@@ -209,7 +243,7 @@
     .line 173
     :cond_0
     :try_start_1
-    sget-object v2, Lcom/tencent/mm/svg/b;->khO:[F
+    sget-object v2, Lcom/tencent/mm/svg/b;->kIo:[F
 
     const/4 v3, 0x0
 
@@ -232,7 +266,7 @@
     throw v0
 .end method
 
-.method protected static declared-synchronized e(Landroid/os/Looper;)Landroid/graphics/Matrix;
+.method protected static declared-synchronized d(Landroid/os/Looper;)Landroid/graphics/Matrix;
     .locals 3
 
     .prologue
@@ -242,9 +276,9 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/svg/b;->khM:Lcom/tencent/mm/svg/a;
+    sget-object v0, Lcom/tencent/mm/svg/b;->kIm:Lcom/tencent/mm/svg/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/svg/a;->aYQ()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/tencent/mm/svg/a;->bej()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -260,7 +294,7 @@
 
     .line 189
     :goto_0
-    sget-object v2, Lcom/tencent/mm/svg/b;->khM:Lcom/tencent/mm/svg/a;
+    sget-object v2, Lcom/tencent/mm/svg/b;->kIm:Lcom/tencent/mm/svg/a;
 
     invoke-virtual {v2, p0, v0}, Lcom/tencent/mm/svg/a;->a(Landroid/os/Looper;Ljava/lang/Object;)V
     :try_end_0
@@ -289,7 +323,7 @@
     throw v0
 .end method
 
-.method protected static declared-synchronized f(Landroid/os/Looper;)Landroid/graphics/Path;
+.method protected static declared-synchronized e(Landroid/os/Looper;)Landroid/graphics/Path;
     .locals 3
 
     .prologue
@@ -299,9 +333,9 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/svg/b;->khN:Lcom/tencent/mm/svg/a;
+    sget-object v0, Lcom/tencent/mm/svg/b;->kIn:Lcom/tencent/mm/svg/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/svg/a;->aYQ()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/tencent/mm/svg/a;->bej()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -317,7 +351,7 @@
 
     .line 202
     :goto_0
-    sget-object v2, Lcom/tencent/mm/svg/b;->khN:Lcom/tencent/mm/svg/a;
+    sget-object v2, Lcom/tencent/mm/svg/b;->kIn:Lcom/tencent/mm/svg/a;
 
     invoke-virtual {v2, p0, v0}, Lcom/tencent/mm/svg/a;->a(Landroid/os/Looper;Ljava/lang/Object;)V
     :try_end_0

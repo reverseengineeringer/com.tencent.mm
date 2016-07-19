@@ -10,7 +10,7 @@ final class ChatFooterCustom$2
   
   public final void onClick(View paramView)
   {
-    ChatFooterCustom.c(kRP);
+    ChatFooterCustom.c(lrR);
   }
 }
 

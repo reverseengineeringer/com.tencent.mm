@@ -2,9 +2,9 @@ package android.support.v4.view;
 
 abstract interface h$b
 {
-  public abstract boolean af();
+  public abstract boolean ad();
   
-  public abstract boolean ag();
+  public abstract boolean ae();
 }
 
 /* Location:

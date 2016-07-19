@@ -3,7 +3,7 @@ package android.support.v4.app;
 import android.os.Parcelable.Creator;
 
 final class BackStackState$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<BackStackState>
 {}
 
 /* Location:

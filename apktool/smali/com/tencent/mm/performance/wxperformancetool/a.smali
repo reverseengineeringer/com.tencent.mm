@@ -4,19 +4,89 @@
 
 
 # instance fields
-.field private clf:Ljava/util/HashMap;
+.field private cgi:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private clg:Ljava/util/HashMap;
+.field private cgj:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private clh:Ljava/util/HashMap;
+.field private cgk:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private cli:Ljava/util/HashMap;
+.field private cgl:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private clj:Ljava/util/HashMap;
+.field private cgm:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private clk:Ljava/util/HashMap;
+.field private cgn:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private cll:Ljava/util/HashMap;
+.field private cgo:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -32,56 +102,68 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->clf:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgi:Ljava/util/HashMap;
 
     .line 28
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->clg:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgj:Ljava/util/HashMap;
 
     .line 29
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->clh:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgk:Ljava/util/HashMap;
 
     .line 30
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cli:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgl:Ljava/util/HashMap;
 
     .line 31
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->clj:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgm:Ljava/util/HashMap;
 
     .line 32
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->clk:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgn:Ljava/util/HashMap;
 
     .line 33
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cll:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgo:Ljava/util/HashMap;
 
     .line 34
     return-void
 .end method
 
 .method private static a(Ljava/util/HashMap;Landroid/app/Activity;)V
-    .locals 3
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Long;",
+            ">;",
+            "Landroid/app/Activity;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
     .line 37
@@ -103,9 +185,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
@@ -115,7 +197,20 @@
 .end method
 
 .method private static a(Ljava/util/HashMap;Landroid/app/Activity;Ljava/lang/String;)V
-    .locals 7
+    .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Long;",
+            ">;",
+            "Landroid/app/Activity;",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
     .line 43
@@ -147,7 +242,7 @@
     if-eqz v0, :cond_0
 
     .line 48
-    const-string/jumbo v2, "!32@/B4Tb64lLpJDy+XtaqVVAmxMdLX9z03q"
+    const-string/jumbo v2, "MicroMsg.WxPerformace"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -193,15 +288,15 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    sub-long/2addr v3, v5
+    sub-long/2addr v4, v6
 
-    invoke-virtual {v1, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -223,7 +318,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -238,7 +333,7 @@
     invoke-super {p0, p1, p2}, Lcom/tencent/mm/performance/a/a$a;->a(Landroid/app/Activity;Landroid/os/Bundle;)V
 
     .line 59
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->clf:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgi:Ljava/util/HashMap;
 
     invoke-static {v0, p1}, Lcom/tencent/mm/performance/wxperformancetool/a;->a(Ljava/util/HashMap;Landroid/app/Activity;)V
 
@@ -254,7 +349,7 @@
     invoke-super {p0, p1, p2}, Lcom/tencent/mm/performance/a/a$a;->b(Landroid/app/Activity;Landroid/os/Bundle;)V
 
     .line 66
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->clf:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgi:Ljava/util/HashMap;
 
     const-string/jumbo v1, "onActivityCreate"
 
@@ -272,7 +367,7 @@
     invoke-super {p0, p1, p2}, Lcom/tencent/mm/performance/a/a$a;->c(Landroid/app/Activity;Landroid/content/Intent;)V
 
     .line 89
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->clh:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgk:Ljava/util/HashMap;
 
     invoke-static {v0, p1}, Lcom/tencent/mm/performance/wxperformancetool/a;->a(Ljava/util/HashMap;Landroid/app/Activity;)V
 
@@ -288,7 +383,7 @@
     invoke-super {p0, p1, p2}, Lcom/tencent/mm/performance/a/a$a;->d(Landroid/app/Activity;Landroid/content/Intent;)V
 
     .line 95
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->clh:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgk:Ljava/util/HashMap;
 
     const-string/jumbo v1, "onActivityNewIntent"
 
@@ -298,15 +393,15 @@
     return-void
 .end method
 
-.method public final j(Landroid/app/Activity;)V
+.method public final f(Landroid/app/Activity;)V
     .locals 1
 
     .prologue
     .line 116
-    invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->j(Landroid/app/Activity;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->f(Landroid/app/Activity;)V
 
     .line 117
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->clj:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgm:Ljava/util/HashMap;
 
     invoke-static {v0, p1}, Lcom/tencent/mm/performance/wxperformancetool/a;->a(Ljava/util/HashMap;Landroid/app/Activity;)V
 
@@ -314,15 +409,15 @@
     return-void
 .end method
 
-.method public final k(Landroid/app/Activity;)V
+.method public final g(Landroid/app/Activity;)V
     .locals 2
 
     .prologue
     .line 122
-    invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->k(Landroid/app/Activity;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->g(Landroid/app/Activity;)V
 
     .line 123
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->clj:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgm:Ljava/util/HashMap;
 
     const-string/jumbo v1, "onActivityResume"
 
@@ -332,15 +427,15 @@
     return-void
 .end method
 
-.method public final l(Landroid/app/Activity;)V
+.method public final h(Landroid/app/Activity;)V
     .locals 1
 
     .prologue
     .line 102
-    invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->l(Landroid/app/Activity;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->h(Landroid/app/Activity;)V
 
     .line 103
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cli:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgl:Ljava/util/HashMap;
 
     invoke-static {v0, p1}, Lcom/tencent/mm/performance/wxperformancetool/a;->a(Ljava/util/HashMap;Landroid/app/Activity;)V
 
@@ -348,15 +443,15 @@
     return-void
 .end method
 
-.method public final m(Landroid/app/Activity;)V
+.method public final i(Landroid/app/Activity;)V
     .locals 2
 
     .prologue
     .line 108
-    invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->m(Landroid/app/Activity;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->i(Landroid/app/Activity;)V
 
     .line 109
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cli:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgl:Ljava/util/HashMap;
 
     const-string/jumbo v1, "onActivityPause"
 
@@ -366,15 +461,15 @@
     return-void
 .end method
 
-.method public final n(Landroid/app/Activity;)V
+.method public final j(Landroid/app/Activity;)V
     .locals 1
 
     .prologue
     .line 129
-    invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->n(Landroid/app/Activity;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->j(Landroid/app/Activity;)V
 
     .line 130
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->clk:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgn:Ljava/util/HashMap;
 
     invoke-static {v0, p1}, Lcom/tencent/mm/performance/wxperformancetool/a;->a(Ljava/util/HashMap;Landroid/app/Activity;)V
 
@@ -382,15 +477,15 @@
     return-void
 .end method
 
-.method public final o(Landroid/app/Activity;)V
+.method public final k(Landroid/app/Activity;)V
     .locals 2
 
     .prologue
     .line 135
-    invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->o(Landroid/app/Activity;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->k(Landroid/app/Activity;)V
 
     .line 136
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->clk:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgn:Ljava/util/HashMap;
 
     const-string/jumbo v1, "onActivityStart"
 
@@ -400,15 +495,15 @@
     return-void
 .end method
 
-.method public final p(Landroid/app/Activity;)V
+.method public final l(Landroid/app/Activity;)V
     .locals 1
 
     .prologue
     .line 143
-    invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->p(Landroid/app/Activity;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->l(Landroid/app/Activity;)V
 
     .line 144
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cll:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgo:Ljava/util/HashMap;
 
     invoke-static {v0, p1}, Lcom/tencent/mm/performance/wxperformancetool/a;->a(Ljava/util/HashMap;Landroid/app/Activity;)V
 
@@ -416,15 +511,15 @@
     return-void
 .end method
 
-.method public final q(Landroid/app/Activity;)V
+.method public final m(Landroid/app/Activity;)V
     .locals 2
 
     .prologue
     .line 149
-    invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->q(Landroid/app/Activity;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->m(Landroid/app/Activity;)V
 
     .line 150
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cll:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgo:Ljava/util/HashMap;
 
     const-string/jumbo v1, "onActivityStop"
 
@@ -434,15 +529,15 @@
     return-void
 .end method
 
-.method public final r(Landroid/app/Activity;)V
+.method public final n(Landroid/app/Activity;)V
     .locals 1
 
     .prologue
     .line 73
-    invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->r(Landroid/app/Activity;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->n(Landroid/app/Activity;)V
 
     .line 74
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->clg:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgj:Ljava/util/HashMap;
 
     invoke-static {v0, p1}, Lcom/tencent/mm/performance/wxperformancetool/a;->a(Ljava/util/HashMap;Landroid/app/Activity;)V
 
@@ -450,15 +545,15 @@
     return-void
 .end method
 
-.method public final s(Landroid/app/Activity;)V
+.method public final o(Landroid/app/Activity;)V
     .locals 2
 
     .prologue
     .line 80
-    invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->s(Landroid/app/Activity;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->o(Landroid/app/Activity;)V
 
     .line 81
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->clg:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/a;->cgj:Ljava/util/HashMap;
 
     const-string/jumbo v1, "onActivityDestroy"
 

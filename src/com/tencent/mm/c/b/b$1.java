@@ -2,7 +2,7 @@ package com.tencent.mm.c.b;
 
 import android.media.MediaRecorder;
 import android.media.MediaRecorder.OnErrorListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class b$1
   implements MediaRecorder.OnErrorListener
@@ -11,20 +11,20 @@ final class b$1
   
   public final void onError(MediaRecorder paramMediaRecorder, int paramInt1, int paramInt2)
   {
-    if (b.a(apQ) != null) {
-      b.a(apQ).onError();
+    if (b.a(abi) != null) {
+      b.a(abi).onError();
     }
     try
     {
-      b.b(apQ).release();
-      b.a(apQ, b.b.apV);
+      b.b(abi).release();
+      b.a(abi, b.b.abn);
       return;
     }
     catch (Exception paramMediaRecorder)
     {
       for (;;)
       {
-        u.e("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", paramMediaRecorder.getMessage());
+        v.e("MicroMsg.MMAudioRecorder", paramMediaRecorder.getMessage());
       }
     }
   }

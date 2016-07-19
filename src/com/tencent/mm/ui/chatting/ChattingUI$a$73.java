@@ -1,14 +1,27 @@
 package com.tencent.mm.ui.chatting;
 
+import com.tencent.mm.model.b.d.a;
+import com.tencent.mm.sdk.platformtools.ac;
+
 final class ChattingUI$a$73
-  implements Runnable
+  implements d.a
 {
   ChattingUI$a$73(ChattingUI.a parama) {}
   
-  public final void run()
+  public final void uT()
   {
-    ChattingUI.a.E(laF);
-    laF.bfB();
+    ChattingUI.a.o(lAY).post(new Runnable()
+    {
+      public final void run()
+      {
+        ChattingUI.a.K(lAY);
+      }
+    });
+  }
+  
+  public final void uU()
+  {
+    ChattingUI.a.L(lAY);
   }
 }
 

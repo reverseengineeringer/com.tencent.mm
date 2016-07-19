@@ -8,7 +8,7 @@ import android.os.Parcel;
 public abstract interface q
   extends IInterface
 {
-  public abstract boolean ks();
+  public abstract boolean iV();
   
   public static abstract class a
     extends Binder
@@ -35,7 +35,7 @@ public abstract interface q
         return true;
       }
       paramParcel1.enforceInterface("com.tencent.mm.network.IWorkerCallback_AIDL");
-      boolean bool = ks();
+      boolean bool = iV();
       paramParcel2.writeNoException();
       if (bool) {}
       for (paramInt1 = 1;; paramInt1 = 0)
@@ -61,7 +61,7 @@ public abstract interface q
       }
       
       /* Error */
-      public final boolean ks()
+      public final boolean iV()
       {
         // Byte code:
         //   0: iconst_1

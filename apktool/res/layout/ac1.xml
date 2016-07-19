@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="58.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.ui.base.MMHorList android:layout_gravity="center_horizontal" android:id="@id/cez" android:layout_width="290.0dip" android:layout_height="58.0dip" />
+</FrameLayout>

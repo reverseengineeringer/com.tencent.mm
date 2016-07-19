@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ewP:Lcom/tencent/mm/plugin/gif/a;
+.field final synthetic eDi:Lcom/tencent/mm/plugin/gif/a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 84
-    iput-object p1, p0, Lcom/tencent/mm/plugin/gif/a$2;->ewP:Lcom/tencent/mm/plugin/gif/a;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/gif/a$2;->eDi:Lcom/tencent/mm/plugin/gif/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 89
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gif/a$2;->ewP:Lcom/tencent/mm/plugin/gif/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gif/a$2;->eDi:Lcom/tencent/mm/plugin/gif/a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/gif/a;->isRunning()Z
 
@@ -49,7 +49,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gif/a$2;->ewP:Lcom/tencent/mm/plugin/gif/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gif/a$2;->eDi:Lcom/tencent/mm/plugin/gif/a;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/gif/a;->b(Lcom/tencent/mm/plugin/gif/a;)I
 
@@ -62,7 +62,7 @@
 
     move-result-wide v0
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/gif/a$2;->ewP:Lcom/tencent/mm/plugin/gif/a;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/gif/a$2;->eDi:Lcom/tencent/mm/plugin/gif/a;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/gif/a;->c(Lcom/tencent/mm/plugin/gif/a;)J
 
@@ -73,16 +73,16 @@
     if-ltz v0, :cond_1
 
     .line 90
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gif/a$2;->ewP:Lcom/tencent/mm/plugin/gif/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gif/a$2;->eDi:Lcom/tencent/mm/plugin/gif/a;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/plugin/gif/a;->a(Lcom/tencent/mm/plugin/gif/a;J)J
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/plugin/gif/a;->a(Lcom/tencent/mm/plugin/gif/a;J)J
 
     .line 91
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gif/a$2;->ewP:Lcom/tencent/mm/plugin/gif/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gif/a$2;->eDi:Lcom/tencent/mm/plugin/gif/a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/gif/a;->invalidateSelf()V
 

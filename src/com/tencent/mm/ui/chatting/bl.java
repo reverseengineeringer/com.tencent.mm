@@ -1,210 +1,94 @@
 package com.tencent.mm.ui.chatting;
 
 import android.content.Context;
-import android.content.res.Resources;
-import android.text.Layout;
-import android.text.Selection;
-import android.text.Spannable;
-import android.text.Spannable.Factory;
-import android.text.TextPaint;
-import android.text.method.LinkMovementMethod;
-import android.text.style.ClickableSpan;
-import android.view.MotionEvent;
+import android.view.ContextMenu;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
+import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.pluginsdk.ui.d.e;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag;
-import com.tencent.mm.storage.ag.a;
-import java.io.IOException;
-import java.util.Iterator;
-import java.util.LinkedList;
-import org.xmlpull.v1.XmlPullParserException;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.ai.d;
+import com.tencent.mm.storage.aj;
 
 final class bl
-  implements bq.a
+  extends ab.b
 {
-  public final void a(aa.a parama, final int paramInt, final ChattingUI.a parama1, final ag paramag)
+  private ChattingUI.a ltl;
+  
+  public bl()
   {
-    final bq.b localb = (bq.b)parama;
-    int i;
-    int j;
-    LinkedList localLinkedList;
-    Iterator localIterator;
-    try
+    super(8);
+  }
+  
+  public final View a(LayoutInflater paramLayoutInflater, View paramView)
+  {
+    View localView;
+    if ((paramView != null) && (paramView.getTag() != null))
     {
-      parama = paramag.aXu();
-      if (parama == null)
-      {
-        hnE.setVisibility(8);
-        ivL.invalidate();
-        return;
-      }
+      localView = paramView;
+      if (getTagtype == cTv) {}
     }
-    catch (XmlPullParserException parama)
+    else
     {
-      for (;;)
-      {
-        u.printErrStackTrace("!56@/B4Tb64lLpKwUcOR+EdWcgxdOLd5rQX9fwQ2MyY5uxRFmfXAt7iZRQ==", parama, "XmlPullParserException", new Object[0]);
-        parama = null;
-      }
+      localView = paramLayoutInflater.inflate(2130903295, null);
+      paramLayoutInflater = new dl(cTv);
+      dXd = ((TextView)localView.findViewById(2131755018));
+      gtM = ((TextView)localView.findViewById(2131755288));
+      lqq = ((ImageView)localView.findViewById(2131756072));
+      iRf = ((TextView)localView.findViewById(2131756073));
+      iRg = ((TextView)localView.findViewById(2131755289));
+      lth = localView.findViewById(2131756021);
+      localView.setTag(paramLayoutInflater);
     }
-    catch (IOException parama)
+    return localView;
+  }
+  
+  public final void a(ab.a parama, int paramInt, ChattingUI.a parama1, ai paramai, String paramString)
+  {
+    ltl = parama1;
+    parama = (dl)parama;
+    paramString = ah.tE().rt().Hy(field_content);
+    iRf.setText(title);
+    iRg.setText(content);
+    a(parama, bUD);
+    ImageView localImageView = lqq;
+    if (dUH) {}
+    for (int i = 0;; i = 8)
     {
-      for (;;)
-      {
-        u.printErrStackTrace("!56@/B4Tb64lLpKwUcOR+EdWcgxdOLd5rQX9fwQ2MyY5uxRFmfXAt7iZRQ==", parama, "IOException", new Object[0]);
-        parama = null;
-      }
-      hnE.setVisibility(0);
-      i = ivL.getContext().getResources().getColor(2131231118);
-      j = ivL.getContext().getResources().getColor(2131231119);
-      localLinkedList = new LinkedList();
-      localIterator = parama.iterator();
-      parama = "";
-    }
-    label134:
-    while (localIterator.hasNext())
-    {
-      Object localObject = localIterator.next();
-      if ((localObject instanceof String))
-      {
-        parama = parama + (String)localObject;
-      }
-      else
-      {
-        if (!(localObject instanceof ag.a)) {
-          break label429;
-        }
-        final ag.a locala = (ag.a)localObject;
-        localObject = new b();
-        kUA = new c(i, j)
-        {
-          public final void onClick(View paramAnonymousView)
-          {
-            parama1.a(localbhnE, locala);
-          }
-        };
-        start = parama.length();
-        parama = parama + ay.ky(text);
-        end = parama.length();
-        localLinkedList.add(localObject);
-      }
-    }
-    label429:
-    for (;;)
-    {
-      break label134;
-      ivL.setText(e.a(ivL.getContext(), parama, ivL.getTextSize()));
-      ivL.setMovementMethod(new a());
-      parama = Spannable.Factory.getInstance().newSpannable(ivL.getText());
-      parama1 = localLinkedList.iterator();
-      while (parama1.hasNext())
-      {
-        paramag = (b)parama1.next();
-        parama.setSpan(kUA, start, end, 33);
-      }
-      ivL.setText(parama);
-      ivL.setOnClickListener(new View.OnClickListener()
-      {
-        public final void onClick(View paramAnonymousView)
-        {
-          u.d("!56@/B4Tb64lLpKwUcOR+EdWcgxdOLd5rQX9fwQ2MyY5uxRFmfXAt7iZRQ==", "clicked");
-        }
-      });
-      break;
+      localImageView.setVisibility(i);
+      lth.setTag(new dh(paramai, kZE, paramInt, null, 0, (byte)0));
+      lth.setOnClickListener(lsL.lvy);
+      lth.setOnLongClickListener(lsL.lvA);
+      return;
     }
   }
   
-  static final class a
-    extends LinkMovementMethod
+  public final boolean a(ContextMenu paramContextMenu, View paramView, ai paramai)
   {
-    private bl.c kUz;
-    
-    private static bl.c a(TextView paramTextView, Spannable paramSpannable, MotionEvent paramMotionEvent)
-    {
-      int i = (int)paramMotionEvent.getX();
-      int j = (int)paramMotionEvent.getY();
-      int k = paramTextView.getTotalPaddingLeft();
-      int m = paramTextView.getTotalPaddingTop();
-      int n = paramTextView.getScrollX();
-      int i1 = paramTextView.getScrollY();
-      paramTextView = paramTextView.getLayout();
-      i = paramTextView.getOffsetForHorizontal(paramTextView.getLineForVertical(j - m + i1), i - k + n);
-      paramTextView = (bl.c[])paramSpannable.getSpans(i, i, bl.c.class);
-      if (paramTextView.length > 0) {
-        return paramTextView[0];
-      }
-      return null;
+    int i = getTagposition;
+    if (!ltl.bln()) {
+      paramContextMenu.add(i, 100, 0, paramView.getContext().getString(2131231700));
     }
-    
-    public final boolean onTouchEvent(TextView paramTextView, Spannable paramSpannable, MotionEvent paramMotionEvent)
-    {
-      if (paramMotionEvent.getAction() == 0)
-      {
-        kUz = a(paramTextView, paramSpannable, paramMotionEvent);
-        if (kUz != null)
-        {
-          kUz.kUB = true;
-          Selection.setSelection(paramSpannable, paramSpannable.getSpanStart(kUz), paramSpannable.getSpanEnd(kUz));
-        }
-      }
-      do
-      {
-        return true;
-        if (paramMotionEvent.getAction() != 2) {
-          break;
-        }
-        paramTextView = a(paramTextView, paramSpannable, paramMotionEvent);
-      } while ((kUz == null) || (paramTextView == kUz));
-      kUz.kUB = false;
-      kUz = null;
-      Selection.removeSelection(paramSpannable);
-      return true;
-      if (kUz != null)
-      {
-        kUz.kUB = false;
-        super.onTouchEvent(paramTextView, paramSpannable, paramMotionEvent);
-      }
-      kUz = null;
-      Selection.removeSelection(paramSpannable);
-      return true;
-    }
+    return true;
   }
   
-  static final class b
+  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ai paramai)
   {
-    public int end;
-    public ClickableSpan kUA;
-    public int start;
+    return false;
   }
   
-  static abstract class c
-    extends ClickableSpan
+  public final boolean a(View paramView, ChattingUI.a parama, ai paramai)
   {
-    boolean kUB;
-    private int kUC;
-    private int kUD;
-    
-    public c(int paramInt1, int paramInt2)
-    {
-      kUC = paramInt1;
-      kUD = paramInt2;
-    }
-    
-    public void updateDrawState(TextPaint paramTextPaint)
-    {
-      super.updateDrawState(paramTextPaint);
-      if (kUB) {}
-      for (int i = kUD;; i = kUC)
-      {
-        paramTextPaint.setColor(i);
-        paramTextPaint.setUnderlineText(false);
-        return;
-      }
-    }
+    return false;
+  }
+  
+  protected final boolean bjZ()
+  {
+    return false;
   }
 }
 

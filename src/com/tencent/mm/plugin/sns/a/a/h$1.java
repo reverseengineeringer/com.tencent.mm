@@ -1,9 +1,9 @@
 package com.tencent.mm.plugin.sns.a.a;
 
-import com.tencent.mm.at.b;
-import com.tencent.mm.protocal.b.aar;
-import com.tencent.mm.protocal.b.aqh;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ax.b;
+import com.tencent.mm.protocal.b.abg;
+import com.tencent.mm.protocal.b.aqs;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.LinkedList;
 
 final class h$1
@@ -13,16 +13,16 @@ final class h$1
   
   public final void run()
   {
-    aar localaar = new aar();
-    jwP = gHf;
-    jwX = ((int)(System.currentTimeMillis() / 1000L));
-    fUi = 1;
-    String str = h.g(gHg);
-    jwQ = new b(str.getBytes());
-    agHh).iWW.add(localaar);
-    u.i("!32@/B4Tb64lLpJcvfkmSiY509t4HukJsave", "snsadlog " + gHf + " " + str);
-    if (h.b(gHh) == 0L) {
-      h.a(gHh, System.currentTimeMillis());
+    abg localabg = new abg();
+    jVv = gNG;
+    jVD = ((int)(System.currentTimeMillis() / 1000L));
+    cmq = 1;
+    String str = h.l(gNH);
+    jVw = new b(str.getBytes());
+    agNI).juA.add(localabg);
+    v.i("MicroMsg.SnsLogMgr", "snsadlog " + gNG + " " + str);
+    if (h.b(gNI) == 0L) {
+      h.a(gNI, System.currentTimeMillis());
     }
   }
 }

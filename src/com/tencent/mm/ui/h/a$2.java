@@ -1,31 +1,40 @@
 package com.tencent.mm.ui.h;
 
-import android.os.Message;
-import b.a.e.b;
-import com.tencent.mm.sdk.platformtools.aa;
+import android.os.HandlerThread;
+import android.os.Looper;
+import com.tencent.mm.compatible.d.l;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.ag.b;
+import java.util.Iterator;
+import java.util.LinkedList;
 
-final class a$2
-  implements Runnable
+public final class a$2
+  implements ag.b
 {
-  a$2(a parama) {}
+  public a$2(a parama) {}
   
-  public final void run()
+  public final String bah()
   {
-    try
+    StringBuilder localStringBuilder = new StringBuilder();
+    localStringBuilder.append("worker thread id = " + twkvy.getLooper().getThread().getId() + '\n');
+    localStringBuilder.append("#cpu freq(KHz)[max=" + l.mB() + ", min=" + l.mC() + ", cur=" + l.mD() + "]\n");
+    Object localObject = new LinkedList(a.d(maX));
+    Iterator localIterator = ((LinkedList)localObject).iterator();
+    localStringBuilder.append("#done tasks size = " + ((LinkedList)localObject).size() + '\n');
+    if (localIterator != null)
     {
-      lBR.lBM = lBR.lBK.boO();
-      Object localObject1 = lBR.lBK.b(lBR.lBM);
-      localObject1 = lBR.gWl.obtainMessage(1000, localObject1);
-      lBR.gWl.sendMessage((Message)localObject1);
-      return;
-    }
-    catch (b.a.b.a locala)
-    {
-      for (;;)
+      int i = 0;
+      while ((localIterator.hasNext()) && (i < a.j(maX)))
       {
-        Object localObject2 = null;
+        localObject = (a.a)localIterator.next();
+        localStringBuilder.append("[index = " + i + " | taskinfo:" + info + "]\n");
+        i += 1;
       }
     }
+    localStringBuilder.append("\n#waiting" + ah.tw().bad().dump(false));
+    return localStringBuilder.toString();
   }
 }
 

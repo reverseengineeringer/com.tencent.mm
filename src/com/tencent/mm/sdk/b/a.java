@@ -2,7 +2,7 @@ package com.tencent.mm.sdk.b;
 
 public abstract interface a
 {
-  public abstract void fg(String paramString);
+  public abstract void ft(String paramString);
 }
 
 /* Location:

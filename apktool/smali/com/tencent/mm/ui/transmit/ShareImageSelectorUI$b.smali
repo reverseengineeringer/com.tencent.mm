@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field dTv:Lcom/tencent/mm/ui/MMImageView;
+.field dVD:Lcom/tencent/mm/ui/MMImageView;
 
-.field final synthetic lBC:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;
+.field final synthetic mcu:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;
 
-.field lBH:Landroid/widget/TextView;
+.field mcz:Landroid/widget/TextView;
 
 
 # direct methods
@@ -27,13 +27,13 @@
     .locals 1
 
     .prologue
-    .line 379
-    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$b;->lBC:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;
+    .line 382
+    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$b;->mcu:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 380
-    const v0, 0x7f070158
+    .line 383
+    const v0, 0x7f1005bc
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -41,10 +41,10 @@
 
     check-cast v0, Lcom/tencent/mm/ui/MMImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$b;->dTv:Lcom/tencent/mm/ui/MMImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$b;->dVD:Lcom/tencent/mm/ui/MMImageView;
 
-    .line 381
-    const v0, 0x7f070159
+    .line 384
+    const v0, 0x7f100f83
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -52,8 +52,8 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$b;->lBH:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$b;->mcz:Landroid/widget/TextView;
 
-    .line 382
+    .line 385
     return-void
 .end method

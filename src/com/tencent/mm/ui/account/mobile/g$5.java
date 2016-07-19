@@ -10,7 +10,7 @@ final class g$5
   
   public final void onDismiss(DialogInterface paramDialogInterface)
   {
-    kyD.kyy.kqh = null;
+    kXK.kXF.kPm = null;
   }
 }
 

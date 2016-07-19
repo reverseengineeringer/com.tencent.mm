@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hfA:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
+.field final synthetic hur:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 416
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$9;->hfA:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$9;->hur:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 420
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$9;->hfA:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$9;->hur:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->l(Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;)V
 

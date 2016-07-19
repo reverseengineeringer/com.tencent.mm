@@ -1,51 +1,61 @@
 package com.tencent.mm.network;
 
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 public final class b$b
 {
-  public int ciG = 0;
+  public int cdX;
   String host = null;
   public String ip = "";
   URL url = null;
   
   public b$b(String paramString)
   {
+    this(paramString, false);
+  }
+  
+  public b$b(String paramString, boolean paramBoolean)
+  {
     Object localObject;
-    try
-    {
-      url = new URL(paramString);
-      host = url.getHost();
-      localObject = new ArrayList();
-      if ((b.ciF == null) || (b.ciF.tT() == null))
+    for (cdX = 0;; cdX = b.cdW.tU().d(host, (List)localObject)) {
+      try
       {
-        if (b.ciF == null) {}
-        for (paramString = "-1";; paramString = b.ciF.tT())
+        url = new URL(paramString);
+        host = url.getHost();
+        localObject = new ArrayList();
+        if ((b.cdW == null) || (b.cdW.tU() == null))
         {
-          u.e("!32@/B4Tb64lLpLNXJYrN+XyJY3MIXY4yYEd", "UrlRedirct ERR:AUTOAUTH NULL:%s  [%s]", new Object[] { paramString, ay.aVJ() });
+          if (b.cdW == null) {}
+          for (paramString = "-1";; paramString = b.cdW.tU())
+          {
+            v.e("MicroMsg.GprsSetting", "UrlRedirct ERR:AUTOAUTH NULL:%s  [%s]", new Object[] { paramString, be.baX() });
+            return;
+          }
+        }
+        if (paramBoolean)
+        {
+          cdX = b.cdW.tU().a(paramBoolean, (List)localObject);
+          v.d("MicroMsg.GprsSetting", "[Arth.302] dnsType:%d  host:%s url:%s", new Object[] { Integer.valueOf(cdX), host, paramString });
+          if (((ArrayList)localObject).size() > 0) {
+            break;
+          }
+          cdX = 0;
           return;
         }
       }
-      ciG = b.ciF.tT().c(host, (List)localObject);
-      u.d("!32@/B4Tb64lLpLNXJYrN+XyJY3MIXY4yYEd", "[Arth.302] dnsType:%d  host:%s url:%s", new Object[] { Integer.valueOf(ciG), host, paramString });
-      if (((ArrayList)localObject).size() <= 0)
+      catch (Exception paramString)
       {
-        ciG = 0;
+        v.e("MicroMsg.GprsSetting", "exception:%s", new Object[] { be.f(paramString) });
         return;
       }
     }
-    catch (Exception paramString)
+    if (1 == cdX)
     {
-      u.e("!32@/B4Tb64lLpLNXJYrN+XyJY3MIXY4yYEd", "exception:%s", new Object[] { ay.b(paramString) });
-      return;
-    }
-    if (1 == ciG)
-    {
-      localObject = (String)((ArrayList)localObject).get((int)(ay.FS() % ((ArrayList)localObject).size()));
+      localObject = (String)((ArrayList)localObject).get((int)(be.Gp() % ((ArrayList)localObject).size()));
       ip = ((String)localObject);
       url = new URL(paramString.replaceFirst(host, (String)localObject));
     }

@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.MenuItem;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.plugin.a.b;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.base.n.d;
 
 final class e$2
@@ -23,32 +23,25 @@ final class e$2
     default: 
       return;
     case 1: 
-      b.kC("F100_100_QQ");
-      b.b(true, ah.tx() + "," + val$context.getClass().getName() + ",F100_100_QQ," + ah.fd("F100_100_QQ") + ",1");
-      e.g(val$context, val$context.getString(2131432248), false);
+      b.ll("F100_100_QQ");
+      b.b(true, ah.ty() + "," + val$context.getClass().getName() + ",F100_100_QQ," + ah.fq("F100_100_QQ") + ",1");
+      e.g(val$context, val$context.getString(2131235763), false);
       return;
     case 4: 
-      e.g(val$context, ksy, ksz, ksA);
+      e.f(val$context, kRG, kRH, kRI);
       return;
     case 2: 
-      b.kC("F100_100_Email");
-      b.b(true, ah.tx() + "," + val$context.getClass().getName() + ",F100_100_Email," + ah.fd("F100_100_Email") + ",1");
-      e.g(val$context, val$context.getString(2131432247), false);
+      b.ll("F100_100_Email");
+      b.b(true, ah.ty() + "," + val$context.getClass().getName() + ",F100_100_Email," + ah.fq("F100_100_Email") + ",1");
+      e.g(val$context, val$context.getString(2131235762), false);
       return;
     }
-    paramMenuItem = val$context.getString(2131432275);
-    if (t.aUB().equals("zh_CN")) {
-      paramMenuItem = paramMenuItem + "zh_CN";
-    }
-    for (;;)
+    paramMenuItem = val$context.getString(2131236665);
+    if (u.aZF().equals("zh_CN")) {}
+    for (paramMenuItem = paramMenuItem + "zh_CN";; paramMenuItem = "https://help.wechat.com/cgi-bin/newreadtemplate?t=help_center/w_index&Channel=Client&lang=")
     {
       e.g(val$context, paramMenuItem, false);
       return;
-      if ((t.aUB().equals("zh_TW")) || (t.aUB().equals("zh_HK"))) {
-        paramMenuItem = paramMenuItem + "zh_TW";
-      } else {
-        paramMenuItem = paramMenuItem + "en";
-      }
     }
   }
 }

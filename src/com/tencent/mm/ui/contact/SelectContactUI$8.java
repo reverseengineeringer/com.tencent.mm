@@ -11,7 +11,7 @@ final class SelectContactUI$8
   
   public final void onAnimationEnd(Animation paramAnimation)
   {
-    SelectContactUI.l(lmm).setVisibility(8);
+    SelectContactUI.l(lMB).setVisibility(8);
   }
   
   public final void onAnimationRepeat(Animation paramAnimation) {}

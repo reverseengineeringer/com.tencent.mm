@@ -13,11 +13,11 @@
 
 
 # instance fields
-.field private dVm:Landroid/widget/ImageView;
+.field private dXt:Landroid/widget/ImageView;
 
-.field private kIw:Landroid/graphics/drawable/Drawable;
+.field private lhM:Landroid/graphics/drawable/Drawable;
 
-.field private view:Landroid/view/View;
+.field public view:Landroid/view/View;
 
 
 # direct methods
@@ -44,7 +44,7 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 50
-    sget-object v0, Lcom/tencent/mm/R$b;->MaskLayout:[I
+    sget-object v0, Lcom/tencent/mm/R$b;->WM:[I
 
     invoke-virtual {p1, p2, v0, p3, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -55,7 +55,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/base/MaskLayout;->kIw:Landroid/graphics/drawable/Drawable;
+    iput-object v1, p0, Lcom/tencent/mm/ui/base/MaskLayout;->lhM:Landroid/graphics/drawable/Drawable;
 
     .line 52
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
@@ -64,7 +64,7 @@
     return-void
 .end method
 
-.method private qJ(I)V
+.method private sH(I)V
     .locals 6
 
     .prologue
@@ -77,7 +77,7 @@
     const/4 v1, -0x2
 
     .line 106
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MaskLayout;->dVm:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MaskLayout;->dXt:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MaskLayout;->removeView(Landroid/view/View;)V
 
@@ -87,7 +87,7 @@
     invoke-direct {v0, v1, v1}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 108
-    sget-object v1, Lcom/tencent/mm/ui/base/MaskLayout$1;->kIx:[I
+    sget-object v1, Lcom/tencent/mm/ui/base/MaskLayout$1;->lhN:[I
 
     add-int/lit8 v2, p1, -0x1
 
@@ -103,7 +103,7 @@
     .line 127
     :goto_0
     :pswitch_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MaskLayout;->dVm:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MaskLayout;->dXt:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v1, v0}, Lcom/tencent/mm/ui/base/MaskLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -148,30 +148,40 @@
 
 
 # virtual methods
-.method public final d(Landroid/graphics/Bitmap;I)V
+.method public final biG()V
+    .locals 2
+
+    .prologue
+    .line 81
+    sget v0, Lcom/tencent/mm/ui/base/MaskLayout$a;->lhS:I
+
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/base/MaskLayout;->sH(I)V
+
+    .line 82
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MaskLayout;->dXt:Landroid/widget/ImageView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 83
+    return-void
+.end method
+
+.method public final c(Landroid/graphics/Bitmap;I)V
     .locals 1
 
     .prologue
     .line 86
-    invoke-direct {p0, p2}, Lcom/tencent/mm/ui/base/MaskLayout;->qJ(I)V
+    invoke-direct {p0, p2}, Lcom/tencent/mm/ui/base/MaskLayout;->sH(I)V
 
     .line 87
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MaskLayout;->dVm:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MaskLayout;->dXt:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 88
     return-void
-.end method
-
-.method public getContentView()Landroid/view/View;
-    .locals 1
-
-    .prologue
-    .line 102
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MaskLayout;->view:Landroid/view/View;
-
-    return-object v0
 .end method
 
 .method public onFinishInflate()V
@@ -184,7 +194,7 @@
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
     .line 59
-    const v0, 0x7f0700c1
+    const v0, 0x7f1000fe
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MaskLayout;->findViewById(I)Landroid/view/View;
 
@@ -198,7 +208,7 @@
     if-nez v0, :cond_0
 
     .line 61
-    const-string/jumbo v0, "!32@/B4Tb64lLpIrPcdvz+HPJK/coyuoK30x"
+    const-string/jumbo v0, "MicroMsg.MaskLayout"
 
     const-string/jumbo v1, "%s"
 
@@ -212,7 +222,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 62
     new-instance v0, Landroid/view/View;
@@ -255,10 +265,10 @@
 
     invoke-direct {v0, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MaskLayout;->dVm:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MaskLayout;->dXt:Landroid/widget/ImageView;
 
     .line 70
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MaskLayout;->dVm:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MaskLayout;->dXt:Landroid/widget/ImageView;
 
     new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
 
@@ -267,53 +277,17 @@
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 71
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MaskLayout;->dVm:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MaskLayout;->dXt:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MaskLayout;->kIw:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MaskLayout;->lhM:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 72
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MaskLayout;->dVm:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MaskLayout;->dXt:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MaskLayout;->addView(Landroid/view/View;)V
 
     .line 73
-    return-void
-.end method
-
-.method public setMaskBitmap(Landroid/graphics/Bitmap;)V
-    .locals 1
-
-    .prologue
-    .line 76
-    sget v0, Lcom/tencent/mm/ui/base/MaskLayout$a;->kIC:I
-
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/base/MaskLayout;->qJ(I)V
-
-    .line 77
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MaskLayout;->dVm:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
-    .line 78
-    return-void
-.end method
-
-.method public setMaskDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 1
-
-    .prologue
-    .line 81
-    sget v0, Lcom/tencent/mm/ui/base/MaskLayout$a;->kIC:I
-
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/base/MaskLayout;->qJ(I)V
-
-    .line 82
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MaskLayout;->dVm:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 83
     return-void
 .end method

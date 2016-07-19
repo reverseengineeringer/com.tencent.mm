@@ -12,10 +12,10 @@ final class ContactRemarkInfoModUI$17
   {
     if (!paramBoolean)
     {
-      ContactRemarkInfoModUI.i(ljV).setBackgroundResource(2130970418);
+      ContactRemarkInfoModUI.i(lKg).setBackgroundResource(2130838515);
       return;
     }
-    ContactRemarkInfoModUI.i(ljV).setBackgroundResource(2130970444);
+    ContactRemarkInfoModUI.i(lKg).setBackgroundResource(2130838514);
   }
 }
 

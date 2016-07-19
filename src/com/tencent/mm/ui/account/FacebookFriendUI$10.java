@@ -2,20 +2,18 @@ package com.tencent.mm.ui.account;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
-import com.tencent.mm.model.ah;
 import com.tencent.mm.modelfriend.x;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.t.m;
 
 final class FacebookFriendUI$10
   implements DialogInterface.OnCancelListener
 {
-  FacebookFriendUI$10(FacebookFriendUI paramFacebookFriendUI, af paramaf, x paramx) {}
+  FacebookFriendUI$10(FacebookFriendUI paramFacebookFriendUI, com.tencent.mm.sdk.platformtools.ah paramah, x paramx) {}
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    coS.aUF();
-    ah.tE().c(coR);
+    ckg.aZJ();
+    com.tencent.mm.model.ah.tF().c(ckf);
   }
 }
 

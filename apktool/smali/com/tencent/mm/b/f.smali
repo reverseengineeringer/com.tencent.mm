@@ -3,151 +3,112 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/mm/b/f$a;
-    }
-.end annotation
-
-
-# instance fields
-.field public akS:Ljava/lang/String;
-
-.field private akT:Ljava/util/Map;
-
-
 # direct methods
-.method private constructor <init>(Ljava/lang/String;)V
-    .locals 1
-
-    .prologue
-    .line 18
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 16
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/b/f;->akT:Ljava/util/Map;
-
-    .line 19
-    if-nez p1, :cond_0
-
-    .line 20
-    const-string/jumbo v0, "http://dldir1.qq.com/foxmail/"
-
-    iput-object v0, p0, Lcom/tencent/mm/b/f;->akS:Ljava/lang/String;
-
-    .line 24
-    :goto_0
-    return-void
-
-    .line 22
-    :cond_0
-    iput-object p1, p0, Lcom/tencent/mm/b/f;->akS:Ljava/lang/String;
-
-    goto :goto_0
-.end method
-
-.method public static aK(Ljava/lang/String;)Lcom/tencent/mm/b/f;
+.method public static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
     .locals 12
 
     .prologue
-    const/4 v0, 0x0
+    const-wide/16 v10, 0x0
 
     const/4 v7, 0x0
 
-    .line 58
-    const-string/jumbo v1, "patchupdate"
+    const/4 v6, -0x1
 
-    invoke-static {p0, v1, v0}, Lcom/tencent/mm/sdk/platformtools/q;->J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+    .line 36
+    if-eqz p0, :cond_0
 
-    move-result-object v9
+    if-eqz p1, :cond_0
 
-    .line 59
-    if-nez v9, :cond_0
+    if-nez p2, :cond_1
 
-    .line 79
-    :goto_0
-    return-object v0
-
-    .line 63
     :cond_0
-    new-instance v6, Lcom/tencent/mm/b/f;
+    move v0, v6
 
-    const-string/jumbo v0, ".patchupdate.$base"
+    .line 85
+    :goto_0
+    return v0
 
-    invoke-interface {v9, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-direct {v6, v0}, Lcom/tencent/mm/b/f;-><init>(Ljava/lang/String;)V
-
-    .line 64
-    const-string/jumbo v0, ".patchupdate.$count"
-
-    invoke-interface {v9, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-static {v0, v7}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
-
-    move-result v10
-
-    move v8, v7
-
-    .line 66
-    :goto_1
-    if-lt v8, v10, :cond_1
-
-    move-object v0, v6
-
-    .line 79
-    goto :goto_0
-
-    .line 67
+    .line 41
     :cond_1
-    new-instance v1, Ljava/lang/StringBuilder;
+    :try_start_0
+    new-instance v1, Ljava/io/File;
 
-    const-string/jumbo v0, ".patchupdate.item"
+    invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 42
+    new-instance v0, Ljava/io/RandomAccessFile;
 
-    if-lez v8, :cond_3
+    const-string/jumbo v2, "r"
 
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {v0, v1, v2}, Ljava/io/RandomAccessFile;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    move-result-object v0
+    .line 43
+    new-instance v4, Ljava/io/File;
 
-    :goto_2
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v4, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
+    .line 44
+    new-instance v3, Ljava/io/File;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v3, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    move-result-object v5
+    .line 46
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
-    .line 69
-    new-instance v0, Lcom/tencent/mm/b/f$a;
+    move-result v2
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    if-eqz v2, :cond_2
 
-    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
-    move-result-object v2
+    move-result v2
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-nez v2, :cond_3
 
-    const-string/jumbo v2, ".$old"
+    .line 47
+    :cond_2
+    const-string/jumbo v2, "MicroMsg.MergePatchApk"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v7, "file not found in merge(): oldFile.exists()="
+
+    invoke-direct {v5, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    move-result v1
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 48
+    const-string/jumbo v5, ", newFile.exists()="
+
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v4}, Ljava/io/File;->exists()Z
+
+    move-result v4
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v4, ", patch.exists()="
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v3}, Ljava/io/File;->exists()Z
+
+    move-result v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -155,24 +116,47 @@
 
     move-result-object v1
 
-    invoke-interface {v9, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 47
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 49
+    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
+
+    move v0, v6
+
+    .line 50
+    goto :goto_0
+
+    .line 54
+    :cond_3
+    invoke-static {p0}, Lcom/tencent/mm/b/a;->aL(Ljava/lang/String;)Lcom/tencent/mm/b/a;
 
     move-result-object v1
 
-    check-cast v1, Ljava/lang/String;
+    .line 56
+    if-eqz v1, :cond_8
 
-    .line 70
+    iget-object v2, v1, Lcom/tencent/mm/b/a;->Xq:Lcom/tencent/mm/b/a$a;
+
+    if-eqz v2, :cond_8
+
+    .line 57
+    iget-object v1, v1, Lcom/tencent/mm/b/a;->Xq:Lcom/tencent/mm/b/a$a;
+
+    iget v1, v1, Lcom/tencent/mm/b/a$a;->Xt:I
+
+    add-int/lit8 v5, v1, 0x8
+
+    .line 58
+    const-string/jumbo v1, "MicroMsg.MergePatchApk"
+
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    const-string/jumbo v8, "extLen = "
 
-    move-result-object v3
+    invoke-direct {v2, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string/jumbo v3, ".$new"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -180,158 +164,146 @@
 
     move-result-object v2
 
-    invoke-interface {v9, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v2
+    .line 60
+    :goto_1
+    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->length()J
 
-    check-cast v2, Ljava/lang/String;
+    move-result-wide v8
 
-    .line 71
-    new-instance v3, Ljava/lang/StringBuilder;
+    cmp-long v1, v8, v10
 
-    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    if-gtz v1, :cond_4
 
-    move-result-object v4
+    const/4 v1, 0x3
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :goto_2
+    const/4 v2, 0x1
 
-    const-string/jumbo v4, ".$patch"
+    if-eq v1, v2, :cond_6
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 61
+    const-string/jumbo v1, "MicroMsg.MergePatchApk"
 
-    move-result-object v3
+    const-string/jumbo v2, "merge failed in patchLessMemory()"
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v3
+    .line 62
+    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
 
-    invoke-interface {v9, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move v0, v6
 
-    move-result-object v3
+    .line 63
+    goto/16 :goto_0
 
-    check-cast v3, Ljava/lang/String;
-
-    .line 72
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-direct {v4, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string/jumbo v11, ".$url"
-
-    invoke-virtual {v4, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v9, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/String;
-
-    .line 73
-    new-instance v11, Ljava/lang/StringBuilder;
-
-    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-direct {v11, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string/jumbo v5, ".$size"
-
-    invoke-virtual {v11, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-interface {v9, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/String;
-
-    invoke-static {v5, v7}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
-
-    move-result v5
-
-    .line 69
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/b/f$a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
-
-    .line 74
-    iget-object v1, v0, Lcom/tencent/mm/b/f$a;->akU:Ljava/lang/String;
-
-    if-eqz v1, :cond_4
-
-    iget-object v1, v0, Lcom/tencent/mm/b/f$a;->akV:Ljava/lang/String;
-
-    if-eqz v1, :cond_4
-
-    iget-object v1, v0, Lcom/tencent/mm/b/f$a;->akW:Ljava/lang/String;
-
-    if-eqz v1, :cond_4
-
-    iget-object v1, v0, Lcom/tencent/mm/b/f$a;->url:Ljava/lang/String;
-
-    if-eqz v1, :cond_4
-
-    const/4 v1, 0x1
-
-    :goto_3
-    if-eqz v1, :cond_2
-
-    .line 75
-    iget-object v1, v6, Lcom/tencent/mm/b/f;->akT:Ljava/util/Map;
-
-    iget-object v2, v0, Lcom/tencent/mm/b/f$a;->akU:Ljava/lang/String;
-
-    invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 66
-    :cond_2
-    add-int/lit8 v0, v8, 0x1
-
-    move v8, v0
-
-    goto/16 :goto_1
-
-    .line 67
-    :cond_3
-    const-string/jumbo v0, ""
-
-    goto/16 :goto_2
-
+    .line 60
     :cond_4
-    move v1, v7
+    invoke-virtual {v3}, Ljava/io/File;->length()J
 
-    .line 74
-    goto :goto_3
-.end method
+    move-result-wide v8
 
+    cmp-long v1, v8, v10
 
-# virtual methods
-.method public final aJ(Ljava/lang/String;)Lcom/tencent/mm/b/f$a;
-    .locals 1
+    if-gtz v1, :cond_5
 
-    .prologue
-    .line 39
-    iget-object v0, p0, Lcom/tencent/mm/b/f;->akT:Ljava/util/Map;
+    const/4 v1, 0x2
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    goto :goto_2
+
+    :cond_5
+    invoke-virtual {v3}, Ljava/io/File;->length()J
+
+    move-result-wide v8
+
+    long-to-int v1, v8
+
+    new-array v2, v1, [B
+
+    new-instance v1, Ljava/io/FileInputStream;
+
+    invoke-direct {v1, v3}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+
+    array-length v3, v2
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/b/e;->a(Ljava/io/InputStream;[BI)Z
+
+    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->length()J
+
+    move-result-wide v8
+
+    long-to-int v1, v8
+
+    array-length v3, v2
+
+    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/b/d;->a(Ljava/io/RandomAccessFile;I[BILjava/io/File;I)I
+
+    move-result v1
+
+    goto :goto_2
+
+    .line 65
+    :cond_6
+    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
+
+    .line 70
+    invoke-static {p2}, Lcom/tencent/mm/a/g;->aH(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/b/f$a;
+    invoke-virtual {p3, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    return-object v0
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    .line 71
+    const/4 v0, -0x2
+
+    goto/16 :goto_0
+
+    .line 74
+    :cond_7
+    new-instance v0, Lcom/tencent/mm/b/b;
+
+    invoke-direct {v0}, Lcom/tencent/mm/b/b;-><init>()V
+
+    .line 75
+    invoke-virtual {v0, p3}, Lcom/tencent/mm/b/b;->aN(Ljava/lang/String;)Lcom/tencent/mm/b/b;
+
+    .line 76
+    new-instance v1, Lcom/tencent/mm/b/a;
+
+    invoke-direct {v1, v0}, Lcom/tencent/mm/b/a;-><init>(Lcom/tencent/mm/b/b;)V
+
+    .line 77
+    invoke-virtual {v1, v4}, Lcom/tencent/mm/b/a;->h(Ljava/io/File;)I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move v0, v7
+
+    .line 85
+    goto/16 :goto_0
+
+    .line 80
+    :catch_0
+    move-exception v0
+
+    const-string/jumbo v0, "MicroMsg.MergePatchApk"
+
+    const-string/jumbo v1, "Exception in merge()"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    move v0, v6
+
+    .line 81
+    goto/16 :goto_0
+
+    :cond_8
+    move v5, v7
+
+    goto :goto_1
 .end method

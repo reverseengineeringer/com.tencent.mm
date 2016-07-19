@@ -1,31 +1,27 @@
 package com.tencent.mm.ui.chatting;
 
-import android.widget.ListView;
-import com.tencent.mm.sdk.platformtools.u;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.tencent.mm.v.an;
+import com.tencent.mm.v.m;
+import com.tencent.mm.v.o;
+import com.tencent.mm.v.s;
 
 final class ChattingUI$a$76
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
   ChattingUI$a$76(ChattingUI.a parama) {}
   
-  public final void run()
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((ChattingUI.a.B(laF)) || (ChattingUI.a.C(laF) != 0))
+    MlAY).field_hadAlert = 1;
+    paramDialogInterface = ChattingUI.a.M(lAY);
+    if (paramDialogInterface != null)
     {
-      ChattingUI.a.G(laF);
-      u.i("!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/", "scrollToLastProtect userTouched: %s state: %s", new Object[] { Boolean.valueOf(ChattingUI.a.B(laF)), Integer.valueOf(ChattingUI.a.C(laF)) });
-      return;
+      field_brandFlag &= 0xFFFFFFFB;
+      o.f(paramDialogInterface);
     }
-    int i = ChattingUI.a.e(laF).getLastVisiblePosition();
-    int j = ChattingUI.a.e(laF).getCount() - 1;
-    u.d("!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/", "scrollToLastProtect tryScrollTimes : %s, lastvisible/total=%s/%s", new Object[] { Integer.valueOf(ChattingUI.a.H(laF)), Integer.valueOf(i), Integer.valueOf(j) });
-    if (i < j)
-    {
-      ChattingUI.a.a(laF, true, null);
-      laF.bfd();
-      return;
-    }
-    ChattingUI.a.G(laF);
+    an.xP().hu(lAY.bjO());
   }
 }
 

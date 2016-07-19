@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.chatting.gallery;
 
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import com.tencent.mm.ui.base.MultiTouchImageView;
 import com.tencent.mm.ui.tools.h.b;
 
@@ -11,25 +11,25 @@ final class ImageGalleryUI$14
   
   public final void onAnimationEnd()
   {
-    ImageGalleryUI.l(lgM).post(new Runnable()
+    ImageGalleryUI.k(lGY).post(new Runnable()
     {
       public final void run()
       {
-        lgM.finish();
-        lgM.overridePendingTransition(0, 0);
+        lGY.finish();
+        lGY.overridePendingTransition(0, 0);
       }
     });
   }
   
   public final void onAnimationStart()
   {
-    ImageGalleryUI.aM(ImageGalleryUI.m(lgM));
-    new aa().postDelayed(new Runnable()
+    ImageGalleryUI.aQ(ImageGalleryUI.l(lGY));
+    new ac().postDelayed(new Runnable()
     {
       public final void run()
       {
-        if (ImageGalleryUI.j(lgM) != null) {
-          ImageGalleryUI.j(lgM).bdf();
+        if (ImageGalleryUI.i(lGY) != null) {
+          ImageGalleryUI.i(lGY).biI();
         }
       }
     }, 20L);

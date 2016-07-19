@@ -11,7 +11,7 @@ final class LoginHistoryUI$22
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    ktx.age();
+    kSF.aiI();
     return false;
   }
 }

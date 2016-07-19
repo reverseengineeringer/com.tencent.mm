@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/plugin/sight/encode/a/d$1;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.super Lcom/tencent/mm/sdk/platformtools/ac;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic gAq:Lcom/tencent/mm/plugin/sight/encode/a/d;
+.field final synthetic gGS:Lcom/tencent/mm/plugin/sight/encode/a/d;
 
 
 # direct methods
@@ -23,10 +23,10 @@
     .locals 0
 
     .prologue
-    .line 52
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/d$1;->gAq:Lcom/tencent/mm/plugin/sight/encode/a/d;
+    .line 53
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/d$1;->gGS:Lcom/tencent/mm/plugin/sight/encode/a/d;
 
-    invoke-direct {p0, p2}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {p0, p2}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
     return-void
 .end method
@@ -37,28 +37,28 @@
     .locals 2
 
     .prologue
-    .line 55
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/d$1;->gAq:Lcom/tencent/mm/plugin/sight/encode/a/d;
+    .line 56
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/d$1;->gGS:Lcom/tencent/mm/plugin/sight/encode/a/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/d;->gzV:Lcom/tencent/mm/plugin/sight/encode/a/a$a;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/d;->gGx:Lcom/tencent/mm/plugin/sight/encode/a/a$a;
 
     if-eqz v0, :cond_0
 
-    .line 56
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/d$1;->gAq:Lcom/tencent/mm/plugin/sight/encode/a/d;
-
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/d;->gzV:Lcom/tencent/mm/plugin/sight/encode/a/a$a;
-
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/encode/a/a$a;->awm()V
-
     .line 57
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/d$1;->gAq:Lcom/tencent/mm/plugin/sight/encode/a/d;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/d$1;->gGS:Lcom/tencent/mm/plugin/sight/encode/a/d;
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/d;->gGx:Lcom/tencent/mm/plugin/sight/encode/a/a$a;
+
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/encode/a/a$a;->ayK()V
+
+    .line 58
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/d$1;->gGS:Lcom/tencent/mm/plugin/sight/encode/a/d;
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/a/d;->gzV:Lcom/tencent/mm/plugin/sight/encode/a/a$a;
+    iput-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/a/d;->gGx:Lcom/tencent/mm/plugin/sight/encode/a/a$a;
 
-    .line 59
+    .line 60
     :cond_0
     return-void
 .end method

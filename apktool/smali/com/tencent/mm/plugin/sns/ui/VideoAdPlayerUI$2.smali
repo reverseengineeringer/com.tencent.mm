@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hnc:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
+.field final synthetic hDx:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 225
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$2;->hnc:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
+    .line 282
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$2;->hDx:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,11 +40,11 @@
     .locals 1
 
     .prologue
-    .line 228
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$2;->hnc:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
+    .line 285
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$2;->hDx:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;->finish()V
 
-    .line 229
+    .line 286
     return-void
 .end method

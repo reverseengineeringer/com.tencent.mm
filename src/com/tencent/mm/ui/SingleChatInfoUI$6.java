@@ -10,7 +10,7 @@ final class SingleChatInfoUI$6
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    SingleChatInfoUI.d(krj);
+    SingleChatInfoUI.d(kQq);
   }
 }
 

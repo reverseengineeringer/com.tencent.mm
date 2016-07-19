@@ -4,25 +4,25 @@
 
 
 # instance fields
-.field private cMt:Landroid/view/View;
+.field private cJf:Landroid/view/View;
 
-.field private eRr:Landroid/app/Activity;
+.field private eZl:Landroid/app/Activity;
 
-.field private gLa:Ljava/lang/String;
+.field private gSF:Ljava/lang/String;
 
-.field private gWs:Landroid/widget/ImageView;
+.field private hjR:Landroid/widget/ImageView;
 
-.field public gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+.field public hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
-.field haA:Ljava/lang/String;
+.field private hnP:Landroid/widget/TextView;
 
-.field public haB:Z
+.field private hnQ:Z
 
-.field private hax:Landroid/widget/TextView;
+.field hnR:I
 
-.field private hay:Z
+.field hnS:Ljava/lang/String;
 
-.field private haz:I
+.field public hnT:Z
 
 .field public style:I
 
@@ -40,23 +40,23 @@
     .line 31
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hay:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnQ:Z
 
     .line 32
-    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->haz:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnR:I
 
     .line 33
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->haA:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnS:Ljava/lang/String;
 
     .line 35
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gLa:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gSF:Ljava/lang/String;
 
     .line 37
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->haB:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnT:Z
 
     .line 39
     iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->style:I
@@ -80,23 +80,23 @@
     .line 31
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hay:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnQ:Z
 
     .line 32
-    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->haz:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnR:I
 
     .line 33
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->haA:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnS:Ljava/lang/String;
 
     .line 35
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gLa:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gSF:Ljava/lang/String;
 
     .line 37
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->haB:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnT:Z
 
     .line 39
     iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->style:I
@@ -113,7 +113,7 @@
 
     .prologue
     .line 22
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->eRr:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->eZl:Landroid/app/Activity;
 
     return-object v0
 .end method
@@ -123,7 +123,7 @@
 
     .prologue
     .line 22
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->haz:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnR:I
 
     return v0
 .end method
@@ -133,7 +133,7 @@
 
     .prologue
     .line 22
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gLa:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gSF:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -143,7 +143,7 @@
 
     .prologue
     .line 22
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->haB:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnT:Z
 
     return v0
 .end method
@@ -157,7 +157,7 @@
 
     check-cast v0, Landroid/app/Activity;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->eRr:Landroid/app/Activity;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->eZl:Landroid/app/Activity;
 
     .line 78
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->getLayoutResource()I
@@ -168,12 +168,12 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->cMt:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->cJf:Landroid/view/View;
 
     .line 82
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->cMt:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->cJf:Landroid/view/View;
 
-    const v1, 0x7f070dd1
+    const v1, 0x7f100dec
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -181,12 +181,12 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hax:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnP:Landroid/widget/TextView;
 
     .line 83
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->cMt:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->cJf:Landroid/view/View;
 
-    const v1, 0x7f070e22
+    const v1, 0x7f100deb
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -194,10 +194,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gWs:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hjR:Landroid/widget/ImageView;
 
     .line 85
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->cMt:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->cJf:Landroid/view/View;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/RangeWidget$1;
 
@@ -226,7 +226,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->haz:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnR:I
 
     .line 107
     const-string/jumbo v0, "Klabel_name_list"
@@ -235,26 +235,26 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gLa:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gSF:Ljava/lang/String;
 
     .line 108
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->getMaxTagNameLen()I
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->aEk()I
 
     move-result v1
 
     .line 109
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gLa:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gSF:Ljava/lang/String;
 
     .line 111
     const/4 v2, -0x1
 
     if-eq v1, v2, :cond_0
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gLa:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gSF:Ljava/lang/String;
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gLa:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gSF:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -267,7 +267,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gLa:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gSF:Ljava/lang/String;
 
     invoke-virtual {v2, v4, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -289,26 +289,26 @@
 
     .line 114
     :cond_0
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->haz:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnR:I
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gWs:Landroid/widget/ImageView;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hjR:Landroid/widget/ImageView;
 
     if-eqz v2, :cond_1
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gWs:Landroid/widget/ImageView;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hjR:Landroid/widget/ImageView;
 
-    const v3, 0x7f0300fb
+    const v3, 0x7f0702a5
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
     :cond_1
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
     if-eqz v2, :cond_2
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
-    invoke-virtual {v2, v4}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->setPrivated(Z)V
+    invoke-virtual {v2, v4}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->fq(Z)V
 
     :cond_2
     packed-switch v1, :pswitch_data_0
@@ -319,42 +319,42 @@
 
     .line 114
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gWs:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hjR:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gWs:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hjR:Landroid/widget/ImageView;
 
-    const v1, 0x7f0300fa
+    const v1, 0x7f0702a4
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hax:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnP:Landroid/widget/TextView;
 
-    const v1, 0x7f0b16c4
+    const v1, 0x7f08128c
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     goto :goto_0
 
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
-    invoke-virtual {v0, v6}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->setPrivated(Z)V
+    invoke-virtual {v0, v6}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->fq(Z)V
 
     :cond_4
     if-eqz p4, :cond_5
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {p4}, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->getAtList()Ljava/util/List;
+    invoke-virtual {p4}, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->aDF()Ljava/util/List;
 
     move-result-object v0
 
@@ -364,42 +364,42 @@
 
     if-lez v0, :cond_5
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->eRr:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->eZl:Landroid/app/Activity;
 
-    const v1, 0x7f0b16bf
+    const v1, 0x7f0812ea
 
-    const v2, 0x7f0b0ddd
+    const v2, 0x7f080134
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->f(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
-    invoke-virtual {p4}, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->aAP()V
+    invoke-virtual {p4}, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->aDG()V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->aCO()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->aFT()V
 
     :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hax:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnP:Landroid/widget/TextView;
 
-    const v1, 0x7f0b16c5
+    const v1, 0x7f08128a
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     goto :goto_0
 
     :pswitch_2
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hax:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnP:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
     :pswitch_3
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hax:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hnP:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->eRr:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->eZl:Landroid/app/Activity;
 
-    const v3, 0x7f0b16cc
+    const v3, 0x7f08127e
 
     invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -466,27 +466,7 @@
     .end packed-switch
 .end method
 
-.method public getLabelRange()I
-    .locals 1
-
-    .prologue
-    .line 73
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->haz:I
-
-    return v0
-.end method
-
-.method protected getLayoutResource()I
-    .locals 1
-
-    .prologue
-    .line 166
-    const v0, 0x7f0a0476
-
-    return v0
-.end method
-
-.method protected getMaxTagNameLen()I
+.method protected aEk()I
     .locals 1
 
     .prologue
@@ -496,13 +476,12 @@
     return v0
 .end method
 
-.method public setEnablePrivate(Z)V
-    .locals 0
+.method protected getLayoutResource()I
+    .locals 1
 
     .prologue
-    .line 57
-    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sns/ui/RangeWidget;->hay:Z
+    .line 166
+    const v0, 0x7f03048e
 
-    .line 58
-    return-void
+    return v0
 .end method

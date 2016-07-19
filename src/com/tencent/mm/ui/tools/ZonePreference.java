@@ -6,16 +6,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.platformtools.s;
 import com.tencent.mm.storage.RegionCodeDecoder.Region;
 import com.tencent.mm.ui.base.preference.Preference;
 
 public class ZonePreference
   extends Preference
 {
-  RegionCodeDecoder.Region lyC;
-  private CharSequence lyD;
-  private TextView lyE;
+  RegionCodeDecoder.Region lZq;
+  private CharSequence lZr;
+  private TextView lZs;
   
   public ZonePreference(Context paramContext)
   {
@@ -30,50 +30,50 @@ public class ZonePreference
   public ZonePreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(2131363286);
+    setLayoutResource(2130903981);
   }
   
-  private void biQ()
+  private void boN()
   {
-    if (lyE == null) {
+    if (lZs == null) {
       return;
     }
-    if ((lyD != null) && (!t.kz(lyD.toString()))) {
-      lyE.setVisibility(0);
+    if ((lZr != null) && (!s.kf(lZr.toString()))) {
+      lZs.setVisibility(0);
     }
     for (;;)
     {
-      lyE.setText(lyD);
+      lZs.setText(lZr);
       return;
-      lyE.setVisibility(8);
+      lZs.setVisibility(8);
     }
   }
   
   protected final void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    if (lyC == null) {
+    if (lZq == null) {
       return;
     }
-    ((TextView)paramView.findViewById(2131165371)).setText(lyC.getName());
-    lyE = ((TextView)paramView.findViewById(2131165720));
-    biQ();
+    ((TextView)paramView.findViewById(2131758118)).setText(lZq.getName());
+    lZs = ((TextView)paramView.findViewById(2131758121));
+    boN();
   }
   
   protected final View onCreateView(ViewGroup paramViewGroup)
   {
     paramViewGroup = super.onCreateView(paramViewGroup);
     LayoutInflater localLayoutInflater = (LayoutInflater)mContext.getSystemService("layout_inflater");
-    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131165377);
+    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131755262);
     localViewGroup.removeAllViews();
-    localLayoutInflater.inflate(2131361985, localViewGroup);
+    localLayoutInflater.inflate(2130904021, localViewGroup);
     return paramViewGroup;
   }
   
   public final void setSummary(CharSequence paramCharSequence)
   {
-    lyD = paramCharSequence;
-    biQ();
+    lZr = paramCharSequence;
+    boN();
   }
 }
 

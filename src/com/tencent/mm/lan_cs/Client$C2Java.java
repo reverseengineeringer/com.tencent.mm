@@ -4,15 +4,15 @@ public class Client$C2Java
 {
   public static void onDisconnect(String paramString, int paramInt)
   {
-    if (Client.bwN != null) {
-      Client.bwN.ra();
+    if (Client.boN != null) {
+      Client.boN.qD();
     }
   }
   
   public static void onRecv(String paramString, int paramInt, byte[] paramArrayOfByte)
   {
-    if (Client.bwN != null) {
-      Client.bwN.onRecv(paramString, paramInt, paramArrayOfByte);
+    if (Client.boN != null) {
+      Client.boN.onRecv(paramString, paramInt, paramArrayOfByte);
     }
   }
 }

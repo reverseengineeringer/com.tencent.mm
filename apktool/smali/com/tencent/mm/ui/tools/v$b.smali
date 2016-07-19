@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field length:I
+.field lZp:Z
 
-.field lyB:Z
+.field length:I
 
 .field start:I
 
@@ -37,7 +37,7 @@
     iput p2, p0, Lcom/tencent/mm/ui/tools/v$b;->length:I
 
     .line 287
-    iput-boolean p3, p0, Lcom/tencent/mm/ui/tools/v$b;->lyB:Z
+    iput-boolean p3, p0, Lcom/tencent/mm/ui/tools/v$b;->lZp:Z
 
     .line 288
     return-void

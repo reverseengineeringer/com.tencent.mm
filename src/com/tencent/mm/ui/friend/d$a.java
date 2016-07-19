@@ -2,7 +2,7 @@ package com.tencent.mm.ui.friend;
 
 public abstract interface d$a
 {
-  public abstract void qm(int paramInt);
+  public abstract void se(int paramInt);
 }
 
 /* Location:

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lvn:Lcom/tencent/mm/ui/tools/DisasterUI;
+.field final synthetic lWp:Lcom/tencent/mm/ui/tools/DisasterUI;
 
 .field final synthetic val$url:Ljava/lang/String;
 
@@ -29,7 +29,7 @@
 
     .prologue
     .line 28
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/DisasterUI$1;->lvn:Lcom/tencent/mm/ui/tools/DisasterUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/DisasterUI$1;->lWp:Lcom/tencent/mm/ui/tools/DisasterUI;
 
     iput-object p2, p0, Lcom/tencent/mm/ui/tools/DisasterUI$1;->val$url:Ljava/lang/String;
 
@@ -61,7 +61,7 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     .line 33
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/DisasterUI$1;->lvn:Lcom/tencent/mm/ui/tools/DisasterUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/DisasterUI$1;->lWp:Lcom/tencent/mm/ui/tools/DisasterUI;
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/tools/DisasterUI;->startActivity(Landroid/content/Intent;)V
 

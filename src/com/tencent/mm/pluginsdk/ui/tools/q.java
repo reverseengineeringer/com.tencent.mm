@@ -4,17 +4,20 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.util.Base64;
 import android.widget.Toast;
 import com.jg.JgClassChecked;
-import com.tencent.mm.sdk.platformtools.ah;
-import com.tencent.mm.sdk.platformtools.am;
-import com.tencent.mm.sdk.platformtools.am.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.ap;
+import com.tencent.mm.sdk.platformtools.ap.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.smtt.sdk.WebView;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -35,12 +38,21 @@ import junit.framework.Assert;
 @JgClassChecked(author=20, fComment="checked", lastDate="20140429", reviewer=20, vComment={com.jg.EType.JSEXECUTECHECK})
 public final class q
 {
-  private static am cmc = null;
+  private static ap chf = null;
+  private static final Pattern jqD = Pattern.compile("data:(image|img)/\\S+;base64,\\S+");
   
-  public static final String AY(String paramString)
+  public static boolean De(String paramString)
+  {
+    if (paramString == null) {
+      return false;
+    }
+    return paramString.toLowerCase().contains(" MicroMessenger/".trim().toLowerCase());
+  }
+  
+  public static final String Df(String paramString)
   {
     String str = paramString;
-    if (!ay.kz(paramString)) {}
+    if (!be.kf(paramString)) {}
     try
     {
       str = URLEncoder.encode(paramString, "utf-8");
@@ -48,15 +60,15 @@ public final class q
     }
     catch (UnsupportedEncodingException localUnsupportedEncodingException)
     {
-      com.tencent.mm.sdk.platformtools.u.e("!32@/B4Tb64lLpJLnjolkGdCeaEhhwktoazg", "URLEncode fail, throw : %s", new Object[] { localUnsupportedEncodingException.getMessage() });
+      com.tencent.mm.sdk.platformtools.v.e("MicroMsg.WebViewUtil", "URLEncode fail, throw : %s", new Object[] { localUnsupportedEncodingException.getMessage() });
     }
     return paramString;
   }
   
-  public static final String AZ(String paramString)
+  public static final String Dg(String paramString)
   {
     Object localObject = paramString;
-    if (!ay.kz(paramString)) {}
+    if (!be.kf(paramString)) {}
     try
     {
       localObject = paramString.getBytes("utf-8");
@@ -67,14 +79,66 @@ public final class q
       for (;;)
       {
         paramString = paramString.getBytes();
-        com.tencent.mm.sdk.platformtools.u.e("!32@/B4Tb64lLpJLnjolkGdCeaEhhwktoazg", "getBytes fail, throw : %s", new Object[] { localUnsupportedEncodingException.getMessage() });
+        com.tencent.mm.sdk.platformtools.v.e("MicroMsg.WebViewUtil", "getBytes fail, throw : %s", new Object[] { localUnsupportedEncodingException.getMessage() });
       }
     }
     localObject = Base64.encodeToString(paramString, 2);
     return (String)localObject;
   }
   
-  public static final String M(Map paramMap)
+  public static String Dh(String paramString)
+  {
+    if (be.kf(paramString)) {}
+    while (!jqD.matcher(paramString).matches()) {
+      return null;
+    }
+    return paramString.substring(paramString.indexOf("base64,") + 7).trim();
+  }
+  
+  public static Boolean Di(String paramString)
+  {
+    if ((paramString != null) && (paramString.startsWith("Refused to frame")))
+    {
+      paramString = paramString.split("'");
+      if ((paramString.length > 1) && (paramString[1].equalsIgnoreCase("weixinpreinject://iframe"))) {
+        return Boolean.valueOf(true);
+      }
+    }
+    return Boolean.valueOf(false);
+  }
+  
+  public static Boolean Dj(String paramString)
+  {
+    if ((paramString != null) && (paramString.startsWith("Refused to frame")))
+    {
+      paramString = paramString.split("'");
+      if ((paramString.length > 1) && (paramString[1].equalsIgnoreCase("weixinping://iframe"))) {
+        return Boolean.valueOf(true);
+      }
+    }
+    return Boolean.valueOf(false);
+  }
+  
+  public static String Dk(String paramString)
+  {
+    String str2 = "";
+    String str1 = str2;
+    if (paramString != null)
+    {
+      str1 = str2;
+      if (paramString.startsWith("Refused to frame"))
+      {
+        paramString = paramString.split("'");
+        str1 = str2;
+        if (paramString.length > 2) {
+          str1 = paramString[1];
+        }
+      }
+    }
+    return str1;
+  }
+  
+  public static final String M(Map<String, Object> paramMap)
   {
     StringBuilder localStringBuilder = new StringBuilder();
     Iterator localIterator = paramMap.keySet().iterator();
@@ -82,7 +146,7 @@ public final class q
     {
       String str = (String)localIterator.next();
       Object localObject = paramMap.get(str);
-      if ((!ay.kz(str)) && (localObject != null) && ((!(localObject instanceof String)) || (!ay.kz((String)localObject))))
+      if ((!be.kf(str)) && (localObject != null) && ((!(localObject instanceof String)) || (!be.kf((String)localObject))))
       {
         if (localStringBuilder.length() > 0) {
           localStringBuilder.append("&");
@@ -97,114 +161,175 @@ public final class q
   
   public static void a(Context paramContext, String paramString1, String paramString2, boolean paramBoolean)
   {
-    if (cmc == null) {
-      cmc = new am(1, "webview-save-image", 1);
+    if (chf == null) {
+      chf = new ap(1, "webview-save-image", 1);
     }
-    cmc.c(new b(paramContext, paramString1, paramString2, paramBoolean));
+    chf.c(new b(paramContext, paramString1, paramString2, paramBoolean));
   }
   
   public static void a(Context paramContext, String paramString1, String paramString2, boolean paramBoolean, a parama)
   {
-    if (cmc == null) {
-      cmc = new am(1, "webview-save-image", 1);
+    if (chf == null) {
+      chf = new ap(1, "webview-save-image", 1);
     }
-    cmc.c(new b(paramContext, paramString1, paramString2, paramBoolean, 1, parama));
+    chf.c(new b(paramContext, paramString1, paramString2, paramBoolean, 1, parama));
   }
   
   public static void a(WebView paramWebView)
   {
-    com.tencent.mm.sdk.platformtools.u.d("!32@/B4Tb64lLpJLnjolkGdCeaEhhwktoazg", "initIFrame");
-    paramWebView.evaluateJavascript("javascript:var edw_iframe = document.getElementById('_edw_iframe_');if (edw_iframe === null) {edw_iframe = document.createElement('iframe');edw_iframe.id = '_edw_iframe_';edw_iframe.style.display = 'none';document.documentElement.appendChild(edw_iframe);}", null);
+    if (paramWebView == null) {
+      return;
+    }
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.WebViewUtil", "initPreinjectiframe");
+    ad.k(new Runnable()
+    {
+      public final void run()
+      {
+        jqE.evaluateJavascript("javascript:var preinject_iframe = document.getElementById('preinject_iframe');if (preinject_iframe === null) {preinject_iframe = document.createElement('iframe');preinject_iframe.id = 'preinject_iframe';preinject_iframe.style.display = 'none';document.documentElement.appendChild(preinject_iframe);preinject_iframe.src = ' weixinpreinject://iframe ' }", null);
+      }
+    });
   }
   
   public static void a(WebView paramWebView, String paramString1, String paramString2)
   {
-    if ((paramWebView == null) || (ay.kz(paramString1)) || (ay.kz(paramString2)))
+    a(paramWebView, paramString1, paramString2, true);
+  }
+  
+  public static void a(final WebView paramWebView, final String paramString1, final String paramString2, boolean paramBoolean)
+  {
+    if ((paramWebView == null) || (be.kf(paramString1)) || (be.kf(paramString2)))
     {
-      com.tencent.mm.sdk.platformtools.u.e("!32@/B4Tb64lLpJLnjolkGdCeaEhhwktoazg", "getJsResult fail, invalid argument, scheme = %s, jsCode = %s", new Object[] { paramString1, paramString2 });
+      com.tencent.mm.sdk.platformtools.v.e("MicroMsg.WebViewUtil", "getJsResult fail, invalid argument, scheme = %s, jsCode = %s", new Object[] { paramString1, paramString2 });
       return;
     }
-    com.tencent.mm.sdk.platformtools.u.d("!32@/B4Tb64lLpJLnjolkGdCeaEhhwktoazg", "getJsResult, scheme = %s, jsCode = %s", new Object[] { paramString1, paramString2 });
-    a(paramWebView);
-    paramWebView.evaluateJavascript("javascript:document.getElementById('_edw_iframe_').src = '" + paramString1 + "' + " + paramString2, null);
-  }
-  
-  public static String aSW()
-  {
-    int i = com.tencent.mm.compatible.d.u.oN();
-    if (i == 0) {
-      return "127.0.0.1";
-    }
-    if (i == 1) {
-      return cV(y.getContext());
-    }
-    try
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.WebViewUtil", "getJsResult, scheme = %s, jsCode = %s", new Object[] { paramString1, paramString2 });
+    c(paramWebView);
+    ad.k(new Runnable()
     {
-      InetAddress localInetAddress;
-      do
+      public final void run()
       {
-        localObject1 = NetworkInterface.getNetworkInterfaces();
-        Object localObject2;
-        while (!((Enumeration)localObject2).hasMoreElements())
+        if (jqF)
         {
-          do
-          {
-            if (!((Enumeration)localObject1).hasMoreElements()) {
-              break;
-            }
-            localObject2 = (NetworkInterface)((Enumeration)localObject1).nextElement();
-          } while (localObject2 == null);
-          localObject2 = ((NetworkInterface)localObject2).getInetAddresses();
+          paramWebView.evaluateJavascript("javascript:document.getElementById('_edw_iframe_').src = '" + paramString1 + "' + " + paramString2, null);
+          return;
         }
-        localInetAddress = (InetAddress)((Enumeration)localObject2).nextElement();
-      } while ((localInetAddress == null) || (localInetAddress.isLoopbackAddress()) || (!(localInetAddress instanceof Inet4Address)));
-      if (ay.kz(localInetAddress.getHostAddress())) {
-        return "127.0.0.1";
+        paramWebView.evaluateJavascript("javascript:console.log('" + paramString1 + "' + " + paramString2 + ")", null);
       }
-      Object localObject1 = localInetAddress.getHostAddress();
-      return (String)localObject1;
-    }
-    catch (Exception localException) {}
-    return "127.0.0.1";
+    });
   }
   
-  public static String aT(Context paramContext, String paramString)
+  public static String aOX()
   {
-    Object localObject = "!32@/B4Tb64lLpJLnjolkGdCeaEhhwktoazg, appendUserAgent fail, context is null, stack = " + ay.aVJ();
+    Object localObject = (ConnectivityManager)aa.getContext().getSystemService("connectivity");
+    if (localObject == null) {
+      return "no";
+    }
+    localObject = ((ConnectivityManager)localObject).getActiveNetworkInfo();
+    if (localObject == null) {
+      return "no";
+    }
+    if (((NetworkInfo)localObject).getType() == 1) {
+      return "WIFI";
+    }
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.WebViewUtil", "activeNetInfo extra=%s, type=%d, %s", new Object[] { ((NetworkInfo)localObject).getExtraInfo(), Integer.valueOf(((NetworkInfo)localObject).getType()), ((NetworkInfo)localObject).getExtraInfo() });
+    if (((NetworkInfo)localObject).getExtraInfo() != null) {
+      return ((NetworkInfo)localObject).getExtraInfo().toLowerCase();
+    }
+    return "no";
+  }
+  
+  public static String aR(Context paramContext, String paramString)
+  {
+    Object localObject = "MicroMsg.WebViewUtil, appendUserAgent fail, context is null, stack = " + be.baX();
     boolean bool;
     if (paramContext != null)
     {
       bool = true;
       Assert.assertTrue((String)localObject, bool);
       if (paramString != null) {
-        break label192;
+        break label193;
       }
     }
-    label192:
+    label193:
     for (paramString = " MicroMessenger/";; paramString = paramString + " MicroMessenger/")
     {
-      localObject = as(paramContext, y.getPackageName());
+      localObject = ar(paramContext, aa.getPackageName());
       paramContext = paramString;
       if (localObject != null)
       {
         paramContext = paramString + versionName;
         paramContext = paramContext + "." + versionCode;
       }
-      paramString = ah.dt(y.getContext());
+      paramString = ak.du(aa.getContext());
       paramContext = paramContext + " NetType/" + paramString;
-      paramContext = paramContext + " Language/" + t.dn(y.getContext());
-      com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJLnjolkGdCeaEhhwktoazg", "appendUserAgent, uaStr = " + paramContext);
+      paramContext = paramContext + " Language/" + u.jdMethod_do(aa.getContext());
+      com.tencent.mm.sdk.platformtools.v.i("MicroMsg.WebViewUtil", "appendUserAgent, uaStr = " + paramContext);
       return paramContext;
       bool = false;
       break;
     }
   }
   
-  public static PackageInfo as(Context paramContext, String paramString)
+  public static String aXP()
+  {
+    int i = 0;
+    try
+    {
+      int j = com.tencent.mm.compatible.d.v.ne();
+      i = j;
+    }
+    catch (Exception localException1)
+    {
+      for (;;)
+      {
+        com.tencent.mm.sdk.platformtools.v.e("MicroMsg.WebViewUtil", "getSelfIp, call NetworkDetailInfo.getNetType(), exp = %s", new Object[] { localException1 });
+      }
+      if (i != 1) {
+        break label48;
+      }
+      return cT(aa.getContext());
+      try
+      {
+        label48:
+        InetAddress localInetAddress;
+        do
+        {
+          localObject1 = NetworkInterface.getNetworkInterfaces();
+          Object localObject2;
+          while (!((Enumeration)localObject2).hasMoreElements())
+          {
+            do
+            {
+              if (!((Enumeration)localObject1).hasMoreElements()) {
+                break;
+              }
+              localObject2 = (NetworkInterface)((Enumeration)localObject1).nextElement();
+            } while (localObject2 == null);
+            localObject2 = ((NetworkInterface)localObject2).getInetAddresses();
+          }
+          localInetAddress = (InetAddress)((Enumeration)localObject2).nextElement();
+        } while ((localInetAddress == null) || (localInetAddress.isLoopbackAddress()) || (!(localInetAddress instanceof Inet4Address)));
+        if (!be.kf(localInetAddress.getHostAddress())) {
+          break label136;
+        }
+        return "127.0.0.1";
+        label136:
+        Object localObject1 = localInetAddress.getHostAddress();
+        return (String)localObject1;
+      }
+      catch (Exception localException2) {}
+    }
+    if (i == 0) {
+      return "127.0.0.1";
+    }
+    return "127.0.0.1";
+  }
+  
+  public static PackageInfo ar(Context paramContext, String paramString)
   {
     if (paramString == null)
     {
-      com.tencent.mm.sdk.platformtools.u.e("!32@/B4Tb64lLpJLnjolkGdCeaEhhwktoazg", "getPackageInfo fail, packageName is null");
+      com.tencent.mm.sdk.platformtools.v.e("MicroMsg.WebViewUtil", "getPackageInfo fail, packageName is null");
       return null;
     }
     try
@@ -216,18 +341,34 @@ public final class q
     return null;
   }
   
-  public static String bX(String paramString1, String paramString2)
+  public static void b(WebView paramWebView)
   {
-    if ((ay.kz(paramString1)) || (ay.kz(paramString2)))
-    {
-      com.tencent.mm.sdk.platformtools.u.e("!32@/B4Tb64lLpJLnjolkGdCeaEhhwktoazg", "genJsCode fail, invalid argument, scheme = %s, jsCode = %s", new Object[] { paramString1, paramString2 });
-      return null;
+    if (paramWebView == null) {
+      return;
     }
-    com.tencent.mm.sdk.platformtools.u.d("!32@/B4Tb64lLpJLnjolkGdCeaEhhwktoazg", "genJsCode, scheme = %s, jsCode = %s", new Object[] { paramString1, paramString2 });
-    return "document.getElementById('_edw_iframe_').src = '" + paramString1 + "' + " + paramString2;
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.WebViewUtil", "initPingIFrame");
+    ad.k(new Runnable()
+    {
+      public final void run()
+      {
+        jqE.evaluateJavascript("javascript:var ping_iframe = document.getElementById('ping_iframe');if (ping_iframe === null) {ping_iframe = document.createElement('iframe');ping_iframe.id = 'ping_iframe';ping_iframe.style.display = 'none';document.documentElement.appendChild(ping_iframe);ping_iframe.src = ' weixinping://iframe ' }", null);
+      }
+    });
   }
   
-  private static String cV(Context paramContext)
+  public static void c(WebView paramWebView)
+  {
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.WebViewUtil", "initIFrame");
+    ad.k(new Runnable()
+    {
+      public final void run()
+      {
+        jqE.evaluateJavascript("javascript:var edw_iframe = document.getElementById('_edw_iframe_');if (edw_iframe === null) {edw_iframe = document.createElement('iframe');edw_iframe.id = '_edw_iframe_';edw_iframe.style.display = 'none';document.documentElement.appendChild(edw_iframe);}", null);
+      }
+    });
+  }
+  
+  private static String cT(Context paramContext)
   {
     paramContext = (WifiManager)paramContext.getSystemService("wifi");
     int i;
@@ -246,27 +387,47 @@ public final class q
       }
       i = paramContext.getIpAddress();
     }
-    return String.format("%d.%d.%d.%d", tmp80_66);
+    return String.format("%d.%d.%d.%d", tmp81_67);
+  }
+  
+  public static boolean cj(String paramString1, String paramString2)
+  {
+    if ((paramString1 == null) || (paramString2 == null) || (paramString1.length() < 0) || (paramString2.length() < 0)) {}
+    while ((paramString2.length() > paramString1.length()) || (!paramString2.equalsIgnoreCase(paramString1.substring(0, paramString2.length())))) {
+      return false;
+    }
+    return true;
+  }
+  
+  public static String ck(String paramString1, String paramString2)
+  {
+    if ((be.kf(paramString1)) || (be.kf(paramString2)))
+    {
+      com.tencent.mm.sdk.platformtools.v.e("MicroMsg.WebViewUtil", "genJsCode fail, invalid argument, scheme = %s, jsCode = %s", new Object[] { paramString1, paramString2 });
+      return null;
+    }
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.WebViewUtil", "genJsCode, scheme = %s, jsCode = %s", new Object[] { paramString1, paramString2 });
+    return "document.getElementById('_edw_iframe_').src = '" + paramString1 + "' + " + paramString2;
   }
   
   public static abstract interface a
   {
-    public abstract void yM(String paramString);
+    public abstract void At(String paramString);
   }
   
   private static final class b
-    implements am.a
+    implements ap.a
   {
-    private static Pattern iTq = Pattern.compile("image/[A-Za-z0-9]+");
-    private static Pattern iTr = Pattern.compile("filename=[A-Za-z0-9@.]+.[A-Za-z0-9]+");
-    private int auE;
-    private String bYm;
+    private static Pattern jqI = Pattern.compile("image/[A-Za-z0-9]+");
+    private static Pattern jqJ = Pattern.compile("filename=[A-Za-z0-9@.]+.[A-Za-z0-9]+");
+    private int agr;
+    private String bRV;
     private Context context;
-    private String iTs;
-    private String iTt;
-    private boolean iTu;
-    private q.a iTv;
     private String imagePath;
+    private String jqK;
+    private String jqL;
+    private boolean jqM;
+    private q.a jqN;
     
     public b(Context paramContext, String paramString1, String paramString2, boolean paramBoolean)
     {
@@ -276,33 +437,33 @@ public final class q
     public b(Context paramContext, String paramString1, String paramString2, boolean paramBoolean, int paramInt, q.a parama)
     {
       context = paramContext;
-      bYm = paramString1;
-      iTt = paramString2;
-      iTu = paramBoolean;
-      auE = paramInt;
-      iTv = parama;
+      bRV = paramString1;
+      jqL = paramString2;
+      jqM = paramBoolean;
+      agr = paramInt;
+      jqN = parama;
     }
     
     private void a(String paramString1, String paramString2, InputStream paramInputStream)
     {
-      com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJLnjolkGdCeaEhhwktoazg", "contentType = %s, dispositionType = %s", new Object[] { paramString1, paramString2 });
+      com.tencent.mm.sdk.platformtools.v.i("MicroMsg.WebViewUtil", "contentType = %s, dispositionType = %s", new Object[] { paramString1, paramString2 });
       Object localObject2 = null;
       Object localObject1 = localObject2;
-      if (!ay.kz(paramString1))
+      if (!be.kf(paramString1))
       {
-        paramString1 = iTq.matcher(paramString1);
+        paramString1 = jqI.matcher(paramString1);
         localObject1 = localObject2;
         if (paramString1.find()) {
           localObject1 = paramString1.group().substring(paramString1.group().lastIndexOf('/') + 1);
         }
       }
       paramString1 = (String)localObject1;
-      if (ay.kz((String)localObject1))
+      if (be.kf((String)localObject1))
       {
         paramString1 = (String)localObject1;
-        if (!ay.kz(paramString2))
+        if (!be.kf(paramString2))
         {
-          paramString2 = iTr.matcher(paramString2);
+          paramString2 = jqJ.matcher(paramString2);
           paramString1 = (String)localObject1;
           if (paramString2.find()) {
             paramString1 = paramString2.group().substring(paramString2.group().lastIndexOf('.') + 1);
@@ -311,18 +472,18 @@ public final class q
       }
       paramString2 = paramString1;
       int i;
-      if (ay.kz(paramString1))
+      if (be.kf(paramString1))
       {
-        paramString1 = new o(bYm);
-        i = dtS.lastIndexOf('.');
+        paramString1 = new o(bRV);
+        i = SZ.lastIndexOf('.');
         if (i != -1) {
           break label221;
         }
       }
       label221:
-      for (paramString2 = "jpg";; paramString2 = dtS.substring(i + 1))
+      for (paramString2 = "jpg";; paramString2 = SZ.substring(i + 1))
       {
-        imagePath = k.kt(paramString2);
+        imagePath = k.lc(paramString2);
         paramString1 = new FileOutputStream(imagePath);
         paramString2 = new byte[' '];
         for (;;)
@@ -338,10 +499,10 @@ public final class q
       {
         paramString1.flush();
         paramString1.close();
-        if (auE == 0)
+        if (agr == 0)
         {
-          iTs = context.getString(2131428844, new Object[] { k.FD() });
-          k.d(imagePath, context);
+          jqK = context.getString(2131232150, new Object[] { k.FY() });
+          k.c(imagePath, context);
         }
         return;
       }
@@ -349,7 +510,7 @@ public final class q
       {
         for (;;)
         {
-          com.tencent.mm.sdk.platformtools.u.e("!32@/B4Tb64lLpJLnjolkGdCeaEhhwktoazg", "close os failed : %s", new Object[] { paramString1.getMessage() });
+          com.tencent.mm.sdk.platformtools.v.e("MicroMsg.WebViewUtil", "close os failed : %s", new Object[] { paramString1.getMessage() });
         }
       }
     }
@@ -369,7 +530,7 @@ public final class q
     }
     
     /* Error */
-    public final boolean vd()
+    public final boolean vf()
     {
       // Byte code:
       //   0: aconst_null
@@ -385,36 +546,36 @@ public final class q
       //   14: iconst_0
       //   15: istore_1
       //   16: aload_0
-      //   17: getfield 57	com/tencent/mm/pluginsdk/ui/tools/q$b:iTu	Z
+      //   17: getfield 57	com/tencent/mm/pluginsdk/ui/tools/q$b:jqM	Z
       //   20: ifne +18 -> 38
       //   23: aload_0
       //   24: aload_0
       //   25: getfield 51	com/tencent/mm/pluginsdk/ui/tools/q$b:context	Landroid/content/Context;
       //   28: ldc -81
       //   30: invokevirtual 177	android/content/Context:getString	(I)Ljava/lang/String;
-      //   33: putfield 154	com/tencent/mm/pluginsdk/ui/tools/q$b:iTs	Ljava/lang/String;
+      //   33: putfield 154	com/tencent/mm/pluginsdk/ui/tools/q$b:jqK	Ljava/lang/String;
       //   36: iconst_1
       //   37: ireturn
       //   38: aload_0
-      //   39: getfield 53	com/tencent/mm/pluginsdk/ui/tools/q$b:bYm	Ljava/lang/String;
-      //   42: invokestatic 81	com/tencent/mm/sdk/platformtools/ay:kz	(Ljava/lang/String;)Z
+      //   39: getfield 53	com/tencent/mm/pluginsdk/ui/tools/q$b:bRV	Ljava/lang/String;
+      //   42: invokestatic 81	com/tencent/mm/sdk/platformtools/be:kf	(Ljava/lang/String;)Z
       //   45: ifeq +5 -> 50
       //   48: iconst_0
       //   49: ireturn
       //   50: aload_0
-      //   51: getfield 53	com/tencent/mm/pluginsdk/ui/tools/q$b:bYm	Ljava/lang/String;
+      //   51: getfield 53	com/tencent/mm/pluginsdk/ui/tools/q$b:bRV	Ljava/lang/String;
       //   54: astore_2
       //   55: iconst_0
-      //   56: invokestatic 183	com/tencent/smtt/sdk/d:is	(Z)Lcom/tencent/smtt/sdk/d;
+      //   56: invokestatic 183	com/tencent/smtt/sdk/d:jb	(Z)Lcom/tencent/smtt/sdk/d;
       //   59: astore 8
       //   61: aload 8
       //   63: ifnull +139 -> 202
       //   66: aload 8
-      //   68: invokevirtual 186	com/tencent/smtt/sdk/d:bln	()Z
+      //   68: invokevirtual 186	com/tencent/smtt/sdk/d:brr	()Z
       //   71: ifeq +131 -> 202
       //   74: aload 8
-      //   76: invokevirtual 190	com/tencent/smtt/sdk/d:blm	()Lcom/tencent/smtt/sdk/t;
-      //   79: getfield 196	com/tencent/smtt/sdk/t:mDexLoader	Lcom/tencent/smtt/export/external/DexLoader;
+      //   76: invokevirtual 190	com/tencent/smtt/sdk/d:brq	()Lcom/tencent/smtt/sdk/t;
+      //   79: getfield 196	com/tencent/smtt/sdk/t:mvz	Lcom/tencent/smtt/export/external/DexLoader;
       //   82: ldc -58
       //   84: ldc -56
       //   86: iconst_1
@@ -438,7 +599,7 @@ public final class q
       //   115: new 210	java/net/URL
       //   118: dup
       //   119: aload_0
-      //   120: getfield 53	com/tencent/mm/pluginsdk/ui/tools/q$b:bYm	Ljava/lang/String;
+      //   120: getfield 53	com/tencent/mm/pluginsdk/ui/tools/q$b:bRV	Ljava/lang/String;
       //   123: invokespecial 211	java/net/URL:<init>	(Ljava/lang/String;)V
       //   126: invokevirtual 215	java/net/URL:openConnection	()Ljava/net/URLConnection;
       //   129: checkcast 217	javax/net/ssl/HttpsURLConnection
@@ -453,7 +614,7 @@ public final class q
       //   145: aload_2
       //   146: ldc -32
       //   148: aload_0
-      //   149: getfield 55	com/tencent/mm/pluginsdk/ui/tools/q$b:iTt	Ljava/lang/String;
+      //   149: getfield 55	com/tencent/mm/pluginsdk/ui/tools/q$b:jqL	Ljava/lang/String;
       //   152: invokevirtual 228	javax/net/ssl/HttpsURLConnection:setRequestProperty	(Ljava/lang/String;Ljava/lang/String;)V
       //   155: aload 7
       //   157: astore_3
@@ -468,7 +629,7 @@ public final class q
       //   173: getfield 51	com/tencent/mm/pluginsdk/ui/tools/q$b:context	Landroid/content/Context;
       //   176: ldc -23
       //   178: invokevirtual 177	android/content/Context:getString	(I)Ljava/lang/String;
-      //   181: putfield 154	com/tencent/mm/pluginsdk/ui/tools/q$b:iTs	Ljava/lang/String;
+      //   181: putfield 154	com/tencent/mm/pluginsdk/ui/tools/q$b:jqK	Ljava/lang/String;
       //   184: aload_2
       //   185: aconst_null
       //   186: invokestatic 235	com/tencent/mm/pluginsdk/ui/tools/q$b:a	(Ljava/net/HttpURLConnection;Ljava/io/InputStream;)V
@@ -518,7 +679,7 @@ public final class q
       //   269: aload 4
       //   271: invokevirtual 163	java/lang/Exception:getMessage	()Ljava/lang/String;
       //   274: aastore
-      //   275: invokestatic 166	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   275: invokestatic 166	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   278: aload_3
       //   279: aload_2
       //   280: invokestatic 235	com/tencent/mm/pluginsdk/ui/tools/q$b:a	(Ljava/net/HttpURLConnection;Ljava/io/InputStream;)V
@@ -538,7 +699,7 @@ public final class q
       //   305: new 210	java/net/URL
       //   308: dup
       //   309: aload_0
-      //   310: getfield 53	com/tencent/mm/pluginsdk/ui/tools/q$b:bYm	Ljava/lang/String;
+      //   310: getfield 53	com/tencent/mm/pluginsdk/ui/tools/q$b:bRV	Ljava/lang/String;
       //   313: invokespecial 211	java/net/URL:<init>	(Ljava/lang/String;)V
       //   316: invokevirtual 215	java/net/URL:openConnection	()Ljava/net/URLConnection;
       //   319: checkcast 169	java/net/HttpURLConnection
@@ -549,7 +710,7 @@ public final class q
       //   329: aload_2
       //   330: ldc -32
       //   332: aload_0
-      //   333: getfield 55	com/tencent/mm/pluginsdk/ui/tools/q$b:iTt	Ljava/lang/String;
+      //   333: getfield 55	com/tencent/mm/pluginsdk/ui/tools/q$b:jqL	Ljava/lang/String;
       //   336: invokevirtual 263	java/net/HttpURLConnection:setRequestProperty	(Ljava/lang/String;Ljava/lang/String;)V
       //   339: aload_2
       //   340: invokevirtual 264	java/net/HttpURLConnection:getResponseCode	()I
@@ -560,7 +721,7 @@ public final class q
       //   351: getfield 51	com/tencent/mm/pluginsdk/ui/tools/q$b:context	Landroid/content/Context;
       //   354: ldc -23
       //   356: invokevirtual 177	android/content/Context:getString	(I)Ljava/lang/String;
-      //   359: putfield 154	com/tencent/mm/pluginsdk/ui/tools/q$b:iTs	Ljava/lang/String;
+      //   359: putfield 154	com/tencent/mm/pluginsdk/ui/tools/q$b:jqK	Ljava/lang/String;
       //   362: aload_2
       //   363: aconst_null
       //   364: invokestatic 235	com/tencent/mm/pluginsdk/ui/tools/q$b:a	(Ljava/net/HttpURLConnection;Ljava/io/InputStream;)V
@@ -596,7 +757,7 @@ public final class q
       //   420: aload_2
       //   421: invokevirtual 163	java/lang/Exception:getMessage	()Ljava/lang/String;
       //   424: aastore
-      //   425: invokestatic 166	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   425: invokestatic 166	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   428: aload 4
       //   430: aload_3
       //   431: invokestatic 235	com/tencent/mm/pluginsdk/ui/tools/q$b:a	(Ljava/net/HttpURLConnection;Ljava/io/InputStream;)V
@@ -738,19 +899,19 @@ public final class q
       //   231	245	545	java/lang/Exception
     }
     
-    public final boolean ve()
+    public final boolean vg()
     {
-      if (1 == auE)
+      if (1 == agr)
       {
-        iTv.yM(imagePath);
+        jqN.At(imagePath);
         return true;
       }
-      if (!ay.kz(iTs))
+      if (!be.kf(jqK))
       {
-        Toast.makeText(context, iTs, 1).show();
+        Toast.makeText(context, jqK, 1).show();
         return true;
       }
-      Toast.makeText(context, context.getString(2131428937), 1).show();
+      Toast.makeText(context, context.getString(2131236699), 1).show();
       return true;
     }
   }

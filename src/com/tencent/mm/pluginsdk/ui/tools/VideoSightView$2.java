@@ -8,13 +8,13 @@ final class VideoSightView$2
 {
   VideoSightView$2(VideoSightView paramVideoSightView) {}
   
-  public final void a(b paramb, long paramLong)
+  public final void b(b paramb, long paramLong)
   {
-    if (VideoSightView.a(iST) == 0) {
-      VideoSightView.a(iST, iST.getDuration());
+    if (VideoSightView.a(jqf) == 0) {
+      VideoSightView.a(jqf, jqf.getDuration());
     }
-    if (iST.gyx != null) {
-      iST.gyx.aA((int)paramLong, VideoSightView.a(iST));
+    if (jqf.gEU != null) {
+      jqf.gEU.aF((int)paramLong, VideoSightView.a(jqf));
     }
   }
 }

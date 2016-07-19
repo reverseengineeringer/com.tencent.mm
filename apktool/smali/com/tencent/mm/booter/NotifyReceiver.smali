@@ -13,23 +13,32 @@
 
 
 # static fields
-.field private static blM:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+.field private static aZr:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
-.field private static bmH:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+.field private static ban:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
-.field private static bmI:Ljava/util/Set;
+.field private static bao:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set",
+            "<",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private static bmJ:Ljava/util/concurrent/locks/Lock;
+.field private static bap:Ljava/util/concurrent/locks/Lock;
 
-.field private static bmK:[B
+.field private static baq:[B
 
-.field private static bmL:[B
+.field private static bar:[B
 
-.field private static bmM:Lcom/tencent/mm/booter/NotifyReceiver$a;
+.field private static bas:Lcom/tencent/mm/booter/NotifyReceiver$a;
 
-.field private static bmN:J
+.field private static bat:J
 
-.field private static bmO:Z
+.field private static bau:Z
 
 
 # direct methods
@@ -41,45 +50,45 @@
 
     const/4 v1, 0x0
 
-    .line 94
-    sput-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->blM:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    .line 97
+    sput-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->aZr:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
-    .line 96
-    sput-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->bmH:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    .line 99
+    sput-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->ban:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
-    .line 98
+    .line 101
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->bmI:Ljava/util/Set;
+    sput-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->bao:Ljava/util/Set;
 
-    .line 99
+    .line 102
     new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>(Z)V
 
-    sput-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->bmJ:Ljava/util/concurrent/locks/Lock;
+    sput-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->bap:Ljava/util/concurrent/locks/Lock;
 
-    .line 101
+    .line 104
     new-array v0, v1, [B
 
-    sput-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->bmK:[B
+    sput-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->baq:[B
 
-    .line 102
+    .line 105
     new-array v0, v1, [B
 
-    sput-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->bmL:[B
-
-    .line 106
-    const-wide/16 v0, 0x0
-
-    sput-wide v0, Lcom/tencent/mm/booter/NotifyReceiver;->bmN:J
+    sput-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->bar:[B
 
     .line 109
+    const-wide/16 v0, 0x0
+
+    sput-wide v0, Lcom/tencent/mm/booter/NotifyReceiver;->bat:J
+
+    .line 112
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/tencent/mm/booter/NotifyReceiver;->bmO:Z
+    sput-boolean v0, Lcom/tencent/mm/booter/NotifyReceiver;->bau:Z
 
     return-void
 .end method
@@ -88,10 +97,10 @@
     .locals 0
 
     .prologue
-    .line 86
+    .line 89
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 677
+    .line 891
     return-void
 .end method
 
@@ -99,8 +108,8 @@
     .locals 0
 
     .prologue
-    .line 86
-    sput-object p0, Lcom/tencent/mm/booter/NotifyReceiver;->blM:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    .line 89
+    sput-object p0, Lcom/tencent/mm/booter/NotifyReceiver;->aZr:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     return-object p0
 .end method
@@ -109,30 +118,30 @@
     .locals 0
 
     .prologue
-    .line 86
-    sput-object p0, Lcom/tencent/mm/booter/NotifyReceiver;->bmH:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    .line 89
+    sput-object p0, Lcom/tencent/mm/booter/NotifyReceiver;->ban:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     return-object p0
 .end method
 
-.method public static mR()V
+.method public static le()V
     .locals 3
 
     .prologue
     const/4 v2, 0x0
 
-    .line 114
-    const-string/jumbo v0, "!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl"
+    .line 117
+    const-string/jumbo v0, "MicroMsg.NotifyReceiver"
 
     const-string/jumbo v1, "markUIShow"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 115
-    sput-boolean v2, Lcom/tencent/mm/booter/NotifyReceiver;->bmO:Z
+    .line 118
+    sput-boolean v2, Lcom/tencent/mm/booter/NotifyReceiver;->bau:Z
 
-    .line 116
-    invoke-static {}, Lcom/tencent/mm/network/z;->EZ()Landroid/content/SharedPreferences;
+    .line 119
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fv()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -148,147 +157,167 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 117
+    .line 120
     return-void
 .end method
 
-.method public static mS()V
-    .locals 4
+.method public static lf()V
+    .locals 5
 
     .prologue
+    const v4, 0xfff0002
+
     const/16 v3, 0x8a
 
     const/16 v2, 0x27
 
-    .line 120
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/tencent/mm/booter/NotifyReceiver;->bmM:Lcom/tencent/mm/booter/NotifyReceiver$a;
-
-    invoke-virtual {v0, v3, v1}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
-
-    .line 121
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/tencent/mm/booter/NotifyReceiver;->bmM:Lcom/tencent/mm/booter/NotifyReceiver$a;
-
-    invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
-
     .line 123
-    sget-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->bmM:Lcom/tencent/mm/booter/NotifyReceiver$a;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/tencent/mm/booter/NotifyReceiver;->bas:Lcom/tencent/mm/booter/NotifyReceiver$a;
+
+    invoke-virtual {v0, v3, v1}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
+
+    .line 124
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/tencent/mm/booter/NotifyReceiver;->bas:Lcom/tencent/mm/booter/NotifyReceiver$a;
+
+    invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
+
+    .line 125
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/tencent/mm/booter/NotifyReceiver;->bas:Lcom/tencent/mm/booter/NotifyReceiver$a;
+
+    invoke-virtual {v0, v4, v1}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
+
+    .line 127
+    sget-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->bas:Lcom/tencent/mm/booter/NotifyReceiver$a;
 
     if-nez v0, :cond_0
 
-    .line 124
+    .line 128
     new-instance v0, Lcom/tencent/mm/booter/NotifyReceiver$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/booter/NotifyReceiver$a;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->bmM:Lcom/tencent/mm/booter/NotifyReceiver$a;
+    sput-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->bas:Lcom/tencent/mm/booter/NotifyReceiver$a;
 
-    .line 127
+    .line 131
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    sget-object v1, Lcom/tencent/mm/booter/NotifyReceiver;->bmM:Lcom/tencent/mm/booter/NotifyReceiver$a;
+    sget-object v1, Lcom/tencent/mm/booter/NotifyReceiver;->bas:Lcom/tencent/mm/booter/NotifyReceiver$a;
 
-    invoke-virtual {v0, v3, v1}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v3, v1}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
-    .line 128
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 132
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    sget-object v1, Lcom/tencent/mm/booter/NotifyReceiver;->bmM:Lcom/tencent/mm/booter/NotifyReceiver$a;
+    sget-object v1, Lcom/tencent/mm/booter/NotifyReceiver;->bas:Lcom/tencent/mm/booter/NotifyReceiver$a;
 
-    invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
-    .line 129
+    .line 133
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/tencent/mm/booter/NotifyReceiver;->bas:Lcom/tencent/mm/booter/NotifyReceiver$a;
+
+    invoke-virtual {v0, v4, v1}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
+
+    .line 135
     return-void
 .end method
 
-.method static synthetic mT()[B
+.method static synthetic lg()[B
     .locals 1
 
     .prologue
-    .line 86
-    sget-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->bmK:[B
+    .line 89
+    sget-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->baq:[B
 
     return-object v0
 .end method
 
-.method static synthetic mU()Lcom/tencent/mm/jni/platformcomm/WakerLock;
+.method static synthetic lh()Lcom/tencent/mm/jni/platformcomm/WakerLock;
     .locals 1
 
     .prologue
-    .line 86
-    sget-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->blM:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    .line 89
+    sget-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->aZr:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     return-object v0
 .end method
 
-.method static synthetic mV()[B
+.method static synthetic li()[B
     .locals 1
 
     .prologue
-    .line 86
-    sget-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->bmL:[B
+    .line 89
+    sget-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->bar:[B
 
     return-object v0
 .end method
 
-.method static synthetic mW()Lcom/tencent/mm/jni/platformcomm/WakerLock;
+.method static synthetic lj()Lcom/tencent/mm/jni/platformcomm/WakerLock;
     .locals 1
 
     .prologue
-    .line 86
-    sget-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->bmH:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    .line 89
+    sget-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->ban:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     return-object v0
 .end method
 
-.method static synthetic mX()Ljava/util/concurrent/locks/Lock;
+.method static synthetic lk()Ljava/util/concurrent/locks/Lock;
     .locals 1
 
     .prologue
-    .line 86
-    sget-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->bmJ:Ljava/util/concurrent/locks/Lock;
+    .line 89
+    sget-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->bap:Ljava/util/concurrent/locks/Lock;
 
     return-object v0
 .end method
 
-.method static synthetic mY()Ljava/util/Set;
+.method static synthetic ll()Ljava/util/Set;
     .locals 1
 
     .prologue
-    .line 86
-    sget-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->bmI:Ljava/util/Set;
+    .line 89
+    sget-object v0, Lcom/tencent/mm/booter/NotifyReceiver;->bao:Ljava/util/Set;
 
     return-object v0
 .end method
 
-.method static synthetic mZ()Z
+.method static synthetic lm()Z
     .locals 1
 
     .prologue
-    .line 86
-    sget-boolean v0, Lcom/tencent/mm/booter/NotifyReceiver;->bmO:Z
+    .line 89
+    sget-boolean v0, Lcom/tencent/mm/booter/NotifyReceiver;->bau:Z
 
     return v0
 .end method
 
-.method static synthetic na()J
+.method static synthetic ln()J
     .locals 2
 
     .prologue
-    .line 86
-    sget-wide v0, Lcom/tencent/mm/booter/NotifyReceiver;->bmN:J
+    .line 89
+    sget-wide v0, Lcom/tencent/mm/booter/NotifyReceiver;->bat:J
 
     return-wide v0
 .end method
@@ -297,8 +326,8 @@
     .locals 0
 
     .prologue
-    .line 86
-    sput-wide p0, Lcom/tencent/mm/booter/NotifyReceiver;->bmN:J
+    .line 89
+    sput-wide p0, Lcom/tencent/mm/booter/NotifyReceiver;->bat:J
 
     return-wide p0
 .end method
@@ -306,24 +335,32 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 3
+    .locals 5
 
     .prologue
-    .line 133
-    const-string/jumbo v0, "!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl"
+    const/4 v4, 0x1
 
-    const-string/jumbo v1, "onReceive"
+    const/4 v3, 0x0
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    .line 139
+    const-string/jumbo v0, "MicroMsg.NotifyReceiver"
 
-    .line 134
+    const-string/jumbo v1, "onReceive intent :%s"
+
+    new-array v2, v4, [Ljava/lang/Object;
+
+    aput-object p2, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 140
     if-nez p2, :cond_0
 
-    .line 150
+    .line 156
     :goto_0
     return-void
 
-    .line 138
+    .line 144
     :cond_0
     const-string/jumbo v0, "system_config_prefs"
 
@@ -333,27 +370,25 @@
 
     move-result-object v0
 
-    .line 139
+    .line 145
     const-string/jumbo v1, "settings_fully_exit"
 
-    const/4 v2, 0x1
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v0, v1, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 140
-    const-string/jumbo v0, "!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl"
+    .line 146
+    const-string/jumbo v0, "MicroMsg.NotifyReceiver"
 
     const-string/jumbo v1, "fully exited, no need to start service"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 144
+    .line 150
     :cond_1
     new-instance v0, Landroid/content/Intent;
 
@@ -361,29 +396,27 @@
 
     invoke-direct {v0, p1, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 145
+    .line 151
     const-string/jumbo v1, "intent_from_shoot_key"
 
-    const/4 v2, 0x0
-
-    invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {p2, v1, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 146
+    .line 152
     const-string/jumbo v1, "notify_option_type"
 
     const/4 v2, 0x3
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 148
+    .line 154
     :cond_2
     invoke-virtual {v0, p2}, Landroid/content/Intent;->putExtras(Landroid/content/Intent;)Landroid/content/Intent;
 
-    .line 149
+    .line 155
     invoke-virtual {p1, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     goto :goto_0

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+.field final synthetic jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 161
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$1;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$1;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,13 +41,13 @@
 
     .prologue
     .line 164
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$1;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$1;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
-    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->eYM:Lcom/tencent/mm/ui/widget/MMEditText;
+    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->fhg:Lcom/tencent/mm/ui/widget/MMEditText;
 
     if-eqz v1, :cond_0
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->eYM:Lcom/tencent/mm/ui/widget/MMEditText;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->fhg:Lcom/tencent/mm/ui/widget/MMEditText;
 
     const-string/jumbo v1, ""
 

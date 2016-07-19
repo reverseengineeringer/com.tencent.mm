@@ -24,55 +24,52 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.tencent.mm.d.a.ay;
-import com.tencent.mm.d.a.ay.a;
-import com.tencent.mm.d.a.ay.b;
+import com.tencent.mm.e.a.bb;
+import com.tencent.mm.e.a.bb.a;
+import com.tencent.mm.e.a.bb.b;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.platformtools.k;
-import com.tencent.mm.sdk.c.a;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.ExifHelper;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.h;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.MMImageView;
-import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.g.c;
 import com.tencent.mm.ui.chatting.ChattingUI;
 import com.tencent.mm.ui.contact.SelectContactUI;
 import com.tencent.mm.ui.contact.r;
-import com.tencent.mm.ui.j;
 import java.util.ArrayList;
 
 public class ShareImageSelectorUI
   extends MMActivity
   implements AdapterView.OnItemClickListener
 {
-  private static int lBx = 1;
-  private ListView cUz;
-  private View dnF;
-  private ImageView dvk;
-  private String eXB;
-  private Dialog lBA;
-  private View.OnClickListener lBB = new View.OnClickListener()
-  {
-    public final void onClick(View paramAnonymousView)
-    {
-      ShareImageSelectorUI.a(ShareImageSelectorUI.this);
-    }
-  };
-  private int lBy = 2;
-  private a lBz;
-  private aa mHandler = new aa()
+  private static int mcp = 1;
+  private ListView cSm;
+  private View dnk;
+  private ImageView dvD;
+  private String ffR;
+  private ac mHandler = new ac()
   {
     public final void handleMessage(Message paramAnonymousMessage)
     {
       finish();
     }
   };
-  
-  private void afO()
+  private int mcq = 2;
+  private a mcr;
+  private Dialog mcs;
+  private View.OnClickListener mct = new View.OnClickListener()
   {
-    g.a(koJ.kpc, getString(2131428855), getString(2131428856), true, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+    public final void onClick(View paramAnonymousView)
+    {
+      ShareImageSelectorUI.a(ShareImageSelectorUI.this);
+    }
+  };
+  
+  private void ait()
+  {
+    com.tencent.mm.ui.base.g.a(kNN.kOg, getString(2131232156), getString(2131232158), true, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
@@ -82,26 +79,26 @@ public class ShareImageSelectorUI
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
-        if (ShareImageSelectorUI.Dt() == 1) {
+        if (ShareImageSelectorUI.bpp() == 1) {
           ShareImageSelectorUI.c(ShareImageSelectorUI.this);
         }
       }
     });
   }
   
-  private void bjo()
+  private void bpl()
   {
-    if ((lBA != null) && (lBA.isShowing())) {
+    if ((mcs != null) && (mcs.isShowing())) {
       return;
     }
-    String str1 = getString(2131428853);
-    String str2 = getString(2131428852);
-    String str3 = getString(2131428854);
-    ActionBarActivity localActionBarActivity = koJ.kpc;
-    String str4 = getString(2131429451);
+    String str1 = getString(2131232160);
+    String str2 = getString(2131232161);
+    String str3 = getString(2131232159);
+    ActionBarActivity localActionBarActivity = kNN.kOg;
+    String str4 = getString(2131233826);
     g.c local6 = new g.c()
     {
-      public final void eu(int paramAnonymousInt)
+      public final void fg(int paramAnonymousInt)
       {
         switch (paramAnonymousInt)
         {
@@ -124,65 +121,65 @@ public class ShareImageSelectorUI
         ShareImageSelectorUI.b(ShareImageSelectorUI.this);
       }
     };
-    lBA = g.a(localActionBarActivity, str4, new String[] { str1, str2, str3 }, null, local6, local7);
+    mcs = com.tencent.mm.ui.base.g.a(localActionBarActivity, str4, new String[] { str1, str2, str3 }, null, local6, local7);
   }
   
-  private void bjp()
+  private void bpm()
   {
     Intent localIntent = new Intent(this, SelectContactUI.class);
-    localIntent.putExtra("list_attr", r.llF);
-    localIntent.putExtra("titile", getString(2131428320));
+    localIntent.putExtra("list_attr", r.lLS);
+    localIntent.putExtra("titile", getString(2131230846));
     localIntent.putExtra("list_type", 11);
     localIntent.putExtra("shareImage", true);
-    localIntent.putExtra("shareImagePath", eXB);
+    localIntent.putExtra("shareImagePath", ffR);
     startActivityForResult(localIntent, 1001);
   }
   
-  private void bjq()
+  private void bpn()
   {
     Intent localIntent = new Intent();
     localIntent.putExtra("Ksnsupload_type", 0);
-    localIntent.putExtra("sns_kemdia_path", eXB);
+    localIntent.putExtra("sns_kemdia_path", ffR);
     localIntent.putExtra("need_result", true);
-    com.tencent.mm.ar.c.a(koJ.kpc, "sns", ".ui.SnsUploadUI", localIntent, 1002);
+    com.tencent.mm.av.c.a(kNN.kOg, "sns", ".ui.SnsUploadUI", localIntent, 1002);
   }
   
-  private void bjr()
+  private void bpo()
   {
-    ay localay = new ay();
-    if ((com.tencent.mm.pluginsdk.model.d.a(localay, 6, eXB)) && (aue.ret == 0))
+    bb localbb = new bb();
+    if ((com.tencent.mm.pluginsdk.model.d.a(localbb, 6, ffR)) && (afR.ret == 0))
     {
-      a.jUF.j(localay);
-      g.ba(koJ.kpc, getString(2131431055));
+      com.tencent.mm.sdk.c.a.kug.y(localbb);
+      com.tencent.mm.ui.snackbar.a.a(52, this, getString(2131232638), getString(2131232583), null);
     }
     for (;;)
     {
-      com.tencent.mm.plugin.report.service.h.fUJ.g(11048, new Object[] { Integer.valueOf(3), Integer.valueOf(0), Integer.valueOf(0) });
+      com.tencent.mm.plugin.report.service.g.gdY.h(11048, new Object[] { Integer.valueOf(3), Integer.valueOf(0), Integer.valueOf(0) });
       if (mHandler != null) {
         mHandler.sendEmptyMessageDelayed(0, 800L);
       }
       return;
-      g.e(koJ.kpc, aud.type, 0);
+      com.tencent.mm.ui.base.g.f(kNN.kOg, afQ.type, 0);
     }
   }
   
-  protected final int Kj()
+  protected final int KT()
   {
     return 1;
   }
   
   protected final int getLayoutId()
   {
-    return 2131361847;
+    return 2130904362;
   }
   
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
   {
-    u.d("!44@/B4Tb64lLpIPG1BmaCV8Iks+xbMm/hgife9upnywcQQ=", "requestCode:%d , resultCode:%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    v.d("MicroMsg.ShareImageSelectorUI", "requestCode:%d , resultCode:%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
     switch (paramInt1)
     {
     default: 
-      u.w("!44@/B4Tb64lLpIPG1BmaCV8Iks+xbMm/hgife9upnywcQQ=", "unknow result");
+      v.w("MicroMsg.ShareImageSelectorUI", "unknow result");
       return;
     case 1001: 
       if (paramInt2 == -1)
@@ -200,35 +197,35 @@ public class ShareImageSelectorUI
         finish();
         return;
       }
-      u.w("!44@/B4Tb64lLpIPG1BmaCV8Iks+xbMm/hgife9upnywcQQ=", "user cancle");
+      v.w("MicroMsg.ShareImageSelectorUI", "user cancle");
       return;
     }
     if (paramInt2 == -1)
     {
-      Toast.makeText(koJ.kpc, 2131431071, 0).show();
+      Toast.makeText(kNN.kOg, 2131231863, 0).show();
       finish();
       return;
     }
-    u.w("!44@/B4Tb64lLpIPG1BmaCV8Iks+xbMm/hgife9upnywcQQ=", "user cancle");
+    v.w("MicroMsg.ShareImageSelectorUI", "user cancle");
   }
   
   public void onBackPressed()
   {
-    afO();
+    ait();
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    paramBundle = ah.tD().rn().get(229635, null);
+    paramBundle = ah.tE().ro().get(229635, null);
     if ((paramBundle instanceof Integer))
     {
       i = ((Integer)paramBundle).intValue();
       if ((i == 0) || (i == 1)) {
-        lBx = i;
+        mcp = i;
       }
     }
-    qb(2131429451);
+    rR(2131233826);
     b(new MenuItem.OnMenuItemClickListener()
     {
       public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
@@ -237,66 +234,66 @@ public class ShareImageSelectorUI
         return false;
       }
     });
-    lBy = getIntent().getIntExtra("Select_Conv_Type", 2);
-    eXB = getIntent().getStringExtra("intent_extra_image_path");
-    dnF = findViewById(2131165440);
-    dvk = ((ImageView)findViewById(2131165228));
-    dvk.setOnClickListener(lBB);
-    cUz = ((ListView)findViewById(2131165441));
-    lBz = new a();
-    cUz.setAdapter(lBz);
-    cUz.setOnItemClickListener(this);
-    u.d("!44@/B4Tb64lLpIPG1BmaCV8Iks+xbMm/hgife9upnywcQQ=", "mSelectType:%s ImagePath:%s", new Object[] { lBy, eXB });
-    if (lBx == 1)
+    mcq = getIntent().getIntExtra("Select_Conv_Type", 2);
+    ffR = getIntent().getStringExtra("intent_extra_image_path");
+    dnk = findViewById(2131757172);
+    dvD = ((ImageView)findViewById(2131755043));
+    dvD.setOnClickListener(mct);
+    cSm = ((ListView)findViewById(2131756581));
+    mcr = new a();
+    cSm.setAdapter(mcr);
+    cSm.setOnItemClickListener(this);
+    v.d("MicroMsg.ShareImageSelectorUI", "mSelectType:%s ImagePath:%s", new Object[] { mcq, ffR });
+    if (mcp == 1)
     {
-      qa(8);
-      cUz.setVisibility(8);
-      dvk.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
-      dvk.setPadding(0, 0, 0, 0);
-      dvk.setOnClickListener(null);
-      dnF.setBackgroundColor(getResources().getColor(2131230721));
-      bjo();
+      rP(8);
+      cSm.setVisibility(8);
+      dvD.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
+      dvD.setPadding(0, 0, 0, 0);
+      dvD.setOnClickListener(null);
+      dnk.setBackgroundColor(getResources().getColor(2131689609));
+      bpl();
     }
     long l = System.currentTimeMillis();
-    paramBundle = k.ku(eXB);
-    int i = BackwardSupportUtil.ExifHelper.kq(eXB);
-    u.d("!44@/B4Tb64lLpIPG1BmaCV8Iks+xbMm/hgife9upnywcQQ=", "cpan [onCreate]degree:%d", new Object[] { Integer.valueOf(i) });
+    paramBundle = com.tencent.mm.platformtools.j.ld(ffR);
+    int i = BackwardSupportUtil.ExifHelper.EM(ffR);
+    v.d("MicroMsg.ShareImageSelectorUI", "cpan [onCreate]degree:%d", new Object[] { Integer.valueOf(i) });
     paramBundle = com.tencent.mm.sdk.platformtools.d.b(paramBundle, i);
     if ((paramBundle != null) && (!paramBundle.isRecycled())) {
-      dvk.setImageBitmap(paramBundle);
+      dvD.setImageBitmap(paramBundle);
     }
-    u.d("!44@/B4Tb64lLpIPG1BmaCV8Iks+xbMm/hgife9upnywcQQ=", "cpan[onCreate] Read Bitmap Time:%s", new Object[] { System.currentTimeMillis() - l + "'" });
+    v.d("MicroMsg.ShareImageSelectorUI", "cpan[onCreate] Read Bitmap Time:%s", new Object[] { System.currentTimeMillis() - l + "'" });
   }
   
-  public void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
     switch (paramInt)
     {
     default: 
-      u.e("!44@/B4Tb64lLpIPG1BmaCV8Iks+xbMm/hgife9upnywcQQ=", "unknow postion.");
+      v.e("MicroMsg.ShareImageSelectorUI", "unknow postion.");
       return;
     case 0: 
-      bjp();
+      bpm();
       return;
     case 1: 
-      bjq();
+      bpn();
       return;
     }
-    bjr();
+    bpo();
   }
   
   protected void onResume()
   {
     super.onResume();
-    if ((lBx == 1) && ((lBA == null) || (!lBA.isShowing()))) {
-      bjo();
+    if ((mcp == 1) && ((mcs == null) || (!mcs.isShowing()))) {
+      bpl();
     }
   }
   
   final class a
     extends BaseAdapter
   {
-    public a[] lBD = { new a(2131428853, 2130903581), new a(2131428852, 2130903724), new a(2131428854, 2130903693) };
+    public a[] mcv = { new a(2131232160, 2131165824), new a(2131232161, 2131165474), new a(2131232159, 2131165605) };
     
     a() {}
     
@@ -313,15 +310,15 @@ public class ShareImageSelectorUI
     public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
     {
       if ((paramView == null) || (paramView.getTag() == null)) {
-        paramView = LayoutInflater.from(koJ.kpc).inflate(2131361871, null);
+        paramView = LayoutInflater.from(kNN.kOg).inflate(2130904363, null);
       }
       for (paramViewGroup = new ShareImageSelectorUI.b(ShareImageSelectorUI.this, paramView);; paramViewGroup = (ShareImageSelectorUI.b)paramView.getTag())
       {
-        a locala = lBD[paramInt];
+        a locala = mcv[paramInt];
         if (locala != null)
         {
-          lBH.setText(lBE);
-          dTv.setImageResource(lBF);
+          mcz.setText(mcw);
+          dVD.setImageResource(mcx);
         }
         return paramView;
       }
@@ -329,26 +326,26 @@ public class ShareImageSelectorUI
     
     final class a
     {
-      int lBE;
-      int lBF;
+      int mcw;
+      int mcx;
       
       public a(int paramInt1, int paramInt2)
       {
-        lBE = paramInt1;
-        lBF = paramInt2;
+        mcw = paramInt1;
+        mcx = paramInt2;
       }
     }
   }
   
   final class b
   {
-    MMImageView dTv;
-    TextView lBH;
+    MMImageView dVD;
+    TextView mcz;
     
     public b(View paramView)
     {
-      dTv = ((MMImageView)paramView.findViewById(2131165528));
-      lBH = ((TextView)paramView.findViewById(2131165529));
+      dVD = ((MMImageView)paramView.findViewById(2131756476));
+      mcz = ((TextView)paramView.findViewById(2131758979));
     }
   }
 }

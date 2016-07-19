@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 328
+    .line 274
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -31,13 +31,13 @@
     .locals 7
 
     .prologue
-    .line 333
+    .line 279
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 334
-    const-string/jumbo v2, "!56@/B4Tb64lLpLiQ7OrT4MAaceQRK/W0iihqAiu47he09l2tvBb7e03Xw=="
+    .line 280
+    const-string/jumbo v2, "MicroMsg.ExdeviceProcessReceiver"
 
     const-string/jumbo v3, "[hakon][Step] onReceive, save rebootTime = %s"
 
@@ -53,16 +53,16 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 335
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUO()Landroid/content/SharedPreferences;
+    .line 281
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZS()Landroid/content/SharedPreferences;
 
-    .line 337
+    .line 283
     const/16 v2, 0xcd
 
-    invoke-static {v2, v0, v1}, Lcom/tencent/mm/compatible/d/r;->j(IJ)V
+    invoke-static {v2, v0, v1}, Lcom/tencent/mm/compatible/d/r;->h(IJ)V
 
-    .line 339
+    .line 285
     return-void
 .end method

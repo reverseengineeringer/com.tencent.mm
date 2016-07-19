@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sight.draft.ui;
 
 import android.view.View;
 import android.view.View.OnLongClickListener;
-import com.tencent.mm.an.f;
+import com.tencent.mm.aq.j;
 
 final class b$b
   implements View.OnLongClickListener
@@ -16,8 +16,8 @@ final class b$b
     {
       return true;
       paramView = (b.e)paramView.getTag();
-    } while ((cfv == null) || (-1 == cfv.field_fileStatus));
-    gzt.a(b.d.gzw, true);
+    } while ((caH == null) || (-1 == caH.field_fileStatus));
+    gFV.a(b.d.gFY, true);
     return true;
   }
 }

@@ -1,494 +1,812 @@
 package ct;
 
-import android.content.Context;
-import android.telephony.TelephonyManager;
-import android.text.TextUtils;
-import org.apache.http.HttpHost;
-import org.apache.http.client.HttpClient;
-import org.apache.http.params.HttpParams;
+import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Array;
+import java.nio.BufferUnderflowException;
+import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
-public class bb
+public final class bb
 {
-  public static String a;
-  public static String b;
-  public static volatile boolean c = false;
-  private static final String d = bb.class.getSimpleName();
-  private static String e = "cmwap";
-  private static String f = "3gwap";
-  private static String g = "uniwap";
-  private static String h = "ctwap";
-  private static Context i;
-  private static volatile boolean j = true;
-  private static String k;
-  private static volatile int l;
-  private static int m;
-  private static String n = "";
+  ByteBuffer a;
+  String b = "GBK";
   
-  static
+  public bb() {}
+  
+  public bb(byte[] paramArrayOfByte)
   {
-    a = "";
-    k = "";
-    b = "";
-    l = 0;
-    m = 0;
+    a = ByteBuffer.wrap(paramArrayOfByte);
   }
   
-  public static String a()
+  public bb(byte[] paramArrayOfByte, byte paramByte)
   {
-    for (;;)
+    a = ByteBuffer.wrap(paramArrayOfByte);
+    a.position(4);
+  }
+  
+  private double a(double paramDouble, int paramInt, boolean paramBoolean)
+  {
+    if (a(paramInt))
+    {
+      locala = new a();
+      a(locala, a);
+      switch (a)
+      {
+      default: 
+        throw new RuntimeException("type mismatch.");
+      case 12: 
+        paramDouble = 0.0D;
+      }
+    }
+    while (!paramBoolean)
+    {
+      a locala;
+      return paramDouble;
+      return a.getFloat();
+      return a.getDouble();
+    }
+    throw new RuntimeException("require field not exist.");
+  }
+  
+  private float a(float paramFloat, int paramInt, boolean paramBoolean)
+  {
+    if (a(paramInt))
+    {
+      locala = new a();
+      a(locala, a);
+      switch (a)
+      {
+      default: 
+        throw new RuntimeException("type mismatch.");
+      case 12: 
+        paramFloat = 0.0F;
+      }
+    }
+    while (!paramBoolean)
+    {
+      a locala;
+      return paramFloat;
+      return a.getFloat();
+    }
+    throw new RuntimeException("require field not exist.");
+  }
+  
+  private static int a(a parama, ByteBuffer paramByteBuffer)
+  {
+    int i = paramByteBuffer.get();
+    a = ((byte)(i & 0xF));
+    b = ((i & 0xF0) >> 4);
+    if (b == 15)
+    {
+      b = (paramByteBuffer.get() & 0xFF);
+      return 2;
+    }
+    return 1;
+  }
+  
+  private void a()
+  {
+    a locala = new a();
+    do
+    {
+      a(locala, a);
+      a(a);
+    } while (a != 11);
+  }
+  
+  private void a(byte paramByte)
+  {
+    byte b2 = 0;
+    byte b1 = 0;
+    a locala;
+    switch (paramByte)
+    {
+    default: 
+      throw new RuntimeException("invalid type.");
+    case 0: 
+      a.position(a.position() + 1);
+    case 11: 
+    case 12: 
+      return;
+    case 1: 
+      a.position(a.position() + 2);
+      return;
+    case 2: 
+      a.position(a.position() + 4);
+      return;
+    case 3: 
+      a.position(a.position() + 8);
+      return;
+    case 4: 
+      a.position(a.position() + 4);
+      return;
+    case 5: 
+      a.position(a.position() + 8);
+      return;
+    case 6: 
+      b1 = a.get();
+      paramByte = b1;
+      if (b1 < 0) {
+        paramByte = b1 + 256;
+      }
+      a.position(paramByte + a.position());
+      return;
+    case 7: 
+      paramByte = a.getInt();
+      a.position(paramByte + a.position());
+      return;
+    case 8: 
+      b2 = a(0, 0, true);
+      paramByte = b1;
+      while (paramByte < b2 << 1)
+      {
+        locala = new a();
+        a(locala, a);
+        a(a);
+        paramByte += 1;
+      }
+    case 9: 
+      b1 = a(0, 0, true);
+      paramByte = b2;
+      while (paramByte < b1)
+      {
+        locala = new a();
+        a(locala, a);
+        a(a);
+        paramByte += 1;
+      }
+    case 13: 
+      locala = new a();
+      a(locala, a);
+      if (a != 0) {
+        throw new RuntimeException("skipField with invalid type, type value: " + paramByte + ", " + a);
+      }
+      paramByte = a(0, 0, true);
+      a.position(paramByte + a.position());
+      return;
+    }
+    a();
+  }
+  
+  private boolean a(int paramInt)
+  {
+    try
+    {
+      a locala = new a();
+      for (;;)
+      {
+        int i = a(locala, a.duplicate());
+        if (a == 11) {
+          return false;
+        }
+        if (paramInt <= b)
+        {
+          if (paramInt != b) {
+            break;
+          }
+          return true;
+        }
+        a.position(i + a.position());
+        a(a);
+      }
+      return false;
+    }
+    catch (BufferUnderflowException localBufferUnderflowException)
+    {
+      return false;
+    }
+    catch (RuntimeException localRuntimeException) {}
+  }
+  
+  private Object[] b(Object paramObject, int paramInt, boolean paramBoolean)
+  {
+    if (a(paramInt))
+    {
+      localObject = new a();
+      a((a)localObject, a);
+      switch (a)
+      {
+      default: 
+        throw new RuntimeException("type mismatch.");
+      }
+      int i = a(0, 0, true);
+      if (i < 0) {
+        throw new RuntimeException("size invalid: " + i);
+      }
+      Object[] arrayOfObject = (Object[])Array.newInstance(paramObject.getClass(), i);
+      paramInt = 0;
+      for (;;)
+      {
+        localObject = arrayOfObject;
+        if (paramInt >= i) {
+          break;
+        }
+        arrayOfObject[paramInt] = a(paramObject, 0, true);
+        paramInt += 1;
+      }
+    }
+    if (paramBoolean) {
+      throw new RuntimeException("require field not exist.");
+    }
+    Object localObject = null;
+    return (Object[])localObject;
+  }
+  
+  private boolean[] c(int paramInt, boolean paramBoolean)
+  {
+    Object localObject = null;
+    if (a(paramInt))
+    {
+      localObject = new a();
+      a((a)localObject, a);
+      switch (a)
+      {
+      default: 
+        throw new RuntimeException("type mismatch.");
+      }
+      i = a(0, 0, true);
+      if (i < 0) {
+        throw new RuntimeException("size invalid: " + i);
+      }
+      localObject = new boolean[i];
+      paramInt = 0;
+      if (paramInt < i)
+      {
+        if (a((byte)0, 0, true) != 0) {}
+        for (paramBoolean = true;; paramBoolean = false)
+        {
+          localObject[paramInt] = paramBoolean;
+          paramInt += 1;
+          break;
+        }
+      }
+    }
+    while (!paramBoolean)
+    {
+      int i;
+      return (boolean[])localObject;
+    }
+    throw new RuntimeException("require field not exist.");
+  }
+  
+  private short[] d(int paramInt, boolean paramBoolean)
+  {
+    Object localObject = null;
+    if (a(paramInt))
+    {
+      localObject = new a();
+      a((a)localObject, a);
+      switch (a)
+      {
+      default: 
+        throw new RuntimeException("type mismatch.");
+      }
+      int i = a(0, 0, true);
+      if (i < 0) {
+        throw new RuntimeException("size invalid: " + i);
+      }
+      short[] arrayOfShort = new short[i];
+      paramInt = 0;
+      for (;;)
+      {
+        localObject = arrayOfShort;
+        if (paramInt >= i) {
+          break;
+        }
+        arrayOfShort[paramInt] = a(arrayOfShort[0], 0, true);
+        paramInt += 1;
+      }
+    }
+    if (paramBoolean) {
+      throw new RuntimeException("require field not exist.");
+    }
+    return (short[])localObject;
+  }
+  
+  private int[] e(int paramInt, boolean paramBoolean)
+  {
+    Object localObject = null;
+    if (a(paramInt))
+    {
+      localObject = new a();
+      a((a)localObject, a);
+      switch (a)
+      {
+      default: 
+        throw new RuntimeException("type mismatch.");
+      }
+      int i = a(0, 0, true);
+      if (i < 0) {
+        throw new RuntimeException("size invalid: " + i);
+      }
+      int[] arrayOfInt = new int[i];
+      paramInt = 0;
+      for (;;)
+      {
+        localObject = arrayOfInt;
+        if (paramInt >= i) {
+          break;
+        }
+        arrayOfInt[paramInt] = a(arrayOfInt[0], 0, true);
+        paramInt += 1;
+      }
+    }
+    if (paramBoolean) {
+      throw new RuntimeException("require field not exist.");
+    }
+    return (int[])localObject;
+  }
+  
+  private long[] f(int paramInt, boolean paramBoolean)
+  {
+    Object localObject = null;
+    if (a(paramInt))
+    {
+      localObject = new a();
+      a((a)localObject, a);
+      switch (a)
+      {
+      default: 
+        throw new RuntimeException("type mismatch.");
+      }
+      int i = a(0, 0, true);
+      if (i < 0) {
+        throw new RuntimeException("size invalid: " + i);
+      }
+      long[] arrayOfLong = new long[i];
+      paramInt = 0;
+      for (;;)
+      {
+        localObject = arrayOfLong;
+        if (paramInt >= i) {
+          break;
+        }
+        arrayOfLong[paramInt] = a(arrayOfLong[0], 0, true);
+        paramInt += 1;
+      }
+    }
+    if (paramBoolean) {
+      throw new RuntimeException("require field not exist.");
+    }
+    return (long[])localObject;
+  }
+  
+  private float[] g(int paramInt, boolean paramBoolean)
+  {
+    Object localObject = null;
+    if (a(paramInt))
+    {
+      localObject = new a();
+      a((a)localObject, a);
+      switch (a)
+      {
+      default: 
+        throw new RuntimeException("type mismatch.");
+      }
+      int i = a(0, 0, true);
+      if (i < 0) {
+        throw new RuntimeException("size invalid: " + i);
+      }
+      float[] arrayOfFloat = new float[i];
+      paramInt = 0;
+      for (;;)
+      {
+        localObject = arrayOfFloat;
+        if (paramInt >= i) {
+          break;
+        }
+        arrayOfFloat[paramInt] = a(arrayOfFloat[0], 0, true);
+        paramInt += 1;
+      }
+    }
+    if (paramBoolean) {
+      throw new RuntimeException("require field not exist.");
+    }
+    return (float[])localObject;
+  }
+  
+  private double[] h(int paramInt, boolean paramBoolean)
+  {
+    Object localObject = null;
+    if (a(paramInt))
+    {
+      localObject = new a();
+      a((a)localObject, a);
+      switch (a)
+      {
+      default: 
+        throw new RuntimeException("type mismatch.");
+      }
+      int i = a(0, 0, true);
+      if (i < 0) {
+        throw new RuntimeException("size invalid: " + i);
+      }
+      double[] arrayOfDouble = new double[i];
+      paramInt = 0;
+      for (;;)
+      {
+        localObject = arrayOfDouble;
+        if (paramInt >= i) {
+          break;
+        }
+        arrayOfDouble[paramInt] = a(arrayOfDouble[0], 0, true);
+        paramInt += 1;
+      }
+    }
+    if (paramBoolean) {
+      throw new RuntimeException("require field not exist.");
+    }
+    return (double[])localObject;
+  }
+  
+  public final byte a(byte paramByte, int paramInt, boolean paramBoolean)
+  {
+    if (a(paramInt))
+    {
+      locala = new a();
+      a(locala, a);
+      switch (a)
+      {
+      default: 
+        throw new RuntimeException("type mismatch.");
+      case 12: 
+        paramByte = 0;
+      }
+    }
+    while (!paramBoolean)
+    {
+      a locala;
+      return paramByte;
+      return a.get();
+    }
+    throw new RuntimeException("require field not exist.");
+  }
+  
+  public final int a(int paramInt1, int paramInt2, boolean paramBoolean)
+  {
+    if (a(paramInt2))
+    {
+      locala = new a();
+      a(locala, a);
+      switch (a)
+      {
+      default: 
+        throw new RuntimeException("type mismatch.");
+      case 12: 
+        paramInt1 = 0;
+      }
+    }
+    while (!paramBoolean)
+    {
+      a locala;
+      return paramInt1;
+      return a.get();
+      return a.getShort();
+      return a.getInt();
+    }
+    throw new RuntimeException("require field not exist.");
+  }
+  
+  public final long a(long paramLong, int paramInt, boolean paramBoolean)
+  {
+    if (a(paramInt))
+    {
+      locala = new a();
+      a(locala, a);
+      switch (a)
+      {
+      default: 
+        throw new RuntimeException("type mismatch.");
+      case 12: 
+        paramLong = 0L;
+      }
+    }
+    while (!paramBoolean)
+    {
+      a locala;
+      return paramLong;
+      return a.get();
+      return a.getShort();
+      return a.getInt();
+      return a.getLong();
+    }
+    throw new RuntimeException("require field not exist.");
+  }
+  
+  public final bd a(bd parambd, int paramInt, boolean paramBoolean)
+  {
+    a locala = null;
+    if (a(paramInt))
     {
       try
       {
-        switch (l)
-        {
-        case 1: 
-          str = "unknown";
-          return str;
+        parambd = (bd)parambd.getClass().newInstance();
+        locala = new a();
+        a(locala, a);
+        if (a != 10) {
+          throw new RuntimeException("type mismatch.");
         }
       }
-      finally {}
-      String str = "ssid_" + k + b;
-      continue;
-      str = "apn_" + a;
-      continue;
-      str = "4Gapn_" + a;
+      catch (Exception parambd)
+      {
+        throw new RuntimeException(parambd.getMessage());
+      }
+      parambd.a(this);
+      a();
     }
+    do
+    {
+      return parambd;
+      parambd = locala;
+    } while (!paramBoolean);
+    throw new RuntimeException("require field not exist.");
   }
   
-  public static void a(Context paramContext)
+  public final Object a(Object paramObject, int paramInt, boolean paramBoolean)
   {
-    try
-    {
-      i = paramContext;
-      b();
-      f();
-      return;
+    int i = 0;
+    boolean bool = false;
+    if ((paramObject instanceof Byte)) {
+      return Byte.valueOf(a((byte)0, paramInt, paramBoolean));
     }
-    catch (Throwable paramContext) {}
-  }
-  
-  public static void a(HttpClient paramHttpClient)
-  {
-    if ((c) && (!TextUtils.isEmpty(n)))
+    if ((paramObject instanceof Boolean))
     {
-      HttpHost localHttpHost = new HttpHost(n, 80);
-      paramHttpClient.getParams().setParameter("http.route.default-proxy", localHttpHost);
-      bc.a(d, "setProxy... sProxyAddress:" + n + ",apn:" + a);
+      if (a((byte)0, paramInt, paramBoolean) != 0) {
+        bool = true;
+      }
+      return Boolean.valueOf(bool);
     }
-  }
-  
-  public static void a(boolean paramBoolean)
-  {
-    j = paramBoolean;
-  }
-  
-  /* Error */
-  public static boolean a(Integer paramInteger)
-  {
-    // Byte code:
-    //   0: iconst_1
-    //   1: istore_3
-    //   2: ldc 2
-    //   4: monitorenter
-    //   5: iload_3
-    //   6: istore_2
-    //   7: aload_0
-    //   8: invokevirtual 142	java/lang/Integer:intValue	()I
-    //   11: iconst_1
-    //   12: if_icmpeq +25 -> 37
-    //   15: iload_3
-    //   16: istore_2
-    //   17: aload_0
-    //   18: invokevirtual 142	java/lang/Integer:intValue	()I
-    //   21: iconst_2
-    //   22: if_icmpeq +15 -> 37
-    //   25: aload_0
-    //   26: invokevirtual 142	java/lang/Integer:intValue	()I
-    //   29: istore_1
-    //   30: iload_1
-    //   31: iconst_3
-    //   32: if_icmpne +10 -> 42
-    //   35: iload_3
-    //   36: istore_2
-    //   37: ldc 2
-    //   39: monitorexit
-    //   40: iload_2
-    //   41: ireturn
-    //   42: iconst_0
-    //   43: istore_2
-    //   44: goto -7 -> 37
-    //   47: astore_0
-    //   48: ldc 2
-    //   50: monitorexit
-    //   51: aload_0
-    //   52: athrow
-    // Local variable table:
-    //   start	length	slot	name	signature
-    //   0	53	0	paramInteger	Integer
-    //   29	4	1	i1	int
-    //   6	38	2	bool1	boolean
-    //   1	35	3	bool2	boolean
-    // Exception table:
-    //   from	to	target	type
-    //   7	15	47	finally
-    //   17	30	47	finally
-  }
-  
-  /* Error */
-  public static void b()
-  {
-    // Byte code:
-    //   0: ldc 2
-    //   2: monitorenter
-    //   3: getstatic 32	ct/bb:d	Ljava/lang/String;
-    //   6: ldc -110
-    //   8: invokestatic 148	ct/bc:b	(Ljava/lang/String;Ljava/lang/String;)V
-    //   11: getstatic 95	ct/bb:i	Landroid/content/Context;
-    //   14: ldc -106
-    //   16: invokevirtual 156	android/content/Context:getSystemService	(Ljava/lang/String;)Ljava/lang/Object;
-    //   19: checkcast 158	android/net/ConnectivityManager
-    //   22: invokevirtual 162	android/net/ConnectivityManager:getActiveNetworkInfo	()Landroid/net/NetworkInfo;
-    //   25: astore_1
-    //   26: aload_1
-    //   27: ifnonnull +29 -> 56
-    //   30: ldc 52
-    //   32: putstatic 54	ct/bb:a	Ljava/lang/String;
-    //   35: iconst_0
-    //   36: putstatic 60	ct/bb:l	I
-    //   39: iconst_0
-    //   40: putstatic 64	ct/bb:c	Z
-    //   43: ldc 52
-    //   45: putstatic 66	ct/bb:n	Ljava/lang/String;
-    //   48: iconst_0
-    //   49: putstatic 50	ct/bb:j	Z
-    //   52: ldc 2
-    //   54: monitorexit
-    //   55: return
-    //   56: aload_1
-    //   57: invokevirtual 168	android/net/NetworkInfo:isAvailable	()Z
-    //   60: ifeq +69 -> 129
-    //   63: aload_1
-    //   64: invokevirtual 171	android/net/NetworkInfo:isConnected	()Z
-    //   67: ifeq +62 -> 129
-    //   70: iconst_1
-    //   71: putstatic 50	ct/bb:j	Z
-    //   74: aload_1
-    //   75: invokevirtual 174	android/net/NetworkInfo:getType	()I
-    //   78: istore_0
-    //   79: iload_0
-    //   80: iconst_1
-    //   81: if_icmpne +61 -> 142
-    //   84: iconst_1
-    //   85: putstatic 60	ct/bb:l	I
-    //   88: iconst_0
-    //   89: putstatic 64	ct/bb:c	Z
-    //   92: ldc 52
-    //   94: putstatic 66	ct/bb:n	Ljava/lang/String;
-    //   97: getstatic 95	ct/bb:i	Landroid/content/Context;
-    //   100: ldc -80
-    //   102: invokevirtual 156	android/content/Context:getSystemService	(Ljava/lang/String;)Ljava/lang/Object;
-    //   105: checkcast 178	android/net/wifi/WifiManager
-    //   108: invokevirtual 182	android/net/wifi/WifiManager:getConnectionInfo	()Landroid/net/wifi/WifiInfo;
-    //   111: astore_1
-    //   112: aload_1
-    //   113: invokevirtual 187	android/net/wifi/WifiInfo:getSSID	()Ljava/lang/String;
-    //   116: putstatic 56	ct/bb:k	Ljava/lang/String;
-    //   119: aload_1
-    //   120: invokevirtual 190	android/net/wifi/WifiInfo:getBSSID	()Ljava/lang/String;
-    //   123: putstatic 58	ct/bb:b	Ljava/lang/String;
-    //   126: goto -74 -> 52
-    //   129: iconst_0
-    //   130: putstatic 50	ct/bb:j	Z
-    //   133: goto -59 -> 74
-    //   136: astore_1
-    //   137: ldc 2
-    //   139: monitorexit
-    //   140: aload_1
-    //   141: athrow
-    //   142: aload_1
-    //   143: invokevirtual 193	android/net/NetworkInfo:getExtraInfo	()Ljava/lang/String;
-    //   146: astore_2
-    //   147: aload_2
-    //   148: ifnonnull +24 -> 172
-    //   151: ldc 52
-    //   153: putstatic 54	ct/bb:a	Ljava/lang/String;
-    //   156: iconst_0
-    //   157: putstatic 60	ct/bb:l	I
-    //   160: iconst_0
-    //   161: putstatic 64	ct/bb:c	Z
-    //   164: ldc 52
-    //   166: putstatic 66	ct/bb:n	Ljava/lang/String;
-    //   169: goto -117 -> 52
-    //   172: aload_2
-    //   173: invokevirtual 198	java/lang/String:trim	()Ljava/lang/String;
-    //   176: invokevirtual 201	java/lang/String:toLowerCase	()Ljava/lang/String;
-    //   179: putstatic 54	ct/bb:a	Ljava/lang/String;
-    //   182: iload_0
-    //   183: ifne +27 -> 210
-    //   186: aload_1
-    //   187: invokevirtual 204	android/net/NetworkInfo:getSubtype	()I
-    //   190: istore_0
-    //   191: iload_0
-    //   192: iconst_1
-    //   193: if_icmpeq +13 -> 206
-    //   196: iload_0
-    //   197: iconst_2
-    //   198: if_icmpeq +8 -> 206
-    //   201: iload_0
-    //   202: iconst_4
-    //   203: if_icmpne +40 -> 243
-    //   206: iconst_2
-    //   207: putstatic 60	ct/bb:l	I
-    //   210: invokestatic 207	ct/bb:g	()Ljava/lang/Integer;
-    //   213: invokevirtual 142	java/lang/Integer:intValue	()I
-    //   216: putstatic 62	ct/bb:m	I
-    //   219: getstatic 54	ct/bb:a	Ljava/lang/String;
-    //   222: getstatic 40	ct/bb:f	Ljava/lang/String;
-    //   225: invokevirtual 210	java/lang/String:contains	(Ljava/lang/CharSequence;)Z
-    //   228: ifeq +35 -> 263
-    //   231: iconst_1
-    //   232: putstatic 64	ct/bb:c	Z
-    //   235: ldc -44
-    //   237: putstatic 66	ct/bb:n	Ljava/lang/String;
-    //   240: goto -188 -> 52
-    //   243: iload_0
-    //   244: bipush 13
-    //   246: if_icmpne +10 -> 256
-    //   249: iconst_4
-    //   250: putstatic 60	ct/bb:l	I
-    //   253: goto -43 -> 210
-    //   256: iconst_3
-    //   257: putstatic 60	ct/bb:l	I
-    //   260: goto -50 -> 210
-    //   263: getstatic 54	ct/bb:a	Ljava/lang/String;
-    //   266: getstatic 36	ct/bb:e	Ljava/lang/String;
-    //   269: invokevirtual 210	java/lang/String:contains	(Ljava/lang/CharSequence;)Z
-    //   272: ifeq +15 -> 287
-    //   275: iconst_1
-    //   276: putstatic 64	ct/bb:c	Z
-    //   279: ldc -44
-    //   281: putstatic 66	ct/bb:n	Ljava/lang/String;
-    //   284: goto -232 -> 52
-    //   287: getstatic 54	ct/bb:a	Ljava/lang/String;
-    //   290: getstatic 44	ct/bb:g	Ljava/lang/String;
-    //   293: invokevirtual 210	java/lang/String:contains	(Ljava/lang/CharSequence;)Z
-    //   296: ifeq +15 -> 311
-    //   299: iconst_1
-    //   300: putstatic 64	ct/bb:c	Z
-    //   303: ldc -44
-    //   305: putstatic 66	ct/bb:n	Ljava/lang/String;
-    //   308: goto -256 -> 52
-    //   311: getstatic 54	ct/bb:a	Ljava/lang/String;
-    //   314: getstatic 48	ct/bb:h	Ljava/lang/String;
-    //   317: invokevirtual 210	java/lang/String:contains	(Ljava/lang/CharSequence;)Z
-    //   320: ifeq +15 -> 335
-    //   323: iconst_1
-    //   324: putstatic 64	ct/bb:c	Z
-    //   327: ldc -42
-    //   329: putstatic 66	ct/bb:n	Ljava/lang/String;
-    //   332: goto -280 -> 52
-    //   335: iconst_0
-    //   336: putstatic 64	ct/bb:c	Z
-    //   339: ldc 52
-    //   341: putstatic 66	ct/bb:n	Ljava/lang/String;
-    //   344: goto -292 -> 52
-    //   347: astore_1
-    //   348: goto -296 -> 52
-    // Local variable table:
-    //   start	length	slot	name	signature
-    //   78	169	0	i1	int
-    //   25	95	1	localObject1	Object
-    //   136	51	1	localObject2	Object
-    //   347	1	1	localException	Exception
-    //   146	27	2	str	String
-    // Exception table:
-    //   from	to	target	type
-    //   3	26	136	finally
-    //   30	52	136	finally
-    //   56	74	136	finally
-    //   74	79	136	finally
-    //   84	126	136	finally
-    //   129	133	136	finally
-    //   142	147	136	finally
-    //   151	169	136	finally
-    //   172	182	136	finally
-    //   186	191	136	finally
-    //   206	210	136	finally
-    //   210	240	136	finally
-    //   249	253	136	finally
-    //   256	260	136	finally
-    //   263	284	136	finally
-    //   287	308	136	finally
-    //   311	332	136	finally
-    //   335	344	136	finally
-    //   3	26	347	java/lang/Exception
-    //   30	52	347	java/lang/Exception
-    //   56	74	347	java/lang/Exception
-    //   74	79	347	java/lang/Exception
-    //   84	126	347	java/lang/Exception
-    //   129	133	347	java/lang/Exception
-    //   142	147	347	java/lang/Exception
-    //   151	169	347	java/lang/Exception
-    //   172	182	347	java/lang/Exception
-    //   186	191	347	java/lang/Exception
-    //   206	210	347	java/lang/Exception
-    //   210	240	347	java/lang/Exception
-    //   249	253	347	java/lang/Exception
-    //   256	260	347	java/lang/Exception
-    //   263	284	347	java/lang/Exception
-    //   287	308	347	java/lang/Exception
-    //   311	332	347	java/lang/Exception
-    //   335	344	347	java/lang/Exception
-  }
-  
-  public static int c()
-  {
-    try
-    {
-      int i1 = l;
-      return i1;
+    if ((paramObject instanceof Short)) {
+      return Short.valueOf(a((short)0, paramInt, paramBoolean));
     }
-    finally
-    {
-      localObject = finally;
-      throw ((Throwable)localObject);
+    if ((paramObject instanceof Integer)) {
+      return Integer.valueOf(a(0, paramInt, paramBoolean));
     }
+    if ((paramObject instanceof Long)) {
+      return Long.valueOf(a(0L, paramInt, paramBoolean));
+    }
+    if ((paramObject instanceof Float)) {
+      return Float.valueOf(a(0.0F, paramInt, paramBoolean));
+    }
+    if ((paramObject instanceof Double)) {
+      return Double.valueOf(a(0.0D, paramInt, paramBoolean));
+    }
+    if ((paramObject instanceof String)) {
+      return a(paramInt, paramBoolean);
+    }
+    if ((paramObject instanceof Map))
+    {
+      paramObject = (Map)paramObject;
+      return (HashMap)a(new HashMap(), (Map)paramObject, paramInt, paramBoolean);
+    }
+    if ((paramObject instanceof List))
+    {
+      paramObject = (List)paramObject;
+      if ((paramObject == null) || (((List)paramObject).isEmpty())) {
+        return new ArrayList();
+      }
+      paramObject = b(((List)paramObject).get(0), paramInt, paramBoolean);
+      if (paramObject == null) {
+        return null;
+      }
+      ArrayList localArrayList = new ArrayList();
+      paramInt = i;
+      while (paramInt < paramObject.length)
+      {
+        localArrayList.add(paramObject[paramInt]);
+        paramInt += 1;
+      }
+      return localArrayList;
+    }
+    if ((paramObject instanceof bd)) {
+      return a((bd)paramObject, paramInt, paramBoolean);
+    }
+    if (paramObject.getClass().isArray())
+    {
+      if (((paramObject instanceof byte[])) || ((paramObject instanceof Byte[]))) {
+        return b(paramInt, paramBoolean);
+      }
+      if ((paramObject instanceof boolean[])) {
+        return c(paramInt, paramBoolean);
+      }
+      if ((paramObject instanceof short[])) {
+        return d(paramInt, paramBoolean);
+      }
+      if ((paramObject instanceof int[])) {
+        return e(paramInt, paramBoolean);
+      }
+      if ((paramObject instanceof long[])) {
+        return f(paramInt, paramBoolean);
+      }
+      if ((paramObject instanceof float[])) {
+        return g(paramInt, paramBoolean);
+      }
+      if ((paramObject instanceof double[])) {
+        return h(paramInt, paramBoolean);
+      }
+      paramObject = (Object[])paramObject;
+      if ((paramObject == null) || (paramObject.length == 0)) {
+        throw new RuntimeException("unable to get type of key and value.");
+      }
+      return b(paramObject[0], paramInt, paramBoolean);
+    }
+    throw new RuntimeException("read object error: unsupport type.");
   }
   
-  public static int d()
+  public final String a(int paramInt, boolean paramBoolean)
   {
-    try
+    Object localObject1 = null;
+    if (a(paramInt))
     {
-      int i1 = m;
-      return i1;
+      localObject1 = new a();
+      a((a)localObject1, a);
+      switch (a)
+      {
+      default: 
+        throw new RuntimeException("type mismatch.");
+      case 6: 
+        i = a.get();
+        paramInt = i;
+        if (i < 0) {
+          paramInt = i + 256;
+        }
+        localObject2 = new byte[paramInt];
+        a.get((byte[])localObject2);
+      }
     }
-    finally
+    while (!paramBoolean)
     {
-      localObject = finally;
-      throw ((Throwable)localObject);
-    }
-  }
-  
-  public static boolean e()
-  {
-    return j;
-  }
-  
-  public static void f()
-  {
-    try
-    {
-      bc.b(d, "showApnInfo... Apn:" + a + ",sIsNetworkOk:" + j + ",sNetType:" + l + ",sIsProxy:" + c + ",sProxyAddress:" + n);
-      return;
-    }
-    finally
-    {
-      localObject = finally;
-      throw ((Throwable)localObject);
-    }
-  }
-  
-  private static Integer g()
-  {
-    int i3 = 3;
-    int i2 = 2;
-    int i1 = 1;
-    for (;;)
-    {
-      Object localObject4;
+      Object localObject2;
       try
       {
-        if (l == 1)
-        {
-          localObject1 = k;
-          if ((localObject1 == null) || (((String)localObject1).length() <= 0))
-          {
-            localObject1 = Integer.valueOf(0);
-            m = ((Integer)localObject1).intValue();
-            i1 = m;
-            return Integer.valueOf(i1);
-          }
-          localObject1 = ((String)localObject1).toLowerCase();
-          if (!((String)localObject1).contains("cmcc")) {
-            break label373;
-          }
-          if (!((String)localObject1).contains("chinanet")) {
-            break label370;
-          }
-          i1 = i3;
-          if (!((String)localObject1).contains("chinaunicom")) {
-            break label367;
-          }
-          i1 = i2;
-          localObject1 = Integer.valueOf(i1);
-          continue;
-        }
-        if ((l != 2) && (l != 3)) {
-          break label360;
-        }
-        localObject4 = i;
-        Object localObject1 = a;
-        localObject4 = (TelephonyManager)((Context)localObject4).getSystemService("phone");
-        if ((localObject4 == null) || (((TelephonyManager)localObject4).getSimState() != 5)) {
-          break label243;
-        }
-        localObject4 = ((TelephonyManager)localObject4).getSimOperator();
-        if (((String)localObject4).length() <= 0) {
-          break label243;
-        }
-        if ((((String)localObject4).equals("46000")) || (((String)localObject4).equals("46002")))
-        {
-          localObject1 = Integer.valueOf(1);
-          m = ((Integer)localObject1).intValue();
-          continue;
-        }
-        if (!((String)localObject4).equals("46001")) {
-          break label224;
-        }
+        int i;
+        localObject1 = new String((byte[])localObject2, b);
+        return (String)localObject1;
       }
-      finally {}
-      Object localObject3 = Integer.valueOf(2);
-      continue;
-      label224:
-      if (((String)localObject4).equals("46003"))
+      catch (UnsupportedEncodingException localUnsupportedEncodingException1)
       {
-        localObject3 = Integer.valueOf(3);
+        return new String((byte[])localObject2);
       }
-      else
+      paramInt = a.getInt();
+      if ((paramInt > 104857600) || (paramInt < 0) || (paramInt > a.capacity())) {
+        throw new RuntimeException("String too long: " + paramInt);
+      }
+      byte[] arrayOfByte = new byte[paramInt];
+      a.get(arrayOfByte);
+      try
       {
-        label243:
-        if (localObject3 != null)
-        {
-          localObject3 = ((String)localObject3).toLowerCase();
-          if ((((String)localObject3).contains("cmnet")) || (((String)localObject3).contains("cmwap")))
-          {
-            localObject3 = Integer.valueOf(1);
-            continue;
-          }
-          if ((((String)localObject3).contains("uninet")) || (((String)localObject3).contains("uniwap")) || (((String)localObject3).contains("3gnet")) || (((String)localObject3).contains("3gwap")))
-          {
-            localObject3 = Integer.valueOf(2);
-            continue;
-          }
-          if ((((String)localObject3).contains("ctnet")) || (((String)localObject3).contains("ctwap")))
-          {
-            localObject3 = Integer.valueOf(3);
-            continue;
-          }
-        }
-        localObject3 = Integer.valueOf(0);
-        continue;
-        label360:
-        m = 0;
-        continue;
-        label367:
-        continue;
-        label370:
-        continue;
-        label373:
-        i1 = 0;
+        localObject2 = new String(arrayOfByte, b);
+        return (String)localObject2;
+      }
+      catch (UnsupportedEncodingException localUnsupportedEncodingException2)
+      {
+        return new String(arrayOfByte);
       }
     }
+    throw new RuntimeException("require field not exist.");
+  }
+  
+  final Map a(Map paramMap1, Map paramMap2, int paramInt, boolean paramBoolean)
+  {
+    if ((paramMap2 == null) || (paramMap2.isEmpty())) {
+      paramMap2 = new HashMap();
+    }
+    do
+    {
+      return paramMap2;
+      paramMap2 = (Map.Entry)paramMap2.entrySet().iterator().next();
+      Object localObject1 = paramMap2.getKey();
+      Object localObject2 = paramMap2.getValue();
+      if (a(paramInt))
+      {
+        paramMap2 = new a();
+        a(paramMap2, a);
+        switch (a)
+        {
+        default: 
+          throw new RuntimeException("type mismatch.");
+        }
+        int i = a(0, 0, true);
+        if (i < 0) {
+          throw new RuntimeException("size invalid: " + i);
+        }
+        paramInt = 0;
+        for (;;)
+        {
+          paramMap2 = paramMap1;
+          if (paramInt >= i) {
+            break;
+          }
+          paramMap1.put(a(localObject1, 0, true), a(localObject2, 1, true));
+          paramInt += 1;
+        }
+      }
+      paramMap2 = paramMap1;
+    } while (!paramBoolean);
+    throw new RuntimeException("require field not exist.");
+  }
+  
+  public final short a(short paramShort, int paramInt, boolean paramBoolean)
+  {
+    if (a(paramInt))
+    {
+      locala = new a();
+      a(locala, a);
+      switch (a)
+      {
+      default: 
+        throw new RuntimeException("type mismatch.");
+      case 12: 
+        paramShort = 0;
+      }
+    }
+    while (!paramBoolean)
+    {
+      a locala;
+      return paramShort;
+      return (short)a.get();
+      return a.getShort();
+    }
+    throw new RuntimeException("require field not exist.");
+  }
+  
+  public final byte[] b(int paramInt, boolean paramBoolean)
+  {
+    Object localObject1 = null;
+    if (a(paramInt))
+    {
+      localObject1 = new a();
+      a((a)localObject1, a);
+      switch (a)
+      {
+      default: 
+        throw new RuntimeException("type mismatch.");
+      case 13: 
+        localObject2 = new a();
+        a((a)localObject2, a);
+        if (a != 0) {
+          throw new RuntimeException("type mismatch, tag: " + paramInt + ", type: " + a + ", " + a);
+        }
+        i = a(0, 0, true);
+        if ((i < 0) || (i > a.capacity())) {
+          throw new RuntimeException("invalid size, tag: " + paramInt + ", type: " + a + ", " + a + ", size: " + i);
+        }
+        localObject1 = new byte[i];
+        a.get((byte[])localObject1);
+      }
+    }
+    while (!paramBoolean)
+    {
+      return (byte[])localObject1;
+      int i = a(0, 0, true);
+      if ((i < 0) || (i > a.capacity())) {
+        throw new RuntimeException("size invalid: " + i);
+      }
+      Object localObject2 = new byte[i];
+      paramInt = 0;
+      for (;;)
+      {
+        localObject1 = localObject2;
+        if (paramInt >= i) {
+          break;
+        }
+        localObject2[paramInt] = a(localObject2[0], 0, true);
+        paramInt += 1;
+      }
+    }
+    throw new RuntimeException("require field not exist.");
+  }
+  
+  public static final class a
+  {
+    public byte a;
+    public int b;
   }
 }
 

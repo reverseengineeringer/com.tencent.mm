@@ -1,15 +1,15 @@
 package com.tencent.mm.plugin.sns.ui.b;
 
-import com.tencent.mm.plugin.sns.h.k;
-import com.tencent.mm.plugin.sns.ui.an;
-import com.tencent.mm.protocal.b.atp;
+import com.tencent.mm.plugin.sns.ui.aq;
+import com.tencent.mm.plugin.sns.ui.as;
+import com.tencent.mm.protocal.b.auf;
 
 public final class f
   extends a
 {
-  public final void a(a.b paramb, int paramInt1, k paramk, atp paramatp, int paramInt2, an paraman) {}
+  public final void a(a.b paramb, int paramInt1, as paramas, auf paramauf, int paramInt2, aq paramaq) {}
   
-  public final void c(a.b paramb) {}
+  public final void d(a.b paramb) {}
   
   public static final class a
     extends a.b

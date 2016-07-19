@@ -1,9 +1,9 @@
 .class public final Lcom/tencent/mm/protocal/q$b;
-.super Lcom/tencent/mm/protocal/h$d;
+.super Lcom/tencent/mm/protocal/k$d;
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/protocal/h$b;
+.implements Lcom/tencent/mm/protocal/k$b;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field public iVf:Lcom/tencent/mm/protocal/b/vu;
+.field public final jsx:Lcom/tencent/mm/protocal/b/id;
 
 
 # direct methods
@@ -26,51 +26,36 @@
     .locals 1
 
     .prologue
-    .line 31
-    invoke-direct {p0}, Lcom/tencent/mm/protocal/h$d;-><init>()V
+    .line 44
+    invoke-direct {p0}, Lcom/tencent/mm/protocal/k$d;-><init>()V
 
-    .line 34
-    new-instance v0, Lcom/tencent/mm/protocal/b/vu;
+    .line 45
+    new-instance v0, Lcom/tencent/mm/protocal/b/id;
 
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/vu;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/id;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/protocal/q$b;->iVf:Lcom/tencent/mm/protocal/b/vu;
+    iput-object v0, p0, Lcom/tencent/mm/protocal/q$b;->jsx:Lcom/tencent/mm/protocal/b/id;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final y([B)I
+.method public final D([B)I
     .locals 1
 
     .prologue
-    .line 38
-    new-instance v0, Lcom/tencent/mm/protocal/b/vu;
+    .line 50
+    iget-object v0, p0, Lcom/tencent/mm/protocal/q$b;->jsx:Lcom/tencent/mm/protocal/b/id;
 
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/vu;-><init>()V
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/protocal/b/id;->au([B)Lcom/tencent/mm/ax/a;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/protocal/b/vu;->am([B)Lcom/tencent/mm/at/a;
+    .line 51
+    iget-object v0, p0, Lcom/tencent/mm/protocal/q$b;->jsx:Lcom/tencent/mm/protocal/b/id;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/id;->kfH:Lcom/tencent/mm/protocal/b/dg;
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/vu;
-
-    iput-object v0, p0, Lcom/tencent/mm/protocal/q$b;->iVf:Lcom/tencent/mm/protocal/b/vu;
-
-    .line 39
-    iget-object v0, p0, Lcom/tencent/mm/protocal/q$b;->iVf:Lcom/tencent/mm/protocal/b/vu;
-
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/alq;->jHj:Lcom/tencent/mm/protocal/b/dd;
-
-    invoke-static {p0, v0}, Lcom/tencent/mm/protocal/h;->a(Lcom/tencent/mm/protocal/h$d;Lcom/tencent/mm/protocal/b/dd;)V
-
-    .line 40
-    iget-object v0, p0, Lcom/tencent/mm/protocal/q$b;->iVf:Lcom/tencent/mm/protocal/b/vu;
-
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/alq;->jHj:Lcom/tencent/mm/protocal/b/dd;
-
-    iget v0, v0, Lcom/tencent/mm/protocal/b/dd;->iZL:I
+    iget v0, v0, Lcom/tencent/mm/protocal/b/dg;->jxr:I
 
     return v0
 .end method

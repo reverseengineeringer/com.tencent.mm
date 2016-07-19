@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:form="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/nk" android:scrollbars="none" style="@style/MMScroll">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/hb" android:paddingTop="@dimen/hb" android:paddingRight="@dimen/hb" android:paddingBottom="@dimen/hb" android:fadingEdge="@null" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/i8" android:gravity="center" android:id="@id/bks" style="@style/MMLineLabel" />
+            <TextView android:textSize="@dimen/hg" android:textStyle="bold" android:textColor="@color/j_" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/n8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/i7" android:maxLines="2" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/i7">
+                <com.tencent.mm.ui.base.MMFormInputView android:id="@id/n_" android:layout_height="wrap_content" android:minHeight="58.0dip" form:form_layout="@layout/y5" form:form_title="@string/ht" form:form_hint="@string/o9" style="@style/MMFormInputView" />
+                <TextView android:textSize="@dimen/h4" android:textColor="@color/pg" android:layout_gravity="center_horizontal" android:id="@id/bkt" android:visibility="gone" android:layout_width="wrap_content" android:layout_marginTop="@dimen/hb" android:text="@string/bk3" style="@style/MMLineLabel" />
+                <TextView android:textColor="#ff666666" android:layout_gravity="center_horizontal" android:id="@id/bku" android:visibility="gone" android:layout_width="wrap_content" android:layout_marginTop="@dimen/j8" android:text="@string/bk3" style="@style/MMLineLabel" />
+                <Button android:id="@id/a6d" android:layout_marginTop="@dimen/hf" android:text="@string/fu" style="@style/MMSolidGreenLargeButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

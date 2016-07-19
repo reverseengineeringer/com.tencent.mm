@@ -2,7 +2,7 @@ package com.tencent.mm.network;
 
 public abstract interface z$a
 {
-  public abstract void ao(boolean paramBoolean);
+  public abstract void R(boolean paramBoolean);
 }
 
 /* Location:

@@ -2,22 +2,22 @@ package com.tencent.mm.a;
 
 final class i
 {
-  public byte[] akv;
-  public int akw = 0;
+  public byte[] Xo;
+  public int Xp = 0;
   
   public i()
   {
-    akv = new byte['Ā'];
+    Xo = new byte['Ā'];
   }
   
   public i(byte paramByte)
   {
-    akv = new byte[] { paramByte };
+    Xo = new byte[] { paramByte };
   }
   
   public i(byte[] paramArrayOfByte)
   {
-    akv = paramArrayOfByte;
+    Xo = paramArrayOfByte;
   }
 }
 

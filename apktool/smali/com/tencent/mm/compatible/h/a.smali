@@ -3,111 +3,128 @@
 .source "SourceFile"
 
 
+# instance fields
+.field public biw:Ljava/lang/String;
+
+.field public bix:J
+
+.field public biy:I
+
+.field public biz:I
+
+
 # direct methods
-.method public static a(Landroid/view/MenuItem;Ljava/lang/String;)V
-    .locals 5
+.method public constructor <init>()V
+    .locals 4
 
     .prologue
-    const/4 v4, 0x1
+    const-wide/16 v2, -0x1
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    .line 12
-    if-nez p0, :cond_1
-
-    .line 13
-    const-string/jumbo v0, "!32@/B4Tb64lLpJKcBiDy6zxE3hSxe+6+uSO"
-
-    const-string/jumbo v1, "fixTitleCondensed fail, item is null"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 26
-    :cond_0
-    :goto_0
-    return-void
+    const/4 v0, -0x1
 
     .line 16
-    :cond_1
-    invoke-interface {p0}, Landroid/view/MenuItem;->getTitleCondensed()Ljava/lang/CharSequence;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    .line 11
+    iput-object v1, p0, Lcom/tencent/mm/compatible/h/a;->biw:Ljava/lang/String;
 
-    if-nez v0, :cond_2
+    .line 12
+    iput-wide v2, p0, Lcom/tencent/mm/compatible/h/a;->bix:J
+
+    .line 13
+    iput v0, p0, Lcom/tencent/mm/compatible/h/a;->biy:I
+
+    .line 14
+    iput v0, p0, Lcom/tencent/mm/compatible/h/a;->biz:I
 
     .line 17
-    const-string/jumbo v0, "!32@/B4Tb64lLpJKcBiDy6zxE3hSxe+6+uSO"
+    iput-object v1, p0, Lcom/tencent/mm/compatible/h/a;->biw:Ljava/lang/String;
 
-    const-string/jumbo v1, "%s title condensed is null, fix it"
+    iput-wide v2, p0, Lcom/tencent/mm/compatible/h/a;->bix:J
 
-    new-array v2, v4, [Ljava/lang/Object;
+    iput v0, p0, Lcom/tencent/mm/compatible/h/a;->biy:I
 
-    aput-object p1, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    iput v0, p0, Lcom/tencent/mm/compatible/h/a;->biz:I
 
     .line 18
-    const-string/jumbo v0, ""
+    return-void
+.end method
 
-    invoke-interface {p0, v0}, Landroid/view/MenuItem;->setTitleCondensed(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
 
-    goto :goto_0
+# virtual methods
+.method public final nl()Ljava/lang/String;
+    .locals 4
 
-    .line 21
-    :cond_2
-    invoke-interface {p0}, Landroid/view/MenuItem;->getTitleCondensed()Ljava/lang/CharSequence;
+    .prologue
+    .line 63
+    new-instance v0, Ljava/lang/StringBuffer;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    instance-of v0, v0, Ljava/lang/String;
+    .line 64
+    iget-object v1, p0, Lcom/tencent/mm/compatible/h/a;->biw:Ljava/lang/String;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 24
-    const-string/jumbo v0, "!32@/B4Tb64lLpJKcBiDy6zxE3hSxe+6+uSO"
+    .line 65
+    const-string/jumbo v1, ","
 
-    const-string/jumbo v1, "%s title condensed is not String type, cur type[%s], cur value[%s], fix it"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    const/4 v2, 0x3
+    .line 66
+    iget-wide v2, p0, Lcom/tencent/mm/compatible/h/a;->bix:J
 
-    new-array v2, v2, [Ljava/lang/Object;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuffer;->append(J)Ljava/lang/StringBuffer;
 
-    aput-object p1, v2, v3
+    .line 67
+    const-string/jumbo v1, ","
 
-    invoke-interface {p0}, Landroid/view/MenuItem;->getTitleCondensed()Ljava/lang/CharSequence;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    .line 68
+    iget v1, p0, Lcom/tencent/mm/compatible/h/a;->biy:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
+
+    .line 69
+    const-string/jumbo v1, ","
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    .line 70
+    iget v1, p0, Lcom/tencent/mm/compatible/h/a;->biz:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
+
+    .line 72
+    const-string/jumbo v1, "MicroMsg.AudioRecorderInfo"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, " getStatInfo "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    aput-object v3, v2, v4
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v3, 0x2
-
-    invoke-interface {p0}, Landroid/view/MenuItem;->getTitleCondensed()Ljava/lang/CharSequence;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 25
-    invoke-interface {p0}, Landroid/view/MenuItem;->getTitleCondensed()Ljava/lang/CharSequence;
+    .line 73
+    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {p0, v0}, Landroid/view/MenuItem;->setTitleCondensed(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
-
-    goto :goto_0
+    return-object v0
 .end method

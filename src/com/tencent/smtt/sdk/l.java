@@ -5,24 +5,24 @@ import android.os.HandlerThread;
 final class l
   extends HandlerThread
 {
-  private static l lSB;
+  private static l mut;
   
   private l(String paramString)
   {
     super(paramString);
   }
   
-  public static l blS()
+  public static l brW()
   {
     try
     {
-      if (lSB == null)
+      if (mut == null)
       {
         locall = new l("TbsHandlerThread");
-        lSB = locall;
+        mut = locall;
         locall.start();
       }
-      l locall = lSB;
+      l locall = mut;
       return locall;
     }
     finally {}

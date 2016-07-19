@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract biL()V
+.method public abstract boH()V
 .end method
 
 .method public abstract collapseActionView()V

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:minHeight="@dimen/j7" style="@style/MMFullLineItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/g6" android:paddingTop="@dimen/i7" android:paddingBottom="@dimen/i7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/j7">
+        <LinearLayout android:gravity="center|left" android:paddingLeft="@dimen/hx" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:id="@android:id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:singleLine="false" style="@style/MMFontPreferenceLarge" />
+                <TextView android:textSize="@dimen/jc" android:textColor="@color/ow" android:gravity="center" android:id="@id/bk6" android:background="@drawable/ow" android:padding="@dimen/j8" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ct" android:minWidth="40.0dip" android:singleLine="true" style="@style/MMFontPreferenceSmall" />
+            </LinearLayout>
+            <include android:gravity="center|right" layout="@layout/mm_preference_checkbox" />
+        </LinearLayout>
+        <TextView android:gravity="left" android:id="@android:id/summary" android:paddingLeft="@dimen/hx" android:paddingRight="@dimen/hx" android:layout_marginTop="@dimen/j8" style="@style/MMBriefText" />
+    </LinearLayout>
+</LinearLayout>

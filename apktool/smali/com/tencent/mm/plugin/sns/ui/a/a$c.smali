@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field cfW:J
+.field cbi:J
 
 .field id:J
 
@@ -27,7 +27,7 @@
     .locals 0
 
     .prologue
-    .line 455
+    .line 464
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +37,7 @@
     .locals 0
 
     .prologue
-    .line 455
+    .line 464
     invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/a/a$c;-><init>()V
 
     return-void

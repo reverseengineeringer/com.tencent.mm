@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract aQY()V
+.method public abstract aVI()V
 .end method
 
 .method public abstract f(Lcom/tencent/mm/pluginsdk/ui/MMPhoneNumberEditText;)V

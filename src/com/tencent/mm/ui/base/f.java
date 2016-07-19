@@ -15,12 +15,7 @@ public final class f
     paramPointF.set(paramBitmap.getWidth() / 2.0F, paramBitmap.getHeight() / 2.0F);
   }
   
-  public static boolean aDK()
-  {
-    return Build.VERSION.SDK_INT >= 5;
-  }
-  
-  public static void b(PointF paramPointF, MotionEvent paramMotionEvent)
+  public static void a(PointF paramPointF, MotionEvent paramMotionEvent)
   {
     if ((paramPointF == null) || (paramMotionEvent == null)) {
       return;
@@ -32,9 +27,14 @@ public final class f
     paramPointF.set((f1 + f2) / 2.0F, (f3 + f4) / 2.0F);
   }
   
+  public static boolean aHm()
+  {
+    return Build.VERSION.SDK_INT >= 5;
+  }
+  
   public static float e(MotionEvent paramMotionEvent, int paramInt)
   {
-    if (m(paramMotionEvent))
+    if (l(paramMotionEvent))
     {
       new e();
       return paramMotionEvent.getX(paramInt);
@@ -44,7 +44,7 @@ public final class f
   
   public static float f(MotionEvent paramMotionEvent, int paramInt)
   {
-    if (m(paramMotionEvent))
+    if (l(paramMotionEvent))
     {
       new e();
       return paramMotionEvent.getY(paramInt);
@@ -52,11 +52,11 @@ public final class f
     return paramMotionEvent.getY();
   }
   
-  private static boolean m(MotionEvent paramMotionEvent)
+  private static boolean l(MotionEvent paramMotionEvent)
   {
     boolean bool2 = false;
     boolean bool1 = bool2;
-    if (aDK())
+    if (aHm())
     {
       bool1 = bool2;
       if (paramMotionEvent.getPointerCount() >= 2) {
@@ -66,7 +66,7 @@ public final class f
     return bool1;
   }
   
-  public static float n(MotionEvent paramMotionEvent)
+  public static float m(MotionEvent paramMotionEvent)
   {
     float f1 = e(paramMotionEvent, 0) - e(paramMotionEvent, 1);
     float f2 = f(paramMotionEvent, 0) - f(paramMotionEvent, 1);
@@ -75,7 +75,7 @@ public final class f
   
   public static int r(MotionEvent paramMotionEvent)
   {
-    if (aDK())
+    if (aHm())
     {
       new e();
       return paramMotionEvent.getPointerCount();

@@ -11,10 +11,10 @@ final class FacebookAuthUI$2
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = ksk.getIntent();
-    paramMenuItem.putExtra("bind_facebook_succ", FacebookAuthUI.b(ksk));
-    ksk.setResult(-1, paramMenuItem);
-    ksk.finish();
+    paramMenuItem = kRs.getIntent();
+    paramMenuItem.putExtra("bind_facebook_succ", FacebookAuthUI.b(kRs));
+    kRs.setResult(-1, paramMenuItem);
+    kRs.finish();
     return true;
   }
 }

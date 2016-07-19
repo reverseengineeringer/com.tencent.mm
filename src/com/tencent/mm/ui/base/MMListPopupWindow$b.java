@@ -7,7 +7,7 @@ final class MMListPopupWindow$b
   
   public final void run()
   {
-    kFn.clearListSelection();
+    ler.clearListSelection();
   }
 }
 

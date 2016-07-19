@@ -1,20 +1,23 @@
 package com.tencent.mm.ui.conversation;
 
-import android.widget.AbsListView;
-import android.widget.AbsListView.OnScrollListener;
-import com.tencent.mm.ab.a.a;
-import com.tencent.mm.ab.n;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.v.c.a;
+import com.tencent.mm.v.c.a.b;
 
 final class BizChatFavUI$1
-  implements AbsListView.OnScrollListener
+  implements c.a
 {
   BizChatFavUI$1(BizChatFavUI paramBizChatFavUI) {}
   
-  public final void onScroll(AbsListView paramAbsListView, int paramInt1, int paramInt2, int paramInt3) {}
-  
-  public final void onScrollStateChanged(AbsListView paramAbsListView, int paramInt)
+  public final void a(c.a.b paramb)
   {
-    n.As().dz(paramInt);
+    if ((paramb != null) && (bAn != null) && (BizChatFavUI.a(lOv).equals(bAn.field_brandUserName)))
+    {
+      v.i("MicroMsg.BizChatFavUI", "bizChatExtension bizChatConv change");
+      if (BizChatFavUI.b(lOv)) {
+        BizChatFavUI.c(lOv).GH();
+      }
+    }
   }
 }
 

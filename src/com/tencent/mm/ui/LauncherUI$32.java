@@ -1,23 +1,23 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.model.ah;
-import com.tencent.mm.model.c;
-import com.tencent.mm.storage.h;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 
 final class LauncherUI$32
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
   LauncherUI$32(LauncherUI paramLauncherUI) {}
   
-  public final void run()
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (ah.rh())
-    {
-      h localh = ah.tD().rn();
-      if (localh != null) {
-        localh.gN(true);
-      }
-    }
+    Intent localIntent = new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS");
+    localIntent.addFlags(268435456);
+    kMs.startActivity(localIntent);
+    paramDialogInterface.dismiss();
+    LauncherUI.d(kMs, true);
+    MMAppMgr.a(kMs, true);
+    kMs.finish();
   }
 }
 

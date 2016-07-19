@@ -1,45 +1,45 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.alq;
-import com.tencent.mm.protocal.b.alx;
-import com.tencent.mm.protocal.b.dd;
-import com.tencent.mm.protocal.b.kv;
-import com.tencent.mm.protocal.b.kw;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.protocal.b.amb;
+import com.tencent.mm.protocal.b.ami;
+import com.tencent.mm.protocal.b.dg;
+import com.tencent.mm.protocal.b.eq;
+import com.tencent.mm.protocal.b.er;
+import com.tencent.mm.sdk.platformtools.be;
 
 public final class m
 {
   public static final class a
-    extends h.c
-    implements h.a
+    extends k.c
+    implements k.a
   {
-    public kv iUX = new kv();
+    public eq jsm = new eq();
     
-    public final byte[] tY()
+    public final byte[] tZ()
     {
-      iUJ = z.aTx();
-      iUX.jbx = new alx().aO(ay.aVA());
-      iUX.jGS = h.a(this);
-      return iUX.toByteArray();
+      jsg = ac.aYs();
+      jsm.jzd = new ami().aV(be.baN());
+      jsm.kfq = k.a(this);
+      return jsm.toByteArray();
     }
     
-    public final int tZ()
+    public final int ua()
     {
-      return 481;
+      return 145;
     }
   }
   
   public static final class b
-    extends h.d
-    implements h.b
+    extends k.d
+    implements k.b
   {
-    public kw iUY = new kw();
+    public er jsn = new er();
     
-    public final int y(byte[] paramArrayOfByte)
+    public final int D(byte[] paramArrayOfByte)
     {
-      iUY = ((kw)new kw().am(paramArrayOfByte));
-      h.a(this, iUY.jHj);
-      return iUY.jHj.iZL;
+      jsn = ((er)new er().au(paramArrayOfByte));
+      k.a(this, jsn.kfH);
+      return jsn.kfH.jxr;
     }
   }
 }

@@ -4,9 +4,9 @@
 
 
 # static fields
-.field public static aka:I
+.field public static VT:I
 
-.field public static akb:I
+.field public static VU:I
 
 
 # direct methods
@@ -17,10 +17,10 @@
     const/4 v0, 0x0
 
     .line 4
-    sput v0, Lcom/tencent/c/a/a/j;->aka:I
+    sput v0, Lcom/tencent/c/a/a/j;->VT:I
 
     .line 5
-    sput v0, Lcom/tencent/c/a/a/j;->akb:I
+    sput v0, Lcom/tencent/c/a/a/j;->VU:I
 
     return-void
 .end method

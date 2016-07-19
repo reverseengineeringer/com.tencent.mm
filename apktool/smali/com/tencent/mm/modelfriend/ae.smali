@@ -4,11 +4,11 @@
 
 
 # static fields
-.field public static final aoY:[Ljava/lang/String;
+.field public static final bkN:[Ljava/lang/String;
 
 
 # instance fields
-.field public final bCw:Lcom/tencent/mm/az/g;
+.field public final bvG:Lcom/tencent/mm/bc/g;
 
 
 # direct methods
@@ -27,12 +27,12 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/modelfriend/ae;->aoY:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/modelfriend/ae;->bkN:[Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/tencent/mm/az/g;)V
+.method public constructor <init>(Lcom/tencent/mm/bc/g;)V
     .locals 0
 
     .prologue
@@ -40,7 +40,7 @@
     invoke-direct {p0}, Lcom/tencent/mm/sdk/h/g;-><init>()V
 
     .line 52
-    iput-object p1, p0, Lcom/tencent/mm/modelfriend/ae;->bCw:Lcom/tencent/mm/az/g;
+    iput-object p1, p0, Lcom/tencent/mm/modelfriend/ae;->bvG:Lcom/tencent/mm/bc/g;
 
     .line 53
     return-void
@@ -65,7 +65,7 @@
     invoke-static {v0}, Ljunit/framework/Assert;->assertTrue(Z)V
 
     .line 114
-    invoke-virtual {p1}, Lcom/tencent/mm/modelfriend/ad;->zd()Landroid/content/ContentValues;
+    invoke-virtual {p1}, Lcom/tencent/mm/modelfriend/ad;->zq()Landroid/content/ContentValues;
 
     move-result-object v0
 
@@ -77,11 +77,11 @@
     if-gtz v3, :cond_2
 
     .line 116
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ+zgjqUamJQfLmk15RM/5N"
+    const-string/jumbo v0, "MicroMsg.QQGroupStorage"
 
     const-string/jumbo v1, "update failed, no values set"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 124
     :cond_0
@@ -96,7 +96,7 @@
 
     .line 119
     :cond_2
-    iget-object v3, p0, Lcom/tencent/mm/modelfriend/ae;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v3, p0, Lcom/tencent/mm/modelfriend/ae;->bvG:Lcom/tencent/mm/bc/g;
 
     const-string/jumbo v4, "qqgroup"
 
@@ -108,7 +108,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget v8, p1, Lcom/tencent/mm/modelfriend/ad;->bNc:I
+    iget v8, p1, Lcom/tencent/mm/modelfriend/ad;->bGw:I
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -120,7 +120,7 @@
 
     aput-object v7, v6, v2
 
-    invoke-virtual {v3, v4, v0, v5, v6}, Lcom/tencent/mm/az/g;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-virtual {v3, v4, v0, v5, v6}, Lcom/tencent/mm/bc/g;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v0
 
@@ -128,7 +128,7 @@
     if-lez v0, :cond_0
 
     .line 123
-    invoke-virtual {p0}, Lcom/tencent/mm/modelfriend/ae;->Ep()V
+    invoke-virtual {p0}, Lcom/tencent/mm/modelfriend/ae;->EJ()V
 
     move v2, v1
 
@@ -136,14 +136,14 @@
     goto :goto_1
 .end method
 
-.method public final dh(I)Lcom/tencent/mm/modelfriend/ad;
+.method public final dM(I)Lcom/tencent/mm/modelfriend/ad;
     .locals 4
 
     .prologue
     const/4 v0, 0x0
 
     .line 60
-    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ae;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v1, p0, Lcom/tencent/mm/modelfriend/ae;->bvG:Lcom/tencent/mm/bc/g;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -159,7 +159,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/az/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/bc/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
 
@@ -184,7 +184,7 @@
     invoke-direct {v0}, Lcom/tencent/mm/modelfriend/ad;-><init>()V
 
     .line 67
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelfriend/ad;->c(Landroid/database/Cursor;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelfriend/ad;->b(Landroid/database/Cursor;)V
 
     .line 69
     :cond_1

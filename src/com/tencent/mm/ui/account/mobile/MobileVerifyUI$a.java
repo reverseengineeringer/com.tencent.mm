@@ -1,11 +1,11 @@
 package com.tencent.mm.ui.account.mobile;
 
 public final class MobileVerifyUI$a
-  extends Enum
+  extends Enum<a>
 {
-  public static int[] bci()
+  public static int[] bhu()
   {
-    return (int[])kzm.clone();
+    return (int[])kYt.clone();
   }
 }
 

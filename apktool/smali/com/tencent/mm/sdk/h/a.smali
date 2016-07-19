@@ -6,7 +6,7 @@
 # instance fields
 .field private filePath:Ljava/lang/String;
 
-.field private jYt:Ljava/util/Properties;
+.field private kyQ:Ljava/util/Properties;
 
 
 # direct methods
@@ -26,7 +26,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 13
-    iput-object v2, p0, Lcom/tencent/mm/sdk/h/a;->jYt:Ljava/util/Properties;
+    iput-object v2, p0, Lcom/tencent/mm/sdk/h/a;->kyQ:Ljava/util/Properties;
 
     .line 14
     iput-object v2, p0, Lcom/tencent/mm/sdk/h/a;->filePath:Ljava/lang/String;
@@ -36,7 +36,7 @@
 
     invoke-direct {v0}, Ljava/util/Properties;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/h/a;->jYt:Ljava/util/Properties;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/h/a;->kyQ:Ljava/util/Properties;
 
     .line 18
     iput-object p1, p0, Lcom/tencent/mm/sdk/h/a;->filePath:Ljava/lang/String;
@@ -52,7 +52,7 @@
 
     .line 22
     :try_start_1
-    iget-object v0, p0, Lcom/tencent/mm/sdk/h/a;->jYt:Ljava/util/Properties;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/h/a;->kyQ:Ljava/util/Properties;
 
     invoke-virtual {v0, v1}, Ljava/util/Properties;->load(Ljava/io/InputStream;)V
     :try_end_1
@@ -75,7 +75,7 @@
     move-exception v0
 
     .line 31
-    const-string/jumbo v1, "!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3"
+    const-string/jumbo v1, "MicroMsg.ReadConfig"
 
     const-string/jumbo v2, "Close File: %s Failed. [%s]"
 
@@ -89,7 +89,7 @@
 
     aput-object v0, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -102,7 +102,7 @@
     .line 24
     :goto_1
     :try_start_3
-    const-string/jumbo v2, "!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3"
+    const-string/jumbo v2, "MicroMsg.ReadConfig"
 
     const-string/jumbo v3, "Read File: %s Failed. [%s]"
 
@@ -122,7 +122,7 @@
 
     aput-object v0, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -142,7 +142,7 @@
     move-exception v0
 
     .line 31
-    const-string/jumbo v1, "!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3"
+    const-string/jumbo v1, "MicroMsg.ReadConfig"
 
     const-string/jumbo v2, "Close File: %s Failed. [%s]"
 
@@ -156,7 +156,7 @@
 
     aput-object v0, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -185,7 +185,7 @@
     move-exception v1
 
     .line 31
-    const-string/jumbo v2, "!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3"
+    const-string/jumbo v2, "MicroMsg.ReadConfig"
 
     const-string/jumbo v3, "Close File: %s Failed. [%s]"
 
@@ -199,7 +199,7 @@
 
     aput-object v1, v4, v7
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_3
 
@@ -216,7 +216,89 @@
     goto :goto_1
 .end method
 
-.method private DE(Ljava/lang/String;)Ljava/lang/Long;
+.method public static N(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 1
+
+    .prologue
+    .line 135
+    new-instance v0, Lcom/tencent/mm/sdk/h/a;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/sdk/h/a;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1, p2}, Lcom/tencent/mm/sdk/h/a;->cv(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static cw(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Long;
+    .locals 1
+
+    .prologue
+    .line 111
+    new-instance v0, Lcom/tencent/mm/sdk/h/a;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/sdk/h/a;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/sdk/h/a;->FT(Ljava/lang/String;)Ljava/lang/Long;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static g(Ljava/lang/String;Ljava/lang/String;J)Z
+    .locals 2
+
+    .prologue
+    .line 139
+    new-instance v0, Lcom/tencent/mm/sdk/h/a;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/sdk/h/a;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1, p2, p3}, Lcom/tencent/mm/sdk/h/a;->A(Ljava/lang/String;J)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static getValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 107
+    new-instance v0, Lcom/tencent/mm/sdk/h/a;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/sdk/h/a;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/sdk/h/a;->getValue(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final A(Ljava/lang/String;J)Z
+    .locals 2
+
+    .prologue
+    .line 61
+    invoke-static {p2, p3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, p1, v0}, Lcom/tencent/mm/sdk/h/a;->cv(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final FT(Ljava/lang/String;)Ljava/lang/Long;
     .locals 7
 
     .prologue
@@ -239,9 +321,9 @@
     :try_start_0
     invoke-static {v2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -254,7 +336,7 @@
     move-exception v1
 
     .line 85
-    const-string/jumbo v3, "!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3"
+    const-string/jumbo v3, "MicroMsg.ReadConfig"
 
     const-string/jumbo v4, "getLongValue ParseLong : %s Failed. [%s]"
 
@@ -274,82 +356,12 @@
 
     aput-object v1, v5, v2
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method public static L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 1
-
-    .prologue
-    .line 135
-    new-instance v0, Lcom/tencent/mm/sdk/h/a;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/sdk/h/a;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1, p2}, Lcom/tencent/mm/sdk/h/a;->ch(Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static ci(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Long;
-    .locals 1
-
-    .prologue
-    .line 111
-    new-instance v0, Lcom/tencent/mm/sdk/h/a;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/sdk/h/a;-><init>(Ljava/lang/String;)V
-
-    invoke-direct {v0, p1}, Lcom/tencent/mm/sdk/h/a;->DE(Ljava/lang/String;)Ljava/lang/Long;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static getValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 107
-    new-instance v0, Lcom/tencent/mm/sdk/h/a;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/sdk/h/a;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/sdk/h/a;->getValue(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static h(Ljava/lang/String;Ljava/lang/String;J)Z
-    .locals 2
-
-    .prologue
-    .line 139
-    new-instance v0, Lcom/tencent/mm/sdk/h/a;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/sdk/h/a;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p2, p3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, p1, v1}, Lcom/tencent/mm/sdk/h/a;->ch(Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-
-# virtual methods
-.method public final DF(Ljava/lang/String;)Ljava/lang/Integer;
+.method public final FU(Ljava/lang/String;)Ljava/lang/Integer;
     .locals 7
 
     .prologue
@@ -387,7 +399,7 @@
     move-exception v1
 
     .line 100
-    const-string/jumbo v3, "!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3"
+    const-string/jumbo v3, "MicroMsg.ReadConfig"
 
     const-string/jumbo v4, "getIntegerValue ParseInteger : %s Failed. [%s]"
 
@@ -407,12 +419,12 @@
 
     aput-object v1, v5, v2
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method public final aM(Ljava/lang/String;I)Z
+.method public final aW(Ljava/lang/String;I)Z
     .locals 1
 
     .prologue
@@ -421,14 +433,14 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0}, Lcom/tencent/mm/sdk/h/a;->ch(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-virtual {p0, p1, v0}, Lcom/tencent/mm/sdk/h/a;->cv(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public final ch(Ljava/lang/String;Ljava/lang/String;)Z
+.method public final cv(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 10
 
     .prologue
@@ -454,12 +466,12 @@
 
     .line 42
     :try_start_1
-    iget-object v2, p0, Lcom/tencent/mm/sdk/h/a;->jYt:Ljava/util/Properties;
+    iget-object v2, p0, Lcom/tencent/mm/sdk/h/a;->kyQ:Ljava/util/Properties;
 
     invoke-virtual {v2, p1, p2}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 43
-    iget-object v2, p0, Lcom/tencent/mm/sdk/h/a;->jYt:Ljava/util/Properties;
+    iget-object v2, p0, Lcom/tencent/mm/sdk/h/a;->kyQ:Ljava/util/Properties;
 
     const-string/jumbo v4, ""
 
@@ -483,7 +495,7 @@
     move-exception v2
 
     .line 53
-    const-string/jumbo v3, "!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3"
+    const-string/jumbo v3, "MicroMsg.ReadConfig"
 
     const-string/jumbo v4, "Close File: %s Failed. [%s]"
 
@@ -499,7 +511,7 @@
 
     aput-object v1, v5, v0
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -512,7 +524,7 @@
     .line 46
     :goto_1
     :try_start_3
-    const-string/jumbo v4, "!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3"
+    const-string/jumbo v4, "MicroMsg.ReadConfig"
 
     const-string/jumbo v5, "Write File: %s Failed. [%s]"
 
@@ -534,7 +546,7 @@
 
     aput-object v2, v6, v7
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -557,7 +569,7 @@
     move-exception v2
 
     .line 53
-    const-string/jumbo v3, "!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3"
+    const-string/jumbo v3, "MicroMsg.ReadConfig"
 
     const-string/jumbo v4, "Close File: %s Failed. [%s]"
 
@@ -573,7 +585,7 @@
 
     aput-object v2, v5, v0
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -605,7 +617,7 @@
     move-exception v3
 
     .line 53
-    const-string/jumbo v4, "!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3"
+    const-string/jumbo v4, "MicroMsg.ReadConfig"
 
     const-string/jumbo v5, "Close File: %s Failed. [%s]"
 
@@ -621,7 +633,7 @@
 
     aput-object v1, v6, v0
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_3
 
@@ -648,11 +660,11 @@
 
     .prologue
     .line 69
-    iget-object v0, p0, Lcom/tencent/mm/sdk/h/a;->jYt:Ljava/util/Properties;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/h/a;->kyQ:Ljava/util/Properties;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/sdk/h/a;->jYt:Ljava/util/Properties;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/h/a;->kyQ:Ljava/util/Properties;
 
     invoke-virtual {v0, p1}, Ljava/util/Properties;->containsKey(Ljava/lang/Object;)Z
 
@@ -661,7 +673,7 @@
     if-eqz v0, :cond_0
 
     .line 70
-    iget-object v0, p0, Lcom/tencent/mm/sdk/h/a;->jYt:Ljava/util/Properties;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/h/a;->kyQ:Ljava/util/Properties;
 
     invoke-virtual {v0, p1}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 

@@ -1,61 +1,61 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.protocal.b.alq;
-import com.tencent.mm.protocal.b.alx;
-import com.tencent.mm.protocal.b.axk;
-import com.tencent.mm.protocal.b.axl;
-import com.tencent.mm.protocal.b.dd;
-import com.tencent.mm.protocal.h;
-import com.tencent.mm.protocal.h.a;
-import com.tencent.mm.protocal.h.b;
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.h.d;
-import com.tencent.mm.protocal.z;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.protocal.ac;
+import com.tencent.mm.protocal.b.amb;
+import com.tencent.mm.protocal.b.ami;
+import com.tencent.mm.protocal.b.ayd;
+import com.tencent.mm.protocal.b.aye;
+import com.tencent.mm.protocal.b.dg;
+import com.tencent.mm.protocal.k;
+import com.tencent.mm.protocal.k.a;
+import com.tencent.mm.protocal.k.b;
+import com.tencent.mm.protocal.k.c;
+import com.tencent.mm.protocal.k.d;
+import com.tencent.mm.sdk.platformtools.be;
 
 public final class ao
 {
   public static final class a
-    extends h.c
-    implements h.a
+    extends k.c
+    implements k.a
   {
-    public axk bBx = new axk();
+    public ayd buC = new ayd();
     
     public final int getCmdId()
     {
       return 0;
     }
     
-    public final byte[] tY()
+    public final byte[] tZ()
     {
-      iUJ = z.aTv();
-      bBx.jbx = new alx().aO(ay.aVA());
-      bBx.jGS = h.a(this);
-      return bBx.toByteArray();
+      jsg = ac.aYs();
+      buC.jzd = new ami().aV(be.baN());
+      buC.kfq = k.a(this);
+      return buC.toByteArray();
     }
     
-    public final int tZ()
+    public final int ua()
     {
       return 617;
     }
   }
   
   public static final class b
-    extends h.d
-    implements h.b
+    extends k.d
+    implements k.b
   {
-    public axl bBy = new axl();
+    public aye buD = new aye();
+    
+    public final int D(byte[] paramArrayOfByte)
+    {
+      buD = ((aye)new aye().au(paramArrayOfByte));
+      k.a(this, buD.kfH);
+      return buD.kfH.jxr;
+    }
     
     public final int getCmdId()
     {
       return 0;
-    }
-    
-    public final int y(byte[] paramArrayOfByte)
-    {
-      bBy = ((axl)new axl().am(paramArrayOfByte));
-      h.a(this, bBy.jHj);
-      return bBy.jHj.iZL;
     }
   }
 }

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bnl:Lcom/tencent/mm/booter/n;
+.field final synthetic baS:Lcom/tencent/mm/booter/n;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 77
-    iput-object p1, p0, Lcom/tencent/mm/booter/n$1;->bnl:Lcom/tencent/mm/booter/n;
+    iput-object p1, p0, Lcom/tencent/mm/booter/n$1;->baS:Lcom/tencent/mm/booter/n;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,7 +51,7 @@
     const/4 v1, 0x0
 
     .line 81
-    invoke-static {}, Lcom/tencent/mm/platformtools/t;->FS()J
+    invoke-static {}, Lcom/tencent/mm/platformtools/s;->Gp()J
 
     move-result-wide v4
 
@@ -61,25 +61,25 @@
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
     .line 83
-    iget-object v0, p0, Lcom/tencent/mm/booter/n$1;->bnl:Lcom/tencent/mm/booter/n;
+    iget-object v0, p0, Lcom/tencent/mm/booter/n$1;->baS:Lcom/tencent/mm/booter/n;
 
-    sget v6, Lcom/tencent/mm/sdk/platformtools/f;->akC:I
+    sget v6, Lcom/tencent/mm/sdk/platformtools/f;->Xv:I
 
-    invoke-static {}, Lcom/tencent/mm/compatible/d/p;->ox()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/compatible/d/p;->mN()Ljava/lang/String;
 
     move-result-object v7
 
-    sget v8, Lcom/tencent/mm/protocal/b;->iUf:I
+    sget v8, Lcom/tencent/mm/protocal/c;->jry:I
 
     const-string/jumbo v9, "0"
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUB()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aZF()Ljava/lang/String;
 
     move-result-object v10
 
     iget-object v11, v0, Lcom/tencent/mm/booter/n;->context:Landroid/content/Context;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v12
 
@@ -95,7 +95,7 @@
 
     iget-object v0, v0, Lcom/tencent/mm/booter/n;->context:Landroid/content/Context;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v12
 
@@ -122,7 +122,7 @@
 
     invoke-direct {v6, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget v11, Lcom/tencent/mm/sdk/platformtools/f;->akC:I
+    sget v11, Lcom/tencent/mm/sdk/platformtools/f;->Xv:I
 
     invoke-virtual {v6, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -184,7 +184,7 @@
 
     .line 84
     :goto_1
-    const-string/jumbo v6, "!32@/B4Tb64lLpJ/45nhhxB3sW7Az8rKLsSk"
+    const-string/jumbo v6, "MicroMsg.StartupReport"
 
     const-string/jumbo v7, "tryReport thread:%s pri:%d  Url[%s] "
 
@@ -216,10 +216,10 @@
 
     aput-object v0, v8, v13
 
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 86
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
 
     move-result v6
 
@@ -278,15 +278,15 @@
     if-ne v6, v7, :cond_4
 
     .line 103
-    iget-object v7, p0, Lcom/tencent/mm/booter/n$1;->bnl:Lcom/tencent/mm/booter/n;
+    iget-object v7, p0, Lcom/tencent/mm/booter/n$1;->baS:Lcom/tencent/mm/booter/n;
 
-    sget v8, Lcom/tencent/mm/sdk/platformtools/f;->akC:I
+    sget v8, Lcom/tencent/mm/sdk/platformtools/f;->Xv:I
 
-    sget v9, Lcom/tencent/mm/protocal/b;->iUf:I
+    sget v9, Lcom/tencent/mm/protocal/c;->jry:I
 
     iget-object v7, v7, Lcom/tencent/mm/booter/n;->context:Landroid/content/Context;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v10
 
@@ -322,7 +322,7 @@
 
     .line 105
     :cond_4
-    const-string/jumbo v7, "!32@/B4Tb64lLpJ/45nhhxB3sW7Az8rKLsSk"
+    const-string/jumbo v7, "MicroMsg.StartupReport"
 
     const-string/jumbo v8, "report FIN time:%d resp:%d url[%s]"
 
@@ -332,7 +332,7 @@
 
     const/4 v10, 0x0
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/platformtools/t;->an(J)J
+    invoke-static {v4, v5}, Lcom/tencent/mm/platformtools/s;->au(J)J
 
     move-result-wide v4
 
@@ -354,7 +354,7 @@
 
     aput-object v0, v9, v4
 
-    invoke-static {v7, v8, v9}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v7, v8, v9}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -363,7 +363,7 @@
     if-eqz v3, :cond_0
 
     .line 112
-    iget-object v0, v3, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, v3, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->disconnect()V
 
@@ -373,7 +373,7 @@
     :catch_0
     move-exception v4
 
-    const-string/jumbo v4, "!32@/B4Tb64lLpJ/45nhhxB3sW7Az8rKLsSk"
+    const-string/jumbo v4, "MicroMsg.StartupReport"
 
     const-string/jumbo v5, "tryReport error url[%s]"
 
@@ -381,7 +381,7 @@
 
     aput-object v0, v2, v1
 
-    invoke-static {v4, v5, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_3
 .end method

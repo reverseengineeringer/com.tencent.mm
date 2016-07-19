@@ -5,57 +5,57 @@ import android.database.Cursor;
 
 public final class af
 {
-  int aou = -1;
-  String bEs = "";
-  String bEt = "";
-  public int bEu = 0;
-  public int bEv = 0;
-  public long bNk = 0L;
-  public int bNl = 0;
-  int bNm = 0;
-  public String bNn = "";
-  String bNo = "";
-  String bNp = "";
-  String bNq = "";
-  String bNr = "";
-  String bNs = "";
-  public String bNt = "";
-  String bNu = "";
-  String bNv = "";
+  int aqQ = -1;
+  public long bGE = 0L;
+  public int bGF = 0;
+  int bGG = 0;
+  public String bGH = "";
+  String bGI = "";
+  String bGJ = "";
+  String bGK = "";
+  String bGL = "";
+  String bGM = "";
+  public String bGN = "";
+  String bGO = "";
+  String bGP = "";
+  String bxD = "";
+  String bxE = "";
+  public int bxF = 0;
+  public int bxG = 0;
   public String username = "";
   
-  public final void c(Cursor paramCursor)
+  public final void b(Cursor paramCursor)
   {
-    bNk = paramCursor.getLong(0);
+    bGE = paramCursor.getLong(0);
     int i = paramCursor.getInt(1);
     if (i == 65536) {}
-    for (bNl = 0;; bNl = i)
+    for (bGF = 0;; bGF = i)
     {
-      bNm = paramCursor.getInt(2);
+      bGG = paramCursor.getInt(2);
       username = paramCursor.getString(3);
-      bNn = paramCursor.getString(4);
-      bNo = paramCursor.getString(5);
-      bNp = paramCursor.getString(6);
-      bNq = paramCursor.getString(7);
-      bNr = paramCursor.getString(8);
-      bNs = paramCursor.getString(9);
-      bNt = paramCursor.getString(10);
-      bNu = paramCursor.getString(11);
-      bNv = paramCursor.getString(12);
-      bEs = paramCursor.getString(13);
-      bEt = paramCursor.getString(14);
-      bEu = paramCursor.getInt(15);
-      bEv = paramCursor.getInt(16);
+      bGH = paramCursor.getString(4);
+      bGI = paramCursor.getString(5);
+      bGJ = paramCursor.getString(6);
+      bGK = paramCursor.getString(7);
+      bGL = paramCursor.getString(8);
+      bGM = paramCursor.getString(9);
+      bGN = paramCursor.getString(10);
+      bGO = paramCursor.getString(11);
+      bGP = paramCursor.getString(12);
+      bxD = paramCursor.getString(13);
+      bxE = paramCursor.getString(14);
+      bxF = paramCursor.getInt(15);
+      bxG = paramCursor.getInt(16);
       return;
     }
   }
   
   public final String getDisplayName()
   {
-    if ((zl() == null) || (zl().length() <= 0)) {
-      return zi();
+    if ((zy() == null) || (zy().length() <= 0)) {
+      return zv();
     }
-    return zl();
+    return zy();
   }
   
   public final String getUsername()
@@ -69,79 +69,92 @@ public final class af
   public final String toString()
   {
     StringBuilder localStringBuilder = new StringBuilder();
-    localStringBuilder.append("groupID\t:").append(bNm).append("\n");
-    localStringBuilder.append("qq\t:").append(bNk).append("\n");
+    localStringBuilder.append("groupID\t:").append(bGG).append("\n");
+    localStringBuilder.append("qq\t:").append(bGE).append("\n");
     localStringBuilder.append("username\t:").append(username).append("\n");
-    localStringBuilder.append("nickname\t:").append(bNn).append("\n");
-    localStringBuilder.append("wexinStatus\t:").append(bNl).append("\n");
-    localStringBuilder.append("reserved3\t:").append(bEu).append("\n");
-    localStringBuilder.append("reserved4\t:").append(bEv).append("\n");
+    localStringBuilder.append("nickname\t:").append(bGH).append("\n");
+    localStringBuilder.append("wexinStatus\t:").append(bGF).append("\n");
+    localStringBuilder.append("reserved3\t:").append(bxF).append("\n");
+    localStringBuilder.append("reserved4\t:").append(bxG).append("\n");
     return localStringBuilder.toString();
   }
   
-  public final ContentValues zg()
+  public final String zA()
+  {
+    if (bGP == null) {
+      return "";
+    }
+    return bGP;
+  }
+  
+  public final void zB()
+  {
+    bxF |= 0x1;
+  }
+  
+  public final ContentValues zt()
   {
     ContentValues localContentValues = new ContentValues();
-    if ((aou & 0x1) != 0) {
-      localContentValues.put("qq", Long.valueOf(bNk));
+    if ((aqQ & 0x1) != 0) {
+      localContentValues.put("qq", Long.valueOf(bGE));
     }
     int i;
-    if ((aou & 0x2) != 0)
+    if ((aqQ & 0x2) != 0)
     {
-      i = bNl;
+      i = bGF;
       if (i == 0) {
         localContentValues.put("wexinstatus", Integer.valueOf(65536));
       }
     }
     else
     {
-      if ((aou & 0x4) != 0) {
-        localContentValues.put("groupid", Integer.valueOf(bNm));
+      if ((aqQ & 0x4) != 0) {
+        localContentValues.put("groupid", Integer.valueOf(bGG));
       }
-      if ((aou & 0x8) != 0) {
+      if ((aqQ & 0x8) != 0) {
         localContentValues.put("username", getUsername());
       }
-      if ((aou & 0x10) != 0) {
-        localContentValues.put("nickname", zh());
+      if ((aqQ & 0x10) != 0) {
+        localContentValues.put("nickname", zu());
       }
-      if ((aou & 0x20) != 0)
+      if ((aqQ & 0x20) != 0)
       {
-        if (bNo != null) {
+        if (bGI != null) {
           break label390;
         }
         str = "";
         label141:
         localContentValues.put("pyinitial", str);
       }
-      if ((aou & 0x40) != 0)
+      if ((aqQ & 0x40) != 0)
       {
-        if (bNp != null) {
+        if (bGJ != null) {
           break label398;
         }
         str = "";
         label168:
         localContentValues.put("quanpin", str);
       }
-      if ((aou & 0x80) != 0) {
-        localContentValues.put("qqnickname", zi());
+      if ((aqQ & 0x80) != 0) {
+        localContentValues.put("qqnickname", zv());
       }
-      if ((aou & 0x100) != 0) {
-        localContentValues.put("qqpyinitial", zj());
+      if ((aqQ & 0x100) != 0) {
+        localContentValues.put("qqpyinitial", zw());
       }
-      if ((aou & 0x200) != 0) {
-        localContentValues.put("qqquanpin", zk());
+      if ((aqQ & 0x200) != 0) {
+        localContentValues.put("qqquanpin", zx());
       }
-      if ((aou & 0x400) != 0) {
-        localContentValues.put("qqremark", zl());
+      if ((aqQ & 0x400) != 0) {
+        localContentValues.put("qqremark", zy());
       }
-      if ((aou & 0x800) != 0) {
-        localContentValues.put("qqremarkpyinitial", zm());
+      if ((aqQ & 0x800) != 0) {
+        localContentValues.put("qqremarkpyinitial", zz());
       }
-      if ((aou & 0x1000) != 0) {
-        localContentValues.put("qqremarkquanpin", zn());
+      if ((aqQ & 0x1000) != 0) {
+        localContentValues.put("qqremarkquanpin", zA());
       }
-      if ((aou & 0x4000) != 0) {
-        if (bEt != null) {
+      if ((aqQ & 0x4000) != 0) {
+        if (bxE != null) {
           break label406;
         }
       }
@@ -149,84 +162,71 @@ public final class af
     label390:
     label398:
     label406:
-    for (String str = "";; str = bEt)
+    for (String str = "";; str = bxE)
     {
       localContentValues.put("reserved2", str);
-      if ((aou & 0x8000) != 0) {
-        localContentValues.put("reserved3", Integer.valueOf(bEu));
+      if ((aqQ & 0x8000) != 0) {
+        localContentValues.put("reserved3", Integer.valueOf(bxF));
       }
-      if ((aou & 0x10000) != 0) {
-        localContentValues.put("reserved4", Integer.valueOf(bEv));
+      if ((aqQ & 0x10000) != 0) {
+        localContentValues.put("reserved4", Integer.valueOf(bxG));
       }
       return localContentValues;
       localContentValues.put("wexinstatus", Integer.valueOf(i));
       break;
-      str = bNo;
+      str = bGI;
       break label141;
-      str = bNp;
+      str = bGJ;
       break label168;
     }
   }
   
-  public final String zh()
+  public final String zu()
   {
-    if (bNn == null) {
+    if (bGH == null) {
       return "";
     }
-    return bNn;
+    return bGH;
   }
   
-  public final String zi()
+  public final String zv()
   {
-    if (bNq == null) {
+    if (bGK == null) {
       return "";
     }
-    return bNq;
+    return bGK;
   }
   
-  public final String zj()
+  public final String zw()
   {
-    if (bNr == null) {
+    if (bGL == null) {
       return "";
     }
-    return bNr;
+    return bGL;
   }
   
-  public final String zk()
+  public final String zx()
   {
-    if (bNs == null) {
+    if (bGM == null) {
       return "";
     }
-    return bNs;
+    return bGM;
   }
   
-  public final String zl()
+  public final String zy()
   {
-    if (bNt == null) {
+    if (bGN == null) {
       return "";
     }
-    return bNt;
+    return bGN;
   }
   
-  public final String zm()
+  public final String zz()
   {
-    if (bNu == null) {
+    if (bGO == null) {
       return "";
     }
-    return bNu;
-  }
-  
-  public final String zn()
-  {
-    if (bNv == null) {
-      return "";
-    }
-    return bNv;
-  }
-  
-  public final void zo()
-  {
-    bEu |= 0x1;
+    return bGO;
   }
 }
 

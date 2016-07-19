@@ -1,19 +1,27 @@
 package com.tencent.mm.ui.conversation;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
-import com.tencent.mm.t.z;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.v.an;
+import com.tencent.mm.v.d;
+import com.tencent.mm.v.e;
+import com.tencent.mm.v.e.a;
+import com.tencent.mm.v.e.a.b;
 
 final class BizChatFavUI$6
-  implements DialogInterface.OnCancelListener
+  implements e.a
 {
-  BizChatFavUI$6(BizChatFavUI paramBizChatFavUI, z paramz) {}
+  BizChatFavUI$6(BizChatFavUI paramBizChatFavUI) {}
   
-  public final void onCancel(DialogInterface paramDialogInterface)
+  public final void a(e.a.b paramb)
   {
-    ah.tE().c(lnP);
+    if ((paramb != null) && (bAx != null))
+    {
+      v.i("MicroMsg.BizChatFavUI", "bizChatExtension bizChat change");
+      v.d("MicroMsg.BizChatFavUI", "needToUpdate:%s", new Object[] { Boolean.valueOf(xJVbAm).field_needToUpdate) });
+      if (BizChatFavUI.b(lOv)) {
+        BizChatFavUI.c(lOv).GH();
+      }
+    }
   }
 }
 

@@ -8,12 +8,22 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/compatible/util/d;->dd(Ljava/lang/String;)V
+    value = Lcom/tencent/mm/compatible/util/d;->dj(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x8
     name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/tencent/mm/sdk/platformtools/at$a;",
+        ">;"
+    }
 .end annotation
 
 
@@ -37,19 +47,19 @@
     const-wide/16 v6, 0x0
 
     .line 90
-    check-cast p1, Lcom/tencent/mm/sdk/platformtools/ao$a;
+    check-cast p1, Lcom/tencent/mm/sdk/platformtools/at$a;
 
-    check-cast p2, Lcom/tencent/mm/sdk/platformtools/ao$a;
+    check-cast p2, Lcom/tencent/mm/sdk/platformtools/at$a;
 
-    iget-wide v0, p1, Lcom/tencent/mm/sdk/platformtools/ao$a;->jXA:J
+    iget-wide v0, p1, Lcom/tencent/mm/sdk/platformtools/at$a;->kxY:J
 
-    iget-wide v2, p1, Lcom/tencent/mm/sdk/platformtools/ao$a;->jXB:J
+    iget-wide v2, p1, Lcom/tencent/mm/sdk/platformtools/at$a;->kxZ:J
 
     mul-long/2addr v0, v2
 
-    iget-wide v2, p2, Lcom/tencent/mm/sdk/platformtools/ao$a;->jXA:J
+    iget-wide v2, p2, Lcom/tencent/mm/sdk/platformtools/at$a;->kxY:J
 
-    iget-wide v4, p2, Lcom/tencent/mm/sdk/platformtools/ao$a;->jXB:J
+    iget-wide v4, p2, Lcom/tencent/mm/sdk/platformtools/at$a;->kxZ:J
 
     mul-long/2addr v2, v4
 

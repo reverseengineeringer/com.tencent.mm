@@ -3,33 +3,42 @@ package com.tencent.smtt.sdk;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
-import android.os.Message;
-import android.webkit.WebView;
+import com.tencent.smtt.export.external.DexLoader;
 
 final class QbSdk$1
-  extends Handler
+  extends Thread
 {
-  QbSdk$1(Looper paramLooper, Context paramContext, QbSdk.a parama)
-  {
-    super(paramLooper);
-  }
+  QbSdk$1(Context paramContext, String paramString, u paramu) {}
   
-  public final void handleMessage(Message paramMessage)
+  public final void run()
   {
-    switch (what)
+    Object localObject = d.jb(true);
+    ((d)localObject).init(val$context);
+    final boolean bool;
+    if (((d)localObject).brr())
     {
+      localObject = ((d)localObject).brq();
+      Context localContext = val$context;
+      String str = chB;
+      localObject = mvz.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "canOpenFile", new Class[] { Context.class, String.class }, new Object[] { localContext, str });
+      if ((localObject instanceof Boolean)) {
+        bool = ((Boolean)localObject).booleanValue();
+      }
     }
-    do
+    for (;;)
     {
-      do
+      new Handler(Looper.getMainLooper()).post(new Runnable()
       {
-        return;
-        new WebView(val$context);
-      } while (lRw == null);
+        public final void run()
+        {
+          mtj.onReceiveValue(Boolean.valueOf(bool));
+        }
+      });
       return;
-      paramMessage = d.is(true).blm();
-    } while (paramMessage == null);
-    paramMessage.createSDKWebview(val$context);
+      bool = false;
+      continue;
+      bool = false;
+    }
   }
 }
 

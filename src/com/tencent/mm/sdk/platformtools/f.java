@@ -10,28 +10,27 @@ import java.util.Map;
 
 public final class f
 {
-  public static int akC;
-  public static String akE = Build.VERSION.SDK_INT;
-  public static int akG = 0;
-  public static int akO;
-  public static int jUZ;
-  public static int jVa = 0;
-  public static String jVb = "market://details?id=" + y.getPackageName();
-  public static boolean jVc = false;
-  public static boolean jVd = true;
-  public static boolean jVe = false;
-  public static boolean jVf = false;
+  public static int XH = 0;
+  public static int Xv;
+  public static String Xx = Build.VERSION.SDK_INT;
+  public static int Xz = 0;
+  public static int kuF;
+  public static int kuG = 0;
+  public static String kuH = "market://details?id=" + aa.getPackageName();
+  public static boolean kuI = false;
+  public static boolean kuJ = true;
+  public static boolean kuK = false;
+  public static boolean kuL = false;
   
   static
   {
-    akC = 0;
-    jUZ = 0;
-    akO = 0;
+    Xv = 0;
+    kuF = 0;
   }
   
-  public static String E(Context paramContext, int paramInt)
+  public static String I(Context paramContext, int paramInt)
   {
-    return a(paramContext, paramInt, jVc);
+    return a(paramContext, paramInt, kuI);
   }
   
   public static String a(Context paramContext, int paramInt, boolean paramBoolean)
@@ -40,7 +39,7 @@ public final class f
     if (i == 0)
     {
       str1 = (paramInt >> 24 & 0xF) + "." + (paramInt >> 16 & 0xFF);
-      u.d("!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg=", "minminor " + i);
+      v.d("MicroMsg.SDK.ChannelUtil", "minminor " + i);
       i = 0xFFFFFFF & paramInt;
       str2 = str1;
       paramInt = i;
@@ -73,7 +72,7 @@ public final class f
     if (paramBoolean)
     {
       paramContext = str2 + "_" + paramInt;
-      u.d("!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg=", "full version: " + paramContext);
+      v.d("MicroMsg.SDK.ChannelUtil", "full version: " + paramContext);
     }
     do
     {
@@ -95,49 +94,49 @@ public final class f
     return str1 + "." + arrayOfString[2];
   }
   
-  public static void dl(Context paramContext)
+  public static void dj(Context paramContext)
   {
     try
     {
-      akC = Integer.parseInt((String)q.CK(ay.d(paramContext.getAssets().open("channel.ini"))).get("CHANNEL"));
+      Xv = Integer.parseInt((String)r.EX(be.d(paramContext.getAssets().open("channel.ini"))).get("CHANNEL"));
       return;
     }
     catch (Exception paramContext)
     {
-      u.e("!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg=", "setup channel id from channel.ini failed");
+      v.e("MicroMsg.SDK.ChannelUtil", "setup channel id from channel.ini failed");
     }
   }
   
-  public static void dm(Context paramContext)
+  public static void dk(Context paramContext)
   {
     try
     {
-      paramContext = q.CK(ay.d(paramContext.getAssets().open("profile.ini")));
-      String str = ay.ky((String)paramContext.get("PROFILE_DEVICE_TYPE"));
-      akE = str;
+      paramContext = r.EX(be.d(paramContext.getAssets().open("profile.ini")));
+      String str = be.li((String)paramContext.get("PROFILE_DEVICE_TYPE"));
+      Xx = str;
       if (str.length() <= 0) {
-        akE = Build.VERSION.SDK_INT;
+        Xx = Build.VERSION.SDK_INT;
       }
-      akG = parseInt((String)paramContext.get("UPDATE_MODE"));
-      jVa = parseInt((String)paramContext.get("BUILD_REVISION"));
-      jVe = parseBoolean((String)paramContext.get("GPRS_ALERT"));
-      akO = parseInt((String)paramContext.get("AUTO_ADD_ACOUNT"));
-      jVf = parseBoolean((String)paramContext.get("NOKIA_AOL"));
-      u.w("!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg=", "profileDeviceType=" + akE);
-      u.w("!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg=", "updateMode=" + akG);
-      u.w("!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg=", "shouldShowGprsAlert=" + jVe);
-      u.w("!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg=", "autoAddAccount=" + akO);
-      u.w("!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg=", "isNokiaol=" + jVf);
+      Xz = parseInt((String)paramContext.get("UPDATE_MODE"));
+      kuG = parseInt((String)paramContext.get("BUILD_REVISION"));
+      kuK = parseBoolean((String)paramContext.get("GPRS_ALERT"));
+      XH = parseInt((String)paramContext.get("AUTO_ADD_ACOUNT"));
+      kuL = parseBoolean((String)paramContext.get("NOKIA_AOL"));
+      v.w("MicroMsg.SDK.ChannelUtil", "profileDeviceType=" + Xx);
+      v.w("MicroMsg.SDK.ChannelUtil", "updateMode=" + Xz);
+      v.w("MicroMsg.SDK.ChannelUtil", "shouldShowGprsAlert=" + kuK);
+      v.w("MicroMsg.SDK.ChannelUtil", "autoAddAccount=" + XH);
+      v.w("MicroMsg.SDK.ChannelUtil", "isNokiaol=" + kuL);
       paramContext = (String)paramContext.get("MARKET_URL");
       if ((paramContext != null) && (paramContext.trim().length() != 0) && (Uri.parse(paramContext) != null)) {
-        jVb = paramContext;
+        kuH = paramContext;
       }
-      u.w("!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg=", "marketURL=" + jVb);
+      v.w("MicroMsg.SDK.ChannelUtil", "marketURL=" + kuH);
       return;
     }
     catch (Exception paramContext)
     {
-      u.e("!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg=", "setup profile from profile.ini failed");
+      v.e("MicroMsg.SDK.ChannelUtil", "setup profile from profile.ini failed");
     }
   }
   
@@ -150,7 +149,7 @@ public final class f
     }
     catch (Exception paramString)
     {
-      u.w("!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg=", paramString.getMessage());
+      v.w("MicroMsg.SDK.ChannelUtil", paramString.getMessage());
     }
     return false;
   }
@@ -164,7 +163,7 @@ public final class f
     }
     catch (Exception paramString)
     {
-      u.w("!44@/B4Tb64lLpL24WDJ/lxlVBtgqMMYbQplykhsmGqTQhg=", paramString.getMessage());
+      v.w("MicroMsg.SDK.ChannelUtil", paramString.getMessage());
     }
     return 0;
   }

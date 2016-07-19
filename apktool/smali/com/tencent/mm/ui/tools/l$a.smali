@@ -15,14 +15,14 @@
 
 
 # virtual methods
-.method public abstract bge()V
+.method public abstract blO()V
 .end method
 
-.method public abstract bgf()V
+.method public abstract blP()V
 .end method
 
-.method public abstract bgg()V
+.method public abstract blQ()V
 .end method
 
-.method public abstract bgh()V
+.method public abstract blR()V
 .end method

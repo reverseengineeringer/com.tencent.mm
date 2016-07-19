@@ -27,10 +27,10 @@
     .locals 1
 
     .prologue
-    .line 276
+    .line 208
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 279
+    .line 211
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/tencent/mm/storage/RegionCodeDecoder$Region;->hasChildren:Z
@@ -44,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 290
+    .line 222
     iget-object v0, p0, Lcom/tencent/mm/storage/RegionCodeDecoder$Region;->code:Ljava/lang/String;
 
     return-object v0
@@ -54,7 +54,7 @@
     .locals 1
 
     .prologue
-    .line 282
+    .line 214
     iget-object v0, p0, Lcom/tencent/mm/storage/RegionCodeDecoder$Region;->name:Ljava/lang/String;
 
     return-object v0
@@ -64,7 +64,7 @@
     .locals 1
 
     .prologue
-    .line 298
+    .line 230
     iget-boolean v0, p0, Lcom/tencent/mm/storage/RegionCodeDecoder$Region;->hasChildren:Z
 
     return v0
@@ -74,10 +74,10 @@
     .locals 0
 
     .prologue
-    .line 294
+    .line 226
     iput-object p1, p0, Lcom/tencent/mm/storage/RegionCodeDecoder$Region;->code:Ljava/lang/String;
 
-    .line 295
+    .line 227
     return-void
 .end method
 
@@ -85,10 +85,10 @@
     .locals 0
 
     .prologue
-    .line 302
+    .line 234
     iput-boolean p1, p0, Lcom/tencent/mm/storage/RegionCodeDecoder$Region;->hasChildren:Z
 
-    .line 303
+    .line 235
     return-void
 .end method
 
@@ -96,9 +96,9 @@
     .locals 0
 
     .prologue
-    .line 286
+    .line 218
     iput-object p1, p0, Lcom/tencent/mm/storage/RegionCodeDecoder$Region;->name:Ljava/lang/String;
 
-    .line 287
+    .line 219
     return-void
 .end method

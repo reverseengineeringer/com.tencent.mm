@@ -10,7 +10,7 @@ final class c$3
   
   public final void onClick(View paramView)
   {
-    c.f(gyI);
+    c.f(gFh);
   }
 }
 

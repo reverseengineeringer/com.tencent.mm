@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic klC:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
+.field final synthetic kLd:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 94
-    iput-object p1, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$2;->klC:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$2;->kLd:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 97
-    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$2;->klC:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$2;->kLd:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;->isFinishing()Z
 
@@ -50,7 +50,7 @@
     if-nez v0, :cond_0
 
     .line 98
-    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$2;->klC:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$2;->kLd:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;->finish()V
 

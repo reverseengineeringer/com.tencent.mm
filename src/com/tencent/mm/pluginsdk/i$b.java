@@ -2,9 +2,9 @@ package com.tencent.mm.pluginsdk;
 
 public abstract interface i$b
 {
-  public abstract String ht(String paramString);
+  public abstract String hL(String paramString);
   
-  public abstract String hu(String paramString);
+  public abstract String hM(String paramString);
 }
 
 /* Location:

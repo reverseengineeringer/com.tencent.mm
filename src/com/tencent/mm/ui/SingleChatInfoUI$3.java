@@ -1,14 +1,14 @@
 package com.tencent.mm.ui;
 
 import android.content.Intent;
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.h.a;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.i.a;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.platformtools.s;
 import com.tencent.mm.pluginsdk.ui.applet.ContactListExpandPreference;
 import com.tencent.mm.pluginsdk.ui.applet.ContactListExpandPreference.a;
-import com.tencent.mm.storage.an;
-import com.tencent.mm.storage.ao;
+import com.tencent.mm.storage.ap;
+import com.tencent.mm.storage.aq;
 import com.tencent.mm.storage.q;
 import com.tencent.mm.ui.contact.e;
 
@@ -17,53 +17,53 @@ final class SingleChatInfoUI$3
 {
   SingleChatInfoUI$3(SingleChatInfoUI paramSingleChatInfoUI) {}
   
-  public final void Oa() {}
+  public final void Pl() {}
   
-  public final void Ob()
+  public final void Pm()
   {
-    if (SingleChatInfoUI.b(krj) != null) {
-      SingleChatInfoUI.b(krj).aRr();
+    if (SingleChatInfoUI.b(kQq) != null) {
+      SingleChatInfoUI.b(kQq).aWd();
     }
   }
   
-  public final void fH(int paramInt) {}
-  
-  public final void fI(int paramInt)
+  public final void gA(int paramInt)
   {
-    String str = SingleChatInfoUI.b(krj).ox(paramInt);
-    Object localObject2 = t.ky(SingleChatInfoUI.b(krj).oz(paramInt));
+    SingleChatInfoUI.c(kQq);
+  }
+  
+  public final void gy(int paramInt) {}
+  
+  public final void gz(int paramInt)
+  {
+    String str = SingleChatInfoUI.b(kQq).qd(paramInt);
+    Object localObject2 = s.li(SingleChatInfoUI.b(kQq).qf(paramInt));
     Object localObject1 = localObject2;
-    if (t.kz((String)localObject2))
+    if (s.kf((String)localObject2))
     {
-      an localan = ah.tD().rr().FH(str);
+      ap localap = ah.tE().rs().HY(str);
       localObject1 = localObject2;
-      if (localan != null)
+      if (localap != null)
       {
         localObject1 = localObject2;
-        if (!t.kz(field_encryptUsername)) {
+        if (!s.kf(field_encryptUsername)) {
           localObject1 = field_conRemark;
         }
       }
     }
-    if (t.kz(str)) {
+    if (s.kf(str)) {
       return;
     }
     localObject2 = new Intent();
     ((Intent)localObject2).putExtra("Contact_User", str);
     ((Intent)localObject2).putExtra("Contact_RemarkName", (String)localObject1);
-    ((Intent)localObject2).putExtra("Contact_Nick", t.ky(SingleChatInfoUI.b(krj).oy(paramInt)));
+    ((Intent)localObject2).putExtra("Contact_Nick", s.li(SingleChatInfoUI.b(kQq).qe(paramInt)));
     ((Intent)localObject2).putExtra("Contact_RoomMember", true);
-    localObject1 = ah.tD().rq().Ep(str);
-    if ((localObject1 != null) && ((int)bvi > 0) && (a.ce(field_type))) {
+    localObject1 = ah.tE().rr().GD(str);
+    if ((localObject1 != null) && ((int)bjS > 0) && (a.cy(field_type))) {
       e.a((Intent)localObject2, str);
     }
     ((Intent)localObject2).putExtra("Kdel_from", 0);
-    com.tencent.mm.ar.c.a(krj, "profile", ".ui.ContactInfoUI", (Intent)localObject2, 0);
-  }
-  
-  public final void fJ(int paramInt)
-  {
-    SingleChatInfoUI.c(krj);
+    com.tencent.mm.av.c.a(kQq, "profile", ".ui.ContactInfoUI", (Intent)localObject2, 0);
   }
 }
 

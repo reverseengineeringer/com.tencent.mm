@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroid/support/v4/app/Fragment;->instantiateChildFragmentManager()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroid/support/v4/app/Fragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic aZ:Landroid/support/v4/app/Fragment;
+.field final synthetic bn:Landroid/support/v4/app/Fragment;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 1439
-    iput-object p1, p0, Landroid/support/v4/app/Fragment$1;->aZ:Landroid/support/v4/app/Fragment;
+    iput-object p1, p0, Landroid/support/v4/app/Fragment$1;->bn:Landroid/support/v4/app/Fragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 1442
-    iget-object v0, p0, Landroid/support/v4/app/Fragment$1;->aZ:Landroid/support/v4/app/Fragment;
+    iget-object v0, p0, Landroid/support/v4/app/Fragment$1;->bn:Landroid/support/v4/app/Fragment;
 
     iget-object v0, v0, Landroid/support/v4/app/Fragment;->mView:Landroid/view/View;
 
@@ -58,7 +58,7 @@
 
     .line 1445
     :cond_0
-    iget-object v0, p0, Landroid/support/v4/app/Fragment$1;->aZ:Landroid/support/v4/app/Fragment;
+    iget-object v0, p0, Landroid/support/v4/app/Fragment$1;->bn:Landroid/support/v4/app/Fragment;
 
     iget-object v0, v0, Landroid/support/v4/app/Fragment;->mView:Landroid/view/View;
 

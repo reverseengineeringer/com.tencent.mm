@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bub:Lcom/tencent/mm/compatible/util/a;
+.field final synthetic biC:Lcom/tencent/mm/compatible/util/a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 34
-    iput-object p1, p0, Lcom/tencent/mm/compatible/util/a$1;->bub:Lcom/tencent/mm/compatible/util/a;
+    iput-object p1, p0, Lcom/tencent/mm/compatible/util/a$1;->biC:Lcom/tencent/mm/compatible/util/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,17 +41,17 @@
 
     .prologue
     .line 37
-    iget-object v0, p0, Lcom/tencent/mm/compatible/util/a$1;->bub:Lcom/tencent/mm/compatible/util/a;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/util/a$1;->biC:Lcom/tencent/mm/compatible/util/a;
 
     new-instance v1, Lcom/tencent/mm/compatible/util/b;
 
-    iget-object v2, p0, Lcom/tencent/mm/compatible/util/a$1;->bub:Lcom/tencent/mm/compatible/util/a;
+    iget-object v2, p0, Lcom/tencent/mm/compatible/util/a$1;->biC:Lcom/tencent/mm/compatible/util/a;
 
     iget-object v2, v2, Lcom/tencent/mm/compatible/util/a;->mContext:Landroid/content/Context;
 
     invoke-direct {v1, v2}, Lcom/tencent/mm/compatible/util/b;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, v0, Lcom/tencent/mm/compatible/util/a;->bua:Lcom/tencent/mm/compatible/util/a$b;
+    iput-object v1, v0, Lcom/tencent/mm/compatible/util/a;->biB:Lcom/tencent/mm/compatible/util/a$b;
 
     .line 38
     return-void

@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field public iLS:Ljava/lang/String;
+.field public jiP:Ljava/lang/String;
 
-.field iLT:Ljava/lang/String;
+.field public jiQ:Ljava/lang/String;
 
-.field iLU:I
+.field public jiR:I
 
 
 # direct methods

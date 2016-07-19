@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gFG:Lcom/tencent/mm/plugin/sns/abtest/b$5;
+.field final synthetic gMi:Lcom/tencent/mm/plugin/sns/abtest/b$5;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 153
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/abtest/b$5$1;->gFG:Lcom/tencent/mm/plugin/sns/abtest/b$5;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/abtest/b$5$1;->gMi:Lcom/tencent/mm/plugin/sns/abtest/b$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 156
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b$5$1;->gFG:Lcom/tencent/mm/plugin/sns/abtest/b$5;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/abtest/b$5$1;->gMi:Lcom/tencent/mm/plugin/sns/abtest/b$5;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/abtest/b$5;->gFE:Lcom/tencent/mm/plugin/sns/abtest/b;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/abtest/b$5;->gMg:Lcom/tencent/mm/plugin/sns/abtest/b;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/abtest/b;->axr()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/abtest/b;->azT()V
 
     .line 157
     return-void

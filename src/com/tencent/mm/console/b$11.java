@@ -1,36 +1,20 @@
 package com.tencent.mm.console;
 
-import com.tencent.mm.model.as.a;
-import com.tencent.mm.network.a.c;
-import com.tencent.mm.network.e;
-import com.tencent.mm.sdk.platformtools.u;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.text.ClipboardManager;
+import android.widget.Toast;
 
 final class b$11
-  implements as.a
+  implements DialogInterface.OnClickListener
 {
-  public final void a(e parame)
+  b$11(Context paramContext, String paramString) {}
+  
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (parame == null) {}
-    for (;;)
-    {
-      return;
-      String[] arrayOfString = parame.getIPsString(true);
-      int i = 0;
-      while (i < arrayOfString.length)
-      {
-        u.d("!44@/B4Tb64lLpJLD/TSzHAWHSAf/GG2c9mYEhKZ1EHpY7c=", "dkip long:%d  %s", new Object[] { Integer.valueOf(i), arrayOfString[i] });
-        u.d("!44@/B4Tb64lLpJLD/TSzHAWHSAf/GG2c9mYEhKZ1EHpY7c=", "dkip long:%d %s", new Object[] { Integer.valueOf(i), c.kl(arrayOfString[i]).toString() });
-        i += 1;
-      }
-      parame = parame.getIPsString(false);
-      i = 0;
-      while (i < parame.length)
-      {
-        u.d("!44@/B4Tb64lLpJLD/TSzHAWHSAf/GG2c9mYEhKZ1EHpY7c=", "dkip short:%d %s", new Object[] { Integer.valueOf(i), parame[i] });
-        u.d("!44@/B4Tb64lLpJLD/TSzHAWHSAf/GG2c9mYEhKZ1EHpY7c=", "dkip long:%d %s", new Object[] { Integer.valueOf(i), c.kl(parame[i]).toString() });
-        i += 1;
-      }
-    }
+    ((ClipboardManager)bjx.getSystemService("clipboard")).setText(bjI);
+    Toast.makeText(bjx, 2131235922, 0).show();
   }
 }
 

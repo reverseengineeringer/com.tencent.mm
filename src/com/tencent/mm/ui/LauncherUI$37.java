@@ -1,27 +1,18 @@
 package com.tencent.mm.ui;
 
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 
 final class LauncherUI$37
-  implements Animation.AnimationListener
+  implements DialogInterface.OnClickListener
 {
   LauncherUI$37(LauncherUI paramLauncherUI) {}
   
-  public final void onAnimationEnd(Animation paramAnimation)
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (LauncherUI.M(knl) == paramAnimation) {
-      LauncherUI.e(knl, false);
-    }
-    while (LauncherUI.N(knl) != paramAnimation) {
-      return;
-    }
-    LauncherUI.e(knl, true);
+    kMs.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
   }
-  
-  public final void onAnimationRepeat(Animation paramAnimation) {}
-  
-  public final void onAnimationStart(Animation paramAnimation) {}
 }
 
 /* Location:

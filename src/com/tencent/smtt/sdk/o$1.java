@@ -7,7 +7,7 @@ final class o$1
   
   public final void run()
   {
-    lTg.blW();
+    muY.bsa();
   }
 }
 

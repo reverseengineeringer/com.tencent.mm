@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final cnY:[J
+.field private static final cjk:[J
 
 
 # direct methods
@@ -12,14 +12,14 @@
     .locals 1
 
     .prologue
-    .line 156
+    .line 163
     const/4 v0, 0x3
 
     new-array v0, v0, [J
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/tencent/mm/sandbox/updater/h;->cnY:[J
+    sput-object v0, Lcom/tencent/mm/sandbox/updater/h;->cjk:[J
 
     return-void
 
@@ -33,7 +33,103 @@
     .end array-data
 .end method
 
-.method public static C(Landroid/content/Context;I)V
+.method public static EI(Ljava/lang/String;)Z
+    .locals 5
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 249
+    invoke-static {}, Lcom/tencent/mm/sandbox/updater/h;->aZa()[Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 250
+    if-eqz v2, :cond_0
+
+    .line 251
+    array-length v3, v2
+
+    move v1, v0
+
+    :goto_0
+    if-ge v1, v3, :cond_0
+
+    aget-object v4, v2, v1
+
+    .line 252
+    invoke-virtual {v4, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    .line 253
+    const/4 v0, 0x1
+
+    .line 257
+    :cond_0
+    return v0
+
+    .line 251
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+.end method
+
+.method public static EJ(Ljava/lang/String;)J
+    .locals 7
+
+    .prologue
+    .line 344
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "update_flowstat_prefs"
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;->getSharedPreferences(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 345
+    const-wide/16 v2, 0x0
+
+    invoke-interface {v0, p0, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    .line 346
+    const-string/jumbo v2, "MicroMsg.UpdateUtil"
+
+    const-string/jumbo v3, "getPackFlowStat pack %s, flow %s"
+
+    const/4 v4, 0x2
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    aput-object p0, v4, v5
+
+    const/4 v5, 0x1
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 347
+    return-wide v0
+.end method
+
+.method public static G(Landroid/content/Context;I)V
     .locals 3
 
     .prologue
@@ -68,121 +164,12 @@
     return-void
 .end method
 
-.method public static Cv(Ljava/lang/String;)Z
-    .locals 5
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 242
-    invoke-static {}, Lcom/tencent/mm/sandbox/updater/h;->aUb()[Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 243
-    if-eqz v2, :cond_0
-
-    .line 244
-    array-length v3, v2
-
-    move v1, v0
-
-    :goto_0
-    if-ge v1, v3, :cond_0
-
-    aget-object v4, v2, v1
-
-    .line 245
-    invoke-virtual {v4, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    .line 246
-    const/4 v0, 0x1
-
-    .line 250
-    :cond_0
-    return v0
-
-    .line 244
-    :cond_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-.end method
-
-.method public static Cw(Ljava/lang/String;)J
-    .locals 7
-
-    .prologue
-    .line 337
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "update_flowstat_prefs"
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;->getSharedPreferences(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 338
-    const-wide/16 v1, 0x0
-
-    invoke-interface {v0, p0, v1, v2}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide v0
-
-    .line 339
-    const-string/jumbo v2, "!32@/B4Tb64lLpK9XuYWhbQlHtRMppGWmwU7"
-
-    const-string/jumbo v3, "getPackFlowStat pack %s, flow %s"
-
-    const/4 v4, 0x2
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    const/4 v5, 0x0
-
-    aput-object p0, v4, v5
-
-    const/4 v5, 0x1
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v6
-
-    aput-object v6, v4, v5
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 340
-    return-wide v0
-.end method
-
-.method public static D(Landroid/content/Context;I)V
-    .locals 1
-
-    .prologue
-    .line 101
-    const/4 v0, 0x0
-
-    invoke-static {p0, p1, v0}, Lcom/tencent/mm/sandbox/updater/h;->d(Landroid/content/Context;II)V
-
-    .line 102
-    return-void
-.end method
-
-.method public static FN()Ljava/lang/String;
+.method public static Gk()Ljava/lang/String;
     .locals 3
 
     .prologue
     .line 116
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -206,12 +193,25 @@
     return-object v0
 .end method
 
-.method public static aTX()Ljava/lang/String;
-    .locals 3
+.method public static H(Landroid/content/Context;I)V
+    .locals 1
 
     .prologue
-    .line 127
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 101
+    const/4 v0, 0x0
+
+    invoke-static {p0, p1, v0}, Lcom/tencent/mm/sandbox/updater/h;->e(Landroid/content/Context;II)V
+
+    .line 102
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIILjava/lang/String;)V
+    .locals 5
+
+    .prologue
+    .line 150
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -223,7 +223,133 @@
 
     move-result-object v0
 
-    .line 128
+    .line 151
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "update_downloaded_pack_md5_key"
+
+    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "update_downloaded_pack_sig_key"
+
+    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "update_downloaded_pack_desc_key"
+
+    invoke-interface {v0, v1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "update_downloaded_pack_size_key"
+
+    invoke-interface {v0, v1, p3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "update_downloaded_pack_download_mode"
+
+    invoke-interface {v0, v1, p4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "update_downloaded_pack_update_type"
+
+    invoke-interface {v0, v1, p5}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "update_download_not_auto_download_range"
+
+    invoke-interface {v0, v1, p6}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 160
+    const-string/jumbo v0, "MicroMsg.UpdateUtil"
+
+    const-string/jumbo v1, "summerupdate putDownloadedPackInfo md5: %s size: %s range: %s"
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p0, v2, v3
+
+    const/4 v3, 0x1
+
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x2
+
+    aput-object p6, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 161
+    return-void
+.end method
+
+.method public static aYV()Ljava/lang/String;
+    .locals 3
+
+    .prologue
+    .line 121
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "update_config_prefs"
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;->getSharedPreferences(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 122
+    const-string/jumbo v1, "update_downloaded_pack_sig_key"
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static aYW()Ljava/lang/String;
+    .locals 3
+
+    .prologue
+    .line 132
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "update_config_prefs"
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;->getSharedPreferences(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 133
     const-string/jumbo v1, "update_downloaded_pack_desc_key"
 
     const/4 v2, 0x0
@@ -235,12 +361,12 @@
     return-object v0
 .end method
 
-.method public static aTY()I
+.method public static aYX()I
     .locals 3
 
     .prologue
-    .line 139
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 144
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -252,7 +378,7 @@
 
     move-result-object v0
 
-    .line 140
+    .line 145
     const-string/jumbo v1, "update_downloaded_pack_download_mode"
 
     const/4 v2, 0x0
@@ -264,14 +390,14 @@
     return v0
 .end method
 
-.method public static aTZ()I
+.method public static aYY()I
     .locals 6
 
     .prologue
     const/4 v5, 0x0
 
-    .line 191
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 198
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -283,15 +409,15 @@
 
     move-result-object v0
 
-    .line 192
+    .line 199
     const-string/jumbo v1, "update_downloaded_cancel_times"
 
     invoke-interface {v0, v1, v5}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 194
-    const-string/jumbo v1, "!32@/B4Tb64lLpK9XuYWhbQlHtRMppGWmwU7"
+    .line 201
+    const-string/jumbo v1, "MicroMsg.UpdateUtil"
 
     const-string/jumbo v2, "getIgnoreDownloadedPackTimes times %s"
 
@@ -305,20 +431,20 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 196
+    .line 203
     return v0
 .end method
 
-.method public static aUa()V
+.method public static aYZ()V
     .locals 7
 
     .prologue
     const/4 v1, 0x0
 
-    .line 201
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 208
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -330,15 +456,15 @@
 
     move-result-object v2
 
-    .line 202
+    .line 209
     const-string/jumbo v0, "update_downloaded_cancel_times"
 
     invoke-interface {v2, v0, v1}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 204
-    const-string/jumbo v3, "!32@/B4Tb64lLpK9XuYWhbQlHtRMppGWmwU7"
+    .line 211
+    const-string/jumbo v3, "MicroMsg.UpdateUtil"
 
     const-string/jumbo v4, "putIgnoreDownloadedPack times %s"
 
@@ -352,10 +478,10 @@
 
     aput-object v6, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 206
-    sget-object v3, Lcom/tencent/mm/sandbox/updater/h;->cnY:[J
+    .line 213
+    sget-object v3, Lcom/tencent/mm/sandbox/updater/h;->cjk:[J
 
     array-length v3, v3
 
@@ -363,38 +489,38 @@
 
     if-lt v0, v3, :cond_3
 
-    .line 207
-    invoke-static {}, Lcom/tencent/mm/sandbox/updater/h;->FN()Ljava/lang/String;
+    .line 214
+    invoke-static {}, Lcom/tencent/mm/sandbox/updater/h;->Gk()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 208
+    .line 215
     const/4 v0, 0x0
 
-    .line 209
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    .line 216
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 210
-    invoke-static {}, Lcom/tencent/mm/sandbox/updater/h;->aUb()[Ljava/lang/String;
+    .line 217
+    invoke-static {}, Lcom/tencent/mm/sandbox/updater/h;->aZa()[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 211
+    .line 218
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 212
+    .line 219
     invoke-virtual {v0, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 213
+    .line 220
     if-eqz v4, :cond_1
 
-    .line 214
+    .line 221
     array-length v3, v4
 
     :goto_0
@@ -402,28 +528,28 @@
 
     aget-object v5, v4, v1
 
-    .line 215
-    invoke-static {v5}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    .line 222
+    invoke-static {v5}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v6
 
     if-nez v6, :cond_0
 
-    .line 216
+    .line 223
     const-string/jumbo v6, ":"
 
     invoke-virtual {v0, v6}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 217
+    .line 224
     invoke-virtual {v0, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 214
+    .line 221
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 222
+    .line 229
     :cond_1
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -435,10 +561,10 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 223
+    .line 230
     if-eqz v0, :cond_2
 
-    .line 224
+    .line 231
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
@@ -455,16 +581,16 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 235
+    .line 242
     :cond_2
     :goto_1
     return-void
 
-    .line 229
+    .line 236
     :cond_3
     add-int/lit8 v0, v0, 0x1
 
-    .line 231
+    .line 238
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
@@ -473,9 +599,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-interface {v1, v2, v3, v4}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v1, v2, v4, v5}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
@@ -490,14 +616,14 @@
     goto :goto_1
 .end method
 
-.method private static aUb()[Ljava/lang/String;
+.method private static aZa()[Ljava/lang/String;
     .locals 4
 
     .prologue
     const/4 v0, 0x0
 
-    .line 255
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 262
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -509,21 +635,21 @@
 
     move-result-object v1
 
-    .line 256
+    .line 263
     const-string/jumbo v2, "update_downloaded_ignored_pack"
 
     invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 257
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    .line 264
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 261
+    .line 268
     :goto_0
     return-object v0
 
@@ -537,12 +663,12 @@
     goto :goto_0
 .end method
 
-.method public static aUc()V
+.method public static aZb()V
     .locals 4
 
     .prologue
-    .line 287
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 294
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -554,7 +680,7 @@
 
     move-result-object v0
 
-    .line 288
+    .line 295
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -579,23 +705,23 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 292
-    const-string/jumbo v0, "!32@/B4Tb64lLpK9XuYWhbQlHtRMppGWmwU7"
+    .line 299
+    const-string/jumbo v0, "MicroMsg.UpdateUtil"
 
     const-string/jumbo v1, "putDowningInSilence"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 293
+    .line 300
     return-void
 .end method
 
-.method public static aUd()V
+.method public static aZc()V
     .locals 3
 
     .prologue
-    .line 297
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 304
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -607,7 +733,7 @@
 
     move-result-object v0
 
-    .line 298
+    .line 305
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -622,23 +748,23 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 301
-    const-string/jumbo v0, "!32@/B4Tb64lLpK9XuYWhbQlHtRMppGWmwU7"
+    .line 308
+    const-string/jumbo v0, "MicroMsg.UpdateUtil"
 
     const-string/jumbo v1, "putOneDownloadTask"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 302
+    .line 309
     return-void
 .end method
 
-.method public static aUe()V
+.method public static aZd()V
     .locals 3
 
     .prologue
-    .line 306
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 313
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -650,7 +776,7 @@
 
     move-result-object v0
 
-    .line 307
+    .line 314
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -663,23 +789,23 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 311
-    const-string/jumbo v0, "!32@/B4Tb64lLpK9XuYWhbQlHtRMppGWmwU7"
+    .line 318
+    const-string/jumbo v0, "MicroMsg.UpdateUtil"
 
     const-string/jumbo v1, "removeUnfinishDownloadingInSilence"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 312
+    .line 319
     return-void
 .end method
 
-.method public static aUf()V
+.method public static aZe()V
     .locals 3
 
     .prologue
-    .line 316
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 323
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -691,7 +817,7 @@
 
     move-result-object v0
 
-    .line 317
+    .line 324
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -702,19 +828,19 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 319
-    const-string/jumbo v0, "!32@/B4Tb64lLpK9XuYWhbQlHtRMppGWmwU7"
+    .line 326
+    const-string/jumbo v0, "MicroMsg.UpdateUtil"
 
     const-string/jumbo v1, "clearUpdateConfigPrefs"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 320
+    .line 327
     return-void
 .end method
 
-.method public static b(Ljava/lang/String;JJ)J
-    .locals 10
+.method public static c(Ljava/lang/String;JJ)J
+    .locals 11
 
     .prologue
     const/4 v9, 0x2
@@ -723,8 +849,8 @@
 
     const/4 v7, 0x0
 
-    .line 324
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 331
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -736,15 +862,15 @@
 
     move-result-object v0
 
-    .line 325
-    const-wide/16 v1, 0x0
+    .line 332
+    const-wide/16 v2, 0x0
 
-    invoke-interface {v0, p0, v1, v2}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+    invoke-interface {v0, p0, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    .line 326
-    const-string/jumbo v3, "!32@/B4Tb64lLpK9XuYWhbQlHtRMppGWmwU7"
+    .line 333
+    const-string/jumbo v1, "MicroMsg.UpdateUtil"
 
     const-string/jumbo v4, "putPackFlowStat pack %s, flowUp %s, flowDown %s"
 
@@ -766,10 +892,10 @@
 
     aput-object v6, v5, v9
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 327
-    const-string/jumbo v3, "!32@/B4Tb64lLpK9XuYWhbQlHtRMppGWmwU7"
+    .line 334
+    const-string/jumbo v1, "MicroMsg.UpdateUtil"
 
     const-string/jumbo v4, "putPackFlowStat pack %s, flow %s"
 
@@ -777,116 +903,142 @@
 
     aput-object p0, v5, v7
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v6
 
     aput-object v6, v5, v8
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 328
-    add-long v3, p1, p3
+    .line 335
+    add-long v4, p1, p3
 
-    add-long/2addr v1, v3
+    add-long/2addr v2, v4
 
-    .line 329
+    .line 336
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    invoke-interface {v0, p0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0, p0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 332
-    return-wide v1
+    .line 339
+    return-wide v2
 .end method
 
-.method public static b(Ljava/lang/String;Ljava/lang/String;III)V
-    .locals 5
+.method private static de(Landroid/content/Context;)Ljava/lang/String;
+    .locals 3
 
     .prologue
-    .line 145
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 46
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    const-string/jumbo v1, "update_config_prefs"
+    .line 47
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    const/4 v2, 0x4
+    move-result-object v1
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;->getSharedPreferences(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    const/4 v2, 0x0
 
-    move-result-object v0
-
-    .line 146
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v0, v1, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object v0
 
-    const-string/jumbo v1, "update_downloaded_pack_md5_key"
+    iget-object v0, v0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object v0
+    .line 49
+    :goto_0
+    return-object v0
 
-    const-string/jumbo v1, "update_downloaded_pack_desc_key"
+    :catch_0
+    move-exception v0
 
-    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const/4 v0, 0x0
 
-    move-result-object v0
-
-    const-string/jumbo v1, "update_downloaded_pack_size_key"
-
-    invoke-interface {v0, v1, p2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "update_downloaded_pack_download_mode"
-
-    invoke-interface {v0, v1, p3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "update_downloaded_pack_update_type"
-
-    invoke-interface {v0, v1, p4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 153
-    const-string/jumbo v0, "!32@/B4Tb64lLpK9XuYWhbQlHtRMppGWmwU7"
-
-    const-string/jumbo v1, "putDownloadedPackInfo md5: %s size: %s"
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    aput-object p0, v2, v3
-
-    const/4 v3, 0x1
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 154
-    return-void
+    goto :goto_0
 .end method
 
-.method public static d(Landroid/content/Context;II)V
+.method public static df(Landroid/content/Context;)Ljava/lang/String;
+    .locals 3
+
+    .prologue
+    .line 77
+    invoke-static {p0}, Lcom/tencent/mm/sandbox/updater/h;->de(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v1, Ljava/io/File;
+
+    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :cond_1
+    invoke-static {v0}, Lcom/tencent/mm/b/a;->aL(Ljava/lang/String;)Lcom/tencent/mm/b/a;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v2, v1, Lcom/tencent/mm/b/a;->Xr:Lcom/tencent/mm/b/b;
+
+    if-eqz v2, :cond_2
+
+    iget-object v0, v1, Lcom/tencent/mm/b/a;->Xr:Lcom/tencent/mm/b/b;
+
+    iget-object v0, v0, Lcom/tencent/mm/b/b;->apkMd5:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static {v0}, Lcom/tencent/mm/a/g;->aH(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public static e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+    .locals 1
+
+    .prologue
+    .line 89
+    invoke-static {p0}, Lcom/tencent/mm/sandbox/updater/h;->de(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0, p1, p2, p3}, Lcom/tencent/mm/b/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static e(Landroid/content/Context;II)V
     .locals 3
 
     .prologue
@@ -930,111 +1082,4 @@
 
     .line 112
     return-void
-.end method
-
-.method private static dg(Landroid/content/Context;)Ljava/lang/String;
-    .locals 3
-
-    .prologue
-    .line 46
-    :try_start_0
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v0
-
-    .line 47
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
-
-    move-result-object v0
-
-    iget-object v0, v0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
-
-    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 49
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static dh(Landroid/content/Context;)Ljava/lang/String;
-    .locals 3
-
-    .prologue
-    .line 77
-    invoke-static {p0}, Lcom/tencent/mm/sandbox/updater/h;->dg(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v1, Ljava/io/File;
-
-    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return-object v0
-
-    :cond_1
-    invoke-static {v0}, Lcom/tencent/mm/b/a;->aG(Ljava/lang/String;)Lcom/tencent/mm/b/a;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v2, v1, Lcom/tencent/mm/b/a;->aky:Lcom/tencent/mm/b/b;
-
-    if-eqz v2, :cond_2
-
-    iget-object v0, v1, Lcom/tencent/mm/b/a;->aky:Lcom/tencent/mm/b/b;
-
-    iget-object v0, v0, Lcom/tencent/mm/b/b;->apkMd5:Ljava/lang/String;
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {v0}, Lcom/tencent/mm/a/g;->aC(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method public static f(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
-    .locals 1
-
-    .prologue
-    .line 89
-    invoke-static {p0}, Lcom/tencent/mm/sandbox/updater/h;->dg(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0, p1, p2, p3}, Lcom/tencent/mm/b/e;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
-
-    move-result v0
-
-    return v0
 .end method

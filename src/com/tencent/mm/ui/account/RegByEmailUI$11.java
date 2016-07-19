@@ -12,10 +12,10 @@ final class RegByEmailUI$11
   
   public final boolean onKey(View paramView, int paramInt, KeyEvent paramKeyEvent)
   {
-    if ((66 != paramInt) || (paramKeyEvent.getAction() != 0) || (!RegByEmailUI.d(kuo).isChecked())) {
+    if ((66 != paramInt) || (paramKeyEvent.getAction() != 0) || (!RegByEmailUI.d(kTv).isChecked())) {
       return false;
     }
-    RegByEmailUI.c(kuo);
+    RegByEmailUI.c(kTv);
     return true;
   }
 }

@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/storage/d$a;
-.super Lcom/tencent/mm/d/b/c;
+.super Lcom/tencent/mm/e/b/c;
 .source "SourceFile"
 
 
@@ -20,19 +20,19 @@
 
     .prologue
     .line 16
-    invoke-direct {p0}, Lcom/tencent/mm/d/b/c;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/e/b/c;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final ls()Lcom/tencent/mm/sdk/h/c$a;
+.method protected final ou()Lcom/tencent/mm/sdk/h/c$a;
     .locals 1
 
     .prologue
     .line 20
-    invoke-static {}, Lcom/tencent/mm/d/b/c;->lY()Lcom/tencent/mm/sdk/h/c$a;
+    invoke-static {}, Lcom/tencent/mm/e/b/c;->ko()Lcom/tencent/mm/sdk/h/c$a;
 
     move-result-object v0
 

@@ -9,8 +9,8 @@ final class SnsAddressUI$1$1
   
   public final void run()
   {
-    if (!lmt.lms.getIntent().getBooleanExtra("stay_in_wechat", true)) {
-      lmt.lms.moveTaskToBack(true);
+    if (!lMJ.lMI.getIntent().getBooleanExtra("stay_in_wechat", true)) {
+      lMJ.lMI.moveTaskToBack(true);
     }
   }
 }

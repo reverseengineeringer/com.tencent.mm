@@ -9,7 +9,7 @@
 
 
 # instance fields
-.field private iPJ:Landroid/text/SpannableString;
+.field private jmQ:Landroid/text/SpannableString;
 
 
 # direct methods
@@ -23,7 +23,7 @@
     .line 10
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->iPJ:Landroid/text/SpannableString;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->jmQ:Landroid/text/SpannableString;
 
     .line 13
     new-instance v0, Landroid/text/SpannableString;
@@ -32,7 +32,7 @@
 
     invoke-direct {v0, v1}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->iPJ:Landroid/text/SpannableString;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->jmQ:Landroid/text/SpannableString;
 
     .line 14
     return-void
@@ -48,10 +48,10 @@
     .line 10
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->iPJ:Landroid/text/SpannableString;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->jmQ:Landroid/text/SpannableString;
 
     .line 29
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->iPJ:Landroid/text/SpannableString;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->jmQ:Landroid/text/SpannableString;
 
     .line 30
     return-void
@@ -67,14 +67,14 @@
     .line 10
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->iPJ:Landroid/text/SpannableString;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->jmQ:Landroid/text/SpannableString;
 
     .line 17
     new-instance v0, Landroid/text/SpannableString;
 
     invoke-direct {v0, p1}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->iPJ:Landroid/text/SpannableString;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->jmQ:Landroid/text/SpannableString;
 
     .line 18
     return-void
@@ -87,7 +87,7 @@
     .line 49
     if-ltz p2, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->iPJ:Landroid/text/SpannableString;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->jmQ:Landroid/text/SpannableString;
 
     invoke-virtual {v0}, Landroid/text/SpannableString;->length()I
 
@@ -96,7 +96,7 @@
     if-gt p3, v0, :cond_0
 
     .line 50
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->iPJ:Landroid/text/SpannableString;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->jmQ:Landroid/text/SpannableString;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
 
@@ -133,7 +133,7 @@
 
     .prologue
     .line 86
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->iPJ:Landroid/text/SpannableString;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->jmQ:Landroid/text/SpannableString;
 
     invoke-virtual {v0, p1}, Landroid/text/SpannableString;->charAt(I)C
 
@@ -162,7 +162,7 @@
 
     .prologue
     .line 101
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->iPJ:Landroid/text/SpannableString;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->jmQ:Landroid/text/SpannableString;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/text/SpannableString;->getChars(II[CI)V
 
@@ -175,7 +175,7 @@
 
     .prologue
     .line 66
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->iPJ:Landroid/text/SpannableString;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->jmQ:Landroid/text/SpannableString;
 
     invoke-virtual {v0, p1}, Landroid/text/SpannableString;->getSpanEnd(Ljava/lang/Object;)I
 
@@ -189,7 +189,7 @@
 
     .prologue
     .line 71
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->iPJ:Landroid/text/SpannableString;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->jmQ:Landroid/text/SpannableString;
 
     invoke-virtual {v0, p1}, Landroid/text/SpannableString;->getSpanFlags(Ljava/lang/Object;)I
 
@@ -203,7 +203,7 @@
 
     .prologue
     .line 61
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->iPJ:Landroid/text/SpannableString;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->jmQ:Landroid/text/SpannableString;
 
     invoke-virtual {v0, p1}, Landroid/text/SpannableString;->getSpanStart(Ljava/lang/Object;)I
 
@@ -214,10 +214,19 @@
 
 .method public final getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(II",
+            "Ljava/lang/Class",
+            "<TT;>;)[TT;"
+        }
+    .end annotation
 
     .prologue
     .line 56
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->iPJ:Landroid/text/SpannableString;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->jmQ:Landroid/text/SpannableString;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/text/SpannableString;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
@@ -231,7 +240,7 @@
 
     .prologue
     .line 81
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->iPJ:Landroid/text/SpannableString;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->jmQ:Landroid/text/SpannableString;
 
     invoke-virtual {v0}, Landroid/text/SpannableString;->length()I
 
@@ -245,7 +254,7 @@
 
     .prologue
     .line 76
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->iPJ:Landroid/text/SpannableString;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->jmQ:Landroid/text/SpannableString;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/text/SpannableString;->nextSpanTransition(IILjava/lang/Class;)I
 
@@ -259,7 +268,7 @@
 
     .prologue
     .line 96
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->iPJ:Landroid/text/SpannableString;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->jmQ:Landroid/text/SpannableString;
 
     invoke-virtual {v0, p1}, Landroid/text/SpannableString;->removeSpan(Ljava/lang/Object;)V
 
@@ -283,7 +292,7 @@
 
     .prologue
     .line 91
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->iPJ:Landroid/text/SpannableString;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->jmQ:Landroid/text/SpannableString;
 
     invoke-virtual {v0, p1, p2}, Landroid/text/SpannableString;->subSequence(II)Ljava/lang/CharSequence;
 
@@ -297,7 +306,7 @@
 
     .prologue
     .line 106
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->iPJ:Landroid/text/SpannableString;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/f;->jmQ:Landroid/text/SpannableString;
 
     invoke-virtual {v0}, Landroid/text/SpannableString;->toString()Ljava/lang/String;
 

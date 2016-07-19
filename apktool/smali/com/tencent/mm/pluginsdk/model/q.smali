@@ -16,7 +16,10 @@
 
 
 # virtual methods
-.method public abstract FG()Ljava/lang/String;
+.method public abstract By(Ljava/lang/String;)Z
+.end method
+
+.method public abstract Gb()Ljava/lang/String;
 .end method
 
 .method public a(Landroid/content/Context;Landroid/content/pm/ResolveInfo;)Ljava/lang/String;
@@ -41,13 +44,13 @@
     return-object v0
 .end method
 
-.method public abstract aPk()Ljava/lang/String;
+.method public abstract aTQ()Ljava/lang/String;
 .end method
 
-.method public abstract aPl()Lcom/tencent/mm/pluginsdk/model/r$a;
+.method public abstract aTR()Lcom/tencent/mm/pluginsdk/model/r$a;
 .end method
 
-.method public abstract cK(Landroid/content/Context;)Z
+.method public abstract cH(Landroid/content/Context;)Z
 .end method
 
 .method public u(Landroid/content/Context;Landroid/content/Intent;)Z
@@ -58,7 +61,4 @@
     const/4 v0, 0x0
 
     return v0
-.end method
-
-.method public abstract zC(Ljava/lang/String;)Z
 .end method

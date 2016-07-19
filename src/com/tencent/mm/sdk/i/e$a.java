@@ -3,19 +3,19 @@ package com.tencent.mm.sdk.i;
 final class e$a
   implements c
 {
-  private final Runnable jZg;
+  private final Runnable kzD;
   
   public e$a(e parame, Runnable paramRunnable)
   {
-    jZg = paramRunnable;
+    kzD = paramRunnable;
   }
   
-  public final void k(Runnable arg1)
+  public final void l(Runnable arg1)
   {
-    if (???.equals(jZg)) {
-      synchronized (jZg)
+    if (???.equals(kzD)) {
+      synchronized (kzD)
       {
-        jZg.notifyAll();
+        kzD.notifyAll();
         e.c(this);
         return;
       }

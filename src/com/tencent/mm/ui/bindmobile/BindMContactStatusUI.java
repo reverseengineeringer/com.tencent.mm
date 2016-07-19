@@ -17,21 +17,21 @@ import com.tencent.mm.ui.MMWizardActivity;
 public class BindMContactStatusUI
   extends MMWizardActivity
 {
-  private Button cyD;
-  private TextView kOy;
-  private ImageView kwV;
-  private TextView kwW;
+  private Button cvB;
+  private ImageView kWc;
+  private TextView kWd;
+  private TextView lnO;
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    kwV = ((ImageView)findViewById(2131167094));
-    kOy = ((TextView)findViewById(2131167095));
-    kwW = ((TextView)findViewById(2131169184));
-    cyD = ((Button)findViewById(2131167097));
-    if (m.yD() == m.a.bMB)
+    kWc = ((ImageView)findViewById(2131755488));
+    lnO = ((TextView)findViewById(2131755489));
+    kWd = ((TextView)findViewById(2131755521));
+    cvB = ((Button)findViewById(2131755491));
+    if (m.yQ() == m.a.bFV)
     {
-      kwV.setImageResource(2130903410);
-      String str2 = (String)ah.tD().rn().get(6, null);
+      kWc.setImageResource(2131165585);
+      String str2 = (String)ah.tE().ro().get(6, null);
       String str1;
       if (str2 != null)
       {
@@ -40,14 +40,14 @@ public class BindMContactStatusUI
       }
       else
       {
-        str1 = (String)ah.tD().rn().get(4097, null);
+        str1 = (String)ah.tE().ro().get(4097, null);
       }
-      kwW.setText(getString(2131428677));
-      kOy.setText(getString(2131428658, new Object[] { str1 }));
+      kWd.setText(getString(2131231285));
+      lnO.setText(getString(2131231308, new Object[] { str1 }));
     }
     for (;;)
     {
-      cyD.setOnClickListener(new View.OnClickListener()
+      cvB.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
@@ -55,30 +55,30 @@ public class BindMContactStatusUI
         }
       });
       return;
-      kwV.setImageResource(2130903411);
-      kwW.setText(2131428618);
-      kOy.setText(2131428618);
-      kwW.setVisibility(8);
+      kWc.setImageResource(2131165586);
+      kWd.setText(2131231296);
+      lnO.setText(2131231296);
+      kWd.setVisibility(8);
     }
   }
   
   protected final int getLayoutId()
   {
-    return 2131363097;
+    return 2130903149;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    qb(2131428607);
-    Gb();
+    rR(2131231289);
+    Gy();
   }
   
   public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
   {
     if (paramInt == 4)
     {
-      bbm();
+      bgy();
       return true;
     }
     return super.onKeyDown(paramInt, paramKeyEvent);

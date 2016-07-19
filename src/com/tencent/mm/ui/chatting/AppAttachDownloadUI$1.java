@@ -3,7 +3,7 @@ package com.tencent.mm.ui.chatting;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 
 final class AppAttachDownloadUI$1
   implements MenuItem.OnMenuItemClickListener
@@ -12,10 +12,10 @@ final class AppAttachDownloadUI$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if (AppAttachDownloadUI.a(kQa) != null) {
-      ah.tE().c(AppAttachDownloadUI.a(kQa));
+    if (AppAttachDownloadUI.a(lpP) != null) {
+      ah.tF().c(AppAttachDownloadUI.a(lpP));
     }
-    kQa.finish();
+    lpP.finish();
     return true;
   }
 }

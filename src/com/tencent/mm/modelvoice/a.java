@@ -1,6 +1,6 @@
 package com.tencent.mm.modelvoice;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import junit.framework.Assert;
@@ -8,21 +8,21 @@ import junit.framework.Assert;
 public final class a
   implements b
 {
-  private String anC = "";
-  private RandomAccessFile anU = null;
+  private String aaq = "";
+  private RandomAccessFile cbR = null;
   
   public a(String paramString)
   {
-    anC = paramString;
+    aaq = paramString;
   }
   
-  private boolean bd(String paramString)
+  private boolean kE(String paramString)
   {
-    if (anC.length() >= 0)
+    if (aaq.length() >= 0)
     {
       bool = true;
       Assert.assertTrue(bool);
-      if (anU != null) {
+      if (cbR != null) {
         break label109;
       }
       bool = true;
@@ -37,16 +37,16 @@ public final class a
     for (boolean bool = true;; bool = false)
     {
       Assert.assertTrue(bool);
-      u.d("!44@/B4Tb64lLpI1uMpLvXr9z/l67fEFyLju4OwsjOKyzR4=", "Open file:" + anU + " mode:" + paramString);
+      v.d("MicroMsg.AmrFileOperator", "Open file:" + cbR + " mode:" + paramString);
       try
       {
-        anU = new RandomAccessFile(anC, paramString);
+        cbR = new RandomAccessFile(aaq, paramString);
         return true;
       }
       catch (Exception paramString)
       {
-        u.e("!44@/B4Tb64lLpI1uMpLvXr9z/l67fEFyLju4OwsjOKyzR4=", "ERR: OpenFile[" + anC + "] failed:[" + paramString.getMessage() + "]");
-        anU = null;
+        v.e("MicroMsg.AmrFileOperator", "ERR: OpenFile[" + aaq + "] failed:[" + paramString.getMessage() + "]");
+        cbR = null;
       }
       bool = false;
       break;
@@ -56,7 +56,20 @@ public final class a
     return false;
   }
   
-  public final g aa(int paramInt1, int paramInt2)
+  public final void EI()
+  {
+    if (cbR != null) {}
+    try
+    {
+      cbR.close();
+      cbR = null;
+      v.d("MicroMsg.AmrFileOperator", "Close :" + aaq);
+      return;
+    }
+    catch (IOException localIOException) {}
+  }
+  
+  public final g ad(int paramInt1, int paramInt2)
   {
     g localg = new g();
     if ((paramInt1 < 0) || (paramInt2 <= 0))
@@ -64,7 +77,7 @@ public final class a
       ret = -3;
       return localg;
     }
-    if ((anU == null) && (!bd("r")))
+    if ((cbR == null) && (!kE("r")))
     {
       ret = -2;
       return localg;
@@ -73,23 +86,23 @@ public final class a
     buf = new byte[paramInt2];
     try
     {
-      long l = anU.length();
-      anU.seek(i);
-      paramInt2 = anU.read(buf, 0, paramInt2);
-      u.d("!44@/B4Tb64lLpI1uMpLvXr9z/l67fEFyLju4OwsjOKyzR4=", "DBG: ReadFile[" + anC + "] readOffset:" + i + " readRet:" + paramInt2 + " fileNow:" + anU.getFilePointer() + " fileSize:" + l);
+      long l = cbR.length();
+      cbR.seek(i);
+      paramInt2 = cbR.read(buf, 0, paramInt2);
+      v.d("MicroMsg.AmrFileOperator", "DBG: ReadFile[" + aaq + "] readOffset:" + i + " readRet:" + paramInt2 + " fileNow:" + cbR.getFilePointer() + " fileSize:" + l);
       paramInt1 = paramInt2;
       if (paramInt2 < 0) {
         paramInt1 = 0;
       }
-      anV = paramInt1;
-      anQ = (paramInt1 + i - 6);
+      acr = paramInt1;
+      cbK = (paramInt1 + i - 6);
       ret = 0;
       return localg;
     }
     catch (Exception localException)
     {
-      u.e("!44@/B4Tb64lLpI1uMpLvXr9z/l67fEFyLju4OwsjOKyzR4=", "ERR: ReadFile[" + anC + "] Offset:" + i + "  failed:[" + localException.getMessage() + "] ");
-      ll();
+      v.e("MicroMsg.AmrFileOperator", "ERR: ReadFile[" + aaq + "] Offset:" + i + "  failed:[" + localException.getMessage() + "] ");
+      EI();
       ret = -1;
     }
     return localg;
@@ -100,19 +113,6 @@ public final class a
     return 0;
   }
   
-  public final void ll()
-  {
-    if (anU != null) {}
-    try
-    {
-      anU.close();
-      anU = null;
-      u.d("!44@/B4Tb64lLpI1uMpLvXr9z/l67fEFyLju4OwsjOKyzR4=", "Close :" + anC);
-      return;
-    }
-    catch (IOException localIOException) {}
-  }
-  
   public final int write(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
   {
     boolean bool2 = true;
@@ -120,7 +120,7 @@ public final class a
     for (boolean bool1 = true;; bool1 = false)
     {
       Assert.assertTrue(bool1);
-      if ((anU != null) || (bd("rw"))) {
+      if ((cbR != null) || (kE("rw"))) {
         break;
       }
       return -1;
@@ -130,7 +130,7 @@ public final class a
     {
       try
       {
-        anU.write("#!AMR\n".getBytes(), 0, 6);
+        cbR.write("#!AMR\n".getBytes(), 0, 6);
         int i = paramInt2 + 6;
         long l;
         bool1 = false;
@@ -139,9 +139,9 @@ public final class a
       {
         try
         {
-          anU.seek(i);
-          anU.write(paramArrayOfByte, 0, paramInt1);
-          l = anU.getFilePointer();
+          cbR.seek(i);
+          cbR.write(paramArrayOfByte, 0, paramInt1);
+          l = cbR.getFilePointer();
           paramInt2 = (int)l;
           paramInt1 = i + paramInt1;
           if (paramInt2 != paramInt1) {
@@ -159,13 +159,13 @@ public final class a
         }
         catch (Exception paramArrayOfByte)
         {
-          u.e("!44@/B4Tb64lLpI1uMpLvXr9z/l67fEFyLju4OwsjOKyzR4=", "ERR: WriteFile[" + anC + "] Offset:" + i + " failed:[" + paramArrayOfByte.getMessage() + "]");
-          ll();
+          v.e("MicroMsg.AmrFileOperator", "ERR: WriteFile[" + aaq + "] Offset:" + i + " failed:[" + paramArrayOfByte.getMessage() + "]");
+          EI();
           return -3;
         }
         paramArrayOfByte = paramArrayOfByte;
-        u.e("!44@/B4Tb64lLpI1uMpLvXr9z/l67fEFyLju4OwsjOKyzR4=", "ERR: WriteHeadToFile[" + anC + "] failed:[" + paramArrayOfByte.getMessage() + "]");
-        ll();
+        v.e("MicroMsg.AmrFileOperator", "ERR: WriteHeadToFile[" + aaq + "] failed:[" + paramArrayOfByte.getMessage() + "]");
+        EI();
         return -2;
       }
       label248:

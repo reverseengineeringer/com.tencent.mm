@@ -10,7 +10,7 @@ import android.text.style.ImageSpan;
 public final class d
   extends ImageSpan
 {
-  public int lEY = 0;
+  public int mfN = 0;
   
   public d(Drawable paramDrawable)
   {
@@ -21,7 +21,7 @@ public final class d
   {
     paramCharSequence = getDrawable();
     paramCanvas.save();
-    paramInt2 = paramInt5 - getBoundsbottom + lEY;
+    paramInt2 = paramInt5 - getBoundsbottom + mfN;
     paramInt1 = paramInt2;
     if (mVerticalAlignment == 1) {
       paramInt1 = paramInt2 - getFontMetricsIntdescent;

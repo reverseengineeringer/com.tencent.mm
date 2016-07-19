@@ -3,7 +3,7 @@ package com.tencent.mm.ui.bindmobile;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 
 final class MobileFriendUI$9
   implements DialogInterface.OnCancelListener
@@ -12,8 +12,8 @@ final class MobileFriendUI$9
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    if (MobileFriendUI.a(kPt) != null) {
-      ah.tE().c(MobileFriendUI.a(kPt));
+    if (MobileFriendUI.a(loJ) != null) {
+      ah.tF().c(MobileFriendUI.a(loJ));
     }
   }
 }

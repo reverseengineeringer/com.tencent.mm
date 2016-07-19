@@ -1,6 +1,9 @@
 package com.tencent.mm.modelfriend;
 
-public enum m$a {}
+public enum m$a
+{
+  private m$a() {}
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.modelfriend.m.a

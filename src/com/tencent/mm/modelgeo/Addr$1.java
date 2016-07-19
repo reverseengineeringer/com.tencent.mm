@@ -3,7 +3,7 @@ package com.tencent.mm.modelgeo;
 import android.os.Parcelable.Creator;
 
 final class Addr$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<Addr>
 {}
 
 /* Location:

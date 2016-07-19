@@ -20,19 +20,19 @@
 
 
 # instance fields
-.field private kjf:Z
+.field private kJo:Z
 
-.field private kjg:Z
+.field private kJp:Z
 
-.field private kjh:Z
+.field private kJq:Z
 
-.field protected kji:Z
+.field protected kJr:Z
 
-.field protected kjj:Z
+.field protected kJs:Z
 
-.field protected kjk:Z
+.field protected kJt:Z
 
-.field protected kjl:Z
+.field protected kJu:Z
 
 
 # direct methods
@@ -46,17 +46,17 @@
     invoke-direct {p0}, Lcom/tencent/mm/ui/o;-><init>()V
 
     .line 48
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kjj:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJs:Z
 
     .line 49
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kjk:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJt:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final Gf()V
+.method public final GC()V
     .locals 0
 
     .prologue
@@ -64,7 +64,7 @@
     return-void
 .end method
 
-.method public final Gg()V
+.method public final GD()V
     .locals 0
 
     .prologue
@@ -72,7 +72,7 @@
     return-void
 .end method
 
-.method public aCH()Z
+.method public aFD()Z
     .locals 1
 
     .prologue
@@ -82,50 +82,50 @@
     return v0
 .end method
 
-.method public abstract aZj()V
+.method public abstract beA()V
 .end method
 
-.method public abstract aZk()V
+.method public abstract beB()V
 .end method
 
-.method public abstract aZl()V
+.method public abstract beC()V
 .end method
 
-.method public abstract aZm()V
+.method public abstract beD()V
 .end method
 
-.method public abstract aZn()V
+.method public abstract beE()V
 .end method
 
-.method public abstract aZo()V
+.method public abstract beF()V
 .end method
 
-.method public abstract aZp()V
+.method public abstract beG()V
 .end method
 
-.method public abstract aZq()V
+.method public abstract beH()V
 .end method
 
-.method public abstract aZr()V
+.method public abstract beI()V
 .end method
 
-.method public final aZs()V
+.method public final beJ()V
     .locals 1
 
     .prologue
     .line 90
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->aZq()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->beH()V
 
     .line 91
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kjh:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJq:Z
 
     .line 92
     return-void
 .end method
 
-.method public final aZt()V
+.method public final beK()V
     .locals 0
 
     .prologue
@@ -133,27 +133,27 @@
     return-void
 .end method
 
-.method public final aZu()V
+.method public final beL()V
     .locals 1
 
     .prologue
     .line 138
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kjk:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJt:Z
 
     .line 139
     return-void
 .end method
 
-.method public final aZv()V
+.method public final beM()V
     .locals 7
 
     .prologue
     const/4 v6, 0x0
 
     .line 184
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kjj:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJs:Z
 
     if-nez v0, :cond_0
 
@@ -163,13 +163,13 @@
 
     .line 185
     :cond_0
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kjg:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJp:Z
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->aZj()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->beA()V
 
-    iput-boolean v6, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kjg:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJp:Z
 
     .line 186
     :cond_1
@@ -179,22 +179,22 @@
     move-result-wide v0
 
     .line 187
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kjh:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJq:Z
 
     if-eqz v2, :cond_2
 
     .line 188
-    iput-boolean v6, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kjh:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJq:Z
 
     .line 189
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->aZr()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->beI()V
 
     .line 191
     :cond_2
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->aZk()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->beB()V
 
     .line 192
-    const-string/jumbo v2, "!24@/B4Tb64lLpKk4tudMInS/w=="
+    const-string/jumbo v2, "MicroMsg.INIT"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -230,29 +230,29 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 193
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kji:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJr:Z
 
     .line 194
-    iput-boolean v6, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kjj:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJs:Z
 
     goto :goto_0
 
     .line 185
     :cond_3
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kjf:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJo:Z
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->aZo()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->beF()V
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->aZj()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->beA()V
 
-    const-string/jumbo v0, "!24@/B4Tb64lLpKk4tudMInS/w=="
+    const-string/jumbo v0, "MicroMsg.INIT"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -272,9 +272,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-boolean v6, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kjf:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJo:Z
 
     goto :goto_1
 .end method
@@ -289,7 +289,7 @@
     return v0
 .end method
 
-.method public onActivityCreated(Landroid/os/Bundle;)V
+.method public final onActivityCreated(Landroid/os/Bundle;)V
     .locals 1
 
     .prologue
@@ -299,7 +299,7 @@
     .line 31
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kjg:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJp:Z
 
     .line 33
     return-void
@@ -310,7 +310,7 @@
 
     .prologue
     .line 212
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->aZo()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->beF()V
 
     .line 213
     invoke-super {p0}, Lcom/tencent/mm/ui/o;->onDestroy()V
@@ -361,18 +361,18 @@
     .line 165
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kjl:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJu:Z
 
     .line 166
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kjl:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJu:Z
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kji:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJr:Z
 
     if-nez v0, :cond_1
 
-    iput-boolean v6, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kjl:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJu:Z
 
     .line 167
     :cond_0
@@ -385,9 +385,9 @@
 
     move-result-wide v0
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->aZm()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->beD()V
 
-    const-string/jumbo v2, "!24@/B4Tb64lLpKk4tudMInS/w=="
+    const-string/jumbo v2, "MicroMsg.INIT"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -423,11 +423,11 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-boolean v6, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kji:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJr:Z
 
-    iput-boolean v6, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kjl:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJu:Z
 
     goto :goto_0
 .end method
@@ -440,13 +440,13 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/o;->onResume()V
 
     .line 108
-    invoke-static {}, Lcom/tencent/mm/ui/LauncherUI;->bat()Lcom/tencent/mm/ui/LauncherUI;
+    invoke-static {}, Lcom/tencent/mm/ui/LauncherUI;->bfJ()Lcom/tencent/mm/ui/LauncherUI;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, v0, Lcom/tencent/mm/ui/LauncherUI;->klI:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/ui/LauncherUI;->kLj:Z
 
     if-nez v0, :cond_1
 
@@ -459,17 +459,17 @@
     :cond_1
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kjj:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJs:Z
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kjk:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJt:Z
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->aZv()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->beM()V
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kjk:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->kJt:Z
 
     goto :goto_0
 .end method
@@ -482,14 +482,14 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/o;->onStart()V
 
     .line 206
-    invoke-static {}, Lcom/tencent/mm/ui/LauncherUI;->bat()Lcom/tencent/mm/ui/LauncherUI;
+    invoke-static {}, Lcom/tencent/mm/ui/LauncherUI;->bfJ()Lcom/tencent/mm/ui/LauncherUI;
 
     move-result-object v0
 
     .line 207
     if-eqz v0, :cond_0
 
-    iget-boolean v0, v0, Lcom/tencent/mm/ui/LauncherUI;->klI:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/ui/LauncherUI;->kLj:Z
 
     if-nez v0, :cond_1
 
@@ -500,12 +500,12 @@
 
     .line 208
     :cond_1
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->aZl()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->beC()V
 
     goto :goto_0
 .end method
 
-.method public onStop()V
+.method public final onStop()V
     .locals 0
 
     .prologue
@@ -513,7 +513,7 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/o;->onStop()V
 
     .line 200
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->aZn()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/AbstractTabChildActivity$a;->beE()V
 
     .line 201
     return-void

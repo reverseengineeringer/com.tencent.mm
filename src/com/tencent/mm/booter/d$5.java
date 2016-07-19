@@ -1,13 +1,13 @@
 package com.tencent.mm.booter;
 
-import com.tencent.mm.sdk.platformtools.ak.a;
+import com.tencent.mm.sdk.platformtools.an.a;
 
 final class d$5
-  implements ak.a
+  implements an.a
 {
   d$5(d paramd) {}
   
-  public final void bx(int paramInt)
+  public final void bP(int paramInt)
   {
     switch (paramInt)
     {
@@ -17,13 +17,13 @@ final class d$5
       do
       {
         return;
-      } while (!d.e(bmw));
-      d.a(bmw, false);
-      bmw.mB();
+      } while (!d.e(bac));
+      d.a(bac, false);
+      bac.kO();
       return;
-    } while (!bmw.mA());
-    d.a(bmw, true);
-    bmw.pause();
+    } while (!bac.kN());
+    d.a(bac, true);
+    bac.pause();
   }
 }
 

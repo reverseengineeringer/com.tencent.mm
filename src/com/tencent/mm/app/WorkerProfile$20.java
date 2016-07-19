@@ -1,25 +1,27 @@
 package com.tencent.mm.app;
 
 import android.content.Context;
-import com.tencent.mm.booter.notification.a.h;
-import com.tencent.mm.pointers.PInt;
-import com.tencent.mm.pointers.PString;
-import com.tencent.mm.storage.ag;
-import com.tencent.mm.storage.s.b;
+import com.tencent.mm.pluginsdk.i.j;
+import com.tencent.mm.ui.MMAppMgr;
 
 final class WorkerProfile$20
-  implements s.b
+  implements i.j
 {
   WorkerProfile$20(WorkerProfile paramWorkerProfile) {}
   
-  public final String a(int paramInt1, String paramString1, String paramString2, int paramInt2, Context paramContext)
+  public final void a(Context paramContext, boolean paramBoolean)
   {
-    return h.a(paramInt1, paramString1, paramString2, paramInt2, paramContext);
+    MMAppMgr.a(paramContext, paramBoolean);
   }
   
-  public final void a(ag paramag, PString paramPString1, PString paramPString2, PInt paramPInt, boolean paramBoolean)
+  public final void ae(Context paramContext)
   {
-    h.b(paramag, paramPString1, paramPString2, paramPInt, paramBoolean);
+    MMAppMgr.a(paramContext, true);
+  }
+  
+  public final boolean jC()
+  {
+    return MMAppMgr.jC();
   }
 }
 

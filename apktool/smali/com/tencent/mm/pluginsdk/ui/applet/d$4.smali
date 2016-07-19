@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iIA:Lcom/tencent/mm/pluginsdk/ui/applet/d;
+.field final synthetic jfx:Lcom/tencent/mm/pluginsdk/ui/applet/d;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 98
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/d$4;->iIA:Lcom/tencent/mm/pluginsdk/ui/applet/d;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/d$4;->jfx:Lcom/tencent/mm/pluginsdk/ui/applet/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,21 +36,21 @@
 
 
 # virtual methods
-.method public final aRm()V
+.method public final aVY()V
     .locals 1
 
     .prologue
     .line 101
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/d$4;->iIA:Lcom/tencent/mm/pluginsdk/ui/applet/d;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/d$4;->jfx:Lcom/tencent/mm/pluginsdk/ui/applet/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/d;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/d;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     if-eqz v0, :cond_0
 
     .line 102
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/d$4;->iIA:Lcom/tencent/mm/pluginsdk/ui/applet/d;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/d$4;->jfx:Lcom/tencent/mm/pluginsdk/ui/applet/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/d;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/d;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     invoke-interface {v0}, Lcom/tencent/mm/ui/base/preference/f;->notifyDataSetChanged()V
 

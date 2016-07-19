@@ -1,59 +1,58 @@
 package com.tencent.mm.protocal.b;
 
-import java.util.LinkedList;
-
 public final class aqh
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public LinkedList iWW = new LinkedList();
+  public int Type;
+  public String emu;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
-      ((a.a.a.c.a)paramVarArgs[0]).d(1, 8, iWW);
+      paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
+      if (emu != null) {
+        paramVarArgs.e(1, emu);
+      }
+      paramVarArgs.cw(2, Type);
       return 0;
     }
     if (paramInt == 1) {
-      return a.a.a.a.c(1, 8, iWW) + 0;
+      if (emu == null) {
+        break label212;
+      }
     }
-    if (paramInt == 2)
+    label212:
+    for (paramInt = a.a.a.b.b.a.f(1, emu) + 0;; paramInt = 0)
     {
-      paramVarArgs = (byte[])paramVarArgs[0];
-      iWW.clear();
-      paramVarArgs = new a.a.a.a.a(paramVarArgs, iTR);
-      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.bog();
+      return paramInt + a.a.a.a.cu(2, Type);
+      if (paramInt == 2)
+      {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bve();
+          }
         }
+        break;
       }
-      return 0;
-    }
-    if (paramInt == 3)
-    {
-      Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
-      aqh localaqh = (aqh)paramVarArgs[1];
-      paramInt = ((Integer)paramVarArgs[2]).intValue();
-      switch (paramInt)
+      if (paramInt == 3)
       {
-      default: 
-        return -1;
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        aqh localaqh = (aqh)paramVarArgs[1];
+        switch (((Integer)paramVarArgs[2]).intValue())
+        {
+        default: 
+          return -1;
+        case 1: 
+          emu = mMY.readString();
+          return 0;
+        }
+        Type = mMY.id();
+        return 0;
       }
-      paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-      int i = paramVarArgs.size();
-      paramInt = 0;
-      while (paramInt < i)
-      {
-        Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-        localObject1 = new aar();
-        localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-        for (boolean bool = true; bool; bool = ((aar)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
-        iWW.add(localObject1);
-        paramInt += 1;
-      }
-      return 0;
+      return -1;
     }
-    return -1;
   }
 }
 

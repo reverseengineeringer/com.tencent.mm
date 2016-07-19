@@ -3,15 +3,15 @@ package com.tencent.mm.pluginsdk.ui.applet;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 
-public final class c$13
+final class c$13
   implements DialogInterface.OnClickListener
 {
-  public c$13(c.b paramb) {}
+  c$13(c.b paramb) {}
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (iIk != null) {
-      iIk.fj(false);
+    if (jfh != null) {
+      jfh.da(false);
     }
   }
 }

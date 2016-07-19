@@ -11,10 +11,10 @@ final class b$1
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    if (iId.dfT != null)
+    if (jfa.deV != null)
     {
-      iId.dfT.dismiss();
-      iId.dfT = null;
+      jfa.deV.dismiss();
+      jfa.deV = null;
     }
   }
 }

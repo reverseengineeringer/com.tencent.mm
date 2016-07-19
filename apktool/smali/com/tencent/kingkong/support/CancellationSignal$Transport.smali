@@ -33,11 +33,10 @@
 
     iput-object v0, p0, Lcom/tencent/kingkong/support/CancellationSignal$Transport;->mCancellationSignal:Lcom/tencent/kingkong/support/CancellationSignal;
 
-    .line 203
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/tencent/kingkong/support/CancellationSignal$Transport;)V
+.method synthetic constructor <init>(Lcom/tencent/kingkong/support/CancellationSignal$1;)V
     .locals 0
 
     .prologue

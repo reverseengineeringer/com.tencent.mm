@@ -1,12 +1,42 @@
 package com.tencent.mm.protocal;
 
-import junit.framework.Assert;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import com.tencent.mm.sdk.platformtools.v;
 
-public class d
+public final class d
 {
-  static
+  public static boolean cV(Context paramContext)
   {
-    Assert.assertTrue("giveup rtType now ! Use the funcid !", true);
+    if (paramContext == null)
+    {
+      v.e("MicroMsg.ReportManagerKvCheck", "getShutDownWxStatus context == null");
+      return false;
+    }
+    return paramContext.getSharedPreferences("system_config_prefs_showdown", 4).getBoolean("shut_down_weixin", false);
+  }
+  
+  public static void h(Context paramContext, boolean paramBoolean)
+  {
+    if (paramContext == null)
+    {
+      v.e("MicroMsg.ReportManagerKvCheck", "editFullExitStatus context == null");
+      return;
+    }
+    paramContext.getSharedPreferences("system_config_prefs", 4).edit().putBoolean("settings_fully_exit", paramBoolean).commit();
+    v.i("MicroMsg.ReportManagerKvCheck", "editFullExitStatus to " + paramBoolean);
+  }
+  
+  public static void i(Context paramContext, boolean paramBoolean)
+  {
+    if (paramContext == null)
+    {
+      v.e("MicroMsg.ReportManagerKvCheck", "editShutDownWxStatus context == null");
+      return;
+    }
+    paramContext.getSharedPreferences("system_config_prefs_showdown", 4).edit().putBoolean("shut_down_weixin", paramBoolean).commit();
+    v.i("MicroMsg.ReportManagerKvCheck", "editShutDownWxStatus to " + paramBoolean);
   }
 }
 

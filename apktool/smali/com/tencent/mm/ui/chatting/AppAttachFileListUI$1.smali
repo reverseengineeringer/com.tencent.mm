@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kQj:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;
+.field final synthetic lpY:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 69
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$1;->kQj:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$1;->lpY:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 72
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$1;->kQj:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$1;->lpY:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->finish()V
 

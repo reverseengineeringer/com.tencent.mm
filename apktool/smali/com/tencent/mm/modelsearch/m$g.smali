@@ -21,17 +21,27 @@
 
 
 # instance fields
-.field public bZJ:I
+.field public bTs:I
 
-.field public bZK:J
+.field public bTt:J
 
-.field public bZL:Ljava/lang/String;
+.field public bTu:Ljava/lang/String;
 
-.field public bZM:[Ljava/lang/String;
+.field public bTv:[Ljava/lang/String;
 
-.field public bZN:[I
+.field public bTw:[I
 
-.field public bZO:[Ljava/util/List;
+.field public bTx:[Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "[",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/modelsearch/m$g$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field public content:Ljava/lang/String;
 
@@ -53,13 +63,13 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 107
-    iput-object v0, p0, Lcom/tencent/mm/modelsearch/m$g;->bZM:[Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/modelsearch/m$g;->bTv:[Ljava/lang/String;
 
     .line 108
-    iput-object v0, p0, Lcom/tencent/mm/modelsearch/m$g;->bZN:[I
+    iput-object v0, p0, Lcom/tencent/mm/modelsearch/m$g;->bTw:[I
 
     .line 109
-    iput-object v0, p0, Lcom/tencent/mm/modelsearch/m$g;->bZO:[Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/modelsearch/m$g;->bTx:[Ljava/util/List;
 
     .line 110
     iput-object v0, p0, Lcom/tencent/mm/modelsearch/m$g;->userData:Ljava/lang/Object;
@@ -69,14 +79,14 @@
 
 
 # virtual methods
-.method public final Cd()Lcom/tencent/mm/modelsearch/m$g$a;
+.method public final Ck()Lcom/tencent/mm/modelsearch/m$g$a;
     .locals 2
 
     .prologue
     const/4 v1, 0x0
 
     .line 113
-    iget-object v0, p0, Lcom/tencent/mm/modelsearch/m$g;->bZO:[Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/modelsearch/m$g;->bTx:[Ljava/util/List;
 
     aget-object v0, v0, v1
 

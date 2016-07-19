@@ -1,25 +1,24 @@
-.class public interface abstract Lcom/tencent/mm/ui/chatting/dl;
-.super Ljava/lang/Object;
+.class final Lcom/tencent/mm/ui/chatting/dl;
+.super Lcom/tencent/mm/ui/chatting/ab$a;
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/mm/ui/chatting/dl$a;
-    }
-.end annotation
+# instance fields
+.field iRf:Landroid/widget/TextView;
+
+.field iRg:Landroid/widget/TextView;
+
+.field lqq:Landroid/widget/ImageView;
 
 
-# virtual methods
-.method public abstract beD()V
-.end method
+# direct methods
+.method public constructor <init>(I)V
+    .locals 0
 
-.method public abstract beF()V
-.end method
+    .prologue
+    .line 86
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/chatting/ab$a;-><init>(I)V
 
-.method public abstract beG()Z
-.end method
-
-.method public abstract rd(I)V
+    .line 87
+    return-void
 .end method

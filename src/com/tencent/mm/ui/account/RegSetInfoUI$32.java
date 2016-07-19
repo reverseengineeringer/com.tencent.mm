@@ -4,8 +4,8 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.ah;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.ui.base.o;
 
 final class RegSetInfoUI$32
@@ -15,34 +15,34 @@ final class RegSetInfoUI$32
   
   public final void afterTextChanged(Editable paramEditable)
   {
-    if (!RegSetInfoUI.m(kwh).aVf()) {
-      RegSetInfoUI.m(kwh).aUF();
+    if (!RegSetInfoUI.m(kVo).baj()) {
+      RegSetInfoUI.m(kVo).aZJ();
     }
-    paramEditable = RegSetInfoUI.a(kwh).getText().toString().trim();
-    if (ay.kz(paramEditable))
+    paramEditable = RegSetInfoUI.a(kVo).getText().toString().trim();
+    if (be.kf(paramEditable))
     {
-      RegSetInfoUI.s(kwh).setText(kwh.getString(2131427624));
-      RegSetInfoUI.t(kwh);
-      if (RegSetInfoUI.u(kwh) != null)
+      RegSetInfoUI.s(kVo).setText(kVo.getString(2131234448));
+      RegSetInfoUI.t(kVo);
+      if (RegSetInfoUI.u(kVo) != null)
       {
-        RegSetInfoUI.u(kwh).dismiss();
-        RegSetInfoUI.v(kwh);
+        RegSetInfoUI.u(kVo).dismiss();
+        RegSetInfoUI.v(kVo);
       }
-      RegSetInfoUI.a(kwh).postDelayed(new Runnable()
+      RegSetInfoUI.a(kVo).postDelayed(new Runnable()
       {
         public final void run()
         {
-          RegSetInfoUI.a(kwh).clearFocus();
-          RegSetInfoUI.a(kwh).requestFocus();
+          RegSetInfoUI.a(kVo).clearFocus();
+          RegSetInfoUI.a(kVo).requestFocus();
         }
       }, 50L);
     }
-    if ((!ay.kz(paramEditable)) && ((RegSetInfoUI.c(kwh)) || (!paramEditable.equals(RegSetInfoUI.w(kwh)))))
+    if ((!be.kf(paramEditable)) && ((RegSetInfoUI.c(kVo)) || (!paramEditable.equals(RegSetInfoUI.w(kVo)))))
     {
-      RegSetInfoUI.t(kwh);
-      RegSetInfoUI.m(kwh).ds(500L);
+      RegSetInfoUI.t(kVo);
+      RegSetInfoUI.m(kVo).dJ(500L);
     }
-    RegSetInfoUI.a(kwh, paramEditable);
+    RegSetInfoUI.a(kVo, paramEditable);
   }
   
   public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}

@@ -3,7 +3,7 @@ package com.tencent.mm.plugin.gwallet;
 import android.content.Intent;
 import com.tencent.mm.plugin.gwallet.a.b.c;
 import com.tencent.mm.plugin.gwallet.a.c;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class GWalletQueryProvider$2
   implements b.c
@@ -12,10 +12,10 @@ final class GWalletQueryProvider$2
   
   public final void a(c paramc, Intent paramIntent)
   {
-    u.d("!44@/B4Tb64lLpJlq3g3dssAoZZ5jyUwqm48qdJiAhkom5Q=", "query detail done! Result " + paramc);
-    GWalletQueryProvider.e(exw);
-    GWalletQueryProvider.a(exw, paramIntent.getStringArrayListExtra("RESPONSE_QUERY_DETAIL_INFO"));
-    GWalletQueryProvider.a(exw, paramIntent.getIntExtra("RESPONSE_CODE", 0));
+    v.d("MicroMsg.GWalletQueryProvider", "query detail done! Result " + paramc);
+    GWalletQueryProvider.e(eDQ);
+    GWalletQueryProvider.a(eDQ, paramIntent.getStringArrayListExtra("RESPONSE_QUERY_DETAIL_INFO"));
+    GWalletQueryProvider.a(eDQ, paramIntent.getIntExtra("RESPONSE_CODE", 0));
   }
 }
 

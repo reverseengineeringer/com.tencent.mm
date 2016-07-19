@@ -15,11 +15,14 @@
 
 
 # virtual methods
-.method public abstract LS()Z
+.method public abstract MZ()Z
 .end method
 
-.method public abstract LT()Z
+.method public abstract Na()Z
 .end method
 
-.method public abstract LU()Ljava/lang/String;
+.method public abstract Nb()Ljava/lang/String;
+.end method
+
+.method public abstract Nc()I
 .end method

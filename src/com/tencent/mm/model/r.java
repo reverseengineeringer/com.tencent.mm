@@ -2,9 +2,9 @@ package com.tencent.mm.model;
 
 public abstract interface r
 {
-  public abstract void sY();
+  public abstract void sX();
   
-  public abstract void sZ();
+  public abstract void sY();
 }
 
 /* Location:

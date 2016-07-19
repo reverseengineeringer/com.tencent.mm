@@ -9,7 +9,7 @@ public final class SearchViewNotRealTimeHelper$6
   
   public final void run()
   {
-    SearchViewNotRealTimeHelper.d(lxN).requestFocus();
+    SearchViewNotRealTimeHelper.d(lYC).requestFocus();
   }
 }
 

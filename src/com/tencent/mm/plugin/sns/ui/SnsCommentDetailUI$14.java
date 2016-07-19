@@ -1,9 +1,9 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.plugin.sns.h.k;
+import com.tencent.mm.plugin.sns.i.k;
 import com.tencent.mm.plugin.sns.lucky.b.w;
 import com.tencent.mm.plugin.sns.lucky.ui.b;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.j;
 
@@ -12,16 +12,16 @@ final class SnsCommentDetailUI$14
 {
   SnsCommentDetailUI$14(SnsCommentDetailUI paramSnsCommentDetailUI, k paramk) {}
   
-  public final void vM(String paramString)
+  public final void wZ(String paramString)
   {
-    if (!w.ut(hdb.aAl()))
+    if (!w.vy(hrO.aCX()))
     {
-      b.d(hda.koJ.kpc, hda.hcX.lW(0));
+      b.d(hrN.kNN.kOg, hrN.hrK.nl(0));
       return;
     }
-    SnsCommentDetailUI.a(hda, paramString, SnsCommentDetailUI.c(hda).getCommentInfo());
-    SnsCommentDetailUI.c(hda).fc(false);
-    u.i("!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc=", "comment send imp!");
+    SnsCommentDetailUI.a(hrN, paramString, SnsCommentDetailUI.c(hrN).aEN());
+    SnsCommentDetailUI.c(hrN).fl(false);
+    v.i("MicroMsg.SnsCommentDetailUI", "comment send imp!");
   }
 }
 

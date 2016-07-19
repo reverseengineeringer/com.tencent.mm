@@ -1,13 +1,15 @@
 package com.tencent.mm.ui.account.mobile;
 
 import android.content.Intent;
+import com.tencent.mm.a.e;
 import com.tencent.mm.compatible.util.d;
 import com.tencent.mm.model.ag;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.modelsimple.v;
+import com.tencent.mm.modelsimple.t;
 import com.tencent.mm.plugin.a.a;
+import com.tencent.mm.plugin.a.b;
 import com.tencent.mm.pluginsdk.g;
-import com.tencent.mm.r.j;
+import com.tencent.mm.t.j;
 import com.tencent.mm.ui.MMWizardActivity;
 import com.tencent.mm.ui.bindmobile.FindMContactAlertUI;
 import com.tencent.mm.ui.bindmobile.FindMContactIntroUI;
@@ -19,36 +21,36 @@ final class i$5
   
   public final void run()
   {
-    kyH.ccq = ((v)aoT).CE();
-    ag.bAw.H("login_user_name", kwj);
-    com.tencent.mm.loader.stub.b.deleteFile(d.bur + "temp.avatar");
-    if ((kwk != null) && (kwk.contains("0")))
+    kXO.bWf = ((t)acZ).CR();
+    ag.btA.E("login_user_name", kVq);
+    e.deleteFile(d.biR + "temp.avatar");
+    if ((kVr != null) && (kVr.contains("0")))
     {
-      com.tencent.mm.plugin.a.b.kC("R300_100_phone");
-      if (!kwl) {
-        localIntent1 = new Intent(kyH.kyy, FindMContactIntroUI.class);
+      b.ll("R300_100_phone");
+      if (!kVs) {
+        localIntent1 = new Intent(kXO.kXF, FindMContactIntroUI.class);
       }
       for (;;)
       {
         localIntent1.addFlags(67108864);
-        localIntent1.putExtra("regsetinfo_ticket", kyH.ccq);
-        localIntent1.putExtra("regsetinfo_NextStep", kwk);
-        localIntent1.putExtra("regsetinfo_NextStyle", kwo);
-        Intent localIntent2 = a.coa.ak(kyH.kyy);
+        localIntent1.putExtra("regsetinfo_ticket", kXO.bWf);
+        localIntent1.putExtra("regsetinfo_NextStep", kVr);
+        localIntent1.putExtra("regsetinfo_NextStyle", kVv);
+        Intent localIntent2 = a.cjo.ag(kXO.kXF);
         localIntent2.addFlags(67108864);
-        MMWizardActivity.b(kyH.kyy, localIntent1, localIntent2);
-        kyH.kyy.finish();
+        MMWizardActivity.b(kXO.kXF, localIntent1, localIntent2);
+        kXO.kXF.finish();
         return;
-        localIntent1 = new Intent(kyH.kyy, FindMContactAlertUI.class);
-        localIntent1.putExtra("alert_title", kwm);
-        localIntent1.putExtra("alert_message", kwn);
+        localIntent1 = new Intent(kXO.kXF, FindMContactAlertUI.class);
+        localIntent1.putExtra("alert_title", kVt);
+        localIntent1.putExtra("alert_message", kVu);
       }
     }
-    Intent localIntent1 = a.coa.ak(kyH.kyy);
+    Intent localIntent1 = a.cjo.ag(kXO.kXF);
     localIntent1.addFlags(67108864);
-    kyH.kyy.startActivity(localIntent1);
-    com.tencent.mm.plugin.a.b.kD(ah.tx() + "," + kyH.kyy.getClass().getName() + ",R200_900_phone," + ah.fd("R200_900_phone") + ",4");
-    kyH.kyy.finish();
+    kXO.kXF.startActivity(localIntent1);
+    b.lm(ah.ty() + "," + kXO.kXF.getClass().getName() + ",R200_900_phone," + ah.fq("R200_900_phone") + ",4");
+    kXO.kXF.finish();
   }
 }
 

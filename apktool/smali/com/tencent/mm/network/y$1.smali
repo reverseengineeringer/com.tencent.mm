@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic cjH:I
+.field final synthetic ceY:I
 
-.field final synthetic cjI:I
+.field final synthetic ceZ:I
 
-.field final synthetic cjJ:Lcom/tencent/mm/network/y;
+.field final synthetic cfa:Lcom/tencent/mm/network/y;
 
 
 # direct methods
@@ -30,12 +30,12 @@
     .locals 0
 
     .prologue
-    .line 371
-    iput-object p1, p0, Lcom/tencent/mm/network/y$1;->cjJ:Lcom/tencent/mm/network/y;
+    .line 390
+    iput-object p1, p0, Lcom/tencent/mm/network/y$1;->cfa:Lcom/tencent/mm/network/y;
 
-    iput p2, p0, Lcom/tencent/mm/network/y$1;->cjH:I
+    iput p2, p0, Lcom/tencent/mm/network/y$1;->ceY:I
 
-    iput p3, p0, Lcom/tencent/mm/network/y$1;->cjI:I
+    iput p3, p0, Lcom/tencent/mm/network/y$1;->ceZ:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,13 +48,13 @@
     .locals 2
 
     .prologue
-    .line 374
-    iget v0, p0, Lcom/tencent/mm/network/y$1;->cjH:I
+    .line 393
+    iget v0, p0, Lcom/tencent/mm/network/y$1;->ceY:I
 
-    iget v1, p0, Lcom/tencent/mm/network/y$1;->cjI:I
+    iget v1, p0, Lcom/tencent/mm/network/y$1;->ceZ:I
 
     invoke-static {v0, v1}, Lcom/tencent/mm/network/Java2C;->reportCGIServerError(II)V
 
-    .line 375
+    .line 394
     return-void
 .end method

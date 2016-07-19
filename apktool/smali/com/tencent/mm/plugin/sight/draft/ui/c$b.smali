@@ -18,11 +18,20 @@
 
 
 # instance fields
-.field buL:Ljava/lang/String;
+.field DF:Ljava/lang/String;
 
-.field efe:Landroid/graphics/Bitmap;
+.field eiG:Landroid/graphics/Bitmap;
 
-.field gzK:Ljava/lang/ref/WeakReference;
+.field gGm:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Lcom/tencent/mm/plugin/sight/draft/ui/c;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -53,7 +62,7 @@
 
     .prologue
     .line 94
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/c$b;->gzK:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/c$b;->gGm:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -65,9 +74,9 @@
     if-eqz v0, :cond_0
 
     .line 96
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/c$b;->buL:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/c$b;->DF:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/draft/ui/c$b;->efe:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/draft/ui/c$b;->eiG:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/sight/draft/ui/c;->o(Ljava/lang/String;Landroid/graphics/Bitmap;)V
 

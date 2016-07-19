@@ -1,183 +1,83 @@
-.class public final Lcom/tencent/mm/ui/f/b;
-.super Lcom/tencent/mm/ui/base/o;
+.class public abstract Lcom/tencent/mm/ui/f/b;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcom/tencent/mm/ui/f/h;
 
 
 # instance fields
-.field public khY:J
+.field public context:Landroid/content/Context;
 
-.field private mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "HandlerLeak"
-        }
-    .end annotation
-.end field
+.field private grk:I
+
+.field public lTr:Lcom/tencent/mm/ui/f/h$c;
 
 
 # direct methods
-.method private constructor <init>(Landroid/view/View;)V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;Lcom/tencent/mm/ui/f/h$c;I)V
+    .locals 0
 
     .prologue
-    .line 30
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/base/o;-><init>(Landroid/view/View;)V
+    .line 20
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
-    const-wide/16 v0, 0xbb8
+    .line 21
+    iput-object p1, p0, Lcom/tencent/mm/ui/f/b;->context:Landroid/content/Context;
 
-    iput-wide v0, p0, Lcom/tencent/mm/ui/f/b;->khY:J
+    .line 22
+    iput-object p2, p0, Lcom/tencent/mm/ui/f/b;->lTr:Lcom/tencent/mm/ui/f/h$c;
 
-    .line 34
-    new-instance v0, Lcom/tencent/mm/ui/f/b$1;
+    .line 23
+    iput p3, p0, Lcom/tencent/mm/ui/f/b;->grk:I
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/f/b$1;-><init>(Lcom/tencent/mm/ui/f/b;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/f/b;->mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
-
-    .line 31
+    .line 24
     return-void
 .end method
 
-.method public static ex(Landroid/content/Context;)Lcom/tencent/mm/ui/f/b;
-    .locals 4
+.method public static cn(Ljava/util/List;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<+",
+            "Ljava/lang/Object;",
+            ">;)Z"
+        }
+    .end annotation
 
     .prologue
-    const/4 v3, -0x1
+    .line 39
+    if-eqz p0, :cond_0
 
-    .line 59
-    invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-interface {p0}, Ljava/util/List;->size()I
 
-    move-result-object v0
+    move-result v0
 
-    const v1, 0x7f0a05c8
+    if-lez v0, :cond_0
 
-    const/4 v2, 0x0
+    .line 40
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+    .line 42
+    :goto_0
+    return v0
 
-    move-result-object v1
+    :cond_0
+    const/4 v0, 0x0
 
-    .line 60
-    const v0, 0x7f0710e3
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    .line 61
-    const/16 v2, 0x8
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 64
-    new-instance v0, Lcom/tencent/mm/ui/f/b;
-
-    invoke-direct {v0, v1}, Lcom/tencent/mm/ui/f/b;-><init>(Landroid/view/View;)V
-
-    .line 67
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/f/b;->setFocusable(Z)V
-
-    .line 68
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/f/b;->setContentView(Landroid/view/View;)V
-
-    .line 69
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/f/b;->setWidth(I)V
-
-    .line 71
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/f/b;->setHeight(I)V
-
-    .line 74
-    const v1, 0x7f0601ea
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/f/b;->setAnimationStyle(I)V
-
-    .line 78
-    const-wide/16 v1, 0x4b0
-
-    iput-wide v1, v0, Lcom/tencent/mm/ui/f/b;->khY:J
-
-    .line 79
-    return-object v0
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final showAsDropDown(Landroid/view/View;)V
-    .locals 4
+.method public bnZ()I
+    .locals 1
 
     .prologue
-    const/16 v3, 0x100
+    .line 35
+    iget v0, p0, Lcom/tencent/mm/ui/f/b;->grk:I
 
-    .line 91
-    invoke-super {p0, p1}, Lcom/tencent/mm/ui/base/o;->showAsDropDown(Landroid/view/View;)V
-
-    .line 92
-    iget-object v0, p0, Lcom/tencent/mm/ui/f/b;->mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
-
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/sdk/platformtools/aa;->removeMessages(I)V
-
-    .line 93
-    iget-object v0, p0, Lcom/tencent/mm/ui/f/b;->mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
-
-    iget-wide v1, p0, Lcom/tencent/mm/ui/f/b;->khY:J
-
-    invoke-virtual {v0, v3, v1, v2}, Lcom/tencent/mm/sdk/platformtools/aa;->sendEmptyMessageDelayed(IJ)Z
-
-    .line 94
-    return-void
-.end method
-
-.method public final showAsDropDown(Landroid/view/View;II)V
-    .locals 4
-
-    .prologue
-    const/16 v3, 0x100
-
-    .line 84
-    invoke-super {p0, p1, p2, p3}, Lcom/tencent/mm/ui/base/o;->showAsDropDown(Landroid/view/View;II)V
-
-    .line 85
-    iget-object v0, p0, Lcom/tencent/mm/ui/f/b;->mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
-
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/sdk/platformtools/aa;->removeMessages(I)V
-
-    .line 86
-    iget-object v0, p0, Lcom/tencent/mm/ui/f/b;->mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
-
-    iget-wide v1, p0, Lcom/tencent/mm/ui/f/b;->khY:J
-
-    invoke-virtual {v0, v3, v1, v2}, Lcom/tencent/mm/sdk/platformtools/aa;->sendEmptyMessageDelayed(IJ)Z
-
-    .line 87
-    return-void
-.end method
-
-.method public final showAtLocation(Landroid/view/View;III)V
-    .locals 4
-
-    .prologue
-    const/16 v3, 0x100
-
-    .line 98
-    invoke-super {p0, p1, p2, p3, p4}, Lcom/tencent/mm/ui/base/o;->showAtLocation(Landroid/view/View;III)V
-
-    .line 99
-    iget-object v0, p0, Lcom/tencent/mm/ui/f/b;->mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
-
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/sdk/platformtools/aa;->removeMessages(I)V
-
-    .line 100
-    iget-object v0, p0, Lcom/tencent/mm/ui/f/b;->mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
-
-    iget-wide v1, p0, Lcom/tencent/mm/ui/f/b;->khY:J
-
-    invoke-virtual {v0, v3, v1, v2}, Lcom/tencent/mm/sdk/platformtools/aa;->sendEmptyMessageDelayed(IJ)Z
-
-    .line 101
-    return-void
+    return v0
 .end method

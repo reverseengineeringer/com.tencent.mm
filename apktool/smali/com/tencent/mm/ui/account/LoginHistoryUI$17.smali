@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+.field final synthetic kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1180
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$17;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    .line 1185
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$17;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,16 +40,16 @@
     .locals 2
 
     .prologue
-    .line 1184
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$17;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    .line 1189
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$17;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->bbD()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->bgP()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$17;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$17;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->k(Lcom/tencent/mm/ui/account/LoginHistoryUI;)I
 
@@ -61,24 +61,24 @@
 
     if-eqz v0, :cond_0
 
-    .line 1185
+    .line 1190
     const/16 v0, 0x1b59
 
-    const v1, 0x7f0b10ac
+    const v1, 0x7f080afb
 
-    invoke-virtual {p1, v0, v1}, Lcom/tencent/mm/ui/base/l;->bL(II)Landroid/view/MenuItem;
+    invoke-virtual {p1, v0, v1}, Lcom/tencent/mm/ui/base/l;->bR(II)Landroid/view/MenuItem;
 
-    .line 1187
+    .line 1192
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$17;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$17;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->bbC()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->bgO()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$17;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$17;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->k(Lcom/tencent/mm/ui/account/LoginHistoryUI;)I
 
@@ -90,35 +90,35 @@
 
     if-eqz v0, :cond_1
 
-    .line 1188
+    .line 1193
     const/16 v0, 0x1b5d
 
-    const v1, 0x7f0b1585
+    const v1, 0x7f080af7
 
-    invoke-virtual {p1, v0, v1}, Lcom/tencent/mm/ui/base/l;->bL(II)Landroid/view/MenuItem;
+    invoke-virtual {p1, v0, v1}, Lcom/tencent/mm/ui/base/l;->bR(II)Landroid/view/MenuItem;
 
-    .line 1190
+    .line 1195
     :cond_1
     const/16 v0, 0x1b5a
 
-    const v1, 0x7f0b01a7
+    const v1, 0x7f080af9
 
-    invoke-virtual {p1, v0, v1}, Lcom/tencent/mm/ui/base/l;->bL(II)Landroid/view/MenuItem;
+    invoke-virtual {p1, v0, v1}, Lcom/tencent/mm/ui/base/l;->bR(II)Landroid/view/MenuItem;
 
-    .line 1191
+    .line 1196
     const/16 v0, 0x1b5b
 
-    const v1, 0x7f0b010a
+    const v1, 0x7f080a05
 
-    invoke-virtual {p1, v0, v1}, Lcom/tencent/mm/ui/base/l;->bL(II)Landroid/view/MenuItem;
+    invoke-virtual {p1, v0, v1}, Lcom/tencent/mm/ui/base/l;->bR(II)Landroid/view/MenuItem;
 
-    .line 1192
+    .line 1197
     const/16 v0, 0x1b5c
 
-    const v1, 0x7f0b0375
+    const v1, 0x7f080b00
 
-    invoke-virtual {p1, v0, v1}, Lcom/tencent/mm/ui/base/l;->bL(II)Landroid/view/MenuItem;
+    invoke-virtual {p1, v0, v1}, Lcom/tencent/mm/ui/base/l;->bR(II)Landroid/view/MenuItem;
 
-    .line 1193
+    .line 1198
     return-void
 .end method

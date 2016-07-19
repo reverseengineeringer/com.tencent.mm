@@ -10,7 +10,7 @@ final class ContactRemarkInfoModUI$16
   
   public final void afterTextChanged(Editable paramEditable)
   {
-    ContactRemarkInfoModUI.b(ljV);
+    ContactRemarkInfoModUI.b(lKg);
   }
   
   public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}

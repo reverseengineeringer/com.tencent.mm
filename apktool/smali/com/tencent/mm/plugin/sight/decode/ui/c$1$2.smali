@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sight/decode/ui/c$1;->lG()V
+    value = Lcom/tencent/mm/plugin/sight/decode/ui/c$1;->jQ()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gyJ:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
+.field final synthetic gFi:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 224
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$2;->gyJ:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$2;->gFi:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 228
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$2;->gyJ:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$2;->gFi:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1;->gyI:Lcom/tencent/mm/plugin/sight/decode/ui/c;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1;->gFh:Lcom/tencent/mm/plugin/sight/decode/ui/c;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/c;->e(Lcom/tencent/mm/plugin/sight/decode/ui/c;)Landroid/widget/TextView;
 
@@ -54,23 +54,23 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 229
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$2;->gyJ:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$2;->gFi:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1;->gyI:Lcom/tencent/mm/plugin/sight/decode/ui/c;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1;->gFh:Lcom/tencent/mm/plugin/sight/decode/ui/c;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/c;->e(Lcom/tencent/mm/plugin/sight/decode/ui/c;)Landroid/widget/TextView;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$2;->gyJ:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$1$2;->gFi:Lcom/tencent/mm/plugin/sight/decode/ui/c$1;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/decode/ui/c$1;->gyI:Lcom/tencent/mm/plugin/sight/decode/ui/c;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/decode/ui/c$1;->gFh:Lcom/tencent/mm/plugin/sight/decode/ui/c;
 
     invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/decode/ui/c;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f020047
+    const v2, 0x7f040024
 
     invoke-static {v1, v2}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 

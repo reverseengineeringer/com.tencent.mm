@@ -8,20 +8,20 @@ import java.util.List;
 
 final class c
 {
-  static File ap(String paramString)
+  static File at(String paramString)
   {
     paramString = new File(paramString);
     if (paramString.exists()) {
       return paramString;
     }
     if (!paramString.getParentFile().exists()) {
-      ap(paramString.getParentFile().getAbsolutePath());
+      at(paramString.getParentFile().getAbsolutePath());
     }
     paramString.mkdir();
     return paramString;
   }
   
-  static List d(File paramFile)
+  static List<String> d(File paramFile)
   {
     paramFile = new FileReader(paramFile);
     BufferedReader localBufferedReader = new BufferedReader(paramFile);

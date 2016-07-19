@@ -15,22 +15,24 @@
 
 
 # static fields
-.field public static bAs:Lcom/tencent/mm/model/z$c;
+.field public static btv:Lcom/tencent/mm/model/z$c;
 
-.field public static bAt:Lcom/tencent/mm/model/z$e;
+.field public static btw:Lcom/tencent/mm/model/z$f;
 
-.field public static bAu:Lcom/tencent/mm/model/z$d;
+.field public static btx:Lcom/tencent/mm/model/z$d;
 
-.field public static bAv:Lcom/tencent/mm/model/z$b;
+.field public static bty:Lcom/tencent/mm/model/z$b;
+
+.field public static btz:Lcom/tencent/mm/model/z$g;
 
 
 # direct methods
-.method public static ta()Lcom/tencent/mm/model/z$c;
+.method public static sZ()Lcom/tencent/mm/model/z$c;
     .locals 1
 
     .prologue
-    .line 69
-    sget-object v0, Lcom/tencent/mm/model/z$a;->bAs:Lcom/tencent/mm/model/z$c;
+    .line 82
+    sget-object v0, Lcom/tencent/mm/model/z$a;->btv:Lcom/tencent/mm/model/z$c;
 
     return-object v0
 .end method

@@ -4,23 +4,23 @@
 
 
 # instance fields
-.field public asc:I
+.field public emC:Ljava/lang/String;
 
-.field public bOa:Ljava/lang/Object;
+.field public fBO:Ljava/lang/String;
 
-.field public eiB:Ljava/lang/String;
+.field public gUR:Lcom/tencent/mm/protocal/b/aqk;
 
-.field public fsI:Ljava/lang/String;
+.field public hkH:Ljava/lang/String;
 
-.field public gNf:Lcom/tencent/mm/protocal/b/apz;
+.field public hkI:Landroid/view/View;
 
-.field public gXv:Ljava/lang/String;
+.field public scene:I
 
-.field public gXw:Landroid/view/View;
+.field public tag:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lcom/tencent/mm/protocal/b/apz;Ljava/lang/String;Ljava/lang/String;Landroid/view/View;I)V
+.method public constructor <init>(Ljava/lang/String;Lcom/tencent/mm/protocal/b/aqk;Ljava/lang/String;Ljava/lang/String;Landroid/view/View;I)V
     .locals 1
 
     .prologue
@@ -30,40 +30,40 @@
     .line 12
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/j;->gXv:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/j;->hkH:Ljava/lang/String;
 
     .line 14
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/j;->fsI:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/j;->fBO:Ljava/lang/String;
 
     .line 16
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/j;->eiB:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/j;->emC:Ljava/lang/String;
 
     .line 23
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/j;->asc:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/j;->scene:I
 
     .line 26
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/j;->gXv:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/j;->hkH:Ljava/lang/String;
 
     .line 27
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/j;->gNf:Lcom/tencent/mm/protocal/b/apz;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/j;->gUR:Lcom/tencent/mm/protocal/b/aqk;
 
     .line 28
-    iput-object p3, p0, Lcom/tencent/mm/plugin/sns/ui/j;->eiB:Ljava/lang/String;
+    iput-object p3, p0, Lcom/tencent/mm/plugin/sns/ui/j;->emC:Ljava/lang/String;
 
     .line 29
-    iput-object p4, p0, Lcom/tencent/mm/plugin/sns/ui/j;->fsI:Ljava/lang/String;
+    iput-object p4, p0, Lcom/tencent/mm/plugin/sns/ui/j;->fBO:Ljava/lang/String;
 
     .line 30
-    iput-object p5, p0, Lcom/tencent/mm/plugin/sns/ui/j;->gXw:Landroid/view/View;
+    iput-object p5, p0, Lcom/tencent/mm/plugin/sns/ui/j;->hkI:Landroid/view/View;
 
     .line 31
-    iput p6, p0, Lcom/tencent/mm/plugin/sns/ui/j;->asc:I
+    iput p6, p0, Lcom/tencent/mm/plugin/sns/ui/j;->scene:I
 
     .line 32
     return-void

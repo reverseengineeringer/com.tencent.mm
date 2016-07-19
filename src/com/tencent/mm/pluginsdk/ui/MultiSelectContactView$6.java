@@ -12,13 +12,13 @@ final class MultiSelectContactView$6
   
   public final void onAnimationEnd(Animation paramAnimation)
   {
-    cqb.post(new Runnable()
+    clo.post(new Runnable()
     {
       public final void run()
       {
-        MultiSelectContactView.h(iHi).removeView(cqb);
-        MultiSelectContactView.i(iHi);
-        MultiSelectContactView.a(iHi, MultiSelectContactView.h(iHi).getChildCount());
+        MultiSelectContactView.h(jed).removeView(clo);
+        MultiSelectContactView.i(jed);
+        MultiSelectContactView.a(jed, MultiSelectContactView.h(jed).getChildCount());
       }
     });
   }

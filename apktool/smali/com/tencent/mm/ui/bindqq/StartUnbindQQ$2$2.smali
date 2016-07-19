@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kPG:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$2;
+.field final synthetic loU:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$2;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 133
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$2$2;->kPG:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$2;
+    .line 96
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$2$2;->loU:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,33 +37,9 @@
 
 # virtual methods
 .method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+    .locals 0
 
     .prologue
-    .line 137
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$2$2;->kPG:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$2;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$2;->kPF:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;->c(Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ""
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 138
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$2$2;->kPG:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$2;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$2;->kPF:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;->a(Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;)Lcom/tencent/mm/ui/base/h;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->dismiss()V
-
-    .line 139
+    .line 100
     return-void
 .end method

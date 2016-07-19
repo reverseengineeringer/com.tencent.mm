@@ -39,7 +39,7 @@
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/tencent/mm/plugin/sns/h/k;
+    instance-of v0, v0, Lcom/tencent/mm/plugin/sns/i/k;
 
     if-eqz v0, :cond_0
 
@@ -48,16 +48,16 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/plugin/sns/h/k;
+    check-cast v0, Lcom/tencent/mm/plugin/sns/i/k;
 
     .line 81
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/k;->aAf()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/k;->aCE()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -68,11 +68,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/k;->aAf()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/k;->aCE()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/plugin/sns/abtest/c;->am(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/plugin/sns/abtest/c;->an(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 85
     :cond_0

@@ -13,12 +13,12 @@
 
 
 # direct methods
-.method public static Gw(Ljava/lang/String;)I
+.method public static IK(Ljava/lang/String;)I
     .locals 1
 
     .prologue
     .line 38
-    invoke-static {p0}, Lcom/tencent/mm/ui/base/b;->Gx(Ljava/lang/String;)Ljava/lang/Class;
+    invoke-static {p0}, Lcom/tencent/mm/ui/base/b;->IL(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
@@ -26,7 +26,7 @@
     if-eqz v0, :cond_0
 
     .line 40
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/b;->h(Ljava/lang/Class;)I
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/b;->j(Ljava/lang/Class;)I
 
     move-result v0
 
@@ -40,8 +40,17 @@
     goto :goto_0
 .end method
 
-.method private static Gx(Ljava/lang/String;)Ljava/lang/Class;
+.method private static IL(Ljava/lang/String;)Ljava/lang/Class;
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/lang/Class",
+            "<*>;"
+        }
+    .end annotation
 
     .prologue
     .line 65
@@ -60,7 +69,7 @@
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i"
+    const-string/jumbo v0, "MicroMsg.ActivityUtil"
 
     const-string/jumbo v1, "Class %s not found in dex"
 
@@ -72,7 +81,7 @@
 
     aput-object p0, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 71
     const/4 v0, 0x0
@@ -80,7 +89,7 @@
     goto :goto_0
 .end method
 
-.method public static W(Landroid/app/Activity;)V
+.method public static S(Landroid/app/Activity;)V
     .locals 6
 
     .prologue
@@ -125,7 +134,7 @@
     move-exception v0
 
     .line 141
-    const-string/jumbo v1, "!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i"
+    const-string/jumbo v1, "MicroMsg.ActivityUtil"
 
     const-string/jumbo v2, "call convertActivityFromTranslucent Fail: %s"
 
@@ -137,12 +146,12 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method public static ei(Landroid/content/Context;)V
+.method public static em(Landroid/content/Context;)V
     .locals 2
 
     .prologue
@@ -162,16 +171,16 @@
     :cond_1
     check-cast p0, Landroid/app/Activity;
 
-    const v0, 0x7f020058
+    const v0, 0x7f040033
 
-    const v1, 0x7f020053
+    const v1, 0x7f040009
 
     invoke-virtual {p0, v0, v1}, Landroid/app/Activity;->overridePendingTransition(II)V
 
     goto :goto_0
 .end method
 
-.method public static ej(Landroid/content/Context;)V
+.method public static en(Landroid/content/Context;)V
     .locals 2
 
     .prologue
@@ -191,20 +200,20 @@
     :cond_1
     check-cast p0, Landroid/app/Activity;
 
-    const v0, 0x7f020053
+    const v0, 0x7f040009
 
-    const v1, 0x7f020060
+    const v1, 0x7f040034
 
     invoke-virtual {p0, v0, v1}, Landroid/app/Activity;->overridePendingTransition(II)V
 
     goto :goto_0
 .end method
 
-.method public static ek(Landroid/content/Context;)V
+.method public static eo(Landroid/content/Context;)V
     .locals 2
 
     .prologue
-    const v1, 0x7f020053
+    const v1, 0x7f040009
 
     .line 263
     if-eqz p0, :cond_0
@@ -227,8 +236,15 @@
     goto :goto_0
 .end method
 
-.method public static h(Ljava/lang/Class;)I
+.method public static j(Ljava/lang/Class;)I
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class",
+            "<*>;)I"
+        }
+    .end annotation
 
     .prologue
     .line 46
@@ -265,12 +281,19 @@
     goto :goto_0
 .end method
 
-.method public static i(Ljava/lang/Class;)Z
+.method public static k(Ljava/lang/Class;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class",
+            "<*>;)Z"
+        }
+    .end annotation
 
     .prologue
     .line 79
-    invoke-static {p0}, Lcom/tencent/mm/ui/base/b;->h(Ljava/lang/Class;)I
+    invoke-static {p0}, Lcom/tencent/mm/ui/base/b;->j(Ljava/lang/Class;)I
 
     move-result v0
 
@@ -323,9 +346,9 @@
     .line 251
     check-cast p0, Landroid/app/Activity;
 
-    const v0, 0x7f020058
+    const v0, 0x7f040033
 
-    const v1, 0x7f020053
+    const v1, 0x7f040009
 
     invoke-virtual {p0, v0, v1}, Landroid/app/Activity;->overridePendingTransition(II)V
 

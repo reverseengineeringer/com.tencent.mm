@@ -24,12 +24,12 @@
     return-void
 .end method
 
-.method private Kr()V
+.method private Lb()V
     .locals 4
 
     .prologue
     .line 52
-    sget-object v0, Lcom/tencent/mm/compatible/util/d;->buk:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/compatible/util/d;->biK:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -127,11 +127,11 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rx()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rz()Ljava/lang/String;
 
     move-result-object v1
 
@@ -252,7 +252,7 @@
 
     const-string/jumbo v2, ".ui.SnsUploadUI"
 
-    invoke-static {p0, v1, v2, v0}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {p0, v1, v2, v0}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     .line 140
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;->finish()V
@@ -286,12 +286,12 @@
 
     const-string/jumbo v3, ""
 
-    invoke-static {p0, v0, v1, v2, v3}, Lcom/tencent/mm/pluginsdk/g/a;->a(Landroid/app/Activity;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Z
+    invoke-static {p0, v0, v1, v2, v3}, Lcom/tencent/mm/pluginsdk/h/a;->a(Landroid/app/Activity;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
     .line 44
-    const-string/jumbo v1, "!44@/B4Tb64lLpIPG1BmaCV8Ij1h352189jTmhyO13lz5Ec="
+    const-string/jumbo v1, "MicroMsg.ShareImageRedirectUI"
 
     const-string/jumbo v2, "summerper checkPermission checkCamera[%b], stack[%s], activity[%s]"
 
@@ -309,7 +309,7 @@
 
     const/4 v4, 0x1
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->aVJ()Lcom/tencent/mm/sdk/platformtools/ad;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->baX()Lcom/tencent/mm/sdk/platformtools/af;
 
     move-result-object v5
 
@@ -319,7 +319,7 @@
 
     aput-object p0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 45
     if-nez v0, :cond_0
@@ -330,7 +330,7 @@
 
     .line 48
     :cond_0
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;->Kr()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;->Lb()V
 
     goto :goto_0
 .end method
@@ -342,7 +342,7 @@
     const/4 v5, 0x0
 
     .line 66
-    const-string/jumbo v0, "!44@/B4Tb64lLpIPG1BmaCV8Ij1h352189jTmhyO13lz5Ec="
+    const-string/jumbo v0, "MicroMsg.ShareImageRedirectUI"
 
     const-string/jumbo v1, "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]"
 
@@ -382,7 +382,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 67
     packed-switch p1, :pswitch_data_0
@@ -398,31 +398,31 @@
     if-nez v0, :cond_0
 
     .line 70
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;->Kr()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;->Lb()V
 
     goto :goto_0
 
     .line 72
     :cond_0
-    const v0, 0x7f0b08dd
+    const v0, 0x7f080d58
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v0, 0x7f0b08d4
+    const v0, 0x7f080d62
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    const v0, 0x7f0b08d5
+    const v0, 0x7f080aa8
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v0, 0x7f0b0c09
+    const v0, 0x7f0802c3
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;->getString(I)Ljava/lang/String;
 

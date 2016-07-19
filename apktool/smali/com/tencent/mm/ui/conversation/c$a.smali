@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field public aji:Ljava/lang/String;
+.field public UY:Ljava/lang/String;
 
 .field public content:Ljava/lang/String;
 
-.field final synthetic loD:Lcom/tencent/mm/ui/conversation/c;
+.field final synthetic lOT:Lcom/tencent/mm/ui/conversation/c;
 
-.field public loE:I
+.field public lOU:I
 
-.field public loF:Ljava/lang/String;
+.field public lOV:Ljava/lang/String;
 
 
 # direct methods
@@ -32,7 +32,7 @@
 
     .prologue
     .line 1316
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/c$a;->loD:Lcom/tencent/mm/ui/conversation/c;
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/c$a;->lOT:Lcom/tencent/mm/ui/conversation/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

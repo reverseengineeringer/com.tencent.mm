@@ -13,26 +13,26 @@ final class MobileFriendUI$14
 {
   MobileFriendUI$14(MobileFriendUI paramMobileFriendUI) {}
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    if (paramInt < MobileFriendUI.f(kPt).getHeaderViewsCount()) {}
+    if (paramInt < MobileFriendUI.f(loJ).getHeaderViewsCount()) {}
     do
     {
       return;
-      int i = MobileFriendUI.f(kPt).getHeaderViewsCount();
-      paramAdapterView = (b)MobileFriendUI.d(kPt).getItem(paramInt - i);
+      int i = MobileFriendUI.f(loJ).getHeaderViewsCount();
+      paramAdapterView = (b)MobileFriendUI.d(loJ).getItem(paramInt - i);
       if ((status == 1) || (status == 2)) {
-        MobileFriendUI.a(kPt, paramAdapterView);
+        MobileFriendUI.a(loJ, paramAdapterView);
       }
     } while (status != 0);
-    paramView = new Intent(kPt, InviteFriendUI.class);
+    paramView = new Intent(loJ, InviteFriendUI.class);
     paramView.putExtra("friend_type", 1);
     paramView.putExtra("friend_user_name", paramAdapterView.getUsername());
-    paramView.putExtra("friend_num", paramAdapterView.yp());
-    paramView.putExtra("friend_nick", paramAdapterView.yj());
-    paramView.putExtra("friend_weixin_nick", paramAdapterView.ym());
+    paramView.putExtra("friend_num", paramAdapterView.yB());
+    paramView.putExtra("friend_nick", paramAdapterView.yv());
+    paramView.putExtra("friend_weixin_nick", paramAdapterView.yy());
     paramView.putExtra("friend_scene", 13);
-    kPt.startActivity(paramView);
+    loJ.startActivity(paramView);
   }
 }
 

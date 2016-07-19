@@ -22,7 +22,7 @@ final class b$2
   
   public final boolean onScroll(MotionEvent paramMotionEvent1, MotionEvent paramMotionEvent2, float paramFloat1, float paramFloat2)
   {
-    paramMotionEvent1 = kzB;
+    paramMotionEvent1 = kYI;
     if (paramFloat2 >= 0.0F) {}
     for (int i = 0;; i = 1)
     {

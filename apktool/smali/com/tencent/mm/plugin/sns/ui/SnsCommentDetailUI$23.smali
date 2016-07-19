@@ -13,9 +13,18 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/mn;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+.field final synthetic hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
 
 # direct methods
@@ -23,68 +32,71 @@
     .locals 1
 
     .prologue
-    .line 220
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$23;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    .line 224
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$23;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/mn;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$23;->kum:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 3
 
     .prologue
-    .line 223
-    instance-of v0, p1, Lcom/tencent/mm/d/a/ma;
+    .line 224
+    check-cast p1, Lcom/tencent/mm/e/a/mn;
+
+    instance-of v0, p1, Lcom/tencent/mm/e/a/mn;
 
     if-eqz v0, :cond_0
 
-    .line 224
-    check-cast p1, Lcom/tencent/mm/d/a/ma;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/mn;->auI:Lcom/tencent/mm/e/a/mn$a;
 
-    .line 225
-    iget-object v0, p1, Lcom/tencent/mm/d/a/ma;->aIo:Lcom/tencent/mm/d/a/ma$a;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/mn$a;->id:Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/a/ma$a;->id:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/e/a/mn;->auI:Lcom/tencent/mm/e/a/mn$a;
 
-    .line 227
-    iget-object v1, p1, Lcom/tencent/mm/d/a/ma;->aIo:Lcom/tencent/mm/d/a/ma$a;
-
-    iget v1, v1, Lcom/tencent/mm/d/a/ma$a;->type:I
+    iget v1, v1, Lcom/tencent/mm/e/a/mn$a;->type:I
 
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_1
 
-    .line 228
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$23;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$23;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
     invoke-static {v1, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->d(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Ljava/lang/String;)V
 
-    .line 234
     :cond_0
     :goto_0
     const/4 v0, 0x0
 
     return v0
 
-    .line 229
     :cond_1
-    iget-object v1, p1, Lcom/tencent/mm/d/a/ma;->aIo:Lcom/tencent/mm/d/a/ma$a;
+    iget-object v1, p1, Lcom/tencent/mm/e/a/mn;->auI:Lcom/tencent/mm/e/a/mn$a;
 
-    iget v1, v1, Lcom/tencent/mm/d/a/ma$a;->type:I
+    iget v1, v1, Lcom/tencent/mm/e/a/mn$a;->type:I
 
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_0
 
-    .line 230
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$23;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$23;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
     invoke-static {v1, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->e(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;Ljava/lang/String;)V
 

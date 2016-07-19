@@ -1,30 +1,13 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.d.a.bl;
-import com.tencent.mm.sdk.c.a;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Set;
+import com.tencent.mm.pluginsdk.model.app.f;
+import java.util.Comparator;
+import java.util.List;
 
 final class ChattingSendDataToDeviceUI$6
-  implements DialogInterface.OnClickListener
+  implements Comparator<f>
 {
-  ChattingSendDataToDeviceUI$6(ChattingSendDataToDeviceUI paramChattingSendDataToDeviceUI) {}
-  
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
-  {
-    paramDialogInterface = ChattingSendDataToDeviceUI.f(kXv).keySet().iterator();
-    while (paramDialogInterface.hasNext())
-    {
-      String str = (String)paramDialogInterface.next();
-      bl localbl = new bl();
-      auG.alN = str;
-      a.jUF.j(localbl);
-    }
-    kXv.finish();
-  }
+  ChattingSendDataToDeviceUI$6(ChattingSendDataToDeviceUI paramChattingSendDataToDeviceUI, List paramList) {}
 }
 
 /* Location:

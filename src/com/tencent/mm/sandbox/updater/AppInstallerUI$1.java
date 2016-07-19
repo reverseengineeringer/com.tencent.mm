@@ -10,7 +10,7 @@ final class AppInstallerUI$1
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    AppInstallerUI.a(jSU);
+    AppInstallerUI.a(kso);
   }
 }
 

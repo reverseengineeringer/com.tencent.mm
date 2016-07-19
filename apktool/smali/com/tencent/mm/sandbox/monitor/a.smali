@@ -4,7 +4,17 @@
 
 
 # static fields
-.field static final bvl:Ljava/util/HashMap;
+.field static final bjV:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -20,7 +30,7 @@
     invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
 
     .line 67
-    sput-object v0, Lcom/tencent/mm/sandbox/monitor/a;->bvl:Ljava/util/HashMap;
+    sput-object v0, Lcom/tencent/mm/sandbox/monitor/a;->bjV:Ljava/util/HashMap;
 
     const-string/jumbo v1, "exception"
 
@@ -33,7 +43,7 @@
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 68
-    sget-object v0, Lcom/tencent/mm/sandbox/monitor/a;->bvl:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/sandbox/monitor/a;->bjV:Ljava/util/HashMap;
 
     const-string/jumbo v1, "anr"
 
@@ -46,7 +56,7 @@
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 69
-    sget-object v0, Lcom/tencent/mm/sandbox/monitor/a;->bvl:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/sandbox/monitor/a;->bjV:Ljava/util/HashMap;
 
     const-string/jumbo v1, "handler"
 
@@ -59,7 +69,7 @@
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 70
-    sget-object v0, Lcom/tencent/mm/sandbox/monitor/a;->bvl:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/sandbox/monitor/a;->bjV:Ljava/util/HashMap;
 
     const-string/jumbo v1, "sql"
 
@@ -72,7 +82,7 @@
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 71
-    sget-object v0, Lcom/tencent/mm/sandbox/monitor/a;->bvl:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/sandbox/monitor/a;->bjV:Ljava/util/HashMap;
 
     const-string/jumbo v1, "permission"
 
@@ -97,7 +107,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -118,7 +128,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v2, Lcom/tencent/mm/storage/j;->bxa:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/storage/j;->bpc:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -152,7 +162,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/tencent/mm/storage/j;->bxa:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/storage/j;->bpc:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -191,48 +201,48 @@
     .line 187
     const-string/jumbo v1, "count"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/h/a;->ci(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Long;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/h/a;->cw(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->c(Ljava/lang/Long;)J
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->c(Ljava/lang/Long;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
     .line 188
-    const-string/jumbo v3, "count"
+    const-string/jumbo v1, "count"
 
     const-wide/16 v4, 0x1
 
-    add-long/2addr v1, v4
+    add-long/2addr v2, v4
 
-    invoke-static {v0, v3, v1, v2}, Lcom/tencent/mm/sdk/h/a;->h(Ljava/lang/String;Ljava/lang/String;J)Z
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/h/a;->g(Ljava/lang/String;Ljava/lang/String;J)Z
 
     .line 189
     const-string/jumbo v1, "lasttime"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/h/a;->ci(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Long;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/h/a;->cw(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->c(Ljava/lang/Long;)J
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->c(Ljava/lang/Long;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-nez v1, :cond_2
 
     .line 190
     const-string/jumbo v1, "lasttime"
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gp()J
 
     move-result-wide v2
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/h/a;->h(Ljava/lang/String;Ljava/lang/String;J)Z
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/h/a;->g(Ljava/lang/String;Ljava/lang/String;J)Z
 
     .line 192
     :cond_2
@@ -240,7 +250,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/tencent/mm/storage/j;->bxa:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/storage/j;->bpc:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -277,7 +287,7 @@
     move-result-object v0
 
     .line 194
-    const-string/jumbo v1, "!32@/B4Tb64lLpJJjWiGupgZbcuzfFJRKwOo"
+    const-string/jumbo v1, "MicroMsg.CrashUpload"
 
     const-string/jumbo v2, "crash:[%s] len:[%d]"
 
@@ -305,7 +315,7 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 196
     invoke-static {p2}, Lcom/tencent/mm/sandbox/monitor/a;->a(Lcom/tencent/mm/sandbox/monitor/b$a;)V
@@ -314,7 +324,7 @@
     invoke-static {v0, p2}, Lcom/tencent/mm/sandbox/monitor/a;->a(Ljava/lang/String;Lcom/tencent/mm/sandbox/monitor/b$a;)V
 
     .line 199
-    invoke-static {p0, p1}, Lcom/tencent/mm/sandbox/monitor/a;->cb(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, p1}, Lcom/tencent/mm/sandbox/monitor/a;->cn(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
@@ -322,15 +332,15 @@
 .end method
 
 .method private static a(Lcom/tencent/mm/sandbox/monitor/b$a;)V
-    .locals 10
+    .locals 11
 
     .prologue
-    const/4 v9, 0x1
+    const/4 v10, 0x1
 
     const/4 v1, 0x0
 
     .line 204
-    iget-boolean v0, p0, Lcom/tencent/mm/sandbox/monitor/b$a;->jSD:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/sandbox/monitor/b$a;->krX:Z
 
     if-nez v0, :cond_0
 
@@ -342,7 +352,7 @@
     :cond_0
     new-instance v0, Ljava/io/File;
 
-    sget-object v2, Lcom/tencent/mm/compatible/util/d;->bxe:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/compatible/util/d;->bpg:Ljava/lang/String;
 
     invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -378,24 +388,24 @@
     .line 214
     invoke-virtual {v4}, Ljava/io/File;->lastModified()J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-static {v5, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->an(J)J
+    invoke-static {v6, v7}, Lcom/tencent/mm/sdk/platformtools/be;->au(J)J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    const-wide/32 v7, 0x240c8400
+    const-wide/32 v8, 0x240c8400
 
-    cmp-long v5, v5, v7
+    cmp-long v5, v6, v8
 
     if-lez v5, :cond_2
 
     .line 215
-    const-string/jumbo v5, "!32@/B4Tb64lLpJJjWiGupgZbcuzfFJRKwOo"
+    const-string/jumbo v5, "MicroMsg.CrashUpload"
 
     const-string/jumbo v6, "dealWithSdcardCrash del old file: %s"
 
-    new-array v7, v9, [Ljava/lang/Object;
+    new-array v7, v10, [Ljava/lang/Object;
 
     invoke-virtual {v4}, Ljava/io/File;->getPath()Ljava/lang/String;
 
@@ -403,7 +413,7 @@
 
     aput-object v8, v7, v1
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 216
     invoke-virtual {v4}, Ljava/io/File;->delete()Z
@@ -436,7 +446,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v4, Lcom/tencent/mm/compatible/util/d;->bxe:Ljava/lang/String;
+    sget-object v4, Lcom/tencent/mm/compatible/util/d;->bpg:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -467,15 +477,15 @@
     move-result-object v0
 
     .line 223
-    const-string/jumbo v2, "!32@/B4Tb64lLpJJjWiGupgZbcuzfFJRKwOo"
+    const-string/jumbo v2, "MicroMsg.CrashUpload"
 
     const-string/jumbo v3, "dealWithSdcardCrash %s"
 
-    new-array v4, v9, [Ljava/lang/Object;
+    new-array v4, v10, [Ljava/lang/Object;
 
     aput-object v0, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 224
     invoke-static {v0, p0}, Lcom/tencent/mm/sandbox/monitor/a;->a(Ljava/lang/String;Lcom/tencent/mm/sandbox/monitor/b$a;)V
@@ -501,7 +511,7 @@
     if-nez v0, :cond_0
 
     .line 229
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -527,16 +537,16 @@
     if-nez v0, :cond_3
 
     .line 234
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->dL(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->dM(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 235
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -567,7 +577,7 @@
 
     .line 244
     :goto_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aUD()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->aZH()Ljava/lang/String;
 
     move-result-object v0
 
@@ -599,7 +609,7 @@
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 246
-    invoke-static {}, Lcom/tencent/mm/compatible/d/p;->oC()[Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/compatible/d/p;->mS()[Ljava/lang/String;
 
     move-result-object v0
 
@@ -669,11 +679,11 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/tencent/mm/a/e;->e(Ljava/lang/String;[B)I
+    invoke-static {p0, v0}, Lcom/tencent/mm/a/e;->d(Ljava/lang/String;[B)I
 
     .line 258
     :cond_0
-    invoke-static {p0}, Lcom/tencent/mm/a/e;->aw(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/tencent/mm/a/e;->aA(Ljava/lang/String;)I
 
     move-result v0
 
@@ -683,7 +693,7 @@
     if-le v0, v1, :cond_1
 
     .line 260
-    invoke-static {p0}, Lcom/tencent/mm/loader/stub/b;->deleteFile(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/a/e;->deleteFile(Ljava/lang/String;)Z
 
     .line 262
     :cond_1
@@ -713,7 +723,7 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/tencent/mm/a/e;->e(Ljava/lang/String;[B)I
+    invoke-static {p0, v0}, Lcom/tencent/mm/a/e;->d(Ljava/lang/String;[B)I
 
     .line 263
     return-void
@@ -816,7 +826,7 @@
     goto/16 :goto_0
 .end method
 
-.method public static aTL()I
+.method public static aYI()I
     .locals 10
 
     .prologue
@@ -833,7 +843,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v5, Lcom/tencent/mm/storage/j;->bxa:Ljava/lang/String;
+    sget-object v5, Lcom/tencent/mm/storage/j;->bpc:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -859,11 +869,11 @@
     if-nez v4, :cond_1
 
     .line 77
-    const-string/jumbo v1, "!32@/B4Tb64lLpJJjWiGupgZbcuzfFJRKwOo"
+    const-string/jumbo v1, "MicroMsg.CrashUpload"
 
     const-string/jumbo v2, "dkcrash checkUpload dir never create ?"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 108
     :cond_0
@@ -882,11 +892,11 @@
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     .line 82
-    const-string/jumbo v1, "!32@/B4Tb64lLpJJjWiGupgZbcuzfFJRKwOo"
+    const-string/jumbo v1, "MicroMsg.CrashUpload"
 
     const-string/jumbo v2, "dkcrash is the fucking file ??"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -950,7 +960,7 @@
 
     .line 104
     :goto_2
-    invoke-static {v7, v0}, Lcom/tencent/mm/sandbox/monitor/a;->cb(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v7, v0}, Lcom/tencent/mm/sandbox/monitor/a;->cn(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 105
     :cond_3
@@ -973,7 +983,7 @@
     goto :goto_0
 .end method
 
-.method private static cb(Ljava/lang/String;Ljava/lang/String;)I
+.method private static cn(Ljava/lang/String;Ljava/lang/String;)I
     .locals 12
 
     .prologue
@@ -986,7 +996,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/tencent/mm/storage/j;->bxa:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/storage/j;->bpc:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1025,27 +1035,27 @@
     .line 114
     const-string/jumbo v0, "count"
 
-    invoke-static {v6, v0}, Lcom/tencent/mm/sdk/h/a;->ci(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Long;
+    invoke-static {v6, v0}, Lcom/tencent/mm/sdk/h/a;->cw(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->c(Ljava/lang/Long;)J
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->c(Ljava/lang/Long;)J
 
     move-result-wide v0
 
     .line 115
     const-string/jumbo v2, "lasttime"
 
-    invoke-static {v6, v2}, Lcom/tencent/mm/sdk/h/a;->ci(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Long;
+    invoke-static {v6, v2}, Lcom/tencent/mm/sdk/h/a;->cw(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->c(Ljava/lang/Long;)J
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->c(Ljava/lang/Long;)J
 
     move-result-wide v2
 
     .line 116
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gp()J
 
     move-result-wide v4
 
@@ -1056,7 +1066,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v5, Lcom/tencent/mm/storage/j;->bxa:Ljava/lang/String;
+    sget-object v5, Lcom/tencent/mm/storage/j;->bpc:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1093,12 +1103,12 @@
     move-result-object v7
 
     .line 119
-    invoke-static {v7}, Lcom/tencent/mm/a/e;->aw(Ljava/lang/String;)I
+    invoke-static {v7}, Lcom/tencent/mm/a/e;->aA(Ljava/lang/String;)I
 
     move-result v4
 
     .line 120
-    const-string/jumbo v5, "!32@/B4Tb64lLpJJjWiGupgZbcuzfFJRKwOo"
+    const-string/jumbo v5, "MicroMsg.CrashUpload"
 
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -1134,7 +1144,7 @@
 
     move-result-object v0
 
-    invoke-static {v5, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 121
     const/high16 v0, 0x500000
@@ -1148,7 +1158,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->J([B)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->P([B)Z
 
     move-result v1
 
@@ -1162,7 +1172,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    sget v4, Lcom/tencent/mm/protocal/b;->iUf:I
+    sget v4, Lcom/tencent/mm/protocal/c;->jry:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1184,7 +1194,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/a/g;->j([B)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1192,7 +1202,7 @@
 
     move-result-object v2
 
-    invoke-static {v0}, Lcom/tencent/mm/a/q;->q([B)[B
+    invoke-static {v0}, Lcom/tencent/mm/a/q;->m([B)[B
 
     move-result-object v0
 
@@ -1220,7 +1230,7 @@
 
     .line 124
     :cond_0
-    invoke-static {v7}, Lcom/tencent/mm/loader/stub/b;->deleteFile(Ljava/lang/String;)Z
+    invoke-static {v7}, Lcom/tencent/mm/a/e;->deleteFile(Ljava/lang/String;)Z
 
     .line 125
     const-string/jumbo v0, "count"
@@ -1229,22 +1239,22 @@
 
     invoke-direct {v1, v6}, Lcom/tencent/mm/sdk/h/a;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0, v10}, Lcom/tencent/mm/sdk/h/a;->aM(Ljava/lang/String;I)Z
+    invoke-virtual {v1, v0, v10}, Lcom/tencent/mm/sdk/h/a;->aW(Ljava/lang/String;I)Z
 
     .line 126
     const-string/jumbo v0, "lasttime"
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gp()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v6, v0, v1, v2}, Lcom/tencent/mm/sdk/h/a;->h(Ljava/lang/String;Ljava/lang/String;J)Z
+    invoke-static {v6, v0, v2, v3}, Lcom/tencent/mm/sdk/h/a;->g(Ljava/lang/String;Ljava/lang/String;J)Z
 
     .line 127
     return v11
 .end method
 
-.method static synthetic u(Ljava/lang/String;[B)V
+.method static synthetic t(Ljava/lang/String;[B)V
     .locals 8
 
     .prologue
@@ -1253,7 +1263,7 @@
     const/4 v6, 0x0
 
     .line 48
-    const-string/jumbo v0, "!32@/B4Tb64lLpJJjWiGupgZbcuzfFJRKwOo"
+    const-string/jumbo v0, "MicroMsg.CrashUpload"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1281,7 +1291,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Lorg/apache/http/impl/client/DefaultHttpClient;
 
@@ -1314,7 +1324,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->d(Ljava/io/InputStream;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->d(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1328,9 +1338,7 @@
 
     const-string/jumbo v0, "Response"
 
-    const/4 v2, 0x0
-
-    invoke-static {v1, v0, v2}, Lcom/tencent/mm/sdk/platformtools/q;->J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/r;->cr(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v2
 
@@ -1375,7 +1383,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJJjWiGupgZbcuzfFJRKwOo"
+    const-string/jumbo v0, "MicroMsg.CrashUpload"
 
     const-string/jumbo v2, "doPost: returnConnection = %s"
 
@@ -1387,7 +1395,7 @@
 
     aput-object v1, v3, v4
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1397,7 +1405,7 @@
     :catch_0
     move-exception v0
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpJJjWiGupgZbcuzfFJRKwOo"
+    const-string/jumbo v1, "MicroMsg.CrashUpload"
 
     const-string/jumbo v2, "doPost e type: %s, msg: %s"
 
@@ -1421,7 +1429,7 @@
 
     aput-object v0, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method

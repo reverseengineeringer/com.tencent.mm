@@ -1,16 +1,16 @@
 package com.tencent.mm.modelmulti;
 
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.h.d;
-import com.tencent.mm.protocal.x.a;
-import com.tencent.mm.protocal.x.b;
-import com.tencent.mm.r.h;
+import com.tencent.mm.protocal.aa.a;
+import com.tencent.mm.protocal.aa.b;
+import com.tencent.mm.protocal.k.c;
+import com.tencent.mm.protocal.k.d;
+import com.tencent.mm.t.h;
 
 public final class i$a
   extends h
 {
-  private final x.a bVv = new x.a();
-  private final x.b bVw = new x.b();
+  private final aa.a bOW = new aa.a();
+  private final aa.b bOX = new aa.b();
   
   public final int getType()
   {
@@ -22,17 +22,17 @@ public final class i$a
     return null;
   }
   
-  protected final h.c tW()
+  protected final k.c tX()
   {
-    return bVv;
+    return bOW;
   }
   
-  public final h.d tX()
+  public final k.d tY()
   {
-    return bVw;
+    return bOX;
   }
   
-  public final int vx()
+  public final int vz()
   {
     return 1;
   }

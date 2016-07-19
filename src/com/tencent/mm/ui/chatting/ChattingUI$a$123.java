@@ -1,14 +1,28 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.sdk.platformtools.ap.a;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.aj;
 
 final class ChattingUI$a$123
-  implements DialogInterface.OnClickListener
+  implements ap.a
 {
-  ChattingUI$a$123(ChattingUI.a parama) {}
+  ChattingUI$a$123(ChattingUI.a parama, long paramLong) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt) {}
+  public final boolean vf()
+  {
+    ai localai = ah.tE().rt().dQ(gXl);
+    localai.bcN();
+    ah.tE().rt().a(gXl, localai);
+    return false;
+  }
+  
+  public final boolean vg()
+  {
+    return false;
+  }
 }
 
 /* Location:

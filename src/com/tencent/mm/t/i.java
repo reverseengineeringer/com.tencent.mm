@@ -1,78 +1,39 @@
 package com.tencent.mm.t;
 
-import com.tencent.mm.d.b.t;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.model.y;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.r;
-import com.tencent.mm.storage.s;
+import com.tencent.mm.protocal.k.c;
+import com.tencent.mm.protocal.k.d;
+import com.tencent.mm.protocal.r.a;
+import com.tencent.mm.protocal.r.b;
 
 public final class i
+  extends h
 {
-  private static void P(String paramString1, String paramString2)
+  private final r.a byB = new r.a();
+  private final r.b byC = new r.b();
+  
+  public final int getType()
   {
-    long l = f.gs(paramString1);
-    if (l == -1L)
-    {
-      u.i("!56@/B4Tb64lLpKy3Chyc6XXOQxAduU3bgoGvS2SZiFZGwYwqEXCzlSYpg==", "qy_status_notify bizLocalId == -1,%s", new Object[] { paramString1 });
-      return;
-    }
-    int i = xIKfield_newUnReadCount;
-    aj.xI().M(l);
-    paramString1 = aj.xH().Q(l);
-    r localr = ah.tD().rt().EA(paramString2);
-    if (localr == null)
-    {
-      u.w("!56@/B4Tb64lLpKy3Chyc6XXOQxAduU3bgoGvS2SZiFZGwYwqEXCzlSYpg==", "qy_status_notify cvs == null:%s", new Object[] { paramString2 });
-      return;
-    }
-    if (paramString1.cU(1))
-    {
-      if (field_unReadMuteCount <= i)
-      {
-        localr.bp(0);
-        ah.tD().rt().a(localr, paramString2, true);
-        ah.kU().cancelNotification(paramString2);
-        return;
-      }
-      localr.bp(field_unReadMuteCount - i);
-      ah.tD().rt().a(localr, paramString2, true);
-      return;
-    }
-    if (field_unReadCount <= i)
-    {
-      ah.tD().rt().EC(paramString2);
-      ah.kU().cancelNotification(paramString2);
-      return;
-    }
-    localr.bo(0);
-    localr.bi(field_unReadCount - i);
-    ah.tD().rt().a(localr, paramString2, true);
+    return 381;
   }
   
-  public static void f(int paramInt, String paramString1, String paramString2)
+  public final String getUri()
   {
-    if (!"EnterpriseChatStatus".equals(paramString1)) {}
-    String str;
-    do
-    {
-      return;
-      paramString1 = paramString2.split(";");
-      paramString2 = paramString1[0];
-      str = paramString1[1];
-      Integer.parseInt(paramString1[2]);
-      if (paramInt == 7)
-      {
-        P(str, paramString2);
-        return;
-      }
-      if (paramInt == 8)
-      {
-        P(str, paramString2);
-        return;
-      }
-    } while (paramInt != 9);
-    P(str, paramString2);
+    return "/cgi-bin/micromsg-bin/getcert";
+  }
+  
+  protected final k.c tX()
+  {
+    return byB;
+  }
+  
+  public final k.d tY()
+  {
+    return byC;
+  }
+  
+  public final int vz()
+  {
+    return 1;
   }
 }
 

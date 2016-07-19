@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/bx;->a(Lcom/tencent/mm/ui/chatting/aa$a;ILcom/tencent/mm/ui/chatting/ChattingUI$a;Lcom/tencent/mm/storage/ag;Ljava/lang/String;)V
+    value = Lcom/tencent/mm/ui/chatting/bx;->a(Landroid/view/MenuItem;Lcom/tencent/mm/ui/chatting/ChattingUI$a;Lcom/tencent/mm/storage/ai;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,24 +18,24 @@
 
 
 # instance fields
-.field final synthetic kUW:Lcom/tencent/mm/storage/ag;
+.field final synthetic bKB:Lcom/tencent/mm/storage/ai;
 
-.field final synthetic kUX:I
+.field final synthetic lqg:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-.field final synthetic kUY:Lcom/tencent/mm/ui/chatting/bx;
+.field final synthetic lvb:Lcom/tencent/mm/ui/chatting/bx;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/chatting/bx;Lcom/tencent/mm/storage/ag;I)V
+.method constructor <init>(Lcom/tencent/mm/ui/chatting/bx;Lcom/tencent/mm/ui/chatting/ChattingUI$a;Lcom/tencent/mm/storage/ai;)V
     .locals 0
 
     .prologue
-    .line 134
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/bx$1;->kUY:Lcom/tencent/mm/ui/chatting/bx;
+    .line 349
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/bx$1;->lvb:Lcom/tencent/mm/ui/chatting/bx;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/bx$1;->kUW:Lcom/tencent/mm/storage/ag;
+    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/bx$1;->lqg:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    iput p3, p0, Lcom/tencent/mm/ui/chatting/bx$1;->kUX:I
+    iput-object p3, p0, Lcom/tencent/mm/ui/chatting/bx$1;->bKB:Lcom/tencent/mm/storage/ai;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,47 +44,20 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 2
 
     .prologue
-    .line 139
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/bx$1;->kUW:Lcom/tencent/mm/storage/ag;
+    .line 353
+    invoke-static {}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->blI()V
 
-    iget-object v0, v0, Lcom/tencent/mm/d/b/bg;->field_imgPath:Ljava/lang/String;
+    .line 354
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/bx$1;->lqg:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/bx$1;->bKB:Lcom/tencent/mm/storage/ai;
 
-    move-result v0
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->af(Lcom/tencent/mm/storage/ai;)V
 
-    if-eqz v0, :cond_0
-
-    .line 141
-    const-string/jumbo v0, "!56@/B4Tb64lLpKwUcOR+EdWcgrQWCeRaP+fpwTv6y+mNLuv5Zxah8/EmQ=="
-
-    const-string/jumbo v1, "filename is null"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 145
-    :goto_0
+    .line 355
     return-void
-
-    .line 144
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/bx$1;->kUY:Lcom/tencent/mm/ui/chatting/bx;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/bx;->kTe:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->kSE:Lcom/tencent/mm/ui/chatting/cl;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/cl;->kVo:Lcom/tencent/mm/ui/chatting/m;
-
-    iget v1, p0, Lcom/tencent/mm/ui/chatting/bx$1;->kUX:I
-
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/bx$1;->kUW:Lcom/tencent/mm/storage/ag;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/chatting/m;->c(ILcom/tencent/mm/storage/ag;)V
-
-    goto :goto_0
 .end method

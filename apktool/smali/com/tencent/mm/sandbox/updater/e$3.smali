@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic jTO:Lcom/tencent/mm/sandbox/updater/e;
+.field final synthetic ktm:Lcom/tencent/mm/sandbox/updater/e;
 
-.field final synthetic jTQ:J
+.field final synthetic kto:J
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 865
-    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/e$3;->jTO:Lcom/tencent/mm/sandbox/updater/e;
+    .line 913
+    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/e$3;->ktm:Lcom/tencent/mm/sandbox/updater/e;
 
-    iput-wide p2, p0, Lcom/tencent/mm/sandbox/updater/e$3;->jTQ:J
+    iput-wide p2, p0, Lcom/tencent/mm/sandbox/updater/e$3;->kto:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,13 +41,13 @@
 
 # virtual methods
 .method public final run()V
-    .locals 6
+    .locals 7
 
     .prologue
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
-    .line 868
-    const-string/jumbo v0, "!44@/B4Tb64lLpIoz7uBiEqQZS70cVT/Q61Ax49vraaHmec="
+    .line 916
+    const-string/jumbo v0, "MicroMsg.TrafficStatistic"
 
     const-string/jumbo v1, "onDownstreamTraffic downstream : %s"
 
@@ -55,34 +55,34 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget-wide v3, p0, Lcom/tencent/mm/sandbox/updater/e$3;->jTQ:J
+    iget-wide v4, p0, Lcom/tencent/mm/sandbox/updater/e$3;->kto:J
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
-    aput-object v3, v2, v5
+    aput-object v3, v2, v6
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 869
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/e$3;->jTO:Lcom/tencent/mm/sandbox/updater/e;
+    .line 917
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/e$3;->ktm:Lcom/tencent/mm/sandbox/updater/e;
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    iget-wide v3, p0, Lcom/tencent/mm/sandbox/updater/e$3;->jTQ:J
+    iget-wide v4, p0, Lcom/tencent/mm/sandbox/updater/e$3;->kto:J
 
-    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->max(JJ)J
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->max(JJ)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sandbox/updater/e;->b(Lcom/tencent/mm/sandbox/updater/e;J)J
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sandbox/updater/e;->b(Lcom/tencent/mm/sandbox/updater/e;J)J
 
-    .line 870
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/e$3;->jTO:Lcom/tencent/mm/sandbox/updater/e;
+    .line 918
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/e$3;->ktm:Lcom/tencent/mm/sandbox/updater/e;
 
-    invoke-static {v0, v5}, Lcom/tencent/mm/sandbox/updater/e;->a(Lcom/tencent/mm/sandbox/updater/e;Z)V
+    invoke-static {v0, v6}, Lcom/tencent/mm/sandbox/updater/e;->a(Lcom/tencent/mm/sandbox/updater/e;Z)V
 
-    .line 871
+    .line 919
     return-void
 .end method

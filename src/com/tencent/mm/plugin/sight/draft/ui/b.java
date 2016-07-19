@@ -17,15 +17,13 @@ import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
-import com.tencent.mm.an.f;
-import com.tencent.mm.an.g;
-import com.tencent.mm.an.h;
-import com.tencent.mm.an.j;
+import com.tencent.mm.aq.j;
+import com.tencent.mm.aq.l;
+import com.tencent.mm.aq.n;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.sdk.h.d;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.tools.k;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -33,21 +31,21 @@ import java.util.List;
 import java.util.Set;
 
 public final class b
-  extends com.tencent.mm.ui.i
+  extends com.tencent.mm.ui.i<j>
 {
-  private int gmC;
-  a gzh = new a((byte)0);
-  private b gzi = new b((byte)0);
-  private c gzj = new c((byte)0);
-  Set gzk = new HashSet();
-  d gzl = d.gzv;
-  private a gzm;
-  int gzn = 2131430519;
-  int gzo = 0;
-  private int gzp;
-  private int gzq;
-  private int gzr;
-  c gzs = new c()
+  private int cVc;
+  private int cWD;
+  a gFK = new a((byte)0);
+  private b gFL = new b((byte)0);
+  private c gFM = new c((byte)0);
+  Set<e> gFN = new HashSet();
+  d gFO = d.gFX;
+  private a gFP;
+  public int gFQ = 2131235352;
+  int gFR = 0;
+  private int gFS;
+  private int gFT;
+  c gFU = new c()
   {
     public final void o(String paramAnonymousString, Bitmap paramAnonymousBitmap)
     {
@@ -55,8 +53,8 @@ public final class b
       while (localIterator.hasNext())
       {
         b.e locale = (b.e)localIterator.next();
-        if ((cfv != null) && (ay.ad(paramAnonymousString, "").equals(cfv.field_fileName))) {
-          gzz.setThumbBmp(paramAnonymousBitmap);
+        if ((caH != null) && (be.ab(paramAnonymousString, "").equals(caH.field_fileName))) {
+          gGb.o(paramAnonymousBitmap);
         }
       }
     }
@@ -65,39 +63,39 @@ public final class b
   public b(Context paramContext, a parama)
   {
     super(paramContext, null);
-    gzm = parama;
-    int i = paramContext.getResources().getDimensionPixelSize(2131034538) * 2;
-    gzp = (getResourcesgetDisplayMetricswidthPixels / 3);
-    gmC = (gzp - i);
-    gzr = (gmC * 3 / 4);
-    gzq = (i + gzr);
+    gFP = parama;
+    int i = paramContext.getResources().getDimensionPixelSize(2131427929) * 2;
+    gFS = (getResourcesgetDisplayMetricswidthPixels / 3);
+    cWD = (gFS - i);
+    cVc = (cWD * 3 / 4);
+    gFT = (i + cVc);
   }
   
-  public final void Gk()
+  public final void GH()
   {
-    Gl();
+    GI();
     super.notifyDataSetChanged();
   }
   
-  protected final void Gl()
+  protected final void GI()
   {
-    setCursor(EbaoX.rawQuery("SELECT * FROM SightDraftInfo WHERE fileStatus = ?  ORDER BY localId DESC ", new String[] { "1" }));
+    setCursor(EtbkP.rawQuery("SELECT * FROM SightDraftInfo WHERE fileStatus = ?  ORDER BY localId DESC ", new String[] { "1" }));
   }
   
   final void a(e parame)
   {
     if (parame == null)
     {
-      parame = gzk.iterator();
+      parame = gFN.iterator();
       while (parame.hasNext()) {
-        nextgzA.setVisibility(8);
+        nextgGc.setVisibility(8);
       }
     }
-    Iterator localIterator = gzk.iterator();
+    Iterator localIterator = gFN.iterator();
     if (localIterator.hasNext())
     {
       e locale = (e)localIterator.next();
-      View localView = gzA;
+      View localView = gGc;
       if (parame == locale) {}
       for (int i = 8;; i = 0)
       {
@@ -109,24 +107,24 @@ public final class b
   
   public final void a(String paramString, com.tencent.mm.sdk.h.i parami)
   {
-    gzk.clear();
+    gFN.clear();
     super.a(paramString, parami);
   }
   
   public final boolean a(d paramd, boolean paramBoolean)
   {
-    if (paramd == gzl)
+    if (paramd == gFO)
     {
-      if ((paramBoolean) && (gzm != null)) {
-        gzm.a(paramd);
+      if ((paramBoolean) && (gFP != null)) {
+        gFP.a(paramd);
       }
       return false;
     }
-    gzl = paramd;
-    gzh.awd();
+    gFO = paramd;
+    gFK.ayB();
     notifyDataSetChanged();
-    if ((paramBoolean) && (gzm != null)) {
-      gzm.a(paramd);
+    if ((paramBoolean) && (gFP != null)) {
+      gFP.a(paramd);
     }
     return true;
   }
@@ -152,56 +150,56 @@ public final class b
       i = 0;
       while (i < 3)
       {
-        localObject2 = LayoutInflater.from(paramViewGroup.getContext()).inflate(2131363061, paramView, false);
+        localObject2 = LayoutInflater.from(paramViewGroup.getContext()).inflate(2130904380, paramView, false);
         localObject3 = new e((byte)0);
-        cTx = ((View)localObject2);
-        cTx.setTag(localObject3);
-        gzy = ((View)localObject2).findViewById(2131169096);
-        gzz = ((com.tencent.mm.plugin.sight.decode.a.a)((View)localObject2).findViewById(2131169097));
-        dVm = ((ImageView)((View)localObject2).findViewById(2131169098));
-        gzA = ((View)localObject2).findViewById(2131169100);
-        cMz = ((TextView)((View)localObject2).findViewById(2131169099));
-        cMz.setText(gzn);
-        gzB = ((ImageView)((View)localObject2).findViewById(2131169101));
-        gzC.add(localObject3);
+        cQS = ((View)localObject2);
+        cQS.setTag(localObject3);
+        gGa = ((View)localObject2).findViewById(2131758996);
+        gGb = ((com.tencent.mm.plugin.sight.decode.a.a)((View)localObject2).findViewById(2131758997));
+        dXt = ((ImageView)((View)localObject2).findViewById(2131758998));
+        gGc = ((View)localObject2).findViewById(2131759000);
+        cJv = ((TextView)((View)localObject2).findViewById(2131758999));
+        cJv.setText(gFQ);
+        gGd = ((ImageView)((View)localObject2).findViewById(2131759001));
+        gGe.add(localObject3);
         localObject4 = (LinearLayout.LayoutParams)((View)localObject2).getLayoutParams();
         weight = 1.0F;
-        height = gzq;
+        height = gFT;
         paramView.addView((View)localObject2);
-        ((View)localObject2).setOnClickListener(gzh);
-        ((View)localObject2).setOnLongClickListener(gzi);
-        gzB.setTag(localObject3);
-        gzB.setOnClickListener(gzj);
+        ((View)localObject2).setOnClickListener(gFK);
+        ((View)localObject2).setOnLongClickListener(gFL);
+        gGd.setTag(localObject3);
+        gGd.setOnClickListener(gFM);
         i += 1;
       }
       paramView.setTag(localObject1);
       paramViewGroup = (ViewGroup)localObject1;
       i = 0;
-      if (i >= gzC.size()) {
+      if (i >= gGe.size()) {
         return paramView;
       }
       j = paramInt * 3 + i;
-      localObject1 = (e)gzC.get(i);
-      gzk.add(localObject1);
-      gzA.setVisibility(8);
-      cMz.setVisibility(8);
-      dVm.setBackgroundResource(2130970063);
-      gzz.P(null, false);
-      gzz.setCanPlay(false);
-      gzz.setForceRecordState(false);
-      ((ImageView)gzz).setBackgroundResource(0);
+      localObject1 = (e)gGe.get(i);
+      gFN.add(localObject1);
+      gGc.setVisibility(8);
+      cJv.setVisibility(8);
+      dXt.setBackgroundResource(2130839315);
+      gGb.V(null, false);
+      gGb.er(false);
+      gGb.ayb();
+      ((ImageView)gGb).setBackgroundResource(0);
       if (j > 0) {
-        break label533;
+        break label532;
       }
-      localObject2 = new f();
+      localObject2 = new j();
       field_fileStatus = -1;
-      cfv = ((f)localObject2);
-      ((ImageView)gzz).setScaleType(ImageView.ScaleType.CENTER_INSIDE);
-      ((ImageView)gzz).setImageResource(2130903714);
-      ((ImageView)gzz).setBackgroundResource(2130970044);
-      gzB.setVisibility(8);
-      cTx.setVisibility(0);
-      k.e(gzy, 1.0F);
+      caH = ((j)localObject2);
+      ((ImageView)gGb).setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+      ((ImageView)gGb).setImageResource(2131165251);
+      ((ImageView)gGb).setBackgroundResource(2130839314);
+      gGd.setVisibility(8);
+      cQS.setVisibility(0);
+      com.tencent.mm.ui.tools.k.e(gGa, 1.0F);
     }
     for (;;)
     {
@@ -209,46 +207,46 @@ public final class b
       break label289;
       paramViewGroup = (f)paramView.getTag();
       break;
-      label533:
-      if (j < SU() + 1) {
-        break label571;
+      label532:
+      if (j < Um() + 1) {
+        break label570;
       }
-      cfv = null;
-      cTx.setVisibility(4);
-      k.e(gzy, 1.0F);
+      caH = null;
+      cQS.setVisibility(4);
+      com.tencent.mm.ui.tools.k.e(gGa, 1.0F);
     }
-    label571:
-    gzo -= 1;
-    Object localObject4 = (f)getItem(j - 1);
-    if (!ah.tD().isSDCardAvailable())
+    label570:
+    gFR -= 1;
+    Object localObject4 = (j)getItem(j - 1);
+    if (!ah.tE().isSDCardAvailable())
     {
-      cfv = null;
-      gzz.avF();
-      if (d.gzw != gzl) {
-        break label749;
+      caH = null;
+      gGb.axX();
+      if (d.gFY != gFO) {
+        break label748;
       }
-      gzB.setVisibility(0);
-      k.e(gzy, 0.95F);
+      gGd.setVisibility(0);
+      com.tencent.mm.ui.tools.k.e(gGa, 0.95F);
     }
     for (;;)
     {
-      cTx.setVisibility(0);
+      cQS.setVisibility(0);
       break;
-      cfv = ((f)localObject4);
-      localObject2 = gzs;
+      caH = ((j)localObject4);
+      localObject2 = gFU;
       localObject3 = field_fileName;
-      localObject4 = g.jH(field_fileName);
-      if (gzo <= 0) {}
+      localObject4 = com.tencent.mm.aq.k.kj(field_fileName);
+      if (gFR <= 0) {}
       for (boolean bool = true;; bool = false)
       {
-        localObject2 = ((c)localObject2).h((String)localObject3, (String)localObject4, bool);
-        ((ImageView)gzz).setScaleType(ImageView.ScaleType.CENTER_CROP);
-        gzz.setThumbBmp((Bitmap)localObject2);
+        localObject2 = ((c)localObject2).k((String)localObject3, (String)localObject4, bool);
+        ((ImageView)gGb).setScaleType(ImageView.ScaleType.CENTER_CROP);
+        gGb.o((Bitmap)localObject2);
         break;
       }
-      label749:
-      gzB.setVisibility(8);
-      k.e(gzy, 1.0F);
+      label748:
+      gGd.setVisibility(8);
+      com.tencent.mm.ui.tools.k.e(gGa, 1.0F);
     }
     return paramView;
   }
@@ -256,22 +254,22 @@ public final class b
   private final class a
     implements View.OnClickListener
   {
-    private b.e gzu;
+    private b.e gFW;
     
     private a() {}
     
-    public final boolean awd()
+    public final boolean ayB()
     {
-      if (gzu != null)
+      if (gFW != null)
       {
-        gzu.cMz.setVisibility(8);
-        gzu.gzz.setCanPlay(false);
-        gzu.gzz.P(null, false);
-        Bitmap localBitmap = b.d(b.this).h(gzu.cfv.field_fileName, g.jH(gzu.cfv.field_fileName), true);
-        gzu.gzz.setThumbBmp(localBitmap);
-        gzu.dVm.setBackgroundResource(2130970063);
-        k.e(gzu.gzy, 1.0F);
-        gzu = null;
+        gFW.cJv.setVisibility(8);
+        gFW.gGb.er(false);
+        gFW.gGb.V(null, false);
+        Bitmap localBitmap = b.d(b.this).k(gFW.caH.field_fileName, com.tencent.mm.aq.k.kj(gFW.caH.field_fileName), true);
+        gFW.gGb.o(localBitmap);
+        gFW.dXt.setBackgroundResource(2130839315);
+        com.tencent.mm.ui.tools.k.e(gFW.gGa, 1.0F);
+        gFW = null;
         return true;
       }
       return false;
@@ -288,53 +286,53 @@ public final class b
         {
           return;
           paramView = (b.e)paramView.getTag();
-          if (cfv == null)
+          if (caH == null)
           {
-            u.i("!56@/B4Tb64lLpJ8NKLwSZ2/Li1Vl1EOzrjMav6QQvoMQ7gze8tXohsfkA==", "click draft, but info null, curType %s", new Object[] { b.b(b.this) });
+            v.i("MicroMsg.SightDraftContainerAdapter", "click draft, but info null, curType %s", new Object[] { b.b(b.this) });
             return;
           }
-          if (-1 != cfv.field_fileStatus) {
+          if (-1 != caH.field_fileStatus) {
             break;
           }
-          u.i("!56@/B4Tb64lLpJ8NKLwSZ2/Li1Vl1EOzrjMav6QQvoMQ7gze8tXohsfkA==", "click camera, curType %s", new Object[] { b.b(b.this) });
-        } while ((b.c(b.this) == null) || (b.d.gzv != b.b(b.this)));
-        b.c(b.this).awc();
+          v.i("MicroMsg.SightDraftContainerAdapter", "click camera, curType %s", new Object[] { b.b(b.this) });
+        } while ((b.c(b.this) == null) || (b.d.gFX != b.b(b.this)));
+        b.c(b.this).ayA();
         return;
-        if (gzu != paramView)
+        if (gFW != paramView)
         {
-          awd();
-          Object localObject1 = g.jG(cfv.field_fileName);
-          gzz.setCanPlay(true);
-          gzz.P((String)localObject1, false);
-          dVm.setBackgroundResource(2130970053);
-          localObject1 = cMz;
-          if (b.d.gzv == b.b(b.this))
+          ayB();
+          Object localObject1 = com.tencent.mm.aq.k.ki(caH.field_fileName);
+          gGb.er(true);
+          gGb.V((String)localObject1, false);
+          dXt.setBackgroundResource(2130839316);
+          localObject1 = cJv;
+          if (b.d.gFX == b.b(b.this))
           {
             ((TextView)localObject1).setVisibility(i);
-            localObject1 = gzy;
-            if ((localObject1 != null) && (!com.tencent.mm.compatible.util.c.bV(11))) {
+            localObject1 = gGa;
+            if ((localObject1 != null) && (!com.tencent.mm.compatible.util.c.cn(11))) {
               break label232;
             }
           }
           for (;;)
           {
             b.a(b.this, paramView);
-            gzu = paramView;
+            gFW = paramView;
             return;
             i = 8;
             break;
-            Object localObject2 = (Animator)((View)localObject1).getTag(2131165230);
+            Object localObject2 = (Animator)((View)localObject1).getTag(2131755052);
             if (localObject2 != null) {
               ((Animator)localObject2).cancel();
             }
-            localObject2 = (AnimatorSet)AnimatorInflater.loadAnimator(((View)localObject1).getContext(), 2131623937);
+            localObject2 = (AnimatorSet)AnimatorInflater.loadAnimator(((View)localObject1).getContext(), 2131034114);
             ((AnimatorSet)localObject2).setTarget(localObject1);
             ((AnimatorSet)localObject2).start();
-            ((View)localObject1).setTag(2131165230, localObject2);
+            ((View)localObject1).setTag(2131755052, localObject2);
           }
         }
-      } while ((b.d.gzv != b.b(b.this)) || (b.c(b.this) == null));
-      b.c(b.this).a(cfv);
+      } while ((b.d.gFX != b.b(b.this)) || (b.c(b.this) == null));
+      b.c(b.this).a(caH);
     }
   }
   
@@ -350,8 +348,8 @@ public final class b
       {
         return true;
         paramView = (b.e)paramView.getTag();
-      } while ((cfv == null) || (-1 == cfv.field_fileStatus));
-      a(b.d.gzw, true);
+      } while ((caH == null) || (-1 == caH.field_fileStatus));
+      a(b.d.gFY, true);
       return true;
     }
   }
@@ -366,36 +364,39 @@ public final class b
       if (!(paramView.getTag() instanceof b.e)) {
         return;
       }
-      b.e(b.this).awd();
+      b.e(b.this).ayB();
       paramView = (b.e)paramView.getTag();
-      if (cfv == null)
+      if (caH == null)
       {
-        u.e("!56@/B4Tb64lLpJ8NKLwSZ2/Li1Vl1EOzrjMav6QQvoMQ7gze8tXohsfkA==", "draftInfo is NULL");
+        v.e("MicroMsg.SightDraftContainerAdapter", "draftInfo is NULL");
         return;
       }
-      cfv.field_fileStatus = 6;
-      j.Eb().a(cfv, new String[] { "localId" });
+      caH.field_fileStatus = 6;
+      n.Et().a(caH, new String[] { "localId" });
       a(null, null);
     }
   }
   
-  public static enum d {}
+  public static enum d
+  {
+    private d() {}
+  }
   
   private static final class e
   {
-    TextView cMz;
-    View cTx;
-    f cfv;
-    ImageView dVm;
-    View gzA;
-    ImageView gzB;
-    View gzy;
-    com.tencent.mm.plugin.sight.decode.a.a gzz;
+    TextView cJv;
+    View cQS;
+    j caH;
+    ImageView dXt;
+    View gGa;
+    com.tencent.mm.plugin.sight.decode.a.a gGb;
+    View gGc;
+    ImageView gGd;
   }
   
   private static final class f
   {
-    List gzC = new LinkedList();
+    List<b.e> gGe = new LinkedList();
   }
 }
 

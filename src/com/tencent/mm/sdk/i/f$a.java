@@ -2,9 +2,9 @@ package com.tencent.mm.sdk.i;
 
 abstract interface f$a
 {
-  public abstract void beforeExecute(Thread paramThread, Runnable paramRunnable);
+  public abstract void A(Runnable paramRunnable);
   
-  public abstract void w(Runnable paramRunnable);
+  public abstract void beforeExecute(Thread paramThread, Runnable paramRunnable);
 }
 
 /* Location:

@@ -2,35 +2,35 @@ package com.tencent.mm.loader.stub;
 
 import android.content.Context;
 import android.os.Environment;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
 import java.io.File;
 
 public class a
 {
-  public static final String bwZ;
-  public static final String bxa = bwZ + "MicroMsg/";
-  public static final String bxb;
-  public static String bxc;
-  public static String bxd;
-  public static String bxe;
+  public static final String bpb;
+  public static final String bpc = bpb + "MicroMsg/";
+  public static final String bpd;
+  public static String bpe;
+  public static String bpf;
+  public static String bpg;
   
   static
   {
-    Object localObject = y.getContext();
+    Object localObject = aa.getContext();
     if (localObject == null) {
       throw new RuntimeException("MMApplicationContext not initialized.");
     }
-    bwZ = ((Context)localObject).getFilesDir().getParentFile().getAbsolutePath() + "/";
+    bpb = ((Context)localObject).getFilesDir().getParentFile().getAbsolutePath() + "/";
     try
     {
-      localObject = new File(bxa);
+      localObject = new File(bpc);
       if (!((File)localObject).exists()) {
         ((File)localObject).mkdirs();
       }
-      bxb = bwZ + "files/public/";
-      bxc = Environment.getExternalStorageDirectory().getAbsolutePath();
-      bxd = bxc + "/tencent/MicroMsg/";
-      bxe = bxd + "crash/";
+      bpd = bpb + "files/public/";
+      bpe = Environment.getExternalStorageDirectory().getAbsolutePath();
+      bpf = bpe + "/tencent/MicroMsg/";
+      bpg = bpf + "crash/";
       return;
     }
     catch (Error localError)

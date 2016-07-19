@@ -6,9 +6,9 @@ public abstract interface i$o$h
 {
   public abstract boolean a(WXMediaMessage paramWXMediaMessage, String paramString1, String paramString2, String paramString3, int paramInt);
   
-  public abstract void azE();
+  public abstract void aCf();
   
-  public abstract boolean br(String paramString1, String paramString2);
+  public abstract boolean bz(String paramString1, String paramString2);
 }
 
 /* Location:

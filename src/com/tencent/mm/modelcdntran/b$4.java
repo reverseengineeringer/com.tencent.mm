@@ -10,9 +10,9 @@ final class b$4
   
   public final void run()
   {
-    bKE.bKx.add(bKG.field_mediaId);
-    bKE.bKy.put(bKG.field_mediaId, bKG);
-    bKE.aS(false);
+    bDY.bDR.add(bEa.field_mediaId);
+    bDY.bDS.put(bEa.field_mediaId, bEa);
+    bDY.ay(false);
   }
   
   public final String toString()

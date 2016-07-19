@@ -1,16 +1,18 @@
 package com.tencent.mm.ui;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-
 final class LauncherUI$49
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
   LauncherUI$49(LauncherUI paramLauncherUI) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final void run()
   {
-    paramDialogInterface.dismiss();
+    LauncherUI.b(kMs, true);
+  }
+  
+  public final String toString()
+  {
+    return super.toString() + "|onInit";
   }
 }
 

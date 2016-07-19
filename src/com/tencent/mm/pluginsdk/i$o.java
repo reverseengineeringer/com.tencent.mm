@@ -5,12 +5,12 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.view.View;
-import com.tencent.mm.az.g;
+import com.tencent.mm.bc.g;
 import com.tencent.mm.model.ac;
-import com.tencent.mm.protocal.b.add;
-import com.tencent.mm.protocal.b.arm;
+import com.tencent.mm.protocal.b.adw;
+import com.tencent.mm.protocal.b.ary;
 import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
-import com.tencent.mm.storage.i.a;
+import com.tencent.mm.storage.z;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,62 +18,62 @@ public abstract interface i$o
 {
   public static abstract interface a
   {
-    public abstract int DE();
+    public abstract int DV();
   }
   
   public static abstract interface b
   {
-    public abstract String E(add paramadd);
+    public abstract String E(adw paramadw);
     
-    public abstract boolean V(String paramString, boolean paramBoolean);
+    public abstract boolean a(String paramString, ary paramary);
     
-    public abstract arm W(String paramString, boolean paramBoolean);
+    public abstract void aCP();
     
-    public abstract boolean a(String paramString, arm paramarm);
+    public abstract void aCQ();
     
-    public abstract void aAc();
+    public abstract boolean ab(String paramString, boolean paramBoolean);
     
-    public abstract void aAd();
+    public abstract ary ac(String paramString, boolean paramBoolean);
     
-    public abstract arm b(String paramString, arm paramarm);
+    public abstract ary b(String paramString, ary paramary);
     
-    public abstract arm vs(String paramString);
+    public abstract ary wE(String paramString);
   }
   
   public static abstract interface c
   {
-    public abstract void L(Activity paramActivity);
+    public abstract void G(Activity paramActivity);
     
-    public abstract void U(View paramView);
+    public abstract void V(View paramView);
     
-    public abstract Bitmap a(add paramadd, View paramView, int paramInt, i.a parama);
+    public abstract Bitmap a(adw paramadw, View paramView, int paramInt, z paramz);
     
-    public abstract void ayA();
+    public abstract void aBa();
     
-    public abstract void b(add paramadd, View paramView, int paramInt, i.a parama);
+    public abstract void b(adw paramadw, View paramView, int paramInt, z paramz);
     
-    public abstract void c(add paramadd, View paramView, int paramInt, i.a parama);
+    public abstract void c(adw paramadw, View paramView, int paramInt, z paramz);
     
     public abstract void pause();
     
-    public abstract Bitmap r(add paramadd);
+    public abstract Bitmap r(adw paramadw);
     
-    public abstract String s(add paramadd);
+    public abstract String s(adw paramadw);
     
     public abstract void start();
   }
   
   public static abstract interface d
   {
-    public abstract g aAB();
+    public abstract g aDq();
     
-    public abstract ArrayList aAC();
+    public abstract ArrayList<Long> aDr();
     
-    public abstract void cw(long paramLong);
+    public abstract void cL(long paramLong);
     
-    public abstract boolean lQ(int paramInt);
+    public abstract boolean nd(int paramInt);
     
-    public abstract Cursor vA(String paramString);
+    public abstract Cursor wM(String paramString);
   }
   
   public static abstract interface e
@@ -86,7 +86,7 @@ public abstract interface i$o
     
     public abstract Intent e(Intent paramIntent, String paramString);
     
-    public abstract void uN(String paramString);
+    public abstract void vT(String paramString);
     
     public static abstract interface a
     {
@@ -105,22 +105,22 @@ public abstract interface i$o
   
   public static abstract interface g
   {
-    public abstract boolean aAK();
+    public abstract boolean aDA();
     
-    public abstract List cA(long paramLong);
+    public abstract List<String> cP(long paramLong);
     
-    public abstract String cB(long paramLong);
+    public abstract String cQ(long paramLong);
     
-    public abstract boolean q(String paramString, long paramLong);
+    public abstract boolean t(String paramString, long paramLong);
   }
   
   public static abstract interface h
   {
     public abstract boolean a(WXMediaMessage paramWXMediaMessage, String paramString1, String paramString2, String paramString3, int paramInt);
     
-    public abstract void azE();
+    public abstract void aCf();
     
-    public abstract boolean br(String paramString1, String paramString2);
+    public abstract boolean bz(String paramString1, String paramString2);
   }
 }
 

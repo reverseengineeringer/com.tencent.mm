@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:flowlayout="http://schemas.android.com/apk/res-auto">
+    <ListView android:id="@id/fu" android:focusable="true" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:transcriptMode="disabled" android:overScrollMode="never" />
+    <TextView android:textColor="@color/j_" android:gravity="center_horizontal" android:id="@id/fv" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/c2x" style="@style/MMFontEmptyMsgLarge" />
+    <com.tencent.mm.ui.base.AlphabetScrollBar android:id="@id/fx" android:layout_width="@dimen/co" android:layout_height="fill_parent" android:layout_below="@id/c2x" android:layout_alignParentRight="true" />
+</RelativeLayout>

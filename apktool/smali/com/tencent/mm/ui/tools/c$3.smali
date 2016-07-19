@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 98
+    .line 112
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,38 +30,38 @@
 
 
 # virtual methods
-.method public final uh()V
+.method public final ui()V
     .locals 1
 
     .prologue
-    .line 106
-    invoke-static {}, Lcom/tencent/mm/ui/tools/c;->biv()Lcom/tencent/mm/ui/base/p;
+    .line 120
+    invoke-static {}, Lcom/tencent/mm/ui/tools/c;->bjL()Lcom/tencent/mm/ui/base/p;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 107
-    invoke-static {}, Lcom/tencent/mm/ui/tools/c;->biv()Lcom/tencent/mm/ui/base/p;
+    .line 121
+    invoke-static {}, Lcom/tencent/mm/ui/tools/c;->bjL()Lcom/tencent/mm/ui/base/p;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/p;->dismiss()V
 
-    .line 108
-    invoke-static {}, Lcom/tencent/mm/ui/tools/c;->biw()Lcom/tencent/mm/ui/base/p;
+    .line 122
+    invoke-static {}, Lcom/tencent/mm/ui/tools/c;->bos()Lcom/tencent/mm/ui/base/p;
 
-    .line 110
+    .line 124
     :cond_0
     return-void
 .end method
 
-.method public final ui()Z
+.method public final uj()Z
     .locals 1
 
     .prologue
-    .line 101
-    invoke-static {}, Lcom/tencent/mm/ui/tools/c;->biu()Z
+    .line 115
+    invoke-static {}, Lcom/tencent/mm/ui/tools/c;->bor()Z
 
     move-result v0
 

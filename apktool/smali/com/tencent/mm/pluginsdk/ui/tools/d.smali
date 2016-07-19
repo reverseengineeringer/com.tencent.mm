@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/platformtools/j;
+.implements Lcom/tencent/mm/platformtools/i;
 
 
 # instance fields
-.field private dOl:Ljava/lang/String;
+.field private dPT:Ljava/lang/String;
 
 .field private height:I
 
@@ -25,7 +25,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 33
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/d;->dOl:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/d;->dPT:Ljava/lang/String;
 
     .line 34
     iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/d;->url:Ljava/lang/String;
@@ -42,7 +42,7 @@
 
 
 # virtual methods
-.method public final FF()Ljava/lang/String;
+.method public final Ga()Ljava/lang/String;
     .locals 2
 
     .prologue
@@ -51,11 +51,11 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rx()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rz()Ljava/lang/String;
 
     move-result-object v1
 
@@ -75,7 +75,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/a/g;->j([B)Ljava/lang/String;
 
     move-result-object v1
 
@@ -90,7 +90,7 @@
     return-object v0
 .end method
 
-.method public final FG()Ljava/lang/String;
+.method public final Gb()Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -100,17 +100,27 @@
     return-object v0
 .end method
 
-.method public final FH()Ljava/lang/String;
+.method public final Gc()Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 51
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/d;->dOl:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/d;->dPT:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final FI()Z
+.method public final Gd()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 56
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/d;->dPT:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final Ge()Z
     .locals 1
 
     .prologue
@@ -120,7 +130,7 @@
     return v0
 .end method
 
-.method public final FJ()Z
+.method public final Gf()Z
     .locals 1
 
     .prologue
@@ -130,12 +140,12 @@
     return v0
 .end method
 
-.method public final FK()Landroid/graphics/Bitmap;
+.method public final Gg()Landroid/graphics/Bitmap;
     .locals 2
 
     .prologue
     .line 71
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -143,7 +153,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f040796
+    const v1, 0x7f02058d
 
     invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -152,7 +162,7 @@
     return-object v0
 .end method
 
-.method public final FL()V
+.method public final Gh()V
     .locals 0
 
     .prologue
@@ -160,18 +170,18 @@
     return-void
 .end method
 
-.method public final a(Landroid/graphics/Bitmap;Lcom/tencent/mm/platformtools/j$a;)Landroid/graphics/Bitmap;
+.method public final a(Landroid/graphics/Bitmap;Lcom/tencent/mm/platformtools/i$a;)Landroid/graphics/Bitmap;
     .locals 6
 
     .prologue
     .line 76
-    sget-object v0, Lcom/tencent/mm/platformtools/j$a;->clV:Lcom/tencent/mm/platformtools/j$a;
+    sget-object v0, Lcom/tencent/mm/platformtools/i$a;->cgY:Lcom/tencent/mm/platformtools/i$a;
 
     if-ne v0, p2, :cond_1
 
     .line 79
     :try_start_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpIRP68/fkv681wCRsNVVS8L+8gbT60B8L0="
+    const-string/jumbo v0, "MicroMsg.DefaultPicStrategy"
 
     const-string/jumbo v1, "handlerBitmap get from net url:%s"
 
@@ -185,7 +195,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 81
     iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/d;->width:I
@@ -207,7 +217,7 @@
 
     .line 85
     :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/d;->FF()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/d;->Ga()Ljava/lang/String;
 
     move-result-object v0
 
@@ -309,7 +319,7 @@
     goto :goto_1
 .end method
 
-.method public final a(Lcom/tencent/mm/platformtools/j$a;Ljava/lang/String;)V
+.method public final a(Lcom/tencent/mm/platformtools/i$a;Ljava/lang/String;)V
     .locals 0
 
     .prologue
@@ -317,17 +327,7 @@
     return-void
 .end method
 
-.method public final getCacheKey()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 56
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/d;->dOl:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final v(Ljava/lang/String;Z)V
+.method public final z(Ljava/lang/String;Z)V
     .locals 0
 
     .prologue

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+.field final synthetic kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 241
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$1;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 242
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$1;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,15 +36,15 @@
 
 
 # virtual methods
-.method public final bJ(II)V
+.method public final bP(II)V
     .locals 1
 
     .prologue
-    .line 243
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$1;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 244
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$1;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->a(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)V
 
-    .line 244
+    .line 245
     return-void
 .end method

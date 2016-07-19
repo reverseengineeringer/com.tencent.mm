@@ -9,13 +9,13 @@ final class ChattingSendDataToDeviceUI$b$1
   
   public final void run()
   {
-    ChattingSendDataToDeviceUI.d(kXE.kXv).bO(ChattingSendDataToDeviceUI.o(kXE.kXv));
-    if (ChattingSendDataToDeviceUI.d(kXE.kXv).getCount() > 0)
+    ChattingSendDataToDeviceUI.d(lxU.lxJ).cc(ChattingSendDataToDeviceUI.o(lxU.lxJ));
+    if (ChattingSendDataToDeviceUI.d(lxU.lxJ).getCount() > 0)
     {
-      ChattingSendDataToDeviceUI.p(kXE.kXv).setVisibility(8);
-      ChattingSendDataToDeviceUI.q(kXE.kXv);
+      ChattingSendDataToDeviceUI.p(lxU.lxJ).setVisibility(8);
+      ChattingSendDataToDeviceUI.q(lxU.lxJ);
     }
-    ChattingSendDataToDeviceUI.d(kXE.kXv).notifyDataSetChanged();
+    ChattingSendDataToDeviceUI.d(lxU.lxJ).notifyDataSetChanged();
   }
 }
 

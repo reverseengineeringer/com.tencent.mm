@@ -17,9 +17,9 @@ public final class g$b
   
   public final View a(Context paramContext, ViewGroup paramViewGroup)
   {
-    paramContext = LayoutInflater.from(paramContext).inflate(2131363010, paramViewGroup, false);
-    paramViewGroup = (g.a)lnj.lni;
-    dcT = ((TextView)paramContext.findViewById(2131167263));
+    paramContext = LayoutInflater.from(paramContext).inflate(2130904325, paramViewGroup, false);
+    paramViewGroup = (g.a)lND.lNC;
+    dbw = ((TextView)paramContext.findViewById(2131756195));
     paramContext.setTag(paramViewGroup);
     return paramContext;
   }
@@ -27,10 +27,10 @@ public final class g$b
   public final void a(Context paramContext, a.a parama, a parama1, boolean paramBoolean1, boolean paramBoolean2)
   {
     paramContext = (g.a)parama;
-    f.a(lnf, dcT);
+    f.a(lNA, dbw);
   }
   
-  public final boolean bhz()
+  public final boolean bnp()
   {
     return false;
   }

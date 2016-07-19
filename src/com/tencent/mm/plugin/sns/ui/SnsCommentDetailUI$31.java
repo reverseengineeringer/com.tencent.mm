@@ -6,13 +6,13 @@ import android.view.View.OnClickListener;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.plugin.sns.a.a.c;
 import com.tencent.mm.plugin.sns.b.a;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.al.a;
-import com.tencent.mm.plugin.sns.h.k;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.ak.a;
+import com.tencent.mm.plugin.sns.i.k;
 import com.tencent.mm.pluginsdk.g;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 
 final class SnsCommentDetailUI$31
   implements View.OnClickListener
@@ -22,20 +22,20 @@ final class SnsCommentDetailUI$31
   public final void onClick(View paramView)
   {
     paramView = (String)paramView.getTag();
-    u.d("!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc=", "onCommentClick:" + paramView);
+    v.d("MicroMsg.SnsCommentDetailUI", "onCommentClick:" + paramView);
     Intent localIntent = new Intent();
-    Object localObject = SnsCommentDetailUI.f(hda);
+    Object localObject = SnsCommentDetailUI.f(hrN);
     int i;
-    if (((k)localObject).lN(32))
+    if (((k)localObject).na(32))
     {
-      String str = ((k)localObject).aAu();
+      String str = ((k)localObject).aDg();
       if (field_type == 1)
       {
         i = 1;
         localObject = new c(str, 1, 2, "", i);
-        ah.tE().d((j)localObject);
+        ah.tF().a((j)localObject, 0);
         localIntent.putExtra("Contact_User", paramView);
-        a.coa.d(localIntent, hda);
+        a.cjo.d(localIntent, hrN);
       }
     }
     do
@@ -43,16 +43,16 @@ final class SnsCommentDetailUI$31
       return;
       i = 2;
       break;
-      localIntent.setClass(hda, SnsUserUI.class);
-      paramView = ad.ayZ().e(localIntent, paramView);
+      localIntent.setClass(hrN, SnsUserUI.class);
+      paramView = ad.getSnsServer().e(localIntent, paramView);
       if (paramView == null)
       {
-        hda.finish();
+        hrN.finish();
         return;
       }
-      hda.startActivity(paramView);
+      hrN.startActivity(paramView);
     } while ((paramView.getFlags() & 0x4000000) == 0);
-    hda.finish();
+    hrN.finish();
   }
 }
 

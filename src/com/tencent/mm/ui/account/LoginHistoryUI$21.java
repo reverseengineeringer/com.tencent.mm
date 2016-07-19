@@ -1,26 +1,26 @@
 package com.tencent.mm.ui.account;
 
 import android.view.View;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class LoginHistoryUI$21
   implements ResizeLayout.a
 {
   LoginHistoryUI$21(LoginHistoryUI paramLoginHistoryUI) {}
   
-  public final void bJ(int paramInt1, int paramInt2)
+  public final void bP(int paramInt1, int paramInt2)
   {
-    MMKeyboardUperView localMMKeyboardUperView = LoginHistoryUI.b(ktx);
-    u.d("!44@/B4Tb64lLpICoG9rhJuc+TFgjqHr5i5P3+F8OjrD0os=", "onLayoutChange h " + paramInt1 + "  oh " + paramInt2);
+    MMKeyboardUperView localMMKeyboardUperView = LoginHistoryUI.b(kSF);
+    v.d("MicroMsg.MMKeyboardUperView", "onLayoutChange h " + paramInt1 + "  oh " + paramInt2);
     if (defaultHeight == -1) {
       defaultHeight = paramInt1;
     }
     if (paramInt1 == defaultHeight)
     {
-      kuc.post(kue);
+      kTj.post(kTl);
       return;
     }
-    kuc.post(kud);
+    kTj.post(kTk);
   }
 }
 

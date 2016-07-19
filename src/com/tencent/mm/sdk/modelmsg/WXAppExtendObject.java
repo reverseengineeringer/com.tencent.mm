@@ -1,7 +1,7 @@
 package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.File;
 
 public class WXAppExtendObject
@@ -10,7 +10,7 @@ public class WXAppExtendObject
   private static final int CONTENT_LENGTH_LIMIT = 10485760;
   private static final int EXTINFO_LENGTH_LIMIT = 2048;
   private static final int PATH_LENGTH_LIMIT = 10240;
-  private static final String TAG = "!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI=";
+  private static final String TAG = "MicroMsg.SDK.WXAppExtendObject";
   public String extInfo;
   public byte[] fileData;
   public String filePath;
@@ -44,27 +44,27 @@ public class WXAppExtendObject
   {
     if (((extInfo == null) || (extInfo.length() == 0)) && ((filePath == null) || (filePath.length() == 0)) && ((fileData == null) || (fileData.length == 0)))
     {
-      u.e("!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI=", "checkArgs fail, all arguments is null");
+      v.e("MicroMsg.SDK.WXAppExtendObject", "checkArgs fail, all arguments is null");
       return false;
     }
     if ((extInfo != null) && (extInfo.length() > 2048))
     {
-      u.e("!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI=", "checkArgs fail, extInfo is invalid");
+      v.e("MicroMsg.SDK.WXAppExtendObject", "checkArgs fail, extInfo is invalid");
       return false;
     }
     if ((filePath != null) && (filePath.length() > 10240))
     {
-      u.e("!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI=", "checkArgs fail, filePath is invalid");
+      v.e("MicroMsg.SDK.WXAppExtendObject", "checkArgs fail, filePath is invalid");
       return false;
     }
     if ((filePath != null) && (getFileSize(filePath) > 10485760))
     {
-      u.e("!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI=", "checkArgs fail, fileSize is too large");
+      v.e("MicroMsg.SDK.WXAppExtendObject", "checkArgs fail, fileSize is too large");
       return false;
     }
     if ((fileData != null) && (fileData.length > 10485760))
     {
-      u.e("!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI=", "checkArgs fail, fileData is too large");
+      v.e("MicroMsg.SDK.WXAppExtendObject", "checkArgs fail, fileData is too large");
       return false;
     }
     return true;

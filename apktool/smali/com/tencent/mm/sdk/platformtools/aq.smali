@@ -1,129 +1,116 @@
-.class public final Lcom/tencent/mm/sdk/platformtools/aq;
+.class Lcom/tencent/mm/sdk/platformtools/aq;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/mm/sdk/platformtools/aq$a;
-    }
-.end annotation
+# static fields
+.field private static final kxB:Ljava/util/concurrent/ConcurrentLinkedQueue;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/ConcurrentLinkedQueue",
+            "<",
+            "Ljava/lang/Runnable;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-
-# instance fields
-.field private iFG:Landroid/hardware/SensorManager;
-
-.field private jXN:Lcom/tencent/mm/sdk/platformtools/aq$a;
+.field private static kxC:Ljava/util/concurrent/ExecutorService;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method static constructor <clinit>()V
     .locals 1
 
     .prologue
-    .line 17
+    .line 854
+    new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
+
+    sput-object v0, Lcom/tencent/mm/sdk/platformtools/aq;->kxB:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    .line 856
+    const/4 v0, 0x0
+
+    sput-object v0, Lcom/tencent/mm/sdk/platformtools/aq;->kxC:Ljava/util/concurrent/ExecutorService;
+
+    return-void
+.end method
+
+.method constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 853
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
-    const-string/jumbo v0, "sensor"
+    return-void
+.end method
 
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+.method public static bas()Ljava/util/concurrent/ExecutorService;
+    .locals 2
+
+    .prologue
+    .line 859
+    const-class v1, Lcom/tencent/mm/sdk/platformtools/aq;
+
+    monitor-enter v1
+
+    .line 860
+    :try_start_0
+    sget-object v0, Lcom/tencent/mm/sdk/platformtools/aq;->kxC:Ljava/util/concurrent/ExecutorService;
+
+    if-nez v0, :cond_0
+
+    .line 861
+    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
-    check-cast v0, Landroid/hardware/SensorManager;
+    sput-object v0, Lcom/tencent/mm/sdk/platformtools/aq;->kxC:Ljava/util/concurrent/ExecutorService;
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/aq;->iFG:Landroid/hardware/SensorManager;
+    .line 863
+    :cond_0
+    sget-object v0, Lcom/tencent/mm/sdk/platformtools/aq;->kxC:Ljava/util/concurrent/ExecutorService;
 
-    .line 19
+    monitor-exit v1
+
+    return-object v0
+
+    .line 864
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method public static x(Ljava/lang/Runnable;)V
+    .locals 1
+
+    .prologue
+    .line 868
+    sget-object v0, Lcom/tencent/mm/sdk/platformtools/aq;->kxB:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->add(Ljava/lang/Object;)Z
+
+    .line 869
     return-void
 .end method
 
-
-# virtual methods
-.method public final aVr()V
-    .locals 3
+.method public static y(Ljava/lang/Runnable;)V
+    .locals 1
 
     .prologue
-    .line 35
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/aq;->iFG:Landroid/hardware/SensorManager;
+    .line 872
+    sget-object v0, Lcom/tencent/mm/sdk/platformtools/aq;->kxB:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->remove(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/aq;->jXN:Lcom/tencent/mm/sdk/platformtools/aq$a;
-
-    if-eqz v0, :cond_0
-
-    .line 36
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/aq;->iFG:Landroid/hardware/SensorManager;
-
-    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/aq;->jXN:Lcom/tencent/mm/sdk/platformtools/aq$a;
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v0, v1, v2}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorListener;I)V
-
-    .line 38
-    :cond_0
+    .line 873
     return-void
-.end method
-
-.method public final v(Ljava/lang/Runnable;)Z
-    .locals 5
-
-    .prologue
-    const/4 v1, 0x1
-
-    const/4 v0, 0x0
-
-    .line 22
-    iget-object v2, p0, Lcom/tencent/mm/sdk/platformtools/aq;->iFG:Landroid/hardware/SensorManager;
-
-    if-nez v2, :cond_1
-
-    .line 31
-    :cond_0
-    :goto_0
-    return v0
-
-    .line 25
-    :cond_1
-    iget-object v2, p0, Lcom/tencent/mm/sdk/platformtools/aq;->iFG:Landroid/hardware/SensorManager;
-
-    invoke-virtual {v2, v1}, Landroid/hardware/SensorManager;->getSensorList(I)Ljava/util/List;
-
-    move-result-object v2
-
-    .line 26
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-lez v2, :cond_0
-
-    .line 27
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aq$a;
-
-    invoke-direct {v0, p1}, Lcom/tencent/mm/sdk/platformtools/aq$a;-><init>(Ljava/lang/Runnable;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/aq;->jXN:Lcom/tencent/mm/sdk/platformtools/aq$a;
-
-    .line 28
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/aq;->iFG:Landroid/hardware/SensorManager;
-
-    iget-object v2, p0, Lcom/tencent/mm/sdk/platformtools/aq;->jXN:Lcom/tencent/mm/sdk/platformtools/aq$a;
-
-    const/4 v3, 0x2
-
-    const/4 v4, 0x3
-
-    invoke-virtual {v0, v2, v3, v4}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorListener;II)Z
-
-    move v0, v1
-
-    .line 29
-    goto :goto_0
 .end method

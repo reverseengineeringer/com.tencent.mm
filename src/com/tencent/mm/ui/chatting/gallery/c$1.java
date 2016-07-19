@@ -4,8 +4,8 @@ import android.graphics.Bitmap;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
-import com.tencent.mm.ab.a.c.i;
-import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.ae.a.c.i;
+import com.tencent.mm.sdk.platformtools.ad;
 import java.lang.ref.WeakReference;
 
 final class c$1
@@ -15,25 +15,25 @@ final class c$1
   
   public final void a(String paramString, Bitmap paramBitmap, Object... paramVarArgs)
   {
-    ab.j(new Runnable()
+    ad.k(new Runnable()
     {
       public final void run()
       {
-        ImageGalleryGridUI localImageGalleryGridUI = leY;
-        c.a locala = leZ;
-        if (!lfn.booleanValue())
+        ImageGalleryGridUI localImageGalleryGridUI = lFk;
+        c.a locala = lFl;
+        if (!lFz.booleanValue())
         {
-          iGr.setVisibility(8);
+          jdm.setVisibility(8);
           return;
         }
-        lfn = Boolean.valueOf(false);
-        if (!ImageGalleryGridUI.bgt())
+        lFz = Boolean.valueOf(false);
+        if (!ImageGalleryGridUI.bmc())
         {
-          iGr.setVisibility(0);
+          jdm.setVisibility(0);
           return;
         }
-        lfl = new WeakReference(locala);
-        gpY.getViewTreeObserver().addOnPreDrawListener(localImageGalleryGridUI);
+        lFx = new WeakReference(locala);
+        gAq.getViewTreeObserver().addOnPreDrawListener(localImageGalleryGridUI);
       }
     });
   }

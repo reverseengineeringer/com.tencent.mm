@@ -9,8 +9,8 @@ final class VideoPlayView$9
   
   public final void run()
   {
-    if (!VideoPlayView.a(gzd).isPlaying()) {
-      ((AdVideoPlayerLoadingBar)VideoPlayView.c(gzd)).avU();
+    if (!VideoPlayView.a(gFG).isPlaying()) {
+      ((AdVideoPlayerLoadingBar)VideoPlayView.c(gFG)).ayr();
     }
   }
 }

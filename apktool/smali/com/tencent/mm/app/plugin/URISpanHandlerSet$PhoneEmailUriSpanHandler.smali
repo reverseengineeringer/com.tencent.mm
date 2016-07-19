@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+.field final synthetic ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1947
-    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PhoneEmailUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 1949
+    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PhoneEmailUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-direct {p0, p1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BaseUriSpanHandler;-><init>(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)V
 
@@ -44,71 +44,71 @@
 
     const/4 v2, 0x0
 
-    .line 1967
+    .line 1969
     iget v0, p1, Lcom/tencent/mm/pluginsdk/ui/applet/g;->type:I
 
     const/16 v1, 0x19
 
     if-ne v0, v1, :cond_1
 
-    .line 1972
+    .line 1974
     const-string/jumbo v1, ""
 
-    .line 1973
+    .line 1975
     iget-object v0, p1, Lcom/tencent/mm/pluginsdk/ui/applet/g;->data:Ljava/lang/Object;
 
-    .line 1974
+    .line 1976
     if-eqz v0, :cond_4
 
     instance-of v4, v0, Ljava/lang/String;
 
     if-eqz v4, :cond_4
 
-    .line 1975
+    .line 1977
     check-cast v0, Ljava/lang/String;
 
-    .line 1978
+    .line 1980
     :goto_0
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 1979
+    .line 1981
     if-eqz v0, :cond_0
 
-    .line 1982
+    .line 1984
     const-string/jumbo v4, "Contact_User"
 
     invoke-virtual {v1, v4, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1983
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zq()Lcom/tencent/mm/modelfriend/c;
+    .line 1985
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zD()Lcom/tencent/mm/modelfriend/c;
 
     move-result-object v4
 
-    invoke-virtual {v4, v0}, Lcom/tencent/mm/modelfriend/c;->hq(Ljava/lang/String;)Lcom/tencent/mm/modelfriend/b;
+    invoke-virtual {v4, v0}, Lcom/tencent/mm/modelfriend/c;->hI(Ljava/lang/String;)Lcom/tencent/mm/modelfriend/b;
 
     move-result-object v0
 
-    .line 1984
+    .line 1986
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/b;->yh()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/b;->yt()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_3
 
-    .line 1985
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/b;->yp()Ljava/lang/String;
+    .line 1987
+    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/b;->yB()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->li(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -120,20 +120,20 @@
 
     move-result-object v0
 
-    .line 1987
+    .line 1989
     :goto_1
     const-string/jumbo v4, "Contact_Mobile_MD5"
 
     invoke-virtual {v1, v4, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1989
+    .line 1991
     :cond_0
     const-string/jumbo v0, "fromScene"
 
     invoke-virtual {v1, v0, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1990
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PhoneEmailUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 1992
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PhoneEmailUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -145,11 +145,11 @@
 
     move v0, v3
 
-    .line 1995
+    .line 1997
     :goto_2
     return v0
 
-    .line 1992
+    .line 1994
     :cond_1
     iget v0, p1, Lcom/tencent/mm/pluginsdk/ui/applet/g;->type:I
 
@@ -157,8 +157,8 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 1993
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PhoneEmailUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 1995
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PhoneEmailUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -168,7 +168,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/ui/d/g;->b(Landroid/content/Context;Ljava/lang/String;Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 1995
+    .line 1997
     :cond_2
     const/4 v0, 0x0
 
@@ -189,27 +189,27 @@
     .locals 1
 
     .prologue
-    .line 2000
+    .line 2002
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method final bb(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
+.method final bg(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
     .locals 1
 
     .prologue
-    .line 1951
+    .line 1953
     const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method final lg()[I
+.method final jH()[I
     .locals 1
 
     .prologue
-    .line 1962
+    .line 1964
     const/4 v0, 0x2
 
     new-array v0, v0, [I

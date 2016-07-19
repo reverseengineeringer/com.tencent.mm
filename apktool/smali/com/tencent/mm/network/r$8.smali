@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/network/r$8;
-.super Lcom/tencent/mm/sdk/platformtools/at;
+.super Lcom/tencent/mm/sdk/platformtools/az;
 .source "SourceFile"
 
 
@@ -13,19 +13,28 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/platformtools/az",
+        "<",
+        "Ljava/lang/Object;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic ciT:Lcom/tencent/mm/network/r;
+.field final synthetic cek:Lcom/tencent/mm/network/r;
 
-.field final synthetic cjc:Ljava/util/Map;
+.field final synthetic cet:Ljava/util/Map;
 
-.field final synthetic cjd:Ljava/util/Map;
+.field final synthetic ceu:Ljava/util/Map;
 
-.field final synthetic cje:[I
+.field final synthetic cev:[I
 
-.field final synthetic cjf:[I
+.field final synthetic cew:[I
 
-.field final synthetic cjg:Z
+.field final synthetic cex:Z
 
 
 # direct methods
@@ -34,21 +43,21 @@
 
     .prologue
     .line 711
-    iput-object p1, p0, Lcom/tencent/mm/network/r$8;->ciT:Lcom/tencent/mm/network/r;
+    iput-object p1, p0, Lcom/tencent/mm/network/r$8;->cek:Lcom/tencent/mm/network/r;
 
-    iput-object p3, p0, Lcom/tencent/mm/network/r$8;->cjc:Ljava/util/Map;
+    iput-object p3, p0, Lcom/tencent/mm/network/r$8;->cet:Ljava/util/Map;
 
-    iput-object p4, p0, Lcom/tencent/mm/network/r$8;->cjd:Ljava/util/Map;
+    iput-object p4, p0, Lcom/tencent/mm/network/r$8;->ceu:Ljava/util/Map;
 
-    iput-object p5, p0, Lcom/tencent/mm/network/r$8;->cje:[I
+    iput-object p5, p0, Lcom/tencent/mm/network/r$8;->cev:[I
 
-    iput-object p6, p0, Lcom/tencent/mm/network/r$8;->cjf:[I
+    iput-object p6, p0, Lcom/tencent/mm/network/r$8;->cew:[I
 
-    iput-boolean p7, p0, Lcom/tencent/mm/network/r$8;->cjg:Z
+    iput-boolean p7, p0, Lcom/tencent/mm/network/r$8;->cex:Z
 
     const-wide/16 v0, 0xbb8
 
-    invoke-direct {p0, v0, v1, p2}, Lcom/tencent/mm/sdk/platformtools/at;-><init>(JLjava/lang/Object;)V
+    invoke-direct {p0, v0, v1, p2}, Lcom/tencent/mm/sdk/platformtools/az;-><init>(JLjava/lang/Object;)V
 
     return-void
 .end method
@@ -62,7 +71,7 @@
     const/4 v4, 0x0
 
     .line 714
-    iget-object v0, p0, Lcom/tencent/mm/network/r$8;->cjc:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/network/r$8;->cet:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -114,7 +123,7 @@
 
     .line 720
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/network/r$8;->cjd:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/network/r$8;->ceu:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -168,14 +177,14 @@
 
     .line 726
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/network/r$8;->cje:[I
+    iget-object v0, p0, Lcom/tencent/mm/network/r$8;->cev:[I
 
-    iget-object v1, p0, Lcom/tencent/mm/network/r$8;->cjf:[I
+    iget-object v1, p0, Lcom/tencent/mm/network/r$8;->cew:[I
 
     invoke-static {v0, v1}, Lcom/tencent/mm/network/Java2C;->saveAuthPorts([I[I)V
 
     .line 728
-    iget-boolean v0, p0, Lcom/tencent/mm/network/r$8;->cjg:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/network/r$8;->cex:Z
 
     invoke-static {v0}, Lcom/tencent/mm/network/Java2C;->onIDCChange(Z)V
 

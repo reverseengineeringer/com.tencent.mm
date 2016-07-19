@@ -3,7 +3,7 @@ package com.tencent.mm.plugin.sns.ui;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 
 final class SnsNotInterestUI$4
   implements DialogInterface.OnCancelListener
@@ -12,7 +12,7 @@ final class SnsNotInterestUI$4
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    ah.tE().c(hgH.hgG);
+    ah.tF().c(hvx.hvw);
   }
 }
 

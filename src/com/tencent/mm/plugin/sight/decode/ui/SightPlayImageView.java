@@ -2,30 +2,32 @@ package com.tencent.mm.plugin.sight.decode.ui;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.ImageView;
 import android.widget.TextView;
+import com.tencent.mm.memory.ui.QPictureView;
 import com.tencent.mm.plugin.sight.decode.a.b;
 import com.tencent.mm.plugin.sight.decode.a.b.e;
 import com.tencent.mm.plugin.sight.decode.a.b.f;
-import com.tencent.mm.plugin.sight.decode.a.b.g;
 import com.tencent.mm.pluginsdk.ui.tools.f.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
 import java.lang.ref.WeakReference;
 
 public class SightPlayImageView
-  extends ImageView
+  extends QPictureView
   implements com.tencent.mm.plugin.sight.decode.a.a
 {
-  public b gyr = new a(this);
-  private int gyt;
-  private int gyu;
-  private int gyv;
-  private int gyw;
-  public f.a gyx;
-  public boolean gyy = true;
+  public b gEO = new a(this);
+  private int gEQ;
+  private int gER;
+  private int gES;
+  private int gET;
+  public f.a gEU;
+  public boolean gEV = true;
   
   public SightPlayImageView(Context paramContext)
   {
@@ -42,130 +44,177 @@ public class SightPlayImageView
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  public final void P(String paramString, boolean paramBoolean)
+  public final void T(View paramView)
   {
-    gyr.P(paramString, paramBoolean);
+    gEO.T(paramView);
   }
   
-  public final void avF()
+  public final void V(String paramString, boolean paramBoolean)
+  {
+    gEO.V(paramString, paramBoolean);
+  }
+  
+  public final void a(b.e parame)
+  {
+    gEO.gEg = parame;
+  }
+  
+  public final void a(b.f paramf)
+  {
+    gEO.gEh = paramf;
+  }
+  
+  public final void aF(Object paramObject)
+  {
+    setTag(paramObject);
+  }
+  
+  public final String axW()
+  {
+    return gEO.gDC;
+  }
+  
+  public final void axX()
   {
     setImageBitmap(null);
-    setImageResource(2130970478);
+    setImageResource(2130838923);
   }
   
-  public final boolean avG()
-  {
-    return gyr.avK();
-  }
-  
-  public final void bc(int paramInt1, int paramInt2)
-  {
-    gyy = false;
-    ViewGroup.LayoutParams localLayoutParams = getLayoutParams();
-    gyt = paramInt1;
-    gyu = (gyt * paramInt2 / paramInt1);
-    width = gyt;
-    height = gyu;
-    setLayoutParams(localLayoutParams);
-    postInvalidate();
-  }
-  
-  public final void clear()
-  {
-    gyr.clear();
-  }
-  
-  public final void eD(boolean paramBoolean)
-  {
-    gyr.eD(paramBoolean);
-  }
-  
-  public b getController()
-  {
-    return gyr;
-  }
-  
-  public int getDuration()
-  {
-    if (gyr == null) {
-      return 0;
-    }
-    return (int)gyr.avM();
-  }
-  
-  public Object getTagObject()
+  public final Object axY()
   {
     return getTag();
   }
   
-  public Context getUIContext()
+  public final Context axZ()
   {
     return getContext();
   }
   
-  public String getVideoPath()
+  public final boolean aya()
   {
-    return gyr.gxe;
+    return gEO.ayf();
   }
   
-  public final void m(Bitmap paramBitmap)
+  public final void ayb() {}
+  
+  public final void ayc()
   {
-    super.setImageBitmap(paramBitmap);
+    gEO.gEi = null;
   }
   
-  protected void onAttachedToWindow()
+  public final void bg(int paramInt1, int paramInt2)
   {
-    u.d("!44@/B4Tb64lLpK4fJPZwyrCPGo0Q5PGl27KKATbvmP8sAA=", "#0x%x on attached from window", new Object[] { Integer.valueOf(hashCode()) });
-    super.onAttachedToWindow();
-    com.tencent.mm.sdk.c.a.jUF.b("UIStatusChanged", gyr.avL());
+    gEV = false;
+    ViewGroup.LayoutParams localLayoutParams = getLayoutParams();
+    gEQ = paramInt1;
+    gER = (gEQ * paramInt2 / paramInt1);
+    width = gEQ;
+    height = gER;
+    setLayoutParams(localLayoutParams);
+    postInvalidate();
   }
   
-  protected void onDetachedFromWindow()
+  public final void c(TextView paramTextView)
   {
-    super.onDetachedFromWindow();
-    u.i("!44@/B4Tb64lLpK4fJPZwyrCPGo0Q5PGl27KKATbvmP8sAA=", "#0x%x clear, on deattached to window", new Object[] { Integer.valueOf(hashCode()) });
-    gyr.clear();
-    com.tencent.mm.sdk.c.a.jUF.c("UIStatusChanged", gyr.avL());
+    gEO.c(paramTextView);
   }
   
-  public void setCanPlay(boolean paramBoolean)
+  public final void clear()
   {
-    gyr.gxz = paramBoolean;
+    gEO.clear();
   }
   
-  public void setDrawableWidth(int paramInt)
+  public final void detach()
   {
-    gyy = false;
-    gyt = paramInt;
-    if ((gyv > 0) && (gyw > 0))
+    com.tencent.mm.sdk.c.a.kug.e(gEO.ayg());
+  }
+  
+  public final void er(boolean paramBoolean)
+  {
+    gEO.gDX = paramBoolean;
+  }
+  
+  public final void es(boolean paramBoolean)
+  {
+    gEO.es(paramBoolean);
+  }
+  
+  public final void fY(int paramInt)
+  {
+    gEO.position = paramInt;
+  }
+  
+  public int getDuration()
+  {
+    if (gEO == null) {
+      return 0;
+    }
+    return (int)gEO.ayh();
+  }
+  
+  public final void lX(int paramInt) {}
+  
+  public final void lY(int paramInt)
+  {
+    gEV = false;
+    gEQ = paramInt;
+    if ((gES > 0) && (gET > 0))
     {
       ViewGroup.LayoutParams localLayoutParams = getLayoutParams();
-      gyu = (gyt * gyw / gyv);
-      if ((width != gyt) || (height != gyu))
+      gER = (gEQ * gET / gES);
+      if ((width != gEQ) || (height != gER))
       {
-        width = gyt;
-        height = gyu;
+        width = gEQ;
+        height = gER;
         setLayoutParams(localLayoutParams);
       }
     }
   }
   
-  public void setForceRecordState(boolean paramBoolean) {}
+  public final void o(Bitmap paramBitmap)
+  {
+    setImageBitmap(paramBitmap);
+  }
   
-  public void setImageBitmap(Bitmap paramBitmap)
+  protected void onAttachedToWindow()
+  {
+    v.d("MicroMsg.SightPlayImageView", "#0x%x on attached from window", new Object[] { Integer.valueOf(hashCode()) });
+    super.onAttachedToWindow();
+    com.tencent.mm.sdk.c.a.kug.d(gEO.ayg());
+  }
+  
+  protected void onDetachedFromWindow()
+  {
+    super.onDetachedFromWindow();
+    v.i("MicroMsg.SightPlayImageView", "#0x%x clear, on deattached to window", new Object[] { Integer.valueOf(hashCode()) });
+    gEO.clear();
+    com.tencent.mm.sdk.c.a.kug.e(gEO.ayg());
+  }
+  
+  protected void onDraw(Canvas paramCanvas)
+  {
+    super.onDraw(paramCanvas);
+  }
+  
+  public final void r(Bitmap paramBitmap)
+  {
+    super.setImageBitmap(paramBitmap);
+  }
+  
+  public final void setImageBitmap(Bitmap paramBitmap)
   {
     super.setImageBitmap(paramBitmap);
     int i;
     int j;
     if (paramBitmap == null) {
-      if (gyu == 0)
+      if (gER == 0)
       {
         i = 240;
         if (paramBitmap != null) {
-          break label105;
+          break label119;
         }
-        if (gyt != 0) {
-          break label97;
+        if (gEQ != 0) {
+          break label110;
         }
         j = 320;
       }
@@ -173,129 +222,127 @@ public class SightPlayImageView
     for (;;)
     {
       paramBitmap = getLayoutParams();
-      if (height != gyt * i / j)
+      if (height != gEQ * i / j)
       {
-        width = gyt;
-        height = (i * gyt / j);
+        width = gEQ;
+        float f = gEQ;
+        height = ((int)(i * f / j));
         setLayoutParams(paramBitmap);
       }
       return;
-      i = gyu;
+      i = gER;
       break;
       i = paramBitmap.getHeight();
       break;
-      label97:
-      j = gyt;
+      label110:
+      j = gEQ;
       continue;
-      label105:
+      label119:
       j = paramBitmap.getWidth();
     }
   }
   
-  public void setIsWhatsNew(boolean paramBoolean)
+  public final void setImageDrawable(Drawable paramDrawable)
   {
-    gyr.gxB = paramBoolean;
-  }
-  
-  public void setLoopImp(boolean paramBoolean)
-  {
-    if (gyr != null) {
-      gyr.ezB = paramBoolean;
+    super.setImageDrawable(paramDrawable);
+    int i;
+    int j;
+    if (paramDrawable == null) {
+      if (gER == 0)
+      {
+        i = 240;
+        if (paramDrawable != null) {
+          break label129;
+        }
+        if (gEQ != 0) {
+          break label120;
+        }
+        j = 320;
+      }
     }
-  }
-  
-  public void setMaskID(int paramInt) {}
-  
-  public void setOnCompletionListener(b.e parame)
-  {
-    gyr.gxI = parame;
-  }
-  
-  public void setOnDecodeDurationListener(b.f paramf)
-  {
-    gyr.gxJ = paramf;
-  }
-  
-  public void setOnSightCompletionAction(b.g paramg)
-  {
-    gyr.gxK = paramg;
-  }
-  
-  public void setPosition(int paramInt)
-  {
-    gyr.position = paramInt;
-  }
-  
-  public void setSightInfoView(TextView paramTextView)
-  {
-    gyr.setSightInfoView(paramTextView);
-  }
-  
-  public void setTagObject(Object paramObject)
-  {
-    setTag(paramObject);
-  }
-  
-  public void setThumbBgView(View paramView)
-  {
-    gyr.setThumbBgView(paramView);
-  }
-  
-  public void setThumbBmp(Bitmap paramBitmap)
-  {
-    setImageBitmap(paramBitmap);
+    for (;;)
+    {
+      if ((i != 0) && (j != 0))
+      {
+        paramDrawable = getLayoutParams();
+        if (height != gEQ * i / j)
+        {
+          width = gEQ;
+          float f = gEQ;
+          height = ((int)(i * f / j));
+          setLayoutParams(paramDrawable);
+        }
+      }
+      return;
+      i = gER;
+      break;
+      i = paramDrawable.getIntrinsicHeight();
+      break;
+      label120:
+      j = gEQ;
+      continue;
+      label129:
+      j = paramDrawable.getIntrinsicWidth();
+    }
   }
   
   private static final class a
     extends b
   {
-    private WeakReference gys;
+    private WeakReference<SightPlayImageView> gEP;
     
     public a(SightPlayImageView paramSightPlayImageView)
     {
       super(paramSightPlayImageView);
-      gys = new WeakReference(paramSightPlayImageView);
+      gEP = new WeakReference(paramSightPlayImageView);
     }
     
-    public final void aB(int paramInt1, int paramInt2)
+    public final void aG(int paramInt1, int paramInt2)
     {
-      SightPlayImageView localSightPlayImageView = (SightPlayImageView)gys.get();
+      final SightPlayImageView localSightPlayImageView = (SightPlayImageView)gEP.get();
       if (localSightPlayImageView == null)
       {
-        u.e("!44@/B4Tb64lLpK4fJPZwyrCPGo0Q5PGl27KKATbvmP8sAA=", "onGetVideoSizeEnd, imageView is null, do clear");
+        v.e("MicroMsg.SightPlayImageView", "onGetVideoSizeEnd, imageView is null, do clear");
         clear();
         return;
       }
       SightPlayImageView.a(localSightPlayImageView, paramInt1);
       SightPlayImageView.b(localSightPlayImageView, paramInt2);
-      if (gyx != null) {
-        gyx.aB(paramInt1, paramInt2);
+      if (gEU != null) {
+        gEU.aG(paramInt1, paramInt2);
       }
       if (SightPlayImageView.a(localSightPlayImageView) > 0)
       {
-        ViewGroup.LayoutParams localLayoutParams = localSightPlayImageView.getLayoutParams();
+        final ViewGroup.LayoutParams localLayoutParams = localSightPlayImageView.getLayoutParams();
         if ((width != SightPlayImageView.a(localSightPlayImageView)) || (height != SightPlayImageView.a(localSightPlayImageView) * paramInt2 / paramInt1))
         {
           width = SightPlayImageView.a(localSightPlayImageView);
           height = (SightPlayImageView.a(localSightPlayImageView) * paramInt2 / paramInt1);
+          ad.k(new Runnable()
+          {
+            public final void run()
+            {
+              localSightPlayImageView.setLayoutParams(localLayoutParams);
+            }
+          });
           localSightPlayImageView.postInvalidate();
         }
-        u.i("!44@/B4Tb64lLpK4fJPZwyrCPGo0Q5PGl27KKATbvmP8sAA=", "onGetVideoSize::params width %d height %d", new Object[] { Integer.valueOf(width), Integer.valueOf(height) });
+        v.i("MicroMsg.SightPlayImageView", "onGetVideoSize::params width %d height %d", new Object[] { Integer.valueOf(width), Integer.valueOf(height) });
       }
-      u.i("!44@/B4Tb64lLpK4fJPZwyrCPGo0Q5PGl27KKATbvmP8sAA=", "onGetVideoSize::DrawWidth %d, video size %d*%d", new Object[] { Integer.valueOf(SightPlayImageView.a(localSightPlayImageView)), Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+      v.i("MicroMsg.SightPlayImageView", "onGetVideoSize::DrawWidth %d, video size %d*%d", new Object[] { Integer.valueOf(SightPlayImageView.a(localSightPlayImageView)), Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
     }
     
-    protected final int avI()
+    protected final int ayd()
     {
-      return 2130837568;
+      return 2130968658;
     }
     
-    public final void l(Bitmap paramBitmap)
+    public final void q(Bitmap paramBitmap)
     {
-      SightPlayImageView localSightPlayImageView = (SightPlayImageView)gys.get();
+      SightPlayImageView localSightPlayImageView = (SightPlayImageView)gEP.get();
       if (localSightPlayImageView == null)
       {
-        u.e("!44@/B4Tb64lLpK4fJPZwyrCPGo0Q5PGl27KKATbvmP8sAA=", "onGetFrameBmp, imageView is null, do clear");
+        v.e("MicroMsg.SightPlayImageView", "onGetFrameBmp, imageView is null, do clear");
         clear();
         return;
       }

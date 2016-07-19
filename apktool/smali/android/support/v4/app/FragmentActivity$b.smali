@@ -15,15 +15,44 @@
 
 
 # instance fields
-.field bk:Ljava/lang/Object;
+.field bA:Ljava/lang/Object;
 
-.field bl:Ljava/lang/Object;
+.field bB:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field bm:Ljava/util/HashMap;
+.field bC:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/support/v4/app/Fragment;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field bn:Ljava/util/ArrayList;
+.field bD:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Landroid/support/v4/app/k;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field bo:Ljava/util/HashMap;
+.field bz:Ljava/lang/Object;
 
 
 # direct methods

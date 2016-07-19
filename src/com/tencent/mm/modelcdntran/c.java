@@ -5,32 +5,32 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import com.tencent.mm.a.g;
 import com.tencent.mm.model.h;
-import com.tencent.mm.sdk.platformtools.ah;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class c
 {
-  public static int bKK = 1;
-  public static int bKL = 2;
-  public static int bKM = 3;
-  public static int bKN = -1;
-  public static int bKO = 3;
-  public static int bKP = 4;
-  public static int bKQ = 5;
-  public static int bKR = 1;
-  public static int bKS = 2;
-  public static int bKT = 55535;
-  public static int bKU = 55534;
-  public static int bKV = 55533;
-  public static int bKW = 55532;
+  public static int bEe = 1;
+  public static int bEf = 2;
+  public static int bEg = 3;
+  public static int bEh = -1;
+  public static int bEi = 3;
+  public static int bEj = 4;
+  public static int bEk = 5;
+  public static int bEl = 1;
+  public static int bEm = 2;
+  public static int bEn = 55535;
+  public static int bEo = 55534;
+  public static int bEp = 55533;
+  public static int bEq = 55532;
   
   public static String a(String paramString1, long paramLong, String paramString2, String paramString3)
   {
     Object localObject2 = null;
-    u.d("!32@A5jPUhK25kM10phlUcYHaD7as7hdt5l7", "cdntra genClientId prefix[%s] createtime:%d talker[%s] suffix:[%s] stack[%s]", new Object[] { paramString1, Long.valueOf(paramLong), paramString2, paramString3, ay.aVJ() });
+    v.d("MicroMsg.CdnUtil", "cdntra genClientId prefix[%s] createtime:%d talker[%s] suffix:[%s] stack[%s]", new Object[] { paramString1, Long.valueOf(paramLong), paramString2, paramString3, be.baX() });
     Object localObject1;
-    if (ay.kz(hl(paramString1))) {
+    if (be.kf(hC(paramString1))) {
       localObject1 = localObject2;
     }
     do
@@ -41,109 +41,109 @@ public final class c
         {
           return (String)localObject1;
           localObject1 = localObject2;
-        } while (ay.kz(paramString2));
+        } while (be.kf(paramString2));
         localObject1 = localObject2;
       } while (paramLong <= 0L);
-      paramString3 = ay.ky(hl(paramString3));
-      paramString2 = g.m((h.sc() + "-" + paramString2).getBytes());
+      paramString3 = be.li(hC(paramString3));
+      paramString2 = g.j((h.se() + "-" + paramString2).getBytes());
       paramString1 = "a" + paramString1 + "_" + paramString2.substring(0, 16) + "_" + paramLong;
       localObject1 = paramString1;
-    } while (ay.kz(paramString3));
+    } while (be.kf(paramString3));
     return paramString1 + "_" + paramString3;
   }
   
   public static void a(byte[] paramArrayOfByte, String paramString, int paramInt)
   {
     byte[] arrayOfByte = paramArrayOfByte;
-    if (ay.J(paramArrayOfByte)) {
+    if (be.P(paramArrayOfByte)) {
       arrayOfByte = new byte[0];
     }
     paramArrayOfByte = new String(arrayOfByte);
     if (paramInt == 4) {
-      u.e(paramString, paramArrayOfByte);
+      v.e(paramString, paramArrayOfByte);
     }
     do
     {
       return;
       if (paramInt == 3)
       {
-        u.w(paramString, paramArrayOfByte);
+        v.w(paramString, paramArrayOfByte);
         return;
       }
       if (paramInt == 2)
       {
-        u.i(paramString, paramArrayOfByte);
+        v.i(paramString, paramArrayOfByte);
         return;
       }
       if (paramInt == 1)
       {
-        u.d(paramString, paramArrayOfByte);
+        v.d(paramString, paramArrayOfByte);
         return;
       }
     } while (paramInt != 0);
-    u.v(paramString, paramArrayOfByte);
+    v.v(paramString, paramArrayOfByte);
   }
   
-  public static int aK(Context paramContext)
+  public static int aH(Context paramContext)
   {
     try
     {
       paramContext = ((ConnectivityManager)paramContext.getSystemService("connectivity")).getActiveNetworkInfo();
       if (paramContext == null) {
-        return bKK;
+        return bEe;
       }
       if (paramContext.getType() == 1) {
-        return bKM;
+        return bEg;
       }
       if (paramContext.getSubtype() == 1) {
-        return bKK;
+        return bEe;
       }
       if (paramContext.getSubtype() == 2) {
-        return bKK;
+        return bEe;
       }
       if (paramContext.getSubtype() >= 3) {
-        return bKL;
+        return bEf;
       }
-      int i = bKK;
+      int i = bEe;
       return i;
     }
     catch (NullPointerException paramContext)
     {
-      u.e("!32@A5jPUhK25kM10phlUcYHaD7as7hdt5l7", "exception:%s", new Object[] { ay.b(paramContext) });
+      v.e("MicroMsg.CdnUtil", "exception:%s", new Object[] { be.f(paramContext) });
     }
-    return bKK;
+    return bEe;
   }
   
-  public static int aL(Context paramContext)
+  public static int aI(Context paramContext)
   {
-    int i = ah.cn(paramContext);
+    int i = ak.ci(paramContext);
     paramContext = ((ConnectivityManager)paramContext.getSystemService("connectivity")).getActiveNetworkInfo();
     if (paramContext == null) {
-      return bKN;
+      return bEh;
     }
     if (paramContext.getType() == 1) {
-      return bKR;
+      return bEl;
     }
     if ((paramContext.getSubtype() == 1) || (paramContext.getSubtype() == 2)) {
-      return bKO;
+      return bEi;
     }
     if (paramContext.getSubtype() >= 13) {
-      return bKQ;
+      return bEk;
     }
     if (paramContext.getSubtype() >= 3) {
-      return bKP;
+      return bEj;
     }
-    if (ah.pr(i)) {
-      return bKS;
+    if (ak.ri(i)) {
+      return bEm;
     }
-    return bKO;
+    return bEi;
   }
   
-  private static String hl(String paramString)
+  private static String hC(String paramString)
   {
     String str = paramString;
     int i;
-    if (!ay.kz(paramString)) {
+    if (!be.kf(paramString)) {
       i = 0;
     }
     for (;;)
@@ -152,7 +152,7 @@ public final class c
       if (i < paramString.length())
       {
         char c = paramString.charAt(i);
-        if ((!ay.f(c)) && (!ay.g(c))) {
+        if ((!be.h(c)) && (!be.i(c))) {
           str = null;
         }
       }

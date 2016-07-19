@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field cjK:Lcom/tencent/mm/network/p;
+.field cfb:Lcom/tencent/mm/network/p;
 
-.field cjL:Lcom/tencent/mm/network/k;
+.field cfc:Lcom/tencent/mm/network/k;
 
-.field cjM:Lcom/tencent/mm/network/c;
+.field cfd:Lcom/tencent/mm/network/c;
 
 .field startTime:J
 

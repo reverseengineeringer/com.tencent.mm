@@ -1,16 +1,16 @@
 package com.tencent.mm.modelsimple;
 
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.h.d;
-import com.tencent.mm.protocal.i.a;
-import com.tencent.mm.protocal.i.b;
-import com.tencent.mm.r.h;
+import com.tencent.mm.protocal.k.c;
+import com.tencent.mm.protocal.k.d;
+import com.tencent.mm.protocal.l.a;
+import com.tencent.mm.protocal.l.b;
+import com.tencent.mm.t.h;
 
 public final class f$a
   extends h
 {
-  private final i.a caO = new i.a();
-  private final i.b caP = new i.b();
+  private final l.a bUx = new l.a();
+  private final l.b bUy = new l.b();
   
   public final int getType()
   {
@@ -22,14 +22,14 @@ public final class f$a
     return null;
   }
   
-  protected final h.c tW()
+  protected final k.c tX()
   {
-    return caO;
+    return bUx;
   }
   
-  public final h.d tX()
+  public final k.d tY()
   {
-    return caP;
+    return bUy;
   }
 }
 

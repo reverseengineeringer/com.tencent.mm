@@ -9,7 +9,7 @@ final class SettingSnsBackgroundUI$4
   
   public final void run()
   {
-    SettingSnsBackgroundUI.a(haX, ao, eYZ);
+    SettingSnsBackgroundUI.a(hoo, P, fhw);
   }
 }
 

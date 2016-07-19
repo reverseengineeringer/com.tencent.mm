@@ -2,7 +2,7 @@ package com.tencent.map.geolocation.internal;
 
 import android.content.Context;
 import android.os.Bundle;
-import ct.cb;
+import ct.by;
 
 public abstract class TencentHttpClientFactory
 {
@@ -36,7 +36,7 @@ public abstract class TencentHttpClientFactory
       }
       return (TencentHttpClient)paramContext;
     }
-    return new cb(paramContext, paramBundle.getString("channelId"));
+    return new by(paramContext, paramBundle.getString("channelId"));
   }
 }
 

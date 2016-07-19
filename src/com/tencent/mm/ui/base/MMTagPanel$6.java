@@ -5,7 +5,7 @@ import android.text.Editable;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.widget.MMEditText;
 
 final class MMTagPanel$6
@@ -15,16 +15,16 @@ final class MMTagPanel$6
   
   public final void onClick(View paramView)
   {
-    u.d("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "on panel click, enableEditMode %B", new Object[] { Boolean.valueOf(MMTagPanel.f(kHq)) });
-    if (MMTagPanel.f(kHq))
+    v.d("MicroMsg.MMTagPanel", "on panel click, enableEditMode %B", new Object[] { Boolean.valueOf(MMTagPanel.f(lgs)) });
+    if (MMTagPanel.f(lgs))
     {
-      kHq.bcY();
-      MMTagPanel.a(kHq).requestFocus();
-      MMTagPanel.a(kHq).setSelection(MMTagPanel.a(kHq).getText().length());
-      ((InputMethodManager)kHq.getContext().getSystemService("input_method")).showSoftInput(MMTagPanel.a(kHq), 0);
-      u.d("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "on content click");
-      if (MMTagPanel.e(kHq) != null) {
-        MMTagPanel.e(kHq).SS();
+      lgs.biA();
+      MMTagPanel.a(lgs).requestFocus();
+      MMTagPanel.a(lgs).setSelection(MMTagPanel.a(lgs).getText().length());
+      ((InputMethodManager)lgs.getContext().getSystemService("input_method")).showSoftInput(MMTagPanel.a(lgs), 0);
+      v.d("MicroMsg.MMTagPanel", "on content click");
+      if (MMTagPanel.e(lgs) != null) {
+        MMTagPanel.e(lgs).Ul();
       }
     }
   }

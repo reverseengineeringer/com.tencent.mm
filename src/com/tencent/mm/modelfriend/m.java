@@ -3,13 +3,14 @@ package com.tencent.mm.modelfriend;
 import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import com.tencent.mm.am.e;
-import com.tencent.mm.am.f;
-import com.tencent.mm.am.l;
+import com.tencent.mm.ap.e;
+import com.tencent.mm.ap.f;
+import com.tencent.mm.ap.l;
 import com.tencent.mm.pluginsdk.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag.b;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai.b;
+import com.tencent.mm.storage.aj;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -19,37 +20,47 @@ import java.util.Map;
 
 public final class m
 {
-  private static Map bMy = null;
+  private static Map<String, String> bFS = null;
+  
+  public static void A(List<String> paramList)
+  {
+    if (paramList == null)
+    {
+      v.e("MicroMsg.FriendLogic", "set uploaded mobile contact failed, null info list");
+      return;
+    }
+    ah.zD().x(paramList);
+  }
   
   public static boolean a(String paramString, Context paramContext, byte[] paramArrayOfByte)
   {
     return a.b(paramString, paramContext, paramArrayOfByte);
   }
   
-  public static Bitmap c(String paramString, Context paramContext)
+  public static Bitmap b(String paramString, Context paramContext)
   {
     return a.b(paramString, paramContext, false);
   }
   
-  public static boolean de(int paramInt)
+  public static boolean dJ(int paramInt)
   {
-    ad localad = ah.zt().dh(paramInt);
-    boolean bool = ah.zv().di(paramInt);
+    ad localad = ah.zG().dM(paramInt);
+    boolean bool = ah.zI().dN(paramInt);
     if (localad == null) {}
-    while ((bNh != 1) && (!bool)) {
+    while ((bGB != 1) && (!bool)) {
       return false;
     }
     return true;
   }
   
-  public static String hy(String paramString)
+  public static String hQ(String paramString)
   {
     if ((paramString == null) || (paramString.equals(""))) {
       return "";
     }
-    Object localObject = ah.zq();
-    paramString = "select addr_upload2.realname from addr_upload2 where addr_upload2.id = \"" + b.ho(paramString) + "\"";
-    localObject = bCw.rawQuery(paramString, null);
+    Object localObject = ah.zD();
+    paramString = "select addr_upload2.realname from addr_upload2 where addr_upload2.id = \"" + b.hG(paramString) + "\"";
+    localObject = bvG.rawQuery(paramString, null);
     if (localObject == null) {
       return "";
     }
@@ -66,92 +77,72 @@ public final class m
     return paramString;
   }
   
-  public static void t(List paramList)
+  public static void y(List<String> paramList)
   {
     if (paramList.size() == 0) {}
     for (;;)
     {
       return;
       HashSet localHashSet = new HashSet();
-      Iterator localIterator = l.DK().DD().iterator();
+      Iterator localIterator = l.Eb().DU().iterator();
       while (localIterator.hasNext())
       {
         f localf = (f)localIterator.next();
-        ag.b localb = com.tencent.mm.model.ah.tD().rs().Fj(field_msgContent);
+        ai.b localb = com.tencent.mm.model.ah.tE().rt().HA(field_msgContent);
         if (localb != null)
         {
-          String str1 = kfM;
-          String str2 = kfL;
-          if (((asc == 10) || (asc == 11)) && ((paramList.contains(str1)) || (paramList.contains(str2)))) {
+          String str1 = kGf;
+          String str2 = kGe;
+          if (((scene == 10) || (scene == 11)) && ((paramList.contains(str1)) || (paramList.contains(str2)))) {
             localHashSet.add(field_talker);
           }
         }
       }
-      u.d("!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy", "deleteMobileFMessage(md5List), delete fmsg and fconv, talker size = " + localHashSet.size());
+      v.d("MicroMsg.FriendLogic", "deleteMobileFMessage(md5List), delete fmsg and fconv, talker size = " + localHashSet.size());
       paramList = localHashSet.iterator();
       while (paramList.hasNext()) {
-        e.jy((String)paramList.next());
+        e.jR((String)paramList.next());
       }
     }
   }
   
-  public static void u(List paramList)
+  public static void yN()
   {
-    if (paramList == null)
-    {
-      u.e("!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy", "sync address book failed, null info list");
-      return;
-    }
-    ah.zq().q(paramList);
+    com.tencent.mm.model.ah.tE().ro().set(12322, Boolean.valueOf(true));
   }
   
-  public static void v(List paramList)
+  public static boolean yO()
   {
-    if (paramList == null)
-    {
-      u.e("!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy", "set uploaded mobile contact failed, null info list");
-      return;
+    if ((com.tencent.mm.model.ah.tE() != null) && (com.tencent.mm.model.ah.tE().ro() != null)) {
+      return be.a((Boolean)com.tencent.mm.model.ah.tE().ro().get(12322, Boolean.valueOf(true)), true);
     }
-    ah.zq().s(paramList);
-  }
-  
-  public static void yA()
-  {
-    com.tencent.mm.model.ah.tD().rn().set(12322, Boolean.valueOf(true));
-  }
-  
-  public static boolean yB()
-  {
-    if ((com.tencent.mm.model.ah.tD() != null) && (com.tencent.mm.model.ah.tD().rn() != null)) {
-      return ay.a((Boolean)com.tencent.mm.model.ah.tD().rn().get(12322, Boolean.valueOf(true)), true);
-    }
-    u.e("!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy", "[arthurdan.UploadPhone] Notice!!!! MMCore.getAccStg() is null!!!");
+    v.e("MicroMsg.FriendLogic", "[arthurdan.UploadPhone] Notice!!!! MMCore.getAccStg() is null!!!");
     return false;
   }
   
-  public static boolean yC()
+  public static boolean yP()
   {
-    a locala = yD();
-    u.i("!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy", "isTipInMobileFriend, state %s", new Object[] { locala.toString() });
-    if (locala == a.bMB)
+    a locala = yQ();
+    v.i("MicroMsg.FriendLogic", "isTipInMobileFriend, state %s", new Object[] { locala.toString() });
+    if (locala == a.bFV)
     {
-      boolean bool = ay.a((Boolean)com.tencent.mm.model.ah.tD().rn().get(12322, Boolean.valueOf(false)), false);
-      u.i("!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy", "USERINFO_UPLOAD_ADDR_LOOK_UP %B", new Object[] { Boolean.valueOf(bool) });
+      boolean bool = be.a((Boolean)com.tencent.mm.model.ah.tE().ro().get(12322, Boolean.valueOf(false)), false);
+      v.i("MicroMsg.FriendLogic", "USERINFO_UPLOAD_ADDR_LOOK_UP %B", new Object[] { Boolean.valueOf(bool) });
       return !bool;
     }
     return false;
   }
   
-  public static a yD()
+  public static a yQ()
   {
     for (;;)
     {
       try
       {
-        localObject3 = (String)com.tencent.mm.model.ah.tD().rn().get(4097, "");
-        String str = (String)com.tencent.mm.model.ah.tD().rn().get(6, "");
-        boolean bool = com.tencent.mm.model.h.sE();
-        u.i("!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy", "isUpload " + bool + " stat " + com.tencent.mm.model.h.sg());
+        localObject3 = (String)com.tencent.mm.model.ah.tE().ro().get(4097, "");
+        String str = (String)com.tencent.mm.model.ah.tE().ro().get(6, "");
+        boolean bool = com.tencent.mm.model.h.sG();
+        v.i("MicroMsg.FriendLogic", "isUpload " + bool + " stat " + com.tencent.mm.model.h.si());
         if (localObject3 != null)
         {
           Object localObject1 = localObject3;
@@ -165,22 +156,22 @@ public final class m
               break label153;
             }
             if ((localObject1 == null) && (localObject3 == null)) {
-              return a.bMz;
+              return a.bFT;
             }
             if ((localObject1 != null) && (localObject3 == null)) {
-              return a.bMA;
+              return a.bFU;
             }
             if (bool) {
-              return a.bMB;
+              return a.bFV;
             }
-            localObject1 = a.bMC;
+            localObject1 = a.bFW;
             return (a)localObject1;
           }
         }
       }
       catch (Exception localException)
       {
-        return a.bMz;
+        return a.bFT;
       }
       Object localObject2 = null;
       continue;
@@ -189,72 +180,72 @@ public final class m
     }
   }
   
-  public static void yE()
+  public static void yR()
   {
-    com.tencent.mm.model.ah.tD().rn().set(4097, "");
-    com.tencent.mm.model.ah.tD().rn().set(6, "");
+    com.tencent.mm.model.ah.tE().ro().set(4097, "");
+    com.tencent.mm.model.ah.tE().ro().set(6, "");
   }
   
-  public static String yF()
+  public static String yS()
   {
-    return (String)com.tencent.mm.model.ah.tD().rn().get(6, "");
+    return (String)com.tencent.mm.model.ah.tE().ro().get(6, "");
   }
   
-  public static boolean yG()
+  public static boolean yT()
   {
-    boolean bool = com.tencent.mm.model.ah.rh();
+    boolean bool = com.tencent.mm.model.ah.rg();
     if (!bool)
     {
-      u.i("!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy", "canSyncAddrBook isAccHasReady: %b", new Object[] { Boolean.valueOf(bool) });
+      v.i("MicroMsg.FriendLogic", "canSyncAddrBook isAccHasReady: %b", new Object[] { Boolean.valueOf(bool) });
       return false;
     }
-    if (yD() == a.bMB) {}
+    if (yQ() == a.bFV) {}
     for (int i = 1; i == 0; i = 0)
     {
-      u.i("!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy", "canSyncAddrBook userBindOpMobile: %b", new Object[] { Boolean.valueOf(false) });
+      v.i("MicroMsg.FriendLogic", "canSyncAddrBook userBindOpMobile: %b", new Object[] { Boolean.valueOf(false) });
       return false;
     }
-    bool = yB();
+    bool = yO();
     if (!bool)
     {
-      u.i("!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy", "canSyncAddrBook isUploadContact: %b", new Object[] { Boolean.valueOf(bool) });
+      v.i("MicroMsg.FriendLogic", "canSyncAddrBook isUploadContact: %b", new Object[] { Boolean.valueOf(bool) });
       return false;
     }
     return true;
   }
   
-  public static void yH()
+  public static void yU()
   {
-    c localc = ah.zq();
-    int i = bCw.delete("addr_upload2", null, null);
-    u.d("!44@/B4Tb64lLpL3lTzROgXSiaEB/XXrrgblbOVxZH2OfNk=", "delete addr_upload2");
+    c localc = ah.zD();
+    int i = bvG.delete("addr_upload2", null, null);
+    v.d("MicroMsg.AddrUploadStorage", "delete addr_upload2");
     if (i > 0) {
       localc.b(5, localc, null);
     }
   }
   
-  public static void yI()
+  public static void yV()
   {
     Object localObject = new HashSet();
-    Iterator localIterator = l.DK().DD().iterator();
+    Iterator localIterator = l.Eb().DU().iterator();
     while (localIterator.hasNext())
     {
       f localf = (f)localIterator.next();
-      ag.b localb = com.tencent.mm.model.ah.tD().rs().Fj(field_msgContent);
-      if ((localb != null) && ((asc == 10) || (asc == 11))) {
+      ai.b localb = com.tencent.mm.model.ah.tE().rt().HA(field_msgContent);
+      if ((localb != null) && ((scene == 10) || (scene == 11))) {
         ((HashSet)localObject).add(field_talker);
       }
     }
-    u.d("!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy", "deleteMobileFMessage, delete fmsg and fconv, talker size = " + ((HashSet)localObject).size());
+    v.d("MicroMsg.FriendLogic", "deleteMobileFMessage, delete fmsg and fconv, talker size = " + ((HashSet)localObject).size());
     localObject = ((HashSet)localObject).iterator();
     while (((Iterator)localObject).hasNext()) {
-      e.jy((String)((Iterator)localObject).next());
+      e.jR((String)((Iterator)localObject).next());
     }
   }
   
-  public static List yJ()
+  public static List<String> yW()
   {
-    Cursor localCursor = zqbCw.rawQuery("select addr_upload2.md5 from addr_upload2 where addr_upload2.uploadtime = 0 AND addr_upload2.type = 1", null);
+    Cursor localCursor = zDbvG.rawQuery("select addr_upload2.md5 from addr_upload2 where addr_upload2.uploadtime = 0 AND addr_upload2.type = 1", null);
     LinkedList localLinkedList = new LinkedList();
     while (localCursor.moveToNext()) {
       localLinkedList.add(localCursor.getString(0));
@@ -263,14 +254,14 @@ public final class m
     return localLinkedList;
   }
   
-  public static List yK()
+  public static List<String> yX()
   {
-    Cursor localCursor = zqbCw.rawQuery("select addr_upload2.moblie from addr_upload2 where addr_upload2.uploadtime = 0 AND addr_upload2.type = 0", null);
+    Cursor localCursor = zDbvG.rawQuery("select addr_upload2.moblie from addr_upload2 where addr_upload2.uploadtime = 0 AND addr_upload2.type = 0", null);
     LinkedList localLinkedList = new LinkedList();
     while (localCursor.moveToNext())
     {
-      String str = a.sy(localCursor.getString(0));
-      if (a.zo(str)) {
+      String str = a.tY(localCursor.getString(0));
+      if (a.Bk(str)) {
         localLinkedList.add(str);
       }
     }
@@ -278,7 +269,20 @@ public final class m
     return localLinkedList;
   }
   
-  public static enum a {}
+  public static void z(List<b> paramList)
+  {
+    if (paramList == null)
+    {
+      v.e("MicroMsg.FriendLogic", "sync address book failed, null info list");
+      return;
+    }
+    ah.zD().v(paramList);
+  }
+  
+  public static enum a
+  {
+    private a() {}
+  }
 }
 
 /* Location:

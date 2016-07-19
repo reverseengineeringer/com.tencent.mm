@@ -1,9 +1,9 @@
 package com.tencent.mm.plugin.sns.ui.a;
 
 import android.content.Context;
-import com.tencent.mm.ui.e.a;
-import com.tencent.mm.ui.e.h;
-import com.tencent.mm.ui.e.h.c;
+import com.tencent.mm.ui.f.a;
+import com.tencent.mm.ui.f.h;
+import com.tencent.mm.ui.f.h.c;
 
 public final class b
   extends a

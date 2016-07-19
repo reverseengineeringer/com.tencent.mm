@@ -1,16 +1,16 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.h.d;
-import com.tencent.mm.protocal.q.a;
-import com.tencent.mm.protocal.q.b;
-import com.tencent.mm.r.h;
+import com.tencent.mm.protocal.k.c;
+import com.tencent.mm.protocal.k.d;
+import com.tencent.mm.protocal.t.a;
+import com.tencent.mm.protocal.t.b;
+import com.tencent.mm.t.h;
 
 public final class z$a
   extends h
 {
-  private final q.a bMT = new q.a();
-  private final q.b bMU = new q.b();
+  private final t.a bGn = new t.a();
+  private final t.b bGo = new t.b();
   
   public final int getType()
   {
@@ -22,17 +22,17 @@ public final class z$a
     return "/cgi-bin/micromsg-bin/getsuggestalias";
   }
   
-  protected final h.c tW()
+  protected final k.c tX()
   {
-    return bMT;
+    return bGn;
   }
   
-  public final h.d tX()
+  public final k.d tY()
   {
-    return bMU;
+    return bGo;
   }
   
-  public final int vx()
+  public final int vz()
   {
     return 1;
   }

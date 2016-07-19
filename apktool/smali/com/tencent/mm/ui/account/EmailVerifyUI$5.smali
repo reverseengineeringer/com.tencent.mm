@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/EmailVerifyUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/EmailVerifyUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ksd:Lcom/tencent/mm/ui/account/EmailVerifyUI;
+.field final synthetic kRl:Lcom/tencent/mm/ui/account/EmailVerifyUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 164
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI$5;->ksd:Lcom/tencent/mm/ui/account/EmailVerifyUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI$5;->kRl:Lcom/tencent/mm/ui/account/EmailVerifyUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 168
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI$5;->ksd:Lcom/tencent/mm/ui/account/EmailVerifyUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI$5;->kRl:Lcom/tencent/mm/ui/account/EmailVerifyUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->d(Lcom/tencent/mm/ui/account/EmailVerifyUI;)V
 

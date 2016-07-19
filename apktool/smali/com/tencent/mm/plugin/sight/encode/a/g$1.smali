@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic bWD:I
+.field final synthetic bQf:I
 
-.field final synthetic gAS:Lcom/tencent/mm/plugin/sight/encode/a/g$a;
+.field final synthetic gHu:Lcom/tencent/mm/plugin/sight/encode/a/g$a;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 108
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$1;->gAS:Lcom/tencent/mm/plugin/sight/encode/a/g$a;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$1;->gHu:Lcom/tencent/mm/plugin/sight/encode/a/g$a;
 
-    iput p2, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$1;->bWD:I
+    iput p2, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$1;->bQf:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,9 +45,9 @@
 
     .prologue
     .line 112
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$1;->gAS:Lcom/tencent/mm/plugin/sight/encode/a/g$a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$1;->gHu:Lcom/tencent/mm/plugin/sight/encode/a/g$a;
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$1;->bWD:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$1;->bQf:I
 
     invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/a/g$a;->onError(I)V
 

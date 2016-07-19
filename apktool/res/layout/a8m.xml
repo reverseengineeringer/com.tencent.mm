@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center" android:id="@id/c5_" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/aor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:textColor="@color/j_" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/ckh" android:drawablePadding="10.0dip" style="@style/ShakeInfoTitleStyle" />
+        <TextView android:textColor="@color/j_" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="15.0dip" android:text="@string/ckf" style="@style/ShakeInfoTextStyle" />
+        <TextView android:textColor="@color/j_" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="15.0dip" android:text="@string/ckg" style="@style/ShakeInfoTextStyle" />
+        <Button android:id="@id/c5a" android:layout_marginLeft="15.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="12.0dip" android:text="@string/cke" style="@style/MMSolidGreenLargeButton" />
+    </LinearLayout>
+</RelativeLayout>

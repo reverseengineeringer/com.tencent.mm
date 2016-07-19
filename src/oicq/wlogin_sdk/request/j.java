@@ -21,22 +21,22 @@ public final class j
 {
   public j(i parami)
   {
-    mbE = 2064;
-    mbF = 9;
-    mbH = parami;
+    mNI = 2064;
+    mNJ = 9;
+    mNL = parami;
   }
   
   public final byte[] a(long paramLong1, long paramLong2, byte[] paramArrayOfByte1, byte[] paramArrayOfByte2, int paramInt1, int paramInt2, int paramInt3, byte[] paramArrayOfByte3)
   {
-    paramInt3 = mbH.mbR;
-    mbH._uin = paramLong2;
-    byte[] arrayOfByte3 = super.bm(paramArrayOfByte2);
+    paramInt3 = mNL.mNV;
+    mNL._uin = paramLong2;
+    byte[] arrayOfByte3 = super.bu(paramArrayOfByte2);
     if (arrayOfByte3 == null) {
       return null;
     }
-    byte[] arrayOfByte4 = mbH.mbS;
-    byte[] arrayOfByte1 = mbH.mbM.bor();
-    byte[] arrayOfByte2 = mbH.mbW;
+    byte[] arrayOfByte4 = mNL.mNW;
+    byte[] arrayOfByte1 = mNL.mNQ.bvp();
+    byte[] arrayOfByte2 = mNL.mOa;
     Object localObject1 = new an();
     Object localObject2 = new b();
     Object localObject6 = new h();
@@ -54,48 +54,48 @@ public final class j
     aj localaj = new aj();
     localObject1 = ((an)localObject1).a(522017402L, paramInt3, paramLong2, 0);
     localObject2 = ((b)localObject2).f(paramLong2, paramArrayOfByte1);
-    mbH.mci = super.bl(arrayOfByte3);
+    mNL.mOm = super.bt(arrayOfByte3);
     int i = arrayOfByte3.length;
-    if (mcn + i > mbs)
+    if (mOr + i > mNw)
     {
-      mbs = (mcn + i + 128);
-      paramArrayOfByte1 = new byte[mbs];
-      System.arraycopy(mby, 0, paramArrayOfByte1, 0, mcn);
-      mby = paramArrayOfByte1;
+      mNw = (mOr + i + 128);
+      paramArrayOfByte1 = new byte[mNw];
+      System.arraycopy(mNC, 0, paramArrayOfByte1, 0, mOr);
+      mNC = paramArrayOfByte1;
     }
-    mbt = (mcn + i);
-    System.arraycopy(arrayOfByte3, 0, mby, mcn, i);
-    mco = i;
-    util.m(mby, 0, mbE);
-    util.m(mby, 2, mco);
-    arrayOfByte3 = ((a)localObject6).boo();
-    util.cP("req2 a1:", util.bw(arrayOfByte3));
+    mNx = (mOr + i);
+    System.arraycopy(arrayOfByte3, 0, mNC, mOr, i);
+    mOs = i;
+    util.o(mNC, 0, mNI);
+    util.o(mNC, 2, mOs);
+    arrayOfByte3 = ((a)localObject6).bvm();
+    util.dc("req2 a1:", util.bE(arrayOfByte3));
     localObject3 = ((c)localObject3).a(522017402L, 1L, paramInt3, 8256);
-    localObject4 = ((oicq.wlogin_sdk.a.i)localObject4).q(0, 1, 102400, 1);
+    localObject4 = ((oicq.wlogin_sdk.a.i)localObject4).p(0, 1, 102400, 1);
     localObject5 = ((r)localObject5).a(paramInt1, paramInt2, null);
-    localObject6 = paramArrayOfByte2.bs(mbH.mbS);
+    localObject6 = paramArrayOfByte2.bA(mNL.mNW);
     paramInt1 = 7;
     paramArrayOfByte1 = new byte[0];
     paramArrayOfByte2 = new byte[0];
     if (paramArrayOfByte3.length > 0)
     {
-      paramArrayOfByte1 = ((oicq.wlogin_sdk.a.j)localObject8).bp(paramArrayOfByte3);
+      paramArrayOfByte1 = ((oicq.wlogin_sdk.a.j)localObject8).bx(paramArrayOfByte3);
       paramInt1 = 8;
     }
     if (arrayOfByte4.length > 0) {
-      paramArrayOfByte2 = ((k)localObject7).bq(arrayOfByte4);
+      paramArrayOfByte2 = ((k)localObject7).by(arrayOfByte4);
     }
-    paramArrayOfByte3 = util.bow();
-    arrayOfByte4 = util.box();
-    paramInt2 = mbH.mbV;
-    localObject7 = mbH.mbU;
-    localObject8 = mbH.mbX;
-    paramArrayOfByte3 = localag.a(paramArrayOfByte2, localy.a(paramArrayOfByte3, arrayOfByte4, paramInt2, (byte[])localObject7, new byte[0], (byte[])localObject8), localaa.a(mbH.mcd, mbH.mce, mbH.mcf, mbH.mcb, mbH.mbS), localaj.a(522017402L, mbH.mbZ, mbH.mca), mbH.mbJ);
-    arrayOfByte2 = localae.br(arrayOfByte2);
+    paramArrayOfByte3 = util.bvu();
+    arrayOfByte4 = util.bvv();
+    paramInt2 = mNL.mNZ;
+    localObject7 = mNL.mNY;
+    localObject8 = mNL.mOb;
+    paramArrayOfByte3 = localag.a(paramArrayOfByte2, localy.a(paramArrayOfByte3, arrayOfByte4, paramInt2, (byte[])localObject7, new byte[0], (byte[])localObject8), localaa.a(mNL.mOh, mNL.mOi, mNL.mOj, mNL.mOf, mNL.mNW), localaj.a(522017402L, mNL.mOd, mNL.mOe), mNL.mNN);
+    arrayOfByte2 = localae.bz(arrayOfByte2);
     paramInt1 = paramInt1 + 1 + 1;
     if (arrayOfByte1.length > 0)
     {
-      paramArrayOfByte2 = localf.bo(arrayOfByte1);
+      paramArrayOfByte2 = localf.bw(arrayOfByte1);
       paramInt1 += 1;
     }
     for (;;)
@@ -123,22 +123,22 @@ public final class j
       paramInt2 += 0;
       System.arraycopy(paramArrayOfByte2, 0, arrayOfByte1, paramInt2, paramArrayOfByte2.length);
       System.arraycopy(localObject6, 0, arrayOfByte1, paramInt2 + paramArrayOfByte2.length, localObject6.length);
-      paramArrayOfByte1 = super.g(arrayOfByte1, mbF, paramInt1);
-      a(mbz, mbE, mbA, paramLong2, mbB, mbC, paramInt3, mbD, paramArrayOfByte1);
-      return super.boo();
+      paramArrayOfByte1 = super.i(arrayOfByte1, mNJ, paramInt1);
+      a(mND, mNI, mNE, paramLong2, mNF, mNG, paramInt3, mNH, paramArrayOfByte1);
+      return super.bvm();
       paramArrayOfByte2 = new byte[0];
     }
   }
   
   public final byte[] a(long paramLong1, long paramLong2, byte[] paramArrayOfByte1, byte[] paramArrayOfByte2, byte[] paramArrayOfByte3, int paramInt1, int paramInt2, int paramInt3, byte[] paramArrayOfByte4)
   {
-    paramInt3 = mbH.mbR;
-    mbH._uin = paramLong2;
-    util.cP("IMEI", util.bw(mbH.mbS));
-    byte[] arrayOfByte4 = mbH.mbJ;
-    byte[] arrayOfByte3 = mbH.mbS;
-    byte[] arrayOfByte1 = mbH.mbM.bor();
-    byte[] arrayOfByte2 = mbH.mbW;
+    paramInt3 = mNL.mNV;
+    mNL._uin = paramLong2;
+    util.dc("IMEI", util.bE(mNL.mNW));
+    byte[] arrayOfByte4 = mNL.mNN;
+    byte[] arrayOfByte3 = mNL.mNW;
+    byte[] arrayOfByte1 = mNL.mNQ.bvp();
+    byte[] arrayOfByte2 = mNL.mOa;
     Object localObject1 = new an();
     Object localObject2 = new b();
     Object localObject3 = new h();
@@ -156,34 +156,34 @@ public final class j
     aj localaj = new aj();
     localObject1 = ((an)localObject1).a(522017402L, paramInt3, paramLong2, 0);
     localObject2 = ((b)localObject2).f(paramLong2, paramArrayOfByte1);
-    paramArrayOfByte3 = ((h)localObject3).a(522017402L, paramInt3, paramLong2, paramArrayOfByte2, paramArrayOfByte1, paramArrayOfByte3, arrayOfByte4, mbH.mce, mbH.mbS);
-    mbH.mci = super.bl(((a)localObject3).bor());
+    paramArrayOfByte3 = ((h)localObject3).a(522017402L, paramInt3, paramLong2, paramArrayOfByte2, paramArrayOfByte1, paramArrayOfByte3, arrayOfByte4, mNL.mOi, mNL.mNW);
+    mNL.mOm = super.bt(((a)localObject3).bvp());
     localObject3 = localc.a(522017402L, 1L, paramInt3, 8256);
-    localObject4 = ((oicq.wlogin_sdk.a.i)localObject4).q(0, 1, 102400, 1);
+    localObject4 = ((oicq.wlogin_sdk.a.i)localObject4).p(0, 1, 102400, 1);
     localObject5 = ((r)localObject5).a(paramInt1, paramInt2, null);
-    localObject7 = ((ah)localObject7).bs(mbH.mbS);
+    localObject7 = ((ah)localObject7).bA(mNL.mNW);
     paramInt1 = 7;
     paramArrayOfByte1 = new byte[0];
     paramArrayOfByte2 = new byte[0];
     if (paramArrayOfByte4.length > 0)
     {
-      paramArrayOfByte1 = ((oicq.wlogin_sdk.a.j)localObject8).bp(paramArrayOfByte4);
+      paramArrayOfByte1 = ((oicq.wlogin_sdk.a.j)localObject8).bx(paramArrayOfByte4);
       paramInt1 = 8;
     }
     if (arrayOfByte3.length > 0) {
-      paramArrayOfByte2 = ((k)localObject6).bq(arrayOfByte3);
+      paramArrayOfByte2 = ((k)localObject6).by(arrayOfByte3);
     }
-    paramArrayOfByte4 = util.bow();
-    arrayOfByte3 = util.box();
-    paramInt2 = mbH.mbV;
-    localObject6 = mbH.mbU;
-    localObject8 = mbH.mbX;
-    paramArrayOfByte4 = localag.a(paramArrayOfByte2, localy.a(paramArrayOfByte4, arrayOfByte3, paramInt2, (byte[])localObject6, new byte[0], (byte[])localObject8), localaa.a(mbH.mcd, mbH.mce, mbH.mcf, mbH.mcb, mbH.mbS), localaj.a(522017402L, mbH.mbZ, mbH.mca), mbH.mbJ);
-    arrayOfByte2 = localae.br(arrayOfByte2);
+    paramArrayOfByte4 = util.bvu();
+    arrayOfByte3 = util.bvv();
+    paramInt2 = mNL.mNZ;
+    localObject6 = mNL.mNY;
+    localObject8 = mNL.mOb;
+    paramArrayOfByte4 = localag.a(paramArrayOfByte2, localy.a(paramArrayOfByte4, arrayOfByte3, paramInt2, (byte[])localObject6, new byte[0], (byte[])localObject8), localaa.a(mNL.mOh, mNL.mOi, mNL.mOj, mNL.mOf, mNL.mNW), localaj.a(522017402L, mNL.mOd, mNL.mOe), mNL.mNN);
+    arrayOfByte2 = localae.bz(arrayOfByte2);
     paramInt1 = paramInt1 + 1 + 1;
     if (arrayOfByte1.length > 0)
     {
-      paramArrayOfByte2 = localf.bo(arrayOfByte1);
+      paramArrayOfByte2 = localf.bw(arrayOfByte1);
       paramInt1 += 1;
     }
     for (;;)
@@ -211,9 +211,9 @@ public final class j
       paramInt2 += 0;
       System.arraycopy(paramArrayOfByte2, 0, arrayOfByte1, paramInt2, paramArrayOfByte2.length);
       System.arraycopy(localObject7, 0, arrayOfByte1, paramArrayOfByte2.length + paramInt2, localObject7.length);
-      paramArrayOfByte1 = super.g(arrayOfByte1, mbF, paramInt1);
-      a(mbz, mbE, mbA, paramLong2, mbB, mbC, paramInt3, mbD, paramArrayOfByte1);
-      return super.boo();
+      paramArrayOfByte1 = super.i(arrayOfByte1, mNJ, paramInt1);
+      a(mND, mNI, mNE, paramLong2, mNF, mNG, paramInt3, mNH, paramArrayOfByte1);
+      return super.bvm();
       paramArrayOfByte2 = new byte[0];
     }
   }

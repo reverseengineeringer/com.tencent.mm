@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/gallery/j$1;->az(II)V
+    value = Lcom/tencent/mm/ui/chatting/gallery/j$1;->aE(II)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic fbI:Ljava/lang/String;
+.field final synthetic fki:Ljava/lang/String;
 
-.field final synthetic lhr:Lcom/tencent/mm/ui/chatting/gallery/j$1;
+.field final synthetic lHC:Lcom/tencent/mm/ui/chatting/gallery/j$1;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 217
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1$1;->lhr:Lcom/tencent/mm/ui/chatting/gallery/j$1;
+    .line 219
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1$1;->lHC:Lcom/tencent/mm/ui/chatting/gallery/j$1;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1$1;->fbI:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1$1;->fki:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,49 +44,49 @@
     .locals 4
 
     .prologue
-    .line 221
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1$1;->fbI:Ljava/lang/String;
+    .line 223
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1$1;->fki:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 222
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1$1;->lhr:Lcom/tencent/mm/ui/chatting/gallery/j$1;
+    .line 224
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1$1;->lHC:Lcom/tencent/mm/ui/chatting/gallery/j$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/j$1;->lhq:Lcom/tencent/mm/ui/chatting/gallery/j;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/j$1;->lHB:Lcom/tencent/mm/ui/chatting/gallery/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/j;->leH:Lcom/tencent/mm/ui/chatting/gallery/b;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/j;->lET:Lcom/tencent/mm/ui/chatting/gallery/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/b;->lem:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/b;->lEz:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
-    const v1, 0x7f0b0604
+    const v1, 0x7f0813eb
 
-    const v2, 0x7f0b0265
+    const v2, 0x7f0803fb
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->f(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
-    .line 237
+    .line 239
     :goto_0
     return-void
 
-    .line 224
+    .line 226
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 225
+    .line 227
     const-string/jumbo v1, "android.intent.action.VIEW"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 226
+    .line 228
     new-instance v1, Ljava/io/File;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1$1;->fbI:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1$1;->fki:Ljava/lang/String;
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -98,29 +98,29 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 228
+    .line 230
     :try_start_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1$1;->lhr:Lcom/tencent/mm/ui/chatting/gallery/j$1;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1$1;->lHC:Lcom/tencent/mm/ui/chatting/gallery/j$1;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/chatting/gallery/j$1;->lhq:Lcom/tencent/mm/ui/chatting/gallery/j;
+    iget-object v1, v1, Lcom/tencent/mm/ui/chatting/gallery/j$1;->lHB:Lcom/tencent/mm/ui/chatting/gallery/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/chatting/gallery/j;->leH:Lcom/tencent/mm/ui/chatting/gallery/b;
+    iget-object v1, v1, Lcom/tencent/mm/ui/chatting/gallery/j;->lET:Lcom/tencent/mm/ui/chatting/gallery/b;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/chatting/gallery/b;->lem:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    iget-object v1, v1, Lcom/tencent/mm/ui/chatting/gallery/b;->lEz:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1$1;->lhr:Lcom/tencent/mm/ui/chatting/gallery/j$1;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1$1;->lHC:Lcom/tencent/mm/ui/chatting/gallery/j$1;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/chatting/gallery/j$1;->lhq:Lcom/tencent/mm/ui/chatting/gallery/j;
+    iget-object v2, v2, Lcom/tencent/mm/ui/chatting/gallery/j$1;->lHB:Lcom/tencent/mm/ui/chatting/gallery/j;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/chatting/gallery/j;->leH:Lcom/tencent/mm/ui/chatting/gallery/b;
+    iget-object v2, v2, Lcom/tencent/mm/ui/chatting/gallery/j;->lET:Lcom/tencent/mm/ui/chatting/gallery/b;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/chatting/gallery/b;->lem:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    iget-object v2, v2, Lcom/tencent/mm/ui/chatting/gallery/b;->lEz:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v2, v2, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v3, 0x7f0b1453
+    const v3, 0x7f0807c8
 
     invoke-virtual {v2, v3}, Landroid/support/v7/app/ActionBarActivity;->getString(I)Ljava/lang/String;
 
@@ -136,30 +136,30 @@
 
     goto :goto_0
 
-    .line 231
+    .line 233
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpJSmuQVFTi9B0ynMnS76y+/Pqewi8jmiJ0="
+    const-string/jumbo v0, "MicroMsg.ImageGalleryViewHolder"
 
     const-string/jumbo v1, "startActivity fail, activity not found"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 232
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1$1;->lhr:Lcom/tencent/mm/ui/chatting/gallery/j$1;
+    .line 234
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/j$1$1;->lHC:Lcom/tencent/mm/ui/chatting/gallery/j$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/j$1;->lhq:Lcom/tencent/mm/ui/chatting/gallery/j;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/j$1;->lHB:Lcom/tencent/mm/ui/chatting/gallery/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/j;->leH:Lcom/tencent/mm/ui/chatting/gallery/b;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/j;->lET:Lcom/tencent/mm/ui/chatting/gallery/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/b;->lem:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/b;->lEz:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
-    const v1, 0x7f0b1463
+    const v1, 0x7f080779
 
-    const v2, 0x7f0b1462
+    const v2, 0x7f08077a
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->f(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
     goto :goto_0
 .end method

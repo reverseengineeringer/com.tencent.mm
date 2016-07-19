@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic exO:Lcom/tencent/mm/plugin/gwallet/a/c;
+.field final synthetic eEi:Lcom/tencent/mm/plugin/gwallet/a/c;
 
-.field final synthetic exP:Lcom/tencent/mm/plugin/gwallet/a/b$2;
+.field final synthetic eEj:Lcom/tencent/mm/plugin/gwallet/a/b$2;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 401
-    iput-object p1, p0, Lcom/tencent/mm/plugin/gwallet/a/b$2$1;->exP:Lcom/tencent/mm/plugin/gwallet/a/b$2;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/gwallet/a/b$2$1;->eEj:Lcom/tencent/mm/plugin/gwallet/a/b$2;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/gwallet/a/b$2$1;->exO:Lcom/tencent/mm/plugin/gwallet/a/c;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/gwallet/a/b$2$1;->eEi:Lcom/tencent/mm/plugin/gwallet/a/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,11 +45,11 @@
 
     .prologue
     .line 403
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/a/b$2$1;->exP:Lcom/tencent/mm/plugin/gwallet/a/b$2;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/a/b$2$1;->eEj:Lcom/tencent/mm/plugin/gwallet/a/b$2;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/gwallet/a/b$2;->exN:Lcom/tencent/mm/plugin/gwallet/a/b$b;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/gwallet/a/b$2;->eEh:Lcom/tencent/mm/plugin/gwallet/a/b$b;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/gwallet/a/b$2$1;->exO:Lcom/tencent/mm/plugin/gwallet/a/c;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/gwallet/a/b$2$1;->eEi:Lcom/tencent/mm/plugin/gwallet/a/c;
 
     const/4 v2, 0x0
 

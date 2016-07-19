@@ -1,6 +1,6 @@
 package com.tencent.mm.c.c;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.concurrent.BlockingQueue;
 
 public final class c$a
@@ -10,40 +10,40 @@ public final class c$a
   
   public final void run()
   {
-    u.i("!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7", "Silk Thread start run");
+    v.i("MicroMsg.SilkWriter", "Silk Thread start run");
     int i;
     for (;;)
     {
       boolean bool;
-      synchronized (arM)
+      synchronized (adu)
       {
-        bool = c.a(arM);
-        u.d("!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7", "ThreadSilk in :" + bool + " cnt :" + c.b(arM).size());
+        bool = c.a(adu);
+        v.d("MicroMsg.SilkWriter", "ThreadSilk in :" + bool + " cnt :" + c.b(adu).size());
         if (bool) {
-          if (c.b(arM).isEmpty()) {
+          if (c.b(adu).isEmpty()) {
             break label275;
           }
         }
       }
       continue;
-      i = c.b(arM).size();
+      i = c.b(adu).size();
       if ((i > 10) || (bool))
       {
-        u.w("!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7", "speed up silkcodec queue:" + i + " stop:" + bool);
+        v.w("MicroMsg.SilkWriter", "speed up silkcodec queue:" + i + " stop:" + bool);
         i = 0;
       }
     }
     for (;;)
     {
       int j = i;
-      if (lWcount >= 10)
+      if (kmcount >= 10)
       {
         j = i;
-        if (lWarz > 240L) {
+        if (kmadh > 240L) {
           j = 0;
         }
       }
-      arM.a(localInterruptedException, j);
+      adu.a(localInterruptedException, j);
       break;
       if (i < 9) {
         i = 1;

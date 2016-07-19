@@ -2,8 +2,8 @@ package com.tencent.mm.ui.chatting;
 
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.Message;
+import com.tencent.mm.sdk.platformtools.ac;
 
 public final class ChattingSendDataToDeviceUI$d
   extends Thread
@@ -13,7 +13,7 @@ public final class ChattingSendDataToDeviceUI$d
   public final void run()
   {
     int i = 0;
-    while (ChattingSendDataToDeviceUI.a(kXv))
+    while (ChattingSendDataToDeviceUI.a(lxJ))
     {
       int j = i;
       try
@@ -22,9 +22,9 @@ public final class ChattingSendDataToDeviceUI$d
         j = i;
         what = 1;
         j = i;
-        int k = kXv.getResources().getStringArray(2131558446).length;
+        int k = lxJ.getResources().getStringArray(2131296296).length;
         j = i;
-        Object localObject = kXv.getResources().getStringArray(2131558446);
+        Object localObject = lxJ.getResources().getStringArray(2131296296);
         i += 1;
         localObject = localObject[(i % k)];
         j = i;
@@ -34,7 +34,7 @@ public final class ChattingSendDataToDeviceUI$d
         j = i;
         localMessage.setData(localBundle);
         j = i;
-        ChattingSendDataToDeviceUI.b(kXv).sendMessage(localMessage);
+        ChattingSendDataToDeviceUI.b(lxJ).sendMessage(localMessage);
         j = i;
         Thread.sleep(500L);
       }

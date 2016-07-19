@@ -1,24 +1,34 @@
 package com.tencent.mm.ui;
 
-import android.app.Activity;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
-import android.content.Intent;
-import com.tencent.mm.ui.base.b;
+import android.content.Context;
+import com.tencent.mm.pluginsdk.i.ad;
+import com.tencent.mm.pluginsdk.i.ag;
+import com.tencent.mm.pluginsdk.model.app.a;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class n$4
-  implements DialogInterface.OnCancelListener
+  implements Runnable
 {
-  n$4(Intent paramIntent, Activity paramActivity) {}
+  n$4(int paramInt, String paramString, Context paramContext) {}
   
-  public final void onCancel(DialogInterface paramDialogInterface)
+  public final void run()
   {
-    if (kqi != null)
-    {
-      cms.finish();
-      cms.startActivity(kqi);
-      b.w(cms, kqi);
+    if ((kPp == 4) && (a.aUd() == null)) {
+      v.w("MicroMsg.MMErrorProcessor", "alphaUpdateInfo expired");
     }
+    while ((i.ag.aTE() == null) || (i.ag.aTE().uo(dms) == null)) {
+      return;
+    }
+    ad.k(new Runnable()
+    {
+      public final void run()
+      {
+        if (i.ag.aTE() != null) {
+          i.ag.aTE().bV(val$context);
+        }
+      }
+    });
   }
 }
 

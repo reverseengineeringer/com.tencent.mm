@@ -4,8 +4,8 @@
 
 
 # virtual methods
-.method public abstract EB(Ljava/lang/String;)V
+.method public abstract GE(Ljava/lang/String;)J
 .end method
 
-.method public abstract EN(Ljava/lang/String;)I
+.method public abstract M(Lcom/tencent/mm/storage/k;)Z
 .end method

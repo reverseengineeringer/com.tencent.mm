@@ -2,14 +2,14 @@ package com.tencent.mm.storage;
 
 import android.database.Cursor;
 import com.tencent.mm.dbsupport.newcursor.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.r;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.s;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class c
-  implements a
+  implements a<String>
 {
-  public long bvi;
+  public long bjS;
   public String field_alias;
   public String field_conRemark;
   public int field_deleteFlag;
@@ -21,9 +21,9 @@ public final class c
   public String field_username;
   public int field_verifyFlag;
   public int field_weiboFlag;
-  public CharSequence jZZ;
+  public CharSequence kAv;
   
-  private void aWh()
+  private void bbu()
   {
     if (field_lvbuff == null) {}
     for (;;)
@@ -33,36 +33,36 @@ public final class c
       {
         if ((field_lvbuff != null) && (field_lvbuff.length != 0))
         {
-          r localr = new r();
-          if (localr.aS(field_lvbuff) == 0)
+          s locals = new s();
+          if (locals.aZ(field_lvbuff) == 0)
           {
-            localr.pm(4);
-            localr.pm(4);
-            localr.aUt();
-            localr.pm(8);
-            localr.pm(4);
-            localr.aUt();
-            localr.aUt();
-            localr.pm(4);
-            localr.pm(4);
-            localr.aUt();
-            localr.aUt();
-            localr.pm(4);
-            localr.pm(4);
-            field_signature = localr.getString();
-            localr.aUt();
-            localr.aUt();
-            localr.aUt();
-            localr.pm(4);
-            localr.pm(4);
-            localr.aUt();
-            localr.pm(4);
-            localr.aUt();
-            localr.aUt();
-            localr.pm(4);
-            localr.pm(4);
-            if (!localr.aUu()) {
-              field_remarkDesc = localr.getString();
+            locals.rd(4);
+            locals.rd(4);
+            locals.aZx();
+            locals.rd(8);
+            locals.rd(4);
+            locals.aZx();
+            locals.aZx();
+            locals.rd(4);
+            locals.rd(4);
+            locals.aZx();
+            locals.aZx();
+            locals.rd(4);
+            locals.rd(4);
+            field_signature = locals.getString();
+            locals.aZx();
+            locals.aZx();
+            locals.aZx();
+            locals.rd(4);
+            locals.rd(4);
+            locals.aZx();
+            locals.rd(4);
+            locals.aZx();
+            locals.aZx();
+            locals.rd(4);
+            locals.rd(4);
+            if (!locals.aZy()) {
+              field_remarkDesc = locals.getString();
             }
             field_lvbuff = null;
             return;
@@ -71,7 +71,7 @@ public final class c
       }
       catch (Exception localException)
       {
-        u.e("!44@/B4Tb64lLpJvPADYHZ60VyUytScpYspw/jijm5ieZHA=", "exception:%s", new Object[] { ay.b(localException) });
+        v.e("MicroMsg.AddressUIContact", "exception:%s", new Object[] { be.f(localException) });
       }
     }
   }
@@ -92,13 +92,13 @@ public final class c
       field_weiboFlag = ((int)paramLong);
       return;
     case 7: 
-      bvi = paramLong;
+      bjS = paramLong;
       return;
     }
     field_deleteFlag = ((int)paramLong);
   }
   
-  public final void c(Cursor paramCursor)
+  public final void b(Cursor paramCursor)
   {
     field_username = paramCursor.getString(0);
     field_nickname = paramCursor.getString(1);
@@ -107,10 +107,10 @@ public final class c
     field_verifyFlag = paramCursor.getInt(4);
     field_showHead = paramCursor.getInt(5);
     field_weiboFlag = paramCursor.getInt(6);
-    bvi = paramCursor.getLong(7);
+    bjS = paramCursor.getLong(7);
     field_deleteFlag = paramCursor.getInt(8);
     field_lvbuff = paramCursor.getBlob(9);
-    aWh();
+    bbu();
   }
   
   public final void e(int paramInt, byte[] paramArrayOfByte)
@@ -120,17 +120,17 @@ public final class c
     }
   }
   
-  public final void k(int paramInt, long paramLong)
+  public final void i(int paramInt, long paramLong)
   {
     w(paramInt, paramLong);
   }
   
-  public final void l(int paramInt, long paramLong)
+  public final void j(int paramInt, long paramLong)
   {
     w(paramInt, paramLong);
   }
   
-  public final void l(int paramInt, String paramString)
+  public final void m(int paramInt, String paramString)
   {
     switch (paramInt)
     {
@@ -149,9 +149,9 @@ public final class c
     field_conRemark = paramString;
   }
   
-  public final void qC()
+  public final void pg()
   {
-    aWh();
+    bbu();
   }
 }
 

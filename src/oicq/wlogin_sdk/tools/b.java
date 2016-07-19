@@ -4,7 +4,7 @@ public class b
 {
   public void e(int paramInt, String paramString1, String paramString2) {}
   
-  public void o(int paramInt, String paramString) {}
+  public void p(int paramInt, String paramString) {}
 }
 
 /* Location:

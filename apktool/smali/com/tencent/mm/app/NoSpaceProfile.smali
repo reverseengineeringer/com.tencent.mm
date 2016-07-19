@@ -1,10 +1,10 @@
 .class public Lcom/tencent/mm/app/NoSpaceProfile;
-.super Lcom/tencent/mm/compatible/loader/h;
+.super Lcom/tencent/mm/compatible/loader/e;
 .source "SourceFile"
 
 
 # static fields
-.field public static final alg:Ljava/lang/String;
+.field public static final Yf:Ljava/lang/String;
 
 
 # direct methods
@@ -17,7 +17,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getPackageName()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -35,7 +35,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/app/NoSpaceProfile;->alg:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/app/NoSpaceProfile;->Yf:Ljava/lang/String;
 
     return-void
 .end method
@@ -45,7 +45,7 @@
 
     .prologue
     .line 14
-    invoke-direct {p0}, Lcom/tencent/mm/compatible/loader/h;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/compatible/loader/e;-><init>()V
 
     return-void
 .end method
@@ -79,24 +79,24 @@
     invoke-static {}, Lcom/tencent/mm/xlog/Xlog;->init()V
 
     .line 24
-    sget-object v0, Lcom/tencent/mm/app/NoSpaceProfile;->alg:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/app/NoSpaceProfile;->Yf:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/app/h;->aP(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/app/g;->aU(Ljava/lang/String;)Z
 
     .line 28
     invoke-static {}, Lcom/tencent/mm/compatible/util/i;->setupBrokenLibraryHandler()V
 
     .line 30
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->dS(Landroid/content/Context;)Ljava/util/Locale;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->dT(Landroid/content/Context;)Ljava/util/Locale;
 
     .line 32
-    iget-object v0, p0, Lcom/tencent/mm/app/NoSpaceProfile;->btM:Landroid/app/Application;
+    iget-object v0, p0, Lcom/tencent/mm/app/NoSpaceProfile;->bhP:Landroid/app/Application;
 
-    invoke-static {v0}, Lcom/tencent/mm/app/MMApplicationWrapper;->a(Landroid/app/Application;)V
+    invoke-static {v0}, Lcom/tencent/mm/app/MMApplicationWrapper;->initSVGPreload(Landroid/app/Application;)V
 
     .line 33
     return-void

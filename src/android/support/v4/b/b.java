@@ -2,11 +2,11 @@ package android.support.v4.b;
 
 import android.os.Parcel;
 
-public abstract interface b
+public abstract interface b<T>
 {
-  public abstract Object createFromParcel(Parcel paramParcel, ClassLoader paramClassLoader);
+  public abstract T createFromParcel(Parcel paramParcel, ClassLoader paramClassLoader);
   
-  public abstract Object[] newArray(int paramInt);
+  public abstract T[] newArray(int paramInt);
 }
 
 /* Location:

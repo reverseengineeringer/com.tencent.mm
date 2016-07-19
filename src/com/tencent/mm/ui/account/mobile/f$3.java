@@ -4,9 +4,9 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.modelsimple.t;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.modelsimple.r;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.applet.SecurityImage;
 import com.tencent.mm.ui.base.g;
 
@@ -17,17 +17,17 @@ final class f$3
   
   public final void onClick(final DialogInterface paramDialogInterface, int paramInt)
   {
-    u.d("!56@/B4Tb64lLpKNhhU94SG29spf7eLCt7FyXMgJYg1JX5PtxO2xLuDbWQ==", "imgSid:" + kyz.ktj.ktL + " img len" + kyz.ktj.ktN.length + " " + com.tencent.mm.compatible.util.f.oZ());
-    paramDialogInterface = new t(kyz.ktj.cbh, kyz.ktj.ktK, kyz.ktj.ktO, kyz.kqh.getSecImgCode(), kyz.kqh.getSecImgSid(), kyz.kqh.getSecImgEncryptKey(), 1, "", false, true);
-    ah.tE().d(paramDialogInterface);
-    MobileVerifyUI localMobileVerifyUI = kyz.kyy;
-    kyz.kyy.getString(2131430877);
-    g.a(localMobileVerifyUI, kyz.kyy.getString(2131427765), true, new DialogInterface.OnCancelListener()
+    v.d("MicroMsg.MobileVerifyForgetPwdLogic", "imgSid:" + kXG.kSr.kSS + " img len" + kXG.kSr.kSU.length + " " + com.tencent.mm.compatible.util.f.nr());
+    paramDialogInterface = new r(kXG.kSr.bUU, kXG.kSr.kSR, kXG.kSr.kSV, kXG.kPm.bhw(), kXG.kPm.kSS, kXG.kPm.kST, 1, "", false, true);
+    ah.tF().a(paramDialogInterface, 0);
+    MobileVerifyUI localMobileVerifyUI = kXG.kXF;
+    kXG.kXF.getString(2131231028);
+    g.a(localMobileVerifyUI, kXG.kXF.getString(2131233543), true, new DialogInterface.OnCancelListener()
     {
       public final void onCancel(DialogInterface paramAnonymousDialogInterface)
       {
-        ah.tE().c(paramDialogInterface);
-        ah.tE().b(701, kyz);
+        ah.tF().c(paramDialogInterface);
+        ah.tF().b(701, kXG);
       }
     });
   }

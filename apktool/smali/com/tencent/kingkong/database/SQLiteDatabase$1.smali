@@ -1,4 +1,4 @@
-.class final Lcom/tencent/kingkong/database/SQLiteDatabase$1;
+.class Lcom/tencent/kingkong/database/SQLiteDatabase$1;
 .super Ljava/lang/ThreadLocal;
 .source "SourceFile"
 
@@ -13,6 +13,15 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/ThreadLocal",
+        "<",
+        "Lcom/tencent/kingkong/database/SQLiteSession;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
 .field final synthetic this$0:Lcom/tencent/kingkong/database/SQLiteDatabase;
@@ -23,10 +32,9 @@
     .locals 0
 
     .prologue
-    .line 1
+    .line 161
     iput-object p1, p0, Lcom/tencent/kingkong/database/SQLiteDatabase$1;->this$0:Lcom/tencent/kingkong/database/SQLiteDatabase;
 
-    .line 161
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void
@@ -34,7 +42,7 @@
 
 
 # virtual methods
-.method protected final initialValue()Lcom/tencent/kingkong/database/SQLiteSession;
+.method protected initialValue()Lcom/tencent/kingkong/database/SQLiteSession;
     .locals 1
 
     .prologue
@@ -48,11 +56,11 @@
     return-object v0
 .end method
 
-.method protected final bridge synthetic initialValue()Ljava/lang/Object;
+.method protected bridge synthetic initialValue()Ljava/lang/Object;
     .locals 1
 
     .prologue
-    .line 1
+    .line 161
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteDatabase$1;->initialValue()Lcom/tencent/kingkong/database/SQLiteSession;
 
     move-result-object v0

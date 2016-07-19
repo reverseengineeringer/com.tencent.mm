@@ -1,6 +1,6 @@
 package com.tencent.mm.c.a;
 
-import com.tencent.mm.r.f.b;
+import com.tencent.mm.t.f.b;
 
 final class a$1$1
   implements Runnable
@@ -9,7 +9,7 @@ final class a$1$1
   
   public final void run()
   {
-    aps.apr.app.onError();
+    aaK.aaJ.aaH.onError();
   }
 }
 

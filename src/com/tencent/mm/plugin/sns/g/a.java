@@ -1,142 +1,212 @@
 package com.tencent.mm.plugin.sns.g;
 
-import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import com.tencent.mm.modelsns.b;
-import com.tencent.mm.plugin.sns.data.h;
-import com.tencent.mm.plugin.sns.h.k;
-import com.tencent.mm.plugin.sns.ui.MaskTextView;
-import com.tencent.mm.plugin.sns.ui.SnsHeader;
-import com.tencent.mm.plugin.sns.ui.an;
-import com.tencent.mm.plugin.sns.ui.b.a.b;
-import com.tencent.mm.plugin.sns.ui.f;
-import com.tencent.mm.protocal.b.aqi;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.adw;
+import com.tencent.mm.protocal.b.ady;
+import com.tencent.mm.protocal.b.as;
+import com.tencent.mm.protocal.b.bs;
+import com.tencent.mm.protocal.b.bt;
+import com.tencent.mm.protocal.b.ye;
+import com.tencent.mm.sdk.platformtools.r;
+import com.tencent.mm.sdk.platformtools.v;
+import java.util.LinkedList;
+import java.util.Map;
 
 public final class a
 {
-  public ListView cqv;
-  public f gSM;
-  public SnsHeader gSN;
-  public boolean gSO = false;
-  private long gSP;
-  public int mScreenHeight = 0;
-  public int mScreenWidth = 0;
-  
-  public final void azQ()
+  private static String iF(String paramString)
   {
-    int i = b.cck;
-    if (i == 2) {}
-    while ((i == 4) && (!gSO)) {
-      return;
+    String str = paramString;
+    if (paramString == null) {
+      str = "";
     }
-    long l = System.currentTimeMillis();
-    gSP = System.currentTimeMillis();
-    Object localObject1 = com.tencent.mm.modelsns.a.dQ(501);
-    cca = gSP;
-    ((com.tencent.mm.modelsns.a)localObject1).dT(mScreenWidth).dT(mScreenHeight);
-    int k = gSN.getTop();
-    int j = gSN.getHeight();
-    i = j;
-    if (k < 0) {
-      i = j + k;
-    }
-    ((com.tencent.mm.modelsns.a)localObject1).dT(i);
-    ((com.tencent.mm.modelsns.a)localObject1).dT(0);
-    j = cqv.getFirstVisiblePosition() - 1;
-    int m = cqv.getLastVisiblePosition() - 1;
-    ((com.tencent.mm.modelsns.a)localObject1).dT(j);
-    ((com.tencent.mm.modelsns.a)localObject1).dT(m);
-    ((com.tencent.mm.modelsns.a)localObject1).CV();
-    int n = gSM.gRM.getCount();
-    boolean bool = false;
-    if (cqv.getChildAt(0) != null) {
-      bool = cqv.getChildAt(0) instanceof SnsHeader;
-    }
-    u.v("!44@/B4Tb64lLpJ9fdCs9cQeASsue4skXvp3dkd/YyAJDaA=", "first last " + j + " " + m + " isHeaderExist " + bool);
-    if (bool)
+    return str;
+  }
+  
+  private static int iG(String paramString)
+  {
+    try
     {
-      i = 1;
-      int i1 = cqv.getChildCount();
-      label246:
-      if (j > m) {
-        break label960;
-      }
-      k = i;
-      if (j < n)
-      {
-        k = i;
-        if (j >= 0)
-        {
-          if (i < i1) {
-            break label314;
-          }
-          u.e("!44@/B4Tb64lLpJ9fdCs9cQeASsue4skXvp3dkd/YyAJDaA=", "childPos biger than childCount %d %d", new Object[] { Integer.valueOf(i), Integer.valueOf(i1) });
-          k = i;
-        }
-      }
+      int i = Integer.parseInt(paramString);
+      return i;
     }
-    for (;;)
+    catch (Exception localException)
     {
-      j += 1;
-      i = k;
-      break label246;
-      i = 0;
+      v.e("MicroMsg.AlbumBgHelper", "parserInt error " + paramString);
+    }
+    return 0;
+  }
+  
+  private static float jB(String paramString)
+  {
+    if (paramString == null) {
+      return 0.0F;
+    }
+    try
+    {
+      float f = Float.parseFloat(paramString);
+      return f;
+    }
+    catch (Exception localException)
+    {
+      v.e("MicroMsg.AlbumBgHelper", "parseFloat error " + paramString);
+    }
+    return 0.0F;
+  }
+  
+  private static ady l(Map<String, String> paramMap, String paramString)
+  {
+    String str2 = paramString + ".size.$width";
+    String str1 = paramString + ".size.$height";
+    Object localObject = paramString + ".size.$totalSize";
+    paramString = (String)paramMap.get(str2);
+    str1 = (String)paramMap.get(str1);
+    paramMap = (String)paramMap.get(localObject);
+    localObject = new ady();
+    jYM = 0.0F;
+    jYL = 0.0F;
+    jYN = 0.0F;
+    if (paramString != null) {
+      jYL = jB(paramString);
+    }
+    if (str1 != null) {
+      jYM = jB(str1);
+    }
+    if (paramMap != null) {
+      jYN = jB(paramMap);
+    }
+    return (ady)localObject;
+  }
+  
+  private static LinkedList<adw> m(Map<String, String> paramMap, String paramString)
+  {
+    LinkedList localLinkedList = new LinkedList();
+    int i = 0;
+    String str9;
+    String str4;
+    String str8;
+    String str7;
+    String str6;
+    String str3;
+    String str2;
+    String str1;
+    String str5;
+    if (i != 0)
+    {
+      str9 = paramString + ".media" + i + ".id";
+      str4 = paramString + ".media" + i + ".type";
+      str8 = paramString + ".media" + i + ".title";
+      str7 = paramString + ".media" + i + ".desc";
+      str6 = paramString + ".media" + i + ".url";
+      str3 = paramString + ".media" + i + ".thumb";
+      str2 = paramString + ".media" + i + ".url.$type";
+      str1 = paramString + ".media" + i + ".thumb.$type";
+      str5 = paramString + ".media" + i + ".private";
+    }
+    for (Object localObject = paramString + ".media" + i;; localObject = paramString + ".media")
+    {
+      if ((str9 == null) || (str4 == null)) {
+        break label784;
+      }
+      localObject = l(paramMap, (String)localObject);
+      str9 = (String)paramMap.get(str9);
+      str4 = (String)paramMap.get(str4);
+      str8 = (String)paramMap.get(str8);
+      str7 = (String)paramMap.get(str7);
+      str6 = (String)paramMap.get(str6);
+      str5 = (String)paramMap.get(str5);
+      str3 = (String)paramMap.get(str3);
+      str2 = (String)paramMap.get(str2);
+      str1 = (String)paramMap.get(str1);
+      if ((str9 == null) || (str4 == null)) {
+        break label784;
+      }
+      adw localadw = new adw();
+      jvB = iF(str9);
+      Type = iG(str4);
+      aez = iF(str8);
+      elX = iF(str7);
+      emu = iF(str6);
+      jYf = iG(str2);
+      jYg = iF(str3);
+      jYh = iG(str1);
+      jYi = iG(str5);
+      jYj = ((ady)localObject);
+      localLinkedList.add(localadw);
+      i += 1;
       break;
-      label314:
-      Object localObject2 = cqv.getChildAt(i);
-      k = i + 1;
-      i = ((View)localObject2).getTop();
-      int i2 = ((View)localObject2).getLeft();
-      int i3 = ((View)localObject2).getHeight();
-      int i4 = ((View)localObject2).getWidth();
-      u.v("!44@/B4Tb64lLpJ9fdCs9cQeASsue4skXvp3dkd/YyAJDaA=", "rootview top left " + i + " " + i2 + " viewWidth: " + i4 + " viewHeight: " + i3);
-      localObject1 = gSM.gRM.ly(j);
-      com.tencent.mm.modelsns.a locala = com.tencent.mm.modelsns.a.dQ(502);
-      cca = gSP;
-      locala.jf(h.g((k)localObject1)).dT(field_type).bc(((k)localObject1).lN(32)).dT(i2).dT(i).dT(i4).dT(i3);
-      locala.CV();
-      if ((localObject2 != null) && (((View)localObject2).getTag() != null) && ((((View)localObject2).getTag() instanceof a.b)))
-      {
-        localObject2 = (a.b)((View)localObject2).getTag();
-        if (gVT != null)
-        {
-          i = gVT.getTop();
-          i2 = gVT.getLeft();
-          i3 = hnV.getHeight();
-          i4 = hnV.getWidth();
-          int i5 = hnW.getTop();
-          int i6 = hnW.getLeft();
-          i5 += i;
-          i6 += i2;
-          int i7 = hnW.getHeight();
-          int i8 = hnW.getWidth();
-          u.v("!44@/B4Tb64lLpJ9fdCs9cQeASsue4skXvp3dkd/YyAJDaA=", "like " + i + " " + i2 + " likeheight: " + i3 + " likewidth: " + i4);
-          u.v("!44@/B4Tb64lLpJ9fdCs9cQeASsue4skXvp3dkd/YyAJDaA=", "comment " + i5 + " " + i6 + " commentheight: " + i7 + " commentwidth: " + i8);
-          u.v("!44@/B4Tb64lLpJ9fdCs9cQeASsue4skXvp3dkd/YyAJDaA=", "holder position " + position + " " + j + " index " + k);
-          if (gFL.jJS != 0)
-          {
-            locala = com.tencent.mm.modelsns.a.dQ(503);
-            cca = gSP;
-            locala.jf(h.g((k)localObject1)).dT(field_type).bc(((k)localObject1).lN(32)).dT(gFL.jJS).dT(i).dT(i2).dT(i4).dT(i3);
-            locala.CV();
-          }
-          if (gFL.jJV != 0)
-          {
-            locala = com.tencent.mm.modelsns.a.dQ(504);
-            cca = gSP;
-            locala.jf(h.g((k)localObject1)).dT(field_type).bc(((k)localObject1).lN(32)).dT(gFL.jJV).dT(i6).dT(i5).dT(i8).dT(i7);
-            locala.CV();
-          }
-        }
-      }
+      str9 = paramString + ".media.id";
+      str4 = paramString + ".media.type";
+      str8 = paramString + ".media.title";
+      str7 = paramString + ".media.desc";
+      str6 = paramString + ".media.url";
+      str3 = paramString + ".media.thumb";
+      str2 = paramString + ".media.url.$type";
+      str1 = paramString + ".media.thumb.$type";
+      str5 = paramString + ".media.private";
     }
-    label960:
-    localObject1 = com.tencent.mm.modelsns.a.dQ(506);
-    cca = gSP;
-    ((com.tencent.mm.modelsns.a)localObject1).CV();
-    u.i("!44@/B4Tb64lLpJ9fdCs9cQeASsue4skXvp3dkd/YyAJDaA=", "end cap: " + (System.currentTimeMillis() - l));
+    label784:
+    return localLinkedList;
+  }
+  
+  public static as wo(String paramString)
+  {
+    Map localMap = r.cr(paramString, "albumList");
+    as localas = new as();
+    if (localMap != null)
+    {
+      emO = iF((String)localMap.get(".albumList.$lang"));
+      paramString = new bs();
+      elW = iF((String)localMap.get(".albumList.album.author.name"));
+      aez = iF((String)localMap.get(".albumList.album.author.title"));
+      jwq = iF((String)localMap.get(".albumList.album.author.description"));
+      jwp = iF((String)localMap.get(".albumList.album.author.quote"));
+      Object localObject1 = new bt();
+      Object localObject2 = l(localMap, ".albumList.album.author.icon.media");
+      String str1 = (String)localMap.get(".albumList.album.author.icon.media.id");
+      String str2 = (String)localMap.get(".albumList.album.author.icon.media.type");
+      String str3 = (String)localMap.get(".albumList.album.author.icon.media.title");
+      String str4 = (String)localMap.get(".albumList.album.author.icon.media.desc");
+      String str5 = (String)localMap.get(".albumList.album.author.icon.media.url");
+      String str6 = (String)localMap.get(".albumList.album.author.icon.media.private");
+      String str7 = (String)localMap.get(".albumList.album.author.icon.media.thumb");
+      String str8 = (String)localMap.get(".albumList.album.author.icon.media.url.$type");
+      String str9 = (String)localMap.get(".albumList.album.author.icon.media.thumb.$type");
+      adw localadw = new adw();
+      jvB = iF(str1);
+      Type = iG(str2);
+      aez = iF(str3);
+      elX = iF(str4);
+      emu = iF(str5);
+      jYf = iG(str8);
+      jYg = iF(str7);
+      jYh = iG(str9);
+      jYi = iG(str6);
+      jYj = ((ady)localObject2);
+      jws = localadw;
+      jwr = ((bt)localObject1);
+      jvr = paramString;
+      int i = 0;
+      localObject2 = new ye();
+      if (i == 0) {
+        localObject1 = ".albumList.album.groupList.group.name";
+      }
+      for (paramString = ".albumList.album.groupList.group.mediaList";; paramString = ".albumList.album.groupList.group" + i + ".mediaList")
+      {
+        localObject1 = (String)localMap.get(localObject1);
+        if (localObject1 == null) {
+          break label501;
+        }
+        elW = iF((String)localObject1);
+        jFv = m(localMap, paramString);
+        jvs.add(localObject2);
+        i += 1;
+        break;
+        localObject1 = ".albumList.album.groupList.group" + i + ".name";
+      }
+      label501:
+      return localas;
+    }
+    return localas;
   }
 }
 

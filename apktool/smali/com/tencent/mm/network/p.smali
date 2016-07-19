@@ -30,23 +30,23 @@
 .method public abstract getUri()Ljava/lang/String;
 .end method
 
-.method public abstract gk(Ljava/lang/String;)V
+.method public abstract gx(Ljava/lang/String;)V
 .end method
 
-.method public abstract vB()Z
+.method public abstract vD()Z
 .end method
 
-.method public abstract vF()I
+.method public abstract vI()I
 .end method
 
-.method public abstract vx()I
+.method public abstract vz()I
 .end method
 
-.method public abstract wf()Lcom/tencent/mm/protocal/e;
+.method public abstract wh()Lcom/tencent/mm/protocal/g;
 .end method
 
-.method public abstract wg()Lcom/tencent/mm/protocal/f;
+.method public abstract wi()Lcom/tencent/mm/protocal/h;
 .end method
 
-.method public abstract wh()I
+.method public abstract wj()I
 .end method

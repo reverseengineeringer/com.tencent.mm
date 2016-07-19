@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ltH:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+.field final synthetic lUJ:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 148
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$5;->ltH:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+    .line 152
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$5;->lUJ:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,10 +40,10 @@
     .locals 2
 
     .prologue
-    .line 151
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$5;->ltH:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+    .line 155
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$5;->lUJ:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->f(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->g(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
     move-result-object v0
 
@@ -51,8 +51,8 @@
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 152
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$5;->ltH:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+    .line 156
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$5;->lUJ:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->c(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Lcom/tencent/mm/ui/tools/ActionBarSearchView$b;
 
@@ -60,16 +60,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 153
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$5;->ltH:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+    .line 157
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$5;->lUJ:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->c(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Lcom/tencent/mm/ui/tools/ActionBarSearchView$b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$b;->bim()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$b;->boj()V
 
-    .line 155
+    .line 159
     :cond_0
     return-void
 .end method

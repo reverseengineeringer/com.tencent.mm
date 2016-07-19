@@ -7,10 +7,10 @@ import android.widget.TextView;
 public final class f$a
   extends a.a
 {
-  public TextView cHk;
-  public TextView cOd;
-  public ImageView czS;
-  public CheckBox czW;
+  public TextView cEo;
+  public ImageView cui;
+  public TextView cuk;
+  public CheckBox cul;
   
   public f$a(f paramf)
   {

@@ -1,6 +1,9 @@
 package com.tencent.mm.pluginsdk.ui.tools;
 
-public enum a$a {}
+public enum a$a
+{
+  private a$a() {}
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.pluginsdk.ui.tools.a.a

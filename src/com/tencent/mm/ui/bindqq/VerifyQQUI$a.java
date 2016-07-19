@@ -1,8 +1,8 @@
 package com.tencent.mm.ui.bindqq;
 
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
-import com.tencent.mm.s.a;
+import com.tencent.mm.t.m;
+import com.tencent.mm.u.a;
 import com.tencent.mm.ui.applet.SecurityImage.b;
 
 final class VerifyQQUI$a
@@ -10,10 +10,10 @@ final class VerifyQQUI$a
 {
   VerifyQQUI$a(VerifyQQUI paramVerifyQQUI) {}
   
-  public final void bby()
+  public final void bgK()
   {
-    a locala = new a(VerifyQQUI.b(kPK), VerifyQQUI.c(kPK), VerifyQQUI.i(kPK), "", VerifyQQUI.j(kPK), 2, true);
-    ah.tE().d(locala);
+    a locala = new a(VerifyQQUI.b(loZ), VerifyQQUI.c(loZ), VerifyQQUI.i(loZ), "", VerifyQQUI.j(loZ), 2, true);
+    ah.tF().a(locala, 0);
   }
 }
 

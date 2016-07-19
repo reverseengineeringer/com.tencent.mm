@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field public cHk:Landroid/widget/TextView;
+.field public cEo:Landroid/widget/TextView;
 
-.field public cOd:Landroid/widget/TextView;
+.field public cui:Landroid/widget/ImageView;
 
-.field public czS:Landroid/widget/ImageView;
+.field public cuk:Landroid/widget/TextView;
 
-.field public czW:Landroid/widget/CheckBox;
+.field public cul:Landroid/widget/CheckBox;
 
-.field final synthetic lne:Lcom/tencent/mm/ui/contact/a/f;
+.field final synthetic lNz:Lcom/tencent/mm/ui/contact/a/f;
 
 
 # direct methods
@@ -32,7 +32,7 @@
 
     .prologue
     .line 82
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/a/f$a;->lne:Lcom/tencent/mm/ui/contact/a/f;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/a/f$a;->lNz:Lcom/tencent/mm/ui/contact/a/f;
 
     invoke-direct {p0, p1}, Lcom/tencent/mm/ui/contact/a/a$a;-><init>(Lcom/tencent/mm/ui/contact/a/a;)V
 

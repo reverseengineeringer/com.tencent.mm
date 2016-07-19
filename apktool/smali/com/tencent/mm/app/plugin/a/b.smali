@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private ans:Lcom/tencent/mm/storage/g;
+.field private aag:Lcom/tencent/mm/storage/g;
 
 
 # direct methods
@@ -25,7 +25,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v2, Lcom/tencent/mm/storage/j;->bxa:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/storage/j;->bpc:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -43,14 +43,14 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/storage/g;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/app/plugin/a/b;->ans:Lcom/tencent/mm/storage/g;
+    iput-object v0, p0, Lcom/tencent/mm/app/plugin/a/b;->aag:Lcom/tencent/mm/storage/g;
 
     .line 22
-    const-string/jumbo v0, "!56@/B4Tb64lLpIRP68/fkv68wdny70logrGavHhEc8vXRtXDiMB7ipI9A=="
+    const-string/jumbo v0, "MicroMsg.DefaultCfgAccessibleImpl"
 
     const-string/jumbo v1, "new DefaultCfgAccessibleImpl."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 23
     return-void
@@ -63,7 +63,7 @@
 
     .prologue
     .line 39
-    const-string/jumbo v0, "!56@/B4Tb64lLpIRP68/fkv68wdny70logrGavHhEc8vXRtXDiMB7ipI9A=="
+    const-string/jumbo v0, "MicroMsg.DefaultCfgAccessibleImpl"
 
     const-string/jumbo v1, "setInt(%s, %s), process : %s"
 
@@ -89,16 +89,16 @@
 
     const/4 v3, 0x2
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aQC()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aVm()Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 40
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/a/b;->ans:Lcom/tencent/mm/storage/g;
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/a/b;->aag:Lcom/tencent/mm/storage/g;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -110,56 +110,12 @@
     return-void
 .end method
 
-.method public final g(ILjava/lang/String;)V
-    .locals 5
-
-    .prologue
-    .line 27
-    const-string/jumbo v0, "!56@/B4Tb64lLpIRP68/fkv68wdny70logrGavHhEc8vXRtXDiMB7ipI9A=="
-
-    const-string/jumbo v1, "setString(%s, %s), process : %s"
-
-    const/4 v2, 0x3
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x1
-
-    aput-object p2, v2, v3
-
-    const/4 v3, 0x2
-
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aQC()Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 28
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/a/b;->ans:Lcom/tencent/mm/storage/g;
-
-    invoke-virtual {v0, p1, p2}, Lcom/tencent/mm/storage/g;->set(ILjava/lang/Object;)V
-
-    .line 29
-    return-void
-.end method
-
 .method public final getInt(II)I
     .locals 5
 
     .prologue
     .line 65
-    const-string/jumbo v0, "!56@/B4Tb64lLpIRP68/fkv68wdny70logrGavHhEc8vXRtXDiMB7ipI9A=="
+    const-string/jumbo v0, "MicroMsg.DefaultCfgAccessibleImpl"
 
     const-string/jumbo v1, "getInt(%s, %s), process : %s"
 
@@ -185,17 +141,17 @@
 
     const/4 v3, 0x2
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aQC()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aVm()Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 67
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/a/b;->ans:Lcom/tencent/mm/storage/g;
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/a/b;->aag:Lcom/tencent/mm/storage/g;
 
     invoke-virtual {v0, p1, p2}, Lcom/tencent/mm/storage/g;->getInt(II)I
     :try_end_0
@@ -214,11 +170,11 @@
 .end method
 
 .method public final getLong(IJ)J
-    .locals 5
+    .locals 6
 
     .prologue
     .line 55
-    const-string/jumbo v0, "!56@/B4Tb64lLpIRP68/fkv68wdny70logrGavHhEc8vXRtXDiMB7ipI9A=="
+    const-string/jumbo v0, "MicroMsg.DefaultCfgAccessibleImpl"
 
     const-string/jumbo v1, "getLong(%s, %s), process : %s"
 
@@ -244,17 +200,17 @@
 
     const/4 v3, 0x2
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aQC()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aVm()Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 57
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/a/b;->ans:Lcom/tencent/mm/storage/g;
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/a/b;->aag:Lcom/tencent/mm/storage/g;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/tencent/mm/storage/g;->getLong(IJ)J
     :try_end_0
@@ -277,7 +233,7 @@
 
     .prologue
     .line 45
-    const-string/jumbo v0, "!56@/B4Tb64lLpIRP68/fkv68wdny70logrGavHhEc8vXRtXDiMB7ipI9A=="
+    const-string/jumbo v0, "MicroMsg.DefaultCfgAccessibleImpl"
 
     const-string/jumbo v1, "getString(%s, %s), process : %s"
 
@@ -299,17 +255,17 @@
 
     const/4 v3, 0x2
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aQC()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aVm()Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 47
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/a/b;->ans:Lcom/tencent/mm/storage/g;
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/a/b;->aag:Lcom/tencent/mm/storage/g;
 
     invoke-virtual {v0, p1, p2}, Lcom/tencent/mm/storage/g;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
@@ -331,12 +287,12 @@
     goto :goto_0
 .end method
 
-.method public final j(IJ)V
-    .locals 5
+.method public final h(IJ)V
+    .locals 6
 
     .prologue
     .line 33
-    const-string/jumbo v0, "!56@/B4Tb64lLpIRP68/fkv68wdny70logrGavHhEc8vXRtXDiMB7ipI9A=="
+    const-string/jumbo v0, "MicroMsg.DefaultCfgAccessibleImpl"
 
     const-string/jumbo v1, "setLong(%s, %s), process : %s"
 
@@ -362,19 +318,63 @@
 
     const/4 v3, 0x2
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aQC()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aVm()Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/a/b;->ans:Lcom/tencent/mm/storage/g;
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/a/b;->aag:Lcom/tencent/mm/storage/g;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/tencent/mm/storage/g;->setLong(IJ)V
 
     .line 35
+    return-void
+.end method
+
+.method public final h(ILjava/lang/String;)V
+    .locals 5
+
+    .prologue
+    .line 27
+    const-string/jumbo v0, "MicroMsg.DefaultCfgAccessibleImpl"
+
+    const-string/jumbo v1, "setString(%s, %s), process : %s"
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x1
+
+    aput-object p2, v2, v3
+
+    const/4 v3, 0x2
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aVm()Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 28
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/a/b;->aag:Lcom/tencent/mm/storage/g;
+
+    invoke-virtual {v0, p1, p2}, Lcom/tencent/mm/storage/g;->set(ILjava/lang/Object;)V
+
+    .line 29
     return-void
 .end method

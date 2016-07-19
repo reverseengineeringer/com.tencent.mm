@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/RegByEmailUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/RegByEmailUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+.field final synthetic kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 203
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$10;->kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$10;->kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,7 +53,7 @@
 
     .line 208
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$10;->kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$10;->kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/RegByEmailUI;->d(Lcom/tencent/mm/ui/account/RegByEmailUI;)Landroid/widget/CheckBox;
 
@@ -72,7 +72,7 @@
 
     .line 211
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$10;->kuo:Lcom/tencent/mm/ui/account/RegByEmailUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByEmailUI$10;->kTv:Lcom/tencent/mm/ui/account/RegByEmailUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByEmailUI;->c(Lcom/tencent/mm/ui/account/RegByEmailUI;)V
 

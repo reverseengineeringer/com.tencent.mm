@@ -16,10 +16,19 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Landroid/support/v7/internal/widget/AbsSpinnerICS$SavedState;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field nj:J
+.field nz:J
 
 .field position:I
 
@@ -51,7 +60,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$SavedState;->nj:J
+    iput-wide v0, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$SavedState;->nz:J
 
     .line 363
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -88,7 +97,7 @@
 
 # virtual methods
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     .prologue
     .line 375
@@ -116,9 +125,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$SavedState;->nj:J
+    iget-wide v2, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$SavedState;->nz:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -155,7 +164,7 @@
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
     .line 369
-    iget-wide v0, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$SavedState;->nj:J
+    iget-wide v0, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$SavedState;->nz:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 

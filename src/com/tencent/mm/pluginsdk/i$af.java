@@ -4,11 +4,11 @@ public abstract interface i$af
 {
   public static abstract interface a
   {
-    public abstract String aKK();
+    public abstract String aOr();
     
-    public abstract void aKL();
+    public abstract void aOs();
     
-    public abstract boolean aKM();
+    public abstract boolean aOt();
   }
 }
 

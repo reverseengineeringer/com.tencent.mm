@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/RegSetInfoUI;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/account/RegSetInfoUI;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+.field final synthetic kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 940
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$15;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$15;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 944
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$15;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$15;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->a(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Landroid/widget/EditText;
 
@@ -50,7 +50,7 @@
     invoke-virtual {v0}, Landroid/widget/EditText;->clearFocus()V
 
     .line 945
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$15;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$15;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->a(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Landroid/widget/EditText;
 

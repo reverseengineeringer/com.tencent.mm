@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kPa:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$4;
+.field final synthetic loq:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$4;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 153
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$4$1;->kPa:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$4;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$4$1;->loq:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 156
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$4$1;->kPa:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$4;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$4$1;->loq:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$4;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$4;->kOZ:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$4;->lop:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;->b(Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;)V
 

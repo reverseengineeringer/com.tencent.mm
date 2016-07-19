@@ -5,9 +5,9 @@ import java.io.File;
 
 public final class h
 {
-  private static String CF(String paramString)
+  private static String ES(String paramString)
   {
-    if (ay.kz(paramString)) {}
+    if (be.kf(paramString)) {}
     while (paramString.length() <= 4) {
       return null;
     }
@@ -15,7 +15,7 @@ public final class h
   }
   
   /* Error */
-  public static boolean CG(String paramString)
+  public static boolean ET(String paramString)
   {
     // Byte code:
     //   0: new 46	java/io/File
@@ -75,7 +75,7 @@ public final class h
   
   public static String a(String paramString1, String paramString2, String paramString3, String paramString4, int paramInt, boolean paramBoolean)
   {
-    if (ay.kz(paramString1)) {}
+    if (be.kf(paramString1)) {}
     label139:
     for (;;)
     {
@@ -84,23 +84,23 @@ public final class h
       {
         String str = "";
         if (paramInt == 1) {
-          str = CF(paramString3);
+          str = ES(paramString3);
         }
         for (;;)
         {
-          if (ay.kz(str)) {
+          if (be.kf(str)) {
             break label139;
           }
           paramString1 = paramString1 + str;
-          if ((paramBoolean) && (!CG(paramString1))) {
+          if ((paramBoolean) && (!ET(paramString1))) {
             break;
           }
-          return paramString1 + ay.ky(paramString2) + paramString3 + ay.ky(paramString4);
+          return paramString1 + be.li(paramString2) + paramString3 + be.li(paramString4);
           if (paramInt == 2) {
-            if (ay.kz(paramString3)) {
+            if (be.kf(paramString3)) {
               str = null;
             } else {
-              str = CF(g.m(paramString3.getBytes()));
+              str = ES(g.j(paramString3.getBytes()));
             }
           }
         }
@@ -112,7 +112,7 @@ public final class h
   {
     String str = paramString1 + paramString3 + paramString4 + paramString5;
     paramString2 = a(paramString2, paramString3, paramString4, paramString5, 1, paramBoolean);
-    if ((ay.kz(str)) || (ay.kz(paramString2))) {
+    if ((be.kf(str)) || (be.kf(paramString2))) {
       paramString1 = null;
     }
     do
@@ -126,11 +126,11 @@ public final class h
       } while (paramString3.exists());
       paramString1 = paramString2;
     } while (!paramString4.exists());
-    j.i(str, paramString2, false);
+    j.l(str, paramString2, false);
     return paramString2;
   }
   
-  public static String b(String paramString1, String paramString2, String paramString3, String paramString4, String paramString5)
+  public static String c(String paramString1, String paramString2, String paramString3, String paramString4, String paramString5)
   {
     return a(paramString1, paramString2, paramString3, paramString4, paramString5, 1, true);
   }

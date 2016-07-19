@@ -2,21 +2,21 @@ package com.tencent.mm.ui.tools;
 
 final class FilterImageView$c
 {
-  String aEZ;
-  FilterImageView.b lvE;
-  String lvF;
-  int lvG;
-  int lvH;
-  int lvI;
+  String are;
+  FilterImageView.b lWG;
+  String lWH;
+  int lWI;
+  int lWJ;
+  int lWK;
   
   FilterImageView$c(FilterImageView.b paramb, String paramString1, int paramInt1, int paramInt2, String paramString2, int paramInt3)
   {
-    lvE = paramb;
-    lvF = paramString1;
-    lvG = paramInt1;
-    lvH = paramInt2;
-    aEZ = paramString2;
-    lvI = paramInt3;
+    lWG = paramb;
+    lWH = paramString1;
+    lWI = paramInt1;
+    lWJ = paramInt2;
+    are = paramString2;
+    lWK = paramInt3;
   }
 }
 

@@ -27,9 +27,9 @@
     .line 45
     new-instance v0, Landroid/support/v7/app/f;
 
-    iget-object v1, p0, Landroid/support/v7/app/c;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, p0, Landroid/support/v7/app/c;->iX:Landroid/support/v7/app/ActionBarActivity;
 
-    iget-object v2, p0, Landroid/support/v7/app/c;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v2, p0, Landroid/support/v7/app/c;->iX:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-direct {v0, v1, v2}, Landroid/support/v7/app/f;-><init>(Landroid/support/v7/app/ActionBarActivity;Landroid/support/v7/app/ActionBar$a;)V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 38
-    iget-object v0, p0, Landroid/support/v7/app/c;->iG:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Landroid/support/v7/app/c;->iX:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v0}, Landroid/support/v7/app/ActionBarActivity;->getWindow()Landroid/view/Window;
 

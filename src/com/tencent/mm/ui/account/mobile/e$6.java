@@ -10,7 +10,7 @@ final class e$6
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    e.a(kxU);
+    e.a(kXb);
   }
 }
 

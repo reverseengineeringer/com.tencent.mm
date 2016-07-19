@@ -11,7 +11,7 @@ final class SnsSightPlayerUI$1
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    his.aBF();
+    hxh.aEu();
     return true;
   }
 }

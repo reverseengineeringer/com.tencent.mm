@@ -1,16 +1,37 @@
 package com.tencent.mm.sdk.platformtools;
 
+import android.telephony.PhoneStateListener;
+import java.util.List;
+
 final class an$1
-  implements af.a
+  extends PhoneStateListener
 {
   an$1(an paraman) {}
   
-  public final boolean lj()
+  public final void onCallStateChanged(int paramInt, String paramString)
   {
-    long l = System.currentTimeMillis();
-    jXo.gK(false);
-    u.i("!32@/B4Tb64lLpKVcgwO/AJ6cRDJPmRljB7e", "summer timer onTimerExpired e appendAll takes: " + (System.currentTimeMillis() - l) + " ms");
-    return false;
+    if (kxq.kxp.size() > 0)
+    {
+      an.a[] arrayOfa = new an.a[kxq.kxp.size()];
+      arrayOfa = (an.a[])kxq.kxp.toArray(arrayOfa);
+      int j = arrayOfa.length;
+      int i = 0;
+      while (i < j)
+      {
+        arrayOfa[i].bP(paramInt);
+        i += 1;
+      }
+    }
+    super.onCallStateChanged(paramInt, paramString);
+    switch (paramInt)
+    {
+    default: 
+      return;
+    case 0: 
+      an.awC = false;
+      return;
+    }
+    an.awC = true;
   }
 }
 

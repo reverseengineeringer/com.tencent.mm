@@ -1,38 +1,30 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.ContentValues;
 import android.content.Context;
-import android.text.Html;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewStub;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import com.tencent.mm.az.g;
-import com.tencent.mm.d.b.bg;
-import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.plugin.report.service.g;
 import com.tencent.mm.pluginsdk.i.a;
 import com.tencent.mm.pluginsdk.i.f;
-import com.tencent.mm.pluginsdk.ui.emoji.ChattingEmojiView;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag;
-import com.tencent.mm.storage.ah.c;
+import com.tencent.mm.pluginsdk.ui.emoji.RTChattingEmojiView;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.aj;
 import com.tencent.mm.storage.w;
-import com.tencent.mm.ui.j;
-import com.tencent.mm.ui.o;
 
 final class bb
-  extends aa.c
+  extends ab.b
 {
-  private ChattingUI.a kTe;
+  private ChattingUI.a ltl;
   
   public bb()
   {
-    super(15);
+    super(14);
   }
   
   public final View a(LayoutInflater paramLayoutInflater, View paramView)
@@ -41,184 +33,103 @@ final class bb
     if ((paramView != null) && (paramView.getTag() != null))
     {
       localObject = paramView;
-      if (getTagtype == eLV) {}
+      if (getTagtype == cTv) {}
     }
     else
     {
-      localObject = new ax(paramLayoutInflater, 2131361856);
-      ((View)localObject).setTag(new db(eLV).e((View)localObject, false));
+      localObject = new ay(paramLayoutInflater, 2130903291);
+      ((View)localObject).setTag(new dc(cTv).f((View)localObject, true));
     }
     return (View)localObject;
   }
   
-  public final void a(aa.a parama, int paramInt, ChattingUI.a parama1, ag paramag, String paramString)
+  public final void a(ab.a parama, int paramInt, ChattingUI.a parama1, ai paramai, String paramString)
   {
-    kTe = parama1;
-    parama = (db)parama;
-    paramString = i.a.aOT().mD(field_imgPath);
-    boolean bool;
-    label126:
-    ImageView localImageView;
-    if (paramString != null)
+    ltl = parama1;
+    com.tencent.mm.storage.a.c localc = i.a.aTv().nz(field_imgPath);
+    parama = (dc)parama;
+    if (localc != null)
     {
-      Object localObject1 = w.EO(field_content);
-      if (!paramString.aPB()) {
-        break label626;
-      }
-      Object localObject2 = kQz;
-      if (cfS) {
-        break label620;
-      }
-      bool = true;
-      ((ChattingEmojiView)localObject2).a(bool, i.a.aOT().d(paramString), i.a.aOT().e(paramString), paramString.getName(), String.valueOf(field_msgId + paramString.getName()));
-      if (lcf != null)
+      w localw = w.Hc(field_content);
+      lqp.a(localc, field_msgId, localw);
+      if ((localc.aUj()) && (!cbe))
       {
-        if (!kfo) {
-          break label707;
-        }
-        lcf.setVisibility(0);
-        localObject2 = (TextView)hnE.findViewById(2131165470).findViewById(2131165471);
-        ((TextView)localObject2).setText(Html.fromHtml(parama1.getString(2131432976)));
-        localImageView = (ImageView)hnE.findViewById(2131165470).findViewById(2131165472);
-        ((TextView)localObject2).setTag(new dg(paramag, false, paramInt, kSE.bEJ, 8, false, "", "", "", "", field_groupId, "", true));
-        ((TextView)localObject2).setOnClickListener(kSE.kVs);
-        if (!i.a.aOT().PQ()) {
-          break label697;
-        }
-        localImageView.setVisibility(0);
-        localImageView.setTag(new dg(paramag, kAy, paramInt, kSE.bEJ, 11, (byte)0));
-        localImageView.setOnClickListener(kSE.kVs);
-      }
-      label313:
-      if (!cfS)
-      {
-        cfS = true;
-        paramag.setContent(((w)localObject1).aWR());
-        paramag.bk(tDrsdzfield_msgId).field_status);
-        paramString = com.tencent.mm.model.ah.tD().rs();
-        if (paramag != null)
-        {
-          localObject1 = new ContentValues();
-          ((ContentValues)localObject1).put("content", field_content);
-          ((ContentValues)localObject1).put("status", Integer.valueOf(field_status));
-          if (bCw.update(paramString.dE(field_msgId), (ContentValues)localObject1, "msgId=?", new String[] { String.valueOf(field_msgId) }) != 0)
-          {
-            paramString.Ep();
-            paramString.a(new ah.c(field_talker, "update", paramag));
-          }
-        }
-      }
-      if (!bes()) {
-        break label738;
-      }
-      fGG.setVisibility(8);
-      if ((paramag == null) || (field_status != 2) || (!a(kSE, field_msgId))) {
-        break label719;
-      }
-      if (kQC != null) {
-        kQC.setVisibility(0);
+        cbe = true;
+        paramai.setContent(localw.bcf());
+        ah.tE().rt().a(field_msgId, paramai);
       }
     }
-    for (;;)
-    {
-      kQz.setTag(new dg(paramag, kAy, paramInt, kSE.bEJ, 0, (byte)0));
-      kQz.setOnClickListener(kSE.kVs);
-      kQz.setOnLongClickListener(kSE.kVu);
-      a(paramInt, parama, paramag, kSE.bEJ, kAy, kSE.kVs);
-      return;
-      label620:
-      bool = false;
-      break;
-      label626:
-      o(paramString);
-      if (paramString == null) {
-        break label126;
-      }
-      if (paramString.aYw())
-      {
-        kQz.a(com.tencent.mm.storage.a.c.aX(koJ.kpc, paramString.getName()), String.valueOf(field_msgId));
-        break label126;
-      }
-      kQz.a(paramString, String.valueOf(field_msgId));
-      break label126;
-      label697:
-      localImageView.setVisibility(8);
-      break label313;
-      label707:
-      lcf.setVisibility(8);
-      break label313;
-      label719:
-      if (kQC != null)
-      {
-        kQC.setVisibility(8);
-        continue;
-        label738:
-        if (kQC != null) {
-          kQC.setVisibility(8);
-        }
-        if (fGG != null)
-        {
-          fGG.setVisibility(0);
-          if (field_status >= 2) {
-            fGG.setVisibility(8);
-          }
-        }
-      }
-    }
+    lqp.setTag(new dh(paramai, kZE, paramInt, paramString, 0, (byte)0));
+    lqp.setOnClickListener(lsL.lvy);
+    lqp.setOnLongClickListener(lsL.lvA);
   }
   
-  public final boolean a(ContextMenu paramContextMenu, View paramView, ag paramag)
+  public final boolean a(ContextMenu paramContextMenu, View paramView, ai paramai)
   {
     int i;
     com.tencent.mm.storage.a.c localc;
-    if ((paramag.aXi()) && (com.tencent.mm.model.ah.tD().isSDCardAvailable()))
+    if ((paramai.bcD()) && (ah.tE().isSDCardAvailable()))
     {
       i = getTagposition;
-      localc = i.a.aOT().mD(field_imgPath);
+      localc = i.a.aTv().nz(field_imgPath);
       if (localc != null) {
-        break label81;
+        break label79;
       }
-      if (paramag != null) {
-        break label73;
+      if (paramai != null) {
+        break label71;
       }
     }
-    label73:
+    label71:
     for (paramContextMenu = "";; paramContextMenu = field_imgPath)
     {
-      u.w("!56@/B4Tb64lLpJxLnYrfKxtob+l8HbEW6cai3tWwJLh6jCjQfepoPuZaA==", "emoji is null. md5:%s", new Object[] { paramContextMenu });
+      v.w("MicroMsg.emoji.ChattingItemEmojiFrom", "emoji is null. md5:%s", new Object[] { paramContextMenu });
       return true;
     }
-    label81:
-    if ((field_catalog != com.tencent.mm.storage.a.c.kgO) && (!localc.aYw())) {
-      paramContextMenu.add(i, 104, 0, paramView.getContext().getString(2131427858));
+    label79:
+    boolean bool = localc.bdN();
+    if ((field_catalog != com.tencent.mm.storage.a.c.kHn) && (!localc.bdP()))
+    {
+      if (bool) {
+        paramContextMenu.add(i, 104, 0, paramView.getContext().getString(2131231707));
+      }
     }
-    if ((field_catalog == com.tencent.mm.storage.a.c.kgO) || (ay.kz(field_groupId)) || ((!ay.kz(field_groupId)) && (i.a.aOT().mH(field_groupId)))) {
-      paramContextMenu.add(i, 113, 0, 2131427822);
+    else if ((field_catalog == com.tencent.mm.storage.a.c.kHn) || (be.kf(field_groupId)) || ((!be.kf(field_groupId)) && (i.a.aTv().nD(field_groupId))))
+    {
+      if (!bool) {
+        break label327;
+      }
+      paramContextMenu.add(i, 113, 0, 2131234525);
     }
-    if ((!ay.kz(field_groupId)) && (!localc.aPB())) {
-      paramContextMenu.add(i, 127, 0, 2131427866);
+    for (;;)
+    {
+      if ((!be.kf(field_groupId)) && (!localc.aUj())) {
+        paramContextMenu.add(i, 127, 0, 2131231709);
+      }
+      if (!ltl.bln()) {
+        paramContextMenu.add(i, 100, 0, paramView.getContext().getString(2131231698));
+      }
+      g.gdY.h(12789, new Object[] { Integer.valueOf(0), localc.yt(), Integer.valueOf(0), field_designerID, field_groupId });
+      return true;
+      v.i("MicroMsg.emoji.ChattingItemEmojiFrom", "file do no exist. cant do add or resend.");
+      break;
+      label327:
+      v.i("MicroMsg.emoji.ChattingItemEmojiFrom", "file do no exist. cant do add or resend.");
     }
-    if (!kTe.bfD()) {
-      paramContextMenu.add(i, 100, 0, paramView.getContext().getString(2131427857));
-    }
-    if ((!paramag.aWV()) && (paramag.aXi()) && ((field_status == 2) || (bcK == 1)) && (ber()) && (GJ(field_talker))) {
-      paramContextMenu.add(i, 123, 0, paramView.getContext().getString(2131427860));
-    }
-    if (field_status == 5) {
-      paramContextMenu.add(i, 103, 0, paramView.getContext().getString(2131427971));
-    }
-    h.fUJ.g(12789, new Object[] { Integer.valueOf(0), localc.yh(), Integer.valueOf(0), field_designerID, field_groupId });
-    return true;
   }
   
-  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ag paramag)
+  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ai paramai)
   {
     return false;
   }
   
-  public final boolean a(View paramView, ChattingUI.a parama, ag paramag)
+  public final boolean a(View paramView, ChattingUI.a parama, ai paramai)
   {
     return false;
+  }
+  
+  protected final boolean a(ChattingUI.a parama)
+  {
+    return kZE;
   }
 }
 

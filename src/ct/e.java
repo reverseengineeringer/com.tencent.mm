@@ -3,113 +3,249 @@ package ct;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import java.util.HashMap;
+import android.text.TextUtils;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
-import java.util.Map;
-import java.util.Map.Entry;
+import java.util.List;
 import java.util.Set;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.CopyOnWriteArraySet;
 
 public final class e
+  implements a, n, Runnable
 {
-  public int a;
-  public int b;
-  public int c;
-  public int d;
-  public int e;
-  public an f;
+  private Set a = null;
+  private BlockingQueue b = null;
+  private q c;
   
-  public e() {}
-  
-  public e(ai paramai)
+  public e()
   {
-    a = a;
-    b = b;
-    c = c;
-    d = d;
-    e = e;
-    f = f;
-  }
-  
-  private void c()
-  {
-    if ((a < 10000) || (a > 60000)) {
-      a = 20000;
-    }
-    if ((b < 10000) || (b > 60000)) {
-      b = 20000;
-    }
-    if ((c < 3) || (c > 15)) {
-      c = 8;
-    }
-    if ((d <= 0) || (d > 5)) {
-      d = 2;
-    }
-    if ((e < 900) || (e > 2160)) {
-      e = 1440;
-    }
-  }
-  
-  public final void a()
-  {
-    an localan = null;
-    Object localObject = q.a().getSharedPreferences("Access_Preferences", 0);
-    a = ((SharedPreferences)localObject).getInt("connectTimeout", 20000);
-    b = ((SharedPreferences)localObject).getInt("readTimeout", 20000);
-    c = ((SharedPreferences)localObject).getInt("apnCachedNum", 8);
-    d = ((SharedPreferences)localObject).getInt("parallelNum", 2);
-    e = ((SharedPreferences)localObject).getInt("expireTime", 1440);
-    localObject = ((SharedPreferences)localObject).getString("samplingInfo", null);
-    if (localObject != null)
+    az.a();
+    a = new CopyOnWriteArraySet();
+    a.add("dispatcher.3g.qq.com");
+    b = new ArrayBlockingQueue(10);
+    c = r.a();
+    try
     {
-      localObject = ((String)localObject).split(";");
-      localan = new an();
-      HashMap localHashMap = new HashMap();
-      int i = 0;
-      while (i < localObject.length - 1)
-      {
-        String[] arrayOfString = localObject[i].split(",");
-        localHashMap.put(Integer.valueOf(Integer.parseInt(arrayOfString[0])), Byte.valueOf(Byte.parseByte(arrayOfString[1])));
-        i += 1;
+      if (c()) {
+        a(true);
       }
-      a = localHashMap;
-      b = Byte.parseByte(localObject[(localObject.length - 1)]);
+      for (;;)
+      {
+        j.a().a(this);
+        return;
+        a(false);
+      }
     }
-    f = localan;
-    c();
+    catch (Exception localException)
+    {
+      for (;;) {}
+    }
+  }
+  
+  private void a(boolean paramBoolean)
+  {
+    try
+    {
+      new StringBuilder("before add, queue size:").append(b.size());
+      az.a();
+      b.add(new i(paramBoolean));
+      az.a();
+      new StringBuilder("after add, queue size:").append(b.size());
+      az.a();
+      return;
+    }
+    catch (Throwable localThrowable)
+    {
+      for (;;)
+      {
+        az.d();
+      }
+    }
+  }
+  
+  private static boolean c()
+  {
+    boolean bool2 = false;
+    try
+    {
+      SharedPreferences localSharedPreferences = p.a().getSharedPreferences("Access_Preferences", 0);
+      boolean bool1 = bool2;
+      if (localSharedPreferences != null)
+      {
+        long l = localSharedPreferences.getLong("lastScheduleTime", 0L);
+        bool1 = bool2;
+        if (System.currentTimeMillis() - l > 86400000L)
+        {
+          localSharedPreferences.edit().putLong("lastScheduleTime", System.currentTimeMillis()).commit();
+          az.a();
+          bool1 = true;
+        }
+      }
+      return bool1;
+    }
+    catch (Exception localException) {}
+    return false;
+  }
+  
+  public final ak a()
+  {
+    return ab.f;
+  }
+  
+  public final t.a a(String paramString)
+  {
+    if (a.contains(paramString))
+    {
+      t.a locala = u.a().a(paramString);
+      if (locala != null)
+      {
+        paramString = locala;
+        if (!locala.b()) {
+          return paramString;
+        }
+        az.c();
+        a(true);
+      }
+    }
+    paramString = null;
+    return paramString;
+  }
+  
+  public final void a(List paramList)
+  {
+    if (paramList == null) {}
+    for (;;)
+    {
+      return;
+      try
+      {
+        paramList = paramList.iterator();
+        while (paramList.hasNext())
+        {
+          String str = (String)paramList.next();
+          a.add(str);
+        }
+        return;
+      }
+      catch (Exception paramList) {}
+    }
   }
   
   public final void b()
   {
-    Object localObject = q.a().getSharedPreferences("Access_Preferences", 0);
-    c();
-    ((SharedPreferences)localObject).edit().putInt("connectTimeout", a).commit();
-    ((SharedPreferences)localObject).edit().putInt("readTimeout", b).commit();
-    ((SharedPreferences)localObject).edit().putInt("apnCachedNum", c).commit();
-    ((SharedPreferences)localObject).edit().putInt("parallelNum", d).commit();
-    ((SharedPreferences)localObject).edit().putInt("expireTime", e).commit();
-    SharedPreferences.Editor localEditor = ((SharedPreferences)localObject).edit();
-    localObject = f;
-    StringBuilder localStringBuilder = new StringBuilder();
-    if (a != null)
-    {
-      Iterator localIterator = a.entrySet().iterator();
-      while (localIterator.hasNext())
-      {
-        Map.Entry localEntry = (Map.Entry)localIterator.next();
-        localStringBuilder.append(localEntry.getKey() + "," + localEntry.getValue() + ";");
-      }
-      localStringBuilder.append(b);
-    }
-    for (localObject = localStringBuilder.toString();; localObject = null)
-    {
-      localEditor.putString("samplingInfo", (String)localObject).commit();
-      return;
-    }
+    az.b();
+    a(false);
   }
   
-  public final String toString()
+  public final void run()
   {
-    return "connectTimeout:" + a + ",readTimeout:" + b + ",apnCachedNum:" + c + ",parallelNum:" + d + ",expireTime:" + e;
+    
+    for (;;)
+    {
+      try
+      {
+        u.a();
+        az.a();
+        Object localObject1 = (i)b.take();
+        az.a();
+        boolean bool1 = a;
+        try
+        {
+          az.b();
+          localObject1 = ay.a();
+          if ((TextUtils.isEmpty((CharSequence)localObject1)) || (((String)localObject1).equals("unknown")))
+          {
+            az.c();
+            continue;
+          }
+          if (!h.a)
+          {
+            az.b();
+            continue;
+          }
+          if (!bool1)
+          {
+            bool1 = u.a().a(a);
+            boolean bool2 = c();
+            if (bool1) {
+              break label517;
+            }
+            if (!bool2) {
+              break label522;
+            }
+            break label517;
+            if (i == 0)
+            {
+              az.b();
+              continue;
+            }
+          }
+          localObject1 = new f();
+          b = p.b();
+          c = p.c();
+          d = p.d();
+          a = p.f();
+          p.g();
+          e = p.e();
+          Object localObject2 = a;
+          h = new ArrayList();
+          h.addAll((Collection)localObject2);
+          g = ay.a();
+          i = ay.c();
+          j = ay.d();
+          localObject2 = ((f)localObject1).a();
+          if (localObject2 != null)
+          {
+            u.a().a(a);
+            b.a locala = b.a.a();
+            d locald = b;
+            if (locald != null)
+            {
+              new StringBuilder("updateSdkCfInfo...SdkCfgInfo:").append(locald);
+              az.b();
+              if ((a < 2000) || (a > 60000))
+              {
+                new StringBuilder("updateSdkCfInfo...connectTimeout:").append(a).append(" is checked to 20s");
+                az.c();
+                a = 20000;
+              }
+              if ((b < 2000) || (b > 60000))
+              {
+                new StringBuilder("updateSdkCfInfo...readTimeout:").append(b).append(" is checked to 20s");
+                az.c();
+                b = 20000;
+              }
+              b = locald;
+              b.b();
+            }
+            locala = b.a.a();
+            localObject2 = c;
+            if (localObject2 != null)
+            {
+              a = ((c)localObject2);
+              a.b();
+            }
+          }
+          new StringBuilder("scheduler...end. apn:").append(g).append(", retCode:").append(k).append(",failInfo:").append(l);
+          az.b();
+          c.a((f)localObject1);
+        }
+        catch (Exception localException) {}
+        continue;
+        i = 1;
+      }
+      catch (Throwable localThrowable)
+      {
+        return;
+      }
+      label517:
+      continue;
+      label522:
+      int i = 0;
+    }
   }
 }
 

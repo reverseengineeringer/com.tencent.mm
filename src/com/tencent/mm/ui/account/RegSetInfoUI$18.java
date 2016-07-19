@@ -2,8 +2,8 @@ package com.tencent.mm.ui.account;
 
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelfriend.z;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.applet.SecurityImage.b;
 
 final class RegSetInfoUI$18
@@ -11,14 +11,14 @@ final class RegSetInfoUI$18
 {
   RegSetInfoUI$18(RegSetInfoUI paramRegSetInfoUI, j paramj) {}
   
-  public final void bby()
+  public final void bgK()
   {
-    kwh.age();
-    int i = RegSetInfoUI.e(kwh);
-    Object localObject = RegSetInfoUI.f(kwh);
-    ah.tE().a(429, kwh);
-    localObject = new z((String)localObject, RegSetInfoUI.g(kwh), i, "", "", ((z)aoT).zb(), "");
-    ah.tE().d((j)localObject);
+    kVo.aiI();
+    int i = RegSetInfoUI.e(kVo);
+    Object localObject = RegSetInfoUI.f(kVo);
+    ah.tF().a(429, kVo);
+    localObject = new z((String)localObject, RegSetInfoUI.g(kVo), i, "", "", ((z)acZ).zo(), "");
+    ah.tF().a((j)localObject, 0);
   }
 }
 

@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract fg(Ljava/lang/String;)V
+.method public abstract ft(Ljava/lang/String;)V
 .end method

@@ -7,12 +7,12 @@ import java.util.Properties;
 
 final class i
 {
-  private static i lSp = null;
   private static Context mContext = null;
+  private static i mue = null;
   
-  static File blC()
+  static File brG()
   {
-    m.blT();
+    m.brX();
     File localFile = new File(m.fl(mContext), "tbscoreinstall.txt");
     if (!localFile.exists()) {}
     try
@@ -25,14 +25,14 @@ final class i
   }
   
   /* Error */
-  static Properties blD()
+  static Properties brH()
   {
     // Byte code:
     //   0: aconst_null
     //   1: astore_3
     //   2: aconst_null
     //   3: astore_2
-    //   4: invokestatic 52	com/tencent/smtt/sdk/i:blC	()Ljava/io/File;
+    //   4: invokestatic 52	com/tencent/smtt/sdk/i:brG	()Ljava/io/File;
     //   7: astore_1
     //   8: new 54	java/util/Properties
     //   11: dup
@@ -126,24 +126,24 @@ final class i
     //   29	34	97	java/lang/Exception
   }
   
-  static i eT(Context paramContext)
+  static i eV(Context paramContext)
   {
     mContext = paramContext.getApplicationContext();
-    if (lSp == null) {
-      lSp = new i();
+    if (mue == null) {
+      mue = new i();
     }
-    return lSp;
+    return mue;
   }
   
   /* Error */
-  final void Ig(String paramString)
+  final void Kz(String paramString)
   {
     // Byte code:
     //   0: aconst_null
     //   1: astore_3
     //   2: aconst_null
     //   3: astore 4
-    //   5: invokestatic 80	com/tencent/smtt/sdk/i:blD	()Ljava/util/Properties;
+    //   5: invokestatic 80	com/tencent/smtt/sdk/i:brH	()Ljava/util/Properties;
     //   8: astore 5
     //   10: aload 4
     //   12: astore_2
@@ -154,7 +154,7 @@ final class i
     //   22: aload_1
     //   23: invokevirtual 86	java/util/Properties:setProperty	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
     //   26: pop
-    //   27: invokestatic 52	com/tencent/smtt/sdk/i:blC	()Ljava/io/File;
+    //   27: invokestatic 52	com/tencent/smtt/sdk/i:brG	()Ljava/io/File;
     //   30: astore_1
     //   31: aload 4
     //   33: astore_2
@@ -234,54 +234,54 @@ final class i
     //   47	55	107	java/lang/Exception
   }
   
-  final int blA()
+  final int brE()
   {
-    Properties localProperties = blD();
+    Properties localProperties = brH();
     if ((localProperties != null) && (localProperties.getProperty("copy_core_ver") != null)) {
       return Integer.parseInt(localProperties.getProperty("copy_core_ver"));
     }
     return 0;
   }
   
-  final int blB()
+  final int brF()
   {
-    Properties localProperties = blD();
+    Properties localProperties = brH();
     if ((localProperties != null) && (localProperties.getProperty("copy_status") != null)) {
       return Integer.parseInt(localProperties.getProperty("copy_status"));
     }
     return -1;
   }
   
-  final String blE()
+  final String brI()
   {
-    Properties localProperties = blD();
+    Properties localProperties = brH();
     if ((localProperties != null) && (localProperties.getProperty("install_apk_path") != null)) {
       return localProperties.getProperty("install_apk_path");
     }
     return null;
   }
   
-  final int blF()
+  final int brJ()
   {
-    Properties localProperties = blD();
+    Properties localProperties = brH();
     if ((localProperties != null) && (localProperties.getProperty("install_core_ver") != null)) {
       return Integer.parseInt(localProperties.getProperty("install_core_ver"));
     }
     return 0;
   }
   
-  final int blG()
+  final int brK()
   {
-    Properties localProperties = blD();
+    Properties localProperties = brH();
     if ((localProperties != null) && (localProperties.getProperty("install_status") != null)) {
       return Integer.parseInt(localProperties.getProperty("install_status"));
     }
     return -1;
   }
   
-  final int blH()
+  final int brL()
   {
-    Properties localProperties = blD();
+    Properties localProperties = brH();
     if ((localProperties != null) && (localProperties.getProperty("incrupdate_status") != null)) {
       return Integer.parseInt(localProperties.getProperty("incrupdate_status"));
     }
@@ -289,14 +289,14 @@ final class i
   }
   
   /* Error */
-  final void ce(int paramInt1, int paramInt2)
+  final void cl(int paramInt1, int paramInt2)
   {
     // Byte code:
     //   0: aconst_null
     //   1: astore 4
     //   3: aconst_null
     //   4: astore 5
-    //   6: invokestatic 80	com/tencent/smtt/sdk/i:blD	()Ljava/util/Properties;
+    //   6: invokestatic 80	com/tencent/smtt/sdk/i:brH	()Ljava/util/Properties;
     //   9: astore 6
     //   11: aload 5
     //   13: astore_3
@@ -314,7 +314,7 @@ final class i
     //   36: invokestatic 132	java/lang/String:valueOf	(I)Ljava/lang/String;
     //   39: invokevirtual 86	java/util/Properties:setProperty	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
     //   42: pop
-    //   43: invokestatic 52	com/tencent/smtt/sdk/i:blC	()Ljava/io/File;
+    //   43: invokestatic 52	com/tencent/smtt/sdk/i:brG	()Ljava/io/File;
     //   46: astore 7
     //   48: aload 5
     //   50: astore_3
@@ -399,14 +399,14 @@ final class i
   }
   
   /* Error */
-  final void cf(int paramInt1, int paramInt2)
+  final void cm(int paramInt1, int paramInt2)
   {
     // Byte code:
     //   0: aconst_null
     //   1: astore 4
     //   3: aconst_null
     //   4: astore 5
-    //   6: invokestatic 80	com/tencent/smtt/sdk/i:blD	()Ljava/util/Properties;
+    //   6: invokestatic 80	com/tencent/smtt/sdk/i:brH	()Ljava/util/Properties;
     //   9: astore 6
     //   11: aload 5
     //   13: astore_3
@@ -424,7 +424,7 @@ final class i
     //   36: invokestatic 132	java/lang/String:valueOf	(I)Ljava/lang/String;
     //   39: invokevirtual 86	java/util/Properties:setProperty	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
     //   42: pop
-    //   43: invokestatic 52	com/tencent/smtt/sdk/i:blC	()Ljava/io/File;
+    //   43: invokestatic 52	com/tencent/smtt/sdk/i:brG	()Ljava/io/File;
     //   46: astore 7
     //   48: aload 5
     //   50: astore_3
@@ -509,14 +509,14 @@ final class i
   }
   
   /* Error */
-  final void sq(int paramInt)
+  final void uv(int paramInt)
   {
     // Byte code:
     //   0: aconst_null
     //   1: astore_3
     //   2: aconst_null
     //   3: astore 4
-    //   5: invokestatic 80	com/tencent/smtt/sdk/i:blD	()Ljava/util/Properties;
+    //   5: invokestatic 80	com/tencent/smtt/sdk/i:brH	()Ljava/util/Properties;
     //   8: astore 5
     //   10: aload 4
     //   12: astore_2
@@ -528,7 +528,7 @@ final class i
     //   23: invokestatic 132	java/lang/String:valueOf	(I)Ljava/lang/String;
     //   26: invokevirtual 86	java/util/Properties:setProperty	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
     //   29: pop
-    //   30: invokestatic 52	com/tencent/smtt/sdk/i:blC	()Ljava/io/File;
+    //   30: invokestatic 52	com/tencent/smtt/sdk/i:brG	()Ljava/io/File;
     //   33: astore 6
     //   35: aload 4
     //   37: astore_2
@@ -612,14 +612,14 @@ final class i
   }
   
   /* Error */
-  final void sr(int paramInt)
+  final void uw(int paramInt)
   {
     // Byte code:
     //   0: aconst_null
     //   1: astore_3
     //   2: aconst_null
     //   3: astore 4
-    //   5: invokestatic 80	com/tencent/smtt/sdk/i:blD	()Ljava/util/Properties;
+    //   5: invokestatic 80	com/tencent/smtt/sdk/i:brH	()Ljava/util/Properties;
     //   8: astore 5
     //   10: aload 4
     //   12: astore_2
@@ -631,7 +631,7 @@ final class i
     //   23: invokestatic 132	java/lang/String:valueOf	(I)Ljava/lang/String;
     //   26: invokevirtual 86	java/util/Properties:setProperty	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
     //   29: pop
-    //   30: invokestatic 52	com/tencent/smtt/sdk/i:blC	()Ljava/io/File;
+    //   30: invokestatic 52	com/tencent/smtt/sdk/i:brG	()Ljava/io/File;
     //   33: astore 6
     //   35: aload 4
     //   37: astore_2
@@ -715,14 +715,14 @@ final class i
   }
   
   /* Error */
-  final void ss(int paramInt)
+  final void ux(int paramInt)
   {
     // Byte code:
     //   0: aconst_null
     //   1: astore_3
     //   2: aconst_null
     //   3: astore 4
-    //   5: invokestatic 80	com/tencent/smtt/sdk/i:blD	()Ljava/util/Properties;
+    //   5: invokestatic 80	com/tencent/smtt/sdk/i:brH	()Ljava/util/Properties;
     //   8: astore 5
     //   10: aload 4
     //   12: astore_2
@@ -734,7 +734,7 @@ final class i
     //   23: invokestatic 132	java/lang/String:valueOf	(I)Ljava/lang/String;
     //   26: invokevirtual 86	java/util/Properties:setProperty	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
     //   29: pop
-    //   30: invokestatic 52	com/tencent/smtt/sdk/i:blC	()Ljava/io/File;
+    //   30: invokestatic 52	com/tencent/smtt/sdk/i:brG	()Ljava/io/File;
     //   33: astore 6
     //   35: aload 4
     //   37: astore_2
@@ -818,14 +818,14 @@ final class i
   }
   
   /* Error */
-  final void st(int paramInt)
+  final void uy(int paramInt)
   {
     // Byte code:
     //   0: aconst_null
     //   1: astore_3
     //   2: aconst_null
     //   3: astore 4
-    //   5: invokestatic 80	com/tencent/smtt/sdk/i:blD	()Ljava/util/Properties;
+    //   5: invokestatic 80	com/tencent/smtt/sdk/i:brH	()Ljava/util/Properties;
     //   8: astore 5
     //   10: aload 4
     //   12: astore_2
@@ -837,7 +837,7 @@ final class i
     //   23: invokestatic 132	java/lang/String:valueOf	(I)Ljava/lang/String;
     //   26: invokevirtual 86	java/util/Properties:setProperty	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
     //   29: pop
-    //   30: invokestatic 52	com/tencent/smtt/sdk/i:blC	()Ljava/io/File;
+    //   30: invokestatic 52	com/tencent/smtt/sdk/i:brG	()Ljava/io/File;
     //   33: astore 6
     //   35: aload 4
     //   37: astore_2

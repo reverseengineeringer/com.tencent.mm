@@ -4,9 +4,6 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/tencent/mm/protocal/b/apu;)V
-.end method
-
 .method public abstract tc()V
 .end method
 
@@ -14,4 +11,7 @@
 .end method
 
 .method public abstract te()V
+.end method
+
+.method public abstract tf()V
 .end method

@@ -13,9 +13,20 @@
     name = "d"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroid/os/AsyncTask",
+        "<",
+        "Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;",
+        "Ljava/lang/Void;",
+        "Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+.field final synthetic jos:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
 
 # direct methods
@@ -24,7 +35,7 @@
 
     .prologue
     .line 745
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$d;->iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$d;->jos:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
@@ -44,19 +55,19 @@
 
     aget-object v0, p1, v0
 
-    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->iRo:Landroid/graphics/drawable/Drawable;
+    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->joy:Landroid/graphics/drawable/Drawable;
 
     if-nez v1, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$d;->iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$d;->jos:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
-    iget-object v2, v0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->iRm:Landroid/content/pm/ResolveInfo;
+    iget-object v2, v0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->jow:Landroid/content/pm/ResolveInfo;
 
     invoke-static {v1, v2}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->a(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;Landroid/content/pm/ResolveInfo;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->iRo:Landroid/graphics/drawable/Drawable;
+    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->joy:Landroid/graphics/drawable/Drawable;
 
     :cond_0
     return-object v0
@@ -67,7 +78,7 @@
 
     .prologue
     .line 745
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$d;->iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$d;->jos:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->a(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$a;
 

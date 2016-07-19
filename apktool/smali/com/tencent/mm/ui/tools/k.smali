@@ -13,7 +13,7 @@
 
 # direct methods
 .method public static final a(Landroid/view/View;JFF)V
-    .locals 2
+    .locals 3
     .annotation build Landroid/annotation/TargetApi;
         value = 0xe
     .end annotation
@@ -24,7 +24,7 @@
 
     const/16 v0, 0xe
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/util/c;->bV(I)Z
+    invoke-static {v0}, Lcom/tencent/mm/compatible/util/c;->cn(I)Z
 
     move-result v0
 
@@ -37,7 +37,7 @@
 
     .line 230
     :cond_1
-    const v0, 0x7f07002e
+    const v0, 0x7f10002c
 
     invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -88,7 +88,7 @@
 .end method
 
 .method public static final a(Landroid/view/View;JFLcom/tencent/mm/ui/tools/k$a;)V
-    .locals 2
+    .locals 3
     .annotation build Landroid/annotation/TargetApi;
         value = 0xe
     .end annotation
@@ -101,7 +101,7 @@
 
     const/16 v0, 0xe
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/util/c;->bV(I)Z
+    invoke-static {v0}, Lcom/tencent/mm/compatible/util/c;->cn(I)Z
 
     move-result v0
 
@@ -114,7 +114,7 @@
 
     .line 191
     :cond_1
-    const v0, 0x7f07002e
+    const v0, 0x7f10002c
 
     invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -190,14 +190,14 @@
     .end annotation
 
     .prologue
-    const v2, 0x7f07002e
+    const v2, 0x7f10002c
 
     .line 312
     if-eqz p0, :cond_0
 
     const/16 v0, 0xb
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/util/c;->bV(I)Z
+    invoke-static {v0}, Lcom/tencent/mm/compatible/util/c;->cn(I)Z
 
     move-result v0
 
@@ -228,7 +228,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e0003
+    const/high16 v1, 0x7f050000
 
     invoke-static {v0, v1}, Landroid/animation/AnimatorInflater;->loadAnimator(Landroid/content/Context;I)Landroid/animation/Animator;
 
@@ -265,7 +265,7 @@
 
     const/16 v0, 0xb
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/util/c;->bV(I)Z
+    invoke-static {v0}, Lcom/tencent/mm/compatible/util/c;->cn(I)Z
 
     move-result v0
 
@@ -278,7 +278,7 @@
 
     .line 149
     :cond_1
-    const v0, 0x7f07002e
+    const v0, 0x7f10002c
 
     invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -314,7 +314,7 @@
 
     const/16 v0, 0xe
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/util/c;->bV(I)Z
+    invoke-static {v0}, Lcom/tencent/mm/compatible/util/c;->cn(I)Z
 
     move-result v0
 
@@ -327,7 +327,7 @@
 
     .line 163
     :cond_1
-    const v0, 0x7f07002e
+    const v0, 0x7f10002c
 
     invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 

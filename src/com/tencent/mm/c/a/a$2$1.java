@@ -4,13 +4,13 @@ import android.content.Context;
 import com.tencent.mm.compatible.b.d;
 import com.tencent.mm.compatible.d.p;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.f.a;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.al;
-import com.tencent.mm.sdk.platformtools.al.a;
-import com.tencent.mm.sdk.platformtools.al.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.ao;
+import com.tencent.mm.sdk.platformtools.ao.a;
+import com.tencent.mm.sdk.platformtools.ao.b;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.f.a;
 
 final class a$2$1
   implements Runnable
@@ -21,37 +21,37 @@ final class a$2$1
   {
     try
     {
-      if (bsLbpQ == 1) {
+      if (bgPbdQ == 1) {
         Thread.sleep(300L);
       }
-      if (apt.apr.apq != null) {
-        ab.j(new Runnable()
+      if (aaL.aaJ.aaI != null) {
+        ad.k(new Runnable()
         {
           public final void run()
           {
-            ah.tF().b(apt.apr.apj, false);
-            Context localContext = apt.apr.context;
-            boolean bool = apt.apr.apj;
-            al.a local1 = new al.a()
+            ah.tG().b(aaL.aaJ.aaB, false);
+            Context localContext = aaL.aaJ.context;
+            boolean bool = aaL.aaJ.aaB;
+            ao.a local1 = new ao.a()
             {
-              public final void lG()
+              public final void jQ()
               {
-                if (!apt.apr.isPlaying())
+                if (!aaL.aaJ.isPlaying())
                 {
-                  ah.tF().b(apt.apr);
-                  ah.tF().nM();
-                  apt.apr.apo = false;
-                  apt.apr.apl.oV();
-                  ah.tF().setMode(0);
-                  u.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "onCompletion() resetSpeaker");
+                  ah.tG().b(aaL.aaJ);
+                  ah.tG().mb();
+                  aaL.aaJ.aaG = false;
+                  ah.tG().setMode(0);
+                  aaL.aaJ.aaD.nn();
+                  v.i("MicroMsg.SceneVoicePlayer", "onCompletion() resetSpeaker");
                 }
-                apt.apr.apq.lG();
+                aaL.aaJ.aaI.jQ();
               }
             };
             if (bool) {}
-            for (al.b localb = al.b.jXa;; localb = al.b.jXb)
+            for (ao.b localb = ao.b.kxt;; localb = ao.b.kxu)
             {
-              al.a(localContext, 2131432253, localb, false, local1);
+              ao.a(localContext, 2131234158, localb, false, local1);
               return;
             }
           }
@@ -61,7 +61,7 @@ final class a$2$1
     }
     catch (InterruptedException localInterruptedException)
     {
-      u.e("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "exception:%s", new Object[] { ay.b(localInterruptedException) });
+      v.e("MicroMsg.SceneVoicePlayer", "exception:%s", new Object[] { be.f(localInterruptedException) });
     }
   }
 }

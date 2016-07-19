@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:flowlayout="http://schemas.android.com/apk/res-auto">
+    <ListView android:id="@id/awr" android:background="#f7ffffff" android:focusable="false" android:visibility="gone" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:transcriptMode="disabled" style="@style/MMList" />
+    <ListView android:id="@id/aws" android:background="#f7ffffff" android:focusable="false" android:visibility="gone" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:transcriptMode="disabled" style="@style/MMList" />
+    <RelativeLayout android:id="@id/xn" android:background="#f7ffffff" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ProgressBar android:gravity="center" android:layout_gravity="center" android:id="@id/awt" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/mediumCustomProgressBar" />
+    <TextView android:textSize="@dimen/i8" android:textColor="@color/gn" android:gravity="center_horizontal" android:id="@id/pr" android:background="#f7ffffff" android:paddingTop="@dimen/hh" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/b0z" />
+</FrameLayout>

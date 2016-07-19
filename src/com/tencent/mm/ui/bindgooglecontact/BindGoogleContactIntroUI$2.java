@@ -15,11 +15,11 @@ final class BindGoogleContactIntroUI$2
   
   public final void onClick(View paramView)
   {
-    g.a(kMI.koJ.kpc, true, kMI.getString(2131428692), "", kMI.getString(2131428690), kMI.getString(2131430884), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+    g.a(llX.kNN.kOg, true, llX.getString(2131235733), "", llX.getString(2131235732), llX.getString(2131230873), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
-        BindGoogleContactIntroUI.b(kMI);
+        BindGoogleContactIntroUI.b(llX);
       }
     }, new DialogInterface.OnClickListener()
     {

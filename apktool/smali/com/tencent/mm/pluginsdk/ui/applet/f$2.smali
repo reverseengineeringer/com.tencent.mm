@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iJk:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+.field final synthetic jgg:Lcom/tencent/mm/pluginsdk/ui/applet/f;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 40
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/f$2;->iJk:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/f$2;->jgg:Lcom/tencent/mm/pluginsdk/ui/applet/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

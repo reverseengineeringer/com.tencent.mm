@@ -10,7 +10,7 @@ final class LoginHistoryUI$12
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    LoginHistoryUI.h(ktx);
+    LoginHistoryUI.h(kSF);
   }
 }
 

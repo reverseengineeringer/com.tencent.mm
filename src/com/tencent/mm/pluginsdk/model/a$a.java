@@ -2,34 +2,34 @@ package com.tencent.mm.pluginsdk.model;
 
 public enum a$a
 {
-  public final int cwi;
+  public final int crO;
   
-  private a$a(int paramInt1)
+  private a$a(int paramInt)
   {
-    cwi = paramInt1;
+    crO = paramInt;
   }
   
-  public static a nY(int paramInt)
+  public static a pE(int paramInt)
   {
     switch (paramInt)
     {
     default: 
-      return izL;
+      return iWj;
     case 0: 
-      return izL;
+      return iWj;
     case 1: 
-      return izM;
+      return iWk;
     case 2: 
-      return izN;
+      return iWl;
     case 3: 
-      return izO;
+      return iWm;
     }
-    return izP;
+    return iWn;
   }
   
   public final String getPackage()
   {
-    switch (a.1.izK[ordinal()])
+    switch (a.1.iWi[ordinal()])
     {
     default: 
       return "com.tencent.map";

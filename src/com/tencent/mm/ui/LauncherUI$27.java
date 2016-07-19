@@ -1,26 +1,16 @@
 package com.tencent.mm.ui;
 
-import android.os.SystemClock;
-import android.view.View;
-import android.view.View.OnClickListener;
-import java.util.Iterator;
-import java.util.LinkedList;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 final class LauncherUI$27
-  implements View.OnClickListener
+  implements DialogInterface.OnClickListener
 {
   LauncherUI$27(LauncherUI paramLauncherUI) {}
   
-  public final void onClick(View paramView)
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (SystemClock.elapsedRealtime() - LauncherUI.E(knl) < 300L)
-    {
-      paramView = LauncherUI.F(knl).iterator();
-      while (paramView.hasNext()) {
-        ((Runnable)paramView.next()).run();
-      }
-    }
-    LauncherUI.a(knl, SystemClock.elapsedRealtime());
+    LauncherUI.F(kMs);
   }
 }
 

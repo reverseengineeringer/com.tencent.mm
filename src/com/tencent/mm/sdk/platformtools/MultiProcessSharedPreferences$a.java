@@ -6,23 +6,23 @@ import android.os.Bundle;
 final class MultiProcessSharedPreferences$a
   extends MatrixCursor
 {
-  private Bundle jWw;
+  private Bundle kwS;
   
   public MultiProcessSharedPreferences$a(Bundle paramBundle)
   {
     super(new String[0], 0);
-    jWw = paramBundle;
+    kwS = paramBundle;
   }
   
   public final Bundle getExtras()
   {
-    return jWw;
+    return kwS;
   }
   
   public final Bundle respond(Bundle paramBundle)
   {
-    jWw = paramBundle;
-    return jWw;
+    kwS = paramBundle;
+    return kwS;
   }
 }
 

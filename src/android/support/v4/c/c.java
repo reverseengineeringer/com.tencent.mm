@@ -1,12 +1,12 @@
 package android.support.v4.c;
 
-public final class c
+public final class c<E>
 {
-  public static final Object en = new Object();
-  public boolean eo = false;
-  public int[] ep;
-  public Object[] eq;
-  public int mSize;
+  public static final Object eI = new Object();
+  public boolean eJ = false;
+  public int[] eK;
+  public Object[] eL;
+  public int eM;
   
   public c()
   {
@@ -15,10 +15,10 @@ public final class c
   
   private c(byte paramByte)
   {
-    paramByte = m(10);
-    ep = new int[paramByte];
-    eq = new Object[paramByte];
-    mSize = 0;
+    paramByte = n(10);
+    eK = new int[paramByte];
+    eL = new Object[paramByte];
+    eM = 0;
   }
   
   public static int a(int[] paramArrayOfInt, int paramInt1, int paramInt2)
@@ -47,16 +47,16 @@ public final class c
   
   private void gc()
   {
-    int m = mSize;
-    int[] arrayOfInt = ep;
-    Object[] arrayOfObject = eq;
+    int m = eM;
+    int[] arrayOfInt = eK;
+    Object[] arrayOfObject = eL;
     int i = 0;
     int k;
     for (int j = 0; i < m; j = k)
     {
       Object localObject = arrayOfObject[i];
       k = j;
-      if (localObject != en)
+      if (localObject != eI)
       {
         if (i != j)
         {
@@ -67,11 +67,11 @@ public final class c
       }
       i += 1;
     }
-    eo = false;
-    mSize = j;
+    eJ = false;
+    eM = j;
   }
   
-  private static int m(int paramInt)
+  private static int n(int paramInt)
   {
     int j = paramInt * 4;
     paramInt = 4;
@@ -93,111 +93,111 @@ public final class c
   
   public final void clear()
   {
-    int j = mSize;
-    Object[] arrayOfObject = eq;
+    int j = eM;
+    Object[] arrayOfObject = eL;
     int i = 0;
     while (i < j)
     {
       arrayOfObject[i] = null;
       i += 1;
     }
-    mSize = 0;
-    eo = false;
+    eM = 0;
+    eJ = false;
   }
   
-  public final Object get(int paramInt)
+  public final E get(int paramInt)
   {
-    paramInt = a(ep, mSize, paramInt);
-    if ((paramInt < 0) || (eq[paramInt] == en)) {
+    paramInt = a(eK, eM, paramInt);
+    if ((paramInt < 0) || (eL[paramInt] == eI)) {
       return null;
     }
-    return eq[paramInt];
+    return (E)eL[paramInt];
   }
   
   public final int indexOfKey(int paramInt)
   {
-    if (eo) {
+    if (eJ) {
       gc();
     }
-    return a(ep, mSize, paramInt);
+    return a(eK, eM, paramInt);
   }
   
   public final int keyAt(int paramInt)
   {
-    if (eo) {
+    if (eJ) {
       gc();
     }
-    return ep[paramInt];
+    return eK[paramInt];
   }
   
-  public final void put(int paramInt, Object paramObject)
+  public final void put(int paramInt, E paramE)
   {
-    int i = a(ep, mSize, paramInt);
+    int i = a(eK, eM, paramInt);
     if (i >= 0)
     {
-      eq[i] = paramObject;
+      eL[i] = paramE;
       return;
     }
     int j = i ^ 0xFFFFFFFF;
-    if ((j < mSize) && (eq[j] == en))
+    if ((j < eM) && (eL[j] == eI))
     {
-      ep[j] = paramInt;
-      eq[j] = paramObject;
+      eK[j] = paramInt;
+      eL[j] = paramE;
       return;
     }
     i = j;
-    if (eo)
+    if (eJ)
     {
       i = j;
-      if (mSize >= ep.length)
+      if (eM >= eK.length)
       {
         gc();
-        i = a(ep, mSize, paramInt) ^ 0xFFFFFFFF;
+        i = a(eK, eM, paramInt) ^ 0xFFFFFFFF;
       }
     }
-    if (mSize >= ep.length)
+    if (eM >= eK.length)
     {
-      j = m(mSize + 1);
+      j = n(eM + 1);
       int[] arrayOfInt = new int[j];
       Object[] arrayOfObject = new Object[j];
-      System.arraycopy(ep, 0, arrayOfInt, 0, ep.length);
-      System.arraycopy(eq, 0, arrayOfObject, 0, eq.length);
-      ep = arrayOfInt;
-      eq = arrayOfObject;
+      System.arraycopy(eK, 0, arrayOfInt, 0, eK.length);
+      System.arraycopy(eL, 0, arrayOfObject, 0, eL.length);
+      eK = arrayOfInt;
+      eL = arrayOfObject;
     }
-    if (mSize - i != 0)
+    if (eM - i != 0)
     {
-      System.arraycopy(ep, i, ep, i + 1, mSize - i);
-      System.arraycopy(eq, i, eq, i + 1, mSize - i);
+      System.arraycopy(eK, i, eK, i + 1, eM - i);
+      System.arraycopy(eL, i, eL, i + 1, eM - i);
     }
-    ep[i] = paramInt;
-    eq[i] = paramObject;
-    mSize += 1;
+    eK[i] = paramInt;
+    eL[i] = paramE;
+    eM += 1;
   }
   
   public final void removeAt(int paramInt)
   {
-    if (eq[paramInt] != en)
+    if (eL[paramInt] != eI)
     {
-      eq[paramInt] = en;
-      eo = true;
+      eL[paramInt] = eI;
+      eJ = true;
     }
   }
   
   public final int size()
   {
-    if (eo) {
+    if (eJ) {
       gc();
     }
-    return mSize;
+    return eM;
   }
   
-  public final Object valueAt(int paramInt)
+  public final E valueAt(int paramInt)
   {
-    if (eo) {
+    if (eJ) {
       gc();
     }
-    return eq[paramInt];
+    return (E)eL[paramInt];
   }
 }
 

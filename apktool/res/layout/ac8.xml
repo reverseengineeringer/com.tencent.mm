@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/nx" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.plugin.sns.ui.MaskTextView android:textColor="@color/m9" android:gravity="center_vertical" android:id="@id/cfd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="{{comment_content}}" />
+    <com.tencent.mm.plugin.sns.ui.SnsTranslateResultView android:id="@id/c_1" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

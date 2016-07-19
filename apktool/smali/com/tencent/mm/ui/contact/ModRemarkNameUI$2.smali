@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->Gb()V
+    value = Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+.field final synthetic lMe:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 224
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$2;->llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$2;->lMe:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 228
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$2;->llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$2;->lMe:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->b(Lcom/tencent/mm/ui/contact/ModRemarkNameUI;)I
 
@@ -57,7 +57,7 @@
 
     .line 230
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$2;->llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$2;->lMe:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->c(Lcom/tencent/mm/ui/contact/ModRemarkNameUI;)V
 
@@ -65,7 +65,7 @@
 
     .line 234
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$2;->llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$2;->lMe:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->d(Lcom/tencent/mm/ui/contact/ModRemarkNameUI;)V
 
@@ -73,7 +73,7 @@
 
     .line 238
     :pswitch_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$2;->llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$2;->lMe:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->e(Lcom/tencent/mm/ui/contact/ModRemarkNameUI;)V
 
@@ -81,13 +81,13 @@
 
     .line 241
     :pswitch_3
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$2;->llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$2;->lMe:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->f(Lcom/tencent/mm/ui/contact/ModRemarkNameUI;)V
 
     .line 243
     :pswitch_4
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$2;->llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$2;->lMe:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->g(Lcom/tencent/mm/ui/contact/ModRemarkNameUI;)V
 

@@ -1,35 +1,24 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.m.a;
-import com.tencent.mm.m.a.a;
-import com.tencent.mm.m.c;
+import android.support.v7.app.ActionBar;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.storage.h;
 
 final class LauncherUI$6
-  implements a.a
+  implements Runnable
 {
   LauncherUI$6(LauncherUI paramLauncherUI) {}
   
-  public final void cn(int paramInt)
+  public final void run()
   {
-    if ((paramInt == 262145) || (paramInt == 262156) || (paramInt == 262152)) {
-      LauncherUI.k(knl);
-    }
-    if ((paramInt == 262147) || (paramInt == 262149)) {
-      LauncherUI.k(knl);
-    }
+    LauncherUI.l(kMs);
+    ah.tE().ro().setInt(327947, LauncherUI.m(kMs).getHeight());
   }
   
-  public final void co(int paramInt)
+  public final String toString()
   {
-    if (paramInt == 266241) {
-      LauncherUI.k(knl);
-    }
-    if (paramInt == 266244)
-    {
-      c.qP().H(262147, 266241);
-      c.qP().H(262149, 266241);
-      LauncherUI.k(knl);
-    }
+    return super.toString() + "|updateTitle";
   }
 }
 

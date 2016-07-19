@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic liY:Lcom/tencent/mm/ui/contact/BizContactEntranceView;
+.field final synthetic lJj:Lcom/tencent/mm/ui/contact/BizContactEntranceView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 63
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$1;->liY:Lcom/tencent/mm/ui/contact/BizContactEntranceView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$1;->lJj:Lcom/tencent/mm/ui/contact/BizContactEntranceView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -61,7 +61,7 @@
 
     const-string/jumbo v3, ".ui.BrandServiceIndexUI"
 
-    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     .line 70
     return-void

@@ -8,16 +8,43 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Lcom/tencent/mm/plugin/sns/data/SnsCmdList;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field private gHv:I
+.field private gOA:I
 
-.field private gHw:I
+.field public gOB:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public gHx:Ljava/util/List;
+.field public gOC:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public gHy:Ljava/util/List;
+.field private gOz:I
 
 
 # direct methods
@@ -45,24 +72,24 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 14
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHv:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOz:I
 
     .line 15
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHw:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOA:I
 
     .line 16
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHx:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOB:Ljava/util/List;
 
     .line 17
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHy:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOC:Ljava/util/List;
 
     return-void
 .end method
@@ -72,7 +99,7 @@
 
     .prologue
     .line 12
-    iput p1, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHv:I
+    iput p1, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOz:I
 
     return p1
 .end method
@@ -82,7 +109,7 @@
 
     .prologue
     .line 12
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHx:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOB:Ljava/util/List;
 
     return-object v0
 .end method
@@ -92,7 +119,7 @@
 
     .prologue
     .line 12
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHv:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOz:I
 
     return v0
 .end method
@@ -102,7 +129,7 @@
 
     .prologue
     .line 12
-    iput p1, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHw:I
+    iput p1, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOA:I
 
     return p1
 .end method
@@ -112,7 +139,7 @@
 
     .prologue
     .line 12
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHy:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOC:Ljava/util/List;
 
     return-object v0
 .end method
@@ -122,7 +149,7 @@
 
     .prologue
     .line 12
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHw:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOA:I
 
     return v0
 .end method
@@ -139,12 +166,12 @@
     return v0
 .end method
 
-.method public final ll(I)V
+.method public final mu(I)V
     .locals 2
 
     .prologue
     .line 20
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHx:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOB:Ljava/util/List;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -156,12 +183,12 @@
     return-void
 .end method
 
-.method public final lm(I)V
+.method public final mv(I)V
     .locals 2
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHy:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOC:Ljava/util/List;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -180,16 +207,16 @@
     const/4 v2, 0x0
 
     .line 42
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHx:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOB:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHv:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOz:I
 
     .line 43
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHv:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOz:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
@@ -197,12 +224,12 @@
 
     .line 44
     :goto_0
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHv:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOz:I
 
     if-ge v1, v0, :cond_0
 
     .line 45
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHx:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOB:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -225,27 +252,27 @@
 
     .line 47
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHy:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOC:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHw:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOA:I
 
     .line 48
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHw:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOA:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 49
     :goto_1
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHw:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOA:I
 
     if-ge v2, v0, :cond_1
 
     .line 50
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gHy:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/data/SnsCmdList;->gOC:Ljava/util/List;
 
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 

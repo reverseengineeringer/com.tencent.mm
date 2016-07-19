@@ -11,16 +11,25 @@
     }
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/ui/i",
+        "<",
+        "Lcom/tencent/mm/modelfriend/h;",
+        ">;"
+    }
+.end annotation
+
 .annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
 # instance fields
-.field private bMl:[I
+.field private bFF:[I
 
-.field private coW:Ljava/lang/String;
+.field private ckk:Ljava/lang/String;
 
-.field ksl:Lcom/tencent/mm/ui/account/d$a;
+.field kRt:Lcom/tencent/mm/ui/account/d$a;
 
 
 # direct methods
@@ -36,7 +45,7 @@
     invoke-direct {p0, p1, v0}, Lcom/tencent/mm/ui/i;-><init>(Landroid/content/Context;Ljava/lang/Object;)V
 
     .line 41
-    iput-object p2, p0, Lcom/tencent/mm/ui/i;->koC:Lcom/tencent/mm/ui/i$a;
+    iput-object p2, p0, Lcom/tencent/mm/ui/i;->kNG:Lcom/tencent/mm/ui/i$a;
 
     .line 106
     return-void
@@ -44,16 +53,16 @@
 
 
 # virtual methods
-.method public final Gk()V
+.method public final GH()V
     .locals 5
 
     .prologue
     .line 119
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zr()Lcom/tencent/mm/modelfriend/i;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zE()Lcom/tencent/mm/modelfriend/i;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/d;->coW:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/d;->ckk:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -138,7 +147,7 @@
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_0
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/i;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/i;->bvG:Lcom/tencent/mm/bc/g;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -166,7 +175,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/az/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/bc/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
@@ -179,19 +188,19 @@
 
     new-array v0, v0, [I
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/d;->bMl:[I
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/d;->bFF:[I
 
     .line 121
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/d;->ksl:Lcom/tencent/mm/ui/account/d$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/d;->kRt:Lcom/tencent/mm/ui/account/d$a;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/d;->coW:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/d;->ckk:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
     .line 122
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/d;->ksl:Lcom/tencent/mm/ui/account/d$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/d;->kRt:Lcom/tencent/mm/ui/account/d$a;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/account/d;->getCursor()Landroid/database/Cursor;
 
@@ -201,7 +210,7 @@
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/account/d$a;->qm(I)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/account/d$a;->se(I)V
 
     .line 124
     :cond_1
@@ -211,18 +220,18 @@
     return-void
 .end method
 
-.method protected final Gl()V
+.method protected final GI()V
     .locals 0
 
     .prologue
     .line 114
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/d;->Gk()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/d;->GH()V
 
     .line 115
     return-void
 .end method
 
-.method public final synthetic a(Ljava/lang/Object;Landroid/database/Cursor;)Ljava/lang/Object;
+.method public final synthetic convertFrom(Ljava/lang/Object;Landroid/database/Cursor;)Ljava/lang/Object;
     .locals 0
 
     .prologue
@@ -236,7 +245,7 @@
     invoke-direct {p1}, Lcom/tencent/mm/modelfriend/h;-><init>()V
 
     :cond_0
-    invoke-virtual {p1, p2}, Lcom/tencent/mm/modelfriend/h;->c(Landroid/database/Cursor;)V
+    invoke-virtual {p1, p2}, Lcom/tencent/mm/modelfriend/h;->b(Landroid/database/Cursor;)V
 
     return-object p1
 .end method
@@ -269,7 +278,7 @@
     .line 148
     iget-object v1, p0, Lcom/tencent/mm/ui/account/d;->context:Landroid/content/Context;
 
-    const v3, 0x7f0a0299
+    const v3, 0x7f0301fc
 
     const/4 v4, 0x0
 
@@ -278,7 +287,7 @@
     move-result-object p2
 
     .line 149
-    const v1, 0x7f07078a
+    const v1, 0x7f1006bd
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -286,10 +295,10 @@
 
     check-cast v1, Landroid/widget/ImageView;
 
-    iput-object v1, v2, Lcom/tencent/mm/ui/account/d$b;->coY:Landroid/widget/ImageView;
+    iput-object v1, v2, Lcom/tencent/mm/ui/account/d$b;->ckm:Landroid/widget/ImageView;
 
     .line 150
-    const v1, 0x7f07078b
+    const v1, 0x7f1006be
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -297,10 +306,10 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, v2, Lcom/tencent/mm/ui/account/d$b;->bMs:Landroid/widget/TextView;
+    iput-object v1, v2, Lcom/tencent/mm/ui/account/d$b;->bFM:Landroid/widget/TextView;
 
     .line 153
-    const v1, 0x7f0707a5
+    const v1, 0x7f1006c1
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -308,10 +317,10 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, v2, Lcom/tencent/mm/ui/account/d$b;->bMt:Landroid/widget/TextView;
+    iput-object v1, v2, Lcom/tencent/mm/ui/account/d$b;->bFN:Landroid/widget/TextView;
 
     .line 154
-    const v1, 0x7f0707a3
+    const v1, 0x7f1006bf
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -319,10 +328,10 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, v2, Lcom/tencent/mm/ui/account/d$b;->ksm:Landroid/widget/TextView;
+    iput-object v1, v2, Lcom/tencent/mm/ui/account/d$b;->kRu:Landroid/widget/TextView;
 
     .line 155
-    const v1, 0x7f0707a4
+    const v1, 0x7f1006c0
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -330,10 +339,10 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, v2, Lcom/tencent/mm/ui/account/d$b;->ksn:Landroid/widget/TextView;
+    iput-object v1, v2, Lcom/tencent/mm/ui/account/d$b;->kRv:Landroid/widget/TextView;
 
     .line 156
-    const v1, 0x7f0707a6
+    const v1, 0x7f1006c2
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -341,7 +350,7 @@
 
     check-cast v1, Landroid/widget/ImageView;
 
-    iput-object v1, v2, Lcom/tencent/mm/ui/account/d$b;->kso:Landroid/widget/ImageView;
+    iput-object v1, v2, Lcom/tencent/mm/ui/account/d$b;->kRw:Landroid/widget/ImageView;
 
     .line 157
     invoke-virtual {p2, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
@@ -350,15 +359,15 @@
 
     .line 164
     :goto_0
-    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->bMs:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->bFM:Landroid/widget/TextView;
 
     iget-object v3, p0, Lcom/tencent/mm/ui/account/d;->context:Landroid/content/Context;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/h;->yw()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/h;->yI()Ljava/lang/String;
 
     move-result-object v4
 
-    iget-object v5, v1, Lcom/tencent/mm/ui/account/d$b;->bMs:Landroid/widget/TextView;
+    iget-object v5, v1, Lcom/tencent/mm/ui/account/d$b;->bFM:Landroid/widget/TextView;
 
     invoke-virtual {v5}, Landroid/widget/TextView;->getTextSize()F
 
@@ -371,17 +380,17 @@
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 165
-    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->ksn:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->kRv:Landroid/widget/TextView;
 
     invoke-virtual {v2, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 166
-    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->kso:Landroid/widget/ImageView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->kRw:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v7}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 168
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/d;->bMl:[I
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/d;->bFF:[I
 
     aget v2, v2, p1
 
@@ -394,9 +403,9 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-wide v3, v0, Lcom/tencent/mm/modelfriend/h;->aSw:J
+    iget-wide v4, v0, Lcom/tencent/mm/modelfriend/h;->aFf:J
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -404,7 +413,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/q/b;->fK(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/tencent/mm/s/b;->fX(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -412,13 +421,13 @@
     if-nez v0, :cond_3
 
     .line 220
-    iget-object v0, v1, Lcom/tencent/mm/ui/account/d$b;->coY:Landroid/widget/ImageView;
+    iget-object v0, v1, Lcom/tencent/mm/ui/account/d$b;->ckm:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/tencent/mm/ui/account/d;->context:Landroid/content/Context;
 
-    const v2, 0x7f0301b1
+    const v2, 0x7f0700af
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/aw/a;->y(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v1, v2}, Lcom/tencent/mm/az/a;->C(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -440,24 +449,24 @@
 
     .line 176
     :pswitch_1
-    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->ksm:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->kRu:Landroid/widget/TextView;
 
     invoke-virtual {v2, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 177
-    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->bMt:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->bFN:Landroid/widget/TextView;
 
     invoke-virtual {v2, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 178
-    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->bMt:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->bFN:Landroid/widget/TextView;
 
-    const v3, 0x7f0b05db
+    const v3, 0x7f0808c5
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
     .line 179
-    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->bMt:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->bFN:Landroid/widget/TextView;
 
     iget-object v3, p0, Lcom/tencent/mm/ui/account/d;->context:Landroid/content/Context;
 
@@ -465,7 +474,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f08017a
+    const v4, 0x7f0f001d
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -481,11 +490,11 @@
 
     if-eq v2, v8, :cond_1
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v2
 
@@ -493,19 +502,19 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/storage/q;->El(Ljava/lang/String;)Z
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/storage/q;->Gz(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
     .line 183
-    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->bMt:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->bFN:Landroid/widget/TextView;
 
     invoke-virtual {v2, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 184
-    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->ksm:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->kRu:Landroid/widget/TextView;
 
     invoke-virtual {v2, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -518,17 +527,17 @@
     if-ne v2, v8, :cond_2
 
     .line 193
-    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->bMt:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->bFN:Landroid/widget/TextView;
 
     invoke-virtual {v2, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 194
-    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->ksm:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->kRu:Landroid/widget/TextView;
 
     invoke-virtual {v2, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 195
-    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->kso:Landroid/widget/ImageView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->kRw:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v6}, Landroid/widget/ImageView;->setVisibility(I)V
 
@@ -536,19 +545,19 @@
 
     .line 202
     :cond_2
-    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->bMt:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->bFN:Landroid/widget/TextView;
 
     invoke-virtual {v2, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 203
-    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->bMt:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->bFN:Landroid/widget/TextView;
 
-    const v3, 0x7f0b05da
+    const v3, 0x7f0808c1
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
     .line 204
-    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->bMt:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->bFN:Landroid/widget/TextView;
 
     iget-object v3, p0, Lcom/tencent/mm/ui/account/d;->context:Landroid/content/Context;
 
@@ -556,7 +565,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f080179
+    const v4, 0x7f0f001c
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -565,7 +574,7 @@
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
     .line 205
-    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->ksm:Landroid/widget/TextView;
+    iget-object v2, v1, Lcom/tencent/mm/ui/account/d$b;->kRu:Landroid/widget/TextView;
 
     invoke-virtual {v2, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -573,7 +582,7 @@
 
     .line 222
     :cond_3
-    iget-object v1, v1, Lcom/tencent/mm/ui/account/d$b;->coY:Landroid/widget/ImageView;
+    iget-object v1, v1, Lcom/tencent/mm/ui/account/d$b;->ckm:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
@@ -590,7 +599,7 @@
     .end packed-switch
 .end method
 
-.method public final pH(Ljava/lang/String;)V
+.method public final qY(Ljava/lang/String;)V
     .locals 1
 
     .prologue
@@ -599,17 +608,17 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kx(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->lh(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/d;->coW:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/d;->ckk:Ljava/lang/String;
 
     .line 138
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/d;->adW()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/d;->closeCursor()V
 
     .line 139
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/d;->Gk()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/d;->GH()V
 
     .line 140
     return-void

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic jTc:Lcom/tencent/mm/sandbox/updater/AppUpdaterUI$1;
+.field final synthetic ksw:Lcom/tencent/mm/sandbox/updater/AppUpdaterUI$1;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 117
-    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/AppUpdaterUI$1$1;->jTc:Lcom/tencent/mm/sandbox/updater/AppUpdaterUI$1;
+    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/AppUpdaterUI$1$1;->ksw:Lcom/tencent/mm/sandbox/updater/AppUpdaterUI$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 121
-    const-string/jumbo v0, "!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/"
+    const-string/jumbo v0, "MicroMsg.AppUpdaterUI"
 
     const-string/jumbo v1, "go to WebView"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 122
     new-instance v0, Landroid/content/Intent;
@@ -66,9 +66,9 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 124
-    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/AppUpdaterUI$1$1;->jTc:Lcom/tencent/mm/sandbox/updater/AppUpdaterUI$1;
+    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/AppUpdaterUI$1$1;->ksw:Lcom/tencent/mm/sandbox/updater/AppUpdaterUI$1;
 
-    iget-object v1, v1, Lcom/tencent/mm/sandbox/updater/AppUpdaterUI$1;->jTb:Lcom/tencent/mm/sandbox/updater/AppUpdaterUI;
+    iget-object v1, v1, Lcom/tencent/mm/sandbox/updater/AppUpdaterUI$1;->ksv:Lcom/tencent/mm/sandbox/updater/AppUpdaterUI;
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/sandbox/updater/AppUpdaterUI;->startActivity(Landroid/content/Intent;)V
 

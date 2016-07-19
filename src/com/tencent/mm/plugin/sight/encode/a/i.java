@@ -1,30 +1,30 @@
 package com.tencent.mm.plugin.sight.encode.a;
 
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class i
 {
-  long cJQ = 0L;
-  int gBb = -1;
-  int gBc = 0;
-  long gBd = 0L;
+  long cGU = 0L;
+  int gHD = -1;
+  int gHE = 0;
+  long gHF = 0L;
   
-  public final long awy()
+  public final long ayX()
   {
-    if (0L == cJQ)
+    if (0L == cGU)
     {
-      u.w("!44@/B4Tb64lLpJYfkm+3BfBr630hXwybmHsot/c0pFER9s=", "do not start record");
+      v.w("MicroMsg.SightYUVRecorder", "do not start record");
       return 0L;
     }
-    return ay.ao(cJQ);
+    return be.av(cGU);
   }
   
   public final void stop()
   {
-    gBb = -1;
-    gBc = 0;
-    cJQ = 0L;
+    gHD = -1;
+    gHE = 0;
+    cGU = 0L;
   }
 }
 

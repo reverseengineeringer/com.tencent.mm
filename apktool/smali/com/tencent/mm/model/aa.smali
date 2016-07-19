@@ -7,11 +7,20 @@
 .method public abstract a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
 .end method
 
-.method public abstract a(Lcom/tencent/mm/storage/ag;)V
+.method public abstract a(Lcom/tencent/mm/storage/ai;)V
 .end method
 
 .method public abstract getLooper()Landroid/os/Looper;
 .end method
 
-.method public abstract j(Ljava/util/List;)V
+.method public abstract m(Ljava/util/List;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/storage/ai;",
+            ">;)V"
+        }
+    .end annotation
 .end method

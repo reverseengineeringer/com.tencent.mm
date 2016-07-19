@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/modelsimple/j;
-.super Lcom/tencent/mm/r/j;
+.super Lcom/tencent/mm/t/j;
 .source "SourceFile"
 
 # interfaces
@@ -13,38 +13,45 @@
     }
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/t/j;",
+        "Lcom/tencent/mm/network/j;"
+    }
+.end annotation
+
 
 # instance fields
-.field private anM:Lcom/tencent/mm/r/d;
+.field public bUD:Ljava/lang/String;
 
-.field private bGh:Lcom/tencent/mm/network/o;
+.field private bkT:Lcom/tencent/mm/t/d;
 
-.field public caU:Ljava/lang/String;
+.field private bzs:Lcom/tencent/mm/network/o;
 
 .field public content:[B
 
 
 # direct methods
-.method public constructor <init>(Lcom/tencent/mm/protocal/h$d;)V
+.method public constructor <init>(Lcom/tencent/mm/protocal/k$d;)V
     .locals 1
 
     .prologue
     .line 57
-    invoke-direct {p0}, Lcom/tencent/mm/r/j;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/t/j;-><init>()V
 
     .line 32
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsimple/j;->caU:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/modelsimple/j;->bUD:Ljava/lang/String;
 
     .line 58
-    check-cast p1, Lcom/tencent/mm/protocal/l$b;
+    check-cast p1, Lcom/tencent/mm/protocal/o$b;
 
-    iget-object v0, p1, Lcom/tencent/mm/protocal/l$b;->caU:Ljava/lang/String;
+    iget-object v0, p1, Lcom/tencent/mm/protocal/o$b;->bUD:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsimple/j;->caU:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/modelsimple/j;->bUD:Ljava/lang/String;
 
-    iget-object v0, p1, Lcom/tencent/mm/protocal/l$b;->content:[B
+    iget-object v0, p1, Lcom/tencent/mm/protocal/o$b;->content:[B
 
     iput-object v0, p0, Lcom/tencent/mm/modelsimple/j;->content:[B
 
@@ -53,7 +60,16 @@
 .end method
 
 .method public constructor <init>(Ljava/util/List;[B)V
-    .locals 7
+    .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;[B)V"
+        }
+    .end annotation
 
     .prologue
     const/4 v1, 0x1
@@ -61,12 +77,12 @@
     const/4 v2, 0x0
 
     .line 35
-    invoke-direct {p0}, Lcom/tencent/mm/r/j;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/t/j;-><init>()V
 
     .line 32
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsimple/j;->caU:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/modelsimple/j;->bUD:Ljava/lang/String;
 
     .line 36
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -85,13 +101,13 @@
     .line 38
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    const-wide/16 v5, 0x3e8
+    const-wide/16 v6, 0x3e8
 
-    div-long/2addr v3, v5
+    div-long/2addr v4, v6
 
-    long-to-int v5, v3
+    long-to-int v5, v4
 
     .line 40
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -164,29 +180,29 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/modelsimple/j$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsimple/j;->bGh:Lcom/tencent/mm/network/o;
+    iput-object v0, p0, Lcom/tencent/mm/modelsimple/j;->bzs:Lcom/tencent/mm/network/o;
 
     .line 46
-    iget-object v0, p0, Lcom/tencent/mm/modelsimple/j;->bGh:Lcom/tencent/mm/network/o;
+    iget-object v0, p0, Lcom/tencent/mm/modelsimple/j;->bzs:Lcom/tencent/mm/network/o;
 
-    invoke-interface {v0}, Lcom/tencent/mm/network/o;->vA()Lcom/tencent/mm/protocal/h$c;
+    invoke-interface {v0}, Lcom/tencent/mm/network/o;->vC()Lcom/tencent/mm/protocal/k$c;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/protocal/l$a;
+    check-cast v0, Lcom/tencent/mm/protocal/o$a;
 
-    check-cast v0, Lcom/tencent/mm/protocal/l$a;
+    check-cast v0, Lcom/tencent/mm/protocal/o$a;
 
     .line 47
     const/16 v3, 0x6f
 
-    iput v3, v0, Lcom/tencent/mm/protocal/l$a;->axL:I
+    iput v3, v0, Lcom/tencent/mm/protocal/o$a;->ajS:I
 
     .line 48
-    iput v2, v0, Lcom/tencent/mm/protocal/l$a;->aou:I
+    iput v2, v0, Lcom/tencent/mm/protocal/o$a;->aqQ:I
 
     .line 49
-    iput v5, v0, Lcom/tencent/mm/protocal/l$a;->ccb:I
+    iput v5, v0, Lcom/tencent/mm/protocal/o$a;->bVQ:I
 
     .line 50
     if-eqz v4, :cond_2
@@ -196,7 +212,7 @@
     :goto_2
     invoke-static {v3}, Ljunit/framework/Assert;->assertTrue(Z)V
 
-    iput-object v4, v0, Lcom/tencent/mm/protocal/l$a;->iUV:Ljava/lang/String;
+    iput-object v4, v0, Lcom/tencent/mm/protocal/o$a;->jss:Ljava/lang/String;
 
     .line 51
     if-eqz p2, :cond_3
@@ -204,10 +220,10 @@
     :goto_3
     invoke-static {v1}, Ljunit/framework/Assert;->assertTrue(Z)V
 
-    iput-object p2, v0, Lcom/tencent/mm/protocal/l$a;->iUW:[B
+    iput-object p2, v0, Lcom/tencent/mm/protocal/o$a;->jst:[B
 
     .line 53
-    const-string/jumbo v0, "!44@/B4Tb64lLpK+IBX8XDgnvkASPLG9hDDydmb3CTe3k6g="
+    const-string/jumbo v0, "MicroMsg.NetSceneDirectSend"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -229,10 +245,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 54
-    const-string/jumbo v0, "!44@/B4Tb64lLpK+IBX8XDgnvkASPLG9hDDydmb3CTe3k6g="
+    const-string/jumbo v0, "MicroMsg.NetSceneDirectSend"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -262,7 +278,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 55
     return-void
@@ -282,15 +298,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/network/e;Lcom/tencent/mm/r/d;)I
+.method public final a(Lcom/tencent/mm/network/e;Lcom/tencent/mm/t/d;)I
     .locals 1
 
     .prologue
     .line 63
-    iput-object p2, p0, Lcom/tencent/mm/modelsimple/j;->anM:Lcom/tencent/mm/r/d;
+    iput-object p2, p0, Lcom/tencent/mm/modelsimple/j;->bkT:Lcom/tencent/mm/t/d;
 
     .line 64
-    iget-object v0, p0, Lcom/tencent/mm/modelsimple/j;->bGh:Lcom/tencent/mm/network/o;
+    iget-object v0, p0, Lcom/tencent/mm/modelsimple/j;->bzs:Lcom/tencent/mm/network/o;
 
     invoke-virtual {p0, p1, v0, p0}, Lcom/tencent/mm/modelsimple/j;->a(Lcom/tencent/mm/network/e;Lcom/tencent/mm/network/o;Lcom/tencent/mm/network/j;)I
 
@@ -303,12 +319,12 @@
     .locals 1
 
     .prologue
-    .line 74
-    iget-object v0, p0, Lcom/tencent/mm/modelsimple/j;->anM:Lcom/tencent/mm/r/d;
+    .line 80
+    iget-object v0, p0, Lcom/tencent/mm/modelsimple/j;->bkT:Lcom/tencent/mm/t/d;
 
-    invoke-interface {v0, p2, p3, p4, p0}, Lcom/tencent/mm/r/d;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    invoke-interface {v0, p2, p3, p4, p0}, Lcom/tencent/mm/t/d;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 
-    .line 75
+    .line 81
     return-void
 .end method
 
@@ -318,6 +334,16 @@
     .prologue
     .line 69
     const/16 v0, 0xa
+
+    return v0
+.end method
+
+.method public final vE()Z
+    .locals 1
+
+    .prologue
+    .line 74
+    const/4 v0, 0x1
 
     return v0
 .end method

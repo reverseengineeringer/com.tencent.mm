@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final mD:Landroid/support/v7/a/b;
+.field final mT:Landroid/support/v7/a/b;
 
 
 # direct methods
@@ -38,7 +38,7 @@
     .line 424
     check-cast v0, Landroid/support/v7/a/b;
 
-    iput-object v0, p0, Landroid/support/v7/internal/view/menu/i$b;->mD:Landroid/support/v7/a/b;
+    iput-object v0, p0, Landroid/support/v7/internal/view/menu/i$b;->mT:Landroid/support/v7/a/b;
 
     .line 425
     invoke-virtual {p0, p1}, Landroid/support/v7/internal/view/menu/i$b;->addView(Landroid/view/View;)V
@@ -54,7 +54,7 @@
 
     .prologue
     .line 435
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/i$b;->mD:Landroid/support/v7/a/b;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/i$b;->mT:Landroid/support/v7/a/b;
 
     invoke-interface {v0}, Landroid/support/v7/a/b;->onActionViewCollapsed()V
 
@@ -67,7 +67,7 @@
 
     .prologue
     .line 430
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/i$b;->mD:Landroid/support/v7/a/b;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/i$b;->mT:Landroid/support/v7/a/b;
 
     invoke-interface {v0}, Landroid/support/v7/a/b;->onActionViewExpanded()V
 

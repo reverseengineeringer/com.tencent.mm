@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">%1$s require unha actualización da aplicación Android Wear.</string>
+    <string name="b">%1$s non se executará a menos que actualices a aplicación Android Wear.</string>
+    <string name="c">Actualizar Android Wear</string>
+    <string name="d">%1$s require un ou máis servizos de Google Play que non están dispoñibles neste momento. Ponte en contacto co programador para obter axuda.</string>
+    <string name="e">Activar servizos de Google Play</string>
+    <string name="f">%1$s non funcionará a menos que actives os servizos de Google Play.</string>
+    <string name="g">Activar servizos de Google Play</string>
+    <string name="h">Solicitado por %1$s</string>
+    <string name="i">Obter servizos de Google Play</string>
+    <string name="j">%1$s non se executará se o teu teléfono non ten instalados os servizos de Google Play.</string>
+    <string name="k">%1$s non se executará se o teu tablet non ten instalados os servizos de Google Play.</string>
+    <string name="l">Descargar servizos de Google Play</string>
+    <string name="m">A conta especificada non existe neste dispositivo. Escolle unha diferente.</string>
+    <string name="n">Conta non válida</string>
+    <string name="o">As aplicacións requiren ter os servizos de Google Play activados.</string>
+    <string name="p">É necesario dispoñer dunha conexión de datos para conectarse aos servizos de Google Play.</string>
+    <string name="q">Erro de rede</string>
+    <string name="r">Unha aplicación require a actualización dos servizos de Google Play.</string>
+    <string name="s">Erro nos servizos de Google Play</string>
+    <string name="t">Produciuse un erro ao iniciar sesión na conta especificada. Escolle unha conta diferente.</string>
+    <string name="u">Produciuse un erro no inicio de sesión</string>
+    <string name="v">Erro descoñecido cos servizos de Google Play.</string>
+    <string name="w">%1$s confía nos servizos de Google Play, que non son compatibles co teu dispositivo. Ponte en contacto co fabricante para obter axuda.</string>
+    <string name="x">Servizos de Google Play</string>
+    <string name="y">Actualizar</string>
+    <string name="z">%1$s non se executará a menos que actualices os servizos de Google Play.</string>
+    <string name="a0">Actualizar os servizos de Google Play</string>
+    <string name="a1">%1$s non se executará sen os servizos de Google Play, que se están actualizando neste momento.</string>
+    <string name="a2">Actualizando os servizos de Google Play</string>
+    <string name="a3">Abrir no teléfono</string>
+    <string name="a4">Iniciar sesión</string>
+    <string name="a5">Iniciar sesión con Google</string>
+</resources>

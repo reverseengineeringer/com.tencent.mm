@@ -7,7 +7,7 @@ final class CropImageNewUI$3
   
   public final void run()
   {
-    luq.finish();
+    lVs.finish();
   }
 }
 

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic luU:Lcom/tencent/mm/ui/tools/CropImageView;
+.field final synthetic lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 223
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,7 +49,7 @@
     const/4 v0, 0x0
 
     .line 226
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/CropImageView;->u(Lcom/tencent/mm/ui/tools/CropImageView;)Z
 
@@ -64,7 +64,7 @@
 
     .line 241
     :cond_1
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/CropImageView;->i(Lcom/tencent/mm/ui/tools/CropImageView;)Landroid/graphics/Bitmap;
 
@@ -80,7 +80,7 @@
     and-int/lit16 v2, v2, 0xff
 
     .line 246
-    const-string/jumbo v3, "!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE"
+    const-string/jumbo v3, "MicroMsg.CropImageView"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -98,7 +98,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v5, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v5}, Lcom/tencent/mm/ui/tools/CropImageView;->v(Lcom/tencent/mm/ui/tools/CropImageView;)Z
 
@@ -112,10 +112,10 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 248
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v3}, Lcom/tencent/mm/ui/tools/CropImageView;->v(Lcom/tencent/mm/ui/tools/CropImageView;)Z
 
@@ -134,14 +134,14 @@
 
     .line 276
     :pswitch_1
-    const-string/jumbo v1, "!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE"
+    const-string/jumbo v1, "MicroMsg.CropImageView"
 
     const-string/jumbo v2, "action_down"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 278
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -150,7 +150,7 @@
     invoke-static {v1, v2}, Lcom/tencent/mm/ui/tools/CropImageView;->a(Lcom/tencent/mm/ui/tools/CropImageView;F)F
 
     .line 279
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
 
@@ -159,7 +159,7 @@
     invoke-static {v1, v2}, Lcom/tencent/mm/ui/tools/CropImageView;->b(Lcom/tencent/mm/ui/tools/CropImageView;F)F
 
     .line 280
-    const-string/jumbo v1, "!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE"
+    const-string/jumbo v1, "MicroMsg.CropImageView"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -167,7 +167,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v3}, Lcom/tencent/mm/ui/tools/CropImageView;->w(Lcom/tencent/mm/ui/tools/CropImageView;)F
 
@@ -183,7 +183,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v3}, Lcom/tencent/mm/ui/tools/CropImageView;->x(Lcom/tencent/mm/ui/tools/CropImageView;)F
 
@@ -197,12 +197,12 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 281
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/CropImageView;->w(Lcom/tencent/mm/ui/tools/CropImageView;)F
 
@@ -211,9 +211,9 @@
     invoke-static {v1, v2}, Lcom/tencent/mm/ui/tools/CropImageView;->c(Lcom/tencent/mm/ui/tools/CropImageView;F)F
 
     .line 282
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/CropImageView;->x(Lcom/tencent/mm/ui/tools/CropImageView;)F
 
@@ -222,7 +222,7 @@
     invoke-static {v1, v2}, Lcom/tencent/mm/ui/tools/CropImageView;->d(Lcom/tencent/mm/ui/tools/CropImageView;F)F
 
     .line 284
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->getImageMatrix()Landroid/graphics/Matrix;
 
@@ -234,7 +234,7 @@
     invoke-direct {v2}, Landroid/graphics/RectF;-><init>()V
 
     .line 286
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v3}, Lcom/tencent/mm/ui/tools/CropImageView;->i(Lcom/tencent/mm/ui/tools/CropImageView;)Landroid/graphics/Bitmap;
 
@@ -246,7 +246,7 @@
 
     int-to-float v3, v3
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v4}, Lcom/tencent/mm/ui/tools/CropImageView;->i(Lcom/tencent/mm/ui/tools/CropImageView;)Landroid/graphics/Bitmap;
 
@@ -264,15 +264,15 @@
     invoke-virtual {v1, v2}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
     .line 288
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v3}, Lcom/tencent/mm/ui/tools/CropImageView;->w(Lcom/tencent/mm/ui/tools/CropImageView;)F
 
     move-result v3
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v4}, Lcom/tencent/mm/ui/tools/CropImageView;->x(Lcom/tencent/mm/ui/tools/CropImageView;)F
 
@@ -285,7 +285,7 @@
     invoke-static {v1, v2}, Lcom/tencent/mm/ui/tools/CropImageView;->a(Lcom/tencent/mm/ui/tools/CropImageView;Z)Z
 
     .line 289
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -297,48 +297,48 @@
 
     .line 255
     :pswitch_2
-    const-string/jumbo v2, "!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE"
+    const-string/jumbo v2, "MicroMsg.CropImageView"
 
     const-string/jumbo v3, "action_mult_down"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 256
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v2, v1}, Lcom/tencent/mm/ui/tools/CropImageView;->b(Lcom/tencent/mm/ui/tools/CropImageView;Z)Z
 
     .line 257
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    invoke-static {p2}, Lcom/tencent/mm/ui/base/f;->n(Landroid/view/MotionEvent;)F
+    invoke-static {p2}, Lcom/tencent/mm/ui/base/f;->m(Landroid/view/MotionEvent;)F
 
     move-result v3
 
-    iput v3, v2, Lcom/tencent/mm/ui/tools/CropImageView;->epi:F
+    iput v3, v2, Lcom/tencent/mm/ui/tools/CropImageView;->eug:F
 
     .line 258
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    iget v2, v2, Lcom/tencent/mm/ui/tools/CropImageView;->epi:F
+    iget v2, v2, Lcom/tencent/mm/ui/tools/CropImageView;->eug:F
 
     cmpl-float v2, v2, v6
 
     if-lez v2, :cond_0
 
     .line 259
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    iput-boolean v1, v0, Lcom/tencent/mm/ui/tools/CropImageView;->luB:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/ui/tools/CropImageView;->lVD:Z
 
     .line 261
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/CropImageView;->h(Lcom/tencent/mm/ui/tools/CropImageView;)Landroid/graphics/PointF;
 
     move-result-object v0
 
-    invoke-static {v0, p2}, Lcom/tencent/mm/ui/base/f;->b(Landroid/graphics/PointF;Landroid/view/MotionEvent;)V
+    invoke-static {v0, p2}, Lcom/tencent/mm/ui/base/f;->a(Landroid/graphics/PointF;Landroid/view/MotionEvent;)V
 
     move v0, v1
 
@@ -347,19 +347,19 @@
 
     .line 269
     :pswitch_3
-    const-string/jumbo v2, "!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE"
+    const-string/jumbo v2, "MicroMsg.CropImageView"
 
     const-string/jumbo v3, "action_mult_up"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 270
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    iput-boolean v0, v2, Lcom/tencent/mm/ui/tools/CropImageView;->luB:Z
+    iput-boolean v0, v2, Lcom/tencent/mm/ui/tools/CropImageView;->lVD:Z
 
     .line 271
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/tools/CropImageView;->b(Lcom/tencent/mm/ui/tools/CropImageView;Z)Z
 
@@ -370,50 +370,50 @@
 
     .line 296
     :pswitch_4
-    const-string/jumbo v1, "!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE"
+    const-string/jumbo v1, "MicroMsg.CropImageView"
 
     const-string/jumbo v2, "action_move"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 297
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    iget-boolean v1, v1, Lcom/tencent/mm/ui/tools/CropImageView;->luB:Z
+    iget-boolean v1, v1, Lcom/tencent/mm/ui/tools/CropImageView;->lVD:Z
 
     if-eqz v1, :cond_4
 
     .line 298
-    const-string/jumbo v1, "!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE"
+    const-string/jumbo v1, "MicroMsg.CropImageView"
 
     const-string/jumbo v2, "is valid mult down"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 299
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    invoke-static {p2}, Lcom/tencent/mm/ui/base/f;->n(Landroid/view/MotionEvent;)F
+    invoke-static {p2}, Lcom/tencent/mm/ui/base/f;->m(Landroid/view/MotionEvent;)F
 
     move-result v2
 
-    iput v2, v1, Lcom/tencent/mm/ui/tools/CropImageView;->epj:F
+    iput v2, v1, Lcom/tencent/mm/ui/tools/CropImageView;->euh:F
 
     .line 300
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    iget v1, v1, Lcom/tencent/mm/ui/tools/CropImageView;->epj:F
+    iget v1, v1, Lcom/tencent/mm/ui/tools/CropImageView;->euh:F
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    iget v2, v2, Lcom/tencent/mm/ui/tools/CropImageView;->epi:F
+    iget v2, v2, Lcom/tencent/mm/ui/tools/CropImageView;->eug:F
 
     sub-float/2addr v1, v2
 
     .line 301
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    iget v2, v2, Lcom/tencent/mm/ui/tools/CropImageView;->epj:F
+    iget v2, v2, Lcom/tencent/mm/ui/tools/CropImageView;->euh:F
 
     cmpl-float v2, v2, v6
 
@@ -428,16 +428,16 @@
     if-lez v2, :cond_3
 
     .line 303
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/CropImageView;->h(Lcom/tencent/mm/ui/tools/CropImageView;)Landroid/graphics/PointF;
 
     move-result-object v2
 
-    invoke-static {v2, p2}, Lcom/tencent/mm/ui/base/f;->b(Landroid/graphics/PointF;Landroid/view/MotionEvent;)V
+    invoke-static {v2, p2}, Lcom/tencent/mm/ui/base/f;->a(Landroid/graphics/PointF;Landroid/view/MotionEvent;)V
 
     .line 304
-    const-string/jumbo v2, "!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE"
+    const-string/jumbo v2, "MicroMsg.CropImageView"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -445,7 +445,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v4}, Lcom/tencent/mm/ui/tools/CropImageView;->h(Lcom/tencent/mm/ui/tools/CropImageView;)Landroid/graphics/PointF;
 
@@ -463,7 +463,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v4}, Lcom/tencent/mm/ui/tools/CropImageView;->h(Lcom/tencent/mm/ui/tools/CropImageView;)Landroid/graphics/PointF;
 
@@ -479,7 +479,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 305
     cmpl-float v1, v1, v7
@@ -487,31 +487,31 @@
     if-lez v1, :cond_8
 
     .line 306
-    const-string/jumbo v1, "!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE"
+    const-string/jumbo v1, "MicroMsg.CropImageView"
 
     const-string/jumbo v2, "zoom in"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 307
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->biA()V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->bow()V
 
     .line 313
     :cond_3
     :goto_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    iget v2, v2, Lcom/tencent/mm/ui/tools/CropImageView;->epj:F
+    iget v2, v2, Lcom/tencent/mm/ui/tools/CropImageView;->euh:F
 
-    iput v2, v1, Lcom/tencent/mm/ui/tools/CropImageView;->epi:F
+    iput v2, v1, Lcom/tencent/mm/ui/tools/CropImageView;->eug:F
 
     .line 318
     :cond_4
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->y(Lcom/tencent/mm/ui/tools/CropImageView;)Z
 
@@ -524,7 +524,7 @@
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/CropImageView;->w(Lcom/tencent/mm/ui/tools/CropImageView;)F
 
@@ -537,7 +537,7 @@
 
     move-result v2
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v3}, Lcom/tencent/mm/ui/tools/CropImageView;->x(Lcom/tencent/mm/ui/tools/CropImageView;)F
 
@@ -564,7 +564,7 @@
 
     .line 322
     :cond_5
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-virtual {v3}, Lcom/tencent/mm/ui/tools/CropImageView;->getImageMatrix()Landroid/graphics/Matrix;
 
@@ -574,18 +574,18 @@
 
     .line 325
     :cond_6
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->invalidate()V
 
     .line 327
     :cond_7
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v1, v0}, Lcom/tencent/mm/ui/tools/CropImageView;->b(Lcom/tencent/mm/ui/tools/CropImageView;Z)Z
 
     .line 328
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -594,7 +594,7 @@
     invoke-static {v1, v2}, Lcom/tencent/mm/ui/tools/CropImageView;->a(Lcom/tencent/mm/ui/tools/CropImageView;F)F
 
     .line 329
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
 
@@ -606,29 +606,29 @@
 
     .line 309
     :cond_8
-    const-string/jumbo v1, "!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE"
+    const-string/jumbo v1, "MicroMsg.CropImageView"
 
     const-string/jumbo v2, "zoom out"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 310
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->biB()V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->box()V
 
     goto :goto_1
 
     .line 334
     :pswitch_5
-    const-string/jumbo v2, "!32@/B4Tb64lLpKZO8SHSsYWiU6LrfM7B7iE"
+    const-string/jumbo v2, "MicroMsg.CropImageView"
 
     const-string/jumbo v3, "action_up"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 336
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/CropImageView;->z(Lcom/tencent/mm/ui/tools/CropImageView;)Z
 
@@ -637,12 +637,12 @@
     if-eqz v2, :cond_a
 
     .line 338
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v2, v0}, Lcom/tencent/mm/ui/tools/CropImageView;->c(Lcom/tencent/mm/ui/tools/CropImageView;Z)Z
 
     .line 339
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/CropImageView;->A(Lcom/tencent/mm/ui/tools/CropImageView;)Z
 
@@ -651,78 +651,78 @@
     if-eqz v2, :cond_9
 
     .line 340
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v1, v0}, Lcom/tencent/mm/ui/tools/CropImageView;->d(Lcom/tencent/mm/ui/tools/CropImageView;Z)Z
 
     .line 341
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->biB()V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->box()V
 
     .line 342
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->biB()V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->box()V
 
     .line 343
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->biB()V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->box()V
 
     .line 344
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->biB()V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->box()V
 
     .line 345
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->biB()V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->box()V
 
     goto/16 :goto_0
 
     .line 347
     :cond_9
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v2, v1}, Lcom/tencent/mm/ui/tools/CropImageView;->d(Lcom/tencent/mm/ui/tools/CropImageView;Z)Z
 
     .line 348
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->biA()V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->bow()V
 
     .line 349
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->biA()V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->bow()V
 
     .line 350
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->biA()V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->bow()V
 
     .line 351
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->biA()V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->bow()V
 
     .line 352
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->biA()V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/CropImageView;->bow()V
 
     goto/16 :goto_0
 
     .line 355
     :cond_a
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v2, v1}, Lcom/tencent/mm/ui/tools/CropImageView;->c(Lcom/tencent/mm/ui/tools/CropImageView;Z)Z
 
     .line 356
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     new-instance v2, Ljava/util/Timer;
 
@@ -736,15 +736,15 @@
     invoke-direct {v1, p0, p2}, Lcom/tencent/mm/ui/tools/CropImageView$3$1;-><init>(Lcom/tencent/mm/ui/tools/CropImageView$3;Landroid/view/MotionEvent;)V
 
     .line 372
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->luU:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView$3;->lVW:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/CropImageView;->B(Lcom/tencent/mm/ui/tools/CropImageView;)Ljava/util/Timer;
 
     move-result-object v2
 
-    const-wide/16 v3, 0xc8
+    const-wide/16 v4, 0xc8
 
-    invoke-virtual {v2, v1, v3, v4}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
+    invoke-virtual {v2, v1, v4, v5}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
 
     goto/16 :goto_0
 

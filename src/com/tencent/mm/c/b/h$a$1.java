@@ -1,30 +1,30 @@
 package com.tencent.mm.c.b;
 
 import android.os.Message;
-import com.tencent.mm.r.g.b;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.g.b;
 
 final class h$a$1
-  extends aa
+  extends ac
 {
   h$a$1(h.a parama, h paramh) {}
   
   public final void handleMessage(Message paramMessage)
   {
-    if (aru.ars.arm <= 0) {
+    if (acN.acL.acF <= 0) {
       return;
     }
     paramMessage = new StringBuilder("On Part :");
-    if (aru.ars.aro == null) {}
+    if (acN.acL.acH == null) {}
     for (boolean bool = true;; bool = false)
     {
-      u.d("!44@/B4Tb64lLpJjyqE6YDnApwOwHOAz5sGPSEN1mjztZrA=", bool);
-      aru.ars.arm = 2;
-      if (aru.ars.aro == null) {
+      v.d("MicroMsg.SceneVoice.Recorder", bool);
+      acN.acL.acF = 2;
+      if (acN.acL.acH == null) {
         break;
       }
-      aru.ars.aro.vz();
+      acN.acL.acH.vB();
       return;
     }
   }

@@ -3,7 +3,7 @@ package com.tencent.mm.plugin.sns.ui;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
-import com.tencent.mm.plugin.sns.f.b;
+import com.tencent.mm.plugin.sns.g.b;
 import com.tencent.mm.ui.base.MMPageControlView;
 import com.tencent.mm.ui.base.MultiTouchImageView;
 
@@ -12,25 +12,25 @@ final class SnsInfoFlip$5
 {
   SnsInfoFlip$5(SnsInfoFlip paramSnsInfoFlip) {}
   
-  public final void onItemSelected(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemSelected(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    if (SnsInfoFlip.d(heR) != null)
+    if (SnsInfoFlip.d(htI) != null)
     {
-      if ((SnsInfoFlip.e(heR)) && (SnsInfoFlip.d(heR).getCount() > 1))
+      if ((SnsInfoFlip.e(htI)) && (SnsInfoFlip.d(htI).getCount() > 1))
       {
-        SnsInfoFlip.f(heR).setVisibility(0);
-        SnsInfoFlip.f(heR).setPage(paramInt);
+        SnsInfoFlip.f(htI).setVisibility(0);
+        SnsInfoFlip.f(htI).sE(paramInt);
       }
-      paramAdapterView = dheR).getItem(paramInt)).aHW;
-      String str = dheR).getItem(paramInt)).gSz;
-      SnsInfoFlip.a(heR, paramAdapterView, paramInt, str);
+      paramAdapterView = dhtI).getItem(paramInt)).aus;
+      String str = dhtI).getItem(paramInt)).haC;
+      SnsInfoFlip.a(htI, paramAdapterView, paramInt, str);
       if ((paramView instanceof MultiTouchImageView)) {
-        ((MultiTouchImageView)paramView).bdf();
+        ((MultiTouchImageView)paramView).biI();
       }
     }
   }
   
-  public final void onNothingSelected(AdapterView paramAdapterView) {}
+  public final void onNothingSelected(AdapterView<?> paramAdapterView) {}
 }
 
 /* Location:

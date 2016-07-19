@@ -16,6 +16,15 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Lcom/tencent/mm/ui/base/preference/Preference$BaseSavedState;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods

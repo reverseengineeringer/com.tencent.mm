@@ -4,49 +4,49 @@ import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.Message;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.LinkedList;
 
 final class e$e
 {
-  b kkd;
-  private c kke;
-  LinkedList kkf;
-  int kkg;
+  e<K, T>.e.b kKl;
+  private e<K, T>.e.c kKm;
+  LinkedList<Integer> kKn;
+  int kKo;
   
   public e$e(e parame)
   {
-    aZM();
+    bfk();
   }
   
-  private void aZM()
+  private void bfk()
   {
-    kkd = new b(Looper.getMainLooper());
-    kke = new c(tvjVF.getLooper());
+    kKl = new b(Looper.getMainLooper());
+    kKm = new c(twkvy.getLooper());
   }
   
-  private void aZN()
+  private void bfl()
   {
-    Object localObject = kke;
-    ((c)localObject).removeMessages(kkn);
-    ((c)localObject).removeMessages(kko);
-    localObject = kkd;
-    kkj = true;
+    Object localObject = kKm;
+    ((c)localObject).removeMessages(kKv);
+    ((c)localObject).removeMessages(kKw);
+    localObject = kKl;
+    kKr = true;
     ((b)localObject).removeMessages(1);
     ((b)localObject).removeMessages(2);
-    kkf.clear();
-    kkg = 0;
+    kKn.clear();
+    kKo = 0;
   }
   
-  public final void aZO()
+  public final void bfm()
   {
     try
     {
-      u.i(kjZ.TAG, "newcursor resetQueue ");
-      aZN();
-      aZM();
+      v.i(kKh.TAG, "newcursor resetQueue ");
+      bfl();
+      bfk();
       return;
     }
     finally
@@ -56,26 +56,26 @@ final class e$e
     }
   }
   
-  final int aZP()
+  final int bfn()
   {
     int i = 0;
-    if (kkf.size() > 1) {
+    if (kKn.size() > 1) {
       i = 2;
     }
-    while (kkf.size() != 1) {
+    while (kKn.size() != 1) {
       return i;
     }
-    return ((Integer)kkf.get(0)).intValue();
+    return ((Integer)kKn.get(0)).intValue();
   }
   
   /* Error */
-  public final boolean aZQ()
+  public final boolean bfo()
   {
     // Byte code:
     //   0: aload_0
     //   1: monitorenter
     //   2: aload_0
-    //   3: getfield 170	com/tencent/mm/ui/e$e:kkg	I
+    //   3: getfield 173	com/tencent/mm/ui/e$e:kKo	I
     //   6: istore_1
     //   7: iload_1
     //   8: ifeq +9 -> 17
@@ -104,11 +104,11 @@ final class e$e
     //   2	7	22	finally
   }
   
-  final void aZR()
+  final void bfp()
   {
     try
     {
-      kke.lastUpdateTime = System.currentTimeMillis();
+      kKm.lastUpdateTime = System.currentTimeMillis();
       return;
     }
     finally
@@ -118,11 +118,11 @@ final class e$e
     }
   }
   
-  final int aZS()
+  final int bfq()
   {
     try
     {
-      int i = kkg;
+      int i = kKo;
       return i;
     }
     finally
@@ -132,27 +132,12 @@ final class e$e
     }
   }
   
-  final void pT(int paramInt)
-  {
-    try
-    {
-      if (!kkf.contains(Integer.valueOf(paramInt))) {
-        kkf.add(Integer.valueOf(paramInt));
-      }
-      kkg = aZP();
-      c localc = kke;
-      localc.sendEmptyMessage(kko);
-      return;
-    }
-    finally {}
-  }
-  
   public final void quit()
   {
     try
     {
-      u.i(kjZ.TAG, "newcursor quit ");
-      aZN();
+      v.i(kKh.TAG, "newcursor quit ");
+      bfl();
       return;
     }
     finally
@@ -162,22 +147,37 @@ final class e$e
     }
   }
   
+  final void rI(int paramInt)
+  {
+    try
+    {
+      if (!kKn.contains(Integer.valueOf(paramInt))) {
+        kKn.add(Integer.valueOf(paramInt));
+      }
+      kKo = bfn();
+      c localc = kKm;
+      localc.sendEmptyMessage(kKw);
+      return;
+    }
+    finally {}
+  }
+  
   private final class a
   {
-    int kkh;
+    int kKp;
     
     public a(int paramInt)
     {
-      kkh = paramInt;
+      kKp = paramInt;
     }
   }
   
   final class b
-    extends aa
+    extends ac
   {
-    boolean kkj;
-    public final int kkk = 1;
-    public final int kkl = 2;
+    boolean kKr;
+    public final int kKs = 1;
+    public final int kKt = 2;
     
     public b(Looper paramLooper)
     {
@@ -187,58 +187,58 @@ final class e$e
     public final void handleMessage(Message paramMessage)
     {
       super.handleMessage(paramMessage);
-      if (kkj) {}
+      if (kKr) {}
       do
       {
         return;
         synchronized (e.e.this)
         {
-          kkg = aZP();
-          u.i(kjZ.TAG, "newcursor updateWorkerRefresh status %d", new Object[] { Integer.valueOf(kkg) });
+          kKo = bfn();
+          v.i(kKh.TAG, "newcursor updateWorkerRefresh status %d", new Object[] { Integer.valueOf(kKo) });
           if (what == 1)
           {
-            e.d(kjZ);
+            e.d(kKh);
             return;
           }
         }
       } while (what != 2);
-      e.a(kjZ, (e.c)obj, false, true);
+      e.a(kKh, (e.c)obj, false, true);
     }
   }
   
   final class c
-    extends aa
+    extends ac
   {
-    long kkm;
-    final int kkn = hashCode() | 0x776;
-    final int kko = hashCode() | 0x77A;
+    long kKu;
+    final int kKv = hashCode() | 0x776;
+    final int kKw = hashCode() | 0x77A;
     long lastUpdateTime;
     
     public c(Looper paramLooper)
     {
       super();
-      kkf = new LinkedList();
+      kKn = new LinkedList();
     }
     
     public final void handleMessage(Message paramMessage)
     {
       super.handleMessage(paramMessage);
-      if (what == kko)
+      if (what == kKw)
       {
-        removeMessages(kkn);
+        removeMessages(kKv);
         l = System.currentTimeMillis();
-        if ((l - kkm > kjZ.kjR) || (l - kkm < 0L) || ((lastUpdateTime != 0L) && (l - lastUpdateTime > kjZ.kjS)) || (l - lastUpdateTime < 0L))
+        if ((l - kKu > kKh.kJZ) || (l - kKu < 0L) || ((lastUpdateTime != 0L) && (l - lastUpdateTime > kKh.kKa)) || (l - lastUpdateTime < 0L))
         {
           e.e.a(e.e.this);
-          kkm = l;
+          kKu = l;
         }
       }
-      while (what != kkn) {
+      while (what != kKv) {
         for (;;)
         {
           long l;
           return;
-          sendEmptyMessageDelayed(kkn, kjZ.kjR);
+          sendEmptyMessageDelayed(kKv, kKh.kJZ);
         }
       }
       e.e.a(e.e.this);

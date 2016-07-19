@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kFg:Lcom/tencent/mm/ui/base/MMHorList;
+.field final synthetic lej:Lcom/tencent/mm/ui/base/MMHorList;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 53
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMHorList$1;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMHorList$1;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 57
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$1;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$1;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMHorList;->requestLayout()V
 

@@ -27,15 +27,15 @@
     .locals 1
 
     .prologue
-    .line 95
+    .line 100
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 96
+    .line 101
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/tencent/mm/network/Java2C$GetDnsReturn;->type:I
 
-    .line 98
+    .line 103
     const/16 v0, 0x32
 
     new-array v0, v0, [Ljava/lang/String;
@@ -49,7 +49,7 @@
     .locals 0
 
     .prologue
-    .line 95
+    .line 100
     invoke-direct {p0}, Lcom/tencent/mm/network/Java2C$GetDnsReturn;-><init>()V
 
     return-void

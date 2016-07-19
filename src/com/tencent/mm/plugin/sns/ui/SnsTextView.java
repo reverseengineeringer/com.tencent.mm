@@ -7,14 +7,14 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 import com.tencent.mm.compatible.d.j;
 import com.tencent.mm.compatible.d.p;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class SnsTextView
   extends TextView
 {
-  private String eMY = "";
-  private char hju = '\000';
+  public String eUR = "";
+  private char hyj = '\000';
   
   public SnsTextView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -28,16 +28,16 @@ public class SnsTextView
   
   protected void onMeasure(int paramInt1, int paramInt2)
   {
-    if ((bsQbrZ == 1) || (bsQbrZ == -1)) {
+    if ((bgWbga == 1) || (bgWbga == -1)) {
       try
       {
         super.onMeasure(paramInt1, paramInt2);
-        hju = '\000';
+        hyj = '\000';
         return;
       }
       catch (IndexOutOfBoundsException localIndexOutOfBoundsException1)
       {
-        if (hju < '\003') {
+        if (hyj < '\003') {
           for (;;)
           {
             try
@@ -47,7 +47,7 @@ public class SnsTextView
               if ((arrayOfMetricAffectingSpan != null) && (arrayOfMetricAffectingSpan.length > 0))
               {
                 localSpannableStringBuilder.insert(localSpannableStringBuilder.getSpanStart(arrayOfMetricAffectingSpan[0]) - 1, " ");
-                hju = ((char)(hju + '\001'));
+                hyj = ((char)(hyj + '\001'));
                 setText(localSpannableStringBuilder);
                 onMeasure(paramInt1, paramInt2);
                 return;
@@ -55,21 +55,21 @@ public class SnsTextView
             }
             catch (IndexOutOfBoundsException localIndexOutOfBoundsException2)
             {
-              u.i("!32@/B4Tb64lLpLSN/oq413YsGYGykLPernY", "tryToFix error set origintext " + ay.kz(eMY));
-              setText(eMY);
+              v.i("MicroMsg.SnsTextView", "tryToFix error set origintext " + be.kf(eUR));
+              setText(eUR);
               onMeasure(paramInt1, paramInt2);
-              hju = ((char)(hju + '\001'));
+              hyj = ((char)(hyj + '\001'));
               return;
             }
-            hju = 'd';
+            hyj = 'd';
           }
         }
-        if (hju == '\003')
+        if (hyj == '\003')
         {
-          u.i("!32@/B4Tb64lLpLSN/oq413YsGYGykLPernY", "fix error set origintext " + ay.kz(eMY));
-          setText(eMY);
+          v.i("MicroMsg.SnsTextView", "fix error set origintext " + be.kf(eUR));
+          setText(eUR);
           onMeasure(paramInt1, paramInt2);
-          hju = ((char)(hju + '\001'));
+          hyj = ((char)(hyj + '\001'));
           return;
         }
         throw localIndexOutOfBoundsException2;
@@ -81,11 +81,6 @@ public class SnsTextView
   public boolean onTextContextMenuItem(int paramInt)
   {
     return super.onTextContextMenuItem(paramInt);
-  }
-  
-  public void setOriginText(String paramString)
-  {
-    eMY = paramString;
   }
 }
 

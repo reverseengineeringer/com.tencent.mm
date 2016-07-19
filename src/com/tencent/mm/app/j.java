@@ -3,291 +3,635 @@ package com.tencent.mm.app;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
+import android.content.res.Resources;
 import android.os.Bundle;
-import android.text.TextUtils;
-import com.tencent.mm.ah.t;
-import com.tencent.mm.d.a.bq;
-import com.tencent.mm.d.a.fc;
-import com.tencent.mm.d.a.ia;
-import com.tencent.mm.d.a.mp;
-import com.tencent.mm.d.a.mu;
+import android.widget.Toast;
+import com.tencent.mm.booter.notification.f.a;
+import com.tencent.mm.booter.notification.queue.b;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.model.at;
-import com.tencent.mm.modelmulti.a.a;
+import com.tencent.mm.model.i;
+import com.tencent.mm.pluginsdk.d;
 import com.tencent.mm.pluginsdk.i.a;
-import com.tencent.mm.pluginsdk.i.p;
-import com.tencent.mm.pluginsdk.model.app.aj;
-import com.tencent.mm.pluginsdk.model.app.g;
-import com.tencent.mm.pluginsdk.model.app.i;
-import com.tencent.mm.pluginsdk.model.app.p;
-import com.tencent.mm.protocal.b.amk;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
-import com.tencent.mm.storage.ag.b;
+import com.tencent.mm.pluginsdk.i.ae;
+import com.tencent.mm.pluginsdk.ui.applet.c.a;
+import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
+import com.tencent.mm.ui.CheckCanSubscribeBizUI;
 import com.tencent.mm.ui.LauncherUI;
+import com.tencent.mm.ui.MMActivity;
+import com.tencent.mm.ui.MMActivity.a;
 import com.tencent.mm.ui.MMAppMgr;
-import com.tencent.mm.ui.n.a;
+import com.tencent.mm.ui.MMWizardActivity;
+import com.tencent.mm.ui.account.LoginHistoryUI;
+import com.tencent.mm.ui.account.LoginIndepPass;
+import com.tencent.mm.ui.account.LoginUI;
+import com.tencent.mm.ui.account.RegByMobileVoiceVerifyUI;
+import com.tencent.mm.ui.account.SimpleLoginUI;
+import com.tencent.mm.ui.account.mobile.MobileInputUI;
+import com.tencent.mm.ui.bindgooglecontact.BindGoogleContactIntroUI;
+import com.tencent.mm.ui.bindgooglecontact.BindGoogleContactUI;
+import com.tencent.mm.ui.bindgooglecontact.GoogleFriendUI;
+import com.tencent.mm.ui.bindlinkedin.ListLinkedInFriendUI;
+import com.tencent.mm.ui.bindmobile.BindMContactIntroUI;
+import com.tencent.mm.ui.bindmobile.BindMContactUI;
+import com.tencent.mm.ui.bindqq.BindQQUI;
+import com.tencent.mm.ui.chatting.ChattingUI;
+import com.tencent.mm.ui.contact.ContactRemarkInfoModUI;
+import com.tencent.mm.ui.contact.ModRemarkNameUI;
+import com.tencent.mm.ui.contact.SayHiEditUI;
+import com.tencent.mm.ui.contact.SelectSpecialContactUI;
+import com.tencent.mm.ui.contact.SnsAddressUI;
+import com.tencent.mm.ui.contact.SnsLabelContactListUI;
+import com.tencent.mm.ui.contact.e;
+import com.tencent.mm.ui.n;
+import com.tencent.mm.ui.tools.CountryCodeUI;
 import com.tencent.mm.ui.tools.CropImageNewUI;
+import com.tencent.mm.ui.tools.MultiStageCitySelectUI;
+import com.tencent.mm.ui.tools.ShowImageUI;
+import com.tencent.mm.ui.tools.a.a;
+import com.tencent.mm.ui.transmit.MsgRetransmitUI;
+import com.tencent.mm.ui.transmit.SelectConversationUI;
 
-final class j
-  implements com.tencent.mm.pluginsdk.f
+public final class j
+  implements com.tencent.mm.pluginsdk.g
 {
-  public final Bitmap a(Activity paramActivity, int paramInt1, int paramInt2, Intent paramIntent)
+  public final com.tencent.mm.ui.base.h a(Runnable paramRunnable, MMActivity paramMMActivity, int paramInt1, int paramInt2, Intent paramIntent)
   {
-    if (paramInt2 != -1) {}
+    return n.a(paramRunnable, paramMMActivity, paramInt1, paramInt2, paramIntent);
+  }
+  
+  public final void a(Activity paramActivity, Intent paramIntent, int paramInt)
+  {
+    if (paramActivity != null)
+    {
+      paramIntent.setClass(paramActivity, CropImageNewUI.class);
+      paramActivity.startActivityForResult(paramIntent, paramInt);
+    }
+  }
+  
+  public final void a(Activity paramActivity, Intent paramIntent1, Intent paramIntent2, String paramString, int paramInt, a.a parama)
+  {
+    if (paramActivity != null)
+    {
+      paramIntent2.setClass(paramActivity, CropImageNewUI.class);
+      com.tencent.mm.ui.tools.a.b(paramActivity, paramIntent1, paramIntent2, paramString, paramInt, parama);
+    }
+  }
+  
+  public final void a(Context paramContext, Intent paramIntent1, Intent paramIntent2)
+  {
+    if ((paramContext == null) || (paramIntent1 == null)) {}
+    int i;
     do
     {
-      do
+      return;
+      i = paramIntent1.getIntExtra("from_source", 1);
+      if (i == 1)
       {
-        do
+        paramIntent1.setClass(paramContext, LoginUI.class);
+        paramContext.startActivity(paramIntent1);
+        return;
+      }
+      if (i == 2)
+      {
+        paramIntent1.setClass(paramContext, LoginHistoryUI.class);
+        paramContext.startActivity(paramIntent1);
+        return;
+      }
+      if (i == 3)
+      {
+        paramIntent1.setClass(paramContext, SimpleLoginUI.class);
+        if (paramIntent2 != null)
         {
-          return null;
-          switch (paramInt1)
-          {
-          default: 
-            return null;
-          }
-        } while (paramIntent == null);
-        localIntent = new Intent();
-        localIntent.setClass(paramActivity, CropImageNewUI.class);
-        localIntent.putExtra("CropImageMode", 1);
-        localIntent.putExtra("CropImage_Filter", true);
-        localIntent.putExtra("CropImage_OutputPath", com.tencent.mm.compatible.util.d.bur + "temp.avatar");
-        localIntent.putExtra("CropImage_ImgPath", null);
-        com.tencent.mm.ui.tools.a.a(paramActivity, paramIntent, localIntent, com.tencent.mm.compatible.util.d.bur, 4);
-        return null;
-        paramIntent = com.tencent.mm.pluginsdk.ui.tools.k.a(paramActivity.getApplicationContext(), paramIntent, com.tencent.mm.compatible.util.d.bur);
-      } while (paramIntent == null);
-      Intent localIntent = new Intent();
-      localIntent.setClass(paramActivity, CropImageNewUI.class);
-      localIntent.putExtra("CropImageMode", 1);
-      localIntent.putExtra("CropImage_OutputPath", com.tencent.mm.compatible.util.d.bur + "temp.avatar");
-      localIntent.putExtra("CropImage_ImgPath", paramIntent);
-      paramActivity.startActivityForResult(localIntent, 4);
-      return null;
-    } while (paramIntent == null);
-    paramActivity = paramIntent.getStringExtra("CropImage_OutputPath");
-    if (paramActivity == null)
+          MMWizardActivity.b(paramContext, paramIntent1, paramIntent2);
+          return;
+        }
+        MMWizardActivity.v(paramContext, paramIntent1);
+        return;
+      }
+      if (i == 5)
+      {
+        paramIntent1.setClass(paramContext, LoginIndepPass.class);
+        paramContext.startActivity(paramIntent1);
+        return;
+      }
+    } while (i != 6);
+    paramIntent1.setClass(paramContext, MobileInputUI.class);
+    paramIntent1.putExtra("mobile_input_purpose", 5);
+    paramContext.startActivity(paramIntent1);
+  }
+  
+  public final void a(Intent paramIntent, int paramInt, Activity paramActivity)
+  {
+    if (paramActivity != null) {
+      com.tencent.mm.av.c.a(paramActivity, "location", ".ui.RedirectUI", paramIntent, 4097);
+    }
+  }
+  
+  public final void a(Intent paramIntent1, int paramInt, MMActivity paramMMActivity, Intent paramIntent2)
+  {
+    if (paramMMActivity != null)
     {
-      u.e("!44@/B4Tb64lLpLNeaXFt7W5V6aJxk4T4bEba6km9Bj/gxs=", "crop picture failed");
-      return null;
-    }
-    u.e("!44@/B4Tb64lLpLNeaXFt7W5V6aJxk4T4bEba6km9Bj/gxs=", "crop picture path %s ", new Object[] { paramActivity });
-    return com.tencent.mm.sdk.platformtools.d.CE(paramActivity);
-  }
-  
-  public final com.tencent.mm.r.j a(com.tencent.mm.r.e parame)
-  {
-    if (com.tencent.mm.modelmulti.k.AQ()) {
-      return new com.tencent.mm.modelmulti.e(parame);
-    }
-    com.tencent.mm.modelmulti.l.Be().dC(4);
-    return null;
-  }
-  
-  public final String a(String paramString1, String paramString2, boolean paramBoolean)
-  {
-    return p.a(paramString1, paramString2, paramBoolean);
-  }
-  
-  public final void a(Context paramContext, ag.b paramb, Bundle paramBundle)
-  {
-    com.tencent.mm.ui.contact.e.a(paramContext, paramb, true, true, paramBundle);
-  }
-  
-  public final void a(Context paramContext, com.tencent.mm.storage.k paramk, ag.b paramb, Bundle paramBundle, String paramString)
-  {
-    com.tencent.mm.ui.contact.e.a(paramContext, paramk, paramb, true, true, paramBundle, paramString);
-  }
-  
-  public final void a(Context paramContext, String paramString1, String paramString2, String paramString3, int paramInt1, int paramInt2, int paramInt3, String paramString4)
-  {
-    i.p localp = i.a.iyK;
-    if (localp != null) {
-      localp.a(paramContext, paramString1, paramString2, paramString3, paramInt1, paramInt2, paramInt3, paramString4);
+      paramIntent1.setClass(paramMMActivity, CropImageNewUI.class);
+      com.tencent.mm.ui.tools.a.a(paramMMActivity, paramIntent2, paramIntent1, ah.tE().rz(), paramInt);
     }
   }
   
-  public final void a(Context paramContext, String paramString1, String paramString2, String paramString3, long paramLong)
+  public final void a(Intent paramIntent, Activity paramActivity)
   {
-    paramContext = i.a.iyK;
-    if (paramContext != null) {
-      paramContext.a(paramString1, paramString2, 2, 4, paramString3, paramLong);
+    if (paramActivity != null)
+    {
+      paramIntent.setClass(paramActivity, ModRemarkNameUI.class);
+      paramActivity.startActivityForResult(paramIntent, 2);
     }
   }
   
-  public final void a(Intent paramIntent, amk paramamk, int paramInt)
+  public final void a(Intent paramIntent, Activity paramActivity, int paramInt)
   {
-    com.tencent.mm.pluginsdk.ui.tools.c.a(paramIntent, paramamk, paramInt);
-  }
-  
-  public final void a(Intent paramIntent, String paramString)
-  {
-    com.tencent.mm.ui.contact.e.a(paramIntent, paramString);
-  }
-  
-  public final void a(com.tencent.mm.t.l paraml, Activity paramActivity, com.tencent.mm.storage.k paramk, boolean paramBoolean, Runnable paramRunnable)
-  {
-    com.tencent.mm.ui.tools.c.a(paraml, paramActivity, paramk, paramBoolean, paramRunnable);
-  }
-  
-  public final boolean a(Context paramContext, int paramInt1, int paramInt2, String paramString)
-  {
-    return n.a.b(paramContext, paramInt1, paramInt2, paramString, 4);
-  }
-  
-  public final boolean a(com.tencent.mm.storage.k paramk)
-  {
-    return com.tencent.mm.modelmulti.m.a(paramk);
-  }
-  
-  public final void aJ(int paramInt)
-  {
-    u.d("!44@/B4Tb64lLpLNeaXFt7W5V6aJxk4T4bEba6km9Bj/gxs=", "trigger netscene sync, scene[%d]", new Object[] { Integer.valueOf(paramInt) });
-    com.tencent.mm.modelmulti.l.Be().dC(paramInt);
-  }
-  
-  public final String aS(String paramString)
-  {
-    if (g.ai(paramString, false) != null) {
-      return aifield_packageName;
+    if (paramActivity != null)
+    {
+      paramIntent.setClass(paramActivity, SnsAddressUI.class);
+      paramActivity.startActivityForResult(paramIntent, paramInt);
     }
-    return "";
   }
   
-  public final boolean aT(String paramString)
+  public final void a(Intent paramIntent, Context paramContext)
   {
-    return g.aT(paramString);
-  }
-  
-  public final boolean aU(String paramString)
-  {
-    return g.aU(paramString);
-  }
-  
-  public final void aV(String paramString)
-  {
-    com.tencent.mm.modelmulti.l.Bf().a(new a.a(paramString, 0, 0, 0));
-  }
-  
-  public final com.tencent.mm.r.j af(boolean paramBoolean)
-  {
-    if (paramBoolean) {
-      t.BA().dE(4);
+    if (paramContext == null) {
+      return;
     }
-    com.tencent.mm.ah.k localk = new com.tencent.mm.ah.k(4);
-    ah.tE().d(localk);
-    return localk;
+    paramIntent.setClass(paramContext, SayHiEditUI.class);
+    paramContext.startActivity(paramIntent);
+  }
+  
+  public final void a(Intent paramIntent, MMActivity.a parama, MMActivity paramMMActivity)
+  {
+    if (paramMMActivity != null)
+    {
+      paramIntent.setClass(paramMMActivity, CheckCanSubscribeBizUI.class);
+      paramMMActivity.a(parama, paramIntent, 8);
+    }
+  }
+  
+  public final void a(Intent paramIntent, MMActivity paramMMActivity)
+  {
+    paramIntent.setClass(paramMMActivity, SelectConversationUI.class);
+    paramMMActivity.startActivityForResult(paramIntent, 1);
+  }
+  
+  public final void a(final MMActivity paramMMActivity, final String paramString1, final WXMediaMessage paramWXMediaMessage, final String paramString2, final String paramString3)
+  {
+    com.tencent.mm.pluginsdk.ui.applet.c.a(kNN, thumbData, title, description, paramString3, true, 2, new c.a()
+    {
+      public final void a(boolean paramAnonymousBoolean, String paramAnonymousString, int paramAnonymousInt)
+      {
+        if (!paramAnonymousBoolean) {
+          return;
+        }
+        com.tencent.mm.pluginsdk.model.app.l.a(paramWXMediaMessage, paramString1, paramString3, paramString2, 3, null);
+        if (!be.kf(paramAnonymousString))
+        {
+          paramAnonymousString = new com.tencent.mm.modelmulti.h(paramString2, paramAnonymousString, i.eW(paramString2));
+          ah.tF().a(paramAnonymousString, 0);
+        }
+        com.tencent.mm.ui.base.g.aZ(paramMMActivity, paramMMActivity.getResources().getString(2131231018));
+        com.tencent.mm.plugin.report.service.g.gdY.X(10910, "2");
+      }
+    });
+  }
+  
+  public final void a(MMWizardActivity paramMMWizardActivity, Intent paramIntent)
+  {
+    if (paramMMWizardActivity == null) {
+      return;
+    }
+    paramIntent.setClass(paramMMWizardActivity, MobileInputUI.class);
+    MMWizardActivity.v(paramMMWizardActivity, paramIntent);
+  }
+  
+  public final void a(String paramString, Context paramContext)
+  {
+    Intent localIntent = new Intent();
+    localIntent.putExtra("Ksnsupload_type", 0);
+    localIntent.putExtra("sns_kemdia_path", paramString);
+    com.tencent.mm.av.c.c(paramContext, "sns", ".ui.SnsUploadUI", localIntent);
+  }
+  
+  public final void a(boolean paramBoolean1, boolean paramBoolean2, Context paramContext, String paramString, int paramInt1, int paramInt2)
+  {
+    if ((paramBoolean1) || (paramBoolean2))
+    {
+      if (!com.tencent.mm.pluginsdk.l.b.a.a.c(paramString, paramContext, paramBoolean2)) {
+        Toast.makeText(paramContext, paramContext.getString(2131235824), 0).show();
+      }
+      return;
+    }
+    Intent localIntent = new Intent();
+    localIntent.putExtra("VideoPlayer_File_nam", paramString);
+    localIntent.putExtra("VideoRecorder_VideoLength", paramInt1);
+    localIntent.putExtra("VideoRecorder_VideoSize", paramInt2);
+    com.tencent.mm.av.c.c(paramContext, "subapp", ".ui.video.VideoPlayerUI", localIntent);
+  }
+  
+  public final boolean a(Context paramContext, String paramString, Object... paramVarArgs)
+  {
+    return i.a.iVm.b(paramContext, paramString, paramVarArgs);
+  }
+  
+  public final com.tencent.mm.ui.base.h af(Context paramContext)
+  {
+    return MMAppMgr.af(paramContext);
+  }
+  
+  public final Intent ag(Context paramContext)
+  {
+    return new Intent(paramContext, LauncherUI.class).addFlags(67108864);
   }
   
   public final void ah(Context paramContext)
   {
-    MMAppMgr.ec(paramContext);
+    com.tencent.mm.av.c.c(paramContext, "setting", ".ui.setting.SelfQRCodeUI", new Intent());
   }
   
-  public final boolean b(Context paramContext, int paramInt1, int paramInt2, String paramString)
+  public final void ai(Context paramContext)
   {
-    return n.a.b(paramContext, paramInt1, paramInt2, paramString, 7);
+    com.tencent.mm.av.c.c(paramContext, "subapp", ".ui.openapi.AddAppUI", new Intent());
   }
   
-  public final String e(Context paramContext, String paramString1, String paramString2)
+  public final void b(Intent paramIntent, Activity paramActivity)
   {
-    return p.e(paramContext, paramString1, paramString2);
-  }
-  
-  public final boolean g(Activity paramActivity)
-  {
-    if (!com.tencent.mm.compatible.util.e.oW())
+    if (paramActivity != null)
     {
-      com.tencent.mm.ui.base.s.em(paramActivity);
-      return false;
+      paramIntent.setClass(paramActivity, CountryCodeUI.class);
+      paramActivity.startActivityForResult(paramIntent, 100);
     }
-    com.tencent.mm.pluginsdk.ui.tools.k.Q(paramActivity);
-    return true;
   }
   
-  public final void h(Activity paramActivity)
+  public final void b(Intent paramIntent, Context paramContext)
   {
-    MMAppMgr.h(paramActivity);
-  }
-  
-  public final void kG()
-  {
-    com.tencent.mm.modelmulti.l.Be().dC(7);
-  }
-  
-  public final com.tencent.mm.r.f kH()
-  {
-    return new com.tencent.mm.c.a.a(y.getContext());
-  }
-  
-  public final void kI()
-  {
-    mu localmu = new mu();
-    aJg.aJi = true;
-    com.tencent.mm.sdk.c.a.jUF.j(localmu);
-  }
-  
-  public final void kJ()
-  {
-    if (ay.d((Integer)ah.tD().rn().get(15, null)) != 0) {
-      com.tencent.mm.modelmulti.l.Be().dC(10);
-    }
-    at.fr("ver" + com.tencent.mm.protocal.b.iUf);
-    aj.aPV().bl(aj.aPR().aPI());
-    com.tencent.mm.sdk.c.a locala = com.tencent.mm.sdk.c.a.jUF;
-    if (locala == null)
-    {
-      u.e("!44@/B4Tb64lLpLNeaXFt7W5V6aJxk4T4bEba6km9Bj/gxs=", "EventPool is null.");
+    if (paramContext == null) {
       return;
     }
-    Object localObject = new fc();
-    azR.azS = true;
-    locala.j((com.tencent.mm.sdk.c.b)localObject);
-    localObject = new mp();
-    aIS.aIT = true;
-    locala.j((com.tencent.mm.sdk.c.b)localObject);
-    locala.j(new bq());
-    locala.j(new ia());
+    Intent localIntent = paramIntent;
+    if (paramIntent == null) {
+      localIntent = new Intent();
+    }
+    localIntent.setClass(paramContext, MultiStageCitySelectUI.class);
+    paramContext.startActivity(localIntent);
   }
   
-  public final void kK()
+  public final void b(MMWizardActivity paramMMWizardActivity, Intent paramIntent)
   {
-    Object localObject = com.tencent.mm.model.h.sc();
-    if (!TextUtils.isEmpty((CharSequence)localObject))
+    if (paramMMWizardActivity == null) {
+      return;
+    }
+    paramIntent.setClass(paramMMWizardActivity, BindMContactUI.class);
+    MMWizardActivity.v(paramMMWizardActivity, paramIntent);
+  }
+  
+  public final boolean b(Context paramContext, String paramString, Bundle paramBundle)
+  {
+    return i.a.iVm.a(paramContext, paramString, false, paramBundle);
+  }
+  
+  public final void c(Context paramContext, Intent paramIntent)
+  {
+    if (paramContext != null)
     {
-      localObject = new com.tencent.mm.modelsimple.s((String)localObject);
-      ah.tE().d((com.tencent.mm.r.j)localObject);
+      paramIntent.setClass(paramContext, ShowImageUI.class);
+      paramContext.startActivity(paramIntent);
     }
   }
   
-  public final void kL() {}
-  
-  public final Intent kM()
+  public final void c(Intent paramIntent, Context paramContext)
   {
-    Intent localIntent = new Intent(y.getContext(), LauncherUI.class);
-    localIntent.putExtra("nofification_type", "talkroom_notification");
-    localIntent.addFlags(67108864);
-    return localIntent;
+    if (paramContext == null) {
+      return;
+    }
+    Intent localIntent = paramIntent;
+    if (paramIntent == null) {
+      localIntent = new Intent();
+    }
+    com.tencent.mm.av.c.c(paramContext, "setting", ".ui.setting.EditSignatureUI", localIntent);
   }
   
-  public final boolean kN()
+  public final void cancelNotification(String paramString)
   {
-    return com.tencent.mm.pluginsdk.ui.d.l.kN();
+    f.a.lJ();
+    if (paramString != null)
+    {
+      int i = b.lK().getId(paramString);
+      v.d("MicroMsg.Notification.Handle", "cancel : %s", new Object[] { paramString });
+      b.lK().cancel(i);
+    }
   }
   
-  public final void kO() {}
-  
-  public final String l(Context paramContext, String paramString)
+  public final void d(Context paramContext, Intent paramIntent)
   {
-    return g.l(paramContext, paramString);
+    if (paramContext == null) {
+      return;
+    }
+    com.tencent.mm.av.c.c(paramContext, "safedevice", ".ui.MySafeDeviceListUI", paramIntent);
   }
   
-  public final boolean m(Context paramContext, String paramString)
+  public final void d(Intent paramIntent, Context paramContext)
   {
-    return g.m(paramContext, paramString);
+    if (paramContext == null) {
+      return;
+    }
+    Intent localIntent = paramIntent;
+    if (paramIntent == null) {
+      localIntent = new Intent();
+    }
+    com.tencent.mm.av.c.c(paramContext, "profile", ".ui.ContactInfoUI", localIntent);
+  }
+  
+  public final void e(Context paramContext, Intent paramIntent)
+  {
+    if (paramContext == null) {
+      return;
+    }
+    paramIntent.setClass(paramContext, RegByMobileVoiceVerifyUI.class);
+    paramContext.startActivity(paramIntent);
+  }
+  
+  public final void e(Intent paramIntent, Context paramContext)
+  {
+    if (paramContext == null) {
+      return;
+    }
+    Intent localIntent = paramIntent;
+    if (paramIntent == null) {
+      localIntent = new Intent();
+    }
+    paramIntent = localIntent.getStringExtra("Contact_User");
+    if (paramIntent != null) {
+      e.a(localIntent, paramIntent);
+    }
+    localIntent.setClass(paramContext, ChattingUI.class);
+    paramContext.startActivity(localIntent);
+  }
+  
+  public final void f(Context paramContext, Intent paramIntent)
+  {
+    if (paramContext == null) {
+      return;
+    }
+    com.tencent.mm.av.c.a(paramContext, "safedevice", ".ui.SecurityAccountIntroUI", paramIntent);
+  }
+  
+  public final void f(Intent paramIntent, Context paramContext)
+  {
+    if (paramContext == null) {
+      return;
+    }
+    paramIntent.setClass(paramContext, ChattingUI.class);
+    if ((paramContext instanceof Activity))
+    {
+      ((Activity)paramContext).startActivityForResult(paramIntent, 1);
+      return;
+    }
+    paramContext.startActivity(paramIntent);
+  }
+  
+  public final void g(Context paramContext, Intent paramIntent)
+  {
+    if (paramContext == null) {
+      return;
+    }
+    paramIntent.setClass(paramContext, GoogleFriendUI.class);
+    paramContext.startActivity(paramIntent);
+  }
+  
+  public final void g(Intent paramIntent, Context paramContext)
+  {
+    if (paramContext == null) {
+      return;
+    }
+    paramIntent.setClass(paramContext, BindMContactIntroUI.class);
+    MMWizardActivity.v(paramContext, paramIntent);
+  }
+  
+  public final void h(Context paramContext, Intent paramIntent)
+  {
+    if (paramContext == null) {
+      return;
+    }
+    paramIntent.setClass(paramContext, BindGoogleContactUI.class);
+    paramContext.startActivity(paramIntent);
+  }
+  
+  public final void h(Intent paramIntent, Context paramContext)
+  {
+    if (paramContext == null) {
+      return;
+    }
+    Intent localIntent = paramIntent;
+    if (paramIntent == null) {
+      localIntent = new Intent();
+    }
+    localIntent.setClass(paramContext, BindQQUI.class);
+    MMWizardActivity.v(paramContext, localIntent);
+  }
+  
+  public final void i(Context paramContext, Intent paramIntent)
+  {
+    if (paramContext == null) {
+      return;
+    }
+    paramIntent.setClass(paramContext, BindGoogleContactIntroUI.class);
+    paramContext.startActivity(paramIntent);
+  }
+  
+  public final void i(Intent paramIntent, Context paramContext)
+  {
+    if (paramContext == null) {
+      return;
+    }
+    paramIntent.setClass(paramContext, LauncherUI.class).addFlags(67108864);
+    paramContext.startActivity(paramIntent);
+  }
+  
+  public final void j(Context paramContext, Intent paramIntent)
+  {
+    if (paramContext == null) {
+      return;
+    }
+    paramIntent.setClass(paramContext, ListLinkedInFriendUI.class);
+    paramContext.startActivity(paramIntent);
+  }
+  
+  public final void j(Intent paramIntent, Context paramContext)
+  {
+    if (paramContext == null) {
+      return;
+    }
+    Intent localIntent = paramIntent;
+    if (paramIntent == null) {
+      localIntent = new Intent();
+    }
+    com.tencent.mm.av.c.c(paramContext, "webview", ".ui.tools.WebViewUI", localIntent);
+  }
+  
+  public final void jl() {}
+  
+  public final void k(Context paramContext, Intent paramIntent)
+  {
+    if ((paramContext == null) || (paramIntent == null)) {
+      return;
+    }
+    com.tencent.mm.av.c.c(paramContext, "game", ".ui.GameDetailUI", paramIntent);
+  }
+  
+  public final void k(Intent paramIntent, Context paramContext)
+  {
+    com.tencent.mm.pluginsdk.ui.d.l.b(paramContext, paramIntent.getBundleExtra("reportArgs"));
+  }
+  
+  public final void l(Context paramContext, Intent paramIntent)
+  {
+    if (paramContext == null) {
+      return;
+    }
+    paramIntent.setClass(paramContext, SelectSpecialContactUI.class);
+    paramContext.startActivity(paramIntent);
+  }
+  
+  public final void l(Intent paramIntent, Context paramContext)
+  {
+    if (paramContext != null)
+    {
+      if (paramIntent.getIntExtra("Retr_Msg_Type", -1) < 0) {
+        paramIntent.putExtra("Retr_Msg_Type", 4);
+      }
+      paramIntent.setClass(paramContext, MsgRetransmitUI.class);
+      paramContext.startActivity(paramIntent);
+    }
+  }
+  
+  public final void m(Intent paramIntent, Context paramContext)
+  {
+    if (paramContext != null)
+    {
+      paramIntent.putExtra("Ksnsupload_type", 1);
+      com.tencent.mm.av.c.c(paramContext, "sns", ".ui.SnsUploadUI", paramIntent);
+    }
+  }
+  
+  public final void n(Intent paramIntent, Context paramContext)
+  {
+    if (paramContext != null)
+    {
+      paramIntent.putExtra("Ksnsupload_type", 2);
+      com.tencent.mm.av.c.c(paramContext, "sns", ".ui.SnsUploadUI", paramIntent);
+    }
+  }
+  
+  public final void o(Context paramContext, String paramString)
+  {
+    i.a.iVm.a(paramContext, paramString, true);
+  }
+  
+  public final void o(Intent paramIntent, Context paramContext)
+  {
+    if (paramContext != null) {
+      com.tencent.mm.av.c.c(paramContext, "location", ".ui.RedirectUI", paramIntent);
+    }
+  }
+  
+  public final void p(Intent paramIntent, Context paramContext)
+  {
+    if (paramContext != null) {
+      com.tencent.mm.av.c.c(paramContext, "setting", ".ui.qrcode.ShowQRCodeStep1UI", paramIntent);
+    }
+  }
+  
+  public final void q(Intent paramIntent, Context paramContext)
+  {
+    if (paramContext != null)
+    {
+      paramIntent.setClass(paramContext, ContactRemarkInfoModUI.class);
+      paramContext.startActivity(paramIntent);
+    }
+  }
+  
+  public final void r(Intent paramIntent, Context paramContext)
+  {
+    if (paramContext != null)
+    {
+      paramIntent.setClass(paramContext, ModRemarkNameUI.class);
+      paramContext.startActivity(paramIntent);
+    }
+  }
+  
+  public final void s(Intent paramIntent, Context paramContext)
+  {
+    if (paramContext != null) {
+      com.tencent.mm.av.c.c(paramContext, "setting", ".ui.setting.SettingsLanguageUI", paramIntent);
+    }
+  }
+  
+  public final void t(Intent paramIntent, Context paramContext)
+  {
+    if (paramContext != null)
+    {
+      paramIntent.setClass(paramContext, LauncherUI.class).addFlags(67108864);
+      paramContext.startActivity(paramIntent);
+    }
+  }
+  
+  public final void u(Intent paramIntent, Context paramContext)
+  {
+    Intent localIntent = new Intent();
+    localIntent.putExtras(paramIntent.getExtras());
+    if (paramIntent.getFlags() != 0) {
+      localIntent.addFlags(paramIntent.getFlags());
+    }
+    com.tencent.mm.av.c.c(paramContext, "subapp", ".ui.gallery.GestureGalleryUI", localIntent);
+  }
+  
+  public final void v(Intent paramIntent, Context paramContext)
+  {
+    Intent localIntent = new Intent();
+    localIntent.putExtras(paramIntent.getExtras());
+    if (paramIntent.getFlags() != 0) {
+      localIntent.addFlags(paramIntent.getFlags());
+    }
+    d.cD(paramContext);
+  }
+  
+  public final void w(Intent paramIntent, Context paramContext)
+  {
+    if (paramContext != null)
+    {
+      Intent localIntent = new Intent();
+      localIntent.putExtras(paramIntent.getExtras());
+      if (paramIntent.getFlags() != 0) {
+        localIntent.addFlags(paramIntent.getFlags());
+      }
+      com.tencent.mm.av.c.c(paramContext, "subapp", ".ui.pluginapp.ContactSearchUI", localIntent);
+    }
+  }
+  
+  public final void x(Intent paramIntent, Context paramContext)
+  {
+    if (paramContext != null)
+    {
+      Intent localIntent = new Intent();
+      localIntent.putExtras(paramIntent.getExtras());
+      if (paramIntent.getFlags() != 0) {
+        localIntent.addFlags(paramIntent.getFlags());
+      }
+      com.tencent.mm.av.c.c(paramContext, "subapp", ".ui.pluginapp.ContactSearchResultUI", localIntent);
+    }
+  }
+  
+  public final void y(Intent paramIntent, Context paramContext)
+  {
+    paramIntent.setClass(paramContext, SnsLabelContactListUI.class);
+    paramContext.startActivity(paramIntent);
   }
 }
 

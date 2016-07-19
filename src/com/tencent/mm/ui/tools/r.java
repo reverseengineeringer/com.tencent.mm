@@ -9,323 +9,389 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnFocusChangeListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.ArrayList;
 
 public class r
 {
   final String TAG;
-  aa bQM = new aa(Looper.getMainLooper());
-  MenuItem dRe = null;
-  public b lxA;
-  public SearchViewNotRealTimeHelper.a lxB;
-  private boolean lxC = true;
-  private ArrayList lxD;
-  public boolean lxE;
-  public int lxF = 2131430945;
-  private int lxG = 0;
-  a lxH;
-  boolean lxu = false;
-  public boolean lxv = false;
-  private boolean lxw = false;
-  private boolean lxx = true;
-  boolean lxy = true;
-  public g lxz = null;
+  ac bpz = new ac(Looper.getMainLooper());
+  MenuItem dTj = null;
+  boolean lYj = false;
+  public boolean lYk = false;
+  private boolean lYl = false;
+  private boolean lYm = true;
+  boolean lYn = true;
+  public g lYo = null;
+  public b lYp;
+  public SearchViewNotRealTimeHelper.a lYq;
+  private boolean lYr = true;
+  private ArrayList<String> lYs;
+  public boolean lYt;
+  public int lYu = 2131230900;
+  private int lYv = 0;
+  a lYw;
   
   public r()
   {
-    lxC = true;
-    lxu = false;
+    lYr = true;
+    lYj = false;
     TAG = ("MicroMsg.SearchViewHelper-" + String.valueOf(System.currentTimeMillis()));
   }
   
   public r(boolean paramBoolean1, boolean paramBoolean2)
   {
-    lxC = paramBoolean1;
-    lxu = true;
+    lYr = paramBoolean1;
+    lYj = true;
     TAG = ("MicroMsg.SearchViewHelper-" + String.valueOf(System.currentTimeMillis()));
+  }
+  
+  public final void JL(String paramString)
+  {
+    if (lYo == null) {
+      return;
+    }
+    lYo.JL(paramString);
   }
   
   public void a(final Activity paramActivity, Menu paramMenu)
   {
-    u.v(TAG, "on prepare options menu, searchViewExpand %B, triggerExpand %B, canExpand %B", new Object[] { Boolean.valueOf(lxv), Boolean.valueOf(lxw), Boolean.valueOf(lxx) });
+    v.v(TAG, "on prepare options menu, searchViewExpand %B, triggerExpand %B, canExpand %B", new Object[] { Boolean.valueOf(lYk), Boolean.valueOf(lYl), Boolean.valueOf(lYm) });
     if (paramActivity == null) {
-      u.w(TAG, "on hanle status fail, activity is null");
+      v.w(TAG, "on hanle status fail, activity is null");
     }
     do
     {
       return;
-      dRe = paramMenu.findItem(2131165229);
-      if (dRe == null)
+      dTj = paramMenu.findItem(2131755051);
+      if (dTj == null)
       {
-        u.w(TAG, "can not find search menu, error");
+        v.w(TAG, "can not find search menu, error");
         return;
       }
-    } while ((!lxx) || ((!lxv) && (!lxw)));
-    lxw = false;
+    } while ((!lYm) || ((!lYk) && (!lYl)));
+    lYl = false;
     int i = 0;
     while (i < paramMenu.size())
     {
       MenuItem localMenuItem = paramMenu.getItem(i);
-      if (localMenuItem.getItemId() != 2131165229) {
+      if (localMenuItem.getItemId() != 2131755051) {
         localMenuItem.setVisible(false);
       }
       i += 1;
     }
-    bQM.postDelayed(new Runnable()
+    bpz.postDelayed(new Runnable()
     {
       public final void run()
       {
-        if (dRe == null)
+        if (dTj == null)
         {
-          u.w(TAG, "on post expand search menu, but item is null");
+          v.w(TAG, "on post expand search menu, but item is null");
           return;
         }
-        u.i(TAG, "try to expand action view, searchViewExpand %B", new Object[] { Boolean.valueOf(lxv) });
-        if (lxu) {
-          if (!lxv) {
-            android.support.v4.view.g.b(dRe);
+        v.i(TAG, "try to expand action view, searchViewExpand %B", new Object[] { Boolean.valueOf(lYk) });
+        if (lYj) {
+          if (!lYk) {
+            android.support.v4.view.g.b(dTj);
           }
         }
         for (;;)
         {
-          final View localView = android.support.v4.view.g.a(dRe);
-          if ((localView == null) || (!lxv)) {
+          final View localView = android.support.v4.view.g.a(dTj);
+          if ((localView == null) || (!lYk)) {
             break;
           }
-          localView.findViewById(2131166420).requestFocus();
-          if (!lxy) {
+          localView.findViewById(2131755215).requestFocus();
+          if (!lYn) {
             break;
           }
-          bQM.postDelayed(new Runnable()
+          bpz.postDelayed(new Runnable()
           {
             public final void run()
             {
-              ((InputMethodManager)an.getSystemService("input_method")).showSoftInput(localView.findViewById(2131166420), 0);
+              ((InputMethodManager)O.getSystemService("input_method")).showSoftInput(localView.findViewById(2131755215), 0);
             }
           }, 128L);
           return;
-          if (lxH != null) {
-            lxH.biL();
+          if (lYw != null) {
+            lYw.boH();
           }
         }
       }
     }, 128L);
   }
   
-  public final void a(final FragmentActivity paramFragmentActivity)
-  {
-    u.d(TAG, "doNewExpand, searchViewExpand " + lxv);
-    if (!lxv)
-    {
-      lxv = true;
-      bQM.post(new Runnable()
-      {
-        public final void run()
-        {
-          if ((paramFragmentActivity == null) || (paramFragmentActivity.isFinishing()))
-          {
-            u.w(TAG, "want to expand search view, but activity status error");
-            return;
-          }
-          paramFragmentActivity.G();
-        }
-      });
-      if (lxA != null) {
-        lxA.Ge();
-      }
-    }
-  }
-  
   public final void a(final FragmentActivity paramFragmentActivity, Menu paramMenu)
   {
-    u.v(TAG, "on create options menu");
+    v.v(TAG, "on create options menu");
     if (paramFragmentActivity == null)
     {
-      u.w(TAG, "on add search menu, activity is null");
+      v.w(TAG, "on add search menu, activity is null");
       return;
     }
-    if (lxz == null)
+    if (lYo == null)
     {
-      if (lxC)
+      if (lYr)
       {
-        lxz = new ActionBarSearchView(paramFragmentActivity);
-        lxz.setAutoMatchKeywords(lxE);
-        lxz.setKeywords(lxD);
+        lYo = new ActionBarSearchView(paramFragmentActivity);
+        lYo.iM(lYt);
+        lYo.U(lYs);
       }
     }
     else
     {
-      lxz.setCallBack(new ActionBarSearchView.b()
+      lYo.a(new ActionBarSearchView.b()
       {
-        public final void AD(String paramAnonymousString)
+        public final void CE(String paramAnonymousString)
         {
-          if (!lxv) {
-            u.v(TAG, "onSearchTextChange %s, but not in searching", new Object[] { paramAnonymousString });
+          if (!lYk) {
+            v.v(TAG, "onSearchTextChange %s, but not in searching", new Object[] { paramAnonymousString });
           }
-          while (lxA == null) {
+          while (lYp == null) {
             return;
           }
-          lxA.kF(paramAnonymousString);
+          lYp.lo(paramAnonymousString);
         }
         
-        public final void Gf()
+        public final void GC()
         {
-          if (lxA != null) {
-            lxA.Gf();
+          if (lYp != null) {
+            lYp.GC();
           }
         }
         
-        public final void bim()
+        public final void boj()
         {
-          if (lxA != null) {
-            lxA.Gg();
+          if (lYp != null) {
+            lYp.GD();
           }
         }
         
-        public final void bin()
+        public final void bok()
         {
-          if (!lxv)
+          if (!lYk)
           {
-            u.v(TAG, "onVoiceSearchRequired, but not in searching");
+            v.v(TAG, "onVoiceSearchRequired, but not in searching");
             return;
           }
-          aSU();
+          aXN();
         }
       });
-      lxz.id(aST());
-      lxz.setOnEditorActionListener(new TextView.OnEditorActionListener()
+      lYo.iI(aXM());
+      lYo.setOnEditorActionListener(new TextView.OnEditorActionListener()
       {
         public final boolean onEditorAction(TextView paramAnonymousTextView, int paramAnonymousInt, KeyEvent paramAnonymousKeyEvent)
         {
-          if ((3 == paramAnonymousInt) && (lxA != null)) {
-            return lxA.kE(getSearchContent());
+          if ((3 == paramAnonymousInt) && (lYp != null)) {
+            return lYp.ln(aVM());
           }
           return false;
         }
       });
-      if (lxG != 0) {
-        lxz.setSearchTipIcon(lxG);
+      if (lYv != 0) {
+        lYo.tU(lYv);
       }
-      dRe = paramMenu.add(0, 2131165229, 0, lxF);
-      dRe.setEnabled(lxx);
-      dRe.setIcon(2130903505);
-      android.support.v4.view.g.a(dRe, (View)lxz);
-      if (!lxu) {
-        break label288;
+      dTj = paramMenu.add(0, 2131755051, 0, lYu);
+      dTj.setEnabled(lYm);
+      dTj.setIcon(2131165203);
+      android.support.v4.view.g.a(dTj, (View)lYo);
+      if (!lYj) {
+        break label287;
       }
-      android.support.v4.view.g.a(dRe, 9);
-      label218:
-      if (!lxu) {
-        break label299;
+      android.support.v4.view.g.a(dTj, 9);
+      label217:
+      if (!lYj) {
+        break label298;
       }
-      android.support.v4.view.g.a(dRe, new g.e()
+      android.support.v4.view.g.a(dTj, new g.e()
       {
-        public final boolean af()
+        public final boolean ad()
         {
-          a(paramFragmentActivity);
+          d(paramFragmentActivity);
           return true;
         }
         
-        public final boolean ag()
+        public final boolean ae()
         {
-          b(paramFragmentActivity);
+          e(paramFragmentActivity);
           return true;
         }
       });
     }
     for (;;)
     {
-      lxz.setBackClickCallback(new ActionBarSearchView.a()
+      lYo.a(new ActionBarSearchView.a()
       {
-        public final void bil()
+        public final void boi()
         {
-          if (lxu) {
-            if (dRe != null) {
-              android.support.v4.view.g.c(dRe);
+          if (lYj) {
+            if (dTj != null) {
+              android.support.v4.view.g.c(dTj);
             }
           }
-          while (lxH == null) {
+          while (lYw == null) {
             return;
           }
-          lxH.collapseActionView();
+          lYw.collapseActionView();
         }
       });
       return;
-      lxz = new SearchViewNotRealTimeHelper(paramFragmentActivity);
-      lxz.setNotRealCallBack(lxB);
+      lYo = new SearchViewNotRealTimeHelper(paramFragmentActivity);
+      lYo.a(lYq);
       break;
-      label288:
-      android.support.v4.view.g.a(dRe, 2);
-      break label218;
-      label299:
-      lxH = new a()
+      label287:
+      android.support.v4.view.g.a(dTj, 2);
+      break label217;
+      label298:
+      lYw = new a()
       {
-        public final void biL()
+        public final void boH()
         {
-          a(paramFragmentActivity);
+          d(paramFragmentActivity);
         }
         
         public final void collapseActionView()
         {
-          b(paramFragmentActivity);
+          e(paramFragmentActivity);
         }
       };
     }
   }
   
-  public boolean aST()
+  public final void a(View.OnFocusChangeListener paramOnFocusChangeListener)
+  {
+    if (lYo != null)
+    {
+      lYo.bof();
+      lYo.a(paramOnFocusChangeListener);
+    }
+  }
+  
+  public final String aVM()
+  {
+    if (lYo != null) {
+      return lYo.aVM();
+    }
+    return "";
+  }
+  
+  public boolean aXM()
   {
     return false;
   }
   
-  public void aSU() {}
+  public void aXN() {}
   
-  public void aSV() {}
+  public void aXO() {}
   
-  public final void b(final FragmentActivity paramFragmentActivity)
+  public final void boG()
   {
-    u.d(TAG, "doNewCollapse, searchViewExpand " + lxv);
-    if (lxv)
+    v.d(TAG, "do collapse");
+    if ((lYk) && (dTj != null))
     {
-      lxv = false;
-      aSV();
-      if (lxz != null) {
-        lxz.ie(false);
+      if (!lYj) {
+        break label40;
       }
-      bQM.post(new Runnable()
+      android.support.v4.view.g.c(dTj);
+    }
+    label40:
+    while (lYw == null) {
+      return;
+    }
+    lYw.collapseActionView();
+  }
+  
+  public final boolean bog()
+  {
+    if (lYo != null) {
+      return lYo.bog();
+    }
+    return false;
+  }
+  
+  public final boolean boh()
+  {
+    if (lYo != null) {
+      return lYo.boh();
+    }
+    return false;
+  }
+  
+  public final void clearFocus()
+  {
+    if (lYo != null) {
+      lYo.bof();
+    }
+  }
+  
+  public final void d(final FragmentActivity paramFragmentActivity)
+  {
+    v.d(TAG, "doNewExpand, searchViewExpand " + lYk);
+    if (!lYk)
+    {
+      lYk = true;
+      bpz.post(new Runnable()
       {
         public final void run()
         {
           if ((paramFragmentActivity == null) || (paramFragmentActivity.isFinishing()))
           {
-            u.w(TAG, "want to collapse search view, but activity status error");
+            v.w(TAG, "want to expand search view, but activity status error");
             return;
           }
-          paramFragmentActivity.G();
+          paramFragmentActivity.F();
         }
       });
-      if (lxA != null) {
-        bQM.post(new Runnable()
+      if (lYp != null) {
+        lYp.GB();
+      }
+    }
+  }
+  
+  public final void e(final FragmentActivity paramFragmentActivity)
+  {
+    v.d(TAG, "doNewCollapse, searchViewExpand " + lYk);
+    if (lYk)
+    {
+      lYk = false;
+      aXO();
+      if (lYo != null) {
+        lYo.iL(false);
+      }
+      bpz.post(new Runnable()
+      {
+        public final void run()
+        {
+          if ((paramFragmentActivity == null) || (paramFragmentActivity.isFinishing()))
+          {
+            v.w(TAG, "want to collapse search view, but activity status error");
+            return;
+          }
+          paramFragmentActivity.F();
+        }
+      });
+      if (lYp != null) {
+        bpz.post(new Runnable()
         {
           public final void run()
           {
-            lxA.Gd();
+            lYp.GA();
           }
         });
       }
     }
-    bQM.post(new Runnable()
+    bpz.post(new Runnable()
     {
       public final void run()
       {
-        if (dRe == null)
+        if (dTj == null)
         {
-          u.w(TAG, "want to collapse search view, but search menu item is null");
+          v.w(TAG, "want to collapse search view, but search menu item is null");
           return;
         }
         if ((paramFragmentActivity != null) && (!paramFragmentActivity.isFinishing()))
@@ -344,114 +410,66 @@ public class r
             }
           }
         }
-        Object localObject1 = android.support.v4.view.g.a(dRe);
+        Object localObject1 = android.support.v4.view.g.a(dTj);
         if (localObject1 != null) {
-          ((View)localObject1).findViewById(2131166420).clearFocus();
+          ((View)localObject1).findViewById(2131755215).clearFocus();
         }
-        dRe = null;
-        lxz = null;
+        dTj = null;
+        lYo = null;
       }
     });
   }
   
-  public final void biK()
-  {
-    u.d(TAG, "do collapse");
-    if ((lxv) && (dRe != null))
-    {
-      if (!lxu) {
-        break label40;
-      }
-      android.support.v4.view.g.c(dRe);
-    }
-    label40:
-    while (lxH == null) {
-      return;
-    }
-    lxH.collapseActionView();
-  }
-  
-  public final boolean bij()
-  {
-    if (lxz != null) {
-      return lxz.bij();
-    }
-    return false;
-  }
-  
-  public final boolean bik()
-  {
-    if (lxz != null) {
-      return lxz.bik();
-    }
-    return false;
-  }
-  
-  public final void clearFocus()
-  {
-    if (lxz != null) {
-      lxz.bii();
-    }
-  }
-  
-  public final String getSearchContent()
-  {
-    if (lxz != null) {
-      return lxz.getSearchContent();
-    }
-    return "";
-  }
-  
-  public final void ig(boolean paramBoolean)
+  public final void iO(boolean paramBoolean)
   {
     boolean bool1 = false;
     String str = TAG;
-    boolean bool2 = lxv;
-    if (dRe == null) {
+    boolean bool2 = lYk;
+    if (dTj == null) {
       bool1 = true;
     }
-    u.d(str, "do expand, expanded[%B], search menu item null[%B]", new Object[] { Boolean.valueOf(bool2), Boolean.valueOf(bool1) });
-    if (lxv) {
+    v.d(str, "do expand, expanded[%B], search menu item null[%B]", new Object[] { Boolean.valueOf(bool2), Boolean.valueOf(bool1) });
+    if (lYk) {
       return;
     }
-    if (!lxx)
+    if (!lYm)
     {
-      u.w(TAG, "can not expand now");
+      v.w(TAG, "can not expand now");
       return;
     }
-    lxy = paramBoolean;
-    if (dRe != null)
+    lYn = paramBoolean;
+    if (dTj != null)
     {
-      bQM.post(new Runnable()
+      bpz.post(new Runnable()
       {
         public final void run()
         {
-          if (dRe == null) {
-            u.w(TAG, "post do expand search menu, but search menu item is null");
+          if (dTj == null) {
+            v.w(TAG, "post do expand search menu, but search menu item is null");
           }
           do
           {
             return;
-            if (lxu)
+            if (lYj)
             {
-              android.support.v4.view.g.b(dRe);
+              android.support.v4.view.g.b(dTj);
               return;
             }
-          } while (lxH == null);
-          lxH.biL();
+          } while (lYw == null);
+          lYw.boH();
         }
       });
       return;
     }
-    lxw = true;
+    lYl = true;
   }
   
   public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
   {
-    u.v(TAG, "on key down, key code %d, expand %B", new Object[] { Integer.valueOf(paramInt), Boolean.valueOf(lxv) });
-    if ((4 == paramInt) && (lxv))
+    v.v(TAG, "on key down, key code %d, expand %B", new Object[] { Integer.valueOf(paramInt), Boolean.valueOf(lYk) });
+    if ((4 == paramInt) && (lYk))
     {
-      biK();
+      boG();
       return true;
     }
     return false;
@@ -459,40 +477,32 @@ public class r
   
   public final void setHint(CharSequence paramCharSequence)
   {
-    if (lxz == null) {
+    if (lYo == null) {
       return;
     }
-    lxz.setHint(paramCharSequence);
-  }
-  
-  public final void setSearchContent(String paramString)
-  {
-    if (lxz == null) {
-      return;
-    }
-    lxz.setSearchContent(paramString);
+    lYo.setHint(paramCharSequence);
   }
   
   public static abstract interface a
   {
-    public abstract void biL();
+    public abstract void boH();
     
     public abstract void collapseActionView();
   }
   
   public static abstract interface b
   {
-    public abstract void Gd();
+    public abstract void GA();
     
-    public abstract void Ge();
+    public abstract void GB();
     
-    public abstract void Gf();
+    public abstract void GC();
     
-    public abstract void Gg();
+    public abstract void GD();
     
-    public abstract boolean kE(String paramString);
+    public abstract boolean ln(String paramString);
     
-    public abstract void kF(String paramString);
+    public abstract void lo(String paramString);
   }
 }
 

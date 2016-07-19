@@ -12,11 +12,11 @@ final class FindMContactAlertUI$6
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramDialogInterface = new Intent(kOV, FindMContactLearmMoreUI.class);
-    paramDialogInterface.putExtra("regsetinfo_ticket", FindMContactAlertUI.a(kOV));
-    paramDialogInterface.putExtra("regsetinfo_NextStep", FindMContactAlertUI.b(kOV));
-    paramDialogInterface.putExtra("regsetinfo_NextStyle", FindMContactAlertUI.c(kOV));
-    MMWizardActivity.v(kOV, paramDialogInterface);
+    paramDialogInterface = new Intent(lol, FindMContactLearmMoreUI.class);
+    paramDialogInterface.putExtra("regsetinfo_ticket", FindMContactAlertUI.a(lol));
+    paramDialogInterface.putExtra("regsetinfo_NextStep", FindMContactAlertUI.b(lol));
+    paramDialogInterface.putExtra("regsetinfo_NextStyle", FindMContactAlertUI.c(lol));
+    MMWizardActivity.v(lol, paramDialogInterface);
   }
 }
 

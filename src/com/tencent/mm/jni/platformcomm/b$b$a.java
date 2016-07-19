@@ -2,13 +2,13 @@ package com.tencent.mm.jni.platformcomm;
 
 final class b$b$a
 {
-  public String bwx = null;
-  public long bwy = 0L;
+  public String blK = null;
+  public long blL = 0L;
   
   public b$b$a(String paramString, long paramLong)
   {
-    bwx = paramString;
-    bwy = paramLong;
+    blK = paramString;
+    blL = paramLong;
   }
 }
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="90" android:drawable="@drawable/aia" />
+    <item android:duration="90" android:drawable="@drawable/aib" />
+    <item android:duration="90" android:drawable="@drawable/aic" />
+    <item android:duration="90" android:drawable="@drawable/aid" />
+    <item android:duration="90" android:drawable="@drawable/aie" />
+    <item android:duration="90" android:drawable="@drawable/aif" />
+</animation-list>

@@ -4,15 +4,15 @@ import java.util.ArrayList;
 
 final class b$a
 {
-  a aG;
-  a aH;
-  int aI;
-  Fragment aJ;
-  int aK;
-  int aL;
-  int aM;
-  int aN;
-  ArrayList aO;
+  a ah;
+  a ai;
+  int aj;
+  Fragment ak;
+  int al;
+  int am;
+  int an;
+  int ao;
+  ArrayList<Fragment> ap;
 }
 
 /* Location:

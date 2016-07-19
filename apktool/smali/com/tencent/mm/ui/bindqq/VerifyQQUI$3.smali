@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindqq/VerifyQQUI;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/bindqq/VerifyQQUI;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kPK:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
+.field final synthetic loZ:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 158
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$3;->kPK:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$3;->loZ:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 162
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$3;->kPK:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindqq/VerifyQQUI$3;->loZ:Lcom/tencent/mm/ui/bindqq/VerifyQQUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindqq/VerifyQQUI;->f(Lcom/tencent/mm/ui/bindqq/VerifyQQUI;)V
 

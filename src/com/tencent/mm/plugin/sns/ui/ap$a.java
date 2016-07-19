@@ -1,71 +1,41 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.view.LayoutInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.TextView;
-import com.tencent.mm.ui.base.l;
-import java.util.HashMap;
-
 final class ap$a
-  extends BaseAdapter
 {
-  private ap$a(ap paramap) {}
+  public int hwJ = -1;
+  public int hwK = -1;
+  public boolean hwL = false;
+  public int hwM = -1;
+  int hwN = 0;
+  public String hwO = "";
+  public String hwP = "";
+  public String hwQ = "";
+  public int hwR = -1;
+  int hwS = 0;
+  public boolean hwT = false;
+  public int hwU = -1;
+  public boolean hwV = false;
+  public int hwW = -1;
+  int hwX = 0;
   
-  public final int getCount()
-  {
-    return ap.a(hlk).size();
-  }
+  ap$a(ap paramap) {}
   
-  public final Object getItem(int paramInt)
+  public static boolean nx(int paramInt)
   {
-    return null;
-  }
-  
-  public final long getItemId(int paramInt)
-  {
-    return 0L;
-  }
-  
-  public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
-  {
-    MenuItem localMenuItem;
-    if (paramView == null)
+    switch (paramInt)
     {
-      paramView = ap.b(hlk).inflate(2131362877, paramViewGroup, false);
-      paramViewGroup = new a((byte)0);
-      cVH = ((TextView)paramView.findViewById(2131165460));
-      hll = ((TextView)paramView.findViewById(2131168666));
-      paramView.setTag(paramViewGroup);
-      localMenuItem = ap.a(hlk).getItem(paramInt);
-      cVH.setText(localMenuItem.getTitle());
-      if (ap.c(hlk).get(Integer.valueOf(localMenuItem.getItemId())) == null) {
-        break label217;
-      }
-      hll.setText((CharSequence)ap.c(hlk).get(Integer.valueOf(localMenuItem.getItemId())));
-      hll.setVisibility(0);
+    case 9: 
+    case 10: 
+    case 11: 
+    case 12: 
+    case 13: 
+    case 14: 
+    case 16: 
+    case 17: 
+    default: 
+      return false;
     }
-    for (;;)
-    {
-      if (ap.d(hlk).get(Integer.valueOf(localMenuItem.getItemId())) != null) {
-        hll.setTextColor(((Integer)ap.d(hlk).get(Integer.valueOf(localMenuItem.getItemId()))).intValue());
-      }
-      return paramView;
-      paramViewGroup = (a)paramView.getTag();
-      break;
-      label217:
-      hll.setVisibility(4);
-    }
-  }
-  
-  private final class a
-  {
-    TextView cVH;
-    TextView hll;
-    
-    private a() {}
+    return true;
   }
 }
 

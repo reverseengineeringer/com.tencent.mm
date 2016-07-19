@@ -13,41 +13,41 @@ import android.view.KeyEvent;
 import android.view.View.MeasureSpec;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import com.tencent.mm.sdk.platformtools.d;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class MultiTouchImageView
   extends ImageView
 {
-  private int dIH;
-  private int dII;
-  private float gaU;
-  private boolean gpO = false;
-  private boolean hez = true;
-  private int imageHeight;
-  private int imageWidth;
-  protected Matrix kIE = new Matrix();
-  protected Matrix kIF = new Matrix();
-  private final Matrix kIG = new Matrix();
-  private final float[] kIH = new float[9];
-  protected Bitmap kII = null;
-  int kIJ = -1;
-  int kIK = -1;
-  private float kIL = 0.0F;
-  private float kIM = 0.0F;
-  private float kIN = 0.0F;
-  private float kIO = 2.0F;
-  private float kIP = 0.75F;
-  private float kIQ = 3.0F;
-  private boolean kIR = false;
-  public boolean kIS = false;
-  public boolean kIT = false;
-  private float kIU;
-  private float kIV;
-  private float kIW = 1.0F;
-  float kIX = 0.0F;
-  protected aa mHandler = new aa();
+  private int dKg;
+  private int dKh;
+  private boolean gAg = false;
+  public float gkV;
+  public boolean htl = true;
+  public int imageHeight;
+  public int imageWidth;
+  protected Matrix lhU = new Matrix();
+  protected Matrix lhV = new Matrix();
+  private final Matrix lhW = new Matrix();
+  private final float[] lhX = new float[9];
+  protected Bitmap lhY = null;
+  int lhZ = -1;
+  int lia = -1;
+  private float lib = 0.0F;
+  private float lic = 0.0F;
+  private float lid = 0.0F;
+  private float lie = 2.0F;
+  private float lif = 0.75F;
+  private float lig = 3.0F;
+  public boolean lih = false;
+  public boolean lii = false;
+  public boolean lij = false;
+  private float lik;
+  private float lil;
+  private float lim = 1.0F;
+  float lin = 0.0F;
+  protected ac mHandler = new ac();
   
   public MultiTouchImageView(Context paramContext, int paramInt1, int paramInt2)
   {
@@ -70,38 +70,109 @@ public class MultiTouchImageView
     init();
   }
   
-  private void bdg()
+  private void F(boolean paramBoolean1, boolean paramBoolean2)
   {
-    boolean bool2 = true;
-    kIU = (dIH / imageWidth);
-    kIV = (dII / imageHeight);
-    kIS = d.af(imageWidth, imageHeight);
-    kIT = d.ae(imageWidth, imageHeight);
-    if ((kIS) && (imageWidth > dIH))
-    {
-      bool1 = true;
-      kIS = bool1;
-      if ((!kIT) || (imageHeight <= dII)) {
-        break label168;
+    float f2 = 0.0F;
+    if (lhY == null) {
+      return;
+    }
+    Matrix localMatrix = biK();
+    RectF localRectF = new RectF(0.0F, 0.0F, lhY.getWidth(), lhY.getHeight());
+    localMatrix.mapRect(localRectF);
+    float f1 = localRectF.height();
+    float f3 = localRectF.width();
+    if (paramBoolean2) {
+      if (f1 < dKh) {
+        f1 = (dKh - f1) / 2.0F - top;
       }
     }
-    label168:
+    for (;;)
+    {
+      if (paramBoolean1) {
+        if (f3 < dKg) {
+          f2 = (dKg - f3) / 2.0F - left;
+        }
+      }
+      for (;;)
+      {
+        p(f2, f1);
+        localMatrix = biK();
+        setImageMatrix(localMatrix);
+        localMatrix.mapRect(localRectF);
+        localRectF.height();
+        localRectF.width();
+        return;
+        if (top > 0.0F)
+        {
+          f1 = -top;
+          break;
+        }
+        if (bottom >= dKh) {
+          break label368;
+        }
+        f1 = dKh - bottom;
+        break;
+        if (top > 0.0F)
+        {
+          f1 = -top;
+          break;
+        }
+        if (bottom >= dKh) {
+          break label368;
+        }
+        f1 = dKh - bottom;
+        break;
+        if (left > 0.0F)
+        {
+          f2 = -left;
+        }
+        else if (right < dKg)
+        {
+          f2 = dKg - right;
+          continue;
+          if (left > 0.0F) {
+            f2 = -left;
+          } else if (right < dKg) {
+            f2 = dKg - right;
+          }
+        }
+      }
+      label368:
+      f1 = 0.0F;
+    }
+  }
+  
+  private void biJ()
+  {
+    boolean bool2 = true;
+    lik = (dKg / imageWidth);
+    lil = (dKh / imageHeight);
+    lii = d.ak(imageWidth, imageHeight);
+    lij = d.aj(imageWidth, imageHeight);
+    if ((lii) && (imageWidth > dKg))
+    {
+      bool1 = true;
+      lii = bool1;
+      if ((!lij) || (imageHeight <= dKh)) {
+        break label126;
+      }
+    }
+    label126:
     for (boolean bool1 = bool2;; bool1 = false)
     {
-      kIT = bool1;
-      if (((!hez) || (!kIS)) && (!kIT)) {
-        break label173;
-      }
-      gaU = Math.max(kIU, kIV);
-      if (gaU > 1.0F) {
-        gaU = 1.0F;
-      }
+      lij = bool1;
+      gkV = lik;
       return;
       bool1 = false;
       break;
     }
-    label173:
-    gaU = kIU;
+  }
+  
+  private Matrix biK()
+  {
+    lhW.set(lhU);
+    lhW.postConcat(lhV);
+    return lhW;
   }
   
   private void d(final float paramFloat1, final float paramFloat2, final float paramFloat3)
@@ -114,255 +185,193 @@ public class MultiTouchImageView
       public final void run()
       {
         long l = System.currentTimeMillis();
-        float f1 = Math.min(kIY, (float)(l - l));
+        float f1 = Math.min(lio, (float)(l - l));
         float f2 = paramFloat1;
         float f3 = paramFloat2;
-        c(f2 + f3 * f1, paramFloat3, kJc);
-        if (f1 < kIY) {
+        c(f2 + f3 * f1, paramFloat3, lis);
+        if (f1 < lio) {
           mHandler.post(this);
         }
       }
     });
   }
   
-  private float getDoubleTabScale()
-  {
-    float f1 = getScale();
-    if (getScaleWidth() * 0.7F > f1) {
-      f1 = getScaleWidth();
-    }
-    for (;;)
-    {
-      float f2 = f1;
-      if (f1 > getMaxZoom()) {
-        f2 = getMaxZoom();
-      }
-      return f2;
-      if (getScaleHeight() * 0.7F > f1) {
-        f1 = getScaleHeight();
-      } else {
-        f1 = getScaleRate() * kIO;
-      }
-    }
-  }
-  
   private void init()
   {
-    u.d("dktest", "init screenWidth:" + dIH + " screenHeight :" + dII);
+    v.d("dktest", "init screenWidth:" + dKg + " screenHeight :" + dKh);
     setScaleType(ImageView.ScaleType.MATRIX);
     float f = getContextgetResourcesgetDisplayMetricswidthPixels / 720.0F;
     if (f > 1.0F) {
-      kIW = f;
+      lim = f;
     }
   }
   
-  public final void bN(int paramInt1, int paramInt2)
+  public final void D(float paramFloat)
+  {
+    if (Float.compare(paramFloat, 1.0F) < 0)
+    {
+      v.w("MicroMsg.MultiTouchImageView", "max scale limit is less than 1.0, change nothing, return");
+      return;
+    }
+    lig = paramFloat;
+  }
+  
+  public final void bT(int paramInt1, int paramInt2)
   {
     imageWidth = paramInt1;
     imageHeight = paramInt2;
   }
   
-  public final void bdf()
+  public final void biI()
   {
-    kIF.reset();
-    bdg();
-    c(gaU, 0.0F, 0.0F);
+    lhV.reset();
+    biJ();
+    c(gkV, 0.0F, 0.0F);
   }
   
-  public final void bdh()
+  public final void biL()
   {
-    if ((kIR) && (0.0F == kIL)) {
-      kIL = getDoubleTabScale();
+    boolean bool2 = true;
+    boolean bool1;
+    if ((!htl) || (!lii))
+    {
+      bool1 = true;
+      if (lij) {
+        break label37;
+      }
+    }
+    for (;;)
+    {
+      F(bool1, bool2);
+      return;
+      bool1 = false;
+      break;
+      label37:
+      bool2 = false;
+    }
+  }
+  
+  public final void biM()
+  {
+    if ((lih) && (0.0F == lib)) {
+      lib = biN();
+    }
+  }
+  
+  public final float biN()
+  {
+    float f1 = gkV;
+    if (lik * 0.7F > f1) {
+      f1 = lik;
+    }
+    for (;;)
+    {
+      float f2 = f1;
+      if (f1 > lic) {
+        f2 = lic;
+      }
+      return f2;
+      if (lil * 0.7F > f1) {
+        f1 = lil;
+      } else {
+        f1 = gkV * lie;
+      }
     }
   }
   
   public final void c(float paramFloat1, float paramFloat2, float paramFloat3)
   {
-    int j = 1;
+    boolean bool2 = true;
     float f2 = getScale();
     float f1;
-    label57:
-    int i;
-    label100:
-    label107:
-    Matrix localMatrix;
-    RectF localRectF;
-    if (kIR)
+    label68:
+    boolean bool1;
+    if (lih)
     {
-      if (0.0F == kIL)
+      if (0.0F == lib)
       {
-        f1 = kIQ * kIW;
-        kIM = f1;
+        f1 = lig * lim;
+        lic = f1;
       }
     }
     else
     {
-      if (paramFloat1 <= kIM) {
-        break label277;
+      if (paramFloat1 <= lic) {
+        break label136;
       }
-      f1 = kIM;
+      f1 = lic + (paramFloat1 - lic) * 0.2F;
       paramFloat1 = f1 / f2;
-      setImageMatrix(getImageViewMatrix());
-      kIF.postScale(paramFloat1, paramFloat1, paramFloat2, paramFloat3);
-      if ((hez) && (kIS)) {
-        break label298;
+      setImageMatrix(biK());
+      lhV.postScale(paramFloat1, paramFloat1, paramFloat2, paramFloat3);
+      if ((htl) && (lii)) {
+        break label157;
       }
-      i = 1;
-      if (kIT) {
-        break label304;
-      }
-      if (kII != null)
-      {
-        localMatrix = getImageViewMatrix();
-        localRectF = new RectF(0.0F, 0.0F, kII.getWidth(), kII.getHeight());
-        localMatrix.mapRect(localRectF);
-        paramFloat1 = localRectF.height();
-        paramFloat2 = localRectF.width();
-        if (j == 0) {
-          break label413;
-        }
-        if (paramFloat1 >= dII) {
-          break label310;
-        }
-        paramFloat1 = (dII - paramFloat1) / 2.0F - top;
+      bool1 = true;
+      label111:
+      if (lij) {
+        break label163;
       }
     }
     for (;;)
     {
-      label198:
-      if (i != 0) {
-        if (paramFloat2 < dIH) {
-          paramFloat2 = (dIH - paramFloat2) / 2.0F - left;
-        }
+      F(bool1, bool2);
+      return;
+      f1 = lib;
+      break;
+      label136:
+      f1 = paramFloat1;
+      if (paramFloat1 >= lid) {
+        break label68;
       }
-      for (;;)
-      {
-        q(paramFloat2, paramFloat1);
-        localMatrix = getImageViewMatrix();
-        setImageMatrix(localMatrix);
-        localMatrix.mapRect(localRectF);
-        localRectF.height();
-        localRectF.width();
-        return;
-        f1 = kIL;
-        break;
-        label277:
-        f1 = paramFloat1;
-        if (paramFloat1 >= kIN) {
-          break label57;
-        }
-        f1 = kIN;
-        break label57;
-        label298:
-        i = 0;
-        break label100;
-        label304:
-        j = 0;
-        break label107;
-        label310:
-        if (top > 0.0F)
-        {
-          paramFloat1 = -top;
-          break label198;
-        }
-        if (bottom >= dII) {
-          break label413;
-        }
-        paramFloat1 = dII - bottom;
-        break label198;
-        if (left > 0.0F) {
-          paramFloat2 = -left;
-        } else if (right < dIH) {
-          paramFloat2 = dIH - right;
-        } else {
-          paramFloat2 = 0.0F;
-        }
-      }
-      label413:
-      paramFloat1 = 0.0F;
+      f1 = lid;
+      break label68;
+      label157:
+      bool1 = false;
+      break label111;
+      label163:
+      bool2 = false;
     }
   }
   
-  public int getImageHeight()
+  public final float getScale()
   {
-    return imageHeight;
-  }
-  
-  protected Matrix getImageViewMatrix()
-  {
-    kIG.set(kIE);
-    kIG.postConcat(kIF);
-    return kIG;
-  }
-  
-  public int getImageWidth()
-  {
-    return imageWidth;
-  }
-  
-  public float getMaxZoom()
-  {
-    return kIM;
-  }
-  
-  public float getMinZoom()
-  {
-    return kIN;
-  }
-  
-  public float getRealWidth()
-  {
-    return getScale() * getImageWidth();
-  }
-  
-  public float getScale()
-  {
-    kIF.getValues(kIH);
-    bdg();
-    kIM = (kIQ * kIW);
-    kIN = (gaU * kIP);
-    if (kIM < 1.0F) {
-      kIM = 1.0F;
+    lhV.getValues(lhX);
+    biJ();
+    lic = (lig * lim);
+    lid = (gkV * lif);
+    if (lic < 1.0F) {
+      lic = 1.0F;
     }
-    if (kIN > 1.0F) {
-      kIN = 1.0F;
+    if (lid > 1.0F) {
+      lid = 1.0F;
     }
-    return kIH[0];
+    return lhX[0];
   }
   
-  public float getScaleHeight()
+  public final void n(float paramFloat1, float paramFloat2)
   {
-    return kIV;
-  }
-  
-  public float getScaleRate()
-  {
-    return gaU;
-  }
-  
-  public float getScaleWidth()
-  {
-    return kIU;
+    biJ();
+    d(gkV, paramFloat1, paramFloat2);
   }
   
   public final void o(float paramFloat1, float paramFloat2)
   {
-    bdg();
-    d(gaU, paramFloat1, paramFloat2);
+    lib = biN();
+    d(lib, paramFloat1, paramFloat2);
   }
   
   public void onConfigurationChanged(Configuration paramConfiguration)
   {
     if ((orientation == 1) || (orientation == 2)) {
-      gpO = false;
+      gAg = false;
     }
   }
   
   protected void onDraw(Canvas paramCanvas)
   {
-    if ((kII != null) && (kII.isRecycled()))
+    if ((lhY != null) && (lhY.isRecycled()))
     {
-      u.e("!44@/B4Tb64lLpL5aiCbYmx2SjWrgSB3hTZ3a/79cTAOp88=", "this bitmap is recycled! draw nothing!");
+      v.e("MicroMsg.MultiTouchImageView", "this bitmap is recycled! draw nothing!");
       return;
     }
     super.onDraw(paramCanvas);
@@ -372,7 +381,7 @@ public class MultiTouchImageView
   {
     if ((paramInt == 4) && (paramKeyEvent.getRepeatCount() == 0))
     {
-      if (f.aDK())
+      if (f.aHm())
       {
         new e();
         paramKeyEvent.startTracking();
@@ -387,13 +396,13 @@ public class MultiTouchImageView
     boolean bool2 = false;
     if (paramInt == 4)
     {
-      if (f.aDK()) {
+      if (f.aHm()) {
         new e();
       }
       for (boolean bool1 = paramKeyEvent.isTracking(); bool1; bool1 = false)
       {
         bool1 = bool2;
-        if (f.aDK())
+        if (f.aHm())
         {
           new e();
           bool1 = paramKeyEvent.isCanceled();
@@ -401,7 +410,7 @@ public class MultiTouchImageView
         if ((bool1) || (getScale() <= 1.0F)) {
           break;
         }
-        c(1.0F, dIH / 2.0F, dII / 2.0F);
+        c(1.0F, dKg / 2.0F, dKh / 2.0F);
         return true;
       }
     }
@@ -411,88 +420,27 @@ public class MultiTouchImageView
   protected void onMeasure(int paramInt1, int paramInt2)
   {
     super.onMeasure(paramInt1, paramInt2);
-    dIH = View.MeasureSpec.getSize(paramInt1);
-    dII = View.MeasureSpec.getSize(paramInt2);
-    if (!gpO)
+    dKg = View.MeasureSpec.getSize(paramInt1);
+    dKh = View.MeasureSpec.getSize(paramInt2);
+    if (!gAg)
     {
-      gpO = true;
+      gAg = true;
       init();
     }
-    bdf();
+    biI();
   }
   
   public final void p(float paramFloat1, float paramFloat2)
   {
-    kIL = getDoubleTabScale();
-    d(kIL, paramFloat1, paramFloat2);
-  }
-  
-  public final void q(float paramFloat1, float paramFloat2)
-  {
-    kIF.postTranslate(paramFloat1, paramFloat2);
-    setImageMatrix(getImageViewMatrix());
-  }
-  
-  public void setDoubleTabScaleLimit(float paramFloat)
-  {
-    if (Float.compare(paramFloat, 0.0F) < 0)
-    {
-      u.w("!44@/B4Tb64lLpL5aiCbYmx2SjWrgSB3hTZ3a/79cTAOp88=", "double tab scale limit is less than 0.0, change nothing, return");
-      return;
-    }
-    kIO = paramFloat;
-  }
-  
-  public void setEnableHorLongBmpMode(boolean paramBoolean)
-  {
-    hez = paramBoolean;
+    lhV.postTranslate(paramFloat1, paramFloat2);
+    setImageMatrix(biK());
   }
   
   public void setImageBitmap(Bitmap paramBitmap)
   {
-    kII = paramBitmap;
-    gpO = false;
+    lhY = paramBitmap;
+    gAg = false;
     super.setImageBitmap(paramBitmap);
-  }
-  
-  public void setImageHeight(int paramInt)
-  {
-    imageHeight = paramInt;
-  }
-  
-  public void setImageWidth(int paramInt)
-  {
-    imageWidth = paramInt;
-  }
-  
-  public void setMaxZoomDoubleTab(boolean paramBoolean)
-  {
-    kIR = paramBoolean;
-  }
-  
-  public void setMaxZoomLimit(float paramFloat)
-  {
-    if (Float.compare(paramFloat, 1.0F) < 0)
-    {
-      u.w("!44@/B4Tb64lLpL5aiCbYmx2SjWrgSB3hTZ3a/79cTAOp88=", "max scale limit is less than 1.0, change nothing, return");
-      return;
-    }
-    kIQ = paramFloat;
-  }
-  
-  public void setMinZoomLimit(float paramFloat)
-  {
-    if (Float.compare(paramFloat, 1.0F) > 0)
-    {
-      u.w("!44@/B4Tb64lLpL5aiCbYmx2SjWrgSB3hTZ3a/79cTAOp88=", "min scale limit is greater than 1.0, change nothing, return");
-      return;
-    }
-    if (Float.compare(paramFloat, 0.0F) < 0)
-    {
-      u.w("!44@/B4Tb64lLpL5aiCbYmx2SjWrgSB3hTZ3a/79cTAOp88=", "min scale limit is less than 0.0, change nothing, return");
-      return;
-    }
-    kIP = paramFloat;
   }
 }
 

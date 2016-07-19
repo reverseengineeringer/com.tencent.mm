@@ -3,25 +3,26 @@ package com.tencent.mm.plugin.sns.ui.b;
 import com.tencent.mm.plugin.sight.decode.a.a;
 import com.tencent.mm.plugin.sight.decode.a.b;
 import com.tencent.mm.plugin.sight.decode.a.b.f;
-import com.tencent.mm.plugin.sns.ui.ad;
-import com.tencent.mm.plugin.sns.ui.an;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.plugin.sns.a.a.f;
+import com.tencent.mm.plugin.sns.ui.ae;
+import com.tencent.mm.plugin.sns.ui.aq;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class g$3
   implements b.f
 {
-  g$3(g paramg, an paraman, a.b paramb) {}
+  g$3(g paramg, aq paramaq, long paramLong, a.b paramb) {}
   
-  public final void a(b paramb, long paramLong)
+  public final void b(b paramb, long paramLong)
   {
-    if ((hoK == null) || (hoK.hjE == null) || (hoK.hjE.gWC == null)) {
+    if ((hFg == null) || (hFg.hyl == null) || (hFg.hyl.hka == null)) {
       return;
     }
-    int i = (int)paramb.avM();
-    hoK.hjE.gWC.l(hoL.hnB, ay.FT());
-    hoK.hjE.gWC.n(hoL.hnB, i);
-    hoK.hjE.gWC.k(hoL.hnB, hoL.hnB);
-    hoL.hoz.gzz.setOnDecodeDurationListener(null);
+    int i = (int)paramb.ayh();
+    hFg.hyl.hka.l(hFh, be.Gq());
+    hFg.hyl.hka.n(hFh, i);
+    hFg.hyl.hka.k(hFh, hFh);
+    hFi.hEV.gGb.a(null);
   }
 }
 

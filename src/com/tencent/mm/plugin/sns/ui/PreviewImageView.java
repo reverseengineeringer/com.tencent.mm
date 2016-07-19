@@ -11,9 +11,11 @@ import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TableRow.LayoutParams;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.sns.data.i;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.h;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -23,15 +25,15 @@ public class PreviewImageView
   extends LinearLayout
 {
   private final Context context;
-  private List eEr = new ArrayList();
-  private TableLayout gZU;
-  private final Map gZV = new HashMap();
-  private final Map gZW = new HashMap();
-  private final int gZX = 4;
-  HashMap gZY = new HashMap();
-  private a gZZ;
-  private boolean haa = true;
-  boolean hab = false;
+  private List<String> eKF = new ArrayList();
+  private TableLayout hnm;
+  private final Map<Integer, View> hnn = new HashMap();
+  private final Map<Integer, TableRow> hno = new HashMap();
+  private final int hnp = 4;
+  HashMap<String, Bitmap> hnq = new HashMap();
+  a hnr;
+  boolean hns = true;
+  boolean hnt = false;
   
   public PreviewImageView(Context paramContext)
   {
@@ -49,45 +51,30 @@ public class PreviewImageView
   
   private void init()
   {
-    gZU = ((TableLayout)LayoutInflater.from(context).inflate(2131362915, this, true).findViewById(2131165377));
+    hnm = ((TableLayout)LayoutInflater.from(context).inflate(2130904472, this, true).findViewById(2131755262));
   }
   
-  public int getCount()
-  {
-    return gZV.size();
-  }
-  
-  public void setImageClick(a parama)
-  {
-    gZZ = parama;
-  }
-  
-  public void setIsShowAddImage(boolean paramBoolean)
-  {
-    haa = paramBoolean;
-  }
-  
-  public final void setList$22875ea3(List paramList)
+  public final void bg(List<String> paramList)
   {
     long l = System.currentTimeMillis();
     if (paramList == null) {
       return;
     }
-    eEr = paramList;
+    eKF = paramList;
     int i = 0;
-    gZU.removeAllViews();
+    hnm.removeAllViews();
     int m = paramList.size() + 1;
     int j = 0;
     label36:
     TableRow localTableRow;
     if (i < m)
     {
-      localTableRow = (TableRow)gZW.get(Integer.valueOf(j));
+      localTableRow = (TableRow)hno.get(Integer.valueOf(j));
       if (localTableRow != null) {
         break label515;
       }
       localTableRow = new TableRow(context);
-      gZW.put(Integer.valueOf(j), localTableRow);
+      hno.put(Integer.valueOf(j), localTableRow);
     }
     label241:
     label295:
@@ -106,39 +93,39 @@ public class PreviewImageView
       for (;;)
       {
         if (localTableRow.getChildCount() > 0) {
-          gZU.addView(localTableRow);
+          hnm.addView(localTableRow);
         }
-        u.d("!44@/B4Tb64lLpK/FntsrpdSiMQ6xRFzIQf83tQUDWHggpg=", "initlist time : " + (System.currentTimeMillis() - l));
+        v.d("MicroMsg.PreviewImageView", "initlist time : " + (System.currentTimeMillis() - l));
         j += 1;
         break label36;
         break;
-        Object localObject2 = (View)gZV.get(Integer.valueOf(i));
+        Object localObject2 = (View)hnn.get(Integer.valueOf(i));
         Object localObject1 = localObject2;
         if (localObject2 == null)
         {
-          localObject1 = View.inflate(context, 2131362857, null);
-          gZV.put(Integer.valueOf(i), localObject1);
+          localObject1 = View.inflate(context, 2130904473, null);
+          hnn.put(Integer.valueOf(i), localObject1);
         }
         ImageView localImageView;
         if (i == m - 1)
         {
           localObject2 = "";
-          localImageView = (ImageView)((View)localObject1).findViewById(2131168613);
+          localImageView = (ImageView)((View)localObject1).findViewById(2131757361);
           if (i != m - 1) {
             break label388;
           }
-          if (haa)
+          if (hns)
           {
-            localImageView.setBackgroundResource(2130969764);
-            localImageView.setContentDescription(getContext().getString(2131429654));
+            localImageView.setBackgroundResource(2130839355);
+            localImageView.setContentDescription(getContext().getString(2131235388));
             localImageView.setImageDrawable(null);
-            if (gZZ != null)
+            if (hnr != null)
             {
               if (i != m - 1) {
                 break label482;
               }
               ((View)localObject1).setTag(Integer.valueOf(-1));
-              ((View)localObject1).setOnClickListener(gZZ.hac);
+              ((View)localObject1).setOnClickListener(hnr.hnu);
               ((View)localObject1).setClickable(true);
             }
           }
@@ -154,18 +141,18 @@ public class PreviewImageView
           break label241;
           localImageView.setBackgroundDrawable(null);
           localImageView.setTag(localObject2);
-          localImageView.setContentDescription(getContext().getString(2131429655));
-          Bitmap localBitmap = (Bitmap)gZY.get(localObject2);
-          if (!com.tencent.mm.plugin.sns.data.h.d(localBitmap))
+          localImageView.setContentDescription(getContext().getString(2131235449));
+          Bitmap localBitmap = (Bitmap)hnq.get(localObject2);
+          if (!i.g(localBitmap))
           {
-            u.d("!44@/B4Tb64lLpK/FntsrpdSiMQ6xRFzIQf83tQUDWHggpg=", "bm is null");
-            new b(localImageView, (String)localObject2).h(new String[] { "" });
+            v.d("MicroMsg.PreviewImageView", "bm is null");
+            new b(localImageView, (String)localObject2).m(new String[] { "" });
             break label295;
           }
           localImageView.setImageBitmap(localBitmap);
           break label295;
           ((View)localObject1).setTag(Integer.valueOf(i));
-          ((View)localObject1).setOnClickListener(gZZ.hac);
+          ((View)localObject1).setOnClickListener(hnr.hnu);
           ((View)localObject1).setClickable(true);
         }
       }
@@ -174,7 +161,7 @@ public class PreviewImageView
   
   static abstract class a
   {
-    View.OnClickListener hac = new View.OnClickListener()
+    View.OnClickListener hnu = new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
@@ -182,29 +169,29 @@ public class PreviewImageView
           return;
         }
         int i = ((Integer)paramAnonymousView.getTag()).intValue();
-        lX(i);
+        nm(i);
       }
     };
     
-    public abstract void lX(int paramInt);
+    public abstract void nm(int paramInt);
   }
   
   final class b
-    extends com.tencent.mm.plugin.sns.d.h
+    extends h<String, Integer, Boolean>
   {
-    private ImageView aAF;
-    private Bitmap bDT;
+    private ImageView amO;
+    private Bitmap bxe;
     private String path;
     
     public b(ImageView paramImageView, String paramString)
     {
-      aAF = paramImageView;
+      amO = paramImageView;
       path = paramString;
     }
     
-    public final aa IA()
+    public final ac IZ()
     {
-      return ad.ayS();
+      return ad.aBt();
     }
   }
 }

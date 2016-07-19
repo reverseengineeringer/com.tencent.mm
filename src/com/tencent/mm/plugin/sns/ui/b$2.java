@@ -1,20 +1,23 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.sdk.platformtools.aa;
-import java.util.List;
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
 
 final class b$2
-  implements Runnable
+  implements Animation.AnimationListener
 {
-  b$2(b paramb, List paramList, boolean paramBoolean) {}
+  b$2(b paramb) {}
   
-  public final void run()
+  public final void onAnimationEnd(Animation paramAnimation)
   {
-    gVz.aY(gVA);
-    b localb = gVz;
-    boolean bool = gVB;
-    ad.ayR().post(new b.3(localb, bool));
+    hiS.gZo = false;
+  }
+  
+  public final void onAnimationRepeat(Animation paramAnimation) {}
+  
+  public final void onAnimationStart(Animation paramAnimation)
+  {
+    hiS.gZo = true;
   }
 }
 

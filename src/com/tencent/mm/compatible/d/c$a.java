@@ -6,8 +6,8 @@ public abstract interface c$a
 {
   public static final class a
   {
-    public int brw;
-    public Camera brz;
+    public int bfw;
+    public Camera bfz;
   }
 }
 

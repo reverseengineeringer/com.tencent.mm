@@ -2,21 +2,23 @@ package com.tencent.mm.model;
 
 import android.content.Context;
 import android.database.Cursor;
-import com.tencent.mm.ag.b.a;
-import com.tencent.mm.d.a.x;
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.protocal.b.adi;
-import com.tencent.mm.protocal.b.adq;
-import com.tencent.mm.protocal.b.hi;
-import com.tencent.mm.protocal.b.hj;
-import com.tencent.mm.protocal.b.jm;
-import com.tencent.mm.protocal.b.jv;
-import com.tencent.mm.protocal.b.z;
-import com.tencent.mm.q.i;
+import com.tencent.mm.aj.b.a;
+import com.tencent.mm.e.a.z;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.platformtools.m;
+import com.tencent.mm.protocal.b.ac;
+import com.tencent.mm.protocal.b.aeb;
+import com.tencent.mm.protocal.b.aej;
+import com.tencent.mm.protocal.b.hn;
+import com.tencent.mm.protocal.b.ho;
+import com.tencent.mm.protocal.b.jx;
+import com.tencent.mm.protocal.b.kg;
+import com.tencent.mm.s.i;
+import com.tencent.mm.s.n;
 import com.tencent.mm.sdk.h.d;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.RegionCodeDecoder;
 import com.tencent.mm.storage.e;
 import com.tencent.mm.storage.k;
@@ -30,24 +32,24 @@ import junit.framework.Assert;
 
 public final class f
 {
-  public static k a(k paramk, adi paramadi)
+  public static k a(k paramk, aeb paramaeb)
   {
-    paramk.setUsername(com.tencent.mm.platformtools.n.a(jhX));
-    paramk.bH(com.tencent.mm.platformtools.n.a(jhX));
-    paramk.bI(com.tencent.mm.platformtools.n.a(jhX));
-    paramk.bJ(com.tencent.mm.platformtools.n.a(jhJ));
-    paramk.aZ(bLM);
-    paramk.bF(com.tencent.mm.platformtools.n.a(jAj));
-    paramk.bM(com.tencent.mm.platformtools.n.a(jAk));
-    paramk.bL(com.tencent.mm.platformtools.n.a(jhJ));
-    paramk.bb(jhl);
-    paramk.bd(bLQ);
-    paramk.bW(RegionCodeDecoder.M(bLV, bLN, bLO));
-    paramk.bQ(bLP);
+    paramk.setUsername(m.a(jGd));
+    paramk.bC(m.a(jGd));
+    paramk.bD(m.a(jGd));
+    paramk.bE(m.a(jFO));
+    paramk.bp(bFg);
+    paramk.bA(m.a(jYW));
+    paramk.bH(m.a(jYX));
+    paramk.bG(m.a(jFO));
+    paramk.bs(jFk);
+    paramk.bu(bFk);
+    paramk.bV(RegionCodeDecoder.O(bFp, bFh, bFi));
+    paramk.bP(bFj);
     return paramk;
   }
   
-  public static String a(List paramList, int paramInt)
+  public static String a(List<String> paramList, int paramInt)
   {
     if ((paramList == null) || (paramList.size() == 0)) {
       localObject2 = "";
@@ -64,14 +66,14 @@ public final class f
     Object localObject2 = (String)paramList.get(i);
     if (((String)localObject2).length() > 0)
     {
-      localObject2 = ah.tD().rq().Ep((String)localObject2);
-      localObject2 = (String)localObject1 + ((k)localObject2).qz();
+      localObject2 = ah.tE().rr().GD((String)localObject2);
+      localObject2 = (String)localObject1 + ((k)localObject2).pc();
       if ((i == paramInt - 1) && (i < paramList.size())) {
         return (String)localObject2 + "...";
       }
       localObject1 = localObject2;
       if (i < paramList.size() - 1) {
-        localObject1 = (String)localObject2 + y.getContext().getString(2131428879);
+        localObject1 = (String)localObject2 + aa.getContext().getString(2131231626);
       }
     }
     for (;;)
@@ -84,18 +86,18 @@ public final class f
   public static void a(String paramString, e parame, boolean paramBoolean)
   {
     int i = 1;
-    parame.gM(paramBoolean);
-    ah.tD().rw().a(parame, new String[0]);
-    parame = h.sc();
-    adq localadq = new adq();
-    jhT = paramString;
-    eiB = parame;
-    jAq = 1;
+    parame.hm(paramBoolean);
+    ah.tE().ry().a(parame, new String[0]);
+    parame = h.se();
+    aej localaej = new aej();
+    jFY = paramString;
+    emC = parame;
+    jZd = 1;
     if (paramBoolean) {}
     for (;;)
     {
-      fUl = i;
-      ah.tD().rp().b(new b.a(49, localadq));
+      gdz = i;
+      ah.tE().rq().b(new b.a(49, localaej));
       return;
       i = 2;
     }
@@ -105,10 +107,10 @@ public final class f
   {
     if (parame == null)
     {
-      u.e("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "updateChatroomMember error! member is null");
+      v.e("MicroMsg.ChatroomMembersLogic", "updateChatroomMember error! member is null");
       return false;
     }
-    boolean bool = ah.tD().rw().b(parame);
+    boolean bool = ah.tE().ry().b(parame);
     String str;
     q localq;
     k localk;
@@ -116,15 +118,15 @@ public final class f
     {
       str = field_chatroomname;
       parame = field_roomowner;
-      u.d("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "update contact chatroom type to %d", new Object[] { Integer.valueOf(1) });
-      localq = ah.tD().rq();
-      localk = localq.Ep(str);
-      if (((int)bvi != 0) && (!ay.kz(parame)) && (!ay.kz(h.sc())))
+      v.d("MicroMsg.ChatroomMembersLogic", "update contact chatroom type to %d", new Object[] { Integer.valueOf(1) });
+      localq = ah.tE().rr();
+      localk = localq.GD(str);
+      if (((int)bjS != 0) && (!be.kf(parame)) && (!be.kf(h.se())))
       {
-        if (!parame.equals(h.sc())) {
+        if (!parame.equals(h.se())) {
           break label121;
         }
-        localk.cf(1);
+        localk.cz(1);
       }
     }
     for (;;)
@@ -132,51 +134,29 @@ public final class f
       localq.a(str, localk);
       return bool;
       label121:
-      localk.cf(0);
+      localk.cz(0);
     }
   }
   
-  public static boolean a(String paramString, jm paramjm)
+  public static boolean a(String paramString, ac paramac)
   {
-    if ((!paramString.toLowerCase().endsWith("@chatroom")) || (iWZ == 0))
-    {
-      u.e("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "DelChatroomMember: room:[" + paramString + "] listCnt:" + iWZ);
-      return false;
-    }
-    com.tencent.mm.storage.f localf = ah.tD().rw();
-    paramString = localf.DT(paramString);
-    List localList = e.DS(field_memberlist);
-    u.d("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "DelChatroomMember before " + localList.size());
-    paramjm = iXa.iterator();
-    while (paramjm.hasNext()) {
-      localList.remove(com.tencent.mm.platformtools.n.a(nextjhX));
-    }
-    u.d("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "DelChatroomMember after " + localList.size());
-    bsfield_displayname = k(localList);
-    boolean bool = localf.b(paramString);
-    u.d("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "delChatroomMember " + bool);
-    return bool;
-  }
-  
-  public static boolean a(String paramString, z paramz)
-  {
-    if ((!paramString.toLowerCase().endsWith("@chatroom")) || (iWZ == 0)) {
-      u.e("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "AddChatroomMember: room:[" + paramString + "] listCnt:" + iWZ);
+    if ((!paramString.toLowerCase().endsWith("@chatroom")) || (juD == 0)) {
+      v.e("MicroMsg.ChatroomMembersLogic", "AddChatroomMember: room:[" + paramString + "] listCnt:" + juD);
     }
     ArrayList localArrayList;
     do
     {
       return false;
       localArrayList = new ArrayList();
-      q localq = ah.tD().rq();
+      q localq = ah.tE().rr();
       int i = 0;
-      while (i < iWZ)
+      while (i < juD)
       {
-        Object localObject = com.tencent.mm.platformtools.n.a(iXa.get(i)).jhX);
-        if (iXa.get(i)).jAi == 0)
+        Object localObject = m.a(juE.get(i)).jGd);
+        if (juE.get(i)).jYV == 0)
         {
-          if (ay.kz((String)localObject)) {
-            u.e("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "this member name is null! chatRoomName : %s", new Object[] { paramString });
+          if (be.kf((String)localObject)) {
+            v.e("MicroMsg.ChatroomMembersLogic", "this member name is null! chatRoomName : %s", new Object[] { paramString });
           }
         }
         else
@@ -184,17 +164,17 @@ public final class f
           i += 1;
           continue;
         }
-        localObject = localq.Ep((String)localObject);
-        if ((int)bvi != 0)
+        localObject = localq.GD((String)localObject);
+        if ((int)bjS != 0)
         {
-          ((k)localObject).pZ();
+          ((k)localObject).ox();
           localq.a(field_username, (k)localObject);
         }
         for (;;)
         {
           localArrayList.add(field_username);
           break;
-          localObject = a((k)localObject, (adi)iXa.get(i));
+          localObject = a((k)localObject, (aeb)juE.get(i));
           localq.M((k)localObject);
         }
       }
@@ -202,52 +182,74 @@ public final class f
     return a(paramString, localArrayList, null);
   }
   
-  public static boolean a(String paramString1, String paramString2, hi paramhi, String paramString3, com.tencent.mm.f.a.a.a parama, com.tencent.mm.sdk.c.b paramb)
+  public static boolean a(String paramString, jx paramjx)
   {
-    if (((!paramString1.toLowerCase().endsWith("@chatroom")) && (!paramString1.toLowerCase().endsWith("@groupcard")) && (!paramString1.toLowerCase().endsWith("@talkroom"))) || (iWZ == 0))
+    if ((!paramString.toLowerCase().endsWith("@chatroom")) || (juD == 0))
     {
-      u.e("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "SyncAddChatroomMember: room:[" + paramString1 + "] listCnt:" + iWZ);
+      v.e("MicroMsg.ChatroomMembersLogic", "DelChatroomMember: room:[" + paramString + "] listCnt:" + juD);
       return false;
     }
-    q localq = ah.tD().rq();
-    e locale = ah.tD().rw().DT(paramString1);
+    com.tencent.mm.storage.f localf = ah.tE().ry();
+    paramString = localf.Gi(paramString);
+    List localList = e.Gh(field_memberlist);
+    v.d("MicroMsg.ChatroomMembersLogic", "DelChatroomMember before " + localList.size());
+    paramjx = juE.iterator();
+    while (paramjx.hasNext()) {
+      localList.remove(m.a(nextjGd));
+    }
+    v.d("MicroMsg.ChatroomMembersLogic", "DelChatroomMember after " + localList.size());
+    bBfield_displayname = o(localList);
+    boolean bool = localf.b(paramString);
+    v.d("MicroMsg.ChatroomMembersLogic", "delChatroomMember " + bool);
+    return bool;
+  }
+  
+  public static boolean a(String paramString1, String paramString2, hn paramhn, String paramString3, com.tencent.mm.g.a.a.a parama, com.tencent.mm.sdk.c.b paramb)
+  {
+    if (((!paramString1.toLowerCase().endsWith("@chatroom")) && (!paramString1.toLowerCase().endsWith("@groupcard")) && (!paramString1.toLowerCase().endsWith("@talkroom"))) || (juD == 0))
+    {
+      v.e("MicroMsg.ChatroomMembersLogic", "SyncAddChatroomMember: room:[" + paramString1 + "] listCnt:" + juD);
+      return false;
+    }
+    q localq = ah.tE().rr();
+    e locale = ah.tE().ry().Gi(paramString1);
     if (locale != null) {
-      aCp = locale.aWj();
+      aoI = locale.bbw();
     }
     ArrayList localArrayList = new ArrayList();
-    u.d("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "SyncAddChatroomMember: room:[" + paramString1 + "] memCnt:" + iWZ);
+    v.d("MicroMsg.ChatroomMembersLogic", "SyncAddChatroomMember: room:[" + paramString1 + "] memCnt:" + juD);
     boolean bool1 = false;
     int i = 0;
-    while (i < iWZ)
+    while (i < juD)
     {
-      hj localhj = (hj)jfK.get(i);
-      k localk = localq.Ep(eiB);
+      ho localho = (ho)jDC.get(i);
+      k localk = localq.GD(emC);
       if (localk == null)
       {
-        u.e("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "SyncAddChatroomMember memberlist username is null");
+        v.e("MicroMsg.ChatroomMembersLogic", "SyncAddChatroomMember memberlist username is null");
         i += 1;
       }
       else
       {
-        com.tencent.mm.f.a.a.b localb = new com.tencent.mm.f.a.a.b();
-        ajh = eiB;
-        if (jfL == 0)
+        com.tencent.mm.g.a.a.b localb = new com.tencent.mm.g.a.a.b();
+        UX = emC;
+        if (jDD == 0)
         {
-          bpe = jfM;
-          bpf = jfP;
-          if (!ay.kz(jfO))
+          bdd = jDE;
+          bde = jDH;
+          if (!be.kf(jDG))
           {
-            com.tencent.mm.q.h localh = com.tencent.mm.q.n.vs().gd(eiB);
+            com.tencent.mm.s.h localh = n.vu().gq(emC);
             localObject = localh;
             if (localh == null)
             {
-              localObject = new com.tencent.mm.q.h();
-              username = eiB;
+              localObject = new com.tencent.mm.s.h();
+              username = emC;
             }
-            bEy = jfN;
-            bEx = jfO;
-            aSt = 3;
-            if (ay.kz(jfN)) {
+            bxJ = jDF;
+            bxI = jDG;
+            aFc = 3;
+            if (be.kf(jDF)) {
               break label499;
             }
           }
@@ -255,25 +257,25 @@ public final class f
         label499:
         for (boolean bool2 = true;; bool2 = false)
         {
-          ((com.tencent.mm.q.h)localObject).aK(bool2);
-          com.tencent.mm.q.n.vs().a((com.tencent.mm.q.h)localObject);
+          ((com.tencent.mm.s.h)localObject).ap(bool2);
+          n.vu().a((com.tencent.mm.s.h)localObject);
           if (locale != null)
           {
-            localObject = locale.DQ(eiB);
+            localObject = locale.Gf(emC);
             if (localObject != null)
             {
-              bpe = bpe;
-              bpf = bpf;
+              bdd = bdd;
+              bde = bde;
             }
           }
-          bpa.add(localb);
-          if ((int)bvi == 0)
+          bcZ.add(localb);
+          if ((int)bjS == 0)
           {
-            localk.setUsername(eiB);
-            if (iVW != null) {
-              localk.bH(iVW);
+            localk.setUsername(emC);
+            if (jtx != null) {
+              localk.bC(jtx);
             }
-            localk.pZ();
+            localk.ox();
             localq.M(localk);
             bool1 = true;
           }
@@ -282,11 +284,11 @@ public final class f
         }
       }
     }
-    u.i("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "summertt SyncAddChatroomMember listUsernames size: " + localArrayList.size() + " event: " + paramb + " publish: " + bool1);
+    v.i("MicroMsg.ChatroomMembersLogic", "summertt SyncAddChatroomMember listUsernames size: " + localArrayList.size() + " event: " + paramb + " publish: " + bool1);
     if (bool1) {
-      com.tencent.mm.sdk.c.a.jUF.j(paramb);
+      com.tencent.mm.sdk.c.a.kug.y(paramb);
     }
-    Object localObject = ah.tD().rw().DT(paramString1);
+    Object localObject = ah.tE().ry().Gi(paramString1);
     paramb = (com.tencent.mm.sdk.c.b)localObject;
     if (localObject == null) {
       paramb = new e();
@@ -294,35 +296,35 @@ public final class f
     long l = System.currentTimeMillis();
     field_chatroomname = paramString1;
     field_roomowner = paramString2;
-    paramString2 = paramb.bs(localArrayList);
-    field_displayname = k(localArrayList);
-    if (jfL != 0) {}
+    paramString2 = paramb.bB(localArrayList);
+    field_displayname = o(localArrayList);
+    if (jDD != 0) {}
     for (bool1 = true;; bool1 = false)
     {
       paramString2.a(paramString3, parama, bool1);
       bool1 = a(paramb);
-      u.d("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "syncAddChatroomMember ret : %s , during : %s", new Object[] { Boolean.valueOf(bool1), Long.valueOf(System.currentTimeMillis() - l) });
-      if (paramb.aWk())
+      v.d("MicroMsg.ChatroomMembersLogic", "syncAddChatroomMember ret : %s , during : %s", new Object[] { Boolean.valueOf(bool1), Long.valueOf(System.currentTimeMillis() - l) });
+      if (paramb.bbx())
       {
-        u.i("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "syncAddChatroomMember OldVer:%d", new Object[] { Integer.valueOf(paramb.aWj()) });
-        paramString2 = new x();
-        atg.username = paramString1;
-        com.tencent.mm.sdk.c.a.jUF.j(paramString2);
+        v.i("MicroMsg.ChatroomMembersLogic", "syncAddChatroomMember OldVer:%d", new Object[] { Integer.valueOf(paramb.bbw()) });
+        paramString2 = new z();
+        aeQ.username = paramString1;
+        com.tencent.mm.sdk.c.a.kug.y(paramString2);
       }
       return bool1;
     }
   }
   
-  public static boolean a(String paramString1, ArrayList paramArrayList, String paramString2)
+  public static boolean a(String paramString1, ArrayList<String> paramArrayList, String paramString2)
   {
     int i = 0;
     int k = 0;
-    com.tencent.mm.storage.f localf = ah.tD().rw();
-    e locale = localf.DU(paramString1);
+    com.tencent.mm.storage.f localf = ah.tE().ry();
+    e locale = localf.Gj(paramString1);
     if (paramString1.endsWith("@chatroom")) {}
     LinkedList localLinkedList;
     int j;
-    for (paramString1 = dK(paramString1);; paramString1 = new LinkedList())
+    for (paramString1 = dT(paramString1);; paramString1 = new LinkedList())
     {
       localLinkedList = new LinkedList();
       if (paramString1 == null) {
@@ -346,10 +348,10 @@ public final class f
       }
       j += 1;
     }
-    if (!ay.kz(paramString2)) {
+    if (!be.kf(paramString2)) {
       field_roomowner = paramString2;
     }
-    bsfield_displayname = k(localLinkedList);
+    bBfield_displayname = o(localLinkedList);
     return localf.b(locale);
     label181:
     while (i < paramArrayList.size())
@@ -357,51 +359,51 @@ public final class f
       localLinkedList.add(paramArrayList.get(i));
       i += 1;
     }
-    if (!ay.kz(paramString2)) {
+    if (!be.kf(paramString2)) {
       field_roomowner = paramString2;
     }
-    bsfield_displayname = k(localLinkedList);
+    bBfield_displayname = o(localLinkedList);
     field_roomowner = paramString2;
     boolean bool = localf.b(locale);
-    u.d("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "insertMembersByChatRoomName " + bool);
+    v.d("MicroMsg.ChatroomMembersLogic", "insertMembersByChatRoomName " + bool);
     return bool;
   }
   
-  public static boolean b(String paramString, Map paramMap)
+  public static boolean a(String paramString, Map<String, String> paramMap)
   {
-    paramString = ah.tD().rw().DT(paramString);
+    paramString = ah.tE().ry().Gi(paramString);
     if (paramString == null) {
       return false;
     }
-    Iterator localIterator = paramString.ws().iterator();
+    Iterator localIterator = paramString.wu().iterator();
     while (localIterator.hasNext())
     {
       String str = (String)localIterator.next();
-      paramMap.put(str, paramString.dY(str));
+      paramMap.put(str, paramString.ej(str));
     }
     return true;
   }
   
-  public static boolean dG(String paramString)
+  public static boolean dP(String paramString)
   {
-    Object localObject = ah.tD().rw();
+    Object localObject = ah.tE().ry();
     boolean bool;
     if (paramString.length() > 0)
     {
       bool = true;
       Assert.assertTrue(bool);
-      paramString = "select roomowner from chatroom where chatroomname='" + ay.kx(paramString) + "'";
-      paramString = aoX.rawQuery(paramString, null);
+      paramString = "select roomowner from chatroom where chatroomname='" + be.lh(paramString) + "'";
+      paramString = bkP.rawQuery(paramString, null);
       if (paramString != null) {
         break label107;
       }
-      u.e("!44@/B4Tb64lLpIELL9O96QoKG6hYx4y45rzIZBjRMoLQqc=", "getChatroomOwner fail, cursor is null");
+      v.e("MicroMsg.ChatroomStorage", "getChatroomOwner fail, cursor is null");
       paramString = null;
     }
     for (;;)
     {
-      localObject = h.sc();
-      if ((ay.kz(paramString)) || (ay.kz((String)localObject)) || (!paramString.equals(localObject))) {
+      localObject = h.se();
+      if ((be.kf(paramString)) || (be.kf((String)localObject)) || (!paramString.equals(localObject))) {
         break label170;
       }
       return true;
@@ -410,7 +412,7 @@ public final class f
       label107:
       if (paramString.getCount() == 0)
       {
-        u.e("!44@/B4Tb64lLpIELL9O96QoKG6hYx4y45rzIZBjRMoLQqc=", "getChatroomOwner fail, cursor is null");
+        v.e("MicroMsg.ChatroomStorage", "getChatroomOwner fail, cursor is null");
         paramString.close();
         paramString = null;
       }
@@ -418,7 +420,7 @@ public final class f
       {
         paramString.moveToFirst();
         localObject = new e();
-        ((e)localObject).c(paramString);
+        ((e)localObject).b(paramString);
         paramString.close();
         paramString = field_roomowner;
       }
@@ -427,92 +429,92 @@ public final class f
     return false;
   }
   
-  public static boolean dH(String paramString)
+  public static boolean dQ(String paramString)
   {
-    String str = (String)ah.tD().rn().get(2, null);
-    paramString = dK(paramString);
+    String str = (String)ah.tE().ro().get(2, null);
+    paramString = dT(paramString);
     if (paramString == null)
     {
-      u.d("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "getmembsersbychatroomname is null ");
+      v.d("MicroMsg.ChatroomMembersLogic", "getmembsersbychatroomname is null ");
       return false;
     }
     if ((paramString.size() == 0) || (!paramString.contains(str)))
     {
-      u.d("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "getmembsersbychatroomname is list is zero or no contains user  " + paramString.size() + " ");
+      v.d("MicroMsg.ChatroomMembersLogic", "getmembsersbychatroomname is list is zero or no contains user  " + paramString.size() + " ");
       return false;
     }
     return true;
   }
   
-  public static boolean dI(String paramString)
+  public static boolean dR(String paramString)
   {
     if ((paramString == null) || (!paramString.toLowerCase().endsWith("@chatroom"))) {}
     com.tencent.mm.storage.f localf;
     do
     {
       return false;
-      u.d("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "updateFailState chatRoomName %s", new Object[] { paramString });
-      localf = ah.tD().rw();
-      paramString = localf.DT(paramString);
+      v.d("MicroMsg.ChatroomMembersLogic", "updateFailState chatRoomName %s", new Object[] { paramString });
+      localf = ah.tE().ry();
+      paramString = localf.Gi(paramString);
     } while (paramString == null);
     field_roomflag = 1;
     return localf.b(paramString);
   }
   
-  public static boolean dJ(String paramString)
+  public static boolean dS(String paramString)
   {
-    return ah.tD().rw().DX(paramString);
+    return ah.tE().ry().Gm(paramString);
   }
   
-  public static List dK(String paramString)
+  public static List<String> dT(String paramString)
   {
     if (paramString == null)
     {
-      u.e("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "chatroomName is null");
+      v.e("MicroMsg.ChatroomMembersLogic", "chatroomName is null");
       return null;
     }
     if (!paramString.toLowerCase().endsWith("@chatroom"))
     {
-      u.e("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "getMembersByChatRoomName: this is not room:[" + paramString + "]");
+      v.e("MicroMsg.ChatroomMembersLogic", "getMembersByChatRoomName: this is not room:[" + paramString + "]");
       return null;
     }
-    return ah.tD().rw().DW(paramString);
+    return ah.tE().ry().Gl(paramString);
   }
   
-  public static List dL(String paramString)
+  public static List<String> dU(String paramString)
   {
     if (!paramString.toLowerCase().endsWith("@chatroom"))
     {
-      u.e("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "getMembersByChatRoomName: room:[" + paramString + "]");
+      v.e("MicroMsg.ChatroomMembersLogic", "getMembersByChatRoomName: room:[" + paramString + "]");
       return null;
     }
-    return ah.tD().rw().DW(paramString);
+    return ah.tE().ry().Gl(paramString);
   }
   
-  public static int dM(String paramString)
+  public static int dV(String paramString)
   {
-    List localList = dK(paramString);
+    List localList = dT(paramString);
     if (localList == null)
     {
-      u.e("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "getMembersByChatRoomName: get room:[" + paramString + "] members count fail");
+      v.e("MicroMsg.ChatroomMembersLogic", "getMembersByChatRoomName: get room:[" + paramString + "] members count fail");
       return 0;
     }
     return localList.size();
   }
   
-  public static List dN(String paramString)
+  public static List<String> dW(String paramString)
   {
     int i = 0;
     if (!paramString.toLowerCase().endsWith("@chatroom"))
     {
-      u.e("!44@/B4Tb64lLpIELL9O96QoKOIOdFJzm+vxoPdj8s3NANo=", "getOtherMembersByChatRoomName: room:[" + paramString + "]");
+      v.e("MicroMsg.ChatroomMembersLogic", "getOtherMembersByChatRoomName: room:[" + paramString + "]");
       return null;
     }
-    paramString = dK(paramString);
+    paramString = dT(paramString);
     if ((paramString == null) || (paramString.size() <= 0)) {
       return null;
     }
-    String str = (String)ah.tD().rn().get(2, null);
+    String str = (String)ah.tE().ro().get(2, null);
     boolean bool;
     if ((str != null) && (str.length() > 0))
     {
@@ -541,18 +543,18 @@ public final class f
     return paramString;
   }
   
-  public static String dO(String paramString)
+  public static String dX(String paramString)
   {
-    paramString = ah.tD().rw().DT(paramString);
+    paramString = ah.tE().ry().Gi(paramString);
     if (paramString == null) {
       return null;
     }
     return field_chatroomnotice;
   }
   
-  public static boolean dP(String paramString)
+  public static boolean dY(String paramString)
   {
-    paramString = ah.tD().rw().DT(paramString);
+    paramString = ah.tE().ry().Gi(paramString);
     if (paramString == null) {}
     while (field_chatroomnoticeOldVersion >= field_chatroomnoticeNewVersion) {
       return false;
@@ -560,7 +562,7 @@ public final class f
     return true;
   }
   
-  public static String k(List paramList)
+  public static String o(List<String> paramList)
   {
     return a(paramList, -1);
   }

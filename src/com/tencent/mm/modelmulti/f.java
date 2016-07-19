@@ -3,64 +3,64 @@ package com.tencent.mm.modelmulti;
 import com.tencent.mm.compatible.d.p;
 import com.tencent.mm.network.e;
 import com.tencent.mm.network.o;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.protocal.b;
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.u.a;
-import com.tencent.mm.protocal.u.b;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.h;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.platformtools.s;
+import com.tencent.mm.protocal.c;
+import com.tencent.mm.protocal.k.c;
+import com.tencent.mm.protocal.x.a;
+import com.tencent.mm.protocal.x.b;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.h;
 
-final class f
-  extends com.tencent.mm.r.j
+public final class f
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private d anM;
-  private o bGh;
-  private long bUN = -1L;
-  private byte[] bVi;
+  private byte[] bOJ;
+  public long bOo = -1L;
+  private d bkT;
+  private o bzs;
   private int uin = 0;
   
   public f(long paramLong, byte[] paramArrayOfByte)
   {
-    bUN = paramLong;
-    bVi = paramArrayOfByte;
+    bOo = paramLong;
+    bOJ = paramArrayOfByte;
   }
   
   public f(long paramLong, byte[] paramArrayOfByte, int paramInt)
   {
-    bUN = paramLong;
-    bVi = paramArrayOfByte;
+    bOo = paramLong;
+    bOJ = paramArrayOfByte;
     uin = paramInt;
   }
   
   public final int a(e parame, d paramd)
   {
-    if (t.J(bVi))
+    if (s.P(bOJ))
     {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvhmsI+8x2U2NWfALp1Hk+2M=", "dkpush %s", new Object[] { "get keyBuf failed" });
+      v.e("MicroMsg.NetSceneNotifyData", "dkpush %s", new Object[] { "get keyBuf failed" });
       return -1;
     }
     if (uin == 0) {
-      bGh = new a();
+      bzs = new a();
     }
     for (;;)
     {
-      u.i("!44@/B4Tb64lLpK+IBX8XDgnvhmsI+8x2U2NWfALp1Hk+2M=", "doScene now:%d buf:%s", new Object[] { Long.valueOf(bUN), t.I(bVi) });
-      bGh.vA()).bWJ = bUN;
-      bGh.vA()).ayo = bVi;
-      anM = paramd;
-      return a(parame, bGh, this);
-      bGh = new b();
-      bGh).uin = uin;
+      v.i("MicroMsg.NetSceneNotifyData", "doScene now:%d buf:%s", new Object[] { Long.valueOf(bOo), s.O(bOJ) });
+      bzs.vC()).bQm = bOo;
+      bzs.vC()).akq = bOJ;
+      bkT = paramd;
+      return a(parame, bzs, this);
+      bzs = new b();
+      bzs).uin = uin;
     }
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    u.i("!44@/B4Tb64lLpK+IBX8XDgnvhmsI+8x2U2NWfALp1Hk+2M=", "onGYNetEnd [%d,%d] %s", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString });
-    anM.a(paramInt2, paramInt3, paramString, this);
+    v.i("MicroMsg.NetSceneNotifyData", "onGYNetEnd [%d,%d] %s", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString });
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()
@@ -71,8 +71,8 @@ final class f
   public static final class a
     extends h
   {
-    private final u.a bVj = new u.a();
-    private final u.b bVk = new u.b();
+    private final x.a bOK = new x.a();
+    private final x.b bOL = new x.b();
     
     public final int getType()
     {
@@ -88,8 +88,8 @@ final class f
   public static final class b
     implements o
   {
-    private final u.a bVj = new u.a();
-    private final u.b bVk = new u.b();
+    private final x.a bOK = new x.a();
+    private final x.b bOL = new x.b();
     int uin;
     
     public final int getType()
@@ -102,21 +102,21 @@ final class f
       return null;
     }
     
-    public final h.c vA()
+    public final k.c vC()
     {
-      bVj.iUH = p.ox();
-      bVj.iUG = b.bwR;
-      bVj.iUF = b.iUf;
-      bVj.ba(uin);
-      return bVj;
+      bOK.jse = p.mN();
+      bOK.jsd = c.boS;
+      bOK.jsc = c.jry;
+      bOK.bq(uin);
+      return bOK;
     }
     
-    public final boolean vB()
+    public final boolean vD()
     {
       return false;
     }
     
-    public final int vx()
+    public final int vz()
     {
       return 0;
     }

@@ -10,8 +10,8 @@ final class SnsStrangerCommentDetailUI$9
   
   public final void onClick(View paramView)
   {
-    if ((paramView.getTag() instanceof ag)) {
-      SnsStrangerCommentDetailUI.f(hiQ).a(paramView, 2, null);
+    if ((paramView.getTag() instanceof ak)) {
+      SnsStrangerCommentDetailUI.f(hxF).a(paramView, 2, null);
     }
   }
 }

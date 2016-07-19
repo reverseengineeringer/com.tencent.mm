@@ -1,9 +1,9 @@
 package com.tencent.mm.plugin.report.service;
 
 import android.os.Process;
-import com.tencent.mm.protocal.c;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.protocal.d;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class KVCommCrossProcessReceiver$1
   implements Runnable
@@ -12,10 +12,10 @@ final class KVCommCrossProcessReceiver$1
   
   public final void run()
   {
-    if (c.cX(y.getContext()))
+    if (d.cV(aa.getContext()))
     {
-      u.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "KVCommCrossProcessReceiver shut_down_weixin need to kill process");
-      u.appenderFlushSync();
+      v.e("MicroMsg.ReportManagerKvCheck", "KVCommCrossProcessReceiver shut_down_weixin need to kill process");
+      v.appenderFlushSync();
       KVReportJni.KVReportJava2C.onExitAppOrAppCrash();
       Process.killProcess(Process.myPid());
     }

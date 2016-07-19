@@ -33,5 +33,5 @@
 .method public abstract a(Ljava/lang/Object;Landroid/graphics/Canvas;)Z
 .end method
 
-.method public abstract l(Landroid/content/Context;)Ljava/lang/Object;
+.method public abstract j(Landroid/content/Context;)Ljava/lang/Object;
 .end method

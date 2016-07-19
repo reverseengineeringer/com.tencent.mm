@@ -9,7 +9,7 @@ final class SnsLabelUI$1$1
   
   public final void run()
   {
-    SnsLabelUI.g(hfC.hfA).qs(hfB);
+    SnsLabelUI.g(hut.hur).sk(hus);
   }
 }
 

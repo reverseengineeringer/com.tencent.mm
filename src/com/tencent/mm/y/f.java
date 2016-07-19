@@ -1,56 +1,30 @@
 package com.tencent.mm.y;
 
+import com.tencent.mm.model.s;
+import com.tencent.mm.sdk.platformtools.v;
+
 public final class f
+  extends s
 {
-  public static e a(e parame)
+  public final boolean dd(int paramInt)
   {
-    e locale;
-    if (parame == null) {
-      locale = null;
-    }
-    do
+    if ((paramInt == 0) || (paramInt <= 604372991)) {}
+    for (boolean bool = true;; bool = false)
     {
-      return locale;
-      locale = parame;
-    } while (!parame.zf());
-    return af.zl().df(bCV);
+      v.i("MicroMsg.EmojiInfoDataTransfer", "in needTransfer, sVer = %d, result = %b", new Object[] { Integer.valueOf(paramInt), Boolean.valueOf(bool) });
+      return bool;
+    }
   }
   
-  public static boolean b(e parame)
+  public final String getTag()
   {
-    if (parame == null) {}
-    int j;
-    int i;
-    long l;
-    do
-    {
-      return false;
-      j = offset;
-      i = bsm;
-      l = bCQ;
-      if (parame.zf())
-      {
-        parame = af.zl().df(bCV);
-        j = offset;
-        i = bsm;
-        l = bCQ;
-      }
-      if (i == 0) {
-        return true;
-      }
-    } while (((j != i) || (i == 0)) && (l == 0L));
-    return true;
+    return "MicroMsg.EmojiInfoDataTransfer";
   }
   
-  public static String c(e parame)
+  public final void transfer(int paramInt)
   {
-    if (parame == null) {
-      return "";
-    }
-    if (parame.zf()) {
-      return zldfbCV).bCR;
-    }
-    return bCR;
+    v.i("MicroMsg.EmojiInfoDataTransfer", "start transfer EmojiInfoStorage and EmojiGroupInfoStorage");
+    v.i("MicroMsg.EmojiInfoDataTransfer", "end transfer EmojiInfoStorage and EmojiGroupInfoStorage");
   }
 }
 

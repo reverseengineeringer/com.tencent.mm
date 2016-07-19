@@ -1,18 +1,18 @@
 package com.tencent.mm.ui;
 
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class LauncherUIBottomTabView$2
-  extends aa
+  extends ac
 {
   LauncherUIBottomTabView$2(LauncherUIBottomTabView paramLauncherUIBottomTabView) {}
   
   public final void handleMessage(Message paramMessage)
   {
-    u.v("!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ=", "onMainTabClick");
-    LauncherUIBottomTabView.d(kog).gr(0);
+    v.v("MicroMsg.LauncherUITabView", "onMainTabClick");
+    LauncherUIBottomTabView.d(kNm).ho(0);
   }
 }
 

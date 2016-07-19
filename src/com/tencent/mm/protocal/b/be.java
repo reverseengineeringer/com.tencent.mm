@@ -1,46 +1,51 @@
 package com.tencent.mm.protocal.b;
 
 public final class be
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public String ehX;
-  public int iYm;
-  public String iYn;
+  public String jvE;
+  public String jvF;
+  public String jvG;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (ehX != null) {
-        paramVarArgs.d(1, ehX);
+      if (jvE != null) {
+        paramVarArgs.e(1, jvE);
       }
-      paramVarArgs.ci(2, iYm);
-      if (iYn != null) {
-        paramVarArgs.d(3, iYn);
+      if (jvF != null) {
+        paramVarArgs.e(2, jvF);
+      }
+      if (jvG != null) {
+        paramVarArgs.e(3, jvG);
       }
       return 0;
     }
     if (paramInt == 1) {
-      if (ehX == null) {
-        break label273;
+      if (jvE == null) {
+        break label289;
       }
     }
-    label273:
-    for (paramInt = a.a.a.b.b.a.e(1, ehX) + 0;; paramInt = 0)
+    label289:
+    for (int i = a.a.a.b.b.a.f(1, jvE) + 0;; i = 0)
     {
-      int i = paramInt + a.a.a.a.cg(2, iYm);
       paramInt = i;
-      if (iYn != null) {
-        paramInt = i + a.a.a.b.b.a.e(3, iYn);
+      if (jvF != null) {
+        paramInt = i + a.a.a.b.b.a.f(2, jvF);
       }
-      return paramInt;
+      i = paramInt;
+      if (jvG != null) {
+        i = paramInt + a.a.a.b.b.a.f(3, jvG);
+      }
+      return i;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
         break;
@@ -54,13 +59,13 @@ public final class be
         default: 
           return -1;
         case 1: 
-          ehX = maU.readString();
+          jvE = mMY.readString();
           return 0;
         case 2: 
-          iYm = maU.jC();
+          jvF = mMY.readString();
           return 0;
         }
-        iYn = maU.readString();
+        jvG = mMY.readString();
         return 0;
       }
       return -1;

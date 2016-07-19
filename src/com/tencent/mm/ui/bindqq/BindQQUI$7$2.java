@@ -3,7 +3,7 @@ package com.tencent.mm.ui.bindqq;
 import android.view.MenuItem;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelsimple.h;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.n.d;
 
@@ -19,11 +19,11 @@ final class BindQQUI$7$2
     default: 
       return;
     }
-    paramMenuItem = kPw.kPv;
-    h localh = new h(h.caQ);
-    ah.tE().d(localh);
-    paramMenuItem.getString(2131430877);
-    coc = g.a(paramMenuItem, paramMenuItem.getString(2131428233), true, new BindQQUI.2(paramMenuItem));
+    paramMenuItem = loM.loL;
+    h localh = new h(h.bUz);
+    ah.tF().a(localh, 0);
+    paramMenuItem.getString(2131231028);
+    cjq = g.a(paramMenuItem, paramMenuItem.getString(2131235027), true, new BindQQUI.2(paramMenuItem));
   }
 }
 

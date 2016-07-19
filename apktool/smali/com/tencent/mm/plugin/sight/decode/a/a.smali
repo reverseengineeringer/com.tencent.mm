@@ -4,65 +4,65 @@
 
 
 # virtual methods
-.method public abstract P(Ljava/lang/String;Z)V
+.method public abstract T(Landroid/view/View;)V
 .end method
 
-.method public abstract avF()V
+.method public abstract V(Ljava/lang/String;Z)V
 .end method
 
-.method public abstract avG()Z
+.method public abstract a(Lcom/tencent/mm/plugin/sight/decode/a/b$e;)V
 .end method
 
-.method public abstract bc(II)V
+.method public abstract a(Lcom/tencent/mm/plugin/sight/decode/a/b$f;)V
+.end method
+
+.method public abstract aF(Ljava/lang/Object;)V
+.end method
+
+.method public abstract axW()Ljava/lang/String;
+.end method
+
+.method public abstract axX()V
+.end method
+
+.method public abstract axY()Ljava/lang/Object;
+.end method
+
+.method public abstract axZ()Landroid/content/Context;
+.end method
+
+.method public abstract aya()Z
+.end method
+
+.method public abstract ayb()V
+.end method
+
+.method public abstract ayc()V
+.end method
+
+.method public abstract bg(II)V
+.end method
+
+.method public abstract c(Landroid/widget/TextView;)V
 .end method
 
 .method public abstract clear()V
 .end method
 
-.method public abstract eD(Z)V
+.method public abstract er(Z)V
 .end method
 
-.method public abstract getTagObject()Ljava/lang/Object;
+.method public abstract es(Z)V
 .end method
 
-.method public abstract getUIContext()Landroid/content/Context;
+.method public abstract fY(I)V
 .end method
 
-.method public abstract getVideoPath()Ljava/lang/String;
+.method public abstract lX(I)V
 .end method
 
-.method public abstract setCanPlay(Z)V
+.method public abstract lY(I)V
 .end method
 
-.method public abstract setDrawableWidth(I)V
-.end method
-
-.method public abstract setForceRecordState(Z)V
-.end method
-
-.method public abstract setMaskID(I)V
-.end method
-
-.method public abstract setOnCompletionListener(Lcom/tencent/mm/plugin/sight/decode/a/b$e;)V
-.end method
-
-.method public abstract setOnDecodeDurationListener(Lcom/tencent/mm/plugin/sight/decode/a/b$f;)V
-.end method
-
-.method public abstract setOnSightCompletionAction(Lcom/tencent/mm/plugin/sight/decode/a/b$g;)V
-.end method
-
-.method public abstract setPosition(I)V
-.end method
-
-.method public abstract setSightInfoView(Landroid/widget/TextView;)V
-.end method
-
-.method public abstract setTagObject(Ljava/lang/Object;)V
-.end method
-
-.method public abstract setThumbBgView(Landroid/view/View;)V
-.end method
-
-.method public abstract setThumbBmp(Landroid/graphics/Bitmap;)V
+.method public abstract o(Landroid/graphics/Bitmap;)V
 .end method

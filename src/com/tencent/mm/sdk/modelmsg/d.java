@@ -9,30 +9,30 @@ public final class d
   public static final class a
     extends a
   {
-    public String bNO;
-    public String bXM;
-    public WXMediaMessage jUS;
+    public String bHk;
+    public String bRs;
+    public WXMediaMessage kuy;
     
     public final int getType()
     {
       return 4;
     }
     
-    public final void l(Bundle paramBundle)
+    public final void n(Bundle paramBundle)
     {
-      Bundle localBundle = WXMediaMessage.a.b(jUS);
-      super.l(localBundle);
-      paramBundle.putString("_wxapi_showmessage_req_lang", bXM);
-      paramBundle.putString("_wxapi_showmessage_req_country", bNO);
+      Bundle localBundle = WXMediaMessage.a.b(kuy);
+      super.n(localBundle);
+      paramBundle.putString("_wxapi_showmessage_req_lang", bRs);
+      paramBundle.putString("_wxapi_showmessage_req_country", bHk);
       paramBundle.putAll(localBundle);
     }
     
-    public final void m(Bundle paramBundle)
+    public final void o(Bundle paramBundle)
     {
-      super.m(paramBundle);
-      bXM = paramBundle.getString("_wxapi_showmessage_req_lang");
-      bNO = paramBundle.getString("_wxapi_showmessage_req_country");
-      jUS = WXMediaMessage.a.J(paramBundle);
+      super.o(paramBundle);
+      bRs = paramBundle.getString("_wxapi_showmessage_req_lang");
+      bHk = paramBundle.getString("_wxapi_showmessage_req_country");
+      kuy = WXMediaMessage.a.P(paramBundle);
     }
   }
   
@@ -43,7 +43,7 @@ public final class d
     
     public b(Bundle paramBundle)
     {
-      m(paramBundle);
+      o(paramBundle);
     }
     
     public final int getType()

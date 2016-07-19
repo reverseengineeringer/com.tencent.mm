@@ -3,7 +3,7 @@ package com.tencent.mm.sdk.modelmsg;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.ByteArrayOutputStream;
 
 public final class WXMediaMessage
@@ -13,7 +13,7 @@ public final class WXMediaMessage
   private static final int MEDIA_TAG_NAME_LENGTH_LIMIT = 64;
   private static final int MESSAGE_ACTION_LENGTH_LIMIT = 2048;
   private static final int MESSAGE_EXT_LENGTH_LIMIT = 2048;
-  private static final String TAG = "!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=";
+  private static final String TAG = "MicroMsg.SDK.WXMediaMessage";
   public static final int THUMB_LENGTH_LIMIT = 32768;
   private static final int TITLE_LENGTH_LIMIT = 512;
   public String description;
@@ -39,42 +39,42 @@ public final class WXMediaMessage
   {
     if ((getType() == 8) && ((thumbData == null) || (thumbData.length == 0)))
     {
-      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, thumbData should not be null when send emoji");
+      v.e("MicroMsg.SDK.WXMediaMessage", "checkArgs fail, thumbData should not be null when send emoji");
       return false;
     }
     if ((thumbData != null) && (thumbData.length > 32768))
     {
-      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, thumbData is invalid");
+      v.e("MicroMsg.SDK.WXMediaMessage", "checkArgs fail, thumbData is invalid");
       return false;
     }
     if ((title != null) && (title.length() > 512))
     {
-      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, title is invalid");
+      v.e("MicroMsg.SDK.WXMediaMessage", "checkArgs fail, title is invalid");
       return false;
     }
     if ((description != null) && (description.length() > 1024))
     {
-      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, description is invalid");
+      v.e("MicroMsg.SDK.WXMediaMessage", "checkArgs fail, description is invalid");
       return false;
     }
     if (mediaObject == null)
     {
-      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, mediaObject is null");
+      v.e("MicroMsg.SDK.WXMediaMessage", "checkArgs fail, mediaObject is null");
       return false;
     }
     if ((mediaTagName != null) && (mediaTagName.length() > 64))
     {
-      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, mediaTagName is too long");
+      v.e("MicroMsg.SDK.WXMediaMessage", "checkArgs fail, mediaTagName is too long");
       return false;
     }
     if ((messageAction != null) && (messageAction.length() > 2048))
     {
-      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, messageAction is too long");
+      v.e("MicroMsg.SDK.WXMediaMessage", "checkArgs fail, messageAction is too long");
       return false;
     }
     if ((messageExt != null) && (messageExt.length() > 2048))
     {
-      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, messageExt is too long");
+      v.e("MicroMsg.SDK.WXMediaMessage", "checkArgs fail, messageExt is too long");
       return false;
     }
     return mediaObject.checkArgs();
@@ -100,13 +100,13 @@ public final class WXMediaMessage
     }
     catch (Exception paramBitmap)
     {
-      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "put thumb failed");
+      v.e("MicroMsg.SDK.WXMediaMessage", "put thumb failed");
     }
   }
   
   public static final class a
   {
-    public static WXMediaMessage J(Bundle paramBundle)
+    public static WXMediaMessage P(Bundle paramBundle)
     {
       WXMediaMessage localWXMediaMessage = new WXMediaMessage();
       sdkVer = paramBundle.getInt("_wxobject_sdkVer");
@@ -118,7 +118,7 @@ public final class WXMediaMessage
       messageExt = paramBundle.getString("_wxobject_message_ext");
       String str = paramBundle.getString("_wxobject_identifier_");
       if ((str == null) || (str.length() == 0)) {
-        u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "pathOldToNew fail, oldPath is null");
+        v.e("MicroMsg.SDK.WXMediaMessage", "pathOldToNew fail, oldPath is null");
       }
       while ((str == null) || (str.length() <= 0))
       {
@@ -133,7 +133,7 @@ public final class WXMediaMessage
       }
       catch (Exception paramBundle)
       {
-        u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "get media object from bundle failed: unknown ident " + str + ", ex = " + paramBundle.getMessage());
+        v.e("MicroMsg.SDK.WXMediaMessage", "get media object from bundle failed: unknown ident " + str + ", ex = " + paramBundle.getMessage());
       }
       return localWXMediaMessage;
     }
@@ -152,7 +152,7 @@ public final class WXMediaMessage
         if ((str != null) && (str.length() != 0)) {
           break label133;
         }
-        u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "pathNewToOld fail, newPath is null");
+        v.e("MicroMsg.SDK.WXMediaMessage", "pathNewToOld fail, newPath is null");
       }
       for (;;)
       {

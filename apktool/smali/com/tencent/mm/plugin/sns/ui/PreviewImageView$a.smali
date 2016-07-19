@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field hac:Landroid/view/View$OnClickListener;
+.field hnu:Landroid/view/View$OnClickListener;
 
 
 # direct methods
@@ -31,7 +31,7 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a$1;-><init>(Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;->hac:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;->hnu:Landroid/view/View$OnClickListener;
 
     .line 261
     return-void
@@ -39,5 +39,5 @@
 
 
 # virtual methods
-.method public abstract lX(I)V
+.method public abstract nm(I)V
 .end method

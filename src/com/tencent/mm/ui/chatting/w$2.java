@@ -1,36 +1,21 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.Context;
-import android.view.MenuItem;
-import android.widget.TextView;
-import com.tencent.mm.h.a;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.model.c;
-import com.tencent.mm.pluginsdk.ui.d.e;
-import com.tencent.mm.storage.k;
-import com.tencent.mm.storage.q;
-import com.tencent.mm.ui.base.n.b;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 final class w$2
-  implements n.b
+  implements DialogInterface.OnClickListener
 {
-  w$2(Context paramContext) {}
+  w$2(dm paramdm) {}
   
-  public final void a(TextView paramTextView, MenuItem paramMenuItem)
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    k localk;
-    if (paramTextView != null)
+    if (lsl != null)
     {
-      localk = ah.tD().rq().Ep(paramMenuItem.getTitle());
-      if ((localk == null) || ((int)bvi <= 0)) {
-        paramTextView.setText(paramMenuItem.getTitle());
-      }
+      paramDialogInterface = lsl;
+      paramInt = dm.a.lCU;
+      paramDialogInterface.bkm();
     }
-    else
-    {
-      return;
-    }
-    paramTextView.setText(e.a(val$context, localk.qy()));
   }
 }
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;->Kr()V
+    value = Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;->Lb()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lxO:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
+.field final synthetic lYD:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 53
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI$1;->lxO:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI$1;->lYD:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 57
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI$1;->lxO:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI$1;->lYD:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
 
-    const v1, 0x7f0b05f9
+    const v1, 0x7f0811fc
 
     const/4 v2, 0x1
 
@@ -54,7 +54,7 @@
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
     .line 58
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI$1;->lxO:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI$1;->lYD:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;->finish()V
 

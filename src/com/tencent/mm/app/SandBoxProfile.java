@@ -1,37 +1,35 @@
 package com.tencent.mm.app;
 
-import com.tencent.mm.booter.c;
-import com.tencent.mm.compatible.loader.h;
+import com.tencent.mm.compatible.loader.e;
 import com.tencent.mm.compatible.util.i;
-import com.tencent.mm.platformtools.r;
+import com.tencent.mm.platformtools.q;
 import com.tencent.mm.protocal.MMProtocalJni;
-import com.tencent.mm.protocal.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.xlog.Xlog;
 
 public final class SandBoxProfile
-  extends h
+  extends e
 {
-  public static final String alg = y.getPackageName() + ":sandbox";
+  public static final String Yf = aa.getPackageName() + ":sandbox";
   
   public final void aQ() {}
   
   public final void onCreate()
   {
     i.b("stlport_shared", SandBoxProfile.class.getClassLoader());
-    c localc = c.an(y.getContext());
+    com.tencent.mm.booter.c localc = com.tencent.mm.booter.c.ak(aa.getContext());
     i.setupBrokenLibraryHandler();
     Xlog.init();
     i.b("MMProtocalJni", SandBoxProfile.class.getClassLoader());
-    MMProtocalJni.setClientPackVersion(b.iUf);
+    MMProtocalJni.setClientPackVersion(com.tencent.mm.protocal.c.jry);
     try
     {
-      localc.cv("SANDBOX");
-      r.cna = ay.a(localc.cw(".com.tencent.mm.debug.test.network.simulate_down_fault"), false);
-      u.i("!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX", "Test.simulateDownFault = " + r.cna);
-      MMApplicationWrapper.a(btM);
+      localc.cA("SANDBOX");
+      q.cif = be.a(localc.cB(".com.tencent.mm.debug.test.network.simulate_down_fault"), false);
+      v.i("MicroMsg.Debugger", "Test.simulateDownFault = " + q.cif);
+      MMApplicationWrapper.initSVGPreload(bhP);
       return;
     }
     catch (Error localError)
@@ -42,7 +40,7 @@ public final class SandBoxProfile
   
   public final String toString()
   {
-    return alg;
+    return Yf;
   }
 }
 

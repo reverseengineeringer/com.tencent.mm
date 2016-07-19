@@ -3,8 +3,8 @@ package com.tencent.mm.ui.base;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import junit.framework.Assert;
 
 final class MMGridPaperGridView$a
@@ -14,26 +14,26 @@ final class MMGridPaperGridView$a
   
   public final int getCount()
   {
-    if ((MMGridPaperGridView.c(kEJ) < 0) || (MMGridPaperGridView.a(kEJ) == null)) {
+    if ((MMGridPaperGridView.c(ldM) < 0) || (MMGridPaperGridView.a(ldM) == null)) {
       return 0;
     }
-    return MMGridPaperGridView.c(kEJ);
+    return MMGridPaperGridView.c(ldM);
   }
   
   public final Object getItem(int paramInt)
   {
-    if (MMGridPaperGridView.a(kEJ) == null) {
+    if (MMGridPaperGridView.a(ldM) == null) {
       return null;
     }
-    return MMGridPaperGridView.a(kEJ).getItem(MMGridPaperGridView.b(kEJ) + paramInt);
+    return MMGridPaperGridView.a(ldM).getItem(MMGridPaperGridView.b(ldM) + paramInt);
   }
   
   public final long getItemId(int paramInt)
   {
-    if (MMGridPaperGridView.a(kEJ) == null) {
+    if (MMGridPaperGridView.a(ldM) == null) {
       return 0L;
     }
-    return MMGridPaperGridView.a(kEJ).getItemId(MMGridPaperGridView.b(kEJ) + paramInt);
+    return MMGridPaperGridView.a(ldM).getItemId(MMGridPaperGridView.b(ldM) + paramInt);
   }
   
   public final int getItemViewType(int paramInt)
@@ -43,17 +43,17 @@ final class MMGridPaperGridView$a
   
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
-    long l = ay.FT();
-    int i = MMGridPaperGridView.d(kEJ);
+    long l = be.Gq();
+    int i = MMGridPaperGridView.d(ldM);
     boolean bool;
     if (paramView == null)
     {
       bool = true;
-      u.v("!44@/B4Tb64lLpJ3ysDJ3BtNKWRcjd4fCZrJmrjyp4tQ6Cg=", "getView:index[%d], pos[%d], converrView is null[%B], parent is [%s], mClearMode[%B]", new Object[] { Integer.valueOf(i), Integer.valueOf(paramInt), Boolean.valueOf(bool), paramViewGroup.toString(), Boolean.valueOf(MMGridPaperGridView.e(kEJ)) });
-      if (MMGridPaperGridView.e(kEJ)) {
+      v.v("MicroMsg.MMGridPaperGridView", "getView:index[%d], pos[%d], converrView is null[%B], parent is [%s], mClearMode[%B]", new Object[] { Integer.valueOf(i), Integer.valueOf(paramInt), Boolean.valueOf(bool), paramViewGroup.toString(), Boolean.valueOf(MMGridPaperGridView.e(ldM)) });
+      if (MMGridPaperGridView.e(ldM)) {
         paramView = null;
       }
-      if (MMGridPaperGridView.a(kEJ) != null) {
+      if (MMGridPaperGridView.a(ldM) != null) {
         break label204;
       }
       paramView = null;
@@ -64,19 +64,19 @@ final class MMGridPaperGridView$a
       bool = true;
       label106:
       Assert.assertTrue(bool);
-      if ((-1 == MMGridPaperGridView.f(kEJ)) || (MMGridPaperGridView.b(kEJ) + paramInt != MMGridPaperGridView.f(kEJ))) {
+      if ((-1 == MMGridPaperGridView.f(ldM)) || (MMGridPaperGridView.b(ldM) + paramInt != MMGridPaperGridView.f(ldM))) {
         break label234;
       }
       paramView.setVisibility(4);
     }
     for (;;)
     {
-      u.v("!44@/B4Tb64lLpJ3ysDJ3BtNKWRcjd4fCZrJmrjyp4tQ6Cg=", "get View ok: use %d ms, hidden index[%d], cur global index[%d]", new Object[] { Long.valueOf(ay.ao(l)), Integer.valueOf(MMGridPaperGridView.f(kEJ)), Integer.valueOf(MMGridPaperGridView.b(kEJ) + paramInt) });
+      v.v("MicroMsg.MMGridPaperGridView", "get View ok: use %d ms, hidden index[%d], cur global index[%d]", new Object[] { Long.valueOf(be.av(l)), Integer.valueOf(MMGridPaperGridView.f(ldM)), Integer.valueOf(MMGridPaperGridView.b(ldM) + paramInt) });
       return paramView;
       bool = false;
       break;
       label204:
-      paramView = MMGridPaperGridView.a(kEJ).b(MMGridPaperGridView.b(kEJ) + paramInt, paramView);
+      paramView = MMGridPaperGridView.a(ldM).b(MMGridPaperGridView.b(ldM) + paramInt, paramView);
       break label99;
       label228:
       bool = false;
@@ -93,7 +93,7 @@ final class MMGridPaperGridView$a
   
   public final boolean isEnabled(int paramInt)
   {
-    return MMGridPaperGridView.a(kEJ) != null;
+    return MMGridPaperGridView.a(ldM) != null;
   }
 }
 

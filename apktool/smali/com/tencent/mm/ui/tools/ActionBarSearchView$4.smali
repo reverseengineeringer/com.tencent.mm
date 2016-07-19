@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ltH:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+.field final synthetic lUJ:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 119
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$4;->ltH:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+    .line 123
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$4;->lUJ:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,25 +40,25 @@
     .locals 1
 
     .prologue
-    .line 123
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$4;->ltH:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+    .line 127
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$4;->lUJ:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->e(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->f(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 124
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$4;->ltH:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+    .line 128
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$4;->lUJ:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->e(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->f(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;->bil()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;->boi()V
 
-    .line 126
+    .line 130
     :cond_0
     return-void
 .end method

@@ -3,47 +3,92 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/r/d;
+.implements Lcom/tencent/mm/t/d;
 
 
 # static fields
-.field public static hfj:[I
+.field public static hua:[I
 
 
 # instance fields
-.field private hfi:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
+.field private htZ:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
 
-.field private hfk:Ljava/util/ArrayList;
+.field private hub:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private hfl:Ljava/lang/String;
+.field private huc:Ljava/lang/String;
 
-.field hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+.field hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-.field private hfn:I
+.field private hue:I
 
-.field private hfo:Z
+.field private huf:Z
 
-.field private hfp:Z
+.field private hug:Z
 
-.field private hfq:Z
+.field private huh:Z
 
-.field private hfr:Z
+.field private hui:Z
 
-.field private hfs:I
+.field private huj:I
 
-.field private hft:Lcom/tencent/mm/ui/base/p;
+.field private huk:Lcom/tencent/mm/ui/base/p;
 
-.field private hfu:Ljava/lang/String;
+.field private hul:Ljava/lang/String;
 
-.field private hfv:I
+.field private hum:I
 
-.field private hfw:Ljava/util/ArrayList;
+.field private hun:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private hfx:Ljava/util/ArrayList;
+.field private huo:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private hfy:Ljava/util/ArrayList;
+.field private hup:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private hfz:Ljava/util/ArrayList;
+.field private huq:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<[",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -58,7 +103,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfj:[I
+    sput-object v0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hua:[I
 
     return-void
 
@@ -66,10 +111,10 @@
 
     :array_0
     .array-data 4
-        0x7f0b16c4
-        0x7f0b16c5
-        0x7f0b16c6
-        0x7f0b16c7
+        0x7f08128c
+        0x7f08128a
+        0x7f081286
+        0x7f08127f
     .end array-data
 .end method
 
@@ -83,16 +128,16 @@
     invoke-direct {p0}, Lcom/tencent/mm/ui/MMActivity;-><init>()V
 
     .line 75
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfn:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hue:I
 
     .line 78
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfp:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hug:Z
 
     .line 80
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfq:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huh:Z
 
     .line 81
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfr:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hui:Z
 
     return-void
 .end method
@@ -102,17 +147,17 @@
 
     .prologue
     .line 51
-    iput p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfs:I
+    iput p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huj:I
 
     return p1
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;)Lcom/tencent/mm/plugin/sns/ui/ah;
+.method static synthetic a(Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;)Lcom/tencent/mm/plugin/sns/ui/al;
     .locals 1
 
     .prologue
     .line 51
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
     return-object v0
 .end method
@@ -122,7 +167,7 @@
 
     .prologue
     .line 51
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hft:Lcom/tencent/mm/ui/base/p;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huk:Lcom/tencent/mm/ui/base/p;
 
     return-object p1
 .end method
@@ -132,7 +177,7 @@
 
     .prologue
     .line 51
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfk:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hub:Ljava/util/ArrayList;
 
     return-object p1
 .end method
@@ -143,16 +188,16 @@
     .prologue
     const/4 v2, 0x1
 
-    const v1, 0x7f070cf3
+    const v1, 0x7f101041
 
     .line 51
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget v0, v0, Lcom/tencent/mm/plugin/sns/ui/ah;->style:I
+    iget v0, v0, Lcom/tencent/mm/plugin/sns/ui/al;->style:I
 
     if-ne v0, v2, :cond_3
 
@@ -174,7 +219,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f030139
+    const v1, 0x7f07028e
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -190,7 +235,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f03013b
+    const v1, 0x7f07028f
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -209,7 +254,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f03015f
+    const v1, 0x7f07028c
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -224,7 +269,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f03014c
+    const v1, 0x7f07028d
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -247,7 +292,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f0301aa
+    const v1, 0x7f070055
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -266,7 +311,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f0301f1
+    const v1, 0x7f070053
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -281,14 +326,14 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f0301a9
+    const v1, 0x7f070054
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_0
 .end method
 
-.method private aBY()V
+.method private aFb()V
     .locals 3
 
     .prologue
@@ -300,18 +345,18 @@
     .line 430
     const-string/jumbo v1, "Ktag_range_index"
 
-    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfn:I
+    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hue:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 431
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfn:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hue:I
 
     const/4 v2, 0x2
 
     if-eq v1, v2, :cond_0
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfn:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hue:I
 
     const/4 v2, 0x3
 
@@ -321,7 +366,7 @@
     :cond_0
     const-string/jumbo v1, "Klabel_name_list"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfl:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huc:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -338,16 +383,16 @@
     return-void
 .end method
 
-.method private static aCa()I
+.method private static aFd()I
     .locals 3
 
     .prologue
     .line 589
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -373,7 +418,7 @@
     return v0
 .end method
 
-.method private aCb()V
+.method private aFe()V
     .locals 8
 
     .prologue
@@ -384,7 +429,7 @@
     const/4 v5, 0x0
 
     .line 605
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v1, 0x2cbf
 
@@ -402,7 +447,7 @@
 
     const/4 v3, 0x2
 
-    iget v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfv:I
+    iget v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hum:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -418,14 +463,14 @@
 
     aput-object v4, v2, v3
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     .line 606
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -445,11 +490,11 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v1
 
@@ -462,20 +507,20 @@
     .line 608
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfx:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huo:Ljava/util/ArrayList;
 
     .line 609
-    iput-boolean v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfr:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hui:Z
 
     .line 610
-    iput-boolean v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfq:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huh:Z
 
     .line 612
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hft:Lcom/tencent/mm/ui/base/p;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huk:Lcom/tencent/mm/ui/base/p;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hft:Lcom/tencent/mm/ui/base/p;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huk:Lcom/tencent/mm/ui/base/p;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/p;->isShowing()Z
 
@@ -484,18 +529,18 @@
     if-eqz v0, :cond_0
 
     .line 613
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hft:Lcom/tencent/mm/ui/base/p;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huk:Lcom/tencent/mm/ui/base/p;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/p;->dismiss()V
 
     .line 616
     :cond_0
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfp:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hug:Z
 
     if-eqz v0, :cond_1
 
     .line 617
-    iput-boolean v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfp:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hug:Z
 
     .line 632
     :goto_0
@@ -503,21 +548,21 @@
 
     .line 621
     :cond_1
-    const v0, 0x7f0b16d2
+    const v0, 0x7f081290
 
     .line 622
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->aCa()I
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->aFd()I
 
     move-result v1
 
     if-le v1, v6, :cond_2
 
     .line 623
-    const v0, 0x7f0b16d3
+    const v0, 0x7f08128f
 
     .line 625
     :cond_2
-    const v1, 0x7f0b0de8
+    const v1, 0x7f0800f7
 
     new-instance v2, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$2;
 
@@ -528,12 +573,12 @@
     goto :goto_0
 .end method
 
-.method static synthetic aCc()I
+.method static synthetic aFf()I
     .locals 1
 
     .prologue
     .line 51
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->aCa()I
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->aFd()I
 
     move-result v0
 
@@ -545,21 +590,30 @@
 
     .prologue
     .line 51
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfx:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huo:Ljava/util/ArrayList;
 
     return-object v0
 .end method
 
-.method private ba(Ljava/util/List;)V
+.method private bi(Ljava/util/List;)V
     .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<[",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
     .line 683
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfx:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huo:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfx:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huo:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -574,7 +628,7 @@
 
     .line 686
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfx:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huo:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -588,7 +642,7 @@
     .line 688
     new-instance v3, Ljava/util/ArrayList;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfx:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huo:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -599,7 +653,7 @@
     .line 689
     new-instance v4, Ljava/util/ArrayList;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfx:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huo:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -616,7 +670,7 @@
     if-eqz v0, :cond_2
 
     .line 691
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aOW()Lcom/tencent/mm/pluginsdk/i$e;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aTy()Lcom/tencent/mm/pluginsdk/i$e;
 
     move-result-object v5
 
@@ -626,7 +680,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-interface {v5, v0}, Lcom/tencent/mm/pluginsdk/i$e;->qh(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v5, v0}, Lcom/tencent/mm/pluginsdk/i$e;->rx(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -646,7 +700,7 @@
 
     const-string/jumbo v5, ","
 
-    invoke-static {v0, v5}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v5}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -656,13 +710,13 @@
     .line 695
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfq:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huh:Z
 
     goto :goto_1
 
     .line 697
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aOW()Lcom/tencent/mm/pluginsdk/i$e;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aTy()Lcom/tencent/mm/pluginsdk/i$e;
 
     move-result-object v0
 
@@ -676,7 +730,7 @@
 
     .prologue
     .line 51
-    const v0, 0x7f0b16d0
+    const v0, 0x7f081292    # 1.8087143E38f
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->getString(I)Ljava/lang/String;
 
@@ -684,7 +738,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f0b16d1
+    const v2, 0x7f081291
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->getString(I)Ljava/lang/String;
 
@@ -704,7 +758,7 @@
 
     .prologue
     .line 51
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfr:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hui:Z
 
     return v0
 .end method
@@ -716,7 +770,7 @@
     .line 51
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfp:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hug:Z
 
     return v0
 .end method
@@ -730,7 +784,7 @@
     const/4 v4, 0x0
 
     .line 51
-    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfq:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huh:Z
 
     new-instance v0, Landroid/content/Intent;
 
@@ -742,7 +796,7 @@
 
     new-array v2, v2, [I
 
-    sget v3, Lcom/tencent/mm/ui/contact/r;->llz:I
+    sget v3, Lcom/tencent/mm/ui/contact/r;->lLM:I
 
     aput v3, v2, v4
 
@@ -762,7 +816,7 @@
 
     const-string/jumbo v1, "titile"
 
-    const v2, 0x7f0b1219
+    const v2, 0x7f080aaa
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->getString(I)Ljava/lang/String;
 
@@ -774,7 +828,7 @@
 
     const/16 v2, 0xfa1
 
-    invoke-static {p0, v1, v0, v2}, Lcom/tencent/mm/ar/c;->a(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;I)V
+    invoke-static {p0, v1, v0, v2}, Lcom/tencent/mm/av/c;->a(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;I)V
 
     return-void
 .end method
@@ -784,7 +838,7 @@
 
     .prologue
     .line 51
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfi:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->htZ:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
 
     return-object v0
 .end method
@@ -802,23 +856,23 @@
     .line 409
     const/4 v0, 0x0
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget v2, v2, Lcom/tencent/mm/plugin/sns/ui/ah;->hfF:I
+    iget v2, v2, Lcom/tencent/mm/plugin/sns/ui/al;->huw:I
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget v3, v3, Lcom/tencent/mm/plugin/sns/ui/ah;->hfF:I
+    iget v3, v3, Lcom/tencent/mm/plugin/sns/ui/al;->huw:I
 
-    iget v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfn:I
+    iget v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hue:I
 
     if-eq v3, v4, :cond_5
 
     if-ne v2, v5, :cond_0
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/ah;->hfH:Ljava/util/ArrayList;
+    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/al;->huy:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -829,9 +883,9 @@
     :cond_0
     if-ne v2, v6, :cond_3
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/ah;->hfI:Ljava/util/ArrayList;
+    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/al;->huz:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -847,7 +901,7 @@
     if-eqz v0, :cond_8
 
     .line 410
-    const v0, 0x7f0b16d4
+    const v0, 0x7f081285
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->getString(I)Ljava/lang/String;
 
@@ -855,13 +909,13 @@
 
     const-string/jumbo v3, ""
 
-    const v0, 0x7f0b16d6
+    const v0, 0x7f081284
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    const v0, 0x7f0b16d5
+    const v0, 0x7f081283
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->getString(I)Ljava/lang/String;
 
@@ -897,9 +951,9 @@
     :cond_5
     if-ne v2, v5, :cond_6
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/ah;->hfH:Ljava/util/ArrayList;
+    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/al;->huy:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -907,17 +961,17 @@
 
     if-eqz v3, :cond_6
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/ah;->hfH:Ljava/util/ArrayList;
+    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/al;->huy:Ljava/util/ArrayList;
 
     const-string/jumbo v4, ","
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfl:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huc:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -928,9 +982,9 @@
     :cond_6
     if-ne v2, v6, :cond_2
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/ah;->hfI:Ljava/util/ArrayList;
+    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/al;->huz:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -938,17 +992,17 @@
 
     if-eqz v2, :cond_2
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/ah;->hfI:Ljava/util/ArrayList;
+    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/al;->huz:Ljava/util/ArrayList;
 
     const-string/jumbo v3, ","
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfl:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huc:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -963,7 +1017,7 @@
 
     .line 424
     :cond_8
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->aBY()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->aFb()V
 
     goto :goto_1
 .end method
@@ -975,7 +1029,7 @@
     .line 51
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfq:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huh:Z
 
     new-instance v0, Landroid/content/Intent;
 
@@ -985,7 +1039,7 @@
 
     const-string/jumbo v2, ".ui.ContactLabelManagerUI"
 
-    invoke-static {p0, v1, v2, v0}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {p0, v1, v2, v0}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -1007,7 +1061,7 @@
     .line 51
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfq:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huh:Z
 
     return v0
 .end method
@@ -1017,7 +1071,7 @@
 
     .prologue
     .line 51
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->aBZ()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->aFc()V
 
     return-void
 .end method
@@ -1027,7 +1081,7 @@
 
     .prologue
     .line 51
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->aBY()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->aFb()V
 
     return-void
 .end method
@@ -1037,7 +1091,7 @@
 
     .prologue
     .line 51
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfs:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huj:I
 
     return v0
 .end method
@@ -1047,7 +1101,7 @@
 
     .prologue
     .line 51
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfk:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hub:Ljava/util/ArrayList;
 
     return-object v0
 .end method
@@ -1059,7 +1113,7 @@
     .line 51
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfx:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huo:Ljava/util/ArrayList;
 
     return-object v0
 .end method
@@ -1069,14 +1123,14 @@
 
     .prologue
     .line 51
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hft:Lcom/tencent/mm/ui/base/p;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huk:Lcom/tencent/mm/ui/base/p;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method protected final Gb()V
+.method protected final Gy()V
     .locals 6
 
     .prologue
@@ -1098,7 +1152,7 @@
     move-result v1
 
     .line 159
-    const v0, 0x7f070dcf
+    const v0, 0x7f10103c
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->findViewById(I)Landroid/view/View;
 
@@ -1106,32 +1160,32 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfi:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->htZ:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
 
     .line 160
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aOW()Lcom/tencent/mm/pluginsdk/i$e;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aTy()Lcom/tencent/mm/pluginsdk/i$e;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/i$e;->aeA()Ljava/util/List;
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/i$e;->ahe()Ljava/util/List;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/ArrayList;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfk:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hub:Ljava/util/ArrayList;
 
     .line 161
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/ah;->hfG:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/al;->hux:Z
 
     .line 162
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfk:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hub:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/ah;->E(Ljava/util/ArrayList;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/al;->I(Ljava/util/ArrayList;)V
 
     .line 163
     new-instance v0, Landroid/widget/AbsListView$LayoutParams;
@@ -1147,7 +1201,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0501d5
+    const v2, 0x7f0b0135
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1164,33 +1218,33 @@
     invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 170
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfi:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->htZ:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->addHeaderView(Landroid/view/View;)V
 
     .line 171
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfi:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->htZ:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->setAdapter(Landroid/widget/ExpandableListAdapter;)V
 
     .line 172
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget v0, v0, Lcom/tencent/mm/plugin/sns/ui/ah;->hfF:I
+    iget v0, v0, Lcom/tencent/mm/plugin/sns/ui/al;->huw:I
 
     if-ne v0, v4, :cond_1
 
     .line 173
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfi:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->htZ:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
 
     invoke-virtual {v0, v4}, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->expandGroup(I)Z
 
     .line 192
     :cond_0
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfi:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->htZ:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$1;
 
@@ -1199,7 +1253,7 @@
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->setOnGroupClickListener(Landroid/widget/ExpandableListView$OnGroupClickListener;)V
 
     .line 251
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfi:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->htZ:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$3;
 
@@ -1215,7 +1269,7 @@
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 280
-    const v0, 0x7f0b16c3
+    const v0, 0x7f081281
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->getString(I)Ljava/lang/String;
 
@@ -1225,7 +1279,7 @@
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$5;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;)V
 
-    sget v2, Lcom/tencent/mm/ui/j$b;->kpJ:I
+    sget v2, Lcom/tencent/mm/ui/j$b;->kOO:I
 
     invoke-virtual {p0, v3, v0, v1, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->a(ILjava/lang/String;Landroid/view/MenuItem$OnMenuItemClickListener;I)V
 
@@ -1234,604 +1288,21 @@
 
     .line 174
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget v0, v0, Lcom/tencent/mm/plugin/sns/ui/ah;->hfF:I
+    iget v0, v0, Lcom/tencent/mm/plugin/sns/ui/al;->huw:I
 
     if-ne v0, v5, :cond_0
 
     .line 175
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfi:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->htZ:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
 
     invoke-virtual {v0, v5}, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->expandGroup(I)Z
 
     goto :goto_0
 .end method
 
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
-    .locals 7
-
-    .prologue
-    .line 487
-    const-string/jumbo v0, "!32@/B4Tb64lLpIqN7lHrKT1FHOI7zfnIA1O"
-
-    const-string/jumbo v1, "dz:[onSceneEnd]errType:%d errCode:%d errMsg:%s"
-
-    const/4 v2, 0x3
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x1
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x2
-
-    aput-object p3, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 488
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfq:Z
-
-    if-nez v0, :cond_1
-
-    .line 580
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 491
-    :cond_1
-    invoke-virtual {p4}, Lcom/tencent/mm/r/j;->getType()I
-
-    move-result v0
-
-    .line 492
-    sparse-switch v0, :sswitch_data_0
-
-    goto :goto_0
-
-    .line 576
-    :sswitch_0
-    if-nez p1, :cond_2
-
-    if-eqz p2, :cond_0
-
-    .line 578
-    :cond_2
-    const-string/jumbo v0, "!32@/B4Tb64lLpIqN7lHrKT1FHOI7zfnIA1O"
-
-    const-string/jumbo v1, "dz: error at delete tag list!"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 494
-    :sswitch_1
-    if-nez p1, :cond_b
-
-    if-nez p2, :cond_b
-
-    .line 495
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azm()Lcom/tencent/mm/plugin/sns/h/r;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/r;->getCursor()Landroid/database/Cursor;
-
-    move-result-object v2
-
-    .line 496
-    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfv:I
-
-    .line 497
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfv:I
-
-    if-lez v0, :cond_7
-
-    invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
-
-    new-instance v3, Lcom/tencent/mm/plugin/sns/h/q;
-
-    invoke-direct {v3}, Lcom/tencent/mm/plugin/sns/h/q;-><init>()V
-
-    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
-
-    move-result v0
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfx:Ljava/util/ArrayList;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfw:Ljava/util/ArrayList;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfz:Ljava/util/ArrayList;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfy:Ljava/util/ArrayList;
-
-    :goto_1
-    invoke-interface {v2}, Landroid/database/Cursor;->isAfterLast()Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    invoke-virtual {v3, v2}, Lcom/tencent/mm/plugin/sns/h/q;->c(Landroid/database/Cursor;)V
-
-    iget-object v0, v3, Lcom/tencent/mm/plugin/sns/h/q;->field_memberList:Ljava/lang/String;
-
-    if-eqz v0, :cond_5
-
-    iget-object v0, v3, Lcom/tencent/mm/plugin/sns/h/q;->field_memberList:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfz:Ljava/util/ArrayList;
-
-    iget-object v1, v3, Lcom/tencent/mm/plugin/sns/h/q;->field_memberList:Ljava/lang/String;
-
-    const-string/jumbo v4, ","
-
-    invoke-virtual {v1, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v1, v3, Lcom/tencent/mm/plugin/sns/h/q;->field_tagName:Ljava/lang/String;
-
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfx:Ljava/util/ArrayList;
-
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aOW()Lcom/tencent/mm/pluginsdk/i$e;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/i$e;->aeC()Ljava/util/List;
-
-    move-result-object v0
-
-    if-nez v0, :cond_3
-
-    move-object v0, v1
-
-    :goto_2
-    invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfw:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfy:Ljava/util/ArrayList;
-
-    iget-wide v4, v3, Lcom/tencent/mm/plugin/sns/h/q;->field_tagId:J
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :goto_3
-    invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
-
-    goto :goto_1
-
-    :cond_3
-    invoke-interface {v0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    move-object v0, v1
-
-    goto :goto_2
-
-    :cond_4
-    const v0, 0x7f0b16cd
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v5, 0x1
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    const/4 v6, 0x0
-
-    aput-object v1, v5, v6
-
-    invoke-static {v0, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_2
-
-    :cond_5
-    const-string/jumbo v0, "!32@/B4Tb64lLpIqN7lHrKT1FHOI7zfnIA1O"
-
-    const-string/jumbo v1, "dz:snstaginfo memberlist is null."
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_3
-
-    :cond_6
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfw:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-nez v0, :cond_9
-
-    const/4 v0, 0x0
-
-    :goto_4
-    if-nez v0, :cond_8
-
-    .line 500
-    :cond_7
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfr:Z
-
-    if-eqz v0, :cond_8
-
-    .line 501
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
-
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfs:I
-
-    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/ah;->hfF:I
-
-    .line 502
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfi:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
-
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfs:I
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->qs(I)Z
-
-    .line 503
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
-
-    move-result-object v0
-
-    const v1, 0x52001
-
-    const/4 v3, 0x0
-
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
-
-    .line 506
-    :cond_8
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    .line 507
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfp:Z
-
-    if-eqz v0, :cond_a
-
-    .line 508
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfq:Z
-
-    .line 509
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aOW()Lcom/tencent/mm/pluginsdk/i$e;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfx:Ljava/util/ArrayList;
-
-    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/i$e;->ah(Ljava/util/List;)V
-
-    .line 517
-    :goto_5
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfr:Z
-
-    goto/16 :goto_0
-
-    .line 497
-    :cond_9
-    const/4 v0, 0x1
-
-    goto :goto_4
-
-    .line 511
-    :cond_a
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfq:Z
-
-    goto :goto_5
-
-    .line 514
-    :cond_b
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->aCb()V
-
-    .line 515
-    const-string/jumbo v0, "!32@/B4Tb64lLpIqN7lHrKT1FHOI7zfnIA1O"
-
-    const-string/jumbo v1, "dz: error at get sns tag list!"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_5
-
-    .line 520
-    :sswitch_2
-    if-nez p1, :cond_c
-
-    if-nez p2, :cond_c
-
-    .line 521
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfz:Ljava/util/ArrayList;
-
-    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->ba(Ljava/util/List;)V
-
-    goto/16 :goto_0
-
-    .line 523
-    :cond_c
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->aCb()V
-
-    .line 524
-    const-string/jumbo v0, "!32@/B4Tb64lLpIqN7lHrKT1FHOI7zfnIA1O"
-
-    const-string/jumbo v1, "dz: error at add contact label!"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    .line 528
-    :sswitch_3
-    if-nez p1, :cond_f
-
-    if-nez p2, :cond_f
-
-    .line 529
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfw:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    .line 530
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfy:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    .line 531
-    :cond_d
-    :goto_6
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_e
-
-    .line 532
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v3
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    const-wide/16 v5, 0x0
-
-    cmp-long v5, v3, v5
-
-    if-eqz v5, :cond_d
-
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
-
-    move-result-object v5
-
-    new-instance v6, Lcom/tencent/mm/plugin/sns/d/u;
-
-    invoke-direct {v6, v3, v4, v0}, Lcom/tencent/mm/plugin/sns/d/u;-><init>(JLjava/lang/String;)V
-
-    invoke-virtual {v5, v6}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
-
-    goto :goto_6
-
-    .line 534
-    :cond_e
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
-
-    move-result-object v0
-
-    const v1, 0x52002
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
-
-    .line 535
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aOW()Lcom/tencent/mm/pluginsdk/i$e;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/i$e;->aeA()Ljava/util/List;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/ArrayList;
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfk:Ljava/util/ArrayList;
-
-    .line 536
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
-
-    const/16 v1, 0x2cbf
-
-    const/4 v2, 0x4
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    const-string/jumbo v4, ""
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x1
-
-    const-string/jumbo v4, ""
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x2
-
-    iget v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfv:I
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x3
-
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfx:Ljava/util/ArrayList;
-
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
-
-    move-result v4
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
-
-    .line 537
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfi:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
-
-    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$10;
-
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$10;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;)V
-
-    const-wide/16 v2, 0x258
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    .line 569
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
-
-    move-result-object v0
-
-    const v1, 0x52001
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
-
-    goto/16 :goto_0
-
-    .line 571
-    :cond_f
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->aCb()V
-
-    .line 572
-    const-string/jumbo v0, "!32@/B4Tb64lLpIqN7lHrKT1FHOI7zfnIA1O"
-
-    const-string/jumbo v1, "dz: error at modify label list!"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    .line 492
-    :sswitch_data_0
-    .sparse-switch
-        0x122 -> :sswitch_0
-        0x124 -> :sswitch_1
-        0x27b -> :sswitch_2
-        0x27e -> :sswitch_3
-    .end sparse-switch
-.end method
-
-.method final aBZ()V
+.method final aFc()V
     .locals 3
 
     .prologue
@@ -1841,31 +1312,31 @@
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     .line 440
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget v1, v1, Lcom/tencent/mm/plugin/sns/ui/ah;->hfF:I
+    iget v1, v1, Lcom/tencent/mm/plugin/sns/ui/al;->huw:I
 
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_1
 
     .line 441
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/ah;->hfH:Ljava/util/ArrayList;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/al;->huy:Ljava/util/ArrayList;
 
     const-string/jumbo v2, ","
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfl:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huc:Ljava/lang/String;
 
     .line 442
     const-string/jumbo v1, "Klabel_name_list"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfl:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huc:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -1874,9 +1345,9 @@
     :goto_0
     const-string/jumbo v1, "Ktag_range_index"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget v2, v2, Lcom/tencent/mm/plugin/sns/ui/ah;->hfF:I
+    iget v2, v2, Lcom/tencent/mm/plugin/sns/ui/al;->huw:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
@@ -1893,31 +1364,31 @@
 
     .line 443
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget v1, v1, Lcom/tencent/mm/plugin/sns/ui/ah;->hfF:I
+    iget v1, v1, Lcom/tencent/mm/plugin/sns/ui/al;->huw:I
 
     const/4 v2, 0x3
 
     if-ne v1, v2, :cond_0
 
     .line 444
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/ah;->hfI:Ljava/util/ArrayList;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/al;->huz:Ljava/util/ArrayList;
 
     const-string/jumbo v2, ","
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfl:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huc:Ljava/lang/String;
 
     .line 445
     const-string/jumbo v1, "Klabel_name_list"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfl:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huc:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -1966,7 +1437,7 @@
 
     .prologue
     .line 92
-    const v0, 0x7f0a044f
+    const v0, 0x7f030575
 
     return v0
 .end method
@@ -1997,7 +1468,7 @@
     move-result-object v0
 
     .line 326
-    const-string/jumbo v1, "!32@/B4Tb64lLpIqN7lHrKT1FHOI7zfnIA1O"
+    const-string/jumbo v1, "MicroMsg.SnsLabelUI"
 
     const-string/jumbo v2, "dz[onActivityResult] %s"
 
@@ -2009,10 +1480,10 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 327
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -2033,7 +1504,7 @@
 
     const-string/jumbo v2, ".ui.ContactLabelEditUI"
 
-    invoke-static {p0, v0, v2, v1, v5}, Lcom/tencent/mm/ar/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
+    invoke-static {p0, v0, v2, v1, v5}, Lcom/tencent/mm/av/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
 
     .line 352
     :cond_0
@@ -2055,19 +1526,19 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfu:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hul:Ljava/lang/String;
 
     .line 336
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfu:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hul:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 337
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfk:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hub:Ljava/util/ArrayList;
 
     if-nez v0, :cond_2
 
@@ -2076,32 +1547,32 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfk:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hub:Ljava/util/ArrayList;
 
     .line 340
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfk:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hub:Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfu:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hul:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 341
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfk:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hub:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/ah;->E(Ljava/util/ArrayList;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/al;->I(Ljava/util/ArrayList;)V
 
     .line 342
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfs:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huj:I
 
-    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/ah;->hfF:I
+    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/al;->huw:I
 
     .line 343
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfi:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->htZ:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$7;
 
@@ -2118,60 +1589,60 @@
     .locals 5
 
     .prologue
-    const/4 v4, 0x0
+    const/4 v4, 0x1
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
     .line 106
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 107
-    const v0, 0x7f0b16a3
+    const v0, 0x7f0812f2
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->qb(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->rR(I)V
 
     .line 108
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0x124
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
     .line 109
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0x27b
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
     .line 110
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0x27e
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
     .line 111
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0x122
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
     .line 113
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/ah;
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/al;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/ah;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/al;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
     .line 114
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->getIntent()Landroid/content/Intent;
@@ -2182,61 +1653,61 @@
     if-nez v0, :cond_5
 
     .line 116
-    iput v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfn:I
+    iput v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hue:I
 
     .line 117
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iput v4, v0, Lcom/tencent/mm/plugin/sns/ui/ah;->style:I
+    iput v3, v0, Lcom/tencent/mm/plugin/sns/ui/al;->style:I
 
     .line 118
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfl:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huc:Ljava/lang/String;
 
     .line 127
     :cond_0
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfn:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hue:I
 
-    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/ah;->hfF:I
+    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/al;->huw:I
 
     .line 128
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget v0, v0, Lcom/tencent/mm/plugin/sns/ui/ah;->style:I
+    iget v0, v0, Lcom/tencent/mm/plugin/sns/ui/al;->style:I
 
-    if-ne v0, v3, :cond_1
+    if-ne v0, v4, :cond_1
 
     .line 129
-    const v0, 0x7f070dce
+    const v0, 0x7f10103b
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    const v1, 0x7f08017d
+    const v1, 0x7f0f002f
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
     .line 131
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfn:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hue:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_6
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfl:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huc:Ljava/lang/String;
 
     if-eqz v0, :cond_6
 
     .line 132
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfl:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huc:Ljava/lang/String;
 
     const-string/jumbo v2, ","
 
@@ -2244,28 +1715,28 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->h([Ljava/lang/String;)Ljava/util/List;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->g([Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/ArrayList;
 
-    iput-object v0, v1, Lcom/tencent/mm/plugin/sns/ui/ah;->hfH:Ljava/util/ArrayList;
+    iput-object v0, v1, Lcom/tencent/mm/plugin/sns/ui/al;->huy:Ljava/util/ArrayList;
 
     .line 137
     :cond_2
     :goto_1
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
     const v1, 0x52001
 
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
@@ -2279,38 +1750,38 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfo:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huf:Z
 
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfo:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huf:Z
 
     if-eqz v0, :cond_4
 
-    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfq:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huh:Z
 
-    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfr:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hui:Z
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->aCa()I
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->aFd()I
 
     move-result v0
 
     if-lez v0, :cond_3
 
-    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfp:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hug:Z
 
     :cond_3
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/plugin/sns/d/s;
+    new-instance v1, Lcom/tencent/mm/plugin/sns/e/s;
 
-    invoke-direct {v1}, Lcom/tencent/mm/plugin/sns/d/s;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/plugin/sns/e/s;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
     .line 139
     :cond_4
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->Gb()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->Gy()V
 
     .line 140
     return-void
@@ -2319,22 +1790,22 @@
     :cond_5
     const-string/jumbo v1, "KLabel_range_index"
 
-    invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfn:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hue:I
 
     .line 121
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
     const-string/jumbo v2, "k_sns_label_ui_style"
 
-    invoke-virtual {v0, v2, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
-    iput v2, v1, Lcom/tencent/mm/plugin/sns/ui/ah;->style:I
+    iput v2, v1, Lcom/tencent/mm/plugin/sns/ui/al;->style:I
 
     .line 122
     const-string/jumbo v1, "Klabel_name_list"
@@ -2343,7 +1814,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfl:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huc:Ljava/lang/String;
 
     .line 123
     const-string/jumbo v1, "k_sns_label_ui_title"
@@ -2365,26 +1836,26 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->Gj(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->Ah(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 133
     :cond_6
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfn:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hue:I
 
     const/4 v1, 0x3
 
     if-ne v0, v1, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfl:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huc:Ljava/lang/String;
 
     if-eqz v0, :cond_2
 
     .line 134
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfl:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huc:Ljava/lang/String;
 
     const-string/jumbo v2, ","
 
@@ -2392,13 +1863,13 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->h([Ljava/lang/String;)Ljava/util/List;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->g([Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/ArrayList;
 
-    iput-object v0, v1, Lcom/tencent/mm/plugin/sns/ui/ah;->hfI:Ljava/util/ArrayList;
+    iput-object v0, v1, Lcom/tencent/mm/plugin/sns/ui/al;->huz:Ljava/util/ArrayList;
 
     goto/16 :goto_1
 .end method
@@ -2408,40 +1879,40 @@
 
     .prologue
     .line 463
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0x124
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
     .line 464
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0x27b
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
     .line 465
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0x27e
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
     .line 466
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0x122
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
     .line 467
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onDestroy()V
@@ -2455,40 +1926,40 @@
 
     .prologue
     .line 472
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfu:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hul:Ljava/lang/String;
 
     if-nez v0, :cond_2
 
     .line 473
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aOW()Lcom/tencent/mm/pluginsdk/i$e;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aTy()Lcom/tencent/mm/pluginsdk/i$e;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/i$e;->aeA()Ljava/util/List;
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/i$e;->ahe()Ljava/util/List;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/ArrayList;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfk:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hub:Ljava/util/ArrayList;
 
     .line 474
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfk:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hub:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/ah;->E(Ljava/util/ArrayList;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/al;->I(Ljava/util/ArrayList;)V
 
     .line 475
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfk:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hub:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfk:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hub:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -2498,27 +1969,614 @@
 
     .line 476
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
     const/4 v1, 0x0
 
-    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/ah;->hfF:I
+    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/al;->huw:I
 
     .line 478
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/ah;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/al;->notifyDataSetChanged()V
 
     .line 480
     :cond_2
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfu:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hul:Ljava/lang/String;
 
     .line 481
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onResume()V
 
     .line 482
     return-void
+.end method
+
+.method public onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
+    .locals 8
+
+    .prologue
+    .line 487
+    const-string/jumbo v0, "MicroMsg.SnsLabelUI"
+
+    const-string/jumbo v1, "dz:[onSceneEnd]errType:%d errCode:%d errMsg:%s"
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x1
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x2
+
+    aput-object p3, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 488
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huh:Z
+
+    if-nez v0, :cond_1
+
+    .line 580
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 491
+    :cond_1
+    invoke-virtual {p4}, Lcom/tencent/mm/t/j;->getType()I
+
+    move-result v0
+
+    .line 492
+    sparse-switch v0, :sswitch_data_0
+
+    goto :goto_0
+
+    .line 576
+    :sswitch_0
+    if-nez p1, :cond_2
+
+    if-eqz p2, :cond_0
+
+    .line 578
+    :cond_2
+    const-string/jumbo v0, "MicroMsg.SnsLabelUI"
+
+    const-string/jumbo v1, "dz: error at delete tag list!"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 494
+    :sswitch_1
+    if-nez p1, :cond_b
+
+    if-nez p2, :cond_b
+
+    .line 495
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBM()Lcom/tencent/mm/plugin/sns/i/r;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/r;->getCursor()Landroid/database/Cursor;
+
+    move-result-object v2
+
+    .line 496
+    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hum:I
+
+    .line 497
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hum:I
+
+    if-lez v0, :cond_7
+
+    invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
+
+    new-instance v3, Lcom/tencent/mm/plugin/sns/i/q;
+
+    invoke-direct {v3}, Lcom/tencent/mm/plugin/sns/i/q;-><init>()V
+
+    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
+
+    move-result v0
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huo:Ljava/util/ArrayList;
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hun:Ljava/util/ArrayList;
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huq:Ljava/util/ArrayList;
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hup:Ljava/util/ArrayList;
+
+    :goto_1
+    invoke-interface {v2}, Landroid/database/Cursor;->isAfterLast()Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/plugin/sns/i/q;->b(Landroid/database/Cursor;)V
+
+    iget-object v0, v3, Lcom/tencent/mm/plugin/sns/i/q;->field_memberList:Ljava/lang/String;
+
+    if-eqz v0, :cond_5
+
+    iget-object v0, v3, Lcom/tencent/mm/plugin/sns/i/q;->field_memberList:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huq:Ljava/util/ArrayList;
+
+    iget-object v1, v3, Lcom/tencent/mm/plugin/sns/i/q;->field_memberList:Ljava/lang/String;
+
+    const-string/jumbo v4, ","
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v1, v3, Lcom/tencent/mm/plugin/sns/i/q;->field_tagName:Ljava/lang/String;
+
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huo:Ljava/util/ArrayList;
+
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aTy()Lcom/tencent/mm/pluginsdk/i$e;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/i$e;->ahg()Ljava/util/List;
+
+    move-result-object v0
+
+    if-nez v0, :cond_3
+
+    move-object v0, v1
+
+    :goto_2
+    invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hun:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hup:Ljava/util/ArrayList;
+
+    iget-wide v4, v3, Lcom/tencent/mm/plugin/sns/i/q;->field_tagId:J
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_3
+    invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
+
+    goto :goto_1
+
+    :cond_3
+    invoke-interface {v0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    move-object v0, v1
+
+    goto :goto_2
+
+    :cond_4
+    const v0, 0x7f081282
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v5, 0x1
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    aput-object v1, v5, v6
+
+    invoke-static {v0, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_2
+
+    :cond_5
+    const-string/jumbo v0, "MicroMsg.SnsLabelUI"
+
+    const-string/jumbo v1, "dz:snstaginfo memberlist is null."
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_3
+
+    :cond_6
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hun:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_9
+
+    const/4 v0, 0x0
+
+    :goto_4
+    if-nez v0, :cond_8
+
+    .line 500
+    :cond_7
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hui:Z
+
+    if-eqz v0, :cond_8
+
+    .line 501
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
+
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huj:I
+
+    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/al;->huw:I
+
+    .line 502
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->htZ:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
+
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huj:I
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->sk(I)Z
+
+    .line 503
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
+
+    move-result-object v0
+
+    const v1, 0x52001
+
+    const/4 v3, 0x0
+
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
+
+    .line 506
+    :cond_8
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+
+    .line 507
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hug:Z
+
+    if-eqz v0, :cond_a
+
+    .line 508
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huh:Z
+
+    .line 509
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aTy()Lcom/tencent/mm/pluginsdk/i$e;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huo:Ljava/util/ArrayList;
+
+    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/i$e;->ap(Ljava/util/List;)V
+
+    .line 517
+    :goto_5
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hui:Z
+
+    goto/16 :goto_0
+
+    .line 497
+    :cond_9
+    const/4 v0, 0x1
+
+    goto :goto_4
+
+    .line 511
+    :cond_a
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huh:Z
+
+    goto :goto_5
+
+    .line 514
+    :cond_b
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->aFe()V
+
+    .line 515
+    const-string/jumbo v0, "MicroMsg.SnsLabelUI"
+
+    const-string/jumbo v1, "dz: error at get sns tag list!"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_5
+
+    .line 520
+    :sswitch_2
+    if-nez p1, :cond_c
+
+    if-nez p2, :cond_c
+
+    .line 521
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huq:Ljava/util/ArrayList;
+
+    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->bi(Ljava/util/List;)V
+
+    goto/16 :goto_0
+
+    .line 523
+    :cond_c
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->aFe()V
+
+    .line 524
+    const-string/jumbo v0, "MicroMsg.SnsLabelUI"
+
+    const-string/jumbo v1, "dz: error at add contact label!"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    .line 528
+    :sswitch_3
+    if-nez p1, :cond_f
+
+    if-nez p2, :cond_f
+
+    .line 529
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hun:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    .line 530
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hup:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    .line 531
+    :cond_d
+    :goto_6
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_e
+
+    .line 532
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Long;
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    const-wide/16 v6, 0x0
+
+    cmp-long v3, v4, v6
+
+    if-eqz v3, :cond_d
+
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
+
+    move-result-object v3
+
+    new-instance v6, Lcom/tencent/mm/plugin/sns/e/u;
+
+    invoke-direct {v6, v4, v5, v0}, Lcom/tencent/mm/plugin/sns/e/u;-><init>(JLjava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v3, v6, v0}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
+
+    goto :goto_6
+
+    .line 534
+    :cond_e
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
+
+    move-result-object v0
+
+    const v1, 0x52002
+
+    const/4 v2, 0x0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
+
+    .line 535
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aTy()Lcom/tencent/mm/pluginsdk/i$e;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/i$e;->ahe()Ljava/util/List;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hub:Ljava/util/ArrayList;
+
+    .line 536
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
+
+    const/16 v1, 0x2cbf
+
+    const/4 v2, 0x4
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    const-string/jumbo v4, ""
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x1
+
+    const-string/jumbo v4, ""
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x2
+
+    iget v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hum:I
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x3
+
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->huo:Ljava/util/ArrayList;
+
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
+
+    .line 537
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->htZ:Lcom/tencent/mm/ui/base/AnimatedExpandableListView;
+
+    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$10;
+
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$10;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;)V
+
+    const-wide/16 v2, 0x258
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    .line 569
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
+
+    move-result-object v0
+
+    const v1, 0x52001
+
+    const/4 v2, 0x0
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
+
+    goto/16 :goto_0
+
+    .line 571
+    :cond_f
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->aFe()V
+
+    .line 572
+    const-string/jumbo v0, "MicroMsg.SnsLabelUI"
+
+    const-string/jumbo v1, "dz: error at modify label list!"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    .line 492
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x122 -> :sswitch_0
+        0x124 -> :sswitch_1
+        0x27b -> :sswitch_2
+        0x27e -> :sswitch_3
+    .end sparse-switch
 .end method

@@ -1,8 +1,8 @@
 package com.tencent.smtt.sdk;
 
 import android.content.Context;
-import com.tencent.smtt.a.d;
-import com.tencent.smtt.a.r;
+import com.tencent.smtt.utils.TbsLog;
+import com.tencent.smtt.utils.e;
 import java.io.File;
 import java.io.FileFilter;
 
@@ -13,26 +13,26 @@ final class m$3
   
   public final void run()
   {
-    r.i("TbsInstaller", "TbsInstaller--quickDexOptForThirdPartyApp thread start");
+    TbsLog.i("TbsInstaller", "TbsInstaller--quickDexOptForThirdPartyApp thread start");
     try
     {
-      File localFile1 = m.fj(lSK);
-      File localFile2 = m.fj(lSL);
-      d.a(localFile1, localFile2, new FileFilter()
+      File localFile1 = m.b(null, muC);
+      File localFile2 = m.b(null, muD);
+      e.a(localFile1, localFile2, new FileFilter()
       {
         public final boolean accept(File paramAnonymousFile)
         {
           return paramAnonymousFile.getName().endsWith(".dex");
         }
       });
-      d.a(localFile1, localFile2, new FileFilter()
+      e.a(localFile1, localFile2, new FileFilter()
       {
         public final boolean accept(File paramAnonymousFile)
         {
           return paramAnonymousFile.getName().endsWith("tbs.conf");
         }
       });
-      r.i("TbsInstaller", "TbsInstaller--quickDexOptForThirdPartyApp thread done");
+      TbsLog.i("TbsInstaller", "TbsInstaller--quickDexOptForThirdPartyApp thread done");
       return;
     }
     catch (Exception localException) {}

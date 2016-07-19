@@ -9,12 +9,12 @@ final class AppGrid$2
 {
   AppGrid$2(AppGrid paramAppGrid) {}
   
-  public final boolean onItemLongClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final boolean onItemLongClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    paramAdapterView = AppGrid.c(iJC);
-    int i = AppGrid.c(iJC).oA(AppGrid.a(iJC) * AppGrid.b(iJC) + paramInt);
-    AppGrid.d(iJC).mn(paramInt);
-    paramAdapterView.oB(i);
+    paramAdapterView = AppGrid.c(jgy);
+    int i = AppGrid.c(jgy).qg(AppGrid.a(jgy) * AppGrid.b(jgy) + paramInt);
+    AppGrid.d(jgy).nH(paramInt);
+    paramAdapterView.qh(i);
     return true;
   }
 }

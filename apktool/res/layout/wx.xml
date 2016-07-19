@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/lf" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:background="@color/j3" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/bdi" android:visibility="gone" layout="@layout/mall_order_latest_status_info_layout" />
+            <include android:id="@id/bdj" android:visibility="gone" layout="@layout/mall_order_latest_status_info_for_msg_layout" />
+            <include android:id="@id/bdk" android:visibility="gone" layout="@layout/mall_order_product_list_item" />
+            <include android:id="@id/bdl" android:visibility="gone" layout="@layout/mall_order_product_item_icon_text_x4" />
+            <include android:id="@id/bdm" android:visibility="gone" layout="@layout/mall_order_product_item_text_x1" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/bdn" android:background="@drawable/m_" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:id="@id/bdo" android:layout_height="@dimen/j7" style="@style/MallOrderDetailItem">
+                <TextView android:textSize="@dimen/i8" android:textColor="@color/ij" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/bgz" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/h4" android:textColor="@color/ih" android:id="@id/bdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hb" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.tencent.mm.ui.base.MaxListView android:id="@id/bdq" android:background="@color/j3" android:focusable="true" android:layout_height="wrap_content" android:transcriptMode="disabled" style="@style/MMList" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/bdr" android:background="@color/ow" android:paddingLeft="@dimen/he" android:paddingRight="@dimen/he" android:layout_width="fill_parent" android:layout_height="@dimen/j7">
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/hc" android:gravity="center" android:id="@id/bds" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/bgx" android:layout_weight="1.0" />
+            <TextView android:id="@id/bdt" android:background="#ffeeeeee" android:layout_width="2.0px" android:layout_height="32.0dip" />
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/hc" android:gravity="center" android:id="@id/bdu" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/bh8" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

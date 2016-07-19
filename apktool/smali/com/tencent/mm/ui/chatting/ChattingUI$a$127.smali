@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/am$a;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;->onActivityResult(IILandroid/content/Intent;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,16 @@
 
 
 # instance fields
-.field final synthetic gPj:J
-
-.field final synthetic laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.field final synthetic lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/chatting/ChattingUI$a;J)V
+.method constructor <init>(Lcom/tencent/mm/ui/chatting/ChattingUI$a;)V
     .locals 0
 
     .prologue
-    .line 962
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$127;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
-
-    iput-wide p2, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$127;->gPj:J
+    .line 7742
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$127;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,53 +36,27 @@
 
 
 # virtual methods
-.method public final vd()Z
-    .locals 4
+.method public final run()V
+    .locals 3
 
     .prologue
-    .line 970
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 7746
+    new-instance v0, Lcom/tencent/mm/e/a/nh;
 
-    move-result-object v0
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/nh;-><init>()V
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rs()Lcom/tencent/mm/storage/ah;
+    .line 7747
+    iget-object v1, v0, Lcom/tencent/mm/e/a/nh;->avA:Lcom/tencent/mm/e/a/nh$a;
 
-    move-result-object v0
+    const/4 v2, 0x1
 
-    iget-wide v1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$127;->gPj:J
+    iput-boolean v2, v1, Lcom/tencent/mm/e/a/nh$a;->avC:Z
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/ah;->dz(J)Lcom/tencent/mm/storage/ag;
+    .line 7748
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    move-result-object v0
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
-    .line 971
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ag;->aXs()V
-
-    .line 974
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rs()Lcom/tencent/mm/storage/ah;
-
-    move-result-object v1
-
-    iget-wide v2, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$127;->gPj:J
-
-    invoke-virtual {v1, v2, v3, v0}, Lcom/tencent/mm/storage/ah;->a(JLcom/tencent/mm/storage/ag;)V
-
-    .line 975
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final ve()Z
-    .locals 1
-
-    .prologue
-    .line 965
-    const/4 v0, 0x0
-
-    return v0
+    .line 7749
+    return-void
 .end method

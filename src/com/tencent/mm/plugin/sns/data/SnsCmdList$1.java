@@ -3,7 +3,7 @@ package com.tencent.mm.plugin.sns.data;
 import android.os.Parcelable.Creator;
 
 final class SnsCmdList$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<SnsCmdList>
 {}
 
 /* Location:

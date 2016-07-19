@@ -1,11 +1,18 @@
 package com.tencent.mm.ui.chatting;
 
+import com.tencent.mm.storage.ai;
+
 abstract class cc
-  extends aa.c
+  extends ab.b
 {
   public cc(int paramInt)
   {
     super(paramInt);
+  }
+  
+  protected final String a(ChattingUI.a parama, ai paramai)
+  {
+    return lsL.ajT;
   }
 }
 

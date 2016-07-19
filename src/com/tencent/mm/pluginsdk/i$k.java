@@ -7,9 +7,9 @@ public abstract interface i$k
 {
   public abstract boolean a(Context paramContext, String paramString, DialogInterface.OnDismissListener paramOnDismissListener);
   
-  public abstract boolean ba(String paramString);
+  public abstract boolean bf(String paramString);
   
-  public abstract String o(Context paramContext, String paramString);
+  public abstract String p(Context paramContext, String paramString);
 }
 
 /* Location:

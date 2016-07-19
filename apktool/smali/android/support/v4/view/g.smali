@@ -16,7 +16,7 @@
 
 
 # static fields
-.field static final eD:Landroid/support/v4/view/g$d;
+.field static final eZ:Landroid/support/v4/view/g$d;
 
 
 # direct methods
@@ -37,7 +37,7 @@
 
     invoke-direct {v0}, Landroid/support/v4/view/g$c;-><init>()V
 
-    sput-object v0, Landroid/support/v4/view/g;->eD:Landroid/support/v4/view/g$d;
+    sput-object v0, Landroid/support/v4/view/g;->eZ:Landroid/support/v4/view/g$d;
 
     .line 255
     :goto_0
@@ -54,7 +54,7 @@
 
     invoke-direct {v0}, Landroid/support/v4/view/g$b;-><init>()V
 
-    sput-object v0, Landroid/support/v4/view/g;->eD:Landroid/support/v4/view/g$d;
+    sput-object v0, Landroid/support/v4/view/g;->eZ:Landroid/support/v4/view/g$d;
 
     goto :goto_0
 
@@ -64,7 +64,7 @@
 
     invoke-direct {v0}, Landroid/support/v4/view/g$a;-><init>()V
 
-    sput-object v0, Landroid/support/v4/view/g;->eD:Landroid/support/v4/view/g$d;
+    sput-object v0, Landroid/support/v4/view/g;->eZ:Landroid/support/v4/view/g$d;
 
     goto :goto_0
 .end method
@@ -111,7 +111,7 @@
     return-object v0
 
     :cond_0
-    sget-object v0, Landroid/support/v4/view/g;->eD:Landroid/support/v4/view/g$d;
+    sget-object v0, Landroid/support/v4/view/g;->eZ:Landroid/support/v4/view/g$d;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/g$d;->a(Landroid/view/MenuItem;Landroid/support/v4/view/g$e;)Landroid/view/MenuItem;
 
@@ -141,7 +141,7 @@
     return-object v0
 
     :cond_0
-    sget-object v0, Landroid/support/v4/view/g;->eD:Landroid/support/v4/view/g$d;
+    sget-object v0, Landroid/support/v4/view/g;->eZ:Landroid/support/v4/view/g$d;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/g$d;->a(Landroid/view/MenuItem;Landroid/view/View;)Landroid/view/MenuItem;
 
@@ -171,11 +171,7 @@
     return-object v0
 
     :cond_0
-    sget-object v0, Landroid/support/v4/view/g;->eD:Landroid/support/v4/view/g$d;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/view/g$d;->a(Landroid/view/MenuItem;)Landroid/view/View;
-
-    move-result-object v0
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
@@ -200,7 +196,7 @@
 
     .line 271
     :cond_0
-    sget-object v0, Landroid/support/v4/view/g;->eD:Landroid/support/v4/view/g$d;
+    sget-object v0, Landroid/support/v4/view/g;->eZ:Landroid/support/v4/view/g$d;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/g$d;->a(Landroid/view/MenuItem;I)V
 
@@ -228,7 +224,7 @@
     return-object v0
 
     :cond_0
-    sget-object v0, Landroid/support/v4/view/g;->eD:Landroid/support/v4/view/g$d;
+    sget-object v0, Landroid/support/v4/view/g;->eZ:Landroid/support/v4/view/g$d;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/g$d;->b(Landroid/view/MenuItem;I)Landroid/view/MenuItem;
 
@@ -258,7 +254,7 @@
     return v0
 
     :cond_0
-    sget-object v0, Landroid/support/v4/view/g;->eD:Landroid/support/v4/view/g$d;
+    sget-object v0, Landroid/support/v4/view/g;->eZ:Landroid/support/v4/view/g$d;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/g$d;->b(Landroid/view/MenuItem;)Z
 
@@ -288,7 +284,7 @@
     return v0
 
     :cond_0
-    sget-object v0, Landroid/support/v4/view/g;->eD:Landroid/support/v4/view/g$d;
+    sget-object v0, Landroid/support/v4/view/g;->eZ:Landroid/support/v4/view/g$d;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/g$d;->c(Landroid/view/MenuItem;)Z
 

@@ -2,16 +2,16 @@ package com.tencent.mm.booter;
 
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.platformtools.s;
 
 public final class h
 {
-  public static boolean nb()
+  public static boolean lp()
   {
     try
     {
-      t.d((Long)ah.tD().rn().get(66817, null));
-      return t.am(0L) * 1000L > 1800000L;
+      s.d((Long)ah.tE().ro().get(66817, null));
+      return s.at(0L) * 1000L > 1800000L;
     }
     catch (Exception localException)
     {

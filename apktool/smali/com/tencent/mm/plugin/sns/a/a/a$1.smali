@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gGs:Lcom/tencent/mm/plugin/sns/a/a/a;
+.field final synthetic gMU:Lcom/tencent/mm/plugin/sns/a/a/a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 102
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/a/a/a$1;->gGs:Lcom/tencent/mm/plugin/sns/a/a/a;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/a/a/a$1;->gMU:Lcom/tencent/mm/plugin/sns/a/a/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,16 +41,16 @@
 
     .prologue
     .line 105
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/a$1;->gGs:Lcom/tencent/mm/plugin/sns/a/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/a$1;->gMU:Lcom/tencent/mm/plugin/sns/a/a/a;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/plugin/sns/a/a/a;->gFK:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/plugin/sns/a/a/a;->gMm:Z
 
     if-nez v0, :cond_0
 
     .line 106
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/a$1;->gGs:Lcom/tencent/mm/plugin/sns/a/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/a$1;->gMU:Lcom/tencent/mm/plugin/sns/a/a/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/a/a/a;->axv()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/a/a/a;->azX()V
 
     .line 108
     :cond_0

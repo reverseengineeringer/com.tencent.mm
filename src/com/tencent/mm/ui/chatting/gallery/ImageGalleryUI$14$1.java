@@ -9,8 +9,8 @@ final class ImageGalleryUI$14$1
   
   public final void run()
   {
-    if (ImageGalleryUI.j(lgQ.lgM) != null) {
-      ImageGalleryUI.j(lgQ.lgM).bdf();
+    if (ImageGalleryUI.i(lHc.lGY) != null) {
+      ImageGalleryUI.i(lHc.lGY).biI();
     }
   }
 }

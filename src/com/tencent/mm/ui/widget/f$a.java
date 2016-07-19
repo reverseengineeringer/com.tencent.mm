@@ -2,9 +2,9 @@ package com.tencent.mm.ui.widget;
 
 public abstract interface f$a
 {
-  public abstract void D(float paramFloat);
+  public abstract void B(float paramFloat);
   
-  public abstract boolean baF();
+  public abstract boolean bfT();
   
   public abstract void j(boolean paramBoolean, int paramInt);
 }

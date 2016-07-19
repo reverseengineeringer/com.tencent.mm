@@ -1,5 +1,5 @@
-.class final Lct/bt$a;
-.super Landroid/os/Handler;
+.class final enum Lct/bt$a;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
@@ -9,83 +9,95 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x10
+    accessFlags = 0x4018
     name = "a"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lct/bt$a;",
+        ">;"
+    }
+.end annotation
 
-# instance fields
-.field private synthetic a:Lct/bt;
+
+# static fields
+.field public static final enum a:Lct/bt$a;
+
+.field public static final enum b:Lct/bt$a;
+
+.field public static final enum c:Lct/bt$a;
 
 
 # direct methods
-.method private constructor <init>(Lct/bt;Landroid/os/Looper;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
     .prologue
-    .line 292
-    iput-object p1, p0, Lct/bt$a;->a:Lct/bt;
+    const/4 v4, 0x2
 
-    .line 293
-    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    const/4 v3, 0x1
 
-    .line 294
+    const/4 v2, 0x0
+
+    .line 31
+    new-instance v0, Lct/bt$a;
+
+    const-string/jumbo v1, "UNKNOW"
+
+    invoke-direct {v0, v1, v2}, Lct/bt$a;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lct/bt$a;->a:Lct/bt$a;
+
+    new-instance v0, Lct/bt$a;
+
+    const-string/jumbo v1, "MOVE"
+
+    invoke-direct {v0, v1, v3}, Lct/bt$a;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lct/bt$a;->b:Lct/bt$a;
+
+    new-instance v0, Lct/bt$a;
+
+    const-string/jumbo v1, "STATIC"
+
+    invoke-direct {v0, v1, v4}, Lct/bt$a;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lct/bt$a;->c:Lct/bt$a;
+
+    .line 30
+    const/4 v0, 0x3
+
+    new-array v0, v0, [Lct/bt$a;
+
+    sget-object v1, Lct/bt$a;->a:Lct/bt$a;
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lct/bt$a;->b:Lct/bt$a;
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lct/bt$a;->c:Lct/bt$a;
+
+    aput-object v1, v0, v4
+
     return-void
 .end method
 
-.method synthetic constructor <init>(Lct/bt;Landroid/os/Looper;B)V
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .prologue
-    .line 291
-    invoke-direct {p0, p1, p2}, Lct/bt$a;-><init>(Lct/bt;Landroid/os/Looper;)V
+    .line 30
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
-    .locals 3
-
-    .prologue
-    .line 298
-    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
-
-    .line 299
-    iget-object v0, p0, Lct/bt$a;->a:Lct/bt;
-
-    iget-boolean v0, v0, Lct/bt;->a:Z
-
-    if-nez v0, :cond_0
-
-    .line 307
-    :goto_0
-    return-void
-
-    .line 303
-    :cond_0
-    const/4 v0, 0x0
-
-    const-wide/16 v1, 0x4e20
-
-    invoke-virtual {p0, v0, v1, v2}, Lct/bt$a;->sendEmptyMessageDelayed(IJ)Z
-
-    .line 305
-    iget-object v0, p0, Lct/bt$a;->a:Lct/bt;
-
-    invoke-static {v0}, Lct/bt;->a(Lct/bt;)Lct/bj;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lct/cv;->b(Lct/bj;)Landroid/telephony/CellLocation;
-
-    move-result-object v0
-
-    .line 306
-    iget-object v1, p0, Lct/bt$a;->a:Lct/bt;
-
-    invoke-static {v1, v0}, Lct/bt;->a(Lct/bt;Landroid/telephony/CellLocation;)V
-
-    goto :goto_0
 .end method

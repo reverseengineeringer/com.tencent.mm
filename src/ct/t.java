@@ -1,54 +1,106 @@
 package ct;
 
 import android.text.TextUtils;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 public final class t
 {
-  public String a = "";
-  public int b = -1;
+  String a;
+  Map b;
   
-  public t() {}
-  
-  public t(String paramString, int paramInt)
+  public t(String paramString)
   {
     a = paramString;
-    b = paramInt;
+    b = new HashMap();
   }
   
-  public final String a()
+  public final void a(a parama)
   {
-    return a + ":" + b;
+    b.put(a, parama);
   }
   
-  public final boolean a(t paramt)
+  public static final class a
   {
-    return (paramt != null) && (a.equals(a)) && (b == b);
-  }
-  
-  public final boolean a(String paramString)
-  {
-    if (TextUtils.isEmpty(paramString)) {}
-    do
+    String a;
+    public String b;
+    public List c;
+    public s d;
+    long e;
+    
+    public a(String paramString1, long paramLong, String paramString2)
     {
-      return false;
-      paramString = paramString.split(":");
-    } while (paramString.length != 2);
-    a = paramString[0];
-    try
+      a = paramString1;
+      e = paramLong;
+      b = paramString2;
+      c = new ArrayList();
+    }
+    
+    public a(String paramString1, long paramLong, String paramString2, String paramString3, String paramString4)
     {
-      b = Integer.parseInt(paramString[1]);
-      return true;
+      a = paramString1;
+      e = paramLong;
+      b = paramString3;
+      c = a(paramString2);
+      if (!TextUtils.isEmpty(paramString4))
+      {
+        paramString1 = paramString4.split(":");
+        if ((paramString1 == null) || (paramString1.length <= 0)) {}
+      }
+      for (paramString1 = new s(paramString1[0], Integer.parseInt(paramString1[1]));; paramString1 = null)
+      {
+        d = paramString1;
+        return;
+      }
     }
-    catch (NumberFormatException paramString) {}
-    return false;
-  }
-  
-  public final String toString()
-  {
-    if (b == -1) {
-      return a;
+    
+    private static ArrayList a(String paramString)
+    {
+      ArrayList localArrayList = new ArrayList();
+      if (!TextUtils.isEmpty(paramString))
+      {
+        paramString = paramString.split(",");
+        if ((paramString != null) && (paramString.length > 0))
+        {
+          int j = paramString.length;
+          int i = 0;
+          while (i < j)
+          {
+            String[] arrayOfString = paramString[i].split(":");
+            if ((arrayOfString != null) && (arrayOfString.length > 0)) {
+              localArrayList.add(new s(arrayOfString[0], Integer.parseInt(arrayOfString[1])));
+            }
+            i += 1;
+          }
+        }
+      }
+      return localArrayList;
     }
-    return a();
+    
+    public final String a()
+    {
+      Object localObject = c;
+      if ((localObject == null) || (((List)localObject).size() == 0)) {
+        return "";
+      }
+      StringBuilder localStringBuilder = new StringBuilder();
+      localObject = ((List)localObject).iterator();
+      while (((Iterator)localObject).hasNext())
+      {
+        localStringBuilder.append(((s)((Iterator)localObject).next()).a());
+        localStringBuilder.append(",");
+      }
+      localStringBuilder.deleteCharAt(localStringBuilder.length() - 1);
+      return localStringBuilder.toString();
+    }
+    
+    public final boolean b()
+    {
+      return System.currentTimeMillis() - e > ab.e * 60 * 1000;
+    }
   }
 }
 

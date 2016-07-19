@@ -11,7 +11,7 @@ final class f$4
   
   public final boolean onLongClick(View paramView)
   {
-    return iJk.iJj.fK(cqF);
+    return jgg.jgf.gB(clS);
   }
 }
 

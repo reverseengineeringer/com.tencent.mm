@@ -1,48 +1,25 @@
 package com.tencent.mm.ui.chatting;
 
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import com.tencent.mm.pluginsdk.ui.chat.ChatFooter;
-import com.tencent.mm.pluginsdk.ui.chat.ChatFooter.c;
-import com.tencent.mm.ui.j;
-import com.tencent.mm.ui.o;
+import com.tencent.mm.s.d.a;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class ChattingUI$a$55
-  implements ChatFooter.c
+  implements d.a
 {
-  private Animation laY;
-  private Animation laZ;
-  
   ChattingUI$a$55(ChattingUI.a parama) {}
   
-  public final boolean gz(boolean paramBoolean)
+  public final void gm(final String paramString)
   {
-    if (laY == null)
+    ChattingUI.a.o(lAY).postDelayed(new Runnable()
     {
-      laY = AnimationUtils.loadAnimation(laF.koJ.kpc, 2130837583);
-      laZ = AnimationUtils.loadAnimation(laF.koJ.kpc, 2130837577);
-    }
-    if (paramBoolean)
-    {
-      if (laF.kYe != null) {
-        laF.kYe.startAnimation(laZ);
-      }
-      ChattingUI.a.w(laF);
-      laF.faQ.startAnimation(laY);
-      laF.faQ.postInvalidateDelayed(laY.getDuration());
-    }
-    for (;;)
-    {
-      return false;
-      laF.VC();
-      laF.faQ.startAnimation(laZ);
-      ChattingUI.a.x(laF);
-      if (laF.kYe != null)
+      public final void run()
       {
-        laF.kYe.startAnimation(laY);
-        laF.kYe.postInvalidateDelayed(laY.getDuration());
+        if ((!be.kf(ChattingUI.a.y(lAY))) && (!be.kf(paramString)) && (paramString.equals(ChattingUI.a.y(lAY)))) {
+          ChattingUI.a.z(lAY);
+        }
       }
-    }
+    }, 1000L);
   }
 }
 

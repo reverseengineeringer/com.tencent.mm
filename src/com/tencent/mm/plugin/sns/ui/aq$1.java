@@ -1,19 +1,14 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.model.c;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.storage.h;
+import com.tencent.mm.e.a.mm;
+import com.tencent.mm.sdk.c.c;
 
 final class aq$1
-  implements DialogInterface.OnDismissListener
+  extends c<mm>
 {
-  public final void onDismiss(DialogInterface paramDialogInterface)
+  aq$1(aq paramaq)
   {
-    int i = ay.b((Integer)ah.tD().rn().get(68385, null), 0);
-    ah.tD().rn().set(68385, Integer.valueOf(i + 1));
+    kum = mm.class.getName().hashCode();
   }
 }
 

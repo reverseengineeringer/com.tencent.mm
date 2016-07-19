@@ -10,9 +10,9 @@ final class RegByMobileRegAIOUI$6
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    kuT.age();
-    RegByMobileRegAIOUI.l(kuT);
-    kuT.finish();
+    kUa.aiI();
+    RegByMobileRegAIOUI.l(kUa);
+    kUa.finish();
     return true;
   }
 }

@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/r/d;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/by;->a(Lcom/tencent/mm/ui/chatting/aa$a;ILcom/tencent/mm/ui/chatting/ChattingUI$a;Lcom/tencent/mm/storage/ag;Ljava/lang/String;)V
+    value = Lcom/tencent/mm/ui/chatting/by;->a(Lcom/tencent/mm/ui/chatting/ab$a;ILcom/tencent/mm/ui/chatting/ChattingUI$a;Lcom/tencent/mm/storage/ai;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,24 @@
 
 
 # instance fields
-.field final synthetic kVe:Lcom/tencent/mm/ui/chatting/by;
+.field final synthetic lvc:Lcom/tencent/mm/storage/ai;
+
+.field final synthetic lvd:I
+
+.field final synthetic lve:Lcom/tencent/mm/ui/chatting/by;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/chatting/by;)V
+.method constructor <init>(Lcom/tencent/mm/ui/chatting/by;Lcom/tencent/mm/storage/ai;I)V
     .locals 0
 
     .prologue
-    .line 143
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/by$1;->kVe:Lcom/tencent/mm/ui/chatting/by;
+    .line 134
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/by$1;->lve:Lcom/tencent/mm/ui/chatting/by;
+
+    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/by$1;->lvc:Lcom/tencent/mm/storage/ai;
+
+    iput p3, p0, Lcom/tencent/mm/ui/chatting/by$1;->lvd:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,73 +44,47 @@
 
 
 # virtual methods
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+.method public final onClick(Landroid/view/View;)V
     .locals 3
 
     .prologue
-    .line 147
-    const-string/jumbo v0, "!56@/B4Tb64lLpKwUcOR+EdWcgrQWCeRaP+fpwTv6y+mNLvWE+WR3rr02g=="
+    .line 139
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/by$1;->lvc:Lcom/tencent/mm/storage/ai;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lcom/tencent/mm/e/b/bj;->field_imgPath:Ljava/lang/String;
 
-    const-string/jumbo v2, "errType "
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_0
 
-    move-result-object v1
+    .line 141
+    const-string/jumbo v0, "MicroMsg.ChattingItemVoiceRemindConfirm"
 
-    const-string/jumbo v2, " errCode "
+    const-string/jumbo v1, "filename is null"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "  scene "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p4}, Lcom/tencent/mm/r/j;->getType()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 153
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
-
-    move-result-object v0
-
-    const/16 v1, 0xdd
-
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/by$1;->kVe:Lcom/tencent/mm/ui/chatting/by;
-
-    iget-object v2, v2, Lcom/tencent/mm/ui/chatting/by;->ccZ:Lcom/tencent/mm/r/d;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
-
-    .line 154
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/by$1;->kVe:Lcom/tencent/mm/ui/chatting/by;
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lcom/tencent/mm/ui/chatting/by;->ccZ:Lcom/tencent/mm/r/d;
-
-    .line 155
+    .line 145
+    :goto_0
     return-void
+
+    .line 144
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/by$1;->lve:Lcom/tencent/mm/ui/chatting/by;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/by;->ltl:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->lsL:Lcom/tencent/mm/ui/chatting/cm;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/cm;->lvu:Lcom/tencent/mm/ui/chatting/n;
+
+    iget v1, p0, Lcom/tencent/mm/ui/chatting/by$1;->lvd:I
+
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/by$1;->lvc:Lcom/tencent/mm/storage/ai;
+
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/chatting/n;->c(ILcom/tencent/mm/storage/ai;)V
+
+    goto :goto_0
 .end method

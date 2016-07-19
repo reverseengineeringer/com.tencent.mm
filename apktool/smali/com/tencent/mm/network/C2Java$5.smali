@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ciw:Ljava/lang/String;
+.field final synthetic cdN:Ljava/lang/String;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 267
-    iput-object p1, p0, Lcom/tencent/mm/network/C2Java$5;->ciw:Ljava/lang/String;
+    .line 272
+    iput-object p1, p0, Lcom/tencent/mm/network/C2Java$5;->cdN:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,8 +40,8 @@
     .locals 4
 
     .prologue
-    .line 270
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fi()Lcom/tencent/mm/network/x;
+    .line 275
+    invoke-static {}, Lcom/tencent/mm/network/z;->FE()Lcom/tencent/mm/network/x;
 
     move-result-object v1
 
@@ -49,9 +49,9 @@
 
     const v3, 0xfff0003
 
-    iget-object v0, p0, Lcom/tencent/mm/network/C2Java$5;->ciw:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/network/C2Java$5;->cdN:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -62,12 +62,12 @@
     :goto_0
     invoke-virtual {v1, v2, v3, v0}, Lcom/tencent/mm/network/x;->onNotify(II[B)V
 
-    .line 271
+    .line 276
     return-void
 
-    .line 270
+    .line 275
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/network/C2Java$5;->ciw:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/network/C2Java$5;->cdN:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 

@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract aBz()Z
+.method public abstract aEQ()Z
 .end method
 
-.method public abstract cE(J)Z
+.method public abstract cS(J)Z
 .end method

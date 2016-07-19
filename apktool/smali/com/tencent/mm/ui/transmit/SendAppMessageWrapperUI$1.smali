@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/af$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ah$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lBv:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
+.field final synthetic mcn:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 66
-    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$1;->lBv:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
+    .line 67
+    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$1;->mcn:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,14 +36,14 @@
 
 
 # virtual methods
-.method public final lj()Z
+.method public final jK()Z
     .locals 3
 
     .prologue
     const/4 v0, 0x0
 
-    .line 70
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$1;->lBv:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
+    .line 71
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$1;->mcn:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->getWindow()Landroid/view/Window;
 
@@ -51,7 +51,7 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$1;->lBv:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$1;->mcn:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->getWindow()Landroid/view/Window;
 
@@ -63,7 +63,7 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$1;->lBv:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$1;->mcn:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->getWindow()Landroid/view/Window;
 
@@ -79,9 +79,9 @@
 
     if-nez v1, :cond_2
 
-    .line 73
+    .line 74
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$1;->lBv:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$1;->mcn:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->a(Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;)I
 
@@ -91,22 +91,22 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 74
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$1;->lBv:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
+    .line 75
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$1;->mcn:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->b(Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;)I
 
-    .line 75
+    .line 76
     const/4 v0, 0x1
 
-    .line 81
+    .line 82
     :cond_1
     :goto_0
     return v0
 
-    .line 80
+    .line 81
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$1;->lBv:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$1;->mcn:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->c(Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;)V
 

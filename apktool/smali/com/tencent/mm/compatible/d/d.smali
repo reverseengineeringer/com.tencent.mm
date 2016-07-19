@@ -17,7 +17,7 @@
     return-void
 .end method
 
-.method public static oh()Lcom/tencent/mm/compatible/d/c$a$a;
+.method public static mx()Lcom/tencent/mm/compatible/d/c$a$a;
     .locals 3
 
     .prologue
@@ -34,17 +34,17 @@
 
     move-result-object v2
 
-    iput-object v2, v1, Lcom/tencent/mm/compatible/d/c$a$a;->brz:Landroid/hardware/Camera;
+    iput-object v2, v1, Lcom/tencent/mm/compatible/d/c$a$a;->bfz:Landroid/hardware/Camera;
 
     .line 188
     const/4 v2, 0x0
 
-    iput v2, v1, Lcom/tencent/mm/compatible/d/c$a$a;->brw:I
+    iput v2, v1, Lcom/tencent/mm/compatible/d/c$a$a;->bfw:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 193
-    iget-object v2, v1, Lcom/tencent/mm/compatible/d/c$a$a;->brz:Landroid/hardware/Camera;
+    iget-object v2, v1, Lcom/tencent/mm/compatible/d/c$a$a;->bfz:Landroid/hardware/Camera;
 
     if-nez v2, :cond_0
 

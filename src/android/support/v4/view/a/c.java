@@ -9,11 +9,11 @@ final class c
 {
   static abstract interface a
   {
-    public abstract boolean at();
+    public abstract boolean as();
     
-    public abstract List au();
+    public abstract List<Object> at();
     
-    public abstract Object av();
+    public abstract Object au();
   }
 }
 

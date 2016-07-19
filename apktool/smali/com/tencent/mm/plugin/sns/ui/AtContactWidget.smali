@@ -4,21 +4,30 @@
 
 
 # instance fields
-.field private cMt:Landroid/view/View;
+.field private cJf:Landroid/view/View;
 
-.field private eRr:Landroid/app/Activity;
+.field private eZl:Landroid/app/Activity;
 
-.field private gWs:Landroid/widget/ImageView;
+.field private hjR:Landroid/widget/ImageView;
 
-.field private gWt:Landroid/widget/TextView;
+.field private hjS:Landroid/widget/TextView;
 
-.field private gWu:Lcom/tencent/mm/plugin/sns/ui/PreviewContactView;
+.field private hjT:Lcom/tencent/mm/plugin/sns/ui/PreviewContactView;
 
-.field gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+.field hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
-.field private gWw:Ljava/util/List;
+.field private hjV:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private gWx:Z
+.field private hjW:Z
 
 
 # direct methods
@@ -34,12 +43,12 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
 
     .line 43
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWx:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjW:Z
 
     .line 53
     invoke-direct {p0, p1}, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->init(Landroid/content/Context;)V
@@ -63,12 +72,12 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
 
     .line 43
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWx:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjW:Z
 
     .line 48
     invoke-direct {p0, p1}, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->init(Landroid/content/Context;)V
@@ -84,7 +93,7 @@
     const/4 v2, 0x1
 
     .line 28
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
 
     if-nez v0, :cond_0
 
@@ -92,28 +101,28 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWv:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjU:Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->getPrivated()I
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUploadConfigView;->aFW()I
 
     move-result v0
 
     if-lez v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->eRr:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->eZl:Landroid/app/Activity;
 
-    const v1, 0x7f0b16bf
+    const v1, 0x7f0812ea
 
-    const v2, 0x7f0b0ddd
+    const v2, 0x7f080134
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->f(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
     :goto_0
     return-void
@@ -133,9 +142,9 @@
 
     const-string/jumbo v1, "Add_address_titile"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->eRr:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->eZl:Landroid/app/Activity;
 
-    const v3, 0x7f0b162a
+    const v3, 0x7f08131b
 
     invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -151,7 +160,7 @@
 
     const-string/jumbo v1, "Block_list"
 
-    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
 
     move-result-object v2
 
@@ -159,11 +168,11 @@
 
     const-string/jumbo v1, "Select_Contact"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
 
     const-string/jumbo v3, ","
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -175,9 +184,9 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    sget-object v1, Lcom/tencent/mm/plugin/sns/b/a;->coa:Lcom/tencent/mm/pluginsdk/g;
+    sget-object v1, Lcom/tencent/mm/plugin/sns/b/a;->cjo:Lcom/tencent/mm/pluginsdk/g;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->eRr:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->eZl:Landroid/app/Activity;
 
     const/4 v3, 0x6
 
@@ -186,12 +195,12 @@
     goto :goto_0
 .end method
 
-.method private aAQ()V
+.method private aDH()V
     .locals 2
 
     .prologue
     .line 187
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -200,9 +209,9 @@
     if-lez v0, :cond_0
 
     .line 188
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWs:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjR:Landroid/widget/ImageView;
 
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->getWithDrawableId()I
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->aDI()I
 
     move-result v1
 
@@ -214,9 +223,9 @@
 
     .line 190
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWs:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjR:Landroid/widget/ImageView;
 
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->getWithEmptyDrawableId()I
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->aDJ()I
 
     move-result v1
 
@@ -234,10 +243,10 @@
 
     check-cast v0, Landroid/app/Activity;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->eRr:Landroid/app/Activity;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->eZl:Landroid/app/Activity;
 
     .line 90
-    invoke-static {p1}, Lcom/tencent/mm/ui/p;->ee(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {p1}, Lcom/tencent/mm/ui/p;->ef(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
@@ -249,12 +258,12 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->cMt:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->cJf:Landroid/view/View;
 
     .line 92
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->cMt:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->cJf:Landroid/view/View;
 
-    const v1, 0x7f070d9d
+    const v1, 0x7f10014a
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -262,12 +271,12 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/PreviewContactView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWu:Lcom/tencent/mm/plugin/sns/ui/PreviewContactView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjT:Lcom/tencent/mm/plugin/sns/ui/PreviewContactView;
 
     .line 93
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->cMt:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->cJf:Landroid/view/View;
 
-    const v1, 0x7f070d0c
+    const v1, 0x7f100148
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -275,12 +284,12 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWs:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjR:Landroid/widget/ImageView;
 
     .line 94
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->cMt:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->cJf:Landroid/view/View;
 
-    const v1, 0x7f070d0d
+    const v1, 0x7f100f92
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -288,10 +297,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWt:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjS:Landroid/widget/TextView;
 
     .line 96
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->cMt:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->cJf:Landroid/view/View;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget$1;
 
@@ -305,7 +314,7 @@
 
 
 # virtual methods
-.method public final A(Landroid/content/Intent;)Z
+.method public final E(Landroid/content/Intent;)Z
     .locals 3
 
     .prologue
@@ -340,7 +349,7 @@
 
     .line 151
     :goto_0
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
 
     if-nez v1, :cond_1
 
@@ -349,11 +358,11 @@
 
     invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
 
     .line 154
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
@@ -377,7 +386,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 156
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -386,7 +395,7 @@
     if-nez v2, :cond_2
 
     .line 157
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -400,7 +409,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->h([Ljava/lang/String;)Ljava/util/List;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->g([Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
@@ -408,25 +417,25 @@
 
     .line 160
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWu:Lcom/tencent/mm/plugin/sns/ui/PreviewContactView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjT:Lcom/tencent/mm/plugin/sns/ui/PreviewContactView;
 
     if-eqz v0, :cond_5
 
     .line 161
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWu:Lcom/tencent/mm/plugin/sns/ui/PreviewContactView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjT:Lcom/tencent/mm/plugin/sns/ui/PreviewContactView;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/PreviewContactView;->setList(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/PreviewContactView;->bf(Ljava/util/List;)V
 
     .line 163
     :cond_5
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWx:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjW:Z
 
     if-eqz v0, :cond_6
 
     .line 164
-    const-string/jumbo v0, "!32@/B4Tb64lLpJOOR0IitmaXivUELpXEdej"
+    const-string/jumbo v0, "MicroMsg.AtContactWiget"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -434,7 +443,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -448,17 +457,17 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWx:Z
-
-    if-eqz v0, :cond_8
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWt:Landroid/widget/TextView;
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjW:Z
 
     if-eqz v0, :cond_8
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjS:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_8
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -466,13 +475,13 @@
 
     if-lez v0, :cond_8
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWt:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjS:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -482,13 +491,13 @@
 
     if-ge v0, v1, :cond_7
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWt:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjS:Landroid/widget/TextView;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -507,7 +516,7 @@
     .line 166
     :cond_6
     :goto_2
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->aAQ()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->aDH()V
 
     .line 167
     const/4 v0, 0x1
@@ -516,16 +525,16 @@
 
     .line 164
     :cond_7
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWt:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjS:Landroid/widget/TextView;
 
-    const v1, 0x7f0b0ec8
+    const v1, 0x7f08139a
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     goto :goto_2
 
     :cond_8
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWt:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjS:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 
@@ -534,12 +543,44 @@
     goto :goto_2
 .end method
 
-.method public final aAP()V
+.method public final aDF()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 66
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
+
+    if-nez v0, :cond_0
+
+    .line 67
+    new-instance v0, Ljava/util/LinkedList;
+
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
+
+    .line 69
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public final aDG()V
     .locals 2
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
 
     if-nez v0, :cond_0
 
@@ -548,37 +589,37 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
 
     .line 76
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     .line 77
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWu:Lcom/tencent/mm/plugin/sns/ui/PreviewContactView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjT:Lcom/tencent/mm/plugin/sns/ui/PreviewContactView;
 
     if-eqz v0, :cond_1
 
     .line 78
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWu:Lcom/tencent/mm/plugin/sns/ui/PreviewContactView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjT:Lcom/tencent/mm/plugin/sns/ui/PreviewContactView;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjV:Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/PreviewContactView;->setList(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/PreviewContactView;->bf(Ljava/util/List;)V
 
     .line 80
     :cond_1
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->aAQ()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->aDH()V
 
     .line 81
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWt:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjS:Landroid/widget/TextView;
 
     if-eqz v0, :cond_2
 
     .line 82
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWt:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->hjS:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 
@@ -589,27 +630,24 @@
     return-void
 .end method
 
-.method public getAtList()Ljava/util/List;
+.method protected aDI()I
     .locals 1
 
     .prologue
-    .line 66
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
+    .line 218
+    const v0, 0x7f07029b
 
-    if-nez v0, :cond_0
+    return v0
+.end method
 
-    .line 67
-    new-instance v0, Ljava/util/LinkedList;
+.method protected aDJ()I
+    .locals 1
 
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+    .prologue
+    .line 222
+    const v0, 0x7f07029a
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
-
-    .line 69
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWw:Ljava/util/List;
-
-    return-object v0
+    return v0
 .end method
 
 .method protected getLayoutResource()I
@@ -617,110 +655,7 @@
 
     .prologue
     .line 214
-    const v0, 0x7f0a043f
+    const v0, 0x7f03003f
 
     return v0
-.end method
-
-.method protected getWithDrawableId()I
-    .locals 1
-
-    .prologue
-    .line 218
-    const v0, 0x7f0300ea
-
-    return v0
-.end method
-
-.method protected getWithEmptyDrawableId()I
-    .locals 1
-
-    .prologue
-    .line 222
-    const v0, 0x7f030100
-
-    return v0
-.end method
-
-.method public setShowAtList(Z)V
-    .locals 2
-
-    .prologue
-    .line 195
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWu:Lcom/tencent/mm/plugin/sns/ui/PreviewContactView;
-
-    if-eqz v0, :cond_0
-
-    .line 196
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWu:Lcom/tencent/mm/plugin/sns/ui/PreviewContactView;
-
-    if-eqz p1, :cond_1
-
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sns/ui/PreviewContactView;->setVisibility(I)V
-
-    .line 198
-    :cond_0
-    return-void
-
-    .line 196
-    :cond_1
-    const/16 v0, 0x8
-
-    goto :goto_0
-.end method
-
-.method public setShowAtNum(Z)V
-    .locals 0
-
-    .prologue
-    .line 210
-    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->gWx:Z
-
-    .line 211
-    return-void
-.end method
-
-.method public setShowAtTips(Z)V
-    .locals 2
-
-    .prologue
-    .line 201
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->cMt:Landroid/view/View;
-
-    if-eqz v0, :cond_0
-
-    .line 202
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/AtContactWidget;->cMt:Landroid/view/View;
-
-    const v1, 0x7f070d9c
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    .line 203
-    if-eqz v0, :cond_0
-
-    .line 204
-    if-eqz p1, :cond_1
-
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 207
-    :cond_0
-    return-void
-
-    .line 204
-    :cond_1
-    const/16 v1, 0x8
-
-    goto :goto_0
 .end method

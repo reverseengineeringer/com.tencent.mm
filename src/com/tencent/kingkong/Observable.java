@@ -2,22 +2,22 @@ package com.tencent.kingkong;
 
 import java.util.ArrayList;
 
-public abstract class Observable
+public abstract class Observable<T>
 {
-  protected final ArrayList mObservers = new ArrayList();
+  protected final ArrayList<T> mObservers = new ArrayList();
   
-  public void registerObserver(Object paramObject)
+  public void registerObserver(T paramT)
   {
-    if (paramObject == null) {
+    if (paramT == null) {
       throw new IllegalArgumentException("The observer is null.");
     }
     synchronized (mObservers)
     {
-      if (mObservers.contains(paramObject)) {
-        throw new IllegalStateException("Observer " + paramObject + " is already registered.");
+      if (mObservers.contains(paramT)) {
+        throw new IllegalStateException("Observer " + paramT + " is already registered.");
       }
     }
-    mObservers.add(paramObject);
+    mObservers.add(paramT);
   }
   
   public void unregisterAll()
@@ -29,17 +29,17 @@ public abstract class Observable
     }
   }
   
-  public void unregisterObserver(Object paramObject)
+  public void unregisterObserver(T paramT)
   {
-    if (paramObject == null) {
+    if (paramT == null) {
       throw new IllegalArgumentException("The observer is null.");
     }
     int i;
     synchronized (mObservers)
     {
-      i = mObservers.indexOf(paramObject);
+      i = mObservers.indexOf(paramT);
       if (i == -1) {
-        throw new IllegalStateException("Observer " + paramObject + " was not registered.");
+        throw new IllegalStateException("Observer " + paramT + " was not registered.");
       }
     }
     mObservers.remove(i);

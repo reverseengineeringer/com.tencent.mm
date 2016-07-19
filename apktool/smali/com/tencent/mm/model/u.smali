@@ -4,7 +4,7 @@
 
 
 # virtual methods
-.method public abstract a(Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/protocal/b/aeo;)Lcom/tencent/mm/model/u;
+.method public abstract a(Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/protocal/b/afj;)Lcom/tencent/mm/model/u;
 .end method
 
 .method public abstract a(Lcom/tencent/mm/model/v;)V
@@ -13,10 +13,7 @@
 .method public abstract b(Lcom/tencent/mm/model/v;)V
 .end method
 
-.method public abstract cD(Ljava/lang/String;)Lcom/tencent/mm/model/u;
-.end method
-
-.method public abstract g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+.method public abstract cI(Ljava/lang/String;)Lcom/tencent/mm/model/u;
 .end method
 
 .method public abstract getMediaId()Ljava/lang/String;
@@ -25,40 +22,43 @@
 .method public abstract getTitle()Ljava/lang/String;
 .end method
 
-.method public abstract mA()Z
+.method public abstract i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 .end method
 
-.method public abstract mF()Lcom/tencent/mm/protocal/b/aeo;
+.method public abstract kB()Ljava/lang/String;
 .end method
 
-.method public abstract mG()Lcom/tencent/mm/model/u;
+.method public abstract kJ()I
 .end method
 
-.method public abstract mI()I
+.method public abstract kK()Ljava/lang/String;
 .end method
 
-.method public abstract mJ()Ljava/lang/String;
+.method public abstract kL()I
 .end method
 
-.method public abstract mK()Lcom/tencent/mm/model/u;
+.method public abstract kM()Ljava/lang/String;
 .end method
 
-.method public abstract mL()Lcom/tencent/mm/model/u;
+.method public abstract kN()Z
 .end method
 
-.method public abstract mn()Ljava/lang/String;
+.method public abstract kS()Lcom/tencent/mm/protocal/b/afj;
 .end method
 
-.method public abstract mw()I
+.method public abstract kT()Lcom/tencent/mm/model/u;
 .end method
 
-.method public abstract mx()Ljava/lang/String;
+.method public abstract kV()I
 .end method
 
-.method public abstract my()I
+.method public abstract kW()Ljava/lang/String;
 .end method
 
-.method public abstract mz()Ljava/lang/String;
+.method public abstract kX()Lcom/tencent/mm/model/u;
+.end method
+
+.method public abstract kY()Lcom/tencent/mm/model/u;
 .end method
 
 .method public abstract release()V

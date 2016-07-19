@@ -2,7 +2,7 @@ package com.tencent.mm.ui.chatting.gallery;
 
 public abstract interface g$b
 {
-  public abstract void bgx();
+  public abstract void bmg();
   
   public abstract void clear();
 }

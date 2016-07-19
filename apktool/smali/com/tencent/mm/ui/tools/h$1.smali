@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic lvY:Lcom/tencent/mm/ui/tools/h$b;
+.field final synthetic lWL:Lcom/tencent/mm/ui/tools/h$b;
 
-.field final synthetic lvZ:Lcom/tencent/mm/ui/tools/h;
+.field final synthetic lWM:Lcom/tencent/mm/ui/tools/h;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 245
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/h$1;->lvZ:Lcom/tencent/mm/ui/tools/h;
+    .line 262
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/h$1;->lWM:Lcom/tencent/mm/ui/tools/h;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/tools/h$1;->lvY:Lcom/tencent/mm/ui/tools/h$b;
+    iput-object p2, p0, Lcom/tencent/mm/ui/tools/h$1;->lWL:Lcom/tencent/mm/ui/tools/h$b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,16 +44,16 @@
     .locals 2
 
     .prologue
-    .line 264
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/h$1;->lvZ:Lcom/tencent/mm/ui/tools/h;
+    .line 281
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/h$1;->lWM:Lcom/tencent/mm/ui/tools/h;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/h$1;->lvZ:Lcom/tencent/mm/ui/tools/h;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/h$1;->lWM:Lcom/tencent/mm/ui/tools/h;
 
-    iget v1, v1, Lcom/tencent/mm/ui/tools/h;->mgg:I
+    iget v1, v1, Lcom/tencent/mm/ui/tools/h;->hiB:I
 
-    iput v1, v0, Lcom/tencent/mm/ui/tools/h;->mgi:I
+    iput v1, v0, Lcom/tencent/mm/ui/tools/h;->hiD:I
 
-    .line 265
+    .line 282
     return-void
 .end method
 
@@ -61,27 +61,27 @@
     .locals 2
 
     .prologue
-    .line 256
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/h$1;->lvY:Lcom/tencent/mm/ui/tools/h$b;
+    .line 273
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/h$1;->lWL:Lcom/tencent/mm/ui/tools/h$b;
 
     if-eqz v0, :cond_0
 
-    .line 257
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/h$1;->lvY:Lcom/tencent/mm/ui/tools/h$b;
+    .line 274
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/h$1;->lWL:Lcom/tencent/mm/ui/tools/h$b;
 
     invoke-interface {v0}, Lcom/tencent/mm/ui/tools/h$b;->onAnimationEnd()V
 
-    .line 259
+    .line 276
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/h$1;->lvZ:Lcom/tencent/mm/ui/tools/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/h$1;->lWM:Lcom/tencent/mm/ui/tools/h;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/h$1;->lvZ:Lcom/tencent/mm/ui/tools/h;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/h$1;->lWM:Lcom/tencent/mm/ui/tools/h;
 
-    iget v1, v1, Lcom/tencent/mm/ui/tools/h;->mgg:I
+    iget v1, v1, Lcom/tencent/mm/ui/tools/h;->hiB:I
 
-    iput v1, v0, Lcom/tencent/mm/ui/tools/h;->mgi:I
+    iput v1, v0, Lcom/tencent/mm/ui/tools/h;->hiD:I
 
-    .line 260
+    .line 277
     return-void
 .end method
 
@@ -89,7 +89,7 @@
     .locals 0
 
     .prologue
-    .line 270
+    .line 287
     return-void
 .end method
 
@@ -97,26 +97,26 @@
     .locals 2
 
     .prologue
-    .line 248
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/h$1;->lvY:Lcom/tencent/mm/ui/tools/h$b;
+    .line 265
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/h$1;->lWL:Lcom/tencent/mm/ui/tools/h$b;
 
     if-eqz v0, :cond_0
 
-    .line 249
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/h$1;->lvY:Lcom/tencent/mm/ui/tools/h$b;
+    .line 266
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/h$1;->lWL:Lcom/tencent/mm/ui/tools/h$b;
 
     invoke-interface {v0}, Lcom/tencent/mm/ui/tools/h$b;->onAnimationStart()V
 
-    .line 251
+    .line 268
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/h$1;->lvZ:Lcom/tencent/mm/ui/tools/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/h$1;->lWM:Lcom/tencent/mm/ui/tools/h;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/h$1;->lvZ:Lcom/tencent/mm/ui/tools/h;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/h$1;->lWM:Lcom/tencent/mm/ui/tools/h;
 
-    iget v1, v1, Lcom/tencent/mm/ui/tools/h;->mgf:I
+    iget v1, v1, Lcom/tencent/mm/ui/tools/h;->hiA:I
 
-    iput v1, v0, Lcom/tencent/mm/ui/tools/h;->mgi:I
+    iput v1, v0, Lcom/tencent/mm/ui/tools/h;->hiD:I
 
-    .line 252
+    .line 269
     return-void
 .end method

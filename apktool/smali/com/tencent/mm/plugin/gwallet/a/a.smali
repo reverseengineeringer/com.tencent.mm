@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field exC:Lcom/tencent/mm/plugin/gwallet/a/c;
+.field eDW:Lcom/tencent/mm/plugin/gwallet/a/c;
 
 
 # direct methods
@@ -46,7 +46,7 @@
     invoke-direct {p0, v0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 35
-    iput-object p1, p0, Lcom/tencent/mm/plugin/gwallet/a/a;->exC:Lcom/tencent/mm/plugin/gwallet/a/c;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/gwallet/a/a;->eDW:Lcom/tencent/mm/plugin/gwallet/a/c;
 
     .line 36
     return-void

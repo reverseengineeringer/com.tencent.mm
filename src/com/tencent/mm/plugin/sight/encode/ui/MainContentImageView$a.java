@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sight.encode.ui;
 
 public abstract interface MainContentImageView$a
 {
-  public abstract void lb(int paramInt);
+  public abstract void mi(int paramInt);
 }
 
 /* Location:

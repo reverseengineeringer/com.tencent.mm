@@ -11,7 +11,7 @@ final class g$15
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    DialogInterface.OnCancelListener localOnCancelListener = (DialogInterface.OnCancelListener)kCG.get();
+    DialogInterface.OnCancelListener localOnCancelListener = (DialogInterface.OnCancelListener)lbL.get();
     if (localOnCancelListener != null) {
       localOnCancelListener.onCancel(paramDialogInterface);
     }

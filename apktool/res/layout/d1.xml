@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/qf" android:background="@drawable/bs" android:padding="@dimen/i7" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textSize="@dimen/i8" android:textColor="@color/q7" android:ellipsize="end" android:layout_gravity="center" android:id="@id/qg" android:background="@drawable/b6" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="42.0dip" android:layout_marginLeft="@dimen/i7" android:layout_marginRight="@dimen/i7" android:minWidth="168.0dip" android:text="@string/t3" android:singleLine="true" />
+        <TextView android:textSize="@dimen/h4" android:textColor="@color/j9" android:ellipsize="end" android:gravity="center" android:id="@id/qo" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/he" android:layout_marginTop="@dimen/i7" android:layout_marginRight="@dimen/he" android:singleLine="true" />
+    </LinearLayout>
+    <View android:id="@id/qp" android:background="@color/lf" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="1.0px" android:layerType="software" />
+    <CheckBox android:textSize="@dimen/h4" android:textColor="@color/j9" android:id="@id/qr" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hr" android:layout_marginBottom="@dimen/hr" android:checked="false" android:drawablePadding="5.0dip" style="@style/MMTextCheckBox" />
+</LinearLayout>

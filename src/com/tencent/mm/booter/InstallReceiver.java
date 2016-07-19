@@ -6,9 +6,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import com.jg.JgClassChecked;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 @JgClassChecked(author=20, fComment="checked", lastDate="20140429", reviewer=20, vComment={com.jg.EType.RECEIVERCHECK})
 public class InstallReceiver
@@ -20,20 +20,20 @@ public class InstallReceiver
       return;
     }
     String str = paramIntent.getAction();
-    u.i("!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0=", "action:[%s]", new Object[] { str });
-    if ((ay.kz(str)) || (!str.equals("com.android.vending.INSTALL_REFERRER")))
+    v.i("MicroMsg.InstallReceiver", "action:[%s]", new Object[] { str });
+    if ((be.kf(str)) || (!str.equals("com.android.vending.INSTALL_REFERRER")))
     {
-      u.e("!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0=", "action is null or nil, or not the installed action");
+      v.e("MicroMsg.InstallReceiver", "action is null or nil, or not the installed action");
       return;
     }
     str = "";
     try
     {
       paramIntent = paramIntent.getStringExtra("referrer");
-      u.i("!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0=", "get referer:[%s]", new Object[] { paramIntent });
-      if (ay.kz(paramIntent))
+      v.i("MicroMsg.InstallReceiver", "get referer:[%s]", new Object[] { paramIntent });
+      if (be.kf(paramIntent))
       {
-        u.e("!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0=", "get referer is null or nil");
+        v.e("MicroMsg.InstallReceiver", "get referer is null or nil");
         return;
       }
     }
@@ -41,11 +41,11 @@ public class InstallReceiver
     {
       for (;;)
       {
-        u.e("!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0=", "%s", new Object[] { ay.b(paramIntent) });
+        v.e("MicroMsg.InstallReceiver", "%s", new Object[] { be.f(paramIntent) });
         paramIntent = str;
       }
-      u.d("!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0=", "[PREF] write installreferer = " + paramIntent);
-      paramContext.getSharedPreferences(y.aUK(), 0).edit().putString("installreferer", paramIntent).commit();
+      v.d("MicroMsg.InstallReceiver", "[PREF] write installreferer = " + paramIntent);
+      paramContext.getSharedPreferences(aa.aZO(), 0).edit().putString("installreferer", paramIntent).commit();
     }
   }
 }

@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Gallery.LayoutParams;
 import android.widget.LinearLayout.LayoutParams;
-import com.tencent.mm.aw.a;
+import com.tencent.mm.az.a;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.MultiTouchImageView;
 
 final class ContactRemarkImagePreviewUI$a
@@ -36,22 +36,22 @@ final class ContactRemarkImagePreviewUI$a
   
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
-    paramView = View.inflate(ljp, 2131361821, null);
-    paramViewGroup = (MultiTouchImageView)paramView.findViewById(2131165228);
+    paramView = View.inflate(lJA, 2130903398, null);
+    paramViewGroup = (MultiTouchImageView)paramView.findViewById(2131755043);
     paramView.setLayoutParams(new Gallery.LayoutParams(-1, -1));
     paramViewGroup.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
-    Bitmap localBitmap = BackwardSupportUtil.b.b(imagePath, a.getDensity(ljp));
+    Bitmap localBitmap = BackwardSupportUtil.b.b(imagePath, a.getDensity(lJA));
     int i;
     Matrix localMatrix;
     if (localBitmap != null)
     {
-      paramInt = ContactRemarkImagePreviewUI.e(ljp).getWidth();
-      i = ContactRemarkImagePreviewUI.e(ljp).getHeight();
+      paramInt = ContactRemarkImagePreviewUI.e(lJA).getWidth();
+      i = ContactRemarkImagePreviewUI.e(lJA).getHeight();
       localMatrix = new Matrix();
       localMatrix.reset();
       f1 = localBitmap.getWidth() / localBitmap.getHeight();
       f2 = localBitmap.getHeight() / localBitmap.getWidth();
-      u.v("!32@/B4Tb64lLpJ8SVyOn6WIBnf/iMnAMEhc", "whDiv is " + f1 + " hwDiv is " + f2);
+      v.v("MicroMsg.ImagePreviewUI", "whDiv is " + f1 + " hwDiv is " + f2);
       if ((f2 < 2.0F) || (localBitmap.getHeight() < 480)) {
         break label308;
       }
@@ -67,7 +67,7 @@ final class ContactRemarkImagePreviewUI$a
     for (;;)
     {
       paramViewGroup.setImageMatrix(localMatrix);
-      paramViewGroup.bN(localBitmap.getWidth(), localBitmap.getHeight());
+      paramViewGroup.bT(localBitmap.getWidth(), localBitmap.getHeight());
       paramViewGroup.setImageBitmap(localBitmap);
       return paramView;
       label280:
@@ -89,7 +89,7 @@ final class ContactRemarkImagePreviewUI$a
       {
         localMatrix.postScale(1.0F, 1.0F);
         f1 = (i - localBitmap.getHeight()) / 2;
-        u.d("!32@/B4Tb64lLpJ8SVyOn6WIBnf/iMnAMEhc", " offsety " + f1);
+        v.d("MicroMsg.ImagePreviewUI", " offsety " + f1);
         localMatrix.postTranslate(0.0F, f1);
       }
     }

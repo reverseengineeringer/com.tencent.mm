@@ -1,23 +1,23 @@
 package com.tencent.mm.modelsimple;
 
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
 
 final class t$1$1
   implements d
 {
   t$1$1(t.1 param1) {}
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvkJt4vtcyP1jJCoDvPgLfDU=", "summerauth dkcert getcert type:%d ret [%d,%d]", new Object[] { Integer.valueOf(paramj.getType()), Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    v.d("MicroMsg.NetSceneReg", "summerauth dkcert getcert type:%d ret [%d,%d]", new Object[] { Integer.valueOf(paramj.getType()), Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
     if ((paramInt1 != 0) || (paramInt2 != 0))
     {
-      cbp.cbo.anM.a(paramInt1, paramInt2, "", cbp.cbo);
+      bVt.bVs.bkT.onSceneEnd(paramInt1, paramInt2, "", bVt.bVs);
       return;
     }
-    cbp.cbo.a(cbp.cbo.bFs, cbp.cbo.anM);
+    bVt.bVs.a(bVt.bVs.byD, bVt.bVs.bkT);
   }
 }
 

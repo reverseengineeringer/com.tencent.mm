@@ -10,7 +10,7 @@ final class LoginHistoryUI$14
   
   public final void onDismiss(DialogInterface paramDialogInterface)
   {
-    LoginHistoryUI.j(ktx);
+    LoginHistoryUI.j(kSF);
   }
 }
 

@@ -19,22 +19,47 @@
 .end method
 
 .method public abstract a(Ljava/lang/String;Ljava/util/LinkedList;DDLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/LinkedList",
+            "<",
+            "Ljava/lang/String;",
+            ">;DD",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
 .end method
 
-.method public abstract aS(Ljava/lang/String;Ljava/lang/String;)Z
+.method public abstract ahV()Z
 .end method
 
-.method public abstract afr()Z
-.end method
-
-.method public abstract afs()Ljava/lang/String;
+.method public abstract ahW()Ljava/lang/String;
 .end method
 
 .method public abstract b(Lcom/tencent/mm/pluginsdk/i$z;)V
 .end method
 
-.method public abstract qr(Ljava/lang/String;)Ljava/util/LinkedList;
+.method public abstract ba(Ljava/lang/String;Ljava/lang/String;)Z
 .end method
 
-.method public abstract qt(Ljava/lang/String;)Z
+.method public abstract rH(Ljava/lang/String;)Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/LinkedList",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end method
+
+.method public abstract rJ(Ljava/lang/String;)Z
 .end method

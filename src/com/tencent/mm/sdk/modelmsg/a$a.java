@@ -6,8 +6,8 @@ import com.tencent.mm.sdk.e.a;
 public final class a$a
   extends a
 {
-  public String bNO;
-  public String bXM;
+  public String bHk;
+  public String bRs;
   public String username;
   
   public final int getType()
@@ -15,18 +15,18 @@ public final class a$a
     return 3;
   }
   
-  public final void l(Bundle paramBundle)
+  public final void n(Bundle paramBundle)
   {
-    super.l(paramBundle);
-    paramBundle.putString("_wxapi_getmessage_req_lang", bXM);
-    paramBundle.putString("_wxapi_getmessage_req_country", bNO);
+    super.n(paramBundle);
+    paramBundle.putString("_wxapi_getmessage_req_lang", bRs);
+    paramBundle.putString("_wxapi_getmessage_req_country", bHk);
   }
   
-  public final void m(Bundle paramBundle)
+  public final void o(Bundle paramBundle)
   {
-    super.m(paramBundle);
-    bXM = paramBundle.getString("_wxapi_getmessage_req_lang");
-    bNO = paramBundle.getString("_wxapi_getmessage_req_country");
+    super.o(paramBundle);
+    bRs = paramBundle.getString("_wxapi_getmessage_req_lang");
+    bHk = paramBundle.getString("_wxapi_getmessage_req_country");
   }
 }
 

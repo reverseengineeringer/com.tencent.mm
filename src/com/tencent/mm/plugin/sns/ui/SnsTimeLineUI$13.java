@@ -1,6 +1,6 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.compatible.util.h;
+import android.widget.ListView;
 
 final class SnsTimeLineUI$13
   implements Runnable
@@ -9,7 +9,11 @@ final class SnsTimeLineUI$13
   
   public final void run()
   {
-    h.i(hkJ);
+    hzE.bgh();
+    SnsTimeLineUI.k(hzE);
+    hzE.Ah(hzE.getString(2131235588));
+    SnsTimeLineUI.l(hzE);
+    SnsTimeLineUI.b(hzE, jhzE).eLC.getFirstVisiblePosition());
   }
 }
 

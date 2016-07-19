@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/m_" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/apf" android:background="@color/lf" android:paddingLeft="@dimen/i7" android:paddingRight="@dimen/i7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="{A}" style="@style/MMListCatalog" />
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/i7" android:paddingRight="@dimen/i7" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/MMListItem">
+        <ImageView android:id="@id/apg" android:background="@raw/default_avatar" android:layout_width="@dimen/iz" android:layout_height="@dimen/iz" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="8.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/j_" android:id="@id/aph" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="{QQ/Mobile/Google昵称}" android:singleLine="true" />
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/g8" android:id="@id/api" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="{微信昵称}" android:singleLine="true" />
+        </LinearLayout>
+        <FrameLayout android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/apj" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="75.0dip" android:minHeight="30.0dip">
+            <TextView android:textSize="14.0dip" android:textColor="@color/ha" android:gravity="center" android:layout_gravity="center" android:id="@id/apk" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="60.0dip" android:minHeight="30.0dip" android:text="@string/awv" />
+            <ProgressBar android:gravity="center" android:layout_gravity="center" android:id="@id/apl" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/smallCustomProgressBar" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,17 +1,14 @@
 package com.tencent.mm.ui.chatting.gallery;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
+import com.tencent.mm.e.a.ex;
+import com.tencent.mm.sdk.c.c;
 
 final class ImageGalleryGridUI$4
-  implements MenuItem.OnMenuItemClickListener
+  extends c<ex>
 {
-  ImageGalleryGridUI$4(ImageGalleryGridUI paramImageGalleryGridUI) {}
-  
-  public final boolean onMenuItemClick(MenuItem paramMenuItem)
+  ImageGalleryGridUI$4(ImageGalleryGridUI paramImageGalleryGridUI)
   {
-    lfA.onBackPressed();
-    return true;
+    kum = ex.class.getName().hashCode();
   }
 }
 

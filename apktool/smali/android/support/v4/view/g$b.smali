@@ -50,18 +50,6 @@
     return-object v0
 .end method
 
-.method public final a(Landroid/view/MenuItem;)Landroid/view/View;
-    .locals 1
-
-    .prologue
-    .line 176
-    invoke-interface {p1}, Landroid/view/MenuItem;->getActionView()Landroid/view/View;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public final a(Landroid/view/MenuItem;I)V
     .locals 0
 

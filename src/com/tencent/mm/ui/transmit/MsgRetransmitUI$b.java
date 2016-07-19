@@ -4,8 +4,8 @@ import java.util.List;
 
 final class MsgRetransmitUI$b
 {
-  boolean atR = true;
-  public List lBc = null;
+  boolean afB = true;
+  public List<String> mbW = null;
 }
 
 /* Location:

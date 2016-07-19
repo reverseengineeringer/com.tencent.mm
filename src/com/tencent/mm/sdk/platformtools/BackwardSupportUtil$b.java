@@ -36,7 +36,7 @@ public final class BackwardSupportUtil$b
     return paramString;
   }
   
-  public static String dk(Context paramContext)
+  public static String di(Context paramContext)
   {
     Object localObject = paramContext.getResources().getDisplayMetrics();
     Configuration localConfiguration = paramContext.getResources().getConfiguration();

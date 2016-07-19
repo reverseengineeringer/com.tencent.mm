@@ -7,7 +7,7 @@ final class AdVideoPlayerLoadingBar$2
   
   public final void run()
   {
-    gyp.setVideoTotalTime(gyq);
+    gEM.mb(gEN);
   }
 }
 

@@ -11,11 +11,11 @@ final class AnimatedExpandableListView$a$2
   
   public final void onAnimationEnd(Animation paramAnimation)
   {
-    AnimatedExpandableListView.a.b(kBI, hfB);
-    kBJ.collapseGroup(hfB);
-    kBI.notifyDataSetChanged();
-    kBK.kBS = -1;
-    kBH.setTag(Integer.valueOf(0));
+    AnimatedExpandableListView.a.b(laO, hus);
+    laP.collapseGroup(hus);
+    laO.notifyDataSetChanged();
+    laQ.laY = -1;
+    laN.setTag(Integer.valueOf(0));
   }
   
   public final void onAnimationRepeat(Animation paramAnimation) {}

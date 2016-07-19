@@ -7,33 +7,33 @@ import android.widget.TextView;
 
 public final class b
 {
-  public TextView cNT;
-  private View kjn;
-  private ImageView kjo;
-  public TextView kjp;
-  private ImageView kjq;
-  public ImageView kjr;
-  private ImageView kjs;
+  public TextView cuj;
+  private ImageView kJA;
+  private View kJv;
+  private ImageView kJw;
+  public TextView kJx;
+  private ImageView kJy;
+  public ImageView kJz;
   
   public b(View paramView)
   {
-    cNT = ((TextView)paramView.findViewById(2131169493));
-    kjp = ((TextView)paramView.findViewById(2131169494));
-    kjq = ((ImageView)paramView.findViewById(2131169495));
-    kjr = ((ImageView)paramView.findViewById(2131169496));
-    kjs = ((ImageView)paramView.findViewById(2131169497));
-    kjn = paramView.findViewById(2131169491);
-    kjo = ((ImageView)paramView.findViewById(2131169492));
+    cuj = ((TextView)paramView.findViewById(2131755203));
+    kJx = ((TextView)paramView.findViewById(2131755204));
+    kJy = ((ImageView)paramView.findViewById(2131755205));
+    kJz = ((ImageView)paramView.findViewById(2131755206));
+    kJA = ((ImageView)paramView.findViewById(2131755207));
+    kJv = paramView.findViewById(2131755201);
+    kJw = ((ImageView)paramView.findViewById(2131755202));
   }
   
-  public final void b(View.OnClickListener paramOnClickListener)
+  public final void g(View.OnClickListener paramOnClickListener)
   {
-    kjn.setOnClickListener(paramOnClickListener);
+    kJv.setOnClickListener(paramOnClickListener);
   }
   
-  public final void gQ(boolean paramBoolean)
+  public final void hq(boolean paramBoolean)
   {
-    ImageView localImageView = kjq;
+    ImageView localImageView = kJy;
     if (paramBoolean) {}
     for (int i = 0;; i = 8)
     {
@@ -42,9 +42,9 @@ public final class b
     }
   }
   
-  public final void gR(boolean paramBoolean)
+  public final void hr(boolean paramBoolean)
   {
-    ImageView localImageView = kjs;
+    ImageView localImageView = kJA;
     if (paramBoolean) {}
     for (int i = 0;; i = 8)
     {
@@ -55,7 +55,7 @@ public final class b
   
   public final void setTitle(CharSequence paramCharSequence)
   {
-    cNT.setText(paramCharSequence);
+    cuj.setText(paramCharSequence);
   }
 }
 

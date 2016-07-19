@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+.field final synthetic kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 593
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$5;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 594
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$5;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,15 +40,15 @@
     .locals 3
 
     .prologue
-    .line 597
+    .line 598
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 598
+    .line 599
     const-string/jumbo v1, "country_name"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$5;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$5;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->k(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Ljava/lang/String;
 
@@ -56,10 +56,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 599
+    .line 600
     const-string/jumbo v1, "couttry_code"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$5;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$5;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->j(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Ljava/lang/String;
 
@@ -67,13 +67,13 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 600
-    sget-object v1, Lcom/tencent/mm/plugin/a/a;->coa:Lcom/tencent/mm/pluginsdk/g;
+    .line 601
+    sget-object v1, Lcom/tencent/mm/plugin/a/a;->cjo:Lcom/tencent/mm/pluginsdk/g;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$5;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$5;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-interface {v1, v0, v2}, Lcom/tencent/mm/pluginsdk/g;->b(Landroid/content/Intent;Landroid/app/Activity;)V
 
-    .line 601
+    .line 602
     return-void
 .end method

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/base/MMClearEditText;->aSo()V
+    value = Lcom/tencent/mm/ui/base/MMClearEditText;->aXg()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kDr:Lcom/tencent/mm/ui/base/MMClearEditText;
+.field final synthetic lcw:Lcom/tencent/mm/ui/base/MMClearEditText;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 93
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMClearEditText$3;->kDr:Lcom/tencent/mm/ui/base/MMClearEditText;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMClearEditText$3;->lcw:Lcom/tencent/mm/ui/base/MMClearEditText;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 97
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText$3;->kDr:Lcom/tencent/mm/ui/base/MMClearEditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText$3;->lcw:Lcom/tencent/mm/ui/base/MMClearEditText;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMClearEditText;->c(Lcom/tencent/mm/ui/base/MMClearEditText;)Landroid/view/View$OnFocusChangeListener;
 
@@ -50,7 +50,7 @@
     if-eqz v0, :cond_0
 
     .line 98
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText$3;->kDr:Lcom/tencent/mm/ui/base/MMClearEditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText$3;->lcw:Lcom/tencent/mm/ui/base/MMClearEditText;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMClearEditText;->c(Lcom/tencent/mm/ui/base/MMClearEditText;)Landroid/view/View$OnFocusChangeListener;
 
@@ -60,7 +60,7 @@
 
     .line 100
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText$3;->kDr:Lcom/tencent/mm/ui/base/MMClearEditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText$3;->lcw:Lcom/tencent/mm/ui/base/MMClearEditText;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMClearEditText;->b(Lcom/tencent/mm/ui/base/MMClearEditText;)V
 

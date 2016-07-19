@@ -1,49 +1,64 @@
 package com.tencent.mm.protocal.b;
 
 public final class ax
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public int iXS;
-  public int iXT;
+  public String aFn;
+  public String jvt;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.ci(1, iXS);
-      paramVarArgs.ci(2, iXT);
+      if (aFn != null) {
+        paramVarArgs.e(1, aFn);
+      }
+      if (jvt != null) {
+        paramVarArgs.e(2, jvt);
+      }
       return 0;
     }
     if (paramInt == 1) {
-      return a.a.a.a.cg(1, iXS) + 0 + a.a.a.a.cg(2, iXT);
-    }
-    if (paramInt == 2)
-    {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.bog();
-        }
+      if (aFn == null) {
+        break label234;
       }
-      return 0;
     }
-    if (paramInt == 3)
+    label234:
+    for (paramInt = a.a.a.b.b.a.f(1, aFn) + 0;; paramInt = 0)
     {
-      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-      ax localax = (ax)paramVarArgs[1];
-      switch (((Integer)paramVarArgs[2]).intValue())
+      int i = paramInt;
+      if (jvt != null) {
+        i = paramInt + a.a.a.b.b.a.f(2, jvt);
+      }
+      return i;
+      if (paramInt == 2)
       {
-      default: 
-        return -1;
-      case 1: 
-        iXS = maU.jC();
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bve();
+          }
+        }
+        break;
+      }
+      if (paramInt == 3)
+      {
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        ax localax = (ax)paramVarArgs[1];
+        switch (((Integer)paramVarArgs[2]).intValue())
+        {
+        default: 
+          return -1;
+        case 1: 
+          aFn = mMY.readString();
+          return 0;
+        }
+        jvt = mMY.readString();
         return 0;
       }
-      iXT = maU.jC();
-      return 0;
+      return -1;
     }
-    return -1;
   }
 }
 

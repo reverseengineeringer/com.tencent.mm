@@ -7,7 +7,7 @@ final class a$5
   
   public final void run()
   {
-    MMGIFJNI.saveRemainder(a.d(ewP));
+    MMGIFJNI.saveRemainder(a.d(eDi));
   }
 }
 

@@ -1,73 +1,57 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import java.util.HashMap;
 import java.util.Map;
 
 public final class k
 {
-  private static k bAd;
-  public Map bAe = new HashMap();
+  private static k btg;
+  private Map<String, b> bth = new HashMap();
   
-  public static String eV(String paramString)
+  public static String fh(String paramString)
   {
     return "SessionId@" + paramString + "#" + System.currentTimeMillis();
   }
   
-  public static k sW()
+  public static k sV()
   {
-    if (bAd == null) {
-      bAd = new k();
+    if (btg == null) {
+      btg = new k();
     }
-    return bAd;
+    return btg;
   }
   
-  public final a eT(String paramString)
+  public final a ff(String paramString)
   {
-    b localb2 = (b)bAe.get(paramString);
+    b localb2 = (b)bth.get(paramString);
     b localb1 = localb2;
     if (localb2 == null)
     {
       localb1 = new b();
-      bAe.put(paramString, localb1);
+      bth.put(paramString, localb1);
     }
-    return bAg;
+    return btj;
   }
   
-  public final a eU(String paramString)
+  public final a fg(String paramString)
   {
-    paramString = (b)bAe.remove(paramString);
+    paramString = (b)bth.remove(paramString);
     if (paramString != null) {
-      return bAg;
+      return btj;
     }
     return null;
   }
   
-  public static class a
+  public static final class a
   {
-    public Map bAf = new HashMap();
+    public Map<String, Object> bti = new HashMap();
     
-    public final a c(String paramString, long paramLong)
+    public final int fi(String paramString)
     {
-      if (!ay.kz(paramString)) {
-        bAf.put(paramString, Long.valueOf(paramLong));
-      }
-      return this;
-    }
-    
-    public final a e(String paramString, Object paramObject)
-    {
-      if (!ay.kz(paramString)) {
-        bAf.put(paramString, paramObject);
-      }
-      return this;
-    }
-    
-    public final int eW(String paramString)
-    {
-      if (!ay.kz(paramString))
+      if (!be.kf(paramString))
       {
-        paramString = bAf.get(paramString);
+        paramString = bti.get(paramString);
         if ((paramString instanceof Integer)) {
           return ((Integer)paramString).intValue();
         }
@@ -78,9 +62,9 @@ public final class k
     public final String getString(String paramString1, String paramString2)
     {
       String str = paramString2;
-      if (!ay.kz(paramString1))
+      if (!be.kf(paramString1))
       {
-        paramString1 = bAf.get(paramString1);
+        paramString1 = bti.get(paramString1);
         str = paramString2;
         if ((paramString1 instanceof String)) {
           str = (String)paramString1;
@@ -89,10 +73,10 @@ public final class k
       return str;
     }
     
-    public final a p(String paramString, int paramInt)
+    public final a l(String paramString, Object paramObject)
     {
-      if (!ay.kz(paramString)) {
-        bAf.put(paramString, Integer.valueOf(paramInt));
+      if (!be.kf(paramString)) {
+        bti.put(paramString, paramObject);
       }
       return this;
     }
@@ -100,7 +84,7 @@ public final class k
   
   private static final class b
   {
-    public k.a bAg = new k.a();
+    k.a btj = new k.a();
   }
 }
 

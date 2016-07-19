@@ -1,6 +1,5 @@
 .class Lcom/tencent/smtt/sdk/SystemWebViewClient$WebResourceRequestImpl;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 # interfaces
 .implements Lcom/tencent/smtt/export/external/interfaces/WebResourceRequest;
@@ -25,6 +24,16 @@
 .field private method:Ljava/lang/String;
 
 .field private requestHeaders:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field final synthetic this$0:Lcom/tencent/smtt/sdk/SystemWebViewClient;
 
@@ -34,29 +43,34 @@
 # direct methods
 .method public constructor <init>(Lcom/tencent/smtt/sdk/SystemWebViewClient;Ljava/lang/String;ZZLjava/lang/String;Ljava/util/Map;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "ZZ",
+            "Ljava/lang/String;",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 
-    .prologue
-    .line 122
     iput-object p1, p0, Lcom/tencent/smtt/sdk/SystemWebViewClient$WebResourceRequestImpl;->this$0:Lcom/tencent/smtt/sdk/SystemWebViewClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 123
     iput-object p2, p0, Lcom/tencent/smtt/sdk/SystemWebViewClient$WebResourceRequestImpl;->url:Ljava/lang/String;
 
-    .line 124
     iput-boolean p3, p0, Lcom/tencent/smtt/sdk/SystemWebViewClient$WebResourceRequestImpl;->isMainFrame:Z
 
-    .line 125
     iput-boolean p4, p0, Lcom/tencent/smtt/sdk/SystemWebViewClient$WebResourceRequestImpl;->hasUserGesture:Z
 
-    .line 126
     iput-object p5, p0, Lcom/tencent/smtt/sdk/SystemWebViewClient$WebResourceRequestImpl;->method:Ljava/lang/String;
 
-    .line 127
     iput-object p6, p0, Lcom/tencent/smtt/sdk/SystemWebViewClient$WebResourceRequestImpl;->requestHeaders:Ljava/util/Map;
 
-    .line 128
     return-void
 .end method
 
@@ -65,8 +79,6 @@
 .method public getMethod()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 143
     iget-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebViewClient$WebResourceRequestImpl;->method:Ljava/lang/String;
 
     return-object v0
@@ -74,9 +86,17 @@
 
 .method public getRequestHeaders()Ljava/util/Map;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
-    .prologue
-    .line 147
     iget-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebViewClient$WebResourceRequestImpl;->requestHeaders:Ljava/util/Map;
 
     return-object v0
@@ -85,8 +105,6 @@
 .method public getUrl()Landroid/net/Uri;
     .locals 1
 
-    .prologue
-    .line 131
     iget-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebViewClient$WebResourceRequestImpl;->url:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -99,8 +117,6 @@
 .method public hasGesture()Z
     .locals 1
 
-    .prologue
-    .line 139
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/SystemWebViewClient$WebResourceRequestImpl;->hasUserGesture:Z
 
     return v0
@@ -109,8 +125,6 @@
 .method public isForMainFrame()Z
     .locals 1
 
-    .prologue
-    .line 135
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/SystemWebViewClient$WebResourceRequestImpl;->isMainFrame:Z
 
     return v0

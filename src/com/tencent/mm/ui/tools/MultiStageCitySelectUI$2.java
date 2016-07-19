@@ -10,8 +10,8 @@ final class MultiStageCitySelectUI$2
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    MultiStageCitySelectUI.e(lxh);
-    lxh.finish();
+    MultiStageCitySelectUI.e(lXV);
+    lXV.finish();
     return true;
   }
 }

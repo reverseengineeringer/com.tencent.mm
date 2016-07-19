@@ -1,26 +1,14 @@
 package com.tencent.mm.ui.chatting;
 
-import android.view.MenuItem.OnMenuItemClickListener;
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.j;
-import com.tencent.mm.ui.o;
+import com.tencent.mm.e.a.hd;
+import com.tencent.mm.sdk.c.c;
 
 final class ChattingUI$a$66
-  implements View.OnClickListener
+  extends c<hd>
 {
-  ChattingUI$a$66(ChattingUI.a parama, MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener) {}
-  
-  public final void onClick(View paramView)
+  ChattingUI$a$66(ChattingUI.a parama)
   {
-    if (!laF.koJ.koS) {
-      u.w("!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/", "Actionbar customView onclick screen not enable");
-    }
-    while (kpz == null) {
-      return;
-    }
-    kpz.onMenuItemClick(null);
+    kum = hd.class.getName().hashCode();
   }
 }
 

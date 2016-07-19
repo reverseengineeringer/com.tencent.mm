@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private bpb:I
+.field bda:I
 
-.field private kDu:I
+.field public lcA:I
 
-.field private kDv:I
+.field public lcz:I
 
 
 # direct methods
@@ -22,17 +22,17 @@
     .line 19
     const/16 v0, 0x9
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->bpb:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->bda:I
 
     .line 21
-    const v0, 0x7f0406d1
+    const v0, 0x7f0205b7
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDu:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->lcz:I
 
     .line 22
-    const v0, 0x7f04067b
+    const v0, 0x7f0205b2
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDv:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->lcA:I
 
     .line 34
     invoke-direct {p0, p1, p2}, Lcom/tencent/mm/ui/base/MMDotView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -54,17 +54,17 @@
     .line 19
     const/16 v0, 0x9
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->bpb:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->bda:I
 
     .line 21
-    const v0, 0x7f0406d1
+    const v0, 0x7f0205b7
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDu:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->lcz:I
 
     .line 22
-    const v0, 0x7f04067b
+    const v0, 0x7f0205b2
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDv:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->lcA:I
 
     .line 28
     invoke-direct {p0, p1, p2}, Lcom/tencent/mm/ui/base/MMDotView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -80,7 +80,7 @@
     const/4 v1, 0x0
 
     .line 42
-    sget-object v0, Lcom/tencent/mm/R$b;->MMDotView:[I
+    sget-object v0, Lcom/tencent/mm/R$b;->WF:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -95,7 +95,7 @@
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 45
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/base/MMDotView;->setDotCount(I)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/base/MMDotView;->sx(I)V
 
     .line 47
     return-void
@@ -103,49 +103,14 @@
 
 
 # virtual methods
-.method public setDarkStyle(Z)V
-    .locals 1
-
-    .prologue
-    .line 50
-    if-eqz p1, :cond_0
-
-    .line 51
-    const v0, 0x7f0406e0
-
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDu:I
-
-    .line 52
-    const v0, 0x7f0406f5
-
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDv:I
-
-    .line 57
-    :goto_0
-    return-void
-
-    .line 54
-    :cond_0
-    const v0, 0x7f0406d1
-
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDu:I
-
-    .line 55
-    const v0, 0x7f04067b
-
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDv:I
-
-    goto :goto_0
-.end method
-
-.method public setDotCount(I)V
+.method public final sx(I)V
     .locals 5
 
     .prologue
     const/4 v4, 0x0
 
     .line 75
-    const-string/jumbo v0, "!32@/B4Tb64lLpKKFsASoNqVnOoHB0Jq9fM2"
+    const-string/jumbo v0, "MicroMsg.MMDotView"
 
     const-string/jumbo v1, "setDotCount:%d"
 
@@ -159,7 +124,7 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 76
     if-gez p1, :cond_1
@@ -171,19 +136,19 @@
 
     .line 79
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->bpb:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->bda:I
 
     if-le p1, v0, :cond_2
 
     .line 80
-    const-string/jumbo v0, "!32@/B4Tb64lLpKKFsASoNqVnOoHB0Jq9fM2"
+    const-string/jumbo v0, "MicroMsg.MMDotView"
 
     const-string/jumbo v1, "large than max count"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 81
-    iget p1, p0, Lcom/tencent/mm/ui/base/MMDotView;->bpb:I
+    iget p1, p0, Lcom/tencent/mm/ui/base/MMDotView;->bda:I
 
     .line 83
     :cond_2
@@ -198,7 +163,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0597
+    const v1, 0x7f030409
 
     const/4 v2, 0x0
 
@@ -211,7 +176,7 @@
     check-cast v0, Landroid/widget/ImageView;
 
     .line 86
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDu:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMDotView;->lcz:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -235,75 +200,14 @@
     if-eqz v0, :cond_0
 
     .line 91
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDv:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMDotView;->lcA:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_0
 .end method
 
-.method public setInvertedStyle(Z)V
-    .locals 2
-
-    .prologue
-    const v1, 0x7f0406d1
-
-    const v0, 0x7f04067b
-
-    .line 60
-    if-eqz p1, :cond_0
-
-    .line 61
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDu:I
-
-    .line 62
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDv:I
-
-    .line 67
-    :goto_0
-    return-void
-
-    .line 64
-    :cond_0
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDu:I
-
-    .line 65
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDv:I
-
-    goto :goto_0
-.end method
-
-.method public setMaxCount(I)V
-    .locals 5
-
-    .prologue
-    .line 70
-    const-string/jumbo v0, "!32@/B4Tb64lLpKKFsASoNqVnOoHB0Jq9fM2"
-
-    const-string/jumbo v1, "setMaxCount:%d"
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 71
-    iput p1, p0, Lcom/tencent/mm/ui/base/MMDotView;->bpb:I
-
-    .line 72
-    return-void
-.end method
-
-.method public setSelectedDot(I)V
+.method public final sy(I)V
     .locals 6
 
     .prologue
@@ -312,7 +216,7 @@
     const/4 v0, 0x0
 
     .line 96
-    const-string/jumbo v1, "!32@/B4Tb64lLpKKFsASoNqVnOoHB0Jq9fM2"
+    const-string/jumbo v1, "MicroMsg.MMDotView"
 
     const-string/jumbo v2, "setSelectedDot:target index is %d"
 
@@ -324,7 +228,7 @@
 
     aput-object v4, v3, v0
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 98
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMDotView;->getChildCount()I
@@ -343,7 +247,7 @@
     .line 104
     :cond_0
     :goto_0
-    const-string/jumbo v1, "!32@/B4Tb64lLpKKFsASoNqVnOoHB0Jq9fM2"
+    const-string/jumbo v1, "MicroMsg.MMDotView"
 
     const-string/jumbo v2, "setSelectedDot:after adjust index is %d"
 
@@ -355,7 +259,7 @@
 
     aput-object v4, v3, v0
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v1, v0
 
@@ -375,7 +279,7 @@
     check-cast v0, Landroid/widget/ImageView;
 
     .line 108
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDu:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMDotView;->lcz:I
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -407,7 +311,7 @@
     if-eqz v0, :cond_3
 
     .line 112
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDv:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMDotView;->lcA:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 

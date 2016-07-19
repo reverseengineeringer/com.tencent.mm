@@ -10,25 +10,25 @@ final class VideoSurfaceView$2
   
   public final void onPrepared(MediaPlayer paramMediaPlayer)
   {
-    VideoSurfaceView.d(iTc);
-    if (VideoSurfaceView.e(iTc) != null) {
-      VideoSurfaceView.e(iTc).Xq();
+    VideoSurfaceView.d(jqo);
+    if (VideoSurfaceView.e(jqo) != null) {
+      VideoSurfaceView.e(jqo).Zb();
     }
-    VideoSurfaceView.a(iTc, paramMediaPlayer.getVideoWidth());
-    VideoSurfaceView.b(iTc, paramMediaPlayer.getVideoHeight());
-    VideoSurfaceView.c(iTc);
-    if ((VideoSurfaceView.a(iTc) != 0) && (VideoSurfaceView.b(iTc) != 0)) {
-      if (VideoSurfaceView.f(iTc))
+    VideoSurfaceView.a(jqo, paramMediaPlayer.getVideoWidth());
+    VideoSurfaceView.b(jqo, paramMediaPlayer.getVideoHeight());
+    VideoSurfaceView.c(jqo);
+    if ((VideoSurfaceView.a(jqo) != 0) && (VideoSurfaceView.b(jqo) != 0)) {
+      if (VideoSurfaceView.f(jqo))
       {
-        VideoSurfaceView.g(iTc).start();
-        VideoSurfaceView.h(iTc);
+        VideoSurfaceView.g(jqo).start();
+        VideoSurfaceView.h(jqo);
       }
     }
-    while (!VideoSurfaceView.f(iTc)) {
+    while (!VideoSurfaceView.f(jqo)) {
       return;
     }
-    VideoSurfaceView.g(iTc).start();
-    VideoSurfaceView.h(iTc);
+    VideoSurfaceView.g(jqo).start();
+    VideoSurfaceView.h(jqo);
   }
 }
 

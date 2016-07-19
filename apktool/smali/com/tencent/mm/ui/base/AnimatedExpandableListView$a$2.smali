@@ -18,15 +18,15 @@
 
 
 # instance fields
-.field final synthetic hfB:I
+.field final synthetic hus:I
 
-.field final synthetic kBH:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;
+.field final synthetic laN:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;
 
-.field final synthetic kBI:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
+.field final synthetic laO:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
 
-.field final synthetic kBJ:Landroid/widget/ExpandableListView;
+.field final synthetic laP:Landroid/widget/ExpandableListView;
 
-.field final synthetic kBK:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;
+.field final synthetic laQ:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;
 
 
 # direct methods
@@ -35,15 +35,15 @@
 
     .prologue
     .line 443
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->kBI:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->laO:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
 
-    iput p2, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->hfB:I
+    iput p2, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->hus:I
 
-    iput-object p3, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->kBJ:Landroid/widget/ExpandableListView;
+    iput-object p3, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->laP:Landroid/widget/ExpandableListView;
 
-    iput-object p4, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->kBK:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;
+    iput-object p4, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->laQ:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;
 
-    iput-object p5, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->kBH:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;
+    iput-object p5, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->laN:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,33 +57,33 @@
 
     .prologue
     .line 447
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->kBI:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->laO:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->hfB:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->hus:I
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;->b(Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;I)V
 
     .line 448
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->kBJ:Landroid/widget/ExpandableListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->laP:Landroid/widget/ExpandableListView;
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->hfB:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->hus:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ExpandableListView;->collapseGroup(I)Z
 
     .line 449
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->kBI:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->laO:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;->notifyDataSetChanged()V
 
     .line 450
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->kBK:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->laQ:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;
 
     const/4 v1, -0x1
 
-    iput v1, v0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;->kBS:I
+    iput v1, v0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;->laY:I
 
     .line 451
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->kBH:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a$2;->laN:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$b;
 
     const/4 v1, 0x0
 

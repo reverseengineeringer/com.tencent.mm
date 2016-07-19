@@ -4,12 +4,14 @@ import android.net.Uri;
 import android.view.View;
 import android.view.View.OnClickListener;
 import com.tencent.mm.model.ah;
+import com.tencent.mm.plugin.report.service.g;
 import com.tencent.mm.pluginsdk.model.app.p;
 import com.tencent.mm.pluginsdk.model.downloader.d.a;
 import com.tencent.mm.pluginsdk.model.downloader.e;
 import com.tencent.mm.pluginsdk.model.q;
 import com.tencent.mm.pluginsdk.model.r;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.h;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.j;
 import java.io.File;
@@ -21,40 +23,40 @@ final class AppChooserUI$4
   
   public final void onClick(View paramView)
   {
-    u.i("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "mDownloadOnClickListener");
+    v.i("MicroMsg.AppChooserUI", "mDownloadOnClickListener");
     int i;
-    if (AppChooserUI.a(iRi) != null)
+    if (AppChooserUI.a(jos) != null)
     {
-      i = aiRi).iRj;
-      if (i != AppChooserUI.f.iRz) {
+      i = ajos).jot;
+      if (i != AppChooserUI.f.joI) {
         break label298;
       }
-      if ((AppChooserUI.b(iRi) != null) && (AppChooserUI.b(iRi).isShowing()))
+      if ((AppChooserUI.b(jos) != null) && (AppChooserUI.b(jos).isShowing()))
       {
-        aiRi).iRj = AppChooserUI.f.iRA;
-        AppChooserUI.a(iRi).notifyDataSetChanged();
+        ajos).jot = AppChooserUI.f.joJ;
+        AppChooserUI.a(jos).notifyDataSetChanged();
       }
       paramView = new d.a();
-      if (AppChooserUI.f(iRi) != 1) {
+      if (AppChooserUI.f(jos) != 1) {
         break label245;
       }
-      paramView.Ac("http://mdc.html5.qq.com/d/directdown.jsp?channel_id=10375");
-      paramView.Ad(AppChooserUI.h(iRi).aPk());
-      paramView.oh(1);
-      paramView.gj(true);
-      com.tencent.mm.pluginsdk.model.downloader.c.aQc().a(iCw);
-      r.aPt();
-      r.oe(AppChooserUI.g(iRi));
-      if (AppChooserUI.g(iRi) == 0)
+      paramView.Cc("http://mdc.html5.qq.com/d/directdown.jsp?channel_id=10375");
+      paramView.Cd(AppChooserUI.h(jos).aTQ());
+      paramView.pM(1);
+      paramView.gH(true);
+      com.tencent.mm.pluginsdk.model.downloader.c.aUL().a(iZk);
+      r.aTZ();
+      r.pK(AppChooserUI.g(jos));
+      if (AppChooserUI.g(jos) == 0)
       {
-        if (!AppChooserUI.i(iRi)) {
+        if (!AppChooserUI.i(jos)) {
           break label262;
         }
-        com.tencent.mm.plugin.report.service.h.fUJ.g(11168, new Object[] { Integer.valueOf(4), Integer.valueOf(AppChooserUI.f(iRi)) });
+        g.gdY.h(11168, new Object[] { Integer.valueOf(4), Integer.valueOf(AppChooserUI.f(jos)) });
       }
       label208:
-      if (AppChooserUI.g(iRi) == 1) {
-        com.tencent.mm.plugin.report.service.h.fUJ.g(12809, new Object[] { Integer.valueOf(5), "" });
+      if (AppChooserUI.g(jos) == 1) {
+        g.gdY.h(12809, new Object[] { Integer.valueOf(5), "" });
       }
     }
     label245:
@@ -68,28 +70,28 @@ final class AppChooserUI$4
         do
         {
           return;
-          paramView.Ac(AppChooserUI.h(iRi).FG());
+          paramView.Cc(AppChooserUI.h(jos).Gb());
           break;
-          com.tencent.mm.plugin.report.service.h.fUJ.g(11168, new Object[] { Integer.valueOf(3), Integer.valueOf(AppChooserUI.f(iRi)) });
+          g.gdY.h(11168, new Object[] { Integer.valueOf(3), Integer.valueOf(AppChooserUI.f(jos)) });
           break label208;
-        } while (i != AppChooserUI.f.iRB);
-        paramView = iRi;
-        long l = AppChooserUI.j(iRi);
-        u.i("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "installRecommendApp");
-        Object localObject = aQccHpath;
-        u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "filepath:%s", new Object[] { localObject });
+        } while (i != AppChooserUI.f.joK);
+        paramView = jos;
+        long l = AppChooserUI.j(jos);
+        v.i("MicroMsg.AppChooserUI", "installRecommendApp");
+        Object localObject = aULcWpath;
+        v.d("MicroMsg.AppChooserUI", "filepath:%s", new Object[] { localObject });
         localObject = new File((String)localObject);
-        if (p.c(koJ.kpc, Uri.fromFile((File)localObject))) {
+        if (p.c(kNN.kOg, Uri.fromFile((File)localObject))) {
           break label426;
         }
-        ah.tD().rn().set(paramView.oL(274560), Long.valueOf(0L));
-      } while (iQK == null);
-      iQK.iRj = AppChooserUI.f.iRz;
-      iQK.notifyDataSetChanged();
+        ah.tE().ro().set(paramView.qy(274560), Long.valueOf(0L));
+      } while (jnU == null);
+      jnU.jot = AppChooserUI.f.joI;
+      jnU.notifyDataSetChanged();
       return;
-    } while (iQK == null);
-    iQK.iRj = AppChooserUI.f.iRB;
-    iQK.notifyDataSetChanged();
+    } while (jnU == null);
+    jnU.jot = AppChooserUI.f.joK;
+    jnU.notifyDataSetChanged();
   }
 }
 

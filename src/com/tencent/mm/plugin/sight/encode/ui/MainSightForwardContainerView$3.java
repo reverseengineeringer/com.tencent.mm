@@ -7,7 +7,7 @@ public final class MainSightForwardContainerView$3
   
   public final void run()
   {
-    MainSightForwardContainerView.a(gCI).show();
+    MainSightForwardContainerView.a(gJj).show();
   }
 }
 

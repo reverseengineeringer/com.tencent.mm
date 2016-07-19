@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sync-adapter android:accountType="com.tencent.mm.account" android:contentAuthority="com.android.contacts" android:supportsUploading="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

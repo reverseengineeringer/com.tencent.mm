@@ -7,8 +7,8 @@ import android.content.DialogInterface.OnClickListener;
 import android.widget.EditText;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelfriend.z;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.applet.SecurityImage;
 import com.tencent.mm.ui.base.g;
 
@@ -19,28 +19,28 @@ final class RegSetInfoUI$16
   
   public final void onClick(final DialogInterface paramDialogInterface, int paramInt)
   {
-    paramDialogInterface = RegSetInfoUI.b(kwh).getText().toString().trim();
-    Object localObject1 = RegSetInfoUI.a(kwh).getText().toString().trim();
+    paramDialogInterface = RegSetInfoUI.b(kVo).getText().toString().trim();
+    Object localObject1 = RegSetInfoUI.a(kVo).getText().toString().trim();
     if ((paramDialogInterface == null) || (paramDialogInterface.length() <= 0))
     {
-      g.e(kwh, 2131427534, 2131427653);
+      g.f(kVo, 2131235798, 2131234402);
       return;
     }
-    kwh.age();
-    paramInt = RegSetInfoUI.e(kwh);
-    Object localObject2 = RegSetInfoUI.f(kwh);
-    ah.tE().a(429, kwh);
-    paramDialogInterface = new z((String)localObject2, RegSetInfoUI.g(kwh), paramInt, paramDialogInterface, (String)localObject1, ((z)aoT).zb(), RegSetInfoUI.D(kwh).getSecImgCode());
-    ah.tE().d(paramDialogInterface);
-    localObject1 = kwh;
-    localObject2 = kwh;
-    kwh.getString(2131430877);
-    RegSetInfoUI.a((RegSetInfoUI)localObject1, g.a((Context)localObject2, kwh.getString(2131427615), true, new DialogInterface.OnCancelListener()
+    kVo.aiI();
+    paramInt = RegSetInfoUI.e(kVo);
+    Object localObject2 = RegSetInfoUI.f(kVo);
+    ah.tF().a(429, kVo);
+    paramDialogInterface = new z((String)localObject2, RegSetInfoUI.g(kVo), paramInt, paramDialogInterface, (String)localObject1, ((z)acZ).zo(), RegSetInfoUI.D(kVo).bhw());
+    ah.tF().a(paramDialogInterface, 0);
+    localObject1 = kVo;
+    localObject2 = kVo;
+    kVo.getString(2131231028);
+    RegSetInfoUI.a((RegSetInfoUI)localObject1, g.a((Context)localObject2, kVo.getString(2131234434), true, new DialogInterface.OnCancelListener()
     {
       public final void onCancel(DialogInterface paramAnonymousDialogInterface)
       {
-        ah.tE().c(paramDialogInterface);
-        ah.tE().b(429, kwh);
+        ah.tF().c(paramDialogInterface);
+        ah.tF().b(429, kVo);
       }
     }));
   }

@@ -1,13 +1,14 @@
 package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class WXWebpageObject
   implements WXMediaMessage.b
 {
   private static final int LENGTH_LIMIT = 10240;
-  private static final String TAG = "!44@/B4Tb64lLpI5xTkrII12QyxP0GmFMufcOhP+yzzJUyY=";
+  private static final String TAG = "MicroMsg.SDK.WXWebpageObject";
+  public String canvasPageXml;
   public String extInfo;
   public String webpageUrl;
   
@@ -22,7 +23,7 @@ public class WXWebpageObject
   {
     if ((webpageUrl == null) || (webpageUrl.length() == 0) || (webpageUrl.length() > 10240))
     {
-      u.e("!44@/B4Tb64lLpI5xTkrII12QyxP0GmFMufcOhP+yzzJUyY=", "checkArgs fail, webpageUrl is invalid");
+      v.e("MicroMsg.SDK.WXWebpageObject", "checkArgs fail, webpageUrl is invalid");
       return false;
     }
     return true;
@@ -32,6 +33,7 @@ public class WXWebpageObject
   {
     paramBundle.putString("_wxwebpageobject_extInfo", extInfo);
     paramBundle.putString("_wxwebpageobject_webpageUrl", webpageUrl);
+    paramBundle.putString("_wxwebpageobject_canvaspagexml", canvasPageXml);
   }
   
   public int type()
@@ -43,6 +45,7 @@ public class WXWebpageObject
   {
     extInfo = paramBundle.getString("_wxwebpageobject_extInfo");
     webpageUrl = paramBundle.getString("_wxwebpageobject_webpageUrl");
+    canvasPageXml = paramBundle.getString("_wxwebpageobject_canvaspagexml");
   }
 }
 

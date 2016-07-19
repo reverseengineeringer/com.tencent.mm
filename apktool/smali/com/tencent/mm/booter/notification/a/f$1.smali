@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/booter/notification/a/f$1;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.super Lcom/tencent/mm/sdk/platformtools/ac;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic bor:Lcom/tencent/mm/booter/notification/a/f;
+.field final synthetic bcp:Lcom/tencent/mm/booter/notification/a/f;
 
 
 # direct methods
@@ -23,10 +23,10 @@
     .locals 0
 
     .prologue
-    .line 53
-    iput-object p1, p0, Lcom/tencent/mm/booter/notification/a/f$1;->bor:Lcom/tencent/mm/booter/notification/a/f;
+    .line 58
+    iput-object p1, p0, Lcom/tencent/mm/booter/notification/a/f$1;->bcp:Lcom/tencent/mm/booter/notification/a/f;
 
-    invoke-direct {p0, p2}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {p0, p2}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
     return-void
 .end method
@@ -39,30 +39,30 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 57
-    const-string/jumbo v0, "!56@/B4Tb64lLpKR3MWtFvfaIMJb62Pm/jgsLT1nr0NtEmCplLo3H1kkFg=="
+    .line 62
+    const-string/jumbo v0, "MicroMsg.Notification.Tool.Sound"
 
     const-string/jumbo v1, "play sound handler, try to stop notify mediaplayer"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 59
+    .line 64
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f$1;->bor:Lcom/tencent/mm/booter/notification/a/f;
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f$1;->bcp:Lcom/tencent/mm/booter/notification/a/f;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/booter/notification/a/f;->boo:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f$1;->bor:Lcom/tencent/mm/booter/notification/a/f;
-
-    iget-object v0, v0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
+    iget-boolean v0, v0, Lcom/tencent/mm/booter/notification/a/f;->bcm:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f$1;->bor:Lcom/tencent/mm/booter/notification/a/f;
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f$1;->bcp:Lcom/tencent/mm/booter/notification/a/f;
 
-    iget-object v0, v0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
+    iget-object v0, v0, Lcom/tencent/mm/booter/notification/a/f;->bcn:Landroid/media/MediaPlayer;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f$1;->bcp:Lcom/tencent/mm/booter/notification/a/f;
+
+    iget-object v0, v0, Lcom/tencent/mm/booter/notification/a/f;->bcn:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
 
@@ -70,40 +70,40 @@
 
     if-eqz v0, :cond_0
 
-    .line 60
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f$1;->bor:Lcom/tencent/mm/booter/notification/a/f;
+    .line 65
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f$1;->bcp:Lcom/tencent/mm/booter/notification/a/f;
 
-    iget-object v0, v0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
+    iget-object v0, v0, Lcom/tencent/mm/booter/notification/a/f;->bcn:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
 
-    .line 61
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f$1;->bor:Lcom/tencent/mm/booter/notification/a/f;
+    .line 66
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f$1;->bcp:Lcom/tencent/mm/booter/notification/a/f;
 
-    iget-object v0, v0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
+    iget-object v0, v0, Lcom/tencent/mm/booter/notification/a/f;->bcn:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
-    .line 62
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f$1;->bor:Lcom/tencent/mm/booter/notification/a/f;
+    .line 67
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f$1;->bcp:Lcom/tencent/mm/booter/notification/a/f;
 
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Lcom/tencent/mm/booter/notification/a/f;->boo:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/booter/notification/a/f;->bcm:Z
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 67
+    .line 72
     :cond_0
     :goto_0
     return-void
 
-    .line 64
+    .line 69
     :catch_0
     move-exception v0
 
-    .line 65
-    const-string/jumbo v1, "!56@/B4Tb64lLpKR3MWtFvfaIMJb62Pm/jgsLT1nr0NtEmCplLo3H1kkFg=="
+    .line 70
+    const-string/jumbo v1, "MicroMsg.Notification.Tool.Sound"
 
     const-string/jumbo v2, "Exception in playSoundHander %s"
 
@@ -117,7 +117,7 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method

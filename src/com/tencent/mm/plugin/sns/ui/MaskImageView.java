@@ -3,22 +3,23 @@ package com.tencent.mm.plugin.sns.ui;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Canvas;
+import android.os.Looper;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import junit.framework.Assert;
 
 public class MaskImageView
   extends TagImageView
 {
   private int a = 90;
-  private boolean aur = true;
+  boolean age = true;
   private int b = 0;
   private int g = 0;
-  private aa gWl = new aa();
-  private Runnable gWm = new Runnable()
+  private ac hjH = new ac(Looper.getMainLooper());
+  private Runnable hjI = new Runnable()
   {
     public final void run()
     {
@@ -41,7 +42,7 @@ public class MaskImageView
         return b(paramAnonymousView, paramAnonymousMotionEvent);
       }
     });
-    super.setContentDescription(getContext().getResources().getString(2131429655));
+    super.setContentDescription(getContext().getResources().getString(2131235449));
   }
   
   public final boolean b(View paramView, MotionEvent paramMotionEvent)
@@ -54,9 +55,9 @@ public class MaskImageView
       return true;
       paramView.setPressed(true);
       paramView.invalidate();
-      gWl.removeCallbacks(gWm);
+      hjH.removeCallbacks(hjI);
       continue;
-      gWl.post(gWm);
+      hjH.post(hjI);
     }
     return false;
   }
@@ -83,11 +84,6 @@ public class MaskImageView
   public void setOnTouchListener(View.OnTouchListener paramOnTouchListener)
   {
     Assert.assertTrue(false);
-  }
-  
-  public void settouchEnable(boolean paramBoolean)
-  {
-    aur = paramBoolean;
   }
 }
 

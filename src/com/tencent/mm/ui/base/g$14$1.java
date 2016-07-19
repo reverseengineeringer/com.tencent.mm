@@ -10,9 +10,9 @@ final class g$14$1
   
   public final void run()
   {
-    ((Dialog)kCF.gkw.getTag()).dismiss();
-    if (kCF.kCD != null) {
-      kCF.kCD.kt(kCE);
+    ((Dialog)lbK.guR.getTag()).dismiss();
+    if (lbK.lbI != null) {
+      lbK.lbI.lK(lbJ);
     }
   }
 }

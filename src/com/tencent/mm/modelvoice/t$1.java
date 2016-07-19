@@ -2,8 +2,8 @@ package com.tencent.mm.modelvoice;
 
 import com.tencent.mm.c.b.b;
 import com.tencent.mm.c.b.b.a;
-import com.tencent.mm.r.g.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.g.a;
 
 final class t$1
   implements b.a
@@ -12,18 +12,18 @@ final class t$1
   
   public final void onError()
   {
-    if (t.a(chQ) != null) {
-      t.a(chQ).onError();
+    if (t.a(cdh) != null) {
+      t.a(cdh).onError();
     }
     try
     {
-      t.b(chQ).release();
-      t.c(chQ);
+      t.b(cdh).release();
+      t.c(cdh);
       return;
     }
     catch (Exception localException)
     {
-      u.e("!24@J/TNaXmTnT2mD815LCdsDw==", "setErrorListener File[" + chQ.anC + "] ErrMsg[" + localException.getStackTrace() + "]");
+      v.e("VoiceRecorder", "setErrorListener File[" + cdh.aaq + "] ErrMsg[" + localException.getStackTrace() + "]");
     }
   }
 }

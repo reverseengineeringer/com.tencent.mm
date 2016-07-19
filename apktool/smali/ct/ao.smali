@@ -2,581 +2,582 @@
 .super Ljava/lang/Object;
 
 
+# static fields
+.field private static k:Lct/ao;
+
+
 # instance fields
-.field public A:Ljava/lang/String;
+.field private a:Ljava/lang/String;
 
-.field public B:I
+.field private b:Ljava/lang/String;
 
-.field public C:I
+.field private c:Ljava/lang/String;
 
-.field public D:I
+.field private d:Ljava/lang/String;
 
-.field public E:Ljava/lang/String;
+.field private e:Ljava/lang/String;
 
-.field public F:Ljava/lang/String;
+.field private f:Ljava/lang/String;
 
-.field public G:Ljava/lang/String;
+.field private g:Ljava/lang/String;
 
-.field public H:I
+.field private h:Ljava/lang/String;
 
-.field public I:Ljava/lang/String;
+.field private i:Ljava/lang/String;
 
-.field public J:I
-
-.field public K:Ljava/lang/String;
-
-.field public L:I
-
-.field public M:I
-
-.field public a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-.field public c:I
-
-.field public d:Ljava/lang/String;
-
-.field public e:Ljava/lang/String;
-
-.field public f:Ljava/lang/String;
-
-.field public g:Ljava/lang/String;
-
-.field public h:I
-
-.field public i:I
-
-.field public j:Ljava/lang/String;
-
-.field public k:Ljava/lang/String;
-
-.field public l:Ljava/lang/String;
-
-.field public m:I
-
-.field public n:I
-
-.field public o:Ljava/lang/String;
-
-.field public p:Ljava/lang/String;
-
-.field public q:I
-
-.field public r:I
-
-.field public s:I
-
-.field public t:I
-
-.field public u:J
-
-.field public v:J
-
-.field public w:I
-
-.field public x:I
-
-.field public y:I
-
-.field public z:Ljava/lang/String;
+.field private j:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    sput-object v0, Lct/ao;->k:Lct/ao;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lct/ao;->K:Ljava/lang/String;
+    iput-object v0, p0, Lct/ao;->a:Ljava/lang/String;
+
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lct/ao;->b:Ljava/lang/String;
+
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lct/ao;->c:Ljava/lang/String;
+
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lct/ao;->d:Ljava/lang/String;
+
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lct/ao;->e:Ljava/lang/String;
+
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lct/ao;->f:Ljava/lang/String;
+
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lct/ao;->g:Ljava/lang/String;
+
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lct/ao;->h:Ljava/lang/String;
+
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lct/ao;->i:Ljava/lang/String;
+
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lct/ao;->j:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static declared-synchronized a(Landroid/content/Context;)V
+    .locals 5
+
+    const-class v1, Lct/ao;
+
+    monitor-enter v1
+
+    if-eqz p0, :cond_1
+
+    :try_start_0
+    sget-object v0, Lct/ao;->k:Lct/ao;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lct/ao;
+
+    invoke-direct {v0}, Lct/ao;-><init>()V
+
+    sput-object v0, Lct/ao;->k:Lct/ao;
+
+    :cond_0
+    sget-object v2, Lct/ao;->k:Lct/ao;
+
+    monitor-enter v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    :try_start_1
+    sget-object v0, Lct/ao;->k:Lct/ao;
+
+    invoke-static {p0}, Lct/ap;->a(Landroid/content/Context;)Lct/ap;
+
+    new-instance v3, Ljava/lang/StringBuffer;
+
+    invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
+
+    invoke-static {}, Lct/ap;->a()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    const-string/jumbo v4, ";Android "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    invoke-static {}, Lct/ap;->b()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    const-string/jumbo v4, ",level "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    invoke-static {}, Lct/ap;->c()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v0, v3}, Lct/ao;->a(Ljava/lang/String;)V
+
+    sget-object v0, Lct/ao;->k:Lct/ao;
+
+    invoke-direct {v0}, Lct/ao;->l()V
+
+    sget-object v0, Lct/ao;->k:Lct/ao;
+
+    const-string/jumbo v3, "unknown"
+
+    invoke-direct {v0, v3}, Lct/ao;->d(Ljava/lang/String;)V
+
+    sget-object v0, Lct/ao;->k:Lct/ao;
+
+    invoke-static {p0}, Lct/an;->c(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v0, v3}, Lct/ao;->c(Ljava/lang/String;)V
+
+    sget-object v0, Lct/ao;->k:Lct/ao;
+
+    invoke-static {p0}, Lct/ap;->a(Landroid/content/Context;)Lct/ap;
+
+    invoke-static {p0}, Lct/ap;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v0, v3}, Lct/ao;->e(Ljava/lang/String;)V
+
+    sget-object v0, Lct/ao;->k:Lct/ao;
+
+    invoke-static {p0}, Lct/ap;->a(Landroid/content/Context;)Lct/ap;
+
+    invoke-static {p0}, Lct/ap;->c(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, v0, Lct/ao;->e:Ljava/lang/String;
+
+    sget-object v0, Lct/ao;->k:Lct/ao;
+
+    invoke-static {p0}, Lct/ap;->a(Landroid/content/Context;)Lct/ap;
+
+    invoke-static {p0}, Lct/ap;->e(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, v0, Lct/ao;->f:Ljava/lang/String;
+
+    sget-object v0, Lct/ao;->k:Lct/ao;
+
+    invoke-static {p0}, Lct/ap;->a(Landroid/content/Context;)Lct/ap;
+
+    invoke-static {p0}, Lct/ap;->d(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, v0, Lct/ao;->g:Ljava/lang/String;
+
+    sget-object v0, Lct/ao;->k:Lct/ao;
+
+    invoke-static {}, Lct/p;->g()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v0, v3}, Lct/ao;->f(Ljava/lang/String;)V
+
+    sget-object v0, Lct/ao;->k:Lct/ao;
+
+    invoke-static {p0}, Lct/an;->a(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v0, v3}, Lct/ao;->b(Ljava/lang/String;)V
+
+    sget-object v0, Lct/ao;->k:Lct/ao;
+
+    invoke-static {p0}, Lct/ap;->a(Landroid/content/Context;)Lct/ap;
+
+    invoke-static {}, Lct/ap;->d()Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, v0, Lct/ao;->i:Ljava/lang/String;
+
+    sget-object v0, Lct/ao;->k:Lct/ao;
+
+    invoke-static {p0}, Lct/ap;->a(Landroid/content/Context;)Lct/ap;
+
+    invoke-static {}, Lct/ap;->a()Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, v0, Lct/ao;->j:Ljava/lang/String;
+
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :cond_1
+    monitor-exit v1
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_2
+    monitor-exit v2
+
+    throw v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    :catchall_1
+    move-exception v0
+
+    monitor-exit v1
+
+    throw v0
+.end method
+
+.method private declared-synchronized a(Ljava/lang/String;)V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iput-object p1, p0, Lct/ao;->a:Ljava/lang/String;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method private declared-synchronized b(Ljava/lang/String;)V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iput-object p1, p0, Lct/ao;->b:Ljava/lang/String;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method private declared-synchronized c(Ljava/lang/String;)V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iput-object p1, p0, Lct/ao;->c:Ljava/lang/String;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method private declared-synchronized d(Ljava/lang/String;)V
+    .locals 0
+
+    monitor-enter p0
+
+    monitor-exit p0
+
+    return-void
+.end method
+
+.method private declared-synchronized e(Ljava/lang/String;)V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iput-object p1, p0, Lct/ao;->d:Ljava/lang/String;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method private declared-synchronized f(Ljava/lang/String;)V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iput-object p1, p0, Lct/ao;->h:Ljava/lang/String;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public static declared-synchronized k()Lct/ao;
+    .locals 2
+
+    const-class v0, Lct/ao;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lct/ao;->k:Lct/ao;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+
+    throw v1
+.end method
+
+.method private declared-synchronized l()V
+    .locals 0
+
+    monitor-enter p0
+
+    monitor-exit p0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final declared-synchronized a()Ljava/lang/String;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    monitor-enter p0
 
-    const-string/jumbo v1, "ReportStruct [appId="
+    :try_start_0
+    iget-object v0, p0, Lct/ao;->a:Ljava/lang/String;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    monitor-exit p0
 
-    iget-object v1, p0, Lct/ao;->a:Ljava/lang/String;
+    return-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :catchall_0
+    move-exception v0
 
-    move-result-object v0
+    monitor-exit p0
 
-    const-string/jumbo v1, ", appVerName="
+    throw v0
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final declared-synchronized b()Ljava/lang/String;
+    .locals 1
 
-    move-result-object v0
+    monitor-enter p0
 
-    iget-object v1, p0, Lct/ao;->b:Ljava/lang/String;
+    :try_start_0
+    iget-object v0, p0, Lct/ao;->b:Ljava/lang/String;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    monitor-exit p0
 
-    move-result-object v0
+    return-object v0
 
-    const-string/jumbo v1, ", appVerCode="
+    :catchall_0
+    move-exception v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    monitor-exit p0
 
-    move-result-object v0
+    throw v0
+.end method
 
-    iget v1, p0, Lct/ao;->c:I
+.method public final declared-synchronized c()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    monitor-enter p0
 
-    move-result-object v0
+    :try_start_0
+    iget-object v0, p0, Lct/ao;->c:Ljava/lang/String;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const-string/jumbo v1, ", sdkVersion="
+    monitor-exit p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object v0
 
-    move-result-object v0
+    :catchall_0
+    move-exception v0
 
-    iget-object v1, p0, Lct/ao;->d:Ljava/lang/String;
+    monitor-exit p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    throw v0
+.end method
 
-    move-result-object v0
+.method public final declared-synchronized d()Ljava/lang/String;
+    .locals 1
 
-    const-string/jumbo v1, ", uuid="
+    monitor-enter p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :try_start_0
+    iget-object v0, p0, Lct/ao;->d:Ljava/lang/String;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v0
+    monitor-exit p0
 
-    iget-object v1, p0, Lct/ao;->e:Ljava/lang/String;
+    return-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :catchall_0
+    move-exception v0
 
-    move-result-object v0
+    monitor-exit p0
 
-    const-string/jumbo v1, ", apn="
+    throw v0
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final declared-synchronized e()Ljava/lang/String;
+    .locals 1
 
-    move-result-object v0
+    monitor-enter p0
 
-    iget-object v1, p0, Lct/ao;->f:Ljava/lang/String;
+    :try_start_0
+    iget-object v0, p0, Lct/ao;->h:Ljava/lang/String;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    monitor-exit p0
 
-    move-result-object v0
+    return-object v0
 
-    const-string/jumbo v1, ", ssid="
+    :catchall_0
+    move-exception v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    monitor-exit p0
 
-    move-result-object v0
+    throw v0
+.end method
 
-    iget-object v1, p0, Lct/ao;->g:Ljava/lang/String;
+.method public final f()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lct/ao;->e:Ljava/lang/String;
 
-    move-result-object v0
+    return-object v0
+.end method
 
-    const-string/jumbo v1, ", netType="
+.method public final g()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lct/ao;->f:Ljava/lang/String;
 
-    move-result-object v0
+    return-object v0
+.end method
 
-    iget v1, p0, Lct/ao;->h:I
+.method public final h()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lct/ao;->g:Ljava/lang/String;
 
-    move-result-object v0
+    return-object v0
+.end method
 
-    const-string/jumbo v1, ", opType="
+.method public final i()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lct/ao;->i:Ljava/lang/String;
 
-    move-result-object v0
+    return-object v0
+.end method
 
-    iget v1, p0, Lct/ao;->i:I
+.method public final j()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", domain="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lct/ao;->j:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", accessIp="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lct/ao;->k:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", lastAccessIp="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lct/ao;->l:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", isNetConnected="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lct/ao;->m:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", retCode="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lct/ao;->n:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", failInfo="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lct/ao;->o:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", exceptionInfo="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lct/ao;->p:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", dnsTime="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lct/ao;->q:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", connectTime="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lct/ao;->r:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", waitTime="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lct/ao;->s:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", readTime="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lct/ao;->t:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", dataLength="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lct/ao;->u:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", rspLen="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lct/ao;->v:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", totalTime="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lct/ao;->w:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", totalTimeReq="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lct/ao;->x:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", retryTime="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lct/ao;->y:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", uniqueRequestKey="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lct/ao;->z:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", url="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lct/ao;->A:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", isUseSchedulerIp="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lct/ao;->B:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", isLast="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lct/ao;->C:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", isSchedulerOn="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lct/ao;->D:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", probability="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lct/ao;->E:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", rule="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lct/ao;->F:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", jumpUrl="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lct/ao;->G:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", isHijack=0, maxRetryTime="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lct/ao;->H:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", domainDns="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lct/ao;->I:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", reqResult="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lct/ao;->J:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", contentType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lct/ao;->K:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", isHtttps="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lct/ao;->L:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ", isTimeout="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lct/ao;->M:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, p0, Lct/ao;->j:Ljava/lang/String;
 
     return-object v0
 .end method

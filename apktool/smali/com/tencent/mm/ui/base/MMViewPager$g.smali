@@ -1,5 +1,5 @@
-.class public final Lcom/tencent/mm/ui/base/MMViewPager$g;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.class final Lcom/tencent/mm/ui/base/MMViewPager$g;
+.super Lcom/tencent/mm/ui/base/MMViewPager$a;
 .source "SourceFile"
 
 
@@ -9,110 +9,58 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x2
     name = "g"
 .end annotation
 
 
 # instance fields
-.field kIn:Ljava/lang/ref/WeakReference;
+.field final synthetic lhv:Lcom/tencent/mm/ui/base/MMViewPager;
 
-.field kIo:J
+.field lhx:[F
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/ref/WeakReference;)V
-    .locals 0
+.method public constructor <init>(Lcom/tencent/mm/ui/base/MMViewPager;)V
+    .locals 1
 
     .prologue
-    .line 1041
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    .line 87
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMViewPager$g;->lhv:Lcom/tencent/mm/ui/base/MMViewPager;
 
-    .line 1042
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMViewPager$g;->kIn:Ljava/lang/ref/WeakReference;
+    .line 88
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/base/MMViewPager$a;-><init>(Lcom/tencent/mm/ui/base/MMViewPager;)V
 
-    .line 1043
+    .line 85
+    const/16 v0, 0x9
+
+    new-array v0, v0, [F
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$g;->lhx:[F
+
+    .line 90
     return-void
 .end method
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
-    .locals 3
+.method public final play()V
+    .locals 2
 
     .prologue
-    .line 1047
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/platformtools/aa;->handleMessage(Landroid/os/Message;)V
+    .line 95
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$g;->lhv:Lcom/tencent/mm/ui/base/MMViewPager;
 
-    .line 1049
-    iget v0, p1, Landroid/os/Message;->what:I
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMViewPager$g;->removeMessages(I)V
-
-    .line 1050
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$g;->kIn:Ljava/lang/ref/WeakReference;
-
-    if-eqz v0, :cond_0
-
-    .line 1051
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$g;->kIn:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->c(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/sdk/platformtools/ac;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/ui/base/MMViewPager;
+    new-instance v1, Lcom/tencent/mm/ui/base/MMViewPager$g$1;
 
-    .line 1052
-    if-eqz v0, :cond_0
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/MMViewPager$g$1;-><init>(Lcom/tencent/mm/ui/base/MMViewPager$g;)V
 
-    .line 1053
-    iget v1, p1, Landroid/os/Message;->what:I
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_0
-
-    .line 1054
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->k(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/ui/base/MMViewPager$a;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    .line 1055
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->k(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/ui/base/MMViewPager$a;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/base/MMViewPager$a;->aPA()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 1057
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->k(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/ui/base/MMViewPager$a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMViewPager$a;->play()V
-
-    .line 1058
-    iget v0, p1, Landroid/os/Message;->what:I
-
-    iget-wide v1, p0, Lcom/tencent/mm/ui/base/MMViewPager$g;->kIo:J
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/tencent/mm/ui/base/MMViewPager$g;->sendEmptyMessageDelayed(IJ)Z
-
-    .line 1067
-    :cond_0
-    :goto_0
+    .line 132
     return-void
-
-    .line 1063
-    :cond_1
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->l(Lcom/tencent/mm/ui/base/MMViewPager;)V
-
-    goto :goto_0
 .end method

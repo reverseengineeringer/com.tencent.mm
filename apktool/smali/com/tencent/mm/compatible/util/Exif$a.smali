@@ -24,21 +24,21 @@
 
 # direct methods
 .method public constructor <init>(DDD)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 109
+    .line 119
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 110
+    .line 120
     iput-wide p1, p0, Lcom/tencent/mm/compatible/util/Exif$a;->latitude:D
 
-    .line 111
+    .line 121
     iput-wide p3, p0, Lcom/tencent/mm/compatible/util/Exif$a;->longitude:D
 
-    .line 112
+    .line 122
     iput-wide p5, p0, Lcom/tencent/mm/compatible/util/Exif$a;->altitude:D
 
-    .line 113
+    .line 123
     return-void
 .end method

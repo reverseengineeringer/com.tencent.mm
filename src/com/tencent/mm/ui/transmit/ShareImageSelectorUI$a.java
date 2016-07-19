@@ -12,7 +12,7 @@ import com.tencent.mm.ui.j;
 final class ShareImageSelectorUI$a
   extends BaseAdapter
 {
-  public a[] lBD = { new a(2131428853, 2130903581), new a(2131428852, 2130903724), new a(2131428854, 2130903693) };
+  public a[] mcv = { new a(2131232160, 2131165824), new a(2131232161, 2131165474), new a(2131232159, 2131165605) };
   
   ShareImageSelectorUI$a(ShareImageSelectorUI paramShareImageSelectorUI) {}
   
@@ -29,15 +29,15 @@ final class ShareImageSelectorUI$a
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
     if ((paramView == null) || (paramView.getTag() == null)) {
-      paramView = LayoutInflater.from(lBC.koJ.kpc).inflate(2131361871, null);
+      paramView = LayoutInflater.from(mcu.kNN.kOg).inflate(2130904363, null);
     }
-    for (paramViewGroup = new ShareImageSelectorUI.b(lBC, paramView);; paramViewGroup = (ShareImageSelectorUI.b)paramView.getTag())
+    for (paramViewGroup = new ShareImageSelectorUI.b(mcu, paramView);; paramViewGroup = (ShareImageSelectorUI.b)paramView.getTag())
     {
-      a locala = lBD[paramInt];
+      a locala = mcv[paramInt];
       if (locala != null)
       {
-        lBH.setText(lBE);
-        dTv.setImageResource(lBF);
+        mcz.setText(mcw);
+        dVD.setImageResource(mcx);
       }
       return paramView;
     }
@@ -45,13 +45,13 @@ final class ShareImageSelectorUI$a
   
   final class a
   {
-    int lBE;
-    int lBF;
+    int mcw;
+    int mcx;
     
     public a(int paramInt1, int paramInt2)
     {
-      lBE = paramInt1;
-      lBF = paramInt2;
+      mcw = paramInt1;
+      mcx = paramInt2;
     }
   }
 }

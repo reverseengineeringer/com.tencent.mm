@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lxN:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
+.field final synthetic lYC:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 213
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$6;->lxN:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$6;->lYC:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 217
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$6;->lxN:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$6;->lYC:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->d(Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;)Landroid/widget/EditText;
 

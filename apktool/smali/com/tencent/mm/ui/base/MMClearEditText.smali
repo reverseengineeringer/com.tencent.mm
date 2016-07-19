@@ -4,17 +4,17 @@
 
 
 # instance fields
-.field private fPV:Landroid/view/View$OnFocusChangeListener;
+.field private fYY:Landroid/view/View$OnFocusChangeListener;
 
-.field public iGN:Ljava/lang/String;
+.field public jdI:Ljava/lang/String;
 
-.field public iGO:Z
+.field public jdJ:Z
 
-.field final iGP:Landroid/graphics/drawable/Drawable;
+.field final jdK:Landroid/graphics/drawable/Drawable;
 
-.field iGT:I
+.field jdO:I
 
-.field private kDq:Z
+.field private lcv:Z
 
 
 # direct methods
@@ -30,37 +30,37 @@
     .line 21
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGN:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdI:Ljava/lang/String;
 
     .line 23
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGO:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdJ:Z
 
     .line 25
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMClearEditText;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0406c3
+    const v1, 0x7f020419
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGP:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdK:Landroid/graphics/drawable/Drawable;
 
     .line 106
-    iput v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGT:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdO:I
 
     .line 145
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->fPV:Landroid/view/View$OnFocusChangeListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->fYY:Landroid/view/View$OnFocusChangeListener;
 
     .line 161
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->kDq:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->lcv:Z
 
     .line 34
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMClearEditText;->aSo()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMClearEditText;->aXg()V
 
     .line 35
     return-void
@@ -78,43 +78,43 @@
     .line 21
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGN:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdI:Ljava/lang/String;
 
     .line 23
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGO:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdJ:Z
 
     .line 25
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMClearEditText;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0406c3
+    const v1, 0x7f020419
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGP:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdK:Landroid/graphics/drawable/Drawable;
 
     .line 106
-    iput v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGT:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdO:I
 
     .line 145
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->fPV:Landroid/view/View$OnFocusChangeListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->fYY:Landroid/view/View$OnFocusChangeListener;
 
     .line 161
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->kDq:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->lcv:Z
 
     .line 39
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMClearEditText;->aSo()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMClearEditText;->aXg()V
 
     .line 40
     return-void
 .end method
 
-.method private Az(Ljava/lang/String;)V
+.method private CA(Ljava/lang/String;)V
     .locals 4
 
     .prologue
@@ -124,7 +124,7 @@
     move-result v0
 
     .line 130
-    invoke-static {}, Lcom/tencent/mm/ay/g;->aWe()Lcom/tencent/mm/ay/g;
+    invoke-static {}, Lcom/tencent/mm/bb/g;->bbq()Lcom/tencent/mm/bb/g;
 
     move-result-object v1
 
@@ -136,7 +136,7 @@
 
     move-result v3
 
-    invoke-virtual {v1, v2, p1, v3}, Lcom/tencent/mm/ay/g;->c(Landroid/content/Context;Ljava/lang/CharSequence;F)Landroid/text/SpannableString;
+    invoke-virtual {v1, v2, p1, v3}, Lcom/tencent/mm/bb/g;->c(Landroid/content/Context;Ljava/lang/CharSequence;F)Landroid/text/SpannableString;
 
     move-result-object v1
 
@@ -194,12 +194,12 @@
 
     .prologue
     .line 17
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMClearEditText;->aQX()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMClearEditText;->aVH()V
 
     return-void
 .end method
 
-.method private aQV()V
+.method private aVF()V
     .locals 5
 
     .prologue
@@ -228,7 +228,7 @@
 
     .line 154
     :cond_0
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMClearEditText;->aQX()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMClearEditText;->aVH()V
 
     .line 159
     :cond_1
@@ -237,7 +237,7 @@
 
     .line 157
     :cond_2
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->kDq:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->lcv:Z
 
     if-nez v0, :cond_1
 
@@ -257,7 +257,7 @@
 
     aget-object v1, v1, v2
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGP:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdK:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMClearEditText;->getCompoundDrawables()[Landroid/graphics/drawable/Drawable;
 
@@ -272,7 +272,7 @@
     goto :goto_0
 .end method
 
-.method private aQX()V
+.method private aVH()V
     .locals 5
 
     .prologue
@@ -309,22 +309,22 @@
     return-void
 .end method
 
-.method private aSo()V
+.method private aXg()V
     .locals 5
 
     .prologue
     const/4 v4, 0x0
 
     .line 45
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGP:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdK:Landroid/graphics/drawable/Drawable;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGP:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdK:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGP:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdK:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -333,7 +333,7 @@
     invoke-virtual {v0, v4, v4, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     .line 47
-    const-string/jumbo v0, "!44@/B4Tb64lLpKV1gYdF8HNDrIV/d4j0/6hFGTPpQharhE="
+    const-string/jumbo v0, "MicroMsg.MMClearEditText"
 
     const-string/jumbo v1, "imgX width %d height %d"
 
@@ -341,7 +341,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGP:Landroid/graphics/drawable/Drawable;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdK:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -355,7 +355,7 @@
 
     const/4 v3, 0x1
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGP:Landroid/graphics/drawable/Drawable;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdK:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -367,13 +367,13 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 49
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMClearEditText;->aQV()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMClearEditText;->aVF()V
 
     .line 52
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGP:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdK:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -383,7 +383,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0501cd
+    const v2, 0x7f0b0154
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -425,7 +425,7 @@
 
     .prologue
     .line 17
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMClearEditText;->aQV()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMClearEditText;->aVF()V
 
     return-void
 .end method
@@ -435,7 +435,7 @@
 
     .prologue
     .line 17
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->fPV:Landroid/view/View$OnFocusChangeListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->fYY:Landroid/view/View$OnFocusChangeListener;
 
     return-object v0
 .end method
@@ -460,7 +460,7 @@
 
     .line 183
     :cond_0
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGO:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdJ:Z
 
     if-nez v0, :cond_1
 
@@ -491,7 +491,7 @@
     if-ne p1, v1, :cond_0
 
     .line 110
-    iput v6, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGT:I
+    iput v6, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdO:I
 
     .line 111
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMClearEditText;->getText()Landroid/text/Editable;
@@ -504,7 +504,7 @@
 
     .line 113
     :try_start_0
-    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/base/MMClearEditText;->Az(Ljava/lang/String;)V
+    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/base/MMClearEditText;->CA(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -517,7 +517,7 @@
     :catch_0
     move-exception v2
 
-    const-string/jumbo v2, "!44@/B4Tb64lLpKV1gYdF8HNDrIV/d4j0/6hFGTPpQharhE="
+    const-string/jumbo v2, "MicroMsg.MMClearEditText"
 
     const-string/jumbo v3, "!!MMClearEditText Exception %d"
 
@@ -525,7 +525,7 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    iget v5, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGT:I
+    iget v5, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdO:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -533,21 +533,21 @@
 
     aput-object v5, v4, v6
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 116
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGT:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdO:I
 
     const/4 v3, 0x3
 
     if-ge v2, v3, :cond_1
 
     .line 117
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGT:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdO:I
 
     add-int/lit8 v2, v2, 0x1
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->iGT:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->jdO:I
 
     .line 118
     new-instance v2, Ljava/lang/StringBuilder;
@@ -565,17 +565,17 @@
     move-result-object v1
 
     .line 119
-    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/base/MMClearEditText;->Az(Ljava/lang/String;)V
+    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/base/MMClearEditText;->CA(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 121
     :cond_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpKV1gYdF8HNDrIV/d4j0/6hFGTPpQharhE="
+    const-string/jumbo v1, "MicroMsg.MMClearEditText"
 
     const-string/jumbo v2, "!!MMClearEditText, IndexOutOfBoundsException cannot fix"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -585,7 +585,7 @@
 
     .prologue
     .line 148
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->fPV:Landroid/view/View$OnFocusChangeListener;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMClearEditText;->fYY:Landroid/view/View$OnFocusChangeListener;
 
     .line 149
     return-void

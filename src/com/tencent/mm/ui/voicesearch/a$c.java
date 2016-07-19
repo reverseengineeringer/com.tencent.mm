@@ -5,13 +5,13 @@ import android.widget.TextView;
 
 public final class a$c
 {
-  public TextView cHk;
-  public TextView cHl;
-  public TextView cHm;
-  public TextView cHo;
-  public ImageView czS;
-  public ImageView lnI;
-  public ImageView lnJ;
+  public TextView cEo;
+  public TextView cEp;
+  public TextView cEq;
+  public TextView cEs;
+  public ImageView cui;
+  public ImageView lOe;
+  public ImageView lOf;
 }
 
 /* Location:

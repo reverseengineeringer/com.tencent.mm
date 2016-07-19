@@ -14,19 +14,28 @@
 
 
 # instance fields
-.field private eIe:Landroid/widget/ListView;
+.field private ePU:Landroid/widget/ListView;
 
-.field private gEQ:Lcom/tencent/mm/protocal/b/aqi;
+.field private gLr:Lcom/tencent/mm/protocal/b/aqt;
 
-.field private lmu:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;
+.field private lMK:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;
 
-.field private lmv:Ljava/util/ArrayList;
+.field private lML:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private lmw:I
+.field private lMM:I
 
-.field private lmx:Ljava/lang/String;
+.field private lMN:Ljava/lang/String;
 
-.field private lmy:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$b;
+.field private lMO:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$b;
 
 
 # direct methods
@@ -42,18 +51,18 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lmv:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lML:Ljava/util/ArrayList;
 
     .line 301
     return-void
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;Lcom/tencent/mm/protocal/b/aqi;)Lcom/tencent/mm/protocal/b/aqi;
+.method static synthetic a(Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;Lcom/tencent/mm/protocal/b/aqt;)Lcom/tencent/mm/protocal/b/aqt;
     .locals 0
 
     .prologue
     .line 52
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gEQ:Lcom/tencent/mm/protocal/b/aqi;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gLr:Lcom/tencent/mm/protocal/b/aqt;
 
     return-object p1
 .end method
@@ -63,47 +72,47 @@
 
     .prologue
     .line 52
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lmu:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lMK:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;
 
     return-object v0
 .end method
 
-.method static synthetic b(Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;)Lcom/tencent/mm/protocal/b/aqi;
+.method static synthetic b(Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;)Lcom/tencent/mm/protocal/b/aqt;
     .locals 1
 
     .prologue
     .line 52
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gEQ:Lcom/tencent/mm/protocal/b/aqi;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gLr:Lcom/tencent/mm/protocal/b/aqt;
 
     return-object v0
 .end method
 
-.method private bhy()V
+.method private bno()V
     .locals 3
 
     .prologue
     .line 90
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gEQ:Lcom/tencent/mm/protocal/b/aqi;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gLr:Lcom/tencent/mm/protocal/b/aqt;
 
-    iget v0, v0, Lcom/tencent/mm/protocal/b/aqi;->jKb:I
+    iget v0, v0, Lcom/tencent/mm/protocal/b/aqt;->kiy:I
 
     const/4 v1, 0x3
 
     if-ne v0, v1, :cond_0
 
     .line 92
-    const v0, 0x7f0b16d9
+    const v0, 0x7f08127a
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lmx:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lMN:Ljava/lang/String;
 
     .line 93
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gEQ:Lcom/tencent/mm/protocal/b/aqi;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gLr:Lcom/tencent/mm/protocal/b/aqt;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqi;->jKg:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqt;->kiD:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
@@ -118,15 +127,15 @@
     if-eqz v0, :cond_1
 
     .line 95
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lmv:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lML:Ljava/util/ArrayList;
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/aly;
+    check-cast v0, Lcom/tencent/mm/protocal/b/amj;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aly;->jHw:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/amj;->kfU:Ljava/lang/String;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -134,27 +143,27 @@
 
     .line 97
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gEQ:Lcom/tencent/mm/protocal/b/aqi;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gLr:Lcom/tencent/mm/protocal/b/aqt;
 
-    iget v0, v0, Lcom/tencent/mm/protocal/b/aqi;->jKb:I
+    iget v0, v0, Lcom/tencent/mm/protocal/b/aqt;->kiy:I
 
     const/4 v1, 0x5
 
     if-ne v0, v1, :cond_1
 
     .line 99
-    const v0, 0x7f0b16d8
+    const v0, 0x7f08127b
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lmx:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lMN:Ljava/lang/String;
 
     .line 100
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gEQ:Lcom/tencent/mm/protocal/b/aqi;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gLr:Lcom/tencent/mm/protocal/b/aqt;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqi;->jzT:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqt;->jYG:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
@@ -169,15 +178,15 @@
     if-eqz v0, :cond_1
 
     .line 102
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lmv:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lML:Ljava/util/ArrayList;
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/aly;
+    check-cast v0, Lcom/tencent/mm/protocal/b/amj;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aly;->jHw:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/amj;->kfU:Ljava/lang/String;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -193,30 +202,30 @@
 
     .prologue
     .line 52
-    invoke-direct {p0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->bhy()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->bno()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final Gb()V
+.method protected final Gy()V
     .locals 4
 
     .prologue
-    const v3, 0x7f08017c
+    const v3, 0x7f0f0241
 
     const/4 v2, 0x0
 
     const/16 v1, 0x8
 
     .line 109
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lmx:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lMN:Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->Gj(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->Ah(Ljava/lang/String;)V
 
     .line 110
-    const v0, 0x7f07108c
+    const v0, 0x7f1010cd
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->findViewById(I)Landroid/view/View;
 
@@ -225,7 +234,7 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 111
-    const v0, 0x7f070166
+    const v0, 0x7f1000f2
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->findViewById(I)Landroid/view/View;
 
@@ -233,10 +242,10 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->eIe:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->ePU:Landroid/widget/ListView;
 
     .line 113
-    const v0, 0x7f0701f0
+    const v0, 0x7f1000f4
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->findViewById(I)Landroid/view/View;
 
@@ -248,7 +257,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 116
-    const v0, 0x7f070169
+    const v0, 0x7f1000f5
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->findViewById(I)Landroid/view/View;
 
@@ -257,7 +266,7 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 117
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->eIe:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->ePU:Landroid/widget/ListView;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->getResources()Landroid/content/res/Resources;
 
@@ -270,7 +279,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setBackgroundColor(I)V
 
     .line 118
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->eIe:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->ePU:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->getParent()Landroid/view/ViewParent;
 
@@ -296,14 +305,14 @@
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 131
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->hh(Z)V
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->hF(Z)V
 
     .line 133
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lmv:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lML:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lmv:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lML:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -314,26 +323,26 @@
     .line 134
     new-instance v0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lmv:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lML:Ljava/util/ArrayList;
 
     invoke-direct {v0, p0, v1}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;-><init>(Landroid/content/Context;Ljava/util/List;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lmu:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lMK:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;
 
     .line 136
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->eIe:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->ePU:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lmu:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lMK:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 138
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->eIe:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->ePU:Landroid/widget/ListView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setVisibility(I)V
 
     .line 141
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->eIe:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->ePU:Landroid/widget/ListView;
 
     new-instance v1, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$2;
 
@@ -351,16 +360,16 @@
 
     .prologue
     .line 183
-    const v0, 0x7f0a00a0
+    const v0, 0x7f030027
 
     return v0
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 4
+    .locals 3
 
     .prologue
-    const/4 v3, -0x1
+    const/4 v2, -0x1
 
     .line 68
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
@@ -368,18 +377,18 @@
     .line 69
     new-instance v0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$b;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$b;-><init>(Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;)V
+    const/4 v1, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lmy:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$b;
+    invoke-direct {v0, p0, v1}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$b;-><init>(Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;B)V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lMO:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$b;
 
     .line 70
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "ReturnSnsObjectDetail"
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lMO:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$b;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lmy:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$b;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->d(Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 71
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->getIntent()Landroid/content/Intent;
@@ -388,16 +397,16 @@
 
     const-string/jumbo v1, "sns_label_sns_info"
 
-    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lmw:I
+    iput v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lMM:I
 
     .line 72
-    iget v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lmw:I
+    iget v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lMM:I
 
-    if-ne v0, v3, :cond_1
+    if-ne v0, v2, :cond_1
 
     .line 73
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->finish()V
@@ -409,52 +418,52 @@
 
     .line 76
     :cond_1
-    new-instance v0, Lcom/tencent/mm/d/a/fo;
+    new-instance v0, Lcom/tencent/mm/e/a/fu;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/fo;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/fu;-><init>()V
 
     .line 77
-    iget-object v1, v0, Lcom/tencent/mm/d/a/fo;->aAr:Lcom/tencent/mm/d/a/fo$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/fu;->amx:Lcom/tencent/mm/e/a/fu$a;
 
-    iget v2, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lmw:I
+    iget v2, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lMM:I
 
-    iput v2, v1, Lcom/tencent/mm/d/a/fo$a;->awX:I
+    iput v2, v1, Lcom/tencent/mm/e/a/fu$a;->aiS:I
 
     .line 78
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 79
-    iget-object v0, v0, Lcom/tencent/mm/d/a/fo;->aAs:Lcom/tencent/mm/d/a/fo$b;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/fu;->amy:Lcom/tencent/mm/e/a/fu$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/a/fo$b;->aAt:Lcom/tencent/mm/protocal/b/aqi;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/fu$b;->amz:Lcom/tencent/mm/protocal/b/aqt;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gEQ:Lcom/tencent/mm/protocal/b/aqi;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gLr:Lcom/tencent/mm/protocal/b/aqt;
 
     .line 80
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gEQ:Lcom/tencent/mm/protocal/b/aqi;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gLr:Lcom/tencent/mm/protocal/b/aqt;
 
     if-eqz v0, :cond_0
 
     .line 81
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gEQ:Lcom/tencent/mm/protocal/b/aqi;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gLr:Lcom/tencent/mm/protocal/b/aqt;
 
-    iget v0, v0, Lcom/tencent/mm/protocal/b/aqi;->jKb:I
+    iget v0, v0, Lcom/tencent/mm/protocal/b/aqt;->kiy:I
 
     const/4 v1, 0x3
 
     if-ne v0, v1, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gEQ:Lcom/tencent/mm/protocal/b/aqi;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gLr:Lcom/tencent/mm/protocal/b/aqt;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqi;->jKg:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqt;->kiD:Ljava/util/LinkedList;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gEQ:Lcom/tencent/mm/protocal/b/aqi;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gLr:Lcom/tencent/mm/protocal/b/aqt;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqi;->jKg:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqt;->kiD:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -463,23 +472,23 @@
     if-gtz v0, :cond_3
 
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gEQ:Lcom/tencent/mm/protocal/b/aqi;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gLr:Lcom/tencent/mm/protocal/b/aqt;
 
-    iget v0, v0, Lcom/tencent/mm/protocal/b/aqi;->jKb:I
+    iget v0, v0, Lcom/tencent/mm/protocal/b/aqt;->kiy:I
 
     const/4 v1, 0x5
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gEQ:Lcom/tencent/mm/protocal/b/aqi;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gLr:Lcom/tencent/mm/protocal/b/aqt;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqi;->jzT:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqt;->jYG:Ljava/util/LinkedList;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gEQ:Lcom/tencent/mm/protocal/b/aqi;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->gLr:Lcom/tencent/mm/protocal/b/aqt;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqi;->jzT:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aqt;->jYG:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -489,26 +498,24 @@
 
     .line 83
     :cond_3
-    invoke-direct {p0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->bhy()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->bno()V
 
     .line 84
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->Gb()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->Gy()V
 
     goto :goto_0
 .end method
 
 .method protected onDestroy()V
-    .locals 3
+    .locals 2
 
     .prologue
     .line 177
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    const-string/jumbo v1, "ReturnSnsObjectDetail"
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lMO:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$b;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lmy:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$b;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->e(Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 178
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onDestroy()V
@@ -525,12 +532,12 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onResume()V
 
     .line 170
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lmu:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lMK:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;
 
     if-eqz v0, :cond_0
 
     .line 171
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lmu:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->lMK:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$a;->notifyDataSetChanged()V
 

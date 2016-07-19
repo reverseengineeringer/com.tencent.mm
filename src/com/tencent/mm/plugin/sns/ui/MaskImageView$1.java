@@ -7,8 +7,8 @@ final class MaskImageView$1
   
   public final void run()
   {
-    gZv.setPressed(false);
-    gZv.invalidate();
+    hmN.setPressed(false);
+    hmN.invalidate();
   }
 }
 

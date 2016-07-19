@@ -4,61 +4,61 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.smtt.sdk.WebView;
 
 public final class j
 {
-  private static String iSP = null;
-  private static final String[] iSQ = { "", "dynamic_config_recv", "trigger_download", "start_download", "stop_download", "download_finish", "install_finish", "use" };
+  private static String jqb = null;
+  private static final String[] jqc = { "", "dynamic_config_recv", "trigger_download", "start_download", "stop_download", "download_finish", "install_finish", "use" };
   
-  public static void be(int paramInt1, int paramInt2)
+  public static void bi(int paramInt1, int paramInt2)
   {
     if ((paramInt1 <= 0) || (paramInt1 > 7))
     {
-      u.e("!32@/B4Tb64lLpISxnUMUi4flWrSvvOSsz//", "report invalid scene = %d", new Object[] { Integer.valueOf(paramInt1) });
+      v.e("MicroMsg.TBSReporter", "report invalid scene = %d", new Object[] { Integer.valueOf(paramInt1) });
       return;
     }
-    u.i("!32@/B4Tb64lLpISxnUMUi4flWrSvvOSsz//", "logSceneDetail, scene = %d_%s, errcode = %d", new Object[] { Integer.valueOf(paramInt1), iSQ[paramInt1], Integer.valueOf(paramInt2) });
-    Object localObject = y.getContext();
+    v.i("MicroMsg.TBSReporter", "logSceneDetail, scene = %d_%s, errcode = %d", new Object[] { Integer.valueOf(paramInt1), jqc[paramInt1], Integer.valueOf(paramInt2) });
+    Object localObject = aa.getContext();
     int i = WebView.getTbsCoreVersion((Context)localObject);
     int j = WebView.getTbsSDKVersion((Context)localObject);
-    localObject = cT((Context)localObject);
-    h localh = h.fUJ;
-    h.a(11633, false, true, new Object[] { Integer.valueOf(paramInt1), Long.valueOf(System.currentTimeMillis() / 1000L), Integer.valueOf(i), Integer.valueOf(j), localObject, Integer.valueOf(paramInt2) });
+    localObject = cR((Context)localObject);
+    g localg = g.gdY;
+    g.a(11633, false, true, new Object[] { Integer.valueOf(paramInt1), Long.valueOf(System.currentTimeMillis() / 1000L), Integer.valueOf(i), Integer.valueOf(j), localObject, Integer.valueOf(paramInt2) });
   }
   
-  private static String cT(Context paramContext)
+  private static String cR(Context paramContext)
   {
-    if (iSP != null) {
-      return iSP;
+    if (jqb != null) {
+      return jqb;
     }
     try
     {
-      paramContext = paramContext.getPackageManager().getApplicationInfo(y.getPackageName(), 128);
+      paramContext = paramContext.getPackageManager().getApplicationInfo(aa.getPackageName(), 128);
       if ((paramContext != null) && (metaData != null))
       {
         paramContext = metaData.getString("com.tencent.mtt.TBS_CODE");
-        if (!ay.kz(paramContext))
+        if (!be.kf(paramContext))
         {
-          iSP = paramContext;
+          jqb = paramContext;
           return paramContext;
         }
       }
     }
     catch (Exception paramContext)
     {
-      u.e("!32@/B4Tb64lLpISxnUMUi4flWrSvvOSsz//", "getMetaTbsCode, ex = %s", new Object[] { paramContext.getMessage() });
+      v.e("MicroMsg.TBSReporter", "getMetaTbsCode, ex = %s", new Object[] { paramContext.getMessage() });
     }
     return null;
   }
   
-  public static void lp(int paramInt)
+  public static void id(int paramInt)
   {
-    be(paramInt, 0);
+    bi(paramInt, 0);
   }
 }
 

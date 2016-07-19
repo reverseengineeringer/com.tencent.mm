@@ -6,28 +6,28 @@ import android.widget.ImageView;
 final class g$e
   implements Runnable
 {
-  ImageView ayh;
-  Bitmap efe;
+  ImageView akj;
+  Bitmap eiG;
   
   private g$e(g paramg) {}
   
   public final void run()
   {
-    if (ayh != null)
+    if (akj != null)
     {
-      if ((efe == null) || (!efe.isRecycled())) {
+      if ((eiG == null) || (!eiG.isRecycled())) {
         break label53;
       }
-      g.d.c(ayh);
+      g.d.c(akj);
     }
     for (;;)
     {
-      ayh = null;
-      efe = null;
-      iSo.iSk.v(this);
+      akj = null;
+      eiG = null;
+      jpx.jpt.v(this);
       return;
       label53:
-      g.d.b(ayh, efe);
+      g.d.b(akj, eiG);
     }
   }
 }

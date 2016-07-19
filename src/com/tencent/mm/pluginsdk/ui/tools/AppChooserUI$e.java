@@ -9,59 +9,59 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.ui.base.i;
 
 final class AppChooserUI$e
   extends i
 {
-  private View cRn;
-  BaseAdapter cTk;
-  View.OnClickListener iRe;
-  private ListView iRt;
-  private Button iRu;
-  private Button iRv;
-  private View iRw;
-  AdapterView.OnItemClickListener iRx;
-  View.OnClickListener iRy;
-  private TextView lv;
+  private View cOS;
+  BaseAdapter cQB;
+  private ListView joC;
+  private Button joD;
+  private Button joE;
+  private View joF;
+  AdapterView.OnItemClickListener joG;
+  View.OnClickListener joH;
+  View.OnClickListener joo;
+  private TextView lL;
   private Context mContext;
   private String mTitle;
   
   public AppChooserUI$e(AppChooserUI paramAppChooserUI, Context paramContext)
   {
-    super(paramContext, 2131100061);
+    super(paramContext, 2131493483);
     mContext = paramContext;
-    cRn = View.inflate(mContext, 2131363089, null);
-    lv = ((TextView)cRn.findViewById(2131169161));
-    iRt = ((ListView)cRn.findViewById(2131169163));
-    iRu = ((Button)cRn.findViewById(2131169165));
-    iRv = ((Button)cRn.findViewById(2131169167));
-    iRw = cRn.findViewById(2131169162);
-    if ((AppChooserUI.f(iRi) == 6) || (AppChooserUI.g(iRi) == 2)) {
-      cRn.findViewById(2131169164).setVisibility(8);
+    cOS = View.inflate(mContext, 2130903091, null);
+    lL = ((TextView)cOS.findViewById(2131755295));
+    joC = ((ListView)cOS.findViewById(2131755297));
+    joD = ((Button)cOS.findViewById(2131755299));
+    joE = ((Button)cOS.findViewById(2131755301));
+    joF = cOS.findViewById(2131755296);
+    if ((AppChooserUI.f(jos) == 6) || (AppChooserUI.g(jos) == 2)) {
+      cOS.findViewById(2131755298).setVisibility(8);
     }
   }
   
-  public final void gB(boolean paramBoolean)
+  public final void gZ(boolean paramBoolean)
   {
-    if (iRu != null) {
-      iRu.setEnabled(paramBoolean);
+    if (joD != null) {
+      joD.setEnabled(paramBoolean);
     }
-    if (iRv != null) {
-      iRv.setEnabled(paramBoolean);
+    if (joE != null) {
+      joE.setEnabled(paramBoolean);
     }
   }
   
   public final void onBackPressed()
   {
-    iRi.finish();
+    jos.finish();
   }
   
   protected final void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    setContentView(cRn);
+    setContentView(cOS);
   }
   
   public final void setTitle(CharSequence paramCharSequence)
@@ -76,30 +76,30 @@ final class AppChooserUI$e
   
   public final void show()
   {
-    if (ay.kz(mTitle))
+    if (be.kf(mTitle))
     {
-      iRw.setVisibility(8);
-      lv.setVisibility(8);
+      joF.setVisibility(8);
+      lL.setVisibility(8);
     }
     for (;;)
     {
-      if (iRx != null) {
-        iRt.setOnItemClickListener(iRx);
+      if (joG != null) {
+        joC.setOnItemClickListener(joG);
       }
-      if (cTk != null) {
-        iRt.setAdapter(cTk);
+      if (cQB != null) {
+        joC.setAdapter(cQB);
       }
-      if (iRu != null) {
-        iRu.setOnClickListener(iRy);
+      if (joD != null) {
+        joD.setOnClickListener(joH);
       }
-      if (iRv != null) {
-        iRv.setOnClickListener(iRe);
+      if (joE != null) {
+        joE.setOnClickListener(joo);
       }
       super.show();
       return;
-      iRw.setVisibility(0);
-      lv.setVisibility(0);
-      lv.setText(mTitle);
+      joF.setVisibility(0);
+      lL.setVisibility(0);
+      lL.setText(mTitle);
     }
   }
 }

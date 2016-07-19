@@ -4,7 +4,7 @@ public abstract interface a$b
 {
   public abstract void a(a.a parama);
   
-  public abstract boolean oV();
+  public abstract boolean nn();
   
   public abstract boolean requestFocus();
 }

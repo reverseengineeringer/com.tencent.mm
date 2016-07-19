@@ -13,11 +13,11 @@
 
 
 # instance fields
-.field private buc:Landroid/media/AudioManager;
+.field private biD:Landroid/media/AudioManager;
 
-.field bud:Lcom/tencent/mm/compatible/util/a$a;
+.field biE:Lcom/tencent/mm/compatible/util/a$a;
 
-.field private bue:Landroid/media/AudioManager$OnAudioFocusChangeListener;
+.field private biF:Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
 .field private context:Landroid/content/Context;
 
@@ -35,7 +35,7 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/compatible/util/b$1;-><init>(Lcom/tencent/mm/compatible/util/b;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/compatible/util/b;->bue:Landroid/media/AudioManager$OnAudioFocusChangeListener;
+    iput-object v0, p0, Lcom/tencent/mm/compatible/util/b;->biF:Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
     .line 55
     iput-object p1, p0, Lcom/tencent/mm/compatible/util/b;->context:Landroid/content/Context;
@@ -51,13 +51,13 @@
 
     .prologue
     .line 46
-    iput-object p1, p0, Lcom/tencent/mm/compatible/util/b;->bud:Lcom/tencent/mm/compatible/util/a$a;
+    iput-object p1, p0, Lcom/tencent/mm/compatible/util/b;->biE:Lcom/tencent/mm/compatible/util/a$a;
 
     .line 47
     return-void
 .end method
 
-.method public final oV()Z
+.method public final nn()Z
     .locals 7
 
     .prologue
@@ -66,7 +66,7 @@
     const/4 v2, 0x0
 
     .line 86
-    iget-object v0, p0, Lcom/tencent/mm/compatible/util/b;->buc:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/util/b;->biD:Landroid/media/AudioManager;
 
     if-nez v0, :cond_0
 
@@ -85,18 +85,18 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    iput-object v0, p0, Lcom/tencent/mm/compatible/util/b;->buc:Landroid/media/AudioManager;
+    iput-object v0, p0, Lcom/tencent/mm/compatible/util/b;->biD:Landroid/media/AudioManager;
 
     .line 91
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/compatible/util/b;->buc:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/util/b;->biD:Landroid/media/AudioManager;
 
     if-eqz v0, :cond_2
 
     .line 92
-    iget-object v0, p0, Lcom/tencent/mm/compatible/util/b;->buc:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/util/b;->biD:Landroid/media/AudioManager;
 
-    iget-object v3, p0, Lcom/tencent/mm/compatible/util/b;->bue:Landroid/media/AudioManager$OnAudioFocusChangeListener;
+    iget-object v3, p0, Lcom/tencent/mm/compatible/util/b;->biF:Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
     invoke-virtual {v0, v3}, Landroid/media/AudioManager;->abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I
 
@@ -108,7 +108,7 @@
 
     .line 96
     :goto_0
-    const-string/jumbo v3, "!44@/B4Tb64lLpLCq+BipdDzGSEj50wMwdFVuq5cXvM0LPk="
+    const-string/jumbo v3, "MicroMsg.AudioFocusHelper"
 
     const-string/jumbo v4, "jacks abandonFocus: %B, %x"
 
@@ -122,7 +122,7 @@
 
     aput-object v6, v5, v2
 
-    iget-object v2, p0, Lcom/tencent/mm/compatible/util/b;->bue:Landroid/media/AudioManager$OnAudioFocusChangeListener;
+    iget-object v2, p0, Lcom/tencent/mm/compatible/util/b;->biF:Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
@@ -134,7 +134,7 @@
 
     aput-object v2, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 97
     return v0
@@ -162,7 +162,7 @@
     const/4 v2, 0x0
 
     .line 65
-    iget-object v0, p0, Lcom/tencent/mm/compatible/util/b;->buc:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/util/b;->biD:Landroid/media/AudioManager;
 
     if-nez v0, :cond_0
 
@@ -181,18 +181,18 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    iput-object v0, p0, Lcom/tencent/mm/compatible/util/b;->buc:Landroid/media/AudioManager;
+    iput-object v0, p0, Lcom/tencent/mm/compatible/util/b;->biD:Landroid/media/AudioManager;
 
     .line 71
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/compatible/util/b;->buc:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/util/b;->biD:Landroid/media/AudioManager;
 
     if-eqz v0, :cond_2
 
     .line 72
-    iget-object v0, p0, Lcom/tencent/mm/compatible/util/b;->buc:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/util/b;->biD:Landroid/media/AudioManager;
 
-    iget-object v3, p0, Lcom/tencent/mm/compatible/util/b;->bue:Landroid/media/AudioManager$OnAudioFocusChangeListener;
+    iget-object v3, p0, Lcom/tencent/mm/compatible/util/b;->biF:Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
     const/4 v4, 0x3
 
@@ -206,7 +206,7 @@
 
     .line 75
     :goto_0
-    const-string/jumbo v3, "!44@/B4Tb64lLpLCq+BipdDzGSEj50wMwdFVuq5cXvM0LPk="
+    const-string/jumbo v3, "MicroMsg.AudioFocusHelper"
 
     const-string/jumbo v4, "jacks requestFocus: %B, %x"
 
@@ -218,7 +218,7 @@
 
     aput-object v6, v5, v2
 
-    iget-object v2, p0, Lcom/tencent/mm/compatible/util/b;->bue:Landroid/media/AudioManager$OnAudioFocusChangeListener;
+    iget-object v2, p0, Lcom/tencent/mm/compatible/util/b;->biF:Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
@@ -230,7 +230,7 @@
 
     aput-object v2, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 76
     return v0

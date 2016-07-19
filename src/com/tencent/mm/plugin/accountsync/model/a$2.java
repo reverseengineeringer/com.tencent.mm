@@ -1,11 +1,11 @@
 package com.tencent.mm.plugin.accountsync.model;
 
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class a$2
-  extends aa
+  extends ac
 {
   a$2(a parama) {}
   
@@ -16,12 +16,12 @@ final class a$2
     default: 
       return;
     }
-    cov.cbN = true;
-    boolean bool = com.tencent.mm.modelfriend.a.a(cov.bLn);
+    cjJ.bVC = true;
+    boolean bool = com.tencent.mm.modelfriend.a.a(cjJ.bEH);
     if (!bool) {
-      cov.cbN = false;
+      cjJ.bVC = false;
     }
-    u.i("!44@/B4Tb64lLpLSOpQlr7qYXXoQpg7hlVkB5ZjNi9/Z4vE=", "sync result %b", new Object[] { Boolean.valueOf(bool) });
+    v.i("MicroMsg.ContactsAutoSyncLogic ", "sync result %b", new Object[] { Boolean.valueOf(bool) });
   }
 }
 

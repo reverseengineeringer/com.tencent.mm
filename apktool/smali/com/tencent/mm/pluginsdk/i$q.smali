@@ -15,23 +15,23 @@
 
 
 # virtual methods
-.method public abstract aDA()Z
+.method public abstract aGY()Z
 .end method
 
-.method public abstract aDB()V
+.method public abstract aGZ()Z
 .end method
 
-.method public abstract aDC()V
+.method public abstract aHa()V
 .end method
 
-.method public abstract aDF()V
+.method public abstract aHb()V
 .end method
 
-.method public abstract aDH()Ljava/lang/String;
+.method public abstract aHe()V
 .end method
 
-.method public abstract aDI()Lcom/tencent/mm/pluginsdk/i$h;
+.method public abstract aHg()Ljava/lang/String;
 .end method
 
-.method public abstract aDz()Z
+.method public abstract aHh()Lcom/tencent/mm/pluginsdk/i$h;
 .end method

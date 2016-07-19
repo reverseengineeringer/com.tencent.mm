@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/r/b;
+.implements Lcom/tencent/mm/t/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/modelcdntran/e;->ai(Z)V
+    value = Lcom/tencent/mm/modelcdntran/e;->aj(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bLe:Lcom/tencent/mm/modelcdntran/e;
+.field final synthetic bEy:Lcom/tencent/mm/modelcdntran/e;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 69
-    iput-object p1, p0, Lcom/tencent/mm/modelcdntran/e$1;->bLe:Lcom/tencent/mm/modelcdntran/e;
+    iput-object p1, p0, Lcom/tencent/mm/modelcdntran/e$1;->bEy:Lcom/tencent/mm/modelcdntran/e;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,12 +36,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/protocal/b/gh;Lcom/tencent/mm/protocal/b/gh;Lcom/tencent/mm/protocal/b/gh;)V
+.method public final a(Lcom/tencent/mm/protocal/b/gm;Lcom/tencent/mm/protocal/b/gm;Lcom/tencent/mm/protocal/b/gm;)V
     .locals 3
 
     .prologue
     .line 72
-    const-string/jumbo v0, "!44@/B4Tb64lLpIAhUt0Bg2QToookYEZHCVFCAb/yW4GbfY="
+    const-string/jumbo v0, "MicroMsg.SubCoreCdnTransport"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -63,7 +63,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcom/tencent/mm/modelcdntran/e;->xX()Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
+    invoke-static {}, Lcom/tencent/mm/modelcdntran/e;->ya()Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
 
     move-result-object v2
 
@@ -75,26 +75,26 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 73
-    invoke-static {}, Lcom/tencent/mm/modelcdntran/e;->xX()Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
+    invoke-static {}, Lcom/tencent/mm/modelcdntran/e;->ya()Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 74
-    invoke-static {}, Lcom/tencent/mm/modelcdntran/e;->xX()Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
+    invoke-static {}, Lcom/tencent/mm/modelcdntran/e;->ya()Lcom/tencent/mm/modelcdntran/CdnTransportEngine;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p1, p2, p3, v1}, Lcom/tencent/mm/modelcdntran/CdnTransportEngine;->a(Lcom/tencent/mm/protocal/b/gh;Lcom/tencent/mm/protocal/b/gh;Lcom/tencent/mm/protocal/b/gh;[B)Z
+    invoke-virtual {v0, p1, p2, p3, v1}, Lcom/tencent/mm/modelcdntran/CdnTransportEngine;->a(Lcom/tencent/mm/protocal/b/gm;Lcom/tencent/mm/protocal/b/gm;Lcom/tencent/mm/protocal/b/gm;[B)Z
 
     .line 75
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/sdk/platformtools/ab;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tw()Lcom/tencent/mm/sdk/platformtools/ad;
 
     move-result-object v0
 
@@ -102,7 +102,7 @@
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/modelcdntran/e$1$1;-><init>(Lcom/tencent/mm/modelcdntran/e$1;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ab;->r(Ljava/lang/Runnable;)I
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ad;->t(Ljava/lang/Runnable;)I
 
     .line 90
     :cond_0

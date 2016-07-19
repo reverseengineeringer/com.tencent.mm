@@ -1,18 +1,24 @@
 package com.tencent.mm.ui.transmit;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.tencent.mm.platformtools.s;
 
 final class SelectConversationUI$8
-  implements DialogInterface.OnClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
-  SelectConversationUI$8(SelectConversationUI paramSelectConversationUI, Intent paramIntent) {}
+  SelectConversationUI$8(SelectConversationUI paramSelectConversationUI) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    lBq.setResult(-1, val$intent);
-    lBq.finish();
+    if (SelectConversationUI.i(mci)) {
+      return false;
+    }
+    paramMenuItem = new Intent();
+    paramMenuItem.putExtra("Select_Conv_User", s.b(SelectConversationUI.j(mci), ","));
+    SelectConversationUI.a(mci, paramMenuItem);
+    return true;
   }
 }
 

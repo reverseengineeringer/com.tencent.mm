@@ -10,7 +10,7 @@ final class LoginIndepPass$4
   
   public final void onDismiss(DialogInterface paramDialogInterface)
   {
-    LoginIndepPass.g(ktE);
+    LoginIndepPass.g(kSL);
   }
 }
 

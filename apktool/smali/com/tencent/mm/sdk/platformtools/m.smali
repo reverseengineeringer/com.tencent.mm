@@ -4,33 +4,12 @@
 
 
 # direct methods
-.method public static a(Landroid/graphics/Bitmap;ILjava/lang/String;)I
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .prologue
-    .line 20
-    if-eqz p0, :cond_0
+    .line 43
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->isRecycled()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 21
-    :cond_0
-    const/4 v0, -0x1
-
-    .line 23
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    invoke-static {p0, p1, v0, p2}, Lcom/tencent/mm/sdk/platformtools/MMJpegOptim;->compressByQualityOptim(Landroid/graphics/Bitmap;IZLjava/lang/String;)I
-
-    move-result v0
-
-    goto :goto_0
+    return-void
 .end method

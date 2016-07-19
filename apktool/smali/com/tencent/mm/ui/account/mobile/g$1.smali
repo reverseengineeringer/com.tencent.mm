@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic ktH:Lcom/tencent/mm/modelfriend/u;
+.field final synthetic kSO:Lcom/tencent/mm/modelfriend/u;
 
-.field final synthetic kyD:Lcom/tencent/mm/ui/account/mobile/g;
+.field final synthetic kXK:Lcom/tencent/mm/ui/account/mobile/g;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 106
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/g$1;->kyD:Lcom/tencent/mm/ui/account/mobile/g;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/g$1;->kXK:Lcom/tencent/mm/ui/account/mobile/g;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/mobile/g$1;->ktH:Lcom/tencent/mm/modelfriend/u;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/mobile/g$1;->kSO:Lcom/tencent/mm/modelfriend/u;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,24 +45,24 @@
 
     .prologue
     .line 110
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/g$1;->ktH:Lcom/tencent/mm/modelfriend/u;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/g$1;->kSO:Lcom/tencent/mm/modelfriend/u;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
     .line 111
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0x91
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/mobile/g$1;->kyD:Lcom/tencent/mm/ui/account/mobile/g;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/mobile/g$1;->kXK:Lcom/tencent/mm/ui/account/mobile/g;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
     .line 112
     return-void

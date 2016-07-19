@@ -8,12 +8,22 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/modelsearch/f;->a(Landroid/content/Context;Ljava/util/List;[Ljava/lang/String;[Ljava/lang/String;I)Ljava/lang/CharSequence;
+    value = Lcom/tencent/mm/modelsearch/f;->a(Landroid/content/Context;Ljava/util/List;[Ljava/lang/String;Ljava/util/List;I)Ljava/lang/CharSequence;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x8
     name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Ljava/lang/String;",
+        ">;"
+    }
 .end annotation
 
 
@@ -22,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 506
+    .line 918
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 506
+    .line 918
     check-cast p1, Ljava/lang/String;
 
     check-cast p2, Ljava/lang/String;

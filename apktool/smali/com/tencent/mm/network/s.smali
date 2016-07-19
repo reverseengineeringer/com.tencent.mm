@@ -4,11 +4,23 @@
 
 
 # instance fields
-.field private ciG:I
+.field private cdX:I
 
-.field public cjv:Ljava/net/HttpURLConnection;
+.field public ceM:Ljava/net/HttpURLConnection;
 
-.field private cjw:Ljava/util/Map;
+.field private ceN:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
+.end field
 
 .field private url:Ljava/net/URL;
 
@@ -24,13 +36,13 @@
     .line 24
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/network/s;->cjw:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/network/s;->ceN:Ljava/util/Map;
 
     .line 27
     iput-object p1, p0, Lcom/tencent/mm/network/s;->url:Ljava/net/URL;
 
     .line 28
-    iput p2, p0, Lcom/tencent/mm/network/s;->ciG:I
+    iput p2, p0, Lcom/tencent/mm/network/s;->cdX:I
 
     .line 29
     iget-object v0, p0, Lcom/tencent/mm/network/s;->url:Ljava/net/URL;
@@ -41,17 +53,17 @@
 
     check-cast v0, Ljava/net/HttpURLConnection;
 
-    iput-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iput-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     .line 30
     const/4 v0, 0x1
 
-    iget v1, p0, Lcom/tencent/mm/network/s;->ciG:I
+    iget v1, p0, Lcom/tencent/mm/network/s;->cdX:I
 
     if-ne v0, v1, :cond_0
 
     .line 31
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     const/4 v1, 0x0
 
@@ -64,12 +76,12 @@
 
 
 # virtual methods
-.method public final ET()V
+.method public final Fo()V
     .locals 2
 
     .prologue
     .line 325
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     const/4 v1, 0x1
 
@@ -79,12 +91,12 @@
     return-void
 .end method
 
-.method public final EU()V
+.method public final Fp()V
     .locals 2
 
     .prologue
     .line 330
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     const/4 v1, 0x1
 
@@ -101,26 +113,26 @@
     .line 150
     const/4 v0, 0x1
 
-    iget v1, p0, Lcom/tencent/mm/network/s;->ciG:I
+    iget v1, p0, Lcom/tencent/mm/network/s;->cdX:I
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjw:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceN:Ljava/util/Map;
 
     if-nez v0, :cond_0
 
     .line 152
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getRequestProperties()Ljava/util/Map;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/network/s;->cjw:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/network/s;->ceN:Ljava/util/Map;
 
     .line 154
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->connect()V
 
@@ -135,26 +147,26 @@
     .line 241
     const/4 v0, 0x1
 
-    iget v1, p0, Lcom/tencent/mm/network/s;->ciG:I
+    iget v1, p0, Lcom/tencent/mm/network/s;->cdX:I
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjw:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceN:Ljava/util/Map;
 
     if-nez v0, :cond_0
 
     .line 243
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getRequestProperties()Ljava/util/Map;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/network/s;->cjw:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/network/s;->ceN:Ljava/util/Map;
 
     .line 245
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, p1}, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
 
@@ -165,31 +177,43 @@
 
 .method public final getHeaderFields()Ljava/util/Map;
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
 
     .prologue
     .line 222
     const/4 v0, 0x1
 
-    iget v1, p0, Lcom/tencent/mm/network/s;->ciG:I
+    iget v1, p0, Lcom/tencent/mm/network/s;->cdX:I
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjw:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceN:Ljava/util/Map;
 
     if-nez v0, :cond_0
 
     .line 224
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getRequestProperties()Ljava/util/Map;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/network/s;->cjw:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/network/s;->ceN:Ljava/util/Map;
 
     .line 226
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getHeaderFields()Ljava/util/Map;
 
@@ -205,23 +229,23 @@
     .line 273
     const/4 v0, 0x1
 
-    iget v1, p0, Lcom/tencent/mm/network/s;->ciG:I
+    iget v1, p0, Lcom/tencent/mm/network/s;->cdX:I
 
     if-ne v0, v1, :cond_1
 
     .line 274
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjw:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceN:Ljava/util/Map;
 
     if-nez v0, :cond_0
 
     .line 275
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getRequestProperties()Ljava/util/Map;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/network/s;->cjw:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/network/s;->ceN:Ljava/util/Map;
 
     .line 277
     :cond_0
@@ -229,7 +253,7 @@
 
     .line 279
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
 
@@ -245,23 +269,23 @@
     .line 289
     const/4 v0, 0x1
 
-    iget v1, p0, Lcom/tencent/mm/network/s;->ciG:I
+    iget v1, p0, Lcom/tencent/mm/network/s;->cdX:I
 
     if-ne v0, v1, :cond_1
 
     .line 290
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjw:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceN:Ljava/util/Map;
 
     if-nez v0, :cond_0
 
     .line 291
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getRequestProperties()Ljava/util/Map;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/network/s;->cjw:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/network/s;->ceN:Ljava/util/Map;
 
     .line 293
     :cond_0
@@ -269,7 +293,7 @@
 
     .line 295
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;
 
@@ -283,7 +307,7 @@
 
     .prologue
     .line 300
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, p1}, Ljava/net/HttpURLConnection;->getRequestProperty(Ljava/lang/String;)Ljava/lang/String;
 
@@ -302,33 +326,33 @@
 
     .line 58
     :goto_0
-    iget v0, p0, Lcom/tencent/mm/network/s;->ciG:I
+    iget v0, p0, Lcom/tencent/mm/network/s;->cdX:I
 
     if-ne v7, v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjw:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceN:Ljava/util/Map;
 
     if-nez v0, :cond_0
 
     .line 60
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getRequestProperties()Ljava/util/Map;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/network/s;->cjw:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/network/s;->ceN:Ljava/util/Map;
 
     .line 62
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result v0
 
     .line 63
-    iget v1, p0, Lcom/tencent/mm/network/s;->ciG:I
+    iget v1, p0, Lcom/tencent/mm/network/s;->cdX:I
 
     if-ne v7, v1, :cond_1
 
@@ -337,7 +361,7 @@
     if-ne v1, v0, :cond_1
 
     .line 64
-    iget-object v1, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v1, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     const-string/jumbo v2, "Location"
 
@@ -371,20 +395,20 @@
 
     check-cast v0, Ljava/net/HttpURLConnection;
 
-    iput-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iput-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     .line 72
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, v4}, Ljava/net/HttpURLConnection;->setInstanceFollowRedirects(Z)V
 
     .line 74
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjw:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceN:Ljava/util/Map;
 
     if-eqz v0, :cond_4
 
     .line 75
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjw:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceN:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
@@ -427,7 +451,7 @@
     if-nez v1, :cond_3
 
     .line 79
-    iget-object v1, p0, Lcom/tencent/mm/network/s;->cjw:Ljava/util/Map;
+    iget-object v1, p0, Lcom/tencent/mm/network/s;->ceN:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -446,7 +470,7 @@
     if-ge v3, v2, :cond_3
 
     .line 83
-    iget-object v6, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v6, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -465,7 +489,7 @@
 
     .line 86
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     const-string/jumbo v1, "Host"
 
@@ -478,7 +502,7 @@
     invoke-virtual {v0, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 91
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     const-string/jumbo v1, "X-Online-Host"
 
@@ -493,12 +517,12 @@
     goto/16 :goto_0
 .end method
 
-.method public final kk(Ljava/lang/String;)V
+.method public final kU(Ljava/lang/String;)V
     .locals 2
 
     .prologue
     .line 369
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     const-string/jumbo v1, "Referer"
 
@@ -513,7 +537,7 @@
 
     .prologue
     .line 350
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, p1}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
@@ -526,7 +550,7 @@
 
     .prologue
     .line 360
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, p1}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
@@ -539,7 +563,7 @@
 
     .prologue
     .line 110
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, p1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
@@ -552,7 +576,7 @@
 
     .prologue
     .line 340
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, p1, p2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -565,7 +589,7 @@
 
     .prologue
     .line 345
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, p1}, Ljava/net/HttpURLConnection;->setUseCaches(Z)V
 
@@ -578,7 +602,7 @@
 
     .prologue
     .line 374
-    iget-object v0, p0, Lcom/tencent/mm/network/s;->cjv:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/tencent/mm/network/s;->ceM:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->toString()Ljava/lang/String;
 

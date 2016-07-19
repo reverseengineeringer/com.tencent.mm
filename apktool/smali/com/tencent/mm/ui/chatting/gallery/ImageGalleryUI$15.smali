@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->hR(Z)V
+    value = Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->iu(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+.field final synthetic lGY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
-.field final synthetic lgR:Ljava/util/List;
+.field final synthetic lHd:Ljava/util/List;
 
-.field final synthetic lgS:Ljava/util/List;
+.field final synthetic lHe:Ljava/util/List;
 
 
 # direct methods
@@ -30,12 +30,12 @@
     .locals 0
 
     .prologue
-    .line 839
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$15;->lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    .line 859
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$15;->lGY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$15;->lgR:Ljava/util/List;
+    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$15;->lHd:Ljava/util/List;
 
-    iput-object p3, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$15;->lgS:Ljava/util/List;
+    iput-object p3, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$15;->lHe:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,18 +48,18 @@
     .locals 3
 
     .prologue
-    .line 842
+    .line 862
     const-string/jumbo v0, ""
 
     invoke-virtual {p1, v0}, Lcom/tencent/mm/ui/base/l;->setHeaderTitle(Ljava/lang/CharSequence;)Landroid/view/ContextMenu;
 
-    .line 843
+    .line 863
     const/4 v0, 0x0
 
     move v1, v0
 
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$15;->lgR:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$15;->lHd:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -67,8 +67,8 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 844
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$15;->lgR:Ljava/util/List;
+    .line 864
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$15;->lHd:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -80,7 +80,7 @@
 
     move-result v2
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$15;->lgS:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$15;->lHe:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -90,14 +90,14 @@
 
     invoke-virtual {p1, v2, v0}, Lcom/tencent/mm/ui/base/l;->b(ILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
-    .line 843
+    .line 863
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 846
+    .line 866
     :cond_0
     return-void
 .end method

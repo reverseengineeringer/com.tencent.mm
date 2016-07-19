@@ -13,5 +13,5 @@
 .method public abstract clear()V
 .end method
 
-.method public abstract e(IILjava/lang/String;Lcom/tencent/mm/r/j;)Z
+.method public abstract d(IILjava/lang/String;Lcom/tencent/mm/t/j;)Z
 .end method

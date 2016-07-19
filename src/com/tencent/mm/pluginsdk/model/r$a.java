@@ -2,11 +2,11 @@ package com.tencent.mm.pluginsdk.model;
 
 public final class r$a
 {
-  public int iAH;
-  public int iAI;
-  public String iAJ;
-  public int iAK;
-  public String iAL;
+  public int iXh;
+  public int iXi;
+  public String iXj;
+  public int iXk;
+  public String iXl;
 }
 
 /* Location:

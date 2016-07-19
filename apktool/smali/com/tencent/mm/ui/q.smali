@@ -7,11 +7,11 @@
 
 
 # instance fields
-.field private cpb:Lcom/tencent/mm/ui/base/preference/f;
+.field private ckp:Lcom/tencent/mm/ui/base/preference/f;
 
-.field private gmE:Lcom/tencent/mm/m/a$a;
+.field private gwY:Lcom/tencent/mm/o/a$a;
 
-.field private kqO:Lcom/tencent/mm/pluginsdk/i$n;
+.field private kPT:Lcom/tencent/mm/pluginsdk/i$n;
 
 
 # direct methods
@@ -19,15 +19,15 @@
     .locals 1
 
     .prologue
-    .line 50
+    .line 58
     invoke-direct {p0}, Lcom/tencent/mm/ui/a;-><init>()V
 
-    .line 56
+    .line 64
     new-instance v0, Lcom/tencent/mm/ui/q$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/q$1;-><init>(Lcom/tencent/mm/ui/q;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/q;->gmE:Lcom/tencent/mm/m/a$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/q;->gwY:Lcom/tencent/mm/o/a$a;
 
     return-void
 .end method
@@ -36,47 +36,47 @@
     .locals 0
 
     .prologue
-    .line 50
-    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bbo()V
+    .line 58
+    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bgA()V
 
     return-void
 .end method
 
-.method private asB()V
+.method private avP()V
     .locals 3
 
     .prologue
-    .line 237
+    .line 257
     const-string/jumbo v0, "sns"
 
-    invoke-static {v0}, Lcom/tencent/mm/ar/c;->yf(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/av/c;->zM(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 238
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    .line 258
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v1, "settings_my_album"
 
     const/4 v2, 0x1
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->at(Ljava/lang/String;Z)V
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->aD(Ljava/lang/String;Z)V
 
-    .line 256
+    .line 276
     :goto_0
     return-void
 
-    .line 240
+    .line 260
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v1, "settings_my_album"
 
     const/4 v2, 0x0
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->at(Ljava/lang/String;Z)V
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->aD(Ljava/lang/String;Z)V
 
     goto :goto_0
 .end method
@@ -85,220 +85,13 @@
     .locals 0
 
     .prologue
-    .line 50
-    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->asB()V
+    .line 58
+    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->avP()V
 
     return-void
 .end method
 
-.method private bbn()V
-    .locals 9
-
-    .prologue
-    const v5, 0x41010
-
-    const v4, 0x40008
-
-    const/4 v8, 0x0
-
-    const/4 v7, 0x0
-
-    const/16 v6, 0x8
-
-    .line 276
-    sget-object v2, Lcom/tencent/mm/pluginsdk/i$a;->iyJ:Lcom/tencent/mm/pluginsdk/i$d;
-
-    .line 277
-    if-eqz v2, :cond_1
-
-    invoke-interface {v2}, Lcom/tencent/mm/pluginsdk/i$d;->LS()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-interface {v2}, Lcom/tencent/mm/pluginsdk/i$d;->LT()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const-string/jumbo v0, "card"
-
-    invoke-static {v0}, Lcom/tencent/mm/ar/c;->yf(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    .line 278
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
-
-    const-string/jumbo v1, "settings_mm_cardpackage"
-
-    const/4 v2, 0x1
-
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->at(Ljava/lang/String;Z)V
-
-    .line 316
-    :goto_0
-    return-void
-
-    .line 280
-    :cond_2
-    const-string/jumbo v0, ""
-
-    .line 281
-    if-eqz v2, :cond_7
-
-    .line 282
-    invoke-interface {v2}, Lcom/tencent/mm/pluginsdk/i$d;->LU()Ljava/lang/String;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    .line 286
-    :goto_1
-    invoke-static {}, Lcom/tencent/mm/m/c;->qP()Lcom/tencent/mm/m/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v4, v5}, Lcom/tencent/mm/m/a;->G(II)Z
-
-    move-result v3
-
-    .line 287
-    invoke-static {}, Lcom/tencent/mm/m/c;->qP()Lcom/tencent/mm/m/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v4, v5}, Lcom/tencent/mm/m/a;->F(II)Z
-
-    move-result v4
-
-    .line 288
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
-
-    const-string/jumbo v5, "settings_mm_cardpackage"
-
-    invoke-interface {v0, v5, v7}, Lcom/tencent/mm/ui/base/preference/f;->at(Ljava/lang/String;Z)V
-
-    .line 289
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
-
-    const-string/jumbo v5, "settings_mm_cardpackage"
-
-    invoke-interface {v0, v5}, Lcom/tencent/mm/ui/base/preference/f;->GB(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/ui/base/preference/IconPreference;
-
-    .line 290
-    if-eqz v2, :cond_3
-
-    invoke-interface {v2}, Lcom/tencent/mm/pluginsdk/i$d;->LT()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    .line 291
-    const v2, 0x7f0b0d45
-
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/base/preference/IconPreference;->setTitle(I)V
-
-    .line 296
-    :goto_2
-    if-eqz v3, :cond_5
-
-    .line 297
-    invoke-virtual {v0, v7}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qM(I)V
-
-    .line 298
-    const-string/jumbo v2, ""
-
-    const/4 v3, -0x1
-
-    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ag(Ljava/lang/String;I)V
-
-    .line 299
-    invoke-virtual {v0, v6}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qK(I)V
-
-    .line 300
-    invoke-static {v1}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    .line 301
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/preference/IconPreference;->setSummary(Ljava/lang/CharSequence;)V
-
-    goto :goto_0
-
-    .line 293
-    :cond_3
-    const v2, 0x7f0b02c6
-
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/base/preference/IconPreference;->setTitle(I)V
-
-    goto :goto_2
-
-    .line 303
-    :cond_4
-    invoke-virtual {v0, v8}, Lcom/tencent/mm/ui/base/preference/IconPreference;->setSummary(Ljava/lang/CharSequence;)V
-
-    goto :goto_0
-
-    .line 305
-    :cond_5
-    if-eqz v4, :cond_6
-
-    .line 306
-    invoke-virtual {v0, v7}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qK(I)V
-
-    .line 307
-    const v1, 0x7f0b0e22
-
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/q;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const v2, 0x7f0406ed
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ag(Ljava/lang/String;I)V
-
-    .line 308
-    invoke-virtual {v0, v6}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qM(I)V
-
-    .line 309
-    invoke-virtual {v0, v8}, Lcom/tencent/mm/ui/base/preference/IconPreference;->setSummary(Ljava/lang/CharSequence;)V
-
-    goto :goto_0
-
-    .line 311
-    :cond_6
-    invoke-virtual {v0, v6}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qM(I)V
-
-    .line 312
-    invoke-virtual {v0, v6}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qK(I)V
-
-    .line 313
-    invoke-virtual {v0, v8}, Lcom/tencent/mm/ui/base/preference/IconPreference;->setSummary(Ljava/lang/CharSequence;)V
-
-    goto/16 :goto_0
-
-    :cond_7
-    move-object v1, v0
-
-    goto :goto_1
-.end method
-
-.method private bbo()V
+.method private bgA()V
     .locals 7
 
     .prologue
@@ -308,32 +101,32 @@
 
     const/4 v5, 0x0
 
-    .line 320
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    .line 396
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v1, "more_setting"
 
-    invoke-interface {v0, v1, v5}, Lcom/tencent/mm/ui/base/preference/f;->at(Ljava/lang/String;Z)V
+    invoke-interface {v0, v1, v5}, Lcom/tencent/mm/ui/base/preference/f;->aD(Ljava/lang/String;Z)V
 
-    .line 321
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    .line 397
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v1, "more_setting"
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/preference/f;->GB(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/preference/f;->IR(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Lcom/tencent/mm/ui/base/preference/IconPreference;
 
-    .line 322
+    .line 398
     if-eqz v0, :cond_1
 
-    .line 324
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qP(I)V
+    .line 400
+    invoke-virtual {v0, v4}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sR(I)V
 
-    .line 325
-    invoke-static {}, Lcom/tencent/mm/m/c;->qP()Lcom/tencent/mm/m/a;
+    .line 401
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
 
     move-result-object v1
 
@@ -341,34 +134,34 @@
 
     const v3, 0x41002
 
-    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/m/a;->F(II)Z
+    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/o/a;->F(II)Z
 
     move-result v2
 
-    .line 326
+    .line 402
     if-eqz v2, :cond_2
 
-    .line 327
-    invoke-virtual {v0, v5}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qK(I)V
+    .line 403
+    invoke-virtual {v0, v5}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sM(I)V
 
-    .line 328
-    const v1, 0x7f0b0e22
+    .line 404
+    const v1, 0x7f0800f4
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/q;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v3, 0x7f0406ed
+    const v3, 0x7f02056b
 
-    invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ag(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ah(Ljava/lang/String;I)V
 
-    .line 334
+    .line 410
     :goto_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v1
 
@@ -386,50 +179,50 @@
 
     move-result v1
 
-    .line 335
+    .line 411
     if-eqz v1, :cond_0
 
-    .line 336
-    invoke-static {}, Lcom/tencent/mm/model/h;->sj()Z
+    .line 412
+    invoke-static {}, Lcom/tencent/mm/model/h;->sl()Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    .line 337
-    const v1, 0x7f0b07a9
+    .line 413
+    const v1, 0x7f080f78
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/preference/IconPreference;->setSummary(I)V
 
-    .line 343
+    .line 419
     :cond_0
     :goto_1
-    invoke-static {}, Lcom/tencent/mm/g/h;->pS()Lcom/tencent/mm/g/e;
+    invoke-static {}, Lcom/tencent/mm/h/h;->om()Lcom/tencent/mm/h/e;
 
     move-result-object v1
 
     const-string/jumbo v3, "VoiceprintEntry"
 
-    invoke-virtual {v1, v3}, Lcom/tencent/mm/g/e;->getValue(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v3}, Lcom/tencent/mm/h/e;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1, v5}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
+    invoke-static {v1, v5}, Lcom/tencent/mm/sdk/platformtools/be;->getInt(Ljava/lang/String;I)I
 
     move-result v1
 
     if-ne v1, v6, :cond_1
 
-    .line 344
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 420
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v1
 
-    sget-object v3, Lcom/tencent/mm/storage/j$a;->kbm:Lcom/tencent/mm/storage/j$a;
+    sget-object v3, Lcom/tencent/mm/storage/j$a;->kBy:Lcom/tencent/mm/storage/j$a;
 
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -447,29 +240,29 @@
 
     if-eqz v1, :cond_1
 
-    .line 346
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 422
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v1
 
     const/16 v3, 0x28
 
-    invoke-virtual {v1, v3}, Lcom/tencent/mm/storage/h;->pB(I)I
+    invoke-virtual {v1, v3, v5}, Lcom/tencent/mm/storage/h;->getInt(II)I
 
     move-result v1
 
-    .line 347
+    .line 423
     const/high16 v3, 0x20000
 
     and-int/2addr v1, v3
 
     if-nez v1, :cond_1
 
-    invoke-static {}, Lcom/tencent/mm/model/h;->sJ()Ljava/lang/Boolean;
+    invoke-static {}, Lcom/tencent/mm/model/h;->sL()Ljava/lang/Boolean;
 
     move-result-object v1
 
@@ -479,37 +272,37 @@
 
     if-nez v1, :cond_1
 
-    .line 348
+    .line 424
     if-nez v2, :cond_1
 
-    .line 349
-    const-string/jumbo v1, "!32@/B4Tb64lLpIoKnD99TFNknXr6PHCQS26"
+    .line 425
+    const-string/jumbo v1, "MicroMsg.MoreTabUI"
 
     const-string/jumbo v2, "show voiceprint dot"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 350
-    invoke-virtual {v0, v5}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qM(I)V
+    .line 426
+    invoke-virtual {v0, v5}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sO(I)V
 
-    .line 357
+    .line 433
     :cond_1
     return-void
 
-    .line 330
+    .line 406
     :cond_2
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qK(I)V
+    invoke-virtual {v0, v4}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sM(I)V
 
-    .line 331
+    .line 407
     const-string/jumbo v1, ""
 
     const/4 v3, -0x1
 
-    invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ag(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ah(Ljava/lang/String;I)V
 
     goto/16 :goto_0
 
-    .line 339
+    .line 415
     :cond_3
     const-string/jumbo v1, ""
 
@@ -518,147 +311,192 @@
     goto :goto_1
 .end method
 
-.method private bbp()V
-    .locals 6
+.method private bgB()V
+    .locals 7
 
     .prologue
-    const v5, 0x7f0406ed
+    const v6, 0x7f02056b
 
     const v3, 0x41004
 
+    const/16 v5, 0x8
+
     const/4 v4, 0x0
 
-    .line 405
+    .line 481
     const-string/jumbo v0, "emoji"
 
-    invoke-static {v0}, Lcom/tencent/mm/ar/c;->yf(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/av/c;->zM(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/ar/c;->aSY()Z
+    invoke-static {}, Lcom/tencent/mm/av/c;->aXR()Z
 
-    .line 408
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    .line 484
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v1, "settings_emoji_store"
 
-    invoke-interface {v0, v1, v4}, Lcom/tencent/mm/ui/base/preference/f;->at(Ljava/lang/String;Z)V
+    invoke-interface {v0, v1, v4}, Lcom/tencent/mm/ui/base/preference/f;->aD(Ljava/lang/String;Z)V
 
-    .line 411
-    invoke-static {}, Lcom/tencent/mm/m/c;->qP()Lcom/tencent/mm/m/a;
+    .line 487
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
 
     move-result-object v0
 
     const v1, 0x40003
 
-    invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/m/a;->F(II)Z
+    invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/o/a;->F(II)Z
 
     move-result v1
 
-    .line 412
-    invoke-static {}, Lcom/tencent/mm/m/c;->qP()Lcom/tencent/mm/m/a;
+    .line 488
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
 
     move-result-object v0
 
     const v2, 0x40005
 
-    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/m/a;->F(II)Z
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/o/a;->F(II)Z
 
     move-result v2
 
-    .line 413
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    .line 489
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v3, "settings_emoji_store"
 
-    invoke-interface {v0, v3}, Lcom/tencent/mm/ui/base/preference/f;->GB(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
+    invoke-interface {v0, v3}, Lcom/tencent/mm/ui/base/preference/f;->IR(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Lcom/tencent/mm/ui/base/preference/IconPreference;
 
-    .line 414
+    .line 490
     if-nez v0, :cond_1
 
-    .line 428
+    .line 538
     :goto_0
     return-void
 
-    .line 406
+    .line 482
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v1, "settings_emoji_store"
 
-    invoke-interface {v0, v1, v4}, Lcom/tencent/mm/ui/base/preference/f;->at(Ljava/lang/String;Z)V
+    invoke-interface {v0, v1, v4}, Lcom/tencent/mm/ui/base/preference/f;->aD(Ljava/lang/String;Z)V
 
     goto :goto_0
 
-    .line 417
+    .line 493
     :cond_1
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
-    .line 418
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qK(I)V
+    .line 494
+    invoke-virtual {v0, v4}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sM(I)V
 
-    .line 419
-    const v1, 0x7f0b0e22
+    .line 495
+    const v3, 0x7f0800f4
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/q;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/tencent/mm/ui/q;->getString(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-virtual {v0, v1, v5}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ag(Ljava/lang/String;I)V
+    invoke-virtual {v0, v3, v6}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ah(Ljava/lang/String;I)V
 
-    goto :goto_0
+    .line 503
+    :goto_1
+    if-nez v2, :cond_2
 
-    .line 420
+    if-eqz v1, :cond_5
+
+    .line 504
     :cond_2
-    if-eqz v2, :cond_3
-
-    .line 421
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qK(I)V
-
-    .line 422
-    const v1, 0x7f0b0e23
-
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/q;->getString(I)Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1, v5}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ag(Ljava/lang/String;I)V
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
+
+    move-result-object v1
+
+    const v2, 0x38101
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    .line 506
+    invoke-static {}, Lcom/tencent/mm/ae/n;->AC()Lcom/tencent/mm/ae/a/a;
+
+    move-result-object v2
+
+    iget-object v3, v0, Lcom/tencent/mm/ui/base/preference/IconPreference;->dlC:Landroid/widget/ImageView;
+
+    new-instance v4, Lcom/tencent/mm/ui/q$2;
+
+    invoke-direct {v4, p0, v0}, Lcom/tencent/mm/ui/q$2;-><init>(Lcom/tencent/mm/ui/q;Lcom/tencent/mm/ui/base/preference/IconPreference;)V
+
+    invoke-virtual {v2, v1, v3, v4}, Lcom/tencent/mm/ae/a/a;->a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/tencent/mm/ae/a/c/g;)V
 
     goto :goto_0
 
-    .line 424
+    .line 496
     :cond_3
-    const/16 v1, 0x8
+    if-eqz v2, :cond_4
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qK(I)V
+    .line 497
+    invoke-virtual {v0, v4}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sM(I)V
 
-    .line 425
-    const-string/jumbo v1, ""
+    .line 498
+    const v3, 0x7f0800d5
 
-    const/4 v2, -0x1
+    invoke-virtual {p0, v3}, Lcom/tencent/mm/ui/q;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ag(Ljava/lang/String;I)V
+    move-result-object v3
+
+    invoke-virtual {v0, v3, v6}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ah(Ljava/lang/String;I)V
+
+    goto :goto_1
+
+    .line 500
+    :cond_4
+    invoke-virtual {v0, v5}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sM(I)V
+
+    .line 501
+    const-string/jumbo v3, ""
+
+    const/4 v4, -0x1
+
+    invoke-virtual {v0, v3, v4}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ah(Ljava/lang/String;I)V
+
+    goto :goto_1
+
+    .line 534
+    :cond_5
+    invoke-virtual {v0, v5}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sQ(I)V
 
     goto :goto_0
 .end method
 
-.method private bbq()V
+.method private bgC()V
     .locals 4
 
     .prologue
-    .line 432
-    invoke-static {}, Lcom/tencent/mm/model/h;->sk()Z
+    .line 542
+    invoke-static {}, Lcom/tencent/mm/model/h;->sm()Z
 
     move-result v0
 
-    .line 433
-    const-string/jumbo v1, "!32@/B4Tb64lLpIoKnD99TFNknXr6PHCQS26"
+    .line 543
+    const-string/jumbo v1, "MicroMsg.MoreTabUI"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -674,10 +512,10 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 434
-    iget-object v1, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    .line 544
+    iget-object v1, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v2, "settings_mm_wallet"
 
@@ -686,24 +524,24 @@
     const/4 v0, 0x1
 
     :goto_0
-    invoke-interface {v1, v2, v0}, Lcom/tencent/mm/ui/base/preference/f;->at(Ljava/lang/String;Z)V
+    invoke-interface {v1, v2, v0}, Lcom/tencent/mm/ui/base/preference/f;->aD(Ljava/lang/String;Z)V
 
-    .line 436
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->kLL:Lcom/tencent/mm/ui/base/preference/h;
+    .line 546
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->lla:Lcom/tencent/mm/ui/base/preference/h;
 
     invoke-interface {v0}, Lcom/tencent/mm/ui/base/preference/f;->notifyDataSetChanged()V
 
-    .line 437
+    .line 547
     return-void
 
-    .line 434
+    .line 544
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method private bbr()V
+.method private bgD()V
     .locals 10
 
     .prologue
@@ -717,12 +555,12 @@
 
     const/16 v7, 0x8
 
-    .line 441
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 551
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -736,16 +574,16 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/t;->e(Ljava/lang/Integer;)I
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/s;->g(Ljava/lang/Integer;)I
 
     move-result v1
 
-    .line 443
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 553
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -759,52 +597,52 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/t;->e(Ljava/lang/Integer;)I
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/s;->g(Ljava/lang/Integer;)I
 
     move-result v0
 
-    .line 444
+    .line 554
     add-int/2addr v1, v0
 
-    .line 447
-    invoke-static {}, Lcom/tencent/mm/m/c;->qP()Lcom/tencent/mm/m/a;
+    .line 557
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, v4, v5}, Lcom/tencent/mm/m/a;->F(II)Z
+    invoke-virtual {v0, v4, v5}, Lcom/tencent/mm/o/a;->F(II)Z
 
     move-result v2
 
-    .line 448
-    invoke-static {}, Lcom/tencent/mm/m/c;->qP()Lcom/tencent/mm/m/a;
+    .line 558
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, v4, v5}, Lcom/tencent/mm/m/a;->G(II)Z
+    invoke-virtual {v0, v4, v5}, Lcom/tencent/mm/o/a;->G(II)Z
 
     move-result v3
 
-    .line 449
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    .line 559
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v4, "settings_mm_wallet"
 
-    invoke-interface {v0, v4}, Lcom/tencent/mm/ui/base/preference/f;->GB(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
+    invoke-interface {v0, v4}, Lcom/tencent/mm/ui/base/preference/f;->IR(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Lcom/tencent/mm/ui/base/preference/IconPreference;
 
-    .line 450
+    .line 560
     if-nez v0, :cond_0
 
-    .line 477
+    .line 587
     :goto_0
     return-void
 
-    .line 453
+    .line 563
     :cond_0
-    const-string/jumbo v4, "!32@/B4Tb64lLpIoKnD99TFNknXr6PHCQS26"
+    const-string/jumbo v4, "MicroMsg.MoreTabUI"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -820,10 +658,10 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 454
-    const-string/jumbo v4, "!32@/B4Tb64lLpIoKnD99TFNknXr6PHCQS26"
+    .line 564
+    const-string/jumbo v4, "MicroMsg.MoreTabUI"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -839,126 +677,528 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 456
+    .line 566
     if-eqz v2, :cond_1
 
-    .line 457
-    invoke-virtual {v0, v8}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qK(I)V
+    .line 567
+    invoke-virtual {v0, v8}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sM(I)V
 
-    .line 458
-    const v1, 0x7f0b0e22
+    .line 568
+    const v1, 0x7f0800f4
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/q;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v2, 0x7f0406ed
+    const v2, 0x7f02056b
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ag(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ah(Ljava/lang/String;I)V
 
-    .line 459
-    invoke-virtual {v0, v7}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qM(I)V
+    .line 569
+    invoke-virtual {v0, v7}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sO(I)V
 
     goto :goto_0
 
-    .line 460
+    .line 570
     :cond_1
     const/16 v2, 0x63
 
     if-le v1, v2, :cond_2
 
-    .line 461
-    invoke-virtual {v0, v8}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qK(I)V
+    .line 571
+    invoke-virtual {v0, v8}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sM(I)V
 
-    .line 462
-    const v1, 0x7f0b0ae0
+    .line 572
+    const v1, 0x7f081685
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/q;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v2, p0, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-static {v2}, Lcom/tencent/mm/ui/tools/u;->eB(Landroid/content/Context;)I
+    invoke-static {v2}, Lcom/tencent/mm/ui/tools/u;->eE(Landroid/content/Context;)I
 
     move-result v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ag(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ah(Ljava/lang/String;I)V
 
-    .line 463
-    invoke-virtual {v0, v7}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qM(I)V
+    .line 573
+    invoke-virtual {v0, v7}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sO(I)V
 
     goto :goto_0
 
-    .line 464
+    .line 574
     :cond_2
     if-lez v1, :cond_3
 
-    .line 465
-    invoke-virtual {v0, v8}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qK(I)V
+    .line 575
+    invoke-virtual {v0, v8}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sM(I)V
 
-    .line 466
+    .line 576
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v2, p0, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-static {v2}, Lcom/tencent/mm/ui/tools/u;->eB(Landroid/content/Context;)I
+    invoke-static {v2}, Lcom/tencent/mm/ui/tools/u;->eE(Landroid/content/Context;)I
 
     move-result v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ag(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ah(Ljava/lang/String;I)V
 
-    .line 467
-    invoke-virtual {v0, v7}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qM(I)V
+    .line 577
+    invoke-virtual {v0, v7}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sO(I)V
 
     goto :goto_0
 
-    .line 468
+    .line 578
     :cond_3
     if-eqz v3, :cond_4
 
-    .line 469
+    .line 579
     const-string/jumbo v1, ""
 
-    invoke-virtual {v0, v1, v9}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ag(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, v9}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ah(Ljava/lang/String;I)V
 
-    .line 470
-    invoke-virtual {v0, v7}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qK(I)V
+    .line 580
+    invoke-virtual {v0, v7}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sM(I)V
 
-    .line 471
-    invoke-virtual {v0, v8}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qM(I)V
+    .line 581
+    invoke-virtual {v0, v8}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sO(I)V
 
     goto/16 :goto_0
 
-    .line 473
+    .line 583
     :cond_4
     const-string/jumbo v1, ""
 
-    invoke-virtual {v0, v1, v9}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ag(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, v9}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ah(Ljava/lang/String;I)V
 
-    .line 474
-    invoke-virtual {v0, v7}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qK(I)V
+    .line 584
+    invoke-virtual {v0, v7}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sM(I)V
 
-    .line 475
-    invoke-virtual {v0, v7}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qM(I)V
+    .line 585
+    invoke-virtual {v0, v7}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sO(I)V
 
     goto/16 :goto_0
+.end method
+
+.method private bgz()V
+    .locals 14
+
+    .prologue
+    const/4 v13, 0x1
+
+    const/4 v12, 0x0
+
+    const/4 v11, -0x1
+
+    const/4 v10, 0x0
+
+    const/16 v9, 0x8
+
+    .line 296
+    sget-object v1, Lcom/tencent/mm/pluginsdk/i$a;->iVf:Lcom/tencent/mm/pluginsdk/i$d;
+
+    .line 297
+    if-eqz v1, :cond_1
+
+    invoke-interface {v1}, Lcom/tencent/mm/pluginsdk/i$d;->MZ()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-interface {v1}, Lcom/tencent/mm/pluginsdk/i$d;->Na()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const-string/jumbo v0, "card"
+
+    invoke-static {v0}, Lcom/tencent/mm/av/c;->zM(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 298
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
+
+    const-string/jumbo v1, "settings_mm_cardpackage"
+
+    invoke-interface {v0, v1, v13}, Lcom/tencent/mm/ui/base/preference/f;->aD(Ljava/lang/String;Z)V
+
+    .line 392
+    :goto_0
+    return-void
+
+    .line 300
+    :cond_2
+    const-string/jumbo v0, ""
+
+    .line 301
+    if-eqz v1, :cond_a
+
+    .line 302
+    invoke-interface {v1}, Lcom/tencent/mm/pluginsdk/i$d;->Nb()Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    .line 306
+    :goto_1
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
+
+    move-result-object v0
+
+    const v1, 0x40008
+
+    const v3, 0x41010
+
+    invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/o/a;->G(II)Z
+
+    move-result v3
+
+    .line 307
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
+
+    move-result-object v0
+
+    const v1, 0x40008
+
+    const v4, 0x41010
+
+    invoke-virtual {v0, v1, v4}, Lcom/tencent/mm/o/a;->F(II)Z
+
+    move-result v1
+
+    .line 308
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
+
+    move-result-object v0
+
+    sget-object v4, Lcom/tencent/mm/storage/j$a;->kBU:Lcom/tencent/mm/storage/j$a;
+
+    sget-object v5, Lcom/tencent/mm/storage/j$a;->kBW:Lcom/tencent/mm/storage/j$a;
+
+    invoke-virtual {v0, v4, v5}, Lcom/tencent/mm/o/a;->a(Lcom/tencent/mm/storage/j$a;Lcom/tencent/mm/storage/j$a;)Z
+
+    move-result v4
+
+    .line 309
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
+
+    move-result-object v0
+
+    sget-object v5, Lcom/tencent/mm/storage/j$a;->kBV:Lcom/tencent/mm/storage/j$a;
+
+    sget-object v6, Lcom/tencent/mm/storage/j$a;->kBX:Lcom/tencent/mm/storage/j$a;
+
+    invoke-virtual {v0, v5, v6}, Lcom/tencent/mm/o/a;->a(Lcom/tencent/mm/storage/j$a;Lcom/tencent/mm/storage/j$a;)Z
+
+    move-result v5
+
+    .line 310
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
+
+    const-string/jumbo v6, "settings_mm_cardpackage"
+
+    invoke-interface {v0, v6, v12}, Lcom/tencent/mm/ui/base/preference/f;->aD(Ljava/lang/String;Z)V
+
+    .line 311
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
+
+    const-string/jumbo v6, "settings_mm_cardpackage"
+
+    invoke-interface {v0, v6}, Lcom/tencent/mm/ui/base/preference/f;->IR(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/ui/base/preference/IconPreference;
+
+    .line 317
+    const v6, 0x7f0810da
+
+    invoke-virtual {v0, v6}, Lcom/tencent/mm/ui/base/preference/IconPreference;->setTitle(I)V
+
+    .line 319
+    if-eqz v1, :cond_3
+
+    .line 320
+    invoke-virtual {v0, v12}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sM(I)V
+
+    .line 321
+    const v1, 0x7f0800f4
+
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/q;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const v2, 0x7f02056b
+
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ah(Ljava/lang/String;I)V
+
+    .line 322
+    invoke-virtual {v0, v9}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sO(I)V
+
+    .line 323
+    invoke-virtual {v0, v10}, Lcom/tencent/mm/ui/base/preference/IconPreference;->setSummary(Ljava/lang/CharSequence;)V
+
+    .line 324
+    invoke-virtual {v0, v10}, Lcom/tencent/mm/ui/base/preference/IconPreference;->E(Landroid/graphics/Bitmap;)V
+
+    .line 325
+    invoke-virtual {v0, v9}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sQ(I)V
+
+    .line 326
+    const-string/jumbo v1, ""
+
+    invoke-virtual {v0, v1, v11}, Lcom/tencent/mm/ui/base/preference/IconPreference;->bj(Ljava/lang/String;I)V
+
+    .line 327
+    invoke-virtual {v0, v9}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sN(I)V
+
+    goto :goto_0
+
+    .line 331
+    :cond_3
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
+
+    move-result-object v1
+
+    sget-object v6, Lcom/tencent/mm/storage/j$a;->kCd:Lcom/tencent/mm/storage/j$a;
+
+    const-string/jumbo v7, ""
+
+    invoke-virtual {v1, v6, v7}, Lcom/tencent/mm/storage/h;->a(Lcom/tencent/mm/storage/j$a;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    .line 332
+    if-eqz v5, :cond_4
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_4
+
+    .line 333
+    invoke-virtual {v0, v12}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sQ(I)V
+
+    .line 335
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/q;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    const v7, 0x7f0b019e
+
+    invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result v6
+
+    .line 339
+    new-instance v7, Lcom/tencent/mm/ae/a/a/c$a;
+
+    invoke-direct {v7}, Lcom/tencent/mm/ae/a/a/c$a;-><init>()V
+
+    .line 342
+    sget-object v8, Lcom/tencent/mm/compatible/util/d;->bpf:Ljava/lang/String;
+
+    iput-object v8, v7, Lcom/tencent/mm/ae/a/a/c$a;->bNf:Ljava/lang/String;
+
+    .line 343
+    invoke-static {}, Lcom/tencent/mm/ae/n;->AD()Lcom/tencent/mm/modelsfs/SFSContext;
+
+    iput-object v10, v7, Lcom/tencent/mm/ae/a/a/c$a;->bNv:Lcom/tencent/mm/modelsfs/SFSContext;
+
+    .line 345
+    invoke-static {v1}, Lcom/tencent/mm/plugin/card/model/h;->mp(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
+    iput-object v8, v7, Lcom/tencent/mm/ae/a/a/c$a;->bNe:Ljava/lang/String;
+
+    .line 346
+    iput-boolean v13, v7, Lcom/tencent/mm/ae/a/a/c$a;->bNc:Z
+
+    .line 347
+    iput-boolean v13, v7, Lcom/tencent/mm/ae/a/a/c$a;->bNx:Z
+
+    .line 348
+    iput-boolean v13, v7, Lcom/tencent/mm/ae/a/a/c$a;->bNa:Z
+
+    .line 349
+    iput v6, v7, Lcom/tencent/mm/ae/a/a/c$a;->bNj:I
+
+    .line 350
+    iput v6, v7, Lcom/tencent/mm/ae/a/a/c$a;->bNi:I
+
+    .line 351
+    const v6, 0x7f020550
+
+    iput v6, v7, Lcom/tencent/mm/ae/a/a/c$a;->bNp:I
+
+    .line 352
+    invoke-virtual {v7}, Lcom/tencent/mm/ae/a/a/c$a;->AM()Lcom/tencent/mm/ae/a/a/c;
+
+    move-result-object v6
+
+    .line 353
+    invoke-static {}, Lcom/tencent/mm/ae/n;->AC()Lcom/tencent/mm/ae/a/a;
+
+    move-result-object v7
+
+    iget-object v8, v0, Lcom/tencent/mm/ui/base/preference/IconPreference;->dlC:Landroid/widget/ImageView;
+
+    invoke-virtual {v7, v1, v8, v6}, Lcom/tencent/mm/ae/a/a;->a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/tencent/mm/ae/a/a/c;)V
+
+    .line 359
+    :goto_2
+    if-eqz v3, :cond_5
+
+    .line 360
+    invoke-virtual {v0, v12}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sO(I)V
+
+    .line 365
+    :goto_3
+    if-eqz v4, :cond_9
+
+    .line 366
+    const-string/jumbo v1, ""
+
+    invoke-virtual {v0, v1, v11}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ah(Ljava/lang/String;I)V
+
+    .line 367
+    invoke-virtual {v0, v9}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sM(I)V
+
+    .line 368
+    if-eqz v5, :cond_7
+
+    .line 369
+    invoke-virtual {v0, v10}, Lcom/tencent/mm/ui/base/preference/IconPreference;->setSummary(Ljava/lang/CharSequence;)V
+
+    .line 370
+    invoke-static {v2}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    .line 371
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/q;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v3, 0x7f0f0110
+
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v2, v11, v1}, Lcom/tencent/mm/ui/base/preference/IconPreference;->A(Ljava/lang/String;II)V
+
+    .line 372
+    invoke-virtual {v0, v12}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sN(I)V
+
+    goto/16 :goto_0
+
+    .line 355
+    :cond_4
+    invoke-virtual {v0, v10}, Lcom/tencent/mm/ui/base/preference/IconPreference;->E(Landroid/graphics/Bitmap;)V
+
+    .line 356
+    invoke-virtual {v0, v9}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sQ(I)V
+
+    goto :goto_2
+
+    .line 362
+    :cond_5
+    invoke-virtual {v0, v9}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sO(I)V
+
+    goto :goto_3
+
+    .line 374
+    :cond_6
+    const-string/jumbo v1, ""
+
+    invoke-virtual {v0, v1, v11}, Lcom/tencent/mm/ui/base/preference/IconPreference;->bj(Ljava/lang/String;I)V
+
+    .line 375
+    invoke-virtual {v0, v9}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sN(I)V
+
+    goto/16 :goto_0
+
+    .line 378
+    :cond_7
+    const-string/jumbo v1, ""
+
+    invoke-virtual {v0, v1, v11}, Lcom/tencent/mm/ui/base/preference/IconPreference;->bj(Ljava/lang/String;I)V
+
+    .line 379
+    invoke-virtual {v0, v9}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sN(I)V
+
+    .line 380
+    invoke-static {v2}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_8
+
+    .line 381
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/base/preference/IconPreference;->setSummary(Ljava/lang/CharSequence;)V
+
+    goto/16 :goto_0
+
+    .line 383
+    :cond_8
+    invoke-virtual {v0, v10}, Lcom/tencent/mm/ui/base/preference/IconPreference;->setSummary(Ljava/lang/CharSequence;)V
+
+    goto/16 :goto_0
+
+    .line 387
+    :cond_9
+    invoke-virtual {v0, v9}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sN(I)V
+
+    .line 388
+    invoke-virtual {v0, v9}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sM(I)V
+
+    .line 389
+    invoke-virtual {v0, v10}, Lcom/tencent/mm/ui/base/preference/IconPreference;->setSummary(Ljava/lang/CharSequence;)V
+
+    goto/16 :goto_0
+
+    :cond_a
+    move-object v2, v0
+
+    goto/16 :goto_1
 .end method
 
 .method static synthetic c(Lcom/tencent/mm/ui/q;)V
     .locals 0
 
     .prologue
-    .line 50
-    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bbp()V
+    .line 58
+    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bgB()V
 
     return-void
 .end method
@@ -967,8 +1207,8 @@
     .locals 0
 
     .prologue
-    .line 50
-    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bbr()V
+    .line 58
+    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bgD()V
 
     return-void
 .end method
@@ -977,8 +1217,8 @@
     .locals 0
 
     .prologue
-    .line 50
-    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bbn()V
+    .line 58
+    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bgz()V
 
     return-void
 .end method
@@ -987,20 +1227,20 @@
     .locals 1
 
     .prologue
-    .line 50
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    .line 58
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final Gn()I
+.method public final GK()I
     .locals 1
 
     .prologue
-    .line 105
-    const v0, 0x7f090004
+    .line 118
+    const v0, 0x7f060034
 
     return v0
 .end method
@@ -1015,13 +1255,13 @@
 
     const/4 v5, 0x0
 
-    .line 500
-    invoke-static {p3}, Lcom/tencent/mm/platformtools/t;->Y(Ljava/lang/Object;)I
+    .line 610
+    invoke-static {p3}, Lcom/tencent/mm/platformtools/s;->as(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 501
-    const-string/jumbo v1, "!32@/B4Tb64lLpIoKnD99TFNknXr6PHCQS26"
+    .line 611
+    const-string/jumbo v1, "MicroMsg.MoreTabUI"
 
     const-string/jumbo v2, "onNotifyChange event:%d obj:%d stg:%s"
 
@@ -1043,14 +1283,14 @@
 
     aput-object p2, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 502
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 612
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v1
 
@@ -1058,9 +1298,9 @@
 
     if-gtz v0, :cond_2
 
-    .line 503
+    .line 613
     :cond_0
-    const-string/jumbo v1, "!32@/B4Tb64lLpIoKnD99TFNknXr6PHCQS26"
+    const-string/jumbo v1, "MicroMsg.MoreTabUI"
 
     const-string/jumbo v2, "onNotifyChange error obj:%d stg:%s"
 
@@ -1074,14 +1314,14 @@
 
     aput-object p2, v3, v6
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 521
+    .line 631
     :cond_1
     :goto_0
     return-void
 
-    .line 506
+    .line 616
     :cond_2
     const v1, 0x32011
 
@@ -1091,24 +1331,24 @@
 
     if-ne v1, v0, :cond_4
 
-    .line 507
+    .line 617
     :cond_3
-    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bbr()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bgD()V
 
     goto :goto_0
 
-    .line 508
+    .line 618
     :cond_4
     const/16 v1, 0x28
 
     if-ne v1, v0, :cond_5
 
-    .line 509
-    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bbq()V
+    .line 619
+    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bgC()V
 
     goto :goto_0
 
-    .line 518
+    .line 628
     :cond_5
     const-string/jumbo v0, "208899"
 
@@ -1122,116 +1362,110 @@
 
     if-eqz v0, :cond_1
 
-    .line 519
-    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bbp()V
+    .line 629
+    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bgB()V
 
     goto :goto_0
 .end method
 
 .method public final a(Lcom/tencent/mm/ui/base/preference/f;Lcom/tencent/mm/ui/base/preference/Preference;)Z
-    .locals 7
+    .locals 9
 
     .prologue
-    const v6, 0x10b25
+    const v8, 0x41008
 
-    const/4 v5, 0x2
+    const v7, 0x4000c
 
-    const/16 v4, 0x2ace
+    const/16 v6, 0x2ace
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    .line 148
-    iget-object v2, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    .line 161
+    iget-object v0, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
     const-string/jumbo v3, "more_tab_setting_personal_info"
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v0
 
-    if-eqz v2, :cond_1
+    if-eqz v0, :cond_0
 
-    .line 149
+    .line 162
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 150
-    iget-object v2, p0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
+    .line 163
+    iget-object v1, p0, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     const-string/jumbo v3, "setting"
 
     const-string/jumbo v4, ".ui.setting.SettingsPersonalInfoUI"
 
-    invoke-static {v2, v3, v4, v0}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {v1, v3, v4, v0}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
-    move v0, v1
-
-    .line 232
-    :cond_0
+    .line 252
     :goto_0
-    return v0
+    return v2
 
-    .line 154
-    :cond_1
-    iget-object v2, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    .line 167
+    :cond_0
+    iget-object v0, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
     const-string/jumbo v3, "settings_my_address"
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v0
 
-    if-eqz v2, :cond_2
+    if-eqz v0, :cond_1
 
-    .line 155
+    .line 168
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, p0, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     const-class v3, Lcom/tencent/mm/ui/contact/AddressUI;
 
-    invoke-direct {v0, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    invoke-direct {v0, v1, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 156
-    const-string/jumbo v2, "Contact_GroupFilter_Type"
+    .line 169
+    const-string/jumbo v1, "Contact_GroupFilter_Type"
 
     const-string/jumbo v3, "@biz.contact"
 
-    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 157
+    .line 170
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/q;->startActivity(Landroid/content/Intent;)V
 
-    move v0, v1
-
-    .line 158
     goto :goto_0
 
-    .line 161
-    :cond_2
-    iget-object v2, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    .line 174
+    :cond_1
+    iget-object v0, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
     const-string/jumbo v3, "settings_my_add_contact"
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v0
 
-    if-eqz v2, :cond_3
+    if-eqz v0, :cond_2
 
-    .line 162
-    iget-object v0, p0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
+    .line 175
+    iget-object v0, p0, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const-string/jumbo v2, "subapp"
+    const-string/jumbo v1, "subapp"
 
     const-string/jumbo v3, ".ui.pluginapp.AddMoreFriendsUI"
 
@@ -1239,310 +1473,130 @@
 
     invoke-direct {v4}, Landroid/content/Intent;-><init>()V
 
-    invoke-static {v0, v2, v3, v4}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {v0, v1, v3, v4}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
-    move v0, v1
-
-    .line 163
     goto :goto_0
 
-    .line 166
-    :cond_3
-    iget-object v2, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    .line 179
+    :cond_2
+    iget-object v0, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
     const-string/jumbo v3, "settings_mm_wallet"
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v0
 
-    if-eqz v2, :cond_4
-
-    .line 167
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
-
-    const-string/jumbo v2, "9"
-
-    invoke-virtual {v0, v4, v2}, Lcom/tencent/mm/plugin/report/service/h;->O(ILjava/lang/String;)V
-
-    .line 168
-    new-instance v0, Lcom/tencent/mm/d/a/jt;
-
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/jt;-><init>()V
-
-    .line 169
-    iget-object v2, v0, Lcom/tencent/mm/d/a/jt;->aGr:Lcom/tencent/mm/d/a/jt$a;
-
-    iget-object v3, p0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
-
-    iget-object v3, v3, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
-
-    iput-object v3, v2, Lcom/tencent/mm/d/a/jt$a;->context:Landroid/content/Context;
-
-    .line 170
-    sget-object v2, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
-
-    .line 171
-    invoke-static {}, Lcom/tencent/mm/m/c;->qP()Lcom/tencent/mm/m/a;
-
-    move-result-object v0
-
-    const v2, 0x4000c
-
-    const v3, 0x41008
-
-    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/m/a;->H(II)V
-
-    move v0, v1
-
-    .line 172
-    goto :goto_0
-
-    .line 175
-    :cond_4
-    iget-object v2, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
-
-    const-string/jumbo v3, "settings_mm_cardpackage"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_7
-
-    .line 176
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
-
-    move-result-object v0
-
-    sget-object v2, Lcom/tencent/mm/storage/j$a;->kbK:Lcom/tencent/mm/storage/j$a;
-
-    const-string/jumbo v3, ""
-
-    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/storage/h;->b(Lcom/tencent/mm/storage/j$a;Ljava/lang/Object;)V
-
-    .line 178
-    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iyJ:Lcom/tencent/mm/pluginsdk/i$d;
-
-    .line 179
-    new-instance v2, Landroid/content/Intent;
-
-    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
+    if-eqz v0, :cond_5
 
     .line 180
-    const-string/jumbo v3, "key_from_scene"
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
 
-    const/16 v4, 0x16
+    move-result-object v0
 
-    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v0, v7, v8}, Lcom/tencent/mm/o/a;->F(II)Z
+
+    move-result v0
 
     .line 181
-    if-eqz v0, :cond_6
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/i$d;->LS()Z
+    move-result-object v3
 
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/i$d;->LT()Z
+    invoke-virtual {v3, v7, v8}, Lcom/tencent/mm/o/a;->G(II)Z
 
     move-result v3
-
-    if-nez v3, :cond_6
 
     .line 182
-    iget-object v0, p0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
+    sget-object v4, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    const-string/jumbo v5, "9"
 
-    const-string/jumbo v3, "card"
-
-    const-string/jumbo v4, ".ui.CardIndexUI"
-
-    invoke-static {v0, v3, v4, v2}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
-
-    :cond_5
-    :goto_1
-    move v0, v1
-
-    .line 186
-    goto/16 :goto_0
+    invoke-virtual {v4, v6, v5}, Lcom/tencent/mm/plugin/report/service/g;->X(ILjava/lang/String;)V
 
     .line 183
-    :cond_6
-    if-eqz v0, :cond_5
+    sget-object v4, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/i$d;->LT()Z
+    const/16 v5, 0x341d
 
-    move-result v0
+    new-array v6, v2, [Ljava/lang/Object;
 
-    if-eqz v0, :cond_5
+    if-nez v0, :cond_3
 
-    .line 184
-    iget-object v0, p0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
+    if-eqz v3, :cond_4
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    :cond_3
+    move v0, v2
 
-    const-string/jumbo v3, "card"
-
-    const-string/jumbo v4, ".sharecard.ui.ShareCardListUI"
-
-    invoke-static {v0, v3, v4, v2}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
-
-    goto :goto_1
-
-    .line 189
-    :cond_7
-    iget-object v2, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
-
-    const-string/jumbo v3, "settings_my_album"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_9
-
-    .line 190
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->isSDCardAvailable()Z
-
-    move-result v0
-
-    if-nez v0, :cond_8
-
-    iget-object v0, p0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/s;->em(Landroid/content/Context;)V
-
-    move v0, v1
-
-    goto/16 :goto_0
-
-    :cond_8
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
-
-    move-result-object v0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v5, v2}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    new-instance v2, Landroid/content/Intent;
-
-    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
-
-    const-string/jumbo v3, "sns_userName"
-
-    invoke-virtual {v2, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    const/high16 v0, 0x20000000
-
-    invoke-virtual {v2, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    const/high16 v0, 0x4000000
-
-    invoke-virtual {v2, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
-
-    move-result-object v0
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v6, v3}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/t;->e(Ljava/lang/Integer;)I
-
-    move-result v0
-
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
-
-    move-result-object v3
-
-    add-int/lit8 v0, v0, 0x1
-
+    :goto_1
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    invoke-virtual {v3, v6, v0}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
+    aput-object v0, v6, v1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
+    invoke-virtual {v4, v5, v6}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    .line 184
+    new-instance v0, Lcom/tencent/mm/e/a/jz;
 
-    const-string/jumbo v3, "sns"
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/jz;-><init>()V
 
-    const-string/jumbo v4, ".ui.SnsUserUI"
+    .line 185
+    iget-object v1, v0, Lcom/tencent/mm/e/a/jz;->asB:Lcom/tencent/mm/e/a/jz$a;
 
-    invoke-static {v0, v3, v4, v2}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    iget-object v3, p0, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
 
-    move v0, v1
+    iget-object v3, v3, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
+
+    iput-object v3, v1, Lcom/tencent/mm/e/a/jz$a;->context:Landroid/content/Context;
+
+    .line 186
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
+
+    .line 187
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v7, v8}, Lcom/tencent/mm/o/a;->H(II)V
 
     goto/16 :goto_0
 
+    :cond_4
+    move v0, v1
+
+    .line 183
+    goto :goto_1
+
+    .line 191
+    :cond_5
+    iget-object v0, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
+
+    const-string/jumbo v3, "settings_mm_cardpackage"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
     .line 193
-    :cond_9
-    iget-object v2, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
-    const-string/jumbo v3, "settings_mm_favorite"
+    move-result-object v0
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
-    move-result v2
+    move-result-object v0
 
-    if-eqz v2, :cond_a
+    sget-object v1, Lcom/tencent/mm/storage/j$a;->kCa:Lcom/tencent/mm/storage/j$a;
 
-    .line 194
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    const-string/jumbo v3, ""
 
-    const-string/jumbo v2, "8"
-
-    invoke-virtual {v0, v4, v2}, Lcom/tencent/mm/plugin/report/service/h;->O(ILjava/lang/String;)V
-
-    .line 195
-    iget-object v0, p0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
-
-    const-string/jumbo v2, "favorite"
-
-    const-string/jumbo v3, ".ui.FavoriteIndexUI"
-
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/ar/c;->u(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/storage/h;->b(Lcom/tencent/mm/storage/j$a;Ljava/lang/Object;)V
 
     .line 196
     new-instance v0, Landroid/content/Intent;
@@ -1550,267 +1604,427 @@
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     .line 197
-    new-instance v2, Landroid/content/ComponentName;
+    const-string/jumbo v1, "key_from_scene"
 
-    sget-object v3, Lcom/tencent/mm/ui/d$e;->kjL:Ljava/lang/String;
+    const/16 v3, 0x16
+
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 205
+    iget-object v1, p0, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
+
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
+
+    const-string/jumbo v3, "card"
+
+    const-string/jumbo v4, ".ui.CardHomePageUI"
+
+    invoke-static {v1, v3, v4, v0}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+
+    goto/16 :goto_0
+
+    .line 209
+    :cond_6
+    iget-object v0, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
+
+    const-string/jumbo v3, "settings_my_album"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    .line 210
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->isSDCardAvailable()Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    iget-object v0, p0, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/s;->ep(Landroid/content/Context;)V
+
+    goto/16 :goto_0
+
+    :cond_7
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    new-instance v1, Landroid/content/Intent;
+
+    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
+
+    const-string/jumbo v3, "sns_userName"
+
+    invoke-virtual {v1, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    const/high16 v0, 0x20000000
+
+    invoke-virtual {v1, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    const/high16 v0, 0x4000000
+
+    invoke-virtual {v1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
+
+    move-result-object v0
+
+    const v3, 0x10b25
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v0, v3, v4}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/s;->g(Ljava/lang/Integer;)I
+
+    move-result v0
+
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
+
+    move-result-object v3
+
+    const v4, 0x10b25
+
+    add-int/lit8 v0, v0, 0x1
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v4, v0}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
+
+    iget-object v0, p0, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
+
+    const-string/jumbo v3, "sns"
+
+    const-string/jumbo v4, ".ui.SnsUserUI"
+
+    invoke-static {v0, v3, v4, v1}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+
+    goto/16 :goto_0
+
+    .line 213
+    :cond_8
+    iget-object v0, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
+
+    const-string/jumbo v3, "settings_mm_favorite"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    .line 214
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
+
+    const-string/jumbo v1, "8"
+
+    invoke-virtual {v0, v6, v1}, Lcom/tencent/mm/plugin/report/service/g;->X(ILjava/lang/String;)V
+
+    .line 215
+    iget-object v0, p0, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
+
+    const-string/jumbo v1, "favorite"
+
+    const-string/jumbo v3, ".ui.FavoriteIndexUI"
+
+    invoke-static {v0, v1, v3}, Lcom/tencent/mm/av/c;->v(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 216
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    .line 217
+    new-instance v1, Landroid/content/ComponentName;
+
+    sget-object v3, Lcom/tencent/mm/ui/d$e;->kJT:Ljava/lang/String;
 
     const-string/jumbo v4, "com.tencent.mm.booter.MMReceivers$ToolsProcessReceiver"
 
-    invoke-direct {v2, v3, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v3, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 198
-    const-string/jumbo v2, "tools_process_action_code_key"
+    .line 218
+    const-string/jumbo v1, "tools_process_action_code_key"
 
     const-string/jumbo v3, "com.tencent.mm.intent.ACTION_START_TOOLS_PROCESS"
 
-    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 199
+    .line 219
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/q;->sendBroadcast(Landroid/content/Intent;)V
 
-    move v0, v1
-
-    .line 200
     goto/16 :goto_0
 
-    .line 204
-    :cond_a
-    iget-object v2, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    .line 224
+    :cond_9
+    iget-object v0, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
     const-string/jumbo v3, "settings_emoji_store"
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v0
 
-    if-eqz v2, :cond_b
+    if-eqz v0, :cond_a
 
-    .line 205
-    sget-object v2, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 225
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-string/jumbo v3, "7"
 
-    invoke-virtual {v2, v4, v3}, Lcom/tencent/mm/plugin/report/service/h;->O(ILjava/lang/String;)V
+    invoke-virtual {v0, v6, v3}, Lcom/tencent/mm/plugin/report/service/g;->X(ILjava/lang/String;)V
 
-    .line 206
-    invoke-static {}, Lcom/tencent/mm/m/c;->qP()Lcom/tencent/mm/m/a;
+    .line 226
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
 
-    move-result-object v2
+    move-result-object v0
 
     const v3, 0x40003
 
     const v4, 0x41004
 
-    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/m/a;->H(II)V
+    invoke-virtual {v0, v3, v4}, Lcom/tencent/mm/o/a;->H(II)V
 
-    invoke-static {}, Lcom/tencent/mm/m/c;->qP()Lcom/tencent/mm/m/a;
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
 
-    move-result-object v2
+    move-result-object v0
 
     const v3, 0x40005
 
     const v4, 0x41004
 
-    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/m/a;->H(II)V
+    invoke-virtual {v0, v3, v4}, Lcom/tencent/mm/o/a;->H(II)V
 
-    new-instance v2, Landroid/content/Intent;
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     const-string/jumbo v3, "preceding_scence"
 
-    invoke-virtual {v2, v3, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    const/4 v4, 0x2
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
+    invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    iget-object v3, v3, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v3, p0, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
+
+    iget-object v3, v3, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     const-string/jumbo v4, "emoji"
 
     const-string/jumbo v5, ".ui.v2.EmojiStoreV2UI"
 
-    invoke-static {v3, v4, v5, v2}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {v3, v4, v5, v0}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
-    sget-object v2, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v3, 0x2f21
 
-    new-array v4, v1, [Ljava/lang/Object;
+    new-array v4, v2, [Ljava/lang/Object;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    aput-object v5, v4, v0
+    aput-object v5, v4, v1
 
-    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
-
-    move v0, v1
+    invoke-virtual {v0, v3, v4}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
-    .line 209
-    :cond_b
-    iget-object v2, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    .line 229
+    :cond_a
+    iget-object v0, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
     const-string/jumbo v3, "more_setting"
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v0
 
-    if-eqz v2, :cond_0
+    if-eqz v0, :cond_c
 
-    .line 211
-    invoke-static {}, Lcom/tencent/mm/m/c;->qP()Lcom/tencent/mm/m/a;
+    .line 231
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
 
-    move-result-object v2
+    move-result-object v0
 
     const v3, 0x40001
 
     const v4, 0x41002
 
-    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/m/a;->H(II)V
+    invoke-virtual {v0, v3, v4}, Lcom/tencent/mm/o/a;->H(II)V
 
-    .line 213
-    invoke-static {}, Lcom/tencent/mm/g/h;->pS()Lcom/tencent/mm/g/e;
-
-    move-result-object v2
-
-    const-string/jumbo v3, "VoiceprintEntry"
-
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/g/e;->getValue(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
-
-    move-result v2
-
-    if-ne v2, v1, :cond_c
-
-    .line 215
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
-
-    move-result-object v2
-
-    const/16 v3, 0x28
-
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/storage/h;->pB(I)I
-
-    move-result v2
-
-    .line 216
-    const/high16 v3, 0x20000
-
-    and-int/2addr v2, v3
-
-    if-nez v2, :cond_c
-
-    .line 217
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
-
-    move-result-object v2
-
-    sget-object v3, Lcom/tencent/mm/storage/j$a;->kbm:Lcom/tencent/mm/storage/j$a;
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    .line 233
+    invoke-static {}, Lcom/tencent/mm/h/h;->om()Lcom/tencent/mm/h/e;
 
     move-result-object v0
 
-    invoke-virtual {v2, v3, v0}, Lcom/tencent/mm/storage/h;->b(Lcom/tencent/mm/storage/j$a;Ljava/lang/Object;)V
+    const-string/jumbo v3, "VoiceprintEntry"
 
-    .line 218
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/h/e;->getValue(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    if-ne v0, v2, :cond_b
+
+    .line 235
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
+
+    move-result-object v0
+
+    const/16 v3, 0x28
+
+    invoke-virtual {v0, v3, v1}, Lcom/tencent/mm/storage/h;->getInt(II)I
+
+    move-result v0
+
+    .line 236
+    const/high16 v3, 0x20000
+
+    and-int/2addr v0, v3
+
+    if-nez v0, :cond_b
+
+    .line 237
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
+
+    move-result-object v0
+
+    sget-object v3, Lcom/tencent/mm/storage/j$a;->kBy:Lcom/tencent/mm/storage/j$a;
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v3, v1}, Lcom/tencent/mm/storage/h;->b(Lcom/tencent/mm/storage/j$a;Ljava/lang/Object;)V
+
+    .line 238
     const-string/jumbo v0, "more_setting"
 
-    invoke-interface {p1, v0}, Lcom/tencent/mm/ui/base/preference/f;->GB(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
+    invoke-interface {p1, v0}, Lcom/tencent/mm/ui/base/preference/f;->IR(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Lcom/tencent/mm/ui/base/preference/IconPreference;
 
-    .line 219
-    const/16 v2, 0x8
+    .line 239
+    const/16 v1, 0x8
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qM(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sO(I)V
 
-    .line 220
-    const-string/jumbo v0, "!32@/B4Tb64lLpIoKnD99TFNknXr6PHCQS26"
+    .line 240
+    const-string/jumbo v0, "MicroMsg.MoreTabUI"
 
-    const-string/jumbo v2, "unset voicepint setting dot show"
+    const-string/jumbo v1, "unset voicepint setting dot show"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 224
-    :cond_c
+    .line 244
+    :cond_b
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 227
-    iget-object v2, p0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
+    .line 247
+    iget-object v1, p0, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     const-string/jumbo v3, "setting"
 
     const-string/jumbo v4, ".ui.setting.SettingsUI"
 
-    invoke-static {v2, v3, v4, v0}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {v1, v3, v4, v0}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
-    move v0, v1
+    goto/16 :goto_0
 
-    .line 229
+    :cond_c
+    move v2, v1
+
+    .line 252
     goto/16 :goto_0
 .end method
 
-.method public final aCH()Z
+.method public final aFD()Z
     .locals 1
 
     .prologue
-    .line 110
+    .line 123
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final aZY()Z
+.method protected final beA()V
     .locals 1
 
     .prologue
-    .line 115
-    const/4 v0, 0x1
+    .line 648
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->lla:Lcom/tencent/mm/ui/base/preference/h;
 
-    return v0
-.end method
+    iput-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
-.method protected final aZj()V
-    .locals 1
-
-    .prologue
-    .line 538
-    invoke-static {}, Lcom/tencent/mm/svg/c/a;->aYX()V
-
-    .line 539
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->kLL:Lcom/tencent/mm/ui/base/preference/h;
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
-
-    .line 540
+    .line 649
     return-void
 .end method
 
-.method protected final aZk()V
+.method protected final beB()V
     .locals 5
 
     .prologue
@@ -1818,63 +2032,63 @@
 
     const/4 v3, 0x0
 
-    .line 544
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->kLL:Lcom/tencent/mm/ui/base/preference/h;
+    .line 653
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->lla:Lcom/tencent/mm/ui/base/preference/h;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iput-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
-    .line 545
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 654
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/tencent/mm/storage/h;->a(Lcom/tencent/mm/sdk/h/j$b;)V
 
-    .line 546
-    invoke-static {}, Lcom/tencent/mm/m/c;->qP()Lcom/tencent/mm/m/a;
+    .line 655
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/q;->gmE:Lcom/tencent/mm/m/a$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/q;->gwY:Lcom/tencent/mm/o/a$a;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/m/a;->a(Lcom/tencent/mm/m/a$a;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/o/a;->a(Lcom/tencent/mm/o/a$a;)V
 
-    .line 547
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
-
-    const-string/jumbo v1, "more_tab_setting_personal_info"
-
-    invoke-interface {v0, v1, v3}, Lcom/tencent/mm/ui/base/preference/f;->at(Ljava/lang/String;Z)V
-
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->kLL:Lcom/tencent/mm/ui/base/preference/h;
+    .line 656
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v1, "more_tab_setting_personal_info"
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/preference/f;->GB(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
+    invoke-interface {v0, v1, v3}, Lcom/tencent/mm/ui/base/preference/f;->aD(Ljava/lang/String;Z)V
+
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->lla:Lcom/tencent/mm/ui/base/preference/h;
+
+    const-string/jumbo v1, "more_tab_setting_personal_info"
+
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/preference/f;->IR(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;
 
-    invoke-static {}, Lcom/tencent/mm/model/h;->sd()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/h;->sf()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
-    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/storage/k;->Ed(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/storage/k;->Gr(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -1882,60 +2096,60 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;->iNY:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;->jld:Ljava/lang/String;
 
     :goto_0
-    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;->ajh:Ljava/lang/String;
-
     invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;->UX:Ljava/lang/String;
+
+    invoke-static {}, Lcom/tencent/mm/model/h;->sg()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
 
     move-result-object v1
 
     :cond_0
-    iget-object v2, p0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v2, p0, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-static {v2, v1}, Lcom/tencent/mm/pluginsdk/ui/d/e;->a(Landroid/content/Context;Ljava/lang/CharSequence;)Landroid/text/SpannableString;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;->iNX:Landroid/text/SpannableString;
+    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;->jlc:Landroid/text/SpannableString;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v1, "more_tab_setting_personal_info"
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/preference/f;->GB(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/preference/f;->IR(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/q;->kqO:Lcom/tencent/mm/pluginsdk/i$n;
+    iget-object v1, p0, Lcom/tencent/mm/ui/q;->kPT:Lcom/tencent/mm/pluginsdk/i$n;
 
-    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;->htk:Lcom/tencent/mm/pluginsdk/i$n;
+    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;->hKW:Lcom/tencent/mm/pluginsdk/i$n;
 
-    .line 548
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    .line 657
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v1, "settings_my_address"
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/preference/f;->GB(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/preference/f;->IR(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
 
     move-result-object v0
 
@@ -1943,77 +2157,77 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/tencent/mm/am/l;->DL()Lcom/tencent/mm/am/c;
+    invoke-static {}, Lcom/tencent/mm/ap/l;->Ec()Lcom/tencent/mm/ap/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/am/c;->DA()I
+    invoke-virtual {v1}, Lcom/tencent/mm/ap/c;->DQ()I
 
     move-result v1
 
     if-lez v1, :cond_5
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qK(I)V
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sM(I)V
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v2, 0x7f0406ed
+    const v2, 0x7f02056b
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ag(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ah(Ljava/lang/String;I)V
 
-    .line 549
+    .line 658
     :cond_1
     :goto_1
-    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->asB()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->avP()V
 
-    .line 550
-    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bbp()V
+    .line 659
+    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bgB()V
 
-    .line 551
-    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bbo()V
+    .line 660
+    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bgA()V
 
-    .line 552
+    .line 661
     const-string/jumbo v0, "favorite"
 
-    invoke-static {v0}, Lcom/tencent/mm/ar/c;->yf(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/av/c;->zM(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_6
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v1, "settings_mm_favorite"
 
     const/4 v2, 0x1
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->at(Ljava/lang/String;Z)V
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->aD(Ljava/lang/String;Z)V
 
-    .line 553
+    .line 662
     :goto_2
-    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bbr()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bgD()V
 
-    .line 554
-    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bbq()V
+    .line 663
+    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bgC()V
 
-    .line 555
-    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bbn()V
+    .line 664
+    invoke-direct {p0}, Lcom/tencent/mm/ui/q;->bgz()V
 
-    .line 557
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    .line 666
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     invoke-interface {v0}, Lcom/tencent/mm/ui/base/preference/f;->notifyDataSetChanged()V
 
-    .line 560
-    const v0, 0x7f07108c
+    .line 669
+    const v0, 0x7f1010cd
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/q;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 561
+    .line 670
     if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
@@ -2022,282 +2236,292 @@
 
     if-eq v1, v4, :cond_2
 
-    .line 562
-    new-instance v1, Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 671
+    new-instance v1, Lcom/tencent/mm/sdk/platformtools/ac;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v1, v2}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
-    new-instance v2, Lcom/tencent/mm/ui/q$2;
+    new-instance v2, Lcom/tencent/mm/ui/q$3;
 
-    invoke-direct {v2, p0, v0}, Lcom/tencent/mm/ui/q$2;-><init>(Lcom/tencent/mm/ui/q;Landroid/view/View;)V
+    invoke-direct {v2, p0, v0}, Lcom/tencent/mm/ui/q$3;-><init>(Lcom/tencent/mm/ui/q;Landroid/view/View;)V
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
-    .line 573
+    .line 682
     :cond_2
     return-void
 
-    .line 547
+    .line 656
     :cond_3
-    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;->iNY:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;->jld:Ljava/lang/String;
 
     goto/16 :goto_0
 
     :cond_4
-    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;->iNY:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;->jld:Ljava/lang/String;
 
     goto/16 :goto_0
 
-    .line 548
+    .line 657
     :cond_5
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/ui/base/preference/IconPreference;->qK(I)V
+    invoke-virtual {v0, v4}, Lcom/tencent/mm/ui/base/preference/IconPreference;->sM(I)V
 
     const-string/jumbo v1, ""
 
     const/4 v2, -0x1
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ag(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/IconPreference;->ah(Ljava/lang/String;I)V
 
     goto :goto_1
 
-    .line 552
+    .line 661
     :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v1, "settings_mm_favorite"
 
-    invoke-interface {v0, v1, v3}, Lcom/tencent/mm/ui/base/preference/f;->at(Ljava/lang/String;Z)V
+    invoke-interface {v0, v1, v3}, Lcom/tencent/mm/ui/base/preference/f;->aD(Ljava/lang/String;Z)V
 
     goto :goto_2
 .end method
 
-.method protected final aZl()V
+.method protected final beC()V
     .locals 0
 
     .prologue
-    .line 585
+    .line 694
     return-void
 .end method
 
-.method protected final aZm()V
+.method protected final beD()V
     .locals 2
 
     .prologue
-    .line 589
-    invoke-static {}, Lcom/tencent/mm/m/c;->qP()Lcom/tencent/mm/m/a;
+    .line 698
+    invoke-static {}, Lcom/tencent/mm/o/c;->pE()Lcom/tencent/mm/o/a;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/q;->gmE:Lcom/tencent/mm/m/a$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/q;->gwY:Lcom/tencent/mm/o/a$a;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/m/a;->b(Lcom/tencent/mm/m/a$a;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/o/a;->b(Lcom/tencent/mm/o/a$a;)V
 
-    .line 590
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 699
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/tencent/mm/storage/h;->b(Lcom/tencent/mm/sdk/h/j$b;)V
 
-    .line 592
+    .line 701
     return-void
 .end method
 
-.method protected final aZn()V
+.method protected final beE()V
     .locals 0
 
     .prologue
-    .line 598
+    .line 707
     return-void
 .end method
 
-.method protected final aZo()V
+.method protected final beF()V
     .locals 0
 
     .prologue
-    .line 602
+    .line 711
     return-void
 .end method
 
-.method public final aZq()V
+.method public final beH()V
     .locals 2
 
     .prologue
-    .line 612
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    .line 721
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     if-eqz v0, :cond_0
 
-    .line 613
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    .line 722
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     invoke-interface {v0}, Lcom/tencent/mm/ui/base/preference/f;->removeAll()V
 
-    .line 615
+    .line 724
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->gWB:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->eLC:Landroid/widget/ListView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 616
+    .line 725
     return-void
 .end method
 
-.method public final aZr()V
+.method public final beI()V
     .locals 2
 
     .prologue
-    .line 620
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    .line 729
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     if-eqz v0, :cond_0
 
-    .line 621
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    .line 730
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     invoke-interface {v0}, Lcom/tencent/mm/ui/base/preference/f;->removeAll()V
 
-    .line 622
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    .line 731
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
-    const v1, 0x7f090004
+    const v1, 0x7f060034
 
     invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/preference/f;->addPreferencesFromResource(I)V
 
-    .line 624
+    .line 733
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->gWB:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->eLC:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/i;->kLL:Lcom/tencent/mm/ui/base/preference/h;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/i;->lla:Lcom/tencent/mm/ui/base/preference/h;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 625
+    .line 734
     return-void
 .end method
 
-.method public final aZt()V
+.method public final beK()V
     .locals 0
 
     .prologue
-    .line 631
+    .line 740
     return-void
 .end method
 
-.method public final bad()V
+.method public final bfr()Z
+    .locals 1
+
+    .prologue
+    .line 128
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final bfv()V
     .locals 0
 
     .prologue
-    .line 637
+    .line 746
     return-void
 .end method
 
-.method public onActivityCreated(Landroid/os/Bundle;)V
+.method public final onActivityCreated(Landroid/os/Bundle;)V
     .locals 3
 
     .prologue
     const/4 v2, 0x1
 
-    .line 129
-    const-string/jumbo v0, "!32@/B4Tb64lLpIoKnD99TFNknXr6PHCQS26"
+    .line 142
+    const-string/jumbo v0, "MicroMsg.MoreTabUI"
 
     const-string/jumbo v1, "onActivityCreated"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 130
+    .line 143
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/a;->onActivityCreated(Landroid/os/Bundle;)V
 
-    .line 131
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->kLL:Lcom/tencent/mm/ui/base/preference/h;
+    .line 144
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/i;->lla:Lcom/tencent/mm/ui/base/preference/h;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iput-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v1, "more_setting"
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->at(Ljava/lang/String;Z)V
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->aD(Ljava/lang/String;Z)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v1, "settings_emoji_store"
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->at(Ljava/lang/String;Z)V
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->aD(Ljava/lang/String;Z)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v1, "settings_mm_wallet"
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->at(Ljava/lang/String;Z)V
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->aD(Ljava/lang/String;Z)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v1, "settings_mm_cardpackage"
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->at(Ljava/lang/String;Z)V
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->aD(Ljava/lang/String;Z)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v1, "settings_mm_favorite"
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->at(Ljava/lang/String;Z)V
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->aD(Ljava/lang/String;Z)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v1, "settings_my_album"
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->at(Ljava/lang/String;Z)V
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->aD(Ljava/lang/String;Z)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v1, "settings_my_address"
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->at(Ljava/lang/String;Z)V
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->aD(Ljava/lang/String;Z)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v1, "more_tab_setting_personal_info"
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->at(Ljava/lang/String;Z)V
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/f;->aD(Ljava/lang/String;Z)V
 
-    .line 132
+    .line 145
     return-void
 .end method
 
-.method public onCreate(Landroid/os/Bundle;)V
+.method public final onCreate(Landroid/os/Bundle;)V
     .locals 5
 
     .prologue
-    .line 92
+    .line 105
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/a;->onCreate(Landroid/os/Bundle;)V
 
-    .line 93
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    .line 106
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tM()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tN()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 94
+    .line 107
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpIoKnD99TFNknXr6PHCQS26"
+    const-string/jumbo v0, "MicroMsg.MoreTabUI"
 
     const-string/jumbo v1, "Create MoreTabUI when accready:%b ishold:%b"
 
@@ -2307,7 +2531,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v4
 
@@ -2319,7 +2543,7 @@
 
     const/4 v3, 0x1
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tM()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tN()Z
 
     move-result v4
 
@@ -2329,62 +2553,62 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 99
+    .line 112
     :cond_1
     :goto_0
     return-void
 
-    .line 97
+    .line 110
     :cond_2
-    sget-object v0, Lcom/tencent/mm/pluginsdk/i$ah;->iyY:Lcom/tencent/mm/pluginsdk/i$s;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$ah;->iVu:Lcom/tencent/mm/pluginsdk/i$s;
 
     if-eqz v0, :cond_1
 
-    .line 98
-    sget-object v0, Lcom/tencent/mm/pluginsdk/i$ah;->iyY:Lcom/tencent/mm/pluginsdk/i$s;
+    .line 111
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$ah;->iVu:Lcom/tencent/mm/pluginsdk/i$s;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, p0, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/i$s;->aj(Landroid/content/Context;Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/i$n;
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/i$s;->am(Landroid/content/Context;Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/i$n;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/q;->kqO:Lcom/tencent/mm/pluginsdk/i$n;
+    iput-object v0, p0, Lcom/tencent/mm/ui/q;->kPT:Lcom/tencent/mm/pluginsdk/i$n;
 
     goto :goto_0
 .end method
 
-.method public onDestroy()V
+.method public final onDestroy()V
     .locals 1
 
     .prologue
-    .line 120
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->kqO:Lcom/tencent/mm/pluginsdk/i$n;
+    .line 133
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->kPT:Lcom/tencent/mm/pluginsdk/i$n;
 
     if-eqz v0, :cond_0
 
-    .line 121
-    iget-object v0, p0, Lcom/tencent/mm/ui/q;->kqO:Lcom/tencent/mm/pluginsdk/i$n;
+    .line 134
+    iget-object v0, p0, Lcom/tencent/mm/ui/q;->kPT:Lcom/tencent/mm/pluginsdk/i$n;
 
     invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/i$n;->onDestroy()V
 
-    .line 122
+    .line 135
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/q;->kqO:Lcom/tencent/mm/pluginsdk/i$n;
+    iput-object v0, p0, Lcom/tencent/mm/ui/q;->kPT:Lcom/tencent/mm/pluginsdk/i$n;
 
-    .line 124
+    .line 137
     :cond_0
     invoke-super {p0}, Lcom/tencent/mm/ui/a;->onDestroy()V
 
-    .line 125
+    .line 138
     return-void
 .end method

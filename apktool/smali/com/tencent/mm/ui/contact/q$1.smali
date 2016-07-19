@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/contact/q;->a(Ljava/lang/String;[I)V
+    value = Lcom/tencent/mm/ui/contact/q;->b(Ljava/lang/String;[I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic ghm:Ljava/lang/String;
+.field final synthetic grO:Ljava/lang/String;
 
-.field final synthetic llw:Lcom/tencent/mm/ui/contact/q;
+.field final synthetic lLJ:Lcom/tencent/mm/ui/contact/q;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 81
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/q$1;->llw:Lcom/tencent/mm/ui/contact/q;
+    .line 80
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/q$1;->lLJ:Lcom/tencent/mm/ui/contact/q;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/contact/q$1;->ghm:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/ui/contact/q$1;->grO:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,10 +44,10 @@
     .locals 2
 
     .prologue
-    .line 84
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/q$1;->llw:Lcom/tencent/mm/ui/contact/q;
+    .line 83
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/q$1;->lLJ:Lcom/tencent/mm/ui/contact/q;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/contact/q;->a(Lcom/tencent/mm/ui/contact/q;)Lcom/tencent/mm/sdk/platformtools/aa;
+    invoke-static {v0}, Lcom/tencent/mm/ui/contact/q;->a(Lcom/tencent/mm/ui/contact/q;)Lcom/tencent/mm/sdk/platformtools/ac;
 
     move-result-object v0
 
@@ -55,8 +55,8 @@
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/ui/contact/q$1$1;-><init>(Lcom/tencent/mm/ui/contact/q$1;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
-    .line 90
+    .line 89
     return-void
 .end method

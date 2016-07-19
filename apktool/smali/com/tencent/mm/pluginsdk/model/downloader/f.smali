@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static Ag(Ljava/lang/String;)Ljava/lang/String;
+.method public static Cg(Ljava/lang/String;)Ljava/lang/String;
     .locals 8
 
     .prologue
@@ -54,7 +54,7 @@
     move-result-object v1
 
     .line 22
-    const-string/jumbo v3, "!44@/B4Tb64lLpKVQlIh1YRBX61VdO1LUFHp1F22sB3B4EE="
+    const-string/jumbo v3, "MicroMsg.FileDownloadUtil"
 
     const-string/jumbo v4, "code : %d, md5 : %s"
 
@@ -74,7 +74,7 @@
 
     aput-object v1, v5, v2
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -113,7 +113,7 @@
     .line 27
     :goto_2
     :try_start_2
-    const-string/jumbo v2, "!44@/B4Tb64lLpKVQlIh1YRBX61VdO1LUFHp1F22sB3B4EE="
+    const-string/jumbo v2, "MicroMsg.FileDownloadUtil"
 
     const-string/jumbo v3, "get recirect location failed : %s"
 
@@ -129,7 +129,7 @@
 
     aput-object v0, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -179,63 +179,63 @@
     goto :goto_2
 .end method
 
-.method public static b(Lcom/tencent/mm/pluginsdk/model/downloader/d;)Lcom/tencent/mm/storage/z;
+.method public static b(Lcom/tencent/mm/pluginsdk/model/downloader/d;)Lcom/tencent/mm/storage/aa;
     .locals 2
 
     .prologue
     .line 37
-    new-instance v0, Lcom/tencent/mm/storage/z;
+    new-instance v0, Lcom/tencent/mm/storage/aa;
 
-    invoke-direct {v0}, Lcom/tencent/mm/storage/z;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/storage/aa;-><init>()V
 
     .line 38
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCq:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iZe:Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/tencent/mm/storage/z;->field_downloadUrl:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/storage/aa;->field_downloadUrl:Ljava/lang/String;
 
     .line 39
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCq:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iZe:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v1
 
-    iput v1, v0, Lcom/tencent/mm/storage/z;->field_downloadUrlHashCode:I
+    iput v1, v0, Lcom/tencent/mm/storage/aa;->field_downloadUrlHashCode:I
 
     .line 40
     iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->mFileName:Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/tencent/mm/storage/z;->field_fileName:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/storage/aa;->field_fileName:Ljava/lang/String;
 
     .line 41
-    iget v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCs:I
+    iget v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iZg:I
 
-    iput v1, v0, Lcom/tencent/mm/storage/z;->field_fileType:I
+    iput v1, v0, Lcom/tencent/mm/storage/aa;->field_fileType:I
 
     .line 42
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCr:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iZf:Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/tencent/mm/storage/z;->field_md5:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/storage/aa;->field_md5:Ljava/lang/String;
 
     .line 43
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->ehh:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->ekS:Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/tencent/mm/storage/z;->field_appId:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/storage/aa;->field_appId:Ljava/lang/String;
 
     .line 44
-    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCt:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iZh:Z
 
-    iput-boolean v1, v0, Lcom/tencent/mm/storage/z;->field_autoInstall:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/storage/aa;->field_autoInstall:Z
 
     .line 45
-    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCu:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iZi:Z
 
-    iput-boolean v1, v0, Lcom/tencent/mm/storage/z;->field_showNotification:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/storage/aa;->field_showNotification:Z
 
     .line 46
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->elm:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->eqa:Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/tencent/mm/storage/z;->field_packageName:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/storage/aa;->field_packageName:Ljava/lang/String;
 
     .line 48
     return-object v0

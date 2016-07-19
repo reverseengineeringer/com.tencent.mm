@@ -11,7 +11,7 @@
 
 .field private static final PATH_LENGTH_LIMIT:I = 0x2800
 
-.field private static final TAG:Ljava/lang/String; = "!44@/B4Tb64lLpIyQij4HtGFZMINqfKLk3xCSNB+M4PcHh0="
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.SDK.WXImageObject"
 
 
 # instance fields
@@ -168,11 +168,11 @@
 
     .line 117
     :cond_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpIyQij4HtGFZMINqfKLk3xCSNB+M4PcHh0="
+    const-string/jumbo v1, "MicroMsg.SDK.WXImageObject"
 
     const-string/jumbo v2, "checkArgs fail, all arguments are null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 136
     :goto_0
@@ -191,11 +191,11 @@
     if-le v1, v3, :cond_3
 
     .line 122
-    const-string/jumbo v1, "!44@/B4Tb64lLpIyQij4HtGFZMINqfKLk3xCSNB+M4PcHh0="
+    const-string/jumbo v1, "MicroMsg.SDK.WXImageObject"
 
     const-string/jumbo v2, "checkArgs fail, content is too large"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -216,11 +216,11 @@
     if-le v1, v2, :cond_4
 
     .line 127
-    const-string/jumbo v1, "!44@/B4Tb64lLpIyQij4HtGFZMINqfKLk3xCSNB+M4PcHh0="
+    const-string/jumbo v1, "MicroMsg.SDK.WXImageObject"
 
     const-string/jumbo v2, "checkArgs fail, path is invalid"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -239,11 +239,11 @@
     if-le v1, v3, :cond_5
 
     .line 132
-    const-string/jumbo v1, "!44@/B4Tb64lLpIyQij4HtGFZMINqfKLk3xCSNB+M4PcHh0="
+    const-string/jumbo v1, "MicroMsg.SDK.WXImageObject"
 
     const-string/jumbo v2, "checkArgs fail, image content is too large"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 

@@ -1,18 +1,18 @@
 package com.tencent.mm.ui.contact;
 
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class k$1
-  implements af.a
+  implements ah.a
 {
   k$1(k paramk) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    u.d("!44@/B4Tb64lLpISOYcLaKm7W93grpYn2xfC5yJeWqznlqY=", "refresh timer expired, update");
-    k.bhm();
-    k.a(lkt);
+    v.d("MicroMsg.FMessageContactView", "refresh timer expired, update");
+    k.bmW();
+    k.a(lKE);
     return false;
   }
 }

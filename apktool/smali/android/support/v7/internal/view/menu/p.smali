@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field mP:Landroid/support/v7/internal/view/menu/f;
+.field nf:Landroid/support/v7/internal/view/menu/f;
 
-.field private mQ:Landroid/support/v7/internal/view/menu/h;
+.field private ng:Landroid/support/v7/internal/view/menu/h;
 
 
 # direct methods
@@ -21,10 +21,10 @@
     invoke-direct {p0, p1}, Landroid/support/v7/internal/view/menu/f;-><init>(Landroid/content/Context;)V
 
     .line 40
-    iput-object p2, p0, Landroid/support/v7/internal/view/menu/p;->mP:Landroid/support/v7/internal/view/menu/f;
+    iput-object p2, p0, Landroid/support/v7/internal/view/menu/p;->nf:Landroid/support/v7/internal/view/menu/f;
 
     .line 41
-    iput-object p3, p0, Landroid/support/v7/internal/view/menu/p;->mQ:Landroid/support/v7/internal/view/menu/h;
+    iput-object p3, p0, Landroid/support/v7/internal/view/menu/p;->ng:Landroid/support/v7/internal/view/menu/h;
 
     .line 42
     return-void
@@ -37,7 +37,7 @@
 
     .prologue
     .line 74
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->mP:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->nf:Landroid/support/v7/internal/view/menu/f;
 
     invoke-virtual {v0, p1}, Landroid/support/v7/internal/view/menu/f;->a(Landroid/support/v7/internal/view/menu/f$a;)V
 
@@ -56,7 +56,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->mP:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->nf:Landroid/support/v7/internal/view/menu/f;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v7/internal/view/menu/f;->a(Landroid/support/v7/internal/view/menu/f;Landroid/view/MenuItem;)Z
 
@@ -81,7 +81,7 @@
 
     .prologue
     .line 51
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->mP:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->nf:Landroid/support/v7/internal/view/menu/f;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/f;->bp()Z
 
@@ -95,7 +95,7 @@
 
     .prologue
     .line 61
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->mP:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->nf:Landroid/support/v7/internal/view/menu/f;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/f;->bq()Z
 
@@ -109,7 +109,7 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->mP:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->nf:Landroid/support/v7/internal/view/menu/f;
 
     return-object v0
 .end method
@@ -127,7 +127,7 @@
 
     .prologue
     .line 128
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->mP:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->nf:Landroid/support/v7/internal/view/menu/f;
 
     invoke-virtual {v0, p1}, Landroid/support/v7/internal/view/menu/f;->f(Landroid/support/v7/internal/view/menu/h;)Z
 
@@ -141,7 +141,7 @@
 
     .prologue
     .line 133
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->mP:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->nf:Landroid/support/v7/internal/view/menu/f;
 
     invoke-virtual {v0, p1}, Landroid/support/v7/internal/view/menu/f;->g(Landroid/support/v7/internal/view/menu/h;)Z
 
@@ -155,7 +155,7 @@
 
     .prologue
     .line 69
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->mQ:Landroid/support/v7/internal/view/menu/h;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->ng:Landroid/support/v7/internal/view/menu/h;
 
     return-object v0
 .end method
@@ -242,7 +242,7 @@
 
     .prologue
     .line 93
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->mQ:Landroid/support/v7/internal/view/menu/h;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->ng:Landroid/support/v7/internal/view/menu/h;
 
     invoke-virtual {v0, p1}, Landroid/support/v7/internal/view/menu/h;->setIcon(I)Landroid/view/MenuItem;
 
@@ -255,7 +255,7 @@
 
     .prologue
     .line 88
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->mQ:Landroid/support/v7/internal/view/menu/h;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->ng:Landroid/support/v7/internal/view/menu/h;
 
     invoke-virtual {v0, p1}, Landroid/support/v7/internal/view/menu/h;->setIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/MenuItem;
 
@@ -268,7 +268,7 @@
 
     .prologue
     .line 46
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->mP:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/p;->nf:Landroid/support/v7/internal/view/menu/f;
 
     invoke-virtual {v0, p1}, Landroid/support/v7/internal/view/menu/f;->setQwertyMode(Z)V
 

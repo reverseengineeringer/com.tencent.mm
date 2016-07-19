@@ -10,12 +10,12 @@ final class SnsBrowseUI$3$1
   
   public final void run()
   {
-    Object localObject = hbZ.hbY.hbK;
-    if (heq != null)
+    Object localObject = hqL.hqK.hqA;
+    if (htc != null)
     {
-      localObject = heq.getSelectedView();
+      localObject = htc.getSelectedView();
       if ((localObject instanceof MultiTouchImageView)) {
-        ((MultiTouchImageView)localObject).bdf();
+        ((MultiTouchImageView)localObject).biI();
       }
     }
   }

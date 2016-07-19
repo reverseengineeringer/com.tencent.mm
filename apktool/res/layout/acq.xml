@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="50.0dip">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="50.0dip">
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.tencent.mm.pluginsdk.ui.applet.CdnImageView android:id="@id/bay" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_margin="3.0dip" android:scaleType="centerCrop" android:maxHeight="350.0dip" />
+                <ImageView android:id="@id/ax4" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_margin="3.0dip" android:src="@drawable/aa8" android:scaleType="center" android:maxHeight="350.0dip" />
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/baz" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="6.0dip" android:minHeight="50.0dip">
+            <TextView android:textSize="14.0dip" android:textColor="@color/ak" android:gravity="center_vertical" android:id="@id/bb0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="2" android:layout_weight="1.0" />
+            <TextView android:textSize="12.0dip" android:textColor="@color/mx" android:id="@id/bb1" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="1" android:layout_weight="1.8" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

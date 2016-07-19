@@ -14,23 +14,33 @@
     return-void
 .end method
 
-.method public static D(Ljava/util/List;)Ljava/lang/String;
+.method public static I(Ljava/util/List;)Ljava/lang/String;
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/Long;",
+            ">;)",
+            "Ljava/lang/String;"
+        }
+    .end annotation
 
     .prologue
-    .line 188
+    .line 194
     new-instance v1, Ljava/lang/StringBuilder;
 
     const/16 v0, 0x20
 
     invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 189
+    .line 195
     const/16 v0, 0x28
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 190
+    .line 196
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -48,7 +58,7 @@
 
     check-cast v0, Ljava/lang/Long;
 
-    .line 191
+    .line 197
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -59,7 +69,7 @@
 
     goto :goto_0
 
-    .line 193
+    .line 199
     :cond_0
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
@@ -71,7 +81,7 @@
 
     invoke-virtual {v1, v0, v2}, Ljava/lang/StringBuilder;->setCharAt(IC)V
 
-    .line 195
+    .line 201
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -79,22 +89,55 @@
     return-object v0
 .end method
 
+.method public static a(Lcom/tencent/kingkong/database/SQLiteDatabase;[B)I
+    .locals 2
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 24
+    invoke-virtual {p0, v0, v0}, Lcom/tencent/kingkong/database/SQLiteDatabase;->acquireNativeConnectionHandle(ZZ)I
+
+    move-result v0
+
+    .line 25
+    invoke-static {v0, p1}, Lcom/tencent/mm/modelsearch/FTSUtils;->nativeInitFts(I[B)I
+
+    move-result v1
+
+    .line 26
+    invoke-virtual {p0, v0}, Lcom/tencent/kingkong/database/SQLiteDatabase;->releaseNativeConnection(I)V
+
+    .line 27
+    return v1
+.end method
+
 .method public static a(Ljava/util/Map;II)I
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Integer;",
+            ">;II)I"
+        }
+    .end annotation
 
     .prologue
     const v2, 0x7fffffff
 
-    .line 80
+    .line 86
     if-ne p1, p2, :cond_0
 
     const/4 v0, 0x0
 
-    .line 88
+    .line 94
     :goto_0
     return v0
 
-    .line 82
+    .line 88
     :cond_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -106,12 +149,12 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 83
+    .line 89
     if-nez v0, :cond_1
 
     move v1, v2
 
-    .line 85
+    .line 91
     :goto_1
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -123,16 +166,16 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 86
+    .line 92
     if-nez v0, :cond_2
 
-    .line 88
+    .line 94
     :goto_2
     sub-int v0, v1, v2
 
     goto :goto_0
 
-    .line 83
+    .line 89
     :cond_1
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -142,7 +185,7 @@
 
     goto :goto_1
 
-    .line 86
+    .line 92
     :cond_2
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -153,14 +196,32 @@
 
 .method public static a(Ljava/util/List;Ljava/util/Map;II)Ljava/util/List;
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/modelsearch/m$g;",
+            ">;",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Integer;",
+            ">;II)",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/modelsearch/m$g;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 101
+    .line 107
     new-instance v1, Lcom/tencent/mm/modelsearch/FTSUtils$1;
 
     invoke-direct {v1, p1}, Lcom/tencent/mm/modelsearch/FTSUtils$1;-><init>(Ljava/util/Map;)V
 
-    .line 108
+    .line 114
     new-instance v2, Lcom/tencent/mm/modelsearch/m$g;
 
     invoke-direct {v2}, Lcom/tencent/mm/modelsearch/m$g;-><init>()V
@@ -264,22 +325,22 @@
     goto :goto_2
 .end method
 
-.method public static b([III)I
+.method public static c([III)I
     .locals 3
 
     .prologue
     const v1, 0x7fffffff
 
-    .line 66
+    .line 72
     if-ne p1, p2, :cond_0
 
     const/4 v0, 0x0
 
-    .line 69
+    .line 75
     :goto_0
     return v0
 
-    .line 67
+    .line 73
     :cond_0
     array-length v0, p0
 
@@ -287,25 +348,25 @@
 
     move v0, v1
 
-    .line 68
+    .line 74
     :goto_1
     array-length v2, p0
 
     if-lt p2, v2, :cond_2
 
-    .line 69
+    .line 75
     :goto_2
     sub-int/2addr v0, v1
 
     goto :goto_0
 
-    .line 67
+    .line 73
     :cond_1
     aget v0, p0, p1
 
     goto :goto_1
 
-    .line 68
+    .line 74
     :cond_2
     aget v1, p0, p2
 
@@ -319,19 +380,19 @@
     .locals 5
 
     .prologue
-    .line 177
+    .line 183
     new-instance v1, Ljava/lang/StringBuilder;
 
     const/16 v0, 0x20
 
     invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 178
+    .line 184
     const/16 v0, 0x28
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 179
+    .line 185
     array-length v2, p0
 
     const/4 v0, 0x0
@@ -341,7 +402,7 @@
 
     aget v3, p0, v0
 
-    .line 180
+    .line 186
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v3
@@ -350,12 +411,12 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 179
+    .line 185
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 182
+    .line 188
     :cond_0
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
@@ -367,7 +428,7 @@
 
     invoke-virtual {v1, v0, v2}, Ljava/lang/StringBuilder;->setCharAt(IC)V
 
-    .line 184
+    .line 190
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -375,26 +436,26 @@
     return-object v0
 .end method
 
-.method public static g([Ljava/lang/String;)[I
+.method public static f([Ljava/lang/String;)[I
     .locals 4
 
     .prologue
     const/4 v2, 0x0
 
-    .line 38
+    .line 44
     array-length v0, p0
 
     new-array v1, v0, [I
 
-    .line 39
+    .line 45
     array-length v0, p0
 
     if-lez v0, :cond_0
 
-    .line 41
+    .line 47
     aput v2, v1, v2
 
-    .line 42
+    .line 48
     const/4 v0, 0x1
 
     :goto_0
@@ -402,7 +463,7 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 43
+    .line 49
     add-int/lit8 v2, v0, -0x1
 
     aget v2, v1, v2
@@ -419,24 +480,24 @@
 
     aput v2, v1, v0
 
-    .line 42
+    .line 48
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 47
+    .line 53
     :cond_0
     return-object v1
 .end method
 
-.method public static iA(Ljava/lang/String;)Ljava/lang/String;
+.method public static iR(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
     .prologue
-    .line 199
+    .line 205
     if-eqz p0, :cond_0
 
-    .line 200
+    .line 206
     const/16 v0, 0x2a
 
     const/16 v1, 0x20
@@ -449,7 +510,7 @@
 
     move-result-object v0
 
-    .line 202
+    .line 208
     :goto_0
     return-object v0
 
@@ -459,7 +520,7 @@
     goto :goto_0
 .end method
 
-.method public static native initFts(Lcom/tencent/kingkong/database/SQLiteDatabase;[B)I
+.method private static native nativeInitFts(I[B)I
 .end method
 
 .method public static native stringCompareUtfBinary(Ljava/lang/String;Ljava/lang/String;)I

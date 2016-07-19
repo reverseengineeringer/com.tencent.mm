@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tencent.mm.plugin.address.ui.MMScrollView android:id="@id/bp7" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:address="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/hb" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.tencent.mm.plugin.address.ui.AddrEditView android:gravity="center_vertical" android:id="@id/ck7" android:inputType="text" app:addr_hint="@string/ca" app:addr_tipmsg="@string/c_" app:addr_editType="b9" app:addr_infoBackground="@raw/wallet_address_contact_icon" style="@style/MMFormInputView" />
+        <com.tencent.mm.plugin.address.ui.AddrEditView android:gravity="center_vertical" android:id="@id/ck8" android:inputType="phone" android:imeOptions="actionDone" app:addr_hint="@string/cf" app:addr_tipmsg="@string/ce" app:addr_editType="b_" style="@style/MMFormInputView" />
+        <com.tencent.mm.plugin.address.ui.AddrEditView android:gravity="center_vertical" android:id="@id/ck9" android:layout_width="fill_parent" android:layout_height="@dimen/j7" android:inputType="text" app:addr_hint="@string/bq" app:addr_tipmsg="@string/bp" app:addr_editType="b8" app:addr_hintTextBg="@null" app:addr_editable="false" app:addr_infoBackground="@raw/wallet_address_location_icon" />
+        <com.tencent.mm.plugin.address.ui.AddrEditView android:gravity="center_vertical" android:id="@id/ck_" android:layout_height="wrap_content" android:minHeight="@dimen/j7" android:inputType="text" app:addr_hint="@string/bt" app:addr_tipmsg="@string/bs" app:addr_singleLine="false" style="@style/MMFormInputView" />
+        <com.tencent.mm.plugin.address.ui.AddrEditView android:gravity="center_vertical" android:id="@id/cka" android:inputType="number" app:addr_hint="@string/ch" app:addr_tipmsg="@string/cg" style="@style/MMFormInputView" />
+    </LinearLayout>
+</com.tencent.mm.plugin.address.ui.MMScrollView>

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lvy:Lcom/tencent/mm/ui/tools/FilterImageView;
+.field final synthetic lWA:Lcom/tencent/mm/ui/tools/FilterImageView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 126
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/FilterImageView$1;->lvy:Lcom/tencent/mm/ui/tools/FilterImageView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/FilterImageView$1;->lWA:Lcom/tencent/mm/ui/tools/FilterImageView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,51 +38,60 @@
 # virtual methods
 .method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
     .line 129
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView$1;->lvy:Lcom/tencent/mm/ui/tools/FilterImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView$1;->lWA:Lcom/tencent/mm/ui/tools/FilterImageView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/FilterImageView;->a(Lcom/tencent/mm/ui/tools/FilterImageView;)Lcom/tencent/mm/ui/tools/FilterImageView$a;
 
     move-result-object v0
 
-    iput p3, v0, Lcom/tencent/mm/ui/tools/FilterImageView$a;->ePW:I
+    iput p3, v0, Lcom/tencent/mm/ui/tools/FilterImageView$a;->eXP:I
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/FilterImageView$a;->notifyDataSetChanged()V
 
     .line 131
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView$1;->lvy:Lcom/tencent/mm/ui/tools/FilterImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView$1;->lWA:Lcom/tencent/mm/ui/tools/FilterImageView;
 
-    sget-object v1, Lcom/tencent/mm/ui/tools/FilterImageView;->lvx:[Lcom/tencent/mm/ui/tools/FilterImageView$c;
+    sget-object v1, Lcom/tencent/mm/ui/tools/FilterImageView;->lWz:[Lcom/tencent/mm/ui/tools/FilterImageView$c;
 
     aget-object v1, v1, p3
 
-    iget v1, v1, Lcom/tencent/mm/ui/tools/FilterImageView$c;->lvI:I
+    iget v1, v1, Lcom/tencent/mm/ui/tools/FilterImageView$c;->lWK:I
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/tools/FilterImageView;->a(Lcom/tencent/mm/ui/tools/FilterImageView;I)I
 
     .line 132
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView$1;->lvy:Lcom/tencent/mm/ui/tools/FilterImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView$1;->lWA:Lcom/tencent/mm/ui/tools/FilterImageView;
 
-    sget-object v1, Lcom/tencent/mm/ui/tools/FilterImageView;->lvx:[Lcom/tencent/mm/ui/tools/FilterImageView$c;
+    sget-object v1, Lcom/tencent/mm/ui/tools/FilterImageView;->lWz:[Lcom/tencent/mm/ui/tools/FilterImageView$c;
 
     aget-object v1, v1, p3
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/tools/FilterImageView$c;->lvF:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/ui/tools/FilterImageView$c;->lWH:Ljava/lang/String;
 
-    sget-object v2, Lcom/tencent/mm/ui/tools/FilterImageView;->lvx:[Lcom/tencent/mm/ui/tools/FilterImageView$c;
+    sget-object v2, Lcom/tencent/mm/ui/tools/FilterImageView;->lWz:[Lcom/tencent/mm/ui/tools/FilterImageView$c;
 
     aget-object v2, v2, p3
 
-    iget v2, v2, Lcom/tencent/mm/ui/tools/FilterImageView$c;->lvG:I
+    iget v2, v2, Lcom/tencent/mm/ui/tools/FilterImageView$c;->lWI:I
 
-    sget-object v3, Lcom/tencent/mm/ui/tools/FilterImageView;->lvx:[Lcom/tencent/mm/ui/tools/FilterImageView$c;
+    sget-object v3, Lcom/tencent/mm/ui/tools/FilterImageView;->lWz:[Lcom/tencent/mm/ui/tools/FilterImageView$c;
 
     aget-object v3, v3, p3
 
-    iget v3, v3, Lcom/tencent/mm/ui/tools/FilterImageView$c;->lvH:I
+    iget v3, v3, Lcom/tencent/mm/ui/tools/FilterImageView$c;->lWJ:I
 
     invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/ui/tools/FilterImageView;->a(Lcom/tencent/mm/ui/tools/FilterImageView;Ljava/lang/String;II)Z
     :try_end_0
@@ -98,13 +107,13 @@
     move-exception v0
 
     .line 134
-    const-string/jumbo v1, "!32@/B4Tb64lLpLxetNgbG3pY/jjX49X0q4a"
+    const-string/jumbo v1, "MicroMsg.FilterView"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -113,13 +122,13 @@
     move-exception v0
 
     .line 137
-    const-string/jumbo v1, "!32@/B4Tb64lLpLxetNgbG3pY/jjX49X0q4a"
+    const-string/jumbo v1, "MicroMsg.FilterView"
 
     invoke-virtual {v0}, Ljava/lang/OutOfMemoryError;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

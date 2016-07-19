@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic gWZ:Lcom/tencent/mm/plugin/sns/d/p;
+.field final synthetic hFm:Lcom/tencent/mm/plugin/sns/ui/c/a;
 
-.field final synthetic hoP:Lcom/tencent/mm/plugin/sns/ui/c/a;
+.field final synthetic hkv:Lcom/tencent/mm/plugin/sns/e/p;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/c/a;Lcom/tencent/mm/plugin/sns/d/p;)V
+.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/c/a;Lcom/tencent/mm/plugin/sns/e/p;)V
     .locals 0
 
     .prologue
-    .line 206
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/c/a$1;->hoP:Lcom/tencent/mm/plugin/sns/ui/c/a;
+    .line 243
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/c/a$1;->hFm:Lcom/tencent/mm/plugin/sns/ui/c/a;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/c/a$1;->gWZ:Lcom/tencent/mm/plugin/sns/d/p;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/c/a$1;->hkv:Lcom/tencent/mm/plugin/sns/e/p;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,15 +44,15 @@
     .locals 2
 
     .prologue
-    .line 209
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 246
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/c/a$1;->gWZ:Lcom/tencent/mm/plugin/sns/d/p;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/c/a$1;->hkv:Lcom/tencent/mm/plugin/sns/e/p;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
-    .line 210
+    .line 247
     return-void
 .end method

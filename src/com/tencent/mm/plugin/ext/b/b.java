@@ -1,11 +1,11 @@
 package com.tencent.mm.plugin.ext.b;
 
-import com.tencent.mm.d.b.bg;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.storage.ai;
 
 public final class b
 {
-  public static int q(ag paramag)
+  public static int t(ai paramai)
   {
     int i = 1;
     if (field_type == 34) {

@@ -35,16 +35,16 @@
 
     .prologue
     .line 641
-    const-string/jumbo v0, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v0, "MicroMsg.SightCamera"
 
     const-string/jumbo v1, "auto focus callback"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 642
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/tencent/mm/plugin/sight/encode/ui/f$a;->gDL:Z
+    sput-boolean v0, Lcom/tencent/mm/plugin/sight/encode/ui/f$a;->gKm:Z
 
     .line 643
     return-void

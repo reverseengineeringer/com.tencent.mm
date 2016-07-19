@@ -12,7 +12,7 @@ final class h$1
   
   public final void onClick(View paramView)
   {
-    lgh.bgS().hfd.f(lgi.lel.lem.koJ.kpc, true);
+    lGu.bmA().htU.f(lGv.lEy.lEz.kNN.kOg, true);
   }
 }
 

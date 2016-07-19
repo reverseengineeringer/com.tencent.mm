@@ -18,36 +18,24 @@
 
 
 # instance fields
-.field final synthetic iph:Ljava/lang/String;
+.field final synthetic lxJ:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
 
-.field final synthetic kXv:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+.field final synthetic lxK:Lcom/tencent/mm/ui/chatting/ec;
 
-.field final synthetic kXw:Lcom/tencent/mm/ui/chatting/eb;
-
-.field final synthetic kXx:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$c;
-
-.field final synthetic kXy:I
-
-.field final synthetic kXz:I
+.field final synthetic lxL:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$c;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;ILcom/tencent/mm/ui/chatting/eb;Ljava/lang/String;Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$c;I)V
+.method constructor <init>(Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;Lcom/tencent/mm/ui/chatting/ec;Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$c;)V
     .locals 0
 
     .prologue
-    .line 609
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9;->kXv:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+    .line 824
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9;->lxJ:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
 
-    iput p2, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9;->kXy:I
+    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9;->lxK:Lcom/tencent/mm/ui/chatting/ec;
 
-    iput-object p3, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9;->kXw:Lcom/tencent/mm/ui/chatting/eb;
-
-    iput-object p4, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9;->iph:Ljava/lang/String;
-
-    iput-object p5, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9;->kXx:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$c;
-
-    iput p6, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9;->kXz:I
+    iput-object p3, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9;->lxL:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,73 +45,59 @@
 
 # virtual methods
 .method public final run()V
-    .locals 6
+    .locals 3
 
     .prologue
-    .line 612
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9;->kXy:I
+    .line 827
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9;->lxK:Lcom/tencent/mm/ui/chatting/ec;
 
-    add-int/lit8 v1, v0, 0x1
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/ec;->lEh:Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;
 
-    .line 615
-    :goto_0
-    const/16 v0, 0x64
+    const/4 v1, 0x0
 
-    if-lt v1, v0, :cond_0
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->setVisibility(I)V
 
-    .line 616
-    :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9;->kXv:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+    .line 828
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9;->lxK:Lcom/tencent/mm/ui/chatting/ec;
 
-    new-instance v2, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9$1;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/ec;->lxP:Landroid/widget/TextView;
 
-    invoke-direct {v2, p0}, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9$1;-><init>(Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9;)V
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9;->lxJ:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;->getResources()Landroid/content/res/Resources;
 
-    .line 628
+    move-result-object v1
+
+    const v2, 0x7f0f01bb
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 829
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9;->lxK:Lcom/tencent/mm/ui/chatting/ec;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/ec;->lxP:Landroid/widget/TextView;
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9;->lxJ:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+
+    const v2, 0x7f08041a
+
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 830
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9;->lxL:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$c;
+
+    const-string/jumbo v1, "send_data_sending"
+
+    iput-object v1, v0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$c;->ahZ:Ljava/lang/String;
+
+    .line 831
     return-void
-
-    .line 630
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9;->kXw:Lcom/tencent/mm/ui/chatting/eb;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/eb;->ldT:Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/chatting/SendDataToDeviceProgressBar;->setProgress(I)V
-
-    .line 631
-    add-int/lit8 v1, v1, 0x1
-
-    .line 632
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$9;->kXz:I
-
-    int-to-long v2, v0
-
-    invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    .line 634
-    :catch_0
-    move-exception v0
-
-    .line 635
-    const-string/jumbo v2, "!56@/B4Tb64lLpKwUcOR+EdWcrdJoeml35tRVsicf3Gr5mNoQw/InWfBMw=="
-
-    const-string/jumbo v3, "setProgress on progress view exception %s"
-
-    const/4 v4, 0x1
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    const/4 v5, 0x0
-
-    aput-object v0, v4, v5
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
 .end method

@@ -7,15 +7,15 @@ public abstract interface i$i
 {
   public abstract boolean a(PayInfo paramPayInfo);
   
-  public abstract void ac(Context paramContext, String paramString);
+  public abstract void af(Context paramContext, String paramString);
   
-  public abstract boolean agV();
+  public abstract boolean ajA();
   
-  public abstract boolean agW();
+  public abstract boolean ajB();
   
-  public abstract boolean agX();
+  public abstract boolean ajC();
   
-  public abstract boolean agY();
+  public abstract boolean ajD();
 }
 
 /* Location:

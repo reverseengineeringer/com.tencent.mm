@@ -2,9 +2,10 @@ package android.support.v4.view;
 
 import android.view.ViewGroup;
 
-abstract interface o$c
+class o$c
+  implements o.b
 {
-  public abstract void a(ViewGroup paramViewGroup, boolean paramBoolean);
+  public void a(ViewGroup paramViewGroup, boolean paramBoolean) {}
 }
 
 /* Location:

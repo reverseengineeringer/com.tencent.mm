@@ -7,7 +7,7 @@ final class as$1
   
   public final void run()
   {
-    bCa.a(0, 0, 0, null, null, null);
+    bvk.a(0, 0, 0, null, null, null);
   }
   
   public final String toString()

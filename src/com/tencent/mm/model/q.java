@@ -6,9 +6,9 @@ public abstract interface q
   
   public abstract void b(r paramr);
   
-  public abstract void mr();
+  public abstract void kF();
   
-  public abstract void ms();
+  public abstract void kG();
 }
 
 /* Location:

@@ -1,175 +1,123 @@
 package com.tencent.mm.protocal.b;
 
+import a.a.a.b;
 import java.util.LinkedList;
 
 public final class db
-  extends com.tencent.mm.at.a
+  extends amb
 {
-  public alx iZe;
-  public alx iZf;
-  public String iZk;
-  public alx jaA;
-  public aze jaB;
-  public bat jaC;
-  public int jaD;
+  public int fyR;
+  public int jxP;
+  public int jxQ;
+  public int jxR;
+  public int jxV;
+  public String jxx;
+  public int jxy;
+  public String jyb;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (jaA != null)
+      if (kfH == null) {
+        throw new b("Not all required fields were included: BaseResponse");
+      }
+      if (kfH != null)
       {
-        paramVarArgs.cj(1, jaA.kn());
-        jaA.a(paramVarArgs);
+        paramVarArgs.cx(1, kfH.iO());
+        kfH.a(paramVarArgs);
       }
-      if (jaB != null)
-      {
-        paramVarArgs.cj(2, jaB.kn());
-        jaB.a(paramVarArgs);
+      if (jxx != null) {
+        paramVarArgs.e(2, jxx);
       }
-      if (jaC != null)
-      {
-        paramVarArgs.cj(3, jaC.kn());
-        jaC.a(paramVarArgs);
+      paramVarArgs.cw(3, jxP);
+      paramVarArgs.cw(4, jxQ);
+      paramVarArgs.cw(5, fyR);
+      if (jyb != null) {
+        paramVarArgs.e(6, jyb);
       }
-      if (iZe != null)
-      {
-        paramVarArgs.cj(4, iZe.kn());
-        iZe.a(paramVarArgs);
-      }
-      if (iZf != null)
-      {
-        paramVarArgs.cj(5, iZf.kn());
-        iZf.a(paramVarArgs);
-      }
-      paramVarArgs.ci(6, jaD);
-      if (iZk != null) {
-        paramVarArgs.d(7, iZk);
-      }
+      paramVarArgs.cw(7, jxV);
+      paramVarArgs.cw(8, jxR);
+      paramVarArgs.cw(9, jxy);
       return 0;
     }
     if (paramInt == 1) {
-      if (jaA == null) {
-        break label959;
+      if (kfH == null) {
+        break label649;
       }
     }
-    label959:
-    for (int i = a.a.a.a.ch(1, jaA.kn()) + 0;; i = 0)
+    label649:
+    for (paramInt = a.a.a.a.cv(1, kfH.iO()) + 0;; paramInt = 0)
     {
+      int i = paramInt;
+      if (jxx != null) {
+        i = paramInt + a.a.a.b.b.a.f(2, jxx);
+      }
+      i = i + a.a.a.a.cu(3, jxP) + a.a.a.a.cu(4, jxQ) + a.a.a.a.cu(5, fyR);
       paramInt = i;
-      if (jaB != null) {
-        paramInt = i + a.a.a.a.ch(2, jaB.kn());
+      if (jyb != null) {
+        paramInt = i + a.a.a.b.b.a.f(6, jyb);
       }
-      i = paramInt;
-      if (jaC != null) {
-        i = paramInt + a.a.a.a.ch(3, jaC.kn());
-      }
-      paramInt = i;
-      if (iZe != null) {
-        paramInt = i + a.a.a.a.ch(4, iZe.kn());
-      }
-      i = paramInt;
-      if (iZf != null) {
-        i = paramInt + a.a.a.a.ch(5, iZf.kn());
-      }
-      i += a.a.a.a.cg(6, jaD);
-      paramInt = i;
-      if (iZk != null) {
-        paramInt = i + a.a.a.b.b.a.e(7, iZk);
-      }
-      return paramInt;
+      return paramInt + a.a.a.a.cu(7, jxV) + a.a.a.a.cu(8, jxR) + a.a.a.a.cu(9, jxy);
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = amb.a(paramVarArgs); paramInt > 0; paramInt = amb.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
-        break;
+        if (kfH != null) {
+          break;
+        }
+        throw new b("Not all required fields were included: BaseResponse");
       }
       if (paramInt == 3)
       {
         Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
         db localdb = (db)paramVarArgs[1];
         paramInt = ((Integer)paramVarArgs[2]).intValue();
-        Object localObject2;
-        boolean bool;
         switch (paramInt)
         {
         default: 
           return -1;
         case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
+          paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
           i = paramVarArgs.size();
           paramInt = 0;
           while (paramInt < i)
           {
-            localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new alx();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-            for (bool = true; bool; bool = ((alx)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
-            jaA = ((alx)localObject1);
+            Object localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new dg();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+            for (boolean bool = true; bool; bool = ((dg)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, amb.a((a.a.a.a.a)localObject2))) {}
+            kfH = ((dg)localObject1);
             paramInt += 1;
           }
         case 2: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-          i = paramVarArgs.size();
-          paramInt = 0;
-          while (paramInt < i)
-          {
-            localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new aze();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-            for (bool = true; bool; bool = ((aze)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
-            jaB = ((aze)localObject1);
-            paramInt += 1;
-          }
+          jxx = mMY.readString();
+          return 0;
         case 3: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-          i = paramVarArgs.size();
-          paramInt = 0;
-          while (paramInt < i)
-          {
-            localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new bat();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-            for (bool = true; bool; bool = ((bat)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
-            jaC = ((bat)localObject1);
-            paramInt += 1;
-          }
+          jxP = mMY.id();
+          return 0;
         case 4: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-          i = paramVarArgs.size();
-          paramInt = 0;
-          while (paramInt < i)
-          {
-            localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new alx();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-            for (bool = true; bool; bool = ((alx)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
-            iZe = ((alx)localObject1);
-            paramInt += 1;
-          }
+          jxQ = mMY.id();
+          return 0;
         case 5: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-          i = paramVarArgs.size();
-          paramInt = 0;
-          while (paramInt < i)
-          {
-            localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new alx();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-            for (bool = true; bool; bool = ((alx)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
-            iZf = ((alx)localObject1);
-            paramInt += 1;
-          }
+          fyR = mMY.id();
+          return 0;
         case 6: 
-          jaD = maU.jC();
+          jyb = mMY.readString();
+          return 0;
+        case 7: 
+          jxV = mMY.id();
+          return 0;
+        case 8: 
+          jxR = mMY.id();
           return 0;
         }
-        iZk = maU.readString();
+        jxy = mMY.id();
         return 0;
       }
       return -1;

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gAq:Lcom/tencent/mm/plugin/sight/encode/a/d;
+.field final synthetic gGS:Lcom/tencent/mm/plugin/sight/encode/a/d;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 71
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/d$2;->gAq:Lcom/tencent/mm/plugin/sight/encode/a/d;
+    .line 72
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/d$2;->gGS:Lcom/tencent/mm/plugin/sight/encode/a/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,24 +40,24 @@
     .locals 1
 
     .prologue
-    .line 75
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/d$2;->gAq:Lcom/tencent/mm/plugin/sight/encode/a/d;
+    .line 76
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/d$2;->gGS:Lcom/tencent/mm/plugin/sight/encode/a/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/d;->apL:Lcom/tencent/mm/c/b/c;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/d;->abd:Lcom/tencent/mm/c/b/c;
 
     if-nez v0, :cond_0
 
-    .line 79
+    .line 80
     :goto_0
     return-void
 
-    .line 78
+    .line 79
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/d$2;->gAq:Lcom/tencent/mm/plugin/sight/encode/a/d;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/d$2;->gGS:Lcom/tencent/mm/plugin/sight/encode/a/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/d;->apL:Lcom/tencent/mm/c/b/c;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/d;->abd:Lcom/tencent/mm/c/b/c;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/c/b/c;->lH()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/c/b/c;->jR()Z
 
     goto :goto_0
 .end method

@@ -1,9 +1,9 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.ui.tools.r;
+import java.util.TreeSet;
 
 final class cq$1
   implements View.OnClickListener
@@ -12,8 +12,14 @@ final class cq$1
   
   public final void onClick(View paramView)
   {
-    new Intent().putExtra("composeType", 1);
-    c.u(kWN.mContext, "qqmail", ".ui.ComposeUI");
+    if (cq.a(lwB).eb(((Long)paramView.getTag()).longValue()))
+    {
+      int i = alwB).lvX.size();
+      cq.b(lwB).bld();
+      cq.c(lwB).boG();
+      cq.d(lwB).setVisibility(0);
+      cq.d(lwB).tc(i);
+    }
   }
 }
 

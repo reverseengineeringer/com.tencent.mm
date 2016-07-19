@@ -10,7 +10,7 @@ final class b$1
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    ldz.lAV = true;
+    lDP.mbO = true;
   }
 }
 

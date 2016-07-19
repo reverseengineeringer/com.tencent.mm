@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic haX:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
+.field final synthetic hoo:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 151
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$2;->haX:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$2;->hoo:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 154
-    sget-object v0, Lcom/tencent/mm/plugin/sns/b/a;->cob:Lcom/tencent/mm/pluginsdk/f;
+    sget-object v0, Lcom/tencent/mm/plugin/sns/b/a;->cjp:Lcom/tencent/mm/pluginsdk/f;
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/f;->kI()V
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/f;->ji()V
 
     .line 155
     return-void

@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+.field final synthetic mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 516
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$2;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$2;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
 
@@ -36,7 +36,7 @@
 
     .prologue
     .line 518
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$2;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$2;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->b(Lcom/tencent/mm/ui/widget/DragSortListView;)I
 
@@ -47,9 +47,9 @@
     if-ne v0, v1, :cond_0
 
     .line 519
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$2;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$2;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bjw()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->bpu()V
 
     .line 521
     :cond_0

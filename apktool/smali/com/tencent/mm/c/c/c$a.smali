@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic arM:Lcom/tencent/mm/c/c/c;
+.field final synthetic adu:Lcom/tencent/mm/c/c/c;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 239
-    iput-object p1, p0, Lcom/tencent/mm/c/c/c$a;->arM:Lcom/tencent/mm/c/c/c;
+    iput-object p1, p0, Lcom/tencent/mm/c/c/c$a;->adu:Lcom/tencent/mm/c/c/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,21 +57,21 @@
     const/4 v3, 0x0
 
     .line 242
-    const-string/jumbo v0, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
+    const-string/jumbo v0, "MicroMsg.SilkWriter"
 
     const-string/jumbo v1, "Silk Thread start run"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 244
     :goto_0
-    iget-object v1, p0, Lcom/tencent/mm/c/c/c$a;->arM:Lcom/tencent/mm/c/c/c;
+    iget-object v1, p0, Lcom/tencent/mm/c/c/c$a;->adu:Lcom/tencent/mm/c/c/c;
 
     monitor-enter v1
 
     .line 246
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/c/c/c$a;->arM:Lcom/tencent/mm/c/c/c;
+    iget-object v0, p0, Lcom/tencent/mm/c/c/c$a;->adu:Lcom/tencent/mm/c/c/c;
 
     invoke-static {v0}, Lcom/tencent/mm/c/c/c;->a(Lcom/tencent/mm/c/c/c;)Z
 
@@ -83,7 +83,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 248
-    const-string/jumbo v0, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
+    const-string/jumbo v0, "MicroMsg.SilkWriter"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -101,7 +101,7 @@
 
     move-result-object v1
 
-    iget-object v5, p0, Lcom/tencent/mm/c/c/c$a;->arM:Lcom/tencent/mm/c/c/c;
+    iget-object v5, p0, Lcom/tencent/mm/c/c/c$a;->adu:Lcom/tencent/mm/c/c/c;
 
     invoke-static {v5}, Lcom/tencent/mm/c/c/c;->b(Lcom/tencent/mm/c/c/c;)Ljava/util/concurrent/BlockingQueue;
 
@@ -119,12 +119,12 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 250
     if-eqz v4, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/c/c/c$a;->arM:Lcom/tencent/mm/c/c/c;
+    iget-object v0, p0, Lcom/tencent/mm/c/c/c$a;->adu:Lcom/tencent/mm/c/c/c;
 
     invoke-static {v0}, Lcom/tencent/mm/c/c/c;->b(Lcom/tencent/mm/c/c/c;)Ljava/util/concurrent/BlockingQueue;
 
@@ -139,17 +139,17 @@
     .line 251
     :cond_0
     :try_start_1
-    iget-object v0, p0, Lcom/tencent/mm/c/c/c$a;->arM:Lcom/tencent/mm/c/c/c;
+    iget-object v0, p0, Lcom/tencent/mm/c/c/c$a;->adu:Lcom/tencent/mm/c/c/c;
 
     invoke-static {v0}, Lcom/tencent/mm/c/c/c;->b(Lcom/tencent/mm/c/c/c;)Ljava/util/concurrent/BlockingQueue;
 
     move-result-object v0
 
-    const-wide/16 v5, 0xc8
+    const-wide/16 v6, 0xc8
 
     sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-interface {v0, v5, v6, v1}, Ljava/util/concurrent/BlockingQueue;->poll(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    invoke-interface {v0, v6, v7, v1}, Ljava/util/concurrent/BlockingQueue;->poll(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -161,7 +161,7 @@
     if-nez v0, :cond_1
 
     .line 263
-    const-string/jumbo v0, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
+    const-string/jumbo v0, "MicroMsg.SilkWriter"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -169,7 +169,7 @@
 
     invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/c/c/c$a;->arM:Lcom/tencent/mm/c/c/c;
+    iget-object v4, p0, Lcom/tencent/mm/c/c/c$a;->adu:Lcom/tencent/mm/c/c/c;
 
     invoke-static {v4}, Lcom/tencent/mm/c/c/c;->c(Lcom/tencent/mm/c/c/c;)Ljava/lang/String;
 
@@ -183,7 +183,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -202,17 +202,17 @@
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
+    const-string/jumbo v0, "MicroMsg.SilkWriter"
 
     const-string/jumbo v1, "ThreadAmr poll null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 265
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/c/c/c$a;->arM:Lcom/tencent/mm/c/c/c;
+    iget-object v1, p0, Lcom/tencent/mm/c/c/c$a;->adu:Lcom/tencent/mm/c/c/c;
 
     invoke-static {v1}, Lcom/tencent/mm/c/c/c;->b(Lcom/tencent/mm/c/c/c;)Ljava/util/concurrent/BlockingQueue;
 
@@ -229,7 +229,7 @@
 
     .line 268
     :cond_2
-    const-string/jumbo v5, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
+    const-string/jumbo v5, "MicroMsg.SilkWriter"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -255,13 +255,13 @@
 
     move-result-object v1
 
-    invoke-static {v5, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     move v1, v3
 
     .line 273
     :goto_1
-    invoke-static {}, Lcom/tencent/mm/c/c/c;->lW()Lcom/tencent/mm/c/c/a$a;
+    invoke-static {}, Lcom/tencent/mm/c/c/c;->km()Lcom/tencent/mm/c/c/a$a;
 
     move-result-object v4
 
@@ -269,11 +269,11 @@
 
     if-lt v4, v8, :cond_3
 
-    invoke-static {}, Lcom/tencent/mm/c/c/c;->lW()Lcom/tencent/mm/c/c/a$a;
+    invoke-static {}, Lcom/tencent/mm/c/c/c;->km()Lcom/tencent/mm/c/c/a$a;
 
     move-result-object v4
 
-    iget-wide v4, v4, Lcom/tencent/mm/c/c/a$a;->arz:J
+    iget-wide v4, v4, Lcom/tencent/mm/c/c/a$a;->adh:J
 
     const-wide/16 v6, 0xf0
 
@@ -285,7 +285,7 @@
 
     .line 276
     :cond_3
-    iget-object v4, p0, Lcom/tencent/mm/c/c/c$a;->arM:Lcom/tencent/mm/c/c/c;
+    iget-object v4, p0, Lcom/tencent/mm/c/c/c$a;->adu:Lcom/tencent/mm/c/c/c;
 
     invoke-virtual {v4, v0, v1}, Lcom/tencent/mm/c/c/c;->a(Lcom/tencent/mm/c/b/g$a;I)I
 

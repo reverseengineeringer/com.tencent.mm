@@ -1,48 +1,94 @@
 package com.tencent.mm.protocal.b;
 
+import a.a.a.b;
+
 public final class li
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public String eiq;
-  public int jhy;
-  public String jiH;
+  public String emu;
+  public String fzw;
+  public String jGJ;
+  public String jGK;
+  public String jGL;
+  public String jGM;
+  public String jwt;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (eiq != null) {
-        paramVarArgs.d(1, eiq);
+      if (jGJ == null) {
+        throw new b("Not all required fields were included: Md5");
       }
-      if (jiH != null) {
-        paramVarArgs.d(2, jiH);
+      if (jGJ != null) {
+        paramVarArgs.e(1, jGJ);
       }
-      paramVarArgs.ci(3, jhy);
+      if (emu != null) {
+        paramVarArgs.e(2, emu);
+      }
+      if (fzw != null) {
+        paramVarArgs.e(3, fzw);
+      }
+      if (jGK != null) {
+        paramVarArgs.e(4, jGK);
+      }
+      if (jGL != null) {
+        paramVarArgs.e(5, jGL);
+      }
+      if (jGM != null) {
+        paramVarArgs.e(6, jGM);
+      }
+      if (jwt != null) {
+        paramVarArgs.e(7, jwt);
+      }
       return 0;
     }
     if (paramInt == 1) {
-      if (eiq == null) {
-        break label269;
+      if (jGJ == null) {
+        break label545;
       }
     }
-    label269:
-    for (paramInt = a.a.a.b.b.a.e(1, eiq) + 0;; paramInt = 0)
+    label545:
+    for (int i = a.a.a.b.b.a.f(1, jGJ) + 0;; i = 0)
     {
-      int i = paramInt;
-      if (jiH != null) {
-        i = paramInt + a.a.a.b.b.a.e(2, jiH);
+      paramInt = i;
+      if (emu != null) {
+        paramInt = i + a.a.a.b.b.a.f(2, emu);
       }
-      return i + a.a.a.a.cg(3, jhy);
+      i = paramInt;
+      if (fzw != null) {
+        i = paramInt + a.a.a.b.b.a.f(3, fzw);
+      }
+      paramInt = i;
+      if (jGK != null) {
+        paramInt = i + a.a.a.b.b.a.f(4, jGK);
+      }
+      i = paramInt;
+      if (jGL != null) {
+        i = paramInt + a.a.a.b.b.a.f(5, jGL);
+      }
+      paramInt = i;
+      if (jGM != null) {
+        paramInt = i + a.a.a.b.b.a.f(6, jGM);
+      }
+      i = paramInt;
+      if (jwt != null) {
+        i = paramInt + a.a.a.b.b.a.f(7, jwt);
+      }
+      return i;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
-        break;
+        if (jGJ != null) {
+          break;
+        }
+        throw new b("Not all required fields were included: Md5");
       }
       if (paramInt == 3)
       {
@@ -53,13 +99,25 @@ public final class li
         default: 
           return -1;
         case 1: 
-          eiq = maU.readString();
+          jGJ = mMY.readString();
           return 0;
         case 2: 
-          jiH = maU.readString();
+          emu = mMY.readString();
+          return 0;
+        case 3: 
+          fzw = mMY.readString();
+          return 0;
+        case 4: 
+          jGK = mMY.readString();
+          return 0;
+        case 5: 
+          jGL = mMY.readString();
+          return 0;
+        case 6: 
+          jGM = mMY.readString();
           return 0;
         }
-        jhy = maU.jC();
+        jwt = mMY.readString();
         return 0;
       }
       return -1;

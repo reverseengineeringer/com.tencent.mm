@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic kFg:Lcom/tencent/mm/ui/base/MMHorList;
+.field final synthetic lej:Lcom/tencent/mm/ui/base/MMHorList;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 442
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMHorList$2;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMHorList$2;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
 
@@ -38,17 +38,17 @@
 
     .prologue
     .line 447
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$2;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$2;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMHorList;->a(Lcom/tencent/mm/ui/base/MMHorList;)Z
 
     .line 448
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$2;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$2;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMHorList;->invalidate()V
 
     .line 449
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$2;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$2;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMHorList;->requestLayout()V
 
@@ -61,17 +61,17 @@
 
     .prologue
     .line 454
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$2;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$2;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMHorList;->b(Lcom/tencent/mm/ui/base/MMHorList;)V
 
     .line 455
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$2;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$2;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMHorList;->invalidate()V
 
     .line 456
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$2;->kFg:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMHorList$2;->lej:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMHorList;->requestLayout()V
 

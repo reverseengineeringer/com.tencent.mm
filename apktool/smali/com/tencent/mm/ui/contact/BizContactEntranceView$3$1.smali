@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic liZ:J
+.field final synthetic lJk:J
 
-.field final synthetic lja:J
+.field final synthetic lJl:J
 
-.field final synthetic ljb:Lcom/tencent/mm/ui/contact/BizContactEntranceView$3;
+.field final synthetic lJm:Lcom/tencent/mm/ui/contact/BizContactEntranceView$3;
 
 
 # direct methods
@@ -31,11 +31,11 @@
 
     .prologue
     .line 109
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3$1;->ljb:Lcom/tencent/mm/ui/contact/BizContactEntranceView$3;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3$1;->lJm:Lcom/tencent/mm/ui/contact/BizContactEntranceView$3;
 
-    iput-wide p2, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3$1;->liZ:J
+    iput-wide p2, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3$1;->lJk:J
 
-    iput-wide p4, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3$1;->lja:J
+    iput-wide p4, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3$1;->lJl:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,17 +49,17 @@
 
     .prologue
     .line 111
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3$1;->ljb:Lcom/tencent/mm/ui/contact/BizContactEntranceView$3;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3$1;->lJm:Lcom/tencent/mm/ui/contact/BizContactEntranceView$3;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3;->liY:Lcom/tencent/mm/ui/contact/BizContactEntranceView;
+    iget-object v0, v0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3;->lJj:Lcom/tencent/mm/ui/contact/BizContactEntranceView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->c(Lcom/tencent/mm/ui/contact/BizContactEntranceView;)Landroid/widget/TextView;
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3$1;->ljb:Lcom/tencent/mm/ui/contact/BizContactEntranceView$3;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3$1;->lJm:Lcom/tencent/mm/ui/contact/BizContactEntranceView$3;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3;->liY:Lcom/tencent/mm/ui/contact/BizContactEntranceView;
+    iget-object v0, v0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3;->lJj:Lcom/tencent/mm/ui/contact/BizContactEntranceView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->b(Lcom/tencent/mm/ui/contact/BizContactEntranceView;)Z
 
@@ -67,9 +67,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-wide v2, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3$1;->liZ:J
+    iget-wide v2, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3$1;->lJk:J
 
-    iget-wide v4, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3$1;->lja:J
+    iget-wide v4, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3$1;->lJl:J
 
     cmp-long v0, v2, v4
 

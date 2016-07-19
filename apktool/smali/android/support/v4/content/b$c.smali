@@ -1,4 +1,4 @@
-.class Landroid/support/v4/content/b$c;
+.class final Landroid/support/v4/content/b$c;
 .super Landroid/support/v4/content/b$b;
 .source "SourceFile"
 
@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 65
+    .line 66
     invoke-direct {p0}, Landroid/support/v4/content/b$b;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
     .locals 1
 
     .prologue
-    .line 68
+    .line 70
     invoke-static {p1}, Landroid/content/Intent;->makeMainActivity(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object v0

@@ -1,10 +1,10 @@
 package com.tencent.mm.network;
 
 import com.tencent.mm.sdk.b.b;
-import com.tencent.mm.sdk.platformtools.at;
+import com.tencent.mm.sdk.platformtools.az;
 
 final class r$7
-  extends at
+  extends az<Object>
 {
   r$7(r paramr, Object paramObject, boolean paramBoolean)
   {
@@ -13,8 +13,8 @@ final class r$7
   
   public final Object run()
   {
-    Java2C.onForeground(cjb);
-    b.aM(cjb);
+    Java2C.onForeground(ces);
+    b.ar(ces);
     return null;
   }
 }

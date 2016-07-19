@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field public gCP:Landroid/view/View;
+.field public gGc:Landroid/view/View;
 
-.field final synthetic gCQ:Lcom/tencent/mm/plugin/sight/encode/ui/c$a;
+.field public gJq:Landroid/view/View;
 
-.field public gzA:Landroid/view/View;
+.field final synthetic gJr:Lcom/tencent/mm/plugin/sight/encode/ui/c$a;
 
 
 # direct methods
@@ -28,7 +28,7 @@
 
     .prologue
     .line 105
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/c$a$a;->gCQ:Lcom/tencent/mm/plugin/sight/encode/ui/c$a;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/c$a$a;->gJr:Lcom/tencent/mm/plugin/sight/encode/ui/c$a;
 
     invoke-direct {p0, p1}, Lcom/tencent/mm/ui/contact/a/e$a;-><init>(Lcom/tencent/mm/ui/contact/a/e;)V
 

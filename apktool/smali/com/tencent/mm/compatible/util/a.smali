@@ -13,9 +13,9 @@
 
 
 # instance fields
-.field private final bmA:Ljava/lang/String;
+.field private final bag:Ljava/lang/String;
 
-.field public bua:Lcom/tencent/mm/compatible/util/a$b;
+.field public biB:Lcom/tencent/mm/compatible/util/a$b;
 
 .field mContext:Landroid/content/Context;
 
@@ -34,12 +34,12 @@
     iput-object v0, p0, Lcom/tencent/mm/compatible/util/a;->mContext:Landroid/content/Context;
 
     .line 19
-    iput-object v0, p0, Lcom/tencent/mm/compatible/util/a;->bua:Lcom/tencent/mm/compatible/util/a$b;
+    iput-object v0, p0, Lcom/tencent/mm/compatible/util/a;->biB:Lcom/tencent/mm/compatible/util/a$b;
 
     .line 59
     const-string/jumbo v0, "audio_lock"
 
-    iput-object v0, p0, Lcom/tencent/mm/compatible/util/a;->bmA:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/compatible/util/a;->bag:Ljava/lang/String;
 
     .line 27
     iput-object p1, p0, Lcom/tencent/mm/compatible/util/a;->mContext:Landroid/content/Context;
@@ -59,7 +59,7 @@
 
 
 # virtual methods
-.method public final oV()Z
+.method public final nn()Z
     .locals 2
 
     .prologue
@@ -70,7 +70,7 @@
 
     .line 69
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/compatible/util/a;->bua:Lcom/tencent/mm/compatible/util/a$b;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/util/a;->biB:Lcom/tencent/mm/compatible/util/a$b;
 
     if-nez v0, :cond_0
 
@@ -84,9 +84,9 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/compatible/util/a;->bua:Lcom/tencent/mm/compatible/util/a$b;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/util/a;->biB:Lcom/tencent/mm/compatible/util/a$b;
 
-    invoke-interface {v0}, Lcom/tencent/mm/compatible/util/a$b;->oV()Z
+    invoke-interface {v0}, Lcom/tencent/mm/compatible/util/a$b;->nn()Z
 
     move-result v0
 
@@ -116,7 +116,7 @@
 
     .line 51
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/compatible/util/a;->bua:Lcom/tencent/mm/compatible/util/a$b;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/util/a;->biB:Lcom/tencent/mm/compatible/util/a$b;
 
     if-nez v0, :cond_0
 
@@ -130,7 +130,7 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/compatible/util/a;->bua:Lcom/tencent/mm/compatible/util/a$b;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/util/a;->biB:Lcom/tencent/mm/compatible/util/a$b;
 
     invoke-interface {v0}, Lcom/tencent/mm/compatible/util/a$b;->requestFocus()Z
 

@@ -12,13 +12,13 @@
 
 
 # instance fields
-.field private apf:Lcom/tencent/mm/ui/base/h;
+.field private fTL:Lcom/tencent/mm/ui/base/h;
 
-.field private kKX:Lcom/tencent/mm/ui/base/preference/Preference$a;
+.field private lkm:Lcom/tencent/mm/ui/base/preference/Preference$a;
 
-.field kLc:Lcom/tencent/mm/ui/base/preference/EditPreference$a;
+.field lkr:Lcom/tencent/mm/ui/base/preference/EditPreference$a;
 
-.field private kLd:Landroid/widget/EditText;
+.field private lks:Landroid/widget/EditText;
 
 .field value:Ljava/lang/String;
 
@@ -53,7 +53,7 @@
 
     .prologue
     .line 16
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/EditPreference;->apf:Lcom/tencent/mm/ui/base/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/EditPreference;->fTL:Lcom/tencent/mm/ui/base/h;
 
     return-object v0
 .end method
@@ -63,7 +63,7 @@
 
     .prologue
     .line 16
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/EditPreference;->kLc:Lcom/tencent/mm/ui/base/preference/EditPreference$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/EditPreference;->lkr:Lcom/tencent/mm/ui/base/preference/EditPreference$a;
 
     return-object v0
 .end method
@@ -73,7 +73,7 @@
 
     .prologue
     .line 16
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/EditPreference;->kKX:Lcom/tencent/mm/ui/base/preference/Preference$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/EditPreference;->lkm:Lcom/tencent/mm/ui/base/preference/Preference$a;
 
     return-object v0
 .end method
@@ -95,7 +95,7 @@
 
     .prologue
     .line 44
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/EditPreference;->kKX:Lcom/tencent/mm/ui/base/preference/Preference$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/EditPreference;->lkm:Lcom/tencent/mm/ui/base/preference/Preference$a;
 
     .line 45
     return-void
@@ -106,12 +106,12 @@
 
     .prologue
     .line 55
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/EditPreference;->kLd:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/EditPreference;->lks:Landroid/widget/EditText;
 
     if-eqz v0, :cond_2
 
     .line 57
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/EditPreference;->kLd:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/EditPreference;->lks:Landroid/widget/EditText;
 
     .line 66
     :goto_0
@@ -132,7 +132,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f0501d4
+    const v3, 0x7f0b0132
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -181,17 +181,17 @@
 
     iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f0b0de8
+    const v4, 0x7f0800f7
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/aw/a;->A(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v3, v4}, Lcom/tencent/mm/az/a;->E(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v3
 
     iget-object v4, p0, Lcom/tencent/mm/ui/base/preference/Preference;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f0b0de4
+    const v5, 0x7f080099
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/aw/a;->A(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v4, v5}, Lcom/tencent/mm/az/a;->E(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -207,7 +207,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/EditPreference;->apf:Lcom/tencent/mm/ui/base/h;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/EditPreference;->fTL:Lcom/tencent/mm/ui/base/h;
 
     .line 108
     return-void

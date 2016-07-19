@@ -1,34 +1,34 @@
 package com.tencent.mm.modelsimple;
 
-import com.tencent.mm.at.b;
+import com.tencent.mm.ax.b;
 import com.tencent.mm.network.e;
 import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b.lw;
-import com.tencent.mm.protocal.b.lx;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.d;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.mf;
+import com.tencent.mm.protocal.b.mg;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.d;
 
 public final class k
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private d anM;
-  private final a anN;
+  private final a bkQ;
+  private d bkT;
   
   public k(String paramString1, int paramInt, String paramString2)
   {
-    u.i("!56@/B4Tb64lLpK+IBX8XDgnvkxAuWo7gtBgGjm5sV5tA62wtu7tGu39Yg==", "NetSceneEnterTempSession %s, %s, %s", new Object[] { paramString1, Integer.valueOf(paramInt), paramString2 });
+    v.i("MicroMsg.NetSceneEnterTempSession", "NetSceneEnterTempSession %s, %s, %s", new Object[] { paramString1, Integer.valueOf(paramInt), paramString2 });
     Object localObject = new a.a();
-    bFa = new lw();
-    bFb = new lx();
+    byl = new mf();
+    bym = new mg();
     uri = "/cgi-bin/mmbiz-bin/usrmsg/entertempsession";
-    bEY = 1066;
-    bFc = 0;
-    bFd = 0;
-    anN = ((a.a)localObject).vy();
+    byj = 1066;
+    byn = 0;
+    byo = 0;
+    bkQ = ((a.a)localObject).vA();
     if (paramString2 != null)
     {
       localObject = paramString2;
@@ -36,26 +36,26 @@ public final class k
     }
     for (localObject = paramString2.substring(0, 32);; localObject = "")
     {
-      paramString2 = (lw)anN.bEW.bFf;
-      iYR = paramString1;
-      iYh = paramInt;
-      jjX = b.Bg((String)localObject);
-      jia = b.aH(new byte[0]);
-      u.i("!56@/B4Tb64lLpK+IBX8XDgnvkxAuWo7gtBgGjm5sV5tA62wtu7tGu39Yg==", "NetSceneEnterTempSession %s, %s, %s", new Object[] { paramString1, Integer.valueOf(paramInt), Integer.valueOf(jia.iTS.length) });
+      paramString2 = (mf)bkQ.byh.byq;
+      jzX = paramString1;
+      jvM = paramInt;
+      jIe = b.Dr((String)localObject);
+      jGg = b.aO(new byte[0]);
+      v.i("MicroMsg.NetSceneEnterTempSession", "NetSceneEnterTempSession %s, %s, %s", new Object[] { paramString1, Integer.valueOf(paramInt), Integer.valueOf(jGg.jrl.length) });
       return;
     }
   }
   
   public final int a(e parame, d paramd)
   {
-    anM = paramd;
-    return a(parame, anN, this);
+    bkT = paramd;
+    return a(parame, bkQ, this);
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    u.i("!56@/B4Tb64lLpK+IBX8XDgnvkxAuWo7gtBgGjm5sV5tA62wtu7tGu39Yg==", "onGYNetEnd: %d, %d, %s", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString });
-    anM.a(paramInt2, paramInt3, paramString, this);
+    v.i("MicroMsg.NetSceneEnterTempSession", "onGYNetEnd: %d, %d, %s", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString });
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()

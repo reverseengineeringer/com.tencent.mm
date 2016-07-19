@@ -3,26 +3,54 @@ package com.tencent.mm.pluginsdk;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
+import android.content.res.Resources.Theme;
 import android.graphics.Rect;
 import android.os.Build.VERSION;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.Window;
+import com.tencent.mm.az.a;
 import com.tencent.mm.ui.MMActivity;
+import com.tencent.mm.ui.MMFragmentActivity;
+import com.tencent.mm.ui.base.s;
 import com.tencent.mm.ui.j;
 
 public final class e
 {
-  public static int cI(Context paramContext)
+  public static void H(Activity paramActivity)
+  {
+    if (Build.VERSION.SDK_INT >= 16) {
+      paramActivity.requestWindowFeature(9);
+    }
+  }
+  
+  public static void a(MMFragmentActivity paramMMFragmentActivity, final View paramView)
+  {
+    if (Build.VERSION.SDK_INT >= 16) {
+      paramMMFragmentActivity.getWindow().getDecorView().post(new Runnable()
+      {
+        public final void run()
+        {
+          iUX.getWindow().getDecorView().setSystemUiVisibility(iUX.getWindow().getDecorView().getSystemUiVisibility() | 0x100);
+          int i = e.cF(iUX);
+          if (paramView != null) {
+            paramView.setPadding(0, i, 0, 0);
+          }
+        }
+      });
+    }
+  }
+  
+  public static int cE(Context paramContext)
   {
     j localj;
     int i;
     if ((paramContext instanceof MMActivity))
     {
-      localj = koJ;
-      if (iH == null) {
+      localj = kNN;
+      if (iY == null) {
         i = 0;
       }
     }
@@ -30,22 +58,56 @@ public final class e
     {
       int j = i;
       if (i <= 0) {
-        j = paramContext.getResources().getDimensionPixelSize(2131034625);
+        j = paramContext.getResources().getDimensionPixelSize(2131427505);
       }
       return j;
-      i = iH.getHeight();
+      i = iY.getHeight();
       continue;
       i = 0;
     }
   }
   
-  public static int cJ(Context paramContext)
+  public static int cF(Context paramContext)
   {
+    int i = 0;
+    Object localObject = new TypedValue();
+    if (paramContext.getTheme().resolveAttribute(16843499, (TypedValue)localObject, true)) {
+      i = TypedValue.complexToDimensionPixelSize(data, paramContext.getResources().getDisplayMetrics());
+    }
+    localObject = paramContext.getResources().getDisplayMetrics();
+    int j = i;
+    if (i <= 0)
+    {
+      if (widthPixels > heightPixels) {
+        j = paramContext.getResources().getDimensionPixelSize(2131427504);
+      }
+    }
+    else {
+      return j;
+    }
+    return paramContext.getResources().getDimensionPixelSize(2131427505);
+  }
+  
+  public static int cG(Context paramContext)
+  {
+    int j = s.P(paramContext, -1);
+    Rect localRect;
+    int i;
+    if (j > 0)
+    {
+      localRect = new Rect();
+      ((Activity)paramContext).getWindow().getDecorView().getWindowVisibleDisplayFrame(localRect);
+      i = j;
+      if (top > j) {
+        i = 0;
+      }
+      return i;
+    }
     if ((paramContext instanceof Activity))
     {
-      Rect localRect = new Rect();
+      localRect = new Rect();
       ((Activity)paramContext).getWindow().getDecorView().getWindowVisibleDisplayFrame(localRect);
-      int i = ((Activity)paramContext).getWindow().getDecorView().getHeight();
+      i = ((Activity)paramContext).getWindow().getDecorView().getHeight();
       int[] arrayOfInt = new int[2];
       ((Activity)paramContext).getWindow().getDecorView().getLocationOnScreen(arrayOfInt);
       if ((i - localRect.height() >= 0) && (arrayOfInt[1] > 200)) {
@@ -53,45 +115,26 @@ public final class e
       }
       return top;
     }
-    return com.tencent.mm.aw.a.fromDPToPix(paramContext, 20);
+    return a.fromDPToPix(paramContext, 20);
   }
   
-  public static void g(MMActivity paramMMActivity)
+  public static void e(MMActivity paramMMActivity)
   {
     if (Build.VERSION.SDK_INT >= 16) {
       paramMMActivity.requestWindowFeature(9);
     }
   }
   
-  public static void h(MMActivity paramMMActivity)
+  public static void f(MMActivity paramMMActivity)
   {
     if (Build.VERSION.SDK_INT >= 16) {
       paramMMActivity.getWindow().getDecorView().post(new Runnable()
       {
         public final void run()
         {
-          cXd.getWindow().getDecorView().setSystemUiVisibility(cXd.getWindow().getDecorView().getSystemUiVisibility() | 0x100);
-          MMActivity localMMActivity = cXd;
-          if ((localMMActivity instanceof MMActivity)) {}
-          for (int i = iF.aP().getHeight();; i = 0)
-          {
-            DisplayMetrics localDisplayMetrics = localMMActivity.getResources().getDisplayMetrics();
-            if (widthPixels > heightPixels) {
-              i = localMMActivity.getResources().getDimensionPixelSize(2131034626);
-            }
-            int j = i;
-            if (i <= 0) {
-              if (widthPixels <= heightPixels) {
-                break label144;
-              }
-            }
-            label144:
-            for (j = localMMActivity.getResources().getDimensionPixelSize(2131034626);; j = localMMActivity.getResources().getDimensionPixelSize(2131034625))
-            {
-              cXd.koJ.koO.setPadding(0, j - com.tencent.mm.aw.a.fromDPToPix(cXd, 2), 0, 0);
-              return;
-            }
-          }
+          cVB.getWindow().getDecorView().setSystemUiVisibility(cVB.getWindow().getDecorView().getSystemUiVisibility() | 0x100);
+          int i = e.cF(cVB);
+          cVB.kNN.kNS.setPadding(0, i - a.fromDPToPix(cVB, 2), 0, 0);
         }
       });
     }

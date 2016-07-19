@@ -11,7 +11,7 @@ final class c$6
   
   public final void onDismiss(DialogInterface paramDialogInterface)
   {
-    if ((fqR != null) && (fqR.isRecycled())) {}
+    if ((fzX != null) && (fzX.isRecycled())) {}
   }
 }
 

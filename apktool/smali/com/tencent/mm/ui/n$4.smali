@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnCancelListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/ui/n;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/ui/n;->ee(Landroid/content/Context;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,22 +18,24 @@
 
 
 # instance fields
-.field final synthetic cms:Landroid/app/Activity;
+.field final synthetic dms:Ljava/lang/String;
 
-.field final synthetic kqi:Landroid/content/Intent;
+.field final synthetic kPp:I
+
+.field final synthetic val$context:Landroid/content/Context;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Intent;Landroid/app/Activity;)V
-    .locals 1
+.method constructor <init>(ILjava/lang/String;Landroid/content/Context;)V
+    .locals 0
 
     .prologue
-    .line 553
-    const/4 v0, 0x0
+    .line 464
+    iput p1, p0, Lcom/tencent/mm/ui/n$4;->kPp:I
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/n$4;->kqi:Landroid/content/Intent;
+    iput-object p2, p0, Lcom/tencent/mm/ui/n$4;->dms:Ljava/lang/String;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/n$4;->cms:Landroid/app/Activity;
+    iput-object p3, p0, Lcom/tencent/mm/ui/n$4;->val$context:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,35 +44,64 @@
 
 
 # virtual methods
-.method public final onCancel(Landroid/content/DialogInterface;)V
+.method public final run()V
     .locals 2
 
     .prologue
-    .line 557
-    iget-object v0, p0, Lcom/tencent/mm/ui/n$4;->kqi:Landroid/content/Intent;
+    .line 467
+    iget v0, p0, Lcom/tencent/mm/ui/n$4;->kPp:I
+
+    const/4 v1, 0x4
+
+    if-ne v0, v1, :cond_1
+
+    .line 468
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/a;->aUd()Lcom/tencent/mm/pluginsdk/model/app/a;
+
+    move-result-object v0
+
+    .line 469
+    if-nez v0, :cond_1
+
+    .line 470
+    const-string/jumbo v0, "MicroMsg.MMErrorProcessor"
+
+    const-string/jumbo v1, "alphaUpdateInfo expired"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 487
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 474
+    :cond_1
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$ag;->aTE()Lcom/tencent/mm/pluginsdk/i$ad;
+
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 558
-    iget-object v0, p0, Lcom/tencent/mm/ui/n$4;->cms:Landroid/app/Activity;
+    .line 475
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$ag;->aTE()Lcom/tencent/mm/pluginsdk/i$ad;
 
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
+    move-result-object v0
 
-    .line 559
-    iget-object v0, p0, Lcom/tencent/mm/ui/n$4;->cms:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/tencent/mm/ui/n$4;->dms:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/n$4;->kqi:Landroid/content/Intent;
+    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/i$ad;->uo(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+    move-result-object v0
 
-    .line 560
-    iget-object v0, p0, Lcom/tencent/mm/ui/n$4;->cms:Landroid/app/Activity;
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/n$4;->kqi:Landroid/content/Intent;
+    .line 476
+    new-instance v0, Lcom/tencent/mm/ui/n$4$1;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/b;->w(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/n$4$1;-><init>(Lcom/tencent/mm/ui/n$4;)V
 
-    .line 562
-    :cond_0
-    return-void
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
+
+    goto :goto_0
 .end method

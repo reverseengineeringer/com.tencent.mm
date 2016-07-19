@@ -3,58 +3,60 @@ package com.tencent.mm.pluginsdk.ui.applet;
 import android.graphics.Bitmap.CompressFormat;
 import android.os.Bundle;
 import android.os.Message;
-import com.tencent.mm.ab.b;
-import com.tencent.mm.ab.n;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.ae.b;
+import com.tencent.mm.ae.n;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.sdk.platformtools.d;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class CdnImageView$1
-  extends aa
+  extends ac
 {
   CdnImageView$1(CdnImageView paramCdnImageView) {}
   
   public final void handleMessage(Message paramMessage)
   {
-    String str = ay.ad(paramMessage.getData().getString("k_url"), "");
-    CdnImageView.a(iIf, ay.ad(CdnImageView.a(iIf), ""));
-    if ((ay.kz(CdnImageView.a(iIf))) && (ay.kz(str)))
+    String str = be.ab(paramMessage.getData().getString("k_url"), "");
+    CdnImageView.a(jfc, be.ab(CdnImageView.a(jfc), ""));
+    if ((be.kf(CdnImageView.a(jfc))) && (be.kf(str)))
     {
-      iIf.setImageBitmap(null);
+      jfc.setImageBitmap(null);
+      jfc.l(null);
       return;
     }
-    if (!CdnImageView.a(iIf).equals(str))
+    if (!CdnImageView.a(jfc).equals(str))
     {
-      u.d("!32@/B4Tb64lLpIqiy54boRLZF2keoz/j0Rc", "hy: url not equal. abort this msg");
+      v.d("MicroMsg.CdnImageView", "hy: url not equal. abort this msg");
       return;
     }
     paramMessage = paramMessage.getData().getByteArray("k_data");
     if ((paramMessage == null) || (paramMessage.length == 0))
     {
-      u.e("!32@/B4Tb64lLpIqiy54boRLZF2keoz/j0Rc", "handleMsg fail, data is null");
+      v.e("MicroMsg.CdnImageView", "handleMsg fail, data is null");
       return;
     }
-    paramMessage = d.aQ(paramMessage);
-    n.An();
-    b.e(CdnImageView.a(iIf), paramMessage);
-    if ((paramMessage != null) && (CdnImageView.b(iIf) > 0) && (CdnImageView.c(iIf) > 0)) {
-      paramMessage = d.a(paramMessage, CdnImageView.c(iIf), CdnImageView.b(iIf), true, false);
+    paramMessage = d.aX(paramMessage);
+    n.Ax();
+    b.e(CdnImageView.a(jfc), paramMessage);
+    if ((paramMessage != null) && (CdnImageView.b(jfc) > 0) && (CdnImageView.c(jfc) > 0)) {
+      paramMessage = d.a(paramMessage, CdnImageView.c(jfc), CdnImageView.b(jfc), true, false);
     }
     for (;;)
     {
-      if ((paramMessage != null) && (!ay.kz(CdnImageView.d(iIf)))) {}
+      if ((paramMessage != null) && (!be.kf(CdnImageView.d(jfc)))) {}
       try
       {
-        d.a(paramMessage, 100, Bitmap.CompressFormat.JPEG, CdnImageView.d(iIf), false);
-        iIf.setImageBitmap(paramMessage);
+        d.a(paramMessage, 100, Bitmap.CompressFormat.JPEG, CdnImageView.d(jfc), false);
+        jfc.setImageBitmap(paramMessage);
+        jfc.l(paramMessage);
         return;
       }
       catch (Exception localException)
       {
         for (;;)
         {
-          u.e("!32@/B4Tb64lLpIqiy54boRLZF2keoz/j0Rc", "save image failed, %s", new Object[] { localException.getMessage() });
+          v.e("MicroMsg.CdnImageView", "save image failed, %s", new Object[] { localException.getMessage() });
         }
       }
     }

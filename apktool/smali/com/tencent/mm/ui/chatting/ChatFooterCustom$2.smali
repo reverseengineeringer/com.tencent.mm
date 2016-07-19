@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kRP:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
+.field final synthetic lrR:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 737
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$2;->kRP:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$2;->lrR:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 741
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$2;->kRP:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$2;->lrR:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChatFooterCustom;->c(Lcom/tencent/mm/ui/chatting/ChatFooterCustom;)V
 

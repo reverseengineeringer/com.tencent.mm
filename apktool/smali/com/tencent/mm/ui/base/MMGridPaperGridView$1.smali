@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kEJ:Lcom/tencent/mm/ui/base/MMGridPaperGridView;
+.field final synthetic ldM:Lcom/tencent/mm/ui/base/MMGridPaperGridView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 85
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView$1;->kEJ:Lcom/tencent/mm/ui/base/MMGridPaperGridView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView$1;->ldM:Lcom/tencent/mm/ui/base/MMGridPaperGridView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,10 +38,19 @@
 # virtual methods
 .method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
     .line 89
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView$1;->kEJ:Lcom/tencent/mm/ui/base/MMGridPaperGridView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView$1;->ldM:Lcom/tencent/mm/ui/base/MMGridPaperGridView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->a(Lcom/tencent/mm/ui/base/MMGridPaperGridView;)Lcom/tencent/mm/ui/base/j;
 
@@ -50,11 +59,11 @@
     if-nez v0, :cond_0
 
     .line 90
-    const-string/jumbo v0, "!44@/B4Tb64lLpJ3ysDJ3BtNKWRcjd4fCZrJmrjyp4tQ6Cg="
+    const-string/jumbo v0, "MicroMsg.MMGridPaperGridView"
 
     const-string/jumbo v1, "on item click, but main adapter is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 93
     :cond_0

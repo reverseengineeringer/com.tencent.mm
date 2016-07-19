@@ -10,7 +10,7 @@ final class AppUpdaterUI$14
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    AppUpdaterUI.i(jTb);
+    AppUpdaterUI.i(ksv);
   }
 }
 

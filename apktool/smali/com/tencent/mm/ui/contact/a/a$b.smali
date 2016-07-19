@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic lmO:Lcom/tencent/mm/ui/contact/a/a;
+.field final synthetic lNj:Lcom/tencent/mm/ui/contact/a/a;
 
 
 # direct methods
@@ -23,8 +23,8 @@
     .locals 0
 
     .prologue
-    .line 102
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/a/a$b;->lmO:Lcom/tencent/mm/ui/contact/a/a;
+    .line 103
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/a/a$b;->lNj:Lcom/tencent/mm/ui/contact/a/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,5 +39,5 @@
 .method public abstract a(Landroid/content/Context;Lcom/tencent/mm/ui/contact/a/a$a;Lcom/tencent/mm/ui/contact/a/a;ZZ)V
 .end method
 
-.method public abstract bhz()Z
+.method public abstract bnp()Z
 .end method

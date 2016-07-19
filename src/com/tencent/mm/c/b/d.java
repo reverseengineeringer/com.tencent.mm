@@ -4,97 +4,97 @@ import android.media.AudioRecord;
 import android.media.AudioRecord.OnRecordPositionUpdateListener;
 import android.os.HandlerThread;
 import com.tencent.mm.sdk.i.e;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.Arrays;
 
 public final class d
   extends f
 {
-  byte[] aqB = null;
-  private int aqC;
-  int aqD;
-  boolean aqE;
-  private AudioRecord.OnRecordPositionUpdateListener aqF = new AudioRecord.OnRecordPositionUpdateListener()
+  AudioRecord abK;
+  c.a abL;
+  byte[] abT = null;
+  private int abU;
+  int abV;
+  boolean abW;
+  private AudioRecord.OnRecordPositionUpdateListener abX = new AudioRecord.OnRecordPositionUpdateListener()
   {
     public final void onMarkerReached(AudioRecord paramAnonymousAudioRecord) {}
     
     public final void onPeriodicNotification(AudioRecord paramAnonymousAudioRecord)
     {
-      if (aqV) {}
+      if (acn) {}
       int i;
       do
       {
         do
         {
           return;
-        } while (aqs == null);
-        if ((aqe) || (aqB == null)) {
-          aqB = new byte[aqD];
+        } while (abK == null);
+        if ((abw) || (abT == null)) {
+          abT = new byte[abV];
         }
-        int j = aqs.read(aqB, 0, aqD);
-        u.d("!56@/B4Tb64lLpLd7hlw6y+1ySBfLlWWvoJ8IrbIM/Of1OSEqUpWJTRUbg==", "OnRecordPositionUpdateListener, read ret: " + j);
-        if (aqz != null) {
-          aqz.c(j, aqB);
+        int j = abK.read(abT, 0, abV);
+        v.d("MicroMsg.RecordModeAsyncCallback", "OnRecordPositionUpdateListener, read ret: " + j);
+        if (abR != null) {
+          abR.c(j, abT);
         }
         i = j;
-        if (j > aqB.length) {
-          i = aqB.length;
+        if (j > abT.length) {
+          i = abT.length;
         }
-        if ((aqE) && (i > 0)) {
-          Arrays.fill(aqB, 0, i, (byte)0);
+        if ((abW) && (i > 0)) {
+          Arrays.fill(abT, 0, i, (byte)0);
         }
-      } while ((aqt == null) || (i <= 0));
-      aqt.d(aqB, i);
+      } while ((abL == null) || (i <= 0));
+      abL.d(abT, i);
     }
   };
-  boolean aqe;
-  AudioRecord aqs;
-  c.a aqt;
-  private HandlerThread dN = null;
+  boolean abw;
+  private HandlerThread ed = null;
   
   public d(AudioRecord paramAudioRecord, c.a parama, boolean paramBoolean, int paramInt1, int paramInt2)
   {
-    aqs = paramAudioRecord;
-    aqt = parama;
-    aqe = paramBoolean;
-    aqC = paramInt1;
-    aqD = paramInt2;
+    abK = paramAudioRecord;
+    abL = parama;
+    abw = paramBoolean;
+    abU = paramInt1;
+    abV = paramInt2;
   }
   
-  public final void an(boolean paramBoolean)
+  public final void Q(boolean paramBoolean)
   {
-    aqE = paramBoolean;
+    abW = paramBoolean;
   }
   
-  public final boolean lN()
+  public final void jJ()
   {
-    if (dN != null)
+    abK.setRecordPositionUpdateListener(null);
+    abK = null;
+    ed.quit();
+    ed = null;
+  }
+  
+  public final boolean jY()
+  {
+    if (ed != null)
     {
-      u.e("!56@/B4Tb64lLpLd7hlw6y+1ySBfLlWWvoJ8IrbIM/Of1OSEqUpWJTRUbg==", "alreay started record");
+      v.e("MicroMsg.RecordModeAsyncCallback", "alreay started record");
       return false;
     }
-    dN = e.aO("RecordModeAsyncCallback_handlerThread", 10);
-    dN.start();
-    aqs.setRecordPositionUpdateListener(aqF, aa.fetchFreeHandler(dN.getLooper()));
-    aqs.setPositionNotificationPeriod(aqC);
-    if ((aqe) || (aqB == null)) {
-      aqB = new byte[aqD];
+    ed = e.aY("RecordModeAsyncCallback_handlerThread", 10);
+    ed.start();
+    abK.setRecordPositionUpdateListener(abX, ac.fetchFreeHandler(ed.getLooper()));
+    abK.setPositionNotificationPeriod(abU);
+    if ((abw) || (abT == null)) {
+      abT = new byte[abV];
     }
-    int i = aqs.read(aqB, 0, aqD);
-    u.d("!56@/B4Tb64lLpLd7hlw6y+1ySBfLlWWvoJ8IrbIM/Of1OSEqUpWJTRUbg==", "startRecord, read ret: " + i);
-    if ((aqt != null) && (i > 0)) {
-      aqt.d(aqB, i);
+    int i = abK.read(abT, 0, abV);
+    v.d("MicroMsg.RecordModeAsyncCallback", "startRecord, read ret: " + i);
+    if ((abL != null) && (i > 0)) {
+      abL.d(abT, i);
     }
     return true;
-  }
-  
-  public final void li()
-  {
-    aqs.setRecordPositionUpdateListener(null);
-    aqs = null;
-    dN.quit();
-    dN = null;
   }
 }
 

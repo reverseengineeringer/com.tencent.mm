@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static sJ(Ljava/lang/String;)Z
+.method public static ul(Ljava/lang/String;)Z
     .locals 6
 
     .prologue
@@ -25,11 +25,11 @@
     if-nez v0, :cond_0
 
     .line 33
-    const-string/jumbo v0, "!56@/B4Tb64lLpK+IBX8XDgnvklqRB2dT0TuJY35uR698qNAQ+vAl+Ie1Q=="
+    const-string/jumbo v0, "MicroMsg.NetSceneCodeCoverageReport"
 
     const-string/jumbo v1, "codecoverage checkUpload dir never create ?"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 59
     :goto_0
@@ -37,13 +37,13 @@
 
     .line 36
     :cond_0
-    sget-object v0, Lcom/tencent/mm/model/ag;->bAw:Lcom/tencent/mm/model/ag;
+    sget-object v0, Lcom/tencent/mm/model/ag;->btA:Lcom/tencent/mm/model/ag;
 
     const-string/jumbo v1, "login_user_name"
 
     const-string/jumbo v4, "never_login_crash"
 
-    invoke-virtual {v0, v1, v4}, Lcom/tencent/mm/model/ag;->A(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1, v4}, Lcom/tencent/mm/model/ag;->x(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -78,7 +78,7 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v5, Lcom/tencent/mm/sdk/platformtools/e;->btx:Ljava/lang/String;
+    sget-object v5, Lcom/tencent/mm/sdk/platformtools/e;->boQ:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -100,7 +100,7 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v5, Lcom/tencent/mm/sdk/platformtools/e;->bwX:Ljava/lang/String;
+    sget-object v5, Lcom/tencent/mm/sdk/platformtools/e;->boY:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -155,7 +155,7 @@
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Lcom/tencent/mm/a/e;->e(Ljava/lang/String;[B)I
+    invoke-static {v4, v0}, Lcom/tencent/mm/a/e;->d(Ljava/lang/String;[B)I
 
     .line 40
     new-instance v0, Ljava/text/SimpleDateFormat;
@@ -203,11 +203,11 @@
     if-nez v0, :cond_2
 
     .line 49
-    const-string/jumbo v0, "!56@/B4Tb64lLpK+IBX8XDgnvklqRB2dT0TuJY35uR698qNAQ+vAl+Ie1Q=="
+    const-string/jumbo v0, "MicroMsg.NetSceneCodeCoverageReport"
 
     const-string/jumbo v1, "zip file failed"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -216,7 +216,7 @@
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
     .line 55
-    const-string/jumbo v3, "!56@/B4Tb64lLpK+IBX8XDgnvklqRB2dT0TuJY35uR698qNAQ+vAl+Ie1Q=="
+    const-string/jumbo v3, "MicroMsg.NetSceneCodeCoverageReport"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -232,7 +232,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 57
     const/16 v4, 0xa
@@ -241,7 +241,7 @@
 
     move v3, v2
 
-    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/platformtools/q;->a(Ljava/lang/String;Ljava/lang/String;ZZII)Z
+    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/platformtools/p;->a(Ljava/lang/String;Ljava/lang/String;ZZII)Z
 
     .line 59
     const/4 v2, 0x1

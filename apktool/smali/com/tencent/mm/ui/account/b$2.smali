@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic krJ:Lcom/tencent/mm/ui/account/b;
+.field final synthetic kQR:Lcom/tencent/mm/ui/account/b;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 50
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/b$2;->krJ:Lcom/tencent/mm/ui/account/b;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/b$2;->kQR:Lcom/tencent/mm/ui/account/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 54
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/b$2;->krJ:Lcom/tencent/mm/ui/account/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/b$2;->kQR:Lcom/tencent/mm/ui/account/b;
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/account/b;->kqh:Lcom/tencent/mm/ui/applet/SecurityImage;
+    iput-object v1, v0, Lcom/tencent/mm/ui/account/b;->kPm:Lcom/tencent/mm/ui/applet/SecurityImage;
 
     .line 55
     return-void

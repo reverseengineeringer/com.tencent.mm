@@ -2,22 +2,22 @@ package com.tencent.mm.modelcdntran;
 
 import com.tencent.mm.model.ah;
 import com.tencent.mm.network.m.a;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 
 final class b$1
   extends m.a
 {
   b$1(b paramb) {}
   
-  public final void aK(int paramInt)
+  public final void bc(int paramInt)
   {
-    u.d("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "cdntra onNetworkChange st:%d ", new Object[] { Integer.valueOf(paramInt) });
+    v.d("MicroMsg.CdnTransportService", "cdntra onNetworkChange st:%d ", new Object[] { Integer.valueOf(paramInt) });
     if ((paramInt != 5) && (paramInt != 1)) {}
-    while (!ah.rh()) {
+    while (!ah.rg()) {
       return;
     }
-    ah.tE().d(new d());
+    ah.tF().a(new d(), 0);
   }
 }
 

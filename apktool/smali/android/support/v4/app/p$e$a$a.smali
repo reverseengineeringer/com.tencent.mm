@@ -15,17 +15,26 @@
 
 
 # instance fields
-.field public dk:Landroid/support/v4/app/w;
+.field public dA:Landroid/support/v4/app/w;
 
-.field public dl:Landroid/app/PendingIntent;
+.field public dB:Landroid/app/PendingIntent;
 
-.field public dm:Landroid/app/PendingIntent;
+.field public dC:Landroid/app/PendingIntent;
 
-.field public do:J
+.field public dE:J
 
-.field public final dq:Ljava/util/List;
+.field public final dG:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final dr:Ljava/lang/String;
+.field public final dH:Ljava/lang/String;
 
 
 # direct methods
@@ -33,19 +42,19 @@
     .locals 1
 
     .prologue
-    .line 3122
+    .line 3113
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3110
+    .line 3101
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v4/app/p$e$a$a;->dq:Ljava/util/List;
+    iput-object v0, p0, Landroid/support/v4/app/p$e$a$a;->dG:Ljava/util/List;
 
-    .line 3123
-    iput-object p1, p0, Landroid/support/v4/app/p$e$a$a;->dr:Ljava/lang/String;
+    .line 3114
+    iput-object p1, p0, Landroid/support/v4/app/p$e$a$a;->dH:Ljava/lang/String;
 
-    .line 3124
+    .line 3115
     return-void
 .end method

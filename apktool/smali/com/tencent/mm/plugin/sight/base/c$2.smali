@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sight/base/c;->tU(Ljava/lang/String;)V
+    value = Lcom/tencent/mm/plugin/sight/base/c;->va(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gxb:Ljava/lang/String;
+.field final synthetic gDz:Ljava/lang/String;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 205
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/base/c$2;->gxb:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/base/c$2;->gDz:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,13 +41,13 @@
 
     .prologue
     .line 208
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/base/c$2;->gxb:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/base/c$2;->gDz:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/g;->ba(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/g;->aZ(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
 
     .line 209
     return-void

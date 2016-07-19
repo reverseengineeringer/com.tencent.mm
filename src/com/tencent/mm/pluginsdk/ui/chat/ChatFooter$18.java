@@ -7,7 +7,7 @@ final class ChatFooter$18
   
   public final void run()
   {
-    iLO.aSb();
+    jiL.aWQ();
   }
 }
 

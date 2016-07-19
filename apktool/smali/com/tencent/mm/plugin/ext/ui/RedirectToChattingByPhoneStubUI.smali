@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/r/d;
+.implements Lcom/tencent/mm/t/d;
 
 
 # instance fields
-.field private dLD:Lcom/tencent/mm/ui/base/p;
+.field private dNk:Lcom/tencent/mm/ui/base/p;
 
 
 # direct methods
@@ -21,14 +21,14 @@
     .line 27
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;->dLD:Lcom/tencent/mm/ui/base/p;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;->dNk:Lcom/tencent/mm/ui/base/p;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final VC()Z
+.method public final Xk()Z
     .locals 6
 
     .prologue
@@ -82,7 +82,7 @@
 
     .line 81
     :goto_1
-    const-string/jumbo v2, "!64@/B4Tb64lLpJfKsem8vz7H377OVeg21KplMgz7y7vvJgP0BrYCsHsNCzbFi7WLdKY"
+    const-string/jumbo v2, "MicroMsg.RedirectToChattingByPhoneStubUI"
 
     const-string/jumbo v3, "hide VKB result %B"
 
@@ -94,7 +94,7 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v1, v0
 
@@ -106,7 +106,7 @@
     move-exception v0
 
     .line 78
-    const-string/jumbo v2, "!64@/B4Tb64lLpJfKsem8vz7H377OVeg21KplMgz7y7vvJgP0BrYCsHsNCzbFi7WLdKY"
+    const-string/jumbo v2, "MicroMsg.RedirectToChattingByPhoneStubUI"
 
     const-string/jumbo v3, "hide VKB exception %s"
 
@@ -114,7 +114,7 @@
 
     aput-object v0, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -122,26 +122,15 @@
     goto :goto_1
 .end method
 
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
-    .locals 0
-
-    .prologue
-    .line 56
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;->finish()V
-
-    .line 57
-    return-void
-.end method
-
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 31
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 32
-    const v0, 0x7f0b0e1d
+    const v0, 0x7f080149
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;->getString(I)Ljava/lang/String;
 
@@ -155,25 +144,25 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;->dLD:Lcom/tencent/mm/ui/base/p;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;->dNk:Lcom/tencent/mm/ui/base/p;
 
     .line 33
     new-instance v0, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI$1;-><init>(Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;)V
 
-    const-wide/16 v1, 0x1f4
+    const-wide/16 v2, 0x1f4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/ab;->e(Ljava/lang/Runnable;J)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ad;->e(Ljava/lang/Runnable;J)V
 
     .line 40
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0x6a
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
     .line 42
     return-void
@@ -187,30 +176,41 @@
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
     .line 47
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0x6a
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
     .line 48
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;->dLD:Lcom/tencent/mm/ui/base/p;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;->dNk:Lcom/tencent/mm/ui/base/p;
 
     if-eqz v0, :cond_0
 
     .line 49
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;->dLD:Lcom/tencent/mm/ui/base/p;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;->dNk:Lcom/tencent/mm/ui/base/p;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/p;->dismiss()V
 
     .line 50
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;->dLD:Lcom/tencent/mm/ui/base/p;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;->dNk:Lcom/tencent/mm/ui/base/p;
 
     .line 52
     :cond_0
+    return-void
+.end method
+
+.method public onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/ui/RedirectToChattingByPhoneStubUI;->finish()V
+
+    .line 57
     return-void
 .end method

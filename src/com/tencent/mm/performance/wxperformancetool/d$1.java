@@ -1,22 +1,41 @@
 package com.tencent.mm.performance.wxperformancetool;
 
-import android.os.Looper;
-import com.tencent.mm.performance.b.a.a;
-import com.tencent.mm.performance.e.c;
-import com.tencent.mm.sdk.platformtools.u;
+import android.content.Context;
+import android.content.Intent;
+import com.tencent.mm.performance.c.a.c;
+import com.tencent.mm.sdk.platformtools.v;
+import java.lang.ref.WeakReference;
+import java.util.HashMap;
 
 final class d$1
-  implements a.a
+  implements a.c
 {
-  d$1(d paramd) {}
+  d$1(d paramd, Context paramContext) {}
   
-  public final void b(Looper paramLooper, long paramLong, int paramInt, boolean paramBoolean, String paramString)
+  public final void a(WeakReference<Object> paramWeakReference, boolean paramBoolean)
   {
-    u.e("!32@/B4Tb64lLpJDy+XtaqVVAmxMdLX9z03q", "current thread name===" + Thread.currentThread().getName());
-    u.e("!32@/B4Tb64lLpJDy+XtaqVVAmxMdLX9z03q", "looper thread name===" + paramLooper.getThread().getName());
-    u.e("!32@/B4Tb64lLpJDy+XtaqVVAmxMdLX9z03q", "looper: " + paramLooper.hashCode() + " usetimefrombegin:" + paramLong + " maxtime:" + paramInt + " end: " + paramBoolean + " " + paramString);
-    if (!paramBoolean) {
-      u.e("!32@/B4Tb64lLpJDy+XtaqVVAmxMdLX9z03q", "looper stack: " + c.b(paramLooper.getThread()));
+    Object localObject = paramWeakReference.get();
+    if (localObject == null) {}
+    do
+    {
+      return;
+      v.e("MicroMsg.WxPerformace", "memoryleak===" + localObject.getClass().toString() + "   " + paramBoolean);
+    } while (localObject.getClass().equals(MemoryLeakActivity.class));
+    Intent localIntent = new Intent();
+    if (paramBoolean) {
+      localIntent.putExtra("tag", "activity:");
+    }
+    for (;;)
+    {
+      String str = String.valueOf(System.currentTimeMillis());
+      localIntent.putExtra("key", str);
+      d.cgz.put(str, paramWeakReference);
+      localIntent.putExtra("class", String.format("%s", new Object[] { localObject }));
+      localIntent.setClass(val$context, MemoryLeakActivity.class);
+      localIntent.addFlags(268435456);
+      val$context.startActivity(localIntent);
+      return;
+      localIntent.putExtra("tag", "object:");
     }
   }
 }

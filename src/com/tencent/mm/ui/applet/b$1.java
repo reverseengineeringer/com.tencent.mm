@@ -10,10 +10,10 @@ final class b$1
   
   public final boolean queueIdle()
   {
-    while (kzB.kzz.size() > 0)
+    while (kYI.kYG.size() > 0)
     {
-      String str = (String)kzB.kzz.removeFirst();
-      kzB.kzA.hw(str);
+      String str = (String)kYI.kYG.removeFirst();
+      kYI.kYH.hO(str);
     }
     return true;
   }

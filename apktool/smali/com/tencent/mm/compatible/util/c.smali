@@ -4,11 +4,11 @@
 
 
 # direct methods
-.method public static bU(I)Z
+.method public static cm(I)Z
     .locals 1
 
     .prologue
-    .line 28
+    .line 29
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-lt v0, p0, :cond_0
@@ -24,11 +24,11 @@
     goto :goto_0
 .end method
 
-.method public static bV(I)Z
+.method public static cn(I)Z
     .locals 1
 
     .prologue
-    .line 32
+    .line 33
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-ge v0, p0, :cond_0
@@ -44,11 +44,11 @@
     goto :goto_0
 .end method
 
-.method public static bW(I)Z
+.method public static co(I)Z
     .locals 1
 
     .prologue
-    .line 36
+    .line 37
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-le v0, p0, :cond_0

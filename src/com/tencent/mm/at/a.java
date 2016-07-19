@@ -1,79 +1,33 @@
 package com.tencent.mm.at;
 
-import java.io.OutputStream;
+import android.content.Context;
+import com.tencent.mm.ap.i;
+import com.tencent.mm.ap.l;
+import com.tencent.mm.av.c;
+import com.tencent.mm.h.e;
+import com.tencent.mm.h.h;
+import com.tencent.mm.sdk.platformtools.be;
 
-public class a
+public final class a
 {
-  public static a.a.a.a.a.b iTR = new a.a.a.a.a.a();
-  
-  public static int a(a.a.a.a.a parama)
+  public static boolean aTr()
   {
-    int i = 0;
-    a.a.a.b.a.a locala = maU;
-    if ((aiB == aiz) && (!locala.iD(false))) {
-      aiC = 0;
+    String str2 = h.om().getValue("EnableStrangerChat");
+    String str1 = str2;
+    if (be.kf(str2)) {
+      str1 = "0";
     }
-    for (;;)
+    return "1".equals(str1);
+  }
+  
+  public static void cy(Context paramContext)
+  {
+    if ((!aTr()) && (l.Ed().DV() > 0))
     {
-      maV = i;
-      return a.a.a.b.a.aC(maV);
-      aiC = locala.jC();
-      if (aiC == 0) {
-        throw a.a.a.b.a.b.bok();
-      }
-      i = aiC;
+      c.v(paramContext, "nearby", ".ui.NearbyFriendShowSayHiUI");
+      return;
     }
-  }
-  
-  public int a(int paramInt, Object... paramVarArgs)
-  {
-    throw new Error("Cannot use this method");
-  }
-  
-  public void a(a.a.a.c.a parama)
-  {
-    a(0, new Object[] { parama });
-  }
-  
-  public boolean a(a.a.a.a.a parama, a parama1, int paramInt)
-  {
-    return a(3, new Object[] { parama, parama1, Integer.valueOf(paramInt) }) == 0;
-  }
-  
-  public a am(byte[] paramArrayOfByte)
-  {
-    a(2, new Object[] { paramArrayOfByte });
-    return this;
-  }
-  
-  public int kn()
-  {
-    try
-    {
-      int i = a(1, new Object[0]);
-      return i;
-    }
-    catch (Exception localException) {}
-    return 0;
-  }
-  
-  public a ko()
-  {
-    return this;
-  }
-  
-  public byte[] toByteArray()
-  {
-    ko();
-    byte[] arrayOfByte = new byte[kn()];
-    a.a.a.c.a locala = new a.a.a.c.a(arrayOfByte);
-    a(locala);
-    if (bEF != null)
-    {
-      bEF.write(mba);
-      bEF.flush();
-    }
-    return arrayOfByte;
+    c.v(paramContext, "nearby", ".ui.NearbyFriendsUI");
   }
 }
 

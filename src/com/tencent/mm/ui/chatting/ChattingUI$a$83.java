@@ -1,19 +1,14 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.model.i;
-import com.tencent.mm.model.j;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.e.a.z;
+import com.tencent.mm.sdk.c.c;
 
 final class ChattingUI$a$83
-  implements Runnable
+  extends c<z>
 {
-  ChattingUI$a$83(ChattingUI.a parama, String paramString) {}
-  
-  public final void run()
+  ChattingUI$a$83(ChattingUI.a parama)
   {
-    if (!ay.kz(lbk)) {
-      ChattingUI.a.a(laF, j.E(lbk, i.bzW));
-    }
+    kum = z.class.getName().hashCode();
   }
 }
 

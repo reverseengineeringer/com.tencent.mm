@@ -10,13 +10,13 @@ import android.os.Bundle;
 import android.os.IBinder;
 import com.jg.JgClassChecked;
 import com.tencent.mm.plugin.accountsync.ui.ContactsSyncUI;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 @JgClassChecked(author=20, fComment="checked", lastDate="20140422", reviewer=20, vComment={com.jg.EType.SERVICESCHECK})
 public class AccountAuthenticatorService
   extends Service
 {
-  private static a cor = null;
+  private static a cjF = null;
   
   public IBinder onBind(Intent paramIntent)
   {
@@ -24,10 +24,10 @@ public class AccountAuthenticatorService
     while ((paramIntent.getAction() == null) || (!paramIntent.getAction().equals("android.accounts.AccountAuthenticator"))) {
       return null;
     }
-    if (cor == null) {
-      cor = new a(this);
+    if (cjF == null) {
+      cjF = new a(this);
     }
-    return cor.getIBinder();
+    return cjF.getIBinder();
   }
   
   private static final class a
@@ -53,37 +53,37 @@ public class AccountAuthenticatorService
     
     public final Bundle confirmCredentials(AccountAuthenticatorResponse paramAccountAuthenticatorResponse, Account paramAccount, Bundle paramBundle)
     {
-      u.i("!56@/B4Tb64lLpIaKqQrIg/z8GkVquS3edhX8D5+aGLT9JA8DpSq5rbbyw==", "confirmCredentials");
+      v.i("MicroMsg.AccountAuthenticatorService", "confirmCredentials");
       return null;
     }
     
     public final Bundle editProperties(AccountAuthenticatorResponse paramAccountAuthenticatorResponse, String paramString)
     {
-      u.i("!56@/B4Tb64lLpIaKqQrIg/z8GkVquS3edhX8D5+aGLT9JA8DpSq5rbbyw==", "editProperties");
+      v.i("MicroMsg.AccountAuthenticatorService", "editProperties");
       return null;
     }
     
     public final Bundle getAuthToken(AccountAuthenticatorResponse paramAccountAuthenticatorResponse, Account paramAccount, String paramString, Bundle paramBundle)
     {
-      u.i("!56@/B4Tb64lLpIaKqQrIg/z8GkVquS3edhX8D5+aGLT9JA8DpSq5rbbyw==", "getAuthToken");
+      v.i("MicroMsg.AccountAuthenticatorService", "getAuthToken");
       return null;
     }
     
     public final String getAuthTokenLabel(String paramString)
     {
-      u.i("!56@/B4Tb64lLpIaKqQrIg/z8GkVquS3edhX8D5+aGLT9JA8DpSq5rbbyw==", "getAuthTokenLabel");
+      v.i("MicroMsg.AccountAuthenticatorService", "getAuthTokenLabel");
       return null;
     }
     
     public final Bundle hasFeatures(AccountAuthenticatorResponse paramAccountAuthenticatorResponse, Account paramAccount, String[] paramArrayOfString)
     {
-      u.i("!56@/B4Tb64lLpIaKqQrIg/z8GkVquS3edhX8D5+aGLT9JA8DpSq5rbbyw==", "hasFeatures: " + paramArrayOfString);
+      v.i("MicroMsg.AccountAuthenticatorService", "hasFeatures: " + paramArrayOfString);
       return null;
     }
     
     public final Bundle updateCredentials(AccountAuthenticatorResponse paramAccountAuthenticatorResponse, Account paramAccount, String paramString, Bundle paramBundle)
     {
-      u.i("!56@/B4Tb64lLpIaKqQrIg/z8GkVquS3edhX8D5+aGLT9JA8DpSq5rbbyw==", "updateCredentials");
+      v.i("MicroMsg.AccountAuthenticatorService", "updateCredentials");
       return null;
     }
   }

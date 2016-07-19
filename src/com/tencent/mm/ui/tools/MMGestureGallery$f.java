@@ -1,13 +1,13 @@
 package com.tencent.mm.ui.tools;
 
 import android.graphics.Matrix;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import com.tencent.mm.ui.base.MultiTouchImageView;
 
 final class MMGestureGallery$f
   extends MMGestureGallery.a
 {
-  float[] kIk = new float[9];
+  float[] lhx = new float[9];
   
   public MMGestureGallery$f(MMGestureGallery paramMMGestureGallery)
   {
@@ -16,29 +16,30 @@ final class MMGestureGallery$f
   
   public final void play()
   {
-    MMGestureGallery.c(lwF).post(new Runnable()
+    MMGestureGallery.c(lXp).post(new Runnable()
     {
       public final void run()
       {
-        MMGestureGallery.a(lwF).getImageMatrix().getValues(kIk);
-        float f2 = kIk[2];
-        float f1 = MMGestureGallery.a(lwF).getScale() * MMGestureGallery.a(lwF).getImageWidth();
-        if (f1 < MMGestureGallery.b(lwF)) {}
-        for (f1 = MMGestureGallery.b(lwF) / 2.0F - f1 / 2.0F;; f1 = 0.0F)
+        MMGestureGallery.a(lXp).getImageMatrix().getValues(lhx);
+        float f1 = MMGestureGallery.a(lXp).getScale();
+        float f2 = alXp).imageHeight * f1;
+        float f3 = lhx[5];
+        f1 = MMGestureGallery.d(lXp);
+        if (f2 < MMGestureGallery.d(lXp)) {
+          f1 = MMGestureGallery.d(lXp) / 2.0F + f2 / 2.0F;
+        }
+        f1 -= f3 + f2;
+        if (f1 <= 0.0F) {
+          lhw = true;
+        }
+        for (;;)
         {
-          f1 -= f2;
-          if (f1 >= 0.0F) {
-            kIj = true;
-          }
-          for (;;)
-          {
-            MMGestureGallery.a(lwF).q(f1, 0.0F);
-            return;
-            if (Math.abs(f1) <= 5.0F) {
-              kIj = true;
-            } else {
-              f1 /= 4.0F;
-            }
+          MMGestureGallery.a(lXp).p(0.0F, f1);
+          return;
+          if (Math.abs(f1) <= 5.0F) {
+            lhw = true;
+          } else {
+            f1 = (float)(Math.abs(f1) - Math.pow(Math.sqrt(Math.abs(f1)) - 1.0D, 2.0D)) * 2.0F;
           }
         }
       }

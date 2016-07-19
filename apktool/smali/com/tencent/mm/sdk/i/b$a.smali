@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private jYQ:Lcom/tencent/mm/sdk/i/g;
+.field private kzn:Lcom/tencent/mm/sdk/i/g;
 
 
 # direct methods
@@ -27,7 +27,7 @@
     invoke-direct {p0, p1, p2, p3}, Ljava/lang/Thread;-><init>(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;Ljava/lang/String;)V
 
     .line 53
-    iput-object p2, p0, Lcom/tencent/mm/sdk/i/b$a;->jYQ:Lcom/tencent/mm/sdk/i/g;
+    iput-object p2, p0, Lcom/tencent/mm/sdk/i/b$a;->kzn:Lcom/tencent/mm/sdk/i/g;
 
     .line 54
     return-void

@@ -1,22 +1,18 @@
 package com.tencent.mm.ui.conversation;
 
-import android.view.MenuItem;
-import com.tencent.mm.ui.base.n.d;
+import com.tencent.mm.ui.i.a;
 
 final class BizConversationUI$a$9
-  implements n.d
+  implements i.a
 {
   BizConversationUI$a$9(BizConversationUI.a parama) {}
   
-  public final void d(MenuItem paramMenuItem, int paramInt)
+  public final void GE()
   {
-    switch (paramMenuItem.getItemId())
-    {
-    default: 
-      return;
-    }
-    BizConversationUI.a.b(loi, BizConversationUI.a.k(loi));
+    BizConversationUI.a.a(lOA, BizConversationUI.a.b(lOA).getCount());
   }
+  
+  public final void GF() {}
 }
 
 /* Location:

@@ -15,11 +15,11 @@
 
 
 # virtual methods
-.method public abstract aKK()Ljava/lang/String;
+.method public abstract aOr()Ljava/lang/String;
 .end method
 
-.method public abstract aKL()V
+.method public abstract aOs()V
 .end method
 
-.method public abstract aKM()Z
+.method public abstract aOt()Z
 .end method

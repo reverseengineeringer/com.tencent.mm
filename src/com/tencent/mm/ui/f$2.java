@@ -1,38 +1,19 @@
 package com.tencent.mm.ui;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.widget.CheckBox;
-import com.tencent.mm.ap.a;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.model.c;
-import com.tencent.mm.storage.h;
+import android.content.ComponentName;
+import android.content.Intent;
 
 final class f$2
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
   f$2(f paramf) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final void run()
   {
-    if (f.g(klo) != null)
-    {
-      paramDialogInterface = ah.tD().rn();
-      if (f.g(klo).isChecked()) {
-        break label71;
-      }
-    }
-    label71:
-    for (boolean bool = true;; bool = false)
-    {
-      paramDialogInterface.set(4104, Boolean.valueOf(bool));
-      paramDialogInterface = LauncherUI.bat();
-      if (paramDialogInterface != null) {
-        paramDialogInterface.Gi("tab_find_friend");
-      }
-      a.cC(klo.koJ.kpc);
-      return;
-    }
+    Intent localIntent = new Intent();
+    localIntent.setComponent(new ComponentName(d.e.kJT, "com.tencent.mm.booter.MMReceivers$ToolsProcessReceiver"));
+    localIntent.putExtra("tools_process_action_code_key", "com.tencent.mm.intent.ACTION_START_TOOLS_PROCESS");
+    kKO.sendBroadcast(localIntent);
   }
 }
 

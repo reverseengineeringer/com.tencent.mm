@@ -10,8 +10,8 @@ final class BindQQUI$4
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    kPv.age();
-    kPv.finish();
+    loL.aiI();
+    loL.finish();
     return true;
   }
 }

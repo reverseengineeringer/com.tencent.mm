@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI;->Gb()V
+    value = Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lCp:Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI;
+.field final synthetic mdg:Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 76
-    iput-object p1, p0, Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI$2;->lCp:Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI$2;->mdg:Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 80
-    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI$2;->lCp:Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI$2;->mdg:Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/voicesearch/SearchConversationResultUI;->finish()V
 

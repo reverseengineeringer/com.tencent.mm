@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field czT:Landroid/widget/TextView;
+.field cwP:Landroid/widget/TextView;
 
-.field czU:Landroid/widget/TextView;
+.field cwQ:Landroid/widget/TextView;
 
-.field eEv:Landroid/widget/TextView;
+.field eKK:Landroid/widget/TextView;
 
 
 # direct methods

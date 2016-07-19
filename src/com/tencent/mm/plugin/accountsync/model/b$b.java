@@ -8,49 +8,50 @@ import android.net.Uri;
 import android.provider.ContactsContract.Data;
 import android.provider.ContactsContract.RawContacts;
 import android.widget.Toast;
-import com.tencent.mm.d.a.nv;
+import com.tencent.mm.e.a.oi;
 import com.tencent.mm.modelfriend.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.h;
 import com.tencent.mm.storage.q;
 
 public final class b$b
   implements b.a
 {
-  private String cow;
+  private String cjK;
   private int toScene;
   private Uri uri;
   
   public b$b(int paramInt, String paramString, Uri paramUri)
   {
     toScene = paramInt;
-    cow = paramString;
+    cjK = paramString;
     uri = paramUri;
   }
   
   private int c(Context paramContext, String paramString1, String paramString2, String paramString3)
   {
-    Object localObject = com.tencent.mm.modelfriend.ah.zq().hr(paramString1);
+    Object localObject = com.tencent.mm.modelfriend.ah.zD().hJ(paramString1);
     if (paramContext == null) {
-      u.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "null context");
+      v.e("MicroMsg.ProcessorToChattingOrTimeLineByPhone", "null context");
     }
     do
     {
       return 1;
       if (localObject == null)
       {
-        u.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "this user is not my friend");
+        v.e("MicroMsg.ProcessorToChattingOrTimeLineByPhone", "this user is not my friend");
         return 1;
       }
       localObject = ((b)localObject).getUsername();
-      if (ay.kz((String)localObject))
+      if (be.kf((String)localObject))
       {
-        u.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "get username failed, phonenum md5 is " + paramString1);
+        v.e("MicroMsg.ProcessorToChattingOrTimeLineByPhone", "get username failed, phonenum md5 is " + paramString1);
         return 1;
       }
-      if (com.tencent.mm.model.ah.tD().rq().El((String)localObject))
+      if (com.tencent.mm.model.ah.tE().rr().Gz((String)localObject))
       {
-        com.tencent.mm.plugin.report.service.h.fUJ.g(11157, new Object[] { Integer.valueOf(toScene) });
+        com.tencent.mm.plugin.report.service.g.gdY.h(11157, new Object[] { Integer.valueOf(toScene) });
         switch (toScene)
         {
         default: 
@@ -60,63 +61,63 @@ public final class b$b
           paramString1.putExtra("Chat_User", (String)localObject);
           paramString1.putExtra("finish_direct", true);
           paramString1.addFlags(67108864);
-          com.tencent.mm.plugin.a.a.coa.e(paramString1, paramContext);
+          com.tencent.mm.plugin.a.a.cjo.e(paramString1, paramContext);
           return 0;
         case 3: 
-          paramString1 = new nv();
-          aKe.axL = 5;
-          aKe.apb = ((String)localObject);
-          aKe.context = paramContext;
-          aKe.aKh = 3;
-          com.tencent.mm.sdk.c.a.jUF.j(paramString1);
+          paramString1 = new oi();
+          awy.ajS = 5;
+          awy.ajT = ((String)localObject);
+          awy.context = paramContext;
+          awy.awB = 3;
+          com.tencent.mm.sdk.c.a.kug.y(paramString1);
           return 0;
         case 4: 
-          paramString1 = new nv();
-          aKe.axL = 5;
-          aKe.apb = ((String)localObject);
-          aKe.context = paramContext;
-          aKe.aKh = 2;
-          com.tencent.mm.sdk.c.a.jUF.j(paramString1);
+          paramString1 = new oi();
+          awy.ajS = 5;
+          awy.ajT = ((String)localObject);
+          awy.context = paramContext;
+          awy.awB = 2;
+          com.tencent.mm.sdk.c.a.kug.y(paramString1);
           return 0;
         }
         paramString1 = new Intent();
         paramString1.putExtra("sns_userName", (String)localObject);
         paramString1.addFlags(67108864);
-        com.tencent.mm.ar.c.c(paramContext, "sns", ".ui.SnsUserUI", paramString1);
+        com.tencent.mm.av.c.c(paramContext, "sns", ".ui.SnsUserUI", paramString1);
         return 0;
       }
-    } while ((ay.kz(paramString3)) || (ay.kz(paramString2)));
-    if (!com.tencent.mm.pluginsdk.g.a.aL(paramContext, "android.permission.READ_CONTACTS"))
+    } while ((be.kf(paramString3)) || (be.kf(paramString2)));
+    if (!com.tencent.mm.pluginsdk.h.a.aK(paramContext, "android.permission.READ_CONTACTS"))
     {
-      u.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "no contact permission");
+      v.e("MicroMsg.ProcessorToChattingOrTimeLineByPhone", "no contact permission");
       return 1;
     }
-    Toast.makeText(paramContext, paramContext.getString(2131429323), 1).show();
+    Toast.makeText(paramContext, paramContext.getString(2131232135), 1).show();
     paramContext.getContentResolver().delete(ContactsContract.Data.CONTENT_URI, "_id = ?", new String[] { paramString2 });
     paramContext.getContentResolver().delete(ContactsContract.RawContacts.CONTENT_URI, "contact_id = ? AND account_type = ?", new String[] { paramString3, "com.tencent.mm.account" });
     return 1;
   }
   
-  public final int bn(Context paramContext)
+  public final int bi(Context paramContext)
   {
     if (paramContext == null)
     {
-      u.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "null context");
+      v.e("MicroMsg.ProcessorToChattingOrTimeLineByPhone", "null context");
       return 1;
     }
-    if ((!com.tencent.mm.model.ah.tI()) || (com.tencent.mm.model.ah.tM()))
+    if ((!com.tencent.mm.model.ah.tJ()) || (com.tencent.mm.model.ah.tN()))
     {
-      u.d("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "not login, start bind login");
+      v.d("MicroMsg.ProcessorToChattingOrTimeLineByPhone", "not login, start bind login");
       return 3;
     }
-    if (ay.kz((String)com.tencent.mm.model.ah.tD().rn().get(6, "")))
+    if (be.kf((String)com.tencent.mm.model.ah.tE().ro().get(6, "")))
     {
-      u.d("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "not bind mobile, start bind mobie");
+      v.d("MicroMsg.ProcessorToChattingOrTimeLineByPhone", "not bind mobile, start bind mobie");
       return 2;
     }
-    if (!com.tencent.mm.pluginsdk.g.a.aL(paramContext, "android.permission.READ_CONTACTS"))
+    if (!com.tencent.mm.pluginsdk.h.a.aK(paramContext, "android.permission.READ_CONTACTS"))
     {
-      u.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "no contacts permission");
+      v.e("MicroMsg.ProcessorToChattingOrTimeLineByPhone", "no contacts permission");
       return 1;
     }
     String str1;
@@ -126,19 +127,19 @@ public final class b$b
       Cursor localCursor = paramContext.getContentResolver().query(uri, new String[] { "contact_id", "_id", "data4" }, null, null, null);
       if (localCursor == null)
       {
-        u.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "query database err");
+        v.e("MicroMsg.ProcessorToChattingOrTimeLineByPhone", "query database err");
         return 1;
       }
       if (!localCursor.moveToFirst())
       {
-        u.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "query database err, move to first fail");
+        v.e("MicroMsg.ProcessorToChattingOrTimeLineByPhone", "query database err, move to first fail");
         localCursor.close();
         return 1;
       }
       int i = localCursor.getColumnIndex("data4");
       if (i == -1)
       {
-        u.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "no data4 segment exist");
+        v.e("MicroMsg.ProcessorToChattingOrTimeLineByPhone", "no data4 segment exist");
         localCursor.close();
         return 1;
       }
@@ -171,10 +172,10 @@ public final class b$b
         for (localObject1 = str3;; localObject1 = "")
         {
           localCursor.close();
-          if (!ay.kz(str2)) {
+          if (!be.kf(str2)) {
             break label423;
           }
-          u.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "null friendmobile");
+          v.e("MicroMsg.ProcessorToChattingOrTimeLineByPhone", "null friendmobile");
           return 1;
           str1 = "";
           break;
@@ -183,8 +184,8 @@ public final class b$b
       }
       catch (Exception paramContext)
       {
-        u.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "match error, %s\n%s", new Object[] { paramContext.getMessage(), ay.b(paramContext) });
-        u.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "result friendMobileMd5 %s contact_id %s data_id %s", new Object[] { localObject2, localObject1, "" });
+        v.e("MicroMsg.ProcessorToChattingOrTimeLineByPhone", "match error, %s\n%s", new Object[] { paramContext.getMessage(), be.f(paramContext) });
+        v.e("MicroMsg.ProcessorToChattingOrTimeLineByPhone", "result friendMobileMd5 %s contact_id %s data_id %s", new Object[] { localObject2, localObject1, "" });
         return 1;
       }
       finally
@@ -193,10 +194,10 @@ public final class b$b
       }
     }
     label423:
-    if (!ay.kz(cow)) {
-      return c(paramContext, com.tencent.mm.a.g.m(com.tencent.mm.pluginsdk.a.sy(cow).getBytes()), null, null);
+    if (!be.kf(cjK)) {
+      return c(paramContext, com.tencent.mm.a.g.j(com.tencent.mm.pluginsdk.a.tY(cjK).getBytes()), null, null);
     }
-    u.e("!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t", "uri is null and the phone num is null");
+    v.e("MicroMsg.ProcessorToChattingOrTimeLineByPhone", "uri is null and the phone num is null");
     return 1;
   }
 }

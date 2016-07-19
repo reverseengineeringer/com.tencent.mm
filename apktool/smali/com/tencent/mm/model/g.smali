@@ -5,14 +5,14 @@
 
 # direct methods
 .method public static b(Ljava/lang/String;J)Ljava/lang/String;
-    .locals 6
+    .locals 7
 
     .prologue
     const/4 v3, 0x1
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
-    .line 20
+    .line 14
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string/jumbo v1, "ssHHmmMMddyy"
@@ -49,13 +49,13 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/a/g;->j([B)Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, 0x7
 
-    invoke-virtual {v1, v5, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {v1, v6, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
@@ -81,15 +81,15 @@
 
     new-array v2, v3, [Ljava/lang/Object;
 
-    const-wide/32 v3, 0xffff
+    const-wide/32 v4, 0xffff
 
-    rem-long v3, p1, v3
+    rem-long v4, p1, v4
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
-    aput-object v3, v2, v5
+    aput-object v3, v2, v6
 
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -112,15 +112,15 @@
 
     move-result-object v0
 
-    const-wide/16 v1, 0x7
+    const-wide/16 v2, 0x7
 
-    rem-long v1, p1, v1
+    rem-long v2, p1, v2
 
-    const-wide/16 v3, 0x64
+    const-wide/16 v4, 0x64
 
-    add-long/2addr v1, v3
+    add-long/2addr v2, v4
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

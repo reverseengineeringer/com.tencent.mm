@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic had:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;
+.field final synthetic hnv:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 250
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a$1;->had:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a$1;->hnv:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -64,9 +64,9 @@
     move-result v0
 
     .line 257
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a$1;->had:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a$1;->hnv:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;->lX(I)V
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;->nm(I)V
 
     goto :goto_0
 .end method

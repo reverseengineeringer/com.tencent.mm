@@ -12,10 +12,10 @@ final class ChattingSightContainerView$3
   
   public final void onClick(View paramView)
   {
-    ChattingSightContainerView.d(gBF).setVisibility(0);
-    ChattingSightContainerView.b(gBF).awf();
-    ChattingSightContainerView.b(gBF).awe();
-    ChattingSightContainerView.g(gBF).aqS();
+    ChattingSightContainerView.d(gIh).setVisibility(0);
+    ChattingSightContainerView.b(gIh).ayD();
+    ChattingSightContainerView.b(gIh).ayC();
+    ChattingSightContainerView.g(gIh).aui();
   }
 }
 

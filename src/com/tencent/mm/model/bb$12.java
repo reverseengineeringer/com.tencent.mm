@@ -1,6 +1,6 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class bb$12
   extends bb.a
@@ -14,14 +14,14 @@ final class bb$12
   {
     boolean bool2 = false;
     boolean bool1 = bool2;
-    if (System.currentTimeMillis() - bCG > 3600000L)
+    if (System.currentTimeMillis() - bvQ > 3600000L)
     {
       bool1 = bool2;
-      if (ay.getInt(bCF, 0) > 0)
+      if (be.getInt(bvP, 0) > 0)
       {
-        bb.n(23, bCF + "_43");
-        bCF = "0";
-        bCG = System.currentTimeMillis();
+        bb.o(23, bvP + "_43");
+        bvP = "0";
+        bvQ = System.currentTimeMillis();
         bool1 = true;
       }
     }

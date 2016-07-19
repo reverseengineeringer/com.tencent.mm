@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field private kii:Lcom/tencent/mm/svg/b/c$a;
+.field private kIG:Lcom/tencent/mm/svg/b/c$a;
 
 
 # direct methods
@@ -44,10 +44,10 @@
 
     invoke-direct {v0, p1, p2}, Lcom/tencent/mm/svg/b/c$a;-><init>(Landroid/graphics/Picture;I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/svg/b/c;->kii:Lcom/tencent/mm/svg/b/c$a;
+    iput-object v0, p0, Lcom/tencent/mm/svg/b/c;->kIG:Lcom/tencent/mm/svg/b/c$a;
 
     .line 23
-    invoke-virtual {p0}, Lcom/tencent/mm/svg/b/c;->aYS()V
+    invoke-virtual {p0}, Lcom/tencent/mm/svg/b/c;->bel()V
 
     .line 28
     return-void
@@ -72,7 +72,7 @@
     const/4 v1, 0x0
 
     .line 130
-    invoke-static {}, Lcom/tencent/mm/svg/d/b;->aZc()J
+    invoke-static {}, Lcom/tencent/mm/svg/c/b;->bet()J
 
     move-result-wide v2
 
@@ -85,13 +85,13 @@
     if-eqz v4, :cond_b
 
     .line 142
-    iget-object v4, p0, Lcom/tencent/mm/svg/b/c;->kii:Lcom/tencent/mm/svg/b/c$a;
+    iget-object v4, p0, Lcom/tencent/mm/svg/b/c;->kIG:Lcom/tencent/mm/svg/b/c$a;
 
-    iget-object v4, v4, Lcom/tencent/mm/svg/b/c$a;->kij:Landroid/graphics/Picture;
+    iget-object v4, v4, Lcom/tencent/mm/svg/b/c$a;->kIH:Landroid/graphics/Picture;
 
     if-nez v4, :cond_4
 
-    const-string/jumbo v4, "!44@/B4Tb64lLpKIEXtxUku6vKosak8nJizyX34PhwEPK2o="
+    const-string/jumbo v4, "MicroMsg.SVGPictureDrawable"
 
     const-string/jumbo v5, "Must not go here! %s"
 
@@ -101,7 +101,7 @@
 
     const/4 v7, 0x0
 
-    iget v8, p0, Lcom/tencent/mm/svg/b/c;->khZ:I
+    iget v8, p0, Lcom/tencent/mm/svg/b/c;->kIz:I
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -109,20 +109,20 @@
 
     aput-object v8, v6, v7
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/svg/d/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/svg/c/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 143
     :cond_0
     :goto_0
-    iget-object v4, p0, Lcom/tencent/mm/svg/b/c;->kii:Lcom/tencent/mm/svg/b/c$a;
+    iget-object v4, p0, Lcom/tencent/mm/svg/b/c;->kIG:Lcom/tencent/mm/svg/b/c$a;
 
-    iget-object v4, v4, Lcom/tencent/mm/svg/b/c$a;->kik:Landroid/graphics/Bitmap;
+    iget-object v4, v4, Lcom/tencent/mm/svg/b/c$a;->kII:Landroid/graphics/Bitmap;
 
     if-eqz v4, :cond_1
 
-    iget-object v4, p0, Lcom/tencent/mm/svg/b/c;->kii:Lcom/tencent/mm/svg/b/c$a;
+    iget-object v4, p0, Lcom/tencent/mm/svg/b/c;->kIG:Lcom/tencent/mm/svg/b/c$a;
 
-    iget-object v4, v4, Lcom/tencent/mm/svg/b/c$a;->kik:Landroid/graphics/Bitmap;
+    iget-object v4, v4, Lcom/tencent/mm/svg/b/c$a;->kII:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->isRecycled()Z
 
@@ -139,22 +139,22 @@
     .line 148
     :cond_2
     :goto_2
-    iget-object v0, p0, Lcom/tencent/mm/svg/b/c;->kic:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/svg/b/c;->kIC:Landroid/view/View;
 
     if-nez v0, :cond_3
 
     .line 149
-    invoke-static {p0}, Lcom/tencent/mm/svg/b/a;->f(Landroid/graphics/drawable/Drawable;)Landroid/view/View;
+    invoke-static {p0}, Lcom/tencent/mm/svg/b/a;->g(Landroid/graphics/drawable/Drawable;)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/svg/b/c;->kic:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/svg/b/c;->kIC:Landroid/view/View;
 
     .line 152
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/svg/b/c;->kic:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/svg/b/c;->kIC:Landroid/view/View;
 
-    iget-object v4, p0, Lcom/tencent/mm/svg/b/c;->kib:Landroid/graphics/Paint;
+    iget-object v4, p0, Lcom/tencent/mm/svg/b/c;->kIB:Landroid/graphics/Paint;
 
     invoke-static {v0, v4}, Lcom/tencent/mm/svg/b/a;->b(Landroid/view/View;Landroid/graphics/Paint;)Z
 
@@ -175,7 +175,7 @@
     if-ge v0, v1, :cond_c
 
     .line 157
-    const-string/jumbo v0, "!44@/B4Tb64lLpKIEXtxUku6vKosak8nJizyX34PhwEPK2o="
+    const-string/jumbo v0, "MicroMsg.SVGPictureDrawable"
 
     const-string/jumbo v1, "Skip this draw."
 
@@ -183,26 +183,19 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    invoke-static {v0, v1, v4}, Lcom/tencent/mm/svg/d/c;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v4}, Lcom/tencent/mm/svg/c/c;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 176
-    invoke-static {v2, v3}, Lcom/tencent/mm/svg/d/b;->dJ(J)J
+    invoke-static {v2, v3}, Lcom/tencent/mm/svg/c/b;->ea(J)J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/svg/b/c;->khY:J
+    iput-wide v0, p0, Lcom/tencent/mm/svg/b/c;->kIy:J
 
     .line 177
-    iget v0, p0, Lcom/tencent/mm/svg/b/c;->khZ:I
-
-    iget-wide v1, p0, Lcom/tencent/mm/svg/b/c;->khY:J
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/svg/d/d;->y(IJ)V
-
-    .line 179
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/svg/b/c;->b(Landroid/graphics/Canvas;)V
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/svg/b/c;->c(Landroid/graphics/Canvas;)V
 
     .line 180
     :goto_3
@@ -215,15 +208,15 @@
 
     move-result-wide v4
 
-    iget-object v6, p0, Lcom/tencent/mm/svg/b/c;->kii:Lcom/tencent/mm/svg/b/c$a;
+    iget-object v6, p0, Lcom/tencent/mm/svg/b/c;->kIG:Lcom/tencent/mm/svg/b/c$a;
 
-    iget-object v6, v6, Lcom/tencent/mm/svg/b/c$a;->kik:Landroid/graphics/Bitmap;
+    iget-object v6, v6, Lcom/tencent/mm/svg/b/c$a;->kII:Landroid/graphics/Bitmap;
 
     if-eqz v6, :cond_5
 
-    iget-object v6, p0, Lcom/tencent/mm/svg/b/c;->kii:Lcom/tencent/mm/svg/b/c$a;
+    iget-object v6, p0, Lcom/tencent/mm/svg/b/c;->kIG:Lcom/tencent/mm/svg/b/c$a;
 
-    iget-object v6, v6, Lcom/tencent/mm/svg/b/c$a;->kik:Landroid/graphics/Bitmap;
+    iget-object v6, v6, Lcom/tencent/mm/svg/b/c$a;->kII:Landroid/graphics/Bitmap;
 
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->isRecycled()Z
 
@@ -245,7 +238,7 @@
     if-le v6, v7, :cond_7
 
     :cond_6
-    const-string/jumbo v4, "!44@/B4Tb64lLpKIEXtxUku6vKosak8nJizyX34PhwEPK2o="
+    const-string/jumbo v4, "MicroMsg.SVGPictureDrawable"
 
     const-string/jumbo v5, "This drawable is too big. %s"
 
@@ -255,7 +248,7 @@
 
     const/4 v7, 0x0
 
-    iget v8, p0, Lcom/tencent/mm/svg/b/c;->khZ:I
+    iget v8, p0, Lcom/tencent/mm/svg/b/c;->kIz:I
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -263,31 +256,24 @@
 
     aput-object v8, v6, v7
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/svg/d/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/svg/c/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    goto/16 :goto_0
+    goto :goto_0
 
     .line 176
     :catchall_0
     move-exception v0
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/svg/d/b;->dJ(J)J
+    invoke-static {v2, v3}, Lcom/tencent/mm/svg/c/b;->ea(J)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p0, Lcom/tencent/mm/svg/b/c;->khY:J
+    iput-wide v2, p0, Lcom/tencent/mm/svg/b/c;->kIy:J
 
     .line 177
-    iget v1, p0, Lcom/tencent/mm/svg/b/c;->khZ:I
-
-    iget-wide v2, p0, Lcom/tencent/mm/svg/b/c;->khY:J
-
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/svg/d/d;->y(IJ)V
-
-    .line 179
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/svg/b/c;->b(Landroid/graphics/Canvas;)V
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/svg/b/c;->c(Landroid/graphics/Canvas;)V
 
     throw v0
 
@@ -307,7 +293,7 @@
     if-gtz v6, :cond_9
 
     :cond_8
-    const-string/jumbo v4, "!44@/B4Tb64lLpKIEXtxUku6vKosak8nJizyX34PhwEPK2o="
+    const-string/jumbo v4, "MicroMsg.SVGPictureDrawable"
 
     const-string/jumbo v5, "width and height must > 0."
 
@@ -315,7 +301,7 @@
 
     new-array v6, v6, [Ljava/lang/Object;
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/svg/d/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/svg/c/c;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
@@ -338,39 +324,35 @@
 
     invoke-direct {v7, v6}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    iget-object v8, p0, Lcom/tencent/mm/svg/b/c;->kii:Lcom/tencent/mm/svg/b/c$a;
+    iget-object v8, p0, Lcom/tencent/mm/svg/b/c;->kIG:Lcom/tencent/mm/svg/b/c$a;
 
-    iget-object v8, v8, Lcom/tencent/mm/svg/b/c$a;->kij:Landroid/graphics/Picture;
+    iget-object v8, v8, Lcom/tencent/mm/svg/b/c$a;->kIH:Landroid/graphics/Picture;
 
     invoke-virtual {v8, v7}, Landroid/graphics/Picture;->draw(Landroid/graphics/Canvas;)V
 
-    iget-object v8, p0, Lcom/tencent/mm/svg/b/c;->kii:Lcom/tencent/mm/svg/b/c$a;
+    iget-object v8, p0, Lcom/tencent/mm/svg/b/c;->kIG:Lcom/tencent/mm/svg/b/c$a;
 
-    iput-object v6, v8, Lcom/tencent/mm/svg/b/c$a;->kik:Landroid/graphics/Bitmap;
+    iput-object v6, v8, Lcom/tencent/mm/svg/b/c$a;->kII:Landroid/graphics/Bitmap;
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/svg/d/b;->dJ(J)J
+    invoke-static {v4, v5}, Lcom/tencent/mm/svg/c/b;->ea(J)J
 
-    move-result-wide v4
-
-    invoke-static {v4, v5}, Lcom/tencent/mm/svg/d/d;->dK(J)V
-
-    invoke-virtual {p0, v7}, Lcom/tencent/mm/svg/b/c;->b(Landroid/graphics/Canvas;)V
+    invoke-virtual {p0, v7}, Lcom/tencent/mm/svg/b/c;->c(Landroid/graphics/Canvas;)V
 
     goto/16 :goto_0
 
     .line 143
     :cond_a
-    invoke-virtual {p0}, Lcom/tencent/mm/svg/b/c;->aYT()V
+    invoke-virtual {p0}, Lcom/tencent/mm/svg/b/c;->bem()V
 
-    iget-object v1, p0, Lcom/tencent/mm/svg/b/c;->kii:Lcom/tencent/mm/svg/b/c$a;
+    iget-object v1, p0, Lcom/tencent/mm/svg/b/c;->kIG:Lcom/tencent/mm/svg/b/c$a;
 
-    iget-object v1, v1, Lcom/tencent/mm/svg/b/c$a;->kik:Landroid/graphics/Bitmap;
+    iget-object v1, v1, Lcom/tencent/mm/svg/b/c$a;->kII:Landroid/graphics/Bitmap;
 
     const/4 v4, 0x0
 
-    iget-object v5, p0, Lcom/tencent/mm/svg/b/c;->ewu:Landroid/graphics/Rect;
+    iget-object v5, p0, Lcom/tencent/mm/svg/b/c;->eCN:Landroid/graphics/Rect;
 
-    iget-object v6, p0, Lcom/tencent/mm/svg/b/c;->kib:Landroid/graphics/Paint;
+    iget-object v6, p0, Lcom/tencent/mm/svg/b/c;->kIB:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v1, v4, v5, v6}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
@@ -378,15 +360,15 @@
 
     .line 145
     :cond_b
-    iget-object v0, p0, Lcom/tencent/mm/svg/b/c;->kii:Lcom/tencent/mm/svg/b/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/svg/b/c;->kIG:Lcom/tencent/mm/svg/b/c$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/svg/b/c$a;->kik:Landroid/graphics/Bitmap;
+    iget-object v0, v0, Lcom/tencent/mm/svg/b/c$a;->kII:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/svg/b/c;->kii:Lcom/tencent/mm/svg/b/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/svg/b/c;->kIG:Lcom/tencent/mm/svg/b/c$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/svg/b/c$a;->kik:Landroid/graphics/Bitmap;
+    iget-object v0, v0, Lcom/tencent/mm/svg/b/c$a;->kII:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
@@ -394,7 +376,7 @@
 
     if-nez v0, :cond_2
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpKIEXtxUku6vKosak8nJizyX34PhwEPK2o="
+    const-string/jumbo v0, "MicroMsg.SVGPictureDrawable"
 
     const-string/jumbo v4, "recycle bitmap:%s"
 
@@ -404,9 +386,9 @@
 
     const/4 v6, 0x0
 
-    iget-object v7, p0, Lcom/tencent/mm/svg/b/c;->kii:Lcom/tencent/mm/svg/b/c$a;
+    iget-object v7, p0, Lcom/tencent/mm/svg/b/c;->kIG:Lcom/tencent/mm/svg/b/c$a;
 
-    iget-object v7, v7, Lcom/tencent/mm/svg/b/c$a;->kik:Landroid/graphics/Bitmap;
+    iget-object v7, v7, Lcom/tencent/mm/svg/b/c$a;->kII:Landroid/graphics/Bitmap;
 
     invoke-virtual {v7}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -414,39 +396,39 @@
 
     aput-object v7, v5, v6
 
-    invoke-static {v0, v4, v5}, Lcom/tencent/mm/svg/d/c;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v4, v5}, Lcom/tencent/mm/svg/c/c;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/svg/b/c;->kii:Lcom/tencent/mm/svg/b/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/svg/b/c;->kIG:Lcom/tencent/mm/svg/b/c$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/svg/b/c$a;->kik:Landroid/graphics/Bitmap;
+    iget-object v0, v0, Lcom/tencent/mm/svg/b/c$a;->kII:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    iget-object v0, p0, Lcom/tencent/mm/svg/b/c;->kii:Lcom/tencent/mm/svg/b/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/svg/b/c;->kIG:Lcom/tencent/mm/svg/b/c$a;
 
     const/4 v4, 0x0
 
-    iput-object v4, v0, Lcom/tencent/mm/svg/b/c$a;->kik:Landroid/graphics/Bitmap;
+    iput-object v4, v0, Lcom/tencent/mm/svg/b/c$a;->kII:Landroid/graphics/Bitmap;
 
     goto/16 :goto_2
 
     .line 161
     :cond_c
-    iget-object v0, p0, Lcom/tencent/mm/svg/b/c;->kii:Lcom/tencent/mm/svg/b/c$a;
+    iget-object v0, p0, Lcom/tencent/mm/svg/b/c;->kIG:Lcom/tencent/mm/svg/b/c$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/svg/b/c$a;->kij:Landroid/graphics/Picture;
+    iget-object v0, v0, Lcom/tencent/mm/svg/b/c$a;->kIH:Landroid/graphics/Picture;
 
     .line 162
     if-eqz v0, :cond_d
 
     .line 164
-    invoke-virtual {p0}, Lcom/tencent/mm/svg/b/c;->aYT()V
+    invoke-virtual {p0}, Lcom/tencent/mm/svg/b/c;->bem()V
 
     .line 166
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     .line 170
-    iget-object v1, p0, Lcom/tencent/mm/svg/b/c;->ewu:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/tencent/mm/svg/b/c;->eCN:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawPicture(Landroid/graphics/Picture;Landroid/graphics/Rect;)V
 
@@ -457,21 +439,14 @@
 
     .line 176
     :cond_d
-    invoke-static {v2, v3}, Lcom/tencent/mm/svg/d/b;->dJ(J)J
+    invoke-static {v2, v3}, Lcom/tencent/mm/svg/c/b;->ea(J)J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/svg/b/c;->khY:J
+    iput-wide v0, p0, Lcom/tencent/mm/svg/b/c;->kIy:J
 
     .line 177
-    iget v0, p0, Lcom/tencent/mm/svg/b/c;->khZ:I
-
-    iget-wide v1, p0, Lcom/tencent/mm/svg/b/c;->khY:J
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/svg/d/d;->y(IJ)V
-
-    .line 179
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/svg/b/c;->b(Landroid/graphics/Canvas;)V
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/svg/b/c;->c(Landroid/graphics/Canvas;)V
 
     goto/16 :goto_3
 .end method

@@ -13,9 +13,18 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/oi;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic lmM:Lcom/tencent/mm/ui/contact/VoipAddressUI;
+.field final synthetic lNc:Lcom/tencent/mm/ui/contact/VoipAddressUI;
 
 
 # direct methods
@@ -24,60 +33,59 @@
 
     .prologue
     .line 198
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI$1;->lmM:Lcom/tencent/mm/ui/contact/VoipAddressUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI$1;->lNc:Lcom/tencent/mm/ui/contact/VoipAddressUI;
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/oi;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI$1;->kum:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 1
 
     .prologue
-    .line 201
-    instance-of v0, p1, Lcom/tencent/mm/d/a/nv;
+    .line 198
+    check-cast p1, Lcom/tencent/mm/e/a/oi;
 
-    if-eqz v0, :cond_0
+    iget-object v0, p1, Lcom/tencent/mm/e/a/oi;->awy:Lcom/tencent/mm/e/a/oi$a;
 
-    .line 202
-    check-cast p1, Lcom/tencent/mm/d/a/nv;
-
-    .line 203
-    iget-object v0, p1, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
-
-    iget v0, v0, Lcom/tencent/mm/d/a/nv$a;->axL:I
+    iget v0, v0, Lcom/tencent/mm/e/a/oi$a;->ajS:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 209
-    :cond_0
     :goto_0
     const/4 v0, 0x0
 
     return v0
 
-    .line 205
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI$1;->lmM:Lcom/tencent/mm/ui/contact/VoipAddressUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI$1;->lNc:Lcom/tencent/mm/ui/contact/VoipAddressUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->finish()V
 
     goto :goto_0
 
-    .line 208
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI$1;->lmM:Lcom/tencent/mm/ui/contact/VoipAddressUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI$1;->lNc:Lcom/tencent/mm/ui/contact/VoipAddressUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->finish()V
 
     goto :goto_0
 
-    .line 203
     nop
 
     :pswitch_data_0

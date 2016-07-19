@@ -12,9 +12,9 @@
 
 
 # instance fields
-.field akx:Lcom/tencent/mm/b/a$a;
+.field Xq:Lcom/tencent/mm/b/a$a;
 
-.field public aky:Lcom/tencent/mm/b/b;
+.field public Xr:Lcom/tencent/mm/b/b;
 
 
 # direct methods
@@ -28,16 +28,16 @@
     .line 12
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/b/a;->aky:Lcom/tencent/mm/b/b;
+    iput-object v0, p0, Lcom/tencent/mm/b/a;->Xr:Lcom/tencent/mm/b/b;
 
     .line 15
-    iput-object p1, p0, Lcom/tencent/mm/b/a;->aky:Lcom/tencent/mm/b/b;
+    iput-object p1, p0, Lcom/tencent/mm/b/a;->Xr:Lcom/tencent/mm/b/b;
 
     .line 16
     return-void
 .end method
 
-.method public static aG(Ljava/lang/String;)Lcom/tencent/mm/b/a;
+.method public static aL(Ljava/lang/String;)Lcom/tencent/mm/b/a;
     .locals 5
 
     .prologue
@@ -75,9 +75,9 @@
 
     invoke-virtual {v2}, Ljava/io/File;->length()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     goto :goto_0
 
@@ -91,7 +91,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/b/a$a;->t([B)Lcom/tencent/mm/b/a$a;
+    invoke-static {v2}, Lcom/tencent/mm/b/a$a;->p([B)Lcom/tencent/mm/b/a$a;
 
     move-result-object v2
 
@@ -99,25 +99,25 @@
     if-eqz v2, :cond_1
 
     .line 67
-    iget v3, v2, Lcom/tencent/mm/b/a$a;->akA:I
+    iget v3, v2, Lcom/tencent/mm/b/a$a;->Xt:I
 
     if-ltz v3, :cond_1
 
     .line 69
-    iget v3, v2, Lcom/tencent/mm/b/a$a;->akA:I
+    iget v3, v2, Lcom/tencent/mm/b/a$a;->Xt:I
 
     sub-int/2addr v1, v3
 
     add-int/lit8 v1, v1, -0x8
 
-    iget v3, v2, Lcom/tencent/mm/b/a$a;->akA:I
+    iget v3, v2, Lcom/tencent/mm/b/a$a;->Xt:I
 
     invoke-static {p0, v1, v3}, Lcom/tencent/mm/b/a;->d(Ljava/lang/String;II)[B
 
     move-result-object v1
 
     .line 68
-    invoke-static {v1}, Lcom/tencent/mm/b/b;->u([B)Lcom/tencent/mm/b/b;
+    invoke-static {v1}, Lcom/tencent/mm/b/b;->q([B)Lcom/tencent/mm/b/b;
 
     move-result-object v3
 
@@ -127,7 +127,7 @@
     invoke-direct {v1, v3}, Lcom/tencent/mm/b/a;-><init>(Lcom/tencent/mm/b/b;)V
 
     .line 71
-    iput-object v2, v1, Lcom/tencent/mm/b/a;->akx:Lcom/tencent/mm/b/a$a;
+    iput-object v2, v1, Lcom/tencent/mm/b/a;->Xq:Lcom/tencent/mm/b/a$a;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -142,8 +142,8 @@
     goto :goto_1
 .end method
 
-.method public static aH(Ljava/lang/String;)Z
-    .locals 8
+.method public static aM(Ljava/lang/String;)Z
+    .locals 10
 
     .prologue
     const/4 v0, 0x0
@@ -170,14 +170,14 @@
     if-eqz v2, :cond_0
 
     .line 96
-    invoke-static {p0}, Lcom/tencent/mm/b/a;->aG(Ljava/lang/String;)Lcom/tencent/mm/b/a;
+    invoke-static {p0}, Lcom/tencent/mm/b/a;->aL(Ljava/lang/String;)Lcom/tencent/mm/b/a;
 
     move-result-object v2
 
     .line 97
     if-eqz v2, :cond_0
 
-    iget-object v3, v2, Lcom/tencent/mm/b/a;->aky:Lcom/tencent/mm/b/b;
+    iget-object v3, v2, Lcom/tencent/mm/b/a;->Xr:Lcom/tencent/mm/b/b;
 
     if-eqz v3, :cond_0
 
@@ -214,7 +214,7 @@
     if-eqz v5, :cond_0
 
     .line 104
-    iget-object v5, v2, Lcom/tencent/mm/b/a;->aky:Lcom/tencent/mm/b/b;
+    iget-object v5, v2, Lcom/tencent/mm/b/a;->Xr:Lcom/tencent/mm/b/b;
 
     iget-object v5, v5, Lcom/tencent/mm/b/b;->apkMd5:Ljava/lang/String;
 
@@ -222,21 +222,21 @@
 
     move-result-wide v6
 
-    iget-object v1, v2, Lcom/tencent/mm/b/a;->akx:Lcom/tencent/mm/b/a$a;
+    iget-object v1, v2, Lcom/tencent/mm/b/a;->Xq:Lcom/tencent/mm/b/a$a;
 
-    iget v1, v1, Lcom/tencent/mm/b/a$a;->akA:I
+    iget v1, v1, Lcom/tencent/mm/b/a$a;->Xt:I
 
     add-int/lit8 v1, v1, 0x8
 
-    int-to-long v1, v1
+    int-to-long v8, v1
 
-    sub-long v1, v6, v1
+    sub-long/2addr v6, v8
 
-    const-wide/16 v6, 0x2
+    const-wide/16 v8, 0x2
 
-    sub-long/2addr v1, v6
+    sub-long/2addr v6, v8
 
-    long-to-int v1, v1
+    long-to-int v1, v6
 
     invoke-static {v4, v1, v3}, Lcom/tencent/mm/a/g;->a(Ljava/io/File;I[B)Ljava/lang/String;
 
@@ -298,9 +298,9 @@
     .line 135
     invoke-virtual {v2}, Ljava/io/File;->length()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    long-to-int v0, v3
+    long-to-int v0, v4
 
     .line 138
     :goto_1
@@ -356,10 +356,10 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 152
-    int-to-long v3, p1
+    int-to-long v4, p1
 
     :try_start_1
-    invoke-virtual {v2, v3, v4}, Ljava/io/RandomAccessFile;->seek(J)V
+    invoke-virtual {v2, v4, v5}, Ljava/io/RandomAccessFile;->seek(J)V
 
     .line 153
     invoke-virtual {v2, v0}, Ljava/io/RandomAccessFile;->readFully([B)V
@@ -405,7 +405,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/b/a;->aG(Ljava/lang/String;)Lcom/tencent/mm/b/a;
+    invoke-static {v2}, Lcom/tencent/mm/b/a;->aL(Ljava/lang/String;)Lcom/tencent/mm/b/a;
 
     move-result-object v2
 
@@ -424,7 +424,7 @@
 
     .line 32
     :cond_0
-    iget-object v2, p0, Lcom/tencent/mm/b/a;->aky:Lcom/tencent/mm/b/b;
+    iget-object v2, p0, Lcom/tencent/mm/b/a;->Xr:Lcom/tencent/mm/b/b;
 
     invoke-virtual {v2}, Lcom/tencent/mm/b/b;->toByteArray()[B
 
@@ -437,19 +437,19 @@
 
     invoke-direct {v3, v4}, Lcom/tencent/mm/b/a$a;-><init>(I)V
 
-    sget-wide v4, Lcom/tencent/mm/b/a$a;->akz:J
+    sget-wide v4, Lcom/tencent/mm/b/a$a;->Xs:J
 
     const/16 v6, 0x20
 
     shl-long/2addr v4, v6
 
-    iget v3, v3, Lcom/tencent/mm/b/a$a;->akA:I
+    iget v3, v3, Lcom/tencent/mm/b/a$a;->Xt:I
 
     int-to-long v6, v3
 
-    or-long v3, v4, v6
+    or-long/2addr v4, v6
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/b/a$a;->m(J)[B
+    invoke-static {v4, v5}, Lcom/tencent/mm/b/a$a;->n(J)[B
 
     move-result-object v3
 

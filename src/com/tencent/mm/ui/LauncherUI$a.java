@@ -1,6 +1,9 @@
 package com.tencent.mm.ui;
 
- enum LauncherUI$a {}
+ enum LauncherUI$a
+{
+  private LauncherUI$a() {}
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.ui.LauncherUI.a

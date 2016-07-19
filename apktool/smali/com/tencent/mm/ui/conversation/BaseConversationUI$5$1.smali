@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lnp:Lcom/tencent/mm/ui/conversation/BaseConversationUI$5;
+.field final synthetic lNJ:Lcom/tencent/mm/ui/conversation/BaseConversationUI$5;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 461
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$5$1;->lnp:Lcom/tencent/mm/ui/conversation/BaseConversationUI$5;
+    .line 469
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$5$1;->lNJ:Lcom/tencent/mm/ui/conversation/BaseConversationUI$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,18 +38,21 @@
 # virtual methods
 .method public final onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
     .locals 8
+    .annotation build Landroid/annotation/TargetApi;
+        value = 0x14
+    .end annotation
 
     .prologue
-    .line 464
+    .line 473
     if-nez p2, :cond_0
 
-    .line 475
+    .line 484
     :goto_0
     return-object p2
 
-    .line 468
+    .line 477
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4="
+    const-string/jumbo v0, "MicroMsg.BaseConversationUI"
 
     const-string/jumbo v1, "OnApplyWindowInsetsListener %s"
 
@@ -61,19 +64,19 @@
 
     aput-object p2, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 470
+    .line 479
     invoke-virtual {p2}, Landroid/view/WindowInsets;->consumeSystemWindowInsets()Landroid/view/WindowInsets;
 
-    .line 472
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$5$1;->lnp:Lcom/tencent/mm/ui/conversation/BaseConversationUI$5;
+    .line 481
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$5$1;->lNJ:Lcom/tencent/mm/ui/conversation/BaseConversationUI$5;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$5;->lnn:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$5;->lNH:Lcom/tencent/mm/ui/conversation/BaseConversationUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$5$1;->lnp:Lcom/tencent/mm/ui/conversation/BaseConversationUI$5;
+    iget-object v1, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$5$1;->lNJ:Lcom/tencent/mm/ui/conversation/BaseConversationUI$5;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/conversation/BaseConversationUI$5;->kns:Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;
+    iget-object v1, v1, Lcom/tencent/mm/ui/conversation/BaseConversationUI$5;->kMy:Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;
 
     invoke-virtual {p2}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
 
@@ -99,9 +102,9 @@
 
     invoke-direct {v3, v4, v5, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$5$1;->lnp:Lcom/tencent/mm/ui/conversation/BaseConversationUI$5;
+    iget-object v4, p0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$5$1;->lNJ:Lcom/tencent/mm/ui/conversation/BaseConversationUI$5;
 
-    iget-object v4, v4, Lcom/tencent/mm/ui/conversation/BaseConversationUI$5;->knt:Landroid/view/ViewGroup;
+    iget-object v4, v4, Lcom/tencent/mm/ui/conversation/BaseConversationUI$5;->kMz:Landroid/view/ViewGroup;
 
     invoke-static {v0, v1, v2, v3, v4}, Lcom/tencent/mm/ui/conversation/BaseConversationUI;->a(Lcom/tencent/mm/ui/conversation/BaseConversationUI;Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;ILandroid/graphics/Rect;Landroid/view/ViewGroup;)V
 

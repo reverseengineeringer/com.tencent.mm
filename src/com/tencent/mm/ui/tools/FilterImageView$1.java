@@ -3,32 +3,32 @@ package com.tencent.mm.ui.tools;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class FilterImageView$1
   implements AdapterView.OnItemClickListener
 {
   FilterImageView$1(FilterImageView paramFilterImageView) {}
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    paramAdapterView = FilterImageView.a(lvy);
-    ePW = paramInt;
+    paramAdapterView = FilterImageView.a(lWA);
+    eXP = paramInt;
     paramAdapterView.notifyDataSetChanged();
     try
     {
-      FilterImageView.a(lvy, lvxlvI);
-      FilterImageView.a(lvy, lvxlvF, lvxlvG, lvxlvH);
+      FilterImageView.a(lWA, lWzlWK);
+      FilterImageView.a(lWA, lWzlWH, lWzlWI, lWzlWJ);
       return;
     }
     catch (Exception paramAdapterView)
     {
-      u.e("!32@/B4Tb64lLpLxetNgbG3pY/jjX49X0q4a", paramAdapterView.toString());
+      v.e("MicroMsg.FilterView", paramAdapterView.toString());
       return;
     }
     catch (OutOfMemoryError paramAdapterView)
     {
-      u.e("!32@/B4Tb64lLpLxetNgbG3pY/jjX49X0q4a", paramAdapterView.toString());
+      v.e("MicroMsg.FilterView", paramAdapterView.toString());
     }
   }
 }

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->td()V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+.field final synthetic hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 2240
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$28;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+    .line 1649
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$28;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,32 +40,86 @@
     .locals 2
 
     .prologue
-    .line 2243
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$28;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+    .line 1652
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$28;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->b(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Lcom/tencent/mm/plugin/sns/ui/am;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 2244
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$28;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->b(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Lcom/tencent/mm/plugin/sns/ui/am;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->g(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Lcom/tencent/mm/plugin/sns/ui/g;
 
     move-result-object v0
 
-    const-string/jumbo v1, ""
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/am;->uF(Ljava/lang/String;)V
-
-    .line 2246
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$28;->hkJ:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->G(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Z
-
-    .line 2247
+    .line 1658
+    :goto_0
     return-void
+
+    .line 1655
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$28;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->g(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Lcom/tencent/mm/plugin/sns/ui/g;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/g;->hkd:Lcom/tencent/mm/plugin/sns/ui/bc;
+
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$28;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+
+    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->j(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Lcom/tencent/mm/plugin/sns/ui/av;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/av;->eLC:Landroid/widget/ListView;
+
+    invoke-virtual {v1}, Landroid/widget/ListView;->getBottom()I
+
+    move-result v1
+
+    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/bc;->hra:I
+
+    .line 1656
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$28;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->g(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Lcom/tencent/mm/plugin/sns/ui/g;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/g;->hkd:Lcom/tencent/mm/plugin/sns/ui/bc;
+
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$28;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+
+    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->j(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Lcom/tencent/mm/plugin/sns/ui/av;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/av;->fjR:Lcom/tencent/mm/ui/base/MMPullDownView;
+
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/base/MMPullDownView;->getTop()I
+
+    move-result v1
+
+    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/bc;->hCQ:I
+
+    .line 1657
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$28;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->x(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$a;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$28;->hzE:Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;
+
+    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;->j(Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI;)Lcom/tencent/mm/plugin/sns/ui/av;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/av;->haS:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+
+    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->getTop()I
+
+    move-result v1
+
+    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsTimeLineUI$a;->hzX:I
+
+    goto :goto_0
 .end method

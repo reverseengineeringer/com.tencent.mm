@@ -7,8 +7,8 @@ final class VideoPlayView$8
   
   public final void run()
   {
-    if (VideoPlayView.c(gzd) != null) {
-      VideoPlayView.c(gzd).setIsPlay(false);
+    if (VideoPlayView.c(gFG) != null) {
+      VideoPlayView.c(gFG).eu(false);
     }
   }
 }

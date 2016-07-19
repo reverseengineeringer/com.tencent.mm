@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract fa(Ljava/lang/String;)V
+.method public abstract fn(Ljava/lang/String;)V
 .end method

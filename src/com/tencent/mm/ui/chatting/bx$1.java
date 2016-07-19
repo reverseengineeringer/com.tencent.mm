@@ -1,25 +1,18 @@
 package com.tencent.mm.ui.chatting;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.tencent.mm.d.b.bg;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.tencent.mm.storage.ai;
 
 final class bx$1
-  implements View.OnClickListener
+  implements DialogInterface.OnClickListener
 {
-  bx$1(bx parambx, ag paramag, int paramInt) {}
+  bx$1(bx parambx, ChattingUI.a parama, ai paramai) {}
   
-  public final void onClick(View paramView)
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (t.kz(kUW.field_imgPath))
-    {
-      u.d("!56@/B4Tb64lLpKwUcOR+EdWcgrQWCeRaP+fpwTv6y+mNLuv5Zxah8/EmQ==", "filename is null");
-      return;
-    }
-    kUY.kTe.kSE.kVo.c(kUX, kUW);
+    ChattingUI.a.blI();
+    lqg.af(bKB);
   }
 }
 

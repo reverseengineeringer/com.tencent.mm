@@ -1,64 +1,64 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.protocal.i;
-import com.tencent.mm.protocal.x.a;
-import com.tencent.mm.protocal.x.b;
-import com.tencent.mm.protocal.y.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.protocal.aa.a;
+import com.tencent.mm.protocal.aa.b;
+import com.tencent.mm.protocal.ab.a;
+import com.tencent.mm.protocal.l;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.h;
 
 final class ah$9
-  extends y.a
+  extends ab.a
 {
-  private byte[] bBg;
+  private byte[] bul;
   
-  public final byte[] tR()
+  public final int C(byte[] paramArrayOfByte)
   {
-    if (ah.tD() == null) {
-      return null;
-    }
-    if (!ah.rh()) {
-      return null;
-    }
-    x.a locala = new x.a();
-    uin = tDuin;
-    bVi = ay.kA((String)ah.tD().rn().get(8195, null));
-    netType = i.cn(y.getContext());
-    iUN = i.aTs();
+    aa.b localb = new aa.b();
     try
     {
-      byte[] arrayOfByte = locala.tY();
-      bBg = bBg;
-      return arrayOfByte;
-    }
-    catch (Exception localException)
-    {
-      u.e("!24@/B4Tb64lLpKk+n5Gbwo3Rw==", "exception:%s", new Object[] { ay.b(localException) });
-    }
-    return null;
-  }
-  
-  public final byte[] tS()
-  {
-    return bBg;
-  }
-  
-  public final int x(byte[] paramArrayOfByte)
-  {
-    x.b localb = new x.b();
-    try
-    {
-      localb.y(paramArrayOfByte);
-      long l = iVp;
+      localb.D(paramArrayOfByte);
+      long l = jsM;
       return (int)l;
     }
     catch (Exception paramArrayOfByte)
     {
-      u.e("!24@/B4Tb64lLpKk+n5Gbwo3Rw==", "exception:%s", new Object[] { ay.b(paramArrayOfByte) });
+      v.e("MicroMsg.MMCore", "exception:%s", new Object[] { be.f(paramArrayOfByte) });
     }
     return 0;
+  }
+  
+  public final byte[] tS()
+  {
+    if (ah.tE() == null) {
+      return null;
+    }
+    if (!ah.rg()) {
+      return null;
+    }
+    aa.a locala = new aa.a();
+    uin = tEuin;
+    bOJ = be.lj((String)ah.tE().ro().get(8195, null));
+    netType = l.ci(aa.getContext());
+    jsk = l.aYp();
+    try
+    {
+      byte[] arrayOfByte = locala.tZ();
+      bul = bul;
+      return arrayOfByte;
+    }
+    catch (Exception localException)
+    {
+      v.e("MicroMsg.MMCore", "exception:%s", new Object[] { be.f(localException) });
+    }
+    return null;
+  }
+  
+  public final byte[] tT()
+  {
+    return bul;
   }
 }
 

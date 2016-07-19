@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic fzd:Lcom/tencent/mm/pluginsdk/model/l;
+.field final synthetic fIh:Lcom/tencent/mm/pluginsdk/model/l;
 
-.field final synthetic llT:Lcom/tencent/mm/ui/contact/SayHiEditUI$1;
+.field final synthetic lMi:Lcom/tencent/mm/ui/contact/SayHiEditUI$1;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 80
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1$1;->llT:Lcom/tencent/mm/ui/contact/SayHiEditUI$1;
+    .line 81
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1$1;->lMi:Lcom/tencent/mm/ui/contact/SayHiEditUI$1;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1$1;->fzd:Lcom/tencent/mm/pluginsdk/model/l;
+    iput-object p2, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1$1;->fIh:Lcom/tencent/mm/pluginsdk/model/l;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,15 +44,15 @@
     .locals 2
 
     .prologue
-    .line 84
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 85
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1$1;->fzd:Lcom/tencent/mm/pluginsdk/model/l;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$1$1;->fIh:Lcom/tencent/mm/pluginsdk/model/l;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
-    .line 85
+    .line 86
     return-void
 .end method

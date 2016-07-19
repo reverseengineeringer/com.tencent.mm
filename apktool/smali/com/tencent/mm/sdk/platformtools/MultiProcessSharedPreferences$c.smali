@@ -17,9 +17,21 @@
 # direct methods
 .method public static a(Landroid/content/SharedPreferences$Editor;Ljava/lang/String;Ljava/util/Set;)Landroid/content/SharedPreferences$Editor;
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/SharedPreferences$Editor;",
+            "Ljava/lang/String;",
+            "Ljava/util/Set",
+            "<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Landroid/content/SharedPreferences$Editor;"
+        }
+    .end annotation
 
     .prologue
-    .line 125
+    .line 124
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -47,7 +59,7 @@
 
     move-result-object v0
 
-    .line 126
+    .line 125
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -73,44 +85,44 @@
 
     return-object v0
 
-    .line 127
+    .line 126
     :catch_0
     move-exception v0
 
-    .line 128
+    .line 127
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 129
+    .line 128
     :catch_1
     move-exception v0
 
-    .line 130
+    .line 129
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 131
+    .line 130
     :catch_2
     move-exception v0
 
-    .line 132
+    .line 131
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 133
+    .line 132
     :catch_3
     move-exception v0
 
-    .line 134
+    .line 133
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -118,11 +130,22 @@
     throw v1
 .end method
 
-.method public static f(Ljava/util/HashMap;)Landroid/content/ContentValues;
+.method public static d(Ljava/util/HashMap;)Landroid/content/ContentValues;
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Object;",
+            ">;)",
+            "Landroid/content/ContentValues;"
+        }
+    .end annotation
 
     .prologue
-    .line 107
+    .line 106
     :try_start_0
     const-class v0, Landroid/content/ContentValues;
 
@@ -140,12 +163,12 @@
 
     move-result-object v0
 
-    .line 108
+    .line 107
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
-    .line 109
+    .line 108
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -168,55 +191,55 @@
 
     return-object v0
 
-    .line 110
+    .line 109
     :catch_0
     move-exception v0
 
-    .line 111
+    .line 110
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 112
+    .line 111
     :catch_1
     move-exception v0
 
-    .line 113
+    .line 112
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 114
+    .line 113
     :catch_2
     move-exception v0
 
-    .line 115
+    .line 114
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 116
+    .line 115
     :catch_3
     move-exception v0
 
-    .line 117
+    .line 116
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 118
+    .line 117
     :catch_4
     move-exception v0
 
-    .line 119
+    .line 118
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V

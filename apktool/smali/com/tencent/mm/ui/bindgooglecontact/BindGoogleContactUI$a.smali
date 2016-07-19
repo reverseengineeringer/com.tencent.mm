@@ -13,15 +13,26 @@
     name = "a"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroid/os/AsyncTask",
+        "<",
+        "Ljava/lang/Void;",
+        "Ljava/lang/Void;",
+        "Ljava/lang/Void;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic kMQ:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
+.field final synthetic lmf:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
 
-.field private kMS:Ljava/lang/String;
+.field private lmh:Ljava/lang/String;
 
-.field private kMT:Ljava/lang/String;
+.field private lmi:Ljava/lang/String;
 
-.field private kMU:Z
+.field private lmj:Z
 
 
 # direct methods
@@ -29,19 +40,19 @@
     .locals 0
 
     .prologue
-    .line 601
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->kMQ:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
+    .line 617
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->lmf:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 602
-    iput-object p2, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->kMS:Ljava/lang/String;
+    .line 618
+    iput-object p2, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->lmh:Ljava/lang/String;
 
-    .line 603
+    .line 619
     return-void
 .end method
 
-.method private varargs acy()Ljava/lang/Void;
+.method private varargs aeX()Ljava/lang/Void;
     .locals 8
 
     .prologue
@@ -49,16 +60,16 @@
 
     const/4 v6, 0x1
 
-    .line 614
-    const-string/jumbo v0, "!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr"
+    .line 630
+    const-string/jumbo v0, "MicroMsg.GoogleContact.BindGoogleContactUI"
 
     const-string/jumbo v1, "doInBackground"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 616
+    .line 632
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->kMS:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->lmh:Ljava/lang/String;
 
     const-string/jumbo v1, ""
 
@@ -108,7 +119,7 @@
 
     move-result v2
 
-    const-string/jumbo v3, "!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr"
+    const-string/jumbo v3, "MicroMsg.GoogleContact.BindGoogleContactUI"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -124,7 +135,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v3, 0xc8
 
@@ -165,12 +176,12 @@
 
     goto :goto_0
 
-    .line 621
+    .line 637
     :catch_0
     move-exception v0
 
-    .line 622
-    const-string/jumbo v1, "!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr"
+    .line 638
+    const-string/jumbo v1, "MicroMsg.GoogleContact.BindGoogleContactUI"
 
     const-string/jumbo v2, "MalformedURLException:%s"
 
@@ -182,16 +193,16 @@
 
     aput-object v0, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 631
+    .line 647
     :cond_0
     :goto_1
     const/4 v0, 0x0
 
     return-object v0
 
-    .line 616
+    .line 632
     :cond_1
     :try_start_1
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
@@ -200,7 +211,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr"
+    const-string/jumbo v2, "MicroMsg.GoogleContact.BindGoogleContactUI"
 
     const-string/jumbo v3, "get EmailAccount respone:%s"
 
@@ -212,12 +223,12 @@
 
     aput-object v1, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_2
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->disconnect()V
 
-    .line 617
+    .line 633
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
@@ -228,10 +239,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->kMT:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->lmi:Ljava/lang/String;
 
-    .line 618
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->kMT:Ljava/lang/String;
+    .line 634
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->lmi:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -239,10 +250,10 @@
 
     if-nez v0, :cond_0
 
-    .line 619
+    .line 635
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->kMU:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->lmj:Z
     :try_end_1
     .catch Ljava/net/MalformedURLException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/net/ProtocolException; {:try_start_1 .. :try_end_1} :catch_1
@@ -252,12 +263,12 @@
 
     goto :goto_1
 
-    .line 623
+    .line 639
     :catch_1
     move-exception v0
 
-    .line 624
-    const-string/jumbo v1, "!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr"
+    .line 640
+    const-string/jumbo v1, "MicroMsg.GoogleContact.BindGoogleContactUI"
 
     const-string/jumbo v2, "ProtocolException:%s"
 
@@ -269,16 +280,16 @@
 
     aput-object v0, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
-    .line 625
+    .line 641
     :catch_2
     move-exception v0
 
-    .line 626
-    const-string/jumbo v1, "!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr"
+    .line 642
+    const-string/jumbo v1, "MicroMsg.GoogleContact.BindGoogleContactUI"
 
     const-string/jumbo v2, "UnsupportedEncodingException:%s"
 
@@ -290,16 +301,16 @@
 
     aput-object v0, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
-    .line 627
+    .line 643
     :catch_3
     move-exception v0
 
-    .line 628
-    const-string/jumbo v1, "!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr"
+    .line 644
+    const-string/jumbo v1, "MicroMsg.GoogleContact.BindGoogleContactUI"
 
     const-string/jumbo v2, "IOException:%s"
 
@@ -311,7 +322,7 @@
 
     aput-object v0, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
@@ -327,8 +338,8 @@
     .locals 1
 
     .prologue
-    .line 594
-    invoke-direct {p0}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->acy()Ljava/lang/Void;
+    .line 610
+    invoke-direct {p0}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->aeX()Ljava/lang/Void;
 
     move-result-object v0
 
@@ -339,22 +350,22 @@
     .locals 5
 
     .prologue
-    .line 594
+    .line 610
     check-cast p1, Ljava/lang/Void;
 
     invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
 
-    const-string/jumbo v0, "!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr"
+    const-string/jumbo v0, "MicroMsg.GoogleContact.BindGoogleContactUI"
 
     const-string/jumbo v1, "onPostExecute"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->kMQ:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->lmf:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
 
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->kMU:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->lmj:Z
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->kMT:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->lmi:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
@@ -364,7 +375,7 @@
 
     if-nez v1, :cond_1
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->kMD:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->llS:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -378,7 +389,7 @@
 
     if-nez v1, :cond_0
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->kMD:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->llS:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -386,9 +397,9 @@
 
     if-nez v1, :cond_0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->bdx()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->bje()V
 
-    const v1, 0x7f0b055c
+    const v1, 0x7f080975
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->getString(I)Ljava/lang/String;
 
@@ -396,13 +407,13 @@
 
     const-string/jumbo v3, ""
 
-    new-instance v4, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$3;
+    new-instance v4, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$4;
 
-    invoke-direct {v4, v0, v2}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$3;-><init>(Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;Ljava/lang/String;)V
+    invoke-direct {v4, v0, v2}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$4;-><init>(Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;Ljava/lang/String;)V
 
-    new-instance v2, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$4;
+    new-instance v2, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$5;
 
-    invoke-direct {v2, v0}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$4;-><init>(Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;)V
+    invoke-direct {v2, v0}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$5;-><init>(Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;)V
 
     invoke-static {v0, v1, v3, v4, v2}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
@@ -410,20 +421,20 @@
     return-void
 
     :cond_0
-    iput-object v2, v0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->kMD:Ljava/lang/String;
+    iput-object v2, v0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->llS:Ljava/lang/String;
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->kMD:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->llS:Ljava/lang/String;
 
-    sget v2, Lcom/tencent/mm/aa/a;->bPg:I
+    sget v2, Lcom/tencent/mm/ad/a;->bIB:I
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->aY(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->bk(Ljava/lang/String;I)V
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->bdx()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->bje()V
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->bdv()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->bjc()V
 
     goto :goto_0
 .end method
@@ -432,21 +443,21 @@
     .locals 2
 
     .prologue
-    .line 607
+    .line 623
     invoke-super {p0}, Landroid/os/AsyncTask;->onPreExecute()V
 
-    .line 608
-    const-string/jumbo v0, "!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr"
+    .line 624
+    const-string/jumbo v0, "MicroMsg.GoogleContact.BindGoogleContactUI"
 
     const-string/jumbo v1, "onPreExecute"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 609
+    .line 625
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->kMU:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a;->lmj:Z
 
-    .line 610
+    .line 626
     return-void
 .end method

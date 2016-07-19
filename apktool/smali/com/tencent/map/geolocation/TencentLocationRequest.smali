@@ -166,7 +166,7 @@
     .locals 4
 
     .prologue
-    const/4 v3, 0x1
+    const/4 v1, 0x1
 
     .line 111
     new-instance v0, Lcom/tencent/map/geolocation/TencentLocationRequest;
@@ -174,15 +174,15 @@
     invoke-direct {v0}, Lcom/tencent/map/geolocation/TencentLocationRequest;-><init>()V
 
     .line 112
-    const-wide/16 v1, 0x2710
+    const-wide/16 v2, 0x2710
 
-    iput-wide v1, v0, Lcom/tencent/map/geolocation/TencentLocationRequest;->a:J
+    iput-wide v2, v0, Lcom/tencent/map/geolocation/TencentLocationRequest;->a:J
 
     .line 113
-    iput v3, v0, Lcom/tencent/map/geolocation/TencentLocationRequest;->b:I
+    iput v1, v0, Lcom/tencent/map/geolocation/TencentLocationRequest;->b:I
 
     .line 114
-    iput-boolean v3, v0, Lcom/tencent/map/geolocation/TencentLocationRequest;->c:Z
+    iput-boolean v1, v0, Lcom/tencent/map/geolocation/TencentLocationRequest;->c:Z
 
     .line 115
     const/4 v1, 0x0
@@ -190,9 +190,9 @@
     iput-boolean v1, v0, Lcom/tencent/map/geolocation/TencentLocationRequest;->d:Z
 
     .line 116
-    const-wide v1, 0x7fffffffffffffffL
+    const-wide v2, 0x7fffffffffffffffL
 
-    iput-wide v1, v0, Lcom/tencent/map/geolocation/TencentLocationRequest;->e:J
+    iput-wide v2, v0, Lcom/tencent/map/geolocation/TencentLocationRequest;->e:J
 
     .line 117
     const v1, 0x7fffffff
@@ -324,7 +324,7 @@
 .end method
 
 .method public final setInterval(J)Lcom/tencent/map/geolocation/TencentLocationRequest;
-    .locals 2
+    .locals 3
 
     .prologue
     .line 143
@@ -431,7 +431,7 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     .prologue
     .line 283
@@ -441,9 +441,9 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v1, p0, Lcom/tencent/map/geolocation/TencentLocationRequest;->a:J
+    iget-wide v2, p0, Lcom/tencent/map/geolocation/TencentLocationRequest;->a:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

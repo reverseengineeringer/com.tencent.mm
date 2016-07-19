@@ -6,8 +6,8 @@ import android.util.DisplayMetrics;
 import android.view.SurfaceView;
 import android.view.ViewGroup.LayoutParams;
 import com.tencent.mm.compatible.util.c;
-import com.tencent.mm.pluginsdk.l.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.pluginsdk.m.a;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SightCameraSurfaceView$1
   implements Runnable
@@ -16,60 +16,60 @@ final class SightCameraSurfaceView$1
   
   public final void run()
   {
-    if ((gDS.getContext() instanceof Activity))
+    if ((gKs.getContext() instanceof Activity))
     {
-      if (gDS.gEc.K((Activity)gDS.getContext()) != 0)
+      if (gKs.gKC.F((Activity)gKs.getContext()) != 0)
       {
-        gDS.gEj = false;
-        gDS.axk();
+        gKs.gKJ = false;
+        gKs.azM();
         return;
       }
-      if (gDS.gEc.a(SightCameraSurfaceView.a(gDS)) != 0)
+      if (gKs.gKC.a(SightCameraSurfaceView.a(gKs)) != 0)
       {
-        gDS.gEj = false;
-        gDS.axl();
+        gKs.gKJ = false;
+        gKs.azN();
         return;
       }
-      gDS.gEj = true;
-      u.d("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "preview camera ok");
-      final ViewGroup.LayoutParams localLayoutParams = SightCameraSurfaceView.b(gDS).getLayoutParams();
-      DisplayMetrics localDisplayMetrics = gDS.getResources().getDisplayMetrics();
+      gKs.gKJ = true;
+      v.d("MicroMsg.SightCameraSurfaceView", "preview camera ok");
+      final ViewGroup.LayoutParams localLayoutParams = SightCameraSurfaceView.b(gKs).getLayoutParams();
+      DisplayMetrics localDisplayMetrics = gKs.getResources().getDisplayMetrics();
       int i;
       int j;
-      if (c.bV(14))
+      if (c.cn(14))
       {
-        i = gDS.gEc.gDs.iFm;
-        j = gDS.gEc.gDs.iFn;
-        u.i("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "below 4.0, resizeLayout priveview[%d, %d], dm[%d, %d]", new Object[] { Integer.valueOf(j), Integer.valueOf(i), Integer.valueOf(widthPixels), Integer.valueOf(heightPixels) });
+        i = gKs.gKC.gJT.jch;
+        j = gKs.gKC.gJT.jci;
+        v.i("MicroMsg.SightCameraSurfaceView", "below 4.0, resizeLayout priveview[%d, %d], dm[%d, %d]", new Object[] { Integer.valueOf(j), Integer.valueOf(i), Integer.valueOf(widthPixels), Integer.valueOf(heightPixels) });
         width = widthPixels;
       }
       for (height = (widthPixels * i / j);; height = (width * i / j))
       {
-        u.i("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "resizeLayout width:%d, height:%d", new Object[] { Integer.valueOf(width), Integer.valueOf(height) });
-        if (SightCameraSurfaceView.c(gDS)) {
+        v.i("MicroMsg.SightCameraSurfaceView", "resizeLayout width:%d, height:%d", new Object[] { Integer.valueOf(width), Integer.valueOf(height) });
+        if (SightCameraSurfaceView.c(gKs)) {
           break;
         }
-        gDS.post(new Runnable()
+        gKs.post(new Runnable()
         {
           public final void run()
           {
-            SightCameraSurfaceView.b(gDS).setLayoutParams(localLayoutParams);
-            if (gDS.gEk != null) {
-              gDS.gEk.awD();
+            SightCameraSurfaceView.b(gKs).setLayoutParams(localLayoutParams);
+            if (gKs.gKL != null) {
+              gKs.gKL.azc();
             }
-            gDS.n(gDS.getMeasuredWidth() / 2, gDS.getMeasuredHeight() / 2);
+            gKs.m(gKs.getMeasuredWidth() / 2, gKs.getMeasuredHeight() / 2);
           }
         });
-        SightCameraSurfaceView.d(gDS);
+        SightCameraSurfaceView.d(gKs);
         return;
-        i = gDS.gEc.gDs.iFn;
-        j = gDS.gEc.gDs.iFm;
-        u.i("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "resizeLayout priveview[%d, %d], dm[%d, %d]", new Object[] { Integer.valueOf(j), Integer.valueOf(i), Integer.valueOf(widthPixels), Integer.valueOf(heightPixels) });
-        width = (widthPixels * j / gDS.gAy);
+        i = gKs.gKC.gJT.jci;
+        j = gKs.gKC.gJT.jch;
+        v.i("MicroMsg.SightCameraSurfaceView", "resizeLayout priveview[%d, %d], dm[%d, %d]", new Object[] { Integer.valueOf(j), Integer.valueOf(i), Integer.valueOf(widthPixels), Integer.valueOf(heightPixels) });
+        width = (widthPixels * j / gKs.gHa);
       }
     }
-    gDS.axk();
-    u.e("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "bug???");
+    gKs.azM();
+    v.e("MicroMsg.SightCameraSurfaceView", "bug???");
   }
   
   public final String toString()

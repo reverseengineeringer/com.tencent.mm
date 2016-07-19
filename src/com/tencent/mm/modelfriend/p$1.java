@@ -2,25 +2,25 @@ package com.tencent.mm.modelfriend;
 
 import com.tencent.mm.sdk.h.d;
 import com.tencent.mm.sdk.h.j;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class p$1
   extends j
 {
   p$1(p paramp) {}
   
-  protected final boolean yv()
+  protected final boolean yH()
   {
     boolean bool = true;
-    if ((p.a(bMF) == null) || (p.a(bMF).aVP())) {
-      if (p.a(bMF) != null) {
+    if ((p.a(bFZ) == null) || (p.a(bFZ).bbc())) {
+      if (p.a(bFZ) != null) {
         break label59;
       }
     }
     label59:
-    for (Object localObject = "null";; localObject = Boolean.valueOf(p.a(bMF).aVP()))
+    for (Object localObject = "null";; localObject = Boolean.valueOf(p.a(bFZ).bbc()))
     {
-      u.w("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "shouldProcessEvent db is close :%s", new Object[] { localObject });
+      v.w("MicroMsg.GoogleContact.GoogleFriendUI", "shouldProcessEvent db is close :%s", new Object[] { localObject });
       bool = false;
       return bool;
     }

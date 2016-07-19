@@ -1,67 +1,652 @@
 package com.tencent.mm.platformtools;
 
+import android.app.ActivityManager;
+import android.app.ActivityManager.RunningTaskInfo;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Debug;
+import android.os.StatFs;
+import android.os.SystemClock;
+import com.tencent.mm.compatible.util.d;
+import com.tencent.mm.compatible.util.e;
+import com.tencent.mm.pluginsdk.i.ab;
+import com.tencent.mm.pluginsdk.i.ad;
+import com.tencent.mm.pluginsdk.i.ag;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.f;
+import com.tencent.mm.sdk.platformtools.v;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.TimeZone;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public final class s
 {
-  private static final long[] cnY = { 0L, 259200000L, 604800000L };
+  private static final TimeZone GMT = TimeZone.getTimeZone("GMT");
+  private static final long[] cjl = { 300L, 200L, 300L, 200L };
   
-  public static String FN()
+  public static boolean D(Context paramContext, String paramString)
   {
-    return y.getContext().getSharedPreferences("update_config_prefs", 4).getString("update_downloaded_pack_md5_key", null);
-  }
-  
-  public static int FO()
-  {
-    return y.getContext().getSharedPreferences("update_config_prefs", 4).getInt("update_downloaded_pack_update_type", 3);
-  }
-  
-  public static boolean FP()
-  {
-    SharedPreferences localSharedPreferences = y.getContext().getSharedPreferences("update_config_prefs", 4);
-    long l1 = localSharedPreferences.getLong("update_downloaded_cancel_ts", 0L);
-    int i = localSharedPreferences.getInt("update_downloaded_cancel_times", 0);
-    u.i("!32@/B4Tb64lLpK9XuYWhbQlHtRMppGWmwU7", "checkIgnoreDownloadedPack last: %s times: %s", new Object[] { Long.valueOf(l1), Integer.valueOf(i) });
-    if (i > cnY.length - 1) {}
-    do
+    Intent localIntent = new Intent("android.intent.action.VIEW", Uri.parse(paramString));
+    if (!n(paramContext, localIntent))
     {
-      return true;
-      long l2 = cnY[i];
-      if (System.currentTimeMillis() - l1 > l2) {
-        return false;
-      }
-    } while (System.currentTimeMillis() - l1 >= 0L);
-    u.e("!32@/B4Tb64lLpK9XuYWhbQlHtRMppGWmwU7", "user modify mobile time. we just remove the config.");
-    y.getContext().getSharedPreferences("update_config_prefs", 4).edit().clear().commit();
-    u.i("!32@/B4Tb64lLpK9XuYWhbQlHtRMppGWmwU7", "clearUpdateConfigPrefs");
+      v.e("MicroMsg.Util", "jump to url failed, " + paramString);
+      return false;
+    }
+    paramContext.startActivity(localIntent);
     return true;
   }
   
-  public static boolean FQ()
+  public static long Go()
   {
-    boolean bool2 = false;
-    SharedPreferences localSharedPreferences = y.getContext().getSharedPreferences("update_config_prefs", 4);
-    long l = localSharedPreferences.getLong("update_downloading_in_silence", 0L);
-    boolean bool1 = localSharedPreferences.getBoolean("update_download_start_one_immediate", false);
-    u.i("!32@/B4Tb64lLpK9XuYWhbQlHtRMppGWmwU7", "hasUnfinishDownloadingInSilence unfinish %s", new Object[] { Long.valueOf(l) });
-    if (!bool1)
+    return System.currentTimeMillis() / 1000L;
+  }
+  
+  public static long Gp()
+  {
+    return System.currentTimeMillis();
+  }
+  
+  public static long Gq()
+  {
+    return SystemClock.elapsedRealtime();
+  }
+  
+  public static void Gr()
+  {
+    v.w("MicroMsg.Util", "memory usage: h=%s/%s, e=%s/%s, n=%s/%s", new Object[] { as(Debug.getGlobalAllocSize()), as(Debug.getGlobalAllocSize() + Debug.getGlobalFreedSize()), as(Debug.getGlobalExternalAllocSize()), as(Debug.getGlobalExternalAllocSize() + Debug.getGlobalExternalFreedSize()), as(Debug.getNativeHeapAllocatedSize()), as(Debug.getNativeHeapSize()) });
+  }
+  
+  public static boolean Gs()
+  {
+    if (!e.no()) {
+      return false;
+    }
+    l2 = 0L;
+    long l4 = 0L;
+    for (;;)
     {
-      bool1 = bool2;
-      if (l != 0L)
+      try
       {
-        bool1 = bool2;
-        if (System.currentTimeMillis() - l <= 3600000L) {}
+        StatFs localStatFs = new StatFs(d.bpe);
+        l1 = l4;
+      }
+      catch (Exception localException1)
+      {
+        try
+        {
+          l3 = localStatFs.getBlockCount();
+          l1 = l4;
+          l2 = l3;
+          l4 = localStatFs.getAvailableBlocks();
+          l1 = l4;
+          l2 = l3;
+          i = localStatFs.getBlockSize();
+          l2 = i;
+          l1 = l3;
+          l3 = l4;
+          if (localStatFs != null) {
+            break;
+          }
+          return false;
+        }
+        catch (Exception localException2)
+        {
+          for (;;)
+          {
+            int i;
+            long l3 = l1;
+            long l1 = l2;
+          }
+        }
+        localException1 = localException1;
+        localStatFs = null;
+        l1 = l2;
+        l3 = l4;
+      }
+      tmp98_95[0] = localException1;
+      v.e("MicroMsg.Util", "checkSDCardFull", tmp98_95);
+      l2 = 0L;
+    }
+    if (l1 <= 0L) {
+      return false;
+    }
+    if (l1 - l3 < 0L) {
+      return false;
+    }
+    i = (int)((l1 - l3) * 100L / l1);
+    l4 = l2 * l3;
+    v.i("MicroMsg.Util", "checkSDCardFull blockCount: %d, availCount: %d, blockSize: %d, totalSize: %d, availSize: %d, used percent: %d", new Object[] { Long.valueOf(l1), Long.valueOf(l3), Long.valueOf(l2), Long.valueOf(l2 * l1), Long.valueOf(l4), Integer.valueOf(i) });
+    if (95 > i) {
+      return false;
+    }
+    if (l4 > 104857600L) {
+      return false;
+    }
+    v.i("MicroMsg.Util", "checkSDCardFull is full!");
+    return true;
+  }
+  
+  public static a Gt()
+  {
+    return new a();
+  }
+  
+  public static String O(byte[] paramArrayOfByte)
+  {
+    return l(paramArrayOfByte, 0);
+  }
+  
+  public static boolean P(byte[] paramArrayOfByte)
+  {
+    return (paramArrayOfByte == null) || (paramArrayOfByte.length <= 0);
+  }
+  
+  public static boolean a(Boolean paramBoolean, boolean paramBoolean1)
+  {
+    if (paramBoolean == null) {
+      return paramBoolean1;
+    }
+    return paramBoolean.booleanValue();
+  }
+  
+  private static String aZ(Context paramContext)
+  {
+    try
+    {
+      paramContext = getSystemService"activity"getRunningTasks1get0topActivity.getClassName();
+      v.i("MicroMsg.Util", "top activity name =" + paramContext);
+      return paramContext;
+    }
+    catch (Exception paramContext) {}
+    return "(null)";
+  }
+  
+  public static String ab(String paramString1, String paramString2)
+  {
+    if (paramString1 == null) {
+      return paramString2;
+    }
+    return paramString1;
+  }
+  
+  public static List<String> ac(String paramString1, String paramString2)
+  {
+    String str = null;
+    if (paramString1 != null)
+    {
+      paramString2 = Pattern.compile(paramString2).matcher(paramString1);
+      int j = paramString2.groupCount();
+      int i = 1;
+      paramString1 = new ArrayList();
+      str = paramString1;
+      if (paramString2.find()) {
+        for (;;)
+        {
+          str = paramString1;
+          if (i > j) {
+            break;
+          }
+          paramString1.add(paramString2.group(i));
+          i += 1;
+        }
       }
     }
-    else
+    return str;
+  }
+  
+  public static int ai(int paramInt1, int paramInt2)
+  {
+    if (paramInt1 <= paramInt2)
     {
-      bool1 = true;
+      v.e("MicroMsg.Util", "getIntRandom failed upLimit:" + paramInt1 + "<= downLimit:" + paramInt2);
+      return 0;
     }
-    return bool1;
+    return new Random(System.currentTimeMillis()).nextInt(paramInt1 - paramInt2 + 1) + paramInt2;
+  }
+  
+  public static boolean aj(int paramInt1, int paramInt2)
+  {
+    return paramInt2 > paramInt1 * 2.0D;
+  }
+  
+  public static boolean ak(int paramInt1, int paramInt2)
+  {
+    return paramInt1 > paramInt2 * 2.0D;
+  }
+  
+  public static int as(Object paramObject)
+  {
+    if (paramObject == null) {}
+    do
+    {
+      return 0;
+      if ((paramObject instanceof Integer)) {
+        return ((Integer)paramObject).intValue();
+      }
+    } while (!(paramObject instanceof Long));
+    return ((Long)paramObject).intValue();
+  }
+  
+  public static String as(long paramLong)
+  {
+    float f;
+    if (paramLong >> 20 > 0L)
+    {
+      f = Math.round((float)paramLong * 10.0F / 1048576.0F) / 10.0F;
+      return f + "MB";
+    }
+    if (paramLong >> 9 > 0L)
+    {
+      f = Math.round((float)paramLong * 10.0F / 1024.0F) / 10.0F;
+      return f + "KB";
+    }
+    return paramLong + "B";
+  }
+  
+  public static long at(long paramLong)
+  {
+    return System.currentTimeMillis() / 1000L - paramLong;
+  }
+  
+  public static long au(long paramLong)
+  {
+    return System.currentTimeMillis() - paramLong;
+  }
+  
+  public static long av(long paramLong)
+  {
+    return SystemClock.elapsedRealtime() - paramLong;
+  }
+  
+  public static String b(List<String> paramList, String paramString)
+  {
+    if (paramList == null) {
+      return "";
+    }
+    StringBuilder localStringBuilder = new StringBuilder("");
+    int i = 0;
+    if (i < paramList.size())
+    {
+      if (i == paramList.size() - 1) {
+        localStringBuilder.append(((String)paramList.get(i)).trim());
+      }
+      for (;;)
+      {
+        i += 1;
+        break;
+        localStringBuilder.append(((String)paramList.get(i)).trim() + paramString);
+      }
+    }
+    return localStringBuilder.toString();
+  }
+  
+  public static boolean b(Boolean paramBoolean)
+  {
+    if (paramBoolean == null) {
+      return true;
+    }
+    return paramBoolean.booleanValue();
+  }
+  
+  public static boolean bf(Context paramContext)
+  {
+    String str = paramContext.getClass().getName();
+    paramContext = aZ(paramContext);
+    v.d("MicroMsg.Util", "top activity=" + paramContext + ", context=" + str);
+    return paramContext.equalsIgnoreCase(str);
+  }
+  
+  public static boolean bg(Context paramContext)
+  {
+    if (i.ag.aTE() != null) {
+      i.ag.aTE().atI();
+    }
+    Intent localIntent;
+    if ((f.Xz & 0x1) != 0)
+    {
+      v.e("MicroMsg.Util", "package has set external update mode");
+      Uri localUri = Uri.parse(f.kuH);
+      localIntent = new Intent("android.intent.action.VIEW", localUri).addFlags(268435456);
+      if ((localUri == null) || (localIntent == null) || (!n(paramContext, localIntent)))
+      {
+        v.e("MicroMsg.Util", "parse market uri failed, jump to weixin.qq.com");
+        paramContext.startActivity(new Intent("android.intent.action.VIEW", Uri.parse("http://weixin.qq.com")).addFlags(268435456));
+      }
+    }
+    do
+    {
+      return true;
+      v.i("MicroMsg.Util", "parse market uri ok");
+      paramContext.startActivity(localIntent);
+      return true;
+      aa.getContext().getSharedPreferences("system_config_prefs", 0).edit().putLong("recomended_update_ignore", System.currentTimeMillis() / 1000L).commit();
+    } while (i.ag.aTE() == null);
+    i.ag.aTE().a(paramContext, new DialogInterface.OnCancelListener()
+    {
+      public final void onCancel(DialogInterface paramAnonymousDialogInterface) {}
+    }).update(3);
+    return true;
+  }
+  
+  public static long c(Long paramLong)
+  {
+    if (paramLong == null) {
+      return 0L;
+    }
+    return paramLong.longValue();
+  }
+  
+  public static boolean c(Boolean paramBoolean)
+  {
+    if (paramBoolean == null) {
+      return false;
+    }
+    return paramBoolean.booleanValue();
+  }
+  
+  public static long d(Long paramLong)
+  {
+    if (paramLong == null) {
+      return 0L;
+    }
+    return paramLong.longValue();
+  }
+  
+  /* Error */
+  public static String d(java.io.InputStream paramInputStream)
+  {
+    // Byte code:
+    //   0: new 446	java/io/BufferedReader
+    //   3: dup
+    //   4: new 448	java/io/InputStreamReader
+    //   7: dup
+    //   8: aload_0
+    //   9: invokespecial 451	java/io/InputStreamReader:<init>	(Ljava/io/InputStream;)V
+    //   12: invokespecial 454	java/io/BufferedReader:<init>	(Ljava/io/Reader;)V
+    //   15: astore_2
+    //   16: new 55	java/lang/StringBuilder
+    //   19: dup
+    //   20: invokespecial 308	java/lang/StringBuilder:<init>	()V
+    //   23: astore_1
+    //   24: aload_2
+    //   25: invokevirtual 457	java/io/BufferedReader:readLine	()Ljava/lang/String;
+    //   28: astore_3
+    //   29: aload_3
+    //   30: ifnull +41 -> 71
+    //   33: aload_1
+    //   34: new 55	java/lang/StringBuilder
+    //   37: dup
+    //   38: invokespecial 308	java/lang/StringBuilder:<init>	()V
+    //   41: aload_3
+    //   42: invokevirtual 64	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   45: ldc_w 459
+    //   48: invokevirtual 64	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   51: invokevirtual 68	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   54: invokevirtual 64	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   57: pop
+    //   58: goto -34 -> 24
+    //   61: astore_2
+    //   62: aload_0
+    //   63: invokevirtual 464	java/io/InputStream:close	()V
+    //   66: aload_1
+    //   67: invokevirtual 68	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   70: areturn
+    //   71: aload_0
+    //   72: invokevirtual 464	java/io/InputStream:close	()V
+    //   75: goto -9 -> 66
+    //   78: astore_0
+    //   79: goto -13 -> 66
+    //   82: astore_1
+    //   83: aload_0
+    //   84: invokevirtual 464	java/io/InputStream:close	()V
+    //   87: aload_1
+    //   88: athrow
+    //   89: astore_0
+    //   90: goto -24 -> 66
+    //   93: astore_0
+    //   94: goto -7 -> 87
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	97	0	paramInputStream	java.io.InputStream
+    //   23	44	1	localStringBuilder	StringBuilder
+    //   82	6	1	localObject	Object
+    //   15	10	2	localBufferedReader	java.io.BufferedReader
+    //   61	1	2	localIOException	java.io.IOException
+    //   28	14	3	str	String
+    // Exception table:
+    //   from	to	target	type
+    //   24	29	61	java/io/IOException
+    //   33	58	61	java/io/IOException
+    //   71	75	78	java/io/IOException
+    //   24	29	82	finally
+    //   33	58	82	finally
+    //   62	66	89	java/io/IOException
+    //   83	87	93	java/io/IOException
+  }
+  
+  public static String eX(int paramInt)
+  {
+    return String.format("%d:%02d", new Object[] { Long.valueOf(paramInt / 60L), Long.valueOf(paramInt % 60L) });
+  }
+  
+  public static boolean eY(int paramInt)
+  {
+    long l1 = paramInt * 1000L;
+    long l2 = l1 - System.currentTimeMillis();
+    v.d("MicroMsg.Util", "time " + l1 + "  systime " + System.currentTimeMillis() + " diff " + l2);
+    return l2 < 0L;
+  }
+  
+  public static int f(Integer paramInteger)
+  {
+    if (paramInteger == null) {
+      return 0;
+    }
+    return paramInteger.intValue();
+  }
+  
+  public static int g(Integer paramInteger)
+  {
+    if (paramInteger == null) {
+      return 0;
+    }
+    return paramInteger.intValue();
+  }
+  
+  public static List<String> g(String[] paramArrayOfString)
+  {
+    if ((paramArrayOfString == null) || (paramArrayOfString.length == 0)) {
+      return null;
+    }
+    ArrayList localArrayList = new ArrayList();
+    int i = 0;
+    while (i < paramArrayOfString.length)
+    {
+      localArrayList.add(paramArrayOfString[i]);
+      i += 1;
+    }
+    return localArrayList;
+  }
+  
+  @Deprecated
+  public static int getInt(String paramString, int paramInt)
+  {
+    if (paramString != null) {
+      try
+      {
+        if (paramString.length() <= 0) {
+          return paramInt;
+        }
+        int i = Integer.parseInt(paramString);
+        return i;
+      }
+      catch (NumberFormatException paramString) {}
+    }
+    return paramInt;
+  }
+  
+  public static boolean kf(String paramString)
+  {
+    return (paramString == null) || (paramString.length() <= 0);
+  }
+  
+  public static String l(byte[] paramArrayOfByte, int paramInt)
+  {
+    int k = 0;
+    if (paramArrayOfByte == null) {
+      return "(null)";
+    }
+    int i = paramInt;
+    if (paramInt <= 0) {
+      i = paramArrayOfByte.length;
+    }
+    char[] arrayOfChar1 = new char[16];
+    char[] tmp27_25 = arrayOfChar1;
+    tmp27_25[0] = 48;
+    char[] tmp33_27 = tmp27_25;
+    tmp33_27[1] = 49;
+    char[] tmp39_33 = tmp33_27;
+    tmp39_33[2] = 50;
+    char[] tmp45_39 = tmp39_33;
+    tmp45_39[3] = 51;
+    char[] tmp51_45 = tmp45_39;
+    tmp51_45[4] = 52;
+    char[] tmp57_51 = tmp51_45;
+    tmp57_51[5] = 53;
+    char[] tmp63_57 = tmp57_51;
+    tmp63_57[6] = 54;
+    char[] tmp70_63 = tmp63_57;
+    tmp70_63[7] = 55;
+    char[] tmp77_70 = tmp70_63;
+    tmp77_70[8] = 56;
+    char[] tmp84_77 = tmp77_70;
+    tmp84_77[9] = 57;
+    char[] tmp91_84 = tmp84_77;
+    tmp91_84[10] = 97;
+    char[] tmp98_91 = tmp91_84;
+    tmp98_91[11] = 98;
+    char[] tmp105_98 = tmp98_91;
+    tmp105_98[12] = 99;
+    char[] tmp112_105 = tmp105_98;
+    tmp112_105[13] = 100;
+    char[] tmp119_112 = tmp112_105;
+    tmp119_112[14] = 101;
+    char[] tmp126_119 = tmp119_112;
+    tmp126_119[15] = 102;
+    tmp126_119;
+    char[] arrayOfChar2 = new char[i * 3 + i / 16];
+    int j = 0;
+    paramInt = k;
+    if (j < i + 0)
+    {
+      k = paramArrayOfByte[j];
+      int m = paramInt + 1;
+      arrayOfChar2[paramInt] = ' ';
+      int n = m + 1;
+      arrayOfChar2[m] = arrayOfChar1[(k >>> 4 & 0xF)];
+      paramInt = n + 1;
+      arrayOfChar2[n] = arrayOfChar1[(k & 0xF)];
+      if ((j % 16 != 0) || (j <= 0)) {
+        break label255;
+      }
+      k = paramInt + 1;
+      arrayOfChar2[paramInt] = '\n';
+      paramInt = k;
+    }
+    label255:
+    for (;;)
+    {
+      j += 1;
+      break;
+      return new String(arrayOfChar2);
+    }
+  }
+  
+  public static String lh(String paramString)
+  {
+    String str = paramString;
+    if (paramString != null) {
+      str = paramString.replace("\\[", "[[]").replace("%", "").replace("\\^", "").replace("'", "").replace("\\{", "").replace("\\}", "").replace("\"", "");
+    }
+    return str;
+  }
+  
+  public static String li(String paramString)
+  {
+    String str = paramString;
+    if (paramString == null) {
+      str = "";
+    }
+    return str;
+  }
+  
+  public static byte[] lj(String paramString)
+  {
+    Object localObject;
+    if ((paramString == null) || (paramString.length() <= 0)) {
+      localObject = new byte[0];
+    }
+    for (;;)
+    {
+      return (byte[])localObject;
+      try
+      {
+        byte[] arrayOfByte = new byte[paramString.length() / 2];
+        int i = 0;
+        for (;;)
+        {
+          localObject = arrayOfByte;
+          if (i >= arrayOfByte.length) {
+            break;
+          }
+          arrayOfByte[i] = ((byte)(Integer.parseInt(paramString.substring(i * 2, i * 2 + 2), 16) & 0xFF));
+          i += 1;
+        }
+        return new byte[0];
+      }
+      catch (NumberFormatException paramString) {}
+    }
+  }
+  
+  private static boolean n(Context paramContext, Intent paramIntent)
+  {
+    return paramContext.getPackageManager().queryIntentActivities(paramIntent, 65536).size() > 0;
+  }
+  
+  public static final class a
+  {
+    public final String toString()
+    {
+      StackTraceElement[] arrayOfStackTraceElement = new Throwable().getStackTrace();
+      if ((arrayOfStackTraceElement == null) || (arrayOfStackTraceElement.length < 4)) {
+        return "";
+      }
+      StringBuilder localStringBuilder = new StringBuilder();
+      int i = 3;
+      while (i < arrayOfStackTraceElement.length)
+      {
+        if (arrayOfStackTraceElement[i].getClassName().contains("com.tencent.mm"))
+        {
+          localStringBuilder.append("[");
+          localStringBuilder.append(arrayOfStackTraceElement[i].getClassName().substring(15));
+          localStringBuilder.append(":");
+          localStringBuilder.append(arrayOfStackTraceElement[i].getMethodName());
+          localStringBuilder.append("(" + arrayOfStackTraceElement[i].getLineNumber() + ")]");
+        }
+        i += 1;
+      }
+      return localStringBuilder.toString();
+    }
   }
 }
 

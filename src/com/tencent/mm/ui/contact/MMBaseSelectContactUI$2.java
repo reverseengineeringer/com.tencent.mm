@@ -10,7 +10,7 @@ final class MMBaseSelectContactUI$2
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    lle.ahG();
+    lLr.LR();
     return true;
   }
 }

@@ -1,6 +1,5 @@
 .class public final Lcom/tencent/smtt/sdk/w;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # annotations

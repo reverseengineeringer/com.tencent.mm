@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ui/base/MMSlideDelView$c;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/ui/contact/AddressUI$a;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/ui/contact/AddressUI$a;->gL(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+.field final synthetic lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 280
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$16;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    .line 1395
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$16;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,20 +36,21 @@
 
 
 # virtual methods
-.method public final I(Landroid/view/View;)I
-    .locals 1
+.method public final run()V
+    .locals 2
 
     .prologue
-    .line 284
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$16;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    .line 1399
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$16;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/AddressUI$a;->c(Lcom/tencent/mm/ui/contact/AddressUI$a;)Landroid/widget/ListView;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroid/widget/ListView;->getPositionForView(Landroid/view/View;)I
+    const/4 v1, 0x0
 
-    move-result v0
+    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setSelection(I)V
 
-    return v0
+    .line 1400
+    return-void
 .end method

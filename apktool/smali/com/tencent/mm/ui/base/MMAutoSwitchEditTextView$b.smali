@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract bbz()V
+.method public abstract bgL()V
 .end method

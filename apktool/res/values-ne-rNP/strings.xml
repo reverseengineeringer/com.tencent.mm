@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">%1$s लाई Android Wear अनुप्रयोगमा अद्यावधिक आवश्यक छ।</string>
+    <string name="b">%1$s तपाईँले Android Wear अनुप्रयोग अद्यावधिक नगरेसम्म सञ्चालन हुँदैन।</string>
+    <string name="c">Android उपयोग अद्यावधिक गर्नुहोस्</string>
+    <string name="d">%1$s लाई एक वा थप Google प्ले सेवाहरू आवश्यकता पर्छ जुन हाल उपलब्ध छैन। कृपया सहायताको लागि विकासकर्तालाई सम्पर्क गर्नुहोस्।</string>
+    <string name="e">Google Play सेवाहरू सक्षम पार्नुहोस्</string>
+    <string name="f">%1$s ले तपाईंले Google प्ले सेवाहरू सक्षम नगरेसम्म काम गर्दैन।</string>
+    <string name="g">Google Play सेवाहरू सक्षम पार्नुहोस्</string>
+    <string name="h">%1$s द्वारा अनुरोध गरियो</string>
+    <string name="i">Google Play सेवाहरू प्राप्त गर्नुहोस्</string>
+    <string name="j">%1$s Google प्ले सेवाहरू बिना सञ्चालन हुँदैन, जुन तपाईँको फोनबाट हराइरहेको छ।</string>
+    <string name="k">%1$s Google प्ले सेवाहरू बिना सञ्चालन हुँदैन, जुन तपाईँको ट्याब्लेटबाट हराइरहेको छ।</string>
+    <string name="l">Google Play सेवाहरू प्राप्त गर्नुहोस्</string>
+    <string name="m">निर्दिष्ट खाता यो उपकरणमा छैन। कृपया एउटा अलग खाता चयन गर्नुहोस्।</string>
+    <string name="n">अमान्य खाता</string>
+    <string name="o">Google Play का सेवाहरू सक्षम गर्न अनुप्रयोग आवश्यक हुन्छ।</string>
+    <string name="p">एउटा डेटा जडान Google प्ले सेवाहरूसँग जडित गर्न आवश्यकता छ।</string>
+    <string name="q">नेटवर्क त्रुटि</string>
+    <string name="r">Google Play सेवाहरू अद्यावधिक गर्न अनुप्रयोग आवश्यक हुन्छ।</string>
+    <string name="s">Google Play सेवाहरूका त्रुटि</string>
+    <string name="t">निर्दिष्ट खातामा साइन इन गर्दा त्रुटि भयो। कृपया फरक खाता रोज्नुहोस्।</string>
+    <string name="u">साइन इन असफल भयो</string>
+    <string name="v">Google Play सेवाहरूको अज्ञात सवाल</string>
+    <string name="w">%1$s Google प्ले सेवाहरूमा निर्भर गर्दछ, जुन तपाईँको यन्त्रद्वारा समर्थन गर्दैन। सहायताको लागि निर्मातालाई सम्पर्क गर्नुहोस्।</string>
+    <string name="x">Google Play सेवाहरू</string>
+    <string name="y">अद्यावधिक गर्नुहोस्</string>
+    <string name="z">%1$s तपाईंले Google प्ले सेवाहरू अद्यावधिक नगरेसम्म सञ्चालन हुँदैन।</string>
+    <string name="a0">Google Play सेवाहरू अद्यावधिक गर्नुहोस्</string>
+    <string name="a1">%1$s Google प्ले सेवाहरू बिना सञ्चालन हुँदैन, जुन हाल अद्यावधिक भइरहेका छन्।</string>
+    <string name="a2">Google प्ले सेवाहरू अद्यावधिक भइरहेका छन्</string>
+    <string name="a3">फोनमा खोल्नुहोस्</string>
+    <string name="a4">साइन इन गर्नुहोस्</string>
+    <string name="a5">गुगलका साथ साइन इन गर्नुहोस्</string>
+</resources>

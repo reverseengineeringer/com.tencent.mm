@@ -7,8 +7,8 @@ final class a$3
   
   public final void run()
   {
-    MMGIFJNI.restoreRemainder(a.d(ewP));
-    a.a(ewP, a.e(ewP), a.f(ewP));
+    MMGIFJNI.restoreRemainder(a.d(eDi));
+    a.a(eDi, a.e(eDi), a.f(eDi));
   }
 }
 

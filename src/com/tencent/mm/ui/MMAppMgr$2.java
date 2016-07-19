@@ -14,15 +14,15 @@ final class MMAppMgr$2
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (kqb.isChecked())
+    if (kPg.isChecked())
     {
-      SharedPreferences.Editor localEditor = hpA.edit();
+      SharedPreferences.Editor localEditor = kPh.edit();
       localEditor.putBoolean("gprs_alert", false);
       localEditor.commit();
     }
-    com.tencent.mm.sdk.platformtools.f.jVd = false;
+    com.tencent.mm.sdk.platformtools.f.kuJ = false;
     paramDialogInterface.dismiss();
-    MMAppMgr.ec(cms);
+    MMAppMgr.ed(chx);
   }
 }
 

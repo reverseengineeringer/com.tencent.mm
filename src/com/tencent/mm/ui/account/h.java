@@ -3,14 +3,14 @@ package com.tencent.mm.ui.account;
 import android.os.Bundle;
 import android.os.Message;
 import com.tencent.mm.sdk.i.e;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.d.a.a;
-import com.tencent.mm.ui.d.a.a.1;
-import com.tencent.mm.ui.d.a.a.a;
-import com.tencent.mm.ui.d.a.c;
-import com.tencent.mm.ui.d.a.d;
-import com.tencent.mm.ui.d.a.f;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.e.a.a;
+import com.tencent.mm.ui.e.a.a.1;
+import com.tencent.mm.ui.e.a.a.a;
+import com.tencent.mm.ui.e.a.c;
+import com.tencent.mm.ui.e.a.d;
+import com.tencent.mm.ui.e.a.f;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -18,19 +18,19 @@ import org.json.JSONObject;
 
 public final class h
 {
-  aa handler;
-  private c krO;
-  a kug;
+  ac handler;
+  private c kQW;
+  a kTn;
   
   public h(c paramc, a parama)
   {
-    krO = paramc;
-    kug = parama;
+    kQW = paramc;
+    kTn = parama;
   }
   
-  public final void bbG()
+  public final void bgS()
   {
-    handler = new aa()
+    handler = new ac()
     {
       public final void handleMessage(Message paramAnonymousMessage)
       {
@@ -42,25 +42,25 @@ public final class h
           do
           {
             return;
-          } while (kug == null);
-          kug.onError(arg1, (String)obj);
+          } while (kTn == null);
+          kTn.onError(arg1, (String)obj);
           return;
-        } while (kug == null);
-        kug.g(paramAnonymousMessage.getData());
+        } while (kTn == null);
+        kTn.i(paramAnonymousMessage.getData());
       }
     };
     Bundle localBundle = new Bundle();
     localBundle.putString("client_id", "290293790992170");
     localBundle.putString("client_secret", "6667e9307e67283c76028fd37189c096");
     localBundle.putString("grant_type", "fb_exchange_token");
-    localBundle.putString("fb_exchange_token", krO.kMS);
+    localBundle.putString("fb_exchange_token", kQW.lmh);
     a.a local2 = new a.a()
     {
-      public final void Gp(String paramAnonymousString)
+      public final void IE(String paramAnonymousString)
       {
         if ((paramAnonymousString == null) || (paramAnonymousString.length() == 0))
         {
-          u.e("!44@/B4Tb64lLpLASVHfQRzXfIKtwR0LMq/9o2AZ+OSS5lE=", "response is null or nil");
+          v.e("MicroMsg.RefreshTokenRunner", "response is null or nil");
           h.a(h.this, 1, "response is null or nil");
           return;
         }
@@ -68,7 +68,7 @@ public final class h
         if ((paramAnonymousString.contains("access_token")) && (paramAnonymousString.length() > 12)) {
           try
           {
-            paramAnonymousString = f.Hq(paramAnonymousString);
+            paramAnonymousString = f.JF(paramAnonymousString);
             if (paramAnonymousString.containsKey("access_token"))
             {
               localObject = h.this;
@@ -95,7 +95,7 @@ public final class h
           }
           catch (Exception paramAnonymousString)
           {
-            u.e("!44@/B4Tb64lLpLASVHfQRzXfIKtwR0LMq/9o2AZ+OSS5lE=", "parseJson exception : " + paramAnonymousString.getMessage());
+            v.e("MicroMsg.RefreshTokenRunner", "parseJson exception : " + paramAnonymousString.getMessage());
             h.a(h.this, 2, "parseJson error");
             return;
             localObject = paramAnonymousString;
@@ -111,8 +111,8 @@ public final class h
           }
           catch (d paramAnonymousString)
           {
-            paramAnonymousString = "errCode = " + cFW + ", errType = " + lqX + ", errMsg = " + paramAnonymousString.getMessage();
-            u.e("!44@/B4Tb64lLpLASVHfQRzXfIKtwR0LMq/9o2AZ+OSS5lE=", "parseJson facebookerror, " + paramAnonymousString);
+            paramAnonymousString = "errCode = " + cCZ + ", errType = " + lRC + ", errMsg = " + paramAnonymousString.getMessage();
+            v.e("MicroMsg.RefreshTokenRunner", "parseJson facebookerror, " + paramAnonymousString);
             h.a(h.this, 3, paramAnonymousString);
             return;
           }
@@ -131,28 +131,28 @@ public final class h
       
       public final void a(FileNotFoundException paramAnonymousFileNotFoundException)
       {
-        u.e("!44@/B4Tb64lLpLASVHfQRzXfIKtwR0LMq/9o2AZ+OSS5lE=", "onFileNotFoundException");
+        v.e("MicroMsg.RefreshTokenRunner", "onFileNotFoundException");
         h.a(h.this, 2, paramAnonymousFileNotFoundException.getMessage());
       }
       
       public final void a(IOException paramAnonymousIOException)
       {
-        u.e("!44@/B4Tb64lLpLASVHfQRzXfIKtwR0LMq/9o2AZ+OSS5lE=", "onIOException");
+        v.e("MicroMsg.RefreshTokenRunner", "onIOException");
         h.a(h.this, 2, paramAnonymousIOException.getMessage());
       }
       
       public final void a(MalformedURLException paramAnonymousMalformedURLException)
       {
-        u.e("!44@/B4Tb64lLpLASVHfQRzXfIKtwR0LMq/9o2AZ+OSS5lE=", "onMalformedURLException");
+        v.e("MicroMsg.RefreshTokenRunner", "onMalformedURLException");
         h.a(h.this, 2, paramAnonymousMalformedURLException.getMessage());
       }
     };
-    e.a(new a.1(new a(krO), "oauth/access_token", localBundle, "GET", local2, null), "AsyncFacebookRunner_request");
+    e.a(new a.1(new a(kQW), "oauth/access_token", localBundle, "GET", local2, null), "AsyncFacebookRunner_request");
   }
   
   public static abstract interface a
   {
-    public abstract void g(Bundle paramBundle);
+    public abstract void i(Bundle paramBundle);
     
     public abstract void onError(int paramInt, String paramString);
   }

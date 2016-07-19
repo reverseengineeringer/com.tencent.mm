@@ -3,8 +3,8 @@ package com.tencent.mm.ui.contact;
 import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.ar.c;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.av.c;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class k$4
   implements View.OnClickListener
@@ -13,8 +13,8 @@ final class k$4
   
   public final void onClick(View paramView)
   {
-    u.d("!44@/B4Tb64lLpISOYcLaKm7W93grpYn2xfC5yJeWqznlqY=", "initNoNew, goto FMessageConversationUI");
-    c.c(k.d(lkt), "subapp", ".ui.friend.FMessageConversationUI", new Intent());
+    v.d("MicroMsg.FMessageContactView", "initNoNew, goto FMessageConversationUI");
+    c.c(k.d(lKE), "subapp", ".ui.friend.FMessageConversationUI", new Intent());
   }
 }
 

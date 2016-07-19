@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic coz:Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;
+.field final synthetic cjN:Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;
 
 .field private mContext:Landroid/content/Context;
 
@@ -26,7 +26,7 @@
 
     .prologue
     .line 62
-    iput-object p1, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;->coz:Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;->cjN:Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;
 
     .line 63
     const/4 v0, 0x1
@@ -37,11 +37,11 @@
     iput-object p2, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;->mContext:Landroid/content/Context;
 
     .line 65
-    const-string/jumbo v0, "!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw="
+    const-string/jumbo v0, "MicroMsg.ContactsSyncService"
 
     const-string/jumbo v1, "ContactsSyncService SyncAdapterImpl construction"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 66
     return-void
@@ -54,25 +54,25 @@
 
     .prologue
     .line 70
-    const-string/jumbo v0, "!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw="
+    const-string/jumbo v0, "MicroMsg.ContactsSyncService"
 
     const-string/jumbo v1, "ContactsSyncService SyncAdapterImpl onPerformSync"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 71
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 72
-    const-string/jumbo v0, "!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw="
+    const-string/jumbo v0, "MicroMsg.ContactsSyncService"
 
     const-string/jumbo v1, "ContactsSyncService account not ready, ignore this sync"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 85
     :goto_0
@@ -84,7 +84,7 @@
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
     .line 77
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;->coz:Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;->cjN:Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
@@ -93,7 +93,7 @@
     invoke-static {v0, v1}, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->a(Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;Landroid/os/Looper;)Landroid/os/Looper;
 
     .line 78
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;->coz:Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;->cjN:Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;
 
     invoke-static {v0, p1}, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->a(Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;Landroid/accounts/Account;)V
 
@@ -109,12 +109,12 @@
     move-exception v0
 
     .line 82
-    iget-object v1, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;->coz:Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;->cjN:Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->a(Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;)V
 
     .line 83
-    const-string/jumbo v1, "!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw="
+    const-string/jumbo v1, "MicroMsg.ContactsSyncService"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -134,7 +134,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

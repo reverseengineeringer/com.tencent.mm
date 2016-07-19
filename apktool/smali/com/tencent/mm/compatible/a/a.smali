@@ -17,7 +17,7 @@
 
     .prologue
     .line 20
-    invoke-static {p0}, Lcom/tencent/mm/compatible/util/e;->bU(I)Z
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/e;->cm(I)Z
 
     move-result v0
 

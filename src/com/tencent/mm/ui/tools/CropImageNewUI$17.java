@@ -10,34 +10,34 @@ final class CropImageNewUI$17
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if ((lut) && (luu))
+    if ((lVv) && (lVw))
     {
-      CropImageNewUI.a(luq, true);
+      CropImageNewUI.a(lVs, true);
       return true;
     }
-    switch (CropImageNewUI.f(luq))
+    switch (CropImageNewUI.f(lVs))
     {
     default: 
       return true;
     case 1: 
-      if (CropImageNewUI.e(luq) != null)
+      if (CropImageNewUI.e(lVs) != null)
       {
-        CropImageNewUI.a(luq, CropImageNewUI.e(luq).getCropImageIV(), CropImageNewUI.i(luq));
+        CropImageNewUI.a(lVs, elVs).lWt, CropImageNewUI.i(lVs));
         return true;
       }
-      CropImageNewUI.a(luq, CropImageNewUI.j(luq), CropImageNewUI.i(luq));
+      CropImageNewUI.a(lVs, CropImageNewUI.j(lVs), CropImageNewUI.i(lVs));
       return true;
     case 2: 
-      CropImageNewUI.k(luq);
+      CropImageNewUI.k(lVs);
       return true;
     case 3: 
-      CropImageNewUI.l(luq);
+      CropImageNewUI.l(lVs);
       return true;
     case 4: 
-      CropImageNewUI.m(luq);
+      CropImageNewUI.m(lVs);
       return true;
     }
-    CropImageNewUI.n(luq);
+    CropImageNewUI.n(lVs);
     return true;
   }
 }

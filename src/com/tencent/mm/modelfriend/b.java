@@ -2,55 +2,55 @@ package com.tencent.mm.modelfriend;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.r;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.s;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class b
 {
-  String aSx = "";
-  String aji = "";
-  public int aou = -1;
-  private String aut = "";
-  public String bEs = "";
-  public int bEv = 0;
-  String bLA = "";
-  long bLB = 0L;
-  String bLC = "";
-  String bLD = "";
-  String bLE = "";
-  String bLF = "";
-  String bLG = "";
-  String bLH = "";
-  private int bLI = 0;
-  public byte[] bLJ;
-  public int bLK;
-  public String bLL = "";
-  public int bLM = 0;
-  public String bLN = "";
-  public String bLO = "";
-  public String bLP = "";
-  int bLQ = 0;
-  public String bLR = "";
-  int bLS = 0;
-  int bLT = 0;
-  String bLU = "";
-  public String bLV = "";
-  String bLW = "";
-  int bLX = -1;
-  String bLY = "";
-  long bLZ = -1L;
-  int bMa = -1;
-  String bMb = "";
-  String bMc = "";
-  String bMd = "";
-  long bMe = 0L;
+  String UY = "";
+  String aFg = "";
+  private String agg = "";
+  public int aqQ = -1;
+  String bEU = "";
+  long bEV = 0L;
+  String bEW = "";
+  String bEX = "";
+  String bEY = "";
+  String bEZ = "";
+  String bFa = "";
+  String bFb = "";
+  private int bFc = 0;
+  public byte[] bFd;
+  public int bFe;
+  public String bFf = "";
+  public int bFg = 0;
+  public String bFh = "";
+  public String bFi = "";
+  public String bFj = "";
+  int bFk = 0;
+  public String bFl = "";
+  int bFm = 0;
+  int bFn = 0;
+  String bFo = "";
+  public String bFp = "";
+  String bFq = "";
+  int bFr = -1;
+  String bFs = "";
+  long bFt = -1L;
+  int bFu = -1;
+  String bFv = "";
+  String bFw = "";
+  String bFx = "";
+  long bFy = 0L;
+  public String bxD = "";
+  public int bxG = 0;
   private int id = 0;
   public int status = 0;
   public int type = 0;
   public String username = "";
   
-  public static int ho(String paramString)
+  public static int hG(String paramString)
   {
     long l1 = 0L;
     try
@@ -62,119 +62,114 @@ public final class b
     {
       for (;;)
       {
-        u.printErrStackTrace("!32@/B4Tb64lLpL3lTzROgXSiflgPRAWEmdi", localException, "md5: %s", new Object[] { paramString });
+        v.printErrStackTrace("MicroMsg.AddrUpload", localException, "md5: %s", new Object[] { paramString });
       }
     }
     return (int)l1;
   }
   
-  private byte[] yg()
+  private byte[] ys()
   {
     try
     {
-      Object localObject = new r();
-      ((r)localObject).aUv();
-      ((r)localObject).CL(bLL);
-      ((r)localObject).po(bLM);
-      ((r)localObject).CL(bLN);
-      ((r)localObject).CL(bLO);
-      ((r)localObject).CL(bLP);
-      ((r)localObject).po(bLQ);
-      ((r)localObject).CL(bLR);
-      ((r)localObject).po(bLS);
-      ((r)localObject).po(bLT);
-      ((r)localObject).CL(bLU);
-      ((r)localObject).CL(bLV);
-      ((r)localObject).CL(bLW);
-      ((r)localObject).po(bLX);
-      ((r)localObject).CL(bLY);
-      ((r)localObject).dq(bLZ);
-      ((r)localObject).po(bMa);
-      ((r)localObject).CL(bMb);
-      ((r)localObject).CL(bMc);
-      ((r)localObject).CL(bMd);
-      ((r)localObject).dq(bMe);
-      localObject = ((r)localObject).aUw();
+      Object localObject = new s();
+      ((s)localObject).aZz();
+      ((s)localObject).EY(bFf);
+      ((s)localObject).rf(bFg);
+      ((s)localObject).EY(bFh);
+      ((s)localObject).EY(bFi);
+      ((s)localObject).EY(bFj);
+      ((s)localObject).rf(bFk);
+      ((s)localObject).EY(bFl);
+      ((s)localObject).rf(bFm);
+      ((s)localObject).rf(bFn);
+      ((s)localObject).EY(bFo);
+      ((s)localObject).EY(bFp);
+      ((s)localObject).EY(bFq);
+      ((s)localObject).rf(bFr);
+      ((s)localObject).EY(bFs);
+      ((s)localObject).dH(bFt);
+      ((s)localObject).rf(bFu);
+      ((s)localObject).EY(bFv);
+      ((s)localObject).EY(bFw);
+      ((s)localObject).EY(bFx);
+      ((s)localObject).dH(bFy);
+      localObject = ((s)localObject).aZA();
       return (byte[])localObject;
     }
     catch (Exception localException) {}
     return null;
   }
   
-  public final void c(Cursor paramCursor)
+  public final void b(Cursor paramCursor)
   {
-    hp(paramCursor.getString(1));
-    bLA = paramCursor.getString(2);
-    bLB = paramCursor.getLong(3);
-    bLC = paramCursor.getString(4);
-    bLD = paramCursor.getString(5);
-    bLE = paramCursor.getString(6);
+    hH(paramCursor.getString(1));
+    bEU = paramCursor.getString(2);
+    bEV = paramCursor.getLong(3);
+    bEW = paramCursor.getString(4);
+    bEX = paramCursor.getString(5);
+    bEY = paramCursor.getString(6);
     username = paramCursor.getString(7);
-    aji = paramCursor.getString(8);
-    bLF = paramCursor.getString(9);
-    bLG = paramCursor.getString(10);
+    UY = paramCursor.getString(8);
+    bEZ = paramCursor.getString(9);
+    bFa = paramCursor.getString(10);
     type = paramCursor.getInt(11);
-    bLH = paramCursor.getString(12);
-    aSx = paramCursor.getString(13);
+    bFb = paramCursor.getString(12);
+    aFg = paramCursor.getString(13);
     int i = paramCursor.getInt(14);
     byte[] arrayOfByte;
     if (i == 65536)
     {
       status = 0;
-      bLI = paramCursor.getInt(17);
-      bEs = paramCursor.getString(15);
-      bEv = paramCursor.getInt(18);
-      bLJ = paramCursor.getBlob(19);
-      if (!ay.J(bLJ)) {
-        arrayOfByte = bLJ;
+      bFc = paramCursor.getInt(17);
+      bxD = paramCursor.getString(15);
+      bxG = paramCursor.getInt(18);
+      bFd = paramCursor.getBlob(19);
+      if (!be.P(bFd)) {
+        arrayOfByte = bFd;
       }
     }
     for (;;)
     {
       try
       {
-        localr = new r();
-        i = localr.aS(arrayOfByte);
+        locals = new s();
+        i = locals.aZ(arrayOfByte);
         if (i == 0) {
           continue;
         }
-        u.e("!32@/B4Tb64lLpL3lTzROgXSiflgPRAWEmdi", "parse LVBuffer error:" + i);
+        v.e("MicroMsg.AddrUpload", "parse LVBuffer error:" + i);
       }
       catch (Exception localException)
       {
-        r localr;
+        s locals;
         continue;
       }
-      bLK = paramCursor.getInt(20);
+      bFe = paramCursor.getInt(20);
       return;
       status = i;
       break;
-      bLL = localr.getString();
-      bLM = localr.getInt();
-      bLN = localr.getString();
-      bLO = localr.getString();
-      bLP = localr.getString();
-      bLQ = localr.getInt();
-      bLR = localr.getString();
-      bLS = localr.getInt();
-      bLT = localr.getInt();
-      bLU = localr.getString();
-      bLV = localr.getString();
-      bLW = localr.getString();
-      bLX = localr.getInt();
-      bLY = localr.getString();
-      bLZ = localr.getLong();
-      bMa = localr.getInt();
-      bMb = localr.getString();
-      bMc = localr.getString();
-      bMd = localr.getString();
-      bMe = localr.getLong();
+      bFf = locals.getString();
+      bFg = locals.getInt();
+      bFh = locals.getString();
+      bFi = locals.getString();
+      bFj = locals.getString();
+      bFk = locals.getInt();
+      bFl = locals.getString();
+      bFm = locals.getInt();
+      bFn = locals.getInt();
+      bFo = locals.getString();
+      bFp = locals.getString();
+      bFq = locals.getString();
+      bFr = locals.getInt();
+      bFs = locals.getString();
+      bFt = locals.getLong();
+      bFu = locals.getInt();
+      bFv = locals.getString();
+      bFw = locals.getString();
+      bFx = locals.getString();
+      bFy = locals.getLong();
     }
-  }
-  
-  public final void da(int paramInt)
-  {
-    aou = 128;
   }
   
   public final String getUsername()
@@ -185,59 +180,59 @@ public final class b
     return username;
   }
   
-  public final void hp(String paramString)
+  public final void hH(String paramString)
   {
-    aut = paramString;
-    id = ho(paramString);
+    agg = paramString;
+    id = hG(paramString);
   }
   
-  public final ContentValues lX()
+  public final ContentValues kn()
   {
     ContentValues localContentValues = new ContentValues();
-    if ((aou & 0x1) != 0) {
+    if ((aqQ & 0x1) != 0) {
       localContentValues.put("id", Integer.valueOf(id));
     }
-    if ((aou & 0x2) != 0) {
-      localContentValues.put("md5", yh());
+    if ((aqQ & 0x2) != 0) {
+      localContentValues.put("md5", yt());
     }
-    if ((aou & 0x4) != 0) {
-      localContentValues.put("peopleid", yi());
+    if ((aqQ & 0x4) != 0) {
+      localContentValues.put("peopleid", yu());
     }
-    if ((aou & 0x8) != 0) {
-      localContentValues.put("uploadtime", Long.valueOf(bLB));
+    if ((aqQ & 0x8) != 0) {
+      localContentValues.put("uploadtime", Long.valueOf(bEV));
     }
-    if ((aou & 0x10) != 0) {
-      localContentValues.put("realname", yj());
+    if ((aqQ & 0x10) != 0) {
+      localContentValues.put("realname", yv());
     }
-    if ((aou & 0x20) != 0) {
-      localContentValues.put("realnamepyinitial", yk());
+    if ((aqQ & 0x20) != 0) {
+      localContentValues.put("realnamepyinitial", yw());
     }
-    if ((aou & 0x40) != 0) {
-      localContentValues.put("realnamequanpin", yl());
+    if ((aqQ & 0x40) != 0) {
+      localContentValues.put("realnamequanpin", yx());
     }
-    if ((aou & 0x80) != 0) {
+    if ((aqQ & 0x80) != 0) {
       localContentValues.put("username", getUsername());
     }
-    if ((aou & 0x100) != 0) {
-      localContentValues.put("nickname", ym());
+    if ((aqQ & 0x100) != 0) {
+      localContentValues.put("nickname", yy());
     }
-    if ((aou & 0x200) != 0) {
-      localContentValues.put("nicknamepyinitial", yn());
+    if ((aqQ & 0x200) != 0) {
+      localContentValues.put("nicknamepyinitial", yz());
     }
-    if ((aou & 0x400) != 0) {
-      localContentValues.put("nicknamequanpin", yo());
+    if ((aqQ & 0x400) != 0) {
+      localContentValues.put("nicknamequanpin", yA());
     }
-    if ((aou & 0x800) != 0) {
+    if ((aqQ & 0x800) != 0) {
       localContentValues.put("type", Integer.valueOf(type));
     }
-    if ((aou & 0x1000) != 0) {
-      localContentValues.put("moblie", yp());
+    if ((aqQ & 0x1000) != 0) {
+      localContentValues.put("moblie", yB());
     }
-    if ((aou & 0x2000) != 0) {
-      localContentValues.put("email", yq());
+    if ((aqQ & 0x2000) != 0) {
+      localContentValues.put("email", yC());
     }
     int i;
-    if ((aou & 0x4000) != 0)
+    if ((aqQ & 0x4000) != 0)
     {
       i = status;
       if (i != 0) {
@@ -247,22 +242,22 @@ public final class b
     }
     for (;;)
     {
-      if ((aou & 0x8000) != 0) {
-        localContentValues.put("reserved1", bEs);
+      if ((aqQ & 0x8000) != 0) {
+        localContentValues.put("reserved1", bxD);
       }
-      if ((aou & 0x20000) != 0) {
-        localContentValues.put("reserved3", Integer.valueOf(bLI));
+      if ((aqQ & 0x20000) != 0) {
+        localContentValues.put("reserved3", Integer.valueOf(bFc));
       }
-      if ((aou & 0x40000) != 0) {
-        localContentValues.put("reserved4", Integer.valueOf(bEv));
+      if ((aqQ & 0x40000) != 0) {
+        localContentValues.put("reserved4", Integer.valueOf(bxG));
       }
-      if ((aou & 0x80000) != 0)
+      if ((aqQ & 0x80000) != 0)
       {
-        bLJ = yg();
-        localContentValues.put("lvbuf", bLJ);
+        bFd = ys();
+        localContentValues.put("lvbuf", bFd);
       }
-      if ((aou & 0x100000) != 0) {
-        localContentValues.put("showhead", Integer.valueOf(bLK));
+      if ((aqQ & 0x100000) != 0) {
+        localContentValues.put("showhead", Integer.valueOf(bFe));
       }
       return localContentValues;
       label476:
@@ -270,13 +265,13 @@ public final class b
     }
   }
   
-  public final int pY()
+  public final int ov()
   {
     int i = 32;
     int j;
-    if (!ay.kz(yk()))
+    if (!be.kf(yw()))
     {
-      i = yk().charAt(0);
+      i = yw().charAt(0);
       if ((i < 97) || (i > 122)) {
         break label64;
       }
@@ -286,10 +281,10 @@ public final class b
     do
     {
       return j;
-      if (ay.kz(yl())) {
+      if (be.kf(yx())) {
         break;
       }
-      i = yl().charAt(0);
+      i = yx().charAt(0);
       break;
       if (i < 65) {
         break label78;
@@ -300,104 +295,99 @@ public final class b
     return 123;
   }
   
-  public final void setUsername(String paramString)
+  public final String yA()
   {
-    username = paramString;
-  }
-  
-  public final String yh()
-  {
-    if (aut == null) {
+    if (bFa == null) {
       return "";
     }
-    return aut;
+    return bFa;
   }
   
-  public final String yi()
+  public final String yB()
   {
-    if (bLA == null) {
+    if (bFb == null) {
       return "";
     }
-    return bLA;
+    return bFb;
   }
   
-  public final String yj()
+  public final String yC()
   {
-    if (bLC == null) {
+    if (aFg == null) {
       return "";
     }
-    return bLC;
+    return aFg;
   }
   
-  public final String yk()
+  public final void yD()
   {
-    if (bLD == null) {
+    bFc &= 0xFFFFFFFE;
+  }
+  
+  public final void yE()
+  {
+    bFc |= 0x1;
+  }
+  
+  public final boolean yF()
+  {
+    return (bFc & 0x1) == 0;
+  }
+  
+  public final String yt()
+  {
+    if (agg == null) {
       return "";
     }
-    return bLD;
+    return agg;
   }
   
-  public final String yl()
+  public final String yu()
   {
-    if (bLE == null) {
+    if (bEU == null) {
       return "";
     }
-    return bLE;
+    return bEU;
   }
   
-  public final String ym()
+  public final String yv()
   {
-    if (aji == null) {
+    if (bEW == null) {
       return "";
     }
-    return aji;
+    return bEW;
   }
   
-  public final String yn()
+  public final String yw()
   {
-    if (bLF == null) {
+    if (bEX == null) {
       return "";
     }
-    return bLF;
+    return bEX;
   }
   
-  public final String yo()
+  public final String yx()
   {
-    if (bLG == null) {
+    if (bEY == null) {
       return "";
     }
-    return bLG;
+    return bEY;
   }
   
-  public final String yp()
+  public final String yy()
   {
-    if (bLH == null) {
+    if (UY == null) {
       return "";
     }
-    return bLH;
+    return UY;
   }
   
-  public final String yq()
+  public final String yz()
   {
-    if (aSx == null) {
+    if (bEZ == null) {
       return "";
     }
-    return aSx;
-  }
-  
-  public final void yr()
-  {
-    bLI &= 0xFFFFFFFE;
-  }
-  
-  public final void ys()
-  {
-    bLI |= 0x1;
-  }
-  
-  public final boolean yt()
-  {
-    return (bLI & 0x1) == 0;
+    return bEZ;
   }
 }
 

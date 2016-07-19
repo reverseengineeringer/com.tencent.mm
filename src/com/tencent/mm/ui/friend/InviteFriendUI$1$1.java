@@ -15,7 +15,7 @@ final class InviteFriendUI$1$1
   public final void a(ImageView paramImageView, MenuItem paramMenuItem)
   {
     paramMenuItem = paramMenuItem.getTitle();
-    paramImageView.setImageDrawable(((ResolveInfo)lrN.get(paramMenuItem)).loadIcon(lrO));
+    paramImageView.setImageDrawable(((ResolveInfo)lSr.get(paramMenuItem)).loadIcon(lSs));
   }
 }
 

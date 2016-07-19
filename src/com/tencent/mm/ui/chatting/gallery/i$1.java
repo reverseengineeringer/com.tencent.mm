@@ -2,18 +2,18 @@ package com.tencent.mm.ui.chatting.gallery;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.an.m;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.aq.q;
+import com.tencent.mm.storage.ai;
 
 final class i$1
   implements DialogInterface.OnClickListener
 {
-  i$1(i parami, ag paramag, m paramm) {}
+  i$1(i parami, ai paramai, q paramq) {}
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    i.kWe = true;
-    i.a(lgV, bRe, kWg);
+    i.lwk = true;
+    i.a(lHh, bKB, lwm);
   }
 }
 

@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/ui/chatting/ChattingUI$a$1;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.super Lcom/tencent/mm/sdk/platformtools/ac;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.field final synthetic lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
 
 # direct methods
@@ -23,10 +23,10 @@
     .locals 0
 
     .prologue
-    .line 658
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$1;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 562
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$1;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
     return-void
 .end method
@@ -37,8 +37,8 @@
     .locals 1
 
     .prologue
-    .line 662
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$1;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 566
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$1;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->isFinishing()Z
 
@@ -46,14 +46,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 673
+    .line 577
     :cond_0
     :goto_0
     return-void
 
-    .line 667
+    .line 571
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$1;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$1;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->b(Lcom/tencent/mm/ui/chatting/ChattingUI$a;)Z
 
@@ -61,18 +61,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 668
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$1;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 572
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$1;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->c(Lcom/tencent/mm/ui/chatting/ChattingUI$a;)Z
 
-    .line 669
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$1;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 573
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$1;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->bfB()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->bll()V
 
-    .line 670
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$1;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 574
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$1;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->d(Lcom/tencent/mm/ui/chatting/ChattingUI$a;)V
 

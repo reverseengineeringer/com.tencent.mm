@@ -7,30 +7,33 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.ui.MMActivity;
 
 public class SnsLongMsgUI
   extends MMActivity
 {
-  private Button hfL;
+  private Button huC;
   
   protected final int getLayoutId()
   {
-    return 2131362906;
+    return 2130903849;
   }
   
   @TargetApi(17)
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    qa(8);
-    hfL = ((Button)findViewById(2131168741));
-    hfL.setOnClickListener(new View.OnClickListener()
+    rP(8);
+    huC = ((Button)findViewById(2131757557));
+    huC.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
         paramAnonymousView = new Intent();
         paramAnonymousView.setClass(SnsLongMsgUI.this, SnsUploadUI.class);
+        paramAnonymousView.putExtra("KSnsPostManu", true);
+        paramAnonymousView.putExtra("KTouchCameraTime", be.Go());
         paramAnonymousView.putExtra("sns_comment_type", 1);
         paramAnonymousView.putExtra("Ksnsupload_type", 9);
         startActivity(paramAnonymousView);
@@ -50,6 +53,8 @@ public class SnsLongMsgUI
     {
       paramKeyEvent = new Intent();
       paramKeyEvent.setClass(this, SnsUploadUI.class);
+      paramKeyEvent.putExtra("KSnsPostManu", true);
+      paramKeyEvent.putExtra("KTouchCameraTime", be.Go());
       paramKeyEvent.putExtra("sns_comment_type", 1);
       paramKeyEvent.putExtra("Ksnsupload_type", 9);
       startActivity(paramKeyEvent);

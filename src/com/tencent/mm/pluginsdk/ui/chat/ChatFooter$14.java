@@ -2,23 +2,23 @@ package com.tencent.mm.pluginsdk.ui.chat;
 
 import android.os.Message;
 import android.widget.Button;
-import com.tencent.mm.aw.a;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.az.a;
+import com.tencent.mm.sdk.platformtools.ac;
 import com.tencent.mm.ui.base.o;
 
 final class ChatFooter$14
-  extends aa
+  extends ac
 {
   ChatFooter$14(ChatFooter paramChatFooter) {}
   
   public final void handleMessage(Message paramMessage)
   {
     super.handleMessage(paramMessage);
-    if (ChatFooter.D(iLO) != null)
+    if (ChatFooter.E(jiL) != null)
     {
-      ChatFooter.D(iLO).dismiss();
-      ChatFooter.r(iLO).setBackgroundDrawable(a.y(iLO.getContext(), 2130970308));
-      ChatFooter.r(iLO).setEnabled(true);
+      ChatFooter.E(jiL).dismiss();
+      ChatFooter.r(jiL).setBackgroundDrawable(a.C(jiL.getContext(), 2130839182));
+      ChatFooter.r(jiL).setEnabled(true);
     }
   }
 }

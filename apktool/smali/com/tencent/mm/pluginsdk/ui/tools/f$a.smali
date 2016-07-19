@@ -15,17 +15,17 @@
 
 
 # virtual methods
-.method public abstract Xq()V
+.method public abstract Zb()V
 .end method
 
-.method public abstract aA(II)I
+.method public abstract aE(II)V
 .end method
 
-.method public abstract aB(II)V
+.method public abstract aF(II)I
 .end method
 
-.method public abstract az(II)V
+.method public abstract aG(II)V
 .end method
 
-.method public abstract lG()V
+.method public abstract jQ()V
 .end method

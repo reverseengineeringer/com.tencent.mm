@@ -3,7 +3,7 @@ package com.tencent.mm.ui.base;
 import android.view.KeyEvent;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class MMTagPanel$5
   implements TextView.OnEditorActionListener
@@ -12,7 +12,7 @@ final class MMTagPanel$5
   
   public final boolean onEditorAction(TextView paramTextView, int paramInt, KeyEvent paramKeyEvent)
   {
-    u.d("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "on action %d, %s", new Object[] { Integer.valueOf(paramInt), paramKeyEvent });
+    v.d("MicroMsg.MMTagPanel", "on action %d, %s", new Object[] { Integer.valueOf(paramInt), paramKeyEvent });
     return false;
   }
 }

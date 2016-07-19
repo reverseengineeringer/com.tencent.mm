@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/tencent/mm/ui/base/MMSlideDelView$c;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+.field final synthetic lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 245
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$14;->loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+    .line 293
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$14;->lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,58 +36,20 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 5
+.method public final I(Landroid/view/View;)I
+    .locals 1
 
     .prologue
-    const/16 v4, 0xa
-
-    const/16 v3, 0x8
-
-    const/4 v2, 0x0
-
-    .line 249
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$14;->loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+    .line 297
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$14;->lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizConversationUI$a;->a(Lcom/tencent/mm/ui/conversation/BizConversationUI$a;)Landroid/widget/ListView;
 
     move-result-object v0
 
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-virtual {v0, p1}, Landroid/widget/ListView;->getPositionForView(Landroid/view/View;)I
 
-    if-lt v1, v3, :cond_2
+    move-result v0
 
-    new-instance v1, Lcom/tencent/mm/platformtools/p;
-
-    invoke-direct {v1}, Lcom/tencent/mm/platformtools/p;-><init>()V
-
-    invoke-virtual {v0}, Landroid/widget/ListView;->getFirstVisiblePosition()I
-
-    move-result v1
-
-    if-le v1, v4, :cond_0
-
-    invoke-virtual {v0, v4}, Landroid/widget/ListView;->setSelection(I)V
-
-    :cond_0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    if-lt v1, v3, :cond_1
-
-    invoke-virtual {v0, v2}, Landroid/widget/ListView;->smoothScrollToPosition(I)V
-
-    .line 250
-    :cond_1
-    :goto_0
-    return-void
-
-    .line 249
-    :cond_2
-    new-instance v1, Lcom/tencent/mm/platformtools/o;
-
-    invoke-direct {v1}, Lcom/tencent/mm/platformtools/o;-><init>()V
-
-    invoke-virtual {v0, v2}, Landroid/widget/ListView;->setSelection(I)V
-
-    goto :goto_0
+    return v0
 .end method

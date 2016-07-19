@@ -1,52 +1,35 @@
 package com.tencent.mm.ui.chatting;
 
-import android.annotation.TargetApi;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnHoverListener;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
-public final class dn
+final class dn
 {
-  private static dn lde;
-  Object ldd;
-  
-  public static dn bgi()
-  {
-    try
-    {
-      if (lde == null) {
-        lde = new dn();
-      }
-      dn localdn = lde;
-      return localdn;
-    }
-    finally {}
-  }
-  
-  @TargetApi(14)
-  public static final class a
-    implements View.OnHoverListener
-  {
-    private dn.b ldf;
-    
-    public a(dn.b paramb)
-    {
-      ldf = paramb;
-    }
-    
-    public final boolean onHover(View paramView, MotionEvent paramMotionEvent)
-    {
-      if (ldf != null) {
-        return ldf.c(paramView, paramMotionEvent);
-      }
-      return false;
-    }
-  }
-  
-  public static abstract interface b
-  {
-    public abstract boolean c(View paramView, MotionEvent paramMotionEvent);
-  }
+  View lCX;
+  ImageView lCY;
+  View lCZ;
+  ImageView lDa;
+  TextView lDb;
+  TextView lDc;
+  TextView lDd;
+  TextView lDe;
+  LinearLayout lDf;
+  TextView lDg;
+  TextView lDh;
+  View lDi;
+  LinearLayout lDj;
+  LinearLayout lDk;
+  View lDl;
+  LinearLayout lDm;
+  LinearLayout lDn;
+  View lDo;
+  TextView lDp;
+  TextView lDq;
+  ImageView lDr;
+  ImageView lDs;
+  ImageView lDt;
 }
 
 /* Location:

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/cd3" android:focusable="true" android:scrollbars="none" android:transcriptMode="disabled" style="@style/MMList" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_gravity="center_horizontal" android:id="@id/cd_" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ct2" />
+    </FrameLayout>
+</LinearLayout>

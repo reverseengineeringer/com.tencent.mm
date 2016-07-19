@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto"
+  xmlns:android1="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:persistent="false" android:summary="@string/crx" android:title="@string/cru" android:key="sns_outside_permiss" android:defaultValue="false" />
+    <CheckBoxPreference android:persistent="false" android:summary="@string/cop" android:title="@string/col" android:key="sns_black_permiss" android:defaultValue="false" />
+</PreferenceScreen>

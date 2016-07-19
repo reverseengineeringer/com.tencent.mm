@@ -3,7 +3,7 @@ package com.tencent.mm.modelsns;
 import android.os.Parcelable.Creator;
 
 final class SnsAdClick$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<SnsAdClick>
 {}
 
 /* Location:

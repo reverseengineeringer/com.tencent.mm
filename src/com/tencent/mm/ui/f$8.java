@@ -1,23 +1,15 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.sdk.c.b;
-import com.tencent.mm.sdk.c.c;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.e.a.mv;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.storage.h;
 
 final class f$8
-  extends c
+  extends com.tencent.mm.sdk.c.c<mv>
 {
   f$8(f paramf)
   {
-    super(1);
-  }
-  
-  public final boolean a(b paramb)
-  {
-    u.i("!44@/B4Tb64lLpLZlZzKaYOI/yivpFQ+kVwcf+qE8n6dW1E=", "dynamic config file change");
-    f.d(klo).sendEmptyMessage(1);
-    return true;
+    kum = mv.class.getName().hashCode();
   }
 }
 

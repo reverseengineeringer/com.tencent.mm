@@ -2,11 +2,11 @@ package com.tencent.mm.plugin.sight.encode.ui;
 
 import android.os.Looper;
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class MainSightContainerView$9
-  extends aa
+  extends ac
 {
   MainSightContainerView$9(MainSightContainerView paramMainSightContainerView, Looper paramLooper)
   {
@@ -15,22 +15,15 @@ final class MainSightContainerView$9
   
   public final void handleMessage(Message paramMessage)
   {
-    u.i("!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI=", "on animation callback type %d", new Object[] { Integer.valueOf(what) });
-    if (MainSightContainerView.u(gCA) == null) {
+    v.i("MicroMsg.MainSightContainerView", "on animation callback type %d", new Object[] { Integer.valueOf(what) });
+    if (MainSightContainerView.u(gJb) == null) {
       return;
     }
-    if (what == 1) {
-      MainSightContainerView.u(gCA).awK();
+    if (what != 1) {
+      int i = what;
     }
-    for (;;)
-    {
-      MainSightContainerView.v(gCA).clearAnimation();
-      MainSightContainerView.v(gCA).setVisibility(4);
-      return;
-      if (what == 0) {
-        MainSightContainerView.u(gCA).awL();
-      }
-    }
+    MainSightContainerView.v(gJb).clearAnimation();
+    MainSightContainerView.v(gJb).setVisibility(4);
   }
 }
 

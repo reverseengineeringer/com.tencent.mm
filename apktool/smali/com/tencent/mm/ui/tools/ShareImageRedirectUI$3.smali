@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lxO:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
+.field final synthetic lYD:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 79
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI$3;->lxO:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI$3;->lYD:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 82
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI$3;->lxO:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI$3;->lYD:Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/ShareImageRedirectUI;->finish()V
 

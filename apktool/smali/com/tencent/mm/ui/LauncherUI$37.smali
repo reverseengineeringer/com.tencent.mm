@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/animation/Animation$AnimationListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/ui/LauncherUI;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/ui/LauncherUI;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic knl:Lcom/tencent/mm/ui/LauncherUI;
+.field final synthetic kMs:Lcom/tencent/mm/ui/LauncherUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 5080
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$37;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 4633
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$37;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,63 +36,21 @@
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
-    .locals 2
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 3
 
     .prologue
-    .line 5092
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$37;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 4636
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$37;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->M(Lcom/tencent/mm/ui/LauncherUI;)Landroid/view/animation/Animation;
+    new-instance v1, Landroid/content/Intent;
 
-    move-result-object v0
+    const-string/jumbo v2, "android.settings.MANAGE_APPLICATIONS_SETTINGS"
 
-    if-ne v0, p1, :cond_1
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 5093
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$37;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->startActivity(Landroid/content/Intent;)V
 
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->e(Lcom/tencent/mm/ui/LauncherUI;Z)V
-
-    .line 5098
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 5094
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$37;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->N(Lcom/tencent/mm/ui/LauncherUI;)Landroid/view/animation/Animation;
-
-    move-result-object v0
-
-    if-ne v0, p1, :cond_0
-
-    .line 5095
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$37;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->e(Lcom/tencent/mm/ui/LauncherUI;Z)V
-
-    goto :goto_0
-.end method
-
-.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    .prologue
-    .line 5088
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    .prologue
-    .line 5084
+    .line 4637
     return-void
 .end method

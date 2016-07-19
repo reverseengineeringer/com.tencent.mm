@@ -10,7 +10,7 @@ final class ChatFooter$7
   
   public final void onClick(View paramView)
   {
-    ChatFooter.q(iLO);
+    ChatFooter.q(jiL);
   }
 }
 

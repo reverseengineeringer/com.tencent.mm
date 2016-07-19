@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/ga" android:background="@drawable/dl" android:layout_width="fill_parent" android:layout_height="@dimen/i6">
+        <TextView android:textSize="@dimen/i8" android:id="@id/gi" android:paddingLeft="@dimen/j8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="{nick}" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/MMFontTitleInList" />
+    </RelativeLayout>
+</RelativeLayout>

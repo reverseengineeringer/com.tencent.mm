@@ -15,158 +15,158 @@
 
 
 # static fields
-.field public static iyD:Lcom/tencent/mm/pluginsdk/i$u;
+.field public static iUZ:Lcom/tencent/mm/pluginsdk/i$u;
 
-.field public static iyE:Lcom/tencent/mm/pluginsdk/i$v;
+.field public static iVa:Lcom/tencent/mm/pluginsdk/i$v;
 
-.field public static iyF:Lcom/tencent/mm/pluginsdk/i$j;
+.field public static iVb:Lcom/tencent/mm/pluginsdk/i$j;
 
-.field public static iyG:Lcom/tencent/mm/pluginsdk/i$r;
+.field public static iVc:Lcom/tencent/mm/pluginsdk/i$r;
 
-.field public static iyH:Lcom/tencent/mm/pluginsdk/i$f;
+.field public static iVd:Lcom/tencent/mm/pluginsdk/i$f;
 
-.field public static iyI:Lcom/tencent/mm/pluginsdk/i$m;
+.field public static iVe:Lcom/tencent/mm/pluginsdk/i$m;
 
-.field public static iyJ:Lcom/tencent/mm/pluginsdk/i$d;
+.field public static iVf:Lcom/tencent/mm/pluginsdk/i$d;
 
-.field public static iyK:Lcom/tencent/mm/pluginsdk/i$p;
+.field public static iVg:Lcom/tencent/mm/pluginsdk/i$p;
 
-.field public static iyL:Lcom/tencent/mm/pluginsdk/i$l;
+.field public static iVh:Lcom/tencent/mm/pluginsdk/i$l;
 
-.field public static iyM:Lcom/tencent/mm/pluginsdk/i$y;
+.field public static iVi:Lcom/tencent/mm/pluginsdk/i$y;
 
-.field public static iyN:Lcom/tencent/mm/pluginsdk/i$aa;
+.field public static iVj:Lcom/tencent/mm/pluginsdk/i$aa;
 
-.field public static iyO:Lcom/tencent/mm/pluginsdk/i$x;
+.field public static iVk:Lcom/tencent/mm/pluginsdk/i$x;
 
-.field public static iyP:Lcom/tencent/mm/pluginsdk/i$e;
+.field public static iVl:Lcom/tencent/mm/pluginsdk/i$e;
 
-.field public static iyQ:Lcom/tencent/mm/pluginsdk/i$ae;
+.field public static iVm:Lcom/tencent/mm/pluginsdk/i$ae;
 
-.field public static iyR:Lcom/tencent/mm/pluginsdk/i$k;
+.field public static iVn:Lcom/tencent/mm/pluginsdk/i$k;
 
-.field public static iyS:Lcom/tencent/mm/pluginsdk/i$c;
+.field public static iVo:Lcom/tencent/mm/pluginsdk/i$c;
 
-.field public static iyT:Lcom/tencent/mm/pluginsdk/i$g;
+.field public static iVp:Lcom/tencent/mm/pluginsdk/i$g;
 
-.field public static iyU:Lcom/tencent/mm/pluginsdk/i$b;
+.field public static iVq:Lcom/tencent/mm/pluginsdk/i$b;
 
-.field public static iyV:Lcom/tencent/mm/pluginsdk/i$i;
+.field public static iVr:Lcom/tencent/mm/pluginsdk/i$i;
 
 
 # direct methods
-.method public static aOS()Lcom/tencent/mm/pluginsdk/i$m;
+.method public static aTu()Lcom/tencent/mm/pluginsdk/i$m;
     .locals 2
 
     .prologue
-    .line 706
-    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iyI:Lcom/tencent/mm/pluginsdk/i$m;
+    .line 703
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iVe:Lcom/tencent/mm/pluginsdk/i$m;
 
     if-nez v0, :cond_0
 
-    .line 707
-    const-string/jumbo v0, "!44@/B4Tb64lLpKhdb2ZkhnNAZZun1WKwwb6seYTmHcGL2c="
+    .line 704
+    const-string/jumbo v0, "MicroMsg.IPluginEvent.Factory"
 
     const-string/jumbo v1, "get shake mgr is null, new default"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 708
+    .line 705
     new-instance v0, Lcom/tencent/mm/pluginsdk/a/d;
 
     invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/a/d;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iyI:Lcom/tencent/mm/pluginsdk/i$m;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iVe:Lcom/tencent/mm/pluginsdk/i$m;
 
-    .line 710
+    .line 707
     :cond_0
-    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iyI:Lcom/tencent/mm/pluginsdk/i$m;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iVe:Lcom/tencent/mm/pluginsdk/i$m;
 
     return-object v0
 .end method
 
-.method public static aOT()Lcom/tencent/mm/pluginsdk/i$f;
+.method public static aTv()Lcom/tencent/mm/pluginsdk/i$f;
     .locals 2
 
     .prologue
-    .line 726
-    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iyH:Lcom/tencent/mm/pluginsdk/i$f;
+    .line 723
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iVd:Lcom/tencent/mm/pluginsdk/i$f;
 
     if-nez v0, :cond_0
 
-    .line 727
-    const-string/jumbo v0, "!44@/B4Tb64lLpKhdb2ZkhnNAZZun1WKwwb6seYTmHcGL2c="
+    .line 724
+    const-string/jumbo v0, "MicroMsg.IPluginEvent.Factory"
 
     const-string/jumbo v1, "get emoji mgr is null, new default"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 728
+    .line 725
     new-instance v0, Lcom/tencent/mm/pluginsdk/a/b;
 
     invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/a/b;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iyH:Lcom/tencent/mm/pluginsdk/i$f;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iVd:Lcom/tencent/mm/pluginsdk/i$f;
 
-    .line 730
+    .line 727
     :cond_0
-    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iyH:Lcom/tencent/mm/pluginsdk/i$f;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iVd:Lcom/tencent/mm/pluginsdk/i$f;
 
     return-object v0
 .end method
 
-.method public static aOU()Lcom/tencent/mm/pluginsdk/i$p;
+.method public static aTw()Lcom/tencent/mm/pluginsdk/i$p;
     .locals 1
 
     .prologue
-    .line 813
-    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iyK:Lcom/tencent/mm/pluginsdk/i$p;
+    .line 810
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iVg:Lcom/tencent/mm/pluginsdk/i$p;
 
     return-object v0
 .end method
 
-.method public static aOV()Lcom/tencent/mm/pluginsdk/i$l;
+.method public static aTx()Lcom/tencent/mm/pluginsdk/i$l;
     .locals 1
 
     .prologue
-    .line 821
-    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iyL:Lcom/tencent/mm/pluginsdk/i$l;
+    .line 818
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iVh:Lcom/tencent/mm/pluginsdk/i$l;
 
     if-nez v0, :cond_0
 
-    .line 822
+    .line 819
     new-instance v0, Lcom/tencent/mm/pluginsdk/a/c;
 
     invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/a/c;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iyL:Lcom/tencent/mm/pluginsdk/i$l;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iVh:Lcom/tencent/mm/pluginsdk/i$l;
 
-    .line 824
+    .line 821
     :cond_0
-    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iyL:Lcom/tencent/mm/pluginsdk/i$l;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iVh:Lcom/tencent/mm/pluginsdk/i$l;
 
     return-object v0
 .end method
 
-.method public static aOW()Lcom/tencent/mm/pluginsdk/i$e;
+.method public static aTy()Lcom/tencent/mm/pluginsdk/i$e;
     .locals 1
 
     .prologue
-    .line 864
-    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iyP:Lcom/tencent/mm/pluginsdk/i$e;
+    .line 861
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iVl:Lcom/tencent/mm/pluginsdk/i$e;
 
     if-nez v0, :cond_0
 
-    .line 865
+    .line 862
     new-instance v0, Lcom/tencent/mm/pluginsdk/a/a;
 
     invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/a/a;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iyP:Lcom/tencent/mm/pluginsdk/i$e;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iVl:Lcom/tencent/mm/pluginsdk/i$e;
 
-    .line 867
+    .line 864
     :cond_0
-    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iyP:Lcom/tencent/mm/pluginsdk/i$e;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iVl:Lcom/tencent/mm/pluginsdk/i$e;
 
     return-object v0
 .end method

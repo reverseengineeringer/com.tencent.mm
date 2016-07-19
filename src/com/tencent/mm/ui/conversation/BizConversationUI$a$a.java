@@ -9,19 +9,19 @@ import com.tencent.mm.ui.i.a;
 final class BizConversationUI$a$a
   extends c
 {
-  private String aEl;
+  private String aqp;
   
   public BizConversationUI$a$a(Context paramContext, String paramString, i.a parama)
   {
     super(paramContext, parama);
-    aEl = paramString;
+    aqp = paramString;
   }
   
-  public final void Gk()
+  public final void GH()
   {
-    setCursor(ah.tD().rt().c(i.bzW, cvM, aEl));
-    if (koC != null) {
-      koC.Gh();
+    setCursor(ah.tE().ru().c(i.bsZ, crs, aqp));
+    if (kNG != null) {
+      kNG.GE();
     }
     super.notifyDataSetChanged();
   }

@@ -1,28 +1,32 @@
 package com.tencent.mm.ui.transmit;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.AsyncTask;
-import com.tencent.mm.protocal.b.ask;
+import com.tencent.mm.protocal.b.ata;
+import com.tencent.mm.sdk.platformtools.ac;
 
 public final class MsgRetransmitUI$a
-  extends AsyncTask
+  extends AsyncTask<Object, Object, String>
 {
-  public String ajh;
-  public String anC;
-  public int ceY;
-  public int cfZ;
+  public String UX;
+  public String aaq;
+  public String atH;
+  public int cak;
+  public int cbl;
+  public Dialog ckI;
   public Context context;
-  public Dialog cpu;
-  public boolean lAF = false;
-  public int lAH;
-  public boolean lAV;
-  public String lAW;
-  public boolean lAX = true;
-  public boolean lAY = false;
-  public boolean lAZ = true;
-  public ask lBa = null;
-  public MsgRetransmitUI.b lBb = null;
+  private ac mHandler = new ac();
+  public boolean mbO;
+  public String mbP;
+  public boolean mbQ = true;
+  public boolean mbR = false;
+  public boolean mbS = true;
+  public ata mbT = null;
+  public MsgRetransmitUI.b mbU = null;
+  public boolean mbu = false;
+  public int mbw;
 }
 
 /* Location:

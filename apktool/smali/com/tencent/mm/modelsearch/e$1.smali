@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic bZg:Ljava/util/List;
+.field final synthetic bSP:Ljava/util/List;
 
-.field final synthetic bZh:[Ljava/lang/String;
+.field final synthetic bSQ:[Ljava/lang/String;
 
-.field final synthetic bZi:Lcom/tencent/mm/modelsearch/e;
+.field final synthetic bSR:Lcom/tencent/mm/modelsearch/e;
 
 
 # direct methods
@@ -31,11 +31,11 @@
 
     .prologue
     .line 44
-    iput-object p1, p0, Lcom/tencent/mm/modelsearch/e$1;->bZi:Lcom/tencent/mm/modelsearch/e;
+    iput-object p1, p0, Lcom/tencent/mm/modelsearch/e$1;->bSR:Lcom/tencent/mm/modelsearch/e;
 
-    iput-object p2, p0, Lcom/tencent/mm/modelsearch/e$1;->bZg:Ljava/util/List;
+    iput-object p2, p0, Lcom/tencent/mm/modelsearch/e$1;->bSP:Ljava/util/List;
 
-    iput-object p3, p0, Lcom/tencent/mm/modelsearch/e$1;->bZh:[Ljava/lang/String;
+    iput-object p3, p0, Lcom/tencent/mm/modelsearch/e$1;->bSQ:[Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,23 +49,23 @@
 
     .prologue
     .line 47
-    iget-object v0, p0, Lcom/tencent/mm/modelsearch/e$1;->bZi:Lcom/tencent/mm/modelsearch/e;
+    iget-object v0, p0, Lcom/tencent/mm/modelsearch/e$1;->bSR:Lcom/tencent/mm/modelsearch/e;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelsearch/e;->bZf:Lcom/tencent/mm/modelsearch/m$j;
+    iget-object v0, v0, Lcom/tencent/mm/modelsearch/e;->bSO:Lcom/tencent/mm/modelsearch/m$j;
 
-    iget-object v1, p0, Lcom/tencent/mm/modelsearch/e$1;->bZi:Lcom/tencent/mm/modelsearch/e;
+    iget-object v1, p0, Lcom/tencent/mm/modelsearch/e$1;->bSR:Lcom/tencent/mm/modelsearch/e;
 
-    iget-object v2, p0, Lcom/tencent/mm/modelsearch/e$1;->bZg:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/modelsearch/e$1;->bSP:Ljava/util/List;
 
-    iget-object v3, p0, Lcom/tencent/mm/modelsearch/e$1;->bZi:Lcom/tencent/mm/modelsearch/e;
+    iget-object v3, p0, Lcom/tencent/mm/modelsearch/e$1;->bSR:Lcom/tencent/mm/modelsearch/e;
 
-    iget-object v3, v3, Lcom/tencent/mm/modelsearch/e;->bYt:Ljava/util/HashSet;
+    iget-object v3, v3, Lcom/tencent/mm/modelsearch/e;->bSc:Ljava/util/HashSet;
 
-    iget-object v4, p0, Lcom/tencent/mm/modelsearch/e$1;->bZh:[Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/modelsearch/e$1;->bSQ:[Ljava/lang/String;
 
-    iget-object v5, p0, Lcom/tencent/mm/modelsearch/e$1;->bZi:Lcom/tencent/mm/modelsearch/e;
+    iget-object v5, p0, Lcom/tencent/mm/modelsearch/e$1;->bSR:Lcom/tencent/mm/modelsearch/e;
 
-    iget-object v5, v5, Lcom/tencent/mm/modelsearch/e;->aEy:Ljava/lang/String;
+    iget-object v5, v5, Lcom/tencent/mm/modelsearch/e;->aqC:Ljava/lang/String;
 
     invoke-interface/range {v0 .. v5}, Lcom/tencent/mm/modelsearch/m$j;->a(Lcom/tencent/mm/modelsearch/m$k;Ljava/util/List;Ljava/util/HashSet;[Ljava/lang/String;Ljava/lang/String;)V
 

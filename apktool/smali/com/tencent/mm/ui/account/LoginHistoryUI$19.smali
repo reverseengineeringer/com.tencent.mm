@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic ktA:Ljava/lang/String;
+.field final synthetic cRT:Ljava/lang/String;
 
-.field final synthetic ktB:Ljava/lang/String;
+.field final synthetic kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
-.field final synthetic ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+.field final synthetic kSI:Ljava/lang/String;
 
 
 # direct methods
@@ -30,12 +30,12 @@
     .locals 0
 
     .prologue
-    .line 1374
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$19;->ktx:Lcom/tencent/mm/ui/account/LoginHistoryUI;
+    .line 1344
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$19;->kSF:Lcom/tencent/mm/ui/account/LoginHistoryUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$19;->ktA:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$19;->kSI:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$19;->ktB:Ljava/lang/String;
+    iput-object p3, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$19;->cRT:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,22 +48,24 @@
     .locals 3
 
     .prologue
-    .line 1377
-    new-instance v0, Lcom/tencent/mm/ak/b;
+    .line 1347
+    new-instance v0, Lcom/tencent/mm/an/b;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$19;->ktA:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$19;->kSI:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$19;->ktB:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI$19;->cRT:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/ak/b;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/an/b;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1379
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 1349
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    const/4 v2, 0x0
 
-    .line 1380
+    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
+
+    .line 1350
     return-void
 .end method

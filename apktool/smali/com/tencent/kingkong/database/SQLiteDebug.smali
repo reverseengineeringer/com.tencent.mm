@@ -45,34 +45,31 @@
 
     const/4 v2, 0x2
 
-    .line 61
+    .line 60
     const-string/jumbo v1, "SQLiteLog"
 
     invoke-static {v1, v2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v1
 
-    .line 60
     sput-boolean v1, Lcom/tencent/kingkong/database/SQLiteDebug;->DEBUG_SQL_LOG:Z
 
-    .line 69
+    .line 68
     const-string/jumbo v1, "SQLiteStatements"
 
     invoke-static {v1, v2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v1
 
-    .line 68
     sput-boolean v1, Lcom/tencent/kingkong/database/SQLiteDebug;->DEBUG_SQL_STATEMENTS:Z
 
-    .line 78
+    .line 77
     const-string/jumbo v1, "SQLiteTime"
 
     invoke-static {v1, v2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v1
 
-    .line 77
     sput-boolean v1, Lcom/tencent/kingkong/database/SQLiteDebug;->DEBUG_SQL_TIME:Z
 
     .line 86
@@ -85,10 +82,8 @@
     :goto_0
     sput-boolean v0, Lcom/tencent/kingkong/database/SQLiteDebug;->DEBUG_LOG_SLOW_QUERIES:Z
 
-    .line 28
     return-void
 
-    .line 86
     :cond_0
     const/4 v0, 0x0
 
@@ -119,16 +114,8 @@
     move v1, v0
 
     :goto_0
-    if-lt v1, v2, :cond_0
+    if-ge v1, v2, :cond_1
 
-    .line 266
-    invoke-static {v0}, Lcom/tencent/kingkong/database/SQLiteDatabase;->dumpAll(Z)V
-
-    .line 267
-    return-void
-
-    .line 260
-    :cond_0
     aget-object v3, p0, v1
 
     .line 261
@@ -138,16 +125,23 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_0
 
     .line 262
     const/4 v0, 0x1
 
     .line 260
-    :cond_1
+    :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
+
+    .line 266
+    :cond_1
+    invoke-static {v0}, Lcom/tencent/kingkong/database/SQLiteDatabase;->dumpAll(Z)V
+
+    .line 267
+    return-void
 .end method
 
 .method public static getDatabaseInfo()Lcom/tencent/kingkong/database/SQLiteDebug$PagerStats;
@@ -210,7 +204,6 @@
 
     move-result-object v2
 
-    .line 93
     const/4 v3, 0x2
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -235,10 +228,8 @@
 
     move-result-object v0
 
-    .line 92
     check-cast v0, Ljava/lang/Integer;
 
-    .line 93
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0

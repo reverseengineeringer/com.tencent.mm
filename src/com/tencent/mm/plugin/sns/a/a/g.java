@@ -2,19 +2,19 @@ package com.tencent.mm.plugin.sns.a.a;
 
 import android.os.SystemClock;
 import com.tencent.mm.plugin.sns.a.a.a.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.LinkedList;
 
 public final class g
 {
-  public String TAG = "!44@/B4Tb64lLpK6kwwQ4jIENGe7Uip3+XJdW0Abb/Nu6d0=";
-  public int gGN = 0;
-  public int gGO = 0;
-  public long gGP = 0L;
-  public int gGQ = 0;
-  public a gGR = new a();
-  public LinkedList gGS = new LinkedList();
+  public String TAG = "MicroMsg.SnsAdVideoStatistic";
+  public int gNo = 0;
+  public int gNp = 0;
+  public long gNq = 0L;
+  public int gNr = 0;
+  public a gNs = new a();
+  public LinkedList<a> gNt = new LinkedList();
   
   public g() {}
   
@@ -23,38 +23,38 @@ public final class g
     TAG = ("MicroMsg.SnsAdVideoStatistic:" + paramString);
   }
   
-  public final String axw()
+  public final String azY()
   {
-    if (gGP == 0L) {}
-    for (int i = 0;; i = (int)ay.ao(gGP))
+    if (gNq == 0L) {}
+    for (int i = 0;; i = (int)be.av(gNq))
     {
-      gGO = i;
-      u.d(TAG, "__staytotaltime " + gGP + " " + gGO + " clock: " + SystemClock.elapsedRealtime());
+      gNp = i;
+      v.d(TAG, "__staytotaltime " + gNq + " " + gNp + " clock: " + SystemClock.elapsedRealtime());
       localObject = new StringBuffer();
       ((StringBuffer)localObject).append("<viewinfo>");
       ((StringBuffer)localObject).append("<downloadstatus>");
-      ((StringBuffer)localObject).append(gGN);
+      ((StringBuffer)localObject).append(gNo);
       ((StringBuffer)localObject).append("</downloadstatus>");
       ((StringBuffer)localObject).append("<staytotaltime>");
-      ((StringBuffer)localObject).append(gGO);
+      ((StringBuffer)localObject).append(gNp);
       ((StringBuffer)localObject).append("</staytotaltime>");
-      if (gGQ > 0)
+      if (gNr > 0)
       {
         ((StringBuffer)localObject).append("<masktotaltime>");
-        ((StringBuffer)localObject).append(gGQ);
+        ((StringBuffer)localObject).append(gNr);
         ((StringBuffer)localObject).append("</masktotaltime>");
       }
-      ((StringBuffer)localObject).append(String.format("<playitemlist count=\"%d\">", new Object[] { Integer.valueOf(gGS.size()) }));
+      ((StringBuffer)localObject).append(String.format("<playitemlist count=\"%d\">", new Object[] { Integer.valueOf(gNt.size()) }));
       i = 0;
-      while (i < gGS.size())
+      while (i < gNt.size())
       {
-        a locala = (a)gGS.get(i);
+        a locala = (a)gNt.get(i);
         ((StringBuffer)localObject).append("<playitem>");
-        ((StringBuffer)localObject).append(String.format("<playcount>%d</playcount>", new Object[] { Integer.valueOf(gHi) }));
-        ((StringBuffer)localObject).append(String.format("<playtotaltime>%d</playtotaltime>", new Object[] { Integer.valueOf(gHj) }));
-        ((StringBuffer)localObject).append(String.format("<videototaltime>%d</videototaltime>", new Object[] { Integer.valueOf(gHk * 1000) }));
-        ((StringBuffer)localObject).append(String.format("<playmode>%d</playmode>", new Object[] { Integer.valueOf(gHl) }));
-        ((StringBuffer)localObject).append(String.format("<playorientation>%d</playorientation>", new Object[] { Integer.valueOf(gHm) }));
+        ((StringBuffer)localObject).append(String.format("<playcount>%d</playcount>", new Object[] { Integer.valueOf(gOn) }));
+        ((StringBuffer)localObject).append(String.format("<playtotaltime>%d</playtotaltime>", new Object[] { Integer.valueOf(gOo) }));
+        ((StringBuffer)localObject).append(String.format("<videototaltime>%d</videototaltime>", new Object[] { Integer.valueOf(gOp * 1000) }));
+        ((StringBuffer)localObject).append(String.format("<playmode>%d</playmode>", new Object[] { Integer.valueOf(gOq) }));
+        ((StringBuffer)localObject).append(String.format("<playorientation>%d</playorientation>", new Object[] { Integer.valueOf(gOr) }));
         ((StringBuffer)localObject).append("</playitem>");
         i += 1;
       }
@@ -62,30 +62,30 @@ public final class g
     ((StringBuffer)localObject).append("</playitemlist>");
     ((StringBuffer)localObject).append("</viewinfo>");
     Object localObject = ((StringBuffer)localObject).toString();
-    u.i(TAG, "xml " + (String)localObject);
+    v.i(TAG, "xml " + (String)localObject);
     return (String)localObject;
   }
   
-  public final void lk(int paramInt)
+  public final void mt(int paramInt)
   {
     a locala;
-    if (gGR.gHj <= 0)
+    if (gNs.gOo <= 0)
     {
-      locala = gGR;
-      if (gGR.gHn != 0L) {
+      locala = gNs;
+      if (gNs.gOs != 0L) {
         break label114;
       }
     }
     label114:
-    for (int i = 0;; i = (int)ay.ao(gGR.gHn))
+    for (int i = 0;; i = (int)be.av(gNs.gOs))
     {
-      gHj = i;
+      gOo = i;
       if (paramInt != 0) {
-        gGR.gHk = paramInt;
+        gNs.gOp = paramInt;
       }
-      u.i(TAG, "pushplayitem duration " + gGR.gHj + " " + gGR.gHm);
-      gGS.add(gGR);
-      gGR = new a();
+      v.i(TAG, "pushplayitem duration " + gNs.gOo + " " + gNs.gOr);
+      gNt.add(gNs);
+      gNs = new a();
       return;
     }
   }

@@ -13,15 +13,31 @@
     name = "a"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
 
 # instance fields
-.field private handler:Lcom/tencent/mm/sdk/platformtools/aa;
+.field private handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-.field final synthetic iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+.field final jpC:I
 
-.field final iSt:I
+.field jpD:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList",
+            "<TT;>;"
+        }
+    .end annotation
+.end field
 
-.field iSu:Ljava/util/LinkedList;
+.field final synthetic jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
 
 # direct methods
@@ -29,19 +45,19 @@
     .locals 2
 
     .prologue
-    .line 286
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$a;->iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+    .line 284
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$a;->jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 282
+    .line 280
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$a;->iSu:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$a;->jpD:Ljava/util/LinkedList;
 
-    .line 287
+    .line 285
     const/4 v0, 0x1
 
     const/16 v1, 0x10
@@ -50,30 +66,40 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$a;->iSt:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$a;->jpC:I
 
-    .line 288
+    .line 286
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/g$a$1;
 
     invoke-direct {v0, p0, p3, p1}, Lcom/tencent/mm/pluginsdk/ui/tools/g$a$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/g$a;Landroid/os/Looper;Lcom/tencent/mm/pluginsdk/ui/tools/g;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$a;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$a;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    .line 297
+    .line 295
     return-void
 .end method
 
 
 # virtual methods
-.method protected abstract aSP()Ljava/lang/Object;
+.method protected abstract aXI()Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
 .end method
 
-.method public final aSQ()Ljava/lang/Object;
+.method public final aXJ()Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
 
     .prologue
-    .line 302
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$a;->iSu:Ljava/util/LinkedList;
+    .line 300
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$a;->jpD:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->isEmpty()Z
 
@@ -81,17 +107,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 303
-    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/g$a;->aSP()Ljava/lang/Object;
+    .line 301
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/g$a;->aXI()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 305
+    .line 303
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$a;->iSu:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$a;->jpD:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
 
@@ -102,21 +128,26 @@
 
 .method public final v(Ljava/lang/Object;)V
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 316
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$a;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 314
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$a;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$a;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$a;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
     const/4 v2, 0x1
 
-    invoke-virtual {v1, v2, p1}, Lcom/tencent/mm/sdk/platformtools/aa;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {v1, v2, p1}, Lcom/tencent/mm/sdk/platformtools/ac;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->sendMessage(Landroid/os/Message;)Z
 
-    .line 317
+    .line 315
     return-void
 .end method

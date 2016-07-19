@@ -4,13 +4,13 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import com.tencent.mm.a.e;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.compatible.util.d;
 import com.tencent.mm.pluginsdk.l;
 import com.tencent.mm.pluginsdk.ui.applet.g;
 import com.tencent.mm.pluginsdk.ui.d.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
 
 @URISpanHandlerSet.a
 class URISpanHandlerSet$AlphaInstallUriSpanHandler
@@ -27,16 +27,16 @@ class URISpanHandlerSet$AlphaInstallUriSpanHandler
     {
       paramg = url.replace("weixin://alphainstall?", "");
       paramb = Uri.parse(paramg).getQueryParameter("md5");
-      paramb = d.bxd + paramb + ".apk";
-      if (e.ax(paramb)) {
-        ay.i(paramb, y.getContext());
+      paramb = d.bpf + paramb + ".apk";
+      if (e.aB(paramb)) {
+        be.i(paramb, aa.getContext());
       }
       for (;;)
       {
         return true;
         paramb = new Intent();
         paramb.putExtra("rawUrl", paramg.toString());
-        c.c(URISpanHandlerSet.a(ang), "webview", ".ui.tools.WebViewUI", paramb);
+        c.c(URISpanHandlerSet.a(ZU), "webview", ".ui.tools.WebViewUI", paramb);
       }
     }
     return false;
@@ -47,7 +47,7 @@ class URISpanHandlerSet$AlphaInstallUriSpanHandler
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     if (paramString.trim().toLowerCase().startsWith("weixin://alphainstall?")) {
       return new g(paramString, 32, null);
@@ -55,7 +55,7 @@ class URISpanHandlerSet$AlphaInstallUriSpanHandler
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 32 };
   }

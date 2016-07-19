@@ -16,260 +16,268 @@
 
 
 # instance fields
-.field private bQM:Lcom/tencent/mm/sdk/platformtools/aa;
+.field public bNe:Ljava/lang/String;
 
-.field private bTF:Ljava/lang/String;
+.field private bpz:Lcom/tencent/mm/sdk/platformtools/ac;
 
-.field private cyM:Z
+.field public cvK:Z
 
-.field public dMC:Landroid/view/View;
+.field public dOk:Landroid/view/View;
 
-.field public dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+.field public dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
-.field public dtU:Landroid/widget/ProgressBar;
+.field public duj:Landroid/widget/ProgressBar;
 
 .field private duration:I
 
-.field private gtk:I
+.field private gFA:I
 
-.field private gtl:I
+.field private gFB:J
 
-.field private gyN:I
+.field private gFC:Landroid/view/animation/Animation;
 
-.field private gyO:I
+.field private gFD:Landroid/view/animation/Animation;
 
-.field private gyP:Z
+.field private gFE:Ljava/lang/Runnable;
 
-.field private gyQ:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$a;
+.field public gFF:I
 
-.field private gyR:Landroid/view/ViewGroup;
+.field private gFn:I
 
-.field public gyS:Lcom/tencent/mm/plugin/sight/decode/ui/a;
+.field private gFo:I
 
-.field private gyT:D
+.field private gFp:Z
 
-.field public gyU:Landroid/widget/TextView;
+.field public gFq:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$a;
 
-.field public gyV:Ljava/lang/String;
+.field private gFr:Landroid/view/ViewGroup;
 
-.field private gyW:Landroid/view/View;
+.field public gFs:Lcom/tencent/mm/plugin/sight/decode/ui/a;
 
-.field private gyX:Landroid/view/View;
+.field private gFt:D
 
-.field private gyY:J
+.field public gFu:Landroid/widget/TextView;
 
-.field private gyZ:Landroid/view/animation/Animation;
+.field public gFv:Ljava/lang/String;
 
-.field private gza:Landroid/view/animation/Animation;
+.field public gFw:Landroid/view/View;
 
-.field private gzb:Ljava/lang/Runnable;
+.field public gFx:Landroid/view/View;
 
-.field public gzc:I
+.field public gFy:Z
+
+.field private gFz:I
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 5
+    .locals 6
 
     .prologue
+    const/4 v5, 0x1
+
     const/high16 v4, 0x3f800000    # 1.0f
 
     const/4 v3, 0x0
 
     const/4 v2, 0x0
 
-    .line 93
+    .line 94
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 46
     const/16 v0, 0x140
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyN:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFn:I
 
     .line 47
     const/16 v0, 0xf0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyO:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFo:I
 
     .line 48
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyP:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFp:Z
 
     .line 52
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     .line 54
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyT:D
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFt:D
 
     .line 57
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyV:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFv:Ljava/lang/String;
 
     .line 59
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bQM:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bpz:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    .line 64
+    .line 63
+    iput-boolean v5, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFy:Z
+
+    .line 65
     iput v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->duration:I
 
-    .line 66
-    iput v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gtl:I
-
     .line 67
-    iput v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gtk:I
+    iput v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFz:I
 
-    .line 69
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->cyM:Z
+    .line 68
+    iput v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFA:I
 
-    .line 72
+    .line 70
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->cvK:Z
+
+    .line 73
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyY:J
-
-    .line 75
-    new-instance v0, Landroid/view/animation/AlphaAnimation;
-
-    invoke-direct {v0, v4, v3}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyZ:Landroid/view/animation/Animation;
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFB:J
 
     .line 76
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
+    invoke-direct {v0, v4, v3}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFC:Landroid/view/animation/Animation;
+
+    .line 77
+    new-instance v0, Landroid/view/animation/AlphaAnimation;
+
     invoke-direct {v0, v3, v4}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gza:Landroid/view/animation/Animation;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFD:Landroid/view/animation/Animation;
 
-    .line 315
+    .line 325
     new-instance v0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$4;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$4;-><init>(Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gzb:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFE:Ljava/lang/Runnable;
 
-    .line 535
-    iput v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gzc:I
-
-    .line 94
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->init()V
+    .line 545
+    iput v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFF:I
 
     .line 95
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->init()V
+
+    .line 96
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 5
+    .locals 6
 
     .prologue
+    const/4 v5, 0x1
+
     const/high16 v4, 0x3f800000    # 1.0f
 
     const/4 v3, 0x0
 
     const/4 v2, 0x0
 
-    .line 98
+    .line 99
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 46
     const/16 v0, 0x140
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyN:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFn:I
 
     .line 47
     const/16 v0, 0xf0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyO:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFo:I
 
     .line 48
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyP:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFp:Z
 
     .line 52
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     .line 54
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyT:D
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFt:D
 
     .line 57
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyV:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFv:Ljava/lang/String;
 
     .line 59
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bQM:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bpz:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    .line 64
+    .line 63
+    iput-boolean v5, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFy:Z
+
+    .line 65
     iput v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->duration:I
 
-    .line 66
-    iput v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gtl:I
-
     .line 67
-    iput v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gtk:I
+    iput v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFz:I
 
-    .line 69
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->cyM:Z
+    .line 68
+    iput v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFA:I
 
-    .line 72
+    .line 70
+    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->cvK:Z
+
+    .line 73
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyY:J
-
-    .line 75
-    new-instance v0, Landroid/view/animation/AlphaAnimation;
-
-    invoke-direct {v0, v4, v3}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyZ:Landroid/view/animation/Animation;
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFB:J
 
     .line 76
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
+    invoke-direct {v0, v4, v3}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFC:Landroid/view/animation/Animation;
+
+    .line 77
+    new-instance v0, Landroid/view/animation/AlphaAnimation;
+
     invoke-direct {v0, v3, v4}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gza:Landroid/view/animation/Animation;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFD:Landroid/view/animation/Animation;
 
-    .line 315
+    .line 325
     new-instance v0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$4;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$4;-><init>(Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gzb:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFE:Ljava/lang/Runnable;
 
-    .line 535
-    iput v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gzc:I
-
-    .line 99
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->init()V
+    .line 545
+    iput v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFF:I
 
     .line 100
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->init()V
+
+    .line 101
     return-void
 .end method
 
 .method static synthetic a(Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;D)D
-    .locals 0
+    .locals 1
 
     .prologue
     .line 34
-    iput-wide p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyT:D
+    iput-wide p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFt:D
 
     return-wide p1
 .end method
@@ -285,11 +293,11 @@
 .end method
 
 .method static synthetic a(Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;J)J
-    .locals 0
+    .locals 1
 
     .prologue
     .line 34
-    iput-wide p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyY:J
+    iput-wide p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFB:J
 
     return-wide p1
 .end method
@@ -299,7 +307,7 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     return-object v0
 .end method
@@ -309,85 +317,91 @@
 
     .prologue
     .line 34
-    invoke-direct {p0, p1}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->eF(Z)V
+    invoke-direct {p0, p1}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->ev(Z)V
 
     return-void
 .end method
 
-.method private avY()V
+.method private ayv()V
     .locals 4
 
     .prologue
     const/4 v1, 0x0
 
-    .line 299
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyS:Lcom/tencent/mm/plugin/sight/decode/ui/a;
+    .line 307
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFs:Lcom/tencent/mm/plugin/sight/decode/ui/a;
 
     check-cast v0, Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 300
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyW:Landroid/view/View;
+    .line 308
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFw:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 301
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyX:Landroid/view/View;
+    .line 309
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFy:Z
+
+    if-eqz v0, :cond_0
+
+    .line 310
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFx:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 302
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gzc:I
+    .line 312
+    :cond_0
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFF:I
 
     const/4 v2, 0x2
 
-    if-ne v0, v2, :cond_1
+    if-ne v0, v2, :cond_2
 
     move v0, v1
 
     :goto_0
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dMC:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dOk:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 303
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bQM:Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 313
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bpz:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gzb:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFE:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 304
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bQM:Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 314
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bpz:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gzb:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFE:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0xbb8
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/aa;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ac;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 305
+    .line 315
     return-void
 
-    .line 302
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyV:Ljava/lang/String;
+    .line 312
+    :cond_2
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFv:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     move v0, v1
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     const/4 v0, 0x1
 
     goto :goto_0
@@ -398,7 +412,7 @@
 
     .prologue
     .line 34
-    iput p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyN:I
+    iput p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFn:I
 
     return p1
 .end method
@@ -408,7 +422,7 @@
 
     .prologue
     .line 34
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->cyM:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->cvK:Z
 
     return v0
 .end method
@@ -418,7 +432,7 @@
 
     .prologue
     .line 34
-    iput p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyO:I
+    iput p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFo:I
 
     return p1
 .end method
@@ -428,7 +442,7 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyS:Lcom/tencent/mm/plugin/sight/decode/ui/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFs:Lcom/tencent/mm/plugin/sight/decode/ui/a;
 
     return-object v0
 .end method
@@ -440,7 +454,7 @@
     .line 34
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->kX(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->me(I)V
 
     return-void
 .end method
@@ -450,38 +464,38 @@
 
     .prologue
     .line 34
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->avY()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->ayv()V
 
     return-void
 .end method
 
-.method private eF(Z)V
+.method private ev(Z)V
     .locals 4
 
     .prologue
-    .line 406
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    .line 416
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
-    iget-wide v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyT:D
+    iget-wide v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFt:D
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->g(D)V
+    invoke-interface {v0, v2, v3}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->j(D)V
 
-    .line 407
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    .line 417
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->start()Z
 
-    .line 408
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bQM:Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 418
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bpz:Lcom/tencent/mm/sdk/platformtools/ac;
 
     new-instance v1, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$7;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$7;-><init>(Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
-    .line 417
-    const-string/jumbo v0, "!32@/B4Tb64lLpKQpS0z/gOJ2Vq6wExBF/3X"
+    .line 427
+    const-string/jumbo v0, "MicroMsg.VideoPlayView"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -501,7 +515,7 @@
 
     move-result-object v1
 
-    iget-wide v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyT:D
+    iget-wide v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFt:D
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -511,19 +525,19 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 418
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyQ:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$a;
+    .line 428
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFq:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$a;
 
     if-eqz v0, :cond_0
 
-    .line 419
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyQ:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$a;
+    .line 429
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFq:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$a;
 
-    invoke-interface {v0, p1}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$a;->eG(Z)V
+    invoke-interface {v0, p1}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$a;->ey(Z)V
 
-    .line 422
+    .line 432
     :cond_0
     return-void
 .end method
@@ -533,7 +547,7 @@
 
     .prologue
     .line 34
-    iget-wide v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyY:J
+    iget-wide v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFB:J
 
     return-wide v0
 .end method
@@ -543,7 +557,7 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyQ:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFq:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$a;
 
     return-object v0
 .end method
@@ -553,7 +567,7 @@
 
     .prologue
     .line 34
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyP:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFp:Z
 
     return v0
 .end method
@@ -565,7 +579,7 @@
     .line 34
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyP:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFp:Z
 
     return v0
 .end method
@@ -580,45 +594,45 @@
 
     const/4 v3, 0x0
 
-    .line 103
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyZ:Landroid/view/animation/Animation;
-
-    invoke-virtual {v0, v4, v5}, Landroid/view/animation/Animation;->setDuration(J)V
-
     .line 104
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gza:Landroid/view/animation/Animation;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFC:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v4, v5}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 105
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFD:Landroid/view/animation/Animation;
+
+    invoke-virtual {v0, v4, v5}, Landroid/view/animation/Animation;->setDuration(J)V
+
+    .line 106
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0a04c3
+    const v1, 0x7f0305e6
 
     invoke-static {v0, v1, p0}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 107
-    const v0, 0x7f070ed9
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyW:Landroid/view/View;
-
     .line 108
-    const v0, 0x7f070eda
+    const v0, 0x7f101128
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyX:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFw:Landroid/view/View;
 
-    .line 110
-    const v0, 0x7f070406
+    .line 109
+    const v0, 0x7f101129
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFx:Landroid/view/View;
+
+    .line 111
+    const v0, 0x7f100932
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->findViewById(I)Landroid/view/View;
 
@@ -626,10 +640,10 @@
 
     check-cast v0, Landroid/widget/ProgressBar;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dtU:Landroid/widget/ProgressBar;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->duj:Landroid/widget/ProgressBar;
 
-    .line 112
-    const v0, 0x7f0704fd
+    .line 113
+    const v0, 0x7f100722
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->findViewById(I)Landroid/view/View;
 
@@ -637,40 +651,40 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyR:Landroid/view/ViewGroup;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFr:Landroid/view/ViewGroup;
 
-    .line 114
+    .line 115
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/m;->cU(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/m;->cS(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
-
-    .line 115
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
-
-    invoke-interface {v0, v3}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->setLoop(Z)V
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     .line 116
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+
+    invoke-interface {v0, v3}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->ew(Z)V
+
+    .line 117
     new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v1, v2, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 118
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyR:Landroid/view/ViewGroup;
+    .line 119
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFr:Landroid/view/ViewGroup;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     check-cast v0, Landroid/view/View;
 
     invoke-virtual {v2, v0, v3, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
-    .line 120
-    const v0, 0x7f07109d
+    .line 121
+    const v0, 0x7f100f9d
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->findViewById(I)Landroid/view/View;
 
@@ -678,38 +692,38 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyU:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFu:Landroid/widget/TextView;
 
-    .line 121
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyU:Landroid/widget/TextView;
+    .line 122
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFu:Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dMC:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dOk:Landroid/view/View;
 
-    .line 123
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    .line 124
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     new-instance v1, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$1;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$1;-><init>(Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;)V
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->setVideoCallback(Lcom/tencent/mm/pluginsdk/ui/tools/f$a;)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->a(Lcom/tencent/mm/pluginsdk/ui/tools/f$a;)V
 
-    .line 208
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    .line 209
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     instance-of v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;
 
     if-eqz v0, :cond_0
 
-    .line 209
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    .line 210
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     check-cast v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;
 
-    .line 210
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->setEnableConfigChanged(Z)V
+    .line 211
+    iput-boolean v3, v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->jqe:Z
 
-    .line 213
+    .line 214
     :cond_0
     new-instance v0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$2;
 
@@ -717,11 +731,11 @@
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 229
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->avZ()V
+    .line 230
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->ayw()V
 
-    .line 231
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    .line 232
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     check-cast v0, Landroid/view/View;
 
@@ -731,7 +745,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    .line 245
+    .line 246
     return-void
 .end method
 
@@ -740,7 +754,7 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dtU:Landroid/widget/ProgressBar;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->duj:Landroid/widget/ProgressBar;
 
     return-object v0
 .end method
@@ -750,7 +764,7 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyW:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFw:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
@@ -758,13 +772,13 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->avZ()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->ayw()V
 
     :goto_0
     return-void
 
     :cond_0
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->avY()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->ayv()V
 
     goto :goto_0
 .end method
@@ -774,17 +788,17 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gzb:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFE:Ljava/lang/Runnable;
 
     return-object v0
 .end method
 
-.method static synthetic m(Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;)Lcom/tencent/mm/sdk/platformtools/aa;
+.method static synthetic m(Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;)Lcom/tencent/mm/sdk/platformtools/ac;
     .locals 1
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bQM:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bpz:Lcom/tencent/mm/sdk/platformtools/ac;
 
     return-object v0
 .end method
@@ -796,7 +810,7 @@
     .line 34
     const/4 v0, -0x1
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->kX(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->me(I)V
 
     return-void
 .end method
@@ -806,48 +820,111 @@
 
     .prologue
     .line 34
-    iget-wide v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyT:D
+    iget-wide v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFt:D
 
     return-wide v0
 .end method
 
 
 # virtual methods
-.method public final avZ()V
+.method public final a(Lcom/tencent/mm/pluginsdk/ui/tools/f$a;)V
+    .locals 1
+
+    .prologue
+    .line 491
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+
+    invoke-interface {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->a(Lcom/tencent/mm/pluginsdk/ui/tools/f$a;)V
+
+    .line 492
+    return-void
+.end method
+
+.method public final axW()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 464
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bNe:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final ayw()V
     .locals 2
 
     .prologue
     const/16 v1, 0x8
 
-    .line 308
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyS:Lcom/tencent/mm/plugin/sight/decode/ui/a;
+    .line 318
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFs:Lcom/tencent/mm/plugin/sight/decode/ui/a;
 
     if-eqz v0, :cond_0
 
-    .line 309
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyS:Lcom/tencent/mm/plugin/sight/decode/ui/a;
+    .line 319
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFs:Lcom/tencent/mm/plugin/sight/decode/ui/a;
 
     check-cast v0, Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 311
+    .line 321
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyW:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFw:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 312
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyX:Landroid/view/View;
+    .line 322
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFx:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 313
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dMC:Landroid/view/View;
+    .line 323
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dOk:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 314
+    .line 324
+    return-void
+.end method
+
+.method public final ayx()D
+    .locals 2
+
+    .prologue
+    .line 487
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->ayx()D
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final ew(Z)V
+    .locals 1
+
+    .prologue
+    .line 482
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+
+    invoke-interface {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->ew(Z)V
+
+    .line 483
+    return-void
+.end method
+
+.method public final ex(Z)V
+    .locals 1
+
+    .prologue
+    .line 516
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+
+    invoke-interface {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->ex(Z)V
+
+    .line 517
     return-void
 .end method
 
@@ -855,8 +932,8 @@
     .locals 1
 
     .prologue
-    .line 459
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    .line 469
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     invoke-interface {v0, p1, p2}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->f(Landroid/content/Context;Z)Z
 
@@ -865,32 +942,12 @@
     return v0
 .end method
 
-.method public final g(D)V
-    .locals 2
-
-    .prologue
-    .line 501
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
-
-    invoke-interface {v0, p1, p2}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->g(D)V
-
-    .line 502
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyS:Lcom/tencent/mm/plugin/sight/decode/ui/a;
-
-    double-to-int v1, p1
-
-    invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/sight/decode/ui/a;->kU(I)V
-
-    .line 503
-    return-void
-.end method
-
-.method public getCurrentPosition()I
+.method public final getCurrentPosition()I
     .locals 1
 
     .prologue
-    .line 485
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    .line 495
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->getCurrentPosition()I
 
@@ -899,23 +956,23 @@
     return v0
 .end method
 
-.method public getDuration()I
+.method public final getDuration()I
     .locals 1
 
     .prologue
-    .line 489
+    .line 499
     iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->duration:I
 
     if-nez v0, :cond_0
 
-    .line 490
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    .line 500
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->getDuration()I
 
     move-result v0
 
-    .line 492
+    .line 502
     :goto_0
     return v0
 
@@ -925,36 +982,12 @@
     goto :goto_0
 .end method
 
-.method public getLastProgresstime()D
-    .locals 2
-
-    .prologue
-    .line 477
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
-
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->getLastProgresstime()D
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public getVideoPath()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 454
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bTF:Ljava/lang/String;
-
-    return-object v0
-.end method
-
 .method public final isPlaying()Z
     .locals 1
 
     .prologue
-    .line 449
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    .line 459
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->isPlaying()Z
 
@@ -963,20 +996,72 @@
     return v0
 .end method
 
-.method public final kX(I)V
+.method public final j(D)V
+    .locals 3
+
+    .prologue
+    .line 511
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+
+    invoke-interface {v0, p1, p2}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->j(D)V
+
+    .line 512
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFs:Lcom/tencent/mm/plugin/sight/decode/ui/a;
+
+    double-to-int v1, p1
+
+    invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/sight/decode/ui/a;->ma(I)V
+
+    .line 513
+    return-void
+.end method
+
+.method public final kZ()V
+    .locals 0
+
+    .prologue
+    .line 523
+    return-void
+.end method
+
+.method public final la()V
+    .locals 0
+
+    .prologue
+    .line 528
+    return-void
+.end method
+
+.method public final lb()V
+    .locals 0
+
+    .prologue
+    .line 533
+    return-void
+.end method
+
+.method public final lc()V
+    .locals 0
+
+    .prologue
+    .line 538
+    return-void
+.end method
+
+.method public final me(I)V
     .locals 4
 
     .prologue
-    .line 425
+    .line 435
     if-ltz p1, :cond_1
 
     int-to-double v0, p1
 
     :goto_0
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyT:D
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFt:D
 
-    .line 426
-    const-string/jumbo v0, "!32@/B4Tb64lLpKQpS0z/gOJ2Vq6wExBF/3X"
+    .line 436
+    const-string/jumbo v0, "MicroMsg.VideoPlayView"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -984,7 +1069,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyT:D
+    iget-wide v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFt:D
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -1006,9 +1091,9 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
-    invoke-interface {v2}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->getLastProgresstime()D
+    invoke-interface {v2}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->ayx()D
 
     move-result-wide v2
 
@@ -1020,89 +1105,57 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 427
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    .line 437
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->pause()V
 
-    .line 429
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bQM:Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 439
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bpz:Lcom/tencent/mm/sdk/platformtools/ac;
 
     new-instance v1, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$8;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$8;-><init>(Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
-    .line 438
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyQ:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$a;
+    .line 448
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFq:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$a;
 
     if-eqz v0, :cond_0
 
-    .line 439
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyQ:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$a;
+    .line 449
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFq:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$a;->awa()V
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$a;->ayy()V
 
-    .line 442
+    .line 452
     :cond_0
     return-void
 
-    .line 425
+    .line 435
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->getLastProgresstime()D
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->ayx()D
 
     move-result-wide v0
 
     goto :goto_0
 .end method
 
-.method public final mM()V
-    .locals 0
-
-    .prologue
-    .line 513
-    return-void
-.end method
-
-.method public final mN()V
-    .locals 0
-
-    .prologue
-    .line 518
-    return-void
-.end method
-
-.method public final mO()V
-    .locals 0
-
-    .prologue
-    .line 523
-    return-void
-.end method
-
-.method public final mP()V
-    .locals 0
-
-    .prologue
-    .line 528
-    return-void
-.end method
-
 .method public final onDetach()V
     .locals 1
 
     .prologue
-    .line 468
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    .line 478
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->onDetach()V
 
-    .line 469
+    .line 479
     return-void
 .end method
 
@@ -1110,113 +1163,24 @@
     .locals 1
 
     .prologue
-    .line 402
+    .line 412
     const/4 v0, -0x1
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->kX(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->me(I)V
 
-    .line 403
+    .line 413
     return-void
 .end method
 
-.method public setIsDownloading(Z)V
-    .locals 0
-
-    .prologue
-    .line 282
-    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->cyM:Z
-
-    .line 283
-    return-void
-.end method
-
-.method public setLeftButtonOnClickListener(Landroid/view/View$OnClickListener;)V
-    .locals 1
-
-    .prologue
-    .line 388
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyW:Landroid/view/View;
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 389
-    return-void
-.end method
-
-.method public setLoop(Z)V
-    .locals 1
-
-    .prologue
-    .line 472
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
-
-    invoke-interface {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->setLoop(Z)V
-
-    .line 473
-    return-void
-.end method
-
-.method public setPlayProgressCallback(Z)V
-    .locals 1
-
-    .prologue
-    .line 506
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
-
-    invoke-interface {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->setPlayProgressCallback(Z)V
-
-    .line 507
-    return-void
-.end method
-
-.method public setRightButtonOnCliclListener(Landroid/view/View$OnClickListener;)V
-    .locals 1
-
-    .prologue
-    .line 392
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyX:Landroid/view/View;
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 393
-    return-void
-.end method
-
-.method public setThumb(Landroid/graphics/Bitmap;)V
-    .locals 1
-
-    .prologue
-    .line 497
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
-
-    invoke-interface {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->setThumb(Landroid/graphics/Bitmap;)V
-
-    .line 498
-    return-void
-.end method
-
-.method public setVideoCallback(Lcom/tencent/mm/pluginsdk/ui/tools/f$a;)V
-    .locals 1
-
-    .prologue
-    .line 481
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
-
-    invoke-interface {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->setVideoCallback(Lcom/tencent/mm/pluginsdk/ui/tools/f$a;)V
-
-    .line 482
-    return-void
-.end method
-
-.method public setVideoPath(Ljava/lang/String;)V
+.method public final setVideoPath(Ljava/lang/String;)V
     .locals 5
 
     .prologue
-    .line 79
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bTF:Ljava/lang/String;
-
     .line 80
-    const-string/jumbo v0, "!32@/B4Tb64lLpKQpS0z/gOJ2Vq6wExBF/3X"
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bNe:Ljava/lang/String;
+
+    .line 81
+    const-string/jumbo v0, "MicroMsg.VideoPlayView"
 
     const-string/jumbo v1, "videoPath  %s"
 
@@ -1226,54 +1190,20 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bTF:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bNe:Ljava/lang/String;
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 81
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    .line 82
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bTF:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bNe:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->setVideoPath(Ljava/lang/String;)V
 
-    .line 82
-    return-void
-.end method
-
-.method public setVideoPlayViewEvent(Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$a;)V
-    .locals 0
-
-    .prologue
-    .line 85
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyQ:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$a;
-
-    .line 86
-    return-void
-.end method
-
-.method public setVideoTotalTime(I)V
-    .locals 1
-
-    .prologue
-    .line 248
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyS:Lcom/tencent/mm/plugin/sight/decode/ui/a;
-
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/a;->getVideoTotalTime()I
-
-    move-result v0
-
-    if-eq v0, p1, :cond_0
-
-    .line 249
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyS:Lcom/tencent/mm/plugin/sight/decode/ui/a;
-
-    invoke-interface {v0, p1}, Lcom/tencent/mm/plugin/sight/decode/ui/a;->setVideoTotalTime(I)V
-
-    .line 251
-    :cond_0
+    .line 83
     return-void
 .end method
 
@@ -1283,10 +1213,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 397
-    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->eF(Z)V
+    .line 407
+    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->ev(Z)V
 
-    .line 398
+    .line 408
     return v0
 .end method
 
@@ -1294,12 +1224,12 @@
     .locals 1
 
     .prologue
-    .line 463
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    .line 473
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/f;->stop()V
 
-    .line 464
+    .line 474
     return-void
 .end method
 
@@ -1313,16 +1243,16 @@
 
     const-wide/high16 v6, 0x3ff0000000000000L    # 1.0
 
-    .line 554
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gtk:I
+    .line 564
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFA:I
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gtl:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFz:I
 
     if-nez v0, :cond_2
 
-    .line 555
+    .line 565
     :cond_0
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->getResources()Landroid/content/res/Resources;
 
@@ -1332,36 +1262,36 @@
 
     move-result-object v0
 
-    .line 556
+    .line 566
     iget v1, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    iput v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gtk:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFA:I
 
-    .line 557
+    .line 567
     iget v1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    iput v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gtl:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFz:I
 
-    .line 558
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gtk:I
+    .line 568
+    iget v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFA:I
 
-    iget v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gtl:I
+    iget v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFz:I
 
     if-ge v1, v2, :cond_1
 
-    .line 559
+    .line 569
     iget v1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    iput v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gtk:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFA:I
 
-    .line 560
+    .line 570
     iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gtl:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFz:I
 
-    .line 562
+    .line 572
     :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpKQpS0z/gOJ2Vq6wExBF/3X"
+    const-string/jumbo v0, "MicroMsg.VideoPlayView"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1369,7 +1299,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gtk:I
+    iget v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFA:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1381,7 +1311,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gtl:I
+    iget v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFz:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1391,18 +1321,18 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 565
+    .line 575
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyR:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFr:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
-    .line 568
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyS:Lcom/tencent/mm/plugin/sight/decode/ui/a;
+    .line 578
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFs:Lcom/tencent/mm/plugin/sight/decode/ui/a;
 
     if-nez v0, :cond_6
 
@@ -1410,36 +1340,36 @@
 
     move-object v1, v0
 
-    .line 571
+    .line 581
     :goto_0
     new-instance v3, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v3, v4, v4}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 573
+    .line 583
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_7
 
-    .line 574
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gtl:I
+    .line 584
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFz:I
 
     iput v0, v3, Landroid/widget/RelativeLayout$LayoutParams;->width:I
 
-    .line 575
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gtl:I
+    .line 585
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFz:I
 
     int-to-double v4, v0
 
     mul-double/2addr v4, v6
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyO:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFo:I
 
     int-to-double v6, v0
 
     mul-double/2addr v4, v6
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyN:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFn:I
 
     int-to-double v6, v0
 
@@ -1447,15 +1377,15 @@
 
     double-to-int v0, v4
 
-    .line 576
+    .line 586
     iput v0, v3, Landroid/widget/RelativeLayout$LayoutParams;->height:I
 
-    .line 577
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyS:Lcom/tencent/mm/plugin/sight/decode/ui/a;
+    .line 587
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFs:Lcom/tencent/mm/plugin/sight/decode/ui/a;
 
     if-eqz v0, :cond_3
 
-    .line 578
+    .line 588
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1466,34 +1396,34 @@
 
     iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
 
-    .line 588
+    .line 598
     :cond_3
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyS:Lcom/tencent/mm/plugin/sight/decode/ui/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFs:Lcom/tencent/mm/plugin/sight/decode/ui/a;
 
     if-eqz v0, :cond_4
 
-    .line 589
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyS:Lcom/tencent/mm/plugin/sight/decode/ui/a;
+    .line 599
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFs:Lcom/tencent/mm/plugin/sight/decode/ui/a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/a;->avT()V
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/a;->ayq()V
 
-    .line 590
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyS:Lcom/tencent/mm/plugin/sight/decode/ui/a;
+    .line 600
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFs:Lcom/tencent/mm/plugin/sight/decode/ui/a;
 
     check-cast v0, Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 592
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyS:Lcom/tencent/mm/plugin/sight/decode/ui/a;
+    .line 602
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFs:Lcom/tencent/mm/plugin/sight/decode/ui/a;
 
     instance-of v0, v0, Lcom/tencent/mm/plugin/sight/decode/ui/AdVideoPlayerLoadingBar;
 
     if-eqz v0, :cond_4
 
-    .line 593
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bQM:Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 603
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->bpz:Lcom/tencent/mm/sdk/platformtools/ac;
 
     new-instance v1, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$9;
 
@@ -1501,11 +1431,11 @@
 
     const-wide/16 v4, 0x1f4
 
-    invoke-virtual {v0, v1, v4, v5}, Lcom/tencent/mm/sdk/platformtools/aa;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, v1, v4, v5}, Lcom/tencent/mm/sdk/platformtools/ac;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 603
+    .line 613
     :cond_4
-    const-string/jumbo v0, "!32@/B4Tb64lLpKQpS0z/gOJ2Vq6wExBF/3X"
+    const-string/jumbo v0, "MicroMsg.VideoPlayView"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1545,24 +1475,24 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 604
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    .line 614
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     check-cast v0, Landroid/view/View;
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 605
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    .line 615
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     instance-of v0, v0, Lcom/tencent/mm/plugin/sight/decode/a/a;
 
     if-eqz v0, :cond_5
 
-    .line 606
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    .line 616
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     check-cast v0, Lcom/tencent/mm/plugin/sight/decode/a/a;
 
@@ -1570,37 +1500,37 @@
 
     iget v4, v3, Landroid/widget/RelativeLayout$LayoutParams;->height:I
 
-    invoke-interface {v0, v1, v4}, Lcom/tencent/mm/plugin/sight/decode/a/a;->bc(II)V
+    invoke-interface {v0, v1, v4}, Lcom/tencent/mm/plugin/sight/decode/a/a;->bg(II)V
 
-    .line 609
+    .line 619
     :cond_5
     iget v0, v3, Landroid/widget/RelativeLayout$LayoutParams;->height:I
 
     iput v0, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 610
+    .line 620
     iget v0, v3, Landroid/widget/RelativeLayout$LayoutParams;->width:I
 
     iput v0, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 611
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyR:Landroid/view/ViewGroup;
+    .line 621
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFr:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 612
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dTz:Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    .line 622
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->dVH:Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
     check-cast v0, Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
-    .line 621
+    .line 631
     return-void
 
-    .line 568
+    .line 578
     :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyS:Lcom/tencent/mm/plugin/sight/decode/ui/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFs:Lcom/tencent/mm/plugin/sight/decode/ui/a;
 
     check-cast v0, Landroid/view/View;
 
@@ -1614,26 +1544,26 @@
 
     goto/16 :goto_0
 
-    .line 581
+    .line 591
     :cond_7
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gtl:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFz:I
 
     iput v0, v3, Landroid/widget/RelativeLayout$LayoutParams;->height:I
 
-    .line 582
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gtl:I
+    .line 592
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFz:I
 
     int-to-double v4, v0
 
     mul-double/2addr v4, v6
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyN:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFn:I
 
     int-to-double v6, v0
 
     mul-double/2addr v4, v6
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyO:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFo:I
 
     int-to-double v6, v0
 
@@ -1641,15 +1571,15 @@
 
     double-to-int v0, v4
 
-    .line 583
+    .line 593
     iput v0, v3, Landroid/widget/RelativeLayout$LayoutParams;->width:I
 
-    .line 584
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gyS:Lcom/tencent/mm/plugin/sight/decode/ui/a;
+    .line 594
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->gFs:Lcom/tencent/mm/plugin/sight/decode/ui/a;
 
     if-eqz v0, :cond_3
 
-    .line 585
+    .line 595
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->getContext()Landroid/content/Context;
 
     move-result-object v0

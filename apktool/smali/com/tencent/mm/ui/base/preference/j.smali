@@ -4,13 +4,31 @@
 
 
 # static fields
-.field private static kMd:Ljava/util/HashMap;
+.field private static lls:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/reflect/Constructor",
+            "<*>;>;"
+        }
+    .end annotation
+.end field
 
-.field private static final kMf:[Ljava/lang/Class;
+.field private static final llu:[Ljava/lang/Class;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "[",
+            "Ljava/lang/Class",
+            "<*>;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field final kMe:[Ljava/lang/Object;
+.field final llt:[Ljava/lang/Object;
 
 .field final mContext:Landroid/content/Context;
 
@@ -25,7 +43,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/ui/base/preference/j;->kMd:Ljava/util/HashMap;
+    sput-object v0, Lcom/tencent/mm/ui/base/preference/j;->lls:Ljava/util/HashMap;
 
     .line 24
     const/4 v0, 0x2
@@ -44,7 +62,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/ui/base/preference/j;->kMf:[Ljava/lang/Class;
+    sput-object v0, Lcom/tencent/mm/ui/base/preference/j;->llu:[Ljava/lang/Class;
 
     return-void
 .end method
@@ -61,7 +79,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/j;->kMe:[Ljava/lang/Object;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/j;->llt:[Ljava/lang/Object;
 
     .line 27
     iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/j;->mContext:Landroid/content/Context;
@@ -75,7 +93,7 @@
 
     .prologue
     .line 82
-    sget-object v0, Lcom/tencent/mm/ui/base/preference/j;->kMd:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/ui/base/preference/j;->lls:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -118,7 +136,7 @@
     move-result-object v1
 
     .line 89
-    sget-object v2, Lcom/tencent/mm/ui/base/preference/j;->kMf:[Ljava/lang/Class;
+    sget-object v2, Lcom/tencent/mm/ui/base/preference/j;->llu:[Ljava/lang/Class;
 
     invoke-virtual {v1, v2}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
     :try_end_0
@@ -130,13 +148,13 @@
 
     .line 90
     :try_start_1
-    sget-object v0, Lcom/tencent/mm/ui/base/preference/j;->kMd:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/ui/base/preference/j;->lls:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 93
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/j;->kMe:[Ljava/lang/Object;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/j;->llt:[Ljava/lang/Object;
 
     .line 94
     const/4 v2, 0x1

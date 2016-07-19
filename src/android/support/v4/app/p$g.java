@@ -3,9 +3,9 @@ package android.support.v4.app;
 import java.util.ArrayList;
 
 public final class p$g
-  extends p.p
+  extends p.o
 {
-  ArrayList ds = new ArrayList();
+  ArrayList<CharSequence> dI = new ArrayList();
 }
 
 /* Location:

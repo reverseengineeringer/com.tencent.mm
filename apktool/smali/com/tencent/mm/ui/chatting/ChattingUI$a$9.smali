@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.field final synthetic lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 8544
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$9;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 8645
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$9;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,16 +37,28 @@
 
 # virtual methods
 .method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 8546
-    if-eqz p1, :cond_0
+    .line 8647
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$9;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    .line 8547
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->av(Lcom/tencent/mm/ui/chatting/ChattingUI$a;)Lcom/tencent/mm/ui/base/h;
 
-    .line 8549
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 8648
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$9;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->av(Lcom/tencent/mm/ui/chatting/ChattingUI$a;)Lcom/tencent/mm/ui/base/h;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->dismiss()V
+
+    .line 8650
     :cond_0
     return-void
 .end method

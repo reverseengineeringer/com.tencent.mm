@@ -1,20 +1,21 @@
 package com.tencent.mm.plugin.base.stub;
 
+import com.tencent.mm.e.a.dj;
 import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class WXCommProvider$2
-  implements af.a
+  implements ah.a
 {
   WXCommProvider$2(WXCommProvider paramWXCommProvider) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    if ((a.jUF != null) && (a.jUF.Cz("ExtCallBiz"))) {
+    if ((a.kug != null) && (a.kug.e(dj.class))) {
       synchronized (WXCommProvider.lock)
       {
-        u.i("!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph", "The lock was released.");
+        v.i("MicroMsg.WXCommProvider", "The lock was released.");
         WXCommProvider.lock.notifyAll();
         return false;
       }

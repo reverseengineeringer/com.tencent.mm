@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/b0p" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/kp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="12.0dip" android:layout_alignParentTop="true">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip">
+            <Button android:id="@id/b38" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="54.0dip" android:text="@string/b82" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/MMlineGreenMiddleButton" />
+            <LinearLayout android:gravity="center|left" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:layout_toLeftOf="@id/b38" android:layout_toRightOf="@id/b38" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_toStartOf="@id/b38">
+                <LinearLayout android:id="@id/b39" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+                    <TextView android:textSize="36.0sp" android:textColor="#ff000000" android:id="@id/b3_" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="18.0sp" android:textColor="#ff000000" android:id="@id/b3a" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <TextView android:textSize="12.0sp" android:textColor="#ffb2b2b2" android:id="@id/b3b" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="12.0sp" android:textColor="#ff1aad19" android:id="@id/b3c" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <View android:layout_width="fill_parent" android:layout_height="20.0dip" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

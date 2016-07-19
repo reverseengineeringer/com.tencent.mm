@@ -52,11 +52,11 @@
 
     .line 204
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpL3WgZWB2MnffCdxn0I3bAMmtDdvU5PFPM="
+    const-string/jumbo v0, "MicroMsg.AsyncObtainImage"
 
     const-string/jumbo v1, "resolvePhotoFromIntent fail, invalid argument"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 259
     :cond_1
@@ -98,11 +98,11 @@
     if-lez v0, :cond_4
 
     .line 213
-    const-string/jumbo v0, "!44@/B4Tb64lLpL3WgZWB2MnffCdxn0I3bAMmtDdvU5PFPM="
+    const-string/jumbo v0, "MicroMsg.AsyncObtainImage"
 
     const-string/jumbo v4, "resolve photo from cursor"
 
-    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 215
     :try_start_0
@@ -123,12 +123,12 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/d;->o(Landroid/net/Uri;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/d;->k(Landroid/net/Uri;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     .line 217
-    invoke-static {p2, v0}, Lcom/tencent/mm/ui/tools/a;->v(Ljava/lang/String;Landroid/graphics/Bitmap;)Ljava/lang/String;
+    invoke-static {p2, v0}, Lcom/tencent/mm/ui/tools/a;->s(Ljava/lang/String;Landroid/graphics/Bitmap;)Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -161,7 +161,7 @@
     move-result-object v2
 
     .line 223
-    const-string/jumbo v0, "!44@/B4Tb64lLpL3WgZWB2MnffCdxn0I3bAMmtDdvU5PFPM="
+    const-string/jumbo v0, "MicroMsg.AsyncObtainImage"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -177,7 +177,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -188,13 +188,13 @@
     move-exception v0
 
     .line 226
-    const-string/jumbo v1, "!44@/B4Tb64lLpL3WgZWB2MnffCdxn0I3bAMmtDdvU5PFPM="
+    const-string/jumbo v1, "MicroMsg.AsyncObtainImage"
 
     const-string/jumbo v4, "resolve photo error."
 
     new-array v5, v6, [Ljava/lang/Object;
 
-    invoke-static {v1, v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
@@ -230,7 +230,7 @@
 
     .line 234
     :cond_5
-    const-string/jumbo v1, "!44@/B4Tb64lLpL3WgZWB2MnffCdxn0I3bAMmtDdvU5PFPM="
+    const-string/jumbo v1, "MicroMsg.AsyncObtainImage"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -246,7 +246,7 @@
 
     move-result-object v4
 
-    invoke-static {v1, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 236
     if-nez v0, :cond_a
@@ -273,7 +273,7 @@
 
     .line 241
     :goto_2
-    const-string/jumbo v0, "!44@/B4Tb64lLpL3WgZWB2MnffCdxn0I3bAMmtDdvU5PFPM="
+    const-string/jumbo v0, "MicroMsg.AsyncObtainImage"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -289,7 +289,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -327,12 +327,12 @@
     check-cast v0, Landroid/graphics/Bitmap;
 
     .line 246
-    invoke-static {p2, v0}, Lcom/tencent/mm/ui/tools/a;->v(Ljava/lang/String;Landroid/graphics/Bitmap;)Ljava/lang/String;
+    invoke-static {p2, v0}, Lcom/tencent/mm/ui/tools/a;->s(Ljava/lang/String;Landroid/graphics/Bitmap;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 247
-    const-string/jumbo v0, "!44@/B4Tb64lLpL3WgZWB2MnffCdxn0I3bAMmtDdvU5PFPM="
+    const-string/jumbo v0, "MicroMsg.AsyncObtainImage"
 
     const-string/jumbo v1, "resolve photo from action-inline-data:%s"
 
@@ -342,7 +342,7 @@
 
     aput-object v2, v4, v6
 
-    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_1
 
@@ -355,11 +355,11 @@
 
     .line 252
     :cond_8
-    const-string/jumbo v0, "!44@/B4Tb64lLpL3WgZWB2MnffCdxn0I3bAMmtDdvU5PFPM="
+    const-string/jumbo v0, "MicroMsg.AsyncObtainImage"
 
     const-string/jumbo v1, "resolve photo from intent failed"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -393,7 +393,7 @@
 
     .line 122
     :cond_0
-    const-string/jumbo v1, "!44@/B4Tb64lLpL3WgZWB2MnffCdxn0I3bAMmtDdvU5PFPM="
+    const-string/jumbo v1, "MicroMsg.AsyncObtainImage"
 
     const-string/jumbo v2, "param error, %b"
 
@@ -410,7 +410,7 @@
 
     aput-object v0, v3, v8
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 199
     :cond_1
@@ -447,7 +447,7 @@
     move-result-object v0
 
     .line 128
-    const-string/jumbo v1, "!44@/B4Tb64lLpL3WgZWB2MnffCdxn0I3bAMmtDdvU5PFPM="
+    const-string/jumbo v1, "MicroMsg.AsyncObtainImage"
 
     const-string/jumbo v2, "resolvePhotoFromIntent, filePath:%s"
 
@@ -455,10 +455,10 @@
 
     aput-object v0, v3, v8
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 129
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -470,7 +470,7 @@
     .line 131
     const-string/jumbo v1, "CropImage_OutputPath"
 
-    invoke-interface {p5, v0}, Lcom/tencent/mm/ui/tools/a$a;->vP(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p5, v0}, Lcom/tencent/mm/ui/tools/a$a;->xc(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -518,7 +518,7 @@
     goto :goto_1
 .end method
 
-.method public static v(Ljava/lang/String;Landroid/graphics/Bitmap;)Ljava/lang/String;
+.method public static s(Ljava/lang/String;Landroid/graphics/Bitmap;)Ljava/lang/String;
     .locals 4
 
     .prologue
@@ -546,7 +546,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/a/g;->j([B)Ljava/lang/String;
 
     move-result-object v1
 
@@ -606,7 +606,7 @@
 
     invoke-direct {v2, v3}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 277
+    .line 276
     sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
     const/16 v3, 0x64
@@ -617,7 +617,7 @@
     invoke-virtual {v2}, Ljava/io/BufferedOutputStream;->close()V
 
     .line 279
-    const-string/jumbo v1, "!44@/B4Tb64lLpL3WgZWB2MnffCdxn0I3bAMmtDdvU5PFPM="
+    const-string/jumbo v1, "MicroMsg.AsyncObtainImage"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -633,7 +633,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -646,7 +646,7 @@
     move-exception v0
 
     .line 283
-    const-string/jumbo v1, "!44@/B4Tb64lLpL3WgZWB2MnffCdxn0I3bAMmtDdvU5PFPM="
+    const-string/jumbo v1, "MicroMsg.AsyncObtainImage"
 
     const-string/jumbo v2, "saveBmp Error."
 
@@ -654,7 +654,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 284
     const/4 v0, 0x0

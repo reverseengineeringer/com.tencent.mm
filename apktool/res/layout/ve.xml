@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tencent.mm.ui.KeyboardLinearLayout android:orientation="vertical" android:background="@color/i2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/b8d" android:background="@color/i2" android:focusable="true" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="0.0dip" android:listSelector="@android:color/transparent" android:scrollingCache="false" android:transcriptMode="disabled" android:divider="@drawable/hv" android:dividerHeight="@dimen/dz" android:layout_weight="1.0" android:headerDividersEnabled="false" android:footerDividersEnabled="false" />
+    <com.tencent.mm.plugin.luckymoney.ui.LuckyMoneyWishFooter android:id="@id/b8e" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.tencent.mm.ui.KeyboardLinearLayout>

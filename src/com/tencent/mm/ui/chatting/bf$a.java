@@ -3,25 +3,25 @@ package com.tencent.mm.ui.chatting;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
-import android.widget.TextView;
+import com.tencent.mm.ui.base.NoMeasuredTextView;
 
 final class bf$a
-  extends aa.a
+  extends ab.a
 {
-  protected ImageView bMr;
-  protected TextView kUu;
+  protected ImageView bFL;
+  protected NoMeasuredTextView luy;
   
   public bf$a(bf parambf, int paramInt)
   {
     super(paramInt);
   }
   
-  public final a aG(View paramView)
+  public final a aJ(View paramView)
   {
-    super.aC(paramView);
-    edK = ((CheckBox)paramView.findViewById(2131165186));
-    bMr = ((ImageView)paramView.findViewById(2131165607));
-    kUu = ((TextView)paramView.findViewById(2131165317));
+    super.aG(paramView);
+    ehl = ((CheckBox)paramView.findViewById(2131755013));
+    bFL = ((ImageView)paramView.findViewById(2131756095));
+    luy = ((NoMeasuredTextView)paramView.findViewById(2131756097));
     return this;
   }
 }

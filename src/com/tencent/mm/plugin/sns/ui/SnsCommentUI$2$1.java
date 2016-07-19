@@ -1,9 +1,11 @@
 package com.tencent.mm.plugin.sns.ui;
 
 import android.content.Intent;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.sns.data.i;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.f.h;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.tools.a.c.a;
 
 final class SnsCommentUI$2$1
@@ -11,19 +13,19 @@ final class SnsCommentUI$2$1
 {
   SnsCommentUI$2$1(SnsCommentUI.2 param2) {}
   
-  public final void Om() {}
+  public final void Px() {}
   
-  public final void On()
+  public final void Py()
   {
-    com.tencent.mm.ui.base.g.e(hdR.hdQ, 2131433035, 2131433034);
+    com.tencent.mm.ui.base.g.f(hsE.hsD, 2131235601, 2131235602);
   }
   
-  public final void mm(String paramString)
+  public final void ng(String paramString)
   {
-    String str1 = SnsCommentUI.b(hdR.hdQ).getText().toString().trim();
-    SnsCommentUI.b(hdR.hdQ).setText("");
+    String str1 = SnsCommentUI.b(hsE.hsD).getText().toString().trim();
+    SnsCommentUI.b(hsE.hsD).setText("");
     if (str1.length() > 0) {
-      switch (SnsCommentUI.a(hdR.hdQ))
+      switch (SnsCommentUI.a(hsE.hsD))
       {
       }
     }
@@ -33,27 +35,27 @@ final class SnsCommentUI$2$1
     do
     {
       return;
-      hdR.hdQ.age();
-      SnsCommentUI.a(hdR.hdQ, str1);
+      hsE.hsD.aiI();
+      SnsCommentUI.a(hsE.hsD, str1);
       return;
-      hdR.hdQ.age();
-      SnsCommentUI.b(hdR.hdQ, str1);
+      hsE.hsD.aiI();
+      SnsCommentUI.b(hsE.hsD, str1);
       return;
-      hdR.hdQ.age();
-      l1 = hdR.hdQ.getIntent().getLongExtra("sns_id", 0L);
-      l2 = hdR.hdQ.getIntent().getLongExtra("action_st_time", 0L);
-      paramString = ay.ad(hdR.hdQ.getIntent().getStringExtra("sns_uxinfo"), "");
-      str2 = ay.ad(hdR.hdQ.getIntent().getStringExtra("sns_actionresult"), "");
+      hsE.hsD.aiI();
+      l1 = hsE.hsD.getIntent().getLongExtra("sns_id", 0L);
+      l2 = hsE.hsD.getIntent().getLongExtra("action_st_time", 0L);
+      paramString = be.ab(hsE.hsD.getIntent().getStringExtra("sns_uxinfo"), "");
+      str2 = be.ab(hsE.hsD.getIntent().getStringExtra("sns_actionresult"), "");
       str1 = str2 + "|4:1:" + str1;
       l3 = System.currentTimeMillis();
-      localObject = ad.azb().azO();
-    } while ((localObject == null) || (!((com.tencent.mm.plugin.sns.e.h)localObject).azP()));
-    String str2 = gRI;
-    Object localObject = gRH;
-    u.d("!32@/B4Tb64lLpIPhXvycW2PJu41Xea6y1xl", "report abtestnotlike " + l1 + " uxinfo:" + paramString + " actionresult: " + str1 + " " + l2 + " " + l3);
-    com.tencent.mm.plugin.report.service.h.fUJ.g(11988, new Object[] { str2, localObject, "", "", com.tencent.mm.plugin.sns.data.h.bX(l1), paramString, str1, Long.valueOf(l2 / 1000L), Long.valueOf(l3 / 1000L) });
-    SnsCommentUI.c(hdR.hdQ);
-    hdR.hdQ.finish();
+      localObject = ad.aBB().aCp();
+    } while ((localObject == null) || (!((h)localObject).aCq()));
+    String str2 = gZL;
+    Object localObject = gZK;
+    v.d("MicroMsg.SnsCommentUI", "report abtestnotlike " + l1 + " uxinfo:" + paramString + " actionresult: " + str1 + " " + l2 + " " + l3);
+    com.tencent.mm.plugin.report.service.g.gdY.h(11988, new Object[] { str2, localObject, "", "", i.cn(l1), paramString, str1, Long.valueOf(l2 / 1000L), Long.valueOf(l3 / 1000L) });
+    SnsCommentUI.c(hsE.hsD);
+    hsE.hsD.finish();
   }
 }
 

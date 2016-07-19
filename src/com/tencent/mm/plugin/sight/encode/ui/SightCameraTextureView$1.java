@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sight.encode.ui;
 
 import android.graphics.SurfaceTexture;
 import android.view.TextureView.SurfaceTextureListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.MMTextureView;
 
 final class SightCameraTextureView$1
@@ -12,34 +12,34 @@ final class SightCameraTextureView$1
   
   public final void onSurfaceTextureAvailable(SurfaceTexture paramSurfaceTexture, int paramInt1, int paramInt2)
   {
-    u.i("!44@/B4Tb64lLpJusIoUV0UaqEWWY4ZA95CZ1/X4zWUi2B8=", "onSurfaceTextureAvailable, [%d, %d], input SurfaceTexture %s, get SurfaceTexture %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramSurfaceTexture, SightCameraTextureView.a(gEa).getSurfaceTexture() });
-    gEa.gEi = SightCameraView.b.gEr;
-    SightCameraTextureView.a(gEa).bcZ();
-    SightCameraTextureView.a(gEa, paramSurfaceTexture);
-    if ((gEa.getVisibility() == 0) && (gEa.gBY))
+    v.i("MicroMsg.SightCameraTextureView", "onSurfaceTextureAvailable, [%d, %d], input SurfaceTexture %s, get SurfaceTexture %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramSurfaceTexture, SightCameraTextureView.a(gKA).getSurfaceTexture() });
+    gKA.gKI = SightCameraView.b.gKS;
+    SightCameraTextureView.a(gKA).biB();
+    SightCameraTextureView.a(gKA, paramSurfaceTexture);
+    if ((gKA.getVisibility() == 0) && (gKA.gIA))
     {
-      u.i("!44@/B4Tb64lLpJusIoUV0UaqEWWY4ZA95CZ1/X4zWUi2B8=", "current view is visible, try preview camera");
-      gEa.axa();
+      v.i("MicroMsg.SightCameraTextureView", "current view is visible, try preview camera");
+      gKA.azz();
     }
-    u.i("!44@/B4Tb64lLpJusIoUV0UaqEWWY4ZA95CZ1/X4zWUi2B8=", "onSurfaceTextureAvailable end, sly texture %s", new Object[] { SightCameraTextureView.b(gEa) });
+    v.i("MicroMsg.SightCameraTextureView", "onSurfaceTextureAvailable end, sly texture %s", new Object[] { SightCameraTextureView.b(gKA) });
   }
   
   public final boolean onSurfaceTextureDestroyed(SurfaceTexture paramSurfaceTexture)
   {
-    u.i("!44@/B4Tb64lLpJusIoUV0UaqEWWY4ZA95CZ1/X4zWUi2B8=", "onSurfaceTextureDestroyed");
-    gEa.gEi = SightCameraView.b.gEt;
-    SightCameraTextureView.a(gEa, null);
-    gEa.gEj = false;
-    gEa.axb();
-    u.i("!44@/B4Tb64lLpJusIoUV0UaqEWWY4ZA95CZ1/X4zWUi2B8=", "destroyed texture %s", new Object[] { paramSurfaceTexture });
+    v.i("MicroMsg.SightCameraTextureView", "onSurfaceTextureDestroyed");
+    gKA.gKI = SightCameraView.b.gKU;
+    SightCameraTextureView.a(gKA, null);
+    gKA.gKJ = false;
+    gKA.azA();
+    v.i("MicroMsg.SightCameraTextureView", "destroyed texture %s", new Object[] { paramSurfaceTexture });
     return true;
   }
   
   public final void onSurfaceTextureSizeChanged(SurfaceTexture paramSurfaceTexture, int paramInt1, int paramInt2)
   {
-    u.i("!44@/B4Tb64lLpJusIoUV0UaqEWWY4ZA95CZ1/X4zWUi2B8=", "onSurfaceTextureSizeChanged, [%d, %d]", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
-    gEa.gEi = SightCameraView.b.gEs;
-    u.i("!44@/B4Tb64lLpJusIoUV0UaqEWWY4ZA95CZ1/X4zWUi2B8=", "changed texture %s", new Object[] { paramSurfaceTexture });
+    v.i("MicroMsg.SightCameraTextureView", "onSurfaceTextureSizeChanged, [%d, %d]", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    gKA.gKI = SightCameraView.b.gKT;
+    v.i("MicroMsg.SightCameraTextureView", "changed texture %s", new Object[] { paramSurfaceTexture });
   }
   
   public final void onSurfaceTextureUpdated(SurfaceTexture paramSurfaceTexture) {}

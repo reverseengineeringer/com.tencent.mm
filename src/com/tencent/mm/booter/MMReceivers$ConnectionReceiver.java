@@ -9,7 +9,7 @@ import android.net.NetworkInfo.State;
 import com.jg.JgClassChecked;
 import com.tencent.mm.network.z;
 import com.tencent.mm.network.z.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 @JgClassChecked(author=20, fComment="checked", lastDate="20140819", reviewer=20, vComment={com.jg.EType.RECEIVERCHECK})
 public class MMReceivers$ConnectionReceiver
@@ -21,29 +21,29 @@ public class MMReceivers$ConnectionReceiver
     do
     {
       return;
-      u.i("!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew=", "onReceive threadID: " + Thread.currentThread().getId());
-      if (!b.q(paramContext, "connection"))
+      v.i("MicroMsg.ConnectionReceiver", "onReceive threadID: " + Thread.currentThread().getId());
+      if (!b.r(paramContext, "connection"))
       {
-        MMReceivers.AlarmReceiver.as(paramContext);
-        u.appenderFlush();
+        MMReceivers.AlarmReceiver.ap(paramContext);
+        v.appenderFlush();
         return;
       }
-    } while (z.Ff() == null);
+    } while (z.FB() == null);
     paramContext = (ConnectivityManager)paramContext.getSystemService("connectivity");
     try
     {
       paramContext = paramContext.getActiveNetworkInfo();
       if ((paramContext == null) || (paramContext.getState() != NetworkInfo.State.CONNECTED))
       {
-        u.i("!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew=", "NetworkAvailable: false");
-        paramIntent = z.Ff();
+        v.i("MicroMsg.ConnectionReceiver", "NetworkAvailable: false");
+        paramIntent = z.FB();
         if (paramContext != null) {
           paramContext.getTypeName();
         }
         if (paramContext != null) {
           paramContext.getSubtypeName();
         }
-        paramIntent.ao(false);
+        paramIntent.R(false);
         return;
       }
     }
@@ -51,14 +51,14 @@ public class MMReceivers$ConnectionReceiver
     {
       for (;;)
       {
-        u.i("!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew=", "getActiveNetworkInfo failed.");
+        v.i("MicroMsg.ConnectionReceiver", "getActiveNetworkInfo failed.");
         paramContext = null;
       }
-      u.i("!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew=", "NetworkAvailable: true");
-      paramIntent = z.Ff();
+      v.i("MicroMsg.ConnectionReceiver", "NetworkAvailable: true");
+      paramIntent = z.FB();
       paramContext.getTypeName();
       paramContext.getSubtypeName();
-      paramIntent.ao(true);
+      paramIntent.R(true);
     }
   }
 }

@@ -18,9 +18,9 @@ final class MultiProcessSharedPreferences$1
   {
     String str = paramIntent.getStringExtra("name");
     paramContext = (List)paramIntent.getSerializableExtra("value");
-    if ((MultiProcessSharedPreferences.a(jWv).equals(str)) && (paramContext != null))
+    if ((MultiProcessSharedPreferences.a(kwR).equals(str)) && (paramContext != null))
     {
-      paramIntent = new ArrayList(MultiProcessSharedPreferences.b(jWv));
+      paramIntent = new ArrayList(MultiProcessSharedPreferences.b(kwR));
       int i = paramContext.size() - 1;
       while (i >= 0)
       {
@@ -30,7 +30,7 @@ final class MultiProcessSharedPreferences$1
         {
           SharedPreferences.OnSharedPreferenceChangeListener localOnSharedPreferenceChangeListener = (SharedPreferences.OnSharedPreferenceChangeListener)((SoftReference)localIterator.next()).get();
           if (localOnSharedPreferenceChangeListener != null) {
-            localOnSharedPreferenceChangeListener.onSharedPreferenceChanged(jWv, str);
+            localOnSharedPreferenceChangeListener.onSharedPreferenceChanged(kwR, str);
           }
         }
         i -= 1;

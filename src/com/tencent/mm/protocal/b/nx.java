@@ -1,114 +1,122 @@
 package com.tencent.mm.protocal.b;
 
 public final class nx
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public int jnl;
-  public int jnm;
-  public int jnn;
-  public int jno;
-  public int jnp;
-  public int jnq;
-  public int jnr;
-  public int jns;
-  public int jnt;
-  public int jnu;
-  public int jnv;
-  public int jnw;
-  public int jnx;
-  public int jny;
-  public int jnz;
+  public String akC;
+  public String desc;
+  public String info;
+  public boolean jIT = false;
+  public boolean jIU = false;
+  public boolean jKV = false;
+  public boolean jKW = false;
+  public String title;
+  
+  public final nx Ew(String paramString)
+  {
+    title = paramString;
+    jIT = true;
+    return this;
+  }
+  
+  public final nx Ex(String paramString)
+  {
+    desc = paramString;
+    jIU = true;
+    return this;
+  }
+  
+  public final nx Ey(String paramString)
+  {
+    akC = paramString;
+    jKV = true;
+    return this;
+  }
+  
+  public final nx Ez(String paramString)
+  {
+    info = paramString;
+    jKW = true;
+    return this;
+  }
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.ci(1, jnl);
-      paramVarArgs.ci(2, jnm);
-      paramVarArgs.ci(3, jnn);
-      paramVarArgs.ci(4, jno);
-      paramVarArgs.ci(5, jnp);
-      paramVarArgs.ci(6, jnq);
-      paramVarArgs.ci(7, jnr);
-      paramVarArgs.ci(8, jns);
-      paramVarArgs.ci(9, jnt);
-      paramVarArgs.ci(10, jnu);
-      paramVarArgs.ci(11, jnv);
-      paramVarArgs.ci(12, jnw);
-      paramVarArgs.ci(13, jnx);
-      paramVarArgs.ci(14, jny);
-      paramVarArgs.ci(15, jnz);
+      if (title != null) {
+        paramVarArgs.e(1, title);
+      }
+      if (desc != null) {
+        paramVarArgs.e(2, desc);
+      }
+      if (akC != null) {
+        paramVarArgs.e(3, akC);
+      }
+      if (info != null) {
+        paramVarArgs.e(4, info);
+      }
       return 0;
     }
     if (paramInt == 1) {
-      return a.a.a.a.cg(1, jnl) + 0 + a.a.a.a.cg(2, jnm) + a.a.a.a.cg(3, jnn) + a.a.a.a.cg(4, jno) + a.a.a.a.cg(5, jnp) + a.a.a.a.cg(6, jnq) + a.a.a.a.cg(7, jnr) + a.a.a.a.cg(8, jns) + a.a.a.a.cg(9, jnt) + a.a.a.a.cg(10, jnu) + a.a.a.a.cg(11, jnv) + a.a.a.a.cg(12, jnw) + a.a.a.a.cg(13, jnx) + a.a.a.a.cg(14, jny) + a.a.a.a.cg(15, jnz);
-    }
-    if (paramInt == 2)
-    {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.bog();
-        }
+      if (title == null) {
+        break label368;
       }
-      return 0;
     }
-    if (paramInt == 3)
+    label368:
+    for (int i = a.a.a.b.b.a.f(1, title) + 0;; i = 0)
     {
-      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-      nx localnx = (nx)paramVarArgs[1];
-      switch (((Integer)paramVarArgs[2]).intValue())
+      paramInt = i;
+      if (desc != null) {
+        paramInt = i + a.a.a.b.b.a.f(2, desc);
+      }
+      i = paramInt;
+      if (akC != null) {
+        i = paramInt + a.a.a.b.b.a.f(3, akC);
+      }
+      paramInt = i;
+      if (info != null) {
+        paramInt = i + a.a.a.b.b.a.f(4, info);
+      }
+      return paramInt;
+      if (paramInt == 2)
       {
-      default: 
-        return -1;
-      case 1: 
-        jnl = maU.jC();
-        return 0;
-      case 2: 
-        jnm = maU.jC();
-        return 0;
-      case 3: 
-        jnn = maU.jC();
-        return 0;
-      case 4: 
-        jno = maU.jC();
-        return 0;
-      case 5: 
-        jnp = maU.jC();
-        return 0;
-      case 6: 
-        jnq = maU.jC();
-        return 0;
-      case 7: 
-        jnr = maU.jC();
-        return 0;
-      case 8: 
-        jns = maU.jC();
-        return 0;
-      case 9: 
-        jnt = maU.jC();
-        return 0;
-      case 10: 
-        jnu = maU.jC();
-        return 0;
-      case 11: 
-        jnv = maU.jC();
-        return 0;
-      case 12: 
-        jnw = maU.jC();
-        return 0;
-      case 13: 
-        jnx = maU.jC();
-        return 0;
-      case 14: 
-        jny = maU.jC();
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bve();
+          }
+        }
+        break;
+      }
+      if (paramInt == 3)
+      {
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        nx localnx = (nx)paramVarArgs[1];
+        switch (((Integer)paramVarArgs[2]).intValue())
+        {
+        default: 
+          return -1;
+        case 1: 
+          title = mMY.readString();
+          jIT = true;
+          return 0;
+        case 2: 
+          desc = mMY.readString();
+          jIU = true;
+          return 0;
+        case 3: 
+          akC = mMY.readString();
+          jKV = true;
+          return 0;
+        }
+        info = mMY.readString();
+        jKW = true;
         return 0;
       }
-      jnz = maU.jC();
-      return 0;
+      return -1;
     }
-    return -1;
   }
 }
 

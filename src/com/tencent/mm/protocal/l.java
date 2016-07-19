@@ -1,202 +1,130 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.a.c;
-import com.tencent.mm.pointers.PByteArray;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import com.tencent.mm.protocal.b.eg;
+import com.tencent.mm.protocal.b.eh;
+import com.tencent.mm.sdk.b.b;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.IOException;
 
 public final class l
 {
-  public static final class a
-    extends h.c
-    implements h.a
+  public static int aYp()
   {
-    public int aou = 0;
-    public int axL = 0;
-    public int ccb = 0;
-    public String iUV = "";
-    public byte[] iUW = new byte[0];
-    
-    private byte[] aK(byte[] paramArrayOfByte)
+    if (b.foreground) {
+      return 1;
+    }
+    return 2;
+  }
+  
+  public static int ci(Context paramContext)
+  {
+    for (;;)
     {
-      if (paramArrayOfByte == null) {
-        return null;
-      }
-      ByteArrayOutputStream localByteArrayOutputStream = new ByteArrayOutputStream();
       try
       {
-        DataOutputStream localDataOutputStream = new DataOutputStream(localByteArrayOutputStream);
-        localDataOutputStream.writeByte(axL);
-        localDataOutputStream.writeByte(aou);
-        localDataOutputStream.write(paramArrayOfByte);
-        localDataOutputStream.close();
-        return localByteArrayOutputStream.toByteArray();
-      }
-      catch (IOException paramArrayOfByte)
-      {
-        for (;;)
-        {
-          u.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "direct merge all failed, err=" + paramArrayOfByte.getMessage());
+        paramContext = ((ConnectivityManager)paramContext.getSystemService("connectivity")).getActiveNetworkInfo();
+        if (paramContext == null) {
+          return 0;
         }
+        i = paramContext.getSubtype();
+        int j = paramContext.getType();
+        if (j != 1) {
+          continue;
+        }
+        i = 1;
+      }
+      catch (Exception paramContext)
+      {
+        v.e("MicroMsg.MMBgFg", "getNetType: %s", new Object[] { be.f(paramContext) });
+        int i = 1;
+        continue;
+      }
+      return i;
+      if ((i == 13) || (i == 15) || (i == 14)) {
+        i = 4;
+      } else if ((i == 3) || (i == 4) || (i == 5) || (i == 6) || (i == 12)) {
+        i = 3;
+      } else if ((i == 1) || (i == 2)) {
+        i = 2;
+      } else {
+        i = 0;
       }
     }
+  }
+  
+  public static final class a
+    extends k.c
+    implements k.a
+  {
+    public int jsk = 0;
+    public int netType;
     
-    private byte[] aTt()
-    {
-      ByteArrayOutputStream localByteArrayOutputStream = new ByteArrayOutputStream();
-      try
-      {
-        DataOutputStream localDataOutputStream = new DataOutputStream(localByteArrayOutputStream);
-        localDataOutputStream.writeInt(ccb);
-        localDataOutputStream.writeShort(iUV.getBytes().length);
-        localDataOutputStream.write(iUV.getBytes());
-        localDataOutputStream.writeShort(iUW.length);
-        localDataOutputStream.write(iUW);
-        localDataOutputStream.close();
-        return localByteArrayOutputStream.toByteArray();
-      }
-      catch (IOException localIOException)
-      {
-        for (;;)
-        {
-          u.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "direct merge tail failed, err=" + localIOException.getMessage());
-        }
-      }
-    }
-    
-    public final boolean auE()
+    public final boolean aAi()
     {
       return true;
     }
     
     public final int getCmdId()
     {
-      return 8;
+      return 312;
     }
     
-    public final byte[] tY()
+    public final byte[] tZ()
     {
-      byte[] arrayOfByte = aTt();
-      PByteArray localPByteArray = new PByteArray();
-      c.a(localPByteArray, arrayOfByte, l.Bk(iUH));
-      return aK(value);
+      Object localObject = new eg();
+      jxA = c.jry;
+      jyF = 2;
+      jyG = netType;
+      jyH = jsk;
+      v.i("MicroMsg.MMBgFg", "somr online:%d nettype:%d ver:%d devid:%d", new Object[] { Integer.valueOf(jyH), Integer.valueOf(jyG), Integer.valueOf(jxA), Integer.valueOf(jyF) });
+      try
+      {
+        localObject = ((eg)localObject).toByteArray();
+        return (byte[])localObject;
+      }
+      catch (IOException localIOException)
+      {
+        v.e("MicroMsg.MMBgFg", "MMBgfg toProtoBuf exception:%s", new Object[] { be.f(localIOException) });
+      }
+      return null;
     }
     
-    public final int tZ()
+    public final int ua()
     {
-      return 10;
+      return 0;
     }
     
-    public final boolean we()
+    public final boolean wg()
     {
       return false;
     }
   }
   
   public static final class b
-    extends h.d
-    implements h.b
+    extends k.d
+    implements k.b
   {
-    private int aou = 0;
-    private int axL = 0;
-    public String caU = "";
-    private int ccb = 0;
-    public byte[] content = new byte[0];
-    public String deviceID = "";
+    public eh jsl = new eh();
     
-    private byte[] aL(byte[] paramArrayOfByte)
+    public final int D(byte[] paramArrayOfByte)
     {
-      if ((paramArrayOfByte == null) || (paramArrayOfByte.length < 2))
-      {
-        u.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "parse all failed, empty buf");
-        return null;
-      }
-      byte[] arrayOfByte = new byte[paramArrayOfByte.length - 2];
-      try
-      {
-        paramArrayOfByte = new ByteArrayInputStream(paramArrayOfByte);
-        DataInputStream localDataInputStream = new DataInputStream(paramArrayOfByte);
-        axL = localDataInputStream.readByte();
-        aou = localDataInputStream.readByte();
-        localDataInputStream.readFully(arrayOfByte);
-        u.d("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "cmdId:" + axL + ", flag=" + aou + ", tail len=" + arrayOfByte.length);
-        paramArrayOfByte.close();
-        return arrayOfByte;
-      }
-      catch (IOException paramArrayOfByte)
-      {
-        u.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "direct parse all failed, err=" + paramArrayOfByte.getMessage());
-      }
-      return arrayOfByte;
+      jsl = ((eh)new eh().au(paramArrayOfByte));
+      v.d("MicroMsg.MMBgFg", "retcode:" + jsl.fvC);
+      return jsl.fvC;
     }
     
-    public final boolean auE()
+    public final boolean aAi()
     {
       return true;
     }
     
     public final int getCmdId()
     {
-      return 8;
-    }
-    
-    public final int y(byte[] paramArrayOfByte)
-    {
-      byte[] arrayOfByte1 = l.Bk(deviceID);
-      PByteArray localPByteArray = new PByteArray();
-      if (c.b(localPByteArray, aL(paramArrayOfByte), arrayOfByte1) != 0)
-      {
-        byte[] arrayOfByte2 = new byte[16];
-        i = 0;
-        while (i < 16)
-        {
-          arrayOfByte2[i] = 0;
-          i += 1;
-        }
-        if (c.b(localPByteArray, aL(paramArrayOfByte), arrayOfByte2) != 0)
-        {
-          u.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "decrypting from buffer using key=%s error", new Object[] { ay.I(arrayOfByte1) });
-          return -1;
-        }
-      }
-      paramArrayOfByte = value;
-      if (paramArrayOfByte == null)
-      {
-        u.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "parse tail failed, empty buf");
-        return 0;
-      }
-      try
-      {
-        paramArrayOfByte = new DataInputStream(new ByteArrayInputStream(paramArrayOfByte));
-        ccb = paramArrayOfByte.readInt();
-        u.d("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "seq=" + ccb);
-        i = paramArrayOfByte.readShort();
-        if (i < 0) {
-          throw new IOException("sender empty");
-        }
-      }
-      catch (IOException paramArrayOfByte)
-      {
-        u.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "direct parse all failed, err=" + paramArrayOfByte.getMessage());
-        return 0;
-      }
-      arrayOfByte1 = new byte[i];
-      paramArrayOfByte.readFully(arrayOfByte1);
-      caU = new String(arrayOfByte1);
-      u.d("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "recievers len=" + i + ", sender=" + caU);
-      int i = paramArrayOfByte.readShort();
-      if (i < 0) {
-        throw new IOException("content empty");
-      }
-      content = new byte[i];
-      paramArrayOfByte.readFully(content);
-      u.d("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "content len=" + content.length);
-      return 0;
+      return 1000000312;
     }
   }
 }

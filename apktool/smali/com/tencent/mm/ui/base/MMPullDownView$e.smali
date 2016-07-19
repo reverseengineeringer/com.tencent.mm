@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract QR()V
+.method public abstract Sg()V
 .end method

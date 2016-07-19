@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_horizontal" android:background="#ffeeeeee" android:paddingTop="@dimen/hf" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/afx" android:layout_width="@dimen/hd" android:layout_height="@dimen/hd" android:src="@drawable/aeg" android:scaleType="fitCenter" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/i8" android:id="@id/afy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hf" android:text="@string/ai0" android:layout_below="@id/afx" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:id="@id/afz" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hb" android:text="" android:layout_below="@id/afy" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <ScrollView android:id="@id/ag8" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/hi" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.tencent.mm.ui.base.MaxListView android:id="@id/ag9" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@null" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="@dimen/jl" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+            <Button android:id="@id/ag_" android:layout_marginLeft="@dimen/i7" android:layout_marginTop="@dimen/hi" android:layout_marginRight="@dimen/i7" android:text="@string/aik" style="@style/MMSolidGreenLargeButton" />
+            <Button android:id="@id/aga" android:layout_marginLeft="@dimen/i7" android:layout_marginTop="@dimen/i7" android:layout_marginRight="@dimen/i7" android:text="@string/ahg" style="@style/MMSolidWhiteLargeButton" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field gFl:Landroid/widget/TextView;
+.field gLN:Landroid/widget/TextView;
 
-.field final synthetic gFm:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$a;
+.field final synthetic gLO:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$a;
 
 
 # direct methods
@@ -26,7 +26,7 @@
 
     .prologue
     .line 147
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$a$a;->gFm:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$a;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$a$a;->gLO:Lcom/tencent/mm/plugin/sns/abtest/NotInterestMenu$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

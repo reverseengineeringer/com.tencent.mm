@@ -1,9 +1,9 @@
 package com.tencent.mm.ui.account.mobile;
 
 import com.tencent.mm.model.ah;
-import com.tencent.mm.modelsimple.v;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
+import com.tencent.mm.modelsimple.t;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.applet.SecurityImage.b;
 
 final class MobileLoginOrForceReg$3
@@ -11,11 +11,11 @@ final class MobileLoginOrForceReg$3
 {
   MobileLoginOrForceReg$3(MobileLoginOrForceReg paramMobileLoginOrForceReg, String paramString1, String paramString2, j paramj, Boolean paramBoolean) {}
   
-  public final void bby()
+  public final void bgK()
   {
-    kyq.age();
-    v localv = new v("", kyr, kys, 0, "", MobileLoginOrForceReg.e(kyq), "", "", MobileLoginOrForceReg.h(kyq), MobileLoginOrForceReg.o(kyq), "", ((v)aoT).zb(), "", true, kyt.booleanValue());
-    ah.tE().d(localv);
+    kXx.aiI();
+    t localt = new t("", kXy, kXz, 0, "", MobileLoginOrForceReg.e(kXx), "", "", MobileLoginOrForceReg.h(kXx), MobileLoginOrForceReg.o(kXx), "", ((t)acZ).zo(), "", true, kXA.booleanValue());
+    ah.tF().a(localt, 0);
   }
 }
 

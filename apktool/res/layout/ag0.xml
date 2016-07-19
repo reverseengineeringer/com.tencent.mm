@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:padding="@dimen/hb" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/aor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/hu">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bh7" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/bh8" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/i7" android:paddingRight="@dimen/i7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/hm">
+                    <ImageView android:id="@id/bh9" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/i7" />
+                    <TextView android:textSize="@dimen/cu" android:textColor="@color/ot" android:gravity="center" android:id="@id/bh_" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dhm" />
+                </LinearLayout>
+                <ImageView android:background="@color/aj" android:layout_width="fill_parent" android:layout_height="@dimen/dy" android:layout_marginLeft="@dimen/i7" android:layout_marginRight="@dimen/i7" />
+            </LinearLayout>
+            <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@id/aur" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hb">
+                        <ImageView android:id="@id/cqu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/aoc" android:layout_centerHorizontal="true" />
+                        <ImageView android:id="@id/cqv" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="30.0dip" android:layout_marginTop="28.0dip" android:scaleType="fitXY" android:layout_alignLeft="@id/cqu" android:layout_alignTop="@id/cqu" />
+                    </RelativeLayout>
+                    <TextView android:textSize="@dimen/h4" android:textColor="@color/j_" android:gravity="center" android:id="@id/auu" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/hb" android:text="@string/dh0" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+        <ImageView android:background="@color/m2" android:layout_width="fill_parent" android:layout_height="@dimen/dz" android:layout_marginLeft="@dimen/i7" android:layout_marginRight="@dimen/i7" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/bhb" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/bhc" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:textSize="@dimen/i8" android:textColor="@color/ot" android:id="@id/bhe" android:background="@drawable/a6" android:layout_width="0.0dip" android:layout_height="@dimen/i2" android:text="@string/d1_" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

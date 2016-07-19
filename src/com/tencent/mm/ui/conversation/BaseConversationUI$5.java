@@ -1,5 +1,6 @@
 package com.tencent.mm.ui.conversation;
 
+import android.annotation.TargetApi;
 import android.graphics.Rect;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
@@ -9,7 +10,7 @@ import android.view.View.OnApplyWindowInsetsListener;
 import android.view.ViewGroup;
 import android.view.WindowInsets;
 import com.tencent.mm.compatible.util.c;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.LauncherUI.FitSystemWindowLayoutView;
 
 final class BaseConversationUI$5
@@ -19,24 +20,25 @@ final class BaseConversationUI$5
   
   public final void run()
   {
-    lnn.iF.aP().getCustomView().getLocationInWindow(knr);
-    int i = knr[1];
+    lNH.iW.aP().getCustomView().getLocationInWindow(kMx);
+    int i = kMx[1];
     if (i > 0) {
-      BaseConversationUI.a(lnn, kns, i, new Rect(0, i, 0, 0), knt);
+      BaseConversationUI.a(lNH, kMy, i, new Rect(0, i, 0, 0), kMz);
     }
-    while (!c.bU(20)) {
+    while (!c.cm(20)) {
       return;
     }
-    kns.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener()
+    kMy.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener()
     {
+      @TargetApi(20)
       public final WindowInsets onApplyWindowInsets(View paramAnonymousView, WindowInsets paramAnonymousWindowInsets)
       {
         if (paramAnonymousWindowInsets == null) {
           return paramAnonymousWindowInsets;
         }
-        u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "OnApplyWindowInsetsListener %s", new Object[] { paramAnonymousWindowInsets });
+        v.i("MicroMsg.BaseConversationUI", "OnApplyWindowInsetsListener %s", new Object[] { paramAnonymousWindowInsets });
         paramAnonymousWindowInsets.consumeSystemWindowInsets();
-        BaseConversationUI.a(lnn, kns, paramAnonymousWindowInsets.getSystemWindowInsetTop(), new Rect(paramAnonymousWindowInsets.getSystemWindowInsetLeft(), paramAnonymousWindowInsets.getSystemWindowInsetTop(), paramAnonymousWindowInsets.getSystemWindowInsetRight(), paramAnonymousWindowInsets.getSystemWindowInsetBottom()), knt);
+        BaseConversationUI.a(lNH, kMy, paramAnonymousWindowInsets.getSystemWindowInsetTop(), new Rect(paramAnonymousWindowInsets.getSystemWindowInsetLeft(), paramAnonymousWindowInsets.getSystemWindowInsetTop(), paramAnonymousWindowInsets.getSystemWindowInsetRight(), paramAnonymousWindowInsets.getSystemWindowInsetBottom()), kMz);
         return paramAnonymousWindowInsets;
       }
     });

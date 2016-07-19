@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->Gb()V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+.field final synthetic huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 325
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$13;->hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+    .line 327
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$13;->huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,7 +40,7 @@
     .locals 0
 
     .prologue
-    .line 348
+    .line 350
     return-void
 .end method
 
@@ -50,8 +50,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 329
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$13;->hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+    .line 331
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$13;->huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->f(Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;)Z
 
@@ -59,12 +59,12 @@
 
     if-nez v0, :cond_1
 
-    .line 343
+    .line 345
     :cond_0
     :goto_0
     return-void
 
-    .line 332
+    .line 334
     :cond_1
     invoke-virtual {p1}, Landroid/widget/AbsListView;->getLastVisiblePosition()I
 
@@ -78,27 +78,27 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 334
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azl()Lcom/tencent/mm/plugin/sns/h/h;
+    .line 336
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBL()Lcom/tencent/mm/plugin/sns/i/h;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/h;->DE()I
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/h;->DV()I
 
     move-result v0
 
     if-lez v0, :cond_2
 
-    .line 335
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azl()Lcom/tencent/mm/plugin/sns/h/h;
+    .line 337
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBL()Lcom/tencent/mm/plugin/sns/i/h;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/h/h;->Mb()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/i/h;->Nj()Z
 
-    .line 340
+    .line 342
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$13;->hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$13;->huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->d(Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;)Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;
 
@@ -108,15 +108,15 @@
 
     goto :goto_0
 
-    .line 337
+    .line 339
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$13;->hfU:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$13;->huL:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;->d(Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI;)Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;->Nw()I
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;->OE()I
 
     goto :goto_1
 .end method

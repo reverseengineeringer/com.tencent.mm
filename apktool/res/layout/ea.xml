@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/u5" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hr" android:layout_marginTop="@dimen/hb" android:layout_marginRight="@dimen/hr" android:layout_marginBottom="@dimen/cp">
+        <TextView android:textSize="@dimen/ja" android:textColor="#ff6a6a6a" android:ellipsize="end" android:id="@id/u6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/u7" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/u8" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/j_" android:src="@drawable/afi" />
+            <TextView android:textSize="@dimen/ja" android:textColor="@color/g8" android:ellipsize="end" android:id="@id/u9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/i7" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/ow" android:layout_width="fill_parent" android:layout_height="110.0dip" android:layout_marginTop="@dimen/hj">
+        <TextView android:textSize="@dimen/cu" android:textColor="@color/bx" android:ellipsize="end" android:text="@string/vl" android:singleLine="true" style="@style/CardIndexCardTitle" />
+    </LinearLayout>
+</LinearLayout>

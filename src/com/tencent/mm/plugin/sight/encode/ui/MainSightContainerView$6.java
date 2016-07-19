@@ -12,8 +12,8 @@ final class MainSightContainerView$6
   
   public final void onError(int paramInt)
   {
-    if ((gCF.size() <= 1) || (-1 == paramInt)) {
-      g.ba(gCA.getContext(), gCA.getContext().getString(2131431089));
+    if ((gJg.size() <= 1) || (-1 == paramInt)) {
+      g.aZ(gJb.getContext(), gJb.getContext().getString(2131234899));
     }
   }
 }

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gxS:Lcom/tencent/mm/plugin/sight/decode/a/b$b;
+.field final synthetic gEp:Lcom/tencent/mm/plugin/sight/decode/a/b$b;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 829
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$b$1;->gxS:Lcom/tencent/mm/plugin/sight/decode/a/b$b;
+    .line 863
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$b$1;->gEp:Lcom/tencent/mm/plugin/sight/decode/a/b$b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,16 +40,16 @@
     .locals 2
 
     .prologue
-    .line 832
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$b$1;->gxS:Lcom/tencent/mm/plugin/sight/decode/a/b$b;
+    .line 866
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$b$1;->gEp:Lcom/tencent/mm/plugin/sight/decode/a/b$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/decode/a/b$b;->gxL:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/decode/a/b$b;->gEj:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/a/b;->r(Lcom/tencent/mm/plugin/sight/decode/a/b;)Lcom/tencent/mm/plugin/sight/decode/a/b$g;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/decode/a/b$g;->avQ()Landroid/view/View;
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/decode/a/b$g;->ayl()Landroid/view/View;
 
     move-result-object v0
 
@@ -57,6 +57,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 833
+    .line 867
     return-void
 .end method

@@ -1,15 +1,17 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-
 final class SnsUserUI$7
-  implements AdapterView.OnItemClickListener
+  extends SnsUserUI.a
 {
-  SnsUserUI$7(SnsUserUI paramSnsUserUI) {}
+  SnsUserUI$7(SnsUserUI paramSnsUserUI)
+  {
+    super(paramSnsUserUI);
+  }
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong) {}
+  public final void bp(int paramInt1, int paramInt2)
+  {
+    super.bp(paramInt1, paramInt2);
+  }
 }
 
 /* Location:

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/c1t" android:visibility="invisible" android:layout_centerHorizontal="true" style="@style/ScanOCRSourceTv" />
+    <TextView android:id="@id/c1u" android:layout_below="@id/c1t" android:layout_centerHorizontal="true" style="@style/ScanOCRResultTv" />
+    <TextView android:id="@id/c1q" android:text="@string/c8d" android:layout_centerHorizontal="true" style="@style/ScanTipsTv" />
+</RelativeLayout>

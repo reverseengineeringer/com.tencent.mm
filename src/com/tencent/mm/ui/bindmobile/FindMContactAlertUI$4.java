@@ -14,9 +14,9 @@ final class FindMContactAlertUI$4
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ah.tD().rn().set(12322, Boolean.valueOf(false));
-    b.kD(ah.tx() + "," + kOV.getClass().getName() + ",R300_200_phone," + ah.fd("R300_200_phone") + ",2");
-    FindMContactAlertUI.d(kOV);
+    ah.tE().ro().set(12322, Boolean.valueOf(false));
+    b.lm(ah.ty() + "," + lol.getClass().getName() + ",R300_200_phone," + ah.fq("R300_200_phone") + ",2");
+    FindMContactAlertUI.d(lol);
   }
 }
 

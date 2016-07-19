@@ -1,9 +1,6 @@
 .class final Lcom/tencent/mm/plugin/sns/ui/aq$1;
-.super Ljava/lang/Object;
+.super Lcom/tencent/mm/sdk/c/c;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # annotations
@@ -12,71 +9,100 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/mm;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic hyz:Lcom/tencent/mm/plugin/sns/ui/aq;
+
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/aq;)V
+    .locals 1
 
     .prologue
-    .line 22
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 150
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/aq$1;->hyz:Lcom/tencent/mm/plugin/sns/ui/aq;
+
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
+
+    const-class v0, Lcom/tencent/mm/e/a/mm;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/aq$1;->kum:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDismiss(Landroid/content/DialogInterface;)V
-    .locals 3
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
+    .locals 2
 
     .prologue
-    const v2, 0x10b21
+    .line 150
+    check-cast p1, Lcom/tencent/mm/e/a/mm;
 
-    .line 26
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    instance-of v0, p1, Lcom/tencent/mm/e/a/mm;
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    iget-object v0, p1, Lcom/tencent/mm/e/a/mm;->auH:Lcom/tencent/mm/e/a/mm$a;
 
-    move-result-object v0
+    iget v0, v0, Lcom/tencent/mm/e/a/mm$a;->type:I
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
+    if-ne v0, v1, :cond_1
 
-    move-result-object v0
+    iget-object v0, p1, Lcom/tencent/mm/e/a/mm;->auH:Lcom/tencent/mm/e/a/mm$a;
 
-    check-cast v0, Ljava/lang/Integer;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/mm$a;->id:Ljava/lang/String;
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/aq$1;->hyz:Lcom/tencent/mm/plugin/sns/ui/aq;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Integer;I)I
+    invoke-static {v1, v0}, Lcom/tencent/mm/plugin/sns/ui/aq;->a(Lcom/tencent/mm/plugin/sns/ui/aq;Ljava/lang/String;)V
 
-    move-result v0
+    :cond_0
+    :goto_0
+    const/4 v0, 0x0
 
-    .line 27
-    add-int/lit8 v0, v0, 0x1
+    return v0
 
-    .line 28
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    :cond_1
+    iget-object v0, p1, Lcom/tencent/mm/e/a/mm;->auH:Lcom/tencent/mm/e/a/mm$a;
 
-    move-result-object v1
+    iget v0, v0, Lcom/tencent/mm/e/a/mm$a;->type:I
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    const/4 v1, 0x2
 
-    move-result-object v1
+    if-ne v0, v1, :cond_0
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/aq$1;->hyz:Lcom/tencent/mm/plugin/sns/ui/aq;
 
-    move-result-object v0
+    iget-object v1, p1, Lcom/tencent/mm/e/a/mm;->auH:Lcom/tencent/mm/e/a/mm$a;
 
-    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
+    iget-object v1, v1, Lcom/tencent/mm/e/a/mm$a;->id:Ljava/lang/String;
 
-    .line 29
-    return-void
+    invoke-static {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/aq;->b(Lcom/tencent/mm/plugin/sns/ui/aq;Ljava/lang/String;)V
+
+    goto :goto_0
 .end method

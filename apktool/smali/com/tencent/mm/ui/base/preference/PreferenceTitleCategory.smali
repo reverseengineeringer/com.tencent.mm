@@ -38,14 +38,14 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/ui/base/preference/PreferenceCategory;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 22
-    iget v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMt:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->llI:I
 
-    const v1, 0x7f0a0589
+    const v1, 0x7f0303e6
 
     if-eq v0, v1, :cond_0
 
     .line 23
-    const v0, 0x7f0a0590
+    const v0, 0x7f0303e4
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/preference/PreferenceTitleCategory;->setLayoutResource(I)V
 

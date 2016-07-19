@@ -15,19 +15,21 @@
 
 
 # instance fields
-.field auJ:Ljava/lang/String;
+.field agw:Ljava/lang/String;
 
-.field awd:Ljava/lang/String;
+.field ahU:Ljava/lang/String;
 
-.field awh:Ljava/lang/String;
+.field ahZ:Ljava/lang/String;
 
-.field bpe:Ljava/lang/String;
+.field bdd:Ljava/lang/String;
 
 .field deviceID:Ljava/lang/String;
 
 .field iconUrl:Ljava/lang/String;
 
-.field final synthetic kXv:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+.field final synthetic lxJ:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+
+.field lxV:Ljava/lang/String;
 
 .field progress:I
 
@@ -37,8 +39,8 @@
     .locals 0
 
     .prologue
-    .line 895
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$c;->kXv:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+    .line 1165
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$c;->lxJ:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

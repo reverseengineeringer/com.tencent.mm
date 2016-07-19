@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.super Lcom/tencent/mm/sdk/platformtools/ac;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+.field final synthetic kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
 
 # direct methods
@@ -23,10 +23,10 @@
     .locals 0
 
     .prologue
-    .line 942
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 943
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
     return-void
 .end method
@@ -34,11 +34,11 @@
 
 # virtual methods
 .method public final handleMessage(Landroid/os/Message;)V
-    .locals 3
+    .locals 4
 
     .prologue
-    .line 946
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 947
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->r(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Lcom/tencent/mm/ui/base/h;
 
@@ -46,7 +46,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->r(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Lcom/tencent/mm/ui/base/h;
 
@@ -59,7 +59,7 @@
     if-eqz v0, :cond_1
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->s(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Z
 
@@ -67,25 +67,25 @@
 
     if-eqz v0, :cond_2
 
-    .line 964
+    .line 965
     :cond_1
     :goto_0
     return-void
 
-    .line 949
+    .line 950
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->t(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)I
 
-    .line 950
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 951
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->v(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Landroid/widget/ProgressBar;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->u(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)I
 
@@ -93,14 +93,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
-    .line 951
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 952
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->u(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->v(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Landroid/widget/ProgressBar;
 
@@ -112,18 +112,18 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 952
+    .line 953
     const/4 v0, 0x0
 
-    const-wide/16 v1, 0xa
+    const-wide/16 v2, 0xa
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {p0, v0, v2, v3}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->sendEmptyMessageDelayed(IJ)Z
 
     goto :goto_0
 
-    .line 955
+    .line 956
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->v(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Landroid/widget/ProgressBar;
 
@@ -133,8 +133,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setIndeterminate(Z)V
 
-    .line 956
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 957
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->s(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Z
 
@@ -142,8 +142,8 @@
 
     if-nez v0, :cond_1
 
-    .line 957
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 958
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->r(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Lcom/tencent/mm/ui/base/h;
 
@@ -151,8 +151,8 @@
 
     if-eqz v0, :cond_4
 
-    .line 958
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 959
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->r(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Lcom/tencent/mm/ui/base/h;
 
@@ -160,9 +160,9 @@
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->dismiss()V
 
-    .line 961
+    .line 962
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$14;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->w(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)V
 

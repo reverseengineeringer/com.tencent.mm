@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/car" android:background="@color/lf" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:flowlayout="http://schemas.android.com/apk/res-auto">
+    <com.tencent.mm.ui.base.AnimatedExpandableListView android:id="@id/cas" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@color/nl" android:cacheColorHint="@color/nl" android:groupIndicator="@null" android:divider="@null" />
+</LinearLayout>

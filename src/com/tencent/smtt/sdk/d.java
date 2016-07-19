@@ -2,9 +2,7 @@ package com.tencent.smtt.sdk;
 
 import android.content.Context;
 import android.os.Build.VERSION;
-import android.util.Log;
-import com.tencent.smtt.a.r;
-import com.tencent.smtt.export.external.DexLoader;
+import com.tencent.smtt.utils.TbsLog;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -14,101 +12,69 @@ import java.util.Properties;
 
 public final class d
 {
-  private static boolean lRC = false;
-  private static int lRD = 0;
-  private static int lRE = 0;
-  static boolean lRF = false;
-  private static int lRG = 3;
-  private static String lRI = null;
-  private static d lRz = null;
-  private boolean lRA = false;
-  boolean lRB = false;
-  private File lRH = null;
-  t lRy = null;
+  private static d mto = null;
+  private static int mtr = 0;
+  private static int mts = 0;
+  static boolean mtt = false;
+  private static int mtu = 3;
+  private static String mtw = null;
+  t mtn = null;
+  private boolean mtp = false;
+  boolean mtq = false;
+  private File mtv = null;
   
-  static void If(String paramString)
+  static void Ky(String paramString)
   {
-    lRI = paramString;
+    mtw = paramString;
   }
   
-  public static int blo()
+  public static int brs()
   {
-    return lRD;
+    return mtr;
   }
   
-  static boolean blp()
+  static boolean brt()
   {
-    lRF = true;
+    mtt = true;
     return true;
   }
   
-  private int blq()
+  private int bru()
   {
     try
     {
-      FileInputStream localFileInputStream = new FileInputStream(new File(lRH, "count.prop"));
+      FileInputStream localFileInputStream = new FileInputStream(new File(mtv, "count.prop"));
       Properties localProperties = new Properties();
       localProperties.load(localFileInputStream);
-      int i = Integer.valueOf(localProperties.getProperty(lRI, "1")).intValue();
+      int i = Integer.valueOf(localProperties.getProperty(mtw, "1")).intValue();
       return i;
     }
     catch (Exception localException) {}
     return 0;
   }
   
-  static boolean eO(Context paramContext)
+  public static d jb(boolean paramBoolean)
   {
-    if (q.fr(paramContext)) {}
-    for (lRD = q.ft(paramContext); (lRD != 0) && (lRD < 25102); lRD = m.fe(paramContext))
-    {
-      h.bly().N(paramContext, 309);
-      return false;
-      m.blT();
+    if ((mto == null) && (paramBoolean)) {
+      mto = new d();
     }
-    return true;
-  }
-  
-  public static d is(boolean paramBoolean)
-  {
-    if ((lRz == null) && (paramBoolean)) {
-      lRz = new d();
-    }
-    return lRz;
+    return mto;
   }
   
   private void n(Context paramContext, boolean paramBoolean)
   {
-    if ((QbSdk.lRk) && (!paramBoolean) && (lRA)) {}
+    if ((QbSdk.msX) && (!paramBoolean) && (mtp)) {}
     do
     {
       return;
-      lRA = false;
+      mtp = false;
       if (paramBoolean)
       {
-        if ((lRy != null) && (!QbSdk.lRk)) {
-          lRy.mDexLoader.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "setContextHolderTbsDevelopMode", new Class[] { Boolean.TYPE }, new Object[] { Boolean.valueOf(false) });
-        }
-        QbSdk.blj();
+        TbsLog.w("SDKEngine", "useSystemWebView -> QbSdk.forceSysWebViewInner");
+        QbSdk.brn();
       }
-    } while ((lRD == 0) || (lRA));
-    h.bly().N(paramContext, 405);
-  }
-  
-  static void so(int paramInt)
-  {
-    lRD = paramInt;
-  }
-  
-  private void sp(int paramInt)
-  {
-    Properties localProperties = new Properties();
-    localProperties.setProperty(lRI, String.valueOf(paramInt));
-    try
-    {
-      localProperties.store(new FileOutputStream(new File(lRH, "count.prop")), null);
-      return;
-    }
-    catch (IOException localIOException) {}catch (FileNotFoundException localFileNotFoundException) {}
+    } while ((mtr == 0) || (mtp));
+    h.brC().S(paramContext, 405);
   }
   
   public static boolean useSoftWare()
@@ -116,44 +82,61 @@ public final class d
     return QbSdk.useSoftWare();
   }
   
-  public final t blm()
+  static void ut(int paramInt)
   {
-    if (QbSdk.lRk) {
-      return null;
-    }
-    return lRy;
+    mtr = paramInt;
   }
   
-  public final boolean bln()
+  private void uu(int paramInt)
   {
-    if (QbSdk.lRk) {
+    Properties localProperties = new Properties();
+    localProperties.setProperty(mtw, String.valueOf(paramInt));
+    try
+    {
+      localProperties.store(new FileOutputStream(new File(mtv, "count.prop")), null);
+      return;
+    }
+    catch (IOException localIOException) {}catch (FileNotFoundException localFileNotFoundException) {}
+  }
+  
+  public final t brq()
+  {
+    if (QbSdk.msX) {
+      return null;
+    }
+    return mtn;
+  }
+  
+  public final boolean brr()
+  {
+    if (QbSdk.msX) {
       return false;
     }
-    return lRA;
+    return mtp;
   }
   
   final boolean getTbsNeedReboot()
   {
     int i;
-    if (lRF)
+    if (mtt)
     {
-      if (lRI == null) {
+      if (mtw == null) {
         return false;
       }
-      i = blq();
+      i = bru();
       if (i != 0) {
         break label32;
       }
-      sp(1);
+      uu(1);
     }
     for (;;)
     {
-      return lRF;
+      return mtt;
       label32:
-      if (i + 1 > lRG) {
+      if (i + 1 > mtu) {
         break;
       }
-      sp(i + 1);
+      uu(i + 1);
     }
   }
   
@@ -176,45 +159,42 @@ public final class d
     int i = 0;
     boolean bool1;
     boolean bool2;
-    label188:
+    label164:
     Object localObject2;
     Object localObject3;
-    label315:
-    label340:
-    label367:
-    label398:
+    label287:
+    label312:
+    label339:
+    label371:
     Context localContext;
     for (;;)
     {
       try
       {
-        lRE += 1;
-        h.bly().blz();
-        Object localObject1 = m.blT();
-        if (lRE == 1)
+        mts += 1;
+        h.brC().brD();
+        Object localObject1 = m.brX();
+        if (mts == 1)
         {
           bool1 = true;
-          ((m)localObject1).r(paramContext, bool1);
+          ((m)localObject1).s(paramContext, bool1);
           bool2 = QbSdk.c(paramContext, false, paramBoolean);
           if (Build.VERSION.SDK_INT >= 7)
           {
             paramBoolean = true;
             if (paramBoolean) {
-              break label515;
+              break label488;
             }
-            r.e("loaderror", "320");
-            break label515;
-            r.e("SDKEngine", "SDKEngine--init canLoadTbs=" + bool1);
-            if (!bool1)
-            {
-              r.e("SDKEngine", "SDKEngine--init can_load_x5=" + bool2);
-              r.e("SDKEngine", "SDKEngine--init is_compatible=" + paramBoolean);
-              r.e("SDKEngine", "SDKEngine--init isTbsCoreLegaL=true");
+            TbsLog.e("loaderror", "320");
+            break label488;
+            TbsLog.i("SDKEngine", "init canLoadTbs=" + bool1);
+            if (!bool1) {
+              TbsLog.e("SDKEngine", "init failure: can_load_x5=" + bool2 + "; is_compatible=" + paramBoolean + "; isTbsCoreLegaL=true");
             }
             if (!bool1) {
               break;
             }
-            paramBoolean = lRA;
+            paramBoolean = mtp;
             if (!paramBoolean) {
               continue;
             }
@@ -232,80 +212,80 @@ public final class d
         try
         {
           if (!q.fr(paramContext)) {
-            break label367;
+            break label339;
           }
-          if (!q.fB(paramContext)) {
-            break label340;
+          if (!q.fC(paramContext)) {
+            break label312;
           }
           localObject2 = new File(q.fs(paramContext));
-          m.blT();
-          localObject3 = m.fj(paramContext);
+          m.brX();
+          localObject3 = m.b(null, paramContext);
           localObject1 = q.fu(paramContext);
           if (localObject3 != null) {
-            break label512;
+            break label485;
           }
-          r.e("SDKEngine", "useSystemWebView by ERROR_TBSCORE_DEXOPT_DIR");
-          h.bly().N(paramContext, 311);
+          TbsLog.e("SDKEngine", "useSystemWebView by ERROR_TBSCORE_DEXOPT_DIR");
+          h.brC().S(paramContext, 311);
           n(paramContext, true);
         }
         catch (Throwable localThrowable)
         {
-          r.e("SDKEngine", "useSystemWebView by exception: " + Log.getStackTraceString(localThrowable));
-          h.bly().a(paramContext, 310, localThrowable);
+          TbsLog.e("SDKEngine", "useSystemWebView by exception: " + localThrowable);
+          h.brC().a(paramContext, 327, localThrowable);
           n(paramContext, true);
         }
-        m.blT();
-        lRH = m.fl(paramContext);
-        lRB = true;
+        m.brX();
+        mtv = m.fl(paramContext);
+        mtq = true;
         continue;
-        r.e("SDKEngine", "useSystemWebView by ERROR_HOST_UNAVAILABLE");
+        TbsLog.e("SDKEngine", "useSystemWebView by ERROR_HOST_UNAVAILABLE");
       }
       finally {}
-      h.bly().N(paramContext, 304);
+      h.brC().S(paramContext, 304);
       n(paramContext, true);
       continue;
-      m.blT();
-      localObject2 = m.fj(paramContext);
-      if ((lRD == 25436) || (lRD == 25437)) {
-        break label530;
+      m.brX();
+      localObject2 = m.b(null, paramContext);
+      if ((mtr == 25436) || (mtr == 25437)) {
+        break label503;
       }
       if (i == 0) {
-        break label535;
+        break label508;
       }
       localContext = paramContext.getApplicationContext();
-      label408:
+      label381:
       if (localObject2 != null) {
-        break label541;
+        break label514;
       }
-      r.e("SDKEngine", "useSystemWebView by ERROR_TBSCORE_SHARE_DIR");
-      h.bly().N(paramContext, 312);
+      TbsLog.e("SDKEngine", "useSystemWebView by ERROR_TBSCORE_SHARE_DIR");
+      h.brC().S(paramContext, 312);
       n(paramContext, true);
     }
     for (;;)
     {
       Object localObject4 = QbSdk.getDexLoaderFileList(paramContext, localContext, ((File)localObject2).getAbsolutePath());
-      lRy = new t(paramContext, localContext, ((File)localObject2).getAbsolutePath(), ((File)localObject3).getAbsolutePath(), (String[])localObject4);
-      lRA = true;
-      break label315;
-      r.e("SDKEngine", "useSystemWebView by !canLoadTbs");
-      r.e("loaderror", "324");
+      mtn = new t(paramContext, localContext, ((File)localObject2).getAbsolutePath(), ((File)localObject3).getAbsolutePath(), (String[])localObject4);
+      mtp = true;
+      break label287;
+      TbsLog.e("SDKEngine", "useSystemWebView by !canLoadTbs");
+      TbsLog.e("loaderror", "324");
       n(paramContext, false);
-      break label315;
-      label512:
+      break label287;
+      label485:
       continue;
-      label515:
+      label488:
       if ((!bool2) || (!paramBoolean)) {
-        break label188;
+        break label164;
       }
       bool1 = true;
       break;
-      label530:
+      label503:
       i = 1;
-      break label398;
-      label535:
+      break label371;
+      label508:
       localContext = paramContext;
-      break label408;
-      label541:
+      break label381;
+      label514:
       localObject4 = localObject2;
       localObject3 = localObject2;
       localObject2 = localObject4;

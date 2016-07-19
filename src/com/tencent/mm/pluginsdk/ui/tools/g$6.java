@@ -2,13 +2,13 @@ package com.tencent.mm.pluginsdk.ui.tools;
 
 import android.graphics.Bitmap;
 import android.widget.ImageView;
-import com.tencent.mm.platformtools.k.a;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.platformtools.j.a;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.HashMap;
 
 final class g$6
-  implements k.a
+  implements j.a
 {
   g$6(g paramg) {}
   
@@ -18,16 +18,16 @@ final class g$6
     if (paramBitmap == null) {
       bool = true;
     }
-    u.v("!32@/B4Tb64lLpI8lfBMGe0Uu+gqtVk/eA4D", "on get picture finish, notifyKey[%s], bitmap is null[%B]", new Object[] { paramString, Boolean.valueOf(bool) });
+    v.v("MicroMsg.ImageEngine", "on get picture finish, notifyKey[%s], bitmap is null[%B]", new Object[] { paramString, Boolean.valueOf(bool) });
     if (paramBitmap == null) {
       return;
     }
-    iSo.iSi.put(paramString, paramBitmap);
-    final ImageView localImageView = (ImageView)iSo.iSg.get(paramString);
+    jpx.jpr.put(paramString, paramBitmap);
+    final ImageView localImageView = (ImageView)jpx.jpp.get(paramString);
     if (localImageView != null)
     {
-      iSo.iSh.remove(localImageView);
-      iSo.bQM.post(new Runnable()
+      jpx.jpq.remove(localImageView);
+      jpx.bpz.post(new Runnable()
       {
         public final void run()
         {
@@ -35,7 +35,7 @@ final class g$6
         }
       });
     }
-    iSo.iSg.remove(paramString);
+    jpx.jpp.remove(paramString);
   }
 }
 

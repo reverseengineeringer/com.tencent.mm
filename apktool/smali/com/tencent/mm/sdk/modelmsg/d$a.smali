@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field public bNO:Ljava/lang/String;
+.field public bHk:Ljava/lang/String;
 
-.field public bXM:Ljava/lang/String;
+.field public bRs:Ljava/lang/String;
 
-.field public jUS:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+.field public kuy:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
 
 # direct methods
@@ -46,31 +46,31 @@
     return v0
 .end method
 
-.method public final l(Landroid/os/Bundle;)V
+.method public final n(Landroid/os/Bundle;)V
     .locals 3
 
     .prologue
     .line 68
-    iget-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/d$a;->jUS:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/d$a;->kuy:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     invoke-static {v0}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$a;->b(Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;)Landroid/os/Bundle;
 
     move-result-object v0
 
     .line 69
-    invoke-super {p0, v0}, Lcom/tencent/mm/sdk/e/a;->l(Landroid/os/Bundle;)V
+    invoke-super {p0, v0}, Lcom/tencent/mm/sdk/e/a;->n(Landroid/os/Bundle;)V
 
     .line 70
     const-string/jumbo v1, "_wxapi_showmessage_req_lang"
 
-    iget-object v2, p0, Lcom/tencent/mm/sdk/modelmsg/d$a;->bXM:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/sdk/modelmsg/d$a;->bRs:Ljava/lang/String;
 
     invoke-virtual {p1, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 71
     const-string/jumbo v1, "_wxapi_showmessage_req_country"
 
-    iget-object v2, p0, Lcom/tencent/mm/sdk/modelmsg/d$a;->bNO:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/sdk/modelmsg/d$a;->bHk:Ljava/lang/String;
 
     invoke-virtual {p1, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -81,12 +81,12 @@
     return-void
 .end method
 
-.method public final m(Landroid/os/Bundle;)V
+.method public final o(Landroid/os/Bundle;)V
     .locals 1
 
     .prologue
     .line 77
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/e/a;->m(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/e/a;->o(Landroid/os/Bundle;)V
 
     .line 78
     const-string/jumbo v0, "_wxapi_showmessage_req_lang"
@@ -95,7 +95,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/d$a;->bXM:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/d$a;->bRs:Ljava/lang/String;
 
     .line 79
     const-string/jumbo v0, "_wxapi_showmessage_req_country"
@@ -104,14 +104,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/d$a;->bNO:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/d$a;->bHk:Ljava/lang/String;
 
     .line 80
-    invoke-static {p1}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$a;->J(Landroid/os/Bundle;)Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    invoke-static {p1}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$a;->P(Landroid/os/Bundle;)Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/d$a;->jUS:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/d$a;->kuy:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     .line 81
     return-void

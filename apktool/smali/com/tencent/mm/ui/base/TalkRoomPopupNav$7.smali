@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kKA:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
+.field final synthetic ljQ:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 237
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$7;->kKA:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$7;->ljQ:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
     const/4 v1, 0x4
 
     .line 251
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$7;->kKA:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$7;->ljQ:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->c(Lcom/tencent/mm/ui/base/TalkRoomPopupNav;)Landroid/widget/LinearLayout;
 
@@ -52,7 +52,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 254
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$7;->kKA:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$7;->ljQ:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->e(Lcom/tencent/mm/ui/base/TalkRoomPopupNav;)Landroid/widget/LinearLayout;
 

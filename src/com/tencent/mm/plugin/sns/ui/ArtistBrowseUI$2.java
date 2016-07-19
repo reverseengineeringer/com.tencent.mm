@@ -3,77 +3,75 @@ package com.tencent.mm.plugin.sns.ui;
 import android.content.Intent;
 import com.tencent.mm.modelsfs.FileOp;
 import com.tencent.mm.modelsns.a;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.am;
-import com.tencent.mm.plugin.sns.d.as;
-import com.tencent.mm.plugin.sns.d.at;
-import com.tencent.mm.plugin.sns.data.h;
-import com.tencent.mm.plugin.sns.h.i;
-import com.tencent.mm.plugin.sns.h.j;
-import com.tencent.mm.protocal.b.add;
-import com.tencent.mm.protocal.b.atp;
-import com.tencent.mm.protocal.b.iv;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.al;
+import com.tencent.mm.plugin.sns.e.ar;
+import com.tencent.mm.plugin.sns.e.as;
+import com.tencent.mm.plugin.sns.i.j;
+import com.tencent.mm.protocal.b.adw;
+import com.tencent.mm.protocal.b.auf;
+import com.tencent.mm.protocal.b.je;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.LinkedList;
 
 final class ArtistBrowseUI$2
-  implements n.a
+  implements p.a
 {
   ArtistBrowseUI$2(ArtistBrowseUI paramArtistBrowseUI) {}
   
-  public final void aAO()
+  public final void aDE()
   {
-    Object localObject1 = gVZ.hbK.getCntMedia();
+    Object localObject1 = hjv.hqA.aDT();
     if (localObject1 == null) {}
     do
     {
       return;
-      u.d("!32@/B4Tb64lLpJgMlxlfB4/di1XaeIJZ0CZ", "set bg the meida id " + iXW);
-      localObject2 = a.dQ(723);
-      ((a)localObject2).jf(eiq);
-      ((a)localObject2).CV();
-    } while (!FileOp.ax(am.bp(ad.ayV(), iXW) + h.k((add)localObject1)));
-    Object localObject2 = ad.azf();
+      v.d("MicroMsg.ArtistBrowseUI", "set bg the meida id " + jvB);
+      localObject2 = a.ex(723);
+      ((a)localObject2).jx(emu);
+      ((a)localObject2).Dg();
+    } while (!FileOp.aB(al.bx(ad.aBw(), jvB) + com.tencent.mm.plugin.sns.data.i.k((adw)localObject1)));
+    Object localObject2 = ad.aBF();
     Object localObject3;
     String str;
-    if ((((as)localObject2).ayN() != null) && (!((as)localObject2).ayN().equals("")))
+    if ((((ar)localObject2).aBo() != null) && (!((ar)localObject2).aBo().equals("")))
     {
-      localObject3 = am.bp(ad.ayV(), iXW) + h.k((add)localObject1);
-      str = am.bp(ad.ayV(), ((as)localObject2).ayN());
-      if (!FileOp.ax((String)localObject3)) {
+      localObject3 = al.bx(ad.aBw(), jvB) + com.tencent.mm.plugin.sns.data.i.k((adw)localObject1);
+      str = al.bx(ad.aBw(), ((ar)localObject2).aBo());
+      if (!FileOp.aB((String)localObject3)) {
         break label408;
       }
-      u.d("!32@/B4Tb64lLpKIXxD1/Zp7n65IPQkp1S0J", "bg file is exist!'");
-      FileOp.iO(str);
-      FileOp.deleteFile(str + ((as)localObject2).ayN() + "bg_");
-      FileOp.deleteFile(str + ((as)localObject2).ayN() + "tbg_");
-      FileOp.o((String)localObject3, str + ((as)localObject2).ayN() + "bg_");
+      v.d("MicroMsg.UploadManager", "bg file is exist!'");
+      FileOp.jf(str);
+      FileOp.deleteFile(str + ((ar)localObject2).aBo() + "bg_");
+      FileOp.deleteFile(str + ((ar)localObject2).aBo() + "tbg_");
+      FileOp.n((String)localObject3, str + ((ar)localObject2).aBo() + "bg_");
     }
     for (;;)
     {
-      localObject3 = ad.azk();
-      Object localObject4 = ((as)localObject2).ayN();
-      str = iXW;
-      localObject4 = ((j)localObject3).vr((String)localObject4);
+      localObject3 = ad.aBK();
+      Object localObject4 = ((ar)localObject2).aBo();
+      str = jvB;
+      localObject4 = ((j)localObject3).wD((String)localObject4);
       field_bgId = str;
-      ((j)localObject3).c((i)localObject4);
-      ((as)localObject2).azG();
-      localObject2 = new at(7);
-      jzz = 1;
-      aIv.jMx.jhw.add(localObject1);
-      ((at)localObject2).lF(2);
-      ((at)localObject2).commit();
+      ((j)localObject3).c((com.tencent.mm.plugin.sns.i.i)localObject4);
+      ((ar)localObject2).aCh();
+      localObject2 = new as(7);
+      jYm = 1;
+      auP.kli.jFv.add(localObject1);
+      ((as)localObject2).mP(2);
+      ((as)localObject2).commit();
       localObject1 = new Intent();
-      ((Intent)localObject1).setClass(gVZ, SettingSnsBackgroundUI.class);
+      ((Intent)localObject1).setClass(hjv, SettingSnsBackgroundUI.class);
       ((Intent)localObject1).setFlags(536870912);
       ((Intent)localObject1).addFlags(67108864);
-      gVZ.startActivity((Intent)localObject1);
-      gVZ.finish();
+      hjv.startActivity((Intent)localObject1);
+      hjv.finish();
       return;
       label408:
-      FileOp.deleteFile(str + ((as)localObject2).ayN() + "bg_");
-      FileOp.deleteFile(str + ((as)localObject2).ayN() + "tbg_");
-      u.e("!32@/B4Tb64lLpKIXxD1/Zp7n65IPQkp1S0J", "bg file is not exist! wait to down it");
+      FileOp.deleteFile(str + ((ar)localObject2).aBo() + "bg_");
+      FileOp.deleteFile(str + ((ar)localObject2).aBo() + "tbg_");
+      v.e("MicroMsg.UploadManager", "bg file is not exist! wait to down it");
     }
   }
 }

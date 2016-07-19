@@ -19,7 +19,7 @@
 
 
 # virtual methods
-.method public final RN()V
+.method public final Th()V
     .locals 0
 
     .prologue
@@ -27,7 +27,7 @@
     return-void
 .end method
 
-.method public final RO()V
+.method public final Ti()V
     .locals 0
 
     .prologue
@@ -35,7 +35,7 @@
     return-void
 .end method
 
-.method public final RP()V
+.method public final Tj()V
     .locals 0
 
     .prologue
@@ -43,7 +43,7 @@
     return-void
 .end method
 
-.method public final RQ()V
+.method public final Tk()V
     .locals 0
 
     .prologue
@@ -51,7 +51,7 @@
     return-void
 .end method
 
-.method public final RR()V
+.method public final Tn()V
     .locals 0
 
     .prologue
@@ -59,7 +59,7 @@
     return-void
 .end method
 
-.method public final RS()V
+.method public final To()V
     .locals 0
 
     .prologue
@@ -67,11 +67,43 @@
     return-void
 .end method
 
-.method public final j(ZZ)V
+.method public final bI(Z)V
+    .locals 0
+
+    .prologue
+    .line 19
+    return-void
+.end method
+
+.method public final hb(I)V
+    .locals 0
+
+    .prologue
+    .line 52
+    return-void
+.end method
+
+.method public final k(ZZ)V
     .locals 0
 
     .prologue
     .line 66
+    return-void
+.end method
+
+.method public final od(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 47
+    return-void
+.end method
+
+.method public final oe(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 62
     return-void
 .end method
 
@@ -88,37 +120,5 @@
 
     .prologue
     .line 13
-    return-void
-.end method
-
-.method public final setDefaultEmojiByDetail(Ljava/lang/String;)V
-    .locals 0
-
-    .prologue
-    .line 62
-    return-void
-.end method
-
-.method public final setPortHeightPx(I)V
-    .locals 0
-
-    .prologue
-    .line 52
-    return-void
-.end method
-
-.method public final setSendButtonEnable(Z)V
-    .locals 0
-
-    .prologue
-    .line 19
-    return-void
-.end method
-
-.method public final setTalkerName(Ljava/lang/String;)V
-    .locals 0
-
-    .prologue
-    .line 47
     return-void
 .end method

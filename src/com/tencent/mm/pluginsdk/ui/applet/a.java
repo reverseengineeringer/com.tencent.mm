@@ -5,15 +5,15 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
 import android.widget.Toast;
-import com.tencent.mm.d.a.gp;
+import com.tencent.mm.e.a.ha;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.pluginsdk.model.l;
-import com.tencent.mm.protocal.b.axg;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.axz;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.p;
 import java.util.LinkedList;
@@ -23,124 +23,171 @@ import junit.framework.Assert;
 public final class a
   implements d
 {
-  public String aCm = "";
-  public p coc;
+  public String aoF = "";
+  public p cjq;
   public Context context;
-  private LinkedList fJx;
-  private LinkedList fJy;
-  public String fvG = "";
-  private a iHO;
-  public b iHP;
-  public String iHQ;
-  String iHR = "";
-  public String iHS;
-  public String iHT;
-  public boolean iHU = true;
-  public boolean iHV = true;
-  public String iHW = "";
-  public boolean iHX = false;
+  public String fEL = "";
+  private LinkedList<Integer> fSA;
+  private LinkedList<String> fSz;
+  private a jeL;
+  public b jeM;
+  public String jeN;
+  String jeO = "";
+  public String jeP;
+  public String jeQ;
+  public boolean jeR = true;
+  public boolean jeS = true;
+  public String jeT = "";
+  public boolean jeU = false;
   
   public a(Context paramContext, a parama)
   {
     context = paramContext;
-    iHO = parama;
-    fJx = new LinkedList();
-    coc = null;
+    jeL = parama;
+    fSz = new LinkedList();
+    cjq = null;
   }
   
   private void c(boolean paramBoolean1, boolean paramBoolean2, String paramString1, String paramString2)
   {
-    if (iHO != null) {
-      iHO.a(paramBoolean1, paramBoolean2, paramString1, paramString2);
+    if (jeL != null) {
+      jeL.a(paramBoolean1, paramBoolean2, paramString1, paramString2);
     }
     if (paramBoolean1)
     {
-      paramString2 = new gp();
-      aBG.username = paramString1;
-      com.tencent.mm.sdk.c.a.jUF.j(paramString2);
+      paramString2 = new ha();
+      anY.username = paramString1;
+      com.tencent.mm.sdk.c.a.kug.y(paramString2);
     }
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, final j paramj)
+  public final void a(String paramString, LinkedList<Integer> paramLinkedList, boolean paramBoolean)
   {
-    u.d("!32@/B4Tb64lLpKN6K/THdLZybvP+afE3jBu", "onSceneEnd, errType = " + paramInt1 + ", errCode = " + paramInt2);
+    if ((paramString != null) && (paramString.length() > 0))
+    {
+      bool = true;
+      Assert.assertTrue(bool);
+      if (paramLinkedList == null) {
+        break label172;
+      }
+    }
+    label172:
+    for (boolean bool = true;; bool = false)
+    {
+      Assert.assertTrue(bool);
+      jeR = paramBoolean;
+      onStart();
+      if (jeS)
+      {
+        Context localContext = context;
+        context.getString(2131231028);
+        cjq = g.a(localContext, context.getString(2131231882), true, new DialogInterface.OnCancelListener()
+        {
+          public final void onCancel(DialogInterface paramAnonymousDialogInterface)
+          {
+            a.a(a.this, false, jeO, jeT);
+          }
+        });
+      }
+      fSA = paramLinkedList;
+      fSz.add(paramString);
+      jeO = paramString;
+      paramString = new l(1, fSz, paramLinkedList, "", fEL, null, aoF);
+      if (!be.kf(jeP)) {
+        paramString.bZ(jeP, jeQ);
+      }
+      ah.tF().a(paramString, 0);
+      return;
+      bool = false;
+      break;
+    }
+  }
+  
+  public final void d(String paramString, LinkedList<Integer> paramLinkedList)
+  {
+    a(paramString, paramLinkedList, false);
+  }
+  
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, final j paramj)
+  {
+    v.d("MicroMsg.AddContact", "onSceneEnd, errType = " + paramInt1 + ", errCode = " + paramInt2);
     if (paramj.getType() != 30) {
-      u.w("!32@/B4Tb64lLpKN6K/THdLZybvP+afE3jBu", "not expected scene,  type = " + paramj.getType());
+      v.w("MicroMsg.AddContact", "not expected scene,  type = " + paramj.getType());
     }
     do
     {
       return;
-      if (coc != null)
+      if (cjq != null)
       {
-        coc.dismiss();
-        coc = null;
+        cjq.dismiss();
+        cjq = null;
       }
-      ah.tE().b(30, this);
+      ah.tF().b(30, this);
       if ((paramInt1 == 0) && (paramInt2 == 0))
       {
-        iHR = ((l)paramj).aPs();
-        c(true, false, iHR, iHW);
+        jeO = ((l)paramj).aTY();
+        c(true, false, jeO, jeT);
         return;
       }
       if (paramInt2 == -44)
       {
-        paramString = iHW;
-        if (iHP != null)
+        paramString = jeT;
+        if (jeM != null)
         {
-          iHP.aek();
-          c(false, false, iHR, paramString);
+          jeM.agP();
+          c(false, false, jeO, paramString);
           return;
         }
         paramString = new i(context, new i.a()
         {
-          public final void bK(boolean paramAnonymousBoolean)
+          public final void bz(boolean paramAnonymousBoolean)
           {
-            String str = iHW;
-            a.a(a.this, paramAnonymousBoolean, iHR, str);
+            String str = jeT;
+            a.a(a.this, paramAnonymousBoolean, jeO, str);
           }
         });
-        if (iHQ != null) {
-          iHQ = iHQ;
+        if (jeN != null) {
+          jeN = jeN;
         }
-        if (iHU)
+        if (jeR)
         {
-          paramj = fJx;
-          LinkedList localLinkedList = fJy;
-          iJo = false;
+          paramj = fSz;
+          LinkedList localLinkedList = fSA;
+          jgk = false;
           paramString.onStart();
-          ah.tE().d(new l(2, paramj, localLinkedList, "", ""));
+          ah.tF().a(new l(2, paramj, localLinkedList, "", ""), 0);
           return;
         }
-        paramString.e(fJx, fJy);
+        paramString.d(fSz, fSA);
         return;
       }
       if (paramInt2 == -87)
       {
-        g.y(context, context.getString(2131431097), "");
+        g.b(context, context.getString(2131231899), "", true);
         return;
       }
-      if ((paramInt2 == -101) && (!ay.kz(paramString)))
+      if ((paramInt2 == -101) && (!be.kf(paramString)))
       {
-        u.d("!32@/B4Tb64lLpKN6K/THdLZybvP+afE3jBu", "jacks catch add Contact errCode: %d && errMsg: %s", new Object[] { Integer.valueOf(paramInt2), paramString });
-        g.y(context, paramString, "");
+        v.d("MicroMsg.AddContact", "jacks catch add Contact errCode: %d && errMsg: %s", new Object[] { Integer.valueOf(paramInt2), paramString });
+        g.b(context, paramString, "", true);
         return;
       }
       if (paramInt2 != 65234) {
         break;
       }
-      paramInt1 = axL;
-      u.d("!32@/B4Tb64lLpKN6K/THdLZybvP+afE3jBu", "onSceneEnd, verify relation out of date, opCode = %d", new Object[] { Integer.valueOf(paramInt1) });
+      paramInt1 = ajS;
+      v.d("MicroMsg.AddContact", "onSceneEnd, verify relation out of date, opCode = %d", new Object[] { Integer.valueOf(paramInt1) });
     } while (paramInt1 != 3);
-    g.a(context, context.getString(2131428539), context.getString(2131430877), context.getString(2131430900), context.getString(2131430884), new DialogInterface.OnClickListener()
+    g.b(context, context.getString(2131232108), context.getString(2131231028), context.getString(2131230866), context.getString(2131230873), new DialogInterface.OnClickListener()
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
-        u.d("!32@/B4Tb64lLpKN6K/THdLZybvP+afE3jBu", "dealwith verify relation out of date");
+        v.d("MicroMsg.AddContact", "dealwith verify relation out of date");
         paramAnonymousDialogInterface = (l)paramj;
-        if ((anN != null) && (anN.vA() != null)) {}
-        for (paramAnonymousDialogInterface = anN.bEW.bFf).jPq;; paramAnonymousDialogInterface = null)
+        if ((bkQ != null) && (bkQ.vC() != null)) {}
+        for (paramAnonymousDialogInterface = bkQ.byh.byq).koj;; paramAnonymousDialogInterface = null)
         {
-          List localList = paramjiAo;
+          List localList = paramjiWO;
           if ((localList != null) && (localList.size() > 0)) {
             a((String)localList.get(0), paramAnonymousDialogInterface, false);
           }
@@ -149,69 +196,26 @@ public final class a
       }
     }, null);
     return;
-    if ((iHX) && (!ay.kz(paramString))) {
+    if ((jeU) && (!be.kf(paramString))) {
       Toast.makeText(context, paramString, 1).show();
     }
     for (;;)
     {
-      c(false, false, iHR, iHW);
+      c(false, false, jeO, jeT);
       return;
       if ((paramInt1 == 4) && (paramInt2 == -22)) {
-        Toast.makeText(context, context.getString(2131431092), 1).show();
-      } else if ((paramInt1 == 4) && (paramInt2 == -24) && (!ay.kz(paramString))) {
+        Toast.makeText(context, context.getString(2131230795), 1).show();
+      } else if ((paramInt1 == 4) && (paramInt2 == -24) && (!be.kf(paramString))) {
         Toast.makeText(context, paramString, 1).show();
       } else {
-        Toast.makeText(context, context.getString(2131431091), 1).show();
+        Toast.makeText(context, context.getString(2131230794), 1).show();
       }
     }
-  }
-  
-  public final void a(String paramString, LinkedList paramLinkedList, boolean paramBoolean)
-  {
-    boolean bool2 = false;
-    if ((paramString != null) && (paramString.length() > 0)) {}
-    for (boolean bool1 = true;; bool1 = false)
-    {
-      Assert.assertTrue(bool1);
-      bool1 = bool2;
-      if (paramLinkedList != null) {
-        bool1 = true;
-      }
-      Assert.assertTrue(bool1);
-      iHU = paramBoolean;
-      onStart();
-      if (iHV)
-      {
-        Context localContext = context;
-        context.getString(2131430877);
-        coc = g.a(localContext, context.getString(2131431095), true, new DialogInterface.OnCancelListener()
-        {
-          public final void onCancel(DialogInterface paramAnonymousDialogInterface)
-          {
-            a.a(a.this, false, iHR, iHW);
-          }
-        });
-      }
-      fJy = paramLinkedList;
-      fJx.add(paramString);
-      iHR = paramString;
-      paramString = new l(1, fJx, paramLinkedList, "", fvG, null, aCm);
-      if (!ay.kz(iHS)) {
-        paramString.bQ(iHS, iHT);
-      }
-      ah.tE().d(paramString);
-      return;
-    }
-  }
-  
-  public final void d(String paramString, LinkedList paramLinkedList)
-  {
-    a(paramString, paramLinkedList, false);
   }
   
   public final void onStart()
   {
-    ah.tE().a(30, this);
+    ah.tF().a(30, this);
   }
   
   public static abstract interface a
@@ -221,7 +225,7 @@ public final class a
   
   public static abstract interface b
   {
-    public abstract boolean aek();
+    public abstract boolean agP();
   }
 }
 

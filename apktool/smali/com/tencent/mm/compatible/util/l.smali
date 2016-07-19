@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static df(Ljava/lang/String;)Ljava/lang/String;
+.method public static dm(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
     .prologue
@@ -20,25 +20,25 @@
 
     .line 89
     :cond_1
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->brO:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->bfP:I
 
     const/4 v1, 0x2
 
     if-eq v0, v1, :cond_0
 
     .line 93
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->brZ:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->bga:I
 
     if-eq v0, v2, :cond_0
 
     .line 97
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->brO:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->bfP:I
 
     if-ne v0, v2, :cond_2
 
@@ -96,7 +96,7 @@
 
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

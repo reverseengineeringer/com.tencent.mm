@@ -12,25 +12,25 @@ final class b$1
   
   public final void run()
   {
-    b localb = kzp;
-    Object localObject = jx;
+    b localb = kYw;
+    Object localObject = jO;
     ActionBar localActionBar = localb.aP();
     if (localActionBar != null) {
       localObject = localActionBar.getThemedContext();
     }
     localObject = new f((Context)localObject);
     ((f)localObject).a(localb);
-    if (kzp.kzo != null)
+    if (kYw.kYv != null)
     {
-      kzp.kzo.c((Menu)localObject);
-      kzp.kzo.b((Menu)localObject);
-      b.a(kzp, (f)localObject);
+      kYw.kYv.c((Menu)localObject);
+      kYw.kYv.b((Menu)localObject);
+      b.a(kYw, (f)localObject);
     }
     for (;;)
     {
-      kzp.iT = false;
+      kYw.jk = false;
       return;
-      b.a(kzp, null);
+      b.a(kYw, null);
     }
   }
 }

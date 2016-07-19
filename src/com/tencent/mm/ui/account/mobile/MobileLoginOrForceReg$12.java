@@ -11,14 +11,14 @@ final class MobileLoginOrForceReg$12
   
   public final void onClick(View paramView)
   {
-    MobileLoginOrForceReg.a(kyq, new a(new a.a()
+    MobileLoginOrForceReg.a(kXx, new a(new a.a()
     {
       public final void a(ProgressDialog paramAnonymousProgressDialog)
       {
-        kyq.coM = paramAnonymousProgressDialog;
+        kXx.cka = paramAnonymousProgressDialog;
       }
-    }, MobileLoginOrForceReg.c(kyq), MobileLoginOrForceReg.d(kyq), MobileLoginOrForceReg.e(kyq)));
-    MobileLoginOrForceReg.f(kyq).i(kyq);
+    }, MobileLoginOrForceReg.c(kXx), MobileLoginOrForceReg.d(kXx), MobileLoginOrForceReg.e(kXx)));
+    MobileLoginOrForceReg.f(kXx).g(kXx);
   }
 }
 

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract vM(Ljava/lang/String;)V
+.method public abstract wZ(Ljava/lang/String;)V
 .end method

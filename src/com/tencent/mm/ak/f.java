@@ -1,72 +1,65 @@
 package com.tencent.mm.ak;
 
-import com.tencent.mm.network.e;
-import com.tencent.mm.network.o;
-import com.tencent.mm.pluginsdk.j.a.b;
-import com.tencent.mm.protocal.b.ave;
-import com.tencent.mm.protocal.b.avf;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.d;
+import java.util.LinkedList;
 
 public final class f
-  extends b
+  extends com.tencent.mm.ax.a
 {
-  private d anM;
-  private a anN;
+  public LinkedList<d> bRt = new LinkedList();
+  public double bRu;
   
-  public f()
+  protected final int a(int paramInt, Object... paramVarArgs)
   {
-    Object localObject = new a.a();
-    bFa = new ave();
-    bFb = new avf();
-    uri = "/cgi-bin/micromsg-bin/updatesoterloginauthkey";
-    bEY = 620;
-    bFc = 0;
-    bFd = 0;
-    anN = ((a.a)localObject).vy();
-    localObject = (ave)anN.bEW.bFf;
-    jNv = "";
-    jNu = "";
-    iWm = 620;
-  }
-  
-  public final void Db()
-  {
-    if (anM != null) {
-      anM.a(4, -1, "", this);
+    if (paramInt == 0)
+    {
+      paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
+      paramVarArgs.d(1, 8, bRt);
+      paramVarArgs.a(2, bRu);
+      return 0;
     }
-  }
-  
-  public final int a(e parame, d paramd)
-  {
-    anM = paramd;
-    return a(parame, anN, this);
-  }
-  
-  public final void b(int paramInt1, int paramInt2, String paramString, o paramo)
-  {
-    if (anM != null) {
-      anM.a(paramInt1, paramInt2, paramString, this);
+    if (paramInt == 1) {
+      return a.a.a.a.c(1, 8, bRt) + 0 + (a.a.a.b.b.a.aQ(2) + 8);
     }
-  }
-  
-  public final void c(int paramInt1, int paramInt2, String paramString)
-  {
-    if (anM != null) {
-      anM.a(3, paramInt2, paramString, this);
+    if (paramInt == 2)
+    {
+      paramVarArgs = (byte[])paramVarArgs[0];
+      bRt.clear();
+      paramVarArgs = new a.a.a.a.a(paramVarArgs, jrk);
+      for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
+        if (!super.a(paramVarArgs, this, paramInt)) {
+          paramVarArgs.bve();
+        }
+      }
+      return 0;
     }
-  }
-  
-  public final int getType()
-  {
-    return 620;
-  }
-  
-  public final d vI()
-  {
-    return anM;
+    if (paramInt == 3)
+    {
+      Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
+      f localf = (f)paramVarArgs[1];
+      paramInt = ((Integer)paramVarArgs[2]).intValue();
+      switch (paramInt)
+      {
+      default: 
+        return -1;
+      case 1: 
+        paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+        int i = paramVarArgs.size();
+        paramInt = 0;
+        while (paramInt < i)
+        {
+          Object localObject2 = (byte[])paramVarArgs.get(paramInt);
+          localObject1 = new d();
+          localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+          for (boolean bool = true; bool; bool = ((d)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, com.tencent.mm.ax.a.a((a.a.a.a.a)localObject2))) {}
+          bRt.add(localObject1);
+          paramInt += 1;
+        }
+        return 0;
+      }
+      bRu = mMY.readDouble();
+      return 0;
+    }
+    return -1;
   }
 }
 

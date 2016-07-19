@@ -62,17 +62,14 @@ public abstract class SQLiteProgram
   
   public void bindAllArgsAsStrings(String[] paramArrayOfString)
   {
-    int i;
-    if (paramArrayOfString != null) {
-      i = paramArrayOfString.length;
-    }
-    for (;;)
+    if (paramArrayOfString != null)
     {
-      if (i == 0) {
-        return;
+      int i = paramArrayOfString.length;
+      while (i != 0)
+      {
+        bindString(i, paramArrayOfString[(i - 1)]);
+        i -= 1;
       }
-      bindString(i, paramArrayOfString[(i - 1)]);
-      i -= 1;
     }
   }
   

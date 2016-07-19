@@ -1,41 +1,39 @@
 .class public final Lcom/tencent/smtt/sdk/a/a;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # static fields
-.field private static final lUm:[I
+.field private static final mwe:[I
 
-.field private static final lUn:[I
+.field private static final mwf:[I
 
-.field private static final lUo:[I
+.field private static final mwg:[I
 
-.field private static final lUp:[I
+.field private static final mwh:[I
 
-.field private static final lUq:[I
+.field private static final mwi:[I
 
-.field private static final lUr:[I
+.field private static final mwj:[I
 
-.field private static final lUs:[[[I
+.field private static final mwk:[[[I
 
-.field private static final lUt:[I
+.field private static final mwl:[I
 
-.field public static final lUu:[B
+.field public static final mwm:[B
 
-.field public static final lUv:[B
+.field public static final mwn:[B
 
-.field public static final lUw:[B
+.field public static final mwo:[B
 
-.field public static final lUx:[B
+.field public static final mwp:[B
 
-.field public static final lUy:[B
+.field public static final mwq:[B
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x3
 
     const/4 v7, 0x2
@@ -46,61 +44,54 @@
 
     const/16 v4, 0x10
 
-    .line 11
     const/16 v0, 0x40
 
     new-array v0, v0, [I
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->lUm:[I
+    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->mwe:[I
 
-    .line 15
     const/16 v0, 0x40
 
     new-array v0, v0, [I
 
     fill-array-data v0, :array_1
 
-    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->lUn:[I
+    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->mwf:[I
 
-    .line 19
     const/16 v0, 0x38
 
     new-array v0, v0, [I
 
     fill-array-data v0, :array_2
 
-    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->lUo:[I
+    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->mwg:[I
 
-    .line 22
     const/16 v0, 0x30
 
     new-array v0, v0, [I
 
     fill-array-data v0, :array_3
 
-    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->lUp:[I
+    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->mwh:[I
 
-    .line 25
     const/16 v0, 0x30
 
     new-array v0, v0, [I
 
     fill-array-data v0, :array_4
 
-    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->lUq:[I
+    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->mwi:[I
 
-    .line 28
     const/16 v0, 0x20
 
     new-array v0, v0, [I
 
     fill-array-data v0, :array_5
 
-    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->lUr:[I
+    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->mwj:[I
 
-    .line 31
     const/16 v0, 0x8
 
     new-array v0, v0, [[[I
@@ -353,61 +344,54 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->lUs:[[[I
+    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->mwk:[[[I
 
-    .line 50
     new-array v0, v4, [I
 
     fill-array-data v0, :array_26
 
-    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->lUt:[I
+    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->mwl:[I
 
-    .line 53
     const/16 v0, 0x8
 
     new-array v0, v0, [B
 
     fill-array-data v0, :array_27
 
-    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->lUu:[B
+    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->mwm:[B
 
-    .line 56
     new-array v0, v4, [B
 
     fill-array-data v0, :array_28
 
-    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->lUv:[B
+    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->mwn:[B
 
-    .line 60
     const/16 v0, 0x8
 
     new-array v0, v0, [B
 
     fill-array-data v0, :array_29
 
-    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->lUw:[B
+    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->mwo:[B
 
-    .line 64
     const/16 v0, 0x8
 
     new-array v0, v0, [B
 
     fill-array-data v0, :array_2a
 
-    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->lUx:[B
+    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->mwp:[B
 
-    .line 68
     const-string/jumbo v0, "AL!#$AC9Ahg@KLJ1"
 
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->lUy:[B
+    sput-object v0, Lcom/tencent/smtt/sdk/a/a;->mwq:[B
 
     return-void
 
-    .line 11
     nop
 
     :array_0
@@ -478,7 +462,6 @@
         0x7
     .end array-data
 
-    .line 15
     :array_1
     .array-data 4
         0x28
@@ -547,7 +530,6 @@
         0x19
     .end array-data
 
-    .line 19
     :array_2
     .array-data 4
         0x39
@@ -608,7 +590,6 @@
         0x4
     .end array-data
 
-    .line 22
     :array_3
     .array-data 4
         0xe
@@ -661,7 +642,6 @@
         0x20
     .end array-data
 
-    .line 25
     :array_4
     .array-data 4
         0x20
@@ -714,7 +694,6 @@
         0x1
     .end array-data
 
-    .line 28
     :array_5
     .array-data 4
         0x10
@@ -751,7 +730,6 @@
         0x19
     .end array-data
 
-    .line 31
     :array_6
     .array-data 4
         0xe
@@ -1392,7 +1370,6 @@
         0xb
     .end array-data
 
-    .line 50
     :array_26
     .array-data 4
         0x1
@@ -1413,7 +1390,6 @@
         0x1
     .end array-data
 
-    .line 53
     :array_27
     .array-data 1
         0x62t
@@ -1426,7 +1402,6 @@
         0x79t
     .end array-data
 
-    .line 56
     :array_28
     .array-data 1
         -0x19t
@@ -1447,7 +1422,6 @@
         0x73t
     .end array-data
 
-    .line 60
     :array_29
     .array-data 1
         0x25t
@@ -1460,7 +1434,6 @@
         -0x6et
     .end array-data
 
-    .line 64
     :array_2a
     .array-data 1
         -0x7at
@@ -1474,1095 +1447,45 @@
     .end array-data
 .end method
 
-.method private static a([III[[I)V
-    .locals 15
-
-    .prologue
-    .line 230
-    const/16 v1, 0x20
-
-    new-array v4, v1, [I
-
-    .line 231
-    const/16 v1, 0x20
-
-    new-array v5, v1, [I
-
-    .line 232
-    const/16 v1, 0x20
-
-    new-array v6, v1, [I
-
-    .line 233
-    const/16 v1, 0x20
-
-    new-array v7, v1, [I
-
-    .line 234
-    const/16 v1, 0x30
-
-    new-array v8, v1, [I
-
-    .line 235
-    const/16 v1, 0x8
-
-    const/4 v2, 0x6
-
-    filled-new-array {v1, v2}, [I
-
-    move-result-object v1
-
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    invoke-static {v2, v1}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, [[I
-
-    .line 236
-    const/16 v2, 0x8
-
-    new-array v9, v2, [I
-
-    .line 237
-    const/16 v2, 0x20
-
-    new-array v10, v2, [I
-
-    .line 238
-    const/16 v2, 0x20
-
-    new-array v11, v2, [I
-
-    .line 239
-    const/4 v2, 0x0
-
-    :goto_0
-    const/16 v3, 0x20
-
-    if-ge v2, v3, :cond_0
-
-    .line 241
-    aget v3, p0, v2
-
-    aput v3, v4, v2
-
-    .line 242
-    add-int/lit8 v3, v2, 0x20
-
-    aget v3, p0, v3
-
-    aput v3, v5, v2
-
-    .line 239
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    .line 244
-    :cond_0
-    const/4 v2, 0x0
-
-    :goto_1
-    const/16 v3, 0x30
-
-    if-ge v2, v3, :cond_2
-
-    .line 246
-    sget-object v3, Lcom/tencent/smtt/sdk/a/a;->lUq:[I
-
-    aget v3, v3, v2
-
-    add-int/lit8 v3, v3, -0x1
-
-    aget v3, v5, v3
-
-    aput v3, v8, v2
-
-    .line 247
-    aget v3, v8, v2
-
-    aget-object v12, p3, p1
-
-    aget v12, v12, v2
-
-    add-int/2addr v3, v12
-
-    aput v3, v8, v2
-
-    .line 248
-    aget v3, v8, v2
-
-    const/4 v12, 0x2
-
-    if-ne v3, v12, :cond_1
-
-    .line 250
-    const/4 v3, 0x0
-
-    aput v3, v8, v2
-
-    .line 244
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    .line 253
-    :cond_2
-    const/4 v2, 0x0
-
-    :goto_2
-    const/16 v3, 0x8
-
-    if-ge v2, v3, :cond_5
-
-    .line 255
-    const/4 v3, 0x0
-
-    :goto_3
-    const/4 v12, 0x6
-
-    if-ge v3, v12, :cond_3
-
-    .line 257
-    aget-object v12, v1, v2
-
-    mul-int/lit8 v13, v2, 0x6
-
-    add-int/2addr v13, v3
-
-    aget v13, v8, v13
-
-    aput v13, v12, v3
-
-    .line 255
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_3
-
-    .line 260
-    :cond_3
-    sget-object v3, Lcom/tencent/smtt/sdk/a/a;->lUs:[[[I
-
-    aget-object v3, v3, v2
-
-    aget-object v12, v1, v2
-
-    const/4 v13, 0x0
-
-    aget v12, v12, v13
-
-    shl-int/lit8 v12, v12, 0x1
-
-    aget-object v13, v1, v2
-
-    const/4 v14, 0x5
-
-    aget v13, v13, v14
-
-    add-int/2addr v12, v13
-
-    aget-object v3, v3, v12
-
-    aget-object v12, v1, v2
-
-    const/4 v13, 0x1
-
-    aget v12, v12, v13
-
-    shl-int/lit8 v12, v12, 0x3
-
-    aget-object v13, v1, v2
-
-    const/4 v14, 0x2
-
-    aget v13, v13, v14
-
-    shl-int/lit8 v13, v13, 0x2
-
-    add-int/2addr v12, v13
-
-    aget-object v13, v1, v2
-
-    const/4 v14, 0x3
-
-    aget v13, v13, v14
-
-    shl-int/lit8 v13, v13, 0x1
-
-    add-int/2addr v12, v13
-
-    aget-object v13, v1, v2
-
-    const/4 v14, 0x4
-
-    aget v13, v13, v14
-
-    add-int/2addr v12, v13
-
-    aget v3, v3, v12
-
-    aput v3, v9, v2
-
-    .line 262
-    const/4 v3, 0x0
-
-    :goto_4
-    const/4 v12, 0x4
-
-    if-ge v3, v12, :cond_4
-
-    .line 264
-    mul-int/lit8 v12, v2, 0x4
-
-    add-int/lit8 v12, v12, 0x3
-
-    sub-int/2addr v12, v3
-
-    aget v13, v9, v2
-
-    rem-int/lit8 v13, v13, 0x2
-
-    aput v13, v10, v12
-
-    .line 265
-    aget v12, v9, v2
-
-    div-int/lit8 v12, v12, 0x2
-
-    aput v12, v9, v2
-
-    .line 262
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_4
-
-    .line 253
-    :cond_4
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_2
-
-    .line 268
-    :cond_5
-    const/4 v1, 0x0
-
-    :goto_5
-    const/16 v2, 0x20
-
-    if-ge v1, v2, :cond_a
-
-    .line 270
-    sget-object v2, Lcom/tencent/smtt/sdk/a/a;->lUr:[I
-
-    aget v2, v2, v1
-
-    add-int/lit8 v2, v2, -0x1
-
-    aget v2, v10, v2
-
-    aput v2, v11, v1
-
-    .line 271
-    aget v2, v5, v1
-
-    aput v2, v6, v1
-
-    .line 272
-    aget v2, v4, v1
-
-    aget v3, v11, v1
-
-    add-int/2addr v2, v3
-
-    aput v2, v7, v1
-
-    .line 273
-    aget v2, v7, v1
-
-    const/4 v3, 0x2
-
-    if-ne v2, v3, :cond_6
-
-    .line 275
-    const/4 v2, 0x0
-
-    aput v2, v7, v1
-
-    .line 279
-    :cond_6
-    if-nez p2, :cond_7
-
-    if-eqz p1, :cond_8
-
-    :cond_7
-    const/4 v2, 0x1
-
-    move/from16 v0, p2
-
-    if-ne v0, v2, :cond_9
-
-    const/16 v2, 0xf
-
-    move/from16 v0, p1
-
-    if-ne v0, v2, :cond_9
-
-    .line 281
-    :cond_8
-    aget v2, v7, v1
-
-    aput v2, p0, v1
-
-    .line 282
-    add-int/lit8 v2, v1, 0x20
-
-    aget v3, v6, v1
-
-    aput v3, p0, v2
-
-    .line 268
-    :goto_6
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_5
-
-    .line 286
-    :cond_9
-    aget v2, v6, v1
-
-    aput v2, p0, v1
-
-    .line 287
-    add-int/lit8 v2, v1, 0x20
-
-    aget v3, v7, v1
-
-    aput v3, p0, v2
-
-    goto :goto_6
-
-    .line 290
-    :cond_a
-    return-void
-.end method
-
-.method private static a([I[[I)V
-    .locals 14
-
-    .prologue
-    const/16 v13, 0x1a
-
-    const/4 v12, 0x1
-
-    const/16 v11, 0x1b
-
-    const/16 v10, 0x1c
-
-    const/4 v1, 0x0
-
-    .line 104
-    const/16 v0, 0x38
-
-    new-array v3, v0, [I
-
-    move v0, v1
-
-    .line 106
-    :goto_0
-    const/16 v2, 0x38
-
-    if-ge v0, v2, :cond_0
-
-    .line 108
-    sget-object v2, Lcom/tencent/smtt/sdk/a/a;->lUo:[I
-
-    aget v2, v2, v0
-
-    add-int/lit8 v2, v2, -0x1
-
-    aget v2, p0, v2
-
-    aput v2, v3, v0
-
-    .line 106
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    .line 110
-    :goto_1
-    const/16 v2, 0x10
-
-    if-ge v0, v2, :cond_8
-
-    .line 112
-    sget-object v2, Lcom/tencent/smtt/sdk/a/a;->lUt:[I
-
-    aget v4, v2, v0
-
-    new-array v5, v10, [I
-
-    new-array v6, v10, [I
-
-    new-array v7, v10, [I
-
-    new-array v8, v10, [I
-
-    move v2, v1
-
-    :goto_2
-    if-ge v2, v10, :cond_1
-
-    aget v9, v3, v2
-
-    aput v9, v5, v2
-
-    add-int/lit8 v9, v2, 0x1c
-
-    aget v9, v3, v9
-
-    aput v9, v6, v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_2
-
-    :cond_1
-    if-ne v4, v12, :cond_4
-
-    move v2, v1
-
-    :goto_3
-    if-ge v2, v11, :cond_2
-
-    add-int/lit8 v4, v2, 0x1
-
-    aget v4, v5, v4
-
-    aput v4, v7, v2
-
-    add-int/lit8 v4, v2, 0x1
-
-    aget v4, v6, v4
-
-    aput v4, v8, v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_3
-
-    :cond_2
-    aget v2, v5, v1
-
-    aput v2, v7, v11
-
-    aget v2, v6, v1
-
-    aput v2, v8, v11
-
-    :cond_3
-    :goto_4
-    move v2, v1
-
-    :goto_5
-    if-ge v2, v10, :cond_6
-
-    aget v4, v7, v2
-
-    aput v4, v3, v2
-
-    add-int/lit8 v4, v2, 0x1c
-
-    aget v5, v8, v2
-
-    aput v5, v3, v4
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_5
-
-    :cond_4
-    const/4 v2, 0x2
-
-    if-ne v4, v2, :cond_3
-
-    move v2, v1
-
-    :goto_6
-    if-ge v2, v13, :cond_5
-
-    add-int/lit8 v4, v2, 0x2
-
-    aget v4, v5, v4
-
-    aput v4, v7, v2
-
-    add-int/lit8 v4, v2, 0x2
-
-    aget v4, v6, v4
-
-    aput v4, v8, v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_6
-
-    :cond_5
-    aget v2, v5, v1
-
-    aput v2, v7, v13
-
-    aget v2, v6, v1
-
-    aput v2, v8, v13
-
-    aget v2, v5, v12
-
-    aput v2, v7, v11
-
-    aget v2, v6, v12
-
-    aput v2, v8, v11
-
-    goto :goto_4
-
-    :cond_6
-    move v2, v1
-
-    .line 114
-    :goto_7
-    const/16 v4, 0x30
-
-    if-ge v2, v4, :cond_7
-
-    .line 116
-    aget-object v4, p1, v0
-
-    sget-object v5, Lcom/tencent/smtt/sdk/a/a;->lUp:[I
-
-    aget v5, v5, v2
-
-    add-int/lit8 v5, v5, -0x1
-
-    aget v5, v3, v5
-
-    aput v5, v4, v2
-
-    .line 114
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_7
-
-    .line 110
-    :cond_7
-    add-int/lit8 v0, v0, 0x1
-
-    goto/16 :goto_1
-
-    .line 119
-    :cond_8
-    return-void
-.end method
-
-.method public static a([B[BI)[B
-    .locals 13
-
-    .prologue
-    const/4 v3, 0x1
-
-    const/16 v12, 0x8
-
-    const/4 v2, 0x0
-
-    .line 354
-    if-eqz p1, :cond_0
-
-    if-nez p0, :cond_1
-
-    .line 404
-    :cond_0
-    :goto_0
-    return-object p1
-
-    .line 360
-    :cond_1
-    const/16 v0, 0x8
-
-    :try_start_0
-    new-array v5, v0, [B
-
-    move v0, v2
-
-    :goto_1
-    if-ge v0, v12, :cond_2
-
-    const/4 v1, 0x0
-
-    aput-byte v1, v5, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    array-length v0, p0
-
-    if-le v0, v12, :cond_3
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    const/16 v4, 0x8
-
-    invoke-static {p0, v0, v5, v1, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 361
-    :goto_2
-    array-length v0, p1
-
-    rem-int/lit8 v1, v0, 0x8
-
-    rsub-int/lit8 v1, v1, 0x8
-
-    add-int v4, v0, v1
-
-    new-array v6, v4, [B
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    invoke-static {p1, v7, v6, v8, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :goto_3
-    if-ge v0, v4, :cond_4
-
-    int-to-byte v7, v1
-
-    aput-byte v7, v6, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_3
-
-    .line 360
-    :cond_3
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    array-length v4, p0
-
-    invoke-static {p0, v0, v5, v1, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    goto :goto_2
-
-    .line 404
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
-
-    .line 363
-    :cond_4
-    div-int/lit8 v7, v4, 0x8
-
-    .line 364
-    new-array v1, v4, [B
-
-    move v4, v2
-
-    .line 365
-    :goto_4
-    if-ge v4, v7, :cond_6
-
-    .line 367
-    const/16 v0, 0x8
-
-    new-array v8, v0, [B
-
-    .line 368
-    const/16 v0, 0x8
-
-    new-array v9, v0, [B
-
-    .line 369
-    const/4 v0, 0x0
-
-    const/4 v10, 0x0
-
-    const/16 v11, 0x8
-
-    invoke-static {v5, v0, v8, v10, v11}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 370
-    mul-int/lit8 v0, v4, 0x8
-
-    const/4 v10, 0x0
-
-    const/16 v11, 0x8
-
-    invoke-static {v6, v0, v9, v10, v11}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 371
-    if-eq p2, v3, :cond_5
-
-    if-eqz p2, :cond_5
-
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string/jumbo v1, "Data Format Error !"
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_5
-    const/16 v0, 0x10
-
-    const/16 v10, 0x30
-
-    filled-new-array {v0, v10}, [I
-
-    move-result-object v0
-
-    sget-object v10, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    invoke-static {v10, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [[I
-
-    invoke-static {v8}, Lcom/tencent/smtt/sdk/a/a;->be([B)[I
-
-    move-result-object v8
-
-    invoke-static {v9}, Lcom/tencent/smtt/sdk/a/a;->be([B)[I
-
-    move-result-object v9
-
-    invoke-static {v8, v0}, Lcom/tencent/smtt/sdk/a/a;->a([I[[I)V
-
-    invoke-static {v9, p2, v0}, Lcom/tencent/smtt/sdk/a/a;->a([II[[I)[B
-
-    move-result-object v0
-
-    .line 372
-    const/4 v8, 0x0
-
-    mul-int/lit8 v9, v4, 0x8
-
-    const/16 v10, 0x8
-
-    invoke-static {v0, v8, v1, v9, v10}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 365
-    add-int/lit8 v0, v4, 0x1
-
-    move v4, v0
-
-    goto :goto_4
-
-    .line 374
-    :cond_6
-    if-nez p2, :cond_8
-
-    .line 377
-    array-length v0, p1
-
-    new-array v4, v0, [B
-
-    .line 378
-    const/4 v0, 0x0
-
-    const/4 v5, 0x0
-
-    array-length v6, v4
-
-    invoke-static {v1, v0, v4, v5, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 379
-    array-length v0, v4
-
-    add-int/lit8 v0, v0, -0x1
-
-    aget-byte v5, v4, v0
-
-    .line 380
-    if-lez v5, :cond_8
-
-    if-gt v5, v12, :cond_8
-
-    move v0, v2
-
-    .line 383
-    :goto_5
-    if-ge v0, v5, :cond_9
-
-    .line 385
-    array-length v6, v4
-
-    add-int/lit8 v6, v6, -0x1
-
-    sub-int/2addr v6, v0
-
-    aget-byte v6, v4, v6
-
-    if-eq v5, v6, :cond_7
-
-    move v0, v2
-
-    .line 392
-    :goto_6
-    if-eqz v0, :cond_8
-
-    .line 394
-    array-length v0, v4
-
-    sub-int/2addr v0, v5
-
-    new-array v0, v0, [B
-
-    .line 395
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    array-length v3, v0
-
-    invoke-static {v4, v1, v0, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_7
-    move-object p1, v0
-
-    .line 399
-    goto/16 :goto_0
-
-    .line 383
-    :cond_7
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_5
-
-    :cond_8
-    move-object v0, v1
-
-    goto :goto_7
-
-    :cond_9
-    move v0, v3
-
-    goto :goto_6
-.end method
-
-.method private static a([II[[I)[B
-    .locals 9
-
-    .prologue
-    const/16 v8, 0x8
-
-    const/16 v6, 0x40
-
-    const/4 v1, 0x0
-
-    .line 125
-    new-array v3, v8, [B
-
-    .line 127
-    new-array v2, v6, [I
-
-    .line 128
-    new-array v4, v6, [I
-
-    move v0, v1
-
-    .line 130
-    :goto_0
-    if-ge v0, v6, :cond_0
-
-    .line 132
-    sget-object v5, Lcom/tencent/smtt/sdk/a/a;->lUm:[I
-
-    aget v5, v5, v0
-
-    add-int/lit8 v5, v5, -0x1
-
-    aget v5, p0, v5
-
-    aput v5, v2, v0
-
-    .line 130
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    .line 134
-    :cond_0
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_1
-
-    move v0, v1
-
-    .line 136
-    :goto_1
-    const/16 v5, 0x10
-
-    if-ge v0, v5, :cond_2
-
-    .line 138
-    invoke-static {v2, v0, p1, p2}, Lcom/tencent/smtt/sdk/a/a;->a([III[[I)V
-
-    .line 136
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    .line 141
-    :cond_1
-    if-nez p1, :cond_2
-
-    .line 143
-    const/16 v0, 0xf
-
-    :goto_2
-    if-ltz v0, :cond_2
-
-    .line 145
-    invoke-static {v2, v0, p1, p2}, Lcom/tencent/smtt/sdk/a/a;->a([III[[I)V
-
-    .line 143
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_2
-
-    :cond_2
-    move v0, v1
-
-    .line 148
-    :goto_3
-    if-ge v0, v6, :cond_3
-
-    .line 150
-    sget-object v5, Lcom/tencent/smtt/sdk/a/a;->lUn:[I
-
-    aget v5, v5, v0
-
-    add-int/lit8 v5, v5, -0x1
-
-    aget v5, v2, v5
-
-    aput v5, v4, v0
-
-    .line 148
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_3
-
-    :cond_3
-    move v2, v1
-
-    .line 152
-    :goto_4
-    if-ge v2, v8, :cond_5
-
-    move v0, v1
-
-    :goto_5
-    if-ge v0, v8, :cond_4
-
-    aget-byte v5, v3, v2
-
-    shl-int/lit8 v6, v2, 0x3
-
-    add-int/2addr v6, v0
-
-    aget v6, v4, v6
-
-    rsub-int/lit8 v7, v0, 0x7
-
-    shl-int/2addr v6, v7
-
-    add-int/2addr v5, v6
-
-    int-to-byte v5, v5
-
-    aput-byte v5, v3, v2
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_5
-
-    :cond_4
-    add-int/lit8 v0, v2, 0x1
-
-    move v2, v0
-
-    goto :goto_4
-
-    .line 154
-    :cond_5
-    return-object v3
-.end method
-
-.method private static be([B)[I
+.method private static bl([B)[I
     .locals 8
 
-    .prologue
     const/4 v1, 0x0
 
     const/16 v7, 0x8
 
-    .line 162
     new-array v3, v7, [I
 
     move v0, v1
 
-    .line 163
     :goto_0
     if-ge v0, v7, :cond_1
 
-    .line 165
     aget-byte v2, p0, v0
 
     aput v2, v3, v0
 
-    .line 166
     aget v2, v3, v0
 
     if-gez v2, :cond_0
 
-    .line 168
     aget v2, v3, v0
 
     add-int/lit16 v2, v2, 0x100
 
     aput v2, v3, v0
 
-    .line 169
     aget v2, v3, v0
 
     rem-int/lit16 v2, v2, 0x100
 
     aput v2, v3, v0
 
-    .line 163
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 172
     :cond_1
     const/16 v0, 0x40
 
@@ -2570,17 +1493,14 @@
 
     move v0, v1
 
-    .line 173
     :goto_1
     if-ge v0, v7, :cond_3
 
     move v2, v1
 
-    .line 175
     :goto_2
     if-ge v2, v7, :cond_2
 
-    .line 177
     mul-int/lit8 v5, v0, 0x8
 
     add-int/lit8 v5, v5, 0x7
@@ -2593,25 +1513,895 @@
 
     aput v6, v4, v5
 
-    .line 178
     aget v5, v3, v0
 
     div-int/lit8 v5, v5, 0x2
 
     aput v5, v3, v0
 
-    .line 175
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 173
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 181
     :cond_3
     return-object v4
+.end method
+
+.method public static l([B[B)[B
+    .locals 25
+
+    if-eqz p1, :cond_0
+
+    if-nez p0, :cond_1
+
+    :cond_0
+    :goto_0
+    return-object p1
+
+    :cond_1
+    const/16 v1, 0x8
+
+    :try_start_0
+    new-array v8, v1, [B
+
+    const/4 v1, 0x0
+
+    :goto_1
+    const/16 v2, 0x8
+
+    if-ge v1, v2, :cond_2
+
+    const/4 v2, 0x0
+
+    aput-byte v2, v8, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    move-object/from16 v0, p0
+
+    array-length v1, v0
+
+    const/16 v2, 0x8
+
+    if-le v1, v2, :cond_3
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0x8
+
+    move-object/from16 v0, p0
+
+    invoke-static {v0, v1, v8, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :goto_2
+    move-object/from16 v0, p1
+
+    array-length v1, v0
+
+    rem-int/lit8 v2, v1, 0x8
+
+    rsub-int/lit8 v2, v2, 0x8
+
+    add-int v3, v1, v2
+
+    new-array v9, v3, [B
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    move-object/from16 v0, p1
+
+    invoke-static {v0, v4, v9, v5, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :goto_3
+    if-ge v1, v3, :cond_4
+
+    int-to-byte v4, v2
+
+    aput-byte v4, v9, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_3
+
+    :cond_3
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    move-object/from16 v0, p0
+
+    array-length v3, v0
+
+    move-object/from16 v0, p0
+
+    invoke-static {v0, v1, v8, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    goto :goto_2
+
+    :catch_0
+    move-exception v1
+
+    goto :goto_0
+
+    :cond_4
+    div-int/lit8 v10, v3, 0x8
+
+    new-array v3, v3, [B
+
+    const/4 v1, 0x0
+
+    move v4, v1
+
+    :goto_4
+    if-ge v4, v10, :cond_1c
+
+    const/16 v1, 0x8
+
+    new-array v5, v1, [B
+
+    const/16 v1, 0x8
+
+    new-array v6, v1, [B
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/16 v7, 0x8
+
+    invoke-static {v8, v1, v5, v2, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    mul-int/lit8 v1, v4, 0x8
+
+    const/4 v2, 0x0
+
+    const/16 v7, 0x8
+
+    invoke-static {v9, v1, v6, v2, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    const/16 v1, 0x10
+
+    const/16 v2, 0x30
+
+    filled-new-array {v1, v2}, [I
+
+    move-result-object v1
+
+    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    invoke-static {v2, v1}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v0, v1
+
+    check-cast v0, [[I
+
+    move-object v2, v0
+
+    invoke-static {v5}, Lcom/tencent/smtt/sdk/a/a;->bl([B)[I
+
+    move-result-object v5
+
+    invoke-static {v6}, Lcom/tencent/smtt/sdk/a/a;->bl([B)[I
+
+    move-result-object v6
+
+    const/16 v1, 0x38
+
+    new-array v7, v1, [I
+
+    const/4 v1, 0x0
+
+    :goto_5
+    const/16 v11, 0x38
+
+    if-ge v1, v11, :cond_5
+
+    sget-object v11, Lcom/tencent/smtt/sdk/a/a;->mwg:[I
+
+    aget v11, v11, v1
+
+    add-int/lit8 v11, v11, -0x1
+
+    aget v11, v5, v11
+
+    aput v11, v7, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_5
+
+    :cond_5
+    const/4 v1, 0x0
+
+    :goto_6
+    const/16 v5, 0x10
+
+    if-ge v1, v5, :cond_d
+
+    sget-object v5, Lcom/tencent/smtt/sdk/a/a;->mwl:[I
+
+    aget v11, v5, v1
+
+    const/16 v5, 0x1c
+
+    new-array v12, v5, [I
+
+    const/16 v5, 0x1c
+
+    new-array v13, v5, [I
+
+    const/16 v5, 0x1c
+
+    new-array v14, v5, [I
+
+    const/16 v5, 0x1c
+
+    new-array v15, v5, [I
+
+    const/4 v5, 0x0
+
+    :goto_7
+    const/16 v16, 0x1c
+
+    move/from16 v0, v16
+
+    if-ge v5, v0, :cond_6
+
+    aget v16, v7, v5
+
+    aput v16, v12, v5
+
+    add-int/lit8 v16, v5, 0x1c
+
+    aget v16, v7, v16
+
+    aput v16, v13, v5
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_7
+
+    :cond_6
+    const/4 v5, 0x1
+
+    if-ne v11, v5, :cond_9
+
+    const/4 v5, 0x0
+
+    :goto_8
+    const/16 v11, 0x1b
+
+    if-ge v5, v11, :cond_7
+
+    add-int/lit8 v11, v5, 0x1
+
+    aget v11, v12, v11
+
+    aput v11, v14, v5
+
+    add-int/lit8 v11, v5, 0x1
+
+    aget v11, v13, v11
+
+    aput v11, v15, v5
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_8
+
+    :cond_7
+    const/16 v5, 0x1b
+
+    const/4 v11, 0x0
+
+    aget v11, v12, v11
+
+    aput v11, v14, v5
+
+    const/16 v5, 0x1b
+
+    const/4 v11, 0x0
+
+    aget v11, v13, v11
+
+    aput v11, v15, v5
+
+    :cond_8
+    :goto_9
+    const/4 v5, 0x0
+
+    :goto_a
+    const/16 v11, 0x1c
+
+    if-ge v5, v11, :cond_b
+
+    aget v11, v14, v5
+
+    aput v11, v7, v5
+
+    add-int/lit8 v11, v5, 0x1c
+
+    aget v12, v15, v5
+
+    aput v12, v7, v11
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_a
+
+    :cond_9
+    const/4 v5, 0x2
+
+    if-ne v11, v5, :cond_8
+
+    const/4 v5, 0x0
+
+    :goto_b
+    const/16 v11, 0x1a
+
+    if-ge v5, v11, :cond_a
+
+    add-int/lit8 v11, v5, 0x2
+
+    aget v11, v12, v11
+
+    aput v11, v14, v5
+
+    add-int/lit8 v11, v5, 0x2
+
+    aget v11, v13, v11
+
+    aput v11, v15, v5
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_b
+
+    :cond_a
+    const/16 v5, 0x1a
+
+    const/4 v11, 0x0
+
+    aget v11, v12, v11
+
+    aput v11, v14, v5
+
+    const/16 v5, 0x1a
+
+    const/4 v11, 0x0
+
+    aget v11, v13, v11
+
+    aput v11, v15, v5
+
+    const/16 v5, 0x1b
+
+    const/4 v11, 0x1
+
+    aget v11, v12, v11
+
+    aput v11, v14, v5
+
+    const/16 v5, 0x1b
+
+    const/4 v11, 0x1
+
+    aget v11, v13, v11
+
+    aput v11, v15, v5
+
+    goto :goto_9
+
+    :cond_b
+    const/4 v5, 0x0
+
+    :goto_c
+    const/16 v11, 0x30
+
+    if-ge v5, v11, :cond_c
+
+    aget-object v11, v2, v1
+
+    sget-object v12, Lcom/tencent/smtt/sdk/a/a;->mwh:[I
+
+    aget v12, v12, v5
+
+    add-int/lit8 v12, v12, -0x1
+
+    aget v12, v7, v12
+
+    aput v12, v11, v5
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_c
+
+    :cond_c
+    add-int/lit8 v1, v1, 0x1
+
+    goto/16 :goto_6
+
+    :cond_d
+    const/16 v1, 0x8
+
+    new-array v11, v1, [B
+
+    const/16 v1, 0x40
+
+    new-array v12, v1, [I
+
+    const/16 v1, 0x40
+
+    new-array v13, v1, [I
+
+    const/4 v1, 0x0
+
+    :goto_d
+    const/16 v5, 0x40
+
+    if-ge v1, v5, :cond_e
+
+    sget-object v5, Lcom/tencent/smtt/sdk/a/a;->mwe:[I
+
+    aget v5, v5, v1
+
+    add-int/lit8 v5, v5, -0x1
+
+    aget v5, v6, v5
+
+    aput v5, v12, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_d
+
+    :cond_e
+    const/4 v1, 0x0
+
+    move v5, v1
+
+    :goto_e
+    const/16 v1, 0x10
+
+    if-ge v5, v1, :cond_18
+
+    const/16 v1, 0x20
+
+    new-array v14, v1, [I
+
+    const/16 v1, 0x20
+
+    new-array v15, v1, [I
+
+    const/16 v1, 0x20
+
+    new-array v0, v1, [I
+
+    move-object/from16 v16, v0
+
+    const/16 v1, 0x20
+
+    new-array v0, v1, [I
+
+    move-object/from16 v17, v0
+
+    const/16 v1, 0x30
+
+    new-array v0, v1, [I
+
+    move-object/from16 v18, v0
+
+    const/16 v1, 0x8
+
+    const/4 v6, 0x6
+
+    filled-new-array {v1, v6}, [I
+
+    move-result-object v1
+
+    sget-object v6, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    invoke-static {v6, v1}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [[I
+
+    const/16 v6, 0x8
+
+    new-array v0, v6, [I
+
+    move-object/from16 v19, v0
+
+    const/16 v6, 0x20
+
+    new-array v0, v6, [I
+
+    move-object/from16 v20, v0
+
+    const/16 v6, 0x20
+
+    new-array v0, v6, [I
+
+    move-object/from16 v21, v0
+
+    const/4 v6, 0x0
+
+    :goto_f
+    const/16 v7, 0x20
+
+    if-ge v6, v7, :cond_f
+
+    aget v7, v12, v6
+
+    aput v7, v14, v6
+
+    add-int/lit8 v7, v6, 0x20
+
+    aget v7, v12, v7
+
+    aput v7, v15, v6
+
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_f
+
+    :cond_f
+    const/4 v6, 0x0
+
+    :goto_10
+    const/16 v7, 0x30
+
+    if-ge v6, v7, :cond_11
+
+    sget-object v7, Lcom/tencent/smtt/sdk/a/a;->mwi:[I
+
+    aget v7, v7, v6
+
+    add-int/lit8 v7, v7, -0x1
+
+    aget v7, v15, v7
+
+    aput v7, v18, v6
+
+    aget v7, v18, v6
+
+    aget-object v22, v2, v5
+
+    aget v22, v22, v6
+
+    add-int v7, v7, v22
+
+    aput v7, v18, v6
+
+    aget v7, v18, v6
+
+    const/16 v22, 0x2
+
+    move/from16 v0, v22
+
+    if-ne v7, v0, :cond_10
+
+    const/4 v7, 0x0
+
+    aput v7, v18, v6
+
+    :cond_10
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_10
+
+    :cond_11
+    const/4 v6, 0x0
+
+    :goto_11
+    const/16 v7, 0x8
+
+    if-ge v6, v7, :cond_14
+
+    const/4 v7, 0x0
+
+    :goto_12
+    const/16 v22, 0x6
+
+    move/from16 v0, v22
+
+    if-ge v7, v0, :cond_12
+
+    aget-object v22, v1, v6
+
+    mul-int/lit8 v23, v6, 0x6
+
+    add-int v23, v23, v7
+
+    aget v23, v18, v23
+
+    aput v23, v22, v7
+
+    add-int/lit8 v7, v7, 0x1
+
+    goto :goto_12
+
+    :cond_12
+    sget-object v7, Lcom/tencent/smtt/sdk/a/a;->mwk:[[[I
+
+    aget-object v7, v7, v6
+
+    aget-object v22, v1, v6
+
+    const/16 v23, 0x0
+
+    aget v22, v22, v23
+
+    shl-int/lit8 v22, v22, 0x1
+
+    aget-object v23, v1, v6
+
+    const/16 v24, 0x5
+
+    aget v23, v23, v24
+
+    add-int v22, v22, v23
+
+    aget-object v7, v7, v22
+
+    aget-object v22, v1, v6
+
+    const/16 v23, 0x1
+
+    aget v22, v22, v23
+
+    shl-int/lit8 v22, v22, 0x3
+
+    aget-object v23, v1, v6
+
+    const/16 v24, 0x2
+
+    aget v23, v23, v24
+
+    shl-int/lit8 v23, v23, 0x2
+
+    add-int v22, v22, v23
+
+    aget-object v23, v1, v6
+
+    const/16 v24, 0x3
+
+    aget v23, v23, v24
+
+    shl-int/lit8 v23, v23, 0x1
+
+    add-int v22, v22, v23
+
+    aget-object v23, v1, v6
+
+    const/16 v24, 0x4
+
+    aget v23, v23, v24
+
+    add-int v22, v22, v23
+
+    aget v7, v7, v22
+
+    aput v7, v19, v6
+
+    const/4 v7, 0x0
+
+    :goto_13
+    const/16 v22, 0x4
+
+    move/from16 v0, v22
+
+    if-ge v7, v0, :cond_13
+
+    mul-int/lit8 v22, v6, 0x4
+
+    add-int/lit8 v22, v22, 0x3
+
+    sub-int v22, v22, v7
+
+    aget v23, v19, v6
+
+    rem-int/lit8 v23, v23, 0x2
+
+    aput v23, v20, v22
+
+    aget v22, v19, v6
+
+    div-int/lit8 v22, v22, 0x2
+
+    aput v22, v19, v6
+
+    add-int/lit8 v7, v7, 0x1
+
+    goto :goto_13
+
+    :cond_13
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_11
+
+    :cond_14
+    const/4 v1, 0x0
+
+    :goto_14
+    const/16 v6, 0x20
+
+    if-ge v1, v6, :cond_17
+
+    sget-object v6, Lcom/tencent/smtt/sdk/a/a;->mwj:[I
+
+    aget v6, v6, v1
+
+    add-int/lit8 v6, v6, -0x1
+
+    aget v6, v20, v6
+
+    aput v6, v21, v1
+
+    aget v6, v15, v1
+
+    aput v6, v16, v1
+
+    aget v6, v14, v1
+
+    aget v7, v21, v1
+
+    add-int/2addr v6, v7
+
+    aput v6, v17, v1
+
+    aget v6, v17, v1
+
+    const/4 v7, 0x2
+
+    if-ne v6, v7, :cond_15
+
+    const/4 v6, 0x0
+
+    aput v6, v17, v1
+
+    :cond_15
+    const/16 v6, 0xf
+
+    if-ne v5, v6, :cond_16
+
+    aget v6, v17, v1
+
+    aput v6, v12, v1
+
+    add-int/lit8 v6, v1, 0x20
+
+    aget v7, v16, v1
+
+    aput v7, v12, v6
+
+    :goto_15
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_14
+
+    :cond_16
+    aget v6, v16, v1
+
+    aput v6, v12, v1
+
+    add-int/lit8 v6, v1, 0x20
+
+    aget v7, v17, v1
+
+    aput v7, v12, v6
+
+    goto :goto_15
+
+    :cond_17
+    add-int/lit8 v1, v5, 0x1
+
+    move v5, v1
+
+    goto/16 :goto_e
+
+    :cond_18
+    const/4 v1, 0x0
+
+    :goto_16
+    const/16 v2, 0x40
+
+    if-ge v1, v2, :cond_19
+
+    sget-object v2, Lcom/tencent/smtt/sdk/a/a;->mwf:[I
+
+    aget v2, v2, v1
+
+    add-int/lit8 v2, v2, -0x1
+
+    aget v2, v12, v2
+
+    aput v2, v13, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_16
+
+    :cond_19
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_17
+    const/16 v1, 0x8
+
+    if-ge v2, v1, :cond_1b
+
+    const/4 v1, 0x0
+
+    :goto_18
+    const/16 v5, 0x8
+
+    if-ge v1, v5, :cond_1a
+
+    aget-byte v5, v11, v2
+
+    shl-int/lit8 v6, v2, 0x3
+
+    add-int/2addr v6, v1
+
+    aget v6, v13, v6
+
+    rsub-int/lit8 v7, v1, 0x7
+
+    shl-int/2addr v6, v7
+
+    add-int/2addr v5, v6
+
+    int-to-byte v5, v5
+
+    aput-byte v5, v11, v2
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_18
+
+    :cond_1a
+    add-int/lit8 v1, v2, 0x1
+
+    move v2, v1
+
+    goto :goto_17
+
+    :cond_1b
+    const/4 v1, 0x0
+
+    mul-int/lit8 v2, v4, 0x8
+
+    const/16 v5, 0x8
+
+    invoke-static {v11, v1, v3, v2, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    add-int/lit8 v1, v4, 0x1
+
+    move v4, v1
+
+    goto/16 :goto_4
+
+    :cond_1c
+    move-object/from16 p1, v3
+
+    goto/16 :goto_0
 .end method

@@ -42,7 +42,7 @@
     .line 81
     iget-object v0, p0, Lcom/tencent/c/a/a/o;->context:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/tencent/c/a/a/p;->R(Landroid/content/Context;)Lcom/tencent/c/a/a/p;
+    invoke-static {v0}, Lcom/tencent/c/a/a/p;->N(Landroid/content/Context;)Lcom/tencent/c/a/a/p;
 
     move-result-object v0
 
@@ -58,7 +58,7 @@
     move-result-object v2
 
     .line 83
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/c/a/a/p;->m(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/c/a/a/p;->l(Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 80
     monitor-exit p0
@@ -75,25 +75,7 @@
     throw v0
 .end method
 
-.method protected final jY()Z
-    .locals 2
-
-    .prologue
-    .line 29
-    iget-object v0, p0, Lcom/tencent/c/a/a/o;->context:Landroid/content/Context;
-
-    .line 30
-    const-string/jumbo v1, "android.permission.WRITE_SETTINGS"
-
-    .line 29
-    invoke-static {v0, v1}, Lcom/tencent/c/a/a/s;->j(Landroid/content/Context;Ljava/lang/String;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method protected final jZ()Ljava/lang/String;
+.method protected final iA()Ljava/lang/String;
     .locals 2
 
     .prologue
@@ -135,7 +117,7 @@
     throw v0
 .end method
 
-.method protected final ka()Lcom/tencent/c/a/a/a;
+.method protected final iB()Lcom/tencent/c/a/a/a;
     .locals 3
 
     .prologue
@@ -196,6 +178,24 @@
     throw v0
 .end method
 
+.method protected final iz()Z
+    .locals 2
+
+    .prologue
+    .line 29
+    iget-object v0, p0, Lcom/tencent/c/a/a/o;->context:Landroid/content/Context;
+
+    .line 30
+    const-string/jumbo v1, "android.permission.WRITE_SETTINGS"
+
+    .line 29
+    invoke-static {v0, v1}, Lcom/tencent/c/a/a/s;->k(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method protected final write(Ljava/lang/String;)V
     .locals 2
 
@@ -207,7 +207,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/tencent/c/a/a/o;->context:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/tencent/c/a/a/p;->R(Landroid/content/Context;)Lcom/tencent/c/a/a/p;
+    invoke-static {v0}, Lcom/tencent/c/a/a/p;->N(Landroid/content/Context;)Lcom/tencent/c/a/a/p;
 
     move-result-object v0
 
@@ -217,7 +217,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1, p1}, Lcom/tencent/c/a/a/p;->m(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-virtual {v0, v1, p1}, Lcom/tencent/c/a/a/p;->l(Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 45
     monitor-exit p0

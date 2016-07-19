@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->Gb()V
+    value = Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kQa:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
+.field final synthetic lpP:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 231
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$1;->kQa:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$1;->lpP:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,30 +41,30 @@
 
     .prologue
     .line 235
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$1;->kQa:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$1;->lpP:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->a(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Lcom/tencent/mm/pluginsdk/model/app/x;
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->a(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Lcom/tencent/mm/pluginsdk/model/app/z;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 236
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$1;->kQa:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$1;->lpP:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->a(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Lcom/tencent/mm/pluginsdk/model/app/x;
+    invoke-static {v1}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->a(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Lcom/tencent/mm/pluginsdk/model/app/z;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
     .line 238
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$1;->kQa:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$1;->lpP:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->finish()V
 

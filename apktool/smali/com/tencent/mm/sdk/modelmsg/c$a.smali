@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public asc:I
+.field public kuy:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
-.field public jUS:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+.field public scene:I
 
 
 # direct methods
@@ -40,7 +40,7 @@
     invoke-direct {p0}, Lcom/tencent/mm/sdk/e/a;-><init>()V
 
     .line 84
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/sdk/modelmsg/c$a;->m(Landroid/os/Bundle;)V
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/sdk/modelmsg/c$a;->o(Landroid/os/Bundle;)V
 
     .line 85
     return-void
@@ -58,15 +58,15 @@
     return v0
 .end method
 
-.method public final l(Landroid/os/Bundle;)V
+.method public final n(Landroid/os/Bundle;)V
     .locals 2
 
     .prologue
     .line 101
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/e/a;->l(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/e/a;->n(Landroid/os/Bundle;)V
 
     .line 102
-    iget-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/c$a;->jUS:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/c$a;->kuy:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     invoke-static {v0}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$a;->b(Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;)Landroid/os/Bundle;
 
@@ -77,7 +77,7 @@
     .line 103
     const-string/jumbo v0, "_wxapi_sendmessagetowx_req_scene"
 
-    iget v1, p0, Lcom/tencent/mm/sdk/modelmsg/c$a;->asc:I
+    iget v1, p0, Lcom/tencent/mm/sdk/modelmsg/c$a;->scene:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
@@ -85,19 +85,19 @@
     return-void
 .end method
 
-.method public final m(Landroid/os/Bundle;)V
+.method public final o(Landroid/os/Bundle;)V
     .locals 1
 
     .prologue
     .line 94
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/e/a;->m(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/e/a;->o(Landroid/os/Bundle;)V
 
     .line 95
-    invoke-static {p1}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$a;->J(Landroid/os/Bundle;)Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    invoke-static {p1}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$a;->P(Landroid/os/Bundle;)Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/c$a;->jUS:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/c$a;->kuy:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     .line 96
     const-string/jumbo v0, "_wxapi_sendmessagetowx_req_scene"
@@ -106,7 +106,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/sdk/modelmsg/c$a;->asc:I
+    iput v0, p0, Lcom/tencent/mm/sdk/modelmsg/c$a;->scene:I
 
     .line 97
     return-void

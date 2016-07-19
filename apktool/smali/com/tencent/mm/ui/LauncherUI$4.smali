@@ -13,9 +13,18 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/nr;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic knl:Lcom/tencent/mm/ui/LauncherUI;
+.field final synthetic kMs:Lcom/tencent/mm/ui/LauncherUI;
 
 
 # direct methods
@@ -23,52 +32,56 @@
     .locals 1
 
     .prologue
-    .line 2290
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$4;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 2150
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$4;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/nr;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/ui/LauncherUI$4;->kum:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
-    .locals 2
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
+    .locals 5
 
     .prologue
-    .line 2292
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$4;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    const/4 v4, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->i(Lcom/tencent/mm/ui/LauncherUI;)Landroid/view/View;
+    .line 2150
+    check-cast p1, Lcom/tencent/mm/e/a/nr;
 
-    move-result-object v0
+    const-string/jumbo v0, "MicroMsg.LauncherUI"
 
-    if-eqz v0, :cond_0
+    const-string/jumbo v1, "appTagUnreadChangeListener, event:%s"
 
-    .line 2293
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$4;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    const/4 v2, 0x1
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->i(Lcom/tencent/mm/ui/LauncherUI;)Landroid/view/View;
+    new-array v2, v2, [Ljava/lang/Object;
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    new-instance v1, Lcom/tencent/mm/ui/LauncherUI$4$1;
+    move-result-object v3
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/LauncherUI$4$1;-><init>(Lcom/tencent/mm/ui/LauncherUI$4;)V
+    aput-object v3, v2, v4
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2307
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$4;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$4;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/LauncherUI;->baj()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/LauncherUI;->bfB()V
 
-    .line 2308
-    const/4 v0, 0x0
-
-    return v0
+    return v4
 .end method

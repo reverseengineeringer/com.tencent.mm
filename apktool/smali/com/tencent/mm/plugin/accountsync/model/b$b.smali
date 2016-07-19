@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private cow:Ljava/lang/String;
+.field private cjK:Ljava/lang/String;
 
 .field private toScene:I
 
@@ -37,7 +37,7 @@
     iput p1, p0, Lcom/tencent/mm/plugin/accountsync/model/b$b;->toScene:I
 
     .line 59
-    iput-object p2, p0, Lcom/tencent/mm/plugin/accountsync/model/b$b;->cow:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/accountsync/model/b$b;->cjK:Ljava/lang/String;
 
     .line 60
     iput-object p3, p0, Lcom/tencent/mm/plugin/accountsync/model/b$b;->uri:Landroid/net/Uri;
@@ -61,11 +61,11 @@
     const/4 v0, 0x1
 
     .line 142
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zq()Lcom/tencent/mm/modelfriend/c;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zD()Lcom/tencent/mm/modelfriend/c;
 
     move-result-object v2
 
-    invoke-virtual {v2, p2}, Lcom/tencent/mm/modelfriend/c;->hr(Ljava/lang/String;)Lcom/tencent/mm/modelfriend/b;
+    invoke-virtual {v2, p2}, Lcom/tencent/mm/modelfriend/c;->hJ(Ljava/lang/String;)Lcom/tencent/mm/modelfriend/b;
 
     move-result-object v2
 
@@ -73,11 +73,11 @@
     if-nez p1, :cond_1
 
     .line 144
-    const-string/jumbo v1, "!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t"
+    const-string/jumbo v1, "MicroMsg.ProcessorToChattingOrTimeLineByPhone"
 
     const-string/jumbo v2, "null context"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 214
     :cond_0
@@ -89,11 +89,11 @@
     if-nez v2, :cond_2
 
     .line 148
-    const-string/jumbo v1, "!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t"
+    const-string/jumbo v1, "MicroMsg.ProcessorToChattingOrTimeLineByPhone"
 
     const-string/jumbo v2, "this user is not my friend"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -104,14 +104,14 @@
     move-result-object v2
 
     .line 153
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
     .line 154
-    const-string/jumbo v1, "!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t"
+    const-string/jumbo v1, "MicroMsg.ProcessorToChattingOrTimeLineByPhone"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -127,21 +127,21 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 158
     :cond_3
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v3}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v3
 
-    invoke-virtual {v3, v2}, Lcom/tencent/mm/storage/q;->El(Ljava/lang/String;)Z
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/storage/q;->Gz(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -149,7 +149,7 @@
     if-eqz v3, :cond_4
 
     .line 160
-    sget-object v3, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v3, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v4, 0x2b95
 
@@ -163,7 +163,7 @@
 
     aput-object v6, v5, v1
 
-    invoke-virtual {v3, v4, v5}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v3, v4, v5}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     .line 164
     iget v3, p0, Lcom/tencent/mm/plugin/accountsync/model/b$b;->toScene:I
@@ -192,7 +192,7 @@
     invoke-virtual {v3, v9}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 171
-    sget-object v0, Lcom/tencent/mm/plugin/a/a;->coa:Lcom/tencent/mm/pluginsdk/g;
+    sget-object v0, Lcom/tencent/mm/plugin/a/a;->cjo:Lcom/tencent/mm/pluginsdk/g;
 
     invoke-interface {v0, v3, p1}, Lcom/tencent/mm/pluginsdk/g;->e(Landroid/content/Intent;Landroid/content/Context;)V
 
@@ -203,36 +203,36 @@
 
     .line 175
     :pswitch_1
-    new-instance v0, Lcom/tencent/mm/d/a/nv;
+    new-instance v0, Lcom/tencent/mm/e/a/oi;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/nv;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/oi;-><init>()V
 
     .line 176
-    iget-object v3, v0, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
+    iget-object v3, v0, Lcom/tencent/mm/e/a/oi;->awy:Lcom/tencent/mm/e/a/oi$a;
 
-    iput v8, v3, Lcom/tencent/mm/d/a/nv$a;->axL:I
+    iput v8, v3, Lcom/tencent/mm/e/a/oi$a;->ajS:I
 
     .line 177
-    iget-object v3, v0, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
+    iget-object v3, v0, Lcom/tencent/mm/e/a/oi;->awy:Lcom/tencent/mm/e/a/oi$a;
 
-    iput-object v2, v3, Lcom/tencent/mm/d/a/nv$a;->apb:Ljava/lang/String;
+    iput-object v2, v3, Lcom/tencent/mm/e/a/oi$a;->ajT:Ljava/lang/String;
 
     .line 178
-    iget-object v2, v0, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
+    iget-object v2, v0, Lcom/tencent/mm/e/a/oi;->awy:Lcom/tencent/mm/e/a/oi$a;
 
-    iput-object p1, v2, Lcom/tencent/mm/d/a/nv$a;->context:Landroid/content/Context;
+    iput-object p1, v2, Lcom/tencent/mm/e/a/oi$a;->context:Landroid/content/Context;
 
     .line 179
-    iget-object v2, v0, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
+    iget-object v2, v0, Lcom/tencent/mm/e/a/oi;->awy:Lcom/tencent/mm/e/a/oi$a;
 
     const/4 v3, 0x3
 
-    iput v3, v2, Lcom/tencent/mm/d/a/nv$a;->aKh:I
+    iput v3, v2, Lcom/tencent/mm/e/a/oi$a;->awB:I
 
     .line 180
-    sget-object v2, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v2, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     move v0, v1
 
@@ -241,34 +241,34 @@
 
     .line 184
     :pswitch_2
-    new-instance v0, Lcom/tencent/mm/d/a/nv;
+    new-instance v0, Lcom/tencent/mm/e/a/oi;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/nv;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/oi;-><init>()V
 
     .line 185
-    iget-object v3, v0, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
+    iget-object v3, v0, Lcom/tencent/mm/e/a/oi;->awy:Lcom/tencent/mm/e/a/oi$a;
 
-    iput v8, v3, Lcom/tencent/mm/d/a/nv$a;->axL:I
+    iput v8, v3, Lcom/tencent/mm/e/a/oi$a;->ajS:I
 
     .line 186
-    iget-object v3, v0, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
+    iget-object v3, v0, Lcom/tencent/mm/e/a/oi;->awy:Lcom/tencent/mm/e/a/oi$a;
 
-    iput-object v2, v3, Lcom/tencent/mm/d/a/nv$a;->apb:Ljava/lang/String;
+    iput-object v2, v3, Lcom/tencent/mm/e/a/oi$a;->ajT:Ljava/lang/String;
 
     .line 187
-    iget-object v2, v0, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
+    iget-object v2, v0, Lcom/tencent/mm/e/a/oi;->awy:Lcom/tencent/mm/e/a/oi$a;
 
-    iput-object p1, v2, Lcom/tencent/mm/d/a/nv$a;->context:Landroid/content/Context;
+    iput-object p1, v2, Lcom/tencent/mm/e/a/oi$a;->context:Landroid/content/Context;
 
     .line 188
-    iget-object v2, v0, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
+    iget-object v2, v0, Lcom/tencent/mm/e/a/oi;->awy:Lcom/tencent/mm/e/a/oi$a;
 
-    iput v7, v2, Lcom/tencent/mm/d/a/nv$a;->aKh:I
+    iput v7, v2, Lcom/tencent/mm/e/a/oi$a;->awB:I
 
     .line 189
-    sget-object v2, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v2, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     move v0, v1
 
@@ -294,7 +294,7 @@
 
     const-string/jumbo v3, ".ui.SnsUserUI"
 
-    invoke-static {p1, v2, v3, v0}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {p1, v2, v3, v0}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     move v0, v1
 
@@ -303,13 +303,13 @@
 
     .line 203
     :cond_4
-    invoke-static {p4}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p4}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -318,24 +318,24 @@
     .line 204
     const-string/jumbo v2, "android.permission.READ_CONTACTS"
 
-    invoke-static {p1, v2}, Lcom/tencent/mm/pluginsdk/g/a;->aL(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v2}, Lcom/tencent/mm/pluginsdk/h/a;->aK(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_5
 
     .line 205
-    const-string/jumbo v1, "!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t"
+    const-string/jumbo v1, "MicroMsg.ProcessorToChattingOrTimeLineByPhone"
 
     const-string/jumbo v2, "no contact permission"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 208
     :cond_5
-    const v2, 0x7f0b07cb
+    const v2, 0x7f080587
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -397,7 +397,7 @@
 
 
 # virtual methods
-.method public final bn(Landroid/content/Context;)I
+.method public final bi(Landroid/content/Context;)I
     .locals 11
 
     .prologue
@@ -415,11 +415,11 @@
     if-nez p1, :cond_0
 
     .line 66
-    const-string/jumbo v0, "!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t"
+    const-string/jumbo v0, "MicroMsg.ProcessorToChattingOrTimeLineByPhone"
 
     const-string/jumbo v1, "null context"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v6
 
@@ -429,13 +429,13 @@
 
     .line 70
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tI()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tJ()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tM()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tN()Z
 
     move-result v0
 
@@ -443,11 +443,11 @@
 
     .line 71
     :cond_1
-    const-string/jumbo v0, "!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t"
+    const-string/jumbo v0, "MicroMsg.ProcessorToChattingOrTimeLineByPhone"
 
     const-string/jumbo v1, "not login, start bind login"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v2
 
@@ -456,11 +456,11 @@
 
     .line 75
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -475,18 +475,18 @@
     check-cast v0, Ljava/lang/String;
 
     .line 76
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
     .line 77
-    const-string/jumbo v0, "!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t"
+    const-string/jumbo v0, "MicroMsg.ProcessorToChattingOrTimeLineByPhone"
 
     const-string/jumbo v1, "not bind mobile, start bind mobie"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v4
 
@@ -497,18 +497,18 @@
     :cond_3
     const-string/jumbo v0, "android.permission.READ_CONTACTS"
 
-    invoke-static {p1, v0}, Lcom/tencent/mm/pluginsdk/g/a;->aL(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v0}, Lcom/tencent/mm/pluginsdk/h/a;->aK(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
     .line 82
-    const-string/jumbo v0, "!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t"
+    const-string/jumbo v0, "MicroMsg.ProcessorToChattingOrTimeLineByPhone"
 
     const-string/jumbo v1, "no contacts permission"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v6
 
@@ -554,11 +554,11 @@
     if-nez v3, :cond_5
 
     .line 90
-    const-string/jumbo v0, "!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t"
+    const-string/jumbo v0, "MicroMsg.ProcessorToChattingOrTimeLineByPhone"
 
     const-string/jumbo v1, "query database err"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v6
 
@@ -574,11 +574,11 @@
     if-nez v0, :cond_6
 
     .line 95
-    const-string/jumbo v0, "!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t"
+    const-string/jumbo v0, "MicroMsg.ProcessorToChattingOrTimeLineByPhone"
 
     const-string/jumbo v1, "query database err, move to first fail"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 96
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
@@ -602,11 +602,11 @@
     if-ne v0, v1, :cond_7
 
     .line 102
-    const-string/jumbo v0, "!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t"
+    const-string/jumbo v0, "MicroMsg.ProcessorToChattingOrTimeLineByPhone"
 
     const-string/jumbo v1, "no data4 segment exist"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 103
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
@@ -669,18 +669,18 @@
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
     .line 126
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_a
 
     .line 127
-    const-string/jumbo v0, "!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t"
+    const-string/jumbo v0, "MicroMsg.ProcessorToChattingOrTimeLineByPhone"
 
     const-string/jumbo v1, "null friendmobile"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v6
 
@@ -709,7 +709,7 @@
 
     .line 119
     :try_start_2
-    const-string/jumbo v5, "!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t"
+    const-string/jumbo v5, "MicroMsg.ProcessorToChattingOrTimeLineByPhone"
 
     const-string/jumbo v7, "match error, %s\n%s"
 
@@ -727,16 +727,16 @@
 
     const/4 v9, 0x1
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v8, v9
 
-    invoke-static {v5, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v7, v8}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 120
-    const-string/jumbo v0, "!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t"
+    const-string/jumbo v0, "MicroMsg.ProcessorToChattingOrTimeLineByPhone"
 
     const-string/jumbo v5, "result friendMobileMd5 %s contact_id %s data_id %s"
 
@@ -756,7 +756,7 @@
 
     aput-object v4, v7, v1
 
-    invoke-static {v0, v5, v7}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v5, v7}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -784,18 +784,18 @@
 
     .line 132
     :cond_b
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/model/b$b;->cow:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/model/b$b;->cjK:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_c
 
     .line 133
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/model/b$b;->cow:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/model/b$b;->cjK:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/a;->sy(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/a;->tY(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -803,7 +803,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/a/g;->j([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -815,11 +815,11 @@
 
     .line 135
     :cond_c
-    const-string/jumbo v0, "!64@/B4Tb64lLpIUGQfqwvb6VnC6ESYOsyj28eXjLbW6Avu1q/if1Lf7B5YA4ciTVu+t"
+    const-string/jumbo v0, "MicroMsg.ProcessorToChattingOrTimeLineByPhone"
 
     const-string/jumbo v1, "uri is null and the phone num is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v6
 

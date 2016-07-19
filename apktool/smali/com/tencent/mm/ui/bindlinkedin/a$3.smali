@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic cqF:I
+.field final synthetic clS:I
 
-.field final synthetic kOa:Lcom/tencent/mm/ui/bindlinkedin/a;
+.field final synthetic lnq:Lcom/tencent/mm/ui/bindlinkedin/a;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 93
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindlinkedin/a$3;->kOa:Lcom/tencent/mm/ui/bindlinkedin/a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindlinkedin/a$3;->lnq:Lcom/tencent/mm/ui/bindlinkedin/a;
 
-    iput p2, p0, Lcom/tencent/mm/ui/bindlinkedin/a$3;->cqF:I
+    iput p2, p0, Lcom/tencent/mm/ui/bindlinkedin/a$3;->clS:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
 
     .prologue
     .line 95
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a$3;->kOa:Lcom/tencent/mm/ui/bindlinkedin/a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a$3;->lnq:Lcom/tencent/mm/ui/bindlinkedin/a;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindlinkedin/a;->a(Lcom/tencent/mm/ui/bindlinkedin/a;)Lcom/tencent/mm/ui/bindlinkedin/a$a;
 
@@ -54,17 +54,17 @@
     if-eqz v0, :cond_0
 
     .line 96
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a$3;->kOa:Lcom/tencent/mm/ui/bindlinkedin/a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/a$3;->lnq:Lcom/tencent/mm/ui/bindlinkedin/a;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindlinkedin/a;->a(Lcom/tencent/mm/ui/bindlinkedin/a;)Lcom/tencent/mm/ui/bindlinkedin/a$a;
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/bindlinkedin/a$3;->cqF:I
+    iget v1, p0, Lcom/tencent/mm/ui/bindlinkedin/a$3;->clS:I
 
     const/4 v2, 0x1
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/bindlinkedin/a$a;->bP(II)V
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/bindlinkedin/a$a;->bV(II)V
 
     .line 98
     :cond_0

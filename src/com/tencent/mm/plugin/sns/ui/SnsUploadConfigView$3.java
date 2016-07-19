@@ -3,7 +3,7 @@ package com.tencent.mm.plugin.sns.ui;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 
 final class SnsUploadConfigView$3
   implements DialogInterface.OnClickListener
@@ -15,7 +15,7 @@ final class SnsUploadConfigView$3
     paramDialogInterface = new Intent();
     paramDialogInterface.putExtra("is_force_unbind", true);
     paramDialogInterface.putExtra("shake_music", true);
-    c.a(hlL.getContext(), ".ui.account.FacebookAuthUI", paramDialogInterface, 8);
+    c.a(hBN.getContext(), ".ui.account.FacebookAuthUI", paramDialogInterface, 8);
   }
 }
 

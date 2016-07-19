@@ -3,7 +3,7 @@ package com.tencent.mm.plugin.sns.lucky.ui;
 import android.app.Dialog;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class b$3
   implements View.OnClickListener
@@ -12,9 +12,9 @@ final class b$3
   
   public final void onClick(View paramView)
   {
-    u.i("!44@/B4Tb64lLpLSajhxpVlTMGlBinPXjNgyDjQxfdmLgIY=", "showTipsDialog OnClick: close");
-    if ((gJF != null) && (gJF.isShowing())) {
-      gJF.dismiss();
+    v.i("MicroMsg.SnsLuckyCommentAlertUI", "showTipsDialog OnClick: close");
+    if ((gRg != null) && (gRg.isShowing())) {
+      gRg.dismiss();
     }
   }
 }

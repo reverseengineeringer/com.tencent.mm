@@ -2,7 +2,7 @@ package com.tencent.mm.booter;
 
 import com.tencent.mm.modelgeo.a.a;
 import com.tencent.mm.modelgeo.c;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class j$1
   implements a.a
@@ -11,18 +11,18 @@ final class j$1
   {
     if (paramBoolean)
     {
-      u.d("!56@/B4Tb64lLpIuznxMDiXSbEgePiuuHmafGRumF/EL+B1ZudK3WLjQDg==", "on location get ok");
-      j.l(paramFloat2);
-      j.m(paramFloat1);
-      j.ap(true);
-      if (j.nc() != null)
+      v.d("MicroMsg.PostTaskStartRangeForIBeacon", "on location get ok");
+      j.h(paramFloat2);
+      j.i(paramFloat1);
+      j.S(true);
+      if (j.lq() != null)
       {
-        j.nc().c(j.nd());
-        j.ap(false);
+        j.lq().c(j.lr());
+        j.S(false);
       }
       return false;
     }
-    u.w("!56@/B4Tb64lLpIuznxMDiXSbEgePiuuHmafGRumF/EL+B1ZudK3WLjQDg==", "getLocation fail");
+    v.w("MicroMsg.PostTaskStartRangeForIBeacon", "getLocation fail");
     return false;
   }
 }

@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private cam:J
+.field private bTV:J
 
 
 # direct methods
@@ -18,7 +18,7 @@
     .line 10
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/sdk/platformtools/i;->cam:J
+    iput-wide v0, p0, Lcom/tencent/mm/sdk/platformtools/i;->bTV:J
 
     .line 18
     return-void
@@ -44,7 +44,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/sdk/platformtools/i;->cam:J
+    iput-wide v0, p0, Lcom/tencent/mm/sdk/platformtools/i;->bTV:J
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -65,7 +65,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -81,7 +81,7 @@
 .end method
 
 .method public final reset()V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 36
@@ -93,9 +93,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/tencent/mm/sdk/platformtools/i;->cam:J
+    iget-wide v2, p0, Lcom/tencent/mm/sdk/platformtools/i;->bTV:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/nio/channels/FileChannel;->position(J)Ljava/nio/channels/FileChannel;
+    invoke-virtual {v0, v2, v3}, Ljava/nio/channels/FileChannel;->position(J)Ljava/nio/channels/FileChannel;
 
     .line 37
     return-void

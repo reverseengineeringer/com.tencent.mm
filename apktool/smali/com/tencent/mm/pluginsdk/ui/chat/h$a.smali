@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract getYFromBottom()I
+.method public abstract aWW()I
 .end method

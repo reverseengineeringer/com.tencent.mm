@@ -5,7 +5,7 @@ import java.util.List;
 
 final class b$f
 {
-  List gzC = new LinkedList();
+  List<b.e> gGe = new LinkedList();
 }
 
 /* Location:

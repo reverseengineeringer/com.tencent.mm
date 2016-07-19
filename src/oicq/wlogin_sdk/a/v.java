@@ -5,12 +5,12 @@ public final class v
 {
   public v()
   {
-    mbE = 287;
+    mNI = 287;
   }
   
-  public final Boolean bot()
+  public final Boolean bvr()
   {
-    if (mco < 8) {
+    if (mOs < 8) {
       return Boolean.valueOf(false);
     }
     return Boolean.valueOf(true);

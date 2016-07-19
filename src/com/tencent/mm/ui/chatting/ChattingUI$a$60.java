@@ -1,25 +1,36 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.q.d.a;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.model.f;
+import com.tencent.mm.sdk.h.g.a;
+import com.tencent.mm.sdk.h.i;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import java.util.Map;
 
 final class ChattingUI$a$60
-  implements d.a
+  implements g.a
 {
   ChattingUI$a$60(ChattingUI.a parama) {}
   
-  public final void fZ(final String paramString)
+  public final void a(String paramString, i parami)
   {
-    ChattingUI.a.o(laF).postDelayed(new Runnable()
+    v.v("MicroMsg.ChattingUI", "roommember watcher notify " + paramString);
+    if (lAY.lzg) {
+      f.a(lAY.bjO(), lAY.lzh);
+    }
+    for (;;)
     {
-      public final void run()
+      if (!be.kf(paramString))
       {
-        if ((!ay.kz(ChattingUI.a.y(laF))) && (!ay.kz(paramString)) && (paramString.equals(ChattingUI.a.y(laF)))) {
-          ChattingUI.a.z(laF);
-        }
+        lAY.bll();
+        ChattingUI.a.d(lAY);
+        lAY.bkV();
+        lAY.blD();
       }
-    }, 1000L);
+      lAY.lsL.a(null, null);
+      return;
+      lAY.lzh.clear();
+    }
   }
 }
 

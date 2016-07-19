@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract af()Z
+.method public abstract ad()Z
 .end method
 
-.method public abstract ag()Z
+.method public abstract ae()Z
 .end method

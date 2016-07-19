@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 765
+    .line 803
     iput-object p1, p0, Lcom/tencent/mm/ui/MMAppMgr$13;->val$context:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 3
 
     .prologue
-    .line 770
+    .line 808
     :try_start_0
     iget-object v0, p0, Lcom/tencent/mm/ui/MMAppMgr$13;->val$context:Landroid/content/Context;
 
@@ -54,7 +54,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 773
+    .line 811
     :goto_0
     return-void
 

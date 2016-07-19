@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.tools;
 
 import android.graphics.Bitmap;
 import android.util.SparseArray;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class g$5
   implements Runnable
@@ -11,22 +11,22 @@ final class g$5
   
   public final void run()
   {
-    u.i("!32@/B4Tb64lLpI8lfBMGe0Uu+gqtVk/eA4D", "begin do recycled");
+    v.i("MicroMsg.ImageEngine", "begin do recycled");
     int i = 0;
-    while (i < iSp.size())
+    while (i < jpy.size())
     {
-      Bitmap localBitmap = (Bitmap)iSp.valueAt(i);
+      Bitmap localBitmap = (Bitmap)jpy.valueAt(i);
       if (localBitmap != null)
       {
-        u.d("!32@/B4Tb64lLpI8lfBMGe0Uu+gqtVk/eA4D", "recycled def bmp %s", new Object[] { localBitmap.toString() });
+        v.d("MicroMsg.ImageEngine", "recycled def bmp %s", new Object[] { localBitmap.toString() });
         localBitmap.recycle();
       }
       i += 1;
     }
-    iSp.clear();
-    u.i("!32@/B4Tb64lLpI8lfBMGe0Uu+gqtVk/eA4D", "clear drawable cache");
-    iSq.clear();
-    u.i("!32@/B4Tb64lLpI8lfBMGe0Uu+gqtVk/eA4D", "end do recycled");
+    jpy.clear();
+    v.i("MicroMsg.ImageEngine", "clear drawable cache");
+    jpz.clear();
+    v.i("MicroMsg.ImageEngine", "end do recycled");
   }
 }
 

@@ -4,7 +4,7 @@ import java.util.List;
 
 class Java2C
 {
-  public static int a(List paramList, boolean paramBoolean)
+  public static int b(List<String> paramList, boolean paramBoolean)
   {
     long l1 = System.currentTimeMillis();
     GetDnsReturn localGetDnsReturn = new GetDnsReturn(null);
@@ -30,7 +30,9 @@ class Java2C
     }
   }
   
-  public static int c(String paramString, List paramList)
+  public static native void clearTask();
+  
+  public static int d(String paramString, List<String> paramList)
   {
     long l1 = System.currentTimeMillis();
     GetDnsReturn localGetDnsReturn = new GetDnsReturn(null);
@@ -55,8 +57,6 @@ class Java2C
       return type;
     }
   }
-  
-  public static native void clearTask();
   
   private static native void getHostIps(String paramString, GetDnsReturn paramGetDnsReturn);
   
@@ -100,7 +100,11 @@ class Java2C
   
   public static native void setHostInfo(String[] paramArrayOfString1, String[] paramArrayOfString2, int[] paramArrayOfInt);
   
+  public static native void setMmtlsCtrlInfo(boolean paramBoolean);
+  
   public static native void setNewDnsDebugHost(String paramString1, String paramString2);
+  
+  public static native void setObject(C2JavaBridge paramC2JavaBridge);
   
   public static native void setSignallingStrategy(long paramLong1, long paramLong2);
   

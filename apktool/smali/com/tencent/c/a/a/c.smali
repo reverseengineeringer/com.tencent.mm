@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method static ap(Ljava/lang/String;)Ljava/io/File;
+.method static at(Ljava/lang/String;)Ljava/io/File;
     .locals 2
 
     .prologue
@@ -45,7 +45,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/c/a/a/c;->ap(Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v1}, Lcom/tencent/c/a/a/c;->at(Ljava/lang/String;)Ljava/io/File;
 
     .line 46
     :cond_1
@@ -56,6 +56,17 @@
 
 .method static d(Ljava/io/File;)Ljava/util/List;
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/io/File;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 22

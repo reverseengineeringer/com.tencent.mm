@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iQd:Lcom/tencent/mm/pluginsdk/ui/d/h;
+.field final synthetic jnl:Lcom/tencent/mm/pluginsdk/ui/d/h;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 171
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/h$b;->iQd:Lcom/tencent/mm/pluginsdk/ui/d/h;
+    .line 260
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/h$b;->jnl:Lcom/tencent/mm/pluginsdk/ui/d/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,7 +38,7 @@
     .locals 0
 
     .prologue
-    .line 171
+    .line 260
     invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/d/h$b;-><init>(Lcom/tencent/mm/pluginsdk/ui/d/h;)V
 
     return-void
@@ -50,15 +50,16 @@
     .locals 2
 
     .prologue
-    .line 174
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/h$b;->iQd:Lcom/tencent/mm/pluginsdk/ui/d/h;
+    .line 263
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/h$b;->jnl:Lcom/tencent/mm/pluginsdk/ui/d/h;
 
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/d/h;->aa()I
+    # getter for: Lcom/tencent/mm/pluginsdk/ui/d/h;->jnf:I
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/d/h;->access$000()I
 
     move-result v1
 
     invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/d/h;->a(Lcom/tencent/mm/pluginsdk/ui/d/h;I)V
 
-    .line 175
+    .line 264
     return-void
 .end method

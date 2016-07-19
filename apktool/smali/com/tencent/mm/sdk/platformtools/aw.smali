@@ -1,311 +1,220 @@
-.class public final Lcom/tencent/mm/sdk/platformtools/aw;
+.class public Lcom/tencent/mm/sdk/platformtools/aw;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
 # instance fields
-.field private jXU:Ljava/lang/String;
+.field public boi:I
 
-.field private jXV:Z
-
-.field jXW:Ljava/util/ArrayList;
-
-.field jXX:Ljava/util/ArrayList;
-
-.field private mTag:Ljava/lang/String;
+.field public kyl:[Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(I)V
     .locals 1
 
     .prologue
-    .line 35
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
-    iput-object p1, p0, Lcom/tencent/mm/sdk/platformtools/aw;->mTag:Ljava/lang/String;
+    .line 14
+    const/16 v0, 0x14
 
-    iput-object p2, p0, Lcom/tencent/mm/sdk/platformtools/aw;->jXU:Ljava/lang/String;
+    new-array v0, v0, [Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->kyl:[Ljava/lang/Object;
 
-    iput-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->jXV:Z
-
-    iget-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->jXV:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->jXW:Ljava/util/ArrayList;
-
-    if-nez v0, :cond_1
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->jXW:Ljava/util/ArrayList;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->jXX:Ljava/util/ArrayList;
-
-    :goto_0
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/sdk/platformtools/aw;->addSplit(Ljava/lang/String;)V
-
-    .line 37
-    :cond_0
+    .line 19
     return-void
-
-    .line 36
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->jXW:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->jXX:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final addSplit(Ljava/lang/String;)V
-    .locals 3
+.method public aM(Ljava/lang/Object;)Z
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)Z"
+        }
+    .end annotation
 
     .prologue
-    .line 61
-    iget-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->jXV:Z
+    const/4 v2, 0x1
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x0
 
-    .line 67
-    :goto_0
-    return-void
+    .line 37
+    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->kyl:[Ljava/lang/Object;
 
-    .line 64
+    if-nez v0, :cond_1
+
+    .line 48
     :cond_0
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    :goto_0
+    return v1
 
-    move-result-wide v0
+    .line 40
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->kyl:[Ljava/lang/Object;
 
-    .line 65
-    iget-object v2, p0, Lcom/tencent/mm/sdk/platformtools/aw;->jXW:Ljava/util/ArrayList;
+    if-eqz v0, :cond_3
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move v0, v1
 
-    move-result-object v0
+    :goto_1
+    iget v3, p0, Lcom/tencent/mm/sdk/platformtools/aw;->boi:I
 
-    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    if-ge v0, v3, :cond_3
 
-    .line 66
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->jXX:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/tencent/mm/sdk/platformtools/aw;->kyl:[Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    aget-object v3, v3, v0
+
+    if-ne v3, p1, :cond_2
+
+    move v0, v2
+
+    :goto_2
+    if-nez v0, :cond_0
+
+    .line 42
+    iget v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->boi:I
+
+    iget-object v3, p0, Lcom/tencent/mm/sdk/platformtools/aw;->kyl:[Ljava/lang/Object;
+
+    array-length v3, v3
+
+    if-ge v0, v3, :cond_4
+
+    iget v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->boi:I
+
+    if-ltz v0, :cond_4
+
+    .line 43
+    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->kyl:[Ljava/lang/Object;
+
+    iget v1, p0, Lcom/tencent/mm/sdk/platformtools/aw;->boi:I
+
+    aput-object p1, v0, v1
+
+    .line 44
+    iget v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->boi:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->boi:I
+
+    move v1, v2
+
+    .line 45
+    goto :goto_0
+
+    .line 40
+    :cond_2
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    move v0, v1
+
+    goto :goto_2
+
+    .line 47
+    :cond_4
+    const-string/jumbo v0, "MicroMsg.SimpleObjectPool"
+
+    const-string/jumbo v3, "error index %d %d"
+
+    const/4 v4, 0x2
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    iget v5, p0, Lcom/tencent/mm/sdk/platformtools/aw;->boi:I
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v4, v1
+
+    iget-object v5, p0, Lcom/tencent/mm/sdk/platformtools/aw;->kyl:[Ljava/lang/Object;
+
+    array-length v5, v5
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v4, v2
+
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method public final dumpToLog()V
-    .locals 11
+.method public aZm()Ljava/lang/Object;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
 
     .prologue
-    .line 70
-    iget-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->jXV:Z
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_0
+    .line 22
+    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/aw;->kyl:[Ljava/lang/Object;
 
-    .line 84
-    :goto_0
-    return-void
+    if-nez v1, :cond_1
 
-    .line 73
+    .line 32
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->mTag:Ljava/lang/String;
+    :goto_0
+    return-object v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v2, p0, Lcom/tencent/mm/sdk/platformtools/aw;->jXU:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string/jumbo v2, ": begin"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 74
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->jXW:Ljava/util/ArrayList;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v3
-
-    .line 76
-    const/4 v0, 0x1
-
-    move v2, v0
-
-    move-wide v0, v3
-
-    :goto_1
-    iget-object v5, p0, Lcom/tencent/mm/sdk/platformtools/aw;->jXW:Ljava/util/ArrayList;
-
-    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
-
-    move-result v5
-
-    if-ge v2, v5, :cond_1
-
-    .line 77
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->jXW:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v5
-
-    .line 78
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->jXX:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    .line 79
-    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/aw;->jXW:Ljava/util/ArrayList;
-
-    add-int/lit8 v7, v2, -0x1
-
-    invoke-virtual {v1, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Long;
-
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v7
-
-    .line 81
-    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/aw;->mTag:Ljava/lang/String;
-
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v10, p0, Lcom/tencent/mm/sdk/platformtools/aw;->jXU:Ljava/lang/String;
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v9
-
-    const-string/jumbo v10, ":      "
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v9
-
-    sub-long v7, v5, v7
-
-    invoke-virtual {v9, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    const-string/jumbo v8, " ms, "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 76
-    add-int/lit8 v0, v2, 0x1
-
-    move v2, v0
-
-    move-wide v0, v5
-
-    goto :goto_1
-
-    .line 83
+    .line 25
     :cond_1
-    iget-object v2, p0, Lcom/tencent/mm/sdk/platformtools/aw;->mTag:Ljava/lang/String;
+    iget v1, p0, Lcom/tencent/mm/sdk/platformtools/aw;->boi:I
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    if-lez v1, :cond_0
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    .line 26
+    iget v1, p0, Lcom/tencent/mm/sdk/platformtools/aw;->boi:I
 
-    iget-object v6, p0, Lcom/tencent/mm/sdk/platformtools/aw;->jXU:Ljava/lang/String;
+    add-int/lit8 v2, v1, -0x1
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 27
+    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/aw;->kyl:[Ljava/lang/Object;
 
-    move-result-object v5
+    aget-object v1, v1, v2
 
-    const-string/jumbo v6, ": end, "
+    .line 28
+    iget-object v3, p0, Lcom/tencent/mm/sdk/platformtools/aw;->kyl:[Ljava/lang/Object;
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aput-object v0, v3, v2
 
-    move-result-object v5
+    .line 29
+    iget v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->boi:I
 
-    sub-long/2addr v0, v3
+    add-int/lit8 v0, v0, -0x1
 
-    invoke-virtual {v5, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iput v0, p0, Lcom/tencent/mm/sdk/platformtools/aw;->boi:I
 
-    move-result-object v0
+    move-object v0, v1
 
-    const-string/jumbo v1, " ms"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_0
+    .line 30
+    goto :goto_0
 .end method

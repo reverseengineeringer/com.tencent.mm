@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic buX:Landroid/app/ProgressDialog;
+.field final synthetic bjH:Landroid/app/ProgressDialog;
 
-.field final synthetic klC:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
+.field final synthetic kLd:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
 
-.field final synthetic klD:Landroid/content/DialogInterface$OnDismissListener;
+.field final synthetic kLe:Landroid/content/DialogInterface$OnDismissListener;
 
 
 # direct methods
@@ -31,11 +31,11 @@
 
     .prologue
     .line 103
-    iput-object p1, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->klC:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->kLd:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->buX:Landroid/app/ProgressDialog;
+    iput-object p2, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->bjH:Landroid/app/ProgressDialog;
 
-    iput-object p3, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->klD:Landroid/content/DialogInterface$OnDismissListener;
+    iput-object p3, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->kLe:Landroid/content/DialogInterface$OnDismissListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,13 +44,13 @@
 
 
 # virtual methods
-.method public final cd(I)V
+.method public final cx(I)V
     .locals 8
 
     .prologue
     const/4 v7, 0x0
 
-    const v6, 0x7f0b0ddd
+    const v6, 0x7f080134
 
     const/4 v4, 0x1
 
@@ -60,7 +60,7 @@
     if-gez p1, :cond_3
 
     .line 107
-    const-string/jumbo v0, "!44@/B4Tb64lLpLSYdQkqWTex1ccbn3Cc8CqdS1RwcelhYo="
+    const-string/jumbo v0, "MicroMsg.JSAPIUploadLogHelperUI"
 
     const-string/jumbo v1, "uploadLog call by jsapi, error happened, percent:%d"
 
@@ -72,28 +72,28 @@
 
     aput-object v3, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 108
     invoke-static {v7}, Lcom/tencent/mm/model/ah;->a(Lcom/tencent/mm/model/w;)V
 
     .line 109
-    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->buX:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->bjH:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_0
 
     .line 110
-    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->buX:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->bjH:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
     .line 112
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->klC:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->kLd:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
 
-    const v1, 0x7f0b08c9
+    const v1, 0x7f0813ab
 
-    invoke-static {v0, v1, v6}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
+    invoke-static {v0, v1, v6}, Lcom/tencent/mm/ui/base/g;->f(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -101,13 +101,13 @@
     if-eqz v0, :cond_1
 
     .line 114
-    iget-object v1, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->klD:Landroid/content/DialogInterface$OnDismissListener;
+    iget-object v1, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->kLe:Landroid/content/DialogInterface$OnDismissListener;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/h;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 116
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->klC:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->kLd:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;->a(Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;)[B
 
@@ -119,7 +119,7 @@
     const/4 v0, 0x0
 
     :try_start_0
-    invoke-static {v0}, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;->ax(Z)Z
+    invoke-static {v0}, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;->aa(Z)Z
 
     .line 118
     monitor-exit v1
@@ -146,32 +146,32 @@
     if-lt p1, v0, :cond_6
 
     .line 120
-    const-string/jumbo v0, "!44@/B4Tb64lLpLSYdQkqWTex1ccbn3Cc8CqdS1RwcelhYo="
+    const-string/jumbo v0, "MicroMsg.JSAPIUploadLogHelperUI"
 
     const-string/jumbo v1, "uploadLog call by jsapi done."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 121
     invoke-static {v7}, Lcom/tencent/mm/model/ah;->a(Lcom/tencent/mm/model/w;)V
 
     .line 122
-    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->buX:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->bjH:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_4
 
     .line 123
-    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->buX:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->bjH:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
     .line 125
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->klC:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->kLd:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
 
-    const v1, 0x7f0b08ca
+    const v1, 0x7f0813af
 
-    invoke-static {v0, v1, v6}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
+    invoke-static {v0, v1, v6}, Lcom/tencent/mm/ui/base/g;->f(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -179,7 +179,7 @@
     if-eqz v0, :cond_5
 
     .line 127
-    iget-object v1, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->klD:Landroid/content/DialogInterface$OnDismissListener;
+    iget-object v1, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->kLe:Landroid/content/DialogInterface$OnDismissListener;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/h;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
@@ -194,7 +194,7 @@
     div-long/2addr v0, v2
 
     .line 131
-    sget-object v2, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v2, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v3, 0x32af
 
@@ -206,10 +206,10 @@
 
     aput-object v0, v4, v5
 
-    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     .line 133
-    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->klC:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->kLd:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;->a(Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;)[B
 
@@ -221,7 +221,7 @@
     const/4 v0, 0x0
 
     :try_start_1
-    invoke-static {v0}, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;->ax(Z)Z
+    invoke-static {v0}, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;->aa(Z)Z
 
     .line 135
     monitor-exit v1
@@ -239,7 +239,7 @@
 
     .line 136
     :cond_6
-    const-string/jumbo v0, "!44@/B4Tb64lLpLSYdQkqWTex1ccbn3Cc8CqdS1RwcelhYo="
+    const-string/jumbo v0, "MicroMsg.JSAPIUploadLogHelperUI"
 
     const-string/jumbo v1, "uploadLog call by jsapi, ipxx progress:%d"
 
@@ -251,23 +251,23 @@
 
     aput-object v3, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 138
-    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->buX:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->bjH:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_2
 
     .line 139
-    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->buX:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->bjH:Landroid/app/ProgressDialog;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->klC:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI$3;->kLd:Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;
 
-    const v3, 0x7f0b08c8
+    const v3, 0x7f0813ac
 
     invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/JSAPIUploadLogHelperUI;->getString(I)Ljava/lang/String;
 

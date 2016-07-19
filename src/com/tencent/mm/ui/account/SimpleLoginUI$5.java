@@ -7,7 +7,7 @@ final class SimpleLoginUI$5
   
   public final void run()
   {
-    SimpleLoginUI.a(kwL);
+    SimpleLoginUI.a(kVS);
   }
 }
 

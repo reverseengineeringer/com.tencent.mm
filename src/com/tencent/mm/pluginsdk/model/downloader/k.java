@@ -2,11 +2,11 @@ package com.tencent.mm.pluginsdk.model.downloader;
 
 public abstract interface k
 {
-  public abstract void bu(long paramLong);
+  public abstract void bF(long paramLong);
   
-  public abstract void bv(long paramLong);
+  public abstract void bG(long paramLong);
   
-  public abstract void c(long paramLong, String paramString);
+  public abstract void d(long paramLong, String paramString);
   
   public abstract void onTaskFailed(long paramLong);
   

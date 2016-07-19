@@ -2,7 +2,7 @@ package com.tencent.mm.app.plugin;
 
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.pluginsdk.l;
 import com.tencent.mm.pluginsdk.ui.applet.g;
 import com.tencent.mm.pluginsdk.ui.d.b;
@@ -25,9 +25,9 @@ class URISpanHandlerSet$EmotionStoreUriSpanHandler
       }
       paramb = new Intent();
       paramb.putExtra("download_entrance_scene", 16);
-      paramb.putExtra("extra_id", (String)paramg.c(String.class));
+      paramb.putExtra("extra_id", (String)paramg.d(String.class));
       paramb.putExtra("preceding_scence", 3);
-      c.c(URISpanHandlerSet.a(ang), "emoji", ".ui.EmojiStoreDetailUI", paramb);
+      c.c(URISpanHandlerSet.a(ZU), "emoji", ".ui.EmojiStoreDetailUI", paramb);
       return true;
     }
     return false;
@@ -38,7 +38,7 @@ class URISpanHandlerSet$EmotionStoreUriSpanHandler
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     if (paramString.trim().startsWith("weixin://emoticonstore/"))
     {
@@ -52,7 +52,7 @@ class URISpanHandlerSet$EmotionStoreUriSpanHandler
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 29 };
   }

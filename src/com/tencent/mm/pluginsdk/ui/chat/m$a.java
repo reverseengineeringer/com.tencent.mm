@@ -2,11 +2,11 @@ package com.tencent.mm.pluginsdk.ui.chat;
 
 public abstract interface m$a
 {
-  public abstract void aSi();
+  public abstract void aWZ();
   
-  public abstract void aSj();
+  public abstract void aXa();
   
-  public abstract void ww(String paramString);
+  public abstract void xP(String paramString);
 }
 
 /* Location:

@@ -4,7 +4,7 @@ import com.tencent.mm.a.o;
 import com.tencent.mm.modelfriend.af;
 import com.tencent.mm.modelfriend.ag;
 import com.tencent.mm.modelfriend.ah;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class e$1$1
   implements g.a
@@ -13,16 +13,16 @@ final class e$1$1
   
   public final void g(boolean paramBoolean, String paramString)
   {
-    paramString = ah.zv().V(o.aF(paramString));
+    paramString = ah.zI().aa(o.aK(paramString));
     if (paramString != null)
     {
-      bEv = 2;
-      u.d("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "qq friend onSendInviteEmail:%s", new Object[] { paramString.toString() });
-      ah.zv().a(bNk, paramString);
-      lrY.lrX.Gk();
+      bxG = 2;
+      v.d("MicroMsg.QQFriendAdapter", "qq friend onSendInviteEmail:%s", new Object[] { paramString.toString() });
+      ah.zI().a(bGE, paramString);
+      lSC.lSB.GH();
       return;
     }
-    u.w("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZIJLQ3cmLpPk=", "cpan qq friedn is null. qq:%s", new Object[] { paramString });
+    v.w("MicroMsg.QQFriendAdapter", "cpan qq friedn is null. qq:%s", new Object[] { paramString });
   }
 }
 

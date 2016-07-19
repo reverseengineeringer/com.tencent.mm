@@ -1,26 +1,17 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
+import com.tencent.mm.plugin.sns.b.a;
+import com.tencent.mm.pluginsdk.f;
 
 final class av$2
-  implements Animation.AnimationListener
+  implements Runnable
 {
-  av$2(av paramav, View paramView) {}
+  av$2(av paramav) {}
   
-  public final void onAnimationEnd(Animation paramAnimation)
+  public final void run()
   {
-    if (gRA != null)
-    {
-      gRA.setVisibility(8);
-      hmD.aAV();
-    }
+    a.cjp.ji();
   }
-  
-  public final void onAnimationRepeat(Animation paramAnimation) {}
-  
-  public final void onAnimationStart(Animation paramAnimation) {}
 }
 
 /* Location:

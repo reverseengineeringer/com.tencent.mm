@@ -8,18 +8,18 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class ChattingTranslateView
   extends LinearLayout
 {
-  private String aIm;
-  private ImageView kXH;
-  private TextView kXI;
-  private boolean kXJ = false;
-  a kXK = null;
-  private boolean kXL = false;
+  private String auG;
+  private ImageView iQQ;
+  private TextView lxY;
+  private boolean lxZ = false;
+  a lya = null;
+  private boolean lyb = false;
   
   public ChattingTranslateView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -35,16 +35,16 @@ public class ChattingTranslateView
   
   private void a(a parama)
   {
-    if (kXL) {
+    if (lyb) {
       super.setVisibility(8);
     }
-    while ((kXK == parama) && (!kXJ)) {
+    while ((lya == parama) && (!lxZ)) {
       return;
     }
-    kXJ = false;
-    u.d("!44@/B4Tb64lLpKwUcOR+EdWcrEYD8dwvm3wvSBPRtXIgAg=", "from status %s to status %s", new Object[] { kXK, parama });
-    kXK = parama;
-    switch (1.kXM[parama.ordinal()])
+    lxZ = false;
+    v.d("MicroMsg.ChattingTranslateView", "from status %s to status %s", new Object[] { lya, parama });
+    lya = parama;
+    switch (1.lyc[parama.ordinal()])
     {
     }
     for (;;)
@@ -54,15 +54,15 @@ public class ChattingTranslateView
       super.setVisibility(8);
       continue;
       super.setVisibility(0);
-      kXH.setImageResource(2130903414);
-      kXI.setText(2131429629);
+      iQQ.setImageResource(2131165890);
+      lxY.setText(2131231779);
       continue;
       super.setVisibility(0);
-      kXH.setImageResource(2130903060);
-      if (ay.kz(aIm)) {
-        kXI.setText(2131429628);
+      iQQ.setImageResource(2131165889);
+      if (be.kf(auG)) {
+        lxY.setText(2131231778);
       } else {
-        kXI.setText(aIm);
+        lxY.setText(auG);
       }
     }
   }
@@ -70,52 +70,55 @@ public class ChattingTranslateView
   private void init()
   {
     int i = (int)TypedValue.applyDimension(1, 3.0F, getResources().getDisplayMetrics());
-    kXH = new ImageView(getContext());
+    iQQ = new ImageView(getContext());
     LinearLayout.LayoutParams localLayoutParams = new LinearLayout.LayoutParams(-2, -2);
     gravity = 16;
     localLayoutParams.setMargins(i, i, 0, i);
-    kXH.setLayoutParams(localLayoutParams);
-    addView(kXH);
-    kXI = new TextView(getContext());
+    iQQ.setLayoutParams(localLayoutParams);
+    addView(iQQ);
+    lxY = new TextView(getContext());
     localLayoutParams = new LinearLayout.LayoutParams(-2, -2);
     localLayoutParams.setMargins(i, i, i, i);
     gravity = 16;
-    kXI.setLayoutParams(localLayoutParams);
-    kXI.setTextSize(1, 11.0F);
-    kXI.setTextColor(-1);
-    addView(kXI);
-    setBackgroundResource(2130970262);
-    a(a.kXN);
+    lxY.setLayoutParams(localLayoutParams);
+    lxY.setTextSize(1, 11.0F);
+    lxY.setTextColor(-1);
+    addView(lxY);
+    setBackgroundResource(2130837963);
+    a(a.lyd);
   }
   
-  public final void beN()
+  public final void Jh(String paramString)
   {
-    a(a.kXN);
+    if (!be.li(auG).equals(be.li(paramString))) {
+      lxZ = true;
+    }
+    auG = paramString;
+    a(a.lyf);
   }
   
-  public final void beO()
+  public final void bku()
   {
-    a(a.kXO);
+    a(a.lyd);
   }
   
-  public final void hL(boolean paramBoolean)
+  public final void bkv()
   {
-    kXL = paramBoolean;
+    a(a.lye);
+  }
+  
+  public final void io(boolean paramBoolean)
+  {
+    lyb = paramBoolean;
     if (paramBoolean) {
       super.setVisibility(8);
     }
   }
   
-  public void setTranslated(String paramString)
+  public static enum a
   {
-    if (!ay.ky(aIm).equals(ay.ky(paramString))) {
-      kXJ = true;
-    }
-    aIm = paramString;
-    a(a.kXP);
+    private a() {}
   }
-  
-  public static enum a {}
 }
 
 /* Location:

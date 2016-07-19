@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 124
+    .line 114
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,40 +30,51 @@
 
 
 # virtual methods
-.method public final i(Landroid/content/Intent;)V
+.method public final j(Landroid/content/Intent;)V
     .locals 5
 
     .prologue
-    const/4 v4, 0x0
+    .line 118
+    const-string/jumbo v0, "acc"
 
-    .line 128
-    const-string/jumbo v0, "flag"
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    move-result-object v0
 
-    move-result v0
+    sput-object v0, Lcom/tencent/mm/platformtools/q;->ciu:Ljava/lang/String;
 
-    sput v0, Lcom/tencent/mm/platformtools/r;->cnR:I
+    .line 119
+    const-string/jumbo v0, "pass"
 
-    .line 129
-    const-string/jumbo v0, "!24@/B4Tb64lLpLOIdMtS2bKaA=="
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    const-string/jumbo v1, "dkwt shell [%d]"
+    move-result-object v0
 
-    const/4 v2, 0x1
+    sput-object v0, Lcom/tencent/mm/platformtools/q;->civ:Ljava/lang/String;
+
+    .line 120
+    const-string/jumbo v0, "MicroMsg.Shell"
+
+    const-string/jumbo v1, "dkwt shell [%s %s]"
+
+    const/4 v2, 0x2
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    sget v3, Lcom/tencent/mm/platformtools/r;->cnR:I
+    const/4 v3, 0x0
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sget-object v4, Lcom/tencent/mm/platformtools/q;->ciu:Ljava/lang/String;
 
-    move-result-object v3
+    aput-object v4, v2, v3
 
-    aput-object v3, v2, v4
+    const/4 v3, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    sget-object v4, Lcom/tencent/mm/platformtools/q;->civ:Ljava/lang/String;
 
-    .line 130
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 121
     return-void
 .end method

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/g9" android:paddingRight="4.0dip" android:layout_height="wrap_content" android:shadowColor="@color/ak" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" style="@style/MMListCatalog" />
+    <com.tencent.mm.ui.base.MMSlideDelView android:id="@id/g_" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_below="@id/g9">
+        <RelativeLayout android:id="@id/ga" android:background="@drawable/j4" android:layout_height="56.0dip" style="@style/MMListItem">
+            <com.tencent.mm.ui.base.MaskLayout android:id="@id/gb" android:layout_width="54.0dip" android:layout_height="54.0dip" android:layout_marginLeft="1.0dip" android:layout_marginRight="3.0dip" android:layout_centerVertical="true">
+                <ImageView android:id="@id/g6" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@raw/default_avatar" android:layout_centerInParent="true" />
+            </com.tencent.mm.ui.base.MaskLayout>
+            <RelativeLayout android:id="@id/gc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="21.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <TextView android:id="@id/gd" android:visibility="gone" android:text="@string/bo" style="@style/MMFontTipInList" />
+                <TextView android:id="@id/ge" android:text="signature" style="@style/ContactSignature" />
+                <CheckBox android:id="@id/gf" android:background="@drawable/iv" android:focusable="false" android:focusableInTouchMode="false" android:visibility="gone" android:clickable="false" android:layout_width="20.0dip" android:layout_height="20.0dip" />
+            </RelativeLayout>
+            <ImageView android:id="@id/gg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="21.0dip" android:src="@drawable/j9" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/gh" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/j9" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <RelativeLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/gc" android:layout_toRightOf="@id/gb" android:layout_centerHorizontal="true">
+                <com.tencent.mm.ui.tools.MMTruncTextView android:id="@id/gi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="{nick}" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_centerHorizontal="true" style="@style/MMFontTitleInList" />
+                <TextView android:id="@id/gj" android:layout_width="wrap_content" android:layout_height="20.0dip" android:text="{account}" android:singleLine="true" android:layout_below="@id/gi" android:layout_alignParentLeft="true" style="@style/MMFontTipInList" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/gk" android:background="@drawable/iu" android:layout_width="112.0dip" android:layout_height="fill_parent">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/a2y" />
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/ow" android:id="@id/gl" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cnw" />
+        </LinearLayout>
+    </com.tencent.mm.ui.base.MMSlideDelView>
+</RelativeLayout>

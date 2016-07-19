@@ -1,7 +1,7 @@
 package com.tencent.mm.plugin.sns.ui;
 
 import android.widget.Gallery;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import com.tencent.mm.ui.base.MMPageControlView;
 import com.tencent.mm.ui.base.MultiTouchImageView;
 import com.tencent.mm.ui.tools.h.b;
@@ -13,32 +13,32 @@ final class SnsBrowseUI$3
   
   public final void onAnimationEnd()
   {
-    SnsBrowseUI.e(hbY).post(new Runnable()
+    SnsBrowseUI.e(hqK).post(new Runnable()
     {
       public final void run()
       {
-        hbY.finish();
-        hbY.overridePendingTransition(0, 0);
+        hqK.finish();
+        hqK.overridePendingTransition(0, 0);
       }
     });
   }
   
   public final void onAnimationStart()
   {
-    SnsInfoFlip localSnsInfoFlip = hbY.hbK;
-    if (heD != null) {
-      heD.setVisibility(8);
+    SnsInfoFlip localSnsInfoFlip = hqK.hqA;
+    if (htp != null) {
+      htp.setVisibility(8);
     }
-    SnsBrowseUI.e(hbY).postDelayed(new Runnable()
+    SnsBrowseUI.e(hqK).postDelayed(new Runnable()
     {
       public final void run()
       {
-        Object localObject = hbY.hbK;
-        if (heq != null)
+        Object localObject = hqK.hqA;
+        if (htc != null)
         {
-          localObject = heq.getSelectedView();
+          localObject = htc.getSelectedView();
           if ((localObject instanceof MultiTouchImageView)) {
-            ((MultiTouchImageView)localObject).bdf();
+            ((MultiTouchImageView)localObject).biI();
           }
         }
       }

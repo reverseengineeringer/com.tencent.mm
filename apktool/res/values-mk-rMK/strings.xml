@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">%1$s бара ажурирање на апликацијата Android Wear.</string>
+    <string name="b">%1$s нема да се извршува ако не ја ажурирате апликацијата Android Wear.</string>
+    <string name="c">Ажурирај Android Wear</string>
+    <string name="d">%1$s бара една или повеќе услуги на Google Play што не се достапни во моментов. Контактирајте со програмерот за помош.</string>
+    <string name="e">Овозможи ги услугите на Google Play</string>
+    <string name="f">%1$s нема да се извршува ако не овозможите услуги на Google Play.</string>
+    <string name="g">Овозможи ги услугите на Google Play</string>
+    <string name="h">Побарал %1$s</string>
+    <string name="i">Преземи ги услугите на Google Play</string>
+    <string name="j">%1$s нема да се извршува без услугите на Google Play што ги нема на телефонот.</string>
+    <string name="k">%1$s нема да се извршува без услугите на Google Play што ги нема на таблетот.</string>
+    <string name="l">Преземи ги услугите на Google Play</string>
+    <string name="m">Наведената сметка не постои на овој уред. Изберете друга сметка.</string>
+    <string name="n">Неважечка сметка</string>
+    <string name="o">Апликацијата бара да се овозможат услугите на Google Play.</string>
+    <string name="p">Потребно е поврзување податоци за да се поврзете со услугите на Google Play.</string>
+    <string name="q">Мрежна грешка</string>
+    <string name="r">Апликацијата бара да се ажурираат услугите на Google Play.</string>
+    <string name="s">Грешка на услугите на Google Play</string>
+    <string name="t">Грешка при пријавување во наведената сметка. Изберете друга сметка.</string>
+    <string name="u">Пријавувањето не успеа</string>
+    <string name="v">Непознат проблем со услугите на Google Play.</string>
+    <string name="w">%1$s се потпира на услуги на Google Play што вашиот уред не ги поддржува. Контактирајте со производителот за помош.</string>
+    <string name="x">Услуги на Google Play</string>
+    <string name="y">Ажурирај</string>
+    <string name="z">%1$s нема да се извршува ако не ги ажурирате услугите на Google Play.</string>
+    <string name="a0">Ажурирај ги услугите на Google Play</string>
+    <string name="a1">%1$s нема да се извршува без услугите на Google Play што се ажурираат во моментов.</string>
+    <string name="a2">Услугите на Google Play се ажурираат</string>
+    <string name="a3">Отвори на телефонот</string>
+    <string name="a4">Најави се</string>
+    <string name="a5">Најави се со Google</string>
+</resources>

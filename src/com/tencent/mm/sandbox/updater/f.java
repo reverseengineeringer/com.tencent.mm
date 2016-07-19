@@ -4,17 +4,17 @@ import com.tencent.mm.sandbox.monitor.c;
 
 abstract interface f
 {
-  public abstract void Ct(String paramString);
-  
-  public abstract void J(int paramInt1, int paramInt2);
+  public abstract void L(int paramInt1, int paramInt2);
   
   public abstract void a(c paramc);
   
-  public abstract void aTT();
+  public abstract void aAB();
   
-  public abstract void aTU();
+  public abstract void aYQ();
   
-  public abstract void ayb();
+  public abstract void aYR();
+  
+  public abstract void wt(String paramString);
 }
 
 /* Location:

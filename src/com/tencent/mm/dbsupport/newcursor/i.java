@@ -9,7 +9,7 @@ import com.tencent.kingkong.support.CancellationSignal;
 public final class i
   implements SQLiteCursorDriver
 {
-  private l bvA;
+  private l bkt;
   private final CancellationSignal mCancellationSignal;
   private final SQLiteDatabase mDatabase;
   private final String mEditTable;
@@ -36,7 +36,7 @@ public final class i
     {
       paramCursorFactory.bindAllArgsAsStrings(paramArrayOfString);
       paramArrayOfString = new j(this, mEditTable, paramCursorFactory);
-      bvA = paramCursorFactory;
+      bkt = paramCursorFactory;
       return paramArrayOfString;
     }
     catch (RuntimeException paramArrayOfString)
@@ -48,7 +48,7 @@ public final class i
   
   public final void setBindArguments(String[] paramArrayOfString)
   {
-    bvA.bindAllArgsAsStrings(paramArrayOfString);
+    bkt.bindAllArgsAsStrings(paramArrayOfString);
   }
   
   public final String toString()

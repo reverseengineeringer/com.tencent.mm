@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iTc:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;
+.field final synthetic jqo:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 194
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$3;->iTc:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$3;->jqo:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 197
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$3;->iTc:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$3;->jqo:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->e(Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;)Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
 
@@ -50,13 +50,13 @@
     if-eqz v0, :cond_0
 
     .line 198
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$3;->iTc:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$3;->jqo:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->e(Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;)Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$3;->iTc:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$3;->jqo:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->g(Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;)Landroid/media/MediaPlayer;
 
@@ -66,7 +66,7 @@
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$3;->iTc:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$3;->jqo:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->g(Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;)Landroid/media/MediaPlayer;
 
@@ -76,16 +76,16 @@
 
     move-result v2
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/ui/tools/f$a;->aA(II)I
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/ui/tools/f$a;->aF(II)I
 
     .line 199
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$3;->iTc:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView$3;->jqo:Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;->e(Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;)Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/f$a;->lG()V
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/f$a;->jQ()V
 
     .line 201
     :cond_0

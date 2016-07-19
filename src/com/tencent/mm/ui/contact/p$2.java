@@ -2,6 +2,7 @@ package com.tencent.mm.ui.contact;
 
 import com.tencent.mm.modelsearch.FTSUtils;
 import com.tencent.mm.modelsearch.c;
+import com.tencent.mm.modelsearch.m.g;
 import com.tencent.mm.modelsearch.m.j;
 import com.tencent.mm.modelsearch.m.k;
 import java.util.HashSet;
@@ -12,25 +13,25 @@ final class p$2
 {
   p$2(p paramp) {}
   
-  public final void a(m.k paramk, List paramList, HashSet paramHashSet, String[] paramArrayOfString, String paramString)
+  public final void a(m.k paramk, List<m.g> paramList, HashSet<String> paramHashSet, String[] paramArrayOfString, String paramString)
   {
-    if ((p.a(llt) == null) || (!p.a(llt).equals(paramk))) {
+    if ((p.a(lLG) == null) || (!p.a(lLG).equals(paramk))) {
       return;
     }
-    p.a(llt, paramArrayOfString);
-    p.a(llt, paramList);
-    p.c(llt, FTSUtils.a(paramList, c.bYR, 131072, 131072));
-    p.d(llt, FTSUtils.a(paramList, c.bYR, 131075, 131075));
-    p.e(llt, FTSUtils.a(paramList, c.bYR, 131076, 131076));
-    p.a(llt, paramString, true);
+    p.a(lLG, paramArrayOfString);
+    p.a(lLG, paramList);
+    p.c(lLG, FTSUtils.a(paramList, c.bSA, 131072, 131072));
+    p.d(lLG, FTSUtils.a(paramList, c.bSA, 131075, 131075));
+    p.e(lLG, FTSUtils.a(paramList, c.bSA, 131076, 131076));
+    p.a(lLG, paramString, true);
   }
   
-  public final void iD(String paramString)
+  public final void iU(String paramString)
   {
-    if (!paramString.equals(p.c(llt))) {
+    if (!paramString.equals(p.c(lLG))) {
       return;
     }
-    p.a(llt, paramString, true);
+    p.a(lLG, paramString, true);
   }
 }
 

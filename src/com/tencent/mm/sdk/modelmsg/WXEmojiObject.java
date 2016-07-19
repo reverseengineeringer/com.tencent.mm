@@ -1,14 +1,14 @@
 package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.File;
 
 public class WXEmojiObject
   implements WXMediaMessage.b
 {
   private static final int CONTENT_LENGTH_LIMIT = 10485760;
-  private static final String TAG = "!44@/B4Tb64lLpKbvaoYwgBifwJtObW4pYnf2Gs+DAkLhRM=";
+  private static final String TAG = "MicroMsg.SDK.WXEmojiObject";
   public byte[] emojiData;
   public String emojiPath;
   
@@ -43,17 +43,17 @@ public class WXEmojiObject
   {
     if (((emojiData == null) || (emojiData.length == 0)) && ((emojiPath == null) || (emojiPath.length() == 0)))
     {
-      u.e("!44@/B4Tb64lLpKbvaoYwgBifwJtObW4pYnf2Gs+DAkLhRM=", "checkArgs fail, both arguments is null");
+      v.e("MicroMsg.SDK.WXEmojiObject", "checkArgs fail, both arguments is null");
       return false;
     }
     if ((emojiData != null) && (emojiData.length > 10485760))
     {
-      u.e("!44@/B4Tb64lLpKbvaoYwgBifwJtObW4pYnf2Gs+DAkLhRM=", "checkArgs fail, emojiData is too large");
+      v.e("MicroMsg.SDK.WXEmojiObject", "checkArgs fail, emojiData is too large");
       return false;
     }
     if ((emojiPath != null) && (getFileSize(emojiPath) > 10485760))
     {
-      u.e("!44@/B4Tb64lLpKbvaoYwgBifwJtObW4pYnf2Gs+DAkLhRM=", "checkArgs fail, emojiSize is too large");
+      v.e("MicroMsg.SDK.WXEmojiObject", "checkArgs fail, emojiSize is too large");
       return false;
     }
     return true;

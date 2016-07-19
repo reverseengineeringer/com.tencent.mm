@@ -2,15 +2,15 @@ package com.tencent.mm.ui;
 
 import android.os.Looper;
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class e$e$b
-  extends aa
+  extends ac
 {
-  boolean kkj;
-  public final int kkk = 1;
-  public final int kkl = 2;
+  boolean kKr;
+  public final int kKs = 1;
+  public final int kKt = 2;
   
   public e$e$b(e.e parame, Looper paramLooper)
   {
@@ -20,22 +20,22 @@ final class e$e$b
   public final void handleMessage(Message paramMessage)
   {
     super.handleMessage(paramMessage);
-    if (kkj) {}
+    if (kKr) {}
     do
     {
       return;
-      synchronized (kki)
+      synchronized (kKq)
       {
-        kki.kkg = kki.aZP();
-        u.i(kki.kjZ.TAG, "newcursor updateWorkerRefresh status %d", new Object[] { Integer.valueOf(kki.kkg) });
+        kKq.kKo = kKq.bfn();
+        v.i(kKq.kKh.TAG, "newcursor updateWorkerRefresh status %d", new Object[] { Integer.valueOf(kKq.kKo) });
         if (what == 1)
         {
-          e.d(kki.kjZ);
+          e.d(kKq.kKh);
           return;
         }
       }
     } while (what != 2);
-    e.a(kki.kjZ, (e.c)obj, false, true);
+    e.a(kKq.kKh, (e.c)obj, false, true);
   }
 }
 

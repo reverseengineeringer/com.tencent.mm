@@ -5,25 +5,25 @@ import android.view.VelocityTracker;
 
 public final class l
 {
-  static final c fv = new a();
+  static final c fR = new a();
   
   static
   {
     if (Build.VERSION.SDK_INT >= 11)
     {
-      fv = new b();
+      fR = new b();
       return;
     }
   }
   
   public static float a(VelocityTracker paramVelocityTracker, int paramInt)
   {
-    return fv.a(paramVelocityTracker, paramInt);
+    return fR.a(paramVelocityTracker, paramInt);
   }
   
   public static float b(VelocityTracker paramVelocityTracker, int paramInt)
   {
-    return fv.b(paramVelocityTracker, paramInt);
+    return fR.b(paramVelocityTracker, paramInt);
   }
   
   static final class a

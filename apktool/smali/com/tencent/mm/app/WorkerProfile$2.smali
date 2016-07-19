@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/app/WorkerProfile;->ah(Z)I
+    value = Lcom/tencent/mm/app/WorkerProfile;->M(Z)I
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -13,9 +13,18 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/c/c",
+        "<",
+        "Lcom/tencent/mm/e/a/od;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic amC:Lcom/tencent/mm/app/WorkerProfile;
+.field final synthetic Zr:Lcom/tencent/mm/app/WorkerProfile;
 
 
 # direct methods
@@ -23,31 +32,40 @@
     .locals 1
 
     .prologue
-    .line 776
-    iput-object p1, p0, Lcom/tencent/mm/app/WorkerProfile$2;->amC:Lcom/tencent/mm/app/WorkerProfile;
+    .line 806
+    iput-object p1, p0, Lcom/tencent/mm/app/WorkerProfile$2;->Zr:Lcom/tencent/mm/app/WorkerProfile;
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/c;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    const-class v0, Lcom/tencent/mm/e/a/od;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/app/WorkerProfile$2;->kum:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
+.method public final synthetic a(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 3
 
     .prologue
-    .line 780
-    const-string/jumbo v0, "!32@/B4Tb64lLpKJUHFjVVLDtjoRkfkHVaSq"
+    .line 806
+    const-string/jumbo v0, "MicroMsg.WorkerProfile"
 
     const-string/jumbo v1, "upload sql file"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 781
-    invoke-static {}, Lcom/tencent/mm/ui/g/b;->bjc()Lcom/tencent/mm/ui/g/b;
+    invoke-static {}, Lcom/tencent/mm/ui/h/b;->bpa()Lcom/tencent/mm/ui/h/b;
 
     move-result-object v0
 
@@ -55,7 +73,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v2, Lcom/tencent/mm/ui/g/b;->lAk:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/ui/h/b;->mba:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -71,13 +89,12 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/g/b;->HD(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/ui/h/b;->JT(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/g/b;->HF(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/h/b;->JV(Ljava/lang/String;)V
 
-    .line 782
     const/4 v0, 0x0
 
     return v0

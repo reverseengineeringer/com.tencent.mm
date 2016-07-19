@@ -3,43 +3,42 @@ package com.tencent.mm.plugin.sns.ui;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
-import com.tencent.mm.plugin.sns.d.ac;
-import com.tencent.mm.plugin.sns.ui.c.b;
+import com.tencent.mm.plugin.sns.e.ac;
 
 final class SnsCommentDetailUI$3
-  extends b
+  extends com.tencent.mm.plugin.sns.ui.c.b
 {
   SnsCommentDetailUI$3(SnsCommentDetailUI paramSnsCommentDetailUI, Activity paramActivity, ac paramac)
   {
     super(1, paramActivity, paramac);
   }
   
-  public final void Z(View paramView) {}
+  public final void aDL() {}
   
-  public final void aAT() {}
-  
-  public final void aAU()
+  public final void aDM()
   {
-    SnsCommentDetailUI.o(hda).azM();
+    SnsCommentDetailUI.o(hrN).aCn();
     Intent localIntent = new Intent();
     localIntent.putExtra("result_finish", true);
-    hda.setResult(-1, localIntent);
-    hda.finish();
+    hrN.setResult(-1, localIntent);
+    hrN.finish();
+  }
+  
+  public final void aJ(Object paramObject)
+  {
+    SnsCommentDetailUI.g(hrN);
+    SnsCommentDetailUI.n(hrN).a((View)paramObject, 2, null);
   }
   
   public final void aa(View paramView) {}
   
   public final void ab(View paramView) {}
   
-  public final void ac(View paramView)
-  {
-    SnsCommentDetailUI.o(hda).Y(paramView);
-  }
+  public final void ac(View paramView) {}
   
-  public final void aq(Object paramObject)
+  public final void ad(View paramView)
   {
-    SnsCommentDetailUI.g(hda);
-    SnsCommentDetailUI.n(hda).a((View)paramObject, 2, null);
+    SnsCommentDetailUI.o(hrN).Z(paramView);
   }
   
   public final void d(View paramView, int paramInt1, int paramInt2, int paramInt3) {}

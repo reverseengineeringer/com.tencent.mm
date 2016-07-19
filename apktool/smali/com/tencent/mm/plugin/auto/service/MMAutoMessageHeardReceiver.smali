@@ -23,7 +23,7 @@
     .line 21
     const-string/jumbo v0, "key_username"
 
-    invoke-static {p2, v0}, Lcom/tencent/mm/sdk/platformtools/p;->g(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0}, Lcom/tencent/mm/sdk/platformtools/q;->g(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -36,7 +36,7 @@
 
     .line 25
     :cond_0
-    const-string/jumbo v1, "!64@/B4Tb64lLpJYWR0wzx4Vma/Smbu3SvmOcxkDwA+D7y4hGJqqFeF7XchOuFbsmY6u"
+    const-string/jumbo v1, "MicroMsg.auto.MMAutoMessageHeardReceiver"
 
     const-string/jumbo v2, "username %s heard"
 
@@ -48,25 +48,25 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 26
-    invoke-static {}, Lcom/tencent/mm/model/ah;->kU()Lcom/tencent/mm/model/y;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->jv()Lcom/tencent/mm/model/y;
 
     move-result-object v1
 
     invoke-interface {v1, v0}, Lcom/tencent/mm/model/y;->cancelNotification(Ljava/lang/String;)V
 
     .line 27
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/s;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->ru()Lcom/tencent/mm/storage/s;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/storage/s;->EC(Ljava/lang/String;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/storage/s;->GQ(Ljava/lang/String;)Z
 
     goto :goto_0
 .end method

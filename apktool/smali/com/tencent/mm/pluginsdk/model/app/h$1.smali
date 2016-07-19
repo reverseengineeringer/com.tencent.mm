@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/af$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ah$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iAW:Lcom/tencent/mm/pluginsdk/model/app/h;
+.field final synthetic iXA:Lcom/tencent/mm/pluginsdk/model/app/h;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 41
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/app/h$1;->iAW:Lcom/tencent/mm/pluginsdk/model/app/h;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/app/h$1;->iXA:Lcom/tencent/mm/pluginsdk/model/app/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,14 +36,14 @@
 
 
 # virtual methods
-.method public final lj()Z
+.method public final jK()Z
     .locals 1
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/h$1;->iAW:Lcom/tencent/mm/pluginsdk/model/app/h;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/h$1;->iXA:Lcom/tencent/mm/pluginsdk/model/app/h;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/app/h;->iAQ:Ljava/util/Map;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/app/h;->iXu:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 

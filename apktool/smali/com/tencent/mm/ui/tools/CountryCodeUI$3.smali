@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/tools/CountryCodeUI;->Gb()V
+    value = Lcom/tencent/mm/ui/tools/CountryCodeUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic luc:Lcom/tencent/mm/ui/tools/CountryCodeUI;
+.field final synthetic lVe:Lcom/tencent/mm/ui/tools/CountryCodeUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 128
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$3;->luc:Lcom/tencent/mm/ui/tools/CountryCodeUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$3;->lVe:Lcom/tencent/mm/ui/tools/CountryCodeUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final Gd()V
+.method public final GA()V
     .locals 0
 
     .prologue
@@ -44,7 +44,7 @@
     return-void
 .end method
 
-.method public final Ge()V
+.method public final GB()V
     .locals 0
 
     .prologue
@@ -52,7 +52,7 @@
     return-void
 .end method
 
-.method public final Gf()V
+.method public final GC()V
     .locals 0
 
     .prologue
@@ -60,7 +60,7 @@
     return-void
 .end method
 
-.method public final Gg()V
+.method public final GD()V
     .locals 0
 
     .prologue
@@ -68,7 +68,7 @@
     return-void
 .end method
 
-.method public final kE(Ljava/lang/String;)Z
+.method public final ln(Ljava/lang/String;)Z
     .locals 1
 
     .prologue
@@ -78,17 +78,17 @@
     return v0
 .end method
 
-.method public final kF(Ljava/lang/String;)V
+.method public final lo(Ljava/lang/String;)V
     .locals 1
 
     .prologue
     .line 132
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$3;->luc:Lcom/tencent/mm/ui/tools/CountryCodeUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$3;->lVe:Lcom/tencent/mm/ui/tools/CountryCodeUI;
 
     invoke-static {v0, p1}, Lcom/tencent/mm/ui/tools/CountryCodeUI;->a(Lcom/tencent/mm/ui/tools/CountryCodeUI;Ljava/lang/String;)Ljava/lang/String;
 
     .line 133
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$3;->luc:Lcom/tencent/mm/ui/tools/CountryCodeUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$3;->lVe:Lcom/tencent/mm/ui/tools/CountryCodeUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/CountryCodeUI;->a(Lcom/tencent/mm/ui/tools/CountryCodeUI;)V
 

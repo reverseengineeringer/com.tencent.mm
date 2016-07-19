@@ -4,35 +4,11 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.os.Build.VERSION;
 import android.util.DisplayMetrics;
-import com.tencent.mm.sdk.platformtools.u;
+import android.widget.ListView;
 
 @Deprecated
 public final class a
 {
-  public static boolean clN = false;
-  
-  static
-  {
-    FC();
-  }
-  
-  private static boolean FC()
-  {
-    try
-    {
-      Class.forName("android.media.ExifInterface");
-      u.i("!24@/B4Tb64lLpKVEdGqaNtVOg==", "android.media.ExifInterface find");
-      clN = true;
-      return true;
-    }
-    catch (Exception localException)
-    {
-      u.w("!24@/B4Tb64lLpKVEdGqaNtVOg==", "android.media.ExifInterface can not found");
-      clN = false;
-    }
-    return false;
-  }
-  
   public static final class a
   {
     public static int a(Context paramContext, float paramFloat)
@@ -44,14 +20,21 @@ public final class a
   
   public static final class b
   {
-    public static int kq(String paramString)
+    public static void a(ListView paramListView)
     {
-      if (!a.clN) {}
-      while ((Build.VERSION.SDK_INT < 5) || (!a.clN)) {
-        return 0;
+      if (Build.VERSION.SDK_INT >= 8)
+      {
+        new o();
+        if (paramListView.getFirstVisiblePosition() > 10) {
+          paramListView.setSelection(10);
+        }
+        if (Build.VERSION.SDK_INT >= 8) {
+          paramListView.smoothScrollToPosition(0);
+        }
+        return;
       }
-      new d();
-      return d.kq(paramString);
+      new n();
+      paramListView.setSelection(0);
     }
   }
 }

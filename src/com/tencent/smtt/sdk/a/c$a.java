@@ -2,10 +2,10 @@ package com.tencent.smtt.sdk.a;
 
 public final class c$a
 {
-  public int iAB = -1;
-  public int iAC = -1;
-  public String iAD = "";
-  public String lUB = "0";
+  public int iXb = -1;
+  public int iXc = -1;
+  public String iXd = "";
+  public String mwt = "0";
   public String packageName = null;
 }
 

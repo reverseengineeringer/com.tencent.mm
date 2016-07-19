@@ -8,9 +8,9 @@ final class AppPanel$2
 {
   AppPanel$2(AppPanel paramAppPanel) {}
   
-  public final void kk(int paramInt)
+  public final void lA(int paramInt)
   {
-    AppPanel.e(iKi).setSelectedDot(paramInt);
+    AppPanel.e(jhe).sy(paramInt);
   }
 }
 

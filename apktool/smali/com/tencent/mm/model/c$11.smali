@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/h/g$a;
+.implements Lcom/tencent/mm/bc/g$b;
 
 
 # annotations
@@ -12,23 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
 .end annotation
 
 
-# instance fields
-.field final synthetic bzL:Lcom/tencent/mm/model/c;
-
-
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/model/c;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 468
-    iput-object p1, p0, Lcom/tencent/mm/model/c$11;->bzL:Lcom/tencent/mm/model/c;
-
+    .line 1384
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,13 +30,12 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Lcom/tencent/mm/sdk/h/i;)V
-    .locals 0
+.method public final kE()[Ljava/lang/String;
+    .locals 1
 
     .prologue
-    .line 472
-    invoke-static {p1}, Lcom/tencent/mm/compatible/d/p;->da(Ljava/lang/String;)V
+    .line 1387
+    sget-object v0, Lcom/tencent/mm/storage/v;->bkN:[Ljava/lang/String;
 
-    .line 473
-    return-void
+    return-object v0
 .end method

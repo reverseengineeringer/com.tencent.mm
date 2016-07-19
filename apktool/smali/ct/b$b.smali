@@ -72,9 +72,9 @@
     :cond_0
     const/4 v0, 0x0
 
-    const-wide/16 v1, 0x4e20
+    const-wide/16 v2, 0x4e20
 
-    invoke-virtual {p0, v0, v1, v2}, Lct/b$b;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {p0, v0, v2, v3}, Lct/b$b;->sendEmptyMessageDelayed(IJ)Z
 
     .line 306
     const/4 v0, 0x0
@@ -82,11 +82,11 @@
     .line 307
     iget-object v1, p0, Lct/b$b;->a:Lct/b;
 
-    invoke-static {v1}, Lct/b;->a(Lct/b;)Lct/bj;
+    invoke-static {v1}, Lct/b;->a(Lct/b;)Lct/bg;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lct/bj;->a()Landroid/telephony/TelephonyManager;
+    invoke-virtual {v1}, Lct/bg;->a()Landroid/telephony/TelephonyManager;
 
     move-result-object v1
 
@@ -111,16 +111,9 @@
 
     goto :goto_0
 
-    .line 311
+    .line 313
     :catch_0
     move-exception v1
-
-    .line 313
-    const-string/jumbo v2, "TxCellProvider"
-
-    const-string/jumbo v3, "cannot get cell location"
-
-    invoke-static {v2, v3, v1}, Lct/b$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_1
 

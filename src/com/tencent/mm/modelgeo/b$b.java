@@ -1,26 +1,26 @@
 package com.tencent.mm.modelgeo;
 
-import com.tencent.mm.sdk.platformtools.am.a;
+import com.tencent.mm.sdk.platformtools.ap.a;
 
 final class b$b
-  implements am.a
+  implements ap.a
 {
-  private Addr bOh = null;
+  private Addr bHC = null;
   
   public b$b(b paramb) {}
   
-  public final boolean vd()
+  public final boolean vf()
   {
-    if ((bOh == null) || (bOh.bNN == null) || (bOh.bNN.equals(""))) {
-      bOh = b.b(abOi).lat, abOi).lng, b.b(bOi));
+    if ((bHC == null) || (bHC.bHj == null) || (bHC.bHj.equals(""))) {
+      bHC = b.b(abHD).lat, abHD).lng, b.b(bHD));
     }
     return true;
   }
   
-  public final boolean ve()
+  public final boolean vg()
   {
-    b.c(bOi);
-    b.a(bOi, bOh);
+    b.c(bHD);
+    b.a(bHD, bHC);
     return true;
   }
 }

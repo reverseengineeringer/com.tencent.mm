@@ -1,16 +1,16 @@
 package com.tencent.mm.ui.base;
 
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class s$3
-  extends aa
+  extends ac
 {
   s$3(o paramo) {}
   
   public final void handleMessage(Message paramMessage)
   {
-    kHO.dismiss();
+    lgQ.dismiss();
     super.handleMessage(paramMessage);
   }
 }

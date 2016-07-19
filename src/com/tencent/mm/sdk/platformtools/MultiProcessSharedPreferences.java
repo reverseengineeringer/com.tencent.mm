@@ -37,11 +37,11 @@ public class MultiProcessSharedPreferences
 {
   private static String AUTHORITY;
   private static volatile Uri AUTHORITY_URI;
-  private BroadcastReceiver cFt;
-  private boolean jWr;
-  private List jWs;
-  private UriMatcher jWt;
-  private Map jWu;
+  private BroadcastReceiver cCw;
+  private boolean kwN;
+  private List<SoftReference<SharedPreferences.OnSharedPreferenceChangeListener>> kwO;
+  private UriMatcher kwP;
+  private Map<String, Integer> kwQ;
   private Context mContext;
   private int mMode;
   private String mName;
@@ -53,19 +53,12 @@ public class MultiProcessSharedPreferences
     mContext = paramContext;
     mName = paramString;
     mMode = paramInt;
-    jWr = paramContext.getPackageManager().isSafeMode();
+    kwN = paramContext.getPackageManager().isSafeMode();
   }
   
-  private static String CV(String paramString)
+  private static String Fj(String paramString)
   {
     return String.format("%1$s_%2$s", new Object[] { MultiProcessSharedPreferences.class.getName(), paramString });
-  }
-  
-  private void aVg()
-  {
-    if (jWu == null) {
-      jWu = new HashMap();
-    }
   }
   
   private Object b(String paramString1, String paramString2, Object paramObject)
@@ -73,12 +66,12 @@ public class MultiProcessSharedPreferences
     Object localObject = null;
     Bundle localBundle = null;
     Uri localUri = null;
-    if (jWr)
+    if (kwN)
     {
       paramString2 = localUri;
       return paramString2;
     }
-    dp(mContext);
+    dq(mContext);
     localUri = Uri.withAppendedPath(Uri.withAppendedPath(AUTHORITY_URI, mName), paramString1);
     int i = mMode;
     if (paramObject == null) {}
@@ -105,14 +98,21 @@ public class MultiProcessSharedPreferences
     }
   }
   
-  private void dp(Context paramContext)
+  private void bap()
+  {
+    if (kwQ == null) {
+      kwQ = new HashMap();
+    }
+  }
+  
+  private void dq(Context paramContext)
   {
     if (AUTHORITY_URI == null) {
       try
       {
         if (AUTHORITY_URI == null)
         {
-          AUTHORITY = dq(paramContext);
+          AUTHORITY = dr(paramContext);
           AUTHORITY_URI = Uri.parse("content://" + AUTHORITY);
         }
         if (AUTHORITY == null) {
@@ -123,7 +123,7 @@ public class MultiProcessSharedPreferences
     }
   }
   
-  private static String dq(Context paramContext)
+  private static String dr(Context paramContext)
   {
     Object localObject2 = null;
     try
@@ -164,22 +164,22 @@ public class MultiProcessSharedPreferences
     }
   }
   
-  public static SharedPreferences getSharedPreferences(Context paramContext, String paramString, int paramInt)
-  {
-    return new MultiProcessSharedPreferences(paramContext, paramString, paramInt);
-  }
-  
-  private void h(String paramString, ArrayList paramArrayList)
+  private void g(String paramString, ArrayList<String> paramArrayList)
   {
     if ((paramArrayList != null) && (!paramArrayList.isEmpty()))
     {
       Intent localIntent = new Intent();
-      localIntent.setAction(CV(paramString));
+      localIntent.setAction(Fj(paramString));
       localIntent.setPackage(getContext().getPackageName());
       localIntent.putExtra("name", paramString);
       localIntent.putExtra("value", paramArrayList);
       getContext().sendBroadcast(localIntent);
     }
+  }
+  
+  public static SharedPreferences getSharedPreferences(Context paramContext, String paramString, int paramInt)
+  {
+    return new MultiProcessSharedPreferences(paramContext, paramString, paramInt);
   }
   
   public boolean contains(String paramString)
@@ -201,7 +201,7 @@ public class MultiProcessSharedPreferences
     return new b();
   }
   
-  public Map getAll()
+  public Map<String, ?> getAll()
   {
     return (Map)b("getAll", null, null);
   }
@@ -251,7 +251,7 @@ public class MultiProcessSharedPreferences
     return paramString2;
   }
   
-  public Set getStringSet(String paramString, Set paramSet)
+  public Set<String> getStringSet(String paramString, Set<String> paramSet)
   {
     for (;;)
     {
@@ -279,34 +279,34 @@ public class MultiProcessSharedPreferences
   
   public boolean onCreate()
   {
-    dp(getContext());
-    jWt = new UriMatcher(-1);
-    jWt.addURI(AUTHORITY, "*/getAll", 1);
-    jWt.addURI(AUTHORITY, "*/getString", 2);
-    jWt.addURI(AUTHORITY, "*/getInt", 3);
-    jWt.addURI(AUTHORITY, "*/getLong", 4);
-    jWt.addURI(AUTHORITY, "*/getFloat", 5);
-    jWt.addURI(AUTHORITY, "*/getBoolean", 6);
-    jWt.addURI(AUTHORITY, "*/contains", 7);
-    jWt.addURI(AUTHORITY, "*/apply", 8);
-    jWt.addURI(AUTHORITY, "*/commit", 9);
-    jWt.addURI(AUTHORITY, "*/registerOnSharedPreferenceChangeListener", 10);
-    jWt.addURI(AUTHORITY, "*/unregisterOnSharedPreferenceChangeListener", 11);
+    dq(getContext());
+    kwP = new UriMatcher(-1);
+    kwP.addURI(AUTHORITY, "*/getAll", 1);
+    kwP.addURI(AUTHORITY, "*/getString", 2);
+    kwP.addURI(AUTHORITY, "*/getInt", 3);
+    kwP.addURI(AUTHORITY, "*/getLong", 4);
+    kwP.addURI(AUTHORITY, "*/getFloat", 5);
+    kwP.addURI(AUTHORITY, "*/getBoolean", 6);
+    kwP.addURI(AUTHORITY, "*/contains", 7);
+    kwP.addURI(AUTHORITY, "*/apply", 8);
+    kwP.addURI(AUTHORITY, "*/commit", 9);
+    kwP.addURI(AUTHORITY, "*/registerOnSharedPreferenceChangeListener", 10);
+    kwP.addURI(AUTHORITY, "*/unregisterOnSharedPreferenceChangeListener", 11);
     return true;
   }
   
   public void onLowMemory()
   {
-    if (jWu != null) {
-      jWu.clear();
+    if (kwQ != null) {
+      kwQ.clear();
     }
     super.onLowMemory();
   }
   
   public void onTrimMemory(int paramInt)
   {
-    if (jWu != null) {
-      jWu.clear();
+    if (kwQ != null) {
+      kwQ.clear();
     }
     super.onTrimMemory(paramInt);
   }
@@ -323,7 +323,7 @@ public class MultiProcessSharedPreferences
     paramArrayOfString1 = new Bundle();
     label381:
     int j;
-    switch (jWt.match(paramUri))
+    switch (kwP.match(paramUri))
     {
     case 8: 
     case 9: 
@@ -353,14 +353,14 @@ public class MultiProcessSharedPreferences
         paramArrayOfString1.putBoolean("value", getContext().getSharedPreferences(paramString1, i).contains(paramString2));
       }
     case 10: 
-      aVg();
-      paramUri = (Integer)jWu.get(paramString1);
+      bap();
+      paramUri = (Integer)kwQ.get(paramString1);
       if (paramUri == null)
       {
         i = 0;
         j = i + 1;
-        jWu.put(paramString1, Integer.valueOf(j));
-        paramUri = (Integer)jWu.get(paramString1);
+        kwQ.put(paramString1, Integer.valueOf(j));
+        paramUri = (Integer)kwQ.get(paramString1);
         if (paramUri != null) {
           break label458;
         }
@@ -378,8 +378,8 @@ public class MultiProcessSharedPreferences
         break label381;
       }
     }
-    aVg();
-    paramUri = (Integer)jWu.get(paramString1);
+    bap();
+    paramUri = (Integer)kwQ.get(paramString1);
     if (paramUri == null)
     {
       i = 0;
@@ -388,8 +388,8 @@ public class MultiProcessSharedPreferences
       if (j > 0) {
         break label553;
       }
-      jWu.remove(paramString1);
-      if (jWu.containsKey(paramString1)) {
+      kwQ.remove(paramString1);
+      if (kwQ.containsKey(paramString1)) {
         break label547;
       }
     }
@@ -403,8 +403,8 @@ public class MultiProcessSharedPreferences
       bool1 = false;
     }
     label553:
-    jWu.put(paramString1, Integer.valueOf(j));
-    paramUri = (Integer)jWu.get(paramString1);
+    kwQ.put(paramString1, Integer.valueOf(j));
+    paramUri = (Integer)kwQ.get(paramString1);
     if (paramUri == null)
     {
       i = 0;
@@ -427,16 +427,16 @@ public class MultiProcessSharedPreferences
   {
     try
     {
-      if (jWs == null) {
-        jWs = new ArrayList();
+      if (kwO == null) {
+        kwO = new ArrayList();
       }
       Boolean localBoolean = (Boolean)b("registerOnSharedPreferenceChangeListener", null, Boolean.valueOf(false));
       if ((localBoolean != null) && (localBoolean.booleanValue()))
       {
-        jWs.add(new SoftReference(paramOnSharedPreferenceChangeListener));
-        if (cFt == null)
+        kwO.add(new SoftReference(paramOnSharedPreferenceChangeListener));
+        if (cCw == null)
         {
-          cFt = new BroadcastReceiver()
+          cCw = new BroadcastReceiver()
           {
             public final void onReceive(Context paramAnonymousContext, Intent paramAnonymousIntent)
             {
@@ -462,7 +462,7 @@ public class MultiProcessSharedPreferences
               }
             }
           };
-          mContext.registerReceiver(cFt, new IntentFilter(CV(mName)));
+          mContext.registerReceiver(cCw, new IntentFilter(Fj(mName)));
         }
       }
       return;
@@ -475,28 +475,28 @@ public class MultiProcessSharedPreferences
     try
     {
       b("unregisterOnSharedPreferenceChangeListener", null, Boolean.valueOf(false));
-      if (jWs == null) {
+      if (kwO == null) {
         break label133;
       }
-      Iterator localIterator = jWs.iterator();
+      Iterator localIterator = kwO.iterator();
       while (localIterator.hasNext())
       {
         SoftReference localSoftReference = (SoftReference)localIterator.next();
         SharedPreferences.OnSharedPreferenceChangeListener localOnSharedPreferenceChangeListener = (SharedPreferences.OnSharedPreferenceChangeListener)localSoftReference.get();
         if ((localOnSharedPreferenceChangeListener != null) && (localOnSharedPreferenceChangeListener.equals(paramOnSharedPreferenceChangeListener))) {
-          jWs.remove(localSoftReference);
+          kwO.remove(localSoftReference);
         }
       }
-      if (!jWs.isEmpty()) {
+      if (!kwO.isEmpty()) {
         break label133;
       }
     }
     finally {}
-    if (cFt != null)
+    if (cCw != null)
     {
-      mContext.unregisterReceiver(cFt);
-      cFt = null;
-      jWs = null;
+      mContext.unregisterReceiver(cCw);
+      cCw = null;
+      kwO = null;
     }
     label133:
   }
@@ -506,13 +506,13 @@ public class MultiProcessSharedPreferences
     String str1 = (String)paramUri.getPathSegments().get(0);
     int i = Integer.parseInt(paramArrayOfString[0]);
     Object localObject1 = getContext().getSharedPreferences(str1, i);
-    int j = jWt.match(paramUri);
+    int j = kwP.match(paramUri);
     switch (j)
     {
     default: 
       throw new IllegalArgumentException("This is Unknown Uri：" + paramUri);
     }
-    if ((jWu != null) && (jWu.get(str1) != null) && (((Integer)jWu.get(str1)).intValue() > 0))
+    if ((kwQ != null) && (kwQ.get(str1) != null) && (((Integer)kwQ.get(str1)).intValue() > 0))
     {
       i = 1;
       if (i == 0) {
@@ -596,7 +596,7 @@ public class MultiProcessSharedPreferences
           try
           {
             localObject1.getClass().getDeclaredMethod("apply", new Class[0]).invoke(localObject1, new Object[0]);
-            h(str1, paramString);
+            g(str1, paramString);
             i = 1;
           }
           catch (IllegalArgumentException paramUri)
@@ -616,7 +616,7 @@ public class MultiProcessSharedPreferences
             throw new RuntimeException(paramUri);
           }
         } while (!((SharedPreferences.Editor)localObject1).commit());
-        h(str1, paramString);
+        g(str1, paramString);
         i = 1;
       }
       label727:
@@ -628,31 +628,31 @@ public class MultiProcessSharedPreferences
   private static final class a
     extends MatrixCursor
   {
-    private Bundle jWw;
+    private Bundle kwS;
     
     public a(Bundle paramBundle)
     {
       super(0);
-      jWw = paramBundle;
+      kwS = paramBundle;
     }
     
     public final Bundle getExtras()
     {
-      return jWw;
+      return kwS;
     }
     
     public final Bundle respond(Bundle paramBundle)
     {
-      jWw = paramBundle;
-      return jWw;
+      kwS = paramBundle;
+      return kwS;
     }
   }
   
   public final class b
     implements SharedPreferences.Editor
   {
-    private final Map jWx = new HashMap();
-    private boolean jWy = false;
+    private final Map<String, Object> kwC = new HashMap();
+    private boolean kwD = false;
     
     public b() {}
     
@@ -661,47 +661,47 @@ public class MultiProcessSharedPreferences
     {
       // Byte code:
       //   0: aload_0
-      //   1: getfield 19	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:jWv	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
-      //   4: invokestatic 36	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:c	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Z
+      //   1: getfield 20	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:kwR	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+      //   4: invokestatic 37	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:c	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Z
       //   7: ifeq +5 -> 12
       //   10: iconst_0
       //   11: ireturn
       //   12: aload_0
-      //   13: getfield 19	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:jWv	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+      //   13: getfield 20	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:kwR	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
       //   16: astore 4
       //   18: aload 4
       //   20: monitorenter
       //   21: aload_0
-      //   22: getfield 19	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:jWv	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+      //   22: getfield 20	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:kwR	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
       //   25: aload_0
-      //   26: getfield 19	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:jWv	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
-      //   29: invokestatic 40	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:d	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Landroid/content/Context;
-      //   32: invokestatic 44	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:a	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;Landroid/content/Context;)V
+      //   26: getfield 20	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:kwR	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+      //   29: invokestatic 41	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:d	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Landroid/content/Context;
+      //   32: invokestatic 45	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:a	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;Landroid/content/Context;)V
       //   35: aload_0
-      //   36: getfield 19	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:jWv	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
-      //   39: invokestatic 48	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:e	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)I
+      //   36: getfield 20	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:kwR	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+      //   39: invokestatic 49	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:e	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)I
       //   42: istore_2
       //   43: aload_0
-      //   44: getfield 29	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:jWy	Z
+      //   44: getfield 30	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:kwD	Z
       //   47: istore_3
       //   48: aload_0
       //   49: monitorenter
-      //   50: invokestatic 52	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:aVh	()Landroid/net/Uri;
+      //   50: invokestatic 53	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:baq	()Landroid/net/Uri;
       //   53: aload_0
-      //   54: getfield 19	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:jWv	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
-      //   57: invokestatic 55	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:a	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Ljava/lang/String;
-      //   60: invokestatic 61	android/net/Uri:withAppendedPath	(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
+      //   54: getfield 20	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:kwR	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+      //   57: invokestatic 56	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:a	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Ljava/lang/String;
+      //   60: invokestatic 62	android/net/Uri:withAppendedPath	(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
       //   63: aload_1
-      //   64: invokestatic 61	android/net/Uri:withAppendedPath	(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
+      //   64: invokestatic 62	android/net/Uri:withAppendedPath	(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
       //   67: astore_1
       //   68: aload_0
-      //   69: getfield 27	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:jWx	Ljava/util/Map;
-      //   72: checkcast 24	java/util/HashMap
-      //   75: invokestatic 67	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$c:f	(Ljava/util/HashMap;)Landroid/content/ContentValues;
+      //   69: getfield 28	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:kwC	Ljava/util/Map;
+      //   72: checkcast 25	java/util/HashMap
+      //   75: invokestatic 67	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$c:d	(Ljava/util/HashMap;)Landroid/content/ContentValues;
       //   78: astore 5
       //   80: aload_0
-      //   81: getfield 19	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:jWv	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
-      //   84: invokestatic 40	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:d	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Landroid/content/Context;
+      //   81: getfield 20	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:kwR	Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+      //   84: invokestatic 41	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences:d	(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Landroid/content/Context;
       //   87: invokevirtual 73	android/content/Context:getContentResolver	()Landroid/content/ContentResolver;
       //   90: aload_1
       //   91: aload 5
@@ -769,7 +769,7 @@ public class MultiProcessSharedPreferences
     {
       try
       {
-        jWy = true;
+        kwD = true;
         return this;
       }
       finally {}
@@ -784,7 +784,7 @@ public class MultiProcessSharedPreferences
     {
       try
       {
-        jWx.put(paramString, Boolean.valueOf(paramBoolean));
+        kwC.put(paramString, Boolean.valueOf(paramBoolean));
         return this;
       }
       finally {}
@@ -794,7 +794,7 @@ public class MultiProcessSharedPreferences
     {
       try
       {
-        jWx.put(paramString, Float.valueOf(paramFloat));
+        kwC.put(paramString, Float.valueOf(paramFloat));
         return this;
       }
       finally {}
@@ -804,7 +804,7 @@ public class MultiProcessSharedPreferences
     {
       try
       {
-        jWx.put(paramString, Integer.valueOf(paramInt));
+        kwC.put(paramString, Integer.valueOf(paramInt));
         return this;
       }
       finally {}
@@ -814,7 +814,7 @@ public class MultiProcessSharedPreferences
     {
       try
       {
-        jWx.put(paramString, Long.valueOf(paramLong));
+        kwC.put(paramString, Long.valueOf(paramLong));
         return this;
       }
       finally {}
@@ -824,20 +824,20 @@ public class MultiProcessSharedPreferences
     {
       try
       {
-        jWx.put(paramString1, paramString2);
+        kwC.put(paramString1, paramString2);
         return this;
       }
       finally {}
     }
     
     /* Error */
-    public final SharedPreferences.Editor putStringSet(String paramString, Set paramSet)
+    public final SharedPreferences.Editor putStringSet(String paramString, Set<String> paramSet)
     {
       // Byte code:
       //   0: aload_0
       //   1: monitorenter
       //   2: aload_0
-      //   3: getfield 27	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:jWx	Ljava/util/Map;
+      //   3: getfield 28	com/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b:kwC	Ljava/util/Map;
       //   6: astore_3
       //   7: aload_2
       //   8: ifnonnull +18 -> 26
@@ -867,7 +867,7 @@ public class MultiProcessSharedPreferences
       //   start	length	slot	name	signature
       //   0	43	0	this	b
       //   0	43	1	paramString	String
-      //   0	43	2	paramSet	Set
+      //   0	43	2	paramSet	Set<String>
       //   6	8	3	localMap	Map
       // Exception table:
       //   from	to	target	type
@@ -881,7 +881,7 @@ public class MultiProcessSharedPreferences
     {
       try
       {
-        jWx.put(paramString, null);
+        kwC.put(paramString, null);
         return this;
       }
       finally {}
@@ -890,7 +890,7 @@ public class MultiProcessSharedPreferences
   
   private static final class c
   {
-    public static SharedPreferences.Editor a(SharedPreferences.Editor paramEditor, String paramString, Set paramSet)
+    public static SharedPreferences.Editor a(SharedPreferences.Editor paramEditor, String paramString, Set<String> paramSet)
     {
       try
       {
@@ -915,7 +915,7 @@ public class MultiProcessSharedPreferences
       }
     }
     
-    public static ContentValues f(HashMap paramHashMap)
+    public static ContentValues d(HashMap<String, Object> paramHashMap)
     {
       try
       {

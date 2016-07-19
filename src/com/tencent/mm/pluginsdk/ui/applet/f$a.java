@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.applet;
 
 public abstract interface f$a
 {
-  public abstract void ot(int paramInt);
+  public abstract void pZ(int paramInt);
 }
 
 /* Location:

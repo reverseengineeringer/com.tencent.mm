@@ -1,27 +1,26 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.and;
+import com.tencent.mm.protocal.b.afv;
 
 public final class w$a
-  extends h.c
-  implements h.a
+  extends k.c
+  implements k.a
 {
-  public and iVn = new and();
+  public afv jsG = new afv();
   
   public final int getCmdId()
   {
-    return 42;
+    return 121;
   }
   
-  public final byte[] tY()
+  public final byte[] tZ()
   {
-    iVn.jGS = h.a(this);
-    return iVn.toByteArray();
+    return jsG.toByteArray();
   }
   
-  public final int tZ()
+  public final int ua()
   {
-    return 131;
+    return 138;
   }
 }
 

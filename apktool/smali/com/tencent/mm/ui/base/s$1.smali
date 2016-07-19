@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/af$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ah$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kHN:Lcom/tencent/mm/ui/base/s;
+.field final synthetic lgP:Lcom/tencent/mm/ui/base/s;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 48
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/s$1;->kHN:Lcom/tencent/mm/ui/base/s;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/s$1;->lgP:Lcom/tencent/mm/ui/base/s;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,27 +36,27 @@
 
 
 # virtual methods
-.method public final lj()Z
-    .locals 5
+.method public final jK()Z
+    .locals 6
 
     .prologue
     const/4 v0, 0x1
 
     .line 52
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/s$1;->kHN:Lcom/tencent/mm/ui/base/s;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/s$1;->lgP:Lcom/tencent/mm/ui/base/s;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/base/s;->a(Lcom/tencent/mm/ui/base/s;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    const-wide/16 v3, -0x1
+    const-wide/16 v4, -0x1
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-nez v1, :cond_0
 
     .line 53
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/s$1;->kHN:Lcom/tencent/mm/ui/base/s;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/s$1;->lgP:Lcom/tencent/mm/ui/base/s;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/base/s;->show()V
 
@@ -66,12 +66,12 @@
 
     .line 56
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/s$1;->kHN:Lcom/tencent/mm/ui/base/s;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/s$1;->lgP:Lcom/tencent/mm/ui/base/s;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/base/s;->b(Lcom/tencent/mm/ui/base/s;)I
 
     .line 57
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/s$1;->kHN:Lcom/tencent/mm/ui/base/s;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/s$1;->lgP:Lcom/tencent/mm/ui/base/s;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/base/s;->c(Lcom/tencent/mm/ui/base/s;)I
 
@@ -80,7 +80,7 @@
     if-ltz v1, :cond_1
 
     .line 58
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/s$1;->kHN:Lcom/tencent/mm/ui/base/s;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/s$1;->lgP:Lcom/tencent/mm/ui/base/s;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/base/s;->show()V
 
@@ -88,7 +88,7 @@
 
     .line 61
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/s$1;->kHN:Lcom/tencent/mm/ui/base/s;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/s$1;->lgP:Lcom/tencent/mm/ui/base/s;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/s;->cancel()V
 

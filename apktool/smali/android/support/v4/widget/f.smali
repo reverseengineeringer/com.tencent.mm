@@ -12,53 +12,53 @@
 
 
 # static fields
-.field private static final fC:Landroid/view/animation/Interpolator;
+.field private static final fY:Landroid/view/animation/Interpolator;
 
 
 # instance fields
-.field eY:I
+.field fv:I
 
-.field private gd:I
+.field private gA:Landroid/view/VelocityTracker;
 
-.field private ge:Landroid/view/VelocityTracker;
+.field private gz:I
 
-.field iA:Landroid/view/View;
+.field public iC:I
 
-.field private iB:Z
+.field iD:[F
 
-.field private final iC:Landroid/view/ViewGroup;
+.field iE:[F
 
-.field private final iD:Ljava/lang/Runnable;
+.field iF:[F
 
-.field public ij:I
+.field iG:[F
 
-.field ik:[F
+.field public iH:[I
 
-.field il:[F
+.field private iI:[I
 
-.field im:[F
+.field private iJ:[I
 
-.field io:[F
+.field private iK:I
 
-.field public iq:[I
+.field public iL:F
 
-.field private ir:[I
+.field public iM:F
 
-.field private is:[I
+.field iN:I
 
-.field private it:I
+.field public iO:I
 
-.field public iu:F
+.field private iP:Landroid/support/v4/widget/e;
 
-.field public iv:F
+.field private final iQ:Landroid/support/v4/widget/f$a;
 
-.field iw:I
+.field iR:Landroid/view/View;
 
-.field public ix:I
+.field private iS:Z
 
-.field private iy:Landroid/support/v4/widget/e;
+.field private final iT:Landroid/view/ViewGroup;
 
-.field private final iz:Landroid/support/v4/widget/f$a;
+.field private final iU:Ljava/lang/Runnable;
 
 
 # direct methods
@@ -71,7 +71,7 @@
 
     invoke-direct {v0}, Landroid/support/v4/widget/f$1;-><init>()V
 
-    sput-object v0, Landroid/support/v4/widget/f;->fC:Landroid/view/animation/Interpolator;
+    sput-object v0, Landroid/support/v4/widget/f;->fY:Landroid/view/animation/Interpolator;
 
     return-void
 .end method
@@ -86,14 +86,14 @@
     .line 117
     const/4 v0, -0x1
 
-    iput v0, p0, Landroid/support/v4/widget/f;->gd:I
+    iput v0, p0, Landroid/support/v4/widget/f;->gz:I
 
     .line 335
     new-instance v0, Landroid/support/v4/widget/f$2;
 
     invoke-direct {v0, p0}, Landroid/support/v4/widget/f$2;-><init>(Landroid/support/v4/widget/f;)V
 
-    iput-object v0, p0, Landroid/support/v4/widget/f;->iD:Ljava/lang/Runnable;
+    iput-object v0, p0, Landroid/support/v4/widget/f;->iU:Ljava/lang/Runnable;
 
     .line 376
     if-nez p2, :cond_0
@@ -122,10 +122,10 @@
 
     .line 383
     :cond_1
-    iput-object p2, p0, Landroid/support/v4/widget/f;->iC:Landroid/view/ViewGroup;
+    iput-object p2, p0, Landroid/support/v4/widget/f;->iT:Landroid/view/ViewGroup;
 
     .line 384
-    iput-object p3, p0, Landroid/support/v4/widget/f;->iz:Landroid/support/v4/widget/f$a;
+    iput-object p3, p0, Landroid/support/v4/widget/f;->iQ:Landroid/support/v4/widget/f$a;
 
     .line 386
     invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
@@ -154,14 +154,14 @@
 
     float-to-int v1, v1
 
-    iput v1, p0, Landroid/support/v4/widget/f;->iw:I
+    iput v1, p0, Landroid/support/v4/widget/f;->iN:I
 
     .line 390
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
 
     move-result v1
 
-    iput v1, p0, Landroid/support/v4/widget/f;->eY:I
+    iput v1, p0, Landroid/support/v4/widget/f;->fv:I
 
     .line 391
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity()I
@@ -170,7 +170,7 @@
 
     int-to-float v1, v1
 
-    iput v1, p0, Landroid/support/v4/widget/f;->iu:F
+    iput v1, p0, Landroid/support/v4/widget/f;->iL:F
 
     .line 392
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledMinimumFlingVelocity()I
@@ -179,22 +179,672 @@
 
     int-to-float v0, v0
 
-    iput v0, p0, Landroid/support/v4/widget/f;->iv:F
+    iput v0, p0, Landroid/support/v4/widget/f;->iM:F
 
     .line 393
-    sget-object v0, Landroid/support/v4/widget/f;->fC:Landroid/view/animation/Interpolator;
+    sget-object v0, Landroid/support/v4/widget/f;->fY:Landroid/view/animation/Interpolator;
 
     invoke-static {p1, v0}, Landroid/support/v4/widget/e;->a(Landroid/content/Context;Landroid/view/animation/Interpolator;)Landroid/support/v4/widget/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v4/widget/f;->iy:Landroid/support/v4/widget/e;
+    iput-object v0, p0, Landroid/support/v4/widget/f;->iP:Landroid/support/v4/widget/e;
 
     .line 394
     return-void
 .end method
 
-.method private static a(FFF)F
+.method public static a(Landroid/view/ViewGroup;FLandroid/support/v4/widget/f$a;)Landroid/support/v4/widget/f;
+    .locals 3
+
+    .prologue
+    .line 362
+    invoke-static {p0, p2}, Landroid/support/v4/widget/f;->a(Landroid/view/ViewGroup;Landroid/support/v4/widget/f$a;)Landroid/support/v4/widget/f;
+
+    move-result-object v0
+
+    .line 363
+    iget v1, v0, Landroid/support/v4/widget/f;->fv:I
+
+    int-to-float v1, v1
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    div-float/2addr v2, p1
+
+    mul-float/2addr v1, v2
+
+    float-to-int v1, v1
+
+    iput v1, v0, Landroid/support/v4/widget/f;->fv:I
+
+    .line 364
+    return-object v0
+.end method
+
+.method public static a(Landroid/view/ViewGroup;Landroid/support/v4/widget/f$a;)Landroid/support/v4/widget/f;
+    .locals 2
+
+    .prologue
+    .line 349
+    new-instance v0, Landroid/support/v4/widget/f;
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1, p0, p1}, Landroid/support/v4/widget/f;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/support/v4/widget/f$a;)V
+
+    return-object v0
+.end method
+
+.method private a(FFI)V
+    .locals 11
+
+    .prologue
+    const/4 v1, 0x1
+
+    const/4 v0, 0x0
+
+    .line 844
+    iget-object v2, p0, Landroid/support/v4/widget/f;->iD:[F
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, p0, Landroid/support/v4/widget/f;->iD:[F
+
+    array-length v2, v2
+
+    if-gt v2, p3, :cond_2
+
+    :cond_0
+    add-int/lit8 v2, p3, 0x1
+
+    new-array v2, v2, [F
+
+    add-int/lit8 v3, p3, 0x1
+
+    new-array v3, v3, [F
+
+    add-int/lit8 v4, p3, 0x1
+
+    new-array v4, v4, [F
+
+    add-int/lit8 v5, p3, 0x1
+
+    new-array v5, v5, [F
+
+    add-int/lit8 v6, p3, 0x1
+
+    new-array v6, v6, [I
+
+    add-int/lit8 v7, p3, 0x1
+
+    new-array v7, v7, [I
+
+    add-int/lit8 v8, p3, 0x1
+
+    new-array v8, v8, [I
+
+    iget-object v9, p0, Landroid/support/v4/widget/f;->iD:[F
+
+    if-eqz v9, :cond_1
+
+    iget-object v9, p0, Landroid/support/v4/widget/f;->iD:[F
+
+    iget-object v10, p0, Landroid/support/v4/widget/f;->iD:[F
+
+    array-length v10, v10
+
+    invoke-static {v9, v0, v2, v0, v10}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget-object v9, p0, Landroid/support/v4/widget/f;->iE:[F
+
+    iget-object v10, p0, Landroid/support/v4/widget/f;->iE:[F
+
+    array-length v10, v10
+
+    invoke-static {v9, v0, v3, v0, v10}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget-object v9, p0, Landroid/support/v4/widget/f;->iF:[F
+
+    iget-object v10, p0, Landroid/support/v4/widget/f;->iF:[F
+
+    array-length v10, v10
+
+    invoke-static {v9, v0, v4, v0, v10}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget-object v9, p0, Landroid/support/v4/widget/f;->iG:[F
+
+    iget-object v10, p0, Landroid/support/v4/widget/f;->iG:[F
+
+    array-length v10, v10
+
+    invoke-static {v9, v0, v5, v0, v10}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget-object v9, p0, Landroid/support/v4/widget/f;->iH:[I
+
+    iget-object v10, p0, Landroid/support/v4/widget/f;->iH:[I
+
+    array-length v10, v10
+
+    invoke-static {v9, v0, v6, v0, v10}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget-object v9, p0, Landroid/support/v4/widget/f;->iI:[I
+
+    iget-object v10, p0, Landroid/support/v4/widget/f;->iI:[I
+
+    array-length v10, v10
+
+    invoke-static {v9, v0, v7, v0, v10}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget-object v9, p0, Landroid/support/v4/widget/f;->iJ:[I
+
+    iget-object v10, p0, Landroid/support/v4/widget/f;->iJ:[I
+
+    array-length v10, v10
+
+    invoke-static {v9, v0, v8, v0, v10}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_1
+    iput-object v2, p0, Landroid/support/v4/widget/f;->iD:[F
+
+    iput-object v3, p0, Landroid/support/v4/widget/f;->iE:[F
+
+    iput-object v4, p0, Landroid/support/v4/widget/f;->iF:[F
+
+    iput-object v5, p0, Landroid/support/v4/widget/f;->iG:[F
+
+    iput-object v6, p0, Landroid/support/v4/widget/f;->iH:[I
+
+    iput-object v7, p0, Landroid/support/v4/widget/f;->iI:[I
+
+    iput-object v8, p0, Landroid/support/v4/widget/f;->iJ:[I
+
+    .line 845
+    :cond_2
+    iget-object v2, p0, Landroid/support/v4/widget/f;->iD:[F
+
+    iget-object v3, p0, Landroid/support/v4/widget/f;->iF:[F
+
+    aput p1, v3, p3
+
+    aput p1, v2, p3
+
+    .line 846
+    iget-object v2, p0, Landroid/support/v4/widget/f;->iE:[F
+
+    iget-object v3, p0, Landroid/support/v4/widget/f;->iG:[F
+
+    aput p2, v3, p3
+
+    aput p2, v2, p3
+
+    .line 847
+    iget-object v2, p0, Landroid/support/v4/widget/f;->iH:[I
+
+    float-to-int v3, p1
+
+    float-to-int v4, p2
+
+    iget-object v5, p0, Landroid/support/v4/widget/f;->iT:Landroid/view/ViewGroup;
+
+    invoke-virtual {v5}, Landroid/view/ViewGroup;->getLeft()I
+
+    move-result v5
+
+    iget v6, p0, Landroid/support/v4/widget/f;->iN:I
+
+    add-int/2addr v5, v6
+
+    if-ge v3, v5, :cond_3
+
+    move v0, v1
+
+    :cond_3
+    iget-object v5, p0, Landroid/support/v4/widget/f;->iT:Landroid/view/ViewGroup;
+
+    invoke-virtual {v5}, Landroid/view/ViewGroup;->getTop()I
+
+    move-result v5
+
+    iget v6, p0, Landroid/support/v4/widget/f;->iN:I
+
+    add-int/2addr v5, v6
+
+    if-ge v4, v5, :cond_4
+
+    or-int/lit8 v0, v0, 0x4
+
+    :cond_4
+    iget-object v5, p0, Landroid/support/v4/widget/f;->iT:Landroid/view/ViewGroup;
+
+    invoke-virtual {v5}, Landroid/view/ViewGroup;->getRight()I
+
+    move-result v5
+
+    iget v6, p0, Landroid/support/v4/widget/f;->iN:I
+
+    sub-int/2addr v5, v6
+
+    if-le v3, v5, :cond_5
+
+    or-int/lit8 v0, v0, 0x2
+
+    :cond_5
+    iget-object v3, p0, Landroid/support/v4/widget/f;->iT:Landroid/view/ViewGroup;
+
+    invoke-virtual {v3}, Landroid/view/ViewGroup;->getBottom()I
+
+    move-result v3
+
+    iget v5, p0, Landroid/support/v4/widget/f;->iN:I
+
+    sub-int/2addr v3, v5
+
+    if-le v4, v3, :cond_6
+
+    or-int/lit8 v0, v0, 0x8
+
+    :cond_6
+    aput v0, v2, p3
+
+    .line 848
+    iget v0, p0, Landroid/support/v4/widget/f;->iK:I
+
+    shl-int/2addr v1, p3
+
+    or-int/2addr v0, v1
+
+    iput v0, p0, Landroid/support/v4/widget/f;->iK:I
+
+    .line 849
+    return-void
+.end method
+
+.method private a(FFII)Z
+    .locals 4
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 1234
+    invoke-static {p1}, Ljava/lang/Math;->abs(F)F
+
+    move-result v1
+
+    .line 1235
+    invoke-static {p2}, Ljava/lang/Math;->abs(F)F
+
+    move-result v2
+
+    .line 1237
+    iget-object v3, p0, Landroid/support/v4/widget/f;->iH:[I
+
+    aget v3, v3, p3
+
+    and-int/2addr v3, p4
+
+    if-ne v3, p4, :cond_0
+
+    iget v3, p0, Landroid/support/v4/widget/f;->iO:I
+
+    and-int/2addr v3, p4
+
+    if-eqz v3, :cond_0
+
+    iget-object v3, p0, Landroid/support/v4/widget/f;->iJ:[I
+
+    aget v3, v3, p3
+
+    and-int/2addr v3, p4
+
+    if-eq v3, p4, :cond_0
+
+    iget-object v3, p0, Landroid/support/v4/widget/f;->iI:[I
+
+    aget v3, v3, p3
+
+    and-int/2addr v3, p4
+
+    if-eq v3, p4, :cond_0
+
+    iget v3, p0, Landroid/support/v4/widget/f;->fv:I
+
+    int-to-float v3, v3
+
+    cmpg-float v3, v1, v3
+
+    if-gtz v3, :cond_1
+
+    iget v3, p0, Landroid/support/v4/widget/f;->fv:I
+
+    int-to-float v3, v3
+
+    cmpg-float v2, v2, v3
+
+    if-gtz v2, :cond_1
+
+    .line 1243
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    iget-object v2, p0, Landroid/support/v4/widget/f;->iI:[I
+
+    aget v2, v2, p3
+
+    and-int/2addr v2, p4
+
+    if-nez v2, :cond_0
+
+    iget v2, p0, Landroid/support/v4/widget/f;->fv:I
+
+    int-to-float v2, v2
+
+    cmpl-float v1, v1, v2
+
+    if-lez v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method
+
+.method private a(IIII)Z
+    .locals 14
+
+    .prologue
+    .line 591
+    iget-object v1, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
+
+    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
+
+    move-result v3
+
+    .line 592
+    iget-object v1, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
+
+    invoke-virtual {v1}, Landroid/view/View;->getTop()I
+
+    move-result v4
+
+    .line 593
+    sub-int v5, p1, v3
+
+    .line 594
+    sub-int v6, p2, v4
+
+    .line 596
+    if-nez v5, :cond_0
+
+    if-nez v6, :cond_0
+
+    .line 598
+    iget-object v1, p0, Landroid/support/v4/widget/f;->iP:Landroid/support/v4/widget/e;
+
+    invoke-virtual {v1}, Landroid/support/v4/widget/e;->abortAnimation()V
+
+    .line 599
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1}, Landroid/support/v4/widget/f;->B(I)V
+
+    .line 600
+    const/4 v1, 0x0
+
+    .line 609
+    :goto_0
+    return v1
+
+    .line 603
+    :cond_0
+    iget-object v7, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
+
+    iget v1, p0, Landroid/support/v4/widget/f;->iM:F
+
+    float-to-int v1, v1
+
+    iget v2, p0, Landroid/support/v4/widget/f;->iL:F
+
+    float-to-int v2, v2
+
+    move/from16 v0, p3
+
+    invoke-static {v0, v1, v2}, Landroid/support/v4/widget/f;->c(III)I
+
+    move-result v8
+
+    iget v1, p0, Landroid/support/v4/widget/f;->iM:F
+
+    float-to-int v1, v1
+
+    iget v2, p0, Landroid/support/v4/widget/f;->iL:F
+
+    float-to-int v2, v2
+
+    move/from16 v0, p4
+
+    invoke-static {v0, v1, v2}, Landroid/support/v4/widget/f;->c(III)I
+
+    move-result v9
+
+    invoke-static {v5}, Ljava/lang/Math;->abs(I)I
+
+    move-result v1
+
+    invoke-static {v6}, Ljava/lang/Math;->abs(I)I
+
+    move-result v10
+
+    invoke-static {v8}, Ljava/lang/Math;->abs(I)I
+
+    move-result v2
+
+    invoke-static {v9}, Ljava/lang/Math;->abs(I)I
+
+    move-result v11
+
+    add-int v12, v2, v11
+
+    add-int v13, v1, v10
+
+    if-eqz v8, :cond_1
+
+    int-to-float v1, v2
+
+    int-to-float v2, v12
+
+    div-float/2addr v1, v2
+
+    move v2, v1
+
+    :goto_1
+    if-eqz v9, :cond_2
+
+    int-to-float v1, v11
+
+    int-to-float v10, v12
+
+    div-float/2addr v1, v10
+
+    :goto_2
+    iget-object v10, p0, Landroid/support/v4/widget/f;->iQ:Landroid/support/v4/widget/f$a;
+
+    invoke-virtual {v10, v7}, Landroid/support/v4/widget/f$a;->y(Landroid/view/View;)I
+
+    move-result v7
+
+    invoke-direct {p0, v5, v8, v7}, Landroid/support/v4/widget/f;->b(III)I
+
+    move-result v7
+
+    const/4 v8, 0x0
+
+    invoke-direct {p0, v6, v9, v8}, Landroid/support/v4/widget/f;->b(III)I
+
+    move-result v8
+
+    int-to-float v7, v7
+
+    mul-float/2addr v2, v7
+
+    int-to-float v7, v8
+
+    mul-float/2addr v1, v7
+
+    add-float/2addr v1, v2
+
+    float-to-int v7, v1
+
+    .line 604
+    const-string/jumbo v1, "ViewDragHelper"
+
+    const-string/jumbo v2, "ashutest:: xvel %d, yvel %d, dx %d, dy %d duration %d"
+
+    const/4 v8, 0x5
+
+    new-array v8, v8, [Ljava/lang/Object;
+
+    const/4 v9, 0x0
+
+    invoke-static/range {p3 .. p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v10
+
+    aput-object v10, v8, v9
+
+    const/4 v9, 0x1
+
+    invoke-static/range {p4 .. p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v10
+
+    aput-object v10, v8, v9
+
+    const/4 v9, 0x2
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v10
+
+    aput-object v10, v8, v9
+
+    const/4 v9, 0x3
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v10
+
+    aput-object v10, v8, v9
+
+    const/4 v9, 0x4
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v10
+
+    aput-object v10, v8, v9
+
+    invoke-static {v1, v2, v8}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 606
+    iget-object v2, p0, Landroid/support/v4/widget/f;->iP:Landroid/support/v4/widget/e;
+
+    sget-object v1, Landroid/support/v4/widget/e;->ie:Landroid/support/v4/widget/e$a;
+
+    iget-object v2, v2, Landroid/support/v4/widget/e;->ic:Ljava/lang/Object;
+
+    invoke-interface/range {v1 .. v7}, Landroid/support/v4/widget/e$a;->a(Ljava/lang/Object;IIIII)V
+
+    .line 608
+    const/4 v1, 0x2
+
+    invoke-virtual {p0, v1}, Landroid/support/v4/widget/f;->B(I)V
+
+    .line 609
+    const/4 v1, 0x1
+
+    goto/16 :goto_0
+
+    .line 603
+    :cond_1
+    int-to-float v1, v1
+
+    int-to-float v2, v13
+
+    div-float/2addr v1, v2
+
+    move v2, v1
+
+    goto :goto_1
+
+    :cond_2
+    int-to-float v1, v10
+
+    int-to-float v10, v13
+
+    div-float/2addr v1, v10
+
+    goto :goto_2
+.end method
+
+.method private aH()V
+    .locals 4
+
+    .prologue
+    .line 1371
+    iget-object v0, p0, Landroid/support/v4/widget/f;->gA:Landroid/view/VelocityTracker;
+
+    const/16 v1, 0x3e8
+
+    iget v2, p0, Landroid/support/v4/widget/f;->iL:F
+
+    invoke-virtual {v0, v1, v2}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
+
+    .line 1372
+    iget-object v0, p0, Landroid/support/v4/widget/f;->gA:Landroid/view/VelocityTracker;
+
+    iget v1, p0, Landroid/support/v4/widget/f;->gz:I
+
+    invoke-static {v0, v1}, Landroid/support/v4/view/l;->a(Landroid/view/VelocityTracker;I)F
+
+    move-result v0
+
+    iget v1, p0, Landroid/support/v4/widget/f;->iM:F
+
+    iget v2, p0, Landroid/support/v4/widget/f;->iL:F
+
+    invoke-static {v0, v1, v2}, Landroid/support/v4/widget/f;->b(FFF)F
+
+    move-result v0
+
+    .line 1375
+    iget-object v1, p0, Landroid/support/v4/widget/f;->gA:Landroid/view/VelocityTracker;
+
+    iget v2, p0, Landroid/support/v4/widget/f;->gz:I
+
+    invoke-static {v1, v2}, Landroid/support/v4/view/l;->b(Landroid/view/VelocityTracker;I)F
+
+    move-result v1
+
+    iget v2, p0, Landroid/support/v4/widget/f;->iM:F
+
+    iget v3, p0, Landroid/support/v4/widget/f;->iL:F
+
+    invoke-static {v1, v2, v3}, Landroid/support/v4/widget/f;->b(FFF)F
+
+    move-result v1
+
+    .line 1378
+    invoke-direct {p0, v0, v1}, Landroid/support/v4/widget/f;->d(FF)V
+
+    .line 1379
+    return-void
+.end method
+
+.method private static b(FFF)F
     .locals 3
 
     .prologue
@@ -238,416 +888,136 @@
     goto :goto_0
 .end method
 
-.method public static a(Landroid/view/ViewGroup;FLandroid/support/v4/widget/f$a;)Landroid/support/v4/widget/f;
-    .locals 3
+.method private b(III)I
+    .locals 9
 
     .prologue
-    .line 362
-    invoke-static {p0, p2}, Landroid/support/v4/widget/f;->a(Landroid/view/ViewGroup;Landroid/support/v4/widget/f$a;)Landroid/support/v4/widget/f;
+    const/high16 v8, 0x3f800000    # 1.0f
 
-    move-result-object v0
+    .line 634
+    if-nez p1, :cond_0
 
-    .line 363
-    iget v1, v0, Landroid/support/v4/widget/f;->eY:I
-
-    int-to-float v1, v1
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    div-float/2addr v2, p1
-
-    mul-float/2addr v1, v2
-
-    float-to-int v1, v1
-
-    iput v1, v0, Landroid/support/v4/widget/f;->eY:I
-
-    .line 364
-    return-object v0
-.end method
-
-.method public static a(Landroid/view/ViewGroup;Landroid/support/v4/widget/f$a;)Landroid/support/v4/widget/f;
-    .locals 2
-
-    .prologue
-    .line 349
-    new-instance v0, Landroid/support/v4/widget/f;
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1, p0, p1}, Landroid/support/v4/widget/f;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/support/v4/widget/f$a;)V
-
-    return-object v0
-.end method
-
-.method private a(FFI)V
-    .locals 11
-
-    .prologue
-    const/4 v1, 0x1
-
+    .line 635
     const/4 v0, 0x0
 
-    .line 844
-    iget-object v2, p0, Landroid/support/v4/widget/f;->ik:[F
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, p0, Landroid/support/v4/widget/f;->ik:[F
-
-    array-length v2, v2
-
-    if-gt v2, p3, :cond_2
-
-    :cond_0
-    add-int/lit8 v2, p3, 0x1
-
-    new-array v2, v2, [F
-
-    add-int/lit8 v3, p3, 0x1
-
-    new-array v3, v3, [F
-
-    add-int/lit8 v4, p3, 0x1
-
-    new-array v4, v4, [F
-
-    add-int/lit8 v5, p3, 0x1
-
-    new-array v5, v5, [F
-
-    add-int/lit8 v6, p3, 0x1
-
-    new-array v6, v6, [I
-
-    add-int/lit8 v7, p3, 0x1
-
-    new-array v7, v7, [I
-
-    add-int/lit8 v8, p3, 0x1
-
-    new-array v8, v8, [I
-
-    iget-object v9, p0, Landroid/support/v4/widget/f;->ik:[F
-
-    if-eqz v9, :cond_1
-
-    iget-object v9, p0, Landroid/support/v4/widget/f;->ik:[F
-
-    iget-object v10, p0, Landroid/support/v4/widget/f;->ik:[F
-
-    array-length v10, v10
-
-    invoke-static {v9, v0, v2, v0, v10}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget-object v9, p0, Landroid/support/v4/widget/f;->il:[F
-
-    iget-object v10, p0, Landroid/support/v4/widget/f;->il:[F
-
-    array-length v10, v10
-
-    invoke-static {v9, v0, v3, v0, v10}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget-object v9, p0, Landroid/support/v4/widget/f;->im:[F
-
-    iget-object v10, p0, Landroid/support/v4/widget/f;->im:[F
-
-    array-length v10, v10
-
-    invoke-static {v9, v0, v4, v0, v10}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget-object v9, p0, Landroid/support/v4/widget/f;->io:[F
-
-    iget-object v10, p0, Landroid/support/v4/widget/f;->io:[F
-
-    array-length v10, v10
-
-    invoke-static {v9, v0, v5, v0, v10}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget-object v9, p0, Landroid/support/v4/widget/f;->iq:[I
-
-    iget-object v10, p0, Landroid/support/v4/widget/f;->iq:[I
-
-    array-length v10, v10
-
-    invoke-static {v9, v0, v6, v0, v10}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget-object v9, p0, Landroid/support/v4/widget/f;->ir:[I
-
-    iget-object v10, p0, Landroid/support/v4/widget/f;->ir:[I
-
-    array-length v10, v10
-
-    invoke-static {v9, v0, v7, v0, v10}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget-object v9, p0, Landroid/support/v4/widget/f;->is:[I
-
-    iget-object v10, p0, Landroid/support/v4/widget/f;->is:[I
-
-    array-length v10, v10
-
-    invoke-static {v9, v0, v8, v0, v10}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :cond_1
-    iput-object v2, p0, Landroid/support/v4/widget/f;->ik:[F
-
-    iput-object v3, p0, Landroid/support/v4/widget/f;->il:[F
-
-    iput-object v4, p0, Landroid/support/v4/widget/f;->im:[F
-
-    iput-object v5, p0, Landroid/support/v4/widget/f;->io:[F
-
-    iput-object v6, p0, Landroid/support/v4/widget/f;->iq:[I
-
-    iput-object v7, p0, Landroid/support/v4/widget/f;->ir:[I
-
-    iput-object v8, p0, Landroid/support/v4/widget/f;->is:[I
-
-    .line 845
-    :cond_2
-    iget-object v2, p0, Landroid/support/v4/widget/f;->ik:[F
-
-    iget-object v3, p0, Landroid/support/v4/widget/f;->im:[F
-
-    aput p1, v3, p3
-
-    aput p1, v2, p3
-
-    .line 846
-    iget-object v2, p0, Landroid/support/v4/widget/f;->il:[F
-
-    iget-object v3, p0, Landroid/support/v4/widget/f;->io:[F
-
-    aput p2, v3, p3
-
-    aput p2, v2, p3
-
-    .line 847
-    iget-object v2, p0, Landroid/support/v4/widget/f;->iq:[I
-
-    float-to-int v3, p1
-
-    float-to-int v4, p2
-
-    iget-object v5, p0, Landroid/support/v4/widget/f;->iC:Landroid/view/ViewGroup;
-
-    invoke-virtual {v5}, Landroid/view/ViewGroup;->getLeft()I
-
-    move-result v5
-
-    iget v6, p0, Landroid/support/v4/widget/f;->iw:I
-
-    add-int/2addr v5, v6
-
-    if-ge v3, v5, :cond_3
-
-    move v0, v1
-
-    :cond_3
-    iget-object v5, p0, Landroid/support/v4/widget/f;->iC:Landroid/view/ViewGroup;
-
-    invoke-virtual {v5}, Landroid/view/ViewGroup;->getTop()I
-
-    move-result v5
-
-    iget v6, p0, Landroid/support/v4/widget/f;->iw:I
-
-    add-int/2addr v5, v6
-
-    if-ge v4, v5, :cond_4
-
-    or-int/lit8 v0, v0, 0x4
-
-    :cond_4
-    iget-object v5, p0, Landroid/support/v4/widget/f;->iC:Landroid/view/ViewGroup;
-
-    invoke-virtual {v5}, Landroid/view/ViewGroup;->getRight()I
-
-    move-result v5
-
-    iget v6, p0, Landroid/support/v4/widget/f;->iw:I
-
-    sub-int/2addr v5, v6
-
-    if-le v3, v5, :cond_5
-
-    or-int/lit8 v0, v0, 0x2
-
-    :cond_5
-    iget-object v3, p0, Landroid/support/v4/widget/f;->iC:Landroid/view/ViewGroup;
-
-    invoke-virtual {v3}, Landroid/view/ViewGroup;->getBottom()I
-
-    move-result v3
-
-    iget v5, p0, Landroid/support/v4/widget/f;->iw:I
-
-    sub-int/2addr v3, v5
-
-    if-le v4, v3, :cond_6
-
-    or-int/lit8 v0, v0, 0x8
-
-    :cond_6
-    aput v0, v2, p3
-
-    .line 848
-    iget v0, p0, Landroid/support/v4/widget/f;->it:I
-
-    shl-int/2addr v1, p3
-
-    or-int/2addr v0, v1
-
-    iput v0, p0, Landroid/support/v4/widget/f;->it:I
-
-    .line 849
-    return-void
-.end method
-
-.method private a(FFII)Z
-    .locals 4
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 1234
-    invoke-static {p1}, Ljava/lang/Math;->abs(F)F
-
-    move-result v1
-
-    .line 1235
-    invoke-static {p2}, Ljava/lang/Math;->abs(F)F
-
-    move-result v2
-
-    .line 1237
-    iget-object v3, p0, Landroid/support/v4/widget/f;->iq:[I
-
-    aget v3, v3, p3
-
-    and-int/2addr v3, p4
-
-    if-ne v3, p4, :cond_0
-
-    iget v3, p0, Landroid/support/v4/widget/f;->ix:I
-
-    and-int/2addr v3, p4
-
-    if-eqz v3, :cond_0
-
-    iget-object v3, p0, Landroid/support/v4/widget/f;->is:[I
-
-    aget v3, v3, p3
-
-    and-int/2addr v3, p4
-
-    if-eq v3, p4, :cond_0
-
-    iget-object v3, p0, Landroid/support/v4/widget/f;->ir:[I
-
-    aget v3, v3, p3
-
-    and-int/2addr v3, p4
-
-    if-eq v3, p4, :cond_0
-
-    iget v3, p0, Landroid/support/v4/widget/f;->eY:I
-
-    int-to-float v3, v3
-
-    cmpg-float v3, v1, v3
-
-    if-gtz v3, :cond_1
-
-    iget v3, p0, Landroid/support/v4/widget/f;->eY:I
-
-    int-to-float v3, v3
-
-    cmpg-float v2, v2, v3
-
-    if-gtz v2, :cond_1
-
-    .line 1243
-    :cond_0
+    .line 652
     :goto_0
     return v0
 
-    :cond_1
-    iget-object v2, p0, Landroid/support/v4/widget/f;->ir:[I
+    .line 638
+    :cond_0
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iT:Landroid/view/ViewGroup;
 
-    aget v2, v2, p3
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getWidth()I
 
-    and-int/2addr v2, p4
+    move-result v0
 
-    if-nez v2, :cond_0
+    .line 639
+    div-int/lit8 v1, v0, 0x2
 
-    iget v2, p0, Landroid/support/v4/widget/f;->eY:I
+    .line 640
+    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
+
+    move-result v2
 
     int-to-float v2, v2
 
-    cmpl-float v1, v1, v2
+    int-to-float v0, v0
 
-    if-lez v1, :cond_0
+    div-float v0, v2, v0
 
-    const/4 v0, 0x1
+    invoke-static {v8, v0}, Ljava/lang/Math;->min(FF)F
+
+    move-result v0
+
+    .line 641
+    int-to-float v2, v1
+
+    int-to-float v1, v1
+
+    const/high16 v3, 0x3f000000    # 0.5f
+
+    sub-float/2addr v0, v3
+
+    float-to-double v4, v0
+
+    const-wide v6, 0x3fde28c7460698c7L    # 0.4712389167638204
+
+    mul-double/2addr v4, v6
+
+    double-to-float v0, v4
+
+    float-to-double v4, v0
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v4
+
+    double-to-float v0, v4
+
+    mul-float/2addr v0, v1
+
+    add-float/2addr v0, v2
+
+    .line 645
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
+
+    move-result v1
+
+    .line 646
+    if-lez v1, :cond_1
+
+    .line 647
+    const/high16 v2, 0x447a0000    # 1000.0f
+
+    int-to-float v1, v1
+
+    div-float/2addr v0, v1
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    mul-float/2addr v0, v2
+
+    invoke-static {v0}, Ljava/lang/Math;->round(F)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x4
+
+    .line 652
+    :goto_1
+    const/16 v1, 0x258
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
 
     goto :goto_0
-.end method
 
-.method private aI()V
-    .locals 4
-
-    .prologue
-    .line 1371
-    iget-object v0, p0, Landroid/support/v4/widget/f;->ge:Landroid/view/VelocityTracker;
-
-    const/16 v1, 0x3e8
-
-    iget v2, p0, Landroid/support/v4/widget/f;->iu:F
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
-
-    .line 1372
-    iget-object v0, p0, Landroid/support/v4/widget/f;->ge:Landroid/view/VelocityTracker;
-
-    iget v1, p0, Landroid/support/v4/widget/f;->gd:I
-
-    invoke-static {v0, v1}, Landroid/support/v4/view/l;->a(Landroid/view/VelocityTracker;I)F
+    .line 649
+    :cond_1
+    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
     move-result v0
 
-    iget v1, p0, Landroid/support/v4/widget/f;->iv:F
+    int-to-float v0, v0
 
-    iget v2, p0, Landroid/support/v4/widget/f;->iu:F
+    int-to-float v1, p3
 
-    invoke-static {v0, v1, v2}, Landroid/support/v4/widget/f;->a(FFF)F
+    div-float/2addr v0, v1
 
-    move-result v0
+    .line 650
+    add-float/2addr v0, v8
 
-    .line 1375
-    iget-object v1, p0, Landroid/support/v4/widget/f;->ge:Landroid/view/VelocityTracker;
+    const/high16 v1, 0x43800000    # 256.0f
 
-    iget v2, p0, Landroid/support/v4/widget/f;->gd:I
+    mul-float/2addr v0, v1
 
-    invoke-static {v1, v2}, Landroid/support/v4/view/l;->b(Landroid/view/VelocityTracker;I)F
+    float-to-int v0, v0
 
-    move-result v1
-
-    iget v2, p0, Landroid/support/v4/widget/f;->iv:F
-
-    iget v3, p0, Landroid/support/v4/widget/f;->iu:F
-
-    invoke-static {v1, v2, v3}, Landroid/support/v4/widget/f;->a(FFF)F
-
-    move-result v1
-
-    .line 1378
-    invoke-direct {p0, v0, v1}, Landroid/support/v4/widget/f;->d(FF)V
-
-    .line 1379
-    return-void
+    goto :goto_1
 .end method
 
 .method private b(FFI)V
@@ -710,7 +1080,7 @@
     if-eqz v0, :cond_3
 
     .line 1228
-    iget-object v1, p0, Landroid/support/v4/widget/f;->ir:[I
+    iget-object v1, p0, Landroid/support/v4/widget/f;->iI:[I
 
     aget v2, v1, p3
 
@@ -719,9 +1089,9 @@
     aput v2, v1, p3
 
     .line 1229
-    iget-object v1, p0, Landroid/support/v4/widget/f;->iz:Landroid/support/v4/widget/f$a;
+    iget-object v1, p0, Landroid/support/v4/widget/f;->iQ:Landroid/support/v4/widget/f$a;
 
-    invoke-virtual {v1, v0, p3}, Landroid/support/v4/widget/f$a;->h(II)V
+    invoke-virtual {v1, v0, p3}, Landroid/support/v4/widget/f$a;->f(II)V
 
     .line 1231
     :cond_3
@@ -731,244 +1101,6 @@
     move v0, v1
 
     goto :goto_0
-.end method
-
-.method private b(IIII)Z
-    .locals 14
-
-    .prologue
-    .line 591
-    iget-object v1, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
-
-    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
-
-    move-result v3
-
-    .line 592
-    iget-object v1, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
-
-    invoke-virtual {v1}, Landroid/view/View;->getTop()I
-
-    move-result v4
-
-    .line 593
-    sub-int v5, p1, v3
-
-    .line 594
-    sub-int v6, p2, v4
-
-    .line 596
-    if-nez v5, :cond_0
-
-    if-nez v6, :cond_0
-
-    .line 598
-    iget-object v1, p0, Landroid/support/v4/widget/f;->iy:Landroid/support/v4/widget/e;
-
-    invoke-virtual {v1}, Landroid/support/v4/widget/e;->abortAnimation()V
-
-    .line 599
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v1}, Landroid/support/v4/widget/f;->w(I)V
-
-    .line 600
-    const/4 v1, 0x0
-
-    .line 609
-    :goto_0
-    return v1
-
-    .line 603
-    :cond_0
-    iget-object v7, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
-
-    iget v1, p0, Landroid/support/v4/widget/f;->iv:F
-
-    float-to-int v1, v1
-
-    iget v2, p0, Landroid/support/v4/widget/f;->iu:F
-
-    float-to-int v2, v2
-
-    move/from16 v0, p3
-
-    invoke-static {v0, v1, v2}, Landroid/support/v4/widget/f;->e(III)I
-
-    move-result v8
-
-    iget v1, p0, Landroid/support/v4/widget/f;->iv:F
-
-    float-to-int v1, v1
-
-    iget v2, p0, Landroid/support/v4/widget/f;->iu:F
-
-    float-to-int v2, v2
-
-    move/from16 v0, p4
-
-    invoke-static {v0, v1, v2}, Landroid/support/v4/widget/f;->e(III)I
-
-    move-result v9
-
-    invoke-static {v5}, Ljava/lang/Math;->abs(I)I
-
-    move-result v1
-
-    invoke-static {v6}, Ljava/lang/Math;->abs(I)I
-
-    move-result v10
-
-    invoke-static {v8}, Ljava/lang/Math;->abs(I)I
-
-    move-result v2
-
-    invoke-static {v9}, Ljava/lang/Math;->abs(I)I
-
-    move-result v11
-
-    add-int v12, v2, v11
-
-    add-int v13, v1, v10
-
-    if-eqz v8, :cond_1
-
-    int-to-float v1, v2
-
-    int-to-float v2, v12
-
-    div-float/2addr v1, v2
-
-    move v2, v1
-
-    :goto_1
-    if-eqz v9, :cond_2
-
-    int-to-float v1, v11
-
-    int-to-float v10, v12
-
-    div-float/2addr v1, v10
-
-    :goto_2
-    iget-object v10, p0, Landroid/support/v4/widget/f;->iz:Landroid/support/v4/widget/f$a;
-
-    invoke-virtual {v10, v7}, Landroid/support/v4/widget/f$a;->y(Landroid/view/View;)I
-
-    move-result v7
-
-    invoke-direct {p0, v5, v8, v7}, Landroid/support/v4/widget/f;->d(III)I
-
-    move-result v7
-
-    const/4 v8, 0x0
-
-    invoke-direct {p0, v6, v9, v8}, Landroid/support/v4/widget/f;->d(III)I
-
-    move-result v8
-
-    int-to-float v7, v7
-
-    mul-float/2addr v2, v7
-
-    int-to-float v7, v8
-
-    mul-float/2addr v1, v7
-
-    add-float/2addr v1, v2
-
-    float-to-int v7, v1
-
-    .line 604
-    const-string/jumbo v1, "!24@n19rX+We8P78qr7fNzDksg=="
-
-    const-string/jumbo v2, "ashutest:: xvel %d, yvel %d, dx %d, dy %d duration %d"
-
-    const/4 v8, 0x5
-
-    new-array v8, v8, [Ljava/lang/Object;
-
-    const/4 v9, 0x0
-
-    invoke-static/range {p3 .. p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v10
-
-    aput-object v10, v8, v9
-
-    const/4 v9, 0x1
-
-    invoke-static/range {p4 .. p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v10
-
-    aput-object v10, v8, v9
-
-    const/4 v9, 0x2
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v10
-
-    aput-object v10, v8, v9
-
-    const/4 v9, 0x3
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v10
-
-    aput-object v10, v8, v9
-
-    const/4 v9, 0x4
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v10
-
-    aput-object v10, v8, v9
-
-    invoke-static {v1, v2, v8}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 606
-    iget-object v2, p0, Landroid/support/v4/widget/f;->iy:Landroid/support/v4/widget/e;
-
-    sget-object v1, Landroid/support/v4/widget/e;->hK:Landroid/support/v4/widget/e$a;
-
-    iget-object v2, v2, Landroid/support/v4/widget/e;->hJ:Ljava/lang/Object;
-
-    invoke-interface/range {v1 .. v7}, Landroid/support/v4/widget/e$a;->a(Ljava/lang/Object;IIIII)V
-
-    .line 608
-    const/4 v1, 0x2
-
-    invoke-virtual {p0, v1}, Landroid/support/v4/widget/f;->w(I)V
-
-    .line 609
-    const/4 v1, 0x1
-
-    goto/16 :goto_0
-
-    .line 603
-    :cond_1
-    int-to-float v1, v1
-
-    int-to-float v2, v13
-
-    div-float/2addr v1, v2
-
-    move v2, v1
-
-    goto :goto_1
-
-    :cond_2
-    int-to-float v1, v10
-
-    int-to-float v10, v13
-
-    div-float/2addr v1, v10
-
-    goto :goto_2
 .end method
 
 .method private b(Landroid/view/View;F)Z
@@ -989,7 +1121,7 @@
 
     .line 1264
     :cond_1
-    iget-object v2, p0, Landroid/support/v4/widget/f;->iz:Landroid/support/v4/widget/f$a;
+    iget-object v2, p0, Landroid/support/v4/widget/f;->iQ:Landroid/support/v4/widget/f$a;
 
     invoke-virtual {v2, p1}, Landroid/support/v4/widget/f$a;->y(Landroid/view/View;)I
 
@@ -1008,7 +1140,7 @@
 
     move-result v2
 
-    iget v3, p0, Landroid/support/v4/widget/f;->eY:I
+    iget v3, p0, Landroid/support/v4/widget/f;->fv:I
 
     int-to-float v3, v3
 
@@ -1025,6 +1157,42 @@
 
     .line 1264
     goto :goto_1
+.end method
+
+.method private static c(III)I
+    .locals 1
+
+    .prologue
+    .line 666
+    invoke-static {p0}, Ljava/lang/Math;->abs(I)I
+
+    move-result v0
+
+    .line 667
+    if-ge v0, p1, :cond_1
+
+    const/4 p2, 0x0
+
+    .line 669
+    :cond_0
+    :goto_0
+    return p2
+
+    .line 668
+    :cond_1
+    if-le v0, p2, :cond_2
+
+    if-gtz p0, :cond_0
+
+    neg-int p2, p2
+
+    goto :goto_0
+
+    :cond_2
+    move p2, p0
+
+    .line 669
+    goto :goto_0
 .end method
 
 .method public static c(Landroid/view/View;II)Z
@@ -1071,138 +1239,6 @@
     goto :goto_0
 .end method
 
-.method private d(III)I
-    .locals 8
-
-    .prologue
-    const/high16 v7, 0x3f800000    # 1.0f
-
-    .line 634
-    if-nez p1, :cond_0
-
-    .line 635
-    const/4 v0, 0x0
-
-    .line 652
-    :goto_0
-    return v0
-
-    .line 638
-    :cond_0
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iC:Landroid/view/ViewGroup;
-
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getWidth()I
-
-    move-result v0
-
-    .line 639
-    div-int/lit8 v1, v0, 0x2
-
-    .line 640
-    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    int-to-float v0, v0
-
-    div-float v0, v2, v0
-
-    invoke-static {v7, v0}, Ljava/lang/Math;->min(FF)F
-
-    move-result v0
-
-    .line 641
-    int-to-float v2, v1
-
-    int-to-float v1, v1
-
-    const/high16 v3, 0x3f000000    # 0.5f
-
-    sub-float/2addr v0, v3
-
-    float-to-double v3, v0
-
-    const-wide v5, 0x3fde28c7460698c7L    # 0.4712389167638204
-
-    mul-double/2addr v3, v5
-
-    double-to-float v0, v3
-
-    float-to-double v3, v0
-
-    invoke-static {v3, v4}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v3
-
-    double-to-float v0, v3
-
-    mul-float/2addr v0, v1
-
-    add-float/2addr v0, v2
-
-    .line 645
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result v1
-
-    .line 646
-    if-lez v1, :cond_1
-
-    .line 647
-    const/high16 v2, 0x447a0000    # 1000.0f
-
-    int-to-float v1, v1
-
-    div-float/2addr v0, v1
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
-
-    move-result v0
-
-    mul-float/2addr v0, v2
-
-    invoke-static {v0}, Ljava/lang/Math;->round(F)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x4
-
-    .line 652
-    :goto_1
-    const/16 v1, 0x258
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    goto :goto_0
-
-    .line 649
-    :cond_1
-    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    int-to-float v1, p3
-
-    div-float/2addr v0, v1
-
-    .line 650
-    add-float/2addr v0, v7
-
-    const/high16 v1, 0x43800000    # 256.0f
-
-    mul-float/2addr v0, v1
-
-    float-to-int v0, v0
-
-    goto :goto_1
-.end method
-
 .method private d(FF)V
     .locals 4
 
@@ -1212,65 +1248,29 @@
     const/4 v2, 0x0
 
     .line 775
-    iput-boolean v3, p0, Landroid/support/v4/widget/f;->iB:Z
+    iput-boolean v3, p0, Landroid/support/v4/widget/f;->iS:Z
 
     .line 776
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iz:Landroid/support/v4/widget/f$a;
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iQ:Landroid/support/v4/widget/f$a;
 
-    iget-object v1, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v1, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     invoke-virtual {v0, v1, p1, p2}, Landroid/support/v4/widget/f$a;->a(Landroid/view/View;FF)V
 
     .line 777
-    iput-boolean v2, p0, Landroid/support/v4/widget/f;->iB:Z
+    iput-boolean v2, p0, Landroid/support/v4/widget/f;->iS:Z
 
     .line 779
-    iget v0, p0, Landroid/support/v4/widget/f;->ij:I
+    iget v0, p0, Landroid/support/v4/widget/f;->iC:I
 
     if-ne v0, v3, :cond_0
 
     .line 781
-    invoke-virtual {p0, v2}, Landroid/support/v4/widget/f;->w(I)V
+    invoke-virtual {p0, v2}, Landroid/support/v4/widget/f;->B(I)V
 
     .line 783
     :cond_0
     return-void
-.end method
-
-.method private static e(III)I
-    .locals 1
-
-    .prologue
-    .line 666
-    invoke-static {p0}, Ljava/lang/Math;->abs(I)I
-
-    move-result v0
-
-    .line 667
-    if-ge v0, p1, :cond_1
-
-    const/4 p2, 0x0
-
-    .line 669
-    :cond_0
-    :goto_0
-    return p2
-
-    .line 668
-    :cond_1
-    if-le v0, p2, :cond_2
-
-    if-gtz p0, :cond_0
-
-    neg-int p2, p2
-
-    goto :goto_0
-
-    :cond_2
-    move p2, p0
-
-    .line 669
-    goto :goto_0
 .end method
 
 .method private g(Landroid/view/View;I)Z
@@ -1280,11 +1280,11 @@
     const/4 v0, 0x1
 
     .line 899
-    iget-object v1, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v1, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     if-ne p1, v1, :cond_0
 
-    iget v1, p0, Landroid/support/v4/widget/f;->gd:I
+    iget v1, p0, Landroid/support/v4/widget/f;->gz:I
 
     if-ne v1, p2, :cond_0
 
@@ -1296,7 +1296,7 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    iget-object v1, p0, Landroid/support/v4/widget/f;->iz:Landroid/support/v4/widget/f$a;
+    iget-object v1, p0, Landroid/support/v4/widget/f;->iQ:Landroid/support/v4/widget/f$a;
 
     invoke-virtual {v1, p1, p2}, Landroid/support/v4/widget/f$a;->d(Landroid/view/View;I)Z
 
@@ -1305,7 +1305,7 @@
     if-eqz v1, :cond_1
 
     .line 904
-    iput p2, p0, Landroid/support/v4/widget/f;->gd:I
+    iput p2, p0, Landroid/support/v4/widget/f;->gz:I
 
     .line 905
     invoke-virtual {p0, p1, p2}, Landroid/support/v4/widget/f;->f(Landroid/view/View;I)V
@@ -1350,12 +1350,12 @@
     move-result v4
 
     .line 857
-    iget-object v5, p0, Landroid/support/v4/widget/f;->im:[F
+    iget-object v5, p0, Landroid/support/v4/widget/f;->iF:[F
 
     aput v3, v5, v2
 
     .line 858
-    iget-object v3, p0, Landroid/support/v4/widget/f;->io:[F
+    iget-object v3, p0, Landroid/support/v4/widget/f;->iG:[F
 
     aput v4, v3, v2
 
@@ -1369,7 +1369,7 @@
     return-void
 .end method
 
-.method private u(I)V
+.method private z(I)V
     .locals 3
 
     .prologue
@@ -1378,7 +1378,7 @@
     const/4 v1, 0x0
 
     .line 800
-    iget-object v0, p0, Landroid/support/v4/widget/f;->ik:[F
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iD:[F
 
     if-nez v0, :cond_0
 
@@ -1388,42 +1388,42 @@
 
     .line 803
     :cond_0
-    iget-object v0, p0, Landroid/support/v4/widget/f;->ik:[F
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iD:[F
 
     aput v1, v0, p1
 
     .line 804
-    iget-object v0, p0, Landroid/support/v4/widget/f;->il:[F
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iE:[F
 
     aput v1, v0, p1
 
     .line 805
-    iget-object v0, p0, Landroid/support/v4/widget/f;->im:[F
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iF:[F
 
     aput v1, v0, p1
 
     .line 806
-    iget-object v0, p0, Landroid/support/v4/widget/f;->io:[F
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iG:[F
 
     aput v1, v0, p1
 
     .line 807
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iq:[I
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iH:[I
 
     aput v2, v0, p1
 
     .line 808
-    iget-object v0, p0, Landroid/support/v4/widget/f;->ir:[I
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iI:[I
 
     aput v2, v0, p1
 
     .line 809
-    iget-object v0, p0, Landroid/support/v4/widget/f;->is:[I
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iJ:[I
 
     aput v2, v0, p1
 
     .line 810
-    iget v0, p0, Landroid/support/v4/widget/f;->it:I
+    iget v0, p0, Landroid/support/v4/widget/f;->iK:I
 
     const/4 v1, 0x1
 
@@ -1433,51 +1433,105 @@
 
     and-int/2addr v0, v1
 
-    iput v0, p0, Landroid/support/v4/widget/f;->it:I
+    iput v0, p0, Landroid/support/v4/widget/f;->iK:I
 
     goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final aH()Z
+.method public final A(I)Z
+    .locals 3
+
+    .prologue
+    const/4 v0, 0x1
+
+    .line 876
+    iget v1, p0, Landroid/support/v4/widget/f;->iK:I
+
+    shl-int v2, v0, p1
+
+    and-int/2addr v1, v2
+
+    if-eqz v1, :cond_0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method final B(I)V
+    .locals 1
+
+    .prologue
+    .line 880
+    iget v0, p0, Landroid/support/v4/widget/f;->iC:I
+
+    if-eq v0, p1, :cond_0
+
+    .line 881
+    iput p1, p0, Landroid/support/v4/widget/f;->iC:I
+
+    .line 882
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iQ:Landroid/support/v4/widget/f$a;
+
+    invoke-virtual {v0, p1}, Landroid/support/v4/widget/f$a;->y(I)V
+
+    .line 883
+    if-nez p1, :cond_0
+
+    .line 884
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
+
+    .line 887
+    :cond_0
+    return-void
+.end method
+
+.method public final aG()Z
     .locals 7
 
     .prologue
     const/4 v6, 0x2
 
     .line 731
-    iget v0, p0, Landroid/support/v4/widget/f;->ij:I
+    iget v0, p0, Landroid/support/v4/widget/f;->iC:I
 
     if-ne v0, v6, :cond_5
 
     .line 732
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iy:Landroid/support/v4/widget/e;
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iP:Landroid/support/v4/widget/e;
 
-    sget-object v1, Landroid/support/v4/widget/e;->hK:Landroid/support/v4/widget/e$a;
+    sget-object v1, Landroid/support/v4/widget/e;->ie:Landroid/support/v4/widget/e$a;
 
-    iget-object v0, v0, Landroid/support/v4/widget/e;->hJ:Ljava/lang/Object;
+    iget-object v0, v0, Landroid/support/v4/widget/e;->ic:Ljava/lang/Object;
 
     invoke-interface {v1, v0}, Landroid/support/v4/widget/e$a;->F(Ljava/lang/Object;)Z
 
     move-result v0
 
     .line 733
-    iget-object v1, p0, Landroid/support/v4/widget/f;->iy:Landroid/support/v4/widget/e;
+    iget-object v1, p0, Landroid/support/v4/widget/f;->iP:Landroid/support/v4/widget/e;
 
     invoke-virtual {v1}, Landroid/support/v4/widget/e;->getCurrX()I
 
     move-result v1
 
     .line 734
-    iget-object v2, p0, Landroid/support/v4/widget/f;->iy:Landroid/support/v4/widget/e;
+    iget-object v2, p0, Landroid/support/v4/widget/f;->iP:Landroid/support/v4/widget/e;
 
     invoke-virtual {v2}, Landroid/support/v4/widget/e;->getCurrY()I
 
     move-result v2
 
     .line 735
-    iget-object v3, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v3, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getLeft()I
 
@@ -1486,7 +1540,7 @@
     sub-int v3, v1, v3
 
     .line 736
-    iget-object v4, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v4, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getTop()I
 
@@ -1498,7 +1552,7 @@
     if-eqz v3, :cond_0
 
     .line 739
-    iget-object v5, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v5, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     invoke-virtual {v5, v3}, Landroid/view/View;->offsetLeftAndRight(I)V
 
@@ -1507,7 +1561,7 @@
     if-eqz v4, :cond_1
 
     .line 742
-    iget-object v5, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v5, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     invoke-virtual {v5, v4}, Landroid/view/View;->offsetTopAndBottom(I)V
 
@@ -1519,9 +1573,9 @@
 
     .line 746
     :cond_2
-    iget-object v3, p0, Landroid/support/v4/widget/f;->iz:Landroid/support/v4/widget/f$a;
+    iget-object v3, p0, Landroid/support/v4/widget/f;->iQ:Landroid/support/v4/widget/f$a;
 
-    iget-object v4, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v4, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     invoke-virtual {v3, v4, v1, v2}, Landroid/support/v4/widget/f$a;->a(Landroid/view/View;II)V
 
@@ -1529,11 +1583,11 @@
     :cond_3
     if-eqz v0, :cond_4
 
-    iget-object v3, p0, Landroid/support/v4/widget/f;->iy:Landroid/support/v4/widget/e;
+    iget-object v3, p0, Landroid/support/v4/widget/f;->iP:Landroid/support/v4/widget/e;
 
-    sget-object v4, Landroid/support/v4/widget/e;->hK:Landroid/support/v4/widget/e$a;
+    sget-object v4, Landroid/support/v4/widget/e;->ie:Landroid/support/v4/widget/e$a;
 
-    iget-object v3, v3, Landroid/support/v4/widget/e;->hJ:Ljava/lang/Object;
+    iget-object v3, v3, Landroid/support/v4/widget/e;->ic:Ljava/lang/Object;
 
     invoke-interface {v4, v3}, Landroid/support/v4/widget/e$a;->H(Ljava/lang/Object;)I
 
@@ -1541,11 +1595,11 @@
 
     if-ne v1, v3, :cond_4
 
-    iget-object v1, p0, Landroid/support/v4/widget/f;->iy:Landroid/support/v4/widget/e;
+    iget-object v1, p0, Landroid/support/v4/widget/f;->iP:Landroid/support/v4/widget/e;
 
-    sget-object v3, Landroid/support/v4/widget/e;->hK:Landroid/support/v4/widget/e$a;
+    sget-object v3, Landroid/support/v4/widget/e;->ie:Landroid/support/v4/widget/e$a;
 
-    iget-object v1, v1, Landroid/support/v4/widget/e;->hJ:Ljava/lang/Object;
+    iget-object v1, v1, Landroid/support/v4/widget/e;->ic:Ljava/lang/Object;
 
     invoke-interface {v3, v1}, Landroid/support/v4/widget/e$a;->I(Ljava/lang/Object;)I
 
@@ -1554,16 +1608,16 @@
     if-ne v2, v1, :cond_4
 
     .line 752
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iy:Landroid/support/v4/widget/e;
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iP:Landroid/support/v4/widget/e;
 
     invoke-virtual {v0}, Landroid/support/v4/widget/e;->abortAnimation()V
 
     .line 753
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iy:Landroid/support/v4/widget/e;
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iP:Landroid/support/v4/widget/e;
 
-    sget-object v1, Landroid/support/v4/widget/e;->hK:Landroid/support/v4/widget/e$a;
+    sget-object v1, Landroid/support/v4/widget/e;->ie:Landroid/support/v4/widget/e$a;
 
-    iget-object v0, v0, Landroid/support/v4/widget/e;->hJ:Ljava/lang/Object;
+    iget-object v0, v0, Landroid/support/v4/widget/e;->ic:Ljava/lang/Object;
 
     invoke-interface {v1, v0}, Landroid/support/v4/widget/e$a;->A(Ljava/lang/Object;)Z
 
@@ -1574,15 +1628,15 @@
     if-nez v0, :cond_5
 
     .line 757
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iC:Landroid/view/ViewGroup;
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iT:Landroid/view/ViewGroup;
 
-    iget-object v1, p0, Landroid/support/v4/widget/f;->iD:Ljava/lang/Runnable;
+    iget-object v1, p0, Landroid/support/v4/widget/f;->iU:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->post(Ljava/lang/Runnable;)Z
 
     .line 760
     :cond_5
-    iget v0, p0, Landroid/support/v4/widget/f;->ij:I
+    iget v0, p0, Landroid/support/v4/widget/f;->iC:I
 
     if-ne v0, v6, :cond_6
 
@@ -1605,45 +1659,45 @@
     invoke-virtual {p0}, Landroid/support/v4/widget/f;->cancel()V
 
     .line 527
-    iget v0, p0, Landroid/support/v4/widget/f;->ij:I
+    iget v0, p0, Landroid/support/v4/widget/f;->iC:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_0
 
     .line 528
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iy:Landroid/support/v4/widget/e;
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iP:Landroid/support/v4/widget/e;
 
     invoke-virtual {v0}, Landroid/support/v4/widget/e;->getCurrX()I
 
     .line 529
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iy:Landroid/support/v4/widget/e;
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iP:Landroid/support/v4/widget/e;
 
     invoke-virtual {v0}, Landroid/support/v4/widget/e;->getCurrY()I
 
     .line 530
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iy:Landroid/support/v4/widget/e;
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iP:Landroid/support/v4/widget/e;
 
     invoke-virtual {v0}, Landroid/support/v4/widget/e;->abortAnimation()V
 
     .line 531
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iy:Landroid/support/v4/widget/e;
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iP:Landroid/support/v4/widget/e;
 
     invoke-virtual {v0}, Landroid/support/v4/widget/e;->getCurrX()I
 
     move-result v0
 
     .line 532
-    iget-object v1, p0, Landroid/support/v4/widget/f;->iy:Landroid/support/v4/widget/e;
+    iget-object v1, p0, Landroid/support/v4/widget/f;->iP:Landroid/support/v4/widget/e;
 
     invoke-virtual {v1}, Landroid/support/v4/widget/e;->getCurrY()I
 
     move-result v1
 
     .line 533
-    iget-object v2, p0, Landroid/support/v4/widget/f;->iz:Landroid/support/v4/widget/f$a;
+    iget-object v2, p0, Landroid/support/v4/widget/f;->iQ:Landroid/support/v4/widget/f$a;
 
-    iget-object v3, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v3, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     invoke-virtual {v2, v3, v0, v1}, Landroid/support/v4/widget/f$a;->a(Landroid/view/View;II)V
 
@@ -1651,7 +1705,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Landroid/support/v4/widget/f;->w(I)V
+    invoke-virtual {p0, v0}, Landroid/support/v4/widget/f;->B(I)V
 
     .line 536
     return-void
@@ -1664,15 +1718,15 @@
     const/4 v1, 0x0
 
     .line 553
-    iput-object p1, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iput-object p1, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     .line 554
     const/4 v0, -0x1
 
-    iput v0, p0, Landroid/support/v4/widget/f;->gd:I
+    iput v0, p0, Landroid/support/v4/widget/f;->gz:I
 
     .line 556
-    invoke-direct {p0, p2, p3, v1, v1}, Landroid/support/v4/widget/f;->b(IIII)Z
+    invoke-direct {p0, p2, p3, v1, v1}, Landroid/support/v4/widget/f;->a(IIII)Z
 
     move-result v0
 
@@ -1690,58 +1744,58 @@
     .line 512
     const/4 v0, -0x1
 
-    iput v0, p0, Landroid/support/v4/widget/f;->gd:I
+    iput v0, p0, Landroid/support/v4/widget/f;->gz:I
 
     .line 513
-    iget-object v0, p0, Landroid/support/v4/widget/f;->ik:[F
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iD:[F
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v4/widget/f;->ik:[F
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iD:[F
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->fill([FF)V
 
-    iget-object v0, p0, Landroid/support/v4/widget/f;->il:[F
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iE:[F
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->fill([FF)V
 
-    iget-object v0, p0, Landroid/support/v4/widget/f;->im:[F
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iF:[F
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->fill([FF)V
 
-    iget-object v0, p0, Landroid/support/v4/widget/f;->io:[F
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iG:[F
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->fill([FF)V
 
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iq:[I
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iH:[I
 
     invoke-static {v0, v2}, Ljava/util/Arrays;->fill([II)V
 
-    iget-object v0, p0, Landroid/support/v4/widget/f;->ir:[I
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iI:[I
 
     invoke-static {v0, v2}, Ljava/util/Arrays;->fill([II)V
 
-    iget-object v0, p0, Landroid/support/v4/widget/f;->is:[I
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iJ:[I
 
     invoke-static {v0, v2}, Ljava/util/Arrays;->fill([II)V
 
-    iput v2, p0, Landroid/support/v4/widget/f;->it:I
+    iput v2, p0, Landroid/support/v4/widget/f;->iK:I
 
     .line 515
     :cond_0
-    iget-object v0, p0, Landroid/support/v4/widget/f;->ge:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Landroid/support/v4/widget/f;->gA:Landroid/view/VelocityTracker;
 
     if-eqz v0, :cond_1
 
     .line 516
-    iget-object v0, p0, Landroid/support/v4/widget/f;->ge:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Landroid/support/v4/widget/f;->gA:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
 
     .line 517
     const/4 v0, 0x0
 
-    iput-object v0, p0, Landroid/support/v4/widget/f;->ge:Landroid/view/VelocityTracker;
+    iput-object v0, p0, Landroid/support/v4/widget/f;->gA:Landroid/view/VelocityTracker;
 
     .line 519
     :cond_1
@@ -1757,7 +1811,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/v4/widget/f;->iC:Landroid/view/ViewGroup;
+    iget-object v1, p0, Landroid/support/v4/widget/f;->iT:Landroid/view/ViewGroup;
 
     if-eq v0, v1, :cond_0
 
@@ -1770,7 +1824,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Landroid/support/v4/widget/f;->iC:Landroid/view/ViewGroup;
+    iget-object v2, p0, Landroid/support/v4/widget/f;->iT:Landroid/view/ViewGroup;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1792,31 +1846,31 @@
 
     .line 479
     :cond_0
-    iput-object p1, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iput-object p1, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     .line 480
-    iput p2, p0, Landroid/support/v4/widget/f;->gd:I
+    iput p2, p0, Landroid/support/v4/widget/f;->gz:I
 
     .line 481
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iz:Landroid/support/v4/widget/f$a;
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iQ:Landroid/support/v4/widget/f$a;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/widget/f$a;->x(Landroid/view/View;)V
 
     .line 482
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Landroid/support/v4/widget/f;->w(I)V
+    invoke-virtual {p0, v0}, Landroid/support/v4/widget/f;->B(I)V
 
     .line 483
     return-void
 .end method
 
-.method public final i(II)Z
+.method public final g(II)Z
     .locals 3
 
     .prologue
     .line 571
-    iget-boolean v0, p0, Landroid/support/v4/widget/f;->iB:Z
+    iget-boolean v0, p0, Landroid/support/v4/widget/f;->iS:Z
 
     if-nez v0, :cond_0
 
@@ -1831,9 +1885,9 @@
 
     .line 576
     :cond_0
-    iget-object v0, p0, Landroid/support/v4/widget/f;->ge:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Landroid/support/v4/widget/f;->gA:Landroid/view/VelocityTracker;
 
-    iget v1, p0, Landroid/support/v4/widget/f;->gd:I
+    iget v1, p0, Landroid/support/v4/widget/f;->gz:I
 
     invoke-static {v0, v1}, Landroid/support/v4/view/l;->a(Landroid/view/VelocityTracker;I)F
 
@@ -1841,9 +1895,9 @@
 
     float-to-int v0, v0
 
-    iget-object v1, p0, Landroid/support/v4/widget/f;->ge:Landroid/view/VelocityTracker;
+    iget-object v1, p0, Landroid/support/v4/widget/f;->gA:Landroid/view/VelocityTracker;
 
-    iget v2, p0, Landroid/support/v4/widget/f;->gd:I
+    iget v2, p0, Landroid/support/v4/widget/f;->gz:I
 
     invoke-static {v1, v2}, Landroid/support/v4/view/l;->b(Landroid/view/VelocityTracker;I)F
 
@@ -1851,329 +1905,19 @@
 
     float-to-int v1, v1
 
-    invoke-direct {p0, p1, p2, v0, v1}, Landroid/support/v4/widget/f;->b(IIII)Z
+    invoke-direct {p0, p1, p2, v0, v1}, Landroid/support/v4/widget/f;->a(IIII)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public final i(Landroid/view/MotionEvent;)Z
-    .locals 9
-
-    .prologue
-    const/4 v6, 0x2
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    .line 955
-    invoke-static {p1}, Landroid/support/v4/view/i;->d(Landroid/view/MotionEvent;)I
-
-    move-result v2
-
-    .line 956
-    invoke-static {p1}, Landroid/support/v4/view/i;->e(Landroid/view/MotionEvent;)I
-
-    move-result v3
-
-    .line 958
-    if-nez v2, :cond_0
-
-    .line 961
-    invoke-virtual {p0}, Landroid/support/v4/widget/f;->cancel()V
-
-    .line 964
-    :cond_0
-    iget-object v4, p0, Landroid/support/v4/widget/f;->ge:Landroid/view/VelocityTracker;
-
-    if-nez v4, :cond_1
-
-    .line 965
-    invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
-
-    move-result-object v4
-
-    iput-object v4, p0, Landroid/support/v4/widget/f;->ge:Landroid/view/VelocityTracker;
-
-    .line 967
-    :cond_1
-    iget-object v4, p0, Landroid/support/v4/widget/f;->ge:Landroid/view/VelocityTracker;
-
-    invoke-virtual {v4, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
-
-    .line 969
-    packed-switch v2, :pswitch_data_0
-
-    .line 1052
-    :cond_2
-    :goto_0
-    :pswitch_0
-    iget v2, p0, Landroid/support/v4/widget/f;->ij:I
-
-    if-ne v2, v0, :cond_7
-
-    :goto_1
-    return v0
-
-    .line 971
-    :pswitch_1
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v2
-
-    .line 972
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
-
-    move-result v3
-
-    .line 973
-    invoke-static {p1, v1}, Landroid/support/v4/view/i;->b(Landroid/view/MotionEvent;I)I
-
-    move-result v4
-
-    .line 974
-    invoke-direct {p0, v2, v3, v4}, Landroid/support/v4/widget/f;->a(FFI)V
-
-    .line 976
-    float-to-int v2, v2
-
-    float-to-int v3, v3
-
-    invoke-virtual {p0, v2, v3}, Landroid/support/v4/widget/f;->j(II)Landroid/view/View;
-
-    move-result-object v2
-
-    .line 979
-    iget-object v3, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
-
-    if-ne v2, v3, :cond_3
-
-    iget v3, p0, Landroid/support/v4/widget/f;->ij:I
-
-    if-ne v3, v6, :cond_3
-
-    .line 980
-    invoke-direct {p0, v2, v4}, Landroid/support/v4/widget/f;->g(Landroid/view/View;I)Z
-
-    .line 983
-    :cond_3
-    iget-object v2, p0, Landroid/support/v4/widget/f;->iq:[I
-
-    aget v2, v2, v4
-
-    .line 984
-    iget v3, p0, Landroid/support/v4/widget/f;->ix:I
-
-    and-int/2addr v2, v3
-
-    if-eqz v2, :cond_2
-
-    .line 985
-    iget-object v2, p0, Landroid/support/v4/widget/f;->iz:Landroid/support/v4/widget/f$a;
-
-    invoke-virtual {v2}, Landroid/support/v4/widget/f$a;->aD()V
-
-    goto :goto_0
-
-    .line 991
-    :pswitch_2
-    invoke-static {p1, v3}, Landroid/support/v4/view/i;->b(Landroid/view/MotionEvent;I)I
-
-    move-result v2
-
-    .line 992
-    invoke-static {p1, v3}, Landroid/support/v4/view/i;->c(Landroid/view/MotionEvent;I)F
-
-    move-result v4
-
-    .line 993
-    invoke-static {p1, v3}, Landroid/support/v4/view/i;->d(Landroid/view/MotionEvent;I)F
-
-    move-result v3
-
-    .line 995
-    invoke-direct {p0, v4, v3, v2}, Landroid/support/v4/widget/f;->a(FFI)V
-
-    .line 998
-    iget v5, p0, Landroid/support/v4/widget/f;->ij:I
-
-    if-nez v5, :cond_4
-
-    .line 999
-    iget-object v3, p0, Landroid/support/v4/widget/f;->iq:[I
-
-    aget v2, v3, v2
-
-    .line 1000
-    iget v3, p0, Landroid/support/v4/widget/f;->ix:I
-
-    and-int/2addr v2, v3
-
-    if-eqz v2, :cond_2
-
-    .line 1001
-    iget-object v2, p0, Landroid/support/v4/widget/f;->iz:Landroid/support/v4/widget/f$a;
-
-    invoke-virtual {v2}, Landroid/support/v4/widget/f$a;->aD()V
-
-    goto :goto_0
-
-    .line 1003
-    :cond_4
-    iget v5, p0, Landroid/support/v4/widget/f;->ij:I
-
-    if-ne v5, v6, :cond_2
-
-    .line 1005
-    float-to-int v4, v4
-
-    float-to-int v3, v3
-
-    invoke-virtual {p0, v4, v3}, Landroid/support/v4/widget/f;->j(II)Landroid/view/View;
-
-    move-result-object v3
-
-    .line 1006
-    iget-object v4, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
-
-    if-ne v3, v4, :cond_2
-
-    .line 1007
-    invoke-direct {p0, v3, v2}, Landroid/support/v4/widget/f;->g(Landroid/view/View;I)Z
-
-    goto :goto_0
-
-    .line 1015
-    :pswitch_3
-    invoke-static {p1}, Landroid/support/v4/view/i;->f(Landroid/view/MotionEvent;)I
-
-    move-result v3
-
-    move v2, v1
-
-    .line 1016
-    :goto_2
-    if-ge v2, v3, :cond_6
-
-    .line 1017
-    invoke-static {p1, v2}, Landroid/support/v4/view/i;->b(Landroid/view/MotionEvent;I)I
-
-    move-result v4
-
-    .line 1018
-    invoke-static {p1, v2}, Landroid/support/v4/view/i;->c(Landroid/view/MotionEvent;I)F
-
-    move-result v5
-
-    .line 1019
-    invoke-static {p1, v2}, Landroid/support/v4/view/i;->d(Landroid/view/MotionEvent;I)F
-
-    move-result v6
-
-    .line 1020
-    iget-object v7, p0, Landroid/support/v4/widget/f;->ik:[F
-
-    aget v7, v7, v4
-
-    sub-float v7, v5, v7
-
-    .line 1021
-    iget-object v8, p0, Landroid/support/v4/widget/f;->il:[F
-
-    aget v8, v8, v4
-
-    sub-float v8, v6, v8
-
-    .line 1023
-    invoke-direct {p0, v7, v8, v4}, Landroid/support/v4/widget/f;->b(FFI)V
-
-    .line 1024
-    iget v8, p0, Landroid/support/v4/widget/f;->ij:I
-
-    if-eq v8, v0, :cond_6
-
-    .line 1026
-    float-to-int v5, v5
-
-    float-to-int v6, v6
-
-    invoke-virtual {p0, v5, v6}, Landroid/support/v4/widget/f;->j(II)Landroid/view/View;
-
-    move-result-object v5
-
-    .line 1030
-    if-eqz v5, :cond_5
-
-    invoke-direct {p0, v5, v7}, Landroid/support/v4/widget/f;->b(Landroid/view/View;F)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_5
-
-    invoke-direct {p0, v5, v4}, Landroid/support/v4/widget/f;->g(Landroid/view/View;I)Z
-
-    move-result v4
-
-    if-nez v4, :cond_6
-
-    .line 1032
-    :cond_5
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_2
-
-    .line 1035
-    :cond_6
-    invoke-direct {p0, p1}, Landroid/support/v4/widget/f;->h(Landroid/view/MotionEvent;)V
-
-    goto/16 :goto_0
-
-    .line 1040
-    :pswitch_4
-    invoke-static {p1, v3}, Landroid/support/v4/view/i;->b(Landroid/view/MotionEvent;I)I
-
-    move-result v2
-
-    .line 1041
-    invoke-direct {p0, v2}, Landroid/support/v4/widget/f;->u(I)V
-
-    goto/16 :goto_0
-
-    .line 1047
-    :pswitch_5
-    invoke-virtual {p0}, Landroid/support/v4/widget/f;->cancel()V
-
-    goto/16 :goto_0
-
-    :cond_7
-    move v0, v1
-
-    .line 1052
-    goto/16 :goto_1
-
-    .line 969
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_5
-        :pswitch_3
-        :pswitch_5
-        :pswitch_0
-        :pswitch_2
-        :pswitch_4
-    .end packed-switch
-.end method
-
-.method public final j(II)Landroid/view/View;
+.method public final h(II)Landroid/view/View;
     .locals 3
 
     .prologue
     .line 1444
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iC:Landroid/view/ViewGroup;
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iT:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -2188,7 +1932,7 @@
     if-ltz v1, :cond_1
 
     .line 1446
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iC:Landroid/view/ViewGroup;
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iT:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
@@ -2238,6 +1982,316 @@
     goto :goto_1
 .end method
 
+.method public final i(Landroid/view/MotionEvent;)Z
+    .locals 9
+
+    .prologue
+    const/4 v6, 0x2
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    .line 955
+    invoke-static {p1}, Landroid/support/v4/view/i;->d(Landroid/view/MotionEvent;)I
+
+    move-result v2
+
+    .line 956
+    invoke-static {p1}, Landroid/support/v4/view/i;->e(Landroid/view/MotionEvent;)I
+
+    move-result v3
+
+    .line 958
+    if-nez v2, :cond_0
+
+    .line 961
+    invoke-virtual {p0}, Landroid/support/v4/widget/f;->cancel()V
+
+    .line 964
+    :cond_0
+    iget-object v4, p0, Landroid/support/v4/widget/f;->gA:Landroid/view/VelocityTracker;
+
+    if-nez v4, :cond_1
+
+    .line 965
+    invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
+
+    move-result-object v4
+
+    iput-object v4, p0, Landroid/support/v4/widget/f;->gA:Landroid/view/VelocityTracker;
+
+    .line 967
+    :cond_1
+    iget-object v4, p0, Landroid/support/v4/widget/f;->gA:Landroid/view/VelocityTracker;
+
+    invoke-virtual {v4, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
+
+    .line 969
+    packed-switch v2, :pswitch_data_0
+
+    .line 1052
+    :cond_2
+    :goto_0
+    :pswitch_0
+    iget v2, p0, Landroid/support/v4/widget/f;->iC:I
+
+    if-ne v2, v0, :cond_7
+
+    :goto_1
+    return v0
+
+    .line 971
+    :pswitch_1
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v2
+
+    .line 972
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v3
+
+    .line 973
+    invoke-static {p1, v1}, Landroid/support/v4/view/i;->b(Landroid/view/MotionEvent;I)I
+
+    move-result v4
+
+    .line 974
+    invoke-direct {p0, v2, v3, v4}, Landroid/support/v4/widget/f;->a(FFI)V
+
+    .line 976
+    float-to-int v2, v2
+
+    float-to-int v3, v3
+
+    invoke-virtual {p0, v2, v3}, Landroid/support/v4/widget/f;->h(II)Landroid/view/View;
+
+    move-result-object v2
+
+    .line 979
+    iget-object v3, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
+
+    if-ne v2, v3, :cond_3
+
+    iget v3, p0, Landroid/support/v4/widget/f;->iC:I
+
+    if-ne v3, v6, :cond_3
+
+    .line 980
+    invoke-direct {p0, v2, v4}, Landroid/support/v4/widget/f;->g(Landroid/view/View;I)Z
+
+    .line 983
+    :cond_3
+    iget-object v2, p0, Landroid/support/v4/widget/f;->iH:[I
+
+    aget v2, v2, v4
+
+    .line 984
+    iget v3, p0, Landroid/support/v4/widget/f;->iO:I
+
+    and-int/2addr v2, v3
+
+    if-eqz v2, :cond_2
+
+    .line 985
+    iget-object v2, p0, Landroid/support/v4/widget/f;->iQ:Landroid/support/v4/widget/f$a;
+
+    invoke-virtual {v2}, Landroid/support/v4/widget/f$a;->aC()V
+
+    goto :goto_0
+
+    .line 991
+    :pswitch_2
+    invoke-static {p1, v3}, Landroid/support/v4/view/i;->b(Landroid/view/MotionEvent;I)I
+
+    move-result v2
+
+    .line 992
+    invoke-static {p1, v3}, Landroid/support/v4/view/i;->c(Landroid/view/MotionEvent;I)F
+
+    move-result v4
+
+    .line 993
+    invoke-static {p1, v3}, Landroid/support/v4/view/i;->d(Landroid/view/MotionEvent;I)F
+
+    move-result v3
+
+    .line 995
+    invoke-direct {p0, v4, v3, v2}, Landroid/support/v4/widget/f;->a(FFI)V
+
+    .line 998
+    iget v5, p0, Landroid/support/v4/widget/f;->iC:I
+
+    if-nez v5, :cond_4
+
+    .line 999
+    iget-object v3, p0, Landroid/support/v4/widget/f;->iH:[I
+
+    aget v2, v3, v2
+
+    .line 1000
+    iget v3, p0, Landroid/support/v4/widget/f;->iO:I
+
+    and-int/2addr v2, v3
+
+    if-eqz v2, :cond_2
+
+    .line 1001
+    iget-object v2, p0, Landroid/support/v4/widget/f;->iQ:Landroid/support/v4/widget/f$a;
+
+    invoke-virtual {v2}, Landroid/support/v4/widget/f$a;->aC()V
+
+    goto :goto_0
+
+    .line 1003
+    :cond_4
+    iget v5, p0, Landroid/support/v4/widget/f;->iC:I
+
+    if-ne v5, v6, :cond_2
+
+    .line 1005
+    float-to-int v4, v4
+
+    float-to-int v3, v3
+
+    invoke-virtual {p0, v4, v3}, Landroid/support/v4/widget/f;->h(II)Landroid/view/View;
+
+    move-result-object v3
+
+    .line 1006
+    iget-object v4, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
+
+    if-ne v3, v4, :cond_2
+
+    .line 1007
+    invoke-direct {p0, v3, v2}, Landroid/support/v4/widget/f;->g(Landroid/view/View;I)Z
+
+    goto :goto_0
+
+    .line 1015
+    :pswitch_3
+    invoke-static {p1}, Landroid/support/v4/view/i;->f(Landroid/view/MotionEvent;)I
+
+    move-result v3
+
+    move v2, v1
+
+    .line 1016
+    :goto_2
+    if-ge v2, v3, :cond_6
+
+    .line 1017
+    invoke-static {p1, v2}, Landroid/support/v4/view/i;->b(Landroid/view/MotionEvent;I)I
+
+    move-result v4
+
+    .line 1018
+    invoke-static {p1, v2}, Landroid/support/v4/view/i;->c(Landroid/view/MotionEvent;I)F
+
+    move-result v5
+
+    .line 1019
+    invoke-static {p1, v2}, Landroid/support/v4/view/i;->d(Landroid/view/MotionEvent;I)F
+
+    move-result v6
+
+    .line 1020
+    iget-object v7, p0, Landroid/support/v4/widget/f;->iD:[F
+
+    aget v7, v7, v4
+
+    sub-float v7, v5, v7
+
+    .line 1021
+    iget-object v8, p0, Landroid/support/v4/widget/f;->iE:[F
+
+    aget v8, v8, v4
+
+    sub-float v8, v6, v8
+
+    .line 1023
+    invoke-direct {p0, v7, v8, v4}, Landroid/support/v4/widget/f;->b(FFI)V
+
+    .line 1024
+    iget v8, p0, Landroid/support/v4/widget/f;->iC:I
+
+    if-eq v8, v0, :cond_6
+
+    .line 1026
+    float-to-int v5, v5
+
+    float-to-int v6, v6
+
+    invoke-virtual {p0, v5, v6}, Landroid/support/v4/widget/f;->h(II)Landroid/view/View;
+
+    move-result-object v5
+
+    .line 1030
+    if-eqz v5, :cond_5
+
+    invoke-direct {p0, v5, v7}, Landroid/support/v4/widget/f;->b(Landroid/view/View;F)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_5
+
+    invoke-direct {p0, v5, v4}, Landroid/support/v4/widget/f;->g(Landroid/view/View;I)Z
+
+    move-result v4
+
+    if-nez v4, :cond_6
+
+    .line 1032
+    :cond_5
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_2
+
+    .line 1035
+    :cond_6
+    invoke-direct {p0, p1}, Landroid/support/v4/widget/f;->h(Landroid/view/MotionEvent;)V
+
+    goto/16 :goto_0
+
+    .line 1040
+    :pswitch_4
+    invoke-static {p1, v3}, Landroid/support/v4/view/i;->b(Landroid/view/MotionEvent;I)I
+
+    move-result v2
+
+    .line 1041
+    invoke-direct {p0, v2}, Landroid/support/v4/widget/f;->z(I)V
+
+    goto/16 :goto_0
+
+    .line 1047
+    :pswitch_5
+    invoke-virtual {p0}, Landroid/support/v4/widget/f;->cancel()V
+
+    goto/16 :goto_0
+
+    :cond_7
+    move v0, v1
+
+    .line 1052
+    goto/16 :goto_1
+
+    .line 969
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_5
+        :pswitch_3
+        :pswitch_5
+        :pswitch_0
+        :pswitch_2
+        :pswitch_4
+    .end packed-switch
+.end method
+
 .method public final j(Landroid/view/MotionEvent;)V
     .locals 8
 
@@ -2268,7 +2322,7 @@
 
     .line 1071
     :cond_0
-    iget-object v4, p0, Landroid/support/v4/widget/f;->ge:Landroid/view/VelocityTracker;
+    iget-object v4, p0, Landroid/support/v4/widget/f;->gA:Landroid/view/VelocityTracker;
 
     if-nez v4, :cond_1
 
@@ -2277,11 +2331,11 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Landroid/support/v4/widget/f;->ge:Landroid/view/VelocityTracker;
+    iput-object v4, p0, Landroid/support/v4/widget/f;->gA:Landroid/view/VelocityTracker;
 
     .line 1074
     :cond_1
-    iget-object v4, p0, Landroid/support/v4/widget/f;->ge:Landroid/view/VelocityTracker;
+    iget-object v4, p0, Landroid/support/v4/widget/f;->gA:Landroid/view/VelocityTracker;
 
     invoke-virtual {v4, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
@@ -2315,7 +2369,7 @@
 
     float-to-int v4, v2
 
-    invoke-virtual {p0, v3, v4}, Landroid/support/v4/widget/f;->j(II)Landroid/view/View;
+    invoke-virtual {p0, v3, v4}, Landroid/support/v4/widget/f;->h(II)Landroid/view/View;
 
     move-result-object v3
 
@@ -2326,21 +2380,21 @@
     invoke-direct {p0, v3, v0}, Landroid/support/v4/widget/f;->g(Landroid/view/View;I)Z
 
     .line 1090
-    iget-object v1, p0, Landroid/support/v4/widget/f;->iq:[I
+    iget-object v1, p0, Landroid/support/v4/widget/f;->iH:[I
 
     aget v0, v1, v0
 
     .line 1091
-    iget v1, p0, Landroid/support/v4/widget/f;->ix:I
+    iget v1, p0, Landroid/support/v4/widget/f;->iO:I
 
     and-int/2addr v0, v1
 
     if-eqz v0, :cond_2
 
     .line 1092
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iz:Landroid/support/v4/widget/f$a;
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iQ:Landroid/support/v4/widget/f$a;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/f$a;->aD()V
+    invoke-virtual {v0}, Landroid/support/v4/widget/f$a;->aC()V
 
     goto :goto_0
 
@@ -2364,7 +2418,7 @@
     invoke-direct {p0, v1, v2, v0}, Landroid/support/v4/widget/f;->a(FFI)V
 
     .line 1105
-    iget v3, p0, Landroid/support/v4/widget/f;->ij:I
+    iget v3, p0, Landroid/support/v4/widget/f;->iC:I
 
     if-nez v3, :cond_3
 
@@ -2373,7 +2427,7 @@
 
     float-to-int v2, v2
 
-    invoke-virtual {p0, v1, v2}, Landroid/support/v4/widget/f;->j(II)Landroid/view/View;
+    invoke-virtual {p0, v1, v2}, Landroid/support/v4/widget/f;->h(II)Landroid/view/View;
 
     move-result-object v1
 
@@ -2381,21 +2435,21 @@
     invoke-direct {p0, v1, v0}, Landroid/support/v4/widget/f;->g(Landroid/view/View;I)Z
 
     .line 1111
-    iget-object v1, p0, Landroid/support/v4/widget/f;->iq:[I
+    iget-object v1, p0, Landroid/support/v4/widget/f;->iH:[I
 
     aget v0, v1, v0
 
     .line 1112
-    iget v1, p0, Landroid/support/v4/widget/f;->ix:I
+    iget v1, p0, Landroid/support/v4/widget/f;->iO:I
 
     and-int/2addr v0, v1
 
     if-eqz v0, :cond_2
 
     .line 1113
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iz:Landroid/support/v4/widget/f$a;
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iQ:Landroid/support/v4/widget/f$a;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/f$a;->aD()V
+    invoke-virtual {v0}, Landroid/support/v4/widget/f$a;->aC()V
 
     goto :goto_0
 
@@ -2405,7 +2459,7 @@
 
     float-to-int v2, v2
 
-    iget-object v3, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v3, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     invoke-static {v3, v1, v2}, Landroid/support/v4/widget/f;->c(Landroid/view/View;II)Z
 
@@ -2414,7 +2468,7 @@
     if-eqz v1, :cond_2
 
     .line 1120
-    iget-object v1, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v1, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     invoke-direct {p0, v1, v0}, Landroid/support/v4/widget/f;->g(Landroid/view/View;I)Z
 
@@ -2422,12 +2476,12 @@
 
     .line 1126
     :pswitch_3
-    iget v1, p0, Landroid/support/v4/widget/f;->ij:I
+    iget v1, p0, Landroid/support/v4/widget/f;->iC:I
 
     if-ne v1, v7, :cond_8
 
     .line 1127
-    iget v0, p0, Landroid/support/v4/widget/f;->gd:I
+    iget v0, p0, Landroid/support/v4/widget/f;->gz:I
 
     invoke-static {p1, v0}, Landroid/support/v4/view/i;->a(Landroid/view/MotionEvent;I)I
 
@@ -2444,9 +2498,9 @@
     move-result v0
 
     .line 1130
-    iget-object v2, p0, Landroid/support/v4/widget/f;->im:[F
+    iget-object v2, p0, Landroid/support/v4/widget/f;->iF:[F
 
-    iget v3, p0, Landroid/support/v4/widget/f;->gd:I
+    iget v3, p0, Landroid/support/v4/widget/f;->gz:I
 
     aget v2, v2, v3
 
@@ -2455,9 +2509,9 @@
     float-to-int v2, v1
 
     .line 1131
-    iget-object v1, p0, Landroid/support/v4/widget/f;->io:[F
+    iget-object v1, p0, Landroid/support/v4/widget/f;->iG:[F
 
-    iget v3, p0, Landroid/support/v4/widget/f;->gd:I
+    iget v3, p0, Landroid/support/v4/widget/f;->gz:I
 
     aget v1, v1, v3
 
@@ -2466,7 +2520,7 @@
     float-to-int v3, v0
 
     .line 1133
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLeft()I
 
@@ -2474,7 +2528,7 @@
 
     add-int v1, v0, v2
 
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getTop()I
 
@@ -2482,13 +2536,13 @@
 
     add-int/2addr v0, v3
 
-    iget-object v4, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v4, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getLeft()I
 
     move-result v4
 
-    iget-object v5, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v5, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     invoke-virtual {v5}, Landroid/view/View;->getTop()I
 
@@ -2496,15 +2550,15 @@
 
     if-eqz v2, :cond_4
 
-    iget-object v6, p0, Landroid/support/v4/widget/f;->iz:Landroid/support/v4/widget/f$a;
+    iget-object v6, p0, Landroid/support/v4/widget/f;->iQ:Landroid/support/v4/widget/f$a;
 
-    iget-object v7, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v7, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     invoke-virtual {v6, v7, v1}, Landroid/support/v4/widget/f$a;->e(Landroid/view/View;I)I
 
     move-result v1
 
-    iget-object v6, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v6, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     sub-int v4, v1, v4
 
@@ -2513,15 +2567,15 @@
     :cond_4
     if-eqz v3, :cond_5
 
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iz:Landroid/support/v4/widget/f$a;
+    iget-object v0, p0, Landroid/support/v4/widget/f;->iQ:Landroid/support/v4/widget/f$a;
 
-    iget-object v4, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v4, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     invoke-virtual {v0, v4}, Landroid/support/v4/widget/f$a;->z(Landroid/view/View;)I
 
     move-result v0
 
-    iget-object v4, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v4, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     sub-int v5, v0, v5
 
@@ -2533,9 +2587,9 @@
     if-eqz v3, :cond_7
 
     :cond_6
-    iget-object v2, p0, Landroid/support/v4/widget/f;->iz:Landroid/support/v4/widget/f$a;
+    iget-object v2, p0, Landroid/support/v4/widget/f;->iQ:Landroid/support/v4/widget/f$a;
 
-    iget-object v3, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v3, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     invoke-virtual {v2, v3, v1, v0}, Landroid/support/v4/widget/f$a;->a(Landroid/view/View;II)V
 
@@ -2571,14 +2625,14 @@
     move-result v4
 
     .line 1143
-    iget-object v5, p0, Landroid/support/v4/widget/f;->ik:[F
+    iget-object v5, p0, Landroid/support/v4/widget/f;->iD:[F
 
     aget v5, v5, v2
 
     sub-float v5, v3, v5
 
     .line 1144
-    iget-object v6, p0, Landroid/support/v4/widget/f;->il:[F
+    iget-object v6, p0, Landroid/support/v4/widget/f;->iE:[F
 
     aget v6, v6, v2
 
@@ -2588,7 +2642,7 @@
     invoke-direct {p0, v5, v6, v2}, Landroid/support/v4/widget/f;->b(FFI)V
 
     .line 1147
-    iget v6, p0, Landroid/support/v4/widget/f;->ij:I
+    iget v6, p0, Landroid/support/v4/widget/f;->iC:I
 
     if-eq v6, v7, :cond_a
 
@@ -2597,7 +2651,7 @@
 
     float-to-int v4, v4
 
-    invoke-virtual {p0, v3, v4}, Landroid/support/v4/widget/f;->j(II)Landroid/view/View;
+    invoke-virtual {p0, v3, v4}, Landroid/support/v4/widget/f;->h(II)Landroid/view/View;
 
     move-result-object v3
 
@@ -2633,11 +2687,11 @@
     move-result v2
 
     .line 1165
-    iget v3, p0, Landroid/support/v4/widget/f;->ij:I
+    iget v3, p0, Landroid/support/v4/widget/f;->iC:I
 
     if-ne v3, v7, :cond_b
 
-    iget v3, p0, Landroid/support/v4/widget/f;->gd:I
+    iget v3, p0, Landroid/support/v4/widget/f;->gz:I
 
     if-ne v2, v3, :cond_b
 
@@ -2656,7 +2710,7 @@
     move-result v4
 
     .line 1171
-    iget v5, p0, Landroid/support/v4/widget/f;->gd:I
+    iget v5, p0, Landroid/support/v4/widget/f;->gz:I
 
     if-eq v4, v5, :cond_c
 
@@ -2675,15 +2729,15 @@
 
     float-to-int v6, v6
 
-    invoke-virtual {p0, v5, v6}, Landroid/support/v4/widget/f;->j(II)Landroid/view/View;
+    invoke-virtual {p0, v5, v6}, Landroid/support/v4/widget/f;->h(II)Landroid/view/View;
 
     move-result-object v5
 
-    iget-object v6, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v6, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     if-ne v5, v6, :cond_c
 
-    iget-object v5, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
+    iget-object v5, p0, Landroid/support/v4/widget/f;->iR:Landroid/view/View;
 
     invoke-direct {p0, v5, v4}, Landroid/support/v4/widget/f;->g(Landroid/view/View;I)Z
 
@@ -2692,18 +2746,18 @@
     if-eqz v4, :cond_c
 
     .line 1180
-    iget v0, p0, Landroid/support/v4/widget/f;->gd:I
+    iget v0, p0, Landroid/support/v4/widget/f;->gz:I
 
     .line 1185
     :goto_3
     if-ne v0, v1, :cond_b
 
     .line 1187
-    invoke-direct {p0}, Landroid/support/v4/widget/f;->aI()V
+    invoke-direct {p0}, Landroid/support/v4/widget/f;->aH()V
 
     .line 1190
     :cond_b
-    invoke-direct {p0, v2}, Landroid/support/v4/widget/f;->u(I)V
+    invoke-direct {p0, v2}, Landroid/support/v4/widget/f;->z(I)V
 
     goto/16 :goto_0
 
@@ -2715,12 +2769,12 @@
 
     .line 1195
     :pswitch_5
-    iget v0, p0, Landroid/support/v4/widget/f;->ij:I
+    iget v0, p0, Landroid/support/v4/widget/f;->iC:I
 
     if-ne v0, v7, :cond_d
 
     .line 1196
-    invoke-direct {p0}, Landroid/support/v4/widget/f;->aI()V
+    invoke-direct {p0}, Landroid/support/v4/widget/f;->aH()V
 
     .line 1198
     :cond_d
@@ -2730,7 +2784,7 @@
 
     .line 1203
     :pswitch_6
-    iget v0, p0, Landroid/support/v4/widget/f;->ij:I
+    iget v0, p0, Landroid/support/v4/widget/f;->iC:I
 
     if-ne v0, v7, :cond_e
 
@@ -2761,58 +2815,4 @@
         :pswitch_2
         :pswitch_4
     .end packed-switch
-.end method
-
-.method public final v(I)Z
-    .locals 3
-
-    .prologue
-    const/4 v0, 0x1
-
-    .line 876
-    iget v1, p0, Landroid/support/v4/widget/f;->it:I
-
-    shl-int v2, v0, p1
-
-    and-int/2addr v1, v2
-
-    if-eqz v1, :cond_0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method final w(I)V
-    .locals 1
-
-    .prologue
-    .line 880
-    iget v0, p0, Landroid/support/v4/widget/f;->ij:I
-
-    if-eq v0, p1, :cond_0
-
-    .line 881
-    iput p1, p0, Landroid/support/v4/widget/f;->ij:I
-
-    .line 882
-    iget-object v0, p0, Landroid/support/v4/widget/f;->iz:Landroid/support/v4/widget/f$a;
-
-    invoke-virtual {v0, p1}, Landroid/support/v4/widget/f$a;->t(I)V
-
-    .line 883
-    if-nez p1, :cond_0
-
-    .line 884
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Landroid/support/v4/widget/f;->iA:Landroid/view/View;
-
-    .line 887
-    :cond_0
-    return-void
 .end method

@@ -10,17 +10,17 @@ import com.tencent.mm.ui.widget.MMPinProgressBtn;
 
 final class SnsInfoFlip$d
 {
-  ImageView aAF;
-  String aHM = "";
-  TextView ePc;
-  ProgressBar epr;
-  View hfb;
-  FrameLayout hfc;
-  f hfd;
-  ImageView hfe;
-  ImageView hff;
-  MMPinProgressBtn hfg;
-  View hfh;
+  ImageView amO;
+  String auc = "";
+  TextView eWV;
+  ProgressBar eup;
+  View htS;
+  FrameLayout htT;
+  f htU;
+  ImageView htV;
+  ImageView htW;
+  MMPinProgressBtn htX;
+  View htY;
   int position;
 }
 

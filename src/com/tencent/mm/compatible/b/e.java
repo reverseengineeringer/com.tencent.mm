@@ -2,15 +2,15 @@ package com.tencent.mm.compatible.b;
 
 public final class e
 {
-  public a bpC = null;
-  public a bpD = null;
-  public a bpE = null;
+  public a bdC = null;
+  public a bdD = null;
+  public a bdE = null;
   
   public static abstract interface a
   {
     public abstract boolean isAvailable();
     
-    public abstract boolean nK();
+    public abstract boolean lY();
   }
 }
 

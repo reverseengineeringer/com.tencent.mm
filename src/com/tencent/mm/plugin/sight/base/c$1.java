@@ -10,10 +10,10 @@ final class c$1
   
   public final void run()
   {
-    int i = c.aa();
-    while (i < gxa)
+    int i = c.access$000();
+    while (i < gDy)
     {
-      File localFile1 = new File(String.format("%s/tempvideo%s.mp4", new Object[] { ah.tD().rH(), Integer.valueOf(i) }));
+      File localFile1 = new File(String.format("%s/tempvideo%s.mp4", new Object[] { ah.tE().rJ(), Integer.valueOf(i) }));
       if (localFile1.exists()) {
         localFile1.delete();
       }
@@ -27,7 +27,7 @@ final class c$1
       }
       i += 1;
     }
-    c.kS(Math.max(gxa, 0));
+    c.lW(Math.max(gDy, 0));
   }
 }
 

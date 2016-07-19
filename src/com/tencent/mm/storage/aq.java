@@ -2,59 +2,99 @@ package com.tencent.mm.storage;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.h.c.a;
 import com.tencent.mm.sdk.h.d;
 import com.tencent.mm.sdk.h.f;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.h.h;
+import com.tencent.mm.sdk.platformtools.v;
+import junit.framework.Assert;
 
 public final class aq
-  extends f
+  extends f<ap>
 {
-  public static final String[] aoY = { f.a(ap.aot, "UserOpenIdInApp") };
-  public d aoX;
+  public static final String[] bkN = { f.a(ap.bjR, "Stranger") };
+  private d bkP;
+  private final h<a, ap> kGE = new h() {};
   
   public aq(d paramd)
   {
-    super(paramd, ap.aot, "UserOpenIdInApp", null);
-    aoX = paramd;
-    paramd.cj("UserOpenIdInApp", "CREATE INDEX IF NOT EXISTS userOpenIdInAppAppIdUsernameIndex ON UserOpenIdInApp ( appId,username )");
-    paramd.cj("UserOpenIdInApp", "CREATE INDEX IF NOT EXISTS userOpenIdInAppOpenIdIndex ON UserOpenIdInApp ( openId )");
+    super(paramd, ap.bjR, "Stranger", null);
+    bkP = paramd;
   }
   
-  public final ap FJ(String paramString)
+  private void b(ap paramap)
+  {
+    if (kGE.aR(paramap)) {
+      kGE.EJ();
+    }
+  }
+  
+  public final ap HY(String paramString)
   {
     if ((paramString == null) || (paramString.length() <= 0)) {
       return null;
     }
-    Cursor localCursor = aoX.query("UserOpenIdInApp", null, "openId=?", new String[] { ay.kx(paramString) }, null, null, null);
-    if (localCursor.getCount() <= 0)
+    ap localap = new ap();
+    paramString = bkP.query("Stranger", null, "encryptUsername = ?", new String[] { paramString }, null, null, null);
+    if (paramString.getCount() != 0)
     {
-      u.w("!56@/B4Tb64lLpLhq7sWJ+/cPquHPuW4dVELw2sSKTF0Xr52ZGTQ0XEmhg==", "get null with openId:" + paramString);
-      localCursor.close();
-      return null;
+      paramString.moveToFirst();
+      localap.b(paramString);
     }
-    localCursor.moveToFirst();
-    paramString = new ap();
-    paramString.c(localCursor);
-    localCursor.close();
-    return paramString;
+    paramString.close();
+    return localap;
   }
   
-  public final boolean a(ap paramap)
+  public final int HZ(String paramString)
   {
-    if ((paramap == null) || (ay.kz(field_appId)) || (ay.kz(field_openId)) || (ay.kz(field_username)))
+    int i = bkP.delete("Stranger", "(encryptUsername=?)", new String[] { paramString });
+    if (i > 0) {
+      EJ();
+    }
+    v.i("MicroMsg.StrangerStorage", "delByEncryptUsername:" + paramString + " result:" + i);
+    return i;
+  }
+  
+  public final void a(a parama)
+  {
+    kGE.a(parama, null);
+  }
+  
+  public final void b(a parama)
+  {
+    kGE.remove(parama);
+  }
+  
+  public final boolean c(ap paramap)
+  {
+    boolean bool;
+    if (paramap != null)
     {
-      u.w("!56@/B4Tb64lLpLhq7sWJ+/cPquHPuW4dVELw2sSKTF0Xr52ZGTQ0XEmhg==", "wrong argument");
+      bool = true;
+      Assert.assertTrue("stranger NULL !", bool);
+      v.d("MicroMsg.StrangerStorage", "replace : encryptUsername=%s, conRemark=%s", new Object[] { field_encryptUsername, field_conRemark });
+      ContentValues localContentValues = paramap.kn();
+      if (bkP.replace("Stranger", "", localContentValues) <= 0L) {
+        break label76;
+      }
+    }
+    label76:
+    for (int i = 1;; i = 0)
+    {
+      if (i != 0) {
+        break label81;
+      }
       return false;
+      bool = false;
+      break;
     }
-    ContentValues localContentValues = paramap.lX();
-    if (aoX.replace("UserOpenIdInApp", aotjYw, localContentValues) > 0L) {}
-    for (boolean bool = true;; bool = false)
-    {
-      u.d("!56@/B4Tb64lLpLhq7sWJ+/cPquHPuW4dVELw2sSKTF0Xr52ZGTQ0XEmhg==", "replace: appId=%s, username=%s, ret=%s ", new Object[] { field_appId, field_username, Boolean.valueOf(bool) });
-      return bool;
-    }
+    label81:
+    b(paramap);
+    return true;
+  }
+  
+  public static abstract interface a
+  {
+    public abstract void a(ap paramap);
   }
 }
 

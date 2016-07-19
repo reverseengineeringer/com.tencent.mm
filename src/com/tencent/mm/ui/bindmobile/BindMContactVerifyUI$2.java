@@ -6,15 +6,15 @@ import android.content.DialogInterface.OnCancelListener;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
-import com.tencent.mm.d.a.fm;
-import com.tencent.mm.d.a.fm.b;
-import com.tencent.mm.d.a.fn;
-import com.tencent.mm.d.a.fn.a;
+import com.tencent.mm.e.a.fs;
+import com.tencent.mm.e.a.fs.b;
+import com.tencent.mm.e.a.ft;
+import com.tencent.mm.e.a.ft.a;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelfriend.v;
-import com.tencent.mm.r.m;
 import com.tencent.mm.sdk.c.a;
 import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.base.g;
 
 final class BindMContactVerifyUI$2
@@ -24,34 +24,34 @@ final class BindMContactVerifyUI$2
   
   public final void onClick(final View paramView)
   {
-    paramView = BindMContactVerifyUI.a(kOF).getText().toString().trim();
+    paramView = BindMContactVerifyUI.a(lnV).getText().toString().trim();
     if (paramView.equals(""))
     {
-      g.e(kOF, 2131428613, 2131430877);
+      g.f(lnV, 2131231312, 2131231028);
       return;
     }
-    kOF.age();
-    Object localObject1 = new fm();
-    aAm.context = kOF;
-    a.jUF.j((b)localObject1);
-    localObject1 = aAn.aAo;
-    Object localObject2 = new fn();
-    a.jUF.j((b)localObject2);
-    localObject2 = aAp.aAq;
+    lnV.aiI();
+    Object localObject1 = new fs();
+    ams.context = lnV;
+    a.kug.y((b)localObject1);
+    localObject1 = amt.amu;
+    Object localObject2 = new ft();
+    a.kug.y((b)localObject2);
+    localObject2 = amv.amw;
     int i = 2;
-    if (BindMContactVerifyUI.b(kOF)) {
+    if (BindMContactVerifyUI.b(lnV)) {
       i = 19;
     }
-    paramView = new v(BindMContactVerifyUI.c(kOF), i, paramView, "", (String)localObject1, (String)localObject2);
-    ah.tE().d(paramView);
-    localObject1 = kOF;
-    localObject2 = kOF;
-    kOF.getString(2131430877);
-    BindMContactVerifyUI.a((BindMContactVerifyUI)localObject1, g.a((Context)localObject2, kOF.getString(2131428614), true, new DialogInterface.OnCancelListener()
+    paramView = new v(BindMContactVerifyUI.c(lnV), i, paramView, "", (String)localObject1, (String)localObject2);
+    ah.tF().a(paramView, 0);
+    localObject1 = lnV;
+    localObject2 = lnV;
+    lnV.getString(2131231028);
+    BindMContactVerifyUI.a((BindMContactVerifyUI)localObject1, g.a((Context)localObject2, lnV.getString(2131231300), true, new DialogInterface.OnCancelListener()
     {
       public final void onCancel(DialogInterface paramAnonymousDialogInterface)
       {
-        ah.tE().c(paramView);
+        ah.tF().c(paramView);
       }
     }));
   }

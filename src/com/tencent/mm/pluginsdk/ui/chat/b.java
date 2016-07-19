@@ -2,25 +2,25 @@ package com.tencent.mm.pluginsdk.ui.chat;
 
 public abstract interface b
 {
-  public abstract boolean aii();
+  public abstract boolean akP();
   
-  public abstract boolean aik();
+  public abstract boolean akR();
   
-  public abstract boolean ail();
+  public abstract boolean akS();
   
-  public abstract void aim();
+  public abstract void akT();
   
-  public abstract void ain();
+  public abstract void akU();
   
-  public abstract void aio();
+  public abstract void akV();
   
-  public abstract void ds(boolean paramBoolean);
+  public abstract void dr(boolean paramBoolean);
   
   public abstract void onPause();
   
-  public abstract boolean qW(String paramString);
-  
   public abstract void release();
+  
+  public abstract boolean sr(String paramString);
 }
 
 /* Location:

@@ -12,9 +12,9 @@ final class FlipView$2
   public final void a(l paraml)
   {
     int i = 0;
-    while (i < dRQ.size())
+    while (i < dTY.size())
     {
-      paraml.b(((Integer)gYb.get(i)).intValue(), (CharSequence)dRQ.get(i));
+      paraml.b(((Integer)hln.get(i)).intValue(), (CharSequence)dTY.get(i));
       i += 1;
     }
   }

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+.field final synthetic hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 254
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$6;->hlY:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
+    .line 271
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$6;->hCb:Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,26 +36,26 @@
 
 
 # virtual methods
-.method public final in(I)V
+.method public final jv(I)V
     .locals 4
 
     .prologue
-    .line 258
+    .line 275
     const/4 v0, -0x3
 
     if-ne p1, v0, :cond_0
 
-    .line 259
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9RADwjweyFoah/b/e2Uej"
+    .line 276
+    const-string/jumbo v0, "MicroMsg.SnsUploadUI"
 
     const-string/jumbo v1, "KEYBOARD_STATE_SHOW"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 260
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 277
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$6$1;
 
@@ -63,17 +63,17 @@
 
     const-wide/16 v2, 0x64
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/aa;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ac;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 281
+    .line 298
     :goto_0
     return-void
 
-    .line 270
+    .line 287
     :cond_0
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsUploadUI$6$2;
 
@@ -81,14 +81,14 @@
 
     const-wide/16 v2, 0xc8
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/aa;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ac;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 279
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ9RADwjweyFoah/b/e2Uej"
+    .line 296
+    const-string/jumbo v0, "MicroMsg.SnsUploadUI"
 
     const-string/jumbo v1, "KEYBOARD_STATE_HIDE"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

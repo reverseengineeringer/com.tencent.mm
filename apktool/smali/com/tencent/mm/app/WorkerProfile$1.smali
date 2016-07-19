@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic amC:Lcom/tencent/mm/app/WorkerProfile;
+.field final synthetic Zr:Lcom/tencent/mm/app/WorkerProfile;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 363
-    iput-object p1, p0, Lcom/tencent/mm/app/WorkerProfile$1;->amC:Lcom/tencent/mm/app/WorkerProfile;
+    .line 385
+    iput-object p1, p0, Lcom/tencent/mm/app/WorkerProfile$1;->Zr:Lcom/tencent/mm/app/WorkerProfile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,14 +40,14 @@
     .locals 1
 
     .prologue
-    .line 408
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aUC()Lcom/tencent/mm/sdk/platformtools/u$a;
+    .line 430
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->aZG()Lcom/tencent/mm/sdk/platformtools/v$a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/sdk/platformtools/u$a;->appenderClose()V
+    invoke-interface {v0}, Lcom/tencent/mm/sdk/platformtools/v$a;->appenderClose()V
 
-    .line 409
+    .line 431
     return-void
 .end method
 
@@ -55,14 +55,14 @@
     .locals 1
 
     .prologue
-    .line 403
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aUC()Lcom/tencent/mm/sdk/platformtools/u$a;
+    .line 425
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->aZG()Lcom/tencent/mm/sdk/platformtools/v$a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/sdk/platformtools/u$a;->appenderFlush()V
+    invoke-interface {v0}, Lcom/tencent/mm/sdk/platformtools/v$a;->appenderFlush()V
 
-    .line 404
+    .line 426
     return-void
 .end method
 
@@ -70,12 +70,12 @@
     .locals 1
 
     .prologue
-    .line 398
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aUC()Lcom/tencent/mm/sdk/platformtools/u$a;
+    .line 420
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->aZG()Lcom/tencent/mm/sdk/platformtools/v$a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/sdk/platformtools/u$a;->getLogLevel()I
+    invoke-interface {v0}, Lcom/tencent/mm/sdk/platformtools/v$a;->getLogLevel()I
 
     move-result v0
 
@@ -83,11 +83,11 @@
 .end method
 
 .method public final logD(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
-    .locals 11
+    .locals 12
 
     .prologue
-    .line 393
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aUC()Lcom/tencent/mm/sdk/platformtools/u$a;
+    .line 415
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->aZG()Lcom/tencent/mm/sdk/platformtools/v$a;
 
     move-result-object v0
 
@@ -97,7 +97,7 @@
 
     move-object v3, p3
 
-    move v4, p4
+    move/from16 v4, p4
 
     move/from16 v5, p5
 
@@ -107,18 +107,18 @@
 
     move-object/from16 v10, p10
 
-    invoke-interface/range {v0 .. v10}, Lcom/tencent/mm/sdk/platformtools/u$a;->logD(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
+    invoke-interface/range {v0 .. v10}, Lcom/tencent/mm/sdk/platformtools/v$a;->logD(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
 
-    .line 394
+    .line 416
     return-void
 .end method
 
 .method public final logE(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
-    .locals 11
+    .locals 12
 
     .prologue
-    .line 388
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aUC()Lcom/tencent/mm/sdk/platformtools/u$a;
+    .line 410
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->aZG()Lcom/tencent/mm/sdk/platformtools/v$a;
 
     move-result-object v0
 
@@ -128,7 +128,7 @@
 
     move-object v3, p3
 
-    move v4, p4
+    move/from16 v4, p4
 
     move/from16 v5, p5
 
@@ -138,18 +138,18 @@
 
     move-object/from16 v10, p10
 
-    invoke-interface/range {v0 .. v10}, Lcom/tencent/mm/sdk/platformtools/u$a;->logE(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
+    invoke-interface/range {v0 .. v10}, Lcom/tencent/mm/sdk/platformtools/v$a;->logE(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
 
-    .line 389
+    .line 411
     return-void
 .end method
 
 .method public final logF(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
-    .locals 11
+    .locals 12
 
     .prologue
-    .line 383
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aUC()Lcom/tencent/mm/sdk/platformtools/u$a;
+    .line 405
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->aZG()Lcom/tencent/mm/sdk/platformtools/v$a;
 
     move-result-object v0
 
@@ -159,7 +159,7 @@
 
     move-object v3, p3
 
-    move v4, p4
+    move/from16 v4, p4
 
     move/from16 v5, p5
 
@@ -169,18 +169,18 @@
 
     move-object/from16 v10, p10
 
-    invoke-interface/range {v0 .. v10}, Lcom/tencent/mm/sdk/platformtools/u$a;->logF(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
+    invoke-interface/range {v0 .. v10}, Lcom/tencent/mm/sdk/platformtools/v$a;->logF(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
 
-    .line 384
+    .line 406
     return-void
 .end method
 
 .method public final logI(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
-    .locals 11
+    .locals 12
 
     .prologue
-    .line 378
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aUC()Lcom/tencent/mm/sdk/platformtools/u$a;
+    .line 400
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->aZG()Lcom/tencent/mm/sdk/platformtools/v$a;
 
     move-result-object v0
 
@@ -190,7 +190,7 @@
 
     move-object v3, p3
 
-    move v4, p4
+    move/from16 v4, p4
 
     move/from16 v5, p5
 
@@ -200,18 +200,18 @@
 
     move-object/from16 v10, p10
 
-    invoke-interface/range {v0 .. v10}, Lcom/tencent/mm/sdk/platformtools/u$a;->logI(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
+    invoke-interface/range {v0 .. v10}, Lcom/tencent/mm/sdk/platformtools/v$a;->logI(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
 
-    .line 379
+    .line 401
     return-void
 .end method
 
 .method public final logV(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
-    .locals 11
+    .locals 12
 
     .prologue
-    .line 372
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aUC()Lcom/tencent/mm/sdk/platformtools/u$a;
+    .line 394
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->aZG()Lcom/tencent/mm/sdk/platformtools/v$a;
 
     move-result-object v0
 
@@ -221,7 +221,7 @@
 
     move-object v3, p3
 
-    move v4, p4
+    move/from16 v4, p4
 
     move/from16 v5, p5
 
@@ -231,18 +231,18 @@
 
     move-object/from16 v10, p10
 
-    invoke-interface/range {v0 .. v10}, Lcom/tencent/mm/sdk/platformtools/u$a;->logV(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
+    invoke-interface/range {v0 .. v10}, Lcom/tencent/mm/sdk/platformtools/v$a;->logV(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
 
-    .line 374
+    .line 396
     return-void
 .end method
 
 .method public final logW(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
-    .locals 11
+    .locals 12
 
     .prologue
-    .line 367
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aUC()Lcom/tencent/mm/sdk/platformtools/u$a;
+    .line 389
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->aZG()Lcom/tencent/mm/sdk/platformtools/v$a;
 
     move-result-object v0
 
@@ -252,7 +252,7 @@
 
     move-object v3, p3
 
-    move v4, p4
+    move/from16 v4, p4
 
     move/from16 v5, p5
 
@@ -262,8 +262,8 @@
 
     move-object/from16 v10, p10
 
-    invoke-interface/range {v0 .. v10}, Lcom/tencent/mm/sdk/platformtools/u$a;->logW(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
+    invoke-interface/range {v0 .. v10}, Lcom/tencent/mm/sdk/platformtools/v$a;->logW(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
 
-    .line 368
+    .line 390
     return-void
 .end method

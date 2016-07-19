@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic lix:[I
+.field static final synthetic lII:[I
 
 
 # direct methods
@@ -32,12 +32,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/tencent/mm/ui/contact/b$3;->lix:[I
+    sput-object v0, Lcom/tencent/mm/ui/contact/b$3;->lII:[I
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/ui/contact/b$3;->lix:[I
+    sget-object v0, Lcom/tencent/mm/ui/contact/b$3;->lII:[I
 
-    sget-object v1, Lcom/tencent/mm/ui/contact/b$a;->liy:Lcom/tencent/mm/ui/contact/b$a;
+    sget-object v1, Lcom/tencent/mm/ui/contact/b$a;->lIJ:Lcom/tencent/mm/ui/contact/b$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/contact/b$a;->ordinal()I
 
@@ -51,9 +51,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/tencent/mm/ui/contact/b$3;->lix:[I
+    sget-object v0, Lcom/tencent/mm/ui/contact/b$3;->lII:[I
 
-    sget-object v1, Lcom/tencent/mm/ui/contact/b$a;->liz:Lcom/tencent/mm/ui/contact/b$a;
+    sget-object v1, Lcom/tencent/mm/ui/contact/b$a;->lIK:Lcom/tencent/mm/ui/contact/b$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/contact/b$a;->ordinal()I
 
@@ -67,9 +67,9 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/tencent/mm/ui/contact/b$3;->lix:[I
+    sget-object v0, Lcom/tencent/mm/ui/contact/b$3;->lII:[I
 
-    sget-object v1, Lcom/tencent/mm/ui/contact/b$a;->liA:Lcom/tencent/mm/ui/contact/b$a;
+    sget-object v1, Lcom/tencent/mm/ui/contact/b$a;->lIL:Lcom/tencent/mm/ui/contact/b$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/contact/b$a;->ordinal()I
 

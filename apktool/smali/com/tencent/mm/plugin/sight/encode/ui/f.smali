@@ -15,39 +15,39 @@
 
 
 # static fields
-.field private static gDw:I
+.field private static gJX:I
 
 
 # instance fields
-.field brz:Landroid/hardware/Camera;
+.field bfz:Landroid/hardware/Camera;
 
-.field private dAV:Landroid/hardware/SensorManager;
+.field private dCo:Landroid/hardware/SensorManager;
 
-.field gAC:Landroid/hardware/Camera$PreviewCallback;
+.field gHe:Landroid/hardware/Camera$PreviewCallback;
 
-.field private gDA:F
+.field gJT:Lcom/tencent/mm/pluginsdk/m/a;
 
-.field private gDB:F
+.field gJU:Z
 
-.field private gDC:[B
+.field gJV:Z
 
-.field private gDD:Z
+.field gJW:I
 
-.field gDE:Lcom/tencent/mm/plugin/sight/encode/ui/f$a;
+.field gJY:Lcom/tencent/mm/compatible/d/c$a$a;
 
-.field gDs:Lcom/tencent/mm/pluginsdk/l/a;
+.field private gJZ:Landroid/hardware/Sensor;
 
-.field gDt:Z
+.field private gKa:F
 
-.field gDu:Z
+.field private gKb:F
 
-.field gDv:I
+.field private gKc:F
 
-.field gDx:Lcom/tencent/mm/compatible/d/c$a$a;
+.field private gKd:[B
 
-.field private gDy:Landroid/hardware/Sensor;
+.field private gKe:Z
 
-.field private gDz:F
+.field gKf:Lcom/tencent/mm/plugin/sight/encode/ui/f$a;
 
 .field private mContext:Landroid/content/Context;
 
@@ -60,7 +60,7 @@
     .line 60
     const v0, 0x7fffffff
 
-    sput v0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDw:I
+    sput v0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJX:I
 
     return-void
 .end method
@@ -79,34 +79,34 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 54
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDt:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJU:Z
 
     .line 56
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     .line 57
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDu:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJV:Z
 
     .line 59
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDv:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJW:I
 
     .line 67
-    iput v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDz:F
+    iput v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKa:F
 
     .line 68
-    iput v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDA:F
+    iput v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKb:F
 
     .line 69
-    iput v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDB:F
+    iput v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKc:F
 
     .line 72
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gAC:Landroid/hardware/Camera$PreviewCallback;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gHe:Landroid/hardware/Camera$PreviewCallback;
 
     .line 74
     iput-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->mContext:Landroid/content/Context;
 
     .line 492
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDD:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKe:Z
 
     .line 840
     new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/f$a;
@@ -117,14 +117,14 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/f$a;-><init>(Landroid/os/Looper;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDE:Lcom/tencent/mm/plugin/sight/encode/ui/f$a;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKf:Lcom/tencent/mm/plugin/sight/encode/ui/f$a;
 
     .line 78
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/l/a;->aQH()Lcom/tencent/mm/pluginsdk/l/a;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/m/a;->aVr()Lcom/tencent/mm/pluginsdk/m/a;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDs:Lcom/tencent/mm/pluginsdk/l/a;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJT:Lcom/tencent/mm/pluginsdk/m/a;
 
     .line 79
     return-void
@@ -135,7 +135,7 @@
 
     .prologue
     .line 49
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gAC:Landroid/hardware/Camera$PreviewCallback;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gHe:Landroid/hardware/Camera$PreviewCallback;
 
     return-object v0
 .end method
@@ -167,7 +167,7 @@
     move-result-object v7
 
     .line 210
-    iget-object v8, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDs:Lcom/tencent/mm/pluginsdk/l/a;
+    iget-object v8, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJT:Lcom/tencent/mm/pluginsdk/m/a;
 
     const v3, 0x7fffffff
 
@@ -177,11 +177,11 @@
 
     if-nez v0, :cond_7
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v0, "MicroMsg.SightCamera"
 
     const-string/jumbo v2, "getFitRecordSize getSupportedVideoSizes null, use getSupportedPreviewSizes instead"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {v7}, Lcom/tencent/mm/compatible/d/c;->a(Landroid/hardware/Camera$Parameters;)Ljava/util/List;
 
@@ -219,7 +219,7 @@
 
     iget v10, v0, Landroid/hardware/Camera$Size;->width:I
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v0, "MicroMsg.SightCamera"
 
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -245,23 +245,23 @@
 
     move-result-object v11
 
-    invoke-static {v0, v11}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v11}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     mul-int v0, v9, v10
 
-    iget v11, v8, Lcom/tencent/mm/pluginsdk/l/a;->iFp:I
+    iget v11, v8, Lcom/tencent/mm/pluginsdk/m/a;->jck:I
 
     if-lt v10, v11, :cond_6
 
-    iget v11, v8, Lcom/tencent/mm/pluginsdk/l/a;->iFq:I
+    iget v11, v8, Lcom/tencent/mm/pluginsdk/m/a;->jcl:I
 
     if-lt v9, v11, :cond_6
 
     if-ge v0, v3, :cond_6
 
-    iput v10, v8, Lcom/tencent/mm/pluginsdk/l/a;->iFn:I
+    iput v10, v8, Lcom/tencent/mm/pluginsdk/m/a;->jci:I
 
-    iput v9, v8, Lcom/tencent/mm/pluginsdk/l/a;->iFm:I
+    iput v9, v8, Lcom/tencent/mm/pluginsdk/m/a;->jch:I
 
     move v2, v0
 
@@ -287,15 +287,15 @@
 
     iget v2, v0, Landroid/hardware/Camera$Size;->height:I
 
-    iput v2, v8, Lcom/tencent/mm/pluginsdk/l/a;->iFm:I
+    iput v2, v8, Lcom/tencent/mm/pluginsdk/m/a;->jch:I
 
     iget v0, v0, Landroid/hardware/Camera$Size;->width:I
 
-    iput v0, v8, Lcom/tencent/mm/pluginsdk/l/a;->iFn:I
+    iput v0, v8, Lcom/tencent/mm/pluginsdk/m/a;->jci:I
 
     :cond_2
     :goto_4
-    const-string/jumbo v0, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v0, "MicroMsg.SightCamera"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -303,7 +303,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v3, v8, Lcom/tencent/mm/pluginsdk/l/a;->brw:I
+    iget v3, v8, Lcom/tencent/mm/pluginsdk/m/a;->bfw:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -315,7 +315,7 @@
 
     move-result-object v2
 
-    iget v3, v8, Lcom/tencent/mm/pluginsdk/l/a;->iFn:I
+    iget v3, v8, Lcom/tencent/mm/pluginsdk/m/a;->jci:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -327,7 +327,7 @@
 
     move-result-object v2
 
-    iget v3, v8, Lcom/tencent/mm/pluginsdk/l/a;->iFm:I
+    iget v3, v8, Lcom/tencent/mm/pluginsdk/m/a;->jch:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -337,15 +337,15 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget v0, Lcom/tencent/mm/pluginsdk/l/a;->iFl:I
+    sget v0, Lcom/tencent/mm/pluginsdk/m/a;->jcg:I
 
-    iget v2, v8, Lcom/tencent/mm/pluginsdk/l/a;->iFn:I
+    iget v2, v8, Lcom/tencent/mm/pluginsdk/m/a;->jci:I
 
     if-eq v0, v2, :cond_3
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v0, "MicroMsg.SightCamera"
 
     const-string/jumbo v2, "TARGET WIDTH %d, CURRENT WIDTH %d"
 
@@ -355,7 +355,7 @@
 
     const/4 v5, 0x0
 
-    sget v6, Lcom/tencent/mm/pluginsdk/l/a;->iFl:I
+    sget v6, Lcom/tencent/mm/pluginsdk/m/a;->jcg:I
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -365,7 +365,7 @@
 
     const/4 v5, 0x1
 
-    iget v6, v8, Lcom/tencent/mm/pluginsdk/l/a;->iFn:I
+    iget v6, v8, Lcom/tencent/mm/pluginsdk/m/a;->jci:I
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -373,20 +373,20 @@
 
     aput-object v6, v3, v5
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget v0, v8, Lcom/tencent/mm/pluginsdk/l/a;->iFn:I
+    iget v0, v8, Lcom/tencent/mm/pluginsdk/m/a;->jci:I
 
-    sput v0, Lcom/tencent/mm/pluginsdk/l/a;->iFl:I
+    sput v0, Lcom/tencent/mm/pluginsdk/m/a;->jcg:I
 
     :cond_3
-    sget v0, Lcom/tencent/mm/pluginsdk/l/a;->iFk:I
+    sget v0, Lcom/tencent/mm/pluginsdk/m/a;->jcf:I
 
-    iget v2, v8, Lcom/tencent/mm/pluginsdk/l/a;->iFm:I
+    iget v2, v8, Lcom/tencent/mm/pluginsdk/m/a;->jch:I
 
     if-eq v0, v2, :cond_4
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v0, "MicroMsg.SightCamera"
 
     const-string/jumbo v2, "TARGET HEIGHT %d, CURRENT HEIGHT %d"
 
@@ -396,7 +396,7 @@
 
     const/4 v5, 0x0
 
-    sget v6, Lcom/tencent/mm/pluginsdk/l/a;->iFk:I
+    sget v6, Lcom/tencent/mm/pluginsdk/m/a;->jcf:I
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -406,7 +406,7 @@
 
     const/4 v5, 0x1
 
-    iget v6, v8, Lcom/tencent/mm/pluginsdk/l/a;->iFm:I
+    iget v6, v8, Lcom/tencent/mm/pluginsdk/m/a;->jch:I
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -414,21 +414,21 @@
 
     aput-object v6, v3, v5
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget v0, v8, Lcom/tencent/mm/pluginsdk/l/a;->iFm:I
+    iget v0, v8, Lcom/tencent/mm/pluginsdk/m/a;->jch:I
 
-    sput v0, Lcom/tencent/mm/pluginsdk/l/a;->iFk:I
+    sput v0, Lcom/tencent/mm/pluginsdk/m/a;->jcf:I
 
     .line 211
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDs:Lcom/tencent/mm/pluginsdk/l/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJT:Lcom/tencent/mm/pluginsdk/m/a;
 
-    iget v0, v0, Lcom/tencent/mm/pluginsdk/l/a;->iFn:I
+    iget v0, v0, Lcom/tencent/mm/pluginsdk/m/a;->jci:I
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDs:Lcom/tencent/mm/pluginsdk/l/a;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJT:Lcom/tencent/mm/pluginsdk/m/a;
 
-    iget v2, v2, Lcom/tencent/mm/pluginsdk/l/a;->iFm:I
+    iget v2, v2, Lcom/tencent/mm/pluginsdk/m/a;->jch:I
 
     invoke-virtual {v7, v0, v2}, Landroid/hardware/Camera$Parameters;->setPreviewSize(II)V
 
@@ -444,7 +444,7 @@
     move-exception v0
 
     .line 214
-    const-string/jumbo v2, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v2, "MicroMsg.SightCamera"
 
     const-string/jumbo v3, "setPreviewSize Exception, %s, %s"
 
@@ -462,7 +462,7 @@
 
     aput-object v0, v5, v1
 
-    invoke-static {v2, v3, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v1, v4
 
@@ -478,11 +478,11 @@
 
     iget v2, v0, Landroid/hardware/Camera$Size;->height:I
 
-    iput v2, v8, Lcom/tencent/mm/pluginsdk/l/a;->iFm:I
+    iput v2, v8, Lcom/tencent/mm/pluginsdk/m/a;->jch:I
 
     iget v0, v0, Landroid/hardware/Camera$Size;->width:I
 
-    iput v0, v8, Lcom/tencent/mm/pluginsdk/l/a;->iFn:I
+    iput v0, v8, Lcom/tencent/mm/pluginsdk/m/a;->jci:I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -526,17 +526,17 @@
     if-eqz p1, :cond_3
 
     .line 253
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->brh:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bfh:I
 
     if-lez v0, :cond_2
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v0, "MicroMsg.SightCamera"
 
     const-string/jumbo v1, "set frame rate > 0, do not try set preview frame rate"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 257
     :cond_1
@@ -546,7 +546,7 @@
     move-result-object v0
 
     .line 258
-    const-string/jumbo v1, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v1, "MicroMsg.SightCamera"
 
     const-string/jumbo v2, "use fix mode %B, supported preview frame rates %s"
 
@@ -566,7 +566,7 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 259
     invoke-virtual {p0, v6}, Landroid/hardware/Camera;->setParameters(Landroid/hardware/Camera$Parameters;)V
@@ -603,7 +603,7 @@
 
     invoke-virtual {v6, v0}, Landroid/hardware/Camera$Parameters;->setPreviewFrameRate(I)V
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v1, "MicroMsg.SightCamera"
 
     const-string/jumbo v2, "set preview frame rate %d"
 
@@ -619,7 +619,7 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -629,7 +629,7 @@
     move-exception v0
 
     :try_start_2
-    const-string/jumbo v1, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v1, "MicroMsg.SightCamera"
 
     const-string/jumbo v2, "trySetPreviewFrameRateParameters Exception, %s, %s"
 
@@ -653,7 +653,7 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
@@ -664,7 +664,7 @@
     move-exception v0
 
     .line 261
-    const-string/jumbo v1, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v1, "MicroMsg.SightCamera"
 
     const-string/jumbo v2, "setPreviewFrameRate Exception, %s, %s"
 
@@ -688,7 +688,7 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 262
     const/4 v0, 0x0
@@ -698,17 +698,17 @@
     .line 255
     :cond_3
     :try_start_3
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->brh:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bfh:I
 
     if-lez v0, :cond_4
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v0, "MicroMsg.SightCamera"
 
     const-string/jumbo v1, "set frame rate > 0, do not try set preview fps range"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -764,7 +764,7 @@
 
     aget v0, v0, v9
 
-    const-string/jumbo v9, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v9, "MicroMsg.SightCamera"
 
     const-string/jumbo v10, "dkfps %d:[%d %d]"
 
@@ -796,7 +796,7 @@
 
     aput-object v13, v11, v12
 
-    invoke-static {v9, v10, v11}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v9, v10, v11}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     if-ltz v4, :cond_7
 
@@ -835,7 +835,7 @@
     goto :goto_2
 
     :cond_6
-    const-string/jumbo v0, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v0, "MicroMsg.SightCamera"
 
     const-string/jumbo v1, "dkfps get fit  [%d %d], max target fps %d"
 
@@ -869,7 +869,7 @@
 
     aput-object v7, v4, v5
 
-    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
@@ -884,7 +884,7 @@
     :try_start_4
     invoke-virtual {v6, v3, v2}, Landroid/hardware/Camera$Parameters;->setPreviewFpsRange(II)V
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v0, "MicroMsg.SightCamera"
 
     const-string/jumbo v1, "set fps range %d %d"
 
@@ -908,7 +908,7 @@
 
     aput-object v2, v4, v3
 
-    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
 
@@ -918,7 +918,7 @@
     move-exception v0
 
     :try_start_5
-    const-string/jumbo v1, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v1, "MicroMsg.SightCamera"
 
     const-string/jumbo v2, "trySetPreviewFpsRangeParameters Exception, %s, %s"
 
@@ -942,7 +942,7 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
 
@@ -979,11 +979,11 @@
     .line 228
     :cond_0
     :try_start_0
-    const-string/jumbo v2, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v2, "MicroMsg.SightCamera"
 
     const-string/jumbo v3, "safeSetMetering"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 229
     invoke-virtual {p0}, Landroid/hardware/Camera;->getParameters()Landroid/hardware/Camera$Parameters;
@@ -1043,7 +1043,7 @@
     move-exception v2
 
     .line 238
-    const-string/jumbo v3, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v3, "MicroMsg.SightCamera"
 
     const-string/jumbo v4, "safeSetMetering Exception, %s, %s"
 
@@ -1063,7 +1063,7 @@
 
     aput-object v2, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -1073,7 +1073,7 @@
 
     .prologue
     .line 49
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDC:[B
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKd:[B
 
     return-object v0
 .end method
@@ -1087,7 +1087,7 @@
     const/4 v3, 0x1
 
     .line 49
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDD:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKe:Z
 
     if-eq v3, v0, :cond_1
 
@@ -1105,34 +1105,34 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/compatible/e/b;->oR()Z
+    invoke-static {}, Lcom/tencent/mm/compatible/e/b;->ni()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     :cond_0
-    new-instance v0, Lcom/tencent/mm/d/a/im;
+    new-instance v0, Lcom/tencent/mm/e/a/ir;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/im;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/ir;-><init>()V
 
-    iget-object v1, v0, Lcom/tencent/mm/d/a/im;->aEu:Lcom/tencent/mm/d/a/im$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/ir;->aqy:Lcom/tencent/mm/e/a/ir$a;
 
     const/4 v2, 0x2
 
-    iput v2, v1, Lcom/tencent/mm/d/a/im$a;->type:I
+    iput v2, v1, Lcom/tencent/mm/e/a/ir$a;->type:I
 
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
-    iget-object v0, v0, Lcom/tencent/mm/d/a/im;->aEv:Lcom/tencent/mm/d/a/im$b;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/ir;->aqz:Lcom/tencent/mm/e/a/ir$b;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/d/a/im$b;->aEt:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/e/a/ir$b;->aqx:Z
 
     if-eqz v0, :cond_2
 
-    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDD:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKe:Z
 
     :cond_1
     :goto_0
@@ -1141,11 +1141,11 @@
     :cond_2
     iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0b0c6e
+    const v1, 0x7f081204
 
-    const v2, 0x7f0b0ddd
+    const v2, 0x7f080134
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->f(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
@@ -1157,7 +1157,7 @@
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->show()V
 
-    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDD:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKe:Z
 
     goto :goto_0
 .end method
@@ -1180,11 +1180,11 @@
     .line 274
     :cond_0
     :try_start_0
-    const-string/jumbo v2, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v2, "MicroMsg.SightCamera"
 
     const-string/jumbo v3, "safeSetPreviewFormat"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 275
     invoke-virtual {p0}, Landroid/hardware/Camera;->getParameters()Landroid/hardware/Camera$Parameters;
@@ -1213,11 +1213,11 @@
 
     .line 278
     :cond_1
-    const-string/jumbo v3, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v3, "MicroMsg.SightCamera"
 
     const-string/jumbo v4, "not support YCbCr_420_SP"
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 280
     :cond_2
@@ -1240,7 +1240,7 @@
     move-exception v2
 
     .line 284
-    const-string/jumbo v3, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v3, "MicroMsg.SightCamera"
 
     const-string/jumbo v4, "setPreviewFormat Exception, %s, %s"
 
@@ -1260,7 +1260,7 @@
 
     aput-object v2, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -1304,11 +1304,11 @@
     if-eqz v4, :cond_1
 
     .line 301
-    const-string/jumbo v3, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v3, "MicroMsg.SightCamera"
 
     const-string/jumbo v4, "support continuous video"
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 302
     const-string/jumbo v3, "continuous-video"
@@ -1337,11 +1337,11 @@
     if-eqz v3, :cond_2
 
     .line 304
-    const-string/jumbo v3, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v3, "MicroMsg.SightCamera"
 
     const-string/jumbo v4, "support auto focus"
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 305
     const-string/jumbo v3, "auto"
@@ -1357,7 +1357,7 @@
     move-exception v2
 
     .line 312
-    const-string/jumbo v3, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v3, "MicroMsg.SightCamera"
 
     const-string/jumbo v4, "setFocusMode Exception, %s, %s"
 
@@ -1377,18 +1377,18 @@
 
     aput-object v2, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 307
     :cond_2
     :try_start_1
-    const-string/jumbo v3, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v3, "MicroMsg.SightCamera"
 
     const-string/jumbo v4, "not support continuous video or auto focus"
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -1397,7 +1397,7 @@
 
 
 # virtual methods
-.method public final K(Landroid/app/Activity;)I
+.method public final F(Landroid/app/Activity;)I
     .locals 7
 
     .prologue
@@ -1406,17 +1406,17 @@
     const/4 v1, 0x0
 
     .line 910
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->brp:I
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->dAV:Landroid/hardware/SensorManager;
+    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bfp:I
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDy:Landroid/hardware/Sensor;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->dCo:Landroid/hardware/SensorManager;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJZ:Landroid/hardware/Sensor;
 
     if-nez v0, :cond_0
 
@@ -1429,43 +1429,43 @@
 
     check-cast v0, Landroid/hardware/SensorManager;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->dAV:Landroid/hardware/SensorManager;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->dCo:Landroid/hardware/SensorManager;
 
     .line 913
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->dAV:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->dCo:Landroid/hardware/SensorManager;
 
     invoke-virtual {v0, v6}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDy:Landroid/hardware/Sensor;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJZ:Landroid/hardware/Sensor;
 
     .line 916
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     if-nez v0, :cond_4
 
     .line 917
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/f;->awZ()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/f;->azy()V
 
     .line 921
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->brq:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bfq:I
 
     if-ltz v0, :cond_1
 
     .line 922
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->brq:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bfq:I
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDv:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJW:I
 
     .line 937
     :goto_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v0, "MicroMsg.SightCamera"
 
     const-string/jumbo v2, "ashu::use camera id %d, DeviceInfo id %d"
 
@@ -1473,7 +1473,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    iget v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDv:I
+    iget v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJW:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1481,9 +1481,9 @@
 
     aput-object v4, v3, v1
 
-    sget-object v4, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v4, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v4, v4, Lcom/tencent/mm/compatible/d/b;->brq:I
+    iget v4, v4, Lcom/tencent/mm/compatible/d/b;->bfq:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1491,10 +1491,10 @@
 
     aput-object v4, v3, v6
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 939
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDD:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKe:Z
 
     .line 941
     iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->mContext:Landroid/content/Context;
@@ -1504,16 +1504,16 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/e;-><init>()V
 
-    iget v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDv:I
+    iget v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJW:I
 
-    invoke-virtual {v0, p1, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/e;->a(Landroid/app/Activity;I)Lcom/tencent/mm/compatible/d/c$a$a;
+    invoke-virtual {v0, p1, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/e;->b(Landroid/app/Activity;I)Lcom/tencent/mm/compatible/d/c$a$a;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDx:Lcom/tencent/mm/compatible/d/c$a$a;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJY:Lcom/tencent/mm/compatible/d/c$a$a;
 
     .line 944
-    const-string/jumbo v0, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v0, "MicroMsg.SightCamera"
 
     const-string/jumbo v2, "ashu::open camera end, %s"
 
@@ -1525,15 +1525,15 @@
 
     aput-object v4, v3, v1
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 945
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDx:Lcom/tencent/mm/compatible/d/c$a$a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJY:Lcom/tencent/mm/compatible/d/c$a$a;
 
     if-nez v0, :cond_3
 
     .line 946
-    const-string/jumbo v0, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v0, "MicroMsg.SightCamera"
 
     const-string/jumbo v2, "ashu::open camera FAILED, %s"
 
@@ -1545,10 +1545,10 @@
 
     aput-object v4, v3, v1
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 947
-    invoke-static {}, Lcom/tencent/mm/compatible/util/f;->oX()I
+    invoke-static {}, Lcom/tencent/mm/compatible/util/f;->np()I
 
     move-result v0
 
@@ -1562,23 +1562,23 @@
     :cond_1
     const v0, 0x7fffffff
 
-    sget v2, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDw:I
+    sget v2, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJX:I
 
     if-eq v0, v2, :cond_2
 
     .line 925
-    sget v0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDw:I
+    sget v0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJX:I
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDv:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJW:I
 
     .line 926
-    const-string/jumbo v0, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v0, "MicroMsg.SightCamera"
 
     const-string/jumbo v2, "ashu:: use last check camera id %d"
 
     new-array v3, v6, [Ljava/lang/Object;
 
-    iget v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDv:I
+    iget v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJW:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1586,23 +1586,23 @@
 
     aput-object v4, v3, v1
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 929
     :cond_2
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/compatible/d/c;->of()I
+    invoke-static {}, Lcom/tencent/mm/compatible/d/c;->mv()I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDv:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJW:I
 
     .line 930
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDv:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJW:I
 
-    sput v0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDw:I
+    sput v0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJX:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1613,7 +1613,7 @@
     move-exception v0
 
     .line 932
-    const-string/jumbo v2, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v2, "MicroMsg.SightCamera"
 
     const-string/jumbo v3, "try to get back cameraid error %s"
 
@@ -1625,49 +1625,49 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 933
-    iput v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDv:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJW:I
 
     goto/16 :goto_0
 
     .line 949
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDx:Lcom/tencent/mm/compatible/d/c$a$a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJY:Lcom/tencent/mm/compatible/d/c$a$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/compatible/d/c$a$a;->brz:Landroid/hardware/Camera;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/d/c$a$a;->bfz:Landroid/hardware/Camera;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     .line 951
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDE:Lcom/tencent/mm/plugin/sight/encode/ui/f$a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKf:Lcom/tencent/mm/plugin/sight/encode/ui/f$a;
 
-    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sight/encode/ui/f$a;->gDI:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sight/encode/ui/f$a;->gKj:Z
 
     .line 953
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDs:Lcom/tencent/mm/pluginsdk/l/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJT:Lcom/tencent/mm/pluginsdk/m/a;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDx:Lcom/tencent/mm/compatible/d/c$a$a;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJY:Lcom/tencent/mm/compatible/d/c$a$a;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/c$a$a;->brw:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/c$a$a;->bfw:I
 
-    iput v2, v0, Lcom/tencent/mm/pluginsdk/l/a;->brw:I
+    iput v2, v0, Lcom/tencent/mm/pluginsdk/m/a;->bfw:I
 
     .line 954
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     if-nez v0, :cond_4
 
     .line 955
-    const-string/jumbo v0, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v0, "MicroMsg.SightCamera"
 
     const-string/jumbo v1, "start camera FAILED!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 956
-    invoke-static {}, Lcom/tencent/mm/compatible/util/f;->oX()I
+    invoke-static {}, Lcom/tencent/mm/compatible/util/f;->np()I
 
     move-result v0
 
@@ -1697,18 +1697,18 @@
     const/4 v3, 0x1
 
     .line 321
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gq()J
 
     move-result-wide v4
 
     .line 322
-    const-string/jumbo v0, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v0, "MicroMsg.SightCamera"
 
     const-string/jumbo v2, "ashu::start preview, previewing %B, %s"
 
     new-array v6, v10, [Ljava/lang/Object;
 
-    iget-boolean v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDu:Z
+    iget-boolean v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJV:Z
 
     invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -1722,10 +1722,10 @@
 
     aput-object v7, v6, v3
 
-    invoke-static {v0, v2, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 323
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDu:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJV:Z
 
     if-eqz v0, :cond_0
 
@@ -1740,7 +1740,7 @@
     if-nez p1, :cond_1
 
     .line 327
-    invoke-static {}, Lcom/tencent/mm/compatible/util/f;->oX()I
+    invoke-static {}, Lcom/tencent/mm/compatible/util/f;->np()I
 
     move-result v0
 
@@ -1751,16 +1751,16 @@
     .line 332
     :cond_1
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/f;->a(Landroid/hardware/Camera;)Z
 
     .line 334
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -1779,7 +1779,7 @@
     check-cast v0, Ljava/lang/Integer;
 
     .line 336
-    const-string/jumbo v6, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v6, "MicroMsg.SightCamera"
 
     const-string/jumbo v7, "startPreview Holder:: sightTest %s, config list: setFPS[%s], setYUV420SP[%B], useMetering[%B], useContinueFocus[%B]"
 
@@ -1793,9 +1793,9 @@
 
     const/4 v9, 0x1
 
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->brm:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfm:I
 
     if-ne v2, v3, :cond_c
 
@@ -1806,9 +1806,9 @@
 
     const/4 v9, 0x2
 
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->brn:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfn:I
 
     if-ne v2, v3, :cond_e
 
@@ -1823,9 +1823,9 @@
 
     const/4 v9, 0x3
 
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bro:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfo:I
 
     if-ne v2, v3, :cond_f
 
@@ -1840,9 +1840,9 @@
 
     const/4 v9, 0x4
 
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->brp:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfp:I
 
     if-ne v2, v3, :cond_10
 
@@ -1855,12 +1855,12 @@
 
     aput-object v2, v8, v9
 
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 344
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->brm:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfm:I
 
     if-ne v2, v3, :cond_11
 
@@ -1878,7 +1878,7 @@
 
     .line 345
     :cond_2
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     const/4 v6, 0x0
 
@@ -1887,9 +1887,9 @@
     .line 350
     :cond_3
     :goto_5
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->brn:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfn:I
 
     if-ne v2, v3, :cond_5
 
@@ -1907,15 +1907,15 @@
 
     .line 351
     :cond_4
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/sight/encode/ui/f;->c(Landroid/hardware/Camera;)Z
 
     .line 354
     :cond_5
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bro:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfo:I
 
     if-ne v2, v3, :cond_7
 
@@ -1935,22 +1935,22 @@
     :cond_6
     const/16 v2, 0xe
 
-    invoke-static {v2}, Lcom/tencent/mm/compatible/util/c;->bW(I)Z
+    invoke-static {v2}, Lcom/tencent/mm/compatible/util/c;->co(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_7
 
     .line 357
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/sight/encode/ui/f;->b(Landroid/hardware/Camera;)Z
 
     .line 361
     :cond_7
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->brp:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfp:I
 
     if-ne v2, v3, :cond_9
 
@@ -1968,31 +1968,31 @@
 
     .line 362
     :cond_8
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/f;->d(Landroid/hardware/Camera;)Z
 
     .line 365
     :cond_9
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     invoke-virtual {v0}, Landroid/hardware/Camera;->getParameters()Landroid/hardware/Camera$Parameters;
 
     move-result-object v0
 
     .line 366
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gAC:Landroid/hardware/Camera$PreviewCallback;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gHe:Landroid/hardware/Camera$PreviewCallback;
 
     if-eqz v2, :cond_a
 
     .line 367
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDs:Lcom/tencent/mm/pluginsdk/l/a;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJT:Lcom/tencent/mm/pluginsdk/m/a;
 
-    iget v2, v2, Lcom/tencent/mm/pluginsdk/l/a;->iFn:I
+    iget v2, v2, Lcom/tencent/mm/pluginsdk/m/a;->jci:I
 
-    iget-object v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDs:Lcom/tencent/mm/pluginsdk/l/a;
+    iget-object v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJT:Lcom/tencent/mm/pluginsdk/m/a;
 
-    iget v6, v6, Lcom/tencent/mm/pluginsdk/l/a;->iFm:I
+    iget v6, v6, Lcom/tencent/mm/pluginsdk/m/a;->jch:I
 
     mul-int/2addr v2, v6
 
@@ -2012,17 +2012,17 @@
     .line 369
     new-array v0, v0, [B
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDC:[B
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKd:[B
 
     .line 370
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDC:[B
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKd:[B
 
     invoke-virtual {v0, v2}, Landroid/hardware/Camera;->addCallbackBuffer([B)V
 
     .line 371
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     new-instance v2, Lcom/tencent/mm/plugin/sight/encode/ui/f$1;
 
@@ -2032,51 +2032,51 @@
 
     .line 385
     :cond_a
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     invoke-virtual {v0, p1}, Landroid/hardware/Camera;->setPreviewDisplay(Landroid/view/SurfaceHolder;)V
 
     .line 386
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     invoke-virtual {v0}, Landroid/hardware/Camera;->startPreview()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 393
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->brp:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bfp:I
 
     if-nez v0, :cond_b
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->dAV:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->dCo:Landroid/hardware/SensorManager;
 
     if-eqz v0, :cond_b
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDy:Landroid/hardware/Sensor;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJZ:Landroid/hardware/Sensor;
 
     if-eqz v0, :cond_b
 
     .line 395
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->dAV:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->dCo:Landroid/hardware/SensorManager;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDy:Landroid/hardware/Sensor;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJZ:Landroid/hardware/Sensor;
 
     invoke-virtual {v0, p0, v2, v10}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
     .line 398
     :cond_b
-    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDu:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJV:Z
 
     .line 399
-    const-string/jumbo v0, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v0, "MicroMsg.SightCamera"
 
     const-string/jumbo v2, "ashu::start preview end, use %dms %s"
 
     new-array v6, v10, [Ljava/lang/Object;
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/ay;->ao(J)J
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/be;->av(J)J
 
     move-result-wide v4
 
@@ -2092,7 +2092,7 @@
 
     aput-object v4, v6, v3
 
-    invoke-static {v0, v2, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -2102,9 +2102,9 @@
     .line 336
     :cond_c
     :try_start_1
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->brl:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfl:I
 
     if-ne v2, v3, :cond_d
 
@@ -2134,9 +2134,9 @@
 
     .line 346
     :cond_11
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->brl:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfl:I
 
     if-ne v2, v3, :cond_3
 
@@ -2156,7 +2156,7 @@
 
     .line 347
     :cond_12
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     const/4 v6, 0x1
 
@@ -2171,7 +2171,7 @@
     move-exception v0
 
     .line 388
-    const-string/jumbo v2, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v2, "MicroMsg.SightCamera"
 
     const-string/jumbo v4, "ashu::start preview FAILED, %s, %s"
 
@@ -2189,10 +2189,10 @@
 
     aput-object v0, v5, v3
 
-    invoke-static {v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 390
-    invoke-static {}, Lcom/tencent/mm/compatible/util/f;->oX()I
+    invoke-static {}, Lcom/tencent/mm/compatible/util/f;->np()I
 
     move-result v0
 
@@ -2201,7 +2201,7 @@
     goto/16 :goto_0
 .end method
 
-.method final awZ()V
+.method final azy()V
     .locals 10
 
     .prologue
@@ -2214,32 +2214,32 @@
     const/4 v6, 0x0
 
     .line 90
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->dAV:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->dCo:Landroid/hardware/SensorManager;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDy:Landroid/hardware/Sensor;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJZ:Landroid/hardware/Sensor;
 
     if-eqz v0, :cond_0
 
     .line 91
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->dAV:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->dCo:Landroid/hardware/SensorManager;
 
     invoke-virtual {v0, p0}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
     .line 94
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     if-eqz v0, :cond_1
 
     .line 95
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gq()J
 
     move-result-wide v0
 
     .line 96
-    const-string/jumbo v2, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v2, "MicroMsg.SightCamera"
 
     const-string/jumbo v3, "ashu::release camera beg, %s"
 
@@ -2251,41 +2251,41 @@
 
     aput-object v5, v4, v6
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 97
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDE:Lcom/tencent/mm/plugin/sight/encode/ui/f$a;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKf:Lcom/tencent/mm/plugin/sight/encode/ui/f$a;
 
     invoke-virtual {v2, v7}, Lcom/tencent/mm/plugin/sight/encode/ui/f$a;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     .line 98
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDE:Lcom/tencent/mm/plugin/sight/encode/ui/f$a;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKf:Lcom/tencent/mm/plugin/sight/encode/ui/f$a;
 
-    iput-boolean v8, v2, Lcom/tencent/mm/plugin/sight/encode/ui/f$a;->gDI:Z
+    iput-boolean v8, v2, Lcom/tencent/mm/plugin/sight/encode/ui/f$a;->gKj:Z
 
     .line 99
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     invoke-virtual {v2, v7}, Landroid/hardware/Camera;->setPreviewCallback(Landroid/hardware/Camera$PreviewCallback;)V
 
     .line 100
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     invoke-virtual {v2}, Landroid/hardware/Camera;->stopPreview()V
 
     .line 101
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     invoke-virtual {v2}, Landroid/hardware/Camera;->release()V
 
     .line 102
-    iput-object v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iput-object v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     .line 103
-    iput-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDu:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJV:Z
 
     .line 104
-    const-string/jumbo v2, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v2, "MicroMsg.SightCamera"
 
     const-string/jumbo v3, "ashu::release camera end, use %dms, %s"
 
@@ -2293,7 +2293,7 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ao(J)J
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->av(J)J
 
     move-result-wide v0
 
@@ -2309,32 +2309,32 @@
 
     aput-object v0, v4, v8
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 108
     :cond_1
-    iput-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDt:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJU:Z
 
     .line 109
-    iput v9, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDz:F
+    iput v9, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKa:F
 
     .line 110
-    iput v9, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDA:F
+    iput v9, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKb:F
 
     .line 111
-    iput v9, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDB:F
+    iput v9, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKc:F
 
     .line 112
-    sput-boolean v8, Lcom/tencent/mm/plugin/sight/encode/ui/f$a;->gDL:Z
+    sput-boolean v8, Lcom/tencent/mm/plugin/sight/encode/ui/f$a;->gKm:Z
 
     .line 114
     iput-object v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->mContext:Landroid/content/Context;
 
     .line 116
-    iput-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDD:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKe:Z
 
     .line 118
-    iput-object v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDC:[B
+    iput-object v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKd:[B
 
     .line 119
     return-void
@@ -2358,18 +2358,18 @@
     const/4 v3, 0x1
 
     .line 406
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gq()J
 
     move-result-wide v4
 
     .line 407
-    const-string/jumbo v0, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v0, "MicroMsg.SightCamera"
 
     const-string/jumbo v2, "ashu::start preview, previewing %B, %s"
 
     new-array v6, v10, [Ljava/lang/Object;
 
-    iget-boolean v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDu:Z
+    iget-boolean v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJV:Z
 
     invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -2383,10 +2383,10 @@
 
     aput-object v7, v6, v3
 
-    invoke-static {v0, v2, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 408
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDu:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJV:Z
 
     if-eqz v0, :cond_0
 
@@ -2401,7 +2401,7 @@
     if-nez p1, :cond_1
 
     .line 412
-    invoke-static {}, Lcom/tencent/mm/compatible/util/f;->oX()I
+    invoke-static {}, Lcom/tencent/mm/compatible/util/f;->np()I
 
     move-result v0
 
@@ -2411,7 +2411,7 @@
 
     .line 415
     :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v0, "MicroMsg.SightCamera"
 
     const-string/jumbo v2, "this texture %s"
 
@@ -2419,20 +2419,20 @@
 
     aput-object p1, v6, v1
 
-    invoke-static {v0, v2, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 419
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/f;->a(Landroid/hardware/Camera;)Z
 
     .line 421
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -2451,7 +2451,7 @@
     check-cast v0, Ljava/lang/Integer;
 
     .line 423
-    const-string/jumbo v6, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v6, "MicroMsg.SightCamera"
 
     const-string/jumbo v7, "startPreview Texture:: sightTest %s, config list: setFPS[%s], setYUV420SP[%B], useMetering[%B], useContinueFocus[%B]"
 
@@ -2465,9 +2465,9 @@
 
     const/4 v9, 0x1
 
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->brm:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfm:I
 
     if-ne v2, v3, :cond_c
 
@@ -2478,9 +2478,9 @@
 
     const/4 v9, 0x2
 
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->brn:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfn:I
 
     if-ne v2, v3, :cond_e
 
@@ -2495,9 +2495,9 @@
 
     const/4 v9, 0x3
 
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bro:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfo:I
 
     if-ne v2, v3, :cond_f
 
@@ -2512,9 +2512,9 @@
 
     const/4 v9, 0x4
 
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->brp:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfp:I
 
     if-ne v2, v3, :cond_10
 
@@ -2527,12 +2527,12 @@
 
     aput-object v2, v8, v9
 
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 431
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->brm:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfm:I
 
     if-ne v2, v3, :cond_11
 
@@ -2550,7 +2550,7 @@
 
     .line 432
     :cond_2
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     const/4 v6, 0x0
 
@@ -2559,9 +2559,9 @@
     .line 437
     :cond_3
     :goto_5
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->brn:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfn:I
 
     if-ne v2, v3, :cond_5
 
@@ -2579,15 +2579,15 @@
 
     .line 438
     :cond_4
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/sight/encode/ui/f;->c(Landroid/hardware/Camera;)Z
 
     .line 441
     :cond_5
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bro:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfo:I
 
     if-ne v2, v3, :cond_7
 
@@ -2607,22 +2607,22 @@
     :cond_6
     const/16 v2, 0xe
 
-    invoke-static {v2}, Lcom/tencent/mm/compatible/util/c;->bW(I)Z
+    invoke-static {v2}, Lcom/tencent/mm/compatible/util/c;->co(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_7
 
     .line 444
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/sight/encode/ui/f;->b(Landroid/hardware/Camera;)Z
 
     .line 448
     :cond_7
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->brp:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfp:I
 
     if-ne v2, v3, :cond_9
 
@@ -2640,31 +2640,31 @@
 
     .line 449
     :cond_8
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/f;->d(Landroid/hardware/Camera;)Z
 
     .line 452
     :cond_9
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     invoke-virtual {v0}, Landroid/hardware/Camera;->getParameters()Landroid/hardware/Camera$Parameters;
 
     move-result-object v0
 
     .line 453
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gAC:Landroid/hardware/Camera$PreviewCallback;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gHe:Landroid/hardware/Camera$PreviewCallback;
 
     if-eqz v2, :cond_a
 
     .line 454
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDs:Lcom/tencent/mm/pluginsdk/l/a;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJT:Lcom/tencent/mm/pluginsdk/m/a;
 
-    iget v2, v2, Lcom/tencent/mm/pluginsdk/l/a;->iFn:I
+    iget v2, v2, Lcom/tencent/mm/pluginsdk/m/a;->jci:I
 
-    iget-object v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDs:Lcom/tencent/mm/pluginsdk/l/a;
+    iget-object v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJT:Lcom/tencent/mm/pluginsdk/m/a;
 
-    iget v6, v6, Lcom/tencent/mm/pluginsdk/l/a;->iFm:I
+    iget v6, v6, Lcom/tencent/mm/pluginsdk/m/a;->jch:I
 
     mul-int/2addr v2, v6
 
@@ -2684,17 +2684,17 @@
     .line 456
     new-array v0, v0, [B
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDC:[B
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKd:[B
 
     .line 457
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDC:[B
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKd:[B
 
     invoke-virtual {v0, v2}, Landroid/hardware/Camera;->addCallbackBuffer([B)V
 
     .line 458
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     new-instance v2, Lcom/tencent/mm/plugin/sight/encode/ui/f$2;
 
@@ -2704,51 +2704,51 @@
 
     .line 473
     :cond_a
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     invoke-virtual {v0, p1}, Landroid/hardware/Camera;->setPreviewTexture(Landroid/graphics/SurfaceTexture;)V
 
     .line 474
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     invoke-virtual {v0}, Landroid/hardware/Camera;->startPreview()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 482
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->brp:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bfp:I
 
     if-nez v0, :cond_b
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->dAV:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->dCo:Landroid/hardware/SensorManager;
 
     if-eqz v0, :cond_b
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDy:Landroid/hardware/Sensor;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJZ:Landroid/hardware/Sensor;
 
     if-eqz v0, :cond_b
 
     .line 484
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->dAV:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->dCo:Landroid/hardware/SensorManager;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDy:Landroid/hardware/Sensor;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJZ:Landroid/hardware/Sensor;
 
     invoke-virtual {v0, p0, v2, v10}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
     .line 487
     :cond_b
-    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDu:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJV:Z
 
     .line 488
-    const-string/jumbo v0, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v0, "MicroMsg.SightCamera"
 
     const-string/jumbo v2, "ashu::start preview end, use %dms %s"
 
     new-array v6, v10, [Ljava/lang/Object;
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/ay;->ao(J)J
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/be;->av(J)J
 
     move-result-wide v4
 
@@ -2764,7 +2764,7 @@
 
     aput-object v4, v6, v3
 
-    invoke-static {v0, v2, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -2774,9 +2774,9 @@
     .line 423
     :cond_c
     :try_start_1
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->brl:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfl:I
 
     if-ne v2, v3, :cond_d
 
@@ -2806,9 +2806,9 @@
 
     .line 433
     :cond_11
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->brl:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfl:I
 
     if-ne v2, v3, :cond_3
 
@@ -2828,7 +2828,7 @@
 
     .line 434
     :cond_12
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     const/4 v6, 0x1
 
@@ -2843,7 +2843,7 @@
     move-exception v0
 
     .line 477
-    const-string/jumbo v2, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v2, "MicroMsg.SightCamera"
 
     const-string/jumbo v4, "ashu::start preview FAILED, %s, %s"
 
@@ -2861,10 +2861,10 @@
 
     aput-object v0, v5, v3
 
-    invoke-static {v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 479
-    invoke-static {}, Lcom/tencent/mm/compatible/util/f;->oX()I
+    invoke-static {}, Lcom/tencent/mm/compatible/util/f;->np()I
 
     move-result v0
 
@@ -2909,7 +2909,7 @@
     aget v2, v2, v3
 
     .line 586
-    iget v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDz:F
+    iget v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKa:F
 
     sub-float/2addr v3, v0
 
@@ -2921,7 +2921,7 @@
 
     if-gtz v3, :cond_0
 
-    iget v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDA:F
+    iget v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKb:F
 
     sub-float/2addr v3, v1
 
@@ -2933,7 +2933,7 @@
 
     if-gtz v3, :cond_0
 
-    iget v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDB:F
+    iget v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKc:F
 
     sub-float/2addr v3, v2
 
@@ -2947,7 +2947,7 @@
 
     .line 590
     :cond_0
-    const-string/jumbo v3, "!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX"
+    const-string/jumbo v3, "MicroMsg.SightCamera"
 
     const-string/jumbo v4, "match accel limit %f, try auto focus"
 
@@ -2959,21 +2959,21 @@
 
     aput-object v6, v5, v7
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 591
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->brz:Landroid/hardware/Camera;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->bfz:Landroid/hardware/Camera;
 
     invoke-static {v3}, Lcom/tencent/mm/plugin/sight/encode/ui/f$a;->e(Landroid/hardware/Camera;)V
 
     .line 593
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDz:F
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKa:F
 
     .line 594
-    iput v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDA:F
+    iput v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKb:F
 
     .line 595
-    iput v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDB:F
+    iput v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gKc:F
 
     .line 597
     :cond_1

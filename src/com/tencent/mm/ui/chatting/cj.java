@@ -1,51 +1,21 @@
 package com.tencent.mm.ui.chatting;
 
-import android.view.ContextMenu;
-import android.view.LayoutInflater;
-import android.view.MenuItem;
-import android.view.View;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.storage.ai;
 
-final class cj
-  extends ci
+abstract class cj
+  extends ab.b
 {
-  public cj()
+  public cj(int paramInt)
   {
     super(39);
   }
   
-  public final View a(LayoutInflater paramLayoutInflater, View paramView)
+  protected final String a(ChattingUI.a parama, ai paramai)
   {
-    Object localObject;
-    if ((paramView != null) && (paramView.getTag() != null))
-    {
-      localObject = paramView;
-      if (getTagtype == eLV) {}
-    }
-    else
-    {
-      localObject = new ax(paramLayoutInflater, 2131361908);
-      ((View)localObject).setTag(new ee(eLV).aI((View)localObject));
-    }
-    return (View)localObject;
+    return lsL.ajT;
   }
   
-  public final void a(aa.a parama, int paramInt, ChattingUI.a parama1, ag paramag, String paramString)
-  {
-    ee.a((ee)parama, paramag, paramInt, parama1);
-  }
-  
-  public final boolean a(ContextMenu paramContextMenu, View paramView, ag paramag)
-  {
-    return false;
-  }
-  
-  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ag paramag)
-  {
-    return false;
-  }
-  
-  public final boolean a(View paramView, ChattingUI.a parama, ag paramag)
+  protected final boolean a(ChattingUI.a parama)
   {
     return false;
   }

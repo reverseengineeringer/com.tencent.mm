@@ -4,20 +4,48 @@
 
 
 # instance fields
-.field gmw:Ljava/util/List;
+.field gwR:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/pluginsdk/model/app/q;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private handler:Lcom/tencent/mm/sdk/platformtools/aa;
+.field private handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-.field iAP:Ljava/util/List;
+.field iXt:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/pluginsdk/model/app/q;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field iAQ:Ljava/util/Map;
+.field iXu:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private iAR:Lcom/tencent/mm/sdk/platformtools/af;
+.field private iXv:Lcom/tencent/mm/sdk/platformtools/ah;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 3
+    .locals 4
 
     .prologue
     const/4 v0, 0x0
@@ -26,16 +54,16 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 27
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iAP:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iXt:Ljava/util/List;
 
     .line 28
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->gmw:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->gwR:Ljava/util/List;
 
     .line 29
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iAQ:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iXu:Ljava/util/Map;
 
     .line 31
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/af;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ah;
 
     new-instance v1, Lcom/tencent/mm/pluginsdk/model/app/e$1;
 
@@ -43,44 +71,44 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;-><init>(Lcom/tencent/mm/sdk/platformtools/af$a;Z)V
+    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/ah;-><init>(Lcom/tencent/mm/sdk/platformtools/ah$a;Z)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iAR:Lcom/tencent/mm/sdk/platformtools/af;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iXv:Lcom/tencent/mm/sdk/platformtools/ah;
 
     .line 42
     new-instance v0, Lcom/tencent/mm/pluginsdk/model/app/e$2;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/model/app/e$2;-><init>(Lcom/tencent/mm/pluginsdk/model/app/e;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
     .line 66
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iAP:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iXt:Ljava/util/List;
 
     .line 67
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->gmw:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->gwR:Ljava/util/List;
 
     .line 68
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iAQ:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iXu:Ljava/util/Map;
 
     .line 70
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iAR:Lcom/tencent/mm/sdk/platformtools/af;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iXv:Lcom/tencent/mm/sdk/platformtools/ah;
 
-    const-wide/32 v1, 0x927c0
+    const-wide/32 v2, 0x927c0
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;->ds(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ah;->dJ(J)V
 
     .line 71
     return-void
@@ -100,11 +128,11 @@
     if-nez p1, :cond_0
 
     .line 107
-    const-string/jumbo v0, "!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O"
+    const-string/jumbo v0, "MicroMsg.AppIconService"
 
     const-string/jumbo v2, "startDownload fail, geticoninfo is null"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -116,11 +144,11 @@
     :cond_0
     if-nez p1, :cond_1
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O"
+    const-string/jumbo v0, "MicroMsg.AppIconService"
 
     const-string/jumbo v3, "increaseCounter fail, info is null"
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -128,11 +156,11 @@
     if-nez v0, :cond_3
 
     .line 112
-    const-string/jumbo v0, "!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O"
+    const-string/jumbo v0, "MicroMsg.AppIconService"
 
     const-string/jumbo v2, "increaseCounter fail"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -141,7 +169,7 @@
 
     .line 111
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iAQ:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iXu:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/tencent/mm/pluginsdk/model/app/q;->toString()Ljava/lang/String;
 
@@ -153,7 +181,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Integer;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/lang/Integer;I)I
 
     move-result v0
 
@@ -169,18 +197,18 @@
 
     if-lt v3, v4, :cond_2
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O"
+    const-string/jumbo v0, "MicroMsg.AppIconService"
 
     const-string/jumbo v3, "increaseCounter fail, has reached the max try count"
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
     goto :goto_1
 
     :cond_2
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iAQ:Ljava/util/Map;
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iXu:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/tencent/mm/pluginsdk/model/app/q;->toString()Ljava/lang/String;
 
@@ -204,13 +232,13 @@
 
     .line 116
     :cond_3
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/aj;->aPR()Lcom/tencent/mm/pluginsdk/model/app/i;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/al;->aUA()Lcom/tencent/mm/pluginsdk/model/app/i;
 
     move-result-object v0
 
     iget-object v3, p1, Lcom/tencent/mm/pluginsdk/model/app/q;->appId:Ljava/lang/String;
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/pluginsdk/model/app/i;->zP(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/model/app/f;
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/pluginsdk/model/app/i;->BL(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/model/app/f;
 
     move-result-object v0
 
@@ -218,7 +246,7 @@
     if-nez v0, :cond_4
 
     .line 118
-    const-string/jumbo v0, "!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O"
+    const-string/jumbo v0, "MicroMsg.AppIconService"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -236,7 +264,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -245,12 +273,12 @@
 
     .line 122
     :cond_4
-    iget v3, p1, Lcom/tencent/mm/pluginsdk/model/app/q;->cbf:I
+    iget v3, p1, Lcom/tencent/mm/pluginsdk/model/app/q;->bUR:I
 
     packed-switch v3, :pswitch_data_0
 
     .line 160
-    const-string/jumbo v0, "!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O"
+    const-string/jumbo v0, "MicroMsg.AppIconService"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -258,7 +286,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v3, p1, Lcom/tencent/mm/pluginsdk/model/app/q;->cbf:I
+    iget v3, p1, Lcom/tencent/mm/pluginsdk/model/app/q;->bUR:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -268,7 +296,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -291,7 +319,7 @@
 
     .line 126
     :cond_5
-    const-string/jumbo v0, "!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O"
+    const-string/jumbo v0, "MicroMsg.AppIconService"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -309,7 +337,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -320,17 +348,36 @@
     :cond_6
     iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appIconUrl:Ljava/lang/String;
 
-    .line 164
+    .line 163
     :goto_2
+    const-string/jumbo v1, "MicroMsg.AppIconService"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v4, "appIconUrl = "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 164
     new-instance v1, Lcom/tencent/mm/pluginsdk/model/app/r;
 
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
     iget-object v4, p1, Lcom/tencent/mm/pluginsdk/model/app/q;->appId:Ljava/lang/String;
 
-    iget v5, p1, Lcom/tencent/mm/pluginsdk/model/app/q;->cbf:I
+    iget v5, p1, Lcom/tencent/mm/pluginsdk/model/app/q;->bUR:I
 
-    invoke-direct {v1, v3, v4, v5, v0}, Lcom/tencent/mm/pluginsdk/model/app/r;-><init>(Lcom/tencent/mm/sdk/platformtools/aa;Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v1, v3, v4, v5, v0}, Lcom/tencent/mm/pluginsdk/model/app/r;-><init>(Lcom/tencent/mm/sdk/platformtools/ac;Ljava/lang/String;ILjava/lang/String;)V
 
     const-string/jumbo v0, "AppIconService_getIcon"
 
@@ -357,7 +404,7 @@
 
     .line 133
     :cond_7
-    const-string/jumbo v0, "!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O"
+    const-string/jumbo v0, "MicroMsg.AppIconService"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -375,7 +422,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -390,11 +437,11 @@
 
     .line 139
     :pswitch_2
-    iget-object v3, v0, Lcom/tencent/mm/d/b/e;->aOa:Ljava/lang/String;
+    iget-object v3, v0, Lcom/tencent/mm/e/b/e;->aAJ:Ljava/lang/String;
 
     if-eqz v3, :cond_9
 
-    iget-object v3, v0, Lcom/tencent/mm/d/b/e;->aOa:Ljava/lang/String;
+    iget-object v3, v0, Lcom/tencent/mm/e/b/e;->aAJ:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -404,7 +451,7 @@
 
     .line 140
     :cond_9
-    const-string/jumbo v0, "!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O"
+    const-string/jumbo v0, "MicroMsg.AppIconService"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -422,7 +469,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -431,17 +478,17 @@
 
     .line 143
     :cond_a
-    iget-object v0, v0, Lcom/tencent/mm/d/b/e;->aOa:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/e/b/e;->aAJ:Ljava/lang/String;
 
     goto :goto_2
 
     .line 146
     :pswitch_3
-    iget-object v3, v0, Lcom/tencent/mm/d/b/e;->aOl:Ljava/lang/String;
+    iget-object v3, v0, Lcom/tencent/mm/e/b/e;->aAU:Ljava/lang/String;
 
     if-eqz v3, :cond_b
 
-    iget-object v3, v0, Lcom/tencent/mm/d/b/e;->aOl:Ljava/lang/String;
+    iget-object v3, v0, Lcom/tencent/mm/e/b/e;->aAU:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -451,7 +498,7 @@
 
     .line 147
     :cond_b
-    const-string/jumbo v0, "!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O"
+    const-string/jumbo v0, "MicroMsg.AppIconService"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -469,7 +516,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -478,17 +525,17 @@
 
     .line 150
     :cond_c
-    iget-object v0, v0, Lcom/tencent/mm/d/b/e;->aOl:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/e/b/e;->aAU:Ljava/lang/String;
 
     goto/16 :goto_2
 
     .line 153
     :pswitch_4
-    iget-object v3, v0, Lcom/tencent/mm/d/b/e;->aOm:Ljava/lang/String;
+    iget-object v3, v0, Lcom/tencent/mm/e/b/e;->aAV:Ljava/lang/String;
 
     if-eqz v3, :cond_d
 
-    iget-object v3, v0, Lcom/tencent/mm/d/b/e;->aOm:Ljava/lang/String;
+    iget-object v3, v0, Lcom/tencent/mm/e/b/e;->aAV:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -498,7 +545,7 @@
 
     .line 154
     :cond_d
-    const-string/jumbo v0, "!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O"
+    const-string/jumbo v0, "MicroMsg.AppIconService"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -516,7 +563,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -525,7 +572,7 @@
 
     .line 157
     :cond_e
-    iget-object v0, v0, Lcom/tencent/mm/d/b/e;->aOm:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/e/b/e;->aAV:Ljava/lang/String;
 
     goto/16 :goto_2
 
@@ -540,7 +587,7 @@
     .end packed-switch
 .end method
 
-.method public final aE(Ljava/lang/String;I)V
+.method public final aO(Ljava/lang/String;I)V
     .locals 3
 
     .prologue
@@ -555,11 +602,11 @@
 
     .line 75
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O"
+    const-string/jumbo v0, "MicroMsg.AppIconService"
 
     const-string/jumbo v1, "push fail, appId is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 97
     :cond_1
@@ -573,7 +620,7 @@
     invoke-direct {v0, p1, p2}, Lcom/tencent/mm/pluginsdk/model/app/q;-><init>(Ljava/lang/String;I)V
 
     .line 81
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iAP:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iXt:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -582,7 +629,7 @@
     if-eqz v1, :cond_3
 
     .line 82
-    const-string/jumbo v0, "!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O"
+    const-string/jumbo v0, "MicroMsg.AppIconService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -614,13 +661,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 86
     :cond_3
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iAP:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iXt:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -631,14 +678,14 @@
     if-lt v1, v2, :cond_4
 
     .line 87
-    const-string/jumbo v1, "!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O"
+    const-string/jumbo v1, "MicroMsg.AppIconService"
 
     const-string/jumbo v2, "running list has reached the max count"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 88
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->gmw:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->gwR:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -647,7 +694,7 @@
     if-nez v1, :cond_1
 
     .line 89
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->gmw:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->gwR:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -662,7 +709,7 @@
     if-eqz v1, :cond_1
 
     .line 95
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iAP:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/app/e;->iXt:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 

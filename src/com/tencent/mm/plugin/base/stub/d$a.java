@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.base.stub;
 
 public abstract interface d$a
 {
-  public abstract void bq(boolean paramBoolean);
+  public abstract void aY(boolean paramBoolean);
 }
 
 /* Location:

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/lx" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:dslv="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/aci" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/emoji_mine_header" />
+    <com.tencent.mm.ui.widget.DragSortListView android:id="@android:id/list" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:layout_below="@id/aci" dslv:collapsed_height="2.0dip" dslv:drag_scroll_start="0.33" dslv:max_drag_scroll_speed="0.5" dslv:remove_mode="bf" dslv:track_drag_sort="false" dslv:float_alpha="0.4" dslv:slide_shuffle_speed="0.3" dslv:drag_enabled="true" dslv:sort_enabled="true" dslv:remove_enabled="false" dslv:drag_start_mode="bg" dslv:drag_handle_id="@id/acj" dslv:use_default_controller="true" />
+</RelativeLayout>

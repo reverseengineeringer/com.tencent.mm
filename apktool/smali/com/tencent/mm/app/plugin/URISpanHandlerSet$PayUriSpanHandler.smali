@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+.field final synthetic ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1256
-    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PayUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 1255
+    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PayUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-direct {p0, p1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BaseUriSpanHandler;-><init>(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)V
 
@@ -40,52 +40,52 @@
     .locals 3
 
     .prologue
-    .line 1282
+    .line 1281
     iget v0, p1, Lcom/tencent/mm/pluginsdk/ui/applet/g;->type:I
 
     const/16 v1, 0x1c
 
     if-ne v0, v1, :cond_1
 
-    .line 1283
+    .line 1282
     if-eqz p2, :cond_0
 
-    .line 1284
+    .line 1283
     invoke-interface {p2, p1}, Lcom/tencent/mm/pluginsdk/ui/d/b;->a(Lcom/tencent/mm/pluginsdk/ui/applet/g;)Ljava/lang/Object;
 
-    .line 1286
+    .line 1285
     :cond_0
-    new-instance v0, Lcom/tencent/mm/d/a/ez;
+    new-instance v0, Lcom/tencent/mm/e/a/ff;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/ez;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/ff;-><init>()V
 
-    .line 1287
-    iget-object v1, v0, Lcom/tencent/mm/d/a/ez;->azK:Lcom/tencent/mm/d/a/ez$a;
+    .line 1286
+    iget-object v1, v0, Lcom/tencent/mm/e/a/ff;->alS:Lcom/tencent/mm/e/a/ff$a;
 
     const/16 v2, 0xb
 
-    iput v2, v1, Lcom/tencent/mm/d/a/ez$a;->actionCode:I
+    iput v2, v1, Lcom/tencent/mm/e/a/ff$a;->actionCode:I
 
-    .line 1288
-    iget-object v1, v0, Lcom/tencent/mm/d/a/ez;->azK:Lcom/tencent/mm/d/a/ez$a;
+    .line 1287
+    iget-object v1, v0, Lcom/tencent/mm/e/a/ff;->alS:Lcom/tencent/mm/e/a/ff$a;
 
     iget-object v2, p1, Lcom/tencent/mm/pluginsdk/ui/applet/g;->url:Ljava/lang/String;
 
-    iput-object v2, v1, Lcom/tencent/mm/d/a/ez$a;->azM:Ljava/lang/String;
+    iput-object v2, v1, Lcom/tencent/mm/e/a/ff$a;->alU:Ljava/lang/String;
 
-    .line 1289
-    iget-object v1, v0, Lcom/tencent/mm/d/a/ez;->azK:Lcom/tencent/mm/d/a/ez$a;
+    .line 1288
+    iget-object v1, v0, Lcom/tencent/mm/e/a/ff;->alS:Lcom/tencent/mm/e/a/ff$a;
 
-    iget-object v2, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PayUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v2, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PayUriSpanHandler;->ZU:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v2}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v2
 
-    iput-object v2, v1, Lcom/tencent/mm/d/a/ez$a;->context:Landroid/content/Context;
+    iput-object v2, v1, Lcom/tencent/mm/e/a/ff$a;->context:Landroid/content/Context;
 
-    .line 1290
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 1289
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
@@ -93,10 +93,10 @@
 
     invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/sdk/c/a;->a(Lcom/tencent/mm/sdk/c/b;Landroid/os/Looper;)V
 
-    .line 1291
+    .line 1290
     const/4 v0, 0x1
 
-    .line 1296
+    .line 1295
     :goto_0
     return v0
 
@@ -110,27 +110,27 @@
     .locals 1
 
     .prologue
-    .line 1301
+    .line 1300
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method final bb(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
+.method final bg(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
     .locals 1
 
     .prologue
-    .line 1267
+    .line 1266
     const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method final lg()[I
+.method final jH()[I
     .locals 3
 
     .prologue
-    .line 1277
+    .line 1276
     const/4 v0, 0x1
 
     new-array v0, v0, [I

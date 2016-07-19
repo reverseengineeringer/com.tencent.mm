@@ -1,10 +1,10 @@
 package com.tencent.mm.ui.account;
 
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class h$1
-  extends aa
+  extends ac
 {
   h$1(h paramh) {}
   
@@ -18,11 +18,11 @@ final class h$1
       do
       {
         return;
-      } while (kuh.kug == null);
-      kuh.kug.onError(arg1, (String)obj);
+      } while (kTo.kTn == null);
+      kTo.kTn.onError(arg1, (String)obj);
       return;
-    } while (kuh.kug == null);
-    kuh.kug.g(paramMessage.getData());
+    } while (kTo.kTn == null);
+    kTo.kTn.i(paramMessage.getData());
   }
 }
 

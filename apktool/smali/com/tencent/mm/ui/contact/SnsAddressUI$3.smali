@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lms:Lcom/tencent/mm/ui/contact/SnsAddressUI;
+.field final synthetic lMI:Lcom/tencent/mm/ui/contact/SnsAddressUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 104
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$3;->lms:Lcom/tencent/mm/ui/contact/SnsAddressUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$3;->lMI:Lcom/tencent/mm/ui/contact/SnsAddressUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final rc(Ljava/lang/String;)V
+.method public final sz(Ljava/lang/String;)V
     .locals 1
 
     .prologue
@@ -44,7 +44,7 @@
     if-eqz p1, :cond_0
 
     .line 108
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$3;->lms:Lcom/tencent/mm/ui/contact/SnsAddressUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$3;->lMI:Lcom/tencent/mm/ui/contact/SnsAddressUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/SnsAddressUI;->a(Lcom/tencent/mm/ui/contact/SnsAddressUI;)Ljava/util/HashSet;
 
@@ -53,7 +53,7 @@
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
     .line 109
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$3;->lms:Lcom/tencent/mm/ui/contact/SnsAddressUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$3;->lMI:Lcom/tencent/mm/ui/contact/SnsAddressUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/SnsAddressUI;->b(Lcom/tencent/mm/ui/contact/SnsAddressUI;)V
 

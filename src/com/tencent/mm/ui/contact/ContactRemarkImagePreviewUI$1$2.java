@@ -17,19 +17,19 @@ final class ContactRemarkImagePreviewUI$1$2
     default: 
       return;
     case 0: 
-      if (!ContactRemarkImagePreviewUI.b(ljq.ljp))
+      if (!ContactRemarkImagePreviewUI.b(lJB.lJA))
       {
-        ContactRemarkImagePreviewUI.a(ljq.ljp, true);
+        ContactRemarkImagePreviewUI.a(lJB.lJA, true);
         return;
       }
-      new File(ContactRemarkImagePreviewUI.c(ljq.ljp)).delete();
-      ContactRemarkImagePreviewUI.a(ljq.ljp, true);
+      new File(ContactRemarkImagePreviewUI.c(lJB.lJA)).delete();
+      ContactRemarkImagePreviewUI.a(lJB.lJA, true);
       return;
     case 1: 
-      k.h(ContactRemarkImagePreviewUI.c(ljq.ljp), ljq.ljp);
+      k.h(ContactRemarkImagePreviewUI.c(lJB.lJA), lJB.lJA);
       return;
     }
-    ContactRemarkImagePreviewUI.d(ljq.ljp);
+    ContactRemarkImagePreviewUI.d(lJB.lJA);
   }
 }
 

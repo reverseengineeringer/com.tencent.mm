@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+.field final synthetic hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
 
 # direct methods
@@ -23,8 +23,8 @@
     .locals 0
 
     .prologue
-    .line 403
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$a;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    .line 407
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$a;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
     invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/d/j;-><init>()V
 
@@ -37,18 +37,18 @@
     .locals 1
 
     .prologue
-    .line 406
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$a;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    .line 410
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$a;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->i(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Lcom/tencent/mm/plugin/sns/ui/au;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->i(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Lcom/tencent/mm/plugin/sns/ui/ba;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/au;->hmq:Landroid/view/View$OnClickListener;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/ba;->hCx:Landroid/view/View$OnClickListener;
 
     invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    .line 407
+    .line 411
     return-void
 .end method
 
@@ -56,32 +56,32 @@
     .locals 2
 
     .prologue
-    .line 412
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$a;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    .line 416
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$a;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f080004
+    const v1, 0x7f0f01e4
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v0
 
-    .line 413
-    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQe:Z
+    .line 417
+    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->jnm:Z
 
     if-eqz v1, :cond_0
 
-    .line 414
+    .line 418
     iput v0, p1, Landroid/text/TextPaint;->bgColor:I
 
-    .line 418
+    .line 422
     :goto_0
     return-void
 
-    .line 416
+    .line 420
     :cond_0
     const/4 v0, 0x0
 

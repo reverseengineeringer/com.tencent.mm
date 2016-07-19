@@ -11,7 +11,7 @@ final class ChattingSightContainerView$8
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    b.ay(gBF.getContext());
+    b.av(gIh.getContext());
   }
 }
 

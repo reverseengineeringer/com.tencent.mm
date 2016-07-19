@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gZv:Lcom/tencent/mm/plugin/sns/ui/MaskImageView;
+.field final synthetic hmN:Lcom/tencent/mm/plugin/sns/ui/MaskImageView;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 61
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/MaskImageView$1;->gZv:Lcom/tencent/mm/plugin/sns/ui/MaskImageView;
+    .line 63
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/MaskImageView$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/MaskImageView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,18 +40,18 @@
     .locals 2
 
     .prologue
-    .line 64
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/MaskImageView$1;->gZv:Lcom/tencent/mm/plugin/sns/ui/MaskImageView;
+    .line 66
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/MaskImageView$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/MaskImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/MaskImageView;->setPressed(Z)V
 
-    .line 65
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/MaskImageView$1;->gZv:Lcom/tencent/mm/plugin/sns/ui/MaskImageView;
+    .line 67
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/MaskImageView$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/MaskImageView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/MaskImageView;->invalidate()V
 
-    .line 66
+    .line 68
     return-void
 .end method

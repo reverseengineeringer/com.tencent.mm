@@ -1,6 +1,9 @@
 package com.tencent.mm.ui;
 
-public abstract interface LayoutListenerView$a {}
+public abstract interface LayoutListenerView$a
+{
+  public abstract void onSizeChanged(int paramInt1, int paramInt2, int paramInt3, int paramInt4);
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.ui.LayoutListenerView.a

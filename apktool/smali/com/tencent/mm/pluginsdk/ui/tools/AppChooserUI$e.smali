@@ -15,27 +15,27 @@
 
 
 # instance fields
-.field private cRn:Landroid/view/View;
+.field private cOS:Landroid/view/View;
 
-.field cTk:Landroid/widget/BaseAdapter;
+.field cQB:Landroid/widget/BaseAdapter;
 
-.field iRe:Landroid/view/View$OnClickListener;
+.field private joC:Landroid/widget/ListView;
 
-.field final synthetic iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+.field private joD:Landroid/widget/Button;
 
-.field private iRt:Landroid/widget/ListView;
+.field private joE:Landroid/widget/Button;
 
-.field private iRu:Landroid/widget/Button;
+.field private joF:Landroid/view/View;
 
-.field private iRv:Landroid/widget/Button;
+.field joG:Landroid/widget/AdapterView$OnItemClickListener;
 
-.field private iRw:Landroid/view/View;
+.field joH:Landroid/view/View$OnClickListener;
 
-.field iRx:Landroid/widget/AdapterView$OnItemClickListener;
+.field joo:Landroid/view/View$OnClickListener;
 
-.field iRy:Landroid/view/View$OnClickListener;
+.field final synthetic jos:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
-.field private lv:Landroid/widget/TextView;
+.field private lL:Landroid/widget/TextView;
 
 .field private mContext:Landroid/content/Context;
 
@@ -48,10 +48,10 @@
 
     .prologue
     .line 646
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->jos:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
     .line 647
-    const v0, 0x7f06019d
+    const v0, 0x7f0c026b
 
     invoke-direct {p0, p2, v0}, Lcom/tencent/mm/ui/base/i;-><init>(Landroid/content/Context;I)V
 
@@ -61,7 +61,7 @@
     .line 649
     iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0a0511
+    const v1, 0x7f030033
 
     const/4 v2, 0x0
 
@@ -69,11 +69,11 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->cRn:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->cOS:Landroid/view/View;
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->cRn:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->cOS:Landroid/view/View;
 
-    const v1, 0x7f070f89
+    const v1, 0x7f10011f
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -81,11 +81,11 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->lv:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->lL:Landroid/widget/TextView;
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->cRn:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->cOS:Landroid/view/View;
 
-    const v1, 0x7f070f8b
+    const v1, 0x7f100121
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -93,23 +93,11 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRt:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->joC:Landroid/widget/ListView;
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->cRn:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->cOS:Landroid/view/View;
 
-    const v1, 0x7f070f8d
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Button;
-
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRu:Landroid/widget/Button;
-
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->cRn:Landroid/view/View;
-
-    const v1, 0x7f070f8f
+    const v1, 0x7f100123
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -117,19 +105,31 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRv:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->joD:Landroid/widget/Button;
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->cRn:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->cOS:Landroid/view/View;
 
-    const v1, 0x7f070f8a
+    const v1, 0x7f100125
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRw:Landroid/view/View;
+    check-cast v0, Landroid/widget/Button;
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->joE:Landroid/widget/Button;
+
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->cOS:Landroid/view/View;
+
+    const v1, 0x7f100120
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->joF:Landroid/view/View;
+
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->jos:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->f(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)I
 
@@ -139,7 +139,7 @@
 
     if-eq v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->jos:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->g(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)I
 
@@ -150,9 +150,9 @@
     if-ne v0, v1, :cond_1
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->cRn:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->cOS:Landroid/view/View;
 
-    const v1, 0x7f070f8c
+    const v1, 0x7f100122
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -169,28 +169,28 @@
 
 
 # virtual methods
-.method public final gB(Z)V
+.method public final gZ(Z)V
     .locals 1
 
     .prologue
     .line 704
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRu:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->joD:Landroid/widget/Button;
 
     if-eqz v0, :cond_0
 
     .line 705
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRu:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->joD:Landroid/widget/Button;
 
     invoke-virtual {v0, p1}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 707
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRv:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->joE:Landroid/widget/Button;
 
     if-eqz v0, :cond_1
 
     .line 708
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRv:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->joE:Landroid/widget/Button;
 
     invoke-virtual {v0, p1}, Landroid/widget/Button;->setEnabled(Z)V
 
@@ -204,7 +204,7 @@
 
     .prologue
     .line 714
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->jos:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->finish()V
 
@@ -220,7 +220,7 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/base/i;->onCreate(Landroid/os/Bundle;)V
 
     .line 655
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->cRn:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->cOS:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->setContentView(Landroid/view/View;)V
 
@@ -266,71 +266,71 @@
     .line 719
     iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->mTitle:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
     .line 720
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRw:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->joF:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     .line 721
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->lv:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->lL:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 727
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRx:Landroid/widget/AdapterView$OnItemClickListener;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->joG:Landroid/widget/AdapterView$OnItemClickListener;
 
     if-eqz v0, :cond_0
 
     .line 728
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRt:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->joC:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRx:Landroid/widget/AdapterView$OnItemClickListener;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->joG:Landroid/widget/AdapterView$OnItemClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 730
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->cTk:Landroid/widget/BaseAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->cQB:Landroid/widget/BaseAdapter;
 
     if-eqz v0, :cond_1
 
     .line 731
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRt:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->joC:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->cTk:Landroid/widget/BaseAdapter;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->cQB:Landroid/widget/BaseAdapter;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 733
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRu:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->joD:Landroid/widget/Button;
 
     if-eqz v0, :cond_2
 
     .line 734
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRu:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->joD:Landroid/widget/Button;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRy:Landroid/view/View$OnClickListener;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->joH:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 737
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRv:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->joE:Landroid/widget/Button;
 
     if-eqz v0, :cond_3
 
     .line 738
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRv:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->joE:Landroid/widget/Button;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRe:Landroid/view/View$OnClickListener;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->joo:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -343,17 +343,17 @@
 
     .line 723
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->iRw:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->joF:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 724
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->lv:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->lL:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 725
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->lv:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->lL:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->mTitle:Ljava/lang/String;
 

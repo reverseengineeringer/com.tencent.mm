@@ -4,8 +4,8 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.ImageView;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.ah;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class RegSetInfoUI$29
   implements TextWatcher
@@ -14,25 +14,25 @@ final class RegSetInfoUI$29
   
   public final void afterTextChanged(Editable paramEditable)
   {
-    paramEditable = RegSetInfoUI.b(kwh).getText().toString().trim();
+    paramEditable = RegSetInfoUI.b(kVo).getText().toString().trim();
     if ((paramEditable != null) && (paramEditable.length() > 16)) {
-      RegSetInfoUI.b(kwh).setText(paramEditable.substring(0, 16));
+      RegSetInfoUI.b(kVo).setText(paramEditable.substring(0, 16));
     }
     for (;;)
     {
       return;
-      if (!RegSetInfoUI.m(kwh).aVf()) {
-        RegSetInfoUI.m(kwh).aUF();
+      if (!RegSetInfoUI.m(kVo).baj()) {
+        RegSetInfoUI.m(kVo).aZJ();
       }
-      RegSetInfoUI.n(kwh);
-      if (ay.kz(RegSetInfoUI.b(kwh).getText().toString().trim())) {
-        RegSetInfoUI.o(kwh).setVisibility(8);
+      RegSetInfoUI.n(kVo);
+      if (be.kf(RegSetInfoUI.b(kVo).getText().toString().trim())) {
+        RegSetInfoUI.o(kVo).setVisibility(8);
       }
-      while (!RegSetInfoUI.p(kwh))
+      while (!RegSetInfoUI.p(kVo))
       {
-        RegSetInfoUI.a(kwh).setText(paramEditable);
+        RegSetInfoUI.a(kVo).setText(paramEditable);
         return;
-        RegSetInfoUI.o(kwh).setVisibility(0);
+        RegSetInfoUI.o(kVo).setVisibility(0);
       }
     }
   }

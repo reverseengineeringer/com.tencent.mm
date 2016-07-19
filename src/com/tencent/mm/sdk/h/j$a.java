@@ -2,15 +2,15 @@ package com.tencent.mm.sdk.h;
 
 final class j$a
 {
-  int ayY;
-  j jYN;
+  int ala;
+  j kzk;
   Object obj;
   
   j$a(j paramj1, int paramInt, j paramj2, Object paramObject)
   {
-    ayY = paramInt;
+    ala = paramInt;
     obj = paramObject;
-    jYN = paramj2;
+    kzk = paramj2;
   }
 }
 

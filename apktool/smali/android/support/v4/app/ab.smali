@@ -16,15 +16,34 @@
     }
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/lang/Iterable",
+        "<",
+        "Landroid/content/Intent;",
+        ">;"
+    }
+.end annotation
+
 
 # static fields
-.field private static final dZ:Landroid/support/v4/app/ab$b;
+.field private static final ep:Landroid/support/v4/app/ab$b;
 
 
 # instance fields
-.field public final ea:Ljava/util/ArrayList;
+.field public final eq:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/content/Intent;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final eb:Landroid/content/Context;
+.field public final er:Landroid/content/Context;
 
 
 # direct methods
@@ -32,31 +51,31 @@
     .locals 2
 
     .prologue
-    .line 115
+    .line 114
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0xb
 
     if-lt v0, v1, :cond_0
 
-    .line 116
+    .line 115
     new-instance v0, Landroid/support/v4/app/ab$d;
 
     invoke-direct {v0}, Landroid/support/v4/app/ab$d;-><init>()V
 
-    sput-object v0, Landroid/support/v4/app/ab;->dZ:Landroid/support/v4/app/ab$b;
+    sput-object v0, Landroid/support/v4/app/ab;->ep:Landroid/support/v4/app/ab$b;
 
-    .line 120
+    .line 119
     :goto_0
     return-void
 
-    .line 118
+    .line 117
     :cond_0
     new-instance v0, Landroid/support/v4/app/ab$c;
 
     invoke-direct {v0}, Landroid/support/v4/app/ab$c;-><init>()V
 
-    sput-object v0, Landroid/support/v4/app/ab;->dZ:Landroid/support/v4/app/ab$b;
+    sput-object v0, Landroid/support/v4/app/ab;->ep:Landroid/support/v4/app/ab$b;
 
     goto :goto_0
 .end method
@@ -65,28 +84,28 @@
     .locals 1
 
     .prologue
-    .line 125
+    .line 124
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 122
+    .line 121
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v4/app/ab;->ea:Ljava/util/ArrayList;
+    iput-object v0, p0, Landroid/support/v4/app/ab;->eq:Ljava/util/ArrayList;
+
+    .line 125
+    iput-object p1, p0, Landroid/support/v4/app/ab;->er:Landroid/content/Context;
 
     .line 126
-    iput-object p1, p0, Landroid/support/v4/app/ab;->eb:Landroid/content/Context;
-
-    .line 127
     return-void
 .end method
 
-.method public static k(Landroid/content/Context;)Landroid/support/v4/app/ab;
+.method public static i(Landroid/content/Context;)Landroid/support/v4/app/ab;
     .locals 1
 
     .prologue
-    .line 137
+    .line 136
     new-instance v0, Landroid/support/v4/app/ab;
 
     invoke-direct {v0, p0}, Landroid/support/v4/app/ab;-><init>(Landroid/content/Context;)V
@@ -100,32 +119,32 @@
     .locals 3
 
     .prologue
-    .line 238
-    iget-object v0, p0, Landroid/support/v4/app/ab;->ea:Ljava/util/ArrayList;
+    .line 237
+    iget-object v0, p0, Landroid/support/v4/app/ab;->eq:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 240
+    .line 239
     :try_start_0
-    iget-object v0, p0, Landroid/support/v4/app/ab;->eb:Landroid/content/Context;
+    iget-object v0, p0, Landroid/support/v4/app/ab;->er:Landroid/content/Context;
 
     invoke-static {v0, p1}, Landroid/support/v4/app/l;->a(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 241
+    .line 240
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 242
-    iget-object v2, p0, Landroid/support/v4/app/ab;->ea:Ljava/util/ArrayList;
+    .line 241
+    iget-object v2, p0, Landroid/support/v4/app/ab;->eq:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1, v0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 243
-    iget-object v2, p0, Landroid/support/v4/app/ab;->eb:Landroid/content/Context;
+    .line 242
+    iget-object v2, p0, Landroid/support/v4/app/ab;->er:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
@@ -139,28 +158,37 @@
 
     goto :goto_0
 
-    .line 245
+    .line 244
     :catch_0
     move-exception v0
 
-    .line 246
+    .line 245
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 249
+    .line 248
     :cond_0
     return-object p0
 .end method
 
 .method public final iterator()Ljava/util/Iterator;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Iterator",
+            "<",
+            "Landroid/content/Intent;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 289
-    iget-object v0, p0, Landroid/support/v4/app/ab;->ea:Ljava/util/ArrayList;
+    .line 288
+    iget-object v0, p0, Landroid/support/v4/app/ab;->eq:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 

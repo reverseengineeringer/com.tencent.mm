@@ -1,11 +1,11 @@
 .class final Lcom/tencent/mm/plugin/sns/ui/ArtistUI$2;
-.super Lcom/tencent/mm/plugin/sns/ui/c$b;
+.super Lcom/tencent/mm/plugin/sns/ui/d$b;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/ArtistUI;->Gb()V
+    value = Lcom/tencent/mm/plugin/sns/ui/ArtistUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic gWk:Lcom/tencent/mm/plugin/sns/ui/ArtistUI;
+.field final synthetic hjG:Lcom/tencent/mm/plugin/sns/ui/ArtistUI;
 
 
 # direct methods
@@ -24,16 +24,16 @@
 
     .prologue
     .line 105
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/ArtistUI$2;->gWk:Lcom/tencent/mm/plugin/sns/ui/ArtistUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/ArtistUI$2;->hjG:Lcom/tencent/mm/plugin/sns/ui/ArtistUI;
 
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/c$b;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/d$b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final lT(I)V
+.method public final ng(I)V
     .locals 3
 
     .prologue
@@ -57,7 +57,7 @@
     .line 112
     const-string/jumbo v1, "sns_gallery_artist_lan"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/ArtistUI$2;->gWk:Lcom/tencent/mm/plugin/sns/ui/ArtistUI;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/ArtistUI$2;->hjG:Lcom/tencent/mm/plugin/sns/ui/ArtistUI;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/sns/ui/ArtistUI;->a(Lcom/tencent/mm/plugin/sns/ui/ArtistUI;)Ljava/lang/String;
 
@@ -73,14 +73,14 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 114
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/ArtistUI$2;->gWk:Lcom/tencent/mm/plugin/sns/ui/ArtistUI;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/ArtistUI$2;->hjG:Lcom/tencent/mm/plugin/sns/ui/ArtistUI;
 
     const-class v2, Lcom/tencent/mm/plugin/sns/ui/ArtistBrowseUI;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
     .line 115
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/ArtistUI$2;->gWk:Lcom/tencent/mm/plugin/sns/ui/ArtistUI;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/ArtistUI$2;->hjG:Lcom/tencent/mm/plugin/sns/ui/ArtistUI;
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sns/ui/ArtistUI;->startActivity(Landroid/content/Intent;)V
 

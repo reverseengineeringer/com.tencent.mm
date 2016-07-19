@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/ow" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/bb8" android:layout_width="fill_parent" android:layout_height="@dimen/j7">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/t9" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/j_" android:gravity="center" android:id="@id/bb9" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/bt8" android:layout_weight="1.0" />
+            <View android:id="@id/bb_" android:background="@color/ot" android:layout_width="fill_parent" android:layout_height="@dimen/jb" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/t9" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/j_" android:gravity="center" android:id="@id/bba" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/bt9" android:layout_weight="1.0" />
+            <View android:id="@id/bbb" android:background="@color/ot" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/jb" />
+        </LinearLayout>
+    </LinearLayout>
+    <ListView android:id="@id/bbc" android:layout_weight="1.0" style="@style/MMList" />
+</LinearLayout>

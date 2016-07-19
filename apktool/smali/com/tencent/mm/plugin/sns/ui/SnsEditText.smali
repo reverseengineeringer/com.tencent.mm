@@ -6,17 +6,17 @@
 # instance fields
 .field private context:Landroid/content/Context;
 
-.field private eJC:Z
+.field private eRs:Z
 
-.field private hdU:Landroid/text/ClipboardManager;
+.field private hsF:Landroid/text/ClipboardManager;
 
-.field private hdV:I
+.field hsG:I
 
-.field private hdW:I
+.field private hsH:I
 
-.field private hdX:I
+.field private hsI:I
 
-.field private hdY:I
+.field private hsJ:I
 
 .field private y:F
 
@@ -34,24 +34,24 @@
     .line 20
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hdU:Landroid/text/ClipboardManager;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hsF:Landroid/text/ClipboardManager;
 
     .line 22
-    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hdV:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hsG:I
 
     .line 38
-    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hdW:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hsH:I
 
     .line 39
-    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hdX:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hsI:I
 
     .line 98
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->eJC:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->eRs:Z
 
     .line 100
     const/16 v0, 0xa
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hdY:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hsJ:I
 
     .line 28
     iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->context:Landroid/content/Context;
@@ -67,7 +67,7 @@
 
     check-cast v0, Landroid/text/ClipboardManager;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hdU:Landroid/text/ClipboardManager;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hsF:Landroid/text/ClipboardManager;
 
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText$1;
 
@@ -84,7 +84,7 @@
 
     .prologue
     .line 17
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hdX:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hsI:I
 
     return v0
 .end method
@@ -94,7 +94,7 @@
 
     .prologue
     .line 17
-    iput p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hdX:I
+    iput p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hsI:I
 
     return p1
 .end method
@@ -104,7 +104,7 @@
 
     .prologue
     .line 17
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hdW:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hsH:I
 
     return v0
 .end method
@@ -114,11 +114,11 @@
 
     .prologue
     .line 17
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hdV:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hsG:I
 
     add-int/2addr v0, p1
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hdV:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hsG:I
 
     return v0
 .end method
@@ -128,7 +128,7 @@
 
     .prologue
     .line 17
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hdV:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hsG:I
 
     return v0
 .end method
@@ -138,23 +138,13 @@
 
     .prologue
     .line 17
-    iput p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hdW:I
+    iput p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hsH:I
 
     return p1
 .end method
 
 
 # virtual methods
-.method public getPasterLen()I
-    .locals 1
-
-    .prologue
-    .line 86
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hdV:I
-
-    return v0
-.end method
-
 .method public onTextContextMenuItem(I)Z
     .locals 1
 
@@ -197,7 +187,7 @@
 
     move-result v1
 
-    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hdY:I
+    iget v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hsJ:I
 
     int-to-float v2, v2
 
@@ -206,7 +196,7 @@
     if-lez v1, :cond_0
 
     .line 106
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->eJC:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->eRs:Z
 
     .line 117
     :cond_0
@@ -234,29 +224,18 @@
     if-ne v1, v0, :cond_2
 
     .line 109
-    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->eJC:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->eRs:Z
 
     if-eqz v1, :cond_0
 
     .line 110
-    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->eJC:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->eRs:Z
 
     goto :goto_1
 
     .line 115
     :cond_2
-    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->eJC:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->eRs:Z
 
     goto :goto_0
-.end method
-
-.method public setPasterLen(I)V
-    .locals 0
-
-    .prologue
-    .line 90
-    iput p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->hdV:I
-
-    .line 91
-    return-void
 .end method

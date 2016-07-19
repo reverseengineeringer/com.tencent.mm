@@ -1,14 +1,13 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.ag.b;
-import com.tencent.mm.az.g.b;
-
 final class c$17
-  implements g.b
+  implements Runnable
 {
-  public final String[] lr()
+  c$17(c paramc) {}
+  
+  public final void run()
   {
-    return b.aoY;
+    bsO.rm();
   }
 }
 

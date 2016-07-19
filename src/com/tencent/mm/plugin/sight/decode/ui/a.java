@@ -4,19 +4,19 @@ import android.view.View.OnClickListener;
 
 public abstract interface a
 {
-  public abstract void avT();
+  public abstract void a(b paramb);
   
-  public abstract int getVideoTotalTime();
+  public abstract int ayo();
   
-  public abstract void kU(int paramInt);
+  public abstract void ayq();
   
-  public abstract void setIplaySeekCallback(b paramb);
+  public abstract void c(View.OnClickListener paramOnClickListener);
   
-  public abstract void setIsPlay(boolean paramBoolean);
+  public abstract void eu(boolean paramBoolean);
   
-  public abstract void setOnPlayButtonClickListener(View.OnClickListener paramOnClickListener);
+  public abstract void ma(int paramInt);
   
-  public abstract void setVideoTotalTime(int paramInt);
+  public abstract void mb(int paramInt);
 }
 
 /* Location:

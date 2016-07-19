@@ -8,50 +8,50 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.os.SystemClock;
 import com.tencent.mm.sandbox.c;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class ExceptionMonitorService
   extends Service
 {
-  public static long bCG = 0L;
-  public static int jSE = 0;
-  private static ExceptionMonitorService jSI = null;
-  private long jSF = 300000L;
-  private aa jSG = new aa();
-  private Runnable jSH = new Runnable()
+  public static long bvQ = 0L;
+  public static int krY = 0;
+  private static ExceptionMonitorService ksc = null;
+  private long krZ = 300000L;
+  private ac ksa = new ac();
+  private Runnable ksb = new Runnable()
   {
     public final void run()
     {
-      u.d("!44@/B4Tb64lLpIdghwcJC06L5mX8ZGnQwd6K21Nn76yszs=", "stopSelf");
+      v.d("MicroMsg.CrashMonitorService", "stopSelf");
       stopSelf();
     }
   };
   
-  public static void df(Context paramContext)
+  public static void dd(Context paramContext)
   {
     Object localObject = new Intent(paramContext, CrashUploadAlarmReceiver.class);
     if (PendingIntent.getBroadcast(paramContext, 0, (Intent)localObject, 536870912) == null)
     {
       localObject = PendingIntent.getBroadcast(paramContext, 0, (Intent)localObject, 0);
       paramContext = (AlarmManager)paramContext.getSystemService("alarm");
-      long l = ay.FS() + 1800000L;
+      long l = be.Gp() + 1800000L;
       paramContext.set(0, l, (PendingIntent)localObject);
-      u.d("!44@/B4Tb64lLpIdghwcJC06L5mX8ZGnQwd6K21Nn76yszs=", "dkcrash startAlarmMgr pendingIntent:%d %d", new Object[] { Integer.valueOf(((PendingIntent)localObject).hashCode()), Long.valueOf(l) });
+      v.d("MicroMsg.CrashMonitorService", "dkcrash startAlarmMgr pendingIntent:%d %d", new Object[] { Integer.valueOf(((PendingIntent)localObject).hashCode()), Long.valueOf(l) });
     }
   }
   
-  private void h(Intent paramIntent)
+  private void i(Intent paramIntent)
   {
     if (paramIntent == null) {}
     for (;;)
     {
       return;
-      jSG.removeCallbacks(jSH);
-      jSG.postDelayed(jSH, jSF);
+      ksa.removeCallbacks(ksb);
+      ksa.postDelayed(ksb, krZ);
       String str3 = paramIntent.getAction();
-      u.d("!44@/B4Tb64lLpIdghwcJC06L5mX8ZGnQwd6K21Nn76yszs=", "dkcrash handleCommand action:" + str3);
+      v.d("MicroMsg.CrashMonitorService", "dkcrash handleCommand action:" + str3);
       try
       {
         String str2 = paramIntent.getStringExtra("tag");
@@ -61,21 +61,21 @@ public class ExceptionMonitorService
         }
         int i = paramIntent.getIntExtra("exceptionPid", 0);
         str1.equals("exception");
-        jSE = i;
-        bCG = paramIntent.getLongExtra("exceptionTime", SystemClock.elapsedRealtime());
+        krY = i;
+        bvQ = paramIntent.getLongExtra("exceptionTime", SystemClock.elapsedRealtime());
         str2 = paramIntent.getStringExtra("exceptionMsg");
         String str4 = paramIntent.getStringExtra("userName");
         boolean bool = paramIntent.getBooleanExtra("exceptionWriteSdcard", true);
-        u.d("!44@/B4Tb64lLpIdghwcJC06L5mX8ZGnQwd6K21Nn76yszs=", "dkcrash handleCommand. action=" + str3 + " pid:" + i + " tag=" + str1 + ", userName=" + str4 + ", message" + str2);
-        if ((!ay.kz(str2)) && (a.a(str4, str1, new b.a(str4, str1, ay.FR(), str2, bool)) == 0))
+        v.d("MicroMsg.CrashMonitorService", "dkcrash handleCommand. action=" + str3 + " pid:" + i + " tag=" + str1 + ", userName=" + str4 + ", message" + str2);
+        if ((!be.kf(str2)) && (a.a(str4, str1, new b.a(str4, str1, be.Go(), str2, bool)) == 0))
         {
-          df(this);
+          dd(this);
           return;
         }
       }
       catch (Exception paramIntent)
       {
-        u.printErrStackTrace("!44@/B4Tb64lLpIdghwcJC06L5mX8ZGnQwd6K21Nn76yszs=", paramIntent, "", new Object[0]);
+        v.printErrStackTrace("MicroMsg.CrashMonitorService", paramIntent, "", new Object[0]);
       }
     }
   }
@@ -88,28 +88,28 @@ public class ExceptionMonitorService
   public void onCreate()
   {
     super.onCreate();
-    jSI = this;
-    c.c(hashCode(), this);
-    jSG.postDelayed(jSH, jSF);
+    ksc = this;
+    c.f(hashCode(), this);
+    ksa.postDelayed(ksb, krZ);
   }
   
   public void onDestroy()
   {
     super.onDestroy();
-    jSI = null;
-    c.d(hashCode(), this);
-    jSG.removeCallbacks(jSH);
+    ksc = null;
+    c.g(hashCode(), this);
+    ksa.removeCallbacks(ksb);
   }
   
   public void onStart(Intent paramIntent, int paramInt)
   {
     super.onStart(paramIntent, paramInt);
-    h(paramIntent);
+    i(paramIntent);
   }
   
   public int onStartCommand(Intent paramIntent, int paramInt1, int paramInt2)
   {
-    h(paramIntent);
+    i(paramIntent);
     return 1;
   }
 }

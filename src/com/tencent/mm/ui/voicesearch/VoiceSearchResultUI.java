@@ -11,11 +11,13 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.model.ah;
+import com.tencent.mm.model.h;
 import com.tencent.mm.model.i;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 import com.tencent.mm.storage.s;
@@ -33,23 +35,23 @@ import java.util.Map;
 public class VoiceSearchResultUI
   extends MMActivity
 {
-  int asN = 1;
-  private int bXH = 2;
-  private int dLU = -1;
-  private b lCA;
-  private String[] lCB;
-  private boolean lCC = false;
-  boolean lCD = false;
-  private ListView lCl;
-  private String lCn = null;
-  private TextView lCo;
+  int aex = 1;
+  private int bRn = 2;
+  private int dNB = -1;
+  private ListView mdc;
+  private String mde = null;
+  private TextView mdf;
+  private b mdq;
+  private String[] mdr;
+  private boolean mds = false;
+  boolean mdt = false;
   
-  private static String[] E(String[] paramArrayOfString)
+  private static String[] F(String[] paramArrayOfString)
   {
     if ((paramArrayOfString == null) || (paramArrayOfString.length == 0)) {
       return paramArrayOfString;
     }
-    u.d("!44@/B4Tb64lLpKCGRi+LcyHSL2bHGvRI18mEYwKXSwUqfk=", "oldlist.length " + paramArrayOfString.length);
+    v.d("MicroMsg.VoiceSearchResultUI", "oldlist.length " + paramArrayOfString.length);
     HashMap localHashMap = new HashMap();
     ArrayList localArrayList = new ArrayList();
     int j = paramArrayOfString.length;
@@ -57,11 +59,11 @@ public class VoiceSearchResultUI
     while (i < j)
     {
       String str1 = paramArrayOfString[i];
-      String str2 = i.dY(str1);
-      u.d("!44@/B4Tb64lLpKCGRi+LcyHSL2bHGvRI18mEYwKXSwUqfk=", "displayname " + str2);
-      if ((!localHashMap.containsValue(str2)) || (!i.dn(str1)))
+      String str2 = i.ej(str1);
+      v.d("MicroMsg.VoiceSearchResultUI", "displayname " + str2);
+      if ((!localHashMap.containsValue(str2)) || (!i.du(str1)))
       {
-        u.d("!44@/B4Tb64lLpKCGRi+LcyHSL2bHGvRI18mEYwKXSwUqfk=", "username " + str1);
+        v.d("MicroMsg.VoiceSearchResultUI", "username " + str1);
         localHashMap.put(str2, str1);
         localArrayList.add(str1);
       }
@@ -70,17 +72,17 @@ public class VoiceSearchResultUI
     return (String[])localArrayList.toArray(new String[localArrayList.size()]);
   }
   
-  private void F(String[] paramArrayOfString)
+  private void G(String[] paramArrayOfString)
   {
     ArrayList localArrayList = new ArrayList();
-    if ((paramArrayOfString != null) && (lCA != null))
+    if ((paramArrayOfString != null) && (mdq != null))
     {
       int j = paramArrayOfString.length;
       int i = 0;
       while (i < j)
       {
         String str = paramArrayOfString[i];
-        if (lCA.HM(str)) {
+        if (mdq.Kb(str)) {
           localArrayList.add(str);
         }
         i += 1;
@@ -88,27 +90,27 @@ public class VoiceSearchResultUI
     }
     if (localArrayList.size() == 0)
     {
-      lCo.setVisibility(0);
-      if (lCn != null) {
-        lCo.setText(lCn);
+      mdf.setVisibility(0);
+      if (mde != null) {
+        mdf.setText(mde);
       }
     }
     for (;;)
     {
-      if (lCA != null) {
-        lCA.bZ(localArrayList);
+      if (mdq != null) {
+        mdq.co(localArrayList);
       }
       return;
-      lCo.setText(getString(2131428328));
+      mdf.setText(getString(2131230819));
       continue;
-      lCo.setVisibility(8);
+      mdf.setVisibility(8);
     }
   }
   
-  static boolean HN(String paramString)
+  static boolean Kc(String paramString)
   {
     Cursor[] arrayOfCursor = new Cursor[2];
-    arrayOfCursor[0] = ah.tD().rt().b(i.bzW, null, paramString);
+    arrayOfCursor[0] = ah.tE().ru().b(i.bsZ, null, paramString);
     ArrayList localArrayList1 = new ArrayList();
     ArrayList localArrayList2 = new ArrayList();
     try
@@ -120,7 +122,7 @@ public class VoiceSearchResultUI
         if (!str.endsWith("@chatroom")) {
           localArrayList2.add(str);
         }
-        u.d("!44@/B4Tb64lLpKCGRi+LcyHSL2bHGvRI18mEYwKXSwUqfk=", "block user " + str);
+        v.d("MicroMsg.VoiceSearchResultUI", "block user " + str);
       }
       int i;
       int j;
@@ -128,59 +130,59 @@ public class VoiceSearchResultUI
     }
     catch (Exception localException)
     {
-      arrayOfCursor[1] = ah.tD().rq().a(paramString, "@micromsg.with.all.biz.qq.com", localArrayList1, localArrayList2);
+      arrayOfCursor[1] = ah.tE().rr().a(paramString, "@micromsg.with.all.biz.qq.com", localArrayList1, localArrayList2);
       i = arrayOfCursor[1].getCount();
       j = arrayOfCursor[0].getCount();
       arrayOfCursor[0].close();
       arrayOfCursor[1].close();
-      u.d("!44@/B4Tb64lLpKCGRi+LcyHSL2bHGvRI18mEYwKXSwUqfk=", "contactCount " + i + " conversationCount " + j);
+      v.d("MicroMsg.VoiceSearchResultUI", "contactCount " + i + " conversationCount " + j);
       if (i + j <= 1) {
         return true;
       }
     }
   }
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    lCl = ((ListView)findViewById(2131165285));
-    lCo = ((TextView)findViewById(2131165286));
-    lCB = getIntent().getStringArrayExtra("VoiceSearchResultUI_Resultlist");
-    lCn = getIntent().getStringExtra("VoiceSearchResultUI_Error");
-    dLU = getIntent().getIntExtra("VoiceSearchResultUI_VoiceId", -1);
-    asN = getIntent().getIntExtra("VoiceSearchResultUI_ShowType", 1);
+    mdc = ((ListView)findViewById(2131759449));
+    mdf = ((TextView)findViewById(2131755251));
+    mdr = getIntent().getStringArrayExtra("VoiceSearchResultUI_Resultlist");
+    mde = getIntent().getStringExtra("VoiceSearchResultUI_Error");
+    dNB = getIntent().getIntExtra("VoiceSearchResultUI_VoiceId", -1);
+    aex = getIntent().getIntExtra("VoiceSearchResultUI_ShowType", 1);
     int i;
     LinkedList localLinkedList;
-    if (asN == 1)
+    if (aex == 1)
     {
       i = 2;
-      bXH = i;
-      lCD = getIntent().getBooleanExtra("VoiceSearchResultUI_IsVoiceControl", false);
-      u.i("!44@/B4Tb64lLpKCGRi+LcyHSL2bHGvRI18mEYwKXSwUqfk=", "showType = %s, isVoiceControl = %s", new Object[] { Integer.valueOf(asN), Boolean.valueOf(lCD) });
-      lCA = new b(getApplicationContext(), asN);
-      lCA.il(false);
+      bRn = i;
+      mdt = getIntent().getBooleanExtra("VoiceSearchResultUI_IsVoiceControl", false);
+      v.i("MicroMsg.VoiceSearchResultUI", "showType = %s, isVoiceControl = %s", new Object[] { Integer.valueOf(aex), Boolean.valueOf(mdt) });
+      mdq = new b(getApplicationContext(), aex);
+      mdq.iT(false);
       localLinkedList = new LinkedList();
-      switch (asN)
+      switch (aex)
       {
       case 1: 
       default: 
         label204:
-        if (lCA != null) {
-          lCA.bS(localLinkedList);
+        if (mdq != null) {
+          mdq.ch(localLinkedList);
         }
-        lCl.setAdapter(lCA);
-        lCo.setVisibility(8);
-        u.d("!44@/B4Tb64lLpKCGRi+LcyHSL2bHGvRI18mEYwKXSwUqfk=", "voiceId  " + dLU);
-        if (asN == 2)
+        mdc.setAdapter(mdq);
+        mdf.setVisibility(8);
+        v.d("MicroMsg.VoiceSearchResultUI", "voiceId  " + dNB);
+        if (aex == 2)
         {
-          Gj("");
-          lCB = E(lCB);
+          Ah("");
+          mdr = F(mdr);
         }
         break;
       }
     }
     for (;;)
     {
-      Gj(getString(2131428371));
+      Ah(getString(2131235869));
       b(new MenuItem.OnMenuItemClickListener()
       {
         public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
@@ -188,7 +190,7 @@ public class VoiceSearchResultUI
           StringBuilder localStringBuilder;
           if (!VoiceSearchResultUI.a(VoiceSearchResultUI.this))
           {
-            paramAnonymousMenuItem = com.tencent.mm.plugin.report.service.h.fUJ;
+            paramAnonymousMenuItem = g.gdY;
             localStringBuilder = new StringBuilder().append(VoiceSearchResultUI.b(VoiceSearchResultUI.this)).append(",").append(VoiceSearchResultUI.c(VoiceSearchResultUI.this)).append(",");
             if (VoiceSearchResultUI.d(VoiceSearchResultUI.this) != null) {
               break label112;
@@ -197,7 +199,7 @@ public class VoiceSearchResultUI
           label112:
           for (int i = 0;; i = VoiceSearchResultUI.d(VoiceSearchResultUI.this).length)
           {
-            paramAnonymousMenuItem.O(10452, i + ",0");
+            paramAnonymousMenuItem.X(10452, i + ",0");
             if (VoiceSearchResultUI.e(VoiceSearchResultUI.this)) {
               moveTaskToBack(true);
             }
@@ -206,28 +208,28 @@ public class VoiceSearchResultUI
           }
         }
       });
-      lCl.setOnItemClickListener(new AdapterView.OnItemClickListener()
+      mdc.setOnItemClickListener(new AdapterView.OnItemClickListener()
       {
-        public final void onItemClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+        public final void onItemClick(AdapterView<?> paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
         {
           int i;
           Object localObject;
           if (!VoiceSearchResultUI.a(VoiceSearchResultUI.this))
           {
-            paramAnonymousAdapterView = com.tencent.mm.plugin.report.service.h.fUJ;
+            paramAnonymousAdapterView = g.gdY;
             paramAnonymousView = new StringBuilder().append(VoiceSearchResultUI.b(VoiceSearchResultUI.this)).append(",").append(VoiceSearchResultUI.c(VoiceSearchResultUI.this)).append(",");
             if (VoiceSearchResultUI.d(VoiceSearchResultUI.this) == null)
             {
               i = 0;
-              paramAnonymousAdapterView.O(10452, i + "," + paramAnonymousInt);
+              paramAnonymousAdapterView.X(10452, i + "," + paramAnonymousInt);
             }
           }
           else
           {
-            localObject = VoiceSearchResultUI.f(VoiceSearchResultUI.this).fL(paramAnonymousInt);
+            localObject = VoiceSearchResultUI.f(VoiceSearchResultUI.this).gC(paramAnonymousInt);
             paramAnonymousAdapterView = VoiceSearchResultUI.this;
             paramAnonymousView = field_username;
-            localObject = ((k)localObject).qz();
+            localObject = ((k)localObject).pc();
             if ((paramAnonymousView != null) && (paramAnonymousView.length() > 0)) {
               break label146;
             }
@@ -241,8 +243,8 @@ public class VoiceSearchResultUI
               return;
               i = VoiceSearchResultUI.d(VoiceSearchResultUI.this).length;
               break;
-              u.d("!44@/B4Tb64lLpKCGRi+LcyHSL2bHGvRI18mEYwKXSwUqfk=", "dealSelectContact " + paramAnonymousView);
-              if (asN == 3)
+              v.d("MicroMsg.VoiceSearchResultUI", "dealSelectContact " + paramAnonymousView);
+              if (aex == 3)
               {
                 localObject = new Intent();
                 ((Intent)localObject).putExtra("Select_Conv_User", paramAnonymousView);
@@ -250,128 +252,128 @@ public class VoiceSearchResultUI
                 paramAnonymousAdapterView.finish();
                 return;
               }
-              if ((asN != 1) && (!i.eJ(paramAnonymousView)) && (!i.ea(paramAnonymousView)) && (!i.dn(paramAnonymousView)) && (!i.dT(paramAnonymousView)) && (!VoiceSearchResultUI.HN((String)localObject))) {
+              if ((aex != 1) && (!i.eV(paramAnonymousView)) && (!i.el(paramAnonymousView)) && (!i.du(paramAnonymousView)) && (!i.ee(paramAnonymousView)) && (!VoiceSearchResultUI.Kc((String)localObject))) {
                 break label1016;
               }
-              if (asN != 1) {
+              if (aex != 1) {
                 break label356;
               }
               localObject = new Intent();
               ((Intent)localObject).putExtra("Contact_User", paramAnonymousView);
-              if (i.dT(paramAnonymousView)) {
+              if (i.ee(paramAnonymousView)) {
                 ((Intent)localObject).putExtra("Is_group_card", true);
               }
             } while ((paramAnonymousView == null) || (paramAnonymousView.length() <= 0));
             e.a((Intent)localObject, paramAnonymousView);
-            if (lCD)
+            if (mdt)
             {
               paramAnonymousAdapterView.a(ChattingUI.class, new Intent().putExtra("Chat_User", paramAnonymousView).putExtra("finish_direct", true));
               paramAnonymousAdapterView.finish();
               return;
             }
-            com.tencent.mm.ar.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", (Intent)localObject);
+            com.tencent.mm.av.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", (Intent)localObject);
             return;
-          } while (asN != 2);
-          if (ay.kz(paramAnonymousView))
+          } while (aex != 2);
+          if (be.kf(paramAnonymousView))
           {
-            u.e("!44@/B4Tb64lLpKCGRi+LcyHSL2bHGvRI18mEYwKXSwUqfk=", "username is null " + paramAnonymousView);
+            v.e("MicroMsg.VoiceSearchResultUI", "username is null " + paramAnonymousView);
             return;
           }
-          if (i.ee(paramAnonymousView))
+          if (i.eq(paramAnonymousView))
           {
-            if (com.tencent.mm.model.h.su())
+            if (h.sw())
             {
               paramAnonymousView = new Intent().putExtra("finish_direct", true);
-              com.tencent.mm.ar.c.c(koJ.kpc, "tmessage", ".ui.TConversationUI", paramAnonymousView);
+              com.tencent.mm.av.c.c(kNN.kOg, "tmessage", ".ui.TConversationUI", paramAnonymousView);
               return;
             }
-            com.tencent.mm.ar.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
+            com.tencent.mm.av.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
             return;
           }
-          if (i.eg(paramAnonymousView))
+          if (i.es(paramAnonymousView))
           {
-            if (com.tencent.mm.model.h.sr())
+            if (h.st())
             {
               paramAnonymousView = new Intent().putExtra("finish_direct", true);
-              com.tencent.mm.ar.c.c(koJ.kpc, "qmessage", ".ui.QConversationUI", paramAnonymousView);
+              com.tencent.mm.av.c.c(kNN.kOg, "qmessage", ".ui.QConversationUI", paramAnonymousView);
               return;
             }
-            com.tencent.mm.ar.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
+            com.tencent.mm.av.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
             return;
           }
-          if (i.ef(paramAnonymousView))
+          if (i.er(paramAnonymousView))
           {
-            com.tencent.mm.ar.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
+            com.tencent.mm.av.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
             return;
           }
-          if (i.ek(paramAnonymousView))
+          if (i.ew(paramAnonymousView))
           {
             MMAppMgr.cancelNotification(paramAnonymousView);
-            com.tencent.mm.ar.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
-            return;
-          }
-          if (i.ec(paramAnonymousView))
-          {
-            if (com.tencent.mm.model.h.sD())
-            {
-              paramAnonymousAdapterView.a(ChattingUI.class, new Intent().putExtra("Chat_User", paramAnonymousView).putExtra("finish_direct", true));
-              return;
-            }
-            com.tencent.mm.ar.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
-            return;
-          }
-          if (i.ep(paramAnonymousView))
-          {
-            if (com.tencent.mm.model.h.sy())
-            {
-              paramAnonymousView = new Intent();
-              paramAnonymousView.putExtra("type", 20);
-              com.tencent.mm.ar.c.c(paramAnonymousAdapterView, "readerapp", ".ui.ReaderAppUI", paramAnonymousView);
-              return;
-            }
-            com.tencent.mm.ar.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
-            return;
-          }
-          if (i.ex(paramAnonymousView))
-          {
-            if (com.tencent.mm.model.h.sz())
-            {
-              paramAnonymousView = new Intent();
-              paramAnonymousView.putExtra("type", 11);
-              com.tencent.mm.ar.c.c(paramAnonymousAdapterView, "readerapp", ".ui.ReaderAppUI", paramAnonymousView);
-              return;
-            }
-            com.tencent.mm.ar.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
-            return;
-          }
-          if (i.eh(paramAnonymousView))
-          {
-            com.tencent.mm.ar.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
-            return;
-          }
-          if (i.ei(paramAnonymousView))
-          {
-            if (com.tencent.mm.model.h.sB())
-            {
-              com.tencent.mm.ar.c.c(paramAnonymousAdapterView, "masssend", ".ui.MassSendHistoryUI", new Intent().putExtra("finish_direct", true));
-              return;
-            }
-            com.tencent.mm.ar.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
+            com.tencent.mm.av.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
             return;
           }
           if (i.eo(paramAnonymousView))
           {
-            if (com.tencent.mm.model.h.sv())
+            if (h.sF())
             {
               paramAnonymousAdapterView.a(ChattingUI.class, new Intent().putExtra("Chat_User", paramAnonymousView).putExtra("finish_direct", true));
               return;
             }
-            com.tencent.mm.ar.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
+            com.tencent.mm.av.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
             return;
           }
-          if ((i.em(paramAnonymousView)) || (i.en(paramAnonymousView)) || (i.ej(paramAnonymousView)) || (i.eq(paramAnonymousView)) || (i.er(paramAnonymousView)) || (i.ed(paramAnonymousView)) || (i.eA(paramAnonymousView)))
+          if (i.eB(paramAnonymousView))
           {
-            com.tencent.mm.ar.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
+            if (h.sA())
+            {
+              paramAnonymousView = new Intent();
+              paramAnonymousView.putExtra("type", 20);
+              com.tencent.mm.av.c.c(paramAnonymousAdapterView, "readerapp", ".ui.ReaderAppUI", paramAnonymousView);
+              return;
+            }
+            com.tencent.mm.av.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
+            return;
+          }
+          if (i.eJ(paramAnonymousView))
+          {
+            if (h.sB())
+            {
+              paramAnonymousView = new Intent();
+              paramAnonymousView.putExtra("type", 11);
+              com.tencent.mm.av.c.c(paramAnonymousAdapterView, "readerapp", ".ui.ReaderAppUI", paramAnonymousView);
+              return;
+            }
+            com.tencent.mm.av.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
+            return;
+          }
+          if (i.et(paramAnonymousView))
+          {
+            com.tencent.mm.av.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
+            return;
+          }
+          if (i.eu(paramAnonymousView))
+          {
+            if (h.sD())
+            {
+              com.tencent.mm.av.c.c(paramAnonymousAdapterView, "masssend", ".ui.MassSendHistoryUI", new Intent().putExtra("finish_direct", true));
+              return;
+            }
+            com.tencent.mm.av.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
+            return;
+          }
+          if (i.eA(paramAnonymousView))
+          {
+            if (h.sx())
+            {
+              paramAnonymousAdapterView.a(ChattingUI.class, new Intent().putExtra("Chat_User", paramAnonymousView).putExtra("finish_direct", true));
+              return;
+            }
+            com.tencent.mm.av.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
+            return;
+          }
+          if ((i.ey(paramAnonymousView)) || (i.ez(paramAnonymousView)) || (i.ev(paramAnonymousView)) || (i.eC(paramAnonymousView)) || (i.eD(paramAnonymousView)) || (i.ep(paramAnonymousView)) || (i.eM(paramAnonymousView)))
+          {
+            com.tencent.mm.av.c.c(paramAnonymousAdapterView, "profile", ".ui.ContactInfoUI", new Intent().putExtra("Contact_User", paramAnonymousView));
             return;
           }
           paramAnonymousAdapterView.a(ChattingUI.class, new Intent().putExtra("Chat_User", paramAnonymousView).putExtra("finish_direct", true));
@@ -382,7 +384,7 @@ public class VoiceSearchResultUI
           paramAnonymousAdapterView.startActivity(paramAnonymousView);
         }
       });
-      F(lCB);
+      G(mdr);
       return;
       i = 1;
       break;
@@ -397,11 +399,11 @@ public class VoiceSearchResultUI
       localLinkedList.add("voiceinputapp");
       localLinkedList.add("linkedinplugin");
       localLinkedList.add("notifymessage");
-      i = com.tencent.mm.model.h.sm();
+      i = h.so();
       if ((i & 0x1) != 0) {
         localLinkedList.add("qqmail");
       }
-      if ((!i.sR()) || ((i & 0x2) != 0)) {
+      if ((!i.sQ()) || ((i & 0x2) != 0)) {
         localLinkedList.add("tmessage");
       }
       if ((i & 0x20) != 0) {
@@ -416,7 +418,7 @@ public class VoiceSearchResultUI
       if ((0x80000 & i) != 0) {
         localLinkedList.add("newsapp");
       }
-      if (((0x40000 & i) != 0) || (!i.sQ())) {
+      if (((0x40000 & i) != 0) || (!i.sP())) {
         localLinkedList.add("blogapp");
       }
       if ((0x10000 & i) != 0) {
@@ -427,47 +429,47 @@ public class VoiceSearchResultUI
       }
       localLinkedList.add("voiceinputapp");
       break label204;
-      Gj(getString(2131428371));
+      Ah(getString(2131235869));
     }
   }
   
   protected final int getLayoutId()
   {
-    return 2131361808;
+    return 2130904570;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    Gb();
-    lCC = false;
+    Gy();
+    mds = false;
   }
   
   public void onDestroy()
   {
     super.onDestroy();
-    lCA.adW();
+    mdq.closeCursor();
   }
   
   public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
   {
     if (4 == paramInt)
     {
-      com.tencent.mm.plugin.report.service.h localh;
+      g localg;
       StringBuilder localStringBuilder;
-      if (!lCC)
+      if (!mds)
       {
-        localh = com.tencent.mm.plugin.report.service.h.fUJ;
-        localStringBuilder = new StringBuilder().append(bXH).append(",").append(dLU).append(",");
-        if (lCB != null) {
+        localg = g.gdY;
+        localStringBuilder = new StringBuilder().append(bRn).append(",").append(dNB).append(",");
+        if (mdr != null) {
           break label103;
         }
       }
       label103:
-      for (int i = 0;; i = lCB.length)
+      for (int i = 0;; i = mdr.length)
       {
-        localh.O(10452, i + ",0");
-        if (!lCD) {
+        localg.X(10452, i + ",0");
+        if (!mdt) {
           break;
         }
         moveTaskToBack(true);
@@ -481,7 +483,7 @@ public class VoiceSearchResultUI
   public void onPause()
   {
     super.onPause();
-    lCC = true;
+    mds = true;
   }
 }
 

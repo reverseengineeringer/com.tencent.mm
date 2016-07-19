@@ -4,9 +4,9 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.widget.Toast;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.MMWizardActivity;
 
@@ -15,33 +15,33 @@ final class FindMContactAddUI$2
 {
   FindMContactAddUI$2(FindMContactAddUI paramFindMContactAddUI) {}
   
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, com.tencent.mm.t.j paramj)
   {
-    if (FindMContactAddUI.a(lrt) != null)
+    if (FindMContactAddUI.a(lRX) != null)
     {
-      FindMContactAddUI.a(lrt).dismiss();
-      FindMContactAddUI.b(lrt);
+      FindMContactAddUI.a(lRX).dismiss();
+      FindMContactAddUI.b(lRX);
     }
-    if (FindMContactAddUI.o(lrt) != null)
+    if (FindMContactAddUI.o(lRX) != null)
     {
-      ah.tE().b(30, FindMContactAddUI.o(lrt));
-      FindMContactAddUI.p(lrt);
+      ah.tF().b(30, FindMContactAddUI.o(lRX));
+      FindMContactAddUI.p(lRX);
     }
-    if ((paramInt1 == 4) && (paramInt2 == -24) && (!ay.kz(paramString)))
+    if ((paramInt1 == 4) && (paramInt2 == -24) && (!be.kf(paramString)))
     {
-      Toast.makeText(lrt.koJ.kpc, paramString, 1).show();
+      Toast.makeText(lRX.kNN.kOg, paramString, 1).show();
       return;
     }
-    if ((FindMContactAddUI.k(lrt) != null) && (FindMContactAddUI.k(lrt).contains("2")))
+    if ((FindMContactAddUI.k(lRX) != null) && (FindMContactAddUI.k(lRX).contains("2")))
     {
-      paramString = new Intent(lrt, FindMContactInviteUI.class);
-      paramString.putExtra("regsetinfo_ticket", FindMContactAddUI.l(lrt));
-      paramString.putExtra("login_type", FindMContactAddUI.m(lrt));
-      paramString.putExtra("regsetinfo_NextStyle", FindMContactAddUI.e(lrt));
-      MMWizardActivity.v(lrt, paramString);
+      paramString = new Intent(lRX, FindMContactInviteUI.class);
+      paramString.putExtra("regsetinfo_ticket", FindMContactAddUI.l(lRX));
+      paramString.putExtra("login_type", FindMContactAddUI.m(lRX));
+      paramString.putExtra("regsetinfo_NextStyle", FindMContactAddUI.e(lRX));
+      MMWizardActivity.v(lRX, paramString);
       return;
     }
-    FindMContactAddUI.n(lrt);
+    FindMContactAddUI.n(lRX);
   }
 }
 

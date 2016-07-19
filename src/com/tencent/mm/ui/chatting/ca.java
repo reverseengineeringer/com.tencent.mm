@@ -1,180 +1,154 @@
 package com.tencent.mm.ui.chatting;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.AlphaAnimation;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.tencent.mm.d.b.bg;
+import com.tencent.mm.e.b.bj;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.model.i;
-import com.tencent.mm.modelvoice.n;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.ag;
-import com.tencent.mm.ui.base.AnimImageView;
-import com.tencent.mm.ui.base.g;
-import com.tencent.mm.ui.j;
-import com.tencent.mm.ui.o;
+import com.tencent.mm.model.ar;
+import com.tencent.mm.model.c;
+import com.tencent.mm.model.z.a;
+import com.tencent.mm.model.z.g;
+import com.tencent.mm.p.a.a;
+import com.tencent.mm.plugin.subapp.c.e;
+import com.tencent.mm.pluginsdk.model.app.al;
+import com.tencent.mm.pluginsdk.model.app.l;
+import com.tencent.mm.pluginsdk.model.app.z;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.aj;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 
 final class ca
-  extends aa.c
+  extends ab.b
 {
-  private ChattingUI.a kTe;
+  d bWN;
+  ChattingUI.a ltl;
   
   public ca()
   {
-    super(7);
+    super(33);
   }
   
   public final View a(LayoutInflater paramLayoutInflater, View paramView)
   {
     Object localObject;
-    if ((paramView != null) && (paramView.getTag() != null))
+    if ((paramView != null) && (paramView.getTag() != null) && ((paramView.getTag() instanceof dw)))
     {
       localObject = paramView;
-      if (getTagtype == eLV) {}
+      if (getTagtype == cTv) {}
     }
     else
     {
-      localObject = new ax(paramLayoutInflater, 2131361813);
-      ((View)localObject).setTag(new ec(eLV).b((View)localObject, false, kAy));
+      localObject = new ay(paramLayoutInflater, 2130903334);
+      ((View)localObject).setTag(new dw(cTv).aO((View)localObject));
     }
     return (View)localObject;
   }
   
-  public final void a(aa.a parama, int paramInt, ChattingUI.a parama1, ag paramag, String paramString)
+  public final void a(final ab.a parama, final int paramInt, ChattingUI.a parama1, final ai paramai, String paramString)
   {
-    kTe = parama1;
-    parama = (ec)parama;
-    ldW.setFromVoice(false);
-    ldW.setFromGroup(kAy);
-    a(kSE, field_msgId);
-    ec.a(parama, paramag, paramInt, parama1, false);
-    if (bes())
+    dw localdw = (dw)parama;
+    ltl = parama1;
+    Object localObject2 = al.aUB().dk(field_msgId);
+    Object localObject1 = field_content;
+    paramString = null;
+    parama = paramString;
+    if (localObject2 != null)
     {
-      if (leb != null) {
-        leb.setVisibility(8);
-      }
-      if (kQC != null) {
-        kQC.setVisibility(8);
-      }
-      if ((field_status == 1) || (field_status == 5))
-      {
-        lec.setBackgroundResource(2130970264);
-        kfH = true;
+      parama = paramString;
+      if (localObject1 != null) {
+        parama = a.a.y((String)localObject1, field_reserved);
       }
     }
-    for (;;)
+    if (parama != null) {
+      cuk.setText(description);
+    }
+    v.d("MicroMsg.ChattingItemVoiceRemindsys", "content sys " + field_content);
+    localObject1 = e.xw((String)localObject1);
+    if ((localObject1 != null) && (hJf != null) && (hJf.length() > 0) && (hJg > 0) && (bWN == null) && (parama != null) && (be.kf(field_imgPath)))
     {
-      a(paramInt, parama, paramag, kSE.bEJ, kAy, kSE.kVs);
-      return;
-      lec.setBackgroundResource(2130970364);
-      if ((kQC != null) && (a(kSE, field_msgId)))
+      localObject2 = com.tencent.mm.plugin.subapp.c.k.ko(com.tencent.mm.model.h.se());
+      paramString = com.tencent.mm.plugin.subapp.c.h.ag((String)localObject2, false);
+      paramai.cs((String)localObject2);
+      ah.tE().rt().a(field_msgId, paramai);
+      long l = field_msgId;
+      int i = sdkVer;
+      localObject2 = appId;
+      String str = hJf;
+      int j = hJg;
+      int k = type;
+      localObject1 = bqo;
+      parama = l.a(paramString, l, i, (String)localObject2, str, j, k, bqd);
+      if (parama != null)
       {
-        if (kfH)
+        paramString = ah.tF();
+        localObject1 = new d()
         {
-          paramString = new AlphaAnimation(0.5F, 1.0F);
-          paramString.setDuration(300L);
-          lec.startAnimation(paramString);
-          kfH = false;
-        }
-        kQC.setVisibility(0);
-        continue;
-        if (leb != null)
-        {
-          leb.setVisibility(0);
-          if (field_status >= 2) {
-            leb.setVisibility(8);
+          public final void onSceneEnd(int paramAnonymousInt1, int paramAnonymousInt2, String paramAnonymousString, j paramAnonymousj)
+          {
+            v.d("MicroMsg.ChattingItemVoiceRemindsys", "errType " + paramAnonymousInt1 + " errCode " + paramAnonymousInt2 + "  scene " + paramAnonymousj.getType());
+            boolean bool = false;
+            if (z.a.btz != null) {
+              bool = z.a.btz.G(paramaifield_msgId);
+            }
+            if ((!bool) && (paramAnonymousInt1 == 0) && (paramAnonymousInt2 == 0) && (((z)paramAnonymousj).getMediaId().equals(parama))) {
+              ltl.lsL.lvu.b(paramInt, paramai);
+            }
+            ah.tF().b(221, bWN);
+            bWN = null;
           }
-        }
+        };
+        bWN = ((d)localObject1);
+        paramString.a(221, (d)localObject1);
+        parama = new z(parama);
+        parama.aUu();
+        ah.tF().a(parama, 0);
       }
+    }
+    cuk.setTag(new dh(paramai, kZE, paramInt, null, 0, (byte)0));
+    cuk.setOnClickListener(lsL.lvy);
+    if (ah.tE().isSDCardAvailable()) {
+      cuk.setOnLongClickListener(lsL.lvA);
     }
   }
   
-  public final boolean a(ContextMenu paramContextMenu, View paramView, ag paramag)
+  public final boolean a(ContextMenu paramContextMenu, View paramView, ai paramai)
   {
-    int j;
-    n localn;
-    if (ah.tD().isSDCardAvailable())
-    {
-      j = getTagposition;
-      localn = new n(field_content);
-      if (((time != 0L) || (field_isSend != 0)) && ((field_status != 1) || (field_isSend != 1)))
-      {
-        if (!kTe.cIH) {
-          break label340;
-        }
-        paramContextMenu.add(j, 120, 0, 2131428002);
-      }
-      if (field_status == 5) {
-        paramContextMenu.add(j, 103, 0, paramView.getContext().getString(2131427971));
-      }
-      if (com.tencent.mm.ar.c.yf("favorite")) {
-        paramContextMenu.add(j, 116, 0, paramView.getContext().getString(2131431054));
-      }
-      if ((!paramag.aWV()) && (paramag.aWW()) && ((field_status == 2) || (bcK == 1)) && (ber()) && (GJ(field_talker))) {
-        paramContextMenu.add(j, 123, 0, paramView.getContext().getString(2131427860));
-      }
-      if ((!i.ea(field_talker)) || (!t.aUx())) {
-        break label357;
-      }
-      paramContextMenu.add(j, 121, 0, 2131427854);
+    int i = getTagposition;
+    if (!ltl.bln()) {
+      paramContextMenu.add(i, 100, 0, ltl.getString(2131231700));
     }
-    label340:
-    label357:
-    for (int i = 1;; i = 0)
-    {
-      if (((time != 0L) || (field_isSend != 0)) && ((field_status != 1) || (field_isSend != 1)) && (!kTe.bfD())) {
-        paramContextMenu.add(j, 100, 0, paramView.getContext().getString(2131427851));
-      }
-      if ((t.aUx()) && (i == 0)) {
-        paramContextMenu.add(j, 121, 0, 2131427854);
-      }
-      return true;
-      paramContextMenu.add(j, 119, 0, 2131428001);
-      break;
-    }
+    return true;
   }
   
-  public final boolean a(MenuItem paramMenuItem, final ChattingUI.a parama, final ag paramag)
+  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ai paramai)
   {
     switch (paramMenuItem.getItemId())
     {
     default: 
       return false;
-    case 119: 
-      parama.hP(true);
-      return true;
-    case 120: 
-      parama.hP(false);
-      return true;
     }
-    if (ChattingUI.a.bfX())
-    {
-      g.a(koJ.kpc, koJ.kpc.getString(2131429461), "", new DialogInterface.OnClickListener()
-      {
-        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
-        {
-          ChattingUI.a.bfY();
-          parama.ab(paramag);
-        }
-      });
-      return true;
+    parama = field_content;
+    paramMenuItem = null;
+    if (parama != null) {
+      paramMenuItem = a.a.dI(parama);
     }
-    parama.ab(paramag);
-    return true;
+    if (paramMenuItem != null) {
+      l.BN(bpZ);
+    }
+    ar.H(field_msgId);
+    return false;
   }
   
-  public final boolean a(View paramView, ChattingUI.a parama, ag paramag)
+  public final boolean a(View paramView, ChattingUI.a parama, ai paramai)
   {
-    return false;
+    return true;
   }
 }
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/ArtistBrowseUI;->Gb()V
+    value = Lcom/tencent/mm/plugin/sns/ui/ArtistBrowseUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gVZ:Lcom/tencent/mm/plugin/sns/ui/ArtistBrowseUI;
+.field final synthetic hjv:Lcom/tencent/mm/plugin/sns/ui/ArtistBrowseUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 97
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/ArtistBrowseUI$1;->gVZ:Lcom/tencent/mm/plugin/sns/ui/ArtistBrowseUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/ArtistBrowseUI$1;->hjv:Lcom/tencent/mm/plugin/sns/ui/ArtistBrowseUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 101
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ArtistBrowseUI$1;->gVZ:Lcom/tencent/mm/plugin/sns/ui/ArtistBrowseUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/ArtistBrowseUI$1;->hjv:Lcom/tencent/mm/plugin/sns/ui/ArtistBrowseUI;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsBaseGalleryUI;->hbH:Lcom/tencent/mm/plugin/sns/ui/o;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsBaseGalleryUI;->hqx:Lcom/tencent/mm/plugin/sns/ui/q;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/o;->aAZ()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/q;->aDU()V
 
     .line 102
     const/4 v0, 0x1

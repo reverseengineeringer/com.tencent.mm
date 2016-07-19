@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/b;->a(Lcom/tencent/mm/sdk/c/b;)Z
+    value = Lcom/tencent/mm/plugin/sns/b;->a(Lcom/tencent/mm/e/a/dv;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic gEN:Lcom/tencent/mm/d/a/dr;
+.field final synthetic gLo:Lcom/tencent/mm/e/a/dv;
 
-.field final synthetic gEO:Lcom/tencent/mm/plugin/sns/b;
+.field final synthetic gLp:Lcom/tencent/mm/plugin/sns/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/plugin/sns/b;Lcom/tencent/mm/d/a/dr;)V
+.method constructor <init>(Lcom/tencent/mm/plugin/sns/b;Lcom/tencent/mm/e/a/dv;)V
     .locals 0
 
     .prologue
-    .line 30
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/b$1;->gEO:Lcom/tencent/mm/plugin/sns/b;
+    .line 27
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/b$1;->gLp:Lcom/tencent/mm/plugin/sns/b;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/b$1;->gEN:Lcom/tencent/mm/d/a/dr;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/b$1;->gLo:Lcom/tencent/mm/e/a/dv;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,25 +44,25 @@
     .locals 2
 
     .prologue
-    .line 37
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/b$1;->gEN:Lcom/tencent/mm/d/a/dr;
+    .line 34
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/b$1;->gLo:Lcom/tencent/mm/e/a/dv;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/a/dr;->axv:Lcom/tencent/mm/d/a/dr$a;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/dv;->aju:Lcom/tencent/mm/e/a/dv$a;
 
     if-eqz v0, :cond_0
 
-    .line 38
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/b$1;->gEN:Lcom/tencent/mm/d/a/dr;
+    .line 35
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/b$1;->gLo:Lcom/tencent/mm/e/a/dv;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/a/dr;->axv:Lcom/tencent/mm/d/a/dr$a;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/dv;->aju:Lcom/tencent/mm/e/a/dv$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/a/dr$a;->axz:Lcom/tencent/mm/model/as$a;
+    iget-object v0, v0, Lcom/tencent/mm/e/a/dv$a;->ajy:Lcom/tencent/mm/model/as$a;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, v1}, Lcom/tencent/mm/model/as$a;->a(Lcom/tencent/mm/network/e;)V
 
-    .line 40
+    .line 37
     :cond_0
     return-void
 .end method
@@ -71,6 +71,6 @@
     .locals 0
 
     .prologue
-    .line 33
+    .line 30
     return-void
 .end method

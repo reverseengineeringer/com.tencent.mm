@@ -13,9 +13,9 @@
 
 
 # static fields
-.field public static final aqX:Ljava/lang/String;
+.field public static final acp:Ljava/lang/String;
 
-.field public static final aqY:Ljava/lang/String;
+.field public static final acq:Ljava/lang/String;
 
 
 # direct methods
@@ -28,7 +28,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/tencent/mm/compatible/util/d;->bxd:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/compatible/util/d;->bpf:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -44,14 +44,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/c/b/g;->aqX:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/c/b/g;->acp:Ljava/lang/String;
 
     .line 118
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/tencent/mm/compatible/util/d;->bxd:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/compatible/util/d;->bpf:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -67,7 +67,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/c/b/g;->aqY:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/c/b/g;->acq:Ljava/lang/String;
 
     return-void
 .end method
@@ -83,17 +83,17 @@
     return-void
 .end method
 
-.method public static j(Ljava/lang/String;I)I
+.method public static g(Ljava/lang/String;I)I
     .locals 3
 
     .prologue
     .line 178
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/g/h;->pS()Lcom/tencent/mm/g/e;
+    invoke-static {}, Lcom/tencent/mm/h/h;->om()Lcom/tencent/mm/h/e;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/g/e;->getValue(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/h/e;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -112,7 +112,7 @@
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpIxLWWXLn1UOQo09hWH5jsc"
+    const-string/jumbo v0, "MicroMsg.RecorderUtil"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -128,7 +128,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -136,7 +136,7 @@
     :catch_1
     move-exception v0
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpIxLWWXLn1UOQo09hWH5jsc"
+    const-string/jumbo v0, "MicroMsg.RecorderUtil"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -152,7 +152,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

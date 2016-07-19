@@ -3,6 +3,17 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/kingkong/Observable",
+        "<",
+        "Lcom/tencent/kingkong/DataSetObserver;",
+        ">;"
+    }
+.end annotation
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0
@@ -38,15 +49,9 @@
     move v1, v0
 
     :goto_0
-    if-gez v1, :cond_0
-
-    .line 31
-    monitor-exit v2
-
-    return-void
+    if-ltz v1, :cond_0
 
     .line 37
-    :cond_0
     iget-object v0, p0, Lcom/tencent/kingkong/DataSetObservable;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -64,7 +69,12 @@
 
     goto :goto_0
 
-    .line 31
+    .line 39
+    :cond_0
+    monitor-exit v2
+
+    return-void
+
     :catchall_0
     move-exception v0
 
@@ -97,15 +107,9 @@
     move v1, v0
 
     :goto_0
-    if-gez v1, :cond_0
-
-    .line 48
-    monitor-exit v2
-
-    return-void
+    if-ltz v1, :cond_0
 
     .line 50
-    :cond_0
     iget-object v0, p0, Lcom/tencent/kingkong/DataSetObservable;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -123,7 +127,12 @@
 
     goto :goto_0
 
-    .line 48
+    .line 52
+    :cond_0
+    monitor-exit v2
+
+    return-void
+
     :catchall_0
     move-exception v0
 

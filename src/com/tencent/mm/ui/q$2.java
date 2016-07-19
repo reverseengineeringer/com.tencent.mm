@@ -1,18 +1,41 @@
 package com.tencent.mm.ui;
 
+import android.graphics.Bitmap;
 import android.view.View;
-import android.view.animation.AnimationUtils;
+import com.tencent.mm.ae.a.c.g;
+import com.tencent.mm.ae.a.d.b;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.ui.base.preference.IconPreference;
 
 final class q$2
-  implements Runnable
+  implements g
 {
-  q$2(q paramq, View paramView) {}
+  q$2(q paramq, IconPreference paramIconPreference) {}
   
-  public final void run()
+  public final void a(String paramString, View paramView, b paramb)
   {
-    klv.setVisibility(8);
-    klv.startAnimation(AnimationUtils.loadAnimation(kqP.koJ.kpc, 2130837603));
+    if ((status == 0) && (bitmap != null))
+    {
+      ad.k(new Runnable()
+      {
+        public final void run()
+        {
+          kPV.E(kKT);
+          kPV.sQ(0);
+        }
+      });
+      return;
+    }
+    ad.k(new Runnable()
+    {
+      public final void run()
+      {
+        kPV.sQ(8);
+      }
+    });
   }
+  
+  public final void iv(String paramString) {}
 }
 
 /* Location:

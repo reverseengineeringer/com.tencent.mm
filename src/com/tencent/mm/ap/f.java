@@ -1,74 +1,65 @@
 package com.tencent.mm.ap;
 
-import android.util.SparseIntArray;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
+import com.tencent.mm.e.b.ad;
+import com.tencent.mm.sdk.h.c.a;
+import java.lang.reflect.Field;
+import java.util.Map;
 
 public final class f
+  extends ad
 {
-  SparseIntArray hVL;
-  byte[] hVM;
+  protected static c.a bjR;
   
-  private f(SparseIntArray paramSparseIntArray, byte[] paramArrayOfByte)
+  static
   {
-    hVL = paramSparseIntArray;
-    hVM = paramArrayOfByte;
+    c.a locala = new c.a();
+    bZI = new Field[8];
+    aZx = new String[9];
+    StringBuilder localStringBuilder = new StringBuilder();
+    aZx[0] = "msgContent";
+    kyU.put("msgContent", "TEXT default '' ");
+    localStringBuilder.append(" msgContent TEXT default '' ");
+    localStringBuilder.append(", ");
+    aZx[1] = "isSend";
+    kyU.put("isSend", "INTEGER default '0' ");
+    localStringBuilder.append(" isSend INTEGER default '0' ");
+    localStringBuilder.append(", ");
+    aZx[2] = "talker";
+    kyU.put("talker", "TEXT default '' ");
+    localStringBuilder.append(" talker TEXT default '' ");
+    localStringBuilder.append(", ");
+    aZx[3] = "encryptTalker";
+    kyU.put("encryptTalker", "TEXT default '' ");
+    localStringBuilder.append(" encryptTalker TEXT default '' ");
+    localStringBuilder.append(", ");
+    aZx[4] = "svrId";
+    kyU.put("svrId", "LONG default '0' ");
+    localStringBuilder.append(" svrId LONG default '0' ");
+    localStringBuilder.append(", ");
+    aZx[5] = "type";
+    kyU.put("type", "INTEGER default '0' ");
+    localStringBuilder.append(" type INTEGER default '0' ");
+    localStringBuilder.append(", ");
+    aZx[6] = "createTime";
+    kyU.put("createTime", "LONG default '0' ");
+    localStringBuilder.append(" createTime LONG default '0' ");
+    localStringBuilder.append(", ");
+    aZx[7] = "chatroomName";
+    kyU.put("chatroomName", "TEXT default '' ");
+    localStringBuilder.append(" chatroomName TEXT default '' ");
+    aZx[8] = "rowid";
+    kyV = localStringBuilder.toString();
+    bjR = locala;
   }
   
-  public static f a(SparseIntArray paramSparseIntArray, InputStream paramInputStream, int paramInt)
+  public final boolean DT()
   {
-    byte[] arrayOfByte = new byte[paramInt];
-    try
-    {
-      if (paramInputStream.read(arrayOfByte, 0, arrayOfByte.length) != arrayOfByte.length) {
-        t.e("!56@/B4Tb64lLpKgNpJeOuPSQaqHoQPXtyphvU/mAg5TckH/nTVOTjsgMw==", "[cpan] newStringsCollection failed. data length no equal.");
-      }
-      paramSparseIntArray = new f(paramSparseIntArray, arrayOfByte);
-      return paramSparseIntArray;
-    }
-    catch (IOException paramSparseIntArray)
-    {
-      t.e("!56@/B4Tb64lLpKgNpJeOuPSQaqHoQPXtyphvU/mAg5TckH/nTVOTjsgMw==", "[cpan] newStringsCollection failed. %s", new Object[] { bn.a(paramSparseIntArray) });
-    }
-    return null;
+    return field_isSend % 2 == 0;
   }
   
-  public final String getString(int paramInt)
+  protected final c.a ou()
   {
-    try
-    {
-      paramInt = hVL.indexOfKey(paramInt);
-      if (paramInt < 0) {
-        return null;
-      }
-      int i = hVL.valueAt(paramInt);
-      if (paramInt < hVL.size() - 1) {
-        paramInt = hVL.valueAt(paramInt + 1) - i;
-      }
-      for (;;)
-      {
-        String str1 = new String(hVM, i, paramInt, "UTF-8");
-        break;
-        paramInt = hVM.length;
-        paramInt -= i;
-      }
-      Object localObject;
-      String str2;
-      return str2;
-    }
-    catch (UnsupportedEncodingException localUnsupportedEncodingException)
-    {
-      t.e("!56@/B4Tb64lLpKgNpJeOuPSQaqHoQPXtyphvU/mAg5TckH/nTVOTjsgMw==", "[cpan] getString failed. %s", new Object[] { bn.a(localUnsupportedEncodingException) });
-      localObject = null;
-    }
-    catch (Exception localException)
-    {
-      t.e("!56@/B4Tb64lLpKgNpJeOuPSQaqHoQPXtyphvU/mAg5TckH/nTVOTjsgMw==", "[cpan] getString failed. %s", new Object[] { bn.a(localException) });
-      str2 = null;
-    }
+    return bjR;
   }
 }
 

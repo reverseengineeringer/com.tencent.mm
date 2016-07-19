@@ -1,8 +1,5 @@
 package com.tencent.mm.ui.contact;
 
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.voicesearch.b;
-
 final class AddressUI$a$8
   implements Runnable
 {
@@ -10,8 +7,7 @@ final class AddressUI$a$8
   
   public final void run()
   {
-    u.v("!32@/B4Tb64lLpJvPADYHZ60V4qqnXgYeWWp", "post search adapter to do refresh");
-    AddressUI.a.e(liu).a(null, null);
+    AddressUI.a.a(lIF).bmF();
   }
 }
 

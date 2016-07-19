@@ -2,7 +2,7 @@ package com.tencent.c.a.a;
 
 public abstract interface f
 {
-  public abstract void aq(String paramString);
+  public abstract void au(String paramString);
 }
 
 /* Location:

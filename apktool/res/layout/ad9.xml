@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/chx" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/he">
+        <ImageView android:id="@id/chk" android:background="@drawable/act" android:layout_width="@dimen/l8" android:layout_height="@dimen/l8" android:layout_marginTop="@dimen/hf" />
+        <TextView android:textSize="24.0dip" android:textColor="@color/ak" android:gravity="center" android:id="@id/chm" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" android:text="@string/d1j" />
+        <TextView android:textSize="@dimen/i8" android:textColor="@color/gg" android:gravity="center" android:id="@id/chn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hb" android:text="@string/d1i" />
+        <RelativeLayout android:gravity="center" android:orientation="horizontal" android:id="@id/chy" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="80.0dip">
+            <Button android:textSize="@dimen/cu" android:id="@id/cho" android:padding="@dimen/cp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hb" android:layout_marginRight="@dimen/hb" android:text="@string/d1g" style="@style/MMSolidGreenLargeButton" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -11,9 +11,9 @@ final class SelectContactUI$11
   
   public final void onClick(View paramView)
   {
-    paramView = new Intent(lmm, GroupCardSelectUI.class);
+    paramView = new Intent(lMB, GroupCardSelectUI.class);
     paramView.putExtra("group_select_type", false);
-    lmm.startActivityForResult(paramView, 1);
+    lMB.startActivityForResult(paramView, 1);
   }
 }
 

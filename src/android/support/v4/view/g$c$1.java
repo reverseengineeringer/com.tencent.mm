@@ -5,14 +5,14 @@ final class g$c$1
 {
   g$c$1(g.c paramc, g.e parame) {}
   
-  public final boolean af()
+  public final boolean ad()
   {
-    return eE.af();
+    return fa.ad();
   }
   
-  public final boolean ag()
+  public final boolean ae()
   {
-    return eE.ag();
+    return fa.ae();
   }
 }
 

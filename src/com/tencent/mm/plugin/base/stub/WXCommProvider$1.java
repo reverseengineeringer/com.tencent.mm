@@ -3,9 +3,9 @@ package com.tencent.mm.plugin.base.stub;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import com.tencent.mm.pluginsdk.model.app.al;
+import com.tencent.mm.pluginsdk.model.app.an;
 import com.tencent.mm.pluginsdk.model.app.p;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class WXCommProvider$1
   extends BroadcastReceiver
@@ -14,16 +14,16 @@ final class WXCommProvider$1
   
   public final void onReceive(Context paramContext, Intent paramIntent)
   {
-    if (System.currentTimeMillis() - al.iCe >= 600000L) {
-      u.e("!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd", "hy: get comm model time expired");
+    if (System.currentTimeMillis() - an.iYO >= 600000L) {
+      v.e("MicroMsg.AppUtil", "hy: get comm model time expired");
     }
-    for (paramContext = null;; paramContext = al.iCd)
+    for (paramContext = null;; paramContext = an.iYN)
     {
       if (paramContext != null)
       {
-        u.i("!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph", "hy: has wxcomm query request. start to continue requesting");
-        cBj.a(uri, projection, selection, selectionArgs, iCb, cwi, iCc);
-        p.aPL();
+        v.i("MicroMsg.WXCommProvider", "hy: has wxcomm query request. start to continue requesting");
+        cye.a(uri, projection, selection, selectionArgs, iYL, crO, iYM);
+        p.aUt();
       }
       return;
     }

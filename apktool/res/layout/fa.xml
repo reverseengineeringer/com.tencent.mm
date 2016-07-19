@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tencent.mm.ui.chatting.ChatFooterCustom android:orientation="horizontal" android:id="@id/z6" android:background="@drawable/aei" android:layout_width="fill_parent" android:layout_height="49.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/z7" android:background="@drawable/ac0" android:layout_width="@dimen/dd" android:layout_height="fill_parent" android:src="@drawable/cy" android:scaleType="center" android:contentDescription="@string/ws" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/z8" android:layout_width="0.0px" android:layout_height="fill_parent" android:weightSum="3.0" android:layout_weight="1.0">
+        <include layout="@layout/chatting_footer_custom_menu" />
+        <include layout="@layout/chatting_footer_custom_menu" />
+        <include layout="@layout/chatting_footer_custom_menu" />
+        <include layout="@layout/chatting_footer_custom_menu" />
+        <include layout="@layout/chatting_footer_custom_menu" />
+        <include layout="@layout/chatting_footer_custom_menu" />
+    </LinearLayout>
+    <ImageView android:id="@id/z9" android:background="@drawable/aw" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/jh" />
+</com.tencent.mm.ui.chatting.ChatFooterCustom>

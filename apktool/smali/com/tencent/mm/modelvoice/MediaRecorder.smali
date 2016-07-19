@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final cgD:[I
+.field public static final cbS:[I
 
 
 # direct methods
@@ -19,7 +19,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/tencent/mm/modelvoice/MediaRecorder;->cgD:[I
+    sput-object v0, Lcom/tencent/mm/modelvoice/MediaRecorder;->cbS:[I
 
     return-void
 

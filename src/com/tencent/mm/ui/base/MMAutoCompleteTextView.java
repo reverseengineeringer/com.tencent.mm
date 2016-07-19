@@ -11,26 +11,25 @@ import android.view.View;
 import android.view.View.OnFocusChangeListener;
 import android.view.View.OnTouchListener;
 import android.widget.AutoCompleteTextView;
-import com.tencent.mm.sdk.platformtools.ay;
 
 public class MMAutoCompleteTextView
   extends AutoCompleteTextView
 {
-  final Drawable iGP = getResources().getDrawable(2130970307);
-  private a kCX;
+  final Drawable jdK = getResources().getDrawable(2130838553);
+  public a lcc;
   
   public MMAutoCompleteTextView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    iGP.setBounds(0, 0, iGP.getIntrinsicWidth(), iGP.getIntrinsicHeight());
-    aQV();
+    jdK.setBounds(0, 0, jdK.getIntrinsicWidth(), jdK.getIntrinsicHeight());
+    aVF();
     setOnTouchListener(new View.OnTouchListener()
     {
       public final boolean onTouch(View paramAnonymousView, MotionEvent paramAnonymousMotionEvent)
       {
         paramAnonymousView = MMAutoCompleteTextView.this;
         if (paramAnonymousView.getCompoundDrawables()[2] == null) {}
-        while ((paramAnonymousMotionEvent.getAction() != 1) || (paramAnonymousMotionEvent.getX() <= paramAnonymousView.getWidth() - paramAnonymousView.getPaddingRight() - iGP.getIntrinsicWidth())) {
+        while ((paramAnonymousMotionEvent.getAction() != 1) || (paramAnonymousMotionEvent.getX() <= paramAnonymousView.getWidth() - paramAnonymousView.getPaddingRight() - jdK.getIntrinsicWidth())) {
           return false;
         }
         paramAnonymousView.setText("");
@@ -58,43 +57,34 @@ public class MMAutoCompleteTextView
     });
   }
   
-  private void aQV()
+  private void aVF()
   {
     if ((getText().toString().equals("")) || (!isFocused()))
     {
-      aQX();
+      aVH();
       return;
     }
-    setCompoundDrawables(getCompoundDrawables()[0], getCompoundDrawables()[1], iGP, getCompoundDrawables()[3]);
+    setCompoundDrawables(getCompoundDrawables()[0], getCompoundDrawables()[1], jdK, getCompoundDrawables()[3]);
   }
   
-  private void aQX()
+  private void aVH()
   {
     setCompoundDrawables(getCompoundDrawables()[0], getCompoundDrawables()[1], null, getCompoundDrawables()[3]);
-  }
-  
-  public void setSpilter(String paramString)
-  {
-    if (!ay.kz(paramString))
-    {
-      kCX = new a(paramString);
-      addTextChangedListener(kCX);
-    }
   }
   
   private final class a
     implements TextWatcher
   {
-    private String kCZ;
+    private String lce;
     
     public a(String paramString)
     {
-      kCZ = paramString;
+      lce = paramString;
     }
     
     public final void afterTextChanged(Editable paramEditable)
     {
-      if (paramEditable.toString().endsWith(kCZ)) {
+      if (paramEditable.toString().endsWith(lce)) {
         showDropDown();
       }
     }

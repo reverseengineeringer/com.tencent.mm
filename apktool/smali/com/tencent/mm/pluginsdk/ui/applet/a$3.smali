@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/pluginsdk/ui/applet/a;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/pluginsdk/ui/applet/a;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic aoT:Lcom/tencent/mm/r/j;
+.field final synthetic acZ:Lcom/tencent/mm/t/j;
 
-.field final synthetic iHY:Lcom/tencent/mm/pluginsdk/ui/applet/a;
+.field final synthetic jeV:Lcom/tencent/mm/pluginsdk/ui/applet/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/pluginsdk/ui/applet/a;Lcom/tencent/mm/r/j;)V
+.method constructor <init>(Lcom/tencent/mm/pluginsdk/ui/applet/a;Lcom/tencent/mm/t/j;)V
     .locals 0
 
     .prologue
     .line 222
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/a$3;->iHY:Lcom/tencent/mm/pluginsdk/ui/applet/a;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/a$3;->jeV:Lcom/tencent/mm/pluginsdk/ui/applet/a;
 
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/a$3;->aoT:Lcom/tencent/mm/r/j;
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/a$3;->acZ:Lcom/tencent/mm/t/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,50 +47,50 @@
     const/4 v3, 0x0
 
     .line 226
-    const-string/jumbo v0, "!32@/B4Tb64lLpKN6K/THdLZybvP+afE3jBu"
+    const-string/jumbo v0, "MicroMsg.AddContact"
 
     const-string/jumbo v1, "dealwith verify relation out of date"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 228
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/a$3;->aoT:Lcom/tencent/mm/r/j;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/a$3;->acZ:Lcom/tencent/mm/t/j;
 
     check-cast v0, Lcom/tencent/mm/pluginsdk/model/l;
 
-    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/model/l;->anN:Lcom/tencent/mm/r/a;
+    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/model/l;->bkQ:Lcom/tencent/mm/t/a;
 
     if-eqz v1, :cond_1
 
-    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/model/l;->anN:Lcom/tencent/mm/r/a;
+    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/model/l;->bkQ:Lcom/tencent/mm/t/a;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/r/a;->vA()Lcom/tencent/mm/protocal/h$c;
+    invoke-virtual {v1}, Lcom/tencent/mm/t/a;->vC()Lcom/tencent/mm/protocal/k$c;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/l;->anN:Lcom/tencent/mm/r/a;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/l;->bkQ:Lcom/tencent/mm/t/a;
 
-    iget-object v0, v0, Lcom/tencent/mm/r/a;->bEW:Lcom/tencent/mm/r/a$b;
+    iget-object v0, v0, Lcom/tencent/mm/t/a;->byh:Lcom/tencent/mm/t/a$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/r/a$b;->bFf:Lcom/tencent/mm/at/a;
+    iget-object v0, v0, Lcom/tencent/mm/t/a$b;->byq:Lcom/tencent/mm/ax/a;
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/axg;
+    check-cast v0, Lcom/tencent/mm/protocal/b/axz;
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/axg;
+    check-cast v0, Lcom/tencent/mm/protocal/b/axz;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/axg;->jPq:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/axz;->koj:Ljava/util/LinkedList;
 
     move-object v1, v0
 
     .line 229
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/a$3;->aoT:Lcom/tencent/mm/r/j;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/a$3;->acZ:Lcom/tencent/mm/t/j;
 
     check-cast v0, Lcom/tencent/mm/pluginsdk/model/l;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/l;->iAo:Ljava/util/List;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/l;->iWO:Ljava/util/List;
 
     .line 230
     if-eqz v0, :cond_0
@@ -102,7 +102,7 @@
     if-lez v2, :cond_0
 
     .line 231
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/a$3;->iHY:Lcom/tencent/mm/pluginsdk/ui/applet/a;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/a$3;->jeV:Lcom/tencent/mm/pluginsdk/ui/applet/a;
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 

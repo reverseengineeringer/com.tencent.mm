@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic kXv:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+.field final synthetic lxJ:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
 
 
 # direct methods
@@ -23,8 +23,8 @@
     .locals 0
 
     .prologue
-    .line 226
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$d;->kXv:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+    .line 370
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$d;->lxJ:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
@@ -37,12 +37,12 @@
     .locals 5
 
     .prologue
-    .line 229
+    .line 373
     const/4 v0, 0x0
 
-    .line 232
+    .line 376
     :goto_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$d;->kXv:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$d;->lxJ:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;->a(Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;)Z
 
@@ -50,25 +50,25 @@
 
     if-eqz v1, :cond_0
 
-    .line 234
+    .line 378
     :try_start_0
     new-instance v1, Landroid/os/Message;
 
     invoke-direct {v1}, Landroid/os/Message;-><init>()V
 
-    .line 235
+    .line 379
     const/4 v2, 0x1
 
     iput v2, v1, Landroid/os/Message;->what:I
 
-    .line 236
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$d;->kXv:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+    .line 380
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$d;->lxJ:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
 
     invoke-virtual {v2}, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f0d002e
+    const v3, 0x7f090028
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -76,14 +76,14 @@
 
     array-length v2, v2
 
-    .line 237
-    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$d;->kXv:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+    .line 381
+    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$d;->lxJ:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
 
     invoke-virtual {v3}, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f0d002e
+    const v4, 0x7f090028
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -95,44 +95,44 @@
 
     aget-object v2, v3, v2
 
-    .line 238
+    .line 382
     new-instance v3, Landroid/os/Bundle;
 
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
-    .line 239
+    .line 383
     const-string/jumbo v4, "data"
 
     invoke-virtual {v3, v4, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 240
+    .line 384
     invoke-virtual {v1, v3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 241
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$d;->kXv:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+    .line 385
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$d;->lxJ:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
 
-    invoke-static {v2}, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;->b(Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;)Landroid/os/Handler;
+    invoke-static {v2}, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;->b(Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;)Lcom/tencent/mm/sdk/platformtools/ac;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->sendMessage(Landroid/os/Message;)Z
 
-    .line 242
-    const-wide/16 v1, 0x1f4
+    .line 386
+    const-wide/16 v2, 0x1f4
 
-    invoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V
+    invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 245
+    .line 389
     :catch_0
     move-exception v1
 
     goto :goto_0
 
-    .line 248
+    .line 392
     :cond_0
     return-void
 .end method

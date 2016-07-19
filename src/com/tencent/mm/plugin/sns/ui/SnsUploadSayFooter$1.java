@@ -10,11 +10,11 @@ final class SnsUploadSayFooter$1
   
   public final void onClick(View paramView)
   {
-    if (hlP.getVisibility() == 8) {
-      hlP.setVisibility(0);
+    if (hBQ.getVisibility() == 8) {
+      hBQ.setVisibility(0);
     }
-    if (hlP.aCR()) {
-      SnsUploadSayFooter.a(hlP);
+    if (hBQ.aFY()) {
+      SnsUploadSayFooter.a(hBQ);
     }
   }
 }

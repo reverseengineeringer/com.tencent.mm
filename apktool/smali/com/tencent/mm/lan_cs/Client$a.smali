@@ -18,5 +18,5 @@
 .method public abstract onRecv(Ljava/lang/String;I[B)V
 .end method
 
-.method public abstract ra()V
+.method public abstract qD()V
 .end method

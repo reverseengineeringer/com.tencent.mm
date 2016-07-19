@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto" xmlns:mm="http://schemas.android.com/apk/res-auto">
+    <Preference mm:layout="@layout/a01" mm:title="@string/bnx" />
+    <com.tencent.mm.ui.base.preference.ChoicePreference mm:layout="@layout/a0a" mm:title="@string/chf" mm:entries="@array/w" mm:entryValues="@array/ae" mm:key="settings_sex" />
+    <com.tencent.mm.ui.base.preference.KeyValuePreference mm:layout="@layout/yk" mm:title="@string/cdi" mm:key="settings_district" />
+    <com.tencent.mm.ui.base.preference.KeyValuePreference mm:layout="@layout/yk" mm:title="@string/chi" mm:key="settings_signature" />
+</PreferenceScreen>

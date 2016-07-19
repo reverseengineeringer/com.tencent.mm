@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/awm" style="@style/GAME_MMSearchListNormalItem">
+        <ImageView android:id="@id/awn" android:layout_width="@dimen/cq" android:layout_height="@dimen/cq" android:layout_marginRight="@dimen/it" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <TextView android:gravity="center_vertical" android:id="@id/awp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="24.0dip" android:maxLines="2" android:singleLine="false" style="@style/MMFontTitleInList" />
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/awq" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="20.0dip" android:maxLines="2" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

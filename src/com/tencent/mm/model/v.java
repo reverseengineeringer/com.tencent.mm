@@ -2,7 +2,7 @@ package com.tencent.mm.model;
 
 public abstract interface v
 {
-  public abstract void J(int paramInt1, int paramInt2);
+  public abstract void L(int paramInt1, int paramInt2);
   
   public abstract void onError();
   

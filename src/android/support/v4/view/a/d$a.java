@@ -5,7 +5,7 @@ import android.view.accessibility.AccessibilityRecord;
 class d$a
   extends d.e
 {
-  public final Object ax()
+  public final Object aw()
   {
     return AccessibilityRecord.obtain();
   }

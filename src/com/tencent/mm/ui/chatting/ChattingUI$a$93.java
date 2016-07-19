@@ -1,23 +1,13 @@
 package com.tencent.mm.ui.chatting;
 
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.View.OnTouchListener;
-import com.tencent.mm.pluginsdk.ui.chat.ChatFooter;
-
 final class ChattingUI$a$93
-  implements View.OnTouchListener
+  implements Runnable
 {
   ChattingUI$a$93(ChattingUI.a parama) {}
   
-  public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
+  public final void run()
   {
-    ChattingUI.a.Z(laF);
-    if (!laF.kYO) {
-      return false;
-    }
-    laF.faQ.h(0, -1, false);
-    return false;
+    ChattingUI.a.h(lAY);
   }
 }
 

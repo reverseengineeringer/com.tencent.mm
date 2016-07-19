@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+.field final synthetic kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
-.field final synthetic kuW:I
+.field final synthetic kUd:I
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 1157
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$16;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 1158
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$16;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
-    iput p2, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$16;->kuW:I
+    iput p2, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$16;->kUd:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,8 +44,8 @@
     .locals 3
 
     .prologue
-    .line 1159
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$16;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 1160
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$16;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->x(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Landroid/widget/ScrollView;
 
@@ -53,10 +53,10 @@
 
     const/4 v1, 0x0
 
-    iget v2, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$16;->kuW:I
+    iget v2, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$16;->kUd:I
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/ScrollView;->smoothScrollBy(II)V
 
-    .line 1160
+    .line 1161
     return-void
 .end method

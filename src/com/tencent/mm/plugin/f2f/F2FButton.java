@@ -7,18 +7,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah;
+import com.tencent.mm.sdk.platformtools.ah.a;
 
 public class F2FButton
   extends RelativeLayout
 {
   private int count = 0;
-  private View dMC;
-  private TextView dMD;
-  private af dME = new af(Looper.getMainLooper(), new af.a()
+  private View dOk;
+  private TextView dOl;
+  private ah dOm = new ah(Looper.getMainLooper(), new ah.a()
   {
-    public final boolean lj()
+    public final boolean jK()
     {
       F2FButton.b(F2FButton.this).setText(10 - F2FButton.a(F2FButton.this));
       F2FButton.c(F2FButton.this);
@@ -40,11 +40,11 @@ public class F2FButton
   
   private void init()
   {
-    LayoutInflater.from(getContext()).inflate(2131363048, this);
-    dMC = findViewById(2131169076);
-    dMD = ((TextView)findViewById(2131169077));
-    dMC.setVisibility(4);
-    dMD.setVisibility(4);
+    LayoutInflater.from(getContext()).inflate(2130903543, this);
+    dOk = findViewById(2131756718);
+    dOl = ((TextView)findViewById(2131756719));
+    dOk.setVisibility(4);
+    dOl.setVisibility(4);
     setClickable(true);
   }
 }

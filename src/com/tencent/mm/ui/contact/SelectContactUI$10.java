@@ -2,8 +2,8 @@ package com.tencent.mm.ui.contact;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.ar.c;
-import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.av.c;
+import com.tencent.mm.plugin.report.service.g;
 
 final class SelectContactUI$10
   implements View.OnClickListener
@@ -12,8 +12,8 @@ final class SelectContactUI$10
   
   public final void onClick(View paramView)
   {
-    h.fUJ.g(11140, new Object[] { Integer.valueOf(0) });
-    c.u(lmm, "pwdgroup", ".ui.FacingCreateChatRoomAllInOneUI");
+    g.gdY.h(11140, new Object[] { Integer.valueOf(0) });
+    c.v(lMB, "pwdgroup", ".ui.FacingCreateChatRoomAllInOneUI");
   }
 }
 

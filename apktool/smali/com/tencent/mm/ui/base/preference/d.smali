@@ -12,15 +12,25 @@
 
 
 # instance fields
-.field protected final blS:Ljava/util/HashMap;
+.field protected final aZy:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/CharSequence;",
+            "Lcom/tencent/mm/ui/base/preference/c;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private final context:Landroid/content/Context;
 
-.field protected ftM:I
+.field protected fCR:I
 
-.field protected kKV:[Ljava/lang/CharSequence;
+.field protected lkk:[Ljava/lang/CharSequence;
 
-.field protected kKW:[Ljava/lang/CharSequence;
+.field protected lkl:[Ljava/lang/CharSequence;
 
 .field private final style:I
 
@@ -38,14 +48,14 @@
     .line 155
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/preference/d;->ftM:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/preference/d;->fCR:I
 
     .line 158
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/d;->blS:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/d;->aZy:Ljava/util/HashMap;
 
     .line 165
     iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/d;->context:Landroid/content/Context;
@@ -61,42 +71,42 @@
 
 
 # virtual methods
-.method protected final bdo()V
+.method protected final biV()V
     .locals 4
 
     .prologue
     const/4 v1, 0x0
 
     .line 170
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/d;->kKV:[Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/d;->lkk:[Ljava/lang/CharSequence;
 
     if-nez v0, :cond_0
 
     .line 171
     new-array v0, v1, [Ljava/lang/CharSequence;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/d;->kKV:[Ljava/lang/CharSequence;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/d;->lkk:[Ljava/lang/CharSequence;
 
     .line 174
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/d;->kKW:[Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/d;->lkl:[Ljava/lang/CharSequence;
 
     if-nez v0, :cond_1
 
     .line 175
     new-array v0, v1, [Ljava/lang/CharSequence;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/d;->kKW:[Ljava/lang/CharSequence;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/d;->lkl:[Ljava/lang/CharSequence;
 
     .line 178
     :cond_1
     const-string/jumbo v2, "entries count different"
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/d;->kKV:[Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/d;->lkk:[Ljava/lang/CharSequence;
 
     array-length v0, v0
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/d;->kKW:[Ljava/lang/CharSequence;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/d;->lkl:[Ljava/lang/CharSequence;
 
     array-length v3, v3
 
@@ -108,13 +118,13 @@
     invoke-static {v2, v0}, Ljunit/framework/Assert;->assertTrue(Ljava/lang/String;Z)V
 
     .line 180
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/d;->blS:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/d;->aZy:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
     .line 181
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/d;->kKW:[Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/d;->lkl:[Ljava/lang/CharSequence;
 
     array-length v0, v0
 
@@ -123,7 +133,7 @@
     .line 182
     new-instance v0, Lcom/tencent/mm/ui/base/preference/c;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/d;->kKV:[Ljava/lang/CharSequence;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/d;->lkk:[Ljava/lang/CharSequence;
 
     aget-object v2, v2, v1
 
@@ -134,9 +144,9 @@
     invoke-direct {v0, v2, v3}, Lcom/tencent/mm/ui/base/preference/c;-><init>(Ljava/lang/CharSequence;I)V
 
     .line 183
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/d;->blS:Ljava/util/HashMap;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/d;->aZy:Ljava/util/HashMap;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/d;->kKW:[Ljava/lang/CharSequence;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/d;->lkl:[Ljava/lang/CharSequence;
 
     aget-object v3, v3, v1
 
@@ -163,7 +173,7 @@
 
     .prologue
     .line 189
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/d;->kKW:[Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/d;->lkl:[Ljava/lang/CharSequence;
 
     array-length v0, v0
 
@@ -204,11 +214,11 @@
     .line 207
     iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/d;->context:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/p;->ee(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {v0}, Lcom/tencent/mm/ui/p;->ef(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f0a05b4
+    const v1, 0x7f0303da
 
     const/4 v2, 0x0
 
@@ -222,7 +232,7 @@
     invoke-direct {v1}, Lcom/tencent/mm/ui/base/preference/d$a;-><init>()V
 
     .line 209
-    const v0, 0x7f0707e8
+    const v0, 0x7f10004a
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -230,10 +240,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v1, Lcom/tencent/mm/ui/base/preference/d$a;->ftN:Landroid/widget/TextView;
+    iput-object v0, v1, Lcom/tencent/mm/ui/base/preference/d$a;->fCS:Landroid/widget/TextView;
 
     .line 210
-    const v0, 0x7f071012
+    const v0, 0x7f100c2f
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -241,10 +251,10 @@
 
     check-cast v0, Landroid/widget/CheckBox;
 
-    iput-object v0, v1, Lcom/tencent/mm/ui/base/preference/d$a;->ftO:Landroid/widget/CheckBox;
+    iput-object v0, v1, Lcom/tencent/mm/ui/base/preference/d$a;->fCT:Landroid/widget/CheckBox;
 
     .line 211
-    const v0, 0x7f0710c2
+    const v0, 0x7f1000a8
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -252,7 +262,7 @@
 
     check-cast v0, Landroid/widget/RadioButton;
 
-    iput-object v0, v1, Lcom/tencent/mm/ui/base/preference/d$a;->ftP:Landroid/widget/RadioButton;
+    iput-object v0, v1, Lcom/tencent/mm/ui/base/preference/d$a;->fCU:Landroid/widget/RadioButton;
 
     .line 212
     invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
@@ -266,9 +276,9 @@
     check-cast v0, Lcom/tencent/mm/ui/base/preference/d$a;
 
     .line 216
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/preference/d$a;->ftN:Landroid/widget/TextView;
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/preference/d$a;->fCS:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/d;->kKV:[Ljava/lang/CharSequence;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/d;->lkk:[Ljava/lang/CharSequence;
 
     aget-object v2, v2, p1
 
@@ -280,12 +290,12 @@
     packed-switch v1, :pswitch_data_0
 
     .line 234
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/preference/d$a;->ftO:Landroid/widget/CheckBox;
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/preference/d$a;->fCT:Landroid/widget/CheckBox;
 
     invoke-virtual {v1, v3}, Landroid/widget/CheckBox;->setVisibility(I)V
 
     .line 235
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/preference/d$a;->ftP:Landroid/widget/RadioButton;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/preference/d$a;->fCU:Landroid/widget/RadioButton;
 
     invoke-virtual {v0, v3}, Landroid/widget/RadioButton;->setVisibility(I)V
 
@@ -295,19 +305,19 @@
 
     .line 221
     :pswitch_0
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/preference/d$a;->ftO:Landroid/widget/CheckBox;
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/preference/d$a;->fCT:Landroid/widget/CheckBox;
 
     invoke-virtual {v1, v3}, Landroid/widget/CheckBox;->setVisibility(I)V
 
     .line 222
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/preference/d$a;->ftP:Landroid/widget/RadioButton;
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/preference/d$a;->fCU:Landroid/widget/RadioButton;
 
     invoke-virtual {v1, v4}, Landroid/widget/RadioButton;->setVisibility(I)V
 
     .line 223
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/preference/d$a;->ftP:Landroid/widget/RadioButton;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/preference/d$a;->fCU:Landroid/widget/RadioButton;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/d;->kKW:[Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/d;->lkl:[Ljava/lang/CharSequence;
 
     aget-object v1, v1, p1
 
@@ -323,19 +333,19 @@
 
     .line 227
     :pswitch_1
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/preference/d$a;->ftO:Landroid/widget/CheckBox;
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/preference/d$a;->fCT:Landroid/widget/CheckBox;
 
     invoke-virtual {v1, v4}, Landroid/widget/CheckBox;->setVisibility(I)V
 
     .line 228
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/preference/d$a;->ftP:Landroid/widget/RadioButton;
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/preference/d$a;->fCU:Landroid/widget/RadioButton;
 
     invoke-virtual {v1, v3}, Landroid/widget/RadioButton;->setVisibility(I)V
 
     .line 229
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/preference/d$a;->ftO:Landroid/widget/CheckBox;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/preference/d$a;->fCT:Landroid/widget/CheckBox;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/d;->kKW:[Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/d;->lkl:[Ljava/lang/CharSequence;
 
     aget-object v1, v1, p1
 

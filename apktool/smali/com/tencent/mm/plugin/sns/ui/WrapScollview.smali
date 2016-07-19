@@ -4,34 +4,70 @@
 
 
 # instance fields
-.field private cMt:Landroid/view/View;
+.field cJf:Landroid/view/View;
+
+.field hDA:Z
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 18
+    .line 20
     invoke-direct {p0, p1, p2}, Landroid/widget/ScrollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 19
+    .line 11
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/WrapScollview;->hDA:Z
+
+    .line 21
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 12
+    .line 14
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ScrollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 13
+    .line 11
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/WrapScollview;->hDA:Z
+
+    .line 15
     return-void
 .end method
 
 
 # virtual methods
+.method protected computeScrollDeltaToGetChildRectOnScreen(Landroid/graphics/Rect;)I
+    .locals 1
+
+    .prologue
+    .line 62
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/WrapScollview;->hDA:Z
+
+    if-nez v0, :cond_0
+
+    .line 63
+    const/4 v0, 0x0
+
+    .line 65
+    :goto_0
+    return v0
+
+    :cond_0
+    invoke-super {p0, p1}, Landroid/widget/ScrollView;->computeScrollDeltaToGetChildRectOnScreen(Landroid/graphics/Rect;)I
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 8
 
@@ -40,12 +76,12 @@
 
     const/4 v0, 0x0
 
-    .line 31
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/WrapScollview;->cMt:Landroid/view/View;
+    .line 33
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/WrapScollview;->cJf:Landroid/view/View;
 
     if-eqz v2, :cond_1
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/WrapScollview;->cMt:Landroid/view/View;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/WrapScollview;->cJf:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -104,32 +140,21 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 34
+    .line 36
     :goto_1
     return v0
 
     :cond_0
     move v1, v0
 
-    .line 31
+    .line 33
     goto :goto_0
 
-    .line 34
+    .line 36
     :cond_1
     invoke-super {p0, p1}, Landroid/widget/ScrollView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
     goto :goto_1
-.end method
-
-.method public setContentView(Landroid/view/View;)V
-    .locals 0
-
-    .prologue
-    .line 26
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/WrapScollview;->cMt:Landroid/view/View;
-
-    .line 27
-    return-void
 .end method

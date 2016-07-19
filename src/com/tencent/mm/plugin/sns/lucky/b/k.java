@@ -2,9 +2,9 @@ package com.tencent.mm.plugin.sns.lucky.b;
 
 public final class k
 {
-  public String gId;
-  public long gIe;
-  public long gIf;
+  public String gPi;
+  public long gPj;
+  public long gPk;
 }
 
 /* Location:

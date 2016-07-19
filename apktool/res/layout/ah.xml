@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" style="@style/ChattingUIContent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/gu" android:focusable="false" android:src="@drawable/adq" style="@style/ChattingUIAvatarFrom" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:id="@id/gv" android:visibility="gone" style="@style/ChattingUISenderText" />
+        <com.tencent.mm.ui.base.MMTextView android:id="@id/gw" android:background="@drawable/cm" android:maxWidth="225.0dip" android:minHeight="@dimen/d5" style="@style/ChattingUIText" />
+    </LinearLayout>
+</LinearLayout>

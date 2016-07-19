@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kPh:Lcom/tencent/mm/ui/bindmobile/b$1;
+.field final synthetic lox:Lcom/tencent/mm/ui/bindmobile/b$1;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 62
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/b$1$1;->kPh:Lcom/tencent/mm/ui/bindmobile/b$1;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/b$1$1;->lox:Lcom/tencent/mm/ui/bindmobile/b$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,7 +47,7 @@
     const/4 v5, 0x0
 
     .line 66
-    const-string/jumbo v0, "!44@/B4Tb64lLpLFDma4Qh7ELFMASImQ3OVXqyPXynP82wU="
+    const-string/jumbo v0, "MicroMsg.MobileFriendAdapter"
 
     const-string/jumbo v1, "cpan ok:%b hasSendVerify:%b  username:%s gitemId:%s"
 
@@ -73,14 +73,14 @@
 
     aput-object p4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 67
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zq()Lcom/tencent/mm/modelfriend/c;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zD()Lcom/tencent/mm/modelfriend/c;
 
     move-result-object v0
 
-    invoke-virtual {v0, p4}, Lcom/tencent/mm/modelfriend/c;->hr(Ljava/lang/String;)Lcom/tencent/mm/modelfriend/b;
+    invoke-virtual {v0, p4}, Lcom/tencent/mm/modelfriend/c;->hJ(Ljava/lang/String;)Lcom/tencent/mm/modelfriend/b;
 
     move-result-object v0
 
@@ -97,7 +97,7 @@
     iput v6, v0, Lcom/tencent/mm/modelfriend/b;->status:I
 
     .line 74
-    invoke-static {}, Lcom/tencent/mm/model/bb;->uE()Lcom/tencent/mm/model/bb;
+    invoke-static {}, Lcom/tencent/mm/model/bb;->uG()Lcom/tencent/mm/model/bb;
 
     move-result-object v1
 
@@ -105,17 +105,17 @@
 
     new-array v3, v5, [Ljava/lang/Object;
 
-    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/model/bb;->b(I[Ljava/lang/Object;)V
+    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/model/bb;->c(I[Ljava/lang/Object;)V
 
     .line 75
-    invoke-static {p3}, Lcom/tencent/mm/ui/bindmobile/b;->GH(Ljava/lang/String;)V
+    invoke-static {p3}, Lcom/tencent/mm/ui/bindmobile/b;->IX(Ljava/lang/String;)V
 
     .line 79
     :cond_0
-    iput v6, v0, Lcom/tencent/mm/modelfriend/b;->bEv:I
+    iput v6, v0, Lcom/tencent/mm/modelfriend/b;->bxG:I
 
     .line 80
-    const-string/jumbo v1, "!44@/B4Tb64lLpLFDma4Qh7ELFMASImQ3OVXqyPXynP82wU="
+    const-string/jumbo v1, "MicroMsg.MobileFriendAdapter"
 
     const-string/jumbo v2, "f :%s"
 
@@ -127,21 +127,21 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 81
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zq()Lcom/tencent/mm/modelfriend/c;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zD()Lcom/tencent/mm/modelfriend/c;
 
     move-result-object v1
 
     invoke-virtual {v1, p4, v0}, Lcom/tencent/mm/modelfriend/c;->a(Ljava/lang/String;Lcom/tencent/mm/modelfriend/b;)I
 
     .line 82
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/b$1$1;->kPh:Lcom/tencent/mm/ui/bindmobile/b$1;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/b$1$1;->lox:Lcom/tencent/mm/ui/bindmobile/b$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/bindmobile/b$1;->kPg:Lcom/tencent/mm/ui/bindmobile/b;
+    iget-object v0, v0, Lcom/tencent/mm/ui/bindmobile/b$1;->low:Lcom/tencent/mm/ui/bindmobile/b;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/bindmobile/b;->Gk()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/bindmobile/b;->GH()V
 
     .line 87
     :goto_0
@@ -149,7 +149,7 @@
 
     .line 84
     :cond_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpLFDma4Qh7ELFMASImQ3OVXqyPXynP82wU="
+    const-string/jumbo v0, "MicroMsg.MobileFriendAdapter"
 
     const-string/jumbo v1, "cpan qq friend is null. qq:%s"
 
@@ -157,7 +157,7 @@
 
     aput-object p4, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method

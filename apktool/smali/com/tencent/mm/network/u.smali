@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public cjy:Lcom/tencent/mm/network/n;
+.field public ceP:Lcom/tencent/mm/network/n;
 
 
 # direct methods
@@ -18,7 +18,7 @@
     .line 9
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/network/u;->cjy:Lcom/tencent/mm/network/n;
+    iput-object v0, p0, Lcom/tencent/mm/network/u;->ceP:Lcom/tencent/mm/network/n;
 
     .line 7
     return-void

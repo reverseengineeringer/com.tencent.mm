@@ -12,11 +12,11 @@ final class RegSetInfoUI$25
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    b.kC("R400_100_signup");
-    paramDialogInterface = new Intent(kwh, LoginUI.class);
+    b.ll("R400_100_signup");
+    paramDialogInterface = new Intent(kVo, LoginUI.class);
     paramDialogInterface.addFlags(67108864);
-    kwh.startActivity(paramDialogInterface);
-    kwh.finish();
+    kVo.startActivity(paramDialogInterface);
+    kVo.finish();
   }
 }
 

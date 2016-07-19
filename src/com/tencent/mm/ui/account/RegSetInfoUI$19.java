@@ -12,23 +12,23 @@ final class RegSetInfoUI$19
 {
   RegSetInfoUI$19(RegSetInfoUI paramRegSetInfoUI, String[] paramArrayOfString) {}
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    if (RegSetInfoUI.u(kwh) != null)
+    if (RegSetInfoUI.u(kVo) != null)
     {
-      RegSetInfoUI.u(kwh).dismiss();
-      RegSetInfoUI.v(kwh);
+      RegSetInfoUI.u(kVo).dismiss();
+      RegSetInfoUI.v(kVo);
     }
-    RegSetInfoUI.a(kwh).setText(kws[paramInt]);
-    RegSetInfoUI.a(kwh).postDelayed(new Runnable()
+    RegSetInfoUI.a(kVo).setText(kVz[paramInt]);
+    RegSetInfoUI.a(kVo).postDelayed(new Runnable()
     {
       public final void run()
       {
-        RegSetInfoUI.a(kwh).clearFocus();
-        RegSetInfoUI.a(kwh).requestFocus();
+        RegSetInfoUI.a(kVo).clearFocus();
+        RegSetInfoUI.a(kVo).requestFocus();
       }
     }, 50L);
-    RegSetInfoUI.s(kwh).setText(kwh.getString(2131427624));
+    RegSetInfoUI.s(kVo).setText(kVo.getString(2131234448));
   }
 }
 

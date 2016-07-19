@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+.field final synthetic mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 269
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$1;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/widget/DragSortListView$1;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,12 +36,12 @@
 
 
 # virtual methods
-.method public final G(F)F
+.method public final F(F)F
     .locals 1
 
     .prologue
     .line 272
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$1;->lEn:Lcom/tencent/mm/ui/widget/DragSortListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/DragSortListView$1;->mfd:Lcom/tencent/mm/ui/widget/DragSortListView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/widget/DragSortListView;->a(Lcom/tencent/mm/ui/widget/DragSortListView;)F
 

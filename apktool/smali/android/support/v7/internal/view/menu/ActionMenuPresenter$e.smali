@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kU:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
+.field final synthetic ll:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 635
-    iput-object p1, p0, Landroid/support/v7/internal/view/menu/ActionMenuPresenter$e;->kU:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
+    iput-object p1, p0, Landroid/support/v7/internal/view/menu/ActionMenuPresenter$e;->ll:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -58,11 +58,11 @@
     .line 650
     check-cast p1, Landroid/support/v7/internal/view/menu/p;
 
-    iget-object v0, p1, Landroid/support/v7/internal/view/menu/p;->mP:Landroid/support/v7/internal/view/menu/f;
+    iget-object v0, p1, Landroid/support/v7/internal/view/menu/p;->nf:Landroid/support/v7/internal/view/menu/f;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/support/v7/internal/view/menu/f;->r(Z)V
+    invoke-virtual {v0, v1}, Landroid/support/v7/internal/view/menu/f;->q(Z)V
 
     .line 652
     :cond_0
@@ -84,7 +84,7 @@
 
     .line 643
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/internal/view/menu/ActionMenuPresenter$e;->kU:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/ActionMenuPresenter$e;->ll:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
 
     check-cast p1, Landroid/support/v7/internal/view/menu/p;
 
@@ -96,7 +96,7 @@
 
     move-result v1
 
-    iput v1, v0, Landroid/support/v7/internal/view/menu/ActionMenuPresenter;->kT:I
+    iput v1, v0, Landroid/support/v7/internal/view/menu/ActionMenuPresenter;->lk:I
 
     goto :goto_0
 .end method

@@ -1,17 +1,27 @@
 package com.tencent.mm.ui.bindgooglecontact;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.aa.a;
+import com.tencent.mm.pluginsdk.ui.tools.q;
+import com.tencent.smtt.export.external.interfaces.ConsoleMessage;
+import com.tencent.smtt.sdk.WebChromeClient;
 
 final class BindGoogleContactUI$3
-  implements DialogInterface.OnClickListener
+  extends WebChromeClient
 {
-  BindGoogleContactUI$3(BindGoogleContactUI paramBindGoogleContactUI, String paramString) {}
+  BindGoogleContactUI$3(BindGoogleContactUI paramBindGoogleContactUI) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final boolean onConsoleMessage(ConsoleMessage paramConsoleMessage)
   {
-    BindGoogleContactUI.a(kMQ, kMR, a.bPg);
+    if (paramConsoleMessage != null) {}
+    for (String str = paramConsoleMessage.message();; str = null)
+    {
+      str = q.Dk(str);
+      if (!str.toLowerCase().startsWith("weixin://private/googlegetcode")) {
+        break;
+      }
+      BindGoogleContactUI.a(lmf, str);
+      return true;
+    }
+    return super.onConsoleMessage(paramConsoleMessage);
   }
 }
 

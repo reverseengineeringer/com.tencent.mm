@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;->setMMEditText(Lcom/tencent/mm/ui/widget/MMEditText;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hlP:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+.field final synthetic hBQ:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 79
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter$2;->hlP:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter$2;->hBQ:Lcom/tencent/mm/plugin/sns/ui/SnsUploadSayFooter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

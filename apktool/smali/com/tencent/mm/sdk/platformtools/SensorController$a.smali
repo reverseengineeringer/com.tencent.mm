@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract bt(Z)V
+.method public abstract bc(Z)V
 .end method

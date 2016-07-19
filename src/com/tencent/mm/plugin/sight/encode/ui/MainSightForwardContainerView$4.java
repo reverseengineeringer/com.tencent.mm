@@ -10,16 +10,16 @@ final class MainSightForwardContainerView$4
   
   public final void run()
   {
-    if ((!MainSightForwardContainerView.b(gCI)) || ((MainSightForwardContainerView.a(gCI) != null) && (agCI).gDc.awS()))) {
-      MainSightForwardContainerView.c(gCI);
+    if ((!MainSightForwardContainerView.b(gJj)) || ((MainSightForwardContainerView.a(gJj) != null) && (agJj).gJD.azp()))) {
+      MainSightForwardContainerView.c(gJj);
     }
     do
     {
       return;
-      MainSightForwardContainerView.d(gCI).setVisibility(0);
-    } while ((MainSightForwardContainerView.a(gCI) == null) || (MainSightForwardContainerView.a(gCI).awY()) || (MainSightForwardContainerView.e(gCI).getVisibility() == 0));
-    MainSightForwardContainerView.e(gCI).setVisibility(0);
-    MainSightForwardContainerView.e(gCI).startAnimation(AnimationUtils.loadAnimation(MainSightForwardContainerView.f(gCI), 2130837575));
+      MainSightForwardContainerView.d(gJj).setVisibility(0);
+    } while ((MainSightForwardContainerView.a(gJj) == null) || (MainSightForwardContainerView.a(gJj).azx()) || (MainSightForwardContainerView.e(gJj).getVisibility() == 0));
+    MainSightForwardContainerView.e(gJj).setVisibility(0);
+    MainSightForwardContainerView.e(gJj).startAnimation(AnimationUtils.loadAnimation(MainSightForwardContainerView.f(gJj), 2130968612));
   }
 }
 

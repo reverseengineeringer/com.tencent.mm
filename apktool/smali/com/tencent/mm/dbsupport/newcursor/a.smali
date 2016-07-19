@@ -3,21 +3,37 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<K:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
 # virtual methods
 .method public abstract e(I[B)V
 .end method
 
 .method public abstract getKey()Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TK;"
+        }
+    .end annotation
 .end method
 
-.method public abstract k(IJ)V
+.method public abstract i(IJ)V
 .end method
 
-.method public abstract l(IJ)V
+.method public abstract j(IJ)V
 .end method
 
-.method public abstract l(ILjava/lang/String;)V
+.method public abstract m(ILjava/lang/String;)V
 .end method
 
-.method public abstract qC()V
+.method public abstract pg()V
 .end method

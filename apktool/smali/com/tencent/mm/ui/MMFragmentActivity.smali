@@ -19,17 +19,28 @@
 # instance fields
 .field className:Ljava/lang/String;
 
-.field public kqo:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
+.field public kPt:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
 
-.field kqq:Ljava/util/ArrayList;
+.field kPv:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Lcom/tencent/mm/ui/o;",
+            ">;>;"
+        }
+    .end annotation
+.end field
 
-.field private kqr:Lcom/tencent/mm/ui/MMFragmentActivity$b;
+.field private kPw:Lcom/tencent/mm/ui/MMFragmentActivity$b;
 
-.field private kqs:Lcom/tencent/mm/ui/MMFragmentActivity$a;
+.field private kPx:Lcom/tencent/mm/ui/MMFragmentActivity$a;
 
-.field public kqt:Z
+.field public kPy:Z
 
-.field private kqu:Landroid/view/View;
+.field private kPz:Landroid/view/View;
 
 
 # direct methods
@@ -45,25 +56,25 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqq:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPv:Ljava/util/ArrayList;
 
-    .line 287
+    .line 308
     new-instance v0, Lcom/tencent/mm/ui/MMFragmentActivity$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/ui/MMFragmentActivity$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqs:Lcom/tencent/mm/ui/MMFragmentActivity$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPx:Lcom/tencent/mm/ui/MMFragmentActivity$a;
 
-    .line 493
+    .line 514
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqu:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPz:Landroid/view/View;
 
-    .line 575
+    .line 596
     return-void
 .end method
 
-.method private N(Landroid/content/Intent;)V
+.method private S(Landroid/content/Intent;)V
     .locals 5
 
     .prologue
@@ -71,16 +82,16 @@
 
     const/4 v2, 0x0
 
-    .line 311
+    .line 332
     if-nez p1, :cond_1
 
     const/4 v0, 0x0
 
-    .line 313
+    .line 334
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 314
+    .line 335
     invoke-virtual {v0}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object v3
@@ -99,9 +110,9 @@
 
     move-result-object v0
 
-    .line 315
+    .line 336
     :goto_1
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/b;->Gw(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/b;->IK(Ljava/lang/String;)I
 
     move-result v3
 
@@ -114,23 +125,19 @@
     :goto_2
     if-eqz v3, :cond_4
 
-    .line 316
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqs:Lcom/tencent/mm/ui/MMFragmentActivity$a;
+    .line 337
+    sget v0, Lcom/tencent/mm/ui/MMFragmentActivity$a;->kPF:I
 
-    iget v0, v0, Lcom/tencent/mm/ui/MMFragmentActivity$a;->kqA:I
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqs:Lcom/tencent/mm/ui/MMFragmentActivity$a;
-
-    iget v1, v1, Lcom/tencent/mm/ui/MMFragmentActivity$a;->kqB:I
+    sget v1, Lcom/tencent/mm/ui/MMFragmentActivity$a;->kPG:I
 
     invoke-super {p0, v0, v1}, Landroid/support/v7/app/ActionBarActivity;->overridePendingTransition(II)V
 
-    .line 327
+    .line 348
     :cond_0
     :goto_3
     return-void
 
-    .line 311
+    .line 332
     :cond_1
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
@@ -138,7 +145,7 @@
 
     goto :goto_0
 
-    .line 314
+    .line 335
     :cond_2
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -169,12 +176,12 @@
     :cond_3
     move v3, v2
 
-    .line 315
+    .line 336
     goto :goto_2
 
-    .line 319
+    .line 340
     :cond_4
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/b;->Gw(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/b;->IK(Ljava/lang/String;)I
 
     move-result v0
 
@@ -187,47 +194,47 @@
     :goto_4
     if-nez v0, :cond_6
 
-    .line 320
-    invoke-static {p0}, Lcom/tencent/mm/ui/base/b;->ei(Landroid/content/Context;)V
+    .line 341
+    invoke-static {p0}, Lcom/tencent/mm/ui/base/b;->em(Landroid/content/Context;)V
 
     goto :goto_3
 
     :cond_5
     move v0, v2
 
-    .line 319
+    .line 340
     goto :goto_4
 
-    .line 322
+    .line 343
     :cond_6
-    invoke-static {p0}, Lcom/tencent/mm/ui/base/b;->ek(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/tencent/mm/ui/base/b;->eo(Landroid/content/Context;)V
 
     goto :goto_3
 .end method
 
-.method private bbg()Z
+.method private bgq()Z
     .locals 2
 
     .prologue
     const/4 v0, 0x0
 
-    .line 412
+    .line 433
     const/16 v1, 0x13
 
-    invoke-static {v1}, Lcom/tencent/mm/compatible/util/c;->bU(I)Z
+    invoke-static {v1}, Lcom/tencent/mm/compatible/util/c;->cm(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/compatible/h/b;->oU()Z
+    invoke-static {}, Lcom/tencent/mm/compatible/i/b;->nm()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 413
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/MMFragmentActivity;->aCH()Z
+    .line 434
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/MMFragmentActivity;->aFD()Z
 
     move-result v1
 
@@ -237,7 +244,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/base/b;->i(Ljava/lang/Class;)Z
+    invoke-static {v1}, Lcom/tencent/mm/ui/base/b;->k(Ljava/lang/Class;)Z
 
     move-result v1
 
@@ -245,20 +252,20 @@
 
     const/4 v0, 0x1
 
-    .line 415
+    .line 436
     :cond_0
     return v0
 .end method
 
 
 # virtual methods
-.method public D(F)V
+.method public B(F)V
     .locals 7
 
     .prologue
     const/high16 v6, 0x3f800000    # 1.0f
 
-    .line 498
+    .line 519
     const-string/jumbo v0, "ashutest"
 
     const-string/jumbo v1, "ashutest::on swipe %f, duration %d"
@@ -285,19 +292,19 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 504
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqu:Landroid/view/View;
+    .line 525
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPz:Landroid/view/View;
 
     if-nez v0, :cond_0
 
-    .line 505
+    .line 526
     invoke-virtual {p0}, Lcom/tencent/mm/ui/MMFragmentActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/v7/app/ActionBarActivity;->iF:Landroid/support/v7/app/a;
+    iget-object v1, p0, Landroid/support/v7/app/ActionBarActivity;->iW:Landroid/support/v7/app/a;
 
     invoke-virtual {v1}, Landroid/support/v7/app/a;->aP()Landroid/support/v7/app/ActionBar;
 
@@ -311,29 +318,29 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqu:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPz:Landroid/view/View;
 
-    .line 508
+    .line 529
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqu:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPz:Landroid/view/View;
 
-    .line 510
+    .line 531
     invoke-static {v6, p1}, Ljava/lang/Float;->compare(FF)I
 
     move-result v1
 
     if-gtz v1, :cond_1
 
-    .line 511
+    .line 532
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/tools/k;->f(Landroid/view/View;F)V
 
-    .line 516
+    .line 537
     :goto_0
     return-void
 
-    .line 513
+    .line 534
     :cond_1
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
@@ -351,7 +358,7 @@
 
     mul-float/2addr v1, v2
 
-    .line 514
+    .line 535
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/tools/k;->f(Landroid/view/View;F)V
 
     goto :goto_0
@@ -361,81 +368,81 @@
     .locals 0
 
     .prologue
-    .line 393
+    .line 414
     invoke-super {p0, p1, p2, p3}, Landroid/support/v7/app/ActionBarActivity;->a(Landroid/support/v4/app/Fragment;Landroid/content/Intent;I)V
 
-    .line 394
-    invoke-direct {p0, p2}, Lcom/tencent/mm/ui/MMFragmentActivity;->N(Landroid/content/Intent;)V
+    .line 415
+    invoke-direct {p0, p2}, Lcom/tencent/mm/ui/MMFragmentActivity;->S(Landroid/content/Intent;)V
 
-    .line 395
+    .line 416
     return-void
 .end method
 
-.method public aCH()Z
+.method public aEs()V
     .locals 1
 
     .prologue
-    .line 420
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public aNg()V
-    .locals 1
-
-    .prologue
-    .line 542
+    .line 563
     invoke-virtual {p0}, Lcom/tencent/mm/ui/MMFragmentActivity;->isFinishing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 543
+    .line 564
     invoke-virtual {p0}, Lcom/tencent/mm/ui/MMFragmentActivity;->finish()V
 
-    .line 545
+    .line 566
     :cond_0
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqt:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPy:Z
 
-    .line 546
+    .line 567
     return-void
 .end method
 
-.method public aNh()V
+.method public aFD()Z
     .locals 1
 
     .prologue
-    .line 555
+    .line 441
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqt:Z
-
-    .line 556
-    return-void
+    return v0
 .end method
 
-.method public baF()Z
+.method public aQQ()V
     .locals 1
 
     .prologue
-    .line 572
+    .line 576
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPy:Z
+
+    .line 577
+    return-void
+.end method
+
+.method public bfT()Z
+    .locals 1
+
+    .prologue
+    .line 593
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final bbj()Lcom/tencent/mm/ui/o;
+.method public final bgt()Lcom/tencent/mm/ui/o;
     .locals 3
 
     .prologue
     const/4 v1, 0x0
 
     .line 212
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqq:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPv:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -453,7 +460,7 @@
 
     .line 215
     :cond_1
-    iget-object v2, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqq:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPv:Ljava/util/ArrayList;
 
     add-int/lit8 v0, v0, -0x1
 
@@ -486,7 +493,7 @@
     goto :goto_0
 .end method
 
-.method public final bbk()Z
+.method public final bgu()Z
     .locals 5
 
     .prologue
@@ -494,43 +501,43 @@
 
     const/4 v3, 0x0
 
-    .line 424
+    .line 445
     const/16 v0, 0x13
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/util/c;->bU(I)Z
+    invoke-static {v0}, Lcom/tencent/mm/compatible/util/c;->cm(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 425
+    .line 446
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/b;->i(Ljava/lang/Class;)Z
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/b;->k(Ljava/lang/Class;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 426
+    .line 447
     new-instance v0, Lcom/tencent/mm/ui/MMFragmentActivity$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/MMFragmentActivity$1;-><init>(Lcom/tencent/mm/ui/MMFragmentActivity;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
-    .line 444
+    .line 465
     :cond_0
     :goto_0
-    invoke-direct {p0}, Lcom/tencent/mm/ui/MMFragmentActivity;->bbg()Z
+    invoke-direct {p0}, Lcom/tencent/mm/ui/MMFragmentActivity;->bgq()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 445
+    .line 466
     invoke-virtual {p0}, Lcom/tencent/mm/ui/MMFragmentActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -545,7 +552,7 @@
 
     move-result-object v1
 
-    const v4, 0x7f0a05cd
+    const v4, 0x7f0305c1
 
     invoke-virtual {v1, v4, v0, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -553,9 +560,9 @@
 
     check-cast v1, Lcom/tencent/mm/ui/widget/SwipeBackLayout;
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqo:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
+    iput-object v1, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPt:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqo:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
+    iget-object v1, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPt:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->init()V
 
@@ -587,41 +594,41 @@
 
     check-cast v1, Landroid/view/ViewGroup;
 
-    const v3, 0x7f08018a
+    const v3, 0x7f0f0211
 
     invoke-virtual {v1, v3}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqo:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
+    iget-object v3, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPt:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
 
     invoke-virtual {v3, v1}, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->addView(Landroid/view/View;)V
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqo:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
+    iget-object v3, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPt:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
 
-    invoke-virtual {v3, v1}, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->setContentView(Landroid/view/View;)V
+    iput-object v1, v3, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->cPr:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqo:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
+    iget-object v1, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPt:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqo:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPt:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->setSwipeGestureDelegate(Lcom/tencent/mm/ui/widget/SwipeBackLayout$a;)V
+    iput-object p0, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mhZ:Lcom/tencent/mm/ui/widget/SwipeBackLayout$a;
 
     move v0, v2
 
-    .line 448
+    .line 469
     :goto_1
     return v0
 
-    .line 433
+    .line 454
     :cond_1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/b;->h(Ljava/lang/Class;)I
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/b;->j(Ljava/lang/Class;)I
 
     move-result v0
 
@@ -634,25 +641,25 @@
     :goto_2
     if-eqz v0, :cond_0
 
-    .line 434
+    .line 455
     new-instance v0, Lcom/tencent/mm/ui/MMFragmentActivity$2;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/MMFragmentActivity$2;-><init>(Lcom/tencent/mm/ui/MMFragmentActivity;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
     goto :goto_0
 
     :cond_2
     move v0, v3
 
-    .line 433
+    .line 454
     goto :goto_2
 
     :cond_3
     move v0, v3
 
-    .line 448
+    .line 469
     goto :goto_1
 .end method
 
@@ -660,14 +667,14 @@
     .locals 2
 
     .prologue
-    .line 560
-    invoke-direct {p0}, Lcom/tencent/mm/ui/MMFragmentActivity;->bbg()Z
+    .line 581
+    invoke-direct {p0}, Lcom/tencent/mm/ui/MMFragmentActivity;->bgq()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 561
+    .line 582
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v0
@@ -676,25 +683,25 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqo:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPt:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->bjR()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->bpP()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 563
+    .line 584
     const-string/jumbo v0, "ashutest"
 
     const-string/jumbo v1, "ashutest::IS SwipeBack ING, ignore KeyBack Event"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 564
+    .line 585
     const/4 v0, 0x1
 
-    .line 567
+    .line 588
     :goto_0
     return v0
 
@@ -714,15 +721,15 @@
 
     const/4 v1, 0x0
 
-    .line 346
+    .line 367
     invoke-super {p0}, Landroid/support/v7/app/ActionBarActivity;->finish()V
 
-    .line 347
+    .line 368
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/ui/base/b;->h(Ljava/lang/Class;)I
+    invoke-static {v2}, Lcom/tencent/mm/ui/base/b;->j(Ljava/lang/Class;)I
 
     move-result v2
 
@@ -735,24 +742,20 @@
     :goto_0
     if-eqz v2, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqs:Lcom/tencent/mm/ui/MMFragmentActivity$a;
+    sget v0, Lcom/tencent/mm/ui/MMFragmentActivity$a;->kPH:I
 
-    iget v0, v0, Lcom/tencent/mm/ui/MMFragmentActivity$a;->kqC:I
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqs:Lcom/tencent/mm/ui/MMFragmentActivity$a;
-
-    iget v1, v1, Lcom/tencent/mm/ui/MMFragmentActivity$a;->kqD:I
+    sget v1, Lcom/tencent/mm/ui/MMFragmentActivity$a;->kPI:I
 
     invoke-super {p0, v0, v1}, Landroid/support/v7/app/ActionBarActivity;->overridePendingTransition(II)V
 
-    .line 348
+    .line 369
     :goto_1
     return-void
 
     :cond_0
     move v2, v1
 
-    .line 347
+    .line 368
     goto :goto_0
 
     :cond_1
@@ -760,7 +763,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/ui/base/b;->h(Ljava/lang/Class;)I
+    invoke-static {v2}, Lcom/tencent/mm/ui/base/b;->j(Ljava/lang/Class;)I
 
     move-result v2
 
@@ -771,7 +774,7 @@
     :goto_2
     if-nez v0, :cond_3
 
-    invoke-static {p0}, Lcom/tencent/mm/ui/base/b;->ej(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/tencent/mm/ui/base/b;->en(Landroid/content/Context;)V
 
     goto :goto_1
 
@@ -781,7 +784,7 @@
     goto :goto_2
 
     :cond_3
-    invoke-static {p0}, Lcom/tencent/mm/ui/base/b;->ek(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/tencent/mm/ui/base/b;->eo(Landroid/content/Context;)V
 
     goto :goto_1
 .end method
@@ -790,25 +793,25 @@
     .locals 1
 
     .prologue
-    .line 485
+    .line 506
     invoke-virtual {p0}, Lcom/tencent/mm/ui/MMFragmentActivity;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getResources()Landroid/content/res/Resources;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 486
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getResources()Landroid/content/res/Resources;
+    .line 507
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 488
+    .line 509
     :goto_0
     return-object v0
 
@@ -824,12 +827,12 @@
     .locals 2
 
     .prologue
-    .line 476
+    .line 497
     invoke-super {p0, p1}, Landroid/support/v7/app/ActionBarActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 477
+    .line 498
     const-string/jumbo v1, "layout_inflater"
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -838,14 +841,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 478
+    .line 499
     check-cast v0, Landroid/view/LayoutInflater;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/p;->a(Landroid/view/LayoutInflater;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    .line 480
+    .line 501
     :cond_0
     return-object v0
 .end method
@@ -860,7 +863,7 @@
 
     const/4 v9, 0x0
 
-    .line 521
+    .line 542
     const-string/jumbo v4, "ashutest"
 
     const-string/jumbo v5, "ashutest: on settle %B, speed %d"
@@ -885,19 +888,19 @@
 
     aput-object v8, v6, v7
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 527
-    iget-object v4, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqu:Landroid/view/View;
+    .line 548
+    iget-object v4, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPz:Landroid/view/View;
 
     if-nez v4, :cond_0
 
-    .line 528
+    .line 549
     invoke-virtual {p0}, Lcom/tencent/mm/ui/MMFragmentActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v4
 
-    iget-object v5, p0, Landroid/support/v7/app/ActionBarActivity;->iF:Landroid/support/v7/app/a;
+    iget-object v5, p0, Landroid/support/v7/app/ActionBarActivity;->iW:Landroid/support/v7/app/a;
 
     invoke-virtual {v5}, Landroid/support/v7/app/a;->aP()Landroid/support/v7/app/ActionBar;
 
@@ -911,16 +914,16 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqu:Landroid/view/View;
+    iput-object v4, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPz:Landroid/view/View;
 
-    .line 531
+    .line 552
     :cond_0
-    iget-object v4, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqu:Landroid/view/View;
+    iget-object v4, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPz:Landroid/view/View;
 
-    .line 533
+    .line 554
     if-eqz p1, :cond_2
 
-    .line 534
+    .line 555
     if-lez p2, :cond_1
 
     :goto_0
@@ -928,17 +931,17 @@
 
     invoke-static {v4, v0, v1, v2, v9}, Lcom/tencent/mm/ui/tools/k;->a(Landroid/view/View;JFLcom/tencent/mm/ui/tools/k$a;)V
 
-    .line 538
+    .line 559
     :goto_1
     return-void
 
     :cond_1
     move-wide v0, v2
 
-    .line 534
+    .line 555
     goto :goto_0
 
-    .line 536
+    .line 557
     :cond_2
     if-lez p2, :cond_3
 
@@ -967,12 +970,12 @@
     .locals 1
 
     .prologue
-    .line 550
+    .line 571
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqt:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPy:Z
 
-    .line 551
+    .line 572
     return-void
 .end method
 
@@ -1002,7 +1005,7 @@
     .line 57
     iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->className:Ljava/lang/String;
 
-    invoke-static {v7, v0}, Lcom/tencent/mm/ui/u;->ae(ILjava/lang/String;)V
+    invoke-static {v7, v0}, Lcom/tencent/mm/ui/u;->ao(ILjava/lang/String;)V
 
     .line 58
     invoke-super {p0, p1}, Landroid/support/v7/app/ActionBarActivity;->onCreate(Landroid/os/Bundle;)V
@@ -1012,24 +1015,24 @@
 
     invoke-direct {v0, p0, v4}, Lcom/tencent/mm/ui/MMFragmentActivity$b;-><init>(Lcom/tencent/mm/ui/MMFragmentActivity;B)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqr:Lcom/tencent/mm/ui/MMFragmentActivity$b;
+    iput-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPw:Lcom/tencent/mm/ui/MMFragmentActivity$b;
 
     .line 61
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqr:Lcom/tencent/mm/ui/MMFragmentActivity$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPw:Lcom/tencent/mm/ui/MMFragmentActivity$b;
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kqv:Lcom/tencent/mm/ui/MMFragmentActivity;
+    iget-object v1, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kPA:Lcom/tencent/mm/ui/MMFragmentActivity;
 
     invoke-static {v1}, Landroid/nfc/NfcAdapter;->getDefaultAdapter(Landroid/content/Context;)Landroid/nfc/NfcAdapter;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kqE:Landroid/nfc/NfcAdapter;
+    iput-object v1, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kPJ:Landroid/nfc/NfcAdapter;
 
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getPackageName()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1041,13 +1044,13 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kqv:Lcom/tencent/mm/ui/MMFragmentActivity;
+    iget-object v2, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kPA:Lcom/tencent/mm/ui/MMFragmentActivity;
 
     invoke-static {v2, v4, v1, v4}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->mPendingIntent:Landroid/app/PendingIntent;
+    iput-object v1, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->xZ:Landroid/app/PendingIntent;
 
     new-instance v1, Landroid/content/IntentFilter;
 
@@ -1086,7 +1089,7 @@
 
     aput-object v1, v3, v6
 
-    iput-object v3, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kqF:[Landroid/content/IntentFilter;
+    iput-object v3, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kPK:[Landroid/content/IntentFilter;
 
     new-array v1, v5, [[Ljava/lang/String;
 
@@ -1110,7 +1113,7 @@
 
     aput-object v2, v1, v4
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kqG:[[Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kPL:[[Ljava/lang/String;
 
     .line 62
     return-void
@@ -1137,29 +1140,29 @@
 
     iget-object v1, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->className:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/u;->ae(ILjava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/u;->ao(ILjava/lang/String;)V
 
     .line 79
     invoke-super {p0}, Landroid/support/v7/app/ActionBarActivity;->onPause()V
 
     .line 81
-    invoke-direct {p0}, Lcom/tencent/mm/ui/MMFragmentActivity;->bbg()Z
+    invoke-direct {p0}, Lcom/tencent/mm/ui/MMFragmentActivity;->bgq()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 82
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqo:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPt:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
 
     if-eqz v0, :cond_0
 
     .line 83
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqo:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPt:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->setEnableGesture(Z)V
+    iput-boolean v1, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->fGj:Z
 
     .line 85
     :cond_0
@@ -1174,21 +1177,21 @@
 
     .line 90
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqr:Lcom/tencent/mm/ui/MMFragmentActivity$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPw:Lcom/tencent/mm/ui/MMFragmentActivity$b;
 
     if-eqz v0, :cond_2
 
     .line 91
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqr:Lcom/tencent/mm/ui/MMFragmentActivity$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPw:Lcom/tencent/mm/ui/MMFragmentActivity$b;
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kqE:Landroid/nfc/NfcAdapter;
+    iget-object v1, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kPJ:Landroid/nfc/NfcAdapter;
 
     if-eqz v1, :cond_2
 
     :try_start_0
-    iget-object v1, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kqE:Landroid/nfc/NfcAdapter;
+    iget-object v1, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kPJ:Landroid/nfc/NfcAdapter;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kqv:Lcom/tencent/mm/ui/MMFragmentActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kPA:Lcom/tencent/mm/ui/MMFragmentActivity;
 
     invoke-virtual {v1, v0}, Landroid/nfc/NfcAdapter;->disableForegroundDispatch(Landroid/app/Activity;)V
     :try_end_0
@@ -1203,7 +1206,7 @@
     :catch_0
     move-exception v0
 
-    const-string/jumbo v1, "!44@/B4Tb64lLpLLi/djrfjxCT3ArCp9yL+mlenviCUOT1U="
+    const-string/jumbo v1, "MicroMsg.MMFragmentActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1223,7 +1226,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -1237,13 +1240,13 @@
     .line 99
     iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->className:Ljava/lang/String;
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/ui/u;->ae(ILjava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/ui/u;->ao(ILjava/lang/String;)V
 
     .line 101
     invoke-super {p0}, Landroid/support/v7/app/ActionBarActivity;->onResume()V
 
     .line 103
-    invoke-direct {p0}, Lcom/tencent/mm/ui/MMFragmentActivity;->bbg()Z
+    invoke-direct {p0}, Lcom/tencent/mm/ui/MMFragmentActivity;->bgq()Z
 
     move-result v0
 
@@ -1255,48 +1258,48 @@
     .line 107
     const/high16 v0, 0x3f800000    # 1.0f
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/MMFragmentActivity;->D(F)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/MMFragmentActivity;->B(F)V
 
     .line 109
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqo:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPt:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
 
     if-eqz v0, :cond_0
 
     .line 110
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqo:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPt:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->setEnableGesture(Z)V
+    iput-boolean v1, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->fGj:Z
 
     .line 111
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqo:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPt:Lcom/tencent/mm/ui/widget/SwipeBackLayout;
 
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->lEy:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/ui/widget/SwipeBackLayout;->mfo:Z
 
     .line 115
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqr:Lcom/tencent/mm/ui/MMFragmentActivity$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPw:Lcom/tencent/mm/ui/MMFragmentActivity$b;
 
     if-eqz v0, :cond_1
 
     .line 116
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kqr:Lcom/tencent/mm/ui/MMFragmentActivity$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity;->kPw:Lcom/tencent/mm/ui/MMFragmentActivity$b;
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kqE:Landroid/nfc/NfcAdapter;
+    iget-object v1, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kPJ:Landroid/nfc/NfcAdapter;
 
     if-eqz v1, :cond_1
 
     :try_start_0
-    iget-object v1, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kqE:Landroid/nfc/NfcAdapter;
+    iget-object v1, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kPJ:Landroid/nfc/NfcAdapter;
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kqv:Lcom/tencent/mm/ui/MMFragmentActivity;
+    iget-object v2, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kPA:Lcom/tencent/mm/ui/MMFragmentActivity;
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->mPendingIntent:Landroid/app/PendingIntent;
+    iget-object v3, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->xZ:Landroid/app/PendingIntent;
 
-    iget-object v4, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kqF:[Landroid/content/IntentFilter;
+    iget-object v4, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kPK:[Landroid/content/IntentFilter;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kqG:[[Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/ui/MMFragmentActivity$b;->kPL:[[Ljava/lang/String;
 
     invoke-virtual {v1, v2, v3, v4, v0}, Landroid/nfc/NfcAdapter;->enableForegroundDispatch(Landroid/app/Activity;Landroid/app/PendingIntent;[Landroid/content/IntentFilter;[[Ljava/lang/String;)V
     :try_end_0
@@ -1311,7 +1314,7 @@
     :catch_0
     move-exception v0
 
-    const-string/jumbo v1, "!44@/B4Tb64lLpLLi/djrfjxCT3ArCp9yL+mlenviCUOT1U="
+    const-string/jumbo v1, "MicroMsg.MMFragmentActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1331,7 +1334,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -1384,15 +1387,15 @@
     .end annotation
 
     .prologue
-    .line 360
+    .line 381
     invoke-super {p0, p1}, Landroid/support/v7/app/ActionBarActivity;->startActivities([Landroid/content/Intent;)V
 
-    .line 361
+    .line 382
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/MMFragmentActivity;->N(Landroid/content/Intent;)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/MMFragmentActivity;->S(Landroid/content/Intent;)V
 
-    .line 362
+    .line 383
     return-void
 .end method
 
@@ -1403,15 +1406,15 @@
     .end annotation
 
     .prologue
-    .line 353
+    .line 374
     invoke-super {p0, p1, p2}, Landroid/support/v7/app/ActionBarActivity;->startActivities([Landroid/content/Intent;Landroid/os/Bundle;)V
 
-    .line 354
+    .line 375
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/MMFragmentActivity;->N(Landroid/content/Intent;)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/MMFragmentActivity;->S(Landroid/content/Intent;)V
 
-    .line 355
+    .line 376
     return-void
 .end method
 
@@ -1419,13 +1422,13 @@
     .locals 0
 
     .prologue
-    .line 366
+    .line 387
     invoke-super {p0, p1}, Landroid/support/v7/app/ActionBarActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 367
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/MMFragmentActivity;->N(Landroid/content/Intent;)V
+    .line 388
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/MMFragmentActivity;->S(Landroid/content/Intent;)V
 
-    .line 368
+    .line 389
     return-void
 .end method
 
@@ -1436,13 +1439,13 @@
     .end annotation
 
     .prologue
-    .line 373
+    .line 394
     invoke-super {p0, p1, p2}, Landroid/support/v7/app/ActionBarActivity;->startActivity(Landroid/content/Intent;Landroid/os/Bundle;)V
 
-    .line 374
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/MMFragmentActivity;->N(Landroid/content/Intent;)V
+    .line 395
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/MMFragmentActivity;->S(Landroid/content/Intent;)V
 
-    .line 375
+    .line 396
     return-void
 .end method
 
@@ -1450,13 +1453,13 @@
     .locals 0
 
     .prologue
-    .line 379
+    .line 400
     invoke-super {p0, p1, p2}, Landroid/support/v7/app/ActionBarActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 380
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/MMFragmentActivity;->N(Landroid/content/Intent;)V
+    .line 401
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/MMFragmentActivity;->S(Landroid/content/Intent;)V
 
-    .line 381
+    .line 402
     return-void
 .end method
 
@@ -1467,12 +1470,12 @@
     .end annotation
 
     .prologue
-    .line 386
+    .line 407
     invoke-super {p0, p1, p2, p3}, Landroid/support/v7/app/ActionBarActivity;->startActivityForResult(Landroid/content/Intent;ILandroid/os/Bundle;)V
 
-    .line 387
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/MMFragmentActivity;->N(Landroid/content/Intent;)V
+    .line 408
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/MMFragmentActivity;->S(Landroid/content/Intent;)V
 
-    .line 388
+    .line 409
     return-void
 .end method

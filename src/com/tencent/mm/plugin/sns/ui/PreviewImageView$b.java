@@ -2,26 +2,26 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.graphics.Bitmap;
 import android.widget.ImageView;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.h;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.h;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class PreviewImageView$b
-  extends h
+  extends h<String, Integer, Boolean>
 {
-  private ImageView aAF;
-  private Bitmap bDT;
+  private ImageView amO;
+  private Bitmap bxe;
   private String path;
   
   public PreviewImageView$b(PreviewImageView paramPreviewImageView, ImageView paramImageView, String paramString)
   {
-    aAF = paramImageView;
+    amO = paramImageView;
     path = paramString;
   }
   
-  public final aa IA()
+  public final ac IZ()
   {
-    return ad.ayS();
+    return ad.aBt();
   }
 }
 

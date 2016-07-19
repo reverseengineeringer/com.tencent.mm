@@ -1,292 +1,292 @@
 package com.tencent.mm.ui.bindgooglecontact;
 
 import android.os.AsyncTask;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class BindGoogleContactUI$b
-  extends AsyncTask
+  extends AsyncTask<Void, Void, Void>
 {
-  private boolean awe;
-  private String kMS;
-  private String kMV;
-  private String kMW;
+  private boolean ahW;
+  private String lmh;
+  private String lmk;
+  private String lml;
   
   public BindGoogleContactUI$b(BindGoogleContactUI paramBindGoogleContactUI, String paramString)
   {
-    kMV = paramString;
+    lmk = paramString;
   }
   
   /* Error */
-  private Void acy()
+  private Void aeX()
   {
     // Byte code:
     //   0: aload_0
-    //   1: getfield 24	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:kMV	Ljava/lang/String;
+    //   1: getfield 25	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:lmk	Ljava/lang/String;
     //   4: astore 4
-    //   6: ldc 37
+    //   6: ldc 38
     //   8: astore_2
-    //   9: new 39	java/net/URL
+    //   9: new 40	java/net/URL
     //   12: dup
-    //   13: ldc 41
-    //   15: invokespecial 44	java/net/URL:<init>	(Ljava/lang/String;)V
-    //   18: invokevirtual 48	java/net/URL:openConnection	()Ljava/net/URLConnection;
-    //   21: checkcast 50	java/net/HttpURLConnection
+    //   13: ldc 42
+    //   15: invokespecial 45	java/net/URL:<init>	(Ljava/lang/String;)V
+    //   18: invokevirtual 49	java/net/URL:openConnection	()Ljava/net/URLConnection;
+    //   21: checkcast 51	java/net/HttpURLConnection
     //   24: astore_3
     //   25: aload_3
-    //   26: ldc 52
-    //   28: ldc 54
-    //   30: invokevirtual 58	java/net/HttpURLConnection:setRequestProperty	(Ljava/lang/String;Ljava/lang/String;)V
+    //   26: ldc 53
+    //   28: ldc 55
+    //   30: invokevirtual 59	java/net/HttpURLConnection:setRequestProperty	(Ljava/lang/String;Ljava/lang/String;)V
     //   33: aload_3
-    //   34: ldc 60
-    //   36: ldc 62
-    //   38: invokevirtual 58	java/net/HttpURLConnection:setRequestProperty	(Ljava/lang/String;Ljava/lang/String;)V
+    //   34: ldc 61
+    //   36: ldc 63
+    //   38: invokevirtual 59	java/net/HttpURLConnection:setRequestProperty	(Ljava/lang/String;Ljava/lang/String;)V
     //   41: aload_3
-    //   42: ldc 64
-    //   44: invokevirtual 67	java/net/HttpURLConnection:setRequestMethod	(Ljava/lang/String;)V
+    //   42: ldc 65
+    //   44: invokevirtual 68	java/net/HttpURLConnection:setRequestMethod	(Ljava/lang/String;)V
     //   47: aload_3
     //   48: sipush 20000
-    //   51: invokevirtual 71	java/net/HttpURLConnection:setConnectTimeout	(I)V
+    //   51: invokevirtual 72	java/net/HttpURLConnection:setConnectTimeout	(I)V
     //   54: aload_3
     //   55: sipush 20000
-    //   58: invokevirtual 74	java/net/HttpURLConnection:setReadTimeout	(I)V
+    //   58: invokevirtual 75	java/net/HttpURLConnection:setReadTimeout	(I)V
     //   61: aload_3
     //   62: iconst_1
-    //   63: invokevirtual 78	java/net/HttpURLConnection:setDoInput	(Z)V
+    //   63: invokevirtual 79	java/net/HttpURLConnection:setDoInput	(Z)V
     //   66: aload_3
     //   67: iconst_1
-    //   68: invokevirtual 81	java/net/HttpURLConnection:setDoOutput	(Z)V
-    //   71: new 83	java/util/ArrayList
+    //   68: invokevirtual 82	java/net/HttpURLConnection:setDoOutput	(Z)V
+    //   71: new 84	java/util/ArrayList
     //   74: dup
-    //   75: invokespecial 84	java/util/ArrayList:<init>	()V
+    //   75: invokespecial 85	java/util/ArrayList:<init>	()V
     //   78: astore 5
     //   80: aload 5
-    //   82: new 86	org/apache/http/message/BasicNameValuePair
+    //   82: new 87	org/apache/http/message/BasicNameValuePair
     //   85: dup
-    //   86: ldc 88
+    //   86: ldc 89
     //   88: aload 4
-    //   90: invokespecial 90	org/apache/http/message/BasicNameValuePair:<init>	(Ljava/lang/String;Ljava/lang/String;)V
-    //   93: invokeinterface 96 2 0
+    //   90: invokespecial 91	org/apache/http/message/BasicNameValuePair:<init>	(Ljava/lang/String;Ljava/lang/String;)V
+    //   93: invokeinterface 97 2 0
     //   98: pop
     //   99: aload 5
-    //   101: new 86	org/apache/http/message/BasicNameValuePair
+    //   101: new 87	org/apache/http/message/BasicNameValuePair
     //   104: dup
-    //   105: ldc 98
-    //   107: ldc 100
-    //   109: invokespecial 90	org/apache/http/message/BasicNameValuePair:<init>	(Ljava/lang/String;Ljava/lang/String;)V
-    //   112: invokeinterface 96 2 0
+    //   105: ldc 99
+    //   107: ldc 101
+    //   109: invokespecial 91	org/apache/http/message/BasicNameValuePair:<init>	(Ljava/lang/String;Ljava/lang/String;)V
+    //   112: invokeinterface 97 2 0
     //   117: pop
     //   118: aload 5
-    //   120: new 86	org/apache/http/message/BasicNameValuePair
+    //   120: new 87	org/apache/http/message/BasicNameValuePair
     //   123: dup
-    //   124: ldc 102
-    //   126: ldc 104
-    //   128: invokespecial 90	org/apache/http/message/BasicNameValuePair:<init>	(Ljava/lang/String;Ljava/lang/String;)V
-    //   131: invokeinterface 96 2 0
+    //   124: ldc 103
+    //   126: ldc 105
+    //   128: invokespecial 91	org/apache/http/message/BasicNameValuePair:<init>	(Ljava/lang/String;Ljava/lang/String;)V
+    //   131: invokeinterface 97 2 0
     //   136: pop
     //   137: aload 5
-    //   139: new 86	org/apache/http/message/BasicNameValuePair
+    //   139: new 87	org/apache/http/message/BasicNameValuePair
     //   142: dup
-    //   143: ldc 106
-    //   145: ldc 108
-    //   147: invokespecial 90	org/apache/http/message/BasicNameValuePair:<init>	(Ljava/lang/String;Ljava/lang/String;)V
-    //   150: invokeinterface 96 2 0
+    //   143: ldc 107
+    //   145: ldc 109
+    //   147: invokespecial 91	org/apache/http/message/BasicNameValuePair:<init>	(Ljava/lang/String;Ljava/lang/String;)V
+    //   150: invokeinterface 97 2 0
     //   155: pop
     //   156: aload 5
-    //   158: new 86	org/apache/http/message/BasicNameValuePair
+    //   158: new 87	org/apache/http/message/BasicNameValuePair
     //   161: dup
-    //   162: ldc 110
-    //   164: ldc 112
-    //   166: invokespecial 90	org/apache/http/message/BasicNameValuePair:<init>	(Ljava/lang/String;Ljava/lang/String;)V
-    //   169: invokeinterface 96 2 0
+    //   162: ldc 111
+    //   164: ldc 113
+    //   166: invokespecial 91	org/apache/http/message/BasicNameValuePair:<init>	(Ljava/lang/String;Ljava/lang/String;)V
+    //   169: invokeinterface 97 2 0
     //   174: pop
     //   175: aload 5
-    //   177: invokestatic 118	com/tencent/mm/modelfriend/n:w	(Ljava/util/List;)Ljava/lang/String;
+    //   177: invokestatic 119	com/tencent/mm/modelfriend/n:B	(Ljava/util/List;)Ljava/lang/String;
     //   180: astore 4
-    //   182: ldc 120
-    //   184: ldc 122
+    //   182: ldc 121
+    //   184: ldc 123
     //   186: iconst_1
-    //   187: anewarray 124	java/lang/Object
+    //   187: anewarray 125	java/lang/Object
     //   190: dup
     //   191: iconst_0
     //   192: aload 4
     //   194: aastore
-    //   195: invokestatic 130	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   195: invokestatic 131	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   198: aload_3
-    //   199: ldc -124
+    //   199: ldc -123
     //   201: aload 4
-    //   203: invokevirtual 138	java/lang/String:getBytes	()[B
+    //   203: invokevirtual 139	java/lang/String:getBytes	()[B
     //   206: arraylength
-    //   207: invokestatic 142	java/lang/String:valueOf	(I)Ljava/lang/String;
-    //   210: invokevirtual 58	java/net/HttpURLConnection:setRequestProperty	(Ljava/lang/String;Ljava/lang/String;)V
-    //   213: new 144	java/io/BufferedWriter
+    //   207: invokestatic 143	java/lang/String:valueOf	(I)Ljava/lang/String;
+    //   210: invokevirtual 59	java/net/HttpURLConnection:setRequestProperty	(Ljava/lang/String;Ljava/lang/String;)V
+    //   213: new 145	java/io/BufferedWriter
     //   216: dup
-    //   217: new 146	java/io/OutputStreamWriter
+    //   217: new 147	java/io/OutputStreamWriter
     //   220: dup
     //   221: aload_3
-    //   222: invokevirtual 150	java/net/HttpURLConnection:getOutputStream	()Ljava/io/OutputStream;
-    //   225: ldc 54
-    //   227: invokespecial 153	java/io/OutputStreamWriter:<init>	(Ljava/io/OutputStream;Ljava/lang/String;)V
-    //   230: invokespecial 156	java/io/BufferedWriter:<init>	(Ljava/io/Writer;)V
+    //   222: invokevirtual 151	java/net/HttpURLConnection:getOutputStream	()Ljava/io/OutputStream;
+    //   225: ldc 55
+    //   227: invokespecial 154	java/io/OutputStreamWriter:<init>	(Ljava/io/OutputStream;Ljava/lang/String;)V
+    //   230: invokespecial 157	java/io/BufferedWriter:<init>	(Ljava/io/Writer;)V
     //   233: astore 5
     //   235: aload 5
     //   237: aload 4
-    //   239: invokevirtual 159	java/io/BufferedWriter:write	(Ljava/lang/String;)V
+    //   239: invokevirtual 160	java/io/BufferedWriter:write	(Ljava/lang/String;)V
     //   242: aload 5
-    //   244: invokevirtual 162	java/io/BufferedWriter:flush	()V
+    //   244: invokevirtual 163	java/io/BufferedWriter:flush	()V
     //   247: aload 5
-    //   249: invokevirtual 165	java/io/BufferedWriter:close	()V
+    //   249: invokevirtual 166	java/io/BufferedWriter:close	()V
     //   252: aload_3
-    //   253: invokevirtual 169	java/net/HttpURLConnection:getResponseCode	()I
+    //   253: invokevirtual 170	java/net/HttpURLConnection:getResponseCode	()I
     //   256: istore_1
-    //   257: ldc 120
-    //   259: new 171	java/lang/StringBuilder
+    //   257: ldc 121
+    //   259: new 172	java/lang/StringBuilder
     //   262: dup
-    //   263: ldc -83
-    //   265: invokespecial 174	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   263: ldc -82
+    //   265: invokespecial 175	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   268: iload_1
-    //   269: invokevirtual 178	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   272: invokevirtual 182	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   275: invokestatic 185	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   269: invokevirtual 179	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   272: invokevirtual 183	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   275: invokestatic 186	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   278: sipush 200
     //   281: iload_1
     //   282: if_icmpne +107 -> 389
-    //   285: new 187	java/lang/StringBuffer
+    //   285: new 188	java/lang/StringBuffer
     //   288: dup
-    //   289: invokespecial 188	java/lang/StringBuffer:<init>	()V
+    //   289: invokespecial 189	java/lang/StringBuffer:<init>	()V
     //   292: astore_2
-    //   293: new 190	java/io/BufferedReader
+    //   293: new 191	java/io/BufferedReader
     //   296: dup
-    //   297: new 192	java/io/InputStreamReader
+    //   297: new 193	java/io/InputStreamReader
     //   300: dup
     //   301: aload_3
-    //   302: invokevirtual 196	java/net/HttpURLConnection:getInputStream	()Ljava/io/InputStream;
-    //   305: ldc 54
-    //   307: invokespecial 199	java/io/InputStreamReader:<init>	(Ljava/io/InputStream;Ljava/lang/String;)V
-    //   310: invokespecial 202	java/io/BufferedReader:<init>	(Ljava/io/Reader;)V
+    //   302: invokevirtual 197	java/net/HttpURLConnection:getInputStream	()Ljava/io/InputStream;
+    //   305: ldc 55
+    //   307: invokespecial 200	java/io/InputStreamReader:<init>	(Ljava/io/InputStream;Ljava/lang/String;)V
+    //   310: invokespecial 203	java/io/BufferedReader:<init>	(Ljava/io/Reader;)V
     //   313: astore 4
     //   315: aload 4
-    //   317: invokevirtual 205	java/io/BufferedReader:readLine	()Ljava/lang/String;
+    //   317: invokevirtual 206	java/io/BufferedReader:readLine	()Ljava/lang/String;
     //   320: astore 5
     //   322: aload 5
     //   324: ifnull +40 -> 364
     //   327: aload_2
     //   328: aload 5
-    //   330: invokevirtual 208	java/lang/StringBuffer:append	(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    //   330: invokevirtual 209	java/lang/StringBuffer:append	(Ljava/lang/String;)Ljava/lang/StringBuffer;
     //   333: pop
     //   334: goto -19 -> 315
     //   337: astore_2
-    //   338: ldc 120
-    //   340: new 171	java/lang/StringBuilder
+    //   338: ldc 121
+    //   340: new 172	java/lang/StringBuilder
     //   343: dup
-    //   344: ldc -46
-    //   346: invokespecial 174	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   344: ldc -45
+    //   346: invokespecial 175	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   349: aload_2
-    //   350: invokevirtual 213	java/net/MalformedURLException:getMessage	()Ljava/lang/String;
-    //   353: invokevirtual 216	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   356: invokevirtual 182	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   359: invokestatic 185	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   350: invokevirtual 214	java/net/MalformedURLException:getMessage	()Ljava/lang/String;
+    //   353: invokevirtual 217	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   356: invokevirtual 183	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   359: invokestatic 186	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   362: aconst_null
     //   363: areturn
     //   364: aload 4
-    //   366: invokevirtual 217	java/io/BufferedReader:close	()V
+    //   366: invokevirtual 218	java/io/BufferedReader:close	()V
     //   369: aload_2
-    //   370: invokevirtual 218	java/lang/StringBuffer:toString	()Ljava/lang/String;
+    //   370: invokevirtual 219	java/lang/StringBuffer:toString	()Ljava/lang/String;
     //   373: astore_2
-    //   374: ldc 120
-    //   376: ldc -36
+    //   374: ldc 121
+    //   376: ldc -35
     //   378: iconst_1
-    //   379: anewarray 124	java/lang/Object
+    //   379: anewarray 125	java/lang/Object
     //   382: dup
     //   383: iconst_0
     //   384: aload_2
     //   385: aastore
-    //   386: invokestatic 130	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   386: invokestatic 131	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   389: aload_3
-    //   390: invokevirtual 223	java/net/HttpURLConnection:disconnect	()V
+    //   390: invokevirtual 224	java/net/HttpURLConnection:disconnect	()V
     //   393: aload_0
-    //   394: new 225	org/json/JSONObject
+    //   394: new 226	org/json/JSONObject
     //   397: dup
     //   398: aload_2
-    //   399: invokespecial 226	org/json/JSONObject:<init>	(Ljava/lang/String;)V
-    //   402: ldc -28
-    //   404: invokevirtual 232	org/json/JSONObject:optString	(Ljava/lang/String;)Ljava/lang/String;
-    //   407: putfield 234	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:kMS	Ljava/lang/String;
+    //   399: invokespecial 227	org/json/JSONObject:<init>	(Ljava/lang/String;)V
+    //   402: ldc -27
+    //   404: invokevirtual 233	org/json/JSONObject:optString	(Ljava/lang/String;)Ljava/lang/String;
+    //   407: putfield 235	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:lmh	Ljava/lang/String;
     //   410: aload_0
-    //   411: new 225	org/json/JSONObject
+    //   411: new 226	org/json/JSONObject
     //   414: dup
     //   415: aload_2
-    //   416: invokespecial 226	org/json/JSONObject:<init>	(Ljava/lang/String;)V
-    //   419: ldc -20
-    //   421: invokevirtual 232	org/json/JSONObject:optString	(Ljava/lang/String;)Ljava/lang/String;
-    //   424: putfield 238	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:kMW	Ljava/lang/String;
-    //   427: ldc 120
-    //   429: ldc -16
+    //   416: invokespecial 227	org/json/JSONObject:<init>	(Ljava/lang/String;)V
+    //   419: ldc -19
+    //   421: invokevirtual 233	org/json/JSONObject:optString	(Ljava/lang/String;)Ljava/lang/String;
+    //   424: putfield 239	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:lml	Ljava/lang/String;
+    //   427: ldc 121
+    //   429: ldc -15
     //   431: iconst_1
-    //   432: anewarray 124	java/lang/Object
+    //   432: anewarray 125	java/lang/Object
     //   435: dup
     //   436: iconst_0
     //   437: aload_2
     //   438: aastore
-    //   439: invokestatic 130	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    //   442: ldc 120
-    //   444: ldc -14
+    //   439: invokestatic 131	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   442: ldc 121
+    //   444: ldc -13
     //   446: iconst_1
-    //   447: anewarray 124	java/lang/Object
+    //   447: anewarray 125	java/lang/Object
     //   450: dup
     //   451: iconst_0
     //   452: aload_0
-    //   453: getfield 234	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:kMS	Ljava/lang/String;
+    //   453: getfield 235	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:lmh	Ljava/lang/String;
     //   456: aastore
-    //   457: invokestatic 130	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    //   460: ldc 120
-    //   462: ldc -12
+    //   457: invokestatic 131	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   460: ldc 121
+    //   462: ldc -11
     //   464: iconst_1
-    //   465: anewarray 124	java/lang/Object
+    //   465: anewarray 125	java/lang/Object
     //   468: dup
     //   469: iconst_0
     //   470: aload_0
-    //   471: getfield 238	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:kMW	Ljava/lang/String;
+    //   471: getfield 239	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:lml	Ljava/lang/String;
     //   474: aastore
-    //   475: invokestatic 130	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   475: invokestatic 131	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   478: aload_0
     //   479: iconst_1
-    //   480: putfield 246	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:awe	Z
+    //   480: putfield 247	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:ahW	Z
     //   483: goto -121 -> 362
     //   486: astore_2
-    //   487: ldc 120
-    //   489: new 171	java/lang/StringBuilder
+    //   487: ldc 121
+    //   489: new 172	java/lang/StringBuilder
     //   492: dup
-    //   493: ldc -8
-    //   495: invokespecial 174	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   493: ldc -7
+    //   495: invokespecial 175	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   498: aload_2
-    //   499: invokevirtual 249	java/net/ProtocolException:getMessage	()Ljava/lang/String;
-    //   502: invokevirtual 216	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   505: invokevirtual 182	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   508: invokestatic 185	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   499: invokevirtual 250	java/net/ProtocolException:getMessage	()Ljava/lang/String;
+    //   502: invokevirtual 217	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   505: invokevirtual 183	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   508: invokestatic 186	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   511: goto -149 -> 362
     //   514: astore_2
-    //   515: ldc 120
-    //   517: new 171	java/lang/StringBuilder
+    //   515: ldc 121
+    //   517: new 172	java/lang/StringBuilder
     //   520: dup
-    //   521: ldc -5
-    //   523: invokespecial 174	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   521: ldc -4
+    //   523: invokespecial 175	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   526: aload_2
-    //   527: invokevirtual 252	java/io/IOException:getMessage	()Ljava/lang/String;
-    //   530: invokevirtual 216	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   533: invokevirtual 182	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   536: invokestatic 185	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   527: invokevirtual 253	java/io/IOException:getMessage	()Ljava/lang/String;
+    //   530: invokevirtual 217	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   533: invokevirtual 183	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   536: invokestatic 186	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   539: goto -177 -> 362
     //   542: astore_2
-    //   543: ldc 120
-    //   545: new 171	java/lang/StringBuilder
+    //   543: ldc 121
+    //   545: new 172	java/lang/StringBuilder
     //   548: dup
-    //   549: ldc -2
-    //   551: invokespecial 174	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   549: ldc -1
+    //   551: invokespecial 175	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   554: aload_2
-    //   555: invokevirtual 255	org/json/JSONException:getMessage	()Ljava/lang/String;
-    //   558: invokevirtual 216	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   561: invokevirtual 182	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   564: invokestatic 185	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   555: invokevirtual 256	org/json/JSONException:getMessage	()Ljava/lang/String;
+    //   558: invokevirtual 217	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   561: invokevirtual 183	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   564: invokestatic 186	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   567: goto -205 -> 362
     // Local variable table:
     //   start	length	slot	name	signature
@@ -336,10 +336,10 @@ final class BindGoogleContactUI$b
   protected final void onPreExecute()
   {
     super.onPreExecute();
-    u.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "onPreExecute");
-    kMS = "";
-    kMW = "";
-    awe = false;
+    v.i("MicroMsg.GoogleContact.BindGoogleContactUI", "onPreExecute");
+    lmh = "";
+    lml = "";
+    ahW = false;
   }
 }
 

@@ -4,19 +4,19 @@
 
 
 # instance fields
-.field public auy:Ljava/lang/String;
+.field public agl:Ljava/lang/String;
 
-.field public fNO:Ljava/lang/String;
+.field public fWR:Ljava/lang/String;
 
-.field public kfq:I
+.field public kFA:I
 
-.field private kfr:Z
+.field public kFB:Ljava/lang/String;
 
-.field public kfs:I
+.field public kFx:I
 
-.field public kft:I
+.field private kFy:Z
 
-.field public kfu:Ljava/lang/String;
+.field public kFz:I
 
 
 # direct methods
@@ -30,12 +30,12 @@
     .line 51
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/storage/x;->kfr:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/storage/x;->kFy:Z
 
     .line 64
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/storage/x;->kfq:I
+    iput v0, p0, Lcom/tencent/mm/storage/x;->kFx:I
 
     .line 65
     return-void
@@ -51,15 +51,15 @@
     .line 51
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/storage/x;->kfr:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/storage/x;->kFy:Z
 
     .line 68
-    iput-object p1, p0, Lcom/tencent/mm/storage/x;->auy:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/storage/x;->agl:Ljava/lang/String;
 
     .line 69
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/storage/x;->kfq:I
+    iput v0, p0, Lcom/tencent/mm/storage/x;->kFx:I
 
     .line 70
     return-void
@@ -67,18 +67,18 @@
 
 
 # virtual methods
-.method public final pE(I)V
+.method public final rt(I)V
     .locals 2
 
     .prologue
     .line 107
-    iget v0, p0, Lcom/tencent/mm/storage/x;->kfq:I
+    iget v0, p0, Lcom/tencent/mm/storage/x;->kFx:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/storage/x;->kfq:I
+    iget v0, p0, Lcom/tencent/mm/storage/x;->kFx:I
 
     if-eq v0, p1, :cond_0
 
@@ -89,11 +89,11 @@
     .line 108
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/storage/x;->kfr:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/storage/x;->kFy:Z
 
     .line 111
     :cond_0
-    iput p1, p0, Lcom/tencent/mm/storage/x;->kfq:I
+    iput p1, p0, Lcom/tencent/mm/storage/x;->kFx:I
 
     .line 113
     return-void

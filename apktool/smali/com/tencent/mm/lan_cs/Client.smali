@@ -14,4 +14,4 @@
 
 
 # static fields
-.field public static bwN:Lcom/tencent/mm/lan_cs/Client$a;
+.field public static boN:Lcom/tencent/mm/lan_cs/Client$a;

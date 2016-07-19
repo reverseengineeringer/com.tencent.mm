@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hne:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$4;
+.field final synthetic hDz:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$4;
 
 .field final synthetic val$intent:Landroid/content/Intent;
 
@@ -28,8 +28,8 @@
     .locals 0
 
     .prologue
-    .line 287
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$4$1;->hne:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$4;
+    .line 361
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$4$1;->hDz:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$4;
 
     iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$4$1;->val$intent:Landroid/content/Intent;
 
@@ -44,17 +44,17 @@
     .locals 3
 
     .prologue
-    .line 290
-    sget-object v0, Lcom/tencent/mm/plugin/sns/b/a;->coa:Lcom/tencent/mm/pluginsdk/g;
+    .line 364
+    sget-object v0, Lcom/tencent/mm/plugin/sns/b/a;->cjo:Lcom/tencent/mm/pluginsdk/g;
 
     iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$4$1;->val$intent:Landroid/content/Intent;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$4$1;->hne:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$4;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$4$1;->hDz:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$4;
 
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$4;->hnc:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
+    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI$4;->hDx:Lcom/tencent/mm/plugin/sns/ui/VideoAdPlayerUI;
 
     invoke-interface {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/g;->j(Landroid/content/Intent;Landroid/content/Context;)V
 
-    .line 291
+    .line 365
     return-void
 .end method

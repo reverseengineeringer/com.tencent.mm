@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/pluginsdk/ui/applet/j$1;->lj()Z
+    value = Lcom/tencent/mm/pluginsdk/ui/applet/j$1;->jK()Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iJt:Lcom/tencent/mm/pluginsdk/ui/applet/j$1;
+.field final synthetic jgp:Lcom/tencent/mm/pluginsdk/ui/applet/j$1;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 39
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j$1$1;->iJt:Lcom/tencent/mm/pluginsdk/ui/applet/j$1;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j$1$1;->jgp:Lcom/tencent/mm/pluginsdk/ui/applet/j$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,26 +41,26 @@
 
     .prologue
     .line 43
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j$1$1;->iJt:Lcom/tencent/mm/pluginsdk/ui/applet/j$1;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j$1$1;->jgp:Lcom/tencent/mm/pluginsdk/ui/applet/j$1;
 
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/j$1;->iJs:Lcom/tencent/mm/pluginsdk/ui/applet/j;
+    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/j$1;->jgo:Lcom/tencent/mm/pluginsdk/ui/applet/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gcq:Lcom/tencent/mm/modelsimple/m;
+    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gms:Lcom/tencent/mm/modelsimple/l;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
     .line 44
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j$1$1;->iJt:Lcom/tencent/mm/pluginsdk/ui/applet/j$1;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j$1$1;->jgp:Lcom/tencent/mm/pluginsdk/ui/applet/j$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/j$1;->iJs:Lcom/tencent/mm/pluginsdk/ui/applet/j;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/j$1;->jgo:Lcom/tencent/mm/pluginsdk/ui/applet/j;
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->eaF:Lcom/tencent/mm/ui/base/p;
+    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->eed:Lcom/tencent/mm/ui/base/p;
 
     .line 45
     return-void

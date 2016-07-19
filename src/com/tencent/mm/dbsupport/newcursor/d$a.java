@@ -4,7 +4,7 @@ import android.database.CursorIndexOutOfBoundsException;
 
 public final class d$a
 {
-  private Object[] bvu;
+  private Object[] bkn;
   private final int endIndex;
   private int index;
   
@@ -12,15 +12,15 @@ public final class d$a
   {
     index = paramInt1;
     endIndex = paramInt2;
-    bvu = paramArrayOfObject;
+    bkn = paramArrayOfObject;
   }
   
-  public final a U(Object paramObject)
+  public final a af(Object paramObject)
   {
     if (index == endIndex) {
       throw new CursorIndexOutOfBoundsException("No more columns left.");
     }
-    Object[] arrayOfObject = bvu;
+    Object[] arrayOfObject = bkn;
     int i = index;
     index = (i + 1);
     arrayOfObject[i] = paramObject;

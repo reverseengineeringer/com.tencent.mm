@@ -16,17 +16,17 @@ public final class a
     super(paramContext, paramString1, paramString2, parama);
   }
   
-  protected final void FB()
+  protected final void FX()
   {
-    g.a(context, 2131429005, 2131430877, false, new DialogInterface.OnClickListener()
+    g.a(context, 2131233106, 2131231028, false, new DialogInterface.OnClickListener()
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
-        paramAnonymousDialogInterface = i.a.iyK;
+        paramAnonymousDialogInterface = i.a.iVg;
         if (paramAnonymousDialogInterface != null) {
-          paramAnonymousDialogInterface.v(cAU, h.sf(), appId);
+          paramAnonymousDialogInterface.y(cxP, h.sh(), appId);
         }
-        cAV.bq(false);
+        cxQ.aY(false);
       }
     });
   }

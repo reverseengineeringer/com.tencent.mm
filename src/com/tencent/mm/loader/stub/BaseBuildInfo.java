@@ -4,29 +4,35 @@ import android.os.Build.VERSION;
 
 public class BaseBuildInfo
 {
-  public static String btx = "44889924bffce294447caf7a30418c7c6488e607";
-  private static String bwP = "false";
-  public static String bwQ = "0x26030D40";
-  public static String bwR = "android-" + Build.VERSION.SDK_INT;
-  public static String bwS = "02/03/2016 05:41 PM";
-  public static String bwT = "ammdev";
-  public static String bwU = "MicroMessenger_Android_GIT_RELEASE #2677";
-  public static String bwV = "builder_/home/android";
-  public static String bwW = "unknown";
-  public static String bwX = "origin/unstable/RB-2016-JAN/wechatout_string@git";
-  public static String bwY = null;
+  private static String boP = "true";
+  public static String boQ = "7ff7d8d3642a6a7ddc0196499733d1bb5a1e138b";
+  public static String boR = "0x26031641";
+  public static String boS = "android-" + Build.VERSION.SDK_INT;
+  public static String boT = "2016-07-08 17:23:21";
+  public static String boU = "null";
+  public static String boV = "MicroMessenger_Android_GIT_RELEASE_GRADLE #785";
+  public static String boW = "jenkins";
+  public static String boX = "null";
+  public static String boY = "origin/RB-2016-JUN@git";
+  public static String boZ = null;
+  public static int bpa = 3;
   
-  public static boolean rb()
+  public static String qE()
   {
-    return !"false".equalsIgnoreCase(bwP);
+    if (boZ == null) {
+      return boQ;
+    }
+    return boQ + "." + boZ;
   }
   
-  public static String rc()
+  public static String qF()
   {
-    if (bwY == null) {
-      return btx;
-    }
-    return btx + "." + bwY;
+    return boQ;
+  }
+  
+  public static boolean qG()
+  {
+    return !"false".equalsIgnoreCase(boP);
   }
 }
 

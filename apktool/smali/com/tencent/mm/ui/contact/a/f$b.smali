@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic lne:Lcom/tencent/mm/ui/contact/a/f;
+.field final synthetic lNz:Lcom/tencent/mm/ui/contact/a/f;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 34
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/a/f$b;->lne:Lcom/tencent/mm/ui/contact/a/f;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/a/f$b;->lNz:Lcom/tencent/mm/ui/contact/a/f;
 
     invoke-direct {p0, p1}, Lcom/tencent/mm/ui/contact/a/a$b;-><init>(Lcom/tencent/mm/ui/contact/a/a;)V
 
@@ -42,7 +42,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a04f1
+    const v1, 0x7f030503
 
     const/4 v2, 0x0
 
@@ -51,14 +51,14 @@
     move-result-object v2
 
     .line 41
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/a/f$b;->lne:Lcom/tencent/mm/ui/contact/a/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/a/f$b;->lNz:Lcom/tencent/mm/ui/contact/a/f;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/contact/a/f;->lnd:Lcom/tencent/mm/ui/contact/a/f$a;
+    iget-object v0, v0, Lcom/tencent/mm/ui/contact/a/f;->lNy:Lcom/tencent/mm/ui/contact/a/f$a;
 
     check-cast v0, Lcom/tencent/mm/ui/contact/a/f$a;
 
     .line 42
-    const v1, 0x7f07006d
+    const v1, 0x7f1001b4
 
     invoke-virtual {v2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -66,10 +66,10 @@
 
     check-cast v1, Landroid/widget/ImageView;
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/contact/a/f$a;->czS:Landroid/widget/ImageView;
+    iput-object v1, v0, Lcom/tencent/mm/ui/contact/a/f$a;->cui:Landroid/widget/ImageView;
 
     .line 43
-    const v1, 0x7f07009c
+    const v1, 0x7f100143
 
     invoke-virtual {v2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -77,10 +77,10 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/contact/a/f$a;->cHk:Landroid/widget/TextView;
+    iput-object v1, v0, Lcom/tencent/mm/ui/contact/a/f$a;->cEo:Landroid/widget/TextView;
 
     .line 44
-    const v1, 0x7f07009d
+    const v1, 0x7f100145
 
     invoke-virtual {v2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -88,17 +88,17 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/contact/a/f$a;->cOd:Landroid/widget/TextView;
+    iput-object v1, v0, Lcom/tencent/mm/ui/contact/a/f$a;->cuk:Landroid/widget/TextView;
 
     .line 45
-    iget-object v1, v0, Lcom/tencent/mm/ui/contact/a/f$a;->cOd:Landroid/widget/TextView;
+    iget-object v1, v0, Lcom/tencent/mm/ui/contact/a/f$a;->cuk:Landroid/widget/TextView;
 
     const/16 v3, 0x8
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 46
-    const v1, 0x7f0701ff
+    const v1, 0x7f1001b6
 
     invoke-virtual {v2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -106,7 +106,7 @@
 
     check-cast v1, Landroid/widget/CheckBox;
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/contact/a/f$a;->czW:Landroid/widget/CheckBox;
+    iput-object v1, v0, Lcom/tencent/mm/ui/contact/a/f$a;->cul:Landroid/widget/CheckBox;
 
     .line 47
     invoke-virtual {v2, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
@@ -130,23 +130,23 @@
     check-cast p2, Lcom/tencent/mm/ui/contact/a/f$a;
 
     .line 57
-    iget-object v0, p3, Lcom/tencent/mm/ui/contact/a/f;->cKS:Ljava/lang/CharSequence;
+    iget-object v0, p3, Lcom/tencent/mm/ui/contact/a/f;->cHV:Ljava/lang/CharSequence;
 
-    iget-object v1, p2, Lcom/tencent/mm/ui/contact/a/f$a;->cHk:Landroid/widget/TextView;
+    iget-object v1, p2, Lcom/tencent/mm/ui/contact/a/f$a;->cEo:Landroid/widget/TextView;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/modelsearch/f;->a(Ljava/lang/CharSequence;Landroid/widget/TextView;)Z
 
     .line 58
-    iget-object v0, p2, Lcom/tencent/mm/ui/contact/a/f$a;->czS:Landroid/widget/ImageView;
+    iget-object v0, p2, Lcom/tencent/mm/ui/contact/a/f$a;->cui:Landroid/widget/ImageView;
 
     iget-object v1, p3, Lcom/tencent/mm/ui/contact/a/f;->username:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/a$b;->b(Landroid/widget/ImageView;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/a$b;->a(Landroid/widget/ImageView;Ljava/lang/String;)V
 
     .line 60
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/a/f$b;->lne:Lcom/tencent/mm/ui/contact/a/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/a/f$b;->lNz:Lcom/tencent/mm/ui/contact/a/f;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/ui/contact/a/a;->lkT:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/ui/contact/a/a;->lLe:Z
 
     if-eqz v0, :cond_1
 
@@ -154,18 +154,18 @@
     if-eqz p4, :cond_0
 
     .line 62
-    iget-object v0, p2, Lcom/tencent/mm/ui/contact/a/f$a;->czW:Landroid/widget/CheckBox;
+    iget-object v0, p2, Lcom/tencent/mm/ui/contact/a/f$a;->cul:Landroid/widget/CheckBox;
 
     invoke-virtual {v0, v3}, Landroid/widget/CheckBox;->setChecked(Z)V
 
     .line 63
-    iget-object v0, p2, Lcom/tencent/mm/ui/contact/a/f$a;->czW:Landroid/widget/CheckBox;
+    iget-object v0, p2, Lcom/tencent/mm/ui/contact/a/f$a;->cul:Landroid/widget/CheckBox;
 
     invoke-virtual {v0, v2}, Landroid/widget/CheckBox;->setEnabled(Z)V
 
     .line 68
     :goto_0
-    iget-object v0, p2, Lcom/tencent/mm/ui/contact/a/f$a;->czW:Landroid/widget/CheckBox;
+    iget-object v0, p2, Lcom/tencent/mm/ui/contact/a/f$a;->cul:Landroid/widget/CheckBox;
 
     invoke-virtual {v0, v2}, Landroid/widget/CheckBox;->setVisibility(I)V
 
@@ -175,12 +175,12 @@
 
     .line 65
     :cond_0
-    iget-object v0, p2, Lcom/tencent/mm/ui/contact/a/f$a;->czW:Landroid/widget/CheckBox;
+    iget-object v0, p2, Lcom/tencent/mm/ui/contact/a/f$a;->cul:Landroid/widget/CheckBox;
 
     invoke-virtual {v0, p5}, Landroid/widget/CheckBox;->setChecked(Z)V
 
     .line 66
-    iget-object v0, p2, Lcom/tencent/mm/ui/contact/a/f$a;->czW:Landroid/widget/CheckBox;
+    iget-object v0, p2, Lcom/tencent/mm/ui/contact/a/f$a;->cul:Landroid/widget/CheckBox;
 
     invoke-virtual {v0, v3}, Landroid/widget/CheckBox;->setEnabled(Z)V
 
@@ -188,7 +188,7 @@
 
     .line 70
     :cond_1
-    iget-object v0, p2, Lcom/tencent/mm/ui/contact/a/f$a;->czW:Landroid/widget/CheckBox;
+    iget-object v0, p2, Lcom/tencent/mm/ui/contact/a/f$a;->cul:Landroid/widget/CheckBox;
 
     const/16 v1, 0x8
 
@@ -197,7 +197,7 @@
     goto :goto_1
 .end method
 
-.method public final bhz()Z
+.method public final bnp()Z
     .locals 1
 
     .prologue

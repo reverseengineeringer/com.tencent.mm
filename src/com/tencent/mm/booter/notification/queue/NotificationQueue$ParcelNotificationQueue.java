@@ -8,10 +8,10 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 public class NotificationQueue$ParcelNotificationQueue
-  extends LinkedList
+  extends LinkedList<NotificationItem>
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+  public static final Parcelable.Creator<ParcelNotificationQueue> CREATOR = new Parcelable.Creator() {};
   
   public int describeContents()
   {

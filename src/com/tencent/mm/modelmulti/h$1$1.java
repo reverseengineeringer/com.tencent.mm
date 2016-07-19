@@ -1,8 +1,8 @@
 package com.tencent.mm.modelmulti;
 
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
 import java.util.List;
 
 final class h$1$1
@@ -10,24 +10,24 @@ final class h$1$1
 {
   h$1$1(h.1 param1) {}
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    bFy = true;
-    u.i("!44@/B4Tb64lLpK+IBX8XDgnvsPvmyRJXaBBLjDRbPDJXV4=", "summerdktext verifypsw onSceneEnd[%d, %d] needVerifyPswList size[%d] errMsg[%s] verifyingPsw[%b], retryVerifyCount[%d]", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(h.b(bVu.bVt).size()), paramString, Boolean.valueOf(h.c(bVu.bVt)), Integer.valueOf(h.d(bVu.bVt)) });
+    byJ = true;
+    v.i("MicroMsg.NetSceneSendMsg", "summerdktext verifypsw onSceneEnd[%d, %d] needVerifyPswList size[%d] errMsg[%s] verifyingPsw[%b], retryVerifyCount[%d]", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(h.b(bOV.bOU).size()), paramString, Boolean.valueOf(h.c(bOV.bOU)), Integer.valueOf(h.d(bOV.bOU)) });
     if ((paramInt1 == 0) && (paramInt2 == 0))
     {
-      h.b(bVu.bVt).clear();
-      h.a(bVu.bVt, paramString);
+      h.b(bOV.bOU).clear();
+      h.a(bOV.bOU, paramString);
     }
     for (;;)
     {
-      h.f(bVu.bVt);
-      com.tencent.mm.platformtools.r.cnS = false;
+      h.f(bOV.bOU);
+      com.tencent.mm.platformtools.q.ciX = false;
       return;
-      h.a(bVu.bVt, h.b(bVu.bVt));
-      h.e(bVu.bVt).a(4, -49, bVu.bVs, bVu.bVt);
-      h.b(bVu.bVt, h.b(bVu.bVt));
-      h.b(bVu.bVt).clear();
+      h.a(bOV.bOU, h.b(bOV.bOU));
+      h.e(bOV.bOU).onSceneEnd(4, -49, bOV.bOT, bOV.bOU);
+      h.b(bOV.bOU, h.b(bOV.bOU));
+      h.b(bOV.bOU).clear();
     }
   }
 }

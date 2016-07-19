@@ -4,9 +4,9 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Looper;
 import ct.b.a;
-import ct.bj;
-import ct.bk;
-import ct.by;
+import ct.bg;
+import ct.bh;
+import ct.bv;
 
 public final class TencentLocationManager
 {
@@ -14,30 +14,32 @@ public final class TencentLocationManager
   public static final int COORDINATE_TYPE_WGS84 = 0;
   private static TencentLocationManager d;
   private final byte[] a = new byte[0];
-  private final bj b;
-  private final by c;
+  private final bg b;
+  private final bv c;
   
   private TencentLocationManager(Context paramContext)
   {
-    b = bj.a(paramContext);
-    c = new by(b);
+    b = bg.a(paramContext);
+    c = new bv(b);
   }
   
   public static TencentLocationManager getInstance(Context paramContext)
   {
-    if (paramContext == null) {
-      try
-      {
+    try
+    {
+      if (d != null) {
+        break label60;
+      }
+      if (paramContext == null) {
         throw new NullPointerException("context is null");
       }
-      finally {}
     }
+    finally {}
     if (paramContext.getApplicationContext() == null) {
       throw new NullPointerException("application context is null");
     }
-    if (d == null) {
-      d = new TencentLocationManager(paramContext.getApplicationContext());
-    }
+    d = new TencentLocationManager(paramContext.getApplicationContext());
+    label60:
     paramContext = d;
     return paramContext;
   }
@@ -60,21 +62,21 @@ public final class TencentLocationManager
   
   public final String getBuild()
   {
-    bk localbk = b.i();
-    if (localbk != null) {
-      return localbk.e();
+    bh localbh = b.a(-1L);
+    if (localbh != null) {
+      return localbh.e();
     }
     return "None";
   }
   
   public final int getCoordinateType()
   {
-    return c.d();
+    return c.f();
   }
   
   public final String getKey()
   {
-    return b.a.a(b.h().h);
+    return b.a.a(b.g().h);
   }
   
   public final TencentLocation getLastKnownLocation()
@@ -84,11 +86,16 @@ public final class TencentLocationManager
   
   public final String getVersion()
   {
-    bk localbk = b.i();
-    if (localbk != null) {
-      return localbk.d();
+    bh localbh = b.a(-1L);
+    if (localbh != null) {
+      return localbh.d();
     }
     return "None";
+  }
+  
+  public final String pauseLocationUpdates()
+  {
+    return c.e();
   }
   
   public final void removeUpdates(TencentLocationListener arg1)
@@ -123,6 +130,11 @@ public final class TencentLocationManager
     }
   }
   
+  public final String resumeLocationUpdates()
+  {
+    return c.d();
+  }
+  
   public final void setCoordinateType(int paramInt)
   {
     if ((paramInt == 1) || (paramInt == 0)) {
@@ -140,7 +152,7 @@ public final class TencentLocationManager
     if ((paramString == null) || (paramString.equals(""))) {
       throw new IllegalArgumentException("bad key: " + paramString);
     }
-    b.h().h = paramString;
+    b.g().h = paramString;
   }
   
   public final int startDistanceCalculate(TencentDistanceListener paramTencentDistanceListener)

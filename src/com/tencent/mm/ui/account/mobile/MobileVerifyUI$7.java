@@ -4,7 +4,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.Button;
 import android.widget.EditText;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class MobileVerifyUI$7
   implements TextWatcher
@@ -13,19 +13,19 @@ final class MobileVerifyUI$7
   
   public final void afterTextChanged(Editable paramEditable)
   {
-    if (ay.kz(kzc.kxy.getText().toString()))
+    if (be.kf(kYj.kWF.getText().toString()))
     {
-      kzc.kxy.setTextSize(15.0F);
-      kzc.kxy.setGravity(16);
+      kYj.kWF.setTextSize(15.0F);
+      kYj.kWF.setGravity(16);
     }
-    while ((kzc.kxy.getText() != null) && (kzc.kxy.getText().toString().length() > 0))
+    while ((kYj.kWF.getText() != null) && (kYj.kWF.getText().toString().length() > 0))
     {
-      kzc.hPY.setEnabled(true);
+      kYj.iia.setEnabled(true);
       return;
-      kzc.kxy.setTextSize(24.0F);
-      kzc.kxy.setGravity(16);
+      kYj.kWF.setTextSize(24.0F);
+      kYj.kWF.setGravity(16);
     }
-    kzc.hPY.setEnabled(false);
+    kYj.iia.setEnabled(false);
   }
   
   public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}

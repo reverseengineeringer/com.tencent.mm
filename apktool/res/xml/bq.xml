@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto"
+  xmlns:android1="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.plugin.scanner.ui.VcardContactUserHeaderPreference android:layout="@layout/act" android:key="v_contact_info_header" />
+    <com.tencent.mm.plugin.scanner.ui.VcardContactLinkPreference android:layout="@layout/yk" android:title="@string/cz5" android:key="v_contact_info_photo_uri" />
+    <PreferenceCategory android:key="v_category_photo_uri" />
+    <com.tencent.mm.plugin.scanner.ui.VcardContactLinkPreference android:layout="@layout/yk" android:title="@string/cyx" android:key="v_contact_info_email" />
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/yk" android:title="@string/cz4" android:key="v_contact_info_org" />
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/yk" android:title="@string/cyu" android:key="v_contact_info_agent" />
+    <com.tencent.mm.plugin.scanner.ui.VcardContactLinkPreference android:layout="@layout/yk" android:title="@string/cz_" android:key="c_contact_info_wx_id" />
+    <PreferenceCategory android:key="v_category_main" />
+    <com.tencent.mm.plugin.scanner.ui.VcardContactLinkPreference android:layout="@layout/yk" android:title="@string/cyz" android:key="v_contact_info_home_page" />
+    <PreferenceCategory android:key="v_category_home_page" />
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/yk" android:title="@string/cyv" android:key="v_contact_info_birthday" />
+    <PreferenceCategory android:key="v_category_birthday" />
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/yk" android:title="@string/cz6" android:key="v_contact_info_remark" />
+    <PreferenceCategory android:key="v_category_remark" />
+    <com.tencent.mm.plugin.scanner.ui.VcardContactLinkPreference android:layout="@layout/yk" android:title="@string/cz1" android:key="v_contact_info_logo" />
+    <PreferenceCategory android:key="v_category_logo" />
+    <Preference android:layout="@layout/a9" android:title="@string/cyq" android:key="add_vcard_contact" />
+    <PreferenceCategory />
+</PreferenceScreen>

@@ -10,7 +10,7 @@ final class InviteLinkedInFriendUI$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    kNW.finish();
+    lnm.finish();
     return true;
   }
 }

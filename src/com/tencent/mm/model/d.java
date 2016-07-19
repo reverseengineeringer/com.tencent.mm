@@ -4,52 +4,52 @@ import android.content.Context;
 import com.tencent.mm.compatible.util.a;
 import com.tencent.mm.compatible.util.a.a;
 import com.tencent.mm.compatible.util.a.b;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class d
 {
-  private a arc;
-  private Context bzN = y.getContext();
-  private a.a bzO;
-  a bzP;
-  private boolean bzQ = false;
+  private a acv;
+  private Context bsQ = aa.getContext();
+  private a.a bsR;
+  a bsS;
+  private boolean bsT = false;
   
   public final boolean a(a parama)
   {
-    bzP = parama;
+    bsS = parama;
     parama = new b((byte)0);
-    if (arc == null) {
-      arc = new a(bzN);
+    if (acv == null) {
+      acv = new a(bsQ);
     }
-    if (bzO != parama) {
-      bzO = parama;
+    if (bsR != parama) {
+      bsR = parama;
     }
-    parama = arc;
-    a.a locala = bzO;
-    if (bua != null) {
-      bua.a(locala);
+    parama = acv;
+    a.a locala = bsR;
+    if (biB != null) {
+      biB.a(locala);
     }
-    if (arc == null) {}
-    while (bzQ) {
+    if (acv == null) {}
+    while (bsT) {
       return false;
     }
-    arc.requestFocus();
-    bzQ = true;
-    return bzQ;
+    acv.requestFocus();
+    bsT = true;
+    return bsT;
   }
   
-  public final boolean aH(boolean paramBoolean)
+  public final boolean am(boolean paramBoolean)
   {
-    if (arc != null) {}
-    for (boolean bool = arc.oV();; bool = false)
+    if (acv != null) {}
+    for (boolean bool = acv.nn();; bool = false)
     {
-      bzQ = false;
+      bsT = false;
       if (paramBoolean)
       {
-        arc = null;
-        bzO = null;
-        bzP = null;
+        acv = null;
+        bsR = null;
+        bsS = null;
       }
       return bool;
     }
@@ -57,13 +57,13 @@ public final class d
   
   public static abstract interface a
   {
-    public abstract void mM();
+    public abstract void kZ();
     
-    public abstract void mN();
+    public abstract void la();
     
-    public abstract void mO();
+    public abstract void lb();
     
-    public abstract void mP();
+    public abstract void lc();
   }
   
   private final class b
@@ -71,13 +71,13 @@ public final class d
   {
     private b() {}
     
-    public final void bT(int paramInt)
+    public final void cl(int paramInt)
     {
       switch (paramInt)
       {
       case 0: 
       default: 
-        u.v("!44@/B4Tb64lLpKIvgnNzDIfLOmAua1hOQXldT/A4qy1crA=", "jacks UNKNOW_AUDIOFOCUS_LOSS DEFAULT");
+        v.v("MicroMsg.AudioHelperTool", "jacks UNKNOW_AUDIOFOCUS_LOSS DEFAULT");
       }
       do
       {
@@ -88,21 +88,21 @@ public final class d
             do
             {
               return;
-              u.v("!44@/B4Tb64lLpKIvgnNzDIfLOmAua1hOQXldT/A4qy1crA=", "jacks AUDIOFOCUS_GAIN");
-            } while (bzP == null);
-            bzP.mM();
+              v.v("MicroMsg.AudioHelperTool", "jacks AUDIOFOCUS_GAIN");
+            } while (bsS == null);
+            bsS.kZ();
             return;
-            u.v("!44@/B4Tb64lLpKIvgnNzDIfLOmAua1hOQXldT/A4qy1crA=", "jacks AUDIOFOCUS_LOSS");
-          } while (bzP == null);
-          bzP.mN();
+            v.v("MicroMsg.AudioHelperTool", "jacks AUDIOFOCUS_LOSS");
+          } while (bsS == null);
+          bsS.la();
           return;
-          u.v("!44@/B4Tb64lLpKIvgnNzDIfLOmAua1hOQXldT/A4qy1crA=", "jacks AUDIOFOCUS_LOSS_TRANSIENT");
-        } while (bzP == null);
-        bzP.mO();
+          v.v("MicroMsg.AudioHelperTool", "jacks AUDIOFOCUS_LOSS_TRANSIENT");
+        } while (bsS == null);
+        bsS.lb();
         return;
-        u.v("!44@/B4Tb64lLpKIvgnNzDIfLOmAua1hOQXldT/A4qy1crA=", "jacks AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK");
-      } while (bzP == null);
-      bzP.mP();
+        v.v("MicroMsg.AudioHelperTool", "jacks AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK");
+      } while (bsS == null);
+      bsS.lc();
     }
   }
 }

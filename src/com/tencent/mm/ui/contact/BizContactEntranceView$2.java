@@ -12,8 +12,8 @@ final class BizContactEntranceView$2
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    if ((BizContactEntranceView.a(liY) instanceof MMActivity)) {
-      ((MMActivity)BizContactEntranceView.a(liY)).age();
+    if ((BizContactEntranceView.a(lJj) instanceof MMActivity)) {
+      ((MMActivity)BizContactEntranceView.a(lJj)).aiI();
     }
     return false;
   }

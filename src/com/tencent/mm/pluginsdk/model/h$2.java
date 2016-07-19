@@ -10,7 +10,7 @@ final class h$2
   
   public final void run()
   {
-    Toast.makeText(h.f(iAg), h.f(iAg).getString(2131428864), 0).show();
+    Toast.makeText(h.f(iWF), h.f(iWF).getString(2131235816), 0).show();
   }
 }
 

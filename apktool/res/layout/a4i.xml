@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tencent.mm.plugin.radar.ui.RadarMemberView android:id="@id/buv" android:background="#e0000000" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/buw" android:layout_width="1.0dip" android:layout_height="1.0dip" android:layout_centerInParent="true" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/buw">
+        <TextView android:textSize="19.0sp" android:textColor="#ff8e8e8e" android:gravity="center" android:layout_gravity="center" android:id="@id/bux" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:text="@string/bvq" />
+        <TextView android:textSize="18.0sp" android:textColor="#ffadadad" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/buy" android:background="@drawable/a6z" android:visibility="gone" android:layout_width="240.0dip" android:layout_height="48.0dip" android:layout_marginTop="40.0dip" android:shadowColor="#ff007e0b" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" />
+        <Button android:textSize="18.0dip" android:textColor="@color/q7" android:layout_gravity="center_horizontal" android:id="@id/buz" android:background="@drawable/b6" android:visibility="gone" android:layout_width="240.0dip" android:layout_height="48.0dip" android:layout_marginTop="40.0dip" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/buw">
+        <View android:layout_gravity="center_horizontal" android:id="@id/bv0" android:layout_width="130.0dip" android:layout_height="130.0dip" android:layout_marginBottom="8.0dip" />
+        <TextView android:textSize="21.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/bv1" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        <Button android:textSize="16.0sp" android:textColor="@color/ju" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/bv2" android:background="@drawable/a6w" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:minWidth="120.0dip" android:text="@string/bvt" android:singleLine="true" style="@style/MMSmallButton" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/bv3" android:visibility="gone" android:layout_width="100.0dip" android:layout_height="75.0dip">
+        <ImageView android:id="@id/bv4" android:layout_width="68.0dip" android:layout_height="68.0dip" android:layout_marginTop="3.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <ImageView android:layout_width="70.0dip" android:layout_height="70.0dip" android:layout_marginTop="3.0dip" android:src="@raw/radar_member_big_bg" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/cu" android:textColor="#ff225a8f" android:ellipsize="end" android:id="@id/bv5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12.0dip" android:text="@string/a5p" android:singleLine="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</com.tencent.mm.plugin.radar.ui.RadarMemberView>

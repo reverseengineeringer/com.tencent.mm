@@ -7,21 +7,21 @@ import java.util.ArrayList;
 final class SlidingPaneLayout$b
   implements Runnable
 {
-  final View ib;
+  final View iv;
   
   SlidingPaneLayout$b(SlidingPaneLayout paramSlidingPaneLayout, View paramView)
   {
-    ib = paramView;
+    iv = paramView;
   }
   
   public final void run()
   {
-    if (ib.getParent() == ia)
+    if (iv.getParent() == iu)
     {
-      m.a(ib, 0, null);
-      SlidingPaneLayout.a(ia, ib);
+      m.a(iv, 0, null);
+      SlidingPaneLayout.a(iu, iv);
     }
-    SlidingPaneLayout.f(ia).remove(this);
+    SlidingPaneLayout.f(iu).remove(this);
   }
 }
 

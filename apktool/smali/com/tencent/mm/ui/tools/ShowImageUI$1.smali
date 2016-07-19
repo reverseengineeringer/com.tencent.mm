@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lxX:Lcom/tencent/mm/ui/tools/ShowImageUI;
+.field final synthetic lYM:Lcom/tencent/mm/ui/tools/ShowImageUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 70
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ShowImageUI$1;->lxX:Lcom/tencent/mm/ui/tools/ShowImageUI;
+    .line 72
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ShowImageUI$1;->lYM:Lcom/tencent/mm/ui/tools/ShowImageUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,12 +40,12 @@
     .locals 1
 
     .prologue
-    .line 74
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI$1;->lxX:Lcom/tencent/mm/ui/tools/ShowImageUI;
+    .line 76
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI$1;->lYM:Lcom/tencent/mm/ui/tools/ShowImageUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/ShowImageUI;->finish()V
 
-    .line 75
+    .line 77
     const/4 v0, 0x1
 
     return v0

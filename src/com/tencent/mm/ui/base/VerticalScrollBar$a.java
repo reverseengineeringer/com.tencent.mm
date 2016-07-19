@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 public abstract interface VerticalScrollBar$a
 {
-  public abstract void ls(String paramString);
+  public abstract void md(String paramString);
 }
 
 /* Location:

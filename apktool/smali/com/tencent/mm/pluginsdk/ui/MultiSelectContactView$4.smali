@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iHi:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
+.field final synthetic jed:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 134
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$4;->iHi:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$4;->jed:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

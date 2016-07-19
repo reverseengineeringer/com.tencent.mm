@@ -5,20 +5,20 @@ import android.graphics.drawable.Drawable;
 
 final class NoMeasuredTextView$b
 {
-  final Rect kJQ = new Rect();
-  Drawable kJR;
-  Drawable kJS;
-  Drawable kJT;
-  Drawable kJU;
-  int kJV;
-  int kJW;
-  int kJX;
-  int kJY;
-  int kJZ;
-  int kKa;
-  int kKb;
-  int kKc;
-  int kKd;
+  final Rect ljg = new Rect();
+  Drawable ljh;
+  Drawable lji;
+  Drawable ljj;
+  Drawable ljk;
+  int ljl;
+  int ljm;
+  int ljn;
+  int ljo;
+  int ljp;
+  int ljq;
+  int ljr;
+  int ljs;
+  int ljt;
   
   NoMeasuredTextView$b(NoMeasuredTextView paramNoMeasuredTextView) {}
 }

@@ -3,7 +3,7 @@ package com.tencent.mm.ui.base;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Process;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
 
 public final class w
 {
@@ -17,9 +17,10 @@ public final class w
     for (paramIntent = "com.tencent.mm.ui.ACTION_ACTIVE";; paramIntent = "com.tencent.mm.ui.ACTION_DEACTIVE")
     {
       localIntent.setAction(paramIntent);
-      localIntent.putExtra("_application_context_process_", y.aQC());
+      localIntent.putExtra("_application_context_process_", aa.aVm());
       localIntent.putExtra("process_id", Process.myPid());
-      y.getContext().sendBroadcast(localIntent, "com.tencent.mm.permission.MM_MESSAGE");
+      localIntent.putExtra("process_is_mm", aa.aZU());
+      aa.getContext().sendBroadcast(localIntent, "com.tencent.mm.permission.MM_MESSAGE");
       return;
     }
   }

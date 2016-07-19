@@ -2,18 +2,18 @@ package com.tencent.mm.modelsearch;
 
 public final class m$h
 {
-  public int bZJ;
-  public int bZS;
-  public int bZT;
+  public int bTB;
+  public int bTC;
+  public int bTs;
   public String content;
   public int end;
   public int start;
   
   public m$h(int paramInt1, int paramInt2, int paramInt3, String paramString, int paramInt4, int paramInt5)
   {
-    bZS = paramInt1;
-    bZT = paramInt2;
-    bZJ = paramInt3;
+    bTB = paramInt1;
+    bTC = paramInt2;
+    bTs = paramInt3;
     content = paramString;
     start = paramInt4;
     end = paramInt5;

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->Gb()V
+    value = Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+.field final synthetic lGY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 434
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$9;->lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    .line 449
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$9;->lGY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,12 +36,12 @@
 
 
 # virtual methods
-.method public final Xq()V
+.method public final Zb()V
     .locals 2
 
     .prologue
-    .line 438
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$9;->lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    .line 453
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$9;->lGY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->e(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;)Lcom/tencent/mm/ui/chatting/gallery/b;
 
@@ -49,23 +49,18 @@
 
     if-nez v0, :cond_0
 
-    .line 446
+    .line 461
     :goto_0
     return-void
 
-    .line 442
+    .line 457
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$9;->lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$9;->lGY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->f(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;)V
 
-    .line 443
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$9;->lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->g(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;)V
-
-    .line 445
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$9;->lgM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
+    .line 460
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI$9;->lGY:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;->e(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryUI;)Lcom/tencent/mm/ui/chatting/gallery/b;
 
@@ -73,7 +68,7 @@
 
     const v1, 0x186a0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/chatting/gallery/b;->n(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/chatting/gallery/b;->p(I)V
 
     goto :goto_0
 .end method

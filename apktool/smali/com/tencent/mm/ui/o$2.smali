@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kqp:Lcom/tencent/mm/ui/o;
+.field final synthetic kPu:Lcom/tencent/mm/ui/o;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 198
-    iput-object p1, p0, Lcom/tencent/mm/ui/o$2;->kqp:Lcom/tencent/mm/ui/o;
+    iput-object p1, p0, Lcom/tencent/mm/ui/o$2;->kPu:Lcom/tencent/mm/ui/o;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,27 +36,27 @@
 
 
 # virtual methods
-.method public final aNg()V
+.method public final aEs()V
     .locals 1
 
     .prologue
     .line 202
-    iget-object v0, p0, Lcom/tencent/mm/ui/o$2;->kqp:Lcom/tencent/mm/ui/o;
+    iget-object v0, p0, Lcom/tencent/mm/ui/o$2;->kPu:Lcom/tencent/mm/ui/o;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/o;->aNg()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/o;->aEs()V
 
     .line 203
     return-void
 .end method
 
-.method public final aNh()V
+.method public final aQQ()V
     .locals 1
 
     .prologue
     .line 212
-    iget-object v0, p0, Lcom/tencent/mm/ui/o$2;->kqp:Lcom/tencent/mm/ui/o;
+    iget-object v0, p0, Lcom/tencent/mm/ui/o$2;->kPu:Lcom/tencent/mm/ui/o;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/o;->bbh()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/o;->bgr()V
 
     .line 213
     return-void
@@ -67,9 +67,9 @@
 
     .prologue
     .line 207
-    iget-object v0, p0, Lcom/tencent/mm/ui/o$2;->kqp:Lcom/tencent/mm/ui/o;
+    iget-object v0, p0, Lcom/tencent/mm/ui/o$2;->kPu:Lcom/tencent/mm/ui/o;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/o;->bbi()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/o;->bgs()V
 
     .line 208
     return-void

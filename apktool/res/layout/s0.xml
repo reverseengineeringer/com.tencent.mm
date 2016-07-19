@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ax0" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/MMGameCenterMsgMediaItemStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/ax1" android:layout_width="@dimen/gf" android:layout_height="@dimen/gf" android:src="@null" android:contentDescription="@string/fn" />
+        <ImageView android:id="@id/ax2" android:padding="@dimen/gr" android:visibility="gone" android:layout_width="@dimen/gf" android:layout_height="@dimen/gf" android:src="@drawable/aa2" android:contentDescription="@string/fn" />
+    </FrameLayout>
+    <TextView android:textSize="14.0sp" android:textColor="@color/ak" android:ellipsize="end" android:id="@id/ax3" android:paddingLeft="@dimen/gr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:singleLine="false" />
+</LinearLayout>

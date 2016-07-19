@@ -16,18 +16,13 @@ public final class o
     try
     {
       new StringBuilder("write CheckEntity to Settings.System:").append(parama.toString());
-      p.R(context).m(s.decode("4kU71lN96TJUomD1vOU9lgj9U+kKmxDPLVM+zzjst5U="), parama.toString());
+      p.N(context).l(s.decode("4kU71lN96TJUomD1vOU9lgj9U+kKmxDPLVM+zzjst5U="), parama.toString());
       return;
     }
     finally {}
   }
   
-  protected final boolean jY()
-  {
-    return s.j(context, "android.permission.WRITE_SETTINGS");
-  }
-  
-  protected final String jZ()
+  protected final String iA()
   {
     try
     {
@@ -37,7 +32,7 @@ public final class o
     finally {}
   }
   
-  protected final a ka()
+  protected final a iB()
   {
     try
     {
@@ -48,11 +43,16 @@ public final class o
     finally {}
   }
   
+  protected final boolean iz()
+  {
+    return s.k(context, "android.permission.WRITE_SETTINGS");
+  }
+  
   protected final void write(String paramString)
   {
     try
     {
-      p.R(context).m(s.decode("4kU71lN96TJUomD1vOU9lgj9Tw=="), paramString);
+      p.N(context).l(s.decode("4kU71lN96TJUomD1vOU9lgj9Tw=="), paramString);
       return;
     }
     finally {}

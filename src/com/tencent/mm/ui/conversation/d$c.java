@@ -6,17 +6,17 @@ import android.widget.TextView;
 
 final class d$c
 {
-  public View cHp = null;
-  public TextView cHq = null;
-  public View kFW = null;
-  public TextView lpA = null;
-  public View lpB = null;
-  boolean lpu = false;
-  boolean lpv = false;
-  boolean lpw = false;
-  boolean lpx = false;
-  boolean lpy = false;
-  public ImageView lpz = null;
+  public View cEt = null;
+  public TextView cEu = null;
+  boolean lPK = false;
+  boolean lPL = false;
+  boolean lPM = false;
+  boolean lPN = false;
+  boolean lPO = false;
+  public ImageView lPP = null;
+  public TextView lPQ = null;
+  public View lPR = null;
+  public View lfa = null;
   String username = "";
   
   d$c(d paramd) {}

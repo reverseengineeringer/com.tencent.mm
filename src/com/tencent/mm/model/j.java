@@ -1,11 +1,11 @@
 package com.tencent.mm.model;
 
 import android.database.Cursor;
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.i.a;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.j.a;
 import com.tencent.mm.sdk.h.d;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.q;
 import com.tencent.mm.storage.s;
 import java.util.Iterator;
@@ -13,24 +13,24 @@ import java.util.List;
 
 public final class j
 {
-  public static int E(String paramString1, String paramString2)
+  public static int B(String paramString1, String paramString2)
   {
     int j = 0;
     int i = 0;
-    if (!ah.rh())
+    if (!ah.rg())
     {
-      u.w("!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI=", "get total unread, but has not set uin");
+      v.w("MicroMsg.ConversationLogic", "get total unread, but has not set uin");
       j = i;
     }
     do
     {
       return j;
-      s locals = ah.tD().rt();
+      s locals = ah.tE().ru();
       StringBuilder localStringBuilder = new StringBuilder();
       localStringBuilder.append("select unReadCount");
-      localStringBuilder.append(" from rconversation where username").append(" = '").append(paramString1).append("' AND ( parentRef is ").append(a.bvk).append(" or parentRef = '' ) ").append(ay.ky(paramString2));
+      localStringBuilder.append(" from rconversation where username").append(" = '").append(paramString1).append("' AND ( parentRef is ").append(a.bjU).append(" or parentRef = '' ) ").append(be.li(paramString2));
       paramString1 = localStringBuilder.toString();
-      paramString1 = aoX.rawQuery(paramString1, null);
+      paramString1 = bkP.rawQuery(paramString1, null);
       i = j;
       if (paramString1 != null)
       {
@@ -49,7 +49,7 @@ public final class j
   
   private static int a(String paramString, Cursor paramCursor)
   {
-    long l = ay.FT();
+    long l = be.Gq();
     if ((paramCursor != null) && (paramCursor.getCount() > 0)) {
       paramCursor.moveToFirst();
     }
@@ -58,54 +58,54 @@ public final class j
       if (paramCursor != null) {
         paramCursor.close();
       }
-      u.d("!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI=", "unreadcheck unRead getTotalUnread %d", new Object[] { Integer.valueOf(i) });
+      v.d("MicroMsg.ConversationLogic", "unreadcheck unRead getTotalUnread %d", new Object[] { Integer.valueOf(i) });
       if (i <= 0) {
         return 0;
       }
-      paramString = ah.tD().rt().EJ(paramString);
+      paramString = ah.tE().ru().GX(paramString);
       if (paramString == null)
       {
-        u.w("!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI=", "cursor is null, return");
-        u.i("!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI=", "get count use %d ms", new Object[] { Long.valueOf(ay.ao(l)) });
+        v.w("MicroMsg.ConversationLogic", "cursor is null, return");
+        v.i("MicroMsg.ConversationLogic", "get count use %d ms", new Object[] { Long.valueOf(be.av(l)) });
         return i;
       }
       paramString.moveToFirst();
       while (!paramString.isAfterLast())
       {
-        paramCursor = ah.tD().rq().Ep(paramString.getString(0));
+        paramCursor = ah.tE().rr().GD(paramString.getString(0));
         int j = i;
         if (paramCursor != null)
         {
           j = i;
-          if (aSC == 0)
+          if (aFl == 0)
           {
             j = i - paramString.getInt(1);
-            u.d("!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI=", "unreadcheck chatroom mute %s, unRead %d,", new Object[] { field_username, Integer.valueOf(j) });
+            v.d("MicroMsg.ConversationLogic", "unreadcheck chatroom mute %s, unRead %d,", new Object[] { field_username, Integer.valueOf(j) });
           }
         }
         paramString.moveToNext();
         i = j;
       }
-      u.i("!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI=", "unreadcheck  result talker count is %d", new Object[] { Integer.valueOf(i) });
+      v.i("MicroMsg.ConversationLogic", "unreadcheck  result talker count is %d", new Object[] { Integer.valueOf(i) });
       paramString.close();
-      u.i("!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI=", "unreadcheck get count use %d ms", new Object[] { Long.valueOf(ay.ao(l)) });
+      v.i("MicroMsg.ConversationLogic", "unreadcheck get count use %d ms", new Object[] { Long.valueOf(be.av(l)) });
       return Math.max(0, i);
     }
   }
   
-  public static int a(String paramString, List paramList)
+  public static int b(String paramString, List<String> paramList)
   {
-    if (!ah.rh())
+    if (!ah.rg())
     {
-      u.w("!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI=", "get total unread with black list, but has not set uin");
+      v.w("MicroMsg.ConversationLogic", "get total unread with black list, but has not set uin");
       return 0;
     }
-    long l = ay.FT();
-    s locals = ah.tD().rt();
-    u.i("!44@/B4Tb64lLpJN/RyYD3u7HK+YneAQ/0gN4D0Emw3Mmi8=", "getTotalUnreadCursor filter[%s] [%s]", new Object[] { paramString, ay.aVJ() });
+    long l = be.Gq();
+    s locals = ah.tE().ru();
+    v.i("MicroMsg.ConversationStorage", "getTotalUnreadCursor filter[%s] [%s]", new Object[] { paramString, be.baX() });
     StringBuilder localStringBuilder = new StringBuilder();
     localStringBuilder.append("select sum(unReadCount) from rconversation").append(", rcontact");
-    localStringBuilder.append(" where rconversation.unReadCount").append(" > 0 AND (rconversation.parentRef").append(" is ").append(a.bvk).append(" or parentRef = '' ) AND ").append("rconversation.username = ").append("rcontact.username").append(ay.ky(paramString)).append(" AND ( type & 512").append(" ) == 0 AND rcontact.").append("username != 'officialaccounts'");
+    localStringBuilder.append(" where rconversation.unReadCount").append(" > 0 AND (rconversation.parentRef").append(" is ").append(a.bjU).append(" or parentRef = '' ) AND ").append("rconversation.username = ").append("rcontact.username").append(be.li(paramString)).append(" AND ( type & 512").append(" ) == 0 AND rcontact.").append("username != 'officialaccounts'");
     if ((paramList != null) && (!paramList.isEmpty()))
     {
       paramList = paramList.iterator();
@@ -116,39 +116,39 @@ public final class j
       }
     }
     paramList = localStringBuilder.toString();
-    u.v("!44@/B4Tb64lLpJN/RyYD3u7HK+YneAQ/0gN4D0Emw3Mmi8=", "get total unread with black list, sql is %s", new Object[] { paramList });
-    int i = a(paramString, aoX.rawQuery(paramList, null));
-    u.i("!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI=", "get count with black list use %d ms", new Object[] { Long.valueOf(ay.ao(l)) });
+    v.v("MicroMsg.ConversationStorage", "get total unread with black list, sql is %s", new Object[] { paramList });
+    int i = a(paramString, bkP.rawQuery(paramList, null));
+    v.i("MicroMsg.ConversationLogic", "get count with black list use %d ms", new Object[] { Long.valueOf(be.av(l)) });
     return i;
   }
   
-  public static int eR(String paramString)
+  public static int fd(String paramString)
   {
-    return a(paramString, null);
+    return b(paramString, null);
   }
   
-  public static int eS(String paramString)
+  public static int fe(String paramString)
   {
-    if (!ah.rh())
+    if (!ah.rg())
     {
-      u.w("!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI=", "get Total Unread Talker, but has not set uin");
+      v.w("MicroMsg.ConversationLogic", "get Total Unread Talker, but has not set uin");
       return 0;
     }
-    long l = ay.FT();
-    Object localObject1 = ah.tD().rt();
+    long l = be.Gq();
+    Object localObject1 = ah.tE().ru();
     Object localObject2 = new StringBuilder();
     ((StringBuilder)localObject2).append("SELECT COUNT(rconversation.username)");
     ((StringBuilder)localObject2).append(" FROM rconversation, rcontact");
     ((StringBuilder)localObject2).append(" WHERE unReadCount > 0");
     ((StringBuilder)localObject2).append(" AND rconversation.username = rcontact.username");
-    ((StringBuilder)localObject2).append(ay.ky(paramString));
+    ((StringBuilder)localObject2).append(be.li(paramString));
     ((StringBuilder)localObject2).append(" AND ( type & 512").append(" ) == 0");
     ((StringBuilder)localObject2).append(" AND ( attrflag & 2097152 ) == 0");
-    ((StringBuilder)localObject2).append(" AND ( ( parentRef is ").append(a.bvk).append(" or parentRef = '' ) ");
+    ((StringBuilder)localObject2).append(" AND ( ( parentRef is ").append(a.bjU).append(" or parentRef = '' ) ");
     ((StringBuilder)localObject2).append(" AND rcontact.username").append(" != 'officialaccounts')");
     localObject2 = ((StringBuilder)localObject2).toString();
-    u.i("!44@/B4Tb64lLpJN/RyYD3u7HK+YneAQ/0gN4D0Emw3Mmi8=", "get total unread talker, sql is %s", new Object[] { localObject2 });
-    localObject1 = aoX.rawQuery((String)localObject2, null);
+    v.i("MicroMsg.ConversationStorage", "get total unread talker, sql is %s", new Object[] { localObject2 });
+    localObject1 = bkP.rawQuery((String)localObject2, null);
     if (((Cursor)localObject1).getCount() > 0) {
       ((Cursor)localObject1).moveToFirst();
     }
@@ -158,51 +158,51 @@ public final class j
       if (i <= 0) {
         break;
       }
-      paramString = ah.tD().rt().EJ(paramString);
+      paramString = ah.tE().ru().GX(paramString);
       if (paramString == null)
       {
-        u.w("!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI=", "cursor is null, return");
-        u.i("!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI=", "get count use %d ms", new Object[] { Long.valueOf(ay.ao(l)) });
+        v.w("MicroMsg.ConversationLogic", "cursor is null, return");
+        v.i("MicroMsg.ConversationLogic", "get count use %d ms", new Object[] { Long.valueOf(be.av(l)) });
         return i;
       }
       paramString.moveToFirst();
       while (!paramString.isAfterLast())
       {
-        localObject1 = ah.tD().rq().Ep(paramString.getString(0));
+        localObject1 = ah.tE().rr().GD(paramString.getString(0));
         int j = i;
         if (localObject1 != null)
         {
           j = i;
-          if (aSC == 0) {
+          if (aFl == 0) {
             j = i - 1;
           }
         }
         paramString.moveToNext();
         i = j;
       }
-      u.i("!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI=", "result talker count is %d", new Object[] { Integer.valueOf(i) });
+      v.i("MicroMsg.ConversationLogic", "result talker count is %d", new Object[] { Integer.valueOf(i) });
       paramString.close();
-      u.i("!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI=", "get count use %d ms", new Object[] { Long.valueOf(ay.ao(l)) });
+      v.i("MicroMsg.ConversationLogic", "get count use %d ms", new Object[] { Long.valueOf(be.av(l)) });
       return Math.max(0, i);
     }
   }
   
-  public static int sV()
+  public static int sU()
   {
     int j = 0;
     int i = 0;
-    if (!ah.rh())
+    if (!ah.rg())
     {
-      u.w("!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI=", "get Bottle Total Conversation Unread, but has not set uin");
+      v.w("MicroMsg.ConversationLogic", "get Bottle Total Conversation Unread, but has not set uin");
       j = i;
     }
     Object localObject;
     do
     {
       return j;
-      localObject = ah.tD().rt();
-      u.i("!44@/B4Tb64lLpJN/RyYD3u7HK+YneAQ/0gN4D0Emw3Mmi8=", "get bottle total conversation unread sql is %s", new Object[] { "select count(*) from rbottleconversation where unReadCount > 0" });
-      localObject = aoX.rawQuery("select count(*) from rbottleconversation where unReadCount > 0", null);
+      localObject = ah.tE().ru();
+      v.i("MicroMsg.ConversationStorage", "get bottle total conversation unread sql is %s", new Object[] { "select count(*) from rbottleconversation where unReadCount > 0" });
+      localObject = bkP.rawQuery("select count(*) from rbottleconversation where unReadCount > 0", null);
       i = j;
       if (localObject != null)
       {

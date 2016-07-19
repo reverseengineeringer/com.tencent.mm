@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic bKE:Lcom/tencent/mm/modelcdntran/b;
+.field final synthetic bDY:Lcom/tencent/mm/modelcdntran/b;
 
-.field final synthetic bKG:Lcom/tencent/mm/modelcdntran/f;
+.field final synthetic bEa:Lcom/tencent/mm/modelcdntran/f;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 197
-    iput-object p1, p0, Lcom/tencent/mm/modelcdntran/b$4;->bKE:Lcom/tencent/mm/modelcdntran/b;
+    iput-object p1, p0, Lcom/tencent/mm/modelcdntran/b$4;->bDY:Lcom/tencent/mm/modelcdntran/b;
 
-    iput-object p2, p0, Lcom/tencent/mm/modelcdntran/b$4;->bKG:Lcom/tencent/mm/modelcdntran/f;
+    iput-object p2, p0, Lcom/tencent/mm/modelcdntran/b$4;->bEa:Lcom/tencent/mm/modelcdntran/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,35 +45,35 @@
 
     .prologue
     .line 201
-    iget-object v0, p0, Lcom/tencent/mm/modelcdntran/b$4;->bKE:Lcom/tencent/mm/modelcdntran/b;
+    iget-object v0, p0, Lcom/tencent/mm/modelcdntran/b$4;->bDY:Lcom/tencent/mm/modelcdntran/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelcdntran/b;->bKx:Ljava/util/Queue;
+    iget-object v0, v0, Lcom/tencent/mm/modelcdntran/b;->bDR:Ljava/util/Queue;
 
-    iget-object v1, p0, Lcom/tencent/mm/modelcdntran/b$4;->bKG:Lcom/tencent/mm/modelcdntran/f;
+    iget-object v1, p0, Lcom/tencent/mm/modelcdntran/b$4;->bEa:Lcom/tencent/mm/modelcdntran/f;
 
     iget-object v1, v1, Lcom/tencent/mm/modelcdntran/f;->field_mediaId:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
 
     .line 202
-    iget-object v0, p0, Lcom/tencent/mm/modelcdntran/b$4;->bKE:Lcom/tencent/mm/modelcdntran/b;
+    iget-object v0, p0, Lcom/tencent/mm/modelcdntran/b$4;->bDY:Lcom/tencent/mm/modelcdntran/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelcdntran/b;->bKy:Ljava/util/Map;
+    iget-object v0, v0, Lcom/tencent/mm/modelcdntran/b;->bDS:Ljava/util/Map;
 
-    iget-object v1, p0, Lcom/tencent/mm/modelcdntran/b$4;->bKG:Lcom/tencent/mm/modelcdntran/f;
+    iget-object v1, p0, Lcom/tencent/mm/modelcdntran/b$4;->bEa:Lcom/tencent/mm/modelcdntran/f;
 
     iget-object v1, v1, Lcom/tencent/mm/modelcdntran/f;->field_mediaId:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/tencent/mm/modelcdntran/b$4;->bKG:Lcom/tencent/mm/modelcdntran/f;
+    iget-object v2, p0, Lcom/tencent/mm/modelcdntran/b$4;->bEa:Lcom/tencent/mm/modelcdntran/f;
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 203
-    iget-object v0, p0, Lcom/tencent/mm/modelcdntran/b$4;->bKE:Lcom/tencent/mm/modelcdntran/b;
+    iget-object v0, p0, Lcom/tencent/mm/modelcdntran/b$4;->bDY:Lcom/tencent/mm/modelcdntran/b;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelcdntran/b;->aS(Z)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelcdntran/b;->ay(Z)V
 
     .line 204
     return-void

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/MMAppMgr;->aj(Landroid/content/Context;)Lcom/tencent/mm/ui/base/h;
+    value = Lcom/tencent/mm/ui/MMAppMgr;->af(Landroid/content/Context;)Lcom/tencent/mm/ui/base/h;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 1032
+    .line 1074
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,15 +36,15 @@
     .prologue
     const/16 v2, 0x1009
 
-    .line 1036
+    .line 1078
     if-eqz p2, :cond_0
 
-    .line 1037
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 1079
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -56,17 +56,17 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
-    .line 1041
+    .line 1083
     :goto_0
     return-void
 
-    .line 1039
+    .line 1081
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 

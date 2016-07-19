@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SnsCommentDetailUI$32
   implements View.OnClickListener
@@ -11,12 +11,12 @@ final class SnsCommentDetailUI$32
   
   public final void onClick(View paramView)
   {
-    u.e("!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc=", "scrollTopClickListener");
-    SnsCommentDetailUI.g(hda);
-    if (!SnsCommentDetailUI.a(hda)) {
+    v.e("MicroMsg.SnsCommentDetailUI", "scrollTopClickListener");
+    SnsCommentDetailUI.g(hrN);
+    if (!SnsCommentDetailUI.a(hrN)) {
       return;
     }
-    SnsCommentDetailUI.h(hda);
+    SnsCommentDetailUI.h(hrN);
   }
 }
 

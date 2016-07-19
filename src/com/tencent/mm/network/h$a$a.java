@@ -13,7 +13,7 @@ final class h$a$a
     mRemote = paramIBinder;
   }
   
-  public final int EM()
+  public final int Fh()
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -32,7 +32,7 @@ final class h$a$a
     }
   }
   
-  public final void EN()
+  public final void Fi()
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
@@ -50,7 +50,7 @@ final class h$a$a
     }
   }
   
-  public final long EO()
+  public final long Fj()
   {
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();

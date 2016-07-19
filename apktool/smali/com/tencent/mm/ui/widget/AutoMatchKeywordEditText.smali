@@ -12,11 +12,11 @@
 
 
 # instance fields
-.field private lCF:Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText$a;
+.field public mdv:Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText$a;
 
-.field private lCG:I
+.field private mdw:I
 
-.field private lCH:I
+.field private mdx:I
 
 
 # direct methods
@@ -57,14 +57,14 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->lCG:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->mdw:I
 
     .line 45
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->getSelectionEnd()I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->lCH:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->mdx:I
 
     .line 46
     return-void
@@ -77,11 +77,11 @@
 
     .prologue
     .line 94
-    const-string/jumbo v0, "!56@/B4Tb64lLpIZ+SpJPafVHqge1jGEX4lL9wwO8DMZ7IoS74Wb0lTPag=="
+    const-string/jumbo v0, "MicroMsg.AutoMatchKeywordEditText"
 
     const-string/jumbo v1, "extendSelection"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 95
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/widget/MMEditText;->extendSelection(I)V
@@ -91,27 +91,17 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->lCG:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->mdw:I
 
     .line 97
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->getSelectionEnd()I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->lCH:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->mdx:I
 
     .line 98
     return-void
-.end method
-
-.method public getOnSelectionChangeListener()Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText$a;
-    .locals 1
-
-    .prologue
-    .line 119
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->lCF:Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText$a;
-
-    return-object v0
 .end method
 
 .method public moveCursorToVisibleOffset()Z
@@ -119,11 +109,11 @@
 
     .prologue
     .line 102
-    const-string/jumbo v0, "!56@/B4Tb64lLpIZ+SpJPafVHqge1jGEX4lL9wwO8DMZ7IoS74Wb0lTPag=="
+    const-string/jumbo v0, "MicroMsg.AutoMatchKeywordEditText"
 
     const-string/jumbo v1, "moveCursorToVisibleOffset"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 103
     invoke-super {p0}, Lcom/tencent/mm/ui/widget/MMEditText;->moveCursorToVisibleOffset()Z
@@ -138,11 +128,11 @@
 
     .prologue
     .line 114
-    const-string/jumbo v0, "!56@/B4Tb64lLpIZ+SpJPafVHqge1jGEX4lL9wwO8DMZ7IoS74Wb0lTPag=="
+    const-string/jumbo v0, "MicroMsg.AutoMatchKeywordEditText"
 
     const-string/jumbo v1, "onDragEvent"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 115
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/widget/MMEditText;->onDragEvent(Landroid/view/DragEvent;)Z
@@ -170,28 +160,28 @@
     move-result v1
 
     .line 54
-    iget v2, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->lCG:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->mdw:I
 
     if-ne v2, v0, :cond_0
 
-    iget v2, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->lCH:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->mdx:I
 
     if-eq v2, v1, :cond_1
 
     .line 55
     :cond_0
-    iput v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->lCG:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->mdw:I
 
     .line 56
-    iput v1, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->lCH:I
+    iput v1, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->mdx:I
 
     .line 57
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->lCF:Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->mdv:Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText$a;
 
     if-eqz v0, :cond_1
 
     .line 58
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->lCF:Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->mdv:Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText$a;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->getSelectionStart()I
 
@@ -213,11 +203,11 @@
 
     .prologue
     .line 108
-    const-string/jumbo v0, "!56@/B4Tb64lLpIZ+SpJPafVHqge1jGEX4lL9wwO8DMZ7IoS74Wb0lTPag=="
+    const-string/jumbo v0, "MicroMsg.AutoMatchKeywordEditText"
 
     const-string/jumbo v1, "performAccessibilityAction"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 109
     invoke-super {p0, p1, p2}, Lcom/tencent/mm/ui/widget/MMEditText;->performAccessibilityAction(ILandroid/os/Bundle;)Z
@@ -227,27 +217,16 @@
     return v0
 .end method
 
-.method public setOnSelectionChangeListener(Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText$a;)V
-    .locals 0
-
-    .prologue
-    .line 123
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->lCF:Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText$a;
-
-    .line 124
-    return-void
-.end method
-
 .method public setSelection(I)V
     .locals 3
 
     .prologue
     .line 65
-    const-string/jumbo v0, "!56@/B4Tb64lLpIZ+SpJPafVHqge1jGEX4lL9wwO8DMZ7IoS74Wb0lTPag=="
+    const-string/jumbo v0, "MicroMsg.AutoMatchKeywordEditText"
 
     const-string/jumbo v1, "setSelection"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 66
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->getSelectionStart()I
@@ -267,14 +246,14 @@
 
     move-result v2
 
-    iput v2, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->lCG:I
+    iput v2, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->mdw:I
 
     .line 70
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->getSelectionEnd()I
 
     move-result v2
 
-    iput v2, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->lCH:I
+    iput v2, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->mdx:I
 
     .line 71
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->getSelectionStart()I
@@ -291,12 +270,12 @@
 
     .line 72
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->lCF:Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->mdv:Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText$a;
 
     if-eqz v0, :cond_1
 
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->lCF:Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->mdv:Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText$a;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->getSelectionStart()I
 
@@ -318,11 +297,11 @@
 
     .prologue
     .line 79
-    const-string/jumbo v0, "!56@/B4Tb64lLpIZ+SpJPafVHqge1jGEX4lL9wwO8DMZ7IoS74Wb0lTPag=="
+    const-string/jumbo v0, "MicroMsg.AutoMatchKeywordEditText"
 
     const-string/jumbo v1, "setSelection."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 80
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->getSelectionStart()I
@@ -342,14 +321,14 @@
 
     move-result v2
 
-    iput v2, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->lCG:I
+    iput v2, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->mdw:I
 
     .line 84
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->getSelectionEnd()I
 
     move-result v2
 
-    iput v2, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->lCH:I
+    iput v2, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->mdx:I
 
     .line 85
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->getSelectionStart()I
@@ -366,12 +345,12 @@
 
     .line 86
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->lCF:Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->mdv:Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText$a;
 
     if-eqz v0, :cond_1
 
     .line 87
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->lCF:Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->mdv:Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText$a;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText;->getSelectionStart()I
 

@@ -13,48 +13,48 @@ public class ContactListCustomPreference
   extends Preference
 {
   int background = -1;
-  View.OnClickListener fSm;
-  private final View.OnTouchListener iJe = new View.OnTouchListener()
+  View.OnClickListener gbp;
+  private View iIl;
+  private final View.OnTouchListener jga = new View.OnTouchListener()
   {
     public final boolean onTouch(View paramAnonymousView, MotionEvent paramAnonymousMotionEvent)
     {
       return true;
     }
   };
-  private View inG;
   
   public ContactListCustomPreference(Context paramContext)
   {
     super(paramContext);
-    setLayoutResource(2131363019);
+    setLayoutResource(2130903992);
   }
   
   public ContactListCustomPreference(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    setLayoutResource(2131363019);
+    setLayoutResource(2130903992);
   }
   
   public ContactListCustomPreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(2131363019);
+    setLayoutResource(2130903992);
   }
   
   public final void onBindView(View paramView)
   {
     ViewGroup localViewGroup = (ViewGroup)paramView;
-    if ((inG != null) && (inG != null))
+    if ((iIl != null) && (iIl != null))
     {
       localViewGroup.removeAllViews();
-      if (inG.getParent() != null) {
-        ((ViewGroup)inG.getParent()).removeAllViews();
+      if (iIl.getParent() != null) {
+        ((ViewGroup)iIl.getParent()).removeAllViews();
       }
-      localViewGroup.addView(inG);
-      if (fSm == null) {
+      localViewGroup.addView(iIl);
+      if (gbp == null) {
         break label85;
       }
-      localViewGroup.setOnClickListener(fSm);
+      localViewGroup.setOnClickListener(gbp);
     }
     for (;;)
     {
@@ -63,7 +63,7 @@ public class ContactListCustomPreference
       }
       return;
       label85:
-      localViewGroup.setOnTouchListener(iJe);
+      localViewGroup.setOnTouchListener(jga);
     }
   }
   
@@ -72,7 +72,7 @@ public class ContactListCustomPreference
     if (paramView == null) {
       return;
     }
-    inG = paramView;
+    iIl = paramView;
   }
 }
 

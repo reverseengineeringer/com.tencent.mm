@@ -2,10 +2,10 @@ package com.tencent.mm.pluginsdk.ui.chat;
 
 final class g
 {
-  public String ayz;
-  public long edh;
-  public long iMi;
-  public String iMj;
+  public String akB;
+  public long egI;
+  public long jjf;
+  public String jjg;
 }
 
 /* Location:

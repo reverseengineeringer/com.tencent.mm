@@ -15,28 +15,30 @@ import com.tencent.mm.R.b;
 
 public abstract class a
 {
-  final ActionBarActivity iG;
-  private ActionBar iH;
-  MenuInflater iI;
-  boolean iJ;
-  boolean iK;
+  final ActionBarActivity iX;
+  private ActionBar iY;
+  MenuInflater iZ;
+  boolean ja;
+  boolean jb;
   
   a(ActionBarActivity paramActionBarActivity)
   {
-    iG = paramActionBarActivity;
+    iX = paramActionBarActivity;
   }
   
-  abstract void G();
+  abstract boolean C(int paramInt);
+  
+  abstract void F();
   
   abstract ActionBar aO();
   
   public final ActionBar aP()
   {
-    if ((iJ) || (iK)) {
-      if (iH != null) {}
+    if ((ja) || (jb)) {
+      if (iY != null) {}
     }
-    for (iH = aO();; iH = null) {
-      return iH;
+    for (iY = aO();; iY = null) {
+      return iY;
     }
   }
   
@@ -49,7 +51,7 @@ public abstract class a
     String str = null;
     try
     {
-      ActivityInfo localActivityInfo = iG.getPackageManager().getActivityInfo(iG.getComponentName(), 128);
+      ActivityInfo localActivityInfo = iX.getPackageManager().getActivityInfo(iX.getComponentName(), 128);
       if (metaData != null) {
         str = metaData.getString("android.support.UI_OPTIONS");
       }
@@ -57,14 +59,14 @@ public abstract class a
     }
     catch (PackageManager.NameNotFoundException localNameNotFoundException)
     {
-      new StringBuilder("getUiOptionsFromMetadata: Activity '").append(iG.getClass().getSimpleName()).append("' not in manifest");
+      new StringBuilder("getUiOptionsFromMetadata: Activity '").append(iX.getClass().getSimpleName()).append("' not in manifest");
     }
     return null;
   }
   
   protected final Context aT()
   {
-    Object localObject = iG;
+    Object localObject = iX;
     ActionBar localActionBar = aP();
     if (localActionBar != null) {
       localObject = localActionBar.getThemedContext();
@@ -78,14 +80,14 @@ public abstract class a
   
   void onCreate(Bundle paramBundle)
   {
-    paramBundle = iG.obtainStyledAttributes(R.b.ActionBarWindow);
+    paramBundle = iX.obtainStyledAttributes(R.b.Wh);
     if (!paramBundle.hasValue(0))
     {
       paramBundle.recycle();
       throw new IllegalStateException("You need to use a Theme.AppCompat theme (or descendant) with this activity.");
     }
-    iJ = paramBundle.getBoolean(0, false);
-    iK = paramBundle.getBoolean(1, false);
+    ja = paramBundle.getBoolean(0, false);
+    jb = paramBundle.getBoolean(1, false);
     paramBundle.recycle();
   }
   
@@ -106,8 +108,6 @@ public abstract class a
   abstract void setContentView(View paramView);
   
   abstract void setContentView(View paramView, ViewGroup.LayoutParams paramLayoutParams);
-  
-  public abstract boolean y(int paramInt);
 }
 
 /* Location:

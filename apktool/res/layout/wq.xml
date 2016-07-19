@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/m_" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/bd3" android:layout_width="fill_parent" android:layout_height="@dimen/j7" style="@style/MallOrderDetailItem">
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/ij" android:id="@id/bd4" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/bgq" android:layout_weight="1.0" />
+            <TextView android:gravity="center|left" android:id="@id/bd6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="@string/bgs" android:drawableRight="@raw/mall_order_detail_good" android:drawablePadding="8.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

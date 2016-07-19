@@ -9,10 +9,10 @@ final class Fragment$1
   
   public final View findViewById(int paramInt)
   {
-    if (aZ.mView == null) {
+    if (bn.mView == null) {
       throw new IllegalStateException("Fragment does not have a view");
     }
-    return aZ.mView.findViewById(paramInt);
+    return bn.mView.findViewById(paramInt);
   }
 }
 

@@ -7,26 +7,39 @@
 .implements Ljava/lang/Runnable;
 
 
-# static fields
-.field private static final cdM:Ljava/lang/String;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/lang/Comparable",
+        "<",
+        "Lcom/tencent/mm/sdk/i/g;",
+        ">;",
+        "Ljava/lang/Runnable;"
+    }
+.end annotation
 
-.field private static jZj:I
+
+# static fields
+.field private static final bYN:Ljava/lang/String;
+
+.field private static kzG:I
 
 
 # instance fields
-.field final jWd:Ljava/lang/Runnable;
+.field final kvW:Ljava/lang/Runnable;
 
-.field final jWe:Ljava/lang/String;
+.field final kvX:Ljava/lang/String;
 
-.field jWi:J
+.field kwb:J
 
-.field jWk:J
+.field kwd:J
 
-.field jWl:J
+.field kwe:J
 
-.field final jZk:Z
+.field final kzH:Z
 
-.field jZl:Lcom/tencent/mm/sdk/i/e$b;
+.field kzI:Lcom/tencent/mm/sdk/i/e$b;
 
 .field final priority:I
 
@@ -41,7 +54,7 @@
     .line 18
     const/16 v0, 0x3e8
 
-    sput v0, Lcom/tencent/mm/sdk/i/g;->jZj:I
+    sput v0, Lcom/tencent/mm/sdk/i/g;->kzG:I
 
     .line 84
     new-instance v0, Ljava/lang/StringBuilder;
@@ -88,7 +101,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/sdk/i/g;->cdM:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/sdk/i/g;->bYN:Ljava/lang/String;
 
     .line 93
     return-void
@@ -117,26 +130,26 @@
     invoke-static {v0, p2}, Ljunit/framework/Assert;->assertNotNull(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 23
-    iput-object p1, p0, Lcom/tencent/mm/sdk/i/g;->jWd:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/tencent/mm/sdk/i/g;->kvW:Ljava/lang/Runnable;
 
     .line 24
-    iput-object p2, p0, Lcom/tencent/mm/sdk/i/g;->jWe:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/sdk/i/g;->kvX:Ljava/lang/String;
 
     .line 25
     iput p3, p0, Lcom/tencent/mm/sdk/i/g;->priority:I
 
     .line 26
-    iput-boolean p4, p0, Lcom/tencent/mm/sdk/i/g;->jZk:Z
+    iput-boolean p4, p0, Lcom/tencent/mm/sdk/i/g;->kzH:Z
 
     .line 27
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/sdk/i/g;->jWi:J
+    iput-wide v0, p0, Lcom/tencent/mm/sdk/i/g;->kwb:J
 
     .line 28
-    iput-object p5, p0, Lcom/tencent/mm/sdk/i/g;->jZl:Lcom/tencent/mm/sdk/i/e$b;
+    iput-object p5, p0, Lcom/tencent/mm/sdk/i/g;->kzI:Lcom/tencent/mm/sdk/i/e$b;
 
     .line 29
     return-void
@@ -155,7 +168,7 @@
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lcom/tencent/mm/sdk/i/g;->jWi:J
+    iget-wide v2, p0, Lcom/tencent/mm/sdk/i/g;->kwb:J
 
     sub-long/2addr v0, v2
 
@@ -163,7 +176,7 @@
 
     move-result-wide v0
 
-    sget v2, Lcom/tencent/mm/sdk/i/g;->jZj:I
+    sget v2, Lcom/tencent/mm/sdk/i/g;->kzG:I
 
     int-to-long v2, v2
 
@@ -194,14 +207,14 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/sdk/i/g;->jWk:J
+    iput-wide v0, p0, Lcom/tencent/mm/sdk/i/g;->kwd:J
 
     .line 56
     invoke-static {}, Landroid/os/Debug;->threadCpuTimeNanos()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/sdk/i/g;->jWl:J
+    iput-wide v0, p0, Lcom/tencent/mm/sdk/i/g;->kwe:J
 
     .line 58
     const/4 v0, 0x1
@@ -209,7 +222,7 @@
     iput-boolean v0, p0, Lcom/tencent/mm/sdk/i/g;->started:Z
 
     .line 59
-    iget-object v0, p0, Lcom/tencent/mm/sdk/i/g;->jWd:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/i/g;->kvW:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
@@ -218,33 +231,33 @@
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lcom/tencent/mm/sdk/i/g;->jWk:J
+    iget-wide v2, p0, Lcom/tencent/mm/sdk/i/g;->kwd:J
 
     sub-long/2addr v0, v2
 
-    iput-wide v0, p0, Lcom/tencent/mm/sdk/i/g;->jWk:J
+    iput-wide v0, p0, Lcom/tencent/mm/sdk/i/g;->kwd:J
 
     .line 62
     invoke-static {}, Landroid/os/Debug;->threadCpuTimeNanos()J
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lcom/tencent/mm/sdk/i/g;->jWl:J
+    iget-wide v2, p0, Lcom/tencent/mm/sdk/i/g;->kwe:J
 
     sub-long/2addr v0, v2
 
-    iput-wide v0, p0, Lcom/tencent/mm/sdk/i/g;->jWl:J
+    iput-wide v0, p0, Lcom/tencent/mm/sdk/i/g;->kwe:J
 
     .line 64
     return-void
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 6
 
     .prologue
     .line 97
-    sget-object v0, Lcom/tencent/mm/sdk/i/g;->cdM:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/sdk/i/g;->bYN:Ljava/lang/String;
 
     const/4 v1, 0x7
 
@@ -252,7 +265,7 @@
 
     const/4 v2, 0x0
 
-    iget-object v3, p0, Lcom/tencent/mm/sdk/i/g;->jWe:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/sdk/i/g;->kvX:Ljava/lang/String;
 
     aput-object v3, v1, v2
 
@@ -268,7 +281,7 @@
 
     const/4 v2, 0x2
 
-    iget-boolean v3, p0, Lcom/tencent/mm/sdk/i/g;->jZk:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/sdk/i/g;->kzH:Z
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -278,9 +291,9 @@
 
     const/4 v2, 0x3
 
-    iget-wide v3, p0, Lcom/tencent/mm/sdk/i/g;->jWi:J
+    iget-wide v4, p0, Lcom/tencent/mm/sdk/i/g;->kwb:J
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
@@ -288,9 +301,9 @@
 
     const/4 v2, 0x4
 
-    iget-wide v3, p0, Lcom/tencent/mm/sdk/i/g;->jWk:J
+    iget-wide v4, p0, Lcom/tencent/mm/sdk/i/g;->kwd:J
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
@@ -298,9 +311,9 @@
 
     const/4 v2, 0x5
 
-    iget-wide v3, p0, Lcom/tencent/mm/sdk/i/g;->jWl:J
+    iget-wide v4, p0, Lcom/tencent/mm/sdk/i/g;->kwe:J
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 

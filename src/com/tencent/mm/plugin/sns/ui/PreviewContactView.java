@@ -20,30 +20,28 @@ public class PreviewContactView
   extends LinearLayout
 {
   private final Context context;
-  private List eEr = new ArrayList();
-  private TableLayout gZU;
-  private final Map gZV = new HashMap();
+  private List<String> eKF = new ArrayList();
+  private TableLayout hnm;
+  private final Map<Integer, View> hnn = new HashMap();
   @SuppressLint({"UseSparseArrays"})
-  private final Map gZW = new HashMap();
-  private final int gZX = 5;
+  private final Map<Integer, TableRow> hno = new HashMap();
+  private final int hnp = 5;
   
   public PreviewContactView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
     context = paramContext;
-    gZU = ((TableLayout)LayoutInflater.from(context).inflate(2131362915, this, true).findViewById(2131165377));
+    hnm = ((TableLayout)LayoutInflater.from(context).inflate(2130904472, this, true).findViewById(2131755262));
   }
   
-  public void setImageClick(a parama) {}
-  
-  public void setList(List paramList)
+  public final void bf(List<String> paramList)
   {
     if (paramList == null) {}
     do
     {
       return;
-      eEr = paramList;
-      gZU.removeAllViews();
+      eKF = paramList;
+      hnm.removeAllViews();
     } while (paramList.size() == 0);
     int m = paramList.size();
     int j = 0;
@@ -52,12 +50,12 @@ public class PreviewContactView
     TableRow localTableRow;
     if (i < m)
     {
-      localTableRow = (TableRow)gZW.get(Integer.valueOf(j));
+      localTableRow = (TableRow)hno.get(Integer.valueOf(j));
       if (localTableRow != null) {
         break label259;
       }
       localTableRow = new TableRow(context);
-      gZW.put(Integer.valueOf(j), localTableRow);
+      hno.put(Integer.valueOf(j), localTableRow);
     }
     label259:
     for (;;)
@@ -66,31 +64,29 @@ public class PreviewContactView
       int k = 0;
       while ((k < 5) && (i < m))
       {
-        Object localObject2 = (View)gZV.get(Integer.valueOf(i));
+        Object localObject2 = (View)hnn.get(Integer.valueOf(i));
         Object localObject1 = localObject2;
         if (localObject2 == null)
         {
-          localObject1 = View.inflate(context, 2131362871, null);
-          gZV.put(Integer.valueOf(i), localObject1);
+          localObject1 = View.inflate(context, 2130904471, null);
+          hnn.put(Integer.valueOf(i), localObject1);
         }
         localObject2 = (String)paramList.get(i);
-        ImageView localImageView = (ImageView)((View)localObject1).findViewById(2131168613);
+        ImageView localImageView = (ImageView)((View)localObject1).findViewById(2131757361);
         localImageView.setBackgroundDrawable(null);
-        a.b.b(localImageView, (String)localObject2);
+        a.b.a(localImageView, (String)localObject2);
         ((View)localObject1).setTag(Integer.valueOf(0));
         ((View)localObject1).setClickable(false);
         localTableRow.addView((View)localObject1);
         k += 1;
         i += 1;
       }
-      gZU.addView(localTableRow);
+      hnm.addView(localTableRow);
       j += 1;
       break label38;
       break;
     }
   }
-  
-  static abstract class a {}
 }
 
 /* Location:

@@ -5,10 +5,10 @@ import android.os.Message;
 import com.tencent.mm.a.g;
 import com.tencent.mm.compatible.util.f.a;
 import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.aw;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.bc;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -18,37 +18,37 @@ import java.util.List;
 final class a$a
   implements Runnable
 {
-  public static boolean bLk = false;
-  private static byte[] bLt = new byte[0];
-  private static final aa bLz = new aa(Looper.getMainLooper())
+  public static boolean bEE = false;
+  private static byte[] bEN = new byte[0];
+  private static final ac bET = new ac(Looper.getMainLooper())
   {
     public final void handleMessage(Message paramAnonymousMessage)
     {
-      if (!com.tencent.mm.model.ah.rh()) {
+      if (!com.tencent.mm.model.ah.rg()) {
         return;
       }
       f.a locala = new f.a();
-      int i = a.bLp.size();
+      int i = a.bEJ.size();
       boolean bool = Boolean.parseBoolean(obj.toString());
-      paramAnonymousMessage = a.bLp.iterator();
+      paramAnonymousMessage = a.bEJ.iterator();
       while (paramAnonymousMessage.hasNext()) {
-        ((a.b)paramAnonymousMessage.next()).aU(bool);
+        ((a.b)paramAnonymousMessage.next()).aA(bool);
       }
-      a.bLp.clear();
-      u.i("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "callBackHandler setSize:%d time:%d", new Object[] { Integer.valueOf(i), Long.valueOf(locala.pa()) });
+      a.bEJ.clear();
+      v.i("MicroMsg.AddrBookSyncHelper", "callBackHandler setSize:%d time:%d", new Object[] { Integer.valueOf(i), Long.valueOf(locala.ns()) });
     }
   };
-  private List bLu;
-  private List bLv;
-  private List bLw;
-  private List bLx;
-  private aw bLy;
+  private List<String[]> bEO;
+  private List<String[]> bEP;
+  private List<b> bEQ;
+  private List<b> bER;
+  private bc bES;
   
-  private static List a(int paramInt, List paramList)
+  private static List<b> a(int paramInt, List<String[]> paramList)
   {
     if (paramList == null)
     {
-      u.e("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "sync address book failed, null info list");
+      v.e("MicroMsg.AddrBookSyncHelper", "sync address book failed, null info list");
       return new LinkedList();
     }
     ArrayList localArrayList = new ArrayList();
@@ -62,41 +62,41 @@ final class a$a
         String str2 = paramList[1];
         String str3 = paramList[2];
         String str4 = paramList[3];
-        long l = ay.Ds(paramList[4]);
+        long l = be.FH(paramList[4]);
         if ((str3 != null) && (!str3.equals("")))
         {
           paramList = "";
           if (paramInt == 1) {
-            paramList = g.m(str3.getBytes());
+            paramList = g.j(str3.getBytes());
           }
           if (paramInt == 0)
           {
-            paramList = com.tencent.mm.pluginsdk.a.sy(str3);
-            if (ay.kz(paramList)) {
-              u.d("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "formatted mobile null, continue");
+            paramList = com.tencent.mm.pluginsdk.a.tY(str3);
+            if (be.kf(paramList)) {
+              v.d("MicroMsg.AddrBookSyncHelper", "formatted mobile null, continue");
             } else {
-              paramList = g.m(paramList.getBytes());
+              paramList = g.j(paramList.getBytes());
             }
           }
           else
           {
             b localb = new b();
-            bLC = str2;
-            bLD = com.tencent.mm.platformtools.c.ks(str2);
-            bLE = com.tencent.mm.platformtools.c.kr(str2);
-            bLA = str1;
-            bEs = str4;
-            localb.hp(paramList);
-            bMe = l;
-            bLK = localb.pY();
+            bEW = str2;
+            bEX = com.tencent.mm.platformtools.c.lb(str2);
+            bEY = com.tencent.mm.platformtools.c.la(str2);
+            bEU = str1;
+            bxD = str4;
+            localb.hH(paramList);
+            bFy = l;
+            bFe = localb.ov();
             if (paramInt == 1) {
-              aSx = str3;
+              aFg = str3;
             }
             if (paramInt == 0) {
-              bLH = str3;
+              bFb = str3;
             }
             type = paramInt;
-            aou = 1095798;
+            aqQ = 1095798;
             localArrayList.add(localb);
           }
         }
@@ -105,7 +105,7 @@ final class a$a
     return localArrayList;
   }
   
-  private static List a(List paramList, int paramInt1, int paramInt2)
+  private static List<b> a(List<b> paramList, int paramInt1, int paramInt2)
   {
     LinkedList localLinkedList = new LinkedList();
     while (paramInt1 < paramInt2)
@@ -116,115 +116,115 @@ final class a$a
     return localLinkedList;
   }
   
-  private static void yf()
+  private static void yr()
   {
-    aw localaw = new aw("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "delete");
+    bc localbc = new bc("MicroMsg.AddrBookSyncHelper", "delete");
     ArrayList localArrayList = new ArrayList();
-    List localList = com.tencent.mm.pluginsdk.a.cG(y.getContext());
-    Iterator localIterator = ah.zq().yu().iterator();
+    List localList = com.tencent.mm.pluginsdk.a.cC(aa.getContext());
+    Iterator localIterator = ah.zD().yG().iterator();
     while (localIterator.hasNext())
     {
       Object localObject = (String[])localIterator.next();
-      String str = ay.ky(localObject[0]);
-      localObject = ay.ky(localObject[1]);
+      String str = be.li(localObject[0]);
+      localObject = be.li(localObject[1]);
       if ((!str.equals("")) && (!localList.contains(str))) {
         localArrayList.add(localObject);
       }
     }
     if (localArrayList.size() > 0)
     {
-      ah.zq().r(localArrayList);
-      m.t(localArrayList);
+      ah.zD().w(localArrayList);
+      m.y(localArrayList);
     }
-    localaw.addSplit("end");
-    localaw.dumpToLog();
+    localbc.addSplit("end");
+    localbc.dumpToLog();
   }
   
   public final void run()
   {
     for (;;)
     {
-      synchronized (bLt)
+      synchronized (bEN)
       {
-        bLy = new aw("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "sync addrBook");
-        bLy.addSplit("sync begin");
-        u.d("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "reading email info");
-        bLu = com.tencent.mm.pluginsdk.a.cF(y.getContext());
-        if (bLu != null) {
-          u.i("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "sync address book email size: " + bLu.size());
+        bES = new bc("MicroMsg.AddrBookSyncHelper", "sync addrBook");
+        bES.addSplit("sync begin");
+        v.d("MicroMsg.AddrBookSyncHelper", "reading email info");
+        bEO = com.tencent.mm.pluginsdk.a.cB(aa.getContext());
+        if (bEO != null) {
+          v.i("MicroMsg.AddrBookSyncHelper", "sync address book email size: " + bEO.size());
         }
-        bLx = a(1, bLu);
-        u.d("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "reading mobile info");
-        bLv = com.tencent.mm.pluginsdk.a.cD(y.getContext());
-        if (bLv != null) {
-          u.i("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "sync address book mobile size: " + bLv.size());
+        bER = a(1, bEO);
+        v.d("MicroMsg.AddrBookSyncHelper", "reading mobile info");
+        bEP = com.tencent.mm.pluginsdk.a.cz(aa.getContext());
+        if (bEP != null) {
+          v.i("MicroMsg.AddrBookSyncHelper", "sync address book mobile size: " + bEP.size());
         }
-        bLw = a(0, bLv);
-        u.d("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "reading done, begin sync to addr_upload");
-        if ((bLu != null) && (bLx.size() > 0))
+        bEQ = a(0, bEP);
+        v.d("MicroMsg.AddrBookSyncHelper", "reading done, begin sync to addr_upload");
+        if ((bEO != null) && (bER.size() > 0))
         {
           i = 0;
-          if (i < bLx.size())
+          if (i < bER.size())
           {
-            u.i("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "sync email index: " + i);
-            if (i + 100 < bLx.size())
+            v.i("MicroMsg.AddrBookSyncHelper", "sync email index: " + i);
+            if (i + 100 < bER.size())
             {
-              localObject1 = a(bLx, i, i + 100);
-              u.i("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "sync email listToSync size: " + ((List)localObject1).size());
-              m.u((List)localObject1);
+              localObject1 = a(bER, i, i + 100);
+              v.i("MicroMsg.AddrBookSyncHelper", "sync email listToSync size: " + ((List)localObject1).size());
+              m.z((List)localObject1);
               i += 100;
               continue;
             }
-            localObject1 = a(bLx, i, bLx.size());
+            localObject1 = a(bER, i, bER.size());
             continue;
           }
         }
-        if ((bLw != null) && (bLw.size() != 0)) {
+        if ((bEQ != null) && (bEQ.size() != 0)) {
           break label636;
         }
-        u.i("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "mobile list null stop service");
-        Object localObject1 = bLz.obtainMessage();
+        v.i("MicroMsg.AddrBookSyncHelper", "mobile list null stop service");
+        Object localObject1 = bET.obtainMessage();
         obj = Boolean.valueOf(false);
-        bLz.sendMessage((Message)localObject1);
+        bET.sendMessage((Message)localObject1);
         return;
-        if (i >= bLw.size()) {
+        if (i >= bEQ.size()) {
           break label538;
         }
-        u.i("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "sync mobile index: " + i);
-        if (!com.tencent.mm.model.ah.rh())
+        v.i("MicroMsg.AddrBookSyncHelper", "sync mobile index: " + i);
+        if (!com.tencent.mm.model.ah.rg())
         {
-          u.i("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "account not ready, stop sync");
-          localObject1 = bLz.obtainMessage();
+          v.i("MicroMsg.AddrBookSyncHelper", "account not ready, stop sync");
+          localObject1 = bET.obtainMessage();
           obj = Boolean.valueOf(false);
-          bLz.sendMessage((Message)localObject1);
+          bET.sendMessage((Message)localObject1);
           return;
         }
       }
-      if (i + 100 < bLw.size()) {}
-      for (Object localObject3 = a(bLw, i, i + 100);; localObject3 = a(bLw, i, bLw.size()))
+      if (i + 100 < bEQ.size()) {}
+      for (Object localObject3 = a(bEQ, i, i + 100);; localObject3 = a(bEQ, i, bEQ.size()))
       {
-        u.i("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "sync mobile listToSync size: " + ((List)localObject3).size());
-        m.u((List)localObject3);
+        v.i("MicroMsg.AddrBookSyncHelper", "sync mobile listToSync size: " + ((List)localObject3).size());
+        m.z((List)localObject3);
         i += 100;
         break;
       }
       label538:
-      u.i("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "sync ok");
-      if (!com.tencent.mm.model.ah.rh())
+      v.i("MicroMsg.AddrBookSyncHelper", "sync ok");
+      if (!com.tencent.mm.model.ah.rg())
       {
-        u.i("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "account not ready, exit");
-        localObject3 = bLz.obtainMessage();
+        v.i("MicroMsg.AddrBookSyncHelper", "account not ready, exit");
+        localObject3 = bET.obtainMessage();
         obj = Boolean.valueOf(false);
-        bLz.sendMessage((Message)localObject3);
+        bET.sendMessage((Message)localObject3);
         return;
       }
-      yf();
+      yr();
       System.currentTimeMillis();
-      bLy.addSplit("sync ok");
-      bLy.dumpToLog();
-      localObject3 = bLz.obtainMessage();
+      bES.addSplit("sync ok");
+      bES.dumpToLog();
+      localObject3 = bET.obtainMessage();
       obj = Boolean.valueOf(true);
-      bLz.sendMessage((Message)localObject3);
+      bET.sendMessage((Message)localObject3);
       return;
       label636:
       int i = 0;

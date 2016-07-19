@@ -5,7 +5,7 @@ public final class w
 {
   public w()
   {
-    mbE = 288;
+    mNI = 288;
   }
 }
 

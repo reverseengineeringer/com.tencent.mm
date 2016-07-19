@@ -1,6 +1,5 @@
 .class Lcom/tencent/smtt/sdk/SystemWebChromeClient$1;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 # interfaces
 .implements Lcom/tencent/smtt/sdk/u;
@@ -16,6 +15,16 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/tencent/smtt/sdk/u",
+        "<[",
+        "Ljava/lang/String;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
 .field final synthetic this$0:Lcom/tencent/smtt/sdk/SystemWebChromeClient;
@@ -27,8 +36,6 @@
 .method constructor <init>(Lcom/tencent/smtt/sdk/SystemWebChromeClient;Landroid/webkit/ValueCallback;)V
     .locals 0
 
-    .prologue
-    .line 65
     iput-object p1, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$1;->this$0:Lcom/tencent/smtt/sdk/SystemWebChromeClient;
 
     iput-object p2, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$1;->val$callback:Landroid/webkit/ValueCallback;
@@ -43,8 +50,6 @@
 .method public bridge synthetic onReceiveValue(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 65
     check-cast p1, [Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/tencent/smtt/sdk/SystemWebChromeClient$1;->onReceiveValue([Ljava/lang/String;)V
@@ -55,12 +60,9 @@
 .method public onReceiveValue([Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 69
     iget-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$1;->val$callback:Landroid/webkit/ValueCallback;
 
     invoke-interface {v0, p1}, Landroid/webkit/ValueCallback;->onReceiveValue(Ljava/lang/Object;)V
 
-    .line 70
     return-void
 .end method

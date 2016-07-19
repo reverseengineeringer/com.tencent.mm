@@ -10,7 +10,7 @@ import java.util.Set;
 
 final class MultiProcessSharedPreferences$c
 {
-  public static SharedPreferences.Editor a(SharedPreferences.Editor paramEditor, String paramString, Set paramSet)
+  public static SharedPreferences.Editor a(SharedPreferences.Editor paramEditor, String paramString, Set<String> paramSet)
   {
     try
     {
@@ -35,7 +35,7 @@ final class MultiProcessSharedPreferences$c
     }
   }
   
-  public static ContentValues f(HashMap paramHashMap)
+  public static ContentValues d(HashMap<String, Object> paramHashMap)
   {
     try
     {

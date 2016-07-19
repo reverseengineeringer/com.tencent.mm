@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/animation/Animation$AnimationListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/plugin/sns/ui/av;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/plugin/sns/ui/av;->onActivityResult(IILandroid/content/Intent;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,16 @@
 
 
 # instance fields
-.field final synthetic gRA:Landroid/view/View;
-
-.field final synthetic hmD:Lcom/tencent/mm/plugin/sns/ui/av;
+.field final synthetic hBw:Lcom/tencent/mm/plugin/sns/ui/av;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/av;Landroid/view/View;)V
+.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/av;)V
     .locals 0
 
     .prologue
-    .line 159
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/av$2;->hmD:Lcom/tencent/mm/plugin/sns/ui/av;
-
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/av$2;->gRA:Landroid/view/View;
+    .line 524
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/av$2;->hBw:Lcom/tencent/mm/plugin/sns/ui/av;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,44 +36,15 @@
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
-    .locals 2
+.method public final run()V
+    .locals 1
 
     .prologue
-    .line 170
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av$2;->gRA:Landroid/view/View;
+    .line 527
+    sget-object v0, Lcom/tencent/mm/plugin/sns/b/a;->cjp:Lcom/tencent/mm/pluginsdk/f;
 
-    if-eqz v0, :cond_0
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/f;->ji()V
 
-    .line 171
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av$2;->gRA:Landroid/view/View;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 172
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/av$2;->hmD:Lcom/tencent/mm/plugin/sns/ui/av;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/av;->aAV()Z
-
-    .line 174
-    :cond_0
-    return-void
-.end method
-
-.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    .prologue
-    .line 166
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    .prologue
-    .line 162
+    .line 528
     return-void
 .end method

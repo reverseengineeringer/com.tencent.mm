@@ -3,79 +3,80 @@ package com.tencent.mm.modelfriend;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.network.e;
 import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b.vu;
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.h.d;
-import com.tencent.mm.protocal.q.a;
-import com.tencent.mm.protocal.q.b;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.h;
-import com.tencent.mm.r.j.a;
-import com.tencent.mm.r.j.b;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.protocal.ac;
+import com.tencent.mm.protocal.b.wf;
+import com.tencent.mm.protocal.k.c;
+import com.tencent.mm.protocal.k.d;
+import com.tencent.mm.protocal.t.a;
+import com.tencent.mm.protocal.t.b;
+import com.tencent.mm.sdk.platformtools.ad;
 import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.h;
+import com.tencent.mm.t.j.a;
+import com.tencent.mm.t.j.b;
 
 public final class z
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  d anM = null;
-  public final o bGh = new a();
+  d bkT = null;
+  public final o bzs = new a();
   
   public z(String paramString1, String paramString2, int paramInt, String paramString3, String paramString4, String paramString5, String paramString6)
   {
-    q.a locala = (q.a)bGh.vA();
-    iVe.jtj = paramString1;
-    iVe.jtk = paramString2;
-    iVe.iVW = paramString3;
-    iVe.jtl = paramString4;
-    iVe.jtm = paramString5;
-    iVe.jtn = paramString6;
-    iVe.jto = paramInt;
-    iVe.dzi = t.aUB();
-    iVe.iZs = ah.tx();
+    t.a locala = (t.a)bzs.vC();
+    jsB.jRE = paramString1;
+    jsB.jRF = paramString2;
+    jsB.jtx = paramString3;
+    jsB.jRG = paramString4;
+    jsB.jRH = paramString5;
+    jsB.jRI = paramString6;
+    jsB.jRJ = paramInt;
+    jsB.dAD = u.aZF();
+    jsB.jwX = ah.ty();
   }
   
   public final int a(e parame, d paramd)
   {
-    anM = paramd;
-    return a(parame, bGh, this);
+    bkT = paramd;
+    return a(parame, bzs, this);
   }
   
   protected final int a(o paramo)
   {
-    return j.b.bFI;
+    return j.b.byT;
   }
   
   public final void a(final int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
     if ((paramInt2 == 4) && (paramInt3 == -102))
     {
-      paramInt1 = vAiUJ.iAC;
-      u.d("!56@/B4Tb64lLpK+IBX8XDgnvj7m8+vib/MwDleFXSgR5SwLtO8UZmjbiQ==", "summerauth auth MM_ERR_CERT_EXPIRED  getcert now  old ver:%d", new Object[] { Integer.valueOf(paramInt1) });
-      ah.tv().r(new Runnable()
+      paramInt1 = vCjsg.iXc;
+      v.d("MicroMsg.NetSceneGetSuggestAlias", "summerauth auth MM_ERR_CERT_EXPIRED  getcert now  old ver:%d", new Object[] { Integer.valueOf(paramInt1) });
+      ah.tw().t(new Runnable()
       {
         public final void run()
         {
-          new com.tencent.mm.modelsimple.n().a(bFs, new d()
+          new com.tencent.mm.modelsimple.m().a(byD, new d()
           {
-            public final void a(int paramAnonymous2Int1, int paramAnonymous2Int2, String paramAnonymous2String, com.tencent.mm.r.j paramAnonymous2j)
+            public final void onSceneEnd(int paramAnonymous2Int1, int paramAnonymous2Int2, String paramAnonymous2String, com.tencent.mm.t.j paramAnonymous2j)
             {
-              u.d("!56@/B4Tb64lLpK+IBX8XDgnvj7m8+vib/MwDleFXSgR5SwLtO8UZmjbiQ==", "summerauth dkcert getcert type:%d ret [%d,%d]", new Object[] { Integer.valueOf(paramAnonymous2j.getType()), Integer.valueOf(paramAnonymous2Int1), Integer.valueOf(paramAnonymous2Int2) });
+              v.d("MicroMsg.NetSceneGetSuggestAlias", "summerauth dkcert getcert type:%d ret [%d,%d]", new Object[] { Integer.valueOf(paramAnonymous2j.getType()), Integer.valueOf(paramAnonymous2Int1), Integer.valueOf(paramAnonymous2Int2) });
               if ((paramAnonymous2Int1 != 0) || (paramAnonymous2Int2 != 0))
               {
-                anM.a(paramAnonymous2Int1, paramAnonymous2Int2, "", z.this);
+                bkT.onSceneEnd(paramAnonymous2Int1, paramAnonymous2Int2, "", z.this);
                 return;
               }
-              a(bFs, anM);
+              a(byD, bkT);
             }
           });
         }
       });
       return;
     }
-    anM.a(paramInt2, paramInt3, paramString, this);
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
   }
   
   protected final void a(j.a parama) {}
@@ -85,26 +86,26 @@ public final class z
     return 429;
   }
   
-  protected final int lk()
+  protected final int px()
   {
     return 3;
   }
   
-  public final byte[] za()
+  public final byte[] zn()
   {
-    return com.tencent.mm.platformtools.n.a(bGh.tX()).iVf.jtp, new byte[0]);
+    return com.tencent.mm.platformtools.m.a(bzs.tY()).jsC.jRK, new byte[0]);
   }
   
-  public final String zb()
+  public final String zo()
   {
-    return bGh.tX()).iVf.jtm;
+    return bzs.tY()).jsC.jRH;
   }
   
   public static final class a
     extends h
   {
-    private final q.a bMT = new q.a();
-    private final q.b bMU = new q.b();
+    private final t.a bGn = new t.a();
+    private final t.b bGo = new t.b();
     
     public final int getType()
     {
@@ -116,17 +117,17 @@ public final class z
       return "/cgi-bin/micromsg-bin/getsuggestalias";
     }
     
-    protected final h.c tW()
+    protected final k.c tX()
     {
-      return bMT;
+      return bGn;
     }
     
-    public final h.d tX()
+    public final k.d tY()
     {
-      return bMU;
+      return bGo;
     }
     
-    public final int vx()
+    public final int vz()
     {
       return 1;
     }

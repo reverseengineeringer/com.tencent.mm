@@ -2,20 +2,20 @@ package com.tencent.mm.network;
 
 import android.os.RemoteCallbackList;
 import android.os.RemoteException;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ah;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class ab
   extends h.a
 {
-  private af anS = new af(new af.a()
+  private ah bwY = new ah(new ah.a()
   {
-    public final boolean lj()
+    public final boolean jK()
     {
       int i = ab.b(ab.this).beginBroadcast();
-      u.i("!32@/B4Tb64lLpJlhWc9y/UzPIrDGDo3IGi4", "listeners ct : %d", new Object[] { Integer.valueOf(i) });
+      v.i("MicroMsg.NetworkEvent", "listeners ct : %d", new Object[] { Integer.valueOf(i) });
       i -= 1;
       for (;;)
       {
@@ -24,14 +24,14 @@ public final class ab
           m localm = (m)ab.b(ab.this).getBroadcastItem(i);
           try
           {
-            localm.aK(ab.c(ab.this));
+            localm.bc(ab.c(ab.this));
             i -= 1;
           }
           catch (RemoteException localRemoteException)
           {
             for (;;)
             {
-              u.e("!32@/B4Tb64lLpJlhWc9y/UzPIrDGDo3IGi4", "exception:%s", new Object[] { ay.b(localRemoteException) });
+              v.e("MicroMsg.NetworkEvent", "exception:%s", new Object[] { be.f(localRemoteException) });
             }
           }
         }
@@ -40,42 +40,42 @@ public final class ab
       return false;
     }
   }, false);
-  private int cjY = 5;
-  long cjZ;
-  private int cka = 0;
-  private final RemoteCallbackList ckb = new RemoteCallbackList();
+  private int cfq = 5;
+  long cfr;
+  private int cfs = 0;
+  private final RemoteCallbackList<m> cft = new RemoteCallbackList();
   
-  public final int EM()
+  public final int Fh()
   {
-    if (0L > ay.am(cjZ)) {}
-    for (int i = 6;; i = cjY)
+    if (0L > be.at(cfr)) {}
+    for (int i = 6;; i = cfq)
     {
-      u.i("!32@/B4Tb64lLpJlhWc9y/UzPIrDGDo3IGi4", "getNowStatus = %d", new Object[] { Integer.valueOf(i) });
+      v.i("MicroMsg.NetworkEvent", "getNowStatus = %d", new Object[] { Integer.valueOf(i) });
       return i;
     }
   }
   
-  public final void EN()
+  public final void Fi()
   {
-    ckb.kill();
+    cft.kill();
   }
   
-  public final long EO()
+  public final long Fj()
   {
-    return cjZ;
+    return cfr;
   }
   
   public final boolean c(m paramm)
   {
     try
     {
-      ckb.register(paramm);
+      cft.register(paramm);
       return true;
     }
     catch (Exception paramm)
     {
-      u.e("!32@/B4Tb64lLpJlhWc9y/UzPIrDGDo3IGi4", "addListener %s", new Object[] { paramm });
-      u.e("!32@/B4Tb64lLpJlhWc9y/UzPIrDGDo3IGi4", "exception:%s", new Object[] { ay.b(paramm) });
+      v.e("MicroMsg.NetworkEvent", "addListener %s", new Object[] { paramm });
+      v.e("MicroMsg.NetworkEvent", "exception:%s", new Object[] { be.f(paramm) });
     }
     return true;
   }
@@ -84,23 +84,23 @@ public final class ab
   {
     try
     {
-      boolean bool = ckb.unregister(paramm);
+      boolean bool = cft.unregister(paramm);
       return bool;
     }
     catch (Exception paramm)
     {
-      u.e("!32@/B4Tb64lLpJlhWc9y/UzPIrDGDo3IGi4", "removeListener %s", new Object[] { paramm });
-      u.e("!32@/B4Tb64lLpJlhWc9y/UzPIrDGDo3IGi4", "exception:%s", new Object[] { ay.b(paramm) });
+      v.e("MicroMsg.NetworkEvent", "removeListener %s", new Object[] { paramm });
+      v.e("MicroMsg.NetworkEvent", "exception:%s", new Object[] { be.f(paramm) });
     }
     return false;
   }
   
-  public final void ei(int paramInt)
+  public final void eR(int paramInt)
   {
     int j = 0;
-    u.i("!32@/B4Tb64lLpJlhWc9y/UzPIrDGDo3IGi4", "networkChange : %d", new Object[] { Integer.valueOf(paramInt) });
+    v.i("MicroMsg.NetworkEvent", "networkChange : %d", new Object[] { Integer.valueOf(paramInt) });
     int i;
-    if (paramInt == cjY)
+    if (paramInt == cfq)
     {
       i = j;
       if (i != 0) {
@@ -115,43 +115,43 @@ public final class ab
       if (4 == paramInt)
       {
         i = j;
-        if (cjY != 3) {
+        if (cfq != 3) {
           break;
         }
-        cjY = paramInt;
+        cfq = paramInt;
         i = 1;
         break;
       }
       if (3 == paramInt)
       {
         i = j;
-        if (cjY == 0) {
+        if (cfq == 0) {
           break;
         }
         i = j;
-        if (cjY == 2) {
+        if (cfq == 2) {
           break;
         }
-        cka += 1;
-        if (cka <= 0) {
+        cfs += 1;
+        if (cfs <= 0) {
           break label131;
         }
-        cjY = 3;
+        cfq = 3;
         i = 1;
         break;
       }
       if (5 == paramInt)
       {
-        cka = 0;
-        cjY = 5;
+        cfs = 0;
+        cfq = 5;
         i = 1;
         break;
       }
-      cjY = paramInt;
+      cfq = paramInt;
       i = 1;
       break;
     }
-    anS.ds(1000L);
+    bwY.dJ(1000L);
   }
 }
 

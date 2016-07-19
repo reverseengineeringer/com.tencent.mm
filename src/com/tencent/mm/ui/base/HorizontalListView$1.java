@@ -9,20 +9,20 @@ final class HorizontalListView$1
   
   public final void onChanged()
   {
-    synchronized (kCs)
+    synchronized (lby)
     {
-      HorizontalListView.a(kCs);
-      kCs.invalidate();
-      kCs.requestLayout();
+      HorizontalListView.a(lby);
+      lby.invalidate();
+      lby.requestLayout();
       return;
     }
   }
   
   public final void onInvalidated()
   {
-    HorizontalListView.b(kCs);
-    kCs.invalidate();
-    kCs.requestLayout();
+    HorizontalListView.b(lby);
+    lby.invalidate();
+    lby.requestLayout();
   }
 }
 

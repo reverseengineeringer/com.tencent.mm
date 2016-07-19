@@ -1,133 +1,69 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.at;
-import com.tencent.mm.plugin.sns.g.c;
-import com.tencent.mm.plugin.sns.g.e;
-import com.tencent.mm.protocal.b.aby;
-import com.tencent.mm.protocal.b.arp;
-import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
-import com.tencent.mm.sdk.modelmsg.c.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.MMActivity;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import com.tencent.mm.kiss.d.p;
+import com.tencent.mm.plugin.sns.data.d;
+import com.tencent.mm.plugin.sns.i.k;
+import com.tencent.mm.protocal.b.adx;
+import com.tencent.mm.protocal.b.aqt;
+import com.tencent.mm.protocal.b.auf;
 
 public final class as
-  implements t
+  implements com.tencent.mm.kiss.vending.b
 {
-  private String appName = "";
-  private MMActivity arW;
-  private String dkU = "";
-  private com.tencent.mm.modelsns.a gXH = null;
-  private boolean gYW = false;
-  private boolean gYX = false;
-  private WXMediaMessage gYY = null;
-  private String gZA = "";
-  
-  public as(MMActivity paramMMActivity)
-  {
-    arW = paramMMActivity;
-  }
-  
-  public final boolean a(int paramInt1, int paramInt2, b.a.d.i parami, String paramString, List paramList1, aby paramaby, int paramInt3, boolean paramBoolean, List paramList2)
-  {
-    ad.azf();
-    paramString = com.tencent.mm.plugin.sns.d.as.a(gYY, paramString, dkU, appName);
-    if (paramString == null)
-    {
-      u.e("!32@/B4Tb64lLpKbuhbLtNsjikaQ1kWOZLpz", "packHelper == null, %s, %s", new Object[] { dkU, appName });
-      return false;
-    }
-    if (paramInt3 > com.tencent.mm.plugin.sns.b.a.gHo) {
-      paramString.lE(4);
-    }
-    if (gYW) {
-      paramString.lI(5);
-    }
-    LinkedList localLinkedList = new LinkedList();
-    if (paramList1 != null)
-    {
-      new LinkedList();
-      List localList = com.tencent.mm.model.i.sT();
-      paramList1 = paramList1.iterator();
-      while (paramList1.hasNext())
-      {
-        String str = (String)paramList1.next();
-        if (!localList.contains(str))
-        {
-          arp localarp = new arp();
-          eiB = str;
-          localLinkedList.add(localarp);
-        }
-      }
-    }
-    paramString.L(localLinkedList);
-    if (parami != null) {
-      paramString.bs(token, jzR);
-    }
-    paramString.a(paramaby);
-    if (paramBoolean) {
-      paramString.lJ(1);
-    }
-    for (;;)
-    {
-      paramString.aT(paramList2);
-      if ((gYX) && (gYY != null))
-      {
-        paramString.uU(gYY.mediaTagName);
-        paramString.C(dkU, gYY.messageExt, gYY.messageAction);
-      }
-      paramInt1 = paramString.commit();
-      if (gXH != null)
-      {
-        gXH.dS(paramInt1);
-        c.gTZ.c(gXH);
-      }
-      ad.azf().azE();
-      arW.finish();
-      return false;
-      paramString.lJ(0);
-    }
-  }
-  
-  public final boolean a(int paramInt, Intent paramIntent)
-  {
-    return false;
-  }
-  
-  public final boolean aAW()
-  {
-    return true;
-  }
-  
-  public final View aAX()
-  {
-    return null;
-  }
-  
-  public final boolean aAY()
-  {
-    return false;
-  }
-  
-  public final void n(Bundle paramBundle)
-  {
-    gXH = com.tencent.mm.modelsns.a.k(arW.getIntent());
-    gZA = arW.getIntent().getStringExtra("Kdescription");
-    dkU = ay.ad(arW.getIntent().getStringExtra("Ksnsupload_appid"), "");
-    appName = ay.ad(arW.getIntent().getStringExtra("Ksnsupload_appname"), "");
-    gYW = arW.getIntent().getBooleanExtra("KThrid_app", false);
-    gYX = arW.getIntent().getBooleanExtra("KSnsAction", false);
-    gYY = c.aarW.getIntent().getBundleExtra("Ksnsupload_timeline")).jUS;
-  }
-  
-  public final void o(Bundle paramBundle) {}
+  public int cVo;
+  public String dGQ;
+  public aqt gLr;
+  public k gLs;
+  public auf gLw;
+  public String hAA;
+  public boolean hAB;
+  public boolean hAC;
+  public boolean hAD;
+  public int hAE;
+  public boolean hAF;
+  public String hAG;
+  public boolean hAH;
+  public boolean hAI;
+  public boolean hAJ;
+  public boolean hAK;
+  public String hAL;
+  public String hAM;
+  public boolean hAN;
+  public int hAO;
+  public boolean hAP;
+  public boolean hAQ;
+  public String hAR;
+  public boolean hAS;
+  public boolean hAT;
+  public int hAU;
+  public double hAV;
+  public com.tencent.mm.kiss.b.a<p> hAW;
+  public com.tencent.mm.kiss.b.a<p> hAX;
+  public com.tencent.mm.kiss.b.a<p> hAY;
+  public boolean hAZ;
+  public d hAi;
+  public CharSequence hAj = null;
+  public com.tencent.mm.i.a hAk;
+  public String hAl;
+  public long hAm;
+  public String hAn;
+  public int hAo;
+  public int hAp;
+  public int hAq;
+  public boolean hAr;
+  public String hAs;
+  public String hAt;
+  public com.tencent.mm.plugin.sns.i.a hAu;
+  public com.tencent.mm.plugin.sns.i.b hAv;
+  public String hAw;
+  public String hAx;
+  public String hAy;
+  public String hAz;
+  public String hBa;
+  public adx hBb;
+  public boolean hjO;
+  public String hlg;
+  public String mUsername;
 }
 
 /* Location:

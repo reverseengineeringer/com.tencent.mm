@@ -11,13 +11,13 @@ final class ImageGalleryUI$6
   
   public final void onAnimationEnd(Animation paramAnimation)
   {
-    if (ImageGalleryUI.s(ImageGalleryUI.r(lgM)).getVisibility() != 0) {
+    if (ImageGalleryUI.u(ImageGalleryUI.t(lGY)).getVisibility() != 0) {
       return;
     }
-    ImageGalleryUI.aM(ImageGalleryUI.t(lgM));
-    ImageGalleryUI.u(ImageGalleryUI.r(lgM)).setVisibility(8);
-    ImageGalleryUI.p(lgM);
-    ImageGalleryUI.q(lgM);
+    ImageGalleryUI.aQ(ImageGalleryUI.v(lGY));
+    ImageGalleryUI.w(ImageGalleryUI.t(lGY)).setVisibility(8);
+    ImageGalleryUI.r(lGY);
+    ImageGalleryUI.s(lGY);
   }
   
   public final void onAnimationRepeat(Animation paramAnimation) {}

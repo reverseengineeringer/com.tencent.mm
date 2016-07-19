@@ -9,8 +9,8 @@ import com.tencent.mm.compatible.b.d;
 import com.tencent.mm.compatible.d.j;
 import com.tencent.mm.compatible.d.p;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.Set;
 
 @JgClassChecked(author=20, fComment="checked", lastDate="20140429", reviewer=20, vComment={com.jg.EType.RECEIVERCHECK})
@@ -19,7 +19,7 @@ public class BluetoothReceiver
 {
   public void onReceive(Context paramContext, Intent paramIntent)
   {
-    if ((paramContext == null) || (paramIntent == null) || (ay.kz(paramIntent.getAction()))) {}
+    if ((paramContext == null) || (paramIntent == null) || (be.kf(paramIntent.getAction()))) {}
     int i;
     do
     {
@@ -31,29 +31,29 @@ public class BluetoothReceiver
           paramContext = BluetoothAdapter.getDefaultAdapter();
           if (paramContext == null)
           {
-            u.d("!44@/B4Tb64lLpLVC0LaS5ZOdqJgxv4SheKzLnVhrVs2Idc=", "getDefaultAdapter == null");
+            v.d("MicroMsg.BluetoothReceiver", "getDefaultAdapter == null");
             return;
           }
           paramContext = paramContext.getBondedDevices();
           if ((paramContext == null) || (paramContext.size() == 0))
           {
-            u.d("!44@/B4Tb64lLpLVC0LaS5ZOdqJgxv4SheKzLnVhrVs2Idc=", "getBondedDevices == null");
+            v.d("MicroMsg.BluetoothReceiver", "getBondedDevices == null");
             return;
           }
-        } while (ay.kz(paramIntent.getAction()));
-        u.d("!44@/B4Tb64lLpLVC0LaS5ZOdqJgxv4SheKzLnVhrVs2Idc=", "dkbt action :" + paramIntent.getAction());
-      } while (!ah.rh());
+        } while (be.kf(paramIntent.getAction()));
+        v.d("MicroMsg.BluetoothReceiver", "dkbt action :" + paramIntent.getAction());
+      } while (!ah.rg());
       try
       {
         i = paramIntent.getIntExtra("android.media.extra.SCO_AUDIO_STATE", -1);
-        u.d("!44@/B4Tb64lLpLVC0LaS5ZOdqJgxv4SheKzLnVhrVs2Idc=", "dkbt  action :" + paramIntent.getAction() + " state:" + i + " isBluetoothScoOn :" + ah.tF().nN() + " " + ah.tF().nQ());
+        v.d("MicroMsg.BluetoothReceiver", "dkbt  action :" + paramIntent.getAction() + " state:" + i + " isBluetoothScoOn :" + ah.tG().mc() + " " + ah.tG().mg());
         if (i == 1)
         {
-          u.d("!44@/B4Tb64lLpLVC0LaS5ZOdqJgxv4SheKzLnVhrVs2Idc=", "sco connected!");
-          paramContext = ah.tF();
-          u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt bluetoothStartSucc %s", new Object[] { paramContext.nQ() });
-          d.bpx = true;
-          paramContext.bN(1);
+          v.d("MicroMsg.BluetoothReceiver", "sco connected!");
+          paramContext = ah.tG();
+          v.d("MicroMsg.MMAudioManager", "dkbt bluetoothStartSucc %s", new Object[] { paramContext.mg() });
+          d.bdw = true;
+          paramContext.cf(1);
           return;
         }
       }
@@ -61,19 +61,16 @@ public class BluetoothReceiver
       {
         for (;;)
         {
-          u.e("!44@/B4Tb64lLpLVC0LaS5ZOdqJgxv4SheKzLnVhrVs2Idc=", "%s", new Object[] { ay.b(paramContext) });
+          v.e("MicroMsg.BluetoothReceiver", "%s", new Object[] { be.f(paramContext) });
           i = 0;
         }
       }
     } while (i != 0);
-    u.d("!44@/B4Tb64lLpLVC0LaS5ZOdqJgxv4SheKzLnVhrVs2Idc=", "sco disconnected!");
-    if (bsQbrA == 1) {
-      ah.tF().nM();
+    v.d("MicroMsg.BluetoothReceiver", "sco disconnected!");
+    if (bgWbfB == 1) {
+      ah.tG().mb();
     }
-    paramContext = ah.tF();
-    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt bluetoothStopped %s", new Object[] { paramContext.nQ() });
-    d.bpx = false;
-    paramContext.bN(2);
+    ah.tG().lZ();
   }
 }
 

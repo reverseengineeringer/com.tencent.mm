@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public bwx:Ljava/lang/String;
+.field public blK:Ljava/lang/String;
 
-.field public bwy:J
+.field public blL:J
 
 
 # direct methods
@@ -31,18 +31,18 @@
     .line 72
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/jni/platformcomm/b$b$a;->bwx:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/jni/platformcomm/b$b$a;->blK:Ljava/lang/String;
 
     .line 73
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/jni/platformcomm/b$b$a;->bwy:J
+    iput-wide v0, p0, Lcom/tencent/mm/jni/platformcomm/b$b$a;->blL:J
 
     .line 76
-    iput-object p1, p0, Lcom/tencent/mm/jni/platformcomm/b$b$a;->bwx:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/jni/platformcomm/b$b$a;->blK:Ljava/lang/String;
 
     .line 77
-    iput-wide p2, p0, Lcom/tencent/mm/jni/platformcomm/b$b$a;->bwy:J
+    iput-wide p2, p0, Lcom/tencent/mm/jni/platformcomm/b$b$a;->blL:J
 
     .line 78
     return-void

@@ -16,7 +16,7 @@
 
     .prologue
     .line 16
-    const-string/jumbo v0, "!56@/B4Tb64lLpJTMeYfRMNNQRuku3R6gzQDlZUKfw7TkJoK66gUI5st6w=="
+    const-string/jumbo v0, "MicroMsg.NewYearSnsTips2016NotifyLsn"
 
     sput-object v0, Lcom/tencent/mm/plugin/sns/lucky/b/s;->TAG:Ljava/lang/String;
 
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/r/c$a;)V
+.method public final a(Lcom/tencent/mm/t/c$a;)V
     .locals 13
 
     .prologue
@@ -44,17 +44,17 @@
 
     const-string/jumbo v1, "receivemsg NewYearSnsTips2016NotifyLsn"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 20
     const/16 v0, 0x4a
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/lucky/b/b;->lp(I)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/lucky/b/b;->id(I)V
 
     .line 21
     if-eqz p1, :cond_0
 
-    iget-object v0, p1, Lcom/tencent/mm/r/c$a;->bFh:Lcom/tencent/mm/protocal/b/aj;
+    iget-object v0, p1, Lcom/tencent/mm/t/c$a;->bys:Lcom/tencent/mm/protocal/b/am;
 
     if-nez v0, :cond_1
 
@@ -64,7 +64,7 @@
 
     const-string/jumbo v1, "onPreAddMessage cmdAM is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 35
     :goto_0
@@ -77,11 +77,11 @@
     invoke-direct {v2}, Lcom/tencent/mm/plugin/sns/lucky/b/r;-><init>()V
 
     .line 26
-    iget-object v0, p1, Lcom/tencent/mm/r/c$a;->bFh:Lcom/tencent/mm/protocal/b/aj;
+    iget-object v0, p1, Lcom/tencent/mm/t/c$a;->bys:Lcom/tencent/mm/protocal/b/am;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aj;->iXv:Lcom/tencent/mm/protocal/b/aly;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/am;->juZ:Lcom/tencent/mm/protocal/b/amj;
 
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/n;->a(Lcom/tencent/mm/protocal/b/aly;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/m;->a(Lcom/tencent/mm/protocal/b/amj;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -90,23 +90,21 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    iput-object v0, v2, Lcom/tencent/mm/plugin/sns/lucky/b/r;->cuM:Ljava/lang/StringBuffer;
+    iput-object v0, v2, Lcom/tencent/mm/plugin/sns/lucky/b/r;->cqq:Ljava/lang/StringBuffer;
 
     const-string/jumbo v0, "sysmsg"
 
-    const/4 v1, 0x0
-
-    invoke-static {v3, v0, v1}, Lcom/tencent/mm/sdk/platformtools/q;->J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {v3, v0}, Lcom/tencent/mm/sdk/platformtools/r;->cr(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v4
 
-    iget-object v0, v2, Lcom/tencent/mm/plugin/sns/lucky/b/r;->gIN:Ljava/util/LinkedList;
+    iget-object v0, v2, Lcom/tencent/mm/plugin/sns/lucky/b/r;->gQo:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
 
     if-nez v4, :cond_3
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJTMeYfRMNNQZctinTW+ioP"
+    const-string/jumbo v0, "MicroMsg.NewYearSnsTips"
 
     const-string/jumbo v1, "errr for paser %s"
 
@@ -118,16 +116,16 @@
 
     aput-object v3, v4, v5
 
-    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/16 v0, 0x4b
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/lucky/b/b;->lp(I)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/lucky/b/b;->id(I)V
 
     .line 28
     :cond_2
     :goto_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpJTMeYfRMNNQZctinTW+ioP"
+    const-string/jumbo v0, "MicroMsg.NewYearSnsTips"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -135,7 +133,7 @@
 
     invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/lucky/b/r;->cuM:Ljava/lang/StringBuffer;
+    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/lucky/b/r;->cqq:Ljava/lang/StringBuffer;
 
     invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -149,33 +147,33 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 29
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
-    sget-object v1, Lcom/tencent/mm/storage/j$a;->keq:Lcom/tencent/mm/storage/j$a;
+    sget-object v1, Lcom/tencent/mm/storage/j$a;->kEa:Lcom/tencent/mm/storage/j$a;
 
     invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/storage/h;->b(Lcom/tencent/mm/storage/j$a;Ljava/lang/Object;)V
 
     .line 30
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/storage/h;->gN(Z)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/storage/h;->hn(Z)V
 
     goto :goto_0
 
@@ -217,35 +215,35 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->Ds(Ljava/lang/String;)J
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->FH(Ljava/lang/String;)J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    iget-object v0, v2, Lcom/tencent/mm/plugin/sns/lucky/b/r;->cuM:Ljava/lang/StringBuffer;
+    iget-object v0, v2, Lcom/tencent/mm/plugin/sns/lucky/b/r;->cqq:Ljava/lang/StringBuffer;
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v5, Ljava/lang/StringBuilder;
 
     const-string/jumbo v8, "BeginTime:"
 
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v5, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v7, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v5
 
     const-string/jumbo v8, ";"
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v5
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v5
 
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    const-string/jumbo v7, ".sysmsg.NewYearSNSTips2016.Tips%s.%s"
+    const-string/jumbo v5, ".sysmsg.NewYearSNSTips2016.Tips%s.%s"
 
     const/4 v0, 0x2
 
@@ -266,7 +264,7 @@
 
     aput-object v9, v8, v0
 
-    invoke-static {v7, v8}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v5, v8}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -276,35 +274,35 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->Ds(Ljava/lang/String;)J
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->FH(Ljava/lang/String;)J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    iget-object v0, v2, Lcom/tencent/mm/plugin/sns/lucky/b/r;->cuM:Ljava/lang/StringBuffer;
+    iget-object v0, v2, Lcom/tencent/mm/plugin/sns/lucky/b/r;->cqq:Ljava/lang/StringBuffer;
 
-    new-instance v9, Ljava/lang/StringBuilder;
+    new-instance v5, Ljava/lang/StringBuilder;
 
     const-string/jumbo v10, "EndTime:"
 
-    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v5, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v9, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v8, v9}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    move-result-object v9
+    move-result-object v5
 
     const-string/jumbo v10, ";"
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v9
+    move-result-object v5
 
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v9
+    move-result-object v5
 
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    const-string/jumbo v9, ".sysmsg.NewYearSNSTips2016.Tips%s.%s"
+    const-string/jumbo v5, ".sysmsg.NewYearSNSTips2016.Tips%s.%s"
 
     const/4 v0, 0x2
 
@@ -325,7 +323,7 @@
 
     aput-object v11, v10, v0
 
-    invoke-static {v9, v10}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v5, v10}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -335,13 +333,13 @@
 
     check-cast v0, Ljava/lang/String;
 
-    const-string/jumbo v9, ""
+    const-string/jumbo v5, ""
 
-    invoke-static {v0, v9}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v5}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v9
+    move-result-object v5
 
-    iget-object v0, v2, Lcom/tencent/mm/plugin/sns/lucky/b/r;->cuM:Ljava/lang/StringBuffer;
+    iget-object v0, v2, Lcom/tencent/mm/plugin/sns/lucky/b/r;->cqq:Ljava/lang/StringBuffer;
 
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -349,7 +347,7 @@
 
     invoke-direct {v10, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v10, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v10
 
@@ -365,7 +363,7 @@
 
     invoke-virtual {v0, v10}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-static {v9}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v5}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -404,11 +402,11 @@
 
     const-string/jumbo v10, ""
 
-    invoke-static {v0, v10}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v10}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v10, v2, Lcom/tencent/mm/plugin/sns/lucky/b/r;->cuM:Ljava/lang/StringBuffer;
+    iget-object v10, v2, Lcom/tencent/mm/plugin/sns/lucky/b/r;->cqq:Ljava/lang/StringBuffer;
 
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -436,15 +434,15 @@
 
     invoke-direct {v10}, Lcom/tencent/mm/plugin/sns/lucky/b/q;-><init>()V
 
-    iput-object v9, v10, Lcom/tencent/mm/plugin/sns/lucky/b/q;->gIK:Ljava/lang/String;
+    iput-object v5, v10, Lcom/tencent/mm/plugin/sns/lucky/b/q;->gQl:Ljava/lang/String;
 
-    iput-wide v5, v10, Lcom/tencent/mm/plugin/sns/lucky/b/q;->gIe:J
+    iput-wide v6, v10, Lcom/tencent/mm/plugin/sns/lucky/b/q;->gPj:J
 
-    iput-wide v7, v10, Lcom/tencent/mm/plugin/sns/lucky/b/q;->gIf:J
+    iput-wide v8, v10, Lcom/tencent/mm/plugin/sns/lucky/b/q;->gPk:J
 
-    iput-object v0, v10, Lcom/tencent/mm/plugin/sns/lucky/b/q;->gIL:Ljava/lang/String;
+    iput-object v0, v10, Lcom/tencent/mm/plugin/sns/lucky/b/q;->gQm:Ljava/lang/String;
 
-    iget-object v0, v2, Lcom/tencent/mm/plugin/sns/lucky/b/r;->gIN:Ljava/util/LinkedList;
+    iget-object v0, v2, Lcom/tencent/mm/plugin/sns/lucky/b/r;->gQo:Ljava/util/LinkedList;
 
     invoke-virtual {v0, v10}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
@@ -483,7 +481,7 @@
     goto :goto_6
 
     :cond_8
-    iget-object v0, v2, Lcom/tencent/mm/plugin/sns/lucky/b/r;->gIN:Ljava/util/LinkedList;
+    iget-object v0, v2, Lcom/tencent/mm/plugin/sns/lucky/b/r;->gQo:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -493,7 +491,7 @@
 
     const/16 v0, 0x4c
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/lucky/b/b;->lp(I)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/lucky/b/b;->id(I)V
 
     goto/16 :goto_1
 .end method

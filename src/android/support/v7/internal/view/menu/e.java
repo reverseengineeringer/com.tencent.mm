@@ -14,40 +14,40 @@ import java.util.ArrayList;
 public final class e
   implements l, AdapterView.OnItemClickListener
 {
-  public LayoutInflater hI;
-  f iO;
-  public ExpandedMenuView lE;
-  private int lF;
-  int lG;
-  public a lH;
-  public l.a ll;
-  int ln = 2131363309;
+  public LayoutInflater ib;
+  f jf;
+  public l.a lC;
+  int lE = 2130903057;
+  public ExpandedMenuView lU;
+  private int lV;
+  int lW;
+  public a lX;
   Context mContext;
   
   public e(int paramInt)
   {
-    lG = paramInt;
+    lW = paramInt;
   }
   
   public final void a(Context paramContext, f paramf)
   {
-    if (lG != 0)
+    if (lW != 0)
     {
-      mContext = new ContextThemeWrapper(paramContext, lG);
-      hI = LayoutInflater.from(mContext);
+      mContext = new ContextThemeWrapper(paramContext, lW);
+      ib = LayoutInflater.from(mContext);
     }
     for (;;)
     {
-      iO = paramf;
-      if (lH != null) {
-        lH.notifyDataSetChanged();
+      jf = paramf;
+      if (lX != null) {
+        lX.notifyDataSetChanged();
       }
       return;
       if (mContext != null)
       {
         mContext = paramContext;
-        if (hI == null) {
-          hI = LayoutInflater.from(mContext);
+        if (ib == null) {
+          ib = LayoutInflater.from(mContext);
         }
       }
     }
@@ -55,8 +55,8 @@ public final class e
   
   public final void a(f paramf, boolean paramBoolean)
   {
-    if (ll != null) {
-      ll.a(paramf, paramBoolean);
+    if (lC != null) {
+      lC.a(paramf, paramBoolean);
     }
   }
   
@@ -66,13 +66,13 @@ public final class e
       return false;
     }
     new g(paramp).by();
-    if (ll != null) {
-      ll.b(paramp);
+    if (lC != null) {
+      lC.b(paramp);
     }
     return true;
   }
   
-  public final boolean bj()
+  public final boolean bk()
   {
     return false;
   }
@@ -89,28 +89,28 @@ public final class e
   
   public final ListAdapter getAdapter()
   {
-    if (lH == null) {
-      lH = new a();
+    if (lX == null) {
+      lX = new a();
     }
-    return lH;
+    return lX;
   }
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    iO.c(lH.B(paramInt), 0);
+    jf.c(lX.G(paramInt), 0);
   }
   
-  public final void q(boolean paramBoolean)
+  public final void p(boolean paramBoolean)
   {
-    if (lH != null) {
-      lH.notifyDataSetChanged();
+    if (lX != null) {
+      lX.notifyDataSetChanged();
     }
   }
   
   private final class a
     extends BaseAdapter
   {
-    private int lI = -1;
+    private int lY = -1;
     
     public a()
     {
@@ -119,34 +119,34 @@ public final class e
     
     private void bo()
     {
-      h localh = iO.mf;
+      h localh = jf.mv;
       if (localh != null)
       {
-        ArrayList localArrayList = iO.bw();
+        ArrayList localArrayList = jf.bw();
         int j = localArrayList.size();
         int i = 0;
         while (i < j)
         {
           if ((h)localArrayList.get(i) == localh)
           {
-            lI = i;
+            lY = i;
             return;
           }
           i += 1;
         }
       }
-      lI = -1;
+      lY = -1;
     }
     
-    public final h B(int paramInt)
+    public final h G(int paramInt)
     {
-      ArrayList localArrayList = iO.bw();
+      ArrayList localArrayList = jf.bw();
       int i = e.a(e.this) + paramInt;
       paramInt = i;
-      if (lI >= 0)
+      if (lY >= 0)
       {
         paramInt = i;
-        if (i >= lI) {
+        if (i >= lY) {
           paramInt = i + 1;
         }
       }
@@ -155,8 +155,8 @@ public final class e
     
     public final int getCount()
     {
-      int i = iO.bw().size() - e.a(e.this);
-      if (lI < 0) {
+      int i = jf.bw().size() - e.a(e.this);
+      if (lY < 0) {
         return i;
       }
       return i - 1;
@@ -170,11 +170,11 @@ public final class e
     public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
     {
       if (paramView == null) {
-        paramView = hI.inflate(ln, paramViewGroup, false);
+        paramView = ib.inflate(lE, paramViewGroup, false);
       }
       for (;;)
       {
-        ((m.a)paramView).a(B(paramInt));
+        ((m.a)paramView).a(G(paramInt));
         return paramView;
       }
     }

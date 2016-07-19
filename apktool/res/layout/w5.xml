@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ae1" android:background="@color/ow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="40.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip" style="@style/MMFooter">
+        <ImageButton android:id="@id/bat" android:background="@null" android:layout_width="@dimen/i5" android:layout_height="@dimen/i5" android:layout_marginLeft="10.0dip" android:src="@raw/textfield_icon_emoji_normal" android:minWidth="0.0dip" android:layout_centerVertical="true" android:contentDescription="@string/wu" style="@style/MMSmallButton" />
+        <com.tencent.mm.plugin.sns.ui.SightRangeWidget android:id="@id/bau" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>

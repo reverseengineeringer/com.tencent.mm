@@ -10,8 +10,8 @@ final class SnsUploadBrowseUI$3$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (hly.hlx.hbK.aBV() == 0) {
-      hly.hlx.aCN();
+    if (hBB.hBA.hqA.aEV() == 0) {
+      hBB.hBA.aFS();
     }
   }
 }

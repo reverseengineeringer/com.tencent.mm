@@ -13,11 +13,11 @@ final class ContactRemarkInfoModUI$8
   
   public final void onClick(View paramView)
   {
-    ContactRemarkInfoModUI.f(ljV);
-    ContactRemarkInfoModUI.a(ljV, true, -1);
-    ContactRemarkInfoModUI.g(ljV).setText(ljX.yj());
-    ContactRemarkInfoModUI.g(ljV).setSelection(ContactRemarkInfoModUI.g(ljV).getText().length());
-    ContactRemarkInfoModUI.z(ljV).setVisibility(8);
+    ContactRemarkInfoModUI.f(lKg);
+    ContactRemarkInfoModUI.a(lKg, true, -1);
+    ContactRemarkInfoModUI.g(lKg).setText(lKi.yv());
+    ContactRemarkInfoModUI.g(lKg).setSelection(ContactRemarkInfoModUI.g(lKg).getText().length());
+    ContactRemarkInfoModUI.z(lKg).setVisibility(8);
   }
 }
 

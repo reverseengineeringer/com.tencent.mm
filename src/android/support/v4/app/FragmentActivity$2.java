@@ -9,7 +9,7 @@ final class FragmentActivity$2
   
   public final View findViewById(int paramInt)
   {
-    return bi.findViewById(paramInt);
+    return bx.findViewById(paramInt);
   }
 }
 

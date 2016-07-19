@@ -1,45 +1,52 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.alq;
-import com.tencent.mm.protocal.b.alx;
-import com.tencent.mm.protocal.b.dd;
-import com.tencent.mm.protocal.b.en;
-import com.tencent.mm.protocal.b.eo;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.protocal.b.ch;
+import com.tencent.mm.protocal.b.cj;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class j
 {
   public static final class a
-    extends h.c
-    implements h.a
+    extends k.c
+    implements k.a
   {
-    public en iUP = new en();
+    public ch jrY = new ch();
+    public byte[] jrZ;
     
-    public final byte[] tY()
+    public final int getCmdId()
     {
-      iUJ = z.aTv();
-      iUP.jbx = new alx().aO(ay.aVA());
-      iUP.jGS = h.a(this);
-      return iUP.toByteArray();
+      return 1000;
     }
     
-    public final int tZ()
+    public final byte[] tZ()
     {
-      return 145;
+      jrY.kfq = k.a(this);
+      v.d("MicroMsg.MMBakchatCreateQRcodeOffline.Req", "key:%s  AddrCount:%s  AddrList:%s, PCName:%s, PCAcctName:%s, Scene:%s, DataSize:%s, WifiName:%s, Tickit:%s", new Object[] { jrZ, Integer.valueOf(jrY.jxl), jrY.jxm, jrY.jxn, jrY.jxo, Integer.valueOf(jrY.jtN), Long.valueOf(jrY.cmO), jrY.jxp, jrY.jxq });
+      return jrY.toByteArray();
+    }
+    
+    public final int ua()
+    {
+      return 1000;
     }
   }
   
   public static final class b
-    extends h.d
-    implements h.b
+    extends k.d
+    implements k.b
   {
-    public eo iUQ = new eo();
+    public cj jsa = new cj();
     
-    public final int y(byte[] paramArrayOfByte)
+    public final int D(byte[] paramArrayOfByte)
     {
-      iUQ = ((eo)new eo().am(paramArrayOfByte));
-      h.a(this, iUQ.jHj);
-      return iUQ.jHj.iZL;
+      jsa = ((cj)new cj().au(paramArrayOfByte));
+      v.d("MicroMsg.MMBakchatCreateQRcodeOffline.Resp", "Ret:%d, QRCodeBuffer:%s, QRCodeUrl:%s", new Object[] { Integer.valueOf(jsa.jxr), jsa.jxs, jsa.jxt });
+      return jsa.jxr;
+    }
+    
+    public final int getCmdId()
+    {
+      return 1000;
     }
   }
 }

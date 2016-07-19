@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/bg3" style="@style/mass_send_time" />
+    <LinearLayout android:orientation="vertical" android:id="@id/bg4" android:background="@drawable/lj" android:paddingLeft="@dimen/ct" android:paddingTop="@dimen/ct" android:paddingRight="@dimen/ct" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j8" android:layout_marginBottom="@dimen/j8">
+        <TextView android:id="@id/bg5" style="@style/mass_send_contact" />
+        <TextView android:id="@id/bg6" android:layout_marginTop="@dimen/cp" android:layout_marginBottom="@dimen/j8" style="@style/mass_send_contact" />
+        <View style="@style/mass_send_divide_line" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ct" android:layout_marginBottom="@dimen/ct">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/bg7" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <TextView android:textSize="13.0dip" android:textColor="@color/ow" android:gravity="bottom|center|right" android:id="@id/bg_" android:background="@drawable/wp" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:id="@id/bga" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/acn" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+        <View style="@style/mass_send_divide_line" />
+        <TextView android:layout_gravity="center_horizontal" android:id="@id/bg8" style="@style/mass_send_again_btn" />
+    </LinearLayout>
+</LinearLayout>

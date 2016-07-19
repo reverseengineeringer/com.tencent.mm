@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic gO:Landroid/support/v4/view/a/b;
+.field final synthetic hj:Landroid/support/v4/view/a/b;
 
-.field final synthetic gP:Landroid/support/v4/view/a/b$b;
+.field final synthetic hk:Landroid/support/v4/view/a/b$b;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 48
-    iput-object p1, p0, Landroid/support/v4/view/a/b$b$1;->gP:Landroid/support/v4/view/a/b$b;
+    iput-object p1, p0, Landroid/support/v4/view/a/b$b$1;->hk:Landroid/support/v4/view/a/b$b;
 
-    iput-object p2, p0, Landroid/support/v4/view/a/b$b$1;->gO:Landroid/support/v4/view/a/b;
+    iput-object p2, p0, Landroid/support/v4/view/a/b$b$1;->hj:Landroid/support/v4/view/a/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,26 +40,35 @@
 
 
 # virtual methods
-.method public final at()Z
+.method public final as()Z
     .locals 1
 
     .prologue
     .line 52
-    invoke-static {}, Landroid/support/v4/view/a/b;->at()Z
+    invoke-static {}, Landroid/support/v4/view/a/b;->as()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public final au()Ljava/util/List;
+.method public final at()Ljava/util/List;
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     const/4 v4, 0x0
 
     .line 58
-    invoke-static {}, Landroid/support/v4/view/a/b;->au()Ljava/util/List;
+    invoke-static {}, Landroid/support/v4/view/a/b;->at()Ljava/util/List;
 
     .line 60
     new-instance v2, Ljava/util/ArrayList;
@@ -87,7 +96,7 @@
     check-cast v0, Landroid/support/v4/view/a/a;
 
     .line 64
-    iget-object v0, v0, Landroid/support/v4/view/a/a;->gL:Ljava/lang/Object;
+    iget-object v0, v0, Landroid/support/v4/view/a/a;->hg:Ljava/lang/Object;
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -103,12 +112,12 @@
     return-object v2
 .end method
 
-.method public final av()Ljava/lang/Object;
+.method public final au()Ljava/lang/Object;
     .locals 1
 
     .prologue
     .line 72
-    invoke-static {}, Landroid/support/v4/view/a/b;->as()Landroid/support/v4/view/a/a;
+    invoke-static {}, Landroid/support/v4/view/a/b;->ar()Landroid/support/v4/view/a/a;
 
     .line 74
     const/4 v0, 0x0

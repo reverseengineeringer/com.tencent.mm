@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kCB:Lcom/tencent/mm/ui/base/g$c;
+.field final synthetic lbG:Lcom/tencent/mm/ui/base/g$c;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 1073
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/g$7;->kCB:Lcom/tencent/mm/ui/base/g$c;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/g$7;->lbG:Lcom/tencent/mm/ui/base/g$c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,18 +41,18 @@
 
     .prologue
     .line 1077
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$7;->kCB:Lcom/tencent/mm/ui/base/g$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$7;->lbG:Lcom/tencent/mm/ui/base/g$c;
 
     if-eqz v0, :cond_0
 
     .line 1078
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$7;->kCB:Lcom/tencent/mm/ui/base/g$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$7;->lbG:Lcom/tencent/mm/ui/base/g$c;
 
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/g$c;->eu(I)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/g$c;->fg(I)V
 
     .line 1080
     :cond_0

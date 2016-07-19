@@ -9,7 +9,7 @@ import com.tencent.mm.storage.k;
 public abstract class ProfileItemView
   extends FrameLayout
 {
-  public k dsm;
+  public k dsC;
   
   public ProfileItemView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -19,19 +19,19 @@ public abstract class ProfileItemView
   public ProfileItemView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    LayoutInflater.from(paramContext).inflate(getLayout(), this);
+    LayoutInflater.from(paramContext).inflate(aqj(), this);
     init();
   }
   
   public boolean G(k paramk)
   {
-    dsm = paramk;
-    return ant();
+    dsC = paramk;
+    return aqk();
   }
   
-  public abstract boolean ant();
+  public abstract int aqj();
   
-  public abstract int getLayout();
+  public abstract boolean aqk();
   
   public abstract void init();
 }

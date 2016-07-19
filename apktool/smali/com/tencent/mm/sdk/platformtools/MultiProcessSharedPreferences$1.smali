@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic jWv:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+.field final synthetic kwR:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
 
 
 # direct methods
@@ -23,8 +23,8 @@
     .locals 0
 
     .prologue
-    .line 280
-    iput-object p1, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$1;->jWv:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+    .line 279
+    iput-object p1, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$1;->kwR:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -37,14 +37,14 @@
     .locals 7
 
     .prologue
-    .line 283
+    .line 282
     const-string/jumbo v0, "name"
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 285
+    .line 284
     const-string/jumbo v0, "value"
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getSerializableExtra(Ljava/lang/String;)Ljava/io/Serializable;
@@ -53,8 +53,8 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 286
-    iget-object v2, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$1;->jWv:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+    .line 285
+    iget-object v2, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$1;->kwR:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
 
     invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;->a(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Ljava/lang/String;
 
@@ -68,10 +68,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 287
+    .line 286
     new-instance v4, Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$1;->jWv:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$1;->kwR:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
 
     invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;->b(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Ljava/util/List;
 
@@ -79,7 +79,7 @@
 
     invoke-direct {v4, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 288
+    .line 287
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -91,14 +91,14 @@
     :goto_0
     if-ltz v3, :cond_2
 
-    .line 289
+    .line 288
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    .line 290
+    .line 289
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -117,24 +117,24 @@
 
     check-cast v2, Ljava/lang/ref/SoftReference;
 
-    .line 291
+    .line 290
     invoke-virtual {v2}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
 
-    .line 292
+    .line 291
     if-eqz v2, :cond_0
 
-    .line 293
-    iget-object v6, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$1;->jWv:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+    .line 292
+    iget-object v6, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$1;->kwR:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
 
     invoke-interface {v2, v6, v1}, Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;->onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 288
+    .line 287
     :cond_1
     add-int/lit8 v1, v3, -0x1
 
@@ -142,7 +142,7 @@
 
     goto :goto_0
 
-    .line 298
+    .line 297
     :cond_2
     return-void
 .end method

@@ -3,36 +3,36 @@ package com.tencent.mm.pluginsdk.model.downloader;
 import android.database.Cursor;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.aa;
-import com.tencent.mm.storage.z;
+import com.tencent.mm.storage.ab;
 
 public final class b
 {
-  public static z Aa(String paramString)
+  public static aa BW(String paramString)
   {
     Object localObject2 = null;
     Object localObject1 = null;
-    Object localObject3 = ru();
+    Object localObject3 = rv();
     if (localObject3 == null) {}
     do
     {
       do
       {
-        return (z)localObject1;
-        if (ay.kz(paramString))
+        return (aa)localObject1;
+        if (be.kf(paramString))
         {
-          u.e("!56@/B4Tb64lLpKVQlIh1YRBX94HnKLHqasj4QVB2Lzhv8UbwRqK+FziQw==", "Null or nil url");
+          v.e("MicroMsg.FileDownloadInfoStorage", "appId is null");
           return null;
         }
-        localObject3 = ((aa)localObject3).rawQuery("select * from FileDownloadInfo where downloadUrlHashCode=" + paramString.hashCode(), new String[0]);
+        localObject3 = ((ab)localObject3).rawQuery("select * from FileDownloadInfo where appId=\"" + paramString + "\"", new String[0]);
       } while (localObject3 == null);
       paramString = (String)localObject2;
       if (((Cursor)localObject3).moveToFirst())
       {
-        paramString = new z();
-        paramString.c((Cursor)localObject3);
+        paramString = new aa();
+        paramString.b((Cursor)localObject3);
       }
       localObject1 = paramString;
     } while (localObject3 == null);
@@ -40,101 +40,131 @@ public final class b
     return paramString;
   }
   
-  public static long a(z paramz)
+  public static boolean BX(String paramString)
   {
-    if (paramz == null) {}
-    aa localaa;
+    ab localab = rv();
+    if (localab == null) {
+      return false;
+    }
+    if (be.kf(paramString))
+    {
+      v.e("MicroMsg.FileDownloadInfoStorage", "deledonloadinfo failed, url is null");
+      return false;
+    }
+    return localab.cx("FileDownloadInfo", "delete from FileDownloadInfo where downloadUrl=\"" + paramString + "\"");
+  }
+  
+  public static boolean BY(String paramString)
+  {
+    ab localab = rv();
+    if (localab == null) {
+      return false;
+    }
+    if (be.kf(paramString))
+    {
+      v.e("MicroMsg.FileDownloadInfoStorage", "deledonloadinfo failed, appId is null");
+      return false;
+    }
+    return localab.cx("FileDownloadInfo", "delete from FileDownloadInfo where appId=\"" + paramString + "\"");
+  }
+  
+  public static aa BZ(String paramString)
+  {
+    Object localObject2 = null;
+    Object localObject1 = null;
+    Object localObject3 = rv();
+    if (localObject3 == null) {}
+    do
+    {
+      do
+      {
+        return (aa)localObject1;
+        if (be.kf(paramString))
+        {
+          v.e("MicroMsg.FileDownloadInfoStorage", "Null or nil url");
+          return null;
+        }
+        localObject3 = ((ab)localObject3).rawQuery("select * from FileDownloadInfo where downloadUrlHashCode=" + paramString.hashCode(), new String[0]);
+      } while (localObject3 == null);
+      paramString = (String)localObject2;
+      if (((Cursor)localObject3).moveToFirst())
+      {
+        paramString = new aa();
+        paramString.b((Cursor)localObject3);
+      }
+      localObject1 = paramString;
+    } while (localObject3 == null);
+    ((Cursor)localObject3).close();
+    return paramString;
+  }
+  
+  public static long c(aa paramaa)
+  {
+    if (paramaa == null) {}
+    ab localab;
     do
     {
       return -1L;
-      localaa = ru();
-    } while (localaa == null);
-    boolean bool = localaa.a(paramz);
-    u.i("!56@/B4Tb64lLpKVQlIh1YRBX94HnKLHqasjKmMimq5cKAVyyVg+ltjGZg==", "insert downloadinfo: " + field_downloadId + ", ret=" + bool);
+      localab = rv();
+    } while (localab == null);
+    boolean bool = localab.a(paramaa);
+    v.i("MicroMsg.FileDownloadInfoDBHelper", "insert downloadinfo: " + field_downloadId + ", ret=" + bool);
     return field_downloadId;
   }
   
-  public static long b(z paramz)
+  public static long d(aa paramaa)
   {
-    if (paramz == null) {}
-    aa localaa;
+    if (paramaa == null) {}
+    ab localab;
     do
     {
       return -1L;
-      localaa = ru();
-    } while (localaa == null);
-    boolean bool = localaa.a(paramz, new String[0]);
-    u.i("!56@/B4Tb64lLpKVQlIh1YRBX94HnKLHqasjKmMimq5cKAVyyVg+ltjGZg==", "Update Downloadinfo, ID: %d, ret: %b, Status: %d", new Object[] { Long.valueOf(field_downloadId), Boolean.valueOf(bool), Integer.valueOf(field_status) });
+      localab = rv();
+    } while (localab == null);
+    boolean bool = localab.a(paramaa, new String[0]);
+    v.i("MicroMsg.FileDownloadInfoDBHelper", "Update Downloadinfo, ID: %d, ret: %b, Status: %d", new Object[] { Long.valueOf(field_downloadId), Boolean.valueOf(bool), Integer.valueOf(field_status) });
     return field_downloadId;
   }
   
-  public static z cZ(long paramLong)
+  public static aa dq(long paramLong)
   {
-    aa localaa = ru();
-    if (localaa == null) {
+    ab localab = rv();
+    if (localab == null) {
       return null;
     }
-    return localaa.dx(paramLong);
+    return localab.dO(paramLong);
   }
   
   public static boolean e(long paramLong1, long paramLong2, long paramLong3)
   {
-    aa localaa = ru();
-    if (localaa == null) {
+    ab localab = rv();
+    if (localab == null) {
       return false;
     }
-    return localaa.cj("FileDownloadInfo", "update FileDownloadInfo set downloadedSize = " + paramLong2 + ",totalSize= " + paramLong3 + " where downloadId = " + paramLong1);
+    return localab.cx("FileDownloadInfo", "update FileDownloadInfo set downloadedSize = " + paramLong2 + ",totalSize= " + paramLong3 + " where downloadId = " + paramLong1);
   }
   
-  public static boolean q(long paramLong, int paramInt)
+  public static boolean r(long paramLong, int paramInt)
   {
-    aa localaa = ru();
-    if (localaa == null) {
+    ab localab = rv();
+    if (localab == null) {
       return false;
     }
-    return localaa.cj("FileDownloadInfo", "update FileDownloadInfo set status = " + paramInt + " where downloadId = " + paramLong);
+    return localab.cx("FileDownloadInfo", "update FileDownloadInfo set status = " + paramInt + " where downloadId = " + paramLong);
   }
   
-  public static aa ru()
+  public static ab rv()
   {
-    if ((!ah.rh()) || (ah.tM())) {
-      u.e("!56@/B4Tb64lLpKVQlIh1YRBX94HnKLHqasjKmMimq5cKAVyyVg+ltjGZg==", "no user login");
+    if ((!ah.rg()) || (ah.tN())) {
+      v.e("MicroMsg.FileDownloadInfoDBHelper", "no user login");
     }
     c localc;
     do
     {
       return null;
-      localc = ah.tD();
+      localc = ah.tE();
     } while (localc == null);
-    return localc.ru();
-  }
-  
-  public static boolean zY(String paramString)
-  {
-    aa localaa = ru();
-    if (localaa == null) {
-      return false;
-    }
-    if (ay.kz(paramString))
-    {
-      u.e("!56@/B4Tb64lLpKVQlIh1YRBX94HnKLHqasj4QVB2Lzhv8UbwRqK+FziQw==", "deledonloadinfo failed, url is null");
-      return false;
-    }
-    return localaa.cj("FileDownloadInfo", "delete from FileDownloadInfo where downloadUrl=\"" + paramString + "\"");
-  }
-  
-  public static boolean zZ(String paramString)
-  {
-    aa localaa = ru();
-    if (localaa == null) {
-      return false;
-    }
-    if (ay.kz(paramString))
-    {
-      u.e("!56@/B4Tb64lLpKVQlIh1YRBX94HnKLHqasj4QVB2Lzhv8UbwRqK+FziQw==", "deledonloadinfo failed, appId is null");
-      return false;
-    }
-    return localaa.cj("FileDownloadInfo", "delete from FileDownloadInfo where appId=\"" + paramString + "\"");
+    return localc.rv();
   }
 }
 

@@ -10,6 +10,8 @@ public abstract class h
   
   public abstract h a(Fragment paramFragment, String paramString);
   
+  public abstract h b(int paramInt, Fragment paramFragment);
+  
   public abstract h b(Fragment paramFragment);
   
   public abstract h c(Fragment paramFragment);
@@ -17,8 +19,6 @@ public abstract class h
   public abstract int commit();
   
   public abstract int commitAllowingStateLoss();
-  
-  public abstract h d(Fragment paramFragment);
 }
 
 /* Location:

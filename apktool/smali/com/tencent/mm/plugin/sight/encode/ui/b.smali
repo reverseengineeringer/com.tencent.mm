@@ -4,14 +4,8 @@
 
 
 # virtual methods
-.method public abstract awK()V
+.method public abstract eC(Z)V
 .end method
 
-.method public abstract awL()V
-.end method
-
-.method public abstract eK(Z)V
-.end method
-
-.method public abstract tY(Ljava/lang/String;)V
+.method public abstract ve(Ljava/lang/String;)V
 .end method

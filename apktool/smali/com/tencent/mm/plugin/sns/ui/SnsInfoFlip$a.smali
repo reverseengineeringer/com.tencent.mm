@@ -15,48 +15,48 @@
 
 
 # instance fields
-.field gPU:J
+.field gXT:J
 
-.field gPV:I
+.field gXU:I
 
-.field final synthetic heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+.field final synthetic htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
-.field heT:I
+.field htK:I
 
-.field heU:J
+.field htL:J
 
-.field heV:J
+.field htM:J
 
-.field heW:Ljava/lang/String;
+.field htN:Ljava/lang/String;
 
 .field networkType:I
 
 
 # direct methods
 .method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)V
-    .locals 3
+    .locals 4
 
     .prologue
-    const-wide/16 v1, -0x1
+    const-wide/16 v2, -0x1
 
-    .line 1260
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    .line 1372
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1262
+    .line 1374
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heT:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htK:I
 
-    .line 1265
-    iput-wide v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heU:J
+    .line 1377
+    iput-wide v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htL:J
 
-    .line 1266
-    iput-wide v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->heV:J
+    .line 1378
+    iput-wide v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->htM:J
 
-    .line 1268
-    iput-wide v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gPU:J
+    .line 1380
+    iput-wide v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$a;->gXT:J
 
     return-void
 .end method

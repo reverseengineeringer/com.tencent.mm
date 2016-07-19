@@ -1,9 +1,9 @@
 package com.tencent.mm.network;
 
-import com.tencent.mm.sdk.platformtools.at;
+import com.tencent.mm.sdk.platformtools.az;
 
 final class r$10
-  extends at
+  extends az<Object>
 {
   r$10(r paramr, String paramString1, String paramString2)
   {
@@ -12,7 +12,7 @@ final class r$10
   
   protected final Object run()
   {
-    Java2C.setNewDnsDebugHost(cjl, cjm);
+    Java2C.setNewDnsDebugHost(ceC, ceD);
     return null;
   }
 }

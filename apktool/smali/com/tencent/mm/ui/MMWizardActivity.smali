@@ -4,7 +4,17 @@
 
 
 # static fields
-.field public static final kqN:Ljava/util/Map;
+.field public static final kPS:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Landroid/content/Intent;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -17,7 +27,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/ui/MMWizardActivity;->kqN:Ljava/util/Map;
+    sput-object v0, Lcom/tencent/mm/ui/MMWizardActivity;->kPS:Ljava/util/Map;
 
     return-void
 .end method
@@ -33,73 +43,73 @@
 .end method
 
 .method public static b(Landroid/content/Context;Landroid/content/Intent;Landroid/content/Intent;)V
-    .locals 6
+    .locals 7
 
     .prologue
     .line 78
     :try_start_0
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v2, "trans."
+    const-string/jumbo v3, "trans."
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gq()J
 
-    move-result-wide v2
+    move-result-wide v4
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "."
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 79
-    sget-object v1, Lcom/tencent/mm/ui/MMWizardActivity;->kqN:Ljava/util/Map;
+    const-string/jumbo v3, "."
 
-    invoke-interface {v1, v2, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {p2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 79
+    sget-object v2, Lcom/tencent/mm/ui/MMWizardActivity;->kPS:Ljava/util/Map;
+
+    invoke-interface {v2, v3, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 80
-    const-string/jumbo v1, "WizardTransactionId"
+    const-string/jumbo v2, "WizardTransactionId"
 
-    invoke-virtual {p1, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {p1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 81
     move-object v0, p0
 
     check-cast v0, Landroid/app/Activity;
 
-    move-object v1, v0
+    move-object v2, v0
 
-    check-cast v1, Landroid/app/Activity;
+    check-cast v2, Landroid/app/Activity;
 
-    invoke-virtual {v1}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {v2}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
-    move-result-object v1
+    move-result-object v2
 
     .line 82
-    if-eqz v1, :cond_0
+    if-eqz v2, :cond_0
 
     .line 83
-    const-string/jumbo v3, "WizardTransactionId"
+    const-string/jumbo v4, "WizardTransactionId"
 
-    invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v2, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 85
     :cond_0
@@ -113,42 +123,42 @@
 
     .line 86
     :catch_0
-    move-exception v1
+    move-exception v2
 
     .line 87
-    const-string/jumbo v2, "!44@/B4Tb64lLpJvV+XMpT29t9nlu8JQyie2l3cWQ1nrjiU="
+    const-string/jumbo v3, "MicroMsg.MMWizardActivity"
 
-    const-string/jumbo v3, "%s"
+    const-string/jumbo v4, "%s"
 
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
-    new-array v4, v4, [Ljava/lang/Object;
+    new-array v5, v5, [Ljava/lang/Object;
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    aput-object v1, v4, v5
+    aput-object v2, v5, v6
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
 .method public static v(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 4
+    .locals 6
 
     .prologue
     const/4 v1, 0x0
 
     .line 47
-    const-string/jumbo v0, "!44@/B4Tb64lLpJvV+XMpT29t9nlu8JQyie2l3cWQ1nrjiU="
+    const-string/jumbo v0, "MicroMsg.MMWizardActivity"
 
     const-string/jumbo v2, "startWizardActivity()"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 48
     new-instance v0, Ljava/lang/StringBuilder;
@@ -203,7 +213,7 @@
 
     .line 60
     :goto_0
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -221,7 +231,7 @@
 
     move-result-object v1
 
-    .line 64
+    .line 68
     :cond_0
     :goto_1
     new-instance v2, Ljava/lang/StringBuilder;
@@ -230,11 +240,25 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    const-string/jumbo v3, "]"
+    const-string/jumbo v3, "][ "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string/jumbo v3, " ]"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -244,7 +268,7 @@
 
     move-result-object v2
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -270,8 +294,20 @@
     .line 74
     return-void
 
+    .line 63
     :catch_0
     move-exception v2
+
+    .line 64
+    const-string/jumbo v3, "MicroMsg.MMWizardActivity"
+
+    const-string/jumbo v4, ""
+
+    const/4 v5, 0x0
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    invoke-static {v3, v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
@@ -283,18 +319,18 @@
 
 
 # virtual methods
-.method public final bbm()V
+.method public final bgy()V
     .locals 5
 
     .prologue
     const/4 v4, 0x1
 
     .line 115
-    const-string/jumbo v0, "!44@/B4Tb64lLpJvV+XMpT29t9nlu8JQyie2l3cWQ1nrjiU="
+    const-string/jumbo v0, "MicroMsg.MMWizardActivity"
 
     const-string/jumbo v1, "finishWizard()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/MMWizardActivity;->getIntent()Landroid/content/Intent;
 
@@ -330,7 +366,7 @@
 
     move-result-object v1
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -395,11 +431,11 @@
 
     .prologue
     .line 105
-    const-string/jumbo v0, "!44@/B4Tb64lLpJvV+XMpT29t9nlu8JQyie2l3cWQ1nrjiU="
+    const-string/jumbo v0, "MicroMsg.MMWizardActivity"
 
     const-string/jumbo v1, "cancel()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 106
     invoke-virtual {p0}, Lcom/tencent/mm/ui/MMWizardActivity;->getIntent()Landroid/content/Intent;
@@ -413,7 +449,7 @@
     move-result-object v1
 
     .line 107
-    sget-object v0, Lcom/tencent/mm/ui/MMWizardActivity;->kqN:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/ui/MMWizardActivity;->kPS:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -422,7 +458,7 @@
     check-cast v0, Landroid/content/Intent;
 
     .line 108
-    sget-object v2, Lcom/tencent/mm/ui/MMWizardActivity;->kqN:Ljava/util/Map;
+    sget-object v2, Lcom/tencent/mm/ui/MMWizardActivity;->kPS:Ljava/util/Map;
 
     invoke-interface {v2, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -430,7 +466,7 @@
     if-eqz v0, :cond_0
 
     .line 110
-    const-string/jumbo v2, "!44@/B4Tb64lLpJvV+XMpT29t9nlu8JQyie2l3cWQ1nrjiU="
+    const-string/jumbo v2, "MicroMsg.MMWizardActivity"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -456,7 +492,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 112
     :cond_0
@@ -468,11 +504,11 @@
 
     .prologue
     .line 93
-    const-string/jumbo v0, "!44@/B4Tb64lLpJvV+XMpT29t9nlu8JQyie2l3cWQ1nrjiU="
+    const-string/jumbo v0, "MicroMsg.MMWizardActivity"
 
     const-string/jumbo v1, "exit()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 94
     invoke-virtual {p0}, Lcom/tencent/mm/ui/MMWizardActivity;->getIntent()Landroid/content/Intent;
@@ -486,7 +522,7 @@
     move-result-object v1
 
     .line 95
-    sget-object v0, Lcom/tencent/mm/ui/MMWizardActivity;->kqN:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/ui/MMWizardActivity;->kPS:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -495,7 +531,7 @@
     check-cast v0, Landroid/content/Intent;
 
     .line 96
-    sget-object v2, Lcom/tencent/mm/ui/MMWizardActivity;->kqN:Ljava/util/Map;
+    sget-object v2, Lcom/tencent/mm/ui/MMWizardActivity;->kPS:Ljava/util/Map;
 
     invoke-interface {v2, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -503,7 +539,7 @@
     if-eqz v0, :cond_0
 
     .line 98
-    const-string/jumbo v2, "!44@/B4Tb64lLpJvV+XMpT29t9nlu8JQyie2l3cWQ1nrjiU="
+    const-string/jumbo v2, "MicroMsg.MMWizardActivity"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -529,7 +565,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 99
     const-string/jumbo v1, "wizard_activity_result_code"
@@ -549,11 +585,11 @@
 
     .prologue
     .line 142
-    const-string/jumbo v0, "!44@/B4Tb64lLpJvV+XMpT29t9nlu8JQyie2l3cWQ1nrjiU="
+    const-string/jumbo v0, "MicroMsg.MMWizardActivity"
 
     const-string/jumbo v1, "finish()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 143
     invoke-virtual {p0}, Lcom/tencent/mm/ui/MMWizardActivity;->getIntent()Landroid/content/Intent;
@@ -583,11 +619,11 @@
     if-eqz v0, :cond_0
 
     .line 146
-    const-string/jumbo v0, "!44@/B4Tb64lLpJvV+XMpT29t9nlu8JQyie2l3cWQ1nrjiU="
+    const-string/jumbo v0, "MicroMsg.MMWizardActivity"
 
     const-string/jumbo v1, "root wizard activity"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 147
     const/4 v0, -0x1
@@ -610,11 +646,11 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 32
-    const-string/jumbo v0, "!44@/B4Tb64lLpJvV+XMpT29t9nlu8JQyie2l3cWQ1nrjiU="
+    const-string/jumbo v0, "MicroMsg.MMWizardActivity"
 
     const-string/jumbo v1, "onCreate()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 34
     const-string/jumbo v0, "MMWizardActivity Should Start By startWizardActivity or startWizardNextStep"
@@ -633,7 +669,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -662,7 +698,7 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->finish()V
 
     .line 39
-    const-string/jumbo v0, "!44@/B4Tb64lLpJvV+XMpT29t9nlu8JQyie2l3cWQ1nrjiU="
+    const-string/jumbo v0, "MicroMsg.MMWizardActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -686,7 +722,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 40
     invoke-virtual {p0}, Lcom/tencent/mm/ui/MMWizardActivity;->getIntent()Landroid/content/Intent;

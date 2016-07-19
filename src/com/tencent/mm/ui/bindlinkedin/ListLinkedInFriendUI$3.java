@@ -5,8 +5,8 @@ import com.tencent.mm.model.c;
 import com.tencent.mm.model.i;
 import com.tencent.mm.modelfriend.t;
 import com.tencent.mm.pluginsdk.ui.applet.a.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.q;
 
 final class ListLinkedInFriendUI$3
@@ -16,19 +16,19 @@ final class ListLinkedInFriendUI$3
   
   public final void a(boolean paramBoolean1, boolean paramBoolean2, String paramString1, String paramString2)
   {
-    u.d("!44@/B4Tb64lLpJ4FHnyJpFGLC6Xej9PxJXB86Z93mHPIZQ=", "[oneliang]AddContact hasSentVerify:" + paramBoolean2);
-    if (!ay.kz(paramString2))
+    v.d("MicroMsg.LinkedInFriendUI", "[oneliang]AddContact hasSentVerify:" + paramBoolean2);
+    if (!be.kf(paramString2))
     {
       if (paramBoolean1)
       {
-        paramString1 = com.tencent.mm.model.ah.tD().rq().Ep(paramString1);
-        if ((int)bvi > 0) {
+        paramString1 = com.tencent.mm.model.ah.tE().rr().GD(paramString1);
+        if ((int)bjS > 0) {
           i.n(paramString1);
         }
-        com.tencent.mm.modelfriend.ah.zz().hB(paramString2);
-        Toast.makeText(kOk, 2131428807, 0).show();
+        com.tencent.mm.modelfriend.ah.zM().hT(paramString2);
+        Toast.makeText(lnA, 2131233484, 0).show();
       }
-      ListLinkedInFriendUI.f(kOk).Gk();
+      ListLinkedInFriendUI.f(lnA).GH();
     }
   }
 }

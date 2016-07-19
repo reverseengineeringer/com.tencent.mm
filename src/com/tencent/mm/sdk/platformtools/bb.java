@@ -1,14 +1,61 @@
 package com.tencent.mm.sdk.platformtools;
 
-final class bb
-  implements aj.a
+import com.tencent.mm.a.d;
+
+public final class bb
 {
-  bb(az paramaz) {}
+  private final d kyq;
+  private x<String, String> kyr = new x(256);
   
-  public final boolean lO()
+  public bb(String paramString)
   {
-    iaN.apE = true;
-    return false;
+    kyq = new d(paramString);
+  }
+  
+  public final String Fo(String paramString)
+  {
+    String str1 = paramString;
+    try
+    {
+      if (paramString.startsWith("!"))
+      {
+        if (kyr.ax(paramString)) {
+          return (String)kyr.get(paramString);
+        }
+        str1 = paramString.substring(1);
+        Object localObject;
+        String str3;
+        int i;
+        str2 = "[td]" + paramString;
+      }
+    }
+    catch (Exception localException)
+    {
+      try
+      {
+        localObject = str1.split("@");
+        if (localObject.length <= 1) {
+          break label178;
+        }
+        str3 = localObject[0];
+        i = Integer.valueOf(localObject[0]).intValue();
+        localObject = str1.substring(str3.length() + 1, str3.length() + 1 + i);
+        str3 = str1.substring(i + (str3.length() + 1));
+        str3 = kyq.az((String)localObject) + str3;
+        kyr.put(paramString, str3);
+        return str3;
+      }
+      catch (Exception paramString)
+      {
+        for (;;)
+        {
+          String str2;
+          paramString = str2;
+        }
+      }
+      localException = localException;
+    }
+    return str2;
   }
 }
 

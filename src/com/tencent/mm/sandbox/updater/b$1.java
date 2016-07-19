@@ -3,13 +3,13 @@ package com.tencent.mm.sandbox.updater;
 import com.tencent.mm.a.e;
 import com.tencent.mm.a.g;
 import com.tencent.mm.compatible.util.d;
-import com.tencent.mm.protocal.b.alq;
-import com.tencent.mm.protocal.b.alx;
-import com.tencent.mm.protocal.b.dd;
-import com.tencent.mm.protocal.b.wg;
+import com.tencent.mm.protocal.b.amb;
+import com.tencent.mm.protocal.b.ami;
+import com.tencent.mm.protocal.b.dg;
+import com.tencent.mm.protocal.b.wr;
 import com.tencent.mm.sandbox.b.a;
 import com.tencent.mm.sandbox.monitor.c;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.File;
 
 final class b$1
@@ -17,86 +17,86 @@ final class b$1
 {
   b$1(b paramb) {}
   
-  public final void J(int paramInt1, int paramInt2) {}
+  public final void L(int paramInt1, int paramInt2) {}
   
-  public final void a(int paramInt1, int paramInt2, alq paramalq)
+  public final void a(int paramInt1, int paramInt2, amb paramamb)
   {
-    if ((paramInt1 != 200) || (paramInt2 != 0) || ((paramalq != null) && (jHj.iZL != 0)))
+    if ((paramInt1 != 200) || (paramInt2 != 0) || ((paramamb != null) && (kfH.jxr != 0)))
     {
-      if ((!jTm.aTO()) && (b.a(jTm) < b.b(jTm).length * 5))
+      if ((!ksG.aYL()) && (b.a(ksG) < b.b(ksG).length * 5))
       {
-        jTm.a(b.c(jTm));
+        ksG.a(b.c(ksG));
         return;
       }
-      b.c(jTm).a(paramInt1, paramInt2, paramalq);
+      b.c(ksG).a(paramInt1, paramInt2, paramamb);
       return;
     }
-    wg localwg = (wg)paramalq;
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkgG6dDIkrLQ8=", "onGYNetEnd : file dir = " + d.bxc);
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkgG6dDIkrLQ8=", "onGYNetEnd : total len = " + iYD);
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkgG6dDIkrLQ8=", "onGYNetEnd : start pos = " + iYE);
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkgG6dDIkrLQ8=", "onGYNetEnd : data len = " + iYF);
-    if ((iYF <= 0) || (jaq == null))
+    wr localwr = (wr)paramamb;
+    v.d("MicroMsg.NetSceneGetUpdatePack", "onGYNetEnd : file dir = " + d.bpe);
+    v.d("MicroMsg.NetSceneGetUpdatePack", "onGYNetEnd : total len = " + jwi);
+    v.d("MicroMsg.NetSceneGetUpdatePack", "onGYNetEnd : start pos = " + jwj);
+    v.d("MicroMsg.NetSceneGetUpdatePack", "onGYNetEnd : data len = " + jwk);
+    if ((jwk <= 0) || (jxU == null))
     {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkgG6dDIkrLQ8=", "data is null");
-      b.c(jTm).a(paramInt1, -1, null);
+      v.e("MicroMsg.NetSceneGetUpdatePack", "data is null");
+      b.c(ksG).a(paramInt1, -1, null);
       return;
     }
-    if (jaq.jHs != iYF)
+    if (jxU.kfQ != jwk)
     {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkgG6dDIkrLQ8=", "data len not match with data buf, dataLen = " + iYF + " data buf len = " + jaq.jHs);
-      b.c(jTm).a(4, -1, null);
+      v.e("MicroMsg.NetSceneGetUpdatePack", "data len not match with data buf, dataLen = " + jwk + " data buf len = " + jxU.kfQ);
+      b.c(ksG).a(4, -1, null);
       return;
     }
-    if ((iYE < 0) || (iYE + iYF > iYD))
+    if ((jwj < 0) || (jwj + jwk > jwi))
     {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkgG6dDIkrLQ8=", "startPos = " + iYE + " dataLen = " + iYF + " totalLen = " + iYD);
-      b.c(jTm).a(4, -1, null);
+      v.e("MicroMsg.NetSceneGetUpdatePack", "startPos = " + jwj + " dataLen = " + jwk + " totalLen = " + jwi);
+      b.c(ksG).a(4, -1, null);
       return;
     }
-    if (iYD <= 0)
+    if (jwi <= 0)
     {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkgG6dDIkrLQ8=", "totalLen is invalid: totalLen = " + iYD);
-      b.c(jTm).a(4, -1, null);
+      v.e("MicroMsg.NetSceneGetUpdatePack", "totalLen is invalid: totalLen = " + jwi);
+      b.c(ksG).a(4, -1, null);
       return;
     }
-    paramInt1 = e.a(c.jSK, b.d(jTm), ".temp", jaq.jHu.toByteArray());
+    paramInt1 = e.a(c.kse, b.d(ksG), ".temp", jxU.kfS.toByteArray());
     if (paramInt1 != 0)
     {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkgG6dDIkrLQ8=", "appendBuf failed : " + paramInt1);
-      b.c(jTm).a(4, -1, null);
+      v.e("MicroMsg.NetSceneGetUpdatePack", "appendBuf failed : " + paramInt1);
+      b.c(ksG).a(4, -1, null);
       return;
     }
-    b.a(jTm, iYF + iYE);
-    b.b(jTm, iYD);
-    b.c(jTm).J(iYD, iYE);
-    if (iYE + iYF >= iYD) {}
+    b.a(ksG, jwk + jwj);
+    b.b(ksG, jwi);
+    b.c(ksG).L(jwi, jwj);
+    if (jwj + jwk >= jwi) {}
     try
     {
-      if (b.f(jTm).equalsIgnoreCase(g.aC(b.e(jTm))))
+      if (b.f(ksG).equalsIgnoreCase(g.aH(b.e(ksG))))
       {
-        e.f(c.jSK, b.g(jTm) + ".temp", b.h(jTm) + ".apk");
-        b.c(jTm).a(200, 0, paramalq);
+        e.h(c.kse, b.g(ksG) + ".temp", b.h(ksG) + ".apk");
+        b.c(ksG).a(200, 0, paramamb);
         return;
       }
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkgG6dDIkrLQ8=", "update pack check error");
-      new File(b.i(jTm)).delete();
-      b.c(jTm).a(-1, -1, paramalq);
+      v.e("MicroMsg.NetSceneGetUpdatePack", "update pack check error");
+      new File(b.i(ksG)).delete();
+      b.c(ksG).a(-1, -1, paramamb);
       return;
     }
-    catch (Exception paramalq) {}
-    jTm.a(b.c(jTm));
+    catch (Exception paramamb) {}
+    ksG.a(b.c(ksG));
     return;
   }
   
-  public final void jdMethod_do(long paramLong)
+  public final void dF(long paramLong)
   {
-    b.c(jTm).jdMethod_do(paramLong);
+    b.c(ksG).dF(paramLong);
   }
   
-  public final void dp(long paramLong)
+  public final void dG(long paramLong)
   {
-    b.c(jTm).dp(paramLong);
+    b.c(ksG).dG(paramLong);
   }
 }
 

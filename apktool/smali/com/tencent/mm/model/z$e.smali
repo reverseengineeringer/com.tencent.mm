@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract K(II)V
+.method public abstract c(Ljava/lang/String;J)V
 .end method

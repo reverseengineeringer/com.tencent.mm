@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ScrollView android:visibility="visible" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center_horizontal" style="@style/MMBody">
+                <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/u6" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ik" />
+                <TextView android:paddingTop="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ij" android:lineSpacingExtra="4.0dip" style="@style/MMBriefText" />
+                <RelativeLayout android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/il" android:layout_alignParentLeft="true" />
+                    <com.tencent.mm.ui.widget.MMSwitchBtn android:id="@id/j3" android:focusable="false" android:clickable="false" android:layout_width="70.0dip" android:layout_height="20.0dip" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/j4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ii" android:layout_alignParentLeft="true" />
+                    <com.tencent.mm.ui.widget.MMSwitchBtn android:id="@id/j5" android:focusable="false" android:clickable="false" android:layout_width="70.0dip" android:layout_height="20.0dip" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <TextView android:paddingTop="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mw" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

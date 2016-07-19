@@ -9,37 +9,37 @@ public final class c
   implements View.OnClickListener
 {
   private Context context;
-  private a lrB;
+  private a lSf;
   
   public c(Context paramContext, a parama)
   {
     context = paramContext;
-    lrB = parama;
+    lSf = parama;
   }
   
   public final void onClick(View paramView)
   {
     paramView = (b)paramView.getTag();
-    String str = lrD;
+    String str = lSh;
     final int i = position;
-    int j = o.aF(str);
+    int j = o.aK(str);
     new g(context, new g.a()
     {
       public final void g(boolean paramAnonymousBoolean, String paramAnonymousString)
       {
-        c.a(c.this).ib(paramAnonymousBoolean);
+        c.a(c.this).iF(paramAnonymousBoolean);
       }
     }).o(new int[] { j });
   }
   
   public static abstract interface a
   {
-    public abstract void ib(boolean paramBoolean);
+    public abstract void iF(boolean paramBoolean);
   }
   
   public static final class b
   {
-    public String lrD;
+    public String lSh;
     public int position;
   }
 }

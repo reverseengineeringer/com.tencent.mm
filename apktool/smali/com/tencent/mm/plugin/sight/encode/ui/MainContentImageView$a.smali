@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract lb(I)V
+.method public abstract mi(I)V
 .end method

@@ -15,11 +15,11 @@
 
 
 # virtual methods
-.method public abstract c(Lcom/tencent/mm/plugin/sns/h/k;)V
+.method public abstract c(Lcom/tencent/mm/plugin/sns/i/k;)V
 .end method
 
-.method public abstract d(Lcom/tencent/mm/plugin/sns/h/k;)V
+.method public abstract d(Lcom/tencent/mm/plugin/sns/i/k;)V
 .end method
 
-.method public abstract e(Lcom/tencent/mm/plugin/sns/h/k;)V
+.method public abstract e(Lcom/tencent/mm/plugin/sns/i/k;)V
 .end method

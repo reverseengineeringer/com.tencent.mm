@@ -1,7 +1,5 @@
 package com.tencent.mm.ui.chatting.gallery;
 
-import com.tencent.mm.ui.base.g;
-
 final class j$3$1
   implements Runnable
 {
@@ -9,9 +7,10 @@ final class j$3$1
   
   public final void run()
   {
-    lhs.lhq.hT(false);
-    g.e(lhs.lhq.leH.lem, 2131428868, 2131427941);
-    lhs.lhq.leH.rw(lhs.lhq.dfq);
+    lHD.lHB.iw(false);
+    com.tencent.mm.ui.base.g.f(lHD.lHB.lET.lEz, 2131235819, 2131231739);
+    lHD.lHB.lET.ty(lHD.lHB.bQx);
+    com.tencent.mm.plugin.report.service.g.gdY.h(12084, new Object[] { Integer.valueOf(lHD.lHB.lHz), Integer.valueOf(lHD.lHB.hfL * 1000), Integer.valueOf(0), Integer.valueOf(4), lHD.lHB.asv, Integer.valueOf(lHD.lHB.lHA), lHD.lHB.fMU, Long.valueOf(lHD.lHB.cbi) });
   }
 }
 

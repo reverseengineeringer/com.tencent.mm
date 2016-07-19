@@ -2,14 +2,14 @@ package com.tencent.mm.model;
 
 public final class ap
 {
-  public int asN = 57005;
+  public int aex = 57005;
   String data = null;
   public int type = 57005;
   
   public ap(int paramInt1, int paramInt2, String paramString)
   {
     type = paramInt1;
-    asN = paramInt2;
+    aex = paramInt2;
     data = paramString;
   }
 }

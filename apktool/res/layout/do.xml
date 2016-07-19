@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/nl" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/u5" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hr" android:layout_marginTop="@dimen/hb" android:layout_marginRight="@dimen/hr" android:layout_marginBottom="@dimen/cp">
+        <TextView android:textSize="@dimen/ja" android:textColor="#ff6a6a6a" android:ellipsize="end" android:id="@id/u6" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/hj" android:singleLine="true" android:layout_weight="1.0" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/u7" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/u8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/j_" android:src="@drawable/ag7" />
+            <TextView android:textSize="@dimen/ja" android:textColor="#ff6a6a6a" android:ellipsize="end" android:id="@id/u9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/q0" android:background="@drawable/bq" android:layout_width="fill_parent" android:layout_height="@dimen/ke" android:layout_marginTop="@dimen/hj">
+        <com.tencent.mm.plugin.card.widget.MemberCardTopCropImageView android:id="@id/u_" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ke" />
+        <ImageView android:id="@id/ua" android:background="@drawable/afe" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ke" />
+        <ImageView android:id="@id/ub" android:background="@drawable/afd" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip" android:scaleType="fitXY" android:layout_alignBottom="@id/rx" android:layout_alignParentBottom="true" />
+        <RelativeLayout android:id="@id/q1" android:layout_width="fill_parent" android:layout_height="80.0dip" android:minHeight="80.0dip" android:layout_centerVertical="true">
+            <RelativeLayout android:id="@id/uc" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                    <ImageView android:id="@id/q2" android:layout_width="@dimen/kk" android:layout_height="@dimen/kk" android:layout_marginLeft="@dimen/kf" android:src="@drawable/amw" android:scaleType="fitCenter" />
+                    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/kg" android:layout_marginRight="@dimen/cp" android:layout_weight="1.0">
+                        <TextView android:textSize="@dimen/ja" android:textColor="@color/bj" android:ellipsize="end" android:id="@id/q3" android:layout_marginBottom="@dimen/j_" android:singleLine="true" style="@style/CardIndexCardTitle" />
+                        <TextView android:textColor="@color/bj" android:ellipsize="end" android:id="@id/q5" android:layout_marginTop="@dimen/j_" android:singleLine="true" style="@style/CardIndexCardTitle" />
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView android:textSize="@dimen/dx" android:ellipsize="end" android:gravity="center" android:id="@id/q9" android:layout_marginLeft="@dimen/i7" android:layout_marginRight="@dimen/hb" android:maxLines="2" android:layout_centerInParent="true" style="@style/CardIndexCardTitle" />
+            </RelativeLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/ud" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginRight="@dimen/hr" android:layout_marginBottom="20.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+                <TextView android:textSize="@dimen/ja" android:ellipsize="end" android:gravity="center|right" android:layout_gravity="right" android:id="@id/ue" android:singleLine="true" style="@style/CardIndexCardTitle" />
+                <TextView android:textSize="@dimen/cn" android:ellipsize="end" android:gravity="center|right" android:layout_gravity="right" android:id="@id/uf" android:layout_marginTop="@dimen/hj" android:singleLine="true" style="@style/CardIndexCardTitle" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/ug" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hj" android:layout_marginRight="@dimen/hr" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/uh" android:background="@color/bk" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_below="@id/q1">
+            <TextView android:textSize="@dimen/ja" android:textColor="@color/g8" android:ellipsize="end" android:gravity="left" android:id="@id/q8" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hr" android:layout_marginRight="@dimen/hr" android:singleLine="true" android:layout_weight="1.0" style="@style/CardIndexSubtitle" />
+            <TextView android:textSize="@dimen/jc" android:textColor="@color/ow" android:gravity="right" android:id="@id/ui" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j8" android:layout_marginRight="@dimen/hr" android:minWidth="80.0dip" android:singleLine="true" style="@style/CardIndexSubtitle" />
+        </LinearLayout>
+        <ImageView android:background="@drawable/br" android:layout_width="fill_parent" android:layout_height="@dimen/ke" />
+        <ImageView android:id="@id/uj" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/he" android:src="@drawable/bj" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/uk" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="6.0dip" android:layout_alignParentTop="true" />
+        <ImageView android:id="@id/ul" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="50.599976dip" android:src="@drawable/afy" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <ImageView android:id="@id/um" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="50.599976dip" android:src="@drawable/af4" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        <View android:id="@id/un" android:background="@drawable/c7" android:visibility="gone" android:layout_width="4.0dip" android:layout_height="110.0dip" android:layout_marginTop="@dimen/cp" android:layout_marginRight="53.599976dip" android:layout_marginBottom="@dimen/cp" android:layout_alignParentRight="true" android:layerType="software" />
+    </RelativeLayout>
+</LinearLayout>

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/FacebookFriendUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/FacebookFriendUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+.field final synthetic kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 181
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$7;->ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$7;->kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,17 +37,26 @@
 
 # virtual methods
 .method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 5
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
     .line 185
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$7;->ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$7;->kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/FacebookFriendUI;->b(Lcom/tencent/mm/ui/account/FacebookFriendUI;)Lcom/tencent/mm/ui/account/d;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$7;->ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$7;->kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/FacebookFriendUI;->e(Lcom/tencent/mm/ui/account/FacebookFriendUI;)Landroid/widget/ListView;
 
@@ -96,7 +105,7 @@
     .line 189
     const-string/jumbo v2, "Contact_Nick"
 
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/h;->ym()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/h;->yy()Ljava/lang/String;
 
     move-result-object v3
 
@@ -105,14 +114,14 @@
     .line 190
     const-string/jumbo v2, "Contact_KFacebookId"
 
-    iget-wide v3, v0, Lcom/tencent/mm/modelfriend/h;->aSw:J
+    iget-wide v4, v0, Lcom/tencent/mm/modelfriend/h;->aFf:J
 
-    invoke-virtual {v1, v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+    invoke-virtual {v1, v2, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
     .line 191
     const-string/jumbo v2, "Contact_KFacebookName"
 
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/h;->yw()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/h;->yI()Ljava/lang/String;
 
     move-result-object v3
 
@@ -126,9 +135,9 @@
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 193
-    sget-object v2, Lcom/tencent/mm/plugin/a/a;->coa:Lcom/tencent/mm/pluginsdk/g;
+    sget-object v2, Lcom/tencent/mm/plugin/a/a;->cjo:Lcom/tencent/mm/pluginsdk/g;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$7;->ksr:Lcom/tencent/mm/ui/account/FacebookFriendUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/FacebookFriendUI$7;->kRz:Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
     invoke-interface {v2, v1, v3}, Lcom/tencent/mm/pluginsdk/g;->d(Landroid/content/Intent;Landroid/content/Context;)V
 

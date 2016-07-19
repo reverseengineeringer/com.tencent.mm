@@ -2,14 +2,14 @@ package com.tencent.mm.plugin.sns.data;
 
 public final class c
 {
-  public d gHu;
+  public e gOy;
   private int requestType;
   
   public c() {}
   
-  public c(d paramd, int paramInt)
+  public c(e parame, int paramInt)
   {
-    gHu = paramd;
+    gOy = parame;
     requestType = paramInt;
   }
 }

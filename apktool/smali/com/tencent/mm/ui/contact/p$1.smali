@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic llt:Lcom/tencent/mm/ui/contact/p;
+.field final synthetic lLG:Lcom/tencent/mm/ui/contact/p;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 109
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/p$1;->llt:Lcom/tencent/mm/ui/contact/p;
+    .line 114
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/p$1;->lLG:Lcom/tencent/mm/ui/contact/p;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,10 +38,27 @@
 # virtual methods
 .method public final a(Lcom/tencent/mm/modelsearch/m$k;Ljava/util/List;Ljava/util/HashSet;[Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/tencent/mm/modelsearch/m$k;",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/modelsearch/m$g;",
+            ">;",
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;[",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
-    .line 112
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/p$1;->llt:Lcom/tencent/mm/ui/contact/p;
+    .line 117
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/p$1;->lLG:Lcom/tencent/mm/ui/contact/p;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/p;->a(Lcom/tencent/mm/ui/contact/p;)Lcom/tencent/mm/modelsearch/m$k;
 
@@ -49,7 +66,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/p$1;->llt:Lcom/tencent/mm/ui/contact/p;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/p$1;->lLG:Lcom/tencent/mm/ui/contact/p;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/p;->a(Lcom/tencent/mm/ui/contact/p;)Lcom/tencent/mm/modelsearch/m$k;
 
@@ -61,34 +78,34 @@
 
     if-nez v0, :cond_1
 
-    .line 121
+    .line 126
     :cond_0
     :goto_0
     return-void
 
-    .line 116
+    .line 121
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/p$1;->llt:Lcom/tencent/mm/ui/contact/p;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/p$1;->lLG:Lcom/tencent/mm/ui/contact/p;
 
     invoke-static {v0, p4}, Lcom/tencent/mm/ui/contact/p;->a(Lcom/tencent/mm/ui/contact/p;[Ljava/lang/String;)[Ljava/lang/String;
 
-    .line 117
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/p$1;->llt:Lcom/tencent/mm/ui/contact/p;
+    .line 122
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/p$1;->lLG:Lcom/tencent/mm/ui/contact/p;
 
     invoke-static {v0, p2}, Lcom/tencent/mm/ui/contact/p;->a(Lcom/tencent/mm/ui/contact/p;Ljava/util/List;)V
 
-    .line 118
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/p$1;->llt:Lcom/tencent/mm/ui/contact/p;
+    .line 123
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/p$1;->lLG:Lcom/tencent/mm/ui/contact/p;
 
     invoke-static {v0, p2}, Lcom/tencent/mm/ui/contact/p;->b(Lcom/tencent/mm/ui/contact/p;Ljava/util/List;)Ljava/util/List;
 
-    .line 119
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/p$1;->llt:Lcom/tencent/mm/ui/contact/p;
+    .line 124
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/p$1;->lLG:Lcom/tencent/mm/ui/contact/p;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/p;->b(Lcom/tencent/mm/ui/contact/p;)V
 
-    .line 120
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/p$1;->llt:Lcom/tencent/mm/ui/contact/p;
+    .line 125
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/p$1;->lLG:Lcom/tencent/mm/ui/contact/p;
 
     const/4 v1, 0x0
 
@@ -97,12 +114,19 @@
     goto :goto_0
 .end method
 
-.method public final iD(Ljava/lang/String;)V
+.method public final iU(Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
-    .line 125
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/p$1;->llt:Lcom/tencent/mm/ui/contact/p;
+    .line 130
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/p$1;->lLG:Lcom/tencent/mm/ui/contact/p;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/p;->c(Lcom/tencent/mm/ui/contact/p;)Ljava/lang/String;
 
@@ -114,13 +138,13 @@
 
     if-nez v0, :cond_0
 
-    .line 129
+    .line 134
     :goto_0
     return-void
 
-    .line 128
+    .line 133
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/p$1;->llt:Lcom/tencent/mm/ui/contact/p;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/p$1;->lLG:Lcom/tencent/mm/ui/contact/p;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/p;->b(Lcom/tencent/mm/ui/contact/p;)V
 

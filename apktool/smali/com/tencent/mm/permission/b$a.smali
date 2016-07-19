@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field public clF:I
+.field public cgJ:I
 
-.field public clG:I
+.field public cgK:I
 
-.field public clH:I
+.field public cgL:I
 
-.field public clI:I
+.field public cgM:I
 
-.field public clJ:I
+.field public cgN:I
 
 
 # direct methods
@@ -31,24 +31,24 @@
     .locals 0
 
     .prologue
-    .line 360
+    .line 352
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 361
-    iput p1, p0, Lcom/tencent/mm/permission/b$a;->clF:I
+    .line 353
+    iput p1, p0, Lcom/tencent/mm/permission/b$a;->cgJ:I
 
-    .line 362
-    iput p2, p0, Lcom/tencent/mm/permission/b$a;->clG:I
+    .line 354
+    iput p2, p0, Lcom/tencent/mm/permission/b$a;->cgK:I
 
-    .line 363
-    iput p3, p0, Lcom/tencent/mm/permission/b$a;->clH:I
+    .line 355
+    iput p3, p0, Lcom/tencent/mm/permission/b$a;->cgL:I
 
-    .line 364
-    iput p4, p0, Lcom/tencent/mm/permission/b$a;->clI:I
+    .line 356
+    iput p4, p0, Lcom/tencent/mm/permission/b$a;->cgM:I
 
-    .line 365
-    iput p5, p0, Lcom/tencent/mm/permission/b$a;->clJ:I
+    .line 357
+    iput p5, p0, Lcom/tencent/mm/permission/b$a;->cgN:I
 
-    .line 366
+    .line 358
     return-void
 .end method

@@ -4,7 +4,7 @@ import android.widget.TextView;
 
 final class NotInterestMenu$a$a
 {
-  TextView gFl;
+  TextView gLN;
   
   NotInterestMenu$a$a(NotInterestMenu.a parama) {}
 }

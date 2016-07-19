@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic dOA:Ljava/lang/String;
+.field final synthetic dQi:Ljava/lang/String;
 
-.field final synthetic kHv:Lcom/tencent/mm/ui/base/MMTagPanel$b;
+.field final synthetic lgx:Lcom/tencent/mm/ui/base/MMTagPanel$b;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 407
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b$2;->kHv:Lcom/tencent/mm/ui/base/MMTagPanel$b;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b$2;->lgx:Lcom/tencent/mm/ui/base/MMTagPanel$b;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b$2;->dOA:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b$2;->dQi:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,21 +45,21 @@
 
     .prologue
     .line 410
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b$2;->kHv:Lcom/tencent/mm/ui/base/MMTagPanel$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b$2;->lgx:Lcom/tencent/mm/ui/base/MMTagPanel$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->kHq:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMTagPanel$b;->lgs:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->e(Lcom/tencent/mm/ui/base/MMTagPanel;)Lcom/tencent/mm/ui/base/MMTagPanel$a;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b$2;->dOA:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel$b$2;->dQi:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/MMTagPanel$a;->ni(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/MMTagPanel$a;->oq(Ljava/lang/String;)V
 
     .line 411
     return-void

@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnCancelListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;->x(Landroid/content/Intent;)V
+    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;->a(Landroid/content/Intent;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,16 @@
 
 
 # instance fields
-.field final synthetic fbK:Lcom/tencent/mm/an/a;
-
-.field final synthetic laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.field final synthetic lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/chatting/ChattingUI$a;Lcom/tencent/mm/an/a;)V
+.method constructor <init>(Lcom/tencent/mm/ui/chatting/ChattingUI$a;)V
     .locals 0
 
     .prologue
-    .line 8233
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$6;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
-
-    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$6;->fbK:Lcom/tencent/mm/an/a;
+    .line 8370
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$6;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,17 +36,15 @@
 
 
 # virtual methods
-.method public final onCancel(Landroid/content/DialogInterface;)V
-    .locals 2
+.method public final run()V
+    .locals 1
 
     .prologue
-    .line 8236
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$6;->fbK:Lcom/tencent/mm/an/a;
+    .line 8374
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$6;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    const/4 v1, 0x0
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->d(Lcom/tencent/mm/ui/chatting/ChattingUI$a;)V
 
-    iput-object v1, v0, Lcom/tencent/mm/an/a;->ceT:Lcom/tencent/mm/an/a$a;
-
-    .line 8237
+    .line 8375
     return-void
 .end method

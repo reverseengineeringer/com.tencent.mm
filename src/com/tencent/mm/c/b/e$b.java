@@ -3,7 +3,7 @@ package com.tencent.mm.c.b;
 import android.media.AudioRecord;
 import android.os.Process;
 import com.tencent.mm.compatible.b.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.Arrays;
 import java.util.concurrent.locks.Lock;
 
@@ -14,78 +14,78 @@ final class e$b
   
   public final void run()
   {
-    u.i("!44@/B4Tb64lLpLd7hlw6y+1ySBfLlWWvoJ8ZSlmCsPIkG8=", "RecordThread started. frameSize:%d", new Object[] { Integer.valueOf(aqU.aqD) });
-    if (-123456789 != aqU.aqi)
+    v.i("MicroMsg.RecordModeAsyncRead", "RecordThread started. frameSize:%d", new Object[] { Integer.valueOf(acm.abV) });
+    if (-123456789 != acm.abA)
     {
-      u.i("!44@/B4Tb64lLpLd7hlw6y+1ySBfLlWWvoJ8ZSlmCsPIkG8=", "set priority to " + aqU.aqi);
-      Process.setThreadPriority(aqU.aqi);
+      v.i("MicroMsg.RecordModeAsyncRead", "set priority to " + acm.abA);
+      Process.setThreadPriority(acm.abA);
     }
     for (;;)
     {
-      synchronized (aqU.aqN)
+      synchronized (acm.acf)
       {
-        if (1 != aqU.mStatus)
+        if (1 != acm.mStatus)
         {
-          u.e("!44@/B4Tb64lLpLd7hlw6y+1ySBfLlWWvoJ8ZSlmCsPIkG8=", "status is not inited, now status: " + aqU.mStatus);
+          v.e("MicroMsg.RecordModeAsyncRead", "status is not inited, now status: " + acm.mStatus);
           return;
         }
-        aqU.mStatus = 2;
-        ??? = new byte[aqU.aqD];
-        if (2 == aqU.mStatus) {
-          synchronized (aqU.aqM)
+        acm.mStatus = 2;
+        ??? = new byte[acm.abV];
+        if (2 == acm.mStatus) {
+          synchronized (acm.ace)
           {
-            boolean bool = aqU.aqV;
+            boolean bool = acm.acn;
             if (!bool) {}
           }
         }
       }
       try
       {
-        aqU.aqM.wait();
-        if (2 != aqU.mStatus) {}
+        acm.ace.wait();
+        if (2 != acm.mStatus) {}
         Object localObject6;
         int i;
         do
         {
           for (;;)
           {
-            u.i("!44@/B4Tb64lLpLd7hlw6y+1ySBfLlWWvoJ8ZSlmCsPIkG8=", "RecordThread exited.");
+            v.i("MicroMsg.RecordModeAsyncRead", "RecordThread exited.");
             return;
             localObject4 = finally;
             throw ((Throwable)localObject4);
-            if (aqU.aqs != null) {
+            if (acm.abK != null) {
               break;
             }
-            u.i("!44@/B4Tb64lLpLd7hlw6y+1ySBfLlWWvoJ8ZSlmCsPIkG8=", "mAudioRecord is null, so stop record.");
-            synchronized (aqU.aqN)
+            v.i("MicroMsg.RecordModeAsyncRead", "mAudioRecord is null, so stop record.");
+            synchronized (acm.acf)
             {
-              aqU.mStatus = 3;
+              acm.mStatus = 3;
             }
           }
           localObject2 = finally;
           throw ((Throwable)localObject2);
           localObject6 = localObject2;
-          if (aqU.aqe) {
-            localObject6 = new byte[aqU.aqD];
+          if (acm.abw) {
+            localObject6 = new byte[acm.abV];
           }
-          aqU.aqW += 1;
+          acm.aco += 1;
           new com.tencent.mm.compatible.util.f.a();
-          i = aqU.aqs.read((byte[])localObject6, 0, aqU.aqD);
-        } while (2 != aqU.mStatus);
-        if (aqU.aqz != null) {
-          aqU.aqz.c(i, (byte[])localObject6);
+          i = acm.abK.read((byte[])localObject6, 0, acm.abV);
+        } while (2 != acm.mStatus);
+        if (acm.abR != null) {
+          acm.abR.c(i, (byte[])localObject6);
         }
-        if (aqU.aqD != i) {
-          u.i("!44@/B4Tb64lLpLd7hlw6y+1ySBfLlWWvoJ8ZSlmCsPIkG8=", "read len " + i);
+        if (acm.abV != i) {
+          v.i("MicroMsg.RecordModeAsyncRead", "read len " + i);
         }
-        if (i < aqU.aqD) {
-          u.i("!44@/B4Tb64lLpLd7hlw6y+1ySBfLlWWvoJ8ZSlmCsPIkG8=", "read too fast? sleep 10 ms");
+        if (i < acm.abV) {
+          v.i("MicroMsg.RecordModeAsyncRead", "read too fast? sleep 10 ms");
         }
         try
         {
           Thread.sleep(10L);
           Object localObject3 = localObject6;
-          if (aqU.aqK == null) {
+          if (acm.acc == null) {
             continue;
           }
           localObject3 = localObject6;
@@ -96,21 +96,21 @@ final class e$b
           if (i > localObject6.length) {
             j = localObject6.length;
           }
-          if (aqU.aqJ != null)
+          if (acm.acb != null)
           {
-            if (aqU.aqE) {
+            if (acm.abW) {
               Arrays.fill((byte[])localObject6, 0, j, (byte)0);
             }
-            localObject3 = aqU.aqJ;
+            localObject3 = acm.acb;
             if (j > 0)
             {
-              if (bpl) {
-                bpm.lock();
+              if (bdk) {
+                bdl.lock();
               }
-              if (bpj != bpk) {
+              if (bdi != bdj) {
                 break label617;
               }
-              i = bpg;
+              i = bdf;
               label561:
               if (j <= i) {
                 break label743;
@@ -122,62 +122,62 @@ final class e$b
               if (i == 0) {
                 break;
               }
-              u.e("!44@/B4Tb64lLpLd7hlw6y+1ySBfLlWWvoJ8ZSlmCsPIkG8=", "WriteToBuffer Failed, ret:%d AudioBuffer length: %d", new Object[] { Integer.valueOf(i), Integer.valueOf(aqU.aqJ.nI()) });
+              v.e("MicroMsg.RecordModeAsyncRead", "WriteToBuffer Failed, ret:%d AudioBuffer length: %d", new Object[] { Integer.valueOf(i), Integer.valueOf(acm.acb.lW()) });
               localObject3 = localObject6;
               break;
               label617:
-              if ((bpk + 1) % bpg == bpj)
+              if ((bdj + 1) % bdf == bdi)
               {
                 i = 0;
                 break label561;
               }
-              if (bpj < bpk) {
-                bph = (bpk - bpj);
+              if (bdi < bdj) {
+                bdg = (bdj - bdi);
               }
               for (;;)
               {
-                if (bpl) {
-                  bpm.unlock();
+                if (bdk) {
+                  bdl.unlock();
                 }
-                i = bpg - bph;
+                i = bdf - bdg;
                 break;
-                if (bpj > bpk) {
-                  bph = (bpk + bpg - bpj);
+                if (bdi > bdj) {
+                  bdg = (bdj + bdf - bdi);
                 }
               }
               label743:
-              if ((bpk + j) % bpg != bpj) {
+              if ((bdj + j) % bdf != bdi) {
                 break label769;
               }
             }
             label769:
-            if (bpl) {
-              bpm.lock();
+            if (bdk) {
+              bdl.lock();
             }
-            if ((bpj < bpk) && (j > bpg - bpk))
+            if ((bdi < bdj) && (j > bdf - bdj))
             {
-              System.arraycopy(localObject6, 0, bpi, bpk, bpg - bpk);
-              System.arraycopy(localObject6, bpg - bpk, bpi, 0, j - (bpg - bpk));
-              bpk = (j - (bpg - bpk));
+              System.arraycopy(localObject6, 0, bdh, bdj, bdf - bdj);
+              System.arraycopy(localObject6, bdf - bdj, bdh, 0, j - (bdf - bdj));
+              bdj = (j - (bdf - bdj));
             }
-            for (bpk %= bpg;; bpk = ((j + bpk) % bpg))
+            for (bdj %= bdf;; bdj = ((j + bdj) % bdf))
             {
-              if (bpl) {
-                bpm.unlock();
+              if (bdk) {
+                bdl.unlock();
               }
               i = 0;
               break;
-              System.arraycopy(localObject6, 0, bpi, bpk, j);
+              System.arraycopy(localObject6, 0, bdh, bdj, j);
             }
           }
           localObject3 = localObject6;
-          if (aqU.aqK == null) {
+          if (acm.acc == null) {
             continue;
           }
-          if (aqU.aqE) {
+          if (acm.abW) {
             Arrays.fill((byte[])localObject6, 0, j, (byte)0);
           }
-          aqU.aqK.d((byte[])localObject6, j);
+          acm.acc.d((byte[])localObject6, j);
           localObject3 = localObject6;
         }
         catch (InterruptedException localInterruptedException1)

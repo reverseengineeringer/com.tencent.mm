@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/j3" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/NavPage">
+        <View android:background="@color/ow" android:layout_width="fill_parent" android:layout_height="20.0dip" />
+        <RelativeLayout android:background="@color/ow" android:layout_width="fill_parent" android:layout_height="200.0dip">
+            <com.tencent.mm.plugin.clean.ui.PieView android:id="@id/a5o" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+            <TextView android:textSize="@dimen/h4" android:textColor="#ffaaaaaa" android:gravity="center_horizontal" android:id="@id/a5p" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:background="@color/ow" android:layout_width="fill_parent" android:layout_height="80.0dip">
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/a5q" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/a5r" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <View android:id="@id/a5s" android:background="#ff17b611" android:layout_width="14.0dip" android:layout_height="14.0dip" android:layout_marginTop="2.0dip" />
+                        <TextView android:textSize="@dimen/h4" android:textColor="#ff10960b" android:id="@id/a5t" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/a2t" />
+                    </LinearLayout>
+                    <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="#ff353535" android:id="@id/a5u" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginTop="3.0dip" android:layout_below="@id/a5r" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/a5v" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <View android:id="@id/a5w" android:background="#ffbbdef1" android:layout_width="14.0dip" android:layout_height="14.0dip" android:layout_marginTop="2.0dip" />
+                        <TextView android:textSize="@dimen/h4" android:textColor="#ff70a0b9" android:id="@id/a5x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/a2s" />
+                    </LinearLayout>
+                    <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="#ff353535" android:id="@id/a5y" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginTop="3.0dip" android:layout_below="@id/a5v" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/a5z" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <View android:id="@id/a60" android:background="#ffe9e9e9" android:layout_width="14.0dip" android:layout_height="14.0dip" android:layout_marginTop="2.0dip" />
+                        <TextView android:textSize="@dimen/h4" android:textColor="#ff898989" android:id="@id/a61" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/a2r" />
+                    </LinearLayout>
+                    <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="#ff353535" android:id="@id/a62" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginTop="3.0dip" android:layout_below="@id/a5z" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="#ffededed" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dip">
+                <TextView android:textSize="@dimen/h4" android:textColor="#ff353535" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/a63" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="@dimen/h4" android:textColor="#ffaaaaaa" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/a64" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="20.0dip" android:minLines="2" />
+            </LinearLayout>
+            <Button android:enabled="false" android:id="@id/a65" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/d2" style="@style/MMSolidWhiteLargeButton" />
+            <Button android:enabled="false" android:id="@id/a66" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="16.0dip" android:layout_marginBottom="20.0dip" android:text="@string/bup" style="@style/MMSolidWhiteLargeButton" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

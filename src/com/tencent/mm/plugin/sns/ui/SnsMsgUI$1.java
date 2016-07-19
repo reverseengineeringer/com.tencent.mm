@@ -2,8 +2,8 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.plugin.sns.h.g;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.sns.i.g;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SnsMsgUI$1
   implements View.OnClickListener
@@ -12,17 +12,17 @@ final class SnsMsgUI$1
   
   public final void onClick(View paramView)
   {
-    if ((paramView.getTag() instanceof ag))
+    if ((paramView.getTag() instanceof ak))
     {
-      SnsMsgUI.a(hfU).a(paramView, -1, null);
+      SnsMsgUI.a(huL).a(paramView, -1, null);
       return;
     }
     if ((paramView.getTag() instanceof g))
     {
-      SnsMsgUI.a(hfU, (g)paramView.getTag());
+      SnsMsgUI.a(huL, (g)paramView.getTag());
       return;
     }
-    u.w("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "v.getTag():" + paramView.getTag());
+    v.w("MicroMsg.SnsMsgUI", "v.getTag():" + paramView.getTag());
   }
 }
 

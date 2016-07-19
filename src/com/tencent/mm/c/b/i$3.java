@@ -1,17 +1,17 @@
 package com.tencent.mm.c.b;
 
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class i$3
-  implements af.a
+  implements ah.a
 {
   i$3(i parami) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    u.d("!44@/B4Tb64lLpJjyqE6YDnAp4yx32s8/BqPmq6RdxNqkkU=", "onTimerExpired");
-    i.h(arv);
+    v.d("MicroMsg.SceneVoiceService", "onTimerExpired");
+    i.h(adc);
     return false;
   }
   

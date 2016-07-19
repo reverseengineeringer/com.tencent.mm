@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kzY:Lcom/tencent/mm/ui/applet/d$a;
+.field final synthetic kZe:Lcom/tencent/mm/ui/applet/d$a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 81
-    iput-object p1, p0, Lcom/tencent/mm/ui/applet/d$a$2;->kzY:Lcom/tencent/mm/ui/applet/d$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/applet/d$a$2;->kZe:Lcom/tencent/mm/ui/applet/d$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,15 +41,15 @@
 
     .prologue
     .line 85
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/d$a$2;->kzY:Lcom/tencent/mm/ui/applet/d$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/d$a$2;->kZe:Lcom/tencent/mm/ui/applet/d$a;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/ui/applet/d$a;->kzT:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/ui/applet/d$a;->kYZ:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/d$a$2;->kzY:Lcom/tencent/mm/ui/applet/d$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/d$a$2;->kZe:Lcom/tencent/mm/ui/applet/d$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/applet/d$a;->aAH:Landroid/widget/ProgressBar;
+    iget-object v0, v0, Lcom/tencent/mm/ui/applet/d$a;->amQ:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0}, Landroid/widget/ProgressBar;->getVisibility()I
 
@@ -58,52 +58,52 @@
     if-eqz v0, :cond_0
 
     .line 86
-    invoke-static {}, Lcom/tencent/mm/ba/c;->aZg()Lcom/tencent/mm/ba/c;
+    invoke-static {}, Lcom/tencent/mm/bd/c;->bex()Lcom/tencent/mm/bd/c;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/applet/d$a$2;->kzY:Lcom/tencent/mm/ui/applet/d$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/applet/d$a$2;->kZe:Lcom/tencent/mm/ui/applet/d$a;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/applet/d$a;->kzV:Lcom/tencent/mm/ba/c$a;
+    iget-object v1, v1, Lcom/tencent/mm/ui/applet/d$a;->kZb:Lcom/tencent/mm/bd/c$a;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ba/c;->b(Lcom/tencent/mm/ba/c$a;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/bd/c;->b(Lcom/tencent/mm/bd/c$a;)Z
 
     .line 88
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/d$a$2;->kzY:Lcom/tencent/mm/ui/applet/d$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/d$a$2;->kZe:Lcom/tencent/mm/ui/applet/d$a;
 
     :try_start_0
-    iget-object v1, v0, Lcom/tencent/mm/ui/applet/d$a;->all:Landroid/view/WindowManager;
+    iget-object v1, v0, Lcom/tencent/mm/ui/applet/d$a;->Yk:Landroid/view/WindowManager;
 
     if-eqz v1, :cond_2
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/applet/d$a;->alk:Landroid/widget/FrameLayout;
+    iget-object v1, v0, Lcom/tencent/mm/ui/applet/d$a;->Yj:Landroid/widget/FrameLayout;
 
     if-eqz v1, :cond_1
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/applet/d$a;->all:Landroid/view/WindowManager;
+    iget-object v1, v0, Lcom/tencent/mm/ui/applet/d$a;->Yk:Landroid/view/WindowManager;
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/applet/d$a;->alk:Landroid/widget/FrameLayout;
+    iget-object v2, v0, Lcom/tencent/mm/ui/applet/d$a;->Yj:Landroid/widget/FrameLayout;
 
     invoke-interface {v1, v2}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
     :cond_1
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/applet/d$a;->all:Landroid/view/WindowManager;
+    iput-object v1, v0, Lcom/tencent/mm/ui/applet/d$a;->Yk:Landroid/view/WindowManager;
 
     :cond_2
-    iget-object v1, v0, Lcom/tencent/mm/ui/applet/d$a;->alk:Landroid/widget/FrameLayout;
+    iget-object v1, v0, Lcom/tencent/mm/ui/applet/d$a;->Yj:Landroid/widget/FrameLayout;
 
     if-eqz v1, :cond_3
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/applet/d$a;->alk:Landroid/widget/FrameLayout;
+    iget-object v1, v0, Lcom/tencent/mm/ui/applet/d$a;->Yj:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->removeAllViews()V
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/applet/d$a;->alk:Landroid/widget/FrameLayout;
+    iput-object v1, v0, Lcom/tencent/mm/ui/applet/d$a;->Yj:Landroid/widget/FrameLayout;
 
     :cond_3
     const/4 v1, 0x0
@@ -114,7 +114,7 @@
 
     .line 89
     :goto_0
-    invoke-static {}, Lcom/tencent/mm/ui/applet/d;->bck()I
+    invoke-static {}, Lcom/tencent/mm/ui/applet/d;->bhx()I
 
     .line 90
     return-void

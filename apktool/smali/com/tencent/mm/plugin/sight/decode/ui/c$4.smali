@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sight/decode/ui/c;->avW()V
+    value = Lcom/tencent/mm/plugin/sight/decode/ui/c;->ayt()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gyI:Lcom/tencent/mm/plugin/sight/decode/ui/c;
+.field final synthetic gFh:Lcom/tencent/mm/plugin/sight/decode/ui/c;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 288
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$4;->gyI:Lcom/tencent/mm/plugin/sight/decode/ui/c;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$4;->gFh:Lcom/tencent/mm/plugin/sight/decode/ui/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 292
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$4;->gyI:Lcom/tencent/mm/plugin/sight/decode/ui/c;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$4;->gFh:Lcom/tencent/mm/plugin/sight/decode/ui/c;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/c;->dismiss()V
 

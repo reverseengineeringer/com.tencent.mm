@@ -2,8 +2,9 @@ package com.tencent.mm.model;
 
 import com.tencent.mm.sdk.h.d;
 import com.tencent.mm.sdk.h.j;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.aj;
 import com.tencent.mm.storage.s;
 import java.util.List;
 
@@ -14,52 +15,52 @@ final class ar$3
   
   public final void run()
   {
-    if ((bBH == null) || (!bBH.ui()))
+    if ((buP == null) || (!buP.uj()))
     {
-      Object localObject = ah.tD().rt();
-      boolean bool1 = aoX.cj("rconversation", "delete from rconversation");
-      boolean bool2 = aoX.cj("rconversation", "delete from rbottleconversation");
+      Object localObject = ah.tE().ru();
+      boolean bool1 = bkP.cx("rconversation", "delete from rconversation");
+      boolean bool2 = bkP.cx("rconversation", "delete from rbottleconversation");
       if ((bool1) || (bool2)) {}
       for (int i = 1;; i = 0)
       {
         if (i != 0) {
           ((s)localObject).b(5, (j)localObject, "");
         }
-        if ((bBH != null) && (bBH.ui())) {
-          break label234;
-        }
-        ar.uf();
-        if ((bBH != null) && (bBH.ui())) {
+        if ((buP != null) && (buP.uj())) {
           break label234;
         }
         ar.ug();
-        if ((bBH != null) && (bBH.ui())) {
+        if ((buP != null) && (buP.uj())) {
           break label234;
         }
-        ar.ue();
-        if ((bBH != null) && (bBH.ui())) {
+        ar.uh();
+        if ((buP != null) && (buP.uj())) {
           break label234;
         }
-        localObject = ah.tD().rs().Fa("message");
+        ar.uf();
+        if ((buP != null) && (buP.uj())) {
+          break label234;
+        }
+        localObject = ah.tE().rt().Hr("message");
         if (localObject == null) {
           break;
         }
         i = 0;
         while (i < ((List)localObject).size())
         {
-          ar.f((ag)((List)localObject).get(i));
+          ar.f((ai)((List)localObject).get(i));
           i += 1;
         }
       }
-      ah.tD().rs().Fc("message");
+      ah.tE().rt().Ht("message");
     }
     label234:
-    if (bBH != null) {
-      ab.j(new Runnable()
+    if (buP != null) {
+      ad.k(new Runnable()
       {
         public final void run()
         {
-          bBH.uh();
+          buP.ui();
         }
       });
     }

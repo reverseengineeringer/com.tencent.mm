@@ -12,14 +12,14 @@ final class SnsLabelUI$5
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = hfA;
-    if (((hfm.hfF == 2) && (hfm.hfH.size() == 0)) || ((hfm.hfF == 3) && (hfm.hfI.size() == 0))) {
-      g.a(paramMenuItem, paramMenuItem.getString(2131433175), "", paramMenuItem.getString(2131433169), null);
+    paramMenuItem = hur;
+    if (((hud.huw == 2) && (hud.huy.size() == 0)) || ((hud.huw == 3) && (hud.huz.size() == 0))) {
+      g.a(paramMenuItem, paramMenuItem.getString(2131235465), "", paramMenuItem.getString(2131235473), null);
     }
     for (;;)
     {
       return true;
-      paramMenuItem.aBZ();
+      paramMenuItem.aFc();
     }
   }
 }

@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field public hdt:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+.field public hDb:Lcom/tencent/mm/plugin/sns/ui/MaskTextView;
 
-.field public hmR:Lcom/tencent/mm/plugin/sns/ui/MaskTextView;
+.field public hsg:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
 
 # direct methods
@@ -51,12 +51,12 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0400
+    const v1, 0x7f0305cd
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     .line 36
-    const v0, 0x7f070d07
+    const v0, 0x7f1010f2
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/TranslateCommentTextView;->findViewById(I)Landroid/view/View;
 
@@ -64,10 +64,10 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/MaskTextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TranslateCommentTextView;->hmR:Lcom/tencent/mm/plugin/sns/ui/MaskTextView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TranslateCommentTextView;->hDb:Lcom/tencent/mm/plugin/sns/ui/MaskTextView;
 
     .line 37
-    const v0, 0x7f070d08
+    const v0, 0x7f100ffb
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/TranslateCommentTextView;->findViewById(I)Landroid/view/View;
 
@@ -75,10 +75,10 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TranslateCommentTextView;->hdt:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TranslateCommentTextView;->hsg:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
     .line 38
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TranslateCommentTextView;->hdt:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TranslateCommentTextView;->hsg:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
 
     const/16 v1, 0x8
 
@@ -86,26 +86,4 @@
 
     .line 39
     return-void
-.end method
-
-
-# virtual methods
-.method public getOriginCommentTextView()Landroid/widget/TextView;
-    .locals 1
-
-    .prologue
-    .line 75
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TranslateCommentTextView;->hmR:Lcom/tencent/mm/plugin/sns/ui/MaskTextView;
-
-    return-object v0
-.end method
-
-.method public getTranslateResultView()Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
-    .locals 1
-
-    .prologue
-    .line 79
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TranslateCommentTextView;->hdt:Lcom/tencent/mm/plugin/sns/ui/SnsTranslateResultView;
-
-    return-object v0
 .end method

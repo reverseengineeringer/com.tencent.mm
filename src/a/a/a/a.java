@@ -1,6 +1,6 @@
 package a.a.a;
 
-import com.tencent.mm.at.b;
+import com.tencent.mm.ax.b;
 import java.util.LinkedList;
 
 public final class a
@@ -10,10 +10,10 @@ public final class a
     if (paramb == null) {
       return 0;
     }
-    return a.a.a.b.b.a.ay(paramInt) + a.a.a.b.b.a.aA(iTS.length) + iTS.length;
+    return a.a.a.b.b.a.aQ(paramInt) + a.a.a.b.b.a.aS(jrl.length) + jrl.length;
   }
   
-  public static int b(int paramInt, LinkedList paramLinkedList)
+  public static int b(int paramInt, LinkedList<?> paramLinkedList)
   {
     int j = 0;
     int i = j;
@@ -30,15 +30,15 @@ public final class a
     {
       if (i >= paramLinkedList.size())
       {
-        i = a.a.a.b.b.a.aA(j) + j + a.a.a.b.b.a.ay(paramInt);
+        i = a.a.a.b.b.a.aS(j) + j + a.a.a.b.b.a.aQ(paramInt);
         return i;
       }
-      j += a.a.a.b.b.a.aA(((Integer)paramLinkedList.get(i)).intValue());
+      j += a.a.a.b.b.a.aS(((Integer)paramLinkedList.get(i)).intValue());
       i += 1;
     }
   }
   
-  public static int c(int paramInt1, int paramInt2, LinkedList paramLinkedList)
+  public static int c(int paramInt1, int paramInt2, LinkedList<?> paramLinkedList)
   {
     if (paramLinkedList != null)
     {
@@ -68,7 +68,7 @@ public final class a
             break;
           }
           ((Double)paramLinkedList.get(j)).doubleValue();
-          paramInt2 = a.a.a.b.b.a.ay(paramInt1);
+          paramInt2 = a.a.a.b.b.a.aQ(paramInt1);
           j += 1;
           i = paramInt2 + 8 + i;
         }
@@ -82,7 +82,7 @@ public final class a
             break;
           }
           ((Float)paramLinkedList.get(j)).floatValue();
-          paramInt2 = a.a.a.b.b.a.ay(paramInt1);
+          paramInt2 = a.a.a.b.b.a.aQ(paramInt1);
           j += 1;
           i = paramInt2 + 4 + i;
         }
@@ -95,7 +95,7 @@ public final class a
           if (j >= paramLinkedList.size()) {
             break;
           }
-          paramInt2 = cg(paramInt1, ((Integer)paramLinkedList.get(j)).intValue());
+          paramInt2 = cu(paramInt1, ((Integer)paramLinkedList.get(j)).intValue());
           j += 1;
           i = paramInt2 + i;
         }
@@ -108,7 +108,7 @@ public final class a
           if (j >= paramLinkedList.size()) {
             break;
           }
-          paramInt2 = z(paramInt1, ((Long)paramLinkedList.get(j)).longValue());
+          paramInt2 = y(paramInt1, ((Long)paramLinkedList.get(j)).longValue());
           j += 1;
           i = paramInt2 + i;
         }
@@ -121,7 +121,7 @@ public final class a
           if (j >= paramLinkedList.size()) {
             break;
           }
-          paramInt2 = a.a.a.b.b.a.e(paramInt1, (String)paramLinkedList.get(j));
+          paramInt2 = a.a.a.b.b.a.f(paramInt1, (String)paramLinkedList.get(j));
           j += 1;
           i = paramInt2 + i;
         }
@@ -135,7 +135,7 @@ public final class a
             break;
           }
           ((Boolean)paramLinkedList.get(j)).booleanValue();
-          paramInt2 = a.a.a.b.b.a.ay(paramInt1);
+          paramInt2 = a.a.a.b.b.a.aQ(paramInt1);
           j += 1;
           i = paramInt2 + 1 + i;
         }
@@ -148,7 +148,7 @@ public final class a
         if (j >= paramLinkedList.size()) {
           break;
         }
-        paramInt2 = ch(paramInt1, ((com.tencent.mm.at.a)paramLinkedList.get(j)).kn());
+        paramInt2 = cv(paramInt1, ((com.tencent.mm.ax.a)paramLinkedList.get(j)).iO());
         j += 1;
         i = paramInt2 + i;
       }
@@ -156,32 +156,22 @@ public final class a
     return 0;
   }
   
-  public static int cg(int paramInt1, int paramInt2)
+  public static int cu(int paramInt1, int paramInt2)
   {
     if (paramInt2 >= 0) {
-      return a.a.a.b.b.a.ay(paramInt1) + a.a.a.b.b.a.aA(paramInt2);
+      return a.a.a.b.b.a.aQ(paramInt1) + a.a.a.b.b.a.aS(paramInt2);
     }
-    return a.a.a.b.b.a.ay(paramInt1) + 10;
+    return a.a.a.b.b.a.aQ(paramInt1) + 10;
   }
   
-  public static int ch(int paramInt1, int paramInt2)
+  public static int cv(int paramInt1, int paramInt2)
   {
-    return a.a.a.b.b.a.ay(paramInt1) + a.a.a.b.b.a.aA(paramInt2) + paramInt2;
+    return a.a.a.b.b.a.aQ(paramInt1) + a.a.a.b.b.a.aS(paramInt2) + paramInt2;
   }
   
-  public static int e(int paramInt, String paramString)
+  public static int y(int paramInt, long paramLong)
   {
-    return a.a.a.b.b.a.e(paramInt, paramString);
-  }
-  
-  public static int sI(int paramInt)
-  {
-    return a.a.a.b.b.a.ay(paramInt) + 1;
-  }
-  
-  public static int z(int paramInt, long paramLong)
-  {
-    int i = a.a.a.b.b.a.ay(paramInt);
+    int i = a.a.a.b.b.a.aQ(paramInt);
     if ((0xFFFFFFFFFFFFFF80 & paramLong) == 0L) {
       paramInt = 1;
     }

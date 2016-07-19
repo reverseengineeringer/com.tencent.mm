@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kSd:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;
+.field final synthetic lsf:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 546
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a$1;->kSd:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a$1;->lsf:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,29 +41,29 @@
 
     .prologue
     .line 549
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a$1;->kSd:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a$1;->lsf:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;
 
     iget-object v0, v0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;->targetView:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
     .line 550
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a$1;->kSd:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a$1;->lsf:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;
 
     iget-object v0, v0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;->targetView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
 
     .line 551
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a$1;->kSd:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a$1;->lsf:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;->kSc:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;->lse:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a$1;->kSd:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a$1;->lsf:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;
 
     iget-object v1, v1, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;->targetView:Landroid/view/View;
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;->gqm:Ljava/util/List;
+    iget-object v2, v0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;->gAE:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 

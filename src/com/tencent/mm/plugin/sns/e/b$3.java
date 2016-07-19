@@ -1,43 +1,26 @@
 package com.tencent.mm.plugin.sns.e;
 
-import android.content.Intent;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.TextView;
-import com.tencent.mm.plugin.sns.ui.SnsCommentUI;
-import com.tencent.mm.ui.MMActivity;
-import java.util.List;
-import java.util.Map;
+import java.util.Iterator;
+import java.util.Set;
 
-final class b$3
-  implements View.OnClickListener
+public final class b$3
+  implements Runnable
 {
-  b$3(b paramb, com.tencent.mm.plugin.sns.data.b paramb1, TextView paramTextView) {}
+  public b$3(b paramb, String paramString1, String paramString2) {}
   
-  public final void onClick(View paramView)
+  public final void run()
   {
-    int i = ((Integer)paramView.getTag()).intValue();
-    paramView = (b.b)gRz.gRr.get(Long.valueOf(gRx.gHt));
-    int j = gRz.gRu.gSk.get(i)).gRa;
-    if (paramView != null) {
-      paramView.vf("3:" + j + ":" + daK.getText());
-    }
-    if (gRz.gRu.gSk.get(i)).gRe == 1)
+    if (b.b(gTG) != null)
     {
-      Intent localIntent = new Intent();
-      localIntent.setClass(gRz.mContext, SnsCommentUI.class);
-      localIntent.putExtra("sns_comment_type", 2);
-      localIntent.putExtra("sns_id", gRx.gHt);
-      localIntent.putExtra("sns_uxinfo", gRE);
-      localIntent.putExtra("action_st_time", gRF);
-      localIntent.putExtra("sns_actionresult", gRD.toString());
-      ((MMActivity)gRz.mContext).startActivity(localIntent);
-      gRz.gRr.remove(Long.valueOf(gRx.gHt));
-      gRz.azM();
-      return;
+      Iterator localIterator = b.b(gTG).iterator();
+      while (localIterator.hasNext())
+      {
+        b.a locala = (b.a)localIterator.next();
+        if (locala != null) {
+          locala.bt(bEb, dtN);
+        }
+      }
     }
-    gRz.a(paramView);
-    gRz.azM();
   }
 }
 

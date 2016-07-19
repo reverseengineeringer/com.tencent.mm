@@ -2,9 +2,9 @@ package com.tencent.mm.ui;
 
 public abstract interface e$a
 {
-  public abstract void Gh();
+  public abstract void GE();
   
-  public abstract void Gi();
+  public abstract void GF();
 }
 
 /* Location:

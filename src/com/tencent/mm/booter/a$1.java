@@ -1,26 +1,26 @@
 package com.tencent.mm.booter;
 
-import com.tencent.mm.sdk.platformtools.ak.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.an.a;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class a$1
-  implements ak.a
+  implements an.a
 {
   a$1(a parama) {}
   
-  public final void bx(int paramInt)
+  public final void bP(int paramInt)
   {
     switch (paramInt)
     {
     default: 
       return;
     case 0: 
-      u.v("!44@/B4Tb64lLpI7uCMufYgkMolJsZYezO/Lsg5Y9fbkrg4=", "call end");
-      blD.mr();
+      v.v("MicroMsg.BackgroundPlayer", "call end");
+      aZf.kF();
       return;
     }
-    u.v("!44@/B4Tb64lLpI7uCMufYgkMolJsZYezO/Lsg5Y9fbkrg4=", "call start");
-    blD.ms();
+    v.v("MicroMsg.BackgroundPlayer", "call start");
+    aZf.kG();
   }
 }
 

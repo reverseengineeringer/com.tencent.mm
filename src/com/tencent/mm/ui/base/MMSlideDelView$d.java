@@ -5,15 +5,15 @@ import java.util.Set;
 
 public abstract interface MMSlideDelView$d
 {
-  public static final Set hfY = new HashSet();
+  public static final Set<MMSlideDelView> eLI = new HashSet();
   
   public abstract void a(MMSlideDelView paramMMSlideDelView, boolean paramBoolean);
   
-  public abstract boolean aCe();
+  public abstract boolean agI();
   
-  public abstract void aCf();
+  public abstract void agJ();
   
-  public abstract void aCg();
+  public abstract void agK();
 }
 
 /* Location:

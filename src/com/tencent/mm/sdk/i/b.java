@@ -5,14 +5,14 @@ import junit.framework.Assert;
 
 final class b
 {
-  private ThreadGroup bTi;
-  private final AtomicInteger jYO = new AtomicInteger(1);
-  private e.b jYP;
+  private ThreadGroup bMH;
+  private final AtomicInteger kzl = new AtomicInteger(1);
+  private e.b kzm;
   
   b(e.b paramb)
   {
-    jYP = paramb;
-    bTi = new ThreadGroup("MM_FREE_THREAD_GROUP");
+    kzm = paramb;
+    bMH = new ThreadGroup("MM_FREE_THREAD_GROUP");
   }
   
   final Thread a(Runnable paramRunnable, String paramString, int paramInt)
@@ -20,12 +20,12 @@ final class b
     Assert.assertNotNull("newThread arg name is null!", paramString);
     if (paramRunnable != null)
     {
-      paramRunnable = new g(paramRunnable, paramString, paramInt, false, jYP);
-      paramRunnable = new a(bTi, paramRunnable, "MM_Thread_Pool_Free_Thread#" + jYO.getAndIncrement() + "#" + paramString);
+      paramRunnable = new g(paramRunnable, paramString, paramInt, false, kzm);
+      paramRunnable = new a(bMH, paramRunnable, "MM_Thread_Pool_Free_Thread#" + kzl.getAndIncrement() + "#" + paramString);
       paramRunnable.setPriority(paramInt);
       return paramRunnable;
     }
-    paramRunnable = new a(bTi, null, "MM_Thread_Pool_Free_Thread#" + jYO.getAndIncrement() + "#" + paramString);
+    paramRunnable = new a(bMH, null, "MM_Thread_Pool_Free_Thread#" + kzl.getAndIncrement() + "#" + paramString);
     paramRunnable.setPriority(paramInt);
     return paramRunnable;
   }
@@ -33,12 +33,12 @@ final class b
   static final class a
     extends Thread
   {
-    private g jYQ;
+    private g kzn;
     
     a(ThreadGroup paramThreadGroup, g paramg, String paramString)
     {
       super(paramg, paramString);
-      jYQ = paramg;
+      kzn = paramg;
     }
     
     public final void run()

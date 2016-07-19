@@ -9,10 +9,10 @@ final class MainSightContainerView$3
   
   public final void run()
   {
-    gCA.setCameraShadowAlpha(0.0F);
-    MainSightContainerView.k(gCA).clearAnimation();
-    MainSightContainerView.k(gCA).setVisibility(8);
-    MainSightContainerView.l(gCA);
+    gJb.u(0.0F);
+    MainSightContainerView.k(gJb).clearAnimation();
+    MainSightContainerView.k(gJb).setVisibility(8);
+    MainSightContainerView.l(gJb);
   }
 }
 

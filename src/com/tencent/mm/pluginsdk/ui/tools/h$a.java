@@ -7,7 +7,7 @@ import com.tencent.mm.ui.widget.MMEditText.b;
 public final class h$a
   implements TextWatcher
 {
-  public MMEditText.b iSM = null;
+  public MMEditText.b jpV = null;
   
   public final void afterTextChanged(Editable paramEditable) {}
   
@@ -15,8 +15,8 @@ public final class h$a
   
   public final void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
   {
-    if (iSM != null) {
-      iSM.aqD();
+    if (jpV != null) {
+      jpV.atE();
     }
   }
 }

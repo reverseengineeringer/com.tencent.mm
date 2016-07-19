@@ -5,7 +5,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnKeyListener;
 import android.widget.Button;
-import com.tencent.mm.aw.a;
+import com.tencent.mm.az.a;
 
 final class ChatFooter$10
   implements View.OnKeyListener
@@ -22,18 +22,18 @@ final class ChatFooter$10
       do
       {
         return false;
-      } while (((paramInt != 23) && (paramInt != 66)) || (ChatFooter.t(iLO)) || (ChatFooter.s(iLO)));
-      ChatFooter.d(iLO, true);
-      ChatFooter.r(iLO).setBackgroundDrawable(a.y(iLO.getContext(), 2130970273));
-      ChatFooter.r(iLO).setText(2131428000);
-      ChatFooter.j(iLO).ail();
-      ChatFooter.r(iLO).setContentDescription(iLO.getContext().getString(2131429616));
+      } while (((paramInt != 23) && (paramInt != 66)) || (ChatFooter.u(jiL)) || (ChatFooter.t(jiL)));
+      ChatFooter.d(jiL, true);
+      ChatFooter.r(jiL).setBackgroundDrawable(a.C(jiL.getContext(), 2130839183));
+      ChatFooter.r(jiL).setText(2131231620);
+      ChatFooter.j(jiL).akS();
+      ChatFooter.r(jiL).setContentDescription(jiL.getContext().getString(2131231598));
       return false;
     } while ((paramInt != 23) && (paramInt != 66));
-    ChatFooter.r(iLO).setBackgroundDrawable(a.y(iLO.getContext(), 2130970308));
-    ChatFooter.r(iLO).setText(2131427999);
-    ChatFooter.j(iLO).aii();
-    ChatFooter.d(iLO, false);
+    ChatFooter.r(jiL).setBackgroundDrawable(a.C(jiL.getContext(), 2130839182));
+    ChatFooter.r(jiL).setText(2131231619);
+    ChatFooter.j(jiL).akP();
+    ChatFooter.d(jiL, false);
     return false;
   }
 }

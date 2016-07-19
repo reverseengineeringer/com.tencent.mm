@@ -1,30 +1,16 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.d.a.gs;
-import com.tencent.mm.d.a.gs.a;
-import com.tencent.mm.sdk.c.b;
-import com.tencent.mm.sdk.c.c;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 final class SnsUserUI$4
-  extends c
+  implements DialogInterface.OnClickListener
 {
-  SnsUserUI$4(SnsUserUI paramSnsUserUI)
-  {
-    super(0);
-  }
+  SnsUserUI$4(SnsUserUI paramSnsUserUI) {}
   
-  public final boolean a(b paramb)
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((paramb instanceof gs)) {
-      switch (aBQ.action)
-      {
-      }
-    }
-    for (;;)
-    {
-      return false;
-      SnsUserUI.a(hme).notifyDataSetChanged();
-    }
+    paramDialogInterface.dismiss();
   }
 }
 

@@ -1,11 +1,11 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
 
 public abstract interface d$e
 {
-  public static final String kjL = ;
-  public static final String kjM = y.getPackageName() + ":tools";
+  public static final String kJT = ;
+  public static final String kJU = aa.getPackageName() + ":tools";
 }
 
 /* Location:

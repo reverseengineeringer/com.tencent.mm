@@ -9,17 +9,17 @@ public class InitCallBackImageView
   extends ImageView
 {
   private boolean hasDrawed;
-  private ea lcq;
+  private eb lCH;
   
   public InitCallBackImageView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
   }
   
-  public InitCallBackImageView(Context paramContext, ea paramea)
+  public InitCallBackImageView(Context paramContext, eb parameb)
   {
     super(paramContext);
-    lcq = paramea;
+    lCH = parameb;
   }
   
   protected void onDraw(Canvas paramCanvas)
@@ -28,15 +28,10 @@ public class InitCallBackImageView
     if (!hasDrawed)
     {
       hasDrawed = true;
-      if (lcq != null) {
-        lcq.kw();
+      if (lCH != null) {
+        lCH.iZ();
       }
     }
-  }
-  
-  public void setListener(ea paramea)
-  {
-    lcq = paramea;
   }
 }
 

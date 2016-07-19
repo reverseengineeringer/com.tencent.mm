@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gEa:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
+.field final synthetic gKA:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 54
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gEa:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gKA:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
     const/4 v5, 0x0
 
     .line 59
-    const-string/jumbo v0, "!44@/B4Tb64lLpJusIoUV0UaqEWWY4ZA95CZ1/X4zWUi2B8="
+    const-string/jumbo v0, "MicroMsg.SightCameraTextureView"
 
     const-string/jumbo v1, "onSurfaceTextureAvailable, [%d, %d], input SurfaceTexture %s, get SurfaceTexture %s"
 
@@ -71,7 +71,7 @@
 
     const/4 v3, 0x3
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gEa:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gKA:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
 
     invoke-static {v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->a(Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;)Lcom/tencent/mm/ui/base/MMTextureView;
 
@@ -83,31 +83,31 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 61
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gEa:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gKA:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
 
-    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;->gEr:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;
+    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;->gKS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;
 
-    iput-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gEi:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;
+    iput-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gKI:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;
 
     .line 62
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gEa:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gKA:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->a(Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;)Lcom/tencent/mm/ui/base/MMTextureView;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMTextureView;->bcZ()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMTextureView;->biB()V
 
     .line 64
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gEa:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gKA:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
 
     invoke-static {v0, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->a(Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;Landroid/graphics/SurfaceTexture;)Landroid/graphics/SurfaceTexture;
 
     .line 65
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gEa:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gKA:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->getVisibility()I
 
@@ -115,33 +115,33 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gEa:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gKA:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gBY:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gIA:Z
 
     if-eqz v0, :cond_0
 
     .line 66
-    const-string/jumbo v0, "!44@/B4Tb64lLpJusIoUV0UaqEWWY4ZA95CZ1/X4zWUi2B8="
+    const-string/jumbo v0, "MicroMsg.SightCameraTextureView"
 
     const-string/jumbo v1, "current view is visible, try preview camera"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 67
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gEa:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gKA:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->axa()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->azz()V
 
     .line 69
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpJusIoUV0UaqEWWY4ZA95CZ1/X4zWUi2B8="
+    const-string/jumbo v0, "MicroMsg.SightCameraTextureView"
 
     const-string/jumbo v1, "onSurfaceTextureAvailable end, sly texture %s"
 
     new-array v2, v6, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gEa:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gKA:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
 
     invoke-static {v3}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->b(Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;)Landroid/graphics/SurfaceTexture;
 
@@ -149,7 +149,7 @@
 
     aput-object v3, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 70
     return-void
@@ -164,38 +164,38 @@
     const/4 v3, 0x0
 
     .line 82
-    const-string/jumbo v0, "!44@/B4Tb64lLpJusIoUV0UaqEWWY4ZA95CZ1/X4zWUi2B8="
+    const-string/jumbo v0, "MicroMsg.SightCameraTextureView"
 
     const-string/jumbo v1, "onSurfaceTextureDestroyed"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 83
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gEa:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gKA:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
 
-    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;->gEt:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;
+    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;->gKU:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;
 
-    iput-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gEi:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;
+    iput-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gKI:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;
 
     .line 84
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gEa:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gKA:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->a(Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;Landroid/graphics/SurfaceTexture;)Landroid/graphics/SurfaceTexture;
 
     .line 85
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gEa:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gKA:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
 
-    iput-boolean v3, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gEj:Z
+    iput-boolean v3, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gKJ:Z
 
     .line 86
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gEa:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gKA:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->axb()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->azA()V
 
     .line 87
-    const-string/jumbo v0, "!44@/B4Tb64lLpJusIoUV0UaqEWWY4ZA95CZ1/X4zWUi2B8="
+    const-string/jumbo v0, "MicroMsg.SightCameraTextureView"
 
     const-string/jumbo v1, "destroyed texture %s"
 
@@ -203,7 +203,7 @@
 
     aput-object p1, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 88
     return v4
@@ -218,7 +218,7 @@
     const/4 v4, 0x0
 
     .line 75
-    const-string/jumbo v0, "!44@/B4Tb64lLpJusIoUV0UaqEWWY4ZA95CZ1/X4zWUi2B8="
+    const-string/jumbo v0, "MicroMsg.SightCameraTextureView"
 
     const-string/jumbo v1, "onSurfaceTextureSizeChanged, [%d, %d]"
 
@@ -238,17 +238,17 @@
 
     aput-object v3, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 76
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gEa:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;->gKA:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
 
-    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;->gEs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;
+    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;->gKT:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;
 
-    iput-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gEi:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;
+    iput-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gKI:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;
 
     .line 77
-    const-string/jumbo v0, "!44@/B4Tb64lLpJusIoUV0UaqEWWY4ZA95CZ1/X4zWUi2B8="
+    const-string/jumbo v0, "MicroMsg.SightCameraTextureView"
 
     const-string/jumbo v1, "changed texture %s"
 
@@ -256,7 +256,7 @@
 
     aput-object p1, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 78
     return-void

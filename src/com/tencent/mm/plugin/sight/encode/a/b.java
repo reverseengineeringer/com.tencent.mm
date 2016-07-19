@@ -8,29 +8,29 @@ public abstract interface b
   
   public abstract void a(b paramb);
   
-  public abstract boolean awo();
+  public abstract boolean ayM();
   
-  public abstract long awp();
+  public abstract long ayN();
   
-  public abstract b awq();
+  public abstract b ayO();
   
-  public abstract void awr();
+  public abstract void ayP();
   
-  public abstract float aws();
+  public abstract String ayQ();
   
-  public abstract Camera.PreviewCallback awt();
+  public abstract float ayR();
+  
+  public abstract Camera.PreviewCallback ayS();
   
   public abstract void b(a parama);
   
-  public abstract void bk(String paramString1, String paramString2);
+  public abstract void br(String paramString1, String paramString2);
   
   public abstract void cancel();
   
   public abstract int getDuration();
   
   public abstract int getFrameCount();
-  
-  public abstract String getRecordPath();
   
   public abstract void initialize(int paramInt);
   
@@ -40,7 +40,7 @@ public abstract interface b
   
   public static abstract interface a
   {
-    public abstract void awu();
+    public abstract void ayT();
     
     public abstract void onError();
     
@@ -49,7 +49,10 @@ public abstract interface b
     public abstract void onStop();
   }
   
-  public static enum b {}
+  public static enum b
+  {
+    private b() {}
+  }
 }
 
 /* Location:

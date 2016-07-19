@@ -4,7 +4,7 @@ public class e
 {
   public static native double b(int paramInt1, int paramInt2, double[] paramArrayOfDouble);
   
-  public static native int o(byte[] paramArrayOfByte);
+  public static native int o(byte[] paramArrayOfByte, int paramInt);
   
   public static native double r(double paramDouble, int paramInt1, int paramInt2);
   

@@ -10,28 +10,28 @@ final class SnsCommentFooter$5
 {
   SnsCommentFooter$5(SnsCommentFooter paramSnsCommentFooter) {}
   
-  public final void ahA() {}
+  public final void akl() {}
   
-  public final void ahB()
+  public final void akm()
   {
-    if ((SnsCommentFooter.a(hdG) == null) || (SnsCommentFooter.a(hdG).getInputConnection() == null)) {
+    if ((SnsCommentFooter.a(hst) == null) || (ahst).mfQ == null)) {
       return;
     }
-    SnsCommentFooter.a(hdG).getInputConnection().sendKeyEvent(new KeyEvent(0, 67));
-    SnsCommentFooter.a(hdG).getInputConnection().sendKeyEvent(new KeyEvent(1, 67));
+    ahst).mfQ.sendKeyEvent(new KeyEvent(0, 67));
+    ahst).mfQ.sendKeyEvent(new KeyEvent(1, 67));
   }
   
   public final void append(String paramString)
   {
     try
     {
-      SnsCommentFooter.a(hdG).HO(paramString);
+      SnsCommentFooter.a(hst).Kd(paramString);
       return;
     }
     catch (Exception paramString) {}
   }
   
-  public final void dr(boolean paramBoolean) {}
+  public final void dq(boolean paramBoolean) {}
 }
 
 /* Location:

@@ -6,51 +6,51 @@ import android.graphics.Bitmap;
 
 public abstract interface y
 {
-  public abstract int a(Notification paramNotification, boolean paramBoolean);
+  public abstract void U(boolean paramBoolean);
   
-  public abstract Notification a(int paramInt, PendingIntent paramPendingIntent, String paramString1, String paramString2, String paramString3, Bitmap paramBitmap, String paramString4);
+  public abstract int a(Notification paramNotification, boolean paramBoolean);
   
   public abstract Notification a(Notification paramNotification, int paramInt1, int paramInt2, PendingIntent paramPendingIntent, String paramString1, String paramString2, String paramString3, Bitmap paramBitmap, String paramString4);
   
   public abstract Notification a(Notification paramNotification, int paramInt, PendingIntent paramPendingIntent1, String paramString1, String paramString2, String paramString3, Bitmap paramBitmap, String paramString4, PendingIntent paramPendingIntent2, String paramString5, PendingIntent paramPendingIntent3, String paramString6);
   
-  public abstract void a(int paramInt, Notification paramNotification, boolean paramBoolean);
+  public abstract Notification a(PendingIntent paramPendingIntent, String paramString1, String paramString2, String paramString3, Bitmap paramBitmap, String paramString4);
   
-  public abstract void ar(boolean paramBoolean);
+  public abstract void a(int paramInt, Notification paramNotification, boolean paramBoolean);
   
   public abstract int b(Notification paramNotification);
   
-  public abstract void bA(int paramInt);
+  public abstract void bR(int paramInt);
   
-  public abstract void bB(int paramInt);
+  public abstract void bS(int paramInt);
   
-  public abstract void bz(int paramInt);
+  public abstract void bT(int paramInt);
   
-  public abstract void cK(String paramString);
+  public abstract void cR(String paramString);
   
-  public abstract void cL(String paramString);
+  public abstract void cS(String paramString);
   
   public abstract void cancel(int paramInt);
   
   public abstract void cancelNotification(String paramString);
   
-  public abstract void i(int paramInt, String paramString);
+  public abstract void i(String paramString, int paramInt);
   
-  public abstract void kL();
+  public abstract void j(int paramInt, String paramString);
   
-  public abstract void l(String paramString, int paramInt);
+  public abstract void jl();
   
-  public abstract String nl();
+  public abstract void lA();
   
-  public abstract void nm();
+  public abstract boolean lB();
   
-  public abstract boolean nn();
+  public abstract void lC();
   
-  public abstract void no();
+  public abstract void lD();
+  
+  public abstract String lz();
   
   public abstract void notify(int paramInt, Notification paramNotification);
-  
-  public abstract void np();
 }
 
 /* Location:

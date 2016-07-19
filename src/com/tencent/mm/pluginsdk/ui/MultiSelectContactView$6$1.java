@@ -9,9 +9,9 @@ final class MultiSelectContactView$6$1
   
   public final void run()
   {
-    MultiSelectContactView.h(iHj.iHi).removeView(iHj.cqb);
-    MultiSelectContactView.i(iHj.iHi);
-    MultiSelectContactView.a(iHj.iHi, MultiSelectContactView.h(iHj.iHi).getChildCount());
+    MultiSelectContactView.h(jee.jed).removeView(jee.clo);
+    MultiSelectContactView.i(jee.jed);
+    MultiSelectContactView.a(jee.jed, MultiSelectContactView.h(jee.jed).getChildCount());
   }
 }
 

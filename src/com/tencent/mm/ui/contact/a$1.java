@@ -3,9 +3,9 @@ package com.tencent.mm.ui.contact;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewStub;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.MMSlideDelView.d;
-import com.tencent.mm.ui.base.MMSlideDelView.f;
+import com.tencent.mm.ui.base.MMSlideDelView.e;
 import java.util.HashMap;
 
 final class a$1
@@ -15,10 +15,10 @@ final class a$1
   
   public final void onClick(View paramView)
   {
-    u.v("!32@/B4Tb64lLpJvPADYHZ60V72QCl639+9L", "on delView clicked");
-    lhP.cHi.aCg();
-    if (lhP.fin != null) {
-      lhP.fin.Z(((ViewStub)a.a(lhP).get(paramView)).getTag());
+    v.v("MicroMsg.AddressAdapter", "on delView clicked");
+    lIa.cEm.agK();
+    if (lIa.frj != null) {
+      lIa.frj.at(((ViewStub)a.a(lIa).get(paramView)).getTag());
     }
   }
 }

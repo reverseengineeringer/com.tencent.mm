@@ -1,141 +1,289 @@
 package com.tencent.mm.protocal.b;
 
+import java.util.LinkedList;
+
 public final class nl
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public int aBp;
-  public String aEM;
-  public boolean jmP = false;
-  public boolean jmQ = false;
-  public boolean jmR = false;
-  public boolean jmS = false;
-  public boolean jmT = false;
-  public String label;
-  public double lat;
-  public double lng;
-  
-  public final nl BR(String paramString)
-  {
-    label = paramString;
-    jmS = true;
-    return this;
-  }
-  
-  public final nl BS(String paramString)
-  {
-    aEM = paramString;
-    jmT = true;
-    return this;
-  }
+  public String desc;
+  public String eyc;
+  public boolean jIT = false;
+  public boolean jIU = false;
+  public nm jKg;
+  public boolean jKh = false;
+  public nq jKi;
+  public boolean jKj = false;
+  public od jKk;
+  public boolean jKl = false;
+  public ns jKm;
+  public boolean jKn = false;
+  public nx jKo;
+  public boolean jKp = false;
+  public boolean jKq = false;
+  public long jKr;
+  public boolean jKs = false;
+  public int jKt = -1;
+  public boolean jKu = false;
+  public long jKv;
+  public boolean jKw = false;
+  public String title;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (jmP == true) {
-        paramVarArgs.a(1, lng);
+      if (jKg != null)
+      {
+        paramVarArgs.cx(1, jKg.iO());
+        jKg.a(paramVarArgs);
       }
-      if (jmQ == true) {
-        paramVarArgs.a(2, lat);
+      if (jKi != null)
+      {
+        paramVarArgs.cx(2, jKi.iO());
+        jKi.a(paramVarArgs);
       }
-      if (jmR == true) {
-        paramVarArgs.ci(3, aBp);
+      if (jKk != null)
+      {
+        paramVarArgs.cx(3, jKk.iO());
+        jKk.a(paramVarArgs);
       }
-      if (label != null) {
-        paramVarArgs.d(4, label);
+      if (jKm != null)
+      {
+        paramVarArgs.cx(4, jKm.iO());
+        jKm.a(paramVarArgs);
       }
-      if (aEM != null) {
-        paramVarArgs.d(5, aEM);
+      if (jKo != null)
+      {
+        paramVarArgs.cx(5, jKo.iO());
+        jKo.a(paramVarArgs);
+      }
+      if (eyc != null) {
+        paramVarArgs.e(6, eyc);
+      }
+      if (title != null) {
+        paramVarArgs.e(7, title);
+      }
+      if (desc != null) {
+        paramVarArgs.e(8, desc);
+      }
+      if (jKs == true) {
+        paramVarArgs.z(9, jKr);
+      }
+      if (jKu == true) {
+        paramVarArgs.cw(101, jKt);
+      }
+      if (jKw == true) {
+        paramVarArgs.z(11, jKv);
       }
       return 0;
     }
     if (paramInt == 1) {
-      if (jmP != true) {
-        break label433;
+      if (jKg == null) {
+        break label1323;
       }
     }
-    label433:
-    for (int i = a.a.a.b.b.a.ay(1) + 8 + 0;; i = 0)
+    label1323:
+    for (int i = a.a.a.a.cv(1, jKg.iO()) + 0;; i = 0)
     {
       paramInt = i;
-      if (jmQ == true) {
-        paramInt = i + (a.a.a.b.b.a.ay(2) + 8);
+      if (jKi != null) {
+        paramInt = i + a.a.a.a.cv(2, jKi.iO());
       }
       i = paramInt;
-      if (jmR == true) {
-        i = paramInt + a.a.a.a.cg(3, aBp);
+      if (jKk != null) {
+        i = paramInt + a.a.a.a.cv(3, jKk.iO());
       }
       paramInt = i;
-      if (label != null) {
-        paramInt = i + a.a.a.b.b.a.e(4, label);
+      if (jKm != null) {
+        paramInt = i + a.a.a.a.cv(4, jKm.iO());
       }
       i = paramInt;
-      if (aEM != null) {
-        i = paramInt + a.a.a.b.b.a.e(5, aEM);
+      if (jKo != null) {
+        i = paramInt + a.a.a.a.cv(5, jKo.iO());
+      }
+      paramInt = i;
+      if (eyc != null) {
+        paramInt = i + a.a.a.b.b.a.f(6, eyc);
+      }
+      i = paramInt;
+      if (title != null) {
+        i = paramInt + a.a.a.b.b.a.f(7, title);
+      }
+      paramInt = i;
+      if (desc != null) {
+        paramInt = i + a.a.a.b.b.a.f(8, desc);
+      }
+      i = paramInt;
+      if (jKs == true) {
+        i = paramInt + a.a.a.a.y(9, jKr);
+      }
+      paramInt = i;
+      if (jKu == true) {
+        paramInt = i + a.a.a.a.cu(101, jKt);
+      }
+      i = paramInt;
+      if (jKw == true) {
+        i = paramInt + a.a.a.a.y(11, jKv);
       }
       return i;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
         break;
       }
       if (paramInt == 3)
       {
-        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
         nl localnl = (nl)paramVarArgs[1];
-        switch (((Integer)paramVarArgs[2]).intValue())
+        paramInt = ((Integer)paramVarArgs[2]).intValue();
+        Object localObject2;
+        boolean bool;
+        switch (paramInt)
         {
         default: 
           return -1;
         case 1: 
-          lng = maU.readDouble();
-          jmP = true;
+          paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+          i = paramVarArgs.size();
+          paramInt = 0;
+          while (paramInt < i)
+          {
+            localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new nm();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+            for (bool = true; bool; bool = ((nm)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, com.tencent.mm.ax.a.a((a.a.a.a.a)localObject2))) {}
+            jKg = ((nm)localObject1);
+            paramInt += 1;
+          }
+          jKh = true;
           return 0;
         case 2: 
-          lat = maU.readDouble();
-          jmQ = true;
+          paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+          i = paramVarArgs.size();
+          paramInt = 0;
+          while (paramInt < i)
+          {
+            localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new nq();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+            for (bool = true; bool; bool = ((nq)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, com.tencent.mm.ax.a.a((a.a.a.a.a)localObject2))) {}
+            jKi = ((nq)localObject1);
+            paramInt += 1;
+          }
+          jKj = true;
           return 0;
         case 3: 
-          aBp = maU.jC();
-          jmR = true;
+          paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+          i = paramVarArgs.size();
+          paramInt = 0;
+          while (paramInt < i)
+          {
+            localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new od();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+            for (bool = true; bool; bool = ((od)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, com.tencent.mm.ax.a.a((a.a.a.a.a)localObject2))) {}
+            jKk = ((od)localObject1);
+            paramInt += 1;
+          }
+          jKl = true;
           return 0;
         case 4: 
-          label = maU.readString();
-          jmS = true;
+          paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+          i = paramVarArgs.size();
+          paramInt = 0;
+          while (paramInt < i)
+          {
+            localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new ns();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+            for (bool = true; bool; bool = ((ns)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, com.tencent.mm.ax.a.a((a.a.a.a.a)localObject2))) {}
+            jKm = ((ns)localObject1);
+            paramInt += 1;
+          }
+          jKn = true;
+          return 0;
+        case 5: 
+          paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+          i = paramVarArgs.size();
+          paramInt = 0;
+          while (paramInt < i)
+          {
+            localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new nx();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+            for (bool = true; bool; bool = ((nx)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, com.tencent.mm.ax.a.a((a.a.a.a.a)localObject2))) {}
+            jKo = ((nx)localObject1);
+            paramInt += 1;
+          }
+          jKp = true;
+          return 0;
+        case 6: 
+          eyc = mMY.readString();
+          jKq = true;
+          return 0;
+        case 7: 
+          title = mMY.readString();
+          jIT = true;
+          return 0;
+        case 8: 
+          desc = mMY.readString();
+          jIU = true;
+          return 0;
+        case 9: 
+          jKr = mMY.ie();
+          jKs = true;
+          return 0;
+        case 101: 
+          jKt = mMY.id();
+          jKu = true;
           return 0;
         }
-        aEM = maU.readString();
-        jmT = true;
+        jKv = mMY.ie();
+        jKw = true;
         return 0;
       }
       return -1;
     }
   }
   
-  public final nl h(double paramDouble)
+  public final nl a(nq paramnq)
   {
-    lng = paramDouble;
-    jmP = true;
+    jKi = paramnq;
+    jKj = true;
     return this;
   }
   
-  public final nl i(double paramDouble)
+  public final nl a(ns paramns)
   {
-    lat = paramDouble;
-    jmQ = true;
+    jKm = paramns;
+    jKn = true;
     return this;
   }
   
-  public final nl pa(int paramInt)
+  public final nl a(nx paramnx)
   {
-    aBp = paramInt;
-    jmR = true;
+    jKo = paramnx;
+    jKp = true;
+    return this;
+  }
+  
+  public final nl a(od paramod)
+  {
+    jKk = paramod;
+    jKl = true;
+    return this;
+  }
+  
+  public final nl c(nm paramnm)
+  {
+    jKg = paramnm;
+    jKh = true;
     return this;
   }
 }

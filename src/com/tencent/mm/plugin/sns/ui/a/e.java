@@ -1,11 +1,11 @@
 package com.tencent.mm.plugin.sns.ui.a;
 
 import android.content.Context;
-import com.tencent.mm.protocal.b.fy;
 import com.tencent.mm.protocal.b.gd;
-import com.tencent.mm.ui.e.d;
-import com.tencent.mm.ui.e.h.b;
-import com.tencent.mm.ui.e.h.c;
+import com.tencent.mm.protocal.b.gi;
+import com.tencent.mm.ui.f.d;
+import com.tencent.mm.ui.f.h.b;
+import com.tencent.mm.ui.f.h.c;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -17,49 +17,49 @@ public final class e
     super(paramContext, paramc, paramInt);
   }
   
-  public final long Lf()
+  public final long LZ()
   {
     return 8L;
   }
   
-  protected final com.tencent.mm.ui.e.a.a a(int paramInt, h.b paramb)
+  protected final com.tencent.mm.ui.f.a.a a(int paramInt, h.b paramb)
   {
-    int i = paramInt - lsV - 1;
-    gd localgd = null;
-    Object localObject = localgd;
-    if (i < lta)
+    int i = paramInt - lTz - 1;
+    gi localgi = null;
+    Object localObject = localgi;
+    if (i < lTE)
     {
-      localObject = localgd;
+      localObject = localgi;
       if (i >= 0)
       {
-        localgd = (gd)ltb.jdy.get(i);
+        localgi = (gi)lTF.jBi.get(i);
         localObject = new a(paramInt);
-        hnf = jdQ;
-        cNH = ltb.jdx;
-        lth = jdO;
+        hDB = jBA;
+        cKI = lTF.jBh;
+        lTK = jBy;
       }
     }
     if (localObject != null) {
-      ltf = (i + 1);
+      lTI = (i + 1);
     }
-    return (com.tencent.mm.ui.e.a.a)localObject;
+    return (com.tencent.mm.ui.f.a.a)localObject;
   }
   
-  protected final void b(fy paramfy)
+  protected final void b(gd paramgd)
   {
     h.b localb = new h.b();
-    ihI = ((int)jdv);
-    ltb = paramfy;
-    if (jdy.size() > 3)
+    iBL = ((int)jBf);
+    lTF = paramgd;
+    if (jBi.size() > 3)
     {
-      lta = 3;
-      lsY = true;
+      lTE = 3;
+      lTC = true;
     }
     for (;;)
     {
-      lsP.add(localb);
+      lTt.add(localb);
       return;
-      lta = jdy.size();
+      lTE = jBi.size();
     }
   }
   

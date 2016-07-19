@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 59
+    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,40 +30,43 @@
 
 
 # virtual methods
-.method public final i(Landroid/content/Intent;)V
-    .locals 5
+.method public final j(Landroid/content/Intent;)V
+    .locals 6
 
     .prologue
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
-    .line 63
-    const-string/jumbo v0, "value"
+    .line 54
+    const-string/jumbo v0, "level"
 
-    invoke-virtual {p1, v0, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {p1, v0, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    sput-boolean v0, Lcom/tencent/mm/platformtools/r;->cnf:Z
+    .line 55
+    const-string/jumbo v1, "MicroMsg.Shell"
 
-    .line 64
-    const-string/jumbo v0, "!24@/B4Tb64lLpLOIdMtS2bKaA=="
+    const-string/jumbo v2, "kiro set Log.level=%d"
 
-    const-string/jumbo v1, "kiro set Test.forceCDNTrans=%b"
+    const/4 v3, 0x1
 
-    const/4 v2, 0x1
+    new-array v3, v3, [Ljava/lang/Object;
 
-    new-array v2, v2, [Ljava/lang/Object;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->getLogLevel()I
 
-    sget-boolean v3, Lcom/tencent/mm/platformtools/r;->cnf:Z
+    move-result v4
 
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v3
+    move-result-object v4
 
-    aput-object v3, v2, v4
+    aput-object v4, v3, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 65
+    .line 56
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/v;->rg(I)V
+
+    .line 57
     return-void
 .end method

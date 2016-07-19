@@ -1,112 +1,103 @@
 package com.tencent.mm.n;
 
-import java.util.LinkedList;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.protocal.b.tf;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
+import java.util.ArrayList;
+import java.util.List;
 
-public class b
-  extends com.tencent.mm.at.a
+public final class b
+  implements com.tencent.mm.t.d
 {
-  public String aHh;
-  public String aHi;
-  public String bcE;
-  public LinkedList byZ = new LinkedList();
-  public String name;
-  public int type;
+  private List<d> bkF = null;
+  private List<d> bkG = null;
+  private d bkH = null;
+  private a bkI;
   
-  protected final int a(int paramInt, Object... paramVarArgs)
+  public b(List<d> paramList, a parama)
   {
-    if (paramInt == 0)
+    bkF = paramList;
+    bkG = new ArrayList();
+    bkI = parama;
+  }
+  
+  private void pr()
+  {
+    v.d("MicroMsg.FunctionMsgFetchLooper", "fetchNext, fetchItemList.size: %s", new Object[] { Integer.valueOf(bkF.size()) });
+    if (bkF.size() > 0)
     {
-      paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.ci(1, type);
-      if (name != null) {
-        paramVarArgs.d(2, name);
+      bkH = ((d)bkF.remove(0));
+      Object localObject = bkH;
+      if (localObject != null)
+      {
+        v.i("MicroMsg.FunctionMsgFetchLooper", "fetchInternal, functionMsgId: %s", new Object[] { field_functionmsgid });
+        field_status = 0;
+        localObject = new g((d)localObject);
+        ah.tF().a((j)localObject, 0);
       }
-      if (aHh != null) {
-        paramVarArgs.d(3, aHh);
-      }
-      if (aHi != null) {
-        paramVarArgs.d(4, aHi);
-      }
-      if (bcE != null) {
-        paramVarArgs.d(5, bcE);
-      }
-      paramVarArgs.d(6, 8, byZ);
-      return 0;
     }
-    int i;
-    if (paramInt == 1)
+    do
     {
-      i = a.a.a.a.cg(1, type) + 0;
-      paramInt = i;
-      if (name != null) {
-        paramInt = i + a.a.a.b.b.a.e(2, name);
-      }
-      i = paramInt;
-      if (aHh != null) {
-        i = paramInt + a.a.a.b.b.a.e(3, aHh);
-      }
-      paramInt = i;
-      if (aHi != null) {
-        paramInt = i + a.a.a.b.b.a.e(4, aHi);
-      }
-      i = paramInt;
-      if (bcE != null) {
-        i = paramInt + a.a.a.b.b.a.e(5, bcE);
-      }
-      return i + a.a.a.a.c(6, 8, byZ);
-    }
-    if (paramInt == 2)
+      return;
+      ah.tF().b(825, this);
+    } while (bkI == null);
+    bkI.n(bkG);
+  }
+  
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
+  {
+    v.i("MicroMsg.FunctionMsgFetchLooper", "errType: %s, errCode: %s, errMsg: %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
+    if (paramj.getType() == 825)
     {
-      paramVarArgs = (byte[])paramVarArgs[0];
-      byZ.clear();
-      paramVarArgs = new a.a.a.a.a(paramVarArgs, iTR);
-      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.bog();
+      paramj = (g)paramj;
+      paramString = bkS;
+      paramj = bkU;
+      if ((paramj != null) && (field_functionmsgid.equals(bkH.field_functionmsgid)))
+      {
+        if ((paramInt1 == 0) || (paramInt2 == 0)) {
+          break label166;
         }
+        v.i("MicroMsg.FunctionMsgFetchLooper", "functionMsgId: %s, fetch failed, mark as fetch failed, preVersion: %s, version: %s", new Object[] { field_functionmsgid, Long.valueOf(field_preVersion), Long.valueOf(field_version) });
+        field_status = 3;
+        field_version = field_preVersion;
+        h.pA().a(field_functionmsgid, paramj);
       }
-      return 0;
     }
-    if (paramInt == 3)
+    for (;;)
     {
-      Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
-      b localb = (b)paramVarArgs[1];
-      paramInt = ((Integer)paramVarArgs[2]).intValue();
-      switch (paramInt)
+      pr();
+      return;
+      label166:
+      v.i("MicroMsg.FunctionMsgFetchLooper", "functionMsgId: %s fetch success, response.version: %s, fetchItem.version: %s", new Object[] { field_functionmsgid, Long.valueOf(jPC), Long.valueOf(field_version) });
+      if (jPC >= field_version)
       {
-      default: 
-        return -1;
-      case 1: 
-        type = maU.jC();
-        return 0;
-      case 2: 
-        name = maU.readString();
-        return 0;
-      case 3: 
-        aHh = maU.readString();
-        return 0;
-      case 4: 
-        aHi = maU.readString();
-        return 0;
-      case 5: 
-        bcE = maU.readString();
-        return 0;
+        field_preVersion = field_version;
+        field_version = jPC;
+        field_status = 2;
+        paramj.b(jPD);
+        h.pA().a(field_functionmsgid, paramj);
+        bkG.add(paramj);
       }
-      paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-      i = paramVarArgs.size();
-      paramInt = 0;
-      while (paramInt < i)
-      {
-        Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-        localObject1 = new d();
-        localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-        for (boolean bool = true; bool; bool = ((d)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
-        byZ.add(localObject1);
-        paramInt += 1;
-      }
-      return 0;
     }
-    return -1;
+  }
+  
+  public final boolean start()
+  {
+    if ((bkF != null) && (bkF.size() > 0))
+    {
+      v.i("MicroMsg.FunctionMsgFetchLooper", "start, fetchItemList.size: %s", new Object[] { Integer.valueOf(bkF.size()) });
+      ah.tF().a(825, this);
+      pr();
+      return true;
+    }
+    return false;
+  }
+  
+  public static abstract interface a
+  {
+    public abstract void n(List<d> paramList);
   }
 }
 

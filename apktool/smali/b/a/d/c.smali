@@ -4,7 +4,17 @@
 
 
 # instance fields
-.field public mdK:Ljava/util/Map;
+.field public mPO:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -20,7 +30,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lb/a/d/c;->mdK:Ljava/util/Map;
+    iput-object v0, p0, Lb/a/d/c;->mPO:Ljava/util/Map;
 
     .line 27
     return-void
@@ -38,96 +48,96 @@
     return-void
 .end method
 
-.method public final bridge synthetic boF()Lb/a/d/e;
+.method public final bridge synthetic bvD()Lb/a/d/e;
     .locals 1
 
     .prologue
     .line 1
-    invoke-super {p0}, Lb/a/d/f;->boF()Lb/a/d/e;
+    invoke-super {p0}, Lb/a/d/f;->bvD()Lb/a/d/e;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final bridge synthetic boG()Lb/a/d/j;
+.method public final bridge synthetic bvE()Lb/a/d/j;
     .locals 1
 
     .prologue
     .line 1
-    invoke-super {p0}, Lb/a/d/f;->boG()Lb/a/d/j;
+    invoke-super {p0}, Lb/a/d/f;->bvE()Lb/a/d/j;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final bridge synthetic boH()Ljava/lang/String;
+.method public final bridge synthetic bvF()Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 1
-    invoke-super {p0}, Lb/a/d/f;->boH()Ljava/lang/String;
+    invoke-super {p0}, Lb/a/d/f;->bvF()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final bridge synthetic boI()Ljava/lang/String;
+.method public final bridge synthetic bvG()Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 1
-    invoke-super {p0}, Lb/a/d/f;->boI()Ljava/lang/String;
+    invoke-super {p0}, Lb/a/d/f;->bvG()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final bridge synthetic boJ()Lb/a/d/g;
+.method public final bridge synthetic bvH()Lb/a/d/g;
     .locals 1
 
     .prologue
     .line 1
-    invoke-super {p0}, Lb/a/d/f;->boJ()Lb/a/d/g;
+    invoke-super {p0}, Lb/a/d/f;->bvH()Lb/a/d/g;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final bridge synthetic boK()Lb/a/d/e;
+.method public final bridge synthetic bvI()Lb/a/d/e;
     .locals 1
 
     .prologue
     .line 1
-    invoke-super {p0}, Lb/a/d/f;->boK()Lb/a/d/e;
+    invoke-super {p0}, Lb/a/d/f;->bvI()Lb/a/d/e;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final bridge synthetic boL()Ljava/lang/String;
+.method public final bridge synthetic bvJ()Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 1
-    invoke-super {p0}, Lb/a/d/f;->boL()Ljava/lang/String;
+    invoke-super {p0}, Lb/a/d/f;->bvJ()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final cR(Ljava/lang/String;Ljava/lang/String;)V
+.method public final de(Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
 
     .prologue
     .line 39
-    iget-object v0, p0, Lb/a/d/c;->mdK:Ljava/util/Map;
+    iget-object v0, p0, Lb/a/d/c;->mPO:Ljava/util/Map;
 
     const-string/jumbo v1, "oauth_"
 
@@ -182,12 +192,12 @@
     throw v0
 .end method
 
-.method public final bridge synthetic cS(Ljava/lang/String;Ljava/lang/String;)V
+.method public final bridge synthetic df(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     .prologue
     .line 1
-    invoke-super {p0, p1, p2}, Lb/a/d/f;->cS(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-super {p0, p1, p2}, Lb/a/d/f;->df(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -217,7 +227,7 @@
 
     const/4 v2, 0x0
 
-    invoke-super {p0}, Lb/a/d/f;->boG()Lb/a/d/j;
+    invoke-super {p0}, Lb/a/d/f;->bvE()Lb/a/d/j;
 
     move-result-object v3
 

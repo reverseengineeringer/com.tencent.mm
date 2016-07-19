@@ -3,7 +3,7 @@ package com.tencent.mm.protocal;
 import android.os.Parcelable.Creator;
 
 final class GeneralControlWrapper$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<GeneralControlWrapper>
 {}
 
 /* Location:

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lxb:Lcom/tencent/mm/ui/tools/MaskImageButton;
+.field final synthetic lXO:Lcom/tencent/mm/ui/tools/MaskImageButton;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 47
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MaskImageButton$2;->lxb:Lcom/tencent/mm/ui/tools/MaskImageButton;
+    .line 49
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MaskImageButton$2;->lXO:Lcom/tencent/mm/ui/tools/MaskImageButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,17 +42,17 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 51
+    .line 53
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1
 
     packed-switch v1, :pswitch_data_0
 
-    .line 62
+    .line 64
     :goto_0
     :pswitch_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MaskImageButton$2;->lxb:Lcom/tencent/mm/ui/tools/MaskImageButton;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MaskImageButton$2;->lXO:Lcom/tencent/mm/ui/tools/MaskImageButton;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/MaskImageButton;->isClickable()Z
 
@@ -60,7 +60,7 @@
 
     if-nez v1, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MaskImageButton$2;->lxb:Lcom/tencent/mm/ui/tools/MaskImageButton;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MaskImageButton$2;->lXO:Lcom/tencent/mm/ui/tools/MaskImageButton;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/MaskImageButton;->isLongClickable()Z
 
@@ -71,55 +71,55 @@
     :goto_1
     return v0
 
-    .line 53
+    .line 55
     :pswitch_1
     invoke-virtual {p1, v0}, Landroid/view/View;->setPressed(Z)V
 
-    .line 54
+    .line 56
     invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
-    .line 55
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MaskImageButton$2;->lxb:Lcom/tencent/mm/ui/tools/MaskImageButton;
+    .line 57
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MaskImageButton$2;->lXO:Lcom/tencent/mm/ui/tools/MaskImageButton;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/tools/MaskImageButton;->b(Lcom/tencent/mm/ui/tools/MaskImageButton;)Lcom/tencent/mm/sdk/platformtools/aa;
+    invoke-static {v1}, Lcom/tencent/mm/ui/tools/MaskImageButton;->b(Lcom/tencent/mm/ui/tools/MaskImageButton;)Lcom/tencent/mm/sdk/platformtools/ac;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MaskImageButton$2;->lxb:Lcom/tencent/mm/ui/tools/MaskImageButton;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MaskImageButton$2;->lXO:Lcom/tencent/mm/ui/tools/MaskImageButton;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/MaskImageButton;->a(Lcom/tencent/mm/ui/tools/MaskImageButton;)Ljava/lang/Runnable;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/sdk/platformtools/aa;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/sdk/platformtools/ac;->removeCallbacks(Ljava/lang/Runnable;)V
 
     goto :goto_0
 
-    .line 59
+    .line 61
     :pswitch_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MaskImageButton$2;->lxb:Lcom/tencent/mm/ui/tools/MaskImageButton;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MaskImageButton$2;->lXO:Lcom/tencent/mm/ui/tools/MaskImageButton;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/tools/MaskImageButton;->b(Lcom/tencent/mm/ui/tools/MaskImageButton;)Lcom/tencent/mm/sdk/platformtools/aa;
+    invoke-static {v1}, Lcom/tencent/mm/ui/tools/MaskImageButton;->b(Lcom/tencent/mm/ui/tools/MaskImageButton;)Lcom/tencent/mm/sdk/platformtools/ac;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MaskImageButton$2;->lxb:Lcom/tencent/mm/ui/tools/MaskImageButton;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MaskImageButton$2;->lXO:Lcom/tencent/mm/ui/tools/MaskImageButton;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/MaskImageButton;->a(Lcom/tencent/mm/ui/tools/MaskImageButton;)Ljava/lang/Runnable;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
-    .line 62
+    .line 64
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 51
+    .line 53
     nop
 
     :pswitch_data_0

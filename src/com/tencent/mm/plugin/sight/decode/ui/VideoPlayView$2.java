@@ -13,7 +13,7 @@ final class VideoPlayView$2
   {
     if (paramMotionEvent.getAction() == 1)
     {
-      VideoPlayView.k(gzd);
+      VideoPlayView.k(gFG);
       return true;
     }
     paramMotionEvent.getAction();

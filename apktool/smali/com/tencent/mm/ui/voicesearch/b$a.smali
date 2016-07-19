@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field public czT:Landroid/widget/TextView;
+.field public cul:Landroid/widget/CheckBox;
 
-.field public czU:Landroid/widget/TextView;
+.field public cwP:Landroid/widget/TextView;
 
-.field public czW:Landroid/widget/CheckBox;
+.field public cwQ:Landroid/widget/TextView;
 
-.field public dbN:Lcom/tencent/mm/ui/base/MaskLayout;
+.field public dat:Lcom/tencent/mm/ui/base/MaskLayout;
 
-.field public lCz:Landroid/widget/ProgressBar;
+.field public lMU:Landroid/widget/TextView;
 
-.field public lmE:Landroid/widget/TextView;
+.field public mdp:Landroid/widget/ProgressBar;
 
 
 # direct methods

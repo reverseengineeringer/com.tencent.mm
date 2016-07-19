@@ -10,8 +10,8 @@ public class DrawedCallBackLinearLayout
   extends LinearLayout
 {
   public final boolean DEBUG = true;
-  public final String TAG = "!44@/B4Tb64lLpItTdpuA6oxWS/W5hNAWFGiw97iJPQYJL0=";
-  private a lEX;
+  public final String TAG = "MicroMsg.TestTimeForChatting";
+  public a mfM;
   
   public DrawedCallBackLinearLayout(Context paramContext)
   {
@@ -32,10 +32,10 @@ public class DrawedCallBackLinearLayout
   public void dispatchDraw(Canvas paramCanvas)
   {
     super.dispatchDraw(paramCanvas);
-    if (lEX != null)
+    if (mfM != null)
     {
-      lEX.kw();
-      lEX = null;
+      mfM.iZ();
+      mfM = null;
     }
   }
   
@@ -44,14 +44,9 @@ public class DrawedCallBackLinearLayout
     super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
   }
   
-  public void setListener(a parama)
-  {
-    lEX = parama;
-  }
-  
   public static abstract interface a
   {
-    public abstract void kw();
+    public abstract void iZ();
   }
 }
 

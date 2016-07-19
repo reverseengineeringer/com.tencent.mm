@@ -4,8 +4,8 @@
 
 
 # virtual methods
-.method public abstract do(J)V
+.method public abstract dF(J)V
 .end method
 
-.method public abstract dp(J)V
+.method public abstract dG(J)V
 .end method

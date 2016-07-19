@@ -7,9 +7,9 @@ import android.os.Parcelable.Creator;
 class StIDKeyDataInfo
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
-  public long fUL;
-  public boolean fUh;
+  public static final Parcelable.Creator<StIDKeyDataInfo> CREATOR = new Parcelable.Creator() {};
+  public boolean gdw;
+  public long gea;
   public long key;
   public long value;
   
@@ -17,13 +17,13 @@ class StIDKeyDataInfo
   
   protected StIDKeyDataInfo(Parcel paramParcel)
   {
-    fUL = paramParcel.readLong();
+    gea = paramParcel.readLong();
     key = paramParcel.readLong();
     value = paramParcel.readLong();
     if (paramParcel.readInt() == 1) {}
     for (;;)
     {
-      fUh = bool;
+      gdw = bool;
       return;
       bool = false;
     }
@@ -36,10 +36,10 @@ class StIDKeyDataInfo
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    paramParcel.writeLong(fUL);
+    paramParcel.writeLong(gea);
     paramParcel.writeLong(key);
     paramParcel.writeLong(value);
-    if (fUh) {}
+    if (gdw) {}
     for (paramInt = 1;; paramInt = 0)
     {
       paramParcel.writeInt(paramInt);

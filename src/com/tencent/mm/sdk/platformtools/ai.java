@@ -1,274 +1,129 @@
 package com.tencent.mm.sdk.platformtools;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import android.os.Debug;
+import android.os.Handler;
+import android.os.Process;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public final class ai
+  implements Runnable
 {
-  public static aj jWK = null;
+  private static final String kwi;
+  private static final String kwj;
+  long endTime;
+  final Handler handler;
+  String kvA;
+  final Runnable kvW;
+  final String kvX;
+  final Object kvY;
+  long kvZ;
+  final a kwa;
+  long kwb;
+  long kwc;
+  long kwd;
+  long kwe;
+  long kwf;
+  long kwg;
+  float kwh = -1.0F;
+  int priority;
+  boolean started = false;
+  final Thread thread;
   
-  public static String CW(String paramString)
+  static
   {
-    if (ay.kz(paramString)) {}
-    while (!ay.Dw(paramString).booleanValue()) {
-      return paramString;
-    }
-    new ai();
-    String str1 = "86";
-    Object localObject = paramString;
-    if (paramString.startsWith("+"))
-    {
-      String str2 = paramString.replace("+", "");
-      paramString = cf(str2, null);
-      str1 = paramString;
-      localObject = str2;
-      if (paramString != null)
-      {
-        localObject = str2.substring(paramString.length());
-        str1 = paramString;
-      }
-    }
-    return formatNumber(str1, (String)localObject);
+    StringBuilder localStringBuilder = new StringBuilder();
+    localStringBuilder.append("taskName = %s");
+    localStringBuilder.append("|token = %s");
+    localStringBuilder.append("|handler = %s");
+    localStringBuilder.append("|threadName = %s");
+    localStringBuilder.append("|threadId = %d");
+    localStringBuilder.append("|priority = %d");
+    localStringBuilder.append("|addTime = %d");
+    localStringBuilder.append("|delayTime = %d");
+    localStringBuilder.append("|usedTime = %d");
+    localStringBuilder.append("|cpuTime = %d");
+    localStringBuilder.append("|started = %b");
+    kwi = localStringBuilder.toString();
+    localStringBuilder = new StringBuilder();
+    localStringBuilder.append("taskName = %s");
+    localStringBuilder.append(" | addTime = %s");
+    localStringBuilder.append(" | endTime = %s");
+    localStringBuilder.append(" | usedTime = %d");
+    localStringBuilder.append(" | cpuTime = %d");
+    localStringBuilder.append(" | threadCpuTime = %d");
+    localStringBuilder.append(" | totalCpuTime = %d");
+    localStringBuilder.append(" | threadCpuRate = %.1f");
+    kwj = localStringBuilder.toString();
   }
   
-  public static String CX(String paramString)
+  ai(Thread paramThread, Handler paramHandler, Runnable paramRunnable, Object paramObject, a parama)
   {
-    if (ay.kz(paramString)) {
-      return "";
+    thread = paramThread;
+    if (paramThread != null)
+    {
+      kvA = paramThread.getName();
+      kvZ = paramThread.getId();
+      priority = paramThread.getPriority();
     }
-    return paramString.replaceAll("[\\.\\-\\ ]", "").trim();
+    handler = paramHandler;
+    kvW = paramRunnable;
+    paramHandler = paramRunnable.getClass().getName();
+    paramRunnable = paramRunnable.toString();
+    paramThread = paramHandler;
+    if (!be.kf(paramRunnable))
+    {
+      int i = paramRunnable.indexOf('|');
+      paramThread = paramHandler;
+      if (i > 0) {
+        paramThread = paramHandler + "_" + paramRunnable.substring(i + 1);
+      }
+    }
+    kvX = paramThread;
+    kvY = paramObject;
+    kwa = parama;
+    kwb = System.currentTimeMillis();
   }
   
-  private static String K(String paramString1, String paramString2, String paramString3)
+  public final String dump(boolean paramBoolean)
   {
-    Pattern localPattern = Pattern.compile(paramString1);
-    paramString1 = "";
-    paramString3 = localPattern.matcher(paramString3);
-    if (paramString3.find()) {
-      paramString1 = paramString3.replaceAll(paramString2);
+    if (paramBoolean) {
+      return String.format(kwi, new Object[] { kvX, kvY, handler, kvA, Long.valueOf(kvZ), Integer.valueOf(priority), Long.valueOf(kwb), Long.valueOf(kwc), Long.valueOf(kwd), Long.valueOf(kwe), Boolean.valueOf(started) });
     }
-    return paramString1;
+    return String.format(kwj, new Object[] { kvX, new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date(kwb)), new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date(endTime)), Long.valueOf(kwd), Long.valueOf(kwe), Long.valueOf(kwf), Long.valueOf(kwg), Float.valueOf(kwh) });
   }
   
-  private static int aL(String paramString, int paramInt)
+  public final void run()
   {
-    Pattern localPattern = Pattern.compile(paramString);
-    paramString = "1";
-    int i = 0;
-    while ((i < paramInt) && (!localPattern.matcher(paramString).find()))
-    {
-      paramString = paramString + "1";
-      i += 1;
+    int i = Process.myTid();
+    new StringBuilder("/proc/self/task/").append(i).append("/stat");
+    kwd = System.currentTimeMillis();
+    kwe = Debug.threadCpuTimeNanos();
+    kwf = -1L;
+    kwg = -1L;
+    started = true;
+    kvW.run();
+    kwf = (-1L - kwf);
+    kwg = (-1L - kwg);
+    endTime = System.currentTimeMillis();
+    kwd = (endTime - kwd);
+    kwe = ((Debug.threadCpuTimeNanos() - kwe) / 1000000L);
+    if (kwg != 0L) {
+      kwh = ((float)(100L * kwf) / (float)kwg);
     }
-    return i + 1;
+    if (kwa != null)
+    {
+      kwa.a(kvW, this);
+      kwa.a(this, thread, kwd, kwe, kwh);
+    }
   }
   
-  public static String cf(String paramString1, String paramString2)
+  public static abstract interface a
   {
-    paramString1 = CX(paramString1).replace("+", "");
-    if (jWK == null) {
-      jWK = new aj();
-    }
-    int i;
-    if (ay.kz(paramString2))
-    {
-      paramString2 = jWKjWL.iterator();
-      do
-      {
-        do
-        {
-          if (!paramString2.hasNext()) {
-            break;
-          }
-          localObject = (aj.a)paramString2.next();
-        } while (!paramString1.startsWith(jWN));
-        i = paramString1.length() - jWN.length();
-      } while ((i < jWO) || (i > jWP));
-      u.i("!32@/B4Tb64lLpK2a/1CtFdgf3C9at81KaHN", "[extractCountryCode] countrycode:%s country isocode: %s country.minlen:%d country.maxlen:%d", new Object[] { jWN, jWM, Integer.valueOf(jWP), Integer.valueOf(jWP) });
-      return jWN;
-    }
-    Object localObject = jWKjWL.iterator();
-    while (((Iterator)localObject).hasNext())
-    {
-      aj.a locala = (aj.a)((Iterator)localObject).next();
-      if (paramString1.startsWith(jWN))
-      {
-        i = paramString1.length() - jWN.length();
-        if ((i >= jWO) && (i <= jWP) && (paramString2.equalsIgnoreCase(jWM)))
-        {
-          u.i("!32@/B4Tb64lLpK2a/1CtFdgf3C9at81KaHN", "[extractCountryCode] countrycode:%s country isocode: %s country.minlen:%d country.maxlen:%d", new Object[] { jWN, jWM, Integer.valueOf(jWP), Integer.valueOf(jWP) });
-          return jWN;
-        }
-      }
-    }
-    return null;
-  }
-  
-  public static String formatNumber(String paramString1, String paramString2)
-  {
-    Object localObject;
-    if ((ay.kz(paramString1)) || (ay.kz(paramString2)))
-    {
-      localObject = paramString2;
-      return (String)localObject;
-    }
-    if (jWK == null) {
-      jWK = new aj();
-    }
-    Iterator localIterator1 = jWKjWL.iterator();
-    aj.a locala;
-    String str;
-    int n;
-    int k;
-    label371:
-    label520:
-    do
-    {
-      StringBuffer localStringBuffer;
-      do
-      {
-        Iterator localIterator2;
-        while (!localIterator2.hasNext())
-        {
-          do
-          {
-            if (!localIterator1.hasNext()) {
-              break;
-            }
-            locala = (aj.a)localIterator1.next();
-          } while ((jWN == null) || (!paramString1.trim().toLowerCase().equals(jWN.trim().toLowerCase())) || (jWQ == null));
-          str = CX(paramString2);
-          if (str != null)
-          {
-            localObject = str;
-            if (str.length() > jWO) {
-              break;
-            }
-          }
-          localIterator2 = jWQ.iterator();
-        }
-        localObject = (aj.b)localIterator2.next();
-        if (!ay.kz(jWR)) {
-          break label520;
-        }
-        if (jWQ.size() <= 1) {
-          break label371;
-        }
-        localStringBuffer = new StringBuffer();
-        localStringBuffer.append(str);
-        m = str.length();
-      } while (m > aL(jWT, jWP));
-      while (localStringBuffer.toString().length() < jWP) {
-        localStringBuffer.append("0");
-      }
-      paramString1 = K(jWT, jWS, localStringBuffer.toString());
-      i = 0;
-      j = 0;
-      for (;;)
-      {
-        localObject = paramString1;
-        if (i >= paramString1.length()) {
-          break;
-        }
-        n = paramString1.charAt(i);
-        paramString2 = paramString1;
-        if (j >= m) {
-          paramString2 = paramString1.substring(0, i);
-        }
-        k = j;
-        if (n != 32)
-        {
-          k = j;
-          if (n != 45)
-          {
-            k = j;
-            if (n != 12290) {
-              k = j + 1;
-            }
-          }
-        }
-        i += 1;
-        j = k;
-        paramString1 = paramString2;
-      }
-      paramString1 = new StringBuffer();
-      paramString1.append(str);
-      m = str.length();
-      while (paramString1.toString().length() < jWP) {
-        paramString1.append("0");
-      }
-      paramString1 = K(jWT, jWS, paramString1.toString());
-      i = 0;
-      j = 0;
-      while (i < paramString1.length())
-      {
-        n = paramString1.charAt(i);
-        paramString2 = paramString1;
-        if (j >= m) {
-          paramString2 = paramString1.substring(0, i);
-        }
-        k = j;
-        if (n != 32)
-        {
-          k = j;
-          if (n != 45)
-          {
-            k = j;
-            if (n != 12290) {
-              k = j + 1;
-            }
-          }
-        }
-        i += 1;
-        j = k;
-        paramString1 = paramString2;
-      }
-      return paramString1;
-    } while (!Pattern.compile(jWR).matcher(str).lookingAt());
-    paramString1 = new StringBuffer();
-    paramString1.append(str);
-    int m = str.length();
-    while (paramString1.toString().length() < jWP) {
-      paramString1.append(str.charAt(m - 1));
-    }
-    paramString1 = K(jWT, jWS, paramString1.toString());
-    int i = 0;
-    int j = 0;
-    for (;;)
-    {
-      localObject = paramString1;
-      if (i >= paramString1.length()) {
-        break;
-      }
-      n = paramString1.charAt(i);
-      paramString2 = paramString1;
-      if (j >= m) {
-        paramString2 = paramString1.substring(0, i);
-      }
-      k = j;
-      if (n != 32)
-      {
-        k = j;
-        if (n != 45)
-        {
-          k = j;
-          if (n != 12290) {
-            k = j + 1;
-          }
-        }
-      }
-      i += 1;
-      j = k;
-      paramString1 = paramString2;
-    }
-    return paramString2;
-  }
-  
-  public static String pW(String paramString)
-  {
-    return cf(paramString, null);
+    public abstract void a(Runnable paramRunnable, ai paramai);
+    
+    public abstract void a(Runnable paramRunnable, Thread paramThread, long paramLong1, long paramLong2, float paramFloat);
   }
 }
 

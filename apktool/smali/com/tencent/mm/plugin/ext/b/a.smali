@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final dKx:[Ljava/lang/String;
+.field public static final dLY:[Ljava/lang/String;
 
 
 # direct methods
@@ -23,7 +23,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/plugin/ext/b/a;->dKx:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/plugin/ext/b/a;->dLY:[Ljava/lang/String;
 
     return-void
 .end method

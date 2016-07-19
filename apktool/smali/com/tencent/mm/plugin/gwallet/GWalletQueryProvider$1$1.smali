@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/ab$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ad$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic exx:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;
+.field final synthetic eDR:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 116
-    iput-object p1, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1$1;->exx:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1$1;->eDR:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -66,14 +66,14 @@
     return-object v0
 .end method
 
-.method public final vd()Z
+.method public final vf()Z
     .locals 1
 
     .prologue
     .line 120
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1$1;->exx:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1$1;->eDR:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;->exw:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;->eDQ:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;->d(Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;)V
 
@@ -83,14 +83,14 @@
     return v0
 .end method
 
-.method public final ve()Z
+.method public final vg()Z
     .locals 1
 
     .prologue
     .line 126
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1$1;->exx:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1$1;->eDR:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;->exw:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;->eDQ:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;->b(Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;)Lcom/tencent/mm/plugin/gwallet/a/b;
 
@@ -99,9 +99,9 @@
     if-eqz v0, :cond_0
 
     .line 127
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1$1;->exx:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1$1;->eDR:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;->exw:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;->eDQ:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;->b(Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;)Lcom/tencent/mm/plugin/gwallet/a/b;
 
@@ -111,9 +111,9 @@
 
     .line 128
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1$1;->exx:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1$1;->eDR:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;->exw:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$1;->eDQ:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;->c(Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;)Lcom/tencent/mm/plugin/gwallet/a/b;
 

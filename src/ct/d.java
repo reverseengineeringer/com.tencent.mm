@@ -3,191 +3,113 @@ package ct;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.text.TextUtils;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 public final class d
 {
-  public static final int[] a = { 14000, 80, 8080 };
-  public long b;
-  private Map c;
+  public int a;
+  public int b;
+  public int c;
+  public int d;
+  public int e;
+  public ak f;
   
   public d() {}
   
-  public d(am paramam)
+  public d(af paramaf)
   {
+    a = a;
     b = b;
-    c = new HashMap();
-    Iterator localIterator = a.keySet().iterator();
-    while (localIterator.hasNext())
-    {
-      Integer localInteger = (Integer)localIterator.next();
-      if (bb.a(localInteger))
-      {
-        Object localObject = (ArrayList)a.get(localInteger);
-        ArrayList localArrayList = new ArrayList();
-        localObject = ((ArrayList)localObject).iterator();
-        while (((Iterator)localObject).hasNext())
-        {
-          String str = (String)((Iterator)localObject).next();
-          t localt = new t();
-          if (localt.a(str)) {
-            localArrayList.add(localt);
-          }
-        }
-        c.put(localInteger, localArrayList);
-      }
-    }
+    c = c;
+    d = d;
+    e = e;
+    f = f;
   }
   
-  private static String a(int paramInt)
+  private void c()
   {
-    String str = "";
-    if (paramInt == 1) {
-      str = "access_cm";
+    if ((a < 10000) || (a > 30000)) {
+      a = 20000;
     }
-    do
-    {
-      return str;
-      if (paramInt == 2) {
-        return "access_uni";
-      }
-    } while (paramInt != 3);
-    return "access_ct";
+    if ((b < 10000) || (b > 30000)) {
+      b = 20000;
+    }
+    if ((c < 3) || (c > 15)) {
+      c = 8;
+    }
+    if ((d <= 0) || (d > 5)) {
+      d = 2;
+    }
+    if ((e < 5) || (e > 240)) {
+      e = 60;
+    }
   }
   
   public final void a()
   {
-    SharedPreferences localSharedPreferences = q.a().getSharedPreferences("Access_Preferences", 0);
-    b = localSharedPreferences.getLong("timeStamp", 0L);
-    c = new HashMap();
-    int i = 1;
-    while (i <= 3)
+    ak localak = null;
+    Object localObject = p.a().getSharedPreferences("Access_Preferences", 0);
+    a = ((SharedPreferences)localObject).getInt("connectTimeout", 20000);
+    b = ((SharedPreferences)localObject).getInt("readTimeout", 20000);
+    c = ((SharedPreferences)localObject).getInt("apnCachedNum", 8);
+    d = ((SharedPreferences)localObject).getInt("parallelNum", 2);
+    e = ((SharedPreferences)localObject).getInt("expireTime", 30);
+    localObject = ((SharedPreferences)localObject).getString("samplingInfo", null);
+    if (localObject != null)
     {
-      Object localObject2 = localSharedPreferences.getString(a(i), "");
-      Object localObject1 = localObject2;
-      if (TextUtils.isEmpty((CharSequence)localObject2))
+      localObject = ((String)localObject).split(";");
+      localak = new ak();
+      HashMap localHashMap = new HashMap();
+      int i = 0;
+      while (i < localObject.length - 1)
       {
-        localObject1 = "";
-        if (i != 1) {
-          break label180;
-        }
-        localObject1 = "120.198.203.148:14000,117.135.171.182:14000";
+        String[] arrayOfString = localObject[i].split(",");
+        localHashMap.put(Integer.valueOf(Integer.parseInt(arrayOfString[0])), Byte.valueOf(Byte.parseByte(arrayOfString[1])));
+        i += 1;
       }
-      for (;;)
-      {
-        bc.b("SdkAccessInfo", "getDefaultIpListByOpType:" + (String)localObject1);
-        localObject1 = ((String)localObject1).split(",");
-        if (localObject1.length <= 0) {
-          break label220;
-        }
-        localObject2 = new ArrayList();
-        int k = localObject1.length;
-        int j = 0;
-        while (j < k)
-        {
-          String str = localObject1[j];
-          t localt = new t();
-          if (localt.a(str)) {
-            ((ArrayList)localObject2).add(localt);
-          }
-          j += 1;
-        }
-        label180:
-        if (i == 2) {
-          localObject1 = "112.90.140.216:14000,140.206.160.244:14000";
-        } else if (i == 3) {
-          localObject1 = "14.17.41.159:14000,101.227.130.12:14000";
-        }
-      }
-      c.put(Integer.valueOf(i), localObject2);
-      label220:
-      i += 1;
+      a = localHashMap;
+      b = Byte.parseByte(localObject[(localObject.length - 1)]);
     }
+    f = localak;
+    c();
   }
   
   public final void b()
   {
-    SharedPreferences localSharedPreferences = q.a().getSharedPreferences("Access_Preferences", 0);
-    if ((c != null) && (c.size() > 0))
+    Object localObject = p.a().getSharedPreferences("Access_Preferences", 0);
+    c();
+    ((SharedPreferences)localObject).edit().putInt("connectTimeout", a).commit();
+    ((SharedPreferences)localObject).edit().putInt("readTimeout", b).commit();
+    ((SharedPreferences)localObject).edit().putInt("apnCachedNum", c).commit();
+    ((SharedPreferences)localObject).edit().putInt("parallelNum", d).commit();
+    ((SharedPreferences)localObject).edit().putInt("expireTime", e).commit();
+    SharedPreferences.Editor localEditor = ((SharedPreferences)localObject).edit();
+    localObject = f;
+    StringBuilder localStringBuilder = new StringBuilder();
+    if (a != null)
     {
-      Iterator localIterator = c.keySet().iterator();
+      Iterator localIterator = a.entrySet().iterator();
       while (localIterator.hasNext())
       {
-        Object localObject1 = (Integer)localIterator.next();
-        if (bb.a((Integer)localObject1))
-        {
-          String str = a(((Integer)localObject1).intValue());
-          Object localObject2 = (ArrayList)c.get(localObject1);
-          if ((localObject2 != null) && (((ArrayList)localObject2).size() > 0))
-          {
-            localObject2 = new StringBuilder();
-            localObject1 = ((ArrayList)c.get(localObject1)).iterator();
-            while (((Iterator)localObject1).hasNext())
-            {
-              ((StringBuilder)localObject2).append(((t)((Iterator)localObject1).next()).a());
-              ((StringBuilder)localObject2).append(",");
-            }
-            ((StringBuilder)localObject2).deleteCharAt(((StringBuilder)localObject2).length() - 1);
-            localSharedPreferences.edit().putString(str, ((StringBuilder)localObject2).toString()).commit();
-          }
-        }
+        Map.Entry localEntry = (Map.Entry)localIterator.next();
+        localStringBuilder.append(localEntry.getKey() + "," + localEntry.getValue() + ";");
       }
-      localSharedPreferences.edit().putLong("timesStamp", b).commit();
+      localStringBuilder.append(b);
+    }
+    for (localObject = localStringBuilder.toString();; localObject = null)
+    {
+      localEditor.putString("samplingInfo", (String)localObject).commit();
+      return;
     }
   }
   
-  public final ArrayList c()
+  public final String toString()
   {
-    int k = 0;
-    int i = bb.d();
-    ArrayList localArrayList1 = new ArrayList();
-    Object localObject;
-    if (bb.a(Integer.valueOf(i)))
-    {
-      localIterator = c.keySet().iterator();
-      while (localIterator.hasNext())
-      {
-        localObject = (Integer)localIterator.next();
-        ArrayList localArrayList2 = (ArrayList)c.get(localObject);
-        if (i == ((Integer)localObject).intValue()) {
-          localArrayList1.addAll(0, localArrayList2);
-        } else {
-          localArrayList1.addAll(localArrayList2);
-        }
-      }
-    }
-    Iterator localIterator = c.keySet().iterator();
-    int j;
-    for (i = 0;; i = Math.max(i, ((ArrayList)c.get(localObject)).size()))
-    {
-      j = k;
-      if (!localIterator.hasNext()) {
-        break;
-      }
-      localObject = (Integer)localIterator.next();
-    }
-    for (;;)
-    {
-      j += 1;
-      if (j >= i) {
-        break;
-      }
-      localIterator = c.keySet().iterator();
-      while (localIterator.hasNext())
-      {
-        localObject = (Integer)localIterator.next();
-        localObject = (ArrayList)c.get(localObject);
-        if (j < ((ArrayList)localObject).size()) {
-          localArrayList1.add(((ArrayList)localObject).get(j));
-        }
-      }
-    }
-    return localArrayList1;
+    return "connectTimeout:" + a + ",readTimeout:" + b + ",apnCachedNum:" + c + ",parallelNum:" + d + ",expireTime:" + e;
   }
 }
 

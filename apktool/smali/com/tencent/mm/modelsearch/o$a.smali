@@ -16,9 +16,19 @@
     name = "a"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/modelsearch/m$k;",
+        "Ljava/lang/Comparable",
+        "<",
+        "Lcom/tencent/mm/modelsearch/o$a;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field public bZY:Z
+.field public bTH:Z
 
 .field public mPriority:I
 
@@ -39,7 +49,7 @@
     .line 14
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/modelsearch/o$a;->bZY:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/modelsearch/o$a;->bTH:Z
 
     .line 15
     return-void

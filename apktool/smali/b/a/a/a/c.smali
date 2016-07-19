@@ -48,7 +48,7 @@
     return-object v0
 .end method
 
-.method public boD()Ljava/lang/String;
+.method public bvB()Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -58,7 +58,7 @@
     return-object v0
 .end method
 
-.method public boE()Ljava/lang/String;
+.method public bvC()Ljava/lang/String;
     .locals 1
 
     .prologue

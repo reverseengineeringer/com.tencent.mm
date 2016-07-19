@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field final synthetic kDn:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+.field final synthetic lcs:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
 
 # direct methods
@@ -29,7 +29,7 @@
 
     .prologue
     .line 130
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->kDn:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->lcs:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,7 +48,7 @@
 
 
 # virtual methods
-.method public final bcw()V
+.method public final bhL()V
     .locals 4
 
     .prologue
@@ -56,7 +56,7 @@
     const-string/jumbo v1, ""
 
     .line 178
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->kDn:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->lcs:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;->a(Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;)Ljava/util/ArrayList;
 
@@ -93,7 +93,7 @@
     move-result-object v3
 
     .line 180
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -136,7 +136,7 @@
 
     .line 185
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->kDn:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->lcs:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;->e(Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;)Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$b;
 
@@ -145,13 +145,13 @@
     if-eqz v0, :cond_1
 
     .line 186
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->kDn:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->lcs:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;->e(Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;)Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$b;->bbz()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$b;->bgL()V
 
     .line 188
     :cond_1
@@ -163,12 +163,12 @@
     goto :goto_1
 .end method
 
-.method public final qC(I)V
+.method public final sv(I)V
     .locals 2
 
     .prologue
     .line 163
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->kDn:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->lcs:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;->a(Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;)Ljava/util/ArrayList;
 
@@ -176,7 +176,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->kDn:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->lcs:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;->a(Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;)Ljava/util/ArrayList;
 
@@ -198,7 +198,7 @@
 
     .line 168
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->kDn:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->lcs:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;->a(Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;)Ljava/util/ArrayList;
 
@@ -221,7 +221,7 @@
     goto :goto_0
 .end method
 
-.method public final qD(I)V
+.method public final sw(I)V
     .locals 4
 
     .prologue
@@ -229,7 +229,7 @@
     const-string/jumbo v1, ""
 
     .line 135
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->kDn:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->lcs:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;->a(Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;)Ljava/util/ArrayList;
 
@@ -266,7 +266,7 @@
     move-result-object v3
 
     .line 137
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -309,7 +309,7 @@
 
     .line 142
     :cond_0
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -319,13 +319,13 @@
 
     move-result v0
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->kDn:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->lcs:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;->b(Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;)I
 
     move-result v2
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->kDn:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->lcs:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
     invoke-static {v3}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;->c(Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;)I
 
@@ -336,7 +336,7 @@
     if-ne v0, v2, :cond_2
 
     .line 143
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->kDn:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->lcs:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;->d(Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;)Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$a;
 
@@ -345,13 +345,13 @@
     if-eqz v0, :cond_1
 
     .line 144
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->kDn:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->lcs:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;->d(Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;)Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$a;
 
     move-result-object v0
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$a;->Go(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$a;->ID(Ljava/lang/String;)V
 
     .line 159
     :cond_1
@@ -360,7 +360,7 @@
 
     .line 149
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->kDn:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->lcs:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;->e(Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;)Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$b;
 
@@ -369,17 +369,17 @@
     if-eqz v0, :cond_3
 
     .line 150
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->kDn:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->lcs:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;->e(Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;)Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$b;->bbz()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$b;->bgL()V
 
     .line 153
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->kDn:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->lcs:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;->a(Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;)Ljava/util/ArrayList;
 
@@ -387,7 +387,7 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->kDn:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->lcs:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;->a(Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;)Ljava/util/ArrayList;
 
@@ -402,7 +402,7 @@
     if-ge p1, v0, :cond_1
 
     .line 154
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->kDn:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$c;->lcs:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;->a(Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;)Ljava/util/ArrayList;
 

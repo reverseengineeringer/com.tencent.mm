@@ -9,7 +9,7 @@ import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -17,15 +17,15 @@ import java.util.List;
 public final class l
   implements ContextMenu
 {
-  public List kFt = new ArrayList();
-  public CharSequence lW;
+  public List<MenuItem> lex = new ArrayList();
+  public CharSequence mm;
   
   public final MenuItem a(int paramInt1, CharSequence paramCharSequence, int paramInt2)
   {
     m localm = new m(paramInt1, 0);
     localm.setTitle(paramCharSequence);
     localm.setIcon(paramInt2);
-    kFt.add(localm);
+    lex.add(localm);
     return localm;
   }
   
@@ -33,7 +33,7 @@ public final class l
   {
     m localm = new m(0, 0);
     localm.setTitle(paramInt);
-    kFt.add(localm);
+    lex.add(localm);
     return localm;
   }
   
@@ -41,7 +41,7 @@ public final class l
   {
     m localm = new m(paramInt2, paramInt1);
     localm.setTitle(paramInt4);
-    kFt.add(localm);
+    lex.add(localm);
     return localm;
   }
   
@@ -49,7 +49,7 @@ public final class l
   {
     m localm = new m(paramInt2, paramInt1);
     localm.setTitle(paramCharSequence);
-    kFt.add(localm);
+    lex.add(localm);
     return localm;
   }
   
@@ -57,7 +57,7 @@ public final class l
   {
     m localm = new m(0, 0);
     localm.setTitle(paramCharSequence);
-    kFt.add(localm);
+    lex.add(localm);
     return localm;
   }
   
@@ -90,34 +90,34 @@ public final class l
   {
     m localm = new m(paramInt, 0);
     localm.setTitle(paramCharSequence);
-    kFt.add(localm);
+    lex.add(localm);
     return localm;
   }
   
-  public final MenuItem bL(int paramInt1, int paramInt2)
+  public final MenuItem bR(int paramInt1, int paramInt2)
   {
     m localm = new m(paramInt1, 0);
     localm.setTitle(paramInt2);
-    kFt.add(localm);
+    lex.add(localm);
     return localm;
   }
   
-  public final boolean bcJ()
+  public final boolean big()
   {
-    return kFt.size() == 0;
+    return lex.size() == 0;
   }
   
   public final void clear()
   {
-    Iterator localIterator = kFt.iterator();
+    Iterator localIterator = lex.iterator();
     while (localIterator.hasNext())
     {
       MenuItem localMenuItem = (MenuItem)localIterator.next();
-      kFw = null;
+      leA = null;
       ((m)localMenuItem).setOnMenuItemClickListener(null);
     }
-    kFt.clear();
-    lW = null;
+    lex.clear();
+    mm = null;
   }
   
   public final void clearHeader() {}
@@ -126,7 +126,7 @@ public final class l
   
   public final MenuItem findItem(int paramInt)
   {
-    Iterator localIterator = kFt.iterator();
+    Iterator localIterator = lex.iterator();
     while (localIterator.hasNext())
     {
       MenuItem localMenuItem = (MenuItem)localIterator.next();
@@ -139,7 +139,7 @@ public final class l
   
   public final MenuItem getItem(int paramInt)
   {
-    return (MenuItem)kFt.get(paramInt);
+    return (MenuItem)lex.get(paramInt);
   }
   
   public final boolean hasVisibleItems()
@@ -186,7 +186,7 @@ public final class l
   {
     Object localObject = this;
     if (paramInt > 0) {
-      localObject = setHeaderTitle(y.getContext().getString(paramInt));
+      localObject = setHeaderTitle(aa.getContext().getString(paramInt));
     }
     return (ContextMenu)localObject;
   }
@@ -196,7 +196,7 @@ public final class l
     if (paramCharSequence == null) {
       return this;
     }
-    lW = paramCharSequence;
+    mm = paramCharSequence;
     return this;
   }
   
@@ -209,18 +209,18 @@ public final class l
   
   public final int size()
   {
-    if (kFt == null) {
+    if (lex == null) {
       return 0;
     }
-    return kFt.size();
+    return lex.size();
   }
   
-  public final MenuItem u(int paramInt1, int paramInt2, int paramInt3)
+  public final MenuItem y(int paramInt1, int paramInt2, int paramInt3)
   {
     m localm = new m(paramInt1, 0);
     localm.setTitle(paramInt2);
     localm.setIcon(paramInt3);
-    kFt.add(localm);
+    lex.add(localm);
     return localm;
   }
 }

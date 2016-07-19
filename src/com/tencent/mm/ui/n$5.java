@@ -1,28 +1,18 @@
 package com.tencent.mm.ui;
 
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
-import android.content.Intent;
-import com.tencent.mm.modelsimple.d;
-import com.tencent.mm.ui.base.b;
 
 final class n$5
   implements DialogInterface.OnCancelListener
 {
-  n$5(Intent paramIntent, Runnable paramRunnable, MMActivity paramMMActivity) {}
+  n$5(Activity paramActivity) {}
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    if (kqi != null)
-    {
-      if (kqj != null) {
-        kqj.run();
-      }
-      d.aW(amX);
-      amX.finish();
-      amX.startActivity(kqi);
-      b.w(amX, kqi);
-    }
+    chx.finish();
+    MMAppMgr.a(chx, true);
   }
 }
 

@@ -3,9 +3,9 @@ package com.tencent.mm.plugin.accountsync.a;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 
 public final class b$1
   implements DialogInterface.OnCancelListener
@@ -14,15 +14,15 @@ public final class b$1
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    u.w("!24@/B4Tb64lLpIfnJwgZ47LaQ==", "do init canceled");
-    ah.tE().c(coe.auF);
-    if (coe.auF.getType() == 139) {
-      ah.tE().b(139, coe);
+    v.w("MicroMsg.DoInit", "do init canceled");
+    ah.tF().c(cjs.ags);
+    if (cjs.ags.getType() == 139) {
+      ah.tF().b(139, cjs);
     }
-    while (coe.auF.getType() != 138) {
+    while (cjs.ags.getType() != 138) {
       return;
     }
-    ah.tE().b(138, coe);
+    ah.tF().b(138, cjs);
   }
 }
 

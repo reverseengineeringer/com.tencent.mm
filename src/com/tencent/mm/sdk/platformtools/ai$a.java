@@ -2,7 +2,9 @@ package com.tencent.mm.sdk.platformtools;
 
 public abstract interface ai$a
 {
-  public abstract void kY();
+  public abstract void a(Runnable paramRunnable, ai paramai);
+  
+  public abstract void a(Runnable paramRunnable, Thread paramThread, long paramLong1, long paramLong2, float paramFloat);
 }
 
 /* Location:

@@ -1,21 +1,8 @@
 package com.tencent.mm.plugin.sns.e;
 
-import android.view.View;
-
-final class b$a
+public abstract interface b$a
 {
-  View gFN = null;
-  long gHt;
-  String gRB;
-  com.tencent.mm.plugin.sns.h.b gRC;
-  
-  public b$a(b paramb, String paramString, View paramView, long paramLong, com.tencent.mm.plugin.sns.h.b paramb1)
-  {
-    gRB = paramString;
-    gFN = paramView;
-    gRC = paramb1;
-    gHt = paramLong;
-  }
+  public abstract void bt(String paramString1, String paramString2);
 }
 
 /* Location:

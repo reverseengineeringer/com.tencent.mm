@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hds:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+.field final synthetic hsf:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 2659
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$1;->hds:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    .line 2813
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$1;->hsf:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,18 +40,18 @@
     .locals 3
 
     .prologue
-    .line 2662
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$1;->hds:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    .line 2816
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$1;->hsf:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->d(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Landroid/widget/ListView;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$1;->hds:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$1;->hsf:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->hda:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->hrN:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;->d(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI;)Landroid/widget/ListView;
 
@@ -61,9 +61,9 @@
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$1;->hds:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b$1;->hsf:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;
 
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->hdq:Ljava/util/LinkedList;
+    iget-object v2, v2, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$b;->hsd:Ljava/util/LinkedList;
 
     invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
 
@@ -75,6 +75,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setSelection(I)V
 
-    .line 2663
+    .line 2817
     return-void
 .end method

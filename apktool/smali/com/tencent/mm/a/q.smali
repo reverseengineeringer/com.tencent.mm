@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static q([B)[B
+.method public static m([B)[B
     .locals 6
 
     .prologue
@@ -202,13 +202,13 @@
     goto :goto_1
 .end method
 
-.method public static r([B)[B
+.method public static n([B)[B
     .locals 1
 
     .prologue
     .line 49
     :try_start_0
-    invoke-static {p0}, Lcom/tencent/mm/a/q;->s([B)[B
+    invoke-static {p0}, Lcom/tencent/mm/a/q;->o([B)[B
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -224,7 +224,7 @@
     goto :goto_0
 .end method
 
-.method public static s([B)[B
+.method public static o([B)[B
     .locals 6
 
     .prologue

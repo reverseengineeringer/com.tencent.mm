@@ -2,9 +2,9 @@ package com.tencent.mm.ui.account.mobile;
 
 import android.graphics.Bitmap;
 import com.tencent.mm.network.b;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import com.tencent.mm.sdk.platformtools.d;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class MobileLoginOrForceReg$11
   implements Runnable
@@ -23,10 +23,10 @@ final class MobileLoginOrForceReg$11
     {
       for (;;)
       {
-        u.e("!44@kCDfVf11b5ODuKlWMsaJVoc4C30kOcNmvf8lIbZ2/oI=", "download avatar failed");
+        v.e("MicorMsg.MobileLoginOrForceReg", "download avatar failed");
       }
     }
-    MobileLoginOrForceReg.b(kyq).sendMessage(MobileLoginOrForceReg.b(kyq).obtainMessage(0, localObject));
+    MobileLoginOrForceReg.b(kXx).sendMessage(MobileLoginOrForceReg.b(kXx).obtainMessage(0, localObject));
   }
   
   public final String toString()

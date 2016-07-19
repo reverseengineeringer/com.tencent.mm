@@ -1,15 +1,28 @@
 package com.tencent.mm.ui.widget;
 
-import android.util.SparseIntArray;
-import java.util.ArrayList;
-
 final class DragSortListView$j
+  extends DragSortListView.m
 {
-  SparseIntArray lEH = new SparseIntArray(3);
-  ArrayList lEI = new ArrayList(3);
-  int lEJ = 3;
+  private float mfA;
+  private float mfz;
   
-  public DragSortListView$j(DragSortListView paramDragSortListView) {}
+  public final void G(float paramFloat)
+  {
+    if (DragSortListView.b(mfd) != 4)
+    {
+      lmv = true;
+      return;
+    }
+    DragSortListView.a(mfd, (int)(mfA * paramFloat + (1.0F - paramFloat) * mfz));
+    emfd).y = (DragSortListView.f(mfd) - DragSortListView.c(mfd));
+    DragSortListView.g(mfd);
+  }
+  
+  public final void onStart()
+  {
+    mfz = DragSortListView.c(mfd);
+    mfA = DragSortListView.d(mfd);
+  }
 }
 
 /* Location:

@@ -2,10 +2,31 @@ package com.tencent.mm.compatible.loader;
 
 public final class a
 {
-  private static Object[] bts = new Object[0];
-  private static Object[] btt = new Object[73];
+  private static Object[] bhE = new Object[0];
+  private static Object[] bhF = new Object[73];
   
-  public static int m(int paramInt)
+  public static <T> boolean a(T[] paramArrayOfT, T paramT)
+  {
+    int j = paramArrayOfT.length;
+    int i = 0;
+    while (i < j)
+    {
+      T ? = paramArrayOfT[i];
+      if (? == null)
+      {
+        if (paramT != null) {}
+      }
+      else {
+        while ((paramT != null) && (?.equals(paramT))) {
+          return true;
+        }
+      }
+      i += 1;
+    }
+    return false;
+  }
+  
+  public static int n(int paramInt)
   {
     int j = paramInt * 4;
     paramInt = 4;

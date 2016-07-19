@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public aut:Ljava/lang/String;
+.field public agg:Ljava/lang/String;
 
-.field public azd:J
+.field public alf:J
 
-.field public aze:J
+.field public alg:J
 
 .field public id:J
 
@@ -52,13 +52,13 @@
     .line 12
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/e;->aut:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/e;->agg:Ljava/lang/String;
 
     .line 14
-    iput-wide v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/e;->azd:J
+    iput-wide v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/e;->alf:J
 
     .line 16
-    iput-wide v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/e;->aze:J
+    iput-wide v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/e;->alg:J
 
     return-void
 .end method

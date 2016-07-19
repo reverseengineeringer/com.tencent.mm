@@ -5,38 +5,38 @@ import java.util.regex.Pattern;
 
 final class o
 {
-  static Pattern iTo = Pattern.compile("(?:(http|https|file)\\:\\/\\/)?(?:([-A-Za-z0-9$_.+!*'(),;?&=]+(?:\\:[-A-Za-z0-9$_.+!*'(),;?&=]+)?)@)?([a-zA-Z0-9 -퟿豈-﷏ﷰ-￯%_-][a-zA-Z0-9 -퟿豈-﷏ﷰ-￯%_\\.-]*|\\[[0-9a-fA-F:\\.]+\\])?(?:\\:([0-9]*))?(\\/?[^#]*)?.*", 2);
-  String dtS;
-  String ekE;
-  String iTl;
-  String iTm;
-  int iTn;
+  static Pattern jqB = Pattern.compile("(?:(http|https|file)\\:\\/\\/)?(?:([-A-Za-z0-9$_.+!*'(),;?&=]+(?:\\:[-A-Za-z0-9$_.+!*'(),;?&=]+)?)@)?([a-zA-Z0-9 -퟿豈-﷏ﷰ-￯%_-][a-zA-Z0-9 -퟿豈-﷏ﷰ-￯%_\\.-]*|\\[[0-9a-fA-F:\\.]+\\])?(?:\\:([0-9]*))?(\\/?[^#]*)?.*", 2);
+  String SZ;
+  String eps;
+  int jqA;
+  String jqy;
+  String jqz;
   
   public o(String paramString)
   {
     if (paramString == null) {
       throw new NullPointerException();
     }
-    iTl = "";
-    iTm = "";
-    iTn = -1;
-    dtS = "/";
-    ekE = "";
-    paramString = iTo.matcher(paramString);
+    jqy = "";
+    jqz = "";
+    jqA = -1;
+    SZ = "/";
+    eps = "";
+    paramString = jqB.matcher(paramString);
     String str;
     if (paramString.matches())
     {
       str = paramString.group(1);
       if (str != null) {
-        iTl = str.toLowerCase();
+        jqy = str.toLowerCase();
       }
       str = paramString.group(2);
       if (str != null) {
-        ekE = str;
+        eps = str;
       }
       str = paramString.group(3);
       if (str != null) {
-        iTm = str;
+        jqz = str;
       }
       str = paramString.group(4);
       if ((str == null) || (str.length() <= 0)) {}
@@ -45,22 +45,22 @@ final class o
     {
       try
       {
-        iTn = Integer.parseInt(str);
+        jqA = Integer.parseInt(str);
         paramString = paramString.group(5);
         if ((paramString != null) && (paramString.length() > 0))
         {
           if (paramString.charAt(0) == '/') {
-            dtS = paramString;
+            SZ = paramString;
           }
         }
         else
         {
-          if ((iTn != 443) || (!iTl.equals(""))) {
+          if ((jqA != 443) || (!jqy.equals(""))) {
             break label256;
           }
-          iTl = "https";
-          if (iTl.equals("")) {
-            iTl = "http";
+          jqy = "https";
+          if (jqy.equals("")) {
+            jqy = "http";
           }
           return;
         }
@@ -69,15 +69,15 @@ final class o
       {
         throw new Exception("Bad port");
       }
-      dtS = ("/" + paramString);
+      SZ = ("/" + paramString);
       continue;
       throw new Exception("Bad address");
       label256:
-      if (iTn == -1) {
-        if (iTl.equals("https")) {
-          iTn = 443;
+      if (jqA == -1) {
+        if (jqy.equals("https")) {
+          jqA = 443;
         } else {
-          iTn = 80;
+          jqA = 80;
         }
       }
     }
@@ -87,24 +87,24 @@ final class o
   {
     String str2 = "";
     String str1;
-    if ((iTn == 443) || (!iTl.equals("https")))
+    if ((jqA == 443) || (!jqy.equals("https")))
     {
       str1 = str2;
-      if (iTn != 80)
+      if (jqA != 80)
       {
         str1 = str2;
-        if (!iTl.equals("http")) {}
+        if (!jqy.equals("http")) {}
       }
     }
     else
     {
-      str1 = ":" + Integer.toString(iTn);
+      str1 = ":" + Integer.toString(jqA);
     }
     str2 = "";
-    if (ekE.length() > 0) {
-      str2 = ekE + "@";
+    if (eps.length() > 0) {
+      str2 = eps + "@";
     }
-    return iTl + "://" + str2 + iTm + str1 + dtS;
+    return jqy + "://" + str2 + jqz + str1 + SZ;
   }
 }
 

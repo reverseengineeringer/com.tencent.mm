@@ -14,16 +14,17 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.Gallery.LayoutParams;
 import android.widget.LinearLayout.LayoutParams;
-import com.tencent.mm.ar.c;
-import com.tencent.mm.aw.a;
+import com.tencent.mm.av.c;
+import com.tencent.mm.az.a;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.MultiTouchImageView;
 import com.tencent.mm.ui.base.l;
 import com.tencent.mm.ui.base.n.c;
 import com.tencent.mm.ui.base.n.d;
+import com.tencent.mm.ui.j;
 import com.tencent.mm.ui.tools.MMGestureGallery;
 import com.tencent.mm.ui.tools.n;
 import java.io.File;
@@ -31,15 +32,15 @@ import java.io.File;
 public class ContactRemarkImagePreviewUI
   extends MMActivity
 {
-  private MMGestureGallery dQq;
-  private View ljk;
-  private String ljl;
-  private boolean ljm;
-  private boolean ljn;
-  private a ljo;
+  private MMGestureGallery dSv;
+  private View lJv;
+  private String lJw;
+  private boolean lJx;
+  private boolean lJy;
+  private a lJz;
   private String username;
   
-  private void hV(boolean paramBoolean)
+  private void iy(boolean paramBoolean)
   {
     if (paramBoolean)
     {
@@ -50,48 +51,48 @@ public class ContactRemarkImagePreviewUI
     finish();
   }
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    ljk = findViewById(2131165619);
-    dQq = ((MMGestureGallery)findViewById(2131165381));
-    qb(2131428457);
-    dQq.setVerticalFadingEdgeEnabled(false);
-    dQq.setHorizontalFadingEdgeEnabled(false);
-    com.tencent.mm.sdk.platformtools.k.H(dQq);
-    ljo = new a();
-    ljo.imagePath = ljl;
-    dQq.setAdapter(ljo);
-    dQq.setOnItemClickListener(new AdapterView.OnItemClickListener()
+    lJv = findViewById(2131756359);
+    dSv = ((MMGestureGallery)findViewById(2131756360));
+    rR(2131233870);
+    dSv.setVerticalFadingEdgeEnabled(false);
+    dSv.setHorizontalFadingEdgeEnabled(false);
+    com.tencent.mm.sdk.platformtools.k.H(dSv);
+    lJz = new a();
+    lJz.imagePath = lJw;
+    dSv.setAdapter(lJz);
+    dSv.setOnItemClickListener(new AdapterView.OnItemClickListener()
     {
-      public final void onItemClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+      public final void onItemClick(AdapterView<?> paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
       {
-        if (!baV())
+        if (!bgf())
         {
-          baU();
+          bge();
           return;
         }
-        baT();
+        kNN.bgn();
       }
     });
-    a(0, 2130903464, new MenuItem.OnMenuItemClickListener()
+    a(0, 2131165199, new MenuItem.OnMenuItemClickListener()
     {
       public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
       {
         paramAnonymousMenuItem = new n(ContactRemarkImagePreviewUI.this);
-        hle = new n.c()
+        hoS = new n.c()
         {
           public final void a(l paramAnonymous2l)
           {
             if (!ContactRemarkImagePreviewUI.a(ContactRemarkImagePreviewUI.this)) {
-              paramAnonymous2l.b(0, getString(2131430890));
+              paramAnonymous2l.b(0, getString(2131230884));
             }
-            paramAnonymous2l.b(1, getString(2131427823));
-            if (c.yf("favorite")) {
-              paramAnonymous2l.b(2, getString(2131431054));
+            paramAnonymous2l.b(1, getString(2131234713));
+            if (c.zM("favorite")) {
+              paramAnonymous2l.b(2, getString(2131234160));
             }
           }
         };
-        hlf = new n.d()
+        hoT = new n.d()
         {
           public final void d(MenuItem paramAnonymous2MenuItem, int paramAnonymous2Int)
           {
@@ -131,22 +132,22 @@ public class ContactRemarkImagePreviewUI
   
   protected final int getLayoutId()
   {
-    return 2131361916;
+    return 2130903397;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
     username = getIntent().getStringExtra("Contact_User");
-    ljl = getIntent().getStringExtra("remark_image_path");
-    ljm = getIntent().getBooleanExtra("view_temp_remark_image", false);
-    ljn = getIntent().getBooleanExtra("view_only", false);
-    if (ay.kz(username))
+    lJw = getIntent().getStringExtra("remark_image_path");
+    lJx = getIntent().getBooleanExtra("view_temp_remark_image", false);
+    lJy = getIntent().getBooleanExtra("view_only", false);
+    if (be.kf(username))
     {
       finish();
       return;
     }
-    Gb();
+    Gy();
   }
   
   protected void onDestroy()
@@ -158,7 +159,7 @@ public class ContactRemarkImagePreviewUI
   {
     if ((paramInt == 4) && (paramKeyEvent.getRepeatCount() == 0))
     {
-      hV(false);
+      iy(false);
       return true;
     }
     return super.onKeyDown(paramInt, paramKeyEvent);
@@ -193,8 +194,8 @@ public class ContactRemarkImagePreviewUI
     
     public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
     {
-      paramView = View.inflate(ContactRemarkImagePreviewUI.this, 2131361821, null);
-      paramViewGroup = (MultiTouchImageView)paramView.findViewById(2131165228);
+      paramView = View.inflate(ContactRemarkImagePreviewUI.this, 2130903398, null);
+      paramViewGroup = (MultiTouchImageView)paramView.findViewById(2131755043);
       paramView.setLayoutParams(new Gallery.LayoutParams(-1, -1));
       paramViewGroup.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
       Bitmap localBitmap = BackwardSupportUtil.b.b(imagePath, a.getDensity(ContactRemarkImagePreviewUI.this));
@@ -208,7 +209,7 @@ public class ContactRemarkImagePreviewUI
         localMatrix.reset();
         f1 = localBitmap.getWidth() / localBitmap.getHeight();
         f2 = localBitmap.getHeight() / localBitmap.getWidth();
-        u.v("!32@/B4Tb64lLpJ8SVyOn6WIBnf/iMnAMEhc", "whDiv is " + f1 + " hwDiv is " + f2);
+        v.v("MicroMsg.ImagePreviewUI", "whDiv is " + f1 + " hwDiv is " + f2);
         if ((f2 < 2.0F) || (localBitmap.getHeight() < 480)) {
           break label308;
         }
@@ -224,7 +225,7 @@ public class ContactRemarkImagePreviewUI
       for (;;)
       {
         paramViewGroup.setImageMatrix(localMatrix);
-        paramViewGroup.bN(localBitmap.getWidth(), localBitmap.getHeight());
+        paramViewGroup.bT(localBitmap.getWidth(), localBitmap.getHeight());
         paramViewGroup.setImageBitmap(localBitmap);
         return paramView;
         label280:
@@ -246,7 +247,7 @@ public class ContactRemarkImagePreviewUI
         {
           localMatrix.postScale(1.0F, 1.0F);
           f1 = (i - localBitmap.getHeight()) / 2;
-          u.d("!32@/B4Tb64lLpJ8SVyOn6WIBnf/iMnAMEhc", " offsety " + f1);
+          v.d("MicroMsg.ImagePreviewUI", " offsety " + f1);
           localMatrix.postTranslate(0.0F, f1);
         }
       }

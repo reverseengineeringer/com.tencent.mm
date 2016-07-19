@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic amU:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+.field final synthetic ZJ:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
-.field final synthetic lBv:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
+.field final synthetic mcn:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 370
-    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$2;->lBv:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
+    .line 376
+    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$2;->mcn:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$2;->amU:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iput-object p2, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$2;->ZJ:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,23 +44,23 @@
     .locals 2
 
     .prologue
-    .line 374
+    .line 380
     if-eqz p1, :cond_0
 
-    .line 375
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$2;->lBv:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
+    .line 381
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$2;->mcn:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$2;->amU:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$2;->ZJ:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     invoke-static {v0, v1, p2, p3}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->a(Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;Ljava/lang/String;I)V
 
-    .line 379
+    .line 385
     :goto_0
     return-void
 
-    .line 377
+    .line 383
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$2;->lBv:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI$2;->mcn:Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;->d(Lcom/tencent/mm/ui/transmit/SendAppMessageWrapperUI;)V
 

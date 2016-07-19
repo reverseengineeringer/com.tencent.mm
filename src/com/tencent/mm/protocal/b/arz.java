@@ -1,75 +1,105 @@
 package com.tencent.mm.protocal.b;
 
+import java.util.LinkedList;
+
 public final class arz
-  extends com.tencent.mm.at.a
+  extends alt
 {
-  public String appName;
-  public String jLE;
-  public int jLF;
-  public boolean jLG;
-  public boolean jLH;
+  public int jvM;
+  public String jwf;
+  public String kic;
+  public long kid;
+  public long kjn;
+  public int kjo;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (jLE != null) {
-        paramVarArgs.d(1, jLE);
+      if (kfq != null)
+      {
+        paramVarArgs.cx(1, kfq.iO());
+        kfq.a(paramVarArgs);
       }
-      if (appName != null) {
-        paramVarArgs.d(2, appName);
+      if (kic != null) {
+        paramVarArgs.e(2, kic);
       }
-      paramVarArgs.ci(3, jLF);
-      paramVarArgs.R(4, jLG);
-      paramVarArgs.R(5, jLH);
+      if (jwf != null) {
+        paramVarArgs.e(3, jwf);
+      }
+      paramVarArgs.z(4, kid);
+      paramVarArgs.cw(5, jvM);
+      paramVarArgs.z(6, kjn);
+      paramVarArgs.cw(7, kjo);
       return 0;
     }
     if (paramInt == 1) {
-      if (jLE == null) {
-        break label333;
+      if (kfq == null) {
+        break label535;
       }
     }
-    label333:
-    for (paramInt = a.a.a.b.b.a.e(1, jLE) + 0;; paramInt = 0)
+    label535:
+    for (int i = a.a.a.a.cv(1, kfq.iO()) + 0;; i = 0)
     {
-      int i = paramInt;
-      if (appName != null) {
-        i = paramInt + a.a.a.b.b.a.e(2, appName);
+      paramInt = i;
+      if (kic != null) {
+        paramInt = i + a.a.a.b.b.a.f(2, kic);
       }
-      return i + a.a.a.a.cg(3, jLF) + (a.a.a.b.b.a.ay(4) + 1) + (a.a.a.b.b.a.ay(5) + 1);
+      i = paramInt;
+      if (jwf != null) {
+        i = paramInt + a.a.a.b.b.a.f(3, jwf);
+      }
+      return i + a.a.a.a.y(4, kid) + a.a.a.a.cu(5, jvM) + a.a.a.a.y(6, kjn) + a.a.a.a.cu(7, kjo);
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = alt.a(paramVarArgs); paramInt > 0; paramInt = alt.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
         break;
       }
       if (paramInt == 3)
       {
-        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
         arz localarz = (arz)paramVarArgs[1];
-        switch (((Integer)paramVarArgs[2]).intValue())
+        paramInt = ((Integer)paramVarArgs[2]).intValue();
+        switch (paramInt)
         {
         default: 
           return -1;
         case 1: 
-          jLE = maU.readString();
-          return 0;
+          paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+          i = paramVarArgs.size();
+          paramInt = 0;
+          while (paramInt < i)
+          {
+            Object localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new df();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+            for (boolean bool = true; bool; bool = ((df)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, alt.a((a.a.a.a.a)localObject2))) {}
+            kfq = ((df)localObject1);
+            paramInt += 1;
+          }
         case 2: 
-          appName = maU.readString();
+          kic = mMY.readString();
           return 0;
         case 3: 
-          jLF = maU.jC();
+          jwf = mMY.readString();
           return 0;
         case 4: 
-          jLG = locala.boe();
+          kid = mMY.ie();
+          return 0;
+        case 5: 
+          jvM = mMY.id();
+          return 0;
+        case 6: 
+          kjn = mMY.ie();
           return 0;
         }
-        jLH = locala.boe();
+        kjo = mMY.id();
         return 0;
       }
       return -1;

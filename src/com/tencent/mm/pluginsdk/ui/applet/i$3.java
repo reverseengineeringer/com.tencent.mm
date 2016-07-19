@@ -11,14 +11,14 @@ final class i$3
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (iJp.apf != null)
+    if (jgl.fTL != null)
     {
-      iJp.apf.dismiss();
-      iJp.apf = null;
+      jgl.fTL.dismiss();
+      jgl.fTL = null;
     }
-    iJp.onStop();
-    if (iJp.iJm != null) {
-      iJp.iJm.bK(false);
+    jgl.onStop();
+    if (jgl.jgi != null) {
+      jgl.jgi.bz(false);
     }
   }
 }

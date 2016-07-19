@@ -16,22 +16,22 @@ final class ChatroomContactUI$13
     }
     for (;;)
     {
-      if (ChatroomContactUI.f(ljg) != null)
+      if (ChatroomContactUI.f(lJr) != null)
       {
-        paramView = ChatroomContactUI.f(ljg);
-        if (bMn != null) {
-          bMn.onTouchEvent(paramMotionEvent);
+        paramView = ChatroomContactUI.f(lJr);
+        if (bFH != null) {
+          bFH.onTouchEvent(paramMotionEvent);
         }
       }
-      if (ChatroomContactUI.d(ljg) != null)
+      if (ChatroomContactUI.d(lJr) != null)
       {
-        paramView = ChatroomContactUI.d(ljg);
-        if (bMn != null) {
-          bMn.onTouchEvent(paramMotionEvent);
+        paramView = ChatroomContactUI.d(lJr);
+        if (bFH != null) {
+          bFH.onTouchEvent(paramMotionEvent);
         }
       }
       return false;
-      ljg.age();
+      lJr.aiI();
     }
   }
 }

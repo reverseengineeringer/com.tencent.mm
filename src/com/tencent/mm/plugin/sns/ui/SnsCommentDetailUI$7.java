@@ -1,19 +1,14 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.e.a.ev;
 import com.tencent.mm.sdk.c.c;
 
 final class SnsCommentDetailUI$7
-  extends c
+  extends c<ev>
 {
   SnsCommentDetailUI$7(SnsCommentDetailUI paramSnsCommentDetailUI)
   {
-    super(0);
-  }
-  
-  public final boolean a(b paramb)
-  {
-    return false;
+    kum = ev.class.getName().hashCode();
   }
 }
 

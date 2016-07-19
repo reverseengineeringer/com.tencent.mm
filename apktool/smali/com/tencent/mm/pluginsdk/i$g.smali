@@ -15,65 +15,91 @@
 
 
 # virtual methods
-.method public abstract XB()Z
+.method public varargs abstract ZA()V
 .end method
 
-.method public abstract XC()Z
+.method public abstract ZB()Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 .end method
 
-.method public abstract XF()Lcom/tencent/mm/pluginsdk/wallet/f;
+.method public abstract ZC()Lcom/tencent/mm/pluginsdk/wallet/g;
 .end method
 
-.method public abstract XG()Z
+.method public abstract ZD()Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 .end method
 
-.method public abstract XH()Z
+.method public abstract ZE()Z
 .end method
 
-.method public abstract XI()V
+.method public abstract Zm()Z
 .end method
 
-.method public abstract XJ()Z
+.method public abstract Zn()Z
 .end method
 
-.method public abstract XK()Z
+.method public abstract Zo()Z
 .end method
 
-.method public varargs abstract XL()V
+.method public abstract Zq()V
 .end method
 
-.method public abstract XM()Ljava/util/Map;
+.method public abstract Zs()Lcom/tencent/mm/pluginsdk/wallet/f;
 .end method
 
-.method public abstract XN()Lcom/tencent/mm/pluginsdk/wallet/g;
+.method public abstract Zt()Z
 .end method
 
-.method public abstract XO()Ljava/util/Map;
+.method public abstract Zu()Z
 .end method
 
-.method public abstract XP()Z
+.method public abstract Zv()V
 .end method
 
-.method public abstract a(Lcom/tencent/mm/pluginsdk/wallet/b;I)I
+.method public abstract Zw()Z
 .end method
 
-.method public abstract a(Lcom/tencent/mm/d/a/ie;I)V
+.method public abstract Zx()Z
 .end method
 
-.method public abstract a(Lcom/tencent/mm/d/a/ie;Z)V
+.method public abstract Zy()V
+.end method
+
+.method public abstract Zz()V
+.end method
+
+.method public abstract a(Lcom/tencent/mm/pluginsdk/wallet/b;IZ)I
+.end method
+
+.method public abstract a(Lcom/tencent/mm/e/a/ij;I)V
+.end method
+
+.method public abstract a(Lcom/tencent/mm/e/a/ij;ILjava/lang/String;)V
 .end method
 
 .method public abstract a(ZZLandroid/os/Bundle;)Z
 .end method
 
-.method public abstract abort()V
+.method public abstract bu(Landroid/content/Context;)V
 .end method
 
-.method public abstract bB(Landroid/content/Context;)V
-.end method
-
-.method public abstract bz(Landroid/content/Context;)V
-.end method
-
-.method public abstract release()V
+.method public abstract bw(Landroid/content/Context;)V
 .end method

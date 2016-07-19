@@ -12,9 +12,9 @@
 
 
 # instance fields
-.field apf:Lcom/tencent/mm/ui/base/h;
+.field fTL:Lcom/tencent/mm/ui/base/h;
 
-.field lBr:Lcom/tencent/mm/ui/transmit/a$a;
+.field mcj:Lcom/tencent/mm/ui/transmit/a$a;
 
 
 # direct methods
@@ -26,7 +26,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 31
-    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/a;->lBr:Lcom/tencent/mm/ui/transmit/a$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/a;->mcj:Lcom/tencent/mm/ui/transmit/a$a;
 
     .line 32
     return-void

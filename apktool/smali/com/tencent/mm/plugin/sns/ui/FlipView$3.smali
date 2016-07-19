@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gYa:Lcom/tencent/mm/plugin/sns/ui/FlipView;
+.field final synthetic hlm:Lcom/tencent/mm/plugin/sns/ui/FlipView;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 372
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$3;->gYa:Lcom/tencent/mm/plugin/sns/ui/FlipView;
+    .line 398
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$3;->hlm:Lcom/tencent/mm/plugin/sns/ui/FlipView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,56 +40,69 @@
     .locals 3
 
     .prologue
-    .line 375
-    new-instance v0, Lcom/tencent/mm/d/a/v;
+    .line 401
+    new-instance v0, Lcom/tencent/mm/e/a/x;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/v;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/x;-><init>()V
 
-    .line 376
-    iget-object v1, v0, Lcom/tencent/mm/d/a/v;->asY:Lcom/tencent/mm/d/a/v$a;
+    .line 402
+    iget-object v1, v0, Lcom/tencent/mm/e/a/x;->aeI:Lcom/tencent/mm/e/a/x$a;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$3;->gYa:Lcom/tencent/mm/plugin/sns/ui/FlipView;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$3;->hlm:Lcom/tencent/mm/plugin/sns/ui/FlipView;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/sns/ui/FlipView;->a(Lcom/tencent/mm/plugin/sns/ui/FlipView;)Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, v1, Lcom/tencent/mm/d/a/v$a;->filePath:Ljava/lang/String;
+    iput-object v2, v1, Lcom/tencent/mm/e/a/x$a;->filePath:Ljava/lang/String;
 
-    .line 377
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 403
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
-    .line 379
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$3;->gYa:Lcom/tencent/mm/plugin/sns/ui/FlipView;
+    .line 405
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$3;->hlm:Lcom/tencent/mm/plugin/sns/ui/FlipView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/FlipView;->b(Lcom/tencent/mm/plugin/sns/ui/FlipView;)Lcom/tencent/mm/ui/tools/m;
 
-    .line 380
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$3;->gYa:Lcom/tencent/mm/plugin/sns/ui/FlipView;
+    .line 406
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$3;->hlm:Lcom/tencent/mm/plugin/sns/ui/FlipView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/FlipView;->c(Lcom/tencent/mm/plugin/sns/ui/FlipView;)Ljava/lang/String;
 
-    .line 381
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$3;->gYa:Lcom/tencent/mm/plugin/sns/ui/FlipView;
+    .line 407
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$3;->hlm:Lcom/tencent/mm/plugin/sns/ui/FlipView;
 
     const-string/jumbo v1, ""
 
     invoke-static {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/FlipView;->a(Lcom/tencent/mm/plugin/sns/ui/FlipView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 382
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$3;->gYa:Lcom/tencent/mm/plugin/sns/ui/FlipView;
+    .line 408
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$3;->hlm:Lcom/tencent/mm/plugin/sns/ui/FlipView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/FlipView;->d(Lcom/tencent/mm/plugin/sns/ui/FlipView;)Ljava/lang/String;
 
-    .line 383
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$3;->gYa:Lcom/tencent/mm/plugin/sns/ui/FlipView;
+    .line 409
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$3;->hlm:Lcom/tencent/mm/plugin/sns/ui/FlipView;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/FlipView;->b(Lcom/tencent/mm/plugin/sns/ui/FlipView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 384
+    .line 410
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$3;->hlm:Lcom/tencent/mm/plugin/sns/ui/FlipView;
+
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$3;->hlm:Lcom/tencent/mm/plugin/sns/ui/FlipView;
+
+    const/4 v2, 0x0
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/plugin/sns/ui/FlipView;->b(Lcom/tencent/mm/plugin/sns/ui/FlipView;I)I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/FlipView;->a(Lcom/tencent/mm/plugin/sns/ui/FlipView;I)I
+
+    .line 411
     return-void
 .end method

@@ -2,7 +2,7 @@ package com.tencent.mm.sdk.platformtools;
 
 public abstract interface SensorController$a
 {
-  public abstract void bt(boolean paramBoolean);
+  public abstract void bc(boolean paramBoolean);
 }
 
 /* Location:

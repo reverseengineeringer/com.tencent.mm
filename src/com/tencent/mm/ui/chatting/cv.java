@@ -1,38 +1,96 @@
 package com.tencent.mm.ui.chatting;
 
-import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.os.Bundle;
+import android.os.Looper;
+import android.support.v4.app.FragmentActivity;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.model.aa;
+import com.tencent.mm.model.i;
+import com.tencent.mm.platformtools.s;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.storage.ai;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 final class cv
-  extends aa.a
+  implements aa
 {
-  protected TextView cOd;
-  protected TextView lbR;
-  protected TextView lbS;
-  protected Button lbT;
-  protected Button lbU;
-  protected ImageView lbV;
+  db lCh;
+  private final ChattingUI.a ltl;
   
-  public cv(int paramInt)
+  public cv(ChattingUI.a parama)
   {
-    super(paramInt);
+    ltl = parama;
+    lCh = new db();
   }
   
-  public final cv aH(View paramView)
+  public final void a(int paramInt, String paramString1, String paramString2, String paramString3, String paramString4, Bundle paramBundle) {}
+  
+  public final void a(ai paramai)
   {
-    super.aC(paramView);
-    cOd = ((TextView)paramView.findViewById(2131165407));
-    lbR = ((TextView)paramView.findViewById(2131165732));
-    lbS = ((TextView)paramView.findViewById(2131165733));
-    lbT = ((Button)paramView.findViewById(2131165734));
-    lbU = ((Button)paramView.findViewById(2131165735));
-    lbV = ((ImageView)paramView.findViewById(2131165736));
-    edK = ((CheckBox)paramView.findViewById(2131165186));
-    dMC = paramView.findViewById(2131165187);
-    return this;
+    ltl.bll();
+    if ((!field_talker.equals(ltl.bjO())) || (!paramai.bcA())) {}
+    while (paramai == null) {
+      return;
+    }
+    ArrayList localArrayList = new ArrayList();
+    localArrayList.add(paramai);
+    c(localArrayList, false, false);
+  }
+  
+  protected final void c(List<ai> paramList, boolean paramBoolean1, boolean paramBoolean2)
+  {
+    db localdb = lCh;
+    FragmentActivity localFragmentActivity = ltl.y();
+    jkh = paramList;
+    lCu = localFragmentActivity;
+    bEA = paramBoolean1;
+    if (paramBoolean2) {}
+    do
+    {
+      do
+      {
+        handler.sendEmptyMessageDelayed(0, 800L);
+        return;
+        while (paramList == null) {}
+        paramList = paramList.iterator();
+      } while (!paramList.hasNext());
+    } while (!localdb.a((ai)paramList.next(), localFragmentActivity, paramBoolean1));
+  }
+  
+  public final void cN(String paramString1, String paramString2)
+  {
+    if (s.kf(paramString1)) {
+      return;
+    }
+    paramString2 = new ArrayList();
+    ai localai = new ai();
+    localai.setContent(paramString1);
+    paramString2.add(localai);
+    c(paramString2, true, false);
+  }
+  
+  public final Looper getLooper()
+  {
+    return Looper.getMainLooper();
+  }
+  
+  public final void m(List<ai> paramList)
+  {
+    if (i.du(ltl.bjO())) {
+      return;
+    }
+    ArrayList localArrayList = new ArrayList();
+    paramList = paramList.iterator();
+    while (paramList.hasNext())
+    {
+      ai localai = (ai)paramList.next();
+      if ((field_talker.equals(ltl.bjO())) && (localai.bcA())) {
+        localArrayList.add(localai);
+      }
+    }
+    c(localArrayList, false, false);
   }
 }
 

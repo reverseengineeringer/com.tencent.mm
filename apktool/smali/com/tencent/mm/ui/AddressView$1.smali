@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic kjt:Lcom/tencent/mm/ui/AddressView;
+.field final synthetic kJB:Lcom/tencent/mm/ui/AddressView;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 419
-    iput-object p1, p0, Lcom/tencent/mm/ui/AddressView$1;->kjt:Lcom/tencent/mm/ui/AddressView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/AddressView$1;->kJB:Lcom/tencent/mm/ui/AddressView;
 
     invoke-direct {p0}, Landroid/support/v4/view/a;-><init>()V
 
@@ -41,7 +41,7 @@
     invoke-super {p0, p1, p2}, Landroid/support/v4/view/a;->a(Landroid/view/View;Landroid/support/v4/view/a/a;)V
 
     .line 438
-    iget-object v0, p0, Lcom/tencent/mm/ui/AddressView$1;->kjt:Lcom/tencent/mm/ui/AddressView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/AddressView$1;->kJB:Lcom/tencent/mm/ui/AddressView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/AddressView;->getContentDescription()Ljava/lang/CharSequence;
 
@@ -52,21 +52,21 @@
     .line 440
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/AddressView$1;->kjt:Lcom/tencent/mm/ui/AddressView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/AddressView$1;->kJB:Lcom/tencent/mm/ui/AddressView;
 
     iget-object v1, v0, Lcom/tencent/mm/ui/AddressView;->nickName:Ljava/lang/CharSequence;
 
     .line 441
     :cond_0
-    sget-object v0, Landroid/support/v4/view/a/a;->gK:Landroid/support/v4/view/a/a$b;
+    sget-object v0, Landroid/support/v4/view/a/a;->hf:Landroid/support/v4/view/a/a$b;
 
-    iget-object v2, p2, Landroid/support/v4/view/a/a;->gL:Ljava/lang/Object;
+    iget-object v2, p2, Landroid/support/v4/view/a/a;->hg:Ljava/lang/Object;
 
     invoke-interface {v0, v2, v1}, Landroid/support/v4/view/a/a$b;->d(Ljava/lang/Object;Ljava/lang/CharSequence;)V
 
@@ -82,7 +82,7 @@
     invoke-super {p0, p1, p2}, Landroid/support/v4/view/a;->onPopulateAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
     .line 426
-    iget-object v0, p0, Lcom/tencent/mm/ui/AddressView$1;->kjt:Lcom/tencent/mm/ui/AddressView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/AddressView$1;->kJB:Lcom/tencent/mm/ui/AddressView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/AddressView;->getContentDescription()Ljava/lang/CharSequence;
 
@@ -93,13 +93,13 @@
     .line 428
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/AddressView$1;->kjt:Lcom/tencent/mm/ui/AddressView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/AddressView$1;->kJB:Lcom/tencent/mm/ui/AddressView;
 
     iget-object v1, v0, Lcom/tencent/mm/ui/AddressView;->nickName:Ljava/lang/CharSequence;
 

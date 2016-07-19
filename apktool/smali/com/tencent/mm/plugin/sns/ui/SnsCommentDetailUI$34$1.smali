@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$34;->eu(I)V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$34;->fg(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic hdo:Lcom/tencent/mm/plugin/sns/d/p;
+.field final synthetic hsb:Lcom/tencent/mm/plugin/sns/e/p;
 
-.field final synthetic hdp:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$34;
+.field final synthetic hsc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$34;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$34;Lcom/tencent/mm/plugin/sns/d/p;)V
+.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$34;Lcom/tencent/mm/plugin/sns/e/p;)V
     .locals 0
 
     .prologue
-    .line 560
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$34$1;->hdp:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$34;
+    .line 564
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$34$1;->hsc:Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$34;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$34$1;->hdo:Lcom/tencent/mm/plugin/sns/d/p;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$34$1;->hsb:Lcom/tencent/mm/plugin/sns/e/p;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,15 +44,15 @@
     .locals 2
 
     .prologue
-    .line 563
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 567
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$34$1;->hdo:Lcom/tencent/mm/plugin/sns/d/p;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentDetailUI$34$1;->hsb:Lcom/tencent/mm/plugin/sns/e/p;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
-    .line 564
+    .line 568
     return-void
 .end method

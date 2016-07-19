@@ -1,26 +1,14 @@
 package com.tencent.mm.model.c;
 
-import com.tencent.mm.d.a.d;
-import com.tencent.mm.d.a.d.a;
+import com.tencent.mm.e.a.d;
 
 final class c$2
-  extends com.tencent.mm.sdk.c.c
+  extends com.tencent.mm.sdk.c.c<d>
 {
   c$2(c paramc)
   {
     super(0);
-  }
-  
-  public final boolean a(com.tencent.mm.sdk.c.b paramb)
-  {
-    if (id == "Activate")
-    {
-      if (arX.arY) {
-        b.uT();
-      }
-      return true;
-    }
-    return false;
+    kum = d.class.getName().hashCode();
   }
 }
 

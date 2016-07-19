@@ -14,7 +14,7 @@
     .line 5
     const/16 v0, 0x136
 
-    iput v0, p0, Loicq/wlogin_sdk/a/ac;->mbE:I
+    iput v0, p0, Loicq/wlogin_sdk/a/ac;->mNI:I
 
     .line 6
     return-void

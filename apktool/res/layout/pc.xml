@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/aq6" android:layout_height="wrap_content" style="@style/FTSListLargeItem">
+        <ImageView android:id="@id/l4" android:layout_width="@dimen/ey" android:layout_height="@dimen/ex" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:scaleType="centerCrop" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="73.0dip">
+                <TextView android:textSize="@dimen/i8" android:textColor="@color/j_" android:ellipsize="end" android:id="@id/i1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="{title}" android:maxLines="2" />
+                <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:ellipsize="end" android:id="@id/aq7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="{abstract}" android:maxLines="2" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:layout_marginTop="6.0dip">
+                <ImageView android:id="@id/alt" android:visibility="gone" android:layout_width="@dimen/ez" android:layout_height="@dimen/ez" android:layout_marginRight="3.0dip" />
+                <TextView android:textSize="13.0dip" android:textColor="#ffbbbbbb" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/aq8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="{status}" android:singleLine="true" style="@style/MMFontTipInList" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

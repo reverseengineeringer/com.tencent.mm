@@ -1,14 +1,12 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.protocal.b.bp;
-import java.util.List;
-import java.util.Map;
+import com.tencent.mm.protocal.b.bs;
 
 public abstract interface d$a
 {
-  public abstract void a(List paramList, Map paramMap1, Map paramMap2, int paramInt1, int paramInt2, bp parambp);
+  public abstract void a(bs parambs);
   
-  public abstract void aAM();
+  public abstract void aDD();
 }
 
 /* Location:

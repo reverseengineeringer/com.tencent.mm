@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/j4" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="43.0dip" android:paddingTop="33.0dip" android:paddingRight="43.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/cu" android:textColor="@color/ow" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/a4_" android:drawableBottom="@drawable/a4e" android:drawablePadding="20.0dip" />
+            <TextView android:gravity="center" android:layout_gravity="center" android:text="@string/b53" style="@style/net_diagnose_intro_text" />
+            <Button android:id="@id/bnn" android:layout_marginTop="86.0dip" android:text="@string/cum" style="@style/MMSolidGreenLargeButton" />
+            <TextView android:text="@string/abu" style="@style/net_diagnose_report_status" />
+            <TextView android:id="@id/bno" android:layout_marginBottom="20.0dip" android:text="@string/bu1" style="@style/net_diagnose_privacy_intro" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

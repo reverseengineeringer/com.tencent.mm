@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/br1" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/br2" android:layout_width="fill_parent" android:layout_height="@dimen/oq">
+        <ImageView android:id="@id/br3" android:layout_width="fill_parent" android:layout_height="@dimen/oq" android:scaleType="centerCrop" />
+        <View android:id="@id/br4" android:background="@color/kq" android:layout_width="fill_parent" android:layout_height="@dimen/oq" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/br5" android:background="@null" android:paddingLeft="12.0dip" android:paddingTop="?c" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/oq">
+        <RelativeLayout android:id="@id/br6" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/br7" android:background="@raw/scan_product_movie_default_img" android:visibility="gone" android:layout_width="87.0dip" android:layout_height="113.0dip" android:layout_marginTop="14.0dip" android:layout_marginBottom="14.0dip" android:src="@raw/scan_product_movie_default_img" android:scaleType="fitCenter" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/br8" android:background="@raw/scan_product_default_img" android:visibility="gone" android:layout_width="87.0dip" android:layout_height="87.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:src="@raw/scan_product_default_img" android:scaleType="fitCenter" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/br9" android:background="@drawable/ly" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2.0dip" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/br_" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/hb">
+            <TextView android:textSize="18.0dip" android:textColor="@color/ow" android:ellipsize="end" android:id="@id/bra" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginRight="2.0dip" android:maxLines="2" android:includeFontPadding="false" android:layout_alignParentTop="true" android:lineSpacingExtra="0.0dip" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/brb" android:background="@drawable/fn" android:paddingLeft="2.0dip" android:paddingTop="2.0dip" android:paddingRight="3.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <ImageView android:id="@id/brc" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:layout_marginRight="3.0dip" android:src="@drawable/aq0" />
+                <TextView android:textSize="@dimen/h4" android:textColor="@color/ow" android:id="@id/brd" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/h4" android:textColor="@color/gi" android:layout_gravity="center|right" android:id="@id/bre" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/c8k" android:singleLine="true" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/brf" android:background="@null" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/oq" />
+</RelativeLayout>

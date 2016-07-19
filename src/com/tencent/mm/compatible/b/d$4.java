@@ -6,7 +6,7 @@ import android.content.Intent;
 import com.tencent.mm.compatible.c.a;
 import com.tencent.mm.compatible.d.j;
 import com.tencent.mm.compatible.d.p;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class d$4
   extends BroadcastReceiver
@@ -22,19 +22,19 @@ final class d$4
       return;
       paramContext = paramIntent.getAction();
       i = paramIntent.getIntExtra("android.bluetooth.profile.extra.STATE", -1);
-      u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt onReceive action[" + paramContext + "] state:" + i);
+      v.d("MicroMsg.MMAudioManager", "dkbt onReceive action[" + paramContext + "] state:" + i);
       if (i == 2)
       {
-        d.ax(true);
-        bpB.bN(3);
+        d.aa(true);
+        bdB.cf(3);
         return;
       }
     } while (i != 0);
-    d.ax(false);
-    if (bsQbrA == 1) {
-      a.a(d.a(bpB));
+    d.aa(false);
+    if (bgWbfB == 1) {
+      a.a(d.a(bdB));
     }
-    bpB.bN(4);
+    bdB.cf(4);
   }
 }
 

@@ -2,9 +2,9 @@ package com.tencent.mm.storage;
 
 public abstract interface af
 {
-  public abstract void EB(String paramString);
+  public abstract long GE(String paramString);
   
-  public abstract int EN(String paramString);
+  public abstract boolean M(k paramk);
 }
 
 /* Location:

@@ -1,19 +1,16 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.h.a;
-import com.tencent.mm.storage.k;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 
 final class ChattingUI$a$82
-  implements Runnable
+  implements MenuItem.OnMenuItemClickListener
 {
   ChattingUI$a$82(ChattingUI.a parama) {}
   
-  public final void run()
+  public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if ((!a.ce(laF.kRI.field_type)) && (laF.kRI.aWp())) {
-      laF.qc(2131427885);
-    }
+    return ChattingUI.a.Q(lAY);
   }
 }
 

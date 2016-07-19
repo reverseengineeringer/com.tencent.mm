@@ -82,17 +82,7 @@
     throw v0
 .end method
 
-.method protected final jY()Z
-    .locals 1
-
-    .prologue
-    .line 55
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method protected final jZ()Ljava/lang/String;
+.method protected final iA()Ljava/lang/String;
     .locals 3
 
     .prologue
@@ -136,7 +126,7 @@
     throw v0
 .end method
 
-.method protected final ka()Lcom/tencent/c/a/a/a;
+.method protected final iB()Lcom/tencent/c/a/a/a;
     .locals 3
 
     .prologue
@@ -197,6 +187,16 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
+.end method
+
+.method protected final iz()Z
+    .locals 1
+
+    .prologue
+    .line 55
+    const/4 v0, 0x1
+
+    return v0
 .end method
 
 .method protected final write(Ljava/lang/String;)V

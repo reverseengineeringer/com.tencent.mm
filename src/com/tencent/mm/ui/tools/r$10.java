@@ -1,7 +1,7 @@
 package com.tencent.mm.ui.tools;
 
 import android.support.v4.app.FragmentActivity;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class r$10
   implements Runnable
@@ -10,12 +10,12 @@ final class r$10
   
   public final void run()
   {
-    if ((lxJ == null) || (lxJ.isFinishing()))
+    if ((lYy == null) || (lYy.isFinishing()))
     {
-      u.w(lxI.TAG, "want to expand search view, but activity status error");
+      v.w(lYx.TAG, "want to expand search view, but activity status error");
       return;
     }
-    lxJ.G();
+    lYy.F();
   }
 }
 

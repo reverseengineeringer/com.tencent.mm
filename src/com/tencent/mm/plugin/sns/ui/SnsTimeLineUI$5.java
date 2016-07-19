@@ -1,14 +1,14 @@
 package com.tencent.mm.plugin.sns.ui;
 
+import com.tencent.mm.e.a.lr;
+import com.tencent.mm.sdk.c.c;
+
 final class SnsTimeLineUI$5
-  implements an.a
+  extends c<lr>
 {
-  SnsTimeLineUI$5(SnsTimeLineUI paramSnsTimeLineUI) {}
-  
-  public final boolean aBQ()
+  SnsTimeLineUI$5(SnsTimeLineUI paramSnsTimeLineUI)
   {
-    SnsTimeLineUI.a(hkJ);
-    return false;
+    kum = lr.class.getName().hashCode();
   }
 }
 

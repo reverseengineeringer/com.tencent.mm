@@ -1,9 +1,9 @@
 .class public final Lcom/tencent/mm/protocal/j$b;
-.super Lcom/tencent/mm/protocal/h$d;
+.super Lcom/tencent/mm/protocal/k$d;
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/protocal/h$b;
+.implements Lcom/tencent/mm/protocal/k$b;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field public iUQ:Lcom/tencent/mm/protocal/b/eo;
+.field public jsa:Lcom/tencent/mm/protocal/b/cj;
 
 
 # direct methods
@@ -26,51 +26,91 @@
     .locals 1
 
     .prologue
-    .line 32
-    invoke-direct {p0}, Lcom/tencent/mm/protocal/h$d;-><init>()V
+    .line 51
+    invoke-direct {p0}, Lcom/tencent/mm/protocal/k$d;-><init>()V
 
-    .line 35
-    new-instance v0, Lcom/tencent/mm/protocal/b/eo;
+    .line 53
+    new-instance v0, Lcom/tencent/mm/protocal/b/cj;
 
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/eo;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/cj;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/protocal/j$b;->iUQ:Lcom/tencent/mm/protocal/b/eo;
+    iput-object v0, p0, Lcom/tencent/mm/protocal/j$b;->jsa:Lcom/tencent/mm/protocal/b/cj;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final y([B)I
-    .locals 1
+.method public final D([B)I
+    .locals 5
 
     .prologue
-    .line 39
-    new-instance v0, Lcom/tencent/mm/protocal/b/eo;
+    .line 56
+    new-instance v0, Lcom/tencent/mm/protocal/b/cj;
 
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/eo;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/cj;-><init>()V
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/protocal/b/eo;->am([B)Lcom/tencent/mm/at/a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/protocal/b/cj;->au([B)Lcom/tencent/mm/ax/a;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/eo;
+    check-cast v0, Lcom/tencent/mm/protocal/b/cj;
 
-    iput-object v0, p0, Lcom/tencent/mm/protocal/j$b;->iUQ:Lcom/tencent/mm/protocal/b/eo;
+    iput-object v0, p0, Lcom/tencent/mm/protocal/j$b;->jsa:Lcom/tencent/mm/protocal/b/cj;
 
-    .line 40
-    iget-object v0, p0, Lcom/tencent/mm/protocal/j$b;->iUQ:Lcom/tencent/mm/protocal/b/eo;
+    .line 57
+    const-string/jumbo v0, "MicroMsg.MMBakchatCreateQRcodeOffline.Resp"
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/alq;->jHj:Lcom/tencent/mm/protocal/b/dd;
+    const-string/jumbo v1, "Ret:%d, QRCodeBuffer:%s, QRCodeUrl:%s"
 
-    invoke-static {p0, v0}, Lcom/tencent/mm/protocal/h;->a(Lcom/tencent/mm/protocal/h$d;Lcom/tencent/mm/protocal/b/dd;)V
+    const/4 v2, 0x3
 
-    .line 41
-    iget-object v0, p0, Lcom/tencent/mm/protocal/j$b;->iUQ:Lcom/tencent/mm/protocal/b/eo;
+    new-array v2, v2, [Ljava/lang/Object;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/alq;->jHj:Lcom/tencent/mm/protocal/b/dd;
+    const/4 v3, 0x0
 
-    iget v0, v0, Lcom/tencent/mm/protocal/b/dd;->iZL:I
+    iget-object v4, p0, Lcom/tencent/mm/protocal/j$b;->jsa:Lcom/tencent/mm/protocal/b/cj;
+
+    iget v4, v4, Lcom/tencent/mm/protocal/b/cj;->jxr:I
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x1
+
+    iget-object v4, p0, Lcom/tencent/mm/protocal/j$b;->jsa:Lcom/tencent/mm/protocal/b/cj;
+
+    iget-object v4, v4, Lcom/tencent/mm/protocal/b/cj;->jxs:Lcom/tencent/mm/protocal/b/ami;
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x2
+
+    iget-object v4, p0, Lcom/tencent/mm/protocal/j$b;->jsa:Lcom/tencent/mm/protocal/b/cj;
+
+    iget-object v4, v4, Lcom/tencent/mm/protocal/b/cj;->jxt:Ljava/lang/String;
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 58
+    iget-object v0, p0, Lcom/tencent/mm/protocal/j$b;->jsa:Lcom/tencent/mm/protocal/b/cj;
+
+    iget v0, v0, Lcom/tencent/mm/protocal/b/cj;->jxr:I
+
+    return v0
+.end method
+
+.method public final getCmdId()I
+    .locals 1
+
+    .prologue
+    .line 63
+    const/16 v0, 0x3e8
 
     return v0
 .end method

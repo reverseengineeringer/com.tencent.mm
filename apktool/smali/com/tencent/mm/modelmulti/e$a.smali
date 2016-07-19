@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field aCE:Ljava/lang/String;
+.field aoX:Ljava/lang/String;
 
-.field bPb:I
+.field bIw:I
 
-.field final synthetic bVb:Lcom/tencent/mm/modelmulti/e;
+.field final synthetic bOC:Lcom/tencent/mm/modelmulti/e;
 
-.field bVe:Lcom/tencent/mm/protocal/b/aev;
+.field bOF:Lcom/tencent/mm/protocal/b/afq;
 
-.field bVf:I
+.field bOG:I
 
 .field errCode:I
 
@@ -37,16 +37,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 177
-    iput-object p1, p0, Lcom/tencent/mm/modelmulti/e$a;->bVb:Lcom/tencent/mm/modelmulti/e;
+    .line 183
+    iput-object p1, p0, Lcom/tencent/mm/modelmulti/e$a;->bOC:Lcom/tencent/mm/modelmulti/e;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 182
-    iput v0, p0, Lcom/tencent/mm/modelmulti/e$a;->bPb:I
+    .line 188
+    iput v0, p0, Lcom/tencent/mm/modelmulti/e$a;->bIw:I
 
-    .line 183
-    iput v0, p0, Lcom/tencent/mm/modelmulti/e$a;->bVf:I
+    .line 189
+    iput v0, p0, Lcom/tencent/mm/modelmulti/e$a;->bOG:I
 
     return-void
 .end method

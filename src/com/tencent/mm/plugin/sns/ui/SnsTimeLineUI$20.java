@@ -1,38 +1,34 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.content.Intent;
-import android.view.View;
-import android.view.View.OnLongClickListener;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.modelsns.a;
-import com.tencent.mm.plugin.sns.g.e;
-import com.tencent.mm.storage.h;
-import com.tencent.mm.ui.MMActivity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.tencent.mm.e.a.id;
+import com.tencent.mm.e.a.kb;
+import com.tencent.mm.sdk.c.a;
+import com.tencent.mm.ui.base.g;
 
 final class SnsTimeLineUI$20
-  implements View.OnLongClickListener
+  implements Runnable
 {
   SnsTimeLineUI$20(SnsTimeLineUI paramSnsTimeLineUI) {}
   
-  public final boolean onLongClick(View paramView)
+  public final void run()
   {
-    if (!((Boolean)ah.tD().rn().get(7490, Boolean.valueOf(true))).booleanValue())
+    g.b(hzE, hzE.getString(2131234104), "", hzE.getString(2131234105), hzE.getString(2131230873), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
     {
-      paramView = new Intent();
-      paramView.setClass(hkJ, SnsUploadUI.class);
-      paramView.putExtra("sns_comment_type", 1);
-      paramView.putExtra("Ksnsupload_type", 9);
-      a locala = a.dQ(705);
-      locala.dU(cbZ).jg(System.currentTimeMillis()).dU(ccb).dU(1);
-      locala = com.tencent.mm.plugin.sns.g.c.gTZ.b(locala);
-      locala.CV();
-      locala.b(paramView, "intent_key_StatisticsOplog");
-      hkJ.startActivityForResult(paramView, 9);
-      return true;
-    }
-    hkJ.startActivity(new Intent().setClass(hkJ, SnsLongMsgUI.class));
-    ah.tD().rn().set(7490, Boolean.valueOf(false));
-    return true;
+      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+      {
+        paramAnonymousDialogInterface = new kb();
+        a.kug.y(paramAnonymousDialogInterface);
+      }
+    }, new DialogInterface.OnClickListener()
+    {
+      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+      {
+        paramAnonymousDialogInterface = new id();
+        a.kug.y(paramAnonymousDialogInterface);
+      }
+    });
   }
 }
 

@@ -1,13 +1,25 @@
 package com.tencent.mm.ui.chatting;
 
+import android.os.Message;
+import android.view.View;
+import com.tencent.mm.sdk.platformtools.ac;
+
 final class co$1
-  implements Runnable
+  extends ac
 {
   co$1(co paramco) {}
   
-  public final void run()
+  public final void handleMessage(Message paramMessage)
   {
-    akWp).kYO = true;
+    paramMessage = (View)obj;
+    if (lws.iGu != paramMessage.getScrollY())
+    {
+      lws.hMd = true;
+      lws.handler.sendMessageDelayed(lws.handler.obtainMessage(0, paramMessage), 5L);
+      lws.iGu = paramMessage.getScrollY();
+      return;
+    }
+    lws.hMd = false;
   }
 }
 

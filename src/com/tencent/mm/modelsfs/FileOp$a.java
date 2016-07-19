@@ -4,14 +4,14 @@ import java.io.File;
 
 final class FileOp$a
 {
-  File car;
-  File[] cas;
+  File bUa;
+  File[] bUb;
   int pos;
   
   FileOp$a(File paramFile)
   {
-    car = paramFile;
-    cas = null;
+    bUa = paramFile;
+    bUb = null;
     pos = 0;
   }
 }

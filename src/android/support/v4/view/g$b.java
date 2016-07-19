@@ -16,11 +16,6 @@ class g$b
     return paramMenuItem.setActionView(paramView);
   }
   
-  public final View a(MenuItem paramMenuItem)
-  {
-    return paramMenuItem.getActionView();
-  }
-  
   public final void a(MenuItem paramMenuItem, int paramInt)
   {
     paramMenuItem.setShowAsAction(paramInt);

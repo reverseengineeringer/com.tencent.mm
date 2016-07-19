@@ -1,9 +1,9 @@
 package com.tencent.mm.network;
 
-import com.tencent.mm.sdk.platformtools.at;
+import com.tencent.mm.sdk.platformtools.az;
 
 final class r$11
-  extends at
+  extends az<Object>
 {
   r$11(r paramr, Object paramObject)
   {

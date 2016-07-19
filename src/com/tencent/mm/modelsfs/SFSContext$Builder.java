@@ -11,7 +11,7 @@ import java.util.Set;
 public class SFSContext$Builder
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new Parcelable.Creator()
+  public static final Parcelable.Creator<Builder> CREATOR = new Parcelable.Creator()
   {
     public final SFSContext.Builder createFromParcel(Parcel paramAnonymousParcel)
     {
@@ -23,7 +23,7 @@ public class SFSContext$Builder
       return new SFSContext.Builder[paramAnonymousInt];
     }
   };
-  HashMap mConf;
+  HashMap<Integer, Object> mConf;
   String mName;
   
   public SFSContext$Builder()

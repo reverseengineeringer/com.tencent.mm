@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Parcel;
 import android.os.Parcelable.Creator;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.TreeMap;
@@ -32,40 +32,40 @@ final class FileOp$1
         paramIntent.setDataPosition(0);
         paramIntent = (FileOp.SFSContextRec)FileOp.SFSContextRec.CREATOR.createFromParcel(paramIntent);
       } while (paramIntent == null);
-      paramContext = cat;
-      FileOp.Ci().writeLock().lock();
-      paramIntent = (FileOp.SFSContextRec)FileOp.Cj().put(paramContext, paramIntent);
-      FileOp.Ci().writeLock().unlock();
-      if ((paramIntent != null) && (cax != null)) {
-        cax.release();
+      paramContext = bUc;
+      FileOp.Cp().writeLock().lock();
+      paramIntent = (FileOp.SFSContextRec)FileOp.Cq().put(paramContext, paramIntent);
+      FileOp.Cp().writeLock().unlock();
+      if ((paramIntent != null) && (bUg != null)) {
+        bUg.release();
       }
-      u.i("!24@/B4Tb64lLpJsxiXOTpu//A==", "Load mapping from broadcast: " + paramContext);
+      v.i("MicroMsg.FileOp", "Load mapping from broadcast: " + paramContext);
       return;
       if (paramIntent.getAction().equals("com.tencent.mm.FileOp.unregisterSFS"))
       {
         paramContext = paramIntent.getStringExtra("prefix");
-        FileOp.Ci().writeLock().lock();
-        paramIntent = (FileOp.SFSContextRec)FileOp.Cj().remove(paramContext);
-        FileOp.Ci().writeLock().unlock();
-        if ((paramIntent != null) && (cax != null)) {
-          cax.release();
+        FileOp.Cp().writeLock().lock();
+        paramIntent = (FileOp.SFSContextRec)FileOp.Cq().remove(paramContext);
+        FileOp.Cp().writeLock().unlock();
+        if ((paramIntent != null) && (bUg != null)) {
+          bUg.release();
         }
-        u.i("!24@/B4Tb64lLpJsxiXOTpu//A==", "Unload mapping from broadcast: " + paramContext);
+        v.i("MicroMsg.FileOp", "Unload mapping from broadcast: " + paramContext);
         return;
       }
     } while (!paramIntent.getAction().equals("com.tencent.mm.FileOp.clearSFS"));
-    FileOp.Ci().writeLock().lock();
-    paramContext = FileOp.Cj().values().iterator();
+    FileOp.Cp().writeLock().lock();
+    paramContext = FileOp.Cq().values().iterator();
     while (paramContext.hasNext())
     {
       paramIntent = (FileOp.SFSContextRec)paramContext.next();
-      if ((paramIntent != null) && (cax != null)) {
-        cax.release();
+      if ((paramIntent != null) && (bUg != null)) {
+        bUg.release();
       }
     }
-    FileOp.Cj().clear();
-    FileOp.Ci().writeLock().unlock();
-    u.i("!24@/B4Tb64lLpJsxiXOTpu//A==", "Clear mapping from broadcast.");
+    FileOp.Cq().clear();
+    FileOp.Cp().writeLock().unlock();
+    v.i("MicroMsg.FileOp", "Clear mapping from broadcast.");
   }
 }
 

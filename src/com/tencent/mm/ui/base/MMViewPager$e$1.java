@@ -9,25 +9,26 @@ final class MMViewPager$e$1
   
   public final void run()
   {
-    MMViewPager.a(kIl.kIi).getImageMatrix().getValues(kIl.kIk);
-    float f2 = kIl.kIk[2];
-    float f1 = MMViewPager.a(kIl.kIi).getScale() * MMViewPager.a(kIl.kIi).getImageWidth();
-    if (f1 < MMViewPager.b(kIl.kIi)) {}
-    for (f1 = MMViewPager.b(kIl.kIi) / 2.0F - f1 / 2.0F;; f1 = 0.0F)
+    MMViewPager.a(lhy.lhv).getImageMatrix().getValues(lhy.lhx);
+    float f1 = MMViewPager.a(lhy.lhv).getScale();
+    float f2 = alhy.lhv).imageHeight * f1;
+    float f3 = lhy.lhx[5];
+    f1 = MMViewPager.d(lhy.lhv);
+    if (f2 < MMViewPager.d(lhy.lhv)) {
+      f1 = MMViewPager.d(lhy.lhv) / 2.0F + f2 / 2.0F;
+    }
+    f1 -= f3 + f2;
+    if (f1 <= 0.0F) {
+      lhy.lhw = true;
+    }
+    for (;;)
     {
-      f1 -= f2;
-      if (f1 >= 0.0F) {
-        kIl.kIj = true;
-      }
-      for (;;)
-      {
-        MMViewPager.a(kIl.kIi).q(f1, 0.0F);
-        return;
-        if (Math.abs(f1) <= 5.0F) {
-          kIl.kIj = true;
-        } else {
-          f1 /= 4.0F;
-        }
+      MMViewPager.a(lhy.lhv).p(0.0F, f1);
+      return;
+      if (Math.abs(f1) <= 5.0F) {
+        lhy.lhw = true;
+      } else {
+        f1 = (float)(Math.abs(f1) - Math.pow(Math.sqrt(Math.abs(f1)) - 1.0D, 2.0D)) * 2.0F;
       }
     }
   }

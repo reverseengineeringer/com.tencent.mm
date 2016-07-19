@@ -10,7 +10,7 @@ final class CropImageNewUI$18
   
   public final void onClick(View paramView)
   {
-    CropImageNewUI.a(luq, true);
+    CropImageNewUI.a(lVs, true);
   }
 }
 

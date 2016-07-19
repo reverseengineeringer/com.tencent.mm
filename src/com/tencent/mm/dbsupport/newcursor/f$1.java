@@ -9,12 +9,12 @@ final class f$1
   
   public final void onChanged()
   {
-    f.a(bvy);
+    f.a(bkr);
   }
   
   public final void onInvalidated()
   {
-    f.a(bvy);
+    f.b(bkr);
   }
 }
 

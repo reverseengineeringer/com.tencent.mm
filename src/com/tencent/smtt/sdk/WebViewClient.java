@@ -2,6 +2,7 @@ package com.tencent.smtt.sdk;
 
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Bundle;
 import android.os.Message;
 import android.view.KeyEvent;
 import com.tencent.smtt.export.external.interfaces.HttpAuthHandler;
@@ -28,7 +29,7 @@ public class WebViewClient
   public static final int ERROR_UNSUPPORTED_AUTH_SCHEME = -3;
   public static final int ERROR_UNSUPPORTED_SCHEME = -10;
   public static final int INTERCEPT_BY_ISP = -16;
-  f lUl;
+  f mwd;
   
   public void doUpdateVisitedHistory(WebView paramWebView, String paramString, boolean paramBoolean) {}
   
@@ -45,8 +46,8 @@ public class WebViewClient
   
   public void onPageStarted(WebView paramWebView, String paramString, Bitmap paramBitmap)
   {
-    if (lUl != null) {
-      lUl.w(paramString, paramBitmap);
+    if (mwd != null) {
+      mwd.t(paramString, paramBitmap);
     }
   }
   
@@ -56,6 +57,8 @@ public class WebViewClient
   {
     paramHttpAuthHandler.cancel();
   }
+  
+  public void onReceivedHttpError(WebView paramWebView, WebResourceRequest paramWebResourceRequest, WebResourceResponse paramWebResourceResponse) {}
   
   public void onReceivedLoginRequest(WebView paramWebView, String paramString1, String paramString2, String paramString3) {}
   
@@ -72,8 +75,16 @@ public class WebViewClient
   
   public WebResourceResponse shouldInterceptRequest(WebView paramWebView, WebResourceRequest paramWebResourceRequest)
   {
-    if (lUl != null) {
-      return lUl.shouldInterceptRequest(paramWebView.getX5WebView(), paramWebResourceRequest.getUrl().toString());
+    if (mwd != null) {
+      return mwd.shouldInterceptRequest(mvJ, paramWebResourceRequest.getUrl().toString());
+    }
+    return null;
+  }
+  
+  public WebResourceResponse shouldInterceptRequest(WebView paramWebView, WebResourceRequest paramWebResourceRequest, Bundle paramBundle)
+  {
+    if (mwd != null) {
+      return mwd.shouldInterceptRequest(mvJ, paramWebResourceRequest);
     }
     return null;
   }

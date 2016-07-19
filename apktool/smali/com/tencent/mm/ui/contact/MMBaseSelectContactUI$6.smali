@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+.field final synthetic lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 281
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$6;->lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+    .line 286
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$6;->lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,63 +36,63 @@
 
 
 # virtual methods
-.method public final SS()V
+.method public final Ul()V
     .locals 0
 
     .prologue
-    .line 293
+    .line 298
     return-void
 .end method
 
-.method public final f(ZI)V
+.method public final e(ZI)V
     .locals 0
 
     .prologue
-    .line 291
+    .line 296
     return-void
 .end method
 
-.method public final ne(Ljava/lang/String;)V
+.method public final om(Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 283
+    .line 288
     return-void
 .end method
 
-.method public final nf(Ljava/lang/String;)V
+.method public final on(Ljava/lang/String;)V
     .locals 1
 
     .prologue
-    .line 286
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$6;->lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+    .line 291
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$6;->lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->rb(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->sy(Ljava/lang/String;)V
 
-    .line 287
+    .line 292
     return-void
 .end method
 
-.method public final ng(Ljava/lang/String;)V
+.method public final oo(Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 289
+    .line 294
     return-void
 .end method
 
-.method public final nh(Ljava/lang/String;)V
+.method public final op(Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 295
+    .line 300
     return-void
 .end method
 
-.method public final ni(Ljava/lang/String;)V
+.method public final oq(Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 297
+    .line 302
     return-void
 .end method

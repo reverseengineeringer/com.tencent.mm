@@ -2,7 +2,8 @@ package com.tencent.mm.compatible.d;
 
 public final class s
 {
-  public int bsW = 0;
+  public int bhc = 0;
+  public int bhd = 0;
 }
 
 /* Location:

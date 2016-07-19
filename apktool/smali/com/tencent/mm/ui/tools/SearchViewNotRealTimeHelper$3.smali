@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lxN:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
+.field final synthetic lYC:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 114
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$3;->lxN:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$3;->lYC:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 118
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$3;->lxN:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$3;->lYC:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->d(Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;)Landroid/widget/EditText;
 
@@ -52,7 +52,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 119
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$3;->lxN:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$3;->lYC:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->c(Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;)Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$a;
 
@@ -61,13 +61,13 @@
     if-eqz v0, :cond_0
 
     .line 120
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$3;->lxN:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$3;->lYC:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->c(Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;)Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$a;->KY()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$a;->LM()V
 
     .line 122
     :cond_0

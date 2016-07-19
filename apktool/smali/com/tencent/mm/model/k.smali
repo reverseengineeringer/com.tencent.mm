@@ -13,11 +13,21 @@
 
 
 # static fields
-.field private static bAd:Lcom/tencent/mm/model/k;
+.field private static btg:Lcom/tencent/mm/model/k;
 
 
 # instance fields
-.field public bAe:Ljava/util/Map;
+.field private bth:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/model/k$b;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -33,14 +43,14 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/model/k;->bAe:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/model/k;->bth:Ljava/util/Map;
 
     .line 30
     return-void
 .end method
 
-.method public static eV(Ljava/lang/String;)Ljava/lang/String;
-    .locals 3
+.method public static fh(Ljava/lang/String;)Ljava/lang/String;
+    .locals 4
 
     .prologue
     .line 171
@@ -62,9 +72,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -75,12 +85,12 @@
     return-object v0
 .end method
 
-.method public static sW()Lcom/tencent/mm/model/k;
+.method public static sV()Lcom/tencent/mm/model/k;
     .locals 1
 
     .prologue
     .line 22
-    sget-object v0, Lcom/tencent/mm/model/k;->bAd:Lcom/tencent/mm/model/k;
+    sget-object v0, Lcom/tencent/mm/model/k;->btg:Lcom/tencent/mm/model/k;
 
     if-nez v0, :cond_0
 
@@ -89,23 +99,23 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/model/k;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/model/k;->bAd:Lcom/tencent/mm/model/k;
+    sput-object v0, Lcom/tencent/mm/model/k;->btg:Lcom/tencent/mm/model/k;
 
     .line 25
     :cond_0
-    sget-object v0, Lcom/tencent/mm/model/k;->bAd:Lcom/tencent/mm/model/k;
+    sget-object v0, Lcom/tencent/mm/model/k;->btg:Lcom/tencent/mm/model/k;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final eT(Ljava/lang/String;)Lcom/tencent/mm/model/k$a;
+.method public final ff(Ljava/lang/String;)Lcom/tencent/mm/model/k$a;
     .locals 2
 
     .prologue
     .line 68
-    iget-object v0, p0, Lcom/tencent/mm/model/k;->bAe:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/model/k;->bth:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -121,23 +131,23 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/model/k$b;-><init>()V
 
-    iget-object v1, p0, Lcom/tencent/mm/model/k;->bAe:Ljava/util/Map;
+    iget-object v1, p0, Lcom/tencent/mm/model/k;->bth:Ljava/util/Map;
 
     invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 75
     :cond_0
-    iget-object v0, v0, Lcom/tencent/mm/model/k$b;->bAg:Lcom/tencent/mm/model/k$a;
+    iget-object v0, v0, Lcom/tencent/mm/model/k$b;->btj:Lcom/tencent/mm/model/k$a;
 
     return-object v0
 .end method
 
-.method public final eU(Ljava/lang/String;)Lcom/tencent/mm/model/k$a;
+.method public final fg(Ljava/lang/String;)Lcom/tencent/mm/model/k$a;
     .locals 1
 
     .prologue
     .line 85
-    iget-object v0, p0, Lcom/tencent/mm/model/k;->bAe:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/model/k;->bth:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -149,7 +159,7 @@
     if-eqz v0, :cond_0
 
     .line 87
-    iget-object v0, v0, Lcom/tencent/mm/model/k$b;->bAg:Lcom/tencent/mm/model/k$a;
+    iget-object v0, v0, Lcom/tencent/mm/model/k$b;->btj:Lcom/tencent/mm/model/k$a;
 
     .line 89
     :goto_0

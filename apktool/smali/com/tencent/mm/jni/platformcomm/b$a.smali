@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private bwt:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+.field private blG:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
 
 # direct methods
@@ -32,10 +32,10 @@
     .line 51
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/jni/platformcomm/b$a;->bwt:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iput-object v0, p0, Lcom/tencent/mm/jni/platformcomm/b$a;->blG:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     .line 54
-    iput-object p1, p0, Lcom/tencent/mm/jni/platformcomm/b$a;->bwt:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iput-object p1, p0, Lcom/tencent/mm/jni/platformcomm/b$a;->blG:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     .line 55
     return-void
@@ -54,11 +54,11 @@
     const/4 v2, 0x0
 
     .line 59
-    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/b;->qV()Landroid/util/SparseArray;
+    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/b;->pK()Landroid/util/SparseArray;
 
     move-result-object v0
 
-    iget-object v3, p0, Lcom/tencent/mm/jni/platformcomm/b$a;->bwt:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iget-object v3, p0, Lcom/tencent/mm/jni/platformcomm/b$a;->blG:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
@@ -71,7 +71,7 @@
     check-cast v0, Lcom/tencent/mm/jni/platformcomm/b$b;
 
     .line 60
-    const-string/jumbo v3, "!44@/B4Tb64lLpIDuTvsMKPbuCABo1Fgu9P2crsOIm2SgXs="
+    const-string/jumbo v3, "MicroMsg.WakeLockManager"
 
     const-string/jumbo v4, "wakerlock held too long: [%d,%d] @[%s] force to unlock it. state: %s"
 
@@ -79,7 +79,7 @@
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    iget-object v6, p0, Lcom/tencent/mm/jni/platformcomm/b$a;->bwt:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iget-object v6, p0, Lcom/tencent/mm/jni/platformcomm/b$a;->blG:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     invoke-virtual {v6}, Ljava/lang/Object;->hashCode()I
 
@@ -91,7 +91,7 @@
 
     aput-object v6, v5, v2
 
-    iget-object v6, p0, Lcom/tencent/mm/jni/platformcomm/b$a;->bwt:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iget-object v6, p0, Lcom/tencent/mm/jni/platformcomm/b$a;->blG:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     invoke-virtual {v6}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->innerWakeLockHashCode()I
 
@@ -105,7 +105,7 @@
 
     const/4 v6, 0x2
 
-    iget-object v7, p0, Lcom/tencent/mm/jni/platformcomm/b$a;->bwt:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iget-object v7, p0, Lcom/tencent/mm/jni/platformcomm/b$a;->blG:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     invoke-virtual {v7}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->getCreatePosStackLine()Ljava/lang/String;
 
@@ -115,7 +115,7 @@
 
     const/4 v6, 0x3
 
-    iget-object v0, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->bww:Ljava/util/Map;
+    iget-object v0, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->blJ:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
 
@@ -148,11 +148,11 @@
     move v1, v2
 
     :goto_1
-    iget-wide v9, v0, Lcom/tencent/mm/jni/platformcomm/b$b$a;->bwy:J
+    iget-wide v10, v0, Lcom/tencent/mm/jni/platformcomm/b$b$a;->blL:J
 
-    const-wide/16 v11, 0x0
+    const-wide/16 v12, 0x0
 
-    cmp-long v9, v9, v11
+    cmp-long v9, v10, v12
 
     if-eqz v9, :cond_0
 
@@ -162,7 +162,7 @@
 
     move-result-object v9
 
-    iget-object v10, v0, Lcom/tencent/mm/jni/platformcomm/b$b$a;->bwx:Ljava/lang/String;
+    iget-object v10, v0, Lcom/tencent/mm/jni/platformcomm/b$b$a;->blK:Ljava/lang/String;
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -176,7 +176,7 @@
 
     move-result-wide v10
 
-    iget-wide v12, v0, Lcom/tencent/mm/jni/platformcomm/b$b$a;->bwy:J
+    iget-wide v12, v0, Lcom/tencent/mm/jni/platformcomm/b$b$a;->blL:J
 
     sub-long/2addr v10, v12
 
@@ -213,10 +213,10 @@
 
     aput-object v0, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 62
-    iget-object v0, p0, Lcom/tencent/mm/jni/platformcomm/b$a;->bwt:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    iget-object v0, p0, Lcom/tencent/mm/jni/platformcomm/b$a;->blG:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     invoke-virtual {v0}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->unLock()V
 

@@ -13,10 +13,10 @@ import java.util.Set;
 
 public final class g
 {
-  public int cwi;
-  private Map mdP;
-  private String mdV;
-  private InputStream mdW;
+  public int crO;
+  private Map<String, String> mPT;
+  private String mPZ;
+  private InputStream mQa;
   
   g(HttpURLConnection paramHttpURLConnection)
   {
@@ -25,15 +25,15 @@ public final class g
       try
       {
         paramHttpURLConnection.connect();
-        cwi = paramHttpURLConnection.getResponseCode();
-        mdP = c(paramHttpURLConnection);
-        if ((cwi >= 200) && (cwi < 400))
+        crO = paramHttpURLConnection.getResponseCode();
+        mPT = d(paramHttpURLConnection);
+        if ((crO >= 200) && (crO < 400))
         {
           i = 1;
           if (i != 0)
           {
             paramHttpURLConnection = paramHttpURLConnection.getInputStream();
-            mdW = paramHttpURLConnection;
+            mQa = paramHttpURLConnection;
             return;
           }
           paramHttpURLConnection = paramHttpURLConnection.getErrorStream();
@@ -48,7 +48,7 @@ public final class g
     }
   }
   
-  private static Map c(HttpURLConnection paramHttpURLConnection)
+  private static Map<String, String> d(HttpURLConnection paramHttpURLConnection)
   {
     HashMap localHashMap = new HashMap();
     Iterator localIterator = paramHttpURLConnection.getHeaderFields().keySet().iterator();
@@ -64,11 +64,11 @@ public final class g
   
   public final String getBody()
   {
-    if (mdV != null) {
-      return mdV;
+    if (mPZ != null) {
+      return mPZ;
     }
-    mdV = e.k(mdW);
-    return mdV;
+    mPZ = e.r(mQa);
+    return mPZ;
   }
 }
 

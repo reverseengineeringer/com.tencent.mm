@@ -3,7 +3,7 @@ package android.support.v7.internal.widget;
 import android.os.Parcelable.Creator;
 
 final class AbsSpinnerICS$SavedState$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<AbsSpinnerICS.SavedState>
 {}
 
 /* Location:

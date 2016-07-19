@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iPL:Landroid/content/DialogInterface$OnDismissListener;
+.field final synthetic jmS:Landroid/content/DialogInterface$OnDismissListener;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 203
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$4;->iPL:Landroid/content/DialogInterface$OnDismissListener;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$4;->jmS:Landroid/content/DialogInterface$OnDismissListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,12 +41,12 @@
 
     .prologue
     .line 207
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$4;->iPL:Landroid/content/DialogInterface$OnDismissListener;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$4;->jmS:Landroid/content/DialogInterface$OnDismissListener;
 
     if-eqz v0, :cond_0
 
     .line 208
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$4;->iPL:Landroid/content/DialogInterface$OnDismissListener;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$4;->jmS:Landroid/content/DialogInterface$OnDismissListener;
 
     const/4 v1, 0x0
 

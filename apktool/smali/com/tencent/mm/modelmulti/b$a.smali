@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field private final bUR:Lcom/tencent/mm/protocal/t$a;
+.field private final bOs:Lcom/tencent/mm/protocal/w$a;
 
-.field private final bUS:Lcom/tencent/mm/protocal/t$b;
+.field private final bOt:Lcom/tencent/mm/protocal/w$b;
 
-.field private final bUT:Z
+.field private final bOu:Z
 
 .field uin:I
 
@@ -36,29 +36,29 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 447
-    new-instance v0, Lcom/tencent/mm/protocal/t$a;
+    new-instance v0, Lcom/tencent/mm/protocal/w$a;
 
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/t$a;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/protocal/w$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bUR:Lcom/tencent/mm/protocal/t$a;
+    iput-object v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bOs:Lcom/tencent/mm/protocal/w$a;
 
     .line 448
-    new-instance v0, Lcom/tencent/mm/protocal/t$b;
+    new-instance v0, Lcom/tencent/mm/protocal/w$b;
 
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/t$b;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/protocal/w$b;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bUS:Lcom/tencent/mm/protocal/t$b;
+    iput-object v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bOt:Lcom/tencent/mm/protocal/w$b;
 
     .line 449
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bUT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bOu:Z
 
     .line 450
     return-void
 .end method
 
-.method public constructor <init>(Lcom/tencent/mm/protocal/t$b;)V
+.method public constructor <init>(Lcom/tencent/mm/protocal/w$b;)V
     .locals 1
 
     .prologue
@@ -66,19 +66,19 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 453
-    new-instance v0, Lcom/tencent/mm/protocal/t$a;
+    new-instance v0, Lcom/tencent/mm/protocal/w$a;
 
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/t$a;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/protocal/w$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bUR:Lcom/tencent/mm/protocal/t$a;
+    iput-object v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bOs:Lcom/tencent/mm/protocal/w$a;
 
     .line 454
-    iput-object p1, p0, Lcom/tencent/mm/modelmulti/b$a;->bUS:Lcom/tencent/mm/protocal/t$b;
+    iput-object p1, p0, Lcom/tencent/mm/modelmulti/b$a;->bOt:Lcom/tencent/mm/protocal/w$b;
 
     .line 455
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bUT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bOu:Z
 
     .line 456
     return-void
@@ -106,57 +106,57 @@
     return-object v0
 .end method
 
-.method public final tX()Lcom/tencent/mm/protocal/h$d;
+.method public final tY()Lcom/tencent/mm/protocal/k$d;
     .locals 1
 
     .prologue
     .line 469
-    iget-object v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bUS:Lcom/tencent/mm/protocal/t$b;
+    iget-object v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bOt:Lcom/tencent/mm/protocal/w$b;
 
     return-object v0
 .end method
 
-.method public final vA()Lcom/tencent/mm/protocal/h$c;
+.method public final vC()Lcom/tencent/mm/protocal/k$c;
     .locals 2
 
     .prologue
     .line 489
-    iget-object v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bUR:Lcom/tencent/mm/protocal/t$a;
+    iget-object v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bOs:Lcom/tencent/mm/protocal/w$a;
 
-    invoke-static {}, Lcom/tencent/mm/compatible/d/p;->ox()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/compatible/d/p;->mN()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/protocal/h$c;->iUH:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/protocal/k$c;->jse:Ljava/lang/String;
 
     .line 490
-    iget-object v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bUR:Lcom/tencent/mm/protocal/t$a;
+    iget-object v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bOs:Lcom/tencent/mm/protocal/w$a;
 
-    sget-object v1, Lcom/tencent/mm/protocal/b;->bwR:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/protocal/c;->boS:Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/tencent/mm/protocal/h$c;->iUG:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/protocal/k$c;->jsd:Ljava/lang/String;
 
     .line 491
-    iget-object v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bUR:Lcom/tencent/mm/protocal/t$a;
+    iget-object v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bOs:Lcom/tencent/mm/protocal/w$a;
 
-    sget v1, Lcom/tencent/mm/protocal/b;->iUf:I
+    sget v1, Lcom/tencent/mm/protocal/c;->jry:I
 
-    iput v1, v0, Lcom/tencent/mm/protocal/h$c;->iUF:I
+    iput v1, v0, Lcom/tencent/mm/protocal/k$c;->jsc:I
 
     .line 492
-    iget-object v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bUR:Lcom/tencent/mm/protocal/t$a;
+    iget-object v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bOs:Lcom/tencent/mm/protocal/w$a;
 
     iget v1, p0, Lcom/tencent/mm/modelmulti/b$a;->uin:I
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/protocal/t$a;->ba(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/protocal/w$a;->bq(I)V
 
     .line 493
-    iget-object v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bUR:Lcom/tencent/mm/protocal/t$a;
+    iget-object v0, p0, Lcom/tencent/mm/modelmulti/b$a;->bOs:Lcom/tencent/mm/protocal/w$a;
 
     return-object v0
 .end method
 
-.method public final vB()Z
+.method public final vD()Z
     .locals 1
 
     .prologue
@@ -166,7 +166,7 @@
     return v0
 .end method
 
-.method public final vx()I
+.method public final vz()I
     .locals 1
 
     .prologue

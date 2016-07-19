@@ -6,16 +6,16 @@ import android.view.View;
 import android.view.View.OnTouchListener;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
-import com.tencent.mm.ba.a;
+import com.tencent.mm.bd.a;
 
 final class c$a$2
   implements View.OnTouchListener
 {
-  int kzD;
-  int kzE;
-  int kzF = kzI.widthPixels - kzC.alm.width - 1;
-  int kzG = kzI.heightPixels - kzC.alm.height - 1;
-  long kzH;
+  int kYK;
+  int kYL;
+  int kYM = kYP.widthPixels - kYJ.Yl.width - 1;
+  int kYN = kYP.heightPixels - kYJ.Yl.height - 1;
+  long kYO;
   
   c$a$2(c.a parama, DisplayMetrics paramDisplayMetrics) {}
   
@@ -32,52 +32,52 @@ final class c$a$2
     do
     {
       return false;
-      kzD = ((int)paramMotionEvent.getRawX() - kzC.alm.x);
-      kzE = ((int)paramMotionEvent.getRawY() - kzC.alm.y);
-      kzH = System.currentTimeMillis();
+      kYK = ((int)paramMotionEvent.getRawX() - kYJ.Yl.x);
+      kYL = ((int)paramMotionEvent.getRawY() - kYJ.Yl.y);
+      kYO = System.currentTimeMillis();
       return false;
-      kzF = (kzI.widthPixels - kzC.alm.width - 1);
-      kzG = (kzI.heightPixels - kzC.alm.height - 1);
-      kzC.alm.x = ((int)paramMotionEvent.getRawX() - kzD);
-      kzC.alm.y = ((int)paramMotionEvent.getRawY() - kzE);
-      paramView = kzC.alm;
-      if (kzC.alm.x < 0)
+      kYM = (kYP.widthPixels - kYJ.Yl.width - 1);
+      kYN = (kYP.heightPixels - kYJ.Yl.height - 1);
+      kYJ.Yl.x = ((int)paramMotionEvent.getRawX() - kYK);
+      kYJ.Yl.y = ((int)paramMotionEvent.getRawY() - kYL);
+      paramView = kYJ.Yl;
+      if (kYJ.Yl.x < 0)
       {
         i = 0;
         x = i;
-        paramView = kzC.alm;
-        if (kzC.alm.x <= kzF) {
+        paramView = kYJ.Yl;
+        if (kYJ.Yl.x <= kYM) {
           break label339;
         }
-        i = kzF;
+        i = kYM;
         x = i;
-        paramView = kzC.alm;
-        if (kzC.alm.y >= 0) {
+        paramView = kYJ.Yl;
+        if (kYJ.Yl.y >= 0) {
           break label353;
         }
         i = 0;
         y = i;
-        paramView = kzC.alm;
-        if (kzC.alm.y <= kzG) {
+        paramView = kYJ.Yl;
+        if (kYJ.Yl.y <= kYN) {
           break label367;
         }
       }
-      for (int i = kzG;; i = kzC.alm.y)
+      for (int i = kYN;; i = kYJ.Yl.y)
       {
         y = i;
-        kzC.all.updateViewLayout(kzC.alk, kzC.alm);
+        kYJ.Yk.updateViewLayout(kYJ.Yj, kYJ.Yl);
         return false;
-        i = kzC.alm.x;
+        i = kYJ.Yl.x;
         break;
-        i = kzC.alm.x;
+        i = kYJ.Yl.x;
         break label229;
-        i = kzC.alm.y;
+        i = kYJ.Yl.y;
         break label257;
       }
-    } while (System.currentTimeMillis() - kzH >= 300L);
-    a.aZe();
-    a.z(false, true);
-    kzC.kv();
+    } while (System.currentTimeMillis() - kYO >= 300L);
+    a.bev();
+    a.D(false, true);
+    kYJ.iY();
     return false;
   }
 }

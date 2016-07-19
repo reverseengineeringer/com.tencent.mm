@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kCY:Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;
+.field final synthetic lcd:Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 36
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView$1;->kCY:Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView$1;->lcd:Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
     const/4 v4, 0x0
 
     .line 40
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView$1;->kCY:Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView$1;->lcd:Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;
 
     .line 43
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->getCompoundDrawables()[Landroid/graphics/drawable/Drawable;
@@ -86,9 +86,9 @@
 
     sub-int/2addr v2, v3
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView$1;->kCY:Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView$1;->lcd:Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;
 
-    iget-object v3, v3, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->iGP:Landroid/graphics/drawable/Drawable;
+    iget-object v3, v3, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->jdK:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -108,7 +108,7 @@
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 53
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView$1;->kCY:Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView$1;->lcd:Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->a(Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;)V
 

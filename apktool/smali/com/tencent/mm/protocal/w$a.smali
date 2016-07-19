@@ -1,9 +1,9 @@
 .class public final Lcom/tencent/mm/protocal/w$a;
-.super Lcom/tencent/mm/protocal/h$c;
+.super Lcom/tencent/mm/protocal/k$c;
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/protocal/h$a;
+.implements Lcom/tencent/mm/protocal/k$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field public iVn:Lcom/tencent/mm/protocal/b/and;
+.field public jsG:Lcom/tencent/mm/protocal/b/afv;
 
 
 # direct methods
@@ -26,15 +26,15 @@
     .locals 1
 
     .prologue
-    .line 7
-    invoke-direct {p0}, Lcom/tencent/mm/protocal/h$c;-><init>()V
+    .line 12
+    invoke-direct {p0}, Lcom/tencent/mm/protocal/k$c;-><init>()V
 
-    .line 9
-    new-instance v0, Lcom/tencent/mm/protocal/b/and;
+    .line 14
+    new-instance v0, Lcom/tencent/mm/protocal/b/afv;
 
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/and;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/afv;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/protocal/w$a;->iVn:Lcom/tencent/mm/protocal/b/and;
+    iput-object v0, p0, Lcom/tencent/mm/protocal/w$a;->jsG:Lcom/tencent/mm/protocal/b/afv;
 
     return-void
 .end method
@@ -45,41 +45,32 @@
     .locals 1
 
     .prologue
-    .line 19
-    const/16 v0, 0x2a
+    .line 28
+    const/16 v0, 0x79
 
     return v0
 .end method
 
-.method public final tY()[B
-    .locals 2
+.method public final tZ()[B
+    .locals 1
 
     .prologue
-    .line 13
-    iget-object v0, p0, Lcom/tencent/mm/protocal/w$a;->iVn:Lcom/tencent/mm/protocal/b/and;
+    .line 18
+    iget-object v0, p0, Lcom/tencent/mm/protocal/w$a;->jsG:Lcom/tencent/mm/protocal/b/afv;
 
-    invoke-static {p0}, Lcom/tencent/mm/protocal/h;->a(Lcom/tencent/mm/protocal/h$c;)Lcom/tencent/mm/protocal/b/dc;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lcom/tencent/mm/protocal/b/ali;->jGS:Lcom/tencent/mm/protocal/b/dc;
-
-    .line 14
-    iget-object v0, p0, Lcom/tencent/mm/protocal/w$a;->iVn:Lcom/tencent/mm/protocal/b/and;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/protocal/b/and;->toByteArray()[B
+    invoke-virtual {v0}, Lcom/tencent/mm/protocal/b/afv;->toByteArray()[B
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final tZ()I
+.method public final ua()I
     .locals 1
 
     .prologue
-    .line 24
-    const/16 v0, 0x83
+    .line 23
+    const/16 v0, 0x8a
 
     return v0
 .end method

@@ -1,76 +1,60 @@
 package com.tencent.mm.performance.wxperformancetool;
 
-import android.os.Looper;
-import com.tencent.mm.performance.d.a.b;
-import com.tencent.mm.performance.d.a.c;
+import com.tencent.mm.performance.c.a.b;
+import com.tencent.mm.performance.c.a.c;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 
 public final class c
 {
-  HashSet clt = new HashSet();
-  public b clu;
+  HashSet<com.tencent.mm.performance.d.a> cgx = new HashSet();
+  public b cgy;
   
-  private boolean kn(String paramString)
+  private boolean kX(String paramString)
   {
-    if (clt.isEmpty()) {
+    if (cgx.isEmpty()) {
       return false;
     }
-    Iterator localIterator = clt.iterator();
+    Iterator localIterator = cgx.iterator();
     while (localIterator.hasNext()) {
-      if (((com.tencent.mm.performance.e.a)localIterator.next()).Fs().equals(paramString)) {
+      if (((com.tencent.mm.performance.d.a)localIterator.next()).FP().equals(paramString)) {
         return true;
       }
     }
     return false;
   }
   
-  private com.tencent.mm.performance.e.a ko(String paramString)
+  private com.tencent.mm.performance.d.a kY(String paramString)
   {
-    if (clt.isEmpty()) {
+    if (cgx.isEmpty()) {
       return null;
     }
-    Iterator localIterator = clt.iterator();
+    Iterator localIterator = cgx.iterator();
     while (localIterator.hasNext())
     {
-      com.tencent.mm.performance.e.a locala = (com.tencent.mm.performance.e.a)localIterator.next();
-      if (locala.Fs().equals(paramString)) {
+      com.tencent.mm.performance.d.a locala = (com.tencent.mm.performance.d.a)localIterator.next();
+      if (locala.FP().equals(paramString)) {
         return locala;
       }
     }
     return null;
   }
   
-  public final void Fv()
-  {
-    Looper localLooper = Looper.getMainLooper();
-    if (kn(com.tencent.mm.performance.b.a.TYPE))
-    {
-      ((com.tencent.mm.performance.b.a)ko(com.tencent.mm.performance.b.a.TYPE)).a(localLooper);
-      return;
-    }
-    com.tencent.mm.performance.b.a locala = new com.tencent.mm.performance.b.a(this);
-    ckx = new HashMap();
-    ckz = new HashSet();
-    locala.a(localLooper);
-    clt.add(locala);
-  }
-  
-  public final boolean Fw()
+  public final boolean FS()
   {
     boolean bool2 = false;
-    boolean bool4 = kn(com.tencent.mm.performance.a.a.TYPE);
+    boolean bool4 = kX(com.tencent.mm.performance.a.a.TYPE);
     boolean bool3;
     if (!bool4)
     {
       com.tencent.mm.performance.a.a locala = new com.tencent.mm.performance.a.a();
-      bool3 = locala.Fr();
+      bool3 = locala.FO();
       bool1 = bool3;
       if (bool3)
       {
-        ckt = new HashSet();
-        clt.add(locala);
+        cfL = new HashSet();
+        cgx.add(locala);
       }
     }
     for (boolean bool1 = bool3;; bool1 = false)
@@ -82,47 +66,47 @@ public final class c
     }
   }
   
-  public final boolean Fx()
+  public final boolean FT()
   {
-    if (!kn(com.tencent.mm.performance.d.a.TYPE))
+    if (!kX(com.tencent.mm.performance.c.a.TYPE))
     {
-      if (!kn(com.tencent.mm.performance.a.a.TYPE)) {
+      if (!kX(com.tencent.mm.performance.a.a.TYPE)) {
         throw new IllegalArgumentException("setMonitorMemoryLeak, you should setMonitorActivityLifeCycle first(and return true)");
       }
-      com.tencent.mm.performance.d.a locala = new com.tencent.mm.performance.d.a();
-      ckz = new HashSet();
-      ckU = new HashSet();
-      ckT = new HashMap();
+      com.tencent.mm.performance.c.a locala = new com.tencent.mm.performance.c.a();
+      cfU = new HashSet();
+      cfX = new HashSet();
+      cfW = new HashMap();
       a(new a.b(locala, (byte)0));
-      clt.add(locala);
+      cgx.add(locala);
       return true;
     }
     return false;
   }
   
-  public final boolean Fy()
+  public final boolean FU()
   {
     boolean bool1 = false;
     boolean bool2 = false;
-    boolean bool3 = kn(com.tencent.mm.performance.c.a.TYPE);
+    boolean bool3 = kX(com.tencent.mm.performance.b.a.TYPE);
     if (!bool3)
     {
-      com.tencent.mm.performance.c.a locala = new com.tencent.mm.performance.c.a();
-      cle = 60000L;
-      ckO = 50L;
-      ckP = 70L;
-      ckQ = 90L;
+      com.tencent.mm.performance.b.a locala = new com.tencent.mm.performance.b.a();
+      cgh = 60000L;
+      cfQ = 50L;
+      cfR = 70L;
+      cfS = 90L;
       bool1 = bool2;
-      if (ckN > 0L) {
+      if (cfP > 0L) {
         bool1 = true;
       }
-      ckR = bool1;
-      bool2 = ckR;
+      cfT = bool1;
+      bool2 = cfT;
       bool1 = bool2;
       if (bool2)
       {
-        ckz = new HashSet();
-        clt.add(locala);
+        cfU = new HashSet();
+        cgx.add(locala);
         bool1 = bool2;
       }
     }
@@ -131,9 +115,9 @@ public final class c
   
   public final void a(com.tencent.mm.performance.a.a.a parama)
   {
-    if (kn(com.tencent.mm.performance.a.a.TYPE))
+    if (kX(com.tencent.mm.performance.a.a.TYPE))
     {
-      ((com.tencent.mm.performance.a.a)ko(com.tencent.mm.performance.a.a.TYPE)).a(parama);
+      ((com.tencent.mm.performance.a.a)kY(com.tencent.mm.performance.a.a.TYPE)).a(parama);
       return;
     }
     throw new IllegalArgumentException("registerActivityLifeCycleCallback, you must set monitor activity lifecycle first");
@@ -141,26 +125,12 @@ public final class c
   
   public final void a(com.tencent.mm.performance.b.a.a parama)
   {
-    if (kn(com.tencent.mm.performance.b.a.TYPE))
+    if (kX(com.tencent.mm.performance.b.a.TYPE))
     {
-      com.tencent.mm.performance.b.a locala = (com.tencent.mm.performance.b.a)ko(com.tencent.mm.performance.b.a.TYPE);
-      synchronized (ckz)
+      com.tencent.mm.performance.b.a locala = (com.tencent.mm.performance.b.a)kY(com.tencent.mm.performance.b.a.TYPE);
+      synchronized (cfU)
       {
-        ckz.add(parama);
-        return;
-      }
-    }
-    throw new IllegalArgumentException("registerLooperMonitorCallback, you must set a monitored looper first");
-  }
-  
-  public final void a(com.tencent.mm.performance.c.a.a parama)
-  {
-    if (kn(com.tencent.mm.performance.c.a.TYPE))
-    {
-      com.tencent.mm.performance.c.a locala = (com.tencent.mm.performance.c.a)ko(com.tencent.mm.performance.c.a.TYPE);
-      synchronized (ckz)
-      {
-        ckz.add(parama);
+        cfU.add(parama);
         return;
       }
     }
@@ -169,24 +139,24 @@ public final class c
   
   public final void a(a.c paramc)
   {
-    if (kn(com.tencent.mm.performance.d.a.TYPE))
+    if (kX(com.tencent.mm.performance.c.a.TYPE))
     {
-      com.tencent.mm.performance.d.a locala = (com.tencent.mm.performance.d.a)ko(com.tencent.mm.performance.d.a.TYPE);
-      synchronized (ckz)
+      com.tencent.mm.performance.c.a locala = (com.tencent.mm.performance.c.a)kY(com.tencent.mm.performance.c.a.TYPE);
+      synchronized (cfU)
       {
-        ckz.add(paramc);
+        cfU.add(paramc);
         return;
       }
     }
     throw new IllegalArgumentException("registerMemoryLeakCallback, you must set monitor memoryleak first");
   }
   
-  public final void km(String paramString)
+  public final void kW(String paramString)
   {
-    com.tencent.mm.performance.e.a locala = ko(paramString);
+    com.tencent.mm.performance.d.a locala = kY(paramString);
     if (locala != null)
     {
-      cle = 10000L;
+      cgh = 10000L;
       return;
     }
     throw new IllegalArgumentException("setTypeMointorInterval, " + paramString + " is not opened");

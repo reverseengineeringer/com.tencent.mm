@@ -11,35 +11,35 @@ final class ChatFooter$13
 {
   ChatFooter$13(ChatFooter paramChatFooter) {}
   
-  public final void aSi()
+  public final void aWZ()
   {
-    CiLO).iMC.aRg();
-    ChatFooter.a(iLO).setText("");
-    ChatFooter.a(iLO, true);
+    DjiL).jjz.aVS();
+    ChatFooter.a(jiL).setText("");
+    ChatFooter.a(jiL, true);
   }
   
-  public final void aSj()
+  public final void aXa()
   {
-    CiLO).iMC.aRg();
-    ChatFooter.h(iLO).performClick();
+    DjiL).jjz.aVS();
+    ChatFooter.h(jiL).performClick();
   }
   
-  public final void ww(String paramString)
+  public final void xP(String paramString)
   {
-    if (iLO.aSa())
+    if (jiL.aWO())
     {
-      ChatFooter.y(iLO);
-      ChatFooter.z(iLO).setVisibility(0);
-      ChatFooter.r(iLO).setVisibility(8);
-      ChatFooter.a(iLO, true);
-      ChatFooter.A(iLO);
-      ChatFooter.a(iLO).HO(paramString);
-      if (ChatFooter.a(iLO).getText().length() > 0) {
-        ChatFooter.C(iLO).aSn();
+      ChatFooter.z(jiL);
+      ChatFooter.A(jiL).setVisibility(0);
+      ChatFooter.r(jiL).setVisibility(8);
+      ChatFooter.a(jiL, true);
+      ChatFooter.B(jiL);
+      ChatFooter.a(jiL).Kd(paramString);
+      if (ChatFooter.a(jiL).getText().length() > 0) {
+        ChatFooter.D(jiL).aXf();
       }
       return;
     }
-    CiLO).iMC.aRg();
+    DjiL).jjz.aVS();
   }
 }
 

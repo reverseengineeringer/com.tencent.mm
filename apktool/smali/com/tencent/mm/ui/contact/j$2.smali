@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lkn:Lcom/tencent/mm/ui/contact/j;
+.field final synthetic lKy:Lcom/tencent/mm/ui/contact/j;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 56
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/j$2;->lkn:Lcom/tencent/mm/ui/contact/j;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/j$2;->lKy:Lcom/tencent/mm/ui/contact/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 60
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/j$2;->lkn:Lcom/tencent/mm/ui/contact/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/j$2;->lKy:Lcom/tencent/mm/ui/contact/j;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/j;->b(Lcom/tencent/mm/ui/contact/j;)Landroid/content/Context;
 
@@ -52,7 +52,7 @@
     if-eqz v0, :cond_0
 
     .line 61
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/j$2;->lkn:Lcom/tencent/mm/ui/contact/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/j$2;->lKy:Lcom/tencent/mm/ui/contact/j;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/j;->b(Lcom/tencent/mm/ui/contact/j;)Landroid/content/Context;
 
@@ -60,7 +60,7 @@
 
     check-cast v0, Lcom/tencent/mm/ui/MMActivity;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/MMActivity;->age()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/MMActivity;->aiI()V
 
     .line 63
     :cond_0

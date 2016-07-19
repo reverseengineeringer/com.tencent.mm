@@ -5,142 +5,142 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.AbsoluteLayout;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ad;
 
 public final class b
 {
-  boolean gFA = false;
-  AbsoluteLayout gFB = null;
-  boolean gFC = false;
-  boolean gFD = false;
-  NotInterestMenu.c gFi;
-  NotInterestMenu gFn;
-  ViewGroup gFo;
-  NotInterestMenu.b gFp = new NotInterestMenu.b()
+  NotInterestMenu.c gLK;
+  NotInterestMenu gLP;
+  ViewGroup gLQ;
+  NotInterestMenu.b gLR = new NotInterestMenu.b()
   {
-    public final void axq()
+    public final void azS()
     {
-      axr();
+      azT();
     }
   };
-  Animation gFq = null;
-  Animation gFr = null;
-  private Animation gFs = null;
-  private Animation gFt = null;
-  int gFu = 0;
-  int gFv = 0;
-  int gFw = 0;
-  int gFx = 0;
-  int gFy = 0;
-  int gFz = 0;
+  Animation gLS = null;
+  Animation gLT = null;
+  private Animation gLU = null;
+  private Animation gLV = null;
+  int gLW = 0;
+  int gLX = 0;
+  int gLY = 0;
+  int gLZ = 0;
+  int gMa = 0;
+  int gMb = 0;
+  boolean gMc = false;
+  AbsoluteLayout gMd = null;
+  boolean gMe = false;
+  boolean gMf = false;
   int mScreenHeight = 0;
-  int nA = 0;
+  int nQ = 0;
   
   public b(ViewGroup paramViewGroup)
   {
-    gFo = paramViewGroup;
-    gFq = AnimationUtils.loadAnimation(y.getContext(), 2130837589);
-    gFq.setFillAfter(true);
-    gFq.setDuration(100L);
-    gFq.setAnimationListener(new Animation.AnimationListener()
+    gLQ = paramViewGroup;
+    gLS = AnimationUtils.loadAnimation(aa.getContext(), 2130968601);
+    gLS.setFillAfter(true);
+    gLS.setDuration(100L);
+    gLS.setAnimationListener(new Animation.AnimationListener()
     {
       public final void onAnimationEnd(Animation paramAnonymousAnimation)
       {
-        if (gFn != null) {
-          gFn.setVisibility(0);
+        if (gLP != null) {
+          gLP.setVisibility(0);
         }
-        gFC = false;
-        gFA = true;
+        gMe = false;
+        gMc = true;
       }
       
       public final void onAnimationRepeat(Animation paramAnonymousAnimation) {}
       
       public final void onAnimationStart(Animation paramAnonymousAnimation)
       {
-        gFC = true;
+        gMe = true;
       }
     });
-    gFr = AnimationUtils.loadAnimation(y.getContext(), 2130837599);
-    gFr.setFillAfter(true);
-    gFr.setDuration(100L);
-    gFr.setAnimationListener(new Animation.AnimationListener()
+    gLT = AnimationUtils.loadAnimation(aa.getContext(), 2130968604);
+    gLT.setFillAfter(true);
+    gLT.setDuration(100L);
+    gLT.setAnimationListener(new Animation.AnimationListener()
     {
       public final void onAnimationEnd(Animation paramAnonymousAnimation)
       {
-        if (gFn != null) {
-          gFn.setVisibility(0);
+        if (gLP != null) {
+          gLP.setVisibility(0);
         }
-        gFC = false;
-        gFA = true;
+        gMe = false;
+        gMc = true;
       }
       
       public final void onAnimationRepeat(Animation paramAnonymousAnimation) {}
       
       public final void onAnimationStart(Animation paramAnonymousAnimation)
       {
-        gFC = true;
+        gMe = true;
       }
     });
-    gFs = AnimationUtils.loadAnimation(y.getContext(), 2130837579);
-    gFs.setFillAfter(true);
-    gFs.setDuration(100L);
-    gFs.setAnimationListener(new Animation.AnimationListener()
+    gLU = AnimationUtils.loadAnimation(aa.getContext(), 2130968602);
+    gLU.setFillAfter(true);
+    gLU.setDuration(100L);
+    gLU.setAnimationListener(new Animation.AnimationListener()
     {
       public final void onAnimationEnd(Animation paramAnonymousAnimation)
       {
-        ab.j(new Runnable()
+        ad.k(new Runnable()
         {
           public final void run()
           {
-            axr();
+            azT();
           }
         });
-        gFC = false;
+        gMe = false;
       }
       
       public final void onAnimationRepeat(Animation paramAnonymousAnimation) {}
       
       public final void onAnimationStart(Animation paramAnonymousAnimation)
       {
-        gFC = true;
+        gMe = true;
       }
     });
-    gFt = AnimationUtils.loadAnimation(y.getContext(), 2130837598);
-    gFt.setFillAfter(true);
-    gFt.setDuration(100L);
-    gFt.setAnimationListener(new Animation.AnimationListener()
+    gLV = AnimationUtils.loadAnimation(aa.getContext(), 2130968603);
+    gLV.setFillAfter(true);
+    gLV.setDuration(100L);
+    gLV.setAnimationListener(new Animation.AnimationListener()
     {
       public final void onAnimationEnd(Animation paramAnonymousAnimation)
       {
-        ab.j(new Runnable()
+        ad.k(new Runnable()
         {
           public final void run()
           {
-            axr();
+            azT();
           }
         });
-        gFC = false;
+        gMe = false;
       }
       
       public final void onAnimationRepeat(Animation paramAnonymousAnimation) {}
       
       public final void onAnimationStart(Animation paramAnonymousAnimation)
       {
-        gFC = true;
+        gMe = true;
       }
     });
   }
   
-  public final void axr()
+  public final void azT()
   {
-    if ((gFB != null) && (gFo != null) && (gFn != null))
+    if ((gMd != null) && (gLQ != null) && (gLP != null))
     {
-      gFB.removeView(gFn);
-      gFo.removeView(gFB);
-      gFB = null;
-      gFn = null;
-      gFA = false;
+      gMd.removeView(gLP);
+      gLQ.removeView(gMd);
+      gMd = null;
+      gLP = null;
+      gMc = false;
     }
   }
 }

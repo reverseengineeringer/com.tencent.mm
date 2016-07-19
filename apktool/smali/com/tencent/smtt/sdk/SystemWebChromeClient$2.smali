@@ -1,6 +1,5 @@
 .class Lcom/tencent/smtt/sdk/SystemWebChromeClient$2;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -29,8 +28,6 @@
 .method constructor <init>(Lcom/tencent/smtt/sdk/SystemWebChromeClient;Lcom/tencent/smtt/sdk/WebView$WebViewTransport;Landroid/os/Message;)V
     .locals 0
 
-    .prologue
-    .line 99
     iput-object p1, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$2;->this$0:Lcom/tencent/smtt/sdk/SystemWebChromeClient;
 
     iput-object p2, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$2;->val$transport:Lcom/tencent/smtt/sdk/WebView$WebViewTransport;
@@ -45,39 +42,40 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 3
 
-    .prologue
-    .line 103
     iget-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$2;->val$transport:Lcom/tencent/smtt/sdk/WebView$WebViewTransport;
 
     invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$WebViewTransport;->getWebView()Lcom/tencent/smtt/sdk/WebView;
 
     move-result-object v1
 
-    .line 104
     if-eqz v1, :cond_0
 
-    .line 106
     iget-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$2;->val$resultMsg:Landroid/os/Message;
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/webkit/WebView$WebViewTransport;
 
-    .line 107
-    invoke-virtual {v1}, Lcom/tencent/smtt/sdk/WebView;->getSysWebView()Landroid/webkit/WebView;
+    iget-boolean v2, v1, Lcom/tencent/smtt/sdk/WebView;->mvI:Z
 
-    move-result-object v1
+    if-nez v2, :cond_1
 
+    iget-object v1, v1, Lcom/tencent/smtt/sdk/WebView;->mvK:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+
+    :goto_0
     invoke-virtual {v0, v1}, Landroid/webkit/WebView$WebViewTransport;->setWebView(Landroid/webkit/WebView;)V
 
-    .line 109
     :cond_0
     iget-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$2;->val$resultMsg:Landroid/os/Message;
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 110
     return-void
+
+    :cond_1
+    const/4 v1, 0x0
+
+    goto :goto_0
 .end method

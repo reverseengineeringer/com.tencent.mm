@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kOk:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
+.field final synthetic lnA:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 240
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$7;->kOk:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$7;->lnA:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,7 +47,7 @@
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     .line 244
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$7;->kOk:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI$7;->lnA:Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/bindlinkedin/ListLinkedInFriendUI;->finish()V
 

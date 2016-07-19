@@ -34,8 +34,8 @@
 .method public abstract b(Lb/a/d/i;)Ljava/lang/String;
 .end method
 
-.method public abstract boD()Ljava/lang/String;
+.method public abstract bvB()Ljava/lang/String;
 .end method
 
-.method public abstract boE()Ljava/lang/String;
+.method public abstract bvC()Ljava/lang/String;
 .end method

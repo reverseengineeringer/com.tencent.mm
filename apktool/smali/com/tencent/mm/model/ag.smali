@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static bAw:Lcom/tencent/mm/model/ag;
+.field public static btA:Lcom/tencent/mm/model/ag;
 
 
 # direct methods
@@ -15,11 +15,11 @@
     .line 13
     new-instance v0, Lcom/tencent/mm/model/ag;
 
-    sget-object v1, Lcom/tencent/mm/loader/stub/c;->bxf:Lcom/tencent/mm/loader/stub/c;
+    sget-object v1, Lcom/tencent/mm/loader/stub/c;->bph:Lcom/tencent/mm/loader/stub/c;
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/model/ag;-><init>(Lcom/tencent/mm/loader/stub/c;)V
 
-    sput-object v0, Lcom/tencent/mm/model/ag;->bAw:Lcom/tencent/mm/model/ag;
+    sput-object v0, Lcom/tencent/mm/model/ag;->btA:Lcom/tencent/mm/model/ag;
 
     return-void
 .end method
@@ -29,7 +29,7 @@
 
     .prologue
     .line 32
-    iget-object v0, p1, Lcom/tencent/mm/loader/stub/c;->bxg:Landroid/content/SharedPreferences;
+    iget-object v0, p1, Lcom/tencent/mm/loader/stub/c;->bpi:Landroid/content/SharedPreferences;
 
     invoke-direct {p0, v0}, Lcom/tencent/mm/loader/stub/c;-><init>(Landroid/content/SharedPreferences;)V
 
@@ -39,12 +39,12 @@
 
 
 # virtual methods
-.method public final H(Ljava/lang/String;Ljava/lang/String;)V
+.method public final E(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
 
     .prologue
     .line 36
-    const-string/jumbo v0, "!32@/B4Tb64lLpKi2lXvYwKJe8aax+f9N9cy"
+    const-string/jumbo v0, "MicroMsg.LastLoginInfo"
 
     const-string/jumbo v1, "save key : %s value : %s"
 
@@ -60,10 +60,10 @@
 
     aput-object p2, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 37
-    iget-object v0, p0, Lcom/tencent/mm/model/ag;->bxg:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/tencent/mm/model/ag;->bpi:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -85,7 +85,7 @@
     if-eqz v0, :cond_0
 
     .line 40
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -114,7 +114,7 @@
     return-void
 .end method
 
-.method public final d(Ljava/lang/String;ILjava/lang/String;)V
+.method public final b(Ljava/lang/String;ILjava/lang/String;)V
     .locals 2
 
     .prologue
@@ -129,7 +129,7 @@
 
     .line 54
     :cond_0
-    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -140,7 +140,7 @@
 
     .line 57
     :cond_1
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -157,18 +157,18 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v1, v0}, Lcom/tencent/mm/model/ag;->H(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v1, v0}, Lcom/tencent/mm/model/ag;->E(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 61
     return-void
 .end method
 
-.method public final fb(Ljava/lang/String;)V
+.method public final fo(Ljava/lang/String;)V
     .locals 8
 
     .prologue
     .line 81
-    const-string/jumbo v0, "!32@/B4Tb64lLpKi2lXvYwKJe8aax+f9N9cy"
+    const-string/jumbo v0, "MicroMsg.LastLoginInfo"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -184,7 +184,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 83
     new-instance v0, Ljava/lang/StringBuilder;
@@ -210,7 +210,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v2, Lcom/tencent/mm/compatible/util/d;->bxa:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/compatible/util/d;->bpc:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -258,7 +258,7 @@
     or-int/2addr v3, v4
 
     .line 89
-    const-string/jumbo v4, "!32@/B4Tb64lLpKi2lXvYwKJe8aax+f9N9cy"
+    const-string/jumbo v4, "MicroMsg.LastLoginInfo"
 
     const-string/jumbo v5, "delete old avatar path[%s], ret[%b]"
 
@@ -278,27 +278,27 @@
 
     aput-object v3, v6, v7
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 91
-    invoke-static {p1, v1}, Lcom/tencent/mm/modelsfs/FileOp;->o(Ljava/lang/String;Ljava/lang/String;)J
+    invoke-static {p1, v1}, Lcom/tencent/mm/modelsfs/FileOp;->n(Ljava/lang/String;Ljava/lang/String;)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
-    cmp-long v3, v3, v5
+    cmp-long v3, v4, v6
 
     if-gtz v3, :cond_0
 
     .line 92
-    invoke-static {v0, v2}, Lcom/tencent/mm/modelsfs/FileOp;->o(Ljava/lang/String;Ljava/lang/String;)J
+    invoke-static {v0, v2}, Lcom/tencent/mm/modelsfs/FileOp;->n(Ljava/lang/String;Ljava/lang/String;)J
 
     .line 93
     :cond_0
     const-string/jumbo v0, "last_avatar_path"
 
-    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/model/ag;->H(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/model/ag;->E(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 94
     return-void

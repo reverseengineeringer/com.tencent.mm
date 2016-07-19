@@ -9,13 +9,13 @@ import org.json.JSONObject;
 
 public class i
 {
-  private static i ajT = null;
-  static f ajU = null;
-  public static volatile long ajV = 0L;
-  static h ajW = null;
+  private static i VM = null;
+  static f VN = null;
+  public static volatile long VO = 0L;
+  static h VP = null;
   public static Context mContext = null;
   public static Handler mHandler = null;
-  private g ajX = null;
+  private g VQ = null;
   
   private i(Context paramContext)
   {
@@ -24,33 +24,33 @@ public class i
     mHandler = new Handler(localHandlerThread.getLooper());
     paramContext = paramContext.getApplicationContext();
     mContext = paramContext;
-    ajV = PreferenceManager.getDefaultSharedPreferences(paramContext).getLong("__MID_LAST_CHECK_TIME__", 0L);
+    VO = PreferenceManager.getDefaultSharedPreferences(paramContext).getLong("__MID_LAST_CHECK_TIME__", 0L);
   }
   
-  public static i Q(Context paramContext)
+  public static i M(Context paramContext)
   {
-    if (ajT == null) {}
+    if (VM == null) {}
     try
     {
-      if (ajT == null) {
-        ajT = new i(paramContext);
+      if (VM == null) {
+        VM = new i(paramContext);
       }
-      return ajT;
+      return VM;
     }
     finally {}
   }
   
   public static void a(f paramf)
   {
-    ajU = paramf;
+    VN = paramf;
   }
   
-  public final String kc()
+  public final String iD()
   {
-    if ((ajX == null) || (!s.at(ajX.ajR)))
+    if ((VQ == null) || (!s.ax(VQ.VK)))
     {
-      ajX = r.S(mContext).kh();
-      if (!s.at(ajX.ajR)) {
+      VQ = r.O(mContext).iI();
+      if (!s.ax(VQ.VK)) {
         break label100;
       }
     }
@@ -60,17 +60,17 @@ public class i
       if (mHandler != null) {
         mHandler.post(new n(mContext, i));
       }
-      new StringBuilder("wx get mid:").append(ajX.ajR);
-      return ajX.ajR;
+      new StringBuilder("wx get mid:").append(VQ.VK);
+      return VQ.VK;
     }
   }
   
-  public final String kd()
+  public final String iE()
   {
-    if ((ajX == null) || (!s.at(ajX.ajR))) {
-      ajX = r.S(mContext).kh();
+    if ((VQ == null) || (!s.ax(VQ.VK))) {
+      VQ = r.O(mContext).iI();
     }
-    return ajX.ajR;
+    return VQ.VK;
   }
 }
 

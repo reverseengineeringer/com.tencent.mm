@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sns.ui;
 
 public abstract interface s
 {
-  public abstract boolean lV(int paramInt);
+  public abstract void xa(String paramString);
 }
 
 /* Location:

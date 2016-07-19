@@ -2,10 +2,8 @@ package com.tencent.mm.app.plugin;
 
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.ar.c;
-import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.av.c;
 import com.tencent.mm.pluginsdk.l;
-import com.tencent.mm.pluginsdk.ui.applet.g;
 import com.tencent.mm.pluginsdk.ui.d.b;
 
 @URISpanHandlerSet.a
@@ -17,15 +15,15 @@ class URISpanHandlerSet$LuckyMoneyUriSpanHandler
     super(paramURISpanHandlerSet);
   }
   
-  final boolean a(g paramg, b paramb)
+  final boolean a(com.tencent.mm.pluginsdk.ui.applet.g paramg, b paramb)
   {
     if (type == 33)
     {
       paramb = new Intent();
       paramb.putExtra("key_native_url", url);
-      c.c(URISpanHandlerSet.a(ang), "luckymoney", ".ui.LuckyMoneyDetailUI", paramb);
-      h.fUJ.g(12097, new Object[] { Integer.valueOf(11), Integer.valueOf(0), Long.valueOf(System.currentTimeMillis()) });
-      h.fUJ.g(11850, new Object[] { Integer.valueOf(4), Integer.valueOf(1) });
+      c.c(URISpanHandlerSet.a(ZU), "luckymoney", ".ui.LuckyMoneyDetailUI", paramb);
+      com.tencent.mm.plugin.report.service.g.gdY.h(12097, new Object[] { Integer.valueOf(11), Integer.valueOf(0), Long.valueOf(System.currentTimeMillis()) });
+      com.tencent.mm.plugin.report.service.g.gdY.h(11850, new Object[] { Integer.valueOf(4), Integer.valueOf(1) });
       return true;
     }
     return false;
@@ -36,15 +34,15 @@ class URISpanHandlerSet$LuckyMoneyUriSpanHandler
     return false;
   }
   
-  final g bb(String paramString)
+  final com.tencent.mm.pluginsdk.ui.applet.g bg(String paramString)
   {
     if (paramString.trim().toLowerCase().startsWith("weixin://weixinhongbao/")) {
-      return new g(paramString, 33, null);
+      return new com.tencent.mm.pluginsdk.ui.applet.g(paramString, 33, null);
     }
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 33 };
   }

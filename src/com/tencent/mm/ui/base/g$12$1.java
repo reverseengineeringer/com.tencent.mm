@@ -9,7 +9,7 @@ final class g$12$1
   
   public final void run()
   {
-    ((MMActivity)kCC.val$context).age();
+    ((MMActivity)lbH.val$context).aiI();
   }
 }
 

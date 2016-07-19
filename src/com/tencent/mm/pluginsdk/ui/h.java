@@ -9,168 +9,168 @@ import android.graphics.Path;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Looper;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class h
   extends BitmapDrawable
   implements d.a
 {
-  protected static final aa cKr = new aa(Looper.getMainLooper());
-  protected static final Paint efA;
-  private Paint cIZ = new Paint();
-  private Runnable cNk;
-  private Path dMx;
-  protected final a fzj;
-  protected boolean iGE = false;
-  protected boolean iGF = false;
-  private int iGG = 0;
-  private int iGH = 0;
-  protected boolean iGI;
-  protected boolean iGJ;
-  protected float iGK = 1.0F;
-  private PaintFlagsDrawFilter iGL = new PaintFlagsDrawFilter(0, 3);
+  protected static final Paint bpK;
+  protected static final ac bpL = new ac(Looper.getMainLooper());
+  private Runnable bpN;
+  private Paint cGd = new Paint();
+  private Path dOe;
+  protected final a fIn;
+  protected boolean jdA = false;
+  private int jdB = 0;
+  private int jdC = 0;
+  protected boolean jdD;
+  protected boolean jdE;
+  protected float jdF = 1.0F;
+  private PaintFlagsDrawFilter jdG = new PaintFlagsDrawFilter(0, 3);
+  protected boolean jdz = false;
   private Rect rect = new Rect();
   protected String tag;
   
   static
   {
     Paint localPaint = new Paint();
-    efA = localPaint;
+    bpK = localPaint;
     localPaint.setAntiAlias(true);
-    efA.setFilterBitmap(true);
+    bpK.setFilterBitmap(true);
   }
   
   public h(a parama, String paramString)
   {
-    super(parama.kp());
-    cIZ.setStyle(Paint.Style.STROKE);
-    cIZ.setFlags(1);
-    cIZ.setAntiAlias(true);
-    dMx = new Path();
-    cNk = new Runnable()
+    super(parama.iS());
+    cGd.setStyle(Paint.Style.STROKE);
+    cGd.setFlags(1);
+    cGd.setAntiAlias(true);
+    dOe = new Path();
+    bpN = new Runnable()
     {
       public final void run()
       {
         invalidateSelf();
       }
     };
-    fzj = parama;
+    fIn = parama;
     tag = paramString;
-    fzj.a(this);
+    fIn.a(this);
   }
   
   public h(a parama, String paramString, boolean paramBoolean)
   {
-    super(parama.kp());
-    cIZ.setStyle(Paint.Style.STROKE);
-    cIZ.setFlags(1);
-    cIZ.setAntiAlias(true);
-    dMx = new Path();
-    cNk = new Runnable()
+    super(parama.iS());
+    cGd.setStyle(Paint.Style.STROKE);
+    cGd.setFlags(1);
+    cGd.setAntiAlias(true);
+    dOe = new Path();
+    bpN = new Runnable()
     {
       public final void run()
       {
         invalidateSelf();
       }
     };
-    iGE = false;
-    fzj = parama;
+    jdz = false;
+    fIn = parama;
     tag = paramString;
-    fzj.a(this);
+    fIn.a(this);
   }
   
-  public final void Ay(String paramString)
+  public final void Cz(String paramString)
   {
     if ((paramString == null) || (paramString.length() <= 0)) {}
     while (paramString.equals(tag)) {
       return;
     }
     tag = paramString;
-    cKr.post(cNk);
+    bpL.post(bpN);
   }
   
-  public final void aQT()
+  public final void aVD()
   {
-    iGI = true;
+    jdD = true;
   }
   
-  public final void aQU()
+  public final void aVE()
   {
-    if (!iGI) {}
+    if (!jdD) {}
     do
     {
       return;
-      iGI = false;
-    } while (!iGJ);
-    iGJ = false;
+      jdD = false;
+    } while (!jdE);
+    jdE = false;
     invalidateSelf();
   }
   
   public void draw(Canvas paramCanvas)
   {
     Bitmap localBitmap;
-    if (iGF)
+    if (jdA)
     {
-      localBitmap = fzj.a(tag, paramCanvas.getWidth(), paramCanvas.getHeight(), 1);
+      localBitmap = fIn.a(tag, paramCanvas.getWidth(), paramCanvas.getHeight(), 1);
       if ((localBitmap != null) && (!localBitmap.isRecycled())) {
         break label204;
       }
-      localBitmap = fzj.kp();
-      if (!iGI) {
+      localBitmap = fIn.iS();
+      if (!jdD) {
         break label196;
       }
-      iGJ = true;
+      jdE = true;
     }
     for (;;)
     {
       Rect localRect2 = getBounds();
       Rect localRect1 = null;
-      if ((iGK > 1.0F) || (iGE))
+      if ((jdF > 1.0F) || (jdz))
       {
         int i = localBitmap.getHeight() / 15 / 2;
         int j = localBitmap.getWidth() / 15 / 2;
         localRect1 = new Rect(j, i, localBitmap.getWidth() - j, localBitmap.getHeight() - i);
       }
-      paramCanvas.drawBitmap(localBitmap, localRect1, localRect2, efA);
+      paramCanvas.drawBitmap(localBitmap, localRect1, localRect2, bpK);
       return;
-      if (iGI)
+      if (jdD)
       {
-        localBitmap = fzj.aM(tag);
+        localBitmap = fIn.aR(tag);
         break;
       }
-      localBitmap = fzj.aL(tag);
+      localBitmap = fIn.aQ(tag);
       break;
       label196:
-      iGJ = false;
+      jdE = false;
       continue;
       label204:
-      iGJ = false;
+      jdE = false;
     }
   }
   
-  public void fZ(String paramString)
+  public final void gJ(boolean paramBoolean)
+  {
+    jdA = paramBoolean;
+  }
+  
+  public void gm(String paramString)
   {
     if ((paramString == null) || (!paramString.equals(tag))) {
       return;
     }
-    u.v("!44@/B4Tb64lLpKZSD58W7O6eLJv0xzjKYwp5aOd5vnMqLY=", "notifyChanged :%s", new Object[] { paramString });
-    cKr.post(cNk);
-  }
-  
-  public final void gl(boolean paramBoolean)
-  {
-    iGF = paramBoolean;
+    v.v("MicroMsg.SDK.LazyBitmapDrawable", "notifyChanged :%s", new Object[] { paramString });
+    bpL.post(bpN);
   }
   
   public void onScrollStateChanged(boolean paramBoolean)
   {
     if (paramBoolean)
     {
-      iGI = true;
+      jdD = true;
       return;
     }
-    aQU();
+    aVE();
   }
   
   public static abstract interface a
@@ -179,11 +179,11 @@ public class h
     
     public abstract void a(h paramh);
     
-    public abstract Bitmap aL(String paramString);
+    public abstract Bitmap aQ(String paramString);
     
-    public abstract Bitmap aM(String paramString);
+    public abstract Bitmap aR(String paramString);
     
-    public abstract Bitmap kp();
+    public abstract Bitmap iS();
   }
 }
 

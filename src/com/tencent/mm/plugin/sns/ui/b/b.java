@@ -4,118 +4,125 @@ import android.view.View;
 import android.view.ViewStub;
 import android.widget.ImageView;
 import com.tencent.mm.model.h;
-import com.tencent.mm.plugin.sns.h.k;
-import com.tencent.mm.plugin.sns.lucky.b.w;
 import com.tencent.mm.plugin.sns.ui.AsyncTextView;
 import com.tencent.mm.plugin.sns.ui.PhotosContent;
 import com.tencent.mm.plugin.sns.ui.TagImageView;
-import com.tencent.mm.plugin.sns.ui.ag;
-import com.tencent.mm.plugin.sns.ui.ai;
-import com.tencent.mm.plugin.sns.ui.an;
-import com.tencent.mm.protocal.b.ade;
-import com.tencent.mm.protocal.b.aqi;
-import com.tencent.mm.protocal.b.aqw;
-import com.tencent.mm.protocal.b.atp;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.i.a;
+import com.tencent.mm.plugin.sns.ui.ak;
+import com.tencent.mm.plugin.sns.ui.am;
+import com.tencent.mm.plugin.sns.ui.aq;
+import com.tencent.mm.plugin.sns.ui.as;
+import com.tencent.mm.protocal.b.adx;
+import com.tencent.mm.protocal.b.aqt;
+import com.tencent.mm.protocal.b.ari;
+import com.tencent.mm.protocal.b.auf;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.z;
 import java.util.ArrayList;
 import java.util.List;
 
 public final class b
   extends a
 {
-  private int hcD = 103;
+  private int hrp = 103;
   
-  public final void a(a.b paramb, int paramInt1, k paramk, atp paramatp, int paramInt2, an paraman)
+  public final void a(a.b paramb, int paramInt1, as paramas, auf paramauf, int paramInt2, aq paramaq)
   {
-    if (paramk == null)
+    Object localObject = hlg;
+    if (hFc != null)
     {
-      u.e("!44@9DU/RFsdGl8RTEO5OMYkvG4PIEEz9MmsvCOlEzDWGyU=", "error for snsinfo is null ");
-      return;
-    }
-    Object localObject = paramk.aAl();
-    if (hoG != null)
-    {
-      if ((!field_userName.equals(h.sc())) || (gFL.jKj == null) || (gFL.jKj.jKy <= 0)) {
-        break label246;
+      if ((!hAC) || (gMn.kiG == null) || (gMn.kiG.kiZ <= 0)) {
+        break label237;
       }
-      hoG.setBackgroundResource(2130969819);
+      hFc.setBackgroundResource(2130838338);
     }
     int i;
+    boolean bool;
     for (;;)
     {
-      TagImageView localTagImageView = hoa.lW(0);
+      TagImageView localTagImageView = hEw.nl(0);
       ArrayList localArrayList = new ArrayList();
       localArrayList.add(localTagImageView);
-      ag localag = new ag();
-      axC = ((String)localObject);
+      ak localak = new ak();
+      ajJ = ((String)localObject);
       index = 0;
-      heo = localArrayList;
-      hbM = hbM;
+      hta = localArrayList;
+      hqC = hqC;
       if (localTagImageView != null) {
-        localTagImageView.setTag(localag);
+        localTagImageView.setTag(localak);
       }
-      localObject = paramk.aAe();
-      gUN = ((ade)localObject);
+      localObject = hBb;
+      hhF = ((adx)localObject);
       if (localObject == null) {
-        break label435;
+        break label440;
       }
-      if (!h.sc().equals(eiB)) {
+      if (!h.se().equals(emC)) {
         break;
       }
-      hoa.setVisibility(0);
-      paraman = hcq;
-      paramb = hoa;
-      localObject = paramk.aAl();
-      i = jx.hashCode();
-      paramk.lN(32);
-      paraman.a(paramb, paramatp, (String)localObject, i, paramInt2, paramInt1, hbM, i.a.kal, true);
+      hEw.setVisibility(0);
+      paramaq = hrc;
+      paramb = hEw;
+      paramas = hlg;
+      i = jO.hashCode();
+      bool = hqC;
+      localObject = z.bcg();
+      fxK = fyR;
+      paramaq.a(paramb, paramauf, paramas, i, paramInt2, paramInt1, bool, (z)localObject, true);
       return;
-      label246:
-      hoG.setBackgroundResource(2130969809);
+      label237:
+      hFc.setBackgroundResource(2130838337);
     }
-    if (w.a(paramk, gFL))
+    if (hAF)
     {
-      hoa.setVisibility(0);
-      paraman = hcq;
-      paramb = hoa;
-      localObject = paramk.aAl();
-      i = jx.hashCode();
-      paramk.lN(32);
-      paraman.a(paramb, paramatp, (String)localObject, i, paramInt2, paramInt1, hbM, i.a.kal, false);
+      hEw.setVisibility(0);
+      paramaq = hrc;
+      paramb = hEw;
+      paramas = hlg;
+      i = jO.hashCode();
+      bool = hqC;
+      localObject = z.bcg();
+      fxK = fyR;
+      paramaq.a(paramb, paramauf, paramas, i, paramInt2, paramInt1, bool, (z)localObject, false);
       return;
     }
-    if (eRP == 0)
+    if (eZJ == 0)
     {
-      hoa.setVisibility(0);
-      paraman = hcq;
-      paramb = hoa;
-      localObject = paramk.aAl();
-      i = jx.hashCode();
-      paramk.lN(32);
-      paraman.a(paramb, paramatp, (String)localObject, i, paramInt2, paramInt1, hbM, i.a.kal, true);
+      hEw.setVisibility(0);
+      paramaq = hrc;
+      paramb = hEw;
+      paramas = hlg;
+      i = jO.hashCode();
+      bool = hqC;
+      localObject = z.bcg();
+      fxK = fyR;
+      paramaq.a(paramb, paramauf, paramas, i, paramInt2, paramInt1, bool, (z)localObject, true);
       return;
     }
-    u.e("!44@9DU/RFsdGl8RTEO5OMYkvG4PIEEz9MmsvCOlEzDWGyU=", "mediaPostInfo.hbStatus is " + eRP);
+    v.e("MiroMsg.HBRewardTimeLineItem", "mediaPostInfo.hbStatus is " + eZJ);
     return;
-    label435:
-    u.e("!44@9DU/RFsdGl8RTEO5OMYkvG4PIEEz9MmsvCOlEzDWGyU=", "mediaPostInfo is null " + paramk.aAl());
+    label440:
+    v.e("MiroMsg.HBRewardTimeLineItem", "mediaPostInfo is null " + hlg);
   }
   
-  public final void c(a.b paramb)
+  public final void d(a.b paramb)
   {
-    hnT.setImageResource(2130969761);
-    hnF.setTextColor(-2730427);
-    hnK.setLayoutResource(2131362808);
-    u.i("!44@9DU/RFsdGl8RTEO5OMYkvG4PIEEz9MmsvCOlEzDWGyU=", "viewtype " + eLV);
-    if (!hnL)
+    hEp.setImageResource(2130838602);
+    hEa.setTextColor(-2730427);
+    if (hEf != null)
     {
-      hoa = ((PhotosContent)hnK.inflate());
-      hnL = true;
+      hEf.setLayoutResource(2130904434);
+      if (!hEg) {
+        hEw = ((PhotosContent)hEf.inflate());
+      }
     }
-    TagImageView localTagImageView = (TagImageView)hoa.findViewById(ai.hgk[0]);
-    hoa.a(localTagImageView);
-    localTagImageView.setOnClickListener(gRM.gRg.hac);
+    for (hEg = true;; hEg = true)
+    {
+      v.i("MiroMsg.HBRewardTimeLineItem", "viewtype " + cTv);
+      TagImageView localTagImageView = (TagImageView)hEw.findViewById(am.hva[0]);
+      hEw.a(localTagImageView);
+      localTagImageView.setOnClickListener(gZP.gZj.hnu);
+      return;
+      hEw = ((PhotosContent)hDZ.findViewById(2131759150));
+    }
   }
 }
 

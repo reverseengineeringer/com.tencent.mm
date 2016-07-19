@@ -18,13 +18,13 @@
 
 
 # instance fields
-.field final synthetic cmn:Ljava/lang/String;
+.field final synthetic cht:Ljava/lang/String;
 
-.field final synthetic gYI:Ljava/util/List;
+.field final synthetic hlT:Ljava/util/List;
 
-.field final synthetic gYb:Ljava/util/List;
+.field final synthetic hln:Ljava/util/List;
 
-.field final synthetic kCz:Ljava/lang/String;
+.field final synthetic lbE:Ljava/lang/String;
 
 
 # direct methods
@@ -33,13 +33,13 @@
 
     .prologue
     .line 960
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/g$4;->cmn:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/g$4;->cht:Ljava/lang/String;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/base/g$4;->gYI:Ljava/util/List;
+    iput-object p2, p0, Lcom/tencent/mm/ui/base/g$4;->hlT:Ljava/util/List;
 
-    iput-object p3, p0, Lcom/tencent/mm/ui/base/g$4;->gYb:Ljava/util/List;
+    iput-object p3, p0, Lcom/tencent/mm/ui/base/g$4;->hln:Ljava/util/List;
 
-    iput-object p4, p0, Lcom/tencent/mm/ui/base/g$4;->kCz:Ljava/lang/String;
+    iput-object p4, p0, Lcom/tencent/mm/ui/base/g$4;->lbE:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,16 +53,16 @@
 
     .prologue
     .line 964
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$4;->cmn:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$4;->cht:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 965
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$4;->cmn:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$4;->cht:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lcom/tencent/mm/ui/base/l;->setHeaderTitle(Ljava/lang/CharSequence;)Landroid/view/ContextMenu;
 
@@ -73,7 +73,7 @@
     move v1, v0
 
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$4;->gYI:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$4;->hlT:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -82,7 +82,7 @@
     if-ge v1, v0, :cond_1
 
     .line 968
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$4;->gYb:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$4;->hln:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -94,7 +94,7 @@
 
     move-result v2
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$4;->gYI:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$4;->hlT:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -113,9 +113,9 @@
 
     .line 970
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$4;->kCz:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$4;->lbE:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -124,7 +124,7 @@
     .line 971
     const/4 v0, -0x1
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/g$4;->kCz:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/g$4;->lbE:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Lcom/tencent/mm/ui/base/l;->b(ILjava/lang/CharSequence;)Landroid/view/MenuItem;
 

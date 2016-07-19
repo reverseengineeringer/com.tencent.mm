@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hiQ:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;
+.field final synthetic hxF:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 181
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$6;->hiQ:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;
+    .line 182
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$6;->hxF:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,33 +36,33 @@
 
 
 # virtual methods
-.method public final eu(I)V
+.method public final fg(I)V
     .locals 1
 
     .prologue
-    .line 184
+    .line 185
     packed-switch p1, :pswitch_data_0
 
-    .line 195
+    .line 196
     :goto_0
     return-void
 
-    .line 186
+    .line 187
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$6;->hiQ:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$6;->hxF:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;->c(Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;)Lcom/tencent/mm/storage/k;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->qp()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->oS()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 187
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$6;->hiQ:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;
+    .line 188
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$6;->hxF:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;->c(Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;)Lcom/tencent/mm/storage/k;
 
@@ -70,25 +70,25 @@
 
     invoke-static {v0}, Lcom/tencent/mm/model/i;->g(Lcom/tencent/mm/storage/k;)V
 
-    .line 188
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$6;->hiQ:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;
+    .line 189
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$6;->hxF:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;->c(Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;)Lcom/tencent/mm/storage/k;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->qd()V
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->oB()V
 
-    .line 189
-    sget-object v0, Lcom/tencent/mm/plugin/sns/b/a;->cob:Lcom/tencent/mm/pluginsdk/f;
+    .line 190
+    sget-object v0, Lcom/tencent/mm/plugin/sns/b/a;->cjp:Lcom/tencent/mm/pluginsdk/f;
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/f;->kG()V
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/f;->jg()V
 
     goto :goto_0
 
-    .line 191
+    .line 192
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$6;->hiQ:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$6;->hxF:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;->c(Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;)Lcom/tencent/mm/storage/k;
 
@@ -96,23 +96,23 @@
 
     invoke-static {v0}, Lcom/tencent/mm/model/i;->f(Lcom/tencent/mm/storage/k;)V
 
-    .line 192
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$6;->hiQ:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;
+    .line 193
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI$6;->hxF:Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;->c(Lcom/tencent/mm/plugin/sns/ui/SnsStrangerCommentDetailUI;)Lcom/tencent/mm/storage/k;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->qc()V
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->oA()V
 
-    .line 193
-    sget-object v0, Lcom/tencent/mm/plugin/sns/b/a;->cob:Lcom/tencent/mm/pluginsdk/f;
+    .line 194
+    sget-object v0, Lcom/tencent/mm/plugin/sns/b/a;->cjp:Lcom/tencent/mm/pluginsdk/f;
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/f;->kG()V
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/f;->jg()V
 
     goto :goto_0
 
-    .line 184
+    .line 185
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

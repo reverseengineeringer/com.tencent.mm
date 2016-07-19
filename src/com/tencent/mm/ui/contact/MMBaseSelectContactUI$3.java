@@ -1,7 +1,7 @@
 package com.tencent.mm.ui.contact;
 
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class MMBaseSelectContactUI$3
   implements p.a
@@ -10,18 +10,18 @@ final class MMBaseSelectContactUI$3
   
   public final void k(String paramString, int paramInt, boolean paramBoolean)
   {
-    u.i("!44@/B4Tb64lLpK0oPlmQkjUOGdE9aJGdTBKiODXy0I4lkg=", "Callback SearchEnd Count=%d", new Object[] { Integer.valueOf(paramInt) });
+    v.i("MicroMsg.MMBaseSelectContactUI", "Callback SearchEnd Count=%d", new Object[] { Integer.valueOf(paramInt) });
     if ((paramBoolean) && (paramInt == 0))
     {
-      if (!ay.kz(paramString))
+      if (!be.kf(paramString))
       {
-        MMBaseSelectContactUI.b(lle);
+        MMBaseSelectContactUI.b(lLr);
         return;
       }
-      MMBaseSelectContactUI.a(lle);
+      MMBaseSelectContactUI.a(lLr);
       return;
     }
-    MMBaseSelectContactUI.c(lle);
+    MMBaseSelectContactUI.c(lLr);
   }
 }
 

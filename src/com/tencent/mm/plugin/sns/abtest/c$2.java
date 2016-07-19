@@ -2,8 +2,8 @@ package com.tencent.mm.plugin.sns.abtest;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.plugin.sns.h.k;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.plugin.sns.i.k;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class c$2
   implements View.OnClickListener
@@ -13,8 +13,8 @@ final class c$2
     if ((paramView.getTag() instanceof k))
     {
       k localk = (k)paramView.getTag();
-      if ((localk != null) && (!ay.kz(localk.aAf()))) {
-        c.am(paramView.getContext(), localk.aAf());
+      if ((localk != null) && (!be.kf(localk.aCE()))) {
+        c.an(paramView.getContext(), localk.aCE());
       }
     }
   }

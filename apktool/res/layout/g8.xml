@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/ChattingUIContent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/zd" android:layout_alignParentLeft="true" layout="@layout/chatting_item_avatar_from" style="@style/ChattingUIAvatarMaskFrom" />
+    <TextView android:id="@id/gv" android:visibility="gone" android:layout_toRightOf="@id/zd" android:layout_alignTop="@id/zd" style="@style/ChattingUISenderText" />
+    <TextView android:id="@id/a2h" android:visibility="gone" android:layout_toRightOf="@id/zd" android:layout_below="@id/gv" android:layout_alignLeft="@id/gv" style="@style/ChattingUIForwardFlagText" />
+    <com.tencent.mm.ui.base.AnimImageView android:orientation="horizontal" android:id="@id/a2i" android:background="@drawable/cm" android:layout_width="100.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/d5" android:layout_toRightOf="@id/zd" android:layout_below="@id/a2h" android:layout_alignLeft="@id/gv" />
+    <FrameLayout android:id="@id/a2j" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/zd" android:layout_below="@id/a2i" android:layout_alignLeft="@id/gv">
+        <TextView android:id="@id/a2k" android:background="@drawable/cm" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="@dimen/d5" android:drawableLeft="@raw/chatfrom_voice_playing" />
+        <com.tencent.mm.ui.base.AnimImageView android:id="@id/a2l" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="@dimen/d5" />
+    </FrameLayout>
+    <TextView android:id="@id/gw" android:layout_toRightOf="@id/a2j" android:layout_alignTop="@id/a2j" android:layout_alignBottom="@id/a2j" style="@style/ChattingUIVoiceLength" />
+    <ImageView android:id="@id/a2m" android:background="@null" android:layout_width="10.0dip" android:layout_height="10.0dip" android:src="@drawable/oy" android:layout_toRightOf="@id/gw" android:layout_alignTop="@id/gw" android:layout_alignBottom="@id/gw" />
+    <TextView android:id="@id/zq" android:background="@drawable/a8" android:visibility="gone" android:layout_marginRight="5.0dip" android:text="@string/y1" android:layout_below="@id/a2j" android:layout_alignRight="@id/a2j" style="@style/ChattingItemSourceTextView" />
+</RelativeLayout>

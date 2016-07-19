@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/c/b/h$a$1;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.super Lcom/tencent/mm/sdk/platformtools/ac;
 .source "SourceFile"
 
 
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field final synthetic art:Lcom/tencent/mm/c/b/h;
+.field final synthetic acM:Lcom/tencent/mm/c/b/h;
 
-.field final synthetic aru:Lcom/tencent/mm/c/b/h$a;
+.field final synthetic acN:Lcom/tencent/mm/c/b/h$a;
 
 
 # direct methods
@@ -26,11 +26,11 @@
 
     .prologue
     .line 147
-    iput-object p1, p0, Lcom/tencent/mm/c/b/h$a$1;->aru:Lcom/tencent/mm/c/b/h$a;
+    iput-object p1, p0, Lcom/tencent/mm/c/b/h$a$1;->acN:Lcom/tencent/mm/c/b/h$a;
 
-    iput-object p2, p0, Lcom/tencent/mm/c/b/h$a$1;->art:Lcom/tencent/mm/c/b/h;
+    iput-object p2, p0, Lcom/tencent/mm/c/b/h$a$1;->acM:Lcom/tencent/mm/c/b/h;
 
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
     return-void
 .end method
@@ -42,11 +42,11 @@
 
     .prologue
     .line 151
-    iget-object v0, p0, Lcom/tencent/mm/c/b/h$a$1;->aru:Lcom/tencent/mm/c/b/h$a;
+    iget-object v0, p0, Lcom/tencent/mm/c/b/h$a$1;->acN:Lcom/tencent/mm/c/b/h$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/c/b/h$a;->ars:Lcom/tencent/mm/c/b/h;
+    iget-object v0, v0, Lcom/tencent/mm/c/b/h$a;->acL:Lcom/tencent/mm/c/b/h;
 
-    iget v0, v0, Lcom/tencent/mm/c/b/h;->arm:I
+    iget v0, v0, Lcom/tencent/mm/c/b/h;->acF:I
 
     if-gtz v0, :cond_1
 
@@ -57,7 +57,7 @@
 
     .line 155
     :cond_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpJjyqE6YDnApwOwHOAz5sGPSEN1mjztZrA="
+    const-string/jumbo v1, "MicroMsg.SceneVoice.Recorder"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -65,11 +65,11 @@
 
     invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/c/b/h$a$1;->aru:Lcom/tencent/mm/c/b/h$a;
+    iget-object v0, p0, Lcom/tencent/mm/c/b/h$a$1;->acN:Lcom/tencent/mm/c/b/h$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/c/b/h$a;->ars:Lcom/tencent/mm/c/b/h;
+    iget-object v0, v0, Lcom/tencent/mm/c/b/h$a;->acL:Lcom/tencent/mm/c/b/h;
 
-    iget-object v0, v0, Lcom/tencent/mm/c/b/h;->aro:Lcom/tencent/mm/r/g$b;
+    iget-object v0, v0, Lcom/tencent/mm/c/b/h;->acH:Lcom/tencent/mm/t/g$b;
 
     if-nez v0, :cond_2
 
@@ -84,34 +84,34 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 156
-    iget-object v0, p0, Lcom/tencent/mm/c/b/h$a$1;->aru:Lcom/tencent/mm/c/b/h$a;
+    iget-object v0, p0, Lcom/tencent/mm/c/b/h$a$1;->acN:Lcom/tencent/mm/c/b/h$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/c/b/h$a;->ars:Lcom/tencent/mm/c/b/h;
+    iget-object v0, v0, Lcom/tencent/mm/c/b/h$a;->acL:Lcom/tencent/mm/c/b/h;
 
     const/4 v1, 0x2
 
-    iput v1, v0, Lcom/tencent/mm/c/b/h;->arm:I
+    iput v1, v0, Lcom/tencent/mm/c/b/h;->acF:I
 
     .line 157
-    iget-object v0, p0, Lcom/tencent/mm/c/b/h$a$1;->aru:Lcom/tencent/mm/c/b/h$a;
+    iget-object v0, p0, Lcom/tencent/mm/c/b/h$a$1;->acN:Lcom/tencent/mm/c/b/h$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/c/b/h$a;->ars:Lcom/tencent/mm/c/b/h;
+    iget-object v0, v0, Lcom/tencent/mm/c/b/h$a;->acL:Lcom/tencent/mm/c/b/h;
 
-    iget-object v0, v0, Lcom/tencent/mm/c/b/h;->aro:Lcom/tencent/mm/r/g$b;
+    iget-object v0, v0, Lcom/tencent/mm/c/b/h;->acH:Lcom/tencent/mm/t/g$b;
 
     if-eqz v0, :cond_0
 
     .line 158
-    iget-object v0, p0, Lcom/tencent/mm/c/b/h$a$1;->aru:Lcom/tencent/mm/c/b/h$a;
+    iget-object v0, p0, Lcom/tencent/mm/c/b/h$a$1;->acN:Lcom/tencent/mm/c/b/h$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/c/b/h$a;->ars:Lcom/tencent/mm/c/b/h;
+    iget-object v0, v0, Lcom/tencent/mm/c/b/h$a;->acL:Lcom/tencent/mm/c/b/h;
 
-    iget-object v0, v0, Lcom/tencent/mm/c/b/h;->aro:Lcom/tencent/mm/r/g$b;
+    iget-object v0, v0, Lcom/tencent/mm/c/b/h;->acH:Lcom/tencent/mm/t/g$b;
 
-    invoke-interface {v0}, Lcom/tencent/mm/r/g$b;->vz()V
+    invoke-interface {v0}, Lcom/tencent/mm/t/g$b;->vB()V
 
     goto :goto_0
 

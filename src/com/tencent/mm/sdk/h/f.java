@@ -2,8 +2,8 @@ package com.tencent.mm.sdk.h;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -13,29 +13,29 @@ import java.util.Map.Entry;
 import java.util.Set;
 import junit.framework.Assert;
 
-public abstract class f
+public abstract class f<T extends c>
   extends g
 {
-  private final d aoX;
-  private final String jYA;
-  public final c.a jYz;
+  private final d bkP;
+  public final c.a kyW;
+  private final String kyX;
   
   public f(d paramd, c.a parama, String paramString, String[] paramArrayOfString)
   {
-    aoX = paramd;
-    jYz = parama;
-    parama = jYz;
-    if (ay.kz(jYz.jYw)) {}
+    bkP = paramd;
+    kyW = parama;
+    parama = kyW;
+    if (be.kf(kyW.kyT)) {}
     int i;
-    for (paramd = "rowid";; paramd = jYz.jYw)
+    for (paramd = "rowid";; paramd = kyW.kyT)
     {
-      jYw = paramd;
-      jYA = paramString;
-      paramd = a(jYz, getTableName(), aoX);
+      kyT = paramd;
+      kyX = paramString;
+      paramd = a(kyW, getTableName(), bkP);
       i = 0;
       while (i < paramd.size())
       {
-        aoX.cj(jYA, (String)paramd.get(i));
+        bkP.cx(kyX, (String)paramd.get(i));
         i += 1;
       }
     }
@@ -44,27 +44,27 @@ public abstract class f
       i = j;
       while (i < paramArrayOfString.length)
       {
-        aoX.cj(jYA, paramArrayOfString[i]);
+        bkP.cx(kyX, paramArrayOfString[i]);
         i += 1;
       }
     }
   }
   
-  private void DG(String paramString)
+  private void FV(String paramString)
   {
-    u.d("!44@/B4Tb64lLpINxdz9rK2idJLP/o47Oe9eivOf1xIfPaU=", getTableName() + ":" + paramString);
+    v.d("MicroMsg.SDK.MAutoStorage", getTableName() + ":" + paramString);
   }
   
-  private void DH(String paramString)
+  private void FW(String paramString)
   {
-    u.e("!44@/B4Tb64lLpINxdz9rK2idJLP/o47Oe9eivOf1xIfPaU=", getTableName() + ":" + paramString);
+    v.e("MicroMsg.SDK.MAutoStorage", getTableName() + ":" + paramString);
   }
   
   public static String a(c.a parama, String paramString)
   {
     StringBuilder localStringBuilder = new StringBuilder();
     localStringBuilder.append("CREATE TABLE IF NOT EXISTS " + paramString + " ( ");
-    localStringBuilder.append(jYy);
+    localStringBuilder.append(kyV);
     localStringBuilder.append(");");
     return localStringBuilder.toString();
   }
@@ -87,7 +87,7 @@ public abstract class f
     return localStringBuilder;
   }
   
-  public static List a(c.a parama, String paramString, d paramd)
+  public static List<String> a(c.a parama, String paramString, d paramd)
   {
     LinkedList localLinkedList = new LinkedList();
     if ((paramd == null) || (paramString == null))
@@ -95,7 +95,7 @@ public abstract class f
       if (paramd == null) {}
       for (boolean bool = true;; bool = false)
       {
-        u.e("!44@/B4Tb64lLpINxdz9rK2idJLP/o47Oe9eivOf1xIfPaU=", "dk getUpdateSQLs db==null :%b  table:%s", new Object[] { Boolean.valueOf(bool), paramString });
+        v.e("MicroMsg.SDK.MAutoStorage", "dk getUpdateSQLs db==null :%b  table:%s", new Object[] { Boolean.valueOf(bool), paramString });
         return localLinkedList;
       }
     }
@@ -108,7 +108,7 @@ public abstract class f
       paramd.put(((Cursor)localObject1).getString(((Cursor)localObject1).getColumnIndex("name")), ((Cursor)localObject1).getString(((Cursor)localObject1).getColumnIndex("type")));
     }
     ((Cursor)localObject1).close();
-    parama = jYx.entrySet().iterator();
+    parama = kyU.entrySet().iterator();
     while (parama.hasNext())
     {
       Object localObject2 = (Map.Entry)parama.next();
@@ -124,7 +124,7 @@ public abstract class f
         }
         else if (!((String)localObject1).toLowerCase().startsWith(str.toLowerCase()))
         {
-          u.e("!44@/B4Tb64lLpINxdz9rK2idJLP/o47Oe9eivOf1xIfPaU=", "conflicting alter table on column: " + (String)localObject2 + ", " + str + "<o-n>" + (String)localObject1);
+          v.e("MicroMsg.SDK.MAutoStorage", "conflicting alter table on column: " + (String)localObject2 + ", " + str + "<o-n>" + (String)localObject1);
           paramd.remove(localObject2);
         }
       }
@@ -134,7 +134,7 @@ public abstract class f
   
   private boolean a(ContentValues paramContentValues)
   {
-    Cursor localCursor = aoX.query(getTableName(), jYz.blR, jYz.jYw + " = ?", new String[] { ay.ky(paramContentValues.getAsString(jYz.jYw)) }, null, null, null);
+    Cursor localCursor = bkP.query(getTableName(), kyW.aZx, kyW.kyT + " = ?", new String[] { be.li(paramContentValues.getAsString(kyW.kyT)) }, null, null, null);
     boolean bool = c.a(paramContentValues, localCursor);
     localCursor.close();
     return bool;
@@ -146,80 +146,80 @@ public abstract class f
     int i = 0;
     while (i < arrayOfString.length)
     {
-      arrayOfString[i] = ay.ky(paramContentValues.getAsString(paramArrayOfString[i]));
+      arrayOfString[i] = be.li(paramContentValues.getAsString(paramArrayOfString[i]));
       i += 1;
     }
     return arrayOfString;
   }
   
-  public Cursor Dy()
+  public Cursor DO()
   {
-    return aoX.query(getTableName(), jYz.blR, null, null, null, null, null);
+    return bkP.query(getTableName(), kyW.aZx, null, null, null, null, null);
   }
   
-  public boolean a(long paramLong, c paramc)
+  public boolean a(long paramLong, T paramT)
   {
-    paramc = paramc.lX();
+    paramT = paramT.kn();
     boolean bool2;
-    if ((paramc == null) || (paramc.size() <= 0))
+    if ((paramT == null) || (paramT.size() <= 0))
     {
-      DH("update failed, value.size <= 0");
+      FW("update failed, value.size <= 0");
       bool2 = false;
       return bool2;
     }
-    Cursor localCursor = aoX.query(getTableName(), jYz.blR, "rowid = ?", new String[] { String.valueOf(paramLong) }, null, null, null);
-    if (c.a(paramc, localCursor))
+    Cursor localCursor = bkP.query(getTableName(), kyW.aZx, "rowid = ?", new String[] { String.valueOf(paramLong) }, null, null, null);
+    if (c.a(paramT, localCursor))
     {
       localCursor.close();
-      DG("no need replace , fields no change");
+      FV("no need replace , fields no change");
       return true;
     }
     localCursor.close();
-    if (aoX.update(getTableName(), paramc, "rowid = ?", new String[] { String.valueOf(paramLong) }) > 0) {}
+    if (bkP.update(getTableName(), paramT, "rowid = ?", new String[] { String.valueOf(paramLong) }) > 0) {}
     for (boolean bool1 = true;; bool1 = false)
     {
       bool2 = bool1;
       if (!bool1) {
         break;
       }
-      Ep();
+      EJ();
       return bool1;
     }
   }
   
-  public boolean a(c paramc)
+  public boolean a(T paramT)
   {
-    return a(paramc, true);
+    return a(paramT, true);
   }
   
-  public final boolean a(c paramc, boolean paramBoolean)
+  public final boolean a(T paramT, boolean paramBoolean)
   {
-    ContentValues localContentValues = paramc.lX();
+    ContentValues localContentValues = paramT.kn();
     if ((localContentValues == null) || (localContentValues.size() <= 0))
     {
-      DH("insert failed, value.size <= 0");
+      FW("insert failed, value.size <= 0");
       return false;
     }
-    jYv = aoX.insert(getTableName(), jYz.jYw, localContentValues);
-    if (jYv <= 0L)
+    kyS = bkP.insert(getTableName(), kyW.kyT, localContentValues);
+    if (kyS <= 0L)
     {
-      DH("insert failed");
+      FW("insert failed");
       return false;
     }
-    localContentValues.put("rowid", Long.valueOf(jYv));
+    localContentValues.put("rowid", Long.valueOf(kyS));
     if (paramBoolean) {
-      DI(localContentValues.getAsString(jYz.jYw));
+      FX(localContentValues.getAsString(kyW.kyT));
     }
     return true;
   }
   
-  public final boolean a(c paramc, boolean paramBoolean, String... paramVarArgs)
+  public final boolean a(T paramT, boolean paramBoolean, String... paramVarArgs)
   {
     boolean bool1 = false;
     boolean bool2 = false;
-    paramc = paramc.lX();
-    if ((paramc == null) || (paramc.size() <= 0)) {
-      DH("delete failed, value.size <= 0");
+    paramT = paramT.kn();
+    if ((paramT == null) || (paramT.size() <= 0)) {
+      FW("delete failed, value.size <= 0");
     }
     do
     {
@@ -229,42 +229,42 @@ public abstract class f
         if ((paramVarArgs != null) && (paramVarArgs.length > 0)) {
           break;
         }
-        DG("delete with primary key");
-        if (aoX.delete(getTableName(), jYz.jYw + " = ?", new String[] { ay.ky(paramc.getAsString(jYz.jYw)) }) > 0) {
+        FV("delete with primary key");
+        if (bkP.delete(getTableName(), kyW.kyT + " = ?", new String[] { be.li(paramT.getAsString(kyW.kyT)) }) > 0) {
           bool1 = true;
         }
         bool2 = bool1;
       } while (!bool1);
       bool2 = bool1;
     } while (!paramBoolean);
-    Ep();
+    EJ();
     return bool1;
-    StringBuilder localStringBuilder = a(paramc, paramVarArgs);
+    StringBuilder localStringBuilder = a(paramT, paramVarArgs);
     if (localStringBuilder == null)
     {
-      DH("delete failed, check keys failed");
+      FW("delete failed, check keys failed");
       return false;
     }
-    if ((aoX.delete(getTableName(), localStringBuilder.toString(), a(paramVarArgs, paramc)) > 0) && (paramBoolean))
+    if ((bkP.delete(getTableName(), localStringBuilder.toString(), a(paramVarArgs, paramT)) > 0) && (paramBoolean))
     {
-      DI(jYz.jYw);
+      FX(kyW.kyT);
       return true;
     }
-    DH("delete failed");
+    FW("delete failed");
     return false;
   }
   
-  public boolean a(c paramc, String... paramVarArgs)
+  public boolean a(T paramT, String... paramVarArgs)
   {
-    return b(paramc, true, paramVarArgs);
+    return b(paramT, true, paramVarArgs);
   }
   
-  public final boolean b(long paramLong, c paramc)
+  public final boolean b(long paramLong, T paramT)
   {
-    Cursor localCursor = aoX.query(getTableName(), jYz.blR, "rowid = ?", new String[] { String.valueOf(paramLong) }, null, null, null);
+    Cursor localCursor = bkP.query(getTableName(), kyW.aZx, "rowid = ?", new String[] { String.valueOf(paramLong) }, null, null, null);
     if (localCursor.moveToFirst())
     {
-      paramc.c(localCursor);
+      paramT.b(localCursor);
       localCursor.close();
       return true;
     }
@@ -272,21 +272,21 @@ public abstract class f
     return false;
   }
   
-  public boolean b(c paramc)
+  public boolean b(T paramT)
   {
     boolean bool;
     ContentValues localContentValues;
     int j;
     int k;
-    if (!ay.kz(jYz.jYw))
+    if (!be.kf(kyW.kyT))
     {
       bool = true;
       Assert.assertTrue("replace primaryKey == null", bool);
-      localContentValues = paramc.lX();
+      localContentValues = paramT.kn();
       if (localContentValues != null)
       {
         j = localContentValues.size();
-        k = lsceD.length;
+        k = oubZI.length;
         if (!localContentValues.containsKey("rowid")) {
           break label86;
         }
@@ -298,7 +298,7 @@ public abstract class f
       if (j == i + k) {
         break label91;
       }
-      DH("replace failed, cv.size() != item.fields().length");
+      FW("replace failed, cv.size() != item.fields().length");
       return false;
       bool = false;
       break;
@@ -306,25 +306,25 @@ public abstract class f
     label91:
     if (a(localContentValues))
     {
-      DG("no need replace , fields no change");
+      FV("no need replace , fields no change");
       return true;
     }
-    if (aoX.replace(getTableName(), jYz.jYw, localContentValues) > 0L)
+    if (bkP.replace(getTableName(), kyW.kyT, localContentValues) > 0L)
     {
-      DI(jYz.jYw);
+      FX(kyW.kyT);
       return true;
     }
-    DH("replace failed");
+    FW("replace failed");
     return false;
   }
   
-  public final boolean b(c paramc, boolean paramBoolean, String... paramVarArgs)
+  public final boolean b(T paramT, boolean paramBoolean, String... paramVarArgs)
   {
     boolean bool1 = false;
     boolean bool2 = false;
-    paramc = paramc.lX();
-    if ((paramc == null) || (paramc.size() <= 0)) {
-      DH("update failed, value.size <= 0");
+    paramT = paramT.kn();
+    if ((paramT == null) || (paramT.size() <= 0)) {
+      FW("update failed, value.size <= 0");
     }
     do
     {
@@ -334,58 +334,58 @@ public abstract class f
         if ((paramVarArgs != null) && (paramVarArgs.length > 0)) {
           break;
         }
-        DG("update with primary key");
-        if (a(paramc))
+        FV("update with primary key");
+        if (a(paramT))
         {
-          DG("no need replace , fields no change");
+          FV("no need replace , fields no change");
           return true;
         }
-        if (aoX.update(getTableName(), paramc, jYz.jYw + " = ?", new String[] { ay.ky(paramc.getAsString(jYz.jYw)) }) > 0) {
+        if (bkP.update(getTableName(), paramT, kyW.kyT + " = ?", new String[] { be.li(paramT.getAsString(kyW.kyT)) }) > 0) {
           bool1 = true;
         }
         bool2 = bool1;
       } while (!bool1);
       bool2 = bool1;
     } while (!paramBoolean);
-    Ep();
+    EJ();
     return bool1;
-    StringBuilder localStringBuilder = a(paramc, paramVarArgs);
+    StringBuilder localStringBuilder = a(paramT, paramVarArgs);
     if (localStringBuilder == null)
     {
-      DH("update failed, check keys failed");
+      FW("update failed, check keys failed");
       return false;
     }
-    if (aoX.update(getTableName(), paramc, localStringBuilder.toString(), a(paramVarArgs, paramc)) > 0)
+    if (bkP.update(getTableName(), paramT, localStringBuilder.toString(), a(paramVarArgs, paramT)) > 0)
     {
       if (paramBoolean) {
-        DI(paramc.getAsString(jYz.jYw));
+        FX(paramT.getAsString(kyW.kyT));
       }
       return true;
     }
-    DH("update failed");
+    FW("update failed");
     return false;
   }
   
-  public boolean b(c paramc, String... paramVarArgs)
+  public boolean b(T paramT, String... paramVarArgs)
   {
-    return a(paramc, true, paramVarArgs);
+    return a(paramT, true, paramVarArgs);
   }
   
-  public final boolean c(c paramc, String... paramVarArgs)
+  public final boolean c(T paramT, String... paramVarArgs)
   {
-    ContentValues localContentValues = paramc.lX();
+    ContentValues localContentValues = paramT.kn();
     if ((localContentValues == null) || (localContentValues.size() <= 0))
     {
-      DH("get failed, value.size <= 0");
+      FW("get failed, value.size <= 0");
       return false;
     }
     if (paramVarArgs.length <= 0)
     {
-      DG("get with primary key");
-      paramVarArgs = aoX.query(getTableName(), jYz.blR, jYz.jYw + " = ?", new String[] { ay.ky(localContentValues.getAsString(jYz.jYw)) }, null, null, null);
+      FV("get with primary key");
+      paramVarArgs = bkP.query(getTableName(), kyW.aZx, kyW.kyT + " = ?", new String[] { be.li(localContentValues.getAsString(kyW.kyT)) }, null, null, null);
       if (paramVarArgs.moveToFirst())
       {
-        paramc.c(paramVarArgs);
+        paramT.b(paramVarArgs);
         paramVarArgs.close();
         return true;
       }
@@ -395,44 +395,44 @@ public abstract class f
     StringBuilder localStringBuilder = a(localContentValues, paramVarArgs);
     if (localStringBuilder == null)
     {
-      DH("get failed, check keys failed");
+      FW("get failed, check keys failed");
       return false;
     }
-    paramVarArgs = aoX.query(getTableName(), jYz.blR, localStringBuilder.toString(), a(paramVarArgs, localContentValues), null, null, null);
+    paramVarArgs = bkP.query(getTableName(), kyW.aZx, localStringBuilder.toString(), a(paramVarArgs, localContentValues), null, null, null);
     if (paramVarArgs.moveToFirst())
     {
-      paramc.c(paramVarArgs);
+      paramT.b(paramVarArgs);
       paramVarArgs.close();
       return true;
     }
     paramVarArgs.close();
-    DG("get failed, not found");
+    FV("get failed, not found");
     return false;
   }
   
-  public final boolean cj(String paramString1, String paramString2)
+  public final boolean cx(String paramString1, String paramString2)
   {
     if (paramString1.length() == 0)
     {
-      DH("null or nill table");
+      FW("null or nill table");
       return false;
     }
     if ((paramString2 == null) || (paramString2.length() == 0))
     {
-      DH("null or nill sql");
+      FW("null or nill sql");
       return false;
     }
-    return aoX.cj(paramString1, paramString2);
+    return bkP.cx(paramString1, paramString2);
   }
   
   public boolean delete(long paramLong)
   {
     boolean bool = true;
-    if (aoX.delete(getTableName(), "rowid = ?", new String[] { String.valueOf(paramLong) }) > 0) {}
+    if (bkP.delete(getTableName(), "rowid = ?", new String[] { String.valueOf(paramLong) }) > 0) {}
     for (;;)
     {
       if (bool) {
-        Ep();
+        EJ();
       }
       return bool;
       bool = false;
@@ -454,12 +454,12 @@ public abstract class f
   
   public String getTableName()
   {
-    return jYA;
+    return kyX;
   }
   
   public final Cursor rawQuery(String paramString, String... paramVarArgs)
   {
-    return aoX.rawQuery(paramString, paramVarArgs);
+    return bkP.rawQuery(paramString, paramVarArgs);
   }
 }
 

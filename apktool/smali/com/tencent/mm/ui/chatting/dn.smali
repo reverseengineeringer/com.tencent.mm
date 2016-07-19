@@ -1,73 +1,63 @@
-.class public final Lcom/tencent/mm/ui/chatting/dn;
+.class final Lcom/tencent/mm/ui/chatting/dn;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/mm/ui/chatting/dn$b;,
-        Lcom/tencent/mm/ui/chatting/dn$a;
-    }
-.end annotation
-
-
-# static fields
-.field private static lde:Lcom/tencent/mm/ui/chatting/dn;
-
-
 # instance fields
-.field ldd:Ljava/lang/Object;
+.field lCX:Landroid/view/View;
+
+.field lCY:Landroid/widget/ImageView;
+
+.field lCZ:Landroid/view/View;
+
+.field lDa:Landroid/widget/ImageView;
+
+.field lDb:Landroid/widget/TextView;
+
+.field lDc:Landroid/widget/TextView;
+
+.field lDd:Landroid/widget/TextView;
+
+.field lDe:Landroid/widget/TextView;
+
+.field lDf:Landroid/widget/LinearLayout;
+
+.field lDg:Landroid/widget/TextView;
+
+.field lDh:Landroid/widget/TextView;
+
+.field lDi:Landroid/view/View;
+
+.field lDj:Landroid/widget/LinearLayout;
+
+.field lDk:Landroid/widget/LinearLayout;
+
+.field lDl:Landroid/view/View;
+
+.field lDm:Landroid/widget/LinearLayout;
+
+.field lDn:Landroid/widget/LinearLayout;
+
+.field lDo:Landroid/view/View;
+
+.field lDp:Landroid/widget/TextView;
+
+.field lDq:Landroid/widget/TextView;
+
+.field lDr:Landroid/widget/ImageView;
+
+.field lDs:Landroid/widget/ImageView;
+
+.field lDt:Landroid/widget/ImageView;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 16
+    .line 675
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 103
     return-void
-.end method
-
-.method public static declared-synchronized bgi()Lcom/tencent/mm/ui/chatting/dn;
-    .locals 2
-
-    .prologue
-    .line 23
-    const-class v1, Lcom/tencent/mm/ui/chatting/dn;
-
-    monitor-enter v1
-
-    :try_start_0
-    sget-object v0, Lcom/tencent/mm/ui/chatting/dn;->lde:Lcom/tencent/mm/ui/chatting/dn;
-
-    if-nez v0, :cond_0
-
-    .line 24
-    new-instance v0, Lcom/tencent/mm/ui/chatting/dn;
-
-    invoke-direct {v0}, Lcom/tencent/mm/ui/chatting/dn;-><init>()V
-
-    sput-object v0, Lcom/tencent/mm/ui/chatting/dn;->lde:Lcom/tencent/mm/ui/chatting/dn;
-
-    .line 26
-    :cond_0
-    sget-object v0, Lcom/tencent/mm/ui/chatting/dn;->lde:Lcom/tencent/mm/ui/chatting/dn;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v1
-
-    return-object v0
-
-    .line 23
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-
-    throw v0
 .end method

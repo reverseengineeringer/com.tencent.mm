@@ -8,9 +8,9 @@ final class b$1
 {
   b$1(b paramb) {}
   
-  public final Bitmap hw(String paramString)
+  public final Bitmap hO(String paramString)
   {
-    return com.tencent.mm.q.b.a(paramString, false, -1);
+    return com.tencent.mm.s.b.a(paramString, false, -1);
   }
 }
 

@@ -2,23 +2,13 @@ package android.support.v4.view;
 
 import android.view.KeyEvent;
 
-final class f$c
-  extends f.b
+abstract interface f$c
 {
-  public final boolean metaStateHasModifiers(int paramInt1, int paramInt2)
-  {
-    return KeyEvent.metaStateHasModifiers(paramInt1, 1);
-  }
+  public abstract void c(KeyEvent paramKeyEvent);
   
-  public final boolean metaStateHasNoModifiers(int paramInt)
-  {
-    return KeyEvent.metaStateHasNoModifiers(paramInt);
-  }
+  public abstract boolean metaStateHasModifiers(int paramInt1, int paramInt2);
   
-  public final int normalizeMetaState(int paramInt)
-  {
-    return KeyEvent.normalizeMetaState(paramInt);
-  }
+  public abstract boolean metaStateHasNoModifiers(int paramInt);
 }
 
 /* Location:

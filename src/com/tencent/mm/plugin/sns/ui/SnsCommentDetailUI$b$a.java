@@ -2,18 +2,18 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.protocal.b.apz;
+import com.tencent.mm.protocal.b.aqk;
 
 final class SnsCommentDetailUI$b$a
 {
-  String ajh;
-  TextView cqK;
-  ImageView czS;
-  TextView dFw;
-  TextView fya;
-  SnsTranslateResultView hdt;
-  Object hdu;
-  apz hdv;
+  String UX;
+  TextView clX;
+  ImageView cui;
+  TextView dGX;
+  TextView fHe;
+  SnsTranslateResultView hsg;
+  Object hsh;
+  aqk hsi;
   
   SnsCommentDetailUI$b$a(SnsCommentDetailUI.b paramb) {}
 }

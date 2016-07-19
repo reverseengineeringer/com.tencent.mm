@@ -7,11 +7,11 @@
 .method public abstract a(Lcom/tencent/mm/sdk/b/a;)V
 .end method
 
-.method public abstract ag(Landroid/content/Context;)V
+.method public abstract ac(Landroid/content/Context;)V
 .end method
 
-.method public abstract f(ILjava/lang/String;)V
+.method public abstract g(ILjava/lang/String;)V
 .end method
 
-.method public abstract q(Ljava/lang/String;Ljava/lang/String;)V
+.method public abstract o(Ljava/lang/String;Ljava/lang/String;)V
 .end method

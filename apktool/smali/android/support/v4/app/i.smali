@@ -15,10 +15,10 @@
 
 
 # virtual methods
-.method public abstract a(Ljava/lang/String;ILjava/lang/String;Landroid/app/Notification;)V
+.method public abstract a(Ljava/lang/String;ILjava/lang/String;)V
 .end method
 
-.method public abstract b(Ljava/lang/String;ILjava/lang/String;)V
+.method public abstract a(Ljava/lang/String;ILjava/lang/String;Landroid/app/Notification;)V
 .end method
 
 .method public abstract i(Ljava/lang/String;)V

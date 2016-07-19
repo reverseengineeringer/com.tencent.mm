@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic knl:Lcom/tencent/mm/ui/LauncherUI;
+.field final synthetic kMs:Lcom/tencent/mm/ui/LauncherUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 5373
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$40;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 4688
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$40;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,43 +40,20 @@
     .locals 3
 
     .prologue
-    const/4 v2, 0x1
-
-    .line 5376
-    new-instance v0, Landroid/content/Intent;
-
-    const-string/jumbo v1, "android.settings.MANAGE_APPLICATIONS_SETTINGS"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 5377
-    const/high16 v1, 0x10000000
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    .line 5378
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUI$40;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/LauncherUI;->startActivity(Landroid/content/Intent;)V
-
-    .line 5379
+    .line 4692
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 5380
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$40;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 4693
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$40;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/ui/LauncherUI;->f(Lcom/tencent/mm/ui/LauncherUI;Z)Z
+    new-instance v1, Landroid/content/Intent;
 
-    .line 5381
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$40;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    const-string/jumbo v2, "android.settings.MANAGE_APPLICATIONS_SETTINGS"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/ui/MMAppMgr;->b(Landroid/content/Context;Z)V
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 5382
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$40;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->startActivity(Landroid/content/Intent;)V
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/LauncherUI;->finish()V
-
-    .line 5383
+    .line 4694
     return-void
 .end method

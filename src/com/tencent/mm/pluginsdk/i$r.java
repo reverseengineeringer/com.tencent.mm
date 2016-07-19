@@ -8,17 +8,21 @@ import java.util.LinkedList;
 
 public abstract interface i$r
 {
-  public abstract void P(LinkedList paramLinkedList);
+  public abstract f Bs(String paramString);
+  
+  public abstract void Bt(String paramString);
+  
+  public abstract void T(LinkedList<String> paramLinkedList);
   
   public abstract Bitmap a(String paramString, int paramInt, float paramFloat);
   
-  public abstract void aD(String paramString, int paramInt);
+  public abstract void aK(String paramString, int paramInt);
   
-  public abstract i aOX();
+  public abstract Cursor aTA();
   
-  public abstract Cursor aOY();
+  public abstract i aTz();
   
-  public abstract Cursor bz(int paramInt1, int paramInt2);
+  public abstract Cursor bE(int paramInt1, int paramInt2);
   
   public abstract void e(f paramf);
   
@@ -28,11 +32,7 @@ public abstract interface i$r
   
   public abstract Cursor k(int[] paramArrayOfInt);
   
-  public abstract Cursor nX(int paramInt);
-  
-  public abstract f zw(String paramString);
-  
-  public abstract void zx(String paramString);
+  public abstract Cursor pB(int paramInt);
 }
 
 /* Location:

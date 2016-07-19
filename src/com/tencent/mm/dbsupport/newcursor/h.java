@@ -2,27 +2,27 @@ package com.tencent.mm.dbsupport.newcursor;
 
 public final class h
 {
-  public static a bvz;
+  public static a bks;
   
   public static void a(String paramString1, String paramString2, int paramInt, long paramLong, int[] paramArrayOfInt)
   {
-    if (bvz != null) {
-      bvz.b(paramString1, paramString2, paramInt, paramLong, paramArrayOfInt);
+    if (bks != null) {
+      bks.b(paramString1, paramString2, paramInt, paramLong, paramArrayOfInt);
     }
   }
   
-  public static boolean qJ()
+  public static boolean pn()
   {
-    if (bvz != null) {
-      return bvz.qJ();
+    if (bks != null) {
+      return bks.pn();
     }
     return false;
   }
   
-  public static long qK()
+  public static long po()
   {
-    if (bvz != null) {
-      return bvz.qK();
+    if (bks != null) {
+      return bks.po();
     }
     return 10000L;
   }
@@ -31,11 +31,11 @@ public final class h
   {
     public abstract void b(String paramString1, String paramString2, int paramInt, long paramLong, int[] paramArrayOfInt);
     
-    public abstract void dv(String paramString);
+    public abstract void dD(String paramString);
     
-    public abstract boolean qJ();
+    public abstract boolean pn();
     
-    public abstract long qK();
+    public abstract long po();
   }
 }
 

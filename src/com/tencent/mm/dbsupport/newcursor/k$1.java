@@ -7,14 +7,14 @@ final class k$1
 {
   k$1(k paramk) {}
   
-  public final ArrayList d(ArrayList paramArrayList)
+  public final ArrayList<a> e(ArrayList<Object> paramArrayList)
   {
-    return bvJ.d(paramArrayList);
+    return bkC.e(paramArrayList);
   }
   
-  public final a qD()
+  public final a ph()
   {
-    return bvJ.qM();
+    return bkC.pq();
   }
 }
 

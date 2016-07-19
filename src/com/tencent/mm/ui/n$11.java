@@ -4,7 +4,10 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
+import com.tencent.mm.e.a.o;
+import com.tencent.mm.model.ah;
 import com.tencent.mm.modelsimple.d;
+import com.tencent.mm.sdk.c.a;
 import com.tencent.mm.ui.base.b;
 
 final class n$11
@@ -14,12 +17,18 @@ final class n$11
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (kqi != null)
+    if (kPn != null)
     {
-      cms.finish();
-      cms.startActivity(kqi);
-      b.w(cms, kqi);
-      d.aW(cms);
+      if (!(chx instanceof LauncherUI)) {
+        chx.finish();
+      }
+      ah.hold();
+      chx.startActivity(kPn);
+      b.w(chx, kPn);
+      d.aS(chx);
+      paramDialogInterface = new o();
+      aeh.aei = true;
+      a.kug.y(paramDialogInterface);
     }
   }
 }

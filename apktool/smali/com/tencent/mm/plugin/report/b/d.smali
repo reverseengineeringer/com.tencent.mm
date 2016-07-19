@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/plugin/report/b/d;
-.super Lcom/tencent/mm/r/j;
+.super Lcom/tencent/mm/t/j;
 .source "SourceFile"
 
 # interfaces
@@ -7,15 +7,15 @@
 
 
 # instance fields
-.field private anM:Lcom/tencent/mm/r/d;
+.field private bkQ:Lcom/tencent/mm/t/a;
 
-.field private anN:Lcom/tencent/mm/r/a;
+.field private bkT:Lcom/tencent/mm/t/d;
 
-.field chp:I
+.field ccG:I
 
-.field private fTT:Z
+.field private gdn:Z
 
-.field private fTU:Lcom/tencent/mm/protocal/b/ic;
+.field private gdo:Lcom/tencent/mm/protocal/b/il;
 
 
 # direct methods
@@ -26,18 +26,18 @@
     const/4 v0, 0x0
 
     .line 35
-    invoke-direct {p0}, Lcom/tencent/mm/r/j;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/t/j;-><init>()V
 
     .line 30
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/report/b/d;->fTT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/report/b/d;->gdn:Z
 
     .line 32
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/tencent/mm/plugin/report/b/d;->fTU:Lcom/tencent/mm/protocal/b/ic;
+    iput-object v1, p0, Lcom/tencent/mm/plugin/report/b/d;->gdo:Lcom/tencent/mm/protocal/b/il;
 
     .line 33
-    iput v0, p0, Lcom/tencent/mm/plugin/report/b/d;->chp:I
+    iput v0, p0, Lcom/tencent/mm/plugin/report/b/d;->ccG:I
 
     .line 36
     if-nez p1, :cond_0
@@ -53,20 +53,20 @@
 
     .line 40
     :cond_0
-    iput p2, p0, Lcom/tencent/mm/plugin/report/b/d;->chp:I
+    iput p2, p0, Lcom/tencent/mm/plugin/report/b/d;->ccG:I
 
     .line 41
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tq()[B
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tr()[B
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->J([B)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->P([B)Z
 
     move-result v1
 
@@ -75,20 +75,20 @@
     const/4 v0, 0x1
 
     :cond_1
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/report/b/d;->fTT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/report/b/d;->gdn:Z
 
     .line 42
-    new-instance v0, Lcom/tencent/mm/protocal/b/ic;
+    new-instance v0, Lcom/tencent/mm/protocal/b/il;
 
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/ic;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/il;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->fTU:Lcom/tencent/mm/protocal/b/ic;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->gdo:Lcom/tencent/mm/protocal/b/il;
 
     .line 44
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->fTU:Lcom/tencent/mm/protocal/b/ic;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->gdo:Lcom/tencent/mm/protocal/b/il;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/protocal/b/ic;->am([B)Lcom/tencent/mm/at/a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/protocal/b/il;->au([B)Lcom/tencent/mm/ax/a;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -100,14 +100,14 @@
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpK+IBX8XDgnvqK+Q3DDqitLpoxMtiEZLS4="
+    const-string/jumbo v0, "MicroMsg.NetSceneCliReportKV"
 
     const-string/jumbo v1, "parse data error"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 47
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/sdk/platformtools/ab;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tw()Lcom/tencent/mm/sdk/platformtools/ad;
 
     move-result-object v0
 
@@ -115,14 +115,14 @@
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/report/b/d$1;-><init>(Lcom/tencent/mm/plugin/report/b/d;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ab;->r(Ljava/lang/Runnable;)I
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ad;->t(Ljava/lang/Runnable;)I
 
     goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/network/e;Lcom/tencent/mm/r/d;)I
+.method public final a(Lcom/tencent/mm/network/e;Lcom/tencent/mm/t/d;)I
     .locals 8
 
     .prologue
@@ -131,49 +131,49 @@
     const/4 v6, 0x1
 
     .line 95
-    iput-object p2, p0, Lcom/tencent/mm/plugin/report/b/d;->anM:Lcom/tencent/mm/r/d;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/report/b/d;->bkT:Lcom/tencent/mm/t/d;
 
     .line 97
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/report/b/d;->fTT:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/report/b/d;->gdn:Z
 
     if-nez v0, :cond_0
 
     .line 98
-    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->fTU:Lcom/tencent/mm/protocal/b/ic;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->gdo:Lcom/tencent/mm/protocal/b/il;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->aVA()[B
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/tencent/mm/at/b;->aH([B)Lcom/tencent/mm/at/b;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->baN()[B
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/protocal/b/ic;->jgC:Lcom/tencent/mm/at/b;
+    invoke-static {v1}, Lcom/tencent/mm/ax/b;->aO([B)Lcom/tencent/mm/ax/b;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/tencent/mm/protocal/b/il;->jEz:Lcom/tencent/mm/ax/b;
 
     .line 100
     :cond_0
-    new-instance v2, Lcom/tencent/mm/r/a$a;
+    new-instance v2, Lcom/tencent/mm/t/a$a;
 
-    invoke-direct {v2}, Lcom/tencent/mm/r/a$a;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/t/a$a;-><init>()V
 
     .line 101
-    iput-boolean v7, v2, Lcom/tencent/mm/r/a$a;->bFe:Z
+    iput-boolean v7, v2, Lcom/tencent/mm/t/a$a;->byp:Z
 
     .line 102
-    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->fTU:Lcom/tencent/mm/protocal/b/ic;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->gdo:Lcom/tencent/mm/protocal/b/il;
 
-    iput-object v0, v2, Lcom/tencent/mm/r/a$a;->bFa:Lcom/tencent/mm/at/a;
+    iput-object v0, v2, Lcom/tencent/mm/t/a$a;->byl:Lcom/tencent/mm/ax/a;
 
     .line 103
-    new-instance v0, Lcom/tencent/mm/protocal/b/id;
+    new-instance v0, Lcom/tencent/mm/protocal/b/im;
 
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/id;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/im;-><init>()V
 
-    iput-object v0, v2, Lcom/tencent/mm/r/a$a;->bFb:Lcom/tencent/mm/at/a;
+    iput-object v0, v2, Lcom/tencent/mm/t/a$a;->bym:Lcom/tencent/mm/ax/a;
 
     .line 104
-    iget v0, p0, Lcom/tencent/mm/plugin/report/b/d;->chp:I
+    iget v0, p0, Lcom/tencent/mm/plugin/report/b/d;->ccG:I
 
     if-ne v6, v0, :cond_3
 
@@ -181,7 +181,7 @@
 
     .line 105
     :goto_0
-    iget v1, p0, Lcom/tencent/mm/plugin/report/b/d;->chp:I
+    iget v1, p0, Lcom/tencent/mm/plugin/report/b/d;->ccG:I
 
     if-ne v6, v1, :cond_4
 
@@ -189,49 +189,49 @@
 
     .line 107
     :goto_1
-    iget-boolean v3, p0, Lcom/tencent/mm/plugin/report/b/d;->fTT:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/plugin/report/b/d;->gdn:Z
 
     if-eqz v3, :cond_5
 
     :goto_2
-    iput-object v0, v2, Lcom/tencent/mm/r/a$a;->uri:Ljava/lang/String;
+    iput-object v0, v2, Lcom/tencent/mm/t/a$a;->uri:Ljava/lang/String;
 
     .line 108
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/report/b/d;->getType()I
 
     move-result v0
 
-    iput v0, v2, Lcom/tencent/mm/r/a$a;->bEY:I
+    iput v0, v2, Lcom/tencent/mm/t/a$a;->byj:I
 
     .line 109
-    invoke-virtual {v2}, Lcom/tencent/mm/r/a$a;->vy()Lcom/tencent/mm/r/a;
+    invoke-virtual {v2}, Lcom/tencent/mm/t/a$a;->vA()Lcom/tencent/mm/t/a;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->anN:Lcom/tencent/mm/r/a;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->bkQ:Lcom/tencent/mm/t/a;
 
     .line 110
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/report/b/d;->fTT:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/report/b/d;->gdn:Z
 
     if-nez v0, :cond_1
 
     .line 111
-    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->anN:Lcom/tencent/mm/r/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->bkQ:Lcom/tencent/mm/t/a;
 
-    invoke-static {}, Lcom/tencent/mm/protocal/z;->aTw()Lcom/tencent/mm/protocal/z;
+    invoke-static {}, Lcom/tencent/mm/protocal/ac;->aYt()Lcom/tencent/mm/protocal/ac;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/a;->a(Lcom/tencent/mm/protocal/z;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/a;->a(Lcom/tencent/mm/protocal/ac;)V
 
     .line 112
-    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->anN:Lcom/tencent/mm/r/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->bkQ:Lcom/tencent/mm/t/a;
 
-    iput v6, v0, Lcom/tencent/mm/r/a;->bEZ:I
+    iput v6, v0, Lcom/tencent/mm/t/a;->byk:I
 
     .line 115
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->anN:Lcom/tencent/mm/r/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->bkQ:Lcom/tencent/mm/t/a;
 
     invoke-virtual {p0, p1, v0, p0}, Lcom/tencent/mm/plugin/report/b/d;->a(Lcom/tencent/mm/network/e;Lcom/tencent/mm/network/o;Lcom/tencent/mm/network/j;)I
 
@@ -241,7 +241,7 @@
     if-gez v1, :cond_2
 
     .line 117
-    const-string/jumbo v0, "!44@/B4Tb64lLpK+IBX8XDgnvqK+Q3DDqitLpoxMtiEZLS4="
+    const-string/jumbo v0, "MicroMsg.NetSceneCliReportKV"
 
     const-string/jumbo v2, "mark all failed. do scene %d"
 
@@ -253,7 +253,7 @@
 
     aput-object v4, v3, v7
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 119
     const/4 v0, 0x3
@@ -263,7 +263,7 @@
     const/4 v3, 0x0
 
     :try_start_0
-    iget v4, p0, Lcom/tencent/mm/plugin/report/b/d;->chp:I
+    iget v4, p0, Lcom/tencent/mm/plugin/report/b/d;->ccG:I
 
     invoke-static {v0, v2, v3, v4}, Lcom/tencent/mm/plugin/report/service/KVReportJni$KVReportJava2C;->ackKvStrategy(II[BI)V
     :try_end_0
@@ -297,7 +297,7 @@
     move-exception v0
 
     .line 121
-    const-string/jumbo v2, "!44@/B4Tb64lLpK+IBX8XDgnvqK+Q3DDqitLpoxMtiEZLS4="
+    const-string/jumbo v2, "MicroMsg.NetSceneCliReportKV"
 
     const-string/jumbo v3, "updateReportStrategy failed  hash:%d  , ex:%s"
 
@@ -315,13 +315,13 @@
 
     aput-object v5, v4, v7
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v4, v6
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_3
 .end method
@@ -333,32 +333,32 @@
     const/4 v5, 0x0
 
     .line 59
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/r/m;->bFO:Lcom/tencent/mm/network/e;
+    iget-object v0, v0, Lcom/tencent/mm/t/m;->byZ:Lcom/tencent/mm/network/e;
 
     if-nez v0, :cond_1
 
     .line 61
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpK+IBX8XDgnvqK+Q3DDqitLpoxMtiEZLS4="
+    const-string/jumbo v0, "MicroMsg.NetSceneCliReportKV"
 
     const-string/jumbo v1, "null == MMCore.getNetSceneQueue().getDispatcher(), can\'t give response to kvcomm."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 62
-    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->anM:Lcom/tencent/mm/r/d;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->bkT:Lcom/tencent/mm/t/d;
 
-    invoke-interface {v0, p2, p3, p4, p0}, Lcom/tencent/mm/r/d;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    invoke-interface {v0, p2, p3, p4, p0}, Lcom/tencent/mm/t/d;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 
     .line 82
     :goto_0
@@ -369,7 +369,7 @@
     if-eqz p2, :cond_2
 
     .line 68
-    const-string/jumbo v0, "!44@/B4Tb64lLpK+IBX8XDgnvqK+Q3DDqitLpoxMtiEZLS4="
+    const-string/jumbo v0, "MicroMsg.NetSceneCliReportKV"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -395,38 +395,38 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 69
     const/4 v0, 0x0
 
-    iget v1, p0, Lcom/tencent/mm/plugin/report/b/d;->chp:I
+    iget v1, p0, Lcom/tencent/mm/plugin/report/b/d;->ccG:I
 
     invoke-static {p2, p3, v0, v1}, Lcom/tencent/mm/plugin/report/service/KVReportJni$KVReportJava2C;->ackKvStrategy(II[BI)V
 
     .line 70
-    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->anM:Lcom/tencent/mm/r/d;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->bkT:Lcom/tencent/mm/t/d;
 
-    invoke-interface {v0, p2, p3, p4, p0}, Lcom/tencent/mm/r/d;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    invoke-interface {v0, p2, p3, p4, p0}, Lcom/tencent/mm/t/d;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 
     goto :goto_0
 
     .line 74
     :cond_2
-    const-string/jumbo v0, "!44@/B4Tb64lLpK+IBX8XDgnvqK+Q3DDqitLpoxMtiEZLS4="
+    const-string/jumbo v0, "MicroMsg.NetSceneCliReportKV"
 
     const-string/jumbo v1, "get report strategy ok"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 75
-    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->anN:Lcom/tencent/mm/r/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->bkQ:Lcom/tencent/mm/t/a;
 
-    iget-object v0, v0, Lcom/tencent/mm/r/a;->bEX:Lcom/tencent/mm/r/a$c;
+    iget-object v0, v0, Lcom/tencent/mm/t/a;->byi:Lcom/tencent/mm/t/a$c;
 
-    iget-object v0, v0, Lcom/tencent/mm/r/a$c;->bFf:Lcom/tencent/mm/at/a;
+    iget-object v0, v0, Lcom/tencent/mm/t/a$c;->byq:Lcom/tencent/mm/ax/a;
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/id;
+    check-cast v0, Lcom/tencent/mm/protocal/b/im;
 
     .line 77
     const/4 v1, 0x0
@@ -434,11 +434,11 @@
     const/4 v2, 0x0
 
     :try_start_0
-    invoke-virtual {v0}, Lcom/tencent/mm/protocal/b/id;->toByteArray()[B
+    invoke-virtual {v0}, Lcom/tencent/mm/protocal/b/im;->toByteArray()[B
 
     move-result-object v0
 
-    iget v3, p0, Lcom/tencent/mm/plugin/report/b/d;->chp:I
+    iget v3, p0, Lcom/tencent/mm/plugin/report/b/d;->ccG:I
 
     invoke-static {v1, v2, v0, v3}, Lcom/tencent/mm/plugin/report/service/KVReportJni$KVReportJava2C;->ackKvStrategy(II[BI)V
     :try_end_0
@@ -446,9 +446,9 @@
 
     .line 81
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->anM:Lcom/tencent/mm/r/d;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/d;->bkT:Lcom/tencent/mm/t/d;
 
-    invoke-interface {v0, p2, p3, p4, p0}, Lcom/tencent/mm/r/d;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    invoke-interface {v0, p2, p3, p4, p0}, Lcom/tencent/mm/t/d;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 
     goto :goto_0
 
@@ -457,7 +457,7 @@
     move-exception v0
 
     .line 79
-    const-string/jumbo v1, "!44@/B4Tb64lLpK+IBX8XDgnvqK+Q3DDqitLpoxMtiEZLS4="
+    const-string/jumbo v1, "MicroMsg.NetSceneCliReportKV"
 
     const-string/jumbo v2, "updateReportStrategy failed  hash:%d  , ex:%s"
 
@@ -477,13 +477,13 @@
 
     const/4 v4, 0x1
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 .end method
@@ -495,12 +495,12 @@
     const/4 v1, 0x1
 
     .line 86
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/report/b/d;->fTT:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/report/b/d;->gdn:Z
 
     if-nez v0, :cond_1
 
     .line 87
-    iget v0, p0, Lcom/tencent/mm/plugin/report/b/d;->chp:I
+    iget v0, p0, Lcom/tencent/mm/plugin/report/b/d;->ccG:I
 
     if-ne v1, v0, :cond_0
 
@@ -518,7 +518,7 @@
 
     .line 90
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/plugin/report/b/d;->chp:I
+    iget v0, p0, Lcom/tencent/mm/plugin/report/b/d;->ccG:I
 
     if-ne v1, v0, :cond_2
 

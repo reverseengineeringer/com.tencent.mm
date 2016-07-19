@@ -10,7 +10,7 @@ final class SnsUploadSayFooter$3
   
   public final void onClick(View paramView)
   {
-    SnsUploadSayFooter.b(hlP);
+    SnsUploadSayFooter.b(hBQ);
   }
 }
 

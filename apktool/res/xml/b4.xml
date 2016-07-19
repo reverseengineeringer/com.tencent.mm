@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto">
+    <PreferenceTitleCategory android:title="@string/ccw" />
+    <CheckBoxPreference android:layout="@layout/yk" android:title="@string/cfm" android:key="settings_need_verify" />
+    <CheckBoxPreference android:title="@string/a8u" android:key="settings_recommend_qqfriends_to_me" />
+    <CheckBoxPreference android:title="@string/a8t" android:key="settings_recommend_mobilefriends_to_me" />
+    <CheckBoxPreference android:layout="@layout/yk" android:title="@string/cdy" android:key="settings_find_google_contact" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/a4n" android:key="settings_autoadd_mobilefriends" />
+    <Preference android:layout="@layout/yk" android:title="@string/cgs" android:key="settings_about_blacklist" />
+    <PreferenceTitleCategory android:title="@string/cd6" />
+    <CheckBoxPreference android:layout="@layout/yk" android:title="@string/ce2" android:key="settings_find_me_by_weixin" />
+    <CheckBoxPreference android:layout="@layout/yk" android:title="@string/ce1" android:key="settings_find_me_by_mobile" />
+    <CheckBoxPreference android:layout="@layout/yk" android:title="@string/cdz" android:key="settings_find_me_by_QQ" />
+    <CheckBoxPreference android:layout="@layout/yk" android:title="@string/ce0" android:key="settings_find_me_by_google" />
+    <PreferenceTitleCategory android:title="@string/ccx" android:key="settings_add_friends_timeline_tip" />
+    <Preference android:title="@string/cru" android:key="timline_outside_permiss" />
+    <Preference android:title="@string/col" android:key="timeline_black_permiss" />
+    <Preference android:title="@string/cgr" android:key="edit_timeline_group" />
+    <CheckBoxPreference android:layout="@layout/yk" android:title="@string/a68" android:key="timeline_stranger_show" />
+    <PreferenceCategory />
+</PreferenceScreen>

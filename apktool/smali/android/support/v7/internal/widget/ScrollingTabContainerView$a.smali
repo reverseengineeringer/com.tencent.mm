@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic qS:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
+.field final synthetic rg:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 441
-    iput-object p1, p0, Landroid/support/v7/internal/widget/ScrollingTabContainerView$a;->qS:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
+    iput-object p1, p0, Landroid/support/v7/internal/widget/ScrollingTabContainerView$a;->rg:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
@@ -48,9 +48,9 @@
 
     .prologue
     .line 445
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ScrollingTabContainerView$a;->qS:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ScrollingTabContainerView$a;->rg:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
 
-    invoke-static {v0}, Landroid/support/v7/internal/widget/ScrollingTabContainerView;->a(Landroid/support/v7/internal/widget/ScrollingTabContainerView;)Landroid/widget/LinearLayout;
+    invoke-static {v0}, Landroid/support/v7/internal/widget/ScrollingTabContainerView;->c(Landroid/support/v7/internal/widget/ScrollingTabContainerView;)Landroid/widget/LinearLayout;
 
     move-result-object v0
 
@@ -66,9 +66,9 @@
 
     .prologue
     .line 450
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ScrollingTabContainerView$a;->qS:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ScrollingTabContainerView$a;->rg:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
 
-    invoke-static {v0}, Landroid/support/v7/internal/widget/ScrollingTabContainerView;->a(Landroid/support/v7/internal/widget/ScrollingTabContainerView;)Landroid/widget/LinearLayout;
+    invoke-static {v0}, Landroid/support/v7/internal/widget/ScrollingTabContainerView;->c(Landroid/support/v7/internal/widget/ScrollingTabContainerView;)Landroid/widget/LinearLayout;
 
     move-result-object v0
 
@@ -78,9 +78,7 @@
 
     check-cast v0, Landroid/support/v7/internal/widget/ScrollingTabContainerView$TabView;
 
-    invoke-virtual {v0}, Landroid/support/v7/internal/widget/ScrollingTabContainerView$TabView;->getTab()Landroid/support/v7/app/ActionBar$c;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/v7/internal/widget/ScrollingTabContainerView$TabView;->rh:Landroid/support/v7/app/ActionBar$b;
 
     return-object v0
 .end method
@@ -103,15 +101,15 @@
     if-nez p2, :cond_0
 
     .line 461
-    iget-object v1, p0, Landroid/support/v7/internal/widget/ScrollingTabContainerView$a;->qS:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
+    iget-object v1, p0, Landroid/support/v7/internal/widget/ScrollingTabContainerView$a;->rg:Landroid/support/v7/internal/widget/ScrollingTabContainerView;
 
     invoke-virtual {p0, p1}, Landroid/support/v7/internal/widget/ScrollingTabContainerView$a;->getItem(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/v7/app/ActionBar$c;
+    check-cast v0, Landroid/support/v7/app/ActionBar$b;
 
-    invoke-static {v1, v0}, Landroid/support/v7/internal/widget/ScrollingTabContainerView;->a(Landroid/support/v7/internal/widget/ScrollingTabContainerView;Landroid/support/v7/app/ActionBar$c;)Landroid/support/v7/internal/widget/ScrollingTabContainerView$TabView;
+    invoke-static {v1, v0}, Landroid/support/v7/internal/widget/ScrollingTabContainerView;->a(Landroid/support/v7/internal/widget/ScrollingTabContainerView;Landroid/support/v7/app/ActionBar$b;)Landroid/support/v7/internal/widget/ScrollingTabContainerView$TabView;
 
     move-result-object p2
 
@@ -129,9 +127,9 @@
 
     move-result-object v1
 
-    check-cast v1, Landroid/support/v7/app/ActionBar$c;
+    check-cast v1, Landroid/support/v7/app/ActionBar$b;
 
-    iput-object v1, v0, Landroid/support/v7/internal/widget/ScrollingTabContainerView$TabView;->qT:Landroid/support/v7/app/ActionBar$c;
+    iput-object v1, v0, Landroid/support/v7/internal/widget/ScrollingTabContainerView$TabView;->rh:Landroid/support/v7/app/ActionBar$b;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/widget/ScrollingTabContainerView$TabView;->update()V
 

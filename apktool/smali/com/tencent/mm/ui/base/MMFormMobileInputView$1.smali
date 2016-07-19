@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kDT:Lcom/tencent/mm/ui/base/MMFormMobileInputView;
+.field final synthetic lcX:Lcom/tencent/mm/ui/base/MMFormMobileInputView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 99
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMFormMobileInputView$1;->kDT:Lcom/tencent/mm/ui/base/MMFormMobileInputView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMFormMobileInputView$1;->lcX:Lcom/tencent/mm/ui/base/MMFormMobileInputView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 101
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormMobileInputView$1;->kDT:Lcom/tencent/mm/ui/base/MMFormMobileInputView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormMobileInputView$1;->lcX:Lcom/tencent/mm/ui/base/MMFormMobileInputView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMFormMobileInputView;->a(Lcom/tencent/mm/ui/base/MMFormMobileInputView;)Landroid/widget/EditText;
 
@@ -49,7 +49,7 @@
 
     if-eq p1, v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormMobileInputView$1;->kDT:Lcom/tencent/mm/ui/base/MMFormMobileInputView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormMobileInputView$1;->lcX:Lcom/tencent/mm/ui/base/MMFormMobileInputView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMFormMobileInputView;->b(Lcom/tencent/mm/ui/base/MMFormMobileInputView;)Landroid/widget/EditText;
 
@@ -59,9 +59,9 @@
 
     .line 102
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormMobileInputView$1;->kDT:Lcom/tencent/mm/ui/base/MMFormMobileInputView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormMobileInputView$1;->lcX:Lcom/tencent/mm/ui/base/MMFormMobileInputView;
 
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/MMFormMobileInputView;->hy(Z)V
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/base/MMFormMobileInputView;->hW(Z)V
 
     .line 104
     :cond_1

@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field dfg:Landroid/widget/ImageView;
+.field ddG:Landroid/widget/ImageView;
 
-.field eVj:Landroid/widget/TextView;
+.field fdu:Landroid/widget/TextView;
 
-.field eWF:Landroid/widget/TextView;
+.field feT:Landroid/widget/TextView;
 
-.field eWG:Landroid/widget/TextView;
+.field feU:Landroid/widget/TextView;
 
-.field eYA:Landroid/widget/TextView;
+.field fgU:Landroid/widget/TextView;
 
-.field final synthetic gKg:Lcom/tencent/mm/plugin/sns/lucky/ui/c;
+.field final synthetic gRM:Lcom/tencent/mm/plugin/sns/lucky/ui/c;
 
 
 # direct methods
@@ -34,7 +34,7 @@
 
     .prologue
     .line 210
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/c$a;->gKg:Lcom/tencent/mm/plugin/sns/lucky/ui/c;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/c$a;->gRM:Lcom/tencent/mm/plugin/sns/lucky/ui/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

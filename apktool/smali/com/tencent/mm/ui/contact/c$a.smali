@@ -15,27 +15,27 @@
 
 
 # instance fields
-.field public lhu:Ljava/lang/String;
+.field public lHF:Ljava/lang/String;
 
-.field public liK:Z
+.field public lIV:Z
 
-.field public liL:Z
+.field public lIW:Z
 
-.field public liM:Z
+.field public lIX:Z
 
-.field public liN:Z
+.field public lIY:Z
 
-.field public liO:Z
+.field public lIZ:Z
 
-.field public liP:Ljava/lang/String;
+.field public lJa:Ljava/lang/String;
 
-.field public liQ:Ljava/lang/String;
+.field public lJb:Ljava/lang/String;
 
-.field public liR:Z
+.field public lJc:Z
 
-.field public liS:Ljava/lang/String;
+.field public lJd:Ljava/lang/String;
 
-.field public liT:Ljava/lang/String;
+.field public lJe:Ljava/lang/String;
 
 
 # direct methods
@@ -49,37 +49,37 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 322
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/c$a;->liK:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/c$a;->lIV:Z
 
     .line 323
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/c$a;->liL:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/c$a;->lIW:Z
 
     .line 324
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/c$a;->liM:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/c$a;->lIX:Z
 
     .line 325
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/c$a;->liN:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/c$a;->lIY:Z
 
     .line 326
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/c$a;->liO:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/c$a;->lIZ:Z
 
     .line 334
     const-string/jumbo v0, "@all.contact.without.chatroom"
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/c$a;->lhu:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/c$a;->lHF:Ljava/lang/String;
 
     .line 337
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/c$a;->liR:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/c$a;->lJc:Z
 
     .line 338
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/c$a;->liS:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/c$a;->lJd:Ljava/lang/String;
 
     .line 339
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/c$a;->liT:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/c$a;->lJe:Ljava/lang/String;
 
     return-void
 .end method

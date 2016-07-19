@@ -13,10 +13,10 @@ final class k$1
   
   public final void d(byte[] paramArrayOfByte, int paramInt)
   {
-    if (k.a(chD) != null) {
-      k.a(chD).a(new g.a(paramArrayOfByte, paramInt), 0);
+    if (k.a(ccU) != null) {
+      k.a(ccU).a(new g.a(paramArrayOfByte, paramInt), 0);
     }
-    k.a(chD, paramArrayOfByte, paramInt);
+    k.a(ccU, paramArrayOfByte, paramInt);
   }
 }
 

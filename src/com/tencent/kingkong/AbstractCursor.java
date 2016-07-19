@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.tencent.kingkong.support.Log;
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
+import java.util.Map;
 
 public abstract class AbstractCursor
   implements CrossProcessCursor
@@ -26,7 +27,7 @@ public abstract class AbstractCursor
   private final Object mSelfObserverLock = new Object();
   private boolean mSelfObserverRegistered;
   @Deprecated
-  protected HashMap mUpdatedRows = new HashMap();
+  protected HashMap<Long, Map<String, Object>> mUpdatedRows = new HashMap();
   
   public void checkPosition()
   {
@@ -73,7 +74,7 @@ public abstract class AbstractCursor
   
   public void finalize()
   {
-    if ((mSelfObserver != null) && (mSelfObserverRegistered)) {
+    if ((mSelfObserver != null) && (mSelfObserverRegistered == true)) {
       mContentResolver.unregisterContentObserver(mSelfObserver);
     }
     try
@@ -108,19 +109,15 @@ public abstract class AbstractCursor
       localObject = paramString.substring(j + 1);
     }
     paramString = getColumnNames();
-    int k = paramString.length;
-    for (;;)
+    j = paramString.length;
+    while (i < j)
     {
-      if (i >= k) {
-        j = -1;
+      if (paramString[i].equalsIgnoreCase((String)localObject)) {
+        return i;
       }
-      do
-      {
-        return j;
-        j = i;
-      } while (paramString[i].equalsIgnoreCase((String)localObject));
       i += 1;
     }
+    return -1;
   }
   
   public int getColumnIndexOrThrow(String paramString)
@@ -381,7 +378,7 @@ public abstract class AbstractCursor
   protected static class SelfContentObserver
     extends ContentObserver
   {
-    WeakReference mCursor;
+    WeakReference<AbstractCursor> mCursor;
     
     public SelfContentObserver(AbstractCursor paramAbstractCursor)
     {

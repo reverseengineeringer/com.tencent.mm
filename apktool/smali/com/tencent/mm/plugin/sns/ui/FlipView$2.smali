@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic dRQ:Ljava/util/List;
+.field final synthetic dTY:Ljava/util/List;
 
-.field final synthetic gYa:Lcom/tencent/mm/plugin/sns/ui/FlipView;
+.field final synthetic hlm:Lcom/tencent/mm/plugin/sns/ui/FlipView;
 
-.field final synthetic gYb:Ljava/util/List;
+.field final synthetic hln:Ljava/util/List;
 
 
 # direct methods
@@ -30,12 +30,12 @@
     .locals 0
 
     .prologue
-    .line 363
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$2;->gYa:Lcom/tencent/mm/plugin/sns/ui/FlipView;
+    .line 389
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$2;->hlm:Lcom/tencent/mm/plugin/sns/ui/FlipView;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$2;->dRQ:Ljava/util/List;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$2;->dTY:Ljava/util/List;
 
-    iput-object p3, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$2;->gYb:Ljava/util/List;
+    iput-object p3, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$2;->hln:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,13 +48,13 @@
     .locals 3
 
     .prologue
-    .line 366
+    .line 392
     const/4 v0, 0x0
 
     move v1, v0
 
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$2;->dRQ:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$2;->dTY:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -62,8 +62,8 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 367
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$2;->gYb:Ljava/util/List;
+    .line 393
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$2;->hln:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -75,7 +75,7 @@
 
     move-result v2
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$2;->dRQ:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/FlipView$2;->dTY:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -85,14 +85,14 @@
 
     invoke-virtual {p1, v2, v0}, Lcom/tencent/mm/ui/base/l;->b(ILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
-    .line 366
+    .line 392
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 369
+    .line 395
     :cond_0
     return-void
 .end method

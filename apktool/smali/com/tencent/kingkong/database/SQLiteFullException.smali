@@ -12,7 +12,7 @@
     invoke-direct {p0}, Lcom/tencent/kingkong/database/SQLiteException;-><init>()V
 
     .line 28
-    invoke-static {}, Lcom/tencent/mm/dbsupport/newcursor/g;->qI()V
+    invoke-static {}, Lcom/tencent/mm/dbsupport/newcursor/g;->pm()V
 
     .line 29
     return-void
@@ -26,7 +26,7 @@
     invoke-direct {p0, p1}, Lcom/tencent/kingkong/database/SQLiteException;-><init>(Ljava/lang/String;)V
 
     .line 33
-    invoke-static {}, Lcom/tencent/mm/dbsupport/newcursor/g;->qI()V
+    invoke-static {}, Lcom/tencent/mm/dbsupport/newcursor/g;->pm()V
 
     .line 34
     return-void

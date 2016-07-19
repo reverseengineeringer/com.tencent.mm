@@ -1,26 +1,26 @@
 package com.tencent.mm.pluginsdk.ui;
 
-import com.tencent.mm.ao.d.b;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ar.d.b;
+import com.tencent.mm.sdk.platformtools.ah;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class VoiceSearchLayout$5
   implements d.b
 {
   VoiceSearchLayout$5(VoiceSearchLayout paramVoiceSearchLayout) {}
   
-  public final void EF()
+  public final void Fa()
   {
-    iHM.reset();
-    VoiceSearchLayout.q(iHM).a(false, null, -1L);
+    jeJ.reset();
+    VoiceSearchLayout.q(jeJ).a(false, null, -1L);
   }
   
-  public final void EG()
+  public final void Fb()
   {
-    VoiceSearchLayout.n(iHM);
-    VoiceSearchLayout.o(iHM);
-    if (VoiceSearchLayout.p(iHM) != null) {
-      VoiceSearchLayout.p(iHM).aUF();
+    VoiceSearchLayout.n(jeJ);
+    VoiceSearchLayout.o(jeJ);
+    if (VoiceSearchLayout.p(jeJ) != null) {
+      VoiceSearchLayout.p(jeJ).aZJ();
     }
   }
   
@@ -28,21 +28,21 @@ final class VoiceSearchLayout$5
   {
     try
     {
-      u.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "dkaddr onRes ");
+      v.d("MicroMsg.VoiceSearchLayout", "dkaddr onRes ");
       if (paramArrayOfString != null)
       {
-        u.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "dkaddr onRes size:" + paramArrayOfString.length + " " + paramArrayOfString.toString());
+        v.d("MicroMsg.VoiceSearchLayout", "dkaddr onRes size:" + paramArrayOfString.length + " " + paramArrayOfString.toString());
         int j = paramArrayOfString.length;
         int i = 0;
         while (i < j)
         {
           String str = paramArrayOfString[i];
-          u.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "search username  :" + str);
+          v.d("MicroMsg.VoiceSearchLayout", "search username  :" + str);
           i += 1;
         }
       }
-      iHM.reset();
-      VoiceSearchLayout.q(iHM).a(true, paramArrayOfString, paramLong);
+      jeJ.reset();
+      VoiceSearchLayout.q(jeJ).a(true, paramArrayOfString, paramLong);
       return;
     }
     catch (Exception paramArrayOfString) {}

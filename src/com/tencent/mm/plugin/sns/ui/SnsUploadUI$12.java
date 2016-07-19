@@ -15,23 +15,23 @@ final class SnsUploadUI$12
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if (SnsUploadUI.i(hlY) == 9)
+    if (SnsUploadUI.i(hCb) == 9)
     {
-      hlY.setResult(0, new Intent());
-      hlY.finish();
+      hCb.setResult(0, new Intent());
+      hCb.finish();
     }
     for (;;)
     {
       return true;
-      g.a(hlY, new DialogInterface.OnClickListener()
+      g.a(hCb, new DialogInterface.OnClickListener()
       {
         public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
         {
-          if (SnsUploadUI.g(hlY) != null) {
-            SnsUploadUI.g(hlY).dP(10);
+          if (SnsUploadUI.g(hCb) != null) {
+            SnsUploadUI.g(hCb).ew(10);
           }
-          hlY.setResult(0, new Intent());
-          hlY.finish();
+          hCb.setResult(0, new Intent());
+          hCb.finish();
         }
       });
     }

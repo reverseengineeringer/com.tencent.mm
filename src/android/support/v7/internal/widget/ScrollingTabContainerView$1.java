@@ -9,10 +9,10 @@ final class ScrollingTabContainerView$1
   
   public final void run()
   {
-    int i = qR.getLeft();
-    int j = (qS.getWidth() - qR.getWidth()) / 2;
-    qS.smoothScrollTo(i - j, 0);
-    qS.oa = null;
+    int i = rf.getLeft();
+    int j = (rg.getWidth() - rf.getWidth()) / 2;
+    rg.smoothScrollTo(i - j, 0);
+    rg.oq = null;
   }
 }
 

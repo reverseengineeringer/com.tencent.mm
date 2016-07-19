@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kXv:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+.field final synthetic lxJ:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 570
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$7;->kXv:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+    .line 792
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$7;->lxJ:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,12 +37,60 @@
 
 # virtual methods
 .method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
+    .locals 4
 
     .prologue
-    .line 574
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    .line 796
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$7;->lxJ:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
 
-    .line 575
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;->e(Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 797
+    new-instance v2, Lcom/tencent/mm/e/a/bo;
+
+    invoke-direct {v2}, Lcom/tencent/mm/e/a/bo;-><init>()V
+
+    .line 798
+    iget-object v3, v2, Lcom/tencent/mm/e/a/bo;->agt:Lcom/tencent/mm/e/a/bo$a;
+
+    iput-object v0, v3, Lcom/tencent/mm/e/a/bo$a;->YC:Ljava/lang/String;
+
+    .line 799
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
+
+    goto :goto_0
+
+    .line 802
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI$7;->lxJ:Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;->finish()V
+
+    .line 803
     return-void
 .end method

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto">
+    <Preference android:title="@string/cru" android:key="timline_outside_permiss" />
+    <Preference android:title="@string/col" android:key="timeline_black_permiss" />
+    <PreferenceCategory />
+    <CheckBoxPreference android:layout="@layout/yk" android:title="@string/a68" android:key="timeline_stranger_show" />
+</PreferenceScreen>

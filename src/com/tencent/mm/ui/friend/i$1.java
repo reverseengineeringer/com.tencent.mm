@@ -2,34 +2,34 @@ package com.tencent.mm.ui.friend;
 
 import android.os.Message;
 import android.widget.ProgressBar;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import com.tencent.mm.ui.base.h;
 
 final class i$1
-  extends aa
+  extends ac
 {
   i$1(i parami) {}
   
   public final void handleMessage(Message paramMessage)
   {
-    if (((i.a(lsI) != null) && (!i.a(lsI).isShowing())) || (i.b(lsI))) {}
+    if (((i.a(lTm) != null) && (!i.a(lTm).isShowing())) || (i.b(lTm))) {}
     do
     {
       return;
-      i.c(lsI);
-      i.e(lsI).setProgress(i.d(lsI));
-      if (i.d(lsI) < i.e(lsI).getMax() - 2)
+      i.c(lTm);
+      i.e(lTm).setProgress(i.d(lTm));
+      if (i.d(lTm) < i.e(lTm).getMax() - 2)
       {
         sendEmptyMessageDelayed(0, 1000L);
         return;
       }
-      i.f(lsI);
-      i.e(lsI).setIndeterminate(true);
-    } while (i.g(lsI));
-    if (i.a(lsI) != null) {
-      i.a(lsI).dismiss();
+      i.f(lTm);
+      i.e(lTm).setIndeterminate(true);
+    } while (i.g(lTm));
+    if (i.a(lTm) != null) {
+      i.a(lTm).dismiss();
     }
-    i.h(lsI);
+    i.h(lTm);
   }
 }
 

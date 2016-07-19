@@ -1,10 +1,7 @@
 package com.tencent.mm.ui.contact;
 
-import android.view.View;
-import android.view.animation.AnimationUtils;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.j;
-import com.tencent.mm.ui.o;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.voicesearch.b;
 
 final class AddressUI$a$9
   implements Runnable
@@ -13,13 +10,8 @@ final class AddressUI$a$9
   
   public final void run()
   {
-    u.i("!32@/B4Tb64lLpJvPADYHZ60V4qqnXgYeWWp", "post to first init finish");
-    View localView = liu.findViewById(2131169420);
-    if (localView != null)
-    {
-      localView.setVisibility(8);
-      localView.startAnimation(AnimationUtils.loadAnimation(liu.koJ.kpc, 2130837603));
-    }
+    v.v("MicroMsg.AddressUI", "post search adapter to do refresh");
+    AddressUI.a.e(lIF).a(null, null);
   }
 }
 

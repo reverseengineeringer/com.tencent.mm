@@ -2,40 +2,61 @@ package com.tencent.mm.plugin.sns.ui;
 
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.widget.TextView;
 import com.tencent.mm.plugin.sns.b.a;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.g;
 import com.tencent.mm.pluginsdk.f;
-import com.tencent.mm.protocal.b.bp;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.bs;
+import com.tencent.mm.protocal.b.bt;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.z;
 import com.tencent.mm.ui.base.p;
 
 final class ArtistUI$3
-  implements c.a
+  implements d.a
 {
   ArtistUI$3(ArtistUI paramArtistUI) {}
   
-  public final void a(bp parambp)
+  public final void a(bs parambs)
   {
-    if (ArtistUI.b(gWk) != null)
+    ArtistHeader localArtistHeader;
+    if (ArtistUI.b(hjG) != null)
     {
-      ArtistUI.b(gWk).setVisibility(0);
-      ArtistUI.b(gWk).setUserName(parambp);
-      parambp = ehZ;
-      if ((parambp != null) && (!parambp.equals(""))) {
-        ArtistUI.c(gWk).edit().putString("artist_name", parambp).commit();
+      ArtistUI.b(hjG).setVisibility(0);
+      localArtistHeader = ArtistUI.b(hjG);
+      if (parambs != null) {
+        break label115;
       }
-      if (ArtistUI.d(gWk) != null) {
-        ArtistUI.d(gWk).notifyDataSetChanged();
-      }
+      v.e("MicroMsg.ArtistHeader", "userName or selfName is null ");
     }
-    ArtistUI.e(gWk).dismiss();
+    for (;;)
+    {
+      parambs = elW;
+      if ((parambs != null) && (!parambs.equals(""))) {
+        ArtistUI.c(hjG).edit().putString("artist_name", parambs).commit();
+      }
+      if (ArtistUI.d(hjG) != null) {
+        ArtistUI.d(hjG).notifyDataSetChanged();
+      }
+      ArtistUI.e(hjG).dismiss();
+      return;
+      label115:
+      hjr = parambs;
+      ad.aBG().b(jwr.jws, hjw.ckm, context.hashCode(), z.kFU);
+      hjw.hjB.setText(elW);
+      hjw.cuI.setText(jwq);
+      hjw.eLK.setText(aez);
+      hjw.hjC.setText(jwp);
+    }
   }
   
-  public final void aAN()
+  public final void aDD()
   {
-    if ((ArtistUI.f(gWk) == null) && (ArtistUI.e(gWk) != null))
+    if ((ArtistUI.f(hjG) == null) && (ArtistUI.e(hjG) != null))
     {
-      u.d("!32@/B4Tb64lLpJC+sbDDDsy3CAlXrK84I2H", "onNothingBgGet");
-      a.cob.af(true);
+      v.d("MicroMsg.ArtistUI", "onNothingBgGet");
+      a.cjp.K(true);
     }
   }
 }

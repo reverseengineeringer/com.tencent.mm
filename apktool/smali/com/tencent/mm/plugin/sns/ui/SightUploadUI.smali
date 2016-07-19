@@ -4,23 +4,36 @@
 
 
 # instance fields
-.field private asL:Ljava/lang/String;
+.field private desc:Ljava/lang/String;
 
-.field private gLa:Ljava/lang/String;
+.field private gSF:Ljava/lang/String;
 
-.field private gLb:Ljava/util/ArrayList;
+.field private gSG:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private gLc:Z
+.field private gSH:Z
 
-.field private gLd:I
+.field private gSI:I
 
-.field private haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+.field private hoA:Landroid/widget/LinearLayout;
 
-.field private hba:Lcom/tencent/mm/plugin/sns/ui/t;
+.field private hoB:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
 
-.field private hbb:Landroid/widget/LinearLayout;
+.field private hoC:Z
 
-.field private hbc:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
+.field private hoD:J
+
+.field private hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+
+.field private hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
 
 # direct methods
@@ -30,29 +43,37 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 31
+    .line 34
     invoke-direct {p0}, Lcom/tencent/mm/ui/MMActivity;-><init>()V
 
-    .line 36
+    .line 39
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
-
-    .line 38
-    const-string/jumbo v0, ""
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->asL:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
     .line 41
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gLa:Ljava/lang/String;
-
-    .line 43
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gLc:Z
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->desc:Ljava/lang/String;
 
     .line 44
-    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gLd:I
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gSF:Ljava/lang/String;
+
+    .line 46
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gSH:Z
+
+    .line 47
+    iput v1, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gSI:I
+
+    .line 49
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoC:Z
+
+    .line 50
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoD:J
 
     return-void
 .end method
@@ -61,8 +82,8 @@
     .locals 1
 
     .prologue
-    .line 31
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    .line 34
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     return-object v0
 .end method
@@ -71,8 +92,8 @@
     .locals 0
 
     .prologue
-    .line 31
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->asL:Ljava/lang/String;
+    .line 34
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->desc:Ljava/lang/String;
 
     return-object p1
 .end method
@@ -81,8 +102,8 @@
     .locals 1
 
     .prologue
-    .line 31
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gLd:I
+    .line 34
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gSI:I
 
     return v0
 .end method
@@ -91,8 +112,8 @@
     .locals 1
 
     .prologue
-    .line 31
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->asL:Ljava/lang/String;
+    .line 34
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->desc:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -101,8 +122,8 @@
     .locals 1
 
     .prologue
-    .line 31
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hbc:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
+    .line 34
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoB:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
 
     return-object v0
 .end method
@@ -111,8 +132,8 @@
     .locals 1
 
     .prologue
-    .line 31
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gLc:Z
+    .line 34
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gSH:Z
 
     return v0
 .end method
@@ -121,34 +142,54 @@
     .locals 1
 
     .prologue
-    .line 31
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gLb:Ljava/util/ArrayList;
+    .line 34
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gSG:Ljava/util/ArrayList;
 
     return-object v0
 .end method
 
-.method static synthetic g(Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;)Lcom/tencent/mm/plugin/sns/ui/t;
+.method static synthetic g(Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;)Lcom/tencent/mm/plugin/sns/ui/v;
     .locals 1
 
     .prologue
-    .line 31
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    .line 34
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
     return-object v0
+.end method
+
+.method static synthetic h(Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;)J
+    .locals 2
+
+    .prologue
+    .line 34
+    iget-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoD:J
+
+    return-wide v0
+.end method
+
+.method static synthetic i(Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;)Z
+    .locals 1
+
+    .prologue
+    .line 34
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoC:Z
+
+    return v0
 .end method
 
 
 # virtual methods
-.method protected final Gb()V
-    .locals 5
+.method protected final Gy()V
+    .locals 6
 
     .prologue
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
-    .line 64
-    const v0, 0x7f070cd1
+    .line 72
+    const v0, 0x7f1009f8
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->findViewById(I)Landroid/view/View;
 
@@ -156,20 +197,20 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
-    .line 65
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    .line 73
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/t;->cY(Landroid/content/Context;)F
+    invoke-static {v1}, Lcom/tencent/mm/ui/t;->cW(Landroid/content/Context;)F
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-virtual {v2}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->getTextSize()F
 
@@ -177,19 +218,19 @@
 
     mul-float/2addr v1, v2
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v2, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-static {v2}, Lcom/tencent/mm/aw/a;->getDensity(Landroid/content/Context;)F
+    invoke-static {v2}, Lcom/tencent/mm/az/a;->getDensity(Landroid/content/Context;)F
 
     move-result v2
 
     div-float/2addr v1, v2
 
-    invoke-virtual {v0, v3, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->setTextSize(IF)V
+    invoke-virtual {v0, v4, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->setTextSize(IF)V
 
-    .line 67
+    .line 75
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -200,14 +241,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 68
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    .line 76
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->getIntent()Landroid/content/Intent;
 
@@ -221,18 +262,18 @@
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 70
+    .line 78
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI$1;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI$1;-><init>(Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsEditText;->setBackListener(Lcom/tencent/mm/ui/widget/MMEditText$a;)V
+    iput-object v1, v0, Lcom/tencent/mm/ui/widget/MMEditText;->mfR:Lcom/tencent/mm/ui/widget/MMEditText$a;
 
-    .line 83
-    const v0, 0x7f070cd7
+    .line 91
+    const v0, 0x7f100ac9
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->findViewById(I)Landroid/view/View;
 
@@ -240,52 +281,72 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hbc:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoB:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
 
-    .line 84
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hbc:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
+    .line 92
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoB:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->haZ:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoy:Lcom/tencent/mm/plugin/sns/ui/SnsEditText;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->setMMEditText(Lcom/tencent/mm/ui/widget/MMEditText;)V
+    iput-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->gSZ:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    .line 85
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hbc:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
+    new-instance v2, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter$1;
 
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->setVisibility(I)V
+    invoke-direct {v2, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter$1;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;)V
 
-    .line 87
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/widget/MMEditText;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    new-instance v2, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter$2;
+
+    invoke-direct {v2, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter$2;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;)V
+
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/widget/MMEditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
+
+    new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter$3;
+
+    invoke-direct {v1, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter$3;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;)V
+
+    const-wide/16 v2, 0xc8
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ad;->e(Ljava/lang/Runnable;J)V
+
+    .line 93
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoB:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
+
+    invoke-virtual {v0, v5}, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->setVisibility(I)V
+
+    .line 95
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI$2;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI$2;-><init>(Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;)V
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
-    .line 113
+    .line 121
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
     const-string/jumbo v1, "KSightDraftEntrance"
 
-    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 114
-    const v0, 0x7f030165
+    .line 122
+    const v0, 0x7f070284
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI$3;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI$3;-><init>(Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;)V
 
-    invoke-virtual {p0, v3, v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->a(IILandroid/view/MenuItem$OnMenuItemClickListener;)V
+    invoke-virtual {p0, v4, v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->a(IILandroid/view/MenuItem$OnMenuItemClickListener;)V
 
-    .line 140
+    .line 148
     :cond_1
-    const v0, 0x7f0b0ddf
+    const v0, 0x7f080122
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->getString(I)Ljava/lang/String;
 
@@ -295,14 +356,14 @@
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI$4;-><init>(Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;)V
 
-    sget v2, Lcom/tencent/mm/ui/j$b;->kpL:I
+    sget v2, Lcom/tencent/mm/ui/j$b;->kOQ:I
 
-    invoke-virtual {p0, v4, v0, v1, v2}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->a(ILjava/lang/String;Landroid/view/MenuItem$OnMenuItemClickListener;I)V
+    invoke-virtual {p0, v5, v0, v1, v2}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->a(ILjava/lang/String;Landroid/view/MenuItem$OnMenuItemClickListener;I)V
 
-    .line 194
-    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->bC(Z)V
+    .line 205
+    invoke-virtual {p0, v4}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->bp(Z)V
 
-    .line 195
+    .line 206
     return-void
 .end method
 
@@ -310,8 +371,8 @@
     .locals 1
 
     .prologue
-    .line 59
-    const v0, 0x7f0a042f
+    .line 67
+    const v0, 0x7f03059e
 
     return v0
 .end method
@@ -330,20 +391,20 @@
 
     const/4 v7, 0x0
 
-    .line 221
+    .line 232
     invoke-super {p0, p1, p2, p3}, Lcom/tencent/mm/ui/MMActivity;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 223
+    .line 234
     const/4 v0, -0x1
 
     if-eq p2, v0, :cond_1
 
-    .line 252
+    .line 263
     :cond_0
     :goto_0
     return-void
 
-    .line 227
+    .line 238
     :cond_1
     const/4 v0, 0x6
 
@@ -353,47 +414,47 @@
 
     if-ne p1, v1, :cond_3
 
-    .line 229
+    .line 240
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hbc:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoB:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
 
     if-eqz p3, :cond_3
 
     if-ne p1, v1, :cond_8
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->hiv:Lcom/tencent/mm/plugin/sns/ui/SightLocationWidget;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->hxk:Lcom/tencent/mm/plugin/sns/ui/SightLocationWidget;
 
-    invoke-virtual {v0, p3}, Lcom/tencent/mm/plugin/sns/ui/SightLocationWidget;->A(Landroid/content/Intent;)Z
+    invoke-virtual {v0, p3}, Lcom/tencent/mm/plugin/sns/ui/SightLocationWidget;->E(Landroid/content/Intent;)Z
 
-    .line 231
+    .line 242
     :cond_3
     :goto_1
     if-ne p1, v2, :cond_0
 
-    .line 232
+    .line 243
     if-eqz p3, :cond_0
 
-    .line 235
+    .line 246
     const-string/jumbo v0, "Ktag_range_index"
 
     invoke-virtual {p3, v0, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 236
+    .line 247
     if-lt v1, v9, :cond_7
 
-    .line 237
+    .line 248
     const-string/jumbo v0, "Klabel_name_list"
 
     invoke-virtual {p3, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gLa:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gSF:Ljava/lang/String;
 
-    .line 238
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gLa:Ljava/lang/String;
+    .line 249
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gSF:Ljava/lang/String;
 
     const-string/jumbo v2, ","
 
@@ -405,12 +466,12 @@
 
     move-result-object v0
 
-    .line 239
+    .line 250
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gLb:Ljava/util/ArrayList;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gSG:Ljava/util/ArrayList;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -429,19 +490,19 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aOW()Lcom/tencent/mm/pluginsdk/i$e;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aTy()Lcom/tencent/mm/pluginsdk/i$e;
 
     move-result-object v3
 
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aOW()Lcom/tencent/mm/pluginsdk/i$e;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aTy()Lcom/tencent/mm/pluginsdk/i$e;
 
     move-result-object v4
 
-    invoke-interface {v4, v0}, Lcom/tencent/mm/pluginsdk/i$e;->qh(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v4, v0}, Lcom/tencent/mm/pluginsdk/i$e;->rx(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v3, v0}, Lcom/tencent/mm/pluginsdk/i$e;->qk(Ljava/lang/String;)Ljava/util/List;
+    invoke-interface {v3, v0}, Lcom/tencent/mm/pluginsdk/i$e;->rA(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
@@ -454,34 +515,34 @@
     if-nez v3, :cond_9
 
     :cond_5
-    const-string/jumbo v0, "!32@/B4Tb64lLpIZFTyMKm284J9F1ofS+Oqo"
+    const-string/jumbo v0, "MicroMsg.SightUploadUI"
 
     const-string/jumbo v2, "dz: getContactNamesFromLabels,namelist get bu label is null"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 240
+    .line 251
     :cond_6
     if-ne v1, v9, :cond_b
 
-    .line 241
-    iput-boolean v7, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gLc:Z
+    .line 252
+    iput-boolean v7, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gSH:Z
 
-    .line 246
+    .line 257
     :cond_7
     :goto_2
     if-ne v8, v1, :cond_c
 
-    .line 247
-    iput v8, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gLd:I
+    .line 258
+    iput v8, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gSI:I
 
     goto :goto_0
 
-    .line 229
+    .line 240
     :cond_8
     if-ne p1, v2, :cond_3
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->gLv:Lcom/tencent/mm/plugin/sns/ui/SightRangeWidget;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->gTa:Lcom/tencent/mm/plugin/sns/ui/SightRangeWidget;
 
     const/4 v1, 0x0
 
@@ -489,7 +550,7 @@
 
     goto :goto_1
 
-    .line 239
+    .line 250
     :cond_9
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -509,7 +570,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gLb:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gSG:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -517,11 +578,11 @@
 
     if-nez v4, :cond_a
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gLb:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gSG:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const-string/jumbo v4, "!32@/B4Tb64lLpIZFTyMKm284J9F1ofS+Oqo"
+    const-string/jumbo v4, "MicroMsg.SightUploadUI"
 
     const-string/jumbo v5, "dz:name : %s"
 
@@ -529,44 +590,44 @@
 
     aput-object v0, v6, v7
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_3
 
-    .line 243
+    .line 254
     :cond_b
-    iput-boolean v8, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gLc:Z
+    iput-boolean v8, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gSH:Z
 
     goto :goto_2
 
-    .line 249
+    .line 260
     :cond_c
-    iput v7, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gLd:I
+    iput v7, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->gSI:I
 
     goto/16 :goto_0
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 3
+    .locals 4
 
     .prologue
-    .line 47
+    .line 53
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 48
-    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/ae;
+    .line 54
+    new-instance v0, Lcom/tencent/mm/plugin/sns/ui/af;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/ae;-><init>(Lcom/tencent/mm/ui/MMActivity;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/af;-><init>(Lcom/tencent/mm/ui/MMActivity;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    .line 49
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    .line 55
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    invoke-interface {v0, p1}, Lcom/tencent/mm/plugin/sns/ui/t;->n(Landroid/os/Bundle;)V
+    invoke-interface {v0, p1}, Lcom/tencent/mm/plugin/sns/ui/v;->p(Landroid/os/Bundle;)V
 
-    .line 50
-    const v0, 0x7f070cd2
+    .line 56
+    const v0, 0x7f100ae4
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->findViewById(I)Landroid/view/View;
 
@@ -574,26 +635,26 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hbb:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoA:Landroid/widget/LinearLayout;
 
-    .line 51
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hbb:Landroid/widget/LinearLayout;
+    .line 57
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoA:Landroid/widget/LinearLayout;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    invoke-interface {v1}, Lcom/tencent/mm/plugin/sns/ui/t;->aAX()Landroid/view/View;
+    invoke-interface {v1}, Lcom/tencent/mm/plugin/sns/ui/v;->aDP()Landroid/view/View;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 52
-    const v0, 0x7f0b1651
+    .line 58
+    const v0, 0x7f081304
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->qb(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->rR(I)V
 
-    .line 53
-    iget-object v0, p0, Landroid/support/v7/app/ActionBarActivity;->iF:Landroid/support/v7/app/a;
+    .line 59
+    iget-object v0, p0, Landroid/support/v7/app/ActionBarActivity;->iW:Landroid/support/v7/app/a;
 
     invoke-virtual {v0}, Landroid/support/v7/app/a;->aP()Landroid/support/v7/app/ActionBar;
 
@@ -603,7 +664,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f08017d
+    const v2, 0x7f0f002f
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -611,10 +672,40 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v7/app/ActionBar;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 54
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->Gb()V
+    .line 60
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->getIntent()Landroid/content/Intent;
 
-    .line 55
+    move-result-object v0
+
+    const-string/jumbo v1, "KSnsPostManu"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoC:Z
+
+    .line 61
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "KTouchCameraTime"
+
+    const-wide/16 v2, 0x0
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoD:J
+
+    .line 62
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->Gy()V
+
+    .line 63
     return-void
 .end method
 
@@ -622,37 +713,37 @@
     .locals 2
 
     .prologue
-    .line 206
+    .line 217
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onDestroy()V
 
-    .line 207
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hba:Lcom/tencent/mm/plugin/sns/ui/t;
+    .line 218
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoz:Lcom/tencent/mm/plugin/sns/ui/v;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/t;->aAY()Z
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/v;->aDQ()Z
 
-    .line 208
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hbc:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
+    .line 219
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoB:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->hiv:Lcom/tencent/mm/plugin/sns/ui/SightLocationWidget;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->hxk:Lcom/tencent/mm/plugin/sns/ui/SightLocationWidget;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SightLocationWidget;->stop()V
 
-    .line 209
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hbc:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
+    .line 220
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoB:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->eYO:Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->fhi:Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->eYO:Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->fhi:Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;->RN()V
+    invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;->Th()V
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->eYO:Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->fhi:Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;
 
     invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;->destroy()V
 
-    .line 210
+    .line 221
     :cond_0
     return-void
 .end method
@@ -661,13 +752,13 @@
     .locals 0
 
     .prologue
-    .line 214
+    .line 225
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onPause()V
 
-    .line 215
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->age()V
+    .line 226
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->aiI()V
 
-    .line 216
+    .line 227
     return-void
 .end method
 
@@ -675,20 +766,20 @@
     .locals 3
 
     .prologue
-    .line 199
+    .line 210
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onResume()V
 
-    .line 200
-    const-string/jumbo v0, "!32@/B4Tb64lLpIZFTyMKm284J9F1ofS+Oqo"
+    .line 211
+    const-string/jumbo v0, "MicroMsg.SightUploadUI"
 
     const-string/jumbo v1, "onResume"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 201
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hbc:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
+    .line 212
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SightUploadUI;->hoB:Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->eYO:Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->fhi:Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;
 
     invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;->getVisibility()I
 
@@ -698,11 +789,11 @@
 
     if-ne v1, v2, :cond_0
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->arW:Lcom/tencent/mm/ui/MMActivity;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightUploadSayFooter;->adL:Lcom/tencent/mm/ui/MMActivity;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/MMActivity;->apz()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/MMActivity;->asv()V
 
-    .line 202
+    .line 213
     :cond_0
     return-void
 .end method

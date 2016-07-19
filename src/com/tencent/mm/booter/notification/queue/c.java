@@ -1,7 +1,7 @@
 package com.tencent.mm.booter.notification.queue;
 
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.platformtools.s;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.ObjectInputStream;
@@ -21,13 +21,13 @@ public final class c
     paramSerializable = URLEncoder.encode(localByteArrayOutputStream.toString("ISO-8859-1"), "UTF-8");
     localObjectOutputStream.close();
     localByteArrayOutputStream.close();
-    u.d("!44@/B4Tb64lLpKR3MWtFvfaIKHn+eBcObF9B5r+XbtqMAg=", "serialize consume: %s", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+    v.d("MicroMsg.NotificationQueueTool", "serialize consume: %s", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
     return paramSerializable;
   }
   
-  public static Serializable cO(String paramString)
+  public static Serializable cV(String paramString)
   {
-    if (t.kz(paramString)) {
+    if (s.kf(paramString)) {
       return null;
     }
     long l = System.currentTimeMillis();
@@ -36,7 +36,7 @@ public final class c
     Serializable localSerializable = (Serializable)localObjectInputStream.readObject();
     localObjectInputStream.close();
     paramString.close();
-    u.d("!44@/B4Tb64lLpKR3MWtFvfaIKHn+eBcObF9B5r+XbtqMAg=", "de serialize consume: %s", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+    v.d("MicroMsg.NotificationQueueTool", "de serialize consume: %s", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
     return localSerializable;
   }
 }

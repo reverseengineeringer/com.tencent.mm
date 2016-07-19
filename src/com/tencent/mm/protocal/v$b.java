@@ -1,41 +1,25 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.aey;
-import com.tencent.mm.protocal.b.alq;
-import com.tencent.mm.protocal.b.dd;
+import com.tencent.mm.protocal.b.afq;
+import com.tencent.mm.protocal.b.amb;
+import com.tencent.mm.protocal.b.dg;
 
 public final class v$b
-  extends h.d
-  implements h.b
+  extends k.d
+  implements k.b
 {
-  public byte[] cin;
-  public byte[] iUC;
-  public int iUD = 0;
-  public aey iVm = new aey();
+  public afq jsF = new afq();
   
-  public final void aJ(byte[] paramArrayOfByte)
+  public final int D(byte[] paramArrayOfByte)
   {
-    if (paramArrayOfByte != null) {}
-    for (;;)
-    {
-      cin = paramArrayOfByte;
-      return;
-      paramArrayOfByte = new byte[0];
-    }
+    jsF = ((afq)new afq().au(paramArrayOfByte));
+    k.a(this, jsF.kfH);
+    return jsF.kfH.jxr;
   }
   
   public final int getCmdId()
   {
-    return 0;
-  }
-  
-  public final int y(byte[] paramArrayOfByte)
-  {
-    iUD = 0;
-    iVm = ((aey)new aey().am(paramArrayOfByte));
-    h.a(this, iVm.jHj);
-    iUD = 0;
-    return iVm.jHj.iZL;
+    return 1000000027;
   }
 }
 

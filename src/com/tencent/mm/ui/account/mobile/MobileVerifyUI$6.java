@@ -10,7 +10,7 @@ final class MobileVerifyUI$6
   
   public final void onClick(View paramView)
   {
-    MobileVerifyUI.e(kzc);
+    MobileVerifyUI.e(kYj);
   }
 }
 

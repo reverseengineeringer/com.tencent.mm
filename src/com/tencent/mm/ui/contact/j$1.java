@@ -3,7 +3,7 @@ package com.tencent.mm.ui.contact;
 import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 
 final class j$1
   implements View.OnClickListener
@@ -14,8 +14,8 @@ final class j$1
   {
     Intent localIntent = new Intent();
     localIntent.putExtra("enterprise_from_scene", 2);
-    localIntent.putExtra("enterprise_biz_name", j.a(lkn));
-    c.c(paramView.getContext(), "brandservice", ".ui.EnterpriseNewBizListUI", localIntent);
+    localIntent.putExtra("enterprise_biz_name", j.a(lKy));
+    c.c(paramView.getContext(), "brandservice", ".ui.EnterpriseBizContactListUI", localIntent);
   }
 }
 

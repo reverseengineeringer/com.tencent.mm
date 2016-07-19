@@ -3,7 +3,7 @@ package com.tencent.mm.booter.notification.queue;
 import android.os.Parcelable.Creator;
 
 final class NotificationQueue$ParcelNotificationQueue$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<NotificationQueue.ParcelNotificationQueue>
 {}
 
 /* Location:

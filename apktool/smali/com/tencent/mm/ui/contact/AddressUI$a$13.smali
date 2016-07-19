@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/ui/contact/AddressUI$a;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/ui/contact/AddressUI$a;->beB()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+.field final synthetic lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1088
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$13;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    .line 1075
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$13;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,14 +37,30 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 4
 
     .prologue
-    .line 1091
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$13;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    const/4 v3, 0x1
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/contact/AddressUI$a;->m(Lcom/tencent/mm/ui/contact/AddressUI$a;)V
+    .line 1079
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$13;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
-    .line 1092
+    invoke-static {v0}, Lcom/tencent/mm/ui/contact/AddressUI$a;->a(Lcom/tencent/mm/ui/contact/AddressUI$a;)Lcom/tencent/mm/ui/contact/a;
+
+    move-result-object v0
+
+    iget-object v1, v0, Lcom/tencent/mm/ui/e;->TAG:Ljava/lang/String;
+
+    const-string/jumbo v2, "newcursor resume "
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput-boolean v3, v0, Lcom/tencent/mm/ui/e;->kJV:Z
+
+    const-string/jumbo v1, "resume"
+
+    invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/ui/e;->az(Ljava/lang/String;Z)V
+
+    .line 1080
     return-void
 .end method

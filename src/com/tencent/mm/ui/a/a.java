@@ -4,37 +4,37 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.view.View;
 import android.view.accessibility.AccessibilityManager;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
 
 public final class a
 {
-  public Context bzN;
-  public AccessibilityManager krA;
+  public Context bsQ;
+  public AccessibilityManager kQJ;
   
   public a(Context paramContext)
   {
-    bzN = paramContext;
-    krA = ((AccessibilityManager)bzN.getSystemService("accessibility"));
+    bsQ = paramContext;
+    kQJ = ((AccessibilityManager)bsQ.getSystemService("accessibility"));
   }
   
   public final void a(View paramView, String paramString1, int paramInt, String paramString2, String paramString3)
   {
-    if (!krA.isEnabled()) {}
-    while ((bzN == null) || (paramView == null) || (paramString1 == null) || (paramString2 == null) || (paramString3 == null)) {
+    if (!kQJ.isEnabled()) {}
+    while ((bsQ == null) || (paramView == null) || (paramString1 == null) || (paramString2 == null) || (paramString3 == null)) {
       return;
     }
     b localb = new b();
-    localb.Gn(paramString1);
+    localb.IC(paramString1);
     if (paramInt > 0) {
-      localb.Gn(bzN.getResources().getQuantityString(2131755027, 1, new Object[] { Integer.valueOf(paramInt) }));
+      localb.IC(bsQ.getResources().getQuantityString(2131361796, 1, new Object[] { Integer.valueOf(paramInt) }));
     }
-    localb.Gn(paramString2).Gn(paramString3);
-    localb.an(paramView);
+    localb.IC(paramString2).IC(paramString3);
+    localb.ar(paramView);
   }
   
   private static final class a
   {
-    private static final a krB = new a(y.getContext());
+    private static final a kQK = new a(aa.getContext());
   }
 }
 

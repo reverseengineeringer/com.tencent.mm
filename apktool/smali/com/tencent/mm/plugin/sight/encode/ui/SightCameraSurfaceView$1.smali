@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->axa()V
+    value = Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->azz()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+.field final synthetic gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 68
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,7 +51,7 @@
     const/4 v8, 0x0
 
     .line 72
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->getContext()Landroid/content/Context;
 
@@ -62,11 +62,11 @@
     if-eqz v0, :cond_4
 
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->gEc:Lcom/tencent/mm/plugin/sight/encode/ui/f;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->gKC:Lcom/tencent/mm/plugin/sight/encode/ui/f;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->getContext()Landroid/content/Context;
 
@@ -74,21 +74,21 @@
 
     check-cast v0, Landroid/app/Activity;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/f;->K(Landroid/app/Activity;)I
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/f;->F(Landroid/app/Activity;)I
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 74
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
-    iput-boolean v8, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->gEj:Z
+    iput-boolean v8, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->gKJ:Z
 
     .line 75
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->axk()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->azM()V
 
     .line 122
     :cond_0
@@ -97,11 +97,11 @@
 
     .line 77
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->gEc:Lcom/tencent/mm/plugin/sight/encode/ui/f;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->gKC:Lcom/tencent/mm/plugin/sight/encode/ui/f;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->a(Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;)Landroid/view/SurfaceHolder;
 
@@ -114,32 +114,32 @@
     if-eqz v0, :cond_2
 
     .line 78
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
-    iput-boolean v8, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->gEj:Z
+    iput-boolean v8, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->gKJ:Z
 
     .line 79
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->axl()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->azN()V
 
     goto :goto_0
 
     .line 81
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
-    iput-boolean v9, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->gEj:Z
+    iput-boolean v9, v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->gKJ:Z
 
     .line 82
-    const-string/jumbo v0, "!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4="
+    const-string/jumbo v0, "MicroMsg.SightCameraSurfaceView"
 
     const-string/jumbo v1, "preview camera ok"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 83
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->b(Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;)Landroid/view/SurfaceView;
 
@@ -150,7 +150,7 @@
     move-result-object v0
 
     .line 84
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
     invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->getResources()Landroid/content/res/Resources;
 
@@ -163,32 +163,32 @@
     .line 85
     const/16 v2, 0xe
 
-    invoke-static {v2}, Lcom/tencent/mm/compatible/util/c;->bV(I)Z
+    invoke-static {v2}, Lcom/tencent/mm/compatible/util/c;->cn(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
     .line 86
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->gEc:Lcom/tencent/mm/plugin/sight/encode/ui/f;
+    iget-object v2, v2, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->gKC:Lcom/tencent/mm/plugin/sight/encode/ui/f;
 
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDs:Lcom/tencent/mm/pluginsdk/l/a;
+    iget-object v2, v2, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJT:Lcom/tencent/mm/pluginsdk/m/a;
 
-    iget v2, v2, Lcom/tencent/mm/pluginsdk/l/a;->iFm:I
+    iget v2, v2, Lcom/tencent/mm/pluginsdk/m/a;->jch:I
 
     .line 87
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
-    iget-object v3, v3, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->gEc:Lcom/tencent/mm/plugin/sight/encode/ui/f;
+    iget-object v3, v3, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->gKC:Lcom/tencent/mm/plugin/sight/encode/ui/f;
 
-    iget-object v3, v3, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDs:Lcom/tencent/mm/pluginsdk/l/a;
+    iget-object v3, v3, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJT:Lcom/tencent/mm/pluginsdk/m/a;
 
-    iget v3, v3, Lcom/tencent/mm/pluginsdk/l/a;->iFn:I
+    iget v3, v3, Lcom/tencent/mm/pluginsdk/m/a;->jci:I
 
     .line 88
-    const-string/jumbo v4, "!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4="
+    const-string/jumbo v4, "MicroMsg.SightCameraSurfaceView"
 
     const-string/jumbo v5, "below 4.0, resizeLayout priveview[%d, %d], dm[%d, %d]"
 
@@ -222,7 +222,7 @@
 
     aput-object v7, v6, v11
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 90
     iget v4, v1, Landroid/util/DisplayMetrics;->widthPixels:I
@@ -240,7 +240,7 @@
 
     .line 100
     :goto_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4="
+    const-string/jumbo v1, "MicroMsg.SightCameraSurfaceView"
 
     const-string/jumbo v2, "resizeLayout width:%d, height:%d"
 
@@ -262,10 +262,10 @@
 
     aput-object v4, v3, v9
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 102
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->c(Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;)Z
 
@@ -274,7 +274,7 @@
     if-nez v1, :cond_0
 
     .line 103
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
     new-instance v2, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1$1;
 
@@ -283,7 +283,7 @@
     invoke-virtual {v1, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->post(Ljava/lang/Runnable;)Z
 
     .line 114
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->d(Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;)Z
 
@@ -291,25 +291,25 @@
 
     .line 93
     :cond_3
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->gEc:Lcom/tencent/mm/plugin/sight/encode/ui/f;
+    iget-object v2, v2, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->gKC:Lcom/tencent/mm/plugin/sight/encode/ui/f;
 
-    iget-object v2, v2, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDs:Lcom/tencent/mm/pluginsdk/l/a;
+    iget-object v2, v2, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJT:Lcom/tencent/mm/pluginsdk/m/a;
 
-    iget v2, v2, Lcom/tencent/mm/pluginsdk/l/a;->iFn:I
+    iget v2, v2, Lcom/tencent/mm/pluginsdk/m/a;->jci:I
 
     .line 94
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
-    iget-object v3, v3, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->gEc:Lcom/tencent/mm/plugin/sight/encode/ui/f;
+    iget-object v3, v3, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->gKC:Lcom/tencent/mm/plugin/sight/encode/ui/f;
 
-    iget-object v3, v3, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gDs:Lcom/tencent/mm/pluginsdk/l/a;
+    iget-object v3, v3, Lcom/tencent/mm/plugin/sight/encode/ui/f;->gJT:Lcom/tencent/mm/pluginsdk/m/a;
 
-    iget v3, v3, Lcom/tencent/mm/pluginsdk/l/a;->iFm:I
+    iget v3, v3, Lcom/tencent/mm/pluginsdk/m/a;->jch:I
 
     .line 95
-    const-string/jumbo v4, "!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4="
+    const-string/jumbo v4, "MicroMsg.SightCameraSurfaceView"
 
     const-string/jumbo v5, "resizeLayout priveview[%d, %d], dm[%d, %d]"
 
@@ -343,16 +343,16 @@
 
     aput-object v7, v6, v11
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 97
     iget v1, v1, Landroid/util/DisplayMetrics;->widthPixels:I
 
     mul-int/2addr v1, v3
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
-    iget v4, v4, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->gAy:I
+    iget v4, v4, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->gHa:I
 
     div-int/2addr v1, v4
 
@@ -371,16 +371,16 @@
 
     .line 119
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gDS:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView$1;->gKs:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->axk()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;->azM()V
 
     .line 120
-    const-string/jumbo v0, "!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4="
+    const-string/jumbo v0, "MicroMsg.SightCameraSurfaceView"
 
     const-string/jumbo v1, "bug???"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 .end method

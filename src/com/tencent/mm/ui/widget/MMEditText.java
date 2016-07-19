@@ -11,16 +11,16 @@ import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
-import com.tencent.mm.ay.g;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.bb.g;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class MMEditText
   extends EditText
 {
-  int iGT = 0;
-  private InputConnection lFb;
-  private a lFc;
+  int jdO = 0;
+  public InputConnection mfQ;
+  public a mfR;
   
   public MMEditText(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -32,10 +32,10 @@ public class MMEditText
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  private void Az(String paramString)
+  private void CA(String paramString)
   {
     int i = getSelectionStart();
-    setText(g.aWe().c(getContext(), paramString, getTextSize()));
+    setText(g.bbq().c(getContext(), paramString, getTextSize()));
     int j = getText().length() - paramString.length();
     if (j > 0)
     {
@@ -48,44 +48,39 @@ public class MMEditText
     setSelection(i);
   }
   
-  public final void HO(String paramString)
+  public final void Kd(String paramString)
   {
-    g.aWe();
+    g.bbq();
     int i = g.h(getContext(), getText().toString(), getSelectionStart());
-    g.aWe();
+    g.bbq();
     int j = g.h(getContext(), getText().toString(), getSelectionEnd());
     Object localObject = new StringBuffer(getText());
     localObject = ((StringBuffer)localObject).substring(0, i) + paramString + ((StringBuffer)localObject).substring(j, ((StringBuffer)localObject).length());
-    setText(g.aWe().c(getContext(), (CharSequence)localObject, getTextSize()));
+    setText(g.bbq().c(getContext(), (CharSequence)localObject, getTextSize()));
     setSelection(i + paramString.length());
-  }
-  
-  public InputConnection getInputConnection()
-  {
-    return lFb;
   }
   
   public InputConnection onCreateInputConnection(EditorInfo paramEditorInfo)
   {
-    lFb = super.onCreateInputConnection(paramEditorInfo);
-    return lFb;
+    mfQ = super.onCreateInputConnection(paramEditorInfo);
+    return mfQ;
   }
   
   public boolean onKeyPreIme(int paramInt, KeyEvent paramKeyEvent)
   {
     boolean bool;
     KeyEvent.DispatcherState localDispatcherState;
-    if (lFc == null)
+    if (mfR == null)
     {
       bool = true;
-      u.v("!32@/B4Tb64lLpKIBwYy27eZfJEyh0MS+Du5", "on onKeyPreIme, listener null ? %B", new Object[] { Boolean.valueOf(bool) });
-      if ((lFc == null) || (paramInt != 4)) {
+      v.v("MicroMsg.MMEditText", "on onKeyPreIme, listener null ? %B", new Object[] { Boolean.valueOf(bool) });
+      if ((mfR == null) || (paramInt != 4)) {
         break label176;
       }
       if ((paramKeyEvent.getAction() != 0) || (paramKeyEvent.getRepeatCount() != 0)) {
         break label85;
       }
-      u.v("!32@/B4Tb64lLpKIBwYy27eZfJEyh0MS+Du5", "on onKeyPreIme action down");
+      v.v("MicroMsg.MMEditText", "on onKeyPreIme action down");
       localDispatcherState = getKeyDispatcherState();
       if (localDispatcherState != null) {
         localDispatcherState.startTracking(paramKeyEvent, this);
@@ -100,7 +95,7 @@ public class MMEditText
       if (paramKeyEvent.getAction() != 1) {
         break label176;
       }
-      u.v("!32@/B4Tb64lLpKIBwYy27eZfJEyh0MS+Du5", "on onKeyPreIme action up");
+      v.v("MicroMsg.MMEditText", "on onKeyPreIme action up");
       localDispatcherState = getKeyDispatcherState();
       if (localDispatcherState != null) {
         localDispatcherState.handleUpEvent(paramKeyEvent);
@@ -108,8 +103,8 @@ public class MMEditText
       if ((!paramKeyEvent.isTracking()) || (paramKeyEvent.isCanceled())) {
         break label176;
       }
-      u.v("!32@/B4Tb64lLpKIBwYy27eZfJEyh0MS+Du5", "on onKeyPreIme action up is tracking");
-      lFc.ahl();
+      v.v("MicroMsg.MMEditText", "on onKeyPreIme action up is tracking");
+      mfR.ajQ();
       paramKeyEvent = (InputMethodManager)getContext().getSystemService("input_method");
     } while (paramKeyEvent == null);
     paramKeyEvent.hideSoftInputFromWindow(getWindowToken(), 0);
@@ -124,56 +119,51 @@ public class MMEditText
     String str;
     if (paramInt == 16908322)
     {
-      iGT = 0;
+      jdO = 0;
       str = getText().toString();
     }
     try
     {
-      Az(str);
+      CA(str);
       return bool;
     }
     catch (IndexOutOfBoundsException localIndexOutOfBoundsException)
     {
-      u.e("!32@/B4Tb64lLpKIBwYy27eZfJEyh0MS+Du5", "!!MMEditText Exception %d", new Object[] { Integer.valueOf(iGT) });
-      if (iGT < 3)
+      v.e("MicroMsg.MMEditText", "!!MMEditText Exception %d", new Object[] { Integer.valueOf(jdO) });
+      if (jdO < 3)
       {
-        iGT += 1;
-        Az(" " + str);
+        jdO += 1;
+        CA(" " + str);
         return bool;
       }
       throw localIndexOutOfBoundsException;
     }
   }
   
-  public void setBackListener(a parama)
-  {
-    lFc = parama;
-  }
-  
   public static abstract interface a
   {
-    public abstract void ahl();
+    public abstract void ajQ();
   }
   
   public static abstract interface b
   {
-    public abstract void aqD();
+    public abstract void atE();
   }
   
   public static final class c
     implements TextWatcher
   {
-    private final int aiH;
-    private EditText fEO;
-    private TextView lFd;
-    public MMEditText.b lFe = null;
-    private boolean lFf = false;
+    private final int Ux;
+    private EditText fNQ;
+    private TextView mfS;
+    public MMEditText.b mfT = null;
+    private boolean mfU = false;
     
     public c(EditText paramEditText, TextView paramTextView, int paramInt)
     {
-      fEO = paramEditText;
-      lFd = paramTextView;
-      aiH = paramInt;
+      fNQ = paramEditText;
+      mfS = paramTextView;
+      Ux = paramInt;
     }
     
     public final void afterTextChanged(Editable paramEditable)
@@ -186,13 +176,13 @@ public class MMEditText
       int k = i;
       if (j < str1.length())
       {
-        if (ay.e(str1.charAt(j))) {
+        if (be.g(str1.charAt(j))) {
           i += 2;
         }
         for (;;)
         {
           k = i;
-          if (i > aiH) {
+          if (i > Ux) {
             break label93;
           }
           paramEditable = paramEditable + str1.charAt(j);
@@ -202,39 +192,39 @@ public class MMEditText
         }
       }
       label93:
-      if (k > aiH) {}
+      if (k > Ux) {}
       for (;;)
       {
         try
         {
-          fEO.setText(paramEditable);
-          if (lFf) {
+          fNQ.setText(paramEditable);
+          if (mfU) {
             continue;
           }
-          i = fEO.getText().toString().length();
-          fEO.setSelection(i);
-          lFf = false;
+          i = fNQ.getText().toString().length();
+          fNQ.setSelection(i);
+          mfU = false;
         }
         catch (Exception localException)
         {
-          lFf = true;
+          mfU = true;
           String str2 = localException.getMessage();
-          u.e("!32@/B4Tb64lLpKIBwYy27eZfJEyh0MS+Du5", "error " + str2);
-          fEO.setText(paramEditable);
-          fEO.setSelection(0);
+          v.e("MicroMsg.MMEditText", "error " + str2);
+          fNQ.setText(paramEditable);
+          fNQ.setSelection(0);
           continue;
           continue;
         }
-        i = aiH - k;
+        i = Ux - k;
         if (i >= 0) {
           continue;
         }
         i = m;
-        if (lFd != null) {
-          lFd.setText(i / 2);
+        if (mfS != null) {
+          mfS.setText(i / 2);
         }
         return;
-        fEO.setSelection(0);
+        fNQ.setSelection(0);
       }
     }
     
@@ -242,8 +232,8 @@ public class MMEditText
     
     public final void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
     {
-      if (lFe != null) {
-        lFe.aqD();
+      if (mfT != null) {
+        mfT.atE();
       }
     }
   }

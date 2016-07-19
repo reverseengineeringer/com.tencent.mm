@@ -15,26 +15,26 @@
 
 
 # virtual methods
-.method public abstract E(Lcom/tencent/mm/protocal/b/add;)Ljava/lang/String;
+.method public abstract E(Lcom/tencent/mm/protocal/b/adw;)Ljava/lang/String;
 .end method
 
-.method public abstract V(Ljava/lang/String;Z)Z
+.method public abstract a(Ljava/lang/String;Lcom/tencent/mm/protocal/b/ary;)Z
 .end method
 
-.method public abstract W(Ljava/lang/String;Z)Lcom/tencent/mm/protocal/b/arm;
+.method public abstract aCP()V
 .end method
 
-.method public abstract a(Ljava/lang/String;Lcom/tencent/mm/protocal/b/arm;)Z
+.method public abstract aCQ()V
 .end method
 
-.method public abstract aAc()V
+.method public abstract ab(Ljava/lang/String;Z)Z
 .end method
 
-.method public abstract aAd()V
+.method public abstract ac(Ljava/lang/String;Z)Lcom/tencent/mm/protocal/b/ary;
 .end method
 
-.method public abstract b(Ljava/lang/String;Lcom/tencent/mm/protocal/b/arm;)Lcom/tencent/mm/protocal/b/arm;
+.method public abstract b(Ljava/lang/String;Lcom/tencent/mm/protocal/b/ary;)Lcom/tencent/mm/protocal/b/ary;
 .end method
 
-.method public abstract vs(Ljava/lang/String;)Lcom/tencent/mm/protocal/b/arm;
+.method public abstract wE(Ljava/lang/String;)Lcom/tencent/mm/protocal/b/ary;
 .end method

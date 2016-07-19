@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto">
+    <PreferenceTitleCategory android:title="@string/b3" />
+    <com.tencent.mm.plugin.subapp.ui.openapi.AppPreference android:layout="@layout/at" android:btn_visibility="bb" android:can_delete="true" android:empty_wording="@string/b5" android:key="addapp_added" />
+    <PreferenceCategory android:key="addapp_cat2" />
+    <PreferenceTitleCategory android:title="@string/b4" />
+    <com.tencent.mm.plugin.subapp.ui.openapi.AppPreference android:layout="@layout/at" android:btn_visibility="bb" android:empty_wording="@string/b6" android:key="addapp_available" />
+    <PreferenceCategory android:key="addapp_cat3" />
+</PreferenceScreen>

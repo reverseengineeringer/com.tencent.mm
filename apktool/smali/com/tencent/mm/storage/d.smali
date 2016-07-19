@@ -10,15 +10,33 @@
     }
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/h/f",
+        "<",
+        "Lcom/tencent/mm/e/b/c;",
+        ">;"
+    }
+.end annotation
+
 
 # static fields
-.field public static final aoY:[Ljava/lang/String;
+.field public static final bkN:[Ljava/lang/String;
 
 
 # instance fields
-.field private bCw:Lcom/tencent/mm/az/g;
+.field private bvG:Lcom/tencent/mm/bc/g;
 
-.field kaa:Landroid/util/SparseArray;
+.field kAw:Landroid/util/SparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/SparseArray",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -33,7 +51,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {}, Lcom/tencent/mm/d/b/c;->lY()Lcom/tencent/mm/sdk/h/c$a;
+    invoke-static {}, Lcom/tencent/mm/e/b/c;->ko()Lcom/tencent/mm/sdk/h/c$a;
 
     move-result-object v2
 
@@ -45,7 +63,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/storage/d;->aoY:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/storage/d;->bkN:[Ljava/lang/String;
 
     return-void
 .end method
@@ -55,7 +73,7 @@
 
     .prologue
     .line 29
-    invoke-static {}, Lcom/tencent/mm/d/b/c;->lY()Lcom/tencent/mm/sdk/h/c$a;
+    invoke-static {}, Lcom/tencent/mm/e/b/c;->ko()Lcom/tencent/mm/sdk/h/c$a;
 
     move-result-object v0
 
@@ -70,12 +88,12 @@
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/storage/d;->kaa:Landroid/util/SparseArray;
+    iput-object v0, p0, Lcom/tencent/mm/storage/d;->kAw:Landroid/util/SparseArray;
 
     .line 31
-    check-cast p1, Lcom/tencent/mm/az/g;
+    check-cast p1, Lcom/tencent/mm/bc/g;
 
-    iput-object p1, p0, Lcom/tencent/mm/storage/d;->bCw:Lcom/tencent/mm/az/g;
+    iput-object p1, p0, Lcom/tencent/mm/storage/d;->bvG:Lcom/tencent/mm/bc/g;
 
     .line 32
     return-void
@@ -83,14 +101,14 @@
 
 
 # virtual methods
-.method public final DP(Ljava/lang/String;)Ljava/lang/String;
+.method public final Ge(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
     .prologue
     const/4 v1, 0x0
 
     .line 70
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -105,7 +123,7 @@
 
     .line 74
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/storage/d;->kaa:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcom/tencent/mm/storage/d;->kAw:Landroid/util/SparseArray;
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -118,7 +136,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 75
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -156,7 +174,7 @@
 
     iget-object v2, v0, Lcom/tencent/mm/storage/d$a;->field_ticket:Ljava/lang/String;
 
-    invoke-virtual {p0, v1, v2}, Lcom/tencent/mm/storage/d;->cm(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v1, v2}, Lcom/tencent/mm/storage/d;->cA(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 84
     iget-object v0, v0, Lcom/tencent/mm/storage/d$a;->field_ticket:Ljava/lang/String;
@@ -170,8 +188,17 @@
     goto :goto_0
 .end method
 
-.method public final br(Ljava/util/List;)V
+.method public final bA(Ljava/util/List;)V
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/e/b/c;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
     .line 49
@@ -187,7 +214,7 @@
 
     .line 53
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/storage/d;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v0, p0, Lcom/tencent/mm/storage/d;->bvG:Lcom/tencent/mm/bc/g;
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -195,29 +222,29 @@
 
     invoke-virtual {v1}, Ljava/lang/Thread;->getId()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/az/g;->dH(J)J
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/bc/g;->dY(J)J
 
-    move-result-wide v1
+    move-result-wide v2
 
     .line 54
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v3
+    move-result-object v1
 
     :goto_1
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/d/b/c;
+    check-cast v0, Lcom/tencent/mm/e/b/c;
 
     .line 55
     invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/d;->b(Lcom/tencent/mm/sdk/h/c;)Z
@@ -226,19 +253,19 @@
 
     .line 58
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/storage/d;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v0, p0, Lcom/tencent/mm/storage/d;->bvG:Lcom/tencent/mm/bc/g;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/az/g;->dI(J)I
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/bc/g;->dZ(J)I
 
     goto :goto_0
 .end method
 
-.method public final cm(Ljava/lang/String;Ljava/lang/String;)V
+.method public final cA(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
     .prologue
     .line 62
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -250,7 +277,7 @@
 
     .line 66
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/storage/d;->kaa:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcom/tencent/mm/storage/d;->kAw:Landroid/util/SparseArray;
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 

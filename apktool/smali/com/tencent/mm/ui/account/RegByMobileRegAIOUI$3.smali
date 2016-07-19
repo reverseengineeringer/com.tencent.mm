@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+.field final synthetic kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 524
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$3;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 525
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$3;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,16 +42,14 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 528
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$3;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 529
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$3;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->i(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Lcom/tencent/mm/ui/base/MMFormInputView;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMFormInputView;->getContentEditText()Landroid/widget/EditText;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMFormInputView;->fNQ:Landroid/widget/EditText;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/a/c;->a(Landroid/widget/EditText;)Lcom/tencent/mm/ui/tools/a/c;
 
@@ -59,11 +57,11 @@
 
     const/16 v1, 0x20
 
-    invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/ui/tools/a/c;->bV(II)Lcom/tencent/mm/ui/tools/a/c;
+    invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/ui/tools/a/c;->cc(II)Lcom/tencent/mm/ui/tools/a/c;
 
     move-result-object v0
 
-    iput-boolean v2, v0, Lcom/tencent/mm/ui/tools/a/c;->lzG:Z
+    iput-boolean v2, v0, Lcom/tencent/mm/ui/tools/a/c;->mav:Z
 
     new-instance v1, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$3$1;
 
@@ -71,6 +69,6 @@
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/a/c;->a(Lcom/tencent/mm/ui/tools/a/c$a;)V
 
-    .line 555
+    .line 556
     return-void
 .end method

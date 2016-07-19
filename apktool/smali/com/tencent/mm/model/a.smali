@@ -4,14 +4,14 @@
 
 
 # instance fields
-.field public bzg:[B
+.field public bsd:[B
 
-.field public bzh:J
+.field public bse:J
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 23
@@ -20,10 +20,10 @@
     .line 64
     const-wide/16 v0, -0x1
 
-    iput-wide v0, p0, Lcom/tencent/mm/model/a;->bzh:J
+    iput-wide v0, p0, Lcom/tencent/mm/model/a;->bse:J
 
     .line 24
-    invoke-static {}, Lcom/tencent/mm/model/a;->re()Z
+    invoke-static {}, Lcom/tencent/mm/model/a;->rd()Z
 
     move-result v0
 
@@ -34,16 +34,16 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/model/a$1;-><init>(Lcom/tencent/mm/model/a;)V
 
-    const-wide/16 v1, 0x1388
+    const-wide/16 v2, 0x1388
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/ab;->e(Ljava/lang/Runnable;J)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ad;->e(Ljava/lang/Runnable;J)V
 
     .line 38
     :cond_0
     return-void
 .end method
 
-.method public static re()Z
+.method public static rd()Z
     .locals 10
 
     .prologue
@@ -52,13 +52,13 @@
     const/4 v1, 0x0
 
     .line 42
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tM()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tN()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v2
 
@@ -74,22 +74,22 @@
 
     .line 45
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/g/h;->pS()Lcom/tencent/mm/g/e;
+    invoke-static {}, Lcom/tencent/mm/h/h;->om()Lcom/tencent/mm/h/e;
 
     move-result-object v2
 
     const-string/jumbo v3, "AndroidUseWorkerAuthCache"
 
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/g/e;->getValue(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/h/e;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/be;->getInt(Ljava/lang/String;I)I
 
     move-result v2
 
     .line 46
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v3
 
@@ -102,12 +102,12 @@
     move-result v3
 
     .line 48
-    invoke-static {}, Lcom/tencent/mm/sdk/b/b;->aUo()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/b/b;->aZo()Z
 
     move-result v4
 
     .line 50
-    const-string/jumbo v5, "!44@/B4Tb64lLpLEGVwVFEpAHktoF8fiVITamsAi0LNQQfI="
+    const-string/jumbo v5, "MicroMsg.AccInfoCacheInWorker"
 
     const-string/jumbo v6, "checkUse debug:%s dyVal:%s uin:%d  uinHash:%d"
 
@@ -129,7 +129,7 @@
 
     const/4 v8, 0x2
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v9
 
@@ -149,7 +149,7 @@
 
     aput-object v9, v7, v8
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 52
     if-nez v4, :cond_1
@@ -163,7 +163,7 @@
     goto :goto_0
 .end method
 
-.method public static rf()V
+.method public static re()V
     .locals 12
 
     .prologue
@@ -172,7 +172,7 @@
     const/4 v10, 0x0
 
     .line 89
-    invoke-static {}, Lcom/tencent/mm/model/a;->re()Z
+    invoke-static {}, Lcom/tencent/mm/model/a;->rd()Z
 
     move-result v0
 
@@ -186,35 +186,35 @@
     .line 93
     :cond_1
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    iget-object v7, v0, Lcom/tencent/mm/model/c;->bzF:Lcom/tencent/mm/model/a;
+    iget-object v7, v0, Lcom/tencent/mm/model/c;->bsE:Lcom/tencent/mm/model/a;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/tencent/mm/r/m;->bFO:Lcom/tencent/mm/network/e;
-
-    invoke-interface {v0}, Lcom/tencent/mm/network/e;->vW()Lcom/tencent/mm/network/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
+    iget-object v0, v0, Lcom/tencent/mm/t/m;->byZ:Lcom/tencent/mm/network/e;
+
+    invoke-interface {v0}, Lcom/tencent/mm/network/e;->vY()Lcom/tencent/mm/network/c;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gp()J
 
     move-result-wide v8
 
     if-nez v0, :cond_2
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpLEGVwVFEpAHktoF8fiVITamsAi0LNQQfI="
+    const-string/jumbo v0, "MicroMsg.AccInfoCacheInWorker"
 
     const-string/jumbo v1, "backupToWorker  accinfo == null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0xe2
 
@@ -224,7 +224,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -235,26 +235,26 @@
     move-exception v0
 
     .line 95
-    const-string/jumbo v1, "!44@/B4Tb64lLpLEGVwVFEpAHktoF8fiVITamsAi0LNQQfI="
+    const-string/jumbo v1, "MicroMsg.AccInfoCacheInWorker"
 
     const-string/jumbo v2, "tryBackupToWorker Exception:%s"
 
     new-array v3, v11, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v3, v10
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 93
     :cond_2
     :try_start_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpLEGVwVFEpAHktoF8fiVITamsAi0LNQQfI="
+    const-string/jumbo v1, "MicroMsg.AccInfoCacheInWorker"
 
     const-string/jumbo v2, "backupToWorker islogin:%b cache:%s"
 
@@ -264,7 +264,7 @@
 
     const/4 v4, 0x0
 
-    invoke-interface {v0}, Lcom/tencent/mm/network/c;->vS()Z
+    invoke-interface {v0}, Lcom/tencent/mm/network/c;->vU()Z
 
     move-result v5
 
@@ -276,7 +276,7 @@
 
     const/4 v4, 0x1
 
-    invoke-virtual {v7}, Lcom/tencent/mm/model/a;->rd()I
+    invoke-virtual {v7}, Lcom/tencent/mm/model/a;->rc()I
 
     move-result v5
 
@@ -286,15 +286,15 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-interface {v0}, Lcom/tencent/mm/network/c;->vS()Z
+    invoke-interface {v0}, Lcom/tencent/mm/network/c;->vU()Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0xe2
 
@@ -304,28 +304,28 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpLEGVwVFEpAHktoF8fiVITamsAi0LNQQfI="
+    const-string/jumbo v0, "MicroMsg.AccInfoCacheInWorker"
 
     const-string/jumbo v1, "backupToWorker ERR: Is Not Login"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_3
-    invoke-interface {v0}, Lcom/tencent/mm/network/c;->vV()[B
+    invoke-interface {v0}, Lcom/tencent/mm/network/c;->vX()[B
 
     move-result-object v0
 
-    iput-object v0, v7, Lcom/tencent/mm/model/a;->bzg:[B
+    iput-object v0, v7, Lcom/tencent/mm/model/a;->bsd:[B
 
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0xe2
 
-    invoke-virtual {v7}, Lcom/tencent/mm/model/a;->rd()I
+    invoke-virtual {v7}, Lcom/tencent/mm/model/a;->rc()I
 
     move-result v2
 
@@ -338,9 +338,9 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpLEGVwVFEpAHktoF8fiVITamsAi0LNQQfI="
+    const-string/jumbo v0, "MicroMsg.AccInfoCacheInWorker"
 
     const-string/jumbo v1, "backupToWorker time:%s cache:%s useCacheCount:%s "
 
@@ -350,7 +350,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v8, v9}, Lcom/tencent/mm/sdk/platformtools/ay;->an(J)J
+    invoke-static {v8, v9}, Lcom/tencent/mm/sdk/platformtools/be;->au(J)J
 
     move-result-wide v4
 
@@ -362,7 +362,7 @@
 
     const/4 v3, 0x1
 
-    invoke-virtual {v7}, Lcom/tencent/mm/model/a;->rd()I
+    invoke-virtual {v7}, Lcom/tencent/mm/model/a;->rc()I
 
     move-result v4
 
@@ -374,7 +374,7 @@
 
     const/4 v3, 0x2
 
-    iget-wide v4, v7, Lcom/tencent/mm/model/a;->bzh:J
+    iget-wide v4, v7, Lcom/tencent/mm/model/a;->bse:J
 
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -382,21 +382,21 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {v7}, Lcom/tencent/mm/model/a;->rd()I
+    invoke-virtual {v7}, Lcom/tencent/mm/model/a;->rc()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v0, 0xe2
 
     const-wide/16 v4, 0x1f
 
-    iget-wide v2, v7, Lcom/tencent/mm/model/a;->bzh:J
+    iget-wide v2, v7, Lcom/tencent/mm/model/a;->bse:J
 
     const-wide/16 v8, 0x5
 
@@ -413,9 +413,9 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v1, 0x2b5a
 
@@ -435,7 +435,7 @@
 
     const/4 v3, 0x1
 
-    iget-wide v4, v7, Lcom/tencent/mm/model/a;->bzh:J
+    iget-wide v4, v7, Lcom/tencent/mm/model/a;->bse:J
 
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -443,11 +443,11 @@
 
     aput-object v4, v2, v3
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     const-wide/16 v0, -0x1
 
-    iput-wide v0, v7, Lcom/tencent/mm/model/a;->bzh:J
+    iput-wide v0, v7, Lcom/tencent/mm/model/a;->bse:J
 
     goto/16 :goto_0
 
@@ -457,7 +457,7 @@
     goto :goto_1
 
     :cond_5
-    iget-wide v2, v7, Lcom/tencent/mm/model/a;->bzh:J
+    iget-wide v2, v7, Lcom/tencent/mm/model/a;->bse:J
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -466,12 +466,12 @@
 
 
 # virtual methods
-.method public final rd()I
+.method public final rc()I
     .locals 1
 
     .prologue
     .line 20
-    iget-object v0, p0, Lcom/tencent/mm/model/a;->bzg:[B
+    iget-object v0, p0, Lcom/tencent/mm/model/a;->bsd:[B
 
     if-nez v0, :cond_0
 
@@ -481,7 +481,7 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/model/a;->bzg:[B
+    iget-object v0, p0, Lcom/tencent/mm/model/a;->bsd:[B
 
     array-length v0, v0
 

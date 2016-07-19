@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hdJ:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;
+.field final synthetic hsw:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 567
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6$1;->hdJ:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6$1;->hsw:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final Om()V
+.method public final Px()V
     .locals 0
 
     .prologue
@@ -44,41 +44,41 @@
     return-void
 .end method
 
-.method public final On()V
+.method public final Py()V
     .locals 3
 
     .prologue
     .line 581
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6$1;->hdJ:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6$1;->hsw:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->d(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;)Lcom/tencent/mm/ui/MMActivity;
 
     move-result-object v0
 
-    const v1, 0x7f0b164b
+    const v1, 0x7f081311
 
-    const v2, 0x7f0b164a
+    const v2, 0x7f081312
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->f(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
     .line 584
     return-void
 .end method
 
-.method public final mm(Ljava/lang/String;)V
+.method public final ng(Ljava/lang/String;)V
     .locals 2
 
     .prologue
     .line 570
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6$1;->hdJ:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6$1;->hsw:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;->hdI:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$c;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;->hsv:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$c;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6$1;->hdJ:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6$1;->hsw:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;)Lcom/tencent/mm/ui/widget/MMEditText;
 
@@ -92,12 +92,12 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$c;->vM(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$c;->wZ(Ljava/lang/String;)V
 
     .line 571
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6$1;->hdJ:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6$1;->hsw:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$6;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;)Lcom/tencent/mm/ui/widget/MMEditText;
 

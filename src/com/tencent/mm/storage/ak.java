@@ -1,119 +1,53 @@
 package com.tencent.mm.storage;
 
-import android.content.ContentValues;
-import android.database.Cursor;
+import com.tencent.mm.e.b.bl;
+import com.tencent.mm.sdk.h.c.a;
+import java.lang.reflect.Field;
+import java.util.Map;
 
 public final class ak
+  extends bl
 {
-  public int aou = 135;
-  public int kgA;
-  public a kgz = null;
-  public String name = "";
-  public int status;
+  protected static c.a bjR;
   
-  public ak()
+  static
   {
-    kgz = null;
-    name = "";
-    status = 0;
-    kgA = 0;
+    c.a locala = new c.a();
+    bZI = new Field[6];
+    aZx = new String[7];
+    StringBuilder localStringBuilder = new StringBuilder();
+    aZx[0] = "appId";
+    kyU.put("appId", "TEXT PRIMARY KEY ");
+    localStringBuilder.append(" appId TEXT PRIMARY KEY ");
+    localStringBuilder.append(", ");
+    kyT = "appId";
+    aZx[1] = "packageName";
+    kyU.put("packageName", "TEXT");
+    localStringBuilder.append(" packageName TEXT");
+    localStringBuilder.append(", ");
+    aZx[2] = "status";
+    kyU.put("status", "INTEGER default '0' ");
+    localStringBuilder.append(" status INTEGER default '0' ");
+    localStringBuilder.append(", ");
+    aZx[3] = "sceneFlag";
+    kyU.put("sceneFlag", "INTEGER default '0' ");
+    localStringBuilder.append(" sceneFlag INTEGER default '0' ");
+    localStringBuilder.append(", ");
+    aZx[4] = "msgTypeFlag";
+    kyU.put("msgTypeFlag", "INTEGER default '0' ");
+    localStringBuilder.append(" msgTypeFlag INTEGER default '0' ");
+    localStringBuilder.append(", ");
+    aZx[5] = "msgState";
+    kyU.put("msgState", "INTEGER default '0' ");
+    localStringBuilder.append(" msgState INTEGER default '0' ");
+    aZx[6] = "rowid";
+    kyV = localStringBuilder.toString();
+    bjR = locala;
   }
   
-  public ak(String paramString, boolean paramBoolean, int paramInt)
+  protected final c.a ou()
   {
-    kgz = new a(paramString);
-    name = paramString;
-    if (paramBoolean) {}
-    for (int i = 1;; i = 0)
-    {
-      status = (i | 0x2);
-      kgA = paramInt;
-      return;
-    }
-  }
-  
-  public final boolean PN()
-  {
-    return (status & 0x1) != 0;
-  }
-  
-  public final boolean aXX()
-  {
-    return (status & 0x2) != 0;
-  }
-  
-  public final void c(Cursor paramCursor)
-  {
-    if ((aou & 0x2) != 0)
-    {
-      name = paramCursor.getString(1);
-      if (kgz == null) {
-        kgz = new a(name);
-      }
-    }
-    if ((aou & 0x4) != 0) {
-      status = paramCursor.getInt(2);
-    }
-    if ((aou & 0x80) != 0) {
-      kgA = paramCursor.getInt(7);
-    }
-  }
-  
-  public final ContentValues lX()
-  {
-    ContentValues localContentValues = new ContentValues();
-    if ((aou & 0x2) != 0) {
-      localContentValues.put("name", name);
-    }
-    if ((aou & 0x4) != 0) {
-      localContentValues.put("status", Integer.valueOf(status));
-    }
-    if ((aou & 0x80) != 0) {
-      localContentValues.put("int_reserved1", Integer.valueOf(kgA));
-    }
-    return localContentValues;
-  }
-  
-  public final void setEnable(boolean paramBoolean)
-  {
-    if (paramBoolean)
-    {
-      int j = status;
-      if (paramBoolean) {}
-      for (int i = 1;; i = 0)
-      {
-        status = (i | j);
-        return;
-      }
-    }
-    status &= 0xFFFFFFFE;
-  }
-  
-  public static final class a
-  {
-    private String aEV;
-    private String aKU;
-    
-    public a(String paramString)
-    {
-      int i = paramString.indexOf("@");
-      if (i >= 0)
-      {
-        aEV = paramString.substring(0, i);
-        aKU = paramString.substring(i);
-        return;
-      }
-      aEV = paramString;
-      aKU = "";
-    }
-    
-    public final String FC(String paramString)
-    {
-      if (aKU != null) {
-        paramString = aKU;
-      }
-      return paramString;
-    }
+    return bjR;
   }
 }
 

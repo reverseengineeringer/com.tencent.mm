@@ -10,8 +10,8 @@ final class AtSomeoneInBizChatUI$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    kRd.setResult(0);
-    kRd.finish();
+    lrg.setResult(0);
+    lrg.finish();
     return true;
   }
 }

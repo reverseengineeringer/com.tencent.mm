@@ -3,19 +3,19 @@ package com.tencent.mm.pluginsdk;
 import android.content.Context;
 import android.content.Intent;
 import com.tencent.mm.model.z.c.a;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class d$3
   implements z.c.a
 {
   d$3(Intent paramIntent, Context paramContext) {}
   
-  public final void f(String paramString, boolean paramBoolean)
+  public final void i(String paramString, boolean paramBoolean)
   {
     if (!paramBoolean)
     {
-      u.e("!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ", "getContact fail, %s", new Object[] { paramString });
+      v.e("MicroMsg.DeepLinkHelper", "getContact fail, %s", new Object[] { paramString });
       return;
     }
     val$intent.putExtra("Chat_User", paramString);
@@ -29,10 +29,10 @@ final class d$3
     }
     catch (Exception paramString)
     {
-      u.printErrStackTrace("!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ", paramString, "", new Object[] { "" });
+      v.printErrStackTrace("MicroMsg.DeepLinkHelper", paramString, "", new Object[] { "" });
       return;
     }
-    y.getContext().startActivity(val$intent);
+    aa.getContext().startActivity(val$intent);
   }
 }
 

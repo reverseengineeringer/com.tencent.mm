@@ -4,7 +4,7 @@ import android.os.Message;
 
 public abstract interface ac$b
 {
-  public abstract boolean onLog(Message paramMessage, Runnable paramRunnable, Thread paramThread, long paramLong1, long paramLong2);
+  public abstract void onLog(Message paramMessage, Runnable paramRunnable, Thread paramThread, long paramLong1, long paramLong2, float paramFloat);
 }
 
 /* Location:

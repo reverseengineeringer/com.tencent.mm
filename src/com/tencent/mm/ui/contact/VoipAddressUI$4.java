@@ -11,7 +11,7 @@ final class VoipAddressUI$4
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    lmM.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
+    lNc.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
   }
 }
 

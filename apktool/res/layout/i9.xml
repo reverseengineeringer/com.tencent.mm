@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/a7h" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/hb" android:minHeight="@dimen/hs" android:layout_weight="1.0">
+        <TextView android:id="@id/a7l" android:text="hello" style="@style/ConfirmDialogTitle" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_gravity="center" android:id="@id/a7p" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.tencent.mm.pluginsdk.ui.applet.CdnImageView android:layout_gravity="center" android:id="@id/a7e" android:padding="@dimen/j_" android:layout_width="@dimen/cq" android:layout_height="@dimen/cq" android:src="@drawable/w5" />
+                <ImageView android:layout_gravity="center" android:id="@id/a7q" android:layout_width="@dimen/cq" android:layout_height="@dimen/cq" android:src="@drawable/w6" />
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <TextView android:id="@id/a7f" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j8" android:layout_marginRight="@dimen/j8" android:text="message" android:maxLines="4" style="@style/ConfirmDialogTitle" />
+                </ScrollView>
+                <TextView android:id="@id/a7g" android:layout_marginLeft="@dimen/j8" android:layout_marginRight="@dimen/j8" android:text="source" style="@style/ConfirmDialogSource" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.tencent.mm.ui.base.PasterEditText android:id="@id/a7d" style="@style/ConfirmDialogEditText" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/g6" android:background="@drawable/a96" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/c9b" android:layout_width="fill_parent" android:layout_height="27.0dip" />
+    <LinearLayout android:id="@id/cc_" android:layout_width="fill_parent" android:layout_height="5.0dip">
+        <ImageView android:background="@drawable/a5g" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="66.0dip" />
+        <ImageView android:id="@id/cca" android:background="@color/mc" android:visibility="invisible" android:layout_width="4.0dip" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/c9c" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip">
+        <include android:layout_width="fill_parent" layout="@layout/sns_data_item" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/i7">
+            <com.tencent.mm.plugin.sns.ui.MaskLinearLayout android:orientation="horizontal" android:id="@id/ccb" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <com.tencent.mm.plugin.sns.ui.MaskImageView android:id="@id/c9f" android:layout_width="74.0dip" android:layout_height="74.0dip" android:scaleType="fitXY" />
+                        <TextView android:textSize="16.0dip" android:textColor="@color/mx" android:gravity="center" android:id="@id/ccc" android:visibility="gone" android:layout_width="74.0dip" android:layout_height="74.0dip" />
+                    </FrameLayout>
+                    <TextView android:layout_gravity="bottom|center|right" android:id="@id/ccf" android:background="@drawable/a5f" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <ImageView android:layout_gravity="bottom|center|left" android:id="@id/cc2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j_" android:layout_marginBottom="@dimen/j_" android:src="@drawable/acr" android:scaleType="fitXY" />
+                </FrameLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/ccg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="6.0dip" android:layout_marginRight="4.0dip">
+                    <TextView android:textSize="13.0dip" android:textColor="@color/l5" android:ellipsize="end" android:gravity="center|left|top" android:id="@id/av0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="3" android:singleLine="false" android:layout_weight="1.0" />
+                    <TextView android:textSize="11.0dip" android:textColor="@color/g7" android:gravity="bottom|center|left" android:layout_gravity="bottom" android:id="@id/cch" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                </LinearLayout>
+            </com.tencent.mm.plugin.sns.ui.MaskLinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

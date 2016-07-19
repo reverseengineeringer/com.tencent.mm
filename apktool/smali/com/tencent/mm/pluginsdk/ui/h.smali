@@ -15,35 +15,35 @@
 
 
 # static fields
-.field protected static final cKr:Lcom/tencent/mm/sdk/platformtools/aa;
+.field protected static final bpK:Landroid/graphics/Paint;
 
-.field protected static final efA:Landroid/graphics/Paint;
+.field protected static final bpL:Lcom/tencent/mm/sdk/platformtools/ac;
 
 
 # instance fields
-.field private cIZ:Landroid/graphics/Paint;
+.field private bpN:Ljava/lang/Runnable;
 
-.field private cNk:Ljava/lang/Runnable;
+.field private cGd:Landroid/graphics/Paint;
 
-.field private dMx:Landroid/graphics/Path;
+.field private dOe:Landroid/graphics/Path;
 
-.field protected final fzj:Lcom/tencent/mm/pluginsdk/ui/h$a;
+.field protected final fIn:Lcom/tencent/mm/pluginsdk/ui/h$a;
 
-.field protected iGE:Z
+.field protected jdA:Z
 
-.field protected iGF:Z
+.field private jdB:I
 
-.field private iGG:I
+.field private jdC:I
 
-.field private iGH:I
+.field protected jdD:Z
 
-.field protected iGI:Z
+.field protected jdE:Z
 
-.field protected iGJ:Z
+.field protected jdF:F
 
-.field protected iGK:F
+.field private jdG:Landroid/graphics/PaintFlagsDrawFilter;
 
-.field private iGL:Landroid/graphics/PaintFlagsDrawFilter;
+.field protected jdz:Z
 
 .field private rect:Landroid/graphics/Rect;
 
@@ -63,25 +63,25 @@
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     .line 35
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/h;->efA:Landroid/graphics/Paint;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/h;->bpK:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 36
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/h;->efA:Landroid/graphics/Paint;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/h;->bpK:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
     .line 38
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/h;->cKr:Lcom/tencent/mm/sdk/platformtools/aa;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/h;->bpL:Lcom/tencent/mm/sdk/platformtools/ac;
 
     .line 39
     return-void
@@ -96,28 +96,28 @@
     const/4 v2, 0x0
 
     .line 63
-    invoke-interface {p1}, Lcom/tencent/mm/pluginsdk/ui/h$a;->kp()Landroid/graphics/Bitmap;
+    invoke-interface {p1}, Lcom/tencent/mm/pluginsdk/ui/h$a;->iS()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/graphics/Bitmap;)V
 
     .line 27
-    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGE:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdz:Z
 
     .line 28
-    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGF:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdA:Z
 
     .line 29
-    iput v2, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGG:I
+    iput v2, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdB:I
 
     .line 30
-    iput v2, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGH:I
+    iput v2, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdC:I
 
     .line 56
     const/high16 v0, 0x3f800000    # 1.0f
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGK:F
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdF:F
 
     .line 97
     new-instance v0, Landroid/graphics/Rect;
@@ -133,29 +133,29 @@
 
     invoke-direct {v0, v2, v1}, Landroid/graphics/PaintFlagsDrawFilter;-><init>(II)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGL:Landroid/graphics/PaintFlagsDrawFilter;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdG:Landroid/graphics/PaintFlagsDrawFilter;
 
     .line 99
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->cIZ:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->cGd:Landroid/graphics/Paint;
 
     .line 100
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->cIZ:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->cGd:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     .line 101
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->cIZ:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->cGd:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setFlags(I)V
 
     .line 102
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->cIZ:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->cGd:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
@@ -164,23 +164,23 @@
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->dMx:Landroid/graphics/Path;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->dOe:Landroid/graphics/Path;
 
     .line 151
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/h$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/h$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/h;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->cNk:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->bpN:Ljava/lang/Runnable;
 
     .line 64
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/h;->fzj:Lcom/tencent/mm/pluginsdk/ui/h$a;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/h;->fIn:Lcom/tencent/mm/pluginsdk/ui/h$a;
 
     .line 65
     iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/h;->tag:Ljava/lang/String;
 
     .line 66
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->fzj:Lcom/tencent/mm/pluginsdk/ui/h$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->fIn:Lcom/tencent/mm/pluginsdk/ui/h$a;
 
     invoke-interface {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/h$a;->a(Lcom/tencent/mm/pluginsdk/ui/h;)V
 
@@ -197,28 +197,28 @@
     const/4 v2, 0x0
 
     .line 70
-    invoke-interface {p1}, Lcom/tencent/mm/pluginsdk/ui/h$a;->kp()Landroid/graphics/Bitmap;
+    invoke-interface {p1}, Lcom/tencent/mm/pluginsdk/ui/h$a;->iS()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/graphics/Bitmap;)V
 
     .line 27
-    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGE:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdz:Z
 
     .line 28
-    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGF:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdA:Z
 
     .line 29
-    iput v2, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGG:I
+    iput v2, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdB:I
 
     .line 30
-    iput v2, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGH:I
+    iput v2, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdC:I
 
     .line 56
     const/high16 v0, 0x3f800000    # 1.0f
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGK:F
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdF:F
 
     .line 97
     new-instance v0, Landroid/graphics/Rect;
@@ -234,29 +234,29 @@
 
     invoke-direct {v0, v2, v1}, Landroid/graphics/PaintFlagsDrawFilter;-><init>(II)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGL:Landroid/graphics/PaintFlagsDrawFilter;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdG:Landroid/graphics/PaintFlagsDrawFilter;
 
     .line 99
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->cIZ:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->cGd:Landroid/graphics/Paint;
 
     .line 100
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->cIZ:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->cGd:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     .line 101
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->cIZ:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->cGd:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setFlags(I)V
 
     .line 102
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->cIZ:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->cGd:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
@@ -265,26 +265,26 @@
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->dMx:Landroid/graphics/Path;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->dOe:Landroid/graphics/Path;
 
     .line 151
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/h$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/h$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/h;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->cNk:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->bpN:Ljava/lang/Runnable;
 
     .line 71
-    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGE:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdz:Z
 
     .line 72
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/h;->fzj:Lcom/tencent/mm/pluginsdk/ui/h$a;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/h;->fIn:Lcom/tencent/mm/pluginsdk/ui/h$a;
 
     .line 73
     iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/h;->tag:Ljava/lang/String;
 
     .line 75
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->fzj:Lcom/tencent/mm/pluginsdk/ui/h$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->fIn:Lcom/tencent/mm/pluginsdk/ui/h$a;
 
     invoke-interface {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/h$a;->a(Lcom/tencent/mm/pluginsdk/ui/h;)V
 
@@ -294,7 +294,7 @@
 
 
 # virtual methods
-.method public final Ay(Ljava/lang/String;)V
+.method public final Cz(Ljava/lang/String;)V
     .locals 2
 
     .prologue
@@ -326,36 +326,36 @@
     iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/h;->tag:Ljava/lang/String;
 
     .line 85
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/h;->cKr:Lcom/tencent/mm/sdk/platformtools/aa;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/h;->bpL:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/h;->cNk:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/h;->bpN:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 .end method
 
-.method public final aQT()V
+.method public final aVD()V
     .locals 1
 
     .prologue
     .line 163
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGI:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdD:Z
 
     .line 164
     return-void
 .end method
 
-.method public final aQU()V
+.method public final aVE()V
     .locals 2
 
     .prologue
     const/4 v1, 0x0
 
     .line 167
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGI:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdD:Z
 
     if-nez v0, :cond_1
 
@@ -366,15 +366,15 @@
 
     .line 170
     :cond_1
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGI:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdD:Z
 
     .line 171
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGJ:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdE:Z
 
     if-eqz v0, :cond_0
 
     .line 172
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGJ:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdE:Z
 
     .line 173
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/h;->invalidateSelf()V
@@ -391,12 +391,12 @@
     const/4 v4, 0x0
 
     .line 109
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGF:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdA:Z
 
     if-eqz v0, :cond_3
 
     .line 110
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->fzj:Lcom/tencent/mm/pluginsdk/ui/h$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->fIn:Lcom/tencent/mm/pluginsdk/ui/h$a;
 
     iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/h;->tag:Ljava/lang/String;
 
@@ -424,19 +424,19 @@
 
     .line 117
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->fzj:Lcom/tencent/mm/pluginsdk/ui/h$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->fIn:Lcom/tencent/mm/pluginsdk/ui/h$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/h$a;->kp()Landroid/graphics/Bitmap;
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/h$a;->iS()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     .line 118
-    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGI:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdD:Z
 
     if-eqz v1, :cond_5
 
     .line 119
-    iput-boolean v5, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGJ:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdE:Z
 
     .line 127
     :goto_1
@@ -448,7 +448,7 @@
     const/4 v1, 0x0
 
     .line 129
-    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGK:F
+    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdF:F
 
     const/high16 v4, 0x3f800000    # 1.0f
 
@@ -456,7 +456,7 @@
 
     if-gtz v3, :cond_1
 
-    iget-boolean v3, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGE:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdz:Z
 
     if-eqz v3, :cond_2
 
@@ -498,7 +498,7 @@
 
     .line 135
     :cond_2
-    sget-object v3, Lcom/tencent/mm/pluginsdk/ui/h;->efA:Landroid/graphics/Paint;
+    sget-object v3, Lcom/tencent/mm/pluginsdk/ui/h;->bpK:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
@@ -507,16 +507,16 @@
 
     .line 111
     :cond_3
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGI:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdD:Z
 
     if-eqz v0, :cond_4
 
     .line 112
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->fzj:Lcom/tencent/mm/pluginsdk/ui/h$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->fIn:Lcom/tencent/mm/pluginsdk/ui/h$a;
 
     iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/h;->tag:Ljava/lang/String;
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/h$a;->aM(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/h$a;->aR(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -524,11 +524,11 @@
 
     .line 114
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->fzj:Lcom/tencent/mm/pluginsdk/ui/h$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->fIn:Lcom/tencent/mm/pluginsdk/ui/h$a;
 
     iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/h;->tag:Ljava/lang/String;
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/h$a;->aL(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/h$a;->aQ(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -536,18 +536,29 @@
 
     .line 121
     :cond_5
-    iput-boolean v4, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGJ:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdE:Z
 
     goto :goto_1
 
     .line 124
     :cond_6
-    iput-boolean v4, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGJ:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdE:Z
 
     goto :goto_1
 .end method
 
-.method public fZ(Ljava/lang/String;)V
+.method public final gJ(Z)V
+    .locals 0
+
+    .prologue
+    .line 94
+    iput-boolean p1, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdA:Z
+
+    .line 95
+    return-void
+.end method
+
+.method public gm(Ljava/lang/String;)V
     .locals 4
 
     .prologue
@@ -569,7 +580,7 @@
 
     .line 147
     :cond_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpKZSD58W7O6eLJv0xzjKYwp5aOd5vnMqLY="
+    const-string/jumbo v0, "MicroMsg.SDK.LazyBitmapDrawable"
 
     const-string/jumbo v1, "notifyChanged :%s"
 
@@ -581,27 +592,16 @@
 
     aput-object p1, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 148
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/h;->cKr:Lcom/tencent/mm/sdk/platformtools/aa;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/h;->bpL:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/h;->cNk:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/h;->bpN:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
-.end method
-
-.method public final gl(Z)V
-    .locals 0
-
-    .prologue
-    .line 94
-    iput-boolean p1, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGF:Z
-
-    .line 95
-    return-void
 .end method
 
 .method public onScrollStateChanged(Z)V
@@ -614,7 +614,7 @@
     .line 184
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->iGI:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/h;->jdD:Z
 
     .line 188
     :goto_0
@@ -622,7 +622,7 @@
 
     .line 186
     :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/h;->aQU()V
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/h;->aVE()V
 
     goto :goto_0
 .end method

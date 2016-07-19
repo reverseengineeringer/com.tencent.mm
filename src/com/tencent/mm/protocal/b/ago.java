@@ -1,97 +1,181 @@
 package com.tencent.mm.protocal.b;
 
-import java.util.LinkedList;
-
 public final class ago
-  extends ali
+  extends com.tencent.mm.ax.a
 {
-  public String fpI;
-  public int fpQ;
-  public String fqc;
-  public int jDT;
+  public String elU;
+  public int emc;
+  public String fyY;
+  public String jtZ;
+  public String jub;
+  public String jzQ;
+  public int jzR;
+  public String kbM;
+  public String kbN;
+  public String kbO;
+  public String kbP;
+  public String kbQ;
+  public String kbR;
+  public String kbS;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (jGS != null)
-      {
-        paramVarArgs.cj(1, jGS.kn());
-        jGS.a(paramVarArgs);
+      if (elU != null) {
+        paramVarArgs.e(1, elU);
       }
-      paramVarArgs.ci(2, jDT);
-      if (fpI != null) {
-        paramVarArgs.d(3, fpI);
+      if (fyY != null) {
+        paramVarArgs.e(2, fyY);
       }
-      paramVarArgs.ci(4, fpQ);
-      if (fqc != null) {
-        paramVarArgs.d(5, fqc);
+      if (kbM != null) {
+        paramVarArgs.e(3, kbM);
       }
+      if (jtZ != null) {
+        paramVarArgs.e(4, jtZ);
+      }
+      if (kbN != null) {
+        paramVarArgs.e(5, kbN);
+      }
+      paramVarArgs.cw(6, jzR);
+      if (kbO != null) {
+        paramVarArgs.e(7, kbO);
+      }
+      if (jub != null) {
+        paramVarArgs.e(8, jub);
+      }
+      if (jzQ != null) {
+        paramVarArgs.e(9, jzQ);
+      }
+      if (kbP != null) {
+        paramVarArgs.e(10, kbP);
+      }
+      if (kbQ != null) {
+        paramVarArgs.e(11, kbQ);
+      }
+      if (kbR != null) {
+        paramVarArgs.e(12, kbR);
+      }
+      if (kbS != null) {
+        paramVarArgs.e(13, kbS);
+      }
+      paramVarArgs.cw(14, emc);
       return 0;
     }
     if (paramInt == 1) {
-      if (jGS == null) {
-        break label461;
+      if (elU == null) {
+        break label878;
       }
     }
-    label461:
-    for (paramInt = a.a.a.a.ch(1, jGS.kn()) + 0;; paramInt = 0)
+    label878:
+    for (int i = a.a.a.b.b.a.f(1, elU) + 0;; i = 0)
     {
-      int i = paramInt + a.a.a.a.cg(2, jDT);
       paramInt = i;
-      if (fpI != null) {
-        paramInt = i + a.a.a.b.b.a.e(3, fpI);
+      if (fyY != null) {
+        paramInt = i + a.a.a.b.b.a.f(2, fyY);
       }
-      i = paramInt + a.a.a.a.cg(4, fpQ);
+      i = paramInt;
+      if (kbM != null) {
+        i = paramInt + a.a.a.b.b.a.f(3, kbM);
+      }
       paramInt = i;
-      if (fqc != null) {
-        paramInt = i + a.a.a.b.b.a.e(5, fqc);
+      if (jtZ != null) {
+        paramInt = i + a.a.a.b.b.a.f(4, jtZ);
       }
-      return paramInt;
+      i = paramInt;
+      if (kbN != null) {
+        i = paramInt + a.a.a.b.b.a.f(5, kbN);
+      }
+      i += a.a.a.a.cu(6, jzR);
+      paramInt = i;
+      if (kbO != null) {
+        paramInt = i + a.a.a.b.b.a.f(7, kbO);
+      }
+      i = paramInt;
+      if (jub != null) {
+        i = paramInt + a.a.a.b.b.a.f(8, jub);
+      }
+      paramInt = i;
+      if (jzQ != null) {
+        paramInt = i + a.a.a.b.b.a.f(9, jzQ);
+      }
+      i = paramInt;
+      if (kbP != null) {
+        i = paramInt + a.a.a.b.b.a.f(10, kbP);
+      }
+      paramInt = i;
+      if (kbQ != null) {
+        paramInt = i + a.a.a.b.b.a.f(11, kbQ);
+      }
+      i = paramInt;
+      if (kbR != null) {
+        i = paramInt + a.a.a.b.b.a.f(12, kbR);
+      }
+      paramInt = i;
+      if (kbS != null) {
+        paramInt = i + a.a.a.b.b.a.f(13, kbS);
+      }
+      return paramInt + a.a.a.a.cu(14, emc);
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = ali.a(paramVarArgs); paramInt > 0; paramInt = ali.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
         break;
       }
       if (paramInt == 3)
       {
-        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
         ago localago = (ago)paramVarArgs[1];
-        paramInt = ((Integer)paramVarArgs[2]).intValue();
-        switch (paramInt)
+        switch (((Integer)paramVarArgs[2]).intValue())
         {
         default: 
           return -1;
         case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-          i = paramVarArgs.size();
-          paramInt = 0;
-          while (paramInt < i)
-          {
-            Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new dc();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-            for (boolean bool = true; bool; bool = ((dc)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, ali.a((a.a.a.a.a)localObject2))) {}
-            jGS = ((dc)localObject1);
-            paramInt += 1;
-          }
+          elU = mMY.readString();
+          return 0;
         case 2: 
-          jDT = maU.jC();
+          fyY = mMY.readString();
           return 0;
         case 3: 
-          fpI = maU.readString();
+          kbM = mMY.readString();
           return 0;
         case 4: 
-          fpQ = maU.jC();
+          jtZ = mMY.readString();
+          return 0;
+        case 5: 
+          kbN = mMY.readString();
+          return 0;
+        case 6: 
+          jzR = mMY.id();
+          return 0;
+        case 7: 
+          kbO = mMY.readString();
+          return 0;
+        case 8: 
+          jub = mMY.readString();
+          return 0;
+        case 9: 
+          jzQ = mMY.readString();
+          return 0;
+        case 10: 
+          kbP = mMY.readString();
+          return 0;
+        case 11: 
+          kbQ = mMY.readString();
+          return 0;
+        case 12: 
+          kbR = mMY.readString();
+          return 0;
+        case 13: 
+          kbS = mMY.readString();
           return 0;
         }
-        fqc = maU.readString();
+        emc = mMY.id();
         return 0;
       }
       return -1;

@@ -3,7 +3,7 @@ package com.tencent.mm.ui.bindlinkedin;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 
 final class ListLinkedInFriendUI$2
   implements DialogInterface.OnClickListener
@@ -12,7 +12,7 @@ final class ListLinkedInFriendUI$2
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ah.tE().c(ListLinkedInFriendUI.h(kOk));
+    ah.tF().c(ListLinkedInFriendUI.h(lnA));
   }
 }
 

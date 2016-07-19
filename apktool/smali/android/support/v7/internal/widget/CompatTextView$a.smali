@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private final fu:Ljava/util/Locale;
+.field private final fQ:Ljava/util/Locale;
 
 
 # direct methods
@@ -40,7 +40,7 @@
 
     iget-object v0, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    iput-object v0, p0, Landroid/support/v7/internal/widget/CompatTextView$a;->fu:Ljava/util/Locale;
+    iput-object v0, p0, Landroid/support/v7/internal/widget/CompatTextView$a;->fQ:Ljava/util/Locale;
 
     .line 71
     return-void
@@ -59,7 +59,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/v7/internal/widget/CompatTextView$a;->fu:Ljava/util/Locale;
+    iget-object v1, p0, Landroid/support/v7/internal/widget/CompatTextView$a;->fQ:Ljava/util/Locale;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
 

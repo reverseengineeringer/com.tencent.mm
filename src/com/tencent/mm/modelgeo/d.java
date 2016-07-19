@@ -2,61 +2,61 @@ package com.tencent.mm.modelgeo;
 
 import com.tencent.mm.network.e;
 import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b.ph;
-import com.tencent.mm.protocal.b.pi;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.a.c;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.pq;
+import com.tencent.mm.protocal.b.pr;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.a.c;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 public final class d
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private com.tencent.mm.r.d anM;
-  public final a anN;
-  private String azv = "";
+  private String alG = "";
+  public final a bkQ;
+  private com.tencent.mm.t.d bkT;
   
   public d(double paramDouble1, double paramDouble2)
   {
     Object localObject = new a.a();
-    bFa = new ph();
-    bFb = new pi();
+    byl = new pq();
+    bym = new pr();
     uri = "/cgi-bin/micromsg-bin/getaddress";
-    bEY = 655;
-    bFc = 0;
-    bFd = 0;
-    anN = ((a.a)localObject).vy();
-    localObject = (ph)anN.bEW.bFf;
-    jcH = paramDouble1;
-    jcG = paramDouble2;
+    byj = 655;
+    byn = 0;
+    byo = 0;
+    bkQ = ((a.a)localObject).vA();
+    localObject = (pq)bkQ.byh.byq;
+    jAo = paramDouble1;
+    jAn = paramDouble2;
   }
   
-  public final int a(e parame, com.tencent.mm.r.d paramd)
+  public final int a(e parame, com.tencent.mm.t.d paramd)
   {
-    anM = paramd;
-    return a(parame, anN, this);
+    bkT = paramd;
+    return a(parame, bkQ, this);
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvmIFh9H6wO6MjG7PJL6UK8U=", "onGYNetEnd errType %d errCode%d", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3) });
+    v.d("MicroMsg.NetSceneGetAddress", "onGYNetEnd errType %d errCode%d", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3) });
     if ((paramInt2 == 0) && (paramInt3 == 0))
     {
-      azv = bEX.bFf).jpk;
-      u.d("!44@/B4Tb64lLpK+IBX8XDgnvmIFh9H6wO6MjG7PJL6UK8U=", azv);
-      if (anM != null) {
-        anM.a(paramInt2, paramInt3, paramString, this);
+      alG = byi.byq).jNm;
+      v.d("MicroMsg.NetSceneGetAddress", alG);
+      if (bkT != null) {
+        bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
       }
     }
-    while (anM == null) {
+    while (bkT == null) {
       return;
     }
-    anM.a(paramInt2, paramInt3, paramString, this);
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()
@@ -64,10 +64,10 @@ public final class d
     return 655;
   }
   
-  public final Addr zG()
+  public final Addr zT()
   {
     int i = 0;
-    if (ay.kz(azv)) {
+    if (be.kf(alG)) {
       return null;
     }
     Addr localAddr = new Addr();
@@ -75,15 +75,15 @@ public final class d
     {
       try
       {
-        JSONArray localJSONArray = new JSONObject(azv).getJSONArray("results");
-        bNN = localJSONArray.getJSONObject(1).getString("address_name");
+        JSONArray localJSONArray = new JSONObject(alG).getJSONArray("results");
+        bHj = localJSONArray.getJSONObject(1).getString("address_name");
         JSONObject localJSONObject = localJSONArray.getJSONObject(0);
-        bNP = localJSONObject.getString("p");
-        bNQ = localJSONObject.getString("c");
-        bNS = localJSONObject.getString("d");
-        bNT = "";
-        bNU = "";
-        bNV = "";
+        bHl = localJSONObject.getString("p");
+        bHm = localJSONObject.getString("c");
+        bHo = localJSONObject.getString("d");
+        bHp = "";
+        bHq = "";
+        bHr = "";
         int j = localJSONArray.length();
         if (i < j) {
           try
@@ -92,25 +92,25 @@ public final class d
             String str = localJSONObject.getString("dtype");
             if ("ST".equals(str))
             {
-              bNU = localJSONObject.getString("name");
+              bHq = localJSONObject.getString("name");
               if (!"FORMAT_ADDRESS".equals(str)) {
                 break label237;
               }
-              bNW = localJSONObject.getString("rough_address_name");
+              bHs = localJSONObject.getString("rough_address_name");
               break label237;
             }
             if (!"ST_NO".equals(str)) {
               continue;
             }
-            bNV = localJSONObject.getString("name");
+            bHr = localJSONObject.getString("name");
             continue;
-            if (ay.kz(bNV)) {
+            if (be.kf(bHr)) {
               continue;
             }
           }
           catch (Exception localException2) {}
         }
-        bNU = "";
+        bHq = "";
         return localAddr;
       }
       catch (Exception localException1)

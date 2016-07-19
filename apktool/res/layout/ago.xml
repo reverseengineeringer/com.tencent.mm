@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tencent.mm.ui.chatting.InitCallBackLayout android:background="#ff72c854" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/csc" android:layout_width="86.0dip" android:layout_height="86.0dip" android:src="@drawable/a1e" />
+</com.tencent.mm.ui.chatting.InitCallBackLayout>

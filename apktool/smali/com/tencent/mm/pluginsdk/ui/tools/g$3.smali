@@ -13,9 +13,19 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/pluginsdk/ui/tools/g$c",
+        "<",
+        "Ljava/lang/String;",
+        "Landroid/graphics/Bitmap;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+.field final synthetic jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
 
 # direct methods
@@ -23,8 +33,8 @@
     .locals 0
 
     .prologue
-    .line 85
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$3;->iSo:Lcom/tencent/mm/pluginsdk/ui/tools/g;
+    .line 83
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/g$3;->jpx:Lcom/tencent/mm/pluginsdk/ui/tools/g;
 
     invoke-direct {p0, p1, p2}, Lcom/tencent/mm/pluginsdk/ui/tools/g$c;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/g;I)V
 
@@ -33,16 +43,16 @@
 
 
 # virtual methods
-.method protected final synthetic as(Ljava/lang/Object;)V
+.method protected final synthetic aL(Ljava/lang/Object;)V
     .locals 5
 
     .prologue
-    .line 85
+    .line 83
     check-cast p1, Landroid/graphics/Bitmap;
 
     if-eqz p1, :cond_0
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpI8lfBMGe0Uu+gqtVk/eA4D"
+    const-string/jumbo v0, "MicroMsg.ImageEngine"
 
     const-string/jumbo v1, "recycle bitmap:%s"
 
@@ -58,7 +68,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 

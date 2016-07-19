@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract g(Landroid/os/Bundle;)V
+.method public abstract i(Landroid/os/Bundle;)V
 .end method
 
 .method public abstract onError(ILjava/lang/String;)V

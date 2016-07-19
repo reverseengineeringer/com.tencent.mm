@@ -2,632 +2,858 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/tencent/mm/r/d;
-
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/mm/ao/d$a;,
-        Lcom/tencent/mm/ao/d$b;
-    }
-.end annotation
-
 
 # static fields
-.field public static aoE:I
-
-.field private static final cib:Ljava/lang/String;
-
-.field private static final cic:Ljava/lang/String;
+.field private static bWL:Lcom/tencent/mm/ao/d;
 
 
 # instance fields
-.field apL:Lcom/tencent/mm/c/b/c;
+.field public bHA:Lcom/tencent/mm/sdk/platformtools/ap;
 
-.field private aqt:Lcom/tencent/mm/c/b/c$a;
+.field private bWM:Ljava/lang/String;
 
-.field public chW:I
+.field private bWN:Lcom/tencent/mm/t/d;
 
-.field public cid:I
-
-.field cie:I
-
-.field cif:Z
-
-.field private cig:I
-
-.field public cih:Z
-
-.field cii:Lcom/tencent/mm/ao/d$b;
-
-.field cij:Lcom/tencent/mm/c/c/a;
-
-.field cik:Lcom/tencent/qqpinyin/voicerecoapi/c;
-
-.field private cil:Lcom/tencent/mm/ao/a;
-
-.field handler:Lcom/tencent/mm/sdk/platformtools/aa;
+.field private blF:[B
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 34
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 24
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v1, Lcom/tencent/mm/storage/j;->bxa:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "tmp_voiceaddr.spx"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/tencent/mm/ao/d;->cib:Ljava/lang/String;
-
-    .line 35
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v1, Lcom/tencent/mm/storage/j;->bxa:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "tmp_voiceaddr.amr"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/tencent/mm/ao/d;->cic:Ljava/lang/String;
-
-    .line 60
-    const/16 v0, 0x64
-
-    sput v0, Lcom/tencent/mm/ao/d;->aoE:I
+    sput-object v0, Lcom/tencent/mm/ao/d;->bWL:Lcom/tencent/mm/ao/d;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/tencent/mm/ao/d$b;I)V
-    .locals 4
-
-    .prologue
-    const v0, 0x7a120
-
-    const/4 v3, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v1, 0x0
-
-    .line 88
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 46
-    iput v3, p0, Lcom/tencent/mm/ao/d;->chW:I
-
-    .line 47
-    iput v1, p0, Lcom/tencent/mm/ao/d;->cid:I
-
-    .line 49
-    iput v1, p0, Lcom/tencent/mm/ao/d;->cie:I
-
-    .line 50
-    iput-boolean v1, p0, Lcom/tencent/mm/ao/d;->cif:Z
-
-    .line 52
-    iput v0, p0, Lcom/tencent/mm/ao/d;->cig:I
-
-    .line 53
-    iput-boolean v1, p0, Lcom/tencent/mm/ao/d;->cih:Z
-
-    .line 55
-    iput-object v2, p0, Lcom/tencent/mm/ao/d;->cii:Lcom/tencent/mm/ao/d$b;
-
-    .line 58
-    iput-object v2, p0, Lcom/tencent/mm/ao/d;->cik:Lcom/tencent/qqpinyin/voicerecoapi/c;
-
-    .line 61
-    iput-object v2, p0, Lcom/tencent/mm/ao/d;->cil:Lcom/tencent/mm/ao/a;
-
-    .line 103
-    new-instance v1, Lcom/tencent/mm/ao/d$1;
-
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ao/d$1;-><init>(Lcom/tencent/mm/ao/d;)V
-
-    iput-object v1, p0, Lcom/tencent/mm/ao/d;->aqt:Lcom/tencent/mm/c/b/c$a;
-
-    .line 218
-    new-instance v1, Lcom/tencent/mm/ao/d$2;
-
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ao/d$2;-><init>(Lcom/tencent/mm/ao/d;)V
-
-    iput-object v1, p0, Lcom/tencent/mm/ao/d;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
-
-    .line 89
-    iput-object p1, p0, Lcom/tencent/mm/ao/d;->cii:Lcom/tencent/mm/ao/d$b;
-
-    .line 90
-    iput p2, p0, Lcom/tencent/mm/ao/d;->chW:I
-
-    .line 92
-    iget v1, p0, Lcom/tencent/mm/ao/d;->chW:I
-
-    if-ne v1, v3, :cond_0
-
-    :goto_0
-    iput v0, p0, Lcom/tencent/mm/ao/d;->cig:I
-
-    .line 93
-    return-void
-
-    .line 92
-    :cond_0
-    const v0, 0x16e360
-
-    goto :goto_0
-.end method
-
-.method static synthetic a(Lcom/tencent/mm/ao/d;Lcom/tencent/mm/ao/a;)Lcom/tencent/mm/ao/a;
-    .locals 0
-
-    .prologue
-    .line 25
-    iput-object p1, p0, Lcom/tencent/mm/ao/d;->cil:Lcom/tencent/mm/ao/a;
-
-    return-object p1
-.end method
-
-.method static synthetic a(Lcom/tencent/mm/ao/d;)V
-    .locals 0
-
-    .prologue
-    .line 25
-    invoke-virtual {p0}, Lcom/tencent/mm/ao/d;->finish()V
-
-    return-void
-.end method
-
-.method static synthetic a(Lcom/tencent/mm/ao/d;[SI)V
+.method public constructor <init>()V
     .locals 3
 
     .prologue
-    .line 25
+    .line 21
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 33
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ap;
+
+    const/4 v1, 0x1
+
+    const-string/jumbo v2, "speex_worker"
+
+    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/ap;-><init>(ILjava/lang/String;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/ao/d;->bHA:Lcom/tencent/mm/sdk/platformtools/ap;
+
+    .line 36
     const/4 v0, 0x0
 
-    :goto_0
-    if-ge v0, p2, :cond_1
+    new-array v0, v0, [B
 
-    aget-short v1, p1, v0
+    iput-object v0, p0, Lcom/tencent/mm/ao/d;->blF:[B
 
-    iget v2, p0, Lcom/tencent/mm/ao/d;->cid:I
+    .line 104
+    new-instance v0, Lcom/tencent/mm/ao/d$3;
 
-    if-le v1, v2, :cond_0
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ao/d$3;-><init>(Lcom/tencent/mm/ao/d;)V
 
-    iput v1, p0, Lcom/tencent/mm/ao/d;->cid:I
+    iput-object v0, p0, Lcom/tencent/mm/ao/d;->bWN:Lcom/tencent/mm/t/d;
 
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
     return-void
 .end method
 
-.method static synthetic b(Lcom/tencent/mm/ao/d;)I
+.method public static Dv()Lcom/tencent/mm/ao/d;
     .locals 1
 
     .prologue
-    .line 25
-    iget v0, p0, Lcom/tencent/mm/ao/d;->chW:I
-
-    return v0
-.end method
-
-.method static synthetic c(Lcom/tencent/mm/ao/d;)Z
-    .locals 1
-
-    .prologue
-    .line 25
-    iget-boolean v0, p0, Lcom/tencent/mm/ao/d;->cih:Z
-
-    return v0
-.end method
-
-.method static synthetic d(Lcom/tencent/mm/ao/d;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 25
-    iget-boolean v0, p0, Lcom/tencent/mm/ao/d;->cih:Z
+    .line 27
+    sget-object v0, Lcom/tencent/mm/ao/d;->bWL:Lcom/tencent/mm/ao/d;
 
     if-nez v0, :cond_0
 
-    sget-object v0, Lcom/tencent/mm/ao/d;->cib:Ljava/lang/String;
+    .line 28
+    new-instance v0, Lcom/tencent/mm/ao/d;
 
-    :goto_0
+    invoke-direct {v0}, Lcom/tencent/mm/ao/d;-><init>()V
+
+    sput-object v0, Lcom/tencent/mm/ao/d;->bWL:Lcom/tencent/mm/ao/d;
+
+    .line 30
+    :cond_0
+    sget-object v0, Lcom/tencent/mm/ao/d;->bWL:Lcom/tencent/mm/ao/d;
+
     return-object v0
+.end method
+
+.method static synthetic a(Lcom/tencent/mm/ao/d;)Lcom/tencent/mm/sdk/platformtools/ap;
+    .locals 1
+
+    .prologue
+    .line 21
+    iget-object v0, p0, Lcom/tencent/mm/ao/d;->bHA:Lcom/tencent/mm/sdk/platformtools/ap;
+
+    return-object v0
+.end method
+
+.method private static ab(II)Ljava/io/File;
+    .locals 10
+
+    .prologue
+    const/4 v3, 0x0
+
+    const/4 v1, 0x0
+
+    .line 137
+    new-instance v0, Ljava/io/File;
+
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rG()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    .line 138
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v0}, Ljava/io/File;->isDirectory()Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
 
     :cond_0
-    sget-object v0, Lcom/tencent/mm/ao/d;->cic:Ljava/lang/String;
+    move-object v0, v1
+
+    .line 168
+    :cond_1
+    return-object v0
+
+    .line 143
+    :cond_2
+    invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
+
+    move-result-object v4
+
+    move v2, v3
+
+    move-object v0, v1
+
+    .line 144
+    :goto_0
+    if-eqz v4, :cond_1
+
+    array-length v5, v4
+
+    if-ge v2, v5, :cond_1
+
+    .line 145
+    aget-object v0, v4, v2
+
+    .line 146
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0}, Ljava/io/File;->isFile()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    .line 147
+    const-string/jumbo v5, "MicroMsg.SpeexUploadCore"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v7, "file "
+
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 151
+    invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 152
+    invoke-virtual {v0}, Ljava/io/File;->length()J
+
+    move-result-wide v6
+
+    .line 153
+    invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v8
+
+    const-string/jumbo v9, ".spx"
+
+    invoke-virtual {v8, v9}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_4
+
+    move-object v0, v1
+
+    .line 162
+    :cond_3
+    :goto_1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
+
+    .line 158
+    :cond_4
+    int-to-long v8, p0
+
+    cmp-long v8, v6, v8
+
+    if-ltz v8, :cond_5
+
+    int-to-long v8, p1
+
+    cmp-long v6, v6, v8
+
+    if-lez v6, :cond_1
+
+    .line 159
+    :cond_5
+    const-string/jumbo v0, "MicroMsg.SpeexUploadCore"
+
+    const-string/jumbo v6, "unfit delete %s, minsize: %d, maxSize: %d"
+
+    const/4 v7, 0x3
+
+    new-array v7, v7, [Ljava/lang/Object;
+
+    aput-object v5, v7, v3
+
+    const/4 v8, 0x1
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    aput-object v9, v7, v8
+
+    const/4 v8, 0x2
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    aput-object v9, v7, v8
+
+    invoke-static {v0, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 160
+    invoke-static {v5}, Lcom/tencent/mm/a/e;->deleteFile(Ljava/lang/String;)Z
+
+    move-object v0, v1
+
+    .line 161
+    goto :goto_1
 .end method
 
-.method static synthetic e(Lcom/tencent/mm/ao/d;)Lcom/tencent/mm/ao/a;
-    .locals 1
+.method static synthetic b(Lcom/tencent/mm/ao/d;)V
+    .locals 8
 
     .prologue
-    .line 25
-    iget-object v0, p0, Lcom/tencent/mm/ao/d;->cil:Lcom/tencent/mm/ao/a;
+    const/4 v2, 0x1
 
-    return-object v0
-.end method
+    const/4 v1, 0x0
 
-.method static synthetic f(Lcom/tencent/mm/ao/d;)I
-    .locals 1
+    .line 21
+    const-string/jumbo v0, "MicroMsg.SpeexUploadCore"
 
-    .prologue
-    .line 25
-    iget v0, p0, Lcom/tencent/mm/ao/d;->cig:I
+    const-string/jumbo v3, "uploadOneFile"
 
-    return v0
-.end method
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-.method static synthetic g(Lcom/tencent/mm/ao/d;)V
-    .locals 0
+    iget-object v6, p0, Lcom/tencent/mm/ao/d;->blF:[B
 
-    .prologue
-    .line 25
-    invoke-direct {p0}, Lcom/tencent/mm/ao/d;->reset()V
+    monitor-enter v6
 
-    return-void
-.end method
-
-.method static synthetic h(Lcom/tencent/mm/ao/d;)Lcom/tencent/mm/c/b/c$a;
-    .locals 1
-
-    .prologue
-    .line 25
-    iget-object v0, p0, Lcom/tencent/mm/ao/d;->aqt:Lcom/tencent/mm/c/b/c$a;
-
-    return-object v0
-.end method
-
-.method private reset()V
-    .locals 2
-
-    .prologue
-    .line 257
-    const-string/jumbo v0, "!32@/B4Tb64lLpJjyqE6YDnAp3o91K/Zm7/t"
-
-    const-string/jumbo v1, "reset"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 259
-    monitor-enter p0
-
-    .line 260
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/ao/d;->apL:Lcom/tencent/mm/c/b/c;
+    iget-object v0, p0, Lcom/tencent/mm/ao/d;->bWM:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 261
-    iget-object v0, p0, Lcom/tencent/mm/ao/d;->apL:Lcom/tencent/mm/c/b/c;
+    const-string/jumbo v0, "MicroMsg.SpeexUploadCore"
 
-    invoke-virtual {v0}, Lcom/tencent/mm/c/b/c;->lH()Z
+    const-string/jumbo v1, "uploading..."
 
-    .line 262
-    const/4 v0, 0x0
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ao/d;->apL:Lcom/tencent/mm/c/b/c;
+    monitor-exit v6
 
-    .line 265
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ao/d;->cij:Lcom/tencent/mm/c/c/a;
-
-    if-eqz v0, :cond_1
-
-    .line 266
-    iget-object v0, p0, Lcom/tencent/mm/ao/d;->cij:Lcom/tencent/mm/c/c/a;
-
-    invoke-interface {v0}, Lcom/tencent/mm/c/c/a;->lU()V
-
-    .line 267
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/tencent/mm/ao/d;->cij:Lcom/tencent/mm/c/c/a;
-
-    .line 270
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ao/d;->cik:Lcom/tencent/qqpinyin/voicerecoapi/c;
-
-    if-eqz v0, :cond_2
-
-    .line 271
-    iget-object v0, p0, Lcom/tencent/mm/ao/d;->cik:Lcom/tencent/qqpinyin/voicerecoapi/c;
-
-    invoke-virtual {v0}, Lcom/tencent/qqpinyin/voicerecoapi/c;->stop()I
-
-    .line 273
-    :cond_2
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/tencent/mm/ao/d;->cik:Lcom/tencent/qqpinyin/voicerecoapi/c;
-
-    .line 275
-    iget-object v0, p0, Lcom/tencent/mm/ao/d;->cil:Lcom/tencent/mm/ao/a;
-
-    if-eqz v0, :cond_3
-
-    .line 276
-    iget-object v0, p0, Lcom/tencent/mm/ao/d;->cil:Lcom/tencent/mm/ao/a;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ao/a;->EC()V
-
-    .line 277
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/tencent/mm/ao/d;->cil:Lcom/tencent/mm/ao/a;
-
-    .line 279
-    :cond_3
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/tencent/mm/ao/d;->cie:I
-
-    .line 280
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/tencent/mm/ao/d;->cif:Z
-
-    .line 281
-    monitor-exit p0
-
+    :goto_0
     return-void
+
+    :cond_0
+    invoke-static {}, Lcom/tencent/mm/ao/c$a;->Du()Lcom/tencent/mm/ao/c$a;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    const-string/jumbo v0, "EnableSpeexVoiceUpload"
+
+    const/4 v4, 0x0
+
+    invoke-static {v0, v4}, Lcom/tencent/mm/c/b/g;->g(Ljava/lang/String;I)I
+
+    move-result v0
+
+    if-eq v2, v0, :cond_7
+
+    invoke-virtual {v3}, Lcom/tencent/mm/ao/c$a;->Ds()I
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    move v0, v1
+
+    :goto_1
+    if-nez v0, :cond_8
+
+    :cond_1
+    const-string/jumbo v0, "MicroMsg.SpeexUploadCore"
+
+    const-string/jumbo v1, "SpeexConfig not allow"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    monitor-exit v6
+
+    goto :goto_0
 
     :catchall_0
     move-exception v0
 
-    monitor-exit p0
+    monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
+
+    :cond_2
+    :try_start_1
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ak;->dC(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    move v0, v1
+
+    goto :goto_1
+
+    :cond_3
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
+
+    move-result-object v0
+
+    const/16 v4, 0x3002
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v0, v4, v5}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    const/4 v4, 0x0
+
+    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/lang/Integer;I)I
+
+    move-result v0
+
+    iget v4, v3, Lcom/tencent/mm/ao/c$a;->aFd:I
+
+    if-nez v4, :cond_4
+
+    move v0, v2
+
+    :goto_2
+    const-string/jumbo v4, "upload"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v7, "fitSex "
+
+    invoke-direct {v5, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v7, v3, Lcom/tencent/mm/ao/c$a;->aFd:I
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string/jumbo v7, " "
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string/jumbo v7, " "
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    iget v7, v3, Lcom/tencent/mm/ao/c$a;->aFd:I
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-nez v0, :cond_6
+
+    move v0, v1
+
+    goto :goto_1
+
+    :cond_4
+    iget v4, v3, Lcom/tencent/mm/ao/c$a;->aFd:I
+
+    if-ne v4, v0, :cond_5
+
+    move v0, v2
+
+    goto :goto_2
+
+    :cond_5
+    move v0, v1
+
+    goto :goto_2
+
+    :cond_6
+    invoke-virtual {v3}, Lcom/tencent/mm/ao/c$a;->Dr()Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    move v0, v1
+
+    goto :goto_1
+
+    :cond_7
+    move v0, v2
+
+    goto :goto_1
+
+    :cond_8
+    iget v0, v3, Lcom/tencent/mm/ao/c$a;->bWE:I
+
+    iget v1, v3, Lcom/tencent/mm/ao/c$a;->bWF:I
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/ao/d;->ab(II)Ljava/io/File;
+
+    move-result-object v0
+
+    if-nez v0, :cond_9
+
+    const-string/jumbo v0, "MicroMsg.SpeexUploadCore"
+
+    const-string/jumbo v1, "no target to upload"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    monitor-exit v6
+
+    goto/16 :goto_0
+
+    :cond_9
+    invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    move-result-object v1
+
+    :try_start_2
+    new-instance v2, Ljava/io/File;
+
+    const-string/jumbo v3, ".spx"
+
+    const-string/jumbo v4, ".uploading"
+
+    invoke-virtual {v1, v3, v4}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v2, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v2}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_b
+
+    invoke-virtual {v2}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/ao/d;->bWM:Ljava/lang/String;
+
+    invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string/jumbo v0, "MicroMsg.SpeexUploadCore"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "upload file "
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, p0, Lcom/tencent/mm/ao/d;->bWM:Ljava/lang/String;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v5, Lcom/tencent/mm/ao/c$b;
+
+    invoke-direct {v5}, Lcom/tencent/mm/ao/c$b;-><init>()V
+
+    const/4 v0, 0x0
+
+    const/16 v1, 0x2e
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->indexOf(I)I
+
+    move-result v1
+
+    invoke-virtual {v2, v0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "_"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v0
+
+    array-length v1, v0
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    const/4 v3, 0x5
+
+    if-ne v1, v3, :cond_a
+
+    const/4 v1, 0x0
+
+    :try_start_3
+    aget-object v1, v0, v1
+
+    iput-object v1, v5, Lcom/tencent/mm/ao/c$b;->bUc:Ljava/lang/String;
+
+    const/4 v1, 0x1
+
+    aget-object v1, v0, v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v1
+
+    iput v1, v5, Lcom/tencent/mm/ao/c$b;->bWo:I
+
+    const/4 v1, 0x2
+
+    aget-object v1, v0, v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v1
+
+    iput v1, v5, Lcom/tencent/mm/ao/c$b;->bWp:I
+
+    const/4 v1, 0x3
+
+    aget-object v0, v0, v1
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    iput v0, v5, Lcom/tencent/mm/ao/c$b;->bWq:I
+    :try_end_3
+    .catch Ljava/lang/NumberFormatException; {:try_start_3 .. :try_end_3} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :cond_a
+    :goto_3
+    :try_start_4
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
+
+    move-result-object v0
+
+    const/16 v1, 0xf0
+
+    iget-object v3, p0, Lcom/tencent/mm/ao/d;->bWN:Lcom/tencent/mm/t/d;
+
+    invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
+
+    new-instance v0, Lcom/tencent/mm/ao/a;
+
+    iget-object v1, p0, Lcom/tencent/mm/ao/d;->bWM:Ljava/lang/String;
+
+    invoke-static {v2}, Lcom/tencent/mm/ao/c;->jG(Ljava/lang/String;)I
+
+    move-result v2
+
+    iget v3, v5, Lcom/tencent/mm/ao/c$b;->bWo:I
+
+    iget v4, v5, Lcom/tencent/mm/ao/c$b;->bWp:I
+
+    iget v5, v5, Lcom/tencent/mm/ao/c$b;->bWq:I
+
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/ao/a;-><init>(Ljava/lang/String;IIII)V
+
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :goto_4
+    :try_start_5
+    monitor-exit v6
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    goto/16 :goto_0
+
+    :catch_0
+    move-exception v0
+
+    :try_start_6
+    const-string/jumbo v1, "upload"
+
+    const-string/jumbo v3, "wrong format"
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v7, 0x0
+
+    aput-object v0, v4, v7
+
+    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_1
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+
+    goto :goto_3
+
+    :catch_1
+    move-exception v0
+
+    :try_start_7
+    const-string/jumbo v1, "MicroMsg.SpeexUploadCore"
+
+    const-string/jumbo v2, "exception:%s"
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v3, v4
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_0
+
+    goto :goto_4
+
+    :cond_b
+    :try_start_8
+    const-string/jumbo v1, "MicroMsg.SpeexUploadCore"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "delete "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
+    :try_end_8
+    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_1
+    .catchall {:try_start_8 .. :try_end_8} :catchall_0
+
+    goto :goto_4
+.end method
+
+.method static synthetic c(Lcom/tencent/mm/ao/d;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 21
+    iget-object v0, p0, Lcom/tencent/mm/ao/d;->bWM:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic d(Lcom/tencent/mm/ao/d;)Lcom/tencent/mm/t/d;
+    .locals 1
+
+    .prologue
+    .line 21
+    iget-object v0, p0, Lcom/tencent/mm/ao/d;->bWN:Lcom/tencent/mm/t/d;
+
+    return-object v0
+.end method
+
+.method static synthetic e(Lcom/tencent/mm/ao/d;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 21
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/tencent/mm/ao/d;->bWM:Ljava/lang/String;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
-    .locals 8
+.method public final b(Lcom/tencent/mm/sdk/platformtools/ap$a;)V
+    .locals 2
 
     .prologue
-    .line 162
-    iget v0, p0, Lcom/tencent/mm/ao/d;->chW:I
+    .line 39
+    const-string/jumbo v0, "MicroMsg.SpeexUploadCore"
 
-    if-nez v0, :cond_2
+    const-string/jumbo v1, "pushWork"
 
-    .line 163
-    const-string/jumbo v0, "!32@/B4Tb64lLpJjyqE6YDnAp3o91K/Zm7/t"
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string/jumbo v1, "removeSceneEndListener MMFunc_UploadInputVoice"
+    .line 40
+    iget-object v0, p0, Lcom/tencent/mm/ao/d;->bHA:Lcom/tencent/mm/sdk/platformtools/ap;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/sdk/platformtools/ap;->c(Lcom/tencent/mm/sdk/platformtools/ap$a;)I
 
-    .line 164
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 41
+    return-void
+.end method
+
+.method public final start()V
+    .locals 4
+
+    .prologue
+    .line 68
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const/16 v1, 0x15d
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ak;->dC(Landroid/content/Context;)Z
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    move-result v0
 
+    if-nez v0, :cond_0
+
+    .line 102
     :goto_0
-    move-object v0, p4
+    return-void
 
-    .line 169
-    check-cast v0, Lcom/tencent/mm/ao/a;
+    .line 72
+    :cond_0
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ao/a;->ED()[Ljava/lang/String;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    .line 170
-    check-cast p4, Lcom/tencent/mm/ao/a;
+    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
-    invoke-virtual {p4}, Lcom/tencent/mm/ao/a;->EE()J
+    new-instance v1, Lcom/tencent/mm/ao/d$2;
 
-    move-result-wide v2
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ao/d$2;-><init>(Lcom/tencent/mm/ao/d;)V
 
-    .line 172
-    const-string/jumbo v4, "!32@/B4Tb64lLpJjyqE6YDnAp3o91K/Zm7/t"
+    const-wide/16 v2, 0x64
 
-    const-string/jumbo v5, "onSceneEnd errType:%d errCode:%d list:%d"
-
-    const/4 v0, 0x3
-
-    new-array v6, v0, [Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    aput-object v7, v6, v0
-
-    const/4 v0, 0x1
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    aput-object v7, v6, v0
-
-    const/4 v7, 0x2
-
-    if-nez v1, :cond_3
-
-    const/4 v0, -0x1
-
-    :goto_1
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    aput-object v0, v6, v7
-
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 173
-    iget-object v0, p0, Lcom/tencent/mm/ao/d;->cii:Lcom/tencent/mm/ao/d$b;
-
-    if-eqz v0, :cond_1
-
-    .line 174
-    if-nez p2, :cond_0
-
-    if-eqz p1, :cond_4
-
-    .line 175
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ao/d;->cii:Lcom/tencent/mm/ao/d$b;
-
-    invoke-interface {v0}, Lcom/tencent/mm/ao/d$b;->EF()V
-
-    .line 176
-    invoke-virtual {p0}, Lcom/tencent/mm/ao/d;->cancel()V
-
-    .line 182
-    :cond_1
-    :goto_2
-    return-void
-
-    .line 166
-    :cond_2
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
-
-    move-result-object v0
-
-    const/16 v1, 0xce
-
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ac;->postDelayed(Ljava/lang/Runnable;J)Z
 
     goto :goto_0
-
-    .line 172
-    :cond_3
-    array-length v0, v1
-
-    goto :goto_1
-
-    .line 179
-    :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/ao/d;->cii:Lcom/tencent/mm/ao/d$b;
-
-    invoke-interface {v0, v1, v2, v3}, Lcom/tencent/mm/ao/d$b;->a([Ljava/lang/String;J)V
-
-    goto :goto_2
-.end method
-
-.method public final cancel()V
-    .locals 1
-
-    .prologue
-    .line 206
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/tencent/mm/ao/d;->cii:Lcom/tencent/mm/ao/d$b;
-
-    .line 207
-    invoke-virtual {p0}, Lcom/tencent/mm/ao/d;->finish()V
-
-    .line 208
-    return-void
-.end method
-
-.method public final finish()V
-    .locals 3
-
-    .prologue
-    .line 190
-    const-string/jumbo v0, "!32@/B4Tb64lLpJjyqE6YDnAp3o91K/Zm7/t"
-
-    const-string/jumbo v1, "finish"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 191
-    const-string/jumbo v0, "!32@/B4Tb64lLpJjyqE6YDnAp3o91K/Zm7/t"
-
-    const-string/jumbo v1, "finish"
-
-    const/4 v2, 0x0
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 193
-    iget-object v0, p0, Lcom/tencent/mm/ao/d;->cil:Lcom/tencent/mm/ao/a;
-
-    if-eqz v0, :cond_0
-
-    .line 194
-    iget-object v0, p0, Lcom/tencent/mm/ao/d;->cil:Lcom/tencent/mm/ao/a;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ao/a;->EC()V
-
-    .line 197
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ao/d;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->sendEmptyMessage(I)Z
-
-    .line 198
-    iget-boolean v0, p0, Lcom/tencent/mm/ao/d;->cif:Z
-
-    if-nez v0, :cond_1
-
-    .line 199
-    iget-object v0, p0, Lcom/tencent/mm/ao/d;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
-
-    const/4 v1, 0x3
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->sendEmptyMessage(I)Z
-
-    .line 202
-    :cond_1
-    invoke-direct {p0}, Lcom/tencent/mm/ao/d;->reset()V
-
-    .line 203
-    return-void
 .end method

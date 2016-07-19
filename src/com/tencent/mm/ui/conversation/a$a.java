@@ -1,14 +1,14 @@
 package com.tencent.mm.ui.conversation;
 
-import com.tencent.mm.t.b;
+import com.tencent.mm.v.b;
 
 final class a$a
 {
-  public boolean cYC;
-  String eaH = null;
-  String kkA = null;
-  public boolean lnC;
-  public b lnD;
+  public boolean cXm;
+  String eef = null;
+  String lNX = null;
+  public boolean lNY;
+  public b lNZ;
   
   private a$a(a parama) {}
 }

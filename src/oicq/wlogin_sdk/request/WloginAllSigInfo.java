@@ -10,7 +10,7 @@ public class WloginAllSigInfo
   implements Serializable, Cloneable
 {
   private static final long serialVersionUID = 1L;
-  public TreeMap _tk_map = new TreeMap();
+  public TreeMap<Long, WloginSigInfo> _tk_map = new TreeMap();
   public long _uin = 0L;
   public WloginSimpleInfo _useInfo = new WloginSimpleInfo();
   
@@ -23,7 +23,7 @@ public class WloginAllSigInfo
     }
     catch (Exception localException)
     {
-      util.DG(localException.toString());
+      util.FV(localException.toString());
     }
     return null;
   }

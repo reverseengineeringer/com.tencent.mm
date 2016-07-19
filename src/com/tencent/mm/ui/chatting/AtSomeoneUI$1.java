@@ -10,8 +10,8 @@ final class AtSomeoneUI$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    kRg.setResult(0);
-    kRg.finish();
+    lrj.setResult(0);
+    lrj.finish();
     return true;
   }
 }

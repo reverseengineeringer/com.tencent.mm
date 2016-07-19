@@ -1,13 +1,13 @@
 package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class WXMusicObject
   implements WXMediaMessage.b
 {
   private static final int LENGTH_LIMIT = 10240;
-  private static final String TAG = "!44@/B4Tb64lLpLZi//yCy0pIDS5SYYe7sSOkAic0iTiIGs=";
+  private static final String TAG = "MicroMsg.SDK.WXMusicObject";
   public String musicDataUrl;
   public String musicLowBandDataUrl;
   public String musicLowBandUrl;
@@ -17,17 +17,17 @@ public class WXMusicObject
   {
     if (((musicUrl == null) || (musicUrl.length() == 0)) && ((musicLowBandUrl == null) || (musicLowBandUrl.length() == 0)))
     {
-      u.e("!44@/B4Tb64lLpLZi//yCy0pIDS5SYYe7sSOkAic0iTiIGs=", "both arguments are null");
+      v.e("MicroMsg.SDK.WXMusicObject", "both arguments are null");
       return false;
     }
     if ((musicUrl != null) && (musicUrl.length() > 10240))
     {
-      u.e("!44@/B4Tb64lLpLZi//yCy0pIDS5SYYe7sSOkAic0iTiIGs=", "checkArgs fail, musicUrl is too long");
+      v.e("MicroMsg.SDK.WXMusicObject", "checkArgs fail, musicUrl is too long");
       return false;
     }
     if ((musicLowBandUrl != null) && (musicLowBandUrl.length() > 10240))
     {
-      u.e("!44@/B4Tb64lLpLZi//yCy0pIDS5SYYe7sSOkAic0iTiIGs=", "checkArgs fail, musicLowBandUrl is too long");
+      v.e("MicroMsg.SDK.WXMusicObject", "checkArgs fail, musicLowBandUrl is too long");
       return false;
     }
     return true;

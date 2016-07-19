@@ -9,20 +9,20 @@ import android.widget.SpinnerAdapter;
 final class d$b
   implements ListAdapter, SpinnerAdapter
 {
-  private SpinnerAdapter mX;
-  private ListAdapter qZ;
+  private SpinnerAdapter nn;
+  private ListAdapter rn;
   
   public d$b(SpinnerAdapter paramSpinnerAdapter)
   {
-    mX = paramSpinnerAdapter;
+    nn = paramSpinnerAdapter;
     if ((paramSpinnerAdapter instanceof ListAdapter)) {
-      qZ = ((ListAdapter)paramSpinnerAdapter);
+      rn = ((ListAdapter)paramSpinnerAdapter);
     }
   }
   
   public final boolean areAllItemsEnabled()
   {
-    ListAdapter localListAdapter = qZ;
+    ListAdapter localListAdapter = rn;
     if (localListAdapter != null) {
       return localListAdapter.areAllItemsEnabled();
     }
@@ -31,34 +31,34 @@ final class d$b
   
   public final int getCount()
   {
-    if (mX == null) {
+    if (nn == null) {
       return 0;
     }
-    return mX.getCount();
+    return nn.getCount();
   }
   
   public final View getDropDownView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
-    if (mX == null) {
+    if (nn == null) {
       return null;
     }
-    return mX.getDropDownView(paramInt, paramView, paramViewGroup);
+    return nn.getDropDownView(paramInt, paramView, paramViewGroup);
   }
   
   public final Object getItem(int paramInt)
   {
-    if (mX == null) {
+    if (nn == null) {
       return null;
     }
-    return mX.getItem(paramInt);
+    return nn.getItem(paramInt);
   }
   
   public final long getItemId(int paramInt)
   {
-    if (mX == null) {
+    if (nn == null) {
       return -1L;
     }
-    return mX.getItemId(paramInt);
+    return nn.getItemId(paramInt);
   }
   
   public final int getItemViewType(int paramInt)
@@ -78,7 +78,7 @@ final class d$b
   
   public final boolean hasStableIds()
   {
-    return (mX != null) && (mX.hasStableIds());
+    return (nn != null) && (nn.hasStableIds());
   }
   
   public final boolean isEmpty()
@@ -88,7 +88,7 @@ final class d$b
   
   public final boolean isEnabled(int paramInt)
   {
-    ListAdapter localListAdapter = qZ;
+    ListAdapter localListAdapter = rn;
     if (localListAdapter != null) {
       return localListAdapter.isEnabled(paramInt);
     }
@@ -97,15 +97,15 @@ final class d$b
   
   public final void registerDataSetObserver(DataSetObserver paramDataSetObserver)
   {
-    if (mX != null) {
-      mX.registerDataSetObserver(paramDataSetObserver);
+    if (nn != null) {
+      nn.registerDataSetObserver(paramDataSetObserver);
     }
   }
   
   public final void unregisterDataSetObserver(DataSetObserver paramDataSetObserver)
   {
-    if (mX != null) {
-      mX.unregisterDataSetObserver(paramDataSetObserver);
+    if (nn != null) {
+      nn.unregisterDataSetObserver(paramDataSetObserver);
     }
   }
 }

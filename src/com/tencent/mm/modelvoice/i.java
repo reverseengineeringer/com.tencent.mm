@@ -6,14 +6,12 @@ import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.media.MediaPlayer.OnErrorListener;
 import android.widget.Toast;
-import com.tencent.mm.c.b.g;
 import com.tencent.mm.c.c.b;
 import com.tencent.mm.compatible.d.p;
-import com.tencent.mm.platformtools.r;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.platformtools.q;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -21,35 +19,35 @@ import java.io.IOException;
 public final class i
   implements d
 {
-  private static Object cha = new Object();
-  private static int chb = -1;
-  private static int chc;
-  public int apH = 16000;
-  public int aqx = 2;
-  private AudioTrack cgS;
-  private a cgT;
-  private com.tencent.mm.compatible.util.a cgU;
-  private d.a cgV = null;
-  private d.b cgW = null;
-  private boolean cgX = false;
-  private String cgY = "";
-  private String cgZ = "";
-  private int chd;
-  private int che = 0;
-  private b chf = null;
-  private MediaPlayer.OnCompletionListener chg = new MediaPlayer.OnCompletionListener()
+  private static Object ccr = new Object();
+  private static int ccs = -1;
+  private static int cct;
+  public int aaZ = 16000;
+  public int abP = 2;
+  private AudioTrack ccj;
+  private a cck;
+  private com.tencent.mm.compatible.util.a ccl;
+  private d.a ccm = null;
+  private d.b ccn = null;
+  private boolean cco = false;
+  private String ccp = "";
+  private String ccq = "";
+  private int ccu;
+  private int ccv = 0;
+  private b ccw = null;
+  private MediaPlayer.OnCompletionListener ccx = new MediaPlayer.OnCompletionListener()
   {
     public final void onCompletion(MediaPlayer paramAnonymousMediaPlayer)
     {
       if (i.a(i.this) != null) {
-        i.a(i.this).oV();
+        i.a(i.this).nn();
       }
       try
       {
         i.a(i.this, 0);
         if (i.b(i.this) != null)
         {
-          u.i("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "mAudioTrack.stop()");
+          v.i("MicroMsg.SilkPlayer", "mAudioTrack.stop()");
           i.b(i.this).stop();
           i.b(i.this).release();
           i.c(i.this);
@@ -58,18 +56,18 @@ public final class i
       }
       catch (Exception paramAnonymousMediaPlayer)
       {
-        u.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "exception:%s", new Object[] { ay.b(paramAnonymousMediaPlayer) });
-        u.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "setCompletion File[" + i.d(i.this) + "] ErrMsg[" + paramAnonymousMediaPlayer.getStackTrace() + "]");
+        v.e("MicroMsg.SilkPlayer", "exception:%s", new Object[] { be.f(paramAnonymousMediaPlayer) });
+        v.e("MicroMsg.SilkPlayer", "setCompletion File[" + i.d(i.this) + "] ErrMsg[" + paramAnonymousMediaPlayer.getStackTrace() + "]");
       }
     }
   };
-  private MediaPlayer.OnErrorListener chh = new MediaPlayer.OnErrorListener()
+  private MediaPlayer.OnErrorListener ccy = new MediaPlayer.OnErrorListener()
   {
     public final boolean onError(MediaPlayer paramAnonymousMediaPlayer, int paramAnonymousInt1, int paramAnonymousInt2)
     {
-      u.i("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "onError");
+      v.i("MicroMsg.SilkPlayer", "onError");
       if (i.a(i.this) != null) {
-        i.a(i.this).oV();
+        i.a(i.this).nn();
       }
       if (i.e(i.this) != null) {
         i.e(i.this).onError();
@@ -79,7 +77,7 @@ public final class i
         i.a(i.this, -1);
         if (i.b(i.this) != null)
         {
-          u.i("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "mAudioTrack.stop()");
+          v.i("MicroMsg.SilkPlayer", "mAudioTrack.stop()");
           i.b(i.this).stop();
           i.b(i.this).release();
           i.c(i.this);
@@ -90,7 +88,7 @@ public final class i
       {
         for (;;)
         {
-          u.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "setErrorListener File[" + i.d(i.this) + "] ErrMsg[" + paramAnonymousMediaPlayer.getStackTrace() + "]");
+          v.e("MicroMsg.SilkPlayer", "setErrorListener File[" + i.d(i.this) + "] ErrMsg[" + paramAnonymousMediaPlayer.getStackTrace() + "]");
         }
       }
     }
@@ -100,61 +98,61 @@ public final class i
   
   public i()
   {
-    chb += 1;
-    chd = chb;
-    u.i("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "[%d] new Instance", new Object[] { Integer.valueOf(chd) });
+    ccs += 1;
+    ccu = ccs;
+    v.i("MicroMsg.SilkPlayer", "[%d] new Instance", new Object[] { Integer.valueOf(ccu) });
   }
   
   public i(Context paramContext)
   {
     this();
-    cgU = new com.tencent.mm.compatible.util.a(paramContext);
+    ccl = new com.tencent.mm.compatible.util.a(paramContext);
   }
   
-  private void bd(boolean paramBoolean)
+  private void aL(boolean paramBoolean)
   {
-    if (cgS != null) {
-      u.i("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "mAudioTrack.stop()");
+    if (ccj != null) {
+      v.i("MicroMsg.SilkPlayer", "mAudioTrack.stop()");
     }
     try
     {
-      cgS.stop();
-      cgS.release();
-      cgS = null;
-      int j = apH;
-      int k = aqx;
+      ccj.stop();
+      ccj.release();
+      ccj = null;
+      int j = aaZ;
+      int k = abP;
       if (paramBoolean)
       {
         i = 3;
-        if (!bsLbpH) {
+        if (!bgPbdH) {
           break label343;
         }
-        p.bsL.dump();
-        if ((!paramBoolean) || (bsLbqj < 0)) {
+        p.bgP.dump();
+        if ((!paramBoolean) || (bgPbej < 0)) {
           break label315;
         }
-        i = bsLbqj;
+        i = bgPbej;
         int m = AudioTrack.getMinBufferSize(j, k, 2);
-        u.i("!32@VXu4NVho+awOLIPNUhhQ0V9U8JcZWYJ1", "speakerOn: %b, type: %d, sampleRate: %d, channelConfig: %d, PlayBufSize: %d", new Object[] { Boolean.valueOf(paramBoolean), Integer.valueOf(i), Integer.valueOf(j), Integer.valueOf(k), Integer.valueOf(m) });
+        v.i("AudioDeviceFactory", "speakerOn: %b, type: %d, sampleRate: %d, channelConfig: %d, PlayBufSize: %d", new Object[] { Boolean.valueOf(paramBoolean), Integer.valueOf(i), Integer.valueOf(j), Integer.valueOf(k), Integer.valueOf(m) });
         AudioTrack localAudioTrack = new AudioTrack(i, j, k, 2, m * 8, 1);
         Object localObject = localAudioTrack;
         if (localAudioTrack.getState() == 0)
         {
-          u.i("!32@VXu4NVho+awOLIPNUhhQ0V9U8JcZWYJ1", "reconstruct AudioTrack");
+          v.i("AudioDeviceFactory", "reconstruct AudioTrack");
           if (i != 0) {
             break label338;
           }
           i = 3;
           localObject = new AudioTrack(i, j, k, 2, m * 8, 1);
         }
-        u.i("!32@VXu4NVho+awOLIPNUhhQ0V9U8JcZWYJ1", "AudioTrack state: " + ((AudioTrack)localObject).getState());
-        cgS = ((AudioTrack)localObject);
-        if ((cgS == null) || (cgS.getState() == 0))
+        v.i("AudioDeviceFactory", "AudioTrack state: " + ((AudioTrack)localObject).getState());
+        ccj = ((AudioTrack)localObject);
+        if ((ccj == null) || (ccj.getState() == 0))
         {
-          localObject = h.fUJ;
-          h.b(161L, 0L, 1L, false);
-          localObject = h.fUJ;
-          h.b(161L, 2L, 1L, false);
+          localObject = com.tencent.mm.plugin.report.service.g.gdY;
+          com.tencent.mm.plugin.report.service.g.b(161L, 0L, 1L, false);
+          localObject = com.tencent.mm.plugin.report.service.g.gdY;
+          com.tencent.mm.plugin.report.service.g.b(161L, 2L, 1L, false);
         }
       }
     }
@@ -165,13 +163,13 @@ public final class i
       label343:
       for (;;)
       {
-        u.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "mAudioTrack.stop() error: %s", new Object[] { localException.getMessage() });
+        v.e("MicroMsg.SilkPlayer", "mAudioTrack.stop() error: %s", new Object[] { localException.getMessage() });
         continue;
         int i = 0;
         continue;
-        if ((!paramBoolean) && (bsLbqk >= 0))
+        if ((!paramBoolean) && (bgPbek >= 0))
         {
-          i = bsLbqk;
+          i = bgPbek;
           continue;
           i = 0;
         }
@@ -180,85 +178,85 @@ public final class i
   }
   
   /* Error */
-  private void be(boolean paramBoolean)
+  private void aM(boolean paramBoolean)
   {
     // Byte code:
     //   0: aload_0
     //   1: getfield 69	com/tencent/mm/modelvoice/i:mFileName	Ljava/lang/String;
-    //   4: invokestatic 233	com/tencent/mm/a/e:ax	(Ljava/lang/String;)Z
+    //   4: invokestatic 232	com/tencent/mm/a/e:aB	(Ljava/lang/String;)Z
     //   7: ifne +4 -> 11
     //   10: return
     //   11: aload_0
     //   12: iload_1
-    //   13: invokespecial 235	com/tencent/mm/modelvoice/i:bd	(Z)V
+    //   13: invokespecial 234	com/tencent/mm/modelvoice/i:aL	(Z)V
     //   16: iload_1
     //   17: ifeq +18 -> 35
     //   20: aload_0
-    //   21: getfield 115	com/tencent/mm/modelvoice/i:cgU	Lcom/tencent/mm/compatible/util/a;
+    //   21: getfield 115	com/tencent/mm/modelvoice/i:ccl	Lcom/tencent/mm/compatible/util/a;
     //   24: ifnull +11 -> 35
     //   27: aload_0
-    //   28: getfield 115	com/tencent/mm/modelvoice/i:cgU	Lcom/tencent/mm/compatible/util/a;
-    //   31: invokevirtual 239	com/tencent/mm/compatible/util/a:requestFocus	()Z
+    //   28: getfield 115	com/tencent/mm/modelvoice/i:ccl	Lcom/tencent/mm/compatible/util/a;
+    //   31: invokevirtual 238	com/tencent/mm/compatible/util/a:requestFocus	()Z
     //   34: pop
     //   35: aload_0
-    //   36: getfield 133	com/tencent/mm/modelvoice/i:cgS	Landroid/media/AudioTrack;
+    //   36: getfield 135	com/tencent/mm/modelvoice/i:ccj	Landroid/media/AudioTrack;
     //   39: astore_2
     //   40: aload_2
     //   41: ifnull -31 -> 10
     //   44: ldc 93
-    //   46: ldc -15
-    //   48: invokestatic 142	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   46: ldc -16
+    //   48: invokestatic 140	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;)V
     //   51: aload_0
-    //   52: getfield 133	com/tencent/mm/modelvoice/i:cgS	Landroid/media/AudioTrack;
-    //   55: invokevirtual 243	android/media/AudioTrack:play	()V
+    //   52: getfield 135	com/tencent/mm/modelvoice/i:ccj	Landroid/media/AudioTrack;
+    //   55: invokevirtual 242	android/media/AudioTrack:play	()V
     //   58: aload_0
     //   59: new 12	com/tencent/mm/modelvoice/i$a
     //   62: dup
     //   63: aload_0
     //   64: iconst_0
-    //   65: invokespecial 246	com/tencent/mm/modelvoice/i$a:<init>	(Lcom/tencent/mm/modelvoice/i;B)V
-    //   68: putfield 248	com/tencent/mm/modelvoice/i:cgT	Lcom/tencent/mm/modelvoice/i$a;
+    //   65: invokespecial 245	com/tencent/mm/modelvoice/i$a:<init>	(Lcom/tencent/mm/modelvoice/i;B)V
+    //   68: putfield 247	com/tencent/mm/modelvoice/i:cck	Lcom/tencent/mm/modelvoice/i$a;
     //   71: aload_0
-    //   72: getfield 248	com/tencent/mm/modelvoice/i:cgT	Lcom/tencent/mm/modelvoice/i$a;
-    //   75: new 190	java/lang/StringBuilder
+    //   72: getfield 247	com/tencent/mm/modelvoice/i:cck	Lcom/tencent/mm/modelvoice/i$a;
+    //   75: new 188	java/lang/StringBuilder
     //   78: dup
-    //   79: ldc -6
-    //   81: invokespecial 194	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   79: ldc -7
+    //   81: invokespecial 192	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   84: aload_0
-    //   85: getfield 91	com/tencent/mm/modelvoice/i:chd	I
-    //   88: invokevirtual 198	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   91: invokevirtual 202	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   85: getfield 91	com/tencent/mm/modelvoice/i:ccu	I
+    //   88: invokevirtual 196	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   91: invokevirtual 200	java/lang/StringBuilder:toString	()Ljava/lang/String;
     //   94: bipush 10
-    //   96: invokestatic 255	com/tencent/mm/sdk/i/e:b	(Ljava/lang/Runnable;Ljava/lang/String;I)V
+    //   96: invokestatic 254	com/tencent/mm/sdk/i/e:b	(Ljava/lang/Runnable;Ljava/lang/String;I)V
     //   99: return
     //   100: astore_2
     //   101: aload_0
-    //   102: getfield 115	com/tencent/mm/modelvoice/i:cgU	Lcom/tencent/mm/compatible/util/a;
+    //   102: getfield 115	com/tencent/mm/modelvoice/i:ccl	Lcom/tencent/mm/compatible/util/a;
     //   105: ifnull +11 -> 116
     //   108: aload_0
-    //   109: getfield 115	com/tencent/mm/modelvoice/i:cgU	Lcom/tencent/mm/compatible/util/a;
-    //   112: invokevirtual 258	com/tencent/mm/compatible/util/a:oV	()Z
+    //   109: getfield 115	com/tencent/mm/modelvoice/i:ccl	Lcom/tencent/mm/compatible/util/a;
+    //   112: invokevirtual 257	com/tencent/mm/compatible/util/a:nn	()Z
     //   115: pop
     //   116: ldc 93
-    //   118: new 190	java/lang/StringBuilder
+    //   118: new 188	java/lang/StringBuilder
     //   121: dup
-    //   122: ldc_w 260
-    //   125: invokespecial 194	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   122: ldc_w 259
+    //   125: invokespecial 192	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   128: aload_2
-    //   129: invokevirtual 220	java/lang/Exception:getMessage	()Ljava/lang/String;
-    //   132: invokevirtual 263	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   135: invokevirtual 202	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   138: invokestatic 265	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   129: invokevirtual 219	java/lang/Exception:getMessage	()Ljava/lang/String;
+    //   132: invokevirtual 262	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   135: invokevirtual 200	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   138: invokestatic 264	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   141: ldc 93
-    //   143: ldc_w 267
+    //   143: ldc_w 266
     //   146: iconst_1
     //   147: anewarray 4	java/lang/Object
     //   150: dup
     //   151: iconst_0
     //   152: aload_2
-    //   153: invokestatic 272	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   153: invokestatic 272	com/tencent/mm/sdk/platformtools/be:f	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   156: aastore
-    //   157: invokestatic 223	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   157: invokestatic 222	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   160: return
     //   161: astore_2
     //   162: ldc 93
@@ -268,23 +266,23 @@ public final class i
     //   171: dup
     //   172: iconst_0
     //   173: aload_2
-    //   174: invokevirtual 220	java/lang/Exception:getMessage	()Ljava/lang/String;
+    //   174: invokevirtual 219	java/lang/Exception:getMessage	()Ljava/lang/String;
     //   177: aastore
-    //   178: invokestatic 223	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    //   181: getstatic 208	com/tencent/mm/plugin/report/service/h:fUJ	Lcom/tencent/mm/plugin/report/service/h;
+    //   178: invokestatic 222	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   181: getstatic 206	com/tencent/mm/plugin/report/service/g:gdY	Lcom/tencent/mm/plugin/report/service/g;
     //   184: astore_2
-    //   185: ldc2_w 209
+    //   185: ldc2_w 207
     //   188: lconst_0
     //   189: lconst_1
     //   190: iconst_0
-    //   191: invokestatic 213	com/tencent/mm/plugin/report/service/h:b	(JJJZ)V
-    //   194: getstatic 208	com/tencent/mm/plugin/report/service/h:fUJ	Lcom/tencent/mm/plugin/report/service/h;
+    //   191: invokestatic 212	com/tencent/mm/plugin/report/service/g:b	(JJJZ)V
+    //   194: getstatic 206	com/tencent/mm/plugin/report/service/g:gdY	Lcom/tencent/mm/plugin/report/service/g;
     //   197: astore_2
-    //   198: ldc2_w 209
+    //   198: ldc2_w 207
     //   201: ldc2_w 275
     //   204: lconst_1
     //   205: iconst_0
-    //   206: invokestatic 213	com/tencent/mm/plugin/report/service/h:b	(JJJZ)V
+    //   206: invokestatic 212	com/tencent/mm/plugin/report/service/g:b	(JJJZ)V
     //   209: return
     // Local variable table:
     //   start	length	slot	name	signature
@@ -293,7 +291,7 @@ public final class i
     //   39	2	2	localAudioTrack	AudioTrack
     //   100	53	2	localException1	Exception
     //   161	13	2	localException2	Exception
-    //   184	14	2	localh	h
+    //   184	14	2	localg	com.tencent.mm.plugin.report.service.g
     // Exception table:
     //   from	to	target	type
     //   11	16	100	java/lang/Exception
@@ -304,29 +302,29 @@ public final class i
     //   44	58	161	java/lang/Exception
   }
   
-  private void jX(String paramString)
+  private void kF(String paramString)
   {
-    chc = chd;
-    u.i("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "[%d] SilkDecInit", new Object[] { Integer.valueOf(chd) });
+    cct = ccu;
+    v.i("MicroMsg.SilkPlayer", "[%d] SilkDecInit", new Object[] { Integer.valueOf(ccu) });
     try
     {
       paramString = new FileInputStream(paramString);
       i = paramString.available();
       localObject = new byte[i];
       paramString.read((byte[])localObject, 0, i);
-      apH = MediaRecorder.SilkGetEncSampleRate(new byte[] { localObject[0] });
+      aaZ = MediaRecorder.SilkGetEncSampleRate(new byte[] { localObject[0] });
       MediaRecorder.SilkDecUnInit();
-      MediaRecorder.SilkDecInit(apH, (byte[])localObject, i);
+      MediaRecorder.SilkDecInit(aaZ, (byte[])localObject, i);
       paramString.close();
-      u.d("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "[%d] skip %d frames", new Object[] { Integer.valueOf(chd), Integer.valueOf(che) });
-      paramString = new byte[AudioTrack.getMinBufferSize(apH, 2, 2) * 2];
-      short s = (short)(apH * 20 / 1000);
+      v.d("MicroMsg.SilkPlayer", "[%d] skip %d frames", new Object[] { Integer.valueOf(ccu), Integer.valueOf(ccv) });
+      paramString = new byte[AudioTrack.getMinBufferSize(aaZ, 2, 2) * 2];
+      short s = (short)(aaZ * 20 / 1000);
       i = 0;
-      if (i < che)
+      if (i < ccv)
       {
         int j = MediaRecorder.SilkDoDec(paramString, s);
         if (j <= 0) {
-          u.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "[%d], skip frame failed: %d", new Object[] { Integer.valueOf(chd), Integer.valueOf(j) });
+          v.e("MicroMsg.SilkPlayer", "[%d], skip frame failed: %d", new Object[] { Integer.valueOf(ccu), Integer.valueOf(j) });
         }
       }
       else
@@ -339,11 +337,11 @@ public final class i
       for (;;)
       {
         int i;
-        Object localObject = h.fUJ;
-        h.b(161L, 0L, 1L, false);
-        localObject = h.fUJ;
-        h.b(161L, 1L, 1L, false);
-        u.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "exception:%s", new Object[] { ay.b(paramString) });
+        Object localObject = com.tencent.mm.plugin.report.service.g.gdY;
+        com.tencent.mm.plugin.report.service.g.b(161L, 0L, 1L, false);
+        localObject = com.tencent.mm.plugin.report.service.g.gdY;
+        com.tencent.mm.plugin.report.service.g.b(161L, 1L, 1L, false);
+        v.e("MicroMsg.SilkPlayer", "exception:%s", new Object[] { be.f(paramString) });
         continue;
         i += 1;
       }
@@ -351,18 +349,18 @@ public final class i
   }
   
   /* Error */
-  private String jY(String paramString)
+  private String kG(String paramString)
   {
     // Byte code:
     //   0: ldc 93
-    //   2: ldc_w 331
-    //   5: invokestatic 333	com/tencent/mm/sdk/platformtools/u:d	(Ljava/lang/String;Ljava/lang/String;)V
+    //   2: ldc_w 332
+    //   5: invokestatic 334	com/tencent/mm/sdk/platformtools/v:d	(Ljava/lang/String;Ljava/lang/String;)V
     //   8: aload_0
     //   9: getfield 69	com/tencent/mm/modelvoice/i:mFileName	Ljava/lang/String;
-    //   12: invokestatic 233	com/tencent/mm/a/e:ax	(Ljava/lang/String;)Z
+    //   12: invokestatic 232	com/tencent/mm/a/e:aB	(Ljava/lang/String;)Z
     //   15: ifne +28 -> 43
     //   18: ldc 93
-    //   20: ldc_w 335
+    //   20: ldc_w 336
     //   23: iconst_1
     //   24: anewarray 4	java/lang/Object
     //   27: dup
@@ -370,27 +368,27 @@ public final class i
     //   29: aload_0
     //   30: getfield 69	com/tencent/mm/modelvoice/i:mFileName	Ljava/lang/String;
     //   33: aastore
-    //   34: invokestatic 223	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   34: invokestatic 222	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   37: aconst_null
     //   38: astore 4
     //   40: aload 4
     //   42: areturn
     //   43: ldc 93
-    //   45: ldc_w 337
-    //   48: invokestatic 333	com/tencent/mm/sdk/platformtools/u:d	(Ljava/lang/String;Ljava/lang/String;)V
+    //   45: ldc_w 338
+    //   48: invokestatic 334	com/tencent/mm/sdk/platformtools/v:d	(Ljava/lang/String;Ljava/lang/String;)V
     //   51: bipush -16
-    //   53: invokestatic 343	android/os/Process:setThreadPriority	(I)V
+    //   53: invokestatic 344	android/os/Process:setThreadPriority	(I)V
     //   56: aload_0
-    //   57: getfield 65	com/tencent/mm/modelvoice/i:apH	I
+    //   57: getfield 65	com/tencent/mm/modelvoice/i:aaZ	I
     //   60: iconst_2
     //   61: iconst_2
-    //   62: invokestatic 171	android/media/AudioTrack:getMinBufferSize	(III)I
+    //   62: invokestatic 169	android/media/AudioTrack:getMinBufferSize	(III)I
     //   65: iconst_1
     //   66: ishl
     //   67: newarray <illegal type>
     //   69: astore 5
     //   71: aload_0
-    //   72: getfield 65	com/tencent/mm/modelvoice/i:apH	I
+    //   72: getfield 65	com/tencent/mm/modelvoice/i:aaZ	I
     //   75: bipush 20
     //   77: imul
     //   78: sipush 1000
@@ -398,12 +396,12 @@ public final class i
     //   82: i2s
     //   83: istore_2
     //   84: aload_1
-    //   85: invokestatic 346	com/tencent/mm/modelvoice/i:jZ	(Ljava/lang/String;)Z
+    //   85: invokestatic 347	com/tencent/mm/modelvoice/i:kH	(Ljava/lang/String;)Z
     //   88: pop
-    //   89: new 348	java/io/FileOutputStream
+    //   89: new 349	java/io/FileOutputStream
     //   92: dup
     //   93: aload_1
-    //   94: invokespecial 349	java/io/FileOutputStream:<init>	(Ljava/lang/String;)V
+    //   94: invokespecial 350	java/io/FileOutputStream:<init>	(Ljava/lang/String;)V
     //   97: astore 4
     //   99: aload_0
     //   100: getfield 71	com/tencent/mm/modelvoice/i:mStatus	I
@@ -415,7 +413,7 @@ public final class i
     //   112: if_icmpne +128 -> 240
     //   115: aload 5
     //   117: iload_2
-    //   118: invokestatic 323	com/tencent/mm/modelvoice/MediaRecorder:SilkDoDec	([BS)I
+    //   118: invokestatic 324	com/tencent/mm/modelvoice/MediaRecorder:SilkDoDec	([BS)I
     //   121: istore_3
     //   122: iload_3
     //   123: ifge +73 -> 196
@@ -425,39 +423,39 @@ public final class i
     //   131: goto -32 -> 99
     //   134: astore_1
     //   135: ldc 93
-    //   137: new 190	java/lang/StringBuilder
+    //   137: new 188	java/lang/StringBuilder
     //   140: dup
-    //   141: ldc_w 351
-    //   144: invokespecial 194	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   141: ldc_w 352
+    //   144: invokespecial 192	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   147: aload_1
-    //   148: invokevirtual 220	java/lang/Exception:getMessage	()Ljava/lang/String;
-    //   151: invokevirtual 263	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   154: invokevirtual 202	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   157: invokestatic 265	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   148: invokevirtual 219	java/lang/Exception:getMessage	()Ljava/lang/String;
+    //   151: invokevirtual 262	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   154: invokevirtual 200	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   157: invokestatic 264	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   160: ldc 93
-    //   162: ldc_w 267
+    //   162: ldc_w 266
     //   165: iconst_1
     //   166: anewarray 4	java/lang/Object
     //   169: dup
     //   170: iconst_0
     //   171: aload_1
-    //   172: invokestatic 272	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   172: invokestatic 272	com/tencent/mm/sdk/platformtools/be:f	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   175: aastore
-    //   176: invokestatic 223	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   176: invokestatic 222	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   179: aload_0
     //   180: iconst_0
     //   181: putfield 71	com/tencent/mm/modelvoice/i:mStatus	I
     //   184: aload 4
     //   186: ifnull +8 -> 194
     //   189: aload 4
-    //   191: invokevirtual 352	java/io/FileOutputStream:close	()V
+    //   191: invokevirtual 353	java/io/FileOutputStream:close	()V
     //   194: aconst_null
     //   195: areturn
     //   196: aload_0
-    //   197: getfield 73	com/tencent/mm/modelvoice/i:cgX	Z
+    //   197: getfield 73	com/tencent/mm/modelvoice/i:cco	Z
     //   200: ifeq +12 -> 212
-    //   203: ldc2_w 353
-    //   206: invokestatic 360	java/lang/Thread:sleep	(J)V
+    //   203: ldc2_w 354
+    //   206: invokestatic 361	java/lang/Thread:sleep	(J)V
     //   209: goto -13 -> 196
     //   212: aload 4
     //   214: aload 5
@@ -465,9 +463,9 @@ public final class i
     //   217: iload_2
     //   218: iconst_2
     //   219: imul
-    //   220: invokevirtual 364	java/io/FileOutputStream:write	([BII)V
+    //   220: invokevirtual 365	java/io/FileOutputStream:write	([BII)V
     //   223: aload 4
-    //   225: invokevirtual 367	java/io/FileOutputStream:flush	()V
+    //   225: invokevirtual 368	java/io/FileOutputStream:flush	()V
     //   228: iload_3
     //   229: ifne -130 -> 99
     //   232: aload_0
@@ -475,59 +473,59 @@ public final class i
     //   234: putfield 71	com/tencent/mm/modelvoice/i:mStatus	I
     //   237: goto -138 -> 99
     //   240: ldc 93
-    //   242: ldc_w 369
-    //   245: invokestatic 333	com/tencent/mm/sdk/platformtools/u:d	(Ljava/lang/String;Ljava/lang/String;)V
+    //   242: ldc_w 370
+    //   245: invokestatic 334	com/tencent/mm/sdk/platformtools/v:d	(Ljava/lang/String;Ljava/lang/String;)V
     //   248: aload 4
-    //   250: invokevirtual 352	java/io/FileOutputStream:close	()V
-    //   253: invokestatic 308	com/tencent/mm/modelvoice/MediaRecorder:SilkDecUnInit	()I
+    //   250: invokevirtual 353	java/io/FileOutputStream:close	()V
+    //   253: invokestatic 309	com/tencent/mm/modelvoice/MediaRecorder:SilkDecUnInit	()I
     //   256: istore_3
     //   257: ldc 93
-    //   259: ldc_w 371
+    //   259: ldc_w 372
     //   262: iconst_1
     //   263: anewarray 4	java/lang/Object
     //   266: dup
     //   267: iconst_0
     //   268: aload_0
-    //   269: getfield 91	com/tencent/mm/modelvoice/i:chd	I
+    //   269: getfield 91	com/tencent/mm/modelvoice/i:ccu	I
     //   272: invokestatic 101	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
     //   275: aastore
-    //   276: invokestatic 107	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   276: invokestatic 107	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   279: aload_1
     //   280: astore 4
     //   282: iload_3
     //   283: ifeq -243 -> 40
     //   286: ldc 93
-    //   288: new 190	java/lang/StringBuilder
+    //   288: new 188	java/lang/StringBuilder
     //   291: dup
-    //   292: ldc_w 373
-    //   295: invokespecial 194	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   292: ldc_w 374
+    //   295: invokespecial 192	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   298: iload_3
-    //   299: invokevirtual 198	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   302: invokevirtual 202	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   305: invokestatic 265	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   299: invokevirtual 196	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   302: invokevirtual 200	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   305: invokestatic 264	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   308: aload_1
     //   309: areturn
     //   310: astore_1
     //   311: ldc 93
-    //   313: new 190	java/lang/StringBuilder
+    //   313: new 188	java/lang/StringBuilder
     //   316: dup
-    //   317: ldc_w 375
-    //   320: invokespecial 194	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   317: ldc_w 376
+    //   320: invokespecial 192	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   323: aload_1
-    //   324: invokevirtual 220	java/lang/Exception:getMessage	()Ljava/lang/String;
-    //   327: invokevirtual 263	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   330: invokevirtual 202	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   333: invokestatic 265	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   324: invokevirtual 219	java/lang/Exception:getMessage	()Ljava/lang/String;
+    //   327: invokevirtual 262	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   330: invokevirtual 200	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   333: invokestatic 264	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   336: ldc 93
-    //   338: ldc_w 267
+    //   338: ldc_w 266
     //   341: iconst_1
     //   342: anewarray 4	java/lang/Object
     //   345: dup
     //   346: iconst_0
     //   347: aload_1
-    //   348: invokestatic 272	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   348: invokestatic 272	com/tencent/mm/sdk/platformtools/be:f	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   351: aastore
-    //   352: invokestatic 223	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   352: invokestatic 222	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   355: aconst_null
     //   356: areturn
     //   357: astore_1
@@ -561,7 +559,7 @@ public final class i
     //   43	99	361	java/lang/Exception
   }
   
-  private static boolean jZ(String paramString)
+  private static boolean kH(String paramString)
   {
     if (paramString == null) {
       return false;
@@ -572,13 +570,13 @@ public final class i
       i = paramString.lastIndexOf("/");
       if (i == -1)
       {
-        u.w("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "ensureFileFloder end == -1");
+        v.w("MicroMsg.SilkPlayer", "ensureFileFloder end == -1");
         return false;
       }
     }
     catch (Exception paramString)
     {
-      u.w("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "ensureFileFloder Exception:", new Object[] { paramString.getMessage() });
+      v.w("MicroMsg.SilkPlayer", "ensureFileFloder Exception:", new Object[] { paramString.getMessage() });
       return false;
     }
     paramString = paramString.substring(0, i + 1);
@@ -595,7 +593,7 @@ public final class i
     }
     for (;;)
     {
-      u.i("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "ensureFileFloder mkdir:%s,sucess:%s", new Object[] { paramString, Boolean.valueOf(bool) });
+      v.i("MicroMsg.SilkPlayer", "ensureFileFloder mkdir:%s,sucess:%s", new Object[] { paramString, Boolean.valueOf(bool) });
       return true;
       label118:
       boolean bool = false;
@@ -605,58 +603,58 @@ public final class i
     }
   }
   
-  private boolean t(String paramString, boolean paramBoolean)
+  private boolean x(String paramString, boolean paramBoolean)
   {
     int j = 2;
     if (mStatus != 0)
     {
-      u.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "startPlay error status:" + mStatus);
+      v.e("MicroMsg.SilkPlayer", "startPlay error status:" + mStatus);
       return false;
     }
-    if (r.cnP) {
-      aa(paramString, g.aqY);
+    if (q.ciU) {
+      Y(paramString, com.tencent.mm.c.b.g.acq);
     }
-    u.i("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "startPlay");
+    v.i("MicroMsg.SilkPlayer", "startPlay");
     mStatus = 1;
     mFileName = paramString;
     for (;;)
     {
-      synchronized (cha)
+      synchronized (ccr)
       {
-        jX(paramString);
-        if (r.cnP)
+        kF(paramString);
+        if (q.ciU)
         {
-          paramString = g.aqX;
-          if (aqx == 2)
+          paramString = com.tencent.mm.c.b.g.acp;
+          if (abP == 2)
           {
             i = 1;
-            chf = new b(paramString, i, apH);
+            ccw = new b(paramString, i, aaZ);
           }
         }
         else
         {
-          int k = apH;
+          int k = aaZ;
           i = j;
-          if (aqx == 2) {
+          if (abP == 2) {
             i = 1;
           }
-          u.d("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "startPlay, sampleRate: %d, channelCnt: %d ", new Object[] { Integer.valueOf(k), Integer.valueOf(i) });
+          v.d("MicroMsg.SilkPlayer", "startPlay, sampleRate: %d, channelCnt: %d ", new Object[] { Integer.valueOf(k), Integer.valueOf(i) });
           try
           {
-            be(paramBoolean);
+            aM(paramBoolean);
             return true;
           }
           catch (Exception paramString)
           {
             try
             {
-              be(true);
+              aM(true);
               return true;
             }
             catch (Exception localException)
             {
-              u.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "startPlay File[" + mFileName + "] failed");
-              u.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "exception:%s", new Object[] { ay.b(paramString) });
+              v.e("MicroMsg.SilkPlayer", "startPlay File[" + mFileName + "] failed");
+              v.e("MicroMsg.SilkPlayer", "exception:%s", new Object[] { be.f(paramString) });
               mStatus = -1;
               return false;
             }
@@ -667,20 +665,35 @@ public final class i
     }
   }
   
-  public final void a(d.a parama)
+  public final void N(boolean paramBoolean)
   {
-    cgV = parama;
+    v.d("MicroMsg.SilkPlayer", "setSpeakerOn: %b", new Object[] { Boolean.valueOf(paramBoolean) });
+    cco = true;
+    abP = 2;
+    aL(paramBoolean);
+    try
+    {
+      ccj.play();
+      cco = false;
+      return;
+    }
+    catch (Exception localException)
+    {
+      for (;;)
+      {
+        com.tencent.mm.plugin.report.service.g localg = com.tencent.mm.plugin.report.service.g.gdY;
+        com.tencent.mm.plugin.report.service.g.b(161L, 0L, 1L, false);
+        localg = com.tencent.mm.plugin.report.service.g.gdY;
+        com.tencent.mm.plugin.report.service.g.b(161L, 3L, 1L, false);
+        v.e("MicroMsg.SilkPlayer", "audioTrack error:%s", new Object[] { localException.getMessage() });
+      }
+    }
   }
   
-  public final void a(d.b paramb)
-  {
-    cgW = paramb;
-  }
-  
-  public final String aa(String paramString1, String paramString2)
+  public final String Y(String paramString1, String paramString2)
   {
     if (mStatus != 0) {
-      u.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "startPlay error status:" + mStatus);
+      v.e("MicroMsg.SilkPlayer", "startPlay error status:" + mStatus);
     }
     do
     {
@@ -699,11 +712,11 @@ public final class i
           i = localFileInputStream.available();
           paramString1 = new byte[i];
           localFileInputStream.read(paramString1, 0, i);
-          apH = MediaRecorder.SilkGetEncSampleRate(new byte[] { paramString1[0] });
-          MediaRecorder.SilkDecInit(apH, paramString1, i);
-          u.i("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "[%d] SilkDecInit in silkToPcm", new Object[] { Integer.valueOf(chd) });
+          aaZ = MediaRecorder.SilkGetEncSampleRate(new byte[] { paramString1[0] });
+          MediaRecorder.SilkDecInit(aaZ, paramString1, i);
+          v.i("MicroMsg.SilkPlayer", "[%d] SilkDecInit in silkToPcm", new Object[] { Integer.valueOf(ccu) });
           localFileInputStream.close();
-          paramString1 = jY(paramString2);
+          paramString1 = kG(paramString2);
           return paramString1;
         }
         catch (Exception paramString1)
@@ -720,8 +733,8 @@ public final class i
       tmp146_143[0] = mFileName;
       Object[] tmp153_146 = tmp146_143;
       tmp153_146[1] = paramString1.getMessage();
-      u.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "silkToPcm, file[%s], exception: %s", tmp153_146);
-      u.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "exception:%s", new Object[] { ay.b(paramString1) });
+      v.e("MicroMsg.SilkPlayer", "silkToPcm, file[%s], exception: %s", tmp153_146);
+      v.e("MicroMsg.SilkPlayer", "exception:%s", new Object[] { be.f(paramString1) });
       mStatus = -1;
     } while (paramString2 == null);
     try
@@ -735,34 +748,19 @@ public final class i
     }
   }
   
-  public final void ak(boolean paramBoolean)
+  public final void a(d.a parama)
   {
-    u.d("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "setSpeakerOn: %b", new Object[] { Boolean.valueOf(paramBoolean) });
-    cgX = true;
-    aqx = 2;
-    bd(paramBoolean);
-    try
-    {
-      cgS.play();
-      cgX = false;
-      return;
-    }
-    catch (Exception localException)
-    {
-      for (;;)
-      {
-        h localh = h.fUJ;
-        h.b(161L, 0L, 1L, false);
-        localh = h.fUJ;
-        h.b(161L, 3L, 1L, false);
-        u.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "audioTrack error:%s", new Object[] { localException.getMessage() });
-      }
-    }
+    ccm = parama;
+  }
+  
+  public final void a(d.b paramb)
+  {
+    ccn = paramb;
   }
   
   public final boolean c(String paramString, boolean paramBoolean, int paramInt)
   {
-    return t(paramString, paramBoolean);
+    return x(paramString, paramBoolean);
   }
   
   public final int getStatus()
@@ -775,53 +773,53 @@ public final class i
     return mStatus == 1;
   }
   
-  public final boolean lB()
+  public final boolean jL()
   {
     if (mStatus != 2) {
       return false;
     }
     mStatus = 1;
-    synchronized (cgY)
+    synchronized (ccp)
     {
       try
       {
-        u.v("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "before mpause.notify");
-        cgY.notify();
-        u.v("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "after mpause.notify");
+        v.v("MicroMsg.SilkPlayer", "before mpause.notify");
+        ccp.notify();
+        v.v("MicroMsg.SilkPlayer", "after mpause.notify");
         return true;
       }
       catch (Exception localException)
       {
-        u.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "exception:%s", new Object[] { ay.b(localException) });
+        v.e("MicroMsg.SilkPlayer", "exception:%s", new Object[] { be.f(localException) });
         return false;
       }
     }
   }
   
-  public final double lE()
+  public final double jO()
   {
     return 0.0D;
   }
   
-  public final boolean lv()
+  public final boolean jW()
   {
-    u.i("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "stop  status:" + mStatus);
+    v.i("MicroMsg.SilkPlayer", "stop  status:" + mStatus);
     if ((mStatus != 1) && (mStatus != 2))
     {
-      u.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "stop  error status:" + mStatus);
+      v.e("MicroMsg.SilkPlayer", "stop  error status:" + mStatus);
       return false;
     }
     mStatus = 3;
-    synchronized (cgY)
+    synchronized (ccp)
     {
       try
       {
-        cgY.notify();
+        ccp.notify();
         return true;
       }
       catch (Exception localException)
       {
-        u.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "exception:%s", new Object[] { ay.b(localException) });
+        v.e("MicroMsg.SilkPlayer", "exception:%s", new Object[] { be.f(localException) });
         return false;
       }
     }
@@ -833,27 +831,27 @@ public final class i
       return false;
     }
     mStatus = 2;
-    synchronized (cgZ)
+    synchronized (ccq)
     {
       try
       {
-        u.v("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "before mOk.wait");
+        v.v("MicroMsg.SilkPlayer", "before mOk.wait");
         long l = System.currentTimeMillis();
-        cgZ.wait();
-        u.v("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "after mOk.wait time:" + (System.currentTimeMillis() - l));
+        ccq.wait();
+        v.v("MicroMsg.SilkPlayer", "after mOk.wait time:" + (System.currentTimeMillis() - l));
         return true;
       }
       catch (Exception localException)
       {
-        u.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "exception:%s", new Object[] { ay.b(localException) });
+        v.e("MicroMsg.SilkPlayer", "exception:%s", new Object[] { be.f(localException) });
         return false;
       }
     }
   }
   
-  public final boolean s(String paramString, boolean paramBoolean)
+  public final boolean w(String paramString, boolean paramBoolean)
   {
-    return t(paramString, paramBoolean);
+    return x(paramString, paramBoolean);
   }
   
   private final class a
@@ -868,7 +866,7 @@ public final class i
       //   0: bipush -16
       //   2: invokestatic 33	android/os/Process:setThreadPriority	(I)V
       //   5: aload_0
-      //   6: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   6: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   9: invokestatic 37	com/tencent/mm/modelvoice/i:f	(Lcom/tencent/mm/modelvoice/i;)I
       //   12: iconst_2
       //   13: iconst_2
@@ -880,7 +878,7 @@ public final class i
       //   21: newarray <illegal type>
       //   23: astore_3
       //   24: aload_0
-      //   25: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   25: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   28: invokestatic 37	com/tencent/mm/modelvoice/i:f	(Lcom/tencent/mm/modelvoice/i;)I
       //   31: bipush 20
       //   33: imul
@@ -902,27 +900,27 @@ public final class i
       //   57: iload_2
       //   58: invokestatic 58	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
       //   61: aastore
-      //   62: invokestatic 64	com/tencent/mm/sdk/platformtools/u:d	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   62: invokestatic 64	com/tencent/mm/sdk/platformtools/v:d	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   65: ldc 45
       //   67: ldc 66
-      //   69: invokestatic 70	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
+      //   69: invokestatic 70	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;)V
       //   72: aload_0
-      //   73: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   73: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   76: invokestatic 73	com/tencent/mm/modelvoice/i:g	(Lcom/tencent/mm/modelvoice/i;)I
       //   79: iconst_1
       //   80: if_icmpeq +14 -> 94
       //   83: aload_0
-      //   84: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   84: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   87: invokestatic 73	com/tencent/mm/modelvoice/i:g	(Lcom/tencent/mm/modelvoice/i;)I
       //   90: iconst_2
       //   91: if_icmpne +789 -> 880
-      //   94: invokestatic 77	com/tencent/mm/modelvoice/i:Es	()Ljava/lang/Object;
+      //   94: invokestatic 77	com/tencent/mm/modelvoice/i:EM	()Ljava/lang/Object;
       //   97: astore 4
       //   99: aload 4
       //   101: monitorenter
-      //   102: invokestatic 81	com/tencent/mm/modelvoice/i:Et	()I
+      //   102: invokestatic 81	com/tencent/mm/modelvoice/i:EN	()I
       //   105: aload_0
-      //   106: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   106: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   109: invokestatic 84	com/tencent/mm/modelvoice/i:h	(Lcom/tencent/mm/modelvoice/i;)I
       //   112: if_icmpeq +50 -> 162
       //   115: ldc 45
@@ -932,20 +930,20 @@ public final class i
       //   123: dup
       //   124: iconst_0
       //   125: aload_0
-      //   126: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   126: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   129: invokestatic 84	com/tencent/mm/modelvoice/i:h	(Lcom/tencent/mm/modelvoice/i;)I
       //   132: invokestatic 58	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
       //   135: aastore
       //   136: dup
       //   137: iconst_1
-      //   138: invokestatic 81	com/tencent/mm/modelvoice/i:Et	()I
+      //   138: invokestatic 81	com/tencent/mm/modelvoice/i:EN	()I
       //   141: invokestatic 58	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
       //   144: aastore
-      //   145: invokestatic 88	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   145: invokestatic 88	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   148: aload_0
-      //   149: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   149: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   152: aload_0
-      //   153: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   153: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   156: invokestatic 91	com/tencent/mm/modelvoice/i:d	(Lcom/tencent/mm/modelvoice/i;)Ljava/lang/String;
       //   159: invokestatic 94	com/tencent/mm/modelvoice/i:a	(Lcom/tencent/mm/modelvoice/i;Ljava/lang/String;)V
       //   162: aload 4
@@ -957,24 +955,24 @@ public final class i
       //   171: iload_2
       //   172: ifge +286 -> 458
       //   175: aload_0
-      //   176: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   176: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   179: iconst_0
       //   180: invokestatic 103	com/tencent/mm/modelvoice/i:a	(Lcom/tencent/mm/modelvoice/i;I)I
       //   183: pop
-      //   184: getstatic 109	com/tencent/mm/plugin/report/service/h:fUJ	Lcom/tencent/mm/plugin/report/service/h;
+      //   184: getstatic 109	com/tencent/mm/plugin/report/service/g:gdY	Lcom/tencent/mm/plugin/report/service/g;
       //   187: astore 4
       //   189: ldc2_w 110
       //   192: lconst_0
       //   193: lconst_1
       //   194: iconst_0
-      //   195: invokestatic 115	com/tencent/mm/plugin/report/service/h:b	(JJJZ)V
-      //   198: getstatic 109	com/tencent/mm/plugin/report/service/h:fUJ	Lcom/tencent/mm/plugin/report/service/h;
+      //   195: invokestatic 115	com/tencent/mm/plugin/report/service/g:b	(JJJZ)V
+      //   198: getstatic 109	com/tencent/mm/plugin/report/service/g:gdY	Lcom/tencent/mm/plugin/report/service/g;
       //   201: astore 4
       //   203: ldc2_w 110
       //   206: ldc2_w 116
       //   209: lconst_1
       //   210: iconst_0
-      //   211: invokestatic 115	com/tencent/mm/plugin/report/service/h:b	(JJJZ)V
+      //   211: invokestatic 115	com/tencent/mm/plugin/report/service/g:b	(JJJZ)V
       //   214: ldc 45
       //   216: ldc 119
       //   218: iconst_2
@@ -982,7 +980,7 @@ public final class i
       //   222: dup
       //   223: iconst_0
       //   224: aload_0
-      //   225: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   225: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   228: invokestatic 84	com/tencent/mm/modelvoice/i:h	(Lcom/tencent/mm/modelvoice/i;)I
       //   231: invokestatic 58	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
       //   234: aastore
@@ -991,26 +989,26 @@ public final class i
       //   237: iload_2
       //   238: invokestatic 58	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
       //   241: aastore
-      //   242: invokestatic 122	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   242: invokestatic 122	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   245: aload_0
-      //   246: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   246: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   249: invokestatic 125	com/tencent/mm/modelvoice/i:i	(Lcom/tencent/mm/modelvoice/i;)Lcom/tencent/mm/c/c/b;
       //   252: ifnull -180 -> 72
-      //   255: getstatic 131	com/tencent/mm/platformtools/r:cnP	Z
+      //   255: getstatic 131	com/tencent/mm/platformtools/q:ciU	Z
       //   258: ifeq -186 -> 72
       //   261: aload_0
-      //   262: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   262: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   265: invokestatic 125	com/tencent/mm/modelvoice/i:i	(Lcom/tencent/mm/modelvoice/i;)Lcom/tencent/mm/c/c/b;
-      //   268: invokevirtual 136	com/tencent/mm/c/c/b:lV	()V
+      //   268: invokevirtual 136	com/tencent/mm/c/c/b:kl	()V
       //   271: goto -199 -> 72
       //   274: astore_3
-      //   275: getstatic 109	com/tencent/mm/plugin/report/service/h:fUJ	Lcom/tencent/mm/plugin/report/service/h;
+      //   275: getstatic 109	com/tencent/mm/plugin/report/service/g:gdY	Lcom/tencent/mm/plugin/report/service/g;
       //   278: astore 4
       //   280: ldc2_w 110
       //   283: lconst_0
       //   284: lconst_1
       //   285: iconst_0
-      //   286: invokestatic 115	com/tencent/mm/plugin/report/service/h:b	(JJJZ)V
+      //   286: invokestatic 115	com/tencent/mm/plugin/report/service/g:b	(JJJZ)V
       //   289: ldc 45
       //   291: ldc -118
       //   293: iconst_1
@@ -1018,15 +1016,15 @@ public final class i
       //   297: dup
       //   298: iconst_0
       //   299: aload_3
-      //   300: invokestatic 143	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
+      //   300: invokestatic 143	com/tencent/mm/sdk/platformtools/be:f	(Ljava/lang/Throwable;)Ljava/lang/String;
       //   303: aastore
-      //   304: invokestatic 122	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   304: invokestatic 122	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   307: aload_0
-      //   308: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   308: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   311: invokestatic 147	com/tencent/mm/modelvoice/i:n	(Lcom/tencent/mm/modelvoice/i;)Landroid/media/MediaPlayer$OnErrorListener;
       //   314: ifnull +19 -> 333
       //   317: aload_0
-      //   318: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   318: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   321: invokestatic 147	com/tencent/mm/modelvoice/i:n	(Lcom/tencent/mm/modelvoice/i;)Landroid/media/MediaPlayer$OnErrorListener;
       //   324: aconst_null
       //   325: iconst_0
@@ -1034,17 +1032,17 @@ public final class i
       //   327: invokeinterface 153 4 0
       //   332: pop
       //   333: aload_0
-      //   334: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   334: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   337: iconst_0
       //   338: invokestatic 103	com/tencent/mm/modelvoice/i:a	(Lcom/tencent/mm/modelvoice/i;I)I
       //   341: pop
-      //   342: invokestatic 77	com/tencent/mm/modelvoice/i:Es	()Ljava/lang/Object;
+      //   342: invokestatic 77	com/tencent/mm/modelvoice/i:EM	()Ljava/lang/Object;
       //   345: astore_3
       //   346: aload_3
       //   347: monitorenter
-      //   348: invokestatic 81	com/tencent/mm/modelvoice/i:Et	()I
+      //   348: invokestatic 81	com/tencent/mm/modelvoice/i:EN	()I
       //   351: aload_0
-      //   352: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   352: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   355: invokestatic 84	com/tencent/mm/modelvoice/i:h	(Lcom/tencent/mm/modelvoice/i;)I
       //   358: if_icmpne +35 -> 393
       //   361: invokestatic 156	com/tencent/mm/modelvoice/MediaRecorder:SilkDecUnInit	()I
@@ -1056,34 +1054,34 @@ public final class i
       //   373: dup
       //   374: iconst_0
       //   375: aload_0
-      //   376: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   376: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   379: invokestatic 84	com/tencent/mm/modelvoice/i:h	(Lcom/tencent/mm/modelvoice/i;)I
       //   382: invokestatic 58	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
       //   385: aastore
-      //   386: invokestatic 88	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-      //   389: invokestatic 161	com/tencent/mm/modelvoice/i:Eu	()I
+      //   386: invokestatic 88	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   389: invokestatic 161	com/tencent/mm/modelvoice/i:EO	()I
       //   392: pop
       //   393: aload_3
       //   394: monitorexit
       //   395: aload_0
-      //   396: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   396: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   399: invokestatic 73	com/tencent/mm/modelvoice/i:g	(Lcom/tencent/mm/modelvoice/i;)I
       //   402: iconst_3
       //   403: if_icmpeq +504 -> 907
       //   406: aload_0
-      //   407: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   407: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   410: invokestatic 165	com/tencent/mm/modelvoice/i:o	(Lcom/tencent/mm/modelvoice/i;)Lcom/tencent/mm/modelvoice/d$a;
       //   413: ifnull +15 -> 428
       //   416: aload_0
-      //   417: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   417: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   420: invokestatic 165	com/tencent/mm/modelvoice/i:o	(Lcom/tencent/mm/modelvoice/i;)Lcom/tencent/mm/modelvoice/d$a;
       //   423: invokeinterface 170 1 0
       //   428: aload_0
-      //   429: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   429: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   432: invokestatic 174	com/tencent/mm/modelvoice/i:p	(Lcom/tencent/mm/modelvoice/i;)Landroid/media/MediaPlayer$OnCompletionListener;
       //   435: ifnull +16 -> 451
       //   438: aload_0
-      //   439: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   439: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   442: invokestatic 174	com/tencent/mm/modelvoice/i:p	(Lcom/tencent/mm/modelvoice/i;)Landroid/media/MediaPlayer$OnCompletionListener;
       //   445: aconst_null
       //   446: invokeinterface 180 2 0
@@ -1093,14 +1091,14 @@ public final class i
       //   455: monitorexit
       //   456: aload_3
       //   457: athrow
-      //   458: getstatic 131	com/tencent/mm/platformtools/r:cnP	Z
+      //   458: getstatic 131	com/tencent/mm/platformtools/q:ciU	Z
       //   461: ifeq +28 -> 489
       //   464: aload_0
-      //   465: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   465: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   468: invokestatic 125	com/tencent/mm/modelvoice/i:i	(Lcom/tencent/mm/modelvoice/i;)Lcom/tencent/mm/c/c/b;
       //   471: ifnull +18 -> 489
       //   474: aload_0
-      //   475: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   475: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   478: invokestatic 125	com/tencent/mm/modelvoice/i:i	(Lcom/tencent/mm/modelvoice/i;)Lcom/tencent/mm/c/c/b;
       //   481: aload_3
       //   482: iload_1
@@ -1109,17 +1107,17 @@ public final class i
       //   485: invokevirtual 183	com/tencent/mm/c/c/b:h	([BI)Z
       //   488: pop
       //   489: aload_0
-      //   490: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   490: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   493: invokestatic 187	com/tencent/mm/modelvoice/i:j	(Lcom/tencent/mm/modelvoice/i;)Z
       //   496: ifeq +19 -> 515
       //   499: ldc 45
       //   501: ldc -67
-      //   503: invokestatic 191	com/tencent/mm/sdk/platformtools/u:d	(Ljava/lang/String;Ljava/lang/String;)V
+      //   503: invokestatic 191	com/tencent/mm/sdk/platformtools/v:d	(Ljava/lang/String;Ljava/lang/String;)V
       //   506: ldc2_w 192
       //   509: invokestatic 199	java/lang/Thread:sleep	(J)V
       //   512: goto -23 -> 489
       //   515: aload_0
-      //   516: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   516: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   519: invokestatic 202	com/tencent/mm/modelvoice/i:b	(Lcom/tencent/mm/modelvoice/i;)Landroid/media/AudioTrack;
       //   522: aload_3
       //   523: iconst_0
@@ -1129,13 +1127,13 @@ public final class i
       //   527: invokevirtual 206	android/media/AudioTrack:write	([BII)I
       //   530: pop
       //   531: aload_0
-      //   532: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   532: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   535: invokestatic 209	com/tencent/mm/modelvoice/i:k	(Lcom/tencent/mm/modelvoice/i;)I
       //   538: pop
       //   539: iload_2
       //   540: ifne +130 -> 670
       //   543: aload_0
-      //   544: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   544: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   547: iconst_0
       //   548: invokestatic 103	com/tencent/mm/modelvoice/i:a	(Lcom/tencent/mm/modelvoice/i;I)I
       //   551: pop
@@ -1146,26 +1144,26 @@ public final class i
       //   560: dup
       //   561: iconst_0
       //   562: aload_0
-      //   563: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   563: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   566: invokestatic 84	com/tencent/mm/modelvoice/i:h	(Lcom/tencent/mm/modelvoice/i;)I
       //   569: invokestatic 58	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
       //   572: aastore
-      //   573: invokestatic 88	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   573: invokestatic 88	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   576: aload_0
-      //   577: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   577: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   580: invokestatic 125	com/tencent/mm/modelvoice/i:i	(Lcom/tencent/mm/modelvoice/i;)Lcom/tencent/mm/c/c/b;
       //   583: ifnull -511 -> 72
-      //   586: getstatic 131	com/tencent/mm/platformtools/r:cnP	Z
+      //   586: getstatic 131	com/tencent/mm/platformtools/q:ciU	Z
       //   589: ifeq -517 -> 72
       //   592: aload_0
-      //   593: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   593: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   596: invokestatic 125	com/tencent/mm/modelvoice/i:i	(Lcom/tencent/mm/modelvoice/i;)Lcom/tencent/mm/c/c/b;
-      //   599: invokevirtual 136	com/tencent/mm/c/c/b:lV	()V
+      //   599: invokevirtual 136	com/tencent/mm/c/c/b:kl	()V
       //   602: new 11	com/tencent/mm/modelvoice/i$a$1
       //   605: dup
       //   606: aload_0
       //   607: invokespecial 214	com/tencent/mm/modelvoice/i$a$1:<init>	(Lcom/tencent/mm/modelvoice/i$a;)V
-      //   610: invokestatic 219	com/tencent/mm/sdk/platformtools/ab:j	(Ljava/lang/Runnable;)V
+      //   610: invokestatic 219	com/tencent/mm/sdk/platformtools/ad:k	(Ljava/lang/Runnable;)V
       //   613: goto -541 -> 72
       //   616: astore 4
       //   618: ldc 45
@@ -1177,61 +1175,61 @@ public final class i
       //   628: aload 4
       //   630: invokevirtual 225	java/lang/Exception:getMessage	()Ljava/lang/String;
       //   633: aastore
-      //   634: invokestatic 122	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-      //   637: getstatic 109	com/tencent/mm/plugin/report/service/h:fUJ	Lcom/tencent/mm/plugin/report/service/h;
+      //   634: invokestatic 122	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   637: getstatic 109	com/tencent/mm/plugin/report/service/g:gdY	Lcom/tencent/mm/plugin/report/service/g;
       //   640: astore 4
       //   642: ldc2_w 110
       //   645: lconst_0
       //   646: lconst_1
       //   647: iconst_0
-      //   648: invokestatic 115	com/tencent/mm/plugin/report/service/h:b	(JJJZ)V
-      //   651: getstatic 109	com/tencent/mm/plugin/report/service/h:fUJ	Lcom/tencent/mm/plugin/report/service/h;
+      //   648: invokestatic 115	com/tencent/mm/plugin/report/service/g:b	(JJJZ)V
+      //   651: getstatic 109	com/tencent/mm/plugin/report/service/g:gdY	Lcom/tencent/mm/plugin/report/service/g;
       //   654: astore 4
       //   656: ldc2_w 110
       //   659: ldc2_w 226
       //   662: lconst_1
       //   663: iconst_0
-      //   664: invokestatic 115	com/tencent/mm/plugin/report/service/h:b	(JJJZ)V
+      //   664: invokestatic 115	com/tencent/mm/plugin/report/service/g:b	(JJJZ)V
       //   667: goto -136 -> 531
       //   670: aload_0
-      //   671: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   671: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   674: invokestatic 73	com/tencent/mm/modelvoice/i:g	(Lcom/tencent/mm/modelvoice/i;)I
       //   677: iconst_2
       //   678: if_icmpne +144 -> 822
       //   681: aload_0
-      //   682: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   682: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   685: invokestatic 230	com/tencent/mm/modelvoice/i:l	(Lcom/tencent/mm/modelvoice/i;)Ljava/lang/String;
       //   688: astore 4
       //   690: aload 4
       //   692: monitorenter
       //   693: ldc 45
       //   695: ldc -24
-      //   697: invokestatic 235	com/tencent/mm/sdk/platformtools/u:v	(Ljava/lang/String;Ljava/lang/String;)V
+      //   697: invokestatic 235	com/tencent/mm/sdk/platformtools/v:v	(Ljava/lang/String;Ljava/lang/String;)V
       //   700: aload_0
-      //   701: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   701: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   704: invokestatic 230	com/tencent/mm/modelvoice/i:l	(Lcom/tencent/mm/modelvoice/i;)Ljava/lang/String;
       //   707: invokevirtual 238	java/lang/Object:notify	()V
       //   710: ldc 45
       //   712: ldc -16
-      //   714: invokestatic 235	com/tencent/mm/sdk/platformtools/u:v	(Ljava/lang/String;Ljava/lang/String;)V
+      //   714: invokestatic 235	com/tencent/mm/sdk/platformtools/v:v	(Ljava/lang/String;Ljava/lang/String;)V
       //   717: aload 4
       //   719: monitorexit
       //   720: aload_0
-      //   721: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   721: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   724: invokestatic 243	com/tencent/mm/modelvoice/i:m	(Lcom/tencent/mm/modelvoice/i;)Ljava/lang/String;
       //   727: astore 4
       //   729: aload 4
       //   731: monitorenter
       //   732: ldc 45
       //   734: ldc -11
-      //   736: invokestatic 235	com/tencent/mm/sdk/platformtools/u:v	(Ljava/lang/String;Ljava/lang/String;)V
+      //   736: invokestatic 235	com/tencent/mm/sdk/platformtools/v:v	(Ljava/lang/String;Ljava/lang/String;)V
       //   739: aload_0
-      //   740: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   740: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   743: invokestatic 243	com/tencent/mm/modelvoice/i:m	(Lcom/tencent/mm/modelvoice/i;)Ljava/lang/String;
       //   746: invokevirtual 248	java/lang/Object:wait	()V
       //   749: ldc 45
       //   751: ldc -6
-      //   753: invokestatic 235	com/tencent/mm/sdk/platformtools/u:v	(Ljava/lang/String;Ljava/lang/String;)V
+      //   753: invokestatic 235	com/tencent/mm/sdk/platformtools/v:v	(Ljava/lang/String;Ljava/lang/String;)V
       //   756: aload 4
       //   758: monitorexit
       //   759: goto -687 -> 72
@@ -1248,9 +1246,9 @@ public final class i
       //   778: dup
       //   779: iconst_0
       //   780: aload 5
-      //   782: invokestatic 143	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
+      //   782: invokestatic 143	com/tencent/mm/sdk/platformtools/be:f	(Ljava/lang/Throwable;)Ljava/lang/String;
       //   785: aastore
-      //   786: invokestatic 122	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   786: invokestatic 122	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   789: goto -72 -> 717
       //   792: astore_3
       //   793: aload 4
@@ -1265,18 +1263,18 @@ public final class i
       //   808: dup
       //   809: iconst_0
       //   810: aload 5
-      //   812: invokestatic 143	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
+      //   812: invokestatic 143	com/tencent/mm/sdk/platformtools/be:f	(Ljava/lang/Throwable;)Ljava/lang/String;
       //   815: aastore
-      //   816: invokestatic 122	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   816: invokestatic 122	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   819: goto -63 -> 756
       //   822: aload_0
-      //   823: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   823: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   826: invokestatic 230	com/tencent/mm/modelvoice/i:l	(Lcom/tencent/mm/modelvoice/i;)Ljava/lang/String;
       //   829: astore 4
       //   831: aload 4
       //   833: monitorenter
       //   834: aload_0
-      //   835: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   835: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   838: invokestatic 230	com/tencent/mm/modelvoice/i:l	(Lcom/tencent/mm/modelvoice/i;)Ljava/lang/String;
       //   841: invokevirtual 238	java/lang/Object:notify	()V
       //   844: aload 4
@@ -1295,12 +1293,12 @@ public final class i
       //   866: dup
       //   867: iconst_0
       //   868: aload 5
-      //   870: invokestatic 143	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
+      //   870: invokestatic 143	com/tencent/mm/sdk/platformtools/be:f	(Ljava/lang/Throwable;)Ljava/lang/String;
       //   873: aastore
-      //   874: invokestatic 122	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   874: invokestatic 122	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   877: goto -33 -> 844
       //   880: aload_0
-      //   881: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   881: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   884: invokestatic 73	com/tencent/mm/modelvoice/i:g	(Lcom/tencent/mm/modelvoice/i;)I
       //   887: iconst_3
       //   888: if_icmpeq -546 -> 342
@@ -1313,22 +1311,22 @@ public final class i
       //   904: aload 4
       //   906: athrow
       //   907: aload_0
-      //   908: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   908: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   911: invokestatic 202	com/tencent/mm/modelvoice/i:b	(Lcom/tencent/mm/modelvoice/i;)Landroid/media/AudioTrack;
       //   914: ifnull -463 -> 451
       //   917: ldc 45
       //   919: ldc -2
-      //   921: invokestatic 70	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
+      //   921: invokestatic 70	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;)V
       //   924: aload_0
-      //   925: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   925: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   928: invokestatic 202	com/tencent/mm/modelvoice/i:b	(Lcom/tencent/mm/modelvoice/i;)Landroid/media/AudioTrack;
       //   931: invokevirtual 257	android/media/AudioTrack:stop	()V
       //   934: aload_0
-      //   935: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   935: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   938: invokestatic 202	com/tencent/mm/modelvoice/i:b	(Lcom/tencent/mm/modelvoice/i;)Landroid/media/AudioTrack;
       //   941: invokevirtual 260	android/media/AudioTrack:release	()V
       //   944: aload_0
-      //   945: getfield 17	com/tencent/mm/modelvoice/i$a:chi	Lcom/tencent/mm/modelvoice/i;
+      //   945: getfield 17	com/tencent/mm/modelvoice/i$a:ccz	Lcom/tencent/mm/modelvoice/i;
       //   948: invokestatic 263	com/tencent/mm/modelvoice/i:c	(Lcom/tencent/mm/modelvoice/i;)Landroid/media/AudioTrack;
       //   951: pop
       //   952: return

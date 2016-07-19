@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/pluginsdk/ui/i;->cR(Landroid/content/Context;)Z
+    value = Lcom/tencent/mm/pluginsdk/ui/i;->cP(Landroid/content/Context;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

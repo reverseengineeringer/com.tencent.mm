@@ -12,8 +12,8 @@ final class SnsSightPlayerUI$5$2
   
   public final void run()
   {
-    SnsSightPlayerUI.j(hit.his).setVisibility(0);
-    SnsSightPlayerUI.j(hit.his).startAnimation(AnimationUtils.loadAnimation(hit.his.koJ.kpc, 2130837575));
+    SnsSightPlayerUI.j(hxi.hxh).setVisibility(0);
+    SnsSightPlayerUI.j(hxi.hxh).startAnimation(AnimationUtils.loadAnimation(hxi.hxh.kNN.kOg, 2130968612));
   }
 }
 

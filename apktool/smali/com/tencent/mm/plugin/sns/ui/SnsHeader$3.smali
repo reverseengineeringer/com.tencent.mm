@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic bMq:I
+.field final synthetic bFK:I
 
-.field final synthetic hei:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+.field final synthetic hsT:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
 
-.field final synthetic hek:I
+.field final synthetic hsW:I
 
 
 # direct methods
@@ -30,12 +30,12 @@
     .locals 0
 
     .prologue
-    .line 317
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$3;->hei:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+    .line 318
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$3;->hsT:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
 
-    iput p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$3;->hek:I
+    iput p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$3;->hsW:I
 
-    iput p3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$3;->bMq:I
+    iput p3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$3;->bFK:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,7 +48,7 @@
     .locals 5
 
     .prologue
-    .line 321
+    .line 322
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -57,15 +57,15 @@
 
     if-eqz v0, :cond_1
 
-    .line 322
+    .line 323
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 323
-    const-string/jumbo v1, "!32@/B4Tb64lLpLa/2+v7MkrLfzFBcAhlFoe"
+    .line 324
+    const-string/jumbo v1, "MicroMsg.SnsHeader"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -81,19 +81,19 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 324
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azi()Lcom/tencent/mm/plugin/sns/h/l;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sns/h/l;->vo(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/h/k;
-
-    move-result-object v1
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 325
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$3;->hei:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBI()Lcom/tencent/mm/plugin/sns/i/l;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sns/i/l;->wA(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/i/k;
+
+    move-result-object v1
+
+    .line 326
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$3;->hsT:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->h(Lcom/tencent/mm/plugin/sns/ui/SnsHeader;)Landroid/content/Context;
 
@@ -103,13 +103,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 326
+    .line 327
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 327
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$3;->hei:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+    .line 328
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$3;->hsT:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
 
     invoke-static {v3}, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->h(Lcom/tencent/mm/plugin/sns/ui/SnsHeader;)Landroid/content/Context;
 
@@ -119,14 +119,14 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 328
+    .line 329
     if-eqz v1, :cond_0
 
-    iget-object v3, v1, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
+    iget-object v3, v1, Lcom/tencent/mm/plugin/sns/i/k;->field_userName:Ljava/lang/String;
 
     if-eqz v3, :cond_0
 
-    iget-object v3, v1, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
+    iget-object v3, v1, Lcom/tencent/mm/plugin/sns/i/k;->field_userName:Ljava/lang/String;
 
     const-string/jumbo v4, ""
 
@@ -136,68 +136,68 @@
 
     if-eqz v3, :cond_2
 
-    .line 329
+    .line 330
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpLa/2+v7MkrLfzFBcAhlFoe"
+    const-string/jumbo v0, "MicroMsg.SnsHeader"
 
     const-string/jumbo v1, "error cntinfo or username is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 349
+    .line 350
     :cond_1
     :goto_0
     return-void
 
-    .line 333
+    .line 334
     :cond_2
     const-string/jumbo v3, "INTENT_TALKER"
 
-    iget-object v4, v1, Lcom/tencent/mm/plugin/sns/h/k;->field_userName:Ljava/lang/String;
+    iget-object v4, v1, Lcom/tencent/mm/plugin/sns/i/k;->field_userName:Ljava/lang/String;
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 336
+    .line 337
     const-string/jumbo v3, "INTENT_SNS_LOCAL_ID"
 
     invoke-virtual {v2, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 337
+    .line 338
     const-string/jumbo v0, "INTENT_FROMGALLERY"
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 339
+    .line 340
     const/16 v0, 0x2d6
 
-    invoke-static {v0}, Lcom/tencent/mm/modelsns/a;->dQ(I)Lcom/tencent/mm/modelsns/a;
+    invoke-static {v0}, Lcom/tencent/mm/modelsns/a;->ex(I)Lcom/tencent/mm/modelsns/a;
 
     move-result-object v0
 
-    .line 341
-    iget v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$3;->hek:I
+    .line 342
+    iget v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$3;->hsW:I
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/modelsns/a;->dT(I)Lcom/tencent/mm/modelsns/a;
-
-    move-result-object v3
-
-    iget v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$3;->bMq:I
-
-    invoke-virtual {v3, v4}, Lcom/tencent/mm/modelsns/a;->dT(I)Lcom/tencent/mm/modelsns/a;
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/modelsns/a;->eA(I)Lcom/tencent/mm/modelsns/a;
 
     move-result-object v3
 
-    iget v1, v1, Lcom/tencent/mm/plugin/sns/h/k;->field_createTime:I
+    iget v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$3;->bFK:I
 
-    invoke-virtual {v3, v1}, Lcom/tencent/mm/modelsns/a;->dT(I)Lcom/tencent/mm/modelsns/a;
+    invoke-virtual {v3, v4}, Lcom/tencent/mm/modelsns/a;->eA(I)Lcom/tencent/mm/modelsns/a;
 
-    .line 344
-    invoke-virtual {v0}, Lcom/tencent/mm/modelsns/a;->CV()Z
+    move-result-object v3
 
-    .line 346
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$3;->hei:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+    iget v1, v1, Lcom/tencent/mm/plugin/sns/i/k;->field_createTime:I
+
+    invoke-virtual {v3, v1}, Lcom/tencent/mm/modelsns/a;->eA(I)Lcom/tencent/mm/modelsns/a;
+
+    .line 345
+    invoke-virtual {v0}, Lcom/tencent/mm/modelsns/a;->Dg()Z
+
+    .line 347
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$3;->hsT:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsHeader;->h(Lcom/tencent/mm/plugin/sns/ui/SnsHeader;)Landroid/content/Context;
 

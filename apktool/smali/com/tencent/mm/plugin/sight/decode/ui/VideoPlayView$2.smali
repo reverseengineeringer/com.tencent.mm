@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gzd:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;
+.field final synthetic gFG:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 213
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$2;->gzd:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;
+    .line 214
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$2;->gFG:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,23 +42,23 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 217
+    .line 218
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     if-ne v0, v1, :cond_0
 
-    .line 218
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$2;->gzd:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;
+    .line 219
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$2;->gFG:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->k(Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;)V
 
-    .line 225
+    .line 226
     :goto_0
     return v1
 
-    .line 220
+    .line 221
     :cond_0
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 

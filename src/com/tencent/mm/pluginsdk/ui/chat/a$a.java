@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.chat;
 
 public final class a$a
 {
-  private boolean iKF = true;
+  private boolean jhC = true;
   public boolean value = true;
   
   public a$a(a parama) {}

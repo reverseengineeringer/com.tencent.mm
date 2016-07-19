@@ -2,6 +2,7 @@ package com.tencent.smtt.export.external;
 
 import android.content.Context;
 import dalvik.system.DexClassLoader;
+import dalvik.system.VMStack;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -17,7 +18,23 @@ public class DexLoader
   
   public DexLoader(Context paramContext, String[] paramArrayOfString, String paramString)
   {
-    paramContext = paramContext.getClassLoader();
+    ClassLoader localClassLoader = VMStack.getCallingClassLoader();
+    Object localObject = localClassLoader;
+    if (localClassLoader == null) {
+      localObject = paramContext.getClassLoader();
+    }
+    int i = 0;
+    while (i < paramArrayOfString.length)
+    {
+      localObject = new DexClassLoader(paramArrayOfString[i], paramString, null, (ClassLoader)localObject);
+      mClassLoader = ((DexClassLoader)localObject);
+      i += 1;
+    }
+  }
+  
+  public DexLoader(Context paramContext, String[] paramArrayOfString, String paramString, DexLoader paramDexLoader)
+  {
+    paramContext = paramDexLoader.getClassLoader();
     int i = 0;
     while (i < paramArrayOfString.length)
     {
@@ -49,7 +66,7 @@ public class DexLoader
     return null;
   }
   
-  public Object invokeMethod(Object paramObject, String paramString1, String paramString2, Class[] paramArrayOfClass, Object... paramVarArgs)
+  public Object invokeMethod(Object paramObject, String paramString1, String paramString2, Class<?>[] paramArrayOfClass, Object... paramVarArgs)
   {
     try
     {
@@ -66,9 +83,8 @@ public class DexLoader
     return null;
   }
   
-  public Object invokeStaticMethod(String paramString1, String paramString2, Class[] paramArrayOfClass, Object... paramVarArgs)
+  public Object invokeStaticMethod(String paramString1, String paramString2, Class<?>[] paramArrayOfClass, Object... paramVarArgs)
   {
-    Object localObject = null;
     try
     {
       paramArrayOfClass = mClassLoader.loadClass(paramString1).getMethod(paramString2, paramArrayOfClass);
@@ -78,20 +94,19 @@ public class DexLoader
     }
     catch (Throwable paramArrayOfClass)
     {
-      do
+      if ((paramString2 != null) && (paramString2.equalsIgnoreCase("initTesRuntimeEnvironment")))
       {
-        if (paramString2 == null) {
-          break;
-        }
-        paramArrayOfClass = (Class[])localObject;
-      } while (paramString2.equalsIgnoreCase("initTesRuntimeEnvironment"));
+        getClass().getSimpleName();
+        new StringBuilder("'").append(paramString1).append("' invoke static method '").append(paramString2).append("' failed");
+        return paramArrayOfClass;
+      }
       getClass().getSimpleName();
       new StringBuilder("'").append(paramString1).append("' invoke static method '").append(paramString2).append("' failed");
     }
     return null;
   }
   
-  public Class loadClass(String paramString)
+  public Class<?> loadClass(String paramString)
   {
     try
     {
@@ -121,7 +136,7 @@ public class DexLoader
     return null;
   }
   
-  public Object newInstance(String paramString, Class[] paramArrayOfClass, Object... paramVarArgs)
+  public Object newInstance(String paramString, Class<?>[] paramArrayOfClass, Object... paramVarArgs)
   {
     try
     {
@@ -130,6 +145,12 @@ public class DexLoader
     }
     catch (Throwable paramArrayOfClass)
     {
+      if ("com.tencent.smtt.webkit.adapter.X5WebViewAdapter".equalsIgnoreCase(paramString))
+      {
+        getClass().getSimpleName();
+        new StringBuilder("'newInstance ").append(paramString).append(" failed");
+        return paramArrayOfClass;
+      }
       getClass().getSimpleName();
       new StringBuilder("create '").append(paramString).append("' instance failed");
     }

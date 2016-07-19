@@ -2,26 +2,35 @@ package com.tencent.mm.ui.chatting;
 
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 final class d
-  extends aa.a
+  extends ab.a
 {
-  public TextView kQv;
+  public ImageView lqh;
+  public TextView lqi;
+  public TextView lqj;
+  public TextView lqk;
   
   public d(int paramInt)
   {
     super(paramInt);
   }
   
-  public final d av(View paramView)
+  public final d ay(View paramView)
   {
-    super.aC(paramView);
-    dUV = ((TextView)hnE.findViewById(2131165184));
-    edK = ((CheckBox)hnE.findViewById(2131165186));
-    dMC = hnE.findViewById(2131165187);
-    gjr = ((TextView)hnE.findViewById(2131165268));
-    kQv = ((TextView)hnE.findViewById(2131165538));
+    super.aG(paramView);
+    dXd = ((TextView)hDZ.findViewById(2131755018));
+    ehl = ((CheckBox)hDZ.findViewById(2131755013));
+    dOk = hDZ.findViewById(2131755017);
+    gtM = ((TextView)hDZ.findViewById(2131755288));
+    lqh = ((ImageView)hDZ.findViewById(2131756040));
+    lqi = ((TextView)hDZ.findViewById(2131756041));
+    lqj = ((TextView)hDZ.findViewById(2131756042));
+    lqk = ((TextView)hDZ.findViewById(2131756043));
+    lth = ((LinearLayout)hDZ.findViewById(2131756021));
     return this;
   }
 }

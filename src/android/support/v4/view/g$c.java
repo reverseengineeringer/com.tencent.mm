@@ -12,14 +12,14 @@ final class g$c
     }
     h.a(paramMenuItem, new h.b()
     {
-      public final boolean af()
+      public final boolean ad()
       {
-        return parame.af();
+        return parame.ad();
       }
       
-      public final boolean ag()
+      public final boolean ae()
       {
-        return parame.ag();
+        return parame.ae();
       }
     });
   }

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract ls(Ljava/lang/String;)V
+.method public abstract md(Ljava/lang/String;)V
 .end method

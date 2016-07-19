@@ -1,195 +1,195 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.az.g;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.bc.g;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.network.e;
 import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b.acc;
-import com.tencent.mm.protocal.b.acd;
-import com.tencent.mm.protocal.b.adl;
-import com.tencent.mm.protocal.b.alq;
-import com.tencent.mm.protocal.b.aly;
-import com.tencent.mm.protocal.b.arm;
-import com.tencent.mm.protocal.b.dd;
-import com.tencent.mm.protocal.b.jh;
-import com.tencent.mm.protocal.b.mx;
-import com.tencent.mm.protocal.b.tt;
-import com.tencent.mm.protocal.b.tu;
-import com.tencent.mm.q.n;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.a.c;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.acr;
+import com.tencent.mm.protocal.b.acs;
+import com.tencent.mm.protocal.b.aee;
+import com.tencent.mm.protocal.b.amb;
+import com.tencent.mm.protocal.b.amj;
+import com.tencent.mm.protocal.b.ary;
+import com.tencent.mm.protocal.b.dg;
+import com.tencent.mm.protocal.b.js;
+import com.tencent.mm.protocal.b.nc;
+import com.tencent.mm.protocal.b.ue;
+import com.tencent.mm.protocal.b.uf;
+import com.tencent.mm.s.n;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.q;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.a.c;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import junit.framework.Assert;
 
 public final class x
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private com.tencent.mm.r.d anM = null;
-  com.tencent.mm.r.a anN;
-  private List bMQ;
-  private List bMj;
+  private List<String> bFD;
+  private List<String> bGk;
+  com.tencent.mm.t.a bkQ;
+  private com.tencent.mm.t.d bkT = null;
   
   public x()
   {
-    yY();
-    tt localtt = (tt)anN.bEW.bFf;
-    jiC = "";
-    jso = null;
-    jsn = 0;
-    jsm = null;
-    jsl = 0;
-    eiL = 0;
-    iWm = 1;
+    zl();
+    ue localue = (ue)bkQ.byh.byq;
+    jGP = "";
+    jQv = null;
+    jQu = 0;
+    jQt = null;
+    jQs = 0;
+    emN = 0;
+    jtN = 1;
   }
   
-  public x(List paramList1, List paramList2)
+  public x(List<String> paramList1, List<String> paramList2)
   {
-    yY();
+    zl();
     if (((paramList1 == null) || (paramList1.size() == 0)) && ((paramList2 == null) || (paramList2.size() == 0))) {
       return;
     }
-    bMj = paramList1;
-    bMQ = paramList2;
-    paramList1 = (tt)anN.bEW.bFf;
-    jiC = "";
-    eiL = 2;
-    iWm = 1;
+    bFD = paramList1;
+    bGk = paramList2;
+    paramList1 = (ue)bkQ.byh.byq;
+    jGP = "";
+    emN = 2;
+    jtN = 1;
   }
   
-  private static void a(b paramb, acd paramacd)
+  private static void a(b paramb, acs paramacs)
   {
-    bLL = bLL;
-    bLM = bLM;
-    bLN = bLN;
-    bLO = bLO;
-    bLP = bLP;
-    bLQ = bLQ;
-    bLR = bLR;
-    bLS = bLS;
-    bLU = bLU;
-    bLT = bLT;
-    bLV = bLV;
-    bLW = bLW;
-    arm localarm = jxm;
-    if (localarm != null)
+    bFf = bFf;
+    bFg = bFg;
+    bFh = bFh;
+    bFi = bFi;
+    bFj = bFj;
+    bFk = bFk;
+    bFl = bFl;
+    bFm = bFm;
+    bFo = bFo;
+    bFn = bFn;
+    bFp = bFp;
+    bFq = bFq;
+    ary localary = jVS;
+    if (localary != null)
     {
-      bLX = bLX;
-      bLY = bLY;
-      bLZ = bLZ;
+      bFr = bFr;
+      bFs = bFs;
+      bFt = bFt;
     }
-    paramacd = jxn;
-    if (paramacd != null)
+    paramacs = jVT;
+    if (paramacs != null)
     {
-      bMa = bMa;
-      bMb = bMb;
-      bMc = bMc;
-      bMd = bMd;
+      bFu = bFu;
+      bFv = bFv;
+      bFw = bFw;
+      bFx = bFx;
     }
   }
   
-  private void yY()
+  private void zl()
   {
     a.a locala = new a.a();
-    bFa = new tt();
-    bFb = new tu();
+    byl = new ue();
+    bym = new uf();
     uri = "/cgi-bin/micromsg-bin/getmfriend";
-    bEY = 142;
-    bFc = 0;
-    bFd = 0;
-    anN = locala.vy();
+    byj = 142;
+    byn = 0;
+    byo = 0;
+    bkQ = locala.vA();
   }
   
-  public final int a(e parame, com.tencent.mm.r.d paramd)
+  public final int a(e parame, com.tencent.mm.t.d paramd)
   {
-    anM = paramd;
-    paramd = (tt)anN.bEW.bFf;
-    if (eiL == 2)
+    bkT = paramd;
+    paramd = (ue)bkQ.byh.byq;
+    if (emN == 2)
     {
-      if (((bMj == null) || (bMj.size() == 0)) && ((bMQ == null) || (bMQ.size() == 0)))
+      if (((bFD == null) || (bFD.size() == 0)) && ((bGk == null) || (bGk.size() == 0)))
       {
-        u.e("!44@/B4Tb64lLpK+IBX8XDgnvgkcsXdgVst9bxTjb+M9eAs=", "doScene failed, mobile list and email list empty.");
+        v.e("MicroMsg.NetSceneGetMFriend", "doScene failed, mobile list and email list empty.");
         return -1;
       }
       LinkedList localLinkedList;
       Iterator localIterator;
       String str;
       Object localObject;
-      if ((bMj != null) && (bMj.size() > 0))
+      if ((bFD != null) && (bFD.size() > 0))
       {
-        u.d("!44@/B4Tb64lLpK+IBX8XDgnvgkcsXdgVst9bxTjb+M9eAs=", "doScene get mobile list size:%d", new Object[] { Integer.valueOf(bMj.size()) });
+        v.d("MicroMsg.NetSceneGetMFriend", "doScene get mobile list size:%d", new Object[] { Integer.valueOf(bFD.size()) });
         localLinkedList = new LinkedList();
-        localIterator = bMj.iterator();
+        localIterator = bFD.iterator();
         while (localIterator.hasNext())
         {
           str = (String)localIterator.next();
-          localObject = new adl();
+          localObject = new aee();
           v = str;
           localLinkedList.add(localObject);
         }
-        jsm = localLinkedList;
-        jsl = localLinkedList.size();
+        jQt = localLinkedList;
+        jQs = localLinkedList.size();
       }
-      if ((bMQ != null) && (bMQ.size() > 0))
+      if ((bGk != null) && (bGk.size() > 0))
       {
-        u.d("!44@/B4Tb64lLpK+IBX8XDgnvgkcsXdgVst9bxTjb+M9eAs=", "doScene get email list size:%d", new Object[] { Integer.valueOf(bMQ.size()) });
+        v.d("MicroMsg.NetSceneGetMFriend", "doScene get email list size:%d", new Object[] { Integer.valueOf(bGk.size()) });
         localLinkedList = new LinkedList();
-        localIterator = bMQ.iterator();
+        localIterator = bGk.iterator();
         while (localIterator.hasNext())
         {
           str = (String)localIterator.next();
-          localObject = new acc();
+          localObject = new acr();
           v = str;
           localLinkedList.add(localObject);
         }
-        jso = localLinkedList;
-        jsn = localLinkedList.size();
+        jQv = localLinkedList;
+        jQu = localLinkedList.size();
       }
     }
-    return a(parame, anN, this);
+    return a(parame, bkQ, this);
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    tu localtu = (tu)anN.bEX.bFf;
-    tt localtt = (tt)anN.bEW.bFf;
+    uf localuf = (uf)bkQ.byi.byq;
+    ue localue = (ue)bkQ.byh.byq;
     if ((paramInt2 == 4) && (paramInt3 == -68))
     {
-      anM.a(paramInt2, paramInt3, jHj.jaF.jHw, this);
+      bkT.onSceneEnd(paramInt2, paramInt3, kfH.jyj.kfU, this);
       return;
     }
     if ((paramInt2 != 0) || (paramInt3 != 0))
     {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvgkcsXdgVst9bxTjb+M9eAs=", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3);
-      anM.a(paramInt2, paramInt3, paramString, this);
+      v.e("MicroMsg.NetSceneGetMFriend", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3);
+      bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
       return;
     }
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvgkcsXdgVst9bxTjb+M9eAs=", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3);
-    paramo = ay.ky((String)com.tencent.mm.model.ah.tD().rn().get(65828, null));
-    if ((eiL == 1) && (!ay.kz(jiC)) && (!jiC.equals(paramo)))
+    v.d("MicroMsg.NetSceneGetMFriend", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3);
+    paramo = be.li((String)com.tencent.mm.model.ah.tE().ro().get(65828, null));
+    if ((emN == 1) && (!be.kf(jGP)) && (!jGP.equals(paramo)))
     {
-      com.tencent.mm.model.ah.tD().rn().set(65828, jiC);
-      ah.zr().yx();
+      com.tencent.mm.model.ah.tE().ro().set(65828, jGP);
+      ah.zE().yJ();
     }
-    if (jsp == null)
+    if (jQw == null)
     {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvgkcsXdgVst9bxTjb+M9eAs=", "onGYNetEnd  friendlist null");
+      v.e("MicroMsg.NetSceneGetMFriend", "onGYNetEnd  friendlist null");
       return;
     }
-    u.i("!44@/B4Tb64lLpK+IBX8XDgnvgkcsXdgVst9bxTjb+M9eAs=", "onGYNetEnd friend list size:%d", new Object[] { Integer.valueOf(jsp.size()) });
-    long l = tDbzA.dH(Thread.currentThread().getId());
+    v.i("MicroMsg.NetSceneGetMFriend", "onGYNetEnd friend list size:%d", new Object[] { Integer.valueOf(jQw.size()) });
+    long l = tEbsy.dY(Thread.currentThread().getId());
     paramInt1 = 0;
-    if (paramInt1 < jsp.size())
+    if (paramInt1 < jQw.size())
     {
-      acd localacd = (acd)jsp.get(paramInt1);
-      if (localacd == null) {
-        u.e("!44@/B4Tb64lLpK+IBX8XDgnvgkcsXdgVst9bxTjb+M9eAs=", "Err getFriendList null");
+      acs localacs = (acs)jQw.get(paramInt1);
+      if (localacs == null) {
+        v.e("MicroMsg.NetSceneGetMFriend", "Err getFriendList null");
       }
       b localb;
       h localh;
@@ -197,70 +197,70 @@ public final class x
       {
         paramInt1 += 1;
         break;
-        localb = ah.zq().hr(bLL);
-        if ((localb == null) && (eiL != 1))
+        localb = ah.zD().hJ(bFf);
+        if ((localb == null) && (emN != 1))
         {
-          u.e("!44@/B4Tb64lLpK+IBX8XDgnvgkcsXdgVst9bxTjb+M9eAs=", "Err MD5 not found is AddrUploadStg, nickName: " + jyd + " md5: " + bLL);
+          v.e("MicroMsg.NetSceneGetMFriend", "Err MD5 not found is AddrUploadStg, nickName: " + jWK + " md5: " + bFf);
         }
         else
         {
-          com.tencent.mm.model.ah.tD().rV().cm(iYA, jpd);
+          com.tencent.mm.model.ah.tE().rX().cA(jwf, jNd);
           localh = new h();
-          if (eiL != 1) {
+          if (emN != 1) {
             break label893;
           }
-          if (jye != null) {
+          if (jWL != null) {
             break label464;
           }
-          u.e("!44@/B4Tb64lLpK+IBX8XDgnvgkcsXdgVst9bxTjb+M9eAs=", "ERR: facebook friend return null info");
+          v.e("MicroMsg.NetSceneGetMFriend", "ERR: facebook friend return null info");
         }
       }
       label464:
-      aSw = jye.fUL;
-      bMg = jye.jkC;
-      com.tencent.mm.q.b.fJ(jye.fUL);
-      bMf = jye.ehZ;
-      baB = bLR;
-      aSG = bLO;
-      aSF = bLN;
-      aSE = bLP;
-      aSD = bLQ;
-      aSu = bLM;
-      aji = jyd;
-      bLF = com.tencent.mm.platformtools.c.ks(jye.ehZ);
-      bLG = com.tencent.mm.platformtools.c.kr(jye.ehZ);
-      username = iYA;
+      aFf = jWL.gea;
+      bFA = jWL.jIC;
+      com.tencent.mm.s.b.fW(jWL.gea);
+      bFz = jWL.elW;
+      aOa = bFl;
+      aFp = bFi;
+      aFo = bFh;
+      aFn = bFj;
+      aFm = bFk;
+      aFd = bFg;
+      UY = jWK;
+      bEZ = com.tencent.mm.platformtools.c.lb(jWL.elW);
+      bFa = com.tencent.mm.platformtools.c.la(jWL.elW);
+      username = jwf;
       label639:
       k localk = new k();
-      username = iYA;
-      aSF = bLN;
-      aSG = bLO;
-      aSE = bLP;
-      aSu = bLM;
-      aSD = bLQ;
+      username = jwf;
+      aFo = bFh;
+      aFp = bFi;
+      aFn = bFj;
+      aFd = bFg;
+      aFm = bFk;
       paramo = null;
-      if (!ay.kz(iYA))
+      if (!be.kf(jwf))
       {
-        paramArrayOfByte = com.tencent.mm.model.ah.tD().rq().Ep(iYA);
-        if ((paramArrayOfByte == null) || (!iYA.equals(field_username))) {
+        paramArrayOfByte = com.tencent.mm.model.ah.tE().rr().GD(jwf);
+        if ((paramArrayOfByte == null) || (!jwf.equals(field_username))) {
           break label915;
         }
         paramo = paramArrayOfByte;
-        if (!ay.kz(bLR))
+        if (!be.kf(bFl))
         {
           paramo = paramArrayOfByte;
-          if (!bLR.equals(paramArrayOfByte.mc()))
+          if (!bFl.equals(paramArrayOfByte.ks()))
           {
-            paramArrayOfByte.bE(bLR);
-            com.tencent.mm.model.ah.tD().rq().a(field_username, paramArrayOfByte);
+            paramArrayOfByte.bz(bFl);
+            com.tencent.mm.model.ah.tE().rr().a(field_username, paramArrayOfByte);
             paramo = paramArrayOfByte;
           }
         }
       }
       label825:
       boolean bool;
-      if (ay.kz(iYA)) {
-        if (eiL == 1)
+      if (be.kf(jwf)) {
+        if (emN == 1)
         {
           bool = true;
           label848:
@@ -270,44 +270,44 @@ public final class x
       }
       for (;;)
       {
-        if (eiL == 1) {
-          ah.zr().a(localh);
+        if (emN == 1) {
+          ah.zE().a(localh);
         }
-        ah.zs().a(localk);
+        ah.zF().a(localk);
         break;
         label893:
-        if (!ay.kz(iYA)) {
+        if (!be.kf(jwf)) {
           break label639;
         }
-        u.w("!44@/B4Tb64lLpK+IBX8XDgnvgkcsXdgVst9bxTjb+M9eAs=", "username null for mobile");
+        v.w("MicroMsg.NetSceneGetMFriend", "username null for mobile");
         break;
         label915:
         paramo = null;
         break label825;
         bool = false;
         break label848;
-        if ((paramo == null) || (!com.tencent.mm.h.a.ce(field_type)))
+        if ((paramo == null) || (!com.tencent.mm.i.a.cy(field_type)))
         {
           status = 100;
           if (localb != null)
           {
-            u.v("!44@/B4Tb64lLpK+IBX8XDgnvgkcsXdgVst9bxTjb+M9eAs=", "onGYNetEnd update status on, nick:" + jyd + " realName:" + localb.yj() + "  MFriend:" + localacd.toString());
+            v.v("MicroMsg.NetSceneGetMFriend", "onGYNetEnd update status on, nick:" + jWK + " realName:" + localb.yv() + "  MFriend:" + localacs.toString());
             status = 1;
-            username = iYA;
-            aji = jyd;
-            bLF = com.tencent.mm.platformtools.c.ks(jye.ehZ);
-            bLG = com.tencent.mm.platformtools.c.kr(jye.ehZ);
-            bLK = localb.pY();
-            a(localb, localacd);
-            aou = -1;
-            ah.zq().a(localb.yh(), localb);
-            paramo = new com.tencent.mm.q.h();
-            username = iYA;
-            bEy = jfN;
-            bEx = jfO;
-            paramo.aK(true);
-            aSt = 3;
-            n.vs().a(paramo);
+            username = jwf;
+            UY = jWK;
+            bEZ = com.tencent.mm.platformtools.c.lb(jWL.elW);
+            bFa = com.tencent.mm.platformtools.c.la(jWL.elW);
+            bFe = localb.ov();
+            a(localb, localacs);
+            aqQ = -1;
+            ah.zD().a(localb.yt(), localb);
+            paramo = new com.tencent.mm.s.h();
+            username = jwf;
+            bxJ = jDF;
+            bxI = jDG;
+            paramo.ap(true);
+            aFc = 3;
+            n.vu().a(paramo);
           }
         }
         else
@@ -315,21 +315,21 @@ public final class x
           status = 101;
           if (localb != null)
           {
-            u.v("!44@/B4Tb64lLpK+IBX8XDgnvgkcsXdgVst9bxTjb+M9eAs=", "onGYNetEnd update status friend, nick:" + jyd + "  md5:" + bLL);
+            v.v("MicroMsg.NetSceneGetMFriend", "onGYNetEnd update status friend, nick:" + jWK + "  md5:" + bFf);
             status = 2;
-            username = iYA;
-            aji = jyd;
-            bLK = localb.pY();
-            a(localb, localacd);
-            aou = -1;
-            ah.zq().a(localb.yh(), localb);
-            com.tencent.mm.q.b.r(iYA, 3);
+            username = jwf;
+            UY = jWK;
+            bFe = localb.ov();
+            a(localb, localacs);
+            aqQ = -1;
+            ah.zD().a(localb.yt(), localb);
+            com.tencent.mm.s.b.o(jwf, 3);
           }
         }
       }
     }
-    tDbzA.dI(l);
-    anM.a(paramInt2, paramInt3, paramString, this);
+    tEbsy.dZ(l);
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()
@@ -337,11 +337,11 @@ public final class x
     return 32;
   }
   
-  public final void yZ()
+  public final void zm()
   {
-    tt localtt = (tt)anN.bEW.bFf;
-    jiC = ((String)com.tencent.mm.model.ah.tD().rn().get(65828, null));
-    eiL = 1;
+    ue localue = (ue)bkQ.byh.byq;
+    jGP = ((String)com.tencent.mm.model.ah.tE().ro().get(65828, null));
+    emN = 1;
   }
 }
 

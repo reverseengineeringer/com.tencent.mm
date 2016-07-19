@@ -12,25 +12,25 @@ import android.view.MenuItem.OnActionExpandListener;
 import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.SubMenu;
 import android.view.View;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
 
 public final class m
   implements MenuItem
 {
-  public String eqd;
+  public String evo;
   private int iconId;
-  private int jK;
-  private int jR;
-  private int kFu;
-  private Drawable kFv;
-  public ContextMenu.ContextMenuInfo kFw;
-  private MenuItem.OnMenuItemClickListener kFx;
+  private int kb;
+  private int ki;
+  public ContextMenu.ContextMenuInfo leA;
+  private MenuItem.OnMenuItemClickListener leB;
+  private int ley;
+  private Drawable lez;
   private CharSequence title;
   
   public m(int paramInt1, int paramInt2)
   {
-    jR = paramInt1;
-    jK = paramInt2;
+    ki = paramInt1;
+    kb = paramInt2;
   }
   
   @TargetApi(14)
@@ -64,19 +64,19 @@ public final class m
   
   public final int getGroupId()
   {
-    return jK;
+    return kb;
   }
   
   public final Drawable getIcon()
   {
-    if (kFv == null)
+    if (lez == null)
     {
       if (iconId != 0) {
-        return y.getContext().getResources().getDrawable(iconId);
+        return aa.getContext().getResources().getDrawable(iconId);
       }
       return null;
     }
-    return kFv;
+    return lez;
   }
   
   public final Intent getIntent()
@@ -86,12 +86,12 @@ public final class m
   
   public final int getItemId()
   {
-    return jR;
+    return ki;
   }
   
   public final ContextMenu.ContextMenuInfo getMenuInfo()
   {
-    return kFw;
+    return leA;
   }
   
   public final char getNumericShortcut()
@@ -113,8 +113,8 @@ public final class m
   {
     if (title == null)
     {
-      if (kFu != 0) {
-        return y.getContext().getString(kFu);
+      if (ley != 0) {
+        return aa.getContext().getString(ley);
       }
       return null;
     }
@@ -159,8 +159,8 @@ public final class m
   
   public final boolean performClick()
   {
-    if (kFx != null) {
-      return kFx.onMenuItemClick(this);
+    if (leB != null) {
+      return leB.onMenuItemClick(this);
     }
     return false;
   }
@@ -211,7 +211,7 @@ public final class m
   
   public final MenuItem setIcon(Drawable paramDrawable)
   {
-    kFv = paramDrawable;
+    lez = paramDrawable;
     return this;
   }
   
@@ -233,7 +233,7 @@ public final class m
   
   public final MenuItem setOnMenuItemClickListener(MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener)
   {
-    kFx = paramOnMenuItemClickListener;
+    leB = paramOnMenuItemClickListener;
     return this;
   }
   
@@ -253,7 +253,7 @@ public final class m
   
   public final MenuItem setTitle(int paramInt)
   {
-    kFu = paramInt;
+    ley = paramInt;
     return this;
   }
   

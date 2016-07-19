@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic knl:Lcom/tencent/mm/ui/LauncherUI;
+.field final synthetic kMs:Lcom/tencent/mm/ui/LauncherUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 396
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$12;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 372
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$12;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,16 +40,16 @@
     .locals 1
 
     .prologue
-    .line 400
+    .line 376
     const-string/jumbo v0, ""
 
-    invoke-static {v0}, Lcom/tencent/mm/model/ah;->fe(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/model/ah;->fr(Ljava/lang/String;)V
 
-    .line 401
+    .line 377
     const/4 v0, 0x1
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/MMAppMgr;->hk(Z)V
+    invoke-static {v0}, Lcom/tencent/mm/ui/MMAppMgr;->hI(Z)V
 
-    .line 402
+    .line 378
     return-void
 .end method

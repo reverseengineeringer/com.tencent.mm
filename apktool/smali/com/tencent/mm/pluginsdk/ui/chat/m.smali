@@ -12,19 +12,19 @@
 
 
 # instance fields
-.field private eYN:Landroid/widget/Button;
+.field private fhh:Landroid/widget/Button;
 
-.field private iKh:I
+.field private jhd:I
 
-.field iMC:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+.field private jjA:Landroid/widget/Button;
 
-.field private iMD:Landroid/widget/Button;
+.field jjB:Lcom/tencent/mm/pluginsdk/ui/chat/m$a;
 
-.field private iME:Lcom/tencent/mm/pluginsdk/ui/chat/m$a;
+.field jjC:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
 
-.field iMF:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
+.field private jjD:Z
 
-.field private iMG:Z
+.field jjz:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
 
 # direct methods
@@ -40,7 +40,7 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/chat/m$3;-><init>(Lcom/tencent/mm/pluginsdk/ui/chat/m;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->iMF:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->jjC:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
 
     .line 122
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/chat/m;->getContext()Landroid/content/Context;
@@ -49,16 +49,16 @@
 
     const/16 v1, 0xd7
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/az/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->iKh:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->jhd:I
 
     .line 124
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->iMG:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->jjD:Z
 
     .line 33
     invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/chat/m;->init()V
@@ -72,7 +72,7 @@
 
     .prologue
     .line 16
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->iME:Lcom/tencent/mm/pluginsdk/ui/chat/m$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->jjB:Lcom/tencent/mm/pluginsdk/ui/chat/m$a;
 
     return-object v0
 .end method
@@ -82,7 +82,7 @@
 
     .prologue
     .line 16
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->iMD:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->jjA:Landroid/widget/Button;
 
     return-object v0
 .end method
@@ -106,26 +106,26 @@
     .prologue
     const/4 v3, 0x0
 
-    const v2, 0x7f070f26
+    const v2, 0x7f101156
 
     .line 39
-    const-string/jumbo v0, "!44@/B4Tb64lLpIbEKHKo7kTF7hRtkVut7/Dah097ExZqPw="
+    const-string/jumbo v0, "MicroMsg.VoiceInputPanel"
 
     const-string/jumbo v1, "init"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 40
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/chat/m;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0a04c5
+    const v1, 0x7f0305f0
 
     invoke-static {v0, v1, p0}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     .line 42
-    const v0, 0x7f070ee0
+    const v0, 0x7f101142
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/chat/m;->findViewById(I)Landroid/view/View;
 
@@ -133,10 +133,10 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->iMD:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->jjA:Landroid/widget/Button;
 
     .line 43
-    const v0, 0x7f0705d4
+    const v0, 0x7f100c89
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/chat/m;->findViewById(I)Landroid/view/View;
 
@@ -144,10 +144,10 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->eYN:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->fhh:Landroid/widget/Button;
 
     .line 45
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->iMD:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->jjA:Landroid/widget/Button;
 
     new-instance v1, Lcom/tencent/mm/pluginsdk/ui/chat/m$1;
 
@@ -156,7 +156,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 55
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->eYN:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->fhh:Landroid/widget/Button;
 
     new-instance v1, Lcom/tencent/mm/pluginsdk/ui/chat/m$2;
 
@@ -167,7 +167,7 @@
     .line 65
     const/16 v0, 0x10
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/util/c;->bU(I)Z
+    invoke-static {v0}, Lcom/tencent/mm/compatible/util/c;->cm(I)Z
 
     move-result v0
 
@@ -197,22 +197,22 @@
 
 
 # virtual methods
-.method public final aRA()V
+.method public final aWn()V
     .locals 4
 
     .prologue
     .line 134
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->iMG:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->jjD:Z
 
     if-eqz v0, :cond_1
 
     .line 135
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->iMG:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->jjD:Z
 
     .line 136
-    const v0, 0x7f070ede
+    const v0, 0x7f101140
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/chat/m;->findViewById(I)Landroid/view/View;
 
@@ -224,7 +224,7 @@
     move-result-object v0
 
     .line 138
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->iKh:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->jhd:I
 
     .line 139
     if-nez v0, :cond_0
@@ -248,12 +248,12 @@
     return-void
 .end method
 
-.method public final aSn()V
+.method public final aXf()V
     .locals 2
 
     .prologue
     .line 119
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->eYN:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->fhh:Landroid/widget/Button;
 
     invoke-virtual {v0}, Landroid/widget/Button;->getParent()Landroid/view/ViewParent;
 
@@ -269,33 +269,22 @@
     return-void
 .end method
 
-.method public final setCallback(Lcom/tencent/mm/pluginsdk/ui/chat/m$a;)V
-    .locals 0
-
-    .prologue
-    .line 100
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->iME:Lcom/tencent/mm/pluginsdk/ui/chat/m$a;
-
-    .line 101
-    return-void
-.end method
-
-.method public final setPortHeightPX(I)V
+.method public final qr(I)V
     .locals 1
 
     .prologue
     .line 127
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->iKh:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->jhd:I
 
     if-eq v0, p1, :cond_0
 
     .line 128
-    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->iKh:I
+    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->jhd:I
 
     .line 129
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->iMG:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m;->jjD:Z
 
     .line 131
     :cond_0

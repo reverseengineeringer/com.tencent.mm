@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->bn(Landroid/content/Context;)I
+    value = Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->bi(Landroid/content/Context;)I
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic coH:Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;
+.field final synthetic cjV:Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;
 
-.field final synthetic coI:Ljava/lang/String;
+.field final synthetic cjW:Ljava/lang/String;
 
 .field final synthetic val$context:Landroid/content/Context;
 
@@ -30,12 +30,12 @@
     .locals 0
 
     .prologue
-    .line 333
-    iput-object p1, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a$2;->coH:Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;
+    .line 342
+    iput-object p1, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a$2;->cjV:Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;
 
     iput-object p2, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a$2;->val$context:Landroid/content/Context;
 
-    iput-object p3, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a$2;->coI:Ljava/lang/String;
+    iput-object p3, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a$2;->cjW:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,12 +50,12 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 337
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 346
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -67,12 +67,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
-    .line 338
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a$2;->coH:Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;
+    .line 347
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a$2;->cjV:Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->coG:Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->cjS:Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v1
 
@@ -82,7 +82,7 @@
 
     move-result-object v0
 
-    .line 339
+    .line 348
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -95,30 +95,30 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 340
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a$2;->coH:Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;
+    .line 349
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a$2;->cjV:Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;
 
     iget-object v1, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a$2;->val$context:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a$2;->coI:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a$2;->cjW:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->D(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a;->F(Landroid/content/Context;Ljava/lang/String;)I
 
-    .line 341
+    .line 350
     iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a$2;->val$context:Landroid/content/Context;
 
     instance-of v0, v0, Landroid/app/Activity;
 
     if-eqz v0, :cond_0
 
-    .line 342
+    .line 351
     iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI$a$2;->val$context:Landroid/content/Context;
 
     check-cast v0, Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 344
+    .line 353
     :cond_0
     return-void
 .end method

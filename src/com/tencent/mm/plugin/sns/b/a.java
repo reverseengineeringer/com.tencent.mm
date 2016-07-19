@@ -7,19 +7,19 @@ import com.tencent.mm.pluginsdk.h;
 public final class a
   implements h
 {
-  public static g coa;
-  public static f cob;
-  public static int gHo = Integer.MAX_VALUE;
-  public static String gHp = "";
+  public static g cjo;
+  public static f cjp;
+  public static int gOt = Integer.MAX_VALUE;
+  public static String gOu = "";
   
   public final void a(f paramf)
   {
-    cob = paramf;
+    cjp = paramf;
   }
   
   public final void a(g paramg)
   {
-    coa = paramg;
+    cjo = paramg;
   }
 }
 

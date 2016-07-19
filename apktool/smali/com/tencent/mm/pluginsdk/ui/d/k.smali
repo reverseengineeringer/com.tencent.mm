@@ -12,47 +12,84 @@
 
 
 # static fields
-.field private static final iQk:Lcom/tencent/mm/a/f;
+.field private static final jns:Lcom/tencent/mm/a/f;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/tencent/mm/a/f",
+            "<",
+            "Ljava/lang/String;",
+            "Landroid/text/SpannableString;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field gZd:Ljava/lang/String;
+.field hmp:Ljava/lang/String;
 
-.field iQA:Ljava/lang/Object;
+.field jnA:Z
 
-.field private iQl:Ljava/util/ArrayList;
+.field jnB:Z
 
-.field private iQm:Ljava/util/ArrayList;
+.field jnC:Z
 
-.field private iQn:Ljava/util/ArrayList;
+.field jnD:Z
 
-.field iQo:Z
+.field jnE:Z
 
-.field iQp:Z
+.field jnF:I
 
-.field iQq:Z
+.field private jnG:I
 
-.field iQr:Z
+.field jnH:Z
 
-.field iQs:Z
+.field jnI:Ljava/lang/Object;
 
-.field iQt:Z
+.field private jnt:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/pluginsdk/ui/applet/g;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field iQu:Z
+.field private jnu:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/pluginsdk/ui/d/k$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field iQv:Z
+.field private jnv:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/pluginsdk/ui/applet/h;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field iQw:Z
+.field jnw:Z
 
-.field iQx:I
+.field jnx:Z
 
-.field private iQy:I
+.field jny:Z
 
-.field iQz:Z
+.field jnz:Z
 
 .field private mContext:Landroid/content/Context;
 
-.field private qU:Landroid/widget/TextView;
+.field private ri:Landroid/widget/TextView;
 
 
 # direct methods
@@ -67,7 +104,7 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/a/f;-><init>(I)V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQk:Lcom/tencent/mm/a/f;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jns:Lcom/tencent/mm/a/f;
 
     return-void
 .end method
@@ -90,84 +127,84 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQl:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnt:Ljava/util/ArrayList;
 
     .line 40
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQm:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnu:Ljava/util/ArrayList;
 
     .line 42
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQn:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnv:Ljava/util/ArrayList;
 
     .line 44
-    iput-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->qU:Landroid/widget/TextView;
+    iput-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->ri:Landroid/widget/TextView;
 
     .line 45
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQo:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnw:Z
 
     .line 46
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQp:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnx:Z
 
     .line 47
-    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQq:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jny:Z
 
     .line 48
-    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQr:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnz:Z
 
     .line 49
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQs:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnA:Z
 
     .line 50
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQt:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnB:Z
 
     .line 52
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQu:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnC:Z
 
     .line 53
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQv:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnD:Z
 
     .line 55
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQw:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnE:Z
 
     .line 57
-    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQx:I
+    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnF:I
 
     .line 58
-    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQy:I
+    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnG:I
 
     .line 59
     iput-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->mContext:Landroid/content/Context;
 
     .line 60
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQz:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnH:Z
 
     .line 64
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQl:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnt:Ljava/util/ArrayList;
 
     .line 65
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQm:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnu:Ljava/util/ArrayList;
 
     .line 66
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQn:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnv:Ljava/util/ArrayList;
 
     .line 67
     iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->mContext:Landroid/content/Context;
@@ -176,7 +213,517 @@
     return-void
 .end method
 
-.method private static a(Landroid/text/Spannable;)V
+.method private A(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
+    .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/CharSequence;",
+            ")",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/pluginsdk/ui/d/k$a;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 496
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    .line 497
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->jmL:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v2
+
+    .line 498
+    :cond_0
+    :goto_0
+    invoke-virtual {v2}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 499
+    invoke-virtual {v2}, Ljava/util/regex/Matcher;->start()I
+
+    move-result v3
+
+    .line 500
+    invoke-virtual {v2}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v4
+
+    .line 502
+    invoke-virtual {v2}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 503
+    sub-int v0, v4, v3
+
+    .line 504
+    const-string/jumbo v6, "+"
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_1
+
+    .line 505
+    add-int/lit8 v0, v0, -0x1
+
+    .line 507
+    :cond_1
+    const/4 v6, 0x6
+
+    if-eq v0, v6, :cond_2
+
+    const/4 v6, 0x5
+
+    if-ne v0, v6, :cond_3
+
+    .line 508
+    :cond_2
+    const-string/jumbo v0, "+12306+12110+12395+12121+12117+12119+95555+95566+95533+95588+95558+95599+95568+95595+95559+95508+95528+95501+95577+95561+10086+10010+10000+17951+17911+17900+118114+116114+950718+95598+12318+12315+12358+12365+12310+12369+12333+12366+95518+95519+95511+95500+95522+95567"
+
+    invoke-virtual {v0, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 509
+    :cond_3
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnu:Ljava/util/ArrayList;
+
+    new-instance v6, Lcom/tencent/mm/pluginsdk/ui/d/k$a;
+
+    invoke-direct {v6, p0, v3, v4}, Lcom/tencent/mm/pluginsdk/ui/d/k$a;-><init>(Lcom/tencent/mm/pluginsdk/ui/d/k;II)V
+
+    invoke-static {v0, v6}, Lcom/tencent/mm/pluginsdk/ui/d/k;->a(Ljava/util/ArrayList;Lcom/tencent/mm/pluginsdk/ui/d/k$a;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 514
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;
+
+    const/16 v6, 0x19
+
+    iget-object v7, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnI:Ljava/lang/Object;
+
+    invoke-direct {v0, v5, v6, v7}, Lcom/tencent/mm/pluginsdk/ui/applet/g;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
+
+    .line 516
+    iput v3, v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;->start:I
+
+    .line 517
+    iput v4, v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;->end:I
+
+    .line 518
+    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnt:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 520
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/d/k$a;
+
+    invoke-direct {v0, p0, v3, v4}, Lcom/tencent/mm/pluginsdk/ui/d/k$a;-><init>(Lcom/tencent/mm/pluginsdk/ui/d/k;II)V
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    .line 523
+    :cond_4
+    return-object v1
+.end method
+
+.method private B(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/CharSequence;",
+            ")",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/pluginsdk/ui/d/k$a;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 527
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    .line 528
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->mContext:Landroid/content/Context;
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/pluginsdk/ui/d/a;->aN(Landroid/content/Context;Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    .line 529
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_0
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;
+
+    .line 530
+    iget v3, v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;->start:I
+
+    .line 531
+    iget v4, v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;->end:I
+
+    .line 533
+    new-instance v5, Lcom/tencent/mm/pluginsdk/ui/d/k$a;
+
+    invoke-direct {v5, p0, v3, v4}, Lcom/tencent/mm/pluginsdk/ui/d/k$a;-><init>(Lcom/tencent/mm/pluginsdk/ui/d/k;II)V
+
+    .line 534
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnu:Ljava/util/ArrayList;
+
+    invoke-static {v3, v5}, Lcom/tencent/mm/pluginsdk/ui/d/k;->a(Ljava/util/ArrayList;Lcom/tencent/mm/pluginsdk/ui/d/k$a;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    .line 535
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnt:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 536
+    invoke-virtual {v1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    .line 539
+    :cond_1
+    return-object v1
+.end method
+
+.method private C(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
+    .locals 10
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/CharSequence;",
+            ")",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/pluginsdk/ui/d/k$a;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v9, 0x0
+
+    const/16 v8, 0x1e
+
+    .line 543
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    .line 544
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 546
+    sget-object v2, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->jmO:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v2, v1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v2
+
+    .line 547
+    :cond_0
+    :goto_0
+    invoke-virtual {v2}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    .line 548
+    invoke-virtual {v2}, Ljava/util/regex/Matcher;->start()I
+
+    move-result v3
+
+    .line 549
+    invoke-virtual {v2}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v4
+
+    .line 550
+    new-instance v5, Lcom/tencent/mm/pluginsdk/ui/d/k$a;
+
+    invoke-direct {v5, p0, v3, v4}, Lcom/tencent/mm/pluginsdk/ui/d/k$a;-><init>(Lcom/tencent/mm/pluginsdk/ui/d/k;II)V
+
+    .line 551
+    iget-object v6, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnu:Ljava/util/ArrayList;
+
+    invoke-static {v6, v5}, Lcom/tencent/mm/pluginsdk/ui/d/k;->a(Ljava/util/ArrayList;Lcom/tencent/mm/pluginsdk/ui/d/k$a;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_0
+
+    if-ltz v3, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v6
+
+    if-gt v4, v6, :cond_0
+
+    .line 552
+    new-instance v6, Lcom/tencent/mm/pluginsdk/ui/applet/g;
+
+    invoke-virtual {v1, v3, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-direct {v6, v7, v8, v9}, Lcom/tencent/mm/pluginsdk/ui/applet/g;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
+
+    .line 553
+    iput v3, v6, Lcom/tencent/mm/pluginsdk/ui/applet/g;->start:I
+
+    .line 554
+    iput v4, v6, Lcom/tencent/mm/pluginsdk/ui/applet/g;->end:I
+
+    .line 555
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnt:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 556
+    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    .line 559
+    :cond_1
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-gtz v2, :cond_3
+
+    .line 560
+    sget-object v2, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->jmN:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v2, v1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v2
+
+    .line 561
+    :cond_2
+    :goto_1
+    invoke-virtual {v2}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    .line 562
+    invoke-virtual {v2}, Ljava/util/regex/Matcher;->start()I
+
+    move-result v3
+
+    .line 563
+    invoke-virtual {v2}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v4
+
+    .line 564
+    new-instance v5, Lcom/tencent/mm/pluginsdk/ui/d/k$a;
+
+    invoke-direct {v5, p0, v3, v4}, Lcom/tencent/mm/pluginsdk/ui/d/k$a;-><init>(Lcom/tencent/mm/pluginsdk/ui/d/k;II)V
+
+    .line 565
+    iget-object v6, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnu:Ljava/util/ArrayList;
+
+    invoke-static {v6, v5}, Lcom/tencent/mm/pluginsdk/ui/d/k;->a(Ljava/util/ArrayList;Lcom/tencent/mm/pluginsdk/ui/d/k$a;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_2
+
+    if-ltz v3, :cond_2
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v6
+
+    if-gt v4, v6, :cond_2
+
+    .line 566
+    new-instance v6, Lcom/tencent/mm/pluginsdk/ui/applet/g;
+
+    invoke-virtual {v1, v3, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-direct {v6, v7, v8, v9}, Lcom/tencent/mm/pluginsdk/ui/applet/g;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
+
+    .line 567
+    iput v3, v6, Lcom/tencent/mm/pluginsdk/ui/applet/g;->start:I
+
+    .line 568
+    iput v4, v6, Lcom/tencent/mm/pluginsdk/ui/applet/g;->end:I
+
+    .line 569
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnt:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 570
+    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    .line 575
+    :cond_3
+    return-object v0
+.end method
+
+.method private static a(Ljava/util/ArrayList;Lcom/tencent/mm/pluginsdk/ui/d/k$a;)Z
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/pluginsdk/ui/d/k$a;",
+            ">;",
+            "Lcom/tencent/mm/pluginsdk/ui/d/k$a;",
+            ")Z"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 614
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :cond_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/pluginsdk/ui/d/k$a;
+
+    .line 615
+    iget v4, v0, Lcom/tencent/mm/pluginsdk/ui/d/k$a;->end:I
+
+    iget v5, p1, Lcom/tencent/mm/pluginsdk/ui/d/k$a;->start:I
+
+    if-le v4, v5, :cond_1
+
+    iget v4, p1, Lcom/tencent/mm/pluginsdk/ui/d/k$a;->end:I
+
+    iget v0, v0, Lcom/tencent/mm/pluginsdk/ui/d/k$a;->start:I
+
+    if-le v4, v0, :cond_1
+
+    move v0, v1
+
+    :goto_0
+    if-eqz v0, :cond_0
+
+    move v0, v1
+
+    .line 619
+    :goto_1
+    return v0
+
+    :cond_1
+    move v0, v2
+
+    .line 615
+    goto :goto_0
+
+    :cond_2
+    move v0, v2
+
+    .line 619
+    goto :goto_1
+.end method
+
+.method private aXD()V
+    .locals 2
+
+    .prologue
+    .line 636
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->ri:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_0
+
+    .line 638
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/d/h;
+
+    invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/ui/d/h;-><init>()V
+
+    .line 639
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->hmp:Ljava/lang/String;
+
+    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/d/h;->hmp:Ljava/lang/String;
+
+    .line 640
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->ri:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+
+    .line 642
+    :cond_0
+    return-void
+.end method
+
+.method private static b(Landroid/text/Spannable;)V
     .locals 3
 
     .prologue
@@ -228,104 +775,12 @@
     return-void
 .end method
 
-.method private static a(Ljava/util/ArrayList;Lcom/tencent/mm/pluginsdk/ui/d/k$a;)Z
-    .locals 6
-
-    .prologue
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    .line 610
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    :cond_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/pluginsdk/ui/d/k$a;
-
-    .line 611
-    iget v4, v0, Lcom/tencent/mm/pluginsdk/ui/d/k$a;->end:I
-
-    iget v5, p1, Lcom/tencent/mm/pluginsdk/ui/d/k$a;->start:I
-
-    if-le v4, v5, :cond_1
-
-    iget v4, p1, Lcom/tencent/mm/pluginsdk/ui/d/k$a;->end:I
-
-    iget v0, v0, Lcom/tencent/mm/pluginsdk/ui/d/k$a;->start:I
-
-    if-le v4, v0, :cond_1
-
-    move v0, v1
-
-    :goto_0
-    if-eqz v0, :cond_0
-
-    move v0, v1
-
-    .line 615
-    :goto_1
-    return v0
-
-    :cond_1
-    move v0, v2
-
-    .line 611
-    goto :goto_0
-
-    :cond_2
-    move v0, v2
-
-    .line 615
-    goto :goto_1
-.end method
-
-.method private aSK()V
+.method private c(Landroid/text/Spannable;)V
     .locals 2
 
     .prologue
-    .line 632
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->qU:Landroid/widget/TextView;
-
-    if-eqz v0, :cond_0
-
-    .line 634
-    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/d/h;
-
-    invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/ui/d/h;-><init>()V
-
-    .line 635
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->gZd:Ljava/lang/String;
-
-    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/d/h;->gZd:Ljava/lang/String;
-
-    .line 636
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->qU:Landroid/widget/TextView;
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    .line 638
-    :cond_0
-    return-void
-.end method
-
-.method private b(Landroid/text/Spannable;)V
-    .locals 2
-
-    .prologue
-    .line 619
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->qU:Landroid/widget/TextView;
+    .line 623
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->ri:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
@@ -333,32 +788,32 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 620
-    sget-boolean v0, Lcom/tencent/mm/platformtools/r;->cnK:Z
+    .line 624
+    sget-boolean v0, Lcom/tencent/mm/platformtools/q;->ciP:Z
 
     if-eqz v0, :cond_1
 
-    .line 621
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->qU:Landroid/widget/TextView;
+    .line 625
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->ri:Landroid/widget/TextView;
 
     sget-object v1, Landroid/widget/TextView$BufferType;->SPANNABLE:Landroid/widget/TextView$BufferType;
 
     invoke-virtual {v0, p1, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
-    .line 629
+    .line 633
     :cond_0
     :goto_0
     return-void
 
-    .line 623
+    .line 627
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->qU:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->ri:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -369,16 +824,16 @@
     .locals 1
 
     .prologue
-    .line 642
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQk:Lcom/tencent/mm/a/f;
+    .line 646
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jns:Lcom/tencent/mm/a/f;
 
     invoke-virtual {v0}, Lcom/tencent/mm/a/f;->clear()V
 
-    .line 643
+    .line 647
     return-void
 .end method
 
-.method private l(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+.method private u(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
     .locals 10
 
     .prologue
@@ -387,7 +842,7 @@
     const/4 v8, 0x0
 
     .line 306
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->iPA:Ljava/util/regex/Pattern;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->jmG:Ljava/util/regex/Pattern;
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
@@ -408,7 +863,7 @@
     if-eqz v0, :cond_3
 
     .line 309
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQv:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnD:Z
 
     if-eqz v0, :cond_0
 
@@ -429,7 +884,7 @@
 
     .line 325
     :goto_1
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->iPy:Ljava/util/regex/Pattern;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->jmE:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
@@ -500,7 +955,7 @@
     invoke-direct {v5, v1, v3, v4}, Lcom/tencent/mm/pluginsdk/ui/applet/h;-><init>(III)V
 
     .line 319
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -524,7 +979,7 @@
 
     .line 320
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQn:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnv:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -532,7 +987,7 @@
 
     .line 322
     :cond_2
-    const-string/jumbo v1, "!32@/B4Tb64lLpLDMUcCddtGXxrt1Jliw5hj"
+    const-string/jumbo v1, "MicroMsg.SpanProcessor"
 
     const-string/jumbo v3, "dz[parseImgSpan:error drawable name %s]"
 
@@ -540,7 +995,7 @@
 
     aput-object v2, v4, v8
 
-    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
@@ -549,7 +1004,7 @@
     return-object p1
 .end method
 
-.method private m(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+.method private v(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
     .locals 12
 
     .prologue
@@ -562,7 +1017,7 @@
     const/4 v7, 0x0
 
     .line 343
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->iPz:Ljava/util/regex/Pattern;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->jmF:Ljava/util/regex/Pattern;
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
@@ -644,7 +1099,7 @@
 
     .line 357
     :cond_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpLDMUcCddtGXxrt1Jliw5hj"
+    const-string/jumbo v0, "MicroMsg.SpanProcessor"
 
     const-string/jumbo v1, "dz[parseWCCustomLink error: start:%d, end:%d, source.length:%d]"
 
@@ -672,7 +1127,7 @@
 
     aput-object v2, v5, v10
 
-    invoke-static {v0, v1, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v6
 
@@ -702,11 +1157,11 @@
 
     if-eqz v0, :cond_3
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQl:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnt:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQm:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnu:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/tencent/mm/pluginsdk/ui/d/k$a;
 
@@ -716,7 +1171,7 @@
 
     .line 371
     :cond_3
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->iPy:Ljava/util/regex/Pattern;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->jmE:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, v6}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
@@ -734,7 +1189,7 @@
     move-exception v0
 
     .line 366
-    const-string/jumbo v0, "!32@/B4Tb64lLpLDMUcCddtGXxrt1Jliw5hj"
+    const-string/jumbo v0, "MicroMsg.SpanProcessor"
 
     const-string/jumbo v4, "dz[parseWCCustomLink error at color : %s]"
 
@@ -742,7 +1197,7 @@
 
     aput-object v5, v8, v7
 
-    invoke-static {v0, v4, v8}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v4, v8}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v4, v7
 
@@ -753,7 +1208,7 @@
     return-object v0
 .end method
 
-.method private n(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+.method private w(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
     .locals 10
 
     .prologue
@@ -764,7 +1219,7 @@
     const/4 v7, 0x0
 
     .line 377
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->iPy:Ljava/util/regex/Pattern;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->jmE:Ljava/util/regex/Pattern;
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
@@ -841,7 +1296,7 @@
 
     .line 390
     :cond_1
-    const-string/jumbo v3, "!32@/B4Tb64lLpLDMUcCddtGXxrt1Jliw5hj"
+    const-string/jumbo v3, "MicroMsg.SpanProcessor"
 
     const-string/jumbo v5, "parseHref error, start:%d, end:%d, source.length:%d"
 
@@ -871,7 +1326,7 @@
 
     aput-object v2, v6, v8
 
-    invoke-static {v3, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -885,11 +1340,11 @@
 
     if-eqz v1, :cond_3
 
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQl:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnt:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQm:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnu:Ljava/util/ArrayList;
 
     new-instance v3, Lcom/tencent/mm/pluginsdk/ui/d/k$a;
 
@@ -899,7 +1354,7 @@
 
     .line 396
     :cond_3
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->iPy:Ljava/util/regex/Pattern;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->jmE:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
@@ -912,45 +1367,71 @@
     return-object v0
 .end method
 
-.method private o(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
+.method private x(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
     .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/CharSequence;",
+            ")",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/pluginsdk/ui/d/k$a;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 429
-    new-instance v0, Ljava/util/ArrayList;
+    const/16 v0, 0x7d0
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    .line 428
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    .line 429
+    sget-object v2, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->jmK:Ljava/util/regex/Pattern;
+
+    const/4 v3, 0x0
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v4
+
+    if-le v4, v0, :cond_1
+
+    :goto_0
+    invoke-interface {p1, v3, v0}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
 
     .line 430
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->iPD:Ljava/util/regex/Pattern;
+    :cond_0
+    :goto_1
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
 
-    invoke-virtual {v1, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+    move-result v2
 
-    move-result-object v1
+    if-eqz v2, :cond_2
 
     .line 431
-    :cond_0
-    :goto_0
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->start()I
 
     move-result v2
-
-    if-eqz v2, :cond_1
 
     .line 432
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->start()I
-
-    move-result v2
-
-    .line 433
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->end()I
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->end()I
 
     move-result v3
 
-    .line 434
+    .line 433
     new-instance v4, Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
 
     move-result-object v5
 
@@ -960,14 +1441,14 @@
 
     invoke-direct {v4, v5, v6, v7}, Lcom/tencent/mm/pluginsdk/ui/applet/g;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 435
+    .line 434
     iput v2, v4, Lcom/tencent/mm/pluginsdk/ui/applet/g;->start:I
 
-    .line 436
+    .line 435
     iput v3, v4, Lcom/tencent/mm/pluginsdk/ui/applet/g;->end:I
 
-    .line 438
-    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQm:Ljava/util/ArrayList;
+    .line 437
+    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnu:Ljava/util/ArrayList;
 
     new-instance v6, Lcom/tencent/mm/pluginsdk/ui/d/k$a;
 
@@ -979,71 +1460,99 @@
 
     if-nez v5, :cond_0
 
-    .line 439
-    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQl:Ljava/util/ArrayList;
+    .line 438
+    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnt:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 440
+    .line 439
     new-instance v4, Lcom/tencent/mm/pluginsdk/ui/d/k$a;
 
     invoke-direct {v4, p0, v2, v3}, Lcom/tencent/mm/pluginsdk/ui/d/k$a;-><init>(Lcom/tencent/mm/pluginsdk/ui/d/k;II)V
 
-    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    .line 429
+    :cond_1
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
 
     goto :goto_0
 
-    .line 443
-    :cond_1
-    return-object v0
+    .line 442
+    :cond_2
+    return-object v1
 .end method
 
-.method private p(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
+.method private y(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
     .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/CharSequence;",
+            ")",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/pluginsdk/ui/d/k$a;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
+    .line 446
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
     .line 447
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 448
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 450
-    sget-object v2, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->iPC:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v2
 
+    .line 450
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const/16 v3, 0x1f4
+
+    if-le v0, v3, :cond_2
+
     .line 451
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->jmJ:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    .line 455
     :cond_0
     :goto_0
-    invoke-virtual {v2}, Ljava/util/regex/Matcher;->find()Z
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v3
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_3
 
-    .line 452
-    invoke-virtual {v2}, Ljava/util/regex/Matcher;->start()I
+    .line 456
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->start()I
 
     move-result v3
 
-    .line 453
-    invoke-virtual {v2}, Ljava/util/regex/Matcher;->end()I
+    .line 457
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->end()I
 
     move-result v4
 
-    .line 455
-    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQm:Ljava/util/ArrayList;
+    .line 459
+    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnu:Ljava/util/ArrayList;
 
     new-instance v6, Lcom/tencent/mm/pluginsdk/ui/d/k$a;
 
@@ -1057,25 +1566,25 @@
 
     if-ltz v3, :cond_0
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v5
 
     if-gt v4, v5, :cond_0
 
-    .line 456
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    .line 460
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v5
 
     if-ge v4, v5, :cond_1
 
-    .line 457
-    invoke-virtual {v1, v4}, Ljava/lang/String;->charAt(I)C
+    .line 461
+    invoke-virtual {v2, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
 
-    .line 458
+    .line 462
     const/16 v6, 0x61
 
     if-gt v6, v5, :cond_1
@@ -1084,67 +1593,92 @@
 
     if-le v5, v6, :cond_0
 
-    .line 459
+    .line 463
     :cond_1
     new-instance v5, Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
-    invoke-virtual {v1, v3, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {v2, v3, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v6
 
     const/4 v7, 0x1
 
-    iget-object v8, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQA:Ljava/lang/Object;
+    iget-object v8, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnI:Ljava/lang/Object;
 
     invoke-direct {v5, v6, v7, v8}, Lcom/tencent/mm/pluginsdk/ui/applet/g;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 463
+    .line 467
     iput v3, v5, Lcom/tencent/mm/pluginsdk/ui/applet/g;->start:I
 
-    .line 464
+    .line 468
     iput v4, v5, Lcom/tencent/mm/pluginsdk/ui/applet/g;->end:I
 
-    .line 465
-    iget-object v6, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQl:Ljava/util/ArrayList;
+    .line 469
+    iget-object v6, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnt:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 467
+    .line 471
     new-instance v5, Lcom/tencent/mm/pluginsdk/ui/d/k$a;
 
     invoke-direct {v5, p0, v3, v4}, Lcom/tencent/mm/pluginsdk/ui/d/k$a;-><init>(Lcom/tencent/mm/pluginsdk/ui/d/k;II)V
 
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 470
+    .line 453
     :cond_2
-    return-object v0
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->jmI:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 474
+    :cond_3
+    return-object v1
 .end method
 
-.method private q(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
+.method private z(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
     .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/CharSequence;",
+            ")",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/pluginsdk/ui/d/k$a;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 474
+    .line 478
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 475
+    .line 479
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 476
-    sget-object v2, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->iPF:Ljava/util/regex/Pattern;
+    .line 480
+    sget-object v2, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->jmM:Ljava/util/regex/Pattern;
 
     invoke-virtual {v2, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v2
 
-    .line 477
+    .line 481
     :cond_0
     :goto_0
     invoke-virtual {v2}, Ljava/util/regex/Matcher;->find()Z
@@ -1153,18 +1687,18 @@
 
     if-eqz v3, :cond_1
 
-    .line 478
+    .line 482
     invoke-virtual {v2}, Ljava/util/regex/Matcher;->start()I
 
     move-result v3
 
-    .line 479
+    .line 483
     invoke-virtual {v2}, Ljava/util/regex/Matcher;->end()I
 
     move-result v4
 
-    .line 480
-    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQm:Ljava/util/ArrayList;
+    .line 484
+    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnu:Ljava/util/ArrayList;
 
     new-instance v6, Lcom/tencent/mm/pluginsdk/ui/d/k$a;
 
@@ -1184,7 +1718,7 @@
 
     if-gt v4, v5, :cond_0
 
-    .line 481
+    .line 485
     new-instance v5, Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
     invoke-virtual {v1, v3, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -1197,18 +1731,18 @@
 
     invoke-direct {v5, v6, v7, v8}, Lcom/tencent/mm/pluginsdk/ui/applet/g;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 482
+    .line 486
     iput v3, v5, Lcom/tencent/mm/pluginsdk/ui/applet/g;->start:I
 
-    .line 483
+    .line 487
     iput v4, v5, Lcom/tencent/mm/pluginsdk/ui/applet/g;->end:I
 
-    .line 484
-    iget-object v6, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQl:Ljava/util/ArrayList;
+    .line 488
+    iget-object v6, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnt:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 485
+    .line 489
     new-instance v5, Lcom/tencent/mm/pluginsdk/ui/d/k$a;
 
     invoke-direct {v5, p0, v3, v4}, Lcom/tencent/mm/pluginsdk/ui/d/k$a;-><init>(Lcom/tencent/mm/pluginsdk/ui/d/k;II)V
@@ -1217,382 +1751,8 @@
 
     goto :goto_0
 
-    .line 488
-    :cond_1
-    return-object v0
-.end method
-
-.method private r(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
-    .locals 8
-
-    .prologue
     .line 492
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    .line 493
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->iPE:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v2
-
-    .line 494
-    :cond_0
-    :goto_0
-    invoke-virtual {v2}, Ljava/util/regex/Matcher;->find()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    .line 495
-    invoke-virtual {v2}, Ljava/util/regex/Matcher;->start()I
-
-    move-result v3
-
-    .line 496
-    invoke-virtual {v2}, Ljava/util/regex/Matcher;->end()I
-
-    move-result v4
-
-    .line 498
-    invoke-virtual {v2}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 499
-    sub-int v0, v4, v3
-
-    .line 500
-    const-string/jumbo v6, "+"
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_1
-
-    .line 501
-    add-int/lit8 v0, v0, -0x1
-
-    .line 503
     :cond_1
-    const/4 v6, 0x6
-
-    if-eq v0, v6, :cond_2
-
-    const/4 v6, 0x5
-
-    if-ne v0, v6, :cond_3
-
-    .line 504
-    :cond_2
-    const-string/jumbo v0, "+12306+12110+12395+12121+12117+12119+95555+95566+95533+95588+95558+95599+95568+95595+95559+95508+95528+95501+95577+95561+10086+10010+10000+17951+17911+17900+118114+116114+950718+95598+12318+12315+12358+12365+12310+12369+12333+12366+95518+95519+95511+95500+95522+95567"
-
-    invoke-virtual {v0, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 505
-    :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQm:Ljava/util/ArrayList;
-
-    new-instance v6, Lcom/tencent/mm/pluginsdk/ui/d/k$a;
-
-    invoke-direct {v6, p0, v3, v4}, Lcom/tencent/mm/pluginsdk/ui/d/k$a;-><init>(Lcom/tencent/mm/pluginsdk/ui/d/k;II)V
-
-    invoke-static {v0, v6}, Lcom/tencent/mm/pluginsdk/ui/d/k;->a(Ljava/util/ArrayList;Lcom/tencent/mm/pluginsdk/ui/d/k$a;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 510
-    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;
-
-    const/16 v6, 0x19
-
-    iget-object v7, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQA:Ljava/lang/Object;
-
-    invoke-direct {v0, v5, v6, v7}, Lcom/tencent/mm/pluginsdk/ui/applet/g;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
-
-    .line 512
-    iput v3, v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;->start:I
-
-    .line 513
-    iput v4, v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;->end:I
-
-    .line 514
-    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQl:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 516
-    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/d/k$a;
-
-    invoke-direct {v0, p0, v3, v4}, Lcom/tencent/mm/pluginsdk/ui/d/k$a;-><init>(Lcom/tencent/mm/pluginsdk/ui/d/k;II)V
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    .line 519
-    :cond_4
-    return-object v1
-.end method
-
-.method private s(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
-    .locals 6
-
-    .prologue
-    .line 523
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    .line 524
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->mContext:Landroid/content/Context;
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Lcom/tencent/mm/pluginsdk/ui/d/a;->aP(Landroid/content/Context;Ljava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    .line 525
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_0
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;
-
-    .line 526
-    iget v3, v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;->start:I
-
-    .line 527
-    iget v4, v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;->end:I
-
-    .line 529
-    new-instance v5, Lcom/tencent/mm/pluginsdk/ui/d/k$a;
-
-    invoke-direct {v5, p0, v3, v4}, Lcom/tencent/mm/pluginsdk/ui/d/k$a;-><init>(Lcom/tencent/mm/pluginsdk/ui/d/k;II)V
-
-    .line 530
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQm:Ljava/util/ArrayList;
-
-    invoke-static {v3, v5}, Lcom/tencent/mm/pluginsdk/ui/d/k;->a(Ljava/util/ArrayList;Lcom/tencent/mm/pluginsdk/ui/d/k$a;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    .line 531
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQl:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 532
-    invoke-virtual {v1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    .line 535
-    :cond_1
-    return-object v1
-.end method
-
-.method private t(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
-    .locals 10
-
-    .prologue
-    const/4 v9, 0x0
-
-    const/16 v8, 0x1e
-
-    .line 539
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 540
-    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 542
-    sget-object v2, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->iPH:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v2, v1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v2
-
-    .line 543
-    :cond_0
-    :goto_0
-    invoke-virtual {v2}, Ljava/util/regex/Matcher;->find()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    .line 544
-    invoke-virtual {v2}, Ljava/util/regex/Matcher;->start()I
-
-    move-result v3
-
-    .line 545
-    invoke-virtual {v2}, Ljava/util/regex/Matcher;->end()I
-
-    move-result v4
-
-    .line 546
-    new-instance v5, Lcom/tencent/mm/pluginsdk/ui/d/k$a;
-
-    invoke-direct {v5, p0, v3, v4}, Lcom/tencent/mm/pluginsdk/ui/d/k$a;-><init>(Lcom/tencent/mm/pluginsdk/ui/d/k;II)V
-
-    .line 547
-    iget-object v6, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQm:Ljava/util/ArrayList;
-
-    invoke-static {v6, v5}, Lcom/tencent/mm/pluginsdk/ui/d/k;->a(Ljava/util/ArrayList;Lcom/tencent/mm/pluginsdk/ui/d/k$a;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_0
-
-    if-ltz v3, :cond_0
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v6
-
-    if-gt v4, v6, :cond_0
-
-    .line 548
-    new-instance v6, Lcom/tencent/mm/pluginsdk/ui/applet/g;
-
-    invoke-virtual {v1, v3, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-direct {v6, v7, v8, v9}, Lcom/tencent/mm/pluginsdk/ui/applet/g;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
-
-    .line 549
-    iput v3, v6, Lcom/tencent/mm/pluginsdk/ui/applet/g;->start:I
-
-    .line 550
-    iput v4, v6, Lcom/tencent/mm/pluginsdk/ui/applet/g;->end:I
-
-    .line 551
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQl:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 552
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    .line 555
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    if-gtz v2, :cond_3
-
-    .line 556
-    sget-object v2, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->iPG:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v2, v1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v2
-
-    .line 557
-    :cond_2
-    :goto_1
-    invoke-virtual {v2}, Ljava/util/regex/Matcher;->find()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    .line 558
-    invoke-virtual {v2}, Ljava/util/regex/Matcher;->start()I
-
-    move-result v3
-
-    .line 559
-    invoke-virtual {v2}, Ljava/util/regex/Matcher;->end()I
-
-    move-result v4
-
-    .line 560
-    new-instance v5, Lcom/tencent/mm/pluginsdk/ui/d/k$a;
-
-    invoke-direct {v5, p0, v3, v4}, Lcom/tencent/mm/pluginsdk/ui/d/k$a;-><init>(Lcom/tencent/mm/pluginsdk/ui/d/k;II)V
-
-    .line 561
-    iget-object v6, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQm:Ljava/util/ArrayList;
-
-    invoke-static {v6, v5}, Lcom/tencent/mm/pluginsdk/ui/d/k;->a(Ljava/util/ArrayList;Lcom/tencent/mm/pluginsdk/ui/d/k$a;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_2
-
-    if-ltz v3, :cond_2
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v6
-
-    if-gt v4, v6, :cond_2
-
-    .line 562
-    new-instance v6, Lcom/tencent/mm/pluginsdk/ui/applet/g;
-
-    invoke-virtual {v1, v3, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-direct {v6, v7, v8, v9}, Lcom/tencent/mm/pluginsdk/ui/applet/g;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
-
-    .line 563
-    iput v3, v6, Lcom/tencent/mm/pluginsdk/ui/applet/g;->start:I
-
-    .line 564
-    iput v4, v6, Lcom/tencent/mm/pluginsdk/ui/applet/g;->end:I
-
-    .line 565
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQl:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 566
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    .line 571
-    :cond_3
     return-object v0
 .end method
 
@@ -1624,7 +1784,7 @@
 
     .line 177
     :cond_0
-    iput p2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQy:I
+    iput p2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnG:I
 
     .line 178
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1641,7 +1801,7 @@
 
     move-result-object v0
 
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQy:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnG:I
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1653,7 +1813,7 @@
 
     move-result-object v0
 
-    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQo:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnw:Z
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1665,7 +1825,7 @@
 
     move-result-object v0
 
-    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQp:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnx:Z
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1677,7 +1837,7 @@
 
     move-result-object v0
 
-    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQq:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jny:Z
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1689,7 +1849,7 @@
 
     move-result-object v0
 
-    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQr:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnz:Z
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1701,7 +1861,7 @@
 
     move-result-object v0
 
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQx:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnF:I
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1713,7 +1873,7 @@
 
     move-result-object v0
 
-    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQz:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnH:Z
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1725,7 +1885,7 @@
 
     move-result-object v0
 
-    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQu:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnC:Z
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1737,7 +1897,7 @@
 
     move-result-object v0
 
-    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQv:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnD:Z
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1749,7 +1909,7 @@
 
     move-result-object v0
 
-    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQw:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnE:Z
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1763,7 +1923,7 @@
     if-eqz p3, :cond_1
 
     .line 181
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQk:Lcom/tencent/mm/a/f;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jns:Lcom/tencent/mm/a/f;
 
     invoke-virtual {v0, v4}, Lcom/tencent/mm/a/f;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1775,13 +1935,13 @@
     if-eqz v0, :cond_1
 
     .line 183
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/d/k;->a(Landroid/text/Spannable;)V
+    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/d/k;->b(Landroid/text/Spannable;)V
 
     .line 184
-    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/d/k;->b(Landroid/text/Spannable;)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/d/k;->c(Landroid/text/Spannable;)V
 
     .line 185
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/d/k;->aSK()V
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/d/k;->aXD()V
 
     goto/16 :goto_0
 
@@ -1791,17 +1951,17 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQl:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnt:Ljava/util/ArrayList;
 
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQy:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnG:I
 
     if-gtz v0, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->qU:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->ri:Landroid/widget/TextView;
 
     if-eqz v0, :cond_11
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->qU:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->ri:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getTextSize()F
 
@@ -1809,11 +1969,11 @@
 
     float-to-int v0, v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQy:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnG:I
 
     :cond_2
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQl:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnt:Ljava/util/ArrayList;
 
     if-nez v0, :cond_3
 
@@ -1821,10 +1981,10 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQl:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnt:Ljava/util/ArrayList;
 
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQm:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnu:Ljava/util/ArrayList;
 
     if-nez v0, :cond_4
 
@@ -1832,22 +1992,22 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQm:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnu:Ljava/util/ArrayList;
 
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQl:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnt:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQm:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnu:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     if-eqz p1, :cond_13
 
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->brO:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->bfP:I
 
     if-ne v0, v1, :cond_12
 
@@ -1856,17 +2016,17 @@
     :goto_2
     if-eqz v0, :cond_6
 
-    invoke-static {}, Lcom/tencent/mm/ay/g;->aWe()Lcom/tencent/mm/ay/g;
+    invoke-static {}, Lcom/tencent/mm/bb/g;->bbq()Lcom/tencent/mm/bb/g;
 
-    invoke-static {p1}, Lcom/tencent/mm/ay/g;->w(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lcom/tencent/mm/bb/g;->F(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_5
 
-    invoke-static {}, Lcom/tencent/mm/ay/g;->aWe()Lcom/tencent/mm/ay/g;
+    invoke-static {}, Lcom/tencent/mm/bb/g;->bbq()Lcom/tencent/mm/bb/g;
 
-    invoke-static {p1}, Lcom/tencent/mm/ay/g;->x(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lcom/tencent/mm/bb/g;->G(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -1886,117 +2046,117 @@
     move-result-object p1
 
     :cond_6
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQo:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnw:Z
 
     if-eqz v0, :cond_7
 
-    invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/d/k;->n(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/d/k;->w(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
     :cond_7
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQu:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnC:Z
 
     if-eqz v0, :cond_8
 
-    invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/d/k;->l(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/d/k;->u(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
     :cond_8
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQw:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnE:Z
 
     if-eqz v0, :cond_9
 
-    invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/d/k;->m(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/d/k;->v(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
     :cond_9
-    invoke-static {}, Lcom/tencent/mm/ay/g;->aWe()Lcom/tencent/mm/ay/g;
+    invoke-static {}, Lcom/tencent/mm/bb/g;->bbq()Lcom/tencent/mm/bb/g;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->mContext:Landroid/content/Context;
 
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQy:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnG:I
 
-    invoke-virtual {v0, v1, p1, v2}, Lcom/tencent/mm/ay/g;->f(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
+    invoke-virtual {v0, v1, p1, v2}, Lcom/tencent/mm/bb/g;->e(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
 
     move-result-object v0
 
-    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQq:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jny:Z
 
     if-eqz v1, :cond_a
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQm:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnu:Ljava/util/ArrayList;
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/d/k;->o(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
+    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/d/k;->x(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     :cond_a
-    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQo:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnw:Z
 
     if-eqz v1, :cond_b
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQm:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnu:Ljava/util/ArrayList;
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/d/k;->p(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
+    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/d/k;->y(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     :cond_b
-    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQt:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnB:Z
 
     if-eqz v1, :cond_c
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQm:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnu:Ljava/util/ArrayList;
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/d/k;->t(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
+    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/d/k;->C(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     :cond_c
-    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQr:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnz:Z
 
     if-eqz v1, :cond_d
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQm:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnu:Ljava/util/ArrayList;
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/d/k;->q(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
+    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/d/k;->z(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     :cond_d
-    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQp:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnx:Z
 
     if-eqz v1, :cond_e
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQm:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnu:Ljava/util/ArrayList;
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/d/k;->r(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
+    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/d/k;->A(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     :cond_e
-    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQs:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnA:Z
 
     if-eqz v1, :cond_f
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQm:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnu:Ljava/util/ArrayList;
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/d/k;->s(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
+    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/d/k;->B(Ljava/lang/CharSequence;)Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -2013,12 +2173,12 @@
 
     .line 192
     :goto_3
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQz:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnH:Z
 
     if-eqz v0, :cond_15
 
     .line 193
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQl:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnt:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -2058,7 +2218,7 @@
     .line 195
     new-instance v5, Lcom/tencent/mm/pluginsdk/ui/d/i;
 
-    iget v6, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQx:I
+    iget v6, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnF:I
 
     invoke-direct {v5, v6, v0}, Lcom/tencent/mm/pluginsdk/ui/d/i;-><init>(ILcom/tencent/mm/pluginsdk/ui/applet/g;)V
 
@@ -2076,13 +2236,13 @@
     :cond_11
     iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f0501c4
+    const v2, 0x7f0b0153
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/aw/a;->z(Landroid/content/Context;I)I
+    invoke-static {v0, v2}, Lcom/tencent/mm/az/a;->D(Landroid/content/Context;I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQy:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnG:I
 
     goto/16 :goto_1
 
@@ -2097,7 +2257,7 @@
 
     const-string/jumbo v2, ""
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2135,7 +2295,7 @@
 
     .line 201
     :cond_15
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQn:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnv:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -2199,7 +2359,7 @@
 
     iget v7, v0, Lcom/tencent/mm/pluginsdk/ui/applet/h;->width:I
 
-    invoke-static {v2, v7}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {v2, v7}, Lcom/tencent/mm/az/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v2
 
@@ -2208,7 +2368,7 @@
 
     iget v8, v0, Lcom/tencent/mm/pluginsdk/ui/applet/h;->height:I
 
-    invoke-static {v7, v8}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {v7, v8}, Lcom/tencent/mm/az/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v7
 
@@ -2226,11 +2386,11 @@
 
     const/4 v7, 0x2
 
-    invoke-static {v6, v7}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {v6, v7}, Lcom/tencent/mm/az/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v6
 
-    iput v6, v2, Lcom/tencent/mm/ui/widget/d;->lEY:I
+    iput v6, v2, Lcom/tencent/mm/ui/widget/d;->mfN:I
 
     .line 219
     iget v6, v0, Lcom/tencent/mm/pluginsdk/ui/applet/h;->start:I
@@ -2247,12 +2407,12 @@
 
     .line 210
     :cond_17
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->qU:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->ri:Landroid/widget/TextView;
 
     if-nez v2, :cond_18
 
     .line 211
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQy:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jnG:I
 
     int-to-float v2, v2
 
@@ -2268,7 +2428,7 @@
 
     .line 213
     :cond_18
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->qU:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->ri:Landroid/widget/TextView;
 
     invoke-virtual {v2}, Landroid/widget/TextView;->getTextSize()F
 
@@ -2282,22 +2442,22 @@
 
     .line 223
     :cond_19
-    invoke-direct {p0, v1}, Lcom/tencent/mm/pluginsdk/ui/d/k;->b(Landroid/text/Spannable;)V
+    invoke-direct {p0, v1}, Lcom/tencent/mm/pluginsdk/ui/d/k;->c(Landroid/text/Spannable;)V
 
     .line 224
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/d/k;->aSK()V
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/d/k;->aXD()V
 
     .line 226
     if-eqz p3, :cond_1a
 
     .line 227
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/k;->iQk:Lcom/tencent/mm/a/f;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/k;->jns:Lcom/tencent/mm/a/f;
 
     new-instance v2, Landroid/text/SpannableString;
 
     invoke-direct {v2, v1}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0, v4, v2}, Lcom/tencent/mm/a/f;->d(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v4, v2}, Lcom/tencent/mm/a/f;->g(Ljava/lang/Object;Ljava/lang/Object;)V
 
     :cond_1a
     move-object v0, v1
@@ -2306,15 +2466,15 @@
     goto/16 :goto_0
 .end method
 
-.method public final d(Landroid/widget/TextView;)Lcom/tencent/mm/pluginsdk/ui/d/k;
+.method public final e(Landroid/widget/TextView;)Lcom/tencent/mm/pluginsdk/ui/d/k;
     .locals 1
 
     .prologue
     .line 83
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->qU:Landroid/widget/TextView;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->ri:Landroid/widget/TextView;
 
     .line 84
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->qU:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/k;->ri:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 

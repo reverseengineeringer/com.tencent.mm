@@ -11,8 +11,8 @@ final class AppUpdaterUI$6
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((AppUpdaterUI.b(jTb) != null) && (!AppUpdaterUI.b(jTb).isShowing())) {
-      AppUpdaterUI.b(jTb).show();
+    if ((AppUpdaterUI.b(ksv) != null) && (!AppUpdaterUI.b(ksv).isShowing())) {
+      AppUpdaterUI.b(ksv).show();
     }
   }
 }

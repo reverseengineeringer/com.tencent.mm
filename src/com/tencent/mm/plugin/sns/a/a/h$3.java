@@ -1,6 +1,6 @@
 package com.tencent.mm.plugin.sns.a.a;
 
-import com.tencent.mm.protocal.b.aqh;
+import com.tencent.mm.protocal.b.aqs;
 import java.util.LinkedList;
 
 final class h$3
@@ -10,12 +10,12 @@ final class h$3
   
   public final void run()
   {
-    if ((System.currentTimeMillis() - h.b(gHh) >= 60000L) || (agHh).iWW.size() > 1000))
+    if ((System.currentTimeMillis() - h.b(gNI) >= 60000L) || (agNI).juA.size() > 1000))
     {
-      if ((h.a(gHh) != null) && (agHh).iWW.size() > 0)) {
-        h.d(gHh);
+      if ((h.a(gNI) != null) && (agNI).juA.size() > 0)) {
+        h.d(gNI);
       }
-      h.a(gHh, 0L);
+      h.a(gNI, 0L);
     }
   }
 }

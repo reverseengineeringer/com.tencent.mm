@@ -1,118 +1,16 @@
 package ct;
 
-import java.io.Serializable;
-import java.util.Map;
+import java.net.Socket;
 
 public final class at
-  implements Serializable
 {
-  private long a;
-  private String b;
-  private Map c;
-  private String d;
-  private String e;
-  private boolean f = true;
-  
-  public static long b()
-  {
-    return 0L;
-  }
-  
-  public static long c()
-  {
-    return 0L;
-  }
-  
-  public final void a(long paramLong)
-  {
-    a = paramLong;
-  }
-  
-  public final void a(String paramString)
-  {
-    e = paramString;
-  }
-  
-  public final void a(Map paramMap)
-  {
-    try
-    {
-      c = paramMap;
-      return;
-    }
-    finally
-    {
-      paramMap = finally;
-      throw paramMap;
-    }
-  }
-  
-  public final boolean a()
-  {
-    return f;
-  }
-  
-  public final void b(String paramString)
-  {
-    d = paramString;
-  }
-  
-  public final void c(String paramString)
-  {
-    try
-    {
-      b = paramString;
-      return;
-    }
-    finally
-    {
-      paramString = finally;
-      throw paramString;
-    }
-  }
-  
-  public final String d()
-  {
-    return e;
-  }
-  
-  public final String e()
-  {
-    return d;
-  }
-  
-  public final long f()
-  {
-    return a;
-  }
-  
-  public final String g()
-  {
-    try
-    {
-      String str = b;
-      return str;
-    }
-    finally
-    {
-      localObject = finally;
-      throw ((Throwable)localObject);
-    }
-  }
-  
-  public final Map h()
-  {
-    try
-    {
-      Map localMap = c;
-      return localMap;
-    }
-    finally
-    {
-      localObject = finally;
-      throw ((Throwable)localObject);
-    }
-  }
+  int a;
+  String b = "";
+  Socket c = null;
+  String d;
+  int e = -1;
+  int f = -1;
+  s g;
 }
 
 /* Location:

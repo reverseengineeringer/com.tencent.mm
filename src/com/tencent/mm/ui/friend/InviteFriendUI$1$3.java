@@ -13,7 +13,7 @@ final class InviteFriendUI$1$3
   
   public final void a(l paraml)
   {
-    Iterator localIterator = lrN.keySet().iterator();
+    Iterator localIterator = lSr.keySet().iterator();
     while (localIterator.hasNext()) {
       paraml.add((String)localIterator.next());
     }

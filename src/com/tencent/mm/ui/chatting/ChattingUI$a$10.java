@@ -1,34 +1,18 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.r.j;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.t.aj;
-import com.tencent.mm.t.d;
-import com.tencent.mm.t.e;
-import com.tencent.mm.t.f;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.tencent.mm.ui.base.h;
 
 final class ChattingUI$a$10
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  ChattingUI$a$10(ChattingUI.a parama, j paramj) {}
+  ChattingUI$a$10(ChattingUI.a parama) {}
   
-  public final void run()
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    long l = System.currentTimeMillis();
-    boolean bool = f.b(aoT, laF.getTalkerUserName());
-    u.d("!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/", "willen test handleGetBizChatInfoSceneEnd use time:%s", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
-    if (bool)
-    {
-      d locald = aj.xH().Q(laF.bfJ());
-      laF.cYG = locald;
-      ab.j(new Runnable()
-      {
-        public final void run()
-        {
-          laF.bfB();
-        }
-      });
+    if (ChattingUI.a.av(lAY) != null) {
+      ChattingUI.a.av(lAY).dismiss();
     }
   }
 }

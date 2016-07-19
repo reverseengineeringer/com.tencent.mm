@@ -1,398 +1,322 @@
 package com.tencent.mm.t;
 
-import android.content.Context;
-import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.Bitmap.CompressFormat;
-import android.graphics.BitmapFactory;
-import android.graphics.BitmapFactory.Options;
-import com.tencent.mm.a.g;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.model.c;
-import com.tencent.mm.model.z.a;
-import com.tencent.mm.model.z.e;
-import com.tencent.mm.network.b;
-import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.sdk.platformtools.am;
-import com.tencent.mm.sdk.platformtools.am.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.d;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.lang.ref.WeakReference;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import android.os.Looper;
+import com.tencent.mm.ax.b;
+import com.tencent.mm.platformtools.q;
+import com.tencent.mm.pointers.PByteArray;
+import com.tencent.mm.pointers.PInt;
+import com.tencent.mm.protocal.MMProtocalJni;
+import com.tencent.mm.protocal.b.aft;
+import com.tencent.mm.protocal.b.ake;
+import com.tencent.mm.protocal.b.amb;
+import com.tencent.mm.protocal.b.ami;
+import com.tencent.mm.protocal.b.ank;
+import com.tencent.mm.protocal.b.avd;
+import com.tencent.mm.protocal.b.bz;
+import com.tencent.mm.protocal.b.rs;
+import com.tencent.mm.protocal.h.a;
+import com.tencent.mm.protocal.i.g;
+import com.tencent.mm.protocal.k.b;
+import com.tencent.mm.protocal.k.d;
+import com.tencent.mm.protocal.r.b;
+import com.tencent.mm.protocal.y.b;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class s
+  extends h.a
 {
-  private static String R(String paramString1, String paramString2)
+  private static a bzM;
+  private k.d bzK;
+  private byte[] bzL;
+  private int type;
+  
+  public s(k.d paramd, int paramInt)
   {
-    if ((paramString1 == null) || (!ah.rh())) {
-      paramString2 = null;
-    }
-    do
-    {
-      return paramString2;
-      paramString1 = aj.xF().gK(paramString1);
-    } while (field_brandIconURL == null);
-    return field_brandIconURL;
+    bzK = paramd;
+    type = paramInt;
   }
   
-  public static Bitmap b(String paramString1, String paramString2, int paramInt)
+  public static void a(a parama)
   {
-    Object localObject;
-    if (!ah.tD().isSDCardAvailable()) {
-      localObject = cZ(paramInt);
-    }
-    String str;
-    label149:
-    do
+    bzM = parama;
+  }
+  
+  public static byte[] a(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2, PInt paramPInt, amb paramamb)
+  {
+    PByteArray localPByteArray1 = new PByteArray();
+    value = -1;
+    PByteArray localPByteArray2 = new PByteArray();
+    PInt localPInt = new PInt(0);
+    try
     {
-      return (Bitmap)localObject;
-      if ((paramString1 == null) || (!ah.rh())) {
-        return null;
-      }
-      str = paramString2;
-      if (paramString2 == null)
+      if (MMProtocalJni.unpack(localPByteArray2, paramArrayOfByte1, paramArrayOfByte2, localPByteArray1, paramPInt, localPInt))
       {
-        paramString2 = R(paramString1, null);
-        str = paramString2;
-        if (paramString2 == null) {
+        if ((value == -13) || (value == -102) || (value == 62535))
+        {
+          v.e("MicroMsg.RemoteResp", "unpack failed. error:%d", new Object[] { Integer.valueOf(value) });
           return null;
         }
-      }
-      paramString2 = aj.xL();
-      if (!bJl.containsKey(paramString1)) {
-        break label242;
-      }
-      localObject = (Bitmap)((WeakReference)bJl.get(paramString1)).get();
-      if ((localObject != null) && (!((Bitmap)localObject).isRecycled())) {
-        break label213;
-      }
-      localObject = R(paramString1, str);
-      localObject = d.CE(a.hg(paramString1 + (String)localObject));
-      if (localObject != null) {
-        break;
-      }
-      u.i("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "not found brand icon local");
-      paramString2 = null;
-      localObject = paramString2;
-    } while (paramString2 != null);
-    paramString2 = aj.xL();
-    if ((ay.kz(paramString1)) || (ay.kz(str))) {
-      u.e("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "pushing for brand " + paramString1 + ", url " + str);
-    }
-    for (;;)
-    {
-      return null;
-      paramString2.d(paramString1, (Bitmap)localObject);
-      for (;;)
-      {
-        label213:
-        paramString2 = (WeakReference)bJl.get(paramString1);
-        if (paramString2 == null) {
-          break;
-        }
-        paramString2 = (Bitmap)paramString2.get();
-        break label149;
-        label242:
-        localObject = R(paramString1, str);
-        localObject = d.CE(a.hg(paramString1 + (String)localObject));
-        if (localObject == null)
+        int i = value;
+        if (i == 62534)
         {
-          u.i("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "not found brand icon local");
-          break;
-        }
-        paramString2.d(paramString1, (Bitmap)localObject);
-      }
-      if (ay.am(ay.d((Integer)bJk.get(paramString1))) < 300L)
-      {
-        u.i("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "downloading interval less than 5 mins for " + paramString1);
-      }
-      else
-      {
-        bJk.put(paramString1, Integer.valueOf((int)ay.FR()));
-        if ((bJm == null) || (bJm.aVi())) {
-          bJm = new am(1, "brand-logic");
-        }
-        str = R(paramString1, str);
-        bJm.c(new b(paramString1, str));
-      }
-    }
-  }
-  
-  private static Bitmap cZ(int paramInt)
-  {
-    Object localObject = null;
-    if (paramInt <= 0) {}
-    Bitmap localBitmap;
-    do
-    {
-      return (Bitmap)localObject;
-      localObject = new BitmapFactory.Options();
-      d.a((BitmapFactory.Options)localObject);
-      localBitmap = BitmapFactory.decodeStream(y.getContext().getResources().openRawResource(paramInt), null, (BitmapFactory.Options)localObject);
-      localObject = localBitmap;
-    } while (localBitmap == null);
-    return d.a(localBitmap, false, localBitmap.getWidth() >> 1);
-  }
-  
-  public static Bitmap he(String paramString)
-  {
-    boolean bool = false;
-    if ((ay.kz(paramString)) || (!ah.tD().isSDCardAvailable()) || (!ah.rh())) {
-      return null;
-    }
-    a locala = aj.xL();
-    String str = String.format("%s%f", new Object[] { paramString, Float.valueOf(1.5F) });
-    Bitmap localBitmap1;
-    if (bJl.containsKey(str))
-    {
-      Bitmap localBitmap2 = (Bitmap)((WeakReference)bJl.get(str)).get();
-      if (localBitmap2 != null)
-      {
-        localBitmap1 = localBitmap2;
-        if (!localBitmap2.isRecycled()) {}
-      }
-      else
-      {
-        localBitmap1 = BackwardSupportUtil.b.b(paramString, 1.5F);
-        bJl.remove(str);
-        bJl.put(str, new WeakReference(localBitmap1));
-      }
-    }
-    for (;;)
-    {
-      if (localBitmap1 == null) {
-        bool = true;
-      }
-      u.i("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "get verify user icon = %s, is null ? %s", new Object[] { paramString, String.valueOf(bool) });
-      return localBitmap1;
-      localBitmap1 = BackwardSupportUtil.b.b(paramString, 1.5F);
-      bJl.put(str, new WeakReference(localBitmap1));
-    }
-  }
-  
-  public static Bitmap hf(String paramString)
-  {
-    Object localObject2 = null;
-    Object localObject1;
-    if (!ah.tD().isSDCardAvailable()) {
-      localObject1 = cZ(0);
-    }
-    do
-    {
-      do
-      {
-        do
-        {
-          do
+          try
           {
-            return (Bitmap)localObject1;
-            localObject1 = localObject2;
-          } while (paramString == null);
-          localObject1 = localObject2;
-        } while (!ah.rh());
-        localObject1 = aj.xL();
-        if (!bJl.containsKey(paramString)) {
-          break;
-        }
-        paramString = (Bitmap)((WeakReference)bJl.get(paramString)).get();
-        localObject1 = localObject2;
-      } while (paramString == null);
-      localObject1 = localObject2;
-    } while (paramString.isRecycled());
-    for (;;)
-    {
-      return paramString;
-      paramString = null;
-    }
-  }
-  
-  public static final class a
-  {
-    List bJj = new ArrayList();
-    Map bJk = new HashMap();
-    Map bJl = new HashMap();
-    am bJm = null;
-    
-    public static String hg(String paramString)
-    {
-      if (ah.rh()) {
-        return ah.tD().rM() + "/brand_" + g.m(paramString.getBytes());
-      }
-      return "";
-    }
-    
-    public final void a(a parama)
-    {
-      bJj.add(parama);
-    }
-    
-    public final void b(a parama)
-    {
-      bJj.remove(parama);
-    }
-    
-    final void d(String paramString, Bitmap paramBitmap)
-    {
-      Bitmap localBitmap1;
-      if (bJl.containsKey(paramString)) {
-        localBitmap1 = (Bitmap)((WeakReference)bJl.get(paramString)).get();
-      }
-      for (;;)
-      {
-        Bitmap localBitmap3;
-        if (localBitmap1 != null)
-        {
-          localBitmap3 = localBitmap1;
-          if (!localBitmap1.isRecycled()) {
-            break label105;
-          }
-        }
-        try
-        {
-          localBitmap1 = Bitmap.createScaledBitmap(paramBitmap, 128, 128, true);
-          localBitmap1 = d.a(localBitmap1, true, localBitmap1.getWidth() >> 1);
-          bJl.remove(paramString);
-          bJl.put(paramString, new WeakReference(localBitmap1));
-          localBitmap3 = localBitmap1;
-          label105:
-          if (localBitmap3 == paramBitmap)
-          {
-            return;
-            localBitmap1 = null;
-          }
-        }
-        catch (OutOfMemoryError localOutOfMemoryError)
-        {
-          for (;;)
-          {
-            Bitmap localBitmap2 = paramBitmap;
-          }
-          u.i("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "recycle bitmap:%s", new Object[] { paramBitmap.toString() });
-          paramBitmap.recycle();
-        }
-      }
-    }
-    
-    public final void xt()
-    {
-      bJj.clear();
-    }
-    
-    public static abstract interface a
-    {
-      public abstract void hh(String paramString);
-    }
-  }
-  
-  private static final class b
-    implements am.a
-  {
-    public byte[] bDS = null;
-    private final String bJn;
-    private final String url;
-    
-    public b(String paramString1, String paramString2)
-    {
-      bJn = paramString1;
-      url = paramString2;
-    }
-    
-    public final boolean vd()
-    {
-      if ((ay.kz(bJn)) || (ay.kz(url))) {}
-      Object localObject1;
-      Object localObject2;
-      for (;;)
-      {
-        return false;
-        try
-        {
-          ByteArrayOutputStream localByteArrayOutputStream = new ByteArrayOutputStream();
-          localObject1 = b.j(url, 3000, 5000);
-          if (localObject1 != null)
-          {
-            localObject2 = new byte['Ѐ'];
-            for (;;)
+            paramArrayOfByte1 = new String(value);
+            v.i("MicroMsg.RemoteResp", "bufToRespNoRSA -3002 ERR_IDCDISASTER, errStr:%s", new Object[] { paramArrayOfByte1 });
+            new com.tencent.mm.sdk.platformtools.ac(Looper.getMainLooper()).post(new Runnable()
             {
-              int i = ((InputStream)localObject1).read((byte[])localObject2);
-              if (i == -1) {
-                break;
+              public final void run()
+              {
+                if ((!be.kf(bzN)) && (s.wr() != null)) {
+                  s.wr().bb(bzN);
+                }
               }
-              localByteArrayOutputStream.write((byte[])localObject2, 0, i);
-            }
-            ((InputStream)localObject1).close();
+            });
+            return null;
+          }
+          catch (Exception paramArrayOfByte1)
+          {
+            v.e("MicroMsg.RemoteResp", "parse string err while MM_ERR_IDCDISASTER");
           }
         }
-        catch (Exception localException1)
+        else
         {
-          u.e("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "exception:%s", new Object[] { ay.b(localException1) });
-          u.e("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "get url:" + url + " failed.");
-          bDS = null;
-          return false;
+          v.i("MicroMsg.RemoteResp", "fuckwifi bufToRespNoRSA using protobuf ok jtype:%d enType:%d ", new Object[] { Integer.valueOf(110), Integer.valueOf(value) });
+          paramamb.au(value);
+          return value;
         }
       }
-      bDS = localException1.toByteArray();
-      localException1.close();
-      if (ay.J(bDS))
+      else
       {
-        u.e("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "imgBuff null brand:" + bJn);
-        return false;
-      }
-      s.a locala;
-      String str;
-      if (ah.rh())
-      {
-        z.a.bAt.K(bDS.length, 0);
-        locala = aj.xL();
-        localObject1 = bJn;
-        str = url;
-        localObject2 = bDS;
-      }
-      try
-      {
-        str = (String)localObject1 + str;
-        localObject2 = d.aQ((byte[])localObject2);
-        d.a((Bitmap)localObject2, 100, Bitmap.CompressFormat.PNG, s.a.hg(str), false);
-        locala.d((String)localObject1, (Bitmap)localObject2);
-        u.i("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "update brand icon for  " + (String)localObject1 + ", done");
-        bJk.remove(localObject1);
-        return true;
-      }
-      catch (Exception localException2)
-      {
-        for (;;)
-        {
-          u.e("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "exception:%s", new Object[] { ay.b(localException2) });
-        }
+        v.e("MicroMsg.RemoteResp", "unpack failed.");
       }
     }
-    
-    public final boolean ve()
+    catch (Exception paramArrayOfByte1)
     {
-      s.a locala = aj.xL();
-      String str = bJn;
-      int i = 0;
+      v.printErrStackTrace("MicroMsg.RemoteResp", paramArrayOfByte1, "parseFrom unbuild exception, check now!", new Object[0]);
+      v.e("MicroMsg.RemoteResp", "exception:%s", new Object[] { be.f(paramArrayOfByte1) });
+    }
+    return null;
+  }
+  
+  public final boolean a(int paramInt, byte[] paramArrayOfByte1, byte[] paramArrayOfByte2)
+  {
+    PByteArray localPByteArray1 = new PByteArray();
+    if (!(bzK instanceof k.b))
+    {
+      v.f("MicroMsg.RemoteResp", "all protocal should implemented with protobuf");
+      return false;
+    }
+    PByteArray localPByteArray2 = new PByteArray();
+    PInt localPInt1 = new PInt(0);
+    k.b localb = (k.b)bzK;
+    PInt localPInt2 = new PInt(0);
+    for (;;)
+    {
       try
       {
-        while (i < bJj.size())
+        if (localb.aAi())
         {
-          ((s.a.a)bJj.get(i)).hh(str);
-          i += 1;
+          paramInt = localb.D(paramArrayOfByte1);
+          v.d("MicroMsg.RemoteResp", "rawData using protobuf ok");
+          bzK.jsi = paramInt;
+          if (be.kf(q.cit)) {
+            break;
+          }
+          bzK.jsj = q.cit;
+          break;
         }
+        if (!MMProtocalJni.unpack(localPByteArray2, paramArrayOfByte1, paramArrayOfByte2, localPByteArray1, localPInt1, localPInt2)) {
+          break label457;
+        }
+        if ((paramInt != 701) && (paramInt != 702) && (10001 == q.ciq) && (q.cir > 0))
+        {
+          if (q.cir == 2) {
+            com.tencent.mm.protocal.ac.t("", "", 0);
+          }
+          q.cir = 0;
+          value = -13;
+          v.w("MicroMsg.RemoteResp", "dkcert dktest set session timeout once !");
+        }
+        if ((value == -13) || (value == -102) || (value == 62535) || (value == 62534) || (value == 62533))
+        {
+          bzK.jsi = value;
+          paramInt = value;
+          if (paramInt == 62534) {}
+          try
+          {
+            bzK.jsj = new String(value);
+            bzK.jsh = paramArrayOfByte1.length;
+            bzL = value;
+            if (be.kf(q.cit)) {
+              break label469;
+            }
+            bzK.jsj = q.cit;
+          }
+          catch (Exception paramArrayOfByte2)
+          {
+            v.e("MicroMsg.RemoteResp", "parse string err while MM_ERR_IDCDISASTER");
+            continue;
+          }
+        }
+        i = localb.D(value);
+      }
+      catch (Exception paramArrayOfByte1)
+      {
+        v.printErrStackTrace("MicroMsg.RemoteResp", paramArrayOfByte1, "fromProtobuf unbuild exception, check now!", new Object[0]);
+        v.e("MicroMsg.RemoteResp", "exception:%s", new Object[] { be.f(paramArrayOfByte1) });
         return false;
       }
-      catch (Exception localException)
+      int i;
+      v.i("MicroMsg.RemoteResp", "fuckwifi bufToResp using protobuf ok jType:%d, enType:%d errCode:%d, len:%d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(value), Integer.valueOf(i), Integer.valueOf(value.length) });
+      bzK.jsi = i;
+      continue;
+      label457:
+      v.e("MicroMsg.RemoteResp", "MMProtocalJni.unpack return false");
+    }
+    return true;
+    label469:
+    return true;
+  }
+  
+  public final void dz(int paramInt)
+  {
+    bzK.jsi = paramInt;
+  }
+  
+  public final int getCmdId()
+  {
+    return bzK.getCmdId();
+  }
+  
+  public final void gy(String paramString)
+  {
+    bzK.jsj = paramString;
+  }
+  
+  public final int rf()
+  {
+    switch (type)
+    {
+    default: 
+      return 0;
+    case 701: 
+    case 702: 
+      return bzK).jrV.klV.dAs;
+    }
+    return bzK).jsJ.dAs;
+  }
+  
+  public final byte[] tr()
+  {
+    switch (type)
+    {
+    default: 
+      return new byte[0];
+    case 701: 
+    case 702: 
+      return bzK).cdE;
+    }
+    return bzK).cdE;
+  }
+  
+  public final byte[] vT()
+  {
+    return bzL;
+  }
+  
+  public final byte[] vV()
+  {
+    switch (type)
+    {
+    default: 
+      return new byte[0];
+    case 701: 
+    case 702: 
+      return bzK).jrW;
+    }
+    return bzK).jrW;
+  }
+  
+  public final String wk()
+  {
+    return bzK.jsj;
+  }
+  
+  public final int wl()
+  {
+    return bzK.jsi;
+  }
+  
+  public final byte[] wm()
+  {
+    switch (type)
+    {
+    }
+    for (;;)
+    {
+      return new byte[0];
+      if (bzK).jrV.klV.jwD != null)
       {
-        u.e("!32@/B4Tb64lLpKQQogTCo8oV6VgvXdJVE+T", "exception:%s", new Object[] { ay.b(localException) });
+        return bzK).jrV.klV.jwD.kfS.toByteArray();
+        ank localank = bzK).jsJ.kbb;
+        if ((localank != null) && (jwD != null)) {
+          return jwD.kfS.toByteArray();
+        }
+        v.d("MicroMsg.RemoteResp", "summerauth MMFunc_NewReg SecAuthRegKeySect is null");
       }
     }
+  }
+  
+  public final String wn()
+  {
+    if (type == 381)
+    {
+      ake localake = bzK).jsz.jOm;
+      if (localake != null) {
+        return be.li(kee);
+      }
+    }
+    return "";
+  }
+  
+  public final String wo()
+  {
+    if (type == 381)
+    {
+      ake localake = bzK).jsz.jOm;
+      if (localake != null) {
+        return be.li(ked);
+      }
+    }
+    return "";
+  }
+  
+  public final int wp()
+  {
+    if (type == 381) {
+      return bzK).jsz.jNy;
+    }
+    return 0;
+  }
+  
+  public final String wq()
+  {
+    switch (type)
+    {
+    default: 
+      return "";
+    case 701: 
+    case 702: 
+      return bzK).cdH;
+    }
+    return bzK).jsJ.emC;
+  }
+  
+  public static abstract interface a
+  {
+    public abstract void bb(String paramString);
   }
 }
 

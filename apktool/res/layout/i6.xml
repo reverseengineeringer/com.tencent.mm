@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/a7h" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/hb" android:minHeight="@dimen/hs" android:layout_weight="1.0">
+        <ImageView android:id="@id/a7i" android:layout_height="120.0dip" android:adjustViewBounds="false" style="@style/ConfirmDialogImg" />
+        <TextView android:gravity="center" android:id="@id/a7g" android:layout_marginTop="@dimen/j8" android:layout_marginRight="0.0dip" android:text="source" style="@style/ConfirmDialogSource" />
+        <com.tencent.mm.ui.base.PasterEditText android:id="@id/a7d" style="@style/ConfirmDialogEditText" />
+    </LinearLayout>
+</LinearLayout>

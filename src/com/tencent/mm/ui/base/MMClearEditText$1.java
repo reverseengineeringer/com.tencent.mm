@@ -12,13 +12,13 @@ final class MMClearEditText$1
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    paramView = kDr;
+    paramView = lcw;
     if (paramView.getCompoundDrawables()[2] == null) {}
-    while ((paramMotionEvent.getAction() != 1) || (paramMotionEvent.getX() <= paramView.getWidth() - paramView.getPaddingRight() - kDr.iGP.getIntrinsicWidth())) {
+    while ((paramMotionEvent.getAction() != 1) || (paramMotionEvent.getX() <= paramView.getWidth() - paramView.getPaddingRight() - lcw.jdK.getIntrinsicWidth())) {
       return false;
     }
     paramView.setText("");
-    MMClearEditText.a(kDr);
+    MMClearEditText.a(lcw);
     return false;
   }
 }

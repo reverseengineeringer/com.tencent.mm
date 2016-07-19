@@ -1,29 +1,14 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.plugin.report.service.g;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.ui.i.a;
+import com.tencent.mm.e.a.lu;
+import com.tencent.mm.sdk.c.c;
 
 final class SnsTimeLineUI$6
-  implements i.a
+  extends c<lu>
 {
-  SnsTimeLineUI$6(SnsTimeLineUI paramSnsTimeLineUI) {}
-  
-  public final void Gh()
+  SnsTimeLineUI$6(SnsTimeLineUI paramSnsTimeLineUI)
   {
-    ad.ZP().post(new Runnable()
-    {
-      public final void run()
-      {
-        g.ke(14);
-      }
-    });
-  }
-  
-  public final void Gi()
-  {
-    g.kd(14);
+    kum = lu.class.getName().hashCode();
   }
 }
 

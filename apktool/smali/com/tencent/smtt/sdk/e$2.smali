@@ -1,6 +1,5 @@
 .class final Lcom/tencent/smtt/sdk/e$2;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 # interfaces
 .implements Lcom/tencent/smtt/sdk/u;
@@ -16,9 +15,19 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/tencent/smtt/sdk/u",
+        "<",
+        "Landroid/net/Uri;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic lRK:Lcom/tencent/smtt/sdk/e;
+.field final synthetic mty:Lcom/tencent/smtt/sdk/e;
 
 .field final synthetic val$uploadFile:Landroid/webkit/ValueCallback;
 
@@ -27,9 +36,7 @@
 .method constructor <init>(Lcom/tencent/smtt/sdk/e;Landroid/webkit/ValueCallback;)V
     .locals 0
 
-    .prologue
-    .line 241
-    iput-object p1, p0, Lcom/tencent/smtt/sdk/e$2;->lRK:Lcom/tencent/smtt/sdk/e;
+    iput-object p1, p0, Lcom/tencent/smtt/sdk/e$2;->mty:Lcom/tencent/smtt/sdk/e;
 
     iput-object p2, p0, Lcom/tencent/smtt/sdk/e$2;->val$uploadFile:Landroid/webkit/ValueCallback;
 
@@ -43,8 +50,6 @@
 .method public final bridge synthetic onReceiveValue(Ljava/lang/Object;)V
     .locals 3
 
-    .prologue
-    .line 241
     check-cast p1, Landroid/net/Uri;
 
     iget-object v0, p0, Lcom/tencent/smtt/sdk/e$2;->val$uploadFile:Landroid/webkit/ValueCallback;

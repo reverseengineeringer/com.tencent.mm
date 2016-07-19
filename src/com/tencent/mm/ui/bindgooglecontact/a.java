@@ -14,34 +14,34 @@ import android.widget.TextView;
 import com.tencent.mm.modelfriend.ah;
 import com.tencent.mm.modelfriend.o;
 import com.tencent.mm.modelfriend.p;
-import com.tencent.mm.q.b;
+import com.tencent.mm.s.b;
 import com.tencent.mm.sdk.h.d;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.i;
 
 public final class a
-  extends i
+  extends i<o>
 {
-  private LayoutInflater dfG;
-  private String kMD;
-  a kMX;
+  private LayoutInflater deJ;
+  private String llS;
+  a lmm;
   private Context mContext;
   private String mFilter;
   
   public a(Context paramContext, String paramString)
   {
     super(paramContext, new o());
-    kMD = paramString;
+    llS = paramString;
     mContext = paramContext;
-    dfG = LayoutInflater.from(mContext);
+    deJ = LayoutInflater.from(mContext);
   }
   
-  public final void Gk()
+  public final void GH()
   {
-    p localp = ah.zy();
+    p localp = ah.zL();
     String str1 = mFilter;
-    String str2 = kMD;
+    String str2 = llS;
     StringBuilder localStringBuilder = new StringBuilder();
     if (!TextUtils.isEmpty(str1))
     {
@@ -56,23 +56,23 @@ public final class a
     {
       localStringBuilder.append(" GROUP BY googleid,contecttype");
       localStringBuilder.append(" ORDER BY status , googlenamepy ASC , usernamepy ASC");
-      setCursor(aoX.rawQuery("SELECT GoogleFriend.googleid,GoogleFriend.googlename,GoogleFriend.googlephotourl,GoogleFriend.googlegmail,GoogleFriend.username,GoogleFriend.nickname,GoogleFriend.nicknameqp,GoogleFriend.usernamepy,GoogleFriend.small_url,GoogleFriend.big_url,GoogleFriend.ret,GoogleFriend.status,GoogleFriend.googleitemid,GoogleFriend.googlecgistatus,GoogleFriend.contecttype,GoogleFriend.googlenamepy FROM GoogleFriend  " + localStringBuilder.toString(), null));
+      setCursor(bkP.rawQuery("SELECT GoogleFriend.googleid,GoogleFriend.googlename,GoogleFriend.googlephotourl,GoogleFriend.googlegmail,GoogleFriend.username,GoogleFriend.nickname,GoogleFriend.nicknameqp,GoogleFriend.usernamepy,GoogleFriend.small_url,GoogleFriend.big_url,GoogleFriend.ret,GoogleFriend.status,GoogleFriend.googleitemid,GoogleFriend.googlecgistatus,GoogleFriend.contecttype,GoogleFriend.googlenamepy FROM GoogleFriend  " + localStringBuilder.toString(), null));
       super.notifyDataSetChanged();
       return;
       localStringBuilder.append(" WHERE ( GoogleFriend.googlegmail!='" + str2 + "' )");
     }
   }
   
-  protected final void Gl()
+  protected final void GI()
   {
-    Gk();
+    GH();
   }
   
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
     if ((paramView == null) || (paramView.getTag() == null))
     {
-      paramView = dfG.inflate(2131363104, null);
+      paramView = deJ.inflate(2130903745, null);
       paramViewGroup = new b(paramView);
       paramView.setTag(paramViewGroup);
     }
@@ -87,20 +87,20 @@ public final class a
       paramViewGroup = (b)paramView.getTag();
     }
     position = paramInt;
-    fxW = field_googlegmail;
+    fHa = field_googlegmail;
     switch (field_status)
     {
     default: 
       if (TextUtils.isEmpty(field_googlename))
       {
-        cqM.setText(ay.Dx(field_googlegmail));
+        clZ.setText(be.FM(field_googlegmail));
         switch (field_status)
         {
         default: 
           switch (field_googlecgistatus)
           {
           default: 
-            kMY.setText(field_googlegmail);
+            lmn.setText(field_googlegmail);
             return paramView;
           }
           break;
@@ -119,67 +119,67 @@ public final class a
     {
       if (localBitmap == null)
       {
-        coY.setImageDrawable(com.tencent.mm.aw.a.y(mContext, 2130903473));
+        ckm.setImageDrawable(com.tencent.mm.az.a.C(mContext, 2131165359));
         break;
       }
-      coY.setImageBitmap(localBitmap);
+      ckm.setImageBitmap(localBitmap);
       break;
-      localBitmap = b.fH(field_googleid);
+      localBitmap = b.fU(field_googleid);
       if (localBitmap == null)
       {
-        coY.setImageDrawable(com.tencent.mm.aw.a.y(mContext, 2130903473));
+        ckm.setImageDrawable(com.tencent.mm.az.a.C(mContext, 2131165359));
         break;
       }
-      coY.setImageBitmap(localBitmap);
+      ckm.setImageBitmap(localBitmap);
       break;
-      cqM.setText(field_googlename);
+      clZ.setText(field_googlename);
       break label138;
-      kMZ.setClickable(true);
-      kMZ.setBackgroundResource(2130970320);
-      eEo.setText(2131428695);
-      eEo.setTextColor(mContext.getResources().getColor(2131231100));
+      lmo.setClickable(true);
+      lmo.setBackgroundResource(2130837816);
+      eKo.setText(2131233130);
+      eKo.setTextColor(mContext.getResources().getColor(2131690049));
       break label168;
-      kMZ.setClickable(true);
-      kMZ.setBackgroundResource(2130970260);
-      eEo.setText(2131428696);
-      eEo.setTextColor(mContext.getResources().getColor(2131231110));
+      lmo.setClickable(true);
+      lmo.setBackgroundResource(2130837817);
+      eKo.setText(2131233138);
+      eKo.setTextColor(mContext.getResources().getColor(2131689768));
       break label168;
-      kMZ.setClickable(false);
-      kMZ.setBackgroundDrawable(null);
-      eEo.setText(2131428697);
-      eEo.setTextColor(mContext.getResources().getColor(2131231110));
+      lmo.setClickable(false);
+      lmo.setBackgroundDrawable(null);
+      eKo.setText(2131233132);
+      eKo.setTextColor(mContext.getResources().getColor(2131689768));
       break label168;
-      eEo.setVisibility(4);
-      kNa.setVisibility(0);
+      eKo.setVisibility(4);
+      lmp.setVisibility(0);
       break label200;
-      kMZ.setClickable(false);
-      kMZ.setBackgroundDrawable(null);
-      eEo.setVisibility(0);
-      kNa.setVisibility(8);
-      eEo.setTextColor(mContext.getResources().getColor(2131231110));
+      lmo.setClickable(false);
+      lmo.setBackgroundDrawable(null);
+      eKo.setVisibility(0);
+      lmp.setVisibility(8);
+      eKo.setTextColor(mContext.getResources().getColor(2131689768));
       switch (field_status)
       {
       default: 
         break;
       case 0: 
-        eEo.setText(2131428699);
+        eKo.setText(2131233131);
         break;
       case 1: 
-        eEo.setText(2131428698);
+        eKo.setText(2131233139);
         break;
-        eEo.setVisibility(0);
-        kNa.setVisibility(8);
+        eKo.setVisibility(0);
+        lmp.setVisibility(8);
         switch (field_status)
         {
         default: 
           break;
         case 0: 
-          eEo.setText(2131428695);
-          eEo.setTextColor(mContext.getResources().getColor(2131231100));
+          eKo.setText(2131233130);
+          eKo.setTextColor(mContext.getResources().getColor(2131690049));
           break;
         case 1: 
-          eEo.setText(2131428696);
-          eEo.setTextColor(mContext.getResources().getColor(2131231110));
+          eKo.setText(2131233138);
+          eKo.setTextColor(mContext.getResources().getColor(2131689768));
           break;
         }
         break;
@@ -187,44 +187,44 @@ public final class a
     }
   }
   
-  public final void pH(String paramString)
+  public final void qY(String paramString)
   {
-    mFilter = ay.kx(paramString);
-    adW();
-    Gk();
+    mFilter = be.lh(paramString);
+    closeCursor();
+    GH();
   }
   
   static abstract interface a
   {
-    public abstract void qV(int paramInt);
+    public abstract void sX(int paramInt);
   }
   
   final class b
   {
-    ImageView coY;
-    TextView cqM;
-    TextView eEo;
-    String fxW;
-    TextView kMY;
-    View kMZ;
-    ProgressBar kNa;
+    ImageView ckm;
+    TextView clZ;
+    TextView eKo;
+    String fHa;
+    TextView lmn;
+    View lmo;
+    ProgressBar lmp;
     int position;
     
     public b(View paramView)
     {
-      coY = ((ImageView)paramView.findViewById(2131169202));
-      cqM = ((TextView)paramView.findViewById(2131169203));
-      kMZ = paramView.findViewById(2131169205);
-      eEo = ((TextView)paramView.findViewById(2131169206));
-      kNa = ((ProgressBar)paramView.findViewById(2131169207));
-      kMY = ((TextView)paramView.findViewById(2131169204));
-      kMZ.setOnClickListener(new View.OnClickListener()
+      ckm = ((ImageView)paramView.findViewById(2131757267));
+      clZ = ((TextView)paramView.findViewById(2131757268));
+      lmo = paramView.findViewById(2131757270);
+      eKo = ((TextView)paramView.findViewById(2131757271));
+      lmp = ((ProgressBar)paramView.findViewById(2131757272));
+      lmn = ((TextView)paramView.findViewById(2131757269));
+      lmo.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
-          u.d("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92JmmhadCtsXjQrRrk90isnD", "onClick");
+          v.d("MicroMsg.GoogleContact.GoogleFriendAdapter", "onClick");
           if (a.a(a.this) != null) {
-            a.a(a.this).qV(position);
+            a.a(a.this).sX(position);
           }
         }
       });

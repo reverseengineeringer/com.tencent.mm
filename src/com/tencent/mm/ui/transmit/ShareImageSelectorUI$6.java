@@ -7,20 +7,20 @@ final class ShareImageSelectorUI$6
 {
   ShareImageSelectorUI$6(ShareImageSelectorUI paramShareImageSelectorUI) {}
   
-  public final void eu(int paramInt)
+  public final void fg(int paramInt)
   {
     switch (paramInt)
     {
     default: 
       return;
     case 0: 
-      ShareImageSelectorUI.d(lBC);
+      ShareImageSelectorUI.d(mcu);
       return;
     case 1: 
-      ShareImageSelectorUI.e(lBC);
+      ShareImageSelectorUI.e(mcu);
       return;
     }
-    ShareImageSelectorUI.f(lBC);
+    ShareImageSelectorUI.f(mcu);
   }
 }
 

@@ -1,14 +1,14 @@
 package com.tencent.mm.plugin.ext;
 
-import com.tencent.mm.az.g.b;
-import com.tencent.mm.storage.aj;
+import com.tencent.mm.bc.g.b;
+import com.tencent.mm.storage.al;
 
 final class b$1
   implements g.b
 {
-  public final String[] lr()
+  public final String[] kE()
   {
-    return aj.aoY;
+    return al.bkN;
   }
 }
 

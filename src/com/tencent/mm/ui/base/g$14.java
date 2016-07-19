@@ -14,22 +14,22 @@ final class g$14
   public final void onClick(View paramView)
   {
     int i = 0;
-    while (i < gkw.getChildCount())
+    while (i < guR.getChildCount())
     {
-      TextView localTextView = (TextView)gkw.getChildAt(i);
-      if (localTextView.getId() != 2131165574) {
-        localTextView.setCompoundDrawablesWithIntrinsicBounds(2130903588, 0, 0, 0);
+      TextView localTextView = (TextView)guR.getChildAt(i);
+      if (localTextView.getId() != 2131756840) {
+        localTextView.setCompoundDrawablesWithIntrinsicBounds(2131165794, 0, 0, 0);
       }
       i += 1;
     }
-    ((TextView)paramView).setCompoundDrawablesWithIntrinsicBounds(2130903478, 0, 0, 0);
+    ((TextView)paramView).setCompoundDrawablesWithIntrinsicBounds(2131165791, 0, 0, 0);
     paramView.post(new Runnable()
     {
       public final void run()
       {
-        ((Dialog)gkw.getTag()).dismiss();
-        if (kCD != null) {
-          kCD.kt(kCE);
+        ((Dialog)guR.getTag()).dismiss();
+        if (lbI != null) {
+          lbI.lK(lbJ);
         }
       }
     });

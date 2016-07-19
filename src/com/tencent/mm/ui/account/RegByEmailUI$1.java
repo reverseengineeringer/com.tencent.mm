@@ -9,7 +9,7 @@ final class RegByEmailUI$1
   
   public final void run()
   {
-    RegByEmailUI.a(kuo).requestFocus();
+    RegByEmailUI.a(kTv).requestFocus();
   }
 }
 

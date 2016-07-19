@@ -1,38 +1,46 @@
 package ct;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 public final class ai
-  extends bg
+  extends bd
 {
-  private static an g;
-  public int a = 0;
-  public int b = 0;
-  public int c = 0;
-  public int d = 0;
-  public int e = 0;
-  public an f = null;
+  private static ArrayList e;
+  private static Map f;
+  public ArrayList a = null;
+  public String b = "";
+  private int c = 0;
+  private Map d = null;
   
-  public final void a(be parambe)
+  public final void a(bb parambb)
   {
-    a = parambe.a(a, 0, false);
-    b = parambe.a(b, 1, false);
-    c = parambe.a(c, 2, false);
-    d = parambe.a(d, 3, false);
-    e = parambe.a(e, 4, false);
-    if (g == null) {
-      g = new an();
+    c = parambb.a(c, 0, true);
+    if (e == null)
+    {
+      e = new ArrayList();
+      e.add("");
     }
-    f = ((an)parambe.a(g, 5, false));
+    a = ((ArrayList)parambb.a(e, 1, true));
+    b = parambb.a(2, false);
+    if (f == null)
+    {
+      f = new HashMap();
+      f.put("", "");
+    }
+    d = ((Map)parambb.a(f, 3, false));
   }
   
-  public final void a(bf parambf)
+  public final void a(bc parambc)
   {
-    parambf.a(a, 0);
-    parambf.a(b, 1);
-    parambf.a(c, 2);
-    parambf.a(d, 3);
-    parambf.a(e, 4);
-    if (f != null) {
-      parambf.a(f, 5);
+    parambc.a(c, 0);
+    parambc.a(a, 1);
+    if (b != null) {
+      parambc.a(b, 2);
+    }
+    if (d != null) {
+      parambc.a(d, 3);
     }
   }
 }

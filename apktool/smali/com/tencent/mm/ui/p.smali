@@ -12,9 +12,9 @@
 
 
 # static fields
-.field public static final kqH:[I
+.field public static final kPM:[I
 
-.field public static final kqI:[I
+.field public static final kPN:[I
 
 
 # direct methods
@@ -29,7 +29,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/tencent/mm/ui/p;->kqH:[I
+    sput-object v0, Lcom/tencent/mm/ui/p;->kPM:[I
 
     .line 33
     const/4 v0, 0x1
@@ -42,7 +42,7 @@
 
     aput v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/ui/p;->kqI:[I
+    sput-object v0, Lcom/tencent/mm/ui/p;->kPN:[I
 
     return-void
 
@@ -64,7 +64,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/aw/a;->cY(Landroid/content/Context;)F
+    invoke-static {v0}, Lcom/tencent/mm/az/a;->cW(Landroid/content/Context;)F
 
     .line 269
     invoke-virtual {p0}, Landroid/view/LayoutInflater;->getContext()Landroid/content/Context;
@@ -83,7 +83,7 @@
     invoke-direct {v1, v2}, Lcom/tencent/mm/ui/p$a;-><init>(B)V
 
     .line 271
-    iput-object v0, v1, Lcom/tencent/mm/ui/p$a;->kqJ:Landroid/view/LayoutInflater;
+    iput-object v0, v1, Lcom/tencent/mm/ui/p$a;->kPO:Landroid/view/LayoutInflater;
 
     .line 272
     invoke-virtual {v0, v1}, Landroid/view/LayoutInflater;->setFactory(Landroid/view/LayoutInflater$Factory;)V
@@ -92,12 +92,12 @@
     return-object v0
 .end method
 
-.method public static ee(Landroid/content/Context;)Landroid/view/LayoutInflater;
+.method public static ef(Landroid/content/Context;)Landroid/view/LayoutInflater;
     .locals 3
 
     .prologue
     .line 277
-    invoke-static {p0}, Lcom/tencent/mm/aw/a;->cY(Landroid/content/Context;)F
+    invoke-static {p0}, Lcom/tencent/mm/az/a;->cW(Landroid/content/Context;)F
 
     .line 278
     invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
@@ -117,7 +117,7 @@
     invoke-direct {v1, v2}, Lcom/tencent/mm/ui/p$a;-><init>(B)V
 
     .line 281
-    iput-object v0, v1, Lcom/tencent/mm/ui/p$a;->kqJ:Landroid/view/LayoutInflater;
+    iput-object v0, v1, Lcom/tencent/mm/ui/p$a;->kPO:Landroid/view/LayoutInflater;
 
     .line 282
     invoke-virtual {v0, v1}, Landroid/view/LayoutInflater;->setFactory(Landroid/view/LayoutInflater$Factory;)V

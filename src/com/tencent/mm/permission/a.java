@@ -1,72 +1,72 @@
 package com.tencent.mm.permission;
 
-import com.tencent.mm.ah.k;
-import com.tencent.mm.ah.n;
-import com.tencent.mm.ah.t;
+import com.tencent.mm.ak.k;
+import com.tencent.mm.ak.n;
+import com.tencent.mm.ak.t;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.l;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.h;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.l;
 
 public final class a
   implements d
 {
-  private static a cly;
-  private int clA = 3;
-  private boolean clz = false;
+  private static a cgC;
+  private boolean cgD = false;
+  private int cgE = 3;
   
-  private static void Bu()
+  private static void Bx()
   {
-    if (!ah.rh()) {
+    if (!ah.rg()) {
       return;
     }
-    ah.tD().rn().set(327944, Long.valueOf(ay.FS()));
+    ah.tE().ro().set(327944, Long.valueOf(be.Gp()));
   }
   
-  public static a Fz()
+  public static a FV()
   {
-    if (cly == null) {
-      cly = new a();
+    if (cgC == null) {
+      cgC = new a();
     }
-    return cly;
+    return cgC;
   }
   
   private void release()
   {
-    clz = false;
-    ah.tE().b(159, this);
-    ah.tE().b(160, this);
+    cgD = false;
+    ah.tF().b(159, this);
+    ah.tF().b(160, this);
   }
   
-  public final void FA()
+  public final void FW()
   {
-    if (!ah.rh()) {}
+    if (!ah.rg()) {}
     long l;
     do
     {
       return;
-      if ((clz) || (!ah.tD().isSDCardAvailable()))
+      if ((cgD) || (!ah.tE().isSDCardAvailable()))
       {
-        u.e("!56@/B4Tb64lLpL0qTj+UKAbT/+Av89GBeesjgMOSMuyqDosNvCl9foaCQ==", "not to update, isUpdating: %s", new Object[] { Boolean.valueOf(clz) });
+        v.e("MicroMsg.PermissionConfigUpdater", "not to update, isUpdating: %s", new Object[] { Boolean.valueOf(cgD) });
         return;
       }
-      l = ((Long)ah.tD().rn().get(327944, Long.valueOf(0L))).longValue();
-    } while (ay.FS() - l < 86400000L);
+      l = ((Long)ah.tE().ro().get(327944, Long.valueOf(0L))).longValue();
+    } while (be.Gp() - l < 86400000L);
     release();
-    clz = true;
+    cgD = true;
     k localk = new k(23);
-    ah.tE().d(localk);
-    ah.tE().a(159, this);
-    ah.tE().a(160, this);
+    ah.tF().a(localk, 0);
+    ah.tF().a(159, this);
+    ah.tF().a(160, this);
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, com.tencent.mm.t.j paramj)
   {
-    if ((!(paramj instanceof l)) || (((l)paramj).vJ() != 23)) {
-      u.d("!56@/B4Tb64lLpL0qTj+UKAbT/+Av89GBeesjgMOSMuyqDosNvCl9foaCQ==", "another scene");
+    if ((!(paramj instanceof l)) || (((l)paramj).vM() != 23)) {
+      v.d("MicroMsg.PermissionConfigUpdater", "another scene");
     }
     int i;
     do
@@ -77,40 +77,40 @@ public final class a
       {
         if ((paramInt1 == 0) && (paramInt2 == 0))
         {
-          Bu();
-          paramString = t.BA().dF(23);
+          Bx();
+          paramString = t.BE().el(23);
           if ((paramString == null) || (paramString.length == 0))
           {
-            u.i("!56@/B4Tb64lLpL0qTj+UKAbT/+Av89GBeesjgMOSMuyqDosNvCl9foaCQ==", "error no pkg found.");
+            v.i("MicroMsg.PermissionConfigUpdater", "error no pkg found.");
             release();
             return;
           }
           paramString = paramString[0];
-          u.i("!56@/B4Tb64lLpL0qTj+UKAbT/+Av89GBeesjgMOSMuyqDosNvCl9foaCQ==", "permission, pkgId: %d, version: %d, status: %d, type: %d", new Object[] { Integer.valueOf(id), Integer.valueOf(version), Integer.valueOf(status), Integer.valueOf(bXX) });
+          v.i("MicroMsg.PermissionConfigUpdater", "permission, pkgId: %d, version: %d, status: %d, type: %d", new Object[] { Integer.valueOf(id), Integer.valueOf(version), Integer.valueOf(status), Integer.valueOf(bRG) });
           if (5 != status)
           {
             release();
             return;
           }
-          paramString = new com.tencent.mm.ah.j(id, 23);
-          ah.tE().d(paramString);
+          paramString = new com.tencent.mm.ak.j(id, 23);
+          ah.tF().a(paramString, 0);
           return;
         }
-        paramInt1 = clA - 1;
-        clA = paramInt1;
+        paramInt1 = cgE - 1;
+        cgE = paramInt1;
         if (paramInt1 <= 0)
         {
-          if (ah.rh()) {
-            ah.tD().rn().set(327944, Long.valueOf(ay.FS() - 86400000L + 3600000L));
+          if (ah.rg()) {
+            ah.tE().ro().set(327944, Long.valueOf(be.Gp() - 86400000L + 3600000L));
           }
-          clA = 3;
+          cgE = 3;
         }
         release();
         return;
       }
     } while (160 != i);
     if ((paramInt1 == 0) && (paramInt2 == 0)) {
-      Bu();
+      Bx();
     }
     release();
   }

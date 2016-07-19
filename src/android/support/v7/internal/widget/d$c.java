@@ -14,23 +14,23 @@ final class d$c
   extends ListPopupWindow
   implements d.d
 {
-  private ListAdapter pL;
-  private CharSequence rd;
+  private ListAdapter pZ;
+  private CharSequence rq;
   
   public d$c(final d paramd, Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    pY = paramd;
-    ce();
-    pW = 0;
-    qa = new c.c(paramd, new c.b()
+    qm = paramd;
+    cg();
+    qk = 0;
+    qo = new c.c(paramd, new c.b()
     {
       public final void i(View paramAnonymousView, int paramAnonymousInt)
       {
-        rc.setSelection(paramAnonymousInt);
-        if (rc.po != null)
+        rp.setSelection(paramAnonymousInt);
+        if (rp.pC != null)
         {
-          d locald = rc;
+          d locald = rp;
           d.c.a(d.c.this).getItemId(paramAnonymousInt);
           locald.h(paramAnonymousView, paramAnonymousInt);
         }
@@ -39,42 +39,42 @@ final class d$c
     });
   }
   
-  public final void g(CharSequence paramCharSequence)
+  public final void h(CharSequence paramCharSequence)
   {
-    rd = paramCharSequence;
+    rq = paramCharSequence;
   }
   
   public final void setAdapter(ListAdapter paramListAdapter)
   {
     super.setAdapter(paramListAdapter);
-    pL = paramListAdapter;
+    pZ = paramListAdapter;
   }
   
   public final void show()
   {
-    int j = rc.getPaddingLeft();
+    int j = rp.getPaddingLeft();
     Object localObject;
-    if (rc.pO == -2)
+    if (rp.qc == -2)
     {
-      i = rc.getWidth();
-      int k = rc.getPaddingRight();
-      setContentWidth(Math.max(rc.a((SpinnerAdapter)pL, pK.getBackground()), i - j - k));
-      localObject = pK.getBackground();
+      i = rp.getWidth();
+      int k = rp.getPaddingRight();
+      setContentWidth(Math.max(rp.a((SpinnerAdapter)pZ, pY.getBackground()), i - j - k));
+      localObject = pY.getBackground();
       if (localObject == null) {
         break label238;
       }
-      ((Drawable)localObject).getPadding(d.a(rc));
+      ((Drawable)localObject).getPadding(d.a(rp));
     }
     label238:
-    for (int i = -arc).left;; i = 0)
+    for (int i = -arp).left;; i = 0)
     {
-      pP = (i + j);
-      cf();
+      qd = (i + j);
+      ch();
       super.show();
-      pM.setChoiceMode(1);
-      i = rc.pq;
-      localObject = pM;
-      if ((pK.isShowing()) && (localObject != null))
+      qa.setChoiceMode(1);
+      i = rp.pE;
+      localObject = qa;
+      if ((pY.isShowing()) && (localObject != null))
       {
         ListPopupWindow.a.a((ListPopupWindow.a)localObject, false);
         ((ListPopupWindow.a)localObject).setSelection(i);
@@ -83,12 +83,12 @@ final class d$c
         }
       }
       return;
-      if (rc.pO == -1)
+      if (rp.qc == -1)
       {
-        setContentWidth(rc.getWidth() - j - rc.getPaddingRight());
+        setContentWidth(rp.getWidth() - j - rp.getPaddingRight());
         break;
       }
-      setContentWidth(rc.pO);
+      setContentWidth(rp.qc);
       break;
     }
   }

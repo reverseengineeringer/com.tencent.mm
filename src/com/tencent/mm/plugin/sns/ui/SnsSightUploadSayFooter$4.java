@@ -10,7 +10,7 @@ final class SnsSightUploadSayFooter$4
   
   public final void onClick(View paramView)
   {
-    SnsSightUploadSayFooter.d(hiw);
+    SnsSightUploadSayFooter.d(hxl);
   }
 }
 

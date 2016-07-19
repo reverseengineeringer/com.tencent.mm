@@ -9,8 +9,8 @@ final class f$4$1
   
   public final void run()
   {
-    f.a(klu.klo, false);
-    f.a((IconPreference)f.a(klu.klo).GB("more_tab_game_recommend"), 8, 8, false, 8, 8, 8);
+    f.a(kKS.kKO, false);
+    f.a((IconPreference)f.a(kKS.kKO).IR("more_tab_game_recommend"), 8, 8, false, 8, 8, 8);
   }
 }
 

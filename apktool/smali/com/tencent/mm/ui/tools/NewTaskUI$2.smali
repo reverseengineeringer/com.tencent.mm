@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/tools/NewTaskUI;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/tools/NewTaskUI;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lxl:Lcom/tencent/mm/ui/tools/NewTaskUI;
+.field final synthetic lXZ:Lcom/tencent/mm/ui/tools/NewTaskUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 115
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lxl:Lcom/tencent/mm/ui/tools/NewTaskUI;
+    .line 114
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lXZ:Lcom/tencent/mm/ui/tools/NewTaskUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,8 +40,8 @@
     .locals 6
 
     .prologue
-    .line 119
-    const-string/jumbo v0, "!32@/B4Tb64lLpIwz/fkTrbJFDJAgnSFqmV8"
+    .line 118
+    const-string/jumbo v0, "MicroMsg.NewTaskUI"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -49,13 +49,13 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lxl:Lcom/tencent/mm/ui/tools/NewTaskUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lXZ:Lcom/tencent/mm/ui/tools/NewTaskUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/NewTaskUI;->a(Lcom/tencent/mm/ui/tools/NewTaskUI;)Lcom/tencent/mm/ui/tools/j;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/tools/j;->ktL:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/ui/tools/j;->kSS:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -67,13 +67,13 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lxl:Lcom/tencent/mm/ui/tools/NewTaskUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lXZ:Lcom/tencent/mm/ui/tools/NewTaskUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/NewTaskUI;->a(Lcom/tencent/mm/ui/tools/NewTaskUI;)Lcom/tencent/mm/ui/tools/j;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/tools/j;->ktN:[B
+    iget-object v2, v2, Lcom/tencent/mm/ui/tools/j;->kSU:[B
 
     array-length v2, v2
 
@@ -87,7 +87,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcom/tencent/mm/compatible/util/f;->oZ()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/compatible/util/f;->nr()Ljava/lang/String;
 
     move-result-object v2
 
@@ -99,10 +99,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 120
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lxl:Lcom/tencent/mm/ui/tools/NewTaskUI;
+    .line 119
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lXZ:Lcom/tencent/mm/ui/tools/NewTaskUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/NewTaskUI;->b(Lcom/tencent/mm/ui/tools/NewTaskUI;)Lcom/tencent/mm/ui/applet/SecurityImage;
 
@@ -110,82 +110,80 @@
 
     if-nez v0, :cond_0
 
-    .line 121
-    const-string/jumbo v0, "!32@/B4Tb64lLpIwz/fkTrbJFDJAgnSFqmV8"
+    .line 120
+    const-string/jumbo v0, "MicroMsg.NewTaskUI"
 
     const-string/jumbo v1, "[arthurdan.SecurityImageCrash] fatal error!!! secimg is null!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 134
+    .line 133
     :goto_0
     return-void
 
-    .line 124
+    .line 123
     :cond_0
-    new-instance v0, Lcom/tencent/mm/modelsimple/t;
+    new-instance v0, Lcom/tencent/mm/modelsimple/r;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lxl:Lcom/tencent/mm/ui/tools/NewTaskUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lXZ:Lcom/tencent/mm/ui/tools/NewTaskUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/tools/NewTaskUI;->a(Lcom/tencent/mm/ui/tools/NewTaskUI;)Lcom/tencent/mm/ui/tools/j;
 
     move-result-object v1
 
-    iget v1, v1, Lcom/tencent/mm/ui/tools/j;->ktO:I
+    iget v1, v1, Lcom/tencent/mm/ui/tools/j;->kSV:I
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lxl:Lcom/tencent/mm/ui/tools/NewTaskUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lXZ:Lcom/tencent/mm/ui/tools/NewTaskUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/NewTaskUI;->b(Lcom/tencent/mm/ui/tools/NewTaskUI;)Lcom/tencent/mm/ui/applet/SecurityImage;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/applet/SecurityImage;->getSecImgCode()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/tencent/mm/ui/applet/SecurityImage;->bhw()Ljava/lang/String;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lxl:Lcom/tencent/mm/ui/tools/NewTaskUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lXZ:Lcom/tencent/mm/ui/tools/NewTaskUI;
 
     invoke-static {v3}, Lcom/tencent/mm/ui/tools/NewTaskUI;->b(Lcom/tencent/mm/ui/tools/NewTaskUI;)Lcom/tencent/mm/ui/applet/SecurityImage;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/tencent/mm/ui/applet/SecurityImage;->getSecImgSid()Ljava/lang/String;
+    iget-object v3, v3, Lcom/tencent/mm/ui/applet/SecurityImage;->kSS:Ljava/lang/String;
 
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lxl:Lcom/tencent/mm/ui/tools/NewTaskUI;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lXZ:Lcom/tencent/mm/ui/tools/NewTaskUI;
 
     invoke-static {v4}, Lcom/tencent/mm/ui/tools/NewTaskUI;->b(Lcom/tencent/mm/ui/tools/NewTaskUI;)Lcom/tencent/mm/ui/applet/SecurityImage;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/tencent/mm/ui/applet/SecurityImage;->getSecImgEncryptKey()Ljava/lang/String;
+    iget-object v4, v4, Lcom/tencent/mm/ui/applet/SecurityImage;->kST:Ljava/lang/String;
 
-    move-result-object v4
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/tencent/mm/modelsimple/r;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/tencent/mm/modelsimple/t;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 125
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 124
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    const/4 v2, 0x0
 
-    .line 127
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lxl:Lcom/tencent/mm/ui/tools/NewTaskUI;
+    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lxl:Lcom/tencent/mm/ui/tools/NewTaskUI;
+    .line 126
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lXZ:Lcom/tencent/mm/ui/tools/NewTaskUI;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lxl:Lcom/tencent/mm/ui/tools/NewTaskUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lXZ:Lcom/tencent/mm/ui/tools/NewTaskUI;
 
-    const v4, 0x7f0b0ddd
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lXZ:Lcom/tencent/mm/ui/tools/NewTaskUI;
+
+    const v4, 0x7f080134
 
     invoke-virtual {v3, v4}, Lcom/tencent/mm/ui/tools/NewTaskUI;->getString(I)Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lxl:Lcom/tencent/mm/ui/tools/NewTaskUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/NewTaskUI$2;->lXZ:Lcom/tencent/mm/ui/tools/NewTaskUI;
 
-    const v4, 0x7f0b01b5
+    const v4, 0x7f080b07
 
     invoke-virtual {v3, v4}, Lcom/tencent/mm/ui/tools/NewTaskUI;->getString(I)Ljava/lang/String;
 
@@ -195,7 +193,7 @@
 
     new-instance v5, Lcom/tencent/mm/ui/tools/NewTaskUI$2$1;
 
-    invoke-direct {v5, p0, v0}, Lcom/tencent/mm/ui/tools/NewTaskUI$2$1;-><init>(Lcom/tencent/mm/ui/tools/NewTaskUI$2;Lcom/tencent/mm/modelsimple/t;)V
+    invoke-direct {v5, p0, v0}, Lcom/tencent/mm/ui/tools/NewTaskUI$2$1;-><init>(Lcom/tencent/mm/ui/tools/NewTaskUI$2;Lcom/tencent/mm/modelsimple/r;)V
 
     invoke-static {v2, v3, v4, v5}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;ZLandroid/content/DialogInterface$OnCancelListener;)Lcom/tencent/mm/ui/base/p;
 

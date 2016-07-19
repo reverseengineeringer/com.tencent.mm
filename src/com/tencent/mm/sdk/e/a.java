@@ -1,26 +1,26 @@
 package com.tencent.mm.sdk.e;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.p;
+import com.tencent.mm.sdk.platformtools.q;
 
 public abstract class a
 {
-  public String cAU;
-  public String iBD;
+  public String cxP;
+  public String iYn;
   
   public abstract int getType();
   
-  public void l(Bundle paramBundle)
+  public void n(Bundle paramBundle)
   {
     paramBundle.putInt("_wxapi_command_type", getType());
-    paramBundle.putString("_wxapi_basereq_transaction", iBD);
-    paramBundle.putString("_wxapi_basereq_openid", cAU);
+    paramBundle.putString("_wxapi_basereq_transaction", iYn);
+    paramBundle.putString("_wxapi_basereq_openid", cxP);
   }
   
-  public void m(Bundle paramBundle)
+  public void o(Bundle paramBundle)
   {
-    iBD = p.c(paramBundle, "_wxapi_basereq_transaction");
-    cAU = p.c(paramBundle, "_wxapi_basereq_openid");
+    iYn = q.c(paramBundle, "_wxapi_basereq_transaction");
+    cxP = q.c(paramBundle, "_wxapi_basereq_openid");
   }
 }
 

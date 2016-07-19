@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public mcT:I
+.field public mOX:I
 
 
 # direct methods
@@ -18,12 +18,12 @@
     .line 4
     const/4 v0, 0x0
 
-    iput v0, p0, Loicq/wlogin_sdk/a/af;->mcT:I
+    iput v0, p0, Loicq/wlogin_sdk/a/af;->mOX:I
 
     .line 7
     const/16 v0, 0x143
 
-    iput v0, p0, Loicq/wlogin_sdk/a/af;->mbE:I
+    iput v0, p0, Loicq/wlogin_sdk/a/af;->mNI:I
 
     .line 8
     return-void

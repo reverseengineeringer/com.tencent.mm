@@ -12,13 +12,13 @@
 
 
 # instance fields
-.field private apf:Lcom/tencent/mm/ui/base/h;
+.field private fTL:Lcom/tencent/mm/ui/base/h;
 
-.field public kKX:Lcom/tencent/mm/ui/base/preference/Preference$a;
+.field public lkm:Lcom/tencent/mm/ui/base/preference/Preference$a;
 
-.field private final kKZ:Lcom/tencent/mm/ui/base/preference/d;
+.field private final lko:Lcom/tencent/mm/ui/base/preference/d;
 
-.field kLa:Lcom/tencent/mm/ui/base/preference/DialogPreference$a;
+.field lkp:Lcom/tencent/mm/ui/base/preference/DialogPreference$a;
 
 
 # direct methods
@@ -51,10 +51,10 @@
 
     invoke-direct {v0, p1}, Lcom/tencent/mm/ui/base/preference/d;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->kKZ:Lcom/tencent/mm/ui/base/preference/d;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->lko:Lcom/tencent/mm/ui/base/preference/d;
 
     .line 49
-    sget-object v0, Lcom/tencent/mm/R$b;->ChoicePreference:[I
+    sget-object v0, Lcom/tencent/mm/R$b;->Wr:[I
 
     invoke-virtual {p1, p2, v0, p3, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -69,7 +69,7 @@
     if-eq v1, v2, :cond_0
 
     .line 53
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->kKZ:Lcom/tencent/mm/ui/base/preference/d;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->lko:Lcom/tencent/mm/ui/base/preference/d;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -79,11 +79,11 @@
 
     move-result-object v1
 
-    iput-object v1, v2, Lcom/tencent/mm/ui/base/preference/d;->kKV:[Ljava/lang/CharSequence;
+    iput-object v1, v2, Lcom/tencent/mm/ui/base/preference/d;->lkk:[Ljava/lang/CharSequence;
 
     .line 56
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->kKZ:Lcom/tencent/mm/ui/base/preference/d;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->lko:Lcom/tencent/mm/ui/base/preference/d;
 
     const/4 v2, 0x1
 
@@ -91,15 +91,15 @@
 
     move-result-object v2
 
-    iput-object v2, v1, Lcom/tencent/mm/ui/base/preference/d;->kKW:[Ljava/lang/CharSequence;
+    iput-object v2, v1, Lcom/tencent/mm/ui/base/preference/d;->lkl:[Ljava/lang/CharSequence;
 
     .line 58
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 60
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->kKZ:Lcom/tencent/mm/ui/base/preference/d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->lko:Lcom/tencent/mm/ui/base/preference/d;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/preference/d;->bdo()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/preference/d;->biV()V
 
     .line 61
     return-void
@@ -110,7 +110,7 @@
 
     .prologue
     .line 23
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->apf:Lcom/tencent/mm/ui/base/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->fTL:Lcom/tencent/mm/ui/base/h;
 
     return-object v0
 .end method
@@ -120,7 +120,7 @@
 
     .prologue
     .line 23
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->kKZ:Lcom/tencent/mm/ui/base/preference/d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->lko:Lcom/tencent/mm/ui/base/preference/d;
 
     return-object v0
 .end method
@@ -130,7 +130,7 @@
 
     .prologue
     .line 23
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->kLa:Lcom/tencent/mm/ui/base/preference/DialogPreference$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->lkp:Lcom/tencent/mm/ui/base/preference/DialogPreference$a;
 
     return-object v0
 .end method
@@ -140,7 +140,7 @@
 
     .prologue
     .line 23
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->kKX:Lcom/tencent/mm/ui/base/preference/Preference$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->lkm:Lcom/tencent/mm/ui/base/preference/Preference$a;
 
     return-object v0
 .end method
@@ -152,7 +152,7 @@
 
     .prologue
     .line 65
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->kKX:Lcom/tencent/mm/ui/base/preference/Preference$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->lkm:Lcom/tencent/mm/ui/base/preference/Preference$a;
 
     .line 66
     return-void
@@ -163,7 +163,7 @@
 
     .prologue
     .line 70
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->kKZ:Lcom/tencent/mm/ui/base/preference/d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->lko:Lcom/tencent/mm/ui/base/preference/d;
 
     iget-object v0, v0, Lcom/tencent/mm/ui/base/preference/d;->value:Ljava/lang/String;
 
@@ -175,11 +175,11 @@
 
     .prologue
     .line 88
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->kKZ:Lcom/tencent/mm/ui/base/preference/d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->lko:Lcom/tencent/mm/ui/base/preference/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/preference/d;->blS:Ljava/util/HashMap;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/preference/d;->aZy:Ljava/util/HashMap;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->kKZ:Lcom/tencent/mm/ui/base/preference/d;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->lko:Lcom/tencent/mm/ui/base/preference/d;
 
     iget-object v1, v1, Lcom/tencent/mm/ui/base/preference/d;->value:Ljava/lang/String;
 
@@ -210,14 +210,14 @@
 
     .prologue
     .line 75
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->kKZ:Lcom/tencent/mm/ui/base/preference/d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->lko:Lcom/tencent/mm/ui/base/preference/d;
 
     iput-object p1, v0, Lcom/tencent/mm/ui/base/preference/d;->value:Ljava/lang/String;
 
     .line 77
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->kKZ:Lcom/tencent/mm/ui/base/preference/d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->lko:Lcom/tencent/mm/ui/base/preference/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/preference/d;->blS:Ljava/util/HashMap;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/preference/d;->aZy:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -229,11 +229,11 @@
     if-nez v0, :cond_0
 
     .line 79
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->kKZ:Lcom/tencent/mm/ui/base/preference/d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->lko:Lcom/tencent/mm/ui/base/preference/d;
 
     const/4 v1, -0x1
 
-    iput v1, v0, Lcom/tencent/mm/ui/base/preference/d;->ftM:I
+    iput v1, v0, Lcom/tencent/mm/ui/base/preference/d;->fCR:I
 
     .line 84
     :goto_0
@@ -241,11 +241,11 @@
 
     .line 82
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->kKZ:Lcom/tencent/mm/ui/base/preference/d;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->lko:Lcom/tencent/mm/ui/base/preference/d;
 
     iget v0, v0, Lcom/tencent/mm/ui/base/preference/c;->id:I
 
-    iput v0, v1, Lcom/tencent/mm/ui/base/preference/d;->ftM:I
+    iput v0, v1, Lcom/tencent/mm/ui/base/preference/d;->fCR:I
 
     goto :goto_0
 .end method
@@ -257,7 +257,7 @@
     .line 98
     iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0a0599
+    const v1, 0x7f0303a3
 
     const/4 v2, 0x0
 
@@ -275,7 +275,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 120
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->kKZ:Lcom/tencent/mm/ui/base/preference/d;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->lko:Lcom/tencent/mm/ui/base/preference/d;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
@@ -295,27 +295,27 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/base/h$a;->Gy(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/base/h$a;->IM(Ljava/lang/String;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 124
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/base/h$a;->aq(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/base/h$a;->au(Landroid/view/View;)Lcom/tencent/mm/ui/base/h$a;
 
     .line 125
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/base/h$a;->bcu()Lcom/tencent/mm/ui/base/h;
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/base/h$a;->bhJ()Lcom/tencent/mm/ui/base/h;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->apf:Lcom/tencent/mm/ui/base/h;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->fTL:Lcom/tencent/mm/ui/base/h;
 
     .line 126
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->apf:Lcom/tencent/mm/ui/base/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->fTL:Lcom/tencent/mm/ui/base/h;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->show()V
 
     .line 128
     iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->apf:Lcom/tencent/mm/ui/base/h;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/DialogPreference;->fTL:Lcom/tencent/mm/ui/base/h;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Landroid/app/Dialog;)V
 

@@ -18,8 +18,6 @@ import com.tencent.mm.pluginsdk.ui.ChatFooterPanel.a;
 import com.tencent.mm.pluginsdk.ui.chat.d;
 import com.tencent.mm.pluginsdk.ui.chat.e;
 import com.tencent.mm.pluginsdk.ui.chat.e.a;
-import com.tencent.mm.protocal.b.aby;
-import com.tencent.mm.sdk.platformtools.ab;
 import com.tencent.mm.storage.h;
 import com.tencent.mm.ui.BasePanelKeybordLayout;
 import com.tencent.mm.ui.MMActivity;
@@ -28,120 +26,78 @@ import com.tencent.mm.ui.widget.MMEditText;
 public class SnsSightUploadSayFooter
   extends BasePanelKeybordLayout
 {
-  MMActivity arW;
-  private ImageButton eYL;
-  ChatFooterPanel eYO;
-  private boolean eYR = true;
-  private MMEditText gLu = null;
-  SightRangeWidget gLv;
-  SightLocationWidget hiv;
+  MMActivity adL;
+  private ImageButton fhf;
+  ChatFooterPanel fhi;
+  private boolean fhl = true;
+  MMEditText gSZ = null;
+  SightRangeWidget gTa;
+  SightLocationWidget hxk;
   
   public SnsSightUploadSayFooter(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    arW = ((MMActivity)paramContext);
-    ah.tD().rn().set(-29414086, "TAG_DEFAULT_TAB");
-    ah.tD().rn().set(-29414083, Integer.valueOf(0));
-    paramContext = (ViewGroup)inflate(arW, 2131362878, this);
-    eYL = ((ImageButton)paramContext.findViewById(2131168521));
-    eYL.setOnClickListener(new View.OnClickListener()
+    adL = ((MMActivity)paramContext);
+    ah.tE().ro().set(-29414086, "TAG_DEFAULT_TAB");
+    ah.tE().ro().set(-29414083, Integer.valueOf(0));
+    paramContext = (ViewGroup)inflate(adL, 2130904477, this);
+    fhf = ((ImageButton)paramContext.findViewById(2131757797));
+    fhf.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
         SnsSightUploadSayFooter.d(SnsSightUploadSayFooter.this);
       }
     });
-    if (e.iMh == null) {
-      eYO = new d(arW);
+    if (e.jje == null) {
+      fhi = new d(adL);
     }
     for (;;)
     {
-      gLv = ((SightRangeWidget)paramContext.findViewById(2131168667));
-      gLv.gWv = null;
-      gLv.style = 1;
-      hiv = ((SightLocationWidget)paramContext.findViewById(2131168467));
+      gTa = ((SightRangeWidget)paramContext.findViewById(2131757798));
+      gTa.hjU = null;
+      gTa.style = 1;
+      hxk = ((SightLocationWidget)paramContext.findViewById(2131759239));
       return;
-      eYO = e.iMh.bs(getContext());
-      eYO.setVisibility(8);
-      ((LinearLayout)findViewById(2131166057)).addView(eYO, -1, 0);
-      eYO.RP();
-      eYO.RQ();
-      eYO.setOnTextOperationListener(new ChatFooterPanel.a()
+      fhi = e.jje.bo(getContext());
+      fhi.setVisibility(8);
+      ((LinearLayout)findViewById(2131756548)).addView(fhi, -1, 0);
+      fhi.Tj();
+      fhi.Tk();
+      fhi.jdd = new ChatFooterPanel.a()
       {
-        public final void ahA() {}
+        public final void akl() {}
         
-        public final void ahB()
+        public final void akm()
         {
-          SnsSightUploadSayFooter.b(SnsSightUploadSayFooter.this).getInputConnection().sendKeyEvent(new KeyEvent(0, 67));
-          SnsSightUploadSayFooter.b(SnsSightUploadSayFooter.this).getInputConnection().sendKeyEvent(new KeyEvent(1, 67));
+          bmfQ.sendKeyEvent(new KeyEvent(0, 67));
+          bmfQ.sendKeyEvent(new KeyEvent(1, 67));
         }
         
         public final void append(String paramAnonymousString)
         {
           try
           {
-            SnsSightUploadSayFooter.b(SnsSightUploadSayFooter.this).HO(paramAnonymousString);
+            SnsSightUploadSayFooter.b(SnsSightUploadSayFooter.this).Kd(paramAnonymousString);
             return;
           }
           catch (Exception paramAnonymousString) {}
         }
         
-        public final void dr(boolean paramAnonymousBoolean) {}
-      });
+        public final void dq(boolean paramAnonymousBoolean) {}
+      };
     }
   }
   
-  private void ayl()
+  private void aAL()
   {
-    eYO.onPause();
-    eYO.setVisibility(8);
+    fhi.onPause();
+    fhi.setVisibility(8);
   }
   
-  public aby getLocation()
+  protected final View akk()
   {
-    return hiv.getLocation();
-  }
-  
-  protected View getPanelView()
-  {
-    return eYO;
-  }
-  
-  public void setMMEditText(MMEditText paramMMEditText)
-  {
-    gLu = paramMMEditText;
-    paramMMEditText.setOnClickListener(new View.OnClickListener()
-    {
-      public final void onClick(View paramAnonymousView)
-      {
-        int i = 0;
-        if (getVisibility() == 8) {
-          setVisibility(0);
-        }
-        if (eYO.getVisibility() == 0) {
-          i = 1;
-        }
-        if (i != 0) {
-          SnsSightUploadSayFooter.a(SnsSightUploadSayFooter.this);
-        }
-      }
-    });
-    paramMMEditText.setOnEditorActionListener(new TextView.OnEditorActionListener()
-    {
-      public final boolean onEditorAction(TextView paramAnonymousTextView, int paramAnonymousInt, KeyEvent paramAnonymousKeyEvent)
-      {
-        return false;
-      }
-    });
-    ab.e(new Runnable()
-    {
-      public final void run()
-      {
-        SnsSightUploadSayFooter.b(SnsSightUploadSayFooter.this).performClick();
-        SnsSightUploadSayFooter.b(SnsSightUploadSayFooter.this).requestFocus();
-        SnsSightUploadSayFooter.c(SnsSightUploadSayFooter.this).apz();
-      }
-    }, 200L);
+    return fhi;
   }
 }
 

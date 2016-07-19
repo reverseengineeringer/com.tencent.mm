@@ -2,110 +2,85 @@ package com.tencent.mm.modelsns;
 
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.protocal.b.asa;
+import com.tencent.mm.protocal.b.asn;
+import com.tencent.mm.sdk.i.e;
 import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ah;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public final class a
 {
-  private static boolean cah = false;
-  private static ab cbX;
-  private static AtomicInteger cci = new AtomicInteger(0);
-  public int auE = 0;
-  public Object cbY = null;
-  public int cbZ = 1;
-  public long cca;
-  public int ccb;
-  public int ccc;
-  public int ccd;
-  public StringBuffer cce = new StringBuffer();
-  public StringBuffer ccf = new StringBuffer();
-  public StringBuffer ccg = new StringBuffer();
-  public StringBuffer cch = new StringBuffer();
+  private static boolean bTQ = false;
+  private static AtomicInteger bVX = new AtomicInteger(0);
+  public int agr = 0;
+  public Object bVN = null;
+  public int bVO = 1;
+  public long bVP;
+  public int bVQ;
+  public int bVR;
+  public int bVS;
+  public StringBuffer bVT = new StringBuffer();
+  public StringBuffer bVU = new StringBuffer();
+  public StringBuffer bVV = new StringBuffer();
+  public StringBuffer bVW = new StringBuffer();
   
   public a(int paramInt1, int paramInt2)
   {
-    if ((cbX == null) && (!cah) && (cbX == null)) {
-      cbX = new ab();
-    }
-    auE = paramInt1;
-    ccd = paramInt2;
-    if (!CR()) {
+    agr = paramInt1;
+    bVS = paramInt2;
+    if (!Dc()) {
       return;
     }
-    cca = System.currentTimeMillis();
-    if (ah.dB(y.getContext())) {
-      ccc = 4;
+    bVP = System.currentTimeMillis();
+    if (ak.dC(aa.getContext())) {
+      bVR = 4;
     }
     for (;;)
     {
-      ccb = cci.incrementAndGet();
+      bVQ = bVX.incrementAndGet();
       return;
-      if (ah.dy(y.getContext())) {
-        ccc = 3;
-      } else if (ah.dA(y.getContext())) {
-        ccc = 2;
-      } else if (ah.dx(y.getContext())) {
-        ccc = 1;
+      if (ak.dz(aa.getContext())) {
+        bVR = 3;
+      } else if (ak.dB(aa.getContext())) {
+        bVR = 2;
+      } else if (ak.dy(aa.getContext())) {
+        bVR = 1;
       } else {
-        ccc = 0;
+        bVR = 0;
       }
     }
   }
   
-  public static void CU()
+  public static void Df()
   {
-    u.i("!44@/B4Tb64lLpI3jEWi8M9D5kLuAv0zb1yHk/1mym2oRR8=", "wait op");
+    v.i("MicroMsg.StatisticsOplog", "wait op");
   }
   
-  private void CW()
-  {
-    c localc = new c();
-    localc.f("\n\nmodel", cbZ + ",");
-    localc.f("opType", auE + ",");
-    localc.f("timeStamp", cca + ",");
-    localc.f("seq", ccb + ",");
-    localc.f("netWork", ccc + ",");
-    localc.f("page", ccd + ",");
-    localc.f("StatusDesc1", cce.toString() + ",");
-    localc.f("DataFlowSourceInfo", ccf.toString() + ",");
-    localc.f("DataFlowResultInfo", ccg.toString() + ",");
-    localc.f("StatusDesc2", cch.toString() + ", ");
-    String str = "bindkey: " + cbY;
-    ccm.append(str);
-    u.d("!44@/B4Tb64lLpI3jEWi8M9D5kLuAv0zb1yHk/1mym2oRR8=", "report logbuffer: " + localc.CY());
-    h.fUJ.g(12645, new Object[] { localc });
-  }
-  
-  private static a D(byte[] paramArrayOfByte)
+  private static a H(byte[] paramArrayOfByte)
   {
     if (paramArrayOfByte == null) {
       return null;
     }
-    asa localasa = new asa();
+    asn localasn = new asn();
     try
     {
-      localasa.am(paramArrayOfByte);
-      paramArrayOfByte = new a(auE, ccd);
-      cbZ = cbZ;
-      cca = cca;
-      ccb = ccb;
-      ccc = ccc;
-      cce = new StringBuffer(jLI);
-      cch = new StringBuffer(jLJ);
-      ccf = new StringBuffer(jLK);
-      ccg = new StringBuffer(jLL);
+      localasn.au(paramArrayOfByte);
+      paramArrayOfByte = new a(agr, bVS);
+      bVO = bVO;
+      bVP = bVP;
+      bVQ = bVQ;
+      bVR = bVR;
+      bVT = new StringBuffer(kkn);
+      bVW = new StringBuffer(kko);
+      bVU = new StringBuffer(kkp);
+      bVV = new StringBuffer(kkq);
       return paramArrayOfByte;
     }
     catch (Exception paramArrayOfByte)
     {
-      u.e("!44@/B4Tb64lLpI3jEWi8M9D5kLuAv0zb1yHk/1mym2oRR8=", "putIntent " + paramArrayOfByte.getMessage());
+      v.e("MicroMsg.StatisticsOplog", "putIntent " + paramArrayOfByte.getMessage());
     }
     return null;
   }
@@ -116,37 +91,37 @@ public final class a
     if (paramIntent == null) {
       return null;
     }
-    return D(paramIntent);
+    return H(paramIntent);
   }
   
-  public static a dQ(int paramInt)
+  public static a ex(int paramInt)
   {
     return new a(paramInt, 1);
   }
   
-  public static a dR(int paramInt)
+  public static a ey(int paramInt)
   {
     return new a(paramInt, 4);
   }
   
-  public static a i(Bundle paramBundle)
+  public static a k(Bundle paramBundle)
   {
     paramBundle = paramBundle.getByteArray("intent_key_StatisticsOplog");
     if (paramBundle == null) {
       return null;
     }
-    return D(paramBundle);
+    return H(paramBundle);
   }
   
-  public static a k(Intent paramIntent)
+  public static a l(Intent paramIntent)
   {
     return c(paramIntent, "intent_key_StatisticsOplog");
   }
   
-  public final boolean CR()
+  public final boolean Dc()
   {
     boolean bool2 = true;
-    int i = b.cck;
+    int i = b.bVZ;
     boolean bool1;
     if (i == 0) {
       bool1 = false;
@@ -168,195 +143,189 @@ public final class a
                 if (i != 1) {
                   break label63;
                 }
-                if (auE < 501) {
+                if (agr < 501) {
                   break;
                 }
                 bool1 = bool2;
-              } while (auE <= 700);
-              if (auE < 701) {
+              } while (agr <= 700);
+              if (agr < 701) {
                 break;
               }
               bool1 = bool2;
-            } while (auE <= 1000);
-            if ((i != 2) || (auE < 701)) {
+            } while (agr <= 1000);
+            if ((i != 2) || (agr < 701)) {
               break;
             }
             bool1 = bool2;
-          } while (auE <= 1000);
-          if ((i != 3) || (auE < 501)) {
+          } while (agr <= 1000);
+          if ((i != 3) || (agr < 501)) {
             break;
           }
           bool1 = bool2;
-        } while (auE <= 700);
+        } while (agr <= 700);
         if (i != 4) {
           break label166;
         }
-        if (auE < 701) {
+        if (agr < 701) {
           break;
         }
         bool1 = bool2;
-      } while (auE <= 1000);
-      if (auE < 501) {
+      } while (agr <= 1000);
+      if (agr < 501) {
         break;
       }
       bool1 = bool2;
-    } while (auE <= 700);
+    } while (agr <= 700);
     label166:
     return false;
   }
   
-  public final a CS()
+  public final a Dd()
   {
-    ccf = new StringBuffer();
+    bVU = new StringBuffer();
     return this;
   }
   
-  public final a CT()
+  public final a De()
   {
-    cce = new StringBuffer();
+    bVT = new StringBuffer();
     return this;
   }
   
-  public final boolean CV()
+  public final boolean Dg()
   {
-    if (!CR()) {
+    if (!Dc()) {
       return false;
     }
-    if (cbX != null) {
-      cbX.aUZ().post(new Runnable()
-      {
-        public final void run()
-        {
-          a.a(a.this);
-        }
-      });
-    }
-    for (;;)
+    e.a(new Runnable()
     {
-      return true;
-      CW();
+      public final void run()
+      {
+        a.a(a.this);
+      }
+    }, "StatisticsOplog");
+    return true;
+  }
+  
+  public final a aJ(boolean paramBoolean)
+  {
+    if (paramBoolean) {}
+    for (String str = "1";; str = "0") {
+      return jx(str);
     }
   }
   
   public final void b(Intent paramIntent, String paramString)
   {
-    byte[] arrayOfByte = vZ();
+    byte[] arrayOfByte = wb();
     if (arrayOfByte == null) {
       return;
     }
     paramIntent.putExtra(paramString, arrayOfByte);
   }
   
-  public final a bc(boolean paramBoolean)
+  public final a eA(int paramInt)
   {
-    if (paramBoolean) {}
-    for (String str = "1";; str = "0") {
-      return jf(str);
-    }
+    return jx(String.valueOf(paramInt));
   }
   
-  public final boolean dS(int paramInt)
+  public final a eB(int paramInt)
   {
-    cbY = Integer.valueOf(paramInt);
+    if (!Dc()) {
+      return this;
+    }
+    if (bVU.length() == 0)
+    {
+      bVU.append(paramInt);
+      return this;
+    }
+    bVU.append("||" + paramInt);
+    return this;
+  }
+  
+  public final boolean ez(int paramInt)
+  {
+    bVN = Integer.valueOf(paramInt);
     return true;
   }
   
-  public final a dT(int paramInt)
+  public final a jx(String paramString)
   {
-    return jf(String.valueOf(paramInt));
-  }
-  
-  public final a dU(int paramInt)
-  {
-    if (!CR()) {
+    if (!Dc()) {
       return this;
     }
-    if (ccf.length() == 0)
+    if (bVT.length() == 0)
     {
-      ccf.append(paramInt);
-      return this;
-    }
-    ccf.append("||" + paramInt);
-    return this;
-  }
-  
-  public final a jf(String paramString)
-  {
-    if (!CR()) {
-      return this;
-    }
-    if (cce.length() == 0)
-    {
-      if (ay.kz(paramString))
+      if (be.kf(paramString))
       {
-        cce.append(" ");
+        bVT.append(" ");
         return this;
       }
-      cce.append(paramString);
+      bVT.append(paramString);
       return this;
     }
-    cce.append("||" + paramString);
+    bVT.append("||" + paramString);
     return this;
   }
   
-  public final a jg(String paramString)
+  public final a jy(String paramString)
   {
-    if (!CR()) {
+    if (!Dc()) {
       return this;
     }
-    if (ccf.length() == 0)
+    if (bVU.length() == 0)
     {
-      ccf.append(paramString);
+      bVU.append(paramString);
       return this;
     }
-    ccf.append("||" + paramString);
+    bVU.append("||" + paramString);
     return this;
   }
   
-  public final a jh(String paramString)
+  public final a jz(String paramString)
   {
-    if (!CR()) {
+    if (!Dc()) {
       return this;
     }
-    if (ccg.length() == 0)
+    if (bVV.length() == 0)
     {
-      ccg.append(paramString);
+      bVV.append(paramString);
       return this;
     }
-    ccg.append("||" + paramString);
+    bVV.append("||" + paramString);
     return this;
   }
   
   public final void update()
   {
-    if (!CR()) {
+    if (!Dc()) {
       return;
     }
-    cca = System.currentTimeMillis();
-    ccb = cci.incrementAndGet();
+    bVP = System.currentTimeMillis();
+    bVQ = bVX.incrementAndGet();
   }
   
-  public final byte[] vZ()
+  public final byte[] wb()
   {
-    Object localObject = new asa();
-    auE = auE;
-    ccd = ccd;
-    cbZ = cbZ;
-    cca = cca;
-    ccb = ccb;
-    ccc = ccc;
-    jLI = cce.toString();
-    jLJ = cch.toString();
-    jLK = ccf.toString();
-    jLL = ccg.toString();
+    Object localObject = new asn();
+    agr = agr;
+    bVS = bVS;
+    bVO = bVO;
+    bVP = bVP;
+    bVQ = bVQ;
+    bVR = bVR;
+    kkn = bVT.toString();
+    kko = bVW.toString();
+    kkp = bVU.toString();
+    kkq = bVV.toString();
     try
     {
-      localObject = ((asa)localObject).toByteArray();
+      localObject = ((asn)localObject).toByteArray();
       return (byte[])localObject;
     }
     catch (Exception localException)
     {
-      u.e("!44@/B4Tb64lLpI3jEWi8M9D5kLuAv0zb1yHk/1mym2oRR8=", "putIntent " + localException.getMessage());
+      v.e("MicroMsg.StatisticsOplog", "putIntent " + localException.getMessage());
     }
     return null;
   }

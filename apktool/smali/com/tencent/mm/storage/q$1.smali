@@ -13,9 +13,19 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/h/h",
+        "<",
+        "Lcom/tencent/mm/storage/q$a;",
+        "Lcom/tencent/mm/storage/k;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic keZ:Lcom/tencent/mm/storage/q;
+.field final synthetic kFg:Lcom/tencent/mm/storage/q;
 
 
 # direct methods
@@ -24,7 +34,7 @@
 
     .prologue
     .line 165
-    iput-object p1, p0, Lcom/tencent/mm/storage/q$1;->keZ:Lcom/tencent/mm/storage/q;
+    iput-object p1, p0, Lcom/tencent/mm/storage/q$1;->kFg:Lcom/tencent/mm/storage/q;
 
     invoke-direct {p0}, Lcom/tencent/mm/sdk/h/h;-><init>()V
 
@@ -33,7 +43,7 @@
 
 
 # virtual methods
-.method protected final synthetic g(Ljava/lang/Object;Ljava/lang/Object;)V
+.method protected final synthetic k(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
 
     .prologue
@@ -42,7 +52,7 @@
 
     check-cast p2, Lcom/tencent/mm/storage/k;
 
-    iget-object v0, p0, Lcom/tencent/mm/storage/q$1;->keZ:Lcom/tencent/mm/storage/q;
+    iget-object v0, p0, Lcom/tencent/mm/storage/q$1;->kFg:Lcom/tencent/mm/storage/q;
 
     invoke-interface {p1, v0, p2}, Lcom/tencent/mm/storage/q$a;->a(Lcom/tencent/mm/storage/q;Lcom/tencent/mm/storage/k;)V
 

@@ -1,11 +1,11 @@
 package com.tencent.mm.plugin.accountsync.a;
 
 public final class c$a
-  extends Enum
+  extends Enum<a>
 {
-  public static int[] FZ()
+  public static int[] Gw()
   {
-    return (int[])coo.clone();
+    return (int[])cjC.clone();
   }
 }
 

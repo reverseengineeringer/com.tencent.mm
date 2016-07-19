@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="hy" parent="@style/hx">
+    <style name="h" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/ao</item>
+        <item name="android:activityOpenExitAnimation">@anim/j</item>
+        <item name="android:activityCloseEnterAnimation">@anim/j</item>
+        <item name="android:activityCloseExitAnimation">@anim/ap</item>
+    </style>
+    <style name="k" parent="@style/j">
         <item name="android:windowIsTranslucent">true</item>
     </style>
-    <style name="hz" parent="@android:style/Animation">
-        <item name="android:activityOpenEnterAnimation">@anim/bo</item>
-        <item name="android:activityOpenExitAnimation">@anim/bj</item>
-        <item name="android:activityCloseEnterAnimation">@anim/bj</item>
-        <item name="android:activityCloseExitAnimation">@anim/bw</item>
-    </style>
-    <style name="i4" parent="@style/hx">
+    <style name="n" parent="@style/j">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsTranslucent">true</item>
@@ -17,6 +17,6 @@
         <item name="android:windowAnimationStyle">@null</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowActionBar">false</item>
-        <item name="d1">false</item>
+        <item name="bl">false</item>
     </style>
 </resources>

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/mobile/i;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/account/mobile/i;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kyH:Lcom/tencent/mm/ui/account/mobile/i;
+.field final synthetic kXO:Lcom/tencent/mm/ui/account/mobile/i;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 495
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/i$3;->kyH:Lcom/tencent/mm/ui/account/mobile/i;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/i$3;->kXO:Lcom/tencent/mm/ui/account/mobile/i;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,13 +41,13 @@
 
     .prologue
     .line 499
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/i$3;->kyH:Lcom/tencent/mm/ui/account/mobile/i;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/i$3;->kXO:Lcom/tencent/mm/ui/account/mobile/i;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kqh:Lcom/tencent/mm/ui/applet/SecurityImage;
+    iput-object v1, v0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->kPm:Lcom/tencent/mm/ui/applet/SecurityImage;
 
     .line 500
     return-void

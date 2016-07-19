@@ -21,11 +21,21 @@
 
 
 # instance fields
-.field volatile bwu:Z
+.field volatile blH:Z
 
-.field bwv:Lcom/tencent/mm/jni/platformcomm/b$a;
+.field blI:Lcom/tencent/mm/jni/platformcomm/b$a;
 
-.field bww:Ljava/util/Map;
+.field blJ:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/jni/platformcomm/b$b$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -39,26 +49,26 @@
     .line 67
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/jni/platformcomm/b$b;->bwu:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/jni/platformcomm/b$b;->blH:Z
 
     .line 68
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/jni/platformcomm/b$b;->bwv:Lcom/tencent/mm/jni/platformcomm/b$a;
+    iput-object v0, p0, Lcom/tencent/mm/jni/platformcomm/b$b;->blI:Lcom/tencent/mm/jni/platformcomm/b$a;
 
     .line 69
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/jni/platformcomm/b$b;->bww:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/jni/platformcomm/b$b;->blJ:Ljava/util/Map;
 
     .line 82
     new-instance v0, Lcom/tencent/mm/jni/platformcomm/b$a;
 
     invoke-direct {v0, p1}, Lcom/tencent/mm/jni/platformcomm/b$a;-><init>(Lcom/tencent/mm/jni/platformcomm/WakerLock;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/jni/platformcomm/b$b;->bwv:Lcom/tencent/mm/jni/platformcomm/b$a;
+    iput-object v0, p0, Lcom/tencent/mm/jni/platformcomm/b$b;->blI:Lcom/tencent/mm/jni/platformcomm/b$a;
 
     .line 83
     return-void

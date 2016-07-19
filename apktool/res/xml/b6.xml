@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto">
+    <Preference android:layout="@layout/yk" android:title="@string/cdc" android:key="settings_chatting_bg_select_bg" />
+    <Preference android:layout="@layout/yk" android:title="@string/cdd" android:key="settings_chatting_bg_select_from_album" />
+    <Preference android:layout="@layout/yk" android:title="@string/cde" android:key="settings_chatting_bg_take_photo" />
+    <Preference android:layout="@layout/yk" android:title="@string/cdb" android:key="settings_chatting_bg_apply_to_all" />
+</PreferenceScreen>

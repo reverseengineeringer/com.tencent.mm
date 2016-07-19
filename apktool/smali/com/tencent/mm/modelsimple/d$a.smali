@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract h(Landroid/os/Bundle;)V
+.method public abstract j(Landroid/os/Bundle;)V
 .end method

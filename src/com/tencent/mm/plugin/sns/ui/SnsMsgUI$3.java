@@ -10,7 +10,7 @@ final class SnsMsgUI$3
   
   public final void d(MenuItem paramMenuItem, int paramInt)
   {
-    SnsMsgUI.a(hfU, SnsMsgUI.k(hfU));
+    SnsMsgUI.a(huL, SnsMsgUI.k(huL));
   }
 }
 

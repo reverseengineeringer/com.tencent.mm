@@ -10,7 +10,7 @@ public final class c$1
   
   public final void onAnimationEnd()
   {
-    iMg.iMc.dismiss();
+    jjd.jiZ.dismiss();
   }
 }
 

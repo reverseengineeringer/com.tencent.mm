@@ -5,21 +5,22 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 import android.widget.TextView.BufferType;
 import com.tencent.mm.plugin.sns.data.a;
-import com.tencent.mm.plugin.sns.h.k;
 import com.tencent.mm.pluginsdk.ui.d.e;
 import com.tencent.mm.pluginsdk.ui.d.f;
 import com.tencent.mm.pluginsdk.ui.d.j;
+import com.tencent.mm.pluginsdk.ui.d.j.a;
 
 public class AsyncTextView
   extends TextView
   implements Runnable
 {
-  public String ajh;
+  public String UX;
+  public int cTv;
   private Context context;
-  public int eLV;
-  public k gPk;
-  public an gRM;
-  public String gWr;
+  public String hjN;
+  public boolean hjO;
+  public String hjP;
+  public j.a hjQ;
   
   public AsyncTextView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -39,21 +40,21 @@ public class AsyncTextView
     if ((getTag() instanceof String))
     {
       localObject1 = (String)getTag();
-      if ((localObject1 != null) && (((String)localObject1).equals(ajh))) {
+      if ((localObject1 != null) && (((String)localObject1).equals(UX))) {
         return;
       }
     }
-    if (eLV == 11) {}
+    if (cTv == 11) {}
     for (int i = 3;; i = 2)
     {
-      localObject1 = new j(new a(gPk.lN(32), ajh, gPk.aAl(), 1), gRM.hcw, i);
+      localObject1 = new j(new a(hjO, UX, hjP, 1), hjQ, i);
       Object localObject2 = getContext();
-      String str = gWr;
+      String str = hjN;
       getTextSize();
       localObject2 = new f(e.b((Context)localObject2, str, i));
-      ((f)localObject2).e(localObject1, gWr);
+      ((f)localObject2).e(localObject1, hjN);
       setText((CharSequence)localObject2, TextView.BufferType.SPANNABLE);
-      setTag(ajh);
+      setTag(UX);
       return;
     }
   }

@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.contact;
 
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.ui.base.l;
 import com.tencent.mm.ui.base.n.c;
 
@@ -11,12 +11,12 @@ final class ContactRemarkImagePreviewUI$1$1
   
   public final void a(l paraml)
   {
-    if (!ContactRemarkImagePreviewUI.a(ljq.ljp)) {
-      paraml.b(0, ljq.ljp.getString(2131430890));
+    if (!ContactRemarkImagePreviewUI.a(lJB.lJA)) {
+      paraml.b(0, lJB.lJA.getString(2131230884));
     }
-    paraml.b(1, ljq.ljp.getString(2131427823));
-    if (c.yf("favorite")) {
-      paraml.b(2, ljq.ljp.getString(2131431054));
+    paraml.b(1, lJB.lJA.getString(2131234713));
+    if (c.zM("favorite")) {
+      paraml.b(2, lJB.lJA.getString(2131234160));
     }
   }
 }

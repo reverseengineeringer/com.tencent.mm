@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic ktF:Lcom/tencent/mm/ui/account/LoginIndepPass$3;
+.field final synthetic kSE:Lcom/tencent/mm/modelsimple/r;
 
-.field final synthetic ktw:Lcom/tencent/mm/modelsimple/t;
+.field final synthetic kSM:Lcom/tencent/mm/ui/account/LoginIndepPass$3;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/account/LoginIndepPass$3;Lcom/tencent/mm/modelsimple/t;)V
+.method constructor <init>(Lcom/tencent/mm/ui/account/LoginIndepPass$3;Lcom/tencent/mm/modelsimple/r;)V
     .locals 0
 
     .prologue
-    .line 445
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$3$1;->ktF:Lcom/tencent/mm/ui/account/LoginIndepPass$3;
+    .line 423
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$3$1;->kSM:Lcom/tencent/mm/ui/account/LoginIndepPass$3;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$3$1;->ktw:Lcom/tencent/mm/modelsimple/t;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$3$1;->kSE:Lcom/tencent/mm/modelsimple/r;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,28 +44,28 @@
     .locals 3
 
     .prologue
-    .line 449
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 427
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$3$1;->ktw:Lcom/tencent/mm/modelsimple/t;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$3$1;->kSE:Lcom/tencent/mm/modelsimple/r;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
-    .line 450
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 428
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0x2bd
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$3$1;->ktF:Lcom/tencent/mm/ui/account/LoginIndepPass$3;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$3$1;->kSM:Lcom/tencent/mm/ui/account/LoginIndepPass$3;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/account/LoginIndepPass$3;->ktE:Lcom/tencent/mm/ui/account/LoginIndepPass;
+    iget-object v2, v2, Lcom/tencent/mm/ui/account/LoginIndepPass$3;->kSL:Lcom/tencent/mm/ui/account/LoginIndepPass;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
-    .line 451
+    .line 429
     return-void
 .end method

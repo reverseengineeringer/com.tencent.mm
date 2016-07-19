@@ -1,36 +1,55 @@
 package ct;
 
-import java.io.Serializable;
+import android.text.TextUtils;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public final class z
-  implements Serializable
 {
-  public int a;
-  public int b;
+  public boolean a = false;
+  public boolean b = true;
+  public String c = null;
+  public int[] d = null;
+  public String e = "";
+  public String f = null;
+  public boolean g = true;
+  public boolean h = true;
+  public Map i = new HashMap();
+  public byte[] j = null;
+  public long k = 0L;
+  public int l = 32768;
+  public int m = 10000;
+  public int n = 3;
+  public boolean o = true;
+  public String p = "";
+  private List q = new ArrayList();
+  private volatile boolean r = false;
   
-  public z(int paramInt)
+  public z(String paramString, int[] paramArrayOfInt)
   {
-    switch (paramInt)
+    c = paramString;
+    d = paramArrayOfInt;
+    if ((d != null) && (d[0] != -1)) {}
+    for (e = (c + ":" + d[0]);; e = c)
     {
-    default: 
-      a = 20;
-      b = 20;
-      return;
-    case 1: 
-      a = 20;
-      b = 20;
-      return;
-    case 4: 
-      a = 20;
-      b = 20;
-      return;
-    case 3: 
-      a = 20;
-      b = 20;
+      p = ba.b(c);
       return;
     }
-    a = 30;
-    b = 20;
+  }
+  
+  public final void a(ac paramac)
+  {
+    q.add(paramac);
+  }
+  
+  public final void a(String paramString1, String paramString2)
+  {
+    if ((TextUtils.isEmpty(paramString1)) || (TextUtils.isEmpty(paramString2))) {
+      return;
+    }
+    i.put(paramString1, paramString2);
   }
 }
 

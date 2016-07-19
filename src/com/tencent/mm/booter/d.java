@@ -12,19 +12,16 @@ import android.text.TextUtils;
 import android.util.SparseArray;
 import android.widget.Toast;
 import com.tencent.mm.a.g;
-import com.tencent.mm.model.v;
-import com.tencent.mm.network.aa;
-import com.tencent.mm.network.s;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.model.u;
+import com.tencent.mm.network.b;
 import com.tencent.mm.pointers.PBool;
 import com.tencent.mm.pointers.PString;
-import com.tencent.mm.protocal.b.aeo;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.ak;
-import com.tencent.mm.sdk.platformtools.ak.a;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.protocal.b.afj;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.ah;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.an;
+import com.tencent.mm.sdk.platformtools.an.a;
 import java.io.File;
 import java.io.FileDescriptor;
 import java.io.FileInputStream;
@@ -37,26 +34,26 @@ import java.util.List;
 import org.json.JSONObject;
 
 public final class d
-  implements com.tencent.mm.model.u
+  implements u
 {
-  private static final String[] bmr = { "#", "?", "&" };
-  private String blU;
-  private String blV = "";
-  private String blW = "";
-  private String blX = "";
-  private MediaPlayer blY;
-  private volatile int blZ = 0;
-  private RandomAccessFile bma;
-  private long bmb = 0L;
-  private s bmc;
-  private InputStream bmd;
-  private FileInputStream bme;
-  private volatile boolean bmf;
-  private volatile boolean bmg = false;
-  private com.tencent.mm.model.d bmh;
-  private af bmi = new af(Looper.getMainLooper(), new af.a()
+  private static final String[] aZX = { "#", "?", "&" };
+  private String aZA;
+  private String aZB = "";
+  private String aZC = "";
+  private String aZD = "";
+  private MediaPlayer aZE;
+  private volatile int aZF = 0;
+  private RandomAccessFile aZG;
+  private long aZH = 0L;
+  private com.tencent.mm.network.s aZI;
+  private InputStream aZJ;
+  private FileInputStream aZK;
+  private volatile boolean aZL;
+  private volatile boolean aZM = false;
+  private com.tencent.mm.model.d aZN;
+  private ah aZO = new ah(Looper.getMainLooper(), new ah.a()
   {
-    public final boolean lj()
+    public final boolean jK()
     {
       try
       {
@@ -67,48 +64,48 @@ public final class d
               d.a(d.this, d.a(d.this).getCurrentPosition());
             }
             Iterator localIterator = d.c(d.this).iterator();
-            v localv;
+            com.tencent.mm.model.v localv;
             do
             {
               if (!localIterator.hasNext()) {
                 break;
               }
-              localv = (v)localIterator.next();
+              localv = (com.tencent.mm.model.v)localIterator.next();
             } while (localv == null);
-            localv.J(d.a(d.this).getCurrentPosition(), d.a(d.this).getDuration());
+            localv.L(d.a(d.this).getCurrentPosition(), d.a(d.this).getDuration());
           }
         }
         return false;
       }
       catch (Exception localException)
       {
-        com.tencent.mm.sdk.platformtools.u.e("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", localException.getMessage());
+        com.tencent.mm.sdk.platformtools.v.e("MicroMsg.DownloadPlayer", localException.getMessage());
       }
       return true;
     }
   }, true);
-  private List bmj = new ArrayList();
-  private long bmk = 0L;
-  private boolean bml = false;
-  private ak bmm = new ak();
-  private boolean bmn = false;
-  private boolean bmo = false;
-  SparseArray bmp = new SparseArray();
-  private a bmq;
-  private String bms = null;
-  private String bmt = null;
-  private af bmu;
-  int bmv = -1;
+  private List<com.tencent.mm.model.v> aZP = new ArrayList();
+  private long aZQ = 0L;
+  private boolean aZR = false;
+  private an aZS = new an();
+  private boolean aZT = false;
+  private boolean aZU = false;
+  SparseArray<afj> aZV = new SparseArray();
+  private a aZW;
+  private String aZY = null;
+  private String aZZ = null;
+  private ah baa;
+  int bab = -1;
   private Context context;
   volatile int currentIndex = -1;
   private final Object lock = new Object();
   
   public d()
   {
-    bmm.dJ(y.getContext());
-    bmm.a(new ak.a()
+    aZS.dK(com.tencent.mm.sdk.platformtools.aa.getContext());
+    aZS.a(new an.a()
     {
-      public final void bx(int paramAnonymousInt)
+      public final void bP(int paramAnonymousInt)
       {
         switch (paramAnonymousInt)
         {
@@ -120,59 +117,40 @@ public final class d
             return;
           } while (!d.e(d.this));
           d.a(d.this, false);
-          mB();
+          kO();
           return;
-        } while (!mA());
+        } while (!kN());
         d.a(d.this, true);
         pause();
       }
     });
-    bmh = new com.tencent.mm.model.d();
-    bmq = new a((byte)0);
+    aZN = new com.tencent.mm.model.d();
+    aZW = new a((byte)0);
   }
   
-  private static int a(char paramChar)
+  private static afj a(afj paramafj, String paramString1, String paramString2)
   {
-    int j = 0;
-    int i;
-    if ((paramChar >= '1') && (paramChar <= '9')) {
-      i = paramChar - '0';
-    }
-    do
-    {
-      do
-      {
-        return i;
-        i = j;
-      } while (paramChar < 'A');
-      i = j;
-    } while (paramChar > 'F');
-    return paramChar - 'A' + 10;
-  }
-  
-  private static aeo a(aeo paramaeo, String paramString1, String paramString2)
-  {
-    aeo localaeo = new aeo();
+    afj localafj = new afj();
     try
     {
-      localaeo.am(paramaeo.toByteArray());
-      jBB = paramString1;
-      iWi = paramString2;
-      return localaeo;
+      localafj.au(paramafj.toByteArray());
+      kap = paramString1;
+      jtJ = paramString2;
+      return localafj;
     }
-    catch (Exception paramaeo) {}
+    catch (Exception paramafj) {}
     return null;
   }
   
   private String a(String paramString1, String paramString2, boolean paramBoolean, PBool paramPBool)
   {
-    if ((paramBoolean) || (t.kz(paramString2))) {}
-    for (String str = paramString1; t.kz(str); str = paramString2) {
+    if ((paramBoolean) || (com.tencent.mm.platformtools.s.kf(paramString2))) {}
+    for (String str = paramString1; com.tencent.mm.platformtools.s.kf(str); str = paramString2) {
       return str;
     }
     PString localPString = new PString();
-    com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "url[%s], lowBandUrl[%s], isWifi[%B]", new Object[] { paramString1, paramString2, Boolean.valueOf(paramBoolean) });
-    paramString1 = cB(str);
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "url[%s], lowBandUrl[%s], isWifi[%B]", new Object[] { paramString1, paramString2, Boolean.valueOf(paramBoolean) });
+    paramString1 = cG(str);
     if (paramString1 != null) {
       if (a(paramString1, paramBoolean, localPString)) {
         value = paramBoolean;
@@ -191,8 +169,8 @@ public final class d
   
   private void a(final FileDescriptor paramFileDescriptor)
   {
-    com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "start play");
-    ab.j(new Runnable()
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "start play");
+    ad.k(new Runnable()
     {
       public final void run()
       {
@@ -207,9 +185,9 @@ public final class d
     {
       try
       {
-        com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "begin down load file job");
-        bmb = 0L;
-        bmf = false;
+        com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "begin down load file job");
+        aZH = 0L;
+        aZL = false;
         localFile = new File(paramString2);
         localObject = new File(paramString3);
         if (!localFile.exists())
@@ -219,7 +197,7 @@ public final class d
             ((File)localObject).delete();
           }
         }
-        com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "file.name[%s], file.length[%d], configFile.exists[%B], configFile.length[%d]", new Object[] { localFile.getAbsolutePath(), Long.valueOf(localFile.length()), Boolean.valueOf(((File)localObject).exists()), Long.valueOf(((File)localObject).length()) });
+        com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "file.name[%s], file.length[%d], configFile.exists[%B], configFile.length[%d]", new Object[] { localFile.getAbsolutePath(), Long.valueOf(localFile.length()), Boolean.valueOf(((File)localObject).exists()), Long.valueOf(((File)localObject).length()) });
         if ((localFile.length() > 0L) && (((File)localObject).exists()))
         {
           l1 = ((File)localObject).length();
@@ -230,12 +208,12 @@ public final class d
       {
         Object localObject;
         byte[] arrayOfByte;
-        l1 = t.ao(bmk);
-        com.tencent.mm.sdk.platformtools.u.e("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "delt:" + l1);
+        l1 = com.tencent.mm.platformtools.s.av(aZQ);
+        com.tencent.mm.sdk.platformtools.v.e("MicroMsg.DownloadPlayer", "delt:" + l1);
         if (l1 <= 2000L) {
-          break label1359;
+          break label1363;
         }
-        ??? = bmj.iterator();
+        ??? = aZP.iterator();
         if (!???.hasNext()) {
           continue;
         }
@@ -249,22 +227,22 @@ public final class d
         localObject = new FileInputStream((File)localObject);
         ((FileInputStream)localObject).read(arrayOfByte);
         ((FileInputStream)localObject).close();
-        bmb = Long.parseLong(new String(arrayOfByte));
-        com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "get download file length[%d]", new Object[] { Long.valueOf(bmb) });
+        aZH = Long.parseLong(new String(arrayOfByte));
+        com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "get download file length[%d]", new Object[] { Long.valueOf(aZH) });
         try
         {
-          bmc = com.tencent.mm.network.b.a(paramString4, null);
-          bmc.setRequestMethod("GET");
-          bmc.setConnectTimeout(25000);
-          bmc.setRequestProperty("Accept-Encoding", "gzip, deflate");
-          if (bmb > 0L)
+          aZI = b.a(paramString4, null);
+          aZI.setRequestMethod("GET");
+          aZI.setConnectTimeout(25000);
+          aZI.setRequestProperty("Accept-Encoding", "gzip, deflate");
+          if (aZH > 0L)
           {
-            bmc.setRequestProperty("range", "bytes=" + bmb + "-");
-            com.tencent.mm.sdk.platformtools.u.d("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "range :" + bmb);
+            aZI.setRequestProperty("range", "bytes=" + aZH + "-");
+            com.tencent.mm.sdk.platformtools.v.d("MicroMsg.DownloadPlayer", "range :" + aZH);
           }
           if (!paramBoolean)
           {
-            if (!t.kz(paramString4)) {
+            if (!com.tencent.mm.platformtools.s.kf(paramString4)) {
               break label636;
             }
             paramBoolean = false;
@@ -275,64 +253,64 @@ public final class d
           release();
           synchronized (lock)
           {
-            ab.j(new Runnable()
+            ad.k(new Runnable()
             {
               public final void run()
               {
-                d.d(d.this).aUF();
+                d.d(d.this).aZJ();
                 Iterator localIterator = d.c(d.this).iterator();
                 while (localIterator.hasNext())
                 {
-                  v localv = (v)localIterator.next();
+                  com.tencent.mm.model.v localv = (com.tencent.mm.model.v)localIterator.next();
                   if (localv != null)
                   {
-                    com.tencent.mm.sdk.platformtools.u.e("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "on error call back: %s", new Object[] { localv.toString() });
+                    com.tencent.mm.sdk.platformtools.v.e("MicroMsg.DownloadPlayer", "on error call back: %s", new Object[] { localv.toString() });
                     localv.onError();
                   }
                 }
-                Toast.makeText(y.getContext(), y.getContext().getString(2131427811), 1).show();
+                Toast.makeText(com.tencent.mm.sdk.platformtools.aa.getContext(), com.tencent.mm.sdk.platformtools.aa.getContext().getString(2131233958), 1).show();
               }
             });
           }
           paramBoolean = Uri.parse(paramString4).getHost().contains(".qq.com");
-          com.tencent.mm.sdk.platformtools.u.w("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "url %s match ? %B", new Object[] { paramString4, Boolean.valueOf(paramBoolean) });
-          break label1367;
-          com.tencent.mm.sdk.platformtools.u.d("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "user-agent: " + bmc.getRequestProperty("user-agent"));
-          com.tencent.mm.sdk.platformtools.u.d("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "content-range: " + bmc.getHeaderField("Content-Range"));
-          if ((bmb <= 0L) || (mD())) {
+          com.tencent.mm.sdk.platformtools.v.w("MicroMsg.DownloadPlayer", "url %s match ? %B", new Object[] { paramString4, Boolean.valueOf(paramBoolean) });
+          break label1371;
+          com.tencent.mm.sdk.platformtools.v.d("MicroMsg.DownloadPlayer", "user-agent: " + aZI.getRequestProperty("user-agent"));
+          com.tencent.mm.sdk.platformtools.v.d("MicroMsg.DownloadPlayer", "content-range: " + aZI.getHeaderField("Content-Range"));
+          if ((aZH <= 0L) || (kQ())) {
             break label807;
           }
-          com.tencent.mm.sdk.platformtools.u.w("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "not continue download");
+          com.tencent.mm.sdk.platformtools.v.w("MicroMsg.DownloadPlayer", "not continue download");
           localFile.delete();
           localFile.createNewFile();
-          bmb = 0L;
+          aZH = 0L;
           paramString4 = new File(paramString3);
           if (!paramString4.exists()) {
             break label807;
           }
           paramString4.delete();
-          bma = new RandomAccessFile(paramString2, "rws");
-          l1 = bmb;
+          aZG = new RandomAccessFile(paramString2, "rws");
+          l1 = aZH;
           long l2 = l1 + 10000000L;
           try
           {
-            l3 = Long.parseLong(bmc.getHeaderField("Content-Length"));
+            l3 = Long.parseLong(aZI.getHeaderField("Content-Length"));
             l1 = l2;
             if (l3 != 0L)
             {
-              l1 = bmb;
+              l1 = aZH;
               l1 += l3;
             }
-            bma.setLength(l1);
-            bma.seek(bmb);
-            bmd = bmc.getInputStream();
+            aZG.setLength(l1);
+            aZG.seek(aZH);
+            aZJ = aZI.getInputStream();
             paramString4 = new byte['က'];
             i = 0;
             l2 = 0L;
-            bmo = true;
+            aZU = true;
             for (;;)
             {
-              int k = bmd.read(paramString4, i, 4096 - i);
+              int k = aZJ.read(paramString4, i, 4096 - i);
               j = i;
               if (k == -1) {
                 break label1185;
@@ -350,89 +328,90 @@ public final class d
             {
               for (;;)
               {
-                com.tencent.mm.sdk.platformtools.u.e("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "Long.parseLong(Content-Length)" + paramString4.toString());
+                com.tencent.mm.sdk.platformtools.v.e("MicroMsg.DownloadPlayer", "Long.parseLong(Content-Length)" + paramString4.toString());
                 l1 = l2;
               }
               j = 0;
               int i = 0;
-              bma.write(paramString4, 0, 4096);
-              bmb += 4096L;
+              aZG.write(paramString4, 0, 4096);
+              aZH += 4096L;
               new File(paramString2);
-              cy(paramString3);
+              cD(paramString3);
               long l3 = l2;
-              if (bmo)
+              if (aZU)
               {
                 l3 = l2;
-                if (bmb > 100000L + l2)
+                if (aZH > 100000L + l2)
                 {
-                  com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "begin play");
-                  bmo = false;
-                  l3 = bmb;
-                  bme = new FileInputStream(new File(paramString2));
-                  a(bme.getFD());
+                  com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "begin play");
+                  aZU = false;
+                  l3 = aZH;
+                  aZK = new FileInputStream(new File(paramString2));
+                  a(aZK.getFD());
                 }
               }
-              if (bmb > l1) {
-                bma.setLength(bmb);
+              if (aZH > l1) {
+                aZG.setLength(aZH);
               }
               l2 = l3;
-            } while (!bmf);
-            if (bmd.read(paramString4) == -1)
+            } while (!aZL);
+            if (aZJ.read(paramString4) == -1)
             {
-              com.tencent.mm.sdk.platformtools.u.w("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "want to stop download, but it just finish");
-              bma.write(paramString4, 0, j);
-              bmb += j;
-              com.tencent.mm.sdk.platformtools.u.d("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "down completed : " + ??? + " downLoadLen: " + bmb);
-              bmc.cjv.disconnect();
-              bmd.close();
-              bmc = null;
-              bmd = null;
-              if ((bmb > 0L) && (bmb != l1)) {
-                bma.setLength(bmb);
+              com.tencent.mm.sdk.platformtools.v.w("MicroMsg.DownloadPlayer", "want to stop download, but it just finish");
+              aZG.write(paramString4, 0, j);
+              l2 = aZH;
+              aZH = (j + l2);
+              com.tencent.mm.sdk.platformtools.v.d("MicroMsg.DownloadPlayer", "down completed : " + ??? + " downLoadLen: " + aZH);
+              aZI.ceM.disconnect();
+              aZJ.close();
+              aZI = null;
+              aZJ = null;
+              if ((aZH > 0L) && (aZH != l1)) {
+                aZG.setLength(aZH);
               }
-              if (bmo)
+              if (aZU)
               {
-                bmo = false;
-                a(bma.getFD());
+                aZU = false;
+                a(aZG.getFD());
               }
-              bma.close();
-              bma = null;
-              com.tencent.mm.a.e.f("", paramString2, ???);
-              com.tencent.mm.loader.stub.b.deleteFile(paramString3);
+              aZG.close();
+              aZG = null;
+              com.tencent.mm.a.e.h("", paramString2, ???);
+              com.tencent.mm.a.e.deleteFile(paramString3);
               continue;
             }
-            cz(paramString2);
+            cE(paramString2);
           }
           continue;
-          bmk = 0L;
+          aZQ = 0L;
           continue;
           if (!paramBoolean) {
             continue;
           }
           continue;
         }
-        bmc.setRequestProperty("Cookie", "qqmusic_fromtag=46;qqmusic_uin=1234567;qqmusic_key=;");
-        bmc.setRequestProperty("referer", "stream12.qqmusic.qq.com");
-        bmc.setRequestProperty("user-agent", System.getProperty("http.agent") + " Built-in music  MicroMessenger/" + ao(context));
-        if ((bmc.getResponseCode() != 200) && (bmc.getResponseCode() != 206))
+        aZI.setRequestProperty("Cookie", "qqmusic_fromtag=46;qqmusic_uin=1234567;qqmusic_key=;");
+        aZI.setRequestProperty("referer", "stream12.qqmusic.qq.com");
+        aZI.setRequestProperty("user-agent", System.getProperty("http.agent") + " Built-in music  MicroMessenger/" + al(context));
+        if ((aZI.getResponseCode() != 200) && (aZI.getResponseCode() != 206))
         {
-          com.tencent.mm.sdk.platformtools.u.e("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "http req error " + bmc.getResponseCode());
-          ab.j(new Runnable()
+          com.tencent.mm.sdk.platformtools.v.e("MicroMsg.DownloadPlayer", "http req error " + aZI.getResponseCode());
+          ad.k(new Runnable()
           {
             public final void run()
             {
-              d.d(d.this).aUF();
+              d.d(d.this).aZJ();
               Iterator localIterator = d.c(d.this).iterator();
               while (localIterator.hasNext())
               {
-                v localv = (v)localIterator.next();
+                com.tencent.mm.model.v localv = (com.tencent.mm.model.v)localIterator.next();
                 if (localv != null)
                 {
-                  com.tencent.mm.sdk.platformtools.u.e("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "on error call back: %s", new Object[] { localv.toString() });
+                  com.tencent.mm.sdk.platformtools.v.e("MicroMsg.DownloadPlayer", "on error call back: %s", new Object[] { localv.toString() });
                   localv.onError();
                 }
               }
-              Toast.makeText(y.getContext(), y.getContext().getString(2131427811), 1).show();
+              Toast.makeText(com.tencent.mm.sdk.platformtools.aa.getContext(), com.tencent.mm.sdk.platformtools.aa.getContext().getString(2131233958), 1).show();
             }
           });
           return;
@@ -440,14 +419,14 @@ public final class d
       }
       catch (Exception localException)
       {
-        com.tencent.mm.sdk.platformtools.u.e("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "read configFile err:" + localException.toString());
+        com.tencent.mm.sdk.platformtools.v.e("MicroMsg.DownloadPlayer", "read configFile err:" + localException.toString());
       }
     }
   }
   
   private static boolean a(String paramString, boolean paramBoolean, PString paramPString)
   {
-    Object localObject2 = new String(cA(paramString));
+    Object localObject2 = new String(cF(paramString));
     int i = ((String)localObject2).indexOf("{");
     Object localObject1 = localObject2;
     if (i != -1) {
@@ -458,7 +437,7 @@ public final class d
       localObject2 = new JSONObject((String)localObject1);
       localObject1 = ((JSONObject)localObject2).getString("song_WapLiveURL");
       localObject2 = ((JSONObject)localObject2).getString("song_WifiURL");
-      com.tencent.mm.sdk.platformtools.u.d("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "waplive: " + (String)localObject1 + "  wifi:" + (String)localObject2);
+      com.tencent.mm.sdk.platformtools.v.d("MicroMsg.DownloadPlayer", "waplive: " + (String)localObject1 + "  wifi:" + (String)localObject2);
       if (paramBoolean) {
         localObject1 = localObject2;
       }
@@ -475,10 +454,10 @@ public final class d
     }
   }
   
-  private static String ao(Context paramContext)
+  private static String al(Context paramContext)
   {
     String str = "";
-    Object localObject2 = y.getPackageName();
+    Object localObject2 = com.tencent.mm.sdk.platformtools.aa.getPackageName();
     if (localObject2 == null) {}
     Object localObject1;
     for (;;)
@@ -504,12 +483,12 @@ public final class d
   
   private boolean b(FileDescriptor paramFileDescriptor)
   {
-    com.tencent.mm.sdk.platformtools.u.d("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "start play img");
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.DownloadPlayer", "start play img");
     try
     {
-      blY = new MediaPlayer();
-      blY.setAudioStreamType(3);
-      blY.setOnCompletionListener(new MediaPlayer.OnCompletionListener()
+      aZE = new MediaPlayer();
+      aZE.setAudioStreamType(3);
+      aZE.setOnCompletionListener(new MediaPlayer.OnCompletionListener()
       {
         public final void onCompletion(MediaPlayer arg1)
         {
@@ -517,68 +496,199 @@ public final class d
           do
           {
             return;
-            com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "completed currentPoint: %d", new Object[] { Integer.valueOf(d.i(d.this)) });
+            com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "completed currentPoint: %d", new Object[] { Integer.valueOf(d.i(d.this)) });
             d.a(d.this).release();
             d.j(d.this);
             if (d.k(d.this) == null)
             {
-              mL();
-              d.d(d.this).aUF();
+              kY();
+              d.d(d.this).aZJ();
             }
             synchronized (d.b(d.this))
             {
               Iterator localIterator = d.c(d.this).iterator();
               while (localIterator.hasNext())
               {
-                v localv = (v)localIterator.next();
+                com.tencent.mm.model.v localv = (com.tencent.mm.model.v)localIterator.next();
                 if ((localv != null) && (d.k(d.this) == null))
                 {
-                  com.tencent.mm.sdk.platformtools.u.d("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "on finish call back: %s", new Object[] { localv.toString() });
+                  com.tencent.mm.sdk.platformtools.v.d("MicroMsg.DownloadPlayer", "on finish call back: %s", new Object[] { localv.toString() });
                   localv.onFinish();
                 }
               }
             }
             d.l(d.this);
           } while ((!d.m(d.this)) || (d.k(d.this) != null));
-          com.tencent.mm.sdk.platformtools.u.d("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "NEXT MUSIC PLAY.");
+          com.tencent.mm.sdk.platformtools.v.d("MicroMsg.DownloadPlayer", "NEXT MUSIC PLAY.");
           ??? = d.this;
           currentIndex += 1;
-          if (bmv > 0)
+          if (bab > 0)
           {
-            if (currentIndex >= bmp.size()) {
+            if (currentIndex >= aZV.size()) {
               currentIndex = 0;
             }
-            if (currentIndex == bmv)
+            if (currentIndex == bab)
             {
-              bmv = -1;
+              bab = -1;
               return;
             }
           }
-          if (???.mF() == null)
+          if (???.kS() == null)
           {
             currentIndex -= 1;
             return;
           }
-          ???.mK();
+          ???.kX();
         }
       });
-      if (blY != null)
+      if (aZE != null)
       {
-        blY.setDataSource(paramFileDescriptor);
-        blY.prepare();
-        blY.seekTo(blZ);
+        aZE.setDataSource(paramFileDescriptor);
+        aZE.prepare();
+        aZE.seekTo(aZF);
       }
-      if (blY != null) {
-        mB();
+      if (aZE != null) {
+        kO();
       }
-      bml = true;
+      aZR = true;
       return true;
     }
     catch (Exception paramFileDescriptor) {}
     return false;
   }
   
-  private static byte[] cA(String paramString)
+  private static int c(char paramChar)
+  {
+    int j = 0;
+    int i;
+    if ((paramChar >= '1') && (paramChar <= '9')) {
+      i = paramChar - '0';
+    }
+    do
+    {
+      do
+      {
+        return i;
+        i = j;
+      } while (paramChar < 'A');
+      i = j;
+    } while (paramChar > 'F');
+    return paramChar - 'A' + 10;
+  }
+  
+  private boolean cC(String paramString)
+  {
+    if (com.tencent.mm.platformtools.s.kf(paramString)) {
+      com.tencent.mm.sdk.platformtools.v.e("MicroMsg.DownloadPlayer", "try to play url, but url is null");
+    }
+    for (;;)
+    {
+      return false;
+      File localFile = new File(aZA + g.j(paramString.getBytes()));
+      if (localFile.exists())
+      {
+        com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "try play url exist! %s", new Object[] { paramString });
+        try
+        {
+          aZK = new FileInputStream(localFile);
+          boolean bool = b(aZK.getFD());
+          if (bool) {
+            return true;
+          }
+        }
+        catch (Exception paramString) {}
+      }
+    }
+    return false;
+  }
+  
+  /* Error */
+  private void cD(String paramString)
+  {
+    // Byte code:
+    //   0: aload_0
+    //   1: monitorenter
+    //   2: aload_0
+    //   3: getfield 108	com/tencent/mm/booter/d:aZH	J
+    //   6: lstore_2
+    //   7: lload_2
+    //   8: lconst_0
+    //   9: lcmp
+    //   10: ifne +6 -> 16
+    //   13: aload_0
+    //   14: monitorexit
+    //   15: return
+    //   16: new 672	java/io/FileOutputStream
+    //   19: dup
+    //   20: aload_1
+    //   21: invokespecial 673	java/io/FileOutputStream:<init>	(Ljava/lang/String;)V
+    //   24: astore_1
+    //   25: aload_1
+    //   26: new 364	java/lang/StringBuilder
+    //   29: dup
+    //   30: invokespecial 395	java/lang/StringBuilder:<init>	()V
+    //   33: aload_0
+    //   34: getfield 108	com/tencent/mm/booter/d:aZH	J
+    //   37: invokevirtual 371	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
+    //   40: invokevirtual 379	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   43: invokevirtual 662	java/lang/String:getBytes	()[B
+    //   46: invokevirtual 675	java/io/FileOutputStream:write	([B)V
+    //   49: aload_1
+    //   50: invokevirtual 678	java/io/FileOutputStream:flush	()V
+    //   53: aload_1
+    //   54: invokevirtual 679	java/io/FileOutputStream:close	()V
+    //   57: goto -44 -> 13
+    //   60: astore_1
+    //   61: aload_0
+    //   62: monitorexit
+    //   63: aload_1
+    //   64: athrow
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	65	0	this	d
+    //   0	65	1	paramString	String
+    //   6	2	2	l	long
+    // Exception table:
+    //   from	to	target	type
+    //   2	7	60	finally
+    //   16	57	60	finally
+  }
+  
+  private void cE(String paramString)
+  {
+    try
+    {
+      com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "stopDownLoad");
+      try
+      {
+        if (aZI != null)
+        {
+          aZI.ceM.disconnect();
+          aZJ.close();
+        }
+        if (aZG != null)
+        {
+          aZG.setLength(aZH);
+          aZG.close();
+          paramString = new File(paramString);
+          com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "stopDownLoad temFileLen:" + paramString.length() + " downloadFileLen:" + aZH);
+          aZG = null;
+        }
+      }
+      catch (Exception paramString)
+      {
+        for (;;)
+        {
+          com.tencent.mm.sdk.platformtools.v.w("MicroMsg.DownloadPlayer", "stop download error[%s]", new Object[] { paramString.getLocalizedMessage() });
+        }
+      }
+      aZH = 0L;
+      return;
+    }
+    finally {}
+  }
+  
+  private static byte[] cF(String paramString)
   {
     byte[] arrayOfByte2 = new byte[paramString.length() / 2 + paramString.length() % 2];
     int i = 0;
@@ -591,12 +701,12 @@ public final class d
         if (i < paramString.length())
         {
           k = i + 1;
-          int m = a(paramString.charAt(i));
+          int m = c(paramString.charAt(i));
           if (k >= paramString.length()) {
             break label93;
           }
           i = k + 1;
-          k = a(paramString.charAt(k));
+          k = c(paramString.charAt(k));
           arrayOfByte2[j] = ((byte)(k | m << 4));
           j += 1;
         }
@@ -612,11 +722,11 @@ public final class d
     }
   }
   
-  private String cB(String paramString)
+  private String cG(String paramString)
   {
     Object localObject5 = null;
     Object localObject2;
-    if (t.kz(paramString)) {
+    if (com.tencent.mm.platformtools.s.kf(paramString)) {
       localObject2 = localObject5;
     }
     Object localObject1;
@@ -626,11 +736,11 @@ public final class d
       do
       {
         return (String)localObject2;
-        if ((bms != null) && (paramString.equals(bms))) {
-          return bmt;
+        if ((aZY != null) && (paramString.equals(aZY))) {
+          return aZZ;
         }
         localObject2 = "";
-        String[] arrayOfString = bmr;
+        String[] arrayOfString = aZX;
         j = arrayOfString.length;
         i = 0;
         localObject1 = null;
@@ -658,11 +768,11 @@ public final class d
       if (localObject4 == null) {}
       for (int i = -1; i < 0; i = ((String)localObject4).indexOf((String)localObject3))
       {
-        com.tencent.mm.sdk.platformtools.u.w("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "pIndex is %d, return", new Object[] { Integer.valueOf(i) });
+        com.tencent.mm.sdk.platformtools.v.w("MicroMsg.DownloadPlayer", "pIndex is %d, return", new Object[] { Integer.valueOf(i) });
         return null;
       }
       localObject1 = ((String)localObject4).substring(((String)localObject3).length() + i);
-      Object localObject3 = bmr;
+      Object localObject3 = aZX;
       int j = localObject3.length;
       i = 0;
       while (i < j)
@@ -677,12 +787,12 @@ public final class d
       }
       localObject2 = localObject1;
     } while (localObject1 == null);
-    bms = paramString;
-    bmt = ((String)localObject1);
+    aZY = paramString;
+    aZZ = ((String)localObject1);
     return (String)localObject1;
   }
   
-  private static int cC(String paramString)
+  private static int cH(String paramString)
   {
     if (TextUtils.isEmpty(paramString)) {}
     label24:
@@ -691,7 +801,7 @@ public final class d
     {
       return -1;
       String str = "";
-      String[] arrayOfString = bmr;
+      String[] arrayOfString = aZX;
       int k = arrayOfString.length;
       int i = 0;
       int j;
@@ -708,7 +818,7 @@ public final class d
           break label143;
         }
         str = paramString.substring(str.length() + i);
-        paramString = bmr;
+        paramString = aZX;
         if (paramString.length <= 0) {
           break;
         }
@@ -732,150 +842,38 @@ public final class d
     }
   }
   
-  private boolean cx(String paramString)
-  {
-    if (t.kz(paramString)) {
-      com.tencent.mm.sdk.platformtools.u.e("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "try to play url, but url is null");
-    }
-    for (;;)
-    {
-      return false;
-      File localFile = new File(blU + g.m(paramString.getBytes()));
-      if (localFile.exists())
-      {
-        com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "try play url exist! %s", new Object[] { paramString });
-        try
-        {
-          bme = new FileInputStream(localFile);
-          boolean bool = b(bme.getFD());
-          if (bool) {
-            return true;
-          }
-        }
-        catch (Exception paramString) {}
-      }
-    }
-    return false;
-  }
-  
-  /* Error */
-  private void cy(String paramString)
-  {
-    // Byte code:
-    //   0: aload_0
-    //   1: monitorenter
-    //   2: aload_0
-    //   3: getfield 106	com/tencent/mm/booter/d:bmb	J
-    //   6: lstore_2
-    //   7: lload_2
-    //   8: lconst_0
-    //   9: lcmp
-    //   10: ifne +6 -> 16
-    //   13: aload_0
-    //   14: monitorexit
-    //   15: return
-    //   16: new 706	java/io/FileOutputStream
-    //   19: dup
-    //   20: aload_1
-    //   21: invokespecial 707	java/io/FileOutputStream:<init>	(Ljava/lang/String;)V
-    //   24: astore_1
-    //   25: aload_1
-    //   26: new 363	java/lang/StringBuilder
-    //   29: dup
-    //   30: invokespecial 394	java/lang/StringBuilder:<init>	()V
-    //   33: aload_0
-    //   34: getfield 106	com/tencent/mm/booter/d:bmb	J
-    //   37: invokevirtual 370	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
-    //   40: invokevirtual 378	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   43: invokevirtual 696	java/lang/String:getBytes	()[B
-    //   46: invokevirtual 709	java/io/FileOutputStream:write	([B)V
-    //   49: aload_1
-    //   50: invokevirtual 712	java/io/FileOutputStream:flush	()V
-    //   53: aload_1
-    //   54: invokevirtual 713	java/io/FileOutputStream:close	()V
-    //   57: goto -44 -> 13
-    //   60: astore_1
-    //   61: aload_0
-    //   62: monitorexit
-    //   63: aload_1
-    //   64: athrow
-    // Local variable table:
-    //   start	length	slot	name	signature
-    //   0	65	0	this	d
-    //   0	65	1	paramString	String
-    //   6	2	2	l	long
-    // Exception table:
-    //   from	to	target	type
-    //   2	7	60	finally
-    //   16	57	60	finally
-  }
-  
-  private void cz(String paramString)
-  {
-    try
-    {
-      com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "stopDownLoad");
-      try
-      {
-        if (bmc != null)
-        {
-          bmc.cjv.disconnect();
-          bmd.close();
-        }
-        if (bma != null)
-        {
-          bma.setLength(bmb);
-          bma.close();
-          paramString = new File(paramString);
-          com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "stopDownLoad temFileLen:" + paramString.length() + " downloadFileLen:" + bmb);
-          bma = null;
-        }
-      }
-      catch (Exception paramString)
-      {
-        for (;;)
-        {
-          com.tencent.mm.sdk.platformtools.u.w("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "stop download error[%s]", new Object[] { paramString.getLocalizedMessage() });
-        }
-      }
-      bmb = 0L;
-      return;
-    }
-    finally {}
-  }
-  
   private String getUrl()
   {
-    if (mF() == null) {}
+    if (kS() == null) {}
     do
     {
       return null;
-      if (!t.kz(mFjBw)) {
-        return mFjBw;
+      if (!com.tencent.mm.platformtools.s.kf(kSkak)) {
+        return kSkak;
       }
-      if (!t.kz(mFjBy)) {
-        return mFjBy;
+      if (!com.tencent.mm.platformtools.s.kf(kSkam)) {
+        return kSkam;
       }
-    } while (t.kz(mFjBx));
-    return mFjBx;
+    } while (com.tencent.mm.platformtools.s.kf(kSkal));
+    return kSkal;
   }
   
-  private void mC()
+  private void kP()
   {
-    com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "clearCurrentMusicData");
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "clearCurrentMusicData");
     if (currentIndex >= 0)
     {
-      bmp.remove(currentIndex);
-      bmp.clear();
-      currentIndex = (bmp.size() - 1);
+      aZV.remove(currentIndex);
+      aZV.clear();
+      currentIndex = (aZV.size() - 1);
     }
   }
   
-  private boolean mD()
+  private boolean kQ()
   {
-    Object localObject = bmc.getHeaderField("Content-Range");
-    if (t.kz((String)localObject)) {
-      com.tencent.mm.sdk.platformtools.u.w("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "dealWithContinueDownload, rangeInfo is null");
+    Object localObject = aZI.getHeaderField("Content-Range");
+    if (com.tencent.mm.platformtools.s.kf((String)localObject)) {
+      com.tencent.mm.sdk.platformtools.v.w("MicroMsg.DownloadPlayer", "dealWithContinueDownload, rangeInfo is null");
     }
     for (;;)
     {
@@ -883,82 +881,82 @@ public final class d
       localObject = ((String)localObject).split("-");
       if ((localObject == null) || (localObject.length <= 0))
       {
-        com.tencent.mm.sdk.platformtools.u.w("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "dealWithContinueDownload, rangeArray empty");
+        com.tencent.mm.sdk.platformtools.v.w("MicroMsg.DownloadPlayer", "dealWithContinueDownload, rangeArray empty");
         return false;
       }
       try
       {
         int i = localObject[0].indexOf("bytes");
         i = Integer.parseInt(localObject[0].substring(i + 5 + 1));
-        com.tencent.mm.sdk.platformtools.u.d("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "try continueDownLoad from %d, downloadFileLen %d", new Object[] { Integer.valueOf(i), Long.valueOf(bmb) });
+        com.tencent.mm.sdk.platformtools.v.d("MicroMsg.DownloadPlayer", "try continueDownLoad from %d, downloadFileLen %d", new Object[] { Integer.valueOf(i), Long.valueOf(aZH) });
         long l1 = i;
-        long l2 = bmb;
+        long l2 = aZH;
         if (l1 == l2) {
           return true;
         }
       }
       catch (Exception localException)
       {
-        com.tencent.mm.sdk.platformtools.u.w("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "dealWithContinueDownload, error[%s]", new Object[] { localException.getLocalizedMessage() });
+        com.tencent.mm.sdk.platformtools.v.w("MicroMsg.DownloadPlayer", "dealWithContinueDownload, error[%s]", new Object[] { localException.getLocalizedMessage() });
       }
     }
     return false;
   }
   
   /* Error */
-  private void mE()
+  private void kR()
   {
     // Byte code:
     //   0: aload_0
     //   1: monitorenter
-    //   2: ldc -38
-    //   4: ldc_w 778
-    //   7: invokestatic 270	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   2: ldc -37
+    //   4: ldc_w 777
+    //   7: invokestatic 271	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;)V
     //   10: aload_0
     //   11: iconst_0
-    //   12: putfield 104	com/tencent/mm/booter/d:blZ	I
+    //   12: putfield 106	com/tencent/mm/booter/d:aZF	I
     //   15: aload_0
-    //   16: getfield 186	com/tencent/mm/booter/d:blY	Landroid/media/MediaPlayer;
+    //   16: getfield 187	com/tencent/mm/booter/d:aZE	Landroid/media/MediaPlayer;
     //   19: ifnull +101 -> 120
     //   22: aload_0
-    //   23: getfield 186	com/tencent/mm/booter/d:blY	Landroid/media/MediaPlayer;
-    //   26: invokevirtual 781	android/media/MediaPlayer:stop	()V
+    //   23: getfield 187	com/tencent/mm/booter/d:aZE	Landroid/media/MediaPlayer;
+    //   26: invokevirtual 780	android/media/MediaPlayer:stop	()V
     //   29: aload_0
-    //   30: getfield 186	com/tencent/mm/booter/d:blY	Landroid/media/MediaPlayer;
-    //   33: invokevirtual 782	android/media/MediaPlayer:release	()V
+    //   30: getfield 187	com/tencent/mm/booter/d:aZE	Landroid/media/MediaPlayer;
+    //   33: invokevirtual 781	android/media/MediaPlayer:release	()V
     //   36: aload_0
     //   37: aconst_null
-    //   38: putfield 186	com/tencent/mm/booter/d:blY	Landroid/media/MediaPlayer;
+    //   38: putfield 187	com/tencent/mm/booter/d:aZE	Landroid/media/MediaPlayer;
     //   41: aload_0
-    //   42: getfield 110	com/tencent/mm/booter/d:lock	Ljava/lang/Object;
+    //   42: getfield 112	com/tencent/mm/booter/d:lock	Ljava/lang/Object;
     //   45: astore_1
     //   46: aload_1
     //   47: monitorenter
     //   48: aload_0
-    //   49: getfield 131	com/tencent/mm/booter/d:bmj	Ljava/util/List;
-    //   52: invokeinterface 438 1 0
+    //   49: getfield 133	com/tencent/mm/booter/d:aZP	Ljava/util/List;
+    //   52: invokeinterface 440 1 0
     //   57: astore_2
     //   58: aload_2
-    //   59: invokeinterface 443 1 0
+    //   59: invokeinterface 445 1 0
     //   64: ifeq +54 -> 118
     //   67: aload_2
-    //   68: invokeinterface 447 1 0
-    //   73: checkcast 784	com/tencent/mm/model/v
+    //   68: invokeinterface 449 1 0
+    //   73: checkcast 783	com/tencent/mm/model/v
     //   76: astore_3
     //   77: aload_3
     //   78: ifnull -20 -> 58
-    //   81: ldc -38
-    //   83: ldc_w 786
+    //   81: ldc -37
+    //   83: ldc_w 785
     //   86: iconst_1
     //   87: anewarray 4	java/lang/Object
     //   90: dup
     //   91: iconst_0
     //   92: aload_3
-    //   93: invokevirtual 787	java/lang/Object:toString	()Ljava/lang/String;
+    //   93: invokevirtual 786	java/lang/Object:toString	()Ljava/lang/String;
     //   96: aastore
-    //   97: invokestatic 232	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   97: invokestatic 233	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   100: aload_3
-    //   101: invokeinterface 790 1 0
+    //   101: invokeinterface 789 1 0
     //   106: goto -48 -> 58
     //   109: astore_2
     //   110: aload_1
@@ -972,11 +970,11 @@ public final class d
     //   118: aload_1
     //   119: monitorexit
     //   120: aload_0
-    //   121: getfield 533	com/tencent/mm/booter/d:bme	Ljava/io/FileInputStream;
+    //   121: getfield 535	com/tencent/mm/booter/d:aZK	Ljava/io/FileInputStream;
     //   124: ifnull -9 -> 115
     //   127: aload_0
-    //   128: getfield 533	com/tencent/mm/booter/d:bme	Ljava/io/FileInputStream;
-    //   131: invokevirtual 325	java/io/FileInputStream:close	()V
+    //   128: getfield 535	com/tencent/mm/booter/d:aZK	Ljava/io/FileInputStream;
+    //   131: invokevirtual 326	java/io/FileInputStream:close	()V
     //   134: goto -19 -> 115
     //   137: astore_1
     //   138: aload_0
@@ -990,7 +988,7 @@ public final class d
     //   137	4	1	localObject2	Object
     //   57	11	2	localIterator	Iterator
     //   109	4	2	localObject3	Object
-    //   76	25	3	localv	v
+    //   76	25	3	localv	com.tencent.mm.model.v
     // Exception table:
     //   from	to	target	type
     //   48	58	109	finally
@@ -1007,10 +1005,10 @@ public final class d
     //   120	134	137	finally
   }
   
-  private String mH()
+  private String kU()
   {
     Object localObject;
-    if ((getUrl() == null) && (mF() == null)) {
+    if ((getUrl() == null) && (kS() == null)) {
       localObject = null;
     }
     String str;
@@ -1019,38 +1017,38 @@ public final class d
       do
       {
         return (String)localObject;
-        str = cB(mFjBw);
+        str = cG(kSkak);
         localObject = str;
       } while (str != null);
-      str = cB(mFjBy);
+      str = cG(kSkam);
       localObject = str;
     } while (str != null);
-    return cB(mFjBx);
+    return cG(kSkal);
   }
   
-  private void s(String paramString1, String paramString2)
+  private void q(String paramString1, String paramString2)
   {
     synchronized (lock)
     {
-      localObject2 = bmj.iterator();
+      localObject2 = aZP.iterator();
       while (((Iterator)localObject2).hasNext())
       {
-        v localv = (v)((Iterator)localObject2).next();
+        com.tencent.mm.model.v localv = (com.tencent.mm.model.v)((Iterator)localObject2).next();
         if (localv != null)
         {
-          com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "on start call back: %s", new Object[] { localv.toString() });
+          com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "on start call back: %s", new Object[] { localv.toString() });
           localv.onStart();
         }
       }
     }
-    bmi.ds(50L);
+    aZO.dJ(50L);
     ??? = context;
     context = ((Context)???);
-    com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "play : " + paramString1);
-    final boolean bool = aa.bg((Context)???);
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "play : " + paramString1);
+    final boolean bool = com.tencent.mm.network.aa.bd((Context)???);
     Object localObject2 = new PBool();
     ??? = a(paramString1, paramString2, bool, (PBool)localObject2);
-    if (!t.kz((String)???)) {
+    if (!com.tencent.mm.platformtools.s.kf((String)???)) {
       if (!bool) {
         break label327;
       }
@@ -1058,13 +1056,13 @@ public final class d
     label327:
     for (paramString1 = (String)???;; paramString1 = a(paramString1, paramString2, true, new PBool()))
     {
-      if ((!cx(paramString1)) && ((bool) || (!cx((String)???))))
+      if ((!cC(paramString1)) && ((bool) || (!cC((String)???))))
       {
         bool = value;
-        com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "mediaUrl[%s], isQQmusicInWifi[%B]", new Object[] { ???, Boolean.valueOf(bool) });
-        blV = (blU + g.m(((String)???).getBytes()));
-        blW = (blV + ".tem");
-        blX = (blV + ".config");
+        com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "mediaUrl[%s], isQQmusicInWifi[%B]", new Object[] { ???, Boolean.valueOf(bool) });
+        aZB = (aZA + g.j(((String)???).getBytes()));
+        aZC = (aZB + ".tem");
+        aZD = (aZB + ".config");
         com.tencent.mm.sdk.i.e.b(new Runnable()
         {
           public final void run()
@@ -1077,12 +1075,12 @@ public final class d
     }
   }
   
-  public final com.tencent.mm.model.u a(String paramString1, String paramString2, aeo paramaeo)
+  public final u a(String paramString1, String paramString2, afj paramafj)
   {
-    if (paramaeo != null)
+    if (paramafj != null)
     {
-      bmp.clear();
-      paramString2 = a(paramaeo, paramString1, paramString2);
+      aZV.clear();
+      paramString2 = a(paramafj, paramString1, paramString2);
       if (paramString2 != null) {
         break label63;
       }
@@ -1090,140 +1088,180 @@ public final class d
     label63:
     for (paramString1 = "null";; paramString1 = paramString2.toString())
     {
-      com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "init current music data: musicwrapper %s", new Object[] { paramString1 });
-      bmp.put(0, paramString2);
+      com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "init current music data: musicwrapper %s", new Object[] { paramString1 });
+      aZV.put(0, paramString2);
       currentIndex = 0;
-      mK();
+      kX();
       return this;
     }
   }
   
-  public final void a(v paramv)
+  public final void a(com.tencent.mm.model.v paramv)
   {
-    if ((paramv == null) || (bmj.contains(paramv))) {
+    if ((paramv == null) || (aZP.contains(paramv))) {
       return;
     }
-    com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "add callback: %s", new Object[] { paramv.toString() });
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "add callback: %s", new Object[] { paramv.toString() });
     synchronized (lock)
     {
-      bmj.add(paramv);
+      aZP.add(paramv);
       return;
     }
   }
   
-  public final void b(v paramv)
+  public final void b(com.tencent.mm.model.v paramv)
   {
-    com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "releasePlayer");
-    if (!mA())
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "releasePlayer");
+    if (!kN())
     {
       release();
-      mC();
-      com.tencent.mm.sdk.platformtools.u.d("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "releasePlayer == release playing");
-      bmn = false;
-      bmo = false;
-      bml = false;
-      bmh.aH(false);
+      kP();
+      com.tencent.mm.sdk.platformtools.v.d("MicroMsg.DownloadPlayer", "releasePlayer == release playing");
+      aZT = false;
+      aZU = false;
+      aZR = false;
+      aZN.am(false);
     }
     if (paramv == null) {
       return;
     }
-    com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "unRegistDownloadCallBack: %s", new Object[] { paramv.toString() });
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "unRegistDownloadCallBack: %s", new Object[] { paramv.toString() });
     synchronized (lock)
     {
-      bmj.remove(paramv);
+      aZP.remove(paramv);
       return;
     }
   }
   
-  public final com.tencent.mm.model.u cD(String paramString)
+  public final u cI(String paramString)
   {
-    if (mF() == null) {
+    if (kS() == null) {
       return this;
     }
-    mFjBz = paramString;
+    kSkan = paramString;
     return this;
-  }
-  
-  public final boolean g(String paramString1, String paramString2, String paramString3)
-  {
-    return ((getUrl() != null) && (getUrl().equals(paramString1))) || ((getUrl() != null) && (getUrl().equals(paramString3))) || ((mF() != null) && (mFjBx != null) && (mFjBx.equals(paramString2)));
   }
   
   public final String getMediaId()
   {
-    if (mF() == null) {
+    if (kS() == null) {
       return null;
     }
-    return mFjax;
+    return kSjyb;
   }
   
   public final String getTitle()
   {
-    if (mF() == null) {
+    if (kS() == null) {
       return "";
     }
-    if (mFjBs == null) {
+    if (kSkag == null) {
       return "";
     }
-    return mFjBs;
+    return kSkag;
   }
   
-  public final boolean mA()
+  public final boolean i(String paramString1, String paramString2, String paramString3)
   {
-    return (blY != null) && (blY.isPlaying());
+    return ((getUrl() != null) && (getUrl().equals(paramString1))) || ((getUrl() != null) && (getUrl().equals(paramString3))) || ((kS() != null) && (kSkal != null) && (kSkal.equals(paramString2)));
   }
   
-  final void mB()
+  public final String kB()
   {
-    if (blY != null) {
-      blY.start();
+    if (kS() == null) {
+      return null;
+    }
+    return kSkao;
+  }
+  
+  public final int kJ()
+  {
+    if (kS() == null) {
+      return -1;
+    }
+    return kSkad;
+  }
+  
+  public final String kK()
+  {
+    if (kS() == null) {
+      return null;
+    }
+    return kSkae;
+  }
+  
+  public final int kL()
+  {
+    if (kS() == null) {
+      return 0;
+    }
+    return kSkaq;
+  }
+  
+  public final String kM()
+  {
+    if (kS() == null) {
+      return null;
+    }
+    return kSkai;
+  }
+  
+  public final boolean kN()
+  {
+    return (aZE != null) && (aZE.isPlaying());
+  }
+  
+  final void kO()
+  {
+    if (aZE != null) {
+      aZE.start();
     }
     synchronized (lock)
     {
-      ab.j(new Runnable()
+      ad.k(new Runnable()
       {
         public final void run()
         {
           Iterator localIterator = d.c(d.this).iterator();
           while (localIterator.hasNext())
           {
-            v localv = (v)localIterator.next();
+            com.tencent.mm.model.v localv = (com.tencent.mm.model.v)localIterator.next();
             if (localv != null)
             {
-              com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "on resume call back: %s", new Object[] { localv.toString() });
+              com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "on resume call back: %s", new Object[] { localv.toString() });
               localv.onResume();
             }
           }
-          d.d(d.this).ds(50L);
+          d.d(d.this).dJ(50L);
         }
       });
-      bmh.a(bmq);
+      aZN.a(aZW);
       return;
     }
   }
   
-  public final aeo mF()
+  public final afj kS()
   {
-    if ((currentIndex < 0) || (currentIndex >= bmp.size())) {}
-    for (aeo localaeo = null;; localaeo = (aeo)bmp.get(currentIndex))
+    if ((currentIndex < 0) || (currentIndex >= aZV.size())) {}
+    for (afj localafj = null;; localafj = (afj)aZV.get(currentIndex))
     {
-      if (localaeo == null)
+      if (localafj == null)
       {
-        bmg = false;
-        bmv = -1;
+        aZM = false;
+        bab = -1;
       }
-      return localaeo;
+      return localafj;
     }
   }
   
-  public final com.tencent.mm.model.u mG()
+  public final u kT()
   {
-    if ((mF() == null) || (mH() == null)) {}
+    if ((kS() == null) || (kU() == null)) {}
     for (;;)
     {
       return this;
       long l = System.currentTimeMillis();
-      Object localObject2 = new String(cA(mH()));
+      Object localObject2 = new String(cF(kU()));
       int i = ((String)localObject2).indexOf("{");
       Object localObject1 = localObject2;
       if (i != -1) {
@@ -1232,24 +1270,24 @@ public final class d
       try
       {
         localObject1 = new JSONObject((String)localObject1);
-        localObject2 = mF();
+        localObject2 = kS();
         if (localObject2 != null)
         {
-          jsW = ((JSONObject)localObject1).getInt("song_ID");
-          if (t.kz(jBs)) {
-            jBs = ((JSONObject)localObject1).getString("song_Name");
+          jRd = ((JSONObject)localObject1).getInt("song_ID");
+          if (com.tencent.mm.platformtools.s.kf(kag)) {
+            kag = ((JSONObject)localObject1).getString("song_Name");
           }
-          if (t.kz(jBx)) {
-            jBx = ((JSONObject)localObject1).getString("song_WapLiveURL");
+          if (com.tencent.mm.platformtools.s.kf(kal)) {
+            kal = ((JSONObject)localObject1).getString("song_WapLiveURL");
           }
-          if (t.kz(jBw)) {
-            jBw = ((JSONObject)localObject1).getString("song_WifiURL");
+          if (com.tencent.mm.platformtools.s.kf(kak)) {
+            kak = ((JSONObject)localObject1).getString("song_WifiURL");
           }
-          if (t.kz(jBu)) {
-            jBu = ((JSONObject)localObject1).getString("song_Album");
+          if (com.tencent.mm.platformtools.s.kf(kai)) {
+            kai = ((JSONObject)localObject1).getString("song_Album");
           }
-          if (t.kz(jBt)) {
-            jBt = ((JSONObject)localObject1).getString("song_Singer");
+          if (com.tencent.mm.platformtools.s.kf(kah)) {
+            kah = ((JSONObject)localObject1).getString("song_Singer");
           }
         }
       }
@@ -1258,141 +1296,101 @@ public final class d
         for (;;) {}
       }
     }
-    com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "parceBCDForMusicWrapper %s: expend: %d", new Object[] { mFjBq, Long.valueOf(System.currentTimeMillis() - l) });
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "parceBCDForMusicWrapper %s: expend: %d", new Object[] { kSkae, Long.valueOf(System.currentTimeMillis() - l) });
     return this;
   }
   
-  public final int mI()
+  public final int kV()
   {
     int j;
-    if (mF() == null) {
+    if (kS() == null) {
       j = -1;
     }
     int i;
     do
     {
       return j;
-      if (mFjsW > 0) {
-        return mFjsW;
+      if (kSjRd > 0) {
+        return kSjRd;
       }
-      j = cC(mFjBy);
+      j = cH(kSkam);
       i = j;
       if (j <= 0)
       {
-        j = cC(mFjBw);
+        j = cH(kSkak);
         i = j;
         if (j <= 0) {
-          i = cC(mFjBx);
+          i = cH(kSkal);
         }
       }
       j = i;
     } while (i <= 0);
-    mFjsW = i;
+    kSjRd = i;
     return i;
   }
   
-  public final String mJ()
+  public final String kW()
   {
-    if (mF() == null) {
+    if (kS() == null) {
       return null;
     }
-    return mFiWi;
+    return kSjtJ;
   }
   
-  public final com.tencent.mm.model.u mK()
+  public final u kX()
   {
-    if (bmu == null) {
-      bmu = new af(new af.a()
+    if (baa == null) {
+      baa = new ah(new ah.a()
       {
-        public final boolean lj()
+        public final boolean jK()
         {
           d.n(d.this);
           return false;
         }
       }, false);
     }
-    bmu.aUF();
-    bmu.ds(50L);
+    baa.aZJ();
+    baa.dJ(50L);
     return this;
   }
   
-  public final com.tencent.mm.model.u mL()
+  public final u kY()
   {
-    if (bmu != null) {
-      bmu.aUF();
+    if (baa != null) {
+      baa.aZJ();
     }
-    com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "stop UI Music");
-    bmh.aH(false);
-    bml = false;
-    bmf = true;
-    mE();
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.DownloadPlayer", "stop UI Music");
+    aZN.am(false);
+    aZR = false;
+    aZL = true;
+    kR();
     return this;
-  }
-  
-  public final String mn()
-  {
-    if (mF() == null) {
-      return null;
-    }
-    return mFjBA;
-  }
-  
-  public final int mw()
-  {
-    if (mF() == null) {
-      return -1;
-    }
-    return mFjBp;
-  }
-  
-  public final String mx()
-  {
-    if (mF() == null) {
-      return null;
-    }
-    return mFjBq;
-  }
-  
-  public final int my()
-  {
-    if (mF() == null) {
-      return 0;
-    }
-    return mFjBC;
-  }
-  
-  public final String mz()
-  {
-    if (mF() == null) {
-      return null;
-    }
-    return mFjBu;
   }
   
   public final void pause()
   {
-    if (bmu != null) {
-      bmu.aUF();
+    if (baa != null) {
+      baa.aZJ();
     }
-    if (!mA()) {
+    if (!kN()) {
       return;
     }
-    blY.pause();
-    bmo = false;
+    aZE.pause();
+    aZU = false;
     synchronized (lock)
     {
-      ab.j(new Runnable()
+      ad.k(new Runnable()
       {
         public final void run()
         {
-          d.d(d.this).aUF();
+          d.d(d.this).aZJ();
           Iterator localIterator = d.c(d.this).iterator();
           while (localIterator.hasNext())
           {
-            v localv = (v)localIterator.next();
+            com.tencent.mm.model.v localv = (com.tencent.mm.model.v)localIterator.next();
             if (localv != null)
             {
-              com.tencent.mm.sdk.platformtools.u.d("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "on pause call back: %s", new Object[] { localv.toString() });
+              com.tencent.mm.sdk.platformtools.v.d("MicroMsg.DownloadPlayer", "on pause call back: %s", new Object[] { localv.toString() });
               localv.onPause();
             }
           }
@@ -1404,31 +1402,31 @@ public final class d
   
   public final void release()
   {
-    mL();
-    mC();
+    kY();
+    kP();
   }
   
   private final class a
     implements com.tencent.mm.model.d.a
   {
-    private final String bmA = "lock_audio";
+    private final String bag = "lock_audio";
     
     private a() {}
     
-    public final void mM()
+    public final void kZ()
     {
       if (!d.o(d.this)) {
         return;
       }
       try
       {
-        mB();
+        kO();
         return;
       }
       finally {}
     }
     
-    public final void mN()
+    public final void la()
     {
       if (!d.o(d.this)) {
         return;
@@ -1441,7 +1439,7 @@ public final class d
       finally {}
     }
     
-    public final void mO()
+    public final void lb()
     {
       if (!d.o(d.this)) {
         return;
@@ -1454,7 +1452,7 @@ public final class d
       finally {}
     }
     
-    public final void mP()
+    public final void lc()
     {
       if (!d.o(d.this)) {
         return;

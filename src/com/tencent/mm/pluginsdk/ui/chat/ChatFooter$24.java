@@ -12,9 +12,9 @@ final class ChatFooter$24
   
   public final boolean onEditorAction(TextView paramTextView, int paramInt, KeyEvent paramKeyEvent)
   {
-    if ((paramInt == 4) || ((paramInt == 0) && (ChatFooter.g(iLO))))
+    if ((paramInt == 4) || ((paramInt == 0) && (ChatFooter.g(jiL))))
     {
-      ChatFooter.h(iLO).performClick();
+      ChatFooter.h(jiL).performClick();
       return true;
     }
     return false;

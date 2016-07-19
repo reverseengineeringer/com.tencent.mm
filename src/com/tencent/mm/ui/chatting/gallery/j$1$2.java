@@ -2,9 +2,9 @@ package com.tencent.mm.ui.chatting.gallery;
 
 import android.view.View;
 import android.view.animation.AnimationUtils;
-import com.tencent.mm.an.m;
-import com.tencent.mm.protocal.b.ask;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.aq.q;
+import com.tencent.mm.protocal.b.ata;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class j$1$2
   implements Runnable
@@ -13,20 +13,20 @@ final class j$1$2
   
   public final void run()
   {
-    if ((lhr.lhq.hfh == null) || (lhr.lhq.hfh.getVisibility() == 0)) {
+    if ((lHC.lHB.htY == null) || (lHC.lHB.htY.getVisibility() == 0)) {
       return;
     }
-    if ((lhr.lhq.hfh.getTag() != null) && ((lhr.lhq.hfh.getTag() instanceof m)))
+    if ((lHC.lHB.htY.getTag() != null) && ((lHC.lHB.htY.getTag() instanceof q)))
     {
-      m localm = (m)lhr.lhq.hfh.getTag();
-      if ((cgi != null) && (!ay.kz(cgi.byS)))
+      q localq = (q)lHC.lHB.htY.getTag();
+      if ((cbu != null) && (!be.kf(cbu.brM)))
       {
-        lhr.lhq.hfh.setVisibility(8);
+        lHC.lHB.htY.setVisibility(8);
         return;
       }
     }
-    lhr.lhq.hfh.setVisibility(0);
-    lhr.lhq.hfh.startAnimation(AnimationUtils.loadAnimation(lhr.lhq.hfh.getContext(), 2130837575));
+    lHC.lHB.htY.setVisibility(0);
+    lHC.lHB.htY.startAnimation(AnimationUtils.loadAnimation(lHC.lHB.htY.getContext(), 2130968612));
   }
 }
 

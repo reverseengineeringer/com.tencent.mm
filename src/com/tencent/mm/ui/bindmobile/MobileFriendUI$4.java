@@ -11,7 +11,7 @@ final class MobileFriendUI$4
   
   public final void onClick(View paramView)
   {
-    BackwardSupportUtil.c.a(MobileFriendUI.f(kPt));
+    BackwardSupportUtil.c.a(MobileFriendUI.f(loJ));
   }
 }
 

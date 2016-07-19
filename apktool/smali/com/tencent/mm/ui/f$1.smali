@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/ui/f$1;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.super Lcom/tencent/mm/sdk/platformtools/ac;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic klo:Lcom/tencent/mm/ui/f;
+.field final synthetic kKO:Lcom/tencent/mm/ui/f;
 
 
 # direct methods
@@ -23,10 +23,10 @@
     .locals 0
 
     .prologue
-    .line 140
-    iput-object p1, p0, Lcom/tencent/mm/ui/f$1;->klo:Lcom/tencent/mm/ui/f;
+    .line 136
+    iput-object p1, p0, Lcom/tencent/mm/ui/f$1;->kKO:Lcom/tencent/mm/ui/f;
 
-    invoke-direct {p0, p2}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {p0, p2}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
     return-void
 .end method
@@ -37,20 +37,20 @@
     .locals 1
 
     .prologue
-    .line 142
+    .line 138
     iget v0, p1, Landroid/os/Message;->what:I
 
-    .line 143
+    .line 139
     packed-switch v0, :pswitch_data_0
 
-    .line 163
+    .line 159
     :cond_0
     :goto_0
     return-void
 
-    .line 155
+    .line 151
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/f$1;->klo:Lcom/tencent/mm/ui/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/f$1;->kKO:Lcom/tencent/mm/ui/f;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/f;->a(Lcom/tencent/mm/ui/f;)Lcom/tencent/mm/ui/base/preference/f;
 
@@ -58,14 +58,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 156
-    iget-object v0, p0, Lcom/tencent/mm/ui/f$1;->klo:Lcom/tencent/mm/ui/f;
+    .line 152
+    iget-object v0, p0, Lcom/tencent/mm/ui/f$1;->kKO:Lcom/tencent/mm/ui/f;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/f;->b(Lcom/tencent/mm/ui/f;)V
 
     goto :goto_0
 
-    .line 143
+    .line 139
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

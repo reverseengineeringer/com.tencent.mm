@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:background="@drawable/dl" android:paddingLeft="@dimen/hb" android:paddingTop="@dimen/hr" android:paddingRight="@dimen/hb" android:paddingBottom="@dimen/hr" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/i6" android:paddingTop="@dimen/cp" android:paddingBottom="@dimen/cp" android:layout_width="@dimen/j6" android:layout_height="@dimen/i5" android:src="@raw/sns_shoot_at_normal" android:scaleType="fitCenter" />
+    <TextView android:textSize="@dimen/i8" android:textColor="@color/j_" android:gravity="center|left" android:id="@id/i7" android:layout_width="wrap_content" android:layout_height="@dimen/i5" android:layout_marginLeft="@dimen/j8" android:layout_marginRight="@dimen/j8" android:text="@string/cuh" android:layout_toRightOf="@id/i6" />
+    <com.tencent.mm.plugin.sns.ui.PreviewContactView android:id="@id/i8" android:layout_width="180.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/j8" android:minHeight="@dimen/i5" android:layout_alignParentRight="true" />
+</RelativeLayout>

@@ -2,94 +2,94 @@ package com.tencent.mm.pluginsdk.ui.tools;
 
 import java.util.HashMap;
 
-abstract class g$c
+abstract class g$c<K, V>
 {
-  private HashMap gmg;
-  private a iSA;
-  private int iSB;
-  private final int iSt;
-  private a iSz;
+  private HashMap<K, c<K, V>.a> gwB;
+  private final int jpC;
+  private c<K, V>.a jpI;
+  private c<K, V>.a jpJ;
+  private int jpK;
   
   public g$c(g paramg, int paramInt)
   {
-    iSt = Math.max(1, paramInt);
-    gmg = new HashMap();
-    iSz = new a();
-    iSA = new a();
-    iSz.iSD = iSA;
-    iSA.iSC = iSz;
-    iSB = 0;
+    jpC = Math.max(1, paramInt);
+    gwB = new HashMap();
+    jpI = new a();
+    jpJ = new a();
+    jpI.jpM = jpJ;
+    jpJ.jpL = jpI;
+    jpK = 0;
   }
   
-  private void a(a parama)
+  private void a(c<K, V>.a paramc)
   {
-    iSD = iSz.iSD;
-    iSD.iSC = parama;
-    iSz.iSD = parama;
-    iSC = iSz;
+    jpM = jpI.jpM;
+    jpM.jpL = paramc;
+    jpI.jpM = paramc;
+    jpL = jpI;
   }
   
-  private static void b(a parama)
+  private static void b(c<K, V>.a paramc)
   {
-    iSC.iSD = iSD;
-    iSD.iSC = iSC;
-    iSD = null;
-    iSC = null;
+    jpL.jpM = jpM;
+    jpM.jpL = jpL;
+    jpM = null;
+    jpL = null;
   }
   
-  protected abstract void as(Object paramObject);
+  protected abstract void aL(V paramV);
   
   public final void clear()
   {
-    while (iSB > 0)
+    while (jpK > 0)
     {
-      a locala = iSA.iSC;
+      a locala = jpJ.jpL;
       b(locala);
-      gmg.remove(iSE);
-      as(iSF);
-      iSB -= 1;
+      gwB.remove(jpN);
+      aL(jpO);
+      jpK -= 1;
     }
   }
   
-  public final Object get(Object paramObject)
+  public final V get(K paramK)
   {
     try
     {
-      paramObject = (a)gmg.get(paramObject);
-      if (paramObject != null)
+      paramK = (a)gwB.get(paramK);
+      if (paramK != null)
       {
-        b((a)paramObject);
-        a((a)paramObject);
-        paramObject = iSF;
-        return paramObject;
+        b(paramK);
+        a(paramK);
+        paramK = jpO;
+        return paramK;
       }
       return null;
     }
     finally {}
   }
   
-  public final Object put(Object paramObject1, Object paramObject2)
+  public final V put(K paramK, V paramV)
   {
     try
     {
-      a locala = (a)gmg.get(paramObject1);
+      a locala = (a)gwB.get(paramK);
       if (locala != null)
       {
         b(locala);
-        paramObject1 = iSF;
-        iSF = paramObject2;
+        paramK = jpO;
+        jpO = paramV;
         a(locala);
-        return paramObject1;
+        return paramK;
       }
-      paramObject2 = new a(paramObject1, paramObject2);
-      a((a)paramObject2);
-      gmg.put(paramObject1, paramObject2);
-      for (iSB += 1; iSt < iSB; iSB -= 1)
+      paramV = new a(paramK, paramV);
+      a(paramV);
+      gwB.put(paramK, paramV);
+      for (jpK += 1; jpC < jpK; jpK -= 1)
       {
-        paramObject1 = iSA.iSC;
-        b((a)paramObject1);
-        gmg.remove(iSE);
-        as(iSF);
+        paramK = jpJ.jpL;
+        b(paramK);
+        gwB.remove(jpN);
+        aL(jpO);
       }
     }
     finally {}
@@ -101,8 +101,8 @@ abstract class g$c
     try
     {
       StringBuilder localStringBuilder = new StringBuilder();
-      for (Object localObject1 = iSz.iSD; localObject1 != iSA; localObject1 = iSD) {
-        localStringBuilder.append("[key:").append(iSE).append(", value:").append(iSF).append("]");
+      for (Object localObject1 = jpI.jpM; localObject1 != jpJ; localObject1 = jpM) {
+        localStringBuilder.append("[key:").append(jpN).append(", value:").append(jpO).append("]");
       }
       localObject1 = localStringBuilder.toString();
       return (String)localObject1;
@@ -112,25 +112,25 @@ abstract class g$c
   
   private final class a
   {
-    public a iSC = null;
-    public a iSD = null;
-    public Object iSE;
-    public Object iSF;
+    public g.c<K, V>.a jpL = null;
+    public g.c<K, V>.a jpM = null;
+    public K jpN;
+    public V jpO;
     
     public a()
     {
       this(null, null, (byte)0);
     }
     
-    public a(Object paramObject1, Object paramObject2)
+    public a(V paramV)
     {
-      this(paramObject1, paramObject2, (byte)0);
+      this(paramV, localObject, (byte)0);
     }
     
-    private a(Object paramObject1, Object paramObject2, byte paramByte)
+    private a(V paramV, byte paramByte)
     {
-      iSE = paramObject1;
-      iSF = paramObject2;
+      jpN = paramV;
+      jpO = paramByte;
     }
   }
 }

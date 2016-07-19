@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;->Gb()V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hbY:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;
+.field final synthetic hqK:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 216
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$1;->hbY:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$1;->hqK:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,36 +36,34 @@
 
 
 # virtual methods
-.method public final aBG()V
-    .locals 3
+.method public final aEC()V
+    .locals 2
 
     .prologue
     .line 219
     const/16 v0, 0x2c
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/lucky/b/b;->lp(I)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/lucky/b/b;->id(I)V
 
     .line 220
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azi()Lcom/tencent/mm/plugin/sns/h/l;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBI()Lcom/tencent/mm/plugin/sns/i/l;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$1;->hbY:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI$1;->hqK:Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;->a(Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/h/l;->vo(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/h/k;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/i/l;->wA(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/i/k;
 
     move-result-object v0
 
     .line 221
     const/4 v1, 0x4
 
-    const/4 v2, 0x0
-
-    invoke-static {v1, v0, v2}, Lcom/tencent/mm/plugin/sns/lucky/c/b;->a(ILcom/tencent/mm/plugin/sns/h/k;I)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/plugin/sns/lucky/c/a;->a(ILcom/tencent/mm/plugin/sns/i/k;)V
 
     .line 222
     return-void

@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic kxO:[I
+.field static final synthetic kWV:[I
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 78
-    invoke-static {}, Lcom/tencent/mm/ui/account/mobile/MobileInputUI$a;->bcf()[I
+    invoke-static {}, Lcom/tencent/mm/ui/account/mobile/MobileInputUI$a;->bhr()[I
 
     move-result-object v0
 
@@ -32,12 +32,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/tencent/mm/ui/account/mobile/b$5;->kxO:[I
+    sput-object v0, Lcom/tencent/mm/ui/account/mobile/b$5;->kWV:[I
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/ui/account/mobile/b$5;->kxO:[I
+    sget-object v0, Lcom/tencent/mm/ui/account/mobile/b$5;->kWV:[I
 
-    sget v1, Lcom/tencent/mm/ui/account/mobile/MobileInputUI$a;->kye:I
+    sget v1, Lcom/tencent/mm/ui/account/mobile/MobileInputUI$a;->kXl:I
 
     add-int/lit8 v1, v1, -0x1
 

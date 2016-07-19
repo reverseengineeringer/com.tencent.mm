@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/tools/r;->b(Landroid/support/v4/app/FragmentActivity;)V
+    value = Lcom/tencent/mm/ui/tools/r;->e(Landroid/support/v4/app/FragmentActivity;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic lxI:Lcom/tencent/mm/ui/tools/r;
+.field final synthetic lYx:Lcom/tencent/mm/ui/tools/r;
 
-.field final synthetic lxJ:Landroid/support/v4/app/FragmentActivity;
+.field final synthetic lYy:Landroid/support/v4/app/FragmentActivity;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 497
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/r$11;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 498
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/r$11;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/tools/r$11;->lxJ:Landroid/support/v4/app/FragmentActivity;
+    iput-object p2, p0, Lcom/tencent/mm/ui/tools/r$11;->lYy:Landroid/support/v4/app/FragmentActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,12 +44,12 @@
     .locals 2
 
     .prologue
-    .line 501
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$11;->lxJ:Landroid/support/v4/app/FragmentActivity;
+    .line 502
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$11;->lYy:Landroid/support/v4/app/FragmentActivity;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$11;->lxJ:Landroid/support/v4/app/FragmentActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$11;->lYy:Landroid/support/v4/app/FragmentActivity;
 
     invoke-virtual {v0}, Landroid/support/v4/app/FragmentActivity;->isFinishing()Z
 
@@ -57,25 +57,25 @@
 
     if-eqz v0, :cond_1
 
-    .line 502
+    .line 503
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$11;->lxI:Lcom/tencent/mm/ui/tools/r;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$11;->lYx:Lcom/tencent/mm/ui/tools/r;
 
     iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "want to collapse search view, but activity status error"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 506
+    .line 507
     :goto_0
     return-void
 
-    .line 505
+    .line 506
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$11;->lxJ:Landroid/support/v4/app/FragmentActivity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$11;->lYy:Landroid/support/v4/app/FragmentActivity;
 
-    invoke-virtual {v0}, Landroid/support/v4/app/FragmentActivity;->G()V
+    invoke-virtual {v0}, Landroid/support/v4/app/FragmentActivity;->F()V
 
     goto :goto_0
 .end method

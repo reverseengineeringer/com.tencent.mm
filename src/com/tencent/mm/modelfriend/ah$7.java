@@ -1,13 +1,14 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.az.g.b;
+import com.tencent.mm.e.a.fj;
+import com.tencent.mm.sdk.c.c;
 
 final class ah$7
-  implements g.b
+  extends c<fj>
 {
-  public final String[] lr()
+  ah$7(ah paramah)
   {
-    return c.aoY;
+    kum = fj.class.getName().hashCode();
   }
 }
 

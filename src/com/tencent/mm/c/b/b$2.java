@@ -1,12 +1,12 @@
 package com.tencent.mm.c.b;
 
 import android.os.Looper;
-import com.tencent.mm.al.c.b;
+import com.tencent.mm.ao.c.b;
 import com.tencent.mm.compatible.util.f.a;
 import com.tencent.mm.sdk.i.e;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.concurrent.BlockingQueue;
 
 final class b$2
@@ -41,8 +41,8 @@ final class b$2
     while (i < paramInt / 2)
     {
       int j = (short)(paramArrayOfByte[(i * 2)] & 0xFF | paramArrayOfByte[(i * 2 + 1)] << 8);
-      if (j > b.p(apQ)) {
-        b.b(apQ, j);
+      if (j > b.p(abi)) {
+        b.b(abi, j);
       }
       i += 1;
     }
@@ -53,76 +53,76 @@ final class b$2
   public final void d(byte[] paramArrayOfByte, int paramInt)
   {
     int j = -1;
-    if (b.c(apQ) == b.b.apW)
+    if (b.c(abi) == b.b.abo)
     {
-      u.w("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "recorder has been stopped");
+      v.w("MicroMsg.MMAudioRecorder", "recorder has been stopped");
       return;
     }
-    long l = ay.an(b.d(apQ));
-    if ((b.e(apQ) > 0L) && (l > b.e(apQ)))
+    long l = be.au(b.d(abi));
+    if ((b.e(abi) > 0L) && (l > b.e(abi)))
     {
-      u.w("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "Stop now ! expire duration ms:" + l);
-      new aa(Looper.getMainLooper()).post(new Runnable()
+      v.w("MicroMsg.MMAudioRecorder", "Stop now ! expire duration ms:" + l);
+      new ac(Looper.getMainLooper()).post(new Runnable()
       {
         public final void run()
         {
-          apQ.lv();
-          b.a(apQ).onError();
+          abi.jW();
+          b.a(abi).onError();
         }
       });
       return;
     }
-    u.d("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "read :" + paramInt + " time: " + b.f(apQ).pa() + " dataReadedCnt: " + b.g(apQ));
+    v.d("MicroMsg.MMAudioRecorder", "read :" + paramInt + " time: " + b.f(abi).ns() + " dataReadedCnt: " + b.g(abi));
     if (paramInt < 0)
     {
-      if (b.c(apQ) == b.b.apW)
+      if (b.c(abi) == b.b.abo)
       {
-        u.w("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "recorder has been stopped");
+        v.w("MicroMsg.MMAudioRecorder", "recorder has been stopped");
         return;
       }
-      new aa(Looper.getMainLooper()).post(new Runnable()
+      new ac(Looper.getMainLooper()).post(new Runnable()
       {
         public final void run()
         {
-          apQ.lv();
-          b.a(apQ).onError();
+          abi.jW();
+          b.a(abi).onError();
         }
       });
       return;
     }
-    b.a(apQ, paramInt);
-    if ((b.h(apQ) == null) && ((b.i(apQ) == com.tencent.mm.compatible.b.b.a.bpn) || (b.i(apQ) == com.tencent.mm.compatible.b.b.a.bpp)) && (b.j(apQ) != null) && (b.k(apQ)))
+    b.a(abi, paramInt);
+    if ((b.h(abi) == null) && ((b.i(abi) == com.tencent.mm.compatible.b.b.a.bdm) || (b.i(abi) == com.tencent.mm.compatible.b.b.a.bdo)) && (b.j(abi) != null) && (b.k(abi)))
     {
-      b.a(apQ, new com.tencent.mm.al.b());
-      localObject = b.h(apQ);
-      i = b.l(apQ);
-      u.i("!44@/B4Tb64lLpJjdNXZaTU/yPJ+5ICc1/K11SmIwS+HTfk=", "init ");
-      ccG.clear();
+      b.a(abi, new com.tencent.mm.ao.b());
+      localObject = b.h(abi);
+      i = b.l(abi);
+      v.i("MicroMsg.SpeexEncoderWorker", "init ");
+      bWu.clear();
       c.b localb = new c.b();
-      cat = com.tencent.mm.al.c.getPrefix();
-      ccA = i;
-      ccB = 1;
-      ccC = 16;
-      mFileName = String.format("%s%d_%d_%d_%d", new Object[] { cat, Integer.valueOf(ccA), Integer.valueOf(ccB), Integer.valueOf(ccC), Long.valueOf(System.currentTimeMillis()) });
+      bUc = com.tencent.mm.ao.c.getPrefix();
+      bWo = i;
+      bWp = 1;
+      bWq = 16;
+      mFileName = String.format("%s%d_%d_%d_%d", new Object[] { bUc, Integer.valueOf(bWo), Integer.valueOf(bWp), Integer.valueOf(bWq), Long.valueOf(System.currentTimeMillis()) });
     }
-    if (b.h(apQ) != null)
+    if (b.h(abi) != null)
     {
-      localObject = b.h(apQ);
-      u.d("!44@/B4Tb64lLpJjdNXZaTU/yPJ+5ICc1/K11SmIwS+HTfk=", "push into queue queueLen:" + ccG.size());
+      localObject = b.h(abi);
+      v.d("MicroMsg.SpeexEncoderWorker", "push into queue queueLen:" + bWu.size());
       if ((paramArrayOfByte != null) && (paramArrayOfByte.length > 0)) {
-        ccG.add(new g.a(paramArrayOfByte, paramArrayOfByte.length));
+        bWu.add(new g.a(paramArrayOfByte, paramArrayOfByte.length));
       }
     }
-    if (b.i(apQ) == com.tencent.mm.compatible.b.b.a.bpp)
+    if (b.i(abi) == com.tencent.mm.compatible.b.b.a.bdo)
     {
-      if (b.m(apQ) == null)
+      if (b.m(abi) == null)
       {
-        b.a(apQ, new com.tencent.mm.c.c.c(b.l(apQ), b.n(apQ)));
-        b.m(apQ).br(b.o(apQ));
+        b.a(abi, new com.tencent.mm.c.c.c(b.l(abi), b.n(abi)));
+        b.m(abi).bk(b.o(abi));
       }
       f(paramArrayOfByte, paramInt);
-      localObject = b.m(apQ);
-      if (arD == null)
+      localObject = b.m(abi);
+      if (adl == null)
       {
         i = -1;
         label596:
@@ -132,32 +132,32 @@ final class b$2
       }
       for (;;)
       {
-        u.d("!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7", "pushBuf queueLen:%d bufLen:%d len:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(j), Integer.valueOf(paramInt) });
+        v.d("MicroMsg.SilkWriter", "pushBuf queueLen:%d bufLen:%d len:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(j), Integer.valueOf(paramInt) });
         if (paramInt <= 0) {
           break;
         }
-        if (!arE) {
+        if (!adm) {
           break label678;
         }
-        u.e("!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7", "already stop");
+        v.e("MicroMsg.SilkWriter", "already stop");
         return;
-        i = arD.size();
+        i = adl.size();
         break label596;
         label671:
         j = paramArrayOfByte.length;
       }
       label678:
-      if (arK == null)
+      if (ads == null)
       {
-        arK = new com.tencent.mm.c.c.c.a((com.tencent.mm.c.c.c)localObject, (byte)0);
-        e.a(arK, "SilkWriter_run");
+        ads = new com.tencent.mm.c.c.c.a((com.tencent.mm.c.c.c)localObject, (byte)0);
+        e.a(ads, "SilkWriter_run");
       }
-      arD.add(new g.a(paramArrayOfByte, paramInt));
+      adl.add(new g.a(paramArrayOfByte, paramInt));
       return;
     }
     Object localObject = paramArrayOfByte;
     int i = paramInt;
-    if (b.l(apQ) == 16000)
+    if (b.l(abi) == 16000)
     {
       localObject = e(paramArrayOfByte, paramInt);
       i = localObject.length;

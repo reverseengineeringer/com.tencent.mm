@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract afi()Ljava/lang/String;
+.method public abstract ahM()Ljava/lang/String;
 .end method

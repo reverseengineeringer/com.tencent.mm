@@ -7,7 +7,7 @@ import com.tencent.mm.model.ah;
 import com.tencent.mm.model.i;
 import com.tencent.mm.sdk.h.j;
 import com.tencent.mm.sdk.h.j.b;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.q;
 import com.tencent.mm.storage.r;
 import com.tencent.mm.storage.s;
@@ -20,70 +20,71 @@ public final class t
   extends n
   implements j.b
 {
-  private int fSV;
-  private Cursor fdB;
-  private List llR;
+  private Cursor fmd;
+  private int gcv;
+  private List<String> lMf;
   
-  public t(MMBaseSelectContactUI paramMMBaseSelectContactUI, List paramList)
+  public t(MMBaseSelectContactUI paramMMBaseSelectContactUI, List<String> paramList)
   {
     this(paramMMBaseSelectContactUI, paramList, true, false);
   }
   
-  public t(MMBaseSelectContactUI paramMMBaseSelectContactUI, List paramList, boolean paramBoolean1, boolean paramBoolean2)
+  public t(MMBaseSelectContactUI paramMMBaseSelectContactUI, List<String> paramList, boolean paramBoolean1, boolean paramBoolean2)
   {
     super(paramMMBaseSelectContactUI, paramList, paramBoolean1, paramBoolean2);
-    u.i("!56@/B4Tb64lLpJPBALU+tmTeKA7sgB7+yKjrhkRR84eirkncCM8RTp8Sg==", "create!");
-    WQ();
-    ah.tD().rt().a(this);
+    v.i("MicroMsg.RecentConversationAdapter", "create!");
+    YA();
+    ah.tE().ru().a(this);
   }
   
-  private void WQ()
+  private void YA()
   {
-    u.i("!56@/B4Tb64lLpJPBALU+tmTeKA7sgB7+yKjrhkRR84eirkncCM8RTp8Sg==", "resetData");
-    if (fdB != null)
+    v.i("MicroMsg.RecentConversationAdapter", "resetData");
+    if (fmd != null)
     {
-      fdB.close();
-      fdB = null;
+      fmd.close();
+      fmd = null;
     }
-    fdB = ah.tD().rt().a(i.bzW, cvM, llg, "");
-    if (llR != null) {}
-    for (int i = llR.size();; i = 0)
+    fmd = ah.tE().ru().a(i.bsZ, crs, lLt, "");
+    if (lMf != null) {}
+    for (int i = lMf.size();; i = 0)
     {
-      fSV = i;
+      gcv = i;
+      clearCache();
       return;
     }
   }
   
   public final void a(int paramInt, j paramj, Object paramObject)
   {
-    WQ();
+    YA();
     notifyDataSetChanged();
   }
   
   public final void finish()
   {
     super.finish();
-    u.i("!56@/B4Tb64lLpJPBALU+tmTeKA7sgB7+yKjrhkRR84eirkncCM8RTp8Sg==", "finish!");
-    if (fdB != null)
+    v.i("MicroMsg.RecentConversationAdapter", "finish!");
+    if (fmd != null)
     {
-      fdB.close();
-      fdB = null;
+      fmd.close();
+      fmd = null;
     }
-    ah.tD().rt().b(this);
+    ah.tE().ru().b(this);
   }
   
   public final int getCount()
   {
-    return fdB.getCount() + fSV + 1;
+    return fmd.getCount() + gcv + 1;
   }
   
-  protected final a iH(int paramInt)
+  protected final a jQ(int paramInt)
   {
     r localr = null;
-    if (paramInt == fSV)
+    if (paramInt == gcv)
     {
       localObject = new g(paramInt);
-      lnf = lkS.getActivity().getResources().getString(2131427815);
+      lNA = lLd.getActivity().getResources().getString(2131234849);
     }
     do
     {
@@ -92,31 +93,31 @@ public final class t
         do
         {
           return (a)localObject;
-          if (paramInt >= fSV) {
+          if (paramInt >= gcv) {
             break;
           }
           localObject = localr;
-        } while (llR == null);
+        } while (lMf == null);
         localObject = localr;
       } while (paramInt < 0);
       localObject = localr;
-    } while (paramInt >= llR.size());
+    } while (paramInt >= lMf.size());
     Object localObject = new com.tencent.mm.ui.contact.a.c(paramInt);
-    username = ((String)llR.get(paramInt));
+    username = ((String)lMf.get(paramInt));
     return (a)localObject;
-    if ((paramInt > fSV) && (fdB.moveToPosition(paramInt - fSV - 1)))
+    if ((paramInt > gcv) && (fmd.moveToPosition(paramInt - gcv - 1)))
     {
       localObject = new f(paramInt);
       localr = new r();
-      localr.c(fdB);
-      cId = ah.tD().rq().Ek(field_username);
-      if (cId == null) {
-        cId = ah.tD().rq().Eo(field_username);
+      localr.b(fmd);
+      cFh = ah.tE().rr().Gy(field_username);
+      if (cFh == null) {
+        cFh = ah.tE().rr().GC(field_username);
       }
-      lkT = awQ();
+      lLe = azn();
       return (a)localObject;
     }
-    u.e("!56@/B4Tb64lLpJPBALU+tmTeKA7sgB7+yKjrhkRR84eirkncCM8RTp8Sg==", "create Data Item Error position=%d", new Object[] { Integer.valueOf(paramInt) });
+    v.e("MicroMsg.RecentConversationAdapter", "create Data Item Error position=%d", new Object[] { Integer.valueOf(paramInt) });
     return null;
   }
 }

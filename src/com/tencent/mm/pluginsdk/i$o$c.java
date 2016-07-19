@@ -3,28 +3,28 @@ package com.tencent.mm.pluginsdk;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.view.View;
-import com.tencent.mm.protocal.b.add;
-import com.tencent.mm.storage.i.a;
+import com.tencent.mm.protocal.b.adw;
+import com.tencent.mm.storage.z;
 
 public abstract interface i$o$c
 {
-  public abstract void L(Activity paramActivity);
+  public abstract void G(Activity paramActivity);
   
-  public abstract void U(View paramView);
+  public abstract void V(View paramView);
   
-  public abstract Bitmap a(add paramadd, View paramView, int paramInt, i.a parama);
+  public abstract Bitmap a(adw paramadw, View paramView, int paramInt, z paramz);
   
-  public abstract void ayA();
+  public abstract void aBa();
   
-  public abstract void b(add paramadd, View paramView, int paramInt, i.a parama);
+  public abstract void b(adw paramadw, View paramView, int paramInt, z paramz);
   
-  public abstract void c(add paramadd, View paramView, int paramInt, i.a parama);
+  public abstract void c(adw paramadw, View paramView, int paramInt, z paramz);
   
   public abstract void pause();
   
-  public abstract Bitmap r(add paramadd);
+  public abstract Bitmap r(adw paramadw);
   
-  public abstract String s(add paramadd);
+  public abstract String s(adw paramadw);
   
   public abstract void start();
 }

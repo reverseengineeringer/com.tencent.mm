@@ -1,38 +1,53 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.pluginsdk.ui.chat.ChatFooter.b;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.ui.tools.r.b;
 
 final class ChattingUI$a$98
-  implements ChatFooter.b
+  implements r.b
 {
+  private int lBK = 0;
+  
   ChattingUI$a$98(ChattingUI.a parama) {}
   
-  public final void a(Boolean paramBoolean1, Boolean paramBoolean2)
+  public final void GA()
   {
-    if (paramBoolean1.booleanValue())
+    new ac().post(new Runnable()
     {
-      if (paramBoolean2.booleanValue()) {
-        ChattingUI.a.a(laF, Boolean.valueOf(true), Boolean.valueOf(true));
+      public final void run()
+      {
+        ChattingUI.a.Q(lAY);
       }
-    }
-    else {
-      return;
-    }
-    ChattingUI.a.a(laF, Boolean.valueOf(false), Boolean.valueOf(true));
+    });
   }
   
-  public final void b(Boolean paramBoolean1, Boolean paramBoolean2)
+  public final void GB() {}
+  
+  public final void GC() {}
+  
+  public final void GD() {}
+  
+  public final boolean ln(String paramString)
   {
-    if (paramBoolean1.booleanValue())
+    return false;
+  }
+  
+  public final void lo(String paramString)
+  {
+    if (be.kf(paramString))
     {
-      if (paramBoolean2.booleanValue()) {
-        ChattingUI.a.a(laF, Boolean.valueOf(true), Boolean.valueOf(false));
-      }
-    }
-    else {
+      lBK = 0;
+      lAY.tl(-1);
       return;
     }
-    ChattingUI.a.a(laF, Boolean.valueOf(false), Boolean.valueOf(false));
+    if (paramString.length() > lBK) {
+      g.gdY.h(10451, new Object[] { Integer.valueOf(1) });
+    }
+    lBK = paramString.length();
+    g.gdY.h(10456, new Object[] { Integer.valueOf(1) });
+    ChattingUI.a.ae(lAY).qY(paramString);
   }
 }
 

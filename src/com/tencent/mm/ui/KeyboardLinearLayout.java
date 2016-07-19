@@ -2,24 +2,24 @@ package com.tencent.mm.ui;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.OnLayoutChangedLinearLayout;
 
 public class KeyboardLinearLayout
   extends OnLayoutChangedLinearLayout
 {
-  public String TAG = "!44@/B4Tb64lLpJirlrWfoDniPYsnRdgh0oTmbySfFnZ03Y=";
-  private int cFj;
-  private boolean ery = false;
-  private boolean gYR;
-  private a klE;
+  public String TAG = "MicroMsg.KeyboardLinearLayout";
+  private int cCm;
+  private boolean ewM = false;
+  private boolean hmc;
+  public a kLf;
   
   public KeyboardLinearLayout(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    ery = false;
-    cFj = 0;
-    gYR = false;
+    ewM = false;
+    cCm = 0;
+    hmc = false;
     TAG += getId();
   }
   
@@ -28,59 +28,54 @@ public class KeyboardLinearLayout
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  public void in(int paramInt)
+  public void jv(int paramInt)
   {
-    if (klE != null) {
-      klE.in(paramInt);
-    }
-  }
-  
-  public void nI(int paramInt)
-  {
-    if (!ery)
-    {
-      ery = true;
-      cFj = paramInt;
-      u.i(TAG, "init height:%d", new Object[] { Integer.valueOf(cFj) });
-      if (klE != null) {
-        klE.in(-1);
-      }
-      if ((ery) && (!gYR) && (cFj > paramInt))
-      {
-        gYR = true;
-        in(-3);
-        u.w(TAG, "show keyboard!! mHeight: " + cFj + " b: " + paramInt);
-      }
-      if ((ery) && (gYR) && (cFj - paramInt <= 100))
-      {
-        gYR = false;
-        in(-2);
-        u.w(TAG, "hide keyboard!! mHeight: " + cFj + " b: " + paramInt);
-      }
-      return;
-    }
-    if (cFj < paramInt) {}
-    for (int i = paramInt;; i = cFj)
-    {
-      cFj = i;
-      break;
+    if (kLf != null) {
+      kLf.jv(paramInt);
     }
   }
   
   public void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
-    nI(paramInt4);
+    pg(paramInt4);
   }
   
-  public void setOnkbdStateListener(a parama)
+  public void pg(int paramInt)
   {
-    klE = parama;
+    if (!ewM)
+    {
+      ewM = true;
+      cCm = paramInt;
+      v.i(TAG, "init height:%d", new Object[] { Integer.valueOf(cCm) });
+      if (kLf != null) {
+        kLf.jv(-1);
+      }
+      if ((ewM) && (!hmc) && (cCm > paramInt))
+      {
+        hmc = true;
+        jv(-3);
+        v.w(TAG, "show keyboard!! mHeight: " + cCm + " b: " + paramInt);
+      }
+      if ((ewM) && (hmc) && (cCm - paramInt <= 100))
+      {
+        hmc = false;
+        jv(-2);
+        v.w(TAG, "hide keyboard!! mHeight: " + cCm + " b: " + paramInt);
+      }
+      return;
+    }
+    if (cCm < paramInt) {}
+    for (int i = paramInt;; i = cCm)
+    {
+      cCm = i;
+      break;
+    }
   }
   
   public static abstract interface a
   {
-    public abstract void in(int paramInt);
+    public abstract void jv(int paramInt);
   }
 }
 

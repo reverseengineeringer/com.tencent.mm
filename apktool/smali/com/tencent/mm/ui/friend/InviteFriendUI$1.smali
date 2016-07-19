@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/friend/InviteFriendUI;->Gb()V
+    value = Lcom/tencent/mm/ui/friend/InviteFriendUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+.field final synthetic lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 219
-    iput-object p1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
     const/4 v8, 0x1
 
     .line 223
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/InviteFriendUI;->a(Lcom/tencent/mm/ui/friend/InviteFriendUI;)I
 
@@ -60,11 +60,11 @@
 
     .line 226
     :pswitch_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -89,11 +89,11 @@
 
     .line 228
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -109,9 +109,9 @@
 
     .line 231
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
-    const v2, 0x7f0b00db
+    const v2, 0x7f080a24
 
     new-array v3, v8, [Ljava/lang/Object;
 
@@ -128,7 +128,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/friend/InviteFriendUI;->b(Lcom/tencent/mm/ui/friend/InviteFriendUI;)Ljava/lang/String;
 
@@ -159,7 +159,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 236
-    iget-object v1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/friend/InviteFriendUI;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -172,7 +172,7 @@
 
     move-result-object v0
 
-    .line 241
+    .line 240
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
@@ -293,12 +293,12 @@
     invoke-virtual {v5, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 255
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
     invoke-virtual {v0, v5}, Lcom/tencent/mm/ui/friend/InviteFriendUI;->startActivity(Landroid/content/Intent;)V
 
     .line 258
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/InviteFriendUI;->c(Lcom/tencent/mm/ui/friend/InviteFriendUI;)V
 
@@ -315,7 +315,7 @@
     .line 263
     new-instance v0, Lcom/tencent/mm/ui/tools/m;
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iget-object v5, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
     invoke-direct {v0, v5}, Lcom/tencent/mm/ui/tools/m;-><init>(Landroid/content/Context;)V
 
@@ -324,34 +324,34 @@
 
     invoke-direct {v5, p0, v4, v1}, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$1;-><init>(Lcom/tencent/mm/ui/friend/InviteFriendUI$1;Ljava/util/HashMap;Landroid/content/pm/PackageManager;)V
 
-    iput-object v5, v0, Lcom/tencent/mm/ui/tools/m;->lwM:Lcom/tencent/mm/ui/base/n$a;
+    iput-object v5, v0, Lcom/tencent/mm/ui/tools/m;->lXz:Lcom/tencent/mm/ui/base/n$a;
 
     .line 272
     new-instance v5, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$2;
 
     invoke-direct {v5, p0, v4, v1}, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$2;-><init>(Lcom/tencent/mm/ui/friend/InviteFriendUI$1;Ljava/util/HashMap;Landroid/content/pm/PackageManager;)V
 
-    iput-object v5, v0, Lcom/tencent/mm/ui/tools/m;->lwN:Lcom/tencent/mm/ui/base/n$b;
+    iput-object v5, v0, Lcom/tencent/mm/ui/tools/m;->lXA:Lcom/tencent/mm/ui/base/n$b;
 
     .line 281
     new-instance v1, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$3;
 
     invoke-direct {v1, p0, v4}, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$3;-><init>(Lcom/tencent/mm/ui/friend/InviteFriendUI$1;Ljava/util/HashMap;)V
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/tools/m;->hle:Lcom/tencent/mm/ui/base/n$c;
+    iput-object v1, v0, Lcom/tencent/mm/ui/tools/m;->hoS:Lcom/tencent/mm/ui/base/n$c;
 
     .line 291
     new-instance v1, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$4;
 
     invoke-direct {v1, p0, v4, v3, v2}, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$4;-><init>(Lcom/tencent/mm/ui/friend/InviteFriendUI$1;Ljava/util/HashMap;Landroid/net/Uri;Ljava/lang/String;)V
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/tools/m;->hlf:Lcom/tencent/mm/ui/base/n$d;
+    iput-object v1, v0, Lcom/tencent/mm/ui/tools/m;->hoT:Lcom/tencent/mm/ui/base/n$d;
 
     .line 304
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/m;->biF()Landroid/app/Dialog;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/m;->boB()Landroid/app/Dialog;
 
     .line 307
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/InviteFriendUI;->c(Lcom/tencent/mm/ui/friend/InviteFriendUI;)V
 
@@ -359,9 +359,9 @@
 
     .line 340
     :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
-    const v1, 0x7f0b00d9
+    const v1, 0x7f08102a
 
     invoke-static {v0, v1, v8}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -375,13 +375,13 @@
     :pswitch_1
     new-array v0, v8, [I
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/friend/InviteFriendUI;->b(Lcom/tencent/mm/ui/friend/InviteFriendUI;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/a/o;->aF(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/a/o;->aK(Ljava/lang/String;)I
 
     move-result v1
 
@@ -390,7 +390,7 @@
     .line 346
     new-instance v1, Lcom/tencent/mm/ui/friend/g;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
     new-instance v3, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$5;
 
@@ -407,7 +407,7 @@
     :pswitch_2
     new-instance v0, Lcom/tencent/mm/ui/friend/h;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
     new-instance v2, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$6;
 
@@ -416,31 +416,31 @@
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/ui/friend/h;-><init>(Landroid/content/Context;Lcom/tencent/mm/ui/friend/h$a;)V
 
     .line 369
-    iget-object v1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/friend/InviteFriendUI;->e(Lcom/tencent/mm/ui/friend/InviteFriendUI;)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/friend/InviteFriendUI;->b(Lcom/tencent/mm/ui/friend/InviteFriendUI;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v3
 
     const/16 v4, 0x1e9
 
-    invoke-virtual {v3, v4, v0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v3, v4, v0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zy()Lcom/tencent/mm/modelfriend/p;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zL()Lcom/tencent/mm/modelfriend/p;
 
     move-result-object v3
 
-    invoke-virtual {v3, v1}, Lcom/tencent/mm/modelfriend/p;->hz(Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v3, v1}, Lcom/tencent/mm/modelfriend/p;->hR(Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
 
@@ -453,7 +453,7 @@
     if-gt v3, v8, :cond_8
 
     :cond_7
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/friend/h;->Hu(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/friend/h;->JJ(Ljava/lang/String;)V
 
     :goto_2
     if-eqz v1, :cond_0
@@ -463,7 +463,7 @@
     goto/16 :goto_0
 
     :cond_8
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/friend/h;->j(Landroid/database/Cursor;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/friend/h;->h(Landroid/database/Cursor;)V
 
     goto :goto_2
 
@@ -476,7 +476,7 @@
     .line 374
     const-string/jumbo v0, "intent.key.linkedin.id"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/friend/InviteFriendUI;->f(Lcom/tencent/mm/ui/friend/InviteFriendUI;)Ljava/lang/String;
 
@@ -485,11 +485,11 @@
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 375
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -502,7 +502,7 @@
     move-result-object v2
 
     .line 376
-    invoke-static {}, Lcom/tencent/mm/model/h;->se()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/h;->sg()Ljava/lang/String;
 
     move-result-object v0
 
@@ -519,16 +519,16 @@
     invoke-virtual {v1, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 378
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
     const-string/jumbo v2, "accountsync"
 
     const-string/jumbo v3, "com.tencent.mm.ui.bindlinkedin.InviteLinkedInFriendUI"
 
-    invoke-static {v0, v2, v3, v1}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {v0, v2, v3, v1}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     .line 379
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lrM:Lcom/tencent/mm/ui/friend/InviteFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1;->lSq:Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/friend/InviteFriendUI;->finish()V
 

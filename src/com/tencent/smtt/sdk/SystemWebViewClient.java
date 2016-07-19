@@ -9,134 +9,149 @@ import android.net.http.SslCertificate;
 import android.os.Build.VERSION;
 import android.os.Message;
 import android.view.KeyEvent;
-import com.tencent.smtt.a.k;
-import com.tencent.smtt.a.p;
-import com.tencent.smtt.a.r;
+import com.tencent.smtt.utils.TbsLog;
+import com.tencent.smtt.utils.l;
+import java.io.InputStream;
 import java.util.Map;
 
 class SystemWebViewClient
   extends android.webkit.WebViewClient
 {
-  private static String lRM = null;
-  private WebViewClient ftr;
-  private WebView kMK;
+  private static String mtB = null;
+  private WebViewClient fCw;
+  private WebView llZ;
   
   SystemWebViewClient(WebView paramWebView, WebViewClient paramWebViewClient)
   {
-    kMK = paramWebView;
-    ftr = paramWebViewClient;
+    llZ = paramWebView;
+    fCw = paramWebViewClient;
   }
   
   public void doUpdateVisitedHistory(android.webkit.WebView paramWebView, String paramString, boolean paramBoolean)
   {
-    kMK.setSysWebView(paramWebView);
-    ftr.doUpdateVisitedHistory(kMK, paramString, paramBoolean);
+    fCw.doUpdateVisitedHistory(llZ, paramString, paramBoolean);
   }
   
   public void onFormResubmission(android.webkit.WebView paramWebView, Message paramMessage1, Message paramMessage2)
   {
-    kMK.setSysWebView(paramWebView);
-    ftr.onFormResubmission(kMK, paramMessage1, paramMessage2);
+    fCw.onFormResubmission(llZ, paramMessage1, paramMessage2);
   }
   
   public void onLoadResource(android.webkit.WebView paramWebView, String paramString)
   {
-    kMK.setSysWebView(paramWebView);
-    ftr.onLoadResource(kMK, paramString);
+    fCw.onLoadResource(llZ, paramString);
   }
   
   public void onPageFinished(android.webkit.WebView paramWebView, String paramString)
   {
-    if (lRM == null)
+    if (mtB == null)
     {
-      localObject = p.bmt();
+      localObject = com.tencent.smtt.utils.q.bsA();
       if (localObject != null)
       {
-        ((p)localObject).iy(true);
-        lRM = Boolean.toString(true);
+        ((com.tencent.smtt.utils.q)localObject).jh(true);
+        mtB = Boolean.toString(true);
       }
     }
-    kMK.setSysWebView(paramWebView);
-    Object localObject = kMK;
-    lTQ += 1;
-    ftr.onPageFinished(kMK, paramString);
+    Object localObject = llZ;
+    mvM += 1;
+    fCw.onPageFinished(llZ, paramString);
     if ("com.qzone".equals(getContextgetApplicationInfopackageName)) {
-      WebView.fG(paramWebView.getContext());
+      WebView.fI(paramWebView.getContext());
     }
-    r.n("SystemWebViewClient", paramWebView.getContext());
-    WebView.bmc();
+    TbsLog.app_extra("SystemWebViewClient", paramWebView.getContext());
+    WebView.bsg();
+    if ((llZ.getContext() != null) && (q.fr(llZ.getContext())) && (!q.fx(llZ.getContext())) && (k.p(llZ.getContext(), false))) {
+      k.eX(llZ.getContext());
+    }
   }
   
   public void onPageStarted(android.webkit.WebView paramWebView, String paramString, Bitmap paramBitmap)
   {
-    kMK.setSysWebView(paramWebView);
-    ftr.onPageStarted(kMK, paramString, paramBitmap);
+    fCw.onPageStarted(llZ, paramString, paramBitmap);
   }
   
   public void onReceivedError(android.webkit.WebView paramWebView, int paramInt, String paramString1, String paramString2)
   {
-    kMK.setSysWebView(paramWebView);
-    ftr.onReceivedError(kMK, paramInt, paramString1, paramString2);
+    fCw.onReceivedError(llZ, paramInt, paramString1, paramString2);
   }
   
   public void onReceivedHttpAuthRequest(android.webkit.WebView paramWebView, android.webkit.HttpAuthHandler paramHttpAuthHandler, String paramString1, String paramString2)
   {
-    kMK.setSysWebView(paramWebView);
-    ftr.onReceivedHttpAuthRequest(kMK, new HttpAuthHandlerImpl(paramHttpAuthHandler), paramString1, paramString2);
+    fCw.onReceivedHttpAuthRequest(llZ, new HttpAuthHandlerImpl(paramHttpAuthHandler), paramString1, paramString2);
+  }
+  
+  public void onReceivedHttpError(android.webkit.WebView paramWebView, android.webkit.WebResourceRequest paramWebResourceRequest, android.webkit.WebResourceResponse paramWebResourceResponse)
+  {
+    paramWebView = new WebResourceRequestimpl(paramWebResourceRequest);
+    paramWebResourceRequest = new WebResourceResponseimpl(paramWebResourceResponse);
+    fCw.onReceivedHttpError(llZ, paramWebView, paramWebResourceRequest);
   }
   
   @TargetApi(12)
   public void onReceivedLoginRequest(android.webkit.WebView paramWebView, String paramString1, String paramString2, String paramString3)
   {
-    if (Build.VERSION.SDK_INT >= 12)
-    {
-      kMK.setSysWebView(paramWebView);
-      ftr.onReceivedLoginRequest(kMK, paramString1, paramString2, paramString3);
+    if (Build.VERSION.SDK_INT >= 12) {
+      fCw.onReceivedLoginRequest(llZ, paramString1, paramString2, paramString3);
     }
   }
   
   @TargetApi(8)
   public void onReceivedSslError(android.webkit.WebView paramWebView, android.webkit.SslErrorHandler paramSslErrorHandler, android.net.http.SslError paramSslError)
   {
-    if (Build.VERSION.SDK_INT >= 8)
-    {
-      kMK.setSysWebView(paramWebView);
-      ftr.onReceivedSslError(kMK, new SslErrorHandlerImpl(paramSslErrorHandler), new SslErrorImpl(paramSslError));
+    if (Build.VERSION.SDK_INT >= 8) {
+      fCw.onReceivedSslError(llZ, new SslErrorHandlerImpl(paramSslErrorHandler), new SslErrorImpl(paramSslError));
     }
   }
   
   public void onScaleChanged(android.webkit.WebView paramWebView, float paramFloat1, float paramFloat2)
   {
-    kMK.setSysWebView(paramWebView);
-    ftr.onScaleChanged(kMK, paramFloat1, paramFloat2);
+    fCw.onScaleChanged(llZ, paramFloat1, paramFloat2);
   }
   
   public void onTooManyRedirects(android.webkit.WebView paramWebView, Message paramMessage1, Message paramMessage2)
   {
-    kMK.setSysWebView(paramWebView);
-    ftr.onTooManyRedirects(kMK, paramMessage1, paramMessage2);
+    fCw.onTooManyRedirects(llZ, paramMessage1, paramMessage2);
   }
   
   public void onUnhandledKeyEvent(android.webkit.WebView paramWebView, KeyEvent paramKeyEvent)
   {
-    kMK.setSysWebView(paramWebView);
-    ftr.onUnhandledKeyEvent(kMK, paramKeyEvent);
+    fCw.onUnhandledKeyEvent(llZ, paramKeyEvent);
   }
   
   public android.webkit.WebResourceResponse shouldInterceptRequest(android.webkit.WebView paramWebView, android.webkit.WebResourceRequest paramWebResourceRequest)
   {
     if (Build.VERSION.SDK_INT < 21) {
-      return null;
+      paramWebView = null;
     }
-    if (paramWebResourceRequest == null) {
-      return null;
-    }
-    paramWebView = new WebResourceRequestImpl(paramWebResourceRequest.getUrl().toString(), paramWebResourceRequest.isForMainFrame(), paramWebResourceRequest.hasGesture(), paramWebResourceRequest.getMethod(), paramWebResourceRequest.getRequestHeaders());
-    paramWebView = ftr.shouldInterceptRequest(kMK, paramWebView);
-    if (paramWebView == null) {
-      return null;
-    }
-    return new android.webkit.WebResourceResponse(paramWebView.getMimeType(), paramWebView.getEncoding(), paramWebView.getData());
+    int i;
+    String str;
+    do
+    {
+      do
+      {
+        return paramWebView;
+        if (paramWebResourceRequest == null) {
+          return null;
+        }
+        paramWebView = new WebResourceRequestImpl(paramWebResourceRequest.getUrl().toString(), paramWebResourceRequest.isForMainFrame(), paramWebResourceRequest.hasGesture(), paramWebResourceRequest.getMethod(), paramWebResourceRequest.getRequestHeaders());
+        paramWebView = fCw.shouldInterceptRequest(llZ, paramWebView);
+        if (paramWebView == null) {
+          return null;
+        }
+        paramWebResourceRequest = new android.webkit.WebResourceResponse(paramWebView.getMimeType(), paramWebView.getEncoding(), paramWebView.getData());
+        paramWebResourceRequest.setResponseHeaders(paramWebView.getResponseHeaders());
+        i = paramWebView.getStatusCode();
+        str = paramWebView.getReasonPhrase();
+        if (i != paramWebResourceRequest.getStatusCode()) {
+          break;
+        }
+        paramWebView = paramWebResourceRequest;
+      } while (str == null);
+      paramWebView = paramWebResourceRequest;
+    } while (str.equals(paramWebResourceRequest.getReasonPhrase()));
+    paramWebResourceRequest.setStatusCodeAndReasonPhrase(i, str);
+    return paramWebResourceRequest;
   }
   
   @TargetApi(11)
@@ -146,26 +161,23 @@ class SystemWebViewClient
     do
     {
       return null;
-      paramWebView = ftr.shouldInterceptRequest(kMK, paramString);
+      paramWebView = fCw.shouldInterceptRequest(llZ, paramString);
     } while (paramWebView == null);
     return new android.webkit.WebResourceResponse(paramWebView.getMimeType(), paramWebView.getEncoding(), paramWebView.getData());
   }
   
   public boolean shouldOverrideKeyEvent(android.webkit.WebView paramWebView, KeyEvent paramKeyEvent)
   {
-    kMK.setSysWebView(paramWebView);
-    return ftr.shouldOverrideKeyEvent(kMK, paramKeyEvent);
+    return fCw.shouldOverrideKeyEvent(llZ, paramKeyEvent);
   }
   
   public boolean shouldOverrideUrlLoading(android.webkit.WebView paramWebView, String paramString)
   {
-    if ((paramString == null) || (kMK.showDebugView(paramString))) {}
-    do
-    {
+    if ((paramString == null) || (llZ.showDebugView(paramString))) {}
+    while (l.bsu().bn(llZ.getContext().getApplicationContext(), paramString)) {
       return true;
-      kMK.setSysWebView(paramWebView);
-    } while (k.bmn().bo(kMK.getContext().getApplicationContext(), paramString));
-    return ftr.shouldOverrideUrlLoading(kMK, paramString);
+    }
+    return fCw.shouldOverrideUrlLoading(llZ, paramString);
   }
   
   private static class HttpAuthHandlerImpl
@@ -252,16 +264,17 @@ class SystemWebViewClient
     private boolean hasUserGesture;
     private boolean isMainFrame;
     private String method;
-    private Map requestHeaders;
+    private Map<String, String> requestHeaders;
     private String url;
     
-    public WebResourceRequestImpl(String paramString1, boolean paramBoolean1, boolean paramBoolean2, String paramString2, Map paramMap)
+    public WebResourceRequestImpl(boolean paramBoolean1, boolean paramBoolean2, String paramString, Map<String, String> paramMap)
     {
-      url = paramString1;
-      isMainFrame = paramBoolean1;
-      hasUserGesture = paramBoolean2;
-      method = paramString2;
-      requestHeaders = paramMap;
+      url = paramBoolean1;
+      isMainFrame = paramBoolean2;
+      hasUserGesture = paramString;
+      method = paramMap;
+      Map localMap;
+      requestHeaders = localMap;
     }
     
     public String getMethod()
@@ -269,7 +282,7 @@ class SystemWebViewClient
       return method;
     }
     
-    public Map getRequestHeaders()
+    public Map<String, String> getRequestHeaders()
     {
       return requestHeaders;
     }
@@ -287,6 +300,108 @@ class SystemWebViewClient
     public boolean isForMainFrame()
     {
       return isMainFrame;
+    }
+  }
+  
+  private static class WebResourceRequestimpl
+    implements com.tencent.smtt.export.external.interfaces.WebResourceRequest
+  {
+    android.webkit.WebResourceRequest mWebResourceRequest;
+    
+    WebResourceRequestimpl(android.webkit.WebResourceRequest paramWebResourceRequest)
+    {
+      mWebResourceRequest = paramWebResourceRequest;
+    }
+    
+    public String getMethod()
+    {
+      return mWebResourceRequest.getMethod();
+    }
+    
+    public Map<String, String> getRequestHeaders()
+    {
+      return mWebResourceRequest.getRequestHeaders();
+    }
+    
+    public Uri getUrl()
+    {
+      return mWebResourceRequest.getUrl();
+    }
+    
+    public boolean hasGesture()
+    {
+      return mWebResourceRequest.hasGesture();
+    }
+    
+    public boolean isForMainFrame()
+    {
+      return mWebResourceRequest.isForMainFrame();
+    }
+  }
+  
+  private static class WebResourceResponseimpl
+    extends com.tencent.smtt.export.external.interfaces.WebResourceResponse
+  {
+    android.webkit.WebResourceResponse mWebResourceResponse;
+    
+    public WebResourceResponseimpl(android.webkit.WebResourceResponse paramWebResourceResponse)
+    {
+      mWebResourceResponse = paramWebResourceResponse;
+    }
+    
+    public InputStream getData()
+    {
+      return mWebResourceResponse.getData();
+    }
+    
+    public String getEncoding()
+    {
+      return mWebResourceResponse.getEncoding();
+    }
+    
+    public String getMimeType()
+    {
+      return mWebResourceResponse.getMimeType();
+    }
+    
+    public String getReasonPhrase()
+    {
+      return mWebResourceResponse.getReasonPhrase();
+    }
+    
+    public Map<String, String> getResponseHeaders()
+    {
+      return mWebResourceResponse.getResponseHeaders();
+    }
+    
+    public int getStatusCode()
+    {
+      return mWebResourceResponse.getStatusCode();
+    }
+    
+    public void setData(InputStream paramInputStream)
+    {
+      mWebResourceResponse.setData(paramInputStream);
+    }
+    
+    public void setEncoding(String paramString)
+    {
+      mWebResourceResponse.setEncoding(paramString);
+    }
+    
+    public void setMimeType(String paramString)
+    {
+      mWebResourceResponse.setMimeType(paramString);
+    }
+    
+    public void setResponseHeaders(Map<String, String> paramMap)
+    {
+      mWebResourceResponse.setResponseHeaders(paramMap);
+    }
+    
+    public void setStatusCodeAndReasonPhrase(int paramInt, String paramString)
+    {
+      mWebResourceResponse.setStatusCodeAndReasonPhrase(paramInt, paramString);
     }
   }
 }

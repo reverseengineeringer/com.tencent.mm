@@ -1,25 +1,24 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.model.ah;
-import com.tencent.mm.model.c;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.h;
-import com.tencent.mm.storage.j.a;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.tencent.mm.pluginsdk.ui.chat.ChatFooter;
 
 final class ChattingUI$a$91
-  implements Runnable
+  implements View.OnClickListener
 {
-  ChattingUI$a$91(ChattingUI.a parama, long paramLong, int paramInt) {}
+  ChattingUI$a$91(ChattingUI.a parama, Boolean paramBoolean) {}
   
-  public final void run()
+  public final void onClick(View paramView)
   {
-    u.i("!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/", "if (isShowSearchChatResult || isFromGlobalSearch) on set position %d, set selection %d", new Object[] { Long.valueOf(lbo), Integer.valueOf(lbp) });
-    ChattingUI.b.a(ChattingUI.a.e(laF), lbp, false);
-    if ((laF.kYT) && (!ChattingUI.a.U(laF)))
+    if (lBJ.booleanValue())
     {
-      ChattingUI.a.a(laF, lbp, lbo);
-      ah.tD().rn().b(j.a.kdo, Boolean.valueOf(false));
+      ChattingUI.a.a(lAY, Boolean.valueOf(true), Boolean.valueOf(true));
+      lAY.fjo.aWr();
+      return;
     }
+    ChattingUI.a.a(lAY, Boolean.valueOf(true), Boolean.valueOf(false));
+    lAY.fjo.J(2, true);
   }
 }
 

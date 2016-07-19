@@ -7,7 +7,7 @@ final class SnsCommentDetailUI$16
   
   public final void run()
   {
-    hda.age();
+    hrN.aiI();
   }
 }
 

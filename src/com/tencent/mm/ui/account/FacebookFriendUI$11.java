@@ -12,7 +12,7 @@ final class FacebookFriendUI$11
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    ksr.startActivity(new Intent(ksr, InviteFacebookFriendsUI.class));
+    kRz.startActivity(new Intent(kRz, InviteFacebookFriendsUI.class));
     return true;
   }
 }

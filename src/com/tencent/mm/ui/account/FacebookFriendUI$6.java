@@ -7,14 +7,14 @@ final class FacebookFriendUI$6
 {
   FacebookFriendUI$6(FacebookFriendUI paramFacebookFriendUI) {}
   
-  public final void qm(int paramInt)
+  public final void se(int paramInt)
   {
     if (paramInt > 0)
     {
-      FacebookFriendUI.d(ksr).setVisibility(8);
+      FacebookFriendUI.d(kRz).setVisibility(8);
       return;
     }
-    FacebookFriendUI.d(ksr).setVisibility(0);
+    FacebookFriendUI.d(kRz).setVisibility(0);
   }
 }
 

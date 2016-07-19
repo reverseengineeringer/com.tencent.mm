@@ -3,12 +3,23 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/h/f",
+        "<",
+        "Lcom/tencent/mm/e/b/g;",
+        ">;"
+    }
+.end annotation
+
+
 # static fields
-.field public static final aoY:[Ljava/lang/String;
+.field public static final bkN:[Ljava/lang/String;
 
 
 # instance fields
-.field public aoX:Lcom/tencent/mm/sdk/h/d;
+.field public bkP:Lcom/tencent/mm/sdk/h/d;
 
 
 # direct methods
@@ -23,7 +34,7 @@
 
     const/4 v1, 0x0
 
-    sget-object v2, Lcom/tencent/mm/pluginsdk/model/app/n;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    sget-object v2, Lcom/tencent/mm/pluginsdk/model/app/n;->bjR:Lcom/tencent/mm/sdk/h/c$a;
 
     const-string/jumbo v3, "AppSort"
 
@@ -33,7 +44,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/model/app/o;->aoY:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/model/app/o;->bkN:[Ljava/lang/String;
 
     return-void
 .end method
@@ -43,7 +54,7 @@
 
     .prologue
     .line 24
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/app/n;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/app/n;->bjR:Lcom/tencent/mm/sdk/h/c$a;
 
     const-string/jumbo v1, "AppSort"
 
@@ -52,21 +63,21 @@
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/tencent/mm/sdk/h/f;-><init>(Lcom/tencent/mm/sdk/h/d;Lcom/tencent/mm/sdk/h/c$a;Ljava/lang/String;[Ljava/lang/String;)V
 
     .line 25
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/app/o;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/app/o;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     .line 26
     const-string/jumbo v0, "AppSort"
 
     const-string/jumbo v1, "CREATE INDEX IF NOT EXISTS flagIdIndex ON AppSort ( flag )"
 
-    invoke-interface {p1, v0, v1}, Lcom/tencent/mm/sdk/h/d;->cj(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-interface {p1, v0, v1}, Lcom/tencent/mm/sdk/h/d;->cx(Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 27
     const-string/jumbo v0, "AppSort"
 
     const-string/jumbo v1, "CREATE INDEX IF NOT EXISTS flagIdIndex ON AppSort ( sortId )"
 
-    invoke-interface {p1, v0, v1}, Lcom/tencent/mm/sdk/h/d;->cj(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-interface {p1, v0, v1}, Lcom/tencent/mm/sdk/h/d;->cx(Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 28
     return-void
@@ -87,8 +98,17 @@
     return v0
 .end method
 
-.method public final cV(J)Ljava/util/List;
+.method public final dm(J)Ljava/util/List;
     .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(J)",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     const/4 v6, 0x0
@@ -144,11 +164,11 @@
     if-nez v1, :cond_0
 
     .line 40
-    const-string/jumbo v0, "!32@/B4Tb64lLpKjqLIxHHV2u0eBiAQ5Q3BJ"
+    const-string/jumbo v0, "MicroMsg.AppSortStorage"
 
     const-string/jumbo v1, "getAppListByFlag : cursor is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 41
     const/4 v0, 0x0
@@ -159,7 +179,7 @@
 
     .line 43
     :cond_0
-    const-string/jumbo v2, "!32@/B4Tb64lLpKjqLIxHHV2u0eBiAQ5Q3BJ"
+    const-string/jumbo v2, "MicroMsg.AppSortStorage"
 
     const-string/jumbo v3, "getAppListByFlag count = %d"
 
@@ -177,7 +197,7 @@
 
     aput-object v5, v4, v6
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 44
     const-string/jumbo v2, "appId"

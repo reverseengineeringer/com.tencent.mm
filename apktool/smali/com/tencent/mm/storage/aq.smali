@@ -3,12 +3,41 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/storage/aq$a;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/h/f",
+        "<",
+        "Lcom/tencent/mm/storage/ap;",
+        ">;"
+    }
+.end annotation
+
+
 # static fields
-.field public static final aoY:[Ljava/lang/String;
+.field public static final bkN:[Ljava/lang/String;
 
 
 # instance fields
-.field public aoX:Lcom/tencent/mm/sdk/h/d;
+.field private bkP:Lcom/tencent/mm/sdk/h/d;
+
+.field private final kGE:Lcom/tencent/mm/sdk/h/h;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/tencent/mm/sdk/h/h",
+            "<",
+            "Lcom/tencent/mm/storage/aq$a;",
+            "Lcom/tencent/mm/storage/ap;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -16,16 +45,16 @@
     .locals 4
 
     .prologue
-    .line 15
+    .line 23
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
 
     const/4 v1, 0x0
 
-    sget-object v2, Lcom/tencent/mm/storage/ap;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    sget-object v2, Lcom/tencent/mm/storage/ap;->bjR:Lcom/tencent/mm/sdk/h/c$a;
 
-    const-string/jumbo v3, "UserOpenIdInApp"
+    const-string/jumbo v3, "Stranger"
 
     invoke-static {v2, v3}, Lcom/tencent/mm/sdk/h/f;->a(Lcom/tencent/mm/sdk/h/c$a;Ljava/lang/String;)Ljava/lang/String;
 
@@ -33,7 +62,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/storage/aq;->aoY:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/storage/aq;->bkN:[Ljava/lang/String;
 
     return-void
 .end method
@@ -42,45 +71,61 @@
     .locals 3
 
     .prologue
-    .line 24
-    sget-object v0, Lcom/tencent/mm/storage/ap;->aot:Lcom/tencent/mm/sdk/h/c$a;
+    .line 60
+    sget-object v0, Lcom/tencent/mm/storage/ap;->bjR:Lcom/tencent/mm/sdk/h/c$a;
 
-    const-string/jumbo v1, "UserOpenIdInApp"
+    const-string/jumbo v1, "Stranger"
 
     const/4 v2, 0x0
 
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/tencent/mm/sdk/h/f;-><init>(Lcom/tencent/mm/sdk/h/d;Lcom/tencent/mm/sdk/h/c$a;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 25
-    iput-object p1, p0, Lcom/tencent/mm/storage/aq;->aoX:Lcom/tencent/mm/sdk/h/d;
+    .line 32
+    new-instance v0, Lcom/tencent/mm/storage/aq$1;
 
-    .line 26
-    const-string/jumbo v0, "UserOpenIdInApp"
+    invoke-direct {v0, p0}, Lcom/tencent/mm/storage/aq$1;-><init>(Lcom/tencent/mm/storage/aq;)V
 
-    const-string/jumbo v1, "CREATE INDEX IF NOT EXISTS userOpenIdInAppAppIdUsernameIndex ON UserOpenIdInApp ( appId,username )"
+    iput-object v0, p0, Lcom/tencent/mm/storage/aq;->kGE:Lcom/tencent/mm/sdk/h/h;
 
-    invoke-interface {p1, v0, v1}, Lcom/tencent/mm/sdk/h/d;->cj(Ljava/lang/String;Ljava/lang/String;)Z
+    .line 61
+    iput-object p1, p0, Lcom/tencent/mm/storage/aq;->bkP:Lcom/tencent/mm/sdk/h/d;
 
-    .line 27
-    const-string/jumbo v0, "UserOpenIdInApp"
+    .line 62
+    return-void
+.end method
 
-    const-string/jumbo v1, "CREATE INDEX IF NOT EXISTS userOpenIdInAppOpenIdIndex ON UserOpenIdInApp ( openId )"
+.method private b(Lcom/tencent/mm/storage/ap;)V
+    .locals 1
 
-    invoke-interface {p1, v0, v1}, Lcom/tencent/mm/sdk/h/d;->cj(Ljava/lang/String;Ljava/lang/String;)Z
+    .prologue
+    .line 41
+    iget-object v0, p0, Lcom/tencent/mm/storage/aq;->kGE:Lcom/tencent/mm/sdk/h/h;
 
-    .line 28
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/sdk/h/h;->aR(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 42
+    iget-object v0, p0, Lcom/tencent/mm/storage/aq;->kGE:Lcom/tencent/mm/sdk/h/h;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/h/h;->EJ()V
+
+    .line 44
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final FJ(Ljava/lang/String;)Lcom/tencent/mm/storage/ap;
-    .locals 8
+.method public final HY(Ljava/lang/String;)Lcom/tencent/mm/storage/ap;
+    .locals 9
 
     .prologue
     const/4 v2, 0x0
 
-    .line 38
+    .line 65
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -89,18 +134,23 @@
 
     if-gtz v0, :cond_1
 
-    .line 51
+    .line 75
     :cond_0
     :goto_0
     return-object v2
 
-    .line 41
+    .line 68
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/storage/aq;->aoX:Lcom/tencent/mm/sdk/h/d;
+    new-instance v8, Lcom/tencent/mm/storage/ap;
 
-    const-string/jumbo v1, "UserOpenIdInApp"
+    invoke-direct {v8}, Lcom/tencent/mm/storage/ap;-><init>()V
 
-    const-string/jumbo v3, "openId=?"
+    .line 69
+    iget-object v0, p0, Lcom/tencent/mm/storage/aq;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    const-string/jumbo v1, "Stranger"
+
+    const-string/jumbo v3, "encryptUsername = ?"
 
     const/4 v4, 0x1
 
@@ -108,11 +158,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kx(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    aput-object v6, v4, v5
+    aput-object p1, v4, v5
 
     move-object v5, v2
 
@@ -124,178 +170,248 @@
 
     move-result-object v0
 
-    .line 42
+    .line 70
     invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
 
     move-result v1
 
-    if-gtz v1, :cond_2
+    if-eqz v1, :cond_2
 
-    .line 43
-    const-string/jumbo v1, "!56@/B4Tb64lLpLhq7sWJ+/cPquHPuW4dVELw2sSKTF0Xr52ZGTQ0XEmhg=="
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v4, "get null with openId:"
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 44
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    goto :goto_0
-
-    .line 47
-    :cond_2
+    .line 71
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 48
-    new-instance v2, Lcom/tencent/mm/storage/ap;
+    .line 72
+    invoke-virtual {v8, v0}, Lcom/tencent/mm/storage/ap;->b(Landroid/database/Cursor;)V
 
-    invoke-direct {v2}, Lcom/tencent/mm/storage/ap;-><init>()V
-
-    .line 49
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/storage/ap;->c(Landroid/database/Cursor;)V
-
-    .line 50
+    .line 74
+    :cond_2
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    move-object v2, v8
+
+    .line 75
+    goto :goto_0
+.end method
+
+.method public final HZ(Ljava/lang/String;)I
+    .locals 5
+
+    .prologue
+    .line 79
+    iget-object v0, p0, Lcom/tencent/mm/storage/aq;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    const-string/jumbo v1, "Stranger"
+
+    const-string/jumbo v2, "(encryptUsername=?)"
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/String;
+
+    const/4 v4, 0x0
+
+    aput-object p1, v3, v4
+
+    invoke-interface {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/h/d;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+
+    move-result v0
+
+    .line 80
+    if-lez v0, :cond_0
+
+    .line 81
+    invoke-virtual {p0}, Lcom/tencent/mm/storage/aq;->EJ()V
+
+    .line 83
+    :cond_0
+    const-string/jumbo v1, "MicroMsg.StrangerStorage"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "delByEncryptUsername:"
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string/jumbo v3, " result:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 84
+    return v0
+.end method
+
+.method public final a(Lcom/tencent/mm/storage/aq$a;)V
+    .locals 2
+
+    .prologue
+    .line 47
+    iget-object v0, p0, Lcom/tencent/mm/storage/aq;->kGE:Lcom/tencent/mm/sdk/h/h;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p1, v1}, Lcom/tencent/mm/sdk/h/h;->a(Ljava/lang/Object;Landroid/os/Looper;)V
+
+    .line 48
+    return-void
+.end method
+
+.method public final synthetic a(Lcom/tencent/mm/sdk/h/c;)Z
+    .locals 1
+
+    .prologue
+    .line 18
+    check-cast p1, Lcom/tencent/mm/storage/ap;
+
+    if-eqz p1, :cond_1
+
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/h/f;->a(Lcom/tencent/mm/sdk/h/c;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0, p1}, Lcom/tencent/mm/storage/aq;->b(Lcom/tencent/mm/storage/ap;)V
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method public final a(Lcom/tencent/mm/storage/ap;)Z
-    .locals 7
+.method public final b(Lcom/tencent/mm/storage/aq$a;)V
+    .locals 1
 
     .prologue
-    const/4 v1, 0x1
+    .line 51
+    iget-object v0, p0, Lcom/tencent/mm/storage/aq;->kGE:Lcom/tencent/mm/sdk/h/h;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/sdk/h/h;->remove(Ljava/lang/Object;)V
 
-    .line 97
-    if-eqz p1, :cond_0
-
-    iget-object v0, p1, Lcom/tencent/mm/storage/ap;->field_appId:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p1, Lcom/tencent/mm/storage/ap;->field_openId:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p1, Lcom/tencent/mm/storage/ap;->field_username:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 99
-    :cond_0
-    const-string/jumbo v0, "!56@/B4Tb64lLpLhq7sWJ+/cPquHPuW4dVELw2sSKTF0Xr52ZGTQ0XEmhg=="
-
-    const-string/jumbo v1, "wrong argument"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    move v0, v2
-
-    .line 106
-    :goto_0
-    return v0
-
-    .line 102
-    :cond_1
-    invoke-virtual {p1}, Lcom/tencent/mm/storage/ap;->lX()Landroid/content/ContentValues;
-
-    move-result-object v0
-
-    .line 103
-    iget-object v3, p0, Lcom/tencent/mm/storage/aq;->aoX:Lcom/tencent/mm/sdk/h/d;
-
-    const-string/jumbo v4, "UserOpenIdInApp"
-
-    sget-object v5, Lcom/tencent/mm/storage/ap;->aot:Lcom/tencent/mm/sdk/h/c$a;
-
-    iget-object v5, v5, Lcom/tencent/mm/sdk/h/c$a;->jYw:Ljava/lang/String;
-
-    invoke-interface {v3, v4, v5, v0}, Lcom/tencent/mm/sdk/h/d;->replace(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
-
-    move-result-wide v3
-
-    const-wide/16 v5, 0x0
-
-    cmp-long v0, v3, v5
-
-    if-lez v0, :cond_2
-
-    move v0, v1
-
-    .line 105
-    :goto_1
-    const-string/jumbo v3, "!56@/B4Tb64lLpLhq7sWJ+/cPquHPuW4dVELw2sSKTF0Xr52ZGTQ0XEmhg=="
-
-    const-string/jumbo v4, "replace: appId=%s, username=%s, ret=%s "
-
-    const/4 v5, 0x3
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    iget-object v6, p1, Lcom/tencent/mm/storage/ap;->field_appId:Ljava/lang/String;
-
-    aput-object v6, v5, v2
-
-    iget-object v2, p1, Lcom/tencent/mm/storage/ap;->field_username:Ljava/lang/String;
-
-    aput-object v2, v5, v1
-
-    const/4 v1, 0x2
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    aput-object v2, v5, v1
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_2
-    move v0, v2
-
-    .line 103
-    goto :goto_1
+    .line 52
+    return-void
 .end method
 
 .method public final synthetic b(Lcom/tencent/mm/sdk/h/c;)Z
     .locals 1
 
     .prologue
-    .line 11
+    .line 18
     check-cast p1, Lcom/tencent/mm/storage/ap;
 
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/storage/aq;->a(Lcom/tencent/mm/storage/ap;)Z
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/storage/aq;->c(Lcom/tencent/mm/storage/ap;)Z
 
     move-result v0
 
     return v0
+.end method
+
+.method public final c(Lcom/tencent/mm/storage/ap;)Z
+    .locals 8
+
+    .prologue
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 114
+    const-string/jumbo v3, "stranger NULL !"
+
+    if-eqz p1, :cond_0
+
+    move v0, v1
+
+    :goto_0
+    invoke-static {v3, v0}, Ljunit/framework/Assert;->assertTrue(Ljava/lang/String;Z)V
+
+    .line 116
+    const-string/jumbo v0, "MicroMsg.StrangerStorage"
+
+    const-string/jumbo v3, "replace : encryptUsername=%s, conRemark=%s"
+
+    const/4 v4, 0x2
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    iget-object v5, p1, Lcom/tencent/mm/storage/ap;->field_encryptUsername:Ljava/lang/String;
+
+    aput-object v5, v4, v2
+
+    iget-object v5, p1, Lcom/tencent/mm/storage/ap;->field_conRemark:Ljava/lang/String;
+
+    aput-object v5, v4, v1
+
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 117
+    invoke-virtual {p1}, Lcom/tencent/mm/storage/ap;->kn()Landroid/content/ContentValues;
+
+    move-result-object v0
+
+    .line 118
+    iget-object v3, p0, Lcom/tencent/mm/storage/aq;->bkP:Lcom/tencent/mm/sdk/h/d;
+
+    const-string/jumbo v4, "Stranger"
+
+    const-string/jumbo v5, ""
+
+    invoke-interface {v3, v4, v5, v0}, Lcom/tencent/mm/sdk/h/d;->replace(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
+
+    move-result-wide v4
+
+    const-wide/16 v6, 0x0
+
+    cmp-long v0, v4, v6
+
+    if-lez v0, :cond_1
+
+    move v0, v1
+
+    .line 120
+    :goto_1
+    if-nez v0, :cond_2
+
+    .line 124
+    :goto_2
+    return v2
+
+    :cond_0
+    move v0, v2
+
+    .line 114
+    goto :goto_0
+
+    :cond_1
+    move v0, v2
+
+    .line 118
+    goto :goto_1
+
+    .line 123
+    :cond_2
+    invoke-direct {p0, p1}, Lcom/tencent/mm/storage/aq;->b(Lcom/tencent/mm/storage/ap;)V
+
+    move v2, v1
+
+    .line 124
+    goto :goto_2
 .end method

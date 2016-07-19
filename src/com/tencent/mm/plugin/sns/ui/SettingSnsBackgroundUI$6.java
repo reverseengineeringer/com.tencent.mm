@@ -11,7 +11,7 @@ final class SettingSnsBackgroundUI$6
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    haX.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
+    hoo.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
   }
 }
 

@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field czT:Landroid/widget/TextView;
+.field cwP:Landroid/widget/TextView;
 
-.field czU:Landroid/widget/TextView;
+.field cwQ:Landroid/widget/TextView;
 
-.field dbN:Lcom/tencent/mm/ui/base/MaskLayout;
+.field dat:Lcom/tencent/mm/ui/base/MaskLayout;
 
-.field lmE:Landroid/widget/TextView;
+.field lMU:Landroid/widget/TextView;
 
 
 # direct methods

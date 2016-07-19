@@ -16,7 +16,7 @@
 
 
 # virtual methods
-.method protected final uP()[Ljava/lang/String;
+.method protected final uR()[Ljava/lang/String;
     .locals 3
 
     .prologue
@@ -34,7 +34,7 @@
     return-object v0
 .end method
 
-.method public final uQ()Ljava/lang/String;
+.method public final uS()Ljava/lang/String;
     .locals 1
 
     .prologue

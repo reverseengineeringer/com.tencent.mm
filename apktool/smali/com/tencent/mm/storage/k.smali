@@ -1,12 +1,15 @@
 .class public final Lcom/tencent/mm/storage/k;
-.super Lcom/tencent/mm/h/a;
+.super Lcom/tencent/mm/i/a;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Cloneable;
 
 
 # instance fields
-.field public jZZ:Ljava/lang/CharSequence;
+.field public kAv:Ljava/lang/CharSequence;
 
-.field public keM:Ljava/lang/String;
+.field public kET:Ljava/lang/String;
 
 
 # direct methods
@@ -15,12 +18,12 @@
 
     .prologue
     .line 38
-    invoke-direct {p0}, Lcom/tencent/mm/h/a;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/i/a;-><init>()V
 
     .line 17
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/storage/k;->keM:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/storage/k;->kET:Ljava/lang/String;
 
     .line 39
     return-void
@@ -31,18 +34,18 @@
 
     .prologue
     .line 35
-    invoke-direct {p0, p1}, Lcom/tencent/mm/h/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/tencent/mm/i/a;-><init>(Ljava/lang/String;)V
 
     .line 17
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/storage/k;->keM:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/storage/k;->kET:Ljava/lang/String;
 
     .line 36
     return-void
 .end method
 
-.method public static DY(Ljava/lang/String;)Z
+.method public static Gn(Ljava/lang/String;)Z
     .locals 1
 
     .prologue
@@ -64,7 +67,7 @@
     goto :goto_0
 .end method
 
-.method public static DZ(Ljava/lang/String;)Z
+.method public static Go(Ljava/lang/String;)Z
     .locals 1
 
     .prologue
@@ -86,7 +89,7 @@
     goto :goto_0
 .end method
 
-.method public static Ea(Ljava/lang/String;)Z
+.method public static Gp(Ljava/lang/String;)Z
     .locals 1
 
     .prologue
@@ -108,7 +111,7 @@
     goto :goto_0
 .end method
 
-.method public static Eb(Ljava/lang/String;)Z
+.method public static Gq(Ljava/lang/String;)Z
     .locals 1
 
     .prologue
@@ -130,46 +133,14 @@
     goto :goto_0
 .end method
 
-.method public static Ec(Ljava/lang/String;)Z
-    .locals 2
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 63
-    if-eqz p0, :cond_1
-
-    const-string/jumbo v1, "@bottle:"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string/jumbo v1, "@bottle"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :cond_1
-    return v0
-.end method
-
-.method public static Ed(Ljava/lang/String;)Z
+.method public static Gr(Ljava/lang/String;)Z
     .locals 4
 
     .prologue
     const/4 v1, 0x0
 
     .line 72
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -182,7 +153,7 @@
 
     .line 77
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/g/h;->pT()Lcom/tencent/mm/g/c;
+    invoke-static {}, Lcom/tencent/mm/h/h;->on()Lcom/tencent/mm/h/c;
 
     move-result-object v0
 
@@ -190,7 +161,7 @@
 
     const-string/jumbo v3, "idprefix"
 
-    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/g/c;->z(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/h/c;->u(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -241,12 +212,12 @@
     goto :goto_1
 .end method
 
-.method public static Ee(Ljava/lang/String;)Ljava/lang/String;
+.method public static Gs(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
     .prologue
     .line 96
-    invoke-static {p0}, Lcom/tencent/mm/storage/k;->Ec(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/storage/k;->eb(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -319,7 +290,7 @@
     goto :goto_0
 .end method
 
-.method public static aWq()I
+.method public static bbD()I
     .locals 1
 
     .prologue
@@ -329,7 +300,7 @@
     return v0
 .end method
 
-.method public static aWr()I
+.method public static bbE()I
     .locals 1
 
     .prologue
@@ -339,7 +310,39 @@
     return v0
 .end method
 
-.method public static h(Landroid/database/Cursor;)Ljava/lang/String;
+.method public static eb(Ljava/lang/String;)Z
+    .locals 2
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 63
+    if-eqz p0, :cond_1
+
+    const-string/jumbo v1, "@bottle:"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const-string/jumbo v1, "@bottle"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :cond_1
+    return v0
+.end method
+
+.method public static f(Landroid/database/Cursor;)Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -358,7 +361,7 @@
     return-object v0
 .end method
 
-.method public static pD(I)Z
+.method public static rs(I)Z
     .locals 1
 
     .prologue
@@ -380,12 +383,52 @@
 
 
 # virtual methods
-.method public final aWp()Z
+.method public final bQ(Ljava/lang/String;)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 191
+    invoke-super {p0, p1}, Lcom/tencent/mm/i/a;->bQ(Ljava/lang/String;)V
+
+    .line 192
+    return-void
+.end method
+
+.method public final bR(Ljava/lang/String;)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 201
+    invoke-super {p0, p1}, Lcom/tencent/mm/i/a;->bR(Ljava/lang/String;)V
+
+    .line 202
+    return-void
+.end method
+
+.method public final bV(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 144
+    invoke-super {p0, p1}, Lcom/tencent/mm/i/a;->bV(Ljava/lang/String;)V
+
+    .line 145
+    invoke-virtual {p0}, Lcom/tencent/mm/storage/k;->bbH()V
+
+    .line 146
+    return-void
+.end method
+
+.method public final bbC()Z
     .locals 1
 
     .prologue
     .line 113
-    iget v0, p0, Lcom/tencent/mm/d/b/p;->field_verifyFlag:I
+    iget v0, p0, Lcom/tencent/mm/e/b/p;->field_verifyFlag:I
 
     and-int/lit8 v0, v0, 0x8
 
@@ -402,18 +445,18 @@
     goto :goto_0
 .end method
 
-.method public final aWs()Z
+.method public final bbF()Z
     .locals 4
 
     .prologue
     .line 129
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FR()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Go()J
 
     move-result-wide v0
 
     long-to-int v0, v0
 
-    iget v1, p0, Lcom/tencent/mm/d/b/p;->aSM:I
+    iget v1, p0, Lcom/tencent/mm/e/b/p;->aFv:I
 
     sub-int/2addr v0, v1
 
@@ -436,15 +479,15 @@
     goto :goto_0
 .end method
 
-.method public final aWt()Ljava/lang/String;
+.method public final bbG()Ljava/lang/String;
     .locals 3
 
     .prologue
     .line 161
-    iget-object v0, p0, Lcom/tencent/mm/d/b/p;->aSL:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/e/b/p;->aFu:Ljava/lang/String;
 
     .line 162
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -486,14 +529,14 @@
 
     aget-object v0, v0, v1
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->li(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method public final aWu()V
+.method public final bbH()V
     .locals 7
 
     .prologue
@@ -504,10 +547,10 @@
     const/4 v4, 0x0
 
     .line 224
-    iget-object v0, p0, Lcom/tencent/mm/d/b/p;->aSL:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/e/b/p;->aFu:Ljava/lang/String;
 
     .line 225
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -539,14 +582,14 @@
     .line 233
     aget-object v1, v0, v4
 
-    invoke-static {v1}, Lcom/tencent/mm/storage/RegionCodeDecoder;->Fz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/storage/RegionCodeDecoder;->HP(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
     .line 234
-    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aXU()Lcom/tencent/mm/storage/RegionCodeDecoder;
+    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->bdm()Lcom/tencent/mm/storage/RegionCodeDecoder;
 
     move-result-object v1
 
@@ -554,15 +597,15 @@
 
     aget-object v3, v0, v5
 
-    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/storage/RegionCodeDecoder;->cq(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/storage/RegionCodeDecoder;->cE(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-super {p0, v1}, Lcom/tencent/mm/h/a;->bR(Ljava/lang/String;)V
+    invoke-super {p0, v1}, Lcom/tencent/mm/i/a;->bQ(Ljava/lang/String;)V
 
     .line 238
     :goto_1
-    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aXU()Lcom/tencent/mm/storage/RegionCodeDecoder;
+    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->bdm()Lcom/tencent/mm/storage/RegionCodeDecoder;
 
     move-result-object v1
 
@@ -572,27 +615,27 @@
 
     aget-object v0, v0, v6
 
-    invoke-virtual {v1, v2, v3, v0}, Lcom/tencent/mm/storage/RegionCodeDecoder;->N(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2, v3, v0}, Lcom/tencent/mm/storage/RegionCodeDecoder;->P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-super {p0, v0}, Lcom/tencent/mm/h/a;->bS(Ljava/lang/String;)V
+    invoke-super {p0, v0}, Lcom/tencent/mm/i/a;->bR(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 236
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aXU()Lcom/tencent/mm/storage/RegionCodeDecoder;
+    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->bdm()Lcom/tencent/mm/storage/RegionCodeDecoder;
 
     move-result-object v1
 
     aget-object v2, v0, v4
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/RegionCodeDecoder;->FA(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/RegionCodeDecoder;->HQ(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-super {p0, v1}, Lcom/tencent/mm/h/a;->bR(Ljava/lang/String;)V
+    invoke-super {p0, v1}, Lcom/tencent/mm/i/a;->bQ(Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -603,20 +646,20 @@
     if-ne v1, v6, :cond_4
 
     .line 240
-    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aXU()Lcom/tencent/mm/storage/RegionCodeDecoder;
+    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->bdm()Lcom/tencent/mm/storage/RegionCodeDecoder;
 
     move-result-object v1
 
     aget-object v2, v0, v4
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/RegionCodeDecoder;->FA(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/RegionCodeDecoder;->HQ(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-super {p0, v1}, Lcom/tencent/mm/h/a;->bR(Ljava/lang/String;)V
+    invoke-super {p0, v1}, Lcom/tencent/mm/i/a;->bQ(Ljava/lang/String;)V
 
     .line 241
-    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aXU()Lcom/tencent/mm/storage/RegionCodeDecoder;
+    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->bdm()Lcom/tencent/mm/storage/RegionCodeDecoder;
 
     move-result-object v1
 
@@ -624,74 +667,77 @@
 
     aget-object v0, v0, v5
 
-    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/storage/RegionCodeDecoder;->cq(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/storage/RegionCodeDecoder;->cE(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-super {p0, v0}, Lcom/tencent/mm/h/a;->bS(Ljava/lang/String;)V
+    invoke-super {p0, v0}, Lcom/tencent/mm/i/a;->bR(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 243
     :cond_4
-    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aXU()Lcom/tencent/mm/storage/RegionCodeDecoder;
+    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->bdm()Lcom/tencent/mm/storage/RegionCodeDecoder;
 
     move-result-object v1
 
     aget-object v0, v0, v4
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/storage/RegionCodeDecoder;->FA(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/storage/RegionCodeDecoder;->HQ(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-super {p0, v0}, Lcom/tencent/mm/h/a;->bR(Ljava/lang/String;)V
+    invoke-super {p0, v0}, Lcom/tencent/mm/i/a;->bQ(Ljava/lang/String;)V
 
     .line 244
     const-string/jumbo v0, ""
 
-    invoke-super {p0, v0}, Lcom/tencent/mm/h/a;->bS(Ljava/lang/String;)V
+    invoke-super {p0, v0}, Lcom/tencent/mm/i/a;->bR(Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public final bR(Ljava/lang/String;)V
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+.method public final bbI()Lcom/tencent/mm/storage/k;
+    .locals 4
 
     .prologue
-    .line 191
-    invoke-super {p0, p1}, Lcom/tencent/mm/h/a;->bR(Ljava/lang/String;)V
+    .line 272
+    const/4 v1, 0x0
 
-    .line 192
-    return-void
-.end method
+    .line 274
+    :try_start_0
+    invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-.method public final bS(Ljava/lang/String;)V
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+    move-result-object v0
 
-    .prologue
-    .line 201
-    invoke-super {p0, p1}, Lcom/tencent/mm/h/a;->bS(Ljava/lang/String;)V
+    check-cast v0, Lcom/tencent/mm/storage/k;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 202
-    return-void
-.end method
+    .line 279
+    :goto_0
+    return-object v0
 
-.method public final bW(Ljava/lang/String;)V
-    .locals 0
+    .line 275
+    :catch_0
+    move-exception v0
 
-    .prologue
-    .line 144
-    invoke-super {p0, p1}, Lcom/tencent/mm/h/a;->bW(Ljava/lang/String;)V
+    .line 276
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 145
-    invoke-virtual {p0}, Lcom/tencent/mm/storage/k;->aWu()V
+    const-string/jumbo v3, "clone Contact error. e: "
 
-    .line 146
-    return-void
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-object v0, v1
+
+    goto :goto_0
 .end method
 
 .method public final getCity()Ljava/lang/String;
@@ -699,7 +745,7 @@
 
     .prologue
     .line 220
-    invoke-super {p0}, Lcom/tencent/mm/h/a;->getCity()Ljava/lang/String;
+    invoke-super {p0}, Lcom/tencent/mm/i/a;->getCity()Ljava/lang/String;
 
     move-result-object v0
 
@@ -711,10 +757,10 @@
 
     .prologue
     .line 173
-    iget-object v0, p0, Lcom/tencent/mm/d/b/p;->aSL:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/e/b/p;->aFu:Ljava/lang/String;
 
     .line 174
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -756,7 +802,7 @@
 
     aget-object v0, v0, v1
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->li(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -768,10 +814,10 @@
 
     .prologue
     .line 149
-    iget-object v0, p0, Lcom/tencent/mm/d/b/p;->aSL:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/e/b/p;->aFu:Ljava/lang/String;
 
     .line 150
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -811,7 +857,7 @@
 
     aget-object v0, v0, v1
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->li(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -823,7 +869,7 @@
 
     .prologue
     .line 211
-    invoke-super {p0}, Lcom/tencent/mm/h/a;->getProvince()Ljava/lang/String;
+    invoke-super {p0}, Lcom/tencent/mm/i/a;->getProvince()Ljava/lang/String;
 
     move-result-object v0
 

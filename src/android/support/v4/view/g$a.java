@@ -16,11 +16,6 @@ final class g$a
     return paramMenuItem;
   }
   
-  public final View a(MenuItem paramMenuItem)
-  {
-    return null;
-  }
-  
   public final void a(MenuItem paramMenuItem, int paramInt) {}
   
   public final MenuItem b(MenuItem paramMenuItem, int paramInt)

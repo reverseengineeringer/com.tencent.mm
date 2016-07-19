@@ -12,9 +12,29 @@
 
 
 # instance fields
-.field public final jYB:Lcom/tencent/mm/sdk/h/h;
+.field public final kyY:Lcom/tencent/mm/sdk/h/h;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/tencent/mm/sdk/h/h",
+            "<",
+            "Lcom/tencent/mm/sdk/h/g$a;",
+            "Lcom/tencent/mm/sdk/h/i;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private final jYC:Lcom/tencent/mm/sdk/h/h;
+.field private final kyZ:Lcom/tencent/mm/sdk/h/h;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/tencent/mm/sdk/h/h",
+            "<",
+            "Ljava/lang/Object;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -30,65 +50,65 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/sdk/h/g$1;-><init>(Lcom/tencent/mm/sdk/h/g;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/h/g;->jYB:Lcom/tencent/mm/sdk/h/h;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/h/g;->kyY:Lcom/tencent/mm/sdk/h/h;
 
     .line 46
     new-instance v0, Lcom/tencent/mm/sdk/h/g$2;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/sdk/h/g$2;-><init>(Lcom/tencent/mm/sdk/h/g;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/h/g;->jYC:Lcom/tencent/mm/sdk/h/h;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/h/g;->kyZ:Lcom/tencent/mm/sdk/h/h;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final DI(Ljava/lang/String;)V
+.method public final EJ()V
     .locals 2
 
     .prologue
-    .line 123
-    new-instance v0, Lcom/tencent/mm/sdk/h/i;
-
-    invoke-direct {v0, p1}, Lcom/tencent/mm/sdk/h/i;-><init>(Ljava/lang/String;)V
-
-    .line 124
-    iget-object v1, p0, Lcom/tencent/mm/sdk/h/g;->jYB:Lcom/tencent/mm/sdk/h/h;
-
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/h/h;->aw(Ljava/lang/Object;)Z
-
-    .line 125
-    iget-object v0, p0, Lcom/tencent/mm/sdk/h/g;->jYB:Lcom/tencent/mm/sdk/h/h;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/h/h;->Ep()V
-
-    .line 126
-    return-void
-.end method
-
-.method public final Ep()V
-    .locals 2
-
-    .prologue
-    .line 111
+    .line 115
     new-instance v0, Lcom/tencent/mm/sdk/h/i;
 
     const-string/jumbo v1, "*"
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/h/i;-><init>(Ljava/lang/String;)V
 
-    .line 112
-    iget-object v1, p0, Lcom/tencent/mm/sdk/h/g;->jYB:Lcom/tencent/mm/sdk/h/h;
+    .line 116
+    iget-object v1, p0, Lcom/tencent/mm/sdk/h/g;->kyY:Lcom/tencent/mm/sdk/h/h;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/h/h;->aw(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/h/h;->aR(Ljava/lang/Object;)Z
 
-    .line 113
-    iget-object v0, p0, Lcom/tencent/mm/sdk/h/g;->jYB:Lcom/tencent/mm/sdk/h/h;
+    .line 117
+    iget-object v0, p0, Lcom/tencent/mm/sdk/h/g;->kyY:Lcom/tencent/mm/sdk/h/h;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/h/h;->Ep()V
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/h/h;->EJ()V
 
-    .line 114
+    .line 118
+    return-void
+.end method
+
+.method public final FX(Ljava/lang/String;)V
+    .locals 2
+
+    .prologue
+    .line 127
+    new-instance v0, Lcom/tencent/mm/sdk/h/i;
+
+    invoke-direct {v0, p1}, Lcom/tencent/mm/sdk/h/i;-><init>(Ljava/lang/String;)V
+
+    .line 128
+    iget-object v1, p0, Lcom/tencent/mm/sdk/h/g;->kyY:Lcom/tencent/mm/sdk/h/h;
+
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/h/h;->aR(Ljava/lang/Object;)Z
+
+    .line 129
+    iget-object v0, p0, Lcom/tencent/mm/sdk/h/g;->kyY:Lcom/tencent/mm/sdk/h/h;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/h/h;->EJ()V
+
+    .line 130
     return-void
 .end method
 
@@ -96,34 +116,34 @@
     .locals 2
 
     .prologue
-    .line 139
+    .line 143
     new-instance v0, Lcom/tencent/mm/sdk/h/i;
 
     invoke-direct {v0}, Lcom/tencent/mm/sdk/h/i;-><init>()V
 
-    .line 140
-    iput-object p1, v0, Lcom/tencent/mm/sdk/h/i;->asJ:Ljava/lang/String;
-
-    .line 141
-    iput p2, v0, Lcom/tencent/mm/sdk/h/i;->jYK:I
-
-    .line 142
-    iput-object p3, v0, Lcom/tencent/mm/sdk/h/i;->obj:Ljava/lang/Object;
-
-    .line 143
-    iput-object p0, v0, Lcom/tencent/mm/sdk/h/i;->jYL:Lcom/tencent/mm/sdk/h/g;
-
     .line 144
-    iget-object v1, p0, Lcom/tencent/mm/sdk/h/g;->jYB:Lcom/tencent/mm/sdk/h/h;
-
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/h/h;->aw(Ljava/lang/Object;)Z
+    iput-object p1, v0, Lcom/tencent/mm/sdk/h/i;->aev:Ljava/lang/String;
 
     .line 145
-    iget-object v0, p0, Lcom/tencent/mm/sdk/h/g;->jYB:Lcom/tencent/mm/sdk/h/h;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/h/h;->Ep()V
+    iput p2, v0, Lcom/tencent/mm/sdk/h/i;->kzh:I
 
     .line 146
+    iput-object p3, v0, Lcom/tencent/mm/sdk/h/i;->obj:Ljava/lang/Object;
+
+    .line 147
+    iput-object p0, v0, Lcom/tencent/mm/sdk/h/i;->kzi:Lcom/tencent/mm/sdk/h/g;
+
+    .line 148
+    iget-object v1, p0, Lcom/tencent/mm/sdk/h/g;->kyY:Lcom/tencent/mm/sdk/h/h;
+
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/h/h;->aR(Ljava/lang/Object;)Z
+
+    .line 149
+    iget-object v0, p0, Lcom/tencent/mm/sdk/h/g;->kyY:Lcom/tencent/mm/sdk/h/h;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/h/h;->EJ()V
+
+    .line 150
     return-void
 .end method
 
@@ -131,8 +151,8 @@
     .locals 2
 
     .prologue
-    .line 75
-    iget-object v0, p0, Lcom/tencent/mm/sdk/h/g;->jYB:Lcom/tencent/mm/sdk/h/h;
+    .line 79
+    iget-object v0, p0, Lcom/tencent/mm/sdk/h/g;->kyY:Lcom/tencent/mm/sdk/h/h;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -140,7 +160,7 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/tencent/mm/sdk/h/h;->a(Ljava/lang/Object;Landroid/os/Looper;)V
 
-    .line 76
+    .line 80
     return-void
 .end method
 
@@ -148,12 +168,12 @@
     .locals 1
 
     .prologue
-    .line 92
-    iget-object v0, p0, Lcom/tencent/mm/sdk/h/g;->jYB:Lcom/tencent/mm/sdk/h/h;
+    .line 96
+    iget-object v0, p0, Lcom/tencent/mm/sdk/h/g;->kyY:Lcom/tencent/mm/sdk/h/h;
 
     invoke-virtual {v0, p1}, Lcom/tencent/mm/sdk/h/h;->remove(Ljava/lang/Object;)V
 
-    .line 93
+    .line 97
     return-void
 .end method
 
@@ -162,7 +182,7 @@
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/tencent/mm/sdk/h/g;->jYB:Lcom/tencent/mm/sdk/h/h;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/h/g;->kyY:Lcom/tencent/mm/sdk/h/h;
 
     invoke-virtual {v0}, Lcom/tencent/mm/sdk/h/h;->lock()V
 
@@ -174,11 +194,11 @@
     .locals 1
 
     .prologue
-    .line 66
-    iget-object v0, p0, Lcom/tencent/mm/sdk/h/g;->jYB:Lcom/tencent/mm/sdk/h/h;
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/sdk/h/g;->kyY:Lcom/tencent/mm/sdk/h/h;
 
     invoke-virtual {v0}, Lcom/tencent/mm/sdk/h/h;->unlock()V
 
-    .line 67
+    .line 71
     return-void
 .end method

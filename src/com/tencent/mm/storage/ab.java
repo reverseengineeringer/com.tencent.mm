@@ -1,81 +1,49 @@
 package com.tencent.mm.storage;
 
-import com.tencent.mm.d.b.ar;
-import com.tencent.mm.sdk.h.c.a;
-import java.lang.reflect.Field;
-import java.util.Map;
+import android.database.Cursor;
+import com.tencent.mm.sdk.h.d;
+import com.tencent.mm.sdk.h.f;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class ab
-  extends ar
+  extends f<aa>
 {
-  protected static c.a aot;
+  public static final String[] bkN = { f.a(aa.bjR, "FileDownloadInfo"), "CREATE INDEX IF NOT EXISTS filedownloadinfo_appId  on FileDownloadInfo  (  appId )", "CREATE INDEX IF NOT EXISTS filedownloadinfo_status  on FileDownloadInfo  (  status )" };
   
-  static
+  public ab(d paramd)
   {
-    c.a locala = new c.a();
-    ceD = new Field[13];
-    blR = new String[14];
-    StringBuilder localStringBuilder = new StringBuilder();
-    blR[0] = "originSvrId";
-    jYx.put("originSvrId", "LONG PRIMARY KEY ");
-    localStringBuilder.append(" originSvrId LONG PRIMARY KEY ");
-    localStringBuilder.append(", ");
-    jYw = "originSvrId";
-    blR[1] = "newMsgId";
-    jYx.put("newMsgId", "LONG");
-    localStringBuilder.append(" newMsgId LONG");
-    localStringBuilder.append(", ");
-    blR[2] = "fromUserName";
-    jYx.put("fromUserName", "TEXT default '' ");
-    localStringBuilder.append(" fromUserName TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[3] = "toUserName";
-    jYx.put("toUserName", "TEXT default '' ");
-    localStringBuilder.append(" toUserName TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[4] = "createTime";
-    jYx.put("createTime", "LONG default '0' ");
-    localStringBuilder.append(" createTime LONG default '0' ");
-    localStringBuilder.append(", ");
-    blR[5] = "content";
-    jYx.put("content", "TEXT default '' ");
-    localStringBuilder.append(" content TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[6] = "msgSource";
-    jYx.put("msgSource", "TEXT default '' ");
-    localStringBuilder.append(" msgSource TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[7] = "msgSeq";
-    jYx.put("msgSeq", "INTEGER");
-    localStringBuilder.append(" msgSeq INTEGER");
-    localStringBuilder.append(", ");
-    blR[8] = "flag";
-    jYx.put("flag", "INTEGER");
-    localStringBuilder.append(" flag INTEGER");
-    localStringBuilder.append(", ");
-    blR[9] = "reserved1";
-    jYx.put("reserved1", "INTEGER");
-    localStringBuilder.append(" reserved1 INTEGER");
-    localStringBuilder.append(", ");
-    blR[10] = "reserved2";
-    jYx.put("reserved2", "LONG");
-    localStringBuilder.append(" reserved2 LONG");
-    localStringBuilder.append(", ");
-    blR[11] = "reserved3";
-    jYx.put("reserved3", "TEXT default '' ");
-    localStringBuilder.append(" reserved3 TEXT default '' ");
-    localStringBuilder.append(", ");
-    blR[12] = "reserved4";
-    jYx.put("reserved4", "TEXT default '' ");
-    localStringBuilder.append(" reserved4 TEXT default '' ");
-    blR[13] = "rowid";
-    jYy = localStringBuilder.toString();
-    aot = locala;
+    super(paramd, aa.bjR, "FileDownloadInfo", null);
   }
   
-  protected final c.a ls()
+  public final boolean bcl()
   {
-    return aot;
+    return cx("FileDownloadInfo", "delete from FileDownloadInfo");
+  }
+  
+  public final aa dO(long paramLong)
+  {
+    aa localaa1 = null;
+    aa localaa2 = null;
+    if (paramLong < 0L) {
+      v.e("MicroMsg.FileDownloadInfoStorage", "download id is not avaiable");
+    }
+    Cursor localCursor;
+    do
+    {
+      do
+      {
+        return localaa2;
+        localCursor = rawQuery("select * from FileDownloadInfo where downloadId=" + paramLong, new String[0]);
+      } while (localCursor == null);
+      if (localCursor.moveToFirst())
+      {
+        localaa1 = new aa();
+        localaa1.b(localCursor);
+      }
+      localaa2 = localaa1;
+    } while (localCursor == null);
+    localCursor.close();
+    return localaa1;
   }
 }
 

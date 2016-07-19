@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kxL:Lcom/tencent/mm/ui/account/mobile/a;
+.field final synthetic kWS:Lcom/tencent/mm/ui/account/mobile/a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 196
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/a$5;->kxL:Lcom/tencent/mm/ui/account/mobile/a;
+    .line 175
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/a$5;->kWS:Lcom/tencent/mm/ui/account/mobile/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,6 +40,6 @@
     .locals 0
 
     .prologue
-    .line 201
+    .line 180
     return-void
 .end method

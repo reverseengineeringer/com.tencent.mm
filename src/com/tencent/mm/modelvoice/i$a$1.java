@@ -2,7 +2,7 @@ package com.tencent.mm.modelvoice;
 
 import android.widget.Toast;
 import com.tencent.mm.c.c.b;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
 
 final class i$a$1
   implements Runnable
@@ -11,7 +11,7 @@ final class i$a$1
   
   public final void run()
   {
-    Toast.makeText(y.getContext(), "Save to: " + ichj.chi).arA, 1).show();
+    Toast.makeText(aa.getContext(), "Save to: " + iccA.ccz).adi, 1).show();
   }
 }
 

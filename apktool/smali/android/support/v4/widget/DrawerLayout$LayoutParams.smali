@@ -17,11 +17,11 @@
 # instance fields
 .field public gravity:I
 
-.field hv:F
+.field hO:F
 
-.field hw:Z
+.field hP:Z
 
-.field hx:Z
+.field hQ:Z
 
 
 # direct methods
@@ -56,7 +56,7 @@
     iput v1, p0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->gravity:I
 
     .line 1492
-    invoke-static {}, Landroid/support/v4/widget/DrawerLayout;->aA()[I
+    invoke-static {}, Landroid/support/v4/widget/DrawerLayout;->az()[I
 
     move-result-object v0
 

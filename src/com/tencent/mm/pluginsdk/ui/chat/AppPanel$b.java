@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.chat;
 
 public abstract interface AppPanel$b
 {
-  public abstract void aRD();
+  public abstract void aWq();
 }
 
 /* Location:

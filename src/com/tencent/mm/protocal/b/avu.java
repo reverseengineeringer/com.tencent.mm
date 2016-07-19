@@ -1,70 +1,59 @@
 package com.tencent.mm.protocal.b;
 
-import a.a.a.b;
 import java.util.LinkedList;
 
 public final class avu
-  extends alq
+  extends alt
 {
-  public String iXk;
-  public int iYD;
-  public int iYE;
-  public String jhx;
+  public int jtN;
+  public String kmf;
+  public String kmg;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (jHj == null) {
-        throw new b("Not all required fields were included: BaseResponse");
-      }
-      if (jHj != null)
+      if (kfq != null)
       {
-        paramVarArgs.cj(1, jHj.kn());
-        jHj.a(paramVarArgs);
+        paramVarArgs.cx(1, kfq.iO());
+        kfq.a(paramVarArgs);
       }
-      paramVarArgs.ci(2, iYE);
-      if (jhx != null) {
-        paramVarArgs.d(3, jhx);
+      if (kmf != null) {
+        paramVarArgs.e(2, kmf);
       }
-      paramVarArgs.ci(4, iYD);
-      if (iXk != null) {
-        paramVarArgs.d(5, iXk);
+      if (kmg != null) {
+        paramVarArgs.e(3, kmg);
       }
+      paramVarArgs.cw(4, jtN);
       return 0;
     }
     if (paramInt == 1) {
-      if (jHj == null) {
-        break label493;
+      if (kfq == null) {
+        break label418;
       }
     }
-    label493:
-    for (paramInt = a.a.a.a.ch(1, jHj.kn()) + 0;; paramInt = 0)
+    label418:
+    for (int i = a.a.a.a.cv(1, kfq.iO()) + 0;; i = 0)
     {
-      int i = paramInt + a.a.a.a.cg(2, iYE);
       paramInt = i;
-      if (jhx != null) {
-        paramInt = i + a.a.a.b.b.a.e(3, jhx);
+      if (kmf != null) {
+        paramInt = i + a.a.a.b.b.a.f(2, kmf);
       }
-      i = paramInt + a.a.a.a.cg(4, iYD);
-      paramInt = i;
-      if (iXk != null) {
-        paramInt = i + a.a.a.b.b.a.e(5, iXk);
+      i = paramInt;
+      if (kmg != null) {
+        i = paramInt + a.a.a.b.b.a.f(3, kmg);
       }
-      return paramInt;
+      return i + a.a.a.a.cu(4, jtN);
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = alq.a(paramVarArgs); paramInt > 0; paramInt = alq.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = alt.a(paramVarArgs); paramInt > 0; paramInt = alt.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
-        if (jHj != null) {
-          break;
-        }
-        throw new b("Not all required fields were included: BaseResponse");
+        break;
       }
       if (paramInt == 3)
       {
@@ -76,29 +65,26 @@ public final class avu
         default: 
           return -1;
         case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
+          paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
           i = paramVarArgs.size();
           paramInt = 0;
           while (paramInt < i)
           {
             Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new dd();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-            for (boolean bool = true; bool; bool = ((dd)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, alq.a((a.a.a.a.a)localObject2))) {}
-            jHj = ((dd)localObject1);
+            localObject1 = new df();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+            for (boolean bool = true; bool; bool = ((df)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, alt.a((a.a.a.a.a)localObject2))) {}
+            kfq = ((df)localObject1);
             paramInt += 1;
           }
         case 2: 
-          iYE = maU.jC();
+          kmf = mMY.readString();
           return 0;
         case 3: 
-          jhx = maU.readString();
-          return 0;
-        case 4: 
-          iYD = maU.jC();
+          kmg = mMY.readString();
           return 0;
         }
-        iXk = maU.readString();
+        jtN = mMY.id();
         return 0;
       }
       return -1;

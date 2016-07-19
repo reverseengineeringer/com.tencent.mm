@@ -3,91 +3,84 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static bhe:Z
+
+
 # instance fields
-.field public bsX:Z
+.field public bhf:Ljava/lang/String;
 
-.field public bsY:I
+.field bhg:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public bsZ:I
-
-.field public bta:I
-
-.field public btb:I
-
-.field public btc:I
-
-.field public btd:I
-
-.field public bte:I
-
-.field public btf:I
-
-.field public btg:I
+.field public bhh:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
     .line 15
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    .line 16
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/t;->reset()V
+    sput-boolean v0, Lcom/tencent/mm/compatible/d/t;->bhe:Z
 
-    .line 17
     return-void
 .end method
 
-
-# virtual methods
-.method public final reset()V
-    .locals 3
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    const/4 v2, 0x0
+    .line 8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x1
+    .line 17
+    const-string/jumbo v0, ""
 
-    .line 20
-    iput-boolean v2, p0, Lcom/tencent/mm/compatible/d/t;->bsX:Z
+    iput-object v0, p0, Lcom/tencent/mm/compatible/d/t;->bhf:Ljava/lang/String;
 
-    .line 21
-    const/16 v0, 0xe0
+    .line 19
+    const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/compatible/d/t;->bsZ:I
+    iput-object v0, p0, Lcom/tencent/mm/compatible/d/t;->bhg:Ljava/util/Map;
 
     .line 22
-    const/16 v0, 0x120
+    const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/compatible/d/t;->bsY:I
+    iput v0, p0, Lcom/tencent/mm/compatible/d/t;->bhh:I
 
-    .line 23
-    const/16 v0, 0xa
-
-    iput v0, p0, Lcom/tencent/mm/compatible/d/t;->bta:I
-
-    .line 24
-    const v0, 0x2dc6c0
-
-    iput v0, p0, Lcom/tencent/mm/compatible/d/t;->btb:I
-
-    .line 25
-    iput v1, p0, Lcom/tencent/mm/compatible/d/t;->btc:I
-
-    .line 26
-    iput v1, p0, Lcom/tencent/mm/compatible/d/t;->btd:I
-
-    .line 27
-    iput v1, p0, Lcom/tencent/mm/compatible/d/t;->bte:I
-
-    .line 28
-    iput v2, p0, Lcom/tencent/mm/compatible/d/t;->btf:I
-
-    .line 29
-    iput v1, p0, Lcom/tencent/mm/compatible/d/t;->btg:I
-
-    .line 30
     return-void
+.end method
+
+.method public static nd()Z
+    .locals 2
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 42
+    sget-boolean v1, Lcom/tencent/mm/compatible/d/t;->bhe:Z
+
+    if-eqz v1, :cond_0
+
+    .line 43
+    sput-boolean v0, Lcom/tencent/mm/compatible/d/t;->bhe:Z
+
+    .line 44
+    const/4 v0, 0x1
+
+    .line 46
+    :cond_0
+    return v0
 .end method

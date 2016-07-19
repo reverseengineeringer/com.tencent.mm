@@ -57,12 +57,10 @@
 
     move-result-object v2
 
-    .line 63
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteQuery;->getConnectionFlags()I
 
     move-result v7
 
-    .line 64
     iget-object v8, p0, Lcom/tencent/kingkong/database/SQLiteQuery;->mCancellationSignal:Lcom/tencent/kingkong/support/CancellationSignal;
 
     move-object v3, p1
@@ -73,7 +71,6 @@
 
     move v6, p4
 
-    .line 62
     invoke-virtual/range {v0 .. v8}, Lcom/tencent/kingkong/database/SQLiteSession;->executeForCursorWindow(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/CursorWindow;IIZILcom/tencent/kingkong/support/CancellationSignal;)I
     :try_end_1
     .catch Lcom/tencent/kingkong/database/SQLiteDatabaseCorruptException; {:try_start_1 .. :try_end_1} :catch_0
@@ -91,7 +88,6 @@
     .line 76
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteQuery;->releaseReference()V
 
-    .line 65
     return v0
 
     .line 66
@@ -107,27 +103,23 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 72
+    .line 73
     :catchall_0
     move-exception v0
 
-    .line 73
     :try_start_4
     invoke-virtual {p1}, Lcom/tencent/kingkong/CursorWindow;->releaseReference()V
 
-    .line 74
     throw v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 75
+    .line 76
     :catchall_1
     move-exception v0
 
-    .line 76
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteQuery;->releaseReference()V
 
-    .line 77
     throw v0
 
     .line 69

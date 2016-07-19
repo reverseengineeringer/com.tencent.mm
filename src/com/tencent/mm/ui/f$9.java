@@ -1,22 +1,14 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.d.a.eu;
-import com.tencent.mm.pluginsdk.c.a;
-import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.e.a.gk;
+import com.tencent.mm.sdk.c.c;
 
 final class f$9
-  extends a
+  extends c<gk>
 {
   f$9(f paramf)
   {
-    super(0);
-  }
-  
-  public final void g(b paramb)
-  {
-    if ((paramb instanceof eu)) {
-      f.e(klo);
-    }
+    kum = gk.class.getName().hashCode();
   }
 }
 

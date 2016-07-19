@@ -18,10 +18,7 @@ public class TencentExtraKeys
   public static final boolean ALLOW_START_TENCENTMAP = false;
   public static final TencentLog DEFAULT_TENCENT_LOG = new TencentLog()
   {
-    public final void println(String paramAnonymousString1, int paramAnonymousInt, @NonNull String paramAnonymousString2)
-    {
-      if (paramAnonymousInt == 4) {}
-    }
+    public final void println(String paramAnonymousString1, int paramAnonymousInt, @NonNull String paramAnonymousString2) {}
   };
   public static final boolean DIDI_INTERNAL = false;
   public static final String LOCATION_KEY_ADMIN_LEVEL1 = "admin_level_1";
@@ -43,7 +40,7 @@ public class TencentExtraKeys
   public static final boolean TRY_NLP = false;
   private static File sLogDir;
   private static TencentLog sTencentLog;
-  private static List sTencentLogs = new ArrayList();
+  private static List<TencentLog> sTencentLogs = new ArrayList();
   
   public static void addTencentLog(TencentLog paramTencentLog)
   {
@@ -137,7 +134,7 @@ public class TencentExtraKeys
     }
   }
   
-  public static List getTencentLogs()
+  public static List<TencentLog> getTencentLogs()
   {
     try
     {
@@ -184,7 +181,7 @@ public class TencentExtraKeys
     // Byte code:
     //   0: ldc 2
     //   2: monitorenter
-    //   3: getstatic 153	com/tencent/map/geolocation/internal/TencentExtraKeys:sTencentLog	Lcom/tencent/map/geolocation/internal/TencentLog;
+    //   3: getstatic 154	com/tencent/map/geolocation/internal/TencentExtraKeys:sTencentLog	Lcom/tencent/map/geolocation/internal/TencentLog;
     //   6: astore_1
     //   7: aload_1
     //   8: ifnull +10 -> 18

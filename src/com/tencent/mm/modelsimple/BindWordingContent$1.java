@@ -3,7 +3,7 @@ package com.tencent.mm.modelsimple;
 import android.os.Parcelable.Creator;
 
 final class BindWordingContent$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<BindWordingContent>
 {}
 
 /* Location:

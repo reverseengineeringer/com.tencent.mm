@@ -9,7 +9,7 @@
 
 # direct methods
 .method public constructor <init>(J)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 11
@@ -137,9 +137,9 @@
     aput-byte v1, v0, v5
 
     .line 32
-    iget-wide v1, p0, Lcom/tencent/mm/modelsfs/SFSOutputStream;->mNativePtr:J
+    iget-wide v2, p0, Lcom/tencent/mm/modelsfs/SFSOutputStream;->mNativePtr:J
 
-    invoke-static {v1, v2, v0, v5, v4}, Lcom/tencent/mm/modelsfs/SFSOutputStream;->nativeWrite(J[BII)I
+    invoke-static {v2, v3, v0, v5, v4}, Lcom/tencent/mm/modelsfs/SFSOutputStream;->nativeWrite(J[BII)I
 
     move-result v0
 

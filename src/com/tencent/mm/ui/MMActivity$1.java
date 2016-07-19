@@ -7,54 +7,54 @@ final class MMActivity$1
 {
   MMActivity$1(MMActivity paramMMActivity) {}
   
-  protected final void aNa()
+  protected final void N(View paramView)
   {
-    koL.aNa();
+    kNP.N(paramView);
   }
   
-  public final boolean aNj()
+  public final void aAK()
   {
-    return koL.aNj();
+    kNP.aAK();
   }
   
-  public final boolean aZY()
+  protected final void aQL()
   {
-    return koL.aZY();
+    kNP.aQL();
   }
   
-  protected final String amX()
+  public final boolean aQR()
   {
-    return koL.amX();
+    return kNP.aQR();
   }
   
-  public final void ayk()
+  protected final String apN()
   {
-    koL.ayk();
+    return kNP.apN();
   }
   
-  protected final boolean baL()
+  protected final boolean bfX()
   {
-    return koL.baL();
+    return kNP.bfX();
   }
   
-  protected final View baY()
+  public final boolean bfr()
+  {
+    return kNP.bfr();
+  }
+  
+  protected final View bgi()
   {
     return null;
   }
   
-  protected final void dealContentView(View paramView)
-  {
-    koL.dealContentView(paramView);
-  }
-  
   protected final String getClassName()
   {
-    return koL.getClass().getName();
+    return kNP.getClass().getName();
   }
   
   protected final int getLayoutId()
   {
-    return koL.getLayoutId();
+    return kNP.getLayoutId();
   }
 }
 

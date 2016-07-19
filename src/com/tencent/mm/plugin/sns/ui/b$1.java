@@ -1,16 +1,15 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import java.util.List;
+import android.view.View;
 
 final class b$1
   implements Runnable
 {
-  b$1(b paramb, boolean paramBoolean) {}
+  b$1(b paramb, View paramView1, View paramView2) {}
   
   public final void run()
   {
-    List localList = gVz.aAL();
-    gVz.b(true, localList);
+    b.a(hiS, clo, gZB);
   }
 }
 

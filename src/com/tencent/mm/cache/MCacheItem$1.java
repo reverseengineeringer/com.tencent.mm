@@ -3,7 +3,7 @@ package com.tencent.mm.cache;
 import android.os.Parcelable.Creator;
 
 final class MCacheItem$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<MCacheItem>
 {}
 
 /* Location:

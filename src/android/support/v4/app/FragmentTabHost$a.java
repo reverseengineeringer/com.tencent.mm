@@ -4,9 +4,9 @@ import android.os.Bundle;
 
 final class FragmentTabHost$a
 {
-  Fragment aJ;
-  final Class ck;
-  final Bundle cl;
+  Fragment ak;
+  final Class<?> cy;
+  final Bundle cz;
   final String tag;
 }
 

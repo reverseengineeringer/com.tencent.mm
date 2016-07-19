@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/tencent/mm/pluginsdk/ui/applet/c$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/transmit/SelectConversationUI;->a(Landroid/widget/ListView;I)V
+    value = Lcom/tencent/mm/ui/transmit/SelectConversationUI;->k(Landroid/content/Intent;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,20 @@
 
 
 # instance fields
-.field final synthetic lBq:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
+.field final synthetic mci:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
+
+.field final synthetic val$intent:Landroid/content/Intent;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/transmit/SelectConversationUI;)V
+.method constructor <init>(Lcom/tencent/mm/ui/transmit/SelectConversationUI;Landroid/content/Intent;)V
     .locals 0
 
     .prologue
-    .line 190
-    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$4;->lBq:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
+    .line 484
+    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$4;->mci:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
+
+    iput-object p2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$4;->val$intent:Landroid/content/Intent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,50 +40,28 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method public final a(ZLjava/lang/String;I)V
+    .locals 3
 
     .prologue
-    .line 193
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$4;->lBq:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
+    .line 487
+    if-eqz p1, :cond_0
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->a(Lcom/tencent/mm/ui/transmit/SelectConversationUI;)Z
+    .line 488
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$4;->mci:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
 
-    move-result v0
+    const/4 v1, -0x1
 
-    if-eqz v0, :cond_0
+    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$4;->val$intent:Landroid/content/Intent;
 
-    .line 194
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$4;->lBq:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->setResult(ILandroid/content/Intent;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->b(Lcom/tencent/mm/ui/transmit/SelectConversationUI;)V
+    .line 489
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$4;->mci:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
 
-    .line 202
-    :goto_0
-    return-void
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->finish()V
 
-    .line 196
+    .line 491
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$4;->lBq:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->c(Lcom/tencent/mm/ui/transmit/SelectConversationUI;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 197
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$4;->lBq:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->d(Lcom/tencent/mm/ui/transmit/SelectConversationUI;)V
-
-    goto :goto_0
-
-    .line 199
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$4;->lBq:Lcom/tencent/mm/ui/transmit/SelectConversationUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->e(Lcom/tencent/mm/ui/transmit/SelectConversationUI;)V
-
-    goto :goto_0
+    return-void
 .end method

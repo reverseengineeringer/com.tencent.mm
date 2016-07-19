@@ -3,155 +3,157 @@ package com.tencent.mm.modelmulti;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import com.tencent.mm.az.g;
+import com.tencent.mm.bc.g;
 import com.tencent.mm.compatible.util.f.a;
+import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.platformtools.n;
+import com.tencent.mm.platformtools.m;
 import com.tencent.mm.pluginsdk.i.ai;
 import com.tencent.mm.pluginsdk.i.o.b;
-import com.tencent.mm.protocal.b.aev;
-import com.tencent.mm.protocal.b.ih;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.protocal.b.afq;
+import com.tencent.mm.protocal.b.iq;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.aj;
 import com.tencent.mm.storage.h;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
 import java.util.LinkedList;
 import java.util.Queue;
 import junit.framework.Assert;
 
 final class e$1
-  implements af.a
+  implements ah.a
 {
   e$1(e parame) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
     float f1 = 1.0F;
-    if ((!com.tencent.mm.model.ah.rh()) || (com.tencent.mm.model.ah.tM()))
+    if ((!ah.rg()) || (ah.tN()))
     {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvnIKeokfDtW+c2Qn4D1oK2g=", "acc is not ready stop handle resp");
+      v.e("MicroMsg.NetSceneInit.dkInit", "acc is not ready stop handle resp");
       return false;
     }
-    if (bVb.bVa)
+    if (bOC.bOB)
     {
-      if (i.ai.izb != null) {
-        i.ai.izb.aAd();
+      if (i.ai.iVx != null) {
+        i.ai.iVx.aCQ();
       }
-      u.w("!44@/B4Tb64lLpK+IBX8XDgnvnIKeokfDtW+c2Qn4D1oK2g=", "Init CANCELED hash:%d", new Object[] { Integer.valueOf(bVb.hashCode()) });
+      v.w("MicroMsg.NetSceneInit.dkInit", "Init CANCELED hash:%d", new Object[] { Integer.valueOf(bOC.hashCode()) });
       return false;
     }
-    if (bVb.bOO.isEmpty())
+    if (bOC.bIj.isEmpty())
     {
-      u.v("!44@/B4Tb64lLpK+IBX8XDgnvnIKeokfDtW+c2Qn4D1oK2g=", "queue maybe this time is null , wait doscene!");
+      v.v("MicroMsg.NetSceneInit.dkInit", "queue maybe this time is null , wait doscene!");
       return false;
     }
-    u.i("!44@/B4Tb64lLpK+IBX8XDgnvnIKeokfDtW+c2Qn4D1oK2g=", "pusher hash:%d time:%d list:%d [%d/%b,%d/%d]", new Object[] { Integer.valueOf(bVb.hashCode()), Long.valueOf(bVb.bUL.pa()), Integer.valueOf(bVb.bOO.size()), Integer.valueOf(bVb.bUW), Boolean.valueOf(bVb.bUX), Integer.valueOf(bVb.bUZ), Integer.valueOf(bVb.bUY) });
-    long l = tDbzA.dH(Thread.currentThread().getId());
-    com.tencent.mm.model.ah.tD().rs().aXL();
+    v.i("MicroMsg.NetSceneInit.dkInit", "pusher hash:%d time:%d list:%d [%d/%b,%d/%d]", new Object[] { Integer.valueOf(bOC.hashCode()), Long.valueOf(bOC.bOm.ns()), Integer.valueOf(bOC.bIj.size()), Integer.valueOf(bOC.bOx), Boolean.valueOf(bOC.bOy), Integer.valueOf(bOC.bOA), Integer.valueOf(bOC.bOz) });
+    long l = tEbsy.dY(Thread.currentThread().getId());
+    ah.tE().rt().Hj("NetSceneInit");
     int i;
     int j;
-    label251:
+    label253:
     final Object localObject1;
     boolean bool;
-    label295:
+    label297:
     Object localObject2;
-    if (bVb.bUX)
+    if (bOC.bOy)
     {
       i = 40;
       j = 0;
       if (j >= i) {
-        break label961;
+        break label965;
       }
-      localObject1 = (e.a)bVb.bOO.peek();
-      if (bVf != Integer.MAX_VALUE) {
-        break label597;
+      localObject1 = (e.a)bOC.bIj.peek();
+      if (bOG != Integer.MAX_VALUE) {
+        break label601;
       }
-      if (bVe != null) {
-        break label591;
+      if (bOF != null) {
+        break label595;
       }
       bool = true;
       Assert.assertTrue("in Queue tail , resp should be null", bool);
-      if (i.ai.izb != null) {
-        i.ai.izb.aAd();
+      if (i.ai.iVx != null) {
+        i.ai.iVx.aCQ();
       }
-      localObject2 = (String)com.tencent.mm.model.ah.tD().rn().get(8198, null);
-      com.tencent.mm.model.ah.tD().rn().set(8195, localObject2);
-      y.getContext().getSharedPreferences("notify_sync_pref", 4).edit().putString("notify_sync_key_keybuf", (String)localObject2).commit();
-      com.tencent.mm.model.ah.tD().rn().set(8197, "");
-      com.tencent.mm.model.ah.tD().rn().set(8198, "");
-      com.tencent.mm.model.ah.tD().rn().set(15, Integer.valueOf(1));
-      com.tencent.mm.model.ah.tD().rn().gN(true);
-      u.i("!44@/B4Tb64lLpK+IBX8XDgnvnIKeokfDtW+c2Qn4D1oK2g=", "INIT DONE: hash:%d time:%d netCnt:%d cmdCnt:%d err:[%d,%d] ", new Object[] { Integer.valueOf(bVb.hashCode()), Long.valueOf(bVb.bUL.pa()), Integer.valueOf(bVb.bUW), Integer.valueOf(bVb.bUY), Integer.valueOf(errType), Integer.valueOf(errCode) });
-      com.tencent.mm.model.ah.tv().r(new Runnable()
+      localObject2 = (String)ah.tE().ro().get(8198, null);
+      ah.tE().ro().set(8195, localObject2);
+      aa.getContext().getSharedPreferences("notify_sync_pref", 4).edit().putString("notify_sync_key_keybuf", (String)localObject2).commit();
+      ah.tE().ro().set(8197, "");
+      ah.tE().ro().set(8198, "");
+      ah.tE().ro().set(15, Integer.valueOf(1));
+      ah.tE().ro().hn(true);
+      v.i("MicroMsg.NetSceneInit.dkInit", "INIT DONE: hash:%d time:%d netCnt:%d cmdCnt:%d err:[%d,%d] ", new Object[] { Integer.valueOf(bOC.hashCode()), Long.valueOf(bOC.bOm.ns()), Integer.valueOf(bOC.bOx), Integer.valueOf(bOC.bOz), Integer.valueOf(errType), Integer.valueOf(errCode) });
+      ah.tw().t(new Runnable()
       {
         public final void run()
         {
-          bVb.anM.a(localObject1errType, localObject1errCode, localObject1aCE, bVb);
+          bOC.bkT.onSceneEnd(localObject1errType, localObject1errCode, localObject1aoX, bOC);
         }
       });
       bool = false;
     }
     for (;;)
     {
-      com.tencent.mm.model.ah.tD().rs().aXM();
-      tDbzA.dI(l);
-      localObject1 = bVb;
-      if (bRs == null)
+      ah.tE().rt().Hk("NetSceneInit");
+      tEbsy.dZ(l);
+      localObject1 = bOC;
+      if (bKO == null)
       {
-        u.w("!44@/B4Tb64lLpK+IBX8XDgnvnIKeokfDtW+c2Qn4D1oK2g=", "dkinit doProgressCallBack progress is null");
+        v.w("MicroMsg.NetSceneInit.dkInit", "dkinit doProgressCallBack progress is null");
         return bool;
         i = 10;
         break;
-        label591:
+        label595:
         bool = false;
-        break label295;
-        label597:
-        localObject2 = bVe.jBU;
-        if ((localObject2 == null) || (((LinkedList)localObject2).size() <= bPb) || (!bVb.bUC.a((ih)((LinkedList)localObject2).get(bPb), true)))
+        break label297;
+        label601:
+        localObject2 = bOF.kaJ;
+        if ((localObject2 == null) || (((LinkedList)localObject2).size() <= bIw) || (!bOC.bOd.a((iq)((LinkedList)localObject2).get(bIw), true)))
         {
-          bVb.bUC.Bh();
-          bVb.bOO.poll();
-          com.tencent.mm.model.ah.tD().rn().set(8197, ay.aW(n.a(bVe.jBQ)));
-          com.tencent.mm.model.ah.tD().rn().set(8198, ay.aW(n.a(bVe.jBR)));
-          com.tencent.mm.model.ah.tD().rn().set(16, Integer.valueOf(0));
-          com.tencent.mm.model.ah.tD().rn().set(8196, Long.valueOf(bVe.jBS));
-          com.tencent.mm.model.ah.tD().rn().gN(true);
+          bOC.bOd.Bg();
+          bOC.bIj.poll();
+          ah.tE().ro().set(8197, be.bd(m.a(bOF.kaF)));
+          ah.tE().ro().set(8198, be.bd(m.a(bOF.kaG)));
+          ah.tE().ro().set(16, Integer.valueOf(0));
+          ah.tE().ro().set(8196, Long.valueOf(bOF.kaH));
+          ah.tE().ro().hn(true);
           bool = true;
           continue;
         }
-        bPb += 1;
-        localObject1 = bVb;
-        bUZ += 1;
+        bIw += 1;
+        localObject1 = bOC;
+        bOA += 1;
         j += 1;
-        break label251;
+        break label253;
       }
-      if (bUW > 50)
+      if (bOx > 50)
       {
         i = 50;
-        label834:
-        if (bUX) {
-          break label921;
+        label838:
+        if (bOy) {
+          break label925;
         }
       }
       for (j = i;; j = (int)((100 - i) * f1 + i))
       {
-        u.d("!44@/B4Tb64lLpK+IBX8XDgnvnIKeokfDtW+c2Qn4D1oK2g=", "doProgressCallBack index:%d sum:%d ratiocmd:%f ratioDoScene:%d", new Object[] { Integer.valueOf(bUZ), Integer.valueOf(bUY), Float.valueOf(f1), Integer.valueOf(i) });
-        bRs.a(j, 100, (j)localObject1);
+        v.d("MicroMsg.NetSceneInit.dkInit", "doProgressCallBack index:%d sum:%d ratiocmd:%f ratioDoScene:%d", new Object[] { Integer.valueOf(bOA), Integer.valueOf(bOz), Float.valueOf(f1), Integer.valueOf(i) });
+        bKO.a(j, 100, (j)localObject1);
         break;
-        i = bUW;
-        break label834;
-        label921:
-        float f2 = bUZ / bUY;
+        i = bOx;
+        break label838;
+        label925:
+        float f2 = bOA / bOz;
         f1 = f2;
         if (f2 > 1.0F) {
           f1 = 1.0F;
         }
       }
-      label961:
+      label965:
       bool = true;
     }
   }

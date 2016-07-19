@@ -15,7 +15,7 @@ final class MMPreference$4
   {
     if (1 == paramInt)
     {
-      paramAbsListView = kLM.getCurrentFocus();
+      paramAbsListView = llb.getCurrentFocus();
       if (paramAbsListView != null) {
         paramAbsListView.clearFocus();
       }

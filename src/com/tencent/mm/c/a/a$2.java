@@ -5,21 +5,21 @@ import com.tencent.mm.compatible.b.d;
 import com.tencent.mm.compatible.d.p;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelvoice.d.a;
-import com.tencent.mm.r.f.a;
 import com.tencent.mm.sdk.i.e;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.al;
-import com.tencent.mm.sdk.platformtools.al.a;
-import com.tencent.mm.sdk.platformtools.al.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.ao;
+import com.tencent.mm.sdk.platformtools.ao.a;
+import com.tencent.mm.sdk.platformtools.ao.b;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.f.a;
 
 final class a$2
   implements d.a
 {
   a$2(a parama) {}
   
-  public final void lG()
+  public final void jQ()
   {
     e.a(new Runnable()
     {
@@ -27,37 +27,37 @@ final class a$2
       {
         try
         {
-          if (bsLbpQ == 1) {
+          if (bgPbdQ == 1) {
             Thread.sleep(300L);
           }
-          if (apr.apq != null) {
-            ab.j(new Runnable()
+          if (aaJ.aaI != null) {
+            ad.k(new Runnable()
             {
               public final void run()
               {
-                ah.tF().b(apr.apj, false);
-                Context localContext = apr.context;
-                boolean bool = apr.apj;
-                al.a local1 = new al.a()
+                ah.tG().b(aaJ.aaB, false);
+                Context localContext = aaJ.context;
+                boolean bool = aaJ.aaB;
+                ao.a local1 = new ao.a()
                 {
-                  public final void lG()
+                  public final void jQ()
                   {
-                    if (!apr.isPlaying())
+                    if (!aaJ.isPlaying())
                     {
-                      ah.tF().b(apr);
-                      ah.tF().nM();
-                      apr.apo = false;
-                      apr.apl.oV();
-                      ah.tF().setMode(0);
-                      u.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "onCompletion() resetSpeaker");
+                      ah.tG().b(aaJ);
+                      ah.tG().mb();
+                      aaJ.aaG = false;
+                      ah.tG().setMode(0);
+                      aaJ.aaD.nn();
+                      v.i("MicroMsg.SceneVoicePlayer", "onCompletion() resetSpeaker");
                     }
-                    apr.apq.lG();
+                    aaJ.aaI.jQ();
                   }
                 };
                 if (bool) {}
-                for (al.b localb = al.b.jXa;; localb = al.b.jXb)
+                for (ao.b localb = ao.b.kxt;; localb = ao.b.kxu)
                 {
-                  al.a(localContext, 2131432253, localb, false, local1);
+                  ao.a(localContext, 2131234158, localb, false, local1);
                   return;
                 }
               }
@@ -67,7 +67,7 @@ final class a$2
         }
         catch (InterruptedException localInterruptedException)
         {
-          u.e("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "exception:%s", new Object[] { ay.b(localInterruptedException) });
+          v.e("MicroMsg.SceneVoicePlayer", "exception:%s", new Object[] { be.f(localInterruptedException) });
         }
       }
     }, "SceneVoice_onCompletion");

@@ -1,40 +1,29 @@
 package com.tencent.mm.ui;
 
-import android.content.Intent;
-import android.os.MessageQueue.IdleHandler;
-import com.tencent.mm.model.h;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.base.w;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.sdk.platformtools.ad;
 import com.tencent.mm.ui.chatting.ChattingUI.a;
 import com.tencent.mm.ui.tools.TestTimeForChatting;
 
 final class LauncherUI$16
-  implements MessageQueue.IdleHandler
+  implements Runnable
 {
   LauncherUI$16(LauncherUI paramLauncherUI) {}
   
-  public final boolean queueIdle()
+  public final void run()
   {
-    long l = System.currentTimeMillis();
-    if (LauncherUI.p(knl) == null)
-    {
-      Object localObject = h.sc();
-      localObject = new Intent().putExtra("Chat_User", (String)localObject);
-      LauncherUI.a(knl, (Intent)localObject);
-      hknl).ePD = true;
-      LauncherUI.h(knl).bfc();
-      LauncherUI.p(knl).setVisibility(8);
-      hknl).kqn = true;
-      LauncherUI.h(knl).onPause();
-      LauncherUI.h(knl).beZ();
-      hknl).bWL = false;
-      LauncherUI.s(knl);
-      w.a(true, new Intent().putExtra("classname", LauncherUI.class.getName()));
-    }
-    LauncherUI.a(knl, null);
-    LauncherUI.b(knl, null);
-    u.d("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "prepare chattingUI logic use %dms", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
-    return false;
+    ah.tw().bac();
+    ad.rh(0);
+    LauncherUI.o(kMs).boM();
+    gkMs).eXw = true;
+    LauncherUI.g(kMs).bkL();
+    LauncherUI.g(kMs).iq(false);
+    LauncherUI.s(kMs);
+  }
+  
+  public final String toString()
+  {
+    return super.toString() + "|chattingView_onAnimationEnd";
   }
 }
 

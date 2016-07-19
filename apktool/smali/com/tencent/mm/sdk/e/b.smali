@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public cAU:Ljava/lang/String;
+.field public cnK:Ljava/lang/String;
 
-.field public csg:Ljava/lang/String;
+.field public cxP:Ljava/lang/String;
 
 .field public errCode:I
 
-.field public iBD:Ljava/lang/String;
+.field public iYn:Ljava/lang/String;
 
 
 # direct methods
@@ -30,7 +30,7 @@
 .method public abstract getType()I
 .end method
 
-.method public l(Landroid/os/Bundle;)V
+.method public n(Landroid/os/Bundle;)V
     .locals 2
 
     .prologue
@@ -53,21 +53,21 @@
     .line 107
     const-string/jumbo v0, "_wxapi_baseresp_errstr"
 
-    iget-object v1, p0, Lcom/tencent/mm/sdk/e/b;->csg:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/sdk/e/b;->cnK:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 108
     const-string/jumbo v0, "_wxapi_baseresp_transaction"
 
-    iget-object v1, p0, Lcom/tencent/mm/sdk/e/b;->iBD:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/sdk/e/b;->iYn:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 109
     const-string/jumbo v0, "_wxapi_baseresp_openId"
 
-    iget-object v1, p0, Lcom/tencent/mm/sdk/e/b;->cAU:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/sdk/e/b;->cxP:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -75,7 +75,7 @@
     return-void
 .end method
 
-.method public m(Landroid/os/Bundle;)V
+.method public o(Landroid/os/Bundle;)V
     .locals 1
 
     .prologue
@@ -95,7 +95,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/e/b;->csg:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/e/b;->cnK:Ljava/lang/String;
 
     .line 123
     const-string/jumbo v0, "_wxapi_baseresp_transaction"
@@ -104,7 +104,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/e/b;->iBD:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/e/b;->iYn:Ljava/lang/String;
 
     .line 124
     const-string/jumbo v0, "_wxapi_baseresp_openId"
@@ -113,7 +113,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/e/b;->cAU:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/e/b;->cxP:Ljava/lang/String;
 
     .line 125
     return-void

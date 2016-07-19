@@ -1,6 +1,7 @@
 package com.tencent.smtt.export.external.proxy;
 
 import android.graphics.Bitmap;
+import android.os.Bundle;
 import android.os.Message;
 import android.view.KeyEvent;
 import com.tencent.smtt.export.external.interfaces.HttpAuthHandler;
@@ -14,6 +15,7 @@ import com.tencent.smtt.export.external.interfaces.WebResourceResponse;
 public abstract class ProxyWebViewClient
   implements IX5WebViewClient
 {
+  private boolean mCompatibleOnPageStartedOrFinishedMethod = false;
   protected IX5WebViewClient mWebViewClient;
   
   public void doUpdateVisitedHistory(IX5WebViewBase paramIX5WebViewBase, String paramString, boolean paramBoolean)
@@ -21,16 +23,6 @@ public abstract class ProxyWebViewClient
     if (mWebViewClient != null) {
       mWebViewClient.doUpdateVisitedHistory(paramIX5WebViewBase, paramString, paramBoolean);
     }
-  }
-  
-  public boolean notifyHideADWebview()
-  {
-    return false;
-  }
-  
-  public boolean notifyLoadADUrl(String paramString)
-  {
-    return false;
   }
   
   public void onContentSizeChanged(IX5WebViewBase paramIX5WebViewBase, int paramInt1, int paramInt2)
@@ -56,17 +48,21 @@ public abstract class ProxyWebViewClient
     }
   }
   
-  public void onPageFinished(IX5WebViewBase paramIX5WebViewBase, int paramInt1, int paramInt2, String paramString)
+  public void onPageFinished(IX5WebViewBase paramIX5WebViewBase, int paramInt1, int paramInt2, String paramString) {}
+  
+  public void onPageFinished(IX5WebViewBase paramIX5WebViewBase, String paramString)
   {
     if (mWebViewClient != null) {
-      mWebViewClient.onPageFinished(paramIX5WebViewBase, paramInt1, paramInt2, paramString);
+      mWebViewClient.onPageFinished(paramIX5WebViewBase, paramString);
     }
   }
   
-  public void onPageStarted(IX5WebViewBase paramIX5WebViewBase, int paramInt1, int paramInt2, String paramString, Bitmap paramBitmap)
+  public void onPageStarted(IX5WebViewBase paramIX5WebViewBase, int paramInt1, int paramInt2, String paramString, Bitmap paramBitmap) {}
+  
+  public void onPageStarted(IX5WebViewBase paramIX5WebViewBase, String paramString, Bitmap paramBitmap)
   {
     if (mWebViewClient != null) {
-      mWebViewClient.onPageStarted(paramIX5WebViewBase, paramInt1, paramInt2, paramString, paramBitmap);
+      mWebViewClient.onPageStarted(paramIX5WebViewBase, paramString, paramBitmap);
     }
   }
   
@@ -81,6 +77,13 @@ public abstract class ProxyWebViewClient
   {
     if (mWebViewClient != null) {
       mWebViewClient.onReceivedHttpAuthRequest(paramIX5WebViewBase, paramHttpAuthHandler, paramString1, paramString2);
+    }
+  }
+  
+  public void onReceivedHttpError(IX5WebViewBase paramIX5WebViewBase, WebResourceRequest paramWebResourceRequest, WebResourceResponse paramWebResourceResponse)
+  {
+    if (mWebViewClient != null) {
+      mWebViewClient.onReceivedHttpError(paramIX5WebViewBase, paramWebResourceRequest, paramWebResourceResponse);
     }
   }
   
@@ -128,6 +131,14 @@ public abstract class ProxyWebViewClient
   {
     if (mWebViewClient != null) {
       return mWebViewClient.shouldInterceptRequest(paramIX5WebViewBase, paramWebResourceRequest);
+    }
+    return null;
+  }
+  
+  public WebResourceResponse shouldInterceptRequest(IX5WebViewBase paramIX5WebViewBase, WebResourceRequest paramWebResourceRequest, Bundle paramBundle)
+  {
+    if (mWebViewClient != null) {
+      return mWebViewClient.shouldInterceptRequest(paramIX5WebViewBase, paramWebResourceRequest, paramBundle);
     }
     return null;
   }

@@ -2,17 +2,17 @@ package com.tencent.mm.pluginsdk.wallet;
 
 public final class e
 {
-  private static int fTs = -1;
-  private static int ibR = -1;
+  private static int gcc = -1;
+  private static int ivO = -1;
   
-  public static int aML()
+  public static int aQu()
   {
-    return ibR;
+    return ivO;
   }
   
-  public static void oO(int paramInt)
+  public static void qB(int paramInt)
   {
-    ibR = paramInt;
+    ivO = paramInt;
   }
 }
 

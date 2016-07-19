@@ -18,16 +18,20 @@
 
 
 # instance fields
-.field final synthetic kMQ:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
+.field final synthetic lmf:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
+
+.field final synthetic lmg:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;)V
+.method constructor <init>(Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 365
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$4;->kMQ:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
+    .line 375
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$4;->lmf:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
+
+    iput-object p2, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$4;->lmg:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,30 +44,15 @@
     .locals 3
 
     .prologue
-    .line 368
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 378
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$4;->lmf:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$4;->lmg:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    sget v2, Lcom/tencent/mm/ad/a;->bIB:I
 
-    move-result-object v0
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->a(Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;Ljava/lang/String;I)V
 
-    const v1, 0x33009
-
-    const/4 v2, 0x1
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
-
-    .line 369
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$4;->kMQ:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;->finish()V
-
-    .line 370
+    .line 379
     return-void
 .end method

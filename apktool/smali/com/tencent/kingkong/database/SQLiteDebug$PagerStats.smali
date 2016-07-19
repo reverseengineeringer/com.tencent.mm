@@ -16,6 +16,15 @@
 
 # instance fields
 .field public dbStats:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/kingkong/database/SQLiteDebug$DbStats;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field public largestMemAlloc:I
 

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract zy(Ljava/lang/String;)V
+.method public abstract Bu(Ljava/lang/String;)V
 .end method

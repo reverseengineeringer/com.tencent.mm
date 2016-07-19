@@ -10,7 +10,7 @@ final class ResourcesExceedUI$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    ldn.finish();
+    lDE.finish();
     return true;
   }
 }

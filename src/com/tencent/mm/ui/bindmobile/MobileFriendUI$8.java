@@ -10,7 +10,7 @@ final class MobileFriendUI$8
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    kPt.finish();
+    loJ.finish();
   }
 }
 

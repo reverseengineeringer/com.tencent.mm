@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ltH:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+.field final synthetic lUJ:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 87
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$2;->ltH:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$2;->lUJ:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 91
-    const-string/jumbo v0, "!44@/B4Tb64lLpL4/IPflj+tleANqnL7qi1AFYpzfZUCVoE="
+    const-string/jumbo v0, "MicroMsg.ActionBarSearchView"
 
     const-string/jumbo v1, "on edittext focus changed, hasFocus %B"
 
@@ -57,8 +57,27 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 97
+    .line 92
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$2;->lUJ:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->d(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Landroid/view/View$OnFocusChangeListener;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 93
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$2;->lUJ:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->d(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Landroid/view/View$OnFocusChangeListener;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1, p2}, Landroid/view/View$OnFocusChangeListener;->onFocusChange(Landroid/view/View;Z)V
+
+    .line 95
+    :cond_0
     return-void
 .end method

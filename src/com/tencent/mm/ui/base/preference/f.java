@@ -2,19 +2,19 @@ package com.tencent.mm.ui.base.preference;
 
 public abstract interface f
 {
-  public abstract Preference GB(String paramString);
+  public abstract Preference IR(String paramString);
   
-  public abstract boolean GC(String paramString);
+  public abstract boolean IS(String paramString);
   
-  public abstract int GD(String paramString);
+  public abstract int IT(String paramString);
   
   public abstract void a(Preference paramPreference);
   
   public abstract void a(Preference paramPreference, int paramInt);
   
-  public abstract void addPreferencesFromResource(int paramInt);
+  public abstract void aD(String paramString, boolean paramBoolean);
   
-  public abstract void at(String paramString, boolean paramBoolean);
+  public abstract void addPreferencesFromResource(int paramInt);
   
   public abstract boolean b(Preference paramPreference);
   

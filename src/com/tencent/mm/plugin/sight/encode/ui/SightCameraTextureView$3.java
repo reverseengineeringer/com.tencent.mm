@@ -7,7 +7,7 @@ final class SightCameraTextureView$3
   
   public final void run()
   {
-    gEa.gEc.awZ();
+    gKA.gKC.azy();
   }
   
   public final String toString()

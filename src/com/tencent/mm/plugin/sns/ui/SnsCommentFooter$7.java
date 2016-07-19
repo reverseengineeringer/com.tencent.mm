@@ -14,24 +14,24 @@ final class SnsCommentFooter$7
   
   public final void onClick(View paramView)
   {
-    SnsCommentFooter.j(hdG).setImageResource(2130969881);
+    SnsCommentFooter.j(hst).setImageResource(2130838038);
     paramView = new ScaleAnimation(0.9F, 1.3F, 0.9F, 1.3F, 1, 0.5F, 1, 0.5F);
     paramView.setDuration(400L);
     paramView.setStartOffset(100L);
     paramView.setRepeatCount(0);
-    SnsCommentFooter.j(hdG).startAnimation(paramView);
+    SnsCommentFooter.j(hst).startAnimation(paramView);
     paramView.setAnimationListener(new Animation.AnimationListener()
     {
       public final void onAnimationEnd(Animation paramAnonymousAnimation)
       {
-        SnsCommentFooter.j(hdG).setImageResource(2130969783);
+        SnsCommentFooter.j(hst).setImageResource(2130838035);
       }
       
       public final void onAnimationRepeat(Animation paramAnonymousAnimation) {}
       
       public final void onAnimationStart(Animation paramAnonymousAnimation) {}
     });
-    hdK.aBM();
+    hsx.aEI();
   }
 }
 

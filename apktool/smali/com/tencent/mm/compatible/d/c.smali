@@ -12,21 +12,48 @@
 
 
 # direct methods
-.method public static a(Landroid/app/Activity;I)Lcom/tencent/mm/compatible/d/c$a$a;
+.method public static a(Landroid/hardware/Camera$Parameters;)Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/hardware/Camera$Parameters;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Landroid/hardware/Camera$Size;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 105
+    new-instance v0, Lcom/tencent/mm/compatible/d/f;
+
+    invoke-direct {v0}, Lcom/tencent/mm/compatible/d/f;-><init>()V
+
+    invoke-virtual {p0}, Landroid/hardware/Camera$Parameters;->getSupportedPreviewSizes()Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static b(Landroid/app/Activity;I)Lcom/tencent/mm/compatible/d/c$a$a;
     .locals 3
 
     .prologue
     const/4 v2, 0x1
 
     .line 86
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bri:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bfi:I
 
     if-ne v0, v2, :cond_0
 
     .line 87
-    const-string/jumbo v0, "!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1"
+    const-string/jumbo v0, "MicroMsg.CameraUtil"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -42,14 +69,14 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 88
     new-instance v0, Lcom/tencent/mm/compatible/d/d;
 
     invoke-direct {v0}, Lcom/tencent/mm/compatible/d/d;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/compatible/d/d;->oh()Lcom/tencent/mm/compatible/d/c$a$a;
+    invoke-static {}, Lcom/tencent/mm/compatible/d/d;->mx()Lcom/tencent/mm/compatible/d/c$a$a;
 
     move-result-object v0
 
@@ -59,14 +86,14 @@
 
     .line 90
     :cond_0
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bra:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bfa:Z
 
     if-eqz v0, :cond_1
 
     .line 91
-    const-string/jumbo v0, "!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1"
+    const-string/jumbo v0, "MicroMsg.CameraUtil"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -82,14 +109,14 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 92
     new-instance v0, Lcom/tencent/mm/compatible/d/h;
 
     invoke-direct {v0}, Lcom/tencent/mm/compatible/d/h;-><init>()V
 
-    invoke-static {p1}, Lcom/tencent/mm/compatible/d/h;->bQ(I)Lcom/tencent/mm/compatible/d/c$a$a;
+    invoke-static {p1}, Lcom/tencent/mm/compatible/d/h;->ci(I)Lcom/tencent/mm/compatible/d/c$a$a;
 
     move-result-object v0
 
@@ -112,7 +139,7 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/compatible/d/i;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/compatible/d/i;->oh()Lcom/tencent/mm/compatible/d/c$a$a;
+    invoke-static {}, Lcom/tencent/mm/compatible/d/i;->mx()Lcom/tencent/mm/compatible/d/c$a$a;
 
     move-result-object v0
 
@@ -127,7 +154,7 @@
     if-le v0, v2, :cond_3
 
     .line 98
-    const-string/jumbo v0, "!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1"
+    const-string/jumbo v0, "MicroMsg.CameraUtil"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -143,14 +170,14 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 99
     new-instance v0, Lcom/tencent/mm/compatible/d/f;
 
     invoke-direct {v0}, Lcom/tencent/mm/compatible/d/f;-><init>()V
 
-    invoke-static {p0, p1}, Lcom/tencent/mm/compatible/d/f;->a(Landroid/app/Activity;I)Lcom/tencent/mm/compatible/d/c$a$a;
+    invoke-static {p0, p1}, Lcom/tencent/mm/compatible/d/f;->b(Landroid/app/Activity;I)Lcom/tencent/mm/compatible/d/c$a$a;
 
     move-result-object v0
 
@@ -162,31 +189,26 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/compatible/d/e;-><init>()V
 
-    invoke-static {p1}, Lcom/tencent/mm/compatible/d/e;->bQ(I)Lcom/tencent/mm/compatible/d/c$a$a;
+    invoke-static {p1}, Lcom/tencent/mm/compatible/d/e;->ci(I)Lcom/tencent/mm/compatible/d/c$a$a;
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method public static a(Landroid/hardware/Camera$Parameters;)Ljava/util/List;
-    .locals 1
-
-    .prologue
-    .line 105
-    new-instance v0, Lcom/tencent/mm/compatible/d/f;
-
-    invoke-direct {v0}, Lcom/tencent/mm/compatible/d/f;-><init>()V
-
-    invoke-virtual {p0}, Landroid/hardware/Camera$Parameters;->getSupportedPreviewSizes()Ljava/util/List;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public static b(Landroid/hardware/Camera$Parameters;)Ljava/util/List;
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/hardware/Camera$Parameters;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Landroid/hardware/Camera$Size;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 109
@@ -220,15 +242,15 @@
 
     .prologue
     .line 47
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bra:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bfa:Z
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->brg:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bfg:Z
 
     if-eqz v0, :cond_0
 
@@ -257,7 +279,7 @@
     goto :goto_0
 .end method
 
-.method public static of()I
+.method public static mv()I
     .locals 7
 
     .prologue
@@ -266,9 +288,9 @@
     const/4 v1, 0x0
 
     .line 54
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->brW:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->bfX:I
 
     if-ne v0, v6, :cond_0
 
@@ -302,7 +324,7 @@
     if-nez v4, :cond_1
 
     .line 65
-    const-string/jumbo v2, "!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1"
+    const-string/jumbo v2, "MicroMsg.CameraUtil"
 
     const-string/jumbo v3, "tigercam get bid %d"
 
@@ -314,11 +336,11 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 70
     :goto_2
-    const-string/jumbo v2, "!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1"
+    const-string/jumbo v2, "MicroMsg.CameraUtil"
 
     const-string/jumbo v3, "tigercam getBackCameraId %d"
 
@@ -330,7 +352,7 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v1, v0
 
@@ -349,16 +371,16 @@
     goto :goto_2
 .end method
 
-.method public static og()Z
+.method public static mw()Z
     .locals 3
 
     .prologue
     const/4 v0, 0x1
 
     .line 75
-    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v1, v1, Lcom/tencent/mm/compatible/d/b;->bri:I
+    iget v1, v1, Lcom/tencent/mm/compatible/d/b;->bfi:I
 
     if-ne v1, v0, :cond_1
 

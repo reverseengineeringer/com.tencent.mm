@@ -1,18 +1,14 @@
 .class final Lcom/tencent/mm/ui/chatting/j;
-.super Lcom/tencent/mm/ui/chatting/aa$a;
+.super Lcom/tencent/mm/ui/chatting/ab$a;
 .source "SourceFile"
 
 
 # instance fields
-.field protected dVa:Landroid/widget/TextView;
+.field public lqx:Landroid/widget/ImageView;
 
-.field protected dVy:Landroid/widget/TextView;
+.field public lqy:Landroid/widget/TextView;
 
-.field protected fGG:Landroid/widget/ProgressBar;
-
-.field protected kQE:Landroid/widget/TextView;
-
-.field protected kQK:Landroid/widget/ImageView;
+.field public lqz:Landroid/widget/TextView;
 
 
 # direct methods
@@ -20,108 +16,111 @@
     .locals 0
 
     .prologue
-    .line 326
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/chatting/aa$a;-><init>(I)V
+    .line 401
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/chatting/ab$a;-><init>(I)V
 
-    .line 327
+    .line 402
     return-void
 .end method
 
 
 # virtual methods
-.method public final aA(Landroid/view/View;)Lcom/tencent/mm/ui/chatting/j;
-    .locals 1
+.method public final aD(Landroid/view/View;)Lcom/tencent/mm/ui/chatting/j;
+    .locals 2
 
     .prologue
-    .line 336
-    invoke-super {p0, p1}, Lcom/tencent/mm/ui/chatting/aa$a;->aC(Landroid/view/View;)V
+    .line 405
+    invoke-super {p0, p1}, Lcom/tencent/mm/ui/chatting/ab$a;->aG(Landroid/view/View;)V
 
-    .line 338
-    const v0, 0x7f07004e
+    .line 407
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->hDZ:Landroid/view/View;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    const v1, 0x7f10000a
 
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->dVy:Landroid/widget/TextView;
-
-    .line 339
-    const v0, 0x7f0700d7
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ProgressBar;
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->fGG:Landroid/widget/ProgressBar;
-
-    .line 340
-    const v0, 0x7f070082
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->kQK:Landroid/widget/ImageView;
-
-    .line 341
-    const v0, 0x7f0700e2
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->dVa:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->dXd:Landroid/widget/TextView;
 
-    .line 342
-    const v0, 0x7f0700f8
+    .line 408
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->hDZ:Landroid/view/View;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    const v1, 0x7f100005
 
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->kQE:Landroid/widget/TextView;
-
-    .line 343
-    const v0, 0x7f070054
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->gjr:Landroid/widget/TextView;
-
-    .line 344
-    const v0, 0x7f070002
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/CheckBox;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->edK:Landroid/widget/CheckBox;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->ehl:Landroid/widget/CheckBox;
 
-    .line 345
-    const v0, 0x7f070003
+    .line 409
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->hDZ:Landroid/view/View;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    const v1, 0x7f100009
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->dMC:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->dOk:Landroid/view/View;
 
-    .line 346
+    .line 410
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->hDZ:Landroid/view/View;
+
+    const v1, 0x7f100118
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->gtM:Landroid/widget/TextView;
+
+    .line 412
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->hDZ:Landroid/view/View;
+
+    const v1, 0x7f100410
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->lqx:Landroid/widget/ImageView;
+
+    .line 413
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->hDZ:Landroid/view/View;
+
+    const v1, 0x7f100411
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->lqy:Landroid/widget/TextView;
+
+    .line 414
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->hDZ:Landroid/view/View;
+
+    const v1, 0x7f100412
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/j;->lqz:Landroid/widget/TextView;
+
+    .line 422
     return-object p0
 .end method

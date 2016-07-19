@@ -1,13 +1,13 @@
 package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class WXTextObject
   implements WXMediaMessage.b
 {
   private static final int LENGTH_LIMIT = 10240;
-  private static final String TAG = "!44@/B4Tb64lLpKTQHlmUvaQNfesKh/fmod7zG0Z1fkch64=";
+  private static final String TAG = "MicroMsg.SDK.WXTextObject";
   public String text;
   
   public WXTextObject()
@@ -24,7 +24,7 @@ public class WXTextObject
   {
     if ((text == null) || (text.length() == 0) || (text.length() > 10240))
     {
-      u.e("!44@/B4Tb64lLpKTQHlmUvaQNfesKh/fmod7zG0Z1fkch64=", "checkArgs fail, text is invalid");
+      v.e("MicroMsg.SDK.WXTextObject", "checkArgs fail, text is invalid");
       return false;
     }
     return true;

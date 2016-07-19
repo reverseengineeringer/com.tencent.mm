@@ -1,24 +1,24 @@
 package com.tencent.mm.modelcdntran;
 
 import com.tencent.mm.model.z.a;
-import com.tencent.mm.model.z.e;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.model.z.f;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class CdnTransportEngine$1
-  implements af.a
+  implements ah.a
 {
   CdnTransportEngine$1(CdnTransportEngine paramCdnTransportEngine) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    if ((CdnTransportEngine.a(bKv) == 0) && (CdnTransportEngine.b(bKv) == 0)) {
+    if ((CdnTransportEngine.a(bDP) == 0) && (CdnTransportEngine.b(bDP) == 0)) {
       return false;
     }
-    u.i("!44@/B4Tb64lLpIOAjTgD1JTqYyjqbRxHUgGUCewsAH7DnA=", "CdnDataFlowStat id:%s send:%d recv:%d", new Object[] { CdnTransportEngine.c(bKv), Integer.valueOf(CdnTransportEngine.a(bKv)), Integer.valueOf(CdnTransportEngine.b(bKv)) });
-    z.a.bAt.K(CdnTransportEngine.b(bKv), CdnTransportEngine.a(bKv));
-    CdnTransportEngine.d(bKv);
-    CdnTransportEngine.e(bKv);
+    v.i("MicroMsg.CdnTransportEngine", "CdnDataFlowStat id:%s send:%d recv:%d", new Object[] { CdnTransportEngine.c(bDP), Integer.valueOf(CdnTransportEngine.a(bDP)), Integer.valueOf(CdnTransportEngine.b(bDP)) });
+    z.a.btw.M(CdnTransportEngine.b(bDP), CdnTransportEngine.a(bDP));
+    CdnTransportEngine.d(bDP);
+    CdnTransportEngine.e(bDP);
     return true;
   }
 }

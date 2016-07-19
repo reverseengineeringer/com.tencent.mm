@@ -12,20 +12,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.modelfriend.b;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.platformtools.s;
 import com.tencent.mm.pluginsdk.i.a;
 import com.tencent.mm.pluginsdk.i.e;
 import com.tencent.mm.pluginsdk.ui.d.e;
 import com.tencent.mm.pluginsdk.ui.tools.h.a;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.an;
-import com.tencent.mm.storage.ao;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ap;
+import com.tencent.mm.storage.aq;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.MMTagPanel;
 import com.tencent.mm.ui.tools.i;
@@ -36,91 +36,91 @@ public class ModRemarkNameUI
   extends MMActivity
   implements d
 {
-  private String aEV;
-  private k cId;
-  private String esJ = "";
-  private an fKG;
-  private int fvF = 9;
-  private ArrayList fvP;
-  private String fww;
-  private TextView kkr = null;
-  private TextView ljA;
-  private View ljB;
-  private Button ljC;
-  private View ljD;
-  private MMTagPanel ljL;
-  private TextView ljM;
-  private EditText llH;
-  private int llI;
-  private String llJ = "";
-  private TextView llK = null;
-  private EditText llL = null;
-  private String llM = "";
-  private boolean llN = false;
-  private a llO = new a((byte)0);
-  private View llP;
+  private String ara;
+  private k cFh;
+  private String eyc = "";
+  private int fEK = 9;
+  private ArrayList<String> fEU;
+  private String fFB;
+  private ap fTI;
+  private TextView lJL;
+  private View lJM;
+  private Button lJN;
+  private View lJO;
+  private MMTagPanel lJW;
+  private TextView lJX;
+  private EditText lLU;
+  private int lLV;
+  private String lLW = "";
+  private TextView lLX = null;
+  private EditText lLY = null;
+  private TextView lLZ = null;
+  private String lMa = "";
+  private boolean lMb = false;
+  private a lMc = new a((byte)0);
+  private View lMd;
   
-  private void hY(boolean paramBoolean)
+  private void iB(boolean paramBoolean)
   {
-    if ((paramBoolean) && (cId != null)) {
-      com.tencent.mm.model.ah.tD().rq().L(cId);
+    if ((paramBoolean) && (cFh != null)) {
+      com.tencent.mm.model.ah.tE().rr().L(cFh);
     }
   }
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    aEV = getIntent().getStringExtra("Contact_User");
-    if ((aEV != null) && (aEV.length() > 0))
+    ara = getIntent().getStringExtra("Contact_User");
+    if ((ara != null) && (ara.length() > 0))
     {
-      cId = com.tencent.mm.model.ah.tD().rq().Ep(aEV);
-      fKG = com.tencent.mm.model.ah.tD().rr().FH(aEV);
-      if ((cId == null) || (t.kz(cId.field_username)))
+      cFh = com.tencent.mm.model.ah.tE().rr().GD(ara);
+      fTI = com.tencent.mm.model.ah.tE().rs().HY(ara);
+      if ((cFh == null) || (s.kf(cFh.field_username)))
       {
-        cId = new k(aEV);
-        cId.bH(t.ky(llJ));
-        cId.bF(t.ky(esJ));
+        cFh = new k(ara);
+        cFh.bC(s.li(lLW));
+        cFh.bA(s.li(eyc));
       }
     }
-    llH = ((EditText)findViewById(2131165320));
+    lLU = ((EditText)findViewById(2131756363));
     final Object localObject = new MMEditText.b()
     {
-      public final void aqD()
+      public final void atE()
       {
         if (ModRemarkNameUI.a(ModRemarkNameUI.this).getText().toString().trim().length() > 0) {
-          bC(true);
+          bp(true);
         }
         while (ModRemarkNameUI.b(ModRemarkNameUI.this) == 0) {
           return;
         }
-        bC(false);
+        bp(false);
       }
     };
     h.a locala;
-    if ((llI == 1) || (llI == 2) || (llI == 3))
+    if ((lLV == 1) || (lLV == 2) || (lLV == 3))
     {
       locala = new h.a();
-      iSM = ((MMEditText.b)localObject);
-      llH.addTextChangedListener(locala);
-      com.tencent.mm.ui.tools.a.c.a(llH).rZ(100).a(null);
-      if ((cId != null) && (llI != 3))
+      jpV = ((MMEditText.b)localObject);
+      lLU.addTextChangedListener(locala);
+      com.tencent.mm.ui.tools.a.c.a(lLU).ud(100).a(null);
+      if ((cFh != null) && (lLV != 3))
       {
-        if (llI != 4) {
+        if (lLV != 4) {
           break label676;
         }
-        llH.setText(e.a(this, t.ky(llJ), llH.getTextSize()));
+        lLU.setText(e.a(this, s.li(lLW), lLU.getTextSize()));
         label260:
-        llH.setSelection(llH.getText().length());
+        lLU.setSelection(lLU.getText().length());
       }
-      if (llI != 0) {
+      if (lLV != 0) {
         break label1009;
       }
-      qb(2131428412);
-      localObject = com.tencent.mm.modelfriend.ah.zq().hq(cId.field_username);
-      if ((localObject != null) && (!t.kz(((b)localObject).yj())) && (!((b)localObject).yj().equals(llH.getText()))) {
+      rR(2131231991);
+      localObject = com.tencent.mm.modelfriend.ah.zD().hI(cFh.field_username);
+      if ((localObject != null) && (!s.kf(((b)localObject).yv())) && (!((b)localObject).yv().equals(lLU.getText()))) {
         break label918;
       }
       label338:
-      a(0, getString(2131430889), new MenuItem.OnMenuItemClickListener()
+      a(0, getString(2131231007), new MenuItem.OnMenuItemClickListener()
       {
         public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
         {
@@ -141,10 +141,10 @@ public class ModRemarkNameUI
           }
         }
       });
-      if ((llH == null) || (llH.getText().toString().trim().length() <= 0)) {
+      if ((lLU == null) || (lLU.getText().toString().trim().length() <= 0)) {
         break label1185;
       }
-      bC(true);
+      bp(true);
     }
     for (;;)
     {
@@ -156,166 +156,152 @@ public class ModRemarkNameUI
           return true;
         }
       });
-      llK = ((TextView)findViewById(2131165332));
-      llL = ((EditText)findViewById(2131165330));
-      kkr = ((TextView)findViewById(2131165331));
-      ljD = findViewById(2131165329);
-      com.tencent.mm.ui.tools.a.c.a(llL).rZ(800).a(null);
-      kkr.setText(i.ai(800, llL.getEditableText().toString()));
-      llL.append(e.a(this, t.ky(llM), llL.getTextSize()));
-      llK.append(e.a(this, t.ky(llM), llK.getTextSize()));
-      if (fKG != null)
+      lLX = ((TextView)findViewById(2131756375));
+      lLY = ((EditText)findViewById(2131756373));
+      lLZ = ((TextView)findViewById(2131756374));
+      lJO = findViewById(2131756372);
+      com.tencent.mm.ui.tools.a.c.a(lLY).ud(800).a(null);
+      lLZ.setText(i.as(800, lLY.getEditableText().toString()));
+      lLY.append(e.a(this, s.li(lMa), lLY.getTextSize()));
+      lLX.append(e.a(this, s.li(lMa), lLX.getTextSize()));
+      if (fTI != null)
       {
-        llL.setText(e.a(this, t.ky(fKG.field_conDescription), llL.getTextSize()));
-        llK.setText(e.a(this, t.ky(fKG.field_conDescription), llL.getTextSize()));
+        lLY.setText(e.a(this, s.li(fTI.field_conDescription), lLY.getTextSize()));
+        lLX.setText(e.a(this, s.li(fTI.field_conDescription), lLY.getTextSize()));
       }
-      llL.addTextChangedListener(new b((byte)0));
-      llK.setOnClickListener(new View.OnClickListener()
+      lLY.addTextChangedListener(new b((byte)0));
+      lLX.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
           ModRemarkNameUI.h(ModRemarkNameUI.this).setVisibility(0);
           ModRemarkNameUI.i(ModRemarkNameUI.this).setVisibility(8);
           ModRemarkNameUI.j(ModRemarkNameUI.this).requestFocus();
-          apz();
+          asv();
         }
       });
       return;
       locala = new h.a();
-      iSM = ((MMEditText.b)localObject);
-      llH.addTextChangedListener(locala);
+      jpV = ((MMEditText.b)localObject);
+      lLU.addTextChangedListener(locala);
       break;
       label676:
-      if (!t.kz(cId.field_conRemark))
+      if (!s.kf(cFh.field_conRemark))
       {
-        llH.setText(e.a(this, t.ky(cId.field_conRemark), llH.getTextSize()));
+        lLU.setText(e.a(this, s.li(cFh.field_conRemark), lLU.getTextSize()));
         break label260;
       }
-      if (!t.kz(esJ))
+      if (!s.kf(eyc))
       {
-        llH.setText(e.a(this, t.ky(esJ), llH.getTextSize()));
+        lLU.setText(e.a(this, s.li(eyc), lLU.getTextSize()));
         break label260;
       }
-      if (!t.kz(cId.field_nickname))
+      if (!s.kf(cFh.field_nickname))
       {
-        llH.setText(e.a(this, t.ky(cId.field_nickname), llH.getTextSize()));
+        lLU.setText(e.a(this, s.li(cFh.field_nickname), lLU.getTextSize()));
         break label260;
       }
-      if (!t.kz(llJ))
+      if (!s.kf(lLW))
       {
-        llH.setText(e.a(this, t.ky(llJ), llH.getTextSize()));
+        lLU.setText(e.a(this, s.li(lLW), lLU.getTextSize()));
         break label260;
       }
-      localObject = cId.field_nickname;
-      if ((t.kz((String)localObject)) || (((String)localObject).length() > 50)) {}
+      localObject = cFh.field_nickname;
+      if ((s.kf((String)localObject)) || (((String)localObject).length() > 50)) {}
       for (int i = 0;; i = 1)
       {
         if (i == 0) {
           break label906;
         }
-        llH.setText(e.a(this, t.ky(cId.qz()), llH.getTextSize()));
+        lLU.setText(e.a(this, s.li(cFh.pc()), lLU.getTextSize()));
         break;
       }
       label906:
-      llH.setText("");
+      lLU.setText("");
       break label260;
       label918:
-      ljA = ((TextView)findViewById(2131165323));
-      ljB = findViewById(2131165322);
-      ljC = ((Button)findViewById(2131165324));
-      ljB.setVisibility(0);
-      ljA.setText(getString(2131428407, new Object[] { ((b)localObject).yj() }));
-      ljC.setOnClickListener(new View.OnClickListener()
+      lJL = ((TextView)findViewById(2131756366));
+      lJM = findViewById(2131756365);
+      lJN = ((Button)findViewById(2131756367));
+      lJM.setVisibility(0);
+      lJL.setText(getString(2131232062, new Object[] { ((b)localObject).yv() }));
+      lJN.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
-          ModRemarkNameUI.a(ModRemarkNameUI.this).setText(localObject.yj());
+          ModRemarkNameUI.a(ModRemarkNameUI.this).setText(localObject.yv());
           ModRemarkNameUI.a(ModRemarkNameUI.this).setSelection(ModRemarkNameUI.a(ModRemarkNameUI.this).getText().length());
           ModRemarkNameUI.k(ModRemarkNameUI.this).setVisibility(8);
         }
       });
       break label338;
       label1009:
-      if (llI == 1)
+      if (lLV == 1)
       {
-        qb(2131432679);
-        llH.setHint("");
-        localObject = (TextView)findViewById(2131165319);
+        rR(2131234605);
+        lLU.setHint("");
+        localObject = (TextView)findViewById(2131756362);
         ((TextView)localObject).setText("");
         ((TextView)localObject).setVisibility(0);
         break label338;
       }
-      if (llI == 2)
+      if (lLV == 2)
       {
-        qb(2131432683);
-        llH.setHint("");
+        rR(2131234639);
+        lLU.setHint("");
         break label338;
       }
-      if (llI == 3)
+      if (lLV == 3)
       {
-        qb(2131433141);
-        llH.setHint("");
-        localObject = (TextView)findViewById(2131165319);
-        ((TextView)localObject).setText(2131433148);
+        rR(2131235564);
+        lLU.setHint("");
+        localObject = (TextView)findViewById(2131756362);
+        ((TextView)localObject).setText(2131234909);
         ((TextView)localObject).setVisibility(0);
         break label338;
       }
-      if (llI != 4) {
+      if (lLV != 4) {
         break label338;
       }
-      qb(2131432676);
-      llH.setHint("");
-      localObject = (TextView)findViewById(2131165319);
-      ((TextView)localObject).setText(2131432699);
+      rR(2131234602);
+      lLU.setHint("");
+      localObject = (TextView)findViewById(2131756362);
+      ((TextView)localObject).setText(2131234649);
       ((TextView)localObject).setVisibility(0);
       break label338;
       label1185:
-      bC(false);
-    }
-  }
-  
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
-  {
-    u.i("!32@9DU/RFsdGl+RDQXDdsDwXSf1gIUFYGLx", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
-    if (paramj.getType() == 44)
-    {
-      if ((paramInt1 != 0) && (paramInt2 < 0))
-      {
-        u.d("!32@9DU/RFsdGl+RDQXDdsDwXSf1gIUFYGLx", "addRoomCard Error!");
-        Toast.makeText(this, getString(2131432686, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
-      }
-      finish();
+      bp(false);
     }
   }
   
   protected final int getLayoutId()
   {
-    return 2131361893;
+    return 2130904080;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    fvF = getIntent().getIntExtra("Contact_Scene", 9);
-    llI = getIntent().getIntExtra("Contact_mode_name_type", 0);
-    llJ = t.ky(getIntent().getStringExtra("Contact_Nick"));
-    esJ = t.ky(getIntent().getStringExtra("Contact_RemarkName"));
-    llN = getIntent().getBooleanExtra("Contact_ModStrangerRemark", false);
-    Gb();
-    llP = findViewById(2131165571);
-    if (llI != 0) {
-      llP.setVisibility(8);
+    fEK = getIntent().getIntExtra("Contact_Scene", 9);
+    lLV = getIntent().getIntExtra("Contact_mode_name_type", 0);
+    lLW = s.li(getIntent().getStringExtra("Contact_Nick"));
+    eyc = s.li(getIntent().getStringExtra("Contact_RemarkName"));
+    lMb = getIntent().getBooleanExtra("Contact_ModStrangerRemark", false);
+    Gy();
+    lMd = findViewById(2131758174);
+    if (lLV != 0) {
+      lMd.setVisibility(8);
     }
     for (;;)
     {
-      ljL = ((MMTagPanel)findViewById(2131165327));
-      ljL.setPanelClickable(false);
-      ljM = ((TextView)findViewById(2131165326));
-      ljM.setText(2131428452);
-      ljL.setOnClickListener(llO);
-      ljM.setOnClickListener(llO);
+      lJW = ((MMTagPanel)findViewById(2131756370));
+      lJW.fAD = false;
+      lJX = ((TextView)findViewById(2131756369));
+      lJX.setText(2131233861);
+      lJW.setOnClickListener(lMc);
+      lJX.setOnClickListener(lMc);
       return;
-      llP.setVisibility(0);
+      lMd.setVisibility(0);
     }
   }
   
@@ -327,23 +313,37 @@ public class ModRemarkNameUI
   protected void onResume()
   {
     super.onResume();
-    fKG = com.tencent.mm.model.ah.tD().rr().FH(aEV);
-    if (fKG != null)
+    fTI = com.tencent.mm.model.ah.tE().rs().HY(ara);
+    if (fTI != null)
     {
-      fww = fKG.field_contactLabels;
-      fvP = ((ArrayList)i.a.aOW().qi(fww));
+      fFB = fTI.field_contactLabels;
+      fEU = ((ArrayList)i.a.aTy().ry(fFB));
     }
-    if (!t.kz(fww))
+    if (!s.kf(fFB))
     {
-      ljL.setVisibility(0);
-      ljM.setVisibility(8);
-      if ((fvP != null) && (!fvP.isEmpty())) {
-        ljL.a(fvP, fvP);
+      lJW.setVisibility(0);
+      lJX.setVisibility(8);
+      if ((fEU != null) && (!fEU.isEmpty())) {
+        lJW.a(fEU, fEU);
       }
       return;
     }
-    ljL.setVisibility(8);
-    ljM.setVisibility(0);
+    lJW.setVisibility(8);
+    lJX.setVisibility(0);
+  }
+  
+  public void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
+  {
+    v.i("MiroMsg.ModRemarkName", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
+    if (paramj.getType() == 44)
+    {
+      if ((paramInt1 != 0) && (paramInt2 < 0))
+      {
+        v.d("MiroMsg.ModRemarkName", "addRoomCard Error!");
+        Toast.makeText(this, getString(2131234640, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
+      }
+      finish();
+    }
   }
   
   private final class a
@@ -360,18 +360,18 @@ public class ModRemarkNameUI
   private final class b
     implements TextWatcher
   {
-    private int gjm = 800;
+    private int gtH = 800;
     
     private b() {}
     
     public final void afterTextChanged(Editable paramEditable)
     {
-      gjm = i.ai(800, paramEditable.toString());
-      if (gjm < 0) {
-        gjm = 0;
+      gtH = i.as(800, paramEditable.toString());
+      if (gtH < 0) {
+        gtH = 0;
       }
       if (ModRemarkNameUI.l(ModRemarkNameUI.this) != null) {
-        ModRemarkNameUI.l(ModRemarkNameUI.this).setText(gjm);
+        ModRemarkNameUI.l(ModRemarkNameUI.this).setText(gtH);
       }
       ModRemarkNameUI.m(ModRemarkNameUI.this);
     }

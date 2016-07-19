@@ -11,7 +11,7 @@ public final class i$1
   {
     try
     {
-      new StringBuilder("receive data:").append(ajZ);
+      new StringBuilder("receive data:").append(VS);
       int k = 100;
       int j = 3;
       int m = j;
@@ -19,17 +19,17 @@ public final class i$1
       Object localObject1;
       Object localObject2;
       long l;
-      if (s.as(ajZ))
+      if (s.aw(VS))
       {
-        localObject1 = new JSONObject(ajZ);
+        localObject1 = new JSONObject(VS);
         if (!((JSONObject)localObject1).isNull("mid"))
         {
           localObject2 = ((JSONObject)localObject1).optString("mid");
-          if ((s.at((String)localObject2)) && (!s.at(ajY.kc())))
+          if ((s.ax((String)localObject2)) && (!s.ax(VR.iD())))
           {
-            aajY).ajR = ((String)localObject2);
-            aajY).ajQ = s.V(i.ke());
-            aajY).ajP = s.U(i.ke());
+            aVR).VK = ((String)localObject2);
+            aVR).VJ = s.R(i.iF());
+            aVR).VI = s.Q(i.iF());
             if (((JSONObject)localObject1).isNull("ts")) {
               break label337;
             }
@@ -39,30 +39,30 @@ public final class i$1
         }
       }
       label337:
-      for (aajY).ajS = l;; aajY).ajS = System.currentTimeMillis())
+      for (aVR).VL = l;; aVR).VL = System.currentTimeMillis())
       {
-        new StringBuilder("new mid midEntity:").append(i.a(ajY).toString());
-        r.S(i.ke()).b(i.a(ajY));
+        new StringBuilder("new mid midEntity:").append(i.a(VR).toString());
+        r.O(i.iF()).b(i.a(VR));
         i = k;
-        if (!((JSONObject)localObject1).isNull(a.ajy)) {
-          i = ((JSONObject)localObject1).getInt(a.ajy);
+        if (!((JSONObject)localObject1).isNull(a.Vq)) {
+          i = ((JSONObject)localObject1).getInt(a.Vq);
         }
-        if (!((JSONObject)localObject1).isNull(a.ajz)) {
-          j = ((JSONObject)localObject1).getInt(a.ajz);
+        if (!((JSONObject)localObject1).isNull(a.Vr)) {
+          j = ((JSONObject)localObject1).getInt(a.Vr);
         }
-        j.aka = ((JSONObject)localObject1).optInt("disable", 0);
-        j.akb = ((JSONObject)localObject1).optInt("limit", 0);
+        j.VT = ((JSONObject)localObject1).optInt("disable", 0);
+        j.VU = ((JSONObject)localObject1).optInt("limit", 0);
         m = j;
-        localObject1 = r.S(i.ke());
-        localObject2 = ((r)localObject1).ki();
+        localObject1 = r.O(i.iF());
+        localObject2 = ((r)localObject1).iJ();
         if (i > 0) {
-          ajv = i;
+          Vm = i;
         }
         if (m > 0) {
-          ajw = m;
+          Vn = m;
         }
-        ajt = System.currentTimeMillis();
-        aju = 0;
+        Vk = System.currentTimeMillis();
+        Vl = 0;
         ((r)localObject1).b((a)localObject2);
         return;
       }

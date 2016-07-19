@@ -4,14 +4,14 @@
 
 
 # direct methods
-.method public static cR(Landroid/content/Context;)Z
+.method public static cP(Landroid/content/Context;)Z
     .locals 4
 
     .prologue
     .line 63
     const-string/jumbo v0, "network_doctor_shown"
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/z;->CQ(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->Fd(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -26,9 +26,9 @@
 
     .line 67
     :cond_0
-    const v0, 0x7f0b0ea9
+    const v0, 0x7f080ce0
 
-    const v1, 0x7f0b0ddd
+    const v1, 0x7f080134
 
     new-instance v2, Lcom/tencent/mm/pluginsdk/ui/i$2;
 
@@ -44,14 +44,14 @@
     goto :goto_0
 .end method
 
-.method public static s(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
+.method public static t(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 7
 
     .prologue
     .line 22
     const-string/jumbo v0, "wap_reporter_shown"
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/z;->CQ(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->Fd(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -66,13 +66,13 @@
 
     .line 26
     :cond_0
-    const v1, 0x7f0b0ea8
+    const v1, 0x7f080edc
 
-    const v2, 0x7f0b0ddd
+    const v2, 0x7f080134
 
-    const v3, 0x7f0b0dfb
+    const v3, 0x7f08011b
 
-    const v4, 0x7f0b0de4
+    const v4, 0x7f080099
 
     new-instance v5, Lcom/tencent/mm/pluginsdk/ui/i$1;
 

@@ -2,26 +2,26 @@ package com.tencent.mm.ui.transmit;
 
 import android.view.View;
 import android.view.Window;
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah.a;
 
 final class SendAppMessageWrapperUI$1
-  implements af.a
+  implements ah.a
 {
   SendAppMessageWrapperUI$1(SendAppMessageWrapperUI paramSendAppMessageWrapperUI) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
     boolean bool = false;
-    if ((lBv.getWindow() == null) || (lBv.getWindow().getDecorView() == null) || (lBv.getWindow().getDecorView().getWindowToken() == null))
+    if ((mcn.getWindow() == null) || (mcn.getWindow().getDecorView() == null) || (mcn.getWindow().getDecorView().getWindowToken() == null))
     {
-      if (SendAppMessageWrapperUI.a(lBv) < 10)
+      if (SendAppMessageWrapperUI.a(mcn) < 10)
       {
-        SendAppMessageWrapperUI.b(lBv);
+        SendAppMessageWrapperUI.b(mcn);
         bool = true;
       }
       return bool;
     }
-    SendAppMessageWrapperUI.c(lBv);
+    SendAppMessageWrapperUI.c(mcn);
     return false;
   }
 }

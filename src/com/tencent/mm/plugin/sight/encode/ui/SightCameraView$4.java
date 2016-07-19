@@ -9,7 +9,7 @@ final class SightCameraView$4
   
   public final void run()
   {
-    gEp.gEd.m(gEq);
+    gKQ.gKD.m(gKR);
   }
   
   public final String toString()

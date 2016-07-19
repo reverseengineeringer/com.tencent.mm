@@ -3,7 +3,7 @@ package com.tencent.mm.ui.contact;
 import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.platformtools.s;
 
 final class SelectContactUI$9
   implements View.OnClickListener
@@ -12,24 +12,24 @@ final class SelectContactUI$9
   
   public final void onClick(View paramView)
   {
-    paramView = new Intent(lmm, GroupCardSelectUI.class);
+    paramView = new Intent(lMB, GroupCardSelectUI.class);
     paramView.putExtra("group_select_type", true);
-    boolean bool = r.aW(SelectContactUI.a(lmm), 16384);
+    boolean bool = r.be(SelectContactUI.a(lMB), 16384);
     paramView.putExtra("group_select_need_result", bool);
     if (bool)
     {
-      if (SelectContactUI.b(lmm) == 14)
+      if (SelectContactUI.b(lMB) == 14)
       {
         paramView.putExtra("group_multi_select", true);
-        paramView.putExtra("already_select_contact", t.b(SelectContactUI.a(lmm, true), ","));
-        paramView.putExtra("max_limit_num", lmm.getIntent().getIntExtra("max_limit_num", 9));
-        lmm.startActivityForResult(paramView, 4);
+        paramView.putExtra("already_select_contact", s.b(SelectContactUI.a(lMB, true), ","));
+        paramView.putExtra("max_limit_num", lMB.getIntent().getIntExtra("max_limit_num", 9));
+        lMB.startActivityForResult(paramView, 4);
         return;
       }
-      lmm.startActivityForResult(paramView, 0);
+      lMB.startActivityForResult(paramView, 0);
       return;
     }
-    lmm.startActivity(paramView);
+    lMB.startActivity(paramView);
   }
 }
 

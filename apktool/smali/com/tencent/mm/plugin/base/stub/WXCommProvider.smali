@@ -18,21 +18,21 @@
 # static fields
 .field public static final PREF_NAME:Ljava/lang/String;
 
-.field private static final cBf:[Ljava/lang/String;
+.field private static final cya:[Ljava/lang/String;
 
-.field private static final cBh:Landroid/content/UriMatcher;
+.field private static final cyc:Landroid/content/UriMatcher;
 
-.field protected static cBi:Z
+.field protected static cyd:Z
 
 .field public static lock:Ljava/lang/Object;
 
 
 # instance fields
-.field private bxg:Landroid/content/SharedPreferences;
+.field private bpi:Landroid/content/SharedPreferences;
 
-.field protected cBg:Landroid/database/MatrixCursor;
+.field protected cyb:Landroid/database/MatrixCursor;
 
-.field private handler:Lcom/tencent/mm/sdk/platformtools/aa;
+.field private handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
 
 # direct methods
@@ -44,12 +44,12 @@
 
     const/4 v4, 0x0
 
-    .line 52
+    .line 53
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getPackageName()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -69,7 +69,7 @@
 
     sput-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->PREF_NAME:Ljava/lang/String;
 
-    .line 124
+    .line 142
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
@@ -82,26 +82,26 @@
 
     aput-object v1, v0, v3
 
-    sput-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBf:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cya:[Ljava/lang/String;
 
-    .line 131
+    .line 149
     new-instance v0, Landroid/content/UriMatcher;
 
     const/4 v1, -0x1
 
     invoke-direct {v0, v1}, Landroid/content/UriMatcher;-><init>(I)V
 
-    sput-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    sput-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
-    .line 132
+    .line 150
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->lock:Ljava/lang/Object;
 
-    .line 137
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 155
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -109,8 +109,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 138
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 156
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -120,8 +120,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 139
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 157
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -131,8 +131,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 140
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 158
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -142,8 +142,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 141
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 159
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -153,8 +153,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 142
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 160
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -164,8 +164,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 143
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 161
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -175,8 +175,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 144
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 162
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -186,8 +186,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 145
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 163
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -197,8 +197,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 146
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 164
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -208,8 +208,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 147
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 165
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -219,8 +219,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 148
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 166
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -230,8 +230,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 149
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 167
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -241,8 +241,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 150
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 168
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -252,8 +252,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 151
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 169
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -263,8 +263,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 152
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 170
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -274,8 +274,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 153
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 171
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -285,8 +285,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 154
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 172
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -296,8 +296,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 155
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 173
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -307,8 +307,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 156
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 174
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -318,8 +318,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 157
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 175
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -329,8 +329,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 158
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 176
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -340,8 +340,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 159
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    .line 177
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
 
@@ -351,8 +351,74 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 528
-    sput-boolean v4, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBi:Z
+    .line 178
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
+
+    const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
+
+    const-string/jumbo v2, "getWifiList"
+
+    const/16 v3, 0x25
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
+
+    .line 179
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
+
+    const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
+
+    const-string/jumbo v2, "connectWifi"
+
+    const/16 v3, 0x26
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
+
+    .line 180
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
+
+    const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
+
+    const-string/jumbo v2, "chooseCardFromWX"
+
+    const/16 v3, 0x27
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
+
+    .line 181
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
+
+    const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
+
+    const-string/jumbo v2, "openOfflinePay"
+
+    const/16 v3, 0x2a
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
+
+    .line 182
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
+
+    const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
+
+    const-string/jumbo v2, "setWechatSportStep"
+
+    const/16 v3, 0x28
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
+
+    .line 183
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
+
+    const-string/jumbo v1, "com.tencent.mm.sdk.comm.provider"
+
+    const-string/jumbo v2, "getWechatSportConfig"
+
+    const/16 v3, 0x29
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
+
+    .line 570
+    sput-boolean v4, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyd:Z
 
     return-void
 .end method
@@ -361,10 +427,10 @@
     .locals 2
 
     .prologue
-    .line 49
+    .line 50
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
-    .line 126
+    .line 144
     new-instance v0, Landroid/database/MatrixCursor;
 
     const/4 v1, 0x0
@@ -373,12 +439,12 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBg:Landroid/database/MatrixCursor;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyb:Landroid/database/MatrixCursor;
 
     return-void
 .end method
 
-.method private JA()[Ljava/lang/String;
+.method private Kj()[Ljava/lang/String;
     .locals 10
 
     .prologue
@@ -386,13 +452,13 @@
 
     const/4 v2, 0x0
 
-    .line 508
+    .line 550
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 510
+    .line 552
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -409,8 +475,8 @@
 
     move-result-object v0
 
-    .line 511
-    const-string/jumbo v3, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    .line 553
+    const-string/jumbo v3, "MicroMsg.WXCommProvider"
 
     const-string/jumbo v4, "getCallingPackages, callingUid = %d, packages size = %d"
 
@@ -439,35 +505,35 @@
 
     aput-object v1, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 513
+    .line 555
     if-nez v0, :cond_2
 
-    .line 514
-    const-string/jumbo v0, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    .line 556
+    const-string/jumbo v0, "MicroMsg.WXCommProvider"
 
     const-string/jumbo v1, "getCallingPackages fail, packages is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 515
+    .line 557
     const/4 v0, 0x0
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 524
+    .line 566
     :cond_0
     :goto_1
     return-object v0
 
-    .line 511
+    .line 553
     :cond_1
     array-length v1, v0
 
     goto :goto_0
 
-    .line 518
+    .line 560
     :cond_2
     array-length v3, v0
 
@@ -478,8 +544,8 @@
 
     aget-object v4, v0, v1
 
-    .line 519
-    const-string/jumbo v5, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    .line 561
+    const-string/jumbo v5, "MicroMsg.WXCommProvider"
 
     const-string/jumbo v6, "getCallingPackages = %s"
 
@@ -491,21 +557,21 @@
 
     aput-object v4, v7, v8
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 518
+    .line 560
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 522
+    .line 564
     :catch_0
     move-exception v0
 
-    .line 523
-    const-string/jumbo v1, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    .line 565
+    const-string/jumbo v1, "MicroMsg.WXCommProvider"
 
     const-string/jumbo v3, "getCallingPackages, ex = %s"
 
@@ -517,34 +583,34 @@
 
     aput-object v0, v4, v2
 
-    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 524
+    .line 566
     new-array v0, v2, [Ljava/lang/String;
 
     goto :goto_1
 .end method
 
-.method private JB()Z
+.method private Kk()Z
     .locals 4
 
     .prologue
     const/4 v1, 0x0
 
-    .line 533
+    .line 575
     :try_start_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    const-string/jumbo v0, "MicroMsg.WXCommProvider"
 
     const-string/jumbo v2, "checkIsLogin()"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 534
-    sget-boolean v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBi:Z
+    .line 576
+    sget-boolean v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyd:Z
 
     if-nez v0, :cond_0
 
-    .line 536
+    .line 578
     new-instance v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$5;
 
     const/4 v2, 0x0
@@ -555,9 +621,9 @@
 
     invoke-direct {v0, p0, v2}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$5;-><init>(Lcom/tencent/mm/plugin/base/stub/WXCommProvider;Ljava/lang/Boolean;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$5;->b(Lcom/tencent/mm/sdk/platformtools/aa;)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$5;->b(Lcom/tencent/mm/sdk/platformtools/ac;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -567,48 +633,55 @@
 
     move-result v0
 
-    .line 559
+    .line 603
     if-nez v0, :cond_0
 
-    .line 560
+    .line 604
+    const-string/jumbo v0, "MicroMsg.WXCommProvider"
+
+    const-string/jumbo v2, "checkIsLogin !syncTaskRet"
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 605
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBi:Z
+    sput-boolean v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyd:Z
 
     move v0, v1
 
-    .line 575
+    .line 620
     :goto_0
     return v0
 
-    .line 565
+    .line 610
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tI()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tJ()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tM()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tN()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 566
+    .line 611
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBi:Z
+    sput-boolean v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyd:Z
 
-    .line 570
+    .line 615
     :goto_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    const-string/jumbo v0, "MicroMsg.WXCommProvider"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -616,7 +689,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-boolean v3, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBi:Z
+    sget-boolean v3, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyd:Z
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -626,39 +699,39 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 571
-    sget-boolean v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBi:Z
+    .line 616
+    sget-boolean v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyd:Z
 
     goto :goto_0
 
-    .line 568
+    .line 613
     :cond_1
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBi:Z
+    sput-boolean v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyd:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_1
 
-    .line 573
+    .line 618
     :catch_0
     move-exception v0
 
-    .line 574
-    const-string/jumbo v2, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    .line 619
+    const-string/jumbo v2, "MicroMsg.WXCommProvider"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
-    .line 575
+    .line 620
     goto :goto_0
 .end method
 
@@ -666,8 +739,8 @@
     .locals 1
 
     .prologue
-    .line 49
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->bxg:Landroid/content/SharedPreferences;
+    .line 50
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->bpi:Landroid/content/SharedPreferences;
 
     return-object v0
 .end method
@@ -675,274 +748,321 @@
 
 # virtual methods
 .method public final a(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/String;)Landroid/database/Cursor;
-    .locals 10
+    .locals 12
 
     .prologue
-    .line 234
+    .line 258
     packed-switch p6, :pswitch_data_0
 
-    .line 415
+    .line 457
     :pswitch_0
-    new-instance v6, Landroid/database/MatrixCursor;
+    new-instance v7, Landroid/database/MatrixCursor;
 
-    sget-object v1, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBf:[Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cya:[Ljava/lang/String;
 
-    invoke-direct {v6, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
+    invoke-direct {v7, v2}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 416
-    new-instance v1, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;
+    .line 458
+    new-instance v2, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;
 
-    move-object v2, p0
+    move-object v3, p0
 
-    move-object v3, p1
+    move-object v4, p1
 
-    move/from16 v4, p6
+    move/from16 v5, p6
 
-    move-object/from16 v5, p7
+    move-object/from16 v6, p7
 
-    invoke-direct/range {v1 .. v6}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;-><init>(Lcom/tencent/mm/plugin/base/stub/WXCommProvider;Landroid/net/Uri;I[Ljava/lang/String;Landroid/database/MatrixCursor;)V
+    invoke-direct/range {v2 .. v7}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;-><init>(Lcom/tencent/mm/plugin/base/stub/WXCommProvider;Landroid/net/Uri;I[Ljava/lang/String;Landroid/database/MatrixCursor;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->b(Lcom/tencent/mm/sdk/platformtools/aa;)Ljava/lang/Object;
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$3;->b(Lcom/tencent/mm/sdk/platformtools/ac;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Landroid/database/Cursor;
+    check-cast v2, Landroid/database/Cursor;
 
-    .line 436
-    if-nez v1, :cond_0
+    .line 478
+    if-nez v2, :cond_0
 
-    .line 437
-    invoke-virtual {v6}, Landroid/database/MatrixCursor;->close()V
+    .line 479
+    invoke-virtual {v7}, Landroid/database/MatrixCursor;->close()V
 
-    .line 440
+    .line 482
     :cond_0
     :goto_0
-    return-object v1
+    return-object v2
 
-    .line 238
+    .line 262
     :pswitch_1
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->JB()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 239
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    .line 241
-    :cond_1
-    new-instance v1, Lcom/tencent/mm/d/a/di;
-
-    invoke-direct {v1}, Lcom/tencent/mm/d/a/di;-><init>()V
-
-    .line 242
-    iget-object v2, v1, Lcom/tencent/mm/d/a/di;->awM:Lcom/tencent/mm/d/a/di$a;
-
-    move/from16 v0, p6
-
-    iput v0, v2, Lcom/tencent/mm/d/a/di$a;->awO:I
-
-    .line 243
-    iget-object v2, v1, Lcom/tencent/mm/d/a/di;->awM:Lcom/tencent/mm/d/a/di$a;
-
-    iput-object p1, v2, Lcom/tencent/mm/d/a/di$a;->uri:Landroid/net/Uri;
-
-    .line 244
-    iget-object v2, v1, Lcom/tencent/mm/d/a/di;->awM:Lcom/tencent/mm/d/a/di$a;
-
-    iput-object p4, v2, Lcom/tencent/mm/d/a/di$a;->selectionArgs:[Ljava/lang/String;
-
-    .line 245
-    iget-object v2, v1, Lcom/tencent/mm/d/a/di;->awM:Lcom/tencent/mm/d/a/di$a;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    iput-object v3, v2, Lcom/tencent/mm/d/a/di$a;->context:Landroid/content/Context;
-
-    .line 246
-    iget-object v2, v1, Lcom/tencent/mm/d/a/di;->awM:Lcom/tencent/mm/d/a/di$a;
-
-    move-object/from16 v0, p7
-
-    iput-object v0, v2, Lcom/tencent/mm/d/a/di$a;->asa:[Ljava/lang/String;
-
-    .line 247
-    sget-object v2, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->Kk()Z
 
     move-result v2
 
-    if-nez v2, :cond_2
-
-    .line 248
-    const-string/jumbo v1, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
-
-    const-string/jumbo v2, "ExtCallEvent fail"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 249
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    .line 251
-    :cond_2
-    iget-object v1, v1, Lcom/tencent/mm/d/a/di;->awN:Lcom/tencent/mm/d/a/di$b;
-
-    iget-object v1, v1, Lcom/tencent/mm/d/a/di$b;->awP:Landroid/database/Cursor;
-
-    goto :goto_0
+    if-nez v2, :cond_1
 
     .line 263
-    :pswitch_2
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    const/4 v2, 0x0
 
-    move-result-wide v1
-
-    .line 264
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->JB()Z
-
-    move-result v3
-
-    if-nez v3, :cond_4
+    goto :goto_0
 
     .line 265
-    const-string/jumbo v3, "appid"
+    :cond_1
+    new-instance v2, Lcom/tencent/mm/e/a/dk;
 
-    invoke-virtual {p1, v3}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
+    invoke-direct {v2}, Lcom/tencent/mm/e/a/dk;-><init>()V
 
     .line 266
-    const-string/jumbo v4, "1"
+    iget-object v3, v2, Lcom/tencent/mm/e/a/dk;->aiB:Lcom/tencent/mm/e/a/dk$a;
 
-    const-string/jumbo v5, "autoLogin"
+    move/from16 v0, p6
 
-    invoke-virtual {p1, v5}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string/jumbo v6, "0"
-
-    invoke-static {v5, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
+    iput v0, v3, Lcom/tencent/mm/e/a/dk$a;->aiD:I
 
     .line 267
-    if-eqz v4, :cond_3
+    iget-object v3, v2, Lcom/tencent/mm/e/a/dk;->aiB:Lcom/tencent/mm/e/a/dk$a;
+
+    iput-object p1, v3, Lcom/tencent/mm/e/a/dk$a;->uri:Landroid/net/Uri;
 
     .line 268
-    const-string/jumbo v1, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    iget-object v3, v2, Lcom/tencent/mm/e/a/dk;->aiB:Lcom/tencent/mm/e/a/dk$a;
 
-    const-string/jumbo v2, "hy: not login. try to login return code = 6"
+    move-object/from16 v0, p4
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    iput-object v0, v3, Lcom/tencent/mm/e/a/dk$a;->selectionArgs:[Ljava/lang/String;
 
     .line 269
-    new-instance v1, Lcom/tencent/mm/pluginsdk/model/app/al;
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    move-object v5, p4
-
-    move-object v6, p5
-
-    move/from16 v7, p6
-
-    move-object/from16 v8, p7
-
-    invoke-direct/range {v1 .. v8}, Lcom/tencent/mm/pluginsdk/model/app/al;-><init>(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/String;)V
-
-    sput-object v1, Lcom/tencent/mm/pluginsdk/model/app/al;->iCd:Lcom/tencent/mm/pluginsdk/model/app/al;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v1
-
-    sput-wide v1, Lcom/tencent/mm/pluginsdk/model/app/al;->iCe:J
+    iget-object v3, v2, Lcom/tencent/mm/e/a/dk;->aiB:Lcom/tencent/mm/e/a/dk$a;
 
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
 
-    move-result-object v1
+    move-result-object v4
 
-    const-string/jumbo v2, "accountsync"
-
-    const-string/jumbo v3, "com.tencent.mm.ui.account.LoginUI"
-
-    const/4 v4, 0x0
-
-    invoke-static {v1, v2, v3, v4}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    iput-object v4, v3, Lcom/tencent/mm/e/a/dk$a;->context:Landroid/content/Context;
 
     .line 270
-    new-instance v1, Landroid/database/MatrixCursor;
+    iget-object v3, v2, Lcom/tencent/mm/e/a/dk;->aiB:Lcom/tencent/mm/e/a/dk$a;
 
-    sget-object v2, Lcom/tencent/mm/plugin/ext/b/a;->dKx:[Ljava/lang/String;
+    move-object/from16 v0, p7
 
-    invoke-direct {v1, v2}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
+    iput-object v0, v3, Lcom/tencent/mm/e/a/dk$a;->adT:[Ljava/lang/String;
 
     .line 271
-    const/4 v2, 0x1
+    sget-object v3, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    new-array v2, v2, [Ljava/lang/Object;
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
-    const/4 v3, 0x0
+    move-result v3
 
-    const/16 v4, 0x9
+    if-nez v3, :cond_2
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 272
+    const-string/jumbo v2, "MicroMsg.WXCommProvider"
+
+    const-string/jumbo v3, "ExtCallEvent fail"
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 273
+    const/4 v2, 0x0
+
+    goto :goto_0
+
+    .line 275
+    :cond_2
+    iget-object v2, v2, Lcom/tencent/mm/e/a/dk;->aiC:Lcom/tencent/mm/e/a/dk$b;
+
+    iget-object v2, v2, Lcom/tencent/mm/e/a/dk$b;->aiE:Landroid/database/Cursor;
+
+    goto :goto_0
+
+    .line 292
+    :pswitch_2
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    .line 293
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->Kk()Z
+
+    move-result v4
+
+    if-nez v4, :cond_4
+
+    .line 294
+    const-string/jumbo v4, "appid"
+
+    invoke-virtual {p1, v4}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    aput-object v4, v2, v3
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/be;->li(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
+    move-result-object v4
+
+    .line 295
+    const-string/jumbo v5, "1"
+
+    const-string/jumbo v6, "autoLogin"
+
+    invoke-virtual {p1, v6}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string/jumbo v7, "0"
+
+    invoke-static {v6, v7}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    .line 296
+    if-eqz v5, :cond_3
+
+    .line 297
+    const-string/jumbo v2, "MicroMsg.WXCommProvider"
+
+    const-string/jumbo v3, "hy: not login. try to login return code = 9"
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 298
+    new-instance v2, Lcom/tencent/mm/pluginsdk/model/app/an;
+
+    move-object v3, p1
+
+    move-object v4, p2
+
+    move-object v5, p3
+
+    move-object/from16 v6, p4
+
+    move-object/from16 v7, p5
+
+    move/from16 v8, p6
+
+    move-object/from16 v9, p7
+
+    invoke-direct/range {v2 .. v9}, Lcom/tencent/mm/pluginsdk/model/app/an;-><init>(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/String;)V
+
+    sput-object v2, Lcom/tencent/mm/pluginsdk/model/app/an;->iYN:Lcom/tencent/mm/pluginsdk/model/app/an;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    sput-wide v2, Lcom/tencent/mm/pluginsdk/model/app/an;->iYO:J
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const-string/jumbo v3, "accountsync"
+
+    const-string/jumbo v4, "com.tencent.mm.ui.account.LoginUI"
+
+    const/4 v5, 0x0
+
+    invoke-static {v2, v3, v4, v5}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+
+    .line 299
+    new-instance v2, Landroid/database/MatrixCursor;
+
+    sget-object v3, Lcom/tencent/mm/protocal/a;->dLY:[Ljava/lang/String;
+
+    invoke-direct {v2, v3}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
+
+    .line 300
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    const/16 v5, 0x9
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    invoke-virtual {v2, v3}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
-    .line 274
+    .line 303
     :cond_3
-    const-string/jumbo v4, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    const-string/jumbo v5, "MicroMsg.WXCommProvider"
 
-    const-string/jumbo v5, "not login, appID = %s, apiID = %s return code =%s "
+    const-string/jumbo v6, "not login, appID = %s, apiID = %s return code =%s "
 
-    const/4 v6, 0x3
+    const/4 v7, 0x3
 
-    new-array v6, v6, [Ljava/lang/Object;
+    new-array v7, v7, [Ljava/lang/Object;
 
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
-    aput-object v3, v6, v7
+    aput-object v4, v7, v8
 
-    const/4 v7, 0x1
+    const/4 v8, 0x1
+
+    invoke-static/range {p6 .. p6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    aput-object v9, v7, v8
+
+    const/4 v8, 0x2
+
+    const/4 v9, 0x3
+
+    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    aput-object v9, v7, v8
+
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 304
+    sget-object v5, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
+
+    const/16 v6, 0x2909
+
+    const/4 v7, 0x5
+
+    new-array v7, v7, [Ljava/lang/Object;
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    aget-object v9, p7, v9
+
+    invoke-static {v9}, Lcom/tencent/mm/sdk/platformtools/be;->li(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    aput-object v9, v7, v8
+
+    const/4 v8, 0x1
+
+    aput-object v4, v7, v8
+
+    const/4 v4, 0x2
 
     invoke-static/range {p6 .. p6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
 
-    aput-object v8, v6, v7
+    aput-object v8, v7, v4
 
-    const/4 v7, 0x2
+    const/4 v4, 0x3
 
     const/4 v8, 0x1
 
@@ -950,768 +1070,817 @@
 
     move-result-object v8
 
-    aput-object v8, v6, v7
+    aput-object v8, v7, v4
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 275
-    sget-object v4, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
-
-    const/16 v5, 0x2909
-
-    const/4 v6, 0x5
-
-    new-array v6, v6, [Ljava/lang/Object;
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    aget-object v8, p7, v8
-
-    invoke-static {v8}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v8
-
-    aput-object v8, v6, v7
-
-    const/4 v7, 0x1
-
-    aput-object v3, v6, v7
-
-    const/4 v3, 0x2
-
-    invoke-static/range {p6 .. p6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    aput-object v7, v6, v3
-
-    const/4 v3, 0x3
-
-    const/4 v7, 0x1
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    aput-object v7, v6, v3
-
-    const/4 v3, 0x4
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v7
-
-    sub-long v1, v7, v1
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    aput-object v1, v6, v3
-
-    invoke-virtual {v4, v5, v6}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
-
-    .line 276
-    new-instance v1, Landroid/database/MatrixCursor;
-
-    sget-object v2, Lcom/tencent/mm/plugin/ext/b/a;->dKx:[Ljava/lang/String;
-
-    invoke-direct {v1, v2}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
-
-    .line 277
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x3
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-virtual {v1, v2}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
-
-    goto/16 :goto_0
-
-    .line 280
-    :cond_4
-    new-instance v3, Lcom/tencent/mm/d/a/dm;
-
-    invoke-direct {v3}, Lcom/tencent/mm/d/a/dm;-><init>()V
-
-    .line 281
-    iget-object v4, v3, Lcom/tencent/mm/d/a/dm;->axk:Lcom/tencent/mm/d/a/dm$a;
-
-    move/from16 v0, p6
-
-    iput v0, v4, Lcom/tencent/mm/d/a/dm$a;->awO:I
-
-    .line 282
-    iget-object v4, v3, Lcom/tencent/mm/d/a/dm;->axk:Lcom/tencent/mm/d/a/dm$a;
-
-    iput-object p1, v4, Lcom/tencent/mm/d/a/dm$a;->uri:Landroid/net/Uri;
-
-    .line 283
-    iget-object v4, v3, Lcom/tencent/mm/d/a/dm;->axk:Lcom/tencent/mm/d/a/dm$a;
-
-    iput-object p4, v4, Lcom/tencent/mm/d/a/dm$a;->selectionArgs:[Ljava/lang/String;
-
-    .line 284
-    iget-object v4, v3, Lcom/tencent/mm/d/a/dm;->axk:Lcom/tencent/mm/d/a/dm$a;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
-
-    move-result-object v5
-
-    iput-object v5, v4, Lcom/tencent/mm/d/a/dm$a;->context:Landroid/content/Context;
-
-    .line 285
-    iget-object v4, v3, Lcom/tencent/mm/d/a/dm;->axk:Lcom/tencent/mm/d/a/dm$a;
-
-    move-object/from16 v0, p7
-
-    iput-object v0, v4, Lcom/tencent/mm/d/a/dm$a;->asa:[Ljava/lang/String;
-
-    .line 286
-    sget-object v4, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    invoke-virtual {v4, v3}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_5
-
-    .line 287
-    const-string/jumbo v1, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
-
-    const-string/jumbo v2, "ExtCallEvent fail return code = 7"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 288
-    const/4 v1, 0x0
-
-    goto/16 :goto_0
-
-    .line 290
-    :cond_5
-    const-string/jumbo v4, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
-
-    const-string/jumbo v5, "[extApiCost] total cost = %s"
-
-    const/4 v6, 0x1
-
-    new-array v6, v6, [Ljava/lang/Object;
-
-    const/4 v7, 0x0
+    const/4 v4, 0x4
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v8
 
-    sub-long v1, v8, v1
+    sub-long v2, v8, v2
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v1
+    move-result-object v2
 
-    aput-object v1, v6, v7
+    aput-object v2, v7, v4
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-virtual {v5, v6, v7}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
-    .line 291
-    iget-object v1, v3, Lcom/tencent/mm/d/a/dm;->axl:Lcom/tencent/mm/d/a/dm$b;
+    .line 305
+    new-instance v2, Landroid/database/MatrixCursor;
 
-    iget-object v1, v1, Lcom/tencent/mm/d/a/dm$b;->awP:Landroid/database/Cursor;
+    sget-object v3, Lcom/tencent/mm/protocal/a;->dLY:[Ljava/lang/String;
+
+    invoke-direct {v2, v3}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
+
+    .line 306
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x3
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    invoke-virtual {v2, v3}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
-    .line 294
-    :pswitch_3
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->JB()Z
+    .line 309
+    :cond_4
+    new-instance v4, Lcom/tencent/mm/e/a/dq;
 
-    move-result v1
+    invoke-direct {v4}, Lcom/tencent/mm/e/a/dq;-><init>()V
 
-    if-nez v1, :cond_6
-
-    .line 295
-    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBg:Landroid/database/MatrixCursor;
-
-    goto/16 :goto_0
-
-    .line 297
-    :cond_6
-    new-instance v2, Lcom/tencent/mm/d/a/oe;
-
-    invoke-direct {v2}, Lcom/tencent/mm/d/a/oe;-><init>()V
-
-    .line 298
-    iget-object v1, v2, Lcom/tencent/mm/d/a/oe;->aKJ:Lcom/tencent/mm/d/a/oe$a;
+    .line 310
+    iget-object v5, v4, Lcom/tencent/mm/e/a/dq;->ajj:Lcom/tencent/mm/e/a/dq$a;
 
     move/from16 v0, p6
 
-    iput v0, v1, Lcom/tencent/mm/d/a/oe$a;->awO:I
+    iput v0, v5, Lcom/tencent/mm/e/a/dq$a;->aiD:I
 
-    .line 299
-    iget-object v1, v2, Lcom/tencent/mm/d/a/oe;->aKJ:Lcom/tencent/mm/d/a/oe$a;
+    .line 311
+    iget-object v5, v4, Lcom/tencent/mm/e/a/dq;->ajj:Lcom/tencent/mm/e/a/dq$a;
 
-    iput-object p1, v1, Lcom/tencent/mm/d/a/oe$a;->uri:Landroid/net/Uri;
+    iput-object p1, v5, Lcom/tencent/mm/e/a/dq$a;->uri:Landroid/net/Uri;
 
-    .line 300
-    iget-object v1, v2, Lcom/tencent/mm/d/a/oe;->aKJ:Lcom/tencent/mm/d/a/oe$a;
+    .line 312
+    iget-object v5, v4, Lcom/tencent/mm/e/a/dq;->ajj:Lcom/tencent/mm/e/a/dq$a;
+
+    move-object/from16 v0, p4
+
+    iput-object v0, v5, Lcom/tencent/mm/e/a/dq$a;->selectionArgs:[Ljava/lang/String;
+
+    .line 313
+    iget-object v5, v4, Lcom/tencent/mm/e/a/dq;->ajj:Lcom/tencent/mm/e/a/dq$a;
 
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v6
 
-    iput-object v3, v1, Lcom/tencent/mm/d/a/oe$a;->context:Landroid/content/Context;
+    iput-object v6, v5, Lcom/tencent/mm/e/a/dq$a;->context:Landroid/content/Context;
 
-    .line 301
-    const/4 v1, 0x0
+    .line 314
+    iget-object v5, v4, Lcom/tencent/mm/e/a/dq;->ajj:Lcom/tencent/mm/e/a/dq$a;
+
+    move-object/from16 v0, p7
+
+    iput-object v0, v5, Lcom/tencent/mm/e/a/dq$a;->adT:[Ljava/lang/String;
+
+    .line 315
+    sget-object v5, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v5, v4}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_5
+
+    .line 316
+    const-string/jumbo v2, "MicroMsg.WXCommProvider"
+
+    const-string/jumbo v3, "ExtCallEvent fail return code = 8"
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 317
+    new-instance v2, Landroid/database/MatrixCursor;
+
+    sget-object v3, Lcom/tencent/mm/protocal/a;->dLY:[Ljava/lang/String;
+
+    invoke-direct {v2, v3}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
+
+    .line 318
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    const/16 v5, 0x8
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    invoke-virtual {v2, v3}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
+
+    goto/16 :goto_0
+
+    .line 321
+    :cond_5
+    const-string/jumbo v5, "MicroMsg.WXCommProvider"
+
+    const-string/jumbo v6, "[extApiCost] total cost = %s"
+
+    const/4 v7, 0x1
+
+    new-array v7, v7, [Ljava/lang/Object;
+
+    const/4 v8, 0x0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v10
+
+    sub-long v2, v10, v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    aput-object v2, v7, v8
+
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 322
+    iget-object v2, v4, Lcom/tencent/mm/e/a/dq;->ajk:Lcom/tencent/mm/e/a/dq$b;
+
+    iget-object v2, v2, Lcom/tencent/mm/e/a/dq$b;->aiE:Landroid/database/Cursor;
+
+    goto/16 :goto_0
+
+    .line 325
+    :pswitch_3
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->Kk()Z
+
+    move-result v2
+
+    if-nez v2, :cond_6
+
+    .line 326
+    iget-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyb:Landroid/database/MatrixCursor;
+
+    goto/16 :goto_0
+
+    .line 328
+    :cond_6
+    new-instance v3, Lcom/tencent/mm/e/a/or;
+
+    invoke-direct {v3}, Lcom/tencent/mm/e/a/or;-><init>()V
+
+    .line 329
+    iget-object v2, v3, Lcom/tencent/mm/e/a/or;->axd:Lcom/tencent/mm/e/a/or$a;
+
+    move/from16 v0, p6
+
+    iput v0, v2, Lcom/tencent/mm/e/a/or$a;->aiD:I
+
+    .line 330
+    iget-object v2, v3, Lcom/tencent/mm/e/a/or;->axd:Lcom/tencent/mm/e/a/or$a;
+
+    iput-object p1, v2, Lcom/tencent/mm/e/a/or$a;->uri:Landroid/net/Uri;
+
+    .line 331
+    iget-object v2, v3, Lcom/tencent/mm/e/a/or;->axd:Lcom/tencent/mm/e/a/or$a;
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    iput-object v4, v2, Lcom/tencent/mm/e/a/or$a;->context:Landroid/content/Context;
+
+    .line 332
+    const/4 v2, 0x0
 
     :goto_1
     move-object/from16 v0, p7
 
-    array-length v3, v0
+    array-length v4, v0
 
-    if-ge v1, v3, :cond_7
+    if-ge v2, v4, :cond_7
 
-    .line 302
-    aget-object v3, p7, v1
+    .line 333
+    aget-object v4, p7, v2
 
-    if-eqz v3, :cond_8
+    if-eqz v4, :cond_8
 
-    .line 303
-    iget-object v3, v2, Lcom/tencent/mm/d/a/oe;->aKJ:Lcom/tencent/mm/d/a/oe$a;
+    .line 334
+    iget-object v4, v3, Lcom/tencent/mm/e/a/or;->axd:Lcom/tencent/mm/e/a/or$a;
 
-    aget-object v1, p7, v1
+    aget-object v2, p7, v2
 
-    iput-object v1, v3, Lcom/tencent/mm/d/a/oe$a;->aKL:Ljava/lang/String;
+    iput-object v2, v4, Lcom/tencent/mm/e/a/or$a;->axf:Ljava/lang/String;
 
-    .line 307
+    .line 338
     :cond_7
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v2, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_9
+    if-nez v2, :cond_9
 
-    .line 308
-    const-string/jumbo v1, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    .line 339
+    const-string/jumbo v2, "MicroMsg.WXCommProvider"
 
-    const-string/jumbo v2, "WatchAppIdRegEvent fail"
+    const-string/jumbo v3, "WatchAppIdRegEvent fail"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 309
-    const/4 v1, 0x0
+    .line 340
+    const/4 v2, 0x0
 
     goto/16 :goto_0
 
-    .line 301
+    .line 332
     :cond_8
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 311
+    .line 342
     :cond_9
-    iget-object v1, v2, Lcom/tencent/mm/d/a/oe;->aKK:Lcom/tencent/mm/d/a/oe$b;
+    iget-object v2, v3, Lcom/tencent/mm/e/a/or;->axe:Lcom/tencent/mm/e/a/or$b;
 
-    iget-object v1, v1, Lcom/tencent/mm/d/a/oe$b;->awP:Landroid/database/Cursor;
+    iget-object v2, v2, Lcom/tencent/mm/e/a/or$b;->aiE:Landroid/database/Cursor;
 
     goto/16 :goto_0
 
-    .line 314
+    .line 345
     :pswitch_4
-    new-instance v1, Lcom/tencent/mm/d/a/dh;
+    new-instance v2, Lcom/tencent/mm/e/a/dj;
 
-    invoke-direct {v1}, Lcom/tencent/mm/d/a/dh;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/e/a/dj;-><init>()V
 
-    .line 315
-    iget-object v2, v1, Lcom/tencent/mm/d/a/dh;->awJ:Lcom/tencent/mm/d/a/dh$a;
+    .line 346
+    iget-object v3, v2, Lcom/tencent/mm/e/a/dj;->aiy:Lcom/tencent/mm/e/a/dj$a;
 
-    const/16 v3, 0x15
+    const/16 v4, 0x15
 
-    iput v3, v2, Lcom/tencent/mm/d/a/dh$a;->op:I
+    iput v4, v3, Lcom/tencent/mm/e/a/dj$a;->op:I
 
-    .line 316
-    iget-object v2, v1, Lcom/tencent/mm/d/a/dh;->awJ:Lcom/tencent/mm/d/a/dh$a;
+    .line 347
+    iget-object v3, v2, Lcom/tencent/mm/e/a/dj;->aiy:Lcom/tencent/mm/e/a/dj$a;
 
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
-    iput v3, v2, Lcom/tencent/mm/d/a/dh$a;->awK:I
+    iput v4, v3, Lcom/tencent/mm/e/a/dj$a;->aiz:I
 
-    .line 317
-    iget-object v2, v1, Lcom/tencent/mm/d/a/dh;->awJ:Lcom/tencent/mm/d/a/dh$a;
+    .line 348
+    iget-object v3, v2, Lcom/tencent/mm/e/a/dj;->aiy:Lcom/tencent/mm/e/a/dj$a;
 
-    iput-object p4, v2, Lcom/tencent/mm/d/a/dh$a;->selectionArgs:[Ljava/lang/String;
+    move-object/from16 v0, p4
 
-    .line 318
-    iget-object v2, v1, Lcom/tencent/mm/d/a/dh;->awJ:Lcom/tencent/mm/d/a/dh$a;
+    iput-object v0, v3, Lcom/tencent/mm/e/a/dj$a;->selectionArgs:[Ljava/lang/String;
+
+    .line 349
+    iget-object v3, v2, Lcom/tencent/mm/e/a/dj;->aiy:Lcom/tencent/mm/e/a/dj$a;
 
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v4
 
-    iput-object v3, v2, Lcom/tencent/mm/d/a/dh$a;->context:Landroid/content/Context;
+    iput-object v4, v3, Lcom/tencent/mm/e/a/dj$a;->context:Landroid/content/Context;
 
-    .line 319
-    iget-object v2, v1, Lcom/tencent/mm/d/a/dh;->awJ:Lcom/tencent/mm/d/a/dh$a;
+    .line 350
+    iget-object v3, v2, Lcom/tencent/mm/e/a/dj;->aiy:Lcom/tencent/mm/e/a/dj$a;
 
     move-object/from16 v0, p7
 
-    iput-object v0, v2, Lcom/tencent/mm/d/a/dh$a;->asa:[Ljava/lang/String;
+    iput-object v0, v3, Lcom/tencent/mm/e/a/dj$a;->adT:[Ljava/lang/String;
 
-    .line 320
-    sget-object v2, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 351
+    sget-object v3, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_a
+    if-nez v2, :cond_a
 
-    .line 321
-    const-string/jumbo v1, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    .line 352
+    const-string/jumbo v2, "MicroMsg.WXCommProvider"
 
-    const-string/jumbo v2, "ExtCallBizEvent fail"
+    const-string/jumbo v3, "ExtCallBizEvent fail"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 323
+    .line 354
     :cond_a
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     goto/16 :goto_0
 
-    .line 326
+    .line 357
     :pswitch_5
     if-eqz p4, :cond_b
 
-    array-length v1, p4
+    move-object/from16 v0, p4
 
-    const/4 v2, 0x2
+    array-length v2, v0
 
-    if-ge v1, v2, :cond_c
+    const/4 v3, 0x2
 
-    .line 327
+    if-ge v2, v3, :cond_c
+
+    .line 358
     :cond_b
-    const-string/jumbo v1, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    const-string/jumbo v2, "MicroMsg.WXCommProvider"
 
-    const-string/jumbo v2, "wrong args"
+    const-string/jumbo v3, "wrong args"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 328
-    const/4 v1, 0x0
+    .line 359
+    const/4 v2, 0x0
 
     goto/16 :goto_0
 
-    .line 330
+    .line 361
     :cond_c
-    new-instance v1, Lcom/tencent/mm/d/a/dh;
+    new-instance v2, Lcom/tencent/mm/e/a/dj;
 
-    invoke-direct {v1}, Lcom/tencent/mm/d/a/dh;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/e/a/dj;-><init>()V
 
-    .line 331
-    iget-object v2, v1, Lcom/tencent/mm/d/a/dh;->awJ:Lcom/tencent/mm/d/a/dh$a;
+    .line 362
+    iget-object v3, v2, Lcom/tencent/mm/e/a/dj;->aiy:Lcom/tencent/mm/e/a/dj$a;
 
-    const/16 v3, 0x1b
+    const/16 v4, 0x1b
 
-    iput v3, v2, Lcom/tencent/mm/d/a/dh$a;->op:I
+    iput v4, v3, Lcom/tencent/mm/e/a/dj$a;->op:I
 
-    .line 332
-    iget-object v2, v1, Lcom/tencent/mm/d/a/dh;->awJ:Lcom/tencent/mm/d/a/dh$a;
+    .line 363
+    iget-object v3, v2, Lcom/tencent/mm/e/a/dj;->aiy:Lcom/tencent/mm/e/a/dj$a;
 
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
-    iput v3, v2, Lcom/tencent/mm/d/a/dh$a;->awK:I
+    iput v4, v3, Lcom/tencent/mm/e/a/dj$a;->aiz:I
 
-    .line 333
-    iget-object v2, v1, Lcom/tencent/mm/d/a/dh;->awJ:Lcom/tencent/mm/d/a/dh$a;
+    .line 364
+    iget-object v3, v2, Lcom/tencent/mm/e/a/dj;->aiy:Lcom/tencent/mm/e/a/dj$a;
 
-    iput-object p4, v2, Lcom/tencent/mm/d/a/dh$a;->selectionArgs:[Ljava/lang/String;
+    move-object/from16 v0, p4
 
-    .line 334
-    iget-object v2, v1, Lcom/tencent/mm/d/a/dh;->awJ:Lcom/tencent/mm/d/a/dh$a;
+    iput-object v0, v3, Lcom/tencent/mm/e/a/dj$a;->selectionArgs:[Ljava/lang/String;
+
+    .line 365
+    iget-object v3, v2, Lcom/tencent/mm/e/a/dj;->aiy:Lcom/tencent/mm/e/a/dj$a;
 
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v4
 
-    iput-object v3, v2, Lcom/tencent/mm/d/a/dh$a;->context:Landroid/content/Context;
+    iput-object v4, v3, Lcom/tencent/mm/e/a/dj$a;->context:Landroid/content/Context;
 
-    .line 335
-    iget-object v2, v1, Lcom/tencent/mm/d/a/dh;->awJ:Lcom/tencent/mm/d/a/dh$a;
+    .line 366
+    iget-object v3, v2, Lcom/tencent/mm/e/a/dj;->aiy:Lcom/tencent/mm/e/a/dj$a;
 
     move-object/from16 v0, p7
 
-    iput-object v0, v2, Lcom/tencent/mm/d/a/dh$a;->asa:[Ljava/lang/String;
+    iput-object v0, v3, Lcom/tencent/mm/e/a/dj$a;->adT:[Ljava/lang/String;
 
-    .line 336
-    sget-object v2, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 367
+    sget-object v3, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_d
+    if-nez v2, :cond_d
 
-    .line 337
-    const-string/jumbo v1, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    .line 368
+    const-string/jumbo v2, "MicroMsg.WXCommProvider"
 
-    const-string/jumbo v2, "ExtCallBizEvent fail"
+    const-string/jumbo v3, "ExtCallBizEvent fail"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 339
+    .line 370
     :cond_d
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     goto/16 :goto_0
 
-    .line 342
+    .line 373
     :pswitch_6
-    new-instance v1, Lcom/tencent/mm/d/a/dh;
+    new-instance v2, Lcom/tencent/mm/e/a/dj;
 
-    invoke-direct {v1}, Lcom/tencent/mm/d/a/dh;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/e/a/dj;-><init>()V
 
-    .line 343
-    iget-object v2, v1, Lcom/tencent/mm/d/a/dh;->awJ:Lcom/tencent/mm/d/a/dh$a;
+    .line 374
+    iget-object v3, v2, Lcom/tencent/mm/e/a/dj;->aiy:Lcom/tencent/mm/e/a/dj$a;
 
     move/from16 v0, p6
 
-    iput v0, v2, Lcom/tencent/mm/d/a/dh$a;->op:I
+    iput v0, v3, Lcom/tencent/mm/e/a/dj$a;->op:I
 
-    .line 345
-    iget-object v2, v1, Lcom/tencent/mm/d/a/dh;->awJ:Lcom/tencent/mm/d/a/dh$a;
+    .line 376
+    iget-object v3, v2, Lcom/tencent/mm/e/a/dj;->aiy:Lcom/tencent/mm/e/a/dj$a;
 
-    iput-object p4, v2, Lcom/tencent/mm/d/a/dh$a;->selectionArgs:[Ljava/lang/String;
+    move-object/from16 v0, p4
 
-    .line 346
-    iget-object v2, v1, Lcom/tencent/mm/d/a/dh;->awJ:Lcom/tencent/mm/d/a/dh$a;
+    iput-object v0, v3, Lcom/tencent/mm/e/a/dj$a;->selectionArgs:[Ljava/lang/String;
 
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    iput-object v3, v2, Lcom/tencent/mm/d/a/dh$a;->context:Landroid/content/Context;
-
-    .line 347
-    iget-object v2, v1, Lcom/tencent/mm/d/a/dh;->awJ:Lcom/tencent/mm/d/a/dh$a;
-
-    move-object/from16 v0, p7
-
-    iput-object v0, v2, Lcom/tencent/mm/d/a/dh$a;->asa:[Ljava/lang/String;
-
-    .line 348
-    sget-object v2, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_e
-
-    .line 349
-    const-string/jumbo v1, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
-
-    const-string/jumbo v2, "ExtCallBizEvent fail"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 351
-    :cond_e
-    const/4 v1, 0x0
-
-    goto/16 :goto_0
-
-    .line 354
-    :pswitch_7
-    new-instance v1, Lcom/tencent/mm/d/a/e;
-
-    invoke-direct {v1}, Lcom/tencent/mm/d/a/e;-><init>()V
-
-    .line 355
-    iget-object v2, v1, Lcom/tencent/mm/d/a/e;->arZ:Lcom/tencent/mm/d/a/e$a;
-
-    iput-object p4, v2, Lcom/tencent/mm/d/a/e$a;->selectionArgs:[Ljava/lang/String;
-
-    .line 356
-    iget-object v2, v1, Lcom/tencent/mm/d/a/e;->arZ:Lcom/tencent/mm/d/a/e$a;
-
-    move-object/from16 v0, p7
-
-    iput-object v0, v2, Lcom/tencent/mm/d/a/e$a;->asa:[Ljava/lang/String;
-
-    .line 357
-    iget-object v2, v1, Lcom/tencent/mm/d/a/e;->arZ:Lcom/tencent/mm/d/a/e$a;
+    .line 377
+    iget-object v3, v2, Lcom/tencent/mm/e/a/dj;->aiy:Lcom/tencent/mm/e/a/dj$a;
 
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v4
 
-    iput-object v3, v2, Lcom/tencent/mm/d/a/e$a;->context:Landroid/content/Context;
+    iput-object v4, v3, Lcom/tencent/mm/e/a/dj$a;->context:Landroid/content/Context;
 
-    .line 358
-    sget-object v2, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_f
-
-    .line 359
-    const-string/jumbo v1, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
-
-    const-string/jumbo v2, "add card to wx fail"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 361
-    :cond_f
-    const/4 v1, 0x0
-
-    goto/16 :goto_0
-
-    .line 365
-    :pswitch_8
-    new-instance v1, Lcom/tencent/mm/d/a/kj;
-
-    invoke-direct {v1}, Lcom/tencent/mm/d/a/kj;-><init>()V
-
-    .line 366
-    iget-object v2, v1, Lcom/tencent/mm/d/a/kj;->aGL:Lcom/tencent/mm/d/a/kj$a;
-
-    iput-object p4, v2, Lcom/tencent/mm/d/a/kj$a;->selectionArgs:[Ljava/lang/String;
-
-    .line 367
-    iget-object v2, v1, Lcom/tencent/mm/d/a/kj;->aGL:Lcom/tencent/mm/d/a/kj$a;
+    .line 378
+    iget-object v3, v2, Lcom/tencent/mm/e/a/dj;->aiy:Lcom/tencent/mm/e/a/dj$a;
 
     move-object/from16 v0, p7
 
-    iput-object v0, v2, Lcom/tencent/mm/d/a/kj$a;->asa:[Ljava/lang/String;
-
-    .line 368
-    iget-object v2, v1, Lcom/tencent/mm/d/a/kj;->aGL:Lcom/tencent/mm/d/a/kj$a;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    iput-object v3, v2, Lcom/tencent/mm/d/a/kj$a;->context:Landroid/content/Context;
-
-    .line 369
-    if-eqz p4, :cond_10
-
-    array-length v2, p4
-
-    const/4 v3, 0x2
-
-    if-le v2, v3, :cond_10
-
-    .line 370
-    const/4 v2, 0x2
-
-    aget-object v2, p4, v2
-
-    sput-object v2, Lcom/tencent/mm/pluginsdk/d;->iyz:Ljava/lang/String;
-
-    .line 372
-    :cond_10
-    sget-object v2, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_11
-
-    .line 373
-    const-string/jumbo v1, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
-
-    const-string/jumbo v2, "open webview fail"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 375
-    :cond_11
-    const/4 v1, 0x0
-
-    goto/16 :goto_0
+    iput-object v0, v3, Lcom/tencent/mm/e/a/dj$a;->adT:[Ljava/lang/String;
 
     .line 379
-    :pswitch_9
-    new-instance v1, Lcom/tencent/mm/d/a/ki;
+    sget-object v3, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-direct {v1}, Lcom/tencent/mm/d/a/ki;-><init>()V
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_e
 
     .line 380
-    iget-object v2, v1, Lcom/tencent/mm/d/a/ki;->aGK:Lcom/tencent/mm/d/a/ki$a;
+    const-string/jumbo v2, "MicroMsg.WXCommProvider"
 
-    iput-object p4, v2, Lcom/tencent/mm/d/a/ki$a;->selectionArgs:[Ljava/lang/String;
+    const-string/jumbo v3, "ExtCallBizEvent fail"
 
-    .line 381
-    iget-object v2, v1, Lcom/tencent/mm/d/a/ki;->aGK:Lcom/tencent/mm/d/a/ki$a;
-
-    move-object/from16 v0, p7
-
-    iput-object v0, v2, Lcom/tencent/mm/d/a/ki$a;->asa:[Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 382
-    iget-object v2, v1, Lcom/tencent/mm/d/a/ki;->aGK:Lcom/tencent/mm/d/a/ki$a;
+    :cond_e
+    const/4 v2, 0x0
 
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
+    goto/16 :goto_0
 
-    move-result-object v3
+    .line 385
+    :pswitch_7
+    new-instance v2, Lcom/tencent/mm/e/a/g;
 
-    iput-object v3, v2, Lcom/tencent/mm/d/a/ki$a;->context:Landroid/content/Context;
-
-    .line 383
-    sget-object v2, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_12
-
-    .line 384
-    const-string/jumbo v1, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
-
-    const-string/jumbo v2, "open busi luckymoney fail"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2}, Lcom/tencent/mm/e/a/g;-><init>()V
 
     .line 386
-    :cond_12
-    const/4 v1, 0x0
+    iget-object v3, v2, Lcom/tencent/mm/e/a/g;->adS:Lcom/tencent/mm/e/a/g$a;
 
-    goto/16 :goto_0
+    move-object/from16 v0, p4
+
+    iput-object v0, v3, Lcom/tencent/mm/e/a/g$a;->selectionArgs:[Ljava/lang/String;
+
+    .line 387
+    iget-object v3, v2, Lcom/tencent/mm/e/a/g;->adS:Lcom/tencent/mm/e/a/g$a;
+
+    move-object/from16 v0, p7
+
+    iput-object v0, v3, Lcom/tencent/mm/e/a/g$a;->adT:[Ljava/lang/String;
+
+    .line 388
+    iget-object v3, v2, Lcom/tencent/mm/e/a/g;->adS:Lcom/tencent/mm/e/a/g$a;
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    iput-object v4, v3, Lcom/tencent/mm/e/a/g$a;->context:Landroid/content/Context;
+
+    .line 389
+    sget-object v3, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_f
 
     .line 390
-    :pswitch_a
-    new-instance v1, Lcom/tencent/mm/d/a/at;
+    const-string/jumbo v2, "MicroMsg.WXCommProvider"
 
-    invoke-direct {v1}, Lcom/tencent/mm/d/a/at;-><init>()V
+    const-string/jumbo v3, "add card to wx fail"
 
-    .line 391
-    iget-object v2, v1, Lcom/tencent/mm/d/a/at;->atW:Lcom/tencent/mm/d/a/at$a;
-
-    const/4 v3, 0x1
-
-    iput v3, v2, Lcom/tencent/mm/d/a/at$a;->action:I
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 392
-    iget-object v2, v1, Lcom/tencent/mm/d/a/at;->atW:Lcom/tencent/mm/d/a/at$a;
+    :cond_f
+    const/4 v2, 0x0
 
-    iput-object p4, v2, Lcom/tencent/mm/d/a/at$a;->selectionArgs:[Ljava/lang/String;
-
-    .line 393
-    iget-object v2, v1, Lcom/tencent/mm/d/a/at;->atW:Lcom/tencent/mm/d/a/at$a;
-
-    move-object/from16 v0, p7
-
-    iput-object v0, v2, Lcom/tencent/mm/d/a/at$a;->asa:[Ljava/lang/String;
-
-    .line 394
-    iget-object v2, v1, Lcom/tencent/mm/d/a/at;->atW:Lcom/tencent/mm/d/a/at$a;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    iput-object v3, v2, Lcom/tencent/mm/d/a/at$a;->context:Landroid/content/Context;
-
-    .line 395
-    sget-object v2, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
-
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_13
+    goto/16 :goto_0
 
     .line 396
-    const-string/jumbo v1, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    :pswitch_8
+    new-instance v2, Lcom/tencent/mm/e/a/kp;
 
-    const-string/jumbo v2, "open webview fail"
+    invoke-direct {v2}, Lcom/tencent/mm/e/a/kp;-><init>()V
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    .line 397
+    iget-object v3, v2, Lcom/tencent/mm/e/a/kp;->asV:Lcom/tencent/mm/e/a/kp$a;
+
+    move-object/from16 v0, p4
+
+    iput-object v0, v3, Lcom/tencent/mm/e/a/kp$a;->selectionArgs:[Ljava/lang/String;
 
     .line 398
-    :cond_13
-    const/4 v1, 0x0
-
-    goto/16 :goto_0
-
-    .line 402
-    :pswitch_b
-    new-instance v1, Lcom/tencent/mm/d/a/at;
-
-    invoke-direct {v1}, Lcom/tencent/mm/d/a/at;-><init>()V
-
-    .line 403
-    iget-object v2, v1, Lcom/tencent/mm/d/a/at;->atW:Lcom/tencent/mm/d/a/at$a;
-
-    const/4 v3, 0x2
-
-    iput v3, v2, Lcom/tencent/mm/d/a/at$a;->action:I
-
-    .line 404
-    iget-object v2, v1, Lcom/tencent/mm/d/a/at;->atW:Lcom/tencent/mm/d/a/at$a;
-
-    iput-object p4, v2, Lcom/tencent/mm/d/a/at$a;->selectionArgs:[Ljava/lang/String;
-
-    .line 405
-    iget-object v2, v1, Lcom/tencent/mm/d/a/at;->atW:Lcom/tencent/mm/d/a/at$a;
+    iget-object v3, v2, Lcom/tencent/mm/e/a/kp;->asV:Lcom/tencent/mm/e/a/kp$a;
 
     move-object/from16 v0, p7
 
-    iput-object v0, v2, Lcom/tencent/mm/d/a/at$a;->asa:[Ljava/lang/String;
+    iput-object v0, v3, Lcom/tencent/mm/e/a/kp$a;->adT:[Ljava/lang/String;
 
-    .line 406
-    iget-object v2, v1, Lcom/tencent/mm/d/a/at;->atW:Lcom/tencent/mm/d/a/at$a;
+    .line 399
+    iget-object v3, v2, Lcom/tencent/mm/e/a/kp;->asV:Lcom/tencent/mm/e/a/kp$a;
 
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v4
 
-    iput-object v3, v2, Lcom/tencent/mm/d/a/at$a;->context:Landroid/content/Context;
+    iput-object v4, v3, Lcom/tencent/mm/e/a/kp$a;->context:Landroid/content/Context;
 
-    .line 407
-    sget-object v2, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 400
+    if-eqz p4, :cond_10
 
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    move-object/from16 v0, p4
 
-    move-result v1
+    array-length v3, v0
 
-    if-nez v1, :cond_14
+    const/4 v4, 0x2
 
-    .line 408
-    const-string/jumbo v1, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    if-le v3, v4, :cond_10
 
-    const-string/jumbo v2, "open webview fail"
+    .line 401
+    const/4 v3, 0x2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    aget-object v3, p4, v3
 
-    .line 410
-    :cond_14
-    const/4 v1, 0x0
+    sput-object v3, Lcom/tencent/mm/pluginsdk/d;->iUS:Ljava/lang/String;
+
+    .line 403
+    :cond_10
+    sget-object v3, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_11
+
+    .line 404
+    const-string/jumbo v2, "MicroMsg.WXCommProvider"
+
+    const-string/jumbo v3, "open webview fail"
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 406
+    :cond_11
+    const/4 v2, 0x0
 
     goto/16 :goto_0
 
-    .line 234
+    .line 410
+    :pswitch_9
+    new-instance v2, Lcom/tencent/mm/e/a/ko;
+
+    invoke-direct {v2}, Lcom/tencent/mm/e/a/ko;-><init>()V
+
+    .line 411
+    iget-object v3, v2, Lcom/tencent/mm/e/a/ko;->asU:Lcom/tencent/mm/e/a/ko$a;
+
+    move-object/from16 v0, p4
+
+    iput-object v0, v3, Lcom/tencent/mm/e/a/ko$a;->selectionArgs:[Ljava/lang/String;
+
+    .line 412
+    iget-object v3, v2, Lcom/tencent/mm/e/a/ko;->asU:Lcom/tencent/mm/e/a/ko$a;
+
+    move-object/from16 v0, p7
+
+    iput-object v0, v3, Lcom/tencent/mm/e/a/ko$a;->adT:[Ljava/lang/String;
+
+    .line 413
+    iget-object v3, v2, Lcom/tencent/mm/e/a/ko;->asU:Lcom/tencent/mm/e/a/ko$a;
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    iput-object v4, v3, Lcom/tencent/mm/e/a/ko$a;->context:Landroid/content/Context;
+
+    .line 414
+    sget-object v3, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_12
+
+    .line 415
+    const-string/jumbo v2, "MicroMsg.WXCommProvider"
+
+    const-string/jumbo v3, "open busi luckymoney fail"
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 417
+    :cond_12
+    const/4 v2, 0x0
+
+    goto/16 :goto_0
+
+    .line 421
+    :pswitch_a
+    new-instance v2, Lcom/tencent/mm/e/a/aw;
+
+    invoke-direct {v2}, Lcom/tencent/mm/e/a/aw;-><init>()V
+
+    .line 422
+    iget-object v3, v2, Lcom/tencent/mm/e/a/aw;->afH:Lcom/tencent/mm/e/a/aw$a;
+
+    const/4 v4, 0x1
+
+    iput v4, v3, Lcom/tencent/mm/e/a/aw$a;->action:I
+
+    .line 423
+    iget-object v3, v2, Lcom/tencent/mm/e/a/aw;->afH:Lcom/tencent/mm/e/a/aw$a;
+
+    move-object/from16 v0, p4
+
+    iput-object v0, v3, Lcom/tencent/mm/e/a/aw$a;->selectionArgs:[Ljava/lang/String;
+
+    .line 424
+    iget-object v3, v2, Lcom/tencent/mm/e/a/aw;->afH:Lcom/tencent/mm/e/a/aw$a;
+
+    move-object/from16 v0, p7
+
+    iput-object v0, v3, Lcom/tencent/mm/e/a/aw$a;->adT:[Ljava/lang/String;
+
+    .line 425
+    iget-object v3, v2, Lcom/tencent/mm/e/a/aw;->afH:Lcom/tencent/mm/e/a/aw$a;
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    iput-object v4, v3, Lcom/tencent/mm/e/a/aw$a;->context:Landroid/content/Context;
+
+    .line 426
+    sget-object v3, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_13
+
+    .line 427
+    const-string/jumbo v2, "MicroMsg.WXCommProvider"
+
+    const-string/jumbo v3, "open webview fail"
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 429
+    :cond_13
+    const/4 v2, 0x0
+
+    goto/16 :goto_0
+
+    .line 433
+    :pswitch_b
+    new-instance v2, Lcom/tencent/mm/e/a/aw;
+
+    invoke-direct {v2}, Lcom/tencent/mm/e/a/aw;-><init>()V
+
+    .line 434
+    iget-object v3, v2, Lcom/tencent/mm/e/a/aw;->afH:Lcom/tencent/mm/e/a/aw$a;
+
+    const/4 v4, 0x2
+
+    iput v4, v3, Lcom/tencent/mm/e/a/aw$a;->action:I
+
+    .line 435
+    iget-object v3, v2, Lcom/tencent/mm/e/a/aw;->afH:Lcom/tencent/mm/e/a/aw$a;
+
+    move-object/from16 v0, p4
+
+    iput-object v0, v3, Lcom/tencent/mm/e/a/aw$a;->selectionArgs:[Ljava/lang/String;
+
+    .line 436
+    iget-object v3, v2, Lcom/tencent/mm/e/a/aw;->afH:Lcom/tencent/mm/e/a/aw$a;
+
+    move-object/from16 v0, p7
+
+    iput-object v0, v3, Lcom/tencent/mm/e/a/aw$a;->adT:[Ljava/lang/String;
+
+    .line 437
+    iget-object v3, v2, Lcom/tencent/mm/e/a/aw;->afH:Lcom/tencent/mm/e/a/aw$a;
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    iput-object v4, v3, Lcom/tencent/mm/e/a/aw$a;->context:Landroid/content/Context;
+
+    .line 438
+    sget-object v3, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_14
+
+    .line 439
+    const-string/jumbo v2, "MicroMsg.WXCommProvider"
+
+    const-string/jumbo v3, "open webview fail"
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 441
+    :cond_14
+    const/4 v2, 0x0
+
+    goto/16 :goto_0
+
+    .line 445
+    :pswitch_c
+    new-instance v2, Lcom/tencent/mm/e/a/al;
+
+    invoke-direct {v2}, Lcom/tencent/mm/e/a/al;-><init>()V
+
+    .line 446
+    iget-object v3, v2, Lcom/tencent/mm/e/a/al;->afv:Lcom/tencent/mm/e/a/al$a;
+
+    move-object/from16 v0, p4
+
+    iput-object v0, v3, Lcom/tencent/mm/e/a/al$a;->selectionArgs:[Ljava/lang/String;
+
+    .line 447
+    iget-object v3, v2, Lcom/tencent/mm/e/a/al;->afv:Lcom/tencent/mm/e/a/al$a;
+
+    move-object/from16 v0, p7
+
+    iput-object v0, v3, Lcom/tencent/mm/e/a/al$a;->adT:[Ljava/lang/String;
+
+    .line 448
+    iget-object v3, v2, Lcom/tencent/mm/e/a/al;->afv:Lcom/tencent/mm/e/a/al$a;
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    iput-object v4, v3, Lcom/tencent/mm/e/a/al$a;->context:Landroid/content/Context;
+
+    .line 449
+    sget-object v3, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_15
+
+    .line 450
+    const-string/jumbo v2, "MicroMsg.WXCommProvider"
+
+    const-string/jumbo v3, "choose card from wx fail"
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 452
+    :cond_15
+    const/4 v2, 0x0
+
+    goto/16 :goto_0
+
+    .line 258
     :pswitch_data_0
     .packed-switch 0x3
         :pswitch_2
@@ -1748,6 +1917,12 @@
         :pswitch_2
         :pswitch_2
         :pswitch_2
+        :pswitch_2
+        :pswitch_2
+        :pswitch_c
+        :pswitch_2
+        :pswitch_2
+        :pswitch_2
     .end packed-switch
 .end method
 
@@ -1757,36 +1932,36 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 464
+    .line 506
     if-nez p1, :cond_0
 
-    .line 465
-    const-string/jumbo v0, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    .line 507
+    const-string/jumbo v0, "MicroMsg.WXCommProvider"
 
     const-string/jumbo v2, "delete fail, uri is null"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
-    .line 472
+    .line 514
     :goto_0
     return v0
 
-    .line 469
+    .line 511
     :cond_0
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
     move-result v4
 
-    .line 470
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->JA()[Ljava/lang/String;
+    .line 512
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->Kj()[Ljava/lang/String;
 
     move-result-object v5
 
-    .line 472
+    .line 514
     new-instance v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$4;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1799,9 +1974,9 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$4;-><init>(Lcom/tencent/mm/plugin/base/stub/WXCommProvider;Ljava/lang/Integer;Landroid/net/Uri;I[Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$4;->b(Lcom/tencent/mm/sdk/platformtools/aa;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$4;->b(Lcom/tencent/mm/sdk/platformtools/ac;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1818,7 +1993,7 @@
     .locals 1
 
     .prologue
-    .line 454
+    .line 496
     const/4 v0, 0x0
 
     return-object v0
@@ -1828,7 +2003,7 @@
     .locals 1
 
     .prologue
-    .line 459
+    .line 501
     const/4 v0, 0x0
 
     return-object v0
@@ -1840,22 +2015,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 169
-    const-string/jumbo v1, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    .line 193
+    const-string/jumbo v1, "MicroMsg.WXCommProvider"
 
     const-string/jumbo v2, "onCreate"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 171
-    new-instance v1, Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 195
+    new-instance v1, Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-direct {v1}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
-    iput-object v1, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object v1, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    .line 173
-    const-string/jumbo v1, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    .line 197
+    const-string/jumbo v1, "MicroMsg.WXCommProvider"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1889,9 +2064,9 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 174
+    .line 198
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1902,9 +2077,9 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->bxg:Landroid/content/SharedPreferences;
+    iput-object v1, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->bpi:Landroid/content/SharedPreferences;
 
-    .line 175
+    .line 199
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1921,8 +2096,8 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 186
-    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->bxg:Landroid/content/SharedPreferences;
+    .line 210
+    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->bpi:Landroid/content/SharedPreferences;
 
     if-eqz v1, :cond_0
 
@@ -1940,8 +2115,8 @@
 
     const/4 v5, 0x1
 
-    .line 191
-    const-string/jumbo v1, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    .line 215
+    const-string/jumbo v1, "MicroMsg.WXCommProvider"
 
     const-string/jumbo v2, "uri:%s"
 
@@ -1951,60 +2126,60 @@
 
     aput-object p1, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 192
+    .line 216
     if-nez p1, :cond_0
 
-    .line 193
-    const-string/jumbo v1, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    .line 217
+    const-string/jumbo v1, "MicroMsg.WXCommProvider"
 
     const-string/jumbo v2, "query fail, uri is null return null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 227
+    .line 251
     :goto_0
     return-object v0
 
-    .line 197
+    .line 221
     :cond_0
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->JA()[Ljava/lang/String;
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->Kj()[Ljava/lang/String;
 
     move-result-object v7
 
-    .line 198
+    .line 222
     if-eqz v7, :cond_1
 
     array-length v1, v7
 
     if-gtz v1, :cond_2
 
-    .line 199
+    .line 223
     :cond_1
-    const-string/jumbo v1, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    const-string/jumbo v1, "MicroMsg.WXCommProvider"
 
     const-string/jumbo v2, "CallingPackages is null return null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 202
+    .line 226
     :cond_2
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBh:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyc:Landroid/content/UriMatcher;
 
     invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
     move-result v6
 
-    .line 203
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    .line 227
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
     if-nez v0, :cond_3
 
-    .line 204
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/af;
+    .line 228
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ah;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -2014,14 +2189,14 @@
 
     invoke-direct {v2, p0}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$2;-><init>(Lcom/tencent/mm/plugin/base/stub/WXCommProvider;)V
 
-    invoke-direct {v0, v1, v2, v5}, Lcom/tencent/mm/sdk/platformtools/af;-><init>(Landroid/os/Looper;Lcom/tencent/mm/sdk/platformtools/af$a;Z)V
+    invoke-direct {v0, v1, v2, v5}, Lcom/tencent/mm/sdk/platformtools/ah;-><init>(Landroid/os/Looper;Lcom/tencent/mm/sdk/platformtools/ah$a;Z)V
 
-    .line 219
-    const-wide/16 v1, 0x32
+    .line 243
+    const-wide/16 v2, 0x32
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;->ds(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ah;->dJ(J)V
 
-    .line 221
+    .line 245
     :try_start_0
     sget-object v1, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->lock:Ljava/lang/Object;
 
@@ -2029,20 +2204,20 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 222
+    .line 246
     :try_start_1
-    const-string/jumbo v0, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    const-string/jumbo v0, "MicroMsg.WXCommProvider"
 
     const-string/jumbo v2, "Lock to wait for the first initialize of the Application."
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 223
+    .line 247
     sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->lock:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->wait()V
 
-    .line 224
+    .line 248
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -2061,14 +2236,14 @@
 
     move-object v5, p5
 
-    .line 227
+    .line 251
     invoke-virtual/range {v0 .. v7}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->a(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 224
+    .line 248
     :catchall_0
     move-exception v0
 
@@ -2082,12 +2257,12 @@
     :try_end_3
     .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 228
+    .line 252
     :catch_0
     move-exception v0
 
-    .line 226
-    const-string/jumbo v1, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    .line 250
+    const-string/jumbo v1, "MicroMsg.WXCommProvider"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2107,7 +2282,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 .end method
@@ -2116,7 +2291,7 @@
     .locals 1
 
     .prologue
-    .line 502
+    .line 544
     const/4 v0, 0x0
 
     return v0

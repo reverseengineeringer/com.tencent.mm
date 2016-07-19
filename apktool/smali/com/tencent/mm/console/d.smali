@@ -17,24 +17,22 @@
 
 
 # virtual methods
-.method public final aG(Landroid/content/Context;)Z
-    .locals 9
+.method public final aD(Landroid/content/Context;)Z
+    .locals 6
 
     .prologue
-    const/4 v4, 0x3
+    const/4 v2, 0x2
 
-    const/4 v8, 0x2
+    const/4 v5, 0x0
 
-    const/4 v7, 0x0
-
-    const/4 v6, 0x1
+    const/4 v4, 0x1
 
     .line 24
     const-string/jumbo v0, "apply"
 
-    iget-object v1, p0, Lcom/tencent/mm/console/d;->bvb:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/console/d;->ajd:[Ljava/lang/String;
 
-    aget-object v1, v1, v6
+    aget-object v1, v1, v4
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -43,47 +41,49 @@
     if-eqz v0, :cond_2
 
     .line 25
-    iget-object v0, p0, Lcom/tencent/mm/console/d;->bvb:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/console/d;->ajd:[Ljava/lang/String;
 
     array-length v0, v0
 
-    if-ge v0, v4, :cond_1
+    const/4 v1, 0x3
+
+    if-ge v0, v1, :cond_1
 
     const-string/jumbo v0, "/data/local/tmp/test.apk"
 
     :goto_0
-    const-string/jumbo v1, "!44@/B4Tb64lLpJLD/TSzHAWHSg0mjVetlQM76FJFsOG0sU="
+    const-string/jumbo v1, "MicroMsg.CommandTestHotPatches"
 
     const-string/jumbo v2, "hotpatch test from %s"
 
-    new-array v3, v6, [Ljava/lang/Object;
+    new-array v3, v4, [Ljava/lang/Object;
 
-    aput-object v0, v3, v7
+    aput-object v0, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    new-instance v1, Lcom/tencent/mm/d/a/fv;
+    new-instance v1, Lcom/tencent/mm/e/a/gc;
 
-    invoke-direct {v1}, Lcom/tencent/mm/d/a/fv;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/e/a/gc;-><init>()V
 
-    iget-object v2, v1, Lcom/tencent/mm/d/a/fv;->aAN:Lcom/tencent/mm/d/a/fv$a;
+    iget-object v2, v1, Lcom/tencent/mm/e/a/gc;->amW:Lcom/tencent/mm/e/a/gc$a;
 
-    iput-object v0, v2, Lcom/tencent/mm/d/a/fv$a;->aAS:Ljava/lang/String;
+    iput-object v0, v2, Lcom/tencent/mm/e/a/gc$a;->anb:Ljava/lang/String;
 
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 40
     :cond_0
     :goto_1
-    return v6
+    return v4
 
     .line 25
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/console/d;->bvb:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/console/d;->ajd:[Ljava/lang/String;
 
-    aget-object v0, v0, v8
+    aget-object v0, v0, v2
 
     goto :goto_0
 
@@ -91,9 +91,9 @@
     :cond_2
     const-string/jumbo v0, "info"
 
-    iget-object v1, p0, Lcom/tencent/mm/console/d;->bvb:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/console/d;->ajd:[Ljava/lang/String;
 
-    aget-object v1, v1, v6
+    aget-object v1, v1, v4
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -102,11 +102,11 @@
     if-eqz v0, :cond_3
 
     .line 28
-    const-string/jumbo v0, "!44@/B4Tb64lLpJLD/TSzHAWHSg0mjVetlQM76FJFsOG0sU="
+    const-string/jumbo v0, "MicroMsg.CommandTestHotPatches"
 
     const-string/jumbo v1, "hotpatch current class loader=%s"
 
-    new-array v2, v6, [Ljava/lang/Object;
+    new-array v2, v4, [Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -116,9 +116,9 @@
 
     move-result-object v3
 
-    aput-object v3, v2, v7
+    aput-object v3, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
@@ -126,9 +126,9 @@
     :cond_3
     const-string/jumbo v0, "clear"
 
-    iget-object v1, p0, Lcom/tencent/mm/console/d;->bvb:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/console/d;->ajd:[Ljava/lang/String;
 
-    aget-object v1, v1, v6
+    aget-object v1, v1, v4
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -137,26 +137,26 @@
     if-eqz v0, :cond_4
 
     .line 31
-    const-string/jumbo v0, "!44@/B4Tb64lLpJLD/TSzHAWHSg0mjVetlQM76FJFsOG0sU="
+    const-string/jumbo v0, "MicroMsg.CommandTestHotPatches"
 
     const-string/jumbo v1, "clear hotpatch"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 32
-    new-instance v0, Lcom/tencent/mm/d/a/fv;
+    new-instance v0, Lcom/tencent/mm/e/a/gc;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/fv;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/gc;-><init>()V
 
     .line 33
-    iget-object v1, v0, Lcom/tencent/mm/d/a/fv;->aAN:Lcom/tencent/mm/d/a/fv$a;
+    iget-object v1, v0, Lcom/tencent/mm/e/a/gc;->amW:Lcom/tencent/mm/e/a/gc$a;
 
-    iput v6, v1, Lcom/tencent/mm/d/a/fv$a;->atF:I
+    iput v4, v1, Lcom/tencent/mm/e/a/gc$a;->afn:I
 
     .line 34
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
     goto :goto_1
 
@@ -164,9 +164,9 @@
     :cond_4
     const-string/jumbo v0, "check"
 
-    iget-object v1, p0, Lcom/tencent/mm/console/d;->bvb:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/console/d;->ajd:[Ljava/lang/String;
 
-    aget-object v1, v1, v6
+    aget-object v1, v1, v4
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -175,9 +175,9 @@
     if-eqz v0, :cond_0
 
     .line 37
-    iget-object v0, p0, Lcom/tencent/mm/console/d;->bvb:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/console/d;->ajd:[Ljava/lang/String;
 
-    aget-object v0, v0, v8
+    aget-object v0, v0, v2
 
     const-string/jumbo v1, "/"
 
@@ -202,84 +202,35 @@
     move-result-object v0
 
     :cond_5
-    const-string/jumbo v1, "!44@/B4Tb64lLpJLD/TSzHAWHSg0mjVetlQM76FJFsOG0sU="
+    const-string/jumbo v1, "MicroMsg.CommandTestHotPatches"
 
     const-string/jumbo v2, "hotpatch check patch file %s"
 
-    new-array v3, v6, [Ljava/lang/Object;
+    new-array v3, v4, [Ljava/lang/Object;
 
-    aput-object v0, v3, v7
+    aput-object v0, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    const-string/jumbo v1, "!44@/B4Tb64lLpJLD/TSzHAWHSg0mjVetlQM76FJFsOG0sU="
-
-    const-string/jumbo v2, "-------------------------------------------------------------------------------------"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {p1}, Lcom/tencent/mm/compatible/loader/b;->ax(Landroid/content/Context;)[Ljava/lang/String;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_6
-
-    array-length v2, v1
-
-    if-ne v2, v4, :cond_6
-
-    const-string/jumbo v2, "!44@/B4Tb64lLpJLD/TSzHAWHSg0mjVetlQM76FJFsOG0sU="
-
-    const-string/jumbo v3, "hotpatch check patch info(%s, %s, %s)"
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    aget-object v5, v1, v7
-
-    aput-object v5, v4, v7
-
-    aget-object v5, v1, v6
-
-    aput-object v5, v4, v6
-
-    aget-object v1, v1, v8
-
-    aput-object v1, v4, v8
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_6
-    const-string/jumbo v1, "!44@/B4Tb64lLpJLD/TSzHAWHSg0mjVetlQM76FJFsOG0sU="
+    const-string/jumbo v1, "MicroMsg.CommandTestHotPatches"
 
     const-string/jumbo v2, "-------------------------------------------------------------------------------------"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string/jumbo v1, "!44@/B4Tb64lLpJLD/TSzHAWHSg0mjVetlQM76FJFsOG0sU="
+    const-string/jumbo v1, "MicroMsg.CommandTestHotPatches"
 
-    const-string/jumbo v2, "hotpatch check signature, passed=%b"
+    const-string/jumbo v2, "-------------------------------------------------------------------------------------"
 
-    new-array v3, v6, [Ljava/lang/Object;
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/loader/b;->db(Ljava/lang/String;)Z
+    const-string/jumbo v1, "MicroMsg.CommandTestHotPatches"
 
-    move-result v4
+    const-string/jumbo v2, "hotpatch check md5, passed=%b"
 
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    new-array v3, v4, [Ljava/lang/Object;
 
-    move-result-object v4
-
-    aput-object v4, v3, v7
-
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    const-string/jumbo v1, "!44@/B4Tb64lLpJLD/TSzHAWHSg0mjVetlQM76FJFsOG0sU="
-
-    const-string/jumbo v2, "hotpatch check patch version, passed=%b"
-
-    new-array v3, v6, [Ljava/lang/Object;
-
-    invoke-static {v0}, Lcom/tencent/mm/compatible/loader/b;->dc(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/tinker/loader/a/e;->KP(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -287,15 +238,15 @@
 
     move-result-object v0
 
-    aput-object v0, v3, v7
+    aput-object v0, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpJLD/TSzHAWHSg0mjVetlQM76FJFsOG0sU="
+    const-string/jumbo v0, "MicroMsg.CommandTestHotPatches"
 
     const-string/jumbo v1, "-------------------------------------------------------------------------------------"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 .end method

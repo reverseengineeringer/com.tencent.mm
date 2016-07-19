@@ -10,8 +10,8 @@ import java.util.regex.Pattern;
 public final class g
   implements a, f
 {
-  private static final Pattern mdH = Pattern.compile("oauth_token=([^&]+)");
-  private static final Pattern mdI = Pattern.compile("oauth_token_secret=([^&]*)");
+  private static final Pattern mPL = Pattern.compile("oauth_token=([^&]+)");
+  private static final Pattern mPM = Pattern.compile("oauth_token_secret=([^&]*)");
   
   private static String b(String paramString, Pattern paramPattern)
   {
@@ -22,10 +22,10 @@ public final class g
     throw new b("Response body is incorrect. Can't extract token and secret from this: '" + paramString + "'", null);
   }
   
-  public final i IO(String paramString)
+  public final i Lp(String paramString)
   {
-    d.cT(paramString, "Response body is incorrect. Can't extract a token from an empty string");
-    return new i(b(paramString, mdH), b(paramString, mdI), paramString);
+    d.dg(paramString, "Response body is incorrect. Can't extract a token from an empty string");
+    return new i(b(paramString, mPL), b(paramString, mPM), paramString);
   }
 }
 

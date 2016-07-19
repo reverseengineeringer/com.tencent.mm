@@ -12,7 +12,17 @@
 
 
 # static fields
-.field private static bMy:Ljava/util/Map;
+.field private static bFS:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -23,9 +33,47 @@
     .line 34
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/modelfriend/m;->bMy:Ljava/util/Map;
+    sput-object v0, Lcom/tencent/mm/modelfriend/m;->bFS:Ljava/util/Map;
 
     return-void
+.end method
+
+.method public static A(Ljava/util/List;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 280
+    if-nez p0, :cond_0
+
+    .line 281
+    const-string/jumbo v0, "MicroMsg.FriendLogic"
+
+    const-string/jumbo v1, "set uploaded mobile contact failed, null info list"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 285
+    :goto_0
+    return-void
+
+    .line 284
+    :cond_0
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zD()Lcom/tencent/mm/modelfriend/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/modelfriend/c;->x(Ljava/util/List;)Z
+
+    goto :goto_0
 .end method
 
 .method public static a(Ljava/lang/String;Landroid/content/Context;[B)Z
@@ -40,7 +88,7 @@
     return v0
 .end method
 
-.method public static c(Ljava/lang/String;Landroid/content/Context;)Landroid/graphics/Bitmap;
+.method public static b(Ljava/lang/String;Landroid/content/Context;)Landroid/graphics/Bitmap;
     .locals 1
 
     .prologue
@@ -54,7 +102,7 @@
     return-object v0
 .end method
 
-.method public static de(I)Z
+.method public static dJ(I)Z
     .locals 4
 
     .prologue
@@ -63,20 +111,20 @@
     const/4 v0, 0x0
 
     .line 296
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zt()Lcom/tencent/mm/modelfriend/ae;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zG()Lcom/tencent/mm/modelfriend/ae;
 
     move-result-object v2
 
-    invoke-virtual {v2, p0}, Lcom/tencent/mm/modelfriend/ae;->dh(I)Lcom/tencent/mm/modelfriend/ad;
+    invoke-virtual {v2, p0}, Lcom/tencent/mm/modelfriend/ae;->dM(I)Lcom/tencent/mm/modelfriend/ad;
 
     move-result-object v2
 
     .line 298
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zv()Lcom/tencent/mm/modelfriend/ag;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zI()Lcom/tencent/mm/modelfriend/ag;
 
     move-result-object v3
 
-    invoke-virtual {v3, p0}, Lcom/tencent/mm/modelfriend/ag;->di(I)Z
+    invoke-virtual {v3, p0}, Lcom/tencent/mm/modelfriend/ag;->dN(I)Z
 
     move-result v3
 
@@ -89,7 +137,7 @@
     return v0
 
     :cond_1
-    iget v2, v2, Lcom/tencent/mm/modelfriend/ad;->bNh:I
+    iget v2, v2, Lcom/tencent/mm/modelfriend/ad;->bGB:I
 
     if-eq v2, v1, :cond_2
 
@@ -101,7 +149,7 @@
     goto :goto_0
 .end method
 
-.method public static hy(Ljava/lang/String;)Ljava/lang/String;
+.method public static hQ(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
     .prologue
@@ -125,7 +173,7 @@
     return-object v0
 
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zq()Lcom/tencent/mm/modelfriend/c;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zD()Lcom/tencent/mm/modelfriend/c;
 
     move-result-object v0
 
@@ -135,7 +183,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcom/tencent/mm/modelfriend/b;->ho(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/tencent/mm/modelfriend/b;->hG(Ljava/lang/String;)I
 
     move-result v2
 
@@ -153,11 +201,11 @@
 
     move-result-object v1
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/c;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/c;->bvG:Lcom/tencent/mm/bc/g;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/az/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/bc/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
 
@@ -201,8 +249,17 @@
     goto :goto_0
 .end method
 
-.method public static t(Ljava/util/List;)V
+.method public static y(Ljava/util/List;)V
     .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
     .line 216
@@ -223,11 +280,11 @@
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
     .line 223
-    invoke-static {}, Lcom/tencent/mm/am/l;->DK()Lcom/tencent/mm/am/g;
+    invoke-static {}, Lcom/tencent/mm/ap/l;->Eb()Lcom/tencent/mm/ap/g;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/am/g;->DD()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/tencent/mm/ap/g;->DU()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -248,20 +305,20 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/am/f;
+    check-cast v0, Lcom/tencent/mm/ap/f;
 
     .line 225
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/tencent/mm/model/c;->rs()Lcom/tencent/mm/storage/ah;
+    invoke-virtual {v3}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/aj;
 
     move-result-object v3
 
-    iget-object v4, v0, Lcom/tencent/mm/am/f;->field_msgContent:Ljava/lang/String;
+    iget-object v4, v0, Lcom/tencent/mm/ap/f;->field_msgContent:Ljava/lang/String;
 
-    invoke-virtual {v3, v4}, Lcom/tencent/mm/storage/ah;->Fj(Ljava/lang/String;)Lcom/tencent/mm/storage/ag$b;
+    invoke-virtual {v3, v4}, Lcom/tencent/mm/storage/aj;->HA(Ljava/lang/String;)Lcom/tencent/mm/storage/ai$b;
 
     move-result-object v3
 
@@ -269,19 +326,19 @@
     if-eqz v3, :cond_2
 
     .line 227
-    iget-object v4, v3, Lcom/tencent/mm/storage/ag$b;->kfM:Ljava/lang/String;
+    iget-object v4, v3, Lcom/tencent/mm/storage/ai$b;->kGf:Ljava/lang/String;
 
     .line 231
-    iget-object v5, v3, Lcom/tencent/mm/storage/ag$b;->kfL:Ljava/lang/String;
+    iget-object v5, v3, Lcom/tencent/mm/storage/ai$b;->kGe:Ljava/lang/String;
 
     .line 232
-    iget v6, v3, Lcom/tencent/mm/storage/ag$b;->asc:I
+    iget v6, v3, Lcom/tencent/mm/storage/ai$b;->scene:I
 
     const/16 v7, 0xa
 
     if-eq v6, v7, :cond_3
 
-    iget v3, v3, Lcom/tencent/mm/storage/ag$b;->asc:I
+    iget v3, v3, Lcom/tencent/mm/storage/ai$b;->scene:I
 
     const/16 v6, 0xb
 
@@ -302,7 +359,7 @@
 
     .line 233
     :cond_4
-    iget-object v0, v0, Lcom/tencent/mm/am/f;->field_talker:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/ap/f;->field_talker:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
@@ -310,7 +367,7 @@
 
     .line 237
     :cond_5
-    const-string/jumbo v0, "!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy"
+    const-string/jumbo v0, "MicroMsg.FriendLogic"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -330,7 +387,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 239
     invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -352,79 +409,21 @@
     check-cast v0, Ljava/lang/String;
 
     .line 241
-    invoke-static {v0}, Lcom/tencent/mm/am/e;->jy(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/ap/e;->jR(Ljava/lang/String;)V
 
     goto :goto_1
 .end method
 
-.method public static u(Ljava/util/List;)V
-    .locals 2
-
-    .prologue
-    .line 272
-    if-nez p0, :cond_0
-
-    .line 273
-    const-string/jumbo v0, "!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy"
-
-    const-string/jumbo v1, "sync address book failed, null info list"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 277
-    :goto_0
-    return-void
-
-    .line 276
-    :cond_0
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zq()Lcom/tencent/mm/modelfriend/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/modelfriend/c;->q(Ljava/util/List;)Z
-
-    goto :goto_0
-.end method
-
-.method public static v(Ljava/util/List;)V
-    .locals 2
-
-    .prologue
-    .line 280
-    if-nez p0, :cond_0
-
-    .line 281
-    const-string/jumbo v0, "!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy"
-
-    const-string/jumbo v1, "set uploaded mobile contact failed, null info list"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 285
-    :goto_0
-    return-void
-
-    .line 284
-    :cond_0
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zq()Lcom/tencent/mm/modelfriend/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/modelfriend/c;->s(Ljava/util/List;)Z
-
-    goto :goto_0
-.end method
-
-.method public static yA()V
+.method public static yN()V
     .locals 3
 
     .prologue
     .line 45
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -442,35 +441,35 @@
     return-void
 .end method
 
-.method public static yB()Z
+.method public static yO()Z
     .locals 4
 
     .prologue
     const/4 v3, 0x1
 
     .line 50
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 51
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -486,7 +485,7 @@
 
     check-cast v0, Ljava/lang/Boolean;
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v0
 
@@ -496,11 +495,11 @@
 
     .line 54
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy"
+    const-string/jumbo v0, "MicroMsg.FriendLogic"
 
     const-string/jumbo v1, "[arthurdan.UploadPhone] Notice!!!! MMCore.getAccStg() is null!!!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 55
     const/4 v0, 0x0
@@ -508,7 +507,7 @@
     goto :goto_0
 .end method
 
-.method public static yC()Z
+.method public static yP()Z
     .locals 7
 
     .prologue
@@ -517,12 +516,12 @@
     const/4 v2, 0x0
 
     .line 61
-    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yD()Lcom/tencent/mm/modelfriend/m$a;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yQ()Lcom/tencent/mm/modelfriend/m$a;
 
     move-result-object v0
 
     .line 62
-    const-string/jumbo v3, "!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy"
+    const-string/jumbo v3, "MicroMsg.FriendLogic"
 
     const-string/jumbo v4, "isTipInMobileFriend, state %s"
 
@@ -534,19 +533,19 @@
 
     aput-object v6, v5, v2
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 63
-    sget-object v3, Lcom/tencent/mm/modelfriend/m$a;->bMB:Lcom/tencent/mm/modelfriend/m$a;
+    sget-object v3, Lcom/tencent/mm/modelfriend/m$a;->bFV:Lcom/tencent/mm/modelfriend/m$a;
 
     if-ne v0, v3, :cond_1
 
     .line 65
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -562,12 +561,12 @@
 
     check-cast v0, Ljava/lang/Boolean;
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Boolean;Z)Z
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/be;->a(Ljava/lang/Boolean;Z)Z
 
     move-result v0
 
     .line 66
-    const-string/jumbo v3, "!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy"
+    const-string/jumbo v3, "MicroMsg.FriendLogic"
 
     const-string/jumbo v4, "USERINFO_UPLOAD_ADDR_LOOK_UP %B"
 
@@ -579,7 +578,7 @@
 
     aput-object v6, v5, v2
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 67
     if-nez v0, :cond_0
@@ -603,7 +602,7 @@
     goto :goto_0
 .end method
 
-.method public static yD()Lcom/tencent/mm/modelfriend/m$a;
+.method public static yQ()Lcom/tencent/mm/modelfriend/m$a;
     .locals 7
 
     .prologue
@@ -611,11 +610,11 @@
 
     .line 77
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -630,11 +629,11 @@
     check-cast v0, Ljava/lang/String;
 
     .line 78
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v1
 
@@ -649,12 +648,12 @@
     check-cast v1, Ljava/lang/String;
 
     .line 80
-    invoke-static {}, Lcom/tencent/mm/model/h;->sE()Z
+    invoke-static {}, Lcom/tencent/mm/model/h;->sG()Z
 
     move-result v3
 
     .line 82
-    const-string/jumbo v4, "!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy"
+    const-string/jumbo v4, "MicroMsg.FriendLogic"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -672,7 +671,7 @@
 
     move-result-object v5
 
-    invoke-static {}, Lcom/tencent/mm/model/h;->sg()I
+    invoke-static {}, Lcom/tencent/mm/model/h;->si()I
 
     move-result v6
 
@@ -684,7 +683,7 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 84
     if-eqz v0, :cond_0
@@ -718,7 +717,7 @@
     if-nez v1, :cond_4
 
     .line 91
-    sget-object v0, Lcom/tencent/mm/modelfriend/m$a;->bMz:Lcom/tencent/mm/modelfriend/m$a;
+    sget-object v0, Lcom/tencent/mm/modelfriend/m$a;->bFT:Lcom/tencent/mm/modelfriend/m$a;
 
     .line 104
     :goto_0
@@ -731,7 +730,7 @@
     if-nez v1, :cond_5
 
     .line 94
-    sget-object v0, Lcom/tencent/mm/modelfriend/m$a;->bMA:Lcom/tencent/mm/modelfriend/m$a;
+    sget-object v0, Lcom/tencent/mm/modelfriend/m$a;->bFU:Lcom/tencent/mm/modelfriend/m$a;
 
     goto :goto_0
 
@@ -740,13 +739,13 @@
     if-eqz v3, :cond_6
 
     .line 98
-    sget-object v0, Lcom/tencent/mm/modelfriend/m$a;->bMB:Lcom/tencent/mm/modelfriend/m$a;
+    sget-object v0, Lcom/tencent/mm/modelfriend/m$a;->bFV:Lcom/tencent/mm/modelfriend/m$a;
 
     goto :goto_0
 
     .line 100
     :cond_6
-    sget-object v0, Lcom/tencent/mm/modelfriend/m$a;->bMC:Lcom/tencent/mm/modelfriend/m$a;
+    sget-object v0, Lcom/tencent/mm/modelfriend/m$a;->bFW:Lcom/tencent/mm/modelfriend/m$a;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -756,21 +755,21 @@
     :catch_0
     move-exception v0
 
-    sget-object v0, Lcom/tencent/mm/modelfriend/m$a;->bMz:Lcom/tencent/mm/modelfriend/m$a;
+    sget-object v0, Lcom/tencent/mm/modelfriend/m$a;->bFT:Lcom/tencent/mm/modelfriend/m$a;
 
     goto :goto_0
 .end method
 
-.method public static yE()V
+.method public static yR()V
     .locals 3
 
     .prologue
     .line 109
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -781,11 +780,11 @@
     invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
     .line 110
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -799,16 +798,16 @@
     return-void
 .end method
 
-.method public static yF()Ljava/lang/String;
+.method public static yS()Ljava/lang/String;
     .locals 3
 
     .prologue
     .line 114
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -825,7 +824,7 @@
     return-object v0
 .end method
 
-.method public static yG()Z
+.method public static yT()Z
     .locals 5
 
     .prologue
@@ -834,7 +833,7 @@
     const/4 v0, 0x0
 
     .line 118
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v2
 
@@ -842,7 +841,7 @@
     if-nez v2, :cond_0
 
     .line 120
-    const-string/jumbo v3, "!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy"
+    const-string/jumbo v3, "MicroMsg.FriendLogic"
 
     const-string/jumbo v4, "canSyncAddrBook isAccHasReady: %b"
 
@@ -854,7 +853,7 @@
 
     aput-object v2, v1, v0
 
-    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 142
     :goto_0
@@ -862,11 +861,11 @@
 
     .line 124
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yD()Lcom/tencent/mm/modelfriend/m$a;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yQ()Lcom/tencent/mm/modelfriend/m$a;
 
     move-result-object v2
 
-    sget-object v3, Lcom/tencent/mm/modelfriend/m$a;->bMB:Lcom/tencent/mm/modelfriend/m$a;
+    sget-object v3, Lcom/tencent/mm/modelfriend/m$a;->bFV:Lcom/tencent/mm/modelfriend/m$a;
 
     if-ne v2, v3, :cond_1
 
@@ -877,7 +876,7 @@
     if-nez v2, :cond_2
 
     .line 132
-    const-string/jumbo v2, "!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy"
+    const-string/jumbo v2, "MicroMsg.FriendLogic"
 
     const-string/jumbo v3, "canSyncAddrBook userBindOpMobile: %b"
 
@@ -889,7 +888,7 @@
 
     aput-object v4, v1, v0
 
-    invoke-static {v2, v3, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -901,7 +900,7 @@
 
     .line 136
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yB()Z
+    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yO()Z
 
     move-result v2
 
@@ -909,7 +908,7 @@
     if-nez v2, :cond_3
 
     .line 138
-    const-string/jumbo v3, "!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy"
+    const-string/jumbo v3, "MicroMsg.FriendLogic"
 
     const-string/jumbo v4, "canSyncAddrBook isUploadContact: %b"
 
@@ -921,7 +920,7 @@
 
     aput-object v2, v1, v0
 
-    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -932,30 +931,30 @@
     goto :goto_0
 .end method
 
-.method public static yH()V
+.method public static yU()V
     .locals 5
 
     .prologue
     const/4 v4, 0x0
 
     .line 188
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zq()Lcom/tencent/mm/modelfriend/c;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zD()Lcom/tencent/mm/modelfriend/c;
 
     move-result-object v0
 
-    iget-object v1, v0, Lcom/tencent/mm/modelfriend/c;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v1, v0, Lcom/tencent/mm/modelfriend/c;->bvG:Lcom/tencent/mm/bc/g;
 
     const-string/jumbo v2, "addr_upload2"
 
-    invoke-virtual {v1, v2, v4, v4}, Lcom/tencent/mm/az/g;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-virtual {v1, v2, v4, v4}, Lcom/tencent/mm/bc/g;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v1
 
-    const-string/jumbo v2, "!44@/B4Tb64lLpL3lTzROgXSiaEB/XXrrgblbOVxZH2OfNk="
+    const-string/jumbo v2, "MicroMsg.AddrUploadStorage"
 
     const-string/jumbo v3, "delete addr_upload2"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-lez v1, :cond_0
 
@@ -968,7 +967,7 @@
     return-void
 .end method
 
-.method public static yI()V
+.method public static yV()V
     .locals 6
 
     .prologue
@@ -978,11 +977,11 @@
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
     .line 196
-    invoke-static {}, Lcom/tencent/mm/am/l;->DK()Lcom/tencent/mm/am/g;
+    invoke-static {}, Lcom/tencent/mm/ap/l;->Eb()Lcom/tencent/mm/ap/g;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/am/g;->DD()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/tencent/mm/ap/g;->DU()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -1003,20 +1002,20 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/am/f;
+    check-cast v0, Lcom/tencent/mm/ap/f;
 
     .line 198
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/tencent/mm/model/c;->rs()Lcom/tencent/mm/storage/ah;
+    invoke-virtual {v3}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/aj;
 
     move-result-object v3
 
-    iget-object v4, v0, Lcom/tencent/mm/am/f;->field_msgContent:Ljava/lang/String;
+    iget-object v4, v0, Lcom/tencent/mm/ap/f;->field_msgContent:Ljava/lang/String;
 
-    invoke-virtual {v3, v4}, Lcom/tencent/mm/storage/ah;->Fj(Ljava/lang/String;)Lcom/tencent/mm/storage/ag$b;
+    invoke-virtual {v3, v4}, Lcom/tencent/mm/storage/aj;->HA(Ljava/lang/String;)Lcom/tencent/mm/storage/ai$b;
 
     move-result-object v3
 
@@ -1024,13 +1023,13 @@
     if-eqz v3, :cond_0
 
     .line 200
-    iget v4, v3, Lcom/tencent/mm/storage/ag$b;->asc:I
+    iget v4, v3, Lcom/tencent/mm/storage/ai$b;->scene:I
 
     const/16 v5, 0xa
 
     if-eq v4, v5, :cond_1
 
-    iget v3, v3, Lcom/tencent/mm/storage/ag$b;->asc:I
+    iget v3, v3, Lcom/tencent/mm/storage/ai$b;->scene:I
 
     const/16 v4, 0xb
 
@@ -1038,7 +1037,7 @@
 
     .line 203
     :cond_1
-    iget-object v0, v0, Lcom/tencent/mm/am/f;->field_talker:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/ap/f;->field_talker:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
@@ -1046,7 +1045,7 @@
 
     .line 207
     :cond_2
-    const-string/jumbo v0, "!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy"
+    const-string/jumbo v0, "MicroMsg.FriendLogic"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1066,7 +1065,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 209
     invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -1088,7 +1087,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 211
-    invoke-static {v0}, Lcom/tencent/mm/am/e;->jy(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/ap/e;->jR(Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -1097,22 +1096,31 @@
     return-void
 .end method
 
-.method public static yJ()Ljava/util/List;
+.method public static yW()Ljava/util/List;
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 288
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zq()Lcom/tencent/mm/modelfriend/c;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zD()Lcom/tencent/mm/modelfriend/c;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/c;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/c;->bvG:Lcom/tencent/mm/bc/g;
 
     const-string/jumbo v1, "select addr_upload2.md5 from addr_upload2 where addr_upload2.uploadtime = 0 AND addr_upload2.type = 1"
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/az/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/bc/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
@@ -1143,22 +1151,31 @@
     return-object v1
 .end method
 
-.method public static yK()Ljava/util/List;
+.method public static yX()Ljava/util/List;
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 292
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zq()Lcom/tencent/mm/modelfriend/c;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zD()Lcom/tencent/mm/modelfriend/c;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/c;->bCw:Lcom/tencent/mm/az/g;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/c;->bvG:Lcom/tencent/mm/bc/g;
 
     const-string/jumbo v1, "select addr_upload2.moblie from addr_upload2 where addr_upload2.uploadtime = 0 AND addr_upload2.type = 0"
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/az/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/bc/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
@@ -1180,11 +1197,11 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/pluginsdk/a;->sy(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/pluginsdk/a;->tY(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/pluginsdk/a;->zo(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/pluginsdk/a;->Bk(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -1198,4 +1215,42 @@
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     return-object v1
+.end method
+
+.method public static z(Ljava/util/List;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/modelfriend/b;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 272
+    if-nez p0, :cond_0
+
+    .line 273
+    const-string/jumbo v0, "MicroMsg.FriendLogic"
+
+    const-string/jumbo v1, "sync address book failed, null info list"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 277
+    :goto_0
+    return-void
+
+    .line 276
+    :cond_0
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zD()Lcom/tencent/mm/modelfriend/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/modelfriend/c;->v(Ljava/util/List;)Z
+
+    goto :goto_0
 .end method

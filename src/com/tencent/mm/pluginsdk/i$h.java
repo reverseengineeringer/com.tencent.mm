@@ -2,17 +2,17 @@ package com.tencent.mm.pluginsdk;
 
 public abstract interface i$h
 {
-  public abstract boolean aDs();
+  public abstract boolean aGR();
   
-  public abstract String aDt();
+  public abstract String aGS();
   
-  public abstract String aDu();
+  public abstract String aGT();
   
-  public abstract boolean aDv();
+  public abstract boolean aGU();
   
-  public abstract String aDw();
+  public abstract String aGV();
   
-  public abstract String aDx();
+  public abstract String aGW();
 }
 
 /* Location:

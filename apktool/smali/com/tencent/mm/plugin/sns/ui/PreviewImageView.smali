@@ -15,23 +15,62 @@
 # instance fields
 .field private final context:Landroid/content/Context;
 
-.field private eEr:Ljava/util/List;
+.field private eKF:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private gZU:Landroid/widget/TableLayout;
+.field private hnm:Landroid/widget/TableLayout;
 
-.field private final gZV:Ljava/util/Map;
+.field private final hnn:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Integer;",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private final gZW:Ljava/util/Map;
+.field private final hno:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Integer;",
+            "Landroid/widget/TableRow;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private final gZX:I
+.field private final hnp:I
 
-.field gZY:Ljava/util/HashMap;
+.field hnq:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Landroid/graphics/Bitmap;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private gZZ:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;
+.field hnr:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;
 
-.field private haa:Z
+.field hns:Z
 
-.field hab:Z
+.field hnt:Z
 
 
 # direct methods
@@ -47,43 +86,43 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->eEr:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->eKF:Ljava/util/List;
 
     .line 39
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZV:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hnn:Ljava/util/Map;
 
     .line 40
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZW:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hno:Ljava/util/Map;
 
     .line 41
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZY:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hnq:Ljava/util/HashMap;
 
     .line 43
     const/4 v0, 0x4
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZX:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hnp:I
 
     .line 46
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->haa:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hns:Z
 
     .line 116
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hab:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hnt:Z
 
     .line 56
     iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->context:Landroid/content/Context;
@@ -107,43 +146,43 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->eEr:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->eKF:Ljava/util/List;
 
     .line 39
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZV:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hnn:Ljava/util/Map;
 
     .line 40
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZW:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hno:Ljava/util/Map;
 
     .line 41
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZY:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hnq:Ljava/util/HashMap;
 
     .line 43
     const/4 v0, 0x4
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZX:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hnp:I
 
     .line 46
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->haa:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hns:Z
 
     .line 116
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hab:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hnt:Z
 
     .line 50
     iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->context:Landroid/content/Context;
@@ -160,7 +199,7 @@
 
     .prologue
     .line 31
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hab:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hnt:Z
 
     return v0
 .end method
@@ -170,7 +209,7 @@
 
     .prologue
     .line 31
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZY:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hnq:Ljava/util/HashMap;
 
     return-object v0
 .end method
@@ -186,7 +225,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0463
+    const v1, 0x7f030598
 
     const/4 v2, 0x1
 
@@ -195,7 +234,7 @@
     move-result-object v0
 
     .line 87
-    const v1, 0x7f0700c1
+    const v1, 0x7f1000fe
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -203,7 +242,7 @@
 
     check-cast v0, Landroid/widget/TableLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZU:Landroid/widget/TableLayout;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hnm:Landroid/widget/TableLayout;
 
     .line 88
     return-void
@@ -211,44 +250,17 @@
 
 
 # virtual methods
-.method public getCount()I
-    .locals 1
-
-    .prologue
-    .line 91
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZV:Ljava/util/Map;
-
-    invoke-interface {v0}, Ljava/util/Map;->size()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public setImageClick(Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;)V
-    .locals 0
-
-    .prologue
-    .line 113
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZZ:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;
-
-    .line 114
-    return-void
-.end method
-
-.method public setIsShowAddImage(Z)V
-    .locals 0
-
-    .prologue
-    .line 61
-    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->haa:Z
-
-    .line 62
-    return-void
-.end method
-
-.method public final setList$22875ea3(Ljava/util/List;)V
+.method public final bg(Ljava/util/List;)V
     .locals 12
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
     .line 128
@@ -265,13 +277,13 @@
 
     .line 132
     :cond_1
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->eEr:Ljava/util/List;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->eKF:Ljava/util/List;
 
     .line 133
     const/4 v4, 0x0
 
     .line 134
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZU:Landroid/widget/TableLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hnm:Landroid/widget/TableLayout;
 
     invoke-virtual {v0}, Landroid/widget/TableLayout;->removeAllViews()V
 
@@ -291,7 +303,7 @@
     if-ge v4, v10, :cond_0
 
     .line 137
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZW:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hno:Ljava/util/Map;
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -311,7 +323,7 @@
 
     invoke-direct {v0, v1}, Landroid/widget/TableRow;-><init>(Landroid/content/Context;)V
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZW:Ljava/util/Map;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hno:Ljava/util/Map;
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -354,13 +366,13 @@
     if-lez v1, :cond_2
 
     .line 193
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZU:Landroid/widget/TableLayout;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hnm:Landroid/widget/TableLayout;
 
     invoke-virtual {v1, v2}, Landroid/widget/TableLayout;->addView(Landroid/view/View;)V
 
     .line 195
     :cond_2
-    const-string/jumbo v1, "!44@/B4Tb64lLpK/FntsrpdSiMQ6xRFzIQf83tQUDWHggpg="
+    const-string/jumbo v1, "MicroMsg.PreviewImageView"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -370,11 +382,11 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    sub-long/2addr v3, v8
+    sub-long/2addr v4, v8
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -382,7 +394,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 136
     add-int/lit8 v1, v7, 0x1
@@ -395,7 +407,7 @@
 
     .line 145
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZV:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hnn:Ljava/util/Map;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -411,7 +423,7 @@
 
     iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->context:Landroid/content/Context;
 
-    const v1, 0x7f0a0429
+    const v1, 0x7f030599
 
     const/4 v3, 0x0
 
@@ -419,7 +431,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZV:Ljava/util/Map;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hnn:Ljava/util/Map;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -442,7 +454,7 @@
 
     .line 152
     :goto_4
-    const v0, 0x7f070d65
+    const v0, 0x7f100931
 
     invoke-virtual {v6, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -456,12 +468,12 @@
     if-ne v4, v1, :cond_8
 
     .line 154
-    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->haa:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hns:Z
 
     if-eqz v1, :cond_6
 
     .line 155
-    const v1, 0x7f0404a4
+    const v1, 0x7f02073b
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
@@ -470,7 +482,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f0b0916
+    const v3, 0x7f08123c
 
     invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -485,7 +497,7 @@
 
     .line 173
     :goto_5
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZZ:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hnr:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;
 
     if-eqz v0, :cond_5
 
@@ -504,9 +516,9 @@
     invoke-virtual {v6, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     .line 176
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZZ:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hnr:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;->hac:Landroid/view/View$OnClickListener;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;->hnu:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v6, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -568,7 +580,7 @@
 
     move-result-object v1
 
-    const v11, 0x7f0b0917
+    const v11, 0x7f081279
 
     invoke-virtual {v1, v11}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -577,7 +589,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 164
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZY:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hnq:Ljava/util/HashMap;
 
     invoke-virtual {v1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -586,18 +598,18 @@
     check-cast v1, Landroid/graphics/Bitmap;
 
     .line 165
-    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/data/h;->d(Landroid/graphics/Bitmap;)Z
+    invoke-static {v1}, Lcom/tencent/mm/plugin/sns/data/i;->g(Landroid/graphics/Bitmap;)Z
 
     move-result v11
 
     if-nez v11, :cond_9
 
     .line 166
-    const-string/jumbo v1, "!44@/B4Tb64lLpK/FntsrpdSiMQ6xRFzIQf83tQUDWHggpg="
+    const-string/jumbo v1, "MicroMsg.PreviewImageView"
 
     const-string/jumbo v11, "bm is null"
 
-    invoke-static {v1, v11}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v11}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 167
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;
@@ -614,7 +626,7 @@
 
     aput-object v11, v0, v3
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->h([Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->m([Ljava/lang/Object;)Z
 
     goto :goto_5
 
@@ -633,9 +645,9 @@
     invoke-virtual {v6, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     .line 180
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->gZZ:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->hnr:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;->hac:Landroid/view/View$OnClickListener;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$a;->hnu:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v6, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

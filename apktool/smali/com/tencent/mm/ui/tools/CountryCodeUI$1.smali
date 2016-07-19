@@ -16,9 +16,19 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/tencent/mm/ui/tools/d;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic luc:Lcom/tencent/mm/ui/tools/CountryCodeUI;
+.field final synthetic lVe:Lcom/tencent/mm/ui/tools/CountryCodeUI;
 
 
 # direct methods
@@ -27,7 +37,7 @@
 
     .prologue
     .line 85
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$1;->luc:Lcom/tencent/mm/ui/tools/CountryCodeUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$1;->lVe:Lcom/tencent/mm/ui/tools/CountryCodeUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,9 +55,9 @@
 
     check-cast p2, Lcom/tencent/mm/ui/tools/d;
 
-    iget-object v0, p1, Lcom/tencent/mm/ui/tools/d;->eCl:Ljava/lang/String;
+    iget-object v0, p1, Lcom/tencent/mm/ui/tools/d;->eIK:Ljava/lang/String;
 
-    iget-object v1, p2, Lcom/tencent/mm/ui/tools/d;->eCl:Ljava/lang/String;
+    iget-object v1, p2, Lcom/tencent/mm/ui/tools/d;->eIK:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 

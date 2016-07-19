@@ -4,7 +4,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.plugin.report.service.g;
 
 public class BluetoothStateReceiver
   extends BroadcastReceiver
@@ -17,7 +17,7 @@ public class BluetoothStateReceiver
       if (paramContext.getState() != 12) {
         break label55;
       }
-      h.fUJ.g(11921, new Object[] { Integer.valueOf(1) });
+      g.gdY.h(11921, new Object[] { Integer.valueOf(1) });
     }
     for (;;)
     {
@@ -25,7 +25,7 @@ public class BluetoothStateReceiver
       return;
       label55:
       if (paramContext.getState() == 10) {
-        h.fUJ.g(11921, new Object[] { Integer.valueOf(0) });
+        g.gdY.h(11921, new Object[] { Integer.valueOf(0) });
       }
     }
   }

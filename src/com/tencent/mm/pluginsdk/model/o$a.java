@@ -2,9 +2,9 @@ package com.tencent.mm.pluginsdk.model;
 
 public final class o$a
 {
-  public int iAB = -1;
-  public int iAC = -1;
-  public String iAD = "";
+  public int iXb = -1;
+  public int iXc = -1;
+  public String iXd = "";
 }
 
 /* Location:

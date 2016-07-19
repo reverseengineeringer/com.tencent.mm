@@ -7,17 +7,17 @@ final class SnsUserUI$a$1
 {
   SnsUserUI$a$1(SnsUserUI.a parama) {}
   
-  public final void eu(int paramInt)
+  public final void fg(int paramInt)
   {
     switch (paramInt)
     {
     default: 
       return;
     case 0: 
-      hmf.hme.lZ(1);
+      SnsUserUI.k(hCk.hCj).nB(1);
       return;
     }
-    SnsUserUI.d(hmf.hme);
+    SnsUserUI.l(hCk.hCj);
   }
 }
 

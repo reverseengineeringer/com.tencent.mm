@@ -19,7 +19,7 @@ public class PreferenceCategory
   public PreferenceCategory(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(2131363176);
+    setLayoutResource(2130903984);
   }
 }
 

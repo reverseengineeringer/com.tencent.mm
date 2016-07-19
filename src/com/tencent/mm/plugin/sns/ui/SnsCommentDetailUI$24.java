@@ -18,7 +18,7 @@ final class SnsCommentDetailUI$24
       int i = ((Integer)paramView.getTag()).intValue();
       paramView = new Intent();
       paramView.putExtra("sns_label_sns_info", i);
-      a.coa.y(paramView, hda);
+      a.cjo.y(paramView, hrN);
       return;
     }
     catch (Exception paramView) {}

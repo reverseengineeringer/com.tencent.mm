@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic bvy:Lcom/tencent/mm/dbsupport/newcursor/f;
+.field final synthetic bkr:Lcom/tencent/mm/dbsupport/newcursor/f;
 
 
 # direct methods
@@ -23,10 +23,9 @@
     .locals 0
 
     .prologue
-    .line 1
-    iput-object p1, p0, Lcom/tencent/mm/dbsupport/newcursor/f$1;->bvy:Lcom/tencent/mm/dbsupport/newcursor/f;
+    .line 13
+    iput-object p1, p0, Lcom/tencent/mm/dbsupport/newcursor/f$1;->bkr:Lcom/tencent/mm/dbsupport/newcursor/f;
 
-    .line 16
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
 
     return-void
@@ -38,12 +37,12 @@
     .locals 1
 
     .prologue
-    .line 22
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f$1;->bvy:Lcom/tencent/mm/dbsupport/newcursor/f;
+    .line 19
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f$1;->bkr:Lcom/tencent/mm/dbsupport/newcursor/f;
 
-    invoke-static {v0}, Lcom/tencent/mm/dbsupport/newcursor/f;->a(Lcom/tencent/mm/dbsupport/newcursor/f;)V
+    invoke-static {v0}, Lcom/tencent/mm/dbsupport/newcursor/f;->a(Lcom/tencent/mm/dbsupport/newcursor/f;)I
 
-    .line 23
+    .line 20
     return-void
 .end method
 
@@ -51,11 +50,11 @@
     .locals 1
 
     .prologue
-    .line 27
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f$1;->bvy:Lcom/tencent/mm/dbsupport/newcursor/f;
+    .line 24
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/f$1;->bkr:Lcom/tencent/mm/dbsupport/newcursor/f;
 
-    invoke-static {v0}, Lcom/tencent/mm/dbsupport/newcursor/f;->a(Lcom/tencent/mm/dbsupport/newcursor/f;)V
+    invoke-static {v0}, Lcom/tencent/mm/dbsupport/newcursor/f;->b(Lcom/tencent/mm/dbsupport/newcursor/f;)I
 
-    .line 28
+    .line 25
     return-void
 .end method

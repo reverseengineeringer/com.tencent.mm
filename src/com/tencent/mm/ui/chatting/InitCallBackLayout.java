@@ -9,7 +9,7 @@ public class InitCallBackLayout
   extends FrameLayout
 {
   private boolean hasDrawed;
-  private ea lcq;
+  public eb lCH;
   
   public InitCallBackLayout(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -22,15 +22,10 @@ public class InitCallBackLayout
     if (!hasDrawed)
     {
       hasDrawed = true;
-      if (lcq != null) {
-        lcq.kw();
+      if (lCH != null) {
+        lCH.iZ();
       }
     }
-  }
-  
-  public void setListener(ea paramea)
-  {
-    lcq = paramea;
   }
 }
 

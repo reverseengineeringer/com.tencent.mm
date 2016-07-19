@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field ayY:I
+.field ala:I
 
-.field final synthetic jYM:Lcom/tencent/mm/sdk/h/j;
+.field final synthetic kzj:Lcom/tencent/mm/sdk/h/j;
 
-.field jYN:Lcom/tencent/mm/sdk/h/j;
+.field kzk:Lcom/tencent/mm/sdk/h/j;
 
 .field obj:Ljava/lang/Object;
 
@@ -30,18 +30,18 @@
 
     .prologue
     .line 24
-    iput-object p1, p0, Lcom/tencent/mm/sdk/h/j$a;->jYM:Lcom/tencent/mm/sdk/h/j;
+    iput-object p1, p0, Lcom/tencent/mm/sdk/h/j$a;->kzj:Lcom/tencent/mm/sdk/h/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 25
-    iput p2, p0, Lcom/tencent/mm/sdk/h/j$a;->ayY:I
+    iput p2, p0, Lcom/tencent/mm/sdk/h/j$a;->ala:I
 
     .line 26
     iput-object p4, p0, Lcom/tencent/mm/sdk/h/j$a;->obj:Ljava/lang/Object;
 
     .line 27
-    iput-object p3, p0, Lcom/tencent/mm/sdk/h/j$a;->jYN:Lcom/tencent/mm/sdk/h/j;
+    iput-object p3, p0, Lcom/tencent/mm/sdk/h/j$a;->kzk:Lcom/tencent/mm/sdk/h/j;
 
     .line 28
     return-void

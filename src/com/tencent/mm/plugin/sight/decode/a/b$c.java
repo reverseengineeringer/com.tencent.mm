@@ -1,37 +1,37 @@
 package com.tencent.mm.plugin.sight.decode.a;
 
-import com.tencent.mm.an.j;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.aq.n;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class b$c
   implements Runnable
 {
-  volatile boolean gxQ = false;
-  int gxT;
-  b.b gxU;
+  volatile boolean foD = false;
+  int gEq;
+  b.b gEr;
   
   private b$c(b paramb) {}
   
   public final void run()
   {
-    if (gxQ)
+    if (foD)
     {
-      u.e("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "#0x%x-#0x%x match stop draw", new Object[] { Integer.valueOf(gxL.hashCode()), Integer.valueOf(hashCode()) });
+      v.e("MicroMsg.SightPlayController", "#0x%x-#0x%x match stop draw", new Object[] { Integer.valueOf(gEj.hashCode()), Integer.valueOf(hashCode()) });
       return;
     }
-    gxL.l(b.C(gxL));
-    if (b.s(gxL) == 0L)
+    gEj.q(b.C(gEj));
+    if (b.s(gEj) == 0L)
     {
-      j.b(gxU, 0L);
+      n.b(gEr, 0L);
       return;
     }
-    long l = b.v(gxL) - (System.currentTimeMillis() - b.s(gxL));
+    long l = b.v(gEj) - (System.currentTimeMillis() - b.s(gEj));
     if (l > 0L)
     {
-      j.b(gxU, l);
+      n.b(gEr, l);
       return;
     }
-    j.b(gxU, 0L);
+    n.b(gEr, 0L);
   }
 }
 

@@ -15,11 +15,11 @@
 
 
 # virtual methods
-.method public abstract a(Ljava/lang/String;ILcom/tencent/mm/modelcdntran/keep_ProgressInfo;Lcom/tencent/mm/modelcdntran/keep_SceneResult;)I
+.method public abstract a(Ljava/lang/String;ILcom/tencent/mm/modelcdntran/keep_ProgressInfo;Lcom/tencent/mm/modelcdntran/keep_SceneResult;Z)I
 .end method
 
 .method public abstract a(Ljava/lang/String;Ljava/io/ByteArrayOutputStream;)V
 .end method
 
-.method public abstract i(Ljava/lang/String;[B)[B
+.method public abstract h(Ljava/lang/String;[B)[B
 .end method

@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field private bxg:Landroid/content/SharedPreferences;
+.field private bpi:Landroid/content/SharedPreferences;
 
-.field private cpb:Lcom/tencent/mm/ui/base/preference/f;
+.field private ckp:Lcom/tencent/mm/ui/base/preference/f;
 
 .field protected filePath:Ljava/lang/String;
 
@@ -22,12 +22,12 @@
     return-void
 .end method
 
-.method private Kr()V
+.method private Lb()V
     .locals 4
 
     .prologue
     .line 284
-    sget-object v0, Lcom/tencent/mm/compatible/util/d;->buk:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/compatible/util/d;->biK:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -62,7 +62,7 @@
     if-nez v0, :cond_0
 
     .line 286
-    const v0, 0x7f0b00da
+    const v0, 0x7f081028
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->getString(I)Ljava/lang/String;
 
@@ -100,14 +100,14 @@
     const/4 v6, 0x1
 
     .line 93
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tH()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 94
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tJ()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tK()Z
 
     .line 97
     :cond_0
@@ -115,11 +115,11 @@
 
     .line 173
     :pswitch_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno="
+    const-string/jumbo v0, "MicroMsg.SettingSnsBackgroundUI"
 
     const-string/jumbo v1, "onActivityResult: not found this requestCode"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 175
     :cond_1
@@ -128,18 +128,18 @@
 
     .line 101
     :pswitch_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno="
+    const-string/jumbo v0, "MicroMsg.SettingSnsBackgroundUI"
 
     const-string/jumbo v1, "onActivityResult CONTEXT_MENU_TAKE_PICTURE"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 103
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayW()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBx()Ljava/lang/String;
 
     move-result-object v1
 
@@ -198,7 +198,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/a/g;->j([B)Ljava/lang/String;
 
     move-result-object v1
 
@@ -207,7 +207,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayW()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBx()Ljava/lang/String;
 
     move-result-object v3
 
@@ -229,7 +229,7 @@
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 118
-    sget-object v1, Lcom/tencent/mm/plugin/sns/b/a;->coa:Lcom/tencent/mm/pluginsdk/g;
+    sget-object v1, Lcom/tencent/mm/plugin/sns/b/a;->cjo:Lcom/tencent/mm/pluginsdk/g;
 
     invoke-interface {v1, p0, v0, v5}, Lcom/tencent/mm/pluginsdk/g;->a(Landroid/app/Activity;Landroid/content/Intent;I)V
 
@@ -237,11 +237,11 @@
 
     .line 125
     :pswitch_2
-    const-string/jumbo v0, "!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno="
+    const-string/jumbo v0, "MicroMsg.SettingSnsBackgroundUI"
 
     const-string/jumbo v1, "onActivityResult CONTEXT_MENU_IMAGE_BROUND"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 126
     if-eqz p2, :cond_1
@@ -251,7 +251,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayW()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBx()Ljava/lang/String;
 
     move-result-object v1
 
@@ -284,9 +284,9 @@
     invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 136
-    sget-object v0, Lcom/tencent/mm/plugin/sns/b/a;->coa:Lcom/tencent/mm/pluginsdk/g;
+    sget-object v0, Lcom/tencent/mm/plugin/sns/b/a;->cjo:Lcom/tencent/mm/pluginsdk/g;
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayW()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBx()Ljava/lang/String;
 
     move-result-object v4
 
@@ -304,26 +304,26 @@
 
     .line 150
     :pswitch_3
-    const-string/jumbo v0, "!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno="
+    const-string/jumbo v0, "MicroMsg.SettingSnsBackgroundUI"
 
     const-string/jumbo v1, "onActivityResult REQUEST_CODE_IMAGE_BROUND_SEND_COMFIRM"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 151
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$2;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$2;-><init>(Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
     .line 157
     if-eqz p2, :cond_1
@@ -343,7 +343,7 @@
     if-eqz v0, :cond_1
 
     .line 164
-    const-string/jumbo v0, "!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno="
+    const-string/jumbo v0, "MicroMsg.SettingSnsBackgroundUI"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -361,10 +361,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 166
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azf()Lcom/tencent/mm/plugin/sns/d/as;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBF()Lcom/tencent/mm/plugin/sns/e/ar;
 
     move-result-object v0
 
@@ -374,21 +374,21 @@
 
     invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
 
-    new-instance v3, Lcom/tencent/mm/plugin/sns/data/g;
+    new-instance v3, Lcom/tencent/mm/plugin/sns/data/h;
 
     const/4 v4, 0x2
 
-    invoke-direct {v3, v1, v4}, Lcom/tencent/mm/plugin/sns/data/g;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v4}, Lcom/tencent/mm/plugin/sns/data/h;-><init>(Ljava/lang/String;I)V
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/d/as;->ayN()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/ar;->aBo()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_2
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/d/as;->ayN()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/ar;->aBo()Ljava/lang/String;
 
     move-result-object v2
 
@@ -400,19 +400,19 @@
 
     if-nez v2, :cond_2
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayV()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBw()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/d/as;->ayN()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/ar;->aBo()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/plugin/sns/d/am;->bp(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/tencent/mm/plugin/sns/e/al;->bx(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/modelsfs/FileOp;->iO(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/modelsfs/FileOp;->jf(Ljava/lang/String;)Z
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -422,7 +422,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/d/as;->ayN()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/ar;->aBo()Ljava/lang/String;
 
     move-result-object v4
 
@@ -450,7 +450,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/d/as;->ayN()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/ar;->aBo()Ljava/lang/String;
 
     move-result-object v3
 
@@ -468,44 +468,44 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/modelsfs/FileOp;->o(Ljava/lang/String;Ljava/lang/String;)J
+    invoke-static {v1, v2}, Lcom/tencent/mm/modelsfs/FileOp;->n(Ljava/lang/String;Ljava/lang/String;)J
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azk()Lcom/tencent/mm/plugin/sns/h/j;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBK()Lcom/tencent/mm/plugin/sns/i/j;
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/d/as;->ayN()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/ar;->aBo()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/plugin/sns/h/j;->vr(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/h/i;
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/plugin/sns/i/j;->wD(Ljava/lang/String;)Lcom/tencent/mm/plugin/sns/i/i;
 
     move-result-object v3
 
     const-string/jumbo v4, ""
 
-    iput-object v4, v3, Lcom/tencent/mm/plugin/sns/h/i;->field_bgId:Ljava/lang/String;
+    iput-object v4, v3, Lcom/tencent/mm/plugin/sns/i/i;->field_bgId:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/plugin/sns/h/j;->c(Lcom/tencent/mm/plugin/sns/h/i;)Z
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/plugin/sns/i/j;->c(Lcom/tencent/mm/plugin/sns/i/i;)Z
 
     :cond_2
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/d/as;->azG()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/ar;->aCh()V
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/d/as;->ayN()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/ar;->aBo()Ljava/lang/String;
 
-    new-instance v0, Lcom/tencent/mm/plugin/sns/d/at;
+    new-instance v0, Lcom/tencent/mm/plugin/sns/e/as;
 
     const/4 v2, 0x7
 
-    invoke-direct {v0, v2}, Lcom/tencent/mm/plugin/sns/d/at;-><init>(I)V
+    invoke-direct {v0, v2}, Lcom/tencent/mm/plugin/sns/e/as;-><init>(I)V
 
     const-string/jumbo v2, ""
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/sns/d/at;->bt(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/sns/e/as;->bB(Ljava/lang/String;Ljava/lang/String;)Z
 
-    invoke-virtual {v0, v6}, Lcom/tencent/mm/plugin/sns/d/at;->lF(I)V
+    invoke-virtual {v0, v6}, Lcom/tencent/mm/plugin/sns/e/as;->mP(I)V
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/d/at;->commit()I
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/e/as;->commit()I
 
     .line 167
     const/4 v0, -0x1
@@ -530,21 +530,31 @@
 
 
 # virtual methods
-.method protected final Gb()V
+.method public final GK()I
+    .locals 1
+
+    .prologue
+    .line 56
+    const v0, 0x7f060051
+
+    return v0
+.end method
+
+.method protected final Gy()V
     .locals 5
 
     .prologue
     .line 211
-    const v0, 0x7f0b167b
+    const v0, 0x7f081145
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->qb(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->rR(I)V
 
     .line 213
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     const-string/jumbo v1, "settings_sns_bg_select_bg"
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/preference/f;->GB(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/preference/f;->IR(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
 
     move-result-object v0
 
@@ -554,7 +564,7 @@
     if-eqz v0, :cond_0
 
     .line 215
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->bxg:Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->bpi:Landroid/content/SharedPreferences;
 
     const-string/jumbo v2, "artist_name"
 
@@ -565,7 +575,7 @@
     move-result-object v1
 
     .line 216
-    const-string/jumbo v2, "!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno="
+    const-string/jumbo v2, "MicroMsg.SettingSnsBackgroundUI"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -581,15 +591,15 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 217
-    iput-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->hbD:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->hqt:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->aBA()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsArtistPreference;->aEx()V
 
     .line 218
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     invoke-interface {v0}, Lcom/tencent/mm/ui/base/preference/f;->notifyDataSetChanged()V
 
@@ -605,16 +615,6 @@
     return-void
 .end method
 
-.method public final Gn()I
-    .locals 1
-
-    .prologue
-    .line 56
-    const v0, 0x7f090005
-
-    return v0
-.end method
-
 .method public final a(Lcom/tencent/mm/ui/base/preference/f;Lcom/tencent/mm/ui/base/preference/Preference;)Z
     .locals 8
 
@@ -624,10 +624,10 @@
     const/4 v0, 0x0
 
     .line 234
-    iget-object v2, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
+    iget-object v2, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cgq:Ljava/lang/String;
 
     .line 235
-    const-string/jumbo v3, "!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno="
+    const-string/jumbo v3, "MicroMsg.SettingSnsBackgroundUI"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -647,7 +647,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 237
     const-string/jumbo v3, "settings_sns_bg_select_from_album"
@@ -659,7 +659,7 @@
     if-eqz v3, :cond_2
 
     .line 238
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
@@ -669,7 +669,7 @@
 
     if-nez v2, :cond_1
 
-    invoke-static {p0}, Lcom/tencent/mm/ui/base/s;->em(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/tencent/mm/ui/base/s;->ep(Landroid/content/Context;)V
 
     .line 249
     :cond_0
@@ -699,7 +699,7 @@
     if-eqz v3, :cond_4
 
     .line 242
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
@@ -709,14 +709,14 @@
 
     if-nez v2, :cond_3
 
-    invoke-static {p0}, Lcom/tencent/mm/ui/base/s;->em(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/tencent/mm/ui/base/s;->ep(Landroid/content/Context;)V
 
     goto :goto_0
 
     :cond_3
-    iget-object v2, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v2, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     const-string/jumbo v3, "android.permission.CAMERA"
 
@@ -726,11 +726,11 @@
 
     const-string/jumbo v6, ""
 
-    invoke-static {v2, v3, v4, v5, v6}, Lcom/tencent/mm/pluginsdk/g/a;->a(Landroid/app/Activity;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v2, v3, v4, v5, v6}, Lcom/tencent/mm/pluginsdk/h/a;->a(Landroid/app/Activity;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Z
 
     move-result v2
 
-    const-string/jumbo v3, "!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno="
+    const-string/jumbo v3, "MicroMsg.SettingSnsBackgroundUI"
 
     const-string/jumbo v4, "summerper checkPermission checkCamera[%b], stack[%s], activity[%s]"
 
@@ -744,7 +744,7 @@
 
     aput-object v6, v5, v0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->aVJ()Lcom/tencent/mm/sdk/platformtools/ad;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->baX()Lcom/tencent/mm/sdk/platformtools/af;
 
     move-result-object v6
 
@@ -752,17 +752,17 @@
 
     const/4 v6, 0x2
 
-    iget-object v7, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v7, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v7, v7, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v7, v7, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     aput-object v7, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     if-eqz v2, :cond_0
 
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->Kr()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->Lb()V
 
     move v0, v1
 
@@ -797,7 +797,7 @@
 
     .prologue
     .line 181
-    const-string/jumbo v0, "!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno="
+    const-string/jumbo v0, "MicroMsg.SettingSnsBackgroundUI"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -823,7 +823,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 182
     const/4 v0, -0x1
@@ -845,19 +845,19 @@
 
     .line 184
     :cond_0
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$3;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$3;-><init>(Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
     .line 207
     :cond_1
@@ -866,7 +866,7 @@
 
     .line 193
     :cond_2
-    const-string/jumbo v0, "!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno="
+    const-string/jumbo v0, "MicroMsg.SettingSnsBackgroundUI"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -874,7 +874,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v2
 
@@ -886,23 +886,23 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 194
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayQ()Z
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBr()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
     .line 195
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
     new-instance v1, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$4;
 
@@ -910,17 +910,17 @@
 
     const-wide/16 v2, 0x7d0
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/aa;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ac;->postDelayed(Ljava/lang/Runnable;J)Z
 
     goto :goto_0
 
     .line 204
     :cond_3
-    const-string/jumbo v0, "!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno="
+    const-string/jumbo v0, "MicroMsg.SettingSnsBackgroundUI"
 
     const-string/jumbo v1, "isInValid ok"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 205
     invoke-direct {p0, p1, p3}, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->b(ILandroid/content/Intent;)V
@@ -933,22 +933,22 @@
 
     .prologue
     .line 61
-    const-string/jumbo v0, "!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno="
+    const-string/jumbo v0, "MicroMsg.SettingSnsBackgroundUI"
 
     const-string/jumbo v1, "onCreate"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 62
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/base/preference/MMPreference;->onCreate(Landroid/os/Bundle;)V
 
     .line 63
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/MMPreference;->kLL:Lcom/tencent/mm/ui/base/preference/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/MMPreference;->lla:Lcom/tencent/mm/ui/base/preference/h;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     .line 64
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v0
 
@@ -958,10 +958,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->bxg:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->bpi:Landroid/content/SharedPreferences;
 
     .line 65
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->Gb()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->Gy()V
 
     .line 66
     return-void
@@ -975,11 +975,11 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/base/preference/MMPreference;->onDestroy()V
 
     .line 80
-    const-string/jumbo v0, "!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno="
+    const-string/jumbo v0, "MicroMsg.SettingSnsBackgroundUI"
 
     const-string/jumbo v1, "onDestroy"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 81
     return-void
@@ -990,11 +990,11 @@
 
     .prologue
     .line 70
-    const-string/jumbo v0, "!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno="
+    const-string/jumbo v0, "MicroMsg.SettingSnsBackgroundUI"
 
     const-string/jumbo v1, "onNewIntent"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 71
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/base/preference/MMPreference;->onNewIntent(Landroid/content/Intent;)V
@@ -1021,7 +1021,7 @@
     const/4 v5, 0x0
 
     .line 293
-    const-string/jumbo v0, "!44@/B4Tb64lLpJkrm2DE1IrT4T88qcgYt4B9tWB2iTFQno="
+    const-string/jumbo v0, "MicroMsg.SettingSnsBackgroundUI"
 
     const-string/jumbo v1, "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]"
 
@@ -1061,7 +1061,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 294
     packed-switch p1, :pswitch_data_0
@@ -1077,31 +1077,31 @@
     if-nez v0, :cond_0
 
     .line 297
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->Kr()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->Lb()V
 
     goto :goto_0
 
     .line 299
     :cond_0
-    const v0, 0x7f0b08dd
+    const v0, 0x7f080d58
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v0, 0x7f0b08d4
+    const v0, 0x7f080d62
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    const v0, 0x7f0b08d5
+    const v0, 0x7f080aa8
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v0, 0x7f0b0c09
+    const v0, 0x7f0802c3
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->getString(I)Ljava/lang/String;
 
@@ -1134,12 +1134,12 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/base/preference/MMPreference;->onResume()V
 
     .line 86
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     if-eqz v0, :cond_0
 
     .line 87
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->cpb:Lcom/tencent/mm/ui/base/preference/f;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->ckp:Lcom/tencent/mm/ui/base/preference/f;
 
     invoke-interface {v0}, Lcom/tencent/mm/ui/base/preference/f;->notifyDataSetChanged()V
 

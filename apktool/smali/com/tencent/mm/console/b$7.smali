@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lcom/tencent/mm/model/as$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/console/b;->u(Landroid/content/Context;Ljava/lang/String;)Z
+    value = Lcom/tencent/mm/console/b;->v(Landroid/content/Context;Ljava/lang/String;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,22 +17,12 @@
 .end annotation
 
 
-# instance fields
-.field final synthetic buV:Landroid/content/Context;
-
-.field final synthetic buY:Ljava/lang/String;
-
-
 # direct methods
-.method constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 422
-    iput-object p1, p0, Lcom/tencent/mm/console/b$7;->buV:Landroid/content/Context;
-
-    iput-object p2, p0, Lcom/tencent/mm/console/b$7;->buY:Ljava/lang/String;
-
+    .line 2257
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,26 +30,34 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public final a(Lcom/tencent/mm/network/e;)V
+    .locals 3
 
     .prologue
-    .line 425
-    iget-object v0, p0, Lcom/tencent/mm/console/b$7;->buV:Landroid/content/Context;
+    .line 2261
+    if-nez p1, :cond_0
 
-    const-string/jumbo v1, "clipboard"
+    .line 2265
+    :goto_0
+    return-void
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    .line 2264
+    :cond_0
+    invoke-interface {p1}, Lcom/tencent/mm/network/e;->vY()Lcom/tencent/mm/network/c;
 
     move-result-object v0
 
-    check-cast v0, Landroid/text/ClipboardManager;
+    const/4 v1, 0x0
 
-    .line 426
-    iget-object v1, p0, Lcom/tencent/mm/console/b$7;->buY:Ljava/lang/String;
+    new-array v1, v1, [B
 
-    invoke-virtual {v0, v1}, Landroid/text/ClipboardManager;->setText(Ljava/lang/CharSequence;)V
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
-    .line 427
-    return-void
+    move-result-object v2
+
+    iget v2, v2, Lcom/tencent/mm/model/c;->uin:I
+
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/network/c;->i([BI)V
+
+    goto :goto_0
 .end method

@@ -15,14 +15,14 @@
 
 
 # direct methods
-.method public static J(Ljava/lang/String;Ljava/lang/String;)Z
+.method public static G(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 3
 
     .prologue
     const/4 v0, 0x1
 
     .line 113
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -44,7 +44,7 @@
     move-result-object v1
 
     .line 117
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -69,8 +69,8 @@
     .line 138
     const-string/jumbo v1, ""
 
-    .line 140
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    .line 139
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+.field final synthetic lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 262
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$5;->lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+    .line 267
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$5;->lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,12 +36,12 @@
 
 
 # virtual methods
-.method public final SQ()V
+.method public final Uj()V
     .locals 2
 
     .prologue
-    .line 265
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$5;->lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+    .line 270
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$5;->lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->d(Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;)Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
 
@@ -49,8 +49,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 266
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$5;->lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+    .line 271
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$5;->lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->d(Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;)Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
 
@@ -58,9 +58,9 @@
 
     invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->clearFocus()V
 
-    .line 268
+    .line 273
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$5;->lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$5;->lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->h(Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;)Lcom/tencent/mm/ui/tools/r;
 
@@ -68,8 +68,8 @@
 
     if-eqz v0, :cond_1
 
-    .line 269
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$5;->lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+    .line 274
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$5;->lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->h(Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;)Lcom/tencent/mm/ui/tools/r;
 
@@ -77,18 +77,18 @@
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/r;->clearFocus()V
 
-    .line 270
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$5;->lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+    .line 275
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$5;->lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->h(Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;)Lcom/tencent/mm/ui/tools/r;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/r;->biK()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/r;->boG()V
 
-    .line 272
+    .line 277
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$5;->lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$5;->lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->i(Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;)Lcom/tencent/mm/ui/contact/LabelContainerView;
 
@@ -96,8 +96,8 @@
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/LabelContainerView;->requestFocus()Z
 
-    .line 273
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$5;->lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+    .line 278
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$5;->lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->i(Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;)Lcom/tencent/mm/ui/contact/LabelContainerView;
 
@@ -107,19 +107,19 @@
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/contact/LabelContainerView;->setVisibility(I)V
 
-    .line 274
+    .line 279
     return-void
 .end method
 
-.method public final SR()V
+.method public final Uk()V
     .locals 1
 
     .prologue
-    .line 277
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$5;->lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+    .line 282
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$5;->lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->age()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->aiI()V
 
-    .line 278
+    .line 283
     return-void
 .end method

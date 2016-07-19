@@ -1,17 +1,11 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import com.tencent.mm.kiss.d.b;
 
 final class SnsTimeLineUI$19
-  implements View.OnClickListener
+  implements b<Void>
 {
-  SnsTimeLineUI$19(SnsTimeLineUI paramSnsTimeLineUI) {}
-  
-  public final void onClick(View paramView)
-  {
-    SnsTimeLineUI.B(hkJ);
-  }
+  SnsTimeLineUI$19(SnsTimeLineUI paramSnsTimeLineUI, String paramString) {}
 }
 
 /* Location:

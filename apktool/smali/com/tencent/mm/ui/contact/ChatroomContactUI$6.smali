@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ljg:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
+.field final synthetic lJr:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 96
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$6;->ljg:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
+    .line 98
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ChatroomContactUI$6;->lJr:Lcom/tencent/mm/ui/contact/ChatroomContactUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,7 +40,7 @@
     .locals 0
 
     .prologue
-    .line 103
+    .line 105
     return-void
 .end method
 
@@ -48,6 +48,6 @@
     .locals 0
 
     .prologue
-    .line 99
+    .line 101
     return-void
 .end method

@@ -9,13 +9,14 @@ import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.g.b;
+import com.tencent.mm.h.b;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.sns.data.i;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.p;
 import com.tencent.mm.ui.j.b;
@@ -27,40 +28,40 @@ public class SnsCommentUI
   extends MMActivity
   implements d
 {
-  private int axy;
-  private p coc = null;
-  private int gHI;
-  private SnsEditText hdM;
-  private int hdN = 0;
-  private boolean hdO = false;
-  private boolean hdP = false;
+  private int ajx;
+  private p cjq = null;
+  private int gON;
+  private int hsA = 0;
+  private boolean hsB = false;
+  private boolean hsC = false;
+  private SnsEditText hsz;
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    hdM = ((SnsEditText)findViewById(2131165377));
-    hdM.setTextSize(1, t.cY(koJ.kpc) * hdM.getTextSize() / com.tencent.mm.aw.a.getDensity(koJ.kpc));
-    a(0, getString(2131430879), new MenuItem.OnMenuItemClickListener()
+    hsz = ((SnsEditText)findViewById(2131755262));
+    hsz.setTextSize(1, t.cW(kNN.kOg) * hsz.getTextSize() / com.tencent.mm.az.a.getDensity(kNN.kOg));
+    a(0, getString(2131231010), new MenuItem.OnMenuItemClickListener()
     {
       public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
       {
         if (SnsCommentUI.a(SnsCommentUI.this) == 0) {
-          b.pt();
+          b.nL();
         }
         if (SnsCommentUI.a(SnsCommentUI.this) == 2) {}
-        for (int i = 200;; i = b.ps())
+        for (int i = 200;; i = b.nK())
         {
-          paramAnonymousMenuItem = com.tencent.mm.ui.tools.a.c.a(SnsCommentUI.b(SnsCommentUI.this)).rZ(i);
-          lzG = true;
+          paramAnonymousMenuItem = com.tencent.mm.ui.tools.a.c.a(SnsCommentUI.b(SnsCommentUI.this)).ud(i);
+          mav = true;
           paramAnonymousMenuItem.a(new c.a()
           {
-            public final void Om() {}
+            public final void Px() {}
             
-            public final void On()
+            public final void Py()
             {
-              com.tencent.mm.ui.base.g.e(SnsCommentUI.this, 2131433035, 2131433034);
+              com.tencent.mm.ui.base.g.f(SnsCommentUI.this, 2131235601, 2131235602);
             }
             
-            public final void mm(String paramAnonymous2String)
+            public final void ng(String paramAnonymous2String)
             {
               String str1 = SnsCommentUI.b(SnsCommentUI.this).getText().toString().trim();
               SnsCommentUI.b(SnsCommentUI.this).setText("");
@@ -75,25 +76,25 @@ public class SnsCommentUI
               do
               {
                 return;
-                age();
+                aiI();
                 SnsCommentUI.a(SnsCommentUI.this, str1);
                 return;
-                age();
+                aiI();
                 SnsCommentUI.b(SnsCommentUI.this, str1);
                 return;
-                age();
+                aiI();
                 l1 = getIntent().getLongExtra("sns_id", 0L);
                 l2 = getIntent().getLongExtra("action_st_time", 0L);
-                paramAnonymous2String = ay.ad(getIntent().getStringExtra("sns_uxinfo"), "");
-                str2 = ay.ad(getIntent().getStringExtra("sns_actionresult"), "");
+                paramAnonymous2String = be.ab(getIntent().getStringExtra("sns_uxinfo"), "");
+                str2 = be.ab(getIntent().getStringExtra("sns_actionresult"), "");
                 str1 = str2 + "|4:1:" + str1;
                 l3 = System.currentTimeMillis();
-                localObject = ad.azb().azO();
-              } while ((localObject == null) || (!((com.tencent.mm.plugin.sns.e.h)localObject).azP()));
-              String str2 = gRI;
-              Object localObject = gRH;
-              u.d("!32@/B4Tb64lLpIPhXvycW2PJu41Xea6y1xl", "report abtestnotlike " + l1 + " uxinfo:" + paramAnonymous2String + " actionresult: " + str1 + " " + l2 + " " + l3);
-              com.tencent.mm.plugin.report.service.h.fUJ.g(11988, new Object[] { str2, localObject, "", "", com.tencent.mm.plugin.sns.data.h.bX(l1), paramAnonymous2String, str1, Long.valueOf(l2 / 1000L), Long.valueOf(l3 / 1000L) });
+                localObject = ad.aBB().aCp();
+              } while ((localObject == null) || (!((com.tencent.mm.plugin.sns.f.h)localObject).aCq()));
+              String str2 = gZL;
+              Object localObject = gZK;
+              v.d("MicroMsg.SnsCommentUI", "report abtestnotlike " + l1 + " uxinfo:" + paramAnonymous2String + " actionresult: " + str1 + " " + l2 + " " + l3);
+              com.tencent.mm.plugin.report.service.g.gdY.h(11988, new Object[] { str2, localObject, "", "", i.cn(l1), paramAnonymous2String, str1, Long.valueOf(l2 / 1000L), Long.valueOf(l3 / 1000L) });
               SnsCommentUI.c(SnsCommentUI.this);
               finish();
             }
@@ -101,9 +102,9 @@ public class SnsCommentUI
           return false;
         }
       }
-    }, j.b.kpJ);
-    if (hdN == 0) {
-      qb(2131433085);
+    }, j.b.kOO);
+    if (hsA == 0) {
+      rR(2131235403);
     }
     for (;;)
     {
@@ -111,12 +112,12 @@ public class SnsCommentUI
       {
         public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
         {
-          age();
+          aiI();
           finish();
           return true;
         }
       });
-      hdM.addTextChangedListener(new TextWatcher()
+      hsz.addTextChangedListener(new TextWatcher()
       {
         public final void afterTextChanged(Editable paramAnonymousEditable) {}
         
@@ -126,48 +127,32 @@ public class SnsCommentUI
         {
           if (SnsCommentUI.b(SnsCommentUI.this).getText().toString().trim().length() > 0)
           {
-            bC(true);
+            bp(true);
             return;
           }
-          bC(false);
+          bp(false);
         }
       });
       return;
-      if (hdN == 1)
+      if (hsA == 1)
       {
-        qb(2131433022);
-        String str = ay.ad((String)ah.tD().rn().get(68408, ""), "");
-        int i = ay.b((Integer)ah.tD().rn().get(7489, Integer.valueOf(0)), 0);
-        hdM.setPasterLen(i);
-        hdM.append(ay.ad(str, ""));
+        rR(2131235610);
+        String str = be.ab((String)ah.tE().ro().get(68408, ""), "");
+        int i = be.b((Integer)ah.tE().ro().get(7489, Integer.valueOf(0)), 0);
+        hsz.hsG = i;
+        hsz.append(be.ab(str, ""));
         if ((str != null) && (str.length() > 0)) {
-          bC(true);
+          bp(true);
         } else {
-          bC(false);
+          bp(false);
         }
       }
-      else if (hdN == 2)
+      else if (hsA == 2)
       {
-        qb(2131433232);
-        bC(false);
+        rR(2131235375);
+        bp(false);
       }
     }
-  }
-  
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
-  {
-    u.i("!32@/B4Tb64lLpIPhXvycW2PJu41Xea6y1xl", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString + " type = " + paramj.getType() + " @" + hashCode());
-    if (coc != null) {
-      coc.dismiss();
-    }
-    switch (paramj.getType())
-    {
-    }
-    do
-    {
-      return;
-    } while (!hdO);
-    finish();
   }
   
   public void finish()
@@ -178,53 +163,53 @@ public class SnsCommentUI
     String str1;
     String str2;
     long l3;
-    if ((!hdP) && (hdN == 2))
+    if ((!hsC) && (hsA == 2))
     {
       l1 = getIntent().getLongExtra("sns_id", 0L);
       l2 = getIntent().getLongExtra("action_st_time", 0L);
-      str1 = ay.ad(getIntent().getStringExtra("sns_uxinfo"), "");
-      str2 = ay.ad(getIntent().getStringExtra("sns_actionresult"), "");
+      str1 = be.ab(getIntent().getStringExtra("sns_uxinfo"), "");
+      str2 = be.ab(getIntent().getStringExtra("sns_actionresult"), "");
       str2 = str2 + "|4:0:";
       l3 = System.currentTimeMillis();
-      localObject = ad.azb().azO();
-      if ((localObject != null) && (((com.tencent.mm.plugin.sns.e.h)localObject).azP())) {}
+      localObject = ad.aBB().aCp();
+      if ((localObject != null) && (((com.tencent.mm.plugin.sns.f.h)localObject).aCq())) {}
     }
     else
     {
       return;
     }
-    String str3 = gRI;
-    Object localObject = gRH;
-    u.d("!32@/B4Tb64lLpIPhXvycW2PJu41Xea6y1xl", "report abtestnotlike " + l1 + " uxinfo:" + str1 + " actionresult: " + str2 + " " + l2 + " " + l3);
-    com.tencent.mm.plugin.report.service.h.fUJ.g(11988, new Object[] { str3, localObject, "", "", com.tencent.mm.plugin.sns.data.h.bX(l1), str1, str2, Long.valueOf(l2 / 1000L), Long.valueOf(l3 / 1000L) });
+    String str3 = gZL;
+    Object localObject = gZK;
+    v.d("MicroMsg.SnsCommentUI", "report abtestnotlike " + l1 + " uxinfo:" + str1 + " actionresult: " + str2 + " " + l2 + " " + l3);
+    com.tencent.mm.plugin.report.service.g.gdY.h(11988, new Object[] { str3, localObject, "", "", i.cn(l1), str1, str2, Long.valueOf(l2 / 1000L), Long.valueOf(l3 / 1000L) });
   }
   
   protected final int getLayoutId()
   {
-    return 2131362843;
+    return 2130904426;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    gHI = getIntent().getIntExtra("sns_comment_localId", 0);
-    hdN = getIntent().getIntExtra("sns_comment_type", 0);
-    axy = getIntent().getIntExtra("sns_source", 0);
-    ah.tE().a(213, this);
-    Gb();
+    gON = getIntent().getIntExtra("sns_comment_localId", 0);
+    hsA = getIntent().getIntExtra("sns_comment_type", 0);
+    ajx = getIntent().getIntExtra("sns_source", 0);
+    ah.tF().a(213, this);
+    Gy();
   }
   
   public void onDestroy()
   {
     super.onDestroy();
-    ah.tE().b(213, this);
+    ah.tF().b(213, this);
   }
   
   public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
   {
     if (paramInt == 4)
     {
-      age();
+      aiI();
       finish();
       return true;
     }
@@ -234,25 +219,41 @@ public class SnsCommentUI
   public void onPause()
   {
     super.onPause();
-    if (hdM != null)
+    if (hsz != null)
     {
-      String str = hdM.getText().toString().trim();
-      ah.tD().rn().set(68408, str);
-      if (!ay.kz(str)) {
-        ah.tD().rn().set(7489, Integer.valueOf(hdM.getPasterLen()));
+      String str = hsz.getText().toString().trim();
+      ah.tE().ro().set(68408, str);
+      if (!be.kf(str)) {
+        ah.tE().ro().set(7489, Integer.valueOf(hsz.hsG));
       }
     }
     else
     {
       return;
     }
-    ah.tD().rn().set(7489, Integer.valueOf(0));
+    ah.tE().ro().set(7489, Integer.valueOf(0));
   }
   
   public void onResume()
   {
     super.onResume();
-    apz();
+    asv();
+  }
+  
+  public void onSceneEnd(int paramInt1, int paramInt2, String paramString, com.tencent.mm.t.j paramj)
+  {
+    v.i("MicroMsg.SnsCommentUI", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString + " type = " + paramj.getType() + " @" + hashCode());
+    if (cjq != null) {
+      cjq.dismiss();
+    }
+    switch (paramj.getType())
+    {
+    }
+    do
+    {
+      return;
+    } while (!hsB);
+    finish();
   }
 }
 

@@ -3,7 +3,7 @@ package com.tencent.mm.ui.tools;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class MaskImageButton$2
   implements View.OnTouchListener
@@ -15,14 +15,14 @@ final class MaskImageButton$2
     switch (paramMotionEvent.getAction())
     {
     }
-    while ((!lxb.isClickable()) && (!lxb.isLongClickable()))
+    while ((!lXO.isClickable()) && (!lXO.isLongClickable()))
     {
       return true;
       paramView.setPressed(true);
       paramView.invalidate();
-      MaskImageButton.b(lxb).removeCallbacks(MaskImageButton.a(lxb));
+      MaskImageButton.b(lXO).removeCallbacks(MaskImageButton.a(lXO));
       continue;
-      MaskImageButton.b(lxb).post(MaskImageButton.a(lxb));
+      MaskImageButton.b(lXO).post(MaskImageButton.a(lXO));
     }
     return false;
   }

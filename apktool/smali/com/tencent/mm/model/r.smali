@@ -4,8 +4,8 @@
 
 
 # virtual methods
-.method public abstract sY()V
+.method public abstract sX()V
 .end method
 
-.method public abstract sZ()V
+.method public abstract sY()V
 .end method

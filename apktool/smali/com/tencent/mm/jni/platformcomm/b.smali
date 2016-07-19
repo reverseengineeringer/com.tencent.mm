@@ -14,11 +14,20 @@
 
 
 # static fields
-.field private static bwr:Landroid/util/SparseArray;
+.field private static blE:Landroid/util/SparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/SparseArray",
+            "<",
+            "Lcom/tencent/mm/jni/platformcomm/b$b;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private static final bws:[B
+.field private static final blF:[B
 
-.field private static mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
+.field private static mHandler:Lcom/tencent/mm/sdk/platformtools/ac;
 
 
 # direct methods
@@ -31,25 +40,25 @@
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/jni/platformcomm/b;->bwr:Landroid/util/SparseArray;
+    sput-object v0, Lcom/tencent/mm/jni/platformcomm/b;->blE:Landroid/util/SparseArray;
 
     .line 46
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
-    sput-object v0, Lcom/tencent/mm/jni/platformcomm/b;->mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
+    sput-object v0, Lcom/tencent/mm/jni/platformcomm/b;->mHandler:Lcom/tencent/mm/sdk/platformtools/ac;
 
     .line 48
     const/4 v0, 0x0
 
     new-array v0, v0, [B
 
-    sput-object v0, Lcom/tencent/mm/jni/platformcomm/b;->bws:[B
+    sput-object v0, Lcom/tencent/mm/jni/platformcomm/b;->blF:[B
 
     return-void
 .end method
@@ -59,13 +68,13 @@
 
     .prologue
     .line 419
-    sget-object v1, Lcom/tencent/mm/jni/platformcomm/b;->bws:[B
+    sget-object v1, Lcom/tencent/mm/jni/platformcomm/b;->blF:[B
 
     monitor-enter v1
 
     .line 420
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/b;->bwr:Landroid/util/SparseArray;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/b;->blE:Landroid/util/SparseArray;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
@@ -86,7 +95,7 @@
     invoke-direct {v0, p0}, Lcom/tencent/mm/jni/platformcomm/b$b;-><init>(Lcom/tencent/mm/jni/platformcomm/WakerLock;)V
 
     .line 423
-    sget-object v2, Lcom/tencent/mm/jni/platformcomm/b;->bwr:Landroid/util/SparseArray;
+    sget-object v2, Lcom/tencent/mm/jni/platformcomm/b;->blE:Landroid/util/SparseArray;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
@@ -96,7 +105,7 @@
 
     .line 426
     :cond_0
-    iget-object v2, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->bww:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->blJ:Ljava/util/Map;
 
     invoke-interface {v2, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
@@ -104,7 +113,7 @@
 
     if-nez v2, :cond_1
 
-    iget-object v2, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->bww:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->blJ:Ljava/util/Map;
 
     new-instance v3, Lcom/tencent/mm/jni/platformcomm/b$b$a;
 
@@ -118,24 +127,24 @@
 
     .line 427
     :cond_1
-    invoke-static {p1}, Lcom/tencent/mm/jni/platformcomm/b$c;->dx(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/tencent/mm/jni/platformcomm/b$c;->dG(Ljava/lang/String;)V
 
     .line 429
-    sget-object v2, Lcom/tencent/mm/jni/platformcomm/b;->mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
+    sget-object v2, Lcom/tencent/mm/jni/platformcomm/b;->mHandler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    iget-boolean v3, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->bwu:Z
+    iget-boolean v3, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->blH:Z
 
     if-nez v3, :cond_2
 
     const/4 v3, 0x1
 
-    iput-boolean v3, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->bwu:Z
+    iput-boolean v3, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->blH:Z
 
-    iget-object v0, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->bwv:Lcom/tencent/mm/jni/platformcomm/b$a;
+    iget-object v0, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->blI:Lcom/tencent/mm/jni/platformcomm/b$a;
 
-    const-wide/32 v3, 0xea60
+    const-wide/32 v4, 0xea60
 
-    invoke-virtual {v2, v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/aa;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v2, v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/ac;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 430
     :cond_2
@@ -158,13 +167,13 @@
 
     .prologue
     .line 434
-    sget-object v2, Lcom/tencent/mm/jni/platformcomm/b;->bws:[B
+    sget-object v2, Lcom/tencent/mm/jni/platformcomm/b;->blF:[B
 
     monitor-enter v2
 
     .line 435
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/b;->bwr:Landroid/util/SparseArray;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/b;->blE:Landroid/util/SparseArray;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
@@ -180,23 +189,23 @@
     if-eqz v0, :cond_2
 
     .line 437
-    sget-object v1, Lcom/tencent/mm/jni/platformcomm/b;->mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
+    sget-object v1, Lcom/tencent/mm/jni/platformcomm/b;->mHandler:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    iget-boolean v3, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->bwu:Z
+    iget-boolean v3, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->blH:Z
 
     if-eqz v3, :cond_0
 
     const/4 v3, 0x0
 
-    iput-boolean v3, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->bwu:Z
+    iput-boolean v3, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->blH:Z
 
-    iget-object v3, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->bwv:Lcom/tencent/mm/jni/platformcomm/b$a;
+    iget-object v3, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->blI:Lcom/tencent/mm/jni/platformcomm/b$a;
 
-    invoke-virtual {v1, v3}, Lcom/tencent/mm/sdk/platformtools/aa;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v3}, Lcom/tencent/mm/sdk/platformtools/ac;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 438
     :cond_0
-    iget-object v1, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->bww:Ljava/util/Map;
+    iget-object v1, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->blJ:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->values()Ljava/util/Collection;
 
@@ -221,9 +230,9 @@
     check-cast v1, Lcom/tencent/mm/jni/platformcomm/b$b$a;
 
     .line 440
-    iget-object v1, v1, Lcom/tencent/mm/jni/platformcomm/b$b$a;->bwx:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/jni/platformcomm/b$b$a;->blK:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/jni/platformcomm/b$c;->dy(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/tencent/mm/jni/platformcomm/b$c;->dH(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -240,7 +249,7 @@
     .line 442
     :cond_1
     :try_start_1
-    iget-object v0, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->bww:Ljava/util/Map;
+    iget-object v0, v0, Lcom/tencent/mm/jni/platformcomm/b$b;->blJ:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
@@ -253,18 +262,18 @@
     return-void
 .end method
 
-.method public static qT()V
+.method public static pI()V
     .locals 0
 
     .prologue
     .line 411
-    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/b$c;->qW()V
+    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/b$c;->pL()V
 
     .line 412
     return-void
 .end method
 
-.method public static qU()V
+.method public static pJ()V
     .locals 0
 
     .prologue
@@ -275,12 +284,12 @@
     return-void
 .end method
 
-.method static synthetic qV()Landroid/util/SparseArray;
+.method static synthetic pK()Landroid/util/SparseArray;
     .locals 1
 
     .prologue
     .line 39
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/b;->bwr:Landroid/util/SparseArray;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/b;->blE:Landroid/util/SparseArray;
 
     return-object v0
 .end method

@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic ksA:Ljava/lang/String;
+.field final synthetic kRG:Ljava/lang/String;
 
-.field final synthetic ksy:Ljava/lang/String;
+.field final synthetic kRH:Ljava/lang/String;
 
-.field final synthetic ksz:Ljava/lang/String;
+.field final synthetic kRI:Ljava/lang/String;
 
 .field final synthetic val$context:Landroid/content/Context;
 
@@ -37,11 +37,11 @@
     .line 68
     iput-object p1, p0, Lcom/tencent/mm/ui/account/e$2;->val$context:Landroid/content/Context;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/e$2;->ksy:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/e$2;->kRG:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/e$2;->ksz:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/e$2;->kRH:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/e$2;->ksA:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/e$2;->kRI:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -65,7 +65,7 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 102
+    .line 100
     :goto_0
     :pswitch_0
     return-void
@@ -74,14 +74,14 @@
     :pswitch_1
     const-string/jumbo v0, "F100_100_QQ"
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kC(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->ll(Ljava/lang/String;)V
 
     .line 75
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->ty()Ljava/lang/String;
 
     move-result-object v1
 
@@ -117,7 +117,7 @@
 
     const-string/jumbo v1, "F100_100_QQ"
 
-    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fq(Ljava/lang/String;)I
 
     move-result v1
 
@@ -142,7 +142,7 @@
 
     iget-object v1, p0, Lcom/tencent/mm/ui/account/e$2;->val$context:Landroid/content/Context;
 
-    const v2, 0x7f0b1338
+    const v2, 0x7f0813b3
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -156,13 +156,13 @@
     :pswitch_2
     iget-object v0, p0, Lcom/tencent/mm/ui/account/e$2;->val$context:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/e$2;->ksy:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/e$2;->kRG:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/e$2;->ksz:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/e$2;->kRH:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/e$2;->ksA:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/e$2;->kRI:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/ui/account/e;->g(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/ui/account/e;->f(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -170,14 +170,14 @@
     :pswitch_3
     const-string/jumbo v0, "F100_100_Email"
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kC(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->ll(Ljava/lang/String;)V
 
     .line 87
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->ty()Ljava/lang/String;
 
     move-result-object v1
 
@@ -213,7 +213,7 @@
 
     const-string/jumbo v1, "F100_100_Email"
 
-    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fq(Ljava/lang/String;)I
 
     move-result v1
 
@@ -238,7 +238,7 @@
 
     iget-object v1, p0, Lcom/tencent/mm/ui/account/e$2;->val$context:Landroid/content/Context;
 
-    const v2, 0x7f0b1337
+    const v2, 0x7f0813b2
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -252,14 +252,14 @@
     :pswitch_4
     iget-object v0, p0, Lcom/tencent/mm/ui/account/e$2;->val$context:Landroid/content/Context;
 
-    const v1, 0x7f0b1353
+    const v1, 0x7f081739
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     .line 94
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUB()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->aZF()Ljava/lang/String;
 
     move-result-object v1
 
@@ -290,7 +290,7 @@
 
     move-result-object v0
 
-    .line 101
+    .line 99
     :goto_1
     iget-object v1, p0, Lcom/tencent/mm/ui/account/e$2;->val$context:Landroid/content/Context;
 
@@ -298,73 +298,9 @@
 
     goto/16 :goto_0
 
-    .line 96
-    :cond_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUB()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "zh_TW"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUB()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "zh_HK"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
     .line 97
-    :cond_1
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "zh_TW"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_1
-
-    .line 99
-    :cond_2
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "en"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    :cond_0
+    const-string/jumbo v0, "https://help.wechat.com/cgi-bin/newreadtemplate?t=help_center/w_index&Channel=Client&lang="
 
     goto :goto_1
 

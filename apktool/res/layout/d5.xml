@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/qz" android:background="@color/lf" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/mu" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bs" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@id/r0" android:layout_height="@dimen/hm" style="@style/CardDetailItem">
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/h4" android:id="@id/r1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/h3" android:id="@id/r2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" />
+            <CheckBox android:id="@id/r3" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" style="@style/MMCheckBox" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

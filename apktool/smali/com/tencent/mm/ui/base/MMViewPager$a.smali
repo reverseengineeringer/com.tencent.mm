@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field final synthetic kIi:Lcom/tencent/mm/ui/base/MMViewPager;
+.field final synthetic lhv:Lcom/tencent/mm/ui/base/MMViewPager;
 
-.field protected kIj:Z
+.field protected lhw:Z
 
 
 # direct methods
@@ -25,28 +25,28 @@
     .locals 1
 
     .prologue
-    .line 49
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMViewPager$a;->kIi:Lcom/tencent/mm/ui/base/MMViewPager;
+    .line 68
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMViewPager$a;->lhv:Lcom/tencent/mm/ui/base/MMViewPager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
+    .line 66
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$a;->kIj:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$a;->lhw:Z
 
-    .line 51
+    .line 70
     return-void
 .end method
 
 
 # virtual methods
-.method public final aPA()Z
+.method public final aUi()Z
     .locals 1
 
     .prologue
-    .line 55
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$a;->kIj:Z
+    .line 74
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$a;->lhw:Z
 
     return v0
 .end method

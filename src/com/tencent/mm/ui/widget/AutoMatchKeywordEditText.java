@@ -6,14 +6,14 @@ import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.DragEvent;
 import android.widget.EditText;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class AutoMatchKeywordEditText
   extends MMEditText
 {
-  private a lCF;
-  private int lCG;
-  private int lCH;
+  public a mdv;
+  private int mdw;
+  private int mdx;
   
   public AutoMatchKeywordEditText(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -29,32 +29,27 @@ public class AutoMatchKeywordEditText
   
   private void init()
   {
-    lCG = getSelectionStart();
-    lCH = getSelectionEnd();
+    mdw = getSelectionStart();
+    mdx = getSelectionEnd();
   }
   
   public void extendSelection(int paramInt)
   {
-    u.d("!56@/B4Tb64lLpIZ+SpJPafVHqge1jGEX4lL9wwO8DMZ7IoS74Wb0lTPag==", "extendSelection");
+    v.d("MicroMsg.AutoMatchKeywordEditText", "extendSelection");
     super.extendSelection(paramInt);
-    lCG = getSelectionStart();
-    lCH = getSelectionEnd();
-  }
-  
-  public a getOnSelectionChangeListener()
-  {
-    return lCF;
+    mdw = getSelectionStart();
+    mdx = getSelectionEnd();
   }
   
   public boolean moveCursorToVisibleOffset()
   {
-    u.d("!56@/B4Tb64lLpIZ+SpJPafVHqge1jGEX4lL9wwO8DMZ7IoS74Wb0lTPag==", "moveCursorToVisibleOffset");
+    v.d("MicroMsg.AutoMatchKeywordEditText", "moveCursorToVisibleOffset");
     return super.moveCursorToVisibleOffset();
   }
   
   public boolean onDragEvent(DragEvent paramDragEvent)
   {
-    u.d("!56@/B4Tb64lLpIZ+SpJPafVHqge1jGEX4lL9wwO8DMZ7IoS74Wb0lTPag==", "onDragEvent");
+    v.d("MicroMsg.AutoMatchKeywordEditText", "onDragEvent");
     return super.onDragEvent(paramDragEvent);
   }
   
@@ -63,50 +58,45 @@ public class AutoMatchKeywordEditText
     super.onDraw(paramCanvas);
     int i = getSelectionStart();
     int j = getSelectionEnd();
-    if ((lCG != i) || (lCH != j))
+    if ((mdw != i) || (mdx != j))
     {
-      lCG = i;
-      lCH = j;
-      if (lCF != null) {
-        lCF.a(this, getSelectionStart(), getSelectionEnd());
+      mdw = i;
+      mdx = j;
+      if (mdv != null) {
+        mdv.a(this, getSelectionStart(), getSelectionEnd());
       }
     }
   }
   
   public boolean performAccessibilityAction(int paramInt, Bundle paramBundle)
   {
-    u.d("!56@/B4Tb64lLpIZ+SpJPafVHqge1jGEX4lL9wwO8DMZ7IoS74Wb0lTPag==", "performAccessibilityAction");
+    v.d("MicroMsg.AutoMatchKeywordEditText", "performAccessibilityAction");
     return super.performAccessibilityAction(paramInt, paramBundle);
-  }
-  
-  public void setOnSelectionChangeListener(a parama)
-  {
-    lCF = parama;
   }
   
   public void setSelection(int paramInt)
   {
-    u.d("!56@/B4Tb64lLpIZ+SpJPafVHqge1jGEX4lL9wwO8DMZ7IoS74Wb0lTPag==", "setSelection");
+    v.d("MicroMsg.AutoMatchKeywordEditText", "setSelection");
     int i = getSelectionStart();
     int j = getSelectionEnd();
     super.setSelection(paramInt);
-    lCG = getSelectionStart();
-    lCH = getSelectionEnd();
-    if (((i != getSelectionStart()) || (j != getSelectionEnd())) && (lCF != null)) {
-      lCF.a(this, getSelectionStart(), getSelectionEnd());
+    mdw = getSelectionStart();
+    mdx = getSelectionEnd();
+    if (((i != getSelectionStart()) || (j != getSelectionEnd())) && (mdv != null)) {
+      mdv.a(this, getSelectionStart(), getSelectionEnd());
     }
   }
   
   public void setSelection(int paramInt1, int paramInt2)
   {
-    u.d("!56@/B4Tb64lLpIZ+SpJPafVHqge1jGEX4lL9wwO8DMZ7IoS74Wb0lTPag==", "setSelection.");
+    v.d("MicroMsg.AutoMatchKeywordEditText", "setSelection.");
     int i = getSelectionStart();
     int j = getSelectionEnd();
     super.setSelection(paramInt1, paramInt2);
-    lCG = getSelectionStart();
-    lCH = getSelectionEnd();
-    if (((i != getSelectionStart()) || (j != getSelectionEnd())) && (lCF != null)) {
-      lCF.a(this, getSelectionStart(), getSelectionEnd());
+    mdw = getSelectionStart();
+    mdx = getSelectionEnd();
+    if (((i != getSelectionStart()) || (j != getSelectionEnd())) && (mdv != null)) {
+      mdv.a(this, getSelectionStart(), getSelectionEnd());
     }
   }
   

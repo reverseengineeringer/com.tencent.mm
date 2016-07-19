@@ -2,9 +2,9 @@ package com.tencent.mm.ui.contact;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.platformtools.s;
 import com.tencent.mm.pluginsdk.ui.tools.n.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.j;
 import com.tencent.mm.ui.voicesearch.VoiceSearchResultUI;
@@ -14,52 +14,52 @@ final class ChatroomContactUI$7
 {
   ChatroomContactUI$7(ChatroomContactUI paramChatroomContactUI) {}
   
-  public final void Gd() {}
+  public final void GA() {}
   
-  public final void Ge() {}
+  public final void GB() {}
   
-  public final void Gf() {}
+  public final void GC() {}
   
-  public final void Gg() {}
+  public final void GD() {}
   
-  public final void KR()
+  public final void LD()
   {
-    u.v("!44@/B4Tb64lLpIELL9O96QoKLI7tZ4uMi2P4SCBJbIGwmU=", "onVoiceSearchStart");
-    ljg.age();
+    v.v("MicroMsg.ChatroomContactUI", "onVoiceSearchStart");
+    lJr.aiI();
   }
   
-  public final void KS() {}
+  public final void LE() {}
   
   public final void a(boolean paramBoolean, String[] paramArrayOfString, long paramLong, int paramInt)
   {
-    u.v("!44@/B4Tb64lLpIELL9O96QoKLI7tZ4uMi2P4SCBJbIGwmU=", "onVoiceReturn");
+    v.v("MicroMsg.ChatroomContactUI", "onVoiceReturn");
     if (paramBoolean)
     {
-      Intent localIntent = new Intent(ljg.koJ.kpc, VoiceSearchResultUI.class);
+      Intent localIntent = new Intent(lJr.kNN.kOg, VoiceSearchResultUI.class);
       localIntent.putExtra("VoiceSearchResultUI_Resultlist", paramArrayOfString);
       localIntent.putExtra("VoiceSearchResultUI_VoiceId", paramLong);
       localIntent.putExtra("VoiceSearchResultUI_ShowType", paramInt);
-      ljg.koJ.kpc.startActivity(localIntent);
+      lJr.kNN.kOg.startActivity(localIntent);
       return;
     }
-    paramArrayOfString = new Intent(ljg.koJ.kpc, VoiceSearchResultUI.class);
+    paramArrayOfString = new Intent(lJr.kNN.kOg, VoiceSearchResultUI.class);
     paramArrayOfString.putExtra("VoiceSearchResultUI_Resultlist", new String[0]);
-    paramArrayOfString.putExtra("VoiceSearchResultUI_Error", ljg.koJ.kpc.getString(2131427481));
+    paramArrayOfString.putExtra("VoiceSearchResultUI_Error", lJr.kNN.kOg.getString(2131232845));
     paramArrayOfString.putExtra("VoiceSearchResultUI_VoiceId", paramLong);
     paramArrayOfString.putExtra("VoiceSearchResultUI_ShowType", paramInt);
-    ljg.koJ.kpc.startActivity(paramArrayOfString);
+    lJr.kNN.kOg.startActivity(paramArrayOfString);
   }
   
-  public final boolean kE(String paramString)
+  public final boolean ln(String paramString)
   {
     return false;
   }
   
-  public final void kF(String paramString)
+  public final void lo(String paramString)
   {
-    u.d("!44@/B4Tb64lLpIELL9O96QoKLI7tZ4uMi2P4SCBJbIGwmU=", "onSearchBarChange %s", new Object[] { paramString });
-    paramString = t.kx(paramString);
-    ChatroomContactUI.a(ljg, paramString);
+    v.d("MicroMsg.ChatroomContactUI", "onSearchBarChange %s", new Object[] { paramString });
+    paramString = s.lh(paramString);
+    ChatroomContactUI.a(lJr, paramString);
   }
 }
 

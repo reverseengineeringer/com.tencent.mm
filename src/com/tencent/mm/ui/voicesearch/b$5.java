@@ -10,13 +10,13 @@ final class b$5
   
   public final void run()
   {
-    if (b.a(lCw) == null) {
-      b.a(lCw, new ArrayList());
+    if (b.a(mdn) == null) {
+      b.a(mdn, new ArrayList());
     }
-    b.a(lCw).clear();
-    b.a(lCw).addAll(lCx);
-    b.a(lCw).add("officialaccounts");
-    b.a(lCw).add("helper_entry");
+    b.a(mdn).clear();
+    b.a(mdn).addAll(lFS);
+    b.a(mdn).add("officialaccounts");
+    b.a(mdn).add("helper_entry");
   }
 }
 

@@ -1,38 +1,40 @@
 package com.tencent.mm.storage;
 
 import android.database.Cursor;
+import com.tencent.mm.protocal.b.mp;
 import com.tencent.mm.sdk.h.d;
 import com.tencent.mm.sdk.h.f;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
 public final class b
-  extends f
+  extends f<a>
 {
-  public static final String[] aoY = { f.a(a.aot, "ABTestItem") };
-  private d aoX;
+  public static final String[] bkN = { f.a(a.bjR, "ABTestItem") };
+  private d bkP;
   
   public b(d paramd)
   {
-    super(paramd, a.aot, "ABTestItem", null);
-    aoX = paramd;
+    super(paramd, a.bjR, "ABTestItem", null);
+    bkP = paramd;
   }
   
-  public final a DN(String paramString)
+  public final a Gc(String paramString)
   {
     a locala = new a();
     field_layerId = paramString;
-    u.i("!32@/B4Tb64lLpJImn5ccegk8yD497yh4Bqw", "getByLayerId, id: %s, return: %b", new Object[] { paramString, Boolean.valueOf(super.c(locala, new String[0])) });
+    v.i("MicroMsg.ABTestStorage", "getByLayerId, id: %s, return: %b", new Object[] { paramString, Boolean.valueOf(super.c(locala, new String[0])) });
     return locala;
   }
   
-  public final Map DO(String paramString)
+  public final Map<String, a> Gd(String paramString)
   {
-    if (ay.kz(paramString)) {}
+    if (be.kf(paramString)) {}
     for (paramString = null; (paramString == null) || (!paramString.moveToFirst()); paramString = rawQuery(String.format("select * from %s where %s = %s", new Object[] { "ABTestItem", "business", paramString }), new String[0]))
     {
       if (paramString != null) {
@@ -44,16 +46,16 @@ public final class b
     do
     {
       a locala = new a();
-      locala.c(paramString);
+      locala.b(paramString);
       localHashMap.put(field_layerId, locala);
     } while (paramString.moveToNext());
     paramString.close();
     return localHashMap;
   }
   
-  public final String aWg()
+  public final String bbs()
   {
-    Cursor localCursor = Dy();
+    Cursor localCursor = DO();
     if (localCursor == null) {
       return "null cursor!!";
     }
@@ -65,7 +67,7 @@ public final class b
     do
     {
       localStringBuilder.append("============\n");
-      locala.c(localCursor);
+      locala.b(localCursor);
       localStringBuilder.append("layerId = ").append(field_layerId).append("\n");
       localStringBuilder.append("sequence = ").append(field_sequence).append("\n");
       localStringBuilder.append("priorityLV = ").append(field_prioritylevel).append("\n");
@@ -74,7 +76,39 @@ public final class b
     return localStringBuilder.toString();
   }
   
-  public final void f(List paramList, int paramInt)
+  public final LinkedList<mp> bbt()
+  {
+    LinkedList localLinkedList = new LinkedList();
+    Cursor localCursor = DO();
+    if ((localCursor == null) || (!localCursor.moveToFirst())) {
+      return localLinkedList;
+    }
+    a locala = new a();
+    for (;;)
+    {
+      locala.b(localCursor);
+      mp localmp = new mp();
+      try
+      {
+        jIk = Integer.parseInt(field_expId);
+        priority = field_prioritylevel;
+        localLinkedList.add(localmp);
+        if (localCursor.moveToNext()) {
+          continue;
+        }
+        return localLinkedList;
+      }
+      catch (Exception localException)
+      {
+        for (;;)
+        {
+          v.e("MicroMsg.ABTestStorage", "expId parse failed, %s", new Object[] { field_expId });
+        }
+      }
+    }
+  }
+  
+  public final void f(List<a> paramList, int paramInt)
   {
     int i = 0;
     a locala1;
@@ -90,9 +124,9 @@ public final class b
     if (paramList.hasNext())
     {
       locala1 = (a)paramList.next();
-      if ((locala1 == null) || (ay.kz(field_layerId)))
+      if ((locala1 == null) || (be.kf(field_layerId)))
       {
-        u.e("!32@/B4Tb64lLpJImn5ccegk8yD497yh4Bqw", "saveIfNecessary, Invalid item");
+        v.e("MicroMsg.ABTestStorage", "saveIfNecessary, Invalid item");
         bool = false;
         label93:
         if (!bool) {
@@ -110,20 +144,20 @@ public final class b
       if (!super.c(locala2, new String[0]))
       {
         bool = super.a(locala1, false);
-        u.i("!32@/B4Tb64lLpJImn5ccegk8yD497yh4Bqw", "Inserted: %s, Result: %b", new Object[] { field_layerId, Boolean.valueOf(bool) });
+        v.i("MicroMsg.ABTestStorage", "Inserted: %s, Result: %b", new Object[] { field_layerId, Boolean.valueOf(bool) });
         break label93;
       }
       if (((field_sequence > field_sequence) && (field_prioritylevel == field_prioritylevel)) || (field_prioritylevel > field_prioritylevel))
       {
         bool = super.b(locala1, false, new String[0]);
-        u.i("!32@/B4Tb64lLpJImn5ccegk8yD497yh4Bqw", "Updated: %s, Result: %b, Seq: %d, %d, PriorityLV: %d, %d", new Object[] { field_layerId, Boolean.valueOf(bool), Long.valueOf(field_sequence), Long.valueOf(field_sequence), Integer.valueOf(field_prioritylevel), Integer.valueOf(field_prioritylevel) });
+        v.i("MicroMsg.ABTestStorage", "Updated: %s, Result: %b, Seq: %d, %d, PriorityLV: %d, %d", new Object[] { field_layerId, Boolean.valueOf(bool), Long.valueOf(field_sequence), Long.valueOf(field_sequence), Integer.valueOf(field_prioritylevel), Integer.valueOf(field_prioritylevel) });
         break label93;
       }
-      u.i("!32@/B4Tb64lLpJImn5ccegk8yD497yh4Bqw", "Ignored: %s, Seq: %d, %d, PriorityLV: %d, %d", new Object[] { field_layerId, Long.valueOf(field_sequence), Long.valueOf(field_sequence), Integer.valueOf(field_prioritylevel), Integer.valueOf(field_prioritylevel) });
+      v.i("MicroMsg.ABTestStorage", "Ignored: %s, Seq: %d, %d, PriorityLV: %d, %d", new Object[] { field_layerId, Long.valueOf(field_sequence), Long.valueOf(field_sequence), Integer.valueOf(field_prioritylevel), Integer.valueOf(field_prioritylevel) });
       bool = false;
       break label93;
       if (paramInt != 0) {
-        DI("event_updated");
+        FX("event_updated");
       }
       return;
     }

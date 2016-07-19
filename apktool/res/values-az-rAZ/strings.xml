@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">%1$s Android Wear tətbiqi üçün güncəlləşmə tələb edir.</string>
+    <string name="b">Android Wear güncəlləşməsə, %1$s işləməyəcək.</string>
+    <string name="c">"Android Wear'i güncəlləşdirin"</string>
+    <string name="d">%1$s hazırda əlçatmaz olan bir və ya daha çox Google Play xidməti tələb edir.</string>
+    <string name="e">Google Play xidmətlərini aktiv et</string>
+    <string name="f">Google Play xidmətlərini aktiv etməsəniz, %1$s işləməyəcək.</string>
+    <string name="g">Google Play xidmətlərini aktiv et</string>
+    <string name="h">%1$s tərəfindən tələb edilib</string>
+    <string name="i">Google Play xidmətlərini əldə et</string>
+    <string name="j">%1$s Sizin telefon itkin Google Play xidmətləri olmadan çalışmaz.</string>
+    <string name="k">%1$s tablet itkin Google Play xidmətləri olmadan çalışmaz.</string>
+    <string name="l">Google Play xidmətləri əldə et</string>
+    <string name="m">Göstərilmiş hesab bu cihazda mövcud deyil. Fərqli hesab seçin.</string>
+    <string name="n">Etibarsız Hesab</string>
+    <string name="o">Tətbiq Google Play Xidmətlərinin aktivləşməsini tələb edir.</string>
+    <string name="p">Google Play xidmətlərinə qoşulmaq üçün data bağlantısı tələb olunur.</string>
+    <string name="q">Şəbəkə Xətası</string>
+    <string name="r">Bir tətbiq Google Play Xidmətləri üçün güncəlləşmə tələb edir.</string>
+    <string name="s">Google Play xidmətləri xətası</string>
+    <string name="t">Göstərilən hesaba daxil olarkən səhv baş verdi. Lütfən fərqli bir hesab seçin.</string>
+    <string name="u">Daxil olmadı</string>
+    <string name="v">Google Play xidmətləri ilə bağlı naməlum problem</string>
+    <string name="w">%1$s Sizin cihaz tərəfindən dəstəklənən deyil ki, Google Play xidmətləri, əsaslanır. Yardım üçün istehsalçısı ilə əlaqə saxlayın.</string>
+    <string name="x">Google Play xidmətləri</string>
+    <string name="y">Güncəllə</string>
+    <string name="z">%1$s Google Play xidmətləri yeniləmə halda çalışmaz.</string>
+    <string name="a0">Update Google Play xidmətlərini güncəlllə</string>
+    <string name="a1">%1$s Hal-hazırda təzələyirik Google Play xidmətləri olmadan çalışmaz.</string>
+    <string name="a2">Google Play xidmətləri təzələyirik</string>
+    <string name="a3">Telefonda açın</string>
+    <string name="a4">Giriş</string>
+    <string name="a5">Google ilə daxil ol</string>
+</resources>

@@ -10,8 +10,8 @@ final class BindQQUI$7$1
   
   public final void a(l paraml)
   {
-    paraml.setHeaderTitle(2131428650);
-    paraml.bL(0, 2131428235);
+    paraml.setHeaderTitle(2131231277);
+    paraml.bR(0, 2131235171);
   }
 }
 

@@ -10,8 +10,8 @@ final class SightCameraView$6
   
   public final void run()
   {
-    g.ba(gEp.getContext(), gEp.getContext().getString(2131430504));
-    gEp.aqS();
+    g.aZ(gKQ.getContext(), gKQ.getContext().getString(2131235814));
+    gKQ.aui();
   }
 }
 

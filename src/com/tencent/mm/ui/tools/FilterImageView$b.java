@@ -2,15 +2,15 @@ package com.tencent.mm.ui.tools;
 
 final class FilterImageView$b
 {
-  String lfO;
-  String lvC;
-  String lvD;
+  String lGb;
+  String lWE;
+  String lWF;
   
   FilterImageView$b(String paramString1, String paramString2, String paramString3)
   {
-    lfO = paramString1;
-    lvC = paramString2;
-    lvD = paramString3;
+    lGb = paramString1;
+    lWE = paramString2;
+    lWF = paramString3;
   }
 }
 

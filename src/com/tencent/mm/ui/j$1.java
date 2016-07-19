@@ -1,25 +1,14 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.d.a.nc;
-import com.tencent.mm.d.a.nc.a;
-import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.e.a.np;
 import com.tencent.mm.sdk.c.c;
 
 final class j$1
-  extends c
+  extends c<np>
 {
   j$1(j paramj)
   {
-    super(0);
-  }
-  
-  public final boolean a(b paramb)
-  {
-    j.a(kpx, aJx);
-    if (akpx).asO == 2) {
-      j.a(kpx, akpx).asQ, akpx).asK, akpx).url, akpx).asL);
-    }
-    return false;
+    kum = np.class.getName().hashCode();
   }
 }
 

@@ -4,7 +4,7 @@ import java.io.UnsupportedEncodingException;
 
 public final class a
 {
-  private final int aiH;
+  private final int Ux;
   private final byte[] buffer;
   private int position;
   
@@ -12,10 +12,15 @@ public final class a
   {
     buffer = paramArrayOfByte;
     position = 0;
-    aiH = (paramInt2 + 0);
+    Ux = (paramInt2 + 0);
   }
   
-  public static int aA(int paramInt)
+  public static int aQ(int paramInt)
+  {
+    return aS(a.a.a.b.a.x(paramInt, 0));
+  }
+  
+  public static int aS(int paramInt)
   {
     if ((paramInt & 0xFFFFFF80) == 0) {
       return 1;
@@ -32,12 +37,7 @@ public final class a
     return 5;
   }
   
-  public static int ay(int paramInt)
-  {
-    return aA(a.a.a.b.a.x(paramInt, 0));
-  }
-  
-  public static int e(int paramInt, String paramString)
+  public static int f(int paramInt, String paramString)
   {
     if (paramString == null) {
       return 0;
@@ -45,8 +45,8 @@ public final class a
     try
     {
       paramString = paramString.getBytes("UTF-8");
-      paramInt = ay(paramInt);
-      int i = aA(paramString.length);
+      paramInt = aQ(paramInt);
+      int i = aS(paramString.length);
       int j = paramString.length;
       return j + (paramInt + i);
     }
@@ -56,7 +56,7 @@ public final class a
     }
   }
   
-  public final void ax(int paramInt)
+  public final void aP(int paramInt)
   {
     int i = (byte)paramInt;
     byte[] arrayOfByte = buffer;
@@ -65,35 +65,21 @@ public final class a
     arrayOfByte[paramInt] = i;
   }
   
-  public final void az(int paramInt)
+  public final void aR(int paramInt)
   {
     for (;;)
     {
       if ((paramInt & 0xFFFFFF80) == 0)
       {
-        ax(paramInt);
+        aP(paramInt);
         return;
       }
-      ax(paramInt & 0x7F | 0x80);
+      aP(paramInt & 0x7F | 0x80);
       paramInt >>>= 7;
     }
   }
   
-  public final void k(long paramLong)
-  {
-    for (;;)
-    {
-      if ((0xFFFFFFFFFFFFFF80 & paramLong) == 0L)
-      {
-        ax((int)paramLong);
-        return;
-      }
-      ax((int)paramLong & 0x7F | 0x80);
-      paramLong >>>= 7;
-    }
-  }
-  
-  public final void l(byte[] paramArrayOfByte)
+  public final void i(byte[] paramArrayOfByte)
   {
     if (paramArrayOfByte == null) {}
     int j;
@@ -105,24 +91,38 @@ public final class a
         return;
         j = paramArrayOfByte.length;
       } while (paramArrayOfByte == null);
-      if (aiH - position >= j)
+      if (Ux - position >= j)
       {
         System.arraycopy(paramArrayOfByte, 0, buffer, position, j);
         position = (j + position);
         return;
       }
-      i = aiH - position;
+      i = Ux - position;
       System.arraycopy(paramArrayOfByte, 0, buffer, position, i);
       j -= i;
-      position = aiH;
-    } while (j > aiH);
+      position = Ux;
+    } while (j > Ux);
     System.arraycopy(paramArrayOfByte, i + 0, buffer, 0, j);
     position = j;
   }
   
+  public final void l(long paramLong)
+  {
+    for (;;)
+    {
+      if ((0xFFFFFFFFFFFFFF80 & paramLong) == 0L)
+      {
+        aP((int)paramLong);
+        return;
+      }
+      aP((int)paramLong & 0x7F | 0x80);
+      paramLong >>>= 7;
+    }
+  }
+  
   public final void w(int paramInt1, int paramInt2)
   {
-    az(a.a.a.b.a.x(paramInt1, paramInt2));
+    aR(a.a.a.b.a.x(paramInt1, paramInt2));
   }
 }
 

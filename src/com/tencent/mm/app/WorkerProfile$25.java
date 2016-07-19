@@ -1,47 +1,24 @@
 package com.tencent.mm.app;
 
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.Intent;
-import com.tencent.mm.d.a.gi;
-import com.tencent.mm.d.a.gi.a;
-import com.tencent.mm.model.ag;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.c.b;
-import com.tencent.mm.sdk.platformtools.y;
-import com.tencent.mm.storage.h;
-import com.tencent.mm.ui.d.e;
+import com.tencent.mm.modelmulti.h;
+import com.tencent.mm.network.m.a;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 
 final class WorkerProfile$25
-  extends com.tencent.mm.sdk.c.c
+  extends m.a
 {
-  WorkerProfile$25(WorkerProfile paramWorkerProfile)
-  {
-    super(0);
-  }
+  WorkerProfile$25(WorkerProfile paramWorkerProfile) {}
   
-  public final boolean a(b paramb)
+  public final void bc(int paramInt)
   {
-    if ((aBv.aBw != 2) && (aBv.status == 0))
-    {
-      Intent localIntent = new Intent();
-      localIntent.setComponent(new ComponentName(d.e.kjL, "com.tencent.mm.booter.MMReceivers$ToolsProcessReceiver"));
-      localIntent.putExtra("tools_process_action_code_key", "com.tencent.mm.intent.ACTION_TOOLS_REMOVE_COOKIE");
-      y.getContext().sendBroadcast(localIntent);
+    if ((paramInt != 5) && (paramInt != 1)) {}
+    while ((!ah.rg()) || (ah.tL()) || (ah.tN())) {
+      return;
     }
-    if (ah.rh()) {
-      if (aBv.aBw != 3) {
-        break label106;
-      }
-    }
-    label106:
-    for (int i = 1; i != 0; i = 0)
-    {
-      ag.bAw.H("login_user_name", "");
-      return false;
-    }
-    ag.bAw.d((String)ah.tD().rn().get(6, null), ((Integer)ah.tD().rn().get(9, null)).intValue(), (String)ah.tD().rn().get(5, null));
-    return false;
+    v.i("MicroMsg.WorkerProfile", "dkmsg Network connected , try send msg.");
+    ah.tF().a(new h(), 0);
   }
 }
 

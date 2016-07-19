@@ -3,19 +3,19 @@ package com.tencent.mm.ui.account;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.modelsimple.t;
-import com.tencent.mm.r.m;
+import com.tencent.mm.modelsimple.r;
+import com.tencent.mm.t.m;
 
 final class LoginHistoryUI$1
   implements DialogInterface.OnCancelListener
 {
-  LoginHistoryUI$1(LoginHistoryUI paramLoginHistoryUI, t paramt) {}
+  LoginHistoryUI$1(LoginHistoryUI paramLoginHistoryUI, r paramr) {}
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    ah.tE().c(ktw);
-    paramDialogInterface = ktx;
-    ah.tE().b(701, paramDialogInterface);
+    ah.tF().c(kSE);
+    paramDialogInterface = kSF;
+    ah.tF().b(701, paramDialogInterface);
   }
 }
 

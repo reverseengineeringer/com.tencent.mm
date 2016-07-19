@@ -4,11 +4,20 @@
 
 
 # instance fields
-.field gZC:Ljava/util/ArrayList;
+.field public hmU:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/plugin/sns/ui/TagImageView;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private gZD:F
+.field private hmV:F
 
-.field private gZE:I
+.field private hmW:I
 
 
 # direct methods
@@ -24,12 +33,12 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->gZC:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->hmU:Ljava/util/ArrayList;
 
     .line 19
     const/16 v0, 0x78
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->gZE:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->hmW:I
 
     .line 71
     return-void
@@ -42,7 +51,7 @@
 
     .prologue
     .line 27
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->gZC:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->hmU:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -50,50 +59,7 @@
     return-void
 .end method
 
-.method public final lW(I)Lcom/tencent/mm/plugin/sns/ui/TagImageView;
-    .locals 1
-
-    .prologue
-    .line 62
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->gZC:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-ge p1, v0, :cond_0
-
-    .line 63
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->gZC:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/plugin/sns/ui/TagImageView;
-
-    .line 65
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method protected onMeasure(II)V
-    .locals 0
-
-    .prologue
-    .line 107
-    invoke-super {p0, p1, p2}, Lcom/tencent/mm/ui/base/MMFrameLayout;->onMeasure(II)V
-
-    .line 108
-    return-void
-.end method
-
-.method public setImageViewWidth(I)V
+.method public final nk(I)V
     .locals 7
 
     .prologue
@@ -119,23 +85,23 @@
 
     iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->gZD:F
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->hmV:F
 
     .line 38
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->gZE:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->hmW:I
 
     int-to-float v0, v0
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->gZD:F
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->hmV:F
 
     mul-float/2addr v0, v1
 
     float-to-int v0, v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->gZE:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->hmW:I
 
     .line 39
-    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->gZE:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->hmW:I
 
     if-ge p1, v0, :cond_2
 
@@ -144,7 +110,7 @@
     const/4 v0, 0x0
 
     :goto_2
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->gZC:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->hmU:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -179,7 +145,7 @@
 
     int-to-float v4, p1
 
-    iget v5, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->gZD:F
+    iget v5, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->hmV:F
 
     mul-float/2addr v5, v6
 
@@ -198,7 +164,7 @@
 
     int-to-float v4, p1
 
-    iget v5, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->gZD:F
+    iget v5, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->hmV:F
 
     mul-float/2addr v5, v6
 
@@ -230,13 +196,13 @@
 
     .line 39
     :cond_2
-    iget p1, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->gZE:I
+    iget p1, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->hmW:I
 
     goto :goto_1
 
     .line 51
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->gZC:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->hmU:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -259,7 +225,7 @@
 
     int-to-float v2, v2
 
-    iget v3, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->gZD:F
+    iget v3, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->hmV:F
 
     mul-float/2addr v3, v6
 
@@ -279,4 +245,47 @@
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
+.end method
+
+.method public final nl(I)Lcom/tencent/mm/plugin/sns/ui/TagImageView;
+    .locals 1
+
+    .prologue
+    .line 62
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->hmU:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-ge p1, v0, :cond_0
+
+    .line 63
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PhotosContent;->hmU:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/plugin/sns/ui/TagImageView;
+
+    .line 65
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method protected onMeasure(II)V
+    .locals 0
+
+    .prologue
+    .line 107
+    invoke-super {p0, p1, p2}, Lcom/tencent/mm/ui/base/MMFrameLayout;->onMeasure(II)V
+
+    .line 108
+    return-void
 .end method

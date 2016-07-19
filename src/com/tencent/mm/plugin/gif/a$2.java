@@ -9,10 +9,10 @@ final class a$2
   
   public final void run()
   {
-    if (((ewP.isRunning()) || (a.b(ewP) == 0)) && (SystemClock.uptimeMillis() >= a.c(ewP)))
+    if (((eDi.isRunning()) || (a.b(eDi) == 0)) && (SystemClock.uptimeMillis() >= a.c(eDi)))
     {
-      a.a(ewP, System.currentTimeMillis());
-      ewP.invalidateSelf();
+      a.a(eDi, System.currentTimeMillis());
+      eDi.invalidateSelf();
     }
   }
 }

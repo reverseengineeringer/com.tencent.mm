@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.Comparator;
 
 final class FileUtils$1
-  implements Comparator
+  implements Comparator<File>
 {
   public final int compare(File paramFile1, File paramFile2)
   {

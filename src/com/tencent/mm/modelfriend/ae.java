@@ -2,18 +2,18 @@ package com.tencent.mm.modelfriend;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import junit.framework.Assert;
 
 public final class ae
   extends com.tencent.mm.sdk.h.g
 {
-  public static final String[] aoY = { "CREATE TABLE IF NOT EXISTS qqgroup ( grouopid int PRIMARY KEY,membernum int,weixinnum int,insert_time int,lastupdate_time int,needupdate int,updatekey text,groupname text,reserved1 text ,reserved2 text ,reserved3 int ,reserved4 int )" };
-  public final com.tencent.mm.az.g bCw;
+  public static final String[] bkN = { "CREATE TABLE IF NOT EXISTS qqgroup ( grouopid int PRIMARY KEY,membernum int,weixinnum int,insert_time int,lastupdate_time int,needupdate int,updatekey text,groupname text,reserved1 text ,reserved2 text ,reserved3 int ,reserved4 int )" };
+  public final com.tencent.mm.bc.g bvG;
   
-  public ae(com.tencent.mm.az.g paramg)
+  public ae(com.tencent.mm.bc.g paramg)
   {
-    bCw = paramg;
+    bvG = paramg;
   }
   
   public final boolean a(ad paramad)
@@ -24,34 +24,34 @@ public final class ae
     {
       bool = true;
       Assert.assertTrue(bool);
-      localContentValues = paramad.zd();
+      localContentValues = paramad.zq();
       if (localContentValues.size() > 0) {
         break label36;
       }
-      u.e("!32@/B4Tb64lLpJ+zgjqUamJQfLmk15RM/5N", "update failed, no values set");
+      v.e("MicroMsg.QQGroupStorage", "update failed, no values set");
     }
     label36:
-    while (bCw.update("qqgroup", localContentValues, "grouopid= ?", new String[] { bNc }) <= 0)
+    while (bvG.update("qqgroup", localContentValues, "grouopid= ?", new String[] { bGw }) <= 0)
     {
       return false;
       bool = false;
       break;
     }
-    Ep();
+    EJ();
     return true;
   }
   
-  public final ad dh(int paramInt)
+  public final ad dM(int paramInt)
   {
     ad localad = null;
-    Cursor localCursor = bCw.rawQuery("select qqgroup.grouopid,qqgroup.membernum,qqgroup.weixinnum,qqgroup.insert_time,qqgroup.lastupdate_time,qqgroup.needupdate,qqgroup.updatekey,qqgroup.groupname from qqgroup  where grouopid = " + paramInt, null);
+    Cursor localCursor = bvG.rawQuery("select qqgroup.grouopid,qqgroup.membernum,qqgroup.weixinnum,qqgroup.insert_time,qqgroup.lastupdate_time,qqgroup.needupdate,qqgroup.updatekey,qqgroup.groupname from qqgroup  where grouopid = " + paramInt, null);
     if (localCursor == null) {
       return null;
     }
     if (localCursor.moveToFirst())
     {
       localad = new ad();
-      localad.c(localCursor);
+      localad.b(localCursor);
     }
     localCursor.close();
     return localad;

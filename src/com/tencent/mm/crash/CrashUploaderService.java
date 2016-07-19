@@ -8,8 +8,8 @@ import com.tencent.mm.a.e;
 import com.tencent.mm.a.g;
 import com.tencent.mm.a.q;
 import com.tencent.mm.pointers.PByteArray;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.File;
 import java.io.PrintStream;
 import java.text.SimpleDateFormat;
@@ -26,17 +26,17 @@ import org.apache.http.impl.client.DefaultHttpClient;
 public class CrashUploaderService
   extends IntentService
 {
-  static final HashMap bvl;
+  static final HashMap<String, Integer> bjV;
   
   static
   {
     HashMap localHashMap = new HashMap(16);
-    bvl = localHashMap;
+    bjV = localHashMap;
     localHashMap.put("exception", Integer.valueOf(10001));
-    bvl.put("anr", Integer.valueOf(10002));
-    bvl.put("handler", Integer.valueOf(10003));
-    bvl.put("sql", Integer.valueOf(10004));
-    bvl.put("permission", Integer.valueOf(10005));
+    bjV.put("anr", Integer.valueOf(10002));
+    bjV.put("handler", Integer.valueOf(10003));
+    bjV.put("sql", Integer.valueOf(10004));
+    bjV.put("permission", Integer.valueOf(10005));
   }
   
   public CrashUploaderService()
@@ -47,11 +47,11 @@ public class CrashUploaderService
   private static boolean a(String paramString1, byte[] paramArrayOfByte, int paramInt, String paramString2, String paramString3, String paramString4)
   {
     int i = paramArrayOfByte.length;
-    String str = g.m(String.format("weixin#$()%d%d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(i) }).getBytes()).toLowerCase();
-    byte[] arrayOfByte = q.q(paramArrayOfByte);
+    String str = g.j(String.format("weixin#$()%d%d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(i) }).getBytes()).toLowerCase();
+    byte[] arrayOfByte = q.m(paramArrayOfByte);
     paramArrayOfByte = new PByteArray();
     c.a(paramArrayOfByte, arrayOfByte, str.getBytes());
-    paramString2 = new StringBuilder().append(paramString3).append("/cgi-bin/mmsupport-bin/stackreport?version=").append(Integer.toHexString(paramInt)).append("&devicetype=").append(paramString2).append("&filelength=").append(i).append("&sum=").append(str).append("&reporttype=1&NewReportType=").append(ay.d((Integer)bvl.get(paramString4)));
+    paramString2 = new StringBuilder().append(paramString3).append("/cgi-bin/mmsupport-bin/stackreport?version=").append(Integer.toHexString(paramInt)).append("&devicetype=").append(paramString2).append("&filelength=").append(i).append("&sum=").append(str).append("&reporttype=1&NewReportType=").append(be.f((Integer)bjV.get(paramString4)));
     if ((paramString1 != null) && (!paramString1.equals(""))) {
       paramString2.append("&username=").append(paramString1);
     }
@@ -62,7 +62,7 @@ public class CrashUploaderService
       paramArrayOfByte = new ByteArrayEntity(value);
       paramArrayOfByte.setContentType("binary/octet-stream");
       paramString2.setEntity(paramArrayOfByte);
-      paramString1 = ay.d(paramString1.execute(paramString2).getEntity().getContent());
+      paramString1 = be.d(paramString1.execute(paramString2).getEntity().getContent());
       System.out.println(paramString1);
       return true;
     }
@@ -70,13 +70,13 @@ public class CrashUploaderService
     return false;
   }
   
-  private static void i(String paramString1, String paramString2, String paramString3)
+  private static void k(String paramString1, String paramString2, String paramString3)
   {
     StringBuilder localStringBuilder;
     if (!new File(paramString1).exists())
     {
       localStringBuilder = new StringBuilder();
-      if ((!ay.kz(paramString3)) && (!paramString3.equals("0"))) {
+      if ((!be.kf(paramString3)) && (!paramString3.equals("0"))) {
         break label188;
       }
       paramString3 = Build.DEVICE + Build.FINGERPRINT + Build.MANUFACTURER + Build.MODEL;
@@ -84,11 +84,11 @@ public class CrashUploaderService
     }
     for (;;)
     {
-      localStringBuilder.append(u.aUD());
+      localStringBuilder.append(v.aZH());
       localStringBuilder.append(" BRAND:[" + Build.BRAND + "] ");
       localStringBuilder.append("\n");
-      e.e(paramString1, localStringBuilder.toString().getBytes());
-      e.e(paramString1, (paramString2 + "\n").getBytes());
+      e.d(paramString1, localStringBuilder.toString().getBytes());
+      e.d(paramString1, (paramString2 + "\n").getBytes());
       return;
       label188:
       localStringBuilder.append("uin[" + paramString3 + "] ");
@@ -132,7 +132,7 @@ public class CrashUploaderService
       paramIntent = "exception";
     }
     localObject1 = str1 + "," + str3 + "_" + i + "_" + Build.CPU_ABI + ",";
-    localObject1 = (String)localObject1 + "exception,time_" + ay.FR() + ",error_" + (String)localObject4;
+    localObject1 = (String)localObject1 + "exception,time_" + be.Go() + ",error_" + (String)localObject4;
     for (;;)
     {
       try
@@ -144,7 +144,7 @@ public class CrashUploaderService
         ((File)localObject4).mkdirs();
         localObject4 = new Date();
         localSimpleDateFormat = new SimpleDateFormat("yyyyMMdd", Locale.getDefault());
-        i((String)localObject3 + "crash_" + localSimpleDateFormat.format((Date)localObject4) + ".txt", (String)localObject1, str2);
+        k((String)localObject3 + "crash_" + localSimpleDateFormat.format((Date)localObject4) + ".txt", (String)localObject1, str2);
       }
       catch (Exception localException)
       {
@@ -161,9 +161,9 @@ public class CrashUploaderService
       if (((File)localObject2).length() > 262144L) {
         ((File)localObject2).delete();
       }
-      i((String)localObject3, (String)localObject1, str2);
+      k((String)localObject3, (String)localObject1, str2);
       localObject1 = e.d((String)localObject3, 0, -1);
-      if ((ay.J((byte[])localObject1)) || (!a(str1, (byte[])localObject1, i, str3, str4, paramIntent))) {
+      if ((be.P((byte[])localObject1)) || (!a(str1, (byte[])localObject1, i, str3, str4, paramIntent))) {
         break;
       }
       ((File)localObject2).delete();
@@ -176,7 +176,7 @@ public class CrashUploaderService
         if (j < k)
         {
           localSimpleDateFormat = localObject4[j];
-          if (ay.an(localSimpleDateFormat.lastModified()) > 2592000000L) {
+          if (be.au(localSimpleDateFormat.lastModified()) > 2592000000L) {
             localSimpleDateFormat.delete();
           }
           j += 1;

@@ -25,7 +25,7 @@
     return-void
 .end method
 
-.method private static a(Ljava/lang/String;[Ljava/lang/String;)Z
+.method private static b(Ljava/lang/String;[Ljava/lang/String;)Z
     .locals 3
 
     const/4 v1, 0x0
@@ -59,10 +59,10 @@
     goto :goto_0
 .end method
 
-.method private static d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method private static f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 9
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     new-instance v0, Ljava/io/File;
 
@@ -125,9 +125,9 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :try_start_1
-    new-instance v6, Ljava/io/FileOutputStream;
+    new-instance v0, Ljava/io/FileOutputStream;
 
-    invoke-direct {v6, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    invoke-direct {v0, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -138,20 +138,20 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_5
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    move-result-object v0
+    move-result-object v1
 
     :try_start_3
-    invoke-virtual {v6}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
-    move-result-object v5
+    move-result-object v6
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {v0}, Ljava/nio/channels/FileChannel;->size()J
+    invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->size()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual/range {v0 .. v5}, Ljava/nio/channels/FileChannel;->transferTo(JJLjava/nio/channels/WritableByteChannel;)J
+    invoke-virtual/range {v1 .. v6}, Ljava/nio/channels/FileChannel;->transferTo(JJLjava/nio/channels/WritableByteChannel;)J
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_6
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
@@ -159,11 +159,11 @@
     :try_start_4
     invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
 
-    invoke-virtual {v0}, Ljava/nio/channels/FileChannel;->close()V
+    invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
 
-    invoke-virtual {v6}, Ljava/io/FileOutputStream;->close()V
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
 
-    invoke-virtual {v5}, Ljava/nio/channels/FileChannel;->close()V
+    invoke-virtual {v6}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
 
@@ -173,21 +173,21 @@
     :catch_0
     move-exception v0
 
-    move-object v0, v5
+    move-object v1, v6
 
-    move-object v1, v5
+    move-object v0, v6
 
-    move-object v2, v5
+    move-object v2, v6
 
     :goto_1
     :try_start_5
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
 
-    invoke-virtual {v0}, Ljava/nio/channels/FileChannel;->close()V
+    invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
 
-    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
 
-    invoke-virtual {v5}, Ljava/nio/channels/FileChannel;->close()V
+    invoke-virtual {v6}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_1
 
@@ -201,11 +201,11 @@
     :catchall_0
     move-exception v0
 
-    move-object v1, v5
+    move-object v1, v6
 
-    move-object v6, v5
+    move-object v2, v6
 
-    move-object v7, v5
+    move-object v7, v6
 
     :goto_2
     :try_start_6
@@ -213,9 +213,9 @@
 
     invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
 
-    invoke-virtual {v6}, Ljava/io/FileOutputStream;->close()V
+    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
 
-    invoke-virtual {v5}, Ljava/nio/channels/FileChannel;->close()V
+    invoke-virtual {v6}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
 
@@ -235,25 +235,29 @@
     :catchall_1
     move-exception v0
 
-    move-object v1, v5
+    move-object v1, v6
 
-    move-object v6, v5
+    move-object v2, v6
 
     goto :goto_2
 
     :catchall_2
-    move-exception v0
+    move-exception v1
 
-    move-object v1, v5
+    move-object v2, v0
+
+    move-object v0, v1
+
+    move-object v1, v6
 
     goto :goto_2
 
     :catchall_3
-    move-exception v1
+    move-exception v2
 
-    move-object v8, v1
+    move-object v8, v2
 
-    move-object v1, v0
+    move-object v2, v0
 
     move-object v0, v8
 
@@ -262,18 +266,16 @@
     :catch_4
     move-exception v0
 
-    move-object v0, v5
+    move-object v1, v6
 
-    move-object v1, v5
+    move-object v0, v6
 
     move-object v2, v7
 
     goto :goto_1
 
     :catch_5
-    move-exception v0
-
-    move-object v0, v5
+    move-exception v1
 
     move-object v1, v6
 
@@ -282,16 +284,14 @@
     goto :goto_1
 
     :catch_6
-    move-exception v1
-
-    move-object v1, v6
+    move-exception v2
 
     move-object v2, v7
 
     goto :goto_1
 .end method
 
-.method private static k(Ljava/lang/String;Ljava/lang/String;)Z
+.method private static j(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 3
 
     new-instance v0, Ljava/io/File;
@@ -327,7 +327,7 @@
     return v0
 .end method
 
-.method private static l(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.method private static k(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 8
 
     new-instance v4, Ljava/io/File;
@@ -476,7 +476,7 @@
     :cond_0
     const-string/jumbo v3, "libwxvoiceembed.so"
 
-    invoke-static {v3, p2}, Lcom/qq/wx/voice/embed/recognizer/f;->k(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v3, p2}, Lcom/qq/wx/voice/embed/recognizer/f;->j(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v3
 
@@ -489,7 +489,7 @@
     :cond_1
     const-string/jumbo v3, "libwxvoiceembed.bin"
 
-    invoke-static {v3, p2}, Lcom/qq/wx/voice/embed/recognizer/f;->k(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v3, p2}, Lcom/qq/wx/voice/embed/recognizer/f;->j(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v3
 
@@ -541,7 +541,7 @@
     :cond_3
     const-string/jumbo v4, "libwxvoiceembed.so"
 
-    invoke-static {v4, v3}, Lcom/qq/wx/voice/embed/recognizer/f;->k(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v4, v3}, Lcom/qq/wx/voice/embed/recognizer/f;->j(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v4
 
@@ -549,12 +549,12 @@
 
     const-string/jumbo v4, "libwxvoiceembed.so"
 
-    invoke-static {v4, p2, v3}, Lcom/qq/wx/voice/embed/recognizer/f;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, p2, v3}, Lcom/qq/wx/voice/embed/recognizer/f;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_4
     const-string/jumbo v4, "libwxvoiceembed.bin"
 
-    invoke-static {v4, v3}, Lcom/qq/wx/voice/embed/recognizer/f;->k(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v4, v3}, Lcom/qq/wx/voice/embed/recognizer/f;->j(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v4
 
@@ -562,19 +562,19 @@
 
     const-string/jumbo v4, "libwxvoiceembed.bin"
 
-    invoke-static {v4, p2, v3}, Lcom/qq/wx/voice/embed/recognizer/f;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, p2, v3}, Lcom/qq/wx/voice/embed/recognizer/f;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_5
     :try_start_0
     const-string/jumbo v4, "libwxvoiceembed.so"
 
-    invoke-static {v4, v3}, Lcom/qq/wx/voice/embed/recognizer/f;->l(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v3}, Lcom/qq/wx/voice/embed/recognizer/f;->k(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     const-string/jumbo v5, "libwxvoiceembed.so"
 
-    invoke-static {v5, p2}, Lcom/qq/wx/voice/embed/recognizer/f;->l(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, p2}, Lcom/qq/wx/voice/embed/recognizer/f;->k(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -588,7 +588,7 @@
 
     const-string/jumbo v5, "libwxvoiceembed.so"
 
-    invoke-static {v5, p2, v3}, Lcom/qq/wx/voice/embed/recognizer/f;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, p2, v3}, Lcom/qq/wx/voice/embed/recognizer/f;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_6
     const-string/jumbo v5, ";"
@@ -597,7 +597,7 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lcom/qq/wx/voice/embed/recognizer/f;->a(Ljava/lang/String;[Ljava/lang/String;)Z
+    invoke-static {v4, v5}, Lcom/qq/wx/voice/embed/recognizer/f;->b(Ljava/lang/String;[Ljava/lang/String;)Z
 
     move-result v4
 
@@ -618,13 +618,13 @@
     :try_start_1
     const-string/jumbo v1, "libwxvoiceembed.bin"
 
-    invoke-static {v1, v3}, Lcom/qq/wx/voice/embed/recognizer/f;->l(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v3}, Lcom/qq/wx/voice/embed/recognizer/f;->k(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string/jumbo v4, "libwxvoiceembed.bin"
 
-    invoke-static {v4, p2}, Lcom/qq/wx/voice/embed/recognizer/f;->l(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, p2}, Lcom/qq/wx/voice/embed/recognizer/f;->k(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -638,7 +638,7 @@
 
     const-string/jumbo v4, "libwxvoiceembed.bin"
 
-    invoke-static {v4, p2, v3}, Lcom/qq/wx/voice/embed/recognizer/f;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, p2, v3}, Lcom/qq/wx/voice/embed/recognizer/f;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_8
     const-string/jumbo v4, ";"
@@ -647,7 +647,7 @@
 
     move-result-object v4
 
-    invoke-static {v1, v4}, Lcom/qq/wx/voice/embed/recognizer/f;->a(Ljava/lang/String;[Ljava/lang/String;)Z
+    invoke-static {v1, v4}, Lcom/qq/wx/voice/embed/recognizer/f;->b(Ljava/lang/String;[Ljava/lang/String;)Z
 
     move-result v1
 
@@ -674,7 +674,7 @@
     goto/16 :goto_0
 .end method
 
-.method public final c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+.method public final e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
     .locals 5
 
     const/4 v0, 0x0
@@ -693,7 +693,7 @@
     :cond_0
     const-string/jumbo v3, "libwxvoiceembed.so"
 
-    invoke-static {v3, p1}, Lcom/qq/wx/voice/embed/recognizer/f;->k(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v3, p1}, Lcom/qq/wx/voice/embed/recognizer/f;->j(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v3
 
@@ -706,7 +706,7 @@
     :cond_1
     const-string/jumbo v3, "libwxvoiceembed.bin"
 
-    invoke-static {v3, p1}, Lcom/qq/wx/voice/embed/recognizer/f;->k(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v3, p1}, Lcom/qq/wx/voice/embed/recognizer/f;->j(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v3
 
@@ -720,7 +720,7 @@
     :try_start_0
     const-string/jumbo v3, "libwxvoiceembed.so"
 
-    invoke-static {v3, p1}, Lcom/qq/wx/voice/embed/recognizer/f;->l(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, p1}, Lcom/qq/wx/voice/embed/recognizer/f;->k(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -732,7 +732,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/qq/wx/voice/embed/recognizer/f;->a(Ljava/lang/String;[Ljava/lang/String;)Z
+    invoke-static {v3, v4}, Lcom/qq/wx/voice/embed/recognizer/f;->b(Ljava/lang/String;[Ljava/lang/String;)Z
 
     move-result v3
 
@@ -753,7 +753,7 @@
     :try_start_1
     const-string/jumbo v1, "libwxvoiceembed.bin"
 
-    invoke-static {v1, p1}, Lcom/qq/wx/voice/embed/recognizer/f;->l(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1}, Lcom/qq/wx/voice/embed/recognizer/f;->k(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -765,7 +765,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcom/qq/wx/voice/embed/recognizer/f;->a(Ljava/lang/String;[Ljava/lang/String;)Z
+    invoke-static {v1, v3}, Lcom/qq/wx/voice/embed/recognizer/f;->b(Ljava/lang/String;[Ljava/lang/String;)Z
 
     move-result v1
 

@@ -18,11 +18,20 @@
 
 
 # instance fields
-.field buL:Ljava/lang/String;
+.field DF:Ljava/lang/String;
 
-.field gzJ:Z
+.field gGl:Z
 
-.field gzK:Ljava/lang/ref/WeakReference;
+.field gGm:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Lcom/tencent/mm/plugin/sight/draft/ui/c;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field path:Ljava/lang/String;
 
@@ -57,12 +66,12 @@
     .line 67
     iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/c$a;->path:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/d;->CE(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/d;->ER(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
     .line 68
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/c$a;->gzK:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/c$a;->gGm:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -74,9 +83,9 @@
     if-eqz v0, :cond_1
 
     .line 70
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/draft/ui/c$a;->buL:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/draft/ui/c$a;->DF:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -85,9 +94,9 @@
     if-eqz v1, :cond_0
 
     .line 72
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/draft/ui/c;->gzH:Lcom/tencent/mm/a/f;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/draft/ui/c;->gGj:Lcom/tencent/mm/a/f;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/draft/ui/c$a;->buL:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/draft/ui/c$a;->DF:Ljava/lang/String;
 
     invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/a/f;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -100,25 +109,25 @@
     invoke-direct {v0, v2}, Lcom/tencent/mm/plugin/sight/draft/ui/c$b;-><init>(B)V
 
     .line 75
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/draft/ui/c$a;->buL:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/draft/ui/c$a;->DF:Ljava/lang/String;
 
-    iput-object v2, v0, Lcom/tencent/mm/plugin/sight/draft/ui/c$b;->buL:Ljava/lang/String;
+    iput-object v2, v0, Lcom/tencent/mm/plugin/sight/draft/ui/c$b;->DF:Ljava/lang/String;
 
     .line 76
-    iput-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/c$b;->efe:Landroid/graphics/Bitmap;
+    iput-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/c$b;->eiG:Landroid/graphics/Bitmap;
 
     .line 77
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/c$a;->gzK:Ljava/lang/ref/WeakReference;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/c$a;->gGm:Ljava/lang/ref/WeakReference;
 
-    iput-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/c$b;->gzK:Ljava/lang/ref/WeakReference;
+    iput-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/c$b;->gGm:Ljava/lang/ref/WeakReference;
 
     .line 78
-    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/c$a;->gzJ:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/c$a;->gGl:Z
 
     if-eqz v1, :cond_1
 
     .line 79
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)V
 
     .line 82
     :cond_1

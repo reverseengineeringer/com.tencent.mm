@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic fJt:Lcom/tencent/mm/storage/k;
+.field final synthetic fSv:Lcom/tencent/mm/storage/k;
 
-.field final synthetic iId:Lcom/tencent/mm/pluginsdk/ui/applet/b;
+.field final synthetic jfa:Lcom/tencent/mm/pluginsdk/ui/applet/b;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 145
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$2;->iId:Lcom/tencent/mm/pluginsdk/ui/applet/b;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$2;->jfa:Lcom/tencent/mm/pluginsdk/ui/applet/b;
 
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$2;->fJt:Lcom/tencent/mm/storage/k;
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$2;->fSv:Lcom/tencent/mm/storage/k;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,17 +48,17 @@
     if-eqz p1, :cond_0
 
     .line 150
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$2;->iId:Lcom/tencent/mm/pluginsdk/ui/applet/b;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$2;->jfa:Lcom/tencent/mm/pluginsdk/ui/applet/b;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$2;->fJt:Lcom/tencent/mm/storage/k;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$2;->fSv:Lcom/tencent/mm/storage/k;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/b;->I(Lcom/tencent/mm/storage/k;)V
 
     .line 155
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$2;->iId:Lcom/tencent/mm/pluginsdk/ui/applet/b;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$2;->jfa:Lcom/tencent/mm/pluginsdk/ui/applet/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/b;->iIa:Lcom/tencent/mm/ui/base/h;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/b;->jeX:Lcom/tencent/mm/ui/base/h;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->dismiss()V
 
@@ -67,11 +67,11 @@
 
     .line 152
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$2;->iId:Lcom/tencent/mm/pluginsdk/ui/applet/b;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/b$2;->jfa:Lcom/tencent/mm/pluginsdk/ui/applet/b;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/b;->cd(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/b;->cx(I)V
 
     goto :goto_0
 .end method

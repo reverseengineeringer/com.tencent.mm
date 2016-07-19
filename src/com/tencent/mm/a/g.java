@@ -21,65 +21,63 @@ public final class g
     //   14: invokespecial 22	java/io/FileInputStream:<init>	(Ljava/io/File;)V
     //   17: astore_0
     //   18: aload_0
-    //   19: ldc 23
-    //   21: iconst_0
-    //   22: sipush 256
-    //   25: aconst_null
-    //   26: invokestatic 26	com/tencent/mm/a/g:a	(Ljava/io/InputStream;III[B)Ljava/lang/String;
-    //   29: astore_3
-    //   30: aload_0
-    //   31: invokevirtual 30	java/io/FileInputStream:close	()V
-    //   34: aload_0
-    //   35: invokevirtual 30	java/io/FileInputStream:close	()V
-    //   38: aload_3
-    //   39: areturn
-    //   40: astore_0
-    //   41: aconst_null
-    //   42: astore_0
-    //   43: aload_0
-    //   44: ifnull -37 -> 7
-    //   47: aload_0
-    //   48: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   19: iconst_0
+    //   20: sipush 256
+    //   23: invokestatic 25	com/tencent/mm/a/g:a	(Ljava/io/InputStream;II)Ljava/lang/String;
+    //   26: astore_3
+    //   27: aload_0
+    //   28: invokevirtual 29	java/io/FileInputStream:close	()V
+    //   31: aload_0
+    //   32: invokevirtual 29	java/io/FileInputStream:close	()V
+    //   35: aload_3
+    //   36: areturn
+    //   37: astore_0
+    //   38: aconst_null
+    //   39: astore_0
+    //   40: aload_0
+    //   41: ifnull -34 -> 7
+    //   44: aload_0
+    //   45: invokevirtual 29	java/io/FileInputStream:close	()V
+    //   48: aconst_null
+    //   49: areturn
+    //   50: astore_0
     //   51: aconst_null
     //   52: areturn
-    //   53: astore_0
+    //   53: astore_3
     //   54: aconst_null
-    //   55: areturn
-    //   56: astore_3
-    //   57: aconst_null
-    //   58: astore_0
-    //   59: aload_0
-    //   60: ifnull +7 -> 67
-    //   63: aload_0
-    //   64: invokevirtual 30	java/io/FileInputStream:close	()V
-    //   67: aload_3
-    //   68: athrow
-    //   69: astore_0
-    //   70: goto -32 -> 38
-    //   73: astore_0
-    //   74: goto -7 -> 67
-    //   77: astore_3
-    //   78: goto -19 -> 59
-    //   81: astore_3
-    //   82: goto -39 -> 43
+    //   55: astore_0
+    //   56: aload_0
+    //   57: ifnull +7 -> 64
+    //   60: aload_0
+    //   61: invokevirtual 29	java/io/FileInputStream:close	()V
+    //   64: aload_3
+    //   65: athrow
+    //   66: astore_0
+    //   67: goto -32 -> 35
+    //   70: astore_0
+    //   71: goto -7 -> 64
+    //   74: astore_3
+    //   75: goto -19 -> 56
+    //   78: astore_3
+    //   79: goto -39 -> 40
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	85	0	paramFile	File
-    //   0	85	1	paramInt1	int
-    //   0	85	2	paramInt2	int
-    //   29	10	3	str	String
-    //   56	12	3	localObject1	Object
-    //   77	1	3	localObject2	Object
-    //   81	1	3	localException	Exception
+    //   0	82	0	paramFile	File
+    //   0	82	1	paramInt1	int
+    //   0	82	2	paramInt2	int
+    //   26	10	3	str	String
+    //   53	12	3	localObject1	Object
+    //   74	1	3	localObject2	Object
+    //   78	1	3	localException	Exception
     // Exception table:
     //   from	to	target	type
-    //   9	18	40	java/lang/Exception
-    //   47	51	53	java/io/IOException
-    //   9	18	56	finally
-    //   34	38	69	java/io/IOException
-    //   63	67	73	java/io/IOException
-    //   18	34	77	finally
-    //   18	34	81	java/lang/Exception
+    //   9	18	37	java/lang/Exception
+    //   44	48	50	java/io/IOException
+    //   9	18	53	finally
+    //   31	35	66	java/io/IOException
+    //   60	64	70	java/io/IOException
+    //   18	31	74	finally
+    //   18	31	78	java/lang/Exception
   }
   
   /* Error */
@@ -99,16 +97,16 @@ public final class g
     //   18: invokespecial 22	java/io/FileInputStream:<init>	(Ljava/io/File;)V
     //   21: astore_0
     //   22: aload_0
-    //   23: ldc 23
+    //   23: ldc 32
     //   25: iconst_0
     //   26: iload_1
     //   27: aload_2
-    //   28: invokestatic 26	com/tencent/mm/a/g:a	(Ljava/io/InputStream;III[B)Ljava/lang/String;
+    //   28: invokestatic 35	com/tencent/mm/a/g:a	(Ljava/io/InputStream;III[B)Ljava/lang/String;
     //   31: astore_2
     //   32: aload_0
-    //   33: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   33: invokevirtual 29	java/io/FileInputStream:close	()V
     //   36: aload_0
-    //   37: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   37: invokevirtual 29	java/io/FileInputStream:close	()V
     //   40: aload_2
     //   41: areturn
     //   42: astore_0
@@ -120,7 +118,7 @@ public final class g
     //   48: aload_0
     //   49: ifnull +7 -> 56
     //   52: aload_0
-    //   53: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   53: invokevirtual 29	java/io/FileInputStream:close	()V
     //   56: aconst_null
     //   57: areturn
     //   58: astore_2
@@ -129,7 +127,7 @@ public final class g
     //   61: aload_0
     //   62: ifnull +7 -> 69
     //   65: aload_0
-    //   66: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   66: invokevirtual 29	java/io/FileInputStream:close	()V
     //   69: aload_2
     //   70: athrow
     //   71: astore_0
@@ -189,10 +187,15 @@ public final class g
     return null;
   }
   
+  public static final String a(InputStream paramInputStream, int paramInt1, int paramInt2)
+  {
+    return a(paramInputStream, 102400, paramInt1, paramInt2, null);
+  }
+  
   private static String a(InputStream paramInputStream, int paramInt1, int paramInt2, int paramInt3, byte[] paramArrayOfByte)
   {
     int i = 0;
-    if ((paramInt2 < 0) || (paramInt3 <= 0)) {}
+    if ((paramInputStream == null) || (paramInt2 < 0) || (paramInt3 <= 0)) {}
     for (;;)
     {
       return null;
@@ -241,7 +244,7 @@ public final class g
     return null;
   }
   
-  public static String aC(String paramString)
+  public static String aH(String paramString)
   {
     if (paramString == null) {}
     do
@@ -252,7 +255,7 @@ public final class g
     return g(paramString);
   }
   
-  public static String aD(String paramString)
+  public static String aI(String paramString)
   {
     if (paramString == null) {}
     do
@@ -267,7 +270,7 @@ public final class g
   public static String g(File paramFile)
   {
     // Byte code:
-    //   0: ldc2_w 99
+    //   0: ldc2_w 102
     //   3: lstore_1
     //   4: aload_0
     //   5: ifnull +10 -> 15
@@ -281,27 +284,27 @@ public final class g
     //   21: aload_0
     //   22: invokespecial 22	java/io/FileInputStream:<init>	(Ljava/io/File;)V
     //   25: astore_3
-    //   26: ldc2_w 99
+    //   26: ldc2_w 102
     //   29: aload_0
-    //   30: invokevirtual 104	java/io/File:length	()J
+    //   30: invokevirtual 107	java/io/File:length	()J
     //   33: lcmp
     //   34: ifgt +23 -> 57
     //   37: aload_3
     //   38: lload_1
     //   39: l2i
-    //   40: invokestatic 106	com/tencent/mm/a/g:a	(Ljava/io/InputStream;I)Ljava/lang/String;
+    //   40: invokestatic 109	com/tencent/mm/a/g:a	(Ljava/io/InputStream;I)Ljava/lang/String;
     //   43: astore_0
     //   44: aload_3
-    //   45: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   45: invokevirtual 29	java/io/FileInputStream:close	()V
     //   48: aload_3
-    //   49: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   49: invokevirtual 29	java/io/FileInputStream:close	()V
     //   52: aload_0
     //   53: areturn
     //   54: astore_3
     //   55: aload_0
     //   56: areturn
     //   57: aload_0
-    //   58: invokevirtual 104	java/io/File:length	()J
+    //   58: invokevirtual 107	java/io/File:length	()J
     //   61: lstore_1
     //   62: goto -25 -> 37
     //   65: astore_0
@@ -310,7 +313,7 @@ public final class g
     //   68: aload_0
     //   69: ifnull +7 -> 76
     //   72: aload_0
-    //   73: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   73: invokevirtual 29	java/io/FileInputStream:close	()V
     //   76: aconst_null
     //   77: areturn
     //   78: astore_0
@@ -319,7 +322,7 @@ public final class g
     //   81: aload_3
     //   82: ifnull +7 -> 89
     //   85: aload_3
-    //   86: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   86: invokevirtual 29	java/io/FileInputStream:close	()V
     //   89: aload_0
     //   90: athrow
     //   91: astore_0
@@ -355,7 +358,7 @@ public final class g
     //   57	62	103	java/lang/Exception
   }
   
-  public static final String m(byte[] paramArrayOfByte)
+  public static final String j(byte[] paramArrayOfByte)
   {
     int i = 0;
     char[] arrayOfChar = new char[16];
@@ -424,7 +427,7 @@ public final class g
     }
   }
   
-  public static final byte[] n(byte[] paramArrayOfByte)
+  public static final byte[] k(byte[] paramArrayOfByte)
   {
     try
     {

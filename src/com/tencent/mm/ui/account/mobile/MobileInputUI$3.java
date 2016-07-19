@@ -12,7 +12,7 @@ final class MobileInputUI$3
   public final boolean onKey(View paramView, int paramInt, KeyEvent paramKeyEvent)
   {
     if ((66 == paramInt) && (paramKeyEvent.getAction() == 0)) {
-      return MobileInputUI.c(kyc);
+      return MobileInputUI.c(kXj);
     }
     return false;
   }

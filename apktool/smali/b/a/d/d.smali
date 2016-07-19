@@ -6,8 +6,20 @@
 .implements Ljava/lang/Comparable;
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/lang/Comparable",
+        "<",
+        "Lb/a/d/d;",
+        ">;"
+    }
+.end annotation
+
+
 # instance fields
-.field final buL:Ljava/lang/String;
+.field final DF:Ljava/lang/String;
 
 .field final value:Ljava/lang/String;
 
@@ -21,7 +33,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 20
-    iput-object p1, p0, Lb/a/d/d;->buL:Ljava/lang/String;
+    iput-object p1, p0, Lb/a/d/d;->DF:Ljava/lang/String;
 
     .line 21
     iput-object p2, p0, Lb/a/d/d;->value:Ljava/lang/String;
@@ -39,9 +51,9 @@
     .line 1
     check-cast p1, Lb/a/d/d;
 
-    iget-object v0, p0, Lb/a/d/d;->buL:Ljava/lang/String;
+    iget-object v0, p0, Lb/a/d/d;->DF:Ljava/lang/String;
 
-    iget-object v1, p1, Lb/a/d/d;->buL:Ljava/lang/String;
+    iget-object v1, p1, Lb/a/d/d;->DF:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
@@ -98,9 +110,9 @@
     check-cast p1, Lb/a/d/d;
 
     .line 36
-    iget-object v2, p1, Lb/a/d/d;->buL:Ljava/lang/String;
+    iget-object v2, p1, Lb/a/d/d;->DF:Ljava/lang/String;
 
-    iget-object v3, p0, Lb/a/d/d;->buL:Ljava/lang/String;
+    iget-object v3, p0, Lb/a/d/d;->DF:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -128,7 +140,7 @@
 
     .prologue
     .line 41
-    iget-object v0, p0, Lb/a/d/d;->buL:Ljava/lang/String;
+    iget-object v0, p0, Lb/a/d/d;->DF:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 

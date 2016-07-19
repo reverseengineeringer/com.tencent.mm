@@ -9,7 +9,7 @@ final class AddressUI$a$4
   
   public final void run()
   {
-    AddressUI.a.c(liu).setSelection(0);
+    AddressUI.a.c(lIF).setSelection(0);
   }
 }
 

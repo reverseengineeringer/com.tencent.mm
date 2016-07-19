@@ -1,96 +1,54 @@
 package com.tencent.mm.ak;
 
-import com.tencent.mm.network.e;
-import com.tencent.mm.network.o;
-import com.tencent.mm.pluginsdk.j.a.b;
-import com.tencent.mm.protocal.b.alx;
-import com.tencent.mm.protocal.b.axd;
-import com.tencent.mm.protocal.b.axe;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.a.c;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-
 public final class g
-  extends b
+  extends com.tencent.mm.ax.a
 {
-  private d anM;
-  private a anN;
-  private String ccs;
-  private boolean cct = false;
+  public int bRn;
+  public int bRv;
+  public int bRw;
   
-  public g(String paramString1, String paramString2, String paramString3, String paramString4)
+  protected final int a(int paramInt, Object... paramVarArgs)
   {
-    Object localObject = new a.a();
-    bFa = new axd();
-    bFb = new axe();
-    uri = "/cgi-bin/micromsg-bin/verifysoterfingerprintlogin";
-    bEY = 248;
-    bFc = 0;
-    bFd = 0;
-    anN = ((a.a)localObject).vy();
-    localObject = (axd)anN.bEW.bFf;
-    iWm = 248;
-    jNv = paramString1;
-    jbX = paramString2;
-    jNu = paramString3;
-    jbW = paramString4;
-    jbx = new alx().aO(ay.aVA());
-  }
-  
-  public final void Db()
-  {
-    u.i("!64@/B4Tb64lLpK+IBX8XDgnvgZ/kgsw4m89t41ZBk4vjbha1WRPgoiG8tdGgpVSGOCt", "onAuth key expired");
-    if (anM != null) {
-      anM.a(4, 62334, "", this);
+    if (paramInt == 0)
+    {
+      paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
+      paramVarArgs.cw(1, bRn);
+      paramVarArgs.cw(2, bRv);
+      paramVarArgs.cw(3, bRw);
+      return 0;
     }
-  }
-  
-  public final int a(e parame, d paramd)
-  {
-    anM = paramd;
-    return a(parame, anN, this);
-  }
-  
-  protected final int a(o paramo)
-  {
-    return j.b.bFI;
-  }
-  
-  public final void b(int paramInt1, int paramInt2, String paramString, o paramo)
-  {
-    if ((paramInt1 == 0) && (paramInt2 == 0)) {
-      ccs = bEX.bFf).jPi;
+    if (paramInt == 1) {
+      return a.a.a.a.cu(1, bRn) + 0 + a.a.a.a.cu(2, bRv) + a.a.a.a.cu(3, bRw);
     }
-    if (anM != null) {
-      anM.a(paramInt1, paramInt2, paramString, this);
+    if (paramInt == 2)
+    {
+      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+      for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
+        if (!super.a(paramVarArgs, this, paramInt)) {
+          paramVarArgs.bve();
+        }
+      }
+      return 0;
     }
-  }
-  
-  public final void c(int paramInt1, int paramInt2, String paramString)
-  {
-    if (anM != null) {
-      anM.a(paramInt1, paramInt2, paramString, this);
+    if (paramInt == 3)
+    {
+      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+      g localg = (g)paramVarArgs[1];
+      switch (((Integer)paramVarArgs[2]).intValue())
+      {
+      default: 
+        return -1;
+      case 1: 
+        bRn = mMY.id();
+        return 0;
+      case 2: 
+        bRv = mMY.id();
+        return 0;
+      }
+      bRw = mMY.id();
+      return 0;
     }
-  }
-  
-  public final int getType()
-  {
-    return 248;
-  }
-  
-  protected final int lk()
-  {
-    return 3;
-  }
-  
-  public final d vI()
-  {
-    return anM;
+    return -1;
   }
 }
 

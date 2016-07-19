@@ -4,20 +4,20 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
+import com.tencent.mm.aq.n;
+import com.tencent.mm.compatible.d.j;
 import com.tencent.mm.compatible.d.p;
 import com.tencent.mm.plugin.sight.decode.a.b;
 import com.tencent.mm.plugin.sight.decode.a.b.3;
 import com.tencent.mm.plugin.sight.decode.a.b.e;
 import com.tencent.mm.plugin.sight.decode.a.b.f;
 import com.tencent.mm.plugin.sight.decode.ui.SightPlayImageView;
-import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.ad;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.g;
 import java.io.File;
 
@@ -26,9 +26,9 @@ public class VideoSightView
   implements f
 {
   private int duration = 0;
-  private String gxe;
-  private boolean iSR;
-  private boolean iSS = true;
+  private String gDC;
+  private boolean jqd;
+  public boolean jqe = true;
   
   public VideoSightView(Context paramContext)
   {
@@ -50,125 +50,158 @@ public class VideoSightView
   
   private void init()
   {
-    if (ay.ad(bsQbsq, "").equals("other")) {
-      u.i("!32@/B4Tb64lLpLxD5nHaNBo4uNW5qSmIaVG", "init::use other player");
+    if (be.ab(bgWbgt, "").equals("other")) {
+      v.i("MicroMsg.VideoSightView", "init::use other player");
     }
     for (;;)
     {
-      setOnCompletionListener(new b.e()
+      a(new b.e()
       {
-        public final void a(b paramAnonymousb, int paramAnonymousInt)
+        public final void d(b paramAnonymousb, int paramAnonymousInt)
         {
           if (-1 == paramAnonymousInt) {
-            if (gyx != null) {
-              gyx.az(0, 0);
+            if (gEU != null) {
+              gEU.aE(0, 0);
             }
           }
-          while ((paramAnonymousInt != 0) || (gyx == null)) {
+          while ((paramAnonymousInt != 0) || (gEU == null)) {
             return;
           }
-          gyx.lG();
+          gEU.jQ();
         }
       });
       return;
-      eD(true);
+      es(true);
     }
+  }
+  
+  public final void a(f.a parama)
+  {
+    gEU = parama;
+  }
+  
+  public final double ayx()
+  {
+    if (gEO != null)
+    {
+      b localb = gEO;
+      if (gEd != -1.0D) {
+        return gEd;
+      }
+      return gEa;
+    }
+    return 0.0D;
+  }
+  
+  public final void ew(boolean paramBoolean)
+  {
+    if (gEO != null) {
+      gEO.eFR = paramBoolean;
+    }
+  }
+  
+  public final void ex(boolean paramBoolean)
+  {
+    if (paramBoolean)
+    {
+      a(new b.f()
+      {
+        public final void b(b paramAnonymousb, long paramAnonymousLong)
+        {
+          if (VideoSightView.a(VideoSightView.this) == 0) {
+            VideoSightView.a(VideoSightView.this, getDuration());
+          }
+          if (gEU != null) {
+            gEU.aF((int)paramAnonymousLong, VideoSightView.a(VideoSightView.this));
+          }
+        }
+      });
+      return;
+    }
+    a(null);
   }
   
   public final boolean f(Context paramContext, boolean paramBoolean)
   {
-    if (gxe == null) {
-      u.e("!32@/B4Tb64lLpLxD5nHaNBo4uNW5qSmIaVG", "start::use path is null!");
+    if (gDC == null) {
+      v.e("MicroMsg.VideoSightView", "start::use path is null!");
     }
     do
     {
       return false;
-      if ((!ay.ad(bsQbsq, "").equals("other")) && (b.tX(gxe))) {
+      if ((!be.ab(bgWbgt, "").equals("other")) && (b.vd(gDC))) {
         break;
       }
-      u.i("!32@/B4Tb64lLpLxD5nHaNBo4uNW5qSmIaVG", "start::use other player, path %s, has called %B", new Object[] { gxe, Boolean.valueOf(iSR) });
-    } while ((iSR) && (!paramBoolean));
+      v.i("MicroMsg.VideoSightView", "start::use other player, path %s, has called %B", new Object[] { gDC, Boolean.valueOf(jqd) });
+    } while ((jqd) && (!paramBoolean));
     Intent localIntent = new Intent();
     localIntent.setAction("android.intent.action.VIEW");
-    localIntent.setDataAndType(Uri.fromFile(new File(gxe)), "video/*");
+    localIntent.setDataAndType(Uri.fromFile(new File(gDC)), "video/*");
     try
     {
-      paramContext.startActivity(Intent.createChooser(localIntent, paramContext.getString(2131432531)));
-      iSR = true;
+      paramContext.startActivity(Intent.createChooser(localIntent, paramContext.getString(2131232712)));
+      jqd = true;
       return false;
     }
     catch (Exception localException)
     {
       for (;;)
       {
-        u.e("!32@/B4Tb64lLpLxD5nHaNBo4uNW5qSmIaVG", "startActivity fail, activity not found");
-        g.ba(paramContext, paramContext.getResources().getString(2131428868));
+        v.e("MicroMsg.VideoSightView", "startActivity fail, activity not found");
+        g.aZ(paramContext, paramContext.getResources().getString(2131235819));
       }
     }
-    P(gxe, false);
+    V(gDC, false);
     return true;
   }
   
-  public final void g(double paramDouble)
+  public final int getCurrentPosition()
   {
-    if (gyr != null)
-    {
-      b localb = gyr;
-      u.v("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "seekToFrame now %f %s", new Object[] { Double.valueOf(paramDouble), ay.aVJ().toString() });
-      com.tencent.mm.an.j.b(new b.3(localb, paramDouble), 0L);
-    }
-  }
-  
-  public int getCurrentPosition()
-  {
-    u.v("!32@/B4Tb64lLpLxD5nHaNBo4uNW5qSmIaVG", "get current position");
+    v.v("MicroMsg.VideoSightView", "get current position");
     return 0;
   }
   
-  public int getDuration()
+  public final int getDuration()
   {
     int i = super.getDuration();
-    u.v("!32@/B4Tb64lLpLxD5nHaNBo4uNW5qSmIaVG", "get duration " + i);
+    v.v("MicroMsg.VideoSightView", "get duration " + i);
     return i;
-  }
-  
-  public double getLastProgresstime()
-  {
-    if (getController() != null)
-    {
-      b localb = getController();
-      if (gxF != -1.0D) {
-        return gxF;
-      }
-      return gxC;
-    }
-    return 0.0D;
   }
   
   public final boolean isPlaying()
   {
-    return gyr.avJ();
+    return gEO.aye();
+  }
+  
+  public final void j(double paramDouble)
+  {
+    if (gEO != null)
+    {
+      b localb = gEO;
+      v.v("MicroMsg.SightPlayController", "seekToFrame now %f %s", new Object[] { Double.valueOf(paramDouble), be.baX().toString() });
+      n.b(new b.3(localb, paramDouble), 0L);
+    }
   }
   
   protected void onConfigurationChanged(Configuration paramConfiguration)
   {
     super.onConfigurationChanged(paramConfiguration);
-    if (iSS) {
-      setDrawableWidth(getResourcesgetDisplayMetricswidthPixels);
+    if (jqe) {
+      lY(getResourcesgetDisplayMetricswidthPixels);
     }
   }
   
   public final void onDetach()
   {
-    a.jUF.c("UIStatusChanged", gyr.avL());
+    detach();
   }
   
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
-    u.v("!32@/B4Tb64lLpLxD5nHaNBo4uNW5qSmIaVG", "ashutest::on layout changed %B, %d %d %d %d %s", new Object[] { Boolean.valueOf(paramBoolean), Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), Integer.valueOf(paramInt4), Boolean.valueOf(gyy) });
-    if ((gyy) && (paramInt3 - paramInt1 > 0)) {
-      setDrawableWidth(paramInt3 - paramInt1);
+    v.v("MicroMsg.VideoSightView", "ashutest::on layout changed %B, %d %d %d %d %s", new Object[] { Boolean.valueOf(paramBoolean), Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), Integer.valueOf(paramInt4), Boolean.valueOf(gEV) });
+    if ((gEV) && (paramInt3 - paramInt1 > 0)) {
+      lY(paramInt3 - paramInt1);
     }
   }
   
@@ -179,60 +212,19 @@ public class VideoSightView
   
   public final void pause()
   {
-    P(gxe, true);
+    V(gDC, true);
   }
   
-  public void setEnableConfigChanged(boolean paramBoolean)
+  public final void setVideoPath(String paramString)
   {
-    iSS = paramBoolean;
-  }
-  
-  public void setLoop(boolean paramBoolean)
-  {
-    setLoopImp(paramBoolean);
-  }
-  
-  public void setPlayProgressCallback(boolean paramBoolean)
-  {
-    if (paramBoolean)
-    {
-      setOnDecodeDurationListener(new b.f()
-      {
-        public final void a(b paramAnonymousb, long paramAnonymousLong)
-        {
-          if (VideoSightView.a(VideoSightView.this) == 0) {
-            VideoSightView.a(VideoSightView.this, getDuration());
-          }
-          if (gyx != null) {
-            gyx.aA((int)paramAnonymousLong, VideoSightView.a(VideoSightView.this));
-          }
-        }
-      });
-      return;
-    }
-    setOnDecodeDurationListener(null);
-  }
-  
-  public void setThumb(Bitmap paramBitmap)
-  {
-    m(paramBitmap);
-  }
-  
-  public void setVideoCallback(f.a parama)
-  {
-    gyx = parama;
-  }
-  
-  public void setVideoPath(String paramString)
-  {
-    if (gyx == null) {}
+    if (gEU == null) {}
     for (boolean bool = true;; bool = false)
     {
-      u.i("!32@/B4Tb64lLpLxD5nHaNBo4uNW5qSmIaVG", "set sight path %s, callback null ? %B", new Object[] { paramString, Boolean.valueOf(bool) });
+      v.i("MicroMsg.VideoSightView", "set sight path %s, callback null ? %B", new Object[] { paramString, Boolean.valueOf(bool) });
       duration = 0;
-      gxe = paramString;
-      if (gyx != null) {
-        gyx.Xq();
+      gDC = paramString;
+      if (gEU != null) {
+        gEU.Zb();
       }
       return;
     }
@@ -245,7 +237,7 @@ public class VideoSightView
   
   public final void stop()
   {
-    gyr.clear();
+    gEO.clear();
   }
 }
 

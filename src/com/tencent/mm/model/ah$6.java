@@ -1,6 +1,7 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ak;
 
 final class ah$6
   implements Runnable
@@ -9,7 +10,7 @@ final class ah$6
   
   public final void run()
   {
-    com.tencent.mm.sdk.platformtools.ah.dG(y.getContext());
+    ak.dH(aa.getContext());
   }
 }
 

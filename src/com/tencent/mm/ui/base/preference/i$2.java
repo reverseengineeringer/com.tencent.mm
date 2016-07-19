@@ -12,30 +12,30 @@ final class i$2
 {
   i$2(i parami) {}
   
-  public final void onItemClick(final AdapterView paramAdapterView, final View paramView, int paramInt, long paramLong)
+  public final void onItemClick(final AdapterView<?> paramAdapterView, final View paramView, int paramInt, long paramLong)
   {
-    if (paramInt < i.e(kMb).getHeaderViewsCount()) {}
+    if (paramInt < i.e(llq).getHeaderViewsCount()) {}
     do
     {
       do
       {
         return;
-        int i = i.e(kMb).getHeaderViewsCount();
-        paramAdapterView = (Preference)i.d(kMb).getItem(paramInt - i);
-      } while ((!paramAdapterView.isEnabled()) || (!kMm) || ((paramAdapterView instanceof CheckBoxPreference)));
+        int i = i.e(llq).getHeaderViewsCount();
+        paramAdapterView = (Preference)i.d(llq).getItem(paramInt - i);
+      } while ((!paramAdapterView.isEnabled()) || (!llB) || ((paramAdapterView instanceof CheckBoxPreference)));
       if ((paramAdapterView instanceof DialogPreference))
       {
         paramView = (DialogPreference)paramAdapterView;
         paramView.showDialog();
-        kLa = new DialogPreference.a()
+        lkp = new DialogPreference.a()
         {
-          public final void bdp()
+          public final void biW()
           {
-            i.c(kMb);
-            if (paramViewkMo) {
-              i.b(kMb).edit().putString(paramAdapterViewcln, paramView.getValue()).commit();
+            i.c(llq);
+            if (paramViewllD) {
+              i.b(llq).edit().putString(paramAdapterViewcgq, paramView.getValue()).commit();
             }
-            i.d(kMb).notifyDataSetChanged();
+            i.d(llq).notifyDataSetChanged();
           }
         };
       }
@@ -43,20 +43,20 @@ final class i$2
       {
         paramView = (EditPreference)paramAdapterView;
         paramView.showDialog();
-        kLc = new EditPreference.a()
+        lkr = new EditPreference.a()
         {
-          public final void bdp()
+          public final void biW()
           {
-            i.c(kMb);
-            if (paramViewkMo) {
-              i.b(kMb).edit().putString(paramAdapterViewcln, paramViewvalue).commit();
+            i.c(llq);
+            if (paramViewllD) {
+              i.b(llq).edit().putString(paramAdapterViewcgq, paramViewvalue).commit();
             }
-            i.d(kMb).notifyDataSetChanged();
+            i.d(llq).notifyDataSetChanged();
           }
         };
       }
-    } while (cln == null);
-    kMb.a(i.d(kMb), paramAdapterView);
+    } while (cgq == null);
+    llq.a(i.d(llq), paramAdapterView);
   }
 }
 

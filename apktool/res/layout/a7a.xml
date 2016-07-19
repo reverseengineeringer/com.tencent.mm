@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:scrollbars="none" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" style="@style/MMBody">
+            <ImageView android:id="@id/c2j" android:paddingBottom="33.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@raw/accounts_saftphone_icon" />
+            <TextView android:gravity="center" android:id="@id/c2k" android:text="@string/c6d" style="@style/MMBriefText" />
+        </LinearLayout>
+        <TextView android:id="@id/c2n" android:layout_marginLeft="@dimen/hb" android:layout_marginRight="@dimen/hb" style="@style/MMSolidGreenLargeButton" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_marginTop="3.0dip" android:layout_marginRight="5.0dip" style="@style/MMBlock">
+            <Button android:layout_gravity="bottom|center|left" android:id="@id/nb" android:paddingTop="10.0dip" android:paddingBottom="5.0dip" android:visibility="gone" android:layout_marginLeft="10.0dip" android:text="@string/c6u" style="@style/RegUIHyperText" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

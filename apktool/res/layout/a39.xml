@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/kn" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.plugin.scanner.ui.ProductScrollView android:id="@id/bqt" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_alignParentTop="true">
+        <LinearLayout android:background="@null" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/NavPage">
+            <com.tencent.mm.ui.base.MaxListView android:id="@android:id/list" android:paddingBottom="15.0dip" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="#00000000" android:divider="#00000000" android:dividerHeight="0.0px" />
+            <LinearLayout android:gravity="bottom|center" android:orientation="vertical" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="@dimen/h4" android:textColor="#ff406ca2" android:id="@id/bqu" android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:paddingBottom="32.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.tencent.mm.plugin.scanner.ui.ProductScrollView>
+    <TextView android:id="@id/bqv" android:background="#ff7f7f7f" android:layout_width="fill_parent" android:layout_height="?c" android:minHeight="?c" android:layout_alignParentTop="true" />
+</RelativeLayout>

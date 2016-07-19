@@ -5,69 +5,70 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import com.tencent.mm.a.e;
-import com.tencent.mm.at.b;
+import com.tencent.mm.ax.b;
 import com.tencent.mm.compatible.a.a.a;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.plugin.ext.provider.ExtContentProviderBase;
-import com.tencent.mm.protocal.b.bg;
-import com.tencent.mm.protocal.b.bi;
 import com.tencent.mm.protocal.b.bj;
-import com.tencent.mm.protocal.b.bk;
 import com.tencent.mm.protocal.b.bl;
 import com.tencent.mm.protocal.b.bm;
 import com.tencent.mm.protocal.b.bn;
 import com.tencent.mm.protocal.b.bo;
-import com.tencent.mm.r.a.c;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.bp;
+import com.tencent.mm.protocal.b.bq;
+import com.tencent.mm.protocal.b.br;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
+import com.tencent.mm.t.a.c;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 import java.util.LinkedList;
 
 public class ExtControlProviderVoiceControl
   extends ExtContentProviderBase
-  implements com.tencent.mm.r.d
+  implements com.tencent.mm.t.d
 {
+  private static final String[] dLY = { "retCode" };
   private Context context;
-  private String[] dKH = null;
-  private int dKI = -1;
-  private int dLF = 4;
-  private long dLG;
-  private long dLH;
-  private long dLI;
-  com.tencent.mm.pluginsdk.d.a.a dLJ = new com.tencent.mm.pluginsdk.d.a.a();
-  private long dLK = 0L;
-  private boolean dLL;
-  private com.qq.wx.voice.embed.recognizer.c dLM = new com.qq.wx.voice.embed.recognizer.c()
+  private String[] dMk = null;
+  private int dMl = -1;
+  private int dNm = 4;
+  private long dNn;
+  private long dNo;
+  private long dNp;
+  com.tencent.mm.pluginsdk.d.a.a dNq = new com.tencent.mm.pluginsdk.d.a.a();
+  private long dNr = 0L;
+  private boolean dNs;
+  private com.qq.wx.voice.embed.recognizer.c dNt = new com.qq.wx.voice.embed.recognizer.c()
   {
     public final void a(com.qq.wx.voice.embed.recognizer.a paramAnonymousa)
     {
       if (paramAnonymousa == null) {
-        u.w("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "localVoiceControl onGetResult restult is null");
+        v.w("MicroMsg.ext.ExtControlProviderVoiceControl", "localVoiceControl onGetResult restult is null");
       }
       do
       {
         return;
-        u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "localVoiceControl use time2:%s,text: %s,name: %s", new Object[] { Long.valueOf(System.currentTimeMillis() - ExtControlProviderVoiceControl.b(ExtControlProviderVoiceControl.this)), text, name });
-      } while (ay.kz(name));
+        v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "localVoiceControl use time2:%s,text: %s,name: %s", new Object[] { Long.valueOf(System.currentTimeMillis() - ExtControlProviderVoiceControl.b(ExtControlProviderVoiceControl.this)), text, name });
+      } while (be.kf(name));
       ExtControlProviderVoiceControl.c(ExtControlProviderVoiceControl.this);
       ExtControlProviderVoiceControl.b(ExtControlProviderVoiceControl.this, name);
     }
     
-    public final void aF(int paramAnonymousInt)
+    public final void aX(int paramAnonymousInt)
     {
-      u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "localVoiceControl onGetError:%s", new Object[] { Integer.valueOf(paramAnonymousInt) });
+      v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "localVoiceControl onGetError:%s", new Object[] { Integer.valueOf(paramAnonymousInt) });
     }
   };
   
   public ExtControlProviderVoiceControl(String[] paramArrayOfString, int paramInt, Context paramContext)
   {
-    dKH = paramArrayOfString;
-    dKI = paramInt;
+    dMk = paramArrayOfString;
+    dMl = paramInt;
     context = paramContext;
   }
   
@@ -75,49 +76,49 @@ public class ExtControlProviderVoiceControl
   {
     if (parama == null)
     {
-      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoiceContinue netscene null");
+      v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] uploadVoiceContinue netscene null");
       return false;
     }
-    if (dLY == null)
+    if (dNF == null)
     {
-      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoiceContinue uploadCmd null");
+      v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] uploadVoiceContinue uploadCmd null");
       return false;
     }
-    if (dLY.iYv == null)
+    if (dNF.jwa == null)
     {
-      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoiceContinue UploadCtx null");
+      v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] uploadVoiceContinue UploadCtx null");
       return false;
     }
-    new bm();
-    Object localObject = dLY;
-    iYv.iYE = paramInt1;
-    iYv.iYF = paramInt2;
-    byte[] arrayOfByte = e.d(dLX, paramInt1, paramInt2);
-    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoiceContinue %s, startPos=%s, dataLen=%s", new Object[] { Integer.valueOf(dLU), Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    new bp();
+    Object localObject = dNF;
+    jwa.jwj = paramInt1;
+    jwa.jwk = paramInt2;
+    byte[] arrayOfByte = e.d(dNE, paramInt1, paramInt2);
+    v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] uploadVoiceContinue %s, startPos=%s, dataLen=%s", new Object[] { Integer.valueOf(dNB), Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
     if ((arrayOfByte == null) || (arrayOfByte.length <= 0))
     {
-      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] buf empty, %s", new Object[] { dLX });
+      v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] buf empty, %s", new Object[] { dNE });
       return false;
     }
-    iYC = b.aH(arrayOfByte);
-    localObject = new a(dLU, appId, bEp, dLX, (bm)localObject);
-    bEq = bEq;
-    ah.tE().d((j)localObject);
+    jwh = b.aO(arrayOfByte);
+    localObject = new a(dNB, appId, bxA, dNE, (bp)localObject);
+    bxB = bxB;
+    ah.tF().a((j)localObject, 0);
     return true;
   }
   
   public static boolean a(String paramString1, int paramInt1, int paramInt2, int paramInt3, int paramInt4, String paramString2)
   {
-    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "uploadVoiceStart ");
+    v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "uploadVoiceStart ");
     Object localObject1;
     if (paramInt1 != 4)
     {
       localObject2 = paramString2 + ".speex";
       new com.tencent.mm.c.c.d();
       localObject1 = localObject2;
-      if (!com.tencent.mm.c.c.d.r(paramString2, (String)localObject2))
+      if (!com.tencent.mm.c.c.d.p(paramString2, (String)localObject2))
       {
-        u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] decodePCMToSpeex error,pcmPath:%s,speexFilePath:%s", new Object[] { paramString2, localObject2 });
+        v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] decodePCMToSpeex error,pcmPath:%s,speexFilePath:%s", new Object[] { paramString2, localObject2 });
         return false;
       }
     }
@@ -125,50 +126,50 @@ public class ExtControlProviderVoiceControl
     {
       localObject1 = paramString2;
     }
-    int i = e.aw((String)localObject1);
-    Object localObject2 = new bo();
-    iYG = 4;
-    iYH = 4;
-    iYI = paramInt3;
-    iYJ = paramInt4;
-    bn localbn = new bn();
-    iYD = i;
-    iYE = 0;
+    int i = e.aA((String)localObject1);
+    Object localObject2 = new br();
+    jwl = 4;
+    jwm = 4;
+    jwn = paramInt3;
+    jwo = paramInt4;
+    bq localbq = new bq();
+    jwi = i;
+    jwj = 0;
     if (i <= 16384) {
-      iYF = i;
+      jwk = i;
     }
     for (paramString2 = e.d((String)localObject1, 0, i);; paramString2 = e.d((String)localObject1, 0, 16384))
     {
-      u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoice appId=%s, FileType=%s, EncodeType=%s, sampleRate=%s, bps=%s, fileLen=%s, limit=%s", new Object[] { paramString1, Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), Integer.valueOf(paramInt4), Integer.valueOf(i), Integer.valueOf(16384) });
+      v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] uploadVoice appId=%s, FileType=%s, EncodeType=%s, sampleRate=%s, bps=%s, fileLen=%s, limit=%s", new Object[] { paramString1, Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), Integer.valueOf(paramInt4), Integer.valueOf(i), Integer.valueOf(16384) });
       if ((paramString2 != null) && (paramString2.length > 0)) {
         break;
       }
-      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] buf empty");
+      v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] buf empty");
       return false;
-      iYF = 16384;
+      jwk = 16384;
     }
-    bm localbm = new bm();
-    iYB = ((bo)localObject2);
-    iYv = localbn;
-    iYC = b.aH(paramString2);
-    paramInt1 = ay.FS().hashCode();
+    bp localbp = new bp();
+    jwg = ((br)localObject2);
+    jwa = localbq;
+    jwh = b.aO(paramString2);
+    paramInt1 = be.Gp().hashCode();
     if (paramInt1 != Integer.MIN_VALUE) {}
     for (paramInt1 = Math.abs(paramInt1);; paramInt1 = Integer.MIN_VALUE)
     {
-      paramString1 = new a(paramInt1, paramString1, i, (String)localObject1, localbm);
-      ah.tE().d(paramString1);
+      paramString1 = new a(paramInt1, paramString1, i, (String)localObject1, localbp);
+      ah.tF().a(paramString1, 0);
       return true;
     }
   }
   
-  private void nV(final String paramString)
+  private void pf(final String paramString)
   {
-    k localk = ah.tD().rq().Ep(paramString);
-    if ((localk == null) || (!com.tencent.mm.h.a.ce(field_type)))
+    k localk = ah.tE().rr().GD(paramString);
+    if ((localk == null) || (!com.tencent.mm.i.a.cy(field_type)))
     {
-      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] username is not contact, countDown");
-      dLF = 5;
-      dLJ.countDown();
+      v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] username is not contact, countDown");
+      dNm = 3505;
+      dNq.countDown();
       return;
     }
     com.tencent.mm.compatible.a.a.a(11, new a.a()
@@ -178,23 +179,37 @@ public class ExtControlProviderVoiceControl
         ExtControlProviderVoiceControl.c(ExtControlProviderVoiceControl.this, paramString);
       }
     });
-    dLF = 1;
-    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] jump to chattingUI : %s, countDown", new Object[] { paramString });
-    dLJ.countDown();
+    dNm = 1;
+    v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] jump to chattingUI : %s, countDown", new Object[] { paramString });
+    dNq.countDown();
   }
   
-  public final void a(int paramInt1, int paramInt2, final String paramString, j paramj)
+  public final boolean a(int paramInt, String paramString, b paramb)
   {
-    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] onSceneEnd errType=%s, errCode=%s, errMsg=%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
+    v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] getVoiceControlResult voiceId=%s, appId=%s", new Object[] { Integer.valueOf(paramInt), paramString });
+    if (dNo == 0L) {
+      dNo = System.currentTimeMillis();
+    }
+    dNp = System.currentTimeMillis();
+    bj localbj = new bj();
+    jvT = paramb;
+    paramString = new a(paramInt, paramString, localbj, dNo);
+    ah.tF().a(paramString, 0);
+    return true;
+  }
+  
+  public void onSceneEnd(int paramInt1, int paramInt2, final String paramString, j paramj)
+  {
+    v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] onSceneEnd errType=%s, errCode=%s, errMsg=%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
     if (paramj == null)
     {
-      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] scene null, countDown");
-      dLF = 7;
-      dLJ.countDown();
+      v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] scene null, countDown");
+      dNm = 3506;
+      dNq.countDown();
     }
     final a locala;
-    label408:
-    label413:
+    label411:
+    label416:
     do
     {
       do
@@ -204,295 +219,296 @@ public class ExtControlProviderVoiceControl
           return;
           if ((paramInt1 != 0) || (paramInt2 != 0))
           {
-            u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] errType、errCode not ok, countDown");
-            dLF = 7;
-            dLJ.countDown();
+            v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] errType、errCode not ok, countDown");
+            dNm = 3507;
+            dNq.countDown();
             return;
           }
-          u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] scene.getType()=%s", new Object[] { Integer.valueOf(paramj.getType()) });
+          v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] scene.getType()=%s", new Object[] { Integer.valueOf(paramj.getType()) });
         } while (paramj.getType() != 985);
-        if (dLL)
+        if (dNs)
         {
-          u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] localVoiceControlSucess, no need to process");
+          v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] localVoiceControlSucess, no need to process");
           return;
         }
         locala = (a)paramj;
         paramString = (a)paramj;
-        if ((anN != null) && (anN.bEX.bFf != null)) {}
-        for (paramString = (bi)anN.bEX.bFf; paramString == null; paramString = null)
+        if ((bkQ != null) && (bkQ.byi.byq != null)) {}
+        for (paramString = (bl)bkQ.byi.byq; paramString == null; paramString = null)
         {
-          u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] resp null, countDown");
-          dLF = 7;
-          dLJ.countDown();
+          v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] resp null, countDown");
+          dNm = 3508;
+          dNq.countDown();
           return;
         }
-        dLV = iYo;
-        paramInt1 = axD;
-        if (iYo == null)
+        dNC = jvT;
+        paramInt1 = ajK;
+        if (jvT == null)
         {
           paramj = "null";
-          u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] opCode=%s, resp.Cookies=%s", new Object[] { Integer.valueOf(paramInt1), paramj });
-          if (axD != 1) {
-            break label408;
+          v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] opCode=%s, resp.Cookies=%s", new Object[] { Integer.valueOf(paramInt1), paramj });
+          if (ajK != 1) {
+            break label411;
           }
         }
         for (paramInt1 = 1;; paramInt1 = 0)
         {
           if (paramInt1 == 0) {
-            break label582;
+            break label589;
           }
-          if (iYv == null) {
-            u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] resp.UploadCtx is null");
+          if (jwa == null) {
+            v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] resp.UploadCtx is null");
           }
-          u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadMode resp: Interval=%s, Timeout=%s, StartPos=%s, DataLen=%s", new Object[] { Integer.valueOf(iYt), Integer.valueOf(iYu), Integer.valueOf(iYv.iYE), Integer.valueOf(iYv.iYF) });
-          if (iYv.iYE < bEp) {
-            break label413;
+          v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] uploadMode resp: Interval=%s, Timeout=%s, StartPos=%s, DataLen=%s", new Object[] { Integer.valueOf(jvY), Integer.valueOf(jvZ), Integer.valueOf(jwa.jwj), Integer.valueOf(jwa.jwk) });
+          if (jwa.jwj < bxA) {
+            break label416;
           }
-          ab.e(new Runnable()
+          ad.e(new Runnable()
           {
             public final void run()
             {
-              u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] getResultMode getVoiceControlResult");
+              v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] getResultMode getVoiceControlResult");
               a locala = locala;
-              int i = paramStringiYu;
-              u.i("!56@/B4Tb64lLpJog02z7cuAvbpQZOkPhbyQv1jPueeOaTaQWzkct9X9+w==", "[voiceControl] setGetResultTimeOut %s", new Object[] { Integer.valueOf(i) });
-              dMa = i;
-              a(localadLU, localaappId, localadLV);
+              int i = paramStringjvZ;
+              v.i("MicroMsg.ext.NetSceneAppVoiceControl", "[voiceControl] setGetResultTimeOut %s", new Object[] { Integer.valueOf(i) });
+              dNH = i;
+              a(localadNB, localaappId, localadNC);
             }
-          }, iYt);
+          }, jvY);
           return;
-          paramj = new String(iYo.iTS);
+          paramj = new String(jvT.jrl);
           break;
         }
-        u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] continue upload voice");
-        if ((iYv.iYE != 0) && (iYv.iYE == bEq))
+        v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] continue upload voice");
+        if ((jwa.jwj != 0) && (jwa.jwj == bxB))
         {
-          u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] avoid duplicate doscene");
+          v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] avoid duplicate doscene");
           return;
         }
-        bEq = iYv.iYE;
-        if (iYv.iYE + iYv.iYF >= bEp) {
+        bxB = jwa.jwj;
+        if (jwa.jwj + jwa.jwk >= bxA) {
           break;
         }
-      } while (a(locala, iYv.iYE, iYv.iYF));
-      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoiceContinue fail, countDown");
-      dLF = 4;
-      dLJ.countDown();
+      } while (a(locala, jwa.jwj, jwa.jwk));
+      v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] uploadVoiceContinue fail1, countDown");
+      dNm = 3510;
+      dNq.countDown();
       return;
-    } while (a(locala, iYv.iYE, bEp - iYv.iYE));
-    u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoiceContinue fail, countDown");
-    dLF = 4;
-    dLJ.countDown();
+    } while (a(locala, jwa.jwj, bxA - jwa.jwj));
+    v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] uploadVoiceContinue fail2, countDown");
+    dNm = 3510;
+    dNq.countDown();
     return;
-    label582:
-    label593:
+    label589:
+    label600:
     long l1;
-    if (axD == 2)
+    if (ajK == 2)
     {
       paramInt1 = 1;
       if (paramInt1 == 0) {
-        break label683;
+        break label691;
       }
-      u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "");
-      l1 = System.currentTimeMillis() - dMb;
-      if (l1 <= dMa) {
-        break label685;
+      v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "");
+      l1 = System.currentTimeMillis() - dNI;
+      if (l1 <= dNH) {
+        break label693;
       }
-      u.w("!56@/B4Tb64lLpJog02z7cuAvbpQZOkPhbyQv1jPueeOaTaQWzkct9X9+w==", "[voiceControl] isGetResultTimeOut %s, %s", new Object[] { Long.valueOf(l1), Integer.valueOf(dMa) });
+      v.w("MicroMsg.ext.NetSceneAppVoiceControl", "[voiceControl] isGetResultTimeOut %s, %s", new Object[] { Long.valueOf(l1), Integer.valueOf(dNH) });
     }
     for (paramInt1 = 1;; paramInt1 = 0)
     {
       if (paramInt1 == 0) {
-        break label722;
+        break label730;
       }
-      dLF = 6;
-      dLJ.countDown();
+      dNm = 3509;
+      dNq.countDown();
       return;
       paramInt1 = 0;
-      break label593;
-      label683:
+      break label600;
+      label691:
       break;
-      label685:
-      u.i("!56@/B4Tb64lLpJog02z7cuAvbpQZOkPhbyQv1jPueeOaTaQWzkct9X9+w==", "[voiceControl] time %s, %s", new Object[] { Long.valueOf(l1), Integer.valueOf(dMa) });
+      label693:
+      v.i("MicroMsg.ext.NetSceneAppVoiceControl", "[voiceControl] time %s, %s", new Object[] { Long.valueOf(l1), Integer.valueOf(dNH) });
     }
-    label722:
-    if (iYw != null) {
-      u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] getResultMode resp VoiceId=%s, RecognizeRet=%s", new Object[] { Integer.valueOf(iYw.iYp), Integer.valueOf(iYw.iYx) });
+    label730:
+    if (jwb != null) {
+      v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] getResultMode resp VoiceId=%s, RecognizeRet=%s", new Object[] { Integer.valueOf(jwb.jvU), Integer.valueOf(jwb.jwc) });
     }
-    if ((iYw == null) || (iYw.iYx != 0))
+    if ((jwb == null) || (jwb.jwc != 0))
     {
-      if (System.currentTimeMillis() - dLI >= iYt)
+      if (System.currentTimeMillis() - dNp >= jvY)
       {
-        ab.j(new Runnable()
+        ad.k(new Runnable()
         {
           public final void run()
           {
-            a(localadLU, localaappId, localadLV);
+            a(localadNB, localaappId, localadNC);
           }
         });
         return;
       }
-      long l2 = iYt - (System.currentTimeMillis() - dLI);
+      long l2 = jvY - (System.currentTimeMillis() - dNp);
       l1 = l2;
-      if (l2 > iYt) {
-        l1 = iYt;
+      if (l2 > jvY) {
+        l1 = jvY;
       }
-      ab.e(new Runnable()
+      ad.e(new Runnable()
       {
         public final void run()
         {
-          a(localadLU, localaappId, localadLV);
+          a(localadNB, localaappId, localadNC);
         }
       }, l1);
       return;
     }
-    if (iYw.iYy == null)
+    if (jwb.jwd == null)
     {
-      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] SearchContactResultInfo null, countDown");
-      dLF = 5;
-      dLJ.countDown();
+      v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] SearchContactResultInfo null, countDown");
+      dNm = 3511;
+      dNq.countDown();
       return;
     }
-    if ((iYw.iYy.iYz == null) || (iYw.iYy.iYz.size() <= 0))
+    if ((jwb.jwd.jwe == null) || (jwb.jwd.jwe.size() <= 0))
     {
-      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] SearchContactResultInfo.Items null, countDown");
-      dLF = 5;
-      dLJ.countDown();
+      v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] SearchContactResultInfo.Items null, countDown");
+      dNm = 3511;
+      dNq.countDown();
       return;
     }
-    if (iYw.iYy.iYz.size() == 0)
+    if (jwb.jwd.jwe.size() == 0)
     {
-      dLF = 5;
-      dLJ.countDown();
+      dNm = 3511;
+      dNq.countDown();
       return;
     }
-    if (iYw.iYy.iYz.size() == 1)
+    if (jwb.jwd.jwe.size() == 1)
     {
-      nV(iYw.iYy.iYz.get(0)).iYA);
+      pf(jwb.jwd.jwe.get(0)).jwf);
       return;
     }
-    paramj = new String[iYw.iYy.iYz.size()];
+    paramj = new String[jwb.jwd.jwe.size()];
     paramInt1 = 0;
     while (paramInt1 < paramj.length)
     {
-      paramj[paramInt1] = iYw.iYy.iYz.get(paramInt1)).iYA;
-      u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] resp result item: %s", new Object[] { paramj[paramInt1] });
+      paramj[paramInt1] = jwb.jwd.jwe.get(paramInt1)).jwf;
+      v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] resp result item: %s", new Object[] { paramj[paramInt1] });
       paramInt1 += 1;
     }
     paramString = new Intent();
     paramString.putExtra("VoiceSearchResultUI_Resultlist", paramj);
-    paramString.putExtra("VoiceSearchResultUI_VoiceId", dLU);
+    paramString.putExtra("VoiceSearchResultUI_VoiceId", dNB);
     paramString.putExtra("VoiceSearchResultUI_IsVoiceControl", true);
     paramString.setFlags(67108864);
     paramString.putExtra("VoiceSearchResultUI_ShowType", 1);
-    com.tencent.mm.ar.c.a(context, ".ui.voicesearch.VoiceSearchResultUI", paramString);
-    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] scene end countDown");
-    dLF = 1;
-    dLJ.countDown();
-  }
-  
-  public final boolean a(int paramInt, String paramString, b paramb)
-  {
-    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] getVoiceControlResult voiceId=%s, appId=%s", new Object[] { Integer.valueOf(paramInt), paramString });
-    if (dLH == 0L) {
-      dLH = System.currentTimeMillis();
-    }
-    dLI = System.currentTimeMillis();
-    bg localbg = new bg();
-    iYo = paramb;
-    paramString = new a(paramInt, paramString, localbg, dLH);
-    ah.tE().d(paramString);
-    return true;
+    com.tencent.mm.av.c.a(context, ".ui.voicesearch.VoiceSearchResultUI", paramString);
+    v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] scene end countDown");
+    dNm = 1;
+    dNq.countDown();
   }
   
   public Cursor query(final Uri paramUri, final String[] paramArrayOfString1, final String paramString1, final String[] paramArrayOfString2, final String paramString2)
   {
-    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] query(), ApiId=%s", new Object[] { Integer.valueOf(dKI) });
-    dLG = 0L;
-    dLH = 0L;
-    a(paramUri, context, dKI, dKH);
+    v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] query(), ApiId=%s", new Object[] { Integer.valueOf(dMl) });
+    dNn = 0L;
+    dNo = 0L;
+    a(paramUri, context, dMl, dMk);
     if (paramUri == null)
     {
-      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "uri == null");
-      gK(3);
-      return gL(2);
+      v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "uri == null");
+      aA(3, 5);
+      return hK(5);
     }
     long l1 = System.currentTimeMillis();
-    if ((ay.kz(dKL)) || (ay.kz(Vw())))
+    if (be.kf(dMu))
     {
-      u.w("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "wrong args");
-      gK(3);
-      return gL(2);
+      v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "AppID == null");
+      aA(3, 7);
+      return hK(7);
+    }
+    if (be.kf(Xd()))
+    {
+      v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "PkgName == null");
+      aA(3, 6);
+      return hK(6);
     }
     long l2 = System.currentTimeMillis();
     long l3 = System.currentTimeMillis();
     long l4 = System.currentTimeMillis();
-    if (!bx(context))
+    int i = Xf();
+    if (i != 1)
     {
-      u.w("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "invalid appid ! return null");
-      gK(2);
-      return gL(8);
+      v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "invalid appid ! return code = " + i);
+      aA(2, i);
+      return hK(i);
     }
-    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[extApiCost][voiceControl] getAppIdAndPkg = %s, checkIsLogin = %s", new Object[] { Long.valueOf(l2 - l1), Long.valueOf(l4 - l3) });
-    switch (dKI)
+    v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "[extApiCost][voiceControl] getAppIdAndPkg = %s, checkIsLogin = %s", new Object[] { Long.valueOf(l2 - l1), Long.valueOf(l4 - l3) });
+    switch (dMl)
     {
     default: 
-      gK(3);
-      return gL(2);
+      aA(3, 15);
+      return hK(15);
     }
-    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "voiceControl");
+    v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "voiceControl");
     if ((paramArrayOfString2 == null) || (paramArrayOfString2.length < 4))
     {
-      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] wrong args");
-      gK(3);
-      dLF = 2;
-      return gL(dLF);
+      v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] wrong args");
+      aA(3, 3501);
+      dNm = 3501;
+      return hK(3501);
     }
     paramUri = paramArrayOfString2[0];
     paramArrayOfString1 = paramArrayOfString2[1];
     paramString1 = paramArrayOfString2[2];
     paramString2 = paramArrayOfString2[3];
     paramArrayOfString2 = paramArrayOfString2[4];
-    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] args: %s, %s, %s, %s %s", new Object[] { paramUri, paramArrayOfString1, paramString1, paramString2, paramArrayOfString2 });
-    if ((ay.kz(paramUri)) || (ay.kz(paramArrayOfString1)) || (ay.kz(paramString1)) || (ay.kz(paramString2)) || (ay.kz(paramArrayOfString2)))
+    v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] args: %s, %s, %s, %s %s", new Object[] { paramUri, paramArrayOfString1, paramString1, paramString2, paramArrayOfString2 });
+    if ((be.kf(paramUri)) || (be.kf(paramArrayOfString1)) || (be.kf(paramString1)) || (be.kf(paramString2)) || (be.kf(paramArrayOfString2)))
     {
-      gK(3);
-      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] wrong args");
-      return gL(2);
+      aA(3, 3502);
+      v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] wrong args");
+      return hK(3502);
     }
-    if (!e.ax(paramArrayOfString2))
+    if (!e.aB(paramArrayOfString2))
     {
-      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] speex file not exist");
-      gK(3);
-      return gL(2);
+      v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] speex file not exist");
+      aA(3, 3503);
+      return hK(3503);
     }
-    dLG = System.currentTimeMillis();
-    ah.tE().a(985, this);
-    dLJ.b(13000L, new Runnable()
+    dNn = System.currentTimeMillis();
+    ah.tF().a(985, this);
+    dNq.b(13000L, new Runnable()
     {
       public final void run()
       {
-        int i = ay.getInt(paramUri, 4);
+        int i = be.getInt(paramUri, 4);
         if (i == 1) {
           ExtControlProviderVoiceControl.a(ExtControlProviderVoiceControl.this, paramArrayOfString2);
         }
         for (;;)
         {
-          if (!ExtControlProviderVoiceControl.a(ExtControlProviderVoiceControl.a(ExtControlProviderVoiceControl.this), i, ay.getInt(paramArrayOfString1, 4), ay.getInt(paramString1, 16000), ay.getInt(paramString2, 16), paramArrayOfString2))
+          if (!ExtControlProviderVoiceControl.a(ExtControlProviderVoiceControl.a(ExtControlProviderVoiceControl.this), i, be.getInt(paramArrayOfString1, 4), be.getInt(paramString1, 16000), be.getInt(paramString2, 16), paramArrayOfString2))
           {
-            u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] !ok countDown");
-            ExtControlProviderVoiceControl.a(ExtControlProviderVoiceControl.this, 4);
-            dLJ.countDown();
+            v.e("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] !ok countDown");
+            ExtControlProviderVoiceControl.a(ExtControlProviderVoiceControl.this, 3504);
+            dNq.countDown();
           }
           return;
-          u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] not pcm, don't run localVoiceControl");
+          v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "[voiceControl] not pcm, don't run localVoiceControl");
         }
       }
     });
-    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[extApiCost][voiceControl] finish uploadVoice = %s, getResult = %s", new Object[] { Long.valueOf(dLH - dLG), Long.valueOf(System.currentTimeMillis() - dLH) });
-    ah.tE().b(985, this);
-    gK(0);
-    return gL(dLF);
+    v.i("MicroMsg.ext.ExtControlProviderVoiceControl", "[extApiCost][voiceControl] finish uploadVoice = %s, getResult = %s", new Object[] { Long.valueOf(dNo - dNn), Long.valueOf(System.currentTimeMillis() - dNo) });
+    ah.tF().b(985, this);
+    l(10, 0, 1);
+    if (1 != dNm) {
+      l(11, 4, 1);
+    }
+    for (;;)
+    {
+      hJ(0);
+      return hK(dNm);
+      l(10, 0, 1);
+    }
   }
 }
 

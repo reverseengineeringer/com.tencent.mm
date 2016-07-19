@@ -4,15 +4,15 @@ public abstract interface r$a
 {
   public abstract void A(int paramInt1, int paramInt2);
   
-  public abstract void g(int paramInt, String paramString);
-  
   public abstract int getInt(int paramInt1, int paramInt2);
   
   public abstract long getLong(int paramInt, long paramLong);
   
   public abstract String getString(int paramInt, String paramString);
   
-  public abstract void j(int paramInt, long paramLong);
+  public abstract void h(int paramInt, long paramLong);
+  
+  public abstract void h(int paramInt, String paramString);
 }
 
 /* Location:

@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hme:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
+.field final synthetic hCj:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 563
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$2;->hme:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
+    .line 699
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$2;->hCj:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,24 +36,54 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 3
+.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 2
 
     .prologue
-    .line 567
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    const/4 v1, 0x1
 
-    .line 568
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$2;->hme:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
+    .line 704
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$2;->hCj:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
 
-    new-instance v1, Landroid/content/Intent;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->n(Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;)Lcom/tencent/mm/plugin/sns/ui/ad;
 
-    const-string/jumbo v2, "android.settings.MANAGE_APPLICATIONS_SETTINGS"
+    move-result-object v0
 
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->startActivity(Landroid/content/Intent;)V
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$2;->hCj:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
 
-    .line 569
-    return-void
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->n(Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;)Lcom/tencent/mm/plugin/sns/ui/ad;
+
+    move-result-object v0
+
+    iget-boolean v0, v0, Lcom/tencent/mm/plugin/sns/ui/ad;->hog:Z
+
+    if-eqz v0, :cond_0
+
+    .line 705
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$2;->hCj:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->n(Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;)Lcom/tencent/mm/plugin/sns/ui/ad;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/ad;->fh(Z)Z
+
+    .line 706
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$2;->hCj:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->i(Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;)V
+
+    .line 710
+    :goto_0
+    return v1
+
+    .line 709
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$2;->hCj:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->finish()V
+
+    goto :goto_0
 .end method

@@ -11,8 +11,8 @@ final class SnsCommentDetailUI$4
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    if (SnsCommentDetailUI.o(hda) != null) {
-      SnsCommentDetailUI.o(hda).azM();
+    if (SnsCommentDetailUI.o(hrN) != null) {
+      SnsCommentDetailUI.o(hrN).aCn();
     }
     return false;
   }

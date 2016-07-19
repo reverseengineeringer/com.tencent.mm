@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/tencent/mm/plugin/sns/ui/ao$c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->Gb()V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hme:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
+.field final synthetic hCj:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
 
 
 # direct methods
@@ -26,25 +26,10 @@
     .locals 0
 
     .prologue
-    .line 151
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$8;->hme:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
+    .line 319
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$8;->hCj:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 1
-
-    .prologue
-    .line 155
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI$8;->hme:Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsUserUI;->aBq()V
-
-    .line 156
     return-void
 .end method

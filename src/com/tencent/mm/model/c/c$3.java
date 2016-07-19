@@ -1,14 +1,14 @@
 package com.tencent.mm.model.c;
 
-import com.tencent.mm.az.g.b;
+import com.tencent.mm.bc.g.b;
 import com.tencent.mm.storage.b;
 
 final class c$3
   implements g.b
 {
-  public final String[] lr()
+  public final String[] kE()
   {
-    return b.aoY;
+    return b.bkN;
   }
 }
 

@@ -2,11 +2,11 @@ package com.tencent.mm.app.plugin;
 
 import android.content.Context;
 import android.widget.Toast;
-import com.tencent.mm.modelsimple.ag;
+import com.tencent.mm.modelsimple.ae;
 import com.tencent.mm.pluginsdk.d.a;
-import com.tencent.mm.protocal.b.aub;
-import com.tencent.mm.r.j;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.protocal.b.aur;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.t.j;
 import com.tencent.mm.ui.base.p;
 import com.tencent.mm.ui.base.s;
 
@@ -17,14 +17,14 @@ final class URISpanHandlerSet$DeeplinkUriSpanHandler$3
   
   public final void a(int paramInt1, int paramInt2, String paramString, j paramj, boolean paramBoolean)
   {
-    if ((anl != null) && (anl.isShowing())) {
-      anl.dismiss();
+    if ((ZZ != null) && (ZZ.isShowing())) {
+      ZZ.dismiss();
     }
-    if ((paramj != null) && (paramInt1 != 0) && (paramInt2 != 0) && ((paramj instanceof ag)))
+    if ((paramj != null) && (paramInt1 != 0) && (paramInt2 != 0) && ((paramj instanceof ae)))
     {
-      paramString = ((ag)paramj).CM();
-      if ((paramString != null) && (URISpanHandlerSet.a(ank.ang) != null)) {
-        s.makeText(URISpanHandlerSet.a(ank.ang), URISpanHandlerSet.a(ank.ang).getString(2131430877) + " : " + ay.ky(jMS), 0).show();
+      paramString = ((ae)paramj).CZ();
+      if ((paramString != null) && (URISpanHandlerSet.a(ZY.ZU) != null)) {
+        s.makeText(URISpanHandlerSet.a(ZY.ZU), URISpanHandlerSet.a(ZY.ZU).getString(2131231028) + " : " + be.li(klC), 0).show();
       }
     }
   }

@@ -4,8 +4,8 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.platformtools.s;
 import com.tencent.mm.storage.k;
 
 final class AtSomeoneUI$3
@@ -13,19 +13,19 @@ final class AtSomeoneUI$3
 {
   AtSomeoneUI$3(AtSomeoneUI paramAtSomeoneUI) {}
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    k localk = (k)AtSomeoneUI.a(kRg).getItem(paramInt);
+    k localk = (k)AtSomeoneUI.a(lrj).getItem(paramInt);
     Intent localIntent = new Intent();
-    paramView = AtSomeoneUI.a(AtSomeoneUI.b(kRg), field_username);
+    paramView = AtSomeoneUI.a(AtSomeoneUI.b(lrj), field_username);
     paramAdapterView = paramView;
-    if (t.kz(paramView)) {
-      paramAdapterView = localk.qy();
+    if (s.kf(paramView)) {
+      paramAdapterView = localk.pb();
     }
     localIntent.putExtra("select_raw_user_name", field_username);
     localIntent.putExtra("Select_Conv_User", paramAdapterView);
-    kRg.setResult(-1, localIntent);
-    kRg.finish();
+    lrj.setResult(-1, localIntent);
+    lrj.finish();
   }
 }
 

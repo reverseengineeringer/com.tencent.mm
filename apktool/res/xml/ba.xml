@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto">
+    <CheckBoxPreference android:title="@string/ciy" android:key="settings_voice_play_mode" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/cdr" android:key="settings_enter_button_send" android:defaultValue="false" />
+    <Preference android:layout="@layout/yk" android:title="@string/cda" android:key="settings_chatting_bg" />
+    <Preference android:layout="@layout/yk" android:title="@string/cdn" android:key="settings_emoji_manager" />
+    <PreferenceTitleCategory android:title="@string/cd7" />
+    <Preference android:layout="@layout/yk" android:title="@string/cd1" android:key="settings_bak_chat" />
+    <Preference android:layout="@layout/yk" android:title="@string/ch1" android:key="settings_reset" />
+</PreferenceScreen>

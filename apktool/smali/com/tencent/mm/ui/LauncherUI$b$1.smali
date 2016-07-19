@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic knC:Lcom/tencent/mm/ui/LauncherUI$b;
+.field final synthetic kMJ:Lcom/tencent/mm/ui/LauncherUI$b;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1859
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$b$1;->knC:Lcom/tencent/mm/ui/LauncherUI$b;
+    .line 1616
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$b$1;->kMJ:Lcom/tencent/mm/ui/LauncherUI$b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,18 +44,18 @@
 
     const/4 v1, 0x0
 
-    .line 1862
-    const-string/jumbo v2, "!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2"
+    .line 1619
+    const-string/jumbo v2, "MicroMsg.LauncherUI"
 
     const-string/jumbo v3, "on select image ActivityResult. after creat chattingUI, chatting fragment is null? %B"
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/LauncherUI$b$1;->knC:Lcom/tencent/mm/ui/LauncherUI$b;
+    iget-object v5, p0, Lcom/tencent/mm/ui/LauncherUI$b$1;->kMJ:Lcom/tencent/mm/ui/LauncherUI$b;
 
-    iget-object v5, v5, Lcom/tencent/mm/ui/LauncherUI$b;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    iget-object v5, v5, Lcom/tencent/mm/ui/LauncherUI$b;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-static {v5}, Lcom/tencent/mm/ui/LauncherUI;->h(Lcom/tencent/mm/ui/LauncherUI;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    invoke-static {v5}, Lcom/tencent/mm/ui/LauncherUI;->g(Lcom/tencent/mm/ui/LauncherUI;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     move-result-object v5
 
@@ -68,61 +68,61 @@
 
     aput-object v0, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1863
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$b$1;->knC:Lcom/tencent/mm/ui/LauncherUI$b;
+    .line 1620
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$b$1;->kMJ:Lcom/tencent/mm/ui/LauncherUI$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/LauncherUI$b;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/LauncherUI$b;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->h(Lcom/tencent/mm/ui/LauncherUI;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->g(Lcom/tencent/mm/ui/LauncherUI;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1864
-    const-string/jumbo v0, "!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2"
+    .line 1621
+    const-string/jumbo v0, "MicroMsg.LauncherUI"
 
     const-string/jumbo v1, "on select image ActivityResult. do post activity result"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1865
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$b$1;->knC:Lcom/tencent/mm/ui/LauncherUI$b;
+    .line 1622
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$b$1;->kMJ:Lcom/tencent/mm/ui/LauncherUI$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/LauncherUI$b;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/LauncherUI$b;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->h(Lcom/tencent/mm/ui/LauncherUI;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->g(Lcom/tencent/mm/ui/LauncherUI;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUI$b$1;->knC:Lcom/tencent/mm/ui/LauncherUI$b;
+    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUI$b$1;->kMJ:Lcom/tencent/mm/ui/LauncherUI$b;
 
-    iget v1, v1, Lcom/tencent/mm/ui/LauncherUI$b;->auo:I
+    iget v1, v1, Lcom/tencent/mm/ui/LauncherUI$b;->agb:I
 
     const v2, 0xffff
 
     and-int/2addr v1, v2
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/LauncherUI$b$1;->knC:Lcom/tencent/mm/ui/LauncherUI$b;
+    iget-object v2, p0, Lcom/tencent/mm/ui/LauncherUI$b$1;->kMJ:Lcom/tencent/mm/ui/LauncherUI$b;
 
-    iget v2, v2, Lcom/tencent/mm/ui/LauncherUI$b;->arU:I
+    iget v2, v2, Lcom/tencent/mm/ui/LauncherUI$b;->adJ:I
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/LauncherUI$b$1;->knC:Lcom/tencent/mm/ui/LauncherUI$b;
+    iget-object v3, p0, Lcom/tencent/mm/ui/LauncherUI$b$1;->kMJ:Lcom/tencent/mm/ui/LauncherUI$b;
 
-    iget-object v3, v3, Lcom/tencent/mm/ui/LauncherUI$b;->aup:Landroid/content/Intent;
+    iget-object v3, v3, Lcom/tencent/mm/ui/LauncherUI$b;->agc:Landroid/content/Intent;
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 1867
+    .line 1624
     :cond_0
     return-void
 
     :cond_1
     move v0, v1
 
-    .line 1862
+    .line 1619
     goto :goto_0
 .end method
 
@@ -130,7 +130,7 @@
     .locals 2
 
     .prologue
-    .line 1871
+    .line 1628
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

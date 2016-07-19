@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract bdl()V
+.method public abstract biT()V
 .end method
 
-.method public abstract bdm()V
+.method public abstract biU()V
 .end method

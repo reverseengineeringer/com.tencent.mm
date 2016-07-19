@@ -10,7 +10,7 @@ final class GoogleFriendUI$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    kNj.finish();
+    lmy.finish();
     return true;
   }
 }

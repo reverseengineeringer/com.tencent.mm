@@ -35,7 +35,6 @@ import android.view.ViewParent;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.animation.Interpolator;
 import android.widget.Scroller;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -43,8 +42,9 @@ import java.util.Comparator;
 public class ViewPager
   extends ViewGroup
 {
-  private static final Comparator fB = new Comparator() {};
-  private static final Interpolator fC = new Interpolator()
+  private static final int[] fV = { 16842931 };
+  private static final Comparator<b> fX = new Comparator() {};
+  private static final Interpolator fY = new Interpolator()
   {
     public final float getInterpolation(float paramAnonymousFloat)
     {
@@ -52,62 +52,35 @@ public class ViewPager
       return paramAnonymousFloat * (paramAnonymousFloat * paramAnonymousFloat * paramAnonymousFloat * paramAnonymousFloat) + 1.0F;
     }
   };
-  private static final int[] fz = { 16842931 };
-  private static final h gy = new h();
-  private final Rect eQ = new Rect();
-  public float eW;
-  private float eX;
-  private int eY;
-  private int fA;
-  private final ArrayList fD = new ArrayList();
-  private final b fE = new b();
-  private j fF;
-  private int fG;
-  private int fH = -1;
-  private Parcelable fI = null;
-  private ClassLoader fJ = null;
-  private Scroller fK;
-  private g fL;
-  private int fM;
-  private Drawable fN;
-  private int fO;
-  private int fP;
-  private float fQ = -3.4028235E38F;
-  private float fR = Float.MAX_VALUE;
-  private int fS;
-  private int fT;
-  private boolean fU;
-  private boolean fV;
-  private int fW = 1;
-  public boolean fX;
-  private boolean fY;
-  private int fZ;
-  private int fs = 0;
-  private int ga;
-  public float gb;
-  public float gc;
-  private int gd = -1;
-  public VelocityTracker ge;
-  private int gf;
-  private int gg;
-  private int gh;
-  private int gi;
-  public boolean gj;
-  public long gk;
-  private android.support.v4.widget.c gl;
-  private android.support.v4.widget.c gm;
-  private boolean gn = true;
-  private boolean go = false;
-  private boolean gp;
-  private int gq;
-  private e gr;
-  private e gs;
-  private d gt;
-  private f gu;
-  private Method gv;
-  private int gw;
-  private ArrayList gx;
-  private final Runnable gz = new Runnable()
+  private static final h gT = new h();
+  private boolean aO;
+  private int fO = 0;
+  private int fW;
+  private final ArrayList<b> fZ = new ArrayList();
+  private final Rect fn = new Rect();
+  public float ft;
+  private float fu;
+  private int fv;
+  public VelocityTracker gA;
+  private int gB;
+  private int gC;
+  private int gD;
+  private int gE;
+  public boolean gF;
+  public long gG;
+  private android.support.v4.widget.c gH;
+  private android.support.v4.widget.c gI;
+  private boolean gJ = true;
+  private boolean gK = false;
+  private boolean gL;
+  private int gM;
+  private e gN;
+  private e gO;
+  d gP;
+  private f gQ;
+  private int gR;
+  private ArrayList<View> gS;
+  private final Runnable gU = new Runnable()
   {
     public final void run()
     {
@@ -115,7 +88,32 @@ public class ViewPager
       populate();
     }
   };
-  private boolean mInLayout;
+  private final b ga = new b();
+  public j gb;
+  public int gc;
+  private int gd = -1;
+  private Parcelable ge = null;
+  private ClassLoader gf = null;
+  public Scroller gg;
+  private g gh;
+  private int gi;
+  private Drawable gj;
+  private int gk;
+  private int gl;
+  private float gm = -3.4028235E38F;
+  private float gn = Float.MAX_VALUE;
+  private int go;
+  private int gp;
+  private boolean gq;
+  private boolean gr;
+  private int gs = 1;
+  public boolean gt;
+  private boolean gu;
+  private int gv;
+  private int gw;
+  public float gx;
+  public float gy;
+  private int gz = -1;
   
   public ViewPager(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -124,17 +122,17 @@ public class ViewPager
     setDescendantFocusability(262144);
     setFocusable(true);
     paramContext = getContext();
-    fK = new Scroller(paramContext, fC);
+    gg = new Scroller(paramContext, fY);
     paramAttributeSet = ViewConfiguration.get(paramContext);
     float f = getResourcesgetDisplayMetricsdensity;
-    eY = n.a(paramAttributeSet);
-    gf = ((int)(400.0F * f));
-    gg = paramAttributeSet.getScaledMaximumFlingVelocity();
-    gl = new android.support.v4.widget.c(paramContext);
-    gm = new android.support.v4.widget.c(paramContext);
-    gh = ((int)(25.0F * f));
-    gi = ((int)(2.0F * f));
-    fZ = ((int)(16.0F * f));
+    fv = n.a(paramAttributeSet);
+    gB = ((int)(400.0F * f));
+    gC = paramAttributeSet.getScaledMaximumFlingVelocity();
+    gH = new android.support.v4.widget.c(paramContext);
+    gI = new android.support.v4.widget.c(paramContext);
+    gD = ((int)(25.0F * f));
+    gE = ((int)(2.0F * f));
+    gv = ((int)(16.0F * f));
     m.a(this, new c());
     if (m.h(this) == 0) {
       m.i(this);
@@ -180,7 +178,7 @@ public class ViewPager
     int m;
     label132:
     int i4;
-    if (gq > 0)
+    if (gM > 0)
     {
       int i1 = getScrollX();
       i = getPaddingLeft();
@@ -192,7 +190,7 @@ public class ViewPager
       {
         localView = getChildAt(n);
         LayoutParams localLayoutParams = (LayoutParams)localView.getLayoutParams();
-        if (!gF) {
+        if (!ha) {
           break label396;
         }
         switch (gravity & 0x7)
@@ -240,13 +238,13 @@ public class ViewPager
       i = j + i4;
       j = m;
       break label132;
-      if (gr != null) {
-        gr.a(paramInt1, paramFloat, paramInt2);
+      if (gN != null) {
+        gN.a(paramInt1, paramFloat, paramInt2);
       }
-      if (gs != null) {
-        gs.a(paramInt1, paramFloat, paramInt2);
+      if (gO != null) {
+        gO.a(paramInt1, paramFloat, paramInt2);
       }
-      if (gu != null)
+      if (gQ != null)
       {
         getScrollX();
         paramInt2 = getChildCount();
@@ -254,15 +252,15 @@ public class ViewPager
         while (paramInt1 < paramInt2)
         {
           localView = getChildAt(paramInt1);
-          if (!getLayoutParamsgF)
+          if (!getLayoutParamsha)
           {
             localView.getLeft();
-            getClientWidth();
+            ag();
           }
           paramInt1 += 1;
         }
       }
-      gp = true;
+      gL = true;
       return;
       label396:
       k = j;
@@ -270,46 +268,12 @@ public class ViewPager
     }
   }
   
-  private void a(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
-  {
-    if ((paramInt2 > 0) && (!fD.isEmpty()))
-    {
-      int i = getPaddingLeft();
-      int j = getPaddingRight();
-      int k = getPaddingLeft();
-      int m = getPaddingRight();
-      f = getScrollX() / (paramInt2 - k - m + paramInt4);
-      paramInt2 = (int)((paramInt1 - i - j + paramInt3) * f);
-      scrollTo(paramInt2, getScrollY());
-      if (!fK.isFinished())
-      {
-        paramInt3 = fK.getDuration();
-        paramInt4 = fK.timePassed();
-        localb = q(fG);
-        fK.startScroll(paramInt2, 0, (int)(gE * paramInt1), 0, paramInt3 - paramInt4);
-      }
-      return;
-    }
-    b localb = q(fG);
-    if (localb != null) {}
-    for (float f = Math.min(gE, fR);; f = 0.0F)
-    {
-      paramInt1 = (int)(f * (paramInt1 - getPaddingLeft() - getPaddingRight()));
-      if (paramInt1 == getScrollX()) {
-        break;
-      }
-      m(false);
-      scrollTo(paramInt1, getScrollY());
-      return;
-    }
-  }
-  
   private void a(int paramInt1, boolean paramBoolean1, int paramInt2, boolean paramBoolean2)
   {
-    b localb = q(paramInt1);
+    b localb = v(paramInt1);
     int i = 0;
     if (localb != null) {
-      i = (int)(getClientWidth() * Math.max(fQ, Math.min(gE, fR)));
+      i = (int)(ag() * Math.max(gm, Math.min(gZ, gn)));
     }
     if (paramBoolean1)
     {
@@ -321,11 +285,11 @@ public class ViewPager
       int m;
       for (;;)
       {
-        if ((paramBoolean2) && (gr != null)) {
-          gr.n(paramInt1);
+        if ((paramBoolean2) && (gN != null)) {
+          gN.p(paramInt1);
         }
-        if ((paramBoolean2) && (gs != null)) {
-          gs.n(paramInt1);
+        if ((paramBoolean2) && (gO != null)) {
+          gO.p(paramInt1);
         }
         return;
         j = getScrollX();
@@ -335,13 +299,13 @@ public class ViewPager
         if ((i != 0) || (m != 0)) {
           break;
         }
-        m(false);
+        l(false);
         populate();
-        setScrollState(0);
+        r(0);
       }
       setScrollingCacheEnabled(true);
-      setScrollState(2);
-      int n = getClientWidth();
+      r(2);
+      int n = ag();
       int i1 = n / 2;
       float f3 = Math.min(1.0F, 1.0F * Math.abs(i) / n);
       float f1 = i1;
@@ -349,24 +313,24 @@ public class ViewPager
       f3 = (float)Math.sin((float)((f3 - 0.5F) * 0.4712389167638204D));
       paramInt2 = Math.abs(paramInt2);
       if (paramInt2 > 0) {}
-      for (paramInt2 = Math.round(1000.0F * Math.abs((f2 * f3 + f1) / paramInt2)) * 4;; paramInt2 = (int)((Math.abs(i) / (f1 * 1.0F + fM) + 3.0F) * 100.0F))
+      for (paramInt2 = Math.round(1000.0F * Math.abs((f2 * f3 + f1) / paramInt2)) * 4;; paramInt2 = (int)((Math.abs(i) / (f1 * 1.0F + gi) + 3.0F) * 100.0F))
       {
         paramInt2 = Math.min(paramInt2, 600);
-        fK.startScroll(j, k, i, m, paramInt2);
+        gg.startScroll(j, k, i, m, paramInt2);
         m.g(this);
         break;
         f1 = n;
       }
     }
-    if ((paramBoolean2) && (gr != null)) {
-      gr.n(paramInt1);
+    if ((paramBoolean2) && (gN != null)) {
+      gN.p(paramInt1);
     }
-    if ((paramBoolean2) && (gs != null)) {
-      gs.n(paramInt1);
+    if ((paramBoolean2) && (gO != null)) {
+      gO.p(paramInt1);
     }
-    m(false);
+    l(false);
     scrollTo(i, 0);
-    r(i);
+    w(i);
   }
   
   private void a(int paramInt, boolean paramBoolean1, boolean paramBoolean2)
@@ -377,12 +341,12 @@ public class ViewPager
   private void a(int paramInt1, boolean paramBoolean1, boolean paramBoolean2, int paramInt2)
   {
     boolean bool = false;
-    if ((fF == null) || (fF.getCount() <= 0))
+    if ((gb == null) || (gb.getCount() <= 0))
     {
       setScrollingCacheEnabled(false);
       return;
     }
-    if ((!paramBoolean2) && (fG == paramInt1) && (fD.size() != 0))
+    if ((!paramBoolean2) && (gc == paramInt1) && (fZ.size() != 0))
     {
       setScrollingCacheEnabled(false);
       return;
@@ -393,49 +357,49 @@ public class ViewPager
     }
     for (;;)
     {
-      paramInt1 = fW;
-      if ((i <= fG + paramInt1) && (i >= fG - paramInt1)) {
+      paramInt1 = gs;
+      if ((i <= gc + paramInt1) && (i >= gc - paramInt1)) {
         break;
       }
       paramInt1 = 0;
-      while (paramInt1 < fD.size())
+      while (paramInt1 < fZ.size())
       {
-        fD.get(paramInt1)).gC = true;
+        fZ.get(paramInt1)).gX = true;
         paramInt1 += 1;
       }
       i = paramInt1;
-      if (paramInt1 >= fF.getCount()) {
-        i = fF.getCount() - 1;
+      if (paramInt1 >= gb.getCount()) {
+        i = gb.getCount() - 1;
       }
     }
     paramBoolean2 = bool;
-    if (fG != i) {
+    if (gc != i) {
       paramBoolean2 = true;
     }
-    if (gn)
+    if (gJ)
     {
-      fG = i;
-      if ((paramBoolean2) && (gr != null)) {
-        gr.n(i);
+      gc = i;
+      if ((paramBoolean2) && (gN != null)) {
+        gN.p(i);
       }
-      if ((paramBoolean2) && (gs != null)) {
-        gs.n(i);
+      if ((paramBoolean2) && (gO != null)) {
+        gO.p(i);
       }
       requestLayout();
       return;
     }
-    p(i);
+    u(i);
     a(i, paramBoolean1, paramInt2, paramBoolean2);
   }
   
   private void a(b paramb1, int paramInt, b paramb2)
   {
-    int k = fF.getCount();
-    int i = getClientWidth();
+    int k = gb.getCount();
+    int i = ag();
     if (i > 0) {}
     float f1;
     int j;
-    for (float f2 = fM / i;; f2 = 0.0F)
+    for (float f2 = gi / i;; f2 = 0.0F)
     {
       if (paramb2 == null) {
         break label365;
@@ -444,13 +408,13 @@ public class ViewPager
       if (i >= position) {
         break;
       }
-      f1 = gE + gD + f2;
+      f1 = gZ + gY + f2;
       j = 0;
       i += 1;
-      if ((i > position) || (j >= fD.size())) {
+      if ((i > position) || (j >= fZ.size())) {
         break label365;
       }
-      for (paramb2 = (b)fD.get(j); (i > position) && (j < fD.size() - 1); paramb2 = (b)fD.get(j)) {
+      for (paramb2 = (b)fZ.get(j); (i > position) && (j < fZ.size() - 1); paramb2 = (b)fZ.get(j)) {
         j += 1;
       }
     }
@@ -463,18 +427,18 @@ public class ViewPager
       }
       else
       {
-        gE = f1;
-        f1 += gD + f2;
+        gZ = f1;
+        f1 += gY + f2;
         i += 1;
         break;
         if (i > position)
         {
-          j = fD.size();
-          f1 = gE;
+          j = fZ.size();
+          f1 = gZ;
           j -= 1;
           i -= 1;
           if ((i >= position) && (j >= 0)) {
-            for (paramb2 = (b)fD.get(j); (i < position) && (j > 0); paramb2 = (b)fD.get(j)) {
+            for (paramb2 = (b)fZ.get(j); (i < position) && (j > 0); paramb2 = (b)fZ.get(j)) {
               j -= 1;
             }
           }
@@ -488,24 +452,24 @@ public class ViewPager
           }
           else
           {
-            f1 -= gD + f2;
-            gE = f1;
+            f1 -= gY + f2;
+            gZ = f1;
             i -= 1;
             break;
             label365:
-            int m = fD.size();
-            float f3 = gE;
+            int m = fZ.size();
+            float f3 = gZ;
             i = position - 1;
             if (position == 0)
             {
-              f1 = gE;
-              fQ = f1;
+              f1 = gZ;
+              gm = f1;
               if (position != k - 1) {
                 break label498;
               }
-              f1 = gE + gD - 1.0F;
+              f1 = gZ + gY - 1.0F;
               label431:
-              fR = f1;
+              gn = f1;
               j = paramInt - 1;
               f1 = f3;
             }
@@ -514,7 +478,7 @@ public class ViewPager
               if (j < 0) {
                 break label551;
               }
-              paramb2 = (b)fD.get(j);
+              paramb2 = (b)fZ.get(j);
               for (;;)
               {
                 if (i > position)
@@ -529,36 +493,36 @@ public class ViewPager
                   break label431;
                 }
               }
-              f1 -= gD + f2;
-              gE = f1;
+              f1 -= gY + f2;
+              gZ = f1;
               if (position == 0) {
-                fQ = f1;
+                gm = f1;
               }
               i -= 1;
               j -= 1;
             }
             label551:
-            f1 = gE + gD + f2;
+            f1 = gZ + gY + f2;
             j = position + 1;
             i = paramInt + 1;
             paramInt = j;
             while (i < m)
             {
-              paramb1 = (b)fD.get(i);
+              paramb1 = (b)fZ.get(i);
               while (paramInt < position)
               {
                 paramInt += 1;
                 f1 += 1.0F + f2;
               }
               if (position == k - 1) {
-                fR = (gD + f1 - 1.0F);
+                gn = (gY + f1 - 1.0F);
               }
-              gE = f1;
-              f1 += gD + f2;
+              gZ = f1;
+              f1 += gY + f2;
               paramInt += 1;
               i += 1;
             }
-            go = false;
+            gK = false;
             return;
           }
         }
@@ -591,12 +555,17 @@ public class ViewPager
     return false;
   }
   
-  private void aj()
+  private int ag()
   {
-    if (gw != 0)
+    return getMeasuredWidth() - getPaddingLeft() - getPaddingRight();
+  }
+  
+  private void ai()
+  {
+    if (gR != 0)
     {
-      if (gx == null) {
-        gx = new ArrayList();
+      if (gS == null) {
+        gS = new ArrayList();
       }
       for (;;)
       {
@@ -605,18 +574,18 @@ public class ViewPager
         while (i < j)
         {
           View localView = getChildAt(i);
-          gx.add(localView);
+          gS.add(localView);
           i += 1;
         }
-        gx.clear();
+        gS.clear();
       }
-      Collections.sort(gx, gy);
+      Collections.sort(gS, gT);
     }
   }
   
-  private b ak()
+  private b aj()
   {
-    int i = getClientWidth();
+    int i = ag();
     float f1;
     float f2;
     label36:
@@ -634,7 +603,7 @@ public class ViewPager
       if (i <= 0) {
         break label203;
       }
-      f2 = fM / i;
+      f2 = gi / i;
       f4 = 0.0F;
       f3 = 0.0F;
       k = -1;
@@ -642,16 +611,16 @@ public class ViewPager
       j = 1;
       localObject1 = null;
       localObject2 = localObject1;
-      if (i < fD.size())
+      if (i < fZ.size())
       {
-        localb = (b)fD.get(i);
+        localb = (b)fZ.get(i);
         if ((j != 0) || (position == k + 1)) {
           break label238;
         }
-        localb = fE;
-        gE = (f4 + f3 + f2);
+        localb = ga;
+        gZ = (f4 + f3 + f2);
         position = (k + 1);
-        gD = 1.0F;
+        gY = 1.0F;
         i -= 1;
       }
     }
@@ -660,8 +629,8 @@ public class ViewPager
     label238:
     for (;;)
     {
-      f3 = gE;
-      f4 = gD;
+      f3 = gZ;
+      f4 = gY;
       if (j == 0)
       {
         localObject2 = localObject1;
@@ -669,7 +638,7 @@ public class ViewPager
       }
       else
       {
-        if ((f1 >= f4 + f3 + f2) && (i != fD.size() - 1)) {
+        if ((f1 >= f4 + f3 + f2) && (i != fZ.size() - 1)) {
           break label208;
         }
         localObject2 = localb;
@@ -680,7 +649,7 @@ public class ViewPager
       f2 = 0.0F;
       break label36;
       k = position;
-      f4 = gD;
+      f4 = gY;
       j = 0;
       i += 1;
       localObject1 = localb;
@@ -688,32 +657,32 @@ public class ViewPager
     }
   }
   
-  private void an()
+  private void am()
   {
-    fX = false;
-    fY = false;
-    if (ge != null)
+    gt = false;
+    gu = false;
+    if (gA != null)
     {
-      ge.recycle();
-      ge = null;
+      gA.recycle();
+      gA = null;
     }
   }
   
-  private boolean ao()
+  private boolean an()
   {
-    if (fG > 0)
+    if (gc > 0)
     {
-      j(fG - 1, true);
+      j(gc - 1, true);
       return true;
     }
     return false;
   }
   
-  private boolean ap()
+  private boolean ao()
   {
-    if ((fF != null) && (fG < fF.getCount() - 1))
+    if ((gb != null) && (gc < gb.getCount() - 1))
     {
-      j(fG + 1, true);
+      j(gc + 1, true);
       return true;
     }
     return false;
@@ -735,11 +704,11 @@ public class ViewPager
       if (paramInt != 17) {
         break label254;
       }
-      i = aeQ, localView).left;
-      j = aeQ, (View)localObject).left;
+      i = afn, localView).left;
+      j = afn, (View)localObject).left;
       if ((localObject != null) && (i >= j))
       {
-        bool = ao();
+        bool = an();
         label89:
         if (bool) {
           playSoundEffect(SoundEffectConstants.getContantForFocusDirection(paramInt));
@@ -788,22 +757,22 @@ public class ViewPager
         break label89;
         if (paramInt == 66)
         {
-          i = aeQ, localView).left;
-          j = aeQ, (View)localObject).left;
+          i = afn, localView).left;
+          j = afn, (View)localObject).left;
           if ((localObject == null) || (i > j))
           {
             bool = localView.requestFocus();
             break label89;
             if ((paramInt == 17) || (paramInt == 1))
             {
-              bool = ao();
+              bool = an();
               break label89;
             }
             if ((paramInt != 66) && (paramInt != 2)) {
               break label348;
             }
           }
-          bool = ap();
+          bool = ao();
           break label89;
         }
         bool = false;
@@ -814,28 +783,43 @@ public class ViewPager
     }
   }
   
-  private boolean e(float paramFloat)
+  private b d(int paramInt1, int paramInt2)
+  {
+    b localb = new b();
+    position = paramInt1;
+    gW = gb.a(this, paramInt1);
+    gY = 1.0F;
+    if ((paramInt2 < 0) || (paramInt2 >= fZ.size()))
+    {
+      fZ.add(localb);
+      return localb;
+    }
+    fZ.add(paramInt2, localb);
+    return localb;
+  }
+  
+  private boolean d(float paramFloat)
   {
     int j = 1;
     boolean bool2 = false;
     boolean bool1 = false;
-    float f1 = gb;
-    gb = paramFloat;
+    float f1 = gx;
+    gx = paramFloat;
     float f2 = getScrollX() + (f1 - paramFloat);
-    int k = getClientWidth();
-    paramFloat = k * fQ;
+    int k = ag();
+    paramFloat = k * gm;
     f1 = k;
-    float f3 = fR;
-    b localb1 = (b)fD.get(0);
-    b localb2 = (b)fD.get(fD.size() - 1);
+    float f3 = gn;
+    b localb1 = (b)fZ.get(0);
+    b localb2 = (b)fZ.get(fZ.size() - 1);
     if (position != 0) {
-      paramFloat = gE * k;
+      paramFloat = gZ * k;
     }
     for (int i = 0;; i = 1)
     {
-      if (position != fF.getCount() - 1)
+      if (position != gb.getCount() - 1)
       {
-        f1 = gE * k;
+        f1 = gZ * k;
         j = 0;
       }
       for (;;)
@@ -845,21 +829,21 @@ public class ViewPager
           f1 = paramFloat;
           if (i != 0)
           {
-            bool1 = gl.f(Math.abs(paramFloat - f2) / k);
+            bool1 = gH.e(Math.abs(paramFloat - f2) / k);
             f1 = paramFloat;
           }
         }
         for (;;)
         {
-          gb += f1 - (int)f1;
+          gx += f1 - (int)f1;
           scrollTo((int)f1, getScrollY());
-          r((int)f1);
+          w((int)f1);
           return bool1;
           if (f2 > f1)
           {
             bool1 = bool2;
             if (j != 0) {
-              bool1 = gm.f(Math.abs(f2 - f1) / k);
+              bool1 = gI.e(Math.abs(f2 - f1) / k);
             }
           }
           else
@@ -872,25 +856,10 @@ public class ViewPager
     }
   }
   
-  private b f(int paramInt1, int paramInt2)
-  {
-    b localb = new b();
-    position = paramInt1;
-    gB = fF.a(this, paramInt1);
-    gD = 1.0F;
-    if ((paramInt2 < 0) || (paramInt2 >= fD.size()))
-    {
-      fD.add(localb);
-      return localb;
-    }
-    fD.add(paramInt2, localb);
-    return localb;
-  }
-  
   private void g(MotionEvent paramMotionEvent)
   {
     int i = i.e(paramMotionEvent);
-    if (i.b(paramMotionEvent, i) == gd) {
+    if (i.b(paramMotionEvent, i) == gz) {
       if (i != 0) {
         break label56;
       }
@@ -898,48 +867,43 @@ public class ViewPager
     label56:
     for (i = 1;; i = 0)
     {
-      gb = i.c(paramMotionEvent, i);
-      gd = i.b(paramMotionEvent, i);
-      if (ge != null) {
-        ge.clear();
+      gx = i.c(paramMotionEvent, i);
+      gz = i.b(paramMotionEvent, i);
+      if (gA != null) {
+        gA.clear();
       }
       return;
     }
   }
   
-  private int getClientWidth()
+  private void l(boolean paramBoolean)
   {
-    return getMeasuredWidth() - getPaddingLeft() - getPaddingRight();
-  }
-  
-  private void m(boolean paramBoolean)
-  {
-    if (fs == 2) {}
+    if (fO == 2) {}
     int j;
     for (int i = 1;; i = 0)
     {
       if (i != 0)
       {
         setScrollingCacheEnabled(false);
-        fK.abortAnimation();
+        gg.abortAnimation();
         j = getScrollX();
         k = getScrollY();
-        int m = fK.getCurrX();
-        int n = fK.getCurrY();
+        int m = gg.getCurrX();
+        int n = gg.getCurrY();
         if ((j != m) || (k != n)) {
           scrollTo(m, n);
         }
       }
-      fV = false;
+      gr = false;
       int k = 0;
       j = i;
       i = k;
-      while (i < fD.size())
+      while (i < fZ.size())
       {
-        b localb = (b)fD.get(i);
-        if (gC)
+        b localb = (b)fZ.get(i);
+        if (gX)
         {
-          gC = false;
+          gX = false;
           j = 1;
         }
         i += 1;
@@ -948,22 +912,22 @@ public class ViewPager
     if (j != 0)
     {
       if (paramBoolean) {
-        m.a(this, gz);
+        m.a(this, gU);
       }
     }
     else {
       return;
     }
-    gz.run();
+    gU.run();
   }
   
   private b n(View paramView)
   {
     int i = 0;
-    while (i < fD.size())
+    while (i < fZ.size())
     {
-      b localb = (b)fD.get(i);
-      if (fF.a(paramView, gB)) {
+      b localb = (b)fZ.get(i);
+      if (gb.a(paramView, gW)) {
         return localb;
       }
       i += 1;
@@ -987,44 +951,51 @@ public class ViewPager
     return n(paramView);
   }
   
-  private void p(int paramInt)
+  private void setScrollingCacheEnabled(boolean paramBoolean)
+  {
+    if (gq != paramBoolean) {
+      gq = paramBoolean;
+    }
+  }
+  
+  private void u(int paramInt)
   {
     int i;
     Object localObject2;
-    if (fG != paramInt) {
-      if (fG < paramInt)
+    if (gc != paramInt) {
+      if (gc < paramInt)
       {
         i = 66;
-        localObject2 = q(fG);
-        fG = paramInt;
+        localObject2 = v(gc);
+        gc = paramInt;
       }
     }
     for (int j = i;; j = 2)
     {
-      if (fF == null) {
-        aj();
+      if (gb == null) {
+        ai();
       }
       do
       {
         return;
         i = 17;
         break;
-        if (fV)
+        if (gr)
         {
-          aj();
+          ai();
           return;
         }
       } while (getWindowToken() == null);
-      paramInt = fW;
-      int i3 = Math.max(0, fG - paramInt);
-      int i1 = fF.getCount();
-      int i2 = Math.min(i1 - 1, paramInt + fG);
+      paramInt = gs;
+      int i3 = Math.max(0, gc - paramInt);
+      int i1 = gb.getCount();
+      int i2 = Math.min(i1 - 1, paramInt + gc);
       Object localObject1;
-      if (i1 != fA) {
+      if (i1 != fW) {
         try
         {
           String str = getResources().getResourceName(getId());
-          throw new IllegalStateException("The application's PagerAdapter changed the adapter's contents without calling PagerAdapter#notifyDataSetChanged! Expected adapter item count: " + fA + ", found: " + i1 + " Pager id: " + str + " Pager class: " + getClass() + " Problematic adapter: " + fF.getClass());
+          throw new IllegalStateException("The application's PagerAdapter changed the adapter's contents without calling PagerAdapter#notifyDataSetChanged! Expected adapter item count: " + fW + ", found: " + i1 + " Pager id: " + str + " Pager class: " + getClass() + " Problematic adapter: " + gb.getClass());
         }
         catch (Resources.NotFoundException localNotFoundException)
         {
@@ -1035,11 +1006,11 @@ public class ViewPager
         }
       }
       paramInt = 0;
-      if (paramInt < fD.size())
+      if (paramInt < fZ.size())
       {
-        localObject1 = (b)fD.get(paramInt);
-        if (position >= fG) {
-          if (position != fG) {
+        localObject1 = (b)fZ.get(paramInt);
+        if (position >= gc) {
+          if (position != gc) {
             break label1254;
           }
         }
@@ -1047,7 +1018,7 @@ public class ViewPager
       for (;;)
       {
         if ((localObject1 == null) && (i1 > 0)) {}
-        for (Object localObject3 = f(fG, paramInt);; localObject3 = localObject1)
+        for (Object localObject3 = d(gc, paramInt);; localObject3 = localObject1)
         {
           label333:
           int i4;
@@ -1064,13 +1035,13 @@ public class ViewPager
             Object localObject4;
             if (n >= 0)
             {
-              localObject1 = (b)fD.get(n);
-              i4 = getClientWidth();
+              localObject1 = (b)fZ.get(n);
+              i4 = ag();
               if (i4 > 0) {
                 break label530;
               }
               f2 = 0.0F;
-              i = fG;
+              i = gc;
               f3 = 0.0F;
               m = i - 1;
               k = paramInt;
@@ -1094,16 +1065,16 @@ public class ViewPager
                 paramInt = n;
                 f1 = f3;
                 i = k;
-                if (!gC)
+                if (!gX)
                 {
-                  fD.remove(n);
-                  fF.a(this, m, gB);
+                  fZ.remove(n);
+                  gb.a(this, m, gW);
                   paramInt = n - 1;
                   i = k - 1;
                   if (paramInt < 0) {
                     break label551;
                   }
-                  localObject1 = (b)fD.get(paramInt);
+                  localObject1 = (b)fZ.get(paramInt);
                   f1 = f3;
                 }
               }
@@ -1121,7 +1092,7 @@ public class ViewPager
               localObject1 = null;
               break label333;
               label530:
-              f2 = 2.0F - gD + getPaddingLeft() / i4;
+              f2 = 2.0F - gY + getPaddingLeft() / i4;
               break label346;
               label551:
               localObject1 = null;
@@ -1130,11 +1101,11 @@ public class ViewPager
               label560:
               if ((localObject4 != null) && (m == position))
               {
-                f1 = f3 + gD;
+                f1 = f3 + gY;
                 paramInt = n - 1;
                 if (paramInt >= 0)
                 {
-                  localObject1 = (b)fD.get(paramInt);
+                  localObject1 = (b)fZ.get(paramInt);
                   i = k;
                 }
                 else
@@ -1145,11 +1116,11 @@ public class ViewPager
               }
               else
               {
-                f1 = f3 + f1gD;
+                f1 = f3 + d1gY;
                 i = k + 1;
                 if (n >= 0)
                 {
-                  localObject1 = (b)fD.get(n);
+                  localObject1 = (b)fZ.get(n);
                   paramInt = n;
                 }
                 else
@@ -1160,19 +1131,19 @@ public class ViewPager
               }
             }
             label680:
-            f1 = gD;
+            f1 = gY;
             paramInt = k + 1;
             if (f1 < 2.0F) {
-              if (paramInt < fD.size())
+              if (paramInt < fZ.size())
               {
-                localObject1 = (b)fD.get(paramInt);
+                localObject1 = (b)fZ.get(paramInt);
                 label721:
                 if (i4 > 0) {
                   break label846;
                 }
                 f2 = 0.0F;
                 label728:
-                i = fG;
+                i = gc;
                 i += 1;
                 label740:
                 if (i >= i1) {
@@ -1184,15 +1155,15 @@ public class ViewPager
                 if (localObject1 == null) {
                   break label989;
                 }
-                if ((i != position) || (gC)) {
+                if ((i != position) || (gX)) {
                   break label1244;
                 }
-                fD.remove(paramInt);
-                fF.a(this, i, gB);
-                if (paramInt >= fD.size()) {
+                fZ.remove(paramInt);
+                gb.a(this, i, gW);
+                if (paramInt >= fZ.size()) {
                   break label861;
                 }
-                localObject1 = (b)fD.get(paramInt);
+                localObject1 = (b)fZ.get(paramInt);
               }
             }
           }
@@ -1215,51 +1186,51 @@ public class ViewPager
             continue;
             if ((localObject1 != null) && (i == position))
             {
-              f3 = gD;
+              f3 = gY;
               paramInt += 1;
-              if (paramInt < fD.size()) {}
-              for (localObject1 = (b)fD.get(paramInt);; localObject1 = null)
+              if (paramInt < fZ.size()) {}
+              for (localObject1 = (b)fZ.get(paramInt);; localObject1 = null)
               {
                 f1 += f3;
                 break;
               }
             }
-            localObject1 = f(i, paramInt);
+            localObject1 = d(i, paramInt);
             paramInt += 1;
-            f3 = gD;
-            if (paramInt < fD.size()) {}
-            for (localObject1 = (b)fD.get(paramInt);; localObject1 = null)
+            f3 = gY;
+            if (paramInt < fZ.size()) {}
+            for (localObject1 = (b)fZ.get(paramInt);; localObject1 = null)
             {
               f1 += f3;
               break;
             }
             a((b)localObject3, k, (b)localObject2);
-            localObject2 = fF;
+            localObject2 = gb;
             if (localObject3 != null) {}
-            for (localObject1 = gB;; localObject1 = null)
+            for (localObject1 = gW;; localObject1 = null)
             {
               ((j)localObject2).d(localObject1);
-              fF.M();
+              gb.L();
               i = getChildCount();
               paramInt = 0;
               while (paramInt < i)
               {
                 localObject2 = getChildAt(paramInt);
                 localObject1 = (LayoutParams)((View)localObject2).getLayoutParams();
-                gH = paramInt;
-                if ((!gF) && (gD == 0.0F))
+                hc = paramInt;
+                if ((!ha) && (gY == 0.0F))
                 {
                   localObject2 = n((View)localObject2);
                   if (localObject2 != null)
                   {
-                    gD = gD;
+                    gY = gY;
                     position = position;
                   }
                 }
                 paramInt += 1;
               }
             }
-            aj();
+            ai();
             if (!hasFocus()) {
               break;
             }
@@ -1267,7 +1238,7 @@ public class ViewPager
             if (localObject1 != null) {}
             for (localObject1 = o((View)localObject1);; localObject1 = null)
             {
-              if ((localObject1 != null) && (position == fG)) {
+              if ((localObject1 != null) && (position == gc)) {
                 break label1242;
               }
               paramInt = 0;
@@ -1278,7 +1249,7 @@ public class ViewPager
                 }
                 localObject1 = getChildAt(paramInt);
                 localObject2 = n((View)localObject1);
-                if ((localObject2 != null) && (position == fG) && (((View)localObject1).requestFocus(j))) {
+                if ((localObject2 != null) && (position == gc) && (((View)localObject1).requestFocus(j))) {
                   break;
                 }
                 paramInt += 1;
@@ -1295,12 +1266,12 @@ public class ViewPager
     }
   }
   
-  private b q(int paramInt)
+  private b v(int paramInt)
   {
     int i = 0;
-    while (i < fD.size())
+    while (i < fZ.size())
     {
-      b localb = (b)fD.get(i);
+      b localb = (b)fZ.get(i);
       if (position == paramInt) {
         return localb;
       }
@@ -1309,29 +1280,29 @@ public class ViewPager
     return null;
   }
   
-  private boolean r(int paramInt)
+  private boolean w(int paramInt)
   {
     boolean bool = false;
-    if (fD.size() == 0)
+    if (fZ.size() == 0)
     {
-      gp = false;
+      gL = false;
       a(0, 0.0F, 0);
-      if (!gp) {
+      if (!gL) {
         throw new IllegalStateException("onPageScrolled did not call superclass implementation");
       }
     }
     else
     {
-      b localb = ak();
-      int j = getClientWidth();
-      int k = fM;
-      float f = fM / j;
+      b localb = aj();
+      int j = ag();
+      int k = gi;
+      float f = gi / j;
       int i = position;
-      f = (paramInt / j - gE) / (gD + f);
+      f = (paramInt / j - gZ) / (gY + f);
       paramInt = (int)((k + j) * f);
-      gp = false;
+      gL = false;
       a(i, f, paramInt);
-      if (!gp) {
+      if (!gL) {
         throw new IllegalStateException("onPageScrolled did not call superclass implementation");
       }
       bool = true;
@@ -1339,21 +1310,77 @@ public class ViewPager
     return bool;
   }
   
-  private void setScrollingCacheEnabled(boolean paramBoolean)
+  public void a(e parame)
   {
-    if (fU != paramBoolean) {
-      fU = paramBoolean;
+    gN = parame;
+  }
+  
+  public void a(j paramj)
+  {
+    if (gb != null)
+    {
+      gb.unregisterDataSetObserver(gh);
+      int i = 0;
+      while (i < fZ.size())
+      {
+        localObject = (b)fZ.get(i);
+        gb.a(this, position, gW);
+        i += 1;
+      }
+      gb.L();
+      fZ.clear();
+      int j;
+      for (i = 0; i < getChildCount(); i = j + 1)
+      {
+        j = i;
+        if (!getChildAtgetLayoutParamsha)
+        {
+          removeViewAt(i);
+          j = i - 1;
+        }
+      }
+      gc = 0;
+      scrollTo(0, 0);
+    }
+    Object localObject = gb;
+    gb = paramj;
+    fW = 0;
+    boolean bool;
+    if (gb != null)
+    {
+      if (gh == null) {
+        gh = new g((byte)0);
+      }
+      gb.registerDataSetObserver(gh);
+      gr = false;
+      bool = gJ;
+      gJ = true;
+      fW = gb.getCount();
+      if (gd < 0) {
+        break label293;
+      }
+      gb.a(ge, gf);
+      a(gd, false, true);
+      gd = -1;
+      ge = null;
+      gf = null;
+    }
+    for (;;)
+    {
+      if ((gP != null) && (localObject != paramj)) {
+        gP.b((j)localObject, paramj);
+      }
+      return;
+      label293:
+      if (!bool) {
+        populate();
+      } else {
+        requestLayout();
+      }
     }
   }
   
-  final e a(e parame)
-  {
-    e locale = gs;
-    gs = parame;
-    return locale;
-  }
-  
-  public void addFocusables(ArrayList paramArrayList, int paramInt1, int paramInt2)
+  public void addFocusables(ArrayList<View> paramArrayList, int paramInt1, int paramInt2)
   {
     int j = paramArrayList.size();
     int k = getDescendantFocusability();
@@ -1366,7 +1393,7 @@ public class ViewPager
         if (localView.getVisibility() == 0)
         {
           b localb = n(localView);
-          if ((localb != null) && (position == fG)) {
+          if ((localb != null) && (position == gc)) {
             localView.addFocusables(paramArrayList, paramInt1, paramInt2);
           }
         }
@@ -1380,7 +1407,7 @@ public class ViewPager
     paramArrayList.add(this);
   }
   
-  public void addTouchables(ArrayList paramArrayList)
+  public void addTouchables(ArrayList<View> paramArrayList)
   {
     int i = 0;
     while (i < getChildCount())
@@ -1389,7 +1416,7 @@ public class ViewPager
       if (localView.getVisibility() == 0)
       {
         b localb = n(localView);
-        if ((localb != null) && (position == fG)) {
+        if ((localb != null) && (position == gc)) {
           localView.addTouchables(paramArrayList);
         }
       }
@@ -1405,13 +1432,13 @@ public class ViewPager
     for (;;)
     {
       LayoutParams localLayoutParams = (LayoutParams)paramLayoutParams;
-      gF |= paramView instanceof a;
-      if (mInLayout)
+      ha |= paramView instanceof a;
+      if (aO)
       {
-        if ((localLayoutParams != null) && (gF)) {
+        if ((localLayoutParams != null) && (ha)) {
           throw new IllegalStateException("Cannot add pager decor view during layout");
         }
-        gG = true;
+        hb = true;
         addViewInLayout(paramView, paramInt, paramLayoutParams);
         return;
       }
@@ -1420,10 +1447,10 @@ public class ViewPager
     }
   }
   
-  final void ai()
+  final void ah()
   {
-    int i2 = fF.getCount();
-    fA = i2;
+    int i2 = gb.getCount();
+    fW = i2;
     int i;
     int j;
     int k;
@@ -1431,38 +1458,38 @@ public class ViewPager
     int m;
     label67:
     Object localObject;
-    if ((fD.size() < fW * 2 + 1) && (fD.size() < i2))
+    if ((fZ.size() < gs * 2 + 1) && (fZ.size() < i2))
     {
       i = 1;
-      j = fG;
+      j = gc;
       k = 0;
       n = 0;
       m = i;
       i = j;
       j = k;
       k = n;
-      if (k >= fD.size()) {
+      if (k >= fZ.size()) {
         break label270;
       }
-      localObject = (b)fD.get(k);
-      n = fF.e(gB);
+      localObject = (b)fZ.get(k);
+      n = gb.e(gW);
       if (n == -1) {
         break label354;
       }
       if (n != -2) {
         break label218;
       }
-      fD.remove(k);
+      fZ.remove(k);
       m = k - 1;
       k = j;
       if (j == 0) {
         k = 1;
       }
-      fF.a(this, position, gB);
-      if (fG != position) {
+      gb.a(this, position, gW);
+      if (gc != position) {
         break label375;
       }
-      j = Math.max(0, Math.min(fG, i2 - 1));
+      j = Math.max(0, Math.min(gc, i2 - 1));
       i = k;
       k = 1;
     }
@@ -1480,7 +1507,7 @@ public class ViewPager
       label218:
       if (position != n)
       {
-        if (position == fG) {
+        if (position == gc) {
           i = n;
         }
         position = n;
@@ -1493,9 +1520,9 @@ public class ViewPager
         continue;
         label270:
         if (j != 0) {
-          fF.M();
+          gb.L();
         }
-        Collections.sort(fD, fB);
+        Collections.sort(fZ, fX);
         if (m != 0)
         {
           k = getChildCount();
@@ -1503,8 +1530,8 @@ public class ViewPager
           while (j < k)
           {
             localObject = (LayoutParams)getChildAt(j).getLayoutParams();
-            if (!gF) {
-              gD = 0.0F;
+            if (!ha) {
+              gY = 0.0F;
             }
             j += 1;
           }
@@ -1531,19 +1558,26 @@ public class ViewPager
     }
   }
   
-  public int al()
+  public int ak()
   {
-    return fD.get(0)).position;
+    return fZ.get(0)).position;
   }
   
-  public int am()
+  public int al()
   {
-    return fD.get(fD.size() - 1)).position;
+    return fZ.get(fZ.size() - 1)).position;
+  }
+  
+  final e b(e parame)
+  {
+    e locale = gO;
+    gO = parame;
+    return locale;
   }
   
   public boolean canScrollHorizontally(int paramInt)
   {
-    if (fF == null) {}
+    if (gb == null) {}
     int i;
     int j;
     do
@@ -1551,14 +1585,14 @@ public class ViewPager
       do
       {
         return false;
-        i = getClientWidth();
+        i = ag();
         j = getScrollX();
         if (paramInt >= 0) {
           break;
         }
-      } while (j <= (int)(i * fQ));
+      } while (j <= (int)(i * gm));
       return true;
-    } while ((paramInt <= 0) || (j >= (int)(i * fR)));
+    } while ((paramInt <= 0) || (j >= (int)(i * gn)));
     return true;
   }
   
@@ -1569,25 +1603,25 @@ public class ViewPager
   
   public void computeScroll()
   {
-    if ((!fK.isFinished()) && (fK.computeScrollOffset()))
+    if ((!gg.isFinished()) && (gg.computeScrollOffset()))
     {
       int i = getScrollX();
       int j = getScrollY();
-      int k = fK.getCurrX();
-      int m = fK.getCurrY();
+      int k = gg.getCurrX();
+      int m = gg.getCurrY();
       if ((i != k) || (j != m))
       {
         scrollTo(k, m);
-        if (!r(k))
+        if (!w(k))
         {
-          fK.abortAnimation();
+          gg.abortAnimation();
           scrollTo(0, m);
         }
       }
       m.g(this);
       return;
     }
-    m(true);
+    l(true);
   }
   
   public boolean dispatchKeyEvent(KeyEvent paramKeyEvent)
@@ -1651,7 +1685,7 @@ public class ViewPager
       if (localView.getVisibility() == 0)
       {
         b localb = n(localView);
-        if ((localb != null) && (position == fG) && (localView.dispatchPopulateAccessibilityEvent(paramAccessibilityEvent))) {
+        if ((localb != null) && (position == gc) && (localView.dispatchPopulateAccessibilityEvent(paramAccessibilityEvent))) {
           return true;
         }
       }
@@ -1666,22 +1700,22 @@ public class ViewPager
     int i = 0;
     int m = m.f(this);
     boolean bool;
-    if ((m == 0) || ((m == 1) && (fF != null) && (fF.getCount() > 1)))
+    if ((m == 0) || ((m == 1) && (gb != null) && (gb.getCount() > 1)))
     {
       int j;
-      if (!gl.isFinished())
+      if (!gH.isFinished())
       {
         k = paramCanvas.save();
         i = getHeight() - getPaddingTop() - getPaddingBottom();
         m = getWidth();
         paramCanvas.rotate(270.0F);
-        paramCanvas.translate(-i + getPaddingTop(), fQ * m);
-        gl.setSize(i, m);
-        j = gl.draw(paramCanvas) | false;
+        paramCanvas.translate(-i + getPaddingTop(), gm * m);
+        gH.setSize(i, m);
+        j = gH.draw(paramCanvas) | false;
         paramCanvas.restoreToCount(k);
       }
       k = j;
-      if (!gm.isFinished())
+      if (!gI.isFinished())
       {
         m = paramCanvas.save();
         k = getWidth();
@@ -1689,9 +1723,9 @@ public class ViewPager
         int i1 = getPaddingTop();
         int i2 = getPaddingBottom();
         paramCanvas.rotate(90.0F);
-        paramCanvas.translate(-getPaddingTop(), -(fR + 1.0F) * k);
-        gm.setSize(n - i1 - i2, k);
-        bool = j | gm.draw(paramCanvas);
+        paramCanvas.translate(-getPaddingTop(), -(gn + 1.0F) * k);
+        gI.setSize(n - i1 - i2, k);
+        bool = j | gI.draw(paramCanvas);
         paramCanvas.restoreToCount(m);
       }
     }
@@ -1701,15 +1735,15 @@ public class ViewPager
         m.g(this);
       }
       return;
-      gl.finish();
-      gm.finish();
+      gH.finish();
+      gI.finish();
     }
   }
   
   protected void drawableStateChanged()
   {
     super.drawableStateChanged();
-    Drawable localDrawable = fN;
+    Drawable localDrawable = gj;
     if ((localDrawable != null) && (localDrawable.isStateful())) {
       localDrawable.setState(getDrawableState());
     }
@@ -1730,85 +1764,65 @@ public class ViewPager
     return generateDefaultLayoutParams();
   }
   
-  public j getAdapter()
-  {
-    return fF;
-  }
-  
   protected int getChildDrawingOrder(int paramInt1, int paramInt2)
   {
     int i = paramInt2;
-    if (gw == 2) {
+    if (gR == 2) {
       i = paramInt1 - 1 - paramInt2;
     }
-    return gx.get(i)).getLayoutParams()).gH;
-  }
-  
-  public int getCurrentItem()
-  {
-    return fG;
-  }
-  
-  public int getOffscreenPageLimit()
-  {
-    return fW;
-  }
-  
-  public int getPageMargin()
-  {
-    return fM;
+    return gS.get(i)).getLayoutParams()).hc;
   }
   
   public final void j(int paramInt, boolean paramBoolean)
   {
-    fV = false;
+    gr = false;
     a(paramInt, paramBoolean, false);
   }
   
   protected void onAttachedToWindow()
   {
     super.onAttachedToWindow();
-    gn = true;
+    gJ = true;
   }
   
   protected void onDetachedFromWindow()
   {
-    removeCallbacks(gz);
+    removeCallbacks(gU);
     super.onDetachedFromWindow();
   }
   
   protected void onDraw(Canvas paramCanvas)
   {
     super.onDraw(paramCanvas);
-    if ((fM > 0) && (fN != null) && (fD.size() > 0) && (fF != null))
+    if ((gi > 0) && (gj != null) && (fZ.size() > 0) && (gb != null))
     {
       int k = getScrollX();
       int m = getWidth();
-      float f3 = fM / m;
-      Object localObject = (b)fD.get(0);
-      float f1 = gE;
-      int n = fD.size();
+      float f3 = gi / m;
+      Object localObject = (b)fZ.get(0);
+      float f1 = gZ;
+      int n = fZ.size();
       int i = position;
-      int i1 = fD.get(n - 1)).position;
+      int i1 = fZ.get(n - 1)).position;
       int j = 0;
       if (i < i1)
       {
         while ((i > position) && (j < n))
         {
-          localObject = fD;
+          localObject = fZ;
           j += 1;
           localObject = (b)((ArrayList)localObject).get(j);
         }
         float f2;
         if (i == position) {
-          f2 = (gE + gD) * m;
+          f2 = (gZ + gY) * m;
         }
-        for (f1 = gE + gD + f3;; f1 += 1.0F + f3)
+        for (f1 = gZ + gY + f3;; f1 += 1.0F + f3)
         {
-          if (fM + f2 > k)
+          if (gi + f2 > k)
           {
-            fN.setBounds((int)f2, fO, (int)(fM + f2 + 0.5F), fP);
-            fN.draw(paramCanvas);
+            gj.setBounds((int)f2, gk, (int)(gi + f2 + 0.5F), gl);
+            gj.draw(paramCanvas);
           }
           if (f2 > k + m) {
             return;
@@ -1826,13 +1840,13 @@ public class ViewPager
     int i = paramMotionEvent.getAction() & 0xFF;
     if ((i == 3) || (i == 1))
     {
-      fX = false;
-      fY = false;
-      gd = -1;
-      if (ge != null)
+      gt = false;
+      gu = false;
+      gz = -1;
+      if (gA != null)
       {
-        ge.recycle();
-        ge = null;
+        gA.recycle();
+        gA = null;
       }
     }
     do
@@ -1841,85 +1855,85 @@ public class ViewPager
       if (i == 0) {
         break;
       }
-      if (fX) {
+      if (gt) {
         return true;
       }
-    } while (fY);
+    } while (gu);
     switch (i)
     {
     }
     for (;;)
     {
-      if (ge == null) {
-        ge = VelocityTracker.obtain();
+      if (gA == null) {
+        gA = VelocityTracker.obtain();
       }
-      ge.addMovement(paramMotionEvent);
-      return fX;
-      i = gd;
+      gA.addMovement(paramMotionEvent);
+      return gt;
+      i = gz;
       if (i != -1)
       {
         i = i.a(paramMotionEvent, i);
         float f2 = i.c(paramMotionEvent, i);
-        float f1 = f2 - gb;
+        float f1 = f2 - gx;
         float f4 = Math.abs(f1);
         float f3 = i.d(paramMotionEvent, i);
-        float f5 = Math.abs(f3 - eX);
+        float f5 = Math.abs(f3 - fu);
         if (f1 != 0.0F)
         {
-          float f6 = gb;
-          if (((f6 < ga) && (f1 > 0.0F)) || ((f6 > getWidth() - ga) && (f1 < 0.0F))) {}
+          float f6 = gx;
+          if (((f6 < gw) && (f1 > 0.0F)) || ((f6 > getWidth() - gw) && (f1 < 0.0F))) {}
           for (i = 1; (i == 0) && (a(this, false, (int)f1, (int)f2, (int)f3)); i = 0)
           {
-            gb = f2;
-            gc = f3;
-            fY = true;
+            gx = f2;
+            gy = f3;
+            gu = true;
             return false;
           }
         }
-        if ((f4 > eY) && (0.5F * f4 > f5))
+        if ((f4 > fv) && (0.5F * f4 > f5))
         {
-          fX = true;
-          setScrollState(1);
+          gt = true;
+          r(1);
           if (f1 > 0.0F)
           {
-            f1 = eW + eY;
+            f1 = ft + fv;
             label352:
-            gb = f1;
-            gc = f3;
+            gx = f1;
+            gy = f3;
             setScrollingCacheEnabled(true);
           }
         }
-        while ((fX) && (e(f2)))
+        while ((gt) && (d(f2)))
         {
           m.g(this);
           break;
-          f1 = eW - eY;
+          f1 = ft - fv;
           break label352;
-          if (f5 > eY) {
-            fY = true;
+          if (f5 > fv) {
+            gu = true;
           }
         }
         f1 = paramMotionEvent.getX();
-        eW = f1;
-        gb = f1;
+        ft = f1;
+        gx = f1;
         f1 = paramMotionEvent.getY();
-        eX = f1;
-        gc = f1;
-        gd = i.b(paramMotionEvent, 0);
-        fY = false;
-        fK.computeScrollOffset();
-        if ((fs == 2) && (Math.abs(fK.getFinalX() - fK.getCurrX()) > gi))
+        fu = f1;
+        gy = f1;
+        gz = i.b(paramMotionEvent, 0);
+        gu = false;
+        gg.computeScrollOffset();
+        if ((fO == 2) && (Math.abs(gg.getFinalX() - gg.getCurrX()) > gE))
         {
-          fK.abortAnimation();
-          fV = false;
+          gg.abortAnimation();
+          gr = false;
           populate();
-          fX = true;
-          setScrollState(1);
+          gt = true;
+          r(1);
         }
         else
         {
-          m(false);
-          fX = false;
+          l(false);
+          gt = false;
           continue;
           g(paramMotionEvent);
         }
@@ -1952,7 +1966,7 @@ public class ViewPager
         break label671;
       }
       localLayoutParams = (LayoutParams)localView.getLayoutParams();
-      if (!gF) {
+      if (!ha) {
         break label671;
       }
       paramInt4 = gravity;
@@ -2033,18 +2047,18 @@ public class ViewPager
         if (localView.getVisibility() != 8)
         {
           localLayoutParams = (LayoutParams)localView.getLayoutParams();
-          if (!gF)
+          if (!ha)
           {
             b localb = n(localView);
             if (localb != null)
             {
               float f = i;
-              k = (int)(gE * f) + paramInt2;
-              if (gG)
+              k = (int)(gZ * f) + paramInt2;
+              if (hb)
               {
-                gG = false;
+                hb = false;
                 f = i;
-                localView.measure(View.MeasureSpec.makeMeasureSpec((int)(gD * f), 1073741824), View.MeasureSpec.makeMeasureSpec(i2 - paramInt1 - paramInt3, 1073741824));
+                localView.measure(View.MeasureSpec.makeMeasureSpec((int)(gY * f), 1073741824), View.MeasureSpec.makeMeasureSpec(i2 - paramInt1 - paramInt3, 1073741824));
               }
               localView.layout(k, paramInt1, localView.getMeasuredWidth() + k, localView.getMeasuredHeight() + paramInt1);
             }
@@ -2052,13 +2066,13 @@ public class ViewPager
         }
         paramInt4 += 1;
       }
-      fO = paramInt1;
-      fP = (i2 - paramInt3);
-      gq = j;
-      if (gn) {
-        a(fG, false, 0, false);
+      gk = paramInt1;
+      gl = (i2 - paramInt3);
+      gM = j;
+      if (gJ) {
+        a(gc, false, 0, false);
       }
-      gn = false;
+      gJ = false;
       return;
       label671:
       paramInt4 = j;
@@ -2076,7 +2090,7 @@ public class ViewPager
   {
     setMeasuredDimension(getDefaultSize(0, paramInt1), getDefaultSize(0, paramInt2));
     paramInt1 = getMeasuredWidth();
-    ga = Math.min(paramInt1 / 10, fZ);
+    gw = Math.min(paramInt1 / 10, gv);
     paramInt1 = paramInt1 - getPaddingLeft() - getPaddingRight();
     paramInt2 = getMeasuredHeight() - getPaddingTop() - getPaddingBottom();
     int i4 = getChildCount();
@@ -2103,7 +2117,7 @@ public class ViewPager
         {
           i = paramInt1;
           j = paramInt2;
-          if (gF)
+          if (ha)
           {
             i = gravity & 0x7;
             m = gravity & 0x70;
@@ -2184,11 +2198,11 @@ public class ViewPager
             j = paramInt2;
           }
         }
-        fS = View.MeasureSpec.makeMeasureSpec(paramInt1, 1073741824);
-        fT = View.MeasureSpec.makeMeasureSpec(paramInt2, 1073741824);
-        mInLayout = true;
+        go = View.MeasureSpec.makeMeasureSpec(paramInt1, 1073741824);
+        gp = View.MeasureSpec.makeMeasureSpec(paramInt2, 1073741824);
+        aO = true;
         populate();
-        mInLayout = false;
+        aO = false;
         i = getChildCount();
         paramInt2 = 0;
         while (paramInt2 < i)
@@ -2197,10 +2211,10 @@ public class ViewPager
           if (localView.getVisibility() != 8)
           {
             localLayoutParams = (LayoutParams)localView.getLayoutParams();
-            if ((localLayoutParams == null) || (!gF))
+            if ((localLayoutParams == null) || (!ha))
             {
               float f = paramInt1;
-              localView.measure(View.MeasureSpec.makeMeasureSpec((int)(gD * f), 1073741824), fT);
+              localView.measure(View.MeasureSpec.makeMeasureSpec((int)(gY * f), 1073741824), gp);
             }
           }
           paramInt2 += 1;
@@ -2232,7 +2246,7 @@ public class ViewPager
       if (localView.getVisibility() == 0)
       {
         b localb = n(localView);
-        if ((localb != null) && (position == fG) && (localView.requestFocus(paramInt, paramRect)))
+        if ((localb != null) && (position == gc) && (localView.requestFocus(paramInt, paramRect)))
         {
           return true;
           i = j - 1;
@@ -2254,23 +2268,23 @@ public class ViewPager
     }
     paramParcelable = (SavedState)paramParcelable;
     super.onRestoreInstanceState(paramParcelable.getSuperState());
-    if (fF != null)
+    if (gb != null)
     {
-      fF.a(gI, gJ);
+      gb.a(hd, he);
       a(position, false, true);
       return;
     }
-    fH = position;
-    fI = gI;
-    fJ = gJ;
+    gd = position;
+    ge = hd;
+    gf = he;
   }
   
   public Parcelable onSaveInstanceState()
   {
     SavedState localSavedState = new SavedState(super.onSaveInstanceState());
-    position = fG;
-    if (fF != null) {
-      gI = fF.N();
+    position = gc;
+    if (gb != null) {
+      hd = gb.M();
     }
     return localSavedState;
   }
@@ -2278,27 +2292,60 @@ public class ViewPager
   public void onSizeChanged(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.onSizeChanged(paramInt1, paramInt2, paramInt3, paramInt4);
-    if (paramInt1 != paramInt3) {
-      a(paramInt1, paramInt3, fM, fM);
+    if (paramInt1 != paramInt3)
+    {
+      paramInt2 = gi;
+      paramInt4 = gi;
+      if ((paramInt3 <= 0) || (fZ.isEmpty())) {
+        break label167;
+      }
+      int i = getPaddingLeft();
+      int j = getPaddingRight();
+      int k = getPaddingLeft();
+      int m = getPaddingRight();
+      f = getScrollX() / (paramInt4 + (paramInt3 - k - m));
+      paramInt2 = (int)((paramInt2 + (paramInt1 - i - j)) * f);
+      scrollTo(paramInt2, getScrollY());
+      if (!gg.isFinished())
+      {
+        paramInt3 = gg.getDuration();
+        paramInt4 = gg.timePassed();
+        localb = v(gc);
+        gg.startScroll(paramInt2, 0, (int)(gZ * paramInt1), 0, paramInt3 - paramInt4);
+      }
+    }
+    return;
+    label167:
+    b localb = v(gc);
+    if (localb != null) {}
+    for (float f = Math.min(gZ, gn);; f = 0.0F)
+    {
+      paramInt1 = (int)(f * (paramInt1 - getPaddingLeft() - getPaddingRight()));
+      if (paramInt1 == getScrollX()) {
+        break;
+      }
+      l(false);
+      scrollTo(paramInt1, getScrollY());
+      return;
     }
   }
   
   public boolean onTouchEvent(MotionEvent paramMotionEvent)
   {
     int n = 0;
-    if (gj) {
+    if (gF) {
       return true;
     }
     if ((paramMotionEvent.getAction() == 0) && (paramMotionEvent.getEdgeFlags() != 0)) {
       return false;
     }
-    if ((fF == null) || (fF.getCount() == 0)) {
+    if ((gb == null) || (gb.getCount() == 0)) {
       return false;
     }
-    if (ge == null) {
-      ge = VelocityTracker.obtain();
+    if (gA == null) {
+      gA = VelocityTracker.obtain();
     }
-    ge.addMovement(paramMotionEvent);
+    gA.addMovement(paramMotionEvent);
     int i = n;
     switch (paramMotionEvent.getAction() & 0xFF)
     {
@@ -2311,103 +2358,103 @@ public class ViewPager
         m.g(this);
       }
       return true;
-      fK.abortAnimation();
-      fV = false;
+      gg.abortAnimation();
+      gr = false;
       populate();
-      fX = true;
-      setScrollState(1);
+      gt = true;
+      r(1);
       float f1 = paramMotionEvent.getX();
-      eW = f1;
-      gb = f1;
+      ft = f1;
+      gx = f1;
       f1 = paramMotionEvent.getY();
-      eX = f1;
-      gc = f1;
-      gd = i.b(paramMotionEvent, 0);
+      fu = f1;
+      gy = f1;
+      gz = i.b(paramMotionEvent, 0);
       i = n;
       continue;
       float f2;
-      if (!fX)
+      if (!gt)
       {
-        i = i.a(paramMotionEvent, gd);
+        i = i.a(paramMotionEvent, gz);
         f1 = i.c(paramMotionEvent, i);
-        float f3 = Math.abs(f1 - gb);
+        float f3 = Math.abs(f1 - gx);
         f2 = i.d(paramMotionEvent, i);
-        float f4 = Math.abs(f2 - gc);
-        if ((f3 > eY) && (f3 > f4))
+        float f4 = Math.abs(f2 - gy);
+        if ((f3 > fv) && (f3 > f4))
         {
-          fX = true;
-          if (f1 - eW <= 0.0F) {
+          gt = true;
+          if (f1 - ft <= 0.0F) {
             break label364;
           }
         }
       }
       label364:
-      for (f1 = eW + eY;; f1 = eW - eY)
+      for (f1 = ft + fv;; f1 = ft - fv)
       {
-        gb = f1;
-        gc = f2;
-        setScrollState(1);
+        gx = f1;
+        gy = f2;
+        r(1);
         setScrollingCacheEnabled(true);
         i = n;
-        if (!fX) {
+        if (!gt) {
           break;
         }
-        bool1 = e(i.c(paramMotionEvent, i.a(paramMotionEvent, gd))) | false;
+        bool1 = d(i.c(paramMotionEvent, i.a(paramMotionEvent, gz))) | false;
         break;
       }
       boolean bool1 = n;
-      if (fX)
+      if (gt)
       {
-        Object localObject = ge;
-        ((VelocityTracker)localObject).computeCurrentVelocity(1000, gg);
-        int i1 = (int)l.a((VelocityTracker)localObject, gd);
-        fV = true;
-        n = getClientWidth();
+        Object localObject = gA;
+        ((VelocityTracker)localObject).computeCurrentVelocity(1000, gC);
+        int i1 = (int)l.a((VelocityTracker)localObject, gz);
+        gr = true;
+        n = ag();
         int i2 = getScrollX();
-        localObject = ak();
+        localObject = aj();
         int j = position;
-        f2 = (i2 / n - gE) / gD;
+        f2 = (i2 / n - gZ) / gY;
         boolean bool4;
-        if ((Math.abs((int)(i.c(paramMotionEvent, i.a(paramMotionEvent, gd)) - eW)) > gh) && (Math.abs(i1) > gf))
+        if ((Math.abs((int)(i.c(paramMotionEvent, i.a(paramMotionEvent, gz)) - ft)) > gD) && (Math.abs(i1) > gB))
         {
           if (i1 > 0) {}
           for (;;)
           {
             n = j;
-            if (fD.size() > 0) {
-              n = Math.max(al(), Math.min(j, am()));
+            if (fZ.size() > 0) {
+              n = Math.max(ak(), Math.min(j, al()));
             }
             a(n, true, true, i1);
-            gd = -1;
-            an();
-            bool4 = gl.aE();
-            boolean bool2 = gm.aE() | bool4;
+            gz = -1;
+            am();
+            bool4 = gH.aD();
+            boolean bool2 = gI.aD() | bool4;
             break;
             bool2 += true;
           }
         }
-        if (k >= fG) {}
+        if (k >= gc) {}
         for (f1 = 0.6F;; f1 = 0.4F)
         {
           k = (int)(k + f2 + f1);
           break;
         }
         int k = n;
-        if (fX)
+        if (gt)
         {
-          a(fG, true, 0, false);
-          gd = -1;
-          an();
-          bool4 = gl.aE();
-          boolean bool3 = gm.aE() | bool4;
+          a(gc, true, 0, false);
+          gz = -1;
+          am();
+          bool4 = gH.aD();
+          boolean bool3 = gI.aD() | bool4;
           continue;
           int m = i.e(paramMotionEvent);
-          gb = i.c(paramMotionEvent, m);
-          gd = i.b(paramMotionEvent, m);
+          gx = i.c(paramMotionEvent, m);
+          gz = i.b(paramMotionEvent, m);
           m = n;
           continue;
           g(paramMotionEvent);
-          gb = i.c(paramMotionEvent, i.a(paramMotionEvent, gd));
+          gx = i.c(paramMotionEvent, i.a(paramMotionEvent, gz));
           m = n;
         }
       }
@@ -2416,178 +2463,19 @@ public class ViewPager
   
   final void populate()
   {
-    p(fG);
+    u(gc);
   }
   
-  public void removeView(View paramView)
+  public final void r(int paramInt)
   {
-    if (mInLayout)
-    {
-      removeViewInLayout(paramView);
-      return;
-    }
-    super.removeView(paramView);
-  }
-  
-  public void setAdapter(j paramj)
-  {
-    if (fF != null)
-    {
-      fF.unregisterDataSetObserver(fL);
-      int i = 0;
-      while (i < fD.size())
-      {
-        localObject = (b)fD.get(i);
-        fF.a(this, position, gB);
-        i += 1;
-      }
-      fF.M();
-      fD.clear();
-      int j;
-      for (i = 0; i < getChildCount(); i = j + 1)
-      {
-        j = i;
-        if (!getChildAtgetLayoutParamsgF)
-        {
-          removeViewAt(i);
-          j = i - 1;
-        }
-      }
-      fG = 0;
-      scrollTo(0, 0);
-    }
-    Object localObject = fF;
-    fF = paramj;
-    fA = 0;
-    boolean bool;
-    if (fF != null)
-    {
-      if (fL == null) {
-        fL = new g((byte)0);
-      }
-      fF.registerDataSetObserver(fL);
-      fV = false;
-      bool = gn;
-      gn = true;
-      fA = fF.getCount();
-      if (fH < 0) {
-        break label293;
-      }
-      fF.a(fI, fJ);
-      a(fH, false, true);
-      fH = -1;
-      fI = null;
-      fJ = null;
-    }
-    for (;;)
-    {
-      if ((gt != null) && (localObject != paramj)) {
-        gt.b((j)localObject, paramj);
-      }
-      return;
-      label293:
-      if (!bool) {
-        populate();
-      } else {
-        requestLayout();
-      }
-    }
-  }
-  
-  void setChildrenDrawingOrderEnabledCompat(boolean paramBoolean)
-  {
-    if ((Build.VERSION.SDK_INT < 7) || (gv == null)) {}
-    try
-    {
-      gv = ViewGroup.class.getDeclaredMethod("setChildrenDrawingOrderEnabled", new Class[] { Boolean.TYPE });
-      try
-      {
-        gv.invoke(this, new Object[] { Boolean.valueOf(paramBoolean) });
-        return;
-      }
-      catch (Exception localException) {}
-    }
-    catch (NoSuchMethodException localNoSuchMethodException)
-    {
-      for (;;) {}
-    }
-  }
-  
-  public void setCurrentItem(int paramInt)
-  {
-    fV = false;
-    if (!gn) {}
-    for (boolean bool = true;; bool = false)
-    {
-      a(paramInt, bool, false);
-      return;
-    }
-  }
-  
-  public void setOffscreenPageLimit(int paramInt)
-  {
-    int i = paramInt;
-    if (paramInt <= 0)
-    {
-      new StringBuilder("Requested offscreen page limit ").append(paramInt).append(" too small; defaulting to 1");
-      i = 1;
-    }
-    if (i != fW)
-    {
-      fW = i;
-      populate();
-    }
-  }
-  
-  void setOnAdapterChangeListener(d paramd)
-  {
-    gt = paramd;
-  }
-  
-  public void setOnPageChangeListener(e parame)
-  {
-    gr = parame;
-  }
-  
-  public void setPageMargin(int paramInt)
-  {
-    int i = fM;
-    fM = paramInt;
-    int j = getWidth();
-    a(j, j, paramInt, i);
-    requestLayout();
-  }
-  
-  public void setPageMarginDrawable(int paramInt)
-  {
-    setPageMarginDrawable(getContext().getResources().getDrawable(paramInt));
-  }
-  
-  public void setPageMarginDrawable(Drawable paramDrawable)
-  {
-    fN = paramDrawable;
-    if (paramDrawable != null) {
-      refreshDrawableState();
-    }
-    if (paramDrawable == null) {}
-    for (boolean bool = true;; bool = false)
-    {
-      setWillNotDraw(bool);
-      invalidate();
-      return;
-    }
-  }
-  
-  public void setScrollState(int paramInt)
-  {
-    if (fs == paramInt) {}
+    if (fO == paramInt) {}
     label35:
     label71:
     do
     {
       return;
-      fs = paramInt;
-      if (gu != null)
+      fO = paramInt;
+      if (gQ != null)
       {
         int i;
         int j;
@@ -2612,28 +2500,59 @@ public class ViewPager
           break;
         }
       }
-    } while (gr == null);
-    gr.o(paramInt);
+    } while (gN == null);
+    gN.q(paramInt);
   }
   
-  public void setScroller(Scroller paramScroller)
+  public void removeView(View paramView)
   {
-    fK = paramScroller;
+    if (aO)
+    {
+      removeViewInLayout(paramView);
+      return;
+    }
+    super.removeView(paramView);
+  }
+  
+  public final void s(int paramInt)
+  {
+    gr = false;
+    if (!gJ) {}
+    for (boolean bool = true;; bool = false)
+    {
+      a(paramInt, bool, false);
+      return;
+    }
+  }
+  
+  public final void t(int paramInt)
+  {
+    int i = paramInt;
+    if (paramInt <= 0)
+    {
+      new StringBuilder("Requested offscreen page limit ").append(paramInt).append(" too small; defaulting to 1");
+      i = 1;
+    }
+    if (i != gs)
+    {
+      gs = i;
+      populate();
+    }
   }
   
   protected boolean verifyDrawable(Drawable paramDrawable)
   {
-    return (super.verifyDrawable(paramDrawable)) || (paramDrawable == fN);
+    return (super.verifyDrawable(paramDrawable)) || (paramDrawable == gj);
   }
   
   public static class LayoutParams
     extends ViewGroup.LayoutParams
   {
-    float gD = 0.0F;
-    public boolean gF;
-    boolean gG;
-    int gH;
+    float gY = 0.0F;
     public int gravity;
+    public boolean ha;
+    boolean hb;
+    int hc;
     int position;
     
     public LayoutParams()
@@ -2644,7 +2563,7 @@ public class ViewPager
     public LayoutParams(Context paramContext, AttributeSet paramAttributeSet)
     {
       super(paramAttributeSet);
-      paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, ViewPager.aq());
+      paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, ViewPager.ap());
       gravity = paramContext.getInteger(0, 48);
       paramContext.recycle();
     }
@@ -2653,9 +2572,9 @@ public class ViewPager
   public static class SavedState
     extends View.BaseSavedState
   {
-    public static final Parcelable.Creator CREATOR;
-    Parcelable gI;
-    ClassLoader gJ;
+    public static final Parcelable.Creator<SavedState> CREATOR;
+    Parcelable hd;
+    ClassLoader he;
     int position;
     
     static
@@ -2675,8 +2594,8 @@ public class ViewPager
         localClassLoader = getClass().getClassLoader();
       }
       position = paramParcel.readInt();
-      gI = paramParcel.readParcelable(localClassLoader);
-      gJ = localClassLoader;
+      hd = paramParcel.readParcelable(localClassLoader);
+      he = localClassLoader;
     }
     
     public SavedState(Parcelable paramParcelable)
@@ -2693,7 +2612,7 @@ public class ViewPager
     {
       super.writeToParcel(paramParcel, paramInt);
       paramParcel.writeInt(position);
-      paramParcel.writeParcelable(gI, paramInt);
+      paramParcel.writeParcelable(hd, paramInt);
     }
   }
   
@@ -2701,10 +2620,10 @@ public class ViewPager
   
   static final class b
   {
-    Object gB;
-    boolean gC;
-    float gD;
-    float gE;
+    Object gW;
+    boolean gX;
+    float gY;
+    float gZ;
     int position;
   }
   
@@ -2713,7 +2632,7 @@ public class ViewPager
   {
     c() {}
     
-    private boolean ar()
+    private boolean aq()
     {
       return (ViewPager.b(ViewPager.this) != null) && (ViewPager.b(ViewPager.this).getCount() > 1);
     }
@@ -2722,8 +2641,8 @@ public class ViewPager
     {
       super.a(paramView, parama);
       parama.setClassName(ViewPager.class.getName());
-      boolean bool = ar();
-      android.support.v4.view.a.a.gK.f(gL, bool);
+      boolean bool = aq();
+      android.support.v4.view.a.a.hf.f(hg, bool);
       if (canScrollHorizontally(1)) {
         parama.addAction(4096);
       }
@@ -2736,17 +2655,17 @@ public class ViewPager
     {
       super.onInitializeAccessibilityEvent(paramView, paramAccessibilityEvent);
       paramAccessibilityEvent.setClassName(ViewPager.class.getName());
-      paramView = d.aw();
-      boolean bool = ar();
-      d.gR.f(gS, bool);
+      paramView = d.av();
+      boolean bool = aq();
+      d.hm.f(hn, bool);
       if ((paramAccessibilityEvent.getEventType() == 4096) && (ViewPager.b(ViewPager.this) != null))
       {
         int i = ViewPager.b(ViewPager.this).getCount();
-        d.gR.e(gS, i);
+        d.hm.e(hn, i);
         i = ViewPager.c(ViewPager.this);
-        d.gR.d(gS, i);
+        d.hm.d(hn, i);
         i = ViewPager.c(ViewPager.this);
-        d.gR.f(gS, i);
+        d.hm.f(hn, i);
       }
     }
     
@@ -2762,14 +2681,14 @@ public class ViewPager
       case 4096: 
         if (canScrollHorizontally(1))
         {
-          setCurrentItem(ViewPager.c(ViewPager.this) + 1);
+          s(ViewPager.c(ViewPager.this) + 1);
           return true;
         }
         return false;
       }
       if (canScrollHorizontally(-1))
       {
-        setCurrentItem(ViewPager.c(ViewPager.this) - 1);
+        s(ViewPager.c(ViewPager.this) - 1);
         return true;
       }
       return false;
@@ -2785,9 +2704,9 @@ public class ViewPager
   {
     public abstract void a(int paramInt1, float paramFloat, int paramInt2);
     
-    public abstract void n(int paramInt);
+    public abstract void p(int paramInt);
     
-    public abstract void o(int paramInt);
+    public abstract void q(int paramInt);
   }
   
   public static abstract interface f {}
@@ -2799,17 +2718,17 @@ public class ViewPager
     
     public final void onChanged()
     {
-      ai();
+      ah();
     }
     
     public final void onInvalidated()
     {
-      ai();
+      ah();
     }
   }
   
   static final class h
-    implements Comparator
+    implements Comparator<View>
   {}
 }
 

@@ -1,7 +1,7 @@
 package com.tencent.mm.ui.chatting;
 
 final class ChattingUI$a$d
-  extends Enum
+  extends Enum<d>
 {}
 
 /* Location:

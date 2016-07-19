@@ -4,19 +4,19 @@
 
 
 # instance fields
-.field private cRI:Landroid/view/View;
+.field private cPr:Landroid/view/View;
 
-.field public dmd:Lcom/tencent/mm/storage/a/c;
+.field public dlK:Lcom/tencent/mm/storage/a/c;
 
-.field public iMb:Lcom/tencent/mm/pluginsdk/ui/emoji/PreViewEmojiView;
+.field public jiY:Lcom/tencent/mm/pluginsdk/ui/emoji/PreViewEmojiView;
 
-.field public iMc:Lcom/tencent/mm/ui/base/o;
+.field public jiZ:Lcom/tencent/mm/ui/base/o;
 
-.field public iMd:Landroid/view/View;
+.field public jja:Landroid/view/View;
 
-.field public iMe:I
+.field public jjb:I
 
-.field public iMf:I
+.field public jjc:I
 
 .field public mContext:Landroid/content/Context;
 
@@ -37,22 +37,22 @@
     iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->mContext:Landroid/content/Context;
 
     .line 41
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->iMd:Landroid/view/View;
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->jja:Landroid/view/View;
 
     .line 42
     iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0a04e4
+    const v1, 0x7f0300db
 
     invoke-static {v0, v1, v3}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->cRI:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->cPr:Landroid/view/View;
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->cRI:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->cPr:Landroid/view/View;
 
-    const v1, 0x7f070f25
+    const v1, 0x7f1003a7
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -60,17 +60,17 @@
 
     check-cast v0, Lcom/tencent/mm/pluginsdk/ui/emoji/PreViewEmojiView;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->iMb:Lcom/tencent/mm/pluginsdk/ui/emoji/PreViewEmojiView;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->jiY:Lcom/tencent/mm/pluginsdk/ui/emoji/PreViewEmojiView;
 
     iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f05019d
+    const v1, 0x7f0b01ed
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/aw/a;->z(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/az/a;->D(Landroid/content/Context;I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->iMe:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->jjb:I
 
     new-instance v0, Lcom/tencent/mm/ui/base/o;
 
@@ -78,33 +78,33 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/ui/base/o;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->iMc:Lcom/tencent/mm/ui/base/o;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->jiZ:Lcom/tencent/mm/ui/base/o;
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->iMc:Lcom/tencent/mm/ui/base/o;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->jiZ:Lcom/tencent/mm/ui/base/o;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->cRI:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->cPr:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/o;->setContentView(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->iMc:Lcom/tencent/mm/ui/base/o;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->jiZ:Lcom/tencent/mm/ui/base/o;
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/base/o;->setOutsideTouchable(Z)V
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->iMc:Lcom/tencent/mm/ui/base/o;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->jiZ:Lcom/tencent/mm/ui/base/o;
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/base/o;->setFocusable(Z)V
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->iMc:Lcom/tencent/mm/ui/base/o;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->jiZ:Lcom/tencent/mm/ui/base/o;
 
     invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/base/o;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/s;->eo(Landroid/content/Context;)I
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/s;->er(Landroid/content/Context;)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->iMf:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/c;->jjc:I
 
     .line 43
     return-void

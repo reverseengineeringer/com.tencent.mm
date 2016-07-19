@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public gHu:Lcom/tencent/mm/plugin/sns/data/d;
+.field public gOy:Lcom/tencent/mm/plugin/sns/data/e;
 
 .field private requestType:I
 
@@ -21,7 +21,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/tencent/mm/plugin/sns/data/d;I)V
+.method public constructor <init>(Lcom/tencent/mm/plugin/sns/data/e;I)V
     .locals 0
 
     .prologue
@@ -29,7 +29,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 12
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/data/c;->gHu:Lcom/tencent/mm/plugin/sns/data/d;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/data/c;->gOy:Lcom/tencent/mm/plugin/sns/data/e;
 
     .line 13
     iput p2, p0, Lcom/tencent/mm/plugin/sns/data/c;->requestType:I

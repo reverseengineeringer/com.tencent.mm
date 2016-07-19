@@ -1,180 +1,158 @@
 package com.tencent.mm.ui.chatting;
 
-import android.app.Activity;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.os.HandlerThread;
-import android.os.Looper;
-import android.widget.TextView;
-import com.tencent.mm.an.j;
-import com.tencent.mm.an.o;
-import com.tencent.mm.an.q.a;
-import com.tencent.mm.d.a.ke;
-import com.tencent.mm.d.a.ke.a;
-import com.tencent.mm.d.b.bg;
+import com.tencent.mm.e.a.jm;
+import com.tencent.mm.e.a.ke;
+import com.tencent.mm.e.a.kf;
+import com.tencent.mm.e.a.lc;
+import com.tencent.mm.e.a.le;
+import com.tencent.mm.e.a.oc;
+import com.tencent.mm.e.b.bj;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.modelcdntran.e;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag;
-import com.tencent.mm.ui.base.g;
-import com.tencent.mm.ui.chatting.gallery.ImageGalleryUI;
-import com.tencent.mm.ui.chatting.gallery.ImageGalleryUI.5;
+import com.tencent.mm.model.ar;
+import com.tencent.mm.model.f;
+import com.tencent.mm.model.i;
+import com.tencent.mm.p.a.a;
+import com.tencent.mm.pluginsdk.model.app.ak.a;
+import com.tencent.mm.pluginsdk.model.app.al;
+import com.tencent.mm.pluginsdk.model.app.l;
+import com.tencent.mm.sdk.c.a;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.aj;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 
 public final class ds
-  extends com.tencent.mm.sdk.c.c
 {
-  Activity asX = null;
-  private a ldo = null;
-  
-  public ds(a parama, Activity paramActivity)
+  public static void B(ai paramai)
   {
-    super(0);
-    ldo = parama;
-    asX = paramActivity;
-  }
-  
-  private static void ah(ag paramag)
-  {
-    paramag = o.jV(field_imgPath);
-    Object localObject;
-    if (paramag != null) {
-      localObject = com.tencent.mm.modelcdntran.c.a("downvideo", cfW, paramag.Ei(), paramag.getFileName());
+    int i = 0;
+    v.i("MicroMsg.ResendMsgLogic", "resendAppMsg, msgId:%d", new Object[] { Long.valueOf(field_msgId) });
+    String str = field_content;
+    int j = field_isSend;
+    Object localObject = field_talker;
+    if ((i.ed((String)localObject)) || (f.dQ((String)localObject))) {
+      i = 1;
     }
-    try
+    localObject = str;
+    if (i != 0)
     {
-      e.xW().hk((String)localObject);
-      u.i("!44@/B4Tb64lLpLvj7Df3Bvn5xYnbkX/ygtwaXm7+WPl0ys=", "ashutest::[oneliang][revokeMsgVideo] cancel result:%s", new Object[] { Boolean.valueOf(true) });
-      localObject = j.Ec();
-      ah.tE().c(cgA);
-      ((q.a)localObject).lz();
-      j.Ea().jK(paramag.getFileName());
-      return;
-    }
-    catch (Exception paramag)
-    {
-      u.printErrStackTrace("!44@/B4Tb64lLpLvj7Df3Bvn5xYnbkX/ygtwaXm7+WPl0ys=", paramag, "[oneliang][revokeMsgVideo] chatting item video,cancel failure:%s", new Object[] { paramag.getMessage() });
-    }
-  }
-  
-  public final boolean a(com.tencent.mm.sdk.c.b paramb)
-  {
-    int i = 1;
-    Object localObject;
-    long l;
-    String str;
-    if ((ldo != null) && (paramb != null) && ((paramb instanceof ke)))
-    {
-      localObject = (ke)paramb;
-      l = aGE.avg;
-      str = aGE.aGF;
-      paramb = aGE.aGG;
-      if ((paramb != null) && (field_msgId > 0L)) {
-        break label590;
+      localObject = str;
+      if (str != null)
+      {
+        localObject = str;
+        if (j == 0) {
+          localObject = ar.fy(str);
+        }
       }
-      paramb = aGE.aGG;
     }
-    label391:
-    label590:
+    localObject = a.a.dI((String)localObject);
+    if (((localObject != null) && (19 == type)) || ((localObject != null) && (24 == type)))
+    {
+      localObject = new jm();
+      arS.type = 4;
+      arS.arX = paramai;
+      arS.aky = field_talker;
+      a.kug.y((com.tencent.mm.sdk.c.b)localObject);
+    }
     for (;;)
     {
-      if (paramb == null) {
-        u.e("!44@/B4Tb64lLpLvj7Df3Bvn5xYnbkX/ygtwaXm7+WPl0ys=", "in callback msgInfo null");
-      }
-      boolean bool;
-      do
-      {
-        for (;;)
-        {
-          return false;
-          switch (field_type)
-          {
-          default: 
-            return false;
-          case 3: 
-            switch (3.ldq[ldo.ordinal()])
-            {
-            default: 
-              return false;
-            }
-            if ((paramb != null) && (field_msgId > 0L)) {
-              localObject = com.tencent.mm.modelcdntran.c.a("downimg", field_createTime, field_talker, field_msgId);
-            }
-            try
-            {
-              e.xW().hk((String)localObject);
-              u.i("!44@/B4Tb64lLpLvj7Df3Bvn5xYnbkX/ygtwaXm7+WPl0ys=", "[oneliang][revokeMsgImage] cancel result:%s", new Object[] { Boolean.valueOf(true) });
-              ah.tE().cancel(109);
-              paramb = com.tencent.mm.ui.chatting.gallery.d.at(paramb);
-              com.tencent.mm.ab.n.Ap().c(bQc, l);
-              if ((asX != null) && ((asX instanceof ImageGalleryUI)))
-              {
-                paramb = (ImageGalleryUI)asX;
-                u.i("!44@/B4Tb64lLpLvj7Df3Bvn5xYnbkX/ygtwaXm7+WPl0ys=", "[oneliang][revokeMsgImage] image gallery ui,msg id is:%s,downloadingImageMsgId: %s", new Object[] { Long.valueOf(l), Long.valueOf(avg) });
-                if (l == avg)
-                {
-                  g.a(asX, str, "", false, new DialogInterface.OnClickListener()
-                  {
-                    public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
-                    {
-                      paramAnonymousDialogInterface.dismiss();
-                      asX.finish();
-                    }
-                  });
-                  return false;
-                }
-              }
-            }
-            catch (Exception paramb)
-            {
-              for (;;)
-              {
-                u.printErrStackTrace("!44@/B4Tb64lLpLvj7Df3Bvn5xYnbkX/ygtwaXm7+WPl0ys=", paramb, "[oneliang][revokeMsgImage] cancel failure:%s", new Object[] { paramb.getMessage() });
-              }
-            }
-          }
-        }
-        localObject = ldo;
-        if (Looper.myLooper() != tvjVF.getLooper()) {
-          break;
-        }
-        bool = true;
-        u.v("!44@/B4Tb64lLpLvj7Df3Bvn5xYnbkX/ygtwaXm7+WPl0ys=", "ashutest::revoke msg, type %s, isWorkerThread %B", new Object[] { localObject, Boolean.valueOf(bool) });
-        switch (3.ldq[ldo.ordinal()])
-        {
-        default: 
-          return false;
-        case 2: 
-          ah(paramb);
-        }
-      } while (!(asX instanceof ImageGalleryUI));
-      localObject = (ImageGalleryUI)asX;
-      if ((lel != null) && (com.tencent.mm.ui.chatting.gallery.b.aj(paramb)) && (field_msgId == lel.bgo().field_msgId)) {}
-      while (i != 0)
-      {
-        i = ((ImageGalleryUI)localObject).getCurrentItem();
-        if (bgDlgp != null) {
-          bgDlgp.post(new ImageGalleryUI.5((ImageGalleryUI)localObject, i));
-        }
-        g.a(asX, str, "", false, new DialogInterface.OnClickListener()
-        {
-          public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
-          {
-            paramAnonymousDialogInterface.dismiss();
-            asX.finish();
-          }
-        });
-        return false;
-        bool = false;
-        break label391;
-        i = 0;
-      }
-      ah(paramb);
-      return false;
+      ar.H(field_msgId);
+      return;
+      l.B(paramai);
     }
   }
   
-  public static enum a {}
+  public static void aa(ai paramai)
+  {
+    v.i("MicroMsg.ResendMsgLogic", "resendEmoji, msgId:%d", new Object[] { Long.valueOf(field_msgId) });
+    oc localoc = new oc();
+    awp.aec = paramai;
+    a.kug.y(localoc);
+  }
+  
+  public static void ab(ai paramai)
+  {
+    v.i("MicroMsg.ResendMsgLogic", "resendTextMsg, msgId:%d", new Object[] { Long.valueOf(field_msgId) });
+    ak(paramai);
+  }
+  
+  public static void ac(ai paramai)
+  {
+    v.i("MicroMsg.ResendMsgLogic", "resendCardMsg, msgId:%d", new Object[] { Long.valueOf(field_msgId) });
+    ak(paramai);
+  }
+  
+  public static void ad(ai paramai)
+  {
+    v.i("MicroMsg.ResendMsgLogic", "resendAppMsgEmoji, msgId:%d", new Object[] { Long.valueOf(field_msgId) });
+    com.tencent.mm.pluginsdk.model.app.b localb = al.Jk().dj(field_msgId);
+    if ((localb != null) && (field_msgInfoId == field_msgId))
+    {
+      v.d("MicroMsg.ResendMsgLogic", "resendAppMsgEmoji, upload app attach first");
+      field_status = 101L;
+      field_offset = 0L;
+      field_lastModifyTime = (System.currentTimeMillis() / 1000L);
+      al.Jk().a(localb, new String[0]);
+      al.aUD().run();
+      return;
+    }
+    v.d("MicroMsg.ResendMsgLogic", "resendAppMsgEmoji, directly send app mag");
+    al.aUD();
+    ak.a.dn(field_msgId);
+  }
+  
+  public static void ah(ai paramai)
+  {
+    v.i("MicroMsg.ResendMsgLogic", "resendVoiceMsg, msgId:%d", new Object[] { Long.valueOf(field_msgId) });
+    if (i.eG(field_talker))
+    {
+      localObject = new kf();
+      asG.aec = paramai;
+      a.kug.y((com.tencent.mm.sdk.c.b)localObject);
+      return;
+    }
+    Object localObject = new ke();
+    asF.aec = paramai;
+    a.kug.y((com.tencent.mm.sdk.c.b)localObject);
+  }
+  
+  public static void ai(ai paramai)
+  {
+    v.i("MicroMsg.ResendMsgLogic", "resendMsgImage, msgId:%d", new Object[] { Long.valueOf(field_msgId) });
+    lc locallc = new lc();
+    atI.aec = paramai;
+    a.kug.y(locallc);
+  }
+  
+  public static void aj(ai paramai)
+  {
+    v.i("MicroMsg.ResendMsgLogic", "resendLocation, msgId:%d", new Object[] { Long.valueOf(field_msgId) });
+    ak(paramai);
+  }
+  
+  private static void ak(ai paramai)
+  {
+    long l = field_msgId;
+    if (l == -1L) {
+      v.e("MicroMsg.ResendMsgLogic", "sendMsgInternal failed msgId " + l);
+    }
+    do
+    {
+      do
+      {
+        return;
+      } while ((field_talker.equals("medianote")) && ((com.tencent.mm.model.h.si() & 0x4000) == 0));
+      v.d("MicroMsg.ResendMsgLogic", "sendMsgInternal, start send msgId: %d", new Object[] { Long.valueOf(l) });
+      localObject = new com.tencent.mm.modelmulti.h(l);
+    } while (ah.tF().a((j)localObject, 0));
+    v.e("MicroMsg.ResendMsgLogic", "sendMsgInternal, doScene return false, directly mark msg to failed");
+    paramai.bB(5);
+    ah.tE().rt().a(field_msgId, paramai);
+    Object localObject = new le();
+    atL.aec = paramai;
+    a.kug.y((com.tencent.mm.sdk.c.b)localObject);
+  }
 }
 
 /* Location:

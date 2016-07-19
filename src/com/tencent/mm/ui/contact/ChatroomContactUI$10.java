@@ -1,22 +1,22 @@
 package com.tencent.mm.ui.contact;
 
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.base.MMSlideDelView.f;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.base.MMSlideDelView.e;
 
 final class ChatroomContactUI$10
-  implements MMSlideDelView.f
+  implements MMSlideDelView.e
 {
   ChatroomContactUI$10(ChatroomContactUI paramChatroomContactUI) {}
   
-  public final void Z(Object paramObject)
+  public final void at(Object paramObject)
   {
     if (paramObject == null)
     {
-      u.e("!44@/B4Tb64lLpIELL9O96QoKLI7tZ4uMi2P4SCBJbIGwmU=", "onItemDel object null");
+      v.e("MicroMsg.ChatroomContactUI", "onItemDel object null");
       return;
     }
-    ChatroomContactUI.Hf(paramObject.toString());
-    ChatroomContactUI.c(ljg);
+    ChatroomContactUI.Ju(paramObject.toString());
+    ChatroomContactUI.c(lJr);
   }
 }
 

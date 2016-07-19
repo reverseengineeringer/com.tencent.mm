@@ -1,17 +1,17 @@
 package com.tencent.mm.sdk.g;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.p;
+import com.tencent.mm.sdk.platformtools.q;
 
 public final class a$a
 {
-  public String jUV;
-  public int jUW = -1;
+  public String kuB;
+  public int kuC = -1;
   
-  public final void m(Bundle paramBundle)
+  public final void o(Bundle paramBundle)
   {
-    jUV = p.c(paramBundle, "_wxapi_payoptions_callback_classname");
-    jUW = p.a(paramBundle, "_wxapi_payoptions_callback_flags", -1);
+    kuB = q.c(paramBundle, "_wxapi_payoptions_callback_classname");
+    kuC = q.a(paramBundle, "_wxapi_payoptions_callback_flags", -1);
   }
 }
 

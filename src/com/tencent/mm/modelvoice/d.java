@@ -2,11 +2,11 @@ package com.tencent.mm.modelvoice;
 
 public abstract interface d
 {
+  public abstract void N(boolean paramBoolean);
+  
   public abstract void a(a parama);
   
   public abstract void a(b paramb);
-  
-  public abstract void ak(boolean paramBoolean);
   
   public abstract boolean c(String paramString, boolean paramBoolean, int paramInt);
   
@@ -14,19 +14,19 @@ public abstract interface d
   
   public abstract boolean isPlaying();
   
-  public abstract boolean lB();
+  public abstract boolean jL();
   
-  public abstract double lE();
+  public abstract double jO();
   
-  public abstract boolean lv();
+  public abstract boolean jW();
   
   public abstract boolean pause();
   
-  public abstract boolean s(String paramString, boolean paramBoolean);
+  public abstract boolean w(String paramString, boolean paramBoolean);
   
   public static abstract interface a
   {
-    public abstract void lG();
+    public abstract void jQ();
   }
   
   public static abstract interface b

@@ -13,7 +13,7 @@ final class c$1
   
   public final void onClick(View paramView)
   {
-    e.b(kxP.koJ.kpc, false, 2);
+    e.b(kWW.kNN.kOg, false, 2);
   }
 }
 

@@ -1,10 +1,10 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.plugin.sns.d.ad;
+import com.tencent.mm.plugin.sns.e.ad;
 import com.tencent.mm.sdk.h.g.a;
 import com.tencent.mm.sdk.h.i;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SnsMsgUI$4
   implements g.a
@@ -13,15 +13,15 @@ final class SnsMsgUI$4
   
   public final void a(String paramString, i parami)
   {
-    ad.ZP().post(new Runnable()
+    ad.acj().post(new Runnable()
     {
       public final void run()
       {
-        synchronized (SnsMsgUI.d(hfU))
+        synchronized (SnsMsgUI.d(huL))
         {
-          u.v("!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp", "comment notify");
-          SnsMsgUI.l(hfU);
-          SnsMsgUI.d(hfU).a(null, null);
+          v.v("MicroMsg.SnsMsgUI", "comment notify");
+          SnsMsgUI.l(huL);
+          SnsMsgUI.d(huL).a(null, null);
           return;
         }
       }

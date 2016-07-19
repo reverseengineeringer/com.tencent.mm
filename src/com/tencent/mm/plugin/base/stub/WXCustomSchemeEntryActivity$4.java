@@ -1,7 +1,7 @@
 package com.tencent.mm.plugin.base.stub;
 
 import com.tencent.mm.pluginsdk.d.a;
-import com.tencent.mm.r.j;
+import com.tencent.mm.t.j;
 
 final class WXCustomSchemeEntryActivity$4
   implements d.a
@@ -10,7 +10,7 @@ final class WXCustomSchemeEntryActivity$4
   
   public final void a(int paramInt1, int paramInt2, String paramString, j paramj, boolean paramBoolean)
   {
-    cBr.finish();
+    cyl.finish();
   }
 }
 

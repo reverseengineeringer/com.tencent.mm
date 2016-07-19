@@ -10,7 +10,7 @@ final class AppUpdaterUI$8
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    AppUpdaterUI.g(jTb);
+    AppUpdaterUI.g(ksv);
   }
 }
 

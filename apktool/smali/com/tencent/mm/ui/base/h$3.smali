@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kCT:Lcom/tencent/mm/ui/base/h;
+.field final synthetic lbY:Lcom/tencent/mm/ui/base/h;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 444
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/h$3;->kCT:Lcom/tencent/mm/ui/base/h;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/h$3;->lbY:Lcom/tencent/mm/ui/base/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 448
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/h$3;->kCT:Lcom/tencent/mm/ui/base/h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/h$3;->lbY:Lcom/tencent/mm/ui/base/h;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/h;->dismiss()V
 

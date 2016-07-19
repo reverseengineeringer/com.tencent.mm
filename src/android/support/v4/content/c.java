@@ -5,45 +5,37 @@ import android.support.v4.c.a;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 
-public class c
+public class c<D>
 {
-  boolean mAbandoned = false;
-  boolean mContentChanged = false;
+  public boolean cC = false;
+  public int cE;
+  public boolean eA = false;
+  public boolean eB = true;
+  public boolean eC = false;
+  public boolean eD = false;
+  public a<D> ez;
   Context mContext;
-  int mId;
-  a mListener;
-  boolean mProcessingChange = false;
-  boolean mReset = true;
-  boolean mStarted = false;
   
   public c(Context paramContext)
   {
     mContext = paramContext.getApplicationContext();
   }
   
-  public void abandon()
+  public final void a(a<D> parama)
   {
-    mAbandoned = true;
-    onAbandon();
+    if (ez == null) {
+      throw new IllegalStateException("No listener register");
+    }
+    if (ez != parama) {
+      throw new IllegalArgumentException("Attempting to unregister the wrong listener");
+    }
+    ez = null;
   }
   
-  public void commitContentChanged()
+  public final void deliverResult(D paramD)
   {
-    mProcessingChange = false;
-  }
-  
-  public String dataToString(Object paramObject)
-  {
-    StringBuilder localStringBuilder = new StringBuilder(64);
-    a.a(paramObject, localStringBuilder);
-    localStringBuilder.append("}");
-    return localStringBuilder.toString();
-  }
-  
-  public void deliverResult(Object paramObject)
-  {
-    if (mListener != null) {
-      mListener.a(this, paramObject);
+    if (ez != null) {
+      ez.b(this, paramD);
     }
   }
   
@@ -51,72 +43,28 @@ public class c
   {
     paramPrintWriter.print(paramString);
     paramPrintWriter.print("mId=");
-    paramPrintWriter.print(mId);
+    paramPrintWriter.print(cE);
     paramPrintWriter.print(" mListener=");
-    paramPrintWriter.println(mListener);
-    if ((mStarted) || (mContentChanged) || (mProcessingChange))
+    paramPrintWriter.println(ez);
+    if ((cC) || (eC) || (eD))
     {
       paramPrintWriter.print(paramString);
       paramPrintWriter.print("mStarted=");
-      paramPrintWriter.print(mStarted);
+      paramPrintWriter.print(cC);
       paramPrintWriter.print(" mContentChanged=");
-      paramPrintWriter.print(mContentChanged);
+      paramPrintWriter.print(eC);
       paramPrintWriter.print(" mProcessingChange=");
-      paramPrintWriter.println(mProcessingChange);
+      paramPrintWriter.println(eD);
     }
-    if ((mAbandoned) || (mReset))
+    if ((eA) || (eB))
     {
       paramPrintWriter.print(paramString);
       paramPrintWriter.print("mAbandoned=");
-      paramPrintWriter.print(mAbandoned);
+      paramPrintWriter.print(eA);
       paramPrintWriter.print(" mReset=");
-      paramPrintWriter.println(mReset);
+      paramPrintWriter.println(eB);
     }
   }
-  
-  public void forceLoad()
-  {
-    onForceLoad();
-  }
-  
-  public Context getContext()
-  {
-    return mContext;
-  }
-  
-  public int getId()
-  {
-    return mId;
-  }
-  
-  public boolean isAbandoned()
-  {
-    return mAbandoned;
-  }
-  
-  public boolean isReset()
-  {
-    return mReset;
-  }
-  
-  public boolean isStarted()
-  {
-    return mStarted;
-  }
-  
-  protected void onAbandon() {}
-  
-  public void onContentChanged()
-  {
-    if (mStarted)
-    {
-      forceLoad();
-      return;
-    }
-    mContentChanged = true;
-  }
-  
-  protected void onForceLoad() {}
   
   public void onReset() {}
   
@@ -124,78 +72,19 @@ public class c
   
   public void onStopLoading() {}
   
-  public void registerListener(int paramInt, a parama)
-  {
-    if (mListener != null) {
-      throw new IllegalStateException("There is already a listener registered");
-    }
-    mListener = parama;
-    mId = paramInt;
-  }
-  
-  public void reset()
-  {
-    onReset();
-    mReset = true;
-    mStarted = false;
-    mAbandoned = false;
-    mContentChanged = false;
-    mProcessingChange = false;
-  }
-  
-  public void rollbackContentChanged()
-  {
-    if (mProcessingChange) {
-      mContentChanged = true;
-    }
-  }
-  
-  public final void startLoading()
-  {
-    mStarted = true;
-    mReset = false;
-    mAbandoned = false;
-    onStartLoading();
-  }
-  
-  public void stopLoading()
-  {
-    mStarted = false;
-    onStopLoading();
-  }
-  
-  public boolean takeContentChanged()
-  {
-    boolean bool = mContentChanged;
-    mContentChanged = false;
-    mProcessingChange |= bool;
-    return bool;
-  }
-  
   public String toString()
   {
     StringBuilder localStringBuilder = new StringBuilder(64);
     a.a(this, localStringBuilder);
     localStringBuilder.append(" id=");
-    localStringBuilder.append(mId);
+    localStringBuilder.append(cE);
     localStringBuilder.append("}");
     return localStringBuilder.toString();
   }
   
-  public void unregisterListener(a parama)
+  public static abstract interface a<D>
   {
-    if (mListener == null) {
-      throw new IllegalStateException("No listener register");
-    }
-    if (mListener != parama) {
-      throw new IllegalArgumentException("Attempting to unregister the wrong listener");
-    }
-    mListener = null;
-  }
-  
-  public static abstract interface a
-  {
-    public abstract void a(c paramc, Object paramObject);
+    public abstract void b(c<D> paramc, D paramD);
   }
 }
 

@@ -9,7 +9,7 @@ final class MobileLoginOrForceReg$12$1
   
   public final void a(ProgressDialog paramProgressDialog)
   {
-    kyu.kyq.coM = paramProgressDialog;
+    kXB.kXx.cka = paramProgressDialog;
   }
 }
 

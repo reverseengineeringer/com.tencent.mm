@@ -2,7 +2,7 @@ package com.tencent.mm.ui.conversation;
 
 import com.tencent.mm.sdk.h.j;
 import com.tencent.mm.sdk.h.j.b;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.HashMap;
 
 final class c$c
@@ -11,15 +11,15 @@ final class c$c
   public final void a(int paramInt, j paramj, Object paramObject)
   {
     if ((paramObject == null) || (!(paramObject instanceof String))) {
-      u.d("!44@/B4Tb64lLpJN/RyYD3u7HIqvfOQFnQw777RTG6BmS5Y=", "onNotifyChange obj not String event:%d stg:%s obj:%s", new Object[] { Integer.valueOf(paramInt), paramj, paramObject });
+      v.d("MicroMsg.ConversationAdapter", "onNotifyChange obj not String event:%d stg:%s obj:%s", new Object[] { Integer.valueOf(paramInt), paramj, paramObject });
     }
     do
     {
       return;
       paramj = (String)paramObject;
-    } while ((c.a(loD)) || (paramj == null) || (paramj.equals("")) || (c.b(loD) == null) || (!c.b(loD).containsKey(Integer.valueOf(paramInt))));
-    c.b(loD).remove(Integer.valueOf(paramInt));
-    c.c(loD);
+    } while ((c.a(lOT)) || (paramj == null) || (paramj.equals("")) || (c.b(lOT) == null) || (!c.b(lOT).containsKey(Integer.valueOf(paramInt))));
+    c.b(lOT).remove(Integer.valueOf(paramInt));
+    c.c(lOT);
   }
 }
 

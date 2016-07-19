@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final bj:[I
+.field public static final by:[I
 
 
 # direct methods
@@ -30,7 +30,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Landroid/support/v4/app/FragmentActivity$a;->bj:[I
+    sput-object v0, Landroid/support/v4/app/FragmentActivity$a;->by:[I
 
     return-void
 

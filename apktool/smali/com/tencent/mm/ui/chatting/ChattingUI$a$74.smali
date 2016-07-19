@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/MessageQueue$IdleHandler;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;->bkO()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.field final synthetic lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 2428
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$74;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 2984
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$74;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,47 +36,33 @@
 
 
 # virtual methods
-.method public final queueIdle()Z
-    .locals 4
+.method public final run()V
+    .locals 3
 
     .prologue
-    .line 2432
-    const-string/jumbo v0, "!32@/B4Tb64lLpKwUcOR+EdWcmybqEj/+Vl/"
+    .line 2987
+    new-instance v0, Lcom/tencent/mm/e/a/kr;
 
-    const-string/jumbo v1, "now try to activity the tools process"
+    invoke-direct {v0}, Lcom/tencent/mm/e/a/kr;-><init>()V
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    .line 2988
+    iget-object v1, v0, Lcom/tencent/mm/e/a/kr;->asZ:Lcom/tencent/mm/e/a/kr$a;
 
-    .line 2433
-    new-instance v0, Landroid/content/Intent;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$74;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+    invoke-static {v2}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->M(Lcom/tencent/mm/ui/chatting/ChattingUI$a;)Lcom/tencent/mm/v/m;
 
-    .line 2434
-    new-instance v1, Landroid/content/ComponentName;
+    move-result-object v2
 
-    sget-object v2, Lcom/tencent/mm/ui/d$e;->kjL:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/v/m;->field_username:Ljava/lang/String;
 
-    const-string/jumbo v3, "com.tencent.mm.booter.MMReceivers$ToolsProcessReceiver"
+    iput-object v2, v1, Lcom/tencent/mm/e/a/kr$a;->UX:Ljava/lang/String;
 
-    invoke-direct {v1, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    .line 2989
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->kug:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->y(Lcom/tencent/mm/sdk/c/b;)Z
 
-    .line 2435
-    const-string/jumbo v1, "tools_process_action_code_key"
-
-    const-string/jumbo v2, "com.tencent.mm.intent.ACTION_START_TOOLS_PROCESS"
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 2436
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$74;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
-
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->sendBroadcast(Landroid/content/Intent;)V
-
-    .line 2437
-    const/4 v0, 0x0
-
-    return v0
+    .line 2990
+    return-void
 .end method

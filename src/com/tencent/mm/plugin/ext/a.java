@@ -7,17 +7,17 @@ import com.tencent.mm.pluginsdk.h;
 public final class a
   implements h
 {
-  public static g coa;
-  private static f cob;
+  public static g cjo;
+  private static f cjp;
   
   public final void a(f paramf)
   {
-    cob = paramf;
+    cjp = paramf;
   }
   
   public final void a(g paramg)
   {
-    coa = paramg;
+    cjo = paramg;
   }
 }
 

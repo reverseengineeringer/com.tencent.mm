@@ -3,14 +3,11 @@ package com.tencent.mm.plugin.sns.ui.c;
 import android.view.View;
 import android.view.View.OnClickListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.p;
-import com.tencent.mm.plugin.sns.h.a;
-import com.tencent.mm.plugin.sns.h.k;
-import com.tencent.mm.plugin.sns.h.l;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.sns.a.a.c;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.i.k;
+import com.tencent.mm.plugin.sns.i.l;
+import com.tencent.mm.t.m;
 
 final class b$15
   implements View.OnClickListener
@@ -19,20 +16,34 @@ final class b$15
   
   public final void onClick(View paramView)
   {
-    u.i("!44@/B4Tb64lLpJYrxmi4Gb6eMmrCqbzyXwtDSgi89xVDlI=", "unlike click");
-    hpo.aAU();
-    paramView = (com.tencent.mm.plugin.sns.data.b)paramView.getTag();
-    paramView = ad.azi().vo(gHs);
-    if (paramView == null) {
-      return;
-    }
-    if (paramView.lN(32))
+    int j = 1;
+    hFM.ad(paramView);
+    if ((paramView.getTag() == null) || (!(paramView.getTag() instanceof com.tencent.mm.plugin.sns.data.b))) {}
+    do
     {
-      String str = aArgFU;
-      h.fUJ.g(11855, new Object[] { Integer.valueOf(1), Integer.valueOf(3), str });
+      return;
+      paramView = (com.tencent.mm.plugin.sns.data.b)paramView.getTag();
+      paramView = ad.aBI().wA(agV);
+    } while ((paramView == null) || (!paramView.na(32)));
+    String str = paramView.aDg();
+    int i;
+    if (hFM.scene == 0)
+    {
+      i = 1;
+      if (field_type != 1) {
+        break label117;
+      }
     }
-    paramView = new p(field_snsId, 8);
-    ah.tE().d(paramView);
+    for (;;)
+    {
+      paramView = new c(str, 20, i, "", j);
+      ah.tF().a(paramView, 0);
+      return;
+      i = 2;
+      break;
+      label117:
+      j = 2;
+    }
   }
 }
 

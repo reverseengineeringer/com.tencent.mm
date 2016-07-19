@@ -1,27 +1,17 @@
 package com.tencent.mm.ui.chatting.gallery;
 
-import com.tencent.mm.d.a.lw;
-import com.tencent.mm.d.a.lw.a;
-import com.tencent.mm.sdk.c.b;
-import com.tencent.mm.sdk.c.c;
+import android.widget.GridView;
 
 final class ImageGalleryGridUI$3
-  extends c
+  implements Runnable
 {
-  ImageGalleryGridUI$3(ImageGalleryGridUI paramImageGalleryGridUI)
-  {
-    super(0);
-  }
+  ImageGalleryGridUI$3(ImageGalleryGridUI paramImageGalleryGridUI) {}
   
-  public final boolean a(b paramb)
+  public final void run()
   {
-    if ((paramb instanceof lw))
-    {
-      paramb = (lw)paramb;
-      int i = aIf.aIi;
-      ImageGalleryGridUI.a(lfA, i, paramb);
+    if ((ImageGalleryGridUI.a(lFM) != null) && (ImageGalleryGridUI.a(lFM).getVisibility() != 0)) {
+      ImageGalleryGridUI.a(lFM).setVisibility(0);
     }
-    return false;
   }
 }
 

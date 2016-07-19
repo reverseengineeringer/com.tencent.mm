@@ -7,7 +7,7 @@ import java.nio.channels.FileChannel;
 public final class i
   extends FilterInputStream
 {
-  private long cam = 0L;
+  private long bTV = 0L;
   
   public i(FileInputStream paramFileInputStream)
   {
@@ -18,12 +18,12 @@ public final class i
   {
     try
     {
-      cam = ((FileInputStream)in).getChannel().position();
+      bTV = ((FileInputStream)in).getChannel().position();
       return;
     }
     catch (Exception localException)
     {
-      u.printErrStackTrace("MicroMsg.FileSeekingInputStream", localException, "Failed seeking FileChannel.", new Object[0]);
+      v.printErrStackTrace("MicroMsg.FileSeekingInputStream", localException, "Failed seeking FileChannel.", new Object[0]);
     }
   }
   
@@ -34,7 +34,7 @@ public final class i
   
   public final void reset()
   {
-    ((FileInputStream)in).getChannel().position(cam);
+    ((FileInputStream)in).getChannel().position(bTV);
   }
 }
 

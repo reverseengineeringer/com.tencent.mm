@@ -1,309 +1,195 @@
 .class public final Lct/aq;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Ljava/io/Serializable;
 
-# static fields
-.field private static a:Ljava/lang/String;
+
+# instance fields
+.field private a:J
+
+.field private b:Ljava/lang/String;
+
+.field private c:Ljava/util/Map;
+
+.field private d:Ljava/lang/String;
+
+.field private e:Ljava/lang/String;
+
+.field private f:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lct/aq;->a:Ljava/lang/String;
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lct/aq;->f:Z
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;)Ljava/lang/String;
+.method public static b()J
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public static c()J
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+
+# virtual methods
+.method public final a(J)V
     .locals 1
 
-    if-nez p0, :cond_0
+    iput-wide p1, p0, Lct/aq;->a:J
 
-    const/4 v0, 0x0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
+    return-void
 .end method
 
-.method public static declared-synchronized b(Landroid/content/Context;)Z
-    .locals 5
+.method public final a(Ljava/lang/String;)V
+    .locals 0
 
-    const/4 v1, 0x1
+    iput-object p1, p0, Lct/aq;->e:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    return-void
+.end method
 
-    const-class v2, Lct/aq;
+.method public final declared-synchronized a(Ljava/util/Map;)V
+    .locals 1
 
-    monitor-enter v2
+    monitor-enter p0
 
-    if-nez p0, :cond_1
+    :try_start_0
+    iput-object p1, p0, Lct/aq;->c:Ljava/util/Map;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :cond_0
-    :goto_0
-    monitor-exit v2
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public final a()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lct/aq;->f:Z
 
     return v0
+.end method
 
-    :cond_1
+.method public final b(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lct/aq;->d:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final declared-synchronized c(Ljava/lang/String;)V
+    .locals 1
+
+    monitor-enter p0
+
     :try_start_0
-    const-string/jumbo v0, "Access_Preferences"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {p0, v0, v3}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    const-string/jumbo v3, "isNew"
-
-    const/4 v4, 0x1
-
-    invoke-interface {v0, v3, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    iput-object p1, p0, Lct/aq;->b:Ljava/lang/String;
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result v0
+    monitor-exit p0
 
-    if-eqz v0, :cond_0
-
-    :try_start_1
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const-string/jumbo v3, "Access_Preferences"
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v3, v4}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v1
-
-    const-string/jumbo v3, "isNew"
-
-    const/4 v4, 0x0
-
-    invoke-interface {v1, v3, v4}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_0
+    return-void
 
     :catchall_0
     move-exception v0
 
-    monitor-exit v2
+    monitor-exit p0
 
     throw v0
-
-    :catch_1
-    move-exception v0
-
-    move v0, v1
-
-    goto :goto_0
 .end method
 
-.method public static declared-synchronized c(Landroid/content/Context;)Ljava/lang/String;
-    .locals 8
+.method public final d()Ljava/lang/String;
+    .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lct/aq;->e:Ljava/lang/String;
 
-    const-class v3, Lct/aq;
+    return-object v0
+.end method
 
-    monitor-enter v3
+.method public final e()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lct/aq;->d:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final f()J
+    .locals 2
+
+    iget-wide v0, p0, Lct/aq;->a:J
+
+    return-wide v0
+.end method
+
+.method public final declared-synchronized g()Ljava/lang/String;
+    .locals 1
+
+    monitor-enter p0
 
     :try_start_0
-    sget-object v1, Lct/aq;->a:Ljava/lang/String;
-
-    if-eqz v1, :cond_0
-
-    sget-object v0, Lct/aq;->a:Ljava/lang/String;
+    iget-object v0, p0, Lct/aq;->b:Ljava/lang/String;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :goto_0
-    monitor-exit v3
+    monitor-exit p0
 
     return-object v0
 
-    :cond_0
-    if-nez p0, :cond_2
-
-    const/4 v1, 0x0
-
-    :goto_1
-    :try_start_1
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v2
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v1, v4}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
-
-    move-result-object v1
-
-    iget-object v2, v1, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
-
-    iget v4, v1, Landroid/content/pm/PackageInfo;->versionCode:I
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v2}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-gtz v1, :cond_3
-
-    :cond_1
-    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {v2}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/16 v2, 0xa
-
-    const/16 v5, 0x20
-
-    invoke-virtual {v1, v2, v5}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/16 v2, 0xd
-
-    const/16 v5, 0x20
-
-    invoke-virtual {v1, v2, v5}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "|"
-
-    const-string/jumbo v5, "%7C"
-
-    invoke-virtual {v1, v2, v5}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/String;->toCharArray()[C
-
-    move-result-object v5
-
-    move v2, v0
-
-    :goto_2
-    array-length v6, v5
-
-    if-ge v2, v6, :cond_5
-
-    aget-char v6, v5, v2
-
-    const/16 v7, 0x2e
-
-    if-ne v6, v7, :cond_4
-
-    add-int/lit8 v0, v0, 0x1
-
-    :cond_4
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_2
-
-    :cond_5
-    const/4 v2, 0x3
-
-    if-ge v0, v2, :cond_6
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_3
-    sput-object v0, Lct/aq;->a:Ljava/lang/String;
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-
-    :catch_0
+    :catchall_0
     move-exception v0
 
-    :try_start_2
-    const-string/jumbo v0, ""
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    monitor-exit p0
 
-    goto :goto_0
+    throw v0
+.end method
+
+.method public final declared-synchronized h()Ljava/util/Map;
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lct/aq;->c:Ljava/util/Map;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-object v0
 
     :catchall_0
     move-exception v0
 
-    monitor-exit v3
+    monitor-exit p0
 
     throw v0
-
-    :cond_6
-    move-object v0, v1
-
-    goto :goto_3
 .end method

@@ -5,8 +5,8 @@ import android.app.ActivityManager.RunningAppProcessInfo;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.ui.d.e;
 import java.util.Iterator;
 import java.util.List;
@@ -14,37 +14,37 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public final class k
 {
-  private static final AtomicInteger izj = new AtomicInteger(0);
+  private static final AtomicInteger iVF = new AtomicInteger(0);
   
   public static boolean isLocked()
   {
-    return izj.get() > 0;
+    return iVF.get() > 0;
   }
   
   public static void lock()
   {
-    if (y.aUS())
+    if (aa.aZW())
     {
-      izj.incrementAndGet();
+      iVF.incrementAndGet();
       return;
     }
     Intent localIntent = new Intent();
-    localIntent.setComponent(new ComponentName(d.e.kjL, "com.tencent.mm.booter.MMReceivers$ToolsProcessReceiver"));
+    localIntent.setComponent(new ComponentName(d.e.kJT, "com.tencent.mm.booter.MMReceivers$ToolsProcessReceiver"));
     localIntent.putExtra("tools_process_action_code_key", "com.tencent.mm.intent.ACTION_LOCK_TOOLS_PROCESS");
-    y.getContext().sendBroadcast(localIntent);
+    aa.getContext().sendBroadcast(localIntent);
   }
   
   public static void unlock()
   {
-    if (y.getContext() == null) {}
+    if (aa.getContext() == null) {}
     for (;;)
     {
       return;
-      Object localObject = (ActivityManager)y.getContext().getSystemService("activity");
+      Object localObject = (ActivityManager)aa.getContext().getSystemService("activity");
       if (localObject != null)
       {
         localObject = ((ActivityManager)localObject).getRunningAppProcesses();
-        if (!ay.bq((List)localObject))
+        if (!be.bz((List)localObject))
         {
           localObject = ((List)localObject).iterator();
           do
@@ -55,15 +55,15 @@ public final class k
           } while (!"com.tencent.mm:tools".equals(nextprocessName));
           for (int i = 1; i != 0; i = 0)
           {
-            if (y.aUS())
+            if (aa.aZW())
             {
-              izj.decrementAndGet();
+              iVF.decrementAndGet();
               return;
             }
             localObject = new Intent();
-            ((Intent)localObject).setComponent(new ComponentName(d.e.kjL, "com.tencent.mm.booter.MMReceivers$ToolsProcessReceiver"));
+            ((Intent)localObject).setComponent(new ComponentName(d.e.kJT, "com.tencent.mm.booter.MMReceivers$ToolsProcessReceiver"));
             ((Intent)localObject).putExtra("tools_process_action_code_key", "com.tencent.mm.intent.ACTION_UNLOCK_TOOLS_PROCESS");
-            y.getContext().sendBroadcast((Intent)localObject);
+            aa.getContext().sendBroadcast((Intent)localObject);
             return;
           }
         }

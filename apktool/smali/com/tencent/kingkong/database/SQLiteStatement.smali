@@ -54,7 +54,7 @@
     .line 49
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteStatement;->releaseReference()V
 
-    .line 51
+    .line 50
     return-void
 
     .line 45
@@ -70,14 +70,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 48
+    .line 49
     :catchall_0
     move-exception v0
 
-    .line 49
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteStatement;->releaseReference()V
 
-    .line 50
     throw v0
 .end method
 
@@ -94,7 +92,6 @@
 
     move-result-object v0
 
-    .line 87
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteStatement;->getSql()Ljava/lang/String;
 
     move-result-object v1
@@ -109,7 +106,6 @@
 
     const/4 v4, 0x0
 
-    .line 86
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/tencent/kingkong/database/SQLiteSession;->executeForLastInsertedRowId(Ljava/lang/String;[Ljava/lang/Object;ILcom/tencent/kingkong/support/CancellationSignal;)J
     :try_end_0
     .catch Lcom/tencent/kingkong/database/SQLiteDatabaseCorruptException; {:try_start_0 .. :try_end_0} :catch_0
@@ -120,7 +116,6 @@
     .line 92
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteStatement;->releaseReference()V
 
-    .line 86
     return-wide v0
 
     .line 88
@@ -136,14 +131,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 91
+    .line 92
     :catchall_0
     move-exception v0
 
-    .line 92
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteStatement;->releaseReference()V
 
-    .line 93
     throw v0
 .end method
 
@@ -160,7 +153,6 @@
 
     move-result-object v0
 
-    .line 65
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteStatement;->getSql()Ljava/lang/String;
 
     move-result-object v1
@@ -175,7 +167,6 @@
 
     const/4 v4, 0x0
 
-    .line 64
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/tencent/kingkong/database/SQLiteSession;->executeForChangedRowCount(Ljava/lang/String;[Ljava/lang/Object;ILcom/tencent/kingkong/support/CancellationSignal;)I
     :try_end_0
     .catch Lcom/tencent/kingkong/database/SQLiteDatabaseCorruptException; {:try_start_0 .. :try_end_0} :catch_0
@@ -186,7 +177,6 @@
     .line 70
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteStatement;->releaseReference()V
 
-    .line 64
     return v0
 
     .line 66
@@ -202,14 +192,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 69
+    .line 70
     :catchall_0
     move-exception v0
 
-    .line 70
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteStatement;->releaseReference()V
 
-    .line 71
     throw v0
 .end method
 
@@ -226,7 +214,6 @@
 
     move-result-object v0
 
-    .line 150
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteStatement;->getSql()Ljava/lang/String;
 
     move-result-object v1
@@ -241,7 +228,6 @@
 
     const/4 v4, 0x0
 
-    .line 149
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/tencent/kingkong/database/SQLiteSession;->executeForBlobFileDescriptor(Ljava/lang/String;[Ljava/lang/Object;ILcom/tencent/kingkong/support/CancellationSignal;)Landroid/os/ParcelFileDescriptor;
     :try_end_0
     .catch Lcom/tencent/kingkong/database/SQLiteDatabaseCorruptException; {:try_start_0 .. :try_end_0} :catch_0
@@ -252,7 +238,6 @@
     .line 155
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteStatement;->releaseReference()V
 
-    .line 149
     return-object v0
 
     .line 151
@@ -268,14 +253,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 154
+    .line 155
     :catchall_0
     move-exception v0
 
-    .line 155
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteStatement;->releaseReference()V
 
-    .line 156
     throw v0
 .end method
 
@@ -292,7 +275,6 @@
 
     move-result-object v0
 
-    .line 108
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteStatement;->getSql()Ljava/lang/String;
 
     move-result-object v1
@@ -307,7 +289,6 @@
 
     const/4 v4, 0x0
 
-    .line 107
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/tencent/kingkong/database/SQLiteSession;->executeForLong(Ljava/lang/String;[Ljava/lang/Object;ILcom/tencent/kingkong/support/CancellationSignal;)J
     :try_end_0
     .catch Lcom/tencent/kingkong/database/SQLiteDatabaseCorruptException; {:try_start_0 .. :try_end_0} :catch_0
@@ -318,7 +299,6 @@
     .line 113
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteStatement;->releaseReference()V
 
-    .line 107
     return-wide v0
 
     .line 109
@@ -334,14 +314,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 112
+    .line 113
     :catchall_0
     move-exception v0
 
-    .line 113
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteStatement;->releaseReference()V
 
-    .line 114
     throw v0
 .end method
 
@@ -358,7 +336,6 @@
 
     move-result-object v0
 
-    .line 129
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteStatement;->getSql()Ljava/lang/String;
 
     move-result-object v1
@@ -373,7 +350,6 @@
 
     const/4 v4, 0x0
 
-    .line 128
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/tencent/kingkong/database/SQLiteSession;->executeForString(Ljava/lang/String;[Ljava/lang/Object;ILcom/tencent/kingkong/support/CancellationSignal;)Ljava/lang/String;
     :try_end_0
     .catch Lcom/tencent/kingkong/database/SQLiteDatabaseCorruptException; {:try_start_0 .. :try_end_0} :catch_0
@@ -384,7 +360,6 @@
     .line 134
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteStatement;->releaseReference()V
 
-    .line 128
     return-object v0
 
     .line 130
@@ -400,14 +375,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 133
+    .line 134
     :catchall_0
     move-exception v0
 
-    .line 134
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteStatement;->releaseReference()V
 
-    .line 135
     throw v0
 .end method
 

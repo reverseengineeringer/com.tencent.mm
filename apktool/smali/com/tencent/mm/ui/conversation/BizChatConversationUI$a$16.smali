@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ui/base/MMSlideDelView$c;
+.implements Lcom/tencent/mm/ui/base/MMSlideDelView$f;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+.field final synthetic lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 256
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$16;->lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+    .line 413
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$16;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,20 +36,21 @@
 
 
 # virtual methods
-.method public final I(Landroid/view/View;)I
-    .locals 1
+.method public final j(Landroid/view/View;I)V
+    .locals 4
 
     .prologue
-    .line 260
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$16;->lnN:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
+    .line 417
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a$16;->lOo:Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->d(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Landroid/widget/ListView;
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;->e(Lcom/tencent/mm/ui/conversation/BizChatConversationUI$a;)Lcom/tencent/mm/ui/conversation/EnterpriseFullHeightListView;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroid/widget/ListView;->getPositionForView(Landroid/view/View;)I
+    const-wide/16 v2, 0x0
 
-    move-result v0
+    invoke-virtual {v0, p1, p2, v2, v3}, Lcom/tencent/mm/ui/conversation/EnterpriseFullHeightListView;->performItemClick(Landroid/view/View;IJ)Z
 
-    return v0
+    .line 418
+    return-void
 .end method

@@ -1,7 +1,9 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.h.l;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.i.l;
+import com.tencent.mm.plugin.sns.lucky.b.b;
+import com.tencent.mm.plugin.sns.lucky.c.a;
 import com.tencent.mm.pluginsdk.model.s.a;
 
 final class SnsBrowseUI$1
@@ -9,10 +11,10 @@ final class SnsBrowseUI$1
 {
   SnsBrowseUI$1(SnsBrowseUI paramSnsBrowseUI) {}
   
-  public final void aBG()
+  public final void aEC()
   {
-    com.tencent.mm.plugin.sns.lucky.b.b.lp(44);
-    com.tencent.mm.plugin.sns.lucky.c.b.a(4, ad.azi().vo(SnsBrowseUI.a(hbY)), 0);
+    b.id(44);
+    a.a(4, ad.aBI().wA(SnsBrowseUI.a(hqK)));
   }
 }
 

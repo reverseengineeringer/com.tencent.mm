@@ -2,37 +2,37 @@ package com.tencent.mm.ui.base;
 
 import android.os.Message;
 import android.view.View;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class MMPullDownView$1
-  extends aa
+  extends ac
 {
   MMPullDownView$1(MMPullDownView paramMMPullDownView) {}
   
   public final void handleMessage(Message paramMessage)
   {
     super.handleMessage(paramMessage);
-    u.d("!32@/B4Tb64lLpI7QFnGqEKENPRhNROls06u", "updateDelayHandler handleMessage loadDataType[%d]", new Object[] { Integer.valueOf(MMPullDownView.a(kGp)) });
-    switch (MMPullDownView.a(kGp))
+    v.d("MicroMsg.MMPullDownView", "updateDelayHandler handleMessage loadDataType[%d]", new Object[] { Integer.valueOf(MMPullDownView.a(lft)) });
+    switch (MMPullDownView.a(lft))
     {
     }
     for (;;)
     {
-      MMPullDownView.g(kGp);
+      MMPullDownView.g(lft);
       return;
-      if (MMPullDownView.b(kGp) != null) {
-        MMPullDownView.b(kGp).aiq();
+      if (MMPullDownView.b(lft) != null) {
+        MMPullDownView.b(lft).akX();
       }
-      if (MMPullDownView.c(kGp).getVisibility() == 0)
+      if (MMPullDownView.c(lft).getVisibility() == 0)
       {
-        kGp.scrollTo(0, MMPullDownView.d(kGp));
+        lft.scrollTo(0, MMPullDownView.d(lft));
         continue;
-        if (MMPullDownView.e(kGp) != null) {
-          MMPullDownView.e(kGp).QR();
+        if (MMPullDownView.e(lft) != null) {
+          MMPullDownView.e(lft).Sg();
         }
-        if (MMPullDownView.f(kGp).getVisibility() == 0) {
-          kGp.scrollTo(0, MMPullDownView.d(kGp));
+        if (MMPullDownView.f(lft).getVisibility() == 0) {
+          lft.scrollTo(0, MMPullDownView.d(lft));
         }
       }
     }

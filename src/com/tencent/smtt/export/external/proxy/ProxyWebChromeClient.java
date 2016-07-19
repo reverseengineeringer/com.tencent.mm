@@ -1,6 +1,9 @@
 package com.tencent.smtt.export.external.proxy;
 
 import android.graphics.Bitmap;
+import android.location.Location;
+import android.net.Uri;
+import android.os.Bundle;
 import android.os.Message;
 import android.view.View;
 import android.webkit.ValueCallback;
@@ -8,6 +11,7 @@ import com.tencent.smtt.export.external.interfaces.ConsoleMessage;
 import com.tencent.smtt.export.external.interfaces.GeolocationPermissionsCallback;
 import com.tencent.smtt.export.external.interfaces.IX5WebChromeClient;
 import com.tencent.smtt.export.external.interfaces.IX5WebChromeClient.CustomViewCallback;
+import com.tencent.smtt.export.external.interfaces.IX5WebChromeClient.FileChooserParams;
 import com.tencent.smtt.export.external.interfaces.IX5WebViewBase;
 import com.tencent.smtt.export.external.interfaces.JsPromptResult;
 import com.tencent.smtt.export.external.interfaces.JsResult;
@@ -23,7 +27,7 @@ public class ProxyWebChromeClient
     return null;
   }
   
-  public void getVisitedHistory(ValueCallback paramValueCallback)
+  public void getVisitedHistory(ValueCallback<String[]> paramValueCallback)
   {
     if (mWebChromeClient != null) {
       mWebChromeClient.getVisitedHistory(paramValueCallback);
@@ -86,10 +90,10 @@ public class ProxyWebChromeClient
     }
   }
   
-  public void onGeolocationStartUpdating(ValueCallback paramValueCallback1, ValueCallback paramValueCallback2)
+  public void onGeolocationStartUpdating(ValueCallback<Location> paramValueCallback, ValueCallback<Bundle> paramValueCallback1)
   {
     if (mWebChromeClient != null) {
-      mWebChromeClient.onGeolocationStartUpdating(paramValueCallback1, paramValueCallback2);
+      mWebChromeClient.onGeolocationStartUpdating(paramValueCallback, paramValueCallback1);
     }
   }
   
@@ -203,7 +207,12 @@ public class ProxyWebChromeClient
     }
   }
   
-  public void openFileChooser(ValueCallback paramValueCallback, String paramString1, String paramString2, boolean paramBoolean)
+  public boolean onShowFileChooser(IX5WebViewBase paramIX5WebViewBase, ValueCallback<Uri[]> paramValueCallback, IX5WebChromeClient.FileChooserParams paramFileChooserParams)
+  {
+    return false;
+  }
+  
+  public void openFileChooser(ValueCallback<Uri[]> paramValueCallback, String paramString1, String paramString2, boolean paramBoolean)
   {
     if (mWebChromeClient != null) {
       mWebChromeClient.openFileChooser(paramValueCallback, paramString1, paramString2, paramBoolean);

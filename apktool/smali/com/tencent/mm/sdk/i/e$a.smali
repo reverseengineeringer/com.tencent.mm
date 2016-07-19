@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field private final jZg:Ljava/lang/Runnable;
+.field private final kzD:Ljava/lang/Runnable;
 
-.field final synthetic jZh:Lcom/tencent/mm/sdk/i/e;
+.field final synthetic kzE:Lcom/tencent/mm/sdk/i/e;
 
 
 # direct methods
@@ -29,12 +29,12 @@
 
     .prologue
     .line 526
-    iput-object p1, p0, Lcom/tencent/mm/sdk/i/e$a;->jZh:Lcom/tencent/mm/sdk/i/e;
+    iput-object p1, p0, Lcom/tencent/mm/sdk/i/e$a;->kzE:Lcom/tencent/mm/sdk/i/e;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 527
-    iput-object p2, p0, Lcom/tencent/mm/sdk/i/e$a;->jZg:Ljava/lang/Runnable;
+    iput-object p2, p0, Lcom/tencent/mm/sdk/i/e$a;->kzD:Ljava/lang/Runnable;
 
     .line 528
     return-void
@@ -42,12 +42,12 @@
 
 
 # virtual methods
-.method public final k(Ljava/lang/Runnable;)V
+.method public final l(Ljava/lang/Runnable;)V
     .locals 2
 
     .prologue
     .line 540
-    iget-object v0, p0, Lcom/tencent/mm/sdk/i/e$a;->jZg:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/i/e$a;->kzD:Ljava/lang/Runnable;
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -56,13 +56,13 @@
     if-eqz v0, :cond_0
 
     .line 541
-    iget-object v1, p0, Lcom/tencent/mm/sdk/i/e$a;->jZg:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/tencent/mm/sdk/i/e$a;->kzD:Ljava/lang/Runnable;
 
     monitor-enter v1
 
     .line 542
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/i/e$a;->jZg:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/i/e$a;->kzD:Ljava/lang/Runnable;
 
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 

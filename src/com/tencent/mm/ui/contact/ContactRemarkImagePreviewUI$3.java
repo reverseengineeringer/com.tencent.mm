@@ -3,20 +3,22 @@ package com.tencent.mm.ui.contact;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import com.tencent.mm.ui.MMActivity;
+import com.tencent.mm.ui.j;
 
 final class ContactRemarkImagePreviewUI$3
   implements AdapterView.OnItemClickListener
 {
   ContactRemarkImagePreviewUI$3(ContactRemarkImagePreviewUI paramContactRemarkImagePreviewUI) {}
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    if (!ljp.baV())
+    if (!lJA.bgf())
     {
-      ljp.baU();
+      lJA.bge();
       return;
     }
-    ljp.baT();
+    lJA.kNN.bgn();
   }
 }
 

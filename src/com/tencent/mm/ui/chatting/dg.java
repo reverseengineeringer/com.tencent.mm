@@ -1,134 +1,52 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.n.a.a;
-import com.tencent.mm.storage.ag;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 final class dg
+  extends ab.a
 {
-  String aCm;
-  ag aFR;
-  String aHh;
-  String aHi;
-  String ajh;
-  String auy;
-  String bIx;
-  String bcE;
-  String designerName;
-  String designerRediretctUrl;
-  int designerUIN;
-  int eLV;
-  long ijg;
-  int ijh;
-  boolean kAy;
-  a.a kXp;
-  boolean lcr;
-  String lcs;
-  boolean lct;
-  String lcu;
-  boolean lcv;
-  int position;
-  String title;
+  ProgressBar fPG;
+  TextView lCE;
+  ImageView lCF;
+  View lCG;
+  ImageView lqq;
+  ImageView lqs;
+  TextView lqu;
   
-  public dg() {}
-  
-  public dg(ag paramag, int paramInt1, String paramString1, String paramString2, String paramString3, String paramString4, String paramString5, int paramInt2, String paramString6, String paramString7, String paramString8)
+  public dg(int paramInt)
   {
-    aFR = paramag;
-    kAy = false;
-    position = paramInt1;
-    ajh = paramString1;
-    eLV = 10;
-    lcr = false;
-    title = paramString2;
-    aHh = paramString3;
-    aHi = paramString4;
-    lcs = paramString5;
-    designerUIN = paramInt2;
-    designerName = paramString6;
-    designerRediretctUrl = paramString7;
-    bcE = paramString8;
+    super(paramInt);
   }
   
-  private dg(ag paramag, boolean paramBoolean, int paramInt1, String paramString, int paramInt2)
+  public final ab.a f(View paramView, boolean paramBoolean)
   {
-    this(paramag, paramBoolean, paramInt1, paramString, paramInt2, false);
-  }
-  
-  public dg(ag paramag, boolean paramBoolean, int paramInt1, String paramString, int paramInt2, byte paramByte)
-  {
-    this(paramag, paramBoolean, paramInt1, paramString, paramInt2);
-  }
-  
-  private dg(ag paramag, boolean paramBoolean1, int paramInt1, String paramString, int paramInt2, boolean paramBoolean2)
-  {
-    this(paramag, paramBoolean1, paramInt1, paramString, paramInt2, false, null, null, null);
-  }
-  
-  public dg(ag paramag, boolean paramBoolean1, int paramInt1, String paramString1, int paramInt2, boolean paramBoolean2, String paramString2, String paramString3, String paramString4)
-  {
-    this(paramag, paramBoolean1, paramInt1, paramString1, paramInt2, paramBoolean2, paramString2, paramString3, paramString4, null);
-  }
-  
-  public dg(ag paramag, boolean paramBoolean1, int paramInt1, String paramString1, int paramInt2, boolean paramBoolean2, String paramString2, String paramString3, String paramString4, String paramString5)
-  {
-    this(paramag, paramBoolean1, paramInt1, paramString1, paramInt2, paramBoolean2, paramString2, paramString3, paramString4, paramString5, null, null, false);
-  }
-  
-  public dg(ag paramag, boolean paramBoolean1, int paramInt1, String paramString1, int paramInt2, boolean paramBoolean2, String paramString2, String paramString3, String paramString4, String paramString5, String paramString6, String paramString7, boolean paramBoolean3)
-  {
-    aFR = paramag;
-    kAy = paramBoolean1;
-    position = paramInt1;
-    ajh = paramString1;
-    eLV = paramInt2;
-    lcr = paramBoolean2;
-    title = paramString2;
-    aHh = paramString3;
-    aHi = paramString4;
-    lcs = paramString5;
-    auy = paramString6;
-    bcE = paramString7;
-    lct = paramBoolean3;
-  }
-  
-  public dg(ag paramag, boolean paramBoolean, int paramInt, String paramString1, String paramString2)
-  {
-    this(paramag, paramBoolean, paramInt, paramString1, 0);
-    aCm = paramString2;
-  }
-  
-  public dg(String paramString1, int paramInt, String paramString2)
-  {
-    ajh = paramString1;
-    eLV = paramInt;
-    aCm = paramString2;
-  }
-  
-  public static dg Hb(String paramString)
-  {
-    dg localdg = new dg();
-    eLV = 7;
-    bcE = paramString;
-    return localdg;
-  }
-  
-  public static dg a(a.a parama, ag paramag)
-  {
-    dg localdg = new dg();
-    kXp = parama;
-    aFR = paramag;
-    return localdg;
-  }
-  
-  public static dg a(ag paramag, boolean paramBoolean, int paramInt)
-  {
-    dg localdg = new dg();
-    aFR = paramag;
-    kAy = paramBoolean;
-    position = paramInt;
-    eLV = 0;
-    lcv = false;
-    return localdg;
+    super.aG(paramView);
+    dXd = ((TextView)paramView.findViewById(2131755018));
+    lqq = ((ImageView)paramView.findViewById(2131756045));
+    ehl = ((CheckBox)paramView.findViewById(2131755013));
+    dOk = paramView.findViewById(2131755017);
+    lCG = paramView.findViewById(2131756074);
+    if (paramBoolean)
+    {
+      gtM = ((TextView)paramView.findViewById(2131755288));
+      fPG = ((ProgressBar)paramView.findViewById(2131756075));
+      type = 1;
+    }
+    for (;;)
+    {
+      lqu = ((TextView)paramView.findViewById(2131755982));
+      lCF = ((ImageView)paramView.findViewById(2131756035));
+      return this;
+      fPG = ((ProgressBar)paramView.findViewById(2131756116));
+      lCE = ((TextView)paramView.findViewById(2131756124));
+      gtM = ((TextView)paramView.findViewById(2131755288));
+      type = 3;
+      lqs = ((ImageView)paramView.findViewById(2131756117));
+    }
   }
 }
 

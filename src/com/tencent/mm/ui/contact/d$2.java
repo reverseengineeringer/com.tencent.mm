@@ -1,7 +1,7 @@
 package com.tencent.mm.ui.contact;
 
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.ui.applet.b.b;
 
@@ -10,23 +10,23 @@ final class d$2
 {
   d$2(d paramd) {}
   
-  public final String dd(int paramInt)
+  public final String dI(int paramInt)
   {
-    if ((paramInt < 0) || (paramInt >= ljc.getCount()))
+    if ((paramInt < 0) || (paramInt >= lJn.getCount()))
     {
-      u.e("!44@/B4Tb64lLpIELL9O96QoKLI7tZ4uMi2Pv5tXEtMBlz8=", "pos is invalid");
+      v.e("MicroMsg.ChatroomContactAdapter", "pos is invalid");
       return null;
     }
-    k localk = (k)ljc.getItem(paramInt);
+    k localk = (k)lJn.getItem(paramInt);
     if (localk == null) {
       return null;
     }
     return field_username;
   }
   
-  public final int yz()
+  public final int yM()
   {
-    return ljc.getCount();
+    return lJn.getCount();
   }
 }
 

@@ -35,15 +35,15 @@
     .line 34
     if-nez p0, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
     .line 35
     :cond_0
-    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iyS:Lcom/tencent/mm/pluginsdk/i$c;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iVo:Lcom/tencent/mm/pluginsdk/i$c;
 
-    invoke-interface {v0, p0, p1}, Lcom/tencent/mm/pluginsdk/i$c;->p(Landroid/content/Context;Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
+    invoke-interface {v0, p0, p1}, Lcom/tencent/mm/pluginsdk/i$c;->q(Landroid/content/Context;Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
     move-result-object v0
 
@@ -67,8 +67,20 @@
     return-object v0
 .end method
 
-.method public static aP(Landroid/content/Context;Ljava/lang/String;)Ljava/util/ArrayList;
+.method public static aN(Landroid/content/Context;Ljava/lang/String;)Ljava/util/ArrayList;
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/pluginsdk/ui/applet/g;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 15
@@ -77,7 +89,7 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 16
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->iPB:Ljava/util/regex/Pattern;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->jmH:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 

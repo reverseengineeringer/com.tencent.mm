@@ -13,29 +13,38 @@
     name = "a"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/tencent/mm/ui/widget/QImageView$a;",
+        ">;"
+    }
+.end annotation
+
 
 # static fields
-.field public static final enum lGo:Lcom/tencent/mm/ui/widget/QImageView$a;
+.field public static final enum mhC:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-.field public static final enum lGp:Lcom/tencent/mm/ui/widget/QImageView$a;
+.field public static final enum mhD:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-.field public static final enum lGq:Lcom/tencent/mm/ui/widget/QImageView$a;
+.field public static final enum mhE:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-.field public static final enum lGr:Lcom/tencent/mm/ui/widget/QImageView$a;
+.field public static final enum mhF:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-.field public static final enum lGs:Lcom/tencent/mm/ui/widget/QImageView$a;
+.field public static final enum mhG:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-.field public static final enum lGt:Lcom/tencent/mm/ui/widget/QImageView$a;
+.field public static final enum mhH:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-.field public static final enum lGu:Lcom/tencent/mm/ui/widget/QImageView$a;
+.field public static final enum mhI:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-.field public static final enum lGv:Lcom/tencent/mm/ui/widget/QImageView$a;
+.field public static final enum mhJ:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-.field private static final synthetic lGx:[Lcom/tencent/mm/ui/widget/QImageView$a;
+.field private static final synthetic mhL:[Lcom/tencent/mm/ui/widget/QImageView$a;
 
 
 # instance fields
-.field final lGw:I
+.field final mhK:I
 
 
 # direct methods
@@ -53,52 +62,52 @@
 
     const/4 v4, 0x0
 
-    .line 470
+    .line 474
     new-instance v0, Lcom/tencent/mm/ui/widget/QImageView$a;
 
     const-string/jumbo v1, "MATRIX"
 
     invoke-direct {v0, v1, v4, v4}, Lcom/tencent/mm/ui/widget/QImageView$a;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->lGo:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->mhC:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    .line 475
+    .line 479
     new-instance v0, Lcom/tencent/mm/ui/widget/QImageView$a;
 
     const-string/jumbo v1, "FIT_XY"
 
     invoke-direct {v0, v1, v5, v5}, Lcom/tencent/mm/ui/widget/QImageView$a;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->lGp:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->mhD:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    .line 480
+    .line 484
     new-instance v0, Lcom/tencent/mm/ui/widget/QImageView$a;
 
     const-string/jumbo v1, "FIT_START"
 
     invoke-direct {v0, v1, v6, v6}, Lcom/tencent/mm/ui/widget/QImageView$a;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->lGq:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->mhE:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    .line 485
+    .line 489
     new-instance v0, Lcom/tencent/mm/ui/widget/QImageView$a;
 
     const-string/jumbo v1, "FIT_CENTER"
 
     invoke-direct {v0, v1, v7, v7}, Lcom/tencent/mm/ui/widget/QImageView$a;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->lGr:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->mhF:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    .line 490
+    .line 494
     new-instance v0, Lcom/tencent/mm/ui/widget/QImageView$a;
 
     const-string/jumbo v1, "FIT_END"
 
     invoke-direct {v0, v1, v8, v8}, Lcom/tencent/mm/ui/widget/QImageView$a;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->lGs:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->mhG:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    .line 495
+    .line 499
     new-instance v0, Lcom/tencent/mm/ui/widget/QImageView$a;
 
     const-string/jumbo v1, "CENTER"
@@ -109,9 +118,9 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/tencent/mm/ui/widget/QImageView$a;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->lGt:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->mhH:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    .line 503
+    .line 507
     new-instance v0, Lcom/tencent/mm/ui/widget/QImageView$a;
 
     const-string/jumbo v1, "CENTER_CROP"
@@ -122,9 +131,9 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/tencent/mm/ui/widget/QImageView$a;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->lGu:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->mhI:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    .line 511
+    .line 515
     new-instance v0, Lcom/tencent/mm/ui/widget/QImageView$a;
 
     const-string/jumbo v1, "CENTER_INSIDE"
@@ -135,67 +144,72 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/tencent/mm/ui/widget/QImageView$a;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->lGv:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->mhJ:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    .line 464
+    .line 468
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->lGo:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->mhC:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->lGp:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->mhD:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     aput-object v1, v0, v5
 
-    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->lGq:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->mhE:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     aput-object v1, v0, v6
 
-    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->lGr:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->mhF:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     aput-object v1, v0, v7
 
-    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->lGs:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->mhG:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     aput-object v1, v0, v8
 
     const/4 v1, 0x5
 
-    sget-object v2, Lcom/tencent/mm/ui/widget/QImageView$a;->lGt:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v2, Lcom/tencent/mm/ui/widget/QImageView$a;->mhH:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    sget-object v2, Lcom/tencent/mm/ui/widget/QImageView$a;->lGu:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v2, Lcom/tencent/mm/ui/widget/QImageView$a;->mhI:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x7
 
-    sget-object v2, Lcom/tencent/mm/ui/widget/QImageView$a;->lGv:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v2, Lcom/tencent/mm/ui/widget/QImageView$a;->mhJ:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->lGx:[Lcom/tencent/mm/ui/widget/QImageView$a;
+    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->mhL:[Lcom/tencent/mm/ui/widget/QImageView$a;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)V"
+        }
+    .end annotation
 
     .prologue
-    .line 513
+    .line 517
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 514
-    iput p3, p0, Lcom/tencent/mm/ui/widget/QImageView$a;->lGw:I
+    .line 518
+    iput p3, p0, Lcom/tencent/mm/ui/widget/QImageView$a;->mhK:I
 
-    .line 515
+    .line 519
     return-void
 .end method
 
@@ -203,7 +217,7 @@
     .locals 1
 
     .prologue
-    .line 464
+    .line 468
     const-class v0, Lcom/tencent/mm/ui/widget/QImageView$a;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -219,8 +233,8 @@
     .locals 1
 
     .prologue
-    .line 464
-    sget-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->lGx:[Lcom/tencent/mm/ui/widget/QImageView$a;
+    .line 468
+    sget-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->mhL:[Lcom/tencent/mm/ui/widget/QImageView$a;
 
     invoke-virtual {v0}, [Lcom/tencent/mm/ui/widget/QImageView$a;->clone()Ljava/lang/Object;
 

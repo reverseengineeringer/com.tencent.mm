@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$5;->a(Lcom/tencent/mm/sdk/c/b;)Z
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$5;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gCJ:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$5;
+.field final synthetic gJk:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$5;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 342
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$5$1;->gCJ:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$5;
+    .line 343
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$5$1;->gJk:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,13 +40,13 @@
     .locals 1
 
     .prologue
-    .line 345
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$5$1;->gCJ:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$5;
-
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$5;->gCI:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->awH()V
-
     .line 346
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$5$1;->gJk:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$5;
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$5;->gJj:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->azh()V
+
+    .line 347
     return-void
 .end method

@@ -22,65 +22,65 @@ import java.util.ArrayList;
 public final class h
   implements b
 {
-  static String mr;
-  static String ms;
-  static String mt;
-  static String mu;
-  f iO;
-  private final int kj;
-  private final int kk;
-  final int kl;
-  private CharSequence km;
-  private CharSequence kn;
-  private char ko;
-  char kp;
-  private Drawable kq;
-  private int kr = 0;
-  private MenuItem.OnMenuItemClickListener ks;
-  private int kt = 16;
-  private final int mId;
+  static String mH;
+  static String mI;
+  static String mJ;
+  static String mK;
+  private final int cE;
+  f jf;
+  private final int kA;
+  private final int kB;
+  final int kC;
+  private CharSequence kD;
+  private CharSequence kE;
+  private char kF;
+  char kG;
+  private Drawable kH;
+  private int kI = 0;
+  private MenuItem.OnMenuItemClickListener kJ;
+  private int kK = 16;
+  private Runnable mA;
+  int mB = 0;
+  private View mC;
+  d mD;
+  private g.e mE;
+  private boolean mF = false;
+  ContextMenu.ContextMenuInfo mG;
   private Intent mIntent;
-  private p mj;
-  private Runnable mk;
-  int ml = 0;
-  private View mm;
-  d mn;
-  private g.e mo;
-  private boolean mp = false;
-  ContextMenu.ContextMenuInfo mq;
+  private p mz;
   
   h(f paramf, int paramInt1, int paramInt2, int paramInt3, int paramInt4, CharSequence paramCharSequence, int paramInt5)
   {
-    iO = paramf;
-    mId = paramInt2;
-    kj = paramInt1;
-    kk = paramInt3;
-    kl = paramInt4;
-    km = paramCharSequence;
-    ml = paramInt5;
+    jf = paramf;
+    cE = paramInt2;
+    kA = paramInt1;
+    kB = paramInt3;
+    kC = paramInt4;
+    kD = paramCharSequence;
+    mB = paramInt5;
   }
   
   private b E(View paramView)
   {
-    mm = paramView;
-    mn = null;
-    if ((paramView != null) && (paramView.getId() == -1) && (mId > 0)) {
-      paramView.setId(mId);
+    mC = paramView;
+    mD = null;
+    if ((paramView != null) && (paramView.getId() == -1) && (cE > 0)) {
+      paramView.setId(cE);
     }
-    iO.bt();
+    jf.bt();
     return this;
   }
   
-  private void u(boolean paramBoolean)
+  private void t(boolean paramBoolean)
   {
-    int j = kt;
-    int k = kt;
+    int j = kK;
+    int k = kK;
     if (paramBoolean) {}
     for (int i = 2;; i = 0)
     {
-      kt = (i | k & 0xFFFFFFFD);
-      if (j != kt) {
-        iO.s(false);
+      kK = (i | k & 0xFFFFFFFD);
+      if (j != kK) {
+        jf.r(false);
       }
       return;
     }
@@ -88,16 +88,16 @@ public final class h
   
   public final b a(d paramd)
   {
-    if (mn == paramd) {}
+    if (mD == paramd) {}
     do
     {
       return this;
-      mm = null;
-      if (mn != null) {
-        mn.a(null);
+      mC = null;
+      if (mD != null) {
+        mD.a(null);
       }
-      mn = paramd;
-      iO.s(true);
+      mD = paramd;
+      jf.r(true);
     } while (paramd == null);
     paramd.a(new d.b() {});
     return this;
@@ -105,13 +105,13 @@ public final class h
   
   public final b a(g.e parame)
   {
-    mo = parame;
+    mE = parame;
     return this;
   }
   
   final CharSequence a(m.a parama)
   {
-    if ((parama != null) && (parama.bc())) {
+    if ((parama != null) && (parama.bd())) {
       return getTitleCondensed();
     }
     return getTitle();
@@ -119,55 +119,55 @@ public final class h
   
   final void b(p paramp)
   {
-    mj = paramp;
+    mz = paramp;
     paramp.setHeaderTitle(getTitle());
   }
   
   final boolean bA()
   {
-    return (iO.bq()) && (kp != 0);
+    return (jf.bq()) && (kG != 0);
   }
   
   public final boolean bB()
   {
-    return (kt & 0x4) != 0;
+    return (kK & 0x4) != 0;
   }
   
   public final boolean bC()
   {
-    return (kt & 0x20) == 32;
+    return (kK & 0x20) == 32;
   }
   
   public final boolean bD()
   {
-    return (ml & 0x1) == 1;
+    return (mB & 0x1) == 1;
   }
   
   public final boolean bE()
   {
-    return (ml & 0x2) == 2;
+    return (mB & 0x2) == 2;
   }
   
   public final boolean bF()
   {
-    return ((ml & 0x8) != 0) && (mm != null);
+    return ((mB & 0x8) != 0) && (mC != null);
   }
   
   public final boolean bz()
   {
-    if ((ks != null) && (ks.onMenuItemClick(this))) {}
-    while (iO.a(iO.bx(), this)) {
+    if ((kJ != null) && (kJ.onMenuItemClick(this))) {}
+    while (jf.a(jf.bx(), this)) {
       return true;
     }
-    if (mk != null)
+    if (mA != null)
     {
-      mk.run();
+      mA.run();
       return true;
     }
     if (mIntent != null) {
       try
       {
-        iO.mContext.startActivity(mIntent);
+        jf.mContext.startActivity(mIntent);
         return true;
       }
       catch (ActivityNotFoundException localActivityNotFoundException) {}
@@ -177,27 +177,27 @@ public final class h
   
   public final boolean collapseActionView()
   {
-    if ((ml & 0x8) == 0) {
+    if ((mB & 0x8) == 0) {
       return false;
     }
-    if (mm == null) {
+    if (mC == null) {
       return true;
     }
-    if (mo != null) {
-      mo.ag();
+    if (mE != null) {
+      mE.ae();
     }
-    return iO.g(this);
+    return jf.g(this);
   }
   
   public final boolean expandActionView()
   {
-    if (((ml & 0x8) == 0) || (mm == null)) {
+    if (((mB & 0x8) == 0) || (mC == null)) {
       return false;
     }
-    if (mo != null) {
-      mo.af();
+    if (mE != null) {
+      mE.ad();
     }
-    return iO.f(this);
+    return jf.f(this);
   }
   
   public final ActionProvider getActionProvider()
@@ -207,37 +207,37 @@ public final class h
   
   public final View getActionView()
   {
-    if (mm != null) {
-      return mm;
+    if (mC != null) {
+      return mC;
     }
-    if (mn != null)
+    if (mD != null)
     {
-      mm = mn.onCreateActionView();
-      return mm;
+      mC = mD.onCreateActionView();
+      return mC;
     }
     return null;
   }
   
   public final char getAlphabeticShortcut()
   {
-    return kp;
+    return kG;
   }
   
   public final int getGroupId()
   {
-    return kj;
+    return kA;
   }
   
   public final Drawable getIcon()
   {
-    if (kq != null) {
-      return kq;
+    if (kH != null) {
+      return kH;
     }
-    if (kr != 0)
+    if (kI != 0)
     {
-      Drawable localDrawable = iO.lL.getDrawable(kr);
-      kr = 0;
-      kq = localDrawable;
+      Drawable localDrawable = jf.mb.getDrawable(kI);
+      kI = 0;
+      kH = localDrawable;
       return localDrawable;
     }
     return null;
@@ -251,71 +251,82 @@ public final class h
   @ViewDebug.CapturedViewProperty
   public final int getItemId()
   {
-    return mId;
+    return cE;
   }
   
   public final ContextMenu.ContextMenuInfo getMenuInfo()
   {
-    return mq;
+    return mG;
   }
   
   public final char getNumericShortcut()
   {
-    return ko;
+    return kF;
   }
   
   public final int getOrder()
   {
-    return kk;
+    return kB;
   }
   
   public final SubMenu getSubMenu()
   {
-    return mj;
+    return mz;
   }
   
   @ViewDebug.CapturedViewProperty
   public final CharSequence getTitle()
   {
-    return km;
+    return kD;
   }
   
   public final CharSequence getTitleCondensed()
   {
-    if (kn != null) {
-      return kn;
+    if (kE != null) {
+      return kE;
     }
-    return km;
+    return kD;
   }
   
   public final boolean hasSubMenu()
   {
-    return mj != null;
+    return mz != null;
   }
   
   public final boolean isActionViewExpanded()
   {
-    return mp;
+    return mF;
   }
   
   public final boolean isCheckable()
   {
-    return (kt & 0x1) == 1;
+    return (kK & 0x1) == 1;
   }
   
   public final boolean isChecked()
   {
-    return (kt & 0x2) == 2;
+    return (kK & 0x2) == 2;
   }
   
   public final boolean isEnabled()
   {
-    return (kt & 0x10) != 0;
+    return (kK & 0x10) != 0;
   }
   
   public final boolean isVisible()
   {
-    return (kt & 0x8) == 0;
+    return (kK & 0x8) == 0;
+  }
+  
+  public final void s(boolean paramBoolean)
+  {
+    int j = kK;
+    if (paramBoolean) {}
+    for (int i = 4;; i = 0)
+    {
+      kK = (i | j & 0xFFFFFFFB);
+      return;
+    }
   }
   
   public final MenuItem setActionProvider(ActionProvider paramActionProvider)
@@ -325,24 +336,24 @@ public final class h
   
   public final MenuItem setAlphabeticShortcut(char paramChar)
   {
-    if (kp == paramChar) {
+    if (kG == paramChar) {
       return this;
     }
-    kp = Character.toLowerCase(paramChar);
-    iO.s(false);
+    kG = Character.toLowerCase(paramChar);
+    jf.r(false);
     return this;
   }
   
   public final MenuItem setCheckable(boolean paramBoolean)
   {
-    int j = kt;
-    int k = kt;
+    int j = kK;
+    int k = kK;
     if (paramBoolean) {}
     for (int i = 1;; i = 0)
     {
-      kt = (i | k & 0xFFFFFFFE);
-      if (j != kt) {
-        iO.s(false);
+      kK = (i | k & 0xFFFFFFFE);
+      if (j != kK) {
+        jf.r(false);
       }
       return this;
     }
@@ -350,15 +361,15 @@ public final class h
   
   public final MenuItem setChecked(boolean paramBoolean)
   {
-    if ((kt & 0x4) != 0)
+    if ((kK & 0x4) != 0)
     {
-      f localf = iO;
+      f localf = jf;
       int j = getGroupId();
-      int k = fD.size();
+      int k = fZ.size();
       int i = 0;
       if (i < k)
       {
-        h localh = (h)fD.get(i);
+        h localh = (h)fZ.get(i);
         if ((localh.getGroupId() == j) && (localh.bB()) && (localh.isCheckable())) {
           if (localh != this) {
             break label100;
@@ -367,7 +378,7 @@ public final class h
         label100:
         for (paramBoolean = true;; paramBoolean = false)
         {
-          localh.u(paramBoolean);
+          localh.t(paramBoolean);
           i += 1;
           break;
         }
@@ -375,7 +386,7 @@ public final class h
     }
     else
     {
-      u(paramBoolean);
+      t(paramBoolean);
     }
     return this;
   }
@@ -383,26 +394,26 @@ public final class h
   public final MenuItem setEnabled(boolean paramBoolean)
   {
     if (paramBoolean) {}
-    for (kt |= 0x10;; kt &= 0xFFFFFFEF)
+    for (kK |= 0x10;; kK &= 0xFFFFFFEF)
     {
-      iO.s(false);
+      jf.r(false);
       return this;
     }
   }
   
   public final MenuItem setIcon(int paramInt)
   {
-    kq = null;
-    kr = paramInt;
-    iO.s(false);
+    kH = null;
+    kI = paramInt;
+    jf.r(false);
     return this;
   }
   
   public final MenuItem setIcon(Drawable paramDrawable)
   {
-    kr = 0;
-    kq = paramDrawable;
-    iO.s(false);
+    kI = 0;
+    kH = paramDrawable;
+    jf.r(false);
     return this;
   }
   
@@ -414,11 +425,11 @@ public final class h
   
   public final MenuItem setNumericShortcut(char paramChar)
   {
-    if (ko == paramChar) {
+    if (kF == paramChar) {
       return this;
     }
-    ko = paramChar;
-    iO.s(false);
+    kF = paramChar;
+    jf.r(false);
     return this;
   }
   
@@ -429,15 +440,15 @@ public final class h
   
   public final MenuItem setOnMenuItemClickListener(MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener)
   {
-    ks = paramOnMenuItemClickListener;
+    kJ = paramOnMenuItemClickListener;
     return this;
   }
   
   public final MenuItem setShortcut(char paramChar1, char paramChar2)
   {
-    ko = paramChar1;
-    kp = Character.toLowerCase(paramChar2);
-    iO.s(false);
+    kF = paramChar1;
+    kG = Character.toLowerCase(paramChar2);
+    jf.r(false);
     return this;
   }
   
@@ -448,90 +459,79 @@ public final class h
     default: 
       throw new IllegalArgumentException("SHOW_AS_ACTION_ALWAYS, SHOW_AS_ACTION_IF_ROOM, and SHOW_AS_ACTION_NEVER are mutually exclusive.");
     }
-    ml = paramInt;
-    iO.bt();
+    mB = paramInt;
+    jf.bt();
   }
   
   public final MenuItem setTitle(int paramInt)
   {
-    return setTitle(iO.mContext.getString(paramInt));
+    return setTitle(jf.mContext.getString(paramInt));
   }
   
   public final MenuItem setTitle(CharSequence paramCharSequence)
   {
-    km = paramCharSequence;
-    iO.s(false);
-    if (mj != null) {
-      mj.setHeaderTitle(paramCharSequence);
+    kD = paramCharSequence;
+    jf.r(false);
+    if (mz != null) {
+      mz.setHeaderTitle(paramCharSequence);
     }
     return this;
   }
   
   public final MenuItem setTitleCondensed(CharSequence paramCharSequence)
   {
-    kn = paramCharSequence;
-    iO.s(false);
+    kE = paramCharSequence;
+    jf.r(false);
     return this;
   }
   
   public final MenuItem setVisible(boolean paramBoolean)
   {
-    if (v(paramBoolean))
+    if (u(paramBoolean))
     {
-      f localf = iO;
-      lQ = true;
-      localf.s(true);
+      f localf = jf;
+      mg = true;
+      localf.r(true);
     }
     return this;
   }
   
-  public final void t(boolean paramBoolean)
-  {
-    int j = kt;
-    if (paramBoolean) {}
-    for (int i = 4;; i = 0)
-    {
-      kt = (i | j & 0xFFFFFFFB);
-      return;
-    }
-  }
-  
   public final String toString()
   {
-    return km.toString();
+    return kD.toString();
   }
   
-  final boolean v(boolean paramBoolean)
+  final boolean u(boolean paramBoolean)
   {
     boolean bool = false;
-    int j = kt;
-    int k = kt;
+    int j = kK;
+    int k = kK;
     if (paramBoolean) {}
     for (int i = 0;; i = 8)
     {
-      kt = (i | k & 0xFFFFFFF7);
+      kK = (i | k & 0xFFFFFFF7);
       paramBoolean = bool;
-      if (j != kt) {
+      if (j != kK) {
         paramBoolean = true;
       }
       return paramBoolean;
     }
   }
   
-  public final void w(boolean paramBoolean)
+  public final void v(boolean paramBoolean)
   {
     if (paramBoolean)
     {
-      kt |= 0x20;
+      kK |= 0x20;
       return;
     }
-    kt &= 0xFFFFFFDF;
+    kK &= 0xFFFFFFDF;
   }
   
-  public final void x(boolean paramBoolean)
+  public final void w(boolean paramBoolean)
   {
-    mp = paramBoolean;
-    iO.s(false);
+    mF = paramBoolean;
+    jf.r(false);
   }
 }
 

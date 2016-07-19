@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic dLv:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
+.field final synthetic dNd:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 283
-    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dLv:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dNd:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
 
     const/4 v0, 0x0
 
@@ -42,12 +42,12 @@
     const/16 v3, 0xa
 
     .line 287
-    instance-of v0, p4, Lcom/tencent/mm/d/a/gy;
+    instance-of v0, p4, Lcom/tencent/mm/e/a/hj;
 
     if-eqz v0, :cond_0
 
     .line 288
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dLv:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dNd:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->c(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;)Ljava/util/concurrent/CountDownLatch;
 
@@ -62,10 +62,10 @@
 
     .line 291
     :cond_1
-    check-cast p4, Lcom/tencent/mm/d/a/gy;
+    check-cast p4, Lcom/tencent/mm/e/a/hj;
 
     .line 293
-    const-string/jumbo v0, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderNearBy"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -91,7 +91,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 294
     if-nez p1, :cond_5
@@ -99,16 +99,16 @@
     if-nez p2, :cond_5
 
     .line 295
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dLv:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dNd:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
 
-    iget-object v1, p4, Lcom/tencent/mm/d/a/gy;->aCr:Lcom/tencent/mm/d/a/gy$b;
+    iget-object v1, p4, Lcom/tencent/mm/e/a/hj;->aoK:Lcom/tencent/mm/e/a/hj$b;
 
-    iget-object v1, v1, Lcom/tencent/mm/d/a/gy$b;->aCy:Ljava/util/List;
+    iget-object v1, v1, Lcom/tencent/mm/e/a/hj$b;->aoR:Ljava/util/List;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->a(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;Ljava/util/List;)Ljava/util/List;
 
     .line 297
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dLv:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dNd:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->d(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;)Ljava/util/List;
 
@@ -116,7 +116,7 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dLv:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dNd:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->d(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;)Ljava/util/List;
 
@@ -130,14 +130,14 @@
 
     .line 298
     :cond_2
-    const-string/jumbo v0, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderNearBy"
 
     const-string/jumbo v1, "get lbsfriend list size:0"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 299
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dLv:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dNd:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->c(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;)Ljava/util/concurrent/CountDownLatch;
 
@@ -147,7 +147,7 @@
 
     .line 313
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dLv:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dNd:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->f(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;)V
 
@@ -155,7 +155,7 @@
 
     .line 301
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dLv:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dNd:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->d(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;)Ljava/util/List;
 
@@ -168,7 +168,7 @@
     if-le v0, v3, :cond_4
 
     .line 302
-    const-string/jumbo v0, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderNearBy"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -176,7 +176,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dLv:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dNd:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->d(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;)Ljava/util/List;
 
@@ -194,16 +194,16 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 303
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dLv:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dNd:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->d(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;)Ljava/util/List;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dLv:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dNd:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->d(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;)Ljava/util/List;
 
@@ -221,11 +221,11 @@
 
     .line 305
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dLv:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dNd:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
 
     new-instance v1, Ljava/util/concurrent/CountDownLatch;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dLv:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dNd:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->d(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;)Ljava/util/List;
 
@@ -240,7 +240,7 @@
     invoke-static {v0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->a(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;Ljava/util/concurrent/CountDownLatch;)Ljava/util/concurrent/CountDownLatch;
 
     .line 306
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dLv:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dNd:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->c(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;)Ljava/util/concurrent/CountDownLatch;
 
@@ -249,7 +249,7 @@
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     .line 307
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dLv:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dNd:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->e(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;)V
 
@@ -257,7 +257,7 @@
 
     .line 310
     :cond_5
-    const-string/jumbo v0, "!56@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4N7P1mJVm15mpUS/mmtFQbA=="
+    const-string/jumbo v0, "MicroMsg.ExtControlProviderNearBy"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -283,10 +283,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 311
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dLv:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy$3;->dNd:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->c(Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;)Ljava/util/concurrent/CountDownLatch;
 

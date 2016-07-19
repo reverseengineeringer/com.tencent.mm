@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.chatting.gallery;
 
-import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.plugin.report.service.g;
 
 final class j$3$3
   implements Runnable
@@ -9,12 +9,12 @@ final class j$3$3
   
   public final void run()
   {
-    h localh = h.fUJ;
-    int j = lhs.lhq.lho;
-    if (gzf <= 0) {}
-    for (int i = lhs.lhq.lhn * 1000;; i = gzf)
+    g localg = g.gdY;
+    int j = lHD.lHB.lHz;
+    if (gFI <= 0) {}
+    for (int i = lHD.lHB.hfL * 1000;; i = gFI)
     {
-      localh.g(12084, new Object[] { Integer.valueOf(j), Integer.valueOf(i), Integer.valueOf(gze), Integer.valueOf(1), lhs.lhq.bxn, Integer.valueOf(lhs.lhq.lhp) });
+      localg.h(12084, new Object[] { Integer.valueOf(j), Integer.valueOf(i), Integer.valueOf(gFH), Integer.valueOf(1), lHD.lHB.asv, Integer.valueOf(lHD.lHB.lHA), lHD.lHB.fMU, Long.valueOf(lHD.lHB.cbi) });
       return;
     }
   }

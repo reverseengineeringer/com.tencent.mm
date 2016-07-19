@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/friend/FindMContactInviteUI;->Gb()V
+    value = Lcom/tencent/mm/ui/friend/FindMContactInviteUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+.field final synthetic lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 335
-    iput-object p1, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$11;->lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$11;->lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 339
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$11;->lrv:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/FindMContactInviteUI$11;->lRZ:Lcom/tencent/mm/ui/friend/FindMContactInviteUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactInviteUI;->i(Lcom/tencent/mm/ui/friend/FindMContactInviteUI;)Landroid/widget/ListView;
 

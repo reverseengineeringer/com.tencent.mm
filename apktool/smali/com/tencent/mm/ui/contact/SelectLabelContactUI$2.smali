@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lmr:Lcom/tencent/mm/ui/contact/SelectLabelContactUI;
+.field final synthetic lMG:Lcom/tencent/mm/ui/contact/SelectLabelContactUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 196
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SelectLabelContactUI$2;->lmr:Lcom/tencent/mm/ui/contact/SelectLabelContactUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SelectLabelContactUI$2;->lMG:Lcom/tencent/mm/ui/contact/SelectLabelContactUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

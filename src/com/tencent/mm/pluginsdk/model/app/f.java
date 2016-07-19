@@ -1,127 +1,131 @@
 package com.tencent.mm.pluginsdk.model.app;
 
 import android.content.ContentValues;
-import com.tencent.mm.d.b.e;
+import com.tencent.mm.e.b.e;
 import com.tencent.mm.pluginsdk.ui.chat.AppPanel;
 import com.tencent.mm.sdk.h.c.a;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import java.lang.reflect.Field;
 import java.util.Map;
 
 public class f
   extends e
 {
-  protected static c.a aot;
+  protected static c.a bjR;
   
   static
   {
     c.a locala = new c.a();
-    ceD = new Field[25];
-    blR = new String[26];
+    bZI = new Field[26];
+    aZx = new String[27];
     StringBuilder localStringBuilder = new StringBuilder();
-    blR[0] = "appId";
-    jYx.put("appId", "TEXT default ''  PRIMARY KEY ");
+    aZx[0] = "appId";
+    kyU.put("appId", "TEXT default ''  PRIMARY KEY ");
     localStringBuilder.append(" appId TEXT default ''  PRIMARY KEY ");
     localStringBuilder.append(", ");
-    jYw = "appId";
-    blR[1] = "appName";
-    jYx.put("appName", "TEXT");
+    kyT = "appId";
+    aZx[1] = "appName";
+    kyU.put("appName", "TEXT");
     localStringBuilder.append(" appName TEXT");
     localStringBuilder.append(", ");
-    blR[2] = "appDiscription";
-    jYx.put("appDiscription", "TEXT");
+    aZx[2] = "appDiscription";
+    kyU.put("appDiscription", "TEXT");
     localStringBuilder.append(" appDiscription TEXT");
     localStringBuilder.append(", ");
-    blR[3] = "appIconUrl";
-    jYx.put("appIconUrl", "TEXT");
+    aZx[3] = "appIconUrl";
+    kyU.put("appIconUrl", "TEXT");
     localStringBuilder.append(" appIconUrl TEXT");
     localStringBuilder.append(", ");
-    blR[4] = "appStoreUrl";
-    jYx.put("appStoreUrl", "TEXT");
+    aZx[4] = "appStoreUrl";
+    kyU.put("appStoreUrl", "TEXT");
     localStringBuilder.append(" appStoreUrl TEXT");
     localStringBuilder.append(", ");
-    blR[5] = "appVersion";
-    jYx.put("appVersion", "INTEGER");
+    aZx[5] = "appVersion";
+    kyU.put("appVersion", "INTEGER");
     localStringBuilder.append(" appVersion INTEGER");
     localStringBuilder.append(", ");
-    blR[6] = "appWatermarkUrl";
-    jYx.put("appWatermarkUrl", "TEXT");
+    aZx[6] = "appWatermarkUrl";
+    kyU.put("appWatermarkUrl", "TEXT");
     localStringBuilder.append(" appWatermarkUrl TEXT");
     localStringBuilder.append(", ");
-    blR[7] = "packageName";
-    jYx.put("packageName", "TEXT");
+    aZx[7] = "packageName";
+    kyU.put("packageName", "TEXT");
     localStringBuilder.append(" packageName TEXT");
     localStringBuilder.append(", ");
-    blR[8] = "status";
-    jYx.put("status", "INTEGER");
+    aZx[8] = "status";
+    kyU.put("status", "INTEGER");
     localStringBuilder.append(" status INTEGER");
     localStringBuilder.append(", ");
-    blR[9] = "signature";
-    jYx.put("signature", "TEXT");
+    aZx[9] = "signature";
+    kyU.put("signature", "TEXT");
     localStringBuilder.append(" signature TEXT");
     localStringBuilder.append(", ");
-    blR[10] = "modifyTime";
-    jYx.put("modifyTime", "LONG");
+    aZx[10] = "modifyTime";
+    kyU.put("modifyTime", "LONG");
     localStringBuilder.append(" modifyTime LONG");
     localStringBuilder.append(", ");
-    blR[11] = "appName_en";
-    jYx.put("appName_en", "TEXT");
+    aZx[11] = "appName_en";
+    kyU.put("appName_en", "TEXT");
     localStringBuilder.append(" appName_en TEXT");
     localStringBuilder.append(", ");
-    blR[12] = "appName_tw";
-    jYx.put("appName_tw", "TEXT");
+    aZx[12] = "appName_tw";
+    kyU.put("appName_tw", "TEXT");
     localStringBuilder.append(" appName_tw TEXT");
     localStringBuilder.append(", ");
-    blR[13] = "appDiscription_en";
-    jYx.put("appDiscription_en", "TEXT");
+    aZx[13] = "appName_hk";
+    kyU.put("appName_hk", "TEXT");
+    localStringBuilder.append(" appName_hk TEXT");
+    localStringBuilder.append(", ");
+    aZx[14] = "appDiscription_en";
+    kyU.put("appDiscription_en", "TEXT");
     localStringBuilder.append(" appDiscription_en TEXT");
     localStringBuilder.append(", ");
-    blR[14] = "appDiscription_tw";
-    jYx.put("appDiscription_tw", "TEXT");
+    aZx[15] = "appDiscription_tw";
+    kyU.put("appDiscription_tw", "TEXT");
     localStringBuilder.append(" appDiscription_tw TEXT");
     localStringBuilder.append(", ");
-    blR[15] = "appType";
-    jYx.put("appType", "TEXT");
+    aZx[16] = "appType";
+    kyU.put("appType", "TEXT");
     localStringBuilder.append(" appType TEXT");
     localStringBuilder.append(", ");
-    blR[16] = "openId";
-    jYx.put("openId", "TEXT");
+    aZx[17] = "openId";
+    kyU.put("openId", "TEXT");
     localStringBuilder.append(" openId TEXT");
     localStringBuilder.append(", ");
-    blR[17] = "authFlag";
-    jYx.put("authFlag", "INTEGER");
+    aZx[18] = "authFlag";
+    kyU.put("authFlag", "INTEGER");
     localStringBuilder.append(" authFlag INTEGER");
     localStringBuilder.append(", ");
-    blR[18] = "appInfoFlag";
-    jYx.put("appInfoFlag", "INTEGER default '-1' ");
+    aZx[19] = "appInfoFlag";
+    kyU.put("appInfoFlag", "INTEGER default '-1' ");
     localStringBuilder.append(" appInfoFlag INTEGER default '-1' ");
     localStringBuilder.append(", ");
-    blR[19] = "lvbuff";
-    jYx.put("lvbuff", "BLOB");
+    aZx[20] = "lvbuff";
+    kyU.put("lvbuff", "BLOB");
     localStringBuilder.append(" lvbuff BLOB");
     localStringBuilder.append(", ");
-    blR[20] = "serviceAppType";
-    jYx.put("serviceAppType", "INTEGER default '0' ");
+    aZx[21] = "serviceAppType";
+    kyU.put("serviceAppType", "INTEGER default '0' ");
     localStringBuilder.append(" serviceAppType INTEGER default '0' ");
     localStringBuilder.append(", ");
-    blR[21] = "serviceAppInfoFlag";
-    jYx.put("serviceAppInfoFlag", "INTEGER default '0' ");
+    aZx[22] = "serviceAppInfoFlag";
+    kyU.put("serviceAppInfoFlag", "INTEGER default '0' ");
     localStringBuilder.append(" serviceAppInfoFlag INTEGER default '0' ");
     localStringBuilder.append(", ");
-    blR[22] = "serviceShowFlag";
-    jYx.put("serviceShowFlag", "INTEGER default '0' ");
+    aZx[23] = "serviceShowFlag";
+    kyU.put("serviceShowFlag", "INTEGER default '0' ");
     localStringBuilder.append(" serviceShowFlag INTEGER default '0' ");
     localStringBuilder.append(", ");
-    blR[23] = "appSupportContentType";
-    jYx.put("appSupportContentType", "LONG default '0' ");
+    aZx[24] = "appSupportContentType";
+    kyU.put("appSupportContentType", "LONG default '0' ");
     localStringBuilder.append(" appSupportContentType LONG default '0' ");
     localStringBuilder.append(", ");
-    blR[24] = "svrAppSupportContentType";
-    jYx.put("svrAppSupportContentType", "LONG default '0' ");
+    aZx[25] = "svrAppSupportContentType";
+    kyU.put("svrAppSupportContentType", "LONG default '0' ");
     localStringBuilder.append(" svrAppSupportContentType LONG default '0' ");
-    blR[25] = "rowid";
-    jYy = localStringBuilder.toString();
-    aot = locala;
+    aZx[26] = "rowid";
+    kyV = localStringBuilder.toString();
+    bjR = locala;
   }
   
   public f()
@@ -139,6 +143,7 @@ public class f
     field_modifyTime = 0L;
     field_appName_en = "";
     field_appName_tw = "";
+    field_appName_hk = "";
     field_appDiscription_en = "";
     field_appDiscription_tw = "";
     field_appInfoFlag = 0;
@@ -146,17 +151,17 @@ public class f
     field_openId = "";
     field_authFlag = 0;
     field_appInfoFlag = 0;
-    bt("");
+    bn("");
+    bm("");
+    bo("");
     bs("");
+    bt("");
     bu("");
-    bx("");
-    by("");
-    bz("");
   }
   
-  public final boolean aPB()
+  public final boolean aUj()
   {
-    if (ay.kz(field_appType)) {}
+    if (be.kf(field_appType)) {}
     for (;;)
     {
       return false;
@@ -176,19 +181,19 @@ public class f
     }
   }
   
-  public final boolean aPC()
+  public final boolean aUk()
   {
     return field_serviceAppType != 0;
   }
   
-  public final boolean aPD()
+  public final boolean aUl()
   {
     return (field_serviceAppInfoFlag & 0x2) != 0;
   }
   
-  public final boolean aPE()
+  public final boolean aUm()
   {
-    return AppPanel.iJM.equals(field_appId);
+    return AppPanel.jgI.equals(field_appId);
   }
   
   public boolean equals(Object paramObject)
@@ -206,23 +211,23 @@ public class f
   
   public int hashCode()
   {
-    if (!ay.kz(field_appId)) {
+    if (!be.kf(field_appId)) {
       return field_appId.hashCode();
     }
     return super.hashCode();
   }
   
-  public final ContentValues lX()
+  public final ContentValues kn()
   {
-    if ((!ay.kz(field_appType)) && (field_appType.startsWith("1"))) {
+    if ((!be.kf(field_appType)) && ((field_appType.startsWith("1")) || (field_appType.startsWith("6")))) {
       field_appType = ("," + field_appType);
     }
-    return super.lX();
+    return super.kn();
   }
   
-  protected final c.a ls()
+  protected final c.a ou()
   {
-    return aot;
+    return bjR;
   }
 }
 

@@ -1,7 +1,7 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.modelmulti.l;
-import com.tencent.mm.modelmulti.n;
+import com.tencent.mm.modelmulti.m;
+import com.tencent.mm.modelmulti.o;
 
 final class SingleChatInfoUI$7
   implements Runnable
@@ -10,7 +10,7 @@ final class SingleChatInfoUI$7
   
   public final void run()
   {
-    l.Be().dC(7);
+    m.Bd().eh(7);
   }
 }
 

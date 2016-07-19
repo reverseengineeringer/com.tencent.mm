@@ -1,6 +1,5 @@
 .class Lcom/tencent/smtt/sdk/SystemWebChromeClient$QuotaUpdaterImpl;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 # interfaces
 .implements Lcom/tencent/smtt/sdk/w$a;
@@ -27,16 +26,12 @@
 .method constructor <init>(Lcom/tencent/smtt/sdk/SystemWebChromeClient;Landroid/webkit/WebStorage$QuotaUpdater;)V
     .locals 0
 
-    .prologue
-    .line 426
     iput-object p1, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$QuotaUpdaterImpl;->this$0:Lcom/tencent/smtt/sdk/SystemWebChromeClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 427
     iput-object p2, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$QuotaUpdaterImpl;->mQuotaUpdater:Landroid/webkit/WebStorage$QuotaUpdater;
 
-    .line 428
     return-void
 .end method
 
@@ -45,12 +40,9 @@
 .method public updateQuota(J)V
     .locals 1
 
-    .prologue
-    .line 432
     iget-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$QuotaUpdaterImpl;->mQuotaUpdater:Landroid/webkit/WebStorage$QuotaUpdater;
 
     invoke-interface {v0, p1, p2}, Landroid/webkit/WebStorage$QuotaUpdater;->updateQuota(J)V
 
-    .line 433
     return-void
 .end method

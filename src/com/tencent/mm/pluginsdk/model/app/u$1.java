@@ -3,7 +3,8 @@ package com.tencent.mm.pluginsdk.model.app;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 
 public final class u$1
   implements DialogInterface.OnCancelListener
@@ -12,11 +13,11 @@ public final class u$1
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    com.tencent.mm.sdk.platformtools.u.w("!44@/B4Tb64lLpIw1vCoUyRMKQjZ1dpQIMvamblCzn1RUg4=", "do init canceled");
-    ah.tE().c(iBd.auF);
-    aj.abv().b(7, iBd);
-    if (iBd.iBc != null) {
-      iBd.iBc.aEY();
+    v.w("MicroMsg.LoadAppInfoAfterLogin", "do init canceled");
+    ah.tF().c(iXJ.ags);
+    al.adP().b(7, iXJ);
+    if (iXJ.iXI != null) {
+      iXJ.iXI.oq();
     }
   }
 }

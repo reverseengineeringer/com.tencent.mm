@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tencent.mm.ui.widget.FoursquareRelativeLayout android:id="@id/c03" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/c24" android:background="@color/jg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="center" />
+    <ImageView android:id="@id/xj" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <ImageView android:id="@id/azz" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/as0" android:scaleType="centerCrop" android:layout_alignParentBottom="true" />
+    <ImageView android:id="@id/c25" android:background="@drawable/gx" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/ayy" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <CheckBox android:id="@id/ayx" android:background="@drawable/ix" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="20.0dip" android:layout_marginTop="@dimen/hj" android:layout_marginRight="@dimen/hj" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+</com.tencent.mm.ui.widget.FoursquareRelativeLayout>

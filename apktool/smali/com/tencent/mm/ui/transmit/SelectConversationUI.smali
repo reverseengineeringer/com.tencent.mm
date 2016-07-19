@@ -10,37 +10,57 @@
 
 
 # static fields
-.field private static final lBg:I
+.field private static final mbX:I
 
 
 # instance fields
-.field private cvM:Ljava/util/List;
+.field private cJO:Landroid/widget/TextView;
 
-.field private lBd:Landroid/widget/TextView;
+.field private crs:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private lBh:I
+.field private lLt:Z
 
-.field private lBi:Z
+.field private lMo:Z
 
-.field private lBj:Z
+.field private lMr:Ljava/lang/String;
 
-.field private lBk:Z
+.field private mbY:I
 
-.field private lBl:Ljava/util/List;
+.field private mbZ:Z
 
-.field private lBm:Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;
+.field private mca:Z
 
-.field private lBn:I
+.field private mcb:Z
 
-.field private lBo:Landroid/view/MenuItem$OnMenuItemClickListener;
+.field private mcc:Z
 
-.field private lBp:Landroid/view/MenuItem$OnMenuItemClickListener;
+.field private mcd:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private llZ:Z
+.field private mce:Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;
 
-.field private llg:Z
+.field private mcf:I
 
-.field private lmc:Ljava/lang/String;
+.field private mcg:Landroid/view/MenuItem$OnMenuItemClickListener;
+
+.field private mch:Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # direct methods
@@ -48,7 +68,7 @@
     .locals 1
 
     .prologue
-    .line 70
+    .line 67
     const/4 v0, 0x2
 
     new-array v0, v0, [I
@@ -59,7 +79,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBg:I
+    sput v0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mbX:I
 
     return-void
 
@@ -78,65 +98,68 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 67
+    .line 64
     invoke-direct {p0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;-><init>()V
 
-    .line 83
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBi:Z
+    .line 79
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mbZ:Z
 
-    .line 84
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->llZ:Z
+    .line 80
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lMo:Z
 
-    .line 90
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBj:Z
+    .line 81
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mca:Z
 
-    .line 91
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBk:Z
+    .line 87
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcb:Z
 
-    .line 92
+    .line 88
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcc:Z
+
+    .line 89
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
-    .line 736
-    new-instance v0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$10;
+    .line 661
+    new-instance v0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$7;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI$10;-><init>(Lcom/tencent/mm/ui/transmit/SelectConversationUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI$7;-><init>(Lcom/tencent/mm/ui/transmit/SelectConversationUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBo:Landroid/view/MenuItem$OnMenuItemClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcg:Landroid/view/MenuItem$OnMenuItemClickListener;
 
-    .line 749
-    new-instance v0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$2;
+    .line 674
+    new-instance v0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$8;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI$2;-><init>(Lcom/tencent/mm/ui/transmit/SelectConversationUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI$8;-><init>(Lcom/tencent/mm/ui/transmit/SelectConversationUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBp:Landroid/view/MenuItem$OnMenuItemClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mch:Landroid/view/MenuItem$OnMenuItemClickListener;
 
     return-void
 .end method
 
-.method private Nk()V
+.method private PH()V
     .locals 3
 
     .prologue
     const/4 v2, 0x1
 
-    .line 776
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBj:Z
+    .line 701
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcb:Z
 
     if-nez v0, :cond_0
 
-    .line 795
+    .line 720
     :goto_0
     return-void
 
-    .line 780
+    .line 705
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -144,12 +167,12 @@
 
     if-lez v0, :cond_1
 
-    .line 781
+    .line 706
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v1, 0x7f0b0ddf
+    const v1, 0x7f080122
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I)Ljava/lang/String;
 
@@ -165,7 +188,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -185,59 +208,59 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v2, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->ad(ILjava/lang/String;)V
+    invoke-virtual {p0, v2, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->an(ILjava/lang/String;)V
 
-    .line 782
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBp:Landroid/view/MenuItem$OnMenuItemClickListener;
+    .line 707
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mch:Landroid/view/MenuItem$OnMenuItemClickListener;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
-    .line 783
+    .line 708
     invoke-virtual {p0, v2, v2}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->M(IZ)V
 
     goto :goto_0
 
-    .line 785
+    .line 710
     :cond_1
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBk:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcc:Z
 
     if-nez v0, :cond_2
 
-    .line 786
-    const v0, 0x7f0b0e7f
+    .line 711
+    const v0, 0x7f0800eb
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v2, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->ad(ILjava/lang/String;)V
+    invoke-virtual {p0, v2, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->an(ILjava/lang/String;)V
 
-    .line 787
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBo:Landroid/view/MenuItem$OnMenuItemClickListener;
+    .line 712
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcg:Landroid/view/MenuItem$OnMenuItemClickListener;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
-    .line 788
+    .line 713
     invoke-virtual {p0, v2, v2}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->M(IZ)V
 
     goto :goto_0
 
-    .line 790
+    .line 715
     :cond_2
-    const v0, 0x7f0b0e80
+    const v0, 0x7f08012d
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v2, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->ad(ILjava/lang/String;)V
+    invoke-virtual {p0, v2, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->an(ILjava/lang/String;)V
 
-    .line 791
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBo:Landroid/view/MenuItem$OnMenuItemClickListener;
+    .line 716
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcg:Landroid/view/MenuItem$OnMenuItemClickListener;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
-    .line 792
+    .line 717
     invoke-virtual {p0, v2, v2}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->M(IZ)V
 
     goto :goto_0
@@ -247,8 +270,8 @@
     .locals 3
 
     .prologue
-    .line 474
-    const-string/jumbo v0, "!44@/B4Tb64lLpJQGo7VtHU/glxECqNzQuUbU+29i/gx8/w="
+    .line 417
+    const-string/jumbo v0, "MicroMsg.SelectConversationUI"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -264,28 +287,28 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 475
+    .line 418
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 476
+    .line 419
     const/4 v0, 0x2
 
     invoke-virtual {p0, p2, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 477
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    .line 420
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-static {v0, p2}, Lcom/tencent/mm/ui/base/b;->w(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 478
+    .line 421
     return-void
 .end method
 
@@ -295,12 +318,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 67
-    iget v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBn:I
+    .line 64
+    iget v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcf:I
 
     const/16 v1, 0x100
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/contact/r;->aW(II)Z
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/contact/r;->be(II)Z
 
     move-result v0
 
@@ -316,7 +339,7 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -324,7 +347,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -338,7 +361,7 @@
 
     const/4 v0, 0x1
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -366,13 +389,13 @@
     invoke-virtual {v3, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_1
-    invoke-static {v0}, Lcom/tencent/mm/model/i;->dY(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/model/i;->ej(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-static {v0}, Lcom/tencent/mm/model/i;->dn(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/model/i;->du(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -382,7 +405,7 @@
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    invoke-static {v0}, Lcom/tencent/mm/model/f;->dM(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/tencent/mm/model/f;->dV(Ljava/lang/String;)I
 
     move-result v0
 
@@ -402,35 +425,35 @@
 
     move-result-object v1
 
-    const v0, 0x7f0b01f1
+    const v0, 0x7f080c68
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    const v0, 0x7f0b0ddf
+    const v0, 0x7f080122
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v0, 0x7f0b0de4
+    const v0, 0x7f080099
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    new-instance v5, Lcom/tencent/mm/ui/transmit/SelectConversationUI$8;
+    new-instance v5, Lcom/tencent/mm/ui/transmit/SelectConversationUI$5;
 
-    invoke-direct {v5, p0, p1}, Lcom/tencent/mm/ui/transmit/SelectConversationUI$8;-><init>(Lcom/tencent/mm/ui/transmit/SelectConversationUI;Landroid/content/Intent;)V
+    invoke-direct {v5, p0, p1}, Lcom/tencent/mm/ui/transmit/SelectConversationUI$5;-><init>(Lcom/tencent/mm/ui/transmit/SelectConversationUI;Landroid/content/Intent;)V
 
-    new-instance v6, Lcom/tencent/mm/ui/transmit/SelectConversationUI$9;
+    new-instance v6, Lcom/tencent/mm/ui/transmit/SelectConversationUI$6;
 
-    invoke-direct {v6, p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI$9;-><init>(Lcom/tencent/mm/ui/transmit/SelectConversationUI;)V
+    invoke-direct {v6, p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI$6;-><init>(Lcom/tencent/mm/ui/transmit/SelectConversationUI;)V
 
     move-object v0, p0
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/ui/base/g;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
     goto :goto_0
 .end method
@@ -439,8 +462,8 @@
     .locals 1
 
     .prologue
-    .line 67
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBk:Z
+    .line 64
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcc:Z
 
     return v0
 .end method
@@ -449,8 +472,8 @@
     .locals 0
 
     .prologue
-    .line 67
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBk:Z
+    .line 64
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcc:Z
 
     return p1
 .end method
@@ -459,41 +482,41 @@
     .locals 0
 
     .prologue
-    .line 67
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bjl()V
+    .line 64
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bpi()V
 
     return-void
 .end method
 
-.method private bjl()V
+.method private bpi()V
     .locals 4
 
     .prologue
-    .line 559
-    const-string/jumbo v0, "!44@/B4Tb64lLpJQGo7VtHU/glxECqNzQuUbU+29i/gx8/w="
+    .line 499
+    const-string/jumbo v0, "MicroMsg.SelectConversationUI"
 
     const-string/jumbo v1, "doCallSelectContactUIForMultiRetransmit"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 560
+    .line 500
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/tencent/mm/ui/contact/SelectContactUI;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 561
+    .line 501
     const-string/jumbo v1, "list_type"
 
     const/16 v2, 0xe
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 562
+    .line 502
     const-string/jumbo v1, "titile"
 
-    const v2, 0x7f0b03de
+    const v2, 0x7f080082
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I)Ljava/lang/String;
 
@@ -501,86 +524,86 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 563
+    .line 503
     const-string/jumbo v1, "list_attr"
 
-    sget v2, Lcom/tencent/mm/ui/contact/r;->llE:I
+    sget v2, Lcom/tencent/mm/ui/contact/r;->lLR:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 564
+    .line 504
     const-string/jumbo v1, "already_select_contact"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
     const-string/jumbo v3, ","
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/platformtools/t;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/tencent/mm/platformtools/s;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 565
+    .line 505
     const-string/jumbo v1, "max_limit_num"
 
     const/16 v2, 0x9
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 567
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    .line 507
+    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     const/4 v2, 0x4
 
     invoke-virtual {v1, v0, v2}, Landroid/support/v7/app/ActionBarActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 568
+    .line 508
     return-void
 .end method
 
-.method private bjm()V
+.method private bpj()V
     .locals 5
 
     .prologue
     const/4 v4, 0x3
 
-    .line 572
-    const-string/jumbo v0, "!44@/B4Tb64lLpJQGo7VtHU/glxECqNzQuUbU+29i/gx8/w="
+    .line 512
+    const-string/jumbo v0, "MicroMsg.SelectConversationUI"
 
     const-string/jumbo v1, "doSendCardOrQRCode2CallSelectContactUI"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 573
+    .line 513
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/tencent/mm/ui/contact/SelectContactUI;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 574
+    .line 514
     const-string/jumbo v1, "list_attr"
 
-    sget v2, Lcom/tencent/mm/ui/contact/r;->llB:I
+    sget v2, Lcom/tencent/mm/ui/contact/r;->lLO:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 575
+    .line 515
     const-string/jumbo v1, "list_type"
 
     invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 576
+    .line 516
     const-string/jumbo v1, "be_send_card_name"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lmc:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lMr:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 577
+    .line 517
     const-string/jumbo v1, "block_contact"
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getIntent()Landroid/content/Intent;
@@ -595,17 +618,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 578
+    .line 518
     const-string/jumbo v1, "Add_SendCard"
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 579
+    .line 519
     const-string/jumbo v1, "titile"
 
-    const v2, 0x7f0b03de
+    const v2, 0x7f080082
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I)Ljava/lang/String;
 
@@ -613,46 +636,46 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 580
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    .line 520
+    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v1, v0, v4}, Landroid/support/v7/app/ActionBarActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 581
+    .line 521
     return-void
 .end method
 
-.method private bjn()V
+.method private bpk()V
     .locals 3
 
     .prologue
-    .line 584
-    const-string/jumbo v0, "!44@/B4Tb64lLpJQGo7VtHU/glxECqNzQuUbU+29i/gx8/w="
+    .line 524
+    const-string/jumbo v0, "MicroMsg.SelectConversationUI"
 
     const-string/jumbo v1, "doCallSelectContactUI"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 585
+    .line 525
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/tencent/mm/ui/contact/SelectContactUI;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 586
+    .line 526
     const-string/jumbo v1, "list_type"
 
     const/4 v2, 0x5
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 587
+    .line 527
     const-string/jumbo v1, "titile"
 
-    const v2, 0x7f0b03de
+    const v2, 0x7f080082
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I)Ljava/lang/String;
 
@@ -660,23 +683,23 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 588
+    .line 528
     const-string/jumbo v1, "list_attr"
 
-    sget v2, Lcom/tencent/mm/ui/contact/r;->llD:I
+    sget v2, Lcom/tencent/mm/ui/contact/r;->lLQ:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 591
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    .line 531
+    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v0, v2}, Landroid/support/v7/app/ActionBarActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 593
+    .line 533
     return-void
 .end method
 
@@ -684,25 +707,25 @@
     .locals 1
 
     .prologue
-    .line 67
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->llZ:Z
+    .line 64
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lMo:Z
 
     return v0
 .end method
 
-.method private cC(Ljava/lang/String;Ljava/lang/String;)V
+.method private cQ(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
     .prologue
-    .line 446
+    .line 389
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 447
+    .line 390
     invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 448
+    .line 391
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -719,7 +742,7 @@
 
     const-string/jumbo v2, ","
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/platformtools/t;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2}, Lcom/tencent/mm/platformtools/s;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -739,23 +762,23 @@
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->finish()V
 
-    .line 449
+    .line 392
     :cond_0
     return-void
 .end method
 
-.method private cD(Ljava/lang/String;Ljava/lang/String;)V
+.method private cR(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
 
     .prologue
     const/4 v1, 0x1
 
-    .line 464
+    .line 407
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 465
+    .line 408
     const-string/jumbo v3, "cardNameToSend is null"
 
     if-eqz p1, :cond_0
@@ -765,33 +788,33 @@
     :goto_0
     invoke-static {v3, v0}, Ljunit/framework/Assert;->assertTrue(Ljava/lang/String;Z)V
 
-    .line 466
+    .line 409
     const-string/jumbo v0, "be_send_card_name"
 
     invoke-virtual {v2, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 467
+    .line 410
     const-string/jumbo v0, "received_card_name"
 
     invoke-virtual {v2, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 468
+    .line 411
     const-string/jumbo v0, "Is_Chatroom"
 
     invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 469
+    .line 412
     const/4 v0, -0x1
 
     invoke-virtual {p0, v0, v2}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->setResult(ILandroid/content/Intent;)V
 
-    .line 470
+    .line 413
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->finish()V
 
-    .line 471
+    .line 414
     return-void
 
-    .line 465
+    .line 408
     :cond_0
     const/4 v0, 0x0
 
@@ -802,8 +825,8 @@
     .locals 0
 
     .prologue
-    .line 67
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bjm()V
+    .line 64
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bpj()V
 
     return-void
 .end method
@@ -812,8 +835,8 @@
     .locals 0
 
     .prologue
-    .line 67
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bjn()V
+    .line 64
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bpk()V
 
     return-void
 .end method
@@ -822,8 +845,8 @@
     .locals 0
 
     .prologue
-    .line 67
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->Nk()V
+    .line 64
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->PH()V
 
     return-void
 .end method
@@ -832,8 +855,8 @@
     .locals 1
 
     .prologue
-    .line 67
-    iget v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBh:I
+    .line 64
+    iget v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mbY:I
 
     return v0
 .end method
@@ -842,8 +865,8 @@
     .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBd:Landroid/widget/TextView;
+    .line 64
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->cJO:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -852,17 +875,17 @@
     .locals 1
 
     .prologue
-    .line 67
+    .line 64
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->ii(Z)Z
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->iQ(Z)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method private ii(Z)Z
+.method private iQ(Z)Z
     .locals 7
 
     .prologue
@@ -872,10 +895,10 @@
 
     const/16 v6, 0x9
 
-    .line 810
+    .line 735
     if-eqz p1, :cond_1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -883,9 +906,9 @@
 
     if-lt v2, v6, :cond_2
 
-    .line 811
+    .line 736
     :cond_0
-    const v2, 0x7f0b01ec
+    const v2, 0x7f08101f
 
     new-array v3, v0, [Ljava/lang/Object;
 
@@ -909,30 +932,30 @@
 
     move-result-object v1
 
-    .line 813
-    iget-object v2, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    .line 738
+    iget-object v2, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v3, 0x7f0b0e63
+    const v3, 0x7f080118
 
     invoke-virtual {p0, v3}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    new-instance v4, Lcom/tencent/mm/ui/transmit/SelectConversationUI$3;
+    new-instance v4, Lcom/tencent/mm/ui/transmit/SelectConversationUI$9;
 
-    invoke-direct {v4, p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI$3;-><init>(Lcom/tencent/mm/ui/transmit/SelectConversationUI;)V
+    invoke-direct {v4, p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI$9;-><init>(Lcom/tencent/mm/ui/transmit/SelectConversationUI;)V
 
     invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
-    .line 822
+    .line 747
     :goto_0
     return v0
 
-    .line 810
+    .line 735
     :cond_1
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -943,7 +966,7 @@
     :cond_2
     move v0, v1
 
-    .line 822
+    .line 747
     goto :goto_0
 .end method
 
@@ -951,8 +974,8 @@
     .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    .line 64
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
     return-object v0
 .end method
@@ -963,146 +986,215 @@
     .prologue
     const/4 v1, 0x0
 
-    const v4, 0x7f0b01f0
+    const v9, 0x7f080122
 
-    const v9, 0x7f0b0ddf
+    const/4 v6, 0x1
 
     const/4 v8, 0x0
 
-    .line 481
-    iget v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBn:I
+    .line 424
+    iget v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcf:I
 
     const/16 v2, 0x100
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/ui/contact/r;->aW(II)Z
+    invoke-static {v0, v2}, Lcom/tencent/mm/ui/contact/r;->be(II)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 483
+    .line 426
     const/4 v0, -0x1
 
     invoke-virtual {p0, v0, p1}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->setResult(ILandroid/content/Intent;)V
 
-    .line 484
+    .line 427
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->finish()V
 
-    .line 555
+    .line 495
     :goto_0
     return-void
 
-    .line 486
+    .line 429
     :cond_0
-    invoke-static {p2}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 487
-    const-string/jumbo v0, "!44@/B4Tb64lLpJQGo7VtHU/glxECqNzQuUbU+29i/gx8/w="
+    .line 430
+    const-string/jumbo v0, "MicroMsg.SelectConversationUI"
 
     const-string/jumbo v1, "avatarUseName is null or nil show dialog fail "
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 491
+    .line 434
     :cond_1
-    invoke-static {p2}, Lcom/tencent/mm/model/i;->dn(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/tencent/mm/model/i;->du(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    .line 493
-    const v0, 0x7f0b01ed
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    invoke-static {p2}, Lcom/tencent/mm/model/f;->dM(Ljava/lang/String;)I
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v2, v8
-
-    invoke-virtual {p0, v0, v2}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 496
-    :goto_1
-    iget v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBn:I
-
-    const/16 v2, 0x8
-
-    invoke-static {v0, v2}, Lcom/tencent/mm/ui/contact/r;->aW(II)Z
+    .line 436
+    invoke-static {p2}, Lcom/tencent/mm/model/f;->dV(Ljava/lang/String;)I
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    .line 438
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mca:Z
 
-    .line 497
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    if-eqz v2, :cond_2
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    .line 439
+    invoke-static {}, Lcom/tencent/mm/h/h;->om()Lcom/tencent/mm/h/e;
 
-    invoke-static {v0, p2}, Lcom/tencent/mm/ui/chatting/v;->bb(Landroid/content/Context;Ljava/lang/String;)Lcom/tencent/mm/d/a/jh;
+    move-result-object v2
+
+    const-string/jumbo v3, "CheckBigFileUploadChatroomMemberCountLimit"
+
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/h/e;->getValue(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/16 v3, 0x32
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/platformtools/s;->getInt(Ljava/lang/String;I)I
+
+    move-result v2
+
+    .line 441
+    if-le v0, v2, :cond_2
+
+    .line 442
+    const-string/jumbo v1, "MicroMsg.SelectConversationUI"
+
+    const-string/jumbo v3, "summerbig SelectConversationUI group limit[%d], count[%d]"
+
+    const/4 v4, 0x2
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v4, v8
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 499
-    iget-object v2, v0, Lcom/tencent/mm/d/a/jh;->aFN:Lcom/tencent/mm/d/a/jh$b;
+    aput-object v0, v4, v6
 
-    iget-object v2, v2, Lcom/tencent/mm/d/a/jh$b;->aFV:Lcom/tencent/mm/protocal/a/a/b;
+    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v2, v2, Lcom/tencent/mm/protocal/a/a/b;->ayz:Ljava/lang/String;
+    .line 443
+    const v0, 0x7f08101e
 
-    .line 500
-    iget-object v3, v0, Lcom/tencent/mm/d/a/jh;->aFN:Lcom/tencent/mm/d/a/jh$b;
+    new-array v1, v6, [Ljava/lang/Object;
 
-    iget-object v3, v3, Lcom/tencent/mm/d/a/jh$b;->aFV:Lcom/tencent/mm/protocal/a/a/b;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object v5, v3, Lcom/tencent/mm/protocal/a/a/b;->asL:Ljava/lang/String;
+    move-result-object v2
 
-    .line 501
-    iget-object v3, v0, Lcom/tencent/mm/d/a/jh;->aFN:Lcom/tencent/mm/d/a/jh$b;
+    aput-object v2, v1, v8
 
-    iget-object v3, v3, Lcom/tencent/mm/d/a/jh$b;->aFV:Lcom/tencent/mm/protocal/a/a/b;
+    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
-    iget v3, v3, Lcom/tencent/mm/protocal/a/a/b;->aFQ:I
+    move-result-object v0
 
-    .line 502
-    iget-object v0, v0, Lcom/tencent/mm/d/a/jh;->aFN:Lcom/tencent/mm/d/a/jh$b;
+    const-string/jumbo v1, ""
 
-    iget-object v0, v0, Lcom/tencent/mm/d/a/jh$b;->aFV:Lcom/tencent/mm/protocal/a/a/b;
+    invoke-static {p0, v0, v1, v6}, Lcom/tencent/mm/ui/base/g;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Z)Lcom/tencent/mm/ui/base/h;
+
+    goto :goto_0
+
+    .line 448
+    :cond_2
+    const v2, 0x7f08101c
+
+    new-array v3, v6, [Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v3, v8
+
+    invoke-virtual {p0, v2, v3}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    .line 451
+    :goto_1
+    iget v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcf:I
+
+    const/16 v2, 0x8
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/ui/contact/r;->be(II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 452
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
+
+    invoke-static {v0, p2}, Lcom/tencent/mm/ui/chatting/w;->ba(Landroid/content/Context;Ljava/lang/String;)Lcom/tencent/mm/e/a/jm;
+
+    move-result-object v0
+
+    .line 454
+    iget-object v2, v0, Lcom/tencent/mm/e/a/jm;->arT:Lcom/tencent/mm/e/a/jm$b;
+
+    iget-object v2, v2, Lcom/tencent/mm/e/a/jm$b;->asb:Lcom/tencent/mm/protocal/a/a/b;
+
+    iget-object v2, v2, Lcom/tencent/mm/protocal/a/a/b;->akB:Ljava/lang/String;
+
+    .line 455
+    iget-object v3, v0, Lcom/tencent/mm/e/a/jm;->arT:Lcom/tencent/mm/e/a/jm$b;
+
+    iget-object v3, v3, Lcom/tencent/mm/e/a/jm$b;->asb:Lcom/tencent/mm/protocal/a/a/b;
+
+    iget-object v5, v3, Lcom/tencent/mm/protocal/a/a/b;->desc:Ljava/lang/String;
+
+    .line 456
+    iget-object v3, v0, Lcom/tencent/mm/e/a/jm;->arT:Lcom/tencent/mm/e/a/jm$b;
+
+    iget-object v3, v3, Lcom/tencent/mm/e/a/jm$b;->asb:Lcom/tencent/mm/protocal/a/a/b;
+
+    iget v3, v3, Lcom/tencent/mm/protocal/a/a/b;->arW:I
+
+    .line 457
+    iget-object v0, v0, Lcom/tencent/mm/e/a/jm;->arT:Lcom/tencent/mm/e/a/jm$b;
+
+    iget-object v0, v0, Lcom/tencent/mm/e/a/jm$b;->asb:Lcom/tencent/mm/protocal/a/a/b;
 
     iget-object v0, v0, Lcom/tencent/mm/protocal/a/a/b;->title:Ljava/lang/String;
 
     const-string/jumbo v4, ""
 
-    invoke-static {v0, v4}, Lcom/tencent/mm/platformtools/t;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v4}, Lcom/tencent/mm/platformtools/s;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 505
+    .line 458
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
     move-result v0
 
     const/16 v6, 0x1a
 
-    if-le v0, v6, :cond_2
+    if-le v0, v6, :cond_3
 
-    .line 506
+    .line 461
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1141,9 +1233,9 @@
 
     move-result-object v4
 
-    .line 511
-    :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    .line 466
+    :cond_3
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
     const-string/jumbo v6, ""
 
@@ -1153,88 +1245,248 @@
 
     move-result-object v9
 
-    new-instance v10, Lcom/tencent/mm/ui/transmit/SelectConversationUI$5;
+    new-instance v10, Lcom/tencent/mm/ui/transmit/SelectConversationUI$3;
 
-    invoke-direct {v10, p0, p1}, Lcom/tencent/mm/ui/transmit/SelectConversationUI$5;-><init>(Lcom/tencent/mm/ui/transmit/SelectConversationUI;Landroid/content/Intent;)V
+    invoke-direct {v10, p0, p1}, Lcom/tencent/mm/ui/transmit/SelectConversationUI$3;-><init>(Lcom/tencent/mm/ui/transmit/SelectConversationUI;Landroid/content/Intent;)V
 
     invoke-static/range {v0 .. v10}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Lcom/tencent/mm/ui/j;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Lcom/tencent/mm/pluginsdk/ui/applet/c$a;)Lcom/tencent/mm/ui/base/h;
 
     goto/16 :goto_0
 
-    .line 528
-    :cond_3
-    const-string/jumbo v0, "key_is_biz_chat"
-
-    invoke-virtual {p1, v0, v8}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    .line 529
-    if-eqz v0, :cond_4
-
-    .line 530
-    const-string/jumbo v0, "key_biz_chat_id"
-
-    const-wide/16 v1, -0x1
-
-    invoke-virtual {p1, v0, v1, v2}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
-
-    move-result-wide v1
-
-    .line 531
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->koJ:Lcom/tencent/mm/ui/j;
-
-    invoke-virtual {p0, v4}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {p0, v9}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I)Ljava/lang/String;
-
-    move-result-object v6
-
-    new-instance v7, Lcom/tencent/mm/ui/transmit/SelectConversationUI$6;
-
-    invoke-direct {v7, p0, p1}, Lcom/tencent/mm/ui/transmit/SelectConversationUI$6;-><init>(Lcom/tencent/mm/ui/transmit/SelectConversationUI;Landroid/content/Intent;)V
-
-    move-object v4, p2
-
-    invoke-static/range {v0 .. v7}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->a(Lcom/tencent/mm/ui/j;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/pluginsdk/ui/applet/c$a;)Lcom/tencent/mm/ui/base/o;
-
-    goto/16 :goto_0
-
-    .line 542
+    .line 483
     :cond_4
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->kNN:Lcom/tencent/mm/ui/j;
 
-    invoke-virtual {p0, v4}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I)Ljava/lang/String;
+    const v1, 0x7f080ee1
 
-    move-result-object v3
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
 
     invoke-virtual {p0, v9}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I)Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v5
 
-    new-instance v7, Lcom/tencent/mm/ui/transmit/SelectConversationUI$7;
+    new-instance v6, Lcom/tencent/mm/ui/transmit/SelectConversationUI$4;
 
-    invoke-direct {v7, p0, p1}, Lcom/tencent/mm/ui/transmit/SelectConversationUI$7;-><init>(Lcom/tencent/mm/ui/transmit/SelectConversationUI;Landroid/content/Intent;)V
+    invoke-direct {v6, p0, p1}, Lcom/tencent/mm/ui/transmit/SelectConversationUI$4;-><init>(Lcom/tencent/mm/ui/transmit/SelectConversationUI;Landroid/content/Intent;)V
 
-    move-object v2, p2
+    move-object v1, p2
 
-    move-object v4, p2
+    move-object v3, p2
 
-    invoke-static/range {v1 .. v7}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->b(Lcom/tencent/mm/ui/j;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/pluginsdk/ui/applet/c$a;)Lcom/tencent/mm/ui/base/o;
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/pluginsdk/ui/applet/c;->b(Lcom/tencent/mm/ui/j;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/pluginsdk/ui/applet/c$a;)Lcom/tencent/mm/ui/base/o;
 
     goto/16 :goto_0
 
     :cond_5
-    move-object v5, v1
+    move-object v4, v1
 
     goto/16 :goto_1
 .end method
 
 
 # virtual methods
-.method protected final Ou()V
+.method protected final LP()Lcom/tencent/mm/ui/contact/n;
+    .locals 4
+
+    .prologue
+    .line 170
+    new-instance v0, Lcom/tencent/mm/ui/contact/t;
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->crs:Ljava/util/List;
+
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lLt:Z
+
+    iget-boolean v3, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcc:Z
+
+    invoke-direct {v0, p0, v1, v2, v3}, Lcom/tencent/mm/ui/contact/t;-><init>(Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;Ljava/util/List;ZZ)V
+
+    return-object v0
+.end method
+
+.method protected final LQ()Lcom/tencent/mm/ui/contact/p;
+    .locals 4
+
+    .prologue
+    .line 175
+    new-instance v0, Lcom/tencent/mm/ui/contact/p;
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->crs:Ljava/util/List;
+
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcc:Z
+
+    iget v3, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->scene:I
+
+    invoke-direct {v0, p0, v1, v2, v3}, Lcom/tencent/mm/ui/contact/p;-><init>(Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;Ljava/util/List;ZI)V
+
+    return-object v0
+.end method
+
+.method protected final LR()V
+    .locals 1
+
+    .prologue
+    .line 217
+    invoke-super {p0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->LR()V
+
+    .line 218
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->aiI()V
+
+    .line 219
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mce:Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;
+
+    if-eqz v0, :cond_0
+
+    .line 220
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mce:Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;
+
+    invoke-static {p0, v0}, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil;->a(Landroid/content/Context;Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;)V
+
+    .line 222
+    :cond_0
+    return-void
+.end method
+
+.method protected final LS()Z
+    .locals 1
+
+    .prologue
+    .line 537
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method protected final LT()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 542
+    const v0, 0x7f081022
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method protected final a(Landroid/widget/ListView;I)V
+    .locals 5
+
+    .prologue
+    .line 180
+    invoke-super {p0, p1, p2}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->a(Landroid/widget/ListView;I)V
+
+    .line 181
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->cJO:Landroid/widget/TextView;
+
+    if-nez v0, :cond_0
+
+    .line 183
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lMo:Z
+
+    if-eqz v0, :cond_1
+
+    .line 184
+    const v0, 0x7f081025
+
+    iput v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mbY:I
+
+    .line 188
+    :goto_0
+    new-instance v0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$2;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI$2;-><init>(Lcom/tencent/mm/ui/transmit/SelectConversationUI;)V
+
+    iget v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mbY:I
+
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p0}, Lcom/tencent/mm/ui/p;->ef(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v2
+
+    const v3, 0x7f0302cb
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const v0, 0x7f1007e7
+
+    invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p1, v2}, Landroid/widget/ListView;->addHeaderView(Landroid/view/View;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->cJO:Landroid/widget/TextView;
+
+    .line 203
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->cJO:Landroid/widget/TextView;
+
+    invoke-virtual {v0, p2}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 204
+    return-void
+
+    .line 186
+    :cond_1
+    const v0, 0x7f081020
+
+    iput v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mbY:I
+
+    goto :goto_0
+.end method
+
+.method public final a(Lcom/tencent/mm/ui/contact/a/a;)Z
+    .locals 2
+
+    .prologue
+    .line 646
+    iget-boolean v0, p1, Lcom/tencent/mm/ui/contact/a/a;->lLe:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p1, Lcom/tencent/mm/ui/contact/a/a;->cFh:Lcom/tencent/mm/storage/k;
+
+    if-eqz v0, :cond_0
+
+    .line 647
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
+
+    iget-object v1, p1, Lcom/tencent/mm/ui/contact/a/a;->cFh:Lcom/tencent/mm/storage/k;
+
+    iget-object v1, v1, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    .line 649
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method protected final initData()V
     .locals 4
 
     .prologue
@@ -1242,10 +1494,10 @@
 
     const/4 v2, 0x0
 
-    .line 134
-    invoke-super {p0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->Ou()V
+    .line 131
+    invoke-super {p0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->initData()V
 
-    .line 135
+    .line 132
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -1256,9 +1508,9 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBi:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mbZ:Z
 
-    .line 136
+    .line 133
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -1269,9 +1521,9 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBj:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcb:Z
 
-    .line 137
+    .line 134
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -1282,14 +1534,27 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->llZ:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lMo:Z
 
-    .line 138
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->llZ:Z
+    .line 135
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "BigFile"
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mca:Z
+
+    .line 136
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lMo:Z
 
     if-eqz v0, :cond_0
 
-    .line 139
+    .line 137
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -1300,9 +1565,9 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lmc:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lMr:Ljava/lang/String;
 
-    .line 142
+    .line 140
     :cond_0
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getIntent()Landroid/content/Intent;
 
@@ -1310,15 +1575,15 @@
 
     const-string/jumbo v1, "Select_Conv_Type"
 
-    sget v2, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBg:I
+    sget v2, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mbX:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBn:I
+    iput v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcf:I
 
-    .line 144
+    .line 142
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -1331,21 +1596,21 @@
 
     check-cast v0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBm:Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mce:Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;
 
-    .line 146
+    .line 144
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 147
-    invoke-static {}, Lcom/tencent/mm/ui/contact/r;->bhu()Ljava/util/HashSet;
+    .line 145
+    invoke-static {}, Lcom/tencent/mm/ui/contact/r;->bnf()Ljava/util/HashSet;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
-    .line 148
+    .line 146
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -1356,305 +1621,108 @@
 
     move-result-object v1
 
-    .line 149
-    invoke-static {v1}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+    .line 147
+    invoke-static {v1}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 150
+    .line 148
     const-string/jumbo v2, ","
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/platformtools/t;->h([Ljava/lang/String;)Ljava/util/List;
+    invoke-static {v1}, Lcom/tencent/mm/platformtools/s;->g([Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
-    .line 152
+    .line 150
     :cond_1
-    iget v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBn:I
+    iget v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcf:I
 
     const/4 v2, 0x2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/ui/contact/r;->aW(II)Z
+    invoke-static {v1, v2}, Lcom/tencent/mm/ui/contact/r;->be(II)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 153
-    invoke-static {}, Lcom/tencent/mm/ui/contact/r;->bhv()Ljava/util/HashSet;
+    .line 151
+    invoke-static {}, Lcom/tencent/mm/ui/contact/r;->bng()Ljava/util/HashSet;
 
     move-result-object v1
 
-    .line 154
-    invoke-static {v1}, Lcom/tencent/mm/ui/contact/r;->h(Ljava/util/HashSet;)V
+    .line 152
+    invoke-static {v1}, Lcom/tencent/mm/ui/contact/r;->g(Ljava/util/HashSet;)V
 
-    .line 155
+    .line 153
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
-    .line 157
+    .line 155
     :cond_2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->cvM:Ljava/util/List;
+    iput-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->crs:Ljava/util/List;
 
-    .line 158
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->cvM:Ljava/util/List;
+    .line 156
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->crs:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 160
-    iget v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBn:I
+    .line 158
+    iget v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcf:I
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/ui/contact/r;->aW(II)Z
+    invoke-static {v0, v3}, Lcom/tencent/mm/ui/contact/r;->be(II)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 161
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->llg:Z
+    .line 159
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lLt:Z
 
-    .line 164
+    .line 162
     :cond_3
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBj:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcb:Z
 
     if-eqz v0, :cond_4
 
-    .line 165
+    .line 163
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
-    .line 166
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBj:Z
+    .line 164
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcb:Z
 
     if-eqz v0, :cond_4
 
-    const v0, 0x7f0b0e7f
+    const v0, 0x7f0800eb
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBo:Landroid/view/MenuItem$OnMenuItemClickListener;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcg:Landroid/view/MenuItem$OnMenuItemClickListener;
 
-    sget v2, Lcom/tencent/mm/ui/j$b;->kpJ:I
+    sget v2, Lcom/tencent/mm/ui/j$b;->kOO:I
 
     invoke-virtual {p0, v3, v0, v1, v2}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->a(ILjava/lang/String;Landroid/view/MenuItem$OnMenuItemClickListener;I)V
 
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->Nk()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->PH()V
 
-    .line 168
+    .line 166
     :cond_4
-    return-void
-.end method
-
-.method protected final a(Landroid/widget/ListView;I)V
-    .locals 5
-
-    .prologue
-    .line 182
-    invoke-super {p0, p1, p2}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->a(Landroid/widget/ListView;I)V
-
-    .line 183
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBd:Landroid/widget/TextView;
-
-    if-nez v0, :cond_0
-
-    .line 185
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->llZ:Z
-
-    if-eqz v0, :cond_1
-
-    .line 186
-    const v0, 0x7f0b01e9
-
-    iput v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBh:I
-
-    .line 190
-    :goto_0
-    new-instance v0, Lcom/tencent/mm/ui/transmit/SelectConversationUI$4;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI$4;-><init>(Lcom/tencent/mm/ui/transmit/SelectConversationUI;)V
-
-    iget v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBh:I
-
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {p0}, Lcom/tencent/mm/ui/p;->ee(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v2
-
-    const v3, 0x7f0a0004
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f070048
-
-    invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p1, v2}, Landroid/widget/ListView;->addHeaderView(Landroid/view/View;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBd:Landroid/widget/TextView;
-
-    .line 205
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBd:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p2}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 206
-    return-void
-
-    .line 188
-    :cond_1
-    const v0, 0x7f0b01e6
-
-    iput v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBh:I
-
-    goto :goto_0
-.end method
-
-.method public final a(Lcom/tencent/mm/ui/contact/a/a;)Z
-    .locals 2
-
-    .prologue
-    .line 721
-    iget-boolean v0, p1, Lcom/tencent/mm/ui/contact/a/a;->lkT:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p1, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
-
-    if-eqz v0, :cond_0
-
-    .line 722
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
-
-    iget-object v1, p1, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
-
-    iget-object v1, v1, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
-
-    invoke-interface {v0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    .line 724
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method protected final afU()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 602
-    const v0, 0x7f0b01e8
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method protected final ahC()Z
-    .locals 1
-
-    .prologue
-    .line 597
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method protected final ahD()Lcom/tencent/mm/ui/contact/n;
-    .locals 4
-
-    .prologue
-    .line 172
-    new-instance v0, Lcom/tencent/mm/ui/contact/t;
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->cvM:Ljava/util/List;
-
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->llg:Z
-
-    iget-boolean v3, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBk:Z
-
-    invoke-direct {v0, p0, v1, v2, v3}, Lcom/tencent/mm/ui/contact/t;-><init>(Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;Ljava/util/List;ZZ)V
-
-    return-object v0
-.end method
-
-.method protected final ahE()Lcom/tencent/mm/ui/contact/p;
-    .locals 3
-
-    .prologue
-    .line 177
-    new-instance v0, Lcom/tencent/mm/ui/contact/p;
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->cvM:Ljava/util/List;
-
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBk:Z
-
-    invoke-direct {v0, p0, v1, v2}, Lcom/tencent/mm/ui/contact/p;-><init>(Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;Ljava/util/List;Z)V
-
-    return-object v0
-.end method
-
-.method protected final ahG()V
-    .locals 1
-
-    .prologue
-    .line 263
-    invoke-super {p0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->ahG()V
-
-    .line 264
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->age()V
-
-    .line 265
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBm:Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;
-
-    if-eqz v0, :cond_0
-
-    .line 266
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBm:Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;
-
-    invoke-static {p0, v0}, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil;->a(Landroid/content/Context;Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;)V
-
-    .line 268
-    :cond_0
     return-void
 .end method
 
@@ -1666,14 +1734,14 @@
 
     const/4 v4, -0x1
 
-    .line 332
+    .line 283
     invoke-super {p0, p1, p2, p3}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 333
-    if-eqz p3, :cond_2
+    .line 284
+    if-eqz p3, :cond_1
 
-    .line 334
-    const-string/jumbo v0, "!44@/B4Tb64lLpJQGo7VtHU/glxECqNzQuUbU+29i/gx8/w="
+    .line 285
+    const-string/jumbo v0, "MicroMsg.SelectConversationUI"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1713,65 +1781,26 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 338
+    .line 289
     :goto_0
     const/4 v0, 0x1
 
-    if-ne p1, v0, :cond_5
+    if-ne p1, v0, :cond_4
 
-    .line 339
-    if-ne p2, v4, :cond_1
+    .line 290
+    if-ne p2, v4, :cond_0
 
-    .line 340
+    .line 291
     const-string/jumbo v0, "Select_Conv_User"
 
     invoke-virtual {p3, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 341
-    const-string/jumbo v0, "key_is_biz_chat"
-
-    invoke-virtual {p3, v0, v5}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    .line 342
-    if-eqz v0, :cond_0
-
-    .line 343
-    const-string/jumbo v0, "key_biz_chat_id"
-
-    const-wide/16 v2, -0x1
-
-    invoke-virtual {p3, v0, v2, v3}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
-
-    move-result-wide v2
-
-    .line 344
-    invoke-static {v1}, Lcom/tencent/mm/t/n;->gW(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 345
-    invoke-static {}, Lcom/tencent/mm/t/aj;->xH()Lcom/tencent/mm/t/e;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/t/e;->Q(J)Lcom/tencent/mm/t/d;
-
-    move-result-object v0
-
-    .line 346
-    invoke-static {v0}, Lcom/tencent/mm/t/f;->d(Lcom/tencent/mm/t/d;)Ljava/lang/String;
-
-    .line 349
-    :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpJQGo7VtHU/glxECqNzQuUbU+29i/gx8/w="
+    .line 292
+    const-string/jumbo v0, "MicroMsg.SelectConversationUI"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1791,9 +1820,9 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 350
+    .line 293
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -1806,20 +1835,20 @@
 
     check-cast v0, Landroid/content/Intent;
 
-    .line 351
-    if-eqz v0, :cond_3
+    .line 294
+    if-eqz v0, :cond_2
 
-    .line 352
+    .line 295
     invoke-direct {p0, p3, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->a(Landroid/content/Intent;Landroid/content/Intent;)V
 
-    .line 417
-    :cond_1
+    .line 360
+    :cond_0
     :goto_1
     return-void
 
-    .line 336
-    :cond_2
-    const-string/jumbo v0, "!44@/B4Tb64lLpJQGo7VtHU/glxECqNzQuUbU+29i/gx8/w="
+    .line 287
+    :cond_1
+    const-string/jumbo v0, "MicroMsg.SelectConversationUI"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1851,47 +1880,47 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto/16 :goto_0
+    goto :goto_0
 
-    .line 355
-    :cond_3
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBi:Z
+    .line 298
+    :cond_2
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mbZ:Z
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_3
 
-    .line 356
+    .line 299
     invoke-direct {p0, p3, v1}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->k(Landroid/content/Intent;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 358
-    :cond_4
+    .line 301
+    :cond_3
     invoke-virtual {p0, v4, p3}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->setResult(ILandroid/content/Intent;)V
 
-    .line 359
+    .line 302
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->finish()V
 
     goto :goto_1
 
-    .line 363
-    :cond_5
+    .line 306
+    :cond_4
     const/4 v0, 0x2
 
-    if-ne p1, v0, :cond_6
+    if-ne p1, v0, :cond_5
 
-    .line 364
+    .line 307
     packed-switch p2, :pswitch_data_0
 
     goto :goto_1
 
-    .line 366
+    .line 309
     :pswitch_0
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->finish()V
 
-    .line 367
-    if-eqz p3, :cond_1
+    .line 310
+    if-eqz p3, :cond_0
 
     const-string/jumbo v0, "Select_stay_in_wx"
 
@@ -1899,30 +1928,30 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    .line 368
+    .line 311
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/tencent/mm/ui/transmit/TaskRedirectUI;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 369
+    .line 312
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 370
+    .line 313
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_1
 
-    .line 374
+    .line 317
     :pswitch_1
-    if-eqz p3, :cond_1
+    if-eqz p3, :cond_0
 
-    .line 375
+    .line 318
     const-string/jumbo v0, "Select_Report_Args"
 
     invoke-virtual {p3, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -1931,86 +1960,86 @@
 
     check-cast v0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBm:Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mce:Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;
 
     goto :goto_1
 
-    .line 380
-    :cond_6
+    .line 323
+    :cond_5
     const/4 v0, 0x3
 
-    if-ne p1, v0, :cond_9
+    if-ne p1, v0, :cond_8
 
-    .line 381
+    .line 324
     packed-switch p2, :pswitch_data_1
 
     goto :goto_1
 
-    .line 383
+    .line 326
     :pswitch_2
-    if-eqz p3, :cond_7
+    if-eqz p3, :cond_6
 
-    .line 384
+    .line 327
     const-string/jumbo v0, "received_card_name"
 
     invoke-virtual {p3, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 385
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    .line 328
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-nez v1, :cond_7
+    if-nez v1, :cond_6
 
-    .line 386
+    .line 329
     const-string/jumbo v1, "@chatroom"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_7
 
-    .line 387
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lmc:Ljava/lang/String;
+    .line 330
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lMr:Ljava/lang/String;
 
-    invoke-direct {p0, v1, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->cD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v1, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->cR(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 393
-    :cond_7
+    .line 336
+    :cond_6
     :goto_2
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->finish()V
 
     goto/16 :goto_1
 
-    .line 389
-    :cond_8
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lmc:Ljava/lang/String;
+    .line 332
+    :cond_7
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lMr:Ljava/lang/String;
 
-    invoke-direct {p0, v1, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->cC(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v1, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->cQ(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
-    .line 397
-    :cond_9
+    .line 340
+    :cond_8
     const/4 v0, 0x4
 
-    if-ne p1, v0, :cond_d
+    if-ne p1, v0, :cond_c
 
-    .line 398
-    if-ne p2, v4, :cond_1
+    .line 341
+    if-ne p2, v4, :cond_0
 
-    .line 399
+    .line 342
     const-string/jumbo v0, "Select_Conv_User"
 
     invoke-virtual {p3, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 400
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    .line 343
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2021,7 +2050,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_9
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2029,37 +2058,37 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 401
-    iget-object v3, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->fbM:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
+    .line 344
+    iget-object v3, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->fkm:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
 
-    invoke-virtual {v3, v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->AB(Ljava/lang/String;)V
+    invoke-virtual {v3, v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->CC(Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 403
-    :cond_a
-    invoke-static {v1}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+    .line 346
+    :cond_9
+    invoke-static {v1}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_b
+    if-nez v0, :cond_a
 
-    .line 404
+    .line 347
     const-string/jumbo v0, ","
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/t;->h([Ljava/lang/String;)Ljava/util/List;
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/s;->g([Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
-    .line 408
+    .line 351
     :goto_4
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2070,7 +2099,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_b
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2078,27 +2107,27 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 409
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->fbM:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
+    .line 352
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->fkm:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
 
-    invoke-virtual {v2, v0, v5}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->aj(Ljava/lang/String;Z)V
+    invoke-virtual {v2, v0, v5}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->as(Ljava/lang/String;Z)V
 
     goto :goto_5
 
-    .line 406
-    :cond_b
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    .line 349
+    :cond_a
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     goto :goto_4
 
-    .line 411
-    :cond_c
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->Nk()V
+    .line 354
+    :cond_b
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->PH()V
 
-    .line 412
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bhp()Lcom/tencent/mm/ui/contact/m;
+    .line 355
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bmZ()Lcom/tencent/mm/ui/contact/m;
 
     move-result-object v0
 
@@ -2106,9 +2135,9 @@
 
     goto/16 :goto_1
 
-    .line 416
-    :cond_d
-    const-string/jumbo v0, "!44@/B4Tb64lLpJQGo7VtHU/glxECqNzQuUbU+29i/gx8/w="
+    .line 359
+    :cond_c
+    const-string/jumbo v0, "MicroMsg.SelectConversationUI"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2124,11 +2153,11 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
-    .line 364
+    .line 307
     nop
 
     :pswitch_data_0
@@ -2137,7 +2166,7 @@
         :pswitch_1
     .end packed-switch
 
-    .line 381
+    .line 324
     :pswitch_data_1
     .packed-switch -0x1
         :pswitch_2
@@ -2148,10 +2177,10 @@
     .locals 5
 
     .prologue
-    .line 112
+    .line 109
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->onCreate(Landroid/os/Bundle;)V
 
-    .line 114
+    .line 111
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -2162,7 +2191,7 @@
 
     move-result-object v0
 
-    .line 115
+    .line 112
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -2173,8 +2202,8 @@
 
     move-result-object v1
 
-    .line 116
-    const-string/jumbo v2, "!44@/B4Tb64lLpJQGo7VtHU/glxECqNzQuUbU+29i/gx8/w="
+    .line 113
+    const-string/jumbo v2, "MicroMsg.SelectConversationUI"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2200,22 +2229,22 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 117
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-static {v1}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+    .line 114
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 118
+    invoke-static {v1}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    .line 115
     new-instance v2, Lcom/tencent/mm/plugin/base/stub/d;
 
     new-instance v3, Lcom/tencent/mm/ui/transmit/SelectConversationUI$1;
@@ -2224,34 +2253,41 @@
 
     invoke-direct {v2, p0, v0, v1, v3}, Lcom/tencent/mm/plugin/base/stub/d;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/plugin/base/stub/d$a;)V
 
-    .line 128
-    invoke-virtual {v2}, Lcom/tencent/mm/plugin/base/stub/d;->Jz()V
+    .line 125
+    invoke-virtual {v2}, Lcom/tencent/mm/plugin/base/stub/d;->Ki()V
 
-    .line 130
+    .line 127
     :cond_0
     return-void
 .end method
 
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 7
+    .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
     const/4 v6, 0x0
 
     const/4 v5, 0x1
 
-    .line 273
+    .line 227
     invoke-super/range {p0 .. p5}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
 
-    .line 275
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBk:Z
+    .line 229
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcc:Z
 
     if-eqz v0, :cond_4
 
-    .line 276
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getContentLV()Landroid/widget/ListView;
-
-    move-result-object v0
+    .line 230
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->fOP:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->getHeaderViewsCount()I
 
@@ -2259,11 +2295,11 @@
 
     sub-int v0, p3, v0
 
-    .line 277
+    .line 231
     if-gez v0, :cond_1
 
-    .line 278
-    const-string/jumbo v0, "!44@/B4Tb64lLpJQGo7VtHU/glxECqNzQuUbU+29i/gx8/w="
+    .line 232
+    const-string/jumbo v0, "MicroMsg.SelectConversationUI"
 
     const-string/jumbo v1, "Click HeaderView position=%d"
 
@@ -2275,42 +2311,42 @@
 
     aput-object v3, v2, v6
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 233
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bpi()V
 
     .line 279
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bjl()V
-
-    .line 328
     :cond_0
     :goto_0
     return-void
 
-    .line 283
+    .line 237
     :cond_1
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bhp()Lcom/tencent/mm/ui/contact/m;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bmZ()Lcom/tencent/mm/ui/contact/m;
 
     move-result-object v1
 
-    .line 284
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/contact/m;->rM(I)Lcom/tencent/mm/ui/contact/a/a;
+    .line 238
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/contact/m;->tO(I)Lcom/tencent/mm/ui/contact/a/a;
 
     move-result-object v0
 
-    .line 285
+    .line 239
     if-eqz v0, :cond_0
 
-    .line 288
-    iget-object v2, v0, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
+    .line 242
+    iget-object v2, v0, Lcom/tencent/mm/ui/contact/a/a;->cFh:Lcom/tencent/mm/storage/k;
 
     if-eqz v2, :cond_0
 
-    .line 291
-    iget-object v0, v0, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
+    .line 245
+    iget-object v0, v0, Lcom/tencent/mm/ui/contact/a/a;->cFh:Lcom/tencent/mm/storage/k;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    .line 292
-    const-string/jumbo v2, "!44@/B4Tb64lLpJQGo7VtHU/glxECqNzQuUbU+29i/gx8/w="
+    .line 246
+    const-string/jumbo v2, "MicroMsg.SelectConversationUI"
 
     const-string/jumbo v3, "ClickUser=%s"
 
@@ -2318,10 +2354,10 @@
 
     aput-object v0, v4, v6
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 294
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    .line 248
+    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -2329,26 +2365,26 @@
 
     if-nez v2, :cond_2
 
-    invoke-direct {p0, v5}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->ii(Z)Z
+    invoke-direct {p0, v5}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->iQ(Z)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 295
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bhs()V
+    .line 249
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bnd()V
 
     goto :goto_0
 
-    .line 298
+    .line 252
     :cond_2
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bhs()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bnd()V
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->fbM:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->fkm:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;
 
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->AA(Ljava/lang/String;)V
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->CB(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -2356,32 +2392,30 @@
 
     if-eqz v2, :cond_3
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 301
+    .line 254
     :goto_1
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->Nk()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->PH()V
 
-    .line 302
+    .line 255
     invoke-virtual {v1}, Lcom/tencent/mm/ui/contact/m;->notifyDataSetChanged()V
 
     goto :goto_0
 
-    .line 298
+    .line 252
     :cond_3
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 306
+    .line 258
     :cond_4
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getContentLV()Landroid/widget/ListView;
-
-    move-result-object v0
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->fOP:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->getHeaderViewsCount()I
 
@@ -2389,8 +2423,8 @@
 
     if-ge p3, v0, :cond_6
 
-    .line 307
-    const-string/jumbo v0, "!44@/B4Tb64lLpJQGo7VtHU/glxECqNzQuUbU+29i/gx8/w="
+    .line 259
+    const-string/jumbo v0, "MicroMsg.SelectConversationUI"
 
     const-string/jumbo v1, "Click HeaderView position=%d"
 
@@ -2402,29 +2436,27 @@
 
     aput-object v3, v2, v6
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 308
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->llZ:Z
+    .line 260
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lMo:Z
 
     if-eqz v0, :cond_5
 
-    .line 309
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bjm()V
+    .line 261
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bpj()V
 
     goto :goto_0
 
-    .line 312
+    .line 264
     :cond_5
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bjn()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bpk()V
 
     goto :goto_0
 
-    .line 314
+    .line 266
     :cond_6
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->getContentLV()Landroid/widget/ListView;
-
-    move-result-object v0
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->fOP:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
 
@@ -2436,19 +2468,19 @@
 
     check-cast v0, Lcom/tencent/mm/ui/contact/a/a;
 
-    .line 316
+    .line 268
     if-eqz v0, :cond_0
 
-    .line 319
-    iget-object v0, v0, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
+    .line 271
+    iget-object v0, v0, Lcom/tencent/mm/ui/contact/a/a;->cFh:Lcom/tencent/mm/storage/k;
 
-    .line 320
+    .line 272
     if-eqz v0, :cond_0
 
-    .line 323
-    iget-object v1, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    .line 275
+    iget-object v1, v0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpJQGo7VtHU/glxECqNzQuUbU+29i/gx8/w="
+    const-string/jumbo v0, "MicroMsg.SelectConversationUI"
 
     const-string/jumbo v2, "doClickUser=%s"
 
@@ -2456,7 +2488,7 @@
 
     aput-object v1, v3, v6
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     new-instance v2, Landroid/content/Intent;
 
@@ -2483,12 +2515,12 @@
     invoke-direct {p0, v2, v0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->a(Landroid/content/Intent;Landroid/content/Intent;)V
 
     :goto_2
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->age()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->aiI()V
 
     goto/16 :goto_0
 
     :cond_7
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBi:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mbZ:Z
 
     if-eqz v0, :cond_8
 
@@ -2497,7 +2529,7 @@
     goto :goto_2
 
     :cond_8
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->llZ:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lMo:Z
 
     if-eqz v0, :cond_a
 
@@ -2509,16 +2541,16 @@
 
     if-eqz v0, :cond_9
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lmc:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lMr:Ljava/lang/String;
 
-    invoke-direct {p0, v0, v1}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->cD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v0, v1}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->cR(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     :cond_9
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lmc:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lMr:Ljava/lang/String;
 
-    invoke-direct {p0, v0, v1}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->cC(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v0, v1}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->cQ(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -2532,25 +2564,25 @@
     goto :goto_2
 .end method
 
-.method public final rc(Ljava/lang/String;)V
+.method public final sz(Ljava/lang/String;)V
     .locals 1
 
     .prologue
-    .line 730
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->lBl:Ljava/util/List;
+    .line 655
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->mcd:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 731
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bhp()Lcom/tencent/mm/ui/contact/m;
+    .line 656
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->bmZ()Lcom/tencent/mm/ui/contact/m;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/m;->notifyDataSetChanged()V
 
-    .line 732
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->Nk()V
+    .line 657
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/SelectConversationUI;->PH()V
 
-    .line 733
+    .line 658
     return-void
 .end method

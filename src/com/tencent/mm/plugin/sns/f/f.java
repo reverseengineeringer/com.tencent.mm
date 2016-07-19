@@ -1,49 +1,66 @@
 package com.tencent.mm.plugin.sns.f;
 
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public final class f
-  extends com.tencent.mm.at.a
 {
-  public int gSI;
-  public long gSK;
+  public static final Pattern hat = Pattern.compile("\\{([\\s\\S]*?)\\}");
+  public static String[] hau = { "{sex", "{username", "{richtext" };
+  public static HashMap<String, a> hav = new HashMap();
   
-  protected final int a(int paramInt, Object... paramVarArgs)
+  public static String a(d.a parama)
   {
-    if (paramInt == 0)
+    if (hav.containsKey(hap))
     {
-      paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.A(1, gSK);
-      paramVarArgs.ci(2, gSI);
-      return 0;
-    }
-    if (paramInt == 1) {
-      return a.a.a.a.z(1, gSK) + 0 + a.a.a.a.cg(2, gSI);
-    }
-    if (paramInt == 2)
-    {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.bog();
-        }
+      if ((a)hav.get(hap) == a.haw) {
+        return hap;
       }
-      return 0;
+      return hao;
     }
-    if (paramInt == 3)
+    Object localObject2 = hap;
+    Object localObject1 = localObject2;
+    if (be.kf((String)localObject2)) {
+      return hao;
+    }
+    label197:
+    label200:
+    for (;;)
     {
-      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-      f localf = (f)paramVarArgs[1];
-      switch (((Integer)paramVarArgs[2]).intValue())
+      localObject2 = hat.matcher((CharSequence)localObject1);
+      if (((Matcher)localObject2).find())
       {
-      default: 
-        return -1;
-      case 1: 
-        gSK = maU.jD();
-        return 0;
+        i = ((Matcher)localObject2).groupCount();
+        localObject2 = ((Matcher)localObject2).group();
+        v.i("MicroMsg.SnsAbTestUtil", "hello matcher group() " + i + " " + (String)localObject2);
+        localObject1 = ((String)localObject1).replace((CharSequence)localObject2, "");
+        i = 0;
+        if (i >= hau.length) {
+          break label197;
+        }
+        if (((String)localObject2).indexOf(hau[i]) < 0) {}
       }
-      gSI = maU.jC();
-      return 0;
+      for (int i = 1;; i = 0)
+      {
+        if (i != 0) {
+          break label200;
+        }
+        hav.put(hap, a.hax);
+        return hao;
+        i += 1;
+        break;
+        hav.put(hap, a.haw);
+        return hap;
+      }
     }
-    return -1;
+  }
+  
+  static enum a
+  {
+    private a() {}
   }
 }
 

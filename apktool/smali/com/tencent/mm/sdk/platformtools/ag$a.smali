@@ -15,8 +15,5 @@
 
 
 # virtual methods
-.method public abstract a(Ljava/lang/Runnable;Lcom/tencent/mm/sdk/platformtools/ag;)V
-.end method
-
-.method public abstract a(Ljava/lang/Runnable;Ljava/lang/Thread;JJF)V
+.method public abstract iW()V
 .end method

@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic lDf:Lcom/tencent/mm/ui/widget/a;
+.field final synthetic mdV:Lcom/tencent/mm/ui/widget/a;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 445
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/a$1;->lDf:Lcom/tencent/mm/ui/widget/a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/widget/a$1;->mdV:Lcom/tencent/mm/ui/widget/a;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
 
@@ -38,7 +38,7 @@
 
     .prologue
     .line 450
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/a$1;->lDf:Lcom/tencent/mm/ui/widget/a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/a$1;->mdV:Lcom/tencent/mm/ui/widget/a;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/widget/a;->a(Lcom/tencent/mm/ui/widget/a;)Z
 
@@ -46,7 +46,7 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/a$1;->lDf:Lcom/tencent/mm/ui/widget/a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/a$1;->mdV:Lcom/tencent/mm/ui/widget/a;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/widget/a;->b(Lcom/tencent/mm/ui/widget/a;)Z
 
@@ -55,7 +55,7 @@
     if-eqz v0, :cond_1
 
     .line 451
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/a$1;->lDf:Lcom/tencent/mm/ui/widget/a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/a$1;->mdV:Lcom/tencent/mm/ui/widget/a;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/widget/a;->c(Lcom/tencent/mm/ui/widget/a;)Lcom/tencent/mm/ui/widget/DragSortListView;
 
@@ -69,7 +69,7 @@
     div-int/lit8 v0, v0, 0x5
 
     .line 453
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/a$1;->lDf:Lcom/tencent/mm/ui/widget/a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/a$1;->mdV:Lcom/tencent/mm/ui/widget/a;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/widget/a;->d(Lcom/tencent/mm/ui/widget/a;)F
 
@@ -80,7 +80,7 @@
     if-lez v1, :cond_2
 
     .line 454
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/a$1;->lDf:Lcom/tencent/mm/ui/widget/a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/a$1;->mdV:Lcom/tencent/mm/ui/widget/a;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/widget/a;->e(Lcom/tencent/mm/ui/widget/a;)I
 
@@ -91,18 +91,18 @@
     if-le v1, v0, :cond_0
 
     .line 455
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/a$1;->lDf:Lcom/tencent/mm/ui/widget/a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/a$1;->mdV:Lcom/tencent/mm/ui/widget/a;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/widget/a;->c(Lcom/tencent/mm/ui/widget/a;)Lcom/tencent/mm/ui/widget/DragSortListView;
 
     move-result-object v0
 
-    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/widget/DragSortListView;->F(F)Z
+    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/widget/DragSortListView;->E(F)Z
 
     .line 462
     :cond_0
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/a$1;->lDf:Lcom/tencent/mm/ui/widget/a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/a$1;->mdV:Lcom/tencent/mm/ui/widget/a;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/widget/a;->f(Lcom/tencent/mm/ui/widget/a;)Z
 
@@ -114,7 +114,7 @@
 
     .line 457
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/a$1;->lDf:Lcom/tencent/mm/ui/widget/a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/a$1;->mdV:Lcom/tencent/mm/ui/widget/a;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/widget/a;->d(Lcom/tencent/mm/ui/widget/a;)F
 
@@ -127,7 +127,7 @@
     if-gez v1, :cond_0
 
     .line 458
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/a$1;->lDf:Lcom/tencent/mm/ui/widget/a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/a$1;->mdV:Lcom/tencent/mm/ui/widget/a;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/widget/a;->e(Lcom/tencent/mm/ui/widget/a;)I
 
@@ -136,13 +136,13 @@
     if-ge v1, v0, :cond_0
 
     .line 459
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/a$1;->lDf:Lcom/tencent/mm/ui/widget/a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/a$1;->mdV:Lcom/tencent/mm/ui/widget/a;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/widget/a;->c(Lcom/tencent/mm/ui/widget/a;)Lcom/tencent/mm/ui/widget/DragSortListView;
 
     move-result-object v0
 
-    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/widget/DragSortListView;->F(F)Z
+    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/widget/DragSortListView;->E(F)Z
 
     goto :goto_0
 .end method

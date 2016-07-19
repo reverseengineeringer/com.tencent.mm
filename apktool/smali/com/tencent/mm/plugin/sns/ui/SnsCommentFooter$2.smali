@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+.field final synthetic hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-.field final synthetic hdH:Ljava/util/List;
+.field final synthetic hsu:Ljava/util/List;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 307
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hdH:Ljava/util/List;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hsu:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,7 +49,7 @@
     const/4 v2, 0x0
 
     .line 321
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;)Lcom/tencent/mm/ui/widget/MMEditText;
 
@@ -68,7 +68,7 @@
 
     .line 325
     :cond_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpIPhXvycW2PJqlaK/iQk5LCbM+7zl/KqGE="
+    const-string/jumbo v0, "MicroMsg.SnsCommentFooter"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -76,7 +76,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-static {v4}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->b(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;)Ljava/lang/String;
 
@@ -90,10 +90,10 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 326
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hdH:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hsu:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -113,13 +113,13 @@
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/i;
 
     .line 327
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-static {v4}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->b(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;)Ljava/lang/String;
 
     move-result-object v4
 
-    iget-object v5, v0, Lcom/tencent/mm/plugin/sns/ui/i;->buL:Ljava/lang/String;
+    iget-object v5, v0, Lcom/tencent/mm/plugin/sns/ui/i;->DF:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -128,14 +128,14 @@
     if-eqz v4, :cond_2
 
     .line 328
-    const-string/jumbo v3, "!44@/B4Tb64lLpIPhXvycW2PJqlaK/iQk5LCbM+7zl/KqGE="
+    const-string/jumbo v3, "MicroMsg.SnsCommentFooter"
 
     const-string/jumbo v4, "afterTextChanged update"
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 329
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-static {v3}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;)Lcom/tencent/mm/ui/widget/MMEditText;
 
@@ -158,11 +158,11 @@
     if-nez v0, :cond_3
 
     .line 335
-    const-string/jumbo v0, "!44@/B4Tb64lLpIPhXvycW2PJqlaK/iQk5LCbM+7zl/KqGE="
+    const-string/jumbo v0, "MicroMsg.SnsCommentFooter"
 
     const-string/jumbo v3, "afterTextChanged add"
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 336
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/i;
@@ -170,16 +170,16 @@
     invoke-direct {v0}, Lcom/tencent/mm/plugin/sns/ui/i;-><init>()V
 
     .line 337
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-static {v3}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->b(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;)Ljava/lang/String;
 
     move-result-object v3
 
-    iput-object v3, v0, Lcom/tencent/mm/plugin/sns/ui/i;->buL:Ljava/lang/String;
+    iput-object v3, v0, Lcom/tencent/mm/plugin/sns/ui/i;->DF:Ljava/lang/String;
 
     .line 338
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-static {v3}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;)Lcom/tencent/mm/ui/widget/MMEditText;
 
@@ -209,13 +209,13 @@
     if-lez v3, :cond_3
 
     .line 340
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hdH:Ljava/util/List;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hsu:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 343
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hdH:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hsu:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -226,20 +226,20 @@
     if-le v0, v3, :cond_4
 
     .line 344
-    const-string/jumbo v0, "!44@/B4Tb64lLpIPhXvycW2PJqlaK/iQk5LCbM+7zl/KqGE="
+    const-string/jumbo v0, "MicroMsg.SnsCommentFooter"
 
     const-string/jumbo v3, "comments remove"
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 345
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hdH:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hsu:Ljava/util/List;
 
     invoke-interface {v0, v2}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     .line 347
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;)Lcom/tencent/mm/ui/widget/MMEditText;
 
@@ -274,35 +274,35 @@
     :goto_2
     if-eqz v0, :cond_5
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    iget-boolean v3, v3, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->eYS:Z
+    iget-boolean v3, v3, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->fhm:Z
 
     if-eqz v3, :cond_5
 
     .line 350
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-static {v3, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;Z)V
 
     .line 351
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    iput-boolean v2, v3, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->eYS:Z
+    iput-boolean v2, v3, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->fhm:Z
 
     .line 353
     :cond_5
     if-nez v0, :cond_0
 
     .line 354
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-static {v2, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;Z)V
 
     .line 355
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$2;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->eYS:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->fhm:Z
 
     goto/16 :goto_0
 

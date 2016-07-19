@@ -12,11 +12,11 @@
 
 
 # instance fields
-.field public iGi:Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel$a;
+.field public jdd:Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel$a;
 
-.field public iGj:Lcom/tencent/mm/pluginsdk/ui/chat/f;
+.field public jde:Lcom/tencent/mm/pluginsdk/ui/chat/f;
 
-.field protected iGk:I
+.field protected jdf:I
 
 
 # direct methods
@@ -33,22 +33,36 @@
 
 
 # virtual methods
-.method public abstract RN()V
+.method public abstract Th()V
 .end method
 
-.method public abstract RO()V
+.method public abstract Ti()V
 .end method
 
-.method public abstract RP()V
+.method public abstract Tj()V
 .end method
 
-.method public abstract RQ()V
+.method public abstract Tk()V
 .end method
 
-.method public abstract RR()V
+.method public abstract Tn()V
 .end method
 
-.method public abstract RS()V
+.method public abstract To()V
+.end method
+
+.method public a(Lcom/tencent/mm/pluginsdk/ui/chat/f;)V
+    .locals 0
+
+    .prologue
+    .line 65
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;->jde:Lcom/tencent/mm/pluginsdk/ui/chat/f;
+
+    .line 66
+    return-void
+.end method
+
+.method public abstract bI(Z)V
 .end method
 
 .method public destroy()V
@@ -59,7 +73,16 @@
     return-void
 .end method
 
-.method public abstract j(ZZ)V
+.method public abstract hb(I)V
+.end method
+
+.method public abstract k(ZZ)V
+.end method
+
+.method public abstract od(Ljava/lang/String;)V
+.end method
+
+.method public abstract oe(Ljava/lang/String;)V
 .end method
 
 .method public abstract onPause()V
@@ -68,47 +91,13 @@
 .method public abstract onResume()V
 .end method
 
-.method public setCallback(Lcom/tencent/mm/pluginsdk/ui/chat/f;)V
-    .locals 0
-
-    .prologue
-    .line 65
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;->iGj:Lcom/tencent/mm/pluginsdk/ui/chat/f;
-
-    .line 66
-    return-void
-.end method
-
-.method public abstract setDefaultEmojiByDetail(Ljava/lang/String;)V
-.end method
-
-.method public setFooterType(I)V
+.method public final pU(I)V
     .locals 0
 
     .prologue
     .line 69
-    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;->iGk:I
+    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;->jdf:I
 
     .line 70
     return-void
-.end method
-
-.method public setOnTextOperationListener(Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel$a;)V
-    .locals 0
-
-    .prologue
-    .line 61
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;->iGi:Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel$a;
-
-    .line 62
-    return-void
-.end method
-
-.method public abstract setPortHeightPx(I)V
-.end method
-
-.method public abstract setSendButtonEnable(Z)V
-.end method
-
-.method public abstract setTalkerName(Ljava/lang/String;)V
 .end method

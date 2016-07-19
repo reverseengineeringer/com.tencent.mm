@@ -48,7 +48,7 @@
     return-object v0
 .end method
 
-.method public final ks()Z
+.method public final iV()Z
     .locals 7
 
     .prologue

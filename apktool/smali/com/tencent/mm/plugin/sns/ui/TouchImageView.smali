@@ -6,19 +6,19 @@
 # instance fields
 .field private a:I
 
-.field private aur:Z
+.field private age:Z
 
 .field private b:I
 
 .field private g:I
 
-.field gWl:Lcom/tencent/mm/sdk/platformtools/aa;
+.field private hCY:Landroid/graphics/Rect;
 
-.field gWm:Ljava/lang/Runnable;
+.field private hCZ:Landroid/graphics/Paint;
 
-.field private hmO:Landroid/graphics/Rect;
+.field hjH:Lcom/tencent/mm/sdk/platformtools/ac;
 
-.field private hmP:Landroid/graphics/Paint;
+.field hjI:Ljava/lang/Runnable;
 
 .field private r:I
 
@@ -38,14 +38,14 @@
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hmO:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hCY:Landroid/graphics/Rect;
 
     .line 22
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hmP:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hCZ:Landroid/graphics/Paint;
 
     .line 23
     const/16 v0, 0x5a
@@ -64,7 +64,7 @@
     .line 27
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->aur:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->age:Z
 
     .line 31
     invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->init()V
@@ -87,14 +87,14 @@
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hmO:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hCY:Landroid/graphics/Rect;
 
     .line 22
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hmP:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hCZ:Landroid/graphics/Paint;
 
     .line 23
     const/16 v0, 0x5a
@@ -113,7 +113,7 @@
     .line 27
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->aur:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->age:Z
 
     .line 36
     invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->init()V
@@ -127,7 +127,7 @@
 
     .prologue
     .line 16
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->aur:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->age:Z
 
     return v0
 .end method
@@ -137,18 +137,18 @@
 
     .prologue
     .line 59
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->gWl:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hjH:Lcom/tencent/mm/sdk/platformtools/ac;
 
     .line 60
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sns/ui/TouchImageView$1;-><init>(Lcom/tencent/mm/plugin/sns/ui/TouchImageView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->gWm:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hjI:Ljava/lang/Runnable;
 
     .line 68
     new-instance v0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView$2;
@@ -171,11 +171,11 @@
     invoke-super {p0}, Landroid/widget/ImageView;->onAttachedToWindow()V
 
     .line 112
-    const-string/jumbo v0, "!32@/B4Tb64lLpKeOb+ZJIF+Li0jeXmJpA9V"
+    const-string/jumbo v0, "MicroMsg.MaskImageView"
 
     const-string/jumbo v1, "onAttachedToWindow"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 113
     return-void
@@ -189,11 +189,11 @@
     invoke-super {p0}, Landroid/widget/ImageView;->onDetachedFromWindow()V
 
     .line 118
-    const-string/jumbo v0, "!32@/B4Tb64lLpKeOb+ZJIF+Li0jeXmJpA9V"
+    const-string/jumbo v0, "MicroMsg.MaskImageView"
 
     const-string/jumbo v1, "onDetachedFromWindow"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 119
     return-void
@@ -214,7 +214,7 @@
     if-eqz v0, :cond_0
 
     .line 85
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hmO:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hCY:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->getPaddingLeft()I
 
@@ -223,7 +223,7 @@
     iput v1, v0, Landroid/graphics/Rect;->left:I
 
     .line 86
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hmO:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hCY:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->getPaddingTop()I
 
@@ -232,7 +232,7 @@
     iput v1, v0, Landroid/graphics/Rect;->top:I
 
     .line 87
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hmO:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hCY:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->getWidth()I
 
@@ -247,7 +247,7 @@
     iput v1, v0, Landroid/graphics/Rect;->right:I
 
     .line 88
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hmO:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hCY:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->getHeight()I
 
@@ -262,7 +262,7 @@
     iput v1, v0, Landroid/graphics/Rect;->bottom:I
 
     .line 89
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hmP:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hCZ:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->a:I
 
@@ -275,9 +275,9 @@
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Paint;->setARGB(IIII)V
 
     .line 90
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hmO:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hCY:Landroid/graphics/Rect;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hmP:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->hCZ:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
@@ -296,16 +296,5 @@
     invoke-static {v0}, Ljunit/framework/Assert;->assertTrue(Z)V
 
     .line 100
-    return-void
-.end method
-
-.method public settouchEnable(Z)V
-    .locals 0
-
-    .prologue
-    .line 40
-    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->aur:Z
-
-    .line 41
     return-void
 .end method

@@ -1,26 +1,19 @@
 package com.tencent.mm.app;
 
-import com.tencent.mm.booter.NotifyReceiver;
-import com.tencent.mm.d.a.mw;
-import com.tencent.mm.d.a.mw.a;
-import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.model.bd.b;
+import com.tencent.mm.platformtools.m;
+import com.tencent.mm.plugin.report.service.KVReportJni;
+import com.tencent.mm.protocal.b.am;
+import com.tencent.mm.t.c.a;
 
 final class WorkerProfile$26
-  extends com.tencent.mm.sdk.c.c
+  implements bd.b
 {
-  WorkerProfile$26(WorkerProfile paramWorkerProfile)
-  {
-    super(0);
-  }
+  WorkerProfile$26(WorkerProfile paramWorkerProfile) {}
   
-  public final boolean a(b paramb)
+  public final void a(c.a parama)
   {
-    if (aJl.aJm == 3) {
-      NotifyReceiver.mR();
-    }
-    paramb = (mw)paramb;
-    com.tencent.mm.ba.c.aZg().aW(aJl.className, aJl.aJm);
-    return false;
+    KVReportJni.parseKVPluginMsg(m.a(bys.juZ));
   }
 }
 

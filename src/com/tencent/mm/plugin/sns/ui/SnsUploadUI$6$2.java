@@ -9,12 +9,12 @@ final class SnsUploadUI$6$2
   
   public final void run()
   {
-    SnsUploadSayFooter localSnsUploadSayFooter = SnsUploadUI.b(hlZ.hlY);
-    if (!localSnsUploadSayFooter.aCR()) {
+    SnsUploadSayFooter localSnsUploadSayFooter = SnsUploadUI.b(hCc.hCb);
+    if (!localSnsUploadSayFooter.aFY()) {
       localSnsUploadSayFooter.setVisibility(8);
     }
-    SnsUploadUI.b(hlZ.hlY).postInvalidate();
-    SnsUploadUI.d(hlZ.hlY).postInvalidate();
+    SnsUploadUI.b(hCc.hCb).postInvalidate();
+    SnsUploadUI.d(hCc.hCb).postInvalidate();
   }
 }
 

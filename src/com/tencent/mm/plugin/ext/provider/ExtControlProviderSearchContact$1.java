@@ -10,8 +10,8 @@ final class ExtControlProviderSearchContact$1
   
   public final void run()
   {
-    ExtControlProviderSearchContact.a(dLC, ExtControlProviderSearchContact.d(dLB));
-    dKP.countDown();
+    ExtControlProviderSearchContact.a(dNj, ExtControlProviderSearchContact.c(dNi));
+    dMy.countDown();
   }
 }
 

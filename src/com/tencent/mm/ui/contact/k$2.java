@@ -2,8 +2,8 @@ package com.tencent.mm.ui.contact;
 
 import com.tencent.mm.sdk.h.g.a;
 import com.tencent.mm.sdk.h.i;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ah;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class k$2
   implements g.a
@@ -12,15 +12,15 @@ final class k$2
   
   public final void a(String paramString, i parami)
   {
-    u.d("!44@/B4Tb64lLpISOYcLaKm7W93grpYn2xfC5yJeWqznlqY=", "onNotifyChange, fmsg change");
-    if (!k.b(lkt).aVf()) {
-      k.b(lkt).aUF();
+    v.d("MicroMsg.FMessageContactView", "onNotifyChange, fmsg change");
+    if (!k.b(lKE).baj()) {
+      k.b(lKE).aZJ();
     }
-    paramString = k.b(lkt);
-    if (k.c(lkt)) {}
+    paramString = k.b(lKE);
+    if (k.c(lKE)) {}
     for (long l = 500L;; l = 1000L)
     {
-      paramString.ds(l);
+      paramString.dJ(l);
       return;
     }
   }

@@ -3,11 +3,11 @@ package com.tencent.mm.c.a;
 import android.content.Context;
 import com.tencent.mm.compatible.b.d;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.f.a;
-import com.tencent.mm.sdk.platformtools.al;
-import com.tencent.mm.sdk.platformtools.al.a;
-import com.tencent.mm.sdk.platformtools.al.b;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ao;
+import com.tencent.mm.sdk.platformtools.ao.a;
+import com.tencent.mm.sdk.platformtools.ao.b;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.f.a;
 
 final class a$2$1$1
   implements Runnable
@@ -16,29 +16,29 @@ final class a$2$1$1
   
   public final void run()
   {
-    ah.tF().b(apu.apt.apr.apj, false);
-    Context localContext = apu.apt.apr.context;
-    boolean bool = apu.apt.apr.apj;
-    al.a local1 = new al.a()
+    ah.tG().b(aaM.aaL.aaJ.aaB, false);
+    Context localContext = aaM.aaL.aaJ.context;
+    boolean bool = aaM.aaL.aaJ.aaB;
+    ao.a local1 = new ao.a()
     {
-      public final void lG()
+      public final void jQ()
       {
-        if (!apu.apt.apr.isPlaying())
+        if (!aaM.aaL.aaJ.isPlaying())
         {
-          ah.tF().b(apu.apt.apr);
-          ah.tF().nM();
-          apu.apt.apr.apo = false;
-          apu.apt.apr.apl.oV();
-          ah.tF().setMode(0);
-          u.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "onCompletion() resetSpeaker");
+          ah.tG().b(aaM.aaL.aaJ);
+          ah.tG().mb();
+          aaM.aaL.aaJ.aaG = false;
+          ah.tG().setMode(0);
+          aaM.aaL.aaJ.aaD.nn();
+          v.i("MicroMsg.SceneVoicePlayer", "onCompletion() resetSpeaker");
         }
-        apu.apt.apr.apq.lG();
+        aaM.aaL.aaJ.aaI.jQ();
       }
     };
     if (bool) {}
-    for (al.b localb = al.b.jXa;; localb = al.b.jXb)
+    for (ao.b localb = ao.b.kxt;; localb = ao.b.kxu)
     {
-      al.a(localContext, 2131432253, localb, false, local1);
+      ao.a(localContext, 2131234158, localb, false, local1);
       return;
     }
   }

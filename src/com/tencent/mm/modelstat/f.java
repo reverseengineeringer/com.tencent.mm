@@ -1,101 +1,92 @@
 package com.tencent.mm.modelstat;
 
-import com.tencent.mm.network.aa;
-import com.tencent.mm.sdk.platformtools.ax;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import android.database.Cursor;
 
 public final class f
 {
-  static {}
+  private static final String bYN;
+  int aqQ = -2;
+  public int bYA = 0;
+  public int bYB = 0;
+  public int bYC = 0;
+  public int bYD = 0;
+  public int bYE = 0;
+  public int bYF = 0;
+  public int bYG = 0;
+  public int bYH = 0;
+  public int bYI = 0;
+  public int bYJ = 0;
+  public int bYK = 0;
+  public int bYL = 0;
+  public int bYM = 0;
+  public int bYk = 0;
+  public int bYl = 0;
+  public int bYm = 0;
+  public int bYn = 0;
+  public int bYo = 0;
+  public int bYp = 0;
+  public int bYq = 0;
+  public int bYr = 0;
+  public int bYs = 0;
+  public int bYt = 0;
+  public int bYu = 0;
+  public int bYv = 0;
+  public int bYw = 0;
+  public int bYx = 0;
+  public int bYy = 0;
+  public int bYz = 0;
+  public int id = 0;
   
-  private static void a(c paramc, int paramInt)
+  static
   {
-    switch (paramInt)
-    {
-    default: 
-      return;
-    case 522: 
-      cdx = (cdE + cdF);
-      aou |= 0x8000;
-      return;
-    case 138: 
-    case 139: 
-      cdl = (cds + cdt);
-      aou |= 0x8;
-      return;
-    case 110: 
-      cdz = (cdE + cdF);
-      aou |= 0x20000;
-      return;
-    case 109: 
-    case 123: 
-      cdn = (cds + cdt);
-      aou |= 0x20;
-      return;
-    case 127: 
-      cdB = (cdE + cdF);
-      aou |= 0x80000;
-      return;
-    case 128: 
-      cdp = (cds + cdt);
-      aou |= 0x80;
-      return;
-    case 149: 
-      cdD = (cdE + cdF);
-      aou |= 0x200000;
-      return;
-    }
-    cdr = (cds + cdt);
-    aou |= 0x200;
+    StringBuilder localStringBuilder = new StringBuilder();
+    localStringBuilder.append("NetStatInfo:");
+    localStringBuilder.append("[mobile in=%dB/%dB/%dB, out=%dB/%dB/%dB]");
+    localStringBuilder.append("[wifi in=%dB/%dB/%dB, out=%dB/%dB/%dB]");
+    localStringBuilder.append("[text in=%d/%dB, out=%d/%dB]");
+    localStringBuilder.append("[image in=%d/%dB, out=%d/%dB]");
+    localStringBuilder.append("[voice in=%d/%dB, out=%d/%dB]");
+    localStringBuilder.append("[video in=%d/%dB, out=%d/%dB]");
+    bYN = localStringBuilder.toString();
   }
   
-  private static void c(c paramc)
+  public final void b(Cursor paramCursor)
   {
-    ax.update();
-    cdu = ((int)ax.aVv());
-    cdG = ((int)ax.aVu());
-    cdv = ((int)ax.aVt());
-    cdH = ((int)ax.aVs());
-    cdI = ((int)ax.aVz());
-    cdK = ((int)ax.aVy());
-    cdJ = ((int)ax.aVx());
-    cdL = ((int)ax.aVw());
-    aou = (aou | 0x2000 | 0x2000000 | 0x1000 | 0x1000000 | 0x8000000 | 0x20000000 | 0x4000000 | 0x10000000);
+    id = paramCursor.getInt(0);
+    bYk = paramCursor.getInt(1);
+    bYl = paramCursor.getInt(2);
+    bYm = paramCursor.getInt(3);
+    bYn = paramCursor.getInt(4);
+    bYo = paramCursor.getInt(5);
+    bYp = paramCursor.getInt(6);
+    bYq = paramCursor.getInt(7);
+    bYr = paramCursor.getInt(8);
+    bYs = paramCursor.getInt(9);
+    bYt = paramCursor.getInt(10);
+    bYu = paramCursor.getInt(11);
+    bYv = paramCursor.getInt(12);
+    bYw = paramCursor.getInt(13);
+    bYx = paramCursor.getInt(14);
+    bYy = paramCursor.getInt(15);
+    bYz = paramCursor.getInt(16);
+    bYA = paramCursor.getInt(17);
+    bYB = paramCursor.getInt(18);
+    bYC = paramCursor.getInt(19);
+    bYD = paramCursor.getInt(20);
+    bYE = paramCursor.getInt(21);
+    bYF = paramCursor.getInt(22);
+    bYG = paramCursor.getInt(23);
+    bYH = paramCursor.getInt(24);
+    bYI = paramCursor.getInt(25);
+    bYJ = paramCursor.getInt(26);
+    bYK = paramCursor.getInt(27);
+    bYL = paramCursor.getInt(28);
+    bYM = paramCursor.getInt(29);
   }
   
-  public static void i(int paramInt1, int paramInt2, int paramInt3)
+  public final String toString()
   {
-    if (aa.bg(y.getContext()))
-    {
-      u.i("!44@/B4Tb64lLpKaLNAssnLXZl1wY8MbRHCtlBQKyQ1d02k=", "dknetflow wifi recv:%d send:%d type:%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(0) });
-      j(paramInt1, paramInt2, 0);
-      return;
-    }
-    u.i("!44@/B4Tb64lLpKaLNAssnLXZl1wY8MbRHCtlBQKyQ1d02k=", "dknetflow mobile recv:%d send:%d type:%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(0) });
-    k(paramInt1, paramInt2, 0);
-  }
-  
-  public static void j(int paramInt1, int paramInt2, int paramInt3)
-  {
-    c localc = new c();
-    cdt = paramInt1;
-    cdF = paramInt2;
-    aou = 8390656;
-    c(localc);
-    a(localc, paramInt3);
-    h.Dw().a(localc);
-  }
-  
-  public static void k(int paramInt1, int paramInt2, int paramInt3)
-  {
-    c localc = new c();
-    cds = paramInt1;
-    cdE = paramInt2;
-    aou = 4195328;
-    c(localc);
-    a(localc, paramInt3);
-    h.Dw().a(localc);
+    return String.format(bYN, new Object[] { Integer.valueOf(bYt), Integer.valueOf(bYJ), Integer.valueOf(bYv), Integer.valueOf(bYF), Integer.valueOf(bYL), Integer.valueOf(bYH), Integer.valueOf(bYu), Integer.valueOf(bYK), Integer.valueOf(bYw), Integer.valueOf(bYG), Integer.valueOf(bYM), Integer.valueOf(bYI), Integer.valueOf(bYl), Integer.valueOf(bYm), Integer.valueOf(bYx), Integer.valueOf(bYy), Integer.valueOf(bYn), Integer.valueOf(bYo), Integer.valueOf(bYz), Integer.valueOf(bYA), Integer.valueOf(bYp), Integer.valueOf(bYq), Integer.valueOf(bYB), Integer.valueOf(bYC), Integer.valueOf(bYr), Integer.valueOf(bYs), Integer.valueOf(bYD), Integer.valueOf(bYE) });
   }
 }
 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView style="@style/MMScroll">
+        <LinearLayout style="@style/MMBody">
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/gn" android:gravity="left" android:id="@id/a_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bkd" />
+            <TextView android:textColor="@color/j_" android:id="@id/a_2" android:background="@drawable/dl" android:paddingBottom="@dimen/j_" android:layout_marginTop="@dimen/i7" style="@style/MMLineEditText" />
+            <LinearLayout android:orientation="vertical" android:id="@id/a_g" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/he">
+                <TextView android:textSize="@dimen/i8" android:textColor="@color/gn" android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bk_" />
+                <TextView android:textColor="@color/j_" android:gravity="top" android:id="@id/a_c" android:background="@drawable/dl" android:paddingBottom="@dimen/j_" android:layout_width="fill_parent" android:layout_marginTop="@dimen/i7" android:singleLine="false" style="@style/MMEditText" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/a_h" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/he">
+                <TextView android:textSize="@dimen/i8" android:textColor="@color/gn" android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bkb" />
+                <ImageView android:id="@id/a_f" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_marginTop="@dimen/i7" android:scaleType="centerCrop" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

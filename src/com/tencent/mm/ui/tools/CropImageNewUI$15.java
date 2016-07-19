@@ -10,7 +10,7 @@ final class CropImageNewUI$15
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    CropImageNewUI.a(luq, false);
+    CropImageNewUI.a(lVs, false);
   }
 }
 

@@ -4,46 +4,46 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelfriend.z;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 
 final class RegSetInfoUI$1
-  implements af.a
+  implements ah.a
 {
   RegSetInfoUI$1(RegSetInfoUI paramRegSetInfoUI) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    String str = RegSetInfoUI.a(kwh).getText().toString().trim();
-    Object localObject2 = RegSetInfoUI.b(kwh).getText().toString().trim();
+    String str = RegSetInfoUI.a(kVo).getText().toString().trim();
+    Object localObject2 = RegSetInfoUI.b(kVo).getText().toString().trim();
     Object localObject1 = str;
-    if (ay.kz(str))
+    if (be.kf(str))
     {
       localObject1 = str;
-      if (!ay.kz((String)localObject2)) {
+      if (!be.kf((String)localObject2)) {
         if (((String)localObject2).length() <= 5) {
-          break label192;
+          break label193;
         }
       }
     }
-    label192:
+    label193:
     for (localObject1 = ((String)localObject2).substring(0, 5);; localObject1 = localObject2)
     {
-      if ((!ay.kz((String)localObject1)) && (ay.kz((String)localObject2))) {
+      if ((!be.kf((String)localObject1)) && (be.kf((String)localObject2))) {
         localObject2 = localObject1;
       }
       for (;;)
       {
-        if ((!ay.kz((String)localObject1)) && (RegSetInfoUI.c(kwh)) && (RegSetInfoUI.d(kwh)))
+        if ((!be.kf((String)localObject1)) && (RegSetInfoUI.c(kVo)) && (RegSetInfoUI.d(kVo)))
         {
-          int i = RegSetInfoUI.e(kwh);
-          str = RegSetInfoUI.f(kwh);
-          ah.tE().a(429, kwh);
-          localObject1 = new z(str, RegSetInfoUI.g(kwh), i, (String)localObject2, (String)localObject1, "", "");
-          ah.tE().d((j)localObject1);
-          RegSetInfoUI.h(kwh).setVisibility(0);
+          int i = RegSetInfoUI.e(kVo);
+          str = RegSetInfoUI.f(kVo);
+          ah.tF().a(429, kVo);
+          localObject1 = new z(str, RegSetInfoUI.g(kVo), i, (String)localObject2, (String)localObject1, "", "");
+          ah.tF().a((j)localObject1, 0);
+          RegSetInfoUI.h(kVo).setVisibility(0);
         }
         return false;
       }

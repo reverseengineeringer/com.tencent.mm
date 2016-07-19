@@ -7,35 +7,35 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
 import java.util.Iterator;
 import java.util.List;
 
 public final class a
   extends q
 {
-  private final a izH;
-  private final Intent izI;
-  private final u izJ = new u();
+  private final a iWf;
+  private final Intent iWg;
+  private final u iWh = new u();
   
   public a(Bundle paramBundle)
   {
     if ((paramBundle == null) || (paramBundle.getParcelable("key_target_intent") == null)) {
-      izH = a.izL;
+      iWf = a.iWj;
     }
-    while (izH == a.izL)
+    while (iWf == a.iWj)
     {
-      izI = null;
+      iWg = null;
       return;
-      a locala = a.nY(paramBundle.getInt("key_map_app", izLcwi));
-      if (a(y.getContext(), locala, null) == null) {
-        izH = a.izL;
+      a locala = a.pE(paramBundle.getInt("key_map_app", iWjcrO));
+      if (a(aa.getContext(), locala, null) == null) {
+        iWf = a.iWj;
       } else {
-        izH = locala;
+        iWf = locala;
       }
     }
-    izI = ((Intent)paramBundle.getParcelable("key_target_intent"));
+    iWg = ((Intent)paramBundle.getParcelable("key_target_intent"));
   }
   
   private static ResolveInfo a(Context paramContext, a parama, Intent paramIntent)
@@ -45,7 +45,7 @@ public final class a
       localIntent = new Intent("android.intent.action.VIEW", Uri.parse(String.format("geo:%f,%f", new Object[] { Float.valueOf(0.0F), Float.valueOf(0.0F) })));
     }
     paramContext = paramContext.getPackageManager().queryIntentActivities(localIntent, 0);
-    if (ay.bq(paramContext)) {
+    if (be.bz(paramContext)) {
       return null;
     }
     paramContext = paramContext.iterator();
@@ -59,9 +59,14 @@ public final class a
     return null;
   }
   
-  public final String FG()
+  public final boolean By(String paramString)
   {
-    if (izH == a.izL) {
+    return iWf.getPackage().equals(paramString);
+  }
+  
+  public final String Gb()
+  {
+    if (iWf == a.iWj) {
       return "http://softroute.map.qq.com/downloadfile?cid=00008&referer=wx_client";
     }
     return null;
@@ -69,22 +74,22 @@ public final class a
   
   public final String a(Context paramContext, ResolveInfo paramResolveInfo)
   {
-    return izJ.a(paramContext, paramResolveInfo);
+    return iWh.a(paramContext, paramResolveInfo);
   }
   
-  public final String aPk()
+  public final String aTQ()
   {
-    if (izH == a.izL) {
+    if (iWf == a.iWj) {
       return "TencentMap.apk";
     }
     return null;
   }
   
-  public final r.a aPl()
+  public final r.a aTR()
   {
     Object localObject;
-    if (izH == a.izL) {
-      localObject = izJ.aPl();
+    if (iWf == a.iWj) {
+      localObject = iWh.aTR();
     }
     r.a locala;
     ResolveInfo localResolveInfo;
@@ -92,58 +97,53 @@ public final class a
     {
       return (r.a)localObject;
       locala = new r.a();
-      iAK = -1;
-      iAH = -1;
-      localResolveInfo = a(y.getContext(), izH, izI);
+      iXk = -1;
+      iXh = -1;
+      localResolveInfo = a(aa.getContext(), iWf, iWg);
       localObject = locala;
     } while (localResolveInfo == null);
-    iAL = a(y.getContext(), localResolveInfo);
+    iXl = a(aa.getContext(), localResolveInfo);
     return locala;
   }
   
-  public final boolean cK(Context paramContext)
+  public final boolean cH(Context paramContext)
   {
-    if (izH == a.izL) {
-      return izJ.cK(paramContext);
+    if (iWf == a.iWj) {
+      return iWh.cH(paramContext);
     }
-    return a(paramContext, izH, izI) != null;
-  }
-  
-  public final boolean zC(String paramString)
-  {
-    return izH.getPackage().equals(paramString);
+    return a(paramContext, iWf, iWg) != null;
   }
   
   public static enum a
   {
-    public final int cwi;
+    public final int crO;
     
-    private a(int paramInt1)
+    private a(int paramInt)
     {
-      cwi = paramInt1;
+      crO = paramInt;
     }
     
-    public static a nY(int paramInt)
+    public static a pE(int paramInt)
     {
       switch (paramInt)
       {
       default: 
-        return izL;
+        return iWj;
       case 0: 
-        return izL;
+        return iWj;
       case 1: 
-        return izM;
+        return iWk;
       case 2: 
-        return izN;
+        return iWl;
       case 3: 
-        return izO;
+        return iWm;
       }
-      return izP;
+      return iWn;
     }
     
     public final String getPackage()
     {
-      switch (a.1.izK[ordinal()])
+      switch (a.1.iWi[ordinal()])
       {
       default: 
         return "com.tencent.map";

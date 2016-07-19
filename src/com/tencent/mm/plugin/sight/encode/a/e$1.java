@@ -3,8 +3,8 @@ package com.tencent.mm.plugin.sight.encode.a;
 import android.hardware.Camera;
 import android.hardware.Camera.PreviewCallback;
 import com.tencent.mm.plugin.sight.base.SightVideoJNI;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class e$1
   implements Camera.PreviewCallback
@@ -14,9 +14,9 @@ final class e$1
   public final void onPreviewFrame(byte[] paramArrayOfByte, Camera paramCamera)
   {
     boolean bool;
-    if (gAD.gAB % 20 == 0)
+    if (gHf.gHd % 20 == 0)
     {
-      paramCamera = gAD.gAt.gAN;
+      paramCamera = gHf.gGV.gHp;
       if (paramArrayOfByte == null)
       {
         bool = true;
@@ -25,20 +25,20 @@ final class e$1
         }
         i = -1;
         label37:
-        u.i("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "got 20 frame! mediaStatus %s, data NULL ? %B, dataLength %d", new Object[] { paramCamera, Boolean.valueOf(bool), Integer.valueOf(i) });
+        v.i("MicroMsg.SightCustomAsyncMediaRecorder", "got 20 frame! mediaStatus %s, data NULL ? %B, dataLength %d", new Object[] { paramCamera, Boolean.valueOf(bool), Integer.valueOf(i) });
       }
     }
     else
     {
-      paramCamera = gAD;
-      gAB += 1;
+      paramCamera = gHf;
+      gHd += 1;
       if ((paramArrayOfByte != null) && (paramArrayOfByte.length > 0)) {
         break label104;
       }
     }
     label98:
     label104:
-    while (gAD.gAt.gAN != b.b.gzM)
+    while (gHf.gGV.gHp != b.b.gGo)
     {
       return;
       bool = false;
@@ -46,23 +46,23 @@ final class e$1
       i = paramArrayOfByte.length;
       break label37;
     }
-    gAD.gAr.awl();
-    paramCamera = gAD.gAs;
+    gHf.gGT.ayJ();
+    paramCamera = gHf.gGU;
     int i = paramArrayOfByte.length;
-    int j = com.tencent.mm.pluginsdk.l.a.iFl;
-    int k = com.tencent.mm.pluginsdk.l.a.iFk;
-    gBd = ay.FT();
-    if (gBb < 0)
+    int j = com.tencent.mm.pluginsdk.m.a.jcg;
+    int k = com.tencent.mm.pluginsdk.m.a.jcf;
+    gHF = be.Gq();
+    if (gHD < 0)
     {
-      u.e("!44@/B4Tb64lLpJYfkm+3BfBr630hXwybmHsot/c0pFER9s=", "write data error, yuv buffer id error");
+      v.e("MicroMsg.SightYUVRecorder", "write data error, yuv buffer id error");
       return;
     }
-    if (0L == cJQ) {
-      cJQ = ay.FT();
+    if (0L == cGU) {
+      cGU = be.Gq();
     }
-    gBc += 1;
-    SightVideoJNI.writeYuvData(gBb, paramArrayOfByte, i, j, k);
-    u.d("!44@/B4Tb64lLpJYfkm+3BfBr630hXwybmHsot/c0pFER9s=", "write data use %dms", new Object[] { Long.valueOf(ay.ao(gBd)) });
+    gHE += 1;
+    SightVideoJNI.writeYuvData(gHD, paramArrayOfByte, i, j, k);
+    v.d("MicroMsg.SightYUVRecorder", "write data use %dms", new Object[] { Long.valueOf(be.av(gHF)) });
   }
 }
 

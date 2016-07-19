@@ -12,12 +12,12 @@ final class ChatFooter$22$1
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     paramInt = 1;
-    boolean bool = h.b(iLQ, ChatFooter.c(iLR.iLO), true);
-    paramDialogInterface = iLR.iLO;
+    boolean bool = h.b(jiN, ChatFooter.c(jiO.jiL), true);
+    paramDialogInterface = jiO.jiL;
     if (bool) {}
     for (;;)
     {
-      ChatFooter.a(paramDialogInterface, paramInt, iLQ);
+      ChatFooter.a(paramDialogInterface, paramInt, jiN);
       return;
       paramInt = 0;
     }

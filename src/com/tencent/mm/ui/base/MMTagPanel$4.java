@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class MMTagPanel$4
   implements View.OnClickListener
@@ -11,10 +11,10 @@ final class MMTagPanel$4
   
   public final void onClick(View paramView)
   {
-    u.d("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "on edittext click");
-    kHq.bcY();
-    if (MMTagPanel.e(kHq) != null) {
-      MMTagPanel.e(kHq).SS();
+    v.d("MicroMsg.MMTagPanel", "on edittext click");
+    lgs.biA();
+    if (MMTagPanel.e(lgs) != null) {
+      MMTagPanel.e(lgs).Ul();
     }
   }
 }

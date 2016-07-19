@@ -1,9 +1,9 @@
 package com.tencent.mm.ui.base;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class MMSlideDelView$a
-  extends MMSlideDelView.h
+  extends MMSlideDelView.g
   implements Runnable
 {
   private MMSlideDelView$a(MMSlideDelView paramMMSlideDelView)
@@ -13,16 +13,16 @@ final class MMSlideDelView$a
   
   public final void run()
   {
-    if ((kGQ.hasWindowFocus()) && (MMSlideDelView.c(kGQ) == drS)) {}
+    if ((lfS.hasWindowFocus()) && (MMSlideDelView.c(lfS) == dsi)) {}
     for (int i = 1;; i = 0)
     {
-      if ((i != 0) && (!MMSlideDelView.d(kGQ)))
+      if ((i != 0) && (!MMSlideDelView.d(lfS)))
       {
-        u.i("!32@/B4Tb64lLpKjyuEDzIt3EXrdyszrp4wg", "is long press");
-        if (kGQ.getParent() != null)
+        v.i("MicroMsg.MMSlideDelView", "is long press");
+        if (lfS.getParent() != null)
         {
-          MMSlideDelView.e(kGQ);
-          kGQ.performLongClick();
+          MMSlideDelView.e(lfS);
+          lfS.performLongClick();
         }
       }
       return;

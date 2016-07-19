@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <selector>
+            <item android:state_pressed="true" android:drawable="@color/nl" />
+            <item android:state_focused="true" android:drawable="@color/nl" />
+            <item android:drawable="@color/nl" />
+        </selector>
+    </item>
+    <item>
+        <ripple android:color="@color/d5" />
+    </item>
+</layer-list>

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/voicesearch/b;->H(Ljava/lang/Runnable;)V
+    value = Lcom/tencent/mm/ui/voicesearch/b;->L(Ljava/lang/Runnable;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic dxj:Ljava/lang/Runnable;
+.field final synthetic dyt:Ljava/lang/Runnable;
 
-.field final synthetic lCw:Lcom/tencent/mm/ui/voicesearch/b;
+.field final synthetic mdn:Lcom/tencent/mm/ui/voicesearch/b;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 809
-    iput-object p1, p0, Lcom/tencent/mm/ui/voicesearch/b$4;->lCw:Lcom/tencent/mm/ui/voicesearch/b;
+    iput-object p1, p0, Lcom/tencent/mm/ui/voicesearch/b$4;->mdn:Lcom/tencent/mm/ui/voicesearch/b;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/voicesearch/b$4;->dxj:Ljava/lang/Runnable;
+    iput-object p2, p0, Lcom/tencent/mm/ui/voicesearch/b$4;->dyt:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,12 +45,12 @@
 
     .prologue
     .line 813
-    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/b$4;->dxj:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/b$4;->dyt:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     .line 814
-    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/b$4;->lCw:Lcom/tencent/mm/ui/voicesearch/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/b$4;->mdn:Lcom/tencent/mm/ui/voicesearch/b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/voicesearch/b;->notifyDataSetChanged()V
 

@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcom/tencent/mm/compatible/g/a$a;
+
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
@@ -9,182 +12,75 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x19
+    accessFlags = 0x9
     name = "a"
 .end annotation
 
 
 # instance fields
-.field aJm:I
-
-.field className:Ljava/lang/String;
-
-.field kjd:I
-
-.field kje:I
-
-.field savePath:Ljava/lang/String;
+.field krG:Lcom/tencent/mm/svg/b/a;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;III)V
-    .locals 6
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 410
+    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 411
-    iput-object p1, p0, Lcom/tencent/mm/ba/c$a;->className:Ljava/lang/String;
+    .line 31
+    new-instance v0, Lcom/tencent/mm/svg/b/a;
 
-    .line 412
-    iput p2, p0, Lcom/tencent/mm/ba/c$a;->aJm:I
+    invoke-direct {v0}, Lcom/tencent/mm/svg/b/a;-><init>()V
 
-    .line 413
-    iput p3, p0, Lcom/tencent/mm/ba/c$a;->kjd:I
+    iput-object v0, p0, Lcom/tencent/mm/ba/c$a;->krG:Lcom/tencent/mm/svg/b/a;
 
-    .line 414
-    iput p4, p0, Lcom/tencent/mm/ba/c$a;->kje:I
+    return-void
+.end method
 
-    .line 415
-    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+# virtual methods
+.method public final decodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    .locals 2
 
-    .line 416
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    .prologue
+    .line 65
+    iget-object v0, p0, Lcom/tencent/mm/ba/c$a;->krG:Lcom/tencent/mm/svg/b/a;
+
+    invoke-virtual {v0, p1, p2}, Lcom/tencent/mm/svg/b/a;->d(Landroid/content/res/Resources;I)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 417
-    sget-object v0, Lcom/tencent/mm/ba/c;->kiX:Ljava/lang/String;
+    .line 66
+    const/4 v0, 0x0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 67
+    if-eqz p3, :cond_0
 
-    move-result-object v0
+    .line 68
+    iget v0, p3, Landroid/graphics/BitmapFactory$Options;->inDensity:I
 
-    const-string/jumbo v2, "WEIXIN_"
+    int-to-float v0, v0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/high16 v1, 0x43200000    # 160.0f
 
-    move-result-object v0
+    div-float/2addr v0, v1
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v2, ".trace"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 421
-    :goto_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0="
-
-    const-string/jumbo v2, "TRACE startMethod path %s traceSize : %d"
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    aput-object v5, v3, v4
-
-    const/4 v4, 0x1
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v3, v4
-
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 422
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tencent/mm/ba/c$a;->savePath:Ljava/lang/String;
-
-    .line 423
-    return-void
-
-    .line 419
+    .line 70
     :cond_0
-    sget-object v0, Lcom/tencent/mm/ba/c;->kiX:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1, p2, v0}, Lcom/tencent/mm/svg/b/a;->b(Landroid/content/res/Resources;IF)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 72
+    :goto_0
+    return-object v0
 
-    move-result-object v0
-
-    const-string/jumbo v2, "_"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string/jumbo v0, ""
-
-    packed-switch p2, :pswitch_data_0
-
-    :goto_1
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v2, ".trace"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
-
-    :pswitch_0
-    const-string/jumbo v0, "onResume"
-
-    goto :goto_1
-
-    :pswitch_1
-    const-string/jumbo v0, "onCreate"
-
-    goto :goto_1
-
-    :pswitch_2
-    const-string/jumbo v0, "onPause"
-
-    goto :goto_1
-
-    :pswitch_3
-    const-string/jumbo v0, "onScrool"
-
-    goto :goto_1
-
-    :pswitch_4
-    const-string/jumbo v0, "all"
-
-    goto :goto_1
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_3
-        :pswitch_4
-    .end packed-switch
 .end method

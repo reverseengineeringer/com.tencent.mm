@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public anQ:I
-
-.field public anV:I
+.field public acr:I
 
 .field public buf:[B
+
+.field public cbK:I
 
 .field public ret:I
 
@@ -29,10 +29,10 @@
     iput-object v0, p0, Lcom/tencent/mm/modelvoice/g;->buf:[B
 
     .line 11
-    iput v1, p0, Lcom/tencent/mm/modelvoice/g;->anV:I
+    iput v1, p0, Lcom/tencent/mm/modelvoice/g;->acr:I
 
     .line 12
-    iput v1, p0, Lcom/tencent/mm/modelvoice/g;->anQ:I
+    iput v1, p0, Lcom/tencent/mm/modelvoice/g;->cbK:I
 
     .line 13
     iput v1, p0, Lcom/tencent/mm/modelvoice/g;->ret:I

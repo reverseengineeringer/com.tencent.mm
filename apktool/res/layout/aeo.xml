@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/qk" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:background="@color/dg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/ats" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center|left" android:orientation="vertical" android:id="@id/cnh" android:paddingLeft="@dimen/i7" android:paddingRight="@dimen/i7" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="22.0dip" android:textColor="@color/ot" android:id="@id/cni" android:paddingLeft="@dimen/j8" android:paddingTop="@dimen/i7" android:paddingBottom="@dimen/i7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+                <ImageView android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/dy" android:src="@color/m2" />
+            </LinearLayout>
+            <com.tencent.mm.ui.base.MaxListView android:id="@id/cnj" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/cnk" android:background="@drawable/dl" android:paddingLeft="@dimen/i7" android:paddingRight="@dimen/i7" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/dy" android:src="@color/m2" />
+                <TextView android:textSize="20.0dip" android:textColor="@color/ot" android:id="@id/cni" android:paddingTop="@dimen/i7" android:paddingBottom="@dimen/i7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ex" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

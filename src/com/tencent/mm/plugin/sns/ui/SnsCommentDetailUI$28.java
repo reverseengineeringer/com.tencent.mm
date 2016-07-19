@@ -3,7 +3,7 @@ package com.tencent.mm.plugin.sns.ui;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SnsCommentDetailUI$28
   implements Animation.AnimationListener
@@ -12,11 +12,11 @@ final class SnsCommentDetailUI$28
   
   public final void onAnimationEnd(Animation paramAnimation)
   {
-    u.d("!44@/B4Tb64lLpIPhXvycW2PJmwGqDNVA4FXx0Nq8byzawc=", "onAnimationEnd");
-    if (SnsCommentDetailUI.v(hda) != null)
+    v.d("MicroMsg.SnsCommentDetailUI", "onAnimationEnd");
+    if (SnsCommentDetailUI.v(hrN) != null)
     {
-      SnsCommentDetailUI.v(hda).clearAnimation();
-      SnsCommentDetailUI.v(hda).setVisibility(8);
+      SnsCommentDetailUI.v(hrN).clearAnimation();
+      SnsCommentDetailUI.v(hrN).setVisibility(8);
     }
   }
   

@@ -7,7 +7,7 @@ final class SnsHeader$1$1
 {
   SnsHeader$1$1(SnsHeader.1 param1, long paramLong) {}
   
-  public final void eu(int paramInt)
+  public final void fg(int paramInt)
   {
     switch (paramInt)
     {
@@ -15,8 +15,8 @@ final class SnsHeader$1$1
     do
     {
       return;
-    } while (SnsHeader.g(hej.hei));
-    SnsHeader.a(hej.hei, gOh);
+    } while (SnsHeader.g(hsV.hsT));
+    SnsHeader.a(hsV.hsT, hsU);
   }
 }
 

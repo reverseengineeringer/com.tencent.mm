@@ -5,7 +5,7 @@
 
 # direct methods
 .method public static D(J)Z
-    .locals 13
+    .locals 14
 
     .prologue
     const/4 v1, 0x1
@@ -15,18 +15,18 @@
     const/4 v0, 0x0
 
     .line 56
-    invoke-static {}, Lcom/tencent/mm/compatible/util/e;->oW()Z
+    invoke-static {}, Lcom/tencent/mm/compatible/util/e;->no()Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
     .line 57
-    const-string/jumbo v1, "!24@/B4Tb64lLpJct1kv8RvO0Q=="
+    const-string/jumbo v1, "MicroMsg.CUtil"
 
     const-string/jumbo v2, "summer isSDCardHaveEnoughSpace sdcard not avail and ret false"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 86
     :cond_0
@@ -41,7 +41,7 @@
     :try_start_0
     new-instance v3, Landroid/os/StatFs;
 
-    sget-object v2, Lcom/tencent/mm/compatible/util/d;->bxc:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/compatible/util/d;->bpe:Ljava/lang/String;
 
     invoke-direct {v3, v2}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
     :try_end_0
@@ -109,7 +109,7 @@
     if-gez v2, :cond_2
 
     .line 83
-    const-string/jumbo v1, "!24@/B4Tb64lLpJct1kv8RvO0Q=="
+    const-string/jumbo v1, "MicroMsg.CUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -131,7 +131,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -145,7 +145,7 @@
 
     .line 68
     :goto_2
-    const-string/jumbo v8, "!24@/B4Tb64lLpJct1kv8RvO0Q=="
+    const-string/jumbo v8, "MicroMsg.CUtil"
 
     const-string/jumbo v9, "isSDCardHaveEnoughSpace"
 
@@ -153,7 +153,7 @@
 
     aput-object v2, v10, v0
 
-    invoke-static {v8, v9, v10}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v8, v9, v10}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-wide v8, v4
 
@@ -181,7 +181,7 @@
     goto :goto_2
 .end method
 
-.method public static bU(I)Z
+.method public static cm(I)Z
     .locals 1
 
     .prologue
@@ -201,7 +201,7 @@
     goto :goto_0
 .end method
 
-.method public static bV(I)Z
+.method public static cn(I)Z
     .locals 1
 
     .prologue
@@ -221,7 +221,7 @@
     goto :goto_0
 .end method
 
-.method public static oW()Z
+.method public static no()Z
     .locals 5
 
     .prologue
@@ -237,7 +237,7 @@
     move-result-object v1
 
     .line 32
-    sget-object v2, Lcom/tencent/mm/compatible/util/d;->bxc:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/compatible/util/d;->bpe:Ljava/lang/String;
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -291,7 +291,7 @@
     move-exception v1
 
     .line 36
-    const-string/jumbo v2, "!24@/B4Tb64lLpJct1kv8RvO0Q=="
+    const-string/jumbo v2, "MicroMsg.CUtil"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -313,7 +313,7 @@
 
     move-result-object v1
 
-    sget-object v3, Lcom/tencent/mm/compatible/util/d;->bxc:Ljava/lang/String;
+    sget-object v3, Lcom/tencent/mm/compatible/util/d;->bpe:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -323,7 +323,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -332,7 +332,7 @@
     :try_start_1
     new-instance v1, Ljava/io/File;
 
-    sget-object v2, Lcom/tencent/mm/compatible/util/d;->bxc:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/compatible/util/d;->bpe:Ljava/lang/String;
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -349,7 +349,7 @@
     move-exception v1
 
     .line 43
-    const-string/jumbo v2, "!24@/B4Tb64lLpJct1kv8RvO0Q=="
+    const-string/jumbo v2, "MicroMsg.CUtil"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -371,7 +371,7 @@
 
     move-result-object v1
 
-    sget-object v3, Lcom/tencent/mm/compatible/util/d;->bxc:Ljava/lang/String;
+    sget-object v3, Lcom/tencent/mm/compatible/util/d;->bpe:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -381,7 +381,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

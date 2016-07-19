@@ -4,11 +4,11 @@ import java.util.List;
 
 public abstract interface d$a
 {
-  public abstract void aP(List paramList);
+  public abstract void aV(List<String> paramList);
   
-  public abstract void awV();
+  public abstract void azs();
   
-  public abstract void awW();
+  public abstract void azt();
 }
 
 /* Location:

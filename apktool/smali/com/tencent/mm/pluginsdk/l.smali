@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract aPf()Ljava/lang/Object;
+.method public abstract aTH()Ljava/lang/Object;
 .end method

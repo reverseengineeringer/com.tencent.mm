@@ -1,22 +1,22 @@
 package com.tencent.mm.ui.chatting;
 
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class ChattingUI$a$1
-  extends aa
+  extends ac
 {
   ChattingUI$a$1(ChattingUI.a parama) {}
   
   public final void handleMessage(Message paramMessage)
   {
-    if (laF.isFinishing()) {}
-    while (!ChattingUI.a.b(laF)) {
+    if (lAY.isFinishing()) {}
+    while (!ChattingUI.a.b(lAY)) {
       return;
     }
-    ChattingUI.a.c(laF);
-    laF.bfB();
-    ChattingUI.a.d(laF);
+    ChattingUI.a.c(lAY);
+    lAY.bll();
+    ChattingUI.a.d(lAY);
   }
 }
 

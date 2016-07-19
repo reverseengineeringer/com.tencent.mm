@@ -1,6 +1,9 @@
 .class final Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI$3;
-.super Lcom/tencent/mm/sdk/c/c;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -15,51 +18,61 @@
 
 
 # instance fields
-.field final synthetic lfA:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
+.field final synthetic lFM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
 
 
 # direct methods
 .method constructor <init>(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;)V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 216
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI$3;->lfA:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
+    .line 125
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI$3;->lFM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
+.method public final run()V
     .locals 2
 
     .prologue
-    .line 219
-    instance-of v0, p1, Lcom/tencent/mm/d/a/lw;
+    .line 128
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI$3;->lFM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;->a(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;)Landroid/widget/GridView;
+
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 220
-    check-cast p1, Lcom/tencent/mm/d/a/lw;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI$3;->lFM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
 
-    .line 221
-    iget-object v0, p1, Lcom/tencent/mm/d/a/lw;->aIf:Lcom/tencent/mm/d/a/lw$a;
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;->a(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;)Landroid/widget/GridView;
 
-    iget v0, v0, Lcom/tencent/mm/d/a/lw$a;->aIi:I
+    move-result-object v0
 
-    .line 222
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI$3;->lfA:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
+    invoke-virtual {v0}, Landroid/widget/GridView;->getVisibility()I
 
-    invoke-static {v1, v0, p1}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;->a(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;ILcom/tencent/mm/d/a/lw;)V
+    move-result v0
 
-    .line 226
+    if-eqz v0, :cond_0
+
+    .line 129
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI$3;->lFM:Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;->a(Lcom/tencent/mm/ui/chatting/gallery/ImageGalleryGridUI;)Landroid/widget/GridView;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/GridView;->setVisibility(I)V
+
+    .line 131
     :cond_0
-    const/4 v0, 0x0
-
-    return v0
+    return-void
 .end method

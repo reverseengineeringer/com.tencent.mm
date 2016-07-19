@@ -11,10 +11,10 @@ final class ChatFooter$25
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    iLO.setToSendTextColor(true);
-    ChatFooter.i(iLO);
-    ChatFooter.j(iLO).aio();
-    ChatFooter.k(iLO);
+    jiL.gV(true);
+    ChatFooter.i(jiL);
+    ChatFooter.j(jiL).akV();
+    ChatFooter.k(jiL);
     return false;
   }
 }

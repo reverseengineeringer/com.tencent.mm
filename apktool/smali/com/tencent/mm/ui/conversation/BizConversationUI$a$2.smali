@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ui/base/MMSlideDelView$g;
+.implements Lcom/tencent/mm/ui/base/MMSlideDelView$f;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+.field final synthetic lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 348
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$2;->loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+    .line 300
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$2;->lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,20 +37,20 @@
 
 # virtual methods
 .method public final j(Landroid/view/View;I)V
-    .locals 3
+    .locals 4
 
     .prologue
-    .line 352
-    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$2;->loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+    .line 304
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$2;->lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizConversationUI$a;->a(Lcom/tencent/mm/ui/conversation/BizConversationUI$a;)Landroid/widget/ListView;
 
     move-result-object v0
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {v0, p1, p2, v1, v2}, Landroid/widget/ListView;->performItemClick(Landroid/view/View;IJ)Z
+    invoke-virtual {v0, p1, p2, v2, v3}, Landroid/widget/ListView;->performItemClick(Landroid/view/View;IJ)Z
 
-    .line 353
+    .line 305
     return-void
 .end method

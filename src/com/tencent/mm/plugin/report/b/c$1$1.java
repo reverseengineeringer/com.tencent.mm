@@ -1,9 +1,9 @@
 package com.tencent.mm.plugin.report.b;
 
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.t.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.t.a;
 
 final class c$1$1
   implements t.a
@@ -12,7 +12,7 @@ final class c$1$1
   
   public final int a(int paramInt1, int paramInt2, String paramString, a parama, j paramj)
   {
-    u.i("!32@/B4Tb64lLpKISRvsDhywQKz8I7hoCJH1", "onGYNetEnd errType:%d errCode:%d msg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
+    v.i("MicroMsg.MidHelper", "onGYNetEnd errType:%d errCode:%d msg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
     return 0;
   }
 }

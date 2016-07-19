@@ -13,20 +13,20 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.model.i;
 import com.tencent.mm.modelsearch.f;
 import com.tencent.mm.modelsns.d;
 import com.tencent.mm.pluginsdk.i.ai;
 import com.tencent.mm.pluginsdk.i.o.c;
-import com.tencent.mm.protocal.b.aby;
-import com.tencent.mm.protocal.b.add;
-import com.tencent.mm.protocal.b.atp;
-import com.tencent.mm.protocal.b.gf;
-import com.tencent.mm.protocal.b.iv;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.i.a;
+import com.tencent.mm.protocal.b.acn;
+import com.tencent.mm.protocal.b.adw;
+import com.tencent.mm.protocal.b.auf;
+import com.tencent.mm.protocal.b.gk;
+import com.tencent.mm.protocal.b.je;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.z;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.util.Comparator;
@@ -34,18 +34,18 @@ import java.util.LinkedList;
 import java.util.List;
 
 public final class a
-  extends com.tencent.mm.ui.e.a.a
+  extends com.tencent.mm.ui.f.a.a
 {
-  public LinkedList cNH;
-  CharSequence cNK;
-  CharSequence cOa;
-  public gf hnf;
-  CharSequence hng;
-  List hnh;
-  int hni;
-  atp hnj;
-  private b hnk = new b((byte)0);
-  a hnl = new a((byte)0);
+  public LinkedList<String> cKI;
+  CharSequence cKL;
+  CharSequence cLa;
+  public gk hDB;
+  CharSequence hDC;
+  List<adw> hDD;
+  int hDE;
+  auf hDF;
+  private b hDG = new b((byte)0);
+  a hDH = new a((byte)0);
   String username;
   
   public a(int paramInt)
@@ -53,97 +53,101 @@ public final class a
     super(13, paramInt);
   }
   
-  public final com.tencent.mm.ui.e.a.a.b Le()
+  public final com.tencent.mm.ui.f.a.a.b LY()
   {
-    return hnk;
+    return hDG;
   }
   
-  public final void a(Context paramContext, com.tencent.mm.ui.e.a.a.a paramVarArgs)
+  public final void a(Context paramContext, com.tencent.mm.ui.f.a.a.a paramVarArgs)
   {
-    int k = 2131433047;
+    int k = 2131235584;
     int i = 1;
-    hnj = d.jk(hnf.jdV);
-    u.i("!56@/B4Tb64lLpKLxeMowbLUcJ9H/mADSlreF7/Wkb9+HQ1qf5warfaijg==", "timeline object id=%d", new Object[] { Long.valueOf(hnf.wz) });
+    hDF = d.jC(hDB.jBG);
+    v.i("MicroMsg.FTS.FTSTimeLineDataItem", "timeline object id=%d", new Object[] { Long.valueOf(hDB.jBF) });
     a locala = (a)paramVarArgs;
-    username = hnj.eiB;
-    paramVarArgs = i.dY(hnj.eiB);
-    Object localObject = f.b(paramContext, hnj.eiB, cNH);
+    username = hDF.emC;
+    paramVarArgs = i.ej(hDF.emC);
+    Object localObject = f.a(paramContext, hDF.emC, cKI);
     int j;
     String str1;
     String str2;
     if (localObject != null)
     {
-      paramVarArgs = a(paramContext, (Spannable)localObject, f.bZn);
+      paramVarArgs = a(paramContext, (Spannable)localObject, f.bSV);
       j = 1;
-      String str3 = f.b(paramContext, hnj.fpL * 1000L);
-      str1 = hnj.jMv.bLO;
-      str2 = hnj.jMv.eLJ;
+      String str3 = f.b(paramContext, hDF.fyR * 1000L);
+      str1 = hDF.klg.bFi;
+      str2 = hDF.klg.eTE;
       localObject = new SpannableStringBuilder();
       ((SpannableStringBuilder)localObject).append(paramVarArgs);
       ((SpannableStringBuilder)localObject).append("  ");
       ((SpannableStringBuilder)localObject).append(str3);
-      if (ay.kz(str2)) {
-        break label428;
+      if (be.kf(str2)) {
+        break label452;
       }
       ((SpannableStringBuilder)localObject).append("  ");
-      paramVarArgs = f.d(str2, cNH);
+      paramVarArgs = f.e(str2, cKI);
       if (paramVarArgs == null) {
-        break label414;
+        break label438;
       }
       ((SpannableStringBuilder)localObject).append(paramVarArgs);
       label219:
       if ((j != 0) || (i == 0)) {
-        break label482;
+        break label506;
       }
-      cNT.setEllipsize(TextUtils.TruncateAt.START);
+      cuj.setEllipsize(TextUtils.TruncateAt.START);
       label240:
-      cNK = ((CharSequence)localObject);
-      paramVarArgs = hnj.jMu;
-      if ((hnj.jMx == null) || (!ay.kz(paramVarArgs))) {
-        break label676;
+      cKL = ((CharSequence)localObject);
+      paramVarArgs = hDF.klf;
+      if ((hDF.kli == null) || (!be.kf(paramVarArgs))) {
+        break label714;
       }
-      paramVarArgs = hnj;
+      paramVarArgs = hDF;
       i = k;
-      switch (jMx.jhv)
+      switch (kli.jFu)
       {
       case 6: 
       case 8: 
       case 11: 
       case 15: 
       case 16: 
+      case 18: 
+      case 19: 
+      case 20: 
+      case 21: 
       default: 
         i = -1;
       case 12: 
-        label360:
-        label363:
+        label384:
+        label387:
         if (i != -1) {
           paramVarArgs = paramContext.getString(i);
         }
         break;
       }
     }
-    label414:
-    label428:
-    label482:
-    label676:
+    label438:
+    label452:
+    label506:
+    label714:
     float f;
     for (;;)
     {
-      cOa = paramVarArgs;
-      if (hnj.jMx != null) {
-        break label712;
+      cLa = paramVarArgs;
+      if (hDF.kli != null) {
+        break label750;
       }
       return;
-      paramVarArgs = a(paramContext, new SpannableString(paramVarArgs), f.bZn);
+      paramVarArgs = a(paramContext, new SpannableString(paramVarArgs), f.bSV);
       j = 0;
       break;
       ((SpannableStringBuilder)localObject).append(str2);
       i = 0;
       break label219;
-      if (!ay.kz(str1))
+      if (!be.kf(str1))
       {
         ((SpannableStringBuilder)localObject).append("  ");
-        paramVarArgs = f.d(str1, cNH);
+        paramVarArgs = f.e(str1, cKI);
         if (paramVarArgs != null)
         {
           ((SpannableStringBuilder)localObject).append(paramVarArgs);
@@ -153,99 +157,103 @@ public final class a
       }
       i = 0;
       break label219;
-      cNT.setEllipsize(TextUtils.TruncateAt.END);
+      cuj.setEllipsize(TextUtils.TruncateAt.END);
       break label240;
-      i = 2131433045;
-      break label363;
-      i = 2131433043;
-      break label363;
-      i = 2131433044;
-      break label363;
-      i = 2131433042;
-      break label363;
-      if ((jMx.jhw == null) || (jMx.jhw.size() <= 0) || (jMx.jhw.get(0) == null)) {
-        break label360;
+      i = 2131235583;
+      break label387;
+      i = 2131235585;
+      break label387;
+      i = 2131235587;
+      break label387;
+      i = 2131235574;
+      break label387;
+      if ((kli.jFv == null) || (kli.jFv.size() <= 0) || (kli.jFv.get(0) == null)) {
+        break label384;
       }
-      switch (jMx.jhw.get(0)).atB)
+      switch (kli.jFv.get(0)).afj)
       {
       }
-      for (i = -1;; i = 2131433047)
+      for (i = -1;; i = 2131235584)
       {
         break;
-        i = 2131433046;
+        i = 2131235577;
         break;
-        i = 2131433049;
+        i = 2131235582;
         break;
-        i = 2131433048;
+        i = 2131235576;
         break;
       }
-      i = 2131433052;
-      break label363;
-      i = 2131433050;
-      break label363;
-      i = 2131433051;
-      break label363;
-      i = 2131430749;
-      break label363;
+      i = 2131235586;
+      break label387;
+      i = 2131235580;
+      break label387;
+      i = 2131235578;
+      break label387;
+      i = 2131235581;
+      break label387;
+      i = 2131235579;
+      break label387;
+      i = 2131231561;
+      break label387;
       paramVarArgs = "";
       continue;
-      f = dVy.getMeasuredWidth() * 2;
-      paramVarArgs = a(paramContext, f.a(paramContext, paramVarArgs, cNH, f.bZo, f), f.bZn);
+      f = dXF.getMeasuredWidth() * 2;
+      paramVarArgs = a(paramContext, f.a(paramContext, paramVarArgs, cKI, f.bSW, f), f.bSV);
     }
-    label712:
-    hni = hnj.jMx.jhv;
-    hnh = hnj.jMx.jhw;
-    switch (hni)
+    label750:
+    hDE = hDF.kli.jFu;
+    hDD = hDF.kli.jFv;
+    switch (hDE)
     {
     }
-    localObject = hnj.jMx.asP;
-    paramVarArgs = (com.tencent.mm.ui.e.a.a.a)localObject;
-    if (ay.kz((String)localObject)) {
-      paramVarArgs = hnj.jMx.eia;
+    localObject = hDF.kli.aez;
+    paramVarArgs = (com.tencent.mm.ui.f.a.a.a)localObject;
+    if (be.kf((String)localObject)) {
+      paramVarArgs = hDF.kli.elX;
     }
     localObject = paramVarArgs;
-    if (ay.kz(paramVarArgs))
+    if (be.kf(paramVarArgs))
     {
-      if (hnj.jMx.jhw.size() <= 0) {
-        break label942;
+      if (hDF.kli.jFv.size() <= 0) {
+        break label978;
       }
-      paramVarArgs = (add)hnj.jMx.jhw.get(0);
-      localObject = asP;
-      if (!ay.kz(eia)) {
-        break label948;
+      paramVarArgs = (adw)hDF.kli.jFv.get(0);
+      localObject = aez;
+      if (!be.kf(elX)) {
+        break label984;
       }
-      localObject = (String)localObject + " " + eia;
+      localObject = (String)localObject + " " + elX;
     }
-    label942:
-    label948:
+    label978:
+    label984:
     for (;;)
     {
-      f = hnm.getMeasuredWidth();
-      for (paramContext = a(paramContext, f.a(paramContext, (String)localObject, cNH, f.bZo, f), f.bZn);; paramContext = "")
+      f = hDI.getMeasuredWidth();
+      for (paramContext = a(paramContext, f.a(paramContext, (String)localObject, cKI, f.bSW, f), f.bSV);; paramContext = "")
       {
-        hng = paramContext;
+        hDC = paramContext;
         return;
       }
     }
   }
   
   private final class a
-    extends com.tencent.mm.ui.e.a.a.a
+    extends com.tencent.mm.ui.f.a.a.a
   {
-    public TextView cNT;
-    public ImageView czS;
-    public TextView dVy;
-    public TextView hnm;
-    public LinearLayout hnn;
-    public ImageView hno;
-    public LinearLayout hnp;
-    public ImageView hnq;
-    public ImageView hnr;
-    public ImageView hns;
-    public ImageView hnt;
-    public ImageView hnu;
-    public TextView hnv;
-    public ImageView hnw;
+    public ImageView cui;
+    public TextView cuj;
+    public TextView dXF;
+    public TextView hDI;
+    public LinearLayout hDJ;
+    public ImageView hDK;
+    public LinearLayout hDL;
+    public ImageView hDM;
+    public ImageView hDN;
+    public ImageView hDO;
+    public ImageView hDP;
+    public ImageView hDQ;
+    public TextView hDR;
+    public ImageView hDS;
     
     private a()
     {
@@ -254,7 +262,7 @@ public final class a
   }
   
   private final class b
-    extends com.tencent.mm.ui.e.a.a.b
+    extends com.tencent.mm.ui.f.a.a.b
   {
     private b()
     {
@@ -263,37 +271,37 @@ public final class a
     
     public final View a(Context paramContext, ViewGroup paramViewGroup)
     {
-      paramContext = LayoutInflater.from(paramContext).inflate(2131362874, paramViewGroup, false);
+      paramContext = LayoutInflater.from(paramContext).inflate(2130903657, paramViewGroup, false);
       int i = paramViewGroup.getPaddingLeft();
       int j = paramViewGroup.getPaddingRight();
       paramContext.measure(ViewGroup.getChildMeasureSpec(View.MeasureSpec.makeMeasureSpec(paramViewGroup.getWidth(), 1073741824), i + j, -1), View.MeasureSpec.makeMeasureSpec(-2, 1073741824));
-      paramViewGroup = (a.a)hnl;
-      czS = ((ImageView)paramContext.findViewById(2131165293));
-      cNT = ((TextView)paramContext.findViewById(2131165340));
-      dVy = ((TextView)paramContext.findViewById(2131165256));
-      hnm = ((TextView)paramContext.findViewById(2131168655));
-      hnn = ((LinearLayout)paramContext.findViewById(2131168653));
-      hno = ((ImageView)paramContext.findViewById(2131168654));
-      hnp = ((LinearLayout)paramContext.findViewById(2131168656));
-      hnq = ((ImageView)paramContext.findViewById(2131168657));
-      hnr = ((ImageView)paramContext.findViewById(2131168659));
-      hns = ((ImageView)paramContext.findViewById(2131168660));
-      hnt = ((ImageView)paramContext.findViewById(2131168661));
-      hnu = ((ImageView)paramContext.findViewById(2131168662));
-      hnv = ((TextView)paramContext.findViewById(2131168663));
-      hnw = ((ImageView)paramContext.findViewById(2131168658));
+      paramViewGroup = (a.a)hDH;
+      cui = ((ImageView)paramContext.findViewById(2131755444));
+      cuj = ((TextView)paramContext.findViewById(2131755331));
+      dXF = ((TextView)paramContext.findViewById(2131757031));
+      hDI = ((TextView)paramContext.findViewById(2131757034));
+      hDJ = ((LinearLayout)paramContext.findViewById(2131757032));
+      hDK = ((ImageView)paramContext.findViewById(2131757033));
+      hDL = ((LinearLayout)paramContext.findViewById(2131757035));
+      hDM = ((ImageView)paramContext.findViewById(2131757036));
+      hDN = ((ImageView)paramContext.findViewById(2131757038));
+      hDO = ((ImageView)paramContext.findViewById(2131757039));
+      hDP = ((ImageView)paramContext.findViewById(2131757040));
+      hDQ = ((ImageView)paramContext.findViewById(2131757041));
+      hDR = ((TextView)paramContext.findViewById(2131757042));
+      hDS = ((ImageView)paramContext.findViewById(2131757037));
       paramContext.setTag(paramViewGroup);
       return paramContext;
     }
     
-    public final void a(Context paramContext, com.tencent.mm.ui.e.a.a.a parama, com.tencent.mm.ui.e.a.a paramVarArgs)
+    public final void a(Context paramContext, com.tencent.mm.ui.f.a.a.a parama, com.tencent.mm.ui.f.a.a paramVarArgs)
     {
       parama = (a.a)parama;
       paramVarArgs = (a)paramVarArgs;
-      com.tencent.mm.pluginsdk.ui.a.b.b(czS, username);
-      f.b(cNK, cNT);
-      f.b(cOa, dVy);
-      switch (hni)
+      com.tencent.mm.pluginsdk.ui.a.b.a(cui, username);
+      f.b(cKL, cuj);
+      f.b(cLa, dXF);
+      switch (hDE)
       {
       case 2: 
       case 6: 
@@ -301,15 +309,19 @@ public final class a
       case 11: 
       case 13: 
       case 16: 
+      case 18: 
+      case 19: 
+      case 20: 
+      case 21: 
       default: 
-        hnn.setVisibility(8);
-        hnp.setVisibility(8);
+        hDJ.setVisibility(8);
+        hDL.setVisibility(8);
         return;
       case 4: 
-        hno.setImageResource(2130903309);
-        f.b(hng, hnm);
-        hnn.setVisibility(0);
-        hnp.setVisibility(8);
+        hDK.setImageResource(2131165505);
+        f.b(hDC, hDI);
+        hDJ.setVisibility(0);
+        hDL.setVisibility(8);
         return;
       case 3: 
       case 8: 
@@ -318,125 +330,127 @@ public final class a
       case 12: 
       case 14: 
       case 17: 
-        hno.setImageResource(2130903279);
-        f.b(hng, hnm);
-        hnn.setVisibility(0);
-        hnp.setVisibility(8);
+      case 22: 
+      case 23: 
+        hDK.setImageResource(2131165504);
+        f.b(hDC, hDI);
+        hDJ.setVisibility(0);
+        hDL.setVisibility(8);
         return;
       case 5: 
-        hno.setImageResource(2130903298);
-        f.b(hng, hnm);
-        hnn.setVisibility(0);
-        hnp.setVisibility(8);
+        hDK.setImageResource(2131165506);
+        f.b(hDC, hDI);
+        hDJ.setVisibility(0);
+        hDL.setVisibility(8);
         return;
       case 1: 
-        if (hnh.size() == 1)
+        if (hDD.size() == 1)
         {
-          hnq.setVisibility(0);
-          hnw.setVisibility(8);
-          hnr.setVisibility(8);
-          hns.setVisibility(8);
-          hnt.setVisibility(8);
-          hnu.setVisibility(8);
-          hnv.setVisibility(8);
-          paramVarArgs = (add)hnh.get(0);
-          i.ai.iza.b(paramVarArgs, hnq, paramContext.hashCode(), i.a.kav);
+          hDM.setVisibility(0);
+          hDS.setVisibility(8);
+          hDN.setVisibility(8);
+          hDO.setVisibility(8);
+          hDP.setVisibility(8);
+          hDQ.setVisibility(8);
+          hDR.setVisibility(8);
+          paramVarArgs = (adw)hDD.get(0);
+          i.ai.iVw.b(paramVarArgs, hDM, paramContext.hashCode(), z.kFW);
         }
         for (;;)
         {
-          hnp.setVisibility(0);
-          hnn.setVisibility(8);
+          hDL.setVisibility(0);
+          hDJ.setVisibility(8);
           return;
-          add localadd;
-          if (hnh.size() == 2)
+          adw localadw;
+          if (hDD.size() == 2)
           {
-            hnq.setVisibility(8);
-            hnw.setVisibility(8);
-            hnr.setVisibility(0);
-            hns.setVisibility(0);
-            hnt.setVisibility(8);
-            hnu.setVisibility(8);
-            hnv.setVisibility(8);
-            localadd = (add)hnh.get(0);
-            i.ai.iza.b(localadd, hnr, paramContext.hashCode(), i.a.kav);
-            paramVarArgs = (add)hnh.get(1);
-            i.ai.iza.b(paramVarArgs, hns, paramContext.hashCode(), i.a.kav);
+            hDM.setVisibility(8);
+            hDS.setVisibility(8);
+            hDN.setVisibility(0);
+            hDO.setVisibility(0);
+            hDP.setVisibility(8);
+            hDQ.setVisibility(8);
+            hDR.setVisibility(8);
+            localadw = (adw)hDD.get(0);
+            i.ai.iVw.b(localadw, hDN, paramContext.hashCode(), z.kFW);
+            paramVarArgs = (adw)hDD.get(1);
+            i.ai.iVw.b(paramVarArgs, hDO, paramContext.hashCode(), z.kFW);
           }
-          else if (hnh.size() == 3)
+          else if (hDD.size() == 3)
           {
-            hnq.setVisibility(8);
-            hnw.setVisibility(8);
-            hnr.setVisibility(0);
-            hns.setVisibility(0);
-            hnt.setVisibility(0);
-            hnu.setVisibility(8);
-            hnv.setVisibility(8);
-            localadd = (add)hnh.get(0);
-            i.ai.iza.b(localadd, hnr, paramContext.hashCode(), i.a.kav);
-            localadd = (add)hnh.get(1);
-            i.ai.iza.b(localadd, hns, paramContext.hashCode(), i.a.kav);
-            paramVarArgs = (add)hnh.get(2);
-            i.ai.iza.b(paramVarArgs, hnt, paramContext.hashCode(), i.a.kav);
+            hDM.setVisibility(8);
+            hDS.setVisibility(8);
+            hDN.setVisibility(0);
+            hDO.setVisibility(0);
+            hDP.setVisibility(0);
+            hDQ.setVisibility(8);
+            hDR.setVisibility(8);
+            localadw = (adw)hDD.get(0);
+            i.ai.iVw.b(localadw, hDN, paramContext.hashCode(), z.kFW);
+            localadw = (adw)hDD.get(1);
+            i.ai.iVw.b(localadw, hDO, paramContext.hashCode(), z.kFW);
+            paramVarArgs = (adw)hDD.get(2);
+            i.ai.iVw.b(paramVarArgs, hDP, paramContext.hashCode(), z.kFW);
           }
-          else if (hnh.size() == 4)
+          else if (hDD.size() == 4)
           {
-            hnq.setVisibility(8);
-            hnw.setVisibility(8);
-            hnr.setVisibility(0);
-            hns.setVisibility(0);
-            hnt.setVisibility(0);
-            hnu.setVisibility(0);
-            hnv.setVisibility(8);
-            localadd = (add)hnh.get(0);
-            i.ai.iza.b(localadd, hnr, paramContext.hashCode(), i.a.kav);
-            localadd = (add)hnh.get(1);
-            i.ai.iza.b(localadd, hns, paramContext.hashCode(), i.a.kav);
-            localadd = (add)hnh.get(2);
-            i.ai.iza.b(localadd, hnt, paramContext.hashCode(), i.a.kav);
-            paramVarArgs = (add)hnh.get(3);
-            i.ai.iza.b(paramVarArgs, hnu, paramContext.hashCode(), i.a.kav);
+            hDM.setVisibility(8);
+            hDS.setVisibility(8);
+            hDN.setVisibility(0);
+            hDO.setVisibility(0);
+            hDP.setVisibility(0);
+            hDQ.setVisibility(0);
+            hDR.setVisibility(8);
+            localadw = (adw)hDD.get(0);
+            i.ai.iVw.b(localadw, hDN, paramContext.hashCode(), z.kFW);
+            localadw = (adw)hDD.get(1);
+            i.ai.iVw.b(localadw, hDO, paramContext.hashCode(), z.kFW);
+            localadw = (adw)hDD.get(2);
+            i.ai.iVw.b(localadw, hDP, paramContext.hashCode(), z.kFW);
+            paramVarArgs = (adw)hDD.get(3);
+            i.ai.iVw.b(paramVarArgs, hDQ, paramContext.hashCode(), z.kFW);
           }
           else
           {
-            hnq.setVisibility(8);
-            hnw.setVisibility(8);
-            hnr.setVisibility(0);
-            hns.setVisibility(0);
-            hnt.setVisibility(0);
-            hnu.setVisibility(8);
-            hnv.setVisibility(0);
-            localadd = (add)hnh.get(0);
-            i.ai.iza.b(localadd, hnr, paramContext.hashCode(), i.a.kav);
-            localadd = (add)hnh.get(1);
-            i.ai.iza.b(localadd, hns, paramContext.hashCode(), i.a.kav);
-            localadd = (add)hnh.get(2);
-            i.ai.iza.b(localadd, hnt, paramContext.hashCode(), i.a.kav);
-            hnv.setText(paramContext.getString(2131431376, new Object[] { Integer.valueOf(hnh.size()) }));
+            hDM.setVisibility(8);
+            hDS.setVisibility(8);
+            hDN.setVisibility(0);
+            hDO.setVisibility(0);
+            hDP.setVisibility(0);
+            hDQ.setVisibility(8);
+            hDR.setVisibility(0);
+            localadw = (adw)hDD.get(0);
+            i.ai.iVw.b(localadw, hDN, paramContext.hashCode(), z.kFW);
+            localadw = (adw)hDD.get(1);
+            i.ai.iVw.b(localadw, hDO, paramContext.hashCode(), z.kFW);
+            localadw = (adw)hDD.get(2);
+            i.ai.iVw.b(localadw, hDP, paramContext.hashCode(), z.kFW);
+            hDR.setText(paramContext.getString(2131234841, new Object[] { Integer.valueOf(hDD.size()) }));
           }
         }
       }
-      hnq.setVisibility(0);
-      hnw.setVisibility(0);
-      hnr.setVisibility(8);
-      hns.setVisibility(8);
-      hnt.setVisibility(8);
-      hnu.setVisibility(8);
-      hnv.setVisibility(8);
-      paramVarArgs = (add)hnh.get(0);
-      i.ai.iza.b(paramVarArgs, hnq, paramContext.hashCode(), i.a.kav);
-      hnp.setVisibility(0);
-      hnn.setVisibility(8);
+      hDM.setVisibility(0);
+      hDS.setVisibility(0);
+      hDN.setVisibility(8);
+      hDO.setVisibility(8);
+      hDP.setVisibility(8);
+      hDQ.setVisibility(8);
+      hDR.setVisibility(8);
+      paramVarArgs = (adw)hDD.get(0);
+      i.ai.iVw.b(paramVarArgs, hDM, paramContext.hashCode(), z.kFW);
+      hDL.setVisibility(0);
+      hDJ.setVisibility(8);
     }
     
-    public final boolean a(Context paramContext, com.tencent.mm.ui.e.a.a paramVarArgs)
+    public final boolean a(Context paramContext, com.tencent.mm.ui.f.a.a paramVarArgs)
     {
       a locala = (a)paramVarArgs;
       paramVarArgs = new Intent();
-      paramVarArgs.putExtra("INTENT_TALKER", hnj.eiB);
-      paramVarArgs.putExtra("INTENT_SNSID", new BigInteger(hnj.iXW).longValue());
+      paramVarArgs.putExtra("INTENT_TALKER", hDF.emC);
+      paramVarArgs.putExtra("INTENT_SNSID", new BigInteger(hDF.jvB).longValue());
       try
       {
-        paramVarArgs.putExtra("INTENT_SNS_TIMELINEOBJECT", hnj.toByteArray());
+        paramVarArgs.putExtra("INTENT_SNS_TIMELINEOBJECT", hDF.toByteArray());
         c.c(paramContext, "sns", ".ui.SnsCommentDetailUI", paramVarArgs);
         return true;
       }
@@ -449,7 +463,7 @@ public final class a
   
   private static final class c
   {
-    long cfW;
+    long cbi;
     long id;
     int index;
   }

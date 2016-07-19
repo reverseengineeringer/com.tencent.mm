@@ -3,7 +3,7 @@ package com.tencent.mm.sdk.platformtools;
 import android.os.Parcelable.Creator;
 
 final class BackwardSupportUtil$ExifHelper$LatLongData$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<BackwardSupportUtil.ExifHelper.LatLongData>
 {}
 
 /* Location:

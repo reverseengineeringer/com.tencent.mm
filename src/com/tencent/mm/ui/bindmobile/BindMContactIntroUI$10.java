@@ -4,7 +4,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelfriend.v;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 
 final class BindMContactIntroUI$10
   implements DialogInterface.OnCancelListener
@@ -13,7 +13,7 @@ final class BindMContactIntroUI$10
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    ah.tE().c(kOt);
+    ah.tF().c(lnJ);
   }
 }
 

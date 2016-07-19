@@ -3,8 +3,8 @@ package com.tencent.mm.ui.contact;
 import android.content.Intent;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
 import java.util.HashSet;
 import java.util.List;
 
@@ -16,25 +16,25 @@ final class SnsAddressUI$1
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
     paramMenuItem = new Intent();
-    List localList = ay.h((String[])SnsAddressUI.a(lms).toArray(new String[0]));
+    List localList = be.g((String[])SnsAddressUI.a(lMI).toArray(new String[0]));
     if ((localList == null) || (localList.size() == 0)) {
       paramMenuItem.putExtra("Select_Contact", "");
     }
     for (;;)
     {
-      lms.setResult(-1, paramMenuItem);
-      lms.finish();
-      ab.e(new Runnable()
+      lMI.setResult(-1, paramMenuItem);
+      lMI.finish();
+      ad.e(new Runnable()
       {
         public final void run()
         {
-          if (!lms.getIntent().getBooleanExtra("stay_in_wechat", true)) {
-            lms.moveTaskToBack(true);
+          if (!lMI.getIntent().getBooleanExtra("stay_in_wechat", true)) {
+            lMI.moveTaskToBack(true);
           }
         }
       }, 100L);
       return true;
-      paramMenuItem.putExtra("Select_Contact", ay.b(localList, ","));
+      paramMenuItem.putExtra("Select_Contact", be.b(localList, ","));
     }
   }
 }

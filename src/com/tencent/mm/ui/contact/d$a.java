@@ -6,10 +6,10 @@ import com.tencent.mm.ui.base.MaskLayout;
 
 public final class d$a
 {
-  public TextView czT;
-  public TextView czU;
-  public MaskLayout dbN;
-  public ViewGroup ljd;
+  public TextView cwP;
+  public TextView cwQ;
+  public MaskLayout dat;
+  public ViewGroup lJo;
 }
 
 /* Location:

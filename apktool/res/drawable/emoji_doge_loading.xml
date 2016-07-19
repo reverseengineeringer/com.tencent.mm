@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="100" android:drawable="@drawable/aho" />
+    <item android:duration="100" android:drawable="@drawable/ahp" />
+    <item android:duration="100" android:drawable="@drawable/ahq" />
+    <item android:duration="100" android:drawable="@drawable/ahr" />
+    <item android:duration="100" android:drawable="@drawable/ahs" />
+</animation-list>

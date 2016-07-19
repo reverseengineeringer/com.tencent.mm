@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic kHK:Lcom/tencent/mm/ui/base/MMTextView;
+.field final synthetic lgM:Lcom/tencent/mm/ui/base/MMTextView;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 44
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTextView$1;->kHK:Lcom/tencent/mm/ui/base/MMTextView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTextView$1;->lgM:Lcom/tencent/mm/ui/base/MMTextView;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
 
@@ -38,7 +38,7 @@
 
     .prologue
     .line 47
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTextView$1;->kHK:Lcom/tencent/mm/ui/base/MMTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTextView$1;->lgM:Lcom/tencent/mm/ui/base/MMTextView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMTextView;->a(Lcom/tencent/mm/ui/base/MMTextView;)Lcom/tencent/mm/ui/base/MMTextView$a;
 
@@ -54,15 +54,15 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTextView$1;->kHK:Lcom/tencent/mm/ui/base/MMTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTextView$1;->lgM:Lcom/tencent/mm/ui/base/MMTextView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMTextView;->a(Lcom/tencent/mm/ui/base/MMTextView;)Lcom/tencent/mm/ui/base/MMTextView$a;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTextView$1;->kHK:Lcom/tencent/mm/ui/base/MMTextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTextView$1;->lgM:Lcom/tencent/mm/ui/base/MMTextView;
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/MMTextView$a;->at(Landroid/view/View;)Z
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/MMTextView$a;->ax(Landroid/view/View;)Z
 
     move-result v0
 

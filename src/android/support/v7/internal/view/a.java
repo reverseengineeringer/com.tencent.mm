@@ -13,14 +13,14 @@ public final class a
     mContext = paramContext;
   }
   
-  public static a m(Context paramContext)
+  public static a k(Context paramContext)
   {
     return new a(paramContext);
   }
   
   public final boolean aY()
   {
-    return mContext.getResources().getBoolean(2131689473);
+    return mContext.getResources().getBoolean(2131558400);
   }
   
   public final boolean aZ()

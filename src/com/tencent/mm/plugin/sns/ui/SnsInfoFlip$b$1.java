@@ -7,7 +7,7 @@ final class SnsInfoFlip$b$1
   
   public final void run()
   {
-    hfa.fd(false);
+    htR.fm(false);
   }
 }
 

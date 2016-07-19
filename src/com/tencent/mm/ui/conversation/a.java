@@ -3,93 +3,98 @@ package com.tencent.mm.ui.conversation;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.text.SpannableStringBuilder;
+import android.text.TextPaint;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.ab.a.a.c.a;
+import com.tencent.mm.ae.a.a.c.a;
 import com.tencent.mm.pluginsdk.i.f;
+import com.tencent.mm.sdk.h.j;
 import com.tencent.mm.sdk.h.j.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.t.aj;
-import com.tencent.mm.t.b;
-import com.tencent.mm.t.d;
-import com.tencent.mm.t.f;
-import com.tencent.mm.t.k;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMFragmentActivity;
 import com.tencent.mm.ui.base.MMSlideDelView;
 import com.tencent.mm.ui.base.MMSlideDelView.c;
 import com.tencent.mm.ui.base.MMSlideDelView.d;
+import com.tencent.mm.ui.base.MMSlideDelView.e;
 import com.tencent.mm.ui.base.MMSlideDelView.f;
-import com.tencent.mm.ui.base.MMSlideDelView.g;
 import com.tencent.mm.ui.base.NoMeasuredTextView;
 import com.tencent.mm.ui.i;
+import com.tencent.mm.ui.tools.u;
+import com.tencent.mm.v.an;
+import com.tencent.mm.v.b;
+import com.tencent.mm.v.d;
+import com.tencent.mm.v.f;
+import com.tencent.mm.v.k;
+import com.tencent.mm.v.l;
 import java.util.HashMap;
 
 public final class a
-  extends i
+  extends i<b>
   implements j.b
 {
-  protected MMSlideDelView.g cHf;
-  protected MMSlideDelView.c cHg;
-  protected MMSlideDelView.f cHh;
-  protected MMSlideDelView.d cHi = MMSlideDelView.getItemStatusCallBack();
-  private final String cYw;
-  private com.tencent.mm.ab.a.a.c iIX = null;
-  private ColorStateList[] lnA = new ColorStateList[5];
-  HashMap lnB;
-  private final MMFragmentActivity lnw;
-  private float lnx = -1.0F;
-  private float lny = -1.0F;
-  private float lnz = -1.0F;
+  protected MMSlideDelView.f cEj;
+  protected MMSlideDelView.c cEk;
+  protected MMSlideDelView.e cEl;
+  protected MMSlideDelView.d cEm = MMSlideDelView.bil();
+  private final String cJN;
+  private com.tencent.mm.ae.a.a.c jfT = null;
+  private final MMFragmentActivity lNR;
+  private float lNS = -1.0F;
+  private float lNT = -1.0F;
+  private float lNU = -1.0F;
+  private ColorStateList[] lNV = new ColorStateList[5];
+  HashMap<String, a> lNW;
   
   public a(Context paramContext, com.tencent.mm.ui.i.a parama, String paramString)
   {
     super(paramContext, new b());
-    koC = parama;
-    lnw = ((MMFragmentActivity)paramContext);
-    cYw = paramString;
-    lnB = new HashMap();
-    lnA[0] = com.tencent.mm.aw.a.x(paramContext, 2131231138);
-    lnA[1] = com.tencent.mm.aw.a.x(paramContext, 2131231248);
-    lnA[3] = com.tencent.mm.aw.a.x(paramContext, 2131231135);
-    lnA[2] = com.tencent.mm.aw.a.x(paramContext, 2131231246);
-    lnA[2] = com.tencent.mm.aw.a.x(paramContext, 2131231246);
-    lnA[4] = com.tencent.mm.aw.a.x(paramContext, 2131231142);
-    lnx = com.tencent.mm.aw.a.z(paramContext, 2131034564);
-    lny = com.tencent.mm.aw.a.z(paramContext, 2131034565);
-    lnz = com.tencent.mm.aw.a.z(paramContext, 2131034567);
+    kNG = parama;
+    lNR = ((MMFragmentActivity)paramContext);
+    cJN = paramString;
+    lNW = new HashMap();
+    lNV[0] = com.tencent.mm.az.a.B(paramContext, 2131689744);
+    lNV[1] = com.tencent.mm.az.a.B(paramContext, 2131690081);
+    lNV[3] = com.tencent.mm.az.a.B(paramContext, 2131689841);
+    lNV[2] = com.tencent.mm.az.a.B(paramContext, 2131690078);
+    lNV[2] = com.tencent.mm.az.a.B(paramContext, 2131690078);
+    lNV[4] = com.tencent.mm.az.a.B(paramContext, 2131689767);
+    lNS = com.tencent.mm.az.a.D(paramContext, 2131427667);
+    lNT = com.tencent.mm.az.a.D(paramContext, 2131427626);
+    lNU = com.tencent.mm.az.a.D(paramContext, 2131427709);
     paramContext = new c.a();
-    bTG = f.gt(cYw);
-    bTD = true;
-    bTV = true;
-    bTO = 2130903473;
-    iIX = paramContext.AA();
+    bNf = f.gL(cJN);
+    bNc = true;
+    bNw = true;
+    bNp = 2131165359;
+    jfT = paramContext.AM();
   }
   
-  private static String Hl(String paramString)
+  private static String JA(String paramString)
   {
     if ((paramString != null) && (paramString.length() == 32)) {
-      return com.tencent.mm.pluginsdk.i.a.aOT().mG(paramString);
+      return com.tencent.mm.pluginsdk.i.a.aTv().nC(paramString);
     }
     return null;
   }
   
   private CharSequence a(b paramb, int paramInt, String paramString)
   {
-    if ((!ay.kz(field_editingMsg)) && ((field_atCount <= 0) || (field_unReadCount <= 0)))
+    if ((!be.kf(field_editingMsg)) && ((field_atCount <= 0) || (field_unReadCount <= 0)))
     {
-      paramString = new SpannableStringBuilder(lnw.getString(2131427802));
+      paramString = new SpannableStringBuilder(lNR.getString(2131233693));
       paramString.setSpan(new ForegroundColorSpan(-5569532), 0, paramString.length(), 33);
-      paramString.append(" ").append(com.tencent.mm.pluginsdk.ui.d.e.a(lnw, field_editingMsg, paramInt));
+      paramString.append(" ").append(com.tencent.mm.pluginsdk.ui.d.e.a(lNR, field_editingMsg, paramInt));
       return paramString;
     }
     Object localObject = field_digest;
     String str1;
     if ((field_msgType != null) && ((field_msgType.equals("47")) || (field_msgType.equals("1048625"))))
     {
-      localObject = Hl(field_digest);
+      localObject = JA(field_digest);
       str1 = "";
       if (localObject != null) {
         return "[" + (String)localObject + "]";
@@ -101,20 +106,20 @@ public final class a
         if (field_digest.contains(":"))
         {
           str1 = field_digest.substring(0, field_digest.indexOf(":"));
-          String str2 = Hl(field_digest.substring(field_digest.indexOf(":") + 1).replace(" ", ""));
+          String str2 = JA(field_digest.substring(field_digest.indexOf(":") + 1).replace(" ", ""));
           localObject = str1;
           if (str2 != null)
           {
             paramb = "[" + str2 + "]";
-            if (ay.kz(str1)) {
+            if (be.kf(str1)) {
               return paramb;
             }
             return str1 + ": " + paramb;
           }
         }
       }
-      str1 = lnw.getString(2131430927);
-      if (ay.kz((String)localObject))
+      str1 = lNR.getString(2131230896);
+      if (be.kf((String)localObject))
       {
         localObject = str1;
         field_digest = ((String)localObject);
@@ -122,10 +127,10 @@ public final class a
     }
     else
     {
-      if (ay.kz(field_digest)) {
+      if (be.kf(field_digest)) {
         break label500;
       }
-      if (ay.kz(field_digestUser)) {
+      if (be.kf(field_digestUser)) {
         break label492;
       }
     }
@@ -138,9 +143,9 @@ public final class a
         if ((field_atCount <= 0) || (field_unReadCount <= 0)) {
           break label506;
         }
-        paramb = new SpannableStringBuilder(lnw.getString(2131427804));
+        paramb = new SpannableStringBuilder(lNR.getString(2131233690));
         paramb.setSpan(new ForegroundColorSpan(-5569532), 0, paramb.length(), 33);
-        paramb.append(" ").append(com.tencent.mm.pluginsdk.ui.d.e.a(lnw, paramString, paramInt));
+        paramb.append(" ").append(com.tencent.mm.pluginsdk.ui.d.e.a(lNR, paramString, paramInt));
         return paramb;
         localObject = (String)localObject + ": " + str1;
       }
@@ -156,10 +161,10 @@ public final class a
       paramString = "";
     }
     label506:
-    return com.tencent.mm.pluginsdk.ui.d.e.a(lnw, paramString, paramInt);
+    return com.tencent.mm.pluginsdk.ui.d.e.a(lNR, paramString, paramInt);
   }
   
-  private static int lo(String paramString)
+  private static int lZ(String paramString)
   {
     int j = 1;
     int i = j;
@@ -177,34 +182,44 @@ public final class a
     return 1;
   }
   
-  public final void Gk()
+  public final void GH()
   {
-    setCursor(aj.xI().gm(cYw));
-    if (koC != null) {
-      koC.Gh();
+    setCursor(an.xK().gz(cJN));
+    if (kNG != null) {
+      kNG.GE();
     }
     super.notifyDataSetChanged();
   }
   
-  protected final void Gl()
+  protected final void GI()
   {
-    Gk();
+    GH();
   }
   
-  public final void a(int paramInt, com.tencent.mm.sdk.h.j paramj, Object paramObject)
+  public final void a(int paramInt, j paramj, Object paramObject)
   {
     super.a(paramInt, paramj, paramObject);
   }
   
-  public final void a(MMSlideDelView.f paramf)
+  public final void a(MMSlideDelView.c paramc)
   {
-    cHh = paramf;
+    cEk = paramc;
   }
   
-  public final void dS(long paramLong)
+  public final void a(MMSlideDelView.e parame)
   {
-    if (lnB != null) {
-      lnB.remove(String.valueOf(paramLong));
+    cEl = parame;
+  }
+  
+  public final void a(MMSlideDelView.f paramf)
+  {
+    cEj = paramf;
+  }
+  
+  public final void ei(long paramLong)
+  {
+    if (lNW != null) {
+      lNW.remove(String.valueOf(paramLong));
     }
   }
   
@@ -216,167 +231,171 @@ public final class a
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
     Object localObject3 = (b)getItem(paramInt);
-    label279:
-    Object localObject2;
-    Object localObject1;
-    if (paramView == null)
+    if (paramView != null) {}
+    for (paramViewGroup = (b)paramView.getTag();; paramViewGroup = null)
     {
-      paramViewGroup = new b();
-      if (com.tencent.mm.aw.a.da(lnw))
+      if ((paramView == null) || (paramViewGroup == null))
       {
-        paramView = View.inflate(lnw, 2131361953, null);
-        czS = ((ImageView)paramView.findViewById(2131165293));
-        lnF = ((NoMeasuredTextView)paramView.findViewById(2131165296));
-        lnG = ((NoMeasuredTextView)paramView.findViewById(2131165297));
-        lnH = ((NoMeasuredTextView)paramView.findViewById(2131165298));
-        cHo = ((TextView)paramView.findViewById(2131165294));
-        cHo.setBackgroundResource(com.tencent.mm.ui.tools.u.eB(lnw));
-        lnI = ((ImageView)paramView.findViewById(2131165299));
-        lnK = paramView.findViewById(2131165295);
-        lnJ = ((ImageView)paramView.findViewById(2131165300));
-        paramView.setTag(paramViewGroup);
-        lnH.setTextSize(0, lny);
-        lnG.setTextSize(0, lnz);
-        lnF.setTextSize(0, lnx);
-        lnH.setTextColor(lnA[0]);
-        lnG.setTextColor(lnA[4]);
-        lnF.setTextColor(lnA[3]);
-        lnH.setShouldEllipsize(true);
-        lnG.setShouldEllipsize(false);
-        lnF.setShouldEllipsize(true);
-        lnG.setGravity(5);
+        paramViewGroup = new b();
+        if (com.tencent.mm.az.a.cY(lNR))
+        {
+          paramView = View.inflate(lNR, 2130903405, null);
+          cui = ((ImageView)paramView.findViewById(2131755444));
+          lOb = ((NoMeasuredTextView)paramView.findViewById(2131756387));
+          lOc = ((NoMeasuredTextView)paramView.findViewById(2131756388));
+          lOd = ((NoMeasuredTextView)paramView.findViewById(2131756389));
+          cEs = ((TextView)paramView.findViewById(2131755263));
+          cEs.setBackgroundResource(u.eE(lNR));
+          lOe = ((ImageView)paramView.findViewById(2131756390));
+          lOg = paramView.findViewById(2131756386);
+          lOf = ((ImageView)paramView.findViewById(2131756391));
+          paramView.setTag(paramViewGroup);
+          lOd.j(lNT);
+          lOc.j(lNU);
+          lOb.j(lNS);
+          lOd.setTextColor(lNV[0]);
+          lOc.setTextColor(lNV[4]);
+          lOb.setTextColor(lNV[3]);
+          lOd.liR = true;
+          lOc.liR = false;
+          lOb.liR = true;
+          lOc.qw();
+        }
+      }
+      for (;;)
+      {
         long l = field_bizChatId;
-        localObject2 = (a)lnB.get(Long.valueOf(l));
-        localObject1 = localObject2;
+        Object localObject2 = (a)lNW.get(Long.valueOf(l));
+        Object localObject1 = localObject2;
         if (localObject2 == null)
         {
           localObject1 = new a((byte)0);
-          aj.xI();
-          lnC = com.tencent.mm.t.c.c((b)localObject3);
-          localObject2 = aj.xH().Q(l);
-          if (!((d)localObject2).wt()) {
-            break label831;
-          }
-          kkA = field_chatName;
-          cYC = ((d)localObject2).cU(1);
-          eaH = field_headImageUrl;
-          label386:
-          if (ay.kz(kkA)) {
-            kkA = lnw.getString(2131432685);
-          }
-          lnD = ((b)localObject3);
-          lnB.put(String.valueOf(l), localObject1);
-        }
-        lnJ.setVisibility(8);
-        localObject3 = lnG;
-        if (lnD.field_status != 1) {
-          break label883;
-        }
-        localObject2 = lnw.getString(2131427788);
-        label473:
-        ((NoMeasuredTextView)localObject3).setText((CharSequence)localObject2);
-        com.tencent.mm.ab.n.As().a(eaH, czS, iIX);
-        if (!cYC) {
-          break label904;
-        }
-        lnI.setVisibility(0);
-        label515:
-        lnF.setText(com.tencent.mm.pluginsdk.ui.d.e.a(lnw, kkA, (int)lnF.getTextSize()));
-        localObject2 = a(lnD, (int)lnH.getTextSize(), kkA);
-        switch (lnD.field_status)
-        {
-        case 3: 
-        case 4: 
-        default: 
-          paramInt = -1;
-          label614:
-          lnF.setDrawRightDrawable(false);
-          if (paramInt != -1)
+          an.xK();
+          lNY = com.tencent.mm.v.c.c((b)localObject3);
+          localObject2 = an.xJ().V(l);
+          if (((d)localObject2).wv())
           {
-            lnH.setCompoundLeftDrawablesWithIntrinsicBounds(paramInt);
-            lnH.setDrawLeftDrawable(true);
-            label643:
-            lnH.setText((CharSequence)localObject2);
-            lnH.setTextColor(com.tencent.mm.aw.a.x(lnw, 2131231258));
-            if ((lo(lnD.field_msgType) == 34) && (lnD.field_isSend == 0) && (!ay.kz(lnD.field_content)) && (!com.tencent.mm.modelvoice.nlnD.field_content).cfS)) {
-              lnH.setTextColor(com.tencent.mm.aw.a.x(lnw, 2131231248));
+            lNX = field_chatName;
+            cXm = ((d)localObject2).dA(1);
+            eef = field_headImageUrl;
+            label398:
+            if (be.kf(lNX)) {
+              lNX = lNR.getString(2131234580);
             }
-            if (!cYC) {
-              break label962;
-            }
-            if (lnD.field_unReadCount <= 0) {
-              break label951;
-            }
-            lnK.setVisibility(0);
-            label774:
-            cHo.setVisibility(4);
+            lNZ = ((b)localObject3);
+            lNW.put(String.valueOf(l), localObject1);
           }
-          break;
         }
+        else
+        {
+          lOf.setVisibility(8);
+          localObject3 = lOc;
+          if (lNZ.field_status != 1) {
+            break label892;
+          }
+          localObject2 = lNR.getString(2131233718);
+          label485:
+          ((NoMeasuredTextView)localObject3).setText((CharSequence)localObject2);
+          com.tencent.mm.ae.n.AC().a(eef, cui, jfT);
+          if (!cXm) {
+            break label913;
+          }
+          lOe.setVisibility(0);
+          label527:
+          lOb.setText(com.tencent.mm.pluginsdk.ui.d.e.a(lNR, lNX, (int)lOb.dIf.getTextSize()));
+          localObject2 = a(lNZ, (int)lOd.dIf.getTextSize(), lNX);
+          switch (lNZ.field_status)
+          {
+          case 3: 
+          case 4: 
+          default: 
+            paramInt = -1;
+            label634:
+            lOb.id(false);
+            if (paramInt != -1)
+            {
+              lOd.sI(paramInt);
+              lOd.ic(true);
+              label663:
+              lOd.setText((CharSequence)localObject2);
+              lOd.setTextColor(com.tencent.mm.az.a.B(lNR, 2131690080));
+              if ((lZ(lNZ.field_msgType) == 34) && (lNZ.field_isSend == 0) && (!be.kf(lNZ.field_content)) && (!com.tencent.mm.modelvoice.nlNZ.field_content).cbe)) {
+                lOd.setTextColor(com.tencent.mm.az.a.B(lNR, 2131690081));
+              }
+              if (!cXm) {
+                break label971;
+              }
+              if (lNZ.field_unReadCount <= 0) {
+                break label960;
+              }
+              lOg.setVisibility(0);
+              label794:
+              cEs.setVisibility(4);
+            }
+            break;
+          }
+        }
+        for (;;)
+        {
+          if (!lNY) {
+            break label1101;
+          }
+          paramView.findViewById(2131756385).setBackgroundResource(2130838070);
+          return paramView;
+          paramView = View.inflate(lNR, 2130903404, null);
+          break;
+          localObject2 = an.xL().gP(field_bizChatServId);
+          if (localObject2 == null) {
+            break label398;
+          }
+          lNX = field_userName;
+          cXm = ((k)localObject2).dA(1);
+          eef = field_headImageUrl;
+          break label398;
+          label892:
+          localObject2 = com.tencent.mm.pluginsdk.i.n.c(lNR, lNZ.field_lastMsgTime, true);
+          break label485;
+          label913:
+          lOe.setVisibility(8);
+          break label527;
+          paramInt = -1;
+          break label634;
+          paramInt = 2131165613;
+          break label634;
+          paramInt = -1;
+          break label634;
+          paramInt = 2131165612;
+          break label634;
+          lOd.ic(false);
+          break label663;
+          label960:
+          lOg.setVisibility(4);
+          break label794;
+          label971:
+          lOg.setVisibility(4);
+          if (lNZ.field_unReadCount > 99)
+          {
+            cEs.setText(2131235738);
+            cEs.setVisibility(0);
+            v.v("MicroMsg.BizChatConversationAdapter", "has unread 100");
+          }
+          else if (lNZ.field_unReadCount > 0)
+          {
+            cEs.setText(lNZ.field_unReadCount);
+            cEs.setVisibility(0);
+            v.v("MicroMsg.BizChatConversationAdapter", "has unread");
+          }
+          else
+          {
+            cEs.setVisibility(4);
+            v.v("MicroMsg.BizChatConversationAdapter", "no unread");
+          }
+        }
+        label1101:
+        paramView.findViewById(2131756385).setBackgroundResource(2130838071);
+        return paramView;
       }
     }
-    for (;;)
-    {
-      if (!lnC) {
-        break label1092;
-      }
-      paramView.findViewById(2131165292).setBackgroundResource(2130970291);
-      return paramView;
-      paramView = View.inflate(lnw, 2131361811, null);
-      break;
-      paramViewGroup = (b)paramView.getTag();
-      break label279;
-      label831:
-      localObject2 = aj.xJ().gz(field_bizChatServId);
-      if (localObject2 == null) {
-        break label386;
-      }
-      kkA = field_userName;
-      cYC = ((com.tencent.mm.t.j)localObject2).cU(1);
-      eaH = field_headImageUrl;
-      break label386;
-      label883:
-      localObject2 = com.tencent.mm.pluginsdk.h.n.b(lnw, lnD.field_lastMsgTime, true);
-      break label473;
-      label904:
-      lnI.setVisibility(8);
-      break label515;
-      paramInt = -1;
-      break label614;
-      paramInt = 2130903404;
-      break label614;
-      paramInt = -1;
-      break label614;
-      paramInt = 2130903366;
-      break label614;
-      lnH.setDrawLeftDrawable(false);
-      break label643;
-      label951:
-      lnK.setVisibility(4);
-      break label774;
-      label962:
-      lnK.setVisibility(4);
-      if (lnD.field_unReadCount > 99)
-      {
-        cHo.setText(2131431112);
-        cHo.setVisibility(0);
-        com.tencent.mm.sdk.platformtools.u.v("!56@/B4Tb64lLpKy3Chyc6XXOXXrN+2WuSA50qPHquheuj/Z5llwMFrCxA==", "has unread 100");
-      }
-      else if (lnD.field_unReadCount > 0)
-      {
-        cHo.setText(lnD.field_unReadCount);
-        cHo.setVisibility(0);
-        com.tencent.mm.sdk.platformtools.u.v("!56@/B4Tb64lLpKy3Chyc6XXOXXrN+2WuSA50qPHquheuj/Z5llwMFrCxA==", "has unread");
-      }
-      else
-      {
-        cHo.setVisibility(4);
-        com.tencent.mm.sdk.platformtools.u.v("!56@/B4Tb64lLpKy3Chyc6XXOXXrN+2WuSA50qPHquheuj/Z5llwMFrCxA==", "no unread");
-      }
-    }
-    label1092:
-    paramView.findViewById(2131165292).setBackgroundResource(2130970354);
-    return paramView;
   }
   
   public final int getViewTypeCount()
@@ -386,42 +405,32 @@ public final class a
   
   public final void onPause()
   {
-    if (cHi != null) {
-      cHi.aCf();
+    if (cEm != null) {
+      cEm.agJ();
     }
-  }
-  
-  public final void setGetViewPositionCallback(MMSlideDelView.c paramc)
-  {
-    cHg = paramc;
-  }
-  
-  public final void setPerformItemClickListener(MMSlideDelView.g paramg)
-  {
-    cHf = paramg;
   }
   
   private final class a
   {
-    public boolean cYC;
-    String eaH = null;
-    String kkA = null;
-    public boolean lnC;
-    public b lnD;
+    public boolean cXm;
+    String eef = null;
+    String lNX = null;
+    public boolean lNY;
+    public b lNZ;
     
     private a() {}
   }
   
   public static final class b
   {
-    public TextView cHo;
-    public ImageView czS;
-    public NoMeasuredTextView lnF;
-    public NoMeasuredTextView lnG;
-    public NoMeasuredTextView lnH;
-    public ImageView lnI;
-    public ImageView lnJ;
-    public View lnK;
+    public TextView cEs;
+    public ImageView cui;
+    public NoMeasuredTextView lOb;
+    public NoMeasuredTextView lOc;
+    public NoMeasuredTextView lOd;
+    public ImageView lOe;
+    public ImageView lOf;
+    public View lOg;
   }
 }
 

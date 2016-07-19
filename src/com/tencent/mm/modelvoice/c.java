@@ -1,10 +1,10 @@
 package com.tencent.mm.modelvoice;
 
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.storage.ai;
 
 public abstract interface c
 {
-  public abstract void l(ag paramag);
+  public abstract void o(ai paramai);
 }
 
 /* Location:

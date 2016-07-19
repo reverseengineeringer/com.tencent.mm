@@ -18,8 +18,8 @@
 .method public abstract a(ILcom/tencent/mm/pluginsdk/model/app/f;)V
 .end method
 
-.method public abstract oA(I)I
+.method public abstract qg(I)I
 .end method
 
-.method public abstract oB(I)V
+.method public abstract qh(I)V
 .end method

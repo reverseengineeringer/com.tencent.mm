@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic lrN:Ljava/util/HashMap;
+.field final synthetic lSr:Ljava/util/HashMap;
 
-.field final synthetic lrO:Landroid/content/pm/PackageManager;
+.field final synthetic lSs:Landroid/content/pm/PackageManager;
 
-.field final synthetic lrP:Lcom/tencent/mm/ui/friend/InviteFriendUI$1;
+.field final synthetic lSt:Lcom/tencent/mm/ui/friend/InviteFriendUI$1;
 
 
 # direct methods
@@ -31,11 +31,11 @@
 
     .prologue
     .line 264
-    iput-object p1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$1;->lrP:Lcom/tencent/mm/ui/friend/InviteFriendUI$1;
+    iput-object p1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$1;->lSt:Lcom/tencent/mm/ui/friend/InviteFriendUI$1;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$1;->lrN:Ljava/util/HashMap;
+    iput-object p2, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$1;->lSr:Ljava/util/HashMap;
 
-    iput-object p3, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$1;->lrO:Landroid/content/pm/PackageManager;
+    iput-object p3, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$1;->lSs:Landroid/content/pm/PackageManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -66,7 +66,7 @@
     move-result-object v0
 
     .line 269
-    iget-object v1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$1;->lrN:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$1;->lSr:Ljava/util/HashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -74,7 +74,7 @@
 
     check-cast v0, Landroid/content/pm/ResolveInfo;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$1;->lrO:Landroid/content/pm/PackageManager;
+    iget-object v1, p0, Lcom/tencent/mm/ui/friend/InviteFriendUI$1$1;->lSs:Landroid/content/pm/PackageManager;
 
     invoke-virtual {v0, v1}, Landroid/content/pm/ResolveInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
 

@@ -26,6 +26,27 @@ final class SQLiteConnection$OperationLog
         return true;
       }
       arrayOfInt = new int[10];
+      int[] tmp55_53 = arrayOfInt;
+      tmp55_53[0] = 0;
+      int[] tmp59_55 = tmp55_53;
+      tmp59_55[1] = 0;
+      int[] tmp63_59 = tmp59_55;
+      tmp63_59[2] = 0;
+      int[] tmp67_63 = tmp63_59;
+      tmp67_63[3] = 0;
+      int[] tmp71_67 = tmp67_63;
+      tmp71_67[4] = 0;
+      int[] tmp75_71 = tmp71_67;
+      tmp75_71[5] = 0;
+      int[] tmp79_75 = tmp75_71;
+      tmp79_75[6] = 0;
+      int[] tmp84_79 = tmp79_75;
+      tmp84_79[7] = 0;
+      int[] tmp89_84 = tmp84_79;
+      tmp89_84[8] = 0;
+      int[] tmp94_89 = tmp89_84;
+      tmp94_89[9] = 0;
+      tmp94_89;
       l = 10000L;
       switch (type)
       {
@@ -40,18 +61,18 @@ final class SQLiteConnection$OperationLog
           do
           {
             return false;
-            if (h.qJ())
+            if (h.pn())
             {
-              arrayOfInt = SQLiteConnection.access$3(paramInt1);
-              l = h.qK();
+              arrayOfInt = SQLiteConnection.access$600(paramInt1);
+              l = h.po();
             }
           } while ((!SQLiteDebug.shouldLogSlowQuery(mEndTime - mStartTime)) && (arrayOfInt[4] <= l));
           h.a(paramString, mSql, type, mEndTime - mStartTime, arrayOfInt);
           return true;
-          if (h.qJ())
+          if (h.pn())
           {
-            arrayOfInt = SQLiteConnection.access$3(paramInt1);
-            l = h.qK();
+            arrayOfInt = SQLiteConnection.access$600(paramInt1);
+            l = h.po();
           }
         } while ((!SQLiteDebug.shouldLogSlowUpdate(mEndTime - mStartTime)) && (arrayOfInt[9] <= l));
         h.a(paramString, mSql, type, mEndTime - mStartTime, arrayOfInt);
@@ -96,10 +117,11 @@ final class SQLiteConnection$OperationLog
     int i = 0;
     for (;;)
     {
+      int j;
       SQLiteConnection.Operation localOperation1;
       synchronized (mOperations)
       {
-        int j = (mIndex + 1) % 20;
+        j = (mIndex + 1) % 20;
         SQLiteConnection.Operation localOperation2 = mOperations[j];
         if (localOperation2 == null)
         {
@@ -108,21 +130,21 @@ final class SQLiteConnection$OperationLog
           mStartTime = System.currentTimeMillis();
           mKind = paramString1;
           mSql = paramString2;
-          if (paramArrayOfObject != null)
-          {
-            if (mBindArgs == null)
-            {
-              mBindArgs = new ArrayList();
-              if (i < paramArrayOfObject.length) {
-                break label186;
-              }
-            }
+          if (paramArrayOfObject == null) {
+            break label207;
           }
-          else
+          if (mBindArgs == null)
           {
-            mCookie = newOperationCookieLocked(j);
-            mIndex = j;
-            return localOperation1;
+            mBindArgs = new ArrayList();
+            if (i >= paramArrayOfObject.length) {
+              break label207;
+            }
+            paramString1 = paramArrayOfObject[i];
+            if ((paramString1 == null) || (!(paramString1 instanceof byte[]))) {
+              break label194;
+            }
+            mBindArgs.add(SQLiteConnection.access$500());
+            break label230;
           }
         }
         else
@@ -139,13 +161,14 @@ final class SQLiteConnection$OperationLog
       }
       mBindArgs.clear();
       continue;
-      label186:
-      paramString1 = paramArrayOfObject[i];
-      if ((paramString1 != null) && ((paramString1 instanceof byte[]))) {
-        mBindArgs.add(SQLiteConnection.access$2());
-      } else {
-        mBindArgs.add(paramString1);
-      }
+      label194:
+      mBindArgs.add(paramString1);
+      break label230;
+      label207:
+      mCookie = newOperationCookieLocked(j);
+      mIndex = j;
+      return localOperation1;
+      label230:
       i += 1;
     }
   }
@@ -180,7 +203,7 @@ final class SQLiteConnection$OperationLog
           int j = 0;
           StringBuilder localStringBuilder = new StringBuilder();
           localStringBuilder.append("    ").append(j).append(": [");
-          localStringBuilder.append(SQLiteConnection.Operation.access$1(localOperation));
+          localStringBuilder.append(SQLiteConnection.Operation.access$700(localOperation));
           localStringBuilder.append("] ");
           localOperation.describe(localStringBuilder, paramBoolean);
           Log.i("MicroMsg.kkdb.SQLiteConnection", localStringBuilder.toString());

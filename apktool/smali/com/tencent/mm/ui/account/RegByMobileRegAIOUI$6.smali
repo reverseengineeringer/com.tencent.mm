@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+.field final synthetic kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 604
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$6;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 605
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$6;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,22 +40,22 @@
     .locals 1
 
     .prologue
-    .line 608
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$6;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->age()V
-
     .line 609
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$6;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$6;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->aiI()V
+
+    .line 610
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$6;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->l(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)V
 
-    .line 610
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$6;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 611
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$6;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->finish()V
 
-    .line 611
+    .line 612
     const/4 v0, 0x1
 
     return v0

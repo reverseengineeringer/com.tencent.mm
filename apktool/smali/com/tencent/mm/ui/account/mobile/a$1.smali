@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/mobile/a;->i(Lcom/tencent/mm/ui/MMActivity;)V
+    value = Lcom/tencent/mm/ui/account/mobile/a;->g(Lcom/tencent/mm/ui/MMActivity;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic ktw:Lcom/tencent/mm/modelsimple/t;
+.field final synthetic kSE:Lcom/tencent/mm/modelsimple/r;
 
-.field final synthetic kxL:Lcom/tencent/mm/ui/account/mobile/a;
+.field final synthetic kWS:Lcom/tencent/mm/ui/account/mobile/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/account/mobile/a;Lcom/tencent/mm/modelsimple/t;)V
+.method constructor <init>(Lcom/tencent/mm/ui/account/mobile/a;Lcom/tencent/mm/modelsimple/r;)V
     .locals 0
 
     .prologue
     .line 60
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/a$1;->kxL:Lcom/tencent/mm/ui/account/mobile/a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/a$1;->kWS:Lcom/tencent/mm/ui/account/mobile/a;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/mobile/a$1;->ktw:Lcom/tencent/mm/modelsimple/t;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/mobile/a$1;->kSE:Lcom/tencent/mm/modelsimple/r;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,13 +45,13 @@
 
     .prologue
     .line 64
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/a$1;->ktw:Lcom/tencent/mm/modelsimple/t;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/a$1;->kSE:Lcom/tencent/mm/modelsimple/r;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
     .line 65
     return-void

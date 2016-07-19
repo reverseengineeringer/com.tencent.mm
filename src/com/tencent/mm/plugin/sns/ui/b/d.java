@@ -6,236 +6,281 @@ import android.view.View;
 import android.view.ViewStub;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.al.a;
-import com.tencent.mm.plugin.sns.d.g;
-import com.tencent.mm.plugin.sns.data.h;
-import com.tencent.mm.plugin.sns.h.k;
+import com.tencent.mm.plugin.sns.data.i;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.ak.a;
+import com.tencent.mm.plugin.sns.e.g;
 import com.tencent.mm.plugin.sns.ui.TagImageView;
-import com.tencent.mm.plugin.sns.ui.an;
-import com.tencent.mm.plugin.sns.ui.au;
+import com.tencent.mm.plugin.sns.ui.aq;
+import com.tencent.mm.plugin.sns.ui.as;
+import com.tencent.mm.plugin.sns.ui.ba;
 import com.tencent.mm.plugin.sns.ui.c.b;
-import com.tencent.mm.protocal.b.add;
-import com.tencent.mm.protocal.b.atp;
-import com.tencent.mm.protocal.b.iv;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.storage.i.a;
+import com.tencent.mm.plugin.sns.ui.o;
+import com.tencent.mm.protocal.b.adw;
+import com.tencent.mm.protocal.b.auf;
+import com.tencent.mm.protocal.b.je;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.storage.z;
+import com.tencent.mm.ui.tools.m;
 import java.util.LinkedList;
 
 public final class d
   extends a
 {
-  public final void a(a.b paramb, int paramInt1, k paramk, atp paramatp, int paramInt2, an paraman)
+  public final void a(a.b paramb, int paramInt1, as paramas, auf paramauf, int paramInt2, aq paramaq)
   {
-    hnN.setPosition(paramInt1);
-    paramk = paramk.aAl();
-    if (jMx.jhv == 9)
+    hEi.position = paramInt1;
+    paramas = hlg;
+    if (kli.jFu == 9)
     {
-      if (jMx.jhw.size() <= 0) {
-        break label1135;
+      if (kli.jFv.size() <= 0) {
+        break label1342;
       }
-      hht.setTag(new com.tencent.mm.plugin.sns.ui.m(paramatp, paramk));
-      hht.setOnClickListener(hcA.hms);
+      hwj.setTag(new o(paramauf, paramas));
+      hwj.setOnClickListener(hrm.hCz);
       paramInt1 = 0;
     }
     for (;;)
     {
-      dRJ.a(hht, gRg.hpf, gRg.hoQ);
+      dTR.a(hwj, gZj.hFC, gZj.hFn);
       int i;
-      if (jMx.jhv == 9)
+      if (kli.jFu == 9)
       {
         i = 1;
         label118:
         if (i == 0) {
-          break label849;
+          break label1003;
         }
-        paramk = an.vX(jMx.eiq);
+        paramas = aq.xk(kli.emu);
         label135:
-        if ((jMx.jhv != 9) && (jMx.jhv != 14) && (jMx.jhv != 12) && (jMx.jhv != 13)) {
-          break label1129;
+        if ((kli.jFu != 9) && (kli.jFu != 14) && (kli.jFu != 12) && (kli.jFu != 13)) {
+          break label1336;
         }
       }
-      label352:
-      label377:
-      label849:
-      label1038:
-      label1050:
-      label1074:
-      label1083:
-      label1129:
-      for (paraman = jMx.eia;; paraman = paramk)
+      label378:
+      label403:
+      label1003:
+      label1245:
+      label1257:
+      label1281:
+      label1290:
+      label1336:
+      for (paramaq = kli.elX;; paramaq = paramas)
       {
-        paramk = jMx.asP;
-        if ((paramk != null) && (paramk.length() > 40)) {
-          paramk = paramk.substring(0, 40) + "...";
+        paramas = kli.aez;
+        if ((paramas != null) && (paramas.length() > 40)) {
+          paramas = paramas.substring(0, 40) + "...";
         }
         for (;;)
         {
-          gWs.setVisibility(8);
-          add localadd;
-          if (!jMx.jhw.isEmpty())
+          hjR.setVisibility(8);
+          adw localadw;
+          g localg;
+          TagImageView localTagImageView;
+          z localz;
+          if (!kli.jFv.isEmpty())
           {
-            hnN.setVisibility(0);
-            localadd = (add)jMx.jhw.get(0);
-            if (jMx.jhv == 5)
+            hEi.setVisibility(0);
+            localadw = (adw)kli.jFv.get(0);
+            if (kli.jFu == 5)
             {
-              paramk = asP;
-              gWs.setImageResource(2130970530);
-              gWs.setVisibility(0);
-              ad.azg().b(localadd, hnN, 2130903696, jx.hashCode(), i.a.kal);
-              if (ay.kz(paraman)) {
-                break label1038;
+              paramas = aez;
+              hjR.setImageResource(2130839539);
+              hjR.setVisibility(0);
+              localg = ad.aBG();
+              localTagImageView = hEi;
+              i = jO.hashCode();
+              localz = z.bcg();
+              fxK = fyR;
+              localg.b(localadw, localTagImageView, 2131165241, i, localz);
+              if (be.kf(paramaq)) {
+                break label1245;
               }
-              hnO.setVisibility(0);
-              hnO.setText(paraman);
-              if (ay.kz(paramk)) {
-                break label1083;
+              hEj.setVisibility(0);
+              hEj.setText(paramaq);
+              if (be.kf(paramas)) {
+                break label1290;
               }
-              if (hnO.getVisibility() != 8) {
-                break label1050;
+              if (hEj.getVisibility() != 8) {
+                break label1257;
               }
-              if (hnP != 2) {
-                eMj.setMaxLines(2);
+              if (hEk != 2) {
+                eLK.setMaxLines(2);
               }
             }
           }
-          for (hnP = 2;; hnP = 1)
+          for (hEk = 2;; hEk = 1)
           {
-            eMj.setVisibility(0);
+            eLK.setVisibility(0);
             if (paramInt1 == 0) {
-              break label1074;
+              break label1281;
             }
-            eMj.setText(h.a(paramk, jx, eMj));
+            eLK.setText(i.a(paramas, jO, eLK));
             return;
-            if (jMx.jhv == 10)
+            if (kli.jFu == 10)
             {
-              if (jMx.jhw.size() <= 0) {
-                break label1135;
+              if (kli.jFv.size() <= 0) {
+                break label1342;
               }
-              hht.setTag(new com.tencent.mm.plugin.sns.ui.m(paramatp, paramk));
-              hht.setOnClickListener(hcA.hmu);
+              hwj.setTag(new o(paramauf, paramas));
+              hwj.setOnClickListener(hrm.hCB);
               paramInt1 = 0;
               break;
             }
-            if (jMx.jhv == 17)
+            if (kli.jFu == 17)
             {
-              if (jMx.jhw.size() <= 0) {
-                break label1135;
+              if (kli.jFv.size() <= 0) {
+                break label1342;
               }
-              hht.setTag(new com.tencent.mm.plugin.sns.ui.m(paramatp, paramk));
-              hht.setOnClickListener(hcA.hmv);
+              hwj.setTag(new o(paramauf, paramas));
+              hwj.setOnClickListener(hrm.hCC);
               paramInt1 = 0;
               break;
             }
-            if (jMx.jhv == 14)
+            if (kli.jFu == 22)
             {
-              if (jMx.jhw.size() <= 0) {
-                break label1135;
+              if (kli.jFv.size() <= 0) {
+                break label1342;
               }
-              hht.setTag(new com.tencent.mm.plugin.sns.ui.m(paramatp, paramk));
-              hht.setOnClickListener(hcA.hmt);
+              hwj.setTag(new o(paramauf, paramas));
+              hwj.setOnClickListener(hrm.hCD);
               paramInt1 = 0;
               break;
             }
-            if (jMx.jhv == 12)
+            if (kli.jFu == 23)
             {
-              if (jMx.jhw.size() <= 0) {
-                break label1135;
+              if (kli.jFv.size() <= 0) {
+                break label1342;
               }
-              hht.setTag(new com.tencent.mm.plugin.sns.ui.m(paramatp, paramk));
-              hht.setOnClickListener(hcA.hmx);
+              hwj.setTag(new o(paramauf, paramas));
+              hwj.setOnClickListener(hrm.hCE);
               paramInt1 = 0;
               break;
             }
-            if (jMx.jhv == 13)
+            if (kli.jFu == 14)
             {
-              if (jMx.jhw.size() > 0)
+              if (kli.jFv.size() <= 0) {
+                break label1342;
+              }
+              hwj.setTag(new o(paramauf, paramas));
+              hwj.setOnClickListener(hrm.hCA);
+              paramInt1 = 0;
+              break;
+            }
+            if (kli.jFu == 12)
+            {
+              if (kli.jFv.size() <= 0) {
+                break label1342;
+              }
+              hwj.setTag(new o(paramauf, paramas));
+              hwj.setOnClickListener(hrm.hCG);
+              paramInt1 = 0;
+              break;
+            }
+            if (kli.jFu == 13)
+            {
+              if (kli.jFv.size() > 0)
               {
-                hht.setTag(new com.tencent.mm.plugin.sns.ui.m(paramatp, paramk));
-                hht.setOnClickListener(hcA.hmy);
+                hwj.setTag(new o(paramauf, paramas));
+                hwj.setOnClickListener(hrm.hCH);
                 paramInt1 = 0;
                 break;
               }
-              hht.setOnClickListener(null);
+              hwj.setOnClickListener(null);
               paramInt1 = 0;
               break;
             }
-            hht.setTag(new com.tencent.mm.plugin.sns.ui.m(paramatp, paramk));
-            hht.setOnClickListener(hcA.hhi);
-            if ((bxl & 0x1) <= 0) {
-              break label1135;
+            hwj.setTag(new o(paramauf, paramas));
+            hwj.setOnClickListener(hrm.hvY);
+            if ((bqe & 0x1) <= 0) {
+              break label1342;
             }
             paramInt1 = 1;
             break;
-            if ((al.a.azB() & 0x1) <= 0)
+            if ((ak.a.aCc() & 0x1) <= 0)
             {
               i = 1;
               break label118;
             }
             i = 0;
             break label118;
-            paramk = "";
+            paramas = "";
             break label135;
-            if (jMx.jhv == 18)
+            if (kli.jFu == 18)
             {
-              gWs.setVisibility(0);
-              gWs.setImageResource(2130970530);
-              hnN.setVisibility(0);
-              ad.azg().b(localadd, hnN, 2130903696, jx.hashCode(), i.a.kal);
-              break label352;
+              hjR.setVisibility(0);
+              hjR.setImageResource(2130839539);
+              hEi.setVisibility(0);
+              localg = ad.aBG();
+              localTagImageView = hEi;
+              i = jO.hashCode();
+              localz = z.bcg();
+              fxK = fyR;
+              localg.b(localadw, localTagImageView, 2131165241, i, localz);
+              break label378;
             }
-            ad.azg().b(localadd, hnN, jx.hashCode(), i.a.kal);
-            break label352;
-            if (jMx.jhv == 18)
+            localg = ad.aBG();
+            localTagImageView = hEi;
+            i = jO.hashCode();
+            localz = z.bcg();
+            fxK = fyR;
+            localg.b(localadw, localTagImageView, i, localz);
+            break label378;
+            if (kli.jFu == 18)
             {
-              gWs.setVisibility(0);
-              gWs.setImageResource(2130970530);
-              hnN.setVisibility(0);
-              ad.azg().c(hnN, -1, 2130903696, jx.hashCode());
-              break label352;
+              hjR.setVisibility(0);
+              hjR.setImageResource(2130839539);
+              hEi.setVisibility(0);
+              ad.aBG().c(hEi, -1, 2131165241, jO.hashCode());
+              break label378;
             }
-            hnN.setVisibility(0);
-            ad.azg().c(hnN, -1, 2130903701, jx.hashCode());
-            break label352;
-            hnO.setVisibility(8);
-            break label377;
-            if (hnP != 1) {
-              eMj.setMaxLines(1);
+            hEi.setVisibility(0);
+            ad.aBG().c(hEi, -1, 2131165244, jO.hashCode());
+            break label378;
+            hEj.setVisibility(8);
+            break label403;
+            if (hEk != 1) {
+              eLK.setMaxLines(1);
             }
           }
-          eMj.setText(paramk);
+          eLK.setText(paramas);
           return;
           if (paramInt2 == 1)
           {
-            eMj.setText(an.vX(jMx.eiq));
-            eMj.setVisibility(0);
+            eLK.setText(aq.xk(kli.emu));
+            eLK.setVisibility(0);
             return;
           }
-          eMj.setVisibility(8);
+          eLK.setVisibility(8);
           return;
         }
       }
-      label1135:
+      label1342:
       paramInt1 = 0;
     }
   }
   
-  public final void c(a.b paramb)
+  public final void d(a.b paramb)
   {
-    hnK.setLayoutResource(2131362847);
-    hos = ((ViewStub)hnE.findViewById(2131168681));
-    if (!hot)
+    if ((hEf != null) && (hEf.getParent() != null))
     {
-      hou = hos.inflate();
-      hot = true;
+      hEf.setLayoutResource(2130904460);
+      if (!hEP) {
+        hEQ = hEf.inflate();
+      }
     }
-    hht = hou;
-    hnN = ((TagImageView)hht.findViewById(2131168526));
-    gWs = ((ImageView)hht.findViewById(2131168527));
-    hnO = ((TextView)hht.findViewById(2131168530));
-    eMj = ((TextView)hht.findViewById(2131168529));
-    eMj.setTextColor(jx.getResources().getColor(2131231101));
-    h.b(hnN, jx);
+    for (hEP = true;; hEP = true)
+    {
+      hwj = hEQ;
+      hEi = ((TagImageView)hwj.findViewById(2131757802));
+      hjR = ((ImageView)hwj.findViewById(2131757253));
+      hEj = ((TextView)hwj.findViewById(2131757805));
+      eLK = ((TextView)hwj.findViewById(2131757804));
+      eLK.setTextColor(jO.getResources().getColor(2131689519));
+      i.b(hEi, jO);
+      return;
+      hEQ = hDZ.findViewById(2131759204);
+    }
   }
 }
 

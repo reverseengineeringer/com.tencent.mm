@@ -1,66 +1,65 @@
 package com.tencent.mm.plugin.report.service;
 
-import com.tencent.mm.model.ah;
-import com.tencent.mm.plugin.report.a.b;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.j.a;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.LinkedList;
 
-public enum a
+public final class a
+  extends com.tencent.mm.ax.a
 {
-  private static Map fUc;
+  public int cmq;
+  public LinkedList<b> gdx = new LinkedList();
   
-  static
+  protected final int a(int paramInt, Object... paramVarArgs)
   {
-    HashMap localHashMap = new HashMap();
-    fUc = localHashMap;
-    localHashMap.put(Integer.valueOf(12993), Integer.valueOf(12977));
-    fUc.put(Integer.valueOf(12994), Integer.valueOf(12978));
-    fUc.put(Integer.valueOf(12995), Integer.valueOf(12979));
-    fUc.put(Integer.valueOf(12996), Integer.valueOf(12980));
-    fUc.put(Integer.valueOf(12997), Integer.valueOf(12981));
-    fUc.put(Integer.valueOf(12998), Integer.valueOf(12982));
-    fUc.put(Integer.valueOf(12999), Integer.valueOf(12983));
-    fUc.put(Integer.valueOf(13010), Integer.valueOf(13009));
-    fUc.put(Integer.valueOf(11747), Integer.valueOf(11747));
-    fUc.put(Integer.valueOf(13066), Integer.valueOf(13065));
-    fUc.put(Integer.valueOf(13106), Integer.valueOf(13105));
-  }
-  
-  private a() {}
-  
-  public static void g(int paramInt, Object... paramVarArgs)
-  {
-    h.fUJ.g(paramInt, paramVarArgs);
-    if (!fUc.containsKey(Integer.valueOf(paramInt)))
+    if (paramInt == 0)
     {
-      u.i("!56@/B4Tb64lLpK8nxROsoUQNJxBZhmhX0xC0WMs0KeC4BEO+erZ45+q0A==", "kvStat: no bakLogId, logId=%d", new Object[] { Integer.valueOf(paramInt) });
-      return;
+      paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
+      paramVarArgs.cw(1, cmq);
+      paramVarArgs.d(2, 8, gdx);
+      return 0;
     }
-    if (paramVarArgs.length <= 0) {
-      u.w("!56@/B4Tb64lLpK8nxROsoUQNJxBZhmhX0xC0WMs0KeC4BEO+erZ45+q0A==", "vals is null, use '' as value");
+    if (paramInt == 1) {
+      return a.a.a.a.cu(1, cmq) + 0 + a.a.a.a.c(2, 8, gdx);
     }
-    Object localObject;
-    for (paramVarArgs = "";; paramVarArgs = ((StringBuilder)localObject).toString())
+    if (paramInt == 2)
     {
-      localObject = new com.tencent.mm.plugin.report.a.a();
-      field_bakLogId = ((Integer)fUc.get(Integer.valueOf(paramInt))).intValue();
-      field_valueStr = paramVarArgs;
-      i.aqx().a((com.tencent.mm.sdk.h.c)localObject);
-      ah.tD().rn().b(j.a.kem, Boolean.valueOf(false));
-      return;
-      localObject = new StringBuilder();
-      int j = paramVarArgs.length - 1;
-      int i = 0;
-      while (i < j)
-      {
-        ((StringBuilder)localObject).append(String.valueOf(paramVarArgs[i])).append(',');
-        i += 1;
+      paramVarArgs = (byte[])paramVarArgs[0];
+      gdx.clear();
+      paramVarArgs = new a.a.a.a.a(paramVarArgs, jrk);
+      for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
+        if (!super.a(paramVarArgs, this, paramInt)) {
+          paramVarArgs.bve();
+        }
       }
-      ((StringBuilder)localObject).append(String.valueOf(paramVarArgs[j]));
+      return 0;
     }
+    if (paramInt == 3)
+    {
+      Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
+      a locala = (a)paramVarArgs[1];
+      paramInt = ((Integer)paramVarArgs[2]).intValue();
+      switch (paramInt)
+      {
+      default: 
+        return -1;
+      case 1: 
+        cmq = mMY.id();
+        return 0;
+      }
+      paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+      int i = paramVarArgs.size();
+      paramInt = 0;
+      while (paramInt < i)
+      {
+        Object localObject2 = (byte[])paramVarArgs.get(paramInt);
+        localObject1 = new b();
+        localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+        for (boolean bool = true; bool; bool = ((b)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, com.tencent.mm.ax.a.a((a.a.a.a.a)localObject2))) {}
+        gdx.add(localObject1);
+        paramInt += 1;
+      }
+      return 0;
+    }
+    return -1;
   }
 }
 

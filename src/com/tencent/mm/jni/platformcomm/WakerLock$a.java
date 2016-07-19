@@ -2,7 +2,7 @@ package com.tencent.mm.jni.platformcomm;
 
 public abstract interface WakerLock$a
 {
-  public abstract void qZ();
+  public abstract void pO();
 }
 
 /* Location:

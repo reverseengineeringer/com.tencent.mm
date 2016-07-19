@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/ae1" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ayz" android:background="@color/ak" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.tencent.mm.plugin.sns.ui.SnsAdNativeLandingPagesScrollView android:id="@id/c8r" android:background="@color/ow" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/c8u" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.tencent.mm.plugin.sns.ui.SnsAdNativeLandingPagesScrollView>
+    <ImageView android:layout_gravity="top" android:id="@id/c8v" android:background="@drawable/adc" android:layout_width="fill_parent" android:layout_height="42.0dip" />
+    <ImageView android:id="@id/c8w" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:src="@drawable/ad3" />
+    <ImageView android:layout_gravity="right" android:id="@id/c8x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/ad4" />
+</FrameLayout>

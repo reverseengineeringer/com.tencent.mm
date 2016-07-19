@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic llf:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$7;
+.field final synthetic lLs:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$7;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 347
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$7$1;->llf:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$7;
+    .line 352
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$7$1;->lLs:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,13 +40,13 @@
     .locals 1
 
     .prologue
-    .line 350
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$7$1;->llf:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$7;
+    .line 355
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$7$1;->lLs:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$7;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$7;->lle:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI$7;->lLr:Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->k(Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;)V
 
-    .line 351
+    .line 356
     return-void
 .end method

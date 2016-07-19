@@ -2,7 +2,7 @@ package com.tencent.mm.ui.tools;
 
 import android.view.View;
 import android.view.View.OnFocusChangeListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class ActionBarSearchView$2
   implements View.OnFocusChangeListener
@@ -11,7 +11,10 @@ final class ActionBarSearchView$2
   
   public final void onFocusChange(View paramView, boolean paramBoolean)
   {
-    u.v("!44@/B4Tb64lLpL4/IPflj+tleANqnL7qi1AFYpzfZUCVoE=", "on edittext focus changed, hasFocus %B", new Object[] { Boolean.valueOf(paramBoolean) });
+    v.v("MicroMsg.ActionBarSearchView", "on edittext focus changed, hasFocus %B", new Object[] { Boolean.valueOf(paramBoolean) });
+    if (ActionBarSearchView.d(lUJ) != null) {
+      ActionBarSearchView.d(lUJ).onFocusChange(paramView, paramBoolean);
+    }
   }
 }
 

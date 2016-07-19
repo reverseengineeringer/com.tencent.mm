@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract ht(Ljava/lang/String;)Ljava/lang/String;
+.method public abstract hL(Ljava/lang/String;)Ljava/lang/String;
 .end method
 
-.method public abstract hu(Ljava/lang/String;)Ljava/lang/String;
+.method public abstract hM(Ljava/lang/String;)Ljava/lang/String;
 .end method

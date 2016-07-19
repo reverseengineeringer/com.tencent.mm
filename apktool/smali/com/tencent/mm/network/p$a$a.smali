@@ -414,7 +414,7 @@
     throw v0
 .end method
 
-.method public final gk(Ljava/lang/String;)V
+.method public final gx(Ljava/lang/String;)V
     .locals 5
 
     .prologue
@@ -472,7 +472,7 @@
     throw v0
 .end method
 
-.method public final vB()Z
+.method public final vD()Z
     .locals 6
 
     .prologue
@@ -539,7 +539,7 @@
     throw v0
 .end method
 
-.method public final vF()I
+.method public final vI()I
     .locals 5
 
     .prologue
@@ -599,7 +599,7 @@
     throw v0
 .end method
 
-.method public final vx()I
+.method public final vz()I
     .locals 5
 
     .prologue
@@ -659,7 +659,7 @@
     throw v0
 .end method
 
-.method public final wf()Lcom/tencent/mm/protocal/e;
+.method public final wh()Lcom/tencent/mm/protocal/g;
     .locals 5
 
     .prologue
@@ -696,7 +696,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/protocal/e$a;->aq(Landroid/os/IBinder;)Lcom/tencent/mm/protocal/e;
+    invoke-static {v0}, Lcom/tencent/mm/protocal/g$a;->S(Landroid/os/IBinder;)Lcom/tencent/mm/protocal/g;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -723,7 +723,7 @@
     throw v0
 .end method
 
-.method public final wg()Lcom/tencent/mm/protocal/f;
+.method public final wi()Lcom/tencent/mm/protocal/h;
     .locals 5
 
     .prologue
@@ -760,7 +760,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/protocal/f$a;->ar(Landroid/os/IBinder;)Lcom/tencent/mm/protocal/f;
+    invoke-static {v0}, Lcom/tencent/mm/protocal/h$a;->T(Landroid/os/IBinder;)Lcom/tencent/mm/protocal/h;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -787,7 +787,7 @@
     throw v0
 .end method
 
-.method public final wh()I
+.method public final wj()I
     .locals 5
 
     .prologue

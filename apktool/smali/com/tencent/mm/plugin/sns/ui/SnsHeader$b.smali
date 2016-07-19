@@ -15,19 +15,19 @@
 
 
 # instance fields
-.field coY:Landroid/widget/ImageView;
+.field ckm:Landroid/widget/ImageView;
 
-.field cyG:Landroid/widget/TextView;
+.field cvE:Landroid/widget/TextView;
 
-.field gWg:Landroid/widget/TextView;
+.field hjC:Landroid/widget/TextView;
 
-.field final synthetic hei:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+.field final synthetic hsT:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
 
-.field hel:Landroid/widget/ImageView;
+.field hsX:Landroid/widget/ImageView;
 
-.field hem:Landroid/widget/LinearLayout;
+.field hsY:Landroid/widget/LinearLayout;
 
-.field hen:Landroid/widget/LinearLayout;
+.field hsZ:Landroid/widget/LinearLayout;
 
 
 # direct methods
@@ -35,8 +35,8 @@
     .locals 0
 
     .prologue
-    .line 393
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;->hei:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
+    .line 394
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsHeader$b;->hsT:Lcom/tencent/mm/plugin/sns/ui/SnsHeader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

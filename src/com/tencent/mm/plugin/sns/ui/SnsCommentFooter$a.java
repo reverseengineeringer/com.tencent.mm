@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sns.ui;
 
 abstract interface SnsCommentFooter$a
 {
-  public abstract void aBL();
+  public abstract void aEH();
 }
 
 /* Location:

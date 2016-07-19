@@ -159,7 +159,7 @@
     move-result v3
 
     .line 75
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/tencent/mm/network/a/b$a;->d(IIII)V
+    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/tencent/mm/network/a/b$a;->b(IIII)V
 
     .line 76
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V

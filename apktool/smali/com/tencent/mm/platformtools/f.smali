@@ -3,41 +3,44 @@
 .source "SourceFile"
 
 
+# instance fields
+.field public final cgR:J
+
+.field public final cgS:I
+
+.field public cgT:J
+
+.field public cgU:I
+
+
 # direct methods
-.method public static H(Landroid/view/View;)V
+.method public constructor <init>()V
     .locals 2
 
     .prologue
-    const/16 v1, 0xb
+    .line 14
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
-    if-nez p0, :cond_1
+    .line 15
+    const-wide/32 v0, 0x2bf20
 
-    .line 19
-    :cond_0
-    :goto_0
-    return-void
+    iput-wide v0, p0, Lcom/tencent/mm/platformtools/f;->cgR:J
 
     .line 16
-    :cond_1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    const/4 v0, 0x3
 
-    if-lt v0, v1, :cond_0
+    iput v0, p0, Lcom/tencent/mm/platformtools/f;->cgS:I
 
     .line 17
-    new-instance v0, Lcom/tencent/mm/platformtools/i;
+    iget v0, p0, Lcom/tencent/mm/platformtools/f;->cgS:I
 
-    invoke-direct {v0}, Lcom/tencent/mm/platformtools/i;-><init>()V
+    iput v0, p0, Lcom/tencent/mm/platformtools/f;->cgU:I
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    .line 18
+    const-wide/16 v0, 0x0
 
-    if-lt v0, v1, :cond_0
+    iput-wide v0, p0, Lcom/tencent/mm/platformtools/f;->cgT:J
 
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
-
-    goto :goto_0
+    .line 19
+    return-void
 .end method

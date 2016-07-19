@@ -1,7 +1,7 @@
 package com.tencent.mm.jni.platformcomm;
 
 import android.os.PowerManager.WakeLock;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class WakerLock$1
   implements Runnable
@@ -10,12 +10,12 @@ final class WakerLock$1
   
   public final void run()
   {
-    if (WakerLock.access$000(bwM).isHeld())
+    if (WakerLock.access$000(blZ).isHeld())
     {
-      u.w("!32@/B4Tb64lLpLSCksk5w/QSxQTciH9sVsR", "unlock by fucking handler! [%d,%d] @[%s]", new Object[] { Integer.valueOf(bwM.hashCode()), Integer.valueOf(WakerLock.access$000(bwM).hashCode()), WakerLock.access$100(bwM) });
-      bwM.unLock();
-      if (WakerLock.access$200(bwM) != null) {
-        WakerLock.access$200(bwM).qZ();
+      v.w("MicroMsg.WakerLock", "unlock by fucking handler! [%d,%d] @[%s]", new Object[] { Integer.valueOf(blZ.hashCode()), Integer.valueOf(WakerLock.access$000(blZ).hashCode()), WakerLock.access$100(blZ) });
+      blZ.unLock();
+      if (WakerLock.access$200(blZ) != null) {
+        WakerLock.access$200(blZ).pO();
       }
     }
   }

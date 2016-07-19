@@ -3,26 +3,56 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/af$a;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/modelstat/g;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/modelstat/g;->a(IILjava/lang/String;ILjava/lang/String;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
+# instance fields
+.field final synthetic bYP:Lcom/tencent/mm/modelstat/g;
+
+.field final synthetic bYS:I
+
+.field final synthetic bYT:I
+
+.field final synthetic bYU:I
+
+.field final synthetic bYV:Ljava/lang/String;
+
+.field final synthetic bYW:Z
+
+.field final synthetic bzm:Ljava/lang/String;
+
+
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcom/tencent/mm/modelstat/g;IILjava/lang/String;ILjava/lang/String;Z)V
     .locals 0
 
     .prologue
-    .line 518
+    .line 221
+    iput-object p1, p0, Lcom/tencent/mm/modelstat/g$3;->bYP:Lcom/tencent/mm/modelstat/g;
+
+    iput p2, p0, Lcom/tencent/mm/modelstat/g$3;->bYS:I
+
+    iput p3, p0, Lcom/tencent/mm/modelstat/g$3;->bYT:I
+
+    iput-object p4, p0, Lcom/tencent/mm/modelstat/g$3;->bzm:Ljava/lang/String;
+
+    iput p5, p0, Lcom/tencent/mm/modelstat/g$3;->bYU:I
+
+    iput-object p6, p0, Lcom/tencent/mm/modelstat/g$3;->bYV:Ljava/lang/String;
+
+    iput-boolean p7, p0, Lcom/tencent/mm/modelstat/g$3;->bYW:Z
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,76 +60,51 @@
 
 
 # virtual methods
-.method public final lj()Z
-    .locals 5
+.method public final run()V
+    .locals 4
 
     .prologue
-    const/4 v4, 0x0
+    .line 224
+    iget v0, p0, Lcom/tencent/mm/modelstat/g$3;->bYS:I
 
-    .line 523
-    :try_start_0
-    invoke-static {}, Lcom/tencent/mm/modelstat/g;->Ds()J
+    iget v1, p0, Lcom/tencent/mm/modelstat/g$3;->bYT:I
 
-    .line 524
-    invoke-static {}, Lcom/tencent/mm/modelstat/g;->Dt()I
+    iget v2, p0, Lcom/tencent/mm/modelstat/g$3;->bYU:I
 
-    move-result v0
+    iget-boolean v3, p0, Lcom/tencent/mm/modelstat/g$3;->bYW:Z
 
-    const/16 v1, 0x7d0
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/modelstat/g;->b(IIIZ)V
 
-    if-ge v0, v1, :cond_0
+    .line 225
+    return-void
+.end method
 
-    invoke-static {}, Lcom/tencent/mm/modelstat/g;->Dt()I
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    move-result v0
+    .prologue
+    .line 229
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x3e8
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-le v0, v1, :cond_0
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 525
-    invoke-static {}, Lcom/tencent/mm/modelstat/g;->Dt()I
+    move-result-object v1
 
-    move-result v0
-
-    invoke-static {v0}, Lcom/tencent/mm/modelstat/g;->dZ(I)V
-
-    .line 532
-    :goto_0
-    return v4
-
-    .line 527
-    :cond_0
-    invoke-static {}, Lcom/tencent/mm/modelstat/g;->Dt()I
-
-    move-result v0
-
-    invoke-static {v0}, Lcom/tencent/mm/modelstat/g;->ea(I)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    .line 529
-    :catch_0
-    move-exception v0
-
-    .line 530
-    const-string/jumbo v1, "!44@/B4Tb64lLpL5Ojn0IScONoo+FDv6oyheT6xM4CLuwD0="
-
-    const-string/jumbo v2, "run :%s"
-
-    const/4 v3, 0x1
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    aput-object v0, v3, v4
+    const-string/jumbo v1, "|report"
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

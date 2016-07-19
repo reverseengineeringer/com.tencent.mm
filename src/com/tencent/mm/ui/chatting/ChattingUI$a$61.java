@@ -1,30 +1,26 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.d.a.mx;
-import com.tencent.mm.d.a.mx.a;
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.sdk.c.b;
-import com.tencent.mm.sdk.c.c;
-import com.tencent.mm.ui.base.g;
+import android.view.MenuItem.OnMenuItemClickListener;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.j;
 import com.tencent.mm.ui.o;
 
 final class ChattingUI$a$61
-  extends c
+  implements View.OnClickListener
 {
-  ChattingUI$a$61(ChattingUI.a parama)
-  {
-    super(0);
-  }
+  ChattingUI$a$61(ChattingUI.a parama, MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener) {}
   
-  public final boolean a(b paramb)
+  public final void onClick(View paramView)
   {
-    if (((paramb instanceof mx)) && (!laF.kRI.field_username.equals(aJn.ajh))) {}
-    while (!laF.kRI.field_username.toLowerCase().endsWith("@chatroom")) {
-      return false;
+    if (!lAY.kNN.kNW) {
+      v.w("MicroMsg.ChattingUI", "Actionbar customView onclick screen not enable");
     }
-    g.y(laF.koJ.kpc, laF.getString(2131432500), null);
-    return false;
+    while (kOD == null) {
+      return;
+    }
+    kOD.onMenuItemClick(null);
   }
 }
 

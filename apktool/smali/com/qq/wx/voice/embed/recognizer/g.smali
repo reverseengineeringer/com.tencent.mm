@@ -3,9 +3,9 @@
 
 
 # instance fields
-.field ajq:Lcom/qq/wx/voice/embed/recognizer/c;
+.field Vg:Lcom/qq/wx/voice/embed/recognizer/c;
 
-.field ajr:Landroid/os/Handler;
+.field Vh:Landroid/os/Handler;
 
 
 # direct methods
@@ -18,7 +18,7 @@
 
     invoke-direct {v0, p0}, Lcom/qq/wx/voice/embed/recognizer/h;-><init>(Lcom/qq/wx/voice/embed/recognizer/g;)V
 
-    iput-object v0, p0, Lcom/qq/wx/voice/embed/recognizer/g;->ajr:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/qq/wx/voice/embed/recognizer/g;->Vh:Landroid/os/Handler;
 
     return-void
 .end method
@@ -28,7 +28,7 @@
 .method public final a(I)V
     .locals 3
 
-    iget-object v0, p0, Lcom/qq/wx/voice/embed/recognizer/g;->ajr:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/qq/wx/voice/embed/recognizer/g;->Vh:Landroid/os/Handler;
 
     const/16 v1, 0x64
 
@@ -46,7 +46,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    iget-object v1, p0, Lcom/qq/wx/voice/embed/recognizer/g;->ajr:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/qq/wx/voice/embed/recognizer/g;->Vh:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 

@@ -26,13 +26,13 @@
     .line 25
     const-string/jumbo v0, "Cannot extract a header from a null object"
 
-    invoke-static {p1, v0}, Lb/a/g/d;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lb/a/g/d;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v0, p1, Lb/a/d/c;->mdK:Ljava/util/Map;
+    iget-object v0, p1, Lb/a/d/c;->mPO:Ljava/util/Map;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p1, Lb/a/d/c;->mdK:Ljava/util/Map;
+    iget-object v0, p1, Lb/a/d/c;->mPO:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->size()I
 
@@ -49,7 +49,7 @@
 
     .line 26
     :cond_1
-    iget-object v1, p1, Lb/a/d/c;->mdK:Ljava/util/Map;
+    iget-object v1, p1, Lb/a/d/c;->mPO:Ljava/util/Map;
 
     .line 27
     new-instance v2, Ljava/lang/StringBuffer;

@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 public abstract interface MMPullDownView$c
 {
-  public abstract boolean Re();
+  public abstract boolean St();
 }
 
 /* Location:

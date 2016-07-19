@@ -9,11 +9,11 @@ final class g$6
   
   public final void a(l paraml)
   {
-    paraml.setHeaderTitle(cmn);
+    paraml.setHeaderTitle(cht);
     int i = 0;
-    while (i < cOT.size())
+    while (i < cMi.size())
     {
-      paraml.b(i, (CharSequence)cOT.get(i));
+      paraml.b(i, (CharSequence)cMi.get(i));
       i += 1;
     }
   }

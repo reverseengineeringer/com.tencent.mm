@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center|left" android:paddingTop="@dimen/j8" android:paddingBottom="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/j7"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center|left" android:id="@android:id/title" android:layout_width="@dimen/fq" android:layout_height="wrap_content" android:singleLine="false" style="@style/MMFontPreferenceLarge" />
+    <HorizontalScrollView android:paddingLeft="@dimen/j6" android:paddingTop="@dimen/j8" android:paddingRight="@dimen/j8" android:paddingBottom="@dimen/j8" android:scrollbars="none" android:layout_width="fill_parent" style="@style/MMFontPreferenceSummary">
+        <LinearLayout android:gravity="center|left" android:id="@id/zr" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </HorizontalScrollView>
+</LinearLayout>

@@ -1,37 +1,35 @@
 package com.tencent.mm.network;
 
 import android.os.RemoteException;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.protocal.e;
-import com.tencent.mm.protocal.f;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.h;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 public final class y
 {
-  final a[] cjG = new a[100];
+  final a[] ceX = new a[100];
   
-  final boolean EV()
+  final boolean Fq()
   {
-    a[] arrayOfa = cjG;
+    a[] arrayOfa = ceX;
     int i = 0;
     for (;;)
     {
       if (i < 100) {}
       try
       {
-        if ((cjG[i] != null) && ((701 == cjG[i].cjK.getType()) || (702 == cjG[i].cjK.getType())))
+        if ((ceX[i] != null) && ((701 == ceX[i].cfb.getType()) || (702 == ceX[i].cfb.getType())))
         {
-          u.w("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "hasAuthCmd Auth inQueue: netid=" + i + " type=" + cjG[i].cjK.getType());
+          v.w("MicroMsg.MMNativeNetTaskAdapter", "hasAuthCmd Auth inQueue: netid=" + i + " type=" + ceX[i].cfb.getType());
           return true;
         }
       }
       catch (RemoteException localRemoteException)
       {
-        cjG[i] = null;
-        u.e("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "exception:%s, remove index:%d", new Object[] { ay.b(localRemoteException), Integer.valueOf(i) });
+        ceX[i] = null;
+        v.e("MicroMsg.MMNativeNetTaskAdapter", "exception:%s, remove index:%d", new Object[] { be.f(localRemoteException), Integer.valueOf(i) });
         break label156;
         return false;
       }
@@ -41,7 +39,35 @@ public final class y
     }
   }
   
-  public final int EW()
+  final boolean Fr()
+  {
+    a[] arrayOfa = ceX;
+    int i = 0;
+    for (;;)
+    {
+      if (i < 100) {}
+      try
+      {
+        if ((ceX[i] != null) && (1000 == ceX[i].cfb.getType()))
+        {
+          v.w("MicroMsg.MMNativeNetTaskAdapter", "hasWithoutLoginCmd inQueue: netid=" + i + " type=" + ceX[i].cfb.getType());
+          return true;
+        }
+      }
+      catch (RemoteException localRemoteException)
+      {
+        ceX[i] = null;
+        v.e("MicroMsg.MMNativeNetTaskAdapter", "exception:%s, remove index:%d", new Object[] { be.f(localRemoteException), Integer.valueOf(i) });
+        break label136;
+        return false;
+      }
+      finally {}
+      label136:
+      i += 1;
+    }
+  }
+  
+  public final int Fs()
   {
     int i = 0;
     int k;
@@ -50,9 +76,9 @@ public final class y
       k = j;
       try
       {
-        if (cjG[i] != null)
+        if (ceX[i] != null)
         {
-          cjG[i].cjK.getType();
+          ceX[i].cfb.getType();
           k = j;
         }
       }
@@ -60,9 +86,9 @@ public final class y
       {
         for (;;)
         {
-          u.e("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "exception:%s, remove index:%d", new Object[] { ay.b(localRemoteException), Integer.valueOf(i) });
+          v.e("MicroMsg.MMNativeNetTaskAdapter", "exception:%s, remove index:%d", new Object[] { be.f(localRemoteException), Integer.valueOf(i) });
           k = j + 1;
-          cjG[i] = null;
+          ceX[i] = null;
         }
       }
       i += 1;
@@ -74,7 +100,7 @@ public final class y
   {
     int j = paramp.hashCode();
     MMNativeNetComm.NetCmd localNetCmd = new MMNativeNetComm.NetCmd();
-    a[] arrayOfa = cjG;
+    a[] arrayOfa = ceX;
     int i = 0;
     for (;;)
     {
@@ -83,20 +109,20 @@ public final class y
       {
         try
         {
-          if (cjG[i] != null) {
+          if (ceX[i] != null) {
             break;
           }
-          cjG[i] = new a(0);
-          cjG[i].cjK = paramp;
-          cjG[i].cjL = paramk;
-          cjG[i].cjM = paramc;
-          cjG[i].startTime = ay.FS();
-          reqCmdID = paramp.wf().getCmdId();
-          respCmdID = paramp.wg().getCmdId();
+          ceX[i] = new a(0);
+          ceX[i].cfb = paramp;
+          ceX[i].cfc = paramk;
+          ceX[i].cfd = paramc;
+          ceX[i].startTime = be.Gp();
+          reqCmdID = paramp.wh().getCmdId();
+          respCmdID = paramp.wi().getCmdId();
           uri = paramp.getUri();
           int k = paramp.getType();
           boolean bool;
-          if ((paramp.vx() & 0x1) != 1)
+          if ((paramp.vz() & 0x1) != 1)
           {
             bool = true;
             isSessionCmd = bool;
@@ -119,7 +145,7 @@ public final class y
             if ((k == 10) || (k == 268369922)) {
               isNotResp = true;
             }
-            if ((paramp.wf().we()) && (paramp.getUri() != null) && (paramp.getUri().length() > 0)) {
+            if ((paramp.wh().wg()) && (paramp.getUri() != null) && (paramp.getUri().length() > 0)) {
               networkType |= 0x1;
             }
             if (reqCmdID != 0) {
@@ -136,14 +162,14 @@ public final class y
               cmduser_expectfinishtime = 15000;
               cmduser_priority = 0;
             }
-            u.i("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "mmcgi startTask inQueue netid:%d hash[%d,%d] net:%d cmdid:[%d,%d] uri:%s sessioncmd:%b", new Object[] { Integer.valueOf(i), Integer.valueOf(j), Integer.valueOf(paramp.vF()), Integer.valueOf(networkType), Integer.valueOf(reqCmdID), Integer.valueOf(respCmdID), uri, Boolean.valueOf(isSessionCmd) });
+            v.i("MicroMsg.MMNativeNetTaskAdapter", "mmcgi startTask inQueue netid:%d hash[%d,%d] net:%d cmdid:[%d,%d] uri:%s sessioncmd:%b", new Object[] { Integer.valueOf(i), Integer.valueOf(j), Integer.valueOf(paramp.vI()), Integer.valueOf(networkType), Integer.valueOf(reqCmdID), Integer.valueOf(respCmdID), uri, Boolean.valueOf(isSessionCmd) });
             if (-1 != i)
             {
               if (paramInt == 1) {
                 cmduser_retrycount = 0;
               }
               Java2C.startTask(j, localNetCmd, paramInt);
-              u.d("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "startTask retsult=" + i);
+              v.d("MicroMsg.MMNativeNetTaskAdapter", "startTask retsult=" + i);
               return i;
             }
           }
@@ -152,11 +178,11 @@ public final class y
             bool = false;
             continue;
           }
-          u.e("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "startTask err");
+          v.e("MicroMsg.MMNativeNetTaskAdapter", "startTask err");
         }
         catch (RemoteException localRemoteException)
         {
-          u.e("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "exception:%s", new Object[] { ay.b(localRemoteException) });
+          v.e("MicroMsg.MMNativeNetTaskAdapter", "exception:%s", new Object[] { be.f(localRemoteException) });
         }
         finally {}
         continue;
@@ -166,9 +192,9 @@ public final class y
     }
   }
   
-  final p bf(boolean paramBoolean)
+  final p aN(boolean paramBoolean)
   {
-    a[] arrayOfa = cjG;
+    a[] arrayOfa = ceX;
     int i = 0;
     Object localObject4;
     label229:
@@ -179,7 +205,7 @@ public final class y
       {
         try
         {
-          a locala = cjG[i];
+          a locala = ceX[i];
           Object localObject3 = localObject1;
           if (locala == null) {
             break label229;
@@ -189,30 +215,30 @@ public final class y
           }
           try
           {
-            if ((cjG[i].cjK instanceof p.a)) {
+            if ((ceX[i].cfb instanceof p.a)) {
               break label229;
             }
-            if ((!paramBoolean) && (!(cjG[i].cjK instanceof p.a)))
+            if ((!paramBoolean) && (!(ceX[i].cfb instanceof p.a)))
             {
               localObject3 = localObject1;
               break label229;
             }
-            if ((701 == cjG[i].cjK.getType()) || (702 == cjG[i].cjK.getType()))
+            if ((701 == ceX[i].cfb.getType()) || (702 == ceX[i].cfb.getType()))
             {
-              u.e("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "getAutoAuthRR Auth inQueue: netid=" + i + " type=" + cjG[i].cjK.getType());
+              v.e("MicroMsg.MMNativeNetTaskAdapter", "getAutoAuthRR Auth inQueue: netid=" + i + " type=" + ceX[i].cfb.getType());
               return null;
             }
           }
           catch (RemoteException localRemoteException)
           {
-            u.w("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "exception:%s", new Object[] { ay.b(localRemoteException) });
+            v.w("MicroMsg.MMNativeNetTaskAdapter", "exception:%s", new Object[] { be.f(localRemoteException) });
             localObject4 = localObject1;
           }
           localObject4 = localp;
         }
         finally {}
         if (localp == null) {
-          localObject4 = cjG[i].cjK;
+          localObject4 = ceX[i].cfb;
         }
       }
       else
@@ -228,93 +254,93 @@ public final class y
     int i = 0;
     for (;;)
     {
-      synchronized (cjG)
+      synchronized (ceX)
       {
-        paramInt = eh(paramInt);
+        paramInt = eQ(paramInt);
         if (-1 == paramInt) {
           return -1;
         }
         try
         {
-          byte[] arrayOfByte = cjG[paramInt].cjK.wf().wc();
-          f localf = cjG[paramInt].cjK.wg();
-          if (!localf.a(cjG[paramInt].cjK.getType(), paramArrayOfByte, arrayOfByte)) {
+          byte[] arrayOfByte = ceX[paramInt].cfb.wh().we();
+          h localh = ceX[paramInt].cfb.wi();
+          if (!localh.a(ceX[paramInt].cfb.getType(), paramArrayOfByte, arrayOfByte)) {
             break label186;
           }
-          if (localf.vR() != null) {
-            paramByteArrayOutputStream.write(localf.vR());
+          if (localh.vT() != null) {
+            paramByteArrayOutputStream.write(localh.vT());
           }
-          if ((-13 != localf.wj()) && (62534 != localf.wj()) && (62533 != localf.wj()))
+          if ((-13 != localh.wl()) && (62534 != localh.wl()) && (62533 != localh.wl()))
           {
             paramInt = i;
-            if (62535 != localf.wj()) {}
+            if (62535 != localh.wl()) {}
           }
           else
           {
-            paramInt = localf.wj();
+            paramInt = localh.wl();
           }
         }
         catch (RemoteException paramArrayOfByte)
         {
-          paramByteArrayOutputStream = h.fUJ;
-          h.b(162L, 5L, 1L, false);
-          u.e("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "exception:%s", new Object[] { ay.b(paramArrayOfByte) });
+          paramByteArrayOutputStream = com.tencent.mm.plugin.report.service.g.gdY;
+          com.tencent.mm.plugin.report.service.g.b(162L, 5L, 1L, false);
+          v.e("MicroMsg.MMNativeNetTaskAdapter", "exception:%s", new Object[] { be.f(paramArrayOfByte) });
           paramInt = -1;
           continue;
         }
         catch (IOException paramArrayOfByte)
         {
-          paramByteArrayOutputStream = h.fUJ;
-          h.b(162L, 6L, 1L, false);
-          u.e("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "exception:%s", new Object[] { ay.b(paramArrayOfByte) });
+          paramByteArrayOutputStream = com.tencent.mm.plugin.report.service.g.gdY;
+          com.tencent.mm.plugin.report.service.g.b(162L, 6L, 1L, false);
+          v.e("MicroMsg.MMNativeNetTaskAdapter", "exception:%s", new Object[] { be.f(paramArrayOfByte) });
           paramInt = -1;
           continue;
         }
         catch (Exception paramArrayOfByte)
         {
-          paramByteArrayOutputStream = h.fUJ;
-          h.b(162L, 7L, 1L, false);
-          u.e("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "exception:%s", new Object[] { ay.b(paramArrayOfByte) });
+          paramByteArrayOutputStream = com.tencent.mm.plugin.report.service.g.gdY;
+          com.tencent.mm.plugin.report.service.g.b(162L, 7L, 1L, false);
+          v.e("MicroMsg.MMNativeNetTaskAdapter", "exception:%s", new Object[] { be.f(paramArrayOfByte) });
           paramInt = -1;
           continue;
         }
         return paramInt;
       }
       label186:
-      paramArrayOfByte = h.fUJ;
-      h.b(162L, 4L, 1L, false);
-      u.e("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "buf to resp failed, change server and try again");
+      paramArrayOfByte = com.tencent.mm.plugin.report.service.g.gdY;
+      com.tencent.mm.plugin.report.service.g.b(162L, 4L, 1L, false);
+      v.e("MicroMsg.MMNativeNetTaskAdapter", "buf to resp failed, change server and try again");
       paramInt = -1;
     }
   }
   
   /* Error */
-  public final void e(int paramInt1, int paramInt2, String paramString)
+  public final void d(int paramInt1, int paramInt2, String paramString)
   {
     // Byte code:
     //   0: ldc 34
     //   2: new 36	java/lang/StringBuilder
     //   5: dup
-    //   6: ldc_w 267
+    //   6: ldc_w 271
     //   9: invokespecial 41	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   12: iload_1
     //   13: invokevirtual 45	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   16: ldc_w 269
+    //   16: ldc_w 273
     //   19: invokevirtual 50	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   22: iload_2
     //   23: invokevirtual 45	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   26: ldc_w 271
+    //   26: ldc_w 275
     //   29: invokevirtual 50	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   32: aload_3
     //   33: invokevirtual 50	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   36: invokevirtual 54	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   39: invokestatic 273	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
-    //   42: invokestatic 276	com/tencent/mm/network/Java2C:clearTask	()V
+    //   39: invokestatic 277	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   42: invokestatic 280	com/tencent/mm/network/Java2C:clearTask	()V
     //   45: bipush 100
     //   47: anewarray 8	com/tencent/mm/network/y$a
     //   50: astore 5
     //   52: aload_0
-    //   53: getfield 17	com/tencent/mm/network/y:cjG	[Lcom/tencent/mm/network/y$a;
+    //   53: getfield 17	com/tencent/mm/network/y:ceX	[Lcom/tencent/mm/network/y$a;
     //   56: astore 6
     //   58: aload 6
     //   60: monitorenter
@@ -326,12 +352,12 @@ public final class y
     //   71: aload 5
     //   73: iload 4
     //   75: aload_0
-    //   76: getfield 17	com/tencent/mm/network/y:cjG	[Lcom/tencent/mm/network/y$a;
+    //   76: getfield 17	com/tencent/mm/network/y:ceX	[Lcom/tencent/mm/network/y$a;
     //   79: iload 4
     //   81: aaload
     //   82: aastore
     //   83: aload_0
-    //   84: getfield 17	com/tencent/mm/network/y:cjG	[Lcom/tencent/mm/network/y$a;
+    //   84: getfield 17	com/tencent/mm/network/y:ceX	[Lcom/tencent/mm/network/y$a;
     //   87: iload 4
     //   89: aconst_null
     //   90: aastore
@@ -352,7 +378,7 @@ public final class y
     //   117: aaload
     //   118: ifnull +88 -> 206
     //   121: ldc 34
-    //   123: ldc_w 278
+    //   123: ldc_w 282
     //   126: iconst_3
     //   127: anewarray 4	java/lang/Object
     //   130: dup
@@ -365,7 +391,7 @@ public final class y
     //   140: aload 5
     //   142: iload 4
     //   144: aaload
-    //   145: getfield 26	com/tencent/mm/network/y$a:cjK	Lcom/tencent/mm/network/p;
+    //   145: getfield 26	com/tencent/mm/network/y$a:cfb	Lcom/tencent/mm/network/p;
     //   148: invokeinterface 32 1 0
     //   153: invokestatic 74	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
     //   156: aastore
@@ -374,15 +400,15 @@ public final class y
     //   159: aload 5
     //   161: iload 4
     //   163: aaload
-    //   164: getfield 26	com/tencent/mm/network/y$a:cjK	Lcom/tencent/mm/network/p;
-    //   167: invokeinterface 181 1 0
+    //   164: getfield 26	com/tencent/mm/network/y$a:cfb	Lcom/tencent/mm/network/p;
+    //   167: invokeinterface 184 1 0
     //   172: invokestatic 74	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
     //   175: aastore
-    //   176: invokestatic 189	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   176: invokestatic 192	com/tencent/mm/sdk/platformtools/v:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   179: aload 5
     //   181: iload 4
     //   183: aaload
-    //   184: getfield 93	com/tencent/mm/network/y$a:cjL	Lcom/tencent/mm/network/k;
+    //   184: getfield 96	com/tencent/mm/network/y$a:cfc	Lcom/tencent/mm/network/k;
     //   187: iload 4
     //   189: iload_1
     //   190: iload_2
@@ -390,9 +416,9 @@ public final class y
     //   192: aload 5
     //   194: iload 4
     //   196: aaload
-    //   197: getfield 26	com/tencent/mm/network/y$a:cjK	Lcom/tencent/mm/network/p;
+    //   197: getfield 26	com/tencent/mm/network/y$a:cfb	Lcom/tencent/mm/network/p;
     //   200: aconst_null
-    //   201: invokeinterface 283 7 0
+    //   201: invokeinterface 287 7 0
     //   206: iload 4
     //   208: iconst_1
     //   209: iadd
@@ -405,15 +431,15 @@ public final class y
     //   220: athrow
     //   221: astore 6
     //   223: ldc 34
-    //   225: ldc -54
+    //   225: ldc -51
     //   227: iconst_1
     //   228: anewarray 4	java/lang/Object
     //   231: dup
     //   232: iconst_0
     //   233: aload 6
-    //   235: invokestatic 68	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   235: invokestatic 68	com/tencent/mm/sdk/platformtools/be:f	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   238: aastore
-    //   239: invokestatic 78	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   239: invokestatic 78	com/tencent/mm/sdk/platformtools/v:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   242: goto -36 -> 206
     //   245: return
     // Local variable table:
@@ -434,24 +460,24 @@ public final class y
     //   121	206	221	java/lang/Exception
   }
   
-  final int eg(int paramInt)
+  final int eP(int paramInt)
   {
-    synchronized (cjG)
+    synchronized (ceX)
     {
-      paramInt = eh(paramInt);
+      paramInt = eQ(paramInt);
       if (-1 == paramInt)
       {
-        u.e("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "-1 == index");
+        v.e("MicroMsg.MMNativeNetTaskAdapter", "-1 == index");
         return 0;
       }
     }
     return 0;
   }
   
-  final int eh(int paramInt)
+  final int eQ(int paramInt)
   {
     int i = 0;
-    while ((i < 100) && ((cjG[i] == null) || (paramInt != cjG[i].cjK.hashCode()))) {
+    while ((i < 100) && ((ceX[i] == null) || (paramInt != ceX[i].cfb.hashCode()))) {
       i += 1;
     }
     paramInt = i;
@@ -471,79 +497,79 @@ public final class y
   {
     for (;;)
     {
-      synchronized (cjG)
+      synchronized (ceX)
       {
-        paramInt = eh(paramInt);
+        paramInt = eQ(paramInt);
         if (-1 == paramInt) {
           return false;
         }
         try
         {
-          u.i("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "req2Buf somr isfg:%b  cookie: %s", new Object[] { Boolean.valueOf(cjG[paramInt].cjM.vU()), ay.aW(cjG[paramInt].cjM.vR()) });
-          cjG[paramInt].cjK.wf().B(cjG[paramInt].cjM.tq());
-          cjG[paramInt].cjK.wf().ba(cjG[paramInt].cjM.rg());
-          bool = cjG[paramInt].cjK.wf().a(cjG[paramInt].cjK.getType(), cjG[paramInt].cjM.tq(), cjG[paramInt].cjM.vR(), cjG[paramInt].cjM.vT(), 0, cjG[paramInt].cjM.vU());
+          v.i("MicroMsg.MMNativeNetTaskAdapter", "req2Buf somr isfg:%b  cookie: %s", new Object[] { Boolean.valueOf(ceX[paramInt].cfd.vW()), be.bd(ceX[paramInt].cfd.vT()) });
+          ceX[paramInt].cfb.wh().G(ceX[paramInt].cfd.tr());
+          ceX[paramInt].cfb.wh().bq(ceX[paramInt].cfd.rf());
+          bool = ceX[paramInt].cfb.wh().a(ceX[paramInt].cfb.getType(), ceX[paramInt].cfd.tr(), ceX[paramInt].cfd.vT(), ceX[paramInt].cfd.vV(), 0, ceX[paramInt].cfd.vW());
           if (!bool) {
             break label291;
           }
-          paramByteArrayOutputStream.write(cjG[paramInt].cjK.wf().vZ());
+          paramByteArrayOutputStream.write(ceX[paramInt].cfb.wh().wb());
         }
         catch (RemoteException paramByteArrayOutputStream)
         {
-          localh = h.fUJ;
-          h.b(162L, 1L, 1L, false);
-          u.e("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "RemoteException:%s", new Object[] { ay.b(paramByteArrayOutputStream) });
+          localg = com.tencent.mm.plugin.report.service.g.gdY;
+          com.tencent.mm.plugin.report.service.g.b(162L, 1L, 1L, false);
+          v.e("MicroMsg.MMNativeNetTaskAdapter", "RemoteException:%s", new Object[] { be.f(paramByteArrayOutputStream) });
           bool = false;
           continue;
         }
         catch (IOException paramByteArrayOutputStream)
         {
-          localh = h.fUJ;
-          h.b(162L, 2L, 1L, false);
-          u.e("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "IOException:%s", new Object[] { ay.b(paramByteArrayOutputStream) });
+          localg = com.tencent.mm.plugin.report.service.g.gdY;
+          com.tencent.mm.plugin.report.service.g.b(162L, 2L, 1L, false);
+          v.e("MicroMsg.MMNativeNetTaskAdapter", "IOException:%s", new Object[] { be.f(paramByteArrayOutputStream) });
           bool = false;
           continue;
         }
         catch (Exception paramByteArrayOutputStream)
         {
-          h localh = h.fUJ;
-          h.b(162L, 3L, 1L, false);
-          u.e("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "Exception:%s", new Object[] { ay.b(paramByteArrayOutputStream) });
+          com.tencent.mm.plugin.report.service.g localg = com.tencent.mm.plugin.report.service.g.gdY;
+          com.tencent.mm.plugin.report.service.g.b(162L, 3L, 1L, false);
+          v.e("MicroMsg.MMNativeNetTaskAdapter", "Exception:%s", new Object[] { be.f(paramByteArrayOutputStream) });
           boolean bool = false;
           continue;
         }
-        u.d("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "req2Buf bOk: %b", new Object[] { Boolean.valueOf(bool) });
+        v.d("MicroMsg.MMNativeNetTaskAdapter", "req2Buf bOk: %b", new Object[] { Boolean.valueOf(bool) });
         return bool;
       }
       label291:
-      paramByteArrayOutputStream = h.fUJ;
-      h.b(162L, 0L, 1L, false);
-      u.e("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "request to buffer using jni failed");
+      paramByteArrayOutputStream = com.tencent.mm.plugin.report.service.g.gdY;
+      com.tencent.mm.plugin.report.service.g.b(162L, 0L, 1L, false);
+      v.e("MicroMsg.MMNativeNetTaskAdapter", "request to buffer using jni failed");
     }
   }
   
   public final void reset()
   {
-    u.i("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "reset");
+    v.i("MicroMsg.MMNativeNetTaskAdapter", "reset");
     Java2C.reset();
-    a[] arrayOfa = cjG;
+    a[] arrayOfa = ceX;
     int i = 0;
     while (i < 100) {
       try
       {
-        a locala = cjG[i];
+        a locala = ceX[i];
         if (locala != null) {}
         try
         {
-          u.i("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "mmcgi reset outQueue: netId:%d hash:%d type:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(cjG[i].cjK.getType()), Integer.valueOf(cjG[i].cjK.vF()) });
-          cjG[i] = null;
+          v.i("MicroMsg.MMNativeNetTaskAdapter", "mmcgi reset outQueue: netId:%d hash:%d type:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(ceX[i].cfb.getType()), Integer.valueOf(ceX[i].cfb.vI()) });
+          ceX[i] = null;
           i += 1;
         }
         catch (RemoteException localRemoteException)
         {
           for (;;)
           {
-            u.e("!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g=", "exception:%s", new Object[] { ay.b(localRemoteException) });
+            v.e("MicroMsg.MMNativeNetTaskAdapter", "exception:%s", new Object[] { be.f(localRemoteException) });
           }
         }
       }
@@ -553,9 +579,9 @@ public final class y
   
   private static final class a
   {
-    p cjK;
-    k cjL;
-    c cjM;
+    p cfb;
+    k cfc;
+    c cfd;
     long startTime;
   }
 }

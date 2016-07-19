@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import com.tencent.mm.model.i;
@@ -22,8 +22,8 @@ import com.tencent.mm.modelsearch.m.g;
 import com.tencent.mm.modelsearch.m.h;
 import com.tencent.mm.pluginsdk.i.a;
 import com.tencent.mm.pluginsdk.i.e;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 import java.util.Iterator;
@@ -33,13 +33,13 @@ import java.util.regex.Pattern;
 public class e
   extends a
 {
-  private static final Pattern bZe = Pattern.compile(",");
-  public String[] bYs;
-  public CharSequence cKS;
-  public m.g cNY;
-  public CharSequence ghW;
-  private b lmZ = new b();
-  private a lna = new a();
+  private static final Pattern bSN = Pattern.compile(",");
+  public String[] bSb;
+  public CharSequence cHV;
+  public m.g cKY;
+  public CharSequence gsw;
+  private b lNu = new b();
+  private a lNv = new a();
   public String username;
   
   public e(int paramInt)
@@ -47,7 +47,7 @@ public class e
     super(1, paramInt);
   }
   
-  private static Spannable a(List paramList, String paramString, String[] paramArrayOfString, Context paramContext)
+  private static Spannable a(List<m.h> paramList, String paramString, String[] paramArrayOfString, Context paramContext)
   {
     paramContext = paramString;
     if (paramString.endsWith("\000")) {
@@ -56,8 +56,8 @@ public class e
     if (paramContext.length() == 0) {
       return new SpannableString("");
     }
-    paramContext = bZe.split(paramContext);
-    i.e locale = i.a.aOW();
+    paramContext = bSN.split(paramContext);
+    i.e locale = i.a.aTy();
     SpannableStringBuilder localSpannableStringBuilder = new SpannableStringBuilder();
     Iterator localIterator = paramList.iterator();
     int i = -1;
@@ -78,7 +78,7 @@ public class e
         paramString = paramList;
         k = i;
         int n;
-        if (bZS != i)
+        if (bTB != i)
         {
           paramString = paramList;
           if (paramList != null)
@@ -86,8 +86,8 @@ public class e
             localSpannableStringBuilder.append(paramList).append(", ");
             paramString = null;
           }
-          k = bZS;
-          n = bZJ;
+          k = bTB;
+          n = bTs;
           paramList = paramString;
           i = k;
           if (k < paramContext.length)
@@ -110,7 +110,7 @@ public class e
             if (paramString != null)
             {
               i = start;
-              m = paramArrayOfString[bZT].length() + i;
+              m = paramArrayOfString[bTC].length() + i;
               if (j != 0)
               {
                 f.a(paramString, content.substring(i, m), bool1);
@@ -131,7 +131,7 @@ public class e
     {
       if (i != 0)
       {
-        paramList = locale.qg(paramContext[k]);
+        paramList = locale.rw(paramContext[k]);
         label319:
         if (paramList != null) {
           break label343;
@@ -160,46 +160,46 @@ public class e
     }
   }
   
-  public a.b ajt()
+  public a.b amb()
   {
-    return lmZ;
+    return lNu;
   }
   
-  public a.a awR()
+  public a.a azo()
   {
-    return lna;
+    return lNv;
   }
   
-  public final void er(Context paramContext)
+  public final void eu(Context paramContext)
   {
     int i;
-    if (cNY != null) {
-      if ((bYs != null) && (bYs.length > 0))
+    if (cKY != null) {
+      if ((bSb != null) && (bSb.length > 0))
       {
         i = 1;
         j = i;
-        if (cId == null)
+        if (cFh == null)
         {
-          cId = ah.tD().rq().Ek(cNY.bZL);
+          cFh = ah.tE().rr().Gy(cKY.bTu);
           j = i;
-          if (cId == null) {
-            cId = ah.tD().rq().Eo(cNY.bZL);
+          if (cFh == null) {
+            cFh = ah.tE().rr().GC(cKY.bTu);
           }
         }
       }
     }
     for (int j = i;; j = 0)
     {
-      if (cId != null) {
+      if (cFh != null) {
         break label123;
       }
-      u.i("!44@/B4Tb64lLpLSOpQlr7qYXQFqqSqXY/rROYYs/UeQ/Fc=", "filling dataItem Occur Error Contact is null, position=%d", new Object[] { Integer.valueOf(position) });
+      v.i("MicroMsg.ContactDataItem", "filling dataItem Occur Error Contact is null, position=%d", new Object[] { Integer.valueOf(position) });
       return;
       i = 0;
       break;
     }
     label123:
-    username = cId.field_username;
+    username = cFh.field_username;
     m.g localg;
     k localk;
     String[] arrayOfString;
@@ -215,9 +215,9 @@ public class e
     Object localObject3;
     if (j != 0)
     {
-      localg = cNY;
-      localk = cId;
-      arrayOfString = bYs;
+      localg = cKY;
+      localk = cFh;
+      arrayOfString = bSb;
       j = 0;
       i = 0;
       bool2 = false;
@@ -229,7 +229,7 @@ public class e
         break label874;
       }
       localObject1 = i.a(localk, field_username);
-      switch (bZJ)
+      switch (bTs)
       {
       case 8: 
       case 9: 
@@ -252,26 +252,26 @@ public class e
     for (;;)
     {
       label315:
-      localObject4 = ay.h(arrayOfString);
+      localObject4 = be.g(arrayOfString);
       if (m != 0)
       {
-        u.d("!44@/B4Tb64lLpLSOpQlr7qYXQFqqSqXY/rROYYs/UeQ/Fc=", "highlight first line");
+        v.d("MicroMsg.ContactDataItem", "highlight first line");
         if (j != 0)
         {
           localObject3 = f.a((String)localObject3, (List)localObject4, bool1);
           label349:
-          localObject3 = a(paramContext, (Spannable)localObject3, bZl);
+          localObject3 = a(paramContext, (Spannable)localObject3, bST);
           label360:
-          cKS = ((CharSequence)localObject3);
+          cHV = ((CharSequence)localObject3);
           if (i == 0) {
             break label776;
           }
-          paramContext = a(paramContext, a((List)userData, field_contactLabelIds, arrayOfString, paramContext), bZn);
+          paramContext = a(paramContext, a((List)userData, field_contactLabelIds, arrayOfString, paramContext), bSV);
         }
       }
-      while ((!ay.kz((String)localObject1)) && (paramContext != null))
+      while ((!be.kf((String)localObject1)) && (paramContext != null))
       {
-        ghW = TextUtils.concat(new CharSequence[] { localObject1, paramContext });
+        gsw = TextUtils.concat(new CharSequence[] { localObject1, paramContext });
         return;
         bool1 = true;
         i = 1;
@@ -290,7 +290,7 @@ public class e
         j = 1;
         bool4 = bool3;
         localObject2 = field_nickname;
-        localObject4 = ((Resources)localObject4).getString(2131431354);
+        localObject4 = ((Resources)localObject4).getString(2131234817);
         localObject3 = localObject1;
         i = 0;
         k = 1;
@@ -298,8 +298,8 @@ public class e
         m = 0;
         localObject1 = localObject4;
         break label315;
-        localObject2 = aSO;
-        localObject4 = ((Resources)localObject4).getString(2131431360);
+        localObject2 = aFx;
+        localObject4 = ((Resources)localObject4).getString(2131234812);
         localObject3 = localObject1;
         i = 0;
         k = 1;
@@ -308,12 +308,12 @@ public class e
         m = 0;
         localObject1 = localObject4;
         break label315;
-        localObject3 = localk.mc();
+        localObject3 = localk.ks();
         localObject2 = localObject3;
-        if (ay.kz((String)localObject3)) {
+        if (be.kf((String)localObject3)) {
           localObject2 = field_username;
         }
-        localObject4 = ((Resources)localObject4).getString(2131431353);
+        localObject4 = ((Resources)localObject4).getString(2131234820);
         localObject3 = localObject1;
         i = 0;
         k = 1;
@@ -323,7 +323,7 @@ public class e
         localObject1 = localObject4;
         break label315;
         localObject2 = content;
-        localObject4 = ((Resources)localObject4).getString(2131431355);
+        localObject4 = ((Resources)localObject4).getString(2131234816);
         localObject3 = localObject1;
         i = 0;
         k = 1;
@@ -333,7 +333,7 @@ public class e
         localObject1 = localObject4;
         break label315;
         localObject2 = content;
-        localObject4 = ((Resources)localObject4).getString(2131431362);
+        localObject4 = ((Resources)localObject4).getString(2131234814);
         localObject3 = localObject1;
         i = 0;
         k = 1;
@@ -342,7 +342,7 @@ public class e
         m = 0;
         localObject1 = localObject4;
         break label315;
-        localObject2 = ((Resources)localObject4).getString(2131431361);
+        localObject2 = ((Resources)localObject4).getString(2131234819);
         localObject3 = localObject1;
         i = 1;
         j = 0;
@@ -353,26 +353,26 @@ public class e
         m = 0;
         localObject2 = localObject4;
         break label315;
-        localObject3 = f.e((String)localObject3, (List)localObject4);
+        localObject3 = f.f((String)localObject3, (List)localObject4);
         break label349;
-        localObject3 = a(paramContext, new SpannableString((CharSequence)localObject3), bZl);
+        localObject3 = a(paramContext, new SpannableString((CharSequence)localObject3), bST);
         break label360;
         label776:
         if (localObject2 != null)
         {
           if (k != 0)
           {
-            u.d("!44@/B4Tb64lLpLSOpQlr7qYXQFqqSqXY/rROYYs/UeQ/Fc=", "highlight second line");
+            v.d("MicroMsg.ContactDataItem", "highlight second line");
             if (j != 0) {}
-            for (localObject2 = f.a((String)localObject2, (List)localObject4, bool1);; localObject2 = f.e((String)localObject2, (List)localObject4))
+            for (localObject2 = f.a((String)localObject2, (List)localObject4, bool1);; localObject2 = f.f((String)localObject2, (List)localObject4))
             {
-              paramContext = a(paramContext, (Spannable)localObject2, bZn);
+              paramContext = a(paramContext, (Spannable)localObject2, bSV);
               break;
             }
           }
-          paramContext = a(paramContext, null, bZn);
+          paramContext = a(paramContext, null, bSV);
           continue;
-          cKS = com.tencent.mm.pluginsdk.ui.d.e.a(paramContext, i.d(cId), com.tencent.mm.aw.a.z(paramContext, 2131034564));
+          cHV = com.tencent.mm.pluginsdk.ui.d.e.a(paramContext, i.d(cFh), com.tencent.mm.az.a.D(paramContext, 2131427667));
         }
         else
         {
@@ -394,11 +394,11 @@ public class e
   public class a
     extends a.a
   {
-    public View cMt;
-    public TextView cNT;
-    public TextView cOd;
-    public ImageView czS;
-    public CheckBox czW;
+    public View cJf;
+    public ImageView cui;
+    public TextView cuj;
+    public TextView cuk;
+    public CheckBox cul;
     
     public a()
     {
@@ -416,15 +416,15 @@ public class e
     
     public View a(Context paramContext, ViewGroup paramViewGroup)
     {
-      if (com.tencent.mm.aw.a.da(paramContext)) {}
-      for (paramContext = LayoutInflater.from(paramContext).inflate(2131363040, paramViewGroup, false);; paramContext = LayoutInflater.from(paramContext).inflate(2131363057, paramViewGroup, false))
+      if (com.tencent.mm.az.a.cY(paramContext)) {}
+      for (paramContext = LayoutInflater.from(paramContext).inflate(2130904324, paramViewGroup, false);; paramContext = LayoutInflater.from(paramContext).inflate(2130904323, paramViewGroup, false))
       {
-        paramViewGroup = (e.a)awR();
-        czS = ((ImageView)paramContext.findViewById(2131165293));
-        cNT = ((TextView)paramContext.findViewById(2131165340));
-        cOd = ((TextView)paramContext.findViewById(2131165341));
-        cMt = paramContext.findViewById(2131167176);
-        czW = ((CheckBox)paramContext.findViewById(2131165695));
+        paramViewGroup = (e.a)azo();
+        cui = ((ImageView)paramContext.findViewById(2131755444));
+        cuj = ((TextView)paramContext.findViewById(2131755331));
+        cuk = ((TextView)paramContext.findViewById(2131755333));
+        cJf = paramContext.findViewById(2131758184);
+        cul = ((CheckBox)paramContext.findViewById(2131755446));
         paramContext.setTag(paramViewGroup);
         return paramContext;
       }
@@ -436,54 +436,51 @@ public class e
       parama1 = (e)parama1;
       if ((username != null) && (username.length() > 0))
       {
-        com.tencent.mm.pluginsdk.ui.a.b.b(czS, username);
-        f.a(cKS, cNT);
-        f.a(ghW, cOd);
-        if (!lkT) {
-          break label213;
+        com.tencent.mm.pluginsdk.ui.a.b.a(cui, username);
+        f.a(cHV, cuj);
+        f.a(gsw, cuk);
+        if (!lLe) {
+          break label185;
         }
         if (!paramBoolean1) {
-          break label193;
+          break label165;
         }
-        czW.setChecked(true);
-        czW.setEnabled(false);
+        cul.setChecked(true);
+        cul.setEnabled(false);
         label93:
-        czW.setVisibility(0);
+        cul.setVisibility(0);
         label101:
-        if (!cLD) {
-          break label225;
+        if (!cIG) {
+          break label197;
         }
-        cMt.setBackgroundResource(2130970303);
+        cJf.setBackgroundResource(2130838073);
       }
       for (;;)
       {
-        if (cId.field_deleteFlag == 1)
+        if (cFh.field_deleteFlag == 1)
         {
-          cOd.setVisibility(0);
-          cOd.setText(paramContext.getString(2131428346));
-        }
-        if (cNY != null) {
-          m.b(aEy, cNY, 1);
+          cuk.setVisibility(0);
+          cuk.setText(paramContext.getString(2131230797));
         }
         return;
-        czS.setImageResource(2130970523);
+        cui.setImageResource(2130838112);
         break;
-        label193:
-        czW.setChecked(paramBoolean2);
-        czW.setEnabled(true);
+        label165:
+        cul.setChecked(paramBoolean2);
+        cul.setEnabled(true);
         break label93;
-        label213:
-        czW.setVisibility(8);
+        label185:
+        cul.setVisibility(8);
         break label101;
-        label225:
-        cMt.setBackgroundResource(2130970354);
+        label197:
+        cJf.setBackgroundResource(2130838071);
       }
     }
     
-    public final boolean bhz()
+    public final boolean bnp()
     {
-      if (cNY != null) {
-        m.b(aEy, cNY, 1);
+      if (cKY != null) {
+        m.b(aqC, cKY, 1);
       }
       return false;
     }

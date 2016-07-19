@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic bOx:Lcom/tencent/mm/modelgeo/c;
+.field final synthetic bHS:Lcom/tencent/mm/modelgeo/c;
 
 
 # direct methods
@@ -23,8 +23,8 @@
     .locals 0
 
     .prologue
-    .line 223
-    iput-object p1, p0, Lcom/tencent/mm/modelgeo/c$2;->bOx:Lcom/tencent/mm/modelgeo/c;
+    .line 227
+    iput-object p1, p0, Lcom/tencent/mm/modelgeo/c$2;->bHS:Lcom/tencent/mm/modelgeo/c;
 
     invoke-direct {p0}, Lcom/tencent/mm/modelgeo/f;-><init>()V
 
@@ -34,80 +34,98 @@
 
 # virtual methods
 .method public final a(ZDDIDD)V
-    .locals 15
+    .locals 16
 
     .prologue
-    .line 233
+    .line 237
     if-eqz p1, :cond_0
 
-    .line 234
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/c$2;->bOx:Lcom/tencent/mm/modelgeo/c;
+    .line 238
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tencent/mm/modelgeo/c$2;->bHS:Lcom/tencent/mm/modelgeo/c;
 
     move-wide/from16 v0, p2
 
-    iput-wide v0, v2, Lcom/tencent/mm/modelgeo/c;->bOq:D
+    iput-wide v0, v2, Lcom/tencent/mm/modelgeo/c;->bHL:D
 
-    .line 235
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/c$2;->bOx:Lcom/tencent/mm/modelgeo/c;
+    .line 239
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tencent/mm/modelgeo/c$2;->bHS:Lcom/tencent/mm/modelgeo/c;
 
     move-wide/from16 v0, p4
 
-    iput-wide v0, v2, Lcom/tencent/mm/modelgeo/c;->bOr:D
+    iput-wide v0, v2, Lcom/tencent/mm/modelgeo/c;->bHM:D
 
-    .line 236
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/c$2;->bOx:Lcom/tencent/mm/modelgeo/c;
+    .line 240
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tencent/mm/modelgeo/c$2;->bHS:Lcom/tencent/mm/modelgeo/c;
 
     move/from16 v0, p6
 
-    iput v0, v2, Lcom/tencent/mm/modelgeo/c;->bOs:I
+    iput v0, v2, Lcom/tencent/mm/modelgeo/c;->bHN:I
 
-    .line 237
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/c$2;->bOx:Lcom/tencent/mm/modelgeo/c;
+    .line 241
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tencent/mm/modelgeo/c$2;->bHS:Lcom/tencent/mm/modelgeo/c;
 
     move-wide/from16 v0, p7
 
-    iput-wide v0, v2, Lcom/tencent/mm/modelgeo/c;->bOt:D
+    iput-wide v0, v2, Lcom/tencent/mm/modelgeo/c;->bHO:D
 
-    .line 238
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/c$2;->bOx:Lcom/tencent/mm/modelgeo/c;
+    .line 242
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tencent/mm/modelgeo/c$2;->bHS:Lcom/tencent/mm/modelgeo/c;
 
     move-wide/from16 v0, p9
 
-    iput-wide v0, v2, Lcom/tencent/mm/modelgeo/c;->bOu:D
+    iput-wide v0, v2, Lcom/tencent/mm/modelgeo/c;->bHP:D
 
-    .line 239
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/c$2;->bOx:Lcom/tencent/mm/modelgeo/c;
+    .line 243
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tencent/mm/modelgeo/c$2;->bHS:Lcom/tencent/mm/modelgeo/c;
 
     const/4 v3, 0x1
 
-    iput-boolean v3, v2, Lcom/tencent/mm/modelgeo/c;->bOp:Z
+    iput-boolean v3, v2, Lcom/tencent/mm/modelgeo/c;->bHK:Z
 
-    .line 240
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/c$2;->bOx:Lcom/tencent/mm/modelgeo/c;
+    .line 244
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tencent/mm/modelgeo/c$2;->bHS:Lcom/tencent/mm/modelgeo/c;
 
     const/4 v3, 0x0
 
-    iput-boolean v3, v2, Lcom/tencent/mm/modelgeo/c;->bOo:Z
+    iput-boolean v3, v2, Lcom/tencent/mm/modelgeo/c;->bHJ:Z
 
-    .line 241
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/c$2;->bOx:Lcom/tencent/mm/modelgeo/c;
+    .line 245
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tencent/mm/modelgeo/c$2;->bHS:Lcom/tencent/mm/modelgeo/c;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    iput-wide v3, v2, Lcom/tencent/mm/modelgeo/c;->bOn:J
+    iput-wide v4, v2, Lcom/tencent/mm/modelgeo/c;->bHI:J
 
-    .line 242
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/c$2;->bOx:Lcom/tencent/mm/modelgeo/c;
+    .line 246
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tencent/mm/modelgeo/c$2;->bHS:Lcom/tencent/mm/modelgeo/c;
 
     const v3, 0x10807
 
     invoke-static {v2, v3}, Lcom/tencent/mm/modelgeo/c;->a(Lcom/tencent/mm/modelgeo/c;I)V
 
-    .line 244
+    .line 248
     :cond_0
-    const-string/jumbo v2, "!32@/B4Tb64lLpIu6Y+BscdrxN3pFdbvvih6"
+    const-string/jumbo v2, "MicroMsg.LocationGeo"
 
     const-string/jumbo v3, "onGetLocationWgs84 fLongitude: %f fLatitude:%f locType:%d %f:spped"
 
@@ -147,20 +165,20 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 247
-    new-instance v14, Lcom/tencent/mm/sdk/platformtools/aa;
+    .line 251
+    new-instance v14, Lcom/tencent/mm/sdk/platformtools/ac;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v2
 
-    invoke-direct {v14, v2}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v14, v2}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
 
     new-instance v2, Lcom/tencent/mm/modelgeo/c$2$1;
 
-    move-object v3, p0
+    move-object/from16 v3, p0
 
     move/from16 v4, p1
 
@@ -176,10 +194,10 @@
 
     invoke-direct/range {v2 .. v13}, Lcom/tencent/mm/modelgeo/c$2$1;-><init>(Lcom/tencent/mm/modelgeo/c$2;ZIDDDD)V
 
-    const-wide/16 v3, 0xc8
+    const-wide/16 v4, 0xc8
 
-    invoke-virtual {v14, v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/aa;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v14, v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/ac;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 300
+    .line 304
     return-void
 .end method

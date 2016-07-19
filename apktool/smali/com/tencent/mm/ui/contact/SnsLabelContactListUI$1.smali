@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->Gb()V
+    value = Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lmz:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;
+.field final synthetic lMP:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 120
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$1;->lmz:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$1;->lMP:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 124
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$1;->lmz:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI$1;->lMP:Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/SnsLabelContactListUI;->finish()V
 

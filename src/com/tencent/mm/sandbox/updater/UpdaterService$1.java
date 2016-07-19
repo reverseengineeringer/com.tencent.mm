@@ -1,15 +1,15 @@
 package com.tencent.mm.sandbox.updater;
 
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah.a;
 
 final class UpdaterService$1
-  implements af.a
+  implements ah.a
 {
   UpdaterService$1(UpdaterService paramUpdaterService) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    return !UpdaterService.a(jUt);
+    return !UpdaterService.a(ktU);
   }
 }
 

@@ -6,9 +6,9 @@ public abstract interface AppGrid$b
 {
   public abstract void a(int paramInt, f paramf);
   
-  public abstract int oA(int paramInt);
+  public abstract int qg(int paramInt);
   
-  public abstract void oB(int paramInt);
+  public abstract void qh(int paramInt);
 }
 
 /* Location:

@@ -1,42 +1,16 @@
 package com.tencent.mm.plugin.sns.ui;
 
+import android.widget.ImageView;
+import android.widget.TextView;
+
 final class al$a
 {
-  public int hhU = -1;
-  public int hhV = -1;
-  public boolean hhW = false;
-  public int hhX = -1;
-  int hhY = 0;
-  public String hhZ = "";
-  public String hia = "";
-  public String hib = "";
-  public int hic = -1;
-  int hid = 0;
-  public boolean hie = false;
-  public int hif = -1;
-  public boolean hig = false;
-  public int hih = -1;
-  int hii = 0;
+  ImageView dlC;
+  TextView eXR;
+  TextView huA;
+  TextView titleView;
   
-  al$a(al paramal) {}
-  
-  public static boolean mf(int paramInt)
-  {
-    switch (paramInt)
-    {
-    case 9: 
-    case 10: 
-    case 11: 
-    case 12: 
-    case 13: 
-    case 14: 
-    case 16: 
-    case 17: 
-    default: 
-      return false;
-    }
-    return true;
-  }
+  private al$a(al paramal) {}
 }
 
 /* Location:

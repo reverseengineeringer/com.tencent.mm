@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field private cyD:Landroid/widget/Button;
+.field private cvB:Landroid/widget/Button;
 
-.field private kOy:Landroid/widget/TextView;
+.field private kWc:Landroid/widget/ImageView;
 
-.field private kwV:Landroid/widget/ImageView;
+.field private kWd:Landroid/widget/TextView;
 
-.field private kwW:Landroid/widget/TextView;
+.field private lnO:Landroid/widget/TextView;
 
 
 # direct methods
@@ -29,23 +29,23 @@
 
     .prologue
     .line 17
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->bbm()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->bgy()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final Gb()V
+.method protected final Gy()V
     .locals 5
 
     .prologue
     const/4 v3, 0x0
 
-    const v2, 0x7f0b050a
+    const v2, 0x7f080240
 
     .line 38
-    const v0, 0x7f070776
+    const v0, 0x7f1001e0
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->findViewById(I)Landroid/view/View;
 
@@ -53,10 +53,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->kwV:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->kWc:Landroid/widget/ImageView;
 
     .line 39
-    const v0, 0x7f070777
+    const v0, 0x7f1001e1
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->findViewById(I)Landroid/view/View;
 
@@ -64,10 +64,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->kOy:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->lnO:Landroid/widget/TextView;
 
     .line 40
-    const v0, 0x7f070fa0
+    const v0, 0x7f100201
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->findViewById(I)Landroid/view/View;
 
@@ -75,10 +75,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->kwW:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->kWd:Landroid/widget/TextView;
 
     .line 41
-    const v0, 0x7f070779
+    const v0, 0x7f1001e3
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->findViewById(I)Landroid/view/View;
 
@@ -86,30 +86,30 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->cyD:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->cvB:Landroid/widget/Button;
 
     .line 43
-    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yD()Lcom/tencent/mm/modelfriend/m$a;
+    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yQ()Lcom/tencent/mm/modelfriend/m$a;
 
     move-result-object v0
 
-    sget-object v1, Lcom/tencent/mm/modelfriend/m$a;->bMB:Lcom/tencent/mm/modelfriend/m$a;
+    sget-object v1, Lcom/tencent/mm/modelfriend/m$a;->bFV:Lcom/tencent/mm/modelfriend/m$a;
 
     if-ne v0, v1, :cond_2
 
     .line 44
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->kwV:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->kWc:Landroid/widget/ImageView;
 
-    const v1, 0x7f030172
+    const v1, 0x7f070191
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 45
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -134,11 +134,11 @@
 
     .line 47
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -152,9 +152,9 @@
 
     .line 49
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->kwW:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->kWd:Landroid/widget/TextView;
 
-    const v2, 0x7f0b0545
+    const v2, 0x7f080235
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->getString(I)Ljava/lang/String;
 
@@ -163,9 +163,9 @@
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 50
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->kOy:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->lnO:Landroid/widget/TextView;
 
-    const v2, 0x7f0b0532
+    const v2, 0x7f08024c
 
     const/4 v3, 0x1
 
@@ -183,7 +183,7 @@
 
     .line 58
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->cyD:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->cvB:Landroid/widget/Button;
 
     new-instance v1, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI$1;
 
@@ -196,24 +196,24 @@
 
     .line 52
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->kwV:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->kWc:Landroid/widget/ImageView;
 
-    const v1, 0x7f030173
+    const v1, 0x7f070192
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 53
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->kwW:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->kWd:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
     .line 54
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->kOy:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->lnO:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
     .line 55
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->kwW:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->kWd:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 
@@ -227,7 +227,7 @@
 
     .prologue
     .line 33
-    const v0, 0x7f0a0519
+    const v0, 0x7f03006d
 
     return v0
 .end method
@@ -240,12 +240,12 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMWizardActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 27
-    const v0, 0x7f0b04ff
+    const v0, 0x7f080239
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->qb(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->rR(I)V
 
     .line 28
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->Gb()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->Gy()V
 
     .line 29
     return-void
@@ -261,7 +261,7 @@
     if-ne p1, v0, :cond_0
 
     .line 71
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->bbm()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindmobile/BindMContactStatusUI;->bgy()V
 
     .line 72
     const/4 v0, 0x1

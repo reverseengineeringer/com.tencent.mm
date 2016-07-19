@@ -3,7 +3,7 @@ package com.tencent.mm.plugin.report.service;
 import android.os.Parcelable.Creator;
 
 final class StIDKeyDataInfo$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<StIDKeyDataInfo>
 {}
 
 /* Location:

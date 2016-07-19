@@ -12,8 +12,8 @@ final class k$3
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    if ((k.d(lkt) instanceof MMActivity)) {
-      ((MMActivity)k.d(lkt)).age();
+    if ((k.d(lKE) instanceof MMActivity)) {
+      ((MMActivity)k.d(lKE)).aiI();
     }
     return false;
   }

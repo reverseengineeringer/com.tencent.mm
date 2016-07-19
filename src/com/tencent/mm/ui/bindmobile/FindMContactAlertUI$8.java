@@ -3,7 +3,7 @@ package com.tencent.mm.ui.bindmobile;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class FindMContactAlertUI$8
   implements ViewTreeObserver.OnGlobalLayoutListener
@@ -12,11 +12,11 @@ final class FindMContactAlertUI$8
   
   public final void onGlobalLayout()
   {
-    gxY.getViewTreeObserver().removeGlobalOnLayoutListener(this);
-    int i = gxY.getMeasuredHeight();
-    int j = gxY.getMeasuredWidth();
-    u.d("!44@/B4Tb64lLpIaEkywMHoqABQUhRrFI+cbSM7Lgi4eEq8=", "bg width: %s height: %s", new Object[] { Integer.valueOf(j), Integer.valueOf(i) });
-    FindMContactAlertUI.b(kOV, j, i);
+    gEv.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+    int i = gEv.getMeasuredHeight();
+    int j = gEv.getMeasuredWidth();
+    v.d("MicroMsg.FindMContactAlertUI", "bg width: %s height: %s", new Object[] { Integer.valueOf(j), Integer.valueOf(i) });
+    FindMContactAlertUI.b(lol, j, i);
   }
 }
 

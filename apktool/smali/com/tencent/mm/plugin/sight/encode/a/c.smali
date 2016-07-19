@@ -7,13 +7,13 @@
 
 
 # instance fields
-.field private gzT:Landroid/media/MediaRecorder;
+.field private gGv:Landroid/media/MediaRecorder;
 
-.field private gzU:I
+.field private gGw:I
 
-.field gzV:Lcom/tencent/mm/plugin/sight/encode/a/a$a;
+.field gGx:Lcom/tencent/mm/plugin/sight/encode/a/a$a;
 
-.field private gzW:Lcom/tencent/mm/sdk/platformtools/aa;
+.field private gGy:Lcom/tencent/mm/sdk/platformtools/ac;
 
 
 # direct methods
@@ -27,11 +27,11 @@
     .line 19
     new-instance v0, Lcom/tencent/mm/plugin/sight/encode/a/c$1;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/sdk/platformtools/ab;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tw()Lcom/tencent/mm/sdk/platformtools/ad;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/tencent/mm/sdk/platformtools/ab;->jVF:Landroid/os/HandlerThread;
+    iget-object v1, v1, Lcom/tencent/mm/sdk/platformtools/ad;->kvy:Landroid/os/HandlerThread;
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
@@ -39,14 +39,14 @@
 
     invoke-direct {v0, p0, v1}, Lcom/tencent/mm/plugin/sight/encode/a/c$1;-><init>(Lcom/tencent/mm/plugin/sight/encode/a/c;Landroid/os/Looper;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzW:Lcom/tencent/mm/sdk/platformtools/aa;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGy:Lcom/tencent/mm/sdk/platformtools/ac;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final R(ILjava/lang/String;)I
+.method public final Z(ILjava/lang/String;)I
     .locals 9
 
     .prologue
@@ -59,7 +59,7 @@
     const/4 v5, 0x1
 
     .line 31
-    const-string/jumbo v0, "!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHGUBS64GKWMWw="
+    const-string/jumbo v0, "MicroMsg.SightAACEncoder"
 
     const-string/jumbo v1, "sight aac encoder init, bufID[%d] tempPath[%s], sampleRate[%d]"
 
@@ -73,7 +73,9 @@
 
     aput-object p2, v2, v5
 
-    sget v3, Lcom/tencent/mm/plugin/sight/base/a;->gwR:I
+    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/a;->axP()I
+
+    move-result v3
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -81,21 +83,21 @@
 
     aput-object v3, v2, v7
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 33
-    iput p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzU:I
+    iput p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGw:I
 
     .line 47
     new-instance v0, Landroid/media/MediaRecorder;
 
     invoke-direct {v0}, Landroid/media/MediaRecorder;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzT:Landroid/media/MediaRecorder;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGv:Landroid/media/MediaRecorder;
 
     .line 49
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzT:Landroid/media/MediaRecorder;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGv:Landroid/media/MediaRecorder;
 
     const/4 v1, 0x5
 
@@ -105,36 +107,40 @@
 
     .line 54
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzT:Landroid/media/MediaRecorder;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGv:Landroid/media/MediaRecorder;
 
     invoke-virtual {v0, v7}, Landroid/media/MediaRecorder;->setOutputFormat(I)V
 
     .line 55
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzT:Landroid/media/MediaRecorder;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGv:Landroid/media/MediaRecorder;
 
     invoke-virtual {v0, v8}, Landroid/media/MediaRecorder;->setAudioEncoder(I)V
 
     .line 56
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzT:Landroid/media/MediaRecorder;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGv:Landroid/media/MediaRecorder;
 
     invoke-virtual {v0, v5}, Landroid/media/MediaRecorder;->setAudioChannels(I)V
 
     .line 57
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzT:Landroid/media/MediaRecorder;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGv:Landroid/media/MediaRecorder;
 
-    sget v1, Lcom/tencent/mm/plugin/sight/base/a;->gwS:I
+    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/a;->axQ()I
+
+    move-result v1
 
     invoke-virtual {v0, v1}, Landroid/media/MediaRecorder;->setAudioEncodingBitRate(I)V
 
     .line 58
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzT:Landroid/media/MediaRecorder;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGv:Landroid/media/MediaRecorder;
 
-    sget v1, Lcom/tencent/mm/plugin/sight/base/a;->gwR:I
+    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/a;->axP()I
+
+    move-result v1
 
     invoke-virtual {v0, v1}, Landroid/media/MediaRecorder;->setAudioSamplingRate(I)V
 
     .line 59
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzT:Landroid/media/MediaRecorder;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGv:Landroid/media/MediaRecorder;
 
     invoke-virtual {v0, p2}, Landroid/media/MediaRecorder;->setOutputFile(Ljava/lang/String;)V
 
@@ -146,7 +152,7 @@
     move-exception v0
 
     .line 51
-    const-string/jumbo v1, "!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHGUBS64GKWMWw="
+    const-string/jumbo v1, "MicroMsg.SightAACEncoder"
 
     const-string/jumbo v2, "Set Audio Source CAMCORDER FAIL"
 
@@ -156,10 +162,10 @@
 
     aput-object v4, v3, v6
 
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 52
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzT:Landroid/media/MediaRecorder;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGv:Landroid/media/MediaRecorder;
 
     invoke-virtual {v0, v5}, Landroid/media/MediaRecorder;->setAudioSource(I)V
 
@@ -173,21 +179,21 @@
     const/4 v0, 0x0
 
     .line 65
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzV:Lcom/tencent/mm/plugin/sight/encode/a/a$a;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGx:Lcom/tencent/mm/plugin/sight/encode/a/a$a;
 
     .line 67
     :try_start_0
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzT:Landroid/media/MediaRecorder;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGv:Landroid/media/MediaRecorder;
 
     if-eqz v1, :cond_0
 
     .line 68
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzT:Landroid/media/MediaRecorder;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGv:Landroid/media/MediaRecorder;
 
     invoke-virtual {v1}, Landroid/media/MediaRecorder;->prepare()V
 
     .line 69
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzT:Landroid/media/MediaRecorder;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGv:Landroid/media/MediaRecorder;
 
     invoke-virtual {v1}, Landroid/media/MediaRecorder;->start()V
     :try_end_0
@@ -196,9 +202,9 @@
 
     .line 78
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzW:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGy:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/platformtools/aa;->sendEmptyMessage(I)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/platformtools/ac;->sendEmptyMessage(I)Z
 
     .line 80
     :goto_0
@@ -210,7 +216,7 @@
 
     .line 72
     :try_start_1
-    const-string/jumbo v2, "!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHGUBS64GKWMWw="
+    const-string/jumbo v2, "MicroMsg.SightAACEncoder"
 
     const-string/jumbo v3, "start record aac.mp4 error:%s"
 
@@ -226,14 +232,14 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 73
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzW:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGy:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/platformtools/aa;->sendEmptyMessage(I)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/platformtools/ac;->sendEmptyMessage(I)Z
 
     const/4 v0, -0x1
 
@@ -242,9 +248,9 @@
     :catchall_0
     move-exception v1
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzW:Lcom/tencent/mm/sdk/platformtools/aa;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGy:Lcom/tencent/mm/sdk/platformtools/ac;
 
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/sdk/platformtools/aa;->sendEmptyMessage(I)Z
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/sdk/platformtools/ac;->sendEmptyMessage(I)Z
 
     throw v1
 .end method
@@ -256,7 +262,7 @@
     const/4 v0, 0x0
 
     .line 85
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzT:Landroid/media/MediaRecorder;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGv:Landroid/media/MediaRecorder;
 
     if-nez v1, :cond_1
 
@@ -264,7 +270,7 @@
     if-eqz p1, :cond_0
 
     .line 87
-    invoke-interface {p1}, Lcom/tencent/mm/plugin/sight/encode/a/a$b;->awn()V
+    invoke-interface {p1}, Lcom/tencent/mm/plugin/sight/encode/a/a$b;->ayL()V
 
     .line 102
     :cond_0
@@ -274,12 +280,12 @@
     .line 92
     :cond_1
     :try_start_0
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzT:Landroid/media/MediaRecorder;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGv:Landroid/media/MediaRecorder;
 
     invoke-virtual {v1}, Landroid/media/MediaRecorder;->stop()V
 
     .line 93
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzT:Landroid/media/MediaRecorder;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGv:Landroid/media/MediaRecorder;
 
     invoke-virtual {v1}, Landroid/media/MediaRecorder;->release()V
     :try_end_0
@@ -288,13 +294,13 @@
     .line 98
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzT:Landroid/media/MediaRecorder;
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGv:Landroid/media/MediaRecorder;
 
     .line 99
     if-eqz p1, :cond_0
 
     .line 100
-    invoke-interface {p1}, Lcom/tencent/mm/plugin/sight/encode/a/a$b;->awn()V
+    invoke-interface {p1}, Lcom/tencent/mm/plugin/sight/encode/a/a$b;->ayL()V
 
     goto :goto_0
 
@@ -303,7 +309,7 @@
     move-exception v1
 
     .line 95
-    const-string/jumbo v2, "!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHGUBS64GKWMWw="
+    const-string/jumbo v2, "MicroMsg.SightAACEncoder"
 
     const-string/jumbo v3, "stop record aac.mp4 error:%s"
 
@@ -317,7 +323,7 @@
 
     aput-object v5, v4, v0
 
-    invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 96
     const/4 v0, -0x1
@@ -325,17 +331,17 @@
     goto :goto_0
 .end method
 
-.method public final awk()I
+.method public final ayI()I
     .locals 1
 
     .prologue
     .line 112
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gzU:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/c;->gGw:I
 
     return v0
 .end method
 
-.method public final awl()V
+.method public final ayJ()V
     .locals 0
 
     .prologue

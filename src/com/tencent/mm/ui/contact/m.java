@@ -4,7 +4,7 @@ import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.contact.a.a;
 import com.tencent.mm.ui.contact.a.a.a;
 import com.tencent.mm.ui.contact.a.a.b;
@@ -13,20 +13,22 @@ import junit.framework.Assert;
 public abstract class m
   extends BaseAdapter
 {
-  private SparseArray kaa;
-  public l lkS;
-  private boolean lkT;
+  private SparseArray<a> kAw;
+  public l lLd;
+  private boolean lLe;
+  int scene;
   
-  public m(l paraml, boolean paramBoolean)
+  public m(l paraml, boolean paramBoolean, int paramInt)
   {
-    lkS = paraml;
-    lkT = paramBoolean;
-    kaa = new SparseArray();
+    lLd = paraml;
+    lLe = paramBoolean;
+    kAw = new SparseArray();
+    scene = paramInt;
   }
   
-  public boolean awQ()
+  public boolean azn()
   {
-    return lkT;
+    return lLe;
   }
   
   protected boolean c(a parama)
@@ -36,8 +38,8 @@ public abstract class m
   
   public final void clearCache()
   {
-    if (kaa != null) {
-      kaa.clear();
+    if (kAw != null) {
+      kAw.clear();
     }
   }
   
@@ -53,29 +55,29 @@ public abstract class m
   
   public int getItemViewType(int paramInt)
   {
-    if (rM(paramInt) != null) {
-      return rMeLV;
+    if (tO(paramInt) != null) {
+      return tOcTv;
     }
-    u.e("!44@/B4Tb64lLpJo7Gkqq5Uobf4F3yk8Md2LqW4ziHKSE2s=", "getItemViewType: get data item fail, return unkown Type, totalCount=%d | position = %s", new Object[] { Integer.valueOf(getCount()), Integer.valueOf(paramInt) });
+    v.e("MicroMsg.MMSelectContactAdapter", "getItemViewType: get data item fail, return unkown Type, totalCount=%d | position = %s", new Object[] { Integer.valueOf(getCount()), Integer.valueOf(paramInt) });
     return -1;
   }
   
   public View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
-    a locala = rM(paramInt);
+    a locala = tO(paramInt);
     View localView = paramView;
     if (paramView == null) {
-      localView = locala.ajt().a(lkS.getActivity(), paramViewGroup);
+      localView = locala.amb().a(lLd.getActivity(), paramViewGroup);
     }
     paramView = (a.a)localView.getTag();
     Assert.assertNotNull(paramView);
-    if (!lmN)
+    if (!lNd)
     {
-      locala.er(lkS.getActivity());
-      lmN = true;
+      locala.eu(lLd.getActivity());
+      lNd = true;
     }
-    lkT = awQ();
-    locala.ajt().a(lkS.getActivity(), paramView, locala, lkS.b(locala), lkS.a(locala));
+    lLe = azn();
+    locala.amb().a(lLd.getActivity(), paramView, locala, lLd.b(locala), lLd.a(locala));
     return localView;
   }
   
@@ -84,33 +86,33 @@ public abstract class m
     return 4;
   }
   
-  public final void hX(boolean paramBoolean)
+  public final void iA(boolean paramBoolean)
   {
-    lkT = paramBoolean;
+    lLe = paramBoolean;
     notifyDataSetChanged();
   }
   
-  public abstract a iH(int paramInt);
+  public abstract a jQ(int paramInt);
   
-  public final a rM(int paramInt)
+  public final a tO(int paramInt)
   {
-    if (kaa.indexOfKey(paramInt) >= 0) {
-      return (a)kaa.get(paramInt);
+    if (kAw.indexOfKey(paramInt) >= 0) {
+      return (a)kAw.get(paramInt);
     }
     if ((paramInt >= 0) && (paramInt < getCount()))
     {
-      a locala = iH(paramInt);
+      a locala = jQ(paramInt);
       if (locala != null)
       {
-        cLD = c(locala);
-        kaa.put(paramInt, locala);
-        u.d("!44@/B4Tb64lLpJo7Gkqq5Uobf4F3yk8Md2LqW4ziHKSE2s=", "put item to cache viewType=%d|position=%d", new Object[] { Integer.valueOf(eLV), Integer.valueOf(paramInt) });
+        cIG = c(locala);
+        kAw.put(paramInt, locala);
+        v.d("MicroMsg.MMSelectContactAdapter", "put item to cache viewType=%d|position=%d", new Object[] { Integer.valueOf(cTv), Integer.valueOf(paramInt) });
         return locala;
       }
-      u.e("!44@/B4Tb64lLpJo7Gkqq5Uobf4F3yk8Md2LqW4ziHKSE2s=", "createDataItem Occur error !!!!!!!!! position = %d", new Object[] { Integer.valueOf(paramInt) });
+      v.e("MicroMsg.MMSelectContactAdapter", "createDataItem Occur error !!!!!!!!! position = %d", new Object[] { Integer.valueOf(paramInt) });
       return locala;
     }
-    u.e("!44@/B4Tb64lLpJo7Gkqq5Uobf4F3yk8Md2LqW4ziHKSE2s=", "getItem Occur error !!!!!!!!! position = %d", new Object[] { Integer.valueOf(paramInt) });
+    v.e("MicroMsg.MMSelectContactAdapter", "getItem Occur error !!!!!!!!! position = %d", new Object[] { Integer.valueOf(paramInt) });
     return null;
   }
 }

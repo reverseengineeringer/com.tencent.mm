@@ -1,6 +1,5 @@
 .class public final Lcom/tencent/smtt/sdk/a/c$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # annotations
@@ -15,13 +14,13 @@
 
 
 # instance fields
-.field public iAB:I
+.field public iXb:I
 
-.field public iAC:I
+.field public iXc:I
 
-.field public iAD:Ljava/lang/String;
+.field public iXd:Ljava/lang/String;
 
-.field public lUB:Ljava/lang/String;
+.field public mwt:Ljava/lang/String;
 
 .field public packageName:Ljava/lang/String;
 
@@ -30,29 +29,22 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
     const/4 v0, -0x1
 
-    .line 202
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 204
-    iput v0, p0, Lcom/tencent/smtt/sdk/a/c$a;->iAB:I
+    iput v0, p0, Lcom/tencent/smtt/sdk/a/c$a;->iXb:I
 
-    .line 205
-    iput v0, p0, Lcom/tencent/smtt/sdk/a/c$a;->iAC:I
+    iput v0, p0, Lcom/tencent/smtt/sdk/a/c$a;->iXc:I
 
-    .line 206
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/a/c$a;->iAD:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/a/c$a;->iXd:Ljava/lang/String;
 
-    .line 207
     const-string/jumbo v0, "0"
 
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/a/c$a;->lUB:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/a/c$a;->mwt:Ljava/lang/String;
 
-    .line 208
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/tencent/smtt/sdk/a/c$a;->packageName:Ljava/lang/String;

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/r/t$a;
+.implements Lcom/tencent/mm/t/t$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bUB:Lcom/tencent/mm/modelmulti/a;
+.field final synthetic bOc:Lcom/tencent/mm/modelmulti/a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 329
-    iput-object p1, p0, Lcom/tencent/mm/modelmulti/a$3;->bUB:Lcom/tencent/mm/modelmulti/a;
+    .line 323
+    iput-object p1, p0, Lcom/tencent/mm/modelmulti/a$3;->bOc:Lcom/tencent/mm/modelmulti/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,828 +36,555 @@
 
 
 # virtual methods
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/a;Lcom/tencent/mm/r/j;)I
-    .locals 14
+.method public final a(IILjava/lang/String;Lcom/tencent/mm/t/a;Lcom/tencent/mm/t/j;)I
+    .locals 15
 
     .prologue
-    .line 333
-    const-string/jumbo v1, "!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s="
+    .line 327
+    const-string/jumbo v2, "MicroMsg.GetChatRoomMsgService"
 
-    const-string/jumbo v2, "summerbadcr callback [%d,%d,%s]"
+    const-string/jumbo v3, "summerbadcr callback [%d,%d,%s]"
 
-    const/4 v3, 0x3
+    const/4 v4, 0x3
 
-    new-array v3, v3, [Ljava/lang/Object;
+    new-array v4, v4, [Ljava/lang/Object;
 
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v5
+    move-result-object v6
 
-    aput-object v5, v3, v4
+    aput-object v6, v4, v5
 
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
     invoke-static/range {p2 .. p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v5
+    move-result-object v6
 
-    aput-object v5, v3, v4
+    aput-object v6, v4, v5
 
-    const/4 v4, 0x2
+    const/4 v5, 0x2
 
-    aput-object p3, v3, v4
+    aput-object p3, v4, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 335
-    invoke-virtual/range {p5 .. p5}, Lcom/tencent/mm/r/j;->getType()I
+    .line 329
+    invoke-virtual/range {p5 .. p5}, Lcom/tencent/mm/t/j;->getType()I
 
-    move-result v1
+    move-result v2
 
-    const/16 v2, 0x325
+    const/16 v3, 0x325
 
-    if-eq v1, v2, :cond_0
+    if-eq v2, v3, :cond_0
 
-    .line 336
-    const/4 v1, 0x0
-
-    .line 464
-    :goto_0
-    return v1
-
-    .line 339
-    :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/modelmulti/a$3;->bUB:Lcom/tencent/mm/modelmulti/a;
-
+    .line 330
     const/4 v2, 0x0
 
-    iput-boolean v2, v1, Lcom/tencent/mm/modelmulti/a;->bDG:Z
+    .line 458
+    :goto_0
+    return v2
 
-    .line 341
+    .line 333
+    :cond_0
+    iget-object v2, p0, Lcom/tencent/mm/modelmulti/a$3;->bOc:Lcom/tencent/mm/modelmulti/a;
+
+    const/4 v3, 0x0
+
+    iput-boolean v3, v2, Lcom/tencent/mm/modelmulti/a;->bwQ:Z
+
+    .line 335
     if-nez p1, :cond_1
 
     if-nez p2, :cond_1
 
     if-nez p4, :cond_2
 
-    .line 342
+    .line 336
     :cond_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s="
+    const-string/jumbo v2, "MicroMsg.GetChatRoomMsgService"
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v3, "summerbadcr callback errType:"
+    const-string/jumbo v4, "summerbadcr callback errType:"
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move/from16 v0, p1
 
-    move-result-object v2
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string/jumbo v3, " errCode:"
+    move-result-object v3
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string/jumbo v4, " errCode:"
 
-    move-result-object v2
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     move/from16 v0, p2
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    const-string/jumbo v3, " will retry"
+    const-string/jumbo v4, " will retry"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 343
-    iget-object v1, p0, Lcom/tencent/mm/modelmulti/a$3;->bUB:Lcom/tencent/mm/modelmulti/a;
+    .line 337
+    iget-object v2, p0, Lcom/tencent/mm/modelmulti/a$3;->bOc:Lcom/tencent/mm/modelmulti/a;
 
-    iget-object v1, v1, Lcom/tencent/mm/modelmulti/a;->bOS:Lcom/tencent/mm/sdk/platformtools/af;
+    iget-object v2, v2, Lcom/tencent/mm/modelmulti/a;->bIn:Lcom/tencent/mm/sdk/platformtools/ah;
 
-    const-wide/16 v2, 0x1388
+    const-wide/16 v4, 0x1388
 
-    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/af;->ds(J)V
+    invoke-virtual {v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/ah;->dJ(J)V
 
-    .line 344
-    const/4 v1, 0x0
+    .line 338
+    const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 347
+    .line 341
     :cond_2
     move-object/from16 v0, p4
 
-    iget-object v1, v0, Lcom/tencent/mm/r/a;->bEW:Lcom/tencent/mm/r/a$b;
+    iget-object v2, v0, Lcom/tencent/mm/t/a;->byh:Lcom/tencent/mm/t/a$b;
 
-    iget-object v1, v1, Lcom/tencent/mm/r/a$b;->bFf:Lcom/tencent/mm/at/a;
+    iget-object v2, v2, Lcom/tencent/mm/t/a$b;->byq:Lcom/tencent/mm/ax/a;
 
-    check-cast v1, Lcom/tencent/mm/protocal/b/rl;
+    check-cast v2, Lcom/tencent/mm/protocal/b/rw;
 
-    .line 348
+    .line 342
     move-object/from16 v0, p4
 
-    iget-object v2, v0, Lcom/tencent/mm/r/a;->bEX:Lcom/tencent/mm/r/a$c;
+    iget-object v3, v0, Lcom/tencent/mm/t/a;->byi:Lcom/tencent/mm/t/a$c;
 
-    iget-object v2, v2, Lcom/tencent/mm/r/a$c;->bFf:Lcom/tencent/mm/at/a;
+    iget-object v3, v3, Lcom/tencent/mm/t/a$c;->byq:Lcom/tencent/mm/ax/a;
 
-    check-cast v2, Lcom/tencent/mm/protocal/b/rm;
+    check-cast v3, Lcom/tencent/mm/protocal/b/rx;
 
-    .line 349
-    iget-object v3, v1, Lcom/tencent/mm/protocal/b/rl;->jqn:Lcom/tencent/mm/protocal/b/aly;
+    .line 343
+    iget-object v4, v2, Lcom/tencent/mm/protocal/b/rw;->jOs:Lcom/tencent/mm/protocal/b/amj;
 
-    invoke-static {v3}, Lcom/tencent/mm/platformtools/n;->a(Lcom/tencent/mm/protocal/b/aly;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/tencent/mm/platformtools/m;->a(Lcom/tencent/mm/protocal/b/amj;)Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v7
 
-    .line 351
-    iget v3, v1, Lcom/tencent/mm/protocal/b/rl;->iXB:I
+    .line 345
+    iget v4, v2, Lcom/tencent/mm/protocal/b/rw;->jvf:I
 
-    if-nez v3, :cond_5
+    if-nez v4, :cond_5
 
-    .line 352
-    const-string/jumbo v3, "!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s="
+    .line 346
+    const-string/jumbo v4, "MicroMsg.GetChatRoomMsgService"
 
-    const-string/jumbo v4, "summerbadcr clear chatroomId[%s], resp size[%d], ContinueFlag[%d]"
+    const-string/jumbo v5, "summerbadcr clear chatroomId[%s], resp size[%d], ContinueFlag[%d]"
 
-    const/4 v1, 0x3
+    const/4 v2, 0x3
 
-    new-array v5, v1, [Ljava/lang/Object;
+    new-array v6, v2, [Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    aput-object v6, v5, v1
+    aput-object v7, v6, v2
 
-    const/4 v6, 0x1
+    const/4 v7, 0x1
 
-    iget-object v1, v2, Lcom/tencent/mm/protocal/b/rm;->jqq:Ljava/util/LinkedList;
+    iget-object v2, v3, Lcom/tencent/mm/protocal/b/rx;->jOv:Ljava/util/LinkedList;
 
-    if-nez v1, :cond_4
+    if-nez v2, :cond_4
 
-    const/4 v1, -0x1
+    const/4 v2, -0x1
 
     :goto_1
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    aput-object v1, v5, v6
-
-    const/4 v1, 0x2
-
-    iget v2, v2, Lcom/tencent/mm/protocal/b/rm;->jdw:I
-
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    aput-object v2, v5, v1
+    aput-object v2, v6, v7
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const/4 v2, 0x2
 
-    .line 353
-    iget-object v1, p0, Lcom/tencent/mm/modelmulti/a$3;->bUB:Lcom/tencent/mm/modelmulti/a;
+    iget v3, v3, Lcom/tencent/mm/protocal/b/rx;->jBg:I
 
-    iget-object v1, v1, Lcom/tencent/mm/modelmulti/a;->bOS:Lcom/tencent/mm/sdk/platformtools/af;
-
-    invoke-virtual {v1}, Lcom/tencent/mm/sdk/platformtools/af;->aVf()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    .line 354
-    iget-object v1, p0, Lcom/tencent/mm/modelmulti/a$3;->bUB:Lcom/tencent/mm/modelmulti/a;
-
-    iget-object v1, v1, Lcom/tencent/mm/modelmulti/a;->bOS:Lcom/tencent/mm/sdk/platformtools/af;
-
-    const-wide/16 v2, 0x1f4
-
-    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/af;->ds(J)V
-
-    .line 356
-    :cond_3
-    const/4 v1, 0x0
-
-    goto/16 :goto_0
-
-    .line 352
-    :cond_4
-    iget-object v1, v2, Lcom/tencent/mm/protocal/b/rm;->jqq:Ljava/util/LinkedList;
-
-    invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
-
-    move-result v1
-
-    goto :goto_1
-
-    .line 359
-    :cond_5
-    const-string/jumbo v3, "!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s="
-
-    const-string/jumbo v4, "summerbadcr callback req chatroomId[%s], resp ContinueFlag[%d]"
-
-    const/4 v5, 0x2
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    const/4 v7, 0x0
-
-    aput-object v6, v5, v7
-
-    const/4 v7, 0x1
-
-    iget v8, v2, Lcom/tencent/mm/protocal/b/rm;->jdw:I
-
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    aput-object v8, v5, v7
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 361
-    iget-object v3, p0, Lcom/tencent/mm/modelmulti/a$3;->bUB:Lcom/tencent/mm/modelmulti/a;
-
-    iget-object v7, v3, Lcom/tencent/mm/modelmulti/a;->bUx:Ljava/util/Map;
-
-    monitor-enter v7
-
-    .line 362
-    :try_start_0
-    iget-object v3, p0, Lcom/tencent/mm/modelmulti/a$3;->bUB:Lcom/tencent/mm/modelmulti/a;
-
-    iget-object v3, v3, Lcom/tencent/mm/modelmulti/a;->bUz:Lcom/tencent/mm/modelmulti/a$c;
-
-    if-eqz v3, :cond_6
-
-    iget-object v3, p0, Lcom/tencent/mm/modelmulti/a$3;->bUB:Lcom/tencent/mm/modelmulti/a;
-
-    iget-object v3, v3, Lcom/tencent/mm/modelmulti/a;->bUz:Lcom/tencent/mm/modelmulti/a$c;
-
-    invoke-interface {v3}, Lcom/tencent/mm/modelmulti/a$c;->AM()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_a
-
-    .line 363
-    :cond_6
-    iget-object v3, p0, Lcom/tencent/mm/modelmulti/a$3;->bUB:Lcom/tencent/mm/modelmulti/a;
-
-    iget-object v3, v3, Lcom/tencent/mm/modelmulti/a;->bUx:Ljava/util/Map;
-
-    invoke-interface {v3}, Ljava/util/Map;->clear()V
-
-    .line 364
-    iget-object v3, p0, Lcom/tencent/mm/modelmulti/a$3;->bUB:Lcom/tencent/mm/modelmulti/a;
-
-    const/4 v4, 0x0
-
-    iput-object v4, v3, Lcom/tencent/mm/modelmulti/a;->bUz:Lcom/tencent/mm/modelmulti/a$c;
-
-    .line 365
-    const-string/jumbo v3, "!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s="
-
-    const-string/jumbo v4, "summerbadcr callback currentListener is or its chatroomid is null so clear map"
-
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 396
-    :cond_7
-    :goto_2
-    monitor-exit v7
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 398
-    iget-object v3, p0, Lcom/tencent/mm/modelmulti/a$3;->bUB:Lcom/tencent/mm/modelmulti/a;
-
-    iget-object v3, v3, Lcom/tencent/mm/modelmulti/a;->bOS:Lcom/tencent/mm/sdk/platformtools/af;
-
-    invoke-virtual {v3}, Lcom/tencent/mm/sdk/platformtools/af;->aVf()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_8
-
-    .line 399
-    iget-object v3, p0, Lcom/tencent/mm/modelmulti/a$3;->bUB:Lcom/tencent/mm/modelmulti/a;
-
-    iget-object v3, v3, Lcom/tencent/mm/modelmulti/a;->bOS:Lcom/tencent/mm/sdk/platformtools/af;
-
-    const-wide/16 v4, 0x1f4
-
-    invoke-virtual {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/af;->ds(J)V
-
-    .line 402
-    :cond_8
-    iget-object v3, v2, Lcom/tencent/mm/protocal/b/rm;->jqq:Ljava/util/LinkedList;
-
-    if-eqz v3, :cond_15
-
-    iget-object v3, v2, Lcom/tencent/mm/protocal/b/rm;->jqq:Ljava/util/LinkedList;
-
-    invoke-virtual {v3}, Ljava/util/LinkedList;->isEmpty()Z
-
-    move-result v3
-
-    if-nez v3, :cond_15
-
-    .line 403
-    new-instance v5, Lcom/tencent/mm/modelmulti/a$b;
-
-    iget-object v3, p0, Lcom/tencent/mm/modelmulti/a$3;->bUB:Lcom/tencent/mm/modelmulti/a;
-
-    invoke-direct {v5, v3}, Lcom/tencent/mm/modelmulti/a$b;-><init>(Lcom/tencent/mm/modelmulti/a;)V
-
-    .line 404
-    iput-object v6, v5, Lcom/tencent/mm/modelmulti/a$b;->bUD:Ljava/lang/String;
-
-    .line 405
-    iget v3, v1, Lcom/tencent/mm/protocal/b/rl;->jqp:I
-
-    iput v3, v5, Lcom/tencent/mm/modelmulti/a$b;->bUG:I
-
-    .line 407
-    iget v3, v2, Lcom/tencent/mm/protocal/b/rm;->jdw:I
-
-    if-nez v3, :cond_9
-
-    .line 408
-    const/4 v3, 0x0
-
-    iput-boolean v3, v5, Lcom/tencent/mm/modelmulti/a$b;->bUI:Z
-
-    .line 411
-    :cond_9
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/tencent/mm/model/c;->rW()Lcom/tencent/mm/storage/v;
-
-    move-result-object v3
-
-    invoke-static {v6}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_e
-
-    const-wide/16 v3, 0x0
-
-    :goto_3
-    long-to-int v6, v3
-
-    .line 412
-    const/4 v3, 0x0
-
-    .line 413
-    if-eqz v6, :cond_11
-
-    move v4, v3
-
-    .line 414
-    :goto_4
-    iget-object v3, v2, Lcom/tencent/mm/protocal/b/rm;->jqq:Ljava/util/LinkedList;
-
-    invoke-virtual {v3}, Ljava/util/LinkedList;->isEmpty()Z
-
-    move-result v3
-
-    if-nez v3, :cond_12
-
-    iget-object v3, v2, Lcom/tencent/mm/protocal/b/rm;->jqq:Ljava/util/LinkedList;
-
-    invoke-virtual {v3}, Ljava/util/LinkedList;->peek()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/tencent/mm/protocal/b/aj;
-
-    iget v3, v3, Lcom/tencent/mm/protocal/b/aj;->iXB:I
-
-    if-gt v3, v6, :cond_12
-
-    .line 415
-    iget-object v3, v2, Lcom/tencent/mm/protocal/b/rm;->jqq:Ljava/util/LinkedList;
-
-    invoke-virtual {v3}, Ljava/util/LinkedList;->poll()Ljava/lang/Object;
-
-    .line 416
-    const/4 v3, 0x1
-
-    move v4, v3
-
-    goto :goto_4
-
-    .line 366
-    :cond_a
-    :try_start_1
-    iget-object v3, p0, Lcom/tencent/mm/modelmulti/a$3;->bUB:Lcom/tencent/mm/modelmulti/a;
-
-    iget-object v3, v3, Lcom/tencent/mm/modelmulti/a;->bUz:Lcom/tencent/mm/modelmulti/a$c;
-
-    invoke-interface {v3}, Lcom/tencent/mm/modelmulti/a$c;->AM()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_d
-
-    .line 367
-    iget-object v8, v2, Lcom/tencent/mm/protocal/b/rm;->jqq:Ljava/util/LinkedList;
-
-    .line 368
-    const-string/jumbo v4, "!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s="
-
-    const-string/jumbo v5, "summerbadcr callback currentListener still in and resp.ContinueFlag[%d], size[%d]"
-
-    const/4 v3, 0x2
-
-    new-array v9, v3, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    iget v10, v2, Lcom/tencent/mm/protocal/b/rm;->jdw:I
-
-    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v10
-
-    aput-object v10, v9, v3
-
-    const/4 v10, 0x1
-
-    if-nez v8, :cond_b
-
-    const/4 v3, -0x1
-
-    :goto_5
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    aput-object v3, v9, v10
+    aput-object v3, v6, v2
 
-    invoke-static {v4, v5, v9}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 369
-    iget v3, v2, Lcom/tencent/mm/protocal/b/rm;->jdw:I
+    .line 347
+    iget-object v2, p0, Lcom/tencent/mm/modelmulti/a$3;->bOc:Lcom/tencent/mm/modelmulti/a;
 
-    if-lez v3, :cond_7
+    iget-object v2, v2, Lcom/tencent/mm/modelmulti/a;->bIn:Lcom/tencent/mm/sdk/platformtools/ah;
 
-    .line 370
-    if-eqz v8, :cond_7
+    invoke-virtual {v2}, Lcom/tencent/mm/sdk/platformtools/ah;->baj()Z
 
-    invoke-virtual {v8}, Ljava/util/LinkedList;->isEmpty()Z
+    move-result v2
 
-    move-result v3
+    if-eqz v2, :cond_3
 
-    if-nez v3, :cond_7
+    .line 348
+    iget-object v2, p0, Lcom/tencent/mm/modelmulti/a$3;->bOc:Lcom/tencent/mm/modelmulti/a;
 
-    .line 371
-    invoke-virtual {v8}, Ljava/util/LinkedList;->getFirst()Ljava/lang/Object;
+    iget-object v2, v2, Lcom/tencent/mm/modelmulti/a;->bIn:Lcom/tencent/mm/sdk/platformtools/ah;
 
-    move-result-object v3
+    const-wide/16 v4, 0x1f4
 
-    check-cast v3, Lcom/tencent/mm/protocal/b/aj;
+    invoke-virtual {v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/ah;->dJ(J)V
 
-    iget v4, v3, Lcom/tencent/mm/protocal/b/aj;->iXB:I
+    .line 350
+    :cond_3
+    const/4 v2, 0x0
 
-    .line 372
-    invoke-virtual {v8}, Ljava/util/LinkedList;->getLast()Ljava/lang/Object;
+    goto/16 :goto_0
 
-    move-result-object v3
+    .line 346
+    :cond_4
+    iget-object v2, v3, Lcom/tencent/mm/protocal/b/rx;->jOv:Ljava/util/LinkedList;
 
-    check-cast v3, Lcom/tencent/mm/protocal/b/aj;
+    invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
 
-    iget v5, v3, Lcom/tencent/mm/protocal/b/aj;->iXB:I
+    move-result v2
 
-    .line 373
-    iget v3, v1, Lcom/tencent/mm/protocal/b/rl;->jqp:I
+    goto :goto_1
 
-    if-eqz v3, :cond_c
+    .line 353
+    :cond_5
+    const-string/jumbo v4, "MicroMsg.GetChatRoomMsgService"
 
-    move v3, v4
+    const-string/jumbo v5, "summerbadcr callback req chatroomId[%s], resp ContinueFlag[%d]"
 
-    .line 374
-    :goto_6
-    const-string/jumbo v9, "!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s="
+    const/4 v6, 0x2
 
-    const-string/jumbo v10, "summerbadcr callback ContinueFlag[%d], list size[%d],firstSeq[%d], lastSeq[%d], UpDownFlag[%d], newSeq[%d]"
+    new-array v6, v6, [Ljava/lang/Object;
 
-    const/4 v11, 0x6
+    const/4 v8, 0x0
 
-    new-array v11, v11, [Ljava/lang/Object;
+    aput-object v7, v6, v8
 
-    const/4 v12, 0x0
+    const/4 v8, 0x1
 
-    iget v13, v2, Lcom/tencent/mm/protocal/b/rm;->jdw:I
+    iget v9, v3, Lcom/tencent/mm/protocal/b/rx;->jBg:I
 
-    invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v13
+    move-result-object v9
 
-    aput-object v13, v11, v12
+    aput-object v9, v6, v8
 
-    const/4 v12, 0x1
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {v8}, Ljava/util/LinkedList;->size()I
+    .line 355
+    iget-object v4, p0, Lcom/tencent/mm/modelmulti/a$3;->bOc:Lcom/tencent/mm/modelmulti/a;
 
-    move-result v8
+    iget-object v8, v4, Lcom/tencent/mm/modelmulti/a;->bNY:Ljava/util/Map;
 
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    monitor-enter v8
 
-    move-result-object v8
+    .line 356
+    :try_start_0
+    iget-object v4, p0, Lcom/tencent/mm/modelmulti/a$3;->bOc:Lcom/tencent/mm/modelmulti/a;
 
-    aput-object v8, v11, v12
+    iget-object v4, v4, Lcom/tencent/mm/modelmulti/a;->bOa:Lcom/tencent/mm/modelmulti/a$c;
 
-    const/4 v8, 0x2
+    if-eqz v4, :cond_6
 
+    iget-object v4, p0, Lcom/tencent/mm/modelmulti/a$3;->bOc:Lcom/tencent/mm/modelmulti/a;
+
+    iget-object v4, v4, Lcom/tencent/mm/modelmulti/a;->bOa:Lcom/tencent/mm/modelmulti/a$c;
+
+    invoke-interface {v4}, Lcom/tencent/mm/modelmulti/a$c;->AY()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_a
+
+    .line 357
+    :cond_6
+    iget-object v4, p0, Lcom/tencent/mm/modelmulti/a$3;->bOc:Lcom/tencent/mm/modelmulti/a;
+
+    iget-object v4, v4, Lcom/tencent/mm/modelmulti/a;->bNY:Ljava/util/Map;
+
+    invoke-interface {v4}, Ljava/util/Map;->clear()V
+
+    .line 358
+    iget-object v4, p0, Lcom/tencent/mm/modelmulti/a$3;->bOc:Lcom/tencent/mm/modelmulti/a;
+
+    const/4 v5, 0x0
+
+    iput-object v5, v4, Lcom/tencent/mm/modelmulti/a;->bOa:Lcom/tencent/mm/modelmulti/a$c;
+
+    .line 359
+    const-string/jumbo v4, "MicroMsg.GetChatRoomMsgService"
+
+    const-string/jumbo v5, "summerbadcr callback currentListener is or its chatroomid is null so clear map"
+
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 390
+    :cond_7
+    :goto_2
+    monitor-exit v8
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 392
+    iget-object v4, p0, Lcom/tencent/mm/modelmulti/a$3;->bOc:Lcom/tencent/mm/modelmulti/a;
+
+    iget-object v4, v4, Lcom/tencent/mm/modelmulti/a;->bIn:Lcom/tencent/mm/sdk/platformtools/ah;
+
+    invoke-virtual {v4}, Lcom/tencent/mm/sdk/platformtools/ah;->baj()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_8
+
+    .line 393
+    iget-object v4, p0, Lcom/tencent/mm/modelmulti/a$3;->bOc:Lcom/tencent/mm/modelmulti/a;
+
+    iget-object v4, v4, Lcom/tencent/mm/modelmulti/a;->bIn:Lcom/tencent/mm/sdk/platformtools/ah;
+
+    const-wide/16 v8, 0x1f4
+
+    invoke-virtual {v4, v8, v9}, Lcom/tencent/mm/sdk/platformtools/ah;->dJ(J)V
+
+    .line 396
+    :cond_8
+    iget-object v4, v3, Lcom/tencent/mm/protocal/b/rx;->jOv:Ljava/util/LinkedList;
+
+    if-eqz v4, :cond_15
+
+    iget-object v4, v3, Lcom/tencent/mm/protocal/b/rx;->jOv:Ljava/util/LinkedList;
+
+    invoke-virtual {v4}, Ljava/util/LinkedList;->isEmpty()Z
+
+    move-result v4
+
+    if-nez v4, :cond_15
+
+    .line 397
+    new-instance v6, Lcom/tencent/mm/modelmulti/a$b;
+
+    iget-object v4, p0, Lcom/tencent/mm/modelmulti/a$3;->bOc:Lcom/tencent/mm/modelmulti/a;
+
+    invoke-direct {v6, v4}, Lcom/tencent/mm/modelmulti/a$b;-><init>(Lcom/tencent/mm/modelmulti/a;)V
+
+    .line 398
+    iput-object v7, v6, Lcom/tencent/mm/modelmulti/a$b;->bOe:Ljava/lang/String;
+
+    .line 399
+    iget v4, v2, Lcom/tencent/mm/protocal/b/rw;->jOu:I
+
+    iput v4, v6, Lcom/tencent/mm/modelmulti/a$b;->bOh:I
+
+    .line 401
+    iget v4, v3, Lcom/tencent/mm/protocal/b/rx;->jBg:I
+
+    if-nez v4, :cond_9
+
+    .line 402
+    const/4 v4, 0x0
+
+    iput-boolean v4, v6, Lcom/tencent/mm/modelmulti/a$b;->bOj:Z
+
+    .line 405
+    :cond_9
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/tencent/mm/model/c;->rY()Lcom/tencent/mm/storage/v;
+
+    move-result-object v4
+
+    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_e
+
+    const-wide/16 v4, 0x0
+
+    :goto_3
+    long-to-int v7, v4
+
+    .line 406
+    const/4 v4, 0x0
+
+    .line 407
+    if-eqz v7, :cond_11
+
+    move v5, v4
+
+    .line 408
+    :goto_4
+    iget-object v4, v3, Lcom/tencent/mm/protocal/b/rx;->jOv:Ljava/util/LinkedList;
+
+    invoke-virtual {v4}, Ljava/util/LinkedList;->isEmpty()Z
+
+    move-result v4
+
+    if-nez v4, :cond_12
+
+    iget-object v4, v3, Lcom/tencent/mm/protocal/b/rx;->jOv:Ljava/util/LinkedList;
+
+    invoke-virtual {v4}, Ljava/util/LinkedList;->peek()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/tencent/mm/protocal/b/am;
+
+    iget v4, v4, Lcom/tencent/mm/protocal/b/am;->jvf:I
+
+    if-gt v4, v7, :cond_12
+
+    .line 409
+    iget-object v4, v3, Lcom/tencent/mm/protocal/b/rx;->jOv:Ljava/util/LinkedList;
+
+    invoke-virtual {v4}, Ljava/util/LinkedList;->poll()Ljava/lang/Object;
+
+    .line 410
+    const/4 v4, 0x1
+
+    move v5, v4
+
+    goto :goto_4
+
+    .line 360
+    :cond_a
+    :try_start_1
+    iget-object v4, p0, Lcom/tencent/mm/modelmulti/a$3;->bOc:Lcom/tencent/mm/modelmulti/a;
+
+    iget-object v4, v4, Lcom/tencent/mm/modelmulti/a;->bOa:Lcom/tencent/mm/modelmulti/a$c;
+
+    invoke-interface {v4}, Lcom/tencent/mm/modelmulti/a$c;->AY()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_d
+
+    .line 361
+    iget-object v9, v3, Lcom/tencent/mm/protocal/b/rx;->jOv:Ljava/util/LinkedList;
+
+    .line 362
+    const-string/jumbo v5, "MicroMsg.GetChatRoomMsgService"
+
+    const-string/jumbo v6, "summerbadcr callback currentListener still in and resp.ContinueFlag[%d], size[%d]"
+
+    const/4 v4, 0x2
+
+    new-array v10, v4, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    iget v11, v3, Lcom/tencent/mm/protocal/b/rx;->jBg:I
+
+    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v11
+
+    aput-object v11, v10, v4
+
+    const/4 v11, 0x1
+
+    if-nez v9, :cond_b
+
+    const/4 v4, -0x1
+
+    :goto_5
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
-    aput-object v4, v11, v8
+    aput-object v4, v10, v11
 
-    const/4 v4, 0x3
+    invoke-static {v5, v6, v10}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 363
+    iget v4, v3, Lcom/tencent/mm/protocal/b/rx;->jBg:I
 
-    move-result-object v5
+    if-lez v4, :cond_7
 
-    aput-object v5, v11, v4
+    .line 364
+    if-eqz v9, :cond_7
 
-    const/4 v4, 0x4
+    invoke-virtual {v9}, Ljava/util/LinkedList;->isEmpty()Z
 
-    iget v5, v1, Lcom/tencent/mm/protocal/b/rl;->jqp:I
+    move-result v4
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-nez v4, :cond_7
 
-    move-result-object v5
+    .line 365
+    invoke-virtual {v9}, Ljava/util/LinkedList;->getFirst()Ljava/lang/Object;
 
-    aput-object v5, v11, v4
+    move-result-object v4
 
-    const/4 v4, 0x5
+    check-cast v4, Lcom/tencent/mm/protocal/b/am;
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget v5, v4, Lcom/tencent/mm/protocal/b/am;->jvf:I
 
-    move-result-object v3
+    .line 366
+    invoke-virtual {v9}, Ljava/util/LinkedList;->getLast()Ljava/lang/Object;
 
-    aput-object v3, v11, v4
+    move-result-object v4
 
-    invoke-static {v9, v10, v11}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    check-cast v4, Lcom/tencent/mm/protocal/b/am;
 
-    goto/16 :goto_2
+    iget v6, v4, Lcom/tencent/mm/protocal/b/am;->jvf:I
 
-    .line 396
-    :catchall_0
-    move-exception v1
+    .line 367
+    iget v4, v2, Lcom/tencent/mm/protocal/b/rw;->jOu:I
 
-    monitor-exit v7
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-eqz v4, :cond_c
 
-    throw v1
+    move v4, v5
 
     .line 368
-    :cond_b
-    :try_start_2
-    invoke-virtual {v8}, Ljava/util/LinkedList;->size()I
+    :goto_6
+    const-string/jumbo v10, "MicroMsg.GetChatRoomMsgService"
 
-    move-result v3
+    const-string/jumbo v11, "summerbadcr callback ContinueFlag[%d], list size[%d],firstSeq[%d], lastSeq[%d], UpDownFlag[%d], newSeq[%d]"
 
-    goto :goto_5
+    const/4 v12, 0x6
 
-    :cond_c
-    move v3, v5
+    new-array v12, v12, [Ljava/lang/Object;
 
-    .line 373
-    goto :goto_6
+    const/4 v13, 0x0
 
-    .line 394
-    :cond_d
-    const-string/jumbo v3, "!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s="
+    iget v14, v3, Lcom/tencent/mm/protocal/b/rx;->jBg:I
 
-    const-string/jumbo v4, "summerbadcr callback currentListener changed current[%s], old[%s]"
+    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 v5, 0x2
+    move-result-object v14
 
-    new-array v5, v5, [Ljava/lang/Object;
+    aput-object v14, v12, v13
 
-    const/4 v8, 0x0
+    const/4 v13, 0x1
 
-    iget-object v9, p0, Lcom/tencent/mm/modelmulti/a$3;->bUB:Lcom/tencent/mm/modelmulti/a;
-
-    iget-object v9, v9, Lcom/tencent/mm/modelmulti/a;->bUz:Lcom/tencent/mm/modelmulti/a$c;
-
-    invoke-interface {v9}, Lcom/tencent/mm/modelmulti/a$c;->AM()Ljava/lang/String;
-
-    move-result-object v9
-
-    aput-object v9, v5, v8
-
-    const/4 v8, 0x1
-
-    aput-object v6, v5, v8
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    goto/16 :goto_2
-
-    .line 411
-    :cond_e
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v7, "select lastSeq from DeletedConversationInfo where userName = \""
-
-    invoke-direct {v4, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v6}, Lcom/tencent/mm/sdk/platformtools/ay;->kx(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const-string/jumbo v7, "\""
-
-    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    iget-object v3, v3, Lcom/tencent/mm/storage/v;->bCw:Lcom/tencent/mm/az/g;
-
-    const/4 v7, 0x0
-
-    invoke-virtual {v3, v4, v7}, Lcom/tencent/mm/az/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v7
-
-    if-nez v7, :cond_f
-
-    const-string/jumbo v3, "!56@/B4Tb64lLpI2g9SUM0MYjbamkxNeLvOtRNGXjUDbZhCSyVPRT5zKkg=="
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v7, "getLastSeq failed "
-
-    invoke-direct {v4, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-wide/16 v3, 0x0
-
-    goto/16 :goto_3
-
-    :cond_f
-    invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_10
-
-    const/4 v3, 0x0
-
-    invoke-interface {v7, v3}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v3
-
-    invoke-interface {v7}, Landroid/database/Cursor;->close()V
-
-    goto/16 :goto_3
-
-    :cond_10
-    invoke-interface {v7}, Landroid/database/Cursor;->close()V
-
-    const-wide/16 v3, 0x0
-
-    goto/16 :goto_3
-
-    :cond_11
-    move v4, v3
-
-    .line 420
-    :cond_12
-    if-eqz v4, :cond_13
-
-    .line 421
-    const/4 v3, 0x0
-
-    iput-boolean v3, v5, Lcom/tencent/mm/modelmulti/a$b;->bUI:Z
-
-    .line 424
-    :cond_13
-    const/4 v3, 0x0
-
-    .line 425
-    iget v1, v1, Lcom/tencent/mm/protocal/b/rl;->jqp:I
-
-    if-eqz v1, :cond_18
-
-    iget-object v1, v2, Lcom/tencent/mm/protocal/b/rm;->jqq:Ljava/util/LinkedList;
-
-    invoke-virtual {v1}, Ljava/util/LinkedList;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_18
-
-    .line 436
-    const/4 v1, 0x1
-
-    .line 447
-    :goto_7
-    iget-object v3, v2, Lcom/tencent/mm/protocal/b/rm;->jqq:Ljava/util/LinkedList;
-
-    invoke-virtual {v3}, Ljava/util/LinkedList;->size()I
-
-    move-result v3
-
-    const/4 v7, 0x1
-
-    if-le v3, v7, :cond_14
-
-    if-eqz v1, :cond_14
-
-    .line 448
-    iget-object v3, v2, Lcom/tencent/mm/protocal/b/rm;->jqq:Ljava/util/LinkedList;
-
-    invoke-static {v3}, Ljava/util/Collections;->reverse(Ljava/util/List;)V
-
-    .line 450
-    :cond_14
-    iget-object v3, v2, Lcom/tencent/mm/protocal/b/rm;->jqq:Ljava/util/LinkedList;
-
-    invoke-virtual {v3}, Ljava/util/LinkedList;->isEmpty()Z
-
-    move-result v3
-
-    if-nez v3, :cond_17
-
-    .line 451
-    iget-object v2, v2, Lcom/tencent/mm/protocal/b/rm;->jqq:Ljava/util/LinkedList;
-
-    iput-object v2, v5, Lcom/tencent/mm/modelmulti/a$b;->bUH:Ljava/util/LinkedList;
-
-    .line 452
-    iget-object v2, p0, Lcom/tencent/mm/modelmulti/a$3;->bUB:Lcom/tencent/mm/modelmulti/a;
-
-    iget-object v2, v2, Lcom/tencent/mm/modelmulti/a;->bOO:Ljava/util/Queue;
-
-    invoke-interface {v2, v5}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
-
-    .line 453
-    const-string/jumbo v2, "!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s="
-
-    const-string/jumbo v3, "summerbadcr callback add resp to respList size[%d], dealFault[%b], lastDeleteSeq[%d], needReverse[%b], removed[%b]"
-
-    const/4 v7, 0x5
-
-    new-array v7, v7, [Ljava/lang/Object;
-
-    const/4 v8, 0x0
-
-    iget-object v9, p0, Lcom/tencent/mm/modelmulti/a$3;->bUB:Lcom/tencent/mm/modelmulti/a;
-
-    iget-object v9, v9, Lcom/tencent/mm/modelmulti/a;->bOO:Ljava/util/Queue;
-
-    invoke-interface {v9}, Ljava/util/Queue;->size()I
+    invoke-virtual {v9}, Ljava/util/LinkedList;->size()I
 
     move-result v9
 
@@ -865,94 +592,369 @@
 
     move-result-object v9
 
-    aput-object v9, v7, v8
+    aput-object v9, v12, v13
 
-    const/4 v8, 0x1
+    const/4 v9, 0x2
 
-    iget-boolean v5, v5, Lcom/tencent/mm/modelmulti/a$b;->bUI:Z
-
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    aput-object v5, v7, v8
+    aput-object v5, v12, v9
 
-    const/4 v5, 0x2
+    const/4 v5, 0x3
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
 
-    aput-object v6, v7, v5
+    aput-object v6, v12, v5
 
-    const/4 v5, 0x3
+    const/4 v5, 0x4
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    iget v6, v2, Lcom/tencent/mm/protocal/b/rw;->jOu:I
 
-    move-result-object v1
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    aput-object v1, v7, v5
+    move-result-object v6
 
-    const/4 v1, 0x4
+    aput-object v6, v12, v5
 
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const/4 v5, 0x5
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
-    aput-object v4, v7, v1
+    aput-object v4, v12, v5
 
-    invoke-static {v2, v3, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v10, v11, v12}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 461
+    goto/16 :goto_2
+
+    .line 390
+    :catchall_0
+    move-exception v2
+
+    monitor-exit v8
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v2
+
+    .line 362
+    :cond_b
+    :try_start_2
+    invoke-virtual {v9}, Ljava/util/LinkedList;->size()I
+
+    move-result v4
+
+    goto :goto_5
+
+    :cond_c
+    move v4, v6
+
+    .line 367
+    goto :goto_6
+
+    .line 388
+    :cond_d
+    const-string/jumbo v4, "MicroMsg.GetChatRoomMsgService"
+
+    const-string/jumbo v5, "summerbadcr callback currentListener changed current[%s], old[%s]"
+
+    const/4 v6, 0x2
+
+    new-array v6, v6, [Ljava/lang/Object;
+
+    const/4 v9, 0x0
+
+    iget-object v10, p0, Lcom/tencent/mm/modelmulti/a$3;->bOc:Lcom/tencent/mm/modelmulti/a;
+
+    iget-object v10, v10, Lcom/tencent/mm/modelmulti/a;->bOa:Lcom/tencent/mm/modelmulti/a$c;
+
+    invoke-interface {v10}, Lcom/tencent/mm/modelmulti/a$c;->AY()Ljava/lang/String;
+
+    move-result-object v10
+
+    aput-object v10, v6, v9
+
+    const/4 v9, 0x1
+
+    aput-object v7, v6, v9
+
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto/16 :goto_2
+
+    .line 405
+    :cond_e
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v8, "select lastSeq from DeletedConversationInfo where userName = \""
+
+    invoke-direct {v5, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/be;->lh(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string/jumbo v8, "\""
+
+    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    iget-object v4, v4, Lcom/tencent/mm/storage/v;->bvG:Lcom/tencent/mm/bc/g;
+
+    const/4 v8, 0x0
+
+    invoke-virtual {v4, v5, v8}, Lcom/tencent/mm/bc/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v8
+
+    if-nez v8, :cond_f
+
+    const-string/jumbo v4, "MicroMsg.DeletedConversationInfoStorage"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v8, "getLastSeq failed "
+
+    invoke-direct {v5, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-wide/16 v4, 0x0
+
+    goto/16 :goto_3
+
+    :cond_f
+    invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_10
+
+    const/4 v4, 0x0
+
+    invoke-interface {v8, v4}, Landroid/database/Cursor;->getLong(I)J
+
+    move-result-wide v4
+
+    invoke-interface {v8}, Landroid/database/Cursor;->close()V
+
+    goto/16 :goto_3
+
+    :cond_10
+    invoke-interface {v8}, Landroid/database/Cursor;->close()V
+
+    const-wide/16 v4, 0x0
+
+    goto/16 :goto_3
+
+    :cond_11
+    move v5, v4
+
+    .line 414
+    :cond_12
+    if-eqz v5, :cond_13
+
+    .line 415
+    const/4 v4, 0x0
+
+    iput-boolean v4, v6, Lcom/tencent/mm/modelmulti/a$b;->bOj:Z
+
+    .line 418
+    :cond_13
+    const/4 v4, 0x0
+
+    .line 419
+    iget v2, v2, Lcom/tencent/mm/protocal/b/rw;->jOu:I
+
+    if-eqz v2, :cond_18
+
+    iget-object v2, v3, Lcom/tencent/mm/protocal/b/rx;->jOv:Ljava/util/LinkedList;
+
+    invoke-virtual {v2}, Ljava/util/LinkedList;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_18
+
+    .line 430
+    const/4 v2, 0x1
+
+    .line 441
+    :goto_7
+    iget-object v4, v3, Lcom/tencent/mm/protocal/b/rx;->jOv:Ljava/util/LinkedList;
+
+    invoke-virtual {v4}, Ljava/util/LinkedList;->size()I
+
+    move-result v4
+
+    const/4 v8, 0x1
+
+    if-le v4, v8, :cond_14
+
+    if-eqz v2, :cond_14
+
+    .line 442
+    iget-object v4, v3, Lcom/tencent/mm/protocal/b/rx;->jOv:Ljava/util/LinkedList;
+
+    invoke-static {v4}, Ljava/util/Collections;->reverse(Ljava/util/List;)V
+
+    .line 444
+    :cond_14
+    iget-object v4, v3, Lcom/tencent/mm/protocal/b/rx;->jOv:Ljava/util/LinkedList;
+
+    invoke-virtual {v4}, Ljava/util/LinkedList;->isEmpty()Z
+
+    move-result v4
+
+    if-nez v4, :cond_17
+
+    .line 445
+    iget-object v3, v3, Lcom/tencent/mm/protocal/b/rx;->jOv:Ljava/util/LinkedList;
+
+    iput-object v3, v6, Lcom/tencent/mm/modelmulti/a$b;->bOi:Ljava/util/LinkedList;
+
+    .line 446
+    iget-object v3, p0, Lcom/tencent/mm/modelmulti/a$3;->bOc:Lcom/tencent/mm/modelmulti/a;
+
+    iget-object v3, v3, Lcom/tencent/mm/modelmulti/a;->bIj:Ljava/util/Queue;
+
+    invoke-interface {v3, v6}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
+
+    .line 447
+    const-string/jumbo v3, "MicroMsg.GetChatRoomMsgService"
+
+    const-string/jumbo v4, "summerbadcr callback add resp to respList size[%d], dealFault[%b], lastDeleteSeq[%d], needReverse[%b], removed[%b]"
+
+    const/4 v8, 0x5
+
+    new-array v8, v8, [Ljava/lang/Object;
+
+    const/4 v9, 0x0
+
+    iget-object v10, p0, Lcom/tencent/mm/modelmulti/a$3;->bOc:Lcom/tencent/mm/modelmulti/a;
+
+    iget-object v10, v10, Lcom/tencent/mm/modelmulti/a;->bIj:Ljava/util/Queue;
+
+    invoke-interface {v10}, Ljava/util/Queue;->size()I
+
+    move-result v10
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v10
+
+    aput-object v10, v8, v9
+
+    const/4 v9, 0x1
+
+    iget-boolean v6, v6, Lcom/tencent/mm/modelmulti/a$b;->bOj:Z
+
+    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v6
+
+    aput-object v6, v8, v9
+
+    const/4 v6, 0x2
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    aput-object v7, v8, v6
+
+    const/4 v6, 0x3
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    aput-object v2, v8, v6
+
+    const/4 v2, 0x4
+
+    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v5
+
+    aput-object v5, v8, v2
+
+    invoke-static {v3, v4, v8}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 455
     :cond_15
     :goto_8
-    iget-object v1, p0, Lcom/tencent/mm/modelmulti/a$3;->bUB:Lcom/tencent/mm/modelmulti/a;
+    iget-object v2, p0, Lcom/tencent/mm/modelmulti/a$3;->bOc:Lcom/tencent/mm/modelmulti/a;
 
-    iget-object v1, v1, Lcom/tencent/mm/modelmulti/a;->bOO:Ljava/util/Queue;
+    iget-object v2, v2, Lcom/tencent/mm/modelmulti/a;->bIj:Ljava/util/Queue;
 
-    invoke-interface {v1}, Ljava/util/Queue;->isEmpty()Z
+    invoke-interface {v2}, Ljava/util/Queue;->isEmpty()Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_16
+    if-nez v2, :cond_16
 
-    iget-object v1, p0, Lcom/tencent/mm/modelmulti/a$3;->bUB:Lcom/tencent/mm/modelmulti/a;
+    iget-object v2, p0, Lcom/tencent/mm/modelmulti/a$3;->bOc:Lcom/tencent/mm/modelmulti/a;
 
-    iget-object v1, v1, Lcom/tencent/mm/modelmulti/a;->bOT:Lcom/tencent/mm/sdk/platformtools/af;
+    iget-object v2, v2, Lcom/tencent/mm/modelmulti/a;->bIo:Lcom/tencent/mm/sdk/platformtools/ah;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/sdk/platformtools/af;->aVf()Z
+    invoke-virtual {v2}, Lcom/tencent/mm/sdk/platformtools/ah;->baj()Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_16
+    if-eqz v2, :cond_16
 
-    .line 462
-    iget-object v1, p0, Lcom/tencent/mm/modelmulti/a$3;->bUB:Lcom/tencent/mm/modelmulti/a;
+    .line 456
+    iget-object v2, p0, Lcom/tencent/mm/modelmulti/a$3;->bOc:Lcom/tencent/mm/modelmulti/a;
 
-    iget-object v1, v1, Lcom/tencent/mm/modelmulti/a;->bOT:Lcom/tencent/mm/sdk/platformtools/af;
+    iget-object v2, v2, Lcom/tencent/mm/modelmulti/a;->bIo:Lcom/tencent/mm/sdk/platformtools/ah;
 
-    const-wide/16 v2, 0x32
+    const-wide/16 v4, 0x32
 
-    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/af;->ds(J)V
+    invoke-virtual {v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/ah;->dJ(J)V
 
-    .line 464
+    .line 458
     :cond_16
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     goto/16 :goto_0
 
-    .line 456
+    .line 450
     :cond_17
-    const-string/jumbo v1, "!44@/B4Tb64lLpJMK7lQo7/G5dvkuZVa6t1JYWr6gkTuF0s="
+    const-string/jumbo v2, "MicroMsg.GetChatRoomMsgService"
 
-    const-string/jumbo v2, "summerbadcr callback resp.AddMsgList is empty at last"
+    const-string/jumbo v3, "summerbadcr callback resp.AddMsgList is empty at last"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_8
 
     :cond_18
-    move v1, v3
+    move v2, v4
 
     goto/16 :goto_7
 .end method

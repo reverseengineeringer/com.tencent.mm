@@ -5,7 +5,7 @@ import android.view.View.OnClickListener;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
-import com.tencent.mm.ba.c;
+import com.tencent.mm.bd.c;
 
 final class d$a$2
   implements View.OnClickListener
@@ -14,23 +14,23 @@ final class d$a$2
   
   public final void onClick(View paramView)
   {
-    if ((kzY.kzT) && (kzY.aAH.getVisibility() != 0)) {
-      c.aZg().b(kzY.kzV);
+    if ((kZe.kYZ) && (kZe.amQ.getVisibility() != 0)) {
+      c.bex().b(kZe.kZb);
     }
-    paramView = kzY;
+    paramView = kZe;
     try
     {
-      if (all != null)
+      if (Yk != null)
       {
-        if (alk != null) {
-          all.removeView(alk);
+        if (Yj != null) {
+          Yk.removeView(Yj);
         }
-        all = null;
+        Yk = null;
       }
-      if (alk != null)
+      if (Yj != null)
       {
-        alk.removeAllViews();
-        alk = null;
+        Yj.removeAllViews();
+        Yj = null;
       }
       mView = null;
     }
@@ -38,7 +38,7 @@ final class d$a$2
     {
       for (;;) {}
     }
-    d.bck();
+    d.bhx();
   }
 }
 

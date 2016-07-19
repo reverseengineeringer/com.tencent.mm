@@ -1,9 +1,10 @@
 package com.tencent.mm.plugin.sns.ui;
 
+import com.tencent.mm.plugin.sns.i.k;
 import java.util.Comparator;
 
 final class SnsHeader$c
-  implements Comparator
+  implements Comparator<k>
 {
   SnsHeader$c(SnsHeader paramSnsHeader) {}
 }

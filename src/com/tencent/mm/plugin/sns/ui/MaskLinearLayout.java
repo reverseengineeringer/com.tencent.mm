@@ -7,8 +7,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
 import android.widget.LinearLayout;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -17,10 +17,10 @@ import junit.framework.Assert;
 public class MaskLinearLayout
   extends LinearLayout
 {
-  private boolean aur = false;
-  private List eEr = new LinkedList();
-  private aa gWl = new aa();
-  private Runnable gWm = new Runnable()
+  boolean age = false;
+  private List<MaskImageView> eKF = new LinkedList();
+  private ac hjH = new ac();
+  private Runnable hjI = new Runnable()
   {
     public final void run()
     {
@@ -37,7 +37,7 @@ public class MaskLinearLayout
     {
       public final boolean onTouch(View paramAnonymousView, MotionEvent paramAnonymousMotionEvent)
       {
-        u.e("test", "touch: " + paramAnonymousMotionEvent.getAction());
+        v.e("test", "touch: " + paramAnonymousMotionEvent.getAction());
         if (!MaskLinearLayout.b(MaskLinearLayout.this)) {}
         label179:
         for (;;)
@@ -71,7 +71,7 @@ public class MaskLinearLayout
   
   public final void b(MaskImageView paramMaskImageView)
   {
-    eEr.add(paramMaskImageView);
+    eKF.add(paramMaskImageView);
   }
   
   protected void onDraw(Canvas paramCanvas)
@@ -83,11 +83,6 @@ public class MaskLinearLayout
   public void setOnTouchListener(View.OnTouchListener paramOnTouchListener)
   {
     Assert.assertTrue(false);
-  }
-  
-  public void settouchEnable(boolean paramBoolean)
-  {
-    aur = paramBoolean;
   }
 }
 

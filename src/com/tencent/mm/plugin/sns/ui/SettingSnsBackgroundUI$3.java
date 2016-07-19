@@ -10,7 +10,7 @@ final class SettingSnsBackgroundUI$3
   
   public final void run()
   {
-    a.cob.kI();
+    a.cjp.ji();
   }
 }
 

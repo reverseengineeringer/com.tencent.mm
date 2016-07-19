@@ -7,8 +7,8 @@ final class SnsInfoFlip$1$1
   
   public final void run()
   {
-    if ((heS.heR.gXN != null) && (SnsInfoFlip.b(heS.heR))) {
-      heS.heR.gXN.Kk();
+    if ((htJ.htI.hkZ != null) && (SnsInfoFlip.b(htJ.htI))) {
+      htJ.htI.hkZ.KU();
     }
   }
 }

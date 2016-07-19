@@ -1,16 +1,23 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.tencent.mm.sdk.platformtools.v;
+import java.util.TreeSet;
 
 final class cq$3
-  implements DialogInterface.OnClickListener
+  implements View.OnClickListener
 {
   cq$3(cq paramcq) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final void onClick(View paramView)
   {
-    cq.b(kWN);
+    if (alwB).lvX.size() == 0)
+    {
+      v.w("MicroMsg.ChattingMoreBtnBarHelper", "ignore click del btn, selected items count is 0");
+      return;
+    }
+    x.a(cq.b(lwB), cq.e(lwB), cq.f(lwB), lwB, cq.g(lwB));
   }
 }
 

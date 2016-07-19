@@ -7,7 +7,7 @@ final class AppAttachDownloadUI$3
 {
   AppAttachDownloadUI$3(AppAttachDownloadUI paramAppAttachDownloadUI) {}
   
-  public final void aq(int paramInt1, int paramInt2)
+  public final void av(int paramInt1, int paramInt2)
   {
     switch (paramInt2)
     {
@@ -15,16 +15,16 @@ final class AppAttachDownloadUI$3
     default: 
       return;
     case 0: 
-      AppAttachDownloadUI.c(kQa);
+      AppAttachDownloadUI.c(lpP);
       return;
     case 2: 
-      AppAttachDownloadUI.d(kQa);
+      AppAttachDownloadUI.d(lpP);
       return;
     case 3: 
-      AppAttachDownloadUI.e(kQa);
+      AppAttachDownloadUI.e(lpP);
       return;
     }
-    AppAttachDownloadUI.f(kQa);
+    AppAttachDownloadUI.f(lpP);
   }
 }
 

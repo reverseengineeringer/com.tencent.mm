@@ -10,14 +10,14 @@ public final class g
 {
   public static o a(Context paramContext, View paramView, String[] paramArrayOfString, AdapterView.OnItemClickListener paramOnItemClickListener)
   {
-    View localView = View.inflate(paramContext, 2131362440, null);
-    HorizontalListView localHorizontalListView = (HorizontalListView)localView.findViewById(2131167079);
+    View localView = View.inflate(paramContext, 2130904148, null);
+    HorizontalListView localHorizontalListView = (HorizontalListView)localView.findViewById(2131758382);
     paramArrayOfString = new a(paramContext, paramArrayOfString);
     localHorizontalListView.setAdapter(paramArrayOfString);
     localHorizontalListView.setOnItemClickListener(paramOnItemClickListener);
-    localHorizontalListView.setBackgroundResource(2130969195);
+    localHorizontalListView.setBackgroundResource(2130839340);
     paramOnItemClickListener = new o(localView);
-    paramOnItemClickListener.setHeight(com.tencent.mm.aw.a.fromDPToPix(paramContext, 120));
+    paramOnItemClickListener.setHeight(com.tencent.mm.az.a.fromDPToPix(paramContext, 120));
     int i = 0;
     int j = 0;
     while (i < paramArrayOfString.getCount())
@@ -27,8 +27,8 @@ public final class g
       j += localView.getMeasuredWidth();
       i += 1;
     }
-    paramOnItemClickListener.setWidth(com.tencent.mm.aw.a.fromDPToPix(paramContext, 20) + j);
-    paramOnItemClickListener.showAsDropDown(paramView, (paramView.getWidth() - (com.tencent.mm.aw.a.fromDPToPix(paramContext, 20) + j)) / 2, 0);
+    paramOnItemClickListener.setWidth(com.tencent.mm.az.a.fromDPToPix(paramContext, 20) + j);
+    paramOnItemClickListener.showAsDropDown(paramView, (paramView.getWidth() - (com.tencent.mm.az.a.fromDPToPix(paramContext, 20) + j)) / 2, 0);
     return paramOnItemClickListener;
   }
 }

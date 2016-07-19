@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/c9" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="174.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/rx" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/hf">
+        <ImageView android:id="@id/re" android:layout_width="93.29999dip" android:layout_height="54.599976dip" android:layout_marginTop="20.0dip" android:src="@drawable/aq8" android:scaleType="fitXY" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/cn" android:textColor="#ffa7271f" android:ellipsize="end" android:gravity="center" android:id="@id/h_" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hb" android:layout_marginTop="30.0dip" android:layout_marginRight="@dimen/hb" android:singleLine="true" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/tw" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hb" android:layout_marginRight="@dimen/hb">
+        <TextView android:textSize="@dimen/h4" android:textColor="@color/c5" android:ellipsize="end" android:gravity="left" android:id="@id/tx" android:layout_width="70.0dip" android:layout_height="wrap_content" android:maxWidth="70.0dip" android:singleLine="true" />
+        <TextView android:textSize="@dimen/h4" android:textColor="@color/c4" android:ellipsize="end" android:gravity="left" android:id="@id/ty" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hb" android:singleLine="true" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/tz" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hb" android:layout_marginTop="@dimen/hr" android:layout_marginRight="@dimen/hb">
+        <TextView android:textSize="@dimen/h4" android:textColor="@color/c5" android:ellipsize="end" android:gravity="left" android:id="@id/u0" android:layout_width="70.0dip" android:layout_height="wrap_content" android:maxWidth="70.0dip" android:singleLine="true" />
+        <TextView android:textSize="@dimen/h4" android:textColor="@color/c4" android:ellipsize="end" android:gravity="left" android:id="@id/u1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hb" android:singleLine="true" android:layout_weight="1.0" />
+    </LinearLayout>
+    <View android:id="@id/ry" android:background="@drawable/dw" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/hi" android:layerType="software" />
+    <ViewStub android:id="@id/u2" android:layout="@layout/e6" android:inflatedId="@id/u2" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:id="@id/u3" android:background="@drawable/dw" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layerType="software" />
+    <include android:id="@id/u4" android:background="@drawable/afa" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="78.599976dip" layout="@layout/card_widget_status_layout" />
+</LinearLayout>

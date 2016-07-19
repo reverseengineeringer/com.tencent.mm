@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.contact;
 
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class q$1
   implements Runnable
@@ -9,11 +9,11 @@ final class q$1
   
   public final void run()
   {
-    q.a(llw).post(new Runnable()
+    q.a(lLJ).post(new Runnable()
     {
       public final void run()
       {
-        llw.av(ghm, true);
+        lLJ.aF(grO, true);
       }
     });
   }

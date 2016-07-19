@@ -10,7 +10,7 @@ final class ShareImageSelectorUI$7
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    ShareImageSelectorUI.b(lBC);
+    ShareImageSelectorUI.b(mcu);
   }
 }
 

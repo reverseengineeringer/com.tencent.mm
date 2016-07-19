@@ -17,48 +17,72 @@ import com.tencent.mm.modelfriend.a.b;
 import com.tencent.mm.modelfriend.ac;
 import com.tencent.mm.modelfriend.x;
 import com.tencent.mm.modelsimple.b;
-import com.tencent.mm.pluginsdk.g.a;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
+import com.tencent.mm.pluginsdk.h.a;
 import com.tencent.mm.sdk.i.e;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.h;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
 
 @JgClassChecked(author=20, fComment="checked", lastDate="20140422", reviewer=20, vComment={com.jg.EType.SERVICESCHECK})
 public class ContactsSyncService
   extends Service
   implements d
 {
-  private static Account caG;
-  private a cox = null;
-  private Looper coy;
+  private static Account bUp;
+  private a cjL = null;
+  private Looper cjM;
   
   public ContactsSyncService()
   {
-    u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService construction");
+    v.i("MicroMsg.ContactsSyncService", "ContactsSyncService construction");
   }
   
-  private void Ga()
+  private void Gx()
   {
-    if (coy != null) {
-      coy.quit();
+    if (cjM != null) {
+      cjM.quit();
     }
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public IBinder onBind(Intent paramIntent)
   {
-    u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString + " type = " + paramj.getType());
+    paramIntent = null;
+    if (a.aK(this, "android.permission.READ_CONTACTS"))
+    {
+      if (cjL == null) {
+        cjL = new a(getApplicationContext());
+      }
+      paramIntent = cjL.getSyncAdapterBinder();
+    }
+    for (;;)
+    {
+      v.i("MicroMsg.ContactsSyncService", "ContactsSyncService onBind ret[%s]", new Object[] { paramIntent });
+      return paramIntent;
+      v.i("MicroMsg.ContactsSyncService", "ContactsSyncService onBind no permission");
+    }
+  }
+  
+  public void onDestroy()
+  {
+    v.i("MicroMsg.ContactsSyncService", "contacts sync service destory");
+    super.onDestroy();
+  }
+  
+  public void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
+  {
+    v.i("MicroMsg.ContactsSyncService", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString + " type = " + paramj.getType());
     if (paramj.getType() == 133)
     {
-      ah.tE().b(133, this);
-      u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "uploadcontact onSceneEnd: errType = " + paramInt1 + ", errCode = " + paramInt2);
-      l1 = ((Long)ah.tD().rn().get(327728, Long.valueOf(0L))).longValue();
+      ah.tF().b(133, this);
+      v.i("MicroMsg.ContactsSyncService", "uploadcontact onSceneEnd: errType = " + paramInt1 + ", errCode = " + paramInt2);
+      l1 = ((Long)ah.tE().ro().get(327728, Long.valueOf(0L))).longValue();
       l2 = System.currentTimeMillis();
-      u.d("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "getMFriend : curTime=" + l2 + ", lastTime=" + l1);
+      v.d("MicroMsg.ContactsSyncService", "getMFriend : curTime=" + l2 + ", lastTime=" + l1);
       if ((paramInt2 != 0) && (l2 - l1 < 86400000L))
       {
-        Ga();
-        u.e("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "uploadmcontact list null, do not do getmfriend.");
+        Gx();
+        v.e("MicroMsg.ContactsSyncService", "uploadmcontact list null, do not do getmfriend.");
       }
     }
     while (paramj.getType() != 32)
@@ -66,42 +90,18 @@ public class ContactsSyncService
       long l1;
       long l2;
       return;
-      ah.tD().rn().set(327728, Long.valueOf(l2));
-      ah.tE().a(32, this);
+      ah.tE().ro().set(327728, Long.valueOf(l2));
+      ah.tF().a(32, this);
       paramString = (ac)paramj;
-      paramString = new x(bMX, bMY);
-      ah.tE().d(paramString);
+      paramString = new x(bGr, bGs);
+      ah.tF().a(paramString, 0);
     }
-    ah.tE().b(32, this);
-    u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "getmfriend onSceneEnd: errType = " + paramInt1 + ", errCode = " + paramInt2);
+    ah.tF().b(32, this);
+    v.i("MicroMsg.ContactsSyncService", "getmfriend onSceneEnd: errType = " + paramInt1 + ", errCode = " + paramInt2);
     if ((paramInt1 == 0) && (paramInt2 == 0)) {
-      e.c(new b(this, caG), "MMAccountManager_updateLocalContacts").start();
+      e.c(new b(this, bUp), "MMAccountManager_updateLocalContacts").start();
     }
-    Ga();
-  }
-  
-  public IBinder onBind(Intent paramIntent)
-  {
-    paramIntent = null;
-    if (a.aL(this, "android.permission.READ_CONTACTS"))
-    {
-      if (cox == null) {
-        cox = new a(getApplicationContext());
-      }
-      paramIntent = cox.getSyncAdapterBinder();
-    }
-    for (;;)
-    {
-      u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService onBind ret[%s]", new Object[] { paramIntent });
-      return paramIntent;
-      u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService onBind no permission");
-    }
-  }
-  
-  public void onDestroy()
-  {
-    u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "contacts sync service destory");
-    super.onDestroy();
+    Gx();
   }
   
   private final class a
@@ -113,15 +113,15 @@ public class ContactsSyncService
     {
       super(true);
       mContext = paramContext;
-      u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService SyncAdapterImpl construction");
+      v.i("MicroMsg.ContactsSyncService", "ContactsSyncService SyncAdapterImpl construction");
     }
     
     public final void onPerformSync(Account paramAccount, Bundle paramBundle, String paramString, ContentProviderClient paramContentProviderClient, SyncResult paramSyncResult)
     {
-      u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService SyncAdapterImpl onPerformSync");
-      if (!ah.rh())
+      v.i("MicroMsg.ContactsSyncService", "ContactsSyncService SyncAdapterImpl onPerformSync");
+      if (!ah.rg())
       {
-        u.e("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService account not ready, ignore this sync");
+        v.e("MicroMsg.ContactsSyncService", "ContactsSyncService account not ready, ignore this sync");
         return;
       }
       try
@@ -135,7 +135,7 @@ public class ContactsSyncService
       catch (Exception paramAccount)
       {
         ContactsSyncService.a(ContactsSyncService.this);
-        u.e("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService.onPerformSync error: " + paramAccount.getMessage());
+        v.e("MicroMsg.ContactsSyncService", "ContactsSyncService.onPerformSync error: " + paramAccount.getMessage());
       }
     }
   }

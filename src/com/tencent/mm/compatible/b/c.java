@@ -3,20 +3,20 @@ package com.tencent.mm.compatible.b;
 import android.annotation.TargetApi;
 import android.media.AudioRecord;
 import android.media.audiofx.AcousticEchoCanceler;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class c
   implements e.a
 {
-  private AcousticEchoCanceler bpt = null;
+  private AcousticEchoCanceler bds = null;
   
   @TargetApi(16)
   public c(AudioRecord paramAudioRecord)
   {
     boolean bool = AcousticEchoCanceler.isAvailable();
-    u.d("!44@/B4Tb64lLpL5ajg1luquwxbRxlpfDxTzO5sucSMwiuU=", "available  " + bool);
+    v.d("MicroMsg.MMAcousticEchoCanceler", "available  " + bool);
     if (bool) {
-      bpt = AcousticEchoCanceler.create(paramAudioRecord.getAudioSessionId());
+      bds = AcousticEchoCanceler.create(paramAudioRecord.getAudioSessionId());
     }
   }
   
@@ -27,16 +27,16 @@ public final class c
   }
   
   @TargetApi(16)
-  public final boolean nK()
+  public final boolean lY()
   {
-    if (bpt != null) {}
+    if (bds != null) {}
     try
     {
-      int i = bpt.setEnabled(true);
+      int i = bds.setEnabled(true);
       if (i == 0) {
         return true;
       }
-      u.d("!44@/B4Tb64lLpL5ajg1luquwxbRxlpfDxTzO5sucSMwiuU=", "setEnabled failed " + i);
+      v.d("MicroMsg.MMAcousticEchoCanceler", "setEnabled failed " + i);
     }
     catch (Exception localException)
     {

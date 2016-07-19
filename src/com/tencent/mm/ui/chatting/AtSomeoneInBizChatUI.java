@@ -14,20 +14,20 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.tencent.mm.ab.a.a.c;
-import com.tencent.mm.ab.a.a.c.a;
-import com.tencent.mm.ab.n;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.t.aj;
-import com.tencent.mm.t.f;
-import com.tencent.mm.t.j;
-import com.tencent.mm.t.k;
+import com.tencent.mm.ae.a.a.c;
+import com.tencent.mm.ae.a.a.c.a;
+import com.tencent.mm.ae.n;
+import com.tencent.mm.platformtools.s;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.MaskLayout;
 import com.tencent.mm.ui.i;
 import com.tencent.mm.ui.tools.r;
 import com.tencent.mm.ui.tools.r.b;
+import com.tencent.mm.v.an;
+import com.tencent.mm.v.f;
+import com.tencent.mm.v.k;
+import com.tencent.mm.v.l;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -35,27 +35,27 @@ import java.util.List;
 public class AtSomeoneInBizChatUI
   extends MMActivity
 {
-  private String apb;
-  private com.tencent.mm.t.d cYG;
-  private long cYx;
-  private String dbA;
-  private String dbB;
-  private r dbC;
-  private ListView dby;
-  private a kRc;
+  private String ajT;
+  private long cJl;
+  private com.tencent.mm.v.d cXq;
+  private ListView dae;
+  private String dag;
+  private String dah;
+  private r dai;
+  private a lrf;
   private String mTitle;
   
-  protected static String a(com.tencent.mm.t.d paramd, String paramString)
+  protected static String a(com.tencent.mm.v.d paramd, String paramString)
   {
     if (paramd == null) {
       return null;
     }
-    return paramd.dY(paramString);
+    return paramd.ej(paramString);
   }
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    Gj(mTitle);
+    Ah(mTitle);
     b(new MenuItem.OnMenuItemClickListener()
     {
       public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
@@ -65,50 +65,50 @@ public class AtSomeoneInBizChatUI
         return true;
       }
     });
-    dbC = new r(true, true);
-    dbC.lxA = new r.b()
+    dai = new r(true, true);
+    dai.lYp = new r.b()
     {
-      public final void Gd() {}
+      public final void GA() {}
       
-      public final void Ge() {}
+      public final void GB() {}
       
-      public final void Gf() {}
+      public final void GC() {}
       
-      public final void Gg() {}
+      public final void GD() {}
       
-      public final boolean kE(String paramAnonymousString)
+      public final boolean ln(String paramAnonymousString)
       {
         return false;
       }
       
-      public final void kF(String paramAnonymousString)
+      public final void lo(String paramAnonymousString)
       {
         AtSomeoneInBizChatUI.a locala = AtSomeoneInBizChatUI.a(AtSomeoneInBizChatUI.this);
-        dbI = paramAnonymousString;
+        dao = paramAnonymousString;
         locala.a(null, null);
       }
     };
-    a(dbC);
-    dby = ((ListView)findViewById(2131165548));
-    j localj = new j();
-    com.tencent.mm.t.d locald = cYG;
+    a(dai);
+    dae = ((ListView)findViewById(2131755344));
+    k localk = new k();
+    com.tencent.mm.v.d locald = cXq;
     String[] arrayOfString = null;
-    if (!t.kz(dbB))
+    if (!s.kf(dah))
     {
-      arrayOfString = dbB.split(";");
-      u.d("!32@/B4Tb64lLpLK7Qt9yZ/QZPm4pyiTa6j+", "chatroom members name=[%s]", new Object[] { Arrays.toString(arrayOfString) });
+      arrayOfString = dah.split(";");
+      v.d("MicroMsg.AtSomeoneUI", "chatroom members name=[%s]", new Object[] { Arrays.toString(arrayOfString) });
     }
     Object localObject = new LinkedList();
-    if (!t.kz(dbA)) {
-      localObject = t.h(dbA.split(";"));
+    if (!s.kf(dag)) {
+      localObject = s.g(dag.split(";"));
     }
-    kRc = new a(this, localj, locald, arrayOfString, (List)localObject);
-    dby.setOnItemClickListener(new AdapterView.OnItemClickListener()
+    lrf = new a(this, localk, locald, arrayOfString, (List)localObject);
+    dae.setOnItemClickListener(new AdapterView.OnItemClickListener()
     {
-      public final void onItemClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+      public final void onItemClick(AdapterView<?> paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
       {
         paramAnonymousAdapterView = new Intent();
-        paramAnonymousView = (j)AtSomeoneInBizChatUI.a(AtSomeoneInBizChatUI.this).getItem(paramAnonymousInt);
+        paramAnonymousView = (k)AtSomeoneInBizChatUI.a(AtSomeoneInBizChatUI.this).getItem(paramAnonymousInt);
         String str = AtSomeoneInBizChatUI.a(AtSomeoneInBizChatUI.b(AtSomeoneInBizChatUI.this), field_userId);
         paramAnonymousAdapterView.putExtra("select_raw_user_name", field_userId);
         paramAnonymousAdapterView.putExtra("Select_Conv_User", str);
@@ -116,87 +116,87 @@ public class AtSomeoneInBizChatUI
         finish();
       }
     });
-    dby.setAdapter(kRc);
-    dby.setOnScrollListener(new AbsListView.OnScrollListener()
+    dae.setAdapter(lrf);
+    dae.setOnScrollListener(new AbsListView.OnScrollListener()
     {
       public final void onScroll(AbsListView paramAnonymousAbsListView, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
       
       public final void onScrollStateChanged(AbsListView paramAnonymousAbsListView, int paramAnonymousInt)
       {
-        n.As().dz(paramAnonymousInt);
+        n.AC().ee(paramAnonymousInt);
       }
     });
   }
   
   protected final int getLayoutId()
   {
-    return 2131361880;
+    return 2130903105;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    dbA = getIntent().getStringExtra("Block_list");
-    dbB = getIntent().getStringExtra("Chatroom_member_list");
-    apb = getIntent().getStringExtra("Chat_User");
+    dag = getIntent().getStringExtra("Block_list");
+    dah = getIntent().getStringExtra("Chatroom_member_list");
+    ajT = getIntent().getStringExtra("Chat_User");
     mTitle = getIntent().getStringExtra("Add_address_titile");
-    cYx = getIntent().getLongExtra("key_biz_chat_id", -1L);
-    cYG = aj.xH().Q(cYx);
-    if (cYG == null)
+    cJl = getIntent().getLongExtra("key_biz_chat_id", -1L);
+    cXq = an.xJ().V(cJl);
+    if (cXq == null)
     {
-      u.w("!32@/B4Tb64lLpLK7Qt9yZ/QZPm4pyiTa6j+", "bizChatInfo is null");
+      v.w("MicroMsg.AtSomeoneUI", "bizChatInfo is null");
       finish();
       return;
     }
-    Gb();
+    Gy();
   }
   
   protected void onDestroy()
   {
-    kRc.adW();
+    lrf.closeCursor();
     super.onDestroy();
   }
   
   protected void onPause()
   {
     super.onPause();
-    if (dbC != null) {
-      dbC.biK();
+    if (dai != null) {
+      dai.boG();
     }
   }
   
   private static final class a
-    extends i
+    extends i<k>
   {
-    private com.tencent.mm.t.d cYG;
-    private List cvM;
-    String dbI;
-    private c iIX = null;
-    private String[] kRe;
+    private com.tencent.mm.v.d cXq;
+    private List<String> crs;
+    String dao;
+    private c jfT = null;
+    private String[] lrh;
     
-    public a(Context paramContext, j paramj, com.tencent.mm.t.d paramd, String[] paramArrayOfString, List paramList)
+    public a(Context paramContext, k paramk, com.tencent.mm.v.d paramd, String[] paramArrayOfString, List<String> paramList)
     {
-      super(paramj);
-      cYG = paramd;
-      kRe = paramArrayOfString;
-      cvM = paramList;
+      super(paramk);
+      cXq = paramd;
+      lrh = paramArrayOfString;
+      crs = paramList;
       paramContext = new c.a();
-      bTG = f.gu(cYG.field_brandUserName);
-      bTD = true;
-      bTV = true;
-      bTO = 2130903473;
-      iIX = paramContext.AA();
+      bNf = f.gM(cXq.field_brandUserName);
+      bNc = true;
+      bNw = true;
+      bNp = 2131165359;
+      jfT = paramContext.AM();
     }
     
-    public final void Gk()
+    public final void GH()
     {
-      k localk = aj.xJ();
-      Object localObject2 = kRe;
-      Object localObject1 = dbI;
-      List localList = cvM;
+      l locall = an.xL();
+      Object localObject2 = lrh;
+      Object localObject1 = dao;
+      List localList = crs;
       StringBuilder localStringBuilder = new StringBuilder();
       localStringBuilder.append("select *  from BizChatUserInfo where ");
-      localObject2 = localStringBuilder.append(k.a((String[])localObject2, localList));
+      localObject2 = localStringBuilder.append(l.a((String[])localObject2, localList));
       if ((localObject1 == null) || (((String)localObject1).equals(""))) {}
       for (localObject1 = "";; localObject1 = " and (" + "userName like '%" + (String)localObject1 + "%' )")
       {
@@ -208,37 +208,37 @@ public class AtSomeoneInBizChatUI
         ((StringBuffer)localObject2).append(" upper(BizChatUserInfo.userNamePY) asc, ");
         ((StringBuffer)localObject2).append(" upper(BizChatUserInfo.userName) asc ");
         ((StringBuilder)localObject1).append(((StringBuffer)localObject2).toString());
-        setCursor(aoX.rawQuery(localStringBuilder.toString(), null));
+        setCursor(bkP.rawQuery(localStringBuilder.toString(), null));
         super.notifyDataSetChanged();
         return;
       }
     }
     
-    protected final void Gl()
+    protected final void GI()
     {
-      adW();
-      Gk();
+      closeCursor();
+      GH();
     }
     
     public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
     {
       if (paramView == null)
       {
-        paramView = View.inflate(context, 2131361938, null);
+        paramView = View.inflate(context, 2130903104, null);
         paramViewGroup = new AtSomeoneInBizChatUI.b((byte)0);
-        dbN = ((MaskLayout)paramView.findViewById(2131165651));
-        czU = ((TextView)paramView.findViewById(2131165652));
+        dat = ((MaskLayout)paramView.findViewById(2131755340));
+        cwQ = ((TextView)paramView.findViewById(2131755341));
         paramView.setTag(paramViewGroup);
       }
       for (;;)
       {
-        Object localObject = (j)getItem(paramInt);
-        czU.setTextColor(com.tencent.mm.aw.a.x(context, 2131231256));
-        ImageView localImageView = (ImageView)dbN.getContentView();
-        n.As().a(field_headImageUrl, localImageView, iIX);
-        dbN.setMaskDrawable(null);
-        localObject = AtSomeoneInBizChatUI.a(cYG, field_userId);
-        czU.setText(com.tencent.mm.pluginsdk.ui.d.e.a(context, (CharSequence)localObject, czU.getTextSize()));
+        Object localObject = (k)getItem(paramInt);
+        cwQ.setTextColor(com.tencent.mm.az.a.B(context, 2131690076));
+        ImageView localImageView = (ImageView)dat.view;
+        n.AC().a(field_headImageUrl, localImageView, jfT);
+        dat.biG();
+        localObject = AtSomeoneInBizChatUI.a(cXq, field_userId);
+        cwQ.setText(com.tencent.mm.pluginsdk.ui.d.e.a(context, (CharSequence)localObject, cwQ.getTextSize()));
         return paramView;
         paramViewGroup = (AtSomeoneInBizChatUI.b)paramView.getTag();
       }
@@ -247,8 +247,8 @@ public class AtSomeoneInBizChatUI
   
   private static final class b
   {
-    public TextView czU;
-    public MaskLayout dbN;
+    public TextView cwQ;
+    public MaskLayout dat;
   }
 }
 

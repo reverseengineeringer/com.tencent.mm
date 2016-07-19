@@ -1,6 +1,6 @@
 package com.tencent.mm.plugin.sight.base;
 
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
 import com.tencent.mm.ui.base.g;
 
 final class c$2
@@ -10,7 +10,7 @@ final class c$2
   
   public final void run()
   {
-    g.ba(y.getContext(), gxb);
+    g.aZ(aa.getContext(), gDz);
   }
 }
 

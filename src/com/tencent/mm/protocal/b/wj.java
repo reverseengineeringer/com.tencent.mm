@@ -1,49 +1,98 @@
 package com.tencent.mm.protocal.b;
 
+import a.a.a.b;
+import java.util.LinkedList;
+
 public final class wj
-  extends com.tencent.mm.al.a
+  extends amb
 {
-  public String v;
+  public int Type;
+  public String jAx;
+  public String jRU;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (v != null) {
-        paramVarArgs.U(1, v);
+      if (kfH == null) {
+        throw new b("Not all required fields were included: BaseResponse");
+      }
+      if (kfH != null)
+      {
+        paramVarArgs.cx(1, kfH.iO());
+        kfH.a(paramVarArgs);
+      }
+      paramVarArgs.cw(2, Type);
+      if (jAx != null) {
+        paramVarArgs.e(3, jAx);
+      }
+      if (jRU != null) {
+        paramVarArgs.e(4, jRU);
       }
       return 0;
     }
     if (paramInt == 1) {
-      if (v == null) {
-        break label174;
+      if (kfH == null) {
+        break label454;
       }
     }
-    label174:
-    for (paramInt = a.a.a.b.b.a.T(1, v) + 0;; paramInt = 0)
+    label454:
+    for (paramInt = a.a.a.a.cv(1, kfH.iO()) + 0;; paramInt = 0)
     {
-      return paramInt;
+      int i = paramInt + a.a.a.a.cu(2, Type);
+      paramInt = i;
+      if (jAx != null) {
+        paramInt = i + a.a.a.b.b.a.f(3, jAx);
+      }
+      i = paramInt;
+      if (jRU != null) {
+        i = paramInt + a.a.a.b.b.a.f(4, jRU);
+      }
+      return i;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = amb.a(paramVarArgs); paramInt > 0; paramInt = amb.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bve();
           }
         }
-        break;
+        if (kfH != null) {
+          break;
+        }
+        throw new b("Not all required fields were included: BaseResponse");
       }
       if (paramInt == 3)
       {
-        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
         wj localwj = (wj)paramVarArgs[1];
-        switch (((Integer)paramVarArgs[2]).intValue())
+        paramInt = ((Integer)paramVarArgs[2]).intValue();
+        switch (paramInt)
         {
         default: 
           return -1;
+        case 1: 
+          paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+          i = paramVarArgs.size();
+          paramInt = 0;
+          while (paramInt < i)
+          {
+            Object localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new dg();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+            for (boolean bool = true; bool; bool = ((dg)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, amb.a((a.a.a.a.a)localObject2))) {}
+            kfH = ((dg)localObject1);
+            paramInt += 1;
+          }
+        case 2: 
+          Type = mMY.id();
+          return 0;
+        case 3: 
+          jAx = mMY.readString();
+          return 0;
         }
-        v = jMD.readString();
+        jRU = mMY.readString();
         return 0;
       }
       return -1;

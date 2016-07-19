@@ -12,9 +12,9 @@
 
 
 # instance fields
-.field private bOa:Ljava/lang/Object;
+.field private jnr:Lcom/tencent/mm/pluginsdk/ui/d/j$a;
 
-.field private iQj:Lcom/tencent/mm/pluginsdk/ui/d/j$a;
+.field private tag:Ljava/lang/Object;
 
 
 # direct methods
@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 19
+    .line 20
     invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/d/i;-><init>()V
 
     return-void
@@ -32,20 +32,20 @@
     .locals 2
 
     .prologue
-    .line 22
+    .line 23
     const/4 v0, 0x2
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v1}, Lcom/tencent/mm/pluginsdk/ui/d/i;-><init>(ILcom/tencent/mm/pluginsdk/ui/applet/g;)V
 
-    .line 23
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/d/j;->iQj:Lcom/tencent/mm/pluginsdk/ui/d/j$a;
-
     .line 24
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/j;->bOa:Ljava/lang/Object;
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/d/j;->jnr:Lcom/tencent/mm/pluginsdk/ui/d/j$a;
 
     .line 25
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/j;->tag:Ljava/lang/Object;
+
+    .line 26
     return-void
 .end method
 
@@ -53,23 +53,23 @@
     .locals 2
 
     .prologue
-    .line 28
+    .line 29
     const/4 v0, 0x2
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v1}, Lcom/tencent/mm/pluginsdk/ui/d/i;-><init>(ILcom/tencent/mm/pluginsdk/ui/applet/g;)V
 
-    .line 29
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/d/j;->iQj:Lcom/tencent/mm/pluginsdk/ui/d/j$a;
-
     .line 30
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/j;->bOa:Ljava/lang/Object;
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/d/j;->jnr:Lcom/tencent/mm/pluginsdk/ui/d/j$a;
 
     .line 31
-    invoke-virtual {p0, p3}, Lcom/tencent/mm/pluginsdk/ui/d/j;->oK(I)V
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/j;->tag:Ljava/lang/Object;
 
     .line 32
+    invoke-virtual {p0, p3}, Lcom/tencent/mm/pluginsdk/ui/d/j;->qx(I)V
+
+    .line 33
     return-void
 .end method
 
@@ -79,19 +79,19 @@
     .locals 2
 
     .prologue
-    .line 38
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/j;->iQj:Lcom/tencent/mm/pluginsdk/ui/d/j$a;
+    .line 39
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/j;->jnr:Lcom/tencent/mm/pluginsdk/ui/d/j$a;
 
     if-eqz v0, :cond_0
 
-    .line 39
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/j;->iQj:Lcom/tencent/mm/pluginsdk/ui/d/j$a;
+    .line 40
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/j;->jnr:Lcom/tencent/mm/pluginsdk/ui/d/j$a;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/j;->bOa:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/j;->tag:Ljava/lang/Object;
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/d/j$a;->ao(Ljava/lang/Object;)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/d/j$a;->aH(Ljava/lang/Object;)V
 
-    .line 41
+    .line 42
     :cond_0
     return-void
 .end method

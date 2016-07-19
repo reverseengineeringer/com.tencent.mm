@@ -1,160 +1,58 @@
 package com.tencent.mm.sdk.platformtools;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-import junit.framework.Assert;
+import android.util.Base64;
+import com.tencent.mm.a.k;
+import java.io.UnsupportedEncodingException;
+import java.util.regex.Pattern;
 
 public final class w
 {
-  public static b blH;
-  private static int jVp;
-  public static Map jVt = new HashMap();
-  private static boolean jVv = false;
-  public static boolean jVw;
-  public long hNj = 0L;
-  public final int jVq;
-  private final boolean jVr;
-  public long jVs = 0L;
-  private final a jVu;
+  public static final Pattern kvf;
+  private byte[] key;
+  private final x<String, String> kvg = new x(256);
+  public final bb kvh;
   
-  public w(a parama)
+  static
   {
-    Assert.assertTrue("bumper not initialized", jVv);
-    jVu = parama;
-    jVr = true;
-    if (jVp >= 8192) {
-      jVp = 0;
-    }
-    int i = jVp + 1;
-    jVp = i;
-    jVq = i;
+    char c = (char)("⍆[0-9]+@".charAt(0) ^ 0xDCBA);
+    kvf = Pattern.compile(c + "⍆[0-9]+@".substring(1));
   }
   
-  public static void a(b paramb)
+  public w(String paramString)
   {
-    jVv = true;
-    blH = paramb;
-  }
-  
-  public static long aUE()
-  {
-    jVw = false;
-    LinkedList localLinkedList = new LinkedList();
-    Object localObject = new HashSet();
-    ((Set)localObject).addAll(jVt.keySet());
-    localObject = ((Set)localObject).iterator();
-    long l1 = Long.MAX_VALUE;
-    if (((Iterator)localObject).hasNext())
+    try
     {
-      Integer localInteger = (Integer)((Iterator)localObject).next();
-      w localw = (w)jVt.get(localInteger);
-      if (localw == null) {
-        break label273;
-      }
-      long l3 = ay.ao(jVs);
-      long l2 = l3;
-      if (l3 < 0L) {
-        l2 = 0L;
-      }
-      if (l2 > hNj)
-      {
-        if ((!jVu.lj()) || (!jVr)) {
-          localLinkedList.add(localInteger);
-        }
-        for (;;)
-        {
-          jVs = ay.FT();
-          break;
-          l1 = hNj;
-        }
-      }
-      if (hNj - l2 >= l1) {
-        break label273;
-      }
-      l1 = hNj - l2;
+      key = paramString.getBytes("UTF-8");
+      kvh = new bb(paramString);
+      return;
     }
-    label273:
-    for (;;)
+    catch (UnsupportedEncodingException localUnsupportedEncodingException)
     {
-      break;
-      int i = 0;
-      while (i < localLinkedList.size())
+      for (;;)
       {
-        jVt.remove(localLinkedList.get(i));
-        i += 1;
+        key = paramString.getBytes();
       }
-      if ((!jVw) && (l1 == Long.MAX_VALUE) && (blH != null))
-      {
-        blH.cancel();
-        u.v("!32@/B4Tb64lLpIraIIYhljH18U8Zao9ShTz", "cancel bumper for no more handler");
-      }
-      return l1;
     }
   }
   
-  public static boolean dr(long paramLong)
+  public final String y(String paramString, int paramInt1, int paramInt2)
   {
-    u.d("!32@/B4Tb64lLpIraIIYhljH18U8Zao9ShTz", "check need prepare: check=" + paramLong);
-    Iterator localIterator = jVt.entrySet().iterator();
-    long l1 = Long.MAX_VALUE;
-    while (localIterator.hasNext())
+    String str = paramString.substring(paramInt1, paramInt2);
+    if (kvg.aN(str)) {
+      return (String)kvg.get(str);
+    }
+    paramInt1 += 1;
+    paramInt2 = paramString.indexOf('@', paramInt1);
+    int i = paramInt2 + 1;
+    paramString = paramString.substring(i, Integer.parseInt(paramString.substring(paramInt1, paramInt2)) + i);
+    try
     {
-      w localw = (w)((Map.Entry)localIterator.next()).getValue();
-      if (localw == null) {
-        break label154;
-      }
-      long l3 = ay.ao(jVs);
-      long l2 = l3;
-      if (l3 < 0L) {
-        l2 = 0L;
-      }
-      if (l2 > hNj)
-      {
-        l1 = hNj;
-      }
-      else
-      {
-        if (hNj - l2 >= l1) {
-          break label154;
-        }
-        l1 = hNj - l2;
-      }
+      paramString = new String(k.b(Base64.decode(paramString, 0), key), "UTF-8");
+      kvg.put(str, paramString);
+      return paramString;
     }
-    label154:
-    for (;;)
-    {
-      break;
-      return l1 > paramLong;
-    }
-  }
-  
-  public final void aUF()
-  {
-    jVt.remove(Integer.valueOf(jVq));
-  }
-  
-  protected final void finalize()
-  {
-    aUF();
-    super.finalize();
-  }
-  
-  public static abstract interface a
-  {
-    public abstract boolean lj();
-  }
-  
-  public static abstract interface b
-  {
-    public abstract void cancel();
-    
-    public abstract void prepare();
+    catch (Exception paramString) {}
+    return "[TD]" + str;
   }
 }
 

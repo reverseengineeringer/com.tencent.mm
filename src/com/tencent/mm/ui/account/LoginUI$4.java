@@ -10,7 +10,7 @@ final class LoginUI$4
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    LoginUI.g(ktY);
+    LoginUI.g(kTf);
   }
 }
 

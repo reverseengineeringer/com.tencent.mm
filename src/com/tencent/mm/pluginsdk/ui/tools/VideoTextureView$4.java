@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.tools;
 
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnErrorListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class VideoTextureView$4
   implements MediaPlayer.OnErrorListener
@@ -11,9 +11,9 @@ final class VideoTextureView$4
   
   public final boolean onError(MediaPlayer paramMediaPlayer, int paramInt1, int paramInt2)
   {
-    u.d("!44@/B4Tb64lLpLHiNiACdo+aX3iR1A7B9vCqhbg6Ep6IDU=", "Error: " + paramInt1 + "," + paramInt2);
-    if (VideoTextureView.e(iTe) != null) {
-      VideoTextureView.e(iTe).az(paramInt1, paramInt2);
+    v.d("MicroMsg.VideoTextureView", "Error: " + paramInt1 + "," + paramInt2);
+    if (VideoTextureView.e(jqr) != null) {
+      VideoTextureView.e(jqr).aE(paramInt1, paramInt2);
     }
     return true;
   }

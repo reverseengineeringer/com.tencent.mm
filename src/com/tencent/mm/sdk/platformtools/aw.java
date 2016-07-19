@@ -1,67 +1,57 @@
 package com.tencent.mm.sdk.platformtools;
 
-import android.os.SystemClock;
-import java.util.ArrayList;
-
-public final class aw
+public class aw<T>
 {
-  private String jXU;
-  private boolean jXV;
-  ArrayList jXW;
-  ArrayList jXX;
-  private String mTag;
+  public int boi;
+  public Object[] kyl = new Object[20];
   
-  public aw(String paramString1, String paramString2)
+  public aw(int paramInt) {}
+  
+  public boolean aM(T paramT)
   {
-    mTag = paramString1;
-    jXU = paramString2;
-    jXV = false;
-    if (!jXV)
-    {
-      if (jXW != null) {
-        break label61;
-      }
-      jXW = new ArrayList();
-      jXX = new ArrayList();
-    }
+    if (kyl == null) {}
+    label93:
     for (;;)
     {
-      addSplit(null);
-      return;
-      label61:
-      jXW.clear();
-      jXX.clear();
+      return false;
+      if (kyl != null)
+      {
+        i = 0;
+        if (i < boi) {
+          if (kyl[i] != paramT) {}
+        }
+      }
+      for (int i = 1;; i = 0)
+      {
+        if (i != 0) {
+          break label93;
+        }
+        if ((boi >= kyl.length) || (boi < 0)) {
+          break label95;
+        }
+        kyl[boi] = paramT;
+        boi += 1;
+        return true;
+        i += 1;
+        break;
+      }
     }
+    label95:
+    v.e("MicroMsg.SimpleObjectPool", "error index %d %d", new Object[] { Integer.valueOf(boi), Integer.valueOf(kyl.length) });
+    return false;
   }
   
-  public final void addSplit(String paramString)
+  public T aZm()
   {
-    if (jXV) {
-      return;
+    if (kyl == null) {}
+    while (boi <= 0) {
+      return null;
     }
-    long l = SystemClock.elapsedRealtime();
-    jXW.add(Long.valueOf(l));
-    jXX.add(paramString);
-  }
-  
-  public final void dumpToLog()
-  {
-    if (jXV) {
-      return;
-    }
-    u.d(mTag, jXU + ": begin");
-    long l2 = ((Long)jXW.get(0)).longValue();
-    int i = 1;
-    long l1 = l2;
-    while (i < jXW.size())
-    {
-      l1 = ((Long)jXW.get(i)).longValue();
-      String str = (String)jXX.get(i);
-      long l3 = ((Long)jXW.get(i - 1)).longValue();
-      u.d(mTag, jXU + ":      " + (l1 - l3) + " ms, " + str);
-      i += 1;
-    }
-    u.d(mTag, jXU + ": end, " + (l1 - l2) + " ms");
+    int i = boi - 1;
+    Object localObject = kyl[i];
+    kyl[i] = null;
+    boi -= 1;
+    return (T)localObject;
   }
 }
 

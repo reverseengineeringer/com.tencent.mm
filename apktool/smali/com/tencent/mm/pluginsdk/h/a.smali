@@ -3,320 +3,227 @@
 .source "SourceFile"
 
 
-# instance fields
-.field private iCG:Lcom/tencent/mm/pluginsdk/h/i;
-
-.field private iCH:Lcom/tencent/mm/pluginsdk/h/j;
-
-.field private iCI:Lcom/tencent/mm/pluginsdk/h/k;
-
-.field private iCJ:Lcom/tencent/mm/pluginsdk/h/g;
-
-.field private iCK:Lcom/tencent/mm/pluginsdk/h/h;
-
-.field private iCL:Lcom/tencent/mm/pluginsdk/h/f;
-
-
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static a(Landroid/app/Activity;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Z
+    .locals 6
 
     .prologue
-    .line 19
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
-    .line 20
-    return-void
-.end method
+    const/4 v0, 0x1
 
-.method private static a(Lcom/tencent/mm/pluginsdk/h/b;)V
-    .locals 3
+    .line 58
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .prologue
-    .line 80
-    if-eqz p0, :cond_1
+    const/16 v3, 0x17
 
-    .line 81
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/h/b;->iCM:Ljava/util/Set;
+    if-ge v2, v3, :cond_1
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    const-string/jumbo v2, "MNC"
 
-    move-result-object v1
+    sget-object v3, Landroid/os/Build$VERSION;->CODENAME:Ljava/lang/String;
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v2
 
-    if-eqz v0, :cond_0
+    if-nez v2, :cond_1
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    invoke-virtual {v2, v0, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/h/b;->asX:Landroid/app/Activity;
-
-    .line 83
-    :cond_1
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Landroid/app/Activity;Lcom/tencent/mm/pluginsdk/h/o;)Z
-    .locals 3
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 23
-    iget v1, p2, Lcom/tencent/mm/pluginsdk/h/o;->type:I
-
-    if-eqz v1, :cond_0
-
-    iget v1, p2, Lcom/tencent/mm/pluginsdk/h/o;->action:I
-
-    if-nez v1, :cond_1
-
-    .line 77
+    .line 98
     :cond_0
     :goto_0
     return v0
 
-    .line 28
+    .line 62
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCL:Lcom/tencent/mm/pluginsdk/h/f;
+    :try_start_0
+    invoke-static {p0, p1}, Landroid/support/v4/content/a;->c(Landroid/content/Context;Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-nez v1, :cond_2
+    move-result v2
 
-    .line 29
-    new-instance v1, Lcom/tencent/mm/pluginsdk/h/f;
+    .line 69
+    if-eqz v2, :cond_0
 
-    invoke-direct {v1, p1}, Lcom/tencent/mm/pluginsdk/h/f;-><init>(Landroid/app/Activity;)V
+    .line 73
+    invoke-static {p4}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
-    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCL:Lcom/tencent/mm/pluginsdk/h/f;
+    move-result v2
 
-    .line 31
-    :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCL:Lcom/tencent/mm/pluginsdk/h/f;
-
-    invoke-virtual {v1, p2}, Lcom/tencent/mm/pluginsdk/h/f;->a(Lcom/tencent/mm/pluginsdk/h/o;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    .line 32
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    .line 35
-    :cond_3
-    iget v1, p2, Lcom/tencent/mm/pluginsdk/h/o;->type:I
-
-    packed-switch v1, :pswitch_data_0
+    if-nez v2, :cond_2
 
     .line 74
-    const-string/jumbo v1, "!44@/B4Tb64lLpI82FDEKU4MMswDBO/xZgZna735fRAmfMs="
+    new-instance v0, Lcom/tencent/mm/pluginsdk/h/a$1;
 
-    const-string/jumbo v2, "Unkown error type"
+    invoke-direct {v0, p0, p1, p2}, Lcom/tencent/mm/pluginsdk/h/a$1;-><init>(Landroid/app/Activity;Ljava/lang/String;I)V
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, p4, p3, v1, v0}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ZLandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
+
+    :goto_1
+    move v0, v1
+
+    .line 98
+    goto :goto_0
+
+    .line 65
+    :catch_0
+    move-exception v2
+
+    .line 66
+    const-string/jumbo v3, "MicroMsg.MPermissionUtil"
+
+    const-string/jumbo v4, "check mpermission exception:%s."
+
+    new-array v5, v0, [Ljava/lang/Object;
+
+    aput-object v2, v5, v1
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 37
-    :pswitch_0
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCG:Lcom/tencent/mm/pluginsdk/h/i;
+    .line 83
+    :cond_2
+    new-array v0, v0, [Ljava/lang/String;
 
-    if-nez v1, :cond_4
+    aput-object p1, v0, v1
 
-    .line 38
-    new-instance v1, Lcom/tencent/mm/pluginsdk/h/i;
+    invoke-static {p0, v0, p2}, Landroid/support/v4/app/a;->a(Landroid/app/Activity;[Ljava/lang/String;I)V
 
-    invoke-direct {v1, p1}, Lcom/tencent/mm/pluginsdk/h/i;-><init>(Landroid/app/Activity;)V
-
-    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCG:Lcom/tencent/mm/pluginsdk/h/i;
-
-    .line 40
-    :cond_4
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCG:Lcom/tencent/mm/pluginsdk/h/i;
-
-    invoke-virtual {v1, p2}, Lcom/tencent/mm/pluginsdk/h/i;->a(Lcom/tencent/mm/pluginsdk/h/o;)Z
-
-    goto :goto_0
-
-    .line 43
-    :pswitch_1
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCH:Lcom/tencent/mm/pluginsdk/h/j;
-
-    if-nez v1, :cond_5
-
-    .line 44
-    new-instance v1, Lcom/tencent/mm/pluginsdk/h/j;
-
-    invoke-direct {v1, p1}, Lcom/tencent/mm/pluginsdk/h/j;-><init>(Landroid/app/Activity;)V
-
-    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCH:Lcom/tencent/mm/pluginsdk/h/j;
-
-    .line 46
-    :cond_5
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCH:Lcom/tencent/mm/pluginsdk/h/j;
-
-    invoke-virtual {v1, p2}, Lcom/tencent/mm/pluginsdk/h/j;->a(Lcom/tencent/mm/pluginsdk/h/o;)Z
-
-    goto :goto_0
-
-    .line 49
-    :pswitch_2
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCI:Lcom/tencent/mm/pluginsdk/h/k;
-
-    if-nez v1, :cond_6
-
-    .line 50
-    new-instance v1, Lcom/tencent/mm/pluginsdk/h/k;
-
-    invoke-direct {v1, p1}, Lcom/tencent/mm/pluginsdk/h/k;-><init>(Landroid/app/Activity;)V
-
-    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCI:Lcom/tencent/mm/pluginsdk/h/k;
-
-    .line 52
-    :cond_6
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCI:Lcom/tencent/mm/pluginsdk/h/k;
-
-    invoke-virtual {v1, p2}, Lcom/tencent/mm/pluginsdk/h/k;->a(Lcom/tencent/mm/pluginsdk/h/o;)Z
-
-    goto :goto_0
-
-    .line 55
-    :pswitch_3
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCJ:Lcom/tencent/mm/pluginsdk/h/g;
-
-    if-nez v1, :cond_7
-
-    .line 56
-    new-instance v1, Lcom/tencent/mm/pluginsdk/h/g;
-
-    invoke-direct {v1, p1}, Lcom/tencent/mm/pluginsdk/h/g;-><init>(Landroid/app/Activity;)V
-
-    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCJ:Lcom/tencent/mm/pluginsdk/h/g;
-
-    .line 58
-    :cond_7
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCJ:Lcom/tencent/mm/pluginsdk/h/g;
-
-    invoke-virtual {v1, p2}, Lcom/tencent/mm/pluginsdk/h/g;->a(Lcom/tencent/mm/pluginsdk/h/o;)Z
-
-    goto :goto_0
-
-    .line 61
-    :pswitch_4
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCK:Lcom/tencent/mm/pluginsdk/h/h;
-
-    if-nez v1, :cond_8
-
-    .line 62
-    new-instance v1, Lcom/tencent/mm/pluginsdk/h/h;
-
-    invoke-direct {v1, p1}, Lcom/tencent/mm/pluginsdk/h/h;-><init>(Landroid/app/Activity;)V
-
-    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCK:Lcom/tencent/mm/pluginsdk/h/h;
-
-    .line 64
-    :cond_8
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCK:Lcom/tencent/mm/pluginsdk/h/h;
-
-    invoke-virtual {v1, p2}, Lcom/tencent/mm/pluginsdk/h/h;->a(Lcom/tencent/mm/pluginsdk/h/o;)Z
-
-    goto :goto_0
-
-    .line 67
-    :pswitch_5
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCL:Lcom/tencent/mm/pluginsdk/h/f;
-
-    if-nez v1, :cond_9
-
-    .line 68
-    new-instance v1, Lcom/tencent/mm/pluginsdk/h/f;
-
-    invoke-direct {v1, p1}, Lcom/tencent/mm/pluginsdk/h/f;-><init>(Landroid/app/Activity;)V
-
-    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCL:Lcom/tencent/mm/pluginsdk/h/f;
-
-    .line 70
-    :cond_9
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCL:Lcom/tencent/mm/pluginsdk/h/f;
-
-    invoke-virtual {v1, p2}, Lcom/tencent/mm/pluginsdk/h/f;->a(Lcom/tencent/mm/pluginsdk/h/o;)Z
-
-    goto/16 :goto_0
-
-    .line 35
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-    .end packed-switch
+    goto :goto_1
 .end method
 
-.method public final close()V
-    .locals 1
+.method public static aK(Landroid/content/Context;Ljava/lang/String;)Z
+    .locals 5
 
     .prologue
-    .line 86
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCG:Lcom/tencent/mm/pluginsdk/h/i;
+    const/4 v2, 0x1
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/h/a;->a(Lcom/tencent/mm/pluginsdk/h/b;)V
+    const/4 v1, 0x0
 
-    .line 87
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCH:Lcom/tencent/mm/pluginsdk/h/j;
+    .line 102
+    :try_start_0
+    invoke-static {p0, p1}, Landroid/support/v4/content/a;->c(Landroid/content/Context;Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/h/a;->a(Lcom/tencent/mm/pluginsdk/h/b;)V
+    move-result v3
 
-    .line 88
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCI:Lcom/tencent/mm/pluginsdk/h/k;
+    .line 110
+    if-eqz v3, :cond_0
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/h/a;->a(Lcom/tencent/mm/pluginsdk/h/b;)V
+    move v0, v1
 
-    .line 89
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCJ:Lcom/tencent/mm/pluginsdk/h/g;
+    .line 134
+    :goto_0
+    return v0
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/h/a;->a(Lcom/tencent/mm/pluginsdk/h/b;)V
+    .line 105
+    :catch_0
+    move-exception v0
 
-    .line 90
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCK:Lcom/tencent/mm/pluginsdk/h/h;
+    .line 106
+    const-string/jumbo v3, "MicroMsg.MPermissionUtil"
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/h/a;->a(Lcom/tencent/mm/pluginsdk/h/b;)V
+    const-string/jumbo v4, "check mpermission exception:%s."
 
-    .line 91
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/h/a;->iCL:Lcom/tencent/mm/pluginsdk/h/f;
+    new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/h/a;->a(Lcom/tencent/mm/pluginsdk/h/b;)V
+    aput-object v0, v2, v1
 
-    .line 92
-    return-void
+    invoke-static {v3, v4, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    move v0, v1
+
+    .line 107
+    goto :goto_0
+
+    .line 114
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 115
+    const-string/jumbo v4, "android.permission.READ_CONTACTS"
+
+    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    .line 116
+    const-string/jumbo v0, "android.permission.WRITE_CONTACTS"
+
+    .line 121
+    :cond_1
+    :goto_1
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_4
+
+    .line 123
+    :try_start_1
+    invoke-static {p0, v0}, Landroid/support/v4/content/a;->c(Landroid/content/Context;Ljava/lang/String;)I
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    move-result v0
+
+    .line 130
+    :goto_2
+    if-nez v0, :cond_3
+
+    move v0, v2
+
+    .line 131
+    goto :goto_0
+
+    .line 117
+    :cond_2
+    const-string/jumbo v4, "android.permission.WRITE_CONTACTS"
+
+    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    .line 118
+    const-string/jumbo v0, "android.permission.READ_CONTACTS"
+
+    goto :goto_1
+
+    .line 124
+    :catch_1
+    move-exception v0
+
+    .line 125
+    const-string/jumbo v3, "MicroMsg.MPermissionUtil"
+
+    const-string/jumbo v4, "check mpermission otherPermisson exception:%s."
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    aput-object v0, v2, v1
+
+    invoke-static {v3, v4, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    move v0, v1
+
+    .line 126
+    goto :goto_0
+
+    :cond_3
+    move v0, v1
+
+    .line 134
+    goto :goto_0
+
+    :cond_4
+    move v0, v3
+
+    goto :goto_2
 .end method

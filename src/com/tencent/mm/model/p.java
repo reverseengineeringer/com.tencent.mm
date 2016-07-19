@@ -1,10 +1,10 @@
 package com.tencent.mm.model;
 
 import android.database.Cursor;
-import com.tencent.mm.d.b.t;
+import com.tencent.mm.e.b.t;
 import com.tencent.mm.sdk.h.d;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 import com.tencent.mm.storage.r;
@@ -43,11 +43,11 @@ public final class p
             Integer localInteger = (Integer)localMap.get(localObject2);
             if (localInteger != null)
             {
-              r localr = paramc.rt().EA((String)localObject2);
+              r localr = paramc.ru().GO((String)localObject2);
               if ((localr != null) && (((String)localObject2).equals(field_username)) && (field_chatmode != localInteger.intValue()))
               {
-                localr.bj(localInteger.intValue());
-                paramc.rt().a(localr, (String)localObject2, true);
+                localr.bA(localInteger.intValue());
+                paramc.ru().a(localr, (String)localObject2, true);
               }
             }
           }
@@ -57,24 +57,24 @@ public final class p
     }
     catch (Exception paramc)
     {
-      u.e("!44@/B4Tb64lLpLN3e9EhE0UiCLOY9dIpm2TGVjx9YX0r8A=", "exception:%s", new Object[] { ay.b(paramc) });
+      v.e("MicroMsg.HardCodeUpdateTask", "exception:%s", new Object[] { be.f(paramc) });
       return;
     }
   }
   
   public static void d(c paramc)
   {
-    Object localObject1 = paramc.rq();
-    Object localObject2 = "select * ,rowid from rcontact  where " + q.keY + " and verifyFlag & " + k.aWr() + " !=0 ";
-    u.v("!32@/B4Tb64lLpLSOpQlr7qYXa3KX0iP+QzT", "dkbf:" + (String)localObject2);
-    localObject1 = aoX.rawQuery((String)localObject2, null);
+    Object localObject1 = paramc.rr();
+    Object localObject2 = "select * ,rowid from rcontact  where " + q.kFf + " and verifyFlag & " + k.bbE() + " !=0 ";
+    v.v("MicroMsg.ContactStorage", "dkbf:" + (String)localObject2);
+    localObject1 = bkP.rawQuery((String)localObject2, null);
     if (((Cursor)localObject1).moveToFirst()) {
       do
       {
         localObject2 = new k();
-        ((k)localObject2).c((Cursor)localObject1);
-        ((k)localObject2).qh();
-        paramc.rq().a(field_username, (k)localObject2);
+        ((k)localObject2).b((Cursor)localObject1);
+        ((k)localObject2).oI();
+        paramc.rr().a(field_username, (k)localObject2);
       } while (((Cursor)localObject1).moveToNext());
     }
     ((Cursor)localObject1).close();

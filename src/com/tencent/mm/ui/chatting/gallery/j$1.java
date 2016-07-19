@@ -6,14 +6,14 @@ import android.support.v7.app.ActionBarActivity;
 import android.util.Base64;
 import android.view.View;
 import android.view.animation.AnimationUtils;
-import com.tencent.mm.an.m;
+import com.tencent.mm.aq.q;
 import com.tencent.mm.plugin.sight.base.c;
 import com.tencent.mm.pluginsdk.ui.tools.f;
 import com.tencent.mm.pluginsdk.ui.tools.f.a;
-import com.tencent.mm.protocal.b.ask;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.ata;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.g;
 import java.io.File;
@@ -24,27 +24,20 @@ final class j$1
 {
   j$1(j paramj) {}
   
-  public final void Xq() {}
+  public final void Zb() {}
   
-  public final int aA(int paramInt1, int paramInt2)
+  public final void aE(int paramInt1, int paramInt2)
   {
-    return 0;
-  }
-  
-  public final void aB(int paramInt1, int paramInt2) {}
-  
-  public final void az(int paramInt1, int paramInt2)
-  {
-    lhq.hfd.stop();
-    final String str = (String)((View)lhq.hfd).getTag();
-    com.tencent.mm.sdk.b.b.q(Base64.encodeToString((c.avE() + "[ImageGallery] on play sight error, what=" + paramInt1 + ", extra=" + paramInt2 + ", path=" + ay.ad(str, "")).getBytes(), 2), "FullScreenPlaySight");
-    ab.j(new Runnable()
+    lHB.htU.stop();
+    final String str = (String)((View)lHB.htU).getTag();
+    com.tencent.mm.sdk.b.b.o(Base64.encodeToString((c.axV() + "[ImageGallery] on play sight error, what=" + paramInt1 + ", extra=" + paramInt2 + ", path=" + be.ab(str, "")).getBytes(), 2), "FullScreenPlaySight");
+    ad.k(new Runnable()
     {
       public final void run()
       {
-        if (ay.kz(str))
+        if (be.kf(str))
         {
-          g.e(lhq.leH.lem, 2131428868, 2131427941);
+          g.f(lHB.lET.lEz, 2131235819, 2131231739);
           return;
         }
         Intent localIntent = new Intent();
@@ -52,40 +45,47 @@ final class j$1
         localIntent.setDataAndType(Uri.fromFile(new File(str)), "video/*");
         try
         {
-          lhq.leH.lem.startActivity(Intent.createChooser(localIntent, lhq.leH.lem.koJ.kpc.getString(2131432531)));
+          lHB.lET.lEz.startActivity(Intent.createChooser(localIntent, lHB.lET.lEz.kNN.kOg.getString(2131232712)));
           return;
         }
         catch (Exception localException)
         {
-          u.e("!44@/B4Tb64lLpJSmuQVFTi9B0ynMnS76y+/Pqewi8jmiJ0=", "startActivity fail, activity not found");
-          g.e(lhq.leH.lem, 2131432547, 2131432546);
+          v.e("MicroMsg.ImageGalleryViewHolder", "startActivity fail, activity not found");
+          g.f(lHB.lET.lEz, 2131232633, 2131232634);
         }
       }
     });
-    lhq.lgX.put(str, Boolean.valueOf(true));
+    lHB.lHj.put(str, Boolean.valueOf(true));
   }
   
-  public final void lG()
+  public final int aF(int paramInt1, int paramInt2)
   {
-    lhq.hfd.start();
-    lhq.hfh.post(new Runnable()
+    return 0;
+  }
+  
+  public final void aG(int paramInt1, int paramInt2) {}
+  
+  public final void jQ()
+  {
+    lHB.htU.start();
+    lHB.htY.post(new Runnable()
     {
       public final void run()
       {
-        if ((lhq.hfh == null) || (lhq.hfh.getVisibility() == 0)) {
+        if ((lHB.htY == null) || (lHB.htY.getVisibility() == 0)) {
           return;
         }
-        if ((lhq.hfh.getTag() != null) && ((lhq.hfh.getTag() instanceof m)))
+        if ((lHB.htY.getTag() != null) && ((lHB.htY.getTag() instanceof q)))
         {
-          m localm = (m)lhq.hfh.getTag();
-          if ((cgi != null) && (!ay.kz(cgi.byS)))
+          q localq = (q)lHB.htY.getTag();
+          if ((cbu != null) && (!be.kf(cbu.brM)))
           {
-            lhq.hfh.setVisibility(8);
+            lHB.htY.setVisibility(8);
             return;
           }
         }
-        lhq.hfh.setVisibility(0);
-        lhq.hfh.startAnimation(AnimationUtils.loadAnimation(lhq.hfh.getContext(), 2130837575));
+        lHB.htY.setVisibility(0);
+        lHB.htY.startAnimation(AnimationUtils.loadAnimation(lHB.htY.getContext(), 2130968612));
       }
     });
   }

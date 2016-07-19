@@ -36,7 +36,7 @@
     move-exception v0
 
     .line 25
-    const-string/jumbo v1, "!44@/B4Tb64lLpK+qNTh5lI0rQ2+i9dgkCmS8K9PUsUQ4IY="
+    const-string/jumbo v1, "MicroMsg.MMSafeProgressDialog"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -56,7 +56,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

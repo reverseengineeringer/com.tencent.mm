@@ -8,7 +8,7 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "!32@/B4Tb64lLpJvPADYHZ60V7qR4Q4a20iF"
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.AddressView"
 
 
 # instance fields
@@ -116,7 +116,7 @@
     .locals 4
 
     .prologue
-    const v3, 0x7f05020e
+    const v3, 0x7f0b00a7
 
     const/4 v2, 0x0
 
@@ -128,7 +128,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f04078e
+    const v1, 0x7f020720
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -164,9 +164,9 @@
     iput v0, p0, Lcom/tencent/mm/ui/AddressView;->AVATAR_WIDTH:I
 
     .line 84
-    const v0, 0x7f0501c4
+    const v0, 0x7f0b0153
 
-    invoke-static {p1, v0}, Lcom/tencent/mm/aw/a;->z(Landroid/content/Context;I)I
+    invoke-static {p1, v0}, Lcom/tencent/mm/az/a;->D(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -175,9 +175,9 @@
     iput v0, p0, Lcom/tencent/mm/ui/AddressView;->NAME_TEXT_SIZE:F
 
     .line 85
-    const v0, 0x7f0501c7
+    const v0, 0x7f0b017d
 
-    invoke-static {p1, v0}, Lcom/tencent/mm/aw/a;->z(Landroid/content/Context;I)I
+    invoke-static {p1, v0}, Lcom/tencent/mm/az/a;->D(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -190,7 +190,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0501ea
+    const v1, 0x7f0b0176
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -206,7 +206,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0501d2
+    const v1, 0x7f0b008b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -222,7 +222,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0501d6
+    const v1, 0x7f0b0136
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -237,7 +237,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0501cf
+    const v1, 0x7f0b017c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -300,7 +300,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0801a2
+    const v2, 0x7f0f0110
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -336,7 +336,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f08019f
+    const v2, 0x7f0f0171
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -696,7 +696,7 @@
 .end method
 
 .method protected onDraw(Landroid/graphics/Canvas;)V
-    .locals 9
+    .locals 10
 
     .prologue
     const/high16 v7, 0x40000000    # 2.0f
@@ -779,7 +779,7 @@
     :cond_3
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->description:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -979,13 +979,13 @@
 
     iget v5, v5, Landroid/graphics/Paint$FontMetrics;->top:F
 
-    float-to-double v5, v5
+    float-to-double v6, v5
 
-    const-wide v7, 0x3ffb333333333333L    # 1.7
+    const-wide v8, 0x3ffb333333333333L    # 1.7
 
-    mul-double/2addr v5, v7
+    mul-double/2addr v6, v8
 
-    double-to-int v5, v5
+    double-to-int v5, v6
 
     int-to-float v5, v5
 
@@ -1083,7 +1083,7 @@
     .line 453
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1119,7 +1119,7 @@
     .line 407
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1175,7 +1175,7 @@
     check-cast v0, Lcom/tencent/mm/pluginsdk/ui/a;
 
     .line 322
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/a;->aQU()V
+    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/a;->aVE()V
 
     .line 324
     :cond_0
@@ -1344,7 +1344,7 @@
     check-cast v0, Lcom/tencent/mm/pluginsdk/ui/a;
 
     .line 329
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/a;->aQT()V
+    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/a;->aVD()V
 
     .line 331
     :cond_0
@@ -1615,11 +1615,11 @@
 
     .line 371
     :cond_2
-    const-string/jumbo v0, "!32@/B4Tb64lLpJvPADYHZ60V7qR4Q4a20iF"
+    const-string/jumbo v0, "MicroMsg.AddressView"
 
     const-string/jumbo v1, "nickNameTextColor should not be null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

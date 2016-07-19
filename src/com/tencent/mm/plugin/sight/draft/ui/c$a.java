@@ -2,34 +2,34 @@ package com.tencent.mm.plugin.sight.draft.ui;
 
 import android.graphics.Bitmap;
 import com.tencent.mm.a.f;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.sdk.platformtools.d;
 import java.lang.ref.WeakReference;
 
 final class c$a
   implements Runnable
 {
-  String buL;
-  boolean gzJ;
-  WeakReference gzK;
+  String DF;
+  boolean gGl;
+  WeakReference<c> gGm;
   String path;
   
   public final void run()
   {
-    Bitmap localBitmap = d.CE(path);
-    Object localObject = (c)gzK.get();
+    Bitmap localBitmap = d.ER(path);
+    Object localObject = (c)gGm.get();
     if (localObject != null)
     {
-      if ((!ay.kz(buL)) && (localBitmap != null)) {
-        gzH.put(buL, localBitmap);
+      if ((!be.kf(DF)) && (localBitmap != null)) {
+        gGj.put(DF, localBitmap);
       }
       localObject = new c.b((byte)0);
-      buL = buL;
-      efe = localBitmap;
-      gzK = gzK;
-      if (gzJ) {
-        ab.j((Runnable)localObject);
+      DF = DF;
+      eiG = localBitmap;
+      gGm = gGm;
+      if (gGl) {
+        ad.k((Runnable)localObject);
       }
     }
   }

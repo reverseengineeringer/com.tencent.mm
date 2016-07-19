@@ -3,28 +3,28 @@ package com.tencent.mm.model;
 import java.util.LinkedList;
 
 public final class ba
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public LinkedList bCH = new LinkedList();
+  public LinkedList<az> bvR = new LinkedList();
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
-      ((a.a.a.c.a)paramVarArgs[0]).d(1, 8, bCH);
+      ((a.a.a.c.a)paramVarArgs[0]).d(1, 8, bvR);
       return 0;
     }
     if (paramInt == 1) {
-      return a.a.a.a.c(1, 8, bCH) + 0;
+      return a.a.a.a.c(1, 8, bvR) + 0;
     }
     if (paramInt == 2)
     {
       paramVarArgs = (byte[])paramVarArgs[0];
-      bCH.clear();
-      paramVarArgs = new a.a.a.a.a(paramVarArgs, iTR);
-      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+      bvR.clear();
+      paramVarArgs = new a.a.a.a.a(paramVarArgs, jrk);
+      for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
         if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.bog();
+          paramVarArgs.bve();
         }
       }
       return 0;
@@ -39,16 +39,16 @@ public final class ba
       default: 
         return -1;
       }
-      paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
+      paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
       int i = paramVarArgs.size();
       paramInt = 0;
       while (paramInt < i)
       {
         Object localObject2 = (byte[])paramVarArgs.get(paramInt);
         localObject1 = new az();
-        localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-        for (boolean bool = true; bool; bool = ((az)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
-        bCH.add(localObject1);
+        localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+        for (boolean bool = true; bool; bool = ((az)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, com.tencent.mm.ax.a.a((a.a.a.a.a)localObject2))) {}
+        bvR.add(localObject1);
         paramInt += 1;
       }
       return 0;

@@ -10,7 +10,7 @@ final class ChattingSightContainerView$5
   
   public final void onClick(View paramView)
   {
-    gBF.eI(false);
+    gIh.eA(false);
   }
 }
 

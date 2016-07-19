@@ -21,9 +21,6 @@
 .method public abstract a(Landroid/view/MenuItem;Landroid/view/View;)Landroid/view/MenuItem;
 .end method
 
-.method public abstract a(Landroid/view/MenuItem;)Landroid/view/View;
-.end method
-
 .method public abstract a(Landroid/view/MenuItem;I)V
 .end method
 

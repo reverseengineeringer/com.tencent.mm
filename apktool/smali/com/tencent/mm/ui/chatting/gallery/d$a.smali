@@ -15,21 +15,31 @@
 
 
 # static fields
-.field private static lfQ:Ljava/util/HashMap;
+.field private static lGd:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/ui/chatting/gallery/d$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field private bEp:I
+.field private bxA:I
 
 .field private height:I
 
-.field private jWi:J
+.field private kwb:J
 
-.field private lfN:I
+.field private lGa:I
 
-.field private lfO:Ljava/lang/String;
+.field private lGb:Ljava/lang/String;
 
-.field private lfP:I
+.field private lGc:I
 
 .field private width:I
 
@@ -39,12 +49,12 @@
     .locals 1
 
     .prologue
-    .line 752
+    .line 753
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfQ:Ljava/util/HashMap;
+    sput-object v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGd:Ljava/util/HashMap;
 
     return-void
 .end method
@@ -55,29 +65,29 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 740
+    .line 741
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 746
+    .line 747
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->jWi:J
-
-    .line 748
-    iput v2, p0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfN:I
+    iput-wide v0, p0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->kwb:J
 
     .line 749
-    const-string/jumbo v0, ""
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfO:Ljava/lang/String;
+    iput v2, p0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGa:I
 
     .line 750
-    iput v2, p0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfP:I
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGb:Ljava/lang/String;
+
+    .line 751
+    iput v2, p0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGc:I
 
     return-void
 .end method
 
-.method public static bd(Ljava/lang/String;I)V
+.method public static bp(Ljava/lang/String;I)V
     .locals 13
 
     .prologue
@@ -85,9 +95,9 @@
 
     const/4 v11, 0x0
 
-    .line 756
+    .line 757
     :try_start_0
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -95,14 +105,14 @@
 
     if-nez p1, :cond_1
 
-    .line 788
+    .line 789
     :cond_0
     :goto_0
     return-void
 
-    .line 759
+    .line 760
     :cond_1
-    sget-object v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfQ:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGd:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -110,20 +120,20 @@
 
     check-cast v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;
 
-    .line 760
+    .line 761
     if-eqz v0, :cond_2
 
-    .line 761
-    iput p1, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->bEp:I
+    .line 762
+    iput p1, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->bxA:I
 
-    .line 764
+    .line 765
     :cond_2
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
-    .line 765
-    sget-object v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfQ:Ljava/util/HashMap;
+    .line 766
+    sget-object v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGd:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
@@ -147,8 +157,8 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 766
-    sget-object v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfQ:Ljava/util/HashMap;
+    .line 767
+    sget-object v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGd:Ljava/util/HashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -156,18 +166,18 @@
 
     check-cast v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;
 
-    .line 767
+    .line 768
     if-eqz v1, :cond_3
 
-    .line 768
-    iget-wide v4, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->jWi:J
+    .line 769
+    iget-wide v4, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->kwb:J
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/ay;->an(J)J
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/be;->au(J)J
 
     move-result-wide v4
 
-    .line 771
-    const-string/jumbo v6, "!56@/B4Tb64lLpJSmuQVFTi9B9Pj/FRa46tMjyWBhAVlBvgbeW0CO/PGGA=="
+    .line 772
+    const-string/jumbo v6, "MicroMsg.ImageGalleryHolderImage"
 
     const-string/jumbo v7, "dkprog report: diff:%d [%d,%d,%d] succ:%d change:%d str:%s file:%s"
 
@@ -185,7 +195,7 @@
 
     const/4 v9, 0x1
 
-    iget v10, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->bEp:I
+    iget v10, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->bxA:I
 
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -215,7 +225,7 @@
 
     const/4 v9, 0x4
 
-    iget v10, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfN:I
+    iget v10, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGa:I
 
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -225,7 +235,7 @@
 
     const/4 v9, 0x5
 
-    iget v10, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfP:I
+    iget v10, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGc:I
 
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -235,7 +245,7 @@
 
     const/4 v9, 0x6
 
-    iget-object v10, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfO:Ljava/lang/String;
+    iget-object v10, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGb:Ljava/lang/String;
 
     aput-object v10, v8, v9
 
@@ -243,30 +253,30 @@
 
     aput-object v0, v8, v9
 
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 773
+    .line 774
     const-wide/32 v6, 0xea60
 
     cmp-long v4, v4, v6
 
     if-ltz v4, :cond_3
 
-    .line 774
-    iget v4, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->bEp:I
+    .line 775
+    iget v4, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->bxA:I
 
     if-lez v4, :cond_4
 
-    iget-object v4, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfO:Ljava/lang/String;
+    iget-object v4, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGb:Ljava/lang/String;
 
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_4
 
-    .line 777
-    sget-object v4, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    .line 778
+    sget-object v4, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v5, 0x2dc1
 
@@ -356,7 +366,7 @@
 
     const/16 v7, 0x8
 
-    iget v8, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->bEp:I
+    iget v8, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->bxA:I
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -386,7 +396,7 @@
 
     const/16 v7, 0xb
 
-    iget v8, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfN:I
+    iget v8, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGa:I
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -396,7 +406,7 @@
 
     const/16 v7, 0xc
 
-    iget v8, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfP:I
+    iget v8, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGc:I
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -406,13 +416,13 @@
 
     const/16 v7, 0xd
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfO:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGb:Ljava/lang/String;
 
     aput-object v1, v6, v7
 
-    invoke-virtual {v4, v5, v6}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v4, v5, v6}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
-    .line 780
+    .line 781
     :cond_4
     invoke-interface {v2, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
     :try_end_0
@@ -420,28 +430,28 @@
 
     goto/16 :goto_1
 
-    .line 785
+    .line 786
     :catch_0
     move-exception v0
 
-    .line 786
-    const-string/jumbo v1, "!56@/B4Tb64lLpJSmuQVFTi9B9Pj/FRa46tMjyWBhAVlBvgbeW0CO/PGGA=="
+    .line 787
+    const-string/jumbo v1, "MicroMsg.ImageGalleryHolderImage"
 
     const-string/jumbo v2, "get useopt  setTotalLen :%s"
 
     new-array v3, v12, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v3, v11
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
-    .line 782
+    .line 783
     :cond_5
     :try_start_1
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -461,8 +471,8 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 783
-    sget-object v2, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfQ:Ljava/util/HashMap;
+    .line 784
+    sget-object v2, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGd:Ljava/util/HashMap;
 
     invoke-virtual {v2, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
@@ -471,7 +481,7 @@
     goto :goto_2
 .end method
 
-.method public static e(Ljava/lang/String;III)V
+.method public static f(Ljava/lang/String;III)V
     .locals 8
 
     .prologue
@@ -479,9 +489,9 @@
 
     const/4 v6, 0x0
 
-    .line 792
+    .line 793
     :try_start_0
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -491,14 +501,14 @@
 
     if-nez p2, :cond_1
 
-    .line 820
+    .line 821
     :cond_0
     :goto_0
     return-void
 
-    .line 795
+    .line 796
     :cond_1
-    sget-object v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfQ:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGd:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -506,39 +516,39 @@
 
     check-cast v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;
 
-    .line 796
+    .line 797
     if-nez v0, :cond_2
 
-    .line 797
+    .line 798
     new-instance v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/ui/chatting/gallery/d$a;-><init>()V
 
-    .line 798
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
-
-    move-result-wide v1
-
-    iput-wide v1, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->jWi:J
-
     .line 799
-    sget-object v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfQ:Ljava/util/HashMap;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gp()J
+
+    move-result-wide v2
+
+    iput-wide v2, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->kwb:J
+
+    .line 800
+    sget-object v1, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGd:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 801
+    .line 802
     :cond_2
     iput p2, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->height:I
 
-    .line 802
+    .line 803
     iput p1, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->width:I
 
-    .line 804
+    .line 805
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfO:Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGb:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -558,23 +568,23 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfO:Ljava/lang/String;
-
-    .line 805
-    if-lez p3, :cond_4
+    iput-object v1, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGb:Ljava/lang/String;
 
     .line 806
-    iget v1, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfN:I
+    if-lez p3, :cond_4
+
+    .line 807
+    iget v1, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGa:I
 
     if-nez v1, :cond_3
 
-    .line 807
-    iput p3, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfN:I
+    .line 808
+    iput p3, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGa:I
 
-    .line 815
+    .line 816
     :cond_3
     :goto_1
-    const-string/jumbo v1, "!56@/B4Tb64lLpJSmuQVFTi9B9Pj/FRa46tMjyWBhAVlBvgbeW0CO/PGGA=="
+    const-string/jumbo v1, "MicroMsg.ImageGalleryHolderImage"
 
     const-string/jumbo v2, "dkprog addBit: [%d,%d,%d] succ:%d change:%d str:%s file:%s"
 
@@ -608,7 +618,7 @@
 
     const/4 v4, 0x3
 
-    iget v5, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfN:I
+    iget v5, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGa:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -618,7 +628,7 @@
 
     const/4 v4, 0x4
 
-    iget v5, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfP:I
+    iget v5, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGc:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -628,7 +638,7 @@
 
     const/4 v4, 0x5
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfO:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGb:Ljava/lang/String;
 
     aput-object v0, v3, v4
 
@@ -636,51 +646,51 @@
 
     aput-object p0, v3, v0
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 817
+    .line 818
     :catch_0
     move-exception v0
 
-    .line 818
-    const-string/jumbo v1, "!56@/B4Tb64lLpJSmuQVFTi9B9Pj/FRa46tMjyWBhAVlBvgbeW0CO/PGGA=="
+    .line 819
+    const-string/jumbo v1, "MicroMsg.ImageGalleryHolderImage"
 
     const-string/jumbo v2, "get useopt  addBit :%s"
 
     new-array v3, v7, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v3, v6
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
-    .line 810
+    .line 811
     :cond_4
     :try_start_1
-    iget v1, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfN:I
+    iget v1, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGa:I
 
     if-eqz v1, :cond_3
 
-    .line 811
-    iget v1, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfP:I
+    .line 812
+    iget v1, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGc:I
 
     add-int/lit8 v1, v1, 0x1
 
-    iput v1, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfP:I
+    iput v1, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGc:I
 
-    .line 812
+    .line 813
     const/4 v1, 0x0
 
-    iput v1, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lfN:I
+    iput v1, v0, Lcom/tencent/mm/ui/chatting/gallery/d$a;->lGa:I
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 

@@ -1,283 +1,148 @@
 package com.tencent.mm.protocal.b;
 
-import a.a.a.b;
+import java.util.LinkedList;
 
 public final class np
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public String aFb;
-  public String aIR;
   public String appId;
-  public String ayw;
-  public boolean bQu = false;
-  public String bxn;
-  public String cbL;
-  public long cfW;
-  public int fNM;
-  public String jmB;
-  public boolean jmC = false;
-  public boolean jmD = false;
-  public boolean jmE = false;
-  public boolean jmF = false;
-  public boolean jmG = false;
-  public String jmH;
-  public boolean jmI = false;
-  public String jmJ;
-  public boolean jmK = false;
-  public boolean jmw = false;
-  public boolean jmx = false;
-  public boolean jmy = false;
-  public String jnc;
-  public boolean jnd = false;
-  
-  public final np Ca(String paramString)
-  {
-    bxn = paramString;
-    jmx = true;
-    return this;
-  }
-  
-  public final np Cb(String paramString)
-  {
-    ayw = paramString;
-    jmy = true;
-    return this;
-  }
-  
-  public final np Cc(String paramString)
-  {
-    jnc = paramString;
-    jnd = true;
-    return this;
-  }
-  
-  public final np Cd(String paramString)
-  {
-    jmB = paramString;
-    jmC = true;
-    return this;
-  }
-  
-  public final np Ce(String paramString)
-  {
-    aFb = paramString;
-    jmD = true;
-    return this;
-  }
-  
-  public final np Cf(String paramString)
-  {
-    aIR = paramString;
-    jmE = true;
-    return this;
-  }
-  
-  public final np Cg(String paramString)
-  {
-    appId = paramString;
-    jmF = true;
-    return this;
-  }
-  
-  public final np Ch(String paramString)
-  {
-    cbL = paramString;
-    jmG = true;
-    return this;
-  }
-  
-  public final np Ci(String paramString)
-  {
-    jmJ = paramString;
-    jmK = true;
-    return this;
-  }
+  public nt arV;
+  public String asv;
+  public String desc;
+  public String jKK;
+  public String jKO;
+  public LinkedList<String> jKP = new LinkedList();
+  public String title;
+  public int type;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (!jmw) {
-        throw new b("Not all required fields were included: sourceType");
+      if (title != null) {
+        paramVarArgs.e(1, title);
       }
-      if (jmw == true) {
-        paramVarArgs.ci(1, fNM);
+      if (desc != null) {
+        paramVarArgs.e(2, desc);
       }
-      if (bxn != null) {
-        paramVarArgs.d(2, bxn);
+      if (asv != null) {
+        paramVarArgs.e(3, asv);
       }
-      if (ayw != null) {
-        paramVarArgs.d(3, ayw);
-      }
-      if (jnc != null) {
-        paramVarArgs.d(4, jnc);
-      }
-      if (jmB != null) {
-        paramVarArgs.d(5, jmB);
-      }
-      if (bQu == true) {
-        paramVarArgs.A(6, cfW);
-      }
-      if (aFb != null) {
-        paramVarArgs.d(7, aFb);
-      }
-      if (aIR != null) {
-        paramVarArgs.d(8, aIR);
+      if (jKO != null) {
+        paramVarArgs.e(4, jKO);
       }
       if (appId != null) {
-        paramVarArgs.d(9, appId);
+        paramVarArgs.e(5, appId);
       }
-      if (cbL != null) {
-        paramVarArgs.d(10, cbL);
+      if (jKK != null) {
+        paramVarArgs.e(6, jKK);
       }
-      if (jmH != null) {
-        paramVarArgs.d(11, jmH);
-      }
-      if (jmJ != null) {
-        paramVarArgs.d(12, jmJ);
+      paramVarArgs.d(7, 1, jKP);
+      paramVarArgs.cw(8, type);
+      if (arV != null)
+      {
+        paramVarArgs.cx(9, arV.iO());
+        arV.a(paramVarArgs);
       }
       return 0;
     }
     if (paramInt == 1) {
-      if (jmw != true) {
-        break label908;
+      if (title == null) {
+        break label701;
       }
     }
-    label908:
-    for (int i = a.a.a.a.cg(1, fNM) + 0;; i = 0)
+    label701:
+    for (int i = a.a.a.b.b.a.f(1, title) + 0;; i = 0)
     {
       paramInt = i;
-      if (bxn != null) {
-        paramInt = i + a.a.a.b.b.a.e(2, bxn);
+      if (desc != null) {
+        paramInt = i + a.a.a.b.b.a.f(2, desc);
       }
       i = paramInt;
-      if (ayw != null) {
-        i = paramInt + a.a.a.b.b.a.e(3, ayw);
+      if (asv != null) {
+        i = paramInt + a.a.a.b.b.a.f(3, asv);
       }
       paramInt = i;
-      if (jnc != null) {
-        paramInt = i + a.a.a.b.b.a.e(4, jnc);
-      }
-      i = paramInt;
-      if (jmB != null) {
-        i = paramInt + a.a.a.b.b.a.e(5, jmB);
-      }
-      paramInt = i;
-      if (bQu == true) {
-        paramInt = i + a.a.a.a.z(6, cfW);
-      }
-      i = paramInt;
-      if (aFb != null) {
-        i = paramInt + a.a.a.b.b.a.e(7, aFb);
-      }
-      paramInt = i;
-      if (aIR != null) {
-        paramInt = i + a.a.a.b.b.a.e(8, aIR);
+      if (jKO != null) {
+        paramInt = i + a.a.a.b.b.a.f(4, jKO);
       }
       i = paramInt;
       if (appId != null) {
-        i = paramInt + a.a.a.b.b.a.e(9, appId);
+        i = paramInt + a.a.a.b.b.a.f(5, appId);
       }
       paramInt = i;
-      if (cbL != null) {
-        paramInt = i + a.a.a.b.b.a.e(10, cbL);
+      if (jKK != null) {
+        paramInt = i + a.a.a.b.b.a.f(6, jKK);
       }
-      i = paramInt;
-      if (jmH != null) {
-        i = paramInt + a.a.a.b.b.a.e(11, jmH);
-      }
+      i = paramInt + a.a.a.a.c(7, 1, jKP) + a.a.a.a.cu(8, type);
       paramInt = i;
-      if (jmJ != null) {
-        paramInt = i + a.a.a.b.b.a.e(12, jmJ);
+      if (arV != null) {
+        paramInt = i + a.a.a.a.cv(9, arV.iO());
       }
       return paramInt;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        paramVarArgs = (byte[])paramVarArgs[0];
+        jKP.clear();
+        paramVarArgs = new a.a.a.a.a(paramVarArgs, jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
-        if (jmw) {
-          break;
-        }
-        throw new b("Not all required fields were included: sourceType");
+        break;
       }
       if (paramInt == 3)
       {
-        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
         np localnp = (np)paramVarArgs[1];
-        switch (((Integer)paramVarArgs[2]).intValue())
+        paramInt = ((Integer)paramVarArgs[2]).intValue();
+        switch (paramInt)
         {
         default: 
           return -1;
         case 1: 
-          fNM = maU.jC();
-          jmw = true;
+          title = mMY.readString();
           return 0;
         case 2: 
-          bxn = maU.readString();
-          jmx = true;
+          desc = mMY.readString();
           return 0;
         case 3: 
-          ayw = maU.readString();
-          jmy = true;
+          asv = mMY.readString();
           return 0;
         case 4: 
-          jnc = maU.readString();
-          jnd = true;
+          jKO = mMY.readString();
           return 0;
         case 5: 
-          jmB = maU.readString();
-          jmC = true;
+          appId = mMY.readString();
           return 0;
         case 6: 
-          cfW = maU.jD();
-          bQu = true;
+          jKK = mMY.readString();
           return 0;
         case 7: 
-          aFb = maU.readString();
-          jmD = true;
+          jKP.add(mMY.readString());
           return 0;
         case 8: 
-          aIR = maU.readString();
-          jmE = true;
-          return 0;
-        case 9: 
-          appId = maU.readString();
-          jmF = true;
-          return 0;
-        case 10: 
-          cbL = maU.readString();
-          jmG = true;
-          return 0;
-        case 11: 
-          jmH = maU.readString();
-          jmI = true;
+          type = mMY.id();
           return 0;
         }
-        jmJ = maU.readString();
-        jmK = true;
-        return 0;
+        paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+        i = paramVarArgs.size();
+        paramInt = 0;
+        while (paramInt < i)
+        {
+          Object localObject2 = (byte[])paramVarArgs.get(paramInt);
+          localObject1 = new nt();
+          localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+          for (boolean bool = true; bool; bool = ((nt)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, com.tencent.mm.ax.a.a((a.a.a.a.a)localObject2))) {}
+          arV = ((nt)localObject1);
+          paramInt += 1;
+        }
+        break;
       }
       return -1;
     }
-  }
-  
-  public final np dn(long paramLong)
-  {
-    cfW = paramLong;
-    bQu = true;
-    return this;
-  }
-  
-  public final np pe(int paramInt)
-  {
-    fNM = paramInt;
-    jmw = true;
-    return this;
   }
 }
 

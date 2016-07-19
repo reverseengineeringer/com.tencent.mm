@@ -9,8 +9,8 @@ final class b$10
   
   public final void run()
   {
-    b.b(lCw, true);
-    b.f(lCw).clear();
+    b.b(mdn, true);
+    b.f(mdn).clear();
   }
 }
 

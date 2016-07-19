@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic krb:Lcom/tencent/mm/ui/s;
+.field final synthetic kQi:Lcom/tencent/mm/ui/s;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 443
-    iput-object p1, p0, Lcom/tencent/mm/ui/s$2;->krb:Lcom/tencent/mm/ui/s;
+    .line 444
+    iput-object p1, p0, Lcom/tencent/mm/ui/s$2;->kQi:Lcom/tencent/mm/ui/s;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,9 +40,9 @@
     .locals 0
 
     .prologue
-    .line 446
+    .line 447
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 447
+    .line 448
     return-void
 .end method

@@ -12,16 +12,16 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.az.g;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.bc.g;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import com.tencent.mm.model.i;
 import com.tencent.mm.modelsearch.f;
 import com.tencent.mm.modelsearch.m;
 import com.tencent.mm.modelsearch.m.g;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 import java.util.List;
@@ -30,14 +30,15 @@ import java.util.regex.Pattern;
 public final class d
   extends a
 {
-  private static final Pattern bZa = Pattern.compile(";");
-  public String[] bYs;
-  public CharSequence cKS;
-  public m.g cNY;
-  public CharSequence ghW;
-  public CharSequence lmV;
-  private b lmW = new b();
-  a lmX = new a();
+  private static final Pattern bSJ = Pattern.compile(";");
+  public String[] bSb;
+  public CharSequence cHV;
+  public m.g cKY;
+  private List<String> cKh;
+  public CharSequence gsw;
+  public CharSequence lNq;
+  private b lNr = new b();
+  a lNs = new a();
   public String username;
   
   public d(int paramInt)
@@ -45,17 +46,17 @@ public final class d
     super(2, paramInt);
   }
   
-  public final a.b ajt()
+  public final a.b amb()
   {
-    return lmW;
+    return lNr;
   }
   
-  protected final a.a awR()
+  protected final a.a azo()
   {
-    return lmX;
+    return lNs;
   }
   
-  public final void er(Context paramContext)
+  public final void eu(Context paramContext)
   {
     Object localObject2 = null;
     int k = 1;
@@ -63,33 +64,34 @@ public final class d
     boolean bool3 = false;
     boolean bool2 = false;
     int i;
-    if (cNY != null) {
-      if ((bYs != null) && (bYs.length > 0))
+    if (cKY != null) {
+      if ((bSb != null) && (bSb.length > 0))
       {
+        cKh = be.g(bSb);
         i = 1;
         j = i;
-        if (cId == null)
+        if (cFh == null)
         {
-          cId = ah.tD().rq().Ek(cNY.bZL);
+          cFh = ah.tE().rr().Gy(cKY.bTu);
           j = i;
-          if (cId == null) {
-            cId = ah.tD().rq().Eo(cNY.bZL);
+          if (cFh == null) {
+            cFh = ah.tE().rr().GC(cKY.bTu);
           }
         }
       }
     }
     for (int j = i;; j = 0)
     {
-      if (cId != null) {
-        break label138;
+      if (cFh != null) {
+        break label149;
       }
-      u.i("!44@/B4Tb64lLpIELL9O96QoKBDgu8frTg9YlQ2Gq+MzF84=", "filling dataItem Occur Error Contact is null, position=%d", new Object[] { Integer.valueOf(position) });
+      v.i("MicroMsg.ChatroomDataItem", "filling dataItem Occur Error Contact is null, position=%d", new Object[] { Integer.valueOf(position) });
       return;
       i = 0;
       break;
     }
-    label138:
-    username = cId.field_username;
+    label149:
+    username = cFh.field_username;
     m.g localg;
     Object localObject1;
     String[] arrayOfString;
@@ -98,14 +100,14 @@ public final class d
     Cursor localCursor;
     if (j != 0)
     {
-      localg = cNY;
-      localObject1 = cId;
-      arrayOfString = bYs;
+      localg = cKY;
+      localObject1 = cFh;
+      arrayOfString = bSb;
       localResources = paramContext.getResources();
       str = i.a((k)localObject1, field_username);
-      localCursor = tDbzA.rawQuery("SELECT memberlist FROM chatroom WHERE chatroomname=?;", new String[] { field_username });
+      localCursor = tEbsy.rawQuery("SELECT memberlist FROM chatroom WHERE chatroomname=?;", new String[] { field_username });
       if (!localCursor.moveToFirst()) {
-        break label633;
+        break label643;
       }
       localObject1 = localCursor.getString(0);
       if (localObject1 == null) {
@@ -116,25 +118,25 @@ public final class d
     {
       localCursor.close();
       if ((localObject1 != null) && (localObject1.length > 0)) {
-        lmV = ("(" + localObject1.length + ")");
+        lNq = ("(" + localObject1.length + ")");
       }
-      switch (bZJ)
+      switch (bTs)
       {
       default: 
         i = 0;
         j = 0;
         localObject1 = localObject2;
         bool1 = bool2;
-        localObject2 = ay.h(arrayOfString);
+        localObject2 = be.g(arrayOfString);
         if (j != 0) {
           if (i != 0)
           {
             localObject2 = f.a(str, (List)localObject2, bool1);
-            paramContext = a(paramContext, (Spannable)localObject2, bZn);
-            cKS = paramContext;
-            ghW = ((CharSequence)localObject1);
+            paramContext = a(paramContext, (Spannable)localObject2, bSV);
+            cHV = paramContext;
+            gsw = ((CharSequence)localObject1);
             return;
-            localObject1 = bZa.split((CharSequence)localObject1);
+            localObject1 = bSJ.split((CharSequence)localObject1);
           }
         }
         break;
@@ -149,38 +151,38 @@ public final class d
       case 5: 
         for (;;)
         {
-          label360:
-          label372:
-          label398:
-          label408:
-          localResources.getString(2131431354);
+          label368:
+          label380:
+          label406:
+          label416:
+          localResources.getString(2131234817);
           j = k;
           localObject1 = localObject2;
-          break label372;
+          break label380;
           if ((localObject1 == null) || (userData == null) || (!(userData instanceof List))) {
-            break label360;
+            break label368;
           }
-          localObject1 = f.a(paramContext, (List)userData, (String[])localObject1, arrayOfString, bZn);
-          localObject1 = TextUtils.concat(new CharSequence[] { localResources.getString(2131431358), localObject1 });
+          localObject1 = f.a(paramContext, (List)userData, (String[])localObject1, cKh, bSV);
+          localObject1 = TextUtils.concat(new CharSequence[] { localResources.getString(2131234815), localObject1 });
           i = 0;
           j = 0;
           bool1 = bool2;
-          break label372;
-          localObject2 = f.e(str, (List)localObject2);
-          break label398;
-          paramContext = a(paramContext, new SpannableString(str), bZn);
-          break label408;
-          cKS = i.a(cId, cId.field_username);
-          i = f.iy(username);
+          break label380;
+          localObject2 = f.f(str, (List)localObject2);
+          break label406;
+          paramContext = a(paramContext, new SpannableString(str), bSV);
+          break label416;
+          cHV = i.a(cFh, cFh.field_username);
+          i = f.iP(username);
           if (i <= 0) {
             break;
           }
-          lmV = ("(" + i + ")");
+          lNq = ("(" + i + ")");
           return;
           i = 0;
           bool1 = bool3;
         }
-        label633:
+        label643:
         localObject1 = null;
       }
     }
@@ -189,12 +191,12 @@ public final class d
   public final class a
     extends a.a
   {
-    public View cMt;
-    public TextView cNT;
-    public TextView cOd;
-    public ImageView czS;
-    public CheckBox czW;
-    public TextView fKK;
+    public View cJf;
+    public ImageView cui;
+    public TextView cuj;
+    public TextView cuk;
+    public CheckBox cul;
+    public TextView fTN;
     
     public a()
     {
@@ -212,17 +214,17 @@ public final class d
     
     public final View a(Context paramContext, ViewGroup paramViewGroup)
     {
-      paramViewGroup = LayoutInflater.from(paramContext).inflate(2131363057, paramViewGroup, false);
-      d.a locala = (d.a)lmX;
-      czS = ((ImageView)paramViewGroup.findViewById(2131165293));
-      cNT = ((TextView)paramViewGroup.findViewById(2131165340));
-      cNT.setMaxWidth(com.tencent.mm.aw.a.fromDPToPix(paramContext, 200));
-      cOd = ((TextView)paramViewGroup.findViewById(2131165341));
-      fKK = ((TextView)paramViewGroup.findViewById(2131166160));
-      cMt = paramViewGroup.findViewById(2131167176);
-      czW = ((CheckBox)paramViewGroup.findViewById(2131165695));
-      if (cLD) {
-        cMt.setBackgroundResource(2130970303);
+      paramViewGroup = LayoutInflater.from(paramContext).inflate(2130904323, paramViewGroup, false);
+      d.a locala = (d.a)lNs;
+      cui = ((ImageView)paramViewGroup.findViewById(2131755444));
+      cuj = ((TextView)paramViewGroup.findViewById(2131755331));
+      cuj.setMaxWidth(com.tencent.mm.az.a.fromDPToPix(paramContext, 200));
+      cuk = ((TextView)paramViewGroup.findViewById(2131755333));
+      fTN = ((TextView)paramViewGroup.findViewById(2131755247));
+      cJf = paramViewGroup.findViewById(2131758184);
+      cul = ((CheckBox)paramViewGroup.findViewById(2131755446));
+      if (cIG) {
+        cJf.setBackgroundResource(2130838073);
       }
       paramViewGroup.setTag(locala);
       return paramViewGroup;
@@ -234,37 +236,37 @@ public final class d
       parama = (d)parama1;
       if ((username != null) && (username.length() > 0))
       {
-        com.tencent.mm.pluginsdk.ui.a.b.b(czS, username);
-        f.a(cKS, cNT);
-        f.a(ghW, cOd);
-        f.a(lmV, fKK);
-        if (!lkT) {
+        com.tencent.mm.pluginsdk.ui.a.b.a(cui, username);
+        f.a(cHV, cuj);
+        f.a(gsw, cuk);
+        f.a(lNq, fTN);
+        if (!lLe) {
           break label146;
         }
         if (!paramBoolean1) {
           break label126;
         }
-        czW.setChecked(true);
-        czW.setEnabled(false);
+        cul.setChecked(true);
+        cul.setEnabled(false);
       }
       for (;;)
       {
-        czW.setVisibility(0);
+        cul.setVisibility(0);
         return;
-        czS.setImageResource(2130970523);
+        cui.setImageResource(2130838112);
         break;
         label126:
-        czW.setChecked(paramBoolean2);
-        czW.setEnabled(true);
+        cul.setChecked(paramBoolean2);
+        cul.setEnabled(true);
       }
       label146:
-      czW.setVisibility(8);
+      cul.setVisibility(8);
     }
     
-    public final boolean bhz()
+    public final boolean bnp()
     {
-      if (cNY != null) {
-        m.b(aEy, cNY, 1);
+      if (cKY != null) {
+        m.b(aqC, cKY, 1);
       }
       return false;
     }

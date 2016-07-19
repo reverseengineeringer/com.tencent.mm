@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kOx:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$24;
+.field final synthetic lnN:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$24;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 331
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$24$1;->kOx:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$24;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$24$1;->lnN:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$24;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

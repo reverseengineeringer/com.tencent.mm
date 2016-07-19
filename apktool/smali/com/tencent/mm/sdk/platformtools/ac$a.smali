@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Handler$Callback;
+
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
@@ -12,17 +15,3 @@
     accessFlags = 0x609
     name = "a"
 .end annotation
-
-
-# virtual methods
-.method public abstract handleMessage(Landroid/os/Message;)V
-.end method
-
-.method public abstract onLog(Landroid/os/Message;Ljava/lang/Runnable;Ljava/lang/Thread;JJF)V
-.end method
-
-.method public abstract onTaskAdded(Ljava/lang/Runnable;Lcom/tencent/mm/sdk/platformtools/ag;)V
-.end method
-
-.method public abstract onTaskRunEnd(Ljava/lang/Runnable;Lcom/tencent/mm/sdk/platformtools/ag;)V
-.end method

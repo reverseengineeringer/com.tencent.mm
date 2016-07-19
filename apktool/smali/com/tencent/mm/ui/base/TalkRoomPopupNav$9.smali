@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kKA:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
+.field final synthetic ljQ:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 304
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$9;->kKA:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$9;->ljQ:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 318
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$9;->kKA:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$9;->ljQ:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->h(Lcom/tencent/mm/ui/base/TalkRoomPopupNav;)Landroid/view/animation/AlphaAnimation;
 
@@ -50,13 +50,13 @@
     if-eqz v0, :cond_0
 
     .line 319
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$9;->kKA:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$9;->ljQ:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->g(Lcom/tencent/mm/ui/base/TalkRoomPopupNav;)Landroid/widget/ImageView;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$9;->kKA:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$9;->ljQ:Lcom/tencent/mm/ui/base/TalkRoomPopupNav;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->h(Lcom/tencent/mm/ui/base/TalkRoomPopupNav;)Landroid/view/animation/AlphaAnimation;
 

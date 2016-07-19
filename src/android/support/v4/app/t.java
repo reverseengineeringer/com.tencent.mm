@@ -18,18 +18,18 @@ import java.util.List;
 
 final class t
 {
-  private static final Object dA = new Object();
-  private static final Object dx = new Object();
-  private static Field dy;
-  private static boolean dz;
+  private static final Object dN = new Object();
+  private static Field dO;
+  private static boolean dP;
+  private static final Object dQ = new Object();
   
   public static Bundle a(Notification paramNotification)
   {
     Object localObject1;
     Bundle localBundle;
-    synchronized (dx)
+    synchronized (dN)
     {
-      if (dz) {
+      if (dP) {
         return null;
       }
     }
@@ -37,7 +37,7 @@ final class t
   
   public static void a(o paramo, CharSequence paramCharSequence1, boolean paramBoolean1, CharSequence paramCharSequence2, Bitmap paramBitmap1, Bitmap paramBitmap2, boolean paramBoolean2)
   {
-    paramo = new Notification.BigPictureStyle(paramo.V()).setBigContentTitle(paramCharSequence1).bigPicture(paramBitmap1);
+    paramo = new Notification.BigPictureStyle(paramo.U()).setBigContentTitle(paramCharSequence1).bigPicture(paramBitmap1);
     if (paramBoolean2) {
       paramo.bigLargeIcon(paramBitmap2);
     }
@@ -48,15 +48,15 @@ final class t
   
   public static void a(o paramo, CharSequence paramCharSequence1, boolean paramBoolean, CharSequence paramCharSequence2, CharSequence paramCharSequence3)
   {
-    paramo = new Notification.BigTextStyle(paramo.V()).setBigContentTitle(paramCharSequence1).bigText(paramCharSequence3);
+    paramo = new Notification.BigTextStyle(paramo.U()).setBigContentTitle(paramCharSequence1).bigText(paramCharSequence3);
     if (paramBoolean) {
       paramo.setSummaryText(paramCharSequence2);
     }
   }
   
-  public static void a(o paramo, CharSequence paramCharSequence1, boolean paramBoolean, CharSequence paramCharSequence2, ArrayList paramArrayList)
+  public static void a(o paramo, CharSequence paramCharSequence1, boolean paramBoolean, CharSequence paramCharSequence2, ArrayList<CharSequence> paramArrayList)
   {
-    paramo = new Notification.InboxStyle(paramo.V()).setBigContentTitle(paramCharSequence1);
+    paramo = new Notification.InboxStyle(paramo.U()).setBigContentTitle(paramCharSequence1);
     if (paramBoolean) {
       paramo.setSummaryText(paramCharSequence2);
     }
@@ -68,15 +68,15 @@ final class t
   
   public static Bundle b(Notification.Builder paramBuilder, s.a parama)
   {
-    paramBuilder.addAction(parama.getIcon(), parama.getTitle(), parama.X());
+    paramBuilder.addAction(parama.getIcon(), parama.getTitle(), parama.W());
     paramBuilder = new Bundle(parama.getExtras());
-    if (parama.Y() != null) {
-      paramBuilder.putParcelableArray("android.support.remoteInputs", z.b(parama.Y()));
+    if (parama.X() != null) {
+      paramBuilder.putParcelableArray("android.support.remoteInputs", z.b(parama.X()));
     }
     return paramBuilder;
   }
   
-  public static SparseArray c(List paramList)
+  public static SparseArray<Bundle> c(List<Bundle> paramList)
   {
     Object localObject1 = null;
     int j = paramList.size();
@@ -96,14 +96,14 @@ final class t
       i += 1;
       localObject1 = localObject2;
     }
-    return (SparseArray)localObject1;
+    return (SparseArray<Bundle>)localObject1;
   }
   
   public static final class a
     implements n, o
   {
-    List dB = new ArrayList();
-    Notification.Builder dw;
+    Notification.Builder dM;
+    List<Bundle> dR = new ArrayList();
     final Bundle mExtras;
     
     public a(Context paramContext, Notification paramNotification, CharSequence paramCharSequence1, CharSequence paramCharSequence2, CharSequence paramCharSequence3, RemoteViews paramRemoteViews, int paramInt1, PendingIntent paramPendingIntent1, PendingIntent paramPendingIntent2, Bitmap paramBitmap, int paramInt2, int paramInt3, boolean paramBoolean1, boolean paramBoolean2, int paramInt4, CharSequence paramCharSequence4, boolean paramBoolean3, Bundle paramBundle, String paramString1, boolean paramBoolean4, String paramString2)
@@ -131,7 +131,7 @@ final class t
         }
         bool = true;
         label202:
-        dw = paramContext.setFullScreenIntent(paramPendingIntent2, bool).setLargeIcon(paramBitmap).setNumber(paramInt1).setUsesChronometer(paramBoolean2).setPriority(paramInt4).setProgress(paramInt2, paramInt3, paramBoolean1);
+        dM = paramContext.setFullScreenIntent(paramPendingIntent2, bool).setLargeIcon(paramBitmap).setNumber(paramInt1).setUsesChronometer(paramBoolean2).setPriority(paramInt4).setProgress(paramInt2, paramInt3, paramBoolean1);
         mExtras = new Bundle();
         if (paramBundle != null) {
           mExtras.putAll(paramBundle);
@@ -170,14 +170,14 @@ final class t
       }
     }
     
-    public final Notification.Builder V()
+    public final Notification.Builder U()
     {
-      return dw;
+      return dM;
     }
     
     public final void a(s.a parama)
     {
-      dB.add(t.b(dw, parama));
+      dR.add(t.b(dM, parama));
     }
   }
 }

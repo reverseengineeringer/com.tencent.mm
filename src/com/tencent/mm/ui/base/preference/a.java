@@ -10,7 +10,7 @@ import android.widget.ListView;
 public final class a
   extends h
 {
-  private SparseArray kKR = new SparseArray();
+  private SparseArray<View> lkg = new SparseArray();
   
   public a(Context paramContext, SharedPreferences paramSharedPreferences)
   {
@@ -22,13 +22,13 @@ public final class a
     if ((paramInt > paramListView.getLastVisiblePosition()) || (paramInt < paramListView.getFirstVisiblePosition())) {
       return null;
     }
-    return (View)kKR.get(paramInt);
+    return (View)lkg.get(paramInt);
   }
   
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
     paramView = super.getView(paramInt, paramView, paramViewGroup);
-    kKR.put(paramInt, paramView);
+    lkg.put(paramInt, paramView);
     return paramView;
   }
 }

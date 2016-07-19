@@ -1,14 +1,16 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.az.g.b;
-import com.tencent.mm.storage.q;
+import java.io.File;
+import java.io.FilenameFilter;
 
-final class c$15
-  implements g.b
+public final class c$15
+  implements FilenameFilter
 {
-  public final String[] lr()
+  public c$15(c paramc) {}
+  
+  public final boolean accept(File paramFile, String paramString)
   {
-    return q.aoY;
+    return paramString.startsWith("EnMicroMsg.dberr");
   }
 }
 

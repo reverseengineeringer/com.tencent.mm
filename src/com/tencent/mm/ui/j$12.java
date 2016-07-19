@@ -1,6 +1,8 @@
 package com.tencent.mm.ui;
 
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Window;
 
 final class j$12
   implements Runnable
@@ -9,8 +11,9 @@ final class j$12
   
   public final void run()
   {
-    if (j.j(kpx) != null) {
-      j.j(kpx).show();
+    j.i(kOB).getWindow().setFlags(1024, 1024);
+    if (j.j(kOB) != null) {
+      j.j(kOB).hide();
     }
   }
 }

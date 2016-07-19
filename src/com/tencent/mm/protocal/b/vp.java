@@ -1,63 +1,64 @@
 package com.tencent.mm.protocal.b;
 
-import com.tencent.mm.at.b;
+import java.util.LinkedList;
 
 public final class vp
-  extends com.tencent.mm.at.a
+  extends alt
 {
-  public b gIa;
-  public b jth;
-  
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (gIa != null) {
-        paramVarArgs.b(1, gIa);
-      }
-      if (jth != null) {
-        paramVarArgs.b(2, jth);
+      if (kfq != null)
+      {
+        paramVarArgs.cx(1, kfq.iO());
+        kfq.a(paramVarArgs);
       }
       return 0;
     }
     if (paramInt == 1) {
-      if (gIa == null) {
-        break label228;
+      if (kfq == null) {
+        break label273;
       }
     }
-    label228:
-    for (paramInt = a.a.a.a.a(1, gIa) + 0;; paramInt = 0)
+    label273:
+    for (paramInt = a.a.a.a.cv(1, kfq.iO()) + 0;; paramInt = 0)
     {
-      int i = paramInt;
-      if (jth != null) {
-        i = paramInt + a.a.a.a.a(2, jth);
-      }
-      return i;
+      return paramInt;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = alt.a(paramVarArgs); paramInt > 0; paramInt = alt.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
         break;
       }
       if (paramInt == 3)
       {
-        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
         vp localvp = (vp)paramVarArgs[1];
-        switch (((Integer)paramVarArgs[2]).intValue())
+        paramInt = ((Integer)paramVarArgs[2]).intValue();
+        switch (paramInt)
         {
         default: 
           return -1;
-        case 1: 
-          gIa = locala.bof();
-          return 0;
         }
-        jth = locala.bof();
-        return 0;
+        paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+        int i = paramVarArgs.size();
+        paramInt = 0;
+        while (paramInt < i)
+        {
+          Object localObject2 = (byte[])paramVarArgs.get(paramInt);
+          localObject1 = new df();
+          localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+          for (boolean bool = true; bool; bool = ((df)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, alt.a((a.a.a.a.a)localObject2))) {}
+          kfq = ((df)localObject1);
+          paramInt += 1;
+        }
+        break;
       }
       return -1;
     }

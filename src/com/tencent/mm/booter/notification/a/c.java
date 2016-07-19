@@ -1,29 +1,29 @@
 package com.tencent.mm.booter.notification.a;
 
-import com.tencent.mm.aq.a;
-import com.tencent.mm.g.g;
+import com.tencent.mm.au.a;
+import com.tencent.mm.h.g;
 
 public final class c
 {
-  public int bol = -1;
+  public int bcj = -1;
   
-  public final int o(String paramString, int paramInt)
+  public final int l(String paramString, int paramInt)
   {
-    bol = a.aOQ();
-    if ((!g.cb(paramInt)) || (g.dj(paramString))) {}
+    bcj = a.aTs();
+    if ((!g.ct(paramInt)) || (g.dq(paramString))) {}
     try
     {
-      bol = 2130968670;
+      bcj = 2130839630;
       for (;;)
       {
-        if (bol < 0) {
-          bol = a.aOQ();
+        if (bcj < 0) {
+          bcj = a.aTs();
         }
-        return bol;
-        if (g.dk(paramString)) {
+        return bcj;
+        if (g.dr(paramString)) {
           try
           {
-            bol = 2130968670;
+            bcj = 2130839630;
           }
           catch (Exception paramString) {}
         }

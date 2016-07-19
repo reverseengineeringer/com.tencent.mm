@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/modelcdntran/b;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/modelcdntran/b;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bKE:Lcom/tencent/mm/modelcdntran/b;
+.field final synthetic bDY:Lcom/tencent/mm/modelcdntran/b;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 76
-    iput-object p1, p0, Lcom/tencent/mm/modelcdntran/b$2;->bKE:Lcom/tencent/mm/modelcdntran/b;
+    iput-object p1, p0, Lcom/tencent/mm/modelcdntran/b$2;->bDY:Lcom/tencent/mm/modelcdntran/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 80
-    iget-object v0, p0, Lcom/tencent/mm/modelcdntran/b$2;->bKE:Lcom/tencent/mm/modelcdntran/b;
+    iget-object v0, p0, Lcom/tencent/mm/modelcdntran/b$2;->bDY:Lcom/tencent/mm/modelcdntran/b;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelcdntran/b;->aS(Z)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelcdntran/b;->ay(Z)V
 
     .line 81
     return-void

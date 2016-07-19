@@ -1,16 +1,19 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import com.tencent.mm.pluginsdk.e;
+import com.tencent.mm.ui.j;
+import com.tencent.mm.ui.o;
 
 final class ChattingUI$7
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
   ChattingUI$7(ChattingUI paramChattingUI) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final void run()
   {
-    paramDialogInterface.dismiss();
+    if (lyl.lyh != null) {
+      e.a(lyl, lyl.lyh.kNN.kNS);
+    }
   }
 }
 

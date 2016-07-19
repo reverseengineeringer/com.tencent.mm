@@ -1,18 +1,20 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.d.a.mu;
-import com.tencent.mm.sdk.c.a;
+import com.tencent.mm.pluginsdk.model.h.a;
+import com.tencent.mm.ui.base.p;
 
 final class ChattingUI$a$132
-  implements Runnable
+  implements h.a
 {
   ChattingUI$a$132(ChattingUI.a parama) {}
   
-  public final void run()
+  public final void aTX()
   {
-    mu localmu = new mu();
-    aJg.aJi = true;
-    a.jUF.j(localmu);
+    if (ChattingUI.a.at(lAY) != null)
+    {
+      ChattingUI.a.at(lAY).dismiss();
+      ChattingUI.a.a(lAY, null);
+    }
   }
 }
 

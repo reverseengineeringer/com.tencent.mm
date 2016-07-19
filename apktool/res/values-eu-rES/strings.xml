@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">%1$s aplikazioak Android Wear eguneratzea behar du.</string>
+    <string name="b">%1$s ez da exekutatuko Android Wear aplikazioa eguneratzen ez baduzu.</string>
+    <string name="c">Eguneratu Android Wear</string>
+    <string name="d">%1$s erabiltzeko unean erabilgarri ez dagoen beste Google Play zerbitzu bat behar da. Laguntza lortzeko, jarri garatzailearekin harremanetan.</string>
+    <string name="e">Gaitu Google Play zerbitzuak</string>
+    <string name="f">%1$s aplikazioak ez du funtzionatuko Google Play zerbitzuak gaitzen ez badituzu.</string>
+    <string name="g">Gaitu Google Play zerbitzuak</string>
+    <string name="h">%1$s aplikazioak eskatu du</string>
+    <string name="i">Lortu Google Play zerbitzuak</string>
+    <string name="j">%1$s ez da exekutatuko Google Play zerbitzurik gabe, baina haiek ez daude telefonoan.</string>
+    <string name="k">%1$s ez da exekutatuko Google Play zerbitzurik gabe, baina haiek ez daude tabletan.</string>
+    <string name="l">Lortu Google Play zerbitzuak</string>
+    <string name="m">Zehaztutako kontua ez dago gailuan. Aukeratu beste kontu bat.</string>
+    <string name="n">Kontu baliogabea</string>
+    <string name="o">Aplikazio batek Google Play zerbitzuak gaituta egotea eskatzen du.</string>
+    <string name="p">Datu-konexioa behar da Google Play zerbitzuetara konektatzeko.</string>
+    <string name="q">Sareko errorea</string>
+    <string name="r">Aplikazio batek Google Play zerbitzuak eguneratzea eskatzen du.</string>
+    <string name="s">Google Play zerbitzuen errorea</string>
+    <string name="t">Errore bat gertatu da zehaztutako kontuan saioa hastean. Aukeratu beste kontu bat.</string>
+    <string name="u">Ezin izan da hasi saioa</string>
+    <string name="v">Google Play zerbitzuekin arazo ezezaguna dago.</string>
+    <string name="w">%1$s Google Play zerbitzuetan oinarrituta dago, baina zure gailuak ez ditu onartzen. Laguntza lortzeko, jarri fabrikatzailearekin harremanetan.</string>
+    <string name="x">Google Play zerbitzuak</string>
+    <string name="y">Eguneratu</string>
+    <string name="z">%1$s ez da exekutatuko Google Play zerbitzuak eguneratzen ez badituzu.</string>
+    <string name="a0">Eguneratu Google Play zerbitzuak</string>
+    <string name="a1">%1$s ez da exekutatuko Google Play zerbitzurik gabe; zerbitzuok une honetan eguneratzen ari dira.</string>
+    <string name="a2">Google Play zerbitzuak eguneratzen</string>
+    <string name="a3">Ireki telefonoan</string>
+    <string name="a4">Hasi saioa</string>
+    <string name="a5">Hasi saioa Google-n</string>
+</resources>

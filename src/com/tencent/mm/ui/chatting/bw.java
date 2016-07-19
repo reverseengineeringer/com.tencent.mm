@@ -1,37 +1,29 @@
 package com.tencent.mm.ui.chatting;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
-import com.tencent.mm.d.b.bg;
+import com.tencent.mm.aq.n;
+import com.tencent.mm.aq.q;
+import com.tencent.mm.aq.r;
+import com.tencent.mm.aq.s;
+import com.tencent.mm.e.b.bj;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.model.i;
-import com.tencent.mm.modelvoice.n;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.ag;
-import com.tencent.mm.storage.h;
-import com.tencent.mm.storage.k;
-import com.tencent.mm.t.aj;
-import com.tencent.mm.ui.base.AnimImageView;
-import com.tencent.mm.ui.base.g;
+import com.tencent.mm.pluginsdk.model.app.g;
+import com.tencent.mm.storage.ai;
 import com.tencent.mm.ui.j;
-import com.tencent.mm.ui.o;
 
 final class bw
-  extends aa.b
+  extends ab.c
 {
-  private ChattingUI.a kTe;
+  private ChattingUI.a ltl;
   
   public bw()
   {
-    super(6);
+    super(11);
   }
   
   public final View a(LayoutInflater paramLayoutInflater, View paramView)
@@ -40,169 +32,76 @@ final class bw
     if ((paramView != null) && (paramView.getTag() != null))
     {
       localObject = paramView;
-      if (getTagtype == eLV) {}
+      if (getTagtype == cTv) {}
     }
     else
     {
-      localObject = new ax(paramLayoutInflater, 2131361850);
-      ((View)localObject).setTag(new ec(eLV).b((View)localObject, true, kAy));
+      localObject = new ay(paramLayoutInflater, 2130903328);
+      ((View)localObject).setTag(new dz(cTv).f((View)localObject, false));
     }
     return (View)localObject;
   }
   
-  public final void a(aa.a parama, int paramInt, ChattingUI.a parama1, ag paramag, String paramString)
+  public final void a(ab.a parama, int paramInt, ChattingUI.a parama1, ai paramai, String paramString)
   {
-    int i = 1;
-    kTe = parama1;
-    paramString = (ec)parama;
-    ldW.setFromVoice(true);
-    ldW.setFromGroup(kAy);
-    a(kSE, field_msgId);
-    ec.a(paramString, paramag, paramInt, parama1, true);
-    if (nfield_content).time == 0L)
+    ltl = parama1;
+    parama = (dz)parama;
+    dz.a(parama, paramai, false, paramInt, parama1, 2130837950);
+    if (bkb())
     {
-      parama = kQK;
-      paramInt = 8;
-    }
-    for (;;)
-    {
-      parama.setVisibility(paramInt);
-      parama = bcE;
-      if ((parama != null) && (parama.length() != 0)) {
-        break;
+      paramString = s.kC(field_imgPath);
+      if ((paramString == null) || (status != 199) || (!a(lsL, field_msgId))) {
+        break label84;
       }
-      kQE.setVisibility(8);
+      if (lqs != null) {
+        lqs.setVisibility(0);
+      }
+    }
+    label84:
+    while (lqs == null) {
       return;
-      if (kSE.kVo != null)
-      {
-        paramInt = i;
-        if (kSE.kVo.kRi == field_msgId) {}
-      }
-      else
-      {
-        if (!com.tencent.mm.modelvoice.q.m(paramag)) {
-          break label179;
-        }
-      }
-      label179:
-      for (paramInt = i;; paramInt = 0)
-      {
-        parama = kQK;
-        if (paramInt == 0) {
-          break label184;
-        }
-        paramInt = 8;
-        break;
-      }
-      label184:
-      paramInt = 0;
     }
-    kQE.setVisibility(0);
-    b(parama1, kQE, dg.Hb(parama));
+    lqs.setVisibility(8);
   }
   
-  public final boolean a(ContextMenu paramContextMenu, View paramView, ag paramag)
+  public final boolean a(ContextMenu paramContextMenu, View paramView, ai paramai)
   {
-    int j;
-    if (ah.tD().isSDCardAvailable())
+    if (ah.tE().isSDCardAvailable())
     {
-      j = getTagposition;
-      if (((nfield_content).time != 0L) || (field_isSend != 0)) && ((field_status != 1) || (field_isSend != 1)))
+      int i = getTagposition;
+      q localq = n.Es().km(field_imgPath);
+      if ((localq != null) && ((status == 199) || (status == 199)))
       {
-        Boolean localBoolean = (Boolean)ah.tD().rn().get(26, null);
-        Object localObject = localBoolean;
-        if (localBoolean == null) {
-          localObject = Boolean.valueOf(false);
+        paramContextMenu.add(i, 106, 0, paramView.getContext().getString(2131231708));
+        paramContextMenu.add(i, 107, 0, paramView.getContext().getString(2131234525));
+        if (com.tencent.mm.av.c.zM("favorite")) {
+          paramContextMenu.add(i, 116, 0, paramView.getContext().getString(2131234160));
         }
-        if (!((Boolean)localObject).booleanValue()) {
-          break label346;
+        if (g.u(ltl.kNN.kOg, field_type)) {
+          paramContextMenu.add(i, 128, 0, paramView.getContext().getString(2131231704));
         }
-        paramContextMenu.add(j, 120, 0, 2131428002);
-        localObject = ah.tD().rq().Ep(field_talker);
-        if ((i.el(field_talker)) || (i.eI(field_talker)) || (localObject == null) || (((k)localObject).aWp())) {
-          break label364;
+        if ((!paramai.bco()) && (paramai.bcB()) && (bka()) && ((status == 199) || (status == 199) || (aQo == 1)) && (IZ(field_talker))) {
+          paramContextMenu.add(i, 123, 0, paramView.getContext().getString(2131231706));
         }
-        i = 1;
-        label168:
-        if (com.tencent.mm.ar.c.yf("favorite")) {
-          paramContextMenu.add(j, 116, 0, paramView.getContext().getString(2131431054));
+        if ((com.tencent.mm.v.o.xm()) && (!ltl.bln())) {
+          paramContextMenu.add(i, 114, 0, paramView.getContext().getString(2131231696));
         }
-        if (i != 0)
-        {
-          if (aj.xF().cX(2) <= 0) {
-            break label370;
-          }
-          i = 1;
-          label215:
-          if ((i != 0) && (!kTe.bfD())) {
-            paramContextMenu.add(j, 114, 0, paramView.getContext().getString(2131427998));
-          }
-        }
-        if ((!i.ea(field_talker)) || (!t.aUx())) {
-          break label376;
-        }
-        paramContextMenu.add(j, 121, 0, 2131427854);
+      }
+      if (!ltl.bln()) {
+        paramContextMenu.add(i, 100, 0, paramView.getContext().getString(2131231701));
       }
     }
-    label346:
-    label364:
-    label370:
-    label376:
-    for (int i = 1;; i = 0)
-    {
-      if (!kTe.bfD()) {
-        paramContextMenu.add(j, 100, 0, paramView.getContext().getString(2131427851));
-      }
-      if ((t.aUx()) && (i == 0)) {
-        paramContextMenu.add(j, 121, 0, 2131427854);
-      }
-      return true;
-      paramContextMenu.add(j, 119, 0, 2131428001);
-      break;
-      i = 0;
-      break label168;
-      i = 0;
-      break label215;
-    }
-  }
-  
-  public final boolean a(MenuItem paramMenuItem, final ChattingUI.a parama, final ag paramag)
-  {
-    switch (paramMenuItem.getItemId())
-    {
-    default: 
-      return false;
-    case 119: 
-      parama.hP(true);
-      return true;
-    case 120: 
-      parama.hP(false);
-      return true;
-    }
-    if (ChattingUI.a.bfX())
-    {
-      g.a(koJ.kpc, koJ.kpc.getString(2131429461), "", new DialogInterface.OnClickListener()
-      {
-        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
-        {
-          ChattingUI.a.bfY();
-          parama.ab(paramag);
-        }
-      });
-      return true;
-    }
-    parama.ab(paramag);
     return true;
   }
   
-  public final boolean a(View paramView, ChattingUI.a parama, ag paramag)
+  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ai paramai)
   {
     return false;
   }
   
-  protected final boolean a(ChattingUI.a parama)
+  public final boolean a(View paramView, ChattingUI.a parama, ai paramai)
   {
-    return kAy;
+    return false;
   }
 }
 

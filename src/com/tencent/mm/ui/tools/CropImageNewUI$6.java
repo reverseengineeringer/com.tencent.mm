@@ -10,7 +10,7 @@ final class CropImageNewUI$6
   
   public final void onClick(View paramView)
   {
-    CropImageNewUI.j(luq).biB();
+    CropImageNewUI.j(lVs).box();
   }
 }
 

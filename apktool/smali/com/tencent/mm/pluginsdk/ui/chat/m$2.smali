@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iMH:Lcom/tencent/mm/pluginsdk/ui/chat/m;
+.field final synthetic jjE:Lcom/tencent/mm/pluginsdk/ui/chat/m;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 55
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m$2;->iMH:Lcom/tencent/mm/pluginsdk/ui/chat/m;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m$2;->jjE:Lcom/tencent/mm/pluginsdk/ui/chat/m;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m$2;->iMH:Lcom/tencent/mm/pluginsdk/ui/chat/m;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m$2;->jjE:Lcom/tencent/mm/pluginsdk/ui/chat/m;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/m;->a(Lcom/tencent/mm/pluginsdk/ui/chat/m;)Lcom/tencent/mm/pluginsdk/ui/chat/m$a;
 
@@ -50,13 +50,13 @@
     if-eqz v0, :cond_0
 
     .line 60
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m$2;->iMH:Lcom/tencent/mm/pluginsdk/ui/chat/m;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m$2;->jjE:Lcom/tencent/mm/pluginsdk/ui/chat/m;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/m;->a(Lcom/tencent/mm/pluginsdk/ui/chat/m;)Lcom/tencent/mm/pluginsdk/ui/chat/m$a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/m$a;->aSj()V
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/m$a;->aXa()V
 
     .line 62
     :cond_0

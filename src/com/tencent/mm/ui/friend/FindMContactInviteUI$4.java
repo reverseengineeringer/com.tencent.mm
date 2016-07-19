@@ -10,8 +10,8 @@ final class FindMContactInviteUI$4
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    FindMContactInviteUI.n(lrv);
-    lrv.finish();
+    FindMContactInviteUI.n(lRZ);
+    lRZ.finish();
   }
 }
 

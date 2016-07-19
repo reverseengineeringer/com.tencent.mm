@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kOZ:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
+.field final synthetic lop:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 362
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$2;->kOZ:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$2;->lop:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,7 +44,7 @@
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     .line 366
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$2;->kOZ:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI$2;->lop:Lcom/tencent/mm/ui/bindmobile/FindMContactIntroUI;
 
     new-instance v1, Landroid/content/Intent;
 

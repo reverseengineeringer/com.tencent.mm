@@ -9,12 +9,12 @@ final class DragSortListView$a$1
   
   public final void onChanged()
   {
-    lEp.notifyDataSetChanged();
+    mff.notifyDataSetChanged();
   }
   
   public final void onInvalidated()
   {
-    lEp.notifyDataSetInvalidated();
+    mff.notifyDataSetInvalidated();
   }
 }
 

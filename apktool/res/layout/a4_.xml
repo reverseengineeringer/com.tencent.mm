@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/MMFullLineItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:paddingLeft="@dimen/cp" android:paddingRight="@dimen/cp" style="@style/MMListItem">
+        <ImageView android:id="@id/aj1" android:background="@raw/default_avatar" android:layout_width="@dimen/hz" android:layout_height="@dimen/hz" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="8.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/i8" android:textColor="@color/j_" android:id="@id/aj2" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <FrameLayout android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/bte" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="75.0dip" android:minHeight="30.0dip">
+            <TextView android:textSize="14.0dip" android:textColor="@color/ha" android:gravity="center" android:layout_gravity="center" android:id="@id/btf" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="60.0dip" android:minHeight="30.0dip" android:text="@string/awv" />
+            <ProgressBar android:gravity="center" android:layout_gravity="center" android:id="@id/btg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/smallCustomProgressBar" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

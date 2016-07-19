@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/r/d;
+.implements Lcom/tencent/mm/t/d;
 
 
 # annotations
@@ -30,13 +30,13 @@
 
 .field private authority:Ljava/lang/String;
 
-.field private cAX:Ljava/lang/String;
-
-.field private cAY:I
-
-.field private coM:Landroid/app/ProgressDialog;
+.field private cka:Landroid/app/ProgressDialog;
 
 .field private content:Ljava/lang/String;
+
+.field private cxS:Ljava/lang/String;
+
+.field private cxT:I
 
 .field private uri:Landroid/net/Uri;
 
@@ -46,18 +46,18 @@
     .locals 0
 
     .prologue
-    .line 70
+    .line 68
     invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;-><init>()V
 
-    .line 72
+    .line 70
     return-void
 .end method
 
-.method private JD()V
+.method private Km()V
     .locals 2
 
     .prologue
-    .line 661
+    .line 660
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -74,18 +74,18 @@
 
     invoke-static {p0, v0}, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil;->a(Landroid/content/Context;Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;)V
 
-    .line 662
+    .line 661
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->finish()V
 
-    .line 663
+    .line 662
     return-void
 .end method
 
-.method private JE()V
+.method private Kn()V
     .locals 2
 
     .prologue
-    .line 666
+    .line 665
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -102,10 +102,10 @@
 
     invoke-static {p0, v0}, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil;->a(Landroid/content/Context;Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;)V
 
-    .line 667
+    .line 666
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->finish()V
 
-    .line 668
+    .line 667
     return-void
 .end method
 
@@ -113,7 +113,7 @@
     .locals 0
 
     .prologue
-    .line 70
+    .line 68
     invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->goBack()V
 
     return-void
@@ -123,8 +123,8 @@
     .locals 0
 
     .prologue
-    .line 70
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->JD()V
+    .line 68
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->Km()V
 
     return-void
 .end method
@@ -133,17 +133,174 @@
     .locals 0
 
     .prologue
-    .line 70
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->JE()V
+    .line 68
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->Kn()V
 
     return-void
 .end method
 
-.method private static eK(I)Z
+.method private static e(Ljava/lang/String;ILjava/lang/String;)[B
+    .locals 3
+
+    .prologue
+    .line 551
+    new-instance v0, Ljava/lang/StringBuffer;
+
+    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
+
+    .line 552
+    if-eqz p0, :cond_0
+
+    .line 553
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    .line 556
+    :cond_0
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
+
+    .line 557
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    .line 558
+    const-string/jumbo v1, "mMcShCsTr"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    .line 560
+    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    const/16 v2, 0x9
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tencent/mm/a/g;->j([B)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 561
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic eS(I)Z
     .locals 1
 
     .prologue
-    .line 548
+    .line 68
+    invoke-static {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->fA(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method private static f([B[B)Z
+    .locals 4
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 565
+    if-eqz p0, :cond_0
+
+    array-length v0, p0
+
+    if-eqz v0, :cond_0
+
+    if-eqz p1, :cond_0
+
+    array-length v0, p1
+
+    if-nez v0, :cond_2
+
+    .line 566
+    :cond_0
+    const-string/jumbo v0, "MicroMsg.WXEntryActivity"
+
+    const-string/jumbo v2, "checkSumConsistent fail, invalid arguments"
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 581
+    :cond_1
+    :goto_0
+    return v1
+
+    .line 570
+    :cond_2
+    array-length v0, p0
+
+    array-length v2, p1
+
+    if-eq v0, v2, :cond_3
+
+    .line 571
+    const-string/jumbo v0, "MicroMsg.WXEntryActivity"
+
+    const-string/jumbo v2, "checkSumConsistent fail, length is different"
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_3
+    move v0, v1
+
+    .line 575
+    :goto_1
+    array-length v2, p0
+
+    if-ge v0, v2, :cond_4
+
+    .line 576
+    aget-byte v2, p0, v0
+
+    aget-byte v3, p1, v0
+
+    if-ne v2, v3, :cond_1
+
+    .line 575
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    .line 581
+    :cond_4
+    const/4 v1, 0x1
+
+    goto :goto_0
+.end method
+
+.method static synthetic f(Ljava/lang/String;ILjava/lang/String;)[B
+    .locals 1
+
+    .prologue
+    .line 68
+    invoke-static {p0, p1, p2}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->e(Ljava/lang/String;ILjava/lang/String;)[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method private static fA(I)Z
+    .locals 1
+
+    .prologue
+    .line 547
     const v0, 0x21010001
 
     if-lt p0, v0, :cond_0
@@ -159,19 +316,7 @@
     goto :goto_0
 .end method
 
-.method static synthetic ej(I)Z
-    .locals 1
-
-    .prologue
-    .line 70
-    invoke-static {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->eK(I)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method private g(Lcom/tencent/mm/r/j;)Z
+.method private g(Lcom/tencent/mm/t/j;)Z
     .locals 11
 
     .prologue
@@ -183,12 +328,12 @@
 
     const/4 v0, 0x0
 
-    .line 478
+    .line 477
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
-    .line 480
+    .line 479
     const-string/jumbo v3, "sendreq"
 
     iget-object v4, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->authority:Ljava/lang/String;
@@ -209,31 +354,31 @@
 
     if-eqz v3, :cond_7
 
-    .line 482
+    .line 481
     :cond_0
     iget-object v3, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->appId:Ljava/lang/String;
 
-    invoke-static {v3, v1}, Lcom/tencent/mm/pluginsdk/model/app/g;->ai(Ljava/lang/String;Z)Lcom/tencent/mm/pluginsdk/model/app/f;
+    invoke-static {v3, v1}, Lcom/tencent/mm/pluginsdk/model/app/g;->ar(Ljava/lang/String;Z)Lcom/tencent/mm/pluginsdk/model/app/f;
 
     move-result-object v3
 
-    .line 483
+    .line 482
     if-nez v3, :cond_1
 
-    .line 484
-    const-string/jumbo v1, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    .line 483
+    const-string/jumbo v1, "MicroMsg.WXEntryActivity"
 
     const-string/jumbo v2, "app not reg, do nothing"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 538
+    .line 537
     :goto_0
     return v0
 
-    .line 494
+    .line 493
     :cond_1
-    iget-object v4, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cAX:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cxS:Ljava/lang/String;
 
     invoke-static {p0, v3, v4}, Lcom/tencent/mm/pluginsdk/model/app/p;->b(Landroid/content/Context;Lcom/tencent/mm/pluginsdk/model/app/f;Ljava/lang/String;)Z
 
@@ -241,8 +386,8 @@
 
     if-nez v4, :cond_3
 
-    .line 495
-    const-string/jumbo v2, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    .line 494
+    const-string/jumbo v2, "MicroMsg.WXEntryActivity"
 
     const-string/jumbo v3, "send fail, check app fail, force to get app info from server again : %s"
 
@@ -252,18 +397,18 @@
 
     aput-object v5, v4, v0
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 496
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/aj;->aPQ()Lcom/tencent/mm/pluginsdk/model/app/h;
+    .line 495
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/al;->aUz()Lcom/tencent/mm/pluginsdk/model/app/h;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->appId:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/pluginsdk/model/app/h;->zN(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/pluginsdk/model/app/h;->BJ(Ljava/lang/String;)V
 
-    .line 497
+    .line 496
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
@@ -274,32 +419,32 @@
 
     const-string/jumbo v3, "_wxapi_command_type"
 
-    invoke-static {v2, v3, v0}, Lcom/tencent/mm/sdk/platformtools/p;->a(Landroid/os/Bundle;Ljava/lang/String;I)I
+    invoke-static {v2, v3, v0}, Lcom/tencent/mm/sdk/platformtools/q;->a(Landroid/os/Bundle;Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 498
+    .line 497
     if-ne v2, v1, :cond_2
 
-    .line 499
-    const-string/jumbo v1, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    .line 498
+    const-string/jumbo v1, "MicroMsg.WXEntryActivity"
 
     const-string/jumbo v2, "it is auth, just dealrequest"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 500
+    .line 499
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->finish()V
 
     goto :goto_0
 
-    .line 503
+    .line 502
     :cond_2
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->JE()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->Kn()V
 
     goto :goto_0
 
-    .line 507
+    .line 506
     :cond_3
     new-instance v4, Lcom/tencent/mm/sdk/modelmsg/c$a;
 
@@ -309,38 +454,38 @@
 
     invoke-direct {v4, v5}, Lcom/tencent/mm/sdk/modelmsg/c$a;-><init>(Landroid/os/Bundle;)V
 
-    .line 508
-    iget v5, v4, Lcom/tencent/mm/sdk/modelmsg/c$a;->asc:I
+    .line 507
+    iget v5, v4, Lcom/tencent/mm/sdk/modelmsg/c$a;->scene:I
 
     const/4 v6, 0x2
 
     if-ne v5, v6, :cond_5
 
-    .line 509
+    .line 508
     new-instance v5, Landroid/content/Intent;
 
     invoke-direct {v5}, Landroid/content/Intent;-><init>()V
 
-    .line 510
+    .line 509
     invoke-virtual {v5, v10}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     move-result-object v6
 
     invoke-virtual {v6, v9}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 511
+    .line 510
     invoke-virtual {v2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v2
 
     invoke-virtual {v5, v2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 513
-    iget-object v2, v4, Lcom/tencent/mm/sdk/modelmsg/c$a;->jUS:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    .line 512
+    iget-object v2, v4, Lcom/tencent/mm/sdk/modelmsg/c$a;->kuy:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     if-eqz v2, :cond_4
 
-    iget-object v2, v4, Lcom/tencent/mm/sdk/modelmsg/c$a;->jUS:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget-object v2, v4, Lcom/tencent/mm/sdk/modelmsg/c$a;->kuy:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     invoke-virtual {v2}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->getType()I
 
@@ -350,8 +495,8 @@
 
     if-ne v2, v4, :cond_4
 
-    .line 514
-    const-string/jumbo v2, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    .line 513
+    const-string/jumbo v2, "MicroMsg.WXEntryActivity"
 
     const-string/jumbo v4, "report(11954), appId : %s"
 
@@ -361,9 +506,9 @@
 
     aput-object v7, v6, v0
 
-    invoke-static {v2, v4, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v4, v6}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 515
+    .line 514
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v2, "app_"
@@ -380,20 +525,20 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/model/k;->eV(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/model/k;->fh(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 516
+    invoke-static {}, Lcom/tencent/mm/model/k;->sV()Lcom/tencent/mm/model/k;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/model/k;->ff(Ljava/lang/String;)Lcom/tencent/mm/model/k$a;
+
+    move-result-object v2
+
     .line 517
-    invoke-static {}, Lcom/tencent/mm/model/k;->sW()Lcom/tencent/mm/model/k;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/model/k;->eT(Ljava/lang/String;)Lcom/tencent/mm/model/k$a;
-
-    move-result-object v2
-
-    .line 518
     const-string/jumbo v4, "prePublishId"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -412,35 +557,35 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v4, v3}, Lcom/tencent/mm/model/k$a;->e(Ljava/lang/String;Ljava/lang/Object;)Lcom/tencent/mm/model/k$a;
+    invoke-virtual {v2, v4, v3}, Lcom/tencent/mm/model/k$a;->l(Ljava/lang/String;Ljava/lang/Object;)Lcom/tencent/mm/model/k$a;
 
-    .line 519
+    .line 518
     const-string/jumbo v2, "reportSessionId"
 
     invoke-virtual {v5, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 521
+    .line 520
     :cond_4
     const-string/jumbo v0, "favorite"
 
     const-string/jumbo v2, ".ui.FavOpenApiEntry"
 
-    invoke-static {p0, v0, v2, v5}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {p0, v0, v2, v5}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     move v0, v1
 
-    .line 522
+    .line 521
     goto/16 :goto_0
 
-    .line 524
+    .line 523
     :cond_5
     if-eqz p1, :cond_6
 
-    iget-object v3, v4, Lcom/tencent/mm/sdk/modelmsg/c$a;->jUS:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget-object v3, v4, Lcom/tencent/mm/sdk/modelmsg/c$a;->kuy:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     if-eqz v3, :cond_6
 
-    iget-object v3, v4, Lcom/tencent/mm/sdk/modelmsg/c$a;->jUS:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget-object v3, v4, Lcom/tencent/mm/sdk/modelmsg/c$a;->kuy:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     invoke-virtual {v3}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->getType()I
 
@@ -450,70 +595,70 @@
 
     if-ne v3, v5, :cond_6
 
-    .line 525
-    check-cast p1, Lcom/tencent/mm/modelsimple/ag;
+    .line 524
+    check-cast p1, Lcom/tencent/mm/modelsimple/ae;
 
-    invoke-virtual {p1}, Lcom/tencent/mm/modelsimple/ag;->CM()Lcom/tencent/mm/protocal/b/aub;
+    invoke-virtual {p1}, Lcom/tencent/mm/modelsimple/ae;->CZ()Lcom/tencent/mm/protocal/b/aur;
 
     move-result-object v3
 
-    .line 526
+    .line 525
     if-eqz v3, :cond_6
 
-    iget-object v5, v3, Lcom/tencent/mm/protocal/b/aub;->jMT:Lcom/tencent/mm/protocal/b/ape;
+    iget-object v5, v3, Lcom/tencent/mm/protocal/b/aur;->klD:Lcom/tencent/mm/protocal/b/app;
 
     if-eqz v5, :cond_6
 
-    iget-object v5, v3, Lcom/tencent/mm/protocal/b/aub;->jMT:Lcom/tencent/mm/protocal/b/ape;
+    iget-object v5, v3, Lcom/tencent/mm/protocal/b/aur;->klD:Lcom/tencent/mm/protocal/b/app;
 
-    iget-object v5, v5, Lcom/tencent/mm/protocal/b/ape;->url:Ljava/lang/String;
+    iget-object v5, v5, Lcom/tencent/mm/protocal/b/app;->url:Ljava/lang/String;
 
-    invoke-static {v5}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+    invoke-static {v5}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
 
     move-result v5
 
     if-nez v5, :cond_6
 
-    .line 527
-    const-string/jumbo v5, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    .line 526
+    const-string/jumbo v5, "MicroMsg.WXEntryActivity"
 
     const-string/jumbo v6, "change appextend to Webpage,url :%s"
 
     new-array v7, v1, [Ljava/lang/Object;
 
-    iget-object v8, v3, Lcom/tencent/mm/protocal/b/aub;->jMT:Lcom/tencent/mm/protocal/b/ape;
+    iget-object v8, v3, Lcom/tencent/mm/protocal/b/aur;->klD:Lcom/tencent/mm/protocal/b/app;
 
-    iget-object v8, v8, Lcom/tencent/mm/protocal/b/ape;->url:Ljava/lang/String;
+    iget-object v8, v8, Lcom/tencent/mm/protocal/b/app;->url:Ljava/lang/String;
 
     aput-object v8, v7, v0
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 528
-    iget-object v0, v4, Lcom/tencent/mm/sdk/modelmsg/c$a;->jUS:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    .line 527
+    iget-object v0, v4, Lcom/tencent/mm/sdk/modelmsg/c$a;->kuy:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     new-instance v5, Lcom/tencent/mm/sdk/modelmsg/WXWebpageObject;
 
-    iget-object v3, v3, Lcom/tencent/mm/protocal/b/aub;->jMT:Lcom/tencent/mm/protocal/b/ape;
+    iget-object v3, v3, Lcom/tencent/mm/protocal/b/aur;->klD:Lcom/tencent/mm/protocal/b/app;
 
-    iget-object v3, v3, Lcom/tencent/mm/protocal/b/ape;->url:Ljava/lang/String;
+    iget-object v3, v3, Lcom/tencent/mm/protocal/b/app;->url:Ljava/lang/String;
 
     invoke-direct {v5, v3}, Lcom/tencent/mm/sdk/modelmsg/WXWebpageObject;-><init>(Ljava/lang/String;)V
 
     iput-object v5, v0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->mediaObject:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$b;
 
-    .line 529
+    .line 528
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 530
-    invoke-virtual {v4, v0}, Lcom/tencent/mm/sdk/modelmsg/c$a;->l(Landroid/os/Bundle;)V
+    .line 529
+    invoke-virtual {v4, v0}, Lcom/tencent/mm/sdk/modelmsg/c$a;->n(Landroid/os/Bundle;)V
 
-    .line 531
+    .line 530
     invoke-virtual {v2, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 534
+    .line 533
     :cond_6
     new-instance v0, Landroid/content/Intent;
 
@@ -541,12 +686,12 @@
 
     move v0, v1
 
-    .line 535
+    .line 534
     goto/16 :goto_0
 
-    .line 537
+    .line 536
     :cond_7
-    const-string/jumbo v1, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    const-string/jumbo v1, "MicroMsg.WXEntryActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -564,82 +709,38 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 .end method
 
-.method private static g(Ljava/lang/String;ILjava/lang/String;)[B
-    .locals 3
+.method static synthetic g([B[B)Z
+    .locals 1
 
     .prologue
-    .line 552
-    new-instance v0, Ljava/lang/StringBuffer;
+    .line 68
+    invoke-static {p0, p1}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->f([B[B)Z
 
-    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
+    move-result v0
 
-    .line 553
-    if-eqz p0, :cond_0
-
-    .line 554
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    .line 557
-    :cond_0
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
-
-    .line 558
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    .line 559
-    const-string/jumbo v1, "mMcShCsTr"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    .line 561
-    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    const/16 v2, 0x9
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 562
-    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method
 
 .method private goBack()V
     .locals 2
 
     .prologue
-    .line 648
-    const v0, 0x7f070057
+    .line 647
+    const v0, 0x7f100edd
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 649
+    .line 648
     if-eqz v0, :cond_0
 
-    .line 650
+    .line 649
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
     move-result v0
@@ -648,137 +749,36 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 651
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->JE()V
+    .line 650
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->Kn()V
 
-    .line 658
+    .line 657
     :goto_0
     return-void
 
-    .line 656
+    .line 655
     :cond_0
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->JD()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->Km()V
 
     goto :goto_0
 .end method
 
-.method private static h([B[B)Z
-    .locals 4
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 566
-    if-eqz p0, :cond_0
-
-    array-length v0, p0
-
-    if-eqz v0, :cond_0
-
-    if-eqz p1, :cond_0
-
-    array-length v0, p1
-
-    if-nez v0, :cond_2
-
-    .line 567
-    :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
-
-    const-string/jumbo v2, "checkSumConsistent fail, invalid arguments"
-
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 582
-    :cond_1
-    :goto_0
-    return v1
-
-    .line 571
-    :cond_2
-    array-length v0, p0
-
-    array-length v2, p1
-
-    if-eq v0, v2, :cond_3
-
-    .line 572
-    const-string/jumbo v0, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
-
-    const-string/jumbo v2, "checkSumConsistent fail, length is different"
-
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_3
-    move v0, v1
-
-    .line 576
-    :goto_1
-    array-length v2, p0
-
-    if-ge v0, v2, :cond_4
-
-    .line 577
-    aget-byte v2, p0, v0
-
-    aget-byte v3, p1, v0
-
-    if-ne v2, v3, :cond_1
-
-    .line 576
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    .line 582
-    :cond_4
-    const/4 v1, 0x1
-
-    goto :goto_0
-.end method
-
-.method static synthetic h(Ljava/lang/String;ILjava/lang/String;)[B
-    .locals 1
-
-    .prologue
-    .line 70
-    invoke-static {p0, p1, p2}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->g(Ljava/lang/String;ILjava/lang/String;)[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method static synthetic i([B[B)Z
-    .locals 1
-
-    .prologue
-    .line 70
-    invoke-static {p0, p1}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->h([B[B)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method private static lk(Ljava/lang/String;)Ljava/lang/String;
+.method private static lV(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
     .prologue
-    .line 461
-    invoke-static {p0}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+    .line 460
+    invoke-static {p0}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 469
+    .line 468
     :goto_0
     return-object p0
 
-    .line 466
+    .line 465
     :cond_0
     :try_start_0
     invoke-static {p0}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;)Ljava/lang/String;
@@ -789,12 +789,12 @@
 
     goto :goto_0
 
-    .line 467
+    .line 466
     :catch_0
     move-exception v0
 
-    .line 468
-    const-string/jumbo v1, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    .line 467
+    const-string/jumbo v1, "MicroMsg.WXEntryActivity"
 
     const-string/jumbo v2, "urlEncode fail, str = %s, ex = %s"
 
@@ -814,12 +814,12 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method private n(Landroid/content/Intent;)Z
+.method private o(Landroid/content/Intent;)Z
     .locals 5
 
     .prologue
@@ -827,30 +827,30 @@
 
     const/4 v1, 0x0
 
-    .line 315
+    .line 313
     const-string/jumbo v2, "_mmessage_sdkVersion"
 
-    invoke-static {p1, v2, v1}, Lcom/tencent/mm/sdk/platformtools/p;->a(Landroid/content/Intent;Ljava/lang/String;I)I
+    invoke-static {p1, v2, v1}, Lcom/tencent/mm/sdk/platformtools/q;->a(Landroid/content/Intent;Ljava/lang/String;I)I
 
     move-result v2
 
-    iput v2, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cAY:I
+    iput v2, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cxT:I
 
-    .line 316
+    .line 314
     const-string/jumbo v2, "_mmessage_content"
 
-    invoke-static {p1, v2}, Lcom/tencent/mm/sdk/platformtools/p;->g(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v2}, Lcom/tencent/mm/sdk/platformtools/q;->g(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->content:Ljava/lang/String;
 
-    .line 317
+    .line 315
     iget-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->content:Ljava/lang/String;
 
     if-eqz v2, :cond_0
 
-    .line 318
+    .line 316
     iget-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->content:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -859,7 +859,7 @@
 
     iput-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->uri:Landroid/net/Uri;
 
-    .line 319
+    .line 317
     iget-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->uri:Landroid/net/Uri;
 
     invoke-virtual {v2}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
@@ -868,7 +868,7 @@
 
     iput-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->authority:Ljava/lang/String;
 
-    .line 321
+    .line 319
     :try_start_0
     iget-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->uri:Landroid/net/Uri;
 
@@ -882,25 +882,25 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 329
+    .line 327
     const-string/jumbo v1, "_mmessage_appPackage"
 
-    invoke-static {p1, v1}, Lcom/tencent/mm/sdk/platformtools/p;->g(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, Lcom/tencent/mm/sdk/platformtools/q;->g(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cAX:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cxS:Ljava/lang/String;
 
-    .line 330
+    .line 328
     :goto_0
     return v0
 
-    .line 322
+    .line 320
     :catch_0
     move-exception v2
 
-    .line 323
-    const-string/jumbo v3, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    .line 321
+    const-string/jumbo v3, "MicroMsg.WXEntryActivity"
 
     const-string/jumbo v4, "init: %s"
 
@@ -912,307 +912,22 @@
 
     aput-object v2, v0, v1
 
-    invoke-static {v3, v4, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
-    .line 324
+    .line 322
     goto :goto_0
 
     :cond_0
     move v0, v1
 
-    .line 327
+    .line 325
     goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
-    .locals 8
-
-    .prologue
-    const/4 v7, 0x0
-
-    const v6, 0x7f0b08c7
-
-    const/4 v4, 0x1
-
-    const/4 v5, 0x0
-
-    .line 587
-    const-string/jumbo v0, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
-
-    const-string/jumbo v1, "onSceneEnd, errType = %d, errCode = %d, errMsg = %s"
-
-    const/4 v2, 0x3
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v2, v5
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v2, v4
-
-    const/4 v3, 0x2
-
-    aput-object p3, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 588
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
-
-    move-result-object v0
-
-    const/16 v1, 0x4b0
-
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
-
-    .line 589
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->coM:Landroid/app/ProgressDialog;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->coM:Landroid/app/ProgressDialog;
-
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->isShowing()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 590
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->coM:Landroid/app/ProgressDialog;
-
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
-
-    .line 592
-    :cond_0
-    if-nez p1, :cond_1
-
-    if-nez p2, :cond_1
-
-    .line 593
-    invoke-direct {p0, p4}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->g(Lcom/tencent/mm/r/j;)Z
-
-    .line 594
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->finish()V
-
-    .line 634
-    :goto_0
-    return-void
-
-    .line 596
-    :cond_1
-    const/4 v0, 0x4
-
-    invoke-static {p0, p1, p2, v7, v0}, Lcom/tencent/mm/ui/n$a;->b(Landroid/content/Context;IILjava/lang/String;I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 597
-    const-string/jumbo v0, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
-
-    const-string/jumbo v1, "mm error processor process this errcode"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 598
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->finish()V
-
-    goto :goto_0
-
-    .line 601
-    :cond_2
-    const v0, 0x7f070057
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
-
-    .line 602
-    const v0, 0x7f0b08c3
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->qb(I)V
-
-    .line 603
-    const v0, 0x7f070058
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    .line 604
-    invoke-static {p3}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    .line 605
-    const-string/jumbo v1, "autoauth_errmsg_"
-
-    invoke-virtual {p3, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    .line 606
-    const/16 v1, 0x10
-
-    invoke-virtual {p3, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object p3
-
-    .line 608
-    :cond_3
-    const-string/jumbo v1, "<e>"
-
-    invoke-virtual {p3, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    .line 609
-    const-string/jumbo v1, "e"
-
-    invoke-static {p3, v1, v7}, Lcom/tencent/mm/sdk/platformtools/q;->J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
-
-    move-result-object v2
-
-    .line 610
-    if-eqz v2, :cond_4
-
-    const-string/jumbo v1, ".e.Content"
-
-    invoke-interface {v2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-static {v1}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    .line 611
-    const-string/jumbo v1, ".e.Content"
-
-    invoke-interface {v2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    move-object p3, v1
-
-    .line 614
-    :cond_4
-    const v1, 0x7f0b08c5
-
-    new-array v2, v4, [Ljava/lang/Object;
-
-    aput-object p3, v2, v5
-
-    invoke-virtual {p0, v1, v2}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 616
-    :cond_5
-    const v0, 0x7f070059
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Button;
-
-    .line 617
-    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->appId:Ljava/lang/String;
-
-    invoke-static {p0, v1}, Lcom/tencent/mm/pluginsdk/model/app/g;->l(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 618
-    const-string/jumbo v2, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
-
-    const-string/jumbo v3, "appName = %s"
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    aput-object v1, v4, v5
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 619
-    invoke-static {v1}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_6
-
-    .line 620
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0, v6}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
-
-    .line 624
-    :goto_1
-    new-instance v1, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$3;
-
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$3;-><init>(Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    goto/16 :goto_0
-
-    .line 622
-    :cond_6
-    invoke-virtual {v0, v6}, Landroid/widget/Button;->setText(I)V
-
-    goto :goto_1
-.end method
-
 .method protected final a(Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;Landroid/content/Intent;)V
     .locals 10
 
@@ -1227,8 +942,8 @@
 
     const/4 v4, 0x1
 
-    .line 386
-    const-string/jumbo v0, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    .line 384
+    const-string/jumbo v0, "MicroMsg.WXEntryActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1244,13 +959,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 385
+    invoke-direct {p0, p2}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->o(Landroid/content/Intent;)Z
 
     .line 387
-    invoke-direct {p0, p2}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->n(Landroid/content/Intent;)Z
-
-    .line 389
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$4;->cBe:[I
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$4;->cxZ:[I
 
     invoke-virtual {p1}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->ordinal()I
 
@@ -1260,8 +975,8 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 398
-    const-string/jumbo v0, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    .line 397
+    const-string/jumbo v0, "MicroMsg.WXEntryActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1277,17 +992,17 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 402
+    .line 401
     :goto_0
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->finish()V
 
-    .line 403
+    .line 402
     :goto_1
     return-void
 
-    .line 391
+    .line 389
     :pswitch_0
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->getIntent()Landroid/content/Intent;
 
@@ -1306,11 +1021,11 @@
     if-nez v0, :cond_1
 
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    const-string/jumbo v0, "MicroMsg.WXEntryActivity"
 
     const-string/jumbo v1, "checkCanShare fail, invalid intent/extras"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->finish()V
 
@@ -1329,19 +1044,19 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/modelmsg/c$a;-><init>(Landroid/os/Bundle;)V
 
-    iget-object v6, v0, Lcom/tencent/mm/sdk/modelmsg/c$a;->jUS:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+    iget-object v6, v0, Lcom/tencent/mm/sdk/modelmsg/c$a;->kuy:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     if-nez v6, :cond_2
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    const-string/jumbo v0, "MicroMsg.WXEntryActivity"
 
     const-string/jumbo v1, "wxmsg is null, how could it be?, directly deal request"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->g(Lcom/tencent/mm/r/j;)Z
+    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->g(Lcom/tencent/mm/t/j;)Z
 
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->finish()V
 
@@ -1358,28 +1073,28 @@
 
     const-string/jumbo v7, "_wxapi_command_type"
 
-    invoke-static {v1, v7, v5}, Lcom/tencent/mm/sdk/platformtools/p;->a(Landroid/os/Bundle;Ljava/lang/String;I)I
+    invoke-static {v1, v7, v5}, Lcom/tencent/mm/sdk/platformtools/q;->a(Landroid/os/Bundle;Ljava/lang/String;I)I
 
     move-result v1
 
     if-ne v1, v4, :cond_3
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    const-string/jumbo v0, "MicroMsg.WXEntryActivity"
 
     const-string/jumbo v1, "it is auth, just dealrequest"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->g(Lcom/tencent/mm/r/j;)Z
+    invoke-direct {p0, v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->g(Lcom/tencent/mm/t/j;)Z
 
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->finish()V
 
     goto :goto_1
 
     :cond_3
-    iget v1, v0, Lcom/tencent/mm/sdk/modelmsg/c$a;->asc:I
+    iget v1, v0, Lcom/tencent/mm/sdk/modelmsg/c$a;->scene:I
 
     if-ne v1, v3, :cond_4
 
@@ -1412,7 +1127,7 @@
 
     iget-object v0, v0, Lcom/tencent/mm/sdk/modelmsg/WXTextObject;->text:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->lk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->lV(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1447,11 +1162,11 @@
     move-result-object v0
 
     :goto_3
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v2, 0x7f0b0e1d
+    const v2, 0x7f080149
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->getString(I)Ljava/lang/String;
 
@@ -1465,34 +1180,34 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->coM:Landroid/app/ProgressDialog;
+    iput-object v1, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cka:Landroid/app/ProgressDialog;
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
     const/16 v2, 0x4b0
 
-    invoke-virtual {v1, v2, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v1, v2, p0}, Lcom/tencent/mm/t/m;->a(ILcom/tencent/mm/t/d;)V
 
     new-instance v1, Ljava/util/LinkedList;
 
     invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
 
-    new-instance v2, Lcom/tencent/mm/modelsimple/ag;
+    new-instance v2, Lcom/tencent/mm/modelsimple/ae;
 
-    invoke-direct {v2, v0, v4, v1}, Lcom/tencent/mm/modelsimple/ag;-><init>(Ljava/lang/String;ILjava/util/LinkedList;)V
+    invoke-direct {v2, v0, v4, v1}, Lcom/tencent/mm/modelsimple/ae;-><init>(Ljava/lang/String;ILjava/util/LinkedList;)V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    invoke-virtual {v0, v2, v5}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
     goto/16 :goto_1
 
     :cond_4
-    iget v1, v0, Lcom/tencent/mm/sdk/modelmsg/c$a;->asc:I
+    iget v1, v0, Lcom/tencent/mm/sdk/modelmsg/c$a;->scene:I
 
     if-ne v1, v4, :cond_5
 
@@ -1501,7 +1216,7 @@
     goto :goto_2
 
     :cond_5
-    iget v0, v0, Lcom/tencent/mm/sdk/modelmsg/c$a;->asc:I
+    iget v0, v0, Lcom/tencent/mm/sdk/modelmsg/c$a;->scene:I
 
     if-nez v0, :cond_8
 
@@ -1536,7 +1251,7 @@
 
     iget-object v1, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->description:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->lk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->lV(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1544,7 +1259,7 @@
 
     iget-object v0, v0, Lcom/tencent/mm/sdk/modelmsg/WXWebpageObject;->webpageUrl:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->lk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->lV(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1593,7 +1308,7 @@
 
     iget-object v1, v6, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->description:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->lk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->lV(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1629,9 +1344,12 @@
 
     goto/16 :goto_3
 
-    .line 395
+    .line 393
     :pswitch_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->Km()V
+
+    .line 394
+    const-string/jumbo v0, "MicroMsg.WXEntryActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1647,7 +1365,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -1656,7 +1374,9 @@
 
     goto/16 :goto_2
 
-    .line 389
+    .line 387
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1669,13 +1389,13 @@
     .locals 1
 
     .prologue
-    .line 544
-    const v0, 0x7f0a0008
+    .line 543
+    const v0, 0x7f0304e6
 
     return v0
 .end method
 
-.method protected final m(Landroid/content/Intent;)Z
+.method protected final n(Landroid/content/Intent;)Z
     .locals 6
 
     .prologue
@@ -1683,44 +1403,44 @@
 
     const/4 v0, 0x0
 
-    .line 335
-    invoke-direct {p0, p1}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->n(Landroid/content/Intent;)Z
+    .line 333
+    invoke-direct {p0, p1}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->o(Landroid/content/Intent;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 336
-    const-string/jumbo v1, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    .line 334
+    const-string/jumbo v1, "MicroMsg.WXEntryActivity"
 
     const-string/jumbo v2, "Init failed"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 337
+    .line 335
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->finish()V
 
-    .line 381
+    .line 379
     :goto_0
     return v0
 
-    .line 341
+    .line 339
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tM()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tN()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 342
+    .line 340
     :cond_1
-    const-string/jumbo v2, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    const-string/jumbo v2, "MicroMsg.WXEntryActivity"
 
     const-string/jumbo v3, "preLogin not login, save the appid : %s"
 
@@ -1730,25 +1450,25 @@
 
     aput-object v5, v4, v0
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 343
+    .line 341
     iget-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->appId:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/tencent/mm/pluginsdk/model/app/p;->zW(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/tencent/mm/pluginsdk/model/app/p;->BT(Ljava/lang/String;)V
 
-    .line 345
+    .line 343
     :cond_2
-    iget v2, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cAY:I
+    iget v2, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cxT:I
 
-    invoke-static {v2}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->eK(I)Z
+    invoke-static {v2}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->fA(I)Z
 
     move-result v2
 
     if-nez v2, :cond_3
 
-    .line 346
-    const-string/jumbo v1, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    .line 344
+    const-string/jumbo v1, "MicroMsg.WXEntryActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1756,7 +1476,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v3, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cAY:I
+    iget v3, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cxT:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1766,34 +1486,34 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 347
+    .line 345
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->finish()V
 
     goto :goto_0
 
-    .line 351
+    .line 349
     :cond_3
     iget-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->uri:Landroid/net/Uri;
 
     if-nez v2, :cond_4
 
-    .line 352
-    const-string/jumbo v1, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    .line 350
+    const-string/jumbo v1, "MicroMsg.WXEntryActivity"
 
     const-string/jumbo v2, "check appid failed, null content"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 353
+    .line 351
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->finish()V
 
     goto :goto_0
 
-    .line 357
+    .line 355
     :cond_4
-    const-string/jumbo v2, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    const-string/jumbo v2, "MicroMsg.WXEntryActivity"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1811,32 +1531,32 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 359
+    .line 357
     iget-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->appId:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_5
 
-    .line 360
-    const-string/jumbo v1, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    .line 358
+    const-string/jumbo v1, "MicroMsg.WXEntryActivity"
 
     const-string/jumbo v2, "invalid appid, ignore"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 361
+    .line 359
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->finish()V
 
     goto/16 :goto_0
 
-    .line 365
+    .line 363
     :cond_5
-    const-string/jumbo v2, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    const-string/jumbo v2, "MicroMsg.WXEntryActivity"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1844,7 +1564,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cAX:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cxS:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1854,63 +1574,63 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 366
-    iget-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cAX:Ljava/lang/String;
+    .line 364
+    iget-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cxS:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_6
 
-    .line 367
-    const-string/jumbo v1, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    .line 365
+    const-string/jumbo v1, "MicroMsg.WXEntryActivity"
 
     const-string/jumbo v2, "unknown package, ignore"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 368
+    .line 366
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->finish()V
 
     goto/16 :goto_0
 
-    .line 372
+    .line 370
     :cond_6
     const-string/jumbo v2, "_mmessage_checksum"
 
-    invoke-static {p1, v2}, Lcom/tencent/mm/sdk/platformtools/p;->h(Landroid/content/Intent;Ljava/lang/String;)[B
+    invoke-static {p1, v2}, Lcom/tencent/mm/sdk/platformtools/q;->h(Landroid/content/Intent;Ljava/lang/String;)[B
 
     move-result-object v2
 
-    .line 373
+    .line 371
     iget-object v3, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->content:Ljava/lang/String;
 
-    iget v4, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cAY:I
+    iget v4, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cxT:I
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cAX:Ljava/lang/String;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cxS:Ljava/lang/String;
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->g(Ljava/lang/String;ILjava/lang/String;)[B
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->e(Ljava/lang/String;ILjava/lang/String;)[B
 
     move-result-object v3
 
-    .line 375
-    invoke-static {v2, v3}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->h([B[B)Z
+    .line 373
+    invoke-static {v2, v3}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->f([B[B)Z
 
     move-result v2
 
     if-nez v2, :cond_7
 
-    .line 376
-    const-string/jumbo v1, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    .line 374
+    const-string/jumbo v1, "MicroMsg.WXEntryActivity"
 
     const-string/jumbo v2, "checksum fail"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 377
+    .line 375
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->finish()V
 
     goto/16 :goto_0
@@ -1918,7 +1638,7 @@
     :cond_7
     move v0, v1
 
-    .line 381
+    .line 379
     goto/16 :goto_0
 .end method
 
@@ -1926,17 +1646,17 @@
     .locals 1
 
     .prologue
-    .line 302
+    .line 300
     invoke-super {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 303
+    .line 301
     new-instance v0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$1;-><init>(Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;)V
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
-    .line 312
+    .line 310
     return-void
 .end method
 
@@ -1944,19 +1664,19 @@
     .locals 2
 
     .prologue
-    .line 672
+    .line 671
     invoke-super {p0}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->onDestroy()V
 
-    .line 673
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 672
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
     const/16 v1, 0x4b0
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
 
-    .line 674
+    .line 673
     return-void
 .end method
 
@@ -1964,7 +1684,7 @@
     .locals 2
 
     .prologue
-    .line 638
+    .line 637
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getRepeatCount()I
 
     move-result v0
@@ -1979,20 +1699,20 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 639
-    const-string/jumbo v0, "!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY="
+    .line 638
+    const-string/jumbo v0, "MicroMsg.WXEntryActivity"
 
     const-string/jumbo v1, "user click back button"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 640
+    .line 639
     invoke-direct {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->goBack()V
 
-    .line 641
+    .line 640
     const/4 v0, 0x1
 
-    .line 643
+    .line 642
     :goto_0
     return v0
 
@@ -2002,4 +1722,289 @@
     move-result v0
 
     goto :goto_0
+.end method
+
+.method public onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
+    .locals 7
+
+    .prologue
+    const v6, 0x7f0811f3
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    .line 586
+    const-string/jumbo v0, "MicroMsg.WXEntryActivity"
+
+    const-string/jumbo v1, "onSceneEnd, errType = %d, errCode = %d, errMsg = %s"
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v5
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v4
+
+    const/4 v3, 0x2
+
+    aput-object p3, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 587
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
+
+    move-result-object v0
+
+    const/16 v1, 0x4b0
+
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/t/m;->b(ILcom/tencent/mm/t/d;)V
+
+    .line 588
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cka:Landroid/app/ProgressDialog;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cka:Landroid/app/ProgressDialog;
+
+    invoke-virtual {v0}, Landroid/app/ProgressDialog;->isShowing()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 589
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->cka:Landroid/app/ProgressDialog;
+
+    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
+
+    .line 591
+    :cond_0
+    if-nez p1, :cond_1
+
+    if-nez p2, :cond_1
+
+    .line 592
+    invoke-direct {p0, p4}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->g(Lcom/tencent/mm/t/j;)Z
+
+    .line 593
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->finish()V
+
+    .line 633
+    :goto_0
+    return-void
+
+    .line 595
+    :cond_1
+    const/4 v0, 0x0
+
+    const/4 v1, 0x4
+
+    invoke-static {p0, p1, p2, v0, v1}, Lcom/tencent/mm/ui/n$a;->a(Landroid/content/Context;IILjava/lang/String;I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 596
+    const-string/jumbo v0, "MicroMsg.WXEntryActivity"
+
+    const-string/jumbo v1, "mm error processor process this errcode"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 597
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->finish()V
+
+    goto :goto_0
+
+    .line 600
+    :cond_2
+    const v0, 0x7f100edd
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
+
+    .line 601
+    const v0, 0x7f0811f5
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->rR(I)V
+
+    .line 602
+    const v0, 0x7f100ede
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    .line 603
+    invoke-static {p3}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    .line 604
+    const-string/jumbo v1, "autoauth_errmsg_"
+
+    invoke-virtual {p3, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    .line 605
+    const/16 v1, 0x10
+
+    invoke-virtual {p3, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p3
+
+    .line 607
+    :cond_3
+    const-string/jumbo v1, "<e>"
+
+    invoke-virtual {p3, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    .line 608
+    const-string/jumbo v1, "e"
+
+    invoke-static {p3, v1}, Lcom/tencent/mm/sdk/platformtools/r;->cr(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+
+    move-result-object v2
+
+    .line 609
+    if-eqz v2, :cond_4
+
+    const-string/jumbo v1, ".e.Content"
+
+    invoke-interface {v2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    .line 610
+    const-string/jumbo v1, ".e.Content"
+
+    invoke-interface {v2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    move-object p3, v1
+
+    .line 613
+    :cond_4
+    const v1, 0x7f0811f6
+
+    new-array v2, v4, [Ljava/lang/Object;
+
+    aput-object p3, v2, v5
+
+    invoke-virtual {p0, v1, v2}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 615
+    :cond_5
+    const v0, 0x7f100edf
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/Button;
+
+    .line 616
+    iget-object v1, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->appId:Ljava/lang/String;
+
+    invoke-static {p0, v1}, Lcom/tencent/mm/pluginsdk/model/app/g;->m(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 617
+    const-string/jumbo v2, "MicroMsg.WXEntryActivity"
+
+    const-string/jumbo v3, "appName = %s"
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    aput-object v1, v4, v5
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 618
+    invoke-static {v1}, Lcom/tencent/mm/platformtools/s;->kf(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_6
+
+    .line 619
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0, v6}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+
+    .line 623
+    :goto_1
+    new-instance v1, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$3;
+
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$3;-><init>(Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    goto/16 :goto_0
+
+    .line 621
+    :cond_6
+    invoke-virtual {v0, v6}, Landroid/widget/Button;->setText(I)V
+
+    goto :goto_1
 .end method

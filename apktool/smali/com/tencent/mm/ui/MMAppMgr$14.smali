@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 778
+    .line 816
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,11 +34,11 @@
     .locals 1
 
     .prologue
-    .line 785
+    .line 823
     const-string/jumbo v0, "show_wap_adviser"
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/z;->CR(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->Fe(Ljava/lang/String;)V
 
-    .line 786
+    .line 824
     return-void
 .end method

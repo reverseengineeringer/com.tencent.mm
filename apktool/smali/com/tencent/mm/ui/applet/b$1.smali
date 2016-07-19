@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kzB:Lcom/tencent/mm/ui/applet/b;
+.field final synthetic kYI:Lcom/tencent/mm/ui/applet/b;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 47
-    iput-object p1, p0, Lcom/tencent/mm/ui/applet/b$1;->kzB:Lcom/tencent/mm/ui/applet/b;
+    iput-object p1, p0, Lcom/tencent/mm/ui/applet/b$1;->kYI:Lcom/tencent/mm/ui/applet/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,9 +42,9 @@
     .prologue
     .line 54
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/b$1;->kzB:Lcom/tencent/mm/ui/applet/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/b$1;->kYI:Lcom/tencent/mm/ui/applet/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/applet/b;->kzz:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/ui/applet/b;->kYG:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -53,9 +53,9 @@
     if-lez v0, :cond_0
 
     .line 55
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/b$1;->kzB:Lcom/tencent/mm/ui/applet/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/b$1;->kYI:Lcom/tencent/mm/ui/applet/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/applet/b;->kzz:Ljava/util/LinkedList;
+    iget-object v0, v0, Lcom/tencent/mm/ui/applet/b;->kYG:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
 
@@ -64,11 +64,11 @@
     check-cast v0, Ljava/lang/String;
 
     .line 58
-    iget-object v1, p0, Lcom/tencent/mm/ui/applet/b$1;->kzB:Lcom/tencent/mm/ui/applet/b;
+    iget-object v1, p0, Lcom/tencent/mm/ui/applet/b$1;->kYI:Lcom/tencent/mm/ui/applet/b;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/applet/b;->kzA:Lcom/tencent/mm/ui/applet/b$a;
+    iget-object v1, v1, Lcom/tencent/mm/ui/applet/b;->kYH:Lcom/tencent/mm/ui/applet/b$a;
 
-    invoke-interface {v1, v0}, Lcom/tencent/mm/ui/applet/b$a;->hw(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-interface {v1, v0}, Lcom/tencent/mm/ui/applet/b$a;->hO(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     goto :goto_0
 

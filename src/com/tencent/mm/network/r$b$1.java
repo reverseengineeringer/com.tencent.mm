@@ -1,12 +1,12 @@
 package com.tencent.mm.network;
 
 import android.os.RemoteException;
-import com.tencent.mm.sdk.platformtools.at;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.az;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class r$b$1
-  extends at
+  extends az<Object>
 {
   r$b$1(r.b paramb, p paramp, int paramInt1, int paramInt2)
   {
@@ -17,14 +17,14 @@ final class r$b$1
   {
     try
     {
-      r.a(r.b.a(cju), cjt);
+      r.a(r.b.a(ceL), ceK);
       return null;
     }
     catch (RemoteException localRemoteException)
     {
       for (;;)
       {
-        u.e("!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb", "exception:%s", new Object[] { ay.b(localRemoteException) });
+        v.e("MicroMsg.AutoAuth", "exception:%s", new Object[] { be.f(localRemoteException) });
       }
     }
   }

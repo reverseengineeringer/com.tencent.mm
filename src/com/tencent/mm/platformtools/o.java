@@ -1,6 +1,6 @@
 package com.tencent.mm.platformtools;
 
-public final class o {}
+final class o {}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.platformtools.o

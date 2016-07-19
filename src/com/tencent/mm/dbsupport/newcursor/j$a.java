@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public abstract interface j$a
 {
-  public abstract ArrayList d(ArrayList paramArrayList);
+  public abstract ArrayList<a> e(ArrayList<Object> paramArrayList);
   
-  public abstract a qD();
+  public abstract a ph();
 }
 
 /* Location:

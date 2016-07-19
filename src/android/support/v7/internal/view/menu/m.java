@@ -8,9 +8,9 @@ public abstract interface m
   {
     public abstract void a(h paramh);
     
-    public abstract boolean bc();
+    public abstract h bc();
     
-    public abstract h getItemData();
+    public abstract boolean bd();
   }
 }
 

@@ -4,31 +4,31 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.graphics.Bitmap;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.ExifHelper;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import com.tencent.mm.sdk.platformtools.d;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class i$3
   implements Runnable
 {
-  i$3(i parami, aa paramaa) {}
+  i$3(i parami, ac paramac) {}
   
   public final void run()
   {
     int n = 1;
-    i locali = iMq;
-    Object localObject = locali.aSl();
+    i locali = jjn;
+    Object localObject = locali.aXd();
     int i;
     if (localObject == null) {
       i = 0;
     }
     while (i != 0)
     {
-      iMr.sendEmptyMessage(0);
+      jjo.sendEmptyMessage(0);
       return;
-      int j = (int)locali.oH(70);
-      int m = (int)locali.oH(120);
-      int i1 = BackwardSupportUtil.ExifHelper.kq((String)localObject);
+      int j = (int)locali.qq(70);
+      int m = (int)locali.qq(120);
+      int i1 = BackwardSupportUtil.ExifHelper.EM((String)localObject);
       int k;
       if (i1 != 90)
       {
@@ -41,22 +41,22 @@ final class i$3
         i = m;
         k = j;
       }
-      j = (int)locali.oH(4);
+      j = (int)locali.qq(4);
       localObject = d.a((String)localObject, k, i, true, null, 0);
       if (localObject != null)
       {
         bitmap = d.a(d.b((Bitmap)localObject, i1), true, j);
-        bxg.edit().putString("chattingui_recent_shown_image_path", iMl.iMj).commit();
-        u.d("!44@/B4Tb64lLpKYgkPW7g2h7ZPkZDASCTQgMn5vbr5V3XA=", "check ok");
+        bpi.edit().putString("chattingui_recent_shown_image_path", jji.jjg).commit();
+        v.d("MicroMsg.RecentImageBubble", "check ok");
         i = n;
       }
       else
       {
-        u.e("!44@/B4Tb64lLpKYgkPW7g2h7ZPkZDASCTQgMn5vbr5V3XA=", "image hits hole.");
+        v.e("MicroMsg.RecentImageBubble", "image hits hole.");
         i = 0;
       }
     }
-    u.d("!44@/B4Tb64lLpKYgkPW7g2h7ZPkZDASCTQgMn5vbr5V3XA=", "check false");
+    v.d("MicroMsg.RecentImageBubble", "check false");
   }
   
   public final String toString()

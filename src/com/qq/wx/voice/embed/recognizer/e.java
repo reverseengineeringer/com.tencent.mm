@@ -4,9 +4,9 @@ import android.os.Handler;
 
 public final class e
 {
-  public Grammar ajn = null;
-  g ajo = new g();
-  byte[] ajp = null;
+  public Grammar Vd = null;
+  g Ve = new g();
+  byte[] Vf = null;
   public boolean d = false;
   public boolean e = false;
   
@@ -19,9 +19,9 @@ public final class e
     while (!e) {
       return i;
     }
-    ajo.ajq = paramc;
-    ajp = paramArrayOfByte;
-    if (ajp == null) {
+    Ve.Vg = paramc;
+    Vf = paramArrayOfByte;
+    if (Vf == null) {
       return 65235;
     }
     try
@@ -40,27 +40,27 @@ public final class e
     
     public final void run()
     {
-      if (ajn.begin() != 0)
+      if (Vd.begin() != 0)
       {
-        ajo.a(-102);
+        Ve.a(-102);
         return;
       }
-      if (ajn.recognize(ajp, ajp.length) != 0)
+      if (Vd.recognize(Vf, Vf.length) != 0)
       {
-        ajo.a(-103);
+        Ve.a(-103);
         return;
       }
-      if (ajn.end() != 0)
+      if (Vd.end() != 0)
       {
-        ajo.a(-104);
+        Ve.a(-104);
         return;
       }
       a locala = new a();
-      if (ajn.getResult(locala) != 0) {
-        ajo.a(-105);
+      if (Vd.getResult(locala) != 0) {
+        Ve.a(-105);
       }
-      g localg = ajo;
-      ajr.sendMessage(ajr.obtainMessage(200, locala));
+      g localg = Ve;
+      Vh.sendMessage(Vh.obtainMessage(200, locala));
     }
   }
 }

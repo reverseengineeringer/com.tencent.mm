@@ -10,7 +10,7 @@ final class SnsLuckyMoneyDetailUI$2
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    gJM.finish();
+    gRm.finish();
     return true;
   }
 }

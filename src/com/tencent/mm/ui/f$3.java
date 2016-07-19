@@ -1,58 +1,38 @@
 package com.tencent.mm.ui;
 
-import android.graphics.Bitmap;
-import android.view.View;
-import com.tencent.mm.ab.a.c.g;
-import com.tencent.mm.ab.a.d.b;
-import com.tencent.mm.d.a.iv;
-import com.tencent.mm.d.a.iv.a;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.ui.base.preference.IconPreference;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.widget.CheckBox;
+import com.tencent.mm.at.a;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.storage.h;
 
 final class f$3
-  implements g
+  implements DialogInterface.OnClickListener
 {
-  f$3(f paramf, IconPreference paramIconPreference, String paramString1, int paramInt, String paramString2, String paramString3, iv paramiv) {}
+  f$3(f paramf) {}
   
-  public final void a(String paramString, View paramView, b paramb)
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((status == 0) && (bitmap != null))
+    if (f.g(kKO) != null)
     {
-      ab.j(new Runnable()
-      {
-        public final void run()
-        {
-          f.a(klo, true);
-          klp.u(gMv);
-          f.a(klp, 8, 8, false, 0, 0, 0);
-          f.a(klo, amV, hWn, klq, bCX, klr.aEY.asN);
-        }
-      });
+      paramDialogInterface = ah.tE().ro();
+      if (f.g(kKO).isChecked()) {
+        break label71;
+      }
+    }
+    label71:
+    for (boolean bool = true;; bool = false)
+    {
+      paramDialogInterface.set(4104, Boolean.valueOf(bool));
+      paramDialogInterface = LauncherUI.bfJ();
+      if (paramDialogInterface != null) {
+        paramDialogInterface.Ix("tab_find_friend");
+      }
+      a.cy(kKO.kNN.kOg);
       return;
     }
-    ab.j(new Runnable()
-    {
-      public final void run()
-      {
-        f.a(klo, true);
-        IconPreference localIconPreference = (IconPreference)f.a(klo).GB("more_tab_game_recommend");
-        localIconPreference.ag(klo.getString(2131430946), 2130970349);
-        f.a(localIconPreference, 0, 8, false, 8, 8, 8);
-        f.a(klo, amV, hWn, klq, bCX, 1);
-      }
-    });
-  }
-  
-  public final void ie(String paramString)
-  {
-    ab.j(new Runnable()
-    {
-      public final void run()
-      {
-        f.a(klo, false);
-        f.a((IconPreference)f.a(klo).GB("more_tab_game_recommend"), 8, 8, false, 8, 8, 8);
-      }
-    });
   }
 }
 

@@ -17,15 +17,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.tencent.mm.ac.b.a;
-import com.tencent.mm.d.a.nk;
-import com.tencent.mm.g.e;
+import com.tencent.mm.af.b.a;
+import com.tencent.mm.e.a.nx;
+import com.tencent.mm.h.e;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.modelfriend.m.a;
-import com.tencent.mm.modelfriend.v;
+import com.tencent.mm.modelsimple.s;
 import com.tencent.mm.pluginsdk.f;
-import com.tencent.mm.protocal.b.hy;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.protocal.b.ih;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.MMWizardActivity;
 import com.tencent.mm.ui.base.l;
@@ -37,80 +37,80 @@ import com.tencent.mm.ui.friend.i.a;
 
 public class BindMContactIntroUI
   extends MMWizardActivity
-  implements com.tencent.mm.r.d
+  implements com.tencent.mm.t.d
 {
-  private String aBH;
-  private p coc = null;
-  private String glR = null;
-  private String glS = null;
-  private boolean gmc = false;
-  private TextView kOl;
-  private TextView kOm;
-  private Button kOn;
-  private Button kOo;
-  private m.a kOp;
-  private boolean kOq = false;
-  private int kOr = 0;
-  private ImageView kwV;
-  private boolean kxC = false;
-  private i kxm;
+  private String anZ;
+  private p cjq = null;
+  private String gwm = null;
+  private String gwn = null;
+  private boolean gwx = false;
+  private boolean kWJ = false;
+  private ImageView kWc;
+  private i kWt;
+  private TextView lnB;
+  private TextView lnC;
+  private Button lnD;
+  private Button lnE;
+  private m.a lnF;
+  private boolean lnG = false;
+  private int lnH = 0;
   
-  private void aqG()
+  private void atH()
   {
-    age();
-    if (kOq)
+    aiI();
+    if (lnG)
     {
       cancel();
       finish();
       return;
     }
-    bbm();
+    bgy();
   }
   
-  private void hF(boolean paramBoolean)
+  private void ij(boolean paramBoolean)
   {
     Intent localIntent = new Intent(this, BindMContactUI.class);
-    localIntent.putExtra("is_bind_for_safe_device", kxC);
-    localIntent.putExtra("is_bind_for_contact_sync", kOq);
+    localIntent.putExtra("is_bind_for_safe_device", kWJ);
+    localIntent.putExtra("is_bind_for_contact_sync", lnG);
     localIntent.putExtra("is_bind_for_change_mobile", paramBoolean);
     Object localObject = ((TelephonyManager)getSystemService("phone")).getSimCountryIso();
-    if (!ay.kz((String)localObject))
+    if (!be.kf((String)localObject))
     {
-      localObject = com.tencent.mm.ac.b.h(this, (String)localObject, getString(2131428870));
+      localObject = com.tencent.mm.af.b.f(this, (String)localObject, getString(2131232142));
       if (localObject != null)
       {
-        localIntent.putExtra("country_name", bUu);
-        localIntent.putExtra("couttry_code", bUt);
+        localIntent.putExtra("country_name", bNV);
+        localIntent.putExtra("couttry_code", bNU);
       }
     }
     v(this, localIntent);
   }
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    kxC = getIntent().getBooleanExtra("is_bind_for_safe_device", false);
-    kOq = getIntent().getBooleanExtra("is_bind_for_contact_sync", false);
-    gmc = getIntent().getBooleanExtra("KEnterFromBanner", false);
-    kOr = getIntent().getIntExtra("key_upload_scene", 0);
-    kOp = com.tencent.mm.modelfriend.m.yD();
-    com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpJ7jzBwffYq6Nl6vsysRADUMgKs8MHn9dQ=", "state " + kOp);
-    aBH = ((String)ah.tD().rn().get(6, null));
-    if ((aBH == null) || (aBH.equals(""))) {
-      aBH = ((String)ah.tD().rn().get(4097, null));
+    kWJ = getIntent().getBooleanExtra("is_bind_for_safe_device", false);
+    lnG = getIntent().getBooleanExtra("is_bind_for_contact_sync", false);
+    gwx = getIntent().getBooleanExtra("KEnterFromBanner", false);
+    lnH = getIntent().getIntExtra("key_upload_scene", 0);
+    lnF = com.tencent.mm.modelfriend.m.yQ();
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.BindMContactIntroUI", "state " + lnF);
+    anZ = ((String)ah.tE().ro().get(6, null));
+    if ((anZ == null) || (anZ.equals(""))) {
+      anZ = ((String)ah.tE().ro().get(4097, null));
     }
-    kwV = ((ImageView)findViewById(2131169213));
-    kOl = ((TextView)findViewById(2131169214));
-    kOm = ((TextView)findViewById(2131169215));
-    kOn = ((Button)findViewById(2131169216));
-    kOo = ((Button)findViewById(2131169217));
-    kOn.setOnClickListener(new View.OnClickListener()
+    kWc = ((ImageView)findViewById(2131755516));
+    lnB = ((TextView)findViewById(2131755517));
+    lnC = ((TextView)findViewById(2131755518));
+    lnD = ((Button)findViewById(2131755519));
+    lnE = ((Button)findViewById(2131755520));
+    lnD.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
         BindMContactIntroUI.a(BindMContactIntroUI.this);
       }
     });
-    kOo.setOnClickListener(new View.OnClickListener()
+    lnE.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
@@ -118,7 +118,7 @@ public class BindMContactIntroUI
       }
     });
     if (getIntent().getBooleanExtra("skip", false)) {
-      a(0, getString(2131430984), new MenuItem.OnMenuItemClickListener()
+      a(0, getString(2131230942), new MenuItem.OnMenuItemClickListener()
       {
         public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
         {
@@ -129,33 +129,33 @@ public class BindMContactIntroUI
     }
     for (;;)
     {
-      if ((kOp == m.a.bMC) || (kOp == m.a.bMB))
+      if ((lnF == m.a.bFW) || (lnF == m.a.bFV))
       {
-        String str = com.tencent.mm.g.h.pS().getValue("ShowUnbindPhone");
+        String str = com.tencent.mm.h.h.om().getValue("ShowUnbindPhone");
         final int i = 2;
-        if (!ay.kz(str)) {
-          i = ay.Dr(str);
+        if (!be.kf(str)) {
+          i = be.FG(str);
         }
         if (i != 0) {
-          a(1, 2130970326, new MenuItem.OnMenuItemClickListener()
+          a(1, 2130838805, new MenuItem.OnMenuItemClickListener()
           {
             public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
             {
-              paramAnonymousMenuItem = new com.tencent.mm.ui.tools.m(koJ.kpc);
-              hle = new n.c()
+              paramAnonymousMenuItem = new com.tencent.mm.ui.tools.m(kNN.kOg);
+              hoS = new n.c()
               {
                 public final void a(l paramAnonymous2l)
                 {
-                  paramAnonymous2l.setHeaderTitle(2131428650);
-                  if ((kOv & 0x2) != 0) {
-                    paramAnonymous2l.bL(0, 2131428652);
+                  paramAnonymous2l.setHeaderTitle(2131231277);
+                  if ((lnL & 0x2) != 0) {
+                    paramAnonymous2l.bR(0, 2131231295);
                   }
-                  if ((kOv & 0x1) != 0) {
-                    paramAnonymous2l.bL(1, 2131428653);
+                  if ((lnL & 0x1) != 0) {
+                    paramAnonymous2l.bR(1, 2131231256);
                   }
                 }
               };
-              hlf = new n.d()
+              hoT = new n.d()
               {
                 public final void d(MenuItem paramAnonymous2MenuItem, int paramAnonymous2Int)
                 {
@@ -169,16 +169,16 @@ public class BindMContactIntroUI
                   }
                   paramAnonymous2MenuItem = new Intent();
                   paramAnonymous2MenuItem.putExtra("need_matte_high_light_item", "settings_find_me_by_mobile");
-                  com.tencent.mm.ar.c.c(BindMContactIntroUI.this, "setting", ".ui.setting.SettingsPrivacyUI", paramAnonymous2MenuItem);
+                  com.tencent.mm.av.c.c(BindMContactIntroUI.this, "setting", ".ui.setting.SettingsPrivacyUI", paramAnonymous2MenuItem);
                 }
               };
-              paramAnonymousMenuItem.biF();
+              paramAnonymousMenuItem.boB();
               return false;
             }
           });
         }
       }
-      switch (20.kOu[kOp.ordinal()])
+      switch (20.lnK[lnF.ordinal()])
       {
       default: 
         return;
@@ -193,58 +193,147 @@ public class BindMContactIntroUI
       }
     }
     N(1, false);
-    kwV.setImageResource(2130903411);
-    kOm.setVisibility(0);
-    kOo.setVisibility(8);
-    kOl.setText(2131428623);
-    kOm.setText(2131428622);
-    kOn.setText(2131428647);
+    kWc.setImageResource(2131165586);
+    lnC.setVisibility(0);
+    lnE.setVisibility(8);
+    lnB.setText(2131231272);
+    lnC.setText(2131231271);
+    lnD.setText(2131231247);
     return;
     N(1, false);
-    kwV.setImageResource(2130903411);
-    kOm.setVisibility(0);
-    kOo.setVisibility(0);
-    kOl.setText(String.format(getString(2131428658), new Object[] { aBH }));
-    kOm.setText(2131428657);
-    kOn.setText(2131428648);
-    kOo.setText(2131428656);
+    kWc.setImageResource(2131165586);
+    lnC.setVisibility(0);
+    lnE.setVisibility(0);
+    lnB.setText(String.format(getString(2131231308), new Object[] { anZ }));
+    lnC.setText(2131231298);
+    lnD.setText(2131231302);
+    lnE.setText(2131231257);
     return;
     N(1, true);
-    kwV.setImageResource(2130903410);
-    kOm.setVisibility(0);
-    kOo.setVisibility(0);
-    kOl.setText(String.format(getString(2131428658), new Object[] { aBH }));
-    kOm.setText(2131428621);
-    kOn.setText(2131428654);
-    kOo.setText(2131428651);
+    kWc.setImageResource(2131165585);
+    lnC.setVisibility(0);
+    lnE.setVisibility(0);
+    lnB.setText(String.format(getString(2131231308), new Object[] { anZ }));
+    lnC.setText(2131231253);
+    lnD.setText(2131231299);
+    lnE.setText(2131231255);
     return;
     N(1, true);
-    kwV.setImageResource(2130903410);
-    kOm.setVisibility(0);
-    kOo.setVisibility(0);
-    kOl.setText(String.format(getString(2131428658), new Object[] { aBH }));
-    kOm.setText(2131428621);
-    kOn.setText(2131428649);
-    kOo.setText(2131428651);
+    kWc.setImageResource(2131165585);
+    lnC.setVisibility(0);
+    lnE.setVisibility(0);
+    lnB.setText(String.format(getString(2131231308), new Object[] { anZ }));
+    lnC.setText(2131231253);
+    lnD.setText(2131231270);
+    lnE.setText(2131231255);
   }
   
-  public final void a(int paramInt1, int paramInt2, final String paramString, com.tencent.mm.r.j paramj)
+  protected final int getLayoutId()
   {
-    com.tencent.mm.sdk.platformtools.u.i("!44@/B4Tb64lLpJ7jzBwffYq6Nl6vsysRADUMgKs8MHn9dQ=", "summerunbind onSceneEnd type: " + paramj.getType() + " errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
+    return 2130903148;
+  }
+  
+  public void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
+  {
+    super.onActivityResult(paramInt1, paramInt2, paramIntent);
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.BindMContactIntroUI", "summerunbind onAcvityResult requestCode:%d, resultCode:%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    switch (paramInt1)
+    {
+    }
+    do
+    {
+      return;
+    } while (paramInt2 != -1);
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.BindMContactIntroUI", "summerunbind REQUEST_CODE_SET_PSW ok and start NetSceneCheckUnBind again mobile: " + anZ);
+    paramIntent = new com.tencent.mm.modelsimple.h(com.tencent.mm.modelsimple.h.bUA);
+    ah.tF().a(paramIntent, 0);
+    getString(2131231028);
+    cjq = com.tencent.mm.ui.base.g.a(this, getString(2131235027), true, new DialogInterface.OnCancelListener()
+    {
+      public final void onCancel(DialogInterface paramAnonymousDialogInterface) {}
+    });
+  }
+  
+  public void onCreate(Bundle paramBundle)
+  {
+    super.onCreate(paramBundle);
+    ah.tF().a(132, this);
+    ah.tF().a(255, this);
+    ah.tF().a(254, this);
+    rR(2131231289);
+  }
+  
+  public void onDestroy()
+  {
+    ah.tF().b(132, this);
+    ah.tF().b(255, this);
+    ah.tF().b(254, this);
+    if (kWt != null)
+    {
+      getContentResolver().unregisterContentObserver(kWt);
+      kWt.recycle();
+    }
+    super.onDestroy();
+  }
+  
+  public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
+  {
+    if (paramInt == 4)
+    {
+      atH();
+      return true;
+    }
+    return super.onKeyDown(paramInt, paramKeyEvent);
+  }
+  
+  public void onRequestPermissionsResult(int paramInt, String[] paramArrayOfString, int[] paramArrayOfInt)
+  {
+    int i;
+    if ((paramArrayOfInt == null) || (paramArrayOfInt.length <= 0)) {
+      if (paramArrayOfInt == null)
+      {
+        i = -1;
+        com.tencent.mm.sdk.platformtools.v.w("MicroMsg.BindMContactIntroUI", "summerper onRequestPermissionsResult, grantResults length is:%d requestCode:%d, permissions:%s, stack:%s", new Object[] { Integer.valueOf(i), Integer.valueOf(paramInt), paramArrayOfString, be.baX() });
+      }
+    }
+    do
+    {
+      return;
+      i = paramArrayOfInt.length;
+      break;
+      com.tencent.mm.sdk.platformtools.v.d("MicroMsg.BindMContactIntroUI", "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(paramArrayOfInt[0]), Long.valueOf(Thread.currentThread().getId()) });
+      switch (paramInt)
+      {
+      default: 
+        return;
+      }
+    } while ((paramArrayOfInt[0] != 0) || (kWt == null));
+    kWt.bhl();
+  }
+  
+  protected void onResume()
+  {
+    super.onResume();
+    Gy();
+  }
+  
+  public void onSceneEnd(int paramInt1, int paramInt2, final String paramString, com.tencent.mm.t.j paramj)
+  {
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.BindMContactIntroUI", "summerunbind onSceneEnd type: " + paramj.getType() + " errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
     if ((paramj.getType() == 132) && (paramInt1 == 0) && (paramInt2 == 0))
     {
-      if (coc != null)
+      if (cjq != null)
       {
-        coc.dismiss();
-        coc = null;
+        cjq.dismiss();
+        cjq = null;
       }
-      if (((v)paramj).va() == 3)
+      if (((com.tencent.mm.modelfriend.v)paramj).vc() == 3)
       {
-        com.tencent.mm.modelsimple.d.aW(this);
-        if (ay.kz(glS)) {
+        com.tencent.mm.modelsimple.d.aS(this);
+        if (be.kf(gwn)) {
           break label150;
         }
-        com.tencent.mm.ui.base.g.a(this, glS, "", getString(2131427932), new DialogInterface.OnClickListener()
+        com.tencent.mm.ui.base.g.a(this, gwn, "", getString(2131230753), new DialogInterface.OnClickListener()
         {
           public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
           {
@@ -255,16 +344,16 @@ public class BindMContactIntroUI
     }
     label150:
     label383:
-    label613:
-    label954:
-    label1014:
+    label615:
+    label957:
+    label1017:
     for (;;)
     {
       return;
       v(this, new Intent(this, BindMContactStatusUI.class));
       return;
       int i;
-      if (com.tencent.mm.plugin.a.a.cob.a(this, paramInt1, paramInt2, paramString)) {
+      if (com.tencent.mm.plugin.a.a.cjp.a(this, paramInt1, paramInt2, paramString)) {
         i = 1;
       }
       for (;;)
@@ -272,11 +361,11 @@ public class BindMContactIntroUI
         if (i == 0) {
           break label383;
         }
-        if (coc == null) {
+        if (cjq == null) {
           break;
         }
-        coc.dismiss();
-        coc = null;
+        cjq.dismiss();
+        cjq = null;
         return;
         i = 0;
         switch (paramInt2)
@@ -284,74 +373,74 @@ public class BindMContactIntroUI
         default: 
           break;
         case -214: 
-          paramString = com.tencent.mm.e.a.cV(paramString);
+          paramString = com.tencent.mm.f.a.dc(paramString);
           if (paramString != null) {
             paramString.a(this, null, null);
           }
           i = 1;
           break;
         case -34: 
-          Toast.makeText(this, 2131428663, 0).show();
+          Toast.makeText(this, 2131231262, 0).show();
           i = 1;
           break;
         case -43: 
-          Toast.makeText(this, 2131428664, 0).show();
+          Toast.makeText(this, 2131231259, 0).show();
           i = 1;
           break;
         case -41: 
-          Toast.makeText(this, 2131428668, 0).show();
+          Toast.makeText(this, 2131231261, 0).show();
           i = 1;
           break;
         case -35: 
-          Toast.makeText(this, 2131428669, 0).show();
+          Toast.makeText(this, 2131231260, 0).show();
           i = 1;
           break;
         case -36: 
-          Toast.makeText(this, 2131428667, 0).show();
+          Toast.makeText(this, 2131231264, 0).show();
           i = 1;
         }
       }
       if (paramj.getType() == 254)
       {
-        if (coc != null)
+        if (cjq != null)
         {
-          coc.dismiss();
-          coc = null;
+          cjq.dismiss();
+          cjq = null;
         }
         if ((paramInt1 == 0) && (paramInt2 == 0))
         {
-          glS = Cnjgq;
-          glR = ((com.tencent.mm.modelsimple.h)paramj).Cm();
-          if (!ay.kz(glS))
+          gwn = CujEn;
+          gwm = ((com.tencent.mm.modelsimple.h)paramj).Ct();
+          if (!be.kf(gwn))
           {
-            paramString = new v(aBH, 3, "", 0, "");
-            ah.tE().d(paramString);
-            paramj = koJ.kpc;
-            getString(2131430877);
-            coc = com.tencent.mm.ui.base.g.a(paramj, getString(2131428617), true, new DialogInterface.OnCancelListener()
+            paramString = new com.tencent.mm.modelfriend.v(anZ, 3, "", 0, "");
+            ah.tF().a(paramString, 0);
+            paramj = kNN.kOg;
+            getString(2131231028);
+            cjq = com.tencent.mm.ui.base.g.a(paramj, getString(2131231297), true, new DialogInterface.OnCancelListener()
             {
               public final void onCancel(DialogInterface paramAnonymousDialogInterface)
               {
-                ah.tE().c(paramString);
+                ah.tF().c(paramString);
               }
             });
             return;
           }
-          paramString = new com.tencent.mm.modelsimple.u(2);
-          ah.tE().d(paramString);
+          paramString = new s(2);
+          ah.tF().a(paramString, 0);
           return;
         }
         if (paramInt2 == -3)
         {
-          com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpJ7jzBwffYq6Nl6vsysRADUMgKs8MHn9dQ=", "summerunbind MMFunc_QueryHasPasswd err and set psw");
-          com.tencent.mm.ui.base.g.a(koJ.kpc, getString(2131428228), null, getString(2131428230), getString(2131428231), true, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+          com.tencent.mm.sdk.platformtools.v.d("MicroMsg.BindMContactIntroUI", "summerunbind MMFunc_QueryHasPasswd err and set psw");
+          com.tencent.mm.ui.base.g.a(kNN.kOg, getString(2131235174), null, getString(2131235175), getString(2131235173), true, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
           {
             public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
             {
               paramAnonymousDialogInterface = new Intent();
-              paramAnonymousDialogInterface.putExtra("kintent_hint", getString(2131428229));
+              paramAnonymousDialogInterface.putExtra("kintent_hint", getString(2131235172));
               paramAnonymousDialogInterface.putExtra("from_unbind", true);
-              com.tencent.mm.ar.c.a(BindMContactIntroUI.this, "accountsync", "com.tencent.mm.ui.account.RegByMobileSetPwdUI", paramAnonymousDialogInterface, 1);
+              com.tencent.mm.av.c.a(BindMContactIntroUI.this, "accountsync", "com.tencent.mm.ui.account.RegByMobileSetPwdUI", paramAnonymousDialogInterface, 1);
             }
           }, new DialogInterface.OnClickListener()
           {
@@ -361,104 +450,104 @@ public class BindMContactIntroUI
       }
       else if (paramj.getType() == 255)
       {
-        if (coc != null)
+        if (cjq != null)
         {
-          coc.dismiss();
-          coc = null;
+          cjq.dismiss();
+          cjq = null;
         }
         if (paramInt2 != 0) {
-          break label954;
+          break label957;
         }
-        paramString = new v(aBH, 3, "", 0, "");
-        ah.tE().d(paramString);
-        ActionBarActivity localActionBarActivity = koJ.kpc;
-        getString(2131430877);
-        coc = com.tencent.mm.ui.base.g.a(localActionBarActivity, getString(2131428617), true, new DialogInterface.OnCancelListener()
+        paramString = new com.tencent.mm.modelfriend.v(anZ, 3, "", 0, "");
+        ah.tF().a(paramString, 0);
+        ActionBarActivity localActionBarActivity = kNN.kOg;
+        getString(2131231028);
+        cjq = com.tencent.mm.ui.base.g.a(localActionBarActivity, getString(2131231297), true, new DialogInterface.OnCancelListener()
         {
           public final void onCancel(DialogInterface paramAnonymousDialogInterface)
           {
-            ah.tE().c(paramString);
+            ah.tF().c(paramString);
           }
         });
       }
       for (;;)
       {
         if (paramj.getType() != 132) {
-          break label1014;
+          break label1017;
         }
-        if (coc != null)
+        if (cjq != null)
         {
-          coc.dismiss();
-          coc = null;
+          cjq.dismiss();
+          cjq = null;
         }
-        if (((v)paramj).va() != 3) {
+        if (((com.tencent.mm.modelfriend.v)paramj).vc() != 3) {
           break;
         }
         if (paramInt2 != -82) {
-          break label1016;
+          break label1019;
         }
-        com.tencent.mm.ui.base.g.a(this, 2131428244, 2131430877, new DialogInterface.OnClickListener()
+        com.tencent.mm.ui.base.g.a(this, 2131234936, 2131231028, new DialogInterface.OnClickListener()
         {
           public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
         });
         return;
         if (paramInt2 == -81)
         {
-          com.tencent.mm.ui.base.g.a(this, 2131428243, 2131430877, new DialogInterface.OnClickListener()
+          com.tencent.mm.ui.base.g.a(this, 2131234935, 2131231028, new DialogInterface.OnClickListener()
           {
             public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
           });
-          break label613;
+          break label615;
         }
         if (paramInt2 == -82)
         {
-          com.tencent.mm.ui.base.g.a(this, 2131428244, 2131430877, new DialogInterface.OnClickListener()
+          com.tencent.mm.ui.base.g.a(this, 2131234936, 2131231028, new DialogInterface.OnClickListener()
           {
             public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
           });
-          break label613;
+          break label615;
         }
         if (paramInt2 == -83)
         {
-          com.tencent.mm.ui.base.g.a(this, 2131428245, 2131430877, new DialogInterface.OnClickListener()
+          com.tencent.mm.ui.base.g.a(this, 2131234933, 2131231028, new DialogInterface.OnClickListener()
           {
             public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
           });
-          break label613;
+          break label615;
         }
         if (paramInt2 == -84)
         {
-          com.tencent.mm.ui.base.g.a(this, 2131428246, 2131430877, new DialogInterface.OnClickListener()
+          com.tencent.mm.ui.base.g.a(this, 2131234934, 2131231028, new DialogInterface.OnClickListener()
           {
             public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
           });
-          break label613;
+          break label615;
         }
         if (paramInt2 == -85)
         {
-          com.tencent.mm.ui.base.g.a(this, 2131428248, 2131430877, new DialogInterface.OnClickListener()
+          com.tencent.mm.ui.base.g.a(this, 2131234930, 2131231028, new DialogInterface.OnClickListener()
           {
             public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
           });
-          break label613;
+          break label615;
         }
         if (paramInt2 != -86) {
-          break label613;
+          break label615;
         }
-        com.tencent.mm.ui.base.g.a(this, 2131428250, 2131430877, new DialogInterface.OnClickListener()
+        com.tencent.mm.ui.base.g.a(this, 2131234938, 2131231028, new DialogInterface.OnClickListener()
         {
           public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
         });
-        break label613;
-        com.tencent.mm.sdk.platformtools.u.i("!44@/B4Tb64lLpJ7jzBwffYq6Nl6vsysRADUMgKs8MHn9dQ=", "summerunbind old err_password");
-        com.tencent.mm.ui.base.g.a(koJ.kpc, getString(2131428228), null, getString(2131428230), getString(2131428231), true, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+        break label615;
+        com.tencent.mm.sdk.platformtools.v.i("MicroMsg.BindMContactIntroUI", "summerunbind old err_password");
+        com.tencent.mm.ui.base.g.a(kNN.kOg, getString(2131235174), null, getString(2131235175), getString(2131235173), true, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
         {
           public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
           {
             paramAnonymousDialogInterface = new Intent();
-            paramAnonymousDialogInterface.putExtra("kintent_hint", getString(2131428229));
+            paramAnonymousDialogInterface.putExtra("kintent_hint", getString(2131235172));
             paramAnonymousDialogInterface.putExtra("from_unbind", true);
-            com.tencent.mm.ar.c.a(BindMContactIntroUI.this, "accountsync", "com.tencent.mm.ui.account.RegByMobileSetPwdUI", paramAnonymousDialogInterface, 1);
+            com.tencent.mm.av.c.a(BindMContactIntroUI.this, "accountsync", "com.tencent.mm.ui.account.RegByMobileSetPwdUI", paramAnonymousDialogInterface, 1);
           }
         }, new DialogInterface.OnClickListener()
         {
@@ -466,10 +555,10 @@ public class BindMContactIntroUI
         });
       }
     }
-    label1016:
+    label1019:
     if (paramInt2 == -83)
     {
-      com.tencent.mm.ui.base.g.a(this, 2131428245, 2131430877, new DialogInterface.OnClickListener()
+      com.tencent.mm.ui.base.g.a(this, 2131234933, 2131231028, new DialogInterface.OnClickListener()
       {
         public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
       });
@@ -477,7 +566,7 @@ public class BindMContactIntroUI
     }
     if (paramInt2 == -84)
     {
-      com.tencent.mm.ui.base.g.a(this, 2131428246, 2131430877, new DialogInterface.OnClickListener()
+      com.tencent.mm.ui.base.g.a(this, 2131234934, 2131231028, new DialogInterface.OnClickListener()
       {
         public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
       });
@@ -485,90 +574,13 @@ public class BindMContactIntroUI
     }
     if (paramInt2 == -85)
     {
-      com.tencent.mm.ui.base.g.a(this, 2131428248, 2131430877, new DialogInterface.OnClickListener()
+      com.tencent.mm.ui.base.g.a(this, 2131234930, 2131231028, new DialogInterface.OnClickListener()
       {
         public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
       });
       return;
     }
-    Toast.makeText(this, getString(2131428620, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
-  }
-  
-  protected final int getLayoutId()
-  {
-    return 2131363107;
-  }
-  
-  public void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
-  {
-    super.onActivityResult(paramInt1, paramInt2, paramIntent);
-    com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpJ7jzBwffYq6Nl6vsysRADUMgKs8MHn9dQ=", "summerunbind onAcvityResult requestCode:%d, resultCode:%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
-    switch (paramInt1)
-    {
-    }
-    do
-    {
-      return;
-    } while (paramInt2 != -1);
-    com.tencent.mm.sdk.platformtools.u.i("!44@/B4Tb64lLpJ7jzBwffYq6Nl6vsysRADUMgKs8MHn9dQ=", "summerunbind REQUEST_CODE_SET_PSW ok and start NetSceneCheckUnBind again mobile: " + aBH);
-    paramIntent = new com.tencent.mm.modelsimple.h(com.tencent.mm.modelsimple.h.caR);
-    ah.tE().d(paramIntent);
-    getString(2131430877);
-    coc = com.tencent.mm.ui.base.g.a(this, getString(2131428233), true, new DialogInterface.OnCancelListener()
-    {
-      public final void onCancel(DialogInterface paramAnonymousDialogInterface) {}
-    });
-  }
-  
-  public void onCreate(Bundle paramBundle)
-  {
-    super.onCreate(paramBundle);
-    ah.tE().a(132, this);
-    ah.tE().a(255, this);
-    ah.tE().a(254, this);
-    qb(2131428607);
-  }
-  
-  public void onDestroy()
-  {
-    ah.tE().b(132, this);
-    ah.tE().b(255, this);
-    ah.tE().b(254, this);
-    if (kxm != null)
-    {
-      getContentResolver().unregisterContentObserver(kxm);
-      kxm.recycle();
-    }
-    super.onDestroy();
-  }
-  
-  public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
-  {
-    if (paramInt == 4)
-    {
-      aqG();
-      return true;
-    }
-    return super.onKeyDown(paramInt, paramKeyEvent);
-  }
-  
-  public void onRequestPermissionsResult(int paramInt, String[] paramArrayOfString, int[] paramArrayOfInt)
-  {
-    com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpJ7jzBwffYq6Nl6vsysRADUMgKs8MHn9dQ=", "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(paramArrayOfInt[0]), Long.valueOf(Thread.currentThread().getId()) });
-    switch (paramInt)
-    {
-    }
-    do
-    {
-      return;
-    } while ((paramArrayOfInt[0] != 0) || (kxm == null));
-    kxm.bbZ();
-  }
-  
-  protected void onResume()
-  {
-    super.onResume();
-    Gb();
+    Toast.makeText(this, getString(2131231294, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
   }
 }
 

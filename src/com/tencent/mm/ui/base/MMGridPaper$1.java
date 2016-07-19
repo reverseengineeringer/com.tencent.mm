@@ -5,9 +5,9 @@ final class MMGridPaper$1
 {
   MMGridPaper$1(MMGridPaper paramMMGridPaper) {}
   
-  public final void bcD()
+  public final void bhZ()
   {
-    kEx.refresh();
+    ldA.refresh();
   }
 }
 

@@ -2,7 +2,7 @@ package com.qq.wx.voice.embed.recognizer;
 
 public final class b$a
 {
-  public static b ajg = new b();
+  public static b UW = new b();
 }
 
 /* Location:

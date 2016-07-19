@@ -7,37 +7,37 @@ import android.content.UriMatcher;
 import android.database.Cursor;
 import android.net.Uri;
 import com.jg.JgClassChecked;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 @JgClassChecked(author=20, fComment="checked", lastDate="20140429", reviewer=20, vComment={com.jg.EType.PROVIDERCHECK})
 public class MMPluginProvider
   extends ContentProvider
 {
-  private static final UriMatcher cAS;
-  private c cAR = new c();
+  private static final UriMatcher cxN;
+  private c cxM = new c();
   
   static
   {
     UriMatcher localUriMatcher = new UriMatcher(-1);
-    cAS = localUriMatcher;
+    cxN = localUriMatcher;
     localUriMatcher.addURI("com.tencent.mm.sdk.plugin.provider", "sharedpref", 2);
   }
   
   public int delete(Uri paramUri, String paramString, String[] paramArrayOfString)
   {
-    u.v("!44@/B4Tb64lLpJVwK899MjSHnGus/LYixbxZMJrvdleiVA=", "plugin delete" + paramUri);
-    switch (cAS.match(paramUri))
+    v.v("MicroMsg.MMPluginProvider", "plugin delete" + paramUri);
+    switch (cxN.match(paramUri))
     {
     default: 
-      u.e("!44@/B4Tb64lLpJVwK899MjSHnGus/LYixbxZMJrvdleiVA=", "Unknown URI " + paramUri);
+      v.e("MicroMsg.MMPluginProvider", "Unknown URI " + paramUri);
       return 0;
     }
-    return c.Jx();
+    return c.Kg();
   }
   
   public String getType(Uri paramUri)
   {
-    switch (cAS.match(paramUri))
+    switch (cxN.match(paramUri))
     {
     }
     return null;
@@ -45,29 +45,29 @@ public class MMPluginProvider
   
   public Uri insert(Uri paramUri, ContentValues paramContentValues)
   {
-    u.v("!44@/B4Tb64lLpJVwK899MjSHnGus/LYixbxZMJrvdleiVA=", "plugin insert" + paramUri);
-    switch (cAS.match(paramUri))
+    v.v("MicroMsg.MMPluginProvider", "plugin insert" + paramUri);
+    switch (cxN.match(paramUri))
     {
     default: 
-      u.e("!44@/B4Tb64lLpJVwK899MjSHnGus/LYixbxZMJrvdleiVA=", "Unknown URI " + paramUri);
+      v.e("MicroMsg.MMPluginProvider", "Unknown URI " + paramUri);
       return null;
     }
-    return c.Jw();
+    return c.Kf();
   }
   
   public boolean onCreate()
   {
-    cAR.bp(getContext());
+    cxM.bk(getContext());
     return true;
   }
   
   public Cursor query(Uri paramUri, String[] paramArrayOfString1, String paramString1, String[] paramArrayOfString2, String paramString2)
   {
-    u.i("!44@/B4Tb64lLpJVwK899MjSHnGus/LYixbxZMJrvdleiVA=", "plugin query" + paramUri);
-    switch (cAS.match(paramUri))
+    v.i("MicroMsg.MMPluginProvider", "plugin query" + paramUri);
+    switch (cxN.match(paramUri))
     {
     default: 
-      u.e("!44@/B4Tb64lLpJVwK899MjSHnGus/LYixbxZMJrvdleiVA=", "Unknown URI " + paramUri);
+      v.e("MicroMsg.MMPluginProvider", "Unknown URI " + paramUri);
       return null;
     }
     return c.a(paramArrayOfString1, paramArrayOfString2);
@@ -75,21 +75,21 @@ public class MMPluginProvider
   
   public int update(Uri paramUri, ContentValues paramContentValues, String paramString, String[] paramArrayOfString)
   {
-    u.d("!44@/B4Tb64lLpJVwK899MjSHnGus/LYixbxZMJrvdleiVA=", "plugin update" + paramUri);
-    switch (cAS.match(paramUri))
+    v.d("MicroMsg.MMPluginProvider", "plugin update" + paramUri);
+    switch (cxN.match(paramUri))
     {
     default: 
-      u.e("!44@/B4Tb64lLpJVwK899MjSHnGus/LYixbxZMJrvdleiVA=", "Unknown URI " + paramUri);
+      v.e("MicroMsg.MMPluginProvider", "Unknown URI " + paramUri);
       return 0;
     }
-    return c.Jy();
+    return c.Kh();
   }
   
   protected static abstract class a
   {
     private Context context = null;
     
-    public boolean bp(Context paramContext)
+    public boolean bk(Context paramContext)
     {
       context = paramContext;
       return true;

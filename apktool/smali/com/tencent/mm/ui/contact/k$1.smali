@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/af$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ah$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lkt:Lcom/tencent/mm/ui/contact/k;
+.field final synthetic lKE:Lcom/tencent/mm/ui/contact/k;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 59
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/k$1;->lkt:Lcom/tencent/mm/ui/contact/k;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/k$1;->lKE:Lcom/tencent/mm/ui/contact/k;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,22 +36,22 @@
 
 
 # virtual methods
-.method public final lj()Z
+.method public final jK()Z
     .locals 2
 
     .prologue
     .line 63
-    const-string/jumbo v0, "!44@/B4Tb64lLpISOYcLaKm7W93grpYn2xfC5yJeWqznlqY="
+    const-string/jumbo v0, "MicroMsg.FMessageContactView"
 
     const-string/jumbo v1, "refresh timer expired, update"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 64
-    invoke-static {}, Lcom/tencent/mm/ui/contact/k;->bhm()V
+    invoke-static {}, Lcom/tencent/mm/ui/contact/k;->bmW()V
 
     .line 65
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/k$1;->lkt:Lcom/tencent/mm/ui/contact/k;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/k$1;->lKE:Lcom/tencent/mm/ui/contact/k;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/k;->a(Lcom/tencent/mm/ui/contact/k;)V
 

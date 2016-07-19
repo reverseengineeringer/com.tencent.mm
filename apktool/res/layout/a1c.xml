@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/bl7" android:background="@drawable/dl" android:paddingRight="@dimen/j8" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/j7" android:text="@string/ab6" android:drawableLeft="@raw/find_more_friend_photograph_icon" android:drawablePadding="5.0dip" style="@style/MMFontTitleInList" />
+    <TextView android:id="@id/bl8" android:paddingRight="@dimen/j8" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/j7" android:text="@string/ya" android:drawableLeft="@raw/more_my_favorite" android:drawablePadding="5.0dip" style="@style/MMFontTitleInList" />
+    <TextView android:id="@id/g9" android:visibility="gone" android:layout_height="wrap_content" android:text="@string/bl3" style="@style/MMListCatalog" />
+    <TextView android:id="@id/bl9" android:background="@drawable/dl" android:paddingRight="@dimen/j8" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/j7" android:text="@string/bl1" style="@style/MMFontTitleInList" />
+</LinearLayout>

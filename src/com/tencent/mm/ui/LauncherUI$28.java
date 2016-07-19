@@ -1,8 +1,7 @@
 package com.tencent.mm.ui;
 
 import com.tencent.mm.model.ah;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.model.c;
 import com.tencent.mm.storage.h;
 
 final class LauncherUI$28
@@ -12,21 +11,13 @@ final class LauncherUI$28
   
   public final void run()
   {
-    if (!ah.rh()) {
-      u.w("!44@/B4Tb64lLpK+AkWszK7UvIu5cpERJB7d1VkLoGBmsjY=", "getAddrTabUnreadCount, but mmcore not ready");
-    }
-    for (int i = 0;; i = t.d((Integer)ah.tD().rn().get(143618, null)))
+    if (ah.rg())
     {
-      if (LauncherUI.a(knl) != null) {
-        LauncherUI.a(knl).pQ(i);
+      h localh = ah.tE().ro();
+      if (localh != null) {
+        localh.hn(true);
       }
-      return;
     }
-  }
-  
-  public final String toString()
-  {
-    return super.toString() + "|setAddressTagUnread";
   }
 }
 

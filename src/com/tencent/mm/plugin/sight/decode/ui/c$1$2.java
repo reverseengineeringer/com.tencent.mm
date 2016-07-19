@@ -10,8 +10,8 @@ final class c$1$2
   
   public final void run()
   {
-    c.e(gyJ.gyI).setVisibility(0);
-    c.e(gyJ.gyI).startAnimation(AnimationUtils.loadAnimation(gyJ.gyI.getContext(), 2130837575));
+    c.e(gFi.gFh).setVisibility(0);
+    c.e(gFi.gFh).startAnimation(AnimationUtils.loadAnimation(gFi.gFh.getContext(), 2130968612));
   }
 }
 

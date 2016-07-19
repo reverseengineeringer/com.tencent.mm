@@ -15,19 +15,19 @@
 
 
 # instance fields
-.field cKD:Ljava/lang/String;
+.field cHG:Ljava/lang/String;
 
-.field fiT:J
+.field frR:J
 
-.field fiU:J
+.field frS:J
 
-.field fiV:J
+.field frT:J
 
-.field fiW:I
+.field frU:I
 
-.field fjc:I
+.field frZ:I
 
-.field final synthetic gZr:Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
+.field final synthetic hmJ:Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
 
 .field index:I
 
@@ -41,30 +41,30 @@
 
     const-wide/16 v0, -0x1
 
-    .line 363
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->gZr:Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
+    .line 367
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->hmJ:Lcom/tencent/mm/plugin/sns/ui/LocationWidget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 365
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->fiT:J
-
-    .line 366
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->fiU:J
-
-    .line 367
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->fiV:J
-
-    .line 368
-    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->fiW:I
-
     .line 369
-    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->fjc:I
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->frR:J
 
     .line 370
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->frS:J
+
+    .line 371
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->frT:J
+
+    .line 372
+    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->frU:I
+
+    .line 373
+    iput v2, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->frZ:I
+
+    .line 374
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->cKD:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/LocationWidget$b;->cHG:Ljava/lang/String;
 
     return-void
 .end method

@@ -16,27 +16,27 @@
     .locals 0
 
     .prologue
-    .line 18
+    .line 19
     invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/ui/b/a;-><init>()V
 
-    .line 20
+    .line 21
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/plugin/sns/ui/b/a$b;ILcom/tencent/mm/plugin/sns/h/k;Lcom/tencent/mm/protocal/b/atp;ILcom/tencent/mm/plugin/sns/ui/an;)V
+.method public final a(Lcom/tencent/mm/plugin/sns/ui/b/a$b;ILcom/tencent/mm/plugin/sns/ui/as;Lcom/tencent/mm/protocal/b/auf;ILcom/tencent/mm/plugin/sns/ui/aq;)V
     .locals 0
 
     .prologue
-    .line 29
+    .line 30
     return-void
 .end method
 
-.method public final c(Lcom/tencent/mm/plugin/sns/ui/b/a$b;)V
+.method public final d(Lcom/tencent/mm/plugin/sns/ui/b/a$b;)V
     .locals 0
 
     .prologue
-    .line 24
+    .line 25
     return-void
 .end method

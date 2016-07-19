@@ -2,8 +2,8 @@ package com.tencent.c.a.a;
 
 public final class j
 {
-  public static int aka = 0;
-  public static int akb = 0;
+  public static int VT = 0;
+  public static int VU = 0;
 }
 
 /* Location:

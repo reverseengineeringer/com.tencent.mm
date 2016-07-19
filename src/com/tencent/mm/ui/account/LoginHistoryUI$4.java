@@ -7,7 +7,7 @@ final class LoginHistoryUI$4
   
   public final void run()
   {
-    ktx.Zi();
+    kSF.aby();
   }
 }
 

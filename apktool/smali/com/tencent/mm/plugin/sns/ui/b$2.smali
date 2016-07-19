@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/animation/Animation$AnimationListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/b;->b(ZLjava/util/List;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/plugin/sns/ui/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,24 +18,16 @@
 
 
 # instance fields
-.field final synthetic gVA:Ljava/util/List;
-
-.field final synthetic gVB:Z
-
-.field final synthetic gVz:Lcom/tencent/mm/plugin/sns/ui/b;
+.field final synthetic hiS:Lcom/tencent/mm/plugin/sns/ui/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/b;Ljava/util/List;Z)V
+.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/b;)V
     .locals 0
 
     .prologue
-    .line 91
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/b$2;->gVz:Lcom/tencent/mm/plugin/sns/ui/b;
-
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/b$2;->gVA:Ljava/util/List;
-
-    iput-boolean p3, p0, Lcom/tencent/mm/plugin/sns/ui/b$2;->gVB:Z
+    .line 184
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/b$2;->hiS:Lcom/tencent/mm/plugin/sns/ui/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,32 +36,40 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
+    .locals 2
 
     .prologue
-    .line 95
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/b$2;->gVz:Lcom/tencent/mm/plugin/sns/ui/b;
+    .line 192
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/b$2;->hiS:Lcom/tencent/mm/plugin/sns/ui/b;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/b$2;->gVA:Ljava/util/List;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/b;->aY(Ljava/util/List;)V
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/b;->gZo:Z
 
-    .line 96
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/b$2;->gVz:Lcom/tencent/mm/plugin/sns/ui/b;
+    .line 193
+    return-void
+.end method
 
-    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sns/ui/b$2;->gVB:Z
+.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
+    .locals 0
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayR()Lcom/tencent/mm/sdk/platformtools/aa;
+    .prologue
+    .line 198
+    return-void
+.end method
 
-    move-result-object v2
+.method public final onAnimationStart(Landroid/view/animation/Animation;)V
+    .locals 2
 
-    new-instance v3, Lcom/tencent/mm/plugin/sns/ui/b$3;
+    .prologue
+    .line 187
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/b$2;->hiS:Lcom/tencent/mm/plugin/sns/ui/b;
 
-    invoke-direct {v3, v0, v1}, Lcom/tencent/mm/plugin/sns/ui/b$3;-><init>(Lcom/tencent/mm/plugin/sns/ui/b;Z)V
+    const/4 v1, 0x1
 
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/b;->gZo:Z
 
-    .line 97
+    .line 188
     return-void
 .end method

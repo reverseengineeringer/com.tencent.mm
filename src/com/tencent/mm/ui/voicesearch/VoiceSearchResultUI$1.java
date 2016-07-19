@@ -2,7 +2,7 @@ package com.tencent.mm.ui.voicesearch;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.plugin.report.service.g;
 
 final class VoiceSearchResultUI$1
   implements MenuItem.OnMenuItemClickListener
@@ -12,22 +12,22 @@ final class VoiceSearchResultUI$1
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
     StringBuilder localStringBuilder;
-    if (!VoiceSearchResultUI.a(lCE))
+    if (!VoiceSearchResultUI.a(mdu))
     {
-      paramMenuItem = h.fUJ;
-      localStringBuilder = new StringBuilder().append(VoiceSearchResultUI.b(lCE)).append(",").append(VoiceSearchResultUI.c(lCE)).append(",");
-      if (VoiceSearchResultUI.d(lCE) != null) {
+      paramMenuItem = g.gdY;
+      localStringBuilder = new StringBuilder().append(VoiceSearchResultUI.b(mdu)).append(",").append(VoiceSearchResultUI.c(mdu)).append(",");
+      if (VoiceSearchResultUI.d(mdu) != null) {
         break label112;
       }
     }
     label112:
-    for (int i = 0;; i = VoiceSearchResultUI.d(lCE).length)
+    for (int i = 0;; i = VoiceSearchResultUI.d(mdu).length)
     {
-      paramMenuItem.O(10452, i + ",0");
-      if (VoiceSearchResultUI.e(lCE)) {
-        lCE.moveTaskToBack(true);
+      paramMenuItem.X(10452, i + ",0");
+      if (VoiceSearchResultUI.e(mdu)) {
+        mdu.moveTaskToBack(true);
       }
-      lCE.finish();
+      mdu.finish();
       return true;
     }
   }

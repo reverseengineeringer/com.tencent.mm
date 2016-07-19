@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->a(Ljava/util/List;Ljava/lang/String;ILcom/tencent/mm/plugin/sns/ui/q;Lcom/tencent/mm/plugin/sns/ui/o$a;)V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->a(Ljava/util/List;Ljava/lang/String;ILcom/tencent/mm/plugin/sns/ui/s;Lcom/tencent/mm/plugin/sns/ui/q$a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+.field final synthetic htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 539
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$5;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    .line 567
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$5;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,10 +38,19 @@
 # virtual methods
 .method public final onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
-    .line 543
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$5;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    .line 571
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$5;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->d(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
@@ -49,8 +58,8 @@
 
     if-eqz v0, :cond_1
 
-    .line 544
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$5;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    .line 572
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$5;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->e(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Z
 
@@ -58,7 +67,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$5;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$5;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->d(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
@@ -72,8 +81,8 @@
 
     if-le v0, v1, :cond_0
 
-    .line 545
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$5;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    .line 573
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$5;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->f(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Lcom/tencent/mm/ui/base/MMPageControlView;
 
@@ -83,18 +92,18 @@
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/MMPageControlView;->setVisibility(I)V
 
-    .line 546
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$5;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    .line 574
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$5;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->f(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Lcom/tencent/mm/ui/base/MMPageControlView;
 
     move-result-object v0
 
-    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/base/MMPageControlView;->setPage(I)V
+    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/base/MMPageControlView;->sE(I)V
 
-    .line 548
+    .line 576
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$5;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$5;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->d(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
@@ -104,12 +113,12 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/plugin/sns/f/b;
+    check-cast v0, Lcom/tencent/mm/plugin/sns/g/b;
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/f/b;->aHW:Lcom/tencent/mm/protocal/b/add;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/g/b;->aus:Lcom/tencent/mm/protocal/b/adw;
 
-    .line 549
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$5;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    .line 577
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$5;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->d(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
@@ -119,34 +128,41 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/plugin/sns/f/b;
+    check-cast v0, Lcom/tencent/mm/plugin/sns/g/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/f/b;->gSz:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/g/b;->haC:Ljava/lang/String;
 
-    .line 550
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$5;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    .line 578
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$5;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
-    invoke-static {v2, v1, p3, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->a(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;Lcom/tencent/mm/protocal/b/add;ILjava/lang/String;)V
+    invoke-static {v2, v1, p3, v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->a(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;Lcom/tencent/mm/protocal/b/adw;ILjava/lang/String;)V
 
-    .line 551
+    .line 579
     instance-of v0, p2, Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     if-eqz v0, :cond_1
 
-    .line 552
+    .line 580
     check-cast p2, Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
-    invoke-virtual {p2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->bdf()V
+    invoke-virtual {p2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->biI()V
 
-    .line 555
+    .line 583
     :cond_1
     return-void
 .end method
 
 .method public final onNothingSelected(Landroid/widget/AdapterView;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 560
+    .line 588
     return-void
 .end method

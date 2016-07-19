@@ -9,7 +9,7 @@ final class ExtControlProviderVoiceControl$6
   
   public final void run()
   {
-    ExtControlProviderVoiceControl.c(dLR, bDO);
+    ExtControlProviderVoiceControl.c(dNy, bwZ);
   }
 }
 

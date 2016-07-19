@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/network/r$6;
-.super Lcom/tencent/mm/sdk/platformtools/at;
+.super Lcom/tencent/mm/sdk/platformtools/az;
 .source "SourceFile"
 
 
@@ -13,13 +13,22 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/platformtools/az",
+        "<",
+        "Ljava/lang/Integer;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic ciT:Lcom/tencent/mm/network/r;
+.field final synthetic cek:Lcom/tencent/mm/network/r;
 
-.field final synthetic ciZ:Lcom/tencent/mm/network/p;
+.field final synthetic ceq:Lcom/tencent/mm/network/p;
 
-.field final synthetic cja:Lcom/tencent/mm/network/k;
+.field final synthetic cer:Lcom/tencent/mm/network/k;
 
 
 # direct methods
@@ -28,30 +37,30 @@
 
     .prologue
     .line 287
-    iput-object p1, p0, Lcom/tencent/mm/network/r$6;->ciT:Lcom/tencent/mm/network/r;
+    iput-object p1, p0, Lcom/tencent/mm/network/r$6;->cek:Lcom/tencent/mm/network/r;
 
-    iput-object p3, p0, Lcom/tencent/mm/network/r$6;->ciZ:Lcom/tencent/mm/network/p;
+    iput-object p3, p0, Lcom/tencent/mm/network/r$6;->ceq:Lcom/tencent/mm/network/p;
 
-    iput-object p4, p0, Lcom/tencent/mm/network/r$6;->cja:Lcom/tencent/mm/network/k;
+    iput-object p4, p0, Lcom/tencent/mm/network/r$6;->cer:Lcom/tencent/mm/network/k;
 
     const-wide/16 v0, 0xbb8
 
-    invoke-direct {p0, v0, v1, p2}, Lcom/tencent/mm/sdk/platformtools/at;-><init>(JLjava/lang/Object;)V
+    invoke-direct {p0, v0, v1, p2}, Lcom/tencent/mm/sdk/platformtools/az;-><init>(JLjava/lang/Object;)V
 
     return-void
 .end method
 
-.method private ES()Ljava/lang/Integer;
+.method private Fn()Ljava/lang/Integer;
     .locals 5
 
     .prologue
     .line 292
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/network/r$6;->ciT:Lcom/tencent/mm/network/r;
+    iget-object v0, p0, Lcom/tencent/mm/network/r$6;->cek:Lcom/tencent/mm/network/r;
 
-    iget-object v1, p0, Lcom/tencent/mm/network/r$6;->ciZ:Lcom/tencent/mm/network/p;
+    iget-object v1, p0, Lcom/tencent/mm/network/r$6;->ceq:Lcom/tencent/mm/network/p;
 
-    iget-object v2, p0, Lcom/tencent/mm/network/r$6;->cja:Lcom/tencent/mm/network/k;
+    iget-object v2, p0, Lcom/tencent/mm/network/r$6;->cer:Lcom/tencent/mm/network/k;
 
     invoke-static {v0, v1, v2}, Lcom/tencent/mm/network/r;->a(Lcom/tencent/mm/network/r;Lcom/tencent/mm/network/p;Lcom/tencent/mm/network/k;)I
 
@@ -72,7 +81,7 @@
     move-exception v0
 
     .line 295
-    const-string/jumbo v1, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v1, "MicroMsg.AutoAuth"
 
     const-string/jumbo v2, "exception:%s"
 
@@ -82,16 +91,16 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 296
-    iget-object v0, p0, Lcom/tencent/mm/network/r$6;->ciT:Lcom/tencent/mm/network/r;
+    iget-object v0, p0, Lcom/tencent/mm/network/r$6;->cek:Lcom/tencent/mm/network/r;
 
     invoke-static {v0}, Lcom/tencent/mm/network/r;->a(Lcom/tencent/mm/network/r;)V
 
@@ -112,7 +121,7 @@
 
     .prologue
     .line 287
-    invoke-direct {p0}, Lcom/tencent/mm/network/r$6;->ES()Ljava/lang/Integer;
+    invoke-direct {p0}, Lcom/tencent/mm/network/r$6;->Fn()Ljava/lang/Integer;
 
     move-result-object v0
 

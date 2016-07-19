@@ -12,8 +12,8 @@ final class MainSightForwardContainerView$6
   
   public final void onError(int paramInt)
   {
-    if ((gCF.size() <= 1) || (-1 == paramInt)) {
-      g.ba(gCI.getContext(), gCI.getContext().getString(2131431089));
+    if ((gJg.size() <= 1) || (-1 == paramInt)) {
+      g.aZ(gJj.getContext(), gJj.getContext().getString(2131234899));
     }
   }
 }

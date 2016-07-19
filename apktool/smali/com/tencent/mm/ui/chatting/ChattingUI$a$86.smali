@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;->ayk()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,24 @@
 
 
 # instance fields
-.field final synthetic laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.field final synthetic lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+
+.field final synthetic lBD:J
+
+.field final synthetic lBE:I
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/chatting/ChattingUI$a;)V
+.method constructor <init>(Lcom/tencent/mm/ui/chatting/ChattingUI$a;JI)V
     .locals 0
 
     .prologue
-    .line 3746
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$86;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 4351
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$86;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+
+    iput-wide p2, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$86;->lBD:J
+
+    iput p4, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$86;->lBE:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,20 +45,22 @@
 
 # virtual methods
 .method public final run()V
-    .locals 4
+    .locals 2
 
     .prologue
-    .line 3749
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$86;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 4354
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$86;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    const/4 v1, 0x1
+    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->e(Lcom/tencent/mm/ui/chatting/ChattingUI$a;)Landroid/widget/ListView;
 
-    const/4 v2, 0x0
+    move-result-object v0
 
-    const/4 v3, 0x0
+    new-instance v1, Lcom/tencent/mm/ui/chatting/ChattingUI$a$86$1;
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->a(ZZLcom/tencent/mm/ui/chatting/ChattingUI$a$e;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a$86$1;-><init>(Lcom/tencent/mm/ui/chatting/ChattingUI$a$86;)V
 
-    .line 3750
+    invoke-virtual {v0, v1}, Landroid/widget/ListView;->post(Ljava/lang/Runnable;)Z
+
+    .line 4367
     return-void
 .end method

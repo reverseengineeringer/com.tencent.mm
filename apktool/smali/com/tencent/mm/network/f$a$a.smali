@@ -26,39 +26,39 @@
     .locals 0
 
     .prologue
-    .line 385
+    .line 394
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 386
+    .line 395
     iput-object p1, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
-    .line 387
+    .line 396
     return-void
 .end method
 
 
 # virtual methods
-.method public final EJ()Lcom/tencent/mm/network/d;
+.method public final Fe()Lcom/tencent/mm/network/d;
     .locals 5
 
     .prologue
-    .line 434
+    .line 443
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 435
+    .line 444
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 438
+    .line 447
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 439
+    .line 448
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x3
@@ -67,62 +67,62 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 440
+    .line 449
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
 
-    .line 441
+    .line 450
     invoke-virtual {v2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/network/d$a;->W(Landroid/os/IBinder;)Lcom/tencent/mm/network/d;
+    invoke-static {v0}, Lcom/tencent/mm/network/d$a;->y(Landroid/os/IBinder;)Lcom/tencent/mm/network/d;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    .line 444
+    .line 453
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 445
+    .line 454
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 447
+    .line 456
     return-object v0
 
-    .line 444
+    .line 453
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 445
+    .line 454
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
 .end method
 
-.method public final EK()V
+.method public final Ff()V
     .locals 5
 
     .prologue
-    .line 595
+    .line 604
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 596
+    .line 605
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 598
+    .line 607
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 599
+    .line 608
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xc
@@ -131,53 +131,53 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 600
+    .line 609
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 603
+    .line 612
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 604
+    .line 613
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 605
+    .line 614
     return-void
 
-    .line 603
+    .line 612
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 604
+    .line 613
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
 .end method
 
-.method public final EL()Lcom/tencent/mm/network/h;
+.method public final Fg()Lcom/tencent/mm/network/h;
     .locals 5
 
     .prologue
-    .line 664
+    .line 673
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 665
+    .line 674
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 668
+    .line 677
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 669
+    .line 678
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x10
@@ -186,36 +186,36 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 670
+    .line 679
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
 
-    .line 671
+    .line 680
     invoke-virtual {v2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/network/h$a;->Y(Landroid/os/IBinder;)Lcom/tencent/mm/network/h;
+    invoke-static {v0}, Lcom/tencent/mm/network/h$a;->A(Landroid/os/IBinder;)Lcom/tencent/mm/network/h;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    .line 674
+    .line 683
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 675
+    .line 684
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 677
+    .line 686
     return-object v0
 
-    .line 674
+    .line 683
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 675
+    .line 684
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -227,23 +227,23 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 398
+    .line 407
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 399
+    .line 408
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v3
 
-    .line 402
+    .line 411
     :try_start_0
     const-string/jumbo v1, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v2, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 403
+    .line 412
     if-eqz p1, :cond_1
 
     invoke-interface {p1}, Lcom/tencent/mm/network/p;->asBinder()Landroid/os/IBinder;
@@ -253,7 +253,7 @@
     :goto_0
     invoke-virtual {v2, v1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 404
+    .line 413
     if-eqz p2, :cond_0
 
     invoke-interface {p2}, Lcom/tencent/mm/network/k;->asBinder()Landroid/os/IBinder;
@@ -263,7 +263,7 @@
     :cond_0
     invoke-virtual {v2, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 405
+    .line 414
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/4 v1, 0x1
@@ -272,38 +272,38 @@
 
     invoke-interface {v0, v1, v2, v3, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 406
+    .line 415
     invoke-virtual {v3}, Landroid/os/Parcel;->readException()V
 
-    .line 407
+    .line 416
     invoke-virtual {v3}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v0
 
-    .line 410
+    .line 419
     invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
 
-    .line 411
+    .line 420
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 413
+    .line 422
     return v0
 
     :cond_1
     move-object v1, v0
 
-    .line 403
+    .line 412
     goto :goto_0
 
-    .line 410
+    .line 419
     :catchall_0
     move-exception v0
 
     invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
 
-    .line 411
+    .line 420
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -311,27 +311,36 @@
 
 .method public final a(ZLjava/util/List;)I
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(Z",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)I"
+        }
+    .end annotation
 
     .prologue
     const/4 v0, 0x0
 
-    .line 700
+    .line 709
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 701
+    .line 710
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 704
+    .line 713
     :try_start_0
     const-string/jumbo v3, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 705
+    .line 714
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
@@ -339,7 +348,7 @@
     :cond_0
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 706
+    .line 715
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x12
@@ -348,35 +357,35 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 707
+    .line 716
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
 
-    .line 708
+    .line 717
     invoke-virtual {v2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 709
+    .line 718
     invoke-virtual {v2, p2}, Landroid/os/Parcel;->readStringList(Ljava/util/List;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 712
+    .line 721
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 713
+    .line 722
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 715
+    .line 724
     return v0
 
-    .line 712
+    .line 721
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 713
+    .line 722
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -388,32 +397,32 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 751
+    .line 760
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 752
+    .line 761
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 754
+    .line 763
     :try_start_0
     const-string/jumbo v3, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 755
+    .line 764
     invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 756
+    .line 765
     invoke-virtual {v1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 757
+    .line 766
     invoke-virtual {v1, p3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 758
+    .line 767
     if-eqz p4, :cond_0
 
     const/4 v0, 0x1
@@ -421,7 +430,7 @@
     :cond_0
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 759
+    .line 768
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x15
@@ -430,27 +439,27 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 760
+    .line 769
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 763
+    .line 772
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 764
+    .line 773
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 765
+    .line 774
     return-void
 
-    .line 763
+    .line 772
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 764
+    .line 773
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -460,23 +469,23 @@
     .locals 5
 
     .prologue
-    .line 630
+    .line 639
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 631
+    .line 640
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 633
+    .line 642
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 634
+    .line 643
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Lcom/tencent/mm/network/a/b;->asBinder()Landroid/os/IBinder;
@@ -486,7 +495,7 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 635
+    .line 644
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xe
@@ -495,33 +504,33 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 636
+    .line 645
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 639
+    .line 648
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 640
+    .line 649
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 641
+    .line 650
     return-void
 
-    .line 634
+    .line 643
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 639
+    .line 648
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 640
+    .line 649
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -531,23 +540,23 @@
     .locals 5
 
     .prologue
-    .line 895
+    .line 904
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 896
+    .line 905
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 898
+    .line 907
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 899
+    .line 908
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Lcom/tencent/mm/network/g;->asBinder()Landroid/os/IBinder;
@@ -557,7 +566,7 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 900
+    .line 909
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x1e
@@ -566,33 +575,33 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 901
+    .line 910
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 904
+    .line 913
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 905
+    .line 914
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 906
+    .line 915
     return-void
 
-    .line 899
+    .line 908
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 904
+    .line 913
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 905
+    .line 914
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -602,23 +611,23 @@
     .locals 5
 
     .prologue
-    .line 865
+    .line 874
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 866
+    .line 875
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 868
+    .line 877
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 869
+    .line 878
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Lcom/tencent/mm/network/n;->asBinder()Landroid/os/IBinder;
@@ -628,7 +637,7 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 870
+    .line 879
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x1c
@@ -637,33 +646,33 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 871
+    .line 880
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 874
+    .line 883
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 875
+    .line 884
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 876
+    .line 885
     return-void
 
-    .line 869
+    .line 878
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 874
+    .line 883
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 875
+    .line 884
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -673,23 +682,23 @@
     .locals 5
 
     .prologue
-    .line 880
+    .line 889
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 881
+    .line 890
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 883
+    .line 892
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 884
+    .line 893
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Lcom/tencent/mm/network/q;->asBinder()Landroid/os/IBinder;
@@ -699,7 +708,7 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 885
+    .line 894
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x1d
@@ -708,69 +717,69 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 886
+    .line 895
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 889
+    .line 898
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 890
+    .line 899
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 891
+    .line 900
     return-void
 
-    .line 884
+    .line 893
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 889
+    .line 898
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 890
+    .line 899
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
 .end method
 
-.method public final a(Lcom/tencent/mm/protocal/y;)V
+.method public final a(Lcom/tencent/mm/protocal/ab;)V
     .locals 5
 
     .prologue
-    .line 465
+    .line 474
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 466
+    .line 475
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 468
+    .line 477
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 469
+    .line 478
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/tencent/mm/protocal/y;->asBinder()Landroid/os/IBinder;
+    invoke-interface {p1}, Lcom/tencent/mm/protocal/ab;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
     :goto_0
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 470
+    .line 479
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x5
@@ -779,33 +788,33 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 471
+    .line 480
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 474
+    .line 483
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 475
+    .line 484
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 476
+    .line 485
     return-void
 
-    .line 469
+    .line 478
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 474
+    .line 483
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 475
+    .line 484
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -817,23 +826,23 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 480
+    .line 489
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 481
+    .line 490
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 483
+    .line 492
     :try_start_0
     const-string/jumbo v3, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 484
+    .line 493
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
@@ -841,31 +850,31 @@
     :cond_0
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 485
+    .line 494
     invoke-virtual {v1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 486
+    .line 495
     invoke-virtual {v1, p3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 487
+    .line 496
     invoke-virtual {v1, p4}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    .line 488
+    .line 497
     invoke-virtual {v1, p5}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    .line 489
+    .line 498
     invoke-virtual {v1, p6}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 490
+    .line 499
     invoke-virtual {v1, p7}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 491
+    .line 500
     invoke-virtual {v1, p8}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 492
+    .line 501
     invoke-virtual {v1, p9}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 493
+    .line 502
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x6
@@ -874,222 +883,27 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 494
+    .line 503
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 497
+    .line 506
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 498
+    .line 507
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 499
+    .line 508
     return-void
 
-    .line 497
+    .line 506
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 498
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    throw v0
-.end method
-
-.method public final aO(Z)V
-    .locals 5
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 542
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    .line 543
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v2
-
-    .line 545
-    :try_start_0
-    const-string/jumbo v3, "com.tencent.mm.network.IDispatcher_AIDL"
-
-    invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    .line 546
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x1
-
-    :cond_0
-    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 547
-    iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
-
-    const/16 v3, 0x9
-
-    const/4 v4, 0x0
-
-    invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    .line 548
-    invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 551
-    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
-
-    .line 552
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    .line 553
-    return-void
-
-    .line 551
-    :catchall_0
-    move-exception v0
-
-    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
-
-    .line 552
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    throw v0
-.end method
-
-.method public final aP(Z)V
-    .locals 5
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 925
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    .line 926
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v2
-
-    .line 928
-    :try_start_0
-    const-string/jumbo v3, "com.tencent.mm.network.IDispatcher_AIDL"
-
-    invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    .line 929
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x1
-
-    :cond_0
-    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 930
-    iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
-
-    const/16 v3, 0x20
-
-    const/4 v4, 0x0
-
-    invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    .line 931
-    invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 934
-    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
-
-    .line 935
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    .line 936
-    return-void
-
-    .line 934
-    :catchall_0
-    move-exception v0
-
-    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
-
-    .line 935
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    throw v0
-.end method
-
-.method public final aQ(Z)V
-    .locals 5
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 940
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    .line 941
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v2
-
-    .line 943
-    :try_start_0
-    const-string/jumbo v3, "com.tencent.mm.network.IDispatcher_AIDL"
-
-    invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    .line 944
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x1
-
-    :cond_0
-    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 945
-    iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
-
-    const/16 v3, 0x21
-
-    const/4 v4, 0x0
-
-    invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    .line 946
-    invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 949
-    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
-
-    .line 950
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    .line 951
-    return-void
-
-    .line 949
-    :catchall_0
-    move-exception v0
-
-    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
-
-    .line 950
+    .line 507
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -1099,73 +913,267 @@
     .locals 1
 
     .prologue
-    .line 390
+    .line 399
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     return-object v0
 .end method
 
-.method public final c(Ljava/lang/String;Ljava/util/List;)I
+.method public final at(Z)V
     .locals 5
 
     .prologue
-    .line 681
+    const/4 v0, 0x0
+
+    .line 551
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 682
+    .line 552
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 685
+    .line 554
     :try_start_0
-    const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
+    const-string/jumbo v3, "com.tencent.mm.network.IDispatcher_AIDL"
 
-    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+    invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 686
-    invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    .line 555
+    if-eqz p1, :cond_0
 
-    .line 687
+    const/4 v0, 0x1
+
+    :cond_0
+    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 556
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
-    const/16 v3, 0x11
+    const/16 v3, 0x9
 
     const/4 v4, 0x0
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 688
+    .line 557
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
-
-    .line 689
-    invoke-virtual {v2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    .line 690
-    invoke-virtual {v2, p2}, Landroid/os/Parcel;->readStringList(Ljava/util/List;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 693
+    .line 560
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 694
+    .line 561
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 696
-    return v0
+    .line 562
+    return-void
 
-    .line 693
+    .line 560
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 694
+    .line 561
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    throw v0
+.end method
+
+.method public final au(Z)V
+    .locals 5
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 934
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    .line 935
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v2
+
+    .line 937
+    :try_start_0
+    const-string/jumbo v3, "com.tencent.mm.network.IDispatcher_AIDL"
+
+    invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 938
+    if-eqz p1, :cond_0
+
+    const/4 v0, 0x1
+
+    :cond_0
+    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 939
+    iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
+
+    const/16 v3, 0x20
+
+    const/4 v4, 0x0
+
+    invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    .line 940
+    invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 943
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    .line 944
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 945
+    return-void
+
+    .line 943
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    .line 944
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    throw v0
+.end method
+
+.method public final av(Z)V
+    .locals 5
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 949
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    .line 950
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v2
+
+    .line 952
+    :try_start_0
+    const-string/jumbo v3, "com.tencent.mm.network.IDispatcher_AIDL"
+
+    invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 953
+    if-eqz p1, :cond_0
+
+    const/4 v0, 0x1
+
+    :cond_0
+    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 954
+    iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
+
+    const/16 v3, 0x21
+
+    const/4 v4, 0x0
+
+    invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    .line 955
+    invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 958
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    .line 959
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 960
+    return-void
+
+    .line 958
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    .line 959
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    throw v0
+.end method
+
+.method public final aw(Z)V
+    .locals 5
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 964
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    .line 965
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v2
+
+    .line 967
+    :try_start_0
+    const-string/jumbo v3, "com.tencent.mm.network.IDispatcher_AIDL"
+
+    invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 968
+    if-eqz p1, :cond_0
+
+    const/4 v0, 0x1
+
+    :cond_0
+    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 969
+    iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
+
+    const/16 v3, 0x22
+
+    const/4 v4, 0x0
+
+    invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    .line 970
+    invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 973
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    .line 974
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 975
+    return-void
+
+    .line 973
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    .line 974
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -1175,35 +1183,35 @@
     .locals 5
 
     .prologue
-    .line 559
+    .line 568
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 560
+    .line 569
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 562
+    .line 571
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 563
+    .line 572
     invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 564
+    .line 573
     invoke-virtual {v1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 565
+    .line 574
     invoke-virtual {v1, p3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 566
+    .line 575
     invoke-virtual {v1, p4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 567
+    .line 576
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xa
@@ -1212,27 +1220,27 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 568
+    .line 577
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 571
+    .line 580
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 572
+    .line 581
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 573
+    .line 582
     return-void
 
-    .line 571
+    .line 580
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 572
+    .line 581
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -1242,26 +1250,26 @@
     .locals 5
 
     .prologue
-    .line 417
+    .line 426
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 418
+    .line 427
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 420
+    .line 429
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 421
+    .line 430
     invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 422
+    .line 431
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x2
@@ -1270,59 +1278,135 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 423
+    .line 432
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 426
+    .line 435
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 427
+    .line 436
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 428
+    .line 437
     return-void
 
-    .line 426
+    .line 435
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 427
+    .line 436
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
 .end method
 
-.method public final f(I[B)I
+.method public final d(Ljava/lang/String;Ljava/util/List;)I
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)I"
+        }
+    .end annotation
 
     .prologue
-    .line 800
+    .line 690
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 801
+    .line 691
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 804
+    .line 694
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 805
+    .line 695
+    invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    .line 696
+    iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
+
+    const/16 v3, 0x11
+
+    const/4 v4, 0x0
+
+    invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    .line 697
+    invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
+
+    .line 698
+    invoke-virtual {v2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    .line 699
+    invoke-virtual {v2, p2}, Landroid/os/Parcel;->readStringList(Ljava/util/List;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 702
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    .line 703
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 705
+    return v0
+
+    .line 702
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    .line 703
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    throw v0
+.end method
+
+.method public final g(I[B)I
+    .locals 5
+
+    .prologue
+    .line 809
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    .line 810
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v2
+
+    .line 813
+    :try_start_0
+    const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
+
+    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 814
     invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 806
+    .line 815
     invoke-virtual {v1, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 807
+    .line 816
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x18
@@ -1331,32 +1415,32 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 808
+    .line 817
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
 
-    .line 809
+    .line 818
     invoke-virtual {v2}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v0
 
-    .line 812
+    .line 821
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 813
+    .line 822
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 815
+    .line 824
     return v0
 
-    .line 812
+    .line 821
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 813
+    .line 822
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -1368,23 +1452,23 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 503
+    .line 512
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 504
+    .line 513
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 507
+    .line 516
     :try_start_0
     const-string/jumbo v3, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 508
+    .line 517
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
@@ -1392,7 +1476,7 @@
     :cond_0
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 509
+    .line 518
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x7
@@ -1401,32 +1485,32 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 510
+    .line 519
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
 
-    .line 511
+    .line 520
     invoke-virtual {v2}, Landroid/os/Parcel;->createStringArray()[Ljava/lang/String;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    .line 514
+    .line 523
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 515
+    .line 524
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 517
+    .line 526
     return-object v0
 
-    .line 514
+    .line 523
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 515
+    .line 524
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -1436,23 +1520,23 @@
     .locals 5
 
     .prologue
-    .line 783
+    .line 792
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 784
+    .line 793
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 787
+    .line 796
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 788
+    .line 797
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x17
@@ -1461,32 +1545,32 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 789
+    .line 798
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
 
-    .line 790
+    .line 799
     invoke-virtual {v2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    .line 793
+    .line 802
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 794
+    .line 803
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 796
+    .line 805
     return-object v0
 
-    .line 793
+    .line 802
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 794
+    .line 803
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -1496,23 +1580,23 @@
     .locals 5
 
     .prologue
-    .line 523
+    .line 532
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 524
+    .line 533
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 527
+    .line 536
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 528
+    .line 537
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x8
@@ -1521,61 +1605,61 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 529
+    .line 538
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
 
-    .line 530
+    .line 539
     invoke-virtual {v2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    .line 533
+    .line 542
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 534
+    .line 543
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 536
+    .line 545
     return-object v0
 
-    .line 533
+    .line 542
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 534
+    .line 543
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
 .end method
 
-.method public final gg(Ljava/lang/String;)V
+.method public final gt(Ljava/lang/String;)V
     .locals 5
 
     .prologue
-    .line 647
+    .line 656
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 648
+    .line 657
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 650
+    .line 659
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 651
+    .line 660
     invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 652
+    .line 661
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xf
@@ -1584,56 +1668,56 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 653
+    .line 662
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 656
+    .line 665
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 657
+    .line 666
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 658
+    .line 667
     return-void
 
-    .line 656
+    .line 665
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 657
+    .line 666
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
 .end method
 
-.method public final gh(Ljava/lang/String;)V
+.method public final gu(Ljava/lang/String;)V
     .locals 5
 
     .prologue
-    .line 910
+    .line 919
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 911
+    .line 920
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 913
+    .line 922
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 914
+    .line 923
     invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 915
+    .line 924
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x1f
@@ -1642,27 +1726,27 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 916
+    .line 925
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 919
+    .line 928
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 920
+    .line 929
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 921
+    .line 930
     return-void
 
-    .line 919
+    .line 928
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 920
+    .line 929
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -1672,23 +1756,23 @@
     .locals 5
 
     .prologue
-    .line 835
+    .line 844
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 836
+    .line 845
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 838
+    .line 847
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 839
+    .line 848
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x1a
@@ -1697,27 +1781,27 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 840
+    .line 849
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 843
+    .line 852
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 844
+    .line 853
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 845
+    .line 854
     return-void
 
-    .line 843
+    .line 852
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 844
+    .line 853
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -1727,26 +1811,26 @@
     .locals 5
 
     .prologue
-    .line 719
+    .line 728
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 720
+    .line 729
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 722
+    .line 731
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 723
+    .line 732
     invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 724
+    .line 733
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x13
@@ -1755,27 +1839,27 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 725
+    .line 734
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 728
+    .line 737
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 729
+    .line 738
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 730
+    .line 739
     return-void
 
-    .line 728
+    .line 737
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 729
+    .line 738
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -1785,23 +1869,23 @@
     .locals 5
 
     .prologue
-    .line 451
+    .line 460
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 452
+    .line 461
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 454
+    .line 463
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 455
+    .line 464
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x4
@@ -1810,27 +1894,27 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 456
+    .line 465
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 459
+    .line 468
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 460
+    .line 469
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 461
+    .line 470
     return-void
 
-    .line 459
+    .line 468
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 460
+    .line 469
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -1840,32 +1924,32 @@
     .locals 5
 
     .prologue
-    .line 734
+    .line 743
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 735
+    .line 744
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 737
+    .line 746
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 738
+    .line 747
     invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 739
+    .line 748
     invoke-virtual {v1, p2}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 740
+    .line 749
     invoke-virtual {v1, p3}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    .line 741
+    .line 750
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x14
@@ -1874,27 +1958,27 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 742
+    .line 751
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 745
+    .line 754
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 746
+    .line 755
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 747
+    .line 756
     return-void
 
-    .line 745
+    .line 754
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 746
+    .line 755
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -1904,29 +1988,29 @@
     .locals 5
 
     .prologue
-    .line 577
+    .line 586
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 578
+    .line 587
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 580
+    .line 589
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 581
+    .line 590
     invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 582
+    .line 591
     invoke-virtual {v1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 583
+    .line 592
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xb
@@ -1935,27 +2019,27 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 584
+    .line 593
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 587
+    .line 596
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 588
+    .line 597
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 589
+    .line 598
     return-void
 
-    .line 587
+    .line 596
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 588
+    .line 597
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -1965,29 +2049,29 @@
     .locals 5
 
     .prologue
-    .line 819
+    .line 828
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 820
+    .line 829
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 822
+    .line 831
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 823
+    .line 832
     invoke-virtual {v1, p1, p2}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 824
+    .line 833
     invoke-virtual {v1, p3, p4}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 825
+    .line 834
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x19
@@ -1996,27 +2080,27 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 826
+    .line 835
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 829
+    .line 838
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 830
+    .line 839
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 831
+    .line 840
     return-void
 
-    .line 829
+    .line 838
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 830
+    .line 839
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
@@ -2026,23 +2110,23 @@
     .locals 5
 
     .prologue
-    .line 849
+    .line 858
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 850
+    .line 859
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 852
+    .line 861
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 853
+    .line 862
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x1b
@@ -2051,55 +2135,55 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 854
+    .line 863
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 857
+    .line 866
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 858
+    .line 867
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 859
+    .line 868
     return-void
 
-    .line 857
+    .line 866
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 858
+    .line 867
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
 .end method
 
-.method public final vM()Z
+.method public final vO()Z
     .locals 6
 
     .prologue
     const/4 v0, 0x0
 
-    .line 611
+    .line 620
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 612
+    .line 621
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 615
+    .line 624
     :try_start_0
     const-string/jumbo v3, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 616
+    .line 625
     iget-object v3, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0xd
@@ -2108,10 +2192,10 @@
 
     invoke-interface {v3, v4, v1, v2, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 617
+    .line 626
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
 
-    .line 618
+    .line 627
     invoke-virtual {v2}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2122,49 +2206,49 @@
 
     const/4 v0, 0x1
 
-    .line 621
+    .line 630
     :cond_0
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 622
+    .line 631
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 624
+    .line 633
     return v0
 
-    .line 621
+    .line 630
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 622
+    .line 631
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
 .end method
 
-.method public final vY()V
+.method public final wa()V
     .locals 5
 
     .prologue
-    .line 769
+    .line 778
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 770
+    .line 779
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 772
+    .line 781
     :try_start_0
     const-string/jumbo v0, "com.tencent.mm.network.IDispatcher_AIDL"
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 773
+    .line 782
     iget-object v0, p0, Lcom/tencent/mm/network/f$a$a;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x16
@@ -2173,27 +2257,27 @@
 
     invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 774
+    .line 783
     invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 777
+    .line 786
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 778
+    .line 787
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 779
+    .line 788
     return-void
 
-    .line 777
+    .line 786
     :catchall_0
     move-exception v0
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 778
+    .line 787
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0

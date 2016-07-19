@@ -2,9 +2,9 @@ package com.tencent.mm.ui;
 
 public final class s$b
 {
-  int ccb;
+  int bVQ;
   int id;
-  int krc;
+  int kQj;
   int order;
   
   public s$b(int paramInt1, int paramInt2, int paramInt3)
@@ -15,8 +15,8 @@ public final class s$b
   public s$b(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     id = paramInt1;
-    krc = paramInt2;
-    ccb = paramInt3;
+    kQj = paramInt2;
+    bVQ = paramInt3;
     order = paramInt4;
   }
 }

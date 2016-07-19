@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static cgF:Lcom/tencent/mm/model/aa;
+.field private static cbU:Lcom/tencent/mm/model/aa;
 
 
 # direct methods
@@ -15,7 +15,7 @@
     .line 10
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/plugin/base/stub/b;->cgF:Lcom/tencent/mm/model/aa;
+    sput-object v0, Lcom/tencent/mm/plugin/base/stub/b;->cbU:Lcom/tencent/mm/model/aa;
 
     return-void
 .end method
@@ -25,7 +25,7 @@
 
     .prologue
     .line 14
-    sput-object p0, Lcom/tencent/mm/plugin/base/stub/b;->cgF:Lcom/tencent/mm/model/aa;
+    sput-object p0, Lcom/tencent/mm/plugin/base/stub/b;->cbU:Lcom/tencent/mm/model/aa;
 
     .line 15
     return-void

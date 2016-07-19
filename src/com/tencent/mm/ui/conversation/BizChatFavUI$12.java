@@ -1,29 +1,19 @@
 package com.tencent.mm.ui.conversation;
 
-import android.widget.ListView;
-import android.widget.TextView;
-import com.tencent.mm.model.i;
-import com.tencent.mm.ui.i.a;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.base.MMSlideDelView.e;
 
 final class BizChatFavUI$12
-  implements i.a
+  implements MMSlideDelView.e
 {
   BizChatFavUI$12(BizChatFavUI paramBizChatFavUI) {}
   
-  public final void Gh()
+  public final void at(Object paramObject)
   {
-    lnW.Gj(i.dY(BizChatFavUI.JT()));
-    if (BizChatFavUI.a(lnW).getCount() <= 0)
-    {
-      BizChatFavUI.b(lnW).setVisibility(0);
-      BizChatFavUI.c(lnW).setVisibility(8);
-      return;
+    if (paramObject == null) {
+      v.e("MicroMsg.BizChatFavUI", "onItemDel object null");
     }
-    BizChatFavUI.b(lnW).setVisibility(8);
-    BizChatFavUI.c(lnW).setVisibility(0);
   }
-  
-  public final void Gi() {}
 }
 
 /* Location:

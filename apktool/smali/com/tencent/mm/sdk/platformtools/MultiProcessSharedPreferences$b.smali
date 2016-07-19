@@ -18,11 +18,21 @@
 
 
 # instance fields
-.field final synthetic jWv:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+.field private final kwC:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private final jWx:Ljava/util/Map;
+.field private kwD:Z
 
-.field private jWy:Z
+.field final synthetic kwR:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
 
 
 # direct methods
@@ -30,22 +40,22 @@
     .locals 1
 
     .prologue
-    .line 326
-    iput-object p1, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->jWv:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+    .line 325
+    iput-object p1, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->kwR:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 327
+    .line 326
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->jWx:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->kwC:Ljava/util/Map;
 
-    .line 328
+    .line 327
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->jWy:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->kwD:Z
 
     return-void
 .end method
@@ -58,8 +68,8 @@
 
     const/4 v1, 0x0
 
-    .line 405
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->jWv:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+    .line 404
+    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->kwR:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
 
     invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;->c(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Z
 
@@ -69,21 +79,21 @@
 
     move v0, v1
 
-    .line 414
+    .line 413
     :goto_0
     return v0
 
-    .line 408
+    .line 407
     :cond_0
-    iget-object v3, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->jWv:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+    iget-object v3, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->kwR:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
 
     monitor-enter v3
 
-    .line 409
+    .line 408
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->jWv:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->kwR:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
 
-    iget-object v4, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->jWv:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+    iget-object v4, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->kwR:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
 
     invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;->d(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Landroid/content/Context;
 
@@ -91,14 +101,14 @@
 
     invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;->a(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;Landroid/content/Context;)V
 
-    .line 410
+    .line 409
     const/4 v0, 0x2
 
     new-array v4, v0, [Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    iget-object v5, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->jWv:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+    iget-object v5, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->kwR:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
 
     invoke-static {v5}, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;->e(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)I
 
@@ -112,7 +122,7 @@
 
     const/4 v0, 0x1
 
-    iget-boolean v5, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->jWy:Z
+    iget-boolean v5, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->kwD:Z
 
     invoke-static {v5}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
@@ -120,18 +130,18 @@
 
     aput-object v5, v4, v0
 
-    .line 411
+    .line 410
     monitor-enter p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 412
+    .line 411
     :try_start_1
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;->aVh()Landroid/net/Uri;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;->baq()Landroid/net/Uri;
 
     move-result-object v0
 
-    iget-object v5, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->jWv:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+    iget-object v5, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->kwR:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
 
     invoke-static {v5}, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;->a(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Ljava/lang/String;
 
@@ -145,17 +155,17 @@
 
     move-result-object v5
 
-    .line 413
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->jWx:Ljava/util/Map;
+    .line 412
+    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->kwC:Ljava/util/Map;
 
     check-cast v0, Ljava/util/HashMap;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$c;->f(Ljava/util/HashMap;)Landroid/content/ContentValues;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$c;->d(Ljava/util/HashMap;)Landroid/content/ContentValues;
 
     move-result-object v0
 
-    .line 414
-    iget-object v6, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->jWv:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
+    .line 413
+    iget-object v6, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->kwR:Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;
 
     invoke-static {v6}, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;->d(Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences;)Landroid/content/Context;
 
@@ -185,7 +195,7 @@
 
     goto :goto_0
 
-    .line 416
+    .line 415
     :catchall_0
     move-exception v0
 
@@ -198,10 +208,10 @@
     :cond_1
     move v0, v1
 
-    .line 414
+    .line 413
     goto :goto_1
 
-    .line 415
+    .line 414
     :catchall_1
     move-exception v0
 
@@ -222,12 +232,12 @@
     .locals 1
 
     .prologue
-    .line 396
+    .line 395
     const-string/jumbo v0, "apply"
 
     invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->setValue(Ljava/lang/String;)Z
 
-    .line 397
+    .line 396
     return-void
 .end method
 
@@ -235,21 +245,21 @@
     .locals 1
 
     .prologue
-    .line 388
+    .line 387
     monitor-enter p0
 
-    .line 389
+    .line 388
     const/4 v0, 0x1
 
     :try_start_0
-    iput-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->jWy:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->kwD:Z
 
-    .line 390
+    .line 389
     monitor-exit p0
 
     return-object p0
 
-    .line 391
+    .line 390
     :catchall_0
     move-exception v0
 
@@ -264,7 +274,7 @@
     .locals 1
 
     .prologue
-    .line 401
+    .line 400
     const-string/jumbo v0, "commit"
 
     invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->setValue(Ljava/lang/String;)Z
@@ -278,12 +288,12 @@
     .locals 2
 
     .prologue
-    .line 372
+    .line 371
     monitor-enter p0
 
-    .line 373
+    .line 372
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->jWx:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->kwC:Ljava/util/Map;
 
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -291,12 +301,12 @@
 
     invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 374
+    .line 373
     monitor-exit p0
 
     return-object p0
 
-    .line 375
+    .line 374
     :catchall_0
     move-exception v0
 
@@ -311,12 +321,12 @@
     .locals 2
 
     .prologue
-    .line 364
+    .line 363
     monitor-enter p0
 
-    .line 365
+    .line 364
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->jWx:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->kwC:Ljava/util/Map;
 
     invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -324,12 +334,12 @@
 
     invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 366
+    .line 365
     monitor-exit p0
 
     return-object p0
 
-    .line 367
+    .line 366
     :catchall_0
     move-exception v0
 
@@ -344,12 +354,12 @@
     .locals 2
 
     .prologue
-    .line 348
+    .line 347
     monitor-enter p0
 
-    .line 349
+    .line 348
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->jWx:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->kwC:Ljava/util/Map;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -357,12 +367,12 @@
 
     invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 350
+    .line 349
     monitor-exit p0
 
     return-object p0
 
-    .line 351
+    .line 350
     :catchall_0
     move-exception v0
 
@@ -377,12 +387,12 @@
     .locals 2
 
     .prologue
-    .line 356
+    .line 355
     monitor-enter p0
 
-    .line 357
+    .line 356
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->jWx:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->kwC:Ljava/util/Map;
 
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -390,12 +400,12 @@
 
     invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 358
+    .line 357
     monitor-exit p0
 
     return-object p0
 
-    .line 359
+    .line 358
     :catchall_0
     move-exception v0
 
@@ -410,21 +420,21 @@
     .locals 1
 
     .prologue
-    .line 332
+    .line 331
     monitor-enter p0
 
-    .line 333
+    .line 332
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->jWx:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->kwC:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 334
+    .line 333
     monitor-exit p0
 
     return-object p0
 
-    .line 335
+    .line 334
     :catchall_0
     move-exception v0
 
@@ -437,14 +447,25 @@
 
 .method public final putStringSet(Ljava/lang/String;Ljava/util/Set;)Landroid/content/SharedPreferences$Editor;
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/Set",
+            "<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Landroid/content/SharedPreferences$Editor;"
+        }
+    .end annotation
 
     .prologue
-    .line 340
+    .line 339
     monitor-enter p0
 
-    .line 341
+    .line 340
     :try_start_0
-    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->jWx:Ljava/util/Map;
+    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->kwC:Ljava/util/Map;
 
     if-nez p2, :cond_0
 
@@ -453,12 +474,12 @@
     :goto_0
     invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 342
+    .line 341
     monitor-exit p0
 
     return-object p0
 
-    .line 341
+    .line 340
     :cond_0
     new-instance v0, Ljava/util/HashSet;
 
@@ -466,7 +487,7 @@
 
     goto :goto_0
 
-    .line 343
+    .line 342
     :catchall_0
     move-exception v0
 
@@ -481,23 +502,23 @@
     .locals 2
 
     .prologue
-    .line 380
+    .line 379
     monitor-enter p0
 
-    .line 381
+    .line 380
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->jWx:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/MultiProcessSharedPreferences$b;->kwC:Ljava/util/Map;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 382
+    .line 381
     monitor-exit p0
 
     return-object p0
 
-    .line 383
+    .line 382
     :catchall_0
     move-exception v0
 

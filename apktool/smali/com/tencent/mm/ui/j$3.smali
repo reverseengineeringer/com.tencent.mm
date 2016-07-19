@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic kpx:Lcom/tencent/mm/ui/j;
+.field final synthetic kOB:Lcom/tencent/mm/ui/j;
 
-.field final synthetic kpz:Landroid/view/MenuItem$OnMenuItemClickListener;
+.field final synthetic kOD:Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 1545
-    iput-object p1, p0, Lcom/tencent/mm/ui/j$3;->kpx:Lcom/tencent/mm/ui/j;
+    .line 1568
+    iput-object p1, p0, Lcom/tencent/mm/ui/j$3;->kOB:Lcom/tencent/mm/ui/j;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/j$3;->kpz:Landroid/view/MenuItem$OnMenuItemClickListener;
+    iput-object p2, p0, Lcom/tencent/mm/ui/j$3;->kOD:Landroid/view/MenuItem$OnMenuItemClickListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,13 +44,13 @@
     .locals 2
 
     .prologue
-    .line 1549
-    iget-object v0, p0, Lcom/tencent/mm/ui/j$3;->kpz:Landroid/view/MenuItem$OnMenuItemClickListener;
+    .line 1572
+    iget-object v0, p0, Lcom/tencent/mm/ui/j$3;->kOD:Landroid/view/MenuItem$OnMenuItemClickListener;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem$OnMenuItemClickListener;->onMenuItemClick(Landroid/view/MenuItem;)Z
 
-    .line 1550
+    .line 1573
     return-void
 .end method

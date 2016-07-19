@@ -1,20 +1,35 @@
 package com.tencent.mm.console;
 
+import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.text.ClipboardManager;
-import android.widget.Toast;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.w;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.base.g;
 
 final class b$8
-  implements DialogInterface.OnClickListener
+  implements w
 {
-  b$8(Context paramContext, String paramString) {}
+  b$8(ProgressDialog paramProgressDialog, Context paramContext) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final void cx(int paramInt)
   {
-    ((ClipboardManager)buV.getSystemService("clipboard")).setText(buY);
-    Toast.makeText(buV, 2131430581, 0).show();
+    v.i("MicroMsg.CommandProcessor", "ipxx progress:%d", new Object[] { Integer.valueOf(paramInt) });
+    if (paramInt < 0)
+    {
+      ah.a(null);
+      bjH.dismiss();
+      g.f(val$context, 2131235755, 2131231028);
+      return;
+    }
+    if (paramInt >= 100)
+    {
+      ah.a(null);
+      bjH.dismiss();
+      g.f(val$context, 2131235759, 2131231028);
+      return;
+    }
+    bjH.setMessage(val$context.getString(2131235756) + paramInt + "%");
   }
 }
 

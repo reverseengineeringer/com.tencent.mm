@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sight.encode.ui;
 
 public abstract interface ChattingSightContainerView$a
 {
-  public abstract void awE();
+  public abstract void azd();
   
   public abstract void onHide();
 }

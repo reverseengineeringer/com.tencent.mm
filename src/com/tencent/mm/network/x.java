@@ -1,20 +1,20 @@
 package com.tencent.mm.network;
 
 import com.tencent.mm.a.n;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class x
 {
-  private static final byte[] cjE = n.aG(7);
-  public l cjF;
+  private static final byte[] ceV = n.aY(7);
+  public l ceW;
   
   public static void onOOBNotify(long paramLong1, long paramLong2)
   {
     long l = 0L;
-    ab localab = z.Fd();
+    ab localab = z.Fz();
     Object localObject = paramLong1 + "," + paramLong2;
-    u.e("!32@/B4Tb64lLpJlhWc9y/UzPIrDGDo3IGi4", "service out of band:" + (String)localObject);
+    v.e("MicroMsg.NetworkEvent", "service out of band:" + (String)localObject);
     for (;;)
     {
       try
@@ -23,20 +23,20 @@ public final class x
         switch (Integer.valueOf(localObject[0]).intValue())
         {
         case 1: 
-          cjZ = 0L;
+          cfr = 0L;
           return;
         }
       }
       catch (Exception localException)
       {
-        u.e("!32@/B4Tb64lLpJlhWc9y/UzPIrDGDo3IGi4", "exception:%s", new Object[] { ay.b(localException) });
+        v.e("MicroMsg.NetworkEvent", "exception:%s", new Object[] { be.f(localException) });
         return;
       }
       paramLong1 = l;
       if (localObject.length > 1) {
         paramLong1 = Integer.valueOf(localObject[1]).intValue();
       }
-      cjZ = paramLong1;
+      cfr = paramLong1;
       return;
     }
   }
@@ -47,7 +47,7 @@ public final class x
     if (paramArrayOfByte == null)
     {
       paramInt1 = 0;
-      u.i("!56@/B4Tb64lLpJ+CRpvz/hRUHpUjpkPFyYq4R4eGf6rI1YM+ebOLIMWgw==", paramInt1 + " cmd= " + paramInt2);
+      v.i("MicroMsg.MMNativeNetNotifyAdapter", paramInt1 + " cmd= " + paramInt2);
     }
     switch (paramInt2)
     {
@@ -71,60 +71,60 @@ public final class x
             return;
             paramInt1 = paramArrayOfByte.length;
             break;
-            u.i("!56@/B4Tb64lLpJ+CRpvz/hRUHpUjpkPFyYq4R4eGf6rI1YM+ebOLIMWgw==", "old notify");
-            cjF.d(138, cjE);
+            v.i("MicroMsg.MMNativeNetNotifyAdapter", "old notify");
+            ceW.d(138, ceV);
             return;
-            u.i("!56@/B4Tb64lLpJ+CRpvz/hRUHpUjpkPFyYq4R4eGf6rI1YM+ebOLIMWgw==", "dkpush new notify [%s]", new Object[] { ay.I(paramArrayOfByte) });
-            cjF.d(138, paramArrayOfByte);
+            v.i("MicroMsg.MMNativeNetNotifyAdapter", "dkpush new notify [%s]", new Object[] { be.O(paramArrayOfByte) });
+            ceW.d(138, paramArrayOfByte);
             return;
-            u.i("!56@/B4Tb64lLpJ+CRpvz/hRUHpUjpkPFyYq4R4eGf6rI1YM+ebOLIMWgw==", "dkpush GCM notify [%s]", new Object[] { ay.I(paramArrayOfByte) });
-            cjF.d(2147480001, paramArrayOfByte);
+            v.i("MicroMsg.MMNativeNetNotifyAdapter", "dkpush GCM notify [%s]", new Object[] { be.O(paramArrayOfByte) });
+            ceW.d(2147480001, paramArrayOfByte);
             return;
-            u.i("!56@/B4Tb64lLpJ+CRpvz/hRUHpUjpkPFyYq4R4eGf6rI1YM+ebOLIMWgw==", "dkpush do synccheck");
-            cjF.d(39, null);
+            v.i("MicroMsg.MMNativeNetNotifyAdapter", "dkpush do synccheck");
+            ceW.d(39, null);
             return;
-            cjF.d(174, paramArrayOfByte);
+            ceW.d(174, paramArrayOfByte);
             return;
           } while (paramArrayOfByte.length <= 0);
-          cjF.d(10, paramArrayOfByte);
+          ceW.d(10, paramArrayOfByte);
           return;
-          u.i("!56@/B4Tb64lLpJ+CRpvz/hRUHpUjpkPFyYq4R4eGf6rI1YM+ebOLIMWgw==", "MM_PKT_VOIP_REQ");
+          v.i("MicroMsg.MMNativeNetNotifyAdapter", "MM_PKT_VOIP_REQ");
         } while (paramArrayOfByte.length <= 0);
-        cjF.d(120, paramArrayOfByte);
+        ceW.d(120, paramArrayOfByte);
         return;
-        u.i("!56@/B4Tb64lLpJ+CRpvz/hRUHpUjpkPFyYq4R4eGf6rI1YM+ebOLIMWgw==", "dkpush MM_PKT_PUSH_DATA_REQ");
+        v.i("MicroMsg.MMNativeNetNotifyAdapter", "dkpush MM_PKT_PUSH_DATA_REQ");
       } while (paramArrayOfByte.length <= 0);
-      cjF.d(268369921, paramArrayOfByte);
+      ceW.d(268369921, paramArrayOfByte);
       return;
     case 1000000205: 
-      cjF.d(1000000205, paramArrayOfByte);
+      ceW.d(1000000205, paramArrayOfByte);
       return;
     case 192: 
-      cjF.d(192, paramArrayOfByte);
+      ceW.d(192, paramArrayOfByte);
       return;
     case 268369923: 
-      u.i("!56@/B4Tb64lLpJ+CRpvz/hRUHpUjpkPFyYq4R4eGf6rI1YM+ebOLIMWgw==", "dkpush do oob do notify");
-      cjF.d(268369923, paramArrayOfByte);
+      v.i("MicroMsg.MMNativeNetNotifyAdapter", "dkpush do oob do notify");
+      ceW.d(268369923, paramArrayOfByte);
       return;
     case 241: 
-      u.i("!56@/B4Tb64lLpJ+CRpvz/hRUHpUjpkPFyYq4R4eGf6rI1YM+ebOLIMWgw==", "jacks do voice notify PUSH");
-      cjF.d(241, paramArrayOfByte);
+      v.i("MicroMsg.MMNativeNetNotifyAdapter", "jacks do voice notify PUSH");
+      ceW.d(241, paramArrayOfByte);
       return;
     case 244: 
-      u.i("!56@/B4Tb64lLpJ+CRpvz/hRUHpUjpkPFyYq4R4eGf6rI1YM+ebOLIMWgw==", "pandy do gamesync notify");
-      cjF.d(244, paramArrayOfByte);
+      v.i("MicroMsg.MMNativeNetNotifyAdapter", "pandy do gamesync notify");
+      ceW.d(244, paramArrayOfByte);
       return;
     case 319: 
-      u.i("!56@/B4Tb64lLpJ+CRpvz/hRUHpUjpkPFyYq4R4eGf6rI1YM+ebOLIMWgw==", "hy: on notify new year shake");
-      cjF.d(319, paramArrayOfByte);
+      v.i("MicroMsg.MMNativeNetNotifyAdapter", "hy: on notify new year shake");
+      ceW.d(319, paramArrayOfByte);
       return;
     case 311: 
-      u.i("!56@/B4Tb64lLpJ+CRpvz/hRUHpUjpkPFyYq4R4eGf6rI1YM+ebOLIMWgw==", "on notify F2F data");
-      cjF.d(311, paramArrayOfByte);
+      v.i("MicroMsg.MMNativeNetNotifyAdapter", "on notify F2F data");
+      ceW.d(311, paramArrayOfByte);
       return;
     }
-    u.i("!56@/B4Tb64lLpJ+CRpvz/hRUHpUjpkPFyYq4R4eGf6rI1YM+ebOLIMWgw==", "summerbadcr on silence notify");
-    cjF.d(318, paramArrayOfByte);
+    v.i("MicroMsg.MMNativeNetNotifyAdapter", "summerbadcr on silence notify");
+    ceW.d(318, paramArrayOfByte);
   }
 }
 

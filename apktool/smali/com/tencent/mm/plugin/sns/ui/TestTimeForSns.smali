@@ -37,7 +37,7 @@
     iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/TestTimeForSns;->DEBUG:Z
 
     .line 14
-    const-string/jumbo v0, "!32@/B4Tb64lLpItTdpuA6oxWRdwg5f05xk5"
+    const-string/jumbo v0, "MicroMsg.TestTimeForSns"
 
     iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TestTimeForSns;->TAG:Ljava/lang/String;
 
@@ -58,7 +58,7 @@
     iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/ui/TestTimeForSns;->DEBUG:Z
 
     .line 14
-    const-string/jumbo v0, "!32@/B4Tb64lLpItTdpuA6oxWRdwg5f05xk5"
+    const-string/jumbo v0, "MicroMsg.TestTimeForSns"
 
     iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TestTimeForSns;->TAG:Ljava/lang/String;
 
@@ -93,18 +93,18 @@
     .line 36
     iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TestTimeForSns;->listener:Lcom/tencent/mm/plugin/sns/ui/TestTimeForSns$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/TestTimeForSns$a;->kw()V
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sns/ui/TestTimeForSns$a;->iZ()V
 
     .line 39
     :cond_0
     const/16 v0, 0xa
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/report/service/g;->ke(I)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/report/service/f;->ls(I)V
 
     .line 40
     const/16 v0, 0x16
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/report/service/g;->ke(I)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/report/service/f;->ls(I)V
 
     .line 42
     return-void

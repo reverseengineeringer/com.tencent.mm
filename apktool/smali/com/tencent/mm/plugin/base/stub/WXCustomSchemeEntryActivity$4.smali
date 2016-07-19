@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic cBr:Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;
+.field final synthetic cyl:Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 214
-    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$4;->cBr:Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;
+    .line 222
+    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$4;->cyl:Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,15 +36,15 @@
 
 
 # virtual methods
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;Z)V
+.method public final a(IILjava/lang/String;Lcom/tencent/mm/t/j;Z)V
     .locals 1
 
     .prologue
-    .line 216
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$4;->cBr:Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;
+    .line 224
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity$4;->cyl:Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/base/stub/WXCustomSchemeEntryActivity;->finish()V
 
-    .line 217
+    .line 225
     return-void
 .end method

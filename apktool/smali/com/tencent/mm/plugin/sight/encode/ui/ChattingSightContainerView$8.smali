@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gBF:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;
+.field final synthetic gIh:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 524
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$8;->gBF:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$8;->gIh:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,13 +41,13 @@
 
     .prologue
     .line 528
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$8;->gBF:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$8;->gIh:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/e/b;->ay(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/tencent/mm/compatible/e/b;->av(Landroid/content/Context;)V
 
     .line 529
     return-void

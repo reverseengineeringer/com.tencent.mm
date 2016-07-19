@@ -1,18 +1,20 @@
 package com.tencent.mm.console;
 
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.text.ClipboardManager;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.as.a;
+import com.tencent.mm.network.e;
 
 final class b$7
-  implements DialogInterface.OnClickListener
+  implements as.a
 {
-  b$7(Context paramContext, String paramString) {}
-  
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final void a(e parame)
   {
-    ((ClipboardManager)buV.getSystemService("clipboard")).setText(buY);
+    if (parame == null) {
+      return;
+    }
+    parame = parame.vY();
+    int i = tEuin;
+    parame.i(new byte[0], i);
   }
 }
 

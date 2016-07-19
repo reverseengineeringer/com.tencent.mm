@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+.field final synthetic lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 249
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$1;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$1;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

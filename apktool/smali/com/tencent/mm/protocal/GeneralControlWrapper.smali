@@ -8,14 +8,23 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Lcom/tencent/mm/protocal/GeneralControlWrapper;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final iUm:Lcom/tencent/mm/protocal/GeneralControlWrapper;
+.field public static final jrF:Lcom/tencent/mm/protocal/GeneralControlWrapper;
 
-.field public static final iUn:Lcom/tencent/mm/protocal/GeneralControlWrapper;
+.field public static final jrG:Lcom/tencent/mm/protocal/GeneralControlWrapper;
 
 
 # instance fields
-.field public iUo:I
+.field public jrH:I
 
 
 # direct methods
@@ -30,7 +39,7 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/protocal/GeneralControlWrapper;-><init>(I)V
 
-    sput-object v0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->iUm:Lcom/tencent/mm/protocal/GeneralControlWrapper;
+    sput-object v0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->jrF:Lcom/tencent/mm/protocal/GeneralControlWrapper;
 
     .line 13
     new-instance v0, Lcom/tencent/mm/protocal/GeneralControlWrapper;
@@ -39,7 +48,7 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/protocal/GeneralControlWrapper;-><init>(I)V
 
-    sput-object v0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->iUn:Lcom/tencent/mm/protocal/GeneralControlWrapper;
+    sput-object v0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->jrG:Lcom/tencent/mm/protocal/GeneralControlWrapper;
 
     .line 104
     new-instance v0, Lcom/tencent/mm/protocal/GeneralControlWrapper$1;
@@ -59,10 +68,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 33
-    iput p1, p0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->iUo:I
+    iput p1, p0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->jrH:I
 
     .line 34
-    const-string/jumbo v0, "!44@/B4Tb64lLpKLtvWkVeLEdBxnptfdvzppfqKdCoJESPk="
+    const-string/jumbo v0, "MicroMsg.GeneralControlWrapper"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -78,7 +87,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 35
     return-void
@@ -96,7 +105,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->iUo:I
+    iput v0, p0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->jrH:I
 
     .line 116
     return-void
@@ -112,7 +121,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/tencent/mm/protocal/b/oy;)V
+.method public constructor <init>(Lcom/tencent/mm/protocal/b/ph;)V
     .locals 3
 
     .prologue
@@ -120,12 +129,12 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 24
-    iget v0, p1, Lcom/tencent/mm/protocal/b/oy;->joI:I
+    iget v0, p1, Lcom/tencent/mm/protocal/b/ph;->jMH:I
 
-    iput v0, p0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->iUo:I
+    iput v0, p0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->jrH:I
 
     .line 29
-    const-string/jumbo v0, "!44@/B4Tb64lLpKLtvWkVeLEdBxnptfdvzppfqKdCoJESPk="
+    const-string/jumbo v0, "MicroMsg.GeneralControlWrapper"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -141,7 +150,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 30
     return-void
@@ -149,26 +158,26 @@
 
 
 # virtual methods
-.method public final aTm()Z
+.method public final aYf()Z
     .locals 4
 
     .prologue
-    .line 56
-    iget v0, p0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->iUo:I
+    .line 38
+    iget v0, p0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->jrH:I
 
-    and-int/lit16 v0, v0, 0x100
+    and-int/lit8 v0, v0, 0x1
 
     if-lez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 57
+    .line 39
     :goto_0
-    const-string/jumbo v1, "!44@/B4Tb64lLpKLtvWkVeLEdBxnptfdvzppfqKdCoJESPk="
+    const-string/jumbo v1, "MicroMsg.GeneralControlWrapper"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v3, "allowH5Expose, ret = "
+    const-string/jumbo v3, "needShowInputAlertTips, ret = "
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -180,24 +189,110 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 58
+    .line 40
     return v0
 
-    .line 56
+    .line 38
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method public final aTn()Z
+.method public final aYg()Z
+    .locals 4
+
+    .prologue
+    .line 44
+    iget v0, p0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->jrH:I
+
+    and-int/lit8 v0, v0, 0x8
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 45
+    :goto_0
+    const-string/jumbo v1, "MicroMsg.GeneralControlWrapper"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "allowOuterOpenUrl, ret = "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 46
+    return v0
+
+    .line 44
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final aYh()Z
+    .locals 4
+
+    .prologue
+    .line 50
+    iget v0, p0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->jrH:I
+
+    and-int/lit8 v0, v0, 0x10
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 51
+    :goto_0
+    const-string/jumbo v1, "MicroMsg.GeneralControlWrapper"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "allowExpose, ret = "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 52
+    return v0
+
+    .line 50
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final aYi()Z
     .locals 4
 
     .prologue
     .line 62
-    iget v0, p0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->iUo:I
+    iget v0, p0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->jrH:I
 
     and-int/lit8 v0, v0, 0x2
 
@@ -207,7 +302,7 @@
 
     .line 63
     :goto_0
-    const-string/jumbo v1, "!44@/B4Tb64lLpKLtvWkVeLEdBxnptfdvzppfqKdCoJESPk="
+    const-string/jumbo v1, "MicroMsg.GeneralControlWrapper"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -223,7 +318,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 64
     return v0
@@ -235,12 +330,12 @@
     goto :goto_0
 .end method
 
-.method public final aTo()Z
+.method public final aYj()Z
     .locals 4
 
     .prologue
     .line 68
-    iget v0, p0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->iUo:I
+    iget v0, p0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->jrH:I
 
     and-int/lit8 v0, v0, 0x40
 
@@ -250,7 +345,7 @@
 
     .line 69
     :goto_0
-    const-string/jumbo v1, "!44@/B4Tb64lLpKLtvWkVeLEdBxnptfdvzppfqKdCoJESPk="
+    const-string/jumbo v1, "MicroMsg.GeneralControlWrapper"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -266,12 +361,98 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 70
     return v0
 
     .line 68
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final aYk()Z
+    .locals 4
+
+    .prologue
+    .line 74
+    iget v0, p0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->jrH:I
+
+    and-int/lit16 v0, v0, 0x200
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 75
+    :goto_0
+    const-string/jumbo v1, "MicroMsg.GeneralControlWrapper"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "allowUploadHosts, ret = "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 76
+    return v0
+
+    .line 74
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final aYl()Z
+    .locals 4
+
+    .prologue
+    .line 80
+    iget v0, p0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->jrH:I
+
+    and-int/lit16 v0, v0, 0x400
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 81
+    :goto_0
+    const-string/jumbo v1, "MicroMsg.GeneralControlWrapper"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "allowUploadHTML, ret = "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 82
+    return v0
+
+    .line 80
     :cond_0
     const/4 v0, 0x0
 
@@ -303,7 +484,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 89
-    iget v1, p0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->iUo:I
+    iget v1, p0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->jrH:I
 
     invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
@@ -329,7 +510,7 @@
 
     .prologue
     .line 101
-    iget v0, p0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->iUo:I
+    iget v0, p0, Lcom/tencent/mm/protocal/GeneralControlWrapper;->jrH:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 

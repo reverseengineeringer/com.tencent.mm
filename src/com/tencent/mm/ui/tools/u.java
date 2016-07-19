@@ -1,16 +1,16 @@
 package com.tencent.mm.ui.tools;
 
 import android.content.Context;
-import com.tencent.mm.aw.a;
+import com.tencent.mm.az.a;
 
 public final class u
 {
-  public static int eB(Context paramContext)
+  public static int eE(Context paramContext)
   {
-    if (Float.compare(a.cY(paramContext), 1.125F) > 0) {
-      return 2130970269;
+    if (Float.compare(a.cW(paramContext), 1.125F) > 0) {
+      return 2130839517;
     }
-    return 2130970267;
+    return 2130839516;
   }
 }
 

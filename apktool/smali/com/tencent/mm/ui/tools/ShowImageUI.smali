@@ -12,13 +12,13 @@
 
 
 # instance fields
-.field private dQq:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+.field private dSv:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-.field private lxU:Z
+.field private lYJ:Z
 
-.field private lxV:Lcom/tencent/mm/ui/tools/ShowImageUI$a;
+.field private lYK:Lcom/tencent/mm/ui/tools/ShowImageUI$a;
 
-.field private lxW:Z
+.field private lYL:Z
 
 
 # direct methods
@@ -26,10 +26,10 @@
     .locals 0
 
     .prologue
-    .line 35
+    .line 37
     invoke-direct {p0}, Lcom/tencent/mm/ui/MMActivity;-><init>()V
 
-    .line 167
+    .line 187
     return-void
 .end method
 
@@ -37,8 +37,8 @@
     .locals 1
 
     .prologue
-    .line 35
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->lxU:Z
+    .line 37
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->lYJ:Z
 
     return v0
 .end method
@@ -49,7 +49,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 35
+    .line 37
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/ShowImageUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -113,7 +113,7 @@
     .locals 2
 
     .prologue
-    .line 35
+    .line 37
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/ShowImageUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -129,14 +129,46 @@
     return-void
 .end method
 
+.method static synthetic d(Lcom/tencent/mm/ui/tools/ShowImageUI;)V
+    .locals 4
+
+    .prologue
+    .line 37
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/ShowImageUI;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "key_message_id"
+
+    const-wide/16 v2, -0x1
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    new-instance v2, Landroid/content/Intent;
+
+    const-class v3, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+
+    invoke-direct {v2, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string/jumbo v3, "Retr_Msg_Id"
+
+    invoke-virtual {v2, v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/tools/ShowImageUI;->startActivity(Landroid/content/Intent;)V
+
+    return-void
+.end method
+
 
 # virtual methods
 .method protected final getLayoutId()I
     .locals 1
 
     .prologue
-    .line 47
-    const v0, 0x7f0a0510
+    .line 49
+    const v0, 0x7f030534
 
     return v0
 .end method
@@ -147,10 +179,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 53
+    .line 55
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 55
+    .line 57
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/ShowImageUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -161,17 +193,17 @@
 
     move-result-object v0
 
-    .line 56
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    .line 58
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 57
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/ShowImageUI;->Gj(Ljava/lang/String;)V
-
     .line 59
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/ShowImageUI;->Ah(Ljava/lang/String;)V
+
+    .line 61
     :cond_0
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/ShowImageUI;->getIntent()Landroid/content/Intent;
 
@@ -183,9 +215,9 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->lxU:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->lYJ:Z
 
-    .line 60
+    .line 62
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/ShowImageUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -198,10 +230,10 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->lxW:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->lYL:Z
 
-    .line 61
-    const v0, 0x7f0700c5
+    .line 63
+    const v0, 0x7f100548
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/ShowImageUI;->findViewById(I)Landroid/view/View;
 
@@ -209,27 +241,27 @@
 
     check-cast v0, Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->dQq:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->dSv:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    .line 62
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->dQq:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 64
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->dSv:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->setVerticalFadingEdgeEnabled(Z)V
 
-    .line 63
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->dQq:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 65
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->dSv:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->setHorizontalFadingEdgeEnabled(Z)V
 
-    .line 66
+    .line 68
     new-instance v0, Lcom/tencent/mm/ui/tools/ShowImageUI$a;
 
     invoke-direct {v0, v3}, Lcom/tencent/mm/ui/tools/ShowImageUI$a;-><init>(B)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->lxV:Lcom/tencent/mm/ui/tools/ShowImageUI$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->lYK:Lcom/tencent/mm/ui/tools/ShowImageUI$a;
 
-    .line 67
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->lxV:Lcom/tencent/mm/ui/tools/ShowImageUI$a;
+    .line 69
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->lYK:Lcom/tencent/mm/ui/tools/ShowImageUI$a;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/ShowImageUI;->getIntent()Landroid/content/Intent;
 
@@ -243,27 +275,27 @@
 
     iput-object v1, v0, Lcom/tencent/mm/ui/tools/ShowImageUI$a;->imagePath:Ljava/lang/String;
 
-    .line 68
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->dQq:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->dSv:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->lxV:Lcom/tencent/mm/ui/tools/ShowImageUI$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->lYK:Lcom/tencent/mm/ui/tools/ShowImageUI$a;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
-    .line 70
+    .line 72
     new-instance v0, Lcom/tencent/mm/ui/tools/ShowImageUI$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/ShowImageUI$1;-><init>(Lcom/tencent/mm/ui/tools/ShowImageUI;)V
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/ShowImageUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
-    .line 78
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->lxW:Z
+    .line 80
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI;->lYL:Z
 
     if-eqz v0, :cond_1
 
-    .line 79
-    const v0, 0x7f03021f
+    .line 81
+    const v0, 0x7f070213
 
     new-instance v1, Lcom/tencent/mm/ui/tools/ShowImageUI$2;
 
@@ -271,7 +303,7 @@
 
     invoke-virtual {p0, v3, v0, v1}, Lcom/tencent/mm/ui/tools/ShowImageUI;->a(IILandroid/view/MenuItem$OnMenuItemClickListener;)V
 
-    .line 124
+    .line 137
     :cond_1
     return-void
 .end method

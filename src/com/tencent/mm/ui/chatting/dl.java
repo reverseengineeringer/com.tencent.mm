@@ -1,16 +1,19 @@
 package com.tencent.mm.ui.chatting;
 
-public abstract interface dl
+import android.widget.ImageView;
+import android.widget.TextView;
+
+final class dl
+  extends ab.a
 {
-  public abstract void beD();
+  TextView iRf;
+  TextView iRg;
+  ImageView lqq;
   
-  public abstract void beF();
-  
-  public abstract boolean beG();
-  
-  public abstract void rd(int paramInt);
-  
-  public static enum a {}
+  public dl(int paramInt)
+  {
+    super(paramInt);
+  }
 }
 
 /* Location:

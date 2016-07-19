@@ -7,7 +7,7 @@ final class y$1
   
   public final void run()
   {
-    Java2C.reportCGIServerError(cjH, cjI);
+    Java2C.reportCGIServerError(ceY, ceZ);
   }
 }
 

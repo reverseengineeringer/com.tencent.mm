@@ -1,112 +1,111 @@
 package com.tencent.mm.y;
 
-import android.content.ContentValues;
 import android.database.Cursor;
+import com.tencent.mm.bc.g;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.e.b.t;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.model.i;
+import com.tencent.mm.pointers.PInt;
+import com.tencent.mm.pointers.PString;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.aj;
+import com.tencent.mm.storage.r;
+import com.tencent.mm.storage.s.b;
 
 public final class e
+  extends com.tencent.mm.model.s
 {
-  int aWU = 0;
-  public int aqq = -2;
-  public long bCP;
-  public long bCQ;
-  public String bCR = "";
-  public String bCS = "";
-  int bCT;
-  int bCU;
-  public int bCV = 0;
-  public String bCW = "";
-  private int bCX = 1;
-  public int bsm;
-  public long byc;
-  public int offset;
-  int source;
-  public int status;
-  
-  public final void c(Cursor paramCursor)
+  public final boolean dd(int paramInt)
   {
-    bCP = paramCursor.getInt(0);
-    bCQ = paramCursor.getLong(1);
-    offset = paramCursor.getInt(2);
-    bsm = paramCursor.getInt(3);
-    bCR = paramCursor.getString(4);
-    bCS = paramCursor.getString(5);
-    bCT = paramCursor.getInt(6);
-    byc = paramCursor.getInt(7);
-    status = paramCursor.getInt(8);
-    bCU = paramCursor.getInt(9);
-    bCV = paramCursor.getInt(10);
-    source = paramCursor.getInt(11);
-    bCW = paramCursor.getString(12);
-    aWU = paramCursor.getInt(14);
-    bCX = paramCursor.getInt(15);
+    return (paramInt != 0) && (paramInt < 604372991);
   }
   
-  public final ContentValues mA()
+  public final String getTag()
   {
-    ContentValues localContentValues = new ContentValues();
-    if ((aqq & 0x1) != 0) {
-      localContentValues.put("id", Long.valueOf(bCP));
-    }
-    if ((aqq & 0x2) != 0) {
-      localContentValues.put("msgSvrId", Long.valueOf(bCQ));
-    }
-    if ((aqq & 0x4) != 0) {
-      localContentValues.put("offset", Integer.valueOf(offset));
-    }
-    if ((aqq & 0x8) != 0) {
-      localContentValues.put("totalLen", Integer.valueOf(bsm));
-    }
-    if ((aqq & 0x10) != 0) {
-      localContentValues.put("bigImgPath", bCR);
-    }
-    if ((aqq & 0x20) != 0) {
-      localContentValues.put("thumbImgPath", bCS);
-    }
-    if ((aqq & 0x40) != 0) {
-      localContentValues.put("createtime", Integer.valueOf(bCT));
-    }
-    if ((aqq & 0x80) != 0) {
-      localContentValues.put("msglocalid", Long.valueOf(byc));
-    }
-    if ((aqq & 0x100) != 0) {
-      localContentValues.put("status", Integer.valueOf(status));
-    }
-    if ((aqq & 0x200) != 0) {
-      localContentValues.put("nettimes", Integer.valueOf(bCU));
-    }
-    if ((aqq & 0x400) != 0) {
-      localContentValues.put("reserved1", Integer.valueOf(bCV));
-    }
-    if ((aqq & 0x800) != 0) {
-      localContentValues.put("reserved2", Integer.valueOf(source));
-    }
-    if ((aqq & 0x1000) != 0) {
-      localContentValues.put("reserved3", bCW);
-    }
-    if ((aqq & 0x4000) != 0) {
-      localContentValues.put("hashdthumb", Integer.valueOf(aWU));
-    }
-    if ((aqq & 0x8000) != 0) {
-      if (offset >= bsm) {
-        break label360;
-      }
-    }
-    label360:
-    for (int i = 0;; i = 1)
+    return "MicroMsg.ConversationDataTransfer";
+  }
+  
+  public final void transfer(int paramInt)
+  {
+    v.d("MicroMsg.ConversationDataTransfer", "the previous version is %d", new Object[] { Integer.valueOf(paramInt) });
+    Object localObject1;
+    Object localObject2;
+    Object localObject3;
+    Object localObject4;
+    if ((paramInt != 0) && (paramInt < 604372991))
     {
-      localContentValues.put("iscomplete", Integer.valueOf(i));
-      return localContentValues;
+      localObject1 = tEbsy;
+      localObject2 = new StringBuilder();
+      ((StringBuilder)localObject2).append("select rconversation.username").append(" from rconversation, rcontact").append(", bizinfo where rconversation").append(".username = rcontact").append(".username and rconversation").append(".username = bizinfo").append(".username and ( rcontact").append(".verifyFlag & 8").append(" ) != 0 ");
+      localObject2 = ((StringBuilder)localObject2).toString();
+      v.d("MicroMsg.ConversationDataTransfer", "select sql %s", new Object[] { localObject2 });
+      localObject2 = ((g)localObject1).rawQuery((String)localObject2, null);
+      if ((localObject2 == null) || (!((Cursor)localObject2).moveToFirst())) {
+        break label516;
+      }
+      localObject3 = new StringBuilder();
+      ((StringBuilder)localObject3).append("Update rconversation set parentRef").append(" = 'officialaccounts' where 1 !=1 ");
+      do
+      {
+        localObject4 = ((Cursor)localObject2).getString(0);
+        if (!i.eT((String)localObject4)) {
+          ((StringBuilder)localObject3).append(" or username = '").append((String)localObject4).append("'");
+        }
+      } while (((Cursor)localObject2).moveToNext());
+      ((Cursor)localObject2).close();
+      localObject3 = ((StringBuilder)localObject3).toString();
+      v.d("MicroMsg.ConversationDataTransfer", "changed[%B] exec sql[%s]", new Object[] { Boolean.valueOf(true), localObject3 });
+      ((g)localObject1).cx("rconversation", (String)localObject3);
+      localObject1 = ah.tE().ru().GO("officialaccounts");
+      if (localObject1 != null) {
+        break label536;
+      }
+      localObject1 = new r("officialaccounts");
+      ((r)localObject1).wt();
+      ah.tE().ru().d((r)localObject1);
     }
-  }
-  
-  public final boolean ze()
-  {
-    return (bsm != 0) && (bsm == offset);
-  }
-  
-  public final boolean zf()
-  {
-    return bCV > 0;
+    label516:
+    label536:
+    for (;;)
+    {
+      localObject3 = ah.tE().ru().bcb();
+      if (be.kf((String)localObject3)) {
+        v.w("MicroMsg.ConversationDataTransfer", "last convBiz is null");
+      }
+      do
+      {
+        return;
+        localObject3 = ah.tE().rt().Ho((String)localObject3);
+        if ((localObject3 == null) || (field_msgId == 0L))
+        {
+          v.w("MicroMsg.ConversationDataTransfer", "last biz msg is error");
+          return;
+        }
+        ((r)localObject1).C((ai)localObject3);
+        ((r)localObject1).setContent(field_talker + ":" + field_content);
+        ((r)localObject1).cd(Integer.toString(field_type));
+        localObject4 = tErukFi;
+        if (localObject4 != null)
+        {
+          PString localPString1 = new PString();
+          PString localPString2 = new PString();
+          PInt localPInt = new PInt();
+          ((ai)localObject3).cr("officialaccounts");
+          ((ai)localObject3).setContent(field_content);
+          ((s.b)localObject4).a((ai)localObject3, localPString1, localPString2, localPInt, false);
+          ((r)localObject1).ce(value);
+          ((r)localObject1).cf(value);
+          ((r)localObject1).bD(value);
+        }
+        ah.tE().ru().a((r)localObject1, field_username, true);
+      } while ((localObject2 == null) || (((Cursor)localObject2).isClosed()));
+      ((Cursor)localObject2).close();
+      return;
+    }
   }
 }
 

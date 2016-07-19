@@ -20,7 +20,7 @@
 .end method
 
 .method public static contains(Lcom/tencent/map/geolocation/TencentLocation;DLcom/tencent/map/geolocation/TencentLocation;)Z
-    .locals 2
+    .locals 3
 
     .prologue
     .line 71
@@ -183,9 +183,9 @@
 
     .line 114
     :cond_0
-    invoke-static {}, Lct/cz;->a()Lct/cz;
+    invoke-static {}, Lct/cu;->a()Lct/cu;
 
-    invoke-static {p0}, Lct/cz;->a(Landroid/content/Context;)I
+    invoke-static {p0}, Lct/cu;->a(Landroid/content/Context;)I
 
     move-result v0
 

@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.aw.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.az.a;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.ui.tools.u;
 
 final class s$a
@@ -19,7 +19,7 @@ final class s$a
   
   public final int getCount()
   {
-    return s.a(krb).size();
+    return s.a(kQi).size();
   }
   
   public final Object getItem(int paramInt)
@@ -34,30 +34,30 @@ final class s$a
   
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
-    paramView = (s.c)s.a(krb).get(paramInt);
-    paramViewGroup = s.b(krb).inflate(2131363271, paramViewGroup, false);
-    Object localObject = (TextView)paramViewGroup.findViewById(2131165460);
-    if (!ay.kz(krf.krg)) {
-      ((TextView)localObject).setText(krf.krg);
+    paramView = (s.c)s.a(kQi).get(paramInt);
+    paramViewGroup = s.b(kQi).inflate(2130904063, paramViewGroup, false);
+    Object localObject = (TextView)paramViewGroup.findViewById(2131755172);
+    if (!be.kf(kQm.kQn)) {
+      ((TextView)localObject).setText(kQm.kQn);
     }
-    if (krf.textColor > 0) {
-      ((TextView)localObject).setTextColor(a.w(y.getContext(), krf.textColor));
+    if (kQm.textColor > 0) {
+      ((TextView)localObject).setTextColor(a.A(aa.getContext(), kQm.textColor));
     }
-    localObject = (ImageView)paramViewGroup.findViewById(2131166684);
+    localObject = (ImageView)paramViewGroup.findViewById(2131755171);
     TextView localTextView;
     View localView;
-    if (krf.icon > 0)
+    if (kQm.icon > 0)
     {
       ((ImageView)localObject).setVisibility(0);
-      ((ImageView)localObject).setImageResource(akrb).get(paramInt)).krf.icon);
-      if (!ay.kz(krf.krh)) {
-        ((ImageView)localObject).setContentDescription(krf.krh);
+      ((ImageView)localObject).setImageResource(akQi).get(paramInt)).kQm.icon);
+      if (!be.kf(kQm.kQo)) {
+        ((ImageView)localObject).setContentDescription(kQm.kQo);
       }
-      localObject = paramViewGroup.findViewById(2131166754);
-      localTextView = (TextView)paramViewGroup.findViewById(2131169505);
-      localTextView.setBackgroundResource(u.eB(s.c(krb)));
-      localView = paramViewGroup.findViewById(2131167203);
-      if (!krd) {
+      localObject = paramViewGroup.findViewById(2131756538);
+      localTextView = (TextView)paramViewGroup.findViewById(2131758148);
+      localTextView.setBackgroundResource(u.eE(s.c(kQi)));
+      localView = paramViewGroup.findViewById(2131757412);
+      if (!kQk) {
         break label254;
       }
       ((View)localObject).setVisibility(0);
@@ -67,21 +67,21 @@ final class s$a
       if (paramInt != getCount() - 1) {
         break label351;
       }
-      paramViewGroup.setBackgroundResource(2130970274);
+      paramViewGroup.setBackgroundResource(2130839419);
       return paramViewGroup;
       ((ImageView)localObject).setVisibility(8);
       break;
       label254:
-      if (aCK > 0)
+      if (apd > 0)
       {
         localTextView.setVisibility(0);
-        if (aCK > 99) {
-          localTextView.setText(2131431112);
+        if (apd > 99) {
+          localTextView.setText(2131235738);
         } else {
-          localTextView.setText(aCK);
+          localTextView.setText(apd);
         }
       }
-      else if (kre)
+      else if (kQl)
       {
         localView.setVisibility(0);
       }
@@ -93,7 +93,7 @@ final class s$a
       }
     }
     label351:
-    paramViewGroup.setBackgroundResource(2130970248);
+    paramViewGroup.setBackgroundResource(2130839418);
     return paramViewGroup;
   }
 }

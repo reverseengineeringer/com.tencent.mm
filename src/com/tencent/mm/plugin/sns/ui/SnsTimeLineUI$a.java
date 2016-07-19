@@ -6,156 +6,119 @@ import android.view.animation.Transformation;
 import android.widget.AbsoluteLayout.LayoutParams;
 import android.widget.ListView;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.widget.QFadeImageView;
 import com.tencent.mm.ui.widget.QImageView;
 import com.tencent.mm.ui.widget.QImageView.a;
 
 final class SnsTimeLineUI$a
   extends Animation
 {
-  private ListView gWB;
-  private float hkR;
-  private float hkS;
-  float hkT = -1.0F;
-  float hkU;
-  float hkV = 0.0F;
-  private float hkW;
-  boolean hkX;
-  int hkY;
-  boolean hkZ = false;
-  int hla = 0;
-  float hlb = 0.0F;
-  float hlc = 0.0F;
+  ListView eLC;
+  float hAa = 0.0F;
+  float hAb = 0.0F;
+  float hzQ;
+  float hzR;
+  float hzS = -1.0F;
+  float hzT;
+  float hzU = 0.0F;
+  private float hzV;
+  boolean hzW;
+  int hzX;
+  boolean hzY = false;
+  int hzZ = 0;
   
   public SnsTimeLineUI$a(SnsTimeLineUI paramSnsTimeLineUI, ListView paramListView)
   {
-    gWB = paramListView;
+    eLC = paramListView;
   }
   
-  public final void C(float paramFloat)
+  public final void aFP()
   {
-    if ((gWB != null) && (gWB.getFirstVisiblePosition() == 0)) {
-      SnsTimeLineUI.l(hkJ).setVisibility(0);
-    }
-    if (SnsTimeLineUI.l(hkJ).getVisibility() != 0) {
-      return;
-    }
-    SnsTimeLineUI.l(hkJ).clearAnimation();
-    init();
-    hkV -= paramFloat / 2.0F;
-    float f2 = hkV;
-    float f1 = f2;
-    if (f2 < hkU)
-    {
-      f1 = hkU;
-      hkV = hkU;
-    }
-    if (f1 > hkT) {
-      f1 = hkT;
-    }
-    for (;;)
-    {
-      if (f1 == hkT) {}
-      for (paramFloat *= 2.0F;; paramFloat = 5.0F * paramFloat)
-      {
-        SnsTimeLineUI.l(hkJ).setScaleType(QImageView.a.lGo);
-        SnsTimeLineUI.l(hkJ).getImageMatrix().postRotate(paramFloat, hkR, hkS);
-        SnsTimeLineUI.l(hkJ).setImageResource(2130903313);
-        AbsoluteLayout.LayoutParams localLayoutParams = (AbsoluteLayout.LayoutParams)SnsTimeLineUI.l(hkJ).getLayoutParams();
-        y = ((int)f1);
-        SnsTimeLineUI.l(hkJ).setLayoutParams(localLayoutParams);
-        SnsTimeLineUI.l(hkJ).invalidate();
-        return;
-      }
-    }
-  }
-  
-  public final void aCL()
-  {
-    u.d("!32@/B4Tb64lLpIApwzsVfw/GSpHowATRrWf", "animtest playLoading");
-    if (SnsTimeLineUI.l(hkJ).getVisibility() != 0) {
+    v.d("MicroMsg.SnsTimeLineUI", "animtest playLoading");
+    if (SnsTimeLineUI.h(hzE).getVisibility() != 0) {
       return;
     }
     init();
-    hkV = (hkT + 20.0F);
-    AbsoluteLayout.LayoutParams localLayoutParams = (AbsoluteLayout.LayoutParams)SnsTimeLineUI.l(hkJ).getLayoutParams();
-    y = ((int)hkT);
-    SnsTimeLineUI.l(hkJ).setLayoutParams(localLayoutParams);
-    aCM();
+    hzU = (hzS + 20.0F);
+    AbsoluteLayout.LayoutParams localLayoutParams = (AbsoluteLayout.LayoutParams)SnsTimeLineUI.h(hzE).getLayoutParams();
+    y = ((int)hzS);
+    SnsTimeLineUI.h(hzE).setLayoutParams(localLayoutParams);
+    aFQ();
   }
   
-  public final void aCM()
+  public final void aFQ()
   {
-    if (SnsTimeLineUI.l(hkJ).getVisibility() != 0) {
+    if (SnsTimeLineUI.h(hzE).getVisibility() != 0) {
       return;
     }
     init();
-    SnsTimeLineUI.l(hkJ).clearAnimation();
-    SnsTimeLineUI.l(hkJ).startAnimation(this);
-    if (hkV >= hkT)
+    SnsTimeLineUI.h(hzE).clearAnimation();
+    SnsTimeLineUI.h(hzE).startAnimation(this);
+    if (hzU >= hzS)
     {
       setDuration(20000L);
-      hkX = false;
+      hzW = false;
       return;
     }
     setDuration(600L);
-    hkX = true;
+    hzW = true;
   }
   
   protected final void applyTransformation(float paramFloat, Transformation paramTransformation)
   {
-    if (SnsTimeLineUI.l(hkJ).getVisibility() != 0) {}
+    if (SnsTimeLineUI.h(hzE).getVisibility() != 0) {}
     float f;
     do
     {
       return;
-      f = hkW;
+      f = hzV;
       f = (float)getDuration() * (paramFloat - f);
     } while (f < 2.0F);
-    hkW = paramFloat;
-    SnsTimeLineUI.l(hkJ).setImageResource(2130903313);
-    SnsTimeLineUI.l(hkJ).setScaleType(QImageView.a.lGo);
-    if (((float)getDuration() * paramFloat >= (float)(getDuration() - 600L)) || (hkX))
+    hzV = paramFloat;
+    SnsTimeLineUI.h(hzE).setImageResource(2131165499);
+    SnsTimeLineUI.h(hzE).a(QImageView.a.mhC);
+    if (((float)getDuration() * paramFloat >= (float)(getDuration() - 600L)) || (hzW))
     {
-      paramTransformation = (AbsoluteLayout.LayoutParams)SnsTimeLineUI.l(hkJ).getLayoutParams();
-      hkV = (y - f / 3.0F);
-      y = ((int)hkV);
-      SnsTimeLineUI.l(hkJ).setLayoutParams(paramTransformation);
+      paramTransformation = (AbsoluteLayout.LayoutParams)SnsTimeLineUI.h(hzE).getLayoutParams();
+      hzU = (y - f / 3.0F);
+      y = ((int)hzU);
+      SnsTimeLineUI.h(hzE).setLayoutParams(paramTransformation);
     }
     for (;;)
     {
-      SnsTimeLineUI.l(hkJ).invalidate();
+      SnsTimeLineUI.h(hzE).invalidate();
       return;
-      SnsTimeLineUI.l(hkJ).getImageMatrix().postRotate(f / 2.5F, hkR, hkS);
+      hhzE).mMatrix.postRotate(f / 2.5F, hzQ, hzR);
     }
   }
   
   final void init()
   {
-    if ((hkT == -1.0F) || (hkS < 0.1D))
+    if ((hzS == -1.0F) || (hzR < 0.1D))
     {
-      hkT = BackwardSupportUtil.b.a(hkJ, 25.0F);
-      hkR = (SnsTimeLineUI.l(hkJ).getWidth() / 2);
-      hkS = (SnsTimeLineUI.l(hkJ).getHeight() / 2);
-      hkU = (hkS * -2.0F - 3.0F);
-      u.d("!32@/B4Tb64lLpIApwzsVfw/GSpHowATRrWf", "MIN_Y" + hkU);
-      hkV = hkU;
-      if (!hkZ)
+      hzS = BackwardSupportUtil.b.a(hzE, 25.0F);
+      hzQ = (SnsTimeLineUI.h(hzE).getWidth() / 2);
+      hzR = (SnsTimeLineUI.h(hzE).getHeight() / 2);
+      hzT = (hzR * -2.0F - 3.0F);
+      v.d("MicroMsg.SnsTimeLineUI", "MIN_Y" + hzT);
+      hzU = hzT;
+      if (!hzY)
       {
-        u.i("!32@/B4Tb64lLpIApwzsVfw/GSpHowATRrWf", "initState");
-        hla = lhkJ).getLayoutParams()).y;
-        hlb = hkT;
-        hlc = hkV;
+        v.i("MicroMsg.SnsTimeLineUI", "initState");
+        hzZ = hhzE).getLayoutParams()).y;
+        hAa = hzS;
+        hAb = hzU;
       }
-      hkZ = true;
+      hzY = true;
     }
   }
   
   public final void initialize(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.initialize(paramInt1, paramInt2, paramInt3, paramInt4);
-    hkW = 0.0F;
-    hkV = hkT;
+    hzV = 0.0F;
+    hzU = hzS;
   }
 }
 

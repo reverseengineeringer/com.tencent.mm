@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+.field final synthetic jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
-.field final synthetic iLP:Z
+.field final synthetic jiM:Z
 
 
 # direct methods
@@ -28,12 +28,12 @@
     .locals 1
 
     .prologue
-    .line 2456
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$20;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    .line 2475
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$20;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$20;->iLP:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$20;->jiM:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,13 +46,13 @@
     .locals 2
 
     .prologue
-    .line 2460
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$20;->iLO:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
+    .line 2479
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$20;->jiL:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
 
-    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$20;->iLP:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$20;->jiM:Z
 
     invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->e(Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;Z)V
 
-    .line 2461
+    .line 2480
     return-void
 .end method

@@ -7,14 +7,14 @@ final class MobileFriendUI$12
 {
   MobileFriendUI$12(MobileFriendUI paramMobileFriendUI) {}
   
-  public final void Gh()
+  public final void GE()
   {
-    MobileFriendUI localMobileFriendUI = kPt;
-    MobileFriendUI.d(kPt).getCount();
+    MobileFriendUI localMobileFriendUI = loJ;
+    MobileFriendUI.d(loJ).getCount();
     MobileFriendUI.e(localMobileFriendUI);
   }
   
-  public final void Gi() {}
+  public final void GF() {}
 }
 
 /* Location:

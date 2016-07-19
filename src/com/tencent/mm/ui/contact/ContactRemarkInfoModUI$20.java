@@ -10,7 +10,7 @@ final class ContactRemarkInfoModUI$20
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    ContactRemarkInfoModUI.q(ljV);
+    ContactRemarkInfoModUI.q(lKg);
     return false;
   }
 }

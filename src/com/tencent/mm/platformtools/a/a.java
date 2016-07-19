@@ -4,7 +4,7 @@ import java.util.Map;
 
 public final class a
 {
-  public static Map values;
+  public static Map<String, String> values;
 }
 
 /* Location:

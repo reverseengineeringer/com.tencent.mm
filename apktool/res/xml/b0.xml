@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto">
+    <PreferenceSmallCategory />
+    <com.tencent.mm.pluginsdk.ui.applet.ContactListExpandPreference android:key="roominfo_contact_anchor" />
+    <PreferenceSmallCategory />
+    <CheckBoxPreference android:layout="@layout/yk" android:title="@string/c4k" android:key="room_placed_to_the_top" android:widgetLayout="@layout/yq" />
+    <CheckBoxPreference android:layout="@layout/yk" android:title="@string/c45" android:key="room_notify_new_msg" android:widgetLayout="@layout/yq" />
+    <Preference android:layout="@layout/yk" android:title="@string/c2q" android:key="room_chatting_images" />
+    <PreferenceSmallCategory />
+    <Preference android:layout="@layout/yk" android:title="@string/c5h" android:key="room_set_chatting_background" />
+    <Preference android:layout="@layout/yk" android:title="@string/c5c" android:key="room_search_chatting_content" />
+    <PreferenceSmallCategory />
+    <Preference android:layout="@layout/yk" android:title="@string/c2r" android:key="room_clear_chatting_history" />
+    <PreferenceSmallCategory />
+    <Preference android:layout="@layout/yk" android:title="@string/c3e" android:key="room_expose" />
+    <PreferenceCategory />
+</PreferenceScreen>

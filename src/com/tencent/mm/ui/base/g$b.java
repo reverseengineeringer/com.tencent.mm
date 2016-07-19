@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 public abstract interface g$b
 {
-  public abstract boolean i(CharSequence paramCharSequence);
+  public abstract boolean r(CharSequence paramCharSequence);
 }
 
 /* Location:

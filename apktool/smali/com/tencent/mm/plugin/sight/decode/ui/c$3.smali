@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gyI:Lcom/tencent/mm/plugin/sight/decode/ui/c;
+.field final synthetic gFh:Lcom/tencent/mm/plugin/sight/decode/ui/c;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 258
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$3;->gyI:Lcom/tencent/mm/plugin/sight/decode/ui/c;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$3;->gFh:Lcom/tencent/mm/plugin/sight/decode/ui/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 262
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$3;->gyI:Lcom/tencent/mm/plugin/sight/decode/ui/c;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/c$3;->gFh:Lcom/tencent/mm/plugin/sight/decode/ui/c;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/c;->f(Lcom/tencent/mm/plugin/sight/decode/ui/c;)V
 

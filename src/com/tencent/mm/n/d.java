@@ -1,135 +1,93 @@
 package com.tencent.mm.n;
 
+import com.tencent.mm.e.b.ao;
+import com.tencent.mm.protocal.b.am;
+import com.tencent.mm.sdk.h.c.a;
+import java.lang.reflect.Field;
+import java.util.Map;
+
 public final class d
-  extends com.tencent.mm.at.a
+  extends ao
 {
-  public String bza;
-  public String bzb;
-  public String bzc;
-  public String bzd;
-  public String bze;
-  public int bzf;
-  public long time;
-  public String title;
-  public int type;
-  public String url;
+  public static c.a bjR;
   
-  protected final int a(int paramInt, Object... paramVarArgs)
+  static
   {
-    if (paramInt == 0)
-    {
-      paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (title != null) {
-        paramVarArgs.d(1, title);
-      }
-      if (url != null) {
-        paramVarArgs.d(2, url);
-      }
-      if (bza != null) {
-        paramVarArgs.d(3, bza);
-      }
-      if (bzb != null) {
-        paramVarArgs.d(4, bzb);
-      }
-      paramVarArgs.A(5, time);
-      if (bzc != null) {
-        paramVarArgs.d(6, bzc);
-      }
-      if (bzd != null) {
-        paramVarArgs.d(7, bzd);
-      }
-      if (bze != null) {
-        paramVarArgs.d(8, bze);
-      }
-      paramVarArgs.ci(9, type);
-      paramVarArgs.ci(10, bzf);
-      return 0;
+    c.a locala = new c.a();
+    bZI = new Field[14];
+    aZx = new String[15];
+    StringBuilder localStringBuilder = new StringBuilder();
+    aZx[0] = "cgi";
+    kyU.put("cgi", "TEXT");
+    localStringBuilder.append(" cgi TEXT");
+    localStringBuilder.append(", ");
+    aZx[1] = "cmdid";
+    kyU.put("cmdid", "INTEGER");
+    localStringBuilder.append(" cmdid INTEGER");
+    localStringBuilder.append(", ");
+    aZx[2] = "functionmsgid";
+    kyU.put("functionmsgid", "TEXT PRIMARY KEY ");
+    localStringBuilder.append(" functionmsgid TEXT PRIMARY KEY ");
+    localStringBuilder.append(", ");
+    kyT = "functionmsgid";
+    aZx[3] = "version";
+    kyU.put("version", "LONG");
+    localStringBuilder.append(" version LONG");
+    localStringBuilder.append(", ");
+    aZx[4] = "preVersion";
+    kyU.put("preVersion", "LONG");
+    localStringBuilder.append(" preVersion LONG");
+    localStringBuilder.append(", ");
+    aZx[5] = "retryinterval";
+    kyU.put("retryinterval", "INTEGER");
+    localStringBuilder.append(" retryinterval INTEGER");
+    localStringBuilder.append(", ");
+    aZx[6] = "reportid";
+    kyU.put("reportid", "INTEGER");
+    localStringBuilder.append(" reportid INTEGER");
+    localStringBuilder.append(", ");
+    aZx[7] = "successkey";
+    kyU.put("successkey", "INTEGER");
+    localStringBuilder.append(" successkey INTEGER");
+    localStringBuilder.append(", ");
+    aZx[8] = "failkey";
+    kyU.put("failkey", "INTEGER");
+    localStringBuilder.append(" failkey INTEGER");
+    localStringBuilder.append(", ");
+    aZx[9] = "finalfailkey";
+    kyU.put("finalfailkey", "INTEGER");
+    localStringBuilder.append(" finalfailkey INTEGER");
+    localStringBuilder.append(", ");
+    aZx[10] = "custombuff";
+    kyU.put("custombuff", "TEXT");
+    localStringBuilder.append(" custombuff TEXT");
+    localStringBuilder.append(", ");
+    aZx[11] = "addMsg";
+    kyU.put("addMsg", "BLOB");
+    localStringBuilder.append(" addMsg BLOB");
+    localStringBuilder.append(", ");
+    aZx[12] = "status";
+    kyU.put("status", "INTEGER default '-1' ");
+    localStringBuilder.append(" status INTEGER default '-1' ");
+    localStringBuilder.append(", ");
+    aZx[13] = "needShow";
+    kyU.put("needShow", "INTEGER default 'false' ");
+    localStringBuilder.append(" needShow INTEGER default 'false' ");
+    aZx[14] = "rowid";
+    kyV = localStringBuilder.toString();
+    bjR = locala;
+  }
+  
+  public final void b(am paramam)
+  {
+    if (paramam != null) {
+      field_addMsg = paramam;
     }
-    if (paramInt == 1) {
-      if (title == null) {
-        break label630;
-      }
-    }
-    label630:
-    for (int i = a.a.a.b.b.a.e(1, title) + 0;; i = 0)
-    {
-      paramInt = i;
-      if (url != null) {
-        paramInt = i + a.a.a.b.b.a.e(2, url);
-      }
-      i = paramInt;
-      if (bza != null) {
-        i = paramInt + a.a.a.b.b.a.e(3, bza);
-      }
-      paramInt = i;
-      if (bzb != null) {
-        paramInt = i + a.a.a.b.b.a.e(4, bzb);
-      }
-      i = paramInt + a.a.a.a.z(5, time);
-      paramInt = i;
-      if (bzc != null) {
-        paramInt = i + a.a.a.b.b.a.e(6, bzc);
-      }
-      i = paramInt;
-      if (bzd != null) {
-        i = paramInt + a.a.a.b.b.a.e(7, bzd);
-      }
-      paramInt = i;
-      if (bze != null) {
-        paramInt = i + a.a.a.b.b.a.e(8, bze);
-      }
-      return paramInt + a.a.a.a.cg(9, type) + a.a.a.a.cg(10, bzf);
-      if (paramInt == 2)
-      {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
-          if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
-          }
-        }
-        break;
-      }
-      if (paramInt == 3)
-      {
-        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-        d locald = (d)paramVarArgs[1];
-        switch (((Integer)paramVarArgs[2]).intValue())
-        {
-        default: 
-          return -1;
-        case 1: 
-          title = maU.readString();
-          return 0;
-        case 2: 
-          url = maU.readString();
-          return 0;
-        case 3: 
-          bza = maU.readString();
-          return 0;
-        case 4: 
-          bzb = maU.readString();
-          return 0;
-        case 5: 
-          time = maU.jD();
-          return 0;
-        case 6: 
-          bzc = maU.readString();
-          return 0;
-        case 7: 
-          bzd = maU.readString();
-          return 0;
-        case 8: 
-          bze = maU.readString();
-          return 0;
-        case 9: 
-          type = maU.jC();
-          return 0;
-        }
-        bzf = maU.jC();
-        return 0;
-      }
-      return -1;
-    }
+  }
+  
+  protected final c.a ou()
+  {
+    return bjR;
   }
 }
 

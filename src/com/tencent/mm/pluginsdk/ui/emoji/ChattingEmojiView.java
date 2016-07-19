@@ -8,8 +8,14 @@ import android.util.AttributeSet;
 public class ChattingEmojiView
   extends MMEmojiView
 {
-  private int iMI;
-  private float iMJ = 1.5F;
+  private int jjF;
+  private float jjG = 1.5F;
+  
+  public ChattingEmojiView(Context paramContext)
+  {
+    super(paramContext);
+    init(paramContext);
+  }
   
   public ChattingEmojiView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -25,8 +31,8 @@ public class ChattingEmojiView
   
   private void init(Context paramContext)
   {
-    iMI = paramContext.getResources().getDimensionPixelSize(2131034525);
-    setDensity(iMJ);
+    jjF = paramContext.getResources().getDimensionPixelSize(2131427821);
+    mDensity = jjG;
   }
   
   public void draw(Canvas paramCanvas)
@@ -40,19 +46,19 @@ public class ChattingEmojiView
     int j = getIntrinsicHeight();
     paramInt1 = j;
     int i = paramInt2;
-    if (paramInt2 > iMI)
+    if (paramInt2 > jjF)
     {
-      float f = iMI / paramInt2;
-      int k = iMI;
+      float f = jjF / paramInt2;
+      int k = jjF;
       paramInt2 = j;
-      if (j > iMI) {
+      if (j > jjF) {
         paramInt2 = (int)(j * f);
       }
       paramInt1 = paramInt2;
       i = k;
-      if (paramInt2 < iMI)
+      if (paramInt2 < jjF)
       {
-        paramInt1 = iMI;
+        paramInt1 = jjF;
         i = k;
       }
     }

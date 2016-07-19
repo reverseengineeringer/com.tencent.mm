@@ -25,9 +25,9 @@ import com.tencent.mm.compatible.d.c.a.a;
 import com.tencent.mm.compatible.d.p;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.h;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,22 +36,22 @@ import java.util.List;
 final class f
   implements SensorEventListener
 {
-  private static int gDw = Integer.MAX_VALUE;
-  Camera brz = null;
-  private SensorManager dAV;
-  Camera.PreviewCallback gAC = null;
-  private float gDA = 0.0F;
-  private float gDB = 0.0F;
-  private byte[] gDC;
-  private boolean gDD = false;
-  a gDE = new a(Looper.getMainLooper());
-  com.tencent.mm.pluginsdk.l.a gDs = com.tencent.mm.pluginsdk.l.a.aQH();
-  boolean gDt = false;
-  boolean gDu = false;
-  int gDv = 0;
-  c.a.a gDx;
-  private Sensor gDy;
-  private float gDz = 0.0F;
+  private static int gJX = Integer.MAX_VALUE;
+  Camera bfz = null;
+  private SensorManager dCo;
+  Camera.PreviewCallback gHe = null;
+  com.tencent.mm.pluginsdk.m.a gJT = com.tencent.mm.pluginsdk.m.a.aVr();
+  boolean gJU = false;
+  boolean gJV = false;
+  int gJW = 0;
+  c.a.a gJY;
+  private Sensor gJZ;
+  private float gKa = 0.0F;
+  private float gKb = 0.0F;
+  private float gKc = 0.0F;
+  private byte[] gKd;
+  private boolean gKe = false;
+  a gKf = new a(Looper.getMainLooper());
   private Context mContext = null;
   
   private boolean a(Camera paramCamera)
@@ -62,18 +62,18 @@ final class f
     for (;;)
     {
       Camera.Parameters localParameters;
-      com.tencent.mm.pluginsdk.l.a locala;
+      com.tencent.mm.pluginsdk.m.a locala;
       Object localObject;
       try
       {
         localParameters = paramCamera.getParameters();
-        locala = gDs;
+        locala = gJT;
         j = Integer.MAX_VALUE;
         localObject = com.tencent.mm.compatible.d.c.b(localParameters);
         if (localObject != null) {
           break label452;
         }
-        u.d("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "getFitRecordSize getSupportedVideoSizes null, use getSupportedPreviewSizes instead");
+        v.d("MicroMsg.SightCamera", "getFitRecordSize getSupportedVideoSizes null, use getSupportedPreviewSizes instead");
         localObject = com.tencent.mm.compatible.d.c.a(localParameters);
       }
       catch (Exception paramCamera)
@@ -82,19 +82,19 @@ final class f
         int n;
         int i1;
         int m;
-        u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "setPreviewSize Exception, %s, %s", new Object[] { Looper.myLooper(), paramCamera.getMessage() });
+        v.i("MicroMsg.SightCamera", "setPreviewSize Exception, %s, %s", new Object[] { Looper.myLooper(), paramCamera.getMessage() });
         return false;
       }
       if (k < ((List)localObject).size())
       {
         n = getheight;
         i1 = getwidth;
-        u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "supp w:" + i1 + " h:" + n);
+        v.i("MicroMsg.SightCamera", "supp w:" + i1 + " h:" + n);
         m = n * i1;
-        if ((i1 >= iFp) && (n >= iFq) && (m < j))
+        if ((i1 >= jck) && (n >= jcl) && (m < j))
         {
-          iFn = i1;
-          iFm = n;
+          jci = i1;
+          jch = n;
           j = m;
           i = 1;
           break label465;
@@ -105,21 +105,21 @@ final class f
         if (i == 0)
         {
           localObject = localParameters.getPreviewSize();
-          iFm = height;
-          iFn = width;
+          jch = height;
+          jci = width;
         }
-        u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", " rotate:" + brw + " w:" + iFn + " h:" + iFm);
-        if (com.tencent.mm.pluginsdk.l.a.iFl != iFn)
+        v.i("MicroMsg.SightCamera", " rotate:" + bfw + " w:" + jci + " h:" + jch);
+        if (com.tencent.mm.pluginsdk.m.a.jcg != jci)
         {
-          u.w("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "TARGET WIDTH %d, CURRENT WIDTH %d", new Object[] { Integer.valueOf(com.tencent.mm.pluginsdk.l.a.iFl), Integer.valueOf(iFn) });
-          com.tencent.mm.pluginsdk.l.a.iFl = iFn;
+          v.w("MicroMsg.SightCamera", "TARGET WIDTH %d, CURRENT WIDTH %d", new Object[] { Integer.valueOf(com.tencent.mm.pluginsdk.m.a.jcg), Integer.valueOf(jci) });
+          com.tencent.mm.pluginsdk.m.a.jcg = jci;
         }
-        if (com.tencent.mm.pluginsdk.l.a.iFk != iFm)
+        if (com.tencent.mm.pluginsdk.m.a.jcf != jch)
         {
-          u.w("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "TARGET HEIGHT %d, CURRENT HEIGHT %d", new Object[] { Integer.valueOf(com.tencent.mm.pluginsdk.l.a.iFk), Integer.valueOf(iFm) });
-          com.tencent.mm.pluginsdk.l.a.iFk = iFm;
+          v.w("MicroMsg.SightCamera", "TARGET HEIGHT %d, CURRENT HEIGHT %d", new Object[] { Integer.valueOf(com.tencent.mm.pluginsdk.m.a.jcf), Integer.valueOf(jch) });
+          com.tencent.mm.pluginsdk.m.a.jcf = jch;
         }
-        localParameters.setPreviewSize(gDs.iFn, gDs.iFm);
+        localParameters.setPreviewSize(gJT.jci, gJT.jch);
         paramCamera.setParameters(localParameters);
         return true;
       }
@@ -127,8 +127,8 @@ final class f
       while (localObject == null)
       {
         localObject = localParameters.getPreviewSize();
-        iFm = height;
-        iFn = width;
+        jch = height;
+        jci = width;
         break;
         break label465;
       }
@@ -156,10 +156,10 @@ final class f
           localParameters = paramCamera.getParameters();
           if (paramBoolean)
           {
-            if (bsKbrh > 0)
+            if (bgObfh > 0)
             {
-              u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "set frame rate > 0, do not try set preview frame rate");
-              u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "use fix mode %B, supported preview frame rates %s", new Object[] { Boolean.valueOf(paramBoolean), localParameters.getSupportedPreviewFrameRates() });
+              v.i("MicroMsg.SightCamera", "set frame rate > 0, do not try set preview frame rate");
+              v.i("MicroMsg.SightCamera", "use fix mode %B, supported preview frame rates %s", new Object[] { Boolean.valueOf(paramBoolean), localParameters.getSupportedPreviewFrameRates() });
               paramCamera.setParameters(localParameters);
               return true;
             }
@@ -167,24 +167,24 @@ final class f
             {
               i = Math.min(30, ((Integer)Collections.max(localParameters.getSupportedPreviewFrameRates())).intValue());
               localParameters.setPreviewFrameRate(i);
-              u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "set preview frame rate %d", new Object[] { Integer.valueOf(i) });
+              v.i("MicroMsg.SightCamera", "set preview frame rate %d", new Object[] { Integer.valueOf(i) });
             }
             catch (Exception localException1)
             {
-              u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "trySetPreviewFrameRateParameters Exception, %s, %s", new Object[] { Looper.myLooper(), localException1.getMessage() });
+              v.i("MicroMsg.SightCamera", "trySetPreviewFrameRateParameters Exception, %s, %s", new Object[] { Looper.myLooper(), localException1.getMessage() });
             }
             continue;
           }
-          if (bsKbrh <= 0) {
+          if (bgObfh <= 0) {
             break;
           }
         }
         catch (Exception paramCamera)
         {
-          u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "setPreviewFrameRate Exception, %s, %s", new Object[] { Looper.myLooper(), paramCamera.getMessage() });
+          v.i("MicroMsg.SightCamera", "setPreviewFrameRate Exception, %s, %s", new Object[] { Looper.myLooper(), paramCamera.getMessage() });
           return false;
         }
-        u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "set frame rate > 0, do not try set preview fps range");
+        v.i("MicroMsg.SightCamera", "set frame rate > 0, do not try set preview fps range");
       }
       localList = localParameters.getSupportedPreviewFpsRange();
     } while ((localList == null) || (localList.size() == 0));
@@ -212,7 +212,7 @@ final class f
           {
             int i5 = arrayOfInt[0];
             i4 = arrayOfInt[1];
-            u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "dkfps %d:[%d %d]", new Object[] { Integer.valueOf(i3), Integer.valueOf(i5), Integer.valueOf(i4) });
+            v.i("MicroMsg.SightCamera", "dkfps %d:[%d %d]", new Object[] { Integer.valueOf(i3), Integer.valueOf(i5), Integer.valueOf(i4) });
             i2 = i;
             i1 = j;
             if (i5 >= 0)
@@ -241,18 +241,18 @@ final class f
       }
       else
       {
-        u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "dkfps get fit  [%d %d], max target fps %d", new Object[] { Integer.valueOf(j), Integer.valueOf(i), Integer.valueOf(30) });
+        v.i("MicroMsg.SightCamera", "dkfps get fit  [%d %d], max target fps %d", new Object[] { Integer.valueOf(j), Integer.valueOf(i), Integer.valueOf(30) });
         if ((j == Integer.MAX_VALUE) || (i == Integer.MAX_VALUE)) {
           break;
         }
         try
         {
           localParameters.setPreviewFpsRange(j, i);
-          u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "set fps range %d %d", new Object[] { Integer.valueOf(j), Integer.valueOf(i) });
+          v.i("MicroMsg.SightCamera", "set fps range %d %d", new Object[] { Integer.valueOf(j), Integer.valueOf(i) });
         }
         catch (Exception localException2)
         {
-          u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "trySetPreviewFpsRangeParameters Exception, %s, %s", new Object[] { Looper.myLooper(), localException2.getMessage() });
+          v.i("MicroMsg.SightCamera", "trySetPreviewFpsRangeParameters Exception, %s, %s", new Object[] { Looper.myLooper(), localException2.getMessage() });
         }
         break;
       }
@@ -284,7 +284,7 @@ final class f
     }
     try
     {
-      u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "safeSetMetering");
+      v.i("MicroMsg.SightCamera", "safeSetMetering");
       Camera.Parameters localParameters = paramCamera.getParameters();
       if (localParameters.getMaxNumMeteringAreas() > 0)
       {
@@ -297,7 +297,7 @@ final class f
     }
     catch (Exception paramCamera)
     {
-      u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "safeSetMetering Exception, %s, %s", new Object[] { Looper.myLooper(), paramCamera.getMessage() });
+      v.i("MicroMsg.SightCamera", "safeSetMetering Exception, %s, %s", new Object[] { Looper.myLooper(), paramCamera.getMessage() });
     }
     return false;
   }
@@ -309,11 +309,11 @@ final class f
     }
     try
     {
-      u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "safeSetPreviewFormat");
+      v.i("MicroMsg.SightCamera", "safeSetPreviewFormat");
       Camera.Parameters localParameters = paramCamera.getParameters();
       List localList = localParameters.getSupportedPreviewFormats();
       if ((localList == null) || (!localList.contains(Integer.valueOf(17)))) {
-        u.e("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "not support YCbCr_420_SP");
+        v.e("MicroMsg.SightCamera", "not support YCbCr_420_SP");
       }
       localParameters.setPreviewFormat(17);
       paramCamera.setParameters(localParameters);
@@ -321,7 +321,7 @@ final class f
     }
     catch (Exception paramCamera)
     {
-      u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "setPreviewFormat Exception, %s, %s", new Object[] { Looper.myLooper(), paramCamera.getMessage() });
+      v.i("MicroMsg.SightCamera", "setPreviewFormat Exception, %s, %s", new Object[] { Looper.myLooper(), paramCamera.getMessage() });
     }
     return false;
   }
@@ -339,80 +339,80 @@ final class f
         List localList = localParameters.getSupportedFocusModes();
         if ((localList != null) && (localList.contains("continuous-video")))
         {
-          u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "support continuous video");
+          v.i("MicroMsg.SightCamera", "support continuous video");
           localParameters.setFocusMode("continuous-video");
           paramCamera.setParameters(localParameters);
           return true;
         }
         if ((localList != null) && (localList.contains("auto")))
         {
-          u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "support auto focus");
+          v.i("MicroMsg.SightCamera", "support auto focus");
           localParameters.setFocusMode("auto");
         }
         else
         {
-          u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "not support continuous video or auto focus");
+          v.i("MicroMsg.SightCamera", "not support continuous video or auto focus");
         }
       }
       catch (Exception paramCamera)
       {
-        u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "setFocusMode Exception, %s, %s", new Object[] { Looper.myLooper(), paramCamera.getMessage() });
+        v.i("MicroMsg.SightCamera", "setFocusMode Exception, %s, %s", new Object[] { Looper.myLooper(), paramCamera.getMessage() });
         return false;
       }
     }
   }
   
-  public final int K(Activity paramActivity)
+  public final int F(Activity paramActivity)
   {
-    if ((bsKbrp == 0) && (dAV == null) && (gDy == null))
+    if ((bgObfp == 0) && (dCo == null) && (gJZ == null))
     {
-      dAV = ((SensorManager)paramActivity.getSystemService("sensor"));
-      gDy = dAV.getDefaultSensor(1);
+      dCo = ((SensorManager)paramActivity.getSystemService("sensor"));
+      gJZ = dCo.getDefaultSensor(1);
     }
-    if (brz == null)
+    if (bfz == null)
     {
-      awZ();
-      if (bsKbrq >= 0) {
-        gDv = bsKbrq;
+      azy();
+      if (bgObfq >= 0) {
+        gJW = bgObfq;
       }
       for (;;)
       {
-        u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "ashu::use camera id %d, DeviceInfo id %d", new Object[] { Integer.valueOf(gDv), Integer.valueOf(bsKbrq) });
-        gDD = false;
+        v.i("MicroMsg.SightCamera", "ashu::use camera id %d, DeviceInfo id %d", new Object[] { Integer.valueOf(gJW), Integer.valueOf(bgObfq) });
+        gKe = false;
         mContext = paramActivity;
-        gDx = new e().a(paramActivity, gDv);
-        u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "ashu::open camera end, %s", new Object[] { Looper.myLooper() });
-        if (gDx != null) {
+        gJY = new e().b(paramActivity, gJW);
+        v.i("MicroMsg.SightCamera", "ashu::open camera end, %s", new Object[] { Looper.myLooper() });
+        if (gJY != null) {
           break;
         }
-        u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "ashu::open camera FAILED, %s", new Object[] { Looper.myLooper() });
-        return 0 - com.tencent.mm.compatible.util.f.oX();
-        if (Integer.MAX_VALUE != gDw)
+        v.i("MicroMsg.SightCamera", "ashu::open camera FAILED, %s", new Object[] { Looper.myLooper() });
+        return 0 - com.tencent.mm.compatible.util.f.np();
+        if (Integer.MAX_VALUE != gJX)
         {
-          gDv = gDw;
-          u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "ashu:: use last check camera id %d", new Object[] { Integer.valueOf(gDv) });
+          gJW = gJX;
+          v.i("MicroMsg.SightCamera", "ashu:: use last check camera id %d", new Object[] { Integer.valueOf(gJW) });
         }
         else
         {
           try
           {
-            gDv = com.tencent.mm.compatible.d.c.of();
-            gDw = gDv;
+            gJW = com.tencent.mm.compatible.d.c.mv();
+            gJX = gJW;
           }
           catch (Exception localException)
           {
-            u.printErrStackTrace("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", localException, "try to get back cameraid error %s", new Object[] { localException.getMessage() });
-            gDv = 0;
+            v.printErrStackTrace("MicroMsg.SightCamera", localException, "try to get back cameraid error %s", new Object[] { localException.getMessage() });
+            gJW = 0;
           }
         }
       }
-      brz = gDx.brz;
-      gDE.gDI = false;
-      gDs.brw = gDx.brw;
-      if (brz == null)
+      bfz = gJY.bfz;
+      gKf.gKj = false;
+      gJT.bfw = gJY.bfw;
+      if (bfz == null)
       {
-        u.e("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "start camera FAILED!");
-        return 0 - com.tencent.mm.compatible.util.f.oX();
+        v.e("MicroMsg.SightCamera", "start camera FAILED!");
+        return 0 - com.tencent.mm.compatible.util.f.np();
       }
     }
     return 0;
@@ -420,56 +420,56 @@ final class f
   
   public final int a(SurfaceHolder paramSurfaceHolder)
   {
-    long l = ay.FT();
-    u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "ashu::start preview, previewing %B, %s", new Object[] { Boolean.valueOf(gDu), Looper.myLooper() });
-    if (gDu) {
+    long l = be.Gq();
+    v.i("MicroMsg.SightCamera", "ashu::start preview, previewing %B, %s", new Object[] { Boolean.valueOf(gJV), Looper.myLooper() });
+    if (gJV) {
       return 0;
     }
     if (paramSurfaceHolder == null) {
-      return 0 - com.tencent.mm.compatible.util.f.oX();
+      return 0 - com.tencent.mm.compatible.util.f.np();
     }
     for (;;)
     {
       try
       {
-        a(brz);
-        Integer localInteger = (Integer)ah.tD().rn().get(344066, Integer.valueOf(0));
-        if (bsKbrm == 1)
+        a(bfz);
+        Integer localInteger = (Integer)ah.tE().ro().get(344066, Integer.valueOf(0));
+        if (bgObfm == 1)
         {
           localObject = "Range";
-          if (bsKbrn != 1) {
+          if (bgObfn != 1) {
             break label595;
           }
           bool1 = true;
-          if (bsKbro != 1) {
+          if (bgObfo != 1) {
             break label601;
           }
           bool2 = true;
-          if (bsKbrp != 1) {
+          if (bgObfp != 1) {
             break label607;
           }
           bool3 = true;
-          u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "startPreview Holder:: sightTest %s, config list: setFPS[%s], setYUV420SP[%B], useMetering[%B], useContinueFocus[%B]", new Object[] { localInteger, localObject, Boolean.valueOf(bool1), Boolean.valueOf(bool2), Boolean.valueOf(bool3) });
-          if ((bsKbrm == 1) && ((localInteger.intValue() == 0) || (localInteger.intValue() == 1)))
+          v.i("MicroMsg.SightCamera", "startPreview Holder:: sightTest %s, config list: setFPS[%s], setYUV420SP[%B], useMetering[%B], useContinueFocus[%B]", new Object[] { localInteger, localObject, Boolean.valueOf(bool1), Boolean.valueOf(bool2), Boolean.valueOf(bool3) });
+          if ((bgObfm == 1) && ((localInteger.intValue() == 0) || (localInteger.intValue() == 1)))
           {
-            a(brz, false);
-            if ((bsKbrn == 1) && ((localInteger.intValue() == 0) || (localInteger.intValue() == 2))) {
-              c(brz);
+            a(bfz, false);
+            if ((bgObfn == 1) && ((localInteger.intValue() == 0) || (localInteger.intValue() == 2))) {
+              c(bfz);
             }
-            if ((bsKbro == 1) && ((localInteger.intValue() == 0) || (localInteger.intValue() == 3)) && (com.tencent.mm.compatible.util.c.bW(14))) {
-              b(brz);
+            if ((bgObfo == 1) && ((localInteger.intValue() == 0) || (localInteger.intValue() == 3)) && (com.tencent.mm.compatible.util.c.co(14))) {
+              b(bfz);
             }
-            if ((bsKbrp == 1) && ((localInteger.intValue() == 0) || (localInteger.intValue() == 4))) {
-              d(brz);
+            if ((bgObfp == 1) && ((localInteger.intValue() == 0) || (localInteger.intValue() == 4))) {
+              d(bfz);
             }
-            localObject = brz.getParameters();
-            if (gAC != null)
+            localObject = bfz.getParameters();
+            if (gHe != null)
             {
-              int i = gDs.iFn;
-              int j = gDs.iFm;
-              gDC = new byte[ImageFormat.getBitsPerPixel(((Camera.Parameters)localObject).getPreviewFormat()) * (i * j) / 8];
-              brz.addCallbackBuffer(gDC);
-              brz.setPreviewCallbackWithBuffer(new Camera.PreviewCallback()
+              int i = gJT.jci;
+              int j = gJT.jch;
+              gKd = new byte[ImageFormat.getBitsPerPixel(((Camera.Parameters)localObject).getPreviewFormat()) * (i * j) / 8];
+              bfz.addCallbackBuffer(gKd);
+              bfz.setPreviewCallbackWithBuffer(new Camera.PreviewCallback()
               {
                 public final void onPreviewFrame(byte[] paramAnonymousArrayOfByte, Camera paramAnonymousCamera)
                 {
@@ -481,35 +481,35 @@ final class f
                 }
               });
             }
-            brz.setPreviewDisplay(paramSurfaceHolder);
-            brz.startPreview();
-            if ((bsKbrp == 0) && (dAV != null) && (gDy != null)) {
-              dAV.registerListener(this, gDy, 2);
+            bfz.setPreviewDisplay(paramSurfaceHolder);
+            bfz.startPreview();
+            if ((bgObfp == 0) && (dCo != null) && (gJZ != null)) {
+              dCo.registerListener(this, gJZ, 2);
             }
-            gDu = true;
-            u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "ashu::start preview end, use %dms %s", new Object[] { Long.valueOf(ay.ao(l)), Looper.myLooper() });
+            gJV = true;
+            v.i("MicroMsg.SightCamera", "ashu::start preview end, use %dms %s", new Object[] { Long.valueOf(be.av(l)), Looper.myLooper() });
             return 0;
           }
         }
         else
         {
-          if (bsKbrl != 1) {
+          if (bgObfl != 1) {
             break label587;
           }
           localObject = "Fix";
           continue;
         }
-        if ((bsKbrl != 1) || ((localInteger.intValue() != 0) && (localInteger.intValue() != 5))) {
+        if ((bgObfl != 1) || ((localInteger.intValue() != 0) && (localInteger.intValue() != 5))) {
           continue;
         }
-        a(brz, true);
+        a(bfz, true);
         continue;
         Object localObject = "Error";
       }
       catch (Exception paramSurfaceHolder)
       {
-        u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "ashu::start preview FAILED, %s, %s", new Object[] { Looper.myLooper(), paramSurfaceHolder.getMessage() });
-        return 0 - com.tencent.mm.compatible.util.f.oX();
+        v.i("MicroMsg.SightCamera", "ashu::start preview FAILED, %s, %s", new Object[] { Looper.myLooper(), paramSurfaceHolder.getMessage() });
+        return 0 - com.tencent.mm.compatible.util.f.np();
       }
       label587:
       continue;
@@ -524,88 +524,88 @@ final class f
     }
   }
   
-  final void awZ()
+  final void azy()
   {
-    if ((dAV != null) && (gDy != null)) {
-      dAV.unregisterListener(this);
+    if ((dCo != null) && (gJZ != null)) {
+      dCo.unregisterListener(this);
     }
-    if (brz != null)
+    if (bfz != null)
     {
-      long l = ay.FT();
-      u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "ashu::release camera beg, %s", new Object[] { Looper.myLooper() });
-      gDE.removeCallbacksAndMessages(null);
-      gDE.gDI = true;
-      brz.setPreviewCallback(null);
-      brz.stopPreview();
-      brz.release();
-      brz = null;
-      gDu = false;
-      u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "ashu::release camera end, use %dms, %s", new Object[] { Long.valueOf(ay.ao(l)), Looper.myLooper() });
+      long l = be.Gq();
+      v.i("MicroMsg.SightCamera", "ashu::release camera beg, %s", new Object[] { Looper.myLooper() });
+      gKf.removeCallbacksAndMessages(null);
+      gKf.gKj = true;
+      bfz.setPreviewCallback(null);
+      bfz.stopPreview();
+      bfz.release();
+      bfz = null;
+      gJV = false;
+      v.i("MicroMsg.SightCamera", "ashu::release camera end, use %dms, %s", new Object[] { Long.valueOf(be.av(l)), Looper.myLooper() });
     }
-    gDt = false;
-    gDz = 0.0F;
-    gDA = 0.0F;
-    gDB = 0.0F;
-    a.gDL = true;
+    gJU = false;
+    gKa = 0.0F;
+    gKb = 0.0F;
+    gKc = 0.0F;
+    a.gKm = true;
     mContext = null;
-    gDD = false;
-    gDC = null;
+    gKe = false;
+    gKd = null;
   }
   
   @TargetApi(11)
   public final int b(SurfaceTexture paramSurfaceTexture)
   {
-    long l = ay.FT();
-    u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "ashu::start preview, previewing %B, %s", new Object[] { Boolean.valueOf(gDu), Looper.myLooper() });
-    if (gDu) {
+    long l = be.Gq();
+    v.i("MicroMsg.SightCamera", "ashu::start preview, previewing %B, %s", new Object[] { Boolean.valueOf(gJV), Looper.myLooper() });
+    if (gJV) {
       return 0;
     }
     if (paramSurfaceTexture == null) {
-      return 0 - com.tencent.mm.compatible.util.f.oX();
+      return 0 - com.tencent.mm.compatible.util.f.np();
     }
-    u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "this texture %s", new Object[] { paramSurfaceTexture });
+    v.i("MicroMsg.SightCamera", "this texture %s", new Object[] { paramSurfaceTexture });
     for (;;)
     {
       try
       {
-        a(brz);
-        Integer localInteger = (Integer)ah.tD().rn().get(344066, Integer.valueOf(0));
-        if (bsKbrm == 1)
+        a(bfz);
+        Integer localInteger = (Integer)ah.tE().ro().get(344066, Integer.valueOf(0));
+        if (bgObfm == 1)
         {
           localObject = "Range";
-          if (bsKbrn != 1) {
+          if (bgObfn != 1) {
             break label611;
           }
           bool1 = true;
-          if (bsKbro != 1) {
+          if (bgObfo != 1) {
             break label617;
           }
           bool2 = true;
-          if (bsKbrp != 1) {
+          if (bgObfp != 1) {
             break label623;
           }
           bool3 = true;
-          u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "startPreview Texture:: sightTest %s, config list: setFPS[%s], setYUV420SP[%B], useMetering[%B], useContinueFocus[%B]", new Object[] { localInteger, localObject, Boolean.valueOf(bool1), Boolean.valueOf(bool2), Boolean.valueOf(bool3) });
-          if ((bsKbrm == 1) && ((localInteger.intValue() == 0) || (localInteger.intValue() == 1)))
+          v.i("MicroMsg.SightCamera", "startPreview Texture:: sightTest %s, config list: setFPS[%s], setYUV420SP[%B], useMetering[%B], useContinueFocus[%B]", new Object[] { localInteger, localObject, Boolean.valueOf(bool1), Boolean.valueOf(bool2), Boolean.valueOf(bool3) });
+          if ((bgObfm == 1) && ((localInteger.intValue() == 0) || (localInteger.intValue() == 1)))
           {
-            a(brz, false);
-            if ((bsKbrn == 1) && ((localInteger.intValue() == 0) || (localInteger.intValue() == 2))) {
-              c(brz);
+            a(bfz, false);
+            if ((bgObfn == 1) && ((localInteger.intValue() == 0) || (localInteger.intValue() == 2))) {
+              c(bfz);
             }
-            if ((bsKbro == 1) && ((localInteger.intValue() == 0) || (localInteger.intValue() == 3)) && (com.tencent.mm.compatible.util.c.bW(14))) {
-              b(brz);
+            if ((bgObfo == 1) && ((localInteger.intValue() == 0) || (localInteger.intValue() == 3)) && (com.tencent.mm.compatible.util.c.co(14))) {
+              b(bfz);
             }
-            if ((bsKbrp == 1) && ((localInteger.intValue() == 0) || (localInteger.intValue() == 4))) {
-              d(brz);
+            if ((bgObfp == 1) && ((localInteger.intValue() == 0) || (localInteger.intValue() == 4))) {
+              d(bfz);
             }
-            localObject = brz.getParameters();
-            if (gAC != null)
+            localObject = bfz.getParameters();
+            if (gHe != null)
             {
-              int i = gDs.iFn;
-              int j = gDs.iFm;
-              gDC = new byte[ImageFormat.getBitsPerPixel(((Camera.Parameters)localObject).getPreviewFormat()) * (i * j) / 8];
-              brz.addCallbackBuffer(gDC);
-              brz.setPreviewCallbackWithBuffer(new Camera.PreviewCallback()
+              int i = gJT.jci;
+              int j = gJT.jch;
+              gKd = new byte[ImageFormat.getBitsPerPixel(((Camera.Parameters)localObject).getPreviewFormat()) * (i * j) / 8];
+              bfz.addCallbackBuffer(gKd);
+              bfz.setPreviewCallbackWithBuffer(new Camera.PreviewCallback()
               {
                 public final void onPreviewFrame(byte[] paramAnonymousArrayOfByte, Camera paramAnonymousCamera)
                 {
@@ -617,35 +617,35 @@ final class f
                 }
               });
             }
-            brz.setPreviewTexture(paramSurfaceTexture);
-            brz.startPreview();
-            if ((bsKbrp == 0) && (dAV != null) && (gDy != null)) {
-              dAV.registerListener(this, gDy, 2);
+            bfz.setPreviewTexture(paramSurfaceTexture);
+            bfz.startPreview();
+            if ((bgObfp == 0) && (dCo != null) && (gJZ != null)) {
+              dCo.registerListener(this, gJZ, 2);
             }
-            gDu = true;
-            u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "ashu::start preview end, use %dms %s", new Object[] { Long.valueOf(ay.ao(l)), Looper.myLooper() });
+            gJV = true;
+            v.i("MicroMsg.SightCamera", "ashu::start preview end, use %dms %s", new Object[] { Long.valueOf(be.av(l)), Looper.myLooper() });
             return 0;
           }
         }
         else
         {
-          if (bsKbrl != 1) {
+          if (bgObfl != 1) {
             break label603;
           }
           localObject = "Fix";
           continue;
         }
-        if ((bsKbrl != 1) || ((localInteger.intValue() != 0) && (localInteger.intValue() != 5))) {
+        if ((bgObfl != 1) || ((localInteger.intValue() != 0) && (localInteger.intValue() != 5))) {
           continue;
         }
-        a(brz, true);
+        a(bfz, true);
         continue;
         Object localObject = "Error";
       }
       catch (Exception paramSurfaceTexture)
       {
-        u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "ashu::start preview FAILED, %s, %s", new Object[] { Looper.myLooper(), paramSurfaceTexture.getMessage() });
-        return 0 - com.tencent.mm.compatible.util.f.oX();
+        v.i("MicroMsg.SightCamera", "ashu::start preview FAILED, %s, %s", new Object[] { Looper.myLooper(), paramSurfaceTexture.getMessage() });
+        return 0 - com.tencent.mm.compatible.util.f.np();
       }
       label603:
       continue;
@@ -667,36 +667,36 @@ final class f
     float f1 = values[0];
     float f2 = values[1];
     float f3 = values[2];
-    if ((Math.abs(gDz - f1) > 3.0F) || (Math.abs(gDA - f2) > 3.0F) || (Math.abs(gDB - f3) > 3.0F))
+    if ((Math.abs(gKa - f1) > 3.0F) || (Math.abs(gKb - f2) > 3.0F) || (Math.abs(gKc - f3) > 3.0F))
     {
-      u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "match accel limit %f, try auto focus", new Object[] { Float.valueOf(3.0F) });
-      a.e(brz);
-      gDz = f1;
-      gDA = f2;
-      gDB = f3;
+      v.i("MicroMsg.SightCamera", "match accel limit %f, try auto focus", new Object[] { Float.valueOf(3.0F) });
+      a.e(bfz);
+      gKa = f1;
+      gKb = f2;
+      gKc = f3;
     }
   }
   
   private static final class a
-    extends aa
+    extends ac
   {
-    static boolean gDL = true;
-    static Camera.AutoFocusCallback gDM = new Camera.AutoFocusCallback()
+    static boolean gKm = true;
+    static Camera.AutoFocusCallback gKn = new Camera.AutoFocusCallback()
     {
       public final void onAutoFocus(boolean paramAnonymousBoolean, Camera paramAnonymousCamera)
       {
-        u.v("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "auto focus callback");
-        f.a.gDL = true;
+        v.v("MicroMsg.SightCamera", "auto focus callback");
+        f.a.gKm = true;
       }
     };
-    float eED;
-    float fgc;
-    int gDG = 0;
-    boolean gDH = false;
-    boolean gDI = false;
-    int gDJ;
-    int gDK;
-    boolean gDt = false;
+    float eKR;
+    float fpb;
+    boolean gJU = false;
+    int gKh = 0;
+    boolean gKi = false;
+    boolean gKj = false;
+    int gKk;
+    int gKl;
     
     public a(Looper paramLooper)
     {
@@ -705,10 +705,10 @@ final class f
     
     private static Rect a(float paramFloat1, float paramFloat2, float paramFloat3, int paramInt1, int paramInt2)
     {
-      int i = Float.valueOf(com.tencent.mm.aw.a.fromDPToPix(y.getContext(), 72) * paramFloat3).intValue();
+      int i = Float.valueOf(com.tencent.mm.az.a.fromDPToPix(aa.getContext(), 72) * paramFloat3).intValue();
       RectF localRectF = new RectF();
       localRectF.set((paramFloat1 - i / 2) * 2000.0F / paramInt1 - 1000.0F, (paramFloat2 - i / 2) * 2000.0F / paramInt2 - 1000.0F, (i / 2 + paramFloat1) * 2000.0F / paramInt1 - 1000.0F, (i / 2 + paramFloat2) * 2000.0F / paramInt2 - 1000.0F);
-      return new Rect(lh(Math.round(left)), lh(Math.round(top)), lh(Math.round(right)), lh(Math.round(bottom)));
+      return new Rect(mo(Math.round(left)), mo(Math.round(top)), mo(Math.round(right)), mo(Math.round(bottom)));
     }
     
     private static int c(Camera.Parameters paramParameters)
@@ -728,7 +728,7 @@ final class f
       {
         for (;;)
         {
-          u.e("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "get target zoom value error: %s", new Object[] { paramParameters.getMessage() });
+          v.e("MicroMsg.SightCamera", "get target zoom value error: %s", new Object[] { paramParameters.getMessage() });
           int i = 0;
         }
       }
@@ -748,27 +748,27 @@ final class f
     static void e(Camera paramCamera)
     {
       if (paramCamera == null) {
-        u.w("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "want to auto focus, but camera is null, do nothing");
+        v.w("MicroMsg.SightCamera", "want to auto focus, but camera is null, do nothing");
       }
-      if (!gDL)
+      if (!gKm)
       {
-        u.w("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "auto focus not back");
+        v.w("MicroMsg.SightCamera", "auto focus not back");
         return;
       }
-      gDL = false;
+      gKm = false;
       try
       {
-        paramCamera.autoFocus(gDM);
+        paramCamera.autoFocus(gKn);
         return;
       }
       catch (Exception paramCamera)
       {
-        u.w("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "autofocus fail, exception %s", new Object[] { paramCamera.getMessage() });
-        gDL = true;
+        v.w("MicroMsg.SightCamera", "autofocus fail, exception %s", new Object[] { paramCamera.getMessage() });
+        gKm = true;
       }
     }
     
-    private static int lh(int paramInt)
+    private static int mo(int paramInt)
     {
       int i;
       if (paramInt > 1000) {
@@ -792,31 +792,31 @@ final class f
       {
         return;
         paramMessage = (Camera)obj;
-        if ((gDJ == 0) || (gDJ == 0) || (com.tencent.mm.compatible.util.c.bV(14)))
+        if ((gKk == 0) || (gKk == 0) || (com.tencent.mm.compatible.util.c.cn(14)))
         {
           e(paramMessage);
           return;
         }
-        float f1 = fgc;
-        float f2 = eED;
-        int i = gDJ;
-        j = gDK;
+        float f1 = fpb;
+        float f2 = eKR;
+        int i = gKk;
+        j = gKl;
         if (paramMessage == null) {
-          u.w("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "want to auto focus, but camera is null, do nothing");
+          v.w("MicroMsg.SightCamera", "want to auto focus, but camera is null, do nothing");
         }
-        if (!gDL)
+        if (!gKm)
         {
-          u.w("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "auto focus not back");
+          v.w("MicroMsg.SightCamera", "auto focus not back");
           return;
         }
-        gDL = false;
+        gKm = false;
         Object localObject2;
         try
         {
-          u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "ashutest:: touch %f %f, display %d %d", new Object[] { Float.valueOf(f1), Float.valueOf(f2), Integer.valueOf(i), Integer.valueOf(j) });
+          v.i("MicroMsg.SightCamera", "ashutest:: touch %f %f, display %d %d", new Object[] { Float.valueOf(f1), Float.valueOf(f2), Integer.valueOf(i), Integer.valueOf(j) });
           localObject2 = a(f1, f2, 1.0F, i, j);
           localObject1 = a(f1, f2, 1.5F, i, j);
-          u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "ashutest:: focus rect %s, meter rect %s", new Object[] { localObject2, localObject1 });
+          v.i("MicroMsg.SightCamera", "ashutest:: focus rect %s, meter rect %s", new Object[] { localObject2, localObject1 });
           localParameters = paramMessage.getParameters();
           Object localObject3 = localParameters.getSupportedFocusModes();
           if ((localObject3 != null) && (((List)localObject3).contains("auto"))) {
@@ -835,30 +835,29 @@ final class f
             localParameters.setMeteringAreas((List)localObject2);
           }
           paramMessage.setParameters(localParameters);
-          paramMessage.autoFocus(gDM);
+          paramMessage.autoFocus(gKn);
           return;
         }
         catch (Exception paramMessage)
         {
-          u.w("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "autofocus with area fail, exception %s", new Object[] { paramMessage.getMessage() });
-          gDL = true;
+          v.w("MicroMsg.SightCamera", "autofocus with area fail, exception %s", new Object[] { paramMessage.getMessage() });
+          gKm = true;
           return;
         }
-        if (gDI) {
+        if (gKj) {
           continue;
         }
         Object localObject1 = (Camera)obj;
         Camera.Parameters localParameters = ((Camera)localObject1).getParameters();
-        u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "zoomed %s curZoomStep %s params.getZoom() %s", new Object[] { Boolean.valueOf(gDt), Integer.valueOf(gDG), Integer.valueOf(localParameters.getZoom()) });
-        i = localParameters.getZoom();
-        i = gDG + i;
-        if (gDt)
+        v.i("MicroMsg.SightCamera", "zoomed %s curZoomStep %s params.getZoom() %s", new Object[] { Boolean.valueOf(gJU), Integer.valueOf(gKh), Integer.valueOf(localParameters.getZoom()) });
+        i = localParameters.getZoom() + gKh;
+        if (gJU)
         {
           int k = c(localParameters);
           if (i >= k)
           {
             i = k;
-            label469:
+            label465:
             localParameters.setZoom(i);
           }
         }
@@ -868,12 +867,12 @@ final class f
           if (j == 0) {
             continue;
           }
-          gDJ = 0;
-          gDK = 0;
+          gKk = 0;
+          gKl = 0;
           sendMessageDelayed(obtainMessage(4354, obj), 20L);
           return;
           localObject2 = obtainMessage(4353, obj);
-          if (gDH) {}
+          if (gKi) {}
           for (long l = 10L;; l = 20L)
           {
             sendMessageDelayed((Message)localObject2, l);
@@ -883,10 +882,10 @@ final class f
           if (i <= 0)
           {
             i = 0;
-            break label469;
+            break label465;
           }
           localObject2 = obtainMessage(4353, obj);
-          if (gDH) {}
+          if (gKi) {}
           for (l = 10L;; l = 20L)
           {
             sendMessageDelayed((Message)localObject2, l);

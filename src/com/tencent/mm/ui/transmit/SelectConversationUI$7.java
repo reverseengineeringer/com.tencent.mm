@@ -1,19 +1,40 @@
 package com.tencent.mm.ui.transmit;
 
-import android.content.Intent;
-import com.tencent.mm.pluginsdk.ui.applet.c.a;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import android.widget.TextView;
+import com.tencent.mm.ui.contact.MMBaseSelectContactUI;
+import com.tencent.mm.ui.contact.m;
+import com.tencent.mm.ui.contact.p;
 
 final class SelectConversationUI$7
-  implements c.a
+  implements MenuItem.OnMenuItemClickListener
 {
-  SelectConversationUI$7(SelectConversationUI paramSelectConversationUI, Intent paramIntent) {}
+  SelectConversationUI$7(SelectConversationUI paramSelectConversationUI) {}
   
-  public final void a(boolean paramBoolean, String paramString, int paramInt)
+  public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if (paramBoolean)
+    paramMenuItem = mci;
+    boolean bool;
+    if (!SelectConversationUI.a(mci))
     {
-      lBq.setResult(-1, val$intent);
-      lBq.finish();
+      bool = true;
+      SelectConversationUI.a(paramMenuItem, bool);
+      mci.bmZ().iA(SelectConversationUI.a(mci));
+      mci.lLh.iA(SelectConversationUI.a(mci));
+      SelectConversationUI.f(mci);
+      paramMenuItem = SelectConversationUI.h(mci);
+      if (SelectConversationUI.a(mci)) {
+        break label102;
+      }
+    }
+    label102:
+    for (int i = SelectConversationUI.g(mci);; i = 2131234853)
+    {
+      paramMenuItem.setText(i);
+      return true;
+      bool = false;
+      break;
     }
   }
 }

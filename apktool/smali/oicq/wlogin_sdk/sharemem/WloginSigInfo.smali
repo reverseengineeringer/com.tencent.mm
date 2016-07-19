@@ -9,6 +9,15 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Loicq/wlogin_sdk/sharemem/WloginSigInfo;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private static final serialVersionUID:J = 0x1L
 
@@ -82,36 +91,36 @@
 .end method
 
 .method public constructor <init>(JJJJ[B[B[B[B[B[B[B[B[B[B[B[B[[B)V
-    .locals 3
+    .locals 5
 
     .prologue
     .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 31
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    iput-wide v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_expire_time:J
+    iput-wide v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_expire_time:J
 
     .line 32
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    iput-wide v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_A2_expire_time:J
+    iput-wide v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_A2_expire_time:J
 
     .line 33
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    iput-wide v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_create_time:J
+    iput-wide v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_create_time:J
 
     .line 34
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    iput-wide v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_app_pri:J
+    iput-wide v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_app_pri:J
 
     .line 35
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    iput-wide v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_ret_appid:J
+    iput-wide v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_ret_appid:J
 
     .line 43
     iput-wide p1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_app_pri:J
@@ -128,38 +137,38 @@
     .line 47
     invoke-virtual {p9}, [B->clone()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, [B
+    check-cast v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_TGT:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_TGT:[B
 
     .line 48
     invoke-virtual {p10}, [B->clone()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, [B
+    check-cast v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_TGTKey:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_TGTKey:[B
 
     .line 49
-    invoke-virtual {p11}, [B->clone()Ljava/lang/Object;
+    invoke-virtual/range {p11 .. p11}, [B->clone()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, [B
+    check-cast v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userStSig:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userStSig:[B
 
     .line 50
-    invoke-virtual {p12}, [B->clone()Ljava/lang/Object;
+    invoke-virtual/range {p12 .. p12}, [B->clone()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, [B
+    check-cast v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userSt_Key:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userSt_Key:[B
 
     .line 52
     if-eqz p13, :cond_0
@@ -167,19 +176,19 @@
     .line 53
     invoke-virtual/range {p13 .. p13}, [B->clone()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, [B
+    check-cast v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userStWebSig:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userStWebSig:[B
 
     .line 57
     :goto_0
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    new-array v1, v1, [B
+    new-array v2, v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userPasswdSig:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userPasswdSig:[B
 
     .line 58
     if-eqz p14, :cond_1
@@ -187,11 +196,11 @@
     .line 59
     invoke-virtual/range {p14 .. p14}, [B->clone()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, [B
+    check-cast v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userA5:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userA5:[B
 
     .line 62
     :goto_1
@@ -200,11 +209,11 @@
     .line 63
     invoke-virtual/range {p15 .. p15}, [B->clone()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, [B
+    check-cast v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userA8:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userA8:[B
 
     .line 66
     :goto_2
@@ -213,11 +222,11 @@
     .line 67
     invoke-virtual/range {p16 .. p16}, [B->clone()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, [B
+    check-cast v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_lsKey:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_lsKey:[B
 
     .line 71
     :goto_3
@@ -226,11 +235,11 @@
     .line 72
     invoke-virtual/range {p17 .. p17}, [B->clone()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, [B
+    check-cast v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_sKey:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_sKey:[B
 
     .line 76
     :goto_4
@@ -239,11 +248,11 @@
     .line 77
     invoke-virtual/range {p18 .. p18}, [B->clone()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, [B
+    check-cast v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userSig64:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userSig64:[B
 
     .line 81
     :goto_5
@@ -252,11 +261,11 @@
     .line 82
     invoke-virtual/range {p19 .. p19}, [B->clone()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, [B
+    check-cast v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_openid:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_openid:[B
 
     .line 86
     :goto_6
@@ -265,11 +274,11 @@
     .line 87
     invoke-virtual/range {p20 .. p20}, [B->clone()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, [B
+    check-cast v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_openkey:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_openkey:[B
 
     .line 91
     :goto_7
@@ -277,102 +286,102 @@
 
     move-object/from16 v0, p21
 
-    array-length v1, v0
+    array-length v2, v0
 
-    const/4 v2, 0x7
+    const/4 v3, 0x7
 
-    if-ne v1, v2, :cond_8
+    if-ne v2, v3, :cond_8
 
     .line 93
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    aget-object v1, p21, v1
+    aget-object v2, p21, v2
 
-    invoke-virtual {v1}, [B->clone()Ljava/lang/Object;
+    invoke-virtual {v2}, [B->clone()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, [B
+    check-cast v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_vkey:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_vkey:[B
 
     .line 94
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    aget-object v1, p21, v1
+    aget-object v2, p21, v2
 
-    invoke-virtual {v1}, [B->clone()Ljava/lang/Object;
+    invoke-virtual {v2}, [B->clone()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, [B
+    check-cast v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_en_A1:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_en_A1:[B
 
     .line 95
-    const/4 v1, 0x2
+    const/4 v2, 0x2
 
-    aget-object v1, p21, v1
+    aget-object v2, p21, v2
 
-    invoke-virtual {v1}, [B->clone()Ljava/lang/Object;
+    invoke-virtual {v2}, [B->clone()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, [B
+    check-cast v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_access_token:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_access_token:[B
 
     .line 96
-    const/4 v1, 0x3
+    const/4 v2, 0x3
 
-    aget-object v1, p21, v1
+    aget-object v2, p21, v2
 
-    invoke-virtual {v1}, [B->clone()Ljava/lang/Object;
+    invoke-virtual {v2}, [B->clone()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, [B
+    check-cast v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_D2:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_D2:[B
 
     .line 97
-    const/4 v1, 0x4
+    const/4 v2, 0x4
 
-    aget-object v1, p21, v1
+    aget-object v2, p21, v2
 
-    invoke-virtual {v1}, [B->clone()Ljava/lang/Object;
+    invoke-virtual {v2}, [B->clone()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, [B
+    check-cast v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_D2Key:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_D2Key:[B
 
     .line 98
-    const/4 v1, 0x5
+    const/4 v2, 0x5
 
-    aget-object v1, p21, v1
+    aget-object v2, p21, v2
 
-    invoke-virtual {v1}, [B->clone()Ljava/lang/Object;
+    invoke-virtual {v2}, [B->clone()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, [B
+    check-cast v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_sid:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_sid:[B
 
     .line 99
-    const/4 v1, 0x6
+    const/4 v2, 0x6
 
-    aget-object v1, p21, v1
+    aget-object v2, p21, v2
 
-    invoke-virtual {v1}, [B->clone()Ljava/lang/Object;
+    invoke-virtual {v2}, [B->clone()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, [B
+    check-cast v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_noPicSig:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_noPicSig:[B
 
     .line 111
     :goto_8
@@ -380,133 +389,133 @@
 
     .line 55
     :cond_0
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    new-array v1, v1, [B
+    new-array v2, v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userStWebSig:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userStWebSig:[B
 
     goto/16 :goto_0
 
     .line 61
     :cond_1
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    new-array v1, v1, [B
+    new-array v2, v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userA5:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userA5:[B
 
     goto/16 :goto_1
 
     .line 65
     :cond_2
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    new-array v1, v1, [B
+    new-array v2, v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userA8:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userA8:[B
 
     goto/16 :goto_2
 
     .line 69
     :cond_3
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    new-array v1, v1, [B
+    new-array v2, v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_lsKey:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_lsKey:[B
 
     goto/16 :goto_3
 
     .line 74
     :cond_4
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    new-array v1, v1, [B
+    new-array v2, v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_sKey:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_sKey:[B
 
     goto/16 :goto_4
 
     .line 79
     :cond_5
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    new-array v1, v1, [B
+    new-array v2, v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userSig64:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_userSig64:[B
 
     goto/16 :goto_5
 
     .line 84
     :cond_6
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    new-array v1, v1, [B
+    new-array v2, v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_openid:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_openid:[B
 
     goto/16 :goto_6
 
     .line 89
     :cond_7
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    new-array v1, v1, [B
+    new-array v2, v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_openkey:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_openkey:[B
 
     goto/16 :goto_7
 
     .line 103
     :cond_8
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    new-array v1, v1, [B
+    new-array v2, v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_vkey:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_vkey:[B
 
     .line 104
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    new-array v1, v1, [B
+    new-array v2, v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_en_A1:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_en_A1:[B
 
     .line 105
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    new-array v1, v1, [B
+    new-array v2, v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_access_token:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_access_token:[B
 
     .line 106
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    new-array v1, v1, [B
+    new-array v2, v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_D2:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_D2:[B
 
     .line 107
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    new-array v1, v1, [B
+    new-array v2, v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_D2Key:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_D2Key:[B
 
     .line 108
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    new-array v1, v1, [B
+    new-array v2, v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_sid:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_sid:[B
 
     .line 109
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    new-array v1, v1, [B
+    new-array v2, v2, [B
 
-    iput-object v1, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_noPicSig:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->_noPicSig:[B
 
     goto :goto_8
 .end method

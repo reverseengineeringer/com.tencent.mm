@@ -5,22 +5,20 @@ import android.content.UriMatcher;
 import android.database.Cursor;
 import android.net.Uri;
 import com.jg.JgClassChecked;
-import com.tencent.mm.az.d;
-import com.tencent.mm.d.a.dj;
-import com.tencent.mm.d.a.dj.b;
-import com.tencent.mm.d.a.dk;
-import com.tencent.mm.d.a.dk.b;
-import com.tencent.mm.d.a.dr;
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.model.ah;
+import com.tencent.mm.bc.d;
+import com.tencent.mm.e.a.dm;
+import com.tencent.mm.e.a.dm.b;
+import com.tencent.mm.e.a.dn;
+import com.tencent.mm.e.a.dn.b;
+import com.tencent.mm.e.a.dv;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.model.as.a;
 import com.tencent.mm.model.c;
 import com.tencent.mm.model.h;
 import com.tencent.mm.network.e;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 import java.util.List;
@@ -29,57 +27,57 @@ import java.util.List;
 public final class ExtControlProviderSNS
   extends ExtContentProviderBase
 {
-  private static final UriMatcher dKS;
-  private static boolean dLt = false;
-  private static af dLu = new af(new af.a()
+  private static final UriMatcher dMB;
+  private static boolean dNb = false;
+  private static com.tencent.mm.sdk.platformtools.ah dNc = new com.tencent.mm.sdk.platformtools.ah(new ah.a()
   {
-    public final boolean lj()
+    public final boolean jK()
     {
-      ExtControlProviderSNS.CP();
+      ExtControlProviderSNS.Da();
       return false;
     }
   }, false);
-  private static final String[] dLw = { "feedId", "desc", "url", "nickname", "avatar", "timestamp", "mediaCount", "type", "bigImgUrl", "firstImgWidth", "firstImgHeight" };
-  private boolean axw = false;
-  private boolean axx = false;
-  private int axy = 0;
-  private String dLx = "";
+  private static final String[] dNe = { "feedId", "desc", "url", "nickname", "avatar", "timestamp", "mediaCount", "type", "bigImgUrl", "firstImgWidth", "firstImgHeight" };
+  private boolean ajv = false;
+  private boolean ajw = false;
+  private int ajx = 0;
+  private String limitSeq = "";
   
   static
   {
     UriMatcher localUriMatcher = new UriMatcher(-1);
-    dKS = localUriMatcher;
+    dMB = localUriMatcher;
     localUriMatcher.addURI("com.tencent.mm.plugin.ext.SNS", "snsInfo", 17);
   }
   
-  private Cursor VB()
+  private Cursor Xj()
   {
-    u.i("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "getSnsCursor() , needDownload = true");
-    d locald = new d(dLw, (byte)0);
-    Object localObject1 = new dj();
-    awQ.awS = dLx;
-    if (!com.tencent.mm.sdk.c.a.jUF.j((com.tencent.mm.sdk.c.b)localObject1))
+    v.i("MicroMsg.ExtControlProviderSNS", "getSnsCursor() , needDownload = true");
+    d locald = new d(dNe, (byte)0);
+    Object localObject1 = new dm();
+    aiL.aiN = limitSeq;
+    if (!com.tencent.mm.sdk.c.a.kug.y((com.tencent.mm.sdk.c.b)localObject1))
     {
       locald.close();
       return null;
     }
-    Cursor localCursor = awR.awP;
+    Cursor localCursor = aiM.aiE;
     if (localCursor != null) {}
     for (;;)
     {
       try
       {
         i = localCursor.getCount();
-        u.i("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "in getSnsCursor(), snsCount = " + i);
-        dk localdk;
+        v.i("MicroMsg.ExtControlProviderSNS", "in getSnsCursor(), snsCount = " + i);
+        dn localdn;
         if ((i > 0) && (localCursor.moveToFirst()))
         {
           if (localCursor != null)
           {
-            localdk = new dk();
-            awT.awV = localCursor;
-            if (!com.tencent.mm.sdk.c.a.jUF.j(localdk)) {
-              u.w("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "ExtGetSnsDataEvent publish error");
+            localdn = new dn();
+            aiO.aiQ = localCursor;
+            if (!com.tencent.mm.sdk.c.a.kug.y(localdn)) {
+              v.w("MicroMsg.ExtControlProviderSNS", "ExtGetSnsDataEvent publish error");
             }
           }
           else
@@ -91,36 +89,36 @@ public final class ExtControlProviderSNS
         }
         else
         {
-          u.i("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "in getSnsCursor(), matrixCursor Count = " + locald.getCount());
+          v.i("MicroMsg.ExtControlProviderSNS", "in getSnsCursor(), matrixCursor Count = " + locald.getCount());
           localCursor.close();
           break label788;
         }
-        Object localObject2 = ah.tD().rq().En(awU.awW);
-        if ((localObject2 == null) || ((int)bvi <= 0)) {
+        Object localObject2 = com.tencent.mm.model.ah.tE().rr().GB(aiP.aiR);
+        if ((localObject2 == null) || ((int)bjS <= 0)) {
           continue;
         }
         String str3 = "";
-        switch (awU.axa)
+        switch (aiP.aiV)
         {
         case 2: 
-          if ((awU.axc == null) || (awU.axc.size() <= 0) || (getContext() == null)) {
+          if ((aiP.aiX == null) || (aiP.aiX.size() <= 0) || (getContext() == null)) {
             break label782;
           }
-          u.d("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "uris.size() = [%s]", new Object[] { Integer.valueOf(awU.axc.size()) });
+          v.d("MicroMsg.ExtControlProviderSNS", "uris.size() = [%s]", new Object[] { Integer.valueOf(aiP.aiX.size()) });
           if ((i != 2) && (i != 6) && (i != 3) && (i != 4)) {
             break label782;
           }
-          localObject1 = (String)awU.axc.get(0);
+          localObject1 = (String)aiP.aiX.get(0);
           String str2 = str3;
-          if (awU.axd != null)
+          if (aiP.aiY != null)
           {
             str2 = str3;
-            if (awU.axd.size() > 0)
+            if (aiP.aiY.size() > 0)
             {
               str2 = str3;
               if (getContext() != null)
               {
-                u.d("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "bigImgUris.size() = [%s], firstImgWidth = [%s], firstImgHeight = [%s]", new Object[] { Integer.valueOf(awU.axd.size()), Integer.valueOf(awU.axe), Integer.valueOf(awU.axf) });
+                v.d("MicroMsg.ExtControlProviderSNS", "bigImgUris.size() = [%s], firstImgWidth = [%s], firstImgHeight = [%s]", new Object[] { Integer.valueOf(aiP.aiY.size()), Integer.valueOf(aiP.aiZ), Integer.valueOf(aiP.aja) });
                 if ((i != 2) && (i != 6) && (i != 3))
                 {
                   str2 = str3;
@@ -128,26 +126,26 @@ public final class ExtControlProviderSNS
                 }
                 else
                 {
-                  str2 = (String)awU.axd.get(0);
+                  str2 = (String)aiP.aiY.get(0);
                 }
               }
             }
           }
-          str3 = com.tencent.mm.q.b.fO(awU.awW);
+          str3 = com.tencent.mm.s.b.gb(aiP.aiR);
           try
           {
-            String str4 = com.tencent.mm.plugin.ext.a.a.bc(awU.awX);
-            String str5 = awU.awY;
-            String str6 = ((k)localObject2).qz();
+            String str4 = com.tencent.mm.plugin.ext.a.a.bk(aiP.aiS);
+            String str5 = aiP.aiT;
+            String str6 = ((k)localObject2).pc();
             localObject2 = str3;
             if (str3 == null) {
               localObject2 = "";
             }
-            locald.addRow(new Object[] { str4, str5, localObject1, str6, localObject2, Long.valueOf(awU.awZ), Integer.valueOf(awU.axb), Integer.valueOf(i), str2, Integer.valueOf(awU.axe), Integer.valueOf(awU.axf) });
+            locald.addRow(new Object[] { str4, str5, localObject1, str6, localObject2, Long.valueOf(aiP.aiU), Integer.valueOf(aiP.aiW), Integer.valueOf(i), str2, Integer.valueOf(aiP.aiZ), Integer.valueOf(aiP.aja) });
           }
           catch (Exception localException1)
           {
-            u.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", localException1.getMessage());
+            v.e("MicroMsg.ExtControlProviderSNS", localException1.getMessage());
           }
           continue;
           i = 1;
@@ -155,7 +153,7 @@ public final class ExtControlProviderSNS
       }
       catch (Exception localException2)
       {
-        u.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", localException2.getMessage());
+        v.e("MicroMsg.ExtControlProviderSNS", localException2.getMessage());
         if (localCursor != null) {
           localCursor.close();
         }
@@ -180,21 +178,21 @@ public final class ExtControlProviderSNS
     }
   }
   
-  private Cursor bd(long paramLong)
+  private Cursor bl(long paramLong)
   {
     int i = 1;
-    u.i("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "handleGetSnsInfo() userId = " + paramLong);
+    v.i("MicroMsg.ExtControlProviderSNS", "handleGetSnsInfo() userId = " + paramLong);
     try
     {
-      u.i("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "startGetSNSInfo, userId=[%s]", new Object[] { Long.valueOf(paramLong) });
+      v.i("MicroMsg.ExtControlProviderSNS", "startGetSNSInfo, userId=[%s]", new Object[] { Long.valueOf(paramLong) });
       final k localk;
       if (paramLong == 0L)
       {
-        localk = ah.tD().rq().En(h.sc());
-        if ((localk != null) && ((int)bvi > 0)) {
+        localk = com.tencent.mm.model.ah.tE().rr().GB(h.se());
+        if ((localk != null) && ((int)bjS > 0)) {
           break label116;
         }
-        u.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "ct == null");
+        v.e("MicroMsg.ExtControlProviderSNS", "ct == null");
         i = 0;
       }
       for (;;)
@@ -202,53 +200,53 @@ public final class ExtControlProviderSNS
         if (i != 0) {
           break label224;
         }
-        u.w("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "startGetSNSInfo() return false");
+        v.w("MicroMsg.ExtControlProviderSNS", "startGetSNSInfo() return false");
         return null;
-        localk = ah.tD().rq().dv(paramLong);
+        localk = com.tencent.mm.model.ah.tE().rr().dM(paramLong);
         break;
         label116:
-        axw = com.tencent.mm.h.a.ce(field_type);
-        axx = h.dQ(field_username);
-        u.d("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "ct.getUsername()=[%s], isFriend=[%s], isSelf=[%s]", new Object[] { field_username, Boolean.valueOf(axw), Boolean.valueOf(axx) });
+        ajv = com.tencent.mm.i.a.cy(field_type);
+        ajw = h.dZ(field_username);
+        v.d("MicroMsg.ExtControlProviderSNS", "ct.getUsername()=[%s], isFriend=[%s], isSelf=[%s]", new Object[] { field_username, Boolean.valueOf(ajv), Boolean.valueOf(ajw) });
         final com.tencent.mm.pluginsdk.d.a.a locala = new com.tencent.mm.pluginsdk.d.a.a();
         locala.b(10000L, new Runnable()
         {
           public final void run()
           {
-            dr localdr = new dr();
-            axv.type = 1;
-            axv.username = localkfield_username;
-            axv.axw = ExtControlProviderSNS.a(ExtControlProviderSNS.this);
-            axv.axx = ExtControlProviderSNS.b(ExtControlProviderSNS.this);
-            axv.axy = ExtControlProviderSNS.c(ExtControlProviderSNS.this);
-            axv.axz = new as.a()
+            dv localdv = new dv();
+            aju.type = 1;
+            aju.username = localkfield_username;
+            aju.ajv = ExtControlProviderSNS.a(ExtControlProviderSNS.this);
+            aju.ajw = ExtControlProviderSNS.b(ExtControlProviderSNS.this);
+            aju.ajx = ExtControlProviderSNS.c(ExtControlProviderSNS.this);
+            aju.ajy = new as.a()
             {
               public final void a(e paramAnonymous2e)
               {
-                dKP.countDown();
+                dMy.countDown();
               }
             };
-            com.tencent.mm.sdk.c.a.jUF.j(localdr);
+            com.tencent.mm.sdk.c.a.kug.y(localdv);
           }
         });
       }
-      return VB();
+      return Xj();
     }
     catch (Exception localException)
     {
-      u.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", localException.getMessage());
+      v.e("MicroMsg.ExtControlProviderSNS", localException.getMessage());
     }
   }
   
-  private static void cj(boolean paramBoolean)
+  private static void cb(boolean paramBoolean)
   {
     if (paramBoolean)
     {
-      dLt = true;
-      dLu.ds(15000L);
+      dNb = true;
+      dNc.dJ(15000L);
       return;
     }
-    dLu.ds(0L);
+    dNc.dJ(0L);
   }
   
   public final int delete(Uri paramUri, String paramString, String[] paramArrayOfString)
@@ -273,51 +271,51 @@ public final class ExtControlProviderSNS
   
   public final Cursor query(Uri paramUri, String[] paramArrayOfString1, String paramString1, String[] paramArrayOfString2, String paramString2)
   {
-    u.i("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "query() " + paramUri);
-    a(paramUri, getContext(), dKS);
+    v.i("MicroMsg.ExtControlProviderSNS", "query() " + paramUri);
+    a(paramUri, getContext(), dMB);
     if (paramUri == null)
     {
-      gK(3);
+      hJ(3);
       return null;
     }
-    if ((ay.kz(dKL)) || (ay.kz(Vw())))
+    if ((be.kf(dMu)) || (be.kf(Xd())))
     {
-      gK(3);
+      hJ(3);
       return null;
     }
-    if (dLt)
+    if (dNb)
     {
-      u.w("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "isBusy, return null");
-      gK(5);
+      v.w("MicroMsg.ExtControlProviderSNS", "isBusy, return null");
+      hJ(5);
       return null;
     }
-    cj(true);
-    if (!Vx())
+    cb(true);
+    if (!Xe())
     {
-      cj(false);
-      gK(1);
-      return cBg;
+      cb(false);
+      hJ(1);
+      return cyb;
     }
-    if (!bx(getContext()))
+    if (!bs(getContext()))
     {
-      u.w("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "invalid appid ! return null");
-      cj(false);
-      gK(2);
+      v.w("MicroMsg.ExtControlProviderSNS", "invalid appid ! return null");
+      cb(false);
+      hJ(2);
       return null;
     }
     if ((paramArrayOfString2 == null) || (paramArrayOfString2.length == 0))
     {
-      u.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "invaild selections");
-      cj(false);
-      gK(3);
+      v.e("MicroMsg.ExtControlProviderSNS", "invaild selections");
+      cb(false);
+      hJ(3);
       return null;
     }
     paramArrayOfString1 = paramArrayOfString2[0];
-    if (ay.kz(paramArrayOfString1))
+    if (be.kf(paramArrayOfString1))
     {
-      u.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "userIdStr should not be null or nil");
-      cj(false);
-      gK(3);
+      v.e("MicroMsg.ExtControlProviderSNS", "userIdStr should not be null or nil");
+      cb(false);
+      hJ(3);
       return null;
     }
     for (;;)
@@ -329,32 +327,32 @@ public final class ExtControlProviderSNS
         if (bool) {
           l = 0L;
         }
-        switch (dKS.match(paramUri))
+        switch (dMB.match(paramUri))
         {
         default: 
           paramUri = null;
           if (paramUri == null) {
             break label322;
           }
-          gK(0);
-          cj(false);
+          hJ(0);
+          cb(false);
           return paramUri;
-          l = Long.valueOf(com.tencent.mm.plugin.ext.a.a.nS(paramArrayOfString1.trim())).longValue();
+          l = Long.valueOf(com.tencent.mm.plugin.ext.a.a.pc(paramArrayOfString1.trim())).longValue();
           break;
         case 17: 
-          paramUri = bd(l);
+          paramUri = bl(l);
         }
       }
       catch (Exception paramUri)
       {
-        u.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", paramUri.getMessage());
-        cj(false);
-        gK(4);
+        v.e("MicroMsg.ExtControlProviderSNS", paramUri.getMessage());
+        cb(false);
+        hJ(4);
         return null;
       }
       continue;
       label322:
-      gK(4);
+      hJ(4);
     }
   }
   

@@ -5,54 +5,54 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.aw.a;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.az.a;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import com.tencent.mm.model.z.a;
 import com.tencent.mm.model.z.d;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.platformtools.s;
 import com.tencent.mm.pluginsdk.ui.a.b;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
-import com.tencent.mm.t.s;
 import com.tencent.mm.ui.base.MaskLayout;
 import com.tencent.mm.ui.base.MaskLayout.a;
+import com.tencent.mm.v.t;
 import java.util.ArrayList;
 import java.util.List;
 
 final class AtSomeoneUI$a
-  extends com.tencent.mm.ui.i
+  extends com.tencent.mm.ui.i<k>
 {
-  private com.tencent.mm.storage.e cZi;
-  private List cvM;
-  String dbI;
-  private String[] kRe;
+  private com.tencent.mm.storage.e cXO;
+  private List<String> crs;
+  String dao;
+  private String[] lrh;
   
-  public AtSomeoneUI$a(Context paramContext, k paramk, com.tencent.mm.storage.e parame, String[] paramArrayOfString, List paramList)
+  public AtSomeoneUI$a(Context paramContext, k paramk, com.tencent.mm.storage.e parame, String[] paramArrayOfString, List<String> paramList)
   {
     super(paramContext, paramk);
-    cZi = parame;
-    kRe = paramArrayOfString;
-    cvM = paramList;
+    cXO = parame;
+    lrh = paramArrayOfString;
+    crs = paramList;
   }
   
-  public final void Gk()
+  public final void GH()
   {
-    q localq = ah.tD().rq();
-    String[] arrayOfString1 = kRe;
-    String str1 = dbI;
-    String str2 = dbI;
+    q localq = ah.tE().rr();
+    String[] arrayOfString1 = lrh;
+    String str1 = dao;
+    String str2 = dao;
     Object localObject;
-    if ((cZi == null) || (str2 == null) || (kRe == null))
+    if ((cXO == null) || (str2 == null) || (lrh == null))
     {
       localObject = null;
-      setCursor(localq.a(arrayOfString1, "@all.chatroom", str1, (List)localObject, cvM));
+      setCursor(localq.a(arrayOfString1, "@all.chatroom", str1, (List)localObject, crs));
       super.notifyDataSetChanged();
       return;
     }
     ArrayList localArrayList = new ArrayList();
-    String[] arrayOfString2 = kRe;
+    String[] arrayOfString2 = lrh;
     int j = arrayOfString2.length;
     int i = 0;
     for (;;)
@@ -62,7 +62,7 @@ final class AtSomeoneUI$a
         break;
       }
       localObject = arrayOfString2[i];
-      String str3 = cZi.dY((String)localObject);
+      String str3 = cXO.ej((String)localObject);
       if ((str3 != null) && (str3.contains(str2))) {
         localArrayList.add(localObject);
       }
@@ -70,10 +70,10 @@ final class AtSomeoneUI$a
     }
   }
   
-  protected final void Gl()
+  protected final void GI()
   {
-    adW();
-    Gk();
+    closeCursor();
+    GH();
   }
   
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
@@ -83,61 +83,61 @@ final class AtSomeoneUI$a
     Object localObject;
     if (paramView == null)
     {
-      localView = View.inflate(context, 2131361938, null);
+      localView = View.inflate(context, 2130903104, null);
       paramViewGroup = new AtSomeoneUI.b((byte)0);
-      dbN = ((MaskLayout)localView.findViewById(2131165651));
-      czU = ((TextView)localView.findViewById(2131165652));
+      dat = ((MaskLayout)localView.findViewById(2131755340));
+      cwQ = ((TextView)localView.findViewById(2131755341));
       localView.setTag(paramViewGroup);
       localk = (k)getItem(paramInt);
-      paramView = czU;
+      paramView = cwQ;
       localObject = context;
-      if (com.tencent.mm.model.i.eI(field_username)) {
+      if (com.tencent.mm.model.i.eU(field_username)) {
         break label244;
       }
-      paramInt = 2131231256;
+      paramInt = 2131690076;
       label94:
-      paramView.setTextColor(a.x((Context)localObject, paramInt));
-      a.b.b((ImageView)dbN.getContentView(), field_username);
+      paramView.setTextColor(a.B((Context)localObject, paramInt));
+      a.b.a((ImageView)dat.view, field_username);
       if (field_verifyFlag == 0) {
-        break label272;
+        break label270;
       }
-      if (z.a.bAu == null) {
-        break label261;
+      if (z.a.btx == null) {
+        break label260;
       }
-      paramView = z.a.bAu.cA(field_verifyFlag);
+      paramView = z.a.btx.df(field_verifyFlag);
       if (paramView == null) {
         break label250;
       }
-      paramView = s.he(paramView);
-      dbN.d(paramView, MaskLayout.a.kIA);
+      paramView = t.hv(paramView);
+      dat.c(paramView, MaskLayout.a.lhQ);
       label170:
-      if (t.kz(field_conRemark)) {
-        break label283;
+      if (s.kf(field_conRemark)) {
+        break label280;
       }
     }
     label244:
     label250:
-    label261:
-    label272:
-    label283:
-    for (paramView = field_conRemark;; paramView = AtSomeoneUI.a(cZi, field_username))
+    label260:
+    label270:
+    label280:
+    for (paramView = field_conRemark;; paramView = AtSomeoneUI.a(cXO, field_username))
     {
       localObject = paramView;
-      if (t.kz(paramView)) {
-        localObject = localk.qy();
+      if (s.kf(paramView)) {
+        localObject = localk.pb();
       }
-      czU.setText(com.tencent.mm.pluginsdk.ui.d.e.a(context, (CharSequence)localObject, czU.getTextSize()));
+      cwQ.setText(com.tencent.mm.pluginsdk.ui.d.e.a(context, (CharSequence)localObject, cwQ.getTextSize()));
       return localView;
       paramViewGroup = (AtSomeoneUI.b)paramView.getTag();
       localView = paramView;
       break;
-      paramInt = 2131231251;
+      paramInt = 2131690077;
       break label94;
-      dbN.setMaskDrawable(null);
+      dat.biG();
       break label170;
-      dbN.setMaskDrawable(null);
+      dat.biG();
       break label170;
-      dbN.setMaskDrawable(null);
+      dat.biG();
       break label170;
     }
   }

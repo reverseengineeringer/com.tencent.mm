@@ -1,16 +1,16 @@
 package com.tencent.mm.ui.conversation;
 
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah.a;
 
 final class c$1
-  implements af.a
+  implements ah.a
 {
   c$1(c paramc) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    if (c.e(loD)) {
-      c.f(loD);
+    if (c.e(lOT)) {
+      c.f(lOT);
     }
     return false;
   }

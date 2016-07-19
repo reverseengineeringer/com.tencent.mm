@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.base;
 
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import java.util.List;
 
 final class g$4
@@ -10,17 +10,17 @@ final class g$4
   
   public final void a(l paraml)
   {
-    if (!ay.kz(cmn)) {
-      paraml.setHeaderTitle(cmn);
+    if (!be.kf(cht)) {
+      paraml.setHeaderTitle(cht);
     }
     int i = 0;
-    while (i < gYI.size())
+    while (i < hlT.size())
     {
-      paraml.b(((Integer)gYb.get(i)).intValue(), (CharSequence)gYI.get(i));
+      paraml.b(((Integer)hln.get(i)).intValue(), (CharSequence)hlT.get(i));
       i += 1;
     }
-    if (!ay.kz(kCz)) {
-      paraml.b(-1, kCz);
+    if (!be.kf(lbE)) {
+      paraml.b(-1, lbE);
     }
   }
 }

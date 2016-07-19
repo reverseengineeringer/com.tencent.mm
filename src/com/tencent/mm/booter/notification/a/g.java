@@ -4,32 +4,32 @@ import android.content.Context;
 
 public final class g
 {
-  public int boA;
-  public int boB;
-  public int boC;
-  public boolean boD;
-  private int boE = -1;
-  private int boF = -1;
-  public boolean boG;
-  public boolean boH;
-  public b bot;
-  public c bou;
-  public d bov;
-  public h bow;
-  public f box;
-  public a boy;
-  public int boz;
+  public int bcA;
+  public int bcB;
+  public boolean bcC;
+  private int bcD = -1;
+  private int bcE = -1;
+  public boolean bcF;
+  public boolean bcG;
+  public b bcs;
+  public c bct;
+  public d bcu;
+  public h bcv;
+  public f bcw;
+  public a bcx;
+  public int bcy;
+  public int bcz;
   public Context mContext;
   
   public g(Context paramContext)
   {
     mContext = paramContext;
-    bot = new b();
-    bou = new c();
-    bov = new d();
-    bow = new h();
-    boy = new a();
-    box = f.a.nG();
+    bcs = new b();
+    bct = new c();
+    bcu = new d();
+    bcv = new h();
+    bcx = new a();
+    bcw = f.a.lU();
   }
   
   public static String a(long[] paramArrayOfLong)

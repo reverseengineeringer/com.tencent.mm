@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->kX(I)V
+    value = Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->me(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gzd:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;
+.field final synthetic gFG:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 429
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$8;->gzd:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;
+    .line 439
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$8;->gFG:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,8 +40,8 @@
     .locals 2
 
     .prologue
-    .line 432
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$8;->gzd:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;
+    .line 442
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$8;->gFG:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->c(Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;)Lcom/tencent/mm/plugin/sight/decode/ui/a;
 
@@ -49,8 +49,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 433
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$8;->gzd:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;
+    .line 443
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView$8;->gFG:Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;->c(Lcom/tencent/mm/plugin/sight/decode/ui/VideoPlayView;)Lcom/tencent/mm/plugin/sight/decode/ui/a;
 
@@ -58,9 +58,9 @@
 
     const/4 v1, 0x0
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/sight/decode/ui/a;->setIsPlay(Z)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/sight/decode/ui/a;->eu(Z)V
 
-    .line 435
+    .line 445
     :cond_0
     return-void
 .end method

@@ -11,7 +11,7 @@ final class b$k$1
   
   public final void run()
   {
-    gxY.setBackgroundDrawable(new BitmapDrawable(gxZ));
+    gEv.setBackgroundDrawable(new BitmapDrawable(gEw));
   }
 }
 

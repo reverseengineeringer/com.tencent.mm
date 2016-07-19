@@ -1,6 +1,9 @@
 .class final Lcom/tencent/mm/ui/chatting/m$2;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
@@ -15,50 +18,101 @@
 
 
 # instance fields
-.field final synthetic kRr:Lcom/tencent/mm/ui/chatting/m;
+.field final synthetic lra:Lcom/tencent/mm/ui/chatting/m;
+
+.field final synthetic lrc:Lcom/tencent/mm/p/a$a;
+
+.field final synthetic lrd:Ljava/lang/String;
+
+.field final synthetic lre:I
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/chatting/m;Landroid/os/Looper;)V
+.method constructor <init>(Lcom/tencent/mm/ui/chatting/m;Lcom/tencent/mm/p/a$a;Ljava/lang/String;I)V
     .locals 0
 
     .prologue
-    .line 421
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/m$2;->kRr:Lcom/tencent/mm/ui/chatting/m;
+    .line 166
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/m$2;->lra:Lcom/tencent/mm/ui/chatting/m;
 
-    invoke-direct {p0, p2}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/m$2;->lrc:Lcom/tencent/mm/p/a$a;
+
+    iput-object p3, p0, Lcom/tencent/mm/ui/chatting/m$2;->lrd:Ljava/lang/String;
+
+    iput p4, p0, Lcom/tencent/mm/ui/chatting/m$2;->lre:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
-    .locals 2
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 7
 
     .prologue
-    .line 425
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/platformtools/aa;->handleMessage(Landroid/os/Message;)V
+    .line 170
+    new-instance v0, Lcom/tencent/mm/pluginsdk/model/app/ah;
 
-    .line 427
-    :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/m$2;->kRr:Lcom/tencent/mm/ui/chatting/m;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/m$2;->lrc:Lcom/tencent/mm/p/a$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/m;->kRk:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    iget-object v1, v1, Lcom/tencent/mm/p/a$a;->appId:Ljava/lang/String;
 
-    const/4 v1, 0x1
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->setScreenEnable(Z)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const-string/jumbo v3, "1"
 
-    .line 430
-    :goto_0
+    invoke-direct {v0, v1, v2, v3}, Lcom/tencent/mm/pluginsdk/model/app/ah;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 171
+    new-instance v1, Lcom/tencent/mm/pluginsdk/model/app/w;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v2, v0}, Lcom/tencent/mm/pluginsdk/model/app/w;-><init>(ILcom/tencent/mm/pluginsdk/model/app/v;)V
+
+    .line 172
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/m$2;->lra:Lcom/tencent/mm/ui/chatting/m;
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/chatting/m;->a(Lcom/tencent/mm/ui/chatting/m;Lcom/tencent/mm/t/j;)V
+
+    .line 173
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iVg:Lcom/tencent/mm/pluginsdk/i$p;
+
+    .line 174
+    if-eqz v0, :cond_0
+
+    .line 175
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/m$2;->lra:Lcom/tencent/mm/ui/chatting/m;
+
+    invoke-static {v1}, Lcom/tencent/mm/ui/chatting/m;->a(Lcom/tencent/mm/ui/chatting/m;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->y()Landroid/support/v4/app/FragmentActivity;
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/m$2;->lrd:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/m$2;->lrc:Lcom/tencent/mm/p/a$a;
+
+    iget-object v2, v2, Lcom/tencent/mm/p/a$a;->appId:Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/m$2;->lrc:Lcom/tencent/mm/p/a$a;
+
+    iget v3, v3, Lcom/tencent/mm/p/a$a;->type:I
+
+    iget v4, p0, Lcom/tencent/mm/ui/chatting/m$2;->lre:I
+
+    iget-object v5, p0, Lcom/tencent/mm/ui/chatting/m$2;->lrc:Lcom/tencent/mm/p/a$a;
+
+    iget-object v5, v5, Lcom/tencent/mm/p/a$a;->mediaTagName:Ljava/lang/String;
+
+    const/4 v6, 0x1
+
+    invoke-interface/range {v0 .. v6}, Lcom/tencent/mm/pluginsdk/i$p;->a(Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;I)V
+
+    .line 177
+    :cond_0
     return-void
-
-    .line 429
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
 .end method

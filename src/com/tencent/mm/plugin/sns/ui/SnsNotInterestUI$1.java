@@ -10,7 +10,7 @@ final class SnsNotInterestUI$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    hgH.finish();
+    hvx.finish();
     return true;
   }
 }

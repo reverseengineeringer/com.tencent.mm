@@ -9,8 +9,8 @@ final class g$7
   
   public final void d(MenuItem paramMenuItem, int paramInt)
   {
-    if (kCB != null) {
-      kCB.eu(paramMenuItem.getItemId());
+    if (lbG != null) {
+      lbG.fg(paramMenuItem.getItemId());
     }
   }
 }

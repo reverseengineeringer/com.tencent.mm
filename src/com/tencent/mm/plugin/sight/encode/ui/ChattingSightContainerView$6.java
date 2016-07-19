@@ -6,7 +6,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
 import com.tencent.mm.plugin.sight.encode.a.h;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.g;
 
 final class ChattingSightContainerView$6
@@ -16,59 +16,59 @@ final class ChattingSightContainerView$6
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    if ((ChattingSightContainerView.h(gBF)) || (ChattingSightContainerView.g(gBF).axh())) {
-      if (!ChattingSightContainerView.h(gBF)) {}
+    if ((ChattingSightContainerView.h(gIh)) || (ChattingSightContainerView.g(gIh).azJ())) {
+      if (!ChattingSightContainerView.h(gIh)) {}
     }
     do
     {
       return true;
-      if (gBF.eED - paramMotionEvent.getY() > 150.0F)
+      if (gIh.eKR - paramMotionEvent.getY() > 150.0F)
       {
-        gBF.awA();
+        gIh.ayZ();
         return true;
       }
-      u.i("!56@/B4Tb64lLpKwUcOR+EdWcqTX9DHwPoekDqTih72bviWMKwaxVrupIQ==", "full stop");
-      gBF.li();
+      v.i("MicroMsg.ChattingSightContainerView", "full stop");
+      gIh.jJ();
       return true;
-      ChattingSightContainerView.g(gBF).eP(false);
+      ChattingSightContainerView.g(gIh).eI(false);
       switch (paramMotionEvent.getAction())
       {
       default: 
         return true;
       case 0: 
-        gBF.eED = paramMotionEvent.getY();
+        gIh.eKR = paramMotionEvent.getY();
       }
-    } while (!ChattingSightContainerView.g(gBF).axf());
-    gBF.adB();
+    } while (!ChattingSightContainerView.g(gIh).azH());
+    gIh.agf();
     return true;
-    if (gBF.eED - paramMotionEvent.getY() > 150.0F)
+    if (gIh.eKR - paramMotionEvent.getY() > 150.0F)
     {
-      ChattingSightContainerView.f(gBF).awx();
-      ChattingSightContainerView.g(gBF).eP(true);
+      ChattingSightContainerView.f(gIh).ayW();
+      ChattingSightContainerView.g(gIh).eI(true);
       return true;
     }
-    ChattingSightContainerView.f(gBF).aww();
-    ChattingSightContainerView.g(gBF).eP(false);
+    ChattingSightContainerView.f(gIh).ayV();
+    ChattingSightContainerView.g(gIh).eI(false);
     return true;
-    u.i("!56@/B4Tb64lLpKwUcOR+EdWcqTX9DHwPoekDqTih72bviWMKwaxVrupIQ==", "action up, y delta %f, isTooShort %B", new Object[] { Float.valueOf(gBF.eED - paramMotionEvent.getY()), Boolean.valueOf(ChattingSightContainerView.g(gBF).axd()) });
-    if ((!ChattingSightContainerView.g(gBF).axg()) && (ChattingSightContainerView.g(gBF).lu()) && (gBF.eED - paramMotionEvent.getY() <= 150.0F))
+    v.i("MicroMsg.ChattingSightContainerView", "action up, y delta %f, isTooShort %B", new Object[] { Float.valueOf(gIh.eKR - paramMotionEvent.getY()), Boolean.valueOf(ChattingSightContainerView.g(gIh).azF()) });
+    if ((!ChattingSightContainerView.g(gIh).azI()) && (ChattingSightContainerView.g(gIh).kf()) && (gIh.eKR - paramMotionEvent.getY() <= 150.0F))
     {
-      if (!ChattingSightContainerView.g(gBF).axd()) {
+      if (!ChattingSightContainerView.g(gIh).azF()) {
         break label360;
       }
-      g.ba(gBF.getContext(), gBF.getContext().getResources().getString(2131429026));
+      g.aZ(gIh.getContext(), gIh.getContext().getResources().getString(2131235367));
     }
     for (;;)
     {
-      gBF.awA();
+      gIh.ayZ();
       return true;
       label360:
-      if (!ChattingSightContainerView.g(gBF).axe()) {
+      if (!ChattingSightContainerView.g(gIh).azG()) {
         break;
       }
-      g.ba(gBF.getContext(), gBF.getContext().getResources().getString(2131429027));
+      g.aZ(gIh.getContext(), gIh.getContext().getResources().getString(2131235360));
     }
-    gBF.li();
+    gIh.jJ();
     return true;
   }
 }

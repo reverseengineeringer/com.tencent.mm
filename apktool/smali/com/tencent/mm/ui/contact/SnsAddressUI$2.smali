@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lms:Lcom/tencent/mm/ui/contact/SnsAddressUI;
+.field final synthetic lMI:Lcom/tencent/mm/ui/contact/SnsAddressUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 89
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$2;->lms:Lcom/tencent/mm/ui/contact/SnsAddressUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$2;->lMI:Lcom/tencent/mm/ui/contact/SnsAddressUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,12 +43,12 @@
     const/4 v2, 0x1
 
     .line 92
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$2;->lms:Lcom/tencent/mm/ui/contact/SnsAddressUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$2;->lMI:Lcom/tencent/mm/ui/contact/SnsAddressUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/SnsAddressUI;->finish()V
 
     .line 93
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$2;->lms:Lcom/tencent/mm/ui/contact/SnsAddressUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$2;->lMI:Lcom/tencent/mm/ui/contact/SnsAddressUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/SnsAddressUI;->getIntent()Landroid/content/Intent;
 
@@ -63,7 +63,7 @@
     if-nez v0, :cond_0
 
     .line 94
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$2;->lms:Lcom/tencent/mm/ui/contact/SnsAddressUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$2;->lMI:Lcom/tencent/mm/ui/contact/SnsAddressUI;
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/contact/SnsAddressUI;->moveTaskToBack(Z)Z
 

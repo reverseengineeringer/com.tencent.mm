@@ -1,7 +1,7 @@
 package com.tencent.mm.network;
 
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -9,7 +9,7 @@ import javax.net.ssl.HttpsURLConnection;
 
 public final class t
 {
-  public HttpsURLConnection cjx = null;
+  public HttpsURLConnection ceO = null;
   
   public t(String paramString)
   {
@@ -20,25 +20,25 @@ public final class t
   {
     try
     {
-      cjx = ((HttpsURLConnection)paramURL.openConnection());
+      ceO = ((HttpsURLConnection)paramURL.openConnection());
       return;
     }
     catch (MalformedURLException paramURL)
     {
-      u.e("!44@/B4Tb64lLpItFYLAoHJ8bg0Xl+6QlhW5VHbm1Z2uYrw=", "MalformedURLException : %s", new Object[] { paramURL.getMessage() });
-      u.e("!44@/B4Tb64lLpItFYLAoHJ8bg0Xl+6QlhW5VHbm1Z2uYrw=", "exception:%s", new Object[] { ay.b(paramURL) });
+      v.e("MicroMsg.MMHttpsUrlConnection", "MalformedURLException : %s", new Object[] { paramURL.getMessage() });
+      v.e("MicroMsg.MMHttpsUrlConnection", "exception:%s", new Object[] { be.f(paramURL) });
       return;
     }
     catch (IOException paramURL)
     {
-      u.e("!44@/B4Tb64lLpItFYLAoHJ8bg0Xl+6QlhW5VHbm1Z2uYrw=", "IOException : %s", new Object[] { paramURL.getMessage() });
-      u.e("!44@/B4Tb64lLpItFYLAoHJ8bg0Xl+6QlhW5VHbm1Z2uYrw=", "exception:%s", new Object[] { ay.b(paramURL) });
+      v.e("MicroMsg.MMHttpsUrlConnection", "IOException : %s", new Object[] { paramURL.getMessage() });
+      v.e("MicroMsg.MMHttpsUrlConnection", "exception:%s", new Object[] { be.f(paramURL) });
       return;
     }
     catch (Exception paramURL)
     {
-      u.e("!44@/B4Tb64lLpItFYLAoHJ8bg0Xl+6QlhW5VHbm1Z2uYrw=", "Exception :" + paramURL.getMessage());
-      u.e("!44@/B4Tb64lLpItFYLAoHJ8bg0Xl+6QlhW5VHbm1Z2uYrw=", "exception:%s", new Object[] { ay.b(paramURL) });
+      v.e("MicroMsg.MMHttpsUrlConnection", "Exception :" + paramURL.getMessage());
+      v.e("MicroMsg.MMHttpsUrlConnection", "exception:%s", new Object[] { be.f(paramURL) });
     }
   }
 }

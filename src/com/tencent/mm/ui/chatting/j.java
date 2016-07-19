@@ -3,34 +3,30 @@ package com.tencent.mm.ui.chatting;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 final class j
-  extends aa.a
+  extends ab.a
 {
-  protected TextView dVa;
-  protected TextView dVy;
-  protected ProgressBar fGG;
-  protected TextView kQE;
-  protected ImageView kQK;
+  public ImageView lqx;
+  public TextView lqy;
+  public TextView lqz;
   
   public j(int paramInt)
   {
     super(paramInt);
   }
   
-  public final j aA(View paramView)
+  public final j aD(View paramView)
   {
-    super.aC(paramView);
-    dVy = ((TextView)paramView.findViewById(2131165262));
-    fGG = ((ProgressBar)paramView.findViewById(2131165399));
-    kQK = ((ImageView)paramView.findViewById(2131165314));
-    dVa = ((TextView)paramView.findViewById(2131165410));
-    kQE = ((TextView)paramView.findViewById(2131165432));
-    gjr = ((TextView)paramView.findViewById(2131165268));
-    edK = ((CheckBox)paramView.findViewById(2131165186));
-    dMC = paramView.findViewById(2131165187);
+    super.aG(paramView);
+    dXd = ((TextView)hDZ.findViewById(2131755018));
+    ehl = ((CheckBox)hDZ.findViewById(2131755013));
+    dOk = hDZ.findViewById(2131755017);
+    gtM = ((TextView)hDZ.findViewById(2131755288));
+    lqx = ((ImageView)hDZ.findViewById(2131756048));
+    lqy = ((TextView)hDZ.findViewById(2131756049));
+    lqz = ((TextView)hDZ.findViewById(2131756050));
     return this;
   }
 }

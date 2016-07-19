@@ -15,10 +15,10 @@
 
 
 # virtual methods
-.method public abstract D(F)V
+.method public abstract B(F)V
 .end method
 
-.method public abstract baF()Z
+.method public abstract bfT()Z
 .end method
 
 .method public abstract j(ZI)V

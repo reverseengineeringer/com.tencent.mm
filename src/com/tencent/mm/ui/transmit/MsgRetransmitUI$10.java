@@ -1,19 +1,19 @@
 package com.tencent.mm.ui.transmit;
 
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
-import com.tencent.mm.pluginsdk.model.h;
+import android.content.DialogInterface.OnClickListener;
+import com.tencent.mm.ui.base.h;
 
 final class MsgRetransmitUI$10
-  implements DialogInterface.OnCancelListener
+  implements DialogInterface.OnClickListener
 {
-  MsgRetransmitUI$10(MsgRetransmitUI paramMsgRetransmitUI, h paramh) {}
+  MsgRetransmitUI$10(MsgRetransmitUI paramMsgRetransmitUI) {}
   
-  public final void onCancel(DialogInterface paramDialogInterface)
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    laH.aPo();
-    lAT.lAS = true;
-    lAT.finish();
+    if (MsgRetransmitUI.b(mbK) != null) {
+      MsgRetransmitUI.b(mbK).cancel();
+    }
   }
 }
 

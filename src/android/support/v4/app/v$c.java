@@ -6,6 +6,11 @@ import android.app.NotificationManager;
 class v$c
   implements v.b
 {
+  public int Z()
+  {
+    return 1;
+  }
+  
   public void a(NotificationManager paramNotificationManager, String paramString, int paramInt)
   {
     paramNotificationManager.cancel(paramInt);
@@ -14,11 +19,6 @@ class v$c
   public void a(NotificationManager paramNotificationManager, String paramString, int paramInt, Notification paramNotification)
   {
     paramNotificationManager.notify(paramInt, paramNotification);
-  }
-  
-  public int ab()
-  {
-    return 1;
   }
 }
 

@@ -8,14 +8,14 @@ final class ActionMenuPresenter$a
   public ActionMenuPresenter$a(ActionMenuPresenter paramActionMenuPresenter, p paramp)
   {
     super(paramp);
-    ll = kS;
+    lC = lj;
   }
   
   public final void onDismiss(DialogInterface paramDialogInterface)
   {
     super.onDismiss(paramDialogInterface);
-    kU.kQ = null;
-    kU.kT = 0;
+    ll.lh = null;
+    ll.lk = 0;
   }
 }
 

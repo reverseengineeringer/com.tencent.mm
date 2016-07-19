@@ -15,31 +15,31 @@
 
 
 # instance fields
-.field private cGx:I
+.field private cDB:I
 
-.field private cGy:I
+.field private cDC:I
 
-.field private gqq:F
+.field private gAI:F
 
-.field private gqr:F
+.field private gAJ:F
 
-.field private gqs:F
+.field private gAK:F
 
-.field private gqt:F
+.field private gAL:F
 
-.field private gqu:F
+.field private gAM:F
 
-.field private gqv:F
+.field private gAN:F
 
-.field private gqw:F
+.field private gAO:F
 
-.field private gqx:F
+.field private gAP:F
 
-.field private gqy:F
+.field private gAQ:F
 
-.field private gqz:F
+.field private gAR:F
 
-.field final synthetic kSc:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;
+.field final synthetic lse:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;
 
 
 # direct methods
@@ -48,51 +48,51 @@
 
     .prologue
     .line 264
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->kSc:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->lse:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;
 
     invoke-direct {p0, p1}, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;-><init>(Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;)V
 
     .line 257
     const v0, 0x3c23d70a    # 0.01f
 
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqu:F
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAM:F
 
     const v0, 0x3ca3d70a    # 0.02f
 
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqv:F
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAN:F
 
     .line 265
-    iput p2, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->cGx:I
+    iput p2, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->cDB:I
 
     .line 266
-    iput p3, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->cGy:I
+    iput p3, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->cDC:I
 
     .line 268
     const v0, 0x3dcccccd    # 0.1f
 
     const v1, 0x3f666666    # 0.9f
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;->g(FF)F
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;->f(FF)F
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqq:F
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAI:F
 
     .line 269
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqq:F
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAI:F
 
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqr:F
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAJ:F
 
     .line 270
     const v0, -0x41666666    # -0.3f
 
     const v1, -0x42333333    # -0.1f
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;->g(FF)F
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;->f(FF)F
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqt:F
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAL:F
 
     .line 271
     invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->restart()V
@@ -106,7 +106,7 @@
 
     .prologue
     .line 292
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqt:F
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAL:F
 
     const/4 v1, 0x0
 
@@ -115,31 +115,31 @@
     if-lez v0, :cond_0
 
     .line 293
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqv:F
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAN:F
 
-    iget v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqu:F
+    iget v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAM:F
 
     add-float/2addr v0, v1
 
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqv:F
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAN:F
 
     .line 295
     :cond_0
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqt:F
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAL:F
 
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqs:F
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAK:F
 
     .line 296
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqt:F
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAL:F
 
-    iget v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqv:F
+    iget v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAN:F
 
     add-float/2addr v0, v1
 
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqt:F
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAL:F
 
     .line 298
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqs:F
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAK:F
 
     const v1, 0x3f8ccccd    # 1.1f
 
@@ -167,45 +167,45 @@
 
     .line 303
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqq:F
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAI:F
 
-    iget v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->cGx:I
-
-    int-to-float v1, v1
-
-    mul-float/2addr v0, v1
-
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqw:F
-
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqr:F
-
-    iget v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->cGx:I
+    iget v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->cDB:I
 
     int-to-float v1, v1
 
     mul-float/2addr v0, v1
 
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqx:F
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAO:F
 
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqs:F
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAJ:F
 
-    iget v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->cGy:I
-
-    int-to-float v1, v1
-
-    mul-float/2addr v0, v1
-
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqy:F
-
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqt:F
-
-    iget v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->cGy:I
+    iget v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->cDB:I
 
     int-to-float v1, v1
 
     mul-float/2addr v0, v1
 
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqz:F
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAP:F
+
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAK:F
+
+    iget v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->cDC:I
+
+    int-to-float v1, v1
+
+    mul-float/2addr v0, v1
+
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAQ:F
+
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAL:F
+
+    iget v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->cDC:I
+
+    int-to-float v1, v1
+
+    mul-float/2addr v0, v1
+
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAR:F
 
     .line 304
     return-void
@@ -224,26 +224,26 @@
 
     .prologue
     .line 276
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqw:F
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAO:F
 
     .line 277
-    iget v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqy:F
+    iget v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAQ:F
 
     .line 278
-    iget v2, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqw:F
+    iget v2, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAO:F
 
-    iget v3, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqx:F
+    iget v3, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAP:F
 
     cmpl-float v2, v2, v3
 
     if-eqz v2, :cond_0
 
     .line 279
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqw:F
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAO:F
 
-    iget v2, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqx:F
+    iget v2, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAP:F
 
-    iget v3, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqw:F
+    iget v3, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAO:F
 
     sub-float/2addr v2, v3
 
@@ -253,20 +253,20 @@
 
     .line 281
     :cond_0
-    iget v2, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqy:F
+    iget v2, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAQ:F
 
-    iget v3, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqz:F
+    iget v3, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAR:F
 
     cmpl-float v2, v2, v3
 
     if-eqz v2, :cond_1
 
     .line 282
-    iget v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqy:F
+    iget v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAQ:F
 
-    iget v2, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqz:F
+    iget v2, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAR:F
 
-    iget v3, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gqy:F
+    iget v3, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;->gAQ:F
 
     sub-float/2addr v2, v3
 

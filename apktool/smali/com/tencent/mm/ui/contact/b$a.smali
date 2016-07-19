@@ -13,15 +13,24 @@
     name = "a"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/tencent/mm/ui/contact/b$a;",
+        ">;"
+    }
+.end annotation
+
 
 # static fields
-.field public static final enum liA:Lcom/tencent/mm/ui/contact/b$a;
+.field public static final enum lIJ:Lcom/tencent/mm/ui/contact/b$a;
 
-.field private static final synthetic liB:[Lcom/tencent/mm/ui/contact/b$a;
+.field public static final enum lIK:Lcom/tencent/mm/ui/contact/b$a;
 
-.field public static final enum liy:Lcom/tencent/mm/ui/contact/b$a;
+.field public static final enum lIL:Lcom/tencent/mm/ui/contact/b$a;
 
-.field public static final enum liz:Lcom/tencent/mm/ui/contact/b$a;
+.field private static final synthetic lIM:[Lcom/tencent/mm/ui/contact/b$a;
 
 
 # direct methods
@@ -42,7 +51,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/ui/contact/b$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/ui/contact/b$a;->liy:Lcom/tencent/mm/ui/contact/b$a;
+    sput-object v0, Lcom/tencent/mm/ui/contact/b$a;->lIJ:Lcom/tencent/mm/ui/contact/b$a;
 
     new-instance v0, Lcom/tencent/mm/ui/contact/b$a;
 
@@ -50,7 +59,7 @@
 
     invoke-direct {v0, v1, v3}, Lcom/tencent/mm/ui/contact/b$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/ui/contact/b$a;->liz:Lcom/tencent/mm/ui/contact/b$a;
+    sput-object v0, Lcom/tencent/mm/ui/contact/b$a;->lIK:Lcom/tencent/mm/ui/contact/b$a;
 
     new-instance v0, Lcom/tencent/mm/ui/contact/b$a;
 
@@ -58,32 +67,37 @@
 
     invoke-direct {v0, v1, v4}, Lcom/tencent/mm/ui/contact/b$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/ui/contact/b$a;->liA:Lcom/tencent/mm/ui/contact/b$a;
+    sput-object v0, Lcom/tencent/mm/ui/contact/b$a;->lIL:Lcom/tencent/mm/ui/contact/b$a;
 
     .line 30
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/tencent/mm/ui/contact/b$a;
 
-    sget-object v1, Lcom/tencent/mm/ui/contact/b$a;->liy:Lcom/tencent/mm/ui/contact/b$a;
+    sget-object v1, Lcom/tencent/mm/ui/contact/b$a;->lIJ:Lcom/tencent/mm/ui/contact/b$a;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/tencent/mm/ui/contact/b$a;->liz:Lcom/tencent/mm/ui/contact/b$a;
+    sget-object v1, Lcom/tencent/mm/ui/contact/b$a;->lIK:Lcom/tencent/mm/ui/contact/b$a;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/tencent/mm/ui/contact/b$a;->liA:Lcom/tencent/mm/ui/contact/b$a;
+    sget-object v1, Lcom/tencent/mm/ui/contact/b$a;->lIL:Lcom/tencent/mm/ui/contact/b$a;
 
     aput-object v1, v0, v4
 
-    sput-object v0, Lcom/tencent/mm/ui/contact/b$a;->liB:[Lcom/tencent/mm/ui/contact/b$a;
+    sput-object v0, Lcom/tencent/mm/ui/contact/b$a;->lIM:[Lcom/tencent/mm/ui/contact/b$a;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .prologue
     .line 30
@@ -113,7 +127,7 @@
 
     .prologue
     .line 30
-    sget-object v0, Lcom/tencent/mm/ui/contact/b$a;->liB:[Lcom/tencent/mm/ui/contact/b$a;
+    sget-object v0, Lcom/tencent/mm/ui/contact/b$a;->lIM:[Lcom/tencent/mm/ui/contact/b$a;
 
     invoke-virtual {v0}, [Lcom/tencent/mm/ui/contact/b$a;->clone()Ljava/lang/Object;
 

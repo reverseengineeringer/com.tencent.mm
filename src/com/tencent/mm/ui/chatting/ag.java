@@ -5,77 +5,78 @@ import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import com.tencent.mm.ar.c;
-import com.tencent.mm.d.a.fu;
-import com.tencent.mm.d.b.bg;
+import com.tencent.mm.av.c;
+import com.tencent.mm.e.a.gb;
+import com.tencent.mm.e.b.bj;
 import com.tencent.mm.model.ar;
-import com.tencent.mm.n.a.a;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.p.a.a;
+import com.tencent.mm.platformtools.s;
 import com.tencent.mm.pluginsdk.model.app.g;
 import com.tencent.mm.pluginsdk.model.app.l;
 import com.tencent.mm.sdk.c.a;
+import com.tencent.mm.storage.ai;
 import com.tencent.mm.ui.j;
 import com.tencent.mm.ui.o;
 import com.tencent.mm.ui.transmit.MsgRetransmitUI;
 
 final class ag
-  extends aa.c
+  extends ab.b
 {
-  private ChattingUI.a kTe;
+  private ChattingUI.a ltl;
   
   public ag()
   {
-    super(62);
+    super(61);
   }
   
   public final View a(LayoutInflater paramLayoutInflater, View paramView)
   {
     Object localObject;
-    if ((paramView != null) && (paramView.getTag() != null) && ((paramView.getTag() instanceof e)))
+    if ((paramView != null) && (paramView.getTag() != null) && ((paramView.getTag() instanceof f)))
     {
       localObject = paramView;
-      if (getTagtype == eLV) {}
+      if (getTagtype == cTv) {}
     }
     else
     {
-      localObject = new ax(paramLayoutInflater, 2131361876);
-      ((View)localObject).setTag(new e(eLV).aw((View)localObject));
+      localObject = new ay(paramLayoutInflater, 2130903290);
+      ((View)localObject).setTag(new f(cTv).aA((View)localObject));
     }
     return (View)localObject;
   }
   
-  public final void a(aa.a parama, int paramInt, ChattingUI.a parama1, com.tencent.mm.storage.ag paramag, String paramString)
+  public final void a(ab.a parama, int paramInt, ChattingUI.a parama1, ai paramai, String paramString)
   {
-    kTe = parama1;
-    e locale = (e)parama;
+    ltl = parama1;
+    f localf = (f)parama;
     paramString = field_content;
     if (paramString != null) {}
-    for (paramString = a.a.B(paramString, field_reserved);; paramString = null)
+    for (paramString = a.a.y(paramString, field_reserved);; paramString = null)
     {
-      locale.a(paramString, field_imgPath, iTu);
-      paramag = new dg(paramag, kAy, paramInt, null, 0, (byte)0);
-      kTa.setTag(paramag);
-      kTa.setOnClickListener(kSE.kVs);
-      if (iTu) {
-        kTa.setOnLongClickListener(kSE.kVu);
+      localf.a(paramString, field_imgPath, jqM);
+      paramai = new dh(paramai, kZE, paramInt, null, 0, (byte)0);
+      lth.setTag(paramai);
+      lth.setOnClickListener(lsL.lvy);
+      if (jqM) {
+        lth.setOnLongClickListener(lsL.lvA);
       }
       return;
     }
   }
   
-  public final boolean a(ContextMenu paramContextMenu, View paramView, com.tencent.mm.storage.ag paramag)
+  public final boolean a(ContextMenu paramContextMenu, View paramView, ai paramai)
   {
     int i = getTagposition;
     paramView = field_content;
     if (paramView == null) {
       return true;
     }
-    paramView = a.a.dz(kTe.ba(paramView, field_isSend));
+    paramView = a.a.dI(ltl.bm(paramView, field_isSend));
     if (paramView == null) {
       return true;
     }
-    if (g.i(g.ai(appId, false))) {
-      paramContextMenu.add(i, 111, 0, kTe.getString(2131427822));
+    if (g.i(g.ar(appId, false))) {
+      paramContextMenu.add(i, 111, 0, ltl.getString(2131234525));
     }
     switch (type)
     {
@@ -83,15 +84,15 @@ final class ag
     do
     {
       return true;
-    } while ((byv != 5) && (byv != 6) && (byv != 2));
-    if (byv != 2) {
+    } while ((brn != 5) && (brn != 6) && (brn != 2));
+    if (brn != 2) {
       paramContextMenu.clear();
     }
-    paramContextMenu.add(i, 100, 0, kTe.getString(2131427849));
+    paramContextMenu.add(i, 100, 0, ltl.getString(2131231700));
     return false;
   }
   
-  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, com.tencent.mm.storage.ag paramag)
+  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ai paramai)
   {
     switch (paramMenuItem.getItemId())
     {
@@ -104,17 +105,17 @@ final class ag
         parama = field_content;
         paramMenuItem = null;
         if (parama != null) {
-          paramMenuItem = a.a.dz(parama);
+          paramMenuItem = a.a.dI(parama);
         }
         if (paramMenuItem != null) {
-          l.zR(aoq);
+          l.BN(bpZ);
         }
-        ar.E(field_msgId);
+        ar.H(field_msgId);
         return false;
-        Object localObject = parama.ba(field_content, field_isSend);
-        paramMenuItem = new Intent(koJ.kpc, MsgRetransmitUI.class);
+        Object localObject = parama.bm(field_content, field_isSend);
+        paramMenuItem = new Intent(kNN.kOg, MsgRetransmitUI.class);
         paramMenuItem.putExtra("Retr_Msg_content", (String)localObject);
-        localObject = a.a.dz((String)localObject);
+        localObject = a.a.dI((String)localObject);
         if ((localObject != null) && (16 == type)) {
           paramMenuItem.putExtra("Retr_Msg_Type", 14);
         }
@@ -127,22 +128,22 @@ final class ag
         }
         paramMenuItem = field_content;
       } while (paramMenuItem == null);
-      paramMenuItem = a.a.dz(paramMenuItem);
+      paramMenuItem = a.a.dI(paramMenuItem);
     } while (paramMenuItem == null);
     switch (type)
     {
     default: 
       return false;
     }
-    parama = new fu();
-    aAJ.aAK = aAK;
-    aAJ.aAL = field_msgId;
-    aAJ.aAM = field_talker;
-    a.jUF.j(parama);
+    parama = new gb();
+    amS.amT = amT;
+    amS.amU = field_msgId;
+    amS.amV = field_talker;
+    a.kug.y(parama);
     return false;
   }
   
-  public final boolean a(View paramView, ChattingUI.a parama, com.tencent.mm.storage.ag paramag)
+  public final boolean a(View paramView, ChattingUI.a parama, ai paramai)
   {
     paramView = field_content;
     if (paramView == null) {}
@@ -151,19 +152,19 @@ final class ag
       do
       {
         return false;
-        paramView = a.a.dz(paramView);
+        paramView = a.a.dI(paramView);
       } while (paramView == null);
       switch (type)
       {
       default: 
         return false;
       }
-    } while (t.kz(aAK));
-    paramag = new Intent();
-    paramag.setFlags(65536);
-    paramag.putExtra("key_card_app_msg", aAK);
-    paramag.putExtra("key_from_scene", byv);
-    c.c(koJ.kpc, "card", ".ui.CardDetailUI", paramag);
+    } while (s.kf(amT));
+    paramai = new Intent();
+    paramai.setFlags(65536);
+    paramai.putExtra("key_card_app_msg", amT);
+    paramai.putExtra("key_from_scene", brn);
+    c.c(kNN.kOg, "card", ".ui.CardDetailUI", paramai);
     return true;
   }
 }

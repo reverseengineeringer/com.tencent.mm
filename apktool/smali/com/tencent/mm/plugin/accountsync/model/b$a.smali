@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract bn(Landroid/content/Context;)I
+.method public abstract bi(Landroid/content/Context;)I
 .end method

@@ -2,9 +2,9 @@ package com.tencent.mm.pluginsdk.ui.tools;
 
 public abstract interface i$a
 {
-  public abstract void aod();
+  public abstract void aqV();
   
-  public abstract void jL(int paramInt);
+  public abstract void kY(int paramInt);
 }
 
 /* Location:

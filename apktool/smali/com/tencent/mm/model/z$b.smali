@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract l(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+.method public abstract m(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 .end method

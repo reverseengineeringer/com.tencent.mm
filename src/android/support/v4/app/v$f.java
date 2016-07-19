@@ -1,36 +1,17 @@
 package android.support.v4.app;
 
-import android.app.Notification;
+import android.content.ComponentName;
+import android.os.IBinder;
 
-public final class v$f
-  implements v.i
+final class v$f
 {
-  final Notification dK;
-  final int id;
-  final String packageName;
-  final String tag;
+  final ComponentName eb;
+  final IBinder ec;
   
-  public v$f(String paramString1, int paramInt, String paramString2, Notification paramNotification)
+  public v$f(ComponentName paramComponentName, IBinder paramIBinder)
   {
-    packageName = paramString1;
-    id = paramInt;
-    tag = null;
-    dK = paramNotification;
-  }
-  
-  public final void a(i parami)
-  {
-    parami.a(packageName, id, tag, dK);
-  }
-  
-  public final String toString()
-  {
-    StringBuilder localStringBuilder = new StringBuilder("NotifyTask[");
-    localStringBuilder.append("packageName:").append(packageName);
-    localStringBuilder.append(", id:").append(id);
-    localStringBuilder.append(", tag:").append(tag);
-    localStringBuilder.append("]");
-    return localStringBuilder.toString();
+    eb = paramComponentName;
+    ec = paramIBinder;
   }
 }
 

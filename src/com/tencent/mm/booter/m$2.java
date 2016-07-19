@@ -5,8 +5,8 @@ final class m$2
 {
   public final void run()
   {
-    m.cG("mm_proc_startup");
-    m.cG("push_proc_startup");
+    m.cM("mm_proc_startup");
+    m.cM("push_proc_startup");
   }
 }
 

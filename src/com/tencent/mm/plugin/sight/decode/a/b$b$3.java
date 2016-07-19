@@ -7,8 +7,8 @@ final class b$b$3
   
   public final void run()
   {
-    if (b.b(gxS.gxL) != null) {
-      b.b(gxS.gxL).a(gxS.gxL, 0);
+    if (b.b(gEp.gEj) != null) {
+      b.b(gEp.gEj).d(gEp.gEj, 0);
     }
   }
 }

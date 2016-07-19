@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:id="@id/bnc" android:background="@drawable/op" android:layout_width="fill_parent" android:layout_height="@dimen/j7">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/bnd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="22.0dip" android:layout_marginRight="20.0dip" android:src="@drawable/o1" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:id="@id/bne" android:layout_weight="1.0" style="@style/MMFontPreferenceLarge" />
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:id="@id/bnf" android:layout_weight="1.0" style="@style/MMFontPreferenceSmall" />
+            <TextView android:textSize="@dimen/h4" android:textColor="#ff606062" android:ellipsize="end" android:id="@id/bng" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:scrollHorizontally="true" android:layout_weight="1.0" />
+        </LinearLayout>
+        <ProgressBar android:layout_gravity="center_vertical" android:id="@id/bnh" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/smallCustomProgressBar" />
+        <TextView android:id="@id/bni" android:text="@string/bo8" style="@style/MMSolidWhiteSmallButton" />
+        <TextView android:id="@id/bnj" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/bnk" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/cy" android:src="@raw/chat_mute_notify_normal" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/bnl" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/j8" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/bnm" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/j8" android:src="@drawable/ao" />
+    </LinearLayout>
+</LinearLayout>

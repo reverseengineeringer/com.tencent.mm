@@ -10,23 +10,23 @@ final class MMFormInputView$1
   
   public final void onFocusChange(View paramView, boolean paramBoolean)
   {
-    if (paramView == MMFormInputView.a(kDO))
+    if (paramView == MMFormInputView.a(lcS))
     {
-      MMFormInputView.b(kDO);
+      MMFormInputView.b(lcS);
       if (!paramBoolean) {
         break label63;
       }
-      kDO.setBackgroundResource(2130970444);
+      lcS.setBackgroundResource(2130838514);
     }
     for (;;)
     {
-      MMFormInputView.c(kDO);
-      if (MMFormInputView.d(kDO) != null) {
-        MMFormInputView.d(kDO).onFocusChange(paramView, paramBoolean);
+      MMFormInputView.c(lcS);
+      if (MMFormInputView.d(lcS) != null) {
+        MMFormInputView.d(lcS).onFocusChange(paramView, paramBoolean);
       }
       return;
       label63:
-      kDO.setBackgroundResource(2130970418);
+      lcS.setBackgroundResource(2130838515);
     }
   }
 }

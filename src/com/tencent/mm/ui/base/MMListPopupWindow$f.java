@@ -7,10 +7,10 @@ final class MMListPopupWindow$f
   
   public final void run()
   {
-    if ((MMListPopupWindow.a(kFn) != null) && (MMListPopupWindow.a(kFn).getCount() > MMListPopupWindow.a(kFn).getChildCount()) && (MMListPopupWindow.a(kFn).getChildCount() <= kFn.pU))
+    if ((MMListPopupWindow.a(ler) != null) && (MMListPopupWindow.a(ler).getCount() > MMListPopupWindow.a(ler).getChildCount()) && (MMListPopupWindow.a(ler).getChildCount() <= ler.qi))
     {
-      MMListPopupWindow.b(kFn).setInputMethodMode(2);
-      kFn.show();
+      MMListPopupWindow.b(ler).setInputMethodMode(2);
+      ler.show();
     }
   }
 }

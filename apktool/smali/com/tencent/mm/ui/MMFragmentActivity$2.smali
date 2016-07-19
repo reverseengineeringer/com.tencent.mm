@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/MMFragmentActivity;->bbk()Z
+    value = Lcom/tencent/mm/ui/MMFragmentActivity;->bgu()Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kqv:Lcom/tencent/mm/ui/MMFragmentActivity;
+.field final synthetic kPA:Lcom/tencent/mm/ui/MMFragmentActivity;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 434
-    iput-object p1, p0, Lcom/tencent/mm/ui/MMFragmentActivity$2;->kqv:Lcom/tencent/mm/ui/MMFragmentActivity;
+    .line 455
+    iput-object p1, p0, Lcom/tencent/mm/ui/MMFragmentActivity$2;->kPA:Lcom/tencent/mm/ui/MMFragmentActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,11 +40,11 @@
     .locals 1
 
     .prologue
-    .line 437
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity$2;->kqv:Lcom/tencent/mm/ui/MMFragmentActivity;
+    .line 458
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMFragmentActivity$2;->kPA:Lcom/tencent/mm/ui/MMFragmentActivity;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/b;->W(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/b;->S(Landroid/app/Activity;)V
 
-    .line 438
+    .line 459
     return-void
 .end method

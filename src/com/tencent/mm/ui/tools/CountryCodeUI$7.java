@@ -11,17 +11,17 @@ final class CountryCodeUI$7
 {
   CountryCodeUI$7(CountryCodeUI paramCountryCodeUI) {}
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
     paramAdapterView = new Intent();
-    if (paramInt >= CountryCodeUI.b(luc).getHeaderViewsCount())
+    if (paramInt >= CountryCodeUI.b(lVe).getHeaderViewsCount())
     {
-      paramView = (d)CountryCodeUI.c(luc).getItem(paramInt - CountryCodeUI.b(luc).getHeaderViewsCount());
-      paramAdapterView.putExtra("country_name", bUu);
-      paramAdapterView.putExtra("couttry_code", aJD);
-      luc.setResult(100, paramAdapterView);
+      paramView = (d)CountryCodeUI.c(lVe).getItem(paramInt - CountryCodeUI.b(lVe).getHeaderViewsCount());
+      paramAdapterView.putExtra("country_name", bNV);
+      paramAdapterView.putExtra("couttry_code", avX);
+      lVe.setResult(100, paramAdapterView);
     }
-    luc.finish();
+    lVe.finish();
   }
 }
 

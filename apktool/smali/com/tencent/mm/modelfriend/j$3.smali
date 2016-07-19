@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic bMp:Lcom/tencent/mm/modelfriend/j;
+.field final synthetic bFJ:Lcom/tencent/mm/modelfriend/j;
 
-.field final synthetic bMq:I
+.field final synthetic bFK:I
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 311
-    iput-object p1, p0, Lcom/tencent/mm/modelfriend/j$3;->bMp:Lcom/tencent/mm/modelfriend/j;
+    iput-object p1, p0, Lcom/tencent/mm/modelfriend/j$3;->bFJ:Lcom/tencent/mm/modelfriend/j;
 
-    iput p2, p0, Lcom/tencent/mm/modelfriend/j$3;->bMq:I
+    iput p2, p0, Lcom/tencent/mm/modelfriend/j$3;->bFK:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,17 +47,17 @@
     const/4 v4, 0x0
 
     .line 315
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/j$3;->bMp:Lcom/tencent/mm/modelfriend/j;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/j$3;->bFJ:Lcom/tencent/mm/modelfriend/j;
 
-    iget v1, p0, Lcom/tencent/mm/modelfriend/j$3;->bMq:I
+    iget v1, p0, Lcom/tencent/mm/modelfriend/j$3;->bFK:I
 
-    iget v2, v0, Lcom/tencent/mm/modelfriend/j;->asN:I
+    iget v2, v0, Lcom/tencent/mm/modelfriend/j;->aex:I
 
     const/4 v3, 0x1
 
     if-ne v2, v3, :cond_1
 
-    iget-object v2, v0, Lcom/tencent/mm/modelfriend/j;->bMl:[I
+    iget-object v2, v0, Lcom/tencent/mm/modelfriend/j;->bFF:[I
 
     aput v4, v2, v1
 
@@ -70,13 +70,13 @@
 
     .line 315
     :cond_1
-    iget v2, v0, Lcom/tencent/mm/modelfriend/j;->asN:I
+    iget v2, v0, Lcom/tencent/mm/modelfriend/j;->aex:I
 
     const/4 v3, 0x2
 
     if-ne v2, v3, :cond_0
 
-    iget-object v2, v0, Lcom/tencent/mm/modelfriend/j;->bMl:[I
+    iget-object v2, v0, Lcom/tencent/mm/modelfriend/j;->bFF:[I
 
     aput v4, v2, v1
 

@@ -8,13 +8,13 @@ final class i$2$1
 {
   i$2$1(i.2 param2, DialogPreference paramDialogPreference, Preference paramPreference) {}
   
-  public final void bdp()
+  public final void biW()
   {
-    i.c(kMc.kMb);
-    if (kLN.kMo) {
-      i.b(kMc.kMb).edit().putString(kLO.cln, kLN.getValue()).commit();
+    i.c(llr.llq);
+    if (llc.llD) {
+      i.b(llr.llq).edit().putString(lld.cgq, llc.getValue()).commit();
     }
-    i.d(kMc.kMb).notifyDataSetChanged();
+    i.d(llr.llq).notifyDataSetChanged();
   }
 }
 

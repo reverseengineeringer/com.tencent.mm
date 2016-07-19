@@ -1,17 +1,17 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.ui.bindqq.b.a;
+import com.tencent.mm.v.f;
 
 final class ChattingUI$a$16
-  implements b.a
+  implements Runnable
 {
   ChattingUI$a$16(ChattingUI.a parama) {}
   
-  public final void bdF() {}
-  
-  public final boolean r(int paramInt1, int paramInt2, String paramString)
+  public final void run()
   {
-    return laF.m(paramInt1, paramInt2, paramString);
+    if ((lAY.jfA) && (lAY.lsL != null) && (!lAY.lsL.lvU)) {
+      f.e(lAY.cXq);
+    }
   }
 }
 

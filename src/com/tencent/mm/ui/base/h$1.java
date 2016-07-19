@@ -11,11 +11,11 @@ final class h$1
   
   public final void onClick(View paramView)
   {
-    if (kCR != null) {
-      kCR.onClick(kCT, -1);
+    if (lbW != null) {
+      lbW.onClick(lbY, -1);
     }
-    if (kCS) {
-      kCT.dismiss();
+    if (lbX) {
+      lbY.dismiss();
     }
   }
 }

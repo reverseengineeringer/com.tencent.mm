@@ -6,7 +6,7 @@ import android.view.View.OnTouchListener;
 import android.widget.FrameLayout.LayoutParams;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class AdVideoPlayerLoadingBar$1
   implements View.OnTouchListener
@@ -17,11 +17,11 @@ final class AdVideoPlayerLoadingBar$1
   {
     if (paramMotionEvent.getAction() == 0)
     {
-      u.i("!44@/B4Tb64lLpKQpS0z/gOJ2VnP45Iw97kkoTXdd8xFzvg=", "ontouch down");
-      AdVideoPlayerLoadingBar.a(gyp, false);
-      AdVideoPlayerLoadingBar.a(gyp, paramMotionEvent.getX());
-      if (AdVideoPlayerLoadingBar.a(gyp) != null) {
-        AdVideoPlayerLoadingBar.a(gyp).avV();
+      v.i("MicroMsg.VideoPlayerLoadingBar", "ontouch down");
+      AdVideoPlayerLoadingBar.a(gEM, false);
+      AdVideoPlayerLoadingBar.a(gEM, paramMotionEvent.getX());
+      if (AdVideoPlayerLoadingBar.a(gEM) != null) {
+        AdVideoPlayerLoadingBar.a(gEM).ays();
       }
     }
     do
@@ -30,30 +30,30 @@ final class AdVideoPlayerLoadingBar$1
       if (paramMotionEvent.getAction() == 2)
       {
         float f = paramMotionEvent.getX();
-        paramView = (FrameLayout.LayoutParams)AdVideoPlayerLoadingBar.b(gyp).getLayoutParams();
+        paramView = (FrameLayout.LayoutParams)AdVideoPlayerLoadingBar.b(gEM).getLayoutParams();
         i = leftMargin;
-        int j = (int)(f - AdVideoPlayerLoadingBar.c(gyp));
-        leftMargin = AdVideoPlayerLoadingBar.a(gyp, j + i);
-        AdVideoPlayerLoadingBar.b(gyp).setLayoutParams(paramView);
-        i = AdVideoPlayerLoadingBar.d(gyp);
-        if (AdVideoPlayerLoadingBar.e(gyp) > 0)
+        int j = (int)(f - AdVideoPlayerLoadingBar.c(gEM));
+        leftMargin = AdVideoPlayerLoadingBar.a(gEM, j + i);
+        AdVideoPlayerLoadingBar.b(gEM).setLayoutParams(paramView);
+        i = AdVideoPlayerLoadingBar.d(gEM);
+        if (AdVideoPlayerLoadingBar.e(gEM) > 0)
         {
-          paramView = (FrameLayout.LayoutParams)AdVideoPlayerLoadingBar.f(gyp).getLayoutParams();
-          width = ((int)(i * 1.0D / AdVideoPlayerLoadingBar.e(gyp) * AdVideoPlayerLoadingBar.g(gyp)));
-          AdVideoPlayerLoadingBar.f(gyp).setLayoutParams(paramView);
+          paramView = (FrameLayout.LayoutParams)AdVideoPlayerLoadingBar.f(gEM).getLayoutParams();
+          width = ((int)(i * 1.0D / AdVideoPlayerLoadingBar.e(gEM) * AdVideoPlayerLoadingBar.g(gEM)));
+          AdVideoPlayerLoadingBar.f(gEM).setLayoutParams(paramView);
         }
-        AdVideoPlayerLoadingBar.h(gyp).setText(AdVideoPlayerLoadingBar.kV(i / 60) + ":" + AdVideoPlayerLoadingBar.kV(i % 60));
-        AdVideoPlayerLoadingBar.a(gyp, true);
+        AdVideoPlayerLoadingBar.h(gEM).setText(AdVideoPlayerLoadingBar.mc(i / 60) + ":" + AdVideoPlayerLoadingBar.mc(i % 60));
+        AdVideoPlayerLoadingBar.a(gEM, true);
         return true;
       }
-    } while (!AdVideoPlayerLoadingBar.i(gyp));
-    int i = AdVideoPlayerLoadingBar.d(gyp);
-    if (AdVideoPlayerLoadingBar.a(gyp) != null)
+    } while (!AdVideoPlayerLoadingBar.i(gEM));
+    int i = AdVideoPlayerLoadingBar.d(gEM);
+    if (AdVideoPlayerLoadingBar.a(gEM) != null)
     {
-      u.i("!44@/B4Tb64lLpKQpS0z/gOJ2VnP45Iw97kkoTXdd8xFzvg=", "current time : " + i);
-      AdVideoPlayerLoadingBar.a(gyp).kW(i);
+      v.i("MicroMsg.VideoPlayerLoadingBar", "current time : " + i);
+      AdVideoPlayerLoadingBar.a(gEM).md(i);
     }
-    AdVideoPlayerLoadingBar.a(gyp, false);
+    AdVideoPlayerLoadingBar.a(gEM, false);
     return true;
   }
 }

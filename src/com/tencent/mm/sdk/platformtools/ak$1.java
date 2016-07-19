@@ -1,37 +1,21 @@
 package com.tencent.mm.sdk.platformtools;
 
 import android.telephony.PhoneStateListener;
-import java.util.List;
+import android.telephony.SignalStrength;
 
 final class ak$1
   extends PhoneStateListener
 {
-  ak$1(ak paramak) {}
-  
-  public final void onCallStateChanged(int paramInt, String paramString)
+  public final void onSignalStrengthsChanged(SignalStrength paramSignalStrength)
   {
-    if (jWW.jWV.size() > 0)
-    {
-      ak.a[] arrayOfa = new ak.a[jWW.jWV.size()];
-      arrayOfa = (ak.a[])jWW.jWV.toArray(arrayOfa);
-      int j = arrayOfa.length;
-      int i = 0;
-      while (i < j)
-      {
-        arrayOfa[i].bx(paramInt);
-        i += 1;
-      }
+    super.onSignalStrengthsChanged(paramSignalStrength);
+    if (ak.access$000() == 2) {
+      ak.ms(paramSignalStrength.getCdmaDbm());
     }
-    super.onCallStateChanged(paramInt, paramString);
-    switch (paramInt)
-    {
-    default: 
-      return;
-    case 0: 
-      ak.aKi = false;
-      return;
+    if (ak.access$000() == 1) {
+      ak.ms(paramSignalStrength.getGsmSignalStrength() * 2 - 113);
     }
-    ak.aKi = true;
+    v.i("MicroMsg.NetStatusUtil", "PhoneStateListener  type:%d  strength:%d", new Object[] { Integer.valueOf(ak.access$000()), Integer.valueOf(ak.vq()) });
   }
 }
 

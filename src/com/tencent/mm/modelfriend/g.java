@@ -1,28 +1,14 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.d.a.dx;
-import com.tencent.mm.d.a.dx.a;
-import com.tencent.mm.d.a.dx.b;
-import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.e.a.ec;
 import com.tencent.mm.sdk.c.c;
-import com.tencent.mm.sdk.platformtools.ay;
 
 public final class g
-  extends c
+  extends c<ec>
 {
   public g()
   {
-    super(0);
-  }
-  
-  public final boolean a(b paramb)
-  {
-    paramb = (dx)paramb;
-    axS.axT = m.hy(axR.axO);
-    if (ay.kz(axS.axT)) {
-      axS.axT = m.hy(axR.axP);
-    }
-    return false;
+    kum = ec.class.getName().hashCode();
   }
 }
 

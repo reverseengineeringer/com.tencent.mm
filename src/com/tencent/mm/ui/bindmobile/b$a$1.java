@@ -10,8 +10,8 @@ final class b$a$1
   
   public final void onClick(View paramView)
   {
-    if (b.b(kPl.kPg) != null) {
-      b.b(kPl.kPg).d(kPl.kPi, kPl.aut, kPl.status);
+    if (b.b(loB.low) != null) {
+      b.b(loB.low).d(loB.loy, loB.agg, loB.status);
     }
   }
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto" xmlns:mm="http://schemas.android.com/apk/res-auto">
+    <com.tencent.mm.pluginsdk.ui.preference.HeadImgNewPreference mm:layout="@layout/yk" mm:title="@string/ccz" mm:key="settings_change_avatar" />
+    <Preference mm:layout="@layout/yk" mm:title="@string/cfi" mm:key="settings_name" />
+    <Preference mm:layout="@layout/yk" mm:title="@string/ccp" mm:key="settings_account_info" />
+    <Preference mm:layout="@layout/yk" mm:title="@string/cgu" mm:key="settings_qrcode" mm:widgetLayout="@layout/zx" />
+    <PreferenceCategory />
+    <com.tencent.mm.ui.base.preference.DialogPreference mm:layout="@layout/yk" mm:persistent="false" mm:title="@string/chf" mm:entries="@array/w" mm:entryValues="@array/ae" mm:key="settings_sex" />
+    <Preference mm:layout="@layout/yk" mm:title="@string/cdi" mm:key="settings_district" />
+    <com.tencent.mm.pluginsdk.ui.preference.SignaturePreference mm:layout="@layout/yk" mm:title="@string/chi" mm:key="settings_signature" />
+    <PreferenceCategory />
+</PreferenceScreen>

@@ -18,15 +18,15 @@
 
 
 # instance fields
-.field final synthetic ciA:I
+.field final synthetic cdQ:Lcom/tencent/mm/network/a/b;
 
-.field final synthetic ciB:I
+.field final synthetic cdR:I
 
-.field final synthetic ciC:I
+.field final synthetic cdS:I
 
-.field final synthetic ciD:I
+.field final synthetic cdT:I
 
-.field final synthetic ciz:Lcom/tencent/mm/network/a/b;
+.field final synthetic cdU:I
 
 
 # direct methods
@@ -34,16 +34,16 @@
     .locals 0
 
     .prologue
-    .line 490
-    iput-object p1, p0, Lcom/tencent/mm/network/C2Java$7;->ciz:Lcom/tencent/mm/network/a/b;
+    .line 495
+    iput-object p1, p0, Lcom/tencent/mm/network/C2Java$7;->cdQ:Lcom/tencent/mm/network/a/b;
 
-    iput p2, p0, Lcom/tencent/mm/network/C2Java$7;->ciA:I
+    iput p2, p0, Lcom/tencent/mm/network/C2Java$7;->cdR:I
 
-    iput p3, p0, Lcom/tencent/mm/network/C2Java$7;->ciB:I
+    iput p3, p0, Lcom/tencent/mm/network/C2Java$7;->cdS:I
 
-    iput p4, p0, Lcom/tencent/mm/network/C2Java$7;->ciC:I
+    iput p4, p0, Lcom/tencent/mm/network/C2Java$7;->cdT:I
 
-    iput p5, p0, Lcom/tencent/mm/network/C2Java$7;->ciD:I
+    iput p5, p0, Lcom/tencent/mm/network/C2Java$7;->cdU:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,32 +56,32 @@
     .locals 5
 
     .prologue
-    .line 494
+    .line 499
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/network/C2Java$7;->ciz:Lcom/tencent/mm/network/a/b;
+    iget-object v0, p0, Lcom/tencent/mm/network/C2Java$7;->cdQ:Lcom/tencent/mm/network/a/b;
 
-    iget v1, p0, Lcom/tencent/mm/network/C2Java$7;->ciA:I
+    iget v1, p0, Lcom/tencent/mm/network/C2Java$7;->cdR:I
 
-    iget v2, p0, Lcom/tencent/mm/network/C2Java$7;->ciB:I
+    iget v2, p0, Lcom/tencent/mm/network/C2Java$7;->cdS:I
 
-    iget v3, p0, Lcom/tencent/mm/network/C2Java$7;->ciC:I
+    iget v3, p0, Lcom/tencent/mm/network/C2Java$7;->cdT:I
 
-    iget v4, p0, Lcom/tencent/mm/network/C2Java$7;->ciD:I
+    iget v4, p0, Lcom/tencent/mm/network/C2Java$7;->cdU:I
 
-    invoke-interface {v0, v1, v2, v3, v4}, Lcom/tencent/mm/network/a/b;->d(IIII)V
+    invoke-interface {v0, v1, v2, v3, v4}, Lcom/tencent/mm/network/a/b;->b(IIII)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 499
+    .line 504
     :goto_0
     return-void
 
-    .line 495
+    .line 500
     :catch_0
     move-exception v0
 
-    .line 496
-    const-string/jumbo v1, "!12@sAoJwmn0ssk="
+    .line 501
+    const-string/jumbo v1, "C2Java"
 
     const-string/jumbo v2, "reportFlowData :%s"
 
@@ -91,13 +91,13 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method

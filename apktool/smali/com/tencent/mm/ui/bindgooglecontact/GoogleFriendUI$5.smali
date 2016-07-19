@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;->Rb()V
+    value = Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;->Sq()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kNj:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
+.field final synthetic lmy:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 622
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$5;->kNj:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$5;->lmy:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,22 +41,22 @@
 
     .prologue
     .line 625
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$5;->kNj:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$5;->lmy:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;->c(Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;)Z
 
     .line 626
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$5;->kNj:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$5;->lmy:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;->d(Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;)Lcom/tencent/mm/aa/c;
+    invoke-static {v1}, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;->d(Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;)Lcom/tencent/mm/ad/c;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
     .line 627
     return-void

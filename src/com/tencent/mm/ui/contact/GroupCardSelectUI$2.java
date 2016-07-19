@@ -10,7 +10,7 @@ final class GroupCardSelectUI$2
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    lkC.finish();
+    lKN.finish();
     return true;
   }
 }

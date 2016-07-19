@@ -4,9 +4,9 @@
 
 
 # static fields
-.field static final maW:I
+.field static final mNa:I
 
-.field static final maX:I
+.field static final mNb:I
 
 
 # direct methods
@@ -18,19 +18,19 @@
     const/16 v0, 0x10
 
     .line 80
-    sput v0, La/a/a/b/a;->maW:I
+    sput v0, La/a/a/b/a;->mNa:I
 
     .line 83
     const/16 v0, 0x1a
 
     .line 82
-    sput v0, La/a/a/b/a;->maX:I
+    sput v0, La/a/a/b/a;->mNb:I
 
     .line 83
     return-void
 .end method
 
-.method public static aB(I)I
+.method public static aT(I)I
     .locals 1
 
     .prologue
@@ -40,7 +40,7 @@
     return v0
 .end method
 
-.method public static aC(I)I
+.method public static aU(I)I
     .locals 1
 
     .prologue

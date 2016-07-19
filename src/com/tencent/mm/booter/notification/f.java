@@ -1,59 +1,59 @@
 package com.tencent.mm.booter.notification;
 
-import com.tencent.mm.g.g;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.h.g;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.ai;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public final class f
 {
-  public e boa = new e();
+  public e bbY = new e();
   
   public final int a(NotificationItem paramNotificationItem)
   {
-    return boa.a(paramNotificationItem, null);
+    return bbY.a(paramNotificationItem, null);
   }
   
   public final void a(long paramLong, String paramString1, String paramString2, String paramString3, String paramString4, int paramInt)
   {
-    e locale = boa;
-    if (!g.pi()) {
+    e locale = bbY;
+    if (!g.nA()) {
       e.cancel();
     }
     try
     {
-      bnS.a(paramLong, paramString1, paramString2, paramString3, paramString4, false, paramInt);
+      bbQ.a(paramLong, paramString1, paramString2, paramString3, paramString4, false, paramInt);
       return;
     }
     catch (Exception paramString1)
     {
-      u.e("!44@/B4Tb64lLpKR3MWtFvfaIO9VjdH9q7JYDEFwdMnORTc=", "push:notify, error");
+      v.e("MicroMsg.Notification.Handle", "push:notify, error");
     }
   }
   
-  public final boolean a(String paramString, ag paramag, int paramInt, boolean paramBoolean)
+  public final boolean a(String paramString, ai paramai, int paramInt, boolean paramBoolean)
   {
-    if (ay.kz(paramString)) {
+    if (be.kf(paramString)) {
       return false;
     }
-    return c.a(paramString, paramag, paramInt, paramBoolean);
+    return c.a(paramString, paramai, paramInt, paramBoolean);
   }
   
-  public final void i(int paramInt, String paramString)
+  public final void j(int paramInt, String paramString)
   {
-    u.i("!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ==", "refreshTotalUnread, %d, %s", new Object[] { Integer.valueOf(paramInt), paramString });
+    v.i("MicroMsg.Notification.AppMsg.Handle", "refreshTotalUnread, %d, %s", new Object[] { Integer.valueOf(paramInt), paramString });
     int i = paramInt;
     if (paramInt == -1) {
-      i = g.pN();
+      i = g.of();
     }
-    c.bC(i);
+    c.bU(i);
     ArrayList localArrayList;
     if ((paramString != null) && (paramString.length() > 0))
     {
-      localArrayList = c.ns();
+      localArrayList = c.lG();
       if (localArrayList != null) {
         break label302;
       }
@@ -67,7 +67,7 @@ public final class f
       while (((Iterator)localObject2).hasNext())
       {
         localObject1 = (c.a)((Iterator)localObject2).next();
-        if (ajh.equals(paramString)) {
+        if (UX.equals(paramString)) {
           localArrayList.remove(localObject1);
         }
       }
@@ -77,23 +77,23 @@ public final class f
         if (localObject1 == null) {
           localObject2 = new c.a((byte)0);
         }
-        ajh = paramString;
-        bnF = g.dl(paramString);
-        if ((bnF == 0) && (localArrayList.isEmpty()))
+        UX = paramString;
+        bbD = g.ds(paramString);
+        if ((bbD == 0) && (localArrayList.isEmpty()))
         {
-          c.c(null);
+          c.d(null);
           return;
         }
         paramString = localArrayList;
-        if (bnF > 0)
+        if (bbD > 0)
         {
           localArrayList.add(localObject2);
           paramString = localArrayList;
         }
-        c.c(paramString);
+        c.d(paramString);
         return;
         localArrayList = new ArrayList();
-        localObject1 = g.pM();
+        localObject1 = g.oe();
         paramString = (String)localObject1;
         if (localObject1 == null) {
           paramString = new ArrayList();
@@ -107,8 +107,8 @@ public final class f
           }
           paramString = (String)((Iterator)localObject1).next();
           localObject2 = new c.a((byte)0);
-          ajh = paramString;
-          bnF = g.dl(paramString);
+          UX = paramString;
+          bbD = g.ds(paramString);
           localArrayList.add(localObject2);
         }
         localObject1 = null;
@@ -118,7 +118,7 @@ public final class f
   
   private static final class a
   {
-    private static final f bob = new f((byte)0);
+    private static final f bbZ = new f((byte)0);
   }
 }
 

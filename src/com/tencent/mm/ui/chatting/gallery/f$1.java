@@ -1,9 +1,10 @@
 package com.tencent.mm.ui.chatting.gallery;
 
+import android.graphics.Bitmap;
 import com.tencent.mm.a.f.a;
 
 final class f$1
-  implements f.a
+  implements f.a<String, Bitmap>
 {
   f$1(f paramf) {}
 }

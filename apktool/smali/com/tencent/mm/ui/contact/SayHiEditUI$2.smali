@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/contact/SayHiEditUI;->Gb()V
+    value = Lcom/tencent/mm/ui/contact/SayHiEditUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic llS:Lcom/tencent/mm/ui/contact/SayHiEditUI;
+.field final synthetic lMh:Lcom/tencent/mm/ui/contact/SayHiEditUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 90
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$2;->llS:Lcom/tencent/mm/ui/contact/SayHiEditUI;
+    .line 91
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$2;->lMh:Lcom/tencent/mm/ui/contact/SayHiEditUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,12 +40,12 @@
     .locals 1
 
     .prologue
-    .line 94
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$2;->llS:Lcom/tencent/mm/ui/contact/SayHiEditUI;
+    .line 95
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI$2;->lMh:Lcom/tencent/mm/ui/contact/SayHiEditUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/SayHiEditUI;->finish()V
 
-    .line 95
+    .line 96
     const/4 v0, 0x1
 
     return v0

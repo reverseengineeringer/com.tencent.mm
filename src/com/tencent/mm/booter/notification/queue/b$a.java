@@ -2,7 +2,7 @@ package com.tencent.mm.booter.notification.queue;
 
 final class b$a
 {
-  private static final b boi = new b((byte)0);
+  private static final b bcg = new b((byte)0);
 }
 
 /* Location:

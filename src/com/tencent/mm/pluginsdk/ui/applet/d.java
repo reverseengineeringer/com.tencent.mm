@@ -3,89 +3,89 @@ package com.tencent.mm.pluginsdk.ui.applet;
 import android.content.Context;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.ab.a.a.c.a;
+import com.tencent.mm.ae.a.a.c.a;
 import com.tencent.mm.model.c;
 import com.tencent.mm.model.i;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.t.n;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.preference.Preference;
+import com.tencent.mm.v.o;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 
 public final class d
 {
+  com.tencent.mm.ui.base.preference.f ckp;
   private Context context;
-  com.tencent.mm.ui.base.preference.f cpb;
-  public View.OnClickListener fSm;
-  private View fig;
-  private View ggJ;
-  String iIl;
-  private HashMap iIm = new HashMap();
-  boolean iIn = false;
-  boolean iIo;
-  public e iIp;
-  f.b iIq;
-  ContactListExpandPreference.a iIr;
-  private View.OnClickListener iIs;
-  private View.OnClickListener iIt;
-  private View.OnClickListener iIu;
-  private f.b iIv;
-  private f.a iIw;
-  private e.a iIx;
-  private final int iIy;
-  private final int iIz;
+  private View frc;
+  public View.OnClickListener gbp;
+  private View grl;
+  String jfi;
+  private HashMap<String, Preference> jfj = new HashMap();
+  boolean jfk = false;
+  boolean jfl;
+  public e jfm;
+  f.b jfn;
+  ContactListExpandPreference.a jfo;
+  private View.OnClickListener jfp;
+  private View.OnClickListener jfq;
+  private View.OnClickListener jfr;
+  private f.b jfs;
+  private f.a jft;
+  private e.a jfu;
+  private final int jfv;
+  private final int jfw;
   String username;
   
   public d(Context paramContext)
   {
-    if (iIn) {
+    if (jfk) {
       bool = true;
     }
-    iIo = bool;
-    iIq = null;
-    fSm = null;
-    iIr = null;
-    iIu = new View.OnClickListener()
+    jfl = bool;
+    jfn = null;
+    gbp = null;
+    jfo = null;
+    jfr = new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
-        u.d("!44@/B4Tb64lLpLSOpQlr7qYXXzhEhFJKZisQQbc4kK5pDc=", "OnClickListener = onClick ");
+        v.d("MicroMsg.ContactListArchor", "OnClickListener = onClick ");
       }
     };
-    iIv = new f.b()
+    jfs = new f.b()
     {
-      public final boolean fK(int paramAnonymousInt)
+      public final boolean gB(int paramAnonymousInt)
       {
-        if ((!iIp.iIK) || (!iIp.ov(paramAnonymousInt))) {}
-        while (iIp.ou(paramAnonymousInt)) {
+        if ((!jfm.jfG) || (!jfm.qb(paramAnonymousInt))) {}
+        while (jfm.qa(paramAnonymousInt)) {
           return true;
         }
-        u.d("!44@/B4Tb64lLpLSOpQlr7qYXXzhEhFJKZisQQbc4kK5pDc=", "onItemLongClick " + paramAnonymousInt);
+        v.d("MicroMsg.ContactListArchor", "onItemLongClick " + paramAnonymousInt);
         return true;
       }
     };
-    iIw = new f.a()
+    jft = new f.a()
     {
-      public final void ot(int paramAnonymousInt)
+      public final void pZ(int paramAnonymousInt)
       {
         int j = 1;
         e locale;
         int i;
-        if ((iIr != null) && (iIp != null))
+        if ((jfo != null) && (jfm != null))
         {
-          locale = iIp;
-          if (!iIK) {
+          locale = jfm;
+          if (!jfG) {
             break label82;
           }
-          if ((daN) || (paramAnonymousInt != iII + 2)) {
+          if ((cZt) || (paramAnonymousInt != jfE + 2)) {
             break label77;
           }
           i = 1;
           if (i == 0) {
             break label111;
           }
-          iIr.Oa();
+          jfo.Pl();
         }
         label77:
         label82:
@@ -95,75 +95,75 @@ public final class d
           return;
           i = 0;
           break;
-          if ((!daN) && (paramAnonymousInt == iII + 1))
+          if ((!cZt) && (paramAnonymousInt == jfE + 1))
           {
             i = 1;
             break;
           }
           i = 0;
           break;
-          locale = iIp;
-          if ((!daN) && (paramAnonymousInt == iII)) {}
+          locale = jfm;
+          if ((!cZt) && (paramAnonymousInt == jfE)) {}
           for (i = 1; i != 0; i = 0)
           {
-            iIr.fJ(paramAnonymousInt);
+            jfo.gA(paramAnonymousInt);
             return;
           }
-          locale = iIp;
-          if ((!daN) && (paramAnonymousInt == iII + 1)) {
+          locale = jfm;
+          if ((!cZt) && (paramAnonymousInt == jfE + 1)) {
             i = j;
           }
           for (;;)
           {
             if (i != 0)
             {
-              if (!iIp.iIK) {
+              if (!jfm.jfG) {
                 break;
               }
-              if (i.dn(username))
+              if (i.du(username))
               {
-                iIr.fH(paramAnonymousInt);
+                jfo.gy(paramAnonymousInt);
                 return;
                 i = 0;
               }
               else
               {
-                iIp.ou(0);
+                jfm.qa(0);
                 return;
               }
             }
           }
-          if ((iIp.daN) && (iIp.ov(paramAnonymousInt)))
+          if ((jfm.cZt) && (jfm.qb(paramAnonymousInt)))
           {
-            iIr.fH(paramAnonymousInt);
+            jfo.gy(paramAnonymousInt);
             return;
           }
-          if ((iIp.daN) && (!iIp.ov(paramAnonymousInt)))
+          if ((jfm.cZt) && (!jfm.qb(paramAnonymousInt)))
           {
-            iIr.Ob();
+            jfo.Pm();
             return;
           }
-        } while ((iIp.daN) || (!iIp.ov(paramAnonymousInt)));
-        iIr.fI(paramAnonymousInt);
+        } while ((jfm.cZt) || (!jfm.qb(paramAnonymousInt)));
+        jfo.gz(paramAnonymousInt);
       }
     };
-    iIx = new e.a()
+    jfu = new e.a()
     {
-      public final void aRm()
+      public final void aVY()
       {
-        if (cpb != null) {
-          cpb.notifyDataSetChanged();
+        if (ckp != null) {
+          ckp.notifyDataSetChanged();
         }
       }
     };
-    iIy = 4;
-    iIz = 4;
+    jfv = 4;
+    jfw = 4;
     context = paramContext;
-    iIp = new e(context);
-    iIp.iIB = iIx;
+    jfm = new e(context);
+    jfm.jfy = jfu;
   }
   
-  private static String os(int paramInt)
+  private static String pY(int paramInt)
   {
     if (paramInt >= 0) {
       return "pref_contact_list_row_" + paramInt;
@@ -181,29 +181,29 @@ public final class d
     }
   }
   
-  public final void aoV()
+  public final void arQ()
   {
     int m = 0;
-    if ((cpb == null) || (iIl == null)) {
+    if ((ckp == null) || (jfi == null)) {
       return;
     }
-    Object localObject1 = iIm.keySet().iterator();
+    Object localObject1 = jfj.keySet().iterator();
     Object localObject2;
     while (((Iterator)localObject1).hasNext())
     {
       localObject2 = (String)((Iterator)localObject1).next();
-      cpb.GC((String)localObject2);
+      ckp.IS((String)localObject2);
     }
-    iIm.clear();
-    int k = cpb.indexOf(iIl);
-    if (fig != null) {}
+    jfj.clear();
+    int k = ckp.indexOf(jfi);
+    if (frc != null) {}
     for (int j = 1;; j = 0)
     {
-      if (ggJ != null) {
-        if (iIn)
+      if (grl != null) {
+        if (jfk)
         {
-          localObject1 = iIp;
-          if (iIH <= iIP) {
+          localObject1 = jfm;
+          if (jfD <= jfL) {
             break label390;
           }
           i = 1;
@@ -221,84 +221,84 @@ public final class d
         if (j != 0)
         {
           localObject1 = new ContactListCustomPreference(context);
-          ((ContactListCustomPreference)localObject1).setKey(os(-1));
-          ((ContactListCustomPreference)localObject1).setCustomView(fig);
-          background = 2130970354;
-          fSm = iIs;
-          cpb.a((Preference)localObject1, k);
-          iIm.put(cln, localObject1);
+          ((ContactListCustomPreference)localObject1).setKey(pY(-1));
+          ((ContactListCustomPreference)localObject1).setCustomView(frc);
+          background = 2130838071;
+          gbp = jfp;
+          ckp.a((Preference)localObject1, k);
+          jfj.put(cgq, localObject1);
         }
         for (j = k + 1;; j = k)
         {
-          if (iIq != null)
+          if (jfn != null)
           {
-            localObject1 = iIq;
-            if (fSm == null) {
+            localObject1 = jfn;
+            if (gbp == null) {
               break label404;
             }
           }
-          for (localObject2 = fSm;; localObject2 = iIu)
+          for (localObject2 = gbp;; localObject2 = jfr)
           {
             k = 0;
-            while (m < iIp.getCount())
+            while (m < jfm.getCount())
             {
               ContactListExpandPreference localContactListExpandPreference = new ContactListExpandPreference(context, 1);
-              localContactListExpandPreference.setKey(os(k));
-              f localf = iJi;
-              iIp = iIp;
+              localContactListExpandPreference.setKey(pY(k));
+              f localf = jge;
+              jfm = jfm;
               row = k;
-              iJi.iIz = 4;
-              iJi.fSm = ((View.OnClickListener)localObject2);
-              iJi.iIw = iIw;
-              iJi.iJj = ((f.b)localObject1);
-              cpb.a(localContactListExpandPreference, j + k);
-              iIm.put(cln, localContactListExpandPreference);
+              jge.jfw = 4;
+              jge.gbp = ((View.OnClickListener)localObject2);
+              jge.jft = jft;
+              jge.jgf = ((f.b)localObject1);
+              ckp.a(localContactListExpandPreference, j + k);
+              jfj.put(cgq, localContactListExpandPreference);
               m += 4;
               k += 1;
             }
             i = 0;
             break;
-            localObject1 = iIv;
+            localObject1 = jfs;
             break label235;
           }
           if (i == 0) {
             break;
           }
           localObject1 = new ContactListCustomPreference(context);
-          ((ContactListCustomPreference)localObject1).setKey(os(-2));
-          ((ContactListCustomPreference)localObject1).setCustomView(ggJ);
-          fSm = iIt;
-          cpb.a((Preference)localObject1, j + k);
-          iIm.put(cln, localObject1);
+          ((ContactListCustomPreference)localObject1).setKey(pY(-2));
+          ((ContactListCustomPreference)localObject1).setCustomView(grl);
+          gbp = jfq;
+          ckp.a((Preference)localObject1, j + k);
+          jfj.put(cgq, localObject1);
           return;
         }
       }
     }
   }
   
-  final void qF(String paramString)
+  final void rV(String paramString)
   {
-    e locale = iIp;
+    e locale = jfm;
     username = paramString;
-    aBs = i.dn(paramString);
-    if (!aBs) {
-      iID = n.gW(paramString);
+    anK = i.du(paramString);
+    if (!anK) {
+      jfA = o.hn(paramString);
     }
-    if (!iID) {
-      cZi = dbM.rw().DT(paramString);
+    if (!jfA) {
+      cXO = das.ry().Gi(paramString);
     }
-    if (iID)
+    if (jfA)
     {
       paramString = new c.a();
-      bTG = com.tencent.mm.t.f.gu(username);
-      bTD = true;
-      bTV = true;
-      bTO = 2130903473;
-      iIX = paramString.AA();
+      bNf = com.tencent.mm.v.f.gM(username);
+      bNc = true;
+      bNw = true;
+      bNp = 2131165359;
+      jfT = paramString.AM();
     }
-    iIp.iIO = iIo;
-    iIp.notifyChanged();
-    aoV();
+    jfm.jfK = jfl;
+    jfm.notifyChanged();
+    arQ();
   }
 }
 

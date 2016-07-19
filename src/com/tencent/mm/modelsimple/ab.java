@@ -2,56 +2,51 @@ package com.tencent.mm.modelsimple;
 
 import com.tencent.mm.network.e;
 import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b.anj;
-import com.tencent.mm.protocal.b.ank;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.d;
-import java.util.LinkedList;
+import com.tencent.mm.protocal.b.aop;
+import com.tencent.mm.protocal.b.aoq;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.d;
 
 public final class ab
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private d anM;
-  private final a anN;
+  private final a bkQ;
+  private d bkT;
   
-  public ab(int[] paramArrayOfInt)
+  public ab(String paramString)
   {
-    Object localObject = new a.a();
-    bFa = new anj();
-    bFb = new ank();
-    uri = "/cgi-bin/micromsg-bin/sendinviteemail";
-    bEY = 116;
-    bFc = 41;
-    bFd = 1000000041;
-    anN = ((a.a)localObject).vy();
-    localObject = new LinkedList();
-    int i = 0;
-    while (i < paramArrayOfInt.length)
-    {
-      ((LinkedList)localObject).add(Integer.valueOf(paramArrayOfInt[i]));
-      i += 1;
-    }
-    anN.bEW.bFf).jIf = ((LinkedList)localObject);
-    anN.bEW.bFf).jIe = ((LinkedList)localObject).size();
+    a.a locala = new a.a();
+    byl = new aop();
+    bym = new aoq();
+    uri = "/cgi-bin/micromsg-bin/newsetemailpwd";
+    byj = 382;
+    byn = 181;
+    byo = 1000000181;
+    bkQ = locala.vA();
+    bkQ.byh.byq).jzi = be.FA(paramString);
+    v.d("MicroMsg.NetSceneSetEmailPwd", "md5 " + paramString);
   }
   
   public final int a(e parame, d paramd)
   {
-    anM = paramd;
-    return a(parame, anN, this);
+    bkT = paramd;
+    return a(parame, bkQ, this);
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    anM.a(paramInt2, paramInt3, paramString, this);
+    v.d("MicroMsg.NetSceneSetEmailPwd", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3);
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()
   {
-    return 116;
+    return 382;
   }
 }
 

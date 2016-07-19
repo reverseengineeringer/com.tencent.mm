@@ -7,7 +7,7 @@ final class NotifyReceiver$NotifyService$1
   
   public final void run()
   {
-    bmQ.stopForeground(true);
+    bax.stopForeground(true);
   }
 }
 

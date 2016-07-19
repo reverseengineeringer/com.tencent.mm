@@ -5,7 +5,7 @@
 
 # direct methods
 .method private static a(Ljava/io/File;II)Ljava/lang/String;
-    .locals 6
+    .locals 4
 
     .prologue
     const/4 v0, 0x0
@@ -33,16 +33,12 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 248
-    const v1, 0x19000
+    const/4 v1, 0x0
 
-    const/4 v3, 0x0
-
-    const/16 v4, 0x100
-
-    const/4 v5, 0x0
+    const/16 v3, 0x100
 
     :try_start_1
-    invoke-static {v2, v1, v3, v4, v5}, Lcom/tencent/mm/a/g;->a(Ljava/io/InputStream;III[B)Ljava/lang/String;
+    invoke-static {v2, v1, v3}, Lcom/tencent/mm/a/g;->a(Ljava/io/InputStream;II)Ljava/lang/String;
 
     move-result-object v1
 
@@ -370,6 +366,22 @@
     goto :goto_0
 .end method
 
+.method public static final a(Ljava/io/InputStream;II)Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 76
+    const v0, 0x19000
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, p1, p2, v1}, Lcom/tencent/mm/a/g;->a(Ljava/io/InputStream;III[B)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method private static a(Ljava/io/InputStream;III[B)Ljava/lang/String;
     .locals 8
 
@@ -379,6 +391,8 @@
     const/4 v1, 0x0
 
     .line 90
+    if-eqz p0, :cond_0
+
     if-ltz p2, :cond_0
 
     if-gtz p3, :cond_1
@@ -531,7 +545,7 @@
     goto :goto_0
 .end method
 
-.method public static aC(Ljava/lang/String;)Ljava/lang/String;
+.method public static aH(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
     .prologue
@@ -566,7 +580,7 @@
     goto :goto_0
 .end method
 
-.method public static aD(Ljava/lang/String;)Ljava/lang/String;
+.method public static aI(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
     .prologue
@@ -606,10 +620,10 @@
 .end method
 
 .method public static g(Ljava/io/File;)Ljava/lang/String;
-    .locals 7
+    .locals 8
 
     .prologue
-    const-wide/32 v3, 0x19000
+    const-wide/32 v4, 0x19000
 
     const/4 v1, 0x0
 
@@ -643,14 +657,14 @@
     :try_start_1
     invoke-virtual {p0}, Ljava/io/File;->length()J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    cmp-long v0, v3, v5
+    cmp-long v0, v4, v6
 
     if-gtz v0, :cond_2
 
     :goto_1
-    long-to-int v0, v3
+    long-to-int v0, v4
 
     invoke-static {v2, v0}, Lcom/tencent/mm/a/g;->a(Ljava/io/InputStream;I)Ljava/lang/String;
 
@@ -683,7 +697,7 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_4
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    move-result-wide v3
+    move-result-wide v4
 
     goto :goto_1
 
@@ -754,7 +768,7 @@
     goto :goto_2
 .end method
 
-.method public static final m([B)Ljava/lang/String;
+.method public static final j([B)Ljava/lang/String;
     .locals 9
 
     .prologue
@@ -866,7 +880,7 @@
     .end array-data
 .end method
 
-.method public static final n([B)[B
+.method public static final k([B)[B
     .locals 1
 
     .prologue

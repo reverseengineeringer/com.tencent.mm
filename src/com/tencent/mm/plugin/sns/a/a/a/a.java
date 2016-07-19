@@ -2,13 +2,13 @@ package com.tencent.mm.plugin.sns.a.a.a;
 
 public final class a
 {
-  public int gGQ = 0;
-  public int gHi = 0;
-  public int gHj = 0;
-  public int gHk = 0;
-  public int gHl = 0;
-  public int gHm = 0;
-  public long gHn = 0L;
+  public int gNr = 0;
+  public int gOn = 0;
+  public int gOo = 0;
+  public int gOp = 0;
+  public int gOq = 0;
+  public int gOr = 0;
+  public long gOs = 0L;
 }
 
 /* Location:

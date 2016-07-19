@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/WalletBody"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="80.0dip" android:src="@raw/wallet_wxcredit_success" />
+    <TextView android:textSize="@dimen/cu" android:textColor="@color/gn" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hb" android:text="@string/djh" />
+    <TextView android:textSize="56.0dip" android:textColor="@color/ak" android:layout_gravity="center_horizontal" android:id="@id/cqx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hb" />
+    <Button android:id="@id/a6d" android:layout_width="fill_parent" android:layout_marginTop="16.0dip" android:text="@string/djj" style="@style/MMSolidGreenLargeButton" />
+</LinearLayout>

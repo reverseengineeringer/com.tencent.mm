@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field private aks:Ljavax/crypto/Cipher;
+.field private Xl:Ljavax/crypto/Cipher;
 
-.field private akt:Ljavax/crypto/Cipher;
+.field private Xm:Ljavax/crypto/Cipher;
 
 
 # direct methods
@@ -60,10 +60,10 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/tencent/mm/a/d;->aks:Ljavax/crypto/Cipher;
+    iput-object v2, p0, Lcom/tencent/mm/a/d;->Xl:Ljavax/crypto/Cipher;
 
     .line 26
-    iget-object v2, p0, Lcom/tencent/mm/a/d;->aks:Ljavax/crypto/Cipher;
+    iget-object v2, p0, Lcom/tencent/mm/a/d;->Xl:Ljavax/crypto/Cipher;
 
     const/4 v3, 0x1
 
@@ -76,10 +76,10 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/tencent/mm/a/d;->akt:Ljavax/crypto/Cipher;
+    iput-object v2, p0, Lcom/tencent/mm/a/d;->Xm:Ljavax/crypto/Cipher;
 
     .line 29
-    iget-object v2, p0, Lcom/tencent/mm/a/d;->akt:Ljavax/crypto/Cipher;
+    iget-object v2, p0, Lcom/tencent/mm/a/d;->Xm:Ljavax/crypto/Cipher;
 
     const/4 v3, 0x2
 
@@ -100,7 +100,7 @@
 
 
 # virtual methods
-.method public final av(Ljava/lang/String;)Ljava/lang/String;
+.method public final az(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
     .prologue
@@ -113,7 +113,7 @@
     move-result-object v0
 
     .line 57
-    iget-object v1, p0, Lcom/tencent/mm/a/d;->akt:Ljavax/crypto/Cipher;
+    iget-object v1, p0, Lcom/tencent/mm/a/d;->Xm:Ljavax/crypto/Cipher;
 
     invoke-virtual {v1, v0}, Ljavax/crypto/Cipher;->doFinal([B)[B
 

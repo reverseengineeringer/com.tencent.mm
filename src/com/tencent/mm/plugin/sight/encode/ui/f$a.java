@@ -8,34 +8,34 @@ import android.hardware.Camera.AutoFocusCallback;
 import android.hardware.Camera.Parameters;
 import android.os.Looper;
 import android.os.Message;
-import com.tencent.mm.aw.a;
+import com.tencent.mm.az.a;
 import com.tencent.mm.compatible.util.c;
 import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.ArrayList;
 import java.util.List;
 
 final class f$a
-  extends aa
+  extends ac
 {
-  static boolean gDL = true;
-  static Camera.AutoFocusCallback gDM = new Camera.AutoFocusCallback()
+  static boolean gKm = true;
+  static Camera.AutoFocusCallback gKn = new Camera.AutoFocusCallback()
   {
     public final void onAutoFocus(boolean paramAnonymousBoolean, Camera paramAnonymousCamera)
     {
-      u.v("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "auto focus callback");
-      f.a.gDL = true;
+      v.v("MicroMsg.SightCamera", "auto focus callback");
+      f.a.gKm = true;
     }
   };
-  float eED;
-  float fgc;
-  int gDG = 0;
-  boolean gDH = false;
-  boolean gDI = false;
-  int gDJ;
-  int gDK;
-  boolean gDt = false;
+  float eKR;
+  float fpb;
+  boolean gJU = false;
+  int gKh = 0;
+  boolean gKi = false;
+  boolean gKj = false;
+  int gKk;
+  int gKl;
   
   public f$a(Looper paramLooper)
   {
@@ -44,10 +44,10 @@ final class f$a
   
   private static Rect a(float paramFloat1, float paramFloat2, float paramFloat3, int paramInt1, int paramInt2)
   {
-    int i = Float.valueOf(a.fromDPToPix(y.getContext(), 72) * paramFloat3).intValue();
+    int i = Float.valueOf(a.fromDPToPix(aa.getContext(), 72) * paramFloat3).intValue();
     RectF localRectF = new RectF();
     localRectF.set((paramFloat1 - i / 2) * 2000.0F / paramInt1 - 1000.0F, (paramFloat2 - i / 2) * 2000.0F / paramInt2 - 1000.0F, (i / 2 + paramFloat1) * 2000.0F / paramInt1 - 1000.0F, (i / 2 + paramFloat2) * 2000.0F / paramInt2 - 1000.0F);
-    return new Rect(lh(Math.round(left)), lh(Math.round(top)), lh(Math.round(right)), lh(Math.round(bottom)));
+    return new Rect(mo(Math.round(left)), mo(Math.round(top)), mo(Math.round(right)), mo(Math.round(bottom)));
   }
   
   private static int c(Camera.Parameters paramParameters)
@@ -67,7 +67,7 @@ final class f$a
     {
       for (;;)
       {
-        u.e("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "get target zoom value error: %s", new Object[] { paramParameters.getMessage() });
+        v.e("MicroMsg.SightCamera", "get target zoom value error: %s", new Object[] { paramParameters.getMessage() });
         int i = 0;
       }
     }
@@ -87,27 +87,27 @@ final class f$a
   static void e(Camera paramCamera)
   {
     if (paramCamera == null) {
-      u.w("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "want to auto focus, but camera is null, do nothing");
+      v.w("MicroMsg.SightCamera", "want to auto focus, but camera is null, do nothing");
     }
-    if (!gDL)
+    if (!gKm)
     {
-      u.w("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "auto focus not back");
+      v.w("MicroMsg.SightCamera", "auto focus not back");
       return;
     }
-    gDL = false;
+    gKm = false;
     try
     {
-      paramCamera.autoFocus(gDM);
+      paramCamera.autoFocus(gKn);
       return;
     }
     catch (Exception paramCamera)
     {
-      u.w("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "autofocus fail, exception %s", new Object[] { paramCamera.getMessage() });
-      gDL = true;
+      v.w("MicroMsg.SightCamera", "autofocus fail, exception %s", new Object[] { paramCamera.getMessage() });
+      gKm = true;
     }
   }
   
-  private static int lh(int paramInt)
+  private static int mo(int paramInt)
   {
     int i;
     if (paramInt > 1000) {
@@ -131,31 +131,31 @@ final class f$a
     {
       return;
       paramMessage = (Camera)obj;
-      if ((gDJ == 0) || (gDJ == 0) || (c.bV(14)))
+      if ((gKk == 0) || (gKk == 0) || (c.cn(14)))
       {
         e(paramMessage);
         return;
       }
-      float f1 = fgc;
-      float f2 = eED;
-      int i = gDJ;
-      j = gDK;
+      float f1 = fpb;
+      float f2 = eKR;
+      int i = gKk;
+      j = gKl;
       if (paramMessage == null) {
-        u.w("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "want to auto focus, but camera is null, do nothing");
+        v.w("MicroMsg.SightCamera", "want to auto focus, but camera is null, do nothing");
       }
-      if (!gDL)
+      if (!gKm)
       {
-        u.w("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "auto focus not back");
+        v.w("MicroMsg.SightCamera", "auto focus not back");
         return;
       }
-      gDL = false;
+      gKm = false;
       Object localObject2;
       try
       {
-        u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "ashutest:: touch %f %f, display %d %d", new Object[] { Float.valueOf(f1), Float.valueOf(f2), Integer.valueOf(i), Integer.valueOf(j) });
+        v.i("MicroMsg.SightCamera", "ashutest:: touch %f %f, display %d %d", new Object[] { Float.valueOf(f1), Float.valueOf(f2), Integer.valueOf(i), Integer.valueOf(j) });
         localObject2 = a(f1, f2, 1.0F, i, j);
         localObject1 = a(f1, f2, 1.5F, i, j);
-        u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "ashutest:: focus rect %s, meter rect %s", new Object[] { localObject2, localObject1 });
+        v.i("MicroMsg.SightCamera", "ashutest:: focus rect %s, meter rect %s", new Object[] { localObject2, localObject1 });
         localParameters = paramMessage.getParameters();
         Object localObject3 = localParameters.getSupportedFocusModes();
         if ((localObject3 != null) && (((List)localObject3).contains("auto"))) {
@@ -174,30 +174,29 @@ final class f$a
           localParameters.setMeteringAreas((List)localObject2);
         }
         paramMessage.setParameters(localParameters);
-        paramMessage.autoFocus(gDM);
+        paramMessage.autoFocus(gKn);
         return;
       }
       catch (Exception paramMessage)
       {
-        u.w("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "autofocus with area fail, exception %s", new Object[] { paramMessage.getMessage() });
-        gDL = true;
+        v.w("MicroMsg.SightCamera", "autofocus with area fail, exception %s", new Object[] { paramMessage.getMessage() });
+        gKm = true;
         return;
       }
-      if (gDI) {
+      if (gKj) {
         continue;
       }
       Object localObject1 = (Camera)obj;
       Camera.Parameters localParameters = ((Camera)localObject1).getParameters();
-      u.i("!32@/B4Tb64lLpJusIoUV0UaqIQNp1QeHzmX", "zoomed %s curZoomStep %s params.getZoom() %s", new Object[] { Boolean.valueOf(gDt), Integer.valueOf(gDG), Integer.valueOf(localParameters.getZoom()) });
-      i = localParameters.getZoom();
-      i = gDG + i;
-      if (gDt)
+      v.i("MicroMsg.SightCamera", "zoomed %s curZoomStep %s params.getZoom() %s", new Object[] { Boolean.valueOf(gJU), Integer.valueOf(gKh), Integer.valueOf(localParameters.getZoom()) });
+      i = localParameters.getZoom() + gKh;
+      if (gJU)
       {
         int k = c(localParameters);
         if (i >= k)
         {
           i = k;
-          label469:
+          label465:
           localParameters.setZoom(i);
         }
       }
@@ -207,12 +206,12 @@ final class f$a
         if (j == 0) {
           continue;
         }
-        gDJ = 0;
-        gDK = 0;
+        gKk = 0;
+        gKl = 0;
         sendMessageDelayed(obtainMessage(4354, obj), 20L);
         return;
         localObject2 = obtainMessage(4353, obj);
-        if (gDH) {}
+        if (gKi) {}
         for (long l = 10L;; l = 20L)
         {
           sendMessageDelayed((Message)localObject2, l);
@@ -222,10 +221,10 @@ final class f$a
         if (i <= 0)
         {
           i = 0;
-          break label469;
+          break label465;
         }
         localObject2 = obtainMessage(4353, obj);
-        if (gDH) {}
+        if (gKi) {}
         for (l = 10L;; l = 20L)
         {
           sendMessageDelayed((Message)localObject2, l);

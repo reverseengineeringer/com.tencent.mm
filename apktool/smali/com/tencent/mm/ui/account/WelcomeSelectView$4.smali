@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kwS:Lcom/tencent/mm/ui/account/WelcomeSelectView;
+.field final synthetic kVZ:Lcom/tencent/mm/ui/account/WelcomeSelectView;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 214
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/WelcomeSelectView$4;->kwS:Lcom/tencent/mm/ui/account/WelcomeSelectView;
+    .line 217
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/WelcomeSelectView$4;->kVZ:Lcom/tencent/mm/ui/account/WelcomeSelectView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,8 +40,8 @@
     .locals 4
 
     .prologue
-    .line 219
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 222
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
@@ -55,8 +55,10 @@
 
     invoke-direct {v1, v2, v3}, Lcom/tencent/mm/model/as;-><init>(Lcom/tencent/mm/model/as$a;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    const/4 v2, 0x0
 
-    .line 227
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
+
+    .line 230
     return-void
 .end method

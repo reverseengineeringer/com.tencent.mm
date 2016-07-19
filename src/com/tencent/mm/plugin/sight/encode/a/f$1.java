@@ -3,11 +3,11 @@ package com.tencent.mm.plugin.sight.encode.a;
 import android.os.Looper;
 import android.os.Message;
 import android.util.SparseArray;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import java.lang.ref.WeakReference;
 
 final class f$1
-  extends aa
+  extends ac
 {
   f$1(f paramf, Looper paramLooper)
   {
@@ -20,11 +20,11 @@ final class f$1
     {
       paramMessage = (b.b)obj;
       int i = 0;
-      if (i < gAQ.gAO.size())
+      if (i < gHs.gHq.size())
       {
-        b.a locala = (b.a)((WeakReference)gAQ.gAO.valueAt(i)).get();
+        b.a locala = (b.a)((WeakReference)gHs.gHq.valueAt(i)).get();
         if (locala != null) {
-          switch (f.2.gAR[paramMessage.ordinal()])
+          switch (f.2.gHt[paramMessage.ordinal()])
           {
           }
         }
@@ -36,7 +36,7 @@ final class f$1
           continue;
           locala.onStop();
           continue;
-          locala.awu();
+          locala.ayT();
           continue;
           locala.onError();
         }
@@ -59,12 +59,12 @@ final class f$1
       do
       {
         return;
-        gAQ.gAO.put(paramMessage.hashCode(), new WeakReference(paramMessage));
+        gHs.gHq.put(paramMessage.hashCode(), new WeakReference(paramMessage));
         return;
       } while (259 != what);
       paramMessage = (b.a)obj;
     } while (paramMessage == null);
-    gAQ.gAO.remove(paramMessage.hashCode());
+    gHs.gHq.remove(paramMessage.hashCode());
   }
 }
 

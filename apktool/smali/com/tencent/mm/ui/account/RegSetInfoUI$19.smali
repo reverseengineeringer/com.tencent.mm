@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+.field final synthetic kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
-.field final synthetic kws:[Ljava/lang/String;
+.field final synthetic kVz:[Ljava/lang/String;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 1039
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$19;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$19;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$19;->kws:[Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$19;->kVz:[Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,10 +42,19 @@
 # virtual methods
 .method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
     .line 1043
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$19;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$19;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->u(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Lcom/tencent/mm/ui/base/o;
 
@@ -54,7 +63,7 @@
     if-eqz v0, :cond_0
 
     .line 1044
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$19;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$19;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->u(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Lcom/tencent/mm/ui/base/o;
 
@@ -63,26 +72,26 @@
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/o;->dismiss()V
 
     .line 1045
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$19;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$19;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->v(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Lcom/tencent/mm/ui/base/o;
 
     .line 1047
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$19;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$19;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->a(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Landroid/widget/EditText;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$19;->kws:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$19;->kVz:[Ljava/lang/String;
 
     aget-object v1, v1, p3
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 1048
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$19;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$19;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->a(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Landroid/widget/EditText;
 
@@ -97,15 +106,15 @@
     invoke-virtual {v0, v1, v2, v3}, Landroid/widget/EditText;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 1057
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$19;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$19;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->s(Lcom/tencent/mm/ui/account/RegSetInfoUI;)Landroid/widget/TextView;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$19;->kwh:Lcom/tencent/mm/ui/account/RegSetInfoUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegSetInfoUI$19;->kVo:Lcom/tencent/mm/ui/account/RegSetInfoUI;
 
-    const v2, 0x7f0b0128
+    const v2, 0x7f080e90
 
     invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/account/RegSetInfoUI;->getString(I)Ljava/lang/String;
 

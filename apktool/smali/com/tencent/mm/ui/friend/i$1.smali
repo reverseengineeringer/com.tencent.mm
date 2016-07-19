@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/ui/friend/i$1;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.super Lcom/tencent/mm/sdk/platformtools/ac;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic lsI:Lcom/tencent/mm/ui/friend/i;
+.field final synthetic lTm:Lcom/tencent/mm/ui/friend/i;
 
 
 # direct methods
@@ -24,9 +24,9 @@
 
     .prologue
     .line 136
-    iput-object p1, p0, Lcom/tencent/mm/ui/friend/i$1;->lsI:Lcom/tencent/mm/ui/friend/i;
+    iput-object p1, p0, Lcom/tencent/mm/ui/friend/i$1;->lTm:Lcom/tencent/mm/ui/friend/i;
 
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
     return-void
 .end method
@@ -34,11 +34,11 @@
 
 # virtual methods
 .method public final handleMessage(Landroid/os/Message;)V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 140
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lsI:Lcom/tencent/mm/ui/friend/i;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lTm:Lcom/tencent/mm/ui/friend/i;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/i;->a(Lcom/tencent/mm/ui/friend/i;)Lcom/tencent/mm/ui/base/h;
 
@@ -46,7 +46,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lsI:Lcom/tencent/mm/ui/friend/i;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lTm:Lcom/tencent/mm/ui/friend/i;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/i;->a(Lcom/tencent/mm/ui/friend/i;)Lcom/tencent/mm/ui/base/h;
 
@@ -59,7 +59,7 @@
     if-eqz v0, :cond_1
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lsI:Lcom/tencent/mm/ui/friend/i;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lTm:Lcom/tencent/mm/ui/friend/i;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/i;->b(Lcom/tencent/mm/ui/friend/i;)Z
 
@@ -74,18 +74,18 @@
 
     .line 143
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lsI:Lcom/tencent/mm/ui/friend/i;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lTm:Lcom/tencent/mm/ui/friend/i;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/i;->c(Lcom/tencent/mm/ui/friend/i;)I
 
     .line 144
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lsI:Lcom/tencent/mm/ui/friend/i;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lTm:Lcom/tencent/mm/ui/friend/i;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/i;->e(Lcom/tencent/mm/ui/friend/i;)Landroid/widget/ProgressBar;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/friend/i$1;->lsI:Lcom/tencent/mm/ui/friend/i;
+    iget-object v1, p0, Lcom/tencent/mm/ui/friend/i$1;->lTm:Lcom/tencent/mm/ui/friend/i;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/friend/i;->d(Lcom/tencent/mm/ui/friend/i;)I
 
@@ -94,13 +94,13 @@
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
     .line 145
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lsI:Lcom/tencent/mm/ui/friend/i;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lTm:Lcom/tencent/mm/ui/friend/i;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/i;->d(Lcom/tencent/mm/ui/friend/i;)I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/friend/i$1;->lsI:Lcom/tencent/mm/ui/friend/i;
+    iget-object v1, p0, Lcom/tencent/mm/ui/friend/i$1;->lTm:Lcom/tencent/mm/ui/friend/i;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/friend/i;->e(Lcom/tencent/mm/ui/friend/i;)Landroid/widget/ProgressBar;
 
@@ -117,20 +117,20 @@
     .line 146
     const/4 v0, 0x0
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/tencent/mm/ui/friend/i$1;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {p0, v0, v2, v3}, Lcom/tencent/mm/ui/friend/i$1;->sendEmptyMessageDelayed(IJ)Z
 
     goto :goto_0
 
     .line 148
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lsI:Lcom/tencent/mm/ui/friend/i;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lTm:Lcom/tencent/mm/ui/friend/i;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/i;->f(Lcom/tencent/mm/ui/friend/i;)Z
 
     .line 149
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lsI:Lcom/tencent/mm/ui/friend/i;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lTm:Lcom/tencent/mm/ui/friend/i;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/i;->e(Lcom/tencent/mm/ui/friend/i;)Landroid/widget/ProgressBar;
 
@@ -141,7 +141,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setIndeterminate(Z)V
 
     .line 150
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lsI:Lcom/tencent/mm/ui/friend/i;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lTm:Lcom/tencent/mm/ui/friend/i;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/i;->g(Lcom/tencent/mm/ui/friend/i;)Z
 
@@ -150,7 +150,7 @@
     if-nez v0, :cond_1
 
     .line 151
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lsI:Lcom/tencent/mm/ui/friend/i;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lTm:Lcom/tencent/mm/ui/friend/i;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/i;->a(Lcom/tencent/mm/ui/friend/i;)Lcom/tencent/mm/ui/base/h;
 
@@ -159,7 +159,7 @@
     if-eqz v0, :cond_4
 
     .line 152
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lsI:Lcom/tencent/mm/ui/friend/i;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lTm:Lcom/tencent/mm/ui/friend/i;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/i;->a(Lcom/tencent/mm/ui/friend/i;)Lcom/tencent/mm/ui/base/h;
 
@@ -169,7 +169,7 @@
 
     .line 154
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lsI:Lcom/tencent/mm/ui/friend/i;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/i$1;->lTm:Lcom/tencent/mm/ui/friend/i;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/friend/i;->h(Lcom/tencent/mm/ui/friend/i;)V
 

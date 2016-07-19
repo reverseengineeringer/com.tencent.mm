@@ -1,47 +1,50 @@
 package ct;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
 public final class al
-  extends bg
 {
-  private static ArrayList e;
-  private static Map f;
-  public ArrayList a = null;
-  public String b = "";
-  private int c = 0;
-  private Map d = null;
+  public String A;
+  public int B;
+  public int C;
+  public int D;
+  public String E;
+  public String F;
+  public String G;
+  public int H;
+  public String I;
+  public int J;
+  public String K = "";
+  public int L;
+  public int M;
+  public String a;
+  public String b;
+  public int c;
+  public String d;
+  public String e;
+  public String f;
+  public String g;
+  public int h;
+  public int i;
+  public String j;
+  public String k;
+  public String l;
+  public int m;
+  public int n;
+  public String o;
+  public String p;
+  public int q;
+  public int r;
+  public int s;
+  public int t;
+  public long u;
+  public long v;
+  public int w;
+  public int x;
+  public int y;
+  public String z;
   
-  public final void a(be parambe)
+  public final String toString()
   {
-    c = parambe.a(c, 0, true);
-    if (e == null)
-    {
-      e = new ArrayList();
-      e.add("");
-    }
-    a = ((ArrayList)parambe.a(e, 1, true));
-    b = parambe.a(2, false);
-    if (f == null)
-    {
-      f = new HashMap();
-      f.put("", "");
-    }
-    d = ((Map)parambe.a(f, 3, false));
-  }
-  
-  public final void a(bf parambf)
-  {
-    parambf.a(c, 0);
-    parambf.a(a, 1);
-    if (b != null) {
-      parambf.a(b, 2);
-    }
-    if (d != null) {
-      parambf.a(d, 3);
-    }
+    return "ReportStruct [appId=" + a + ", appVerName=" + b + ", appVerCode=" + c + ", sdkVersion=" + d + ", uuid=" + e + ", apn=" + f + ", ssid=" + g + ", netType=" + h + ", opType=" + i + ", domain=" + j + ", accessIp=" + k + ", lastAccessIp=" + l + ", isNetConnected=" + m + ", retCode=" + n + ", failInfo=" + o + ", exceptionInfo=" + p + ", dnsTime=" + q + ", connectTime=" + r + ", waitTime=" + s + ", readTime=" + t + ", dataLength=" + u + ", rspLen=" + v + ", totalTime=" + w + ", totalTimeReq=" + x + ", retryTime=" + y + ", uniqueRequestKey=" + z + ", url=" + A + ", isUseSchedulerIp=" + B + ", isLast=" + C + ", isSchedulerOn=" + D + ", probability=" + E + ", rule=" + F + ", jumpUrl=" + G + ", isHijack=0, maxRetryTime=" + H + ", domainDns=" + I + ", reqResult=" + J + ", contentType=" + K + ", isHtttps=" + L + ", isTimeout=" + M + "]";
   }
 }
 

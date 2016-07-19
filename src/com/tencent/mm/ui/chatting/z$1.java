@@ -1,32 +1,52 @@
 package com.tencent.mm.ui.chatting;
 
-import android.app.Activity;
-import android.widget.Toast;
-import com.tencent.mm.pluginsdk.ui.chat.ChatFooter;
-import com.tencent.mm.r.g;
-import com.tencent.mm.r.g.a;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.j;
-import com.tencent.mm.ui.o;
+import android.content.Intent;
+import android.support.v4.app.FragmentActivity;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 
 final class z$1
-  implements g.a
+  implements MenuItem.OnMenuItemClickListener
 {
   z$1(z paramz) {}
   
-  public final void onError()
+  public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    z.a(kSO).reset();
-    z.b(kSO).aUF();
-    z.c(kSO).aUF();
-    com.tencent.mm.sdk.platformtools.z.CR("keep_app_silent");
-    z.d(kSO).Xv();
-    ekSO).kVo.bdO();
-    u.v("!56@/B4Tb64lLpKwUcOR+EdWcty+WvCaqY0r1h+IytP2caAOFJMyUBO6MA==", "record stop on error");
-    z.f(kSO).bC(true);
-    z.f(kSO).hg(true);
-    Toast.makeText(fkSO).koJ.kpc, fkSO).koJ.kpc.getString(2131427940), 0).show();
+    paramMenuItem = new Intent();
+    Object localObject2 = lsI.lsD.lvX;
+    if (localObject2 != null)
+    {
+      Object localObject1 = new ArrayList();
+      localObject2 = ((Set)localObject2).iterator();
+      while (((Iterator)localObject2).hasNext())
+      {
+        Long localLong = (Long)((Iterator)localObject2).next();
+        if (localLong != null) {
+          ((List)localObject1).add(localLong);
+        }
+      }
+      localObject2 = new long[((List)localObject1).size()];
+      localObject1 = ((List)localObject1).iterator();
+      int i = 0;
+      while (((Iterator)localObject1).hasNext())
+      {
+        localObject2[i] = ((Long)((Iterator)localObject1).next()).longValue();
+        i += 1;
+      }
+      paramMenuItem.putExtra("k_outside_expose_proof_item_list", (long[])localObject2);
+      lsI.lsC.y().setResult(-1, paramMenuItem);
+    }
+    for (;;)
+    {
+      paramMenuItem.putExtra("k_is_group_chat", lsI.kZE);
+      lsI.lsC.finish();
+      return false;
+      lsI.lsC.y().setResult(0, paramMenuItem);
+    }
   }
 }
 

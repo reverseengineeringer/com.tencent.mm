@@ -12,13 +12,13 @@ final class MMAutoCompleteTextView$1
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    paramView = kCY;
+    paramView = lcd;
     if (paramView.getCompoundDrawables()[2] == null) {}
-    while ((paramMotionEvent.getAction() != 1) || (paramMotionEvent.getX() <= paramView.getWidth() - paramView.getPaddingRight() - kCY.iGP.getIntrinsicWidth())) {
+    while ((paramMotionEvent.getAction() != 1) || (paramMotionEvent.getX() <= paramView.getWidth() - paramView.getPaddingRight() - lcd.jdK.getIntrinsicWidth())) {
       return false;
     }
     paramView.setText("");
-    MMAutoCompleteTextView.a(kCY);
+    MMAutoCompleteTextView.a(lcd);
     return false;
   }
 }

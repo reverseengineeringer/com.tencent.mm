@@ -10,8 +10,8 @@ final class ChatFooter$16
   
   public final void onClick(View paramView)
   {
-    if (ChatFooter.H(iLO) != null) {
-      ChatFooter.H(iLO).gz(false);
+    if (ChatFooter.I(jiL) != null) {
+      ChatFooter.I(jiL).gX(false);
     }
   }
 }

@@ -24,7 +24,7 @@ class URISpanHandlerSet$SettingPluginSxMsgUriSpanHandler
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     if (paramString.trim().startsWith("weixin://setting/plugin/sxmsg")) {
       return new g(paramString, 11, null);
@@ -32,7 +32,7 @@ class URISpanHandlerSet$SettingPluginSxMsgUriSpanHandler
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 11 };
   }

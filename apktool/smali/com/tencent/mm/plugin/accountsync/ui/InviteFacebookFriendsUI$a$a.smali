@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field bMs:Landroid/widget/TextView;
+.field bFM:Landroid/widget/TextView;
 
-.field coY:Landroid/widget/ImageView;
+.field ckm:Landroid/widget/ImageView;
 
-.field coZ:Landroid/widget/TextView;
+.field ckn:Landroid/widget/TextView;
 
-.field cpa:Landroid/widget/CheckBox;
+.field cko:Landroid/widget/CheckBox;
 
 
 # direct methods

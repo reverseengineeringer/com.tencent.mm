@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract eu(I)V
+.method public abstract fg(I)V
 .end method

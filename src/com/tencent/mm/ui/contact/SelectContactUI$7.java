@@ -10,8 +10,8 @@ final class SelectContactUI$7
   
   public final void onClick(View paramView)
   {
-    SelectContactUI.j(lmm);
-    SelectContactUI.k(lmm);
+    SelectContactUI.j(lMB);
+    SelectContactUI.k(lMB);
   }
 }
 

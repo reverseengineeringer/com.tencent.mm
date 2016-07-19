@@ -1,99 +1,293 @@
 package ct;
 
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.atomic.AtomicInteger;
+import android.content.Context;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
+import android.telephony.TelephonyManager;
+import android.text.TextUtils;
+import android.util.Log;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public final class ba
-  implements av
 {
-  private static AtomicInteger k = new AtomicInteger(0);
-  public bh a;
-  public int b = 0;
-  public String c;
-  public int d;
-  public int e;
-  public int f;
-  public int g;
-  public t h;
-  public long i;
-  public int j;
-  private bh l;
-  private byte[] m;
-  private int n = 0;
+  private static String a = "";
+  private static String b = "";
   
-  public ba(bh parambh)
+  public static int a(byte[] paramArrayOfByte)
   {
-    new CountDownLatch(1);
-    d = 0;
-    e = 0;
-    f = 0;
-    g = 0;
-    h = null;
-    i = 0L;
-    j = 20;
-    l = parambh;
-    n = k.getAndIncrement();
-    l.a(n);
+    return (paramArrayOfByte[0] << 24 & 0xFF000000) + (paramArrayOfByte[1] << 16 & 0xFF0000) + (paramArrayOfByte[2] << 8 & 0xFF00) + (paramArrayOfByte[3] & 0xFF);
   }
   
-  public final bh a()
+  public static String a()
   {
-    return a;
+    int i = 1;
+    for (;;)
+    {
+      try
+      {
+        localObject = a;
+        if (localObject != null) {
+          continue;
+        }
+        if (i != 0)
+        {
+          localObject = p.a();
+          if (localObject != null)
+          {
+            localObject = (TelephonyManager)((Context)localObject).getSystemService("phone");
+            if (localObject != null) {
+              a = ((TelephonyManager)localObject).getDeviceId();
+            }
+          }
+        }
+      }
+      catch (Exception localException)
+      {
+        Object localObject;
+        int j;
+        continue;
+      }
+      return a;
+      j = ((String)localObject).trim().length();
+      if (j != 0) {
+        i = 0;
+      }
+    }
   }
   
-  public final void b()
+  public static String a(Context paramContext)
   {
-    az.a().a(this);
+    int i = 1;
+    if (paramContext == null) {
+      return null;
+    }
+    for (;;)
+    {
+      try
+      {
+        str = a;
+        if (str != null) {
+          continue;
+        }
+        if (i != 0)
+        {
+          paramContext = (TelephonyManager)paramContext.getSystemService("phone");
+          if (paramContext != null) {
+            a = paramContext.getDeviceId();
+          }
+        }
+      }
+      catch (Exception paramContext)
+      {
+        String str;
+        int j;
+        continue;
+      }
+      return a;
+      j = str.trim().length();
+      if (j != 0) {
+        i = 0;
+      }
+    }
   }
   
-  public final int c()
+  public static String a(Exception paramException)
   {
-    return b;
+    String str = Log.getStackTraceString(paramException);
+    if (str != null)
+    {
+      if ((str.indexOf("\n") != -1) && (str.indexOf("\n") < 100)) {
+        paramException = str.substring(0, str.indexOf("\n"));
+      }
+      do
+      {
+        return paramException;
+        paramException = str;
+      } while (str.length() <= 100);
+      return str.substring(0, 100);
+    }
+    return "";
   }
   
-  public final String d()
+  public static boolean a(String paramString)
   {
-    return c;
+    if (paramString == null) {}
+    while (paramString.trim().length() == 0) {
+      return true;
+    }
+    return false;
   }
   
-  public final t e()
+  public static String b(Context paramContext)
   {
-    return h;
+    int i = 1;
+    if (paramContext == null) {
+      return null;
+    }
+    for (;;)
+    {
+      try
+      {
+        str = b;
+        if (str != null) {
+          continue;
+        }
+        if (i != 0)
+        {
+          paramContext = (WifiManager)paramContext.getSystemService("wifi");
+          if (paramContext != null)
+          {
+            paramContext = paramContext.getConnectionInfo();
+            if (paramContext != null) {
+              b = paramContext.getMacAddress();
+            }
+          }
+        }
+      }
+      catch (Exception paramContext)
+      {
+        String str;
+        int j;
+        continue;
+      }
+      return b;
+      j = str.trim().length();
+      if (j != 0) {
+        i = 0;
+      }
+    }
   }
   
-  public final int f()
+  public static String b(String paramString)
   {
-    return d;
+    Object localObject = p.a();
+    try
+    {
+      StringBuilder localStringBuilder = new StringBuilder("");
+      String str = a((Context)localObject);
+      if (!TextUtils.isEmpty(str)) {
+        localStringBuilder.append(str);
+      }
+      localObject = b((Context)localObject);
+      if (!TextUtils.isEmpty((CharSequence)localObject)) {
+        localStringBuilder.append((String)localObject);
+      }
+      localStringBuilder.append(System.currentTimeMillis());
+      localStringBuilder.append(paramString);
+      localStringBuilder.append((int)(Math.random() * 2.147483647E9D));
+      paramString = e(localStringBuilder.toString());
+      return paramString;
+    }
+    catch (Exception paramString) {}
+    return "";
   }
   
-  public final int g()
+  public static String b(byte[] paramArrayOfByte)
   {
-    return g;
+    Object localObject;
+    if (paramArrayOfByte == null)
+    {
+      localObject = "";
+      return (String)localObject;
+    }
+    String str = "";
+    int i = 0;
+    for (;;)
+    {
+      localObject = str;
+      if (i >= paramArrayOfByte.length) {
+        break;
+      }
+      str = str + Integer.toHexString(paramArrayOfByte[i] >> 4 & 0xF);
+      str = str + Integer.toHexString(paramArrayOfByte[i] & 0xF);
+      i += 1;
+    }
   }
   
-  public final int h()
+  public static String c(String paramString)
   {
-    return e;
+    String str;
+    if ((paramString == null) || (paramString.length() == 0)) {
+      str = null;
+    }
+    do
+    {
+      do
+      {
+        return str;
+        str = paramString;
+      } while (paramString.toLowerCase().startsWith("http://"));
+      str = paramString;
+    } while (paramString.toLowerCase().startsWith("https://"));
+    return "http://" + paramString;
   }
   
-  public final int i()
+  public static String d(String paramString)
   {
-    return f;
+    String str;
+    if ((paramString == null) || (paramString.length() == 0))
+    {
+      str = null;
+      return str;
+    }
+    int i = paramString.indexOf("://");
+    if (i != -1) {
+      i += 3;
+    }
+    for (;;)
+    {
+      int j = paramString.indexOf('/', i);
+      if (j != -1) {
+        paramString = paramString.substring(i, j);
+      }
+      for (;;)
+      {
+        i = paramString.indexOf(":");
+        str = paramString;
+        if (i < 0) {
+          break;
+        }
+        return paramString.substring(0, i);
+        j = paramString.indexOf('?', i);
+        if (j != -1) {
+          paramString = paramString.substring(i, j);
+        } else {
+          paramString = paramString.substring(i);
+        }
+      }
+      i = 0;
+    }
   }
   
-  public final void j()
+  private static String e(String paramString)
   {
-    m = l.a();
-  }
-  
-  public final int k()
-  {
-    return n;
-  }
-  
-  public final byte[] l()
-  {
-    return m;
+    if ((paramString == null) || (paramString.length() == 0)) {
+      return null;
+    }
+    try
+    {
+      Object localObject = MessageDigest.getInstance("MD5");
+      ((MessageDigest)localObject).update(paramString.getBytes());
+      paramString = ((MessageDigest)localObject).digest();
+      if (paramString == null) {
+        return "";
+      }
+      localObject = new StringBuffer();
+      int i = 0;
+      while (i < paramString.length)
+      {
+        String str = Integer.toHexString(paramString[i] & 0xFF);
+        if (str.length() == 1) {
+          ((StringBuffer)localObject).append("0");
+        }
+        ((StringBuffer)localObject).append(str);
+        i += 1;
+      }
+      return ((StringBuffer)localObject).toString().toUpperCase();
+    }
+    catch (NoSuchAlgorithmException paramString) {}
+    return null;
   }
 }
 

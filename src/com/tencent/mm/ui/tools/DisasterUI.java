@@ -8,30 +8,30 @@ import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 
 public class DisasterUI
   extends MMActivity
 {
-  public final boolean aNj()
+  public final boolean aQR()
   {
     return false;
   }
   
   protected final int getLayoutId()
   {
-    return 2131361810;
+    return 2130903426;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    u.i("!32@/B4Tb64lLpKLlbgMS2DoQqCWOqvTA8sH", "onCreate :%d", new Object[] { Integer.valueOf(hashCode()) });
+    v.i("MicroMsg.DisasterUI", "onCreate :%d", new Object[] { Integer.valueOf(hashCode()) });
     paramBundle = getIntent().getStringExtra("key_disaster_content");
     final String str = getIntent().getStringExtra("key_disaster_url");
-    ((TextView)findViewById(2131165290)).setText(paramBundle);
-    findViewById(2131165291).setOnClickListener(new View.OnClickListener()
+    ((TextView)findViewById(2131756449)).setText(paramBundle);
+    findViewById(2131756450).setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
@@ -40,7 +40,7 @@ public class DisasterUI
         startActivity(paramAnonymousView);
       }
     });
-    Gj(getString(2131427844));
+    Ah(getString(2131233273));
     b(new MenuItem.OnMenuItemClickListener()
     {
       public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)

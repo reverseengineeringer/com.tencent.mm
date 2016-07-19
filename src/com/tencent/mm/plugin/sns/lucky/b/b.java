@@ -1,19 +1,19 @@
 package com.tencent.mm.plugin.sns.lucky.b;
 
-import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.plugin.report.service.g;
 
 public final class b
 {
-  public static void be(int paramInt1, int paramInt2)
+  public static void bi(int paramInt1, int paramInt2)
   {
-    h localh = h.fUJ;
-    h.b(paramInt1, paramInt2, 1L, true);
+    g localg = g.gdY;
+    g.b(paramInt1, paramInt2, 1L, true);
   }
   
-  public static void lp(int paramInt)
+  public static void id(int paramInt)
   {
-    h localh = h.fUJ;
-    h.b(270L, paramInt, 1L, true);
+    g localg = g.gdY;
+    g.b(270L, paramInt, 1L, true);
   }
 }
 

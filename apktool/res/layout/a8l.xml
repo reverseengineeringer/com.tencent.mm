@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:focusable="false" android:focusableInTouchMode="false" android:visibility="visible" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:textSize="15.0sp" android:textColor="#ff757575" android:id="@id/c59" android:background="@drawable/dl" android:layout_width="fill_parent" android:layout_height="60.0dip" android:text="@string/ck5" />
+</LinearLayout>

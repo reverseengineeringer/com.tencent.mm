@@ -10,11 +10,11 @@ final class a$7
   
   public final void run()
   {
-    if (a.aQa() != null)
+    if (a.aUJ() != null)
     {
-      Iterator localIterator = a.aQa().iterator();
+      Iterator localIterator = a.aUJ().iterator();
       while (localIterator.hasNext()) {
-        ((k)localIterator.next()).bu(gPj);
+        ((k)localIterator.next()).bF(gXl);
       }
     }
   }

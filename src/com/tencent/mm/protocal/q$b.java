@@ -1,20 +1,18 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.alq;
-import com.tencent.mm.protocal.b.dd;
-import com.tencent.mm.protocal.b.vu;
+import com.tencent.mm.protocal.b.dg;
+import com.tencent.mm.protocal.b.id;
 
 public final class q$b
-  extends h.d
-  implements h.b
+  extends k.d
+  implements k.b
 {
-  public vu iVf = new vu();
+  public final id jsx = new id();
   
-  public final int y(byte[] paramArrayOfByte)
+  public final int D(byte[] paramArrayOfByte)
   {
-    iVf = ((vu)new vu().am(paramArrayOfByte));
-    h.a(this, iVf.jHj);
-    return iVf.jHj.iZL;
+    jsx.au(paramArrayOfByte);
+    return jsx.kfH.jxr;
   }
 }
 

@@ -1,9 +1,9 @@
 package com.tencent.mm.modelmulti;
 
-import com.tencent.mm.modelsimple.ah;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.modelsimple.af;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
 import java.util.List;
 
 final class h$1
@@ -13,26 +13,26 @@ final class h$1
   
   public final void run()
   {
-    new ah(5, "", "", "", "", false, 1, false).a(h.a(bVt), new d()
+    new af(5, "", "", "", "", false, 1, false).a(h.a(bOU), new d()
     {
-      public final void a(int paramAnonymousInt1, int paramAnonymousInt2, String paramAnonymousString, j paramAnonymousj)
+      public final void onSceneEnd(int paramAnonymousInt1, int paramAnonymousInt2, String paramAnonymousString, j paramAnonymousj)
       {
-        bFy = true;
-        u.i("!44@/B4Tb64lLpK+IBX8XDgnvsPvmyRJXaBBLjDRbPDJXV4=", "summerdktext verifypsw onSceneEnd[%d, %d] needVerifyPswList size[%d] errMsg[%s] verifyingPsw[%b], retryVerifyCount[%d]", new Object[] { Integer.valueOf(paramAnonymousInt1), Integer.valueOf(paramAnonymousInt2), Integer.valueOf(h.b(bVt).size()), paramAnonymousString, Boolean.valueOf(h.c(bVt)), Integer.valueOf(h.d(bVt)) });
+        byJ = true;
+        v.i("MicroMsg.NetSceneSendMsg", "summerdktext verifypsw onSceneEnd[%d, %d] needVerifyPswList size[%d] errMsg[%s] verifyingPsw[%b], retryVerifyCount[%d]", new Object[] { Integer.valueOf(paramAnonymousInt1), Integer.valueOf(paramAnonymousInt2), Integer.valueOf(h.b(bOU).size()), paramAnonymousString, Boolean.valueOf(h.c(bOU)), Integer.valueOf(h.d(bOU)) });
         if ((paramAnonymousInt1 == 0) && (paramAnonymousInt2 == 0))
         {
-          h.b(bVt).clear();
-          h.a(bVt, paramAnonymousString);
+          h.b(bOU).clear();
+          h.a(bOU, paramAnonymousString);
         }
         for (;;)
         {
-          h.f(bVt);
-          com.tencent.mm.platformtools.r.cnS = false;
+          h.f(bOU);
+          com.tencent.mm.platformtools.q.ciX = false;
           return;
-          h.a(bVt, h.b(bVt));
-          h.e(bVt).a(4, -49, bVs, bVt);
-          h.b(bVt, h.b(bVt));
-          h.b(bVt).clear();
+          h.a(bOU, h.b(bOU));
+          h.e(bOU).onSceneEnd(4, -49, bOT, bOU);
+          h.b(bOU, h.b(bOU));
+          h.b(bOU).clear();
         }
       }
     });

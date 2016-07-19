@@ -7,8 +7,8 @@ final class ar$1$1
   
   public final void run()
   {
-    if (bBI.bBH != null) {
-      bBI.bBH.uh();
+    if (buQ.buP != null) {
+      buQ.buP.ui();
     }
   }
 }

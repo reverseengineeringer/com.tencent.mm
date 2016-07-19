@@ -5,24 +5,24 @@ import android.view.View;
 final class ActionMenuPresenter$b
   implements Runnable
 {
-  private ActionMenuPresenter.d kV;
+  private ActionMenuPresenter.d lm;
   
   public ActionMenuPresenter$b(ActionMenuPresenter paramActionMenuPresenter, ActionMenuPresenter.d paramd)
   {
-    kV = paramd;
+    lm = paramd;
   }
   
   public final void run()
   {
-    Object localObject = kU.iO;
-    if (lO != null) {
-      lO.a((f)localObject);
+    Object localObject = ll.jf;
+    if (me != null) {
+      me.a((f)localObject);
     }
-    localObject = (View)kU.lo;
-    if ((localObject != null) && (((View)localObject).getWindowToken() != null) && (kV.bH())) {
-      kU.kP = kV;
+    localObject = (View)ll.lF;
+    if ((localObject != null) && (((View)localObject).getWindowToken() != null) && (lm.bH())) {
+      ll.lg = lm;
     }
-    kU.kR = null;
+    ll.li = null;
   }
 }
 

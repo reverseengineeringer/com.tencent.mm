@@ -19,12 +19,21 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter$ImageSpanData;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field bEq:I
+.field bxB:I
 
-.field ldk:I
+.field lDB:I
 
 .field path:Ljava/lang/String;
 
@@ -88,12 +97,12 @@
 
     .prologue
     .line 353
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter$ImageSpanData;->bEq:I
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter$ImageSpanData;->bxB:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 354
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter$ImageSpanData;->ldk:I
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter$ImageSpanData;->lDB:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 

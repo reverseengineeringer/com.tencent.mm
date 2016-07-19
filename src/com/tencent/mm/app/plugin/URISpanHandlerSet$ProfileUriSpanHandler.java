@@ -2,14 +2,14 @@ package com.tencent.mm.app.plugin;
 
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.h.a;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.i.a;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.pluginsdk.l;
 import com.tencent.mm.pluginsdk.ui.applet.g;
 import com.tencent.mm.pluginsdk.ui.d.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 import com.tencent.mm.ui.contact.e;
@@ -30,16 +30,16 @@ class URISpanHandlerSet$ProfileUriSpanHandler
       if (paramb != null) {
         paramb.a(paramg);
       }
-      paramg = (String)paramg.c(String.class);
+      paramg = (String)paramg.d(String.class);
       paramb = new Intent();
       paramb.addFlags(268435456);
       paramb.putExtra("Contact_User", paramg);
-      k localk = ah.tD().rq().Ep(paramg);
-      if ((localk != null) && ((int)bvi > 0) && (a.ce(field_type))) {
+      k localk = ah.tE().rr().GD(paramg);
+      if ((localk != null) && ((int)bjS > 0) && (a.cy(field_type))) {
         e.a(paramb, paramg);
       }
-      if (ay.ky(paramg).length() > 0) {
-        com.tencent.mm.ar.c.c(URISpanHandlerSet.a(ang), "profile", ".ui.ContactInfoUI", paramb);
+      if (be.li(paramg).length() > 0) {
+        com.tencent.mm.av.c.c(URISpanHandlerSet.a(ZU), "profile", ".ui.ContactInfoUI", paramb);
       }
       return true;
     }
@@ -51,25 +51,25 @@ class URISpanHandlerSet$ProfileUriSpanHandler
     if (paramString.startsWith("weixin://contacts/profile/"))
     {
       paramString = paramString.trim().replace("weixin://contacts/profile/", "").replace("/", "");
-      if (ay.kz(paramString))
+      if (be.kf(paramString))
       {
-        u.e("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "jumpToActivity fail, user is null");
+        v.e("MicroMsg.URISpanHandlerSet", "jumpToActivity fail, user is null");
         return true;
       }
       paraml = new Intent();
       paraml.addFlags(268435456);
       paraml.putExtra("Contact_User", paramString);
-      paramBundle = ah.tD().rq().Ep(paramString);
-      if ((paramBundle != null) && ((int)bvi > 0) && (a.ce(field_type))) {
+      paramBundle = ah.tE().rr().GD(paramString);
+      if ((paramBundle != null) && ((int)bjS > 0) && (a.cy(field_type))) {
         e.a(paraml, paramString);
       }
-      com.tencent.mm.ar.c.c(URISpanHandlerSet.a(ang), "profile", ".ui.ContactInfoUI", paraml);
+      com.tencent.mm.av.c.c(URISpanHandlerSet.a(ZU), "profile", ".ui.ContactInfoUI", paraml);
       return true;
     }
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     if (paramString.trim().startsWith("weixin://contacts/profile/")) {
       return new g(paramString, 3, paramString.trim().replace("weixin://contacts/profile/", "").replace("/", ""));
@@ -77,7 +77,7 @@ class URISpanHandlerSet$ProfileUriSpanHandler
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[] { 3 };
   }

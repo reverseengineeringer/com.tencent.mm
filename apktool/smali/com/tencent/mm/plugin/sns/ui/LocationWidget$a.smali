@@ -15,8 +15,17 @@
 
 
 # virtual methods
-.method public abstract aBe()Ljava/util/ArrayList;
+.method public abstract aEf()Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/tencent/mm/compatible/util/Exif$a;",
+            ">;"
+        }
+    .end annotation
 .end method
 
-.method public abstract aBf()Z
+.method public abstract aEg()Z
 .end method

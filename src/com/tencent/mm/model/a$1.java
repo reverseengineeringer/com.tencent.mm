@@ -1,8 +1,8 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.report.service.g;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class a$1
   implements Runnable
@@ -13,16 +13,16 @@ final class a$1
   {
     try
     {
-      if (a.re())
+      if (a.rd())
       {
-        h localh = h.fUJ;
-        h.b(226L, 1L, 1L, false);
+        g localg = g.gdY;
+        g.b(226L, 1L, 1L, false);
       }
       return;
     }
     catch (Exception localException)
     {
-      u.e("!44@/B4Tb64lLpLEGVwVFEpAHktoF8fiVITamsAi0LNQQfI=", "init Exception:%s", new Object[] { ay.b(localException) });
+      v.e("MicroMsg.AccInfoCacheInWorker", "init Exception:%s", new Object[] { be.f(localException) });
     }
   }
 }

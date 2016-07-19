@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bMp:Lcom/tencent/mm/modelfriend/j;
+.field final synthetic bFJ:Lcom/tencent/mm/modelfriend/j;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 55
-    iput-object p1, p0, Lcom/tencent/mm/modelfriend/j$1;->bMp:Lcom/tencent/mm/modelfriend/j;
+    iput-object p1, p0, Lcom/tencent/mm/modelfriend/j$1;->bFJ:Lcom/tencent/mm/modelfriend/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final hw(Ljava/lang/String;)Landroid/graphics/Bitmap;
+.method public final hO(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 2
 
     .prologue
@@ -45,7 +45,7 @@
 
     const/4 v1, -0x1
 
-    invoke-static {p1, v0, v1}, Lcom/tencent/mm/q/b;->a(Ljava/lang/String;ZI)Landroid/graphics/Bitmap;
+    invoke-static {p1, v0, v1}, Lcom/tencent/mm/s/b;->a(Ljava/lang/String;ZI)Landroid/graphics/Bitmap;
 
     move-result-object v0
 

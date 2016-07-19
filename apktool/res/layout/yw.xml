@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/ow" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:id="@id/bim" android:background="@drawable/m_" android:paddingTop="@dimen/j8" android:paddingBottom="@dimen/j8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+        <include style="@style/ContactListItemStyle" layout="@layout/roominfo_contact" />
+        <include style="@style/ContactListItemStyle" layout="@layout/roominfo_contact" />
+        <include style="@style/ContactListItemStyle" layout="@layout/roominfo_contact" />
+        <include style="@style/ContactListItemStyle" layout="@layout/roominfo_contact" />
+    </LinearLayout>
+    <TextView android:id="@id/ee" android:background="@drawable/gq" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</LinearLayout>

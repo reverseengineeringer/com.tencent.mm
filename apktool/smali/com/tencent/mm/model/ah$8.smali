@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/r/t$b;
+.implements Lcom/tencent/mm/t/t$b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/model/ah;-><init>(Lcom/tencent/mm/model/x;Lcom/tencent/mm/storage/g;Lcom/tencent/mm/r/m$a;)V
+    value = Lcom/tencent/mm/model/ah;-><init>(Lcom/tencent/mm/model/x;Lcom/tencent/mm/storage/g;Lcom/tencent/mm/t/m$a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic bBf:Lcom/tencent/mm/model/ah;
+.field final synthetic buk:Lcom/tencent/mm/model/ah;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 482
-    iput-object p1, p0, Lcom/tencent/mm/model/ah$8;->bBf:Lcom/tencent/mm/model/ah;
+    .line 483
+    iput-object p1, p0, Lcom/tencent/mm/model/ah$8;->buk:Lcom/tencent/mm/model/ah;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,14 +36,14 @@
 
 
 # virtual methods
-.method public final tQ()Lcom/tencent/mm/r/m;
+.method public final tR()Lcom/tencent/mm/t/m;
     .locals 1
 
     .prologue
-    .line 486
-    iget-object v0, p0, Lcom/tencent/mm/model/ah$8;->bBf:Lcom/tencent/mm/model/ah;
+    .line 487
+    iget-object v0, p0, Lcom/tencent/mm/model/ah$8;->buk:Lcom/tencent/mm/model/ah;
 
-    invoke-static {v0}, Lcom/tencent/mm/model/ah;->g(Lcom/tencent/mm/model/ah;)Lcom/tencent/mm/r/m;
+    invoke-static {v0}, Lcom/tencent/mm/model/ah;->g(Lcom/tencent/mm/model/ah;)Lcom/tencent/mm/t/m;
 
     move-result-object v0
 

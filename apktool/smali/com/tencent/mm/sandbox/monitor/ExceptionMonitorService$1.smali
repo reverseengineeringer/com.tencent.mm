@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic jSJ:Lcom/tencent/mm/sandbox/monitor/ExceptionMonitorService;
+.field final synthetic ksd:Lcom/tencent/mm/sandbox/monitor/ExceptionMonitorService;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 28
-    iput-object p1, p0, Lcom/tencent/mm/sandbox/monitor/ExceptionMonitorService$1;->jSJ:Lcom/tencent/mm/sandbox/monitor/ExceptionMonitorService;
+    iput-object p1, p0, Lcom/tencent/mm/sandbox/monitor/ExceptionMonitorService$1;->ksd:Lcom/tencent/mm/sandbox/monitor/ExceptionMonitorService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,14 +41,14 @@
 
     .prologue
     .line 32
-    const-string/jumbo v0, "!44@/B4Tb64lLpIdghwcJC06L5mX8ZGnQwd6K21Nn76yszs="
+    const-string/jumbo v0, "MicroMsg.CrashMonitorService"
 
     const-string/jumbo v1, "stopSelf"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 33
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/monitor/ExceptionMonitorService$1;->jSJ:Lcom/tencent/mm/sandbox/monitor/ExceptionMonitorService;
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/monitor/ExceptionMonitorService$1;->ksd:Lcom/tencent/mm/sandbox/monitor/ExceptionMonitorService;
 
     invoke-virtual {v0}, Lcom/tencent/mm/sandbox/monitor/ExceptionMonitorService;->stopSelf()V
 

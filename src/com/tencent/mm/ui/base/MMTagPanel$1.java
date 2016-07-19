@@ -3,8 +3,8 @@ package com.tencent.mm.ui.base;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnKeyListener;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.widget.MMEditText;
 import java.util.LinkedList;
 
@@ -17,8 +17,8 @@ final class MMTagPanel$1
   {
     if ((paramKeyEvent.getAction() == 0) && (67 == paramInt))
     {
-      u.d("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "on del click, selection[%d, %d]", new Object[] { Integer.valueOf(MMTagPanel.a(kHq).getSelectionStart()), Integer.valueOf(MMTagPanel.a(kHq).getSelectionEnd()) });
-      if ((MMTagPanel.a(kHq).getSelectionStart() != 0) || (MMTagPanel.a(kHq).getSelectionStart() != MMTagPanel.a(kHq).getSelectionEnd())) {
+      v.d("MicroMsg.MMTagPanel", "on del click, selection[%d, %d]", new Object[] { Integer.valueOf(MMTagPanel.a(lgs).getSelectionStart()), Integer.valueOf(MMTagPanel.a(lgs).getSelectionEnd()) });
+      if ((MMTagPanel.a(lgs).getSelectionStart() != 0) || (MMTagPanel.a(lgs).getSelectionStart() != MMTagPanel.a(lgs).getSelectionEnd())) {
         break label100;
       }
       paramInt = 1;
@@ -33,30 +33,30 @@ final class MMTagPanel$1
       return false;
       paramInt = 0;
       break;
-      kHq.Xk();
-    } while ((MMTagPanel.b(kHq) == null) || (MMTagPanel.b(kHq).isEmpty()));
-    if ((!MMTagPanel.c(kHq)) && (MMTagPanel.d(kHq) == null))
+      lgs.YV();
+    } while ((MMTagPanel.b(lgs) == null) || (MMTagPanel.b(lgs).isEmpty()));
+    if ((!MMTagPanel.c(lgs)) && (MMTagPanel.d(lgs) == null))
     {
-      MMTagPanel.a(kHq, (MMTagPanel.d)MMTagPanel.b(kHq).getLast());
-      kHq.a(dkHq).kHC, false, true);
-      MMTagPanel.a(kHq).setCursorVisible(false);
+      MMTagPanel.a(lgs, (MMTagPanel.d)MMTagPanel.b(lgs).getLast());
+      lgs.a(dlgs).lgE, false, true);
+      MMTagPanel.a(lgs).setCursorVisible(false);
       return false;
     }
-    if ((MMTagPanel.d(kHq) != null) && (MMTagPanel.b(kHq) != null) && (MMTagPanel.b(kHq).getLast() != null) && (!ay.kz(dkHq).kHB)) && (!ay.kz(bkHq).getLast()).kHB)) && (!dkHq).kHB.equals(bkHq).getLast()).kHB)))
+    if ((MMTagPanel.d(lgs) != null) && (MMTagPanel.b(lgs) != null) && (MMTagPanel.b(lgs).getLast() != null) && (!be.kf(dlgs).lgD)) && (!be.kf(blgs).getLast()).lgD)) && (!dlgs).lgD.equals(blgs).getLast()).lgD)))
     {
-      u.i("!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA", "change hight");
-      kHq.bcY();
-      MMTagPanel.a(kHq, (MMTagPanel.d)MMTagPanel.b(kHq).getLast());
-      kHq.a(dkHq).kHC, false, true);
-      MMTagPanel.a(kHq).setCursorVisible(false);
+      v.i("MicroMsg.MMTagPanel", "change hight");
+      lgs.biA();
+      MMTagPanel.a(lgs, (MMTagPanel.d)MMTagPanel.b(lgs).getLast());
+      lgs.a(dlgs).lgE, false, true);
+      MMTagPanel.a(lgs).setCursorVisible(false);
       return false;
     }
-    paramView = bkHq).getLast()).kHB;
-    kHq.removeTag(paramView);
-    if (MMTagPanel.e(kHq) != null) {
-      MMTagPanel.e(kHq).ng(paramView);
+    paramView = blgs).getLast()).lgD;
+    lgs.removeTag(paramView);
+    if (MMTagPanel.e(lgs) != null) {
+      MMTagPanel.e(lgs).oo(paramView);
     }
-    kHq.bcY();
+    lgs.biA();
     return false;
   }
 }

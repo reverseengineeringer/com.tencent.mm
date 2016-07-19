@@ -7,17 +7,17 @@ final class ChatFooterCustom$1
 {
   ChatFooterCustom$1(ChatFooterCustom paramChatFooterCustom) {}
   
-  public final void eu(int paramInt)
+  public final void fg(int paramInt)
   {
     switch (paramInt)
     {
     default: 
       return;
     case 0: 
-      ChatFooterCustom.a(kRP);
+      ChatFooterCustom.a(lrR);
       return;
     }
-    ChatFooterCustom.b(kRP);
+    ChatFooterCustom.b(lrR);
   }
 }
 

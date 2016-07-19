@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract bs(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;
+.method public abstract bo(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/ui/ChatFooterPanel;
 .end method

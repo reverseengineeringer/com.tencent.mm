@@ -38,7 +38,17 @@
 
 
 # virtual methods
-.method public final aK(I)V
+.method public final asBinder()Landroid/os/IBinder;
+    .locals 1
+
+    .prologue
+    .line 66
+    iget-object v0, p0, Lcom/tencent/mm/network/m$a$a;->mRemote:Landroid/os/IBinder;
+
+    return-object v0
+.end method
+
+.method public final bc(I)V
     .locals 5
 
     .prologue
@@ -94,14 +104,4 @@
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v0
-.end method
-
-.method public final asBinder()Landroid/os/IBinder;
-    .locals 1
-
-    .prologue
-    .line 66
-    iget-object v0, p0, Lcom/tencent/mm/network/m$a$a;->mRemote:Landroid/os/IBinder;
-
-    return-object v0
 .end method

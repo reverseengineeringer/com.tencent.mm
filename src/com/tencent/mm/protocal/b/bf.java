@@ -1,35 +1,43 @@
 package com.tencent.mm.protocal.b;
 
 public final class bf
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public String ehX;
+  public String jvH;
+  public String jvI;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (ehX != null) {
-        paramVarArgs.d(1, ehX);
+      if (jvH != null) {
+        paramVarArgs.e(1, jvH);
+      }
+      if (jvI != null) {
+        paramVarArgs.e(2, jvI);
       }
       return 0;
     }
     if (paramInt == 1) {
-      if (ehX == null) {
-        break label174;
+      if (jvH == null) {
+        break label234;
       }
     }
-    label174:
-    for (paramInt = a.a.a.b.b.a.e(1, ehX) + 0;; paramInt = 0)
+    label234:
+    for (paramInt = a.a.a.b.b.a.f(1, jvH) + 0;; paramInt = 0)
     {
-      return paramInt;
+      int i = paramInt;
+      if (jvI != null) {
+        i = paramInt + a.a.a.b.b.a.f(2, jvI);
+      }
+      return i;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
         break;
@@ -42,8 +50,11 @@ public final class bf
         {
         default: 
           return -1;
+        case 1: 
+          jvH = mMY.readString();
+          return 0;
         }
-        ehX = maU.readString();
+        jvI = mMY.readString();
         return 0;
       }
       return -1;

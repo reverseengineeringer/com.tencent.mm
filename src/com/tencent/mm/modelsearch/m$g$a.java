@@ -2,9 +2,9 @@ package com.tencent.mm.modelsearch;
 
 public final class m$g$a
 {
-  public int bZP = -1;
-  public int bZQ = -1;
-  public int bZR = -1;
+  public int bTA = -1;
+  public int bTy = -1;
+  public int bTz = -1;
   public int end;
   public int start;
   

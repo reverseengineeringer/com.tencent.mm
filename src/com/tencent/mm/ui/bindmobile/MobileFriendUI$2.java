@@ -14,9 +14,9 @@ final class MobileFriendUI$2
   
   public final void onClick(View paramView)
   {
-    paramView = new Intent(kPt.koJ.kpc, BindMContactIntroUI.class);
+    paramView = new Intent(loJ.kNN.kOg, BindMContactIntroUI.class);
     paramView.putExtra("key_upload_scene", 6);
-    MMWizardActivity.v(kPt, paramView);
+    MMWizardActivity.v(loJ, paramView);
   }
 }
 

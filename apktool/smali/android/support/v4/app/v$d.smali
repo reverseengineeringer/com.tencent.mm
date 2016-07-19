@@ -1,4 +1,4 @@
-.class Landroid/support/v4/app/v$d;
+.class final Landroid/support/v4/app/v$d;
 .super Landroid/support/v4/app/v$c;
 .source "SourceFile"
 
@@ -27,6 +27,16 @@
 
 
 # virtual methods
+.method public final Z()I
+    .locals 1
+
+    .prologue
+    .line 157
+    const/16 v0, 0x21
+
+    return v0
+.end method
+
 .method public final a(Landroid/app/NotificationManager;Ljava/lang/String;I)V
     .locals 1
 
@@ -49,6 +59,6 @@
 
     invoke-virtual {p1, v0, p3, p4}, Landroid/app/NotificationManager;->notify(Ljava/lang/String;ILandroid/app/Notification;)V
 
-    .line 154
+    .line 153
     return-void
 .end method

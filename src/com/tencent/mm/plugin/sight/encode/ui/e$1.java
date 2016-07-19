@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.hardware.Camera;
 import com.tencent.mm.compatible.d.c;
 import com.tencent.mm.compatible.d.c.a.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class e$1
   implements Runnable
@@ -14,37 +14,37 @@ final class e$1
   
   public final void run()
   {
-    u.i("!56@/B4Tb64lLpJusIoUV0UaqLbZZ92tGkg2qimb2Z/NRagzXiTGtEYyIA==", "Start Open Camera thread[parent:%d this:%d] time:%d", new Object[] { Long.valueOf(gDp), Long.valueOf(Thread.currentThread().getId()), Long.valueOf(ay.FS() - emF) });
+    v.i("MicroMsg.SightCamera.OpenCameraThread", "Start Open Camera thread[parent:%d this:%d] time:%d", new Object[] { Long.valueOf(gJQ), Long.valueOf(Thread.currentThread().getId()), Long.valueOf(be.Gp() - erF) });
     try
     {
-      gDr.gDo = c.a(cms, gDq);
+      gJS.gJP = c.b(chx, gJR);
     }
     catch (Exception localException1)
     {
-      synchronized (gDr.lock)
+      synchronized (gJS.lock)
       {
         for (;;)
         {
-          if ((gDr.gDn) && (gDr.gDo != null)) {
-            u.e("!56@/B4Tb64lLpJusIoUV0UaqLbZZ92tGkg2qimb2Z/NRagzXiTGtEYyIA==", "thread time out now, release camera :%d ", new Object[] { Long.valueOf(ay.FS() - emF) });
+          if ((gJS.gJO) && (gJS.gJP != null)) {
+            v.e("MicroMsg.SightCamera.OpenCameraThread", "thread time out now, release camera :%d ", new Object[] { Long.valueOf(be.Gp() - erF) });
           }
           try
           {
-            Camera localCamera = gDr.gDo.brz;
+            Camera localCamera = gJS.gJP.bfz;
             localCamera.setPreviewCallback(null);
             localCamera.stopPreview();
             localCamera.release();
-            gDr.gDo = null;
-            gDr.lock.notify();
+            gJS.gJP = null;
+            gJS.lock.notify();
             return;
             localException1 = localException1;
-            u.e("!56@/B4Tb64lLpJusIoUV0UaqLbZZ92tGkg2qimb2Z/NRagzXiTGtEYyIA==", "openCamera failed e:%s", new Object[] { localException1.getMessage() });
+            v.e("MicroMsg.SightCamera.OpenCameraThread", "openCamera failed e:%s", new Object[] { localException1.getMessage() });
           }
           catch (Exception localException2)
           {
             for (;;)
             {
-              u.e("!56@/B4Tb64lLpJusIoUV0UaqLbZZ92tGkg2qimb2Z/NRagzXiTGtEYyIA==", "realease Camera failed e:%s", new Object[] { localException2.getMessage() });
+              v.e("MicroMsg.SightCamera.OpenCameraThread", "realease Camera failed e:%s", new Object[] { localException2.getMessage() });
             }
           }
         }

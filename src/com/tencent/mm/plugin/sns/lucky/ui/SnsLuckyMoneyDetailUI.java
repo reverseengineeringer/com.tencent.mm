@@ -15,15 +15,16 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import com.tencent.mm.plugin.luckymoney.ui.LuckyMoneyBaseUI;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.ai;
-import com.tencent.mm.plugin.sns.h.k;
-import com.tencent.mm.plugin.sns.h.l;
-import com.tencent.mm.protocal.b.add;
-import com.tencent.mm.protocal.b.aqi;
-import com.tencent.mm.protocal.b.aqw;
-import com.tencent.mm.protocal.b.atp;
-import com.tencent.mm.protocal.b.iv;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.ah;
+import com.tencent.mm.plugin.sns.i.k;
+import com.tencent.mm.plugin.sns.i.l;
+import com.tencent.mm.protocal.b.adw;
+import com.tencent.mm.protocal.b.aqq;
+import com.tencent.mm.protocal.b.aqt;
+import com.tencent.mm.protocal.b.ari;
+import com.tencent.mm.protocal.b.auf;
+import com.tencent.mm.protocal.b.je;
 import com.tencent.mm.ui.MMActivity;
 import java.util.LinkedList;
 import java.util.List;
@@ -31,16 +32,19 @@ import java.util.List;
 public class SnsLuckyMoneyDetailUI
   extends LuckyMoneyBaseUI
 {
-  private boolean eVA = false;
-  AbsListView.OnScrollListener eVB = new AbsListView.OnScrollListener()
+  private String dyx;
+  private List<aqq> fdH = new LinkedList();
+  private String fdK = "";
+  private boolean fdL = false;
+  AbsListView.OnScrollListener fdM = new AbsListView.OnScrollListener()
   {
-    private boolean eVC = false;
-    private boolean eVD;
+    private boolean fdN = false;
+    private boolean fdO;
     
     public final void onScroll(AbsListView paramAnonymousAbsListView, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3)
     {
       boolean bool = true;
-      if ((paramAnonymousInt3 == 0) || (!eVC)) {
+      if ((paramAnonymousInt3 == 0) || (!fdN)) {
         return;
       }
       if (paramAnonymousInt1 > 0) {}
@@ -51,13 +55,13 @@ public class SnsLuckyMoneyDetailUI
       label102:
       for (;;)
       {
-        if (eVD != bool)
+        if (fdO != bool)
         {
           if (!bool) {
             break label89;
           }
-          SnsLuckyMoneyDetailUI.a(SnsLuckyMoneyDetailUI.this, getResources().getDrawable(2131231008));
-          eVD = bool;
+          SnsLuckyMoneyDetailUI.a(SnsLuckyMoneyDetailUI.this, getResources().getDrawable(2131689960));
+          fdO = bool;
           return;
           paramAnonymousAbsListView = paramAnonymousAbsListView.getChildAt(paramAnonymousInt1);
           if (paramAnonymousAbsListView == null) {
@@ -88,28 +92,25 @@ public class SnsLuckyMoneyDetailUI
       default: 
         return;
       case 0: 
-        eVC = false;
+        fdN = false;
         return;
       }
-      eVC = true;
+      fdN = true;
     }
   };
-  private ListView eVe;
-  private List eVw = new LinkedList();
-  private String eVz = "";
-  private final int eWn = 750;
-  private final int eWo = 240;
-  private k gER;
-  private String gJH;
-  private String gJI;
-  private aqi gJJ;
-  private add gJK;
-  private c gJL;
+  private ListView fdp;
+  private final int feA = 750;
+  private final int feB = 240;
+  private k gLs;
+  private String gRi;
+  private aqt gRj;
+  private adw gRk;
+  private c gRl;
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    d(getResources().getDrawable(2130969428));
-    qb(2131431632);
+    e(getResources().getDrawable(2130838607));
+    rR(2131235483);
     b(new MenuItem.OnMenuItemClickListener()
     {
       public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
@@ -118,14 +119,19 @@ public class SnsLuckyMoneyDetailUI
         return true;
       }
     });
-    eVe = ((ListView)findViewById(2131167815));
-    gJL = new c(koJ.kpc);
-    eVe.setAdapter(gJL);
-    eVe.setOnScrollListener(eVB);
-    eVe.setOnItemClickListener(new AdapterView.OnItemClickListener()
+    fdp = ((ListView)findViewById(2131757670));
+    gRl = new c(kNN.kOg);
+    fdp.setAdapter(gRl);
+    fdp.setOnScrollListener(fdM);
+    fdp.setOnItemClickListener(new AdapterView.OnItemClickListener()
     {
-      public final void onItemClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong) {}
+      public final void onItemClick(AdapterView<?> paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong) {}
     });
+  }
+  
+  public final boolean d(int paramInt1, int paramInt2, String paramString, com.tencent.mm.t.j paramj)
+  {
+    return false;
   }
   
   public boolean dispatchKeyEvent(KeyEvent paramKeyEvent)
@@ -133,68 +139,63 @@ public class SnsLuckyMoneyDetailUI
     return super.dispatchKeyEvent(paramKeyEvent);
   }
   
-  public final boolean e(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
-  {
-    return false;
-  }
-  
   protected final int getLayoutId()
   {
-    return 2131362890;
+    return 2130904503;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    Gb();
-    gJH = getIntent().getStringExtra("key_feedid");
-    long l = azivogJH).field_snsId;
-    gER = ad.azi().cx(l);
-    if (gER != null)
+    Gy();
+    dyx = getIntent().getStringExtra("key_feedid");
+    long l = aBIwAdyx).field_snsId;
+    gLs = ad.aBI().cM(l);
+    if (gLs != null)
     {
-      paramBundle = gER.azR();
+      paramBundle = gLs.aCD();
       if (paramBundle != null)
       {
-        paramBundle = jMx.jhw;
+        paramBundle = kli.jFv;
         if (paramBundle.size() > 0)
         {
-          paramBundle = (add)paramBundle.get(0);
-          gJI = eiq;
-          gJK = paramBundle;
+          paramBundle = (adw)paramBundle.get(0);
+          gRi = emu;
+          gRk = paramBundle;
         }
       }
-      gJJ = ai.l(gER);
+      gRj = ah.l(gLs);
     }
-    if (gJJ != null)
+    if (gRj != null)
     {
-      paramBundle = gJJ;
-      if ((paramBundle != null) && (jKj != null)) {
+      paramBundle = gRj;
+      if ((paramBundle != null) && (kiG != null)) {
         break label177;
       }
     }
     label177:
     do
     {
-      baP();
+      bga();
       if (Build.VERSION.SDK_INT >= 21)
       {
-        i = getResources().getColor(2131231015);
+        i = getResources().getColor(2131689962);
         getWindow().setStatusBarColor(i);
       }
-      Gk(null);
+      Iy(null);
       return;
-      i = jKj.jKy;
-      paramBundle = jKj.jKz;
+      i = kiG.kiZ;
+      paramBundle = kiG.kja;
     } while (paramBundle == null);
     int i = 0;
     while (i < paramBundle.size())
     {
       paramBundle.get(i);
-      eVw.add(paramBundle.get(i));
+      fdH.add(paramBundle.get(i));
       i += 1;
     }
-    paramBundle = gJL;
-    List localList = eVw;
+    paramBundle = gRl;
+    List localList = fdH;
     if (localList == null) {
       new LinkedList();
     }
@@ -202,7 +203,7 @@ public class SnsLuckyMoneyDetailUI
     {
       paramBundle.notifyDataSetChanged();
       break;
-      eVw = localList;
+      fdH = localList;
     }
   }
   

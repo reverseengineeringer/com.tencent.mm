@@ -22,11 +22,11 @@
 
 
 # static fields
-.field private static final cAS:Landroid/content/UriMatcher;
+.field private static final cxN:Landroid/content/UriMatcher;
 
 
 # instance fields
-.field private cAR:Lcom/tencent/mm/plugin/base/stub/c;
+.field private cxM:Lcom/tencent/mm/plugin/base/stub/c;
 
 
 # direct methods
@@ -42,7 +42,7 @@
     invoke-direct {v0, v1}, Landroid/content/UriMatcher;-><init>(I)V
 
     .line 31
-    sput-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cAS:Landroid/content/UriMatcher;
+    sput-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cxN:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.plugin.provider"
 
@@ -68,7 +68,7 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/plugin/base/stub/c;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cAR:Lcom/tencent/mm/plugin/base/stub/c;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cxM:Lcom/tencent/mm/plugin/base/stub/c;
 
     .line 34
     return-void
@@ -81,7 +81,7 @@
 
     .prologue
     .line 92
-    const-string/jumbo v0, "!44@/B4Tb64lLpJVwK899MjSHnGus/LYixbxZMJrvdleiVA="
+    const-string/jumbo v0, "MicroMsg.MMPluginProvider"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -97,10 +97,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 94
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cAS:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cxN:Landroid/content/UriMatcher;
 
     invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
@@ -109,7 +109,7 @@
     packed-switch v0, :pswitch_data_0
 
     .line 99
-    const-string/jumbo v0, "!44@/B4Tb64lLpJVwK899MjSHnGus/LYixbxZMJrvdleiVA="
+    const-string/jumbo v0, "MicroMsg.MMPluginProvider"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -125,7 +125,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 100
     const/4 v0, 0x0
@@ -135,7 +135,7 @@
 
     .line 96
     :pswitch_0
-    invoke-static {}, Lcom/tencent/mm/plugin/base/stub/c;->Jx()I
+    invoke-static {}, Lcom/tencent/mm/plugin/base/stub/c;->Kg()I
 
     move-result v0
 
@@ -155,7 +155,7 @@
     const/4 v1, 0x0
 
     .line 59
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cAS:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cxN:Landroid/content/UriMatcher;
 
     invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
@@ -181,7 +181,7 @@
 
     .prologue
     .line 77
-    const-string/jumbo v0, "!44@/B4Tb64lLpJVwK899MjSHnGus/LYixbxZMJrvdleiVA="
+    const-string/jumbo v0, "MicroMsg.MMPluginProvider"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -197,10 +197,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 79
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cAS:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cxN:Landroid/content/UriMatcher;
 
     invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
@@ -209,7 +209,7 @@
     packed-switch v0, :pswitch_data_0
 
     .line 84
-    const-string/jumbo v0, "!44@/B4Tb64lLpJVwK899MjSHnGus/LYixbxZMJrvdleiVA="
+    const-string/jumbo v0, "MicroMsg.MMPluginProvider"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -225,7 +225,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 85
     const/4 v0, 0x0
@@ -235,7 +235,7 @@
 
     .line 81
     :pswitch_0
-    invoke-static {}, Lcom/tencent/mm/plugin/base/stub/c;->Jw()Landroid/net/Uri;
+    invoke-static {}, Lcom/tencent/mm/plugin/base/stub/c;->Kf()Landroid/net/Uri;
 
     move-result-object v0
 
@@ -253,13 +253,13 @@
 
     .prologue
     .line 70
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cAR:Lcom/tencent/mm/plugin/base/stub/c;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cxM:Lcom/tencent/mm/plugin/base/stub/c;
 
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/base/stub/c;->bp(Landroid/content/Context;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/base/stub/c;->bk(Landroid/content/Context;)Z
 
     .line 71
     const/4 v0, 0x1
@@ -272,7 +272,7 @@
 
     .prologue
     .line 107
-    const-string/jumbo v0, "!44@/B4Tb64lLpJVwK899MjSHnGus/LYixbxZMJrvdleiVA="
+    const-string/jumbo v0, "MicroMsg.MMPluginProvider"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -288,10 +288,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 109
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cAS:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cxN:Landroid/content/UriMatcher;
 
     invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
@@ -300,7 +300,7 @@
     packed-switch v0, :pswitch_data_0
 
     .line 114
-    const-string/jumbo v0, "!44@/B4Tb64lLpJVwK899MjSHnGus/LYixbxZMJrvdleiVA="
+    const-string/jumbo v0, "MicroMsg.MMPluginProvider"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -316,7 +316,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 115
     const/4 v0, 0x0
@@ -344,7 +344,7 @@
 
     .prologue
     .line 123
-    const-string/jumbo v0, "!44@/B4Tb64lLpJVwK899MjSHnGus/LYixbxZMJrvdleiVA="
+    const-string/jumbo v0, "MicroMsg.MMPluginProvider"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -360,10 +360,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 125
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cAS:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cxN:Landroid/content/UriMatcher;
 
     invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
@@ -372,7 +372,7 @@
     packed-switch v0, :pswitch_data_0
 
     .line 130
-    const-string/jumbo v0, "!44@/B4Tb64lLpJVwK899MjSHnGus/LYixbxZMJrvdleiVA="
+    const-string/jumbo v0, "MicroMsg.MMPluginProvider"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -388,7 +388,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 131
     const/4 v0, 0x0
@@ -398,7 +398,7 @@
 
     .line 127
     :pswitch_0
-    invoke-static {}, Lcom/tencent/mm/plugin/base/stub/c;->Jy()I
+    invoke-static {}, Lcom/tencent/mm/plugin/base/stub/c;->Kh()I
 
     move-result v0
 

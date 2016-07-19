@@ -7,7 +7,7 @@ final class UpdaterService$2
   
   public final void run()
   {
-    jUt.stopSelf();
+    ktU.stopSelf();
   }
 }
 

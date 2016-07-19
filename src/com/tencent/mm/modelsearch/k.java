@@ -1,7 +1,7 @@
 package com.tencent.mm.modelsearch;
 
 public abstract interface k
-  extends Comparable
+  extends Comparable<k>
 {
   public abstract void create();
   

@@ -1,7 +1,7 @@
 package com.tencent.mm.sandbox.updater;
 
 import android.content.Intent;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class AppUpdaterUI$11
   implements Runnable
@@ -10,9 +10,9 @@ final class AppUpdaterUI$11
   
   public final void run()
   {
-    Intent localIntent = ay.Dh(jSV);
-    jTb.startActivity(localIntent);
-    AppUpdaterUI.f(jTb);
+    Intent localIntent = be.Fw(ksp);
+    ksv.startActivity(localIntent);
+    AppUpdaterUI.f(ksv);
   }
 }
 

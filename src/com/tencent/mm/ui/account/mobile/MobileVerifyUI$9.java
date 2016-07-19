@@ -10,7 +10,7 @@ final class MobileVerifyUI$9
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    MobileVerifyUI.i(kzc);
+    MobileVerifyUI.i(kYj);
     return true;
   }
 }

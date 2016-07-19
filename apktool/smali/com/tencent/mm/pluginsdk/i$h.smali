@@ -15,20 +15,20 @@
 
 
 # virtual methods
-.method public abstract aDs()Z
+.method public abstract aGR()Z
 .end method
 
-.method public abstract aDt()Ljava/lang/String;
+.method public abstract aGS()Ljava/lang/String;
 .end method
 
-.method public abstract aDu()Ljava/lang/String;
+.method public abstract aGT()Ljava/lang/String;
 .end method
 
-.method public abstract aDv()Z
+.method public abstract aGU()Z
 .end method
 
-.method public abstract aDw()Ljava/lang/String;
+.method public abstract aGV()Ljava/lang/String;
 .end method
 
-.method public abstract aDx()Ljava/lang/String;
+.method public abstract aGW()Ljava/lang/String;
 .end method

@@ -12,11 +12,21 @@
 
 
 # static fields
-.field private static ckf:Lcom/tencent/mm/network/ad;
+.field private static cfx:Lcom/tencent/mm/network/ad;
 
 
 # instance fields
-.field private ckg:Ljava/util/HashMap;
+.field private cfy:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Lcom/tencent/mm/network/ad$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -27,7 +37,7 @@
     .line 22
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/network/ad;->ckf:Lcom/tencent/mm/network/ad;
+    sput-object v0, Lcom/tencent/mm/network/ad;->cfx:Lcom/tencent/mm/network/ad;
 
     return-void
 .end method
@@ -44,12 +54,12 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/network/ad;->ckg:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/network/ad;->cfy:Ljava/util/HashMap;
 
     return-void
 .end method
 
-.method public static declared-synchronized Fn()Lcom/tencent/mm/network/ad;
+.method public static declared-synchronized FJ()Lcom/tencent/mm/network/ad;
     .locals 2
 
     .prologue
@@ -59,7 +69,7 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/network/ad;->ckf:Lcom/tencent/mm/network/ad;
+    sget-object v0, Lcom/tencent/mm/network/ad;->cfx:Lcom/tencent/mm/network/ad;
 
     if-nez v0, :cond_0
 
@@ -68,11 +78,11 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/network/ad;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/network/ad;->ckf:Lcom/tencent/mm/network/ad;
+    sput-object v0, Lcom/tencent/mm/network/ad;->cfx:Lcom/tencent/mm/network/ad;
 
     .line 28
     :cond_0
-    sget-object v0, Lcom/tencent/mm/network/ad;->ckf:Lcom/tencent/mm/network/ad;
+    sget-object v0, Lcom/tencent/mm/network/ad;->cfx:Lcom/tencent/mm/network/ad;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -91,110 +101,6 @@
 
 
 # virtual methods
-.method public final declared-synchronized a(ILcom/tencent/mm/network/ad$a;)V
-    .locals 5
-
-    .prologue
-    .line 34
-    monitor-enter p0
-
-    :try_start_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAwj+87HTBh7W+rumNhLlPNfZV1oJR0OU="
-
-    const-string/jumbo v1, "register event:%s cb:%s [%s]"
-
-    const/4 v2, 0x3
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x1
-
-    aput-object p2, v2, v3
-
-    const/4 v3, 0x2
-
-    new-instance v4, Lcom/tencent/mm/sdk/platformtools/ad;
-
-    invoke-direct {v4}, Lcom/tencent/mm/sdk/platformtools/ad;-><init>()V
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 35
-    iget-object v0, p0, Lcom/tencent/mm/network/ad;->ckg:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 36
-    const-string/jumbo v0, "!44@/B4Tb64lLpKAwj+87HTBh7W+rumNhLlPNfZV1oJR0OU="
-
-    const-string/jumbo v1, "register duplicate event:%s [%s]"
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x1
-
-    new-instance v4, Lcom/tencent/mm/sdk/platformtools/ad;
-
-    invoke-direct {v4}, Lcom/tencent/mm/sdk/platformtools/ad;-><init>()V
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 38
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/network/ad;->ckg:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 39
-    monitor-exit p0
-
-    return-void
-
-    .line 34
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
 .method public final declared-synchronized h(I[B)I
     .locals 7
 
@@ -205,7 +111,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/network/ad;->ckg:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/network/ad;->cfy:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -218,7 +124,7 @@
     check-cast v0, Lcom/tencent/mm/network/ad$a;
 
     .line 43
-    const-string/jumbo v3, "!44@/B4Tb64lLpKAwj+87HTBh7W+rumNhLlPNfZV1oJR0OU="
+    const-string/jumbo v3, "MicroMsg.PostPushEventHandler"
 
     const-string/jumbo v4, "postEvent event:%s cb:%s data:%s [%s]"
 
@@ -253,19 +159,19 @@
 
     const/4 v2, 0x3
 
-    new-instance v6, Lcom/tencent/mm/sdk/platformtools/ad;
+    new-instance v6, Lcom/tencent/mm/sdk/platformtools/af;
 
-    invoke-direct {v6}, Lcom/tencent/mm/sdk/platformtools/ad;-><init>()V
+    invoke-direct {v6}, Lcom/tencent/mm/sdk/platformtools/af;-><init>()V
 
     aput-object v6, v5, v2
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 45
     if-nez v0, :cond_2
 
     .line 46
-    const-string/jumbo v2, "!44@/B4Tb64lLpKAwj+87HTBh7W+rumNhLlPNfZV1oJR0OU="
+    const-string/jumbo v2, "MicroMsg.PostPushEventHandler"
 
     const-string/jumbo v3, "postEvent cb == null  event:%s cb:%s data:%s [%s]"
 
@@ -300,13 +206,13 @@
 
     const/4 v0, 0x3
 
-    new-instance v1, Lcom/tencent/mm/sdk/platformtools/ad;
+    new-instance v1, Lcom/tencent/mm/sdk/platformtools/af;
 
-    invoke-direct {v1}, Lcom/tencent/mm/sdk/platformtools/ad;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/sdk/platformtools/af;-><init>()V
 
     aput-object v1, v4, v0
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -334,7 +240,7 @@
 
     .line 49
     :cond_2
-    invoke-interface {v0, p2}, Lcom/tencent/mm/network/ad$a;->C([B)I
+    invoke-interface {v0}, Lcom/tencent/mm/network/ad$a;->FK()I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 

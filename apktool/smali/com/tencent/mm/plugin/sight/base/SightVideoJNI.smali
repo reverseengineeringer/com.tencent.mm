@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "!32@/B4Tb64lLpJtjoEZ/uIRrTTiblOUU+JF"
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.SightVideoJNI"
 
 .field public static final TYPE_BITMAP:I = 0x1
 
@@ -95,7 +95,7 @@
     move-result v0
 
     .line 60
-    const-string/jumbo v1, "!32@/B4Tb64lLpJtjoEZ/uIRrTTiblOUU+JF"
+    const-string/jumbo v1, "MicroMsg.SightVideoJNI"
 
     const-string/jumbo v2, "ashutest::call initDataBuffer, ret %d"
 
@@ -111,7 +111,7 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 61
     return v0
@@ -140,7 +140,7 @@
 
     .prologue
     .line 70
-    const-string/jumbo v0, "!32@/B4Tb64lLpJtjoEZ/uIRrTTiblOUU+JF"
+    const-string/jumbo v0, "MicroMsg.SightVideoJNI"
 
     const-string/jumbo v1, "ashutest::call release dataBufferRef %d"
 
@@ -156,7 +156,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 71
     invoke-static {p0}, Lcom/tencent/mm/plugin/sight/base/SightVideoJNI;->releaseDataBuffer(I)V
@@ -173,7 +173,7 @@
 
     .prologue
     .line 65
-    const-string/jumbo v0, "!32@/B4Tb64lLpJtjoEZ/uIRrTTiblOUU+JF"
+    const-string/jumbo v0, "MicroMsg.SightVideoJNI"
 
     const-string/jumbo v1, "ashutest::call release recorder buffer, %s"
 
@@ -185,7 +185,7 @@
 
     aput-object p0, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 66
     invoke-static {}, Lcom/tencent/mm/plugin/sight/base/SightVideoJNI;->releaseRecorderBuffer()I
@@ -194,7 +194,7 @@
     return-void
 .end method
 
-.method public static native remuxing(Ljava/lang/String;Ljava/lang/String;IIIIIIF)I
+.method public static native remuxing(Ljava/lang/String;Ljava/lang/String;IIIIIIFF)I
 .end method
 
 .method public static native seekStream(DI)I

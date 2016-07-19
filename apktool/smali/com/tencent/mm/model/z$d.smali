@@ -15,17 +15,17 @@
 
 
 # virtual methods
-.method public abstract cA(I)Ljava/lang/String;
+.method public abstract de(I)Ljava/lang/String;
 .end method
 
-.method public abstract cB(I)Z
+.method public abstract df(I)Ljava/lang/String;
 .end method
 
-.method public abstract cz(I)Ljava/lang/String;
+.method public abstract dg(I)Z
 .end method
 
 .method public abstract p(IZ)Ljava/lang/String;
 .end method
 
-.method public abstract tb()V
+.method public abstract ta()V
 .end method

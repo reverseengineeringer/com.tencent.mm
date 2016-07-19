@@ -36,7 +36,6 @@ final class b$b
     {
       for (;;)
       {
-        b.a.a("TxCellProvider", "cannot get cell location", paramMessage);
         paramMessage = (Message)localObject;
       }
     }

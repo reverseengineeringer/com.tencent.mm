@@ -1,29 +1,45 @@
 package com.tencent.mm.performance.d;
 
-import android.os.Looper;
-import android.os.Message;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.t;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
-final class b
-  extends ac
+public final class b
 {
-  b(a parama, Looper paramLooper)
+  public static Object a(Class<?> paramClass, String paramString, Object paramObject)
   {
-    super(paramLooper);
+    try
+    {
+      paramClass = paramClass.getDeclaredField(paramString);
+      paramClass.setAccessible(true);
+      paramClass = paramClass.get(paramObject);
+      return paramClass;
+    }
+    catch (Exception paramClass) {}
+    return null;
   }
   
-  public final void handleMessage(Message paramMessage)
+  private static Object a(Class<?> paramClass, String paramString, Object paramObject, Class<?>[] paramArrayOfClass, Object[] paramArrayOfObject)
   {
-    super.handleMessage(paramMessage);
-    switch (what)
+    try
     {
-    default: 
-      return;
+      paramClass = paramClass.getDeclaredMethod(paramString, null);
+      paramClass.setAccessible(true);
+      paramClass = paramClass.invoke(null, null);
+      return paramClass;
     }
-    t.d("!32@/B4Tb64lLpJDy+XtaqVVAmxMdLX9z03q", "gc==" + Thread.currentThread().getName());
-    System.gc();
-    a.a(bUc, System.currentTimeMillis());
+    catch (Exception paramClass) {}
+    return null;
+  }
+  
+  public static Object aa(String paramString1, String paramString2)
+  {
+    try
+    {
+      paramString1 = a(Class.forName(paramString1), paramString2, null, null, null);
+      return paramString1;
+    }
+    catch (Exception paramString1) {}
+    return null;
   }
 }
 

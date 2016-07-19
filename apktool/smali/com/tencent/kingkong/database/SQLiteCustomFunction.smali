@@ -16,7 +16,7 @@
     .locals 2
 
     .prologue
-    .line 37
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 39

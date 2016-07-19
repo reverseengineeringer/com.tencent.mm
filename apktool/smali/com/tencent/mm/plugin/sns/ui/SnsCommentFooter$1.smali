@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+.field final synthetic hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 235
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$1;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$1;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
     const/4 v2, 0x0
 
     .line 254
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$1;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$1;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;)Lcom/tencent/mm/ui/widget/MMEditText;
 
@@ -64,7 +64,7 @@
 
     .line 257
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$1;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$1;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;)Lcom/tencent/mm/ui/widget/MMEditText;
 
@@ -99,35 +99,35 @@
     :goto_1
     if-eqz v0, :cond_2
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$1;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$1;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    iget-boolean v3, v3, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->eYS:Z
+    iget-boolean v3, v3, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->fhm:Z
 
     if-eqz v3, :cond_2
 
     .line 260
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$1;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$1;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-static {v3, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;Z)V
 
     .line 261
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$1;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$1;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    iput-boolean v2, v3, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->eYS:Z
+    iput-boolean v2, v3, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->fhm:Z
 
     .line 263
     :cond_2
     if-nez v0, :cond_0
 
     .line 264
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$1;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$1;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
     invoke-static {v0, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->a(Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;Z)V
 
     .line 265
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$1;->hdG:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter$1;->hst:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
 
-    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->eYS:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->fhm:Z
 
     goto :goto_0
 

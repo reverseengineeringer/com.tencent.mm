@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static d([B[B)[B
+.method public static b([B[B)[B
     .locals 1
 
     .prologue
@@ -22,14 +22,14 @@
     return-object v0
 
     :cond_1
-    invoke-static {p0, p1}, Lcom/tencent/mm/a/k;->f([B[B)[B
+    invoke-static {p0, p1}, Lcom/tencent/mm/a/k;->d([B[B)[B
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method public static e([B[B)[B
+.method public static c([B[B)[B
     .locals 1
 
     .prologue
@@ -47,14 +47,14 @@
     return-object v0
 
     :cond_1
-    invoke-static {p0, p1}, Lcom/tencent/mm/a/k;->f([B[B)[B
+    invoke-static {p0, p1}, Lcom/tencent/mm/a/k;->d([B[B)[B
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method private static f([B[B)[B
+.method private static d([B[B)[B
     .locals 8
 
     .prologue

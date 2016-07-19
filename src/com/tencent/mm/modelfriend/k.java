@@ -4,12 +4,12 @@ import android.content.ContentValues;
 
 public final class k
 {
-  int aSD = 0;
-  String aSE = "";
-  String aSF = "";
-  String aSG = "";
-  public int aSu = 0;
-  int aou = -1;
+  public int aFd = 0;
+  int aFm = 0;
+  String aFn = "";
+  String aFo = "";
+  String aFp = "";
+  int aqQ = -1;
   String username = "";
   
   public final String getUsername()
@@ -20,21 +20,21 @@ public final class k
     return username;
   }
   
-  public final ContentValues lX()
+  public final ContentValues kn()
   {
     ContentValues localContentValues = new ContentValues();
-    if ((aou & 0x1) != 0) {
+    if ((aqQ & 0x1) != 0) {
       localContentValues.put("username", getUsername());
     }
-    if ((aou & 0x2) != 0) {
-      localContentValues.put("sex", Integer.valueOf(aSu));
+    if ((aqQ & 0x2) != 0) {
+      localContentValues.put("sex", Integer.valueOf(aFd));
     }
-    if ((aou & 0x4) != 0) {
-      localContentValues.put("personalcard", Integer.valueOf(aSD));
+    if ((aqQ & 0x4) != 0) {
+      localContentValues.put("personalcard", Integer.valueOf(aFm));
     }
-    if ((aou & 0x8) != 0)
+    if ((aqQ & 0x8) != 0)
     {
-      if (aSF == null)
+      if (aFo == null)
       {
         str = "";
         localContentValues.put("province", str);
@@ -42,30 +42,30 @@ public final class k
     }
     else
     {
-      if ((aou & 0x10) != 0)
+      if ((aqQ & 0x10) != 0)
       {
-        if (aSG != null) {
+        if (aFp != null) {
           break label162;
         }
         str = "";
         label118:
         localContentValues.put("city", str);
       }
-      if ((aou & 0x20) != 0) {
-        if (aSE != null) {
+      if ((aqQ & 0x20) != 0) {
+        if (aFn != null) {
           break label170;
         }
       }
     }
     label162:
     label170:
-    for (String str = "";; str = aSE)
+    for (String str = "";; str = aFn)
     {
       localContentValues.put("signature", str);
       return localContentValues;
-      str = aSF;
+      str = aFo;
       break;
-      str = aSG;
+      str = aFp;
       break label118;
     }
   }

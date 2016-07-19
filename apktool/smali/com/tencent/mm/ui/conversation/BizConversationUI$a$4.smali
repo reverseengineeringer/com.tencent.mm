@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+.implements Landroid/content/DialogInterface$OnCancelListener;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+.field final synthetic lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 383
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$4;->loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
+    .line 373
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$4;->lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,41 +36,15 @@
 
 
 # virtual methods
-.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 4
+.method public final onCancel(Landroid/content/DialogInterface;)V
+    .locals 1
 
     .prologue
-    .line 386
-    new-instance v0, Landroid/content/Intent;
+    .line 376
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$4;->lOA:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizConversationUI$a;->f(Lcom/tencent/mm/ui/conversation/BizConversationUI$a;)Z
 
-    .line 387
-    const-string/jumbo v1, "Contact_User"
-
-    iget-object v2, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$4;->loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
-
-    invoke-static {v2}, Lcom/tencent/mm/ui/conversation/BizConversationUI$a;->f(Lcom/tencent/mm/ui/conversation/BizConversationUI$a;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 388
-    iget-object v1, p0, Lcom/tencent/mm/ui/conversation/BizConversationUI$a$4;->loi:Lcom/tencent/mm/ui/conversation/BizConversationUI$a;
-
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/conversation/BizConversationUI$a;->getActivity()Landroid/support/v4/app/FragmentActivity;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "profile"
-
-    const-string/jumbo v3, ".ui.ContactInfoUI"
-
-    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
-
-    .line 389
-    const/4 v0, 0x1
-
-    return v0
+    .line 377
+    return-void
 .end method

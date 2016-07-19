@@ -1,14 +1,19 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.az.g.b;
-import com.tencent.mm.storage.f;
+import java.util.Iterator;
+import java.util.List;
 
 final class c$16
-  implements g.b
+  implements Runnable
 {
-  public final String[] lr()
+  c$16(c paramc) {}
+  
+  public final void run()
   {
-    return f.aoY;
+    Iterator localIterator = c.b(bsO).iterator();
+    while (localIterator.hasNext()) {
+      ((ad)localIterator.next()).tg();
+    }
   }
 }
 

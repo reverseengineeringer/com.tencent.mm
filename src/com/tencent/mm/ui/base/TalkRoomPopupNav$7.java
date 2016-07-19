@@ -11,8 +11,8 @@ final class TalkRoomPopupNav$7
   
   public final void onAnimationEnd(Animation paramAnimation)
   {
-    TalkRoomPopupNav.c(kKA).setVisibility(4);
-    TalkRoomPopupNav.e(kKA).setVisibility(4);
+    TalkRoomPopupNav.c(ljQ).setVisibility(4);
+    TalkRoomPopupNav.e(ljQ).setVisibility(4);
   }
   
   public final void onAnimationRepeat(Animation paramAnimation) {}

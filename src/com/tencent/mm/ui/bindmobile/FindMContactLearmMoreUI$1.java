@@ -4,7 +4,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.platformtools.m;
+import com.tencent.mm.platformtools.l;
 import com.tencent.mm.storage.h;
 
 final class FindMContactLearmMoreUI$1
@@ -14,9 +14,9 @@ final class FindMContactLearmMoreUI$1
   
   public final void onClick(View paramView)
   {
-    ah.tD().rn().set(12322, Boolean.valueOf(true));
-    m.d(true, false);
-    FindMContactLearmMoreUI.a(kPd);
+    ah.tE().ro().set(12322, Boolean.valueOf(true));
+    l.d(true, false);
+    FindMContactLearmMoreUI.a(lot);
   }
 }
 

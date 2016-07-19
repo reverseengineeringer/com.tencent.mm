@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lxI:Lcom/tencent/mm/ui/tools/r;
+.field final synthetic lYx:Lcom/tencent/mm/ui/tools/r;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 207
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/r$4;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 208
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/r$4;->lYx:Lcom/tencent/mm/ui/tools/r;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,34 +40,34 @@
     .locals 2
 
     .prologue
-    .line 211
+    .line 212
     const/4 v0, 0x3
 
     if-ne v0, p2, :cond_0
 
-    .line 212
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$4;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 213
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$4;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->lxA:Lcom/tencent/mm/ui/tools/r$b;
+    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->lYp:Lcom/tencent/mm/ui/tools/r$b;
 
     if-eqz v0, :cond_0
 
-    .line 213
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$4;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 214
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$4;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->lxA:Lcom/tencent/mm/ui/tools/r$b;
+    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->lYp:Lcom/tencent/mm/ui/tools/r$b;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/r$4;->lxI:Lcom/tencent/mm/ui/tools/r;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/r$4;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/r;->getSearchContent()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/r;->aVM()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/tools/r$b;->kE(Ljava/lang/String;)Z
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/tools/r$b;->ln(Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 216
+    .line 217
     :goto_0
     return v0
 

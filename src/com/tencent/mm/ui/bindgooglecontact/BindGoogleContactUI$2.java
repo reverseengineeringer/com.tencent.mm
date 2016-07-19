@@ -3,7 +3,7 @@ package com.tencent.mm.ui.bindgooglecontact;
 import android.text.TextUtils;
 import android.widget.TextView;
 import com.tencent.mm.pluginsdk.ui.tools.q;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.smtt.sdk.WebView;
 import com.tencent.smtt.sdk.WebViewClient;
 
@@ -14,43 +14,43 @@ final class BindGoogleContactUI$2
   
   public final void onPageFinished(WebView paramWebView, String paramString)
   {
-    u.d("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "onPageFinished URL:" + paramString);
-    if ((BindGoogleContactUI.a(kMQ) != null) && (BindGoogleContactUI.a(kMQ).getVisibility() != 0))
+    v.d("MicroMsg.GoogleContact.BindGoogleContactUI", "onPageFinished URL:" + paramString);
+    if ((BindGoogleContactUI.a(lmf) != null) && (BindGoogleContactUI.a(lmf).getVisibility() != 0))
     {
-      BindGoogleContactUI.a(kMQ).setVisibility(0);
-      if (BindGoogleContactUI.b(kMQ) != null) {
-        BindGoogleContactUI.b(kMQ).setVisibility(4);
+      BindGoogleContactUI.a(lmf).setVisibility(0);
+      if (BindGoogleContactUI.b(lmf) != null) {
+        BindGoogleContactUI.b(lmf).setVisibility(4);
       }
     }
-    BindGoogleContactUI.c(kMQ);
+    BindGoogleContactUI.c(lmf);
     if (paramWebView != null)
     {
       paramWebView = paramWebView.getTitle();
-      u.d("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "title:%s", new Object[] { paramWebView });
+      v.d("MicroMsg.GoogleContact.BindGoogleContactUI", "title:%s", new Object[] { paramWebView });
       if (!TextUtils.isEmpty(paramWebView))
       {
         if (!paramWebView.toLowerCase().contains("success")) {
           break label162;
         }
-        if (BindGoogleContactUI.a(kMQ) != null) {
-          BindGoogleContactUI.a(kMQ).setVisibility(4);
+        if (BindGoogleContactUI.a(lmf) != null) {
+          BindGoogleContactUI.a(lmf).setVisibility(4);
         }
-        q.a(BindGoogleContactUI.a(kMQ), "weixin://private/googlegetcode", "document.getElementById('code').value");
+        q.a(BindGoogleContactUI.a(lmf), "weixin://private/googlegetcode", "document.getElementById('code').value");
       }
     }
     label162:
     while (!paramWebView.toLowerCase().contains("error")) {
       return;
     }
-    u.w("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "failed." + paramWebView.substring(paramWebView.indexOf("=")));
+    v.w("MicroMsg.GoogleContact.BindGoogleContactUI", "failed." + paramWebView.substring(paramWebView.indexOf("=")));
   }
   
   public final boolean shouldOverrideUrlLoading(WebView paramWebView, String paramString)
   {
-    u.d("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "shouldOverrideUrlLoading, url = %s", new Object[] { paramString });
+    v.d("MicroMsg.GoogleContact.BindGoogleContactUI", "shouldOverrideUrlLoading, url = %s", new Object[] { paramString });
     if (paramString.toLowerCase().startsWith("weixin://private/googlegetcode"))
     {
-      BindGoogleContactUI.a(kMQ, paramString);
+      BindGoogleContactUI.a(lmf, paramString);
       return true;
     }
     return super.shouldOverrideUrlLoading(paramWebView, paramString);

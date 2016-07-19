@@ -2,22 +2,22 @@ package com.tencent.mm.ui.conversation;
 
 final class c$d
 {
-  public int eLV;
-  public boolean iCR;
-  public boolean kTp;
-  public boolean lnC;
-  public CharSequence loG;
-  public CharSequence loH;
-  public int loI;
-  public int loJ;
-  public int loK;
-  public boolean loL;
-  public boolean loM;
-  public boolean loN;
-  public boolean loO;
-  public boolean loP;
-  public boolean loQ;
-  public int loR;
+  public int cTv;
+  public boolean iZF;
+  public boolean lNY;
+  public CharSequence lOW;
+  public CharSequence lOX;
+  public int lOY;
+  public int lOZ;
+  public int lPa;
+  public boolean lPb;
+  public boolean lPc;
+  public boolean lPd;
+  public boolean lPe;
+  public boolean lPf;
+  public boolean lPg;
+  public int lPh;
+  public boolean ltv;
   public CharSequence nickName;
   
   private c$d(c paramc) {}

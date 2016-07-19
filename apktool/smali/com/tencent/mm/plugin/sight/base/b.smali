@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field public gwT:[I
+.field public gDr:[I
 
-.field public gwU:[I
+.field public gDs:[I
 
-.field public gwV:[I
+.field public gDt:[I
 
-.field public gwW:[I
+.field public gDu:[I
 
-.field public gwX:[I
+.field public gDv:[I
 
 
 # direct methods
@@ -30,21 +30,21 @@
 
     fill-array-data v0, :array_0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/base/b;->gwT:[I
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/base/b;->gDr:[I
 
     .line 15
     new-array v0, v1, [I
 
     fill-array-data v0, :array_1
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/base/b;->gwU:[I
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/base/b;->gDs:[I
 
     .line 18
     new-array v0, v1, [I
 
     fill-array-data v0, :array_2
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/base/b;->gwV:[I
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/base/b;->gDt:[I
 
     .line 21
     const/16 v0, 0x9
@@ -53,14 +53,14 @@
 
     fill-array-data v0, :array_3
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/base/b;->gwW:[I
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/base/b;->gDu:[I
 
     .line 26
     new-array v0, v1, [I
 
     fill-array-data v0, :array_4
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/base/b;->gwX:[I
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/base/b;->gDv:[I
 
     .line 29
     return-void

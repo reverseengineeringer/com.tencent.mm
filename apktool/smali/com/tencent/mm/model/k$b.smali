@@ -1,4 +1,4 @@
-.class public final Lcom/tencent/mm/model/k$b;
+.class final Lcom/tencent/mm/model/k$b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public bAg:Lcom/tencent/mm/model/k$a;
+.field btj:Lcom/tencent/mm/model/k$a;
 
 
 # direct methods
@@ -31,7 +31,7 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/model/k$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/model/k$b;->bAg:Lcom/tencent/mm/model/k$a;
+    iput-object v0, p0, Lcom/tencent/mm/model/k$b;->btj:Lcom/tencent/mm/model/k$a;
 
     .line 187
     return-void

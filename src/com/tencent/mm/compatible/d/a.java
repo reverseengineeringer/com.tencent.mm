@@ -1,70 +1,70 @@
 package com.tencent.mm.compatible.d;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class a
 {
-  public boolean bpH = false;
-  public int bpI;
-  public int bpJ;
-  public int bpK;
-  public int bpL;
-  public int bpM;
-  public int bpN;
-  public int bpO;
-  public int bpP;
-  public int bpQ;
-  public int bpR;
-  public int bpS;
-  public int bpT;
-  public int bpU;
-  public int bpV;
-  public int bpW;
-  public int bpX;
-  public int bpY;
-  public int bpZ;
-  public int bqA;
-  public short[] bqB = new short[15];
-  public short[] bqC = new short[2];
-  public boolean bqD;
-  public int bqE;
-  public boolean bqF = false;
-  public int bqG;
-  public int bqH;
-  public int bqI;
-  public int bqJ;
-  public int bqK;
-  public int bqL;
-  public int bqM;
-  public int bqN;
-  public int bqO;
-  public int bqP;
-  public int bqa;
-  public int bqb;
-  public int bqc;
-  public int bqd;
-  public int bqe;
-  public int bqf;
-  public int bqg;
-  public int bqh;
-  public int bqi;
-  public int bqj;
-  public int bqk;
-  public boolean bql;
-  public int bqm;
-  public int bqn;
-  public int bqo;
-  public int bqp;
-  public int bqq;
-  public int bqr;
-  public int bqs;
-  public int bqt;
-  public int bqu;
-  public int bqv;
-  public int bqw;
-  public int bqx;
-  public int bqy;
-  public int bqz;
+  public boolean bdH = false;
+  public int bdI;
+  public int bdJ;
+  public int bdK;
+  public int bdL;
+  public int bdM;
+  public int bdN;
+  public int bdO;
+  public int bdP;
+  public int bdQ;
+  public int bdR;
+  public int bdS;
+  public int bdT;
+  public int bdU;
+  public int bdV;
+  public int bdW;
+  public int bdX;
+  public int bdY;
+  public int bdZ;
+  public int beA;
+  public short[] beB = new short[15];
+  public short[] beC = new short[2];
+  public boolean beD;
+  public int beE;
+  public boolean beF = false;
+  public int beG;
+  public int beH;
+  public int beI;
+  public int beJ;
+  public int beK;
+  public int beL;
+  public int beM;
+  public int beN;
+  public int beO;
+  public int beP;
+  public int bea;
+  public int beb;
+  public int bec;
+  public int bed;
+  public int bee;
+  public int bef;
+  public int beg;
+  public int beh;
+  public int bei;
+  public int bej;
+  public int bek;
+  public boolean bel;
+  public int bem;
+  public int ben;
+  public int beo;
+  public int bep;
+  public int beq;
+  public int ber;
+  public int bes;
+  public int bet;
+  public int beu;
+  public int bev;
+  public int bew;
+  public int bex;
+  public int bey;
+  public int bez;
   
   public a()
   {
@@ -73,81 +73,81 @@ public final class a
   
   public final void dump()
   {
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "streamtype " + bpI);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "smode " + bpJ);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "omode " + bpK);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "ospeaker " + bpL);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "operating" + bpM);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "moperating" + bpN);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "mstreamtype" + bpO);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "mVoiceRecordMode" + bpP);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agcMode :" + bqt);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "nsMode:" + bpS);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "aecMode:" + bpR);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "volumMode:" + bpT);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "micMode:" + bqe);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "sourceMode:" + bqf);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "speakerMode:" + bqg);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "phoneMode:" + bqh);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "voipstreamType:" + bqi);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "speakerstreamtype:" + bqj);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "phonestreamtype:" + bqk);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "ringphonestream:" + bqm);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "ringphonemode:" + bqn);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "ringspeakerstream:" + bqo);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "ringspeakermode:" + bqp);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agcModeNew :" + bqs);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "nsModeNew:" + bqr);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "aecModeNew:" + bqq);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agctargetdb:" + bqu);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agcgaindb:" + bqv);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agcflag:" + bqw);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agclimiter:" + bqx);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "inputVolumeScale:" + bpU);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "outputVolumeScale:" + bpV);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "inputVolumeScaleForSpeaker:" + bpW);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "outputVolumeScaleForSpeaker:" + bpX);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "ehanceHeadsetEC:" + bqa);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "setECModeLevelForHeadSet:" + bqb);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "setECModeLevelForSpeaker:" + bqc);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "enableSpeakerEnhanceEC:" + bqd);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "enableRecTimer:" + bqy);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "enablePlayTimer:" + bqz);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "setPlayerPrecorrectCofOnOrOff:" + bqA);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "outputVolumeGainForPhone:" + bpY);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "outputVolumeGainForSpeaker:" + bpZ);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "noisegateon" + bqD);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "noisegatestrength[0]" + bqC[0]);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "noisegatestrength[1]" + bqC[1]);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "spkecenable:" + bqE);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agcRxFlag:" + bqM);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agcRxTargetdb:" + bqN);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agcRxGaindb:" + bqO);
-    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agcRxLimiter:" + bqP);
+    v.d("VoipAudioInfo", "streamtype " + bdI);
+    v.d("VoipAudioInfo", "smode " + bdJ);
+    v.d("VoipAudioInfo", "omode " + bdK);
+    v.d("VoipAudioInfo", "ospeaker " + bdL);
+    v.d("VoipAudioInfo", "operating" + bdM);
+    v.d("VoipAudioInfo", "moperating" + bdN);
+    v.d("VoipAudioInfo", "mstreamtype" + bdO);
+    v.d("VoipAudioInfo", "mVoiceRecordMode" + bdP);
+    v.d("VoipAudioInfo", "agcMode :" + bet);
+    v.d("VoipAudioInfo", "nsMode:" + bdS);
+    v.d("VoipAudioInfo", "aecMode:" + bdR);
+    v.d("VoipAudioInfo", "volumMode:" + bdT);
+    v.d("VoipAudioInfo", "micMode:" + bee);
+    v.d("VoipAudioInfo", "sourceMode:" + bef);
+    v.d("VoipAudioInfo", "speakerMode:" + beg);
+    v.d("VoipAudioInfo", "phoneMode:" + beh);
+    v.d("VoipAudioInfo", "voipstreamType:" + bei);
+    v.d("VoipAudioInfo", "speakerstreamtype:" + bej);
+    v.d("VoipAudioInfo", "phonestreamtype:" + bek);
+    v.d("VoipAudioInfo", "ringphonestream:" + bem);
+    v.d("VoipAudioInfo", "ringphonemode:" + ben);
+    v.d("VoipAudioInfo", "ringspeakerstream:" + beo);
+    v.d("VoipAudioInfo", "ringspeakermode:" + bep);
+    v.d("VoipAudioInfo", "agcModeNew :" + bes);
+    v.d("VoipAudioInfo", "nsModeNew:" + ber);
+    v.d("VoipAudioInfo", "aecModeNew:" + beq);
+    v.d("VoipAudioInfo", "agctargetdb:" + beu);
+    v.d("VoipAudioInfo", "agcgaindb:" + bev);
+    v.d("VoipAudioInfo", "agcflag:" + bew);
+    v.d("VoipAudioInfo", "agclimiter:" + bex);
+    v.d("VoipAudioInfo", "inputVolumeScale:" + bdU);
+    v.d("VoipAudioInfo", "outputVolumeScale:" + bdV);
+    v.d("VoipAudioInfo", "inputVolumeScaleForSpeaker:" + bdW);
+    v.d("VoipAudioInfo", "outputVolumeScaleForSpeaker:" + bdX);
+    v.d("VoipAudioInfo", "ehanceHeadsetEC:" + bea);
+    v.d("VoipAudioInfo", "setECModeLevelForHeadSet:" + beb);
+    v.d("VoipAudioInfo", "setECModeLevelForSpeaker:" + bec);
+    v.d("VoipAudioInfo", "enableSpeakerEnhanceEC:" + bed);
+    v.d("VoipAudioInfo", "enableRecTimer:" + bey);
+    v.d("VoipAudioInfo", "enablePlayTimer:" + bez);
+    v.d("VoipAudioInfo", "setPlayerPrecorrectCofOnOrOff:" + beA);
+    v.d("VoipAudioInfo", "outputVolumeGainForPhone:" + bdY);
+    v.d("VoipAudioInfo", "outputVolumeGainForSpeaker:" + bdZ);
+    v.d("VoipAudioInfo", "noisegateon" + beD);
+    v.d("VoipAudioInfo", "noisegatestrength[0]" + beC[0]);
+    v.d("VoipAudioInfo", "noisegatestrength[1]" + beC[1]);
+    v.d("VoipAudioInfo", "spkecenable:" + beE);
+    v.d("VoipAudioInfo", "agcRxFlag:" + beM);
+    v.d("VoipAudioInfo", "agcRxTargetdb:" + beN);
+    v.d("VoipAudioInfo", "agcRxGaindb:" + beO);
+    v.d("VoipAudioInfo", "agcRxLimiter:" + beP);
   }
   
-  public final boolean nW()
+  public final boolean mm()
   {
-    return ((bpJ >= 0) && (bpK < 0)) || ((bpJ < 0) && (bpK >= 0)) || (bpL > 0);
+    return ((bdJ >= 0) && (bdK < 0)) || ((bdJ < 0) && (bdK >= 0)) || (bdL > 0);
   }
   
-  public final boolean nX()
+  public final boolean mn()
   {
-    return bpM >= 0;
+    return bdM >= 0;
   }
   
-  public final boolean nY()
+  public final boolean mo()
   {
-    return bpN >= 0;
+    return bdN >= 0;
   }
   
-  public final int nZ()
+  public final int mp()
   {
     int i;
-    if (nX())
+    if (mn())
     {
-      i = (bpM & 0xE0) >> 5;
-      u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "getEnableMode " + i);
+      i = (bdM & 0xE0) >> 5;
+      v.d("VoipAudioInfo", "getEnableMode " + i);
       if (i != 7) {}
     }
     else
@@ -157,15 +157,15 @@ public final class a
     return i;
   }
   
-  public final boolean oa()
+  public final boolean mq()
   {
     boolean bool2 = false;
     boolean bool1 = bool2;
     int i;
     StringBuilder localStringBuilder;
-    if (nX())
+    if (mn())
     {
-      i = bpM & 0x10;
+      i = bdM & 0x10;
       localStringBuilder = new StringBuilder("enableSpeaker ");
       if (i <= 0) {
         break label61;
@@ -174,7 +174,7 @@ public final class a
     label61:
     for (bool1 = true;; bool1 = false)
     {
-      u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", bool1);
+      v.d("VoipAudioInfo", bool1);
       bool1 = bool2;
       if (i > 0) {
         bool1 = true;
@@ -183,13 +183,13 @@ public final class a
     }
   }
   
-  public final int ob()
+  public final int mr()
   {
     int i;
-    if (nX())
+    if (mn())
     {
-      i = (bpM & 0xE) >> 1;
-      u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "getDisableMode " + i);
+      i = (bdM & 0xE) >> 1;
+      v.d("VoipAudioInfo", "getDisableMode " + i);
       if (i != 7) {}
     }
     else
@@ -199,15 +199,15 @@ public final class a
     return i;
   }
   
-  public final boolean oc()
+  public final boolean ms()
   {
     boolean bool2 = false;
     boolean bool1 = bool2;
     int i;
     StringBuilder localStringBuilder;
-    if (nX())
+    if (mn())
     {
-      i = bpM & 0x1;
+      i = bdM & 0x1;
       localStringBuilder = new StringBuilder("disableSpeaker ");
       if (i <= 0) {
         break label60;
@@ -216,7 +216,7 @@ public final class a
     label60:
     for (bool1 = true;; bool1 = false)
     {
-      u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", bool1);
+      v.d("VoipAudioInfo", bool1);
       bool1 = bool2;
       if (i > 0) {
         bool1 = true;
@@ -225,13 +225,13 @@ public final class a
     }
   }
   
-  public final int od()
+  public final int mt()
   {
     int i;
-    if (nY())
+    if (mo())
     {
-      i = (bpN & 0xE0) >> 5;
-      u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "getEnableMode " + i);
+      i = (bdN & 0xE0) >> 5;
+      v.d("VoipAudioInfo", "getEnableMode " + i);
       if (i != 7) {}
     }
     else
@@ -241,13 +241,13 @@ public final class a
     return i;
   }
   
-  public final int oe()
+  public final int mu()
   {
     int i;
-    if (nY())
+    if (mo())
     {
-      i = (bpN & 0xE) >> 1;
-      u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "getDisableMode " + i);
+      i = (bdN & 0xE) >> 1;
+      v.d("VoipAudioInfo", "getDisableMode " + i);
       if (i != 7) {}
     }
     else
@@ -259,60 +259,60 @@ public final class a
   
   public final void reset()
   {
-    bpH = false;
-    bpI = -1;
-    bpJ = -1;
-    bpK = -1;
-    bpL = -1;
-    bpM = -1;
-    bpN = -1;
-    bpO = -1;
-    bpQ = -1;
-    bpP = -1;
-    bqt = -1;
-    bpR = -1;
-    bpS = -1;
-    bpT = -1;
-    bqe = -1;
-    bqf = -1;
-    bqg = -1;
-    bqh = -1;
-    bqi = -1;
-    bqj = -1;
-    bqk = -1;
-    bql = false;
-    bqm = -1;
-    bqn = -1;
-    bqp = -1;
-    bqo = -1;
-    bqs = -1;
-    bqq = -1;
-    bqr = -1;
-    bqu = -1;
-    bqv = -1;
-    bqw = -1;
-    bqx = -1;
-    bpU = -1;
-    bpV = -1;
-    bpW = -1;
-    bpX = -1;
-    bqa = -1;
-    bqb = -1;
-    bqc = -1;
-    bqd = -1;
-    bqy = 0;
-    bqz = 0;
-    bqA = -1;
-    bpZ = -1;
-    bpY = -1;
-    bqD = false;
-    bqC[0] = -1;
-    bqC[1] = -1;
-    bqE = -1;
-    bqM = -1;
-    bqN = -1;
-    bqO = -1;
-    bqP = -1;
+    bdH = false;
+    bdI = -1;
+    bdJ = -1;
+    bdK = -1;
+    bdL = -1;
+    bdM = -1;
+    bdN = -1;
+    bdO = -1;
+    bdQ = -1;
+    bdP = -1;
+    bet = -1;
+    bdR = -1;
+    bdS = -1;
+    bdT = -1;
+    bee = -1;
+    bef = -1;
+    beg = -1;
+    beh = -1;
+    bei = -1;
+    bej = -1;
+    bek = -1;
+    bel = false;
+    bem = -1;
+    ben = -1;
+    bep = -1;
+    beo = -1;
+    bes = -1;
+    beq = -1;
+    ber = -1;
+    beu = -1;
+    bev = -1;
+    bew = -1;
+    bex = -1;
+    bdU = -1;
+    bdV = -1;
+    bdW = -1;
+    bdX = -1;
+    bea = -1;
+    beb = -1;
+    bec = -1;
+    bed = -1;
+    bey = 0;
+    bez = 0;
+    beA = -1;
+    bdZ = -1;
+    bdY = -1;
+    beD = false;
+    beC[0] = -1;
+    beC[1] = -1;
+    beE = -1;
+    beM = -1;
+    beN = -1;
+    beO = -1;
+    beP = -1;
   }
 }
 

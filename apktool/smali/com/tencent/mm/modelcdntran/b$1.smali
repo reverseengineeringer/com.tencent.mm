@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic bKE:Lcom/tencent/mm/modelcdntran/b;
+.field final synthetic bDY:Lcom/tencent/mm/modelcdntran/b;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 34
-    iput-object p1, p0, Lcom/tencent/mm/modelcdntran/b$1;->bKE:Lcom/tencent/mm/modelcdntran/b;
+    iput-object p1, p0, Lcom/tencent/mm/modelcdntran/b$1;->bDY:Lcom/tencent/mm/modelcdntran/b;
 
     invoke-direct {p0}, Lcom/tencent/mm/network/m$a;-><init>()V
 
@@ -33,28 +33,28 @@
 
 
 # virtual methods
-.method public final aK(I)V
+.method public final bc(I)V
     .locals 6
 
     .prologue
     const/4 v5, 0x1
 
+    const/4 v4, 0x0
+
     .line 38
-    const-string/jumbo v0, "!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM="
+    const-string/jumbo v0, "MicroMsg.CdnTransportService"
 
     const-string/jumbo v1, "cdntra onNetworkChange st:%d "
 
     new-array v2, v5, [Ljava/lang/Object;
 
-    const/4 v3, 0x0
-
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v4
+    move-result-object v3
 
-    aput-object v4, v2, v3
+    aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 39
     const/4 v0, 0x5
@@ -70,14 +70,14 @@
 
     .line 42
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rg()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 45
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
@@ -85,7 +85,7 @@
 
     invoke-direct {v1}, Lcom/tencent/mm/modelcdntran/d;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    invoke-virtual {v0, v1, v4}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
     goto :goto_0
 .end method

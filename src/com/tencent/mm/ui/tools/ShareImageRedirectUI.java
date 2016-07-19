@@ -12,8 +12,8 @@ import android.widget.Toast;
 import com.tencent.mm.compatible.util.d;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.pluginsdk.ui.tools.k;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMBaseActivity;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.chatting.ChattingUI;
@@ -26,14 +26,14 @@ public class ShareImageRedirectUI
 {
   private String imagePath;
   
-  private void Kr()
+  private void Lb()
   {
-    k.d(this, d.buk, "microMsg." + System.currentTimeMillis() + ".jpg", 0);
+    k.d(this, d.biK, "microMsg." + System.currentTimeMillis() + ".jpg", 0);
     getWindow().getDecorView().setOnTouchListener(new View.OnTouchListener()
     {
       public final boolean onTouch(View paramAnonymousView, MotionEvent paramAnonymousMotionEvent)
       {
-        Toast.makeText(ShareImageRedirectUI.this, 2131428857, 1).show();
+        Toast.makeText(ShareImageRedirectUI.this, 2131235324, 1).show();
         finish();
         return false;
       }
@@ -56,7 +56,7 @@ public class ShareImageRedirectUI
       default: 
         return;
       case 0: 
-        imagePath = k.a(getApplicationContext(), paramIntent, ah.tD().rx());
+        imagePath = k.a(getApplicationContext(), paramIntent, ah.tE().rz());
       }
     } while (imagePath == null);
     paramIntent = new Intent(this, ShareImageSelectorUI.class);
@@ -82,24 +82,24 @@ public class ShareImageRedirectUI
     paramIntent = new Intent();
     paramIntent.putExtra("Ksnsupload_type", 0);
     paramIntent.putExtra("sns_kemdia_path", imagePath);
-    com.tencent.mm.ar.c.c(this, "sns", ".ui.SnsUploadUI", paramIntent);
+    com.tencent.mm.av.c.c(this, "sns", ".ui.SnsUploadUI", paramIntent);
     finish();
   }
   
   protected void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    boolean bool = com.tencent.mm.pluginsdk.g.a.a(this, "android.permission.CAMERA", 256, "", "");
-    u.d("!44@/B4Tb64lLpIPG1BmaCV8Ij1h352189jTmhyO13lz5Ec=", "summerper checkPermission checkCamera[%b], stack[%s], activity[%s]", new Object[] { Boolean.valueOf(bool), ay.aVJ(), this });
+    boolean bool = com.tencent.mm.pluginsdk.h.a.a(this, "android.permission.CAMERA", 256, "", "");
+    v.d("MicroMsg.ShareImageRedirectUI", "summerper checkPermission checkCamera[%b], stack[%s], activity[%s]", new Object[] { Boolean.valueOf(bool), be.baX(), this });
     if (!bool) {
       return;
     }
-    Kr();
+    Lb();
   }
   
   public void onRequestPermissionsResult(int paramInt, String[] paramArrayOfString, int[] paramArrayOfInt)
   {
-    u.d("!44@/B4Tb64lLpIPG1BmaCV8Ij1h352189jTmhyO13lz5Ec=", "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(paramArrayOfInt[0]), Long.valueOf(Thread.currentThread().getId()) });
+    v.d("MicroMsg.ShareImageRedirectUI", "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(paramArrayOfInt[0]), Long.valueOf(Thread.currentThread().getId()) });
     switch (paramInt)
     {
     default: 
@@ -107,10 +107,10 @@ public class ShareImageRedirectUI
     }
     if (paramArrayOfInt[0] == 0)
     {
-      Kr();
+      Lb();
       return;
     }
-    g.a(this, getString(2131429597), getString(2131429588), getString(2131429589), getString(2131430409), false, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+    g.a(this, getString(2131234136), getString(2131234146), getString(2131233448), getString(2131231427), false, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {

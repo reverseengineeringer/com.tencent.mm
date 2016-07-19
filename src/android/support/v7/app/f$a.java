@@ -8,28 +8,28 @@ import android.view.MenuItem;
 final class f$a
   implements ActionMode.Callback
 {
-  private final ActionMode.Callback jv;
+  private final ActionMode.Callback jM;
   
   f$a(f paramf, ActionMode.Callback paramCallback)
   {
-    jv = paramCallback;
+    jM = paramCallback;
   }
   
   public final boolean onActionItemClicked(ActionMode paramActionMode, MenuItem paramMenuItem)
   {
-    return jv.onActionItemClicked(paramActionMode, paramMenuItem);
+    return jM.onActionItemClicked(paramActionMode, paramMenuItem);
   }
   
   public final boolean onCreateActionMode(ActionMode paramActionMode, Menu paramMenu)
   {
-    boolean bool = jv.onCreateActionMode(paramActionMode, paramMenu);
+    boolean bool = jM.onCreateActionMode(paramActionMode, paramMenu);
     if (bool)
     {
-      jw.ju = paramActionMode;
-      paramActionMode = jw;
-      if (!jp)
+      jN.jL = paramActionMode;
+      paramActionMode = jN;
+      if (!jG)
       {
-        jp = true;
+        jG = true;
         paramActionMode.aW();
       }
     }
@@ -38,19 +38,19 @@ final class f$a
   
   public final void onDestroyActionMode(ActionMode paramActionMode)
   {
-    jv.onDestroyActionMode(paramActionMode);
-    paramActionMode = jw;
-    if (jp)
+    jM.onDestroyActionMode(paramActionMode);
+    paramActionMode = jN;
+    if (jG)
     {
-      jp = false;
+      jG = false;
       paramActionMode.aW();
     }
-    jw.ju = null;
+    jN.jL = null;
   }
   
   public final boolean onPrepareActionMode(ActionMode paramActionMode, Menu paramMenu)
   {
-    return jv.onPrepareActionMode(paramActionMode, paramMenu);
+    return jM.onPrepareActionMode(paramActionMode, paramMenu);
   }
 }
 

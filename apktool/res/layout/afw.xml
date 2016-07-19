@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckBox android:textAppearance="@style/i5" android:textColor="@android:color/black" android:ellipsize="marquee" android:gravity="center_vertical" android:background="@drawable/dl" android:layout_width="fill_parent" android:layout_height="45.0dip" android:checked="true" android:button="@null" android:minHeight="45.0dip" android:singleLine="true" android:drawableRight="@drawable/nt"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

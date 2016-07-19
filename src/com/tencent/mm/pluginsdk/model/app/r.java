@@ -1,22 +1,22 @@
 package com.tencent.mm.pluginsdk.model.app;
 
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class r
   implements Runnable
 {
   private String appId = null;
-  private int cbf = 0;
-  private aa handler = null;
+  private int bUR = 0;
+  private ac handler = null;
   private String url = null;
   
-  public r(aa paramaa, String paramString1, int paramInt, String paramString2)
+  public r(ac paramac, String paramString1, int paramInt, String paramString2)
   {
-    handler = paramaa;
+    handler = paramac;
     appId = paramString1;
-    cbf = paramInt;
+    bUR = paramInt;
     url = paramString2;
   }
   
@@ -25,8 +25,8 @@ final class r
     if ((appId == null) || (appId.length() == 0) || (url == null) || (url.length() == 0)) {
       return;
     }
-    Object localObject = ay.Du(url);
-    localObject = new t(appId, cbf, (byte[])localObject);
+    Object localObject = be.FJ(url);
+    localObject = new t(appId, bUR, (byte[])localObject);
     Message localMessage = Message.obtain();
     obj = localObject;
     handler.sendMessage(localMessage);

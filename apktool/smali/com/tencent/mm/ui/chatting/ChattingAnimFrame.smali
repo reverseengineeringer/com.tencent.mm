@@ -13,9 +13,18 @@
 
 
 # instance fields
-.field gqm:Ljava/util/List;
+.field gAE:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field gqn:I
+.field gAF:I
 
 .field size:I
 
@@ -35,19 +44,19 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;->gqm:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;->gAE:Ljava/util/List;
 
     .line 46
     iput v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;->size:I
 
     .line 47
-    iput v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;->gqn:I
+    iput v1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;->gAF:I
 
     .line 55
     return-void
 .end method
 
-.method static g(FF)F
+.method static f(FF)F
     .locals 2
 
     .prologue
@@ -110,7 +119,7 @@
 
 
 # virtual methods
-.method public final e(Landroid/app/Activity;I)V
+.method public final g(Landroid/app/Activity;I)V
     .locals 8
 
     .prologue
@@ -158,9 +167,9 @@
     invoke-direct {v0, p0, v4, v5}, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$b;-><init>(Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;II)V
 
     .line 97
-    invoke-static {}, Lcom/tencent/mm/ay/g;->aWe()Lcom/tencent/mm/ay/g;
+    invoke-static {}, Lcom/tencent/mm/bb/g;->bbq()Lcom/tencent/mm/bb/g;
 
-    invoke-static {p2}, Lcom/tencent/mm/ay/g;->pA(I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p2}, Lcom/tencent/mm/bb/g;->rq(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
@@ -218,7 +227,7 @@
 
     iput-object v5, v0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;->targetView:Landroid/view/View;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;->gqm:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;->gAE:Ljava/util/List;
 
     invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -240,7 +249,7 @@
 
     .prologue
     .line 226
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;->gqm:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;->gAE:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 

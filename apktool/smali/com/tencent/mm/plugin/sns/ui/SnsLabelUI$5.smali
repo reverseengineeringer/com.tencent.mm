@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->Gb()V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hfA:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
+.field final synthetic hur:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 280
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$5;->hfA:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$5;->hur:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,19 +41,19 @@
 
     .prologue
     .line 284
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$5;->hfA:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$5;->hur:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget v1, v1, Lcom/tencent/mm/plugin/sns/ui/ah;->hfF:I
+    iget v1, v1, Lcom/tencent/mm/plugin/sns/ui/al;->huw:I
 
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_0
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/ah;->hfH:Ljava/util/ArrayList;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/al;->huy:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -62,17 +62,17 @@
     if-eqz v1, :cond_1
 
     :cond_0
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget v1, v1, Lcom/tencent/mm/plugin/sns/ui/ah;->hfF:I
+    iget v1, v1, Lcom/tencent/mm/plugin/sns/ui/al;->huw:I
 
     const/4 v2, 0x3
 
     if-ne v1, v2, :cond_2
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hfm:Lcom/tencent/mm/plugin/sns/ui/ah;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->hud:Lcom/tencent/mm/plugin/sns/ui/al;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/ah;->hfI:Ljava/util/ArrayList;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/al;->huz:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -81,7 +81,7 @@
     if-nez v1, :cond_2
 
     :cond_1
-    const v1, 0x7f0b16d7
+    const v1, 0x7f081289
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->getString(I)Ljava/lang/String;
 
@@ -89,7 +89,7 @@
 
     const-string/jumbo v2, ""
 
-    const v3, 0x7f0b16d1
+    const v3, 0x7f081291
 
     invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->getString(I)Ljava/lang/String;
 
@@ -107,7 +107,7 @@
 
     .line 284
     :cond_2
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->aBZ()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->aFc()V
 
     goto :goto_0
 .end method

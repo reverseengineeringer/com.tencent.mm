@@ -3,33 +3,39 @@ package com.tencent.mm.c.b;
 import android.media.MediaRecorder;
 import android.media.MediaRecorder.OnErrorListener;
 import android.os.Looper;
-import com.tencent.mm.al.c.b;
+import com.tencent.mm.ao.c.b;
 import com.tencent.mm.compatible.util.f.a;
+import com.tencent.mm.model.ah;
 import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
 
 public final class b
 {
-  private static Object apG = new Object();
-  private a apA;
-  private com.tencent.mm.al.b apB = null;
-  private com.tencent.mm.al.c.a apC = null;
-  private long apD = 0L;
-  private long apE = 0L;
-  private int apF = 0;
-  private int apH = 8000;
-  private int apI = 16000;
-  private boolean apJ = false;
-  private MediaRecorder apK;
-  public c apL = null;
-  public com.tencent.mm.compatible.b.b.a apM;
-  private b apN;
-  private f.a apO = new f.a();
-  private c.a apP = new c.a()
+  private static Object aaY = new Object();
+  private int aaO = 0;
+  private String aaP = null;
+  private int aaQ;
+  private com.tencent.mm.c.c.c aaR = null;
+  private a aaS;
+  private com.tencent.mm.ao.b aaT = null;
+  private com.tencent.mm.ao.c.a aaU = null;
+  private long aaV = 0L;
+  private long aaW = 0L;
+  private int aaX = 0;
+  private int aaZ = 8000;
+  private int aba = 16000;
+  private boolean abb = false;
+  private MediaRecorder abc;
+  public c abd = null;
+  public com.tencent.mm.compatible.b.b.a abe;
+  private b abf;
+  private f.a abg = new f.a();
+  private c.a abh = new c.a()
   {
     private static byte[] e(byte[] paramAnonymousArrayOfByte, int paramAnonymousInt)
     {
@@ -70,76 +76,76 @@ public final class b
     public final void d(byte[] paramAnonymousArrayOfByte, int paramAnonymousInt)
     {
       int j = -1;
-      if (b.c(b.this) == b.b.apW)
+      if (b.c(b.this) == b.b.abo)
       {
-        u.w("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "recorder has been stopped");
+        v.w("MicroMsg.MMAudioRecorder", "recorder has been stopped");
         return;
       }
-      long l = ay.an(b.d(b.this));
+      long l = be.au(b.d(b.this));
       if ((b.e(b.this) > 0L) && (l > b.e(b.this)))
       {
-        u.w("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "Stop now ! expire duration ms:" + l);
-        new aa(Looper.getMainLooper()).post(new Runnable()
+        v.w("MicroMsg.MMAudioRecorder", "Stop now ! expire duration ms:" + l);
+        new ac(Looper.getMainLooper()).post(new Runnable()
         {
           public final void run()
           {
-            lv();
+            jW();
             b.a(b.this).onError();
           }
         });
         return;
       }
-      u.d("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "read :" + paramAnonymousInt + " time: " + b.f(b.this).pa() + " dataReadedCnt: " + b.g(b.this));
+      v.d("MicroMsg.MMAudioRecorder", "read :" + paramAnonymousInt + " time: " + b.f(b.this).ns() + " dataReadedCnt: " + b.g(b.this));
       if (paramAnonymousInt < 0)
       {
-        if (b.c(b.this) == b.b.apW)
+        if (b.c(b.this) == b.b.abo)
         {
-          u.w("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "recorder has been stopped");
+          v.w("MicroMsg.MMAudioRecorder", "recorder has been stopped");
           return;
         }
-        new aa(Looper.getMainLooper()).post(new Runnable()
+        new ac(Looper.getMainLooper()).post(new Runnable()
         {
           public final void run()
           {
-            lv();
+            jW();
             b.a(b.this).onError();
           }
         });
         return;
       }
       b.a(b.this, paramAnonymousInt);
-      if ((b.h(b.this) == null) && ((b.i(b.this) == com.tencent.mm.compatible.b.b.a.bpn) || (b.i(b.this) == com.tencent.mm.compatible.b.b.a.bpp)) && (b.j(b.this) != null) && (b.k(b.this)))
+      if ((b.h(b.this) == null) && ((b.i(b.this) == com.tencent.mm.compatible.b.b.a.bdm) || (b.i(b.this) == com.tencent.mm.compatible.b.b.a.bdo)) && (b.j(b.this) != null) && (b.k(b.this)))
       {
-        b.a(b.this, new com.tencent.mm.al.b());
+        b.a(b.this, new com.tencent.mm.ao.b());
         localObject = b.h(b.this);
         i = b.l(b.this);
-        u.i("!44@/B4Tb64lLpJjdNXZaTU/yPJ+5ICc1/K11SmIwS+HTfk=", "init ");
-        ccG.clear();
+        v.i("MicroMsg.SpeexEncoderWorker", "init ");
+        bWu.clear();
         c.b localb = new c.b();
-        cat = com.tencent.mm.al.c.getPrefix();
-        ccA = i;
-        ccB = 1;
-        ccC = 16;
-        mFileName = String.format("%s%d_%d_%d_%d", new Object[] { cat, Integer.valueOf(ccA), Integer.valueOf(ccB), Integer.valueOf(ccC), Long.valueOf(System.currentTimeMillis()) });
+        bUc = com.tencent.mm.ao.c.getPrefix();
+        bWo = i;
+        bWp = 1;
+        bWq = 16;
+        mFileName = String.format("%s%d_%d_%d_%d", new Object[] { bUc, Integer.valueOf(bWo), Integer.valueOf(bWp), Integer.valueOf(bWq), Long.valueOf(System.currentTimeMillis()) });
       }
       if (b.h(b.this) != null)
       {
         localObject = b.h(b.this);
-        u.d("!44@/B4Tb64lLpJjdNXZaTU/yPJ+5ICc1/K11SmIwS+HTfk=", "push into queue queueLen:" + ccG.size());
+        v.d("MicroMsg.SpeexEncoderWorker", "push into queue queueLen:" + bWu.size());
         if ((paramAnonymousArrayOfByte != null) && (paramAnonymousArrayOfByte.length > 0)) {
-          ccG.add(new g.a(paramAnonymousArrayOfByte, paramAnonymousArrayOfByte.length));
+          bWu.add(new g.a(paramAnonymousArrayOfByte, paramAnonymousArrayOfByte.length));
         }
       }
-      if (b.i(b.this) == com.tencent.mm.compatible.b.b.a.bpp)
+      if (b.i(b.this) == com.tencent.mm.compatible.b.b.a.bdo)
       {
         if (b.m(b.this) == null)
         {
           b.a(b.this, new com.tencent.mm.c.c.c(b.l(b.this), b.n(b.this)));
-          b.m(b.this).br(b.o(b.this));
+          b.m(b.this).bk(b.o(b.this));
         }
         f(paramAnonymousArrayOfByte, paramAnonymousInt);
         localObject = b.m(b.this);
-        if (arD == null)
+        if (adl == null)
         {
           i = -1;
           label596:
@@ -149,27 +155,27 @@ public final class b
         }
         for (;;)
         {
-          u.d("!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7", "pushBuf queueLen:%d bufLen:%d len:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(j), Integer.valueOf(paramAnonymousInt) });
+          v.d("MicroMsg.SilkWriter", "pushBuf queueLen:%d bufLen:%d len:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(j), Integer.valueOf(paramAnonymousInt) });
           if (paramAnonymousInt <= 0) {
             break;
           }
-          if (!arE) {
+          if (!adm) {
             break label678;
           }
-          u.e("!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7", "already stop");
+          v.e("MicroMsg.SilkWriter", "already stop");
           return;
-          i = arD.size();
+          i = adl.size();
           break label596;
           label671:
           j = paramAnonymousArrayOfByte.length;
         }
         label678:
-        if (arK == null)
+        if (ads == null)
         {
-          arK = new com.tencent.mm.c.c.c.a((com.tencent.mm.c.c.c)localObject, (byte)0);
-          com.tencent.mm.sdk.i.e.a(arK, "SilkWriter_run");
+          ads = new com.tencent.mm.c.c.c.a((com.tencent.mm.c.c.c)localObject, (byte)0);
+          com.tencent.mm.sdk.i.e.a(ads, "SilkWriter_run");
         }
-        arD.add(new g.a(paramAnonymousArrayOfByte, paramAnonymousInt));
+        adl.add(new g.a(paramAnonymousArrayOfByte, paramAnonymousInt));
         return;
       }
       Object localObject = paramAnonymousArrayOfByte;
@@ -182,91 +188,87 @@ public final class b
       f((byte[])localObject, i);
     }
   };
-  private int apw = 0;
-  private String apx = null;
-  private int apy;
-  private com.tencent.mm.c.c.c apz = null;
   
   public b(com.tencent.mm.compatible.b.b.a arg1)
   {
-    u.i("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "MMAudioRecorder recMode: " + ???);
-    apM = ???;
-    if (!g.b.lS())
+    v.i("MicroMsg.MMAudioRecorder", "MMAudioRecorder recMode: " + ???);
+    abe = ???;
+    if (!g.b.kd())
     {
-      u.i("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "can't use silk encode, force to use amr mode now");
-      apM = com.tencent.mm.compatible.b.b.a.bpo;
+      v.i("MicroMsg.MMAudioRecorder", "can't use silk encode, force to use amr mode now");
+      abe = com.tencent.mm.compatible.b.b.a.bdn;
     }
-    if (apM == com.tencent.mm.compatible.b.b.a.bpo)
+    if (abe == com.tencent.mm.compatible.b.b.a.bdn)
     {
-      apy = 7;
-      apK = new MediaRecorder();
+      aaQ = 7;
+      abc = new MediaRecorder();
       return;
     }
-    apC = com.tencent.mm.al.c.a.Dk();
+    aaU = com.tencent.mm.ao.c.a.Du();
     boolean bool;
-    if (apC != null)
+    if (aaU != null)
     {
-      ??? = apC;
-      if (1 != g.j("EnableSpeexVoiceUpload", 0)) {
+      ??? = aaU;
+      if (1 != g.g("EnableSpeexVoiceUpload", 0)) {
         break label385;
       }
       bool = true;
     }
     for (;;)
     {
-      apJ = bool;
+      abb = bool;
       Object localObject1;
-      if (apM == com.tencent.mm.compatible.b.b.a.bpp)
+      if (abe == com.tencent.mm.compatible.b.b.a.bdo)
       {
-        ??? = com.tencent.mm.g.h.pS().getValue("VoiceSamplingRate");
-        apH = ay.getInt(???, 16000);
-        localObject1 = com.tencent.mm.g.h.pS().getValue("VoiceRate");
-        apI = ay.getInt((String)localObject1, 16000);
-        u.i("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "initMediaRecorder dynamicSample: %s sampleRate: %d dynamicEncoding: %s audioEncoding: %d", new Object[] { ???, Integer.valueOf(apH), localObject1, Integer.valueOf(apI) });
+        ??? = com.tencent.mm.h.h.om().getValue("VoiceSamplingRate");
+        aaZ = be.getInt(???, 16000);
+        localObject1 = com.tencent.mm.h.h.om().getValue("VoiceRate");
+        aba = be.getInt((String)localObject1, 16000);
+        v.i("MicroMsg.MMAudioRecorder", "initMediaRecorder dynamicSample: %s sampleRate: %d dynamicEncoding: %s audioEncoding: %d", new Object[] { ???, Integer.valueOf(aaZ), localObject1, Integer.valueOf(aba) });
         label295:
-        apw = 0;
-        apx = null;
-        apB = null;
-        apz = null;
-        apF = 0;
+        aaO = 0;
+        aaP = null;
+        aaT = null;
+        aaR = null;
+        aaX = 0;
       }
       try
       {
-        synchronized (apG)
+        synchronized (aaY)
         {
-          apL = new c(apH, 0);
-          apL.al(true);
-          apL.aP(120);
-          apL.aqt = apP;
-          apN = b.apS;
-          apy = 1;
+          abd = new c(aaZ, 0);
+          abd.O(true);
+          abd.bf(120);
+          abd.abL = abh;
+          abf = b.abk;
+          aaQ = 1;
           return;
           label385:
-          u.d("!12@nLQl5Xo8bwA=", "type " + com.tencent.mm.al.c.ccJ);
-          int j = ???.Dj();
-          int i = ???.Di();
-          localObject1 = Integer.valueOf(ay.d((Integer)com.tencent.mm.model.ah.tD().rn().get(16646145, null)));
-          u.d("!12@nLQl5Xo8bwA=", "daycount " + ???.Dj() + "  count " + localObject1 + " rate " + i);
-          if ((((Integer)localObject1).intValue() <= j) && (i != 0) && (com.tencent.mm.sdk.platformtools.ah.dB(y.getContext())))
+          v.d("upload", "type " + com.tencent.mm.ao.c.bWx);
+          int j = ???.Dt();
+          int i = ???.Ds();
+          localObject1 = Integer.valueOf(be.f((Integer)ah.tE().ro().get(16646145, null)));
+          v.d("upload", "daycount " + ???.Dt() + "  count " + localObject1 + " rate " + i);
+          if ((((Integer)localObject1).intValue() <= j) && (i != 0) && (ak.dC(aa.getContext())))
           {
-            j = ay.b((Integer)com.tencent.mm.model.ah.tD().rn().get(12290, null), 0);
-            if (aSu == 0) {
+            j = be.b((Integer)ah.tE().ro().get(12290, null), 0);
+            if (aFd == 0) {
               bool = true;
             }
             for (;;)
             {
-              u.d("!12@nLQl5Xo8bwA=", "fitSex " + aSu + " " + bool + " " + aSu);
-              if ((!bool) || (!???.Dh())) {
+              v.d("upload", "fitSex " + aFd + " " + bool + " " + aFd);
+              if ((!bool) || (!???.Dr())) {
                 break label665;
               }
-              j = ccV.nextInt(i);
-              u.d("!12@nLQl5Xo8bwA=", "luck " + j);
+              j = bWJ.nextInt(i);
+              v.d("upload", "luck " + j);
               if (j != i / 2) {
                 break label665;
               }
               bool = true;
               break;
-              if (aSu == j) {
+              if (aFd == j) {
                 bool = true;
               } else {
                 bool = false;
@@ -276,20 +278,20 @@ public final class b
           label665:
           bool = false;
           continue;
-          if (apJ)
+          if (abb)
           {
-            apH = 16000;
-            i = ay.b((Integer)com.tencent.mm.model.ah.tu().get(27), 0);
-            u.i("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "sampleRate: " + apH + " notSupp16K: " + i);
+            aaZ = 16000;
+            i = be.b((Integer)ah.tv().get(27), 0);
+            v.i("MicroMsg.MMAudioRecorder", "sampleRate: " + aaZ + " notSupp16K: " + i);
             if (i != 1) {
               break label295;
             }
-            apH = 8000;
+            aaZ = 8000;
             break label295;
           }
-          apH = 8000;
+          aaZ = 8000;
         }
-        u.e("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", ???.getMessage());
+        v.e("MicroMsg.MMAudioRecorder", ???.getMessage());
       }
       catch (Exception ???)
       {
@@ -298,21 +300,21 @@ public final class b
     }
     for (;;)
     {
-      apN = b.apV;
+      abf = b.abn;
       break;
-      u.e("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "Unknown error occured while initializing recording");
+      v.e("MicroMsg.MMAudioRecorder", "Unknown error occured while initializing recording");
     }
   }
   
   public final void a(a parama)
   {
-    if (apM == com.tencent.mm.compatible.b.b.a.bpo)
+    if (abe == com.tencent.mm.compatible.b.b.a.bdn)
     {
-      if (apK == null) {
+      if (abc == null) {
         return;
       }
-      apA = parama;
-      apK.setOnErrorListener(new MediaRecorder.OnErrorListener()
+      aaS = parama;
+      abc.setOnErrorListener(new MediaRecorder.OnErrorListener()
       {
         public final void onError(MediaRecorder paramAnonymousMediaRecorder, int paramAnonymousInt1, int paramAnonymousInt2)
         {
@@ -322,220 +324,220 @@ public final class b
           try
           {
             b.b(b.this).release();
-            b.a(b.this, b.b.apV);
+            b.a(b.this, b.b.abn);
             return;
           }
           catch (Exception paramAnonymousMediaRecorder)
           {
             for (;;)
             {
-              u.e("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", paramAnonymousMediaRecorder.getMessage());
+              v.e("MicroMsg.MMAudioRecorder", paramAnonymousMediaRecorder.getMessage());
             }
           }
         }
       });
       return;
     }
-    if (apN == b.apS)
+    if (abf == b.abk)
     {
-      apA = parama;
+      aaS = parama;
       return;
     }
-    u.e("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "setOnErrorListener on wrong state");
+    v.e("MicroMsg.MMAudioRecorder", "setOnErrorListener on wrong state");
   }
   
   public final int getMaxAmplitude()
   {
-    if (apM == com.tencent.mm.compatible.b.b.a.bpo) {
-      if (apK != null) {}
+    if (abe == com.tencent.mm.compatible.b.b.a.bdn) {
+      if (abc != null) {}
     }
-    while (apN != b.apU)
+    while (abf != b.abm)
     {
       return 0;
-      return apK.getMaxAmplitude();
+      return abc.getMaxAmplitude();
     }
-    int i = apw;
-    apw = 0;
+    int i = aaO;
+    aaO = 0;
     return i;
   }
   
-  public final void lJ()
+  public final void jT()
   {
-    if ((apM == com.tencent.mm.compatible.b.b.a.bpo) && (apK != null)) {
-      apK.setAudioEncoder(1);
+    if ((abe == com.tencent.mm.compatible.b.b.a.bdn) && (abc != null)) {
+      abc.setAudioEncoder(1);
     }
   }
   
-  public final void lK()
+  public final void jU()
   {
-    if ((apM != com.tencent.mm.compatible.b.b.a.bpo) || (apK == null)) {
+    if ((abe != com.tencent.mm.compatible.b.b.a.bdn) || (abc == null)) {
       return;
     }
-    apK.setAudioSource(1);
+    abc.setAudioSource(1);
   }
   
-  public final void lL()
+  public final void jV()
   {
-    if ((apM != com.tencent.mm.compatible.b.b.a.bpo) || (apK == null)) {
+    if ((abe != com.tencent.mm.compatible.b.b.a.bdn) || (abc == null)) {
       return;
     }
-    apK.setOutputFormat(3);
+    abc.setOutputFormat(3);
   }
   
-  public final boolean lv()
+  public final boolean jW()
   {
-    if (apM == com.tencent.mm.compatible.b.b.a.bpo)
+    if (abe == com.tencent.mm.compatible.b.b.a.bdn)
     {
-      u.i("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "stop sysMediaRecorder: %s", new Object[] { apK });
-      if (apK != null)
+      v.i("MicroMsg.MMAudioRecorder", "stop sysMediaRecorder: %s", new Object[] { abc });
+      if (abc != null)
       {
-        apK.stop();
-        apK.release();
-        apK = null;
+        abc.stop();
+        abc.release();
+        abc = null;
       }
       return true;
     }
     f.a locala = new f.a();
-    u.i("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "stop now state: " + apN);
-    if (apN != b.apU)
+    v.i("MicroMsg.MMAudioRecorder", "stop now state: " + abf);
+    if (abf != b.abm)
     {
-      u.e("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "stop() called on illegal state");
-      apN = b.apV;
+      v.e("MicroMsg.MMAudioRecorder", "stop() called on illegal state");
+      abf = b.abn;
       return true;
     }
-    synchronized (apG)
+    synchronized (aaY)
     {
-      if (apL != null)
+      if (abd != null)
       {
-        apL.lH();
-        apL.aqt = null;
-        long l1 = locala.pa();
-        apN = b.apW;
-        long l2 = locala.pa();
-        if (apz != null) {
-          apz.lU();
+        abd.jR();
+        abd.abL = null;
+        long l1 = locala.ns();
+        abf = b.abo;
+        long l2 = locala.ns();
+        if (aaR != null) {
+          aaR.kk();
         }
-        if (apB != null)
+        if (aaT != null)
         {
-          ??? = apB;
-          u.i("!44@/B4Tb64lLpJjdNXZaTU/yPJ+5ICc1/K11SmIwS+HTfk=", "stop ");
-          new aa(Looper.getMainLooper()).post(new com.tencent.mm.al.b.1((com.tencent.mm.al.b)???));
+          ??? = aaT;
+          v.i("MicroMsg.SpeexEncoderWorker", "stop ");
+          new ac(Looper.getMainLooper()).post(new com.tencent.mm.ao.b.1((com.tencent.mm.ao.b)???));
         }
-        long l3 = ay.an(apE);
-        u.i("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "toNow " + l3 + " startTickCnt: " + apE + " pcmDataReadedCnt: " + apF);
-        if ((l3 > 2000L) && (apF == 0))
+        long l3 = be.au(aaW);
+        v.i("MicroMsg.MMAudioRecorder", "toNow " + l3 + " startTickCnt: " + aaW + " pcmDataReadedCnt: " + aaX);
+        if ((l3 > 2000L) && (aaX == 0))
         {
-          com.tencent.mm.model.ah.tu().set(27, Integer.valueOf(1));
-          u.i("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "16k not suppourt");
+          ah.tv().set(27, Integer.valueOf(1));
+          v.i("MicroMsg.MMAudioRecorder", "16k not suppourt");
         }
-        u.i("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "Wait Stop Time Media:" + l1 + " Read:" + l2 + " Thr:" + locala.pa());
+        v.i("MicroMsg.MMAudioRecorder", "Wait Stop Time Media:" + l1 + " Read:" + l2 + " Thr:" + locala.ns());
         return false;
       }
-      u.i("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "stop now, but recorder is null");
+      v.i("MicroMsg.MMAudioRecorder", "stop now, but recorder is null");
     }
   }
   
   public final void prepare()
   {
-    if (apM == com.tencent.mm.compatible.b.b.a.bpo)
+    if (abe == com.tencent.mm.compatible.b.b.a.bdn)
     {
-      if (apK != null) {
-        apK.prepare();
+      if (abc != null) {
+        abc.prepare();
       }
       return;
     }
-    if ((apN != b.apS) || (apx == null))
+    if ((abf != b.abk) || (aaP == null))
     {
-      apN = b.apV;
+      abf = b.abn;
       release();
       return;
     }
-    apN = b.apT;
+    abf = b.abl;
   }
   
   public final void release()
   {
-    if (apM == com.tencent.mm.compatible.b.b.a.bpo)
+    if (abe == com.tencent.mm.compatible.b.b.a.bdn)
     {
-      if (apK != null) {
-        apK.release();
+      if (abc != null) {
+        abc.release();
       }
       return;
     }
-    if (apN == b.apU) {
-      lv();
+    if (abf == b.abm) {
+      jW();
     }
     for (;;)
     {
-      synchronized (apG)
+      synchronized (aaY)
       {
-        if (apL != null)
+        if (abd != null)
         {
-          apL.lH();
-          apL = null;
+          abd.jR();
+          abd = null;
         }
         return;
       }
-      ??? = b.apT;
+      ??? = b.abl;
     }
   }
   
   public final void setMaxDuration(int paramInt)
   {
-    if (apM == com.tencent.mm.compatible.b.b.a.bpo)
+    if (abe == com.tencent.mm.compatible.b.b.a.bdn)
     {
-      if (apK != null) {
-        apK.setMaxDuration(paramInt);
+      if (abc != null) {
+        abc.setMaxDuration(paramInt);
       }
       return;
     }
-    apD = paramInt;
+    aaV = paramInt;
   }
   
   public final void setOutputFile(String paramString)
   {
-    if (apM == com.tencent.mm.compatible.b.b.a.bpo)
+    if (abe == com.tencent.mm.compatible.b.b.a.bdn)
     {
-      if (apK == null) {
+      if (abc == null) {
         return;
       }
-      apK.setOutputFile(paramString);
-      apx = paramString;
+      abc.setOutputFile(paramString);
+      aaP = paramString;
       return;
     }
-    if (apN == b.apS)
+    if (abf == b.abk)
     {
-      apx = paramString;
+      aaP = paramString;
       return;
     }
-    u.e("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "set output path on wrong state");
-    apN = b.apV;
+    v.e("MicroMsg.MMAudioRecorder", "set output path on wrong state");
+    abf = b.abn;
   }
   
   public final void start()
   {
-    if (apM == com.tencent.mm.compatible.b.b.a.bpo)
+    if (abe == com.tencent.mm.compatible.b.b.a.bdn)
     {
-      if (apK != null) {
-        apK.start();
+      if (abc != null) {
+        abc.start();
       }
       return;
     }
-    u.i("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "Start record now state: " + apN + " recMode: " + apM);
-    if (apN == b.apT)
+    v.i("MicroMsg.MMAudioRecorder", "Start record now state: " + abf + " recMode: " + abe);
+    if (abf == b.abl)
     {
-      apE = System.currentTimeMillis();
-      apF = 0;
-      apN = b.apU;
-      synchronized (apG)
+      aaW = System.currentTimeMillis();
+      aaX = 0;
+      abf = b.abm;
+      synchronized (aaY)
       {
-        apL.lN();
+        abd.jY();
         return;
       }
     }
-    com.tencent.mm.model.ah.tu().set(27, Integer.valueOf(1));
-    u.e("!44@/B4Tb64lLpLjA0AEL11ABnydw0lmalY0PUdh7PwSVhI=", "start() called on illegal state");
-    apN = b.apV;
+    ah.tv().set(27, Integer.valueOf(1));
+    v.e("MicroMsg.MMAudioRecorder", "start() called on illegal state");
+    abf = b.abn;
   }
   
   public static abstract interface a
@@ -543,7 +545,10 @@ public final class b
     public abstract void onError();
   }
   
-  public static enum b {}
+  public static enum b
+  {
+    private b() {}
+  }
 }
 
 /* Location:

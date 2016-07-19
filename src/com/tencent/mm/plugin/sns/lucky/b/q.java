@@ -2,10 +2,10 @@ package com.tencent.mm.plugin.sns.lucky.b;
 
 public final class q
 {
-  public String gIK = "";
-  public String gIL = "";
-  public long gIe = 0L;
-  public long gIf = 0L;
+  public long gPj = 0L;
+  public long gPk = 0L;
+  public String gQl = "";
+  public String gQm = "";
 }
 
 /* Location:

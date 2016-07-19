@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ewP:Lcom/tencent/mm/plugin/gif/a;
+.field final synthetic eDi:Lcom/tencent/mm/plugin/gif/a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 96
-    iput-object p1, p0, Lcom/tencent/mm/plugin/gif/a$3;->ewP:Lcom/tencent/mm/plugin/gif/a;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/gif/a$3;->eDi:Lcom/tencent/mm/plugin/gif/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 100
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gif/a$3;->ewP:Lcom/tencent/mm/plugin/gif/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gif/a$3;->eDi:Lcom/tencent/mm/plugin/gif/a;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/gif/a;->d(Lcom/tencent/mm/plugin/gif/a;)J
 
@@ -50,15 +50,15 @@
     invoke-static {v0, v1}, Lcom/tencent/mm/plugin/gif/MMGIFJNI;->restoreRemainder(J)V
 
     .line 101
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gif/a$3;->ewP:Lcom/tencent/mm/plugin/gif/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gif/a$3;->eDi:Lcom/tencent/mm/plugin/gif/a;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/gif/a$3;->ewP:Lcom/tencent/mm/plugin/gif/a;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/gif/a$3;->eDi:Lcom/tencent/mm/plugin/gif/a;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/gif/a;->e(Lcom/tencent/mm/plugin/gif/a;)Ljava/lang/Runnable;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/gif/a$3;->ewP:Lcom/tencent/mm/plugin/gif/a;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/gif/a$3;->eDi:Lcom/tencent/mm/plugin/gif/a;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/gif/a;->f(Lcom/tencent/mm/plugin/gif/a;)J
 

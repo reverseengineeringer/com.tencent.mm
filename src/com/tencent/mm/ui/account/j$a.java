@@ -2,9 +2,9 @@ package com.tencent.mm.ui.account;
 
 public abstract interface j$a
 {
-  public abstract void Gr(String paramString);
+  public abstract void IG(String paramString);
   
-  public abstract void bbK();
+  public abstract void bgW();
 }
 
 /* Location:

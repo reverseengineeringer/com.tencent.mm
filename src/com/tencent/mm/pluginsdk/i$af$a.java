@@ -2,11 +2,11 @@ package com.tencent.mm.pluginsdk;
 
 public abstract interface i$af$a
 {
-  public abstract String aKK();
+  public abstract String aOr();
   
-  public abstract void aKL();
+  public abstract void aOs();
   
-  public abstract boolean aKM();
+  public abstract boolean aOt();
 }
 
 /* Location:

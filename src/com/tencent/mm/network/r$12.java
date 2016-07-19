@@ -1,10 +1,10 @@
 package com.tencent.mm.network;
 
-import com.tencent.mm.sdk.platformtools.at;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.az;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class r$12
-  extends at
+  extends az<Object>
 {
   r$12(r paramr, String paramString)
   {
@@ -13,8 +13,8 @@ final class r$12
   
   protected final Object run()
   {
-    u.appenderFlush();
-    Java2C.onIPxx(cjn);
+    v.appenderFlush();
+    Java2C.onIPxx(ceE);
     return null;
   }
 }

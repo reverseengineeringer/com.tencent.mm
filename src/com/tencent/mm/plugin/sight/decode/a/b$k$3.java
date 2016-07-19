@@ -1,7 +1,7 @@
 package com.tencent.mm.plugin.sight.decode.a;
 
 import android.view.View;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class b$k$3
   implements Runnable
@@ -10,8 +10,8 @@ final class b$k$3
   
   public final void run()
   {
-    u.v("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "set background drawable null");
-    gxY.setBackgroundDrawable(null);
+    v.v("MicroMsg.SightPlayController", "set background drawable null");
+    gEv.setBackgroundDrawable(null);
   }
 }
 

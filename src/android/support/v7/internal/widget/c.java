@@ -16,52 +16,52 @@ import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 
-abstract class c
+abstract class c<T extends Adapter>
   extends ViewGroup
 {
-  boolean mInLayout = false;
-  boolean na = false;
-  private boolean pA;
-  private e pB;
+  boolean aO = false;
+  boolean nq = false;
+  int pA;
+  d pB;
+  b pC;
+  boolean pD;
+  @ViewDebug.ExportedProperty(category="list")
+  int pE = -1;
+  long pF = Long.MIN_VALUE;
+  @ViewDebug.ExportedProperty(category="list")
+  int pG = -1;
+  long pH = Long.MIN_VALUE;
+  private View pI;
+  @ViewDebug.ExportedProperty(category="list")
+  int pJ;
+  int pK;
+  int pL = -1;
+  long pM = Long.MIN_VALUE;
+  private boolean pN;
+  private boolean pO;
+  private c<T>.e pP;
   @ViewDebug.ExportedProperty(category="scrolling")
-  int pf = 0;
-  int pg;
-  int ph;
-  long pi = Long.MIN_VALUE;
-  long pj;
-  boolean pk = false;
-  int pl;
-  int pm;
-  d pn;
-  b po;
-  boolean pp;
-  @ViewDebug.ExportedProperty(category="list")
-  int pq = -1;
-  long pr = Long.MIN_VALUE;
-  @ViewDebug.ExportedProperty(category="list")
-  int ps = -1;
-  long pt = Long.MIN_VALUE;
-  private View pu;
-  @ViewDebug.ExportedProperty(category="list")
+  int pt = 0;
+  int pu;
   int pv;
-  int pw;
-  int px = -1;
-  long py = Long.MIN_VALUE;
-  private boolean pz;
+  long pw = Long.MIN_VALUE;
+  long px;
+  boolean py = false;
+  int pz;
   
   c(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  private void cc()
+  private void ce()
   {
-    if (pn == null) {}
+    if (pB == null) {}
     int i;
     do
     {
       return;
-      i = pq;
+      i = pE;
     } while (i < 0);
     getSelectedView();
     getAdapter().getItemId(i);
@@ -76,26 +76,26 @@ abstract class c
     return localAdapter.getItemId(paramInt);
   }
   
-  final void J(int paramInt)
+  final void N(int paramInt)
   {
-    ps = paramInt;
-    pt = getItemIdAtPosition(paramInt);
+    pG = paramInt;
+    pH = getItemIdAtPosition(paramInt);
   }
   
-  final void K(int paramInt)
+  final void O(int paramInt)
   {
-    pq = paramInt;
-    pr = getItemIdAtPosition(paramInt);
-    if ((pk) && (pl == 0) && (paramInt >= 0))
+    pE = paramInt;
+    pF = getItemIdAtPosition(paramInt);
+    if ((py) && (pz == 0) && (paramInt >= 0))
     {
-      ph = paramInt;
-      pi = pr;
+      pv = paramInt;
+      pw = pF;
     }
   }
   
   public void a(b paramb)
   {
-    po = paramb;
+    pC = paramb;
   }
   
   public void addView(View paramView)
@@ -120,10 +120,10 @@ abstract class c
   
   protected boolean canAnimate()
   {
-    return (super.canAnimate()) && (pv > 0);
+    return (super.canAnimate()) && (pJ > 0);
   }
   
-  final void cb()
+  final void cd()
   {
     int j = 1;
     Adapter localAdapter = getAdapter();
@@ -137,19 +137,19 @@ abstract class c
         break label152;
       }
       i = 1;
-      if ((i == 0) || (!pA)) {
+      if ((i == 0) || (!pO)) {
         break label157;
       }
       bool = true;
       label44:
       super.setFocusableInTouchMode(bool);
-      if ((i == 0) || (!pz)) {
+      if ((i == 0) || (!pN)) {
         break label162;
       }
       bool = true;
       label62:
       super.setFocusable(bool);
-      if (pu != null)
+      if (pI != null)
       {
         i = j;
         if (localAdapter != null)
@@ -163,16 +163,16 @@ abstract class c
         if (i == 0) {
           break label180;
         }
-        if (pu == null) {
+        if (pI == null) {
           break label172;
         }
-        pu.setVisibility(0);
+        pI.setVisibility(0);
         setVisibility(8);
       }
     }
     for (;;)
     {
-      if (pp) {
+      if (pD) {
         onLayout(false, getLeft(), getTop(), getRight(), getBottom());
       }
       return;
@@ -194,36 +194,36 @@ abstract class c
       setVisibility(0);
     }
     label180:
-    if (pu != null) {
-      pu.setVisibility(8);
+    if (pI != null) {
+      pI.setVisibility(8);
     }
     setVisibility(0);
   }
   
-  final void cd()
+  final void cf()
   {
-    if ((ps != px) || (pt != py)) {
-      if (pn != null)
+    if ((pG != pL) || (pH != pM)) {
+      if (pB != null)
       {
-        if ((!mInLayout) && (!na)) {
+        if ((!aO) && (!nq)) {
           break label117;
         }
-        if (pB == null) {
-          pB = new e((byte)0);
+        if (pP == null) {
+          pP = new e((byte)0);
         }
-        post(pB);
+        post(pP);
       }
     }
     for (;;)
     {
-      if ((ps != -1) && (isShown()) && (!isInTouchMode())) {
+      if ((pG != -1) && (isShown()) && (!isInTouchMode())) {
         sendAccessibilityEvent(4);
       }
-      px = ps;
-      py = pt;
+      pL = pG;
+      pM = pH;
       return;
       label117:
-      cc();
+      ce();
     }
   }
   
@@ -233,29 +233,29 @@ abstract class c
     return (localView != null) && (localView.getVisibility() == 0) && (localView.dispatchPopulateAccessibilityEvent(paramAccessibilityEvent));
   }
   
-  protected void dispatchRestoreInstanceState(SparseArray paramSparseArray)
+  protected void dispatchRestoreInstanceState(SparseArray<Parcelable> paramSparseArray)
   {
     dispatchThawSelfOnly(paramSparseArray);
   }
   
-  protected void dispatchSaveInstanceState(SparseArray paramSparseArray)
+  protected void dispatchSaveInstanceState(SparseArray<Parcelable> paramSparseArray)
   {
     dispatchFreezeSelfOnly(paramSparseArray);
   }
   
-  public abstract Adapter getAdapter();
+  public abstract T getAdapter();
   
   public abstract View getSelectedView();
   
   public final boolean h(View paramView, int paramInt)
   {
-    if (po != null)
+    if (pC != null)
     {
       playSoundEffect(0);
       if (paramView != null) {
         paramView.sendAccessibilityEvent(1);
       }
-      po.i(paramView, paramInt);
+      pC.i(paramView, paramInt);
       return true;
     }
     return false;
@@ -263,21 +263,21 @@ abstract class c
   
   final void handleDataChanged()
   {
-    int i2 = pv;
+    int i2 = pJ;
     int i3;
     int i;
     int n;
     int k;
     int m;
     if (i2 > 0) {
-      if (pk)
+      if (py)
       {
-        pk = false;
-        i3 = pv;
+        py = false;
+        i3 = pJ;
         if (i3 != 0)
         {
-          long l1 = pi;
-          i = ph;
+          long l1 = pw;
+          i = pv;
           if (l1 != Long.MIN_VALUE)
           {
             j = Math.min(i3 - 1, Math.max(0, i));
@@ -290,20 +290,20 @@ abstract class c
               i = j;
               m = j;
               j = n;
-              if (SystemClock.uptimeMillis() <= l2 + 100L) {
+              if (SystemClock.uptimeMillis() <= 100L + l2) {
                 if (localAdapter.getItemId(i) == l1)
                 {
                   label123:
                   if (i < 0) {
                     break label324;
                   }
-                  K(i);
+                  O(i);
                   i = 1;
                   label134:
                   j = i;
                   if (i == 0)
                   {
-                    k = pq;
+                    k = pE;
                     j = k;
                     if (k >= i2) {
                       j = i2 - 1;
@@ -316,8 +316,8 @@ abstract class c
                     j = i;
                     if (k >= 0)
                     {
-                      K(k);
-                      cd();
+                      O(k);
+                      cf();
                     }
                   }
                 }
@@ -331,12 +331,12 @@ abstract class c
     {
       if (j == 0)
       {
-        ps = -1;
-        pt = Long.MIN_VALUE;
-        pq = -1;
-        pr = Long.MIN_VALUE;
-        pk = false;
-        cd();
+        pG = -1;
+        pH = Long.MIN_VALUE;
+        pE = -1;
+        pF = Long.MIN_VALUE;
+        py = false;
+        cf();
       }
       return;
       label237:
@@ -385,12 +385,12 @@ abstract class c
   protected void onDetachedFromWindow()
   {
     super.onDetachedFromWindow();
-    removeCallbacks(pB);
+    removeCallbacks(pP);
   }
   
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
-    pm = getHeight();
+    pA = getHeight();
   }
   
   public void removeAllViews()
@@ -416,9 +416,9 @@ abstract class c
     if ((localAdapter == null) || (localAdapter.getCount() == 0))
     {
       i = 1;
-      pz = paramBoolean;
+      pN = paramBoolean;
       if (!paramBoolean) {
-        pA = false;
+        pO = false;
       }
       if ((!paramBoolean) || (i != 0)) {
         break label60;
@@ -442,9 +442,9 @@ abstract class c
     if ((localAdapter == null) || (localAdapter.getCount() == 0))
     {
       i = 1;
-      pA = paramBoolean;
+      pO = paramBoolean;
       if (paramBoolean) {
-        pz = true;
+        pN = true;
       }
       if ((!paramBoolean) || (i != 0)) {
         break label60;
@@ -468,71 +468,71 @@ abstract class c
   final class a
     extends DataSetObserver
   {
-    private Parcelable pC = null;
+    private Parcelable pQ = null;
     
     a() {}
     
     public final void onChanged()
     {
-      pp = true;
-      pw = pv;
-      pv = getAdapter().getCount();
-      if ((getAdapter().hasStableIds()) && (pC != null) && (pw == 0) && (pv > 0))
+      pD = true;
+      pK = pJ;
+      pJ = getAdapter().getCount();
+      if ((getAdapter().hasStableIds()) && (pQ != null) && (pK == 0) && (pJ > 0))
       {
-        c.a(c.this, pC);
-        pC = null;
+        c.a(c.this, pQ);
+        pQ = null;
       }
       c localc;
       for (;;)
       {
-        cb();
+        cd();
         requestLayout();
         return;
         localc = c.this;
         if (localc.getChildCount() > 0)
         {
-          pk = true;
-          pj = pm;
-          if (ps < 0) {
+          py = true;
+          px = pA;
+          if (pG < 0) {
             break;
           }
-          localView = localc.getChildAt(ps - pf);
-          pi = pr;
-          ph = pq;
+          localView = localc.getChildAt(pG - pt);
+          pw = pF;
+          pv = pE;
           if (localView != null) {
-            pg = localView.getTop();
+            pu = localView.getTop();
           }
-          pl = 0;
+          pz = 0;
         }
       }
       View localView = localc.getChildAt(0);
       Adapter localAdapter = localc.getAdapter();
-      if ((pf >= 0) && (pf < localAdapter.getCount())) {}
-      for (pi = localAdapter.getItemId(pf);; pi = -1L)
+      if ((pt >= 0) && (pt < localAdapter.getCount())) {}
+      for (pw = localAdapter.getItemId(pt);; pw = -1L)
       {
-        ph = pf;
+        pv = pt;
         if (localView != null) {
-          pg = localView.getTop();
+          pu = localView.getTop();
         }
-        pl = 1;
+        pz = 1;
         break;
       }
     }
     
     public final void onInvalidated()
     {
-      pp = true;
+      pD = true;
       if (getAdapter().hasStableIds()) {
-        pC = c.a(c.this);
+        pQ = c.a(c.this);
       }
-      pw = pv;
-      pv = 0;
-      ps = -1;
-      pt = Long.MIN_VALUE;
-      pq = -1;
-      pr = Long.MIN_VALUE;
-      pk = false;
-      cb();
+      pK = pJ;
+      pJ = 0;
+      pG = -1;
+      pH = Long.MIN_VALUE;
+      pE = -1;
+      pF = Long.MIN_VALUE;
+      py = false;
+      cd();
       requestLayout();
     }
   }
@@ -545,16 +545,16 @@ abstract class c
   final class c
     implements AdapterView.OnItemClickListener
   {
-    private final c.b pE;
+    private final c.b pS;
     
     public c(c.b paramb)
     {
-      pE = paramb;
+      pS = paramb;
     }
     
-    public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+    public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
     {
-      pE.i(paramView, paramInt);
+      pS.i(paramView, paramInt);
     }
   }
   
@@ -567,7 +567,7 @@ abstract class c
     
     public final void run()
     {
-      if (pp)
+      if (pD)
       {
         if (getAdapter() != null) {
           post(this);

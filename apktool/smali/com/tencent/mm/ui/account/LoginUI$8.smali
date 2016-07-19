@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/LoginUI;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/account/LoginUI;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ktY:Lcom/tencent/mm/ui/account/LoginUI;
+.field final synthetic kTf:Lcom/tencent/mm/ui/account/LoginUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 632
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginUI$8;->ktY:Lcom/tencent/mm/ui/account/LoginUI;
+    .line 611
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginUI$8;->kTf:Lcom/tencent/mm/ui/account/LoginUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,12 +40,12 @@
     .locals 2
 
     .prologue
-    .line 636
+    .line 615
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->ty()Ljava/lang/String;
 
     move-result-object v1
 
@@ -59,7 +59,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginUI$8;->ktY:Lcom/tencent/mm/ui/account/LoginUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/LoginUI$8;->kTf:Lcom/tencent/mm/ui/account/LoginUI;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -81,7 +81,7 @@
 
     const-string/jumbo v1, "R400_100_login"
 
-    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fq(Ljava/lang/String;)I
 
     move-result v1
 
@@ -99,8 +99,8 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kD(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->lm(Ljava/lang/String;)V
 
-    .line 640
+    .line 619
     return-void
 .end method

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/ie" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/bcp" style="@style/MallIndexEntranceLayout">
+        <ImageView android:id="@id/bcq" android:src="@raw/mall_index_offline_icon_normal" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" style="@style/MallIndexEntrancePic" />
+        <TextView android:id="@id/bcr" android:text="@string/da1" android:layout_below="@id/bcq" style="@style/MallIndexEntranceText" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/bcs" style="@style/MallIndexEntranceLayout">
+        <ImageView android:id="@id/bct" android:src="@raw/mall_index_balance_icon_normal" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" style="@style/MallIndexEntrancePic" />
+        <TextView android:id="@id/bcu" android:text="@string/d_r" android:layout_below="@id/bct" style="@style/MallIndexEntranceText" />
+        <TextView android:textSize="@dimen/h4" android:textColor="@color/ic" android:ellipsize="end" android:id="@id/bcv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/bcu" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/bcw" style="@style/MallIndexEntranceLayout">
+        <ImageView android:id="@id/bcx" android:src="@raw/mall_index_bankcard_icon_normal" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" style="@style/MallIndexEntrancePic" />
+        <TextView android:id="@id/bcy" android:text="@string/d_s" android:layout_below="@id/bcx" style="@style/MallIndexEntranceText" />
+        <ImageView android:id="@id/bcz" android:visibility="gone" android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_marginLeft="-6.0dip" android:layout_marginTop="1.0dip" android:layout_marginRight="1.0dip" android:src="@drawable/oy" android:layout_toRightOf="@id/bcx" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+</LinearLayout>

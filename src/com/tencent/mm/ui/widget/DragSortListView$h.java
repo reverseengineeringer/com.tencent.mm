@@ -1,8 +1,15 @@
 package com.tencent.mm.ui.widget;
 
+import android.graphics.Point;
+import android.view.View;
+
 public abstract interface DragSortListView$h
 {
-  public abstract void at(int paramInt1, int paramInt2);
+  public abstract void aU(View paramView);
+  
+  public abstract void b(Point paramPoint);
+  
+  public abstract View ul(int paramInt);
 }
 
 /* Location:

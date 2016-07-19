@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gxL:Lcom/tencent/mm/plugin/sight/decode/a/b;
+.field final synthetic gEj:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 683
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$d;->gxL:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    .line 715
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$d;->gEj:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,7 +38,7 @@
     .locals 0
 
     .prologue
-    .line 683
+    .line 715
     invoke-direct {p0, p1}, Lcom/tencent/mm/plugin/sight/decode/a/b$d;-><init>(Lcom/tencent/mm/plugin/sight/decode/a/b;)V
 
     return-void
@@ -50,8 +50,8 @@
     .locals 2
 
     .prologue
-    .line 687
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$d;->gxL:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    .line 719
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$d;->gEj:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/a/b;->l(Lcom/tencent/mm/plugin/sight/decode/a/b;)Ljava/lang/ref/WeakReference;
 
@@ -63,13 +63,13 @@
 
     if-nez v0, :cond_0
 
-    .line 691
+    .line 723
     :goto_0
     return-void
 
-    .line 690
+    .line 722
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$d;->gxL:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$d;->gEj:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sight/decode/a/b;->l(Lcom/tencent/mm/plugin/sight/decode/a/b;)Ljava/lang/ref/WeakReference;
 
@@ -81,7 +81,7 @@
 
     check-cast v0, Landroid/view/View;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$d;->gxL:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/decode/a/b$d;->gEj:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/sight/decode/a/b;->m(Lcom/tencent/mm/plugin/sight/decode/a/b;)Landroid/view/animation/Animation;
 

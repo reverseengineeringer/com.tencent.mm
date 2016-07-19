@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic cqb:Landroid/view/View;
+.field final synthetic clo:Landroid/view/View;
 
-.field final synthetic lxK:Lcom/tencent/mm/ui/tools/r$8;
+.field final synthetic lYz:Lcom/tencent/mm/ui/tools/r$8;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 328
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/r$8$1;->lxK:Lcom/tencent/mm/ui/tools/r$8;
+    .line 329
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/r$8$1;->lYz:Lcom/tencent/mm/ui/tools/r$8;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/tools/r$8$1;->cqb:Landroid/view/View;
+    iput-object p2, p0, Lcom/tencent/mm/ui/tools/r$8$1;->clo:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,10 +44,10 @@
     .locals 3
 
     .prologue
-    .line 331
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$8$1;->lxK:Lcom/tencent/mm/ui/tools/r$8;
+    .line 332
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$8$1;->lYz:Lcom/tencent/mm/ui/tools/r$8;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r$8;->an:Landroid/app/Activity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r$8;->O:Landroid/app/Activity;
 
     const-string/jumbo v1, "input_method"
 
@@ -57,10 +57,10 @@
 
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 332
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/r$8$1;->cqb:Landroid/view/View;
+    .line 333
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/r$8$1;->clo:Landroid/view/View;
 
-    const v2, 0x7f0704d4
+    const v2, 0x7f1000cf
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -70,6 +70,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
-    .line 333
+    .line 334
     return-void
 .end method

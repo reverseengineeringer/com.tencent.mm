@@ -4,52 +4,63 @@ import a.a.a.b;
 import java.util.LinkedList;
 
 public final class awc
-  extends alq
+  extends amb
 {
-  public int iYE;
-  public String jax;
+  public String jZv;
+  public String juO;
+  public int jwi;
+  public int jwj;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (jHj == null) {
+      if (kfH == null) {
         throw new b("Not all required fields were included: BaseResponse");
       }
-      if (jHj != null)
+      if (kfH != null)
       {
-        paramVarArgs.cj(1, jHj.kn());
-        jHj.a(paramVarArgs);
+        paramVarArgs.cx(1, kfH.iO());
+        kfH.a(paramVarArgs);
       }
-      if (jax != null) {
-        paramVarArgs.d(2, jax);
+      paramVarArgs.cw(2, jwj);
+      paramVarArgs.cw(3, jwi);
+      if (juO != null) {
+        paramVarArgs.e(4, juO);
       }
-      paramVarArgs.ci(3, iYE);
+      if (jZv != null) {
+        paramVarArgs.e(5, jZv);
+      }
       return 0;
     }
     if (paramInt == 1) {
-      if (jHj == null) {
-        break label399;
+      if (kfH == null) {
+        break label493;
       }
     }
-    label399:
-    for (paramInt = a.a.a.a.ch(1, jHj.kn()) + 0;; paramInt = 0)
+    label493:
+    for (paramInt = a.a.a.a.cv(1, kfH.iO()) + 0;; paramInt = 0)
     {
-      int i = paramInt;
-      if (jax != null) {
-        i = paramInt + a.a.a.b.b.a.e(2, jax);
+      int i = paramInt + a.a.a.a.cu(2, jwj) + a.a.a.a.cu(3, jwi);
+      paramInt = i;
+      if (juO != null) {
+        paramInt = i + a.a.a.b.b.a.f(4, juO);
       }
-      return i + a.a.a.a.cg(3, iYE);
+      i = paramInt;
+      if (jZv != null) {
+        i = paramInt + a.a.a.b.b.a.f(5, jZv);
+      }
+      return i;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = alq.a(paramVarArgs); paramInt > 0; paramInt = alq.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = amb.a(paramVarArgs); paramInt > 0; paramInt = amb.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
-        if (jHj != null) {
+        if (kfH != null) {
           break;
         }
         throw new b("Not all required fields were included: BaseResponse");
@@ -64,23 +75,29 @@ public final class awc
         default: 
           return -1;
         case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
+          paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
           i = paramVarArgs.size();
           paramInt = 0;
           while (paramInt < i)
           {
             Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new dd();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-            for (boolean bool = true; bool; bool = ((dd)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, alq.a((a.a.a.a.a)localObject2))) {}
-            jHj = ((dd)localObject1);
+            localObject1 = new dg();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+            for (boolean bool = true; bool; bool = ((dg)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, amb.a((a.a.a.a.a)localObject2))) {}
+            kfH = ((dg)localObject1);
             paramInt += 1;
           }
         case 2: 
-          jax = maU.readString();
+          jwj = mMY.id();
+          return 0;
+        case 3: 
+          jwi = mMY.id();
+          return 0;
+        case 4: 
+          juO = mMY.readString();
           return 0;
         }
-        iYE = maU.jC();
+        jZv = mMY.readString();
         return 0;
       }
       return -1;

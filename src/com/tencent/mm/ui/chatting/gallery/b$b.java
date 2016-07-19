@@ -1,6 +1,9 @@
 package com.tencent.mm.ui.chatting.gallery;
 
-public enum b$b {}
+public enum b$b
+{
+  private b$b() {}
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.ui.chatting.gallery.b.b

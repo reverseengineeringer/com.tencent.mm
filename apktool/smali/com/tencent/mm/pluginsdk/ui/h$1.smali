@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iGM:Lcom/tencent/mm/pluginsdk/ui/h;
+.field final synthetic jdH:Lcom/tencent/mm/pluginsdk/ui/h;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 151
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/h$1;->iGM:Lcom/tencent/mm/pluginsdk/ui/h;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/h$1;->jdH:Lcom/tencent/mm/pluginsdk/ui/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 156
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h$1;->iGM:Lcom/tencent/mm/pluginsdk/ui/h;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/h$1;->jdH:Lcom/tencent/mm/pluginsdk/ui/h;
 
     invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/h;->invalidateSelf()V
 

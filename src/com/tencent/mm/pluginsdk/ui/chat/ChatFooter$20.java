@@ -7,7 +7,7 @@ final class ChatFooter$20
   
   public final void run()
   {
-    ChatFooter.e(iLO, iLP);
+    ChatFooter.e(jiL, jiM);
   }
 }
 

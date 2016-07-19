@@ -6,41 +6,41 @@ import com.tencent.mm.model.ai;
 import com.tencent.mm.network.e;
 import com.tencent.mm.network.o;
 import com.tencent.mm.plugin.a.b;
-import com.tencent.mm.protocal.b.apg;
-import com.tencent.mm.protocal.b.asl;
-import com.tencent.mm.protocal.b.kw;
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.h.d;
-import com.tencent.mm.protocal.m.a;
-import com.tencent.mm.protocal.m.b;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.h;
-import com.tencent.mm.r.j.b;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.protocal.b.apr;
+import com.tencent.mm.protocal.b.atb;
+import com.tencent.mm.protocal.b.lh;
+import com.tencent.mm.protocal.k.c;
+import com.tencent.mm.protocal.k.d;
+import com.tencent.mm.protocal.p.a;
+import com.tencent.mm.protocal.p.b;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.h;
+import com.tencent.mm.t.j.b;
 import java.util.Iterator;
 import java.util.LinkedList;
 
 public final class w
-  extends com.tencent.mm.r.j
+  extends com.tencent.mm.t.j
   implements com.tencent.mm.network.j
 {
-  private d anM;
-  private int bFL = 2;
-  public o bGh = new a();
+  private d bkT;
+  private int byW = 2;
+  public o bzs = new a();
   
   private w(int paramInt, String paramString1, String paramString2, String paramString3)
   {
-    m.a locala = (m.a)bGh.vA();
-    iUX.iZE = paramInt;
-    iUX.jbc = paramString1;
-    iUX.dzi = t.aUB();
-    iUX.jbC = ay.Dl(paramString2);
-    iUX.jiy = paramString3;
-    iUX.iZs = ah.tx();
-    iUX.jiz = p.getSimCountryIso();
-    iUX.jiA = 1;
+    p.a locala = (p.a)bzs.vC();
+    jsu.jxj = paramInt;
+    jsu.jyI = paramString1;
+    jsu.dAD = u.aZF();
+    jsu.jzi = be.FA(paramString2);
+    jsu.jGF = paramString3;
+    jsu.jwX = ah.ty();
+    jsu.jGG = p.getSimCountryIso();
+    jsu.jGH = 1;
   }
   
   public w(String paramString1, String paramString2)
@@ -55,42 +55,42 @@ public final class w
   
   public final int a(e parame, d paramd)
   {
-    anM = paramd;
-    return a(parame, bGh, this);
+    bkT = paramd;
+    return a(parame, bzs, this);
   }
   
   protected final int a(o paramo)
   {
-    return j.b.bFI;
+    return j.b.byT;
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    u.i("!44@/B4Tb64lLpK+IBX8XDgnvngb9j239D9dCEvdErt89hw=", "onGYNetEnd  errType:%d errCode:%d", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3) });
-    paramo = (m.b)paramo.tX();
+    v.i("MicroMsg.NetSceneEmailReg", "onGYNetEnd  errType:%d errCode:%d", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3) });
+    paramo = (p.b)paramo.tY();
     if ((paramInt2 == 4) && (paramInt3 == 65235))
     {
-      ai.a(true, iUY.jbE, iUY.jbF, iUY.jbD);
-      bFL -= 1;
-      if (bFL <= 0)
+      ai.a(true, jsv.jzk, jsv.jzl, jsv.jzj);
+      byW -= 1;
+      if (byW <= 0)
       {
-        anM.a(3, -1, "", this);
+        bkT.onSceneEnd(3, -1, "", this);
         return;
       }
-      a(bFs, anM);
+      a(byD, bkT);
       return;
     }
     if ((paramInt2 != 0) || (paramInt3 != 0))
     {
-      u.e("!44@/B4Tb64lLpK+IBX8XDgnvngb9j239D9dCEvdErt89hw=", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3);
-      anM.a(paramInt2, paramInt3, paramString, this);
+      v.e("MicroMsg.NetSceneEmailReg", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3);
+      bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
       return;
     }
-    ai.a(false, iUY.jbE, iUY.jbF, iUY.jbD);
+    ai.a(false, jsv.jzk, jsv.jzl, jsv.jzj);
     if ((paramInt2 == 0) && (paramInt3 == 0)) {
-      b.en(yU());
+      b.eZ(zh());
     }
-    anM.a(paramInt2, paramInt3, paramString, this);
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()
@@ -98,22 +98,22 @@ public final class w
     return 481;
   }
   
-  protected final int lk()
+  protected final int px()
   {
     return 5;
   }
   
-  public final int yU()
+  public final int zh()
   {
-    Object localObject = bGh.tX()).iUY.iZj;
-    if ((localObject != null) && (jJe != null) && (jJe.size() > 0))
+    Object localObject = bzs.tY()).jsv.jwN;
+    if ((localObject != null) && (khB != null) && (khB.size() > 0))
     {
-      localObject = jJe.iterator();
+      localObject = khB.iterator();
       while (((Iterator)localObject).hasNext())
       {
-        asl localasl = (asl)((Iterator)localObject).next();
-        if (fUk == 1) {
-          return ay.getInt(jMf, 0);
+        atb localatb = (atb)((Iterator)localObject).next();
+        if (gdy == 1) {
+          return be.getInt(kkQ, 0);
         }
       }
     }
@@ -123,8 +123,8 @@ public final class w
   public static final class a
     extends h
   {
-    private m.a bMO = new m.a();
-    private m.b bMP = new m.b();
+    private p.a bGi = new p.a();
+    private p.b bGj = new p.b();
     
     public final int getType()
     {
@@ -136,17 +136,17 @@ public final class w
       return "/cgi-bin/micromsg-bin/emailreg";
     }
     
-    protected final h.c tW()
+    protected final k.c tX()
     {
-      return bMO;
+      return bGi;
     }
     
-    public final h.d tX()
+    public final k.d tY()
     {
-      return bMP;
+      return bGj;
     }
     
-    public final int vx()
+    public final int vz()
     {
       return 1;
     }

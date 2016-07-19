@@ -21,75 +21,75 @@ public final class b
   extends a
   implements f.a, l.a
 {
-  public ViewGroup iC;
-  private ActionBarView iM;
-  private e iN;
-  private f iO;
-  private boolean iQ;
-  boolean iT;
-  private final Runnable iU = new Runnable()
+  public ViewGroup iT;
+  private ActionBarView jd;
+  private e je;
+  private f jf;
+  private boolean jh;
+  boolean jk;
+  private final Runnable jl = new Runnable()
   {
     public final void run()
     {
       b localb = b.this;
-      Object localObject = jx;
+      Object localObject = jO;
       ActionBar localActionBar = localb.aP();
       if (localActionBar != null) {
         localObject = localActionBar.getThemedContext();
       }
       localObject = new f((Context)localObject);
       ((f)localObject).a(localb);
-      if (kzo != null)
+      if (kYv != null)
       {
-        kzo.c((Menu)localObject);
-        kzo.b((Menu)localObject);
+        kYv.c((Menu)localObject);
+        kYv.b((Menu)localObject);
         b.a(b.this, (f)localObject);
       }
       for (;;)
       {
-        iT = false;
+        jk = false;
         return;
         b.a(b.this, null);
       }
     }
   };
-  a kzo;
+  a kYv;
   
   public b(Activity paramActivity, a parama)
   {
     super(paramActivity);
-    kzo = parama;
+    kYv = parama;
   }
   
   private View findViewById(int paramInt)
   {
-    if (iC != null) {
-      return iC.findViewById(paramInt);
+    if (iT != null) {
+      return iT.findViewById(paramInt);
     }
-    return jx.findViewById(paramInt);
+    return jO.findViewById(paramInt);
   }
   
-  public final void G()
+  public final void F()
   {
-    if (!iT)
+    if (!jk)
     {
-      iT = true;
-      iU.run();
+      jk = true;
+      jl.run();
     }
   }
   
   public final void a(f paramf)
   {
-    if ((iM != null) && (iM.bJ()))
+    if ((jd != null) && (jd.bK()))
     {
-      if (!iM.isOverflowMenuShowing())
+      if (!jd.isOverflowMenuShowing())
       {
-        if (iM.getVisibility() == 0) {
-          iM.showOverflowMenu();
+        if (jd.getVisibility() == 0) {
+          jd.showOverflowMenu();
         }
         return;
       }
-      iM.hideOverflowMenu();
+      jd.hideOverflowMenu();
       return;
     }
     paramf.close();
@@ -99,28 +99,28 @@ public final class b
   
   public final ActionBar aO()
   {
-    if (!iQ)
+    if (!jh)
     {
-      iM = ((ActionBarView)findViewById(2131169502));
-      iM.setWindowCallback(jx);
-      Object localObject = jx.obtainStyledAttributes(R.b.ActionBarWindow);
+      jd = ((ActionBarView)findViewById(2131755209));
+      jd.ot = jO;
+      Object localObject = jO.obtainStyledAttributes(R.b.Wh);
       boolean bool = ((TypedArray)localObject).getBoolean(2, false);
       ((TypedArray)localObject).recycle();
-      localObject = (ActionBarContainer)findViewById(2131169537);
+      localObject = (ActionBarContainer)findViewById(2131755160);
       if (localObject != null)
       {
-        iM.setSplitView((ActionBarContainer)localObject);
-        iM.setSplitActionBar(bool);
-        iM.setSplitWhenNarrow(false);
-        ActionBarContextView localActionBarContextView = (ActionBarContextView)findViewById(2131169536);
-        localActionBarContextView.setSplitView((ActionBarContainer)localObject);
-        localActionBarContextView.setSplitActionBar(bool);
-        localActionBarContextView.setSplitWhenNarrow(false);
+        jd.a((ActionBarContainer)localObject);
+        jd.x(bool);
+        jd.y(false);
+        ActionBarContextView localActionBarContextView = (ActionBarContextView)findViewById(2131755159);
+        localActionBarContextView.a((ActionBarContainer)localObject);
+        localActionBarContextView.x(bool);
+        localActionBarContextView.y(false);
       }
-      iQ = true;
-      G();
+      jh = true;
+      F();
     }
-    return new c(jx, iC);
+    return new c(jO, iT);
   }
   
   public final boolean b(f paramf)
@@ -130,8 +130,8 @@ public final class b
   
   public final boolean d(MenuItem paramMenuItem)
   {
-    if (kzo != null) {
-      return kzo.d(paramMenuItem);
+    if (kYv != null) {
+      return kYv.d(paramMenuItem);
     }
     return false;
   }

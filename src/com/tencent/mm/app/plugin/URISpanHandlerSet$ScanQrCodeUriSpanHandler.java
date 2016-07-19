@@ -3,11 +3,11 @@ package com.tencent.mm.app.plugin;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.pluginsdk.l;
 import com.tencent.mm.pluginsdk.ui.applet.g;
 import com.tencent.mm.pluginsdk.ui.d.b;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 @URISpanHandlerSet.a
 class URISpanHandlerSet$ScanQrCodeUriSpanHandler
@@ -30,7 +30,7 @@ class URISpanHandlerSet$ScanQrCodeUriSpanHandler
     {
       if (!paramBoolean)
       {
-        u.e("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "jumpToActivity, scan qrcode permission fail");
+        v.e("MicroMsg.URISpanHandlerSet", "jumpToActivity, scan qrcode permission fail");
         return true;
       }
       paramString = new Intent();
@@ -46,26 +46,26 @@ class URISpanHandlerSet$ScanQrCodeUriSpanHandler
       if (i == 0) {
         paramString.addFlags(67108864);
       }
-      if ((URISpanHandlerSet.a(ang) instanceof Service)) {
+      if ((URISpanHandlerSet.a(ZU) instanceof Service)) {
         paramString.addFlags(268435456);
       }
       if (i != 0)
       {
-        c.c(URISpanHandlerSet.a(ang), "scanner", ".ui.SingleTopScanUI", paramString);
+        c.c(URISpanHandlerSet.a(ZU), "scanner", ".ui.SingleTopScanUI", paramString);
         return true;
       }
-      c.c(URISpanHandlerSet.a(ang), "scanner", ".ui.BaseScanUI", paramString);
+      c.c(URISpanHandlerSet.a(ZU), "scanner", ".ui.BaseScanUI", paramString);
       return true;
     }
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[0];
   }

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iOb:Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;
+.field final synthetic jlg:Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 115
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference$1;->iOb:Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference$1;->jlg:Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
     const/4 v4, 0x1
 
     .line 118
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference$1;->iOb:Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference$1;->jlg:Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;->a(Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;)Lcom/tencent/mm/pluginsdk/i$n;
 
@@ -52,7 +52,7 @@
     if-eqz v0, :cond_0
 
     .line 119
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v1, 0x2c00
 
@@ -66,10 +66,10 @@
 
     aput-object v4, v2, v3
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/g;->h(I[Ljava/lang/Object;)V
 
     .line 121
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference$1;->iOb:Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference$1;->jlg:Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;->a(Lcom/tencent/mm/pluginsdk/ui/preference/AccountInfoPreference;)Lcom/tencent/mm/pluginsdk/i$n;
 

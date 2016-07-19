@@ -20,10 +20,10 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.h;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.storage.s;
 import com.tencent.mm.ui.MMFragmentActivity;
 import com.tencent.mm.ui.contact.l;
@@ -38,21 +38,21 @@ public class MainSightSelectContactView
   extends FrameLayout
   implements AbsListView.OnScrollListener, d.a, l
 {
-  private ListView cUz;
-  private boolean gCo = false;
-  private MMFragmentActivity gCr;
-  private Animation gCy;
-  private int gDb;
-  d gDc;
-  private c gDd;
-  private View gDe;
-  private a gDf;
-  private LinearLayout gDg;
-  private View gDh;
-  private int gDi = -1;
-  private int gDj = -1;
-  private HashSet gDk;
-  private HashSet gDl;
+  private ListView cSm;
+  private boolean gIP = false;
+  private MMFragmentActivity gIS;
+  private Animation gIZ;
+  private int gJC;
+  d gJD;
+  private c gJE;
+  public View gJF;
+  public a gJG;
+  private LinearLayout gJH;
+  private View gJI;
+  private int gJJ = -1;
+  private int gJK = -1;
+  private HashSet<String> gJL;
+  private HashSet<String> gJM;
   
   public MainSightSelectContactView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -64,9 +64,9 @@ public class MainSightSelectContactView
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  private void b(List paramList, boolean paramBoolean1, boolean paramBoolean2)
+  private void b(List<String> paramList, boolean paramBoolean1, boolean paramBoolean2)
   {
-    if (gCo) {}
+    if (gIP) {}
     do
     {
       do
@@ -75,128 +75,143 @@ public class MainSightSelectContactView
       } while (paramList == null);
       if (paramBoolean1)
       {
-        gDl.clear();
-        gDk.clear();
-        c.gCM = true;
-        c.gCN = false;
+        gJM.clear();
+        gJL.clear();
+        c.gJn = true;
+        c.gJo = false;
       }
-      if (gDd != null)
+      if (gJE != null)
       {
-        c localc = gDd;
+        c localc = gJE;
         localc.clearCache();
-        gCK = paramList;
+        gJl = paramList;
         localc.notifyDataSetChanged();
       }
       if (paramBoolean2)
       {
-        awX();
+        azu();
         return;
       }
-    } while (gDh == null);
-    cUz.removeFooterView(gDh);
+    } while (gJI == null);
+    cSm.removeFooterView(gJI);
   }
   
-  public static boolean lf(int paramInt)
+  public static boolean mm(int paramInt)
   {
     return paramInt == -1;
   }
   
-  private void o(boolean paramBoolean1, boolean paramBoolean2)
+  private void r(boolean paramBoolean1, boolean paramBoolean2)
   {
     ArrayList localArrayList = new ArrayList();
     localArrayList.add("@search.tencent");
     localArrayList.add("@sns.tencent");
-    if (gDf.awJ()) {
+    if (gJG.azj()) {
       localArrayList.add("@draft.tencent");
     }
-    Object localObject = getInitData();
+    Object localObject1 = new ArrayList();
+    Object localObject2 = ah.tE().ru().bbY();
+    ((List)localObject2).remove(h.se());
+    ((List)localObject1).addAll((Collection)localObject2);
     if (paramBoolean1)
     {
-      localArrayList.addAll(gDl);
-      localObject = ((List)localObject).iterator();
-      while (((Iterator)localObject).hasNext())
+      localArrayList.addAll(gJM);
+      localObject1 = ((List)localObject1).iterator();
+      while (((Iterator)localObject1).hasNext())
       {
-        String str = (String)((Iterator)localObject).next();
-        if (!localArrayList.contains(str)) {
-          localArrayList.add(str);
+        localObject2 = (String)((Iterator)localObject1).next();
+        if (!localArrayList.contains(localObject2)) {
+          localArrayList.add(localObject2);
         }
       }
     }
-    localArrayList.addAll((Collection)localObject);
+    localArrayList.addAll((Collection)localObject1);
     b(localArrayList, paramBoolean2, true);
+  }
+  
+  public final void U(View paramView)
+  {
+    d locald = gJD;
+    gJu = paramView;
+    gJs = ((EditText)paramView.findViewById(2131755215));
+    gJt = ((TextView)paramView.findViewById(2131757834));
+    gJs.setOnFocusChangeListener(locald);
+    gJs.addTextChangedListener(locald);
+    gJt.setOnClickListener(locald);
+    gJw = ((InputMethodManager)paramView.getContext().getSystemService("input_method"));
   }
   
   public final void a(MMFragmentActivity paramMMFragmentActivity, int paramInt, AdapterView.OnItemClickListener paramOnItemClickListener, a parama)
   {
-    gCr = paramMMFragmentActivity;
-    gDb = paramInt;
-    setMainSightContentView(parama);
-    addView(View.inflate(getContext(), 2131363008, null), -1, -2);
-    cUz = ((ListView)findViewById(2131166016));
-    gDd = new c(this);
-    gDg = new LinearLayout(getContext());
-    gDg.addView(new View(getContext()), -1, gDf.getViewHeight() - gDb);
-    gDg.getChildAt(0).setBackgroundColor(0);
-    cUz.addHeaderView(gDg);
-    cUz.setAdapter(gDd);
-    cUz.setOnItemClickListener(paramOnItemClickListener);
-    gDk = new HashSet();
-    gDl = new HashSet();
-    cUz.setOnScrollListener(this);
-    gDc = new d();
-    gDc.gCX = this;
+    gIS = paramMMFragmentActivity;
+    gJC = paramInt;
+    gJG = parama;
+    addView(View.inflate(getContext(), 2130903901, null), -1, -2);
+    cSm = ((ListView)findViewById(2131757839));
+    gJE = new c(this);
+    gJH = new LinearLayout(getContext());
+    gJH.addView(new View(getContext()), -1, gJG.aze() - gJC);
+    gJH.getChildAt(0).setBackgroundColor(0);
+    cSm.addHeaderView(gJH);
+    cSm.setAdapter(gJE);
+    cSm.setOnItemClickListener(paramOnItemClickListener);
+    gJL = new HashSet();
+    gJM = new HashSet();
+    cSm.setOnScrollListener(this);
+    gJD = new d();
+    gJD.gJy = this;
   }
   
   public final boolean a(com.tencent.mm.ui.contact.a.a parama)
   {
-    if ((lkT) && (cId != null)) {
-      return gDl.contains(cId.field_username);
+    if ((lLe) && (cFh != null)) {
+      return gJM.contains(cFh.field_username);
     }
     return false;
   }
   
-  public final void aP(List paramList)
+  public final void aV(List<String> paramList)
   {
     b(paramList, false, false);
   }
   
-  public final void awV()
+  public final void azs()
   {
-    if (gDg == null) {
+    if (gJH == null) {
       return;
     }
-    gDg.getChildAt(0).setVisibility(8);
-    gDe.setVisibility(0);
-    List localList = gDd.gCK;
+    gJH.getChildAt(0).setVisibility(8);
+    gJF.setVisibility(0);
+    List localList = gJE.gJl;
     localList.remove("@search.tencent");
     localList.remove("@sns.tencent");
     localList.remove("@draft.tencent");
     b(localList, false, true);
-    gDf.awG();
-    if (!gDf.qr()) {
-      gDf.awH();
+    gJG.azg();
+    if (!gJG.oU()) {
+      gJG.azh();
     }
-    gDf.awI();
+    gJG.azi();
   }
   
-  public final void awW()
+  public final void azt()
   {
-    if (gDg == null) {
+    if (gJH == null) {
       return;
     }
-    gDg.getChildAt(0).setVisibility(0);
-    gDe.setVisibility(8);
-    o(true, false);
-    gDf.awF();
+    gJH.getChildAt(0).setVisibility(0);
+    gJF.setVisibility(8);
+    r(true, false);
+    gJG.azf();
   }
   
-  public final void awX()
+  public final void azu()
   {
-    cUz.post(new Runnable()
+    cSm.post(new Runnable()
     {
       public final void run()
       {
-        if ((MainSightSelectContactView.a(MainSightSelectContactView.this) == MainSightSelectContactView.b(MainSightSelectContactView.this).getCount()) && (MainSightSelectContactView.c(MainSightSelectContactView.this).getViewHeight() >= MainSightSelectContactView.d(MainSightSelectContactView.this))) {}
+        if ((MainSightSelectContactView.a(MainSightSelectContactView.this) == MainSightSelectContactView.b(MainSightSelectContactView.this).getCount()) && (MainSightSelectContactView.c(MainSightSelectContactView.this).aze() >= MainSightSelectContactView.d(MainSightSelectContactView.this))) {}
         int i;
         label225:
         do
@@ -206,8 +221,8 @@ public class MainSightSelectContactView
             MainSightSelectContactView.f(MainSightSelectContactView.this).removeFooterView(MainSightSelectContactView.e(MainSightSelectContactView.this));
           }
           i = MainSightSelectContactView.d(MainSightSelectContactView.this);
-          if ((MainSightSelectContactView.d(MainSightSelectContactView.this) < 0) || (MainSightSelectContactView.d(MainSightSelectContactView.this) > MainSightSelectContactView.c(MainSightSelectContactView.this).getViewHeight())) {
-            i = MainSightSelectContactView.c(MainSightSelectContactView.this).getViewHeight();
+          if ((MainSightSelectContactView.d(MainSightSelectContactView.this) < 0) || (MainSightSelectContactView.d(MainSightSelectContactView.this) > MainSightSelectContactView.c(MainSightSelectContactView.this).aze())) {
+            i = MainSightSelectContactView.c(MainSightSelectContactView.this).aze();
           }
           MainSightSelectContactView.a(MainSightSelectContactView.this, MainSightSelectContactView.b(MainSightSelectContactView.this).getCount());
           MainSightSelectContactView.b(MainSightSelectContactView.this, i);
@@ -231,152 +246,138 @@ public class MainSightSelectContactView
         MainSightSelectContactView.a(MainSightSelectContactView.this, new View(getContext()));
         Object localObject = new AbsListView.LayoutParams(-1, i);
         MainSightSelectContactView.e(MainSightSelectContactView.this).setLayoutParams((ViewGroup.LayoutParams)localObject);
-        MainSightSelectContactView.e(MainSightSelectContactView.this).setBackgroundResource(2131231101);
+        MainSightSelectContactView.e(MainSightSelectContactView.this).setBackgroundResource(2131689519);
         MainSightSelectContactView.f(MainSightSelectContactView.this).addFooterView(MainSightSelectContactView.e(MainSightSelectContactView.this));
       }
     });
   }
   
-  public final boolean awY()
+  public final ListView azv()
   {
-    if (gDl == null) {
+    return cSm;
+  }
+  
+  public final LinkedList<String> azw()
+  {
+    LinkedList localLinkedList = new LinkedList();
+    localLinkedList.addAll(gJM);
+    return localLinkedList;
+  }
+  
+  public final boolean azx()
+  {
+    if (gJM == null) {
       return true;
     }
-    return gDl.isEmpty();
+    return gJM.isEmpty();
   }
   
   public final boolean b(com.tencent.mm.ui.contact.a.a parama)
   {
-    if ((lkT) && (cId != null)) {
-      return gDk.contains(cId.field_username);
+    if ((lLe) && (cFh != null)) {
+      return gJL.contains(cFh.field_username);
     }
     return false;
   }
   
-  final String dd(int paramInt)
+  final String dI(int paramInt)
   {
-    Object localObject = gDd.rM(paramInt);
+    Object localObject = gJE.tO(paramInt);
     if (localObject == null) {}
     do
     {
       return null;
-      localObject = cId;
+      localObject = cFh;
     } while (localObject == null);
     return field_username;
   }
   
   public final void dismiss()
   {
-    gCo = true;
-    ay.am(this);
-    gDc.awU();
-    gDl.clear();
-    gDk.clear();
-    cUz.setAdapter(null);
-    cUz.clearAnimation();
+    gIP = true;
+    be.ap(this);
+    gJD.azr();
+    gJM.clear();
+    gJL.clear();
+    cSm.setAdapter(null);
+    cSm.clearAnimation();
     setVisibility(8);
   }
   
-  public Activity getActivity()
+  public final Activity getActivity()
   {
-    return gCr;
+    return gIS;
   }
   
-  public ListView getContentLV()
+  public final void mj(int paramInt)
   {
-    return cUz;
-  }
-  
-  public List getInitData()
-  {
-    ArrayList localArrayList = new ArrayList();
-    List localList = ah.tD().rt().aWK();
-    localList.remove(h.sc());
-    localArrayList.addAll(localList);
-    return localArrayList;
-  }
-  
-  public ListView getListView()
-  {
-    return cUz;
-  }
-  
-  public LinkedList getSelectedContact()
-  {
-    LinkedList localLinkedList = new LinkedList();
-    localLinkedList.addAll(gDl);
-    return localLinkedList;
-  }
-  
-  public final void lc(int paramInt)
-  {
-    if ((paramInt < 0) || (paramInt > gDd.getCount())) {}
+    if ((paramInt < 0) || (paramInt > gJE.getCount())) {}
     com.tencent.mm.ui.contact.a.a locala;
     do
     {
       return;
-      locala = gDd.rM(paramInt);
+      locala = gJE.tO(paramInt);
     } while (locala == null);
-    if (gDl.contains(cId.field_username))
+    if (gJM.contains(cFh.field_username))
     {
-      gDl.remove(cId.field_username);
-      c.gCM = gDl.isEmpty();
-      if (gDl.isEmpty()) {
+      gJM.remove(cFh.field_username);
+      c.gJn = gJM.isEmpty();
+      if (gJM.isEmpty()) {
         break label106;
       }
     }
     label106:
     for (boolean bool = true;; bool = false)
     {
-      c.gCN = bool;
+      c.gJo = bool;
       return;
-      gDl.add(cId.field_username);
+      gJM.add(cFh.field_username);
       break;
     }
   }
   
-  public final boolean ld(int paramInt)
+  public final boolean mk(int paramInt)
   {
-    return c.tZ(dd(paramInt));
+    return c.vf(dI(paramInt));
   }
   
-  public final boolean le(int paramInt)
+  public final boolean ml(int paramInt)
   {
-    return c.ua(dd(paramInt));
+    return c.vg(dI(paramInt));
   }
   
-  public final boolean lg(int paramInt)
+  public final boolean mn(int paramInt)
   {
-    if (gDd.rM(paramInt) == null) {}
-    while (gDd.rM(paramInt).cId == null) {
+    if (gJE.tO(paramInt) == null) {}
+    while (gJE.tO(paramInt).cFh == null) {
       return false;
     }
-    return gDl.contains(gDd.rM(paramInt).cId.field_username);
+    return gJM.contains(gJE.tO(paramInt).cFh.field_username);
   }
   
   public final void notifyDataSetChanged()
   {
-    if (gDd == null) {
+    if (gJE == null) {
       return;
     }
-    gDd.notifyDataSetChanged();
+    gJE.notifyDataSetChanged();
   }
   
   public void onScroll(AbsListView paramAbsListView, int paramInt1, int paramInt2, int paramInt3)
   {
-    if ((gDg == null) || (paramAbsListView == null) || (gDg.getHeight() <= 0) || (gCr == null)) {}
+    if ((gJH == null) || (paramAbsListView == null) || (gJH.getHeight() <= 0) || (gIS == null)) {}
     do
     {
       return;
-      paramInt1 = gDg.getHeight() - gCr.iF.aP().getHeight();
-      paramInt2 = -gDg.getTop();
+      paramInt1 = gJH.getHeight() - gIS.iW.aP().getHeight();
+      paramInt2 = -gJH.getTop();
     } while (paramInt2 < 0);
     float f = paramInt2 / paramInt1;
-    gDf.setCameraShadowAlpha(f);
-    if ((gDg.getTop() < 0) && (gDg.getTop() <= -paramInt1)) {}
+    gJG.u(f);
+    if ((gJH.getTop() < 0) && (gJH.getTop() <= -paramInt1)) {}
     for (boolean bool = true;; bool = false)
     {
-      gDf.eJ(bool);
+      gJG.eB(bool);
       return;
     }
   }
@@ -384,51 +385,24 @@ public class MainSightSelectContactView
   public void onScrollStateChanged(AbsListView paramAbsListView, int paramInt)
   {
     if (paramInt == 1) {
-      ay.am(paramAbsListView);
+      be.ap(paramAbsListView);
     }
-  }
-  
-  public void setEmptyBgView(View paramView)
-  {
-    gDe = paramView;
-  }
-  
-  public void setIsMultiSelect(boolean paramBoolean)
-  {
-    gDd.gCL = paramBoolean;
-  }
-  
-  public void setMainSightContentView(a parama)
-  {
-    gDf = parama;
-  }
-  
-  public void setSearchView(View paramView)
-  {
-    d locald = gDc;
-    gCT = paramView;
-    gCR = ((EditText)paramView.findViewById(2131166420));
-    gCS = ((TextView)paramView.findViewById(2131169026));
-    gCR.setOnFocusChangeListener(locald);
-    gCR.addTextChangedListener(locald);
-    gCS.setOnClickListener(locald);
-    gCV = ((InputMethodManager)paramView.getContext().getSystemService("input_method"));
   }
   
   public final void show()
   {
-    gCo = false;
-    cUz.clearAnimation();
-    cUz.clearFocus();
-    cUz.setAdapter(gDd);
-    o(false, true);
+    gIP = false;
+    cSm.clearAnimation();
+    cSm.clearFocus();
+    cSm.setAdapter(gJE);
+    r(false, true);
     setVisibility(0);
-    if (gCy == null)
+    if (gIZ == null)
     {
-      gCy = new TranslateAnimation(0.0F, 0.0F, gDb, 0.0F);
-      gCy.setDuration(300L);
+      gIZ = new TranslateAnimation(0.0F, 0.0F, gJC, 0.0F);
+      gIZ.setDuration(300L);
     }
-    cUz.startAnimation(gCy);
+    cSm.startAnimation(gIZ);
   }
 }
 

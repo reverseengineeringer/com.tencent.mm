@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;->Gb()V
+    value = Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kPF:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;
+.field final synthetic loT:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 96
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$1;->kPF:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;
+    .line 72
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$1;->loT:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,17 +40,12 @@
     .locals 1
 
     .prologue
-    .line 100
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$1;->kPF:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;->age()V
-
-    .line 101
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$1;->kPF:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;
+    .line 76
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$1;->loT:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;->finish()V
 
-    .line 102
+    .line 77
     const/4 v0, 0x1
 
     return v0

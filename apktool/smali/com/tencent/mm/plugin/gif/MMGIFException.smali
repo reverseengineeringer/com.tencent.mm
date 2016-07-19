@@ -30,7 +30,7 @@
 
 .field public static final D_GIF_ERR_WRONG_RECORD:I = 0x6b
 
-.field private static final TAG:Ljava/lang/String; = "!44@/B4Tb64lLpISAcxqEoGUAZ3QidtC2RLrcJuDE8yE8XE="
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.GIF.MMGIFException"
 
 .field private static final serialVersionUID:J = 0x1L
 
@@ -47,7 +47,7 @@
     .line 12
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "!44@/B4Tb64lLpISAcxqEoGUAZ3QidtC2RLrcJuDE8yE8XE="
+    const-string/jumbo v1, "MicroMsg.GIF.MMGIFException"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 

@@ -15,5 +15,14 @@
 
 
 # virtual methods
-.method public abstract kt()V
+.method public abstract handleMessage(Landroid/os/Message;)V
+.end method
+
+.method public abstract onLog(Landroid/os/Message;Ljava/lang/Runnable;Ljava/lang/Thread;JJF)V
+.end method
+
+.method public abstract onTaskAdded(Ljava/lang/Runnable;Lcom/tencent/mm/sdk/platformtools/ai;)V
+.end method
+
+.method public abstract onTaskRunEnd(Ljava/lang/Runnable;Lcom/tencent/mm/sdk/platformtools/ai;)V
 .end method

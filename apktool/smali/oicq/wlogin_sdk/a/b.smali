@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field mcp:I
+.field mOt:I
 
-.field mcq:I
+.field mOu:I
 
-.field mcr:I
+.field mOv:I
 
-.field mcs:I
+.field mOw:I
 
-.field mct:[B
+.field mOx:[B
 
 
 # direct methods
@@ -28,30 +28,30 @@
     .line 8
     const/4 v0, 0x4
 
-    iput v0, p0, Loicq/wlogin_sdk/a/b;->mcp:I
+    iput v0, p0, Loicq/wlogin_sdk/a/b;->mOt:I
 
     .line 9
     const/16 v0, 0xe
 
-    iput v0, p0, Loicq/wlogin_sdk/a/b;->mcq:I
+    iput v0, p0, Loicq/wlogin_sdk/a/b;->mOu:I
 
     .line 10
-    iput v1, p0, Loicq/wlogin_sdk/a/b;->mcr:I
+    iput v1, p0, Loicq/wlogin_sdk/a/b;->mOv:I
 
     .line 11
     const/16 v0, 0x14
 
-    iput v0, p0, Loicq/wlogin_sdk/a/b;->mcs:I
+    iput v0, p0, Loicq/wlogin_sdk/a/b;->mOw:I
 
     .line 12
     const/4 v0, 0x2
 
     new-array v0, v0, [B
 
-    iput-object v0, p0, Loicq/wlogin_sdk/a/b;->mct:[B
+    iput-object v0, p0, Loicq/wlogin_sdk/a/b;->mOx:[B
 
     .line 16
-    iput v1, p0, Loicq/wlogin_sdk/a/b;->mbE:I
+    iput v1, p0, Loicq/wlogin_sdk/a/b;->mNI:I
 
     .line 17
     return-void
@@ -59,12 +59,12 @@
 
 
 # virtual methods
-.method public final bot()Ljava/lang/Boolean;
+.method public final bvr()Ljava/lang/Boolean;
     .locals 2
 
     .prologue
     .line 21
-    iget v0, p0, Loicq/wlogin_sdk/a/b;->mco:I
+    iget v0, p0, Loicq/wlogin_sdk/a/b;->mOs:I
 
     const/16 v1, 0x14
 
@@ -98,35 +98,35 @@
     const/4 v4, 0x0
 
     .line 37
-    iget v0, p0, Loicq/wlogin_sdk/a/b;->mcs:I
+    iget v0, p0, Loicq/wlogin_sdk/a/b;->mOw:I
 
     new-array v0, v0, [B
 
     .line 40
-    iget v1, p0, Loicq/wlogin_sdk/a/b;->mcr:I
+    iget v1, p0, Loicq/wlogin_sdk/a/b;->mOv:I
 
-    invoke-static {v0, v4, v1}, Loicq/wlogin_sdk/tools/util;->m([BII)V
+    invoke-static {v0, v4, v1}, Loicq/wlogin_sdk/tools/util;->o([BII)V
 
     .line 41
     const/4 v1, 0x2
 
-    invoke-static {}, Loicq/wlogin_sdk/tools/util;->boy()I
+    invoke-static {}, Loicq/wlogin_sdk/tools/util;->bvw()I
 
     move-result v2
 
-    invoke-static {v0, v1, v2}, Loicq/wlogin_sdk/tools/util;->n([BII)V
+    invoke-static {v0, v1, v2}, Loicq/wlogin_sdk/tools/util;->p([BII)V
 
     .line 43
     const/4 v1, 0x6
 
     long-to-int v2, p1
 
-    invoke-static {v0, v1, v2}, Loicq/wlogin_sdk/tools/util;->n([BII)V
+    invoke-static {v0, v1, v2}, Loicq/wlogin_sdk/tools/util;->p([BII)V
 
     .line 45
     const/16 v1, 0xa
 
-    invoke-static {}, Loicq/wlogin_sdk/tools/util;->boA()J
+    invoke-static {}, Loicq/wlogin_sdk/tools/util;->bvy()J
 
     move-result-wide v2
 
@@ -145,23 +145,23 @@
     add-int/lit8 v1, v1, 0xe
 
     .line 51
-    invoke-static {v0, v1, v4}, Loicq/wlogin_sdk/tools/util;->m([BII)V
+    invoke-static {v0, v1, v4}, Loicq/wlogin_sdk/tools/util;->o([BII)V
 
     .line 52
-    iget v1, p0, Loicq/wlogin_sdk/a/b;->mbE:I
+    iget v1, p0, Loicq/wlogin_sdk/a/b;->mNI:I
 
-    invoke-super {p0, v1}, Loicq/wlogin_sdk/a/a;->sL(I)V
+    invoke-super {p0, v1}, Loicq/wlogin_sdk/a/a;->vE(I)V
 
     .line 55
-    iget v1, p0, Loicq/wlogin_sdk/a/b;->mcs:I
+    iget v1, p0, Loicq/wlogin_sdk/a/b;->mOw:I
 
-    invoke-super {p0, v0, v1}, Loicq/wlogin_sdk/a/a;->A([BI)V
+    invoke-super {p0, v0, v1}, Loicq/wlogin_sdk/a/a;->B([BI)V
 
     .line 56
-    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->bos()V
+    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->bvq()V
 
     .line 58
-    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->boo()[B
+    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->bvm()[B
 
     move-result-object v0
 

@@ -2,7 +2,7 @@ package com.tencent.mm.app.plugin;
 
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.pluginsdk.l;
 import com.tencent.mm.pluginsdk.ui.applet.g;
 import com.tencent.mm.pluginsdk.ui.d.b;
@@ -27,23 +27,23 @@ class URISpanHandlerSet$CardUriSpanHandler
     {
       paramString = null;
       if (paraml != null) {
-        paramString = paraml.aPf().toString();
+        paramString = paraml.aTH().toString();
       }
       paraml = new Intent();
       paraml.putExtra("user_name", paramString);
       paraml.putExtra("view_type", 1);
-      c.c(URISpanHandlerSet.a(ang), "card", ".ui.CardViewUI", paraml);
+      c.c(URISpanHandlerSet.a(ZU), "card", ".ui.CardViewUI", paraml);
       return true;
     }
     return false;
   }
   
-  final g bb(String paramString)
+  final g bg(String paramString)
   {
     return null;
   }
   
-  final int[] lg()
+  final int[] jH()
   {
     return new int[0];
   }

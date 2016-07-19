@@ -111,7 +111,7 @@
     return-object v1
 .end method
 
-.method public static dk(Landroid/content/Context;)Ljava/lang/String;
+.method public static di(Landroid/content/Context;)Ljava/lang/String;
     .locals 5
 
     .prologue

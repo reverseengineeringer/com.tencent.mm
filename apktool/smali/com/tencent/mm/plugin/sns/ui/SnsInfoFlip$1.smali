@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+.field final synthetic htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
 .field final synthetic val$context:Landroid/content/Context;
 
@@ -28,8 +28,8 @@
     .locals 0
 
     .prologue
-    .line 169
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    .line 193
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;->val$context:Landroid/content/Context;
 
@@ -40,31 +40,31 @@
 
 
 # virtual methods
-.method public final aap()V
+.method public final YB()V
     .locals 2
 
     .prologue
-    .line 174
+    .line 198
     iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;->val$context:Landroid/content/Context;
 
     instance-of v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;
 
     if-eqz v0, :cond_0
 
-    .line 175
+    .line 199
     iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;->val$context:Landroid/content/Context;
 
     check-cast v0, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;->aBF()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsBrowseUI;->aEu()V
 
-    .line 196
+    .line 220
     :goto_0
     return-void
 
-    .line 178
+    .line 202
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->a(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Z
 
@@ -72,7 +72,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 179
+    .line 203
     iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;->val$context:Landroid/content/Context;
 
     check-cast v0, Lcom/tencent/mm/ui/MMActivity;
@@ -81,11 +81,11 @@
 
     goto :goto_0
 
-    .line 183
+    .line 207
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;->heR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;->htI:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->c(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Lcom/tencent/mm/sdk/platformtools/aa;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;->c(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip;)Lcom/tencent/mm/sdk/platformtools/ac;
 
     move-result-object v0
 
@@ -93,7 +93,7 @@
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1$1;-><init>(Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$1;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 .end method

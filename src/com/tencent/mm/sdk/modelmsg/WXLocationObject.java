@@ -5,7 +5,7 @@ import android.os.Bundle;
 public class WXLocationObject
   implements WXMediaMessage.b
 {
-  private static final String TAG = "!44@/B4Tb64lLpI5eDqK2Q2vWEl+K5iffebz/j79EavVBUE=";
+  private static final String TAG = "MicroMsg.SDK.WXLocationObject";
   public double lat;
   public double lng;
   

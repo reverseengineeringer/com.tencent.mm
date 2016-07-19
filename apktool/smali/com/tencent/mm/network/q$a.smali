@@ -82,7 +82,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 48
-    invoke-virtual {p0}, Lcom/tencent/mm/network/q$a;->ks()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/network/q$a;->iV()Z
 
     move-result v0
 

@@ -1,18 +1,18 @@
 package com.tencent.mm.plugin.f2f;
 
 import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah.a;
 
 final class F2FButton$1
-  implements af.a
+  implements ah.a
 {
   F2FButton$1(F2FButton paramF2FButton) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    F2FButton.b(dMF).setText(10 - F2FButton.a(dMF));
-    F2FButton.c(dMF);
-    return F2FButton.a(dMF) != 10;
+    F2FButton.b(dOn).setText(10 - F2FButton.a(dOn));
+    F2FButton.c(dOn);
+    return F2FButton.a(dOn) != 10;
   }
 }
 

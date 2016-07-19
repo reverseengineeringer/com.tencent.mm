@@ -3,7 +3,7 @@ package com.tencent.mm.pluginsdk.wallet;
 import android.os.Parcelable.Creator;
 
 final class PayInfo$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<PayInfo>
 {}
 
 /* Location:

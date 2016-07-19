@@ -5,7 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.KeyEvent;
 import com.tencent.mm.pluginsdk.ui.VoiceSearchLayout.b;
 import com.tencent.mm.pluginsdk.ui.tools.n.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public abstract class AbstractTabChildActivity
   extends ActionBarActivity
@@ -14,83 +14,83 @@ public abstract class AbstractTabChildActivity
     extends o
     implements VoiceSearchLayout.b, n.a, h
   {
-    private boolean kjf;
-    private boolean kjg;
-    private boolean kjh;
-    protected boolean kji;
-    protected boolean kjj = false;
-    protected boolean kjk = false;
-    protected boolean kjl;
+    private boolean kJo;
+    private boolean kJp;
+    private boolean kJq;
+    protected boolean kJr;
+    protected boolean kJs = false;
+    protected boolean kJt = false;
+    protected boolean kJu;
     
-    public final void Gf() {}
+    public final void GC() {}
     
-    public final void Gg() {}
+    public final void GD() {}
     
-    public boolean aCH()
+    public boolean aFD()
     {
       return false;
     }
     
-    public abstract void aZj();
+    public abstract void beA();
     
-    public abstract void aZk();
+    public abstract void beB();
     
-    public abstract void aZl();
+    public abstract void beC();
     
-    public abstract void aZm();
+    public abstract void beD();
     
-    public abstract void aZn();
+    public abstract void beE();
     
-    public abstract void aZo();
+    public abstract void beF();
     
-    public abstract void aZp();
+    public abstract void beG();
     
-    public abstract void aZq();
+    public abstract void beH();
     
-    public abstract void aZr();
+    public abstract void beI();
     
-    public final void aZs()
+    public final void beJ()
     {
-      aZq();
-      kjh = true;
+      beH();
+      kJq = true;
     }
     
-    public final void aZt() {}
+    public final void beK() {}
     
-    public final void aZu()
+    public final void beL()
     {
-      kjk = true;
+      kJt = true;
     }
     
-    public final void aZv()
+    public final void beM()
     {
-      if (!kjj) {
+      if (!kJs) {
         return;
       }
-      if (kjg)
+      if (kJp)
       {
-        aZj();
-        kjg = false;
+        beA();
+        kJp = false;
       }
       for (;;)
       {
         long l = System.currentTimeMillis();
-        if (kjh)
+        if (kJq)
         {
-          kjh = false;
-          aZr();
+          kJq = false;
+          beI();
         }
-        aZk();
-        u.d("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN " + toString() + " OnTabResume last : " + (System.currentTimeMillis() - l));
-        kji = true;
-        kjj = false;
+        beB();
+        v.d("MicroMsg.INIT", "KEVIN " + toString() + " OnTabResume last : " + (System.currentTimeMillis() - l));
+        kJr = true;
+        kJs = false;
         return;
-        if (kjf)
+        if (kJo)
         {
-          aZo();
-          aZj();
-          u.v("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN tab onRecreate " + toString());
-          kjf = false;
+          beF();
+          beA();
+          v.v("MicroMsg.INIT", "KEVIN tab onRecreate " + toString());
+          kJo = false;
         }
       }
     }
@@ -100,15 +100,15 @@ public abstract class AbstractTabChildActivity
       return 0;
     }
     
-    public void onActivityCreated(Bundle paramBundle)
+    public final void onActivityCreated(Bundle paramBundle)
     {
       super.onActivityCreated(paramBundle);
-      kjg = true;
+      kJp = true;
     }
     
     public void onDestroy()
     {
-      aZo();
+      beF();
       super.onDestroy();
     }
     
@@ -123,51 +123,51 @@ public abstract class AbstractTabChildActivity
     public void onPause()
     {
       super.onPause();
-      kjl = true;
-      if (kjl)
+      kJu = true;
+      if (kJu)
       {
-        if (!kji) {
-          kjl = false;
+        if (!kJr) {
+          kJu = false;
         }
       }
       else {
         return;
       }
       long l = System.currentTimeMillis();
-      aZm();
-      u.d("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN " + toString() + " onTabPause last : " + (System.currentTimeMillis() - l));
-      kji = false;
-      kjl = false;
+      beD();
+      v.d("MicroMsg.INIT", "KEVIN " + toString() + " onTabPause last : " + (System.currentTimeMillis() - l));
+      kJr = false;
+      kJu = false;
     }
     
     public void onResume()
     {
       super.onResume();
-      LauncherUI localLauncherUI = LauncherUI.bat();
-      if ((localLauncherUI == null) || (!klI)) {}
+      LauncherUI localLauncherUI = LauncherUI.bfJ();
+      if ((localLauncherUI == null) || (!kLj)) {}
       do
       {
         return;
-        kjj = true;
-      } while (!kjk);
-      aZv();
-      kjk = false;
+        kJs = true;
+      } while (!kJt);
+      beM();
+      kJt = false;
     }
     
     public void onStart()
     {
       super.onStart();
-      LauncherUI localLauncherUI = LauncherUI.bat();
-      if ((localLauncherUI == null) || (!klI)) {
+      LauncherUI localLauncherUI = LauncherUI.bfJ();
+      if ((localLauncherUI == null) || (!kLj)) {
         return;
       }
-      aZl();
+      beC();
     }
     
-    public void onStop()
+    public final void onStop()
     {
       super.onStop();
-      aZn();
+      beE();
     }
   }
 }

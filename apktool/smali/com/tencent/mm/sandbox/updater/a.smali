@@ -4,10 +4,10 @@
 
 
 # virtual methods
-.method public abstract H(Landroid/content/Intent;)Z
+.method public abstract M(Landroid/content/Intent;)Z
 .end method
 
-.method public abstract gF(Z)V
+.method public abstract hd(Z)V
 .end method
 
 .method public abstract isBusy()Z

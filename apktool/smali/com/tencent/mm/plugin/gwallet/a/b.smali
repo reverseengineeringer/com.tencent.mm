@@ -14,19 +14,19 @@
 
 
 # instance fields
-.field public exD:Lcom/a/a/a/a;
+.field public eDX:Lcom/a/a/a/a;
 
-.field private exE:Landroid/content/ServiceConnection;
+.field private eDY:Landroid/content/ServiceConnection;
 
-.field exF:Z
+.field eDZ:Z
 
-.field public exG:Z
+.field public eEa:Z
 
-.field public exH:I
+.field public eEb:I
 
-.field public exI:Lcom/tencent/mm/plugin/gwallet/a/b$b;
+.field public eEc:Lcom/tencent/mm/plugin/gwallet/a/b$b;
 
-.field public exJ:Ljava/lang/String;
+.field public eEd:Ljava/lang/String;
 
 .field public mContext:Landroid/content/Context;
 
@@ -42,10 +42,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 78
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->exF:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->eDZ:Z
 
     .line 80
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->exG:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->eEa:Z
 
     .line 93
     iput-object p1, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->mContext:Landroid/content/Context;
@@ -73,9 +73,9 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
+    const-string/jumbo v1, "MicroMsg.IabHelper"
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -97,9 +97,9 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
+    const-string/jumbo v1, "MicroMsg.IabHelper"
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -130,11 +130,11 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
+    const-string/jumbo v5, "MicroMsg.IabHelper"
 
-    invoke-static {v5, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->exD:Lcom/a/a/a/a;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->eDX:Lcom/a/a/a/a;
 
     const/4 v5, 0x3
 
@@ -148,7 +148,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/tencent/mm/plugin/gwallet/a/b;->j(Landroid/os/Bundle;)I
+    invoke-static {v4}, Lcom/tencent/mm/plugin/gwallet/a/b;->l(Landroid/os/Bundle;)I
 
     move-result v0
 
@@ -170,9 +170,9 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
+    const-string/jumbo v6, "MicroMsg.IabHelper"
 
-    invoke-static {v6, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v0, :cond_1
 
@@ -190,9 +190,9 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
+    const-string/jumbo v2, "MicroMsg.IabHelper"
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return v0
@@ -225,7 +225,7 @@
     :cond_2
     const-string/jumbo v0, "Bundle returned from getPurchases() doesn\'t contain required fields."
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->pu(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->qK(Ljava/lang/String;)V
 
     const/16 v0, -0x3ea
 
@@ -276,9 +276,9 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
+    const-string/jumbo v5, "MicroMsg.IabHelper"
 
-    invoke-static {v5, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -303,7 +303,7 @@
     goto :goto_0
 .end method
 
-.method public static hE(I)Ljava/lang/String;
+.method public static iK(I)Ljava/lang/String;
     .locals 3
 
     .prologue
@@ -414,7 +414,7 @@
     goto :goto_0
 .end method
 
-.method public static j(Landroid/os/Bundle;)I
+.method public static l(Landroid/os/Bundle;)I
     .locals 4
 
     .prologue
@@ -431,9 +431,9 @@
     .line 604
     const-string/jumbo v0, "Bundle with null response code, assuming OK (known issue)"
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
+    const-string/jumbo v1, "MicroMsg.IabHelper"
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 605
     const/4 v0, 0x0
@@ -478,7 +478,7 @@
     :cond_2
     const-string/jumbo v1, "Unexpected type for bundle response code."
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/gwallet/a/b;->pu(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/tencent/mm/plugin/gwallet/a/b;->qK(Ljava/lang/String;)V
 
     .line 612
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -489,7 +489,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/gwallet/a/b;->pu(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/tencent/mm/plugin/gwallet/a/b;->qK(Ljava/lang/String;)V
 
     .line 613
     new-instance v1, Ljava/lang/RuntimeException;
@@ -521,12 +521,12 @@
     throw v1
 .end method
 
-.method public static pu(Ljava/lang/String;)V
+.method public static qK(Ljava/lang/String;)V
     .locals 3
 
     .prologue
     .line 640
-    const-string/jumbo v0, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
+    const-string/jumbo v0, "MicroMsg.IabHelper"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -542,20 +542,20 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 641
     return-void
 .end method
 
-.method static synthetic pv(Ljava/lang/String;)V
+.method static synthetic qL(Ljava/lang/String;)V
     .locals 1
 
     .prologue
     .line 45
-    const-string/jumbo v0, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
+    const-string/jumbo v0, "MicroMsg.IabHelper"
 
-    invoke-static {v0, p0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -569,7 +569,7 @@
     const/4 v2, 0x0
 
     .line 106
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->exF:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->eDZ:Z
 
     if-eqz v0, :cond_0
 
@@ -586,16 +586,16 @@
     :cond_0
     const-string/jumbo v0, "Starting in-app billing setup."
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
+    const-string/jumbo v1, "MicroMsg.IabHelper"
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 111
     new-instance v0, Lcom/tencent/mm/plugin/gwallet/a/b$1;
 
     invoke-direct {v0, p0, p1}, Lcom/tencent/mm/plugin/gwallet/a/b$1;-><init>(Lcom/tencent/mm/plugin/gwallet/a/b;Lcom/tencent/mm/plugin/gwallet/a/b$a;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->exE:Landroid/content/ServiceConnection;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->eDY:Landroid/content/ServiceConnection;
 
     .line 163
     new-instance v0, Landroid/content/Intent;
@@ -653,7 +653,7 @@
     .line 167
     iget-object v1, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->exE:Landroid/content/ServiceConnection;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->eDY:Landroid/content/ServiceConnection;
 
     const/4 v3, 0x1
 
@@ -680,6 +680,17 @@
 
 .method public final a(Ljava/util/ArrayList;Lcom/tencent/mm/plugin/gwallet/a/b$c;)Z
     .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Lcom/tencent/mm/plugin/gwallet/a/b$c;",
+            ")Z"
+        }
+    .end annotation
 
     .prologue
     const/4 v4, 0x5
@@ -689,7 +700,7 @@
     .line 278
     const-string/jumbo v0, "query details"
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->pt(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->qJ(Ljava/lang/String;)V
 
     .line 280
     new-instance v2, Landroid/content/Intent;
@@ -707,11 +718,11 @@
 
     .line 286
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
+    const-string/jumbo v0, "MicroMsg.IabHelper"
 
     const-string/jumbo v3, "query list is empty!"
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 287
     new-instance v0, Lcom/tencent/mm/plugin/gwallet/a/c;
@@ -764,9 +775,9 @@
 
     move-result-object v0
 
-    const-string/jumbo v3, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
+    const-string/jumbo v3, "MicroMsg.IabHelper"
 
-    invoke-static {v3, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 297
     new-instance v0, Landroid/os/Bundle;
@@ -779,7 +790,7 @@
     invoke-virtual {v0, v3, p1}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
     .line 300
-    iget-object v3, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->exD:Lcom/a/a/a/a;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->eDX:Lcom/a/a/a/a;
 
     const/4 v4, 0x3
 
@@ -796,7 +807,7 @@
     move-result-object v0
 
     .line 302
-    invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->j(Landroid/os/Bundle;)I
+    invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->l(Landroid/os/Bundle;)I
 
     move-result v3
 
@@ -819,9 +830,9 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
+    const-string/jumbo v5, "MicroMsg.IabHelper"
 
-    invoke-static {v5, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 305
     if-eqz v3, :cond_2
@@ -829,9 +840,9 @@
     .line 306
     const-string/jumbo v0, "cannot query details"
 
-    const-string/jumbo v4, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
+    const-string/jumbo v4, "MicroMsg.IabHelper"
 
-    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 307
     new-instance v0, Lcom/tencent/mm/plugin/gwallet/a/c;
@@ -876,9 +887,9 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
+    const-string/jumbo v6, "MicroMsg.IabHelper"
 
-    invoke-static {v6, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 314
     const-string/jumbo v5, "RESPONSE_CODE"
@@ -924,9 +935,9 @@
     check-cast v0, Ljava/lang/String;
 
     .line 319
-    const-string/jumbo v4, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
+    const-string/jumbo v4, "MicroMsg.IabHelper"
 
-    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -938,7 +949,7 @@
 
     const-string/jumbo v0, "RemoteException while launching query details "
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->pu(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->qK(Ljava/lang/String;)V
 
     .line 327
     new-instance v0, Lcom/tencent/mm/plugin/gwallet/a/c;
@@ -989,26 +1000,26 @@
     .line 183
     const-string/jumbo v0, "Disposing."
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
+    const-string/jumbo v1, "MicroMsg.IabHelper"
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 184
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->exF:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->eDZ:Z
 
     .line 185
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->exE:Landroid/content/ServiceConnection;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->eDY:Landroid/content/ServiceConnection;
 
     if-eqz v0, :cond_1
 
     .line 186
     const-string/jumbo v0, "Unbinding from service."
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
+    const-string/jumbo v1, "MicroMsg.IabHelper"
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 188
     :try_start_0
@@ -1019,7 +1030,7 @@
     .line 189
     iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->exE:Landroid/content/ServiceConnection;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->eDY:Landroid/content/ServiceConnection;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
     :try_end_0
@@ -1028,10 +1039,10 @@
     .line 193
     :cond_0
     :goto_0
-    iput-object v2, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->exE:Landroid/content/ServiceConnection;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->eDY:Landroid/content/ServiceConnection;
 
     .line 194
-    iput-object v2, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->exD:Lcom/a/a/a/a;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->eDX:Lcom/a/a/a/a;
 
     .line 196
     :cond_1
@@ -1042,28 +1053,28 @@
     move-exception v0
 
     .line 191
-    const-string/jumbo v1, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
+    const-string/jumbo v1, "MicroMsg.IabHelper"
 
     invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public final pt(Ljava/lang/String;)V
+.method public final qJ(Ljava/lang/String;)V
     .locals 3
 
     .prologue
     .line 200
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->exF:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/gwallet/a/b;->eDZ:Z
 
     if-nez v0, :cond_0
 
     .line 201
-    const-string/jumbo v0, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
+    const-string/jumbo v0, "MicroMsg.IabHelper"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1085,7 +1096,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 202
     new-instance v0, Ljava/lang/IllegalStateException;

@@ -18,10 +18,10 @@
 
 
 # virtual methods
-.method public abstract KR()V
+.method public abstract LD()V
 .end method
 
-.method public abstract KS()V
+.method public abstract LE()V
 .end method
 
 .method public abstract a(Z[Ljava/lang/String;JI)V

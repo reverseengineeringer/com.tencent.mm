@@ -3,7 +3,7 @@ package com.tencent.mm.ui.bindmobile;
 import android.content.Intent;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.ar.c;
+import com.tencent.mm.av.c;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.l;
 import com.tencent.mm.ui.base.n.c;
@@ -18,21 +18,21 @@ final class BindMContactIntroUI$23
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = new m(kOs.koJ.kpc);
-    hle = new n.c()
+    paramMenuItem = new m(lnI.kNN.kOg);
+    hoS = new n.c()
     {
       public final void a(l paramAnonymousl)
       {
-        paramAnonymousl.setHeaderTitle(2131428650);
-        if ((kOv & 0x2) != 0) {
-          paramAnonymousl.bL(0, 2131428652);
+        paramAnonymousl.setHeaderTitle(2131231277);
+        if ((lnL & 0x2) != 0) {
+          paramAnonymousl.bR(0, 2131231295);
         }
-        if ((kOv & 0x1) != 0) {
-          paramAnonymousl.bL(1, 2131428653);
+        if ((lnL & 0x1) != 0) {
+          paramAnonymousl.bR(1, 2131231256);
         }
       }
     };
-    hlf = new n.d()
+    hoT = new n.d()
     {
       public final void d(MenuItem paramAnonymousMenuItem, int paramAnonymousInt)
       {
@@ -41,15 +41,15 @@ final class BindMContactIntroUI$23
         default: 
           return;
         case 0: 
-          BindMContactIntroUI.d(kOs);
+          BindMContactIntroUI.d(lnI);
           return;
         }
         paramAnonymousMenuItem = new Intent();
         paramAnonymousMenuItem.putExtra("need_matte_high_light_item", "settings_find_me_by_mobile");
-        c.c(kOs, "setting", ".ui.setting.SettingsPrivacyUI", paramAnonymousMenuItem);
+        c.c(lnI, "setting", ".ui.setting.SettingsPrivacyUI", paramAnonymousMenuItem);
       }
     };
-    paramMenuItem.biF();
+    paramMenuItem.boB();
     return false;
   }
 }

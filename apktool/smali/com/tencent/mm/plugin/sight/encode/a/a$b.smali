@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract awn()V
+.method public abstract ayL()V
 .end method

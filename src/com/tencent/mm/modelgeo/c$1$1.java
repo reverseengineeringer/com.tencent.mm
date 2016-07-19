@@ -1,6 +1,6 @@
 package com.tencent.mm.modelgeo;
 
-import com.tencent.mm.platformtools.r;
+import com.tencent.mm.platformtools.q;
 import com.tencent.mm.sdk.b.b;
 import java.lang.ref.WeakReference;
 import java.util.Iterator;
@@ -15,7 +15,7 @@ final class c$1$1
   public final void run()
   {
     Object localObject1 = new LinkedList();
-    Object localObject2 = bOE.bOx.bOl.iterator();
+    Object localObject2 = bHZ.bHS.bHG.iterator();
     while (((Iterator)localObject2).hasNext())
     {
       WeakReference localWeakReference = (WeakReference)((Iterator)localObject2).next();
@@ -27,10 +27,10 @@ final class c$1$1
     while (((Iterator)localObject1).hasNext())
     {
       localObject2 = (a.a)((Iterator)localObject1).next();
-      if ((r.cmK) && (b.aUo())) {
-        ((a.a)localObject2).a(bOy, (float)r.lng, (float)r.lat, bOz, (float)bOA, bOB);
+      if ((q.chP) && (b.aZo())) {
+        ((a.a)localObject2).a(bHT, (float)q.lng, (float)q.lat, bHU, (float)bHV, bHW);
       } else {
-        ((a.a)localObject2).a(bOy, (float)bOC, (float)bOD, bOz, (float)bOA, bOB);
+        ((a.a)localObject2).a(bHT, (float)bHX, (float)bHY, bHU, (float)bHV, bHW);
       }
     }
   }

@@ -6,16 +6,15 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroid/support/v4/view/o$b;,
         Landroid/support/v4/view/o$a;,
-        Landroid/support/v4/view/o$d;,
-        Landroid/support/v4/view/o$c;
+        Landroid/support/v4/view/o$c;,
+        Landroid/support/v4/view/o$b;
     }
 .end annotation
 
 
 # static fields
-.field static final fy:Landroid/support/v4/view/o$c;
+.field static final fU:Landroid/support/v4/view/o$b;
 
 
 # direct methods
@@ -23,47 +22,32 @@
     .locals 2
 
     .prologue
-    .line 65
+    .line 63
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 66
+    .line 64
     const/16 v1, 0xe
 
     if-lt v0, v1, :cond_0
 
-    .line 67
-    new-instance v0, Landroid/support/v4/view/o$b;
-
-    invoke-direct {v0}, Landroid/support/v4/view/o$b;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/o;->fy:Landroid/support/v4/view/o$c;
-
-    .line 73
-    :goto_0
-    return-void
-
-    .line 68
-    :cond_0
-    const/16 v1, 0xb
-
-    if-lt v0, v1, :cond_1
-
-    .line 69
+    .line 65
     new-instance v0, Landroid/support/v4/view/o$a;
 
     invoke-direct {v0}, Landroid/support/v4/view/o$a;-><init>()V
 
-    sput-object v0, Landroid/support/v4/view/o;->fy:Landroid/support/v4/view/o$c;
+    sput-object v0, Landroid/support/v4/view/o;->fU:Landroid/support/v4/view/o$b;
 
-    goto :goto_0
+    .line 69
+    :goto_0
+    return-void
 
-    .line 71
-    :cond_1
-    new-instance v0, Landroid/support/v4/view/o$d;
+    .line 67
+    :cond_0
+    new-instance v0, Landroid/support/v4/view/o$c;
 
-    invoke-direct {v0}, Landroid/support/v4/view/o$d;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/view/o$c;-><init>()V
 
-    sput-object v0, Landroid/support/v4/view/o;->fy:Landroid/support/v4/view/o$c;
+    sput-object v0, Landroid/support/v4/view/o;->fU:Landroid/support/v4/view/o$b;
 
     goto :goto_0
 .end method
@@ -72,13 +56,13 @@
     .locals 2
 
     .prologue
-    .line 119
-    sget-object v0, Landroid/support/v4/view/o;->fy:Landroid/support/v4/view/o$c;
+    .line 115
+    sget-object v0, Landroid/support/v4/view/o;->fU:Landroid/support/v4/view/o$b;
 
     const/4 v1, 0x0
 
-    invoke-interface {v0, p0, v1}, Landroid/support/v4/view/o$c;->a(Landroid/view/ViewGroup;Z)V
+    invoke-interface {v0, p0, v1}, Landroid/support/v4/view/o$b;->a(Landroid/view/ViewGroup;Z)V
 
-    .line 120
+    .line 116
     return-void
 .end method

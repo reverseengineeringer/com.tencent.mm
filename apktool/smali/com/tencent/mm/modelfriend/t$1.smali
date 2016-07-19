@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic bMI:Lcom/tencent/mm/modelfriend/t;
+.field final synthetic bGc:Lcom/tencent/mm/modelfriend/t;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 42
-    iput-object p1, p0, Lcom/tencent/mm/modelfriend/t$1;->bMI:Lcom/tencent/mm/modelfriend/t;
+    iput-object p1, p0, Lcom/tencent/mm/modelfriend/t$1;->bGc:Lcom/tencent/mm/modelfriend/t;
 
     invoke-direct {p0}, Lcom/tencent/mm/sdk/h/j;-><init>()V
 
@@ -33,7 +33,7 @@
 
 
 # virtual methods
-.method protected final yv()Z
+.method protected final yH()Z
     .locals 5
 
     .prologue
@@ -42,7 +42,7 @@
     const/4 v1, 0x0
 
     .line 45
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/t$1;->bMI:Lcom/tencent/mm/modelfriend/t;
+    iget-object v2, p0, Lcom/tencent/mm/modelfriend/t$1;->bGc:Lcom/tencent/mm/modelfriend/t;
 
     invoke-static {v2}, Lcom/tencent/mm/modelfriend/t;->a(Lcom/tencent/mm/modelfriend/t;)Lcom/tencent/mm/sdk/h/d;
 
@@ -50,13 +50,13 @@
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/t$1;->bMI:Lcom/tencent/mm/modelfriend/t;
+    iget-object v2, p0, Lcom/tencent/mm/modelfriend/t$1;->bGc:Lcom/tencent/mm/modelfriend/t;
 
     invoke-static {v2}, Lcom/tencent/mm/modelfriend/t;->a(Lcom/tencent/mm/modelfriend/t;)Lcom/tencent/mm/sdk/h/d;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/tencent/mm/sdk/h/d;->aVP()Z
+    invoke-interface {v2}, Lcom/tencent/mm/sdk/h/d;->bbc()Z
 
     move-result v2
 
@@ -64,13 +64,13 @@
 
     .line 46
     :cond_0
-    const-string/jumbo v2, "!44@/B4Tb64lLpJ4FHnyJpFGLGUFfp8Yd7awqsKJHV4TzI0="
+    const-string/jumbo v2, "MicroMsg.LinkedInFriendStorage"
 
     const-string/jumbo v3, "shouldProcessEvent db is close :%s"
 
     new-array v4, v0, [Ljava/lang/Object;
 
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/t$1;->bMI:Lcom/tencent/mm/modelfriend/t;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/t$1;->bGc:Lcom/tencent/mm/modelfriend/t;
 
     invoke-static {v0}, Lcom/tencent/mm/modelfriend/t;->a(Lcom/tencent/mm/modelfriend/t;)Lcom/tencent/mm/sdk/h/d;
 
@@ -83,7 +83,7 @@
     :goto_0
     aput-object v0, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -93,13 +93,13 @@
 
     .line 46
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/t$1;->bMI:Lcom/tencent/mm/modelfriend/t;
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/t$1;->bGc:Lcom/tencent/mm/modelfriend/t;
 
     invoke-static {v0}, Lcom/tencent/mm/modelfriend/t;->a(Lcom/tencent/mm/modelfriend/t;)Lcom/tencent/mm/sdk/h/d;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/tencent/mm/sdk/h/d;->aVP()Z
+    invoke-interface {v0}, Lcom/tencent/mm/sdk/h/d;->bbc()Z
 
     move-result v0
 

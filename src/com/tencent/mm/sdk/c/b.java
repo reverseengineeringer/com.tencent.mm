@@ -2,9 +2,17 @@ package com.tencent.mm.sdk.c;
 
 public abstract class b
 {
-  public Runnable aID = null;
-  public String id;
-  public boolean jUI;
+  public Runnable auX = null;
+  public boolean kuk;
+  private int kul = 0;
+  
+  final int aZq()
+  {
+    if (kul == 0) {
+      kul = getClass().getName().hashCode();
+    }
+    return kul;
+  }
 }
 
 /* Location:

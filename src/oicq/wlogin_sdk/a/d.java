@@ -5,7 +5,7 @@ public final class d
 {
   public d()
   {
-    mbE = 258;
+    mNI = 258;
   }
 }
 

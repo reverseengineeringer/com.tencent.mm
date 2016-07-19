@@ -4,14 +4,14 @@ import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.storage.ai;
 
 final class ce
-  extends cb
+  extends cc
 {
   public ce()
   {
-    super(27);
+    super(24);
   }
   
   public final View a(LayoutInflater paramLayoutInflater, View paramView)
@@ -20,32 +20,32 @@ final class ce
     if ((paramView != null) && (paramView.getTag() != null))
     {
       localObject = paramView;
-      if (getTagtype == eLV) {}
+      if (getTagtype == cTv) {}
     }
     else
     {
-      localObject = new ax(paramLayoutInflater, 2131361991);
-      ((View)localObject).setTag(new ed(eLV).aI((View)localObject));
+      localObject = new ay(paramLayoutInflater, 2130903300);
+      ((View)localObject).setTag(new ee(cTv).aM((View)localObject));
     }
     return (View)localObject;
   }
   
-  public final void a(aa.a parama, int paramInt, ChattingUI.a parama1, ag paramag, String paramString)
+  public final void a(ab.a parama, int paramInt, ChattingUI.a parama1, ai paramai, String paramString)
   {
-    ed.a((ed)parama, paramag, true, paramInt, parama1);
+    ee.a((ee)parama, paramai, true, paramInt, parama1);
   }
   
-  public final boolean a(ContextMenu paramContextMenu, View paramView, ag paramag)
-  {
-    return false;
-  }
-  
-  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ag paramag)
+  public final boolean a(ContextMenu paramContextMenu, View paramView, ai paramai)
   {
     return false;
   }
   
-  public final boolean a(View paramView, ChattingUI.a parama, ag paramag)
+  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ai paramai)
+  {
+    return false;
+  }
+  
+  public final boolean a(View paramView, ChattingUI.a parama, ai paramai)
   {
     return false;
   }

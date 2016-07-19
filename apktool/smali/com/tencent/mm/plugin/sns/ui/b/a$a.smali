@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic hnA:Lcom/tencent/mm/plugin/sns/ui/b/a;
+.field final synthetic hDV:Lcom/tencent/mm/plugin/sns/ui/b/a;
 
 
 # direct methods
@@ -23,8 +23,8 @@
     .locals 0
 
     .prologue
-    .line 1138
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/b/a$a;->hnA:Lcom/tencent/mm/plugin/sns/ui/b/a;
+    .line 1117
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/b/a$a;->hDV:Lcom/tencent/mm/plugin/sns/ui/b/a;
 
     invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/d/j;-><init>()V
 
@@ -37,18 +37,18 @@
     .locals 1
 
     .prologue
-    .line 1141
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/b/a$a;->hnA:Lcom/tencent/mm/plugin/sns/ui/b/a;
+    .line 1120
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/b/a$a;->hDV:Lcom/tencent/mm/plugin/sns/ui/b/a;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/b/a;->gRM:Lcom/tencent/mm/plugin/sns/ui/an;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/b/a;->gZP:Lcom/tencent/mm/plugin/sns/ui/aq;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/an;->hcA:Lcom/tencent/mm/plugin/sns/ui/au;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/aq;->hrm:Lcom/tencent/mm/plugin/sns/ui/ba;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/au;->hmq:Landroid/view/View$OnClickListener;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/ba;->hCx:Landroid/view/View$OnClickListener;
 
     invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    .line 1142
+    .line 1121
     return-void
 .end method
 
@@ -56,34 +56,34 @@
     .locals 2
 
     .prologue
-    .line 1147
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/b/a$a;->hnA:Lcom/tencent/mm/plugin/sns/ui/b/a;
+    .line 1126
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/b/a$a;->hDV:Lcom/tencent/mm/plugin/sns/ui/b/a;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/b/a;->jx:Landroid/app/Activity;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/b/a;->jO:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f080004
+    const v1, 0x7f0f01e4
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v0
 
-    .line 1148
-    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQe:Z
+    .line 1127
+    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->jnm:Z
 
     if-eqz v1, :cond_0
 
-    .line 1149
+    .line 1128
     iput v0, p1, Landroid/text/TextPaint;->bgColor:I
 
-    .line 1153
+    .line 1132
     :goto_0
     return-void
 
-    .line 1151
+    .line 1130
     :cond_0
     const/4 v0, 0x0
 

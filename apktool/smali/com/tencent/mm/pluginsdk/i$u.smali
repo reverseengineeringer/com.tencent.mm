@@ -19,16 +19,40 @@
 .end method
 
 .method public abstract a(Ljava/lang/String;Ljava/util/LinkedList;Ljava/lang/String;Ljava/lang/String;I)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/LinkedList",
+            "<",
+            "Lcom/tencent/mm/protocal/b/atw;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "I)V"
+        }
+    .end annotation
 .end method
 
-.method public abstract aEr()Z
+.method public abstract aHT()Z
 .end method
 
 .method public abstract b(Lcom/tencent/mm/pluginsdk/i$t;)V
 .end method
 
-.method public abstract wn(Ljava/lang/String;)Z
+.method public abstract xF(Ljava/lang/String;)Z
 .end method
 
-.method public abstract wo(Ljava/lang/String;)Ljava/util/LinkedList;
+.method public abstract xG(Ljava/lang/String;)Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/LinkedList",
+            "<",
+            "Lcom/tencent/mm/protocal/b/atw;",
+            ">;"
+        }
+    .end annotation
 .end method

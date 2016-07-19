@@ -1,7 +1,7 @@
 package com.tencent.mm.ui.voicesearch;
 
-import com.tencent.mm.d.b.t;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.e.b.t;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.r;
 import com.tencent.mm.ui.applet.b.b;
 
@@ -10,23 +10,23 @@ final class a$2
 {
   a$2(a parama) {}
   
-  public final String dd(int paramInt)
+  public final String dI(int paramInt)
   {
-    if ((paramInt < 0) || (paramInt >= lCk.getCount()))
+    if ((paramInt < 0) || (paramInt >= mdb.getCount()))
     {
-      u.e("!56@/B4Tb64lLpIuhwFNmr0jFWYgIN094j0aBZ18bmsj7hGfIxUgiYP/JA==", "pos is invalid");
+      v.e("MicroMsg.SearchConversationAdapter", "pos is invalid");
       return null;
     }
-    r localr = (r)lCk.getItem(paramInt);
+    r localr = (r)mdb.getItem(paramInt);
     if (localr == null) {
       return null;
     }
     return field_username;
   }
   
-  public final int yz()
+  public final int yM()
   {
-    return lCk.getCount();
+    return mdb.getCount();
   }
 }
 

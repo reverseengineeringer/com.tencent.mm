@@ -2,9 +2,9 @@ package com.tencent.mm.sandbox.updater;
 
 import com.tencent.mm.a.e;
 import com.tencent.mm.a.g;
-import com.tencent.mm.protocal.b.alq;
+import com.tencent.mm.protocal.b.amb;
 import com.tencent.mm.sandbox.b.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.File;
 
 final class c$3
@@ -12,71 +12,71 @@ final class c$3
 {
   c$3(c paramc) {}
   
-  public final void J(int paramInt1, int paramInt2)
+  public final void L(int paramInt1, int paramInt2)
   {
-    u.d("!56@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkWxWU3EihDr6zrocW4g7iOg==", "progress, total=" + paramInt1 + ", offset=" + paramInt2);
-    c.b(jTv).J(paramInt1, paramInt2);
+    v.d("MicroMsg.NetSceneGetUpdatePackFromCDN", "progress, total=" + paramInt1 + ", offset=" + paramInt2);
+    c.b(ksP).L(paramInt1, paramInt2);
   }
   
-  public final void a(int paramInt1, int paramInt2, alq paramalq)
+  public final void a(int paramInt1, int paramInt2, amb paramamb)
   {
     if (paramInt1 != 0)
     {
-      u.e("!56@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkWxWU3EihDr6zrocW4g7iOg==", "scene error. netRet=" + paramInt1);
+      v.e("MicroMsg.NetSceneGetUpdatePackFromCDN", "scene error. netRet=" + paramInt1);
       if (paramInt1 == -2) {
-        new File(jTv.aTM()).delete();
+        new File(ksP.aYJ()).delete();
       }
-      c.e(jTv);
-      jTv.a(c.b(jTv));
+      c.e(ksP);
+      ksP.a(c.b(ksP));
       return;
     }
-    u.i("!56@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkWxWU3EihDr6zrocW4g7iOg==", "scene success");
+    v.i("MicroMsg.NetSceneGetUpdatePackFromCDN", "scene success");
     try
     {
-      if (e.aw(jTv.aTM()) < c.f(jTv))
+      if (e.aA(ksP.aYJ()) < c.f(ksP))
       {
-        u.i("!56@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkWxWU3EihDr6zrocW4g7iOg==", "scene continue;");
-        jTv.a(c.b(jTv));
+        v.i("MicroMsg.NetSceneGetUpdatePackFromCDN", "scene continue;");
+        ksP.a(c.b(ksP));
         return;
       }
     }
     catch (Exception localException)
     {
-      u.e("!56@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkWxWU3EihDr6zrocW4g7iOg==", "error occured during pack processing");
-      c.b(jTv).a(-1, -1, paramalq);
+      v.e("MicroMsg.NetSceneGetUpdatePackFromCDN", "error occured during pack processing");
+      c.b(ksP).a(-1, -1, paramamb);
       return;
     }
-    if (c.g(jTv))
+    if (c.g(ksP))
     {
-      if (!c.h(jTv).equalsIgnoreCase(g.aC(jTv.aTM())))
+      if (!c.h(ksP).equalsIgnoreCase(g.aH(ksP.aYJ())))
       {
-        u.e("!56@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkWxWU3EihDr6zrocW4g7iOg==", "pack md5 check error");
-        new File(jTv.aTM()).delete();
-        c.b(jTv).a(2, -1, paramalq);
+        v.e("MicroMsg.NetSceneGetUpdatePackFromCDN", "pack md5 check error");
+        new File(ksP.aYJ()).delete();
+        c.b(ksP).a(2, -1, paramamb);
         return;
       }
-      c.a(jTv, paramalq);
+      c.a(ksP, paramamb);
       return;
     }
-    if (!c.i(jTv).equalsIgnoreCase(g.aC(jTv.aTM())))
+    if (!c.i(ksP).equalsIgnoreCase(g.aH(ksP.aYJ())))
     {
-      u.e("!56@/B4Tb64lLpK+IBX8XDgnvlltEyUofJIkWxWU3EihDr6zrocW4g7iOg==", "update pack check error");
-      new File(jTv.aTM()).delete();
-      c.b(jTv).a(-1, -1, paramalq);
+      v.e("MicroMsg.NetSceneGetUpdatePackFromCDN", "update pack check error");
+      new File(ksP.aYJ()).delete();
+      c.b(ksP).a(-1, -1, paramamb);
       return;
     }
-    e.f(com.tencent.mm.sandbox.monitor.c.jSK, c.j(jTv) + ".temp", c.k(jTv) + ".apk");
-    c.b(jTv).a(200, 0, paramalq);
+    e.h(com.tencent.mm.sandbox.monitor.c.kse, c.j(ksP) + ".temp", c.k(ksP) + ".apk");
+    c.b(ksP).a(200, 0, paramamb);
   }
   
-  public final void jdMethod_do(long paramLong)
+  public final void dF(long paramLong)
   {
-    c.b(jTv).jdMethod_do(paramLong);
+    c.b(ksP).dF(paramLong);
   }
   
-  public final void dp(long paramLong)
+  public final void dG(long paramLong)
   {
-    c.b(jTv).dp(paramLong);
+    c.b(ksP).dG(paramLong);
   }
 }
 

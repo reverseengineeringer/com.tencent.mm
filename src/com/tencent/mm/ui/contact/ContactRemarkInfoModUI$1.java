@@ -2,7 +2,7 @@ package com.tencent.mm.ui.contact;
 
 import com.tencent.mm.sdk.h.j;
 import com.tencent.mm.sdk.h.j.b;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class ContactRemarkInfoModUI$1
   implements j.b
@@ -11,8 +11,8 @@ final class ContactRemarkInfoModUI$1
   
   public final void a(int paramInt, j paramj, Object paramObject)
   {
-    u.d("!44@9DU/RFsdGl+78IVsLr7e0lB3zxHTejPIMP7oYqhJXgY=", "cpan onNotifyChange");
-    ContactRemarkInfoModUI.d(ljV);
+    v.d("MiroMsg.ContactRemarkInfoModUI", "cpan onNotifyChange");
+    ContactRemarkInfoModUI.d(lKg);
   }
 }
 

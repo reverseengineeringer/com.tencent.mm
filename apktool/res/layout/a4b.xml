@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="@dimen/j7" android:minHeight="@dimen/j7" style="@style/MMFullLineItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="@dimen/j7" android:layout_weight="1.0" style="@style/MMListItem">
+        <TextView android:textSize="@dimen/i8" android:textColor="@color/j_" android:id="@id/btk" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@id/btl" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/MMFontPreferenceSmall" />
+    </LinearLayout>
+</LinearLayout>

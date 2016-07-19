@@ -1,12 +1,13 @@
 package com.tencent.mm.plugin.sns.ui;
 
+import com.tencent.mm.compatible.util.Exif.a;
 import java.util.ArrayList;
 
 public abstract interface LocationWidget$a
 {
-  public abstract ArrayList aBe();
+  public abstract ArrayList<Exif.a> aEf();
   
-  public abstract boolean aBf();
+  public abstract boolean aEg();
 }
 
 /* Location:

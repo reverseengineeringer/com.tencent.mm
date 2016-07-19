@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hfA:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
+.field final synthetic hur:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 292
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$6;->hfA:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$6;->hur:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,31 +41,31 @@
 
     .prologue
     .line 296
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$6;->hfA:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$6;->hur:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->j(Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;)Z
 
     .line 297
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aOW()Lcom/tencent/mm/pluginsdk/i$e;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aTy()Lcom/tencent/mm/pluginsdk/i$e;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$6;->hfA:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$6;->hur:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->b(Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;)Ljava/util/ArrayList;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/i$e;->ah(Ljava/util/List;)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/i$e;->ap(Ljava/util/List;)V
 
     .line 298
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$6;->hfA:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$6;->hur:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$6;->hfA:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$6;->hur:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$6;->hfA:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI$6;->hur:Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;
 
-    const v3, 0x7f0b16da
+    const v3, 0x7f081288
 
     invoke-virtual {v2, v3}, Lcom/tencent/mm/plugin/sns/ui/SnsLabelUI;->getString(I)Ljava/lang/String;
 

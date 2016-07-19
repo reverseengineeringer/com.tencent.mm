@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/tencent/smtt/sdk/DownloadListener;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # virtual methods

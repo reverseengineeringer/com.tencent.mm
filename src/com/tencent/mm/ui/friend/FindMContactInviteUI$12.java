@@ -7,8 +7,8 @@ import android.content.DialogInterface.OnClickListener;
 import android.support.v7.app.ActionBarActivity;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.plugin.a.b;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.g;
 
@@ -19,38 +19,38 @@ final class FindMContactInviteUI$12
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (FindMContactInviteUI.j(lrv) == 1) {
-      b.kD(ah.tx() + "," + getClass().getName() + ",R300_500_QQ," + ah.fd("R300_500_QQ") + ",3");
+    if (FindMContactInviteUI.j(lRZ) == 1) {
+      b.lm(ah.ty() + "," + getClass().getName() + ",R300_500_QQ," + ah.fq("R300_500_QQ") + ",3");
     }
     for (;;)
     {
-      ah.tE().a(432, FindMContactInviteUI.a(lrv, new d()
+      ah.tF().a(432, FindMContactInviteUI.a(lRZ, new d()
       {
-        public final void a(int paramAnonymousInt1, int paramAnonymousInt2, String paramAnonymousString, com.tencent.mm.r.j paramAnonymousj)
+        public final void onSceneEnd(int paramAnonymousInt1, int paramAnonymousInt2, String paramAnonymousString, com.tencent.mm.t.j paramAnonymousj)
         {
-          if (FindMContactInviteUI.a(lrv) != null)
+          if (FindMContactInviteUI.a(lRZ) != null)
           {
-            FindMContactInviteUI.a(lrv).dismiss();
-            FindMContactInviteUI.a(lrv, null);
+            FindMContactInviteUI.a(lRZ).dismiss();
+            FindMContactInviteUI.a(lRZ, null);
           }
-          if (FindMContactInviteUI.k(lrv) != null)
+          if (FindMContactInviteUI.k(lRZ) != null)
           {
-            ah.tE().b(432, FindMContactInviteUI.k(lrv));
-            FindMContactInviteUI.a(lrv, null);
+            ah.tF().b(432, FindMContactInviteUI.k(lRZ));
+            FindMContactInviteUI.a(lRZ, null);
           }
-          FindMContactInviteUI.l(lrv);
+          FindMContactInviteUI.l(lRZ);
         }
       }));
-      paramDialogInterface = lrv;
-      ActionBarActivity localActionBarActivity = lrv.koJ.kpc;
-      lrv.getString(2131430877);
-      FindMContactInviteUI.a(paramDialogInterface, g.a(localActionBarActivity, lrv.getString(2131428729), true, new DialogInterface.OnCancelListener()
+      paramDialogInterface = lRZ;
+      ActionBarActivity localActionBarActivity = lRZ.kNN.kOg;
+      lRZ.getString(2131231028);
+      FindMContactInviteUI.a(paramDialogInterface, g.a(localActionBarActivity, lRZ.getString(2131232768), true, new DialogInterface.OnCancelListener()
       {
         public final void onCancel(DialogInterface paramAnonymousDialogInterface) {}
       }));
-      FindMContactInviteUI.b(lrv).hv(FindMContactInviteUI.m(lrv));
+      FindMContactInviteUI.b(lRZ).hN(FindMContactInviteUI.m(lRZ));
       return;
-      b.kD(ah.tx() + "," + getClass().getName() + ",R300_500_phone," + ah.fd("R300_500_phone") + ",3");
+      b.lm(ah.ty() + "," + getClass().getName() + ",R300_500_phone," + ah.fq("R300_500_phone") + ",3");
     }
   }
 }

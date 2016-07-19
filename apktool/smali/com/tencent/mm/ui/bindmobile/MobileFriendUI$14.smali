@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;->Gb()V
+    value = Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+.field final synthetic loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 306
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$14;->kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$14;->loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,12 +38,21 @@
 # virtual methods
 .method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
     const/4 v4, 0x1
 
     .line 310
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$14;->kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$14;->loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;->f(Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;)Landroid/widget/ListView;
 
@@ -62,7 +71,7 @@
 
     .line 313
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$14;->kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$14;->loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;->f(Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;)Landroid/widget/ListView;
 
@@ -75,7 +84,7 @@
     sub-int v0, p3, v0
 
     .line 315
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$14;->kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$14;->loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;->d(Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;)Lcom/tencent/mm/ui/bindmobile/a;
 
@@ -100,7 +109,7 @@
 
     .line 317
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$14;->kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$14;->loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
     invoke-static {v1, v0}, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;->a(Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;Lcom/tencent/mm/modelfriend/b;)V
 
@@ -113,7 +122,7 @@
     .line 321
     new-instance v1, Landroid/content/Intent;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$14;->kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$14;->loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
     const-class v3, Lcom/tencent/mm/ui/friend/InviteFriendUI;
 
@@ -140,7 +149,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/b;->yp()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/b;->yB()Ljava/lang/String;
 
     move-result-object v4
 
@@ -157,7 +166,7 @@
     .line 325
     const-string/jumbo v2, "friend_nick"
 
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/b;->yj()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/b;->yv()Ljava/lang/String;
 
     move-result-object v3
 
@@ -166,7 +175,7 @@
     .line 326
     const-string/jumbo v2, "friend_weixin_nick"
 
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/b;->ym()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/b;->yy()Ljava/lang/String;
 
     move-result-object v0
 
@@ -180,7 +189,7 @@
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 328
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$14;->kPt:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI$14;->loJ:Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/bindmobile/MobileFriendUI;->startActivity(Landroid/content/Intent;)V
 

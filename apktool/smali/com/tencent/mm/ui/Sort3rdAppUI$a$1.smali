@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic krp:Lcom/tencent/mm/pluginsdk/model/app/f;
+.field final synthetic kQw:Lcom/tencent/mm/pluginsdk/model/app/f;
 
-.field final synthetic krq:Lcom/tencent/mm/ui/Sort3rdAppUI$a;
+.field final synthetic kQx:Lcom/tencent/mm/ui/Sort3rdAppUI$a;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 172
-    iput-object p1, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a$1;->krq:Lcom/tencent/mm/ui/Sort3rdAppUI$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a$1;->kQx:Lcom/tencent/mm/ui/Sort3rdAppUI$a;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a$1;->krp:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iput-object p2, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a$1;->kQw:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public final fg(Z)V
+.method public final ft(Z)V
     .locals 3
 
     .prologue
@@ -48,7 +48,7 @@
     if-eqz p1, :cond_0
 
     .line 176
-    iget-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a$1;->krp:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a$1;->kQw:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     iget v1, v0, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appInfoFlag:I
 
@@ -58,11 +58,11 @@
 
     .line 180
     :goto_0
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/aj;->aPR()Lcom/tencent/mm/pluginsdk/model/app/i;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/al;->aUA()Lcom/tencent/mm/pluginsdk/model/app/i;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a$1;->krp:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v1, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a$1;->kQw:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     const/4 v2, 0x0
 
@@ -75,7 +75,7 @@
 
     .line 178
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a$1;->krp:Lcom/tencent/mm/pluginsdk/model/app/f;
+    iget-object v0, p0, Lcom/tencent/mm/ui/Sort3rdAppUI$a$1;->kQw:Lcom/tencent/mm/pluginsdk/model/app/f;
 
     iget v1, v0, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appInfoFlag:I
 

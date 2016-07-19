@@ -10,12 +10,12 @@ final class ChattingAnimFrame$a$1
   
   public final void run()
   {
-    if (kSd.targetView != null)
+    if (lsf.targetView != null)
     {
-      kSd.targetView.clearAnimation();
-      ChattingAnimFrame localChattingAnimFrame = kSd.kSc;
-      View localView = kSd.targetView;
-      gqm.remove(localView);
+      lsf.targetView.clearAnimation();
+      ChattingAnimFrame localChattingAnimFrame = lsf.lse;
+      View localView = lsf.targetView;
+      gAE.remove(localView);
       localChattingAnimFrame.removeView(localView);
     }
   }

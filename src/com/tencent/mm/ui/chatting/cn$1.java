@@ -1,26 +1,13 @@
 package com.tencent.mm.ui.chatting;
 
-import android.os.Message;
-import android.view.View;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.model.z.c.a;
 
 final class cn$1
-  extends aa
+  implements z.c.a
 {
   cn$1(cn paramcn) {}
   
-  public final void handleMessage(Message paramMessage)
-  {
-    paramMessage = (View)obj;
-    if (kWm.imc != paramMessage.getScrollY())
-    {
-      kWm.hup = true;
-      kWm.handler.sendMessageDelayed(kWm.handler.obtainMessage(0, paramMessage), 5L);
-      kWm.imc = paramMessage.getScrollY();
-      return;
-    }
-    kWm.hup = false;
-  }
+  public final void i(String paramString, boolean paramBoolean) {}
 }
 
 /* Location:

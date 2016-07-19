@@ -13,33 +13,61 @@
     name = "b"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<K:",
+        "Ljava/lang/Object;",
+        "T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
 
 # instance fields
-.field public gB:Ljava/lang/Object;
+.field public gW:Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "TK;"
+        }
+    .end annotation
+.end field
 
-.field public kkb:I
+.field public kKj:I
 
-.field public kkc:Ljava/lang/Object;
+.field public kKk:Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "TT;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;ITT;)V"
+        }
+    .end annotation
 
     .prologue
     .line 603
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 604
-    iput-object p1, p0, Lcom/tencent/mm/ui/e$b;->gB:Ljava/lang/Object;
+    iput-object p1, p0, Lcom/tencent/mm/ui/e$b;->gW:Ljava/lang/Object;
 
     .line 605
-    iput p2, p0, Lcom/tencent/mm/ui/e$b;->kkb:I
+    iput p2, p0, Lcom/tencent/mm/ui/e$b;->kKj:I
 
     .line 606
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/e$b;->kkc:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/tencent/mm/ui/e$b;->kKk:Ljava/lang/Object;
 
     .line 607
     return-void
@@ -94,9 +122,9 @@
     check-cast p1, Lcom/tencent/mm/ui/e$b;
 
     .line 628
-    iget v2, p0, Lcom/tencent/mm/ui/e$b;->kkb:I
+    iget v2, p0, Lcom/tencent/mm/ui/e$b;->kKj:I
 
-    iget v3, p1, Lcom/tencent/mm/ui/e$b;->kkb:I
+    iget v3, p1, Lcom/tencent/mm/ui/e$b;->kKj:I
 
     if-eq v2, v3, :cond_4
 
@@ -107,12 +135,12 @@
 
     .line 630
     :cond_4
-    iget-object v2, p0, Lcom/tencent/mm/ui/e$b;->gB:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/tencent/mm/ui/e$b;->gW:Ljava/lang/Object;
 
     if-nez v2, :cond_5
 
     .line 631
-    iget-object v2, p1, Lcom/tencent/mm/ui/e$b;->gB:Ljava/lang/Object;
+    iget-object v2, p1, Lcom/tencent/mm/ui/e$b;->gW:Ljava/lang/Object;
 
     if-eqz v2, :cond_0
 
@@ -123,9 +151,9 @@
 
     .line 633
     :cond_5
-    iget-object v2, p0, Lcom/tencent/mm/ui/e$b;->gB:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/tencent/mm/ui/e$b;->gW:Ljava/lang/Object;
 
-    iget-object v3, p1, Lcom/tencent/mm/ui/e$b;->gB:Ljava/lang/Object;
+    iget-object v3, p1, Lcom/tencent/mm/ui/e$b;->gW:Ljava/lang/Object;
 
     invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -143,15 +171,15 @@
     .locals 2
 
     .prologue
-    .line 612
-    iget v0, p0, Lcom/tencent/mm/ui/e$b;->kkb:I
+    .line 611
+    iget v0, p0, Lcom/tencent/mm/ui/e$b;->kKj:I
 
     add-int/lit8 v0, v0, 0x1f
 
     .line 614
     mul-int/lit8 v1, v0, 0x1f
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/e$b;->gB:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e$b;->gW:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
@@ -165,7 +193,7 @@
 
     .line 614
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/e$b;->gB:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e$b;->gW:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 

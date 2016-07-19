@@ -3,27 +3,36 @@ package com.tencent.mm.plugin.sight.encode.a;
 import android.hardware.Camera;
 import android.hardware.Camera.CameraInfo;
 import android.hardware.Camera.PreviewCallback;
-import com.tencent.mm.an.j;
-import com.tencent.mm.an.n;
+import com.tencent.mm.aq.n;
+import com.tencent.mm.aq.r;
 import com.tencent.mm.plugin.sight.base.SightVideoJNI;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class e
   implements b
 {
-  int gAA = 400000;
-  int gAB = 0;
-  private Camera.PreviewCallback gAC = new Camera.PreviewCallback()
+  a gGT;
+  i gGU = new i();
+  f gGV = new f();
+  a gGW;
+  String gGX = "";
+  private int gGY = 0;
+  private float gGZ = 0.0F;
+  private int gHa = 320;
+  private int gHb = 240;
+  int gHc = 400000;
+  int gHd = 0;
+  private Camera.PreviewCallback gHe = new Camera.PreviewCallback()
   {
     public final void onPreviewFrame(byte[] paramAnonymousArrayOfByte, Camera paramAnonymousCamera)
     {
       boolean bool;
-      if (gAB % 20 == 0)
+      if (gHd % 20 == 0)
       {
-        paramAnonymousCamera = gAt.gAN;
+        paramAnonymousCamera = gGV.gHp;
         if (paramAnonymousArrayOfByte == null)
         {
           bool = true;
@@ -32,20 +41,20 @@ public final class e
           }
           i = -1;
           label37:
-          u.i("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "got 20 frame! mediaStatus %s, data NULL ? %B, dataLength %d", new Object[] { paramAnonymousCamera, Boolean.valueOf(bool), Integer.valueOf(i) });
+          v.i("MicroMsg.SightCustomAsyncMediaRecorder", "got 20 frame! mediaStatus %s, data NULL ? %B, dataLength %d", new Object[] { paramAnonymousCamera, Boolean.valueOf(bool), Integer.valueOf(i) });
         }
       }
       else
       {
         paramAnonymousCamera = e.this;
-        gAB += 1;
+        gHd += 1;
         if ((paramAnonymousArrayOfByte != null) && (paramAnonymousArrayOfByte.length > 0)) {
           break label104;
         }
       }
       label98:
       label104:
-      while (gAt.gAN != b.b.gzM)
+      while (gGV.gHp != b.b.gGo)
       {
         return;
         bool = false;
@@ -53,66 +62,57 @@ public final class e
         i = paramAnonymousArrayOfByte.length;
         break label37;
       }
-      gAr.awl();
-      paramAnonymousCamera = gAs;
+      gGT.ayJ();
+      paramAnonymousCamera = gGU;
       int i = paramAnonymousArrayOfByte.length;
-      int j = com.tencent.mm.pluginsdk.l.a.iFl;
-      int k = com.tencent.mm.pluginsdk.l.a.iFk;
-      gBd = ay.FT();
-      if (gBb < 0)
+      int j = com.tencent.mm.pluginsdk.m.a.jcg;
+      int k = com.tencent.mm.pluginsdk.m.a.jcf;
+      gHF = be.Gq();
+      if (gHD < 0)
       {
-        u.e("!44@/B4Tb64lLpJYfkm+3BfBr630hXwybmHsot/c0pFER9s=", "write data error, yuv buffer id error");
+        v.e("MicroMsg.SightYUVRecorder", "write data error, yuv buffer id error");
         return;
       }
-      if (0L == cJQ) {
-        cJQ = ay.FT();
+      if (0L == cGU) {
+        cGU = be.Gq();
       }
-      gBc += 1;
-      SightVideoJNI.writeYuvData(gBb, paramAnonymousArrayOfByte, i, j, k);
-      u.d("!44@/B4Tb64lLpJYfkm+3BfBr630hXwybmHsot/c0pFER9s=", "write data use %dms", new Object[] { Long.valueOf(ay.ao(gBd)) });
+      gHE += 1;
+      SightVideoJNI.writeYuvData(gHD, paramAnonymousArrayOfByte, i, j, k);
+      v.d("MicroMsg.SightYUVRecorder", "write data use %dms", new Object[] { Long.valueOf(be.av(gHF)) });
     }
   };
-  a gAr;
-  i gAs = new i();
-  f gAt = new f();
-  a gAu;
-  String gAv = "";
-  private int gAw = 0;
-  private float gAx = 0.0F;
-  private int gAy = 320;
-  private int gAz = 240;
-  String gfD;
+  String gpN;
   String mFileName;
   
   public e()
   {
-    if (com.tencent.mm.plugin.sight.base.c.avC())
+    if (com.tencent.mm.plugin.sight.base.c.axT())
     {
-      gAr = new d();
+      gGT = new d();
       return;
     }
-    gAr = new c();
+    gGT = new c();
   }
   
   private void clear()
   {
     boolean bool2 = false;
-    int i = gAs.gBb;
+    int i = gGU.gHD;
     if (i < 0)
     {
-      u.v("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "call clear, but bufID error");
+      v.v("MicroMsg.SightCustomAsyncMediaRecorder", "call clear, but bufID error");
       return;
     }
-    gAs.stop();
-    gAr.a(null);
-    if (gAu == null) {}
+    gGU.stop();
+    gGT.a(null);
+    if (gGW == null) {}
     for (boolean bool1 = true;; bool1 = false)
     {
-      if (gAu != null) {
-        bool2 = gAu.gAK;
+      if (gGW != null) {
+        bool2 = gGW.gHm;
       }
-      u.v("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "ashutest::clear bufID %d, encodeRunnable null ? %B, markCancel %B", new Object[] { Integer.valueOf(i), Boolean.valueOf(bool1), Boolean.valueOf(bool2) });
-      if (kZ(i)) {
+      v.v("MicroMsg.SightCustomAsyncMediaRecorder", "ashutest::clear bufID %d, encodeRunnable null ? %B, markCancel %B", new Object[] { Integer.valueOf(i), Boolean.valueOf(bool1), Boolean.valueOf(bool2) });
+      if (mg(i)) {
         break;
       }
       SightVideoJNI.releaseRecorderBufferRef("clear");
@@ -123,123 +123,123 @@ public final class e
   
   public final void a(b.a parama)
   {
-    f localf = gAt;
+    f localf = gGV;
     if (parama == null) {}
     for (int i = 0;; i = parama.hashCode())
     {
-      u.i("!56@/B4Tb64lLpKqlKwF1ffTCwg004KTnhCXKcRjvlWyYsav9U7R7fFEGA==", "add media status callback, hashcode %d", new Object[] { Integer.valueOf(i) });
-      gAP.sendMessage(gAP.obtainMessage(258, parama));
+      v.i("MicroMsg.SightMediaStatusHandler", "add media status callback, hashcode %d", new Object[] { Integer.valueOf(i) });
+      gHr.sendMessage(gHr.obtainMessage(258, parama));
       return;
     }
   }
   
   public final void a(b.b paramb)
   {
-    gAt.b(paramb);
+    gGV.b(paramb);
   }
   
-  public final boolean awo()
+  public final boolean ayM()
   {
-    gAt.b(b.b.gzO);
+    gGV.b(b.b.gGq);
     return false;
   }
   
-  public final long awp()
+  public final long ayN()
   {
-    return gAs.awy();
+    return gGU.ayX();
   }
   
-  public final b.b awq()
+  public final b.b ayO()
   {
-    return gAt.gAN;
+    return gGV.gHp;
   }
   
-  public final void awr()
+  public final void ayP()
   {
-    u.i("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "request start, last status %s", new Object[] { gAt.gAN });
-    gAw = 0;
-    gAt.b(b.b.gzL);
+    v.i("MicroMsg.SightCustomAsyncMediaRecorder", "request start, last status %s", new Object[] { gGV.gHp });
+    gGY = 0;
+    gGV.b(b.b.gGn);
   }
   
-  public final float aws()
+  public final String ayQ()
   {
-    return gAx;
+    return gGX;
   }
   
-  public final Camera.PreviewCallback awt()
+  public final float ayR()
   {
-    return gAC;
+    return gGZ;
+  }
+  
+  public final Camera.PreviewCallback ayS()
+  {
+    return gHe;
   }
   
   public final void b(b.a parama)
   {
-    f localf = gAt;
+    f localf = gGV;
     if (parama == null) {}
     for (int i = 0;; i = parama.hashCode())
     {
-      u.i("!56@/B4Tb64lLpKqlKwF1ffTCwg004KTnhCXKcRjvlWyYsav9U7R7fFEGA==", "remove media status callback, hashcode %d", new Object[] { Integer.valueOf(i) });
-      gAP.sendMessage(gAP.obtainMessage(259, parama));
+      v.i("MicroMsg.SightMediaStatusHandler", "remove media status callback, hashcode %d", new Object[] { Integer.valueOf(i) });
+      gHr.sendMessage(gHr.obtainMessage(259, parama));
       return;
     }
   }
   
-  public final void bk(String paramString1, String paramString2)
+  public final void br(String paramString1, String paramString2)
   {
-    gfD = paramString1;
+    gpN = paramString1;
     mFileName = paramString2;
   }
   
   public final void cancel()
   {
-    u.i("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "ashutest::cancel");
+    v.i("MicroMsg.SightCustomAsyncMediaRecorder", "ashutest::cancel");
     clear();
-    gAt.b(b.b.gzN);
+    gGV.b(b.b.gGp);
   }
   
   public final int getDuration()
   {
-    return gAw / 1000;
+    return gGY / 1000;
   }
   
   public final int getFrameCount()
   {
-    if (gAs != null) {
-      return gAs.gBc;
+    if (gGU != null) {
+      return gGU.gHE;
     }
     return 0;
   }
   
-  public final String getRecordPath()
-  {
-    return gAv;
-  }
-  
   public final void initialize(final int paramInt)
   {
-    Object localObject = gfD;
+    Object localObject = gpN;
     boolean bool1;
-    if (gAu == null)
+    if (gGW == null)
     {
       bool1 = true;
-      if (gAu != null) {
+      if (gGW != null) {
         break label89;
       }
     }
     label89:
-    for (boolean bool2 = true;; bool2 = gAu.gAL)
+    for (boolean bool2 = true;; bool2 = gGW.gHn)
     {
-      u.i("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "initialize: talker[%s], encodeThread null[%B], encodeThreadFinish[%B]", new Object[] { localObject, Boolean.valueOf(bool1), Boolean.valueOf(bool2) });
-      if ((gAu == null) || (gAu.gAL)) {
+      v.i("MicroMsg.SightCustomAsyncMediaRecorder", "initialize: talker[%s], encodeThread null[%B], encodeThreadFinish[%B]", new Object[] { localObject, Boolean.valueOf(bool1), Boolean.valueOf(bool2) });
+      if ((gGW == null) || (gGW.gHn)) {
         break label101;
       }
-      u.w("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "ERROR, status, wait last encode thread finish!!! MUST NOT BE HERE");
+      v.w("MicroMsg.SightCustomAsyncMediaRecorder", "ERROR, status, wait last encode thread finish!!! MUST NOT BE HERE");
       return;
       bool1 = false;
       break;
     }
     label101:
-    if (ay.kz(gfD)) {}
-    for (gAv = com.tencent.mm.plugin.sight.base.c.avA();; gAv = n.jL(mFileName))
+    if (be.kf(gpN)) {}
+    for (gGX = com.tencent.mm.plugin.sight.base.c.axR();; gGX = r.kp(mFileName))
     {
       localObject = new Camera.CameraInfo();
       int i = 0;
@@ -253,14 +253,14 @@ public final class e
         for (;;)
         {
           int j;
-          u.printErrStackTrace("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", localThrowable, "getCameraInfo failed.", new Object[0]);
+          v.printErrStackTrace("MicroMsg.SightCustomAsyncMediaRecorder", localThrowable, "getCameraInfo failed.", new Object[0]);
           paramInt = 1;
           continue;
-          gBb = paramInt;
-          gBc = 0;
-          cJQ = 0L;
+          gHD = paramInt;
+          gHE = 0;
+          cGU = 0L;
         }
-        gAt.b(b.b.gzR);
+        gGV.b(b.b.gGt);
       }
       j = 90;
       i = j;
@@ -271,79 +271,55 @@ public final class e
           i = 270;
         }
       }
-      paramInt = SightVideoJNI.initDataBufferRef(com.tencent.mm.pluginsdk.l.a.iFl, com.tencent.mm.pluginsdk.l.a.iFk, i, com.tencent.mm.pluginsdk.l.a.iFk, com.tencent.mm.pluginsdk.l.a.iFk * gAz / gAy, gAy, gAz, 24.0F, gAA, com.tencent.mm.plugin.sight.base.a.gwQ, 8, 2, 23.0F, 1);
-      localObject = gAs;
+      paramInt = SightVideoJNI.initDataBufferRef(com.tencent.mm.pluginsdk.m.a.jcg, com.tencent.mm.pluginsdk.m.a.jcf, i, com.tencent.mm.pluginsdk.m.a.jcf, com.tencent.mm.pluginsdk.m.a.jcf * gHb / gHa, gHa, gHb, 24.0F, gHc, com.tencent.mm.plugin.sight.base.a.gDi, 8, 2, 23.0F, 1);
+      localObject = gGU;
       if (paramInt >= 0) {
         break;
       }
-      u.e("!44@/B4Tb64lLpJYfkm+3BfBr630hXwybmHsot/c0pFER9s=", "init error, yuv buffer id error");
-      if (gAr.R(paramInt, com.tencent.mm.plugin.sight.base.c.tT(gAv)) < 0)
+      v.e("MicroMsg.SightYUVRecorder", "init error, yuv buffer id error");
+      if (gGT.Z(paramInt, com.tencent.mm.plugin.sight.base.c.uZ(gGX)) < 0)
       {
-        bool1 = gAr instanceof d;
-        u.e("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "init aac encoder error, is MediaCodec Type ? %B", new Object[] { Boolean.valueOf(bool1) });
+        bool1 = gGT instanceof d;
+        v.e("MicroMsg.SightCustomAsyncMediaRecorder", "init aac encoder error, is MediaCodec Type ? %B", new Object[] { Boolean.valueOf(bool1) });
         if (bool1)
         {
-          gAr = new c();
-          gAr.R(paramInt, com.tencent.mm.plugin.sight.base.c.tT(gAv));
+          gGT = new c();
+          gGT.Z(paramInt, com.tencent.mm.plugin.sight.base.c.uZ(gGX));
         }
       }
-      if (gAr.a(new a.a()
+      if (gGT.a(new a.a()
       {
-        public final void awm()
+        public final void ayK()
         {
-          u.i("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "ashutest::pcm ready");
-          if ((gAu != null) && (!gAu.gAL))
+          v.i("MicroMsg.SightCustomAsyncMediaRecorder", "ashutest::pcm ready");
+          if ((gGW != null) && (!gGW.gHn))
           {
-            u.e("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "ashutest::OnPcmReady, last encode thread[%s] status error!!! MUST NOT BE HERE", new Object[] { gAu });
-            kZ(gAu.gAF);
+            v.e("MicroMsg.SightCustomAsyncMediaRecorder", "ashutest::OnPcmReady, last encode thread[%s] status error!!! MUST NOT BE HERE", new Object[] { gGW });
+            mg(gGW.gHh);
           }
-          if (gAt.gAN != b.b.gzR)
+          if (gGV.gHp != b.b.gGt)
           {
-            u.w("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "ashutest::not MediaStatus.Initialized, maybe canceled by user");
+            v.w("MicroMsg.SightCustomAsyncMediaRecorder", "ashutest::not MediaStatus.Initialized, maybe canceled by user");
             return;
           }
-          if (gAr.awk() != paramInt)
+          if (gGT.ayI() != paramInt)
           {
-            u.w("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "ashutest::error bufferID, return!!!! %d vs %s", new Object[] { Integer.valueOf(gAr.awk()), Integer.valueOf(paramInt) });
+            v.w("MicroMsg.SightCustomAsyncMediaRecorder", "ashutest::error bufferID, return!!!! %d vs %s", new Object[] { Integer.valueOf(gGT.ayI()), Integer.valueOf(paramInt) });
             return;
           }
-          gAt.b(b.b.gzM);
-          gAu = new e.a(e.this, (byte)0);
-          gAu.gAF = paramInt;
-          com.tencent.mm.sdk.i.e.a(gAu, "SightCustomAsyncMediaRecorder_encode_" + ay.FT());
+          gGV.b(b.b.gGo);
+          gGW = new e.a(e.this, (byte)0);
+          gGW.gHh = paramInt;
+          com.tencent.mm.sdk.i.e.a(gGW, "SightCustomAsyncMediaRecorder_encode_" + be.Gq());
         }
       }) == 0) {
         break label409;
       }
-      gAt.b(b.b.gzQ);
+      gGV.b(b.b.gGs);
       return;
-      j.Ea();
+      n.Es();
     }
     label409:
-  }
-  
-  final boolean kZ(int paramInt)
-  {
-    if ((gAu != null) && (!gAu.gAL))
-    {
-      if (!gAu.gAI)
-      {
-        gAu.aID = null;
-        gAu.gAK = true;
-        gAu.gAJ = true;
-        com.tencent.mm.sdk.i.e.remove(gAu);
-      }
-      synchronized (gAu.gAM)
-      {
-        SightVideoJNI.releaseRecorderBufferRef("clear");
-        SightVideoJNI.releaseDataBufferRef(paramInt);
-        if (gAu.gAF != paramInt) {
-          SightVideoJNI.releaseDataBufferRef(gAu.gAF);
-        }
-        return true;
-      }
-    }
-    return false;
   }
   
   public final void m(Runnable paramRunnable)
@@ -352,19 +328,19 @@ public final class e
     boolean bool2;
     label20:
     boolean bool3;
-    if (gAu == null)
+    if (gGW == null)
     {
       bool1 = true;
-      if (gAu != null) {
+      if (gGW != null) {
         break label109;
       }
       bool2 = false;
-      if (gAu != null) {
+      if (gGW != null) {
         break label121;
       }
       bool3 = false;
-      u.i("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "ashutest::stop, encodeThread null ? %B, has trigger finish ? %B, has finish callback ? %B", new Object[] { Boolean.valueOf(bool1), Boolean.valueOf(bool2), Boolean.valueOf(bool3) });
-      if ((gAu == null) || (!gAu.gAI)) {
+      v.i("MicroMsg.SightCustomAsyncMediaRecorder", "ashutest::stop, encodeThread null ? %B, has trigger finish ? %B, has finish callback ? %B", new Object[] { Boolean.valueOf(bool1), Boolean.valueOf(bool2), Boolean.valueOf(bool3) });
+      if ((gGW == null) || (!gGW.gHk)) {
         break label139;
       }
     }
@@ -373,63 +349,87 @@ public final class e
     label139:
     do
     {
-      synchronized (gAu.gAM)
+      synchronized (gGW.gHo)
       {
-        ab.j(paramRunnable);
+        ad.k(paramRunnable);
         return;
         bool1 = false;
         break;
-        bool2 = gAu.gAI;
+        bool2 = gGW.gHk;
         break label20;
-        bool3 = gAu.gAJ;
+        bool3 = gGW.gHl;
       }
-      int i = gAs.gBb;
-      float f = gAs.gBc * 1000.0F / (float)gAs.awy();
-      u.i("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "on mux main sight stop, bufID %d, frameCount %d, duration %dms, %.6ffps", new Object[] { Integer.valueOf(i), Integer.valueOf(gAs.gBc), Long.valueOf(gAs.awy()), Float.valueOf(f) });
-      gAw = ((int)gAs.awy());
-      gAx = f;
-      gAs.stop();
-      gAr.a(new a.b()
+      int i = gGU.gHD;
+      float f = gGU.gHE * 1000.0F / (float)gGU.ayX();
+      v.i("MicroMsg.SightCustomAsyncMediaRecorder", "on mux main sight stop, bufID %d, frameCount %d, duration %dms, %.6ffps", new Object[] { Integer.valueOf(i), Integer.valueOf(gGU.gHE), Long.valueOf(gGU.ayX()), Float.valueOf(f) });
+      gGY = ((int)gGU.ayX());
+      gGZ = f;
+      gGU.stop();
+      gGT.a(new a.b()
       {
-        public final void awn()
+        public final void ayL()
         {
-          if (gAu != null) {
-            gAu.gAJ = true;
+          if (gGW != null) {
+            gGW.gHl = true;
           }
         }
       });
-      if (gAu != null)
+      if (gGW != null)
       {
-        gAu.gAH = f;
-        gAu.duration = gAw;
-        gAu.aID = paramRunnable;
-        gAu.gAI = true;
-        com.tencent.mm.sdk.i.e.remove(gAu);
+        gGW.gHj = f;
+        gGW.duration = gGY;
+        gGW.auX = paramRunnable;
+        gGW.gHk = true;
+        com.tencent.mm.sdk.i.e.remove(gGW);
       }
-    } while (b.b.gzO == gAt.gAN);
-    gAt.b(b.b.gzN);
+    } while (b.b.gGq == gGV.gHp);
+    gGV.b(b.b.gGp);
+  }
+  
+  final boolean mg(int paramInt)
+  {
+    if ((gGW != null) && (!gGW.gHn))
+    {
+      if (!gGW.gHk)
+      {
+        gGW.auX = null;
+        gGW.gHm = true;
+        gGW.gHl = true;
+        com.tencent.mm.sdk.i.e.remove(gGW);
+      }
+      synchronized (gGW.gHo)
+      {
+        SightVideoJNI.releaseRecorderBufferRef("clear");
+        SightVideoJNI.releaseDataBufferRef(paramInt);
+        if (gGW.gHh != paramInt) {
+          SightVideoJNI.releaseDataBufferRef(gGW.gHh);
+        }
+        return true;
+      }
+    }
+    return false;
   }
   
   public final void reset()
   {
-    u.i("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "reset");
-    gAt.gAN = b.b.gzN;
+    v.i("MicroMsg.SightCustomAsyncMediaRecorder", "reset");
+    gGV.gHp = b.b.gGp;
     clear();
   }
   
   private final class a
     implements Runnable
   {
-    Runnable aID = null;
+    Runnable auX = null;
     int duration;
-    int gAF;
-    int gAG = 0;
-    float gAH;
-    boolean gAI = false;
-    boolean gAJ = false;
-    boolean gAK = false;
-    boolean gAL = false;
-    Object gAM = new Object();
+    int gHh;
+    int gHi = 0;
+    float gHj;
+    boolean gHk = false;
+    boolean gHl = false;
+    boolean gHm = false;
+    boolean gHn = false;
+    Object gHo = new Object();
     
     private a() {}
     
@@ -438,73 +438,73 @@ public final class e
       int i;
       for (;;)
       {
-        synchronized (gAM)
+        synchronized (gHo)
         {
-          ay.FT();
-          l1 = ay.FT();
-          if (gAJ) {
+          be.Gq();
+          l1 = be.Gq();
+          if (gHl) {
             break label226;
           }
-          l2 = ay.FT();
-          i = SightVideoJNI.triggerEncode(gAF, Math.max(0, gAG), false);
-          u.i("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "ing: trgger encode use %dms, Encode index[%d, %d)", new Object[] { Long.valueOf(ay.ao(l2)), Integer.valueOf(gAG), Integer.valueOf(i) });
-          if ((gAG == 0) && (i > 0))
+          l2 = be.Gq();
+          i = SightVideoJNI.triggerEncode(gHh, Math.max(0, gHi), false);
+          v.i("MicroMsg.SightCustomAsyncMediaRecorder", "ing: trgger encode use %dms, Encode index[%d, %d)", new Object[] { Long.valueOf(be.av(l2)), Integer.valueOf(gHi), Integer.valueOf(i) });
+          if ((gHi == 0) && (i > 0))
           {
-            if (ay.kz(gfD))
+            if (be.kf(gpN))
             {
-              String str1 = com.tencent.mm.plugin.sight.base.c.tS(gAv);
-              g.a(SightVideoJNI.getThumbData(gAF), SightVideoJNI.getWidth(gAF), SightVideoJNI.getHeight(gAF), str1);
+              String str1 = com.tencent.mm.plugin.sight.base.c.uY(gGX);
+              g.a(SightVideoJNI.getThumbData(gHh), SightVideoJNI.getWidth(gHh), SightVideoJNI.getHeight(gHh), str1);
             }
           }
           else
           {
-            int j = gAG;
+            int j = gHi;
             if (i - j >= 5) {}
           }
         }
         try
         {
           Thread.sleep(200L);
-          gAG = i;
+          gHi = i;
           continue;
           localObject1 = finally;
           throw ((Throwable)localObject1);
-          j.Ea();
-          String str2 = n.jM(mFileName);
+          n.Es();
+          String str2 = r.kq(mFileName);
         }
         catch (InterruptedException localInterruptedException)
         {
           for (;;)
           {
-            u.e("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "sleep error %s", new Object[] { localInterruptedException.getMessage() });
+            v.e("MicroMsg.SightCustomAsyncMediaRecorder", "sleep error %s", new Object[] { localInterruptedException.getMessage() });
           }
         }
       }
       label226:
-      long l2 = ay.FT();
-      if (!gAK) {
-        gAG = SightVideoJNI.triggerEncode(gAF, gAG, true);
+      long l2 = be.Gq();
+      if (!gHm) {
+        gHi = SightVideoJNI.triggerEncode(gHh, gHi, true);
       }
-      u.i("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "end: trgger encode use %dms, curEncode index %d, markCancel %B", new Object[] { Long.valueOf(ay.ao(l2)), Integer.valueOf(gAG), Boolean.valueOf(gAK) });
-      l2 = ay.FT();
+      v.i("MicroMsg.SightCustomAsyncMediaRecorder", "end: trgger encode use %dms, curEncode index %d, markCancel %B", new Object[] { Long.valueOf(be.av(l2)), Integer.valueOf(gHi), Boolean.valueOf(gHm) });
+      l2 = be.Gq();
       SightVideoJNI.releaseRecorderBufferRef("cancel");
-      if (!gAK)
+      if (!gHm)
       {
-        i = SightVideoJNI.muxing(gAF, com.tencent.mm.plugin.sight.base.c.tT(gAv), com.tencent.mm.plugin.sight.base.a.gwR, 1024, 2, 1, 0L, gAv, gAH, Math.max(1000, duration), gAA, com.tencent.mm.plugin.sight.base.a.gwQ, 8, 2, 23.0F);
-        com.tencent.mm.loader.stub.b.deleteFile(com.tencent.mm.plugin.sight.base.c.tT(gAv));
-        float f = com.tencent.mm.a.e.aw(gAv) / 1024.0F;
-        String str3 = String.format("use %dms, sightFileSize %.2f KB", new Object[] { Long.valueOf(ay.ao(l1)), Float.valueOf(f) });
-        u.i("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "mux sight end, duration %ds, %s", new Object[] { Integer.valueOf(i), str3 });
-        com.tencent.mm.plugin.sight.base.c.tU(str3);
+        i = SightVideoJNI.muxing(gHh, com.tencent.mm.plugin.sight.base.c.uZ(gGX), com.tencent.mm.plugin.sight.base.a.axP(), 1024, 2, 1, 0L, gGX, gHj, Math.max(1000, duration), gHc, com.tencent.mm.plugin.sight.base.a.gDi, 8, 2, 23.0F);
+        com.tencent.mm.a.e.deleteFile(com.tencent.mm.plugin.sight.base.c.uZ(gGX));
+        float f = com.tencent.mm.a.e.aA(gGX) / 1024.0F;
+        String str3 = String.format("use %dms, sightFileSize %.2f KB", new Object[] { Long.valueOf(be.av(l1)), Float.valueOf(f) });
+        v.i("MicroMsg.SightCustomAsyncMediaRecorder", "mux sight end, duration %ds, %s", new Object[] { Integer.valueOf(i), str3 });
+        com.tencent.mm.plugin.sight.base.c.va(str3);
       }
-      SightVideoJNI.releaseDataBufferRef(gAF);
-      long l1 = ay.ao(l2);
-      if (aID == null) {}
+      SightVideoJNI.releaseDataBufferRef(gHh);
+      long l1 = be.av(l2);
+      if (auX == null) {}
       for (boolean bool = true;; bool = false)
       {
-        u.i("!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg==", "ashutest::mux main sigth end, use %dms, do callback null ? %B", new Object[] { Long.valueOf(l1), Boolean.valueOf(bool) });
-        ab.j(aID);
-        gAL = true;
+        v.i("MicroMsg.SightCustomAsyncMediaRecorder", "ashutest::mux main sigth end, use %dms, do callback null ? %B", new Object[] { Long.valueOf(l1), Boolean.valueOf(bool) });
+        ad.k(auX);
+        gHn = true;
         return;
       }
     }

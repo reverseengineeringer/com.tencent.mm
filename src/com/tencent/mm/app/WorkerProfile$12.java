@@ -1,7 +1,7 @@
 package com.tencent.mm.app;
 
 import android.os.HandlerThread;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class WorkerProfile$12
   implements Runnable
@@ -11,10 +11,10 @@ final class WorkerProfile$12
   public final void run()
   {
     long l = System.currentTimeMillis();
-    u.i("!32@/B4Tb64lLpKJUHFjVVLDtjoRkfkHVaSq", "start time check appOnCreate init through thread");
-    amC.ah(true);
-    boolean bool = amC.kS().amT.quit();
-    u.i("!32@/B4Tb64lLpKJUHFjVVLDtjoRkfkHVaSq", "start time check appOnCreate init through thread end, use time %d, result %b", new Object[] { Long.valueOf(System.currentTimeMillis() - l), Boolean.valueOf(bool) });
+    v.i("MicroMsg.WorkerProfile", "start time check appOnCreate init through thread");
+    Zr.M(true);
+    boolean bool = Zr.jt().ZI.quit();
+    v.i("MicroMsg.WorkerProfile", "start time check appOnCreate init through thread end, use time %d, result %b", new Object[] { Long.valueOf(System.currentTimeMillis() - l), Boolean.valueOf(bool) });
   }
 }
 

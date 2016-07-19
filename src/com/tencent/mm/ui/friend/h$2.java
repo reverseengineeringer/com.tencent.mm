@@ -2,9 +2,9 @@ package com.tencent.mm.ui.friend;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
-import com.tencent.mm.aa.b;
+import com.tencent.mm.ad.b;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 
 final class h$2
   implements DialogInterface.OnCancelListener
@@ -13,8 +13,8 @@ final class h$2
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    ah.tE().c(lsx);
-    lsw.lsv.ic(false);
+    ah.tF().c(lTb);
+    lTa.lSZ.iG(false);
   }
 }
 

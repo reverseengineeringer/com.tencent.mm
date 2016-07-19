@@ -8,15 +8,15 @@ import android.widget.AbsListView.OnScrollListener;
 final class SnsLuckyMoneyDetailUI$1
   implements AbsListView.OnScrollListener
 {
-  private boolean eVC = false;
-  private boolean eVD;
+  private boolean fdN = false;
+  private boolean fdO;
   
   SnsLuckyMoneyDetailUI$1(SnsLuckyMoneyDetailUI paramSnsLuckyMoneyDetailUI) {}
   
   public final void onScroll(AbsListView paramAbsListView, int paramInt1, int paramInt2, int paramInt3)
   {
     boolean bool = true;
-    if ((paramInt3 == 0) || (!eVC)) {
+    if ((paramInt3 == 0) || (!fdN)) {
       return;
     }
     if (paramInt1 > 0) {}
@@ -27,13 +27,13 @@ final class SnsLuckyMoneyDetailUI$1
     label102:
     for (;;)
     {
-      if (eVD != bool)
+      if (fdO != bool)
       {
         if (!bool) {
           break label89;
         }
-        SnsLuckyMoneyDetailUI.a(gJM, gJM.getResources().getDrawable(2131231008));
-        eVD = bool;
+        SnsLuckyMoneyDetailUI.a(gRm, gRm.getResources().getDrawable(2131689960));
+        fdO = bool;
         return;
         paramAbsListView = paramAbsListView.getChildAt(paramInt1);
         if (paramAbsListView == null) {
@@ -48,7 +48,7 @@ final class SnsLuckyMoneyDetailUI$1
         bool = false;
         break label20;
         break;
-        SnsLuckyMoneyDetailUI.a(gJM);
+        SnsLuckyMoneyDetailUI.a(gRm);
         break label53;
       }
     }
@@ -64,10 +64,10 @@ final class SnsLuckyMoneyDetailUI$1
     default: 
       return;
     case 0: 
-      eVC = false;
+      fdN = false;
       return;
     }
-    eVC = true;
+    fdN = true;
   }
 }
 

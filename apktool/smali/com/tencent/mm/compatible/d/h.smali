@@ -17,7 +17,7 @@
     return-void
 .end method
 
-.method public static bQ(I)Lcom/tencent/mm/compatible/d/c$a$a;
+.method public static ci(I)Lcom/tencent/mm/compatible/d/c$a$a;
     .locals 7
 
     .prologue
@@ -33,7 +33,7 @@
     invoke-direct {v1}, Lcom/tencent/mm/compatible/d/c$a$a;-><init>()V
 
     .line 406
-    iput-object v0, v1, Lcom/tencent/mm/compatible/d/c$a$a;->brz:Landroid/hardware/Camera;
+    iput-object v0, v1, Lcom/tencent/mm/compatible/d/c$a$a;->bfz:Landroid/hardware/Camera;
 
     .line 408
     :try_start_0
@@ -41,12 +41,12 @@
 
     move-result-object v2
 
-    iput-object v2, v1, Lcom/tencent/mm/compatible/d/c$a$a;->brz:Landroid/hardware/Camera;
+    iput-object v2, v1, Lcom/tencent/mm/compatible/d/c$a$a;->bfz:Landroid/hardware/Camera;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 413
-    iget-object v2, v1, Lcom/tencent/mm/compatible/d/c$a$a;->brz:Landroid/hardware/Camera;
+    iget-object v2, v1, Lcom/tencent/mm/compatible/d/c$a$a;->bfz:Landroid/hardware/Camera;
 
     if-nez v2, :cond_0
 
@@ -58,10 +58,10 @@
     :cond_0
     const/4 v0, 0x0
 
-    iput v0, v1, Lcom/tencent/mm/compatible/d/c$a$a;->brw:I
+    iput v0, v1, Lcom/tencent/mm/compatible/d/c$a$a;->bfw:I
 
     .line 418
-    const-string/jumbo v0, "!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan"
+    const-string/jumbo v0, "CameraUtilImplConfig"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -69,9 +69,9 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget-boolean v3, v3, Lcom/tencent/mm/compatible/d/b;->bra:Z
+    iget-boolean v3, v3, Lcom/tencent/mm/compatible/d/b;->bfa:Z
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -81,10 +81,10 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 419
-    const-string/jumbo v0, "!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan"
+    const-string/jumbo v0, "CameraUtilImplConfig"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -92,9 +92,9 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v3, v3, Lcom/tencent/mm/compatible/d/b;->brb:I
+    iget v3, v3, Lcom/tencent/mm/compatible/d/b;->bfb:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -104,10 +104,10 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 420
-    const-string/jumbo v0, "!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan"
+    const-string/jumbo v0, "CameraUtilImplConfig"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -115,9 +115,9 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v3, v3, Lcom/tencent/mm/compatible/d/b;->brc:I
+    iget v3, v3, Lcom/tencent/mm/compatible/d/b;->bfc:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -127,10 +127,10 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 421
-    const-string/jumbo v0, "!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan"
+    const-string/jumbo v0, "CameraUtilImplConfig"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -138,9 +138,9 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v3, v3, Lcom/tencent/mm/compatible/d/b;->brd:I
+    iget v3, v3, Lcom/tencent/mm/compatible/d/b;->bfd:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -150,10 +150,10 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 422
-    const-string/jumbo v0, "!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan"
+    const-string/jumbo v0, "CameraUtilImplConfig"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -161,9 +161,9 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v3, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v3, v3, Lcom/tencent/mm/compatible/d/b;->bre:I
+    iget v3, v3, Lcom/tencent/mm/compatible/d/b;->bfe:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -173,7 +173,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 424
     invoke-static {}, Lcom/tencent/mm/compatible/d/h;->getNumberOfCameras()I
@@ -192,7 +192,7 @@
     invoke-static {p0, v0}, Landroid/hardware/Camera;->getCameraInfo(ILandroid/hardware/Camera$CameraInfo;)V
 
     .line 428
-    const-string/jumbo v2, "!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan"
+    const-string/jumbo v2, "CameraUtilImplConfig"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -210,7 +210,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 429
     iget v0, v0, Landroid/hardware/Camera$CameraInfo;->facing:I
@@ -218,45 +218,45 @@
     if-ne v0, v6, :cond_3
 
     .line 430
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bra:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bfa:Z
 
     if-eqz v0, :cond_1
 
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->brb:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bfb:I
 
     if-eq v0, v5, :cond_1
 
     .line 431
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->brb:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bfb:I
 
-    iput v0, v1, Lcom/tencent/mm/compatible/d/c$a$a;->brw:I
+    iput v0, v1, Lcom/tencent/mm/compatible/d/c$a$a;->bfw:I
 
     .line 433
     :cond_1
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bra:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bfa:Z
 
     if-eqz v0, :cond_2
 
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->brc:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bfc:I
 
     if-eq v0, v5, :cond_2
 
     .line 434
-    iget-object v0, v1, Lcom/tencent/mm/compatible/d/c$a$a;->brz:Landroid/hardware/Camera;
+    iget-object v0, v1, Lcom/tencent/mm/compatible/d/c$a$a;->bfz:Landroid/hardware/Camera;
 
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->brc:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfc:I
 
     invoke-virtual {v0, v2}, Landroid/hardware/Camera;->setDisplayOrientation(I)V
 
@@ -269,45 +269,45 @@
 
     .line 437
     :cond_3
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bra:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bfa:Z
 
     if-eqz v0, :cond_4
 
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->brd:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bfd:I
 
     if-eq v0, v5, :cond_4
 
     .line 438
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->brd:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bfd:I
 
-    iput v0, v1, Lcom/tencent/mm/compatible/d/c$a$a;->brw:I
+    iput v0, v1, Lcom/tencent/mm/compatible/d/c$a$a;->bfw:I
 
     .line 440
     :cond_4
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bra:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bfa:Z
 
     if-eqz v0, :cond_2
 
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bre:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bfe:I
 
     if-eq v0, v5, :cond_2
 
     .line 441
-    iget-object v0, v1, Lcom/tencent/mm/compatible/d/c$a$a;->brz:Landroid/hardware/Camera;
+    iget-object v0, v1, Lcom/tencent/mm/compatible/d/c$a$a;->bfz:Landroid/hardware/Camera;
 
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bre:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfe:I
 
     invoke-virtual {v0, v2}, Landroid/hardware/Camera;->setDisplayOrientation(I)V
     :try_end_1
@@ -323,45 +323,45 @@
 
     .line 449
     :cond_5
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bra:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bfa:Z
 
     if-eqz v0, :cond_6
 
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->brd:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bfd:I
 
     if-eq v0, v5, :cond_6
 
     .line 450
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->brd:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bfd:I
 
-    iput v0, v1, Lcom/tencent/mm/compatible/d/c$a$a;->brw:I
+    iput v0, v1, Lcom/tencent/mm/compatible/d/c$a$a;->bfw:I
 
     .line 452
     :cond_6
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bra:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bfa:Z
 
     if-eqz v0, :cond_2
 
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bre:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bfe:I
 
     if-eq v0, v5, :cond_2
 
     .line 453
-    iget-object v0, v1, Lcom/tencent/mm/compatible/d/c$a$a;->brz:Landroid/hardware/Camera;
+    iget-object v0, v1, Lcom/tencent/mm/compatible/d/c$a$a;->bfz:Landroid/hardware/Camera;
 
-    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bre:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/b;->bfe:I
 
     invoke-virtual {v0, v2}, Landroid/hardware/Camera;->setDisplayOrientation(I)V
 
@@ -379,27 +379,27 @@
 
     .prologue
     .line 389
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->brg:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bfg:Z
 
     if-eqz v0, :cond_1
 
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->brf:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bff:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_1
 
     .line 391
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgO:Lcom/tencent/mm/compatible/d/b;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->brf:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bff:I
 
     .line 392
-    const-string/jumbo v1, "!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan"
+    const-string/jumbo v1, "CameraUtilImplConfig"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -415,7 +415,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 400
     :cond_0
@@ -429,7 +429,7 @@
     move-result v0
 
     .line 396
-    const-string/jumbo v1, "!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan"
+    const-string/jumbo v1, "CameraUtilImplConfig"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -445,7 +445,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 397
     const/4 v1, 0x1

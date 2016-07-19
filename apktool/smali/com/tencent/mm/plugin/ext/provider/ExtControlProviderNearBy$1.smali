@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/af$a;
+.implements Lcom/tencent/mm/sdk/platformtools/ah$a;
 
 
 # annotations
@@ -30,12 +30,12 @@
 
 
 # virtual methods
-.method public final lj()Z
+.method public final jK()Z
     .locals 1
 
     .prologue
     .line 83
-    invoke-static {}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->CP()Z
+    invoke-static {}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderNearBy;->Da()Z
 
     .line 84
     const/4 v0, 0x0

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hmQ:Lcom/tencent/mm/plugin/sns/ui/TouchImageView;
+.field final synthetic hDa:Lcom/tencent/mm/plugin/sns/ui/TouchImageView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 60
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView$1;->hmQ:Lcom/tencent/mm/plugin/sns/ui/TouchImageView;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView$1;->hDa:Lcom/tencent/mm/plugin/sns/ui/TouchImageView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,14 +41,14 @@
 
     .prologue
     .line 63
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView$1;->hmQ:Lcom/tencent/mm/plugin/sns/ui/TouchImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView$1;->hDa:Lcom/tencent/mm/plugin/sns/ui/TouchImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->setPressed(Z)V
 
     .line 64
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView$1;->hmQ:Lcom/tencent/mm/plugin/sns/ui/TouchImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/TouchImageView$1;->hDa:Lcom/tencent/mm/plugin/sns/ui/TouchImageView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/TouchImageView;->invalidate()V
 

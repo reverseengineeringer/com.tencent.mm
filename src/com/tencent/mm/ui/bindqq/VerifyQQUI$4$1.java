@@ -3,8 +3,8 @@ package com.tencent.mm.ui.bindqq;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
-import com.tencent.mm.s.a;
+import com.tencent.mm.t.m;
+import com.tencent.mm.u.a;
 
 final class VerifyQQUI$4$1
   implements DialogInterface.OnCancelListener
@@ -13,7 +13,7 @@ final class VerifyQQUI$4$1
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    ah.tE().c(kPN);
+    ah.tF().c(lpc);
   }
 }
 

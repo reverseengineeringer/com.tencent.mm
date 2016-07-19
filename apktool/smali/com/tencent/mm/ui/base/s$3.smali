@@ -1,11 +1,11 @@
 .class final Lcom/tencent/mm/ui/base/s$3;
-.super Lcom/tencent/mm/sdk/platformtools/aa;
+.super Lcom/tencent/mm/sdk/platformtools/ac;
 .source "SourceFile"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/base/s;->b(Landroid/app/Activity;Landroid/view/View;)Lcom/tencent/mm/ui/base/o;
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/ui/base/s;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic kHO:Lcom/tencent/mm/ui/base/o;
+.field final synthetic lgQ:Lcom/tencent/mm/ui/base/o;
 
 
 # direct methods
@@ -23,10 +23,10 @@
     .locals 0
 
     .prologue
-    .line 212
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/s$3;->kHO:Lcom/tencent/mm/ui/base/o;
+    .line 345
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/s$3;->lgQ:Lcom/tencent/mm/ui/base/o;
 
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
 
     return-void
 .end method
@@ -37,14 +37,14 @@
     .locals 1
 
     .prologue
-    .line 216
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/s$3;->kHO:Lcom/tencent/mm/ui/base/o;
+    .line 349
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/s$3;->lgQ:Lcom/tencent/mm/ui/base/o;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/o;->dismiss()V
 
-    .line 217
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/platformtools/aa;->handleMessage(Landroid/os/Message;)V
+    .line 350
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/platformtools/ac;->handleMessage(Landroid/os/Message;)V
 
-    .line 218
+    .line 351
     return-void
 .end method

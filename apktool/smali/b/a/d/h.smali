@@ -3,12 +3,23 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lb/a/d/h;",
+        ">;"
+    }
+.end annotation
+
+
 # static fields
-.field public static final enum mdX:Lb/a/d/h;
+.field public static final enum mQb:Lb/a/d/h;
 
-.field public static final enum mdY:Lb/a/d/h;
+.field public static final enum mQc:Lb/a/d/h;
 
-.field private static final synthetic mdZ:[Lb/a/d/h;
+.field private static final synthetic mQd:[Lb/a/d/h;
 
 
 # direct methods
@@ -27,7 +38,7 @@
 
     invoke-direct {v0, v1, v2}, Lb/a/d/h;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lb/a/d/h;->mdX:Lb/a/d/h;
+    sput-object v0, Lb/a/d/h;->mQb:Lb/a/d/h;
 
     .line 6
     new-instance v0, Lb/a/d/h;
@@ -36,22 +47,22 @@
 
     invoke-direct {v0, v1, v3}, Lb/a/d/h;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lb/a/d/h;->mdY:Lb/a/d/h;
+    sput-object v0, Lb/a/d/h;->mQc:Lb/a/d/h;
 
     .line 3
     const/4 v0, 0x2
 
     new-array v0, v0, [Lb/a/d/h;
 
-    sget-object v1, Lb/a/d/h;->mdX:Lb/a/d/h;
+    sget-object v1, Lb/a/d/h;->mQb:Lb/a/d/h;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lb/a/d/h;->mdY:Lb/a/d/h;
+    sget-object v1, Lb/a/d/h;->mQc:Lb/a/d/h;
 
     aput-object v1, v0, v3
 
-    sput-object v0, Lb/a/d/h;->mdZ:[Lb/a/d/h;
+    sput-object v0, Lb/a/d/h;->mQd:[Lb/a/d/h;
 
     return-void
 .end method
@@ -89,7 +100,7 @@
     const/4 v3, 0x0
 
     .line 1
-    sget-object v0, Lb/a/d/h;->mdZ:[Lb/a/d/h;
+    sget-object v0, Lb/a/d/h;->mQd:[Lb/a/d/h;
 
     array-length v1, v0
 

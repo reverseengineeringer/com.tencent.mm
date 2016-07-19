@@ -12,7 +12,7 @@
 
     const/4 v1, 0x0
 
-    .line 144
+    .line 142
     const/4 v3, 0x0
 
     .line 145
@@ -228,7 +228,7 @@
     goto :goto_1
 .end method
 
-.method public static ce(Ljava/lang/String;Ljava/lang/String;)Z
+.method public static cq(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 6
 
     .prologue
@@ -236,7 +236,7 @@
 
     const/4 v1, 0x0
 
-    .line 26
+    .line 25
     .line 28
     :try_start_0
     new-instance v3, Ljava/io/FileInputStream;
@@ -448,7 +448,7 @@
     goto :goto_3
 .end method
 
-.method public static i(Ljava/lang/String;Ljava/lang/String;Z)Z
+.method public static l(Ljava/lang/String;Ljava/lang/String;Z)Z
     .locals 5
 
     .prologue
@@ -499,7 +499,7 @@
 
     .line 81
     :cond_2
-    invoke-static {p0, p1}, Lcom/tencent/mm/sdk/platformtools/j;->ce(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {p0, p1}, Lcom/tencent/mm/sdk/platformtools/j;->cq(Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 82
     if-eqz p2, :cond_3
@@ -599,7 +599,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3, p2}, Lcom/tencent/mm/sdk/platformtools/j;->i(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-static {v2, v3, p2}, Lcom/tencent/mm/sdk/platformtools/j;->l(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     .line 94
     add-int/lit8 v0, v0, 0x1
@@ -607,7 +607,7 @@
     goto :goto_1
 .end method
 
-.method public static w(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
+.method public static x(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 7
 
     .prologue
@@ -642,7 +642,7 @@
     :catch_0
     move-exception v2
 
-    const-string/jumbo v2, "!32@/B4Tb64lLpKEimhusr6EBVHdaUJF77fu"
+    const-string/jumbo v2, "MicroMsg.SDK.FilesCopy"
 
     const-string/jumbo v3, "copy assets file srcpath=%s to=%s failed, try pattern now"
 
@@ -654,7 +654,7 @@
 
     aput-object p2, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 121
     :goto_1
@@ -707,7 +707,7 @@
 
     .line 129
     :cond_0
-    const-string/jumbo v3, "!32@/B4Tb64lLpKEimhusr6EBVHdaUJF77fu"
+    const-string/jumbo v3, "MicroMsg.SDK.FilesCopy"
 
     const-string/jumbo v4, "copy pattern %s"
 
@@ -719,7 +719,7 @@
 
     aput-object v2, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 

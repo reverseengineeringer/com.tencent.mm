@@ -46,7 +46,7 @@
 
     .line 101
     :cond_1
-    invoke-virtual {p0}, Lcom/tencent/c/a/a/q;->jY()Z
+    invoke-virtual {p0}, Lcom/tencent/c/a/a/q;->iz()Z
 
     move-result v0
 
@@ -76,7 +76,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/tencent/c/a/a/q;->jY()Z
+    invoke-virtual {p0}, Lcom/tencent/c/a/a/q;->iz()Z
 
     move-result v1
 
@@ -91,29 +91,26 @@
     goto :goto_0
 .end method
 
-.method protected abstract jY()Z
+.method protected abstract iA()Ljava/lang/String;
 .end method
 
-.method protected abstract jZ()Ljava/lang/String;
+.method protected abstract iB()Lcom/tencent/c/a/a/a;
 .end method
 
-.method protected abstract ka()Lcom/tencent/c/a/a/a;
-.end method
-
-.method public final kh()Lcom/tencent/c/a/a/g;
+.method public final iI()Lcom/tencent/c/a/a/g;
     .locals 2
 
     .prologue
     const/4 v0, 0x0
 
     .line 64
-    invoke-virtual {p0}, Lcom/tencent/c/a/a/q;->jY()Z
+    invoke-virtual {p0}, Lcom/tencent/c/a/a/q;->iz()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/tencent/c/a/a/q;->jZ()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/c/a/a/q;->iA()Ljava/lang/String;
 
     move-result-object v1
 
@@ -126,7 +123,7 @@
     if-eqz v1, :cond_0
 
     .line 66
-    invoke-static {v1}, Lcom/tencent/c/a/a/g;->ar(Ljava/lang/String;)Lcom/tencent/c/a/a/g;
+    invoke-static {v1}, Lcom/tencent/c/a/a/g;->av(Ljava/lang/String;)Lcom/tencent/c/a/a/g;
 
     move-result-object v0
 
@@ -141,19 +138,19 @@
     goto :goto_0
 .end method
 
-.method public final ki()Lcom/tencent/c/a/a/a;
+.method public final iJ()Lcom/tencent/c/a/a/a;
     .locals 1
 
     .prologue
     .line 91
-    invoke-virtual {p0}, Lcom/tencent/c/a/a/q;->jY()Z
+    invoke-virtual {p0}, Lcom/tencent/c/a/a/q;->iz()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 92
-    invoke-virtual {p0}, Lcom/tencent/c/a/a/q;->ka()Lcom/tencent/c/a/a/a;
+    invoke-virtual {p0}, Lcom/tencent/c/a/a/q;->iB()Lcom/tencent/c/a/a/a;
 
     move-result-object v0
 
@@ -165,6 +162,9 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method protected abstract iz()Z
 .end method
 
 .method protected abstract write(Ljava/lang/String;)V

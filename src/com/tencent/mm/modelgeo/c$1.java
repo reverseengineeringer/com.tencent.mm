@@ -1,10 +1,10 @@
 package com.tencent.mm.modelgeo;
 
 import android.os.Looper;
-import com.tencent.mm.platformtools.r;
+import com.tencent.mm.platformtools.q;
 import com.tencent.mm.sdk.b.b;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import java.lang.ref.WeakReference;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -19,23 +19,23 @@ final class c$1
   {
     if (paramBoolean)
     {
-      bOx.bOq = paramDouble1;
-      bOx.bOr = paramDouble2;
-      bOx.bOs = paramInt;
-      bOx.bOt = paramDouble3;
-      bOx.bOu = paramDouble4;
-      bOx.bOn = System.currentTimeMillis();
-      bOx.bOo = true;
-      bOx.bOp = false;
-      c.a(bOx, 67592);
+      bHS.bHL = paramDouble1;
+      bHS.bHM = paramDouble2;
+      bHS.bHN = paramInt;
+      bHS.bHO = paramDouble3;
+      bHS.bHP = paramDouble4;
+      bHS.bHI = System.currentTimeMillis();
+      bHS.bHJ = true;
+      bHS.bHK = false;
+      c.a(bHS, 67592);
     }
-    u.d("!32@/B4Tb64lLpIu6Y+BscdrxN3pFdbvvih6", "onGetLocation fLongitude: %f fLatitude:%f locType:%d %f:spped", new Object[] { Double.valueOf(paramDouble2), Double.valueOf(paramDouble1), Integer.valueOf(paramInt), Double.valueOf(paramDouble3) });
-    new aa(Looper.getMainLooper()).postDelayed(new Runnable()
+    v.d("MicroMsg.LocationGeo", "onGetLocation fLongitude: %f fLatitude:%f locType:%d %f:spped", new Object[] { Double.valueOf(paramDouble2), Double.valueOf(paramDouble1), Integer.valueOf(paramInt), Double.valueOf(paramDouble3) });
+    new ac(Looper.getMainLooper()).postDelayed(new Runnable()
     {
       public final void run()
       {
         Object localObject1 = new LinkedList();
-        Object localObject2 = bOx.bOl.iterator();
+        Object localObject2 = bHS.bHG.iterator();
         while (((Iterator)localObject2).hasNext())
         {
           WeakReference localWeakReference = (WeakReference)((Iterator)localObject2).next();
@@ -47,10 +47,10 @@ final class c$1
         while (((Iterator)localObject1).hasNext())
         {
           localObject2 = (a.a)((Iterator)localObject1).next();
-          if ((r.cmK) && (b.aUo())) {
-            ((a.a)localObject2).a(paramBoolean, (float)r.lng, (float)r.lat, paramInt, (float)paramDouble3, paramDouble2);
+          if ((q.chP) && (b.aZo())) {
+            ((a.a)localObject2).a(paramBoolean, (float)q.lng, (float)q.lat, paramInt, (float)paramDouble3, paramDouble2);
           } else {
-            ((a.a)localObject2).a(paramBoolean, (float)bOC, (float)bOD, paramInt, (float)paramDouble3, paramDouble2);
+            ((a.a)localObject2).a(paramBoolean, (float)bHX, (float)bHY, paramInt, (float)paramDouble3, paramDouble2);
           }
         }
       }

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/compatible/d/m;->ot()I
+    value = Lcom/tencent/mm/compatible/d/m;->mJ()I
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

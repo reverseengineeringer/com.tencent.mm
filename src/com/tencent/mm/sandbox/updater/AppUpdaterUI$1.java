@@ -5,8 +5,8 @@ import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.net.Uri;
 import android.widget.Button;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.h;
 
@@ -15,56 +15,41 @@ final class AppUpdaterUI$1
 {
   AppUpdaterUI$1(AppUpdaterUI paramAppUpdaterUI) {}
   
-  public final void Ct(String paramString)
-  {
-    if (AppUpdaterUI.b(jTb) != null) {
-      AppUpdaterUI.b(jTb).dismiss();
-    }
-    if (jTb.isFinishing()) {}
-    do
-    {
-      return;
-      u.d("!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/", paramString);
-    } while (paramString == null);
-    AppUpdaterUI.a(jTb, paramString);
-    AppUpdaterUI.a(jTb).setEnabled(false);
-  }
-  
-  public final void J(int paramInt1, int paramInt2)
+  public final void L(int paramInt1, int paramInt2)
   {
     if (paramInt1 <= 0) {}
     for (long l = 0L;; l = paramInt2 * 100L / paramInt1)
     {
       paramInt1 = (int)l;
-      AppUpdaterUI.a(jTb).setText(jTb.getString(2131427577) + paramInt1 + "%");
+      AppUpdaterUI.a(ksv).setText(ksv.getString(2131235746) + paramInt1 + "%");
       return;
     }
   }
   
   public final void a(com.tencent.mm.sandbox.monitor.c paramc)
   {
-    if (jTb.isFinishing()) {}
+    if (ksv.isFinishing()) {}
     do
     {
       return;
       if (!(paramc instanceof c)) {
         break;
       }
-      u.e("!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/", "download package from cdn error. switch to webserver");
-      if (AppUpdaterUI.b(jTb) != null) {
-        AppUpdaterUI.b(jTb).setMessage(jTb.getString(2131427493, new Object[] { ejTb).asL, jTb.getString(2131427588), ay.al(ejTb).size) }));
+      v.e("MicroMsg.AppUpdaterUI", "download package from cdn error. switch to webserver");
+      if (AppUpdaterUI.b(ksv) != null) {
+        AppUpdaterUI.b(ksv).setMessage(ksv.getString(2131232904, new Object[] { eksv).desc, ksv.getString(2131235743), be.as(eksv).size) }));
       }
-    } while (!ejTb).jUe);
-    AppUpdaterUI.a(jTb, paramc);
+    } while (!eksv).ktD);
+    AppUpdaterUI.a(ksv, paramc);
     return;
-    g.a(jTb, 2131427585, 2131430877, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+    g.a(ksv, 2131235744, 2131231028, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
-        u.d("!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/", "go to WebView");
+        v.d("MicroMsg.AppUpdaterUI", "go to WebView");
         paramAnonymousDialogInterface = new Intent("android.intent.action.VIEW", Uri.parse("https://weixin.qq.com/m"));
         paramAnonymousDialogInterface.addFlags(268435456);
-        jTb.startActivity(paramAnonymousDialogInterface);
+        ksv.startActivity(paramAnonymousDialogInterface);
       }
     }, new DialogInterface.OnClickListener()
     {
@@ -72,36 +57,51 @@ final class AppUpdaterUI$1
     });
   }
   
-  public final void aTT()
+  public final void aAB()
   {
-    u.e("!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/", "no sdcard.");
-    if (AppUpdaterUI.b(jTb) != null) {
-      AppUpdaterUI.b(jTb).dismiss();
-    }
-    if (jTb.isFinishing()) {
+    if (ksv.isFinishing()) {
       return;
     }
-    AppUpdaterUI.c(jTb);
+    AppUpdaterUI.a(ksv).setText(2131235746);
+    AppUpdaterUI.a(ksv).setEnabled(false);
   }
   
-  public final void aTU()
+  public final void aYQ()
   {
-    if (AppUpdaterUI.b(jTb) != null) {
-      AppUpdaterUI.b(jTb).dismiss();
+    v.e("MicroMsg.AppUpdaterUI", "no sdcard.");
+    if (AppUpdaterUI.b(ksv) != null) {
+      AppUpdaterUI.b(ksv).dismiss();
     }
-    if (jTb.isFinishing()) {
+    if (ksv.isFinishing()) {
       return;
     }
-    AppUpdaterUI.d(jTb);
+    AppUpdaterUI.c(ksv);
   }
   
-  public final void ayb()
+  public final void aYR()
   {
-    if (jTb.isFinishing()) {
+    if (AppUpdaterUI.b(ksv) != null) {
+      AppUpdaterUI.b(ksv).dismiss();
+    }
+    if (ksv.isFinishing()) {
       return;
     }
-    AppUpdaterUI.a(jTb).setText(2131427577);
-    AppUpdaterUI.a(jTb).setEnabled(false);
+    AppUpdaterUI.d(ksv);
+  }
+  
+  public final void wt(String paramString)
+  {
+    if (AppUpdaterUI.b(ksv) != null) {
+      AppUpdaterUI.b(ksv).dismiss();
+    }
+    if (ksv.isFinishing()) {}
+    do
+    {
+      return;
+      v.d("MicroMsg.AppUpdaterUI", paramString);
+    } while (paramString == null);
+    AppUpdaterUI.a(ksv, paramString);
+    AppUpdaterUI.a(ksv).setEnabled(false);
   }
 }
 

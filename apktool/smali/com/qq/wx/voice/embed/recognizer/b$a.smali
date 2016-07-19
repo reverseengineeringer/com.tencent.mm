@@ -14,7 +14,7 @@
 
 
 # static fields
-.field public static ajg:Lcom/qq/wx/voice/embed/recognizer/b;
+.field public static UW:Lcom/qq/wx/voice/embed/recognizer/b;
 
 
 # direct methods
@@ -25,7 +25,7 @@
 
     invoke-direct {v0}, Lcom/qq/wx/voice/embed/recognizer/b;-><init>()V
 
-    sput-object v0, Lcom/qq/wx/voice/embed/recognizer/b$a;->ajg:Lcom/qq/wx/voice/embed/recognizer/b;
+    sput-object v0, Lcom/qq/wx/voice/embed/recognizer/b$a;->UW:Lcom/qq/wx/voice/embed/recognizer/b;
 
     return-void
 .end method

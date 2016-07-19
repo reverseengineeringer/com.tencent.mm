@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic cix:J
+.field final synthetic cdO:J
 
-.field final synthetic ciy:J
+.field final synthetic cdP:J
 
 
 # direct methods
 .method constructor <init>(JJ)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 385
-    iput-wide p1, p0, Lcom/tencent/mm/network/C2Java$6;->cix:J
+    .line 390
+    iput-wide p1, p0, Lcom/tencent/mm/network/C2Java$6;->cdO:J
 
-    iput-wide p3, p0, Lcom/tencent/mm/network/C2Java$6;->ciy:J
+    iput-wide p3, p0, Lcom/tencent/mm/network/C2Java$6;->cdP:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,15 +44,15 @@
     .locals 4
 
     .prologue
-    .line 388
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fi()Lcom/tencent/mm/network/x;
+    .line 393
+    invoke-static {}, Lcom/tencent/mm/network/z;->FE()Lcom/tencent/mm/network/x;
 
-    iget-wide v0, p0, Lcom/tencent/mm/network/C2Java$6;->cix:J
+    iget-wide v0, p0, Lcom/tencent/mm/network/C2Java$6;->cdO:J
 
-    iget-wide v2, p0, Lcom/tencent/mm/network/C2Java$6;->ciy:J
+    iget-wide v2, p0, Lcom/tencent/mm/network/C2Java$6;->cdP:J
 
     invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/network/x;->onOOBNotify(JJ)V
 
-    .line 389
+    .line 394
     return-void
 .end method

@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field public final jzR:Ljava/lang/String;
+.field public final jYE:Ljava/lang/String;
 
-.field private final mea:Ljava/lang/String;
+.field private final mQe:Ljava/lang/String;
 
 .field public final token:Ljava/lang/String;
 
@@ -38,21 +38,21 @@
     .line 32
     const-string/jumbo v0, "Token can\'t be null"
 
-    invoke-static {p1, v0}, Lb/a/g/d;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lb/a/g/d;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 33
     const-string/jumbo v0, "Secret can\'t be null"
 
-    invoke-static {p2, v0}, Lb/a/g/d;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lb/a/g/d;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 35
     iput-object p1, p0, Lb/a/d/i;->token:Ljava/lang/String;
 
     .line 36
-    iput-object p2, p0, Lb/a/d/i;->jzR:Ljava/lang/String;
+    iput-object p2, p0, Lb/a/d/i;->jYE:Ljava/lang/String;
 
     .line 37
-    iput-object p3, p0, Lb/a/d/i;->mea:Ljava/lang/String;
+    iput-object p3, p0, Lb/a/d/i;->mQe:Ljava/lang/String;
 
     .line 38
     return-void
@@ -110,9 +110,9 @@
 
     if-eqz v2, :cond_4
 
-    iget-object v2, p0, Lb/a/d/i;->jzR:Ljava/lang/String;
+    iget-object v2, p0, Lb/a/d/i;->jYE:Ljava/lang/String;
 
-    iget-object v3, p1, Lb/a/d/i;->jzR:Ljava/lang/String;
+    iget-object v3, p1, Lb/a/d/i;->jYE:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -139,7 +139,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lb/a/d/i;->jzR:Ljava/lang/String;
+    iget-object v1, p0, Lb/a/d/i;->jYE:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
@@ -169,7 +169,7 @@
 
     const/4 v2, 0x1
 
-    iget-object v3, p0, Lb/a/d/i;->jzR:Ljava/lang/String;
+    iget-object v3, p0, Lb/a/d/i;->jYE:Ljava/lang/String;
 
     aput-object v3, v1, v2
 

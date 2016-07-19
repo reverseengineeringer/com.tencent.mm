@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+.field final synthetic kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 615
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$7;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 616
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$7;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,13 +40,13 @@
     .locals 2
 
     .prologue
-    .line 617
-    sget-object v0, Lcom/tencent/mm/plugin/a/a;->cob:Lcom/tencent/mm/pluginsdk/f;
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$7;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
-
-    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/f;->g(Landroid/app/Activity;)Z
-
     .line 618
+    sget-object v0, Lcom/tencent/mm/plugin/a/a;->cjp:Lcom/tencent/mm/pluginsdk/f;
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$7;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+
+    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/f;->c(Landroid/app/Activity;)Z
+
+    .line 619
     return-void
 .end method

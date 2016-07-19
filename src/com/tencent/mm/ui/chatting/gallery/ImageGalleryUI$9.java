@@ -5,14 +5,13 @@ final class ImageGalleryUI$9
 {
   ImageGalleryUI$9(ImageGalleryUI paramImageGalleryUI) {}
   
-  public final void Xq()
+  public final void Zb()
   {
-    if (ImageGalleryUI.e(lgM) == null) {
+    if (ImageGalleryUI.e(lGY) == null) {
       return;
     }
-    ImageGalleryUI.f(lgM);
-    ImageGalleryUI.g(lgM);
-    ImageGalleryUI.e(lgM).n(100000);
+    ImageGalleryUI.f(lGY);
+    ImageGalleryUI.e(lGY).p(100000);
   }
 }
 

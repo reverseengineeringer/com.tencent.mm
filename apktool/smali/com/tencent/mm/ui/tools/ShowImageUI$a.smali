@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 167
+    .line 187
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
     return-void
@@ -33,7 +33,7 @@
     .locals 0
 
     .prologue
-    .line 167
+    .line 187
     invoke-direct {p0}, Lcom/tencent/mm/ui/tools/ShowImageUI$a;-><init>()V
 
     return-void
@@ -45,7 +45,7 @@
     .locals 1
 
     .prologue
-    .line 177
+    .line 197
     const/4 v0, 0x1
 
     return v0
@@ -55,7 +55,7 @@
     .locals 1
 
     .prologue
-    .line 182
+    .line 202
     const/4 v0, 0x0
 
     return-object v0
@@ -65,7 +65,7 @@
     .locals 2
 
     .prologue
-    .line 187
+    .line 207
     int-to-long v0, p1
 
     return-wide v0
@@ -77,37 +77,37 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 193
+    .line 213
     iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI$a;->imagePath:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/k;->ku(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/j;->ld(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 194
+    .line 214
     if-nez v0, :cond_2
 
-    .line 195
-    const-string/jumbo v0, "!32@/B4Tb64lLpL/S4mvETx9l9B/T4NcFgMX"
+    .line 215
+    const-string/jumbo v0, "MicroMsg.ShowImageUI"
 
     const-string/jumbo v1, "get image fail"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 196
+    .line 216
     if-eqz p2, :cond_0
 
     instance-of v0, p2, Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     if-eqz v0, :cond_1
 
-    .line 197
+    .line 217
     :cond_0
     invoke-virtual {p3}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0a04d2
+    const v1, 0x7f030535
 
     const/4 v2, 0x0
 
@@ -115,9 +115,9 @@
 
     move-result-object p2
 
-    .line 199
+    .line 219
     :cond_1
-    const v0, 0x7f07069b
+    const v0, 0x7f1006c7
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -125,18 +125,18 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f03022b
+    const v1, 0x7f0700d2
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 200
+    .line 220
     new-instance v0, Landroid/widget/Gallery$LayoutParams;
 
     invoke-direct {v0, v4, v4}, Landroid/widget/Gallery$LayoutParams;-><init>(II)V
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 204
+    .line 224
     :goto_0
     return-object p2
 
@@ -175,7 +175,7 @@
 
     const/4 v0, 0x1
 
-    invoke-virtual {p2, v0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->setMaxZoomDoubleTab(Z)V
+    iput-boolean v0, p2, Lcom/tencent/mm/ui/base/MultiTouchImageView;->lih:Z
 
     goto :goto_0
 
@@ -190,7 +190,7 @@
 
     move-result v2
 
-    invoke-virtual {p2, v1, v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->bN(II)V
+    invoke-virtual {p2, v1, v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->bT(II)V
 
     goto :goto_1
 .end method

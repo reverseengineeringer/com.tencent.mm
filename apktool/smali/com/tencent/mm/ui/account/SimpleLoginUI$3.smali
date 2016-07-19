@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/SimpleLoginUI;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/account/SimpleLoginUI;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+.field final synthetic kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 431
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$3;->kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$3;->kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final FY()V
+.method public final Gv()V
     .locals 11
 
     .prologue
@@ -47,7 +47,7 @@
     const/4 v4, 0x0
 
     .line 435
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$3;->kwL:Lcom/tencent/mm/ui/account/SimpleLoginUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/SimpleLoginUI$3;->kVS:Lcom/tencent/mm/ui/account/SimpleLoginUI;
 
     new-instance v2, Lcom/tencent/mm/ui/account/SimpleLoginUI$3$1;
 
@@ -57,7 +57,7 @@
 
     invoke-direct {v6, v1, v2}, Lcom/tencent/mm/pluginsdk/model/app/u;-><init>(Landroid/content/Context;Lcom/tencent/mm/pluginsdk/model/app/u$a;)V
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUM()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZQ()Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -71,17 +71,17 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpJX+KZ6umzqt7wl5hsBuqkd"
+    const-string/jumbo v1, "MicroMsg.AppUtil"
 
     const-string/jumbo v2, "no saved appids while not login"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     move-object v2, v0
@@ -117,7 +117,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0, v4}, Lcom/tencent/mm/pluginsdk/model/app/g;->ai(Ljava/lang/String;Z)Lcom/tencent/mm/pluginsdk/model/app/f;
+    invoke-static {v0, v4}, Lcom/tencent/mm/pluginsdk/model/app/g;->ar(Ljava/lang/String;Z)Lcom/tencent/mm/pluginsdk/model/app/f;
 
     move-result-object v3
 
@@ -160,7 +160,7 @@
 
     aget-object v9, v7, v3
 
-    invoke-static {v9}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v9}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v10
 
@@ -197,21 +197,21 @@
     if-eqz v1, :cond_a
 
     :cond_8
-    const-string/jumbo v0, "!44@/B4Tb64lLpIw1vCoUyRMKQjZ1dpQIMvamblCzn1RUg4="
+    const-string/jumbo v0, "MicroMsg.LoadAppInfoAfterLogin"
 
     const-string/jumbo v1, "no saved appids, just callback"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/g;->aPG()V
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/g;->aUn()V
 
-    iget-object v0, v6, Lcom/tencent/mm/pluginsdk/model/app/u;->iBc:Lcom/tencent/mm/pluginsdk/model/app/u$a;
+    iget-object v0, v6, Lcom/tencent/mm/pluginsdk/model/app/u;->iXI:Lcom/tencent/mm/pluginsdk/model/app/u$a;
 
     if-eqz v0, :cond_9
 
-    iget-object v0, v6, Lcom/tencent/mm/pluginsdk/model/app/u;->iBc:Lcom/tencent/mm/pluginsdk/model/app/u$a;
+    iget-object v0, v6, Lcom/tencent/mm/pluginsdk/model/app/u;->iXI:Lcom/tencent/mm/pluginsdk/model/app/u$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/model/app/u$a;->aEY()V
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/model/app/u$a;->oq()V
 
     .line 443
     :cond_9
@@ -220,7 +220,7 @@
 
     .line 435
     :cond_a
-    const-string/jumbo v1, "!44@/B4Tb64lLpIw1vCoUyRMKQjZ1dpQIMvamblCzn1RUg4="
+    const-string/jumbo v1, "MicroMsg.LoadAppInfoAfterLogin"
 
     const-string/jumbo v2, "now do batch get appinfos, appid liSst size is :%d"
 
@@ -236,9 +236,9 @@
 
     aput-object v7, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/aj;->abv()Lcom/tencent/mm/pluginsdk/model/app/d;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/al;->adP()Lcom/tencent/mm/pluginsdk/model/app/d;
 
     move-result-object v1
 
@@ -246,11 +246,11 @@
 
     invoke-virtual {v1, v2, v6}, Lcom/tencent/mm/pluginsdk/model/app/d;->a(ILcom/tencent/mm/pluginsdk/model/app/s;)V
 
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/aj;->aPQ()Lcom/tencent/mm/pluginsdk/model/app/h;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/al;->aUz()Lcom/tencent/mm/pluginsdk/model/app/h;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/pluginsdk/model/app/h;->Q(Ljava/util/LinkedList;)V
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/pluginsdk/model/app/h;->U(Ljava/util/LinkedList;)V
 
     iget-object v0, v6, Lcom/tencent/mm/pluginsdk/model/app/u;->mContext:Landroid/content/Context;
 
@@ -270,13 +270,13 @@
 
     iget-object v1, v6, Lcom/tencent/mm/pluginsdk/model/app/u;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f0b0ddd
+    const v2, 0x7f080134
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     iget-object v1, v6, Lcom/tencent/mm/pluginsdk/model/app/u;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f0b0e1d
+    const v2, 0x7f080149
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -290,25 +290,25 @@
 
     move-result-object v0
 
-    iput-object v0, v6, Lcom/tencent/mm/pluginsdk/model/app/u;->coc:Lcom/tencent/mm/ui/base/p;
+    iput-object v0, v6, Lcom/tencent/mm/pluginsdk/model/app/u;->cjq:Lcom/tencent/mm/ui/base/p;
 
     goto :goto_3
 
     :cond_b
-    iget-object v0, v6, Lcom/tencent/mm/pluginsdk/model/app/u;->iBc:Lcom/tencent/mm/pluginsdk/model/app/u$a;
+    iget-object v0, v6, Lcom/tencent/mm/pluginsdk/model/app/u;->iXI:Lcom/tencent/mm/pluginsdk/model/app/u$a;
 
     if-eqz v0, :cond_c
 
-    iget-object v0, v6, Lcom/tencent/mm/pluginsdk/model/app/u;->iBc:Lcom/tencent/mm/pluginsdk/model/app/u$a;
+    iget-object v0, v6, Lcom/tencent/mm/pluginsdk/model/app/u;->iXI:Lcom/tencent/mm/pluginsdk/model/app/u$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/model/app/u$a;->aEY()V
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/model/app/u$a;->oq()V
 
     :cond_c
-    const-string/jumbo v0, "!44@/B4Tb64lLpIw1vCoUyRMKQjZ1dpQIMvamblCzn1RUg4="
+    const-string/jumbo v0, "MicroMsg.LoadAppInfoAfterLogin"
 
     const-string/jumbo v1, "dz[loadAppInfo:catch the null window for progress bar"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_3
 .end method

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iPS:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
+.field final synthetic jmZ:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 431
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$a$1;->iPS:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
+    .line 433
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$a$1;->jmZ:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,34 +42,34 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 435
+    .line 437
     invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm$C2Java;->isNetworkConnected()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 436
-    const-string/jumbo v0, "!44@/B4Tb64lLpJ721CYNoMrI4TNb+IdX5kijxTVE+9ur/c="
+    .line 438
+    const-string/jumbo v0, "MicroMsg.MailPhoneMenuHelper"
 
     const-string/jumbo v1, "hy: no network. abort download"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 437
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$a$1;->iPS:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
+    .line 439
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$a$1;->jmZ:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/d/g$a;->a(Lcom/tencent/mm/pluginsdk/ui/d/g$a;)Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$a$1;->iPS:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$a$1;->jmZ:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/d/g$a;->a(Lcom/tencent/mm/pluginsdk/ui/d/g$a;)Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f0b0099
+    const v2, 0x7f08084d
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -81,8 +81,8 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 438
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$a$1;->iPS:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
+    .line 440
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$a$1;->jmZ:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/d/g$a;->b(Lcom/tencent/mm/pluginsdk/ui/d/g$a;)Lcom/tencent/mm/pluginsdk/ui/d/g$a$a;
 
@@ -90,38 +90,38 @@
 
     if-eqz v0, :cond_0
 
-    .line 439
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$a$1;->iPS:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
+    .line 441
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$a$1;->jmZ:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/d/g$a;->b(Lcom/tencent/mm/pluginsdk/ui/d/g$a;)Lcom/tencent/mm/pluginsdk/ui/d/g$a$a;
 
     move-result-object v0
 
-    invoke-interface {v0, v3}, Lcom/tencent/mm/pluginsdk/ui/d/g$a$a;->db(Z)V
+    invoke-interface {v0, v3}, Lcom/tencent/mm/pluginsdk/ui/d/g$a$a;->cZ(Z)V
 
-    .line 452
+    .line 454
     :cond_0
     :goto_0
     return-void
 
-    .line 443
+    .line 445
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$a$1;->iPS:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$a$1;->jmZ:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/d/g$a;->a(Lcom/tencent/mm/pluginsdk/ui/d/g$a;)Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$a$1;->iPS:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$a$1;->jmZ:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/d/g$a;->c(Lcom/tencent/mm/pluginsdk/ui/d/g$a;)Landroid/os/Bundle;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/d/l;->a(Landroid/content/Context;Landroid/os/Bundle;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/d/l;->b(Landroid/content/Context;Landroid/os/Bundle;)V
 
-    .line 444
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$a$1;->iPS:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
+    .line 446
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$a$1;->jmZ:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/d/g$a;->b(Lcom/tencent/mm/pluginsdk/ui/d/g$a;)Lcom/tencent/mm/pluginsdk/ui/d/g$a$a;
 
@@ -129,8 +129,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 445
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$a$1;->iPS:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
+    .line 447
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/g$a$1;->jmZ:Lcom/tencent/mm/pluginsdk/ui/d/g$a;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/d/g$a;->b(Lcom/tencent/mm/pluginsdk/ui/d/g$a;)Lcom/tencent/mm/pluginsdk/ui/d/g$a$a;
 
@@ -138,7 +138,7 @@
 
     const/4 v1, 0x1
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/d/g$a$a;->db(Z)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/d/g$a$a;->cZ(Z)V
 
     goto :goto_0
 .end method

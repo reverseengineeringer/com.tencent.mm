@@ -1,36 +1,36 @@
 package com.tencent.mm.modelsfs;
 
-import com.tencent.mm.sdk.platformtools.ad;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.FileInputStream;
 import java.nio.channels.FileChannel;
 
 public final class b
   extends FileInputStream
 {
-  private boolean cah = false;
-  private a cal;
-  private long cam = 0L;
+  private boolean bTQ = false;
+  private a bTU;
+  private long bTV = 0L;
   
   public b(String paramString, long paramLong)
   {
     super(paramString);
-    cal = new a(paramLong);
+    bTU = new a(paramLong);
   }
   
   public final void close()
   {
     super.close();
-    if (cal != null) {
-      cal.free();
+    if (bTU != null) {
+      bTU.free();
     }
-    u.i("!32@/B4Tb64lLpLneYoyykN+fy5De7MR2Z99", "close  hashcode " + hashCode());
+    v.i("MicroMsg.EncInputStream", "close  hashcode " + hashCode());
   }
   
   public final void mark(int paramInt)
   {
-    cam = cal.Cf();
+    bTV = bTU.Cm();
   }
   
   public final boolean markSupported()
@@ -40,27 +40,27 @@ public final class b
   
   public final int read(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
   {
-    if (cah) {
-      u.i("!32@/B4Tb64lLpLneYoyykN+fy5De7MR2Z99", "read buffer  hashcode " + hashCode() + " " + ay.aVJ().toString());
+    if (bTQ) {
+      v.i("MicroMsg.EncInputStream", "read buffer  hashcode " + hashCode() + " " + be.baX().toString());
     }
     paramInt1 = super.read(paramArrayOfByte, paramInt1, paramInt2);
     if (paramInt1 < 0) {
       return paramInt1;
     }
-    cal.j(paramArrayOfByte, paramInt2);
+    bTU.j(paramArrayOfByte, paramInt2);
     return paramInt1;
   }
   
   public final void reset()
   {
-    getChannel().position(cam);
-    cal.reset();
+    getChannel().position(bTV);
+    bTU.reset();
   }
   
   public final long skip(long paramLong)
   {
     long l = super.skip(paramLong);
-    cal.seek(paramLong);
+    bTU.seek(paramLong);
     return l;
   }
 }

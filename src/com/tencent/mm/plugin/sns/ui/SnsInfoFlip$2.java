@@ -7,10 +7,10 @@ final class SnsInfoFlip$2
 {
   SnsInfoFlip$2(SnsInfoFlip paramSnsInfoFlip) {}
   
-  public final void aBX()
+  public final void aFa()
   {
-    if (heR.gXN != null) {
-      heR.gXN.aBa();
+    if (htI.hkZ != null) {
+      htI.hkZ.aDV();
     }
   }
 }

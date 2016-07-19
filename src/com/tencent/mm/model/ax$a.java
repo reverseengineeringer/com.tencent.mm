@@ -1,24 +1,24 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class ax$a
 {
-  public static boolean J(String paramString1, String paramString2)
+  public static boolean G(String paramString1, String paramString2)
   {
-    if (ay.kz(paramString1)) {}
+    if (be.kf(paramString1)) {}
     do
     {
       return true;
       paramString1 = decode(encode(paramString1));
-    } while ((ay.kz(paramString1)) || (!paramString1.equals(paramString2)));
+    } while ((be.kf(paramString1)) || (!paramString1.equals(paramString2)));
     return false;
   }
   
   private static String decode(String paramString)
   {
     Object localObject;
-    if ((ay.kz(paramString)) || (paramString.length() % 2 != 0)) {
+    if ((be.kf(paramString)) || (paramString.length() % 2 != 0)) {
       localObject = "";
     }
     for (;;)

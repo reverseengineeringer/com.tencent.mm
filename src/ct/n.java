@@ -1,20 +1,8 @@
 package ct;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.os.SystemClock;
-
-final class n
-  extends BroadcastReceiver
+public abstract interface n
 {
-  n(k paramk) {}
-  
-  public final void onReceive(Context paramContext, Intent paramIntent)
-  {
-    bc.a("AccessSchedulerTrigger", "onAccessSchedulerTriggered by timer, curTime:" + SystemClock.elapsedRealtime());
-    p.a().a(new k.a(a, (byte)0));
-  }
+  public abstract void b();
 }
 
 /* Location:

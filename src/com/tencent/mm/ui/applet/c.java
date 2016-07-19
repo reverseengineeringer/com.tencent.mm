@@ -13,62 +13,62 @@ import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import com.tencent.mm.ba.a;
+import com.tencent.mm.bd.a;
 
 public final class c
 {
-  public static void ef(Context paramContext)
+  public static void ej(Context paramContext)
   {
-    paramContext = new a(paramContext, LayoutInflater.from(paramContext).inflate(2131361929, null));
-    all.addView(alk, alm);
+    paramContext = new a(paramContext, LayoutInflater.from(paramContext).inflate(2130904533, null));
+    Yk.addView(Yj, Yl);
   }
   
   public static final class a
   {
-    private ImageView aAF;
-    FrameLayout alk;
-    WindowManager all;
-    WindowManager.LayoutParams alm;
-    private ViewGroup.LayoutParams aln;
+    FrameLayout Yj;
+    WindowManager Yk;
+    WindowManager.LayoutParams Yl;
+    private ViewGroup.LayoutParams Ym;
+    private ImageView amO;
     private View mView;
     
     public a(final Context paramContext, View paramView)
     {
-      if ((alk != null) && (all != null)) {
+      if ((Yj != null) && (Yk != null)) {
         return;
       }
-      paramView.findViewById(2131165633).setVisibility(8);
-      aAF = ((ImageView)paramView.findViewById(2131165632));
-      ((ImageView)paramView.findViewById(2131165634)).setOnClickListener(new View.OnClickListener()
+      paramView.findViewById(2131759360).setVisibility(8);
+      amO = ((ImageView)paramView.findViewById(2131755217));
+      ((ImageView)paramView.findViewById(2131759361)).setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
-          kv();
+          iY();
         }
       });
-      alm = new WindowManager.LayoutParams();
-      alm.height = -2;
-      alm.width = -2;
-      all = ((WindowManager)paramContext.getSystemService("window"));
-      alm.x = 0;
-      alm.y = 0;
-      alm.flags = 40;
-      alm.type = 2002;
+      Yl = new WindowManager.LayoutParams();
+      Yl.height = -2;
+      Yl.width = -2;
+      Yk = ((WindowManager)paramContext.getSystemService("window"));
+      Yl.x = 0;
+      Yl.y = 0;
+      Yl.flags = 40;
+      Yl.type = 2002;
       mView = paramView;
-      alm.gravity = 51;
-      alm.format = 1;
-      alk = new FrameLayout(paramContext);
-      alk.setPadding(4, 4, 4, 4);
-      aln = new ViewGroup.LayoutParams(-2, -2);
-      alk.addView(mView, aln);
+      Yl.gravity = 51;
+      Yl.format = 1;
+      Yj = new FrameLayout(paramContext);
+      Yj.setPadding(4, 4, 4, 4);
+      Ym = new ViewGroup.LayoutParams(-2, -2);
+      Yj.addView(mView, Ym);
       paramContext = paramContext.getResources().getDisplayMetrics();
-      alk.setOnTouchListener(new View.OnTouchListener()
+      Yj.setOnTouchListener(new View.OnTouchListener()
       {
-        int kzD;
-        int kzE;
-        int kzF = paramContextwidthPixels - alm.width - 1;
-        int kzG = paramContextheightPixels - alm.height - 1;
-        long kzH;
+        int kYK;
+        int kYL;
+        int kYM = paramContextwidthPixels - Yl.width - 1;
+        int kYN = paramContextheightPixels - Yl.height - 1;
+        long kYO;
         
         public final boolean onTouch(View paramAnonymousView, MotionEvent paramAnonymousMotionEvent)
         {
@@ -83,72 +83,72 @@ public final class c
           do
           {
             return false;
-            kzD = ((int)paramAnonymousMotionEvent.getRawX() - alm.x);
-            kzE = ((int)paramAnonymousMotionEvent.getRawY() - alm.y);
-            kzH = System.currentTimeMillis();
+            kYK = ((int)paramAnonymousMotionEvent.getRawX() - Yl.x);
+            kYL = ((int)paramAnonymousMotionEvent.getRawY() - Yl.y);
+            kYO = System.currentTimeMillis();
             return false;
-            kzF = (paramContextwidthPixels - alm.width - 1);
-            kzG = (paramContextheightPixels - alm.height - 1);
-            alm.x = ((int)paramAnonymousMotionEvent.getRawX() - kzD);
-            alm.y = ((int)paramAnonymousMotionEvent.getRawY() - kzE);
-            paramAnonymousView = alm;
-            if (alm.x < 0)
+            kYM = (paramContextwidthPixels - Yl.width - 1);
+            kYN = (paramContextheightPixels - Yl.height - 1);
+            Yl.x = ((int)paramAnonymousMotionEvent.getRawX() - kYK);
+            Yl.y = ((int)paramAnonymousMotionEvent.getRawY() - kYL);
+            paramAnonymousView = Yl;
+            if (Yl.x < 0)
             {
               i = 0;
               x = i;
-              paramAnonymousView = alm;
-              if (alm.x <= kzF) {
+              paramAnonymousView = Yl;
+              if (Yl.x <= kYM) {
                 break label339;
               }
-              i = kzF;
+              i = kYM;
               x = i;
-              paramAnonymousView = alm;
-              if (alm.y >= 0) {
+              paramAnonymousView = Yl;
+              if (Yl.y >= 0) {
                 break label353;
               }
               i = 0;
               y = i;
-              paramAnonymousView = alm;
-              if (alm.y <= kzG) {
+              paramAnonymousView = Yl;
+              if (Yl.y <= kYN) {
                 break label367;
               }
             }
-            for (int i = kzG;; i = alm.y)
+            for (int i = kYN;; i = Yl.y)
             {
               y = i;
-              all.updateViewLayout(alk, alm);
+              Yk.updateViewLayout(Yj, Yl);
               return false;
-              i = alm.x;
+              i = Yl.x;
               break;
-              i = alm.x;
+              i = Yl.x;
               break label229;
-              i = alm.y;
+              i = Yl.y;
               break label257;
             }
-          } while (System.currentTimeMillis() - kzH >= 300L);
-          a.aZe();
-          a.z(false, true);
-          kv();
+          } while (System.currentTimeMillis() - kYO >= 300L);
+          a.bev();
+          a.D(false, true);
+          iY();
           return false;
         }
       });
     }
     
-    public final void kv()
+    public final void iY()
     {
       try
       {
-        if (all != null)
+        if (Yk != null)
         {
-          if (alk != null) {
-            all.removeView(alk);
+          if (Yj != null) {
+            Yk.removeView(Yj);
           }
-          all = null;
+          Yk = null;
         }
-        if (alk != null)
+        if (Yj != null)
         {
-          alk.removeAllViews();
-          alk = null;
+          Yj.removeAllViews();
+          Yj = null;
         }
         mView = null;
         return;

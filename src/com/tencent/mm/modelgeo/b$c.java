@@ -2,15 +2,15 @@ package com.tencent.mm.modelgeo;
 
 final class b$c
 {
-  Object bOa = "";
   double lat;
   double lng;
+  Object tag = "";
   
   public b$c(b paramb, double paramDouble1, double paramDouble2, Object paramObject)
   {
     lat = paramDouble1;
     lng = paramDouble2;
-    bOa = paramObject;
+    tag = paramObject;
   }
   
   public final boolean equals(Object paramObject)
@@ -25,16 +25,16 @@ final class b$c
   {
     StringBuilder localStringBuilder = new StringBuilder().append((int)(lat * 1000000.0D)).append((int)(lng * 1000000.0D));
     String str;
-    if (bOa == null) {
+    if (tag == null) {
       str = "";
     }
     for (;;)
     {
       return str;
-      if (((bOa instanceof Integer)) || ((bOa instanceof Long)) || ((bOa instanceof Double)) || ((bOa instanceof Float)) || ((bOa instanceof String))) {
-        str = bOa;
+      if (((tag instanceof Integer)) || ((tag instanceof Long)) || ((tag instanceof Double)) || ((tag instanceof Float)) || ((tag instanceof String))) {
+        str = tag;
       } else {
-        str = bOa.toString();
+        str = tag.toString();
       }
     }
   }

@@ -12,8 +12,8 @@ final class b$2
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    if ((b.a(liw) instanceof MMActivity)) {
-      ((MMActivity)b.a(liw)).age();
+    if ((b.a(lIH) instanceof MMActivity)) {
+      ((MMActivity)b.a(lIH)).aiI();
     }
     return false;
   }

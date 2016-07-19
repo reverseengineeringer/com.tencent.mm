@@ -1,16 +1,16 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.h.d;
-import com.tencent.mm.protocal.j.a;
-import com.tencent.mm.protocal.j.b;
-import com.tencent.mm.r.h;
+import com.tencent.mm.protocal.k.c;
+import com.tencent.mm.protocal.k.d;
+import com.tencent.mm.protocal.m.a;
+import com.tencent.mm.protocal.m.b;
+import com.tencent.mm.t.h;
 
 public final class u$a
   extends h
 {
-  private final j.a bMM = new j.a();
-  private final j.b bMN = new j.b();
+  private final m.a bGg = new m.a();
+  private final m.b bGh = new m.b();
   
   public final int getType()
   {
@@ -22,17 +22,17 @@ public final class u$a
     return "/cgi-bin/micromsg-bin/bindopmobileforreg";
   }
   
-  protected final h.c tW()
+  protected final k.c tX()
   {
-    return bMM;
+    return bGg;
   }
   
-  public final h.d tX()
+  public final k.d tY()
   {
-    return bMN;
+    return bGh;
   }
   
-  public final int vx()
+  public final int vz()
   {
     return 1;
   }

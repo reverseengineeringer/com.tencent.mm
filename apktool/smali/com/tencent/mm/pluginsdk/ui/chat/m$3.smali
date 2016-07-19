@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iMH:Lcom/tencent/mm/pluginsdk/ui/chat/m;
+.field final synthetic jjE:Lcom/tencent/mm/pluginsdk/ui/chat/m;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 72
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m$3;->iMH:Lcom/tencent/mm/pluginsdk/ui/chat/m;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m$3;->jjE:Lcom/tencent/mm/pluginsdk/ui/chat/m;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 89
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m$3;->iMH:Lcom/tencent/mm/pluginsdk/ui/chat/m;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m$3;->jjE:Lcom/tencent/mm/pluginsdk/ui/chat/m;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/m;->a(Lcom/tencent/mm/pluginsdk/ui/chat/m;)Lcom/tencent/mm/pluginsdk/ui/chat/m$a;
 
@@ -56,7 +56,7 @@
     if-lez v0, :cond_0
 
     .line 90
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m$3;->iMH:Lcom/tencent/mm/pluginsdk/ui/chat/m;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m$3;->jjE:Lcom/tencent/mm/pluginsdk/ui/chat/m;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/m;->a(Lcom/tencent/mm/pluginsdk/ui/chat/m;)Lcom/tencent/mm/pluginsdk/ui/chat/m$a;
 
@@ -66,11 +66,11 @@
 
     aget-object v1, p2, v1
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/chat/m$a;->ww(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/chat/m$a;->xP(Ljava/lang/String;)V
 
     .line 93
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m$3;->iMH:Lcom/tencent/mm/pluginsdk/ui/chat/m;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m$3;->jjE:Lcom/tencent/mm/pluginsdk/ui/chat/m;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/m;->b(Lcom/tencent/mm/pluginsdk/ui/chat/m;)Landroid/widget/Button;
 
@@ -79,7 +79,7 @@
     if-nez v0, :cond_1
 
     .line 94
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m$3;->iMH:Lcom/tencent/mm/pluginsdk/ui/chat/m;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/m$3;->jjE:Lcom/tencent/mm/pluginsdk/ui/chat/m;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/chat/m;->c(Lcom/tencent/mm/pluginsdk/ui/chat/m;)V
 
@@ -88,7 +88,7 @@
     return-void
 .end method
 
-.method public final aRk()V
+.method public final aVW()V
     .locals 0
 
     .prologue
@@ -96,7 +96,7 @@
     return-void
 .end method
 
-.method public final aRl()V
+.method public final aVX()V
     .locals 0
 
     .prologue

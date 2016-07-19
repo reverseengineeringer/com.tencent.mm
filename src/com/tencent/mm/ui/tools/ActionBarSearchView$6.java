@@ -5,7 +5,6 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnKeyListener;
 import android.widget.EditText;
-import com.tencent.mm.sdk.platformtools.u;
 import java.lang.ref.WeakReference;
 
 final class ActionBarSearchView$6
@@ -17,12 +16,12 @@ final class ActionBarSearchView$6
   {
     if (paramInt == 67)
     {
-      u.d("!44@/B4Tb64lLpL4/IPflj+tleANqnL7qi1AFYpzfZUCVoE=", "on back key click.");
-      Object localObject = ActionBarSearchView.b(ltH);
-      if (lys)
+      com.tencent.mm.sdk.platformtools.v.d("MicroMsg.ActionBarSearchView", "on back key click.");
+      Object localObject = ActionBarSearchView.b(lUJ);
+      if (lZg)
       {
-        paramView = (EditText)lyq.get();
-        if ((paramView != null) && (lyp != null)) {}
+        paramView = (EditText)lZe.get();
+        if ((paramView != null) && (lZd != null)) {}
       }
       else
       {
@@ -32,8 +31,8 @@ final class ActionBarSearchView$6
       paramInt = paramView.getSelectionStart();
       if (paramInt == paramView.getSelectionEnd())
       {
-        localObject = ((v)localObject).rS(paramInt);
-        if ((localObject != null) && (lyB))
+        localObject = ((v)localObject).tW(paramInt);
+        if ((localObject != null) && (lZp))
         {
           paramKeyEvent.delete(start, start + length);
           paramView.setTextKeepState(paramKeyEvent);

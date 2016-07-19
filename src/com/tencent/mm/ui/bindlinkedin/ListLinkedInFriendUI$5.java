@@ -5,20 +5,20 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import com.tencent.mm.modelfriend.s;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class ListLinkedInFriendUI$5
   implements AdapterView.OnItemClickListener
 {
   ListLinkedInFriendUI$5(ListLinkedInFriendUI paramListLinkedInFriendUI) {}
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    u.d("!44@/B4Tb64lLpJ4FHnyJpFGLC6Xej9PxJXB86Z93mHPIZQ=", "onItemClick position:%d,", new Object[] { Integer.valueOf(paramInt) });
-    if (ListLinkedInFriendUI.f(kOk) != null)
+    v.d("MicroMsg.LinkedInFriendUI", "onItemClick position:%d,", new Object[] { Integer.valueOf(paramInt) });
+    if (ListLinkedInFriendUI.f(lnA) != null)
     {
-      int i = ListLinkedInFriendUI.g(kOk).getHeaderViewsCount();
-      ListLinkedInFriendUI.a(kOk, (s)ListLinkedInFriendUI.f(kOk).getItem(paramInt - i));
+      int i = ListLinkedInFriendUI.g(lnA).getHeaderViewsCount();
+      ListLinkedInFriendUI.a(lnA, (s)ListLinkedInFriendUI.f(lnA).getItem(paramInt - i));
     }
   }
 }

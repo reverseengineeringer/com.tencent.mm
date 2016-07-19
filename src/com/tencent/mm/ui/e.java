@@ -10,10 +10,10 @@ import com.tencent.mm.dbsupport.newcursor.a;
 import com.tencent.mm.dbsupport.newcursor.f;
 import com.tencent.mm.dbsupport.newcursor.k;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -21,31 +21,31 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public abstract class e
+public abstract class e<K, T extends a>
   extends BaseAdapter
 {
-  public String TAG = "!44@/B4Tb64lLpJ+mcb97U9hxtX6gGooumjq7DJ96+X83HQ=";
-  private int bvB;
+  public String TAG = "MicroMsg.CursorDataAdapter";
+  private int bku;
   public Context context;
-  private int eKM = 0;
-  public boolean kjN = true;
-  private c kjO;
-  private HashMap kjP;
-  protected a kjQ;
-  public int kjR = 1000;
-  public int kjS = 3000;
-  public boolean kjT = true;
-  int kjU = 0;
-  private boolean kjV;
-  private boolean kjW;
-  private e kjX;
-  public Object kjY = null;
+  private int eSH = 0;
+  public boolean kJV = true;
+  private e<K, T>.c kJW;
+  private HashMap<K, b<K, T>> kJX;
+  protected a kJY;
+  public int kJZ = 1000;
+  public int kKa = 3000;
+  public boolean kKb = true;
+  int kKc = 0;
+  private boolean kKd;
+  private boolean kKe;
+  private e<K, T>.e kKf;
+  public K kKg = null;
   
   public e(Context paramContext)
   {
     this(true, paramContext);
-    bvB = 5000;
-    u.i(TAG, "newCursor setPageSize %d", new Object[] { Integer.valueOf(5000) });
+    bku = 5000;
+    v.i(TAG, "newCursor setPageSize %d", new Object[] { Integer.valueOf(5000) });
   }
   
   public e(Context paramContext, byte paramByte)
@@ -56,134 +56,134 @@ public abstract class e
   private e(Context paramContext, int paramInt1, int paramInt2)
   {
     context = paramContext;
-    kjV = true;
-    kjW = false;
-    kjR = 800;
-    kjS = 2000;
+    kKd = true;
+    kKe = false;
+    kJZ = 800;
+    kKa = 2000;
   }
   
   private e(boolean paramBoolean, Context paramContext)
   {
     context = paramContext;
-    kjV = true;
+    kKd = true;
   }
   
-  private void a(com.tencent.mm.dbsupport.newcursor.e parame)
+  private void a(com.tencent.mm.dbsupport.newcursor.e<K> parame)
   {
-    gV(true);
-    if ((kjO == null) || (kjO.bvI != parame))
+    hv(true);
+    if ((kJW == null) || (kJW.bkB != parame))
     {
-      if ((kjO != null) && (!kjO.isClosed()))
+      if ((kJW != null) && (!kJW.isClosed()))
       {
-        kjO.close();
-        kjO = null;
+        kJW.close();
+        kJW = null;
       }
-      kjO = new c(parame);
-      kjO.getCount();
-      aZE();
+      kJW = new c(parame);
+      kJW.getCount();
+      bfc();
       notifyDataSetChanged();
     }
   }
   
-  private void a(c paramc)
+  private void a(e<K, T>.c parame)
   {
-    gV(false);
-    kjO = paramc;
-    kjO.getCount();
-    aZE();
+    hv(false);
+    kJW = parame;
+    kJW.getCount();
+    bfc();
   }
   
-  private void a(final c paramc, boolean paramBoolean1, boolean paramBoolean2)
+  private void a(final e<K, T>.c parame, boolean paramBoolean1, boolean paramBoolean2)
   {
     if (paramBoolean1)
     {
-      if ((kjX != null) && (kjX.aZQ())) {
-        kjX.aZO();
+      if ((kKf != null) && (kKf.bfo())) {
+        kKf.bfm();
       }
-      if (kjP != null) {
-        kjP.clear();
+      if (kJX != null) {
+        kJX.clear();
       }
     }
     if (paramBoolean2)
     {
       a(new d()
       {
-        public final void aZL()
+        public final void bfj()
         {
-          e.a(e.this, paramc);
+          e.a(e.this, parame);
         }
       });
       return;
     }
-    a(paramc);
+    a(parame);
   }
   
   private void a(d paramd)
   {
     long l = System.currentTimeMillis();
-    if (kjQ != null) {
-      kjQ.Gi();
+    if (kJY != null) {
+      kJY.GF();
     }
-    paramd.aZL();
+    paramd.bfj();
     notifyDataSetChanged();
-    if (kjQ != null) {
-      kjQ.Gh();
+    if (kJY != null) {
+      kJY.GE();
     }
-    if (kjX != null) {
-      kjX.aZR();
+    if (kKf != null) {
+      kKf.bfp();
     }
-    u.i(TAG, "newcursor update callback last :%d ", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+    v.i(TAG, "newcursor update callback last :%d ", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
   }
   
-  private void aZE()
+  private void bfc()
   {
-    if (kjV) {
-      if (!kjO.qG()) {
+    if (kKd) {
+      if (!kJW.pk()) {
         break label95;
       }
     }
     label95:
     for (int i = 1;; i = 2)
     {
-      if ((i != kjU) && (kjU != 0))
+      if ((i != kKc) && (kKc != 0))
       {
-        if ((kjX != null) && (kjX.aZQ())) {
-          a(new c(aZG()), true, false);
+        if ((kKf != null) && (kKf.bfo())) {
+          a(new c(bfe()), true, false);
         }
-        u.i(TAG, "newcursor change update stats  %d ", new Object[] { Integer.valueOf(i) });
+        v.i(TAG, "newcursor change update stats  %d ", new Object[] { Integer.valueOf(i) });
       }
-      kjU = i;
+      kKc = i;
       return;
     }
   }
   
-  private void aZI()
+  private void bfg()
   {
-    kjP.clear();
-    kjP.put(kjY, null);
+    kJX.clear();
+    kJX.put(kKg, null);
   }
   
-  private int aZJ()
+  private int bfh()
   {
-    if ((kjP == null) || (kjP.size() == 0)) {
+    if ((kJX == null) || (kJX.size() == 0)) {
       return 0;
     }
-    if (kjP.containsKey(kjY)) {
+    if (kJX.containsKey(kKg)) {
       return 2;
     }
     return 1;
   }
   
-  private void aZK()
+  private void bfi()
   {
-    if ((kjO != null) && (!kjO.isClosed()) && (kjP.size() == 0))
+    if ((kJW != null) && (!kJW.isClosed()) && (kJX.size() == 0))
     {
-      u.i(TAG, "events size is 0  ");
+      v.i(TAG, "events size is 0  ");
       return;
     }
     a(new d()
     {
-      public final void aZL()
+      public final void bfj()
       {
         Object localObject1;
         Object localObject2;
@@ -192,9 +192,9 @@ public abstract class e
           localObject1 = new HashSet(e.b(e.this).size());
           localObject2 = e.b(e.this).values().iterator();
           while (((Iterator)localObject2).hasNext()) {
-            ((HashSet)localObject1).add(nextgB);
+            ((HashSet)localObject1).add(nextgW);
           }
-          u.i(TAG, "newcursor all event is delete");
+          v.i(TAG, "newcursor all event is delete");
           e.c(e.this).b(((HashSet)localObject1).toArray(), null);
         }
         for (;;)
@@ -202,10 +202,10 @@ public abstract class e
           e.b(e.this).clear();
           return;
           long l;
-          if (!e.b(e.this).containsKey(kjY))
+          if (!e.b(e.this).containsKey(kKg))
           {
             l = System.currentTimeMillis();
-            localObject2 = aZH();
+            localObject2 = bff();
             localObject1 = a(new HashSet(e.b(e.this).values()), (SparseArray[])localObject2);
             int j = localObject2.length;
             if (j > 1)
@@ -213,57 +213,49 @@ public abstract class e
               int i = 0;
               while (i < j)
               {
-                u.i(TAG, "newcursor %d  refreshPosistion last :%d, oldpos size is %d ,newpos size is %d  ", new Object[] { Integer.valueOf(i), Long.valueOf(System.currentTimeMillis() - l), Integer.valueOf(localObject2[i].size()), Integer.valueOf(localObject1[i].size()) });
+                v.i(TAG, "newcursor %d  refreshPosistion last :%d, oldpos size is %d ,newpos size is %d  ", new Object[] { Integer.valueOf(i), Long.valueOf(System.currentTimeMillis() - l), Integer.valueOf(localObject2[i].size()), Integer.valueOf(localObject1[i].size()) });
                 i += 1;
               }
             }
-            u.i(TAG, "newcursor refreshPosistion last :%d, oldpos size is %d ,newpos size is %d  ", new Object[] { Long.valueOf(System.currentTimeMillis() - l), Integer.valueOf(localObject2[0].size()), Integer.valueOf(localObject1[0].size()) });
+            v.i(TAG, "newcursor refreshPosistion last :%d, oldpos size is %d ,newpos size is %d  ", new Object[] { Long.valueOf(System.currentTimeMillis() - l), Integer.valueOf(localObject2[0].size()), Integer.valueOf(localObject1[0].size()) });
             localObject2 = e.b(e.this).values().iterator();
-            if (((Iterator)localObject2).hasNext())
+            while (((Iterator)localObject2).hasNext())
             {
               e.b localb = (e.b)((Iterator)localObject2).next();
-              if (localb != null) {
-                if (kkc != null) {
-                  u.i(TAG, "newcursor notify cache update : key : %s ", new Object[] { gB });
-                }
-              }
-              for (;;)
+              if (localb != null)
               {
-                e.c(e.this).b(gB, (a)kkc);
-                break;
-                u.e(TAG, "newcursor event is null ! ");
+                if (kKk != null) {
+                  v.i(TAG, "newcursor notify cache update : key : %s ", new Object[] { gW });
+                }
+                e.c(e.this).b(gW, (a)kKk);
+              }
+              else
+              {
+                v.e(TAG, "newcursor event is null ! ");
               }
             }
             a((SparseArray[])localObject1);
-            u.i(TAG, "newcursor after resort new pos size :%d  ", new Object[] { Integer.valueOf(e.c(e.this).qH()[0].size()) });
+            v.i(TAG, "newcursor after resort new pos size :%d  ", new Object[] { Integer.valueOf(e.c(e.this).pl()[0].size()) });
           }
           else
           {
             l = System.currentTimeMillis();
-            e.a(e.this, new e.c(e.this, aZG()), true, false);
-            u.i(TAG, "cache unuseful,reset cursor,last : %d", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+            e.a(e.this, new e.c(e.this, bfe()), true, false);
+            v.i(TAG, "cache unuseful,reset cursor,last : %d", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
           }
         }
       }
     });
   }
   
-  public final a V(Object paramObject)
-  {
-    if (kjO == null) {
-      return null;
-    }
-    return kjO.bvI.V(paramObject);
-  }
-  
   public final void a(a parama)
   {
-    kjQ = parama;
+    kJY = parama;
   }
   
-  public final void a(SparseArray[] paramArrayOfSparseArray)
+  public final void a(SparseArray<K>[] paramArrayOfSparseArray)
   {
-    SparseArray[] arrayOfSparseArray = kjO.qH();
+    SparseArray[] arrayOfSparseArray = kJW.pl();
     int i = 0;
     while (i < arrayOfSparseArray.length)
     {
@@ -278,36 +270,60 @@ public abstract class e
     }
   }
   
-  public abstract SparseArray[] a(HashSet paramHashSet, SparseArray[] paramArrayOfSparseArray);
+  public abstract SparseArray<K>[] a(HashSet<b<K, T>> paramHashSet, SparseArray<K>[] paramArrayOfSparseArray);
   
-  public final void aZD()
+  public final T ag(K paramK)
   {
-    kjQ = null;
+    if (kJW == null) {
+      return null;
+    }
+    return kJW.bkB.ag(paramK);
   }
   
-  public final int aZF()
+  public final void az(String paramString, boolean paramBoolean)
   {
-    if (kjO == null) {
+    if (eSH == 0) {}
+    for (int i = 1;; i = 0)
+    {
+      if ((i == 0) && ((kKb | paramBoolean)))
+      {
+        if (!paramBoolean) {
+          v.i(TAG, "newcursor cache needRefresh : needRefreshInfront :%b from : %s %s", new Object[] { Boolean.valueOf(kKb), paramString, be.baX() });
+        }
+        hu(false);
+      }
+      return;
+    }
+  }
+  
+  public final void bfb()
+  {
+    kJY = null;
+  }
+  
+  public final int bfd()
+  {
+    if (kJW == null) {
       return 0;
     }
-    com.tencent.mm.dbsupport.newcursor.e locale = kjO.bvI;
+    com.tencent.mm.dbsupport.newcursor.e locale = kJW.bkB;
     if (locale == null) {
       return 0;
     }
     if ((locale instanceof f)) {
-      return bvx[0].getCount();
+      return bkq[0].getCount();
     }
     throw new RuntimeException("the cursor is not instanceof MergeHeapCursor ,please call getCount() instead ");
   }
   
-  public abstract com.tencent.mm.dbsupport.newcursor.e aZG();
+  public abstract com.tencent.mm.dbsupport.newcursor.e<K> bfe();
   
-  public final SparseArray[] aZH()
+  public final SparseArray<K>[] bff()
   {
-    if (kjO == null) {
+    if (kJW == null) {
       return null;
     }
-    SparseArray[] arrayOfSparseArray1 = kjO.qH();
+    SparseArray[] arrayOfSparseArray1 = kJW.pl();
     SparseArray[] arrayOfSparseArray2 = new SparseArray[arrayOfSparseArray1.length];
     int i = 0;
     while (i < arrayOfSparseArray2.length)
@@ -324,58 +340,59 @@ public abstract class e
     return arrayOfSparseArray2;
   }
   
-  public final void ap(String paramString, boolean paramBoolean)
+  public final T cJ(int paramInt)
   {
-    if (eKM == 0) {}
-    for (int i = 1;; i = 0)
-    {
-      if ((i == 0) && ((kjT | paramBoolean)))
-      {
-        if (!paramBoolean) {
-          u.i(TAG, "newcursor cache needRefresh : needRefreshInfront :%b from : %s %s", new Object[] { Boolean.valueOf(kjT), paramString, ay.aVJ() });
-        }
-        gU(false);
-      }
-      return;
+    if (kJW == null) {
+      a(bfe());
     }
-  }
-  
-  public final a cj(int paramInt)
-  {
-    if (kjO == null) {
-      a(aZG());
-    }
-    ap("getItem", false);
-    kjO.bvI.moveToPosition(paramInt);
-    a locala = kjO.bvI.cj(paramInt);
+    az("getItem", false);
+    kJW.bkB.moveToPosition(paramInt);
+    a locala = kJW.bkB.cJ(paramInt);
     if (locala != null)
     {
-      locala.qC();
+      locala.pg();
       return locala;
     }
-    u.e(TAG, "newcursor getItem error %d", new Object[] { Integer.valueOf(paramInt) });
+    v.e(TAG, "newcursor getItem error %d", new Object[] { Integer.valueOf(paramInt) });
     return locala;
   }
   
-  public abstract ArrayList d(ArrayList paramArrayList);
+  public abstract ArrayList<T> e(ArrayList<K> paramArrayList);
   
-  public final void gU(boolean paramBoolean)
+  public int getCount()
+  {
+    if (kJW == null)
+    {
+      long l = System.currentTimeMillis();
+      a(bfe());
+      v.i(TAG, "newcursor createCursor last : %d", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+    }
+    az("getcount", false);
+    return kJW.getCount();
+  }
+  
+  public long getItemId(int paramInt)
+  {
+    return 0L;
+  }
+  
+  public final void hu(boolean paramBoolean)
   {
     int i;
-    if ((kjW) || (paramBoolean)) {
-      if (((kjX != null) && (kjX.aZQ())) || (aZJ() != 0))
+    if ((kKe) || (paramBoolean)) {
+      if (((kKf != null) && (kKf.bfo())) || (bfh() != 0))
       {
         i = 1;
         if (i != 0)
         {
-          i = aZJ();
-          if (kjX == null) {
+          i = bfh();
+          if (kKf == null) {
             break label239;
           }
-          int j = kjX.aZS();
-          u.i(TAG, "newcursor mWorkerHandler.isHandingMsg,type is %d ", new Object[] { Integer.valueOf(j) });
+          int j = kKf.bfq();
+          v.i(TAG, "newcursor mWorkerHandler.isHandingMsg,type is %d ", new Object[] { Integer.valueOf(j) });
           if (j != 0) {
-            kjX.aZO();
+            kKf.bfm();
           }
           if (i == 2) {
             break label239;
@@ -387,92 +404,75 @@ public abstract class e
     label239:
     for (;;)
     {
-      u.i(TAG, "newcursor ensureNewState  refreshstatus is %d ", new Object[] { Integer.valueOf(i) });
-      eKM = 0;
+      v.i(TAG, "newcursor ensureNewState  refreshstatus is %d ", new Object[] { Integer.valueOf(i) });
+      eSH = 0;
       if (i == 2) {
-        a(new c(aZG()), true, true);
+        a(new c(bfe()), true, true);
       }
       for (;;)
       {
-        eKM = 0;
+        eSH = 0;
         return;
         i = 0;
         break;
-        aZK();
+        bfi();
         continue;
-        i = aZJ();
+        i = bfh();
         if (i == 0)
         {
-          u.i(TAG, "newcursor need not change ");
+          v.i(TAG, "newcursor need not change ");
           return;
         }
         if (i == 2)
         {
-          u.i(TAG, "newcursor enqueueMessage resetcursor ");
-          kjP.clear();
+          v.i(TAG, "newcursor enqueueMessage resetcursor ");
+          kJX.clear();
         }
-        if (kjX == null) {
-          kjX = new e();
+        if (kKf == null) {
+          kKf = new e();
         }
-        kjX.pT(i);
+        kKf.rI(i);
       }
     }
   }
   
-  public final void gV(boolean paramBoolean)
+  public final void hv(boolean paramBoolean)
   {
-    if (kjO != null)
+    if (kJW != null)
     {
-      kjO.close();
-      kjO = null;
+      kJW.close();
+      kJW = null;
     }
-    if ((paramBoolean) && (kjX != null))
+    if ((paramBoolean) && (kKf != null))
     {
-      kjX.quit();
-      kjX = null;
-      if (kjP != null)
+      kKf.quit();
+      kKf = null;
+      if (kJX != null)
       {
-        kjP.clear();
-        u.i(TAG, "newcursor closeCursor,clear events");
+        kJX.clear();
+        v.i(TAG, "newcursor closeCursor,clear events");
       }
     }
-    eKM = 0;
-    kjU = 0;
+    eSH = 0;
+    kKc = 0;
   }
   
-  public int getCount()
-  {
-    if (kjO == null)
-    {
-      long l = System.currentTimeMillis();
-      a(aZG());
-      u.i(TAG, "newcursor createCursor last : %d", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
-    }
-    ap("getcount", false);
-    return kjO.getCount();
-  }
-  
-  public long getItemId(int paramInt)
-  {
-    return 0L;
-  }
-  
-  public void h(Object paramObject, int paramInt)
+  public void i(K paramK, int paramInt)
   {
     boolean bool;
-    if (kjO != null)
+    if (kJW != null)
     {
-      if (kjP == null) {
-        kjP = new HashMap();
+      if (kJX == null) {
+        kJX = new HashMap();
       }
-      bool = kjP.containsKey(kjY);
-      if ((paramInt != 5) && (kjV) && (paramInt != 1)) {
+      bool = kJX.containsKey(kKg);
+      if ((paramInt != 5) && (kKd) && (paramInt != 1)) {
         break label198;
       }
       if (paramInt == 5) {
         break label171;
       }
-      aZI();
+      bfg();
     }
     label87:
     label170:
@@ -485,41 +485,41 @@ public abstract class e
     do
     {
       break label170;
-      u.i(TAG, "newcursor syncHandle is true ,changeType is %d  ", new Object[] { Integer.valueOf(paramInt) });
+      v.i(TAG, "newcursor syncHandle is true ,changeType is %d  ", new Object[] { Integer.valueOf(paramInt) });
       int i = 1;
-      eKM = aZJ();
-      paramObject = TAG;
-      int j = eKM;
-      if (kjU == 1) {}
+      eSH = bfh();
+      paramK = TAG;
+      int j = eSH;
+      if (kKc == 1) {}
       for (bool = true;; bool = false)
       {
-        u.i((String)paramObject, "newcursor refreshStatus: %d ,hasLoadedAllDataStatus %b changeType :%d ", new Object[] { Integer.valueOf(j), Boolean.valueOf(bool), Integer.valueOf(paramInt) });
+        v.i(paramK, "newcursor refreshStatus: %d ,hasLoadedAllDataStatus %b changeType :%d ", new Object[] { Integer.valueOf(j), Boolean.valueOf(bool), Integer.valueOf(paramInt) });
         if (i == 0) {
           break label715;
         }
-        u.i(TAG, "newcursor event is refresh sync ");
-        gU(true);
+        v.i(TAG, "newcursor event is refresh sync ");
+        hu(true);
         return;
         if (bool) {
           break;
         }
-        kjP.put(paramObject, new b(paramObject, paramInt, null));
+        kJX.put(paramK, new b(paramK, paramInt, null));
         break;
         if (bool)
         {
-          u.i(TAG, "newcursor need reset ,return ");
+          v.i(TAG, "newcursor need reset ,return ");
           return;
         }
-        if (kjU == 1)
+        if (kKc == 1)
         {
-          if ((kjO.T(paramObject)) || (paramInt == 2))
+          if ((kJW.ae(paramK)) || (paramInt == 2))
           {
-            HashMap localHashMap = kjP;
-            b localb1 = new b(paramObject, paramInt, null);
-            if ((kkb == 2) && (kjO.T(gB))) {
-              kkb = 3;
+            HashMap localHashMap = kJX;
+            b localb1 = new b(paramK, paramInt, null);
+            if ((kKj == 2) && (kJW.ae(gW))) {
+              kKj = 3;
             }
-            b localb2 = (b)localHashMap.get(paramObject);
+            b localb2 = (b)localHashMap.get(paramK);
             if (localb2 != null)
             {
               i = 1;
@@ -527,120 +527,120 @@ public abstract class e
                 break label673;
               }
               localHashMap.remove(localb2);
-              switch (kkb)
+              switch (kKj)
               {
               case 3: 
               case 4: 
               default: 
-                switch (kkb)
+                switch (kKj)
                 {
                 case 3: 
                 case 4: 
                 default: 
-                  kkb = 3;
-                  localHashMap.put(paramObject, localb1);
+                  kKj = 3;
+                  localHashMap.put(paramK, localb1);
                 }
                 break;
               }
             }
             for (;;)
             {
-              paramObject = kjO;
+              paramK = kJW;
               i = localHashMap.size();
-              if (!bvI.cl(i))
+              if (!bkB.cL(i))
               {
-                u.i(TAG, "newcursor events size exceed limit :size is :  %d", new Object[] { Integer.valueOf(localHashMap.size()) });
+                v.i(TAG, "newcursor events size exceed limit :size is :  %d", new Object[] { Integer.valueOf(localHashMap.size()) });
                 localHashMap.clear();
-                localHashMap.put(kjY, null);
+                localHashMap.put(kKg, null);
               }
-              u.i(TAG, "newcursor add event events size %d", new Object[] { Integer.valueOf(kjP.size()) });
+              v.i(TAG, "newcursor add event events size %d", new Object[] { Integer.valueOf(kJX.size()) });
               i = 0;
               break;
               i = 0;
               break label304;
-              switch (kkb)
+              switch (kKj)
               {
               case 2: 
               case 3: 
               case 4: 
               default: 
-                kkb = 5;
+                kKj = 5;
                 break;
               case 5: 
-                u.i(TAG, "newcursor processEvent last delete, now delete, impossible");
-                kkb = 5;
+                v.i(TAG, "newcursor processEvent last delete, now delete, impossible");
+                kKj = 5;
                 break;
-                switch (kkb)
+                switch (kKj)
                 {
                 case 3: 
                 case 4: 
                 default: 
-                  u.i(TAG, "newcursor processEvent last update, now insert, impossible");
-                  kkb = 2;
+                  v.i(TAG, "newcursor processEvent last update, now insert, impossible");
+                  kKj = 2;
                   break;
                 case 5: 
-                  kkb = 3;
+                  kKj = 3;
                   break;
                 case 2: 
-                  u.i(TAG, "newcursor processEvent last insert, now insert, impossible");
-                  kkb = 2;
+                  v.i(TAG, "newcursor processEvent last insert, now insert, impossible");
+                  kKj = 2;
                   break;
-                  u.i(TAG, "newcursor processEvent last delete, now update, impossible");
+                  v.i(TAG, "newcursor processEvent last delete, now update, impossible");
                   break label388;
-                  kkb = 2;
+                  kKj = 2;
                   break;
-                  localHashMap.put(paramObject, localb1);
+                  localHashMap.put(paramK, localb1);
                 }
                 break;
               }
             }
           }
-          u.i(TAG, "newcursor event pass ");
+          v.i(TAG, "newcursor event pass ");
           i = 0;
           break label87;
         }
-        aZI();
+        bfg();
         i = 0;
         break label87;
       }
-    } while ((!kjN) || (!kjT));
-    gU(false);
+    } while ((!kJV) || (!kKb));
+    hu(false);
   }
   
   public void pause()
   {
-    kjN = false;
-    u.i(TAG, "new cursor pasue");
+    kJV = false;
+    v.i(TAG, "new cursor pasue");
   }
   
-  public abstract a qD();
+  public abstract T ph();
   
-  public boolean qG()
+  public boolean pk()
   {
-    if (kjO == null) {
+    if (kJW == null) {
       return false;
     }
-    return kjO.qG();
+    return kJW.pk();
   }
   
   public static abstract interface a
   {
-    public abstract void Gh();
+    public abstract void GE();
     
-    public abstract void Gi();
+    public abstract void GF();
   }
   
-  public static final class b
+  public static final class b<K, T>
   {
-    public Object gB;
-    public int kkb;
-    public Object kkc;
+    public K gW;
+    public int kKj;
+    public T kKk;
     
-    public b(Object paramObject1, int paramInt, Object paramObject2)
+    public b(K paramK, int paramInt, T paramT)
     {
-      gB = paramObject1;
-      kkb = paramInt;
-      kkc = null;
+      gW = paramK;
+      kKj = paramInt;
+      kKk = null;
     }
     
     public final boolean equals(Object paramObject)
@@ -658,90 +658,90 @@ public abstract class e
             return false;
           }
           paramObject = (b)paramObject;
-          if (kkb != kkb) {
+          if (kKj != kKj) {
             return false;
           }
-          if (gB != null) {
+          if (gW != null) {
             break;
           }
-        } while (gB == null);
+        } while (gW == null);
         return false;
-      } while (gB.equals(gB));
+      } while (gW.equals(gW));
       return false;
     }
     
     public final int hashCode()
     {
-      int j = kkb;
-      if (gB == null) {}
-      for (int i = 0;; i = gB.hashCode()) {
+      int j = kKj;
+      if (gW == null) {}
+      for (int i = 0;; i = gW.hashCode()) {
         return i + (j + 31) * 31;
       }
     }
   }
   
   final class c
-    extends k
+    extends k<K, T>
   {
-    public c(com.tencent.mm.dbsupport.newcursor.e parame)
+    public c()
     {
       super(e.a(e.this));
     }
     
-    public final ArrayList d(ArrayList paramArrayList)
+    public final ArrayList<T> e(ArrayList paramArrayList)
     {
-      return e.this.d(paramArrayList);
+      return e.this.e(paramArrayList);
     }
     
-    public final a qM()
+    public final T pq()
     {
-      return qD();
+      return ph();
     }
   }
   
   private static abstract interface d
   {
-    public abstract void aZL();
+    public abstract void bfj();
   }
   
   private final class e
   {
-    b kkd;
-    private c kke;
-    LinkedList kkf;
-    int kkg;
+    e<K, T>.e.b kKl;
+    private e<K, T>.e.c kKm;
+    LinkedList<Integer> kKn;
+    int kKo;
     
     public e()
     {
-      aZM();
+      bfk();
     }
     
-    private void aZM()
+    private void bfk()
     {
-      kkd = new b(Looper.getMainLooper());
-      kke = new c(tvjVF.getLooper());
+      kKl = new b(Looper.getMainLooper());
+      kKm = new c(twkvy.getLooper());
     }
     
-    private void aZN()
+    private void bfl()
     {
-      Object localObject = kke;
-      ((c)localObject).removeMessages(kkn);
-      ((c)localObject).removeMessages(kko);
-      localObject = kkd;
-      kkj = true;
+      Object localObject = kKm;
+      ((c)localObject).removeMessages(kKv);
+      ((c)localObject).removeMessages(kKw);
+      localObject = kKl;
+      kKr = true;
       ((b)localObject).removeMessages(1);
       ((b)localObject).removeMessages(2);
-      kkf.clear();
-      kkg = 0;
+      kKn.clear();
+      kKo = 0;
     }
     
-    public final void aZO()
+    public final void bfm()
     {
       try
       {
-        u.i(TAG, "newcursor resetQueue ");
-        aZN();
-        aZM();
+        v.i(TAG, "newcursor resetQueue ");
+        bfl();
+        bfk();
         return;
       }
       finally
@@ -751,26 +751,26 @@ public abstract class e
       }
     }
     
-    final int aZP()
+    final int bfn()
     {
       int i = 0;
-      if (kkf.size() > 1) {
+      if (kKn.size() > 1) {
         i = 2;
       }
-      while (kkf.size() != 1) {
+      while (kKn.size() != 1) {
         return i;
       }
-      return ((Integer)kkf.get(0)).intValue();
+      return ((Integer)kKn.get(0)).intValue();
     }
     
     /* Error */
-    public final boolean aZQ()
+    public final boolean bfo()
     {
       // Byte code:
       //   0: aload_0
       //   1: monitorenter
       //   2: aload_0
-      //   3: getfield 170	com/tencent/mm/ui/e$e:kkg	I
+      //   3: getfield 173	com/tencent/mm/ui/e$e:kKo	I
       //   6: istore_1
       //   7: iload_1
       //   8: ifeq +9 -> 17
@@ -799,11 +799,11 @@ public abstract class e
       //   2	7	22	finally
     }
     
-    final void aZR()
+    final void bfp()
     {
       try
       {
-        kke.lastUpdateTime = System.currentTimeMillis();
+        kKm.lastUpdateTime = System.currentTimeMillis();
         return;
       }
       finally
@@ -813,11 +813,11 @@ public abstract class e
       }
     }
     
-    final int aZS()
+    final int bfq()
     {
       try
       {
-        int i = kkg;
+        int i = kKo;
         return i;
       }
       finally
@@ -827,27 +827,12 @@ public abstract class e
       }
     }
     
-    final void pT(int paramInt)
-    {
-      try
-      {
-        if (!kkf.contains(Integer.valueOf(paramInt))) {
-          kkf.add(Integer.valueOf(paramInt));
-        }
-        kkg = aZP();
-        c localc = kke;
-        localc.sendEmptyMessage(kko);
-        return;
-      }
-      finally {}
-    }
-    
     public final void quit()
     {
       try
       {
-        u.i(TAG, "newcursor quit ");
-        aZN();
+        v.i(TAG, "newcursor quit ");
+        bfl();
         return;
       }
       finally
@@ -857,22 +842,37 @@ public abstract class e
       }
     }
     
+    final void rI(int paramInt)
+    {
+      try
+      {
+        if (!kKn.contains(Integer.valueOf(paramInt))) {
+          kKn.add(Integer.valueOf(paramInt));
+        }
+        kKo = bfn();
+        c localc = kKm;
+        localc.sendEmptyMessage(kKw);
+        return;
+      }
+      finally {}
+    }
+    
     private final class a
     {
-      int kkh;
+      int kKp;
       
       public a(int paramInt)
       {
-        kkh = paramInt;
+        kKp = paramInt;
       }
     }
     
     final class b
-      extends aa
+      extends ac
     {
-      boolean kkj;
-      public final int kkk = 1;
-      public final int kkl = 2;
+      boolean kKr;
+      public final int kKs = 1;
+      public final int kKt = 2;
       
       public b(Looper paramLooper)
       {
@@ -882,14 +882,14 @@ public abstract class e
       public final void handleMessage(Message paramMessage)
       {
         super.handleMessage(paramMessage);
-        if (kkj) {}
+        if (kKr) {}
         do
         {
           return;
           synchronized (e.e.this)
           {
-            kkg = aZP();
-            u.i(TAG, "newcursor updateWorkerRefresh status %d", new Object[] { Integer.valueOf(kkg) });
+            kKo = bfn();
+            v.i(TAG, "newcursor updateWorkerRefresh status %d", new Object[] { Integer.valueOf(kKo) });
             if (what == 1)
             {
               e.d(e.this);
@@ -902,38 +902,38 @@ public abstract class e
     }
     
     final class c
-      extends aa
+      extends ac
     {
-      long kkm;
-      final int kkn = hashCode() | 0x776;
-      final int kko = hashCode() | 0x77A;
+      long kKu;
+      final int kKv = hashCode() | 0x776;
+      final int kKw = hashCode() | 0x77A;
       long lastUpdateTime;
       
       public c(Looper paramLooper)
       {
         super();
-        kkf = new LinkedList();
+        kKn = new LinkedList();
       }
       
       public final void handleMessage(Message paramMessage)
       {
         super.handleMessage(paramMessage);
-        if (what == kko)
+        if (what == kKw)
         {
-          removeMessages(kkn);
+          removeMessages(kKv);
           l = System.currentTimeMillis();
-          if ((l - kkm > kjR) || (l - kkm < 0L) || ((lastUpdateTime != 0L) && (l - lastUpdateTime > kjS)) || (l - lastUpdateTime < 0L))
+          if ((l - kKu > kJZ) || (l - kKu < 0L) || ((lastUpdateTime != 0L) && (l - lastUpdateTime > kKa)) || (l - lastUpdateTime < 0L))
           {
             e.e.a(e.e.this);
-            kkm = l;
+            kKu = l;
           }
         }
-        while (what != kkn) {
+        while (what != kKv) {
           for (;;)
           {
             long l;
             return;
-            sendEmptyMessageDelayed(kkn, kjR);
+            sendEmptyMessageDelayed(kKv, kJZ);
           }
         }
         e.e.a(e.e.this);

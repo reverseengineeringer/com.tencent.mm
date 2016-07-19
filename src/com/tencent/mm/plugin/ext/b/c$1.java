@@ -2,15 +2,15 @@ package com.tencent.mm.plugin.ext.b;
 
 import android.content.Intent;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.modelsimple.z;
+import com.tencent.mm.modelsimple.x;
 import com.tencent.mm.plugin.ext.a;
 import com.tencent.mm.pluginsdk.g;
-import com.tencent.mm.protocal.b.ami;
-import com.tencent.mm.protocal.b.amk;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.protocal.b.amt;
+import com.tencent.mm.protocal.b.amv;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 import java.io.IOException;
 import java.util.LinkedList;
 
@@ -19,22 +19,22 @@ final class c$1
 {
   c$1(c paramc) {}
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    ah.tE().b(106, this);
+    ah.tF().b(106, this);
     if ((paramInt1 == 0) && (paramInt2 == 0))
     {
-      u.i("!64@/B4Tb64lLpJfKsem8vz7H377OVeg21KplMgz7y7vvJgQRy0J6Js3s0NvtqjWv2k1", "hy: searched data.");
-      paramString = ((z)paramj).CL();
-      u.i("!64@/B4Tb64lLpJfKsem8vz7H377OVeg21KplMgz7y7vvJgQRy0J6Js3s0NvtqjWv2k1", "hy: contact count: %d", new Object[] { Integer.valueOf(jqM) });
-      if (jqM > 0)
+      v.i("MicroMsg.RedirectToChattingByPhoneHelper", "hy: searched data.");
+      paramString = ((x)paramj).CY();
+      v.i("MicroMsg.RedirectToChattingByPhoneHelper", "hy: contact count: %d", new Object[] { Integer.valueOf(jOQ) });
+      if (jOQ > 0)
       {
-        if (jqN.isEmpty())
+        if (jOR.isEmpty())
         {
-          u.i("!64@/B4Tb64lLpJfKsem8vz7H377OVeg21KplMgz7y7vvJgQRy0J6Js3s0NvtqjWv2k1", "hy: no result is retrieved. start to search UI");
-          c.a(dKB, paramString);
+          v.i("MicroMsg.RedirectToChattingByPhoneHelper", "hy: no result is retrieved. start to search UI");
+          c.a(dMc, paramString);
         }
-        if (jqN.size() <= 1) {}
+        if (jOR.size() <= 1) {}
       }
     }
     try
@@ -42,18 +42,18 @@ final class c$1
       paramj = new Intent();
       paramj.putExtra("add_more_friend_search_scene", 3);
       paramj.putExtra("result", paramString.toByteArray());
-      u.i("!64@/B4Tb64lLpJfKsem8vz7H377OVeg21KplMgz7y7vvJgQRy0J6Js3s0NvtqjWv2k1", "hy: more than one contact is resolved. starting to ContactSearchResultUI");
-      a.coa.x(paramj, c.a(dKB));
+      v.i("MicroMsg.RedirectToChattingByPhoneHelper", "hy: more than one contact is resolved. starting to ContactSearchResultUI");
+      a.cjo.x(paramj, c.a(dMc));
       return;
     }
     catch (IOException paramString) {}
-    c.a(dKB, (ami)jqN.getFirst());
+    c.a(dMc, (amt)jOR.getFirst());
     return;
-    u.i("!64@/B4Tb64lLpJfKsem8vz7H377OVeg21KplMgz7y7vvJgQRy0J6Js3s0NvtqjWv2k1", "hy: only one result is retrieved. start to chatting directly");
-    c.b(dKB, paramString);
+    v.i("MicroMsg.RedirectToChattingByPhoneHelper", "hy: only one result is retrieved. start to chatting directly");
+    c.b(dMc, paramString);
     return;
-    u.w("!64@/B4Tb64lLpJfKsem8vz7H377OVeg21KplMgz7y7vvJgQRy0J6Js3s0NvtqjWv2k1", "hy: err net.errType: %d, errCode: %d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
-    c.a(dKB, null);
+    v.w("MicroMsg.RedirectToChattingByPhoneHelper", "hy: err net.errType: %d, errCode: %d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    c.a(dMc, null);
     return;
   }
 }

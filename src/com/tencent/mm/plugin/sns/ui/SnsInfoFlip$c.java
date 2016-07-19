@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sns.ui;
 
 public abstract interface SnsInfoFlip$c
 {
-  public abstract void mc(int paramInt);
+  public abstract void nu(int paramInt);
 }
 
 /* Location:

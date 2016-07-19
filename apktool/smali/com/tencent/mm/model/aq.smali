@@ -13,11 +13,11 @@
 
 
 # static fields
-.field private static bBA:Lcom/tencent/mm/model/aq;
+.field private static buF:Lcom/tencent/mm/model/aq;
 
 
 # instance fields
-.field public bBz:Lcom/tencent/mm/model/aq$b;
+.field public buE:Lcom/tencent/mm/model/aq$b;
 
 
 # direct methods
@@ -32,20 +32,30 @@
     return-void
 .end method
 
-.method private static b(Ljava/lang/String;Ljava/util/List;)Z
+.method private static c(Ljava/lang/String;Ljava/util/List;)Z
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;)Z"
+        }
+    .end annotation
 
     .prologue
     const/4 v0, 0x0
 
     .line 242
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
     const-string/jumbo v2, "banner"
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/model/c;->dF(Ljava/lang/String;)Landroid/content/SharedPreferences;
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/model/c;->dO(Ljava/lang/String;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -142,20 +152,31 @@
     goto :goto_0
 .end method
 
-.method private static fh(Ljava/lang/String;)Ljava/util/List;
+.method private static fu(Ljava/lang/String;)Ljava/util/List;
     .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     const/4 v2, 0x0
 
     .line 256
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
     const-string/jumbo v1, "banner"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/model/c;->dF(Ljava/lang/String;)Landroid/content/SharedPreferences;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/model/c;->dO(Ljava/lang/String;)Landroid/content/SharedPreferences;
 
     move-result-object v3
 
@@ -237,7 +258,7 @@
     goto :goto_0
 .end method
 
-.method public static ua()Lcom/tencent/mm/model/aq;
+.method public static ub()Lcom/tencent/mm/model/aq;
     .locals 2
 
     .prologue
@@ -248,7 +269,7 @@
 
     .line 68
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/model/aq;->bBA:Lcom/tencent/mm/model/aq;
+    sget-object v0, Lcom/tencent/mm/model/aq;->buF:Lcom/tencent/mm/model/aq;
 
     if-nez v0, :cond_0
 
@@ -257,7 +278,7 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/model/aq;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/model/aq;->bBA:Lcom/tencent/mm/model/aq;
+    sput-object v0, Lcom/tencent/mm/model/aq;->buF:Lcom/tencent/mm/model/aq;
 
     .line 71
     :cond_0
@@ -266,7 +287,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 72
-    sget-object v0, Lcom/tencent/mm/model/aq;->bBA:Lcom/tencent/mm/model/aq;
+    sget-object v0, Lcom/tencent/mm/model/aq;->buF:Lcom/tencent/mm/model/aq;
 
     return-object v0
 
@@ -282,7 +303,7 @@
     throw v0
 .end method
 
-.method public static ub()Lcom/tencent/mm/model/ap;
+.method public static uc()Lcom/tencent/mm/model/ap;
     .locals 7
 
     .prologue
@@ -291,13 +312,13 @@
     const/4 v1, 0x0
 
     .line 125
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
     const-string/jumbo v2, "banner"
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/model/c;->dF(Ljava/lang/String;)Landroid/content/SharedPreferences;
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/model/c;->dO(Ljava/lang/String;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -351,24 +372,24 @@
 
     .line 137
     :sswitch_1
-    invoke-static {}, Lcom/tencent/mm/model/aq;->uc()I
+    invoke-static {}, Lcom/tencent/mm/model/aq;->ud()I
 
     move-result v0
 
     .line 139
-    sget v5, Lcom/tencent/mm/model/aq$a;->bBD:I
+    sget v5, Lcom/tencent/mm/model/aq$a;->buI:I
 
     if-eq v0, v5, :cond_2
 
-    sget v5, Lcom/tencent/mm/model/aq$a;->bBE:I
+    sget v5, Lcom/tencent/mm/model/aq$a;->buJ:I
 
     if-eq v0, v5, :cond_2
 
-    invoke-static {}, Lcom/tencent/mm/model/a/f;->uO()Lcom/tencent/mm/model/a/b;
+    invoke-static {}, Lcom/tencent/mm/model/a/f;->uQ()Lcom/tencent/mm/model/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/a/b;->uM()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/model/a/b;->uO()Z
 
     move-result v0
 
@@ -376,22 +397,22 @@
 
     .line 140
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/model/a/f;->uO()Lcom/tencent/mm/model/a/b;
+    invoke-static {}, Lcom/tencent/mm/model/a/f;->uQ()Lcom/tencent/mm/model/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/a/b;->uM()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/model/a/b;->uO()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
     .line 141
-    const-string/jumbo v0, "!44@kCDfVf11b5NCeprZfz972Ag4FJNFWg5rdvaK4iyvyKU="
+    const-string/jumbo v0, "MicorMsg.MainFrameBannerStorage"
 
     const-string/jumbo v2, "has abtest case. ignore bind bind contacts banner."
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_1
     move-object v0, v1
@@ -401,30 +422,30 @@
 
     .line 143
     :cond_3
-    const-string/jumbo v0, "!44@kCDfVf11b5NCeprZfz972Ag4FJNFWg5rdvaK4iyvyKU="
+    const-string/jumbo v0, "MicorMsg.MainFrameBannerStorage"
 
     const-string/jumbo v2, "already Bind the Mobile"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 149
     :sswitch_2
-    invoke-static {}, Lcom/tencent/mm/q/n;->vr()Lcom/tencent/mm/q/n;
+    invoke-static {}, Lcom/tencent/mm/s/n;->vt()Lcom/tencent/mm/s/n;
 
-    invoke-static {}, Lcom/tencent/mm/q/n;->vv()Z
+    invoke-static {}, Lcom/tencent/mm/s/n;->vx()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 150
-    const-string/jumbo v0, "!44@kCDfVf11b5NCeprZfz972Ag4FJNFWg5rdvaK4iyvyKU="
+    const-string/jumbo v0, "MicorMsg.MainFrameBannerStorage"
 
     const-string/jumbo v2, "avatar already existed"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -433,19 +454,19 @@
 
     .line 157
     :sswitch_3
-    invoke-static {}, Lcom/tencent/mm/model/aq;->uc()I
+    invoke-static {}, Lcom/tencent/mm/model/aq;->ud()I
 
     move-result v0
 
-    sget v5, Lcom/tencent/mm/model/aq$a;->bBD:I
+    sget v5, Lcom/tencent/mm/model/aq$a;->buI:I
 
     if-eq v0, v5, :cond_4
 
-    invoke-static {}, Lcom/tencent/mm/model/a/f;->uO()Lcom/tencent/mm/model/a/b;
+    invoke-static {}, Lcom/tencent/mm/model/a/f;->uQ()Lcom/tencent/mm/model/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/a/b;->uM()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/model/a/b;->uO()Z
 
     move-result v0
 
@@ -453,22 +474,22 @@
 
     .line 158
     :cond_4
-    invoke-static {}, Lcom/tencent/mm/model/a/f;->uO()Lcom/tencent/mm/model/a/b;
+    invoke-static {}, Lcom/tencent/mm/model/a/f;->uQ()Lcom/tencent/mm/model/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/a/b;->uM()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/model/a/b;->uO()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
     .line 159
-    const-string/jumbo v0, "!44@kCDfVf11b5NCeprZfz972Ag4FJNFWg5rdvaK4iyvyKU="
+    const-string/jumbo v0, "MicorMsg.MainFrameBannerStorage"
 
     const-string/jumbo v2, "has abtest case. ignore bind upload contacts banner."
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_2
     move-object v0, v1
@@ -478,21 +499,21 @@
 
     .line 161
     :cond_5
-    const-string/jumbo v0, "!44@kCDfVf11b5NCeprZfz972Ag4FJNFWg5rdvaK4iyvyKU="
+    const-string/jumbo v0, "MicorMsg.MainFrameBannerStorage"
 
     const-string/jumbo v2, "already upload the contacts"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
     .line 167
     :sswitch_4
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -514,11 +535,11 @@
     if-lez v0, :cond_1
 
     .line 169
-    const-string/jumbo v0, "!44@kCDfVf11b5NCeprZfz972Ag4FJNFWg5rdvaK4iyvyKU="
+    const-string/jumbo v0, "MicorMsg.MainFrameBannerStorage"
 
     const-string/jumbo v2, "already bind Google Account"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -564,7 +585,7 @@
     .end sparse-switch
 .end method
 
-.method public static uc()I
+.method public static ud()I
     .locals 7
 
     .prologue
@@ -572,11 +593,11 @@
 
     .line 275
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -591,11 +612,11 @@
     check-cast v0, Ljava/lang/String;
 
     .line 276
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v1
 
@@ -610,12 +631,12 @@
     check-cast v1, Ljava/lang/String;
 
     .line 278
-    invoke-static {}, Lcom/tencent/mm/model/h;->sE()Z
+    invoke-static {}, Lcom/tencent/mm/model/h;->sG()Z
 
     move-result v3
 
     .line 280
-    const-string/jumbo v4, "!44@kCDfVf11b5NCeprZfz972Ag4FJNFWg5rdvaK4iyvyKU="
+    const-string/jumbo v4, "MicorMsg.MainFrameBannerStorage"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -633,7 +654,7 @@
 
     move-result-object v5
 
-    invoke-static {}, Lcom/tencent/mm/model/h;->sg()I
+    invoke-static {}, Lcom/tencent/mm/model/h;->si()I
 
     move-result v6
 
@@ -645,7 +666,7 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 282
     if-eqz v0, :cond_0
@@ -679,7 +700,7 @@
     if-nez v1, :cond_4
 
     .line 289
-    sget v0, Lcom/tencent/mm/model/aq$a;->bBB:I
+    sget v0, Lcom/tencent/mm/model/aq$a;->buG:I
 
     .line 302
     :goto_0
@@ -692,7 +713,7 @@
     if-nez v1, :cond_5
 
     .line 292
-    sget v0, Lcom/tencent/mm/model/aq$a;->bBC:I
+    sget v0, Lcom/tencent/mm/model/aq$a;->buH:I
 
     goto :goto_0
 
@@ -701,13 +722,13 @@
     if-eqz v3, :cond_6
 
     .line 296
-    sget v0, Lcom/tencent/mm/model/aq$a;->bBD:I
+    sget v0, Lcom/tencent/mm/model/aq$a;->buI:I
 
     goto :goto_0
 
     .line 298
     :cond_6
-    sget v0, Lcom/tencent/mm/model/aq$a;->bBE:I
+    sget v0, Lcom/tencent/mm/model/aq$a;->buJ:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -717,25 +738,25 @@
     :catch_0
     move-exception v0
 
-    sget v0, Lcom/tencent/mm/model/aq$a;->bBB:I
+    sget v0, Lcom/tencent/mm/model/aq$a;->buG:I
 
     goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final M(II)V
+.method public final O(II)V
     .locals 2
 
     .prologue
     .line 197
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
     const-string/jumbo v1, "banner"
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/model/c;->dF(Ljava/lang/String;)Landroid/content/SharedPreferences;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/model/c;->dO(Ljava/lang/String;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -759,14 +780,14 @@
     .line 224
     :cond_2
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/model/aq;->bBz:Lcom/tencent/mm/model/aq$b;
+    iget-object v0, p0, Lcom/tencent/mm/model/aq;->buE:Lcom/tencent/mm/model/aq$b;
 
     if-eqz v0, :cond_0
 
     .line 225
-    iget-object v0, p0, Lcom/tencent/mm/model/aq;->bBz:Lcom/tencent/mm/model/aq$b;
+    iget-object v0, p0, Lcom/tencent/mm/model/aq;->buE:Lcom/tencent/mm/model/aq$b;
 
-    invoke-interface {v0}, Lcom/tencent/mm/model/aq$b;->ud()V
+    invoke-interface {v0}, Lcom/tencent/mm/model/aq$b;->ue()V
 
     goto :goto_0
 
@@ -819,7 +840,7 @@
     .line 209
     const-string/jumbo v0, "HistoryInfo"
 
-    invoke-static {v0}, Lcom/tencent/mm/model/aq;->fh(Ljava/lang/String;)Ljava/util/List;
+    invoke-static {v0}, Lcom/tencent/mm/model/aq;->fu(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
@@ -845,7 +866,7 @@
     :cond_3
     const-string/jumbo v1, "HistoryInfo"
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/model/aq;->b(Ljava/lang/String;Ljava/util/List;)Z
+    invoke-static {v1, v0}, Lcom/tencent/mm/model/aq;->c(Ljava/lang/String;Ljava/util/List;)Z
 
     goto :goto_1
 
@@ -905,13 +926,13 @@
     if-ne v2, v3, :cond_2
 
     .line 87
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
     const-string/jumbo v2, "banner"
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/model/c;->dF(Ljava/lang/String;)Landroid/content/SharedPreferences;
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/model/c;->dO(Ljava/lang/String;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -929,14 +950,14 @@
 
     .line 88
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/model/aq;->bBz:Lcom/tencent/mm/model/aq$b;
+    iget-object v1, p0, Lcom/tencent/mm/model/aq;->buE:Lcom/tencent/mm/model/aq$b;
 
     if-eqz v1, :cond_1
 
     .line 89
-    iget-object v1, p0, Lcom/tencent/mm/model/aq;->bBz:Lcom/tencent/mm/model/aq$b;
+    iget-object v1, p0, Lcom/tencent/mm/model/aq;->buE:Lcom/tencent/mm/model/aq$b;
 
-    invoke-interface {v1}, Lcom/tencent/mm/model/aq$b;->ud()V
+    invoke-interface {v1}, Lcom/tencent/mm/model/aq$b;->ue()V
 
     .line 118
     :cond_1
@@ -958,13 +979,13 @@
 
     .line 96
     :cond_3
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
     const-string/jumbo v3, "banner"
 
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/model/c;->dF(Ljava/lang/String;)Landroid/content/SharedPreferences;
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/model/c;->dO(Ljava/lang/String;)Landroid/content/SharedPreferences;
 
     move-result-object v2
 
@@ -983,14 +1004,14 @@
     move-result-object v2
 
     .line 102
-    invoke-static {}, Lcom/tencent/mm/model/aq;->ub()Lcom/tencent/mm/model/ap;
+    invoke-static {}, Lcom/tencent/mm/model/aq;->uc()Lcom/tencent/mm/model/ap;
 
     move-result-object v3
 
     .line 104
     const-string/jumbo v4, "HistoryInfo"
 
-    invoke-static {v4}, Lcom/tencent/mm/model/aq;->fh(Ljava/lang/String;)Ljava/util/List;
+    invoke-static {v4}, Lcom/tencent/mm/model/aq;->fu(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v4
 
@@ -1010,7 +1031,7 @@
     :goto_1
     if-eqz v3, :cond_6
 
-    iget v1, v3, Lcom/tencent/mm/model/ap;->asN:I
+    iget v1, v3, Lcom/tencent/mm/model/ap;->aex:I
 
     const/4 v4, 0x2
 
@@ -1019,7 +1040,7 @@
     .line 106
     const-string/jumbo v1, "HistoryInfo"
 
-    invoke-static {v1}, Lcom/tencent/mm/model/aq;->fh(Ljava/lang/String;)Ljava/util/List;
+    invoke-static {v1}, Lcom/tencent/mm/model/aq;->fu(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
 
@@ -1049,7 +1070,7 @@
     :cond_5
     const-string/jumbo v3, "HistoryInfo"
 
-    invoke-static {v3, v1}, Lcom/tencent/mm/model/aq;->b(Ljava/lang/String;Ljava/util/List;)Z
+    invoke-static {v3, v1}, Lcom/tencent/mm/model/aq;->c(Ljava/lang/String;Ljava/util/List;)Z
 
     .line 112
     :cond_6
@@ -1066,7 +1087,7 @@
 
     const-string/jumbo v2, "CurrentShowType"
 
-    iget v3, p1, Lcom/tencent/mm/model/ap;->asN:I
+    iget v3, p1, Lcom/tencent/mm/model/ap;->aex:I
 
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
@@ -1084,14 +1105,14 @@
 
     .line 115
     :cond_7
-    iget-object v1, p0, Lcom/tencent/mm/model/aq;->bBz:Lcom/tencent/mm/model/aq$b;
+    iget-object v1, p0, Lcom/tencent/mm/model/aq;->buE:Lcom/tencent/mm/model/aq$b;
 
     if-eqz v1, :cond_1
 
     .line 116
-    iget-object v1, p0, Lcom/tencent/mm/model/aq;->bBz:Lcom/tencent/mm/model/aq$b;
+    iget-object v1, p0, Lcom/tencent/mm/model/aq;->buE:Lcom/tencent/mm/model/aq$b;
 
-    invoke-interface {v1}, Lcom/tencent/mm/model/aq$b;->ud()V
+    invoke-interface {v1}, Lcom/tencent/mm/model/aq$b;->ue()V
 
     goto/16 :goto_0
 

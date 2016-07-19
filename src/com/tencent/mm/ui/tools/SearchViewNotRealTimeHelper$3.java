@@ -11,9 +11,9 @@ final class SearchViewNotRealTimeHelper$3
   
   public final void onClick(View paramView)
   {
-    SearchViewNotRealTimeHelper.d(lxN).setText("");
-    if (SearchViewNotRealTimeHelper.c(lxN) != null) {
-      SearchViewNotRealTimeHelper.c(lxN).KY();
+    SearchViewNotRealTimeHelper.d(lYC).setText("");
+    if (SearchViewNotRealTimeHelper.c(lYC) != null) {
+      SearchViewNotRealTimeHelper.c(lYC).LM();
     }
   }
 }

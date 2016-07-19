@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/friend/i;->ah(ILjava/lang/String;)Z
+    value = Lcom/tencent/mm/ui/friend/i;->ar(ILjava/lang/String;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lsI:Lcom/tencent/mm/ui/friend/i;
+.field final synthetic lTm:Lcom/tencent/mm/ui/friend/i;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 245
-    iput-object p1, p0, Lcom/tencent/mm/ui/friend/i$2;->lsI:Lcom/tencent/mm/ui/friend/i;
+    iput-object p1, p0, Lcom/tencent/mm/ui/friend/i$2;->lTm:Lcom/tencent/mm/ui/friend/i;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

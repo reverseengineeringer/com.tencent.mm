@@ -1,6 +1,9 @@
 package com.tencent.smtt.sdk;
 
-public abstract interface QbSdk$a {}
+public abstract interface QbSdk$a
+{
+  public abstract void aUb();
+}
 
 /* Location:
  * Qualified Name:     com.tencent.smtt.sdk.QbSdk.a

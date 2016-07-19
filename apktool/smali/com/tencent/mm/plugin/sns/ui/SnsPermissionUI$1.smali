@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;->Gb()V
+    value = Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hgS:Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;
+.field final synthetic hvH:Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 109
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI$1;->hgS:Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI$1;->hvH:Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,12 +41,12 @@
 
     .prologue
     .line 113
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI$1;->hgS:Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI$1;->hvH:Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;->age()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;->aiI()V
 
     .line 114
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI$1;->hgS:Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI$1;->hvH:Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;
 
     const/4 v1, -0x1
 
@@ -57,7 +57,7 @@
     invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;->setResult(ILandroid/content/Intent;)V
 
     .line 115
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI$1;->hgS:Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI$1;->hvH:Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsPermissionUI;->finish()V
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" style="@style/ChattingAppUIContent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/zd" android:layout_alignParentTop="true" android:layout_alignParentRight="true" layout="@layout/chatting_item_avatar_to" style="@style/ChattingUIAvatarMaskTo" />
+    <TextView android:id="@id/gv" android:visibility="gone" android:text="{user}" android:layout_toLeftOf="@id/zd" style="@style/ChattingUISenderText" />
+    <LinearLayout android:id="@id/g" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/zd">
+        <View android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/a2m" android:layout_marginRight="6.0dip" style="@style/ChattingUIState" />
+            <ProgressBar android:layout_gravity="center_vertical" android:id="@id/a3c" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/smallCustomProgressBar" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.tencent.mm.ui.base.MMTextView android:id="@id/gw" android:background="@drawable/da" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/d5" style="@style/ChattingUIText" />
+                <TextView android:id="@id/a15" android:background="@drawable/a9" android:padding="@dimen/cp" android:layout_marginLeft="0.0dip" style="@style/ChattingItemSourceTextView" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

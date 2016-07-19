@@ -15,7 +15,7 @@ import android.view.animation.Animation;
 import android.view.animation.Transformation;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-import com.tencent.mm.ay.g;
+import com.tencent.mm.bb.g;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -24,8 +24,8 @@ import junit.framework.Assert;
 public class ChattingAnimFrame
   extends FrameLayout
 {
-  List gqm = new ArrayList();
-  int gqn = 0;
+  List<View> gAE = new ArrayList();
+  int gAF = 0;
   int size = 0;
   
   public ChattingAnimFrame(Context paramContext, AttributeSet paramAttributeSet)
@@ -33,7 +33,7 @@ public class ChattingAnimFrame
     super(paramContext, paramAttributeSet);
   }
   
-  static float g(float paramFloat1, float paramFloat2)
+  static float f(float paramFloat1, float paramFloat2)
   {
     return (float)Math.random() * (paramFloat2 - paramFloat1) + paramFloat1;
   }
@@ -46,7 +46,7 @@ public class ChattingAnimFrame
     return size;
   }
   
-  public final void e(Activity paramActivity, int paramInt)
+  public final void g(Activity paramActivity, int paramInt)
   {
     stop();
     DisplayMetrics localDisplayMetrics = new DisplayMetrics();
@@ -56,8 +56,8 @@ public class ChattingAnimFrame
     while (i < 30)
     {
       paramActivity = new b(widthPixels, heightPixels);
-      g.aWe();
-      Object localObject1 = g.pA(paramInt);
+      g.bbq();
+      Object localObject1 = g.rq(paramInt);
       if (localObject1 != null)
       {
         ((Drawable)localObject1).setBounds(0, 0, getSize(), getSize());
@@ -71,7 +71,7 @@ public class ChattingAnimFrame
         ((TextView)localObject2).setTag(paramActivity);
         addView((View)localObject2);
         targetView = ((View)localObject2);
-        gqm.add(localObject2);
+        gAE.add(localObject2);
       }
       i += 1;
     }
@@ -79,7 +79,7 @@ public class ChattingAnimFrame
   
   public final void stop()
   {
-    Iterator localIterator = gqm.iterator();
+    Iterator localIterator = gAE.iterator();
     while (localIterator.hasNext())
     {
       View localView = (View)localIterator.next();
@@ -100,38 +100,38 @@ public class ChattingAnimFrame
   final class b
     extends ChattingAnimFrame.a
   {
-    private int cGx;
-    private int cGy;
-    private float gqq;
-    private float gqr;
-    private float gqs;
-    private float gqt;
-    private float gqu = 0.01F;
-    private float gqv = 0.02F;
-    private float gqw;
-    private float gqx;
-    private float gqy;
-    private float gqz;
+    private int cDB;
+    private int cDC;
+    private float gAI;
+    private float gAJ;
+    private float gAK;
+    private float gAL;
+    private float gAM = 0.01F;
+    private float gAN = 0.02F;
+    private float gAO;
+    private float gAP;
+    private float gAQ;
+    private float gAR;
     
     public b(int paramInt1, int paramInt2)
     {
       super();
-      cGx = paramInt1;
-      cGy = paramInt2;
-      gqq = ChattingAnimFrame.g(0.1F, 0.9F);
-      gqr = gqq;
-      gqt = ChattingAnimFrame.g(-0.3F, -0.1F);
+      cDB = paramInt1;
+      cDC = paramInt2;
+      gAI = ChattingAnimFrame.f(0.1F, 0.9F);
+      gAJ = gAI;
+      gAL = ChattingAnimFrame.f(-0.3F, -0.1F);
       restart();
     }
     
     private void restart()
     {
-      if (gqt > 0.0F) {
-        gqv += gqu;
+      if (gAL > 0.0F) {
+        gAN += gAM;
       }
-      gqs = gqt;
-      gqt += gqv;
-      if (gqs > 1.1F) {
+      gAK = gAL;
+      gAL += gAN;
+      if (gAK > 1.1F) {
         if (targetView == null) {
           break label139;
         }
@@ -141,23 +141,23 @@ public class ChattingAnimFrame
       {
         Assert.assertTrue(bool);
         targetView.post(new ChattingAnimFrame.a.1(this));
-        gqw = (gqq * cGx);
-        gqx = (gqr * cGx);
-        gqy = (gqs * cGy);
-        gqz = (gqt * cGy);
+        gAO = (gAI * cDB);
+        gAP = (gAJ * cDB);
+        gAQ = (gAK * cDC);
+        gAR = (gAL * cDC);
         return;
       }
     }
     
     protected final void applyTransformation(float paramFloat, Transformation paramTransformation)
     {
-      float f1 = gqw;
-      float f2 = gqy;
-      if (gqw != gqx) {
-        f1 = gqw + (gqx - gqw) * paramFloat;
+      float f1 = gAO;
+      float f2 = gAQ;
+      if (gAO != gAP) {
+        f1 = gAO + (gAP - gAO) * paramFloat;
       }
-      if (gqy != gqz) {
-        f2 = gqy + (gqz - gqy) * paramFloat;
+      if (gAQ != gAR) {
+        f2 = gAQ + (gAR - gAQ) * paramFloat;
       }
       paramTransformation.getMatrix().setTranslate(f1, f2);
       if (paramFloat == 1.0F) {

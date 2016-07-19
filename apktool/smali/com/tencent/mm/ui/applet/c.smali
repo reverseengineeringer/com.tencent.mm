@@ -23,7 +23,7 @@
     return-void
 .end method
 
-.method public static ef(Landroid/content/Context;)V
+.method public static ej(Landroid/content/Context;)V
     .locals 3
 
     .prologue
@@ -32,7 +32,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0089
+    const v1, 0x7f0305d5
 
     const/4 v2, 0x0
 
@@ -46,11 +46,11 @@
     invoke-direct {v1, p0, v0}, Lcom/tencent/mm/ui/applet/c$a;-><init>(Landroid/content/Context;Landroid/view/View;)V
 
     .line 32
-    iget-object v0, v1, Lcom/tencent/mm/ui/applet/c$a;->all:Landroid/view/WindowManager;
+    iget-object v0, v1, Lcom/tencent/mm/ui/applet/c$a;->Yk:Landroid/view/WindowManager;
 
-    iget-object v2, v1, Lcom/tencent/mm/ui/applet/c$a;->alk:Landroid/widget/FrameLayout;
+    iget-object v2, v1, Lcom/tencent/mm/ui/applet/c$a;->Yj:Landroid/widget/FrameLayout;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/applet/c$a;->alm:Landroid/view/WindowManager$LayoutParams;
+    iget-object v1, v1, Lcom/tencent/mm/ui/applet/c$a;->Yl:Landroid/view/WindowManager$LayoutParams;
 
     invoke-interface {v0, v2, v1}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 

@@ -15,15 +15,24 @@
 
 
 # instance fields
-.field arD:Ljava/util/concurrent/BlockingQueue;
+.field adl:Ljava/util/concurrent/BlockingQueue;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/BlockingQueue",
+            "<",
+            "Lcom/tencent/mm/c/b/g$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field arE:Z
+.field adm:Z
 
-.field arF:Ljava/lang/String;
+.field adn:Ljava/lang/String;
 
-.field private arN:Lcom/tencent/qqpinyin/voicerecoapi/a;
+.field private adv:Lcom/tencent/qqpinyin/voicerecoapi/a;
 
-.field private arO:Lcom/tencent/mm/c/c/d$a;
+.field private adw:Lcom/tencent/mm/c/c/d$a;
 
 .field private mFileOutputStream:Ljava/io/FileOutputStream;
 
@@ -43,18 +52,18 @@
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/ArrayBlockingQueue;-><init>(I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/c/c/d;->arD:Ljava/util/concurrent/BlockingQueue;
+    iput-object v0, p0, Lcom/tencent/mm/c/c/d;->adl:Ljava/util/concurrent/BlockingQueue;
 
     .line 30
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/c/c/d;->arE:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/c/c/d;->adm:Z
 
     .line 141
     return-void
 .end method
 
-.method public static r(Ljava/lang/String;Ljava/lang/String;)Z
+.method public static p(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 12
 
     .prologue
@@ -78,11 +87,11 @@
 
     .line 176
     :cond_0
-    const-string/jumbo v1, "!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+"
+    const-string/jumbo v1, "MicroMsg.SpeexWriter"
 
     const-string/jumbo v2, "[voiceControl] decodePCMToSpeex filePath null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 229
     :goto_0
@@ -102,17 +111,17 @@
     if-nez v2, :cond_2
 
     .line 181
-    const-string/jumbo v1, "!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+"
+    const-string/jumbo v1, "MicroMsg.SpeexWriter"
 
     const-string/jumbo v2, "[voiceControl] decodePCMToSpeex filePath null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 184
     :cond_2
-    const-string/jumbo v2, "!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+"
+    const-string/jumbo v2, "MicroMsg.SpeexWriter"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -122,9 +131,9 @@
 
     invoke-virtual {v6}, Ljava/io/File;->length()J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    invoke-virtual {v3, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v8, v9}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -132,7 +141,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 187
     :try_start_0
@@ -141,21 +150,21 @@
     invoke-direct {v7}, Lcom/tencent/qqpinyin/voicerecoapi/a;-><init>()V
 
     .line 188
-    invoke-virtual {v7}, Lcom/tencent/qqpinyin/voicerecoapi/a;->blf()I
+    invoke-virtual {v7}, Lcom/tencent/qqpinyin/voicerecoapi/a;->brj()I
 
     move-result v2
 
     if-eqz v2, :cond_3
 
     .line 191
-    const-string/jumbo v1, "!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+"
+    const-string/jumbo v1, "MicroMsg.SpeexWriter"
 
     const-string/jumbo v2, "[voiceControl] speexInit fail"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 192
-    invoke-virtual {v7}, Lcom/tencent/qqpinyin/voicerecoapi/a;->blg()I
+    invoke-virtual {v7}, Lcom/tencent/qqpinyin/voicerecoapi/a;->brk()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -166,7 +175,7 @@
     move-exception v1
 
     .line 226
-    const-string/jumbo v2, "!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+"
+    const-string/jumbo v2, "MicroMsg.SpeexWriter"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -186,14 +195,14 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 195
     :cond_3
     :try_start_1
-    invoke-static {p1}, Lcom/tencent/mm/loader/stub/b;->deleteFile(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/a/e;->deleteFile(Ljava/lang/String;)Z
 
     .line 196
     new-instance v2, Ljava/io/File;
@@ -236,7 +245,7 @@
     if-lez v3, :cond_6
 
     .line 206
-    invoke-virtual {v7, v8, v3}, Lcom/tencent/qqpinyin/voicerecoapi/a;->x([BI)[B
+    invoke-virtual {v7, v8, v3}, Lcom/tencent/qqpinyin/voicerecoapi/a;->y([BI)[B
 
     move-result-object v6
 
@@ -265,7 +274,7 @@
 
     .line 222
     :cond_4
-    invoke-virtual {v7}, Lcom/tencent/qqpinyin/voicerecoapi/a;->blg()I
+    invoke-virtual {v7}, Lcom/tencent/qqpinyin/voicerecoapi/a;->brk()I
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
@@ -274,12 +283,12 @@
     .line 211
     :cond_5
     :try_start_5
-    invoke-static {p1, v6}, Lcom/tencent/mm/a/e;->e(Ljava/lang/String;[B)I
+    invoke-static {p1, v6}, Lcom/tencent/mm/a/e;->d(Ljava/lang/String;[B)I
 
     move-result v6
 
     .line 212
-    const-string/jumbo v9, "!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+"
+    const-string/jumbo v9, "MicroMsg.SpeexWriter"
 
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -305,7 +314,7 @@
 
     move-result-object v3
 
-    invoke-static {v9, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -314,10 +323,10 @@
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
 
     .line 215
-    invoke-virtual {v7}, Lcom/tencent/qqpinyin/voicerecoapi/a;->blg()I
+    invoke-virtual {v7}, Lcom/tencent/qqpinyin/voicerecoapi/a;->brk()I
 
     .line 216
-    const-string/jumbo v3, "!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+"
+    const-string/jumbo v3, "MicroMsg.SpeexWriter"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -339,7 +348,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
 
@@ -370,7 +379,7 @@
     const/4 v0, -0x1
 
     .line 68
-    iget-object v1, p0, Lcom/tencent/mm/c/c/d;->arN:Lcom/tencent/qqpinyin/voicerecoapi/a;
+    iget-object v1, p0, Lcom/tencent/mm/c/c/d;->adv:Lcom/tencent/qqpinyin/voicerecoapi/a;
 
     if-eqz v1, :cond_0
 
@@ -378,17 +387,17 @@
 
     if-eqz v1, :cond_0
 
-    iget v1, p1, Lcom/tencent/mm/c/b/g$a;->anV:I
+    iget v1, p1, Lcom/tencent/mm/c/b/g$a;->acr:I
 
     if-nez v1, :cond_1
 
     .line 69
     :cond_0
-    const-string/jumbo v1, "!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+"
+    const-string/jumbo v1, "MicroMsg.SpeexWriter"
 
     const-string/jumbo v2, "try write invalid data to file"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 86
     :goto_0
@@ -397,13 +406,13 @@
     .line 74
     :cond_1
     :try_start_0
-    iget-object v1, p0, Lcom/tencent/mm/c/c/d;->arN:Lcom/tencent/qqpinyin/voicerecoapi/a;
+    iget-object v1, p0, Lcom/tencent/mm/c/c/d;->adv:Lcom/tencent/qqpinyin/voicerecoapi/a;
 
     iget-object v2, p1, Lcom/tencent/mm/c/b/g$a;->buf:[B
 
-    iget v3, p1, Lcom/tencent/mm/c/b/g$a;->anV:I
+    iget v3, p1, Lcom/tencent/mm/c/b/g$a;->acr:I
 
-    invoke-virtual {v1, v2, v3}, Lcom/tencent/qqpinyin/voicerecoapi/a;->x([BI)[B
+    invoke-virtual {v1, v2, v3}, Lcom/tencent/qqpinyin/voicerecoapi/a;->y([BI)[B
 
     move-result-object v1
 
@@ -415,7 +424,7 @@
     if-lez v2, :cond_2
 
     .line 76
-    const-string/jumbo v2, "!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+"
+    const-string/jumbo v2, "MicroMsg.SpeexWriter"
 
     const-string/jumbo v3, "write to file, len: %d"
 
@@ -433,7 +442,7 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 77
     iget-object v2, p0, Lcom/tencent/mm/c/c/d;->mFileOutputStream:Ljava/io/FileOutputStream;
@@ -452,7 +461,7 @@
 
     .line 81
     :cond_2
-    const-string/jumbo v2, "!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+"
+    const-string/jumbo v2, "MicroMsg.SpeexWriter"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -473,7 +482,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -484,7 +493,7 @@
     move-exception v1
 
     .line 85
-    const-string/jumbo v2, "!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+"
+    const-string/jumbo v2, "MicroMsg.SpeexWriter"
 
     const-string/jumbo v3, "write to file failed"
 
@@ -492,7 +501,7 @@
 
     aput-object v1, v4, v7
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -506,7 +515,7 @@
     goto :goto_1
 .end method
 
-.method public final br(Ljava/lang/String;)Z
+.method public final bk(Ljava/lang/String;)Z
     .locals 5
 
     .prologue
@@ -515,7 +524,7 @@
     const/4 v0, 0x0
 
     .line 37
-    const-string/jumbo v2, "!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+"
+    const-string/jumbo v2, "MicroMsg.SpeexWriter"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -531,7 +540,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 38
     if-nez p1, :cond_0
@@ -542,7 +551,7 @@
 
     .line 42
     :cond_0
-    iput-object p1, p0, Lcom/tencent/mm/c/c/d;->arF:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/c/c/d;->adn:Ljava/lang/String;
 
     .line 44
     :try_start_0
@@ -564,12 +573,12 @@
 
     invoke-direct {v2}, Lcom/tencent/qqpinyin/voicerecoapi/a;-><init>()V
 
-    iput-object v2, p0, Lcom/tencent/mm/c/c/d;->arN:Lcom/tencent/qqpinyin/voicerecoapi/a;
+    iput-object v2, p0, Lcom/tencent/mm/c/c/d;->adv:Lcom/tencent/qqpinyin/voicerecoapi/a;
 
     .line 58
-    iget-object v2, p0, Lcom/tencent/mm/c/c/d;->arN:Lcom/tencent/qqpinyin/voicerecoapi/a;
+    iget-object v2, p0, Lcom/tencent/mm/c/c/d;->adv:Lcom/tencent/qqpinyin/voicerecoapi/a;
 
-    invoke-virtual {v2}, Lcom/tencent/qqpinyin/voicerecoapi/a;->blf()I
+    invoke-virtual {v2}, Lcom/tencent/qqpinyin/voicerecoapi/a;->brj()I
 
     move-result v2
 
@@ -577,7 +586,7 @@
     if-eqz v2, :cond_2
 
     .line 60
-    const-string/jumbo v1, "!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+"
+    const-string/jumbo v1, "MicroMsg.SpeexWriter"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -593,7 +602,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -617,7 +626,7 @@
     .line 53
     :cond_1
     :goto_1
-    const-string/jumbo v3, "!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+"
+    const-string/jumbo v3, "MicroMsg.SpeexWriter"
 
     const-string/jumbo v4, "Error on init file: "
 
@@ -625,7 +634,7 @@
 
     aput-object v2, v1, v0
 
-    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -641,18 +650,18 @@
     goto :goto_1
 .end method
 
-.method public final lU()V
+.method public final kk()V
     .locals 5
 
     .prologue
     const/4 v4, 0x0
 
     .line 91
-    const-string/jumbo v0, "!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+"
+    const-string/jumbo v0, "MicroMsg.SpeexWriter"
 
     const-string/jumbo v1, "wait Stop"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 93
     monitor-enter p0
@@ -661,7 +670,7 @@
     const/4 v0, 0x1
 
     :try_start_0
-    iput-boolean v0, p0, Lcom/tencent/mm/c/c/d;->arE:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/c/c/d;->adm:Z
 
     .line 95
     monitor-exit p0
@@ -669,35 +678,35 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 97
-    iget-object v0, p0, Lcom/tencent/mm/c/c/d;->arO:Lcom/tencent/mm/c/c/d$a;
+    iget-object v0, p0, Lcom/tencent/mm/c/c/d;->adw:Lcom/tencent/mm/c/c/d$a;
 
     if-eqz v0, :cond_0
 
     .line 99
     :try_start_1
-    iget-object v0, p0, Lcom/tencent/mm/c/c/d;->arO:Lcom/tencent/mm/c/c/d$a;
+    iget-object v0, p0, Lcom/tencent/mm/c/c/d;->adw:Lcom/tencent/mm/c/c/d$a;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/i/e;->z(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/i/e;->D(Ljava/lang/Runnable;)V
 
     .line 100
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/c/c/d;->arO:Lcom/tencent/mm/c/c/d$a;
+    iput-object v0, p0, Lcom/tencent/mm/c/c/d;->adw:Lcom/tencent/mm/c/c/d$a;
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
 
     .line 106
     :cond_0
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/c/c/d;->arN:Lcom/tencent/qqpinyin/voicerecoapi/a;
+    iget-object v0, p0, Lcom/tencent/mm/c/c/d;->adv:Lcom/tencent/qqpinyin/voicerecoapi/a;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/c/c/d;->arN:Lcom/tencent/qqpinyin/voicerecoapi/a;
+    iget-object v0, p0, Lcom/tencent/mm/c/c/d;->adv:Lcom/tencent/qqpinyin/voicerecoapi/a;
 
-    invoke-virtual {v0}, Lcom/tencent/qqpinyin/voicerecoapi/a;->blg()I
+    invoke-virtual {v0}, Lcom/tencent/qqpinyin/voicerecoapi/a;->brk()I
 
-    iput-object v4, p0, Lcom/tencent/mm/c/c/d;->arN:Lcom/tencent/qqpinyin/voicerecoapi/a;
+    iput-object v4, p0, Lcom/tencent/mm/c/c/d;->adv:Lcom/tencent/qqpinyin/voicerecoapi/a;
 
     :cond_1
     iget-object v0, p0, Lcom/tencent/mm/c/c/d;->mFileOutputStream:Ljava/io/FileOutputStream;
@@ -733,11 +742,11 @@
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+"
+    const-string/jumbo v0, "MicroMsg.SpeexWriter"
 
     const-string/jumbo v1, "thread speex interrupted"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -745,7 +754,7 @@
     :catch_1
     move-exception v0
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+"
+    const-string/jumbo v1, "MicroMsg.SpeexWriter"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -753,7 +762,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/tencent/mm/c/c/d;->arF:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/c/c/d;->adn:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -777,7 +786,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 .end method

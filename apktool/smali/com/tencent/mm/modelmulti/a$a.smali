@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field final bUD:Ljava/lang/String;
+.field final bOe:Ljava/lang/String;
 
-.field final bUE:I
+.field final bOf:I
 
-.field final bUF:I
+.field final bOg:I
 
-.field final bUG:I
+.field final bOh:I
 
 
 # direct methods
@@ -29,22 +29,22 @@
     .locals 0
 
     .prologue
-    .line 144
+    .line 138
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 145
-    iput-object p1, p0, Lcom/tencent/mm/modelmulti/a$a;->bUD:Ljava/lang/String;
+    .line 139
+    iput-object p1, p0, Lcom/tencent/mm/modelmulti/a$a;->bOe:Ljava/lang/String;
 
-    .line 146
-    iput p2, p0, Lcom/tencent/mm/modelmulti/a$a;->bUE:I
+    .line 140
+    iput p2, p0, Lcom/tencent/mm/modelmulti/a$a;->bOf:I
 
-    .line 147
-    iput p3, p0, Lcom/tencent/mm/modelmulti/a$a;->bUF:I
+    .line 141
+    iput p3, p0, Lcom/tencent/mm/modelmulti/a$a;->bOg:I
 
-    .line 148
-    iput p4, p0, Lcom/tencent/mm/modelmulti/a$a;->bUG:I
+    .line 142
+    iput p4, p0, Lcom/tencent/mm/modelmulti/a$a;->bOh:I
 
-    .line 149
+    .line 143
     return-void
 .end method
 
@@ -54,7 +54,7 @@
     .locals 2
 
     .prologue
-    .line 153
+    .line 147
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "GetChatRoomMsgInfo hash["
@@ -75,7 +75,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/modelmulti/a$a;->bUD:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/modelmulti/a$a;->bOe:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -87,7 +87,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/modelmulti/a$a;->bUE:I
+    iget v1, p0, Lcom/tencent/mm/modelmulti/a$a;->bOf:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -99,7 +99,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/modelmulti/a$a;->bUF:I
+    iget v1, p0, Lcom/tencent/mm/modelmulti/a$a;->bOg:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -111,7 +111,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/modelmulti/a$a;->bUG:I
+    iget v1, p0, Lcom/tencent/mm/modelmulti/a$a;->bOh:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

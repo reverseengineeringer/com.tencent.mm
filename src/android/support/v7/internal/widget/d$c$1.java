@@ -10,14 +10,14 @@ final class d$c$1
   
   public final void i(View paramView, int paramInt)
   {
-    rf.rc.setSelection(paramInt);
-    if (rf.rc.po != null)
+    rs.rp.setSelection(paramInt);
+    if (rs.rp.pC != null)
     {
-      d locald = rf.rc;
-      d.c.a(rf).getItemId(paramInt);
+      d locald = rs.rp;
+      d.c.a(rs).getItemId(paramInt);
       locald.h(paramView, paramInt);
     }
-    rf.dismiss();
+    rs.dismiss();
   }
 }
 

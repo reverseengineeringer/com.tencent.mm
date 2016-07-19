@@ -2,7 +2,7 @@ package com.tencent.mm.ui.tools;
 
 public abstract interface a$a
 {
-  public abstract String vP(String paramString);
+  public abstract String xc(String paramString);
 }
 
 /* Location:

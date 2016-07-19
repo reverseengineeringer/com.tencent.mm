@@ -15,17 +15,26 @@
 
 
 # instance fields
-.field bPb:I
+.field bIw:I
 
-.field final synthetic bUB:Lcom/tencent/mm/modelmulti/a;
+.field final synthetic bOc:Lcom/tencent/mm/modelmulti/a;
 
-.field bUD:Ljava/lang/String;
+.field bOe:Ljava/lang/String;
 
-.field bUG:I
+.field bOh:I
 
-.field bUH:Ljava/util/LinkedList;
+.field bOi:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList",
+            "<",
+            "Lcom/tencent/mm/protocal/b/am;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field bUI:Z
+.field bOj:Z
 
 
 # direct methods
@@ -35,28 +44,28 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 470
-    iput-object p1, p0, Lcom/tencent/mm/modelmulti/a$b;->bUB:Lcom/tencent/mm/modelmulti/a;
+    .line 464
+    iput-object p1, p0, Lcom/tencent/mm/modelmulti/a$b;->bOc:Lcom/tencent/mm/modelmulti/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 472
+    .line 466
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelmulti/a$b;->bUH:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/modelmulti/a$b;->bOi:Ljava/util/LinkedList;
 
-    .line 473
-    iput v1, p0, Lcom/tencent/mm/modelmulti/a$b;->bPb:I
+    .line 467
+    iput v1, p0, Lcom/tencent/mm/modelmulti/a$b;->bIw:I
 
-    .line 474
-    iput v1, p0, Lcom/tencent/mm/modelmulti/a$b;->bUG:I
+    .line 468
+    iput v1, p0, Lcom/tencent/mm/modelmulti/a$b;->bOh:I
 
-    .line 475
+    .line 469
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/modelmulti/a$b;->bUI:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/modelmulti/a$b;->bOj:Z
 
     return-void
 .end method

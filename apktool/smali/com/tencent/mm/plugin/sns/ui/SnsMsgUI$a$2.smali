@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hfZ:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;
+.field final synthetic huP:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 753
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$2;->hfZ:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;
+    .line 755
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$2;->huP:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,39 +40,39 @@
     .locals 2
 
     .prologue
-    .line 757
-    const-string/jumbo v0, "!32@/B4Tb64lLpLP0kPhuI+v6ivshuxaXtQp"
+    .line 759
+    const-string/jumbo v0, "MicroMsg.SnsMsgUI"
 
     const-string/jumbo v1, "on delView clicked"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 758
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$2;->hfZ:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;
+    .line 760
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$2;->huP:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;->cHi:Lcom/tencent/mm/ui/base/MMSlideDelView$d;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;->cEm:Lcom/tencent/mm/ui/base/MMSlideDelView$d;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/base/MMSlideDelView$d;->aCg()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/base/MMSlideDelView$d;->agK()V
 
-    .line 759
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$2;->hfZ:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;
+    .line 761
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$2;->huP:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;->hfX:Lcom/tencent/mm/ui/base/MMSlideDelView$f;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;->huO:Lcom/tencent/mm/ui/base/MMSlideDelView$e;
 
     if-eqz v0, :cond_0
 
-    .line 760
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$2;->hfZ:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;
+    .line 762
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a$2;->huP:Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;->hfX:Lcom/tencent/mm/ui/base/MMSlideDelView$f;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsMsgUI$a;->huO:Lcom/tencent/mm/ui/base/MMSlideDelView$e;
 
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/MMSlideDelView$f;->Z(Ljava/lang/Object;)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/MMSlideDelView$e;->at(Ljava/lang/Object;)V
 
-    .line 762
+    .line 764
     :cond_0
     return-void
 .end method

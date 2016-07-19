@@ -4,18 +4,18 @@
 
 
 # direct methods
-.method public static cU(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/ui/tools/f;
+.method public static cS(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/ui/tools/f;
     .locals 2
 
     .prologue
     .line 15
-    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bgW:Lcom/tencent/mm/compatible/d/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/compatible/d/j;->bsq:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/d/j;->bgt:Ljava/lang/String;
 
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -28,11 +28,11 @@
     if-eqz v0, :cond_0
 
     .line 16
-    const-string/jumbo v0, "!44@/B4Tb64lLpI0gAQi2o+bKffNaBJGXprKxiIC3NpMX2E="
+    const-string/jumbo v0, "MicroMsg.VideoViewFactory"
 
     const-string/jumbo v1, "match full type surface"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 17
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;
@@ -47,7 +47,7 @@
     :cond_0
     const-string/jumbo v0, "ro.mediatek.platform"
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/d/w;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/compatible/d/y;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -76,11 +76,11 @@
     if-eqz v0, :cond_3
 
     .line 20
-    const-string/jumbo v0, "!44@/B4Tb64lLpI0gAQi2o+bKffNaBJGXprKxiIC3NpMX2E="
+    const-string/jumbo v0, "MicroMsg.VideoViewFactory"
 
     const-string/jumbo v1, "IS MTK platform"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 21
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;
@@ -97,11 +97,11 @@
 
     .line 23
     :cond_3
-    const-string/jumbo v0, "!44@/B4Tb64lLpI0gAQi2o+bKffNaBJGXprKxiIC3NpMX2E="
+    const-string/jumbo v0, "MicroMsg.VideoViewFactory"
 
     const-string/jumbo v1, "default settings, use sightview"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 24
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;

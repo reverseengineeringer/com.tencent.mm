@@ -16,9 +16,22 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/tencent/mm/a/f$a",
+        "<",
+        "Ljava/lang/String;",
+        "Ljava/lang/ref/WeakReference",
+        "<",
+        "Lcom/tencent/mm/plugin/gif/a;",
+        ">;>;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic ewT:Lcom/tencent/mm/plugin/gif/b;
+.field final synthetic eDm:Lcom/tencent/mm/plugin/gif/b;
 
 
 # direct methods
@@ -27,7 +40,7 @@
 
     .prologue
     .line 26
-    iput-object p1, p0, Lcom/tencent/mm/plugin/gif/b$1;->ewT:Lcom/tencent/mm/plugin/gif/b;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/gif/b$1;->eDm:Lcom/tencent/mm/plugin/gif/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +49,7 @@
 
 
 # virtual methods
-.method public final synthetic e(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final synthetic h(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 6
 
     .prologue
@@ -53,7 +66,7 @@
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v1, "!56@/B4Tb64lLpISAcxqEoGUAVVVet2oG2nlZyTbTY9znHfD6n2sJWsfXA=="
+    const-string/jumbo v1, "MicroMsg.GIF.MMGIFDrawableCacheMgr"
 
     const-string/jumbo v2, "recycle bitmap:%s"
 
@@ -69,7 +82,7 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/gif/a;->recycle()V
 

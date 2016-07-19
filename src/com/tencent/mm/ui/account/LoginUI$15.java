@@ -13,7 +13,7 @@ final class LoginUI$15
   {
     if ((paramInt == 6) || (paramInt == 5))
     {
-      LoginUI.c(ktY);
+      LoginUI.c(kTf);
       return true;
     }
     return false;

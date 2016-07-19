@@ -3,38 +3,58 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroid/widget/AdapterView",
+        "<",
+        "Landroid/widget/ListAdapter;",
+        ">;"
+    }
+.end annotation
+
+
 # instance fields
-.field protected fK:Landroid/widget/Scroller;
+.field protected gg:Landroid/widget/Scroller;
 
-.field public kCf:Z
+.field public lbl:Z
 
-.field private kCg:I
+.field private lbm:I
 
-.field private kCh:I
+.field private lbn:I
 
-.field protected kCi:I
+.field protected lbo:I
 
-.field protected kCj:I
+.field protected lbp:I
 
-.field private kCk:I
+.field private lbq:I
 
-.field private kCl:I
+.field private lbr:I
 
-.field private kCm:Landroid/view/GestureDetector;
+.field private lbs:Landroid/view/GestureDetector;
 
-.field private kCn:Ljava/util/Queue;
+.field private lbt:Ljava/util/Queue;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Queue",
+            "<",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private kCo:Landroid/widget/AdapterView$OnItemSelectedListener;
+.field private lbu:Landroid/widget/AdapterView$OnItemSelectedListener;
 
-.field private kCp:Landroid/widget/AdapterView$OnItemClickListener;
+.field private lbv:Landroid/widget/AdapterView$OnItemClickListener;
 
-.field private kCq:Landroid/database/DataSetObserver;
+.field private lbw:Landroid/database/DataSetObserver;
 
-.field private kCr:Landroid/view/GestureDetector$OnGestureListener;
+.field private lbx:Landroid/view/GestureDetector$OnGestureListener;
 
-.field protected pL:Landroid/widget/ListAdapter;
+.field private pD:Z
 
-.field private pp:Z
+.field protected pZ:Landroid/widget/ListAdapter;
 
 
 # direct methods
@@ -50,56 +70,56 @@
     .line 20
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCf:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbl:Z
 
     .line 22
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCg:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbm:I
 
     .line 23
-    iput v1, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCh:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbn:I
 
     .line 26
     const v0, 0x7fffffff
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCk:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbq:I
 
     .line 27
-    iput v1, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCl:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbr:I
 
     .line 30
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCn:Ljava/util/Queue;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbt:Ljava/util/Queue;
 
     .line 33
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pp:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pD:Z
 
     .line 61
     new-instance v0, Lcom/tencent/mm/ui/base/HorizontalListView$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/HorizontalListView$1;-><init>(Lcom/tencent/mm/ui/base/HorizontalListView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCq:Landroid/database/DataSetObserver;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbw:Landroid/database/DataSetObserver;
 
     .line 277
     new-instance v0, Lcom/tencent/mm/ui/base/HorizontalListView$3;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/HorizontalListView$3;-><init>(Lcom/tencent/mm/ui/base/HorizontalListView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCr:Landroid/view/GestureDetector$OnGestureListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbx:Landroid/view/GestureDetector$OnGestureListener;
 
     .line 37
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/HorizontalListView;->Gb()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/HorizontalListView;->Gy()V
 
     .line 38
     return-void
 .end method
 
-.method private declared-synchronized Gb()V
+.method private declared-synchronized Gy()V
     .locals 3
 
     .prologue
@@ -109,32 +129,32 @@
     const/4 v0, -0x1
 
     :try_start_0
-    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCg:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbm:I
 
     .line 42
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCh:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbn:I
 
     .line 43
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCl:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbr:I
 
     .line 44
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCi:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbo:I
 
     .line 45
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCj:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbp:I
 
     .line 46
     const v0, 0x7fffffff
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCk:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbq:I
 
     .line 47
     new-instance v0, Landroid/widget/Scroller;
@@ -145,7 +165,7 @@
 
     invoke-direct {v0, v1}, Landroid/widget/Scroller;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->fK:Landroid/widget/Scroller;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->gg:Landroid/widget/Scroller;
 
     .line 48
     new-instance v0, Landroid/view/GestureDetector;
@@ -154,11 +174,11 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCr:Landroid/view/GestureDetector$OnGestureListener;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbx:Landroid/view/GestureDetector$OnGestureListener;
 
     invoke-direct {v0, v1, v2}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCm:Landroid/view/GestureDetector;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbs:Landroid/view/GestureDetector;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -183,7 +203,7 @@
     .line 18
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pp:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pD:Z
 
     return v0
 .end method
@@ -203,7 +223,7 @@
 
     .prologue
     .line 18
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCp:Landroid/widget/AdapterView$OnItemClickListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbv:Landroid/widget/AdapterView$OnItemClickListener;
 
     return-object v0
 .end method
@@ -213,7 +233,7 @@
 
     .prologue
     .line 18
-    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCg:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbm:I
 
     return v0
 .end method
@@ -223,7 +243,7 @@
 
     .prologue
     .line 18
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCo:Landroid/widget/AdapterView$OnItemSelectedListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbu:Landroid/widget/AdapterView$OnItemSelectedListener;
 
     return-object v0
 .end method
@@ -236,7 +256,7 @@
     monitor-enter p0
 
     :try_start_0
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/HorizontalListView;->Gb()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/HorizontalListView;->Gy()V
 
     .line 104
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/HorizontalListView;->removeAllViewsInLayout()V
@@ -312,7 +332,7 @@
 
 
 # virtual methods
-.method protected final E(F)Z
+.method protected final C(F)Z
     .locals 9
 
     .prologue
@@ -321,9 +341,9 @@
 
     .line 265
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->fK:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->gg:Landroid/widget/Scroller;
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCj:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbp:I
 
     const/4 v2, 0x0
 
@@ -335,7 +355,7 @@
 
     const/4 v5, 0x0
 
-    iget v6, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCk:I
+    iget v6, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbq:I
 
     const/4 v7, 0x0
 
@@ -368,14 +388,14 @@
     throw v0
 .end method
 
-.method protected final bcq()Z
+.method protected final bhF()Z
     .locals 2
 
     .prologue
     const/4 v1, 0x1
 
     .line 273
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->fK:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->gg:Landroid/widget/Scroller;
 
     invoke-virtual {v0, v1}, Landroid/widget/Scroller;->forceFinished(Z)V
 
@@ -393,7 +413,7 @@
     move-result v0
 
     .line 259
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCm:Landroid/view/GestureDetector;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbs:Landroid/view/GestureDetector;
 
     invoke-virtual {v1, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -410,19 +430,7 @@
 
     .prologue
     .line 18
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/HorizontalListView;->getAdapter()Landroid/widget/ListAdapter;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getAdapter()Landroid/widget/ListAdapter;
-    .locals 1
-
-    .prologue
-    .line 83
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pL:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pZ:Landroid/widget/ListAdapter;
 
     return-object v0
 .end method
@@ -450,7 +458,7 @@
     invoke-super/range {p0 .. p5}, Landroid/widget/AdapterView;->onLayout(ZIIII)V
 
     .line 127
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pL:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pZ:Landroid/widget/ListAdapter;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -466,30 +474,30 @@
     .line 131
     :cond_1
     :try_start_1
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pp:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pD:Z
 
     if-eqz v0, :cond_2
 
     .line 132
-    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCi:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbo:I
 
     .line 133
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/HorizontalListView;->Gb()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/HorizontalListView;->Gy()V
 
     .line 134
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/HorizontalListView;->removeAllViewsInLayout()V
 
     .line 135
-    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCj:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbp:I
 
     .line 136
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pp:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pD:Z
 
     .line 139
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->fK:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->gg:Landroid/widget/Scroller;
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->computeScrollOffset()Z
 
@@ -498,28 +506,28 @@
     if-eqz v0, :cond_3
 
     .line 140
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->fK:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->gg:Landroid/widget/Scroller;
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->getCurrX()I
 
     move-result v0
 
     .line 141
-    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCj:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbp:I
 
     .line 144
     :cond_3
-    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCj:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbp:I
 
     if-gtz v0, :cond_4
 
     .line 145
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCj:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbp:I
 
     .line 146
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->fK:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->gg:Landroid/widget/Scroller;
 
     const/4 v2, 0x1
 
@@ -527,19 +535,19 @@
 
     .line 148
     :cond_4
-    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCj:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbp:I
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCk:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbq:I
 
     if-lt v0, v2, :cond_5
 
     .line 149
-    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCk:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbq:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCj:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbp:I
 
     .line 150
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->fK:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->gg:Landroid/widget/Scroller;
 
     const/4 v2, 0x1
 
@@ -547,9 +555,9 @@
 
     .line 153
     :cond_5
-    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCi:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbo:I
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCj:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbp:I
 
     sub-int v3, v0, v2
 
@@ -571,7 +579,7 @@
 
     if-gtz v2, :cond_6
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCl:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbr:I
 
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -579,19 +587,19 @@
 
     add-int/2addr v2, v4
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCl:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbr:I
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCn:Ljava/util/Queue;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbt:Ljava/util/Queue;
 
     invoke-interface {v2, v0}, Ljava/util/Queue;->offer(Ljava/lang/Object;)Z
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/HorizontalListView;->removeViewInLayout(Landroid/view/View;)V
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCg:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbm:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCg:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbm:I
 
     const/4 v0, 0x0
 
@@ -627,17 +635,17 @@
 
     if-lt v2, v4, :cond_7
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCn:Ljava/util/Queue;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbt:Ljava/util/Queue;
 
     invoke-interface {v2, v0}, Ljava/util/Queue;->offer(Ljava/lang/Object;)Z
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/HorizontalListView;->removeViewInLayout(Landroid/view/View;)V
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCh:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbn:I
 
     add-int/lit8 v0, v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCh:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbn:I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -682,9 +690,9 @@
 
     if-ge v0, v4, :cond_a
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCh:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbn:I
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pL:Landroid/widget/ListAdapter;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pZ:Landroid/widget/ListAdapter;
 
     invoke-interface {v4}, Landroid/widget/ListAdapter;->getCount()I
 
@@ -692,11 +700,11 @@
 
     if-ge v0, v4, :cond_a
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pL:Landroid/widget/ListAdapter;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pZ:Landroid/widget/ListAdapter;
 
-    iget v5, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCh:I
+    iget v5, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbn:I
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCn:Ljava/util/Queue;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbt:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->poll()Ljava/lang/Object;
 
@@ -718,9 +726,9 @@
 
     add-int/2addr v0, v2
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCh:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbn:I
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pL:Landroid/widget/ListAdapter;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pZ:Landroid/widget/ListAdapter;
 
     invoke-interface {v4}, Landroid/widget/ListAdapter;->getCount()I
 
@@ -730,7 +738,7 @@
 
     if-ne v2, v4, :cond_8
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCi:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbo:I
 
     add-int/2addr v2, v0
 
@@ -740,23 +748,23 @@
 
     sub-int/2addr v2, v4
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCk:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbq:I
 
     :cond_8
-    iget v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCk:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbq:I
 
     if-gez v2, :cond_9
 
     const/4 v2, 0x0
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCk:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbq:I
 
     :cond_9
-    iget v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCh:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbn:I
 
     add-int/lit8 v2, v2, 0x1
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCh:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbn:I
 
     move v2, v0
 
@@ -783,15 +791,15 @@
 
     if-lez v0, :cond_b
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCg:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbm:I
 
     if-ltz v0, :cond_b
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pL:Landroid/widget/ListAdapter;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pZ:Landroid/widget/ListAdapter;
 
-    iget v5, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCg:I
+    iget v5, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbm:I
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCn:Ljava/util/Queue;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbt:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->poll()Ljava/lang/Object;
 
@@ -813,13 +821,13 @@
 
     sub-int v0, v2, v0
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCg:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbm:I
 
     add-int/lit8 v2, v2, -0x1
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCg:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbm:I
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCl:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbr:I
 
     invoke-virtual {v4}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -827,7 +835,7 @@
 
     sub-int/2addr v2, v4
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCl:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbr:I
 
     move v2, v0
 
@@ -841,13 +849,13 @@
 
     if-lez v0, :cond_c
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCl:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbr:I
 
     add-int/2addr v0, v3
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCl:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbr:I
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCl:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbr:I
 
     :goto_7
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/HorizontalListView;->getChildCount()I
@@ -882,12 +890,12 @@
 
     .line 159
     :cond_c
-    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCj:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbp:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCi:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbo:I
 
     .line 161
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->fK:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->gg:Landroid/widget/Scroller;
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->isFinished()Z
 
@@ -929,30 +937,30 @@
     return-void
 .end method
 
-.method public setAdapter(Landroid/widget/ListAdapter;)V
+.method public final setAdapter(Landroid/widget/ListAdapter;)V
     .locals 2
 
     .prologue
     .line 94
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pL:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pZ:Landroid/widget/ListAdapter;
 
     if-eqz v0, :cond_0
 
     .line 95
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pL:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pZ:Landroid/widget/ListAdapter;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCq:Landroid/database/DataSetObserver;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbw:Landroid/database/DataSetObserver;
 
     invoke-interface {v0, v1}, Landroid/widget/ListAdapter;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
 
     .line 97
     :cond_0
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pL:Landroid/widget/ListAdapter;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pZ:Landroid/widget/ListAdapter;
 
     .line 98
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pL:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->pZ:Landroid/widget/ListAdapter;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCq:Landroid/database/DataSetObserver;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbw:Landroid/database/DataSetObserver;
 
     invoke-interface {v0, v1}, Landroid/widget/ListAdapter;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
@@ -968,7 +976,7 @@
 
     .prologue
     .line 58
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCp:Landroid/widget/AdapterView$OnItemClickListener;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbv:Landroid/widget/AdapterView$OnItemClickListener;
 
     .line 59
     return-void
@@ -979,7 +987,7 @@
 
     .prologue
     .line 53
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->kCo:Landroid/widget/AdapterView$OnItemSelectedListener;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/HorizontalListView;->lbu:Landroid/widget/AdapterView$OnItemSelectedListener;
 
     .line 54
     return-void

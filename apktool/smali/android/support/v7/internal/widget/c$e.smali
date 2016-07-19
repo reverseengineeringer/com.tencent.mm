@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic pD:Landroid/support/v7/internal/widget/c;
+.field final synthetic pR:Landroid/support/v7/internal/widget/c;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 853
-    iput-object p1, p0, Landroid/support/v7/internal/widget/c$e;->pD:Landroid/support/v7/internal/widget/c;
+    iput-object p1, p0, Landroid/support/v7/internal/widget/c$e;->pR:Landroid/support/v7/internal/widget/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,14 +51,14 @@
 
     .prologue
     .line 855
-    iget-object v0, p0, Landroid/support/v7/internal/widget/c$e;->pD:Landroid/support/v7/internal/widget/c;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/c$e;->pR:Landroid/support/v7/internal/widget/c;
 
-    iget-boolean v0, v0, Landroid/support/v7/internal/widget/c;->pp:Z
+    iget-boolean v0, v0, Landroid/support/v7/internal/widget/c;->pD:Z
 
     if-eqz v0, :cond_1
 
     .line 859
-    iget-object v0, p0, Landroid/support/v7/internal/widget/c$e;->pD:Landroid/support/v7/internal/widget/c;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/c$e;->pR:Landroid/support/v7/internal/widget/c;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/widget/c;->getAdapter()Landroid/widget/Adapter;
 
@@ -67,7 +67,7 @@
     if-eqz v0, :cond_0
 
     .line 860
-    iget-object v0, p0, Landroid/support/v7/internal/widget/c$e;->pD:Landroid/support/v7/internal/widget/c;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/c$e;->pR:Landroid/support/v7/internal/widget/c;
 
     invoke-virtual {v0, p0}, Landroid/support/v7/internal/widget/c;->post(Ljava/lang/Runnable;)Z
 
@@ -78,7 +78,7 @@
 
     .line 863
     :cond_1
-    iget-object v0, p0, Landroid/support/v7/internal/widget/c$e;->pD:Landroid/support/v7/internal/widget/c;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/c$e;->pR:Landroid/support/v7/internal/widget/c;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/c;->b(Landroid/support/v7/internal/widget/c;)V
 

@@ -4,16 +4,16 @@
 
 
 # direct methods
-.method public static FX()Ljava/lang/String;
+.method public static Gu()Ljava/lang/String;
     .locals 3
 
     .prologue
     .line 123
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v1
 
@@ -59,7 +59,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/plugin/a/b;->yU()I
+    invoke-static {}, Lcom/tencent/mm/plugin/a/b;->zh()I
 
     move-result v1
 
@@ -73,11 +73,11 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gp()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -87,7 +87,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/plugin/a/b;->FX()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/plugin/a/b;->Gu()Ljava/lang/String;
 
     move-result-object v1
 
@@ -101,11 +101,11 @@
 
     .line 152
     :goto_0
-    sget-object v1, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v1, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v1, 0x2995
 
-    invoke-static {v1, v0, v4, v4}, Lcom/tencent/mm/plugin/report/service/h;->c(ILjava/lang/String;ZZ)V
+    invoke-static {v1, v0, v4, v4}, Lcom/tencent/mm/plugin/report/service/g;->c(ILjava/lang/String;ZZ)V
 
     .line 153
     return-void
@@ -126,7 +126,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/plugin/a/b;->yU()I
+    invoke-static {}, Lcom/tencent/mm/plugin/a/b;->zh()I
 
     move-result v1
 
@@ -140,11 +140,11 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gp()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -154,11 +154,11 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v2
 
@@ -187,7 +187,7 @@
     goto :goto_0
 .end method
 
-.method public static en(I)V
+.method public static eZ(I)V
     .locals 3
 
     .prologue
@@ -195,21 +195,21 @@
     if-lez p0, :cond_0
 
     .line 98
-    invoke-static {}, Lcom/tencent/mm/model/aw;->uB()Lcom/tencent/mm/model/aw;
+    invoke-static {}, Lcom/tencent/mm/model/aw;->uD()Lcom/tencent/mm/model/aw;
 
     .line 99
-    invoke-static {}, Lcom/tencent/mm/model/aw;->uB()Lcom/tencent/mm/model/aw;
+    invoke-static {}, Lcom/tencent/mm/model/aw;->uD()Lcom/tencent/mm/model/aw;
 
     const/16 v0, 0x14
 
     if-ne p0, v0, :cond_0
 
     .line 100
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v1
 
@@ -236,16 +236,16 @@
     return-void
 .end method
 
-.method public static kB(Ljava/lang/String;)V
+.method public static lk(Ljava/lang/String;)V
     .locals 3
 
     .prologue
     .line 118
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v1
 
@@ -272,16 +272,16 @@
     return-void
 .end method
 
-.method public static kC(Ljava/lang/String;)V
+.method public static ll(Ljava/lang/String;)V
     .locals 3
 
     .prologue
     .line 128
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v1
 
@@ -308,11 +308,11 @@
     return-void
 .end method
 
-.method public static kD(Ljava/lang/String;)V
-    .locals 4
+.method public static lm(Ljava/lang/String;)V
+    .locals 5
 
     .prologue
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
     .line 138
     new-instance v0, Ljava/lang/StringBuilder;
@@ -329,7 +329,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/plugin/a/b;->yU()I
+    invoke-static {}, Lcom/tencent/mm/plugin/a/b;->zh()I
 
     move-result v1
 
@@ -343,11 +343,11 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/be;->Gp()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -357,7 +357,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/plugin/a/b;->FX()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/plugin/a/b;->Gu()Ljava/lang/String;
 
     move-result-object v1
 
@@ -370,28 +370,28 @@
     move-result-object v0
 
     .line 139
-    sget-object v1, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v1, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v1, 0x2995
 
-    invoke-static {v1, v0, v3, v3}, Lcom/tencent/mm/plugin/report/service/h;->c(ILjava/lang/String;ZZ)V
+    invoke-static {v1, v0, v4, v4}, Lcom/tencent/mm/plugin/report/service/g;->c(ILjava/lang/String;ZZ)V
 
     .line 140
     return-void
 .end method
 
-.method private static yU()I
+.method private static zh()I
     .locals 3
 
     .prologue
     const/4 v2, 0x0
 
     .line 113
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aZO()Ljava/lang/String;
 
     move-result-object v1
 

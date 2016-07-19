@@ -18,19 +18,19 @@
 
 
 # instance fields
-.field final synthetic bOA:D
+.field final synthetic bHT:Z
 
-.field final synthetic bOB:D
+.field final synthetic bHU:I
 
-.field final synthetic bOC:D
+.field final synthetic bHV:D
 
-.field final synthetic bOD:D
+.field final synthetic bHW:D
 
-.field final synthetic bOE:Lcom/tencent/mm/modelgeo/c$1;
+.field final synthetic bHX:D
 
-.field final synthetic bOy:Z
+.field final synthetic bHY:D
 
-.field final synthetic bOz:I
+.field final synthetic bHZ:Lcom/tencent/mm/modelgeo/c$1;
 
 
 # direct methods
@@ -38,20 +38,20 @@
     .locals 0
 
     .prologue
-    .line 177
-    iput-object p1, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bOE:Lcom/tencent/mm/modelgeo/c$1;
+    .line 181
+    iput-object p1, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bHZ:Lcom/tencent/mm/modelgeo/c$1;
 
-    iput-boolean p2, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bOy:Z
+    iput-boolean p2, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bHT:Z
 
-    iput p3, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bOz:I
+    iput p3, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bHU:I
 
-    iput-wide p4, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bOA:D
+    iput-wide p4, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bHV:D
 
-    iput-wide p6, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bOB:D
+    iput-wide p6, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bHW:D
 
-    iput-wide p8, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bOC:D
+    iput-wide p8, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bHX:D
 
-    iput-wide p10, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bOD:D
+    iput-wide p10, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bHY:D
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -64,17 +64,17 @@
     .locals 10
 
     .prologue
-    .line 183
+    .line 187
     new-instance v1, Ljava/util/LinkedList;
 
     invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
 
-    .line 184
-    iget-object v0, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bOE:Lcom/tencent/mm/modelgeo/c$1;
+    .line 188
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bHZ:Lcom/tencent/mm/modelgeo/c$1;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelgeo/c$1;->bOx:Lcom/tencent/mm/modelgeo/c;
+    iget-object v0, v0, Lcom/tencent/mm/modelgeo/c$1;->bHS:Lcom/tencent/mm/modelgeo/c;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelgeo/c;->bOl:Ljava/util/List;
+    iget-object v0, v0, Lcom/tencent/mm/modelgeo/c;->bHG:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -94,7 +94,7 @@
 
     check-cast v0, Ljava/lang/ref/WeakReference;
 
-    .line 185
+    .line 189
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -103,100 +103,100 @@
 
     if-eqz v3, :cond_0
 
-    .line 186
+    .line 190
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/tencent/mm/modelgeo/a$a;
 
-    .line 187
+    .line 191
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 190
+    .line 194
     :cond_1
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v9
-
-    :goto_1
-    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/modelgeo/a$a;
-
-    .line 191
-    sget-boolean v1, Lcom/tencent/mm/platformtools/r;->cmK:Z
-
-    if-eqz v1, :cond_2
-
-    invoke-static {}, Lcom/tencent/mm/sdk/b/b;->aUo()Z
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
-    .line 192
-    iget-boolean v1, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bOy:Z
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    sget-wide v2, Lcom/tencent/mm/platformtools/r;->lng:D
+    move-result-object v1
 
-    double-to-float v2, v2
+    check-cast v1, Lcom/tencent/mm/modelgeo/a$a;
 
-    sget-wide v3, Lcom/tencent/mm/platformtools/r;->lat:D
+    .line 195
+    sget-boolean v2, Lcom/tencent/mm/platformtools/q;->chP:Z
 
-    double-to-float v3, v3
+    if-eqz v2, :cond_2
 
-    iget v4, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bOz:I
+    invoke-static {}, Lcom/tencent/mm/sdk/b/b;->aZo()Z
 
-    iget-wide v5, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bOA:D
+    move-result v2
 
-    double-to-float v5, v5
-
-    float-to-double v5, v5
-
-    iget-wide v7, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bOB:D
-
-    invoke-interface/range {v0 .. v8}, Lcom/tencent/mm/modelgeo/a$a;->a(ZFFIDD)Z
-
-    goto :goto_1
+    if-eqz v2, :cond_2
 
     .line 196
-    :cond_2
-    iget-boolean v1, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bOy:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bHT:Z
 
-    iget-wide v2, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bOC:D
+    sget-wide v4, Lcom/tencent/mm/platformtools/q;->lng:D
 
-    double-to-float v2, v2
+    double-to-float v3, v4
 
-    iget-wide v3, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bOD:D
+    sget-wide v4, Lcom/tencent/mm/platformtools/q;->lat:D
 
-    double-to-float v3, v3
+    double-to-float v4, v4
 
-    iget v4, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bOz:I
+    iget v5, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bHU:I
 
-    iget-wide v5, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bOA:D
+    iget-wide v6, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bHV:D
 
-    double-to-float v5, v5
+    double-to-float v6, v6
 
-    float-to-double v5, v5
+    float-to-double v6, v6
 
-    iget-wide v7, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bOB:D
+    iget-wide v8, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bHW:D
 
-    invoke-interface/range {v0 .. v8}, Lcom/tencent/mm/modelgeo/a$a;->a(ZFFIDD)Z
+    invoke-interface/range {v1 .. v9}, Lcom/tencent/mm/modelgeo/a$a;->a(ZFFIDD)Z
 
     goto :goto_1
 
-    .line 202
+    .line 200
+    :cond_2
+    iget-boolean v2, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bHT:Z
+
+    iget-wide v4, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bHX:D
+
+    double-to-float v3, v4
+
+    iget-wide v4, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bHY:D
+
+    double-to-float v4, v4
+
+    iget v5, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bHU:I
+
+    iget-wide v6, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bHV:D
+
+    double-to-float v6, v6
+
+    float-to-double v6, v6
+
+    iget-wide v8, p0, Lcom/tencent/mm/modelgeo/c$1$1;->bHW:D
+
+    invoke-interface/range {v1 .. v9}, Lcom/tencent/mm/modelgeo/a$a;->a(ZFFIDD)Z
+
+    goto :goto_1
+
+    .line 206
     :cond_3
     return-void
 .end method

@@ -8,36 +8,36 @@ import com.tencent.mm.model.c;
 public abstract class a
   implements d
 {
-  protected d.a bDs;
-  protected String bDt = uQ();
-  protected String[] bDu = uP();
+  protected d.a bwC;
+  protected String bwD = uS();
+  protected String[] bwE = uR();
   
-  public final String K(String paramString1, String paramString2)
+  public final String H(String paramString1, String paramString2)
   {
-    SharedPreferences localSharedPreferences = ah.tD().dF("banner");
+    SharedPreferences localSharedPreferences = ah.tE().dO("banner");
     if (localSharedPreferences == null) {
       return null;
     }
-    return localSharedPreferences.getString(bDt + paramString2 + paramString1, null);
+    return localSharedPreferences.getString(bwD + paramString2 + paramString1, null);
   }
   
   public final void a(d.a parama)
   {
-    bDs = parama;
+    bwC = parama;
   }
   
   public final void a(String paramString, boolean paramBoolean, String[] paramArrayOfString)
   {
-    SharedPreferences localSharedPreferences = ah.tD().dF("banner");
+    SharedPreferences localSharedPreferences = ah.tE().dO("banner");
     if (localSharedPreferences == null) {}
     label187:
     do
     {
       return;
-      localSharedPreferences.edit().putBoolean(bDt + paramString, paramBoolean).commit();
-      if ((bDu != null) && (paramArrayOfString != null) && (bDu.length == paramArrayOfString.length))
+      localSharedPreferences.edit().putBoolean(bwD + paramString, paramBoolean).commit();
+      if ((bwE != null) && (paramArrayOfString != null) && (bwE.length == paramArrayOfString.length))
       {
-        String[] arrayOfString = bDu;
+        String[] arrayOfString = bwE;
         int k = arrayOfString.length;
         int i = 0;
         int j = 0;
@@ -51,64 +51,64 @@ public abstract class a
           }
           for (String str1 = paramArrayOfString[j];; str1 = "")
           {
-            localSharedPreferences.edit().putString(bDt + str2 + paramString, str1).commit();
+            localSharedPreferences.edit().putString(bwD + str2 + paramString, str1).commit();
             j += 1;
             i += 1;
             break;
           }
         }
       }
-    } while (bDs == null);
-    bDs.uR();
+    } while (bwC == null);
+    bwC.uT();
   }
   
-  public final boolean fC(String paramString)
+  public final boolean fP(String paramString)
   {
     boolean bool2 = false;
-    SharedPreferences localSharedPreferences = ah.tD().dF("banner");
+    SharedPreferences localSharedPreferences = ah.tE().dO("banner");
     boolean bool1 = bool2;
     if (localSharedPreferences != null)
     {
       bool1 = bool2;
-      if (localSharedPreferences.getBoolean(bDt + paramString, false)) {
+      if (localSharedPreferences.getBoolean(bwD + paramString, false)) {
         bool1 = true;
       }
     }
     return bool1;
   }
   
-  public final void fD(String paramString)
+  public final void fQ(String paramString)
   {
-    SharedPreferences localSharedPreferences = ah.tD().dF("banner");
+    SharedPreferences localSharedPreferences = ah.tE().dO("banner");
     if (localSharedPreferences == null) {}
     do
     {
       return;
-      localSharedPreferences.edit().remove(bDt + paramString).commit();
-      if (bDu != null)
+      localSharedPreferences.edit().remove(bwD + paramString).commit();
+      if (bwE != null)
       {
-        String[] arrayOfString = bDu;
+        String[] arrayOfString = bwE;
         int j = arrayOfString.length;
         int i = 0;
         while (i < j)
         {
           String str = arrayOfString[i];
           if (str != null) {
-            localSharedPreferences.edit().remove(bDt + str + paramString).commit();
+            localSharedPreferences.edit().remove(bwD + str + paramString).commit();
           }
           i += 1;
         }
       }
-    } while (bDs == null);
-    bDs.uS();
+    } while (bwC == null);
+    bwC.uU();
   }
   
-  protected String[] uP()
+  protected String[] uR()
   {
     return null;
   }
   
-  public abstract String uQ();
+  public abstract String uS();
 }
 
 /* Location:

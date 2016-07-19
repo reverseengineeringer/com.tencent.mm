@@ -1,18 +1,18 @@
 package com.tencent.mm.app.plugin.b;
 
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class a$f$1
-  implements af.a
+  implements ah.a
 {
   a$f$1(a.f paramf) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    u.i("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "Voice record timeout.");
-    anL.anI = true;
-    anL.li();
+    v.i("MicroMsg.SubCoreExtAgent", "Voice record timeout.");
+    aaz.aaw = true;
+    aaz.jJ();
     return false;
   }
 }

@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.base;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.lang.ref.WeakReference;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -8,20 +8,20 @@ import java.lang.reflect.Method;
 public final class b$b
   implements InvocationHandler
 {
-  public WeakReference kBn;
+  public WeakReference<b.a> las;
   
   public final Object invoke(Object paramObject, Method paramMethod, Object[] paramArrayOfObject)
   {
     boolean bool2 = false;
-    if (kBn == null)
+    if (las == null)
     {
-      u.i("!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i", "swipe invoke fail, callbackRef NULL!");
+      v.i("MicroMsg.ActivityUtil", "swipe invoke fail, callbackRef NULL!");
       return null;
     }
-    paramObject = (b.a)kBn.get();
+    paramObject = (b.a)las.get();
     if (paramObject == null)
     {
-      u.i("!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i", "swipe invoke fail, callback NULL!");
+      v.i("MicroMsg.ActivityUtil", "swipe invoke fail, callback NULL!");
       return null;
     }
     boolean bool1 = bool2;
@@ -36,7 +36,7 @@ public final class b$b
         }
       }
     }
-    ((b.a)paramObject).hu(bool1);
+    ((b.a)paramObject).hS(bool1);
     return null;
   }
 }

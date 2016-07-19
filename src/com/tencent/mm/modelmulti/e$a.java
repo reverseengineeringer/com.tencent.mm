@@ -1,13 +1,13 @@
 package com.tencent.mm.modelmulti;
 
-import com.tencent.mm.protocal.b.aev;
+import com.tencent.mm.protocal.b.afq;
 
 final class e$a
 {
-  String aCE;
-  int bPb = 0;
-  aev bVe;
-  int bVf = 0;
+  String aoX;
+  int bIw = 0;
+  afq bOF;
+  int bOG = 0;
   int errCode;
   int errType;
   

@@ -12,13 +12,32 @@
 
 
 # static fields
-.field private static can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+.field private static bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
-.field private static cao:Ljava/util/TreeMap;
+.field private static bTX:Ljava/util/TreeMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/TreeMap",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private static cap:Ljava/io/File;
+.field private static bTY:Ljava/io/File;
 
-.field private static final caq:Ljava/util/EnumSet;
+.field private static final bTZ:Ljava/util/EnumSet;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/EnumSet",
+            "<",
+            "Lcom/tencent/mm/modelsfs/g$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -31,30 +50,30 @@
 
     invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sput-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     .line 87
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/modelsfs/FileOp;->cao:Ljava/util/TreeMap;
+    sput-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTX:Ljava/util/TreeMap;
 
     .line 317
-    sget-object v0, Lcom/tencent/mm/modelsfs/g$a;->caA:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v0, Lcom/tencent/mm/modelsfs/g$a;->bUj:Lcom/tencent/mm/modelsfs/g$a;
 
-    sget-object v1, Lcom/tencent/mm/modelsfs/g$a;->caB:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v1, Lcom/tencent/mm/modelsfs/g$a;->bUk:Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-static {v0, v1}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;Ljava/lang/Enum;)Ljava/util/EnumSet;
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/modelsfs/FileOp;->caq:Ljava/util/EnumSet;
+    sput-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTZ:Ljava/util/EnumSet;
 
     return-void
 .end method
 
-.method private static Cg()V
+.method private static Cn()V
     .locals 4
 
     .prologue
@@ -64,7 +83,7 @@
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     .line 185
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->cao:Ljava/util/TreeMap;
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTX:Ljava/util/TreeMap;
 
     invoke-virtual {v0}, Ljava/util/TreeMap;->values()Ljava/util/Collection;
 
@@ -88,7 +107,7 @@
     check-cast v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
 
     .line 186
-    iget-object v3, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cat:Ljava/lang/String;
+    iget-object v3, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUc:Ljava/lang/String;
 
     invoke-virtual {v1, v3, v0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
@@ -106,7 +125,7 @@
     invoke-virtual {v1, v0, v2}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
 
     .line 190
-    sget-object v1, Lcom/tencent/mm/modelsfs/FileOp;->cap:Ljava/io/File;
+    sget-object v1, Lcom/tencent/mm/modelsfs/FileOp;->bTY:Ljava/io/File;
 
     invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -127,12 +146,22 @@
     return-void
 .end method
 
-.method public static Ch()Ljava/util/Map;
+.method public static Co()Ljava/util/Map;
     .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/modelsfs/SFSContext$Statistics;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     .line 286
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -146,7 +175,7 @@
     invoke-direct {v2}, Ljava/util/TreeMap;-><init>()V
 
     .line 289
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->cao:Ljava/util/TreeMap;
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTX:Ljava/util/TreeMap;
 
     invoke-virtual {v0}, Ljava/util/TreeMap;->values()Ljava/util/Collection;
 
@@ -173,12 +202,12 @@
     .line 290
     if-eqz v0, :cond_0
 
-    iget-boolean v1, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->caw:Z
+    iget-boolean v1, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUf:Z
 
     if-nez v1, :cond_0
 
     .line 293
-    iget-object v1, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iget-object v1, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
 
     if-nez v1, :cond_2
 
@@ -187,7 +216,7 @@
 
     .line 295
     :try_start_0
-    iget-object v1, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iget-object v1, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -195,13 +224,13 @@
 
     .line 297
     :try_start_1
-    iget-object v1, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cay:Lcom/tencent/mm/modelsfs/SFSContext$Builder;
+    iget-object v1, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUh:Lcom/tencent/mm/modelsfs/SFSContext$Builder;
 
     invoke-virtual {v1}, Lcom/tencent/mm/modelsfs/SFSContext$Builder;->create()Lcom/tencent/mm/modelsfs/SFSContext;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iput-object v1, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -215,7 +244,7 @@
 
     .line 309
     :cond_2
-    iget-object v1, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iget-object v1, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
 
     iget-wide v4, v1, Lcom/tencent/mm/modelsfs/SFSContext;->mNativePtr:J
 
@@ -239,7 +268,7 @@
 
     .line 299
     :try_start_3
-    const-string/jumbo v4, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v4, "MicroMsg.FileOp"
 
     const-string/jumbo v5, "Failed to create SFSContext for prefix \'%s\': %s"
 
@@ -249,7 +278,7 @@
 
     const/4 v7, 0x0
 
-    iget-object v8, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cat:Ljava/lang/String;
+    iget-object v8, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUc:Ljava/lang/String;
 
     aput-object v8, v6, v7
 
@@ -261,12 +290,12 @@
 
     aput-object v1, v6, v7
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 301
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->caw:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUf:Z
 
     .line 302
     monitor-exit v0
@@ -292,7 +321,7 @@
     move-result-object v1
 
     .line 310
-    iget-object v0, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cay:Lcom/tencent/mm/modelsfs/SFSContext$Builder;
+    iget-object v0, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUh:Lcom/tencent/mm/modelsfs/SFSContext$Builder;
 
     iget-object v0, v0, Lcom/tencent/mm/modelsfs/SFSContext$Builder;->mName:Ljava/lang/String;
 
@@ -302,7 +331,7 @@
 
     .line 313
     :cond_4
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -314,27 +343,27 @@
     return-object v2
 .end method
 
-.method static synthetic Ci()Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+.method static synthetic Cp()Ljava/util/concurrent/locks/ReentrantReadWriteLock;
     .locals 1
 
     .prologue
     .line 40
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     return-object v0
 .end method
 
-.method static synthetic Cj()Ljava/util/TreeMap;
+.method static synthetic Cq()Ljava/util/TreeMap;
     .locals 1
 
     .prologue
     .line 40
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->cao:Ljava/util/TreeMap;
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTX:Ljava/util/TreeMap;
 
     return-object v0
 .end method
 
-.method public static X(Ljava/lang/String;Ljava/lang/String;)Z
+.method public static V(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 6
 
     .prologue
@@ -369,40 +398,40 @@
 
     .line 774
     :cond_2
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iG(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iX(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_5
 
-    invoke-static {p1}, Lcom/tencent/mm/modelsfs/FileOp;->iG(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/modelsfs/FileOp;->iX(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_5
 
     .line 775
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->iT(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->jk(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
     .line 776
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->iU(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->jl(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     .line 778
     :cond_3
-    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->iT(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->jk(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
     .line 779
-    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->iU(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/modelsfs/f;->jl(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -424,7 +453,7 @@
 
     .line 785
     :cond_5
-    invoke-static {p0, p1}, Lcom/tencent/mm/modelsfs/FileOp;->o(Ljava/lang/String;Ljava/lang/String;)J
+    invoke-static {p0, p1}, Lcom/tencent/mm/modelsfs/FileOp;->n(Ljava/lang/String;Ljava/lang/String;)J
 
     move-result-wide v2
 
@@ -458,7 +487,7 @@
     if-nez p2, :cond_0
 
     .line 199
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iE(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iV(Ljava/lang/String;)V
 
     .line 243
     :goto_0
@@ -505,11 +534,11 @@
     if-eqz v0, :cond_1
 
     .line 206
-    const-string/jumbo v0, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v0, "MicroMsg.FileOp"
 
     const-string/jumbo v1, "SFS disabled."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -523,7 +552,7 @@
     invoke-direct {v2}, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;-><init>()V
 
     .line 214
-    iput-object p0, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cat:Ljava/lang/String;
+    iput-object p0, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUc:Ljava/lang/String;
 
     .line 215
     if-eqz p1, :cond_2
@@ -536,22 +565,22 @@
     move-object v0, v1
 
     :goto_1
-    iput-object v0, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cau:[Ljava/lang/String;
+    iput-object v0, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUd:[Ljava/lang/String;
 
     .line 217
-    iput-boolean v4, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cav:Z
+    iput-boolean v4, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUe:Z
 
     .line 218
-    iput-object v1, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iput-object v1, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
 
     .line 219
-    iput-object p2, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cay:Lcom/tencent/mm/modelsfs/SFSContext$Builder;
+    iput-object p2, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUh:Lcom/tencent/mm/modelsfs/SFSContext$Builder;
 
     move-object v1, v2
 
     .line 222
     :cond_3
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;
 
@@ -560,7 +589,7 @@
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->lock()V
 
     .line 224
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->cao:Ljava/util/TreeMap;
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTX:Ljava/util/TreeMap;
 
     invoke-virtual {v0, p0, v1}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -569,7 +598,7 @@
     check-cast v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
 
     .line 225
-    sget-object v2, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v2, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;
 
@@ -580,12 +609,12 @@
     .line 228
     if-eqz v0, :cond_4
 
-    iget-object v2, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iget-object v2, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
 
     if-eqz v2, :cond_4
 
     .line 229
-    iget-object v0, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iget-object v0, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
 
     invoke-virtual {v0}, Lcom/tencent/mm/modelsfs/SFSContext;->release()V
 
@@ -607,7 +636,7 @@
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     .line 235
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -638,10 +667,10 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
     .line 241
-    invoke-static {}, Lcom/tencent/mm/modelsfs/FileOp;->Cg()V
+    invoke-static {}, Lcom/tencent/mm/modelsfs/FileOp;->Cn()V
 
     .line 242
-    const-string/jumbo v0, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v0, "MicroMsg.FileOp"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -657,7 +686,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -681,7 +710,7 @@
     const/4 v0, 0x0
 
     .line 319
-    iget-object v1, p1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cau:[Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUd:[Ljava/lang/String;
 
     if-nez v1, :cond_1
 
@@ -692,7 +721,7 @@
 
     .line 321
     :cond_1
-    iget-object v1, p1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cat:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUc:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -729,7 +758,7 @@
     if-eqz v1, :cond_0
 
     .line 327
-    iget-object v3, p1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cau:[Ljava/lang/String;
+    iget-object v3, p1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUd:[Ljava/lang/String;
 
     array-length v4, v3
 
@@ -741,7 +770,7 @@
     aget-object v5, v3, v1
 
     .line 328
-    sget-object v6, Lcom/tencent/mm/modelsfs/FileOp;->caq:Ljava/util/EnumSet;
+    sget-object v6, Lcom/tencent/mm/modelsfs/FileOp;->bTZ:Ljava/util/EnumSet;
 
     invoke-static {v5, v0, v2, v0, v6}, Lcom/tencent/mm/modelsfs/g;->a(Ljava/lang/String;ILjava/lang/String;ILjava/util/EnumSet;)Z
 
@@ -761,7 +790,7 @@
     goto :goto_1
 .end method
 
-.method public static ax(Ljava/lang/String;)Z
+.method public static aB(Ljava/lang/String;)Z
     .locals 8
 
     .prologue
@@ -785,7 +814,7 @@
 
     .line 719
     :cond_1
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iH(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iY(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
 
     move-result-object v2
 
@@ -793,9 +822,9 @@
     if-eqz v2, :cond_5
 
     .line 721
-    iget-object v3, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iget-object v3, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
 
-    iget-object v0, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cat:Ljava/lang/String;
+    iget-object v0, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUc:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -822,29 +851,29 @@
     throw v0
 
     :cond_2
-    invoke-static {v0}, Lcom/tencent/mm/modelsfs/f;->iT(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/modelsfs/f;->jk(Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    invoke-static {v0}, Lcom/tencent/mm/modelsfs/f;->iV(Ljava/lang/String;)J
+    invoke-static {v0}, Lcom/tencent/mm/modelsfs/f;->jm(Ljava/lang/String;)J
 
-    invoke-static {v0}, Lcom/tencent/mm/modelsfs/f;->iU(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/modelsfs/f;->jl(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     :cond_3
-    iget-wide v3, v3, Lcom/tencent/mm/modelsfs/SFSContext;->mNativePtr:J
+    iget-wide v4, v3, Lcom/tencent/mm/modelsfs/SFSContext;->mNativePtr:J
 
-    invoke-static {v3, v4, v0}, Lcom/tencent/mm/modelsfs/SFSContext;->nativeExists(JLjava/lang/String;)Z
+    invoke-static {v4, v5, v0}, Lcom/tencent/mm/modelsfs/SFSContext;->nativeExists(JLjava/lang/String;)Z
 
     move-result v0
 
     .line 722
     if-nez v0, :cond_4
 
-    iget-boolean v3, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cav:Z
+    iget-boolean v3, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUe:Z
 
     if-eqz v3, :cond_4
 
@@ -860,7 +889,7 @@
     .line 727
     :cond_4
     :goto_1
-    sget-object v3, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v3, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -869,7 +898,7 @@
     invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->unlock()V
 
     .line 730
-    const-string/jumbo v3, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v3, "MicroMsg.FileOp"
 
     const-string/jumbo v4, "fileExists: %s [%b, %s]"
 
@@ -896,7 +925,7 @@
     :goto_2
     aput-object v1, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -955,7 +984,7 @@
 
     .line 650
     :try_start_0
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iJ(Ljava/lang/String;)Ljava/io/OutputStream;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->ja(Ljava/lang/String;)Ljava/io/OutputStream;
 
     move-result-object v1
 
@@ -990,7 +1019,7 @@
 
     .line 653
     :try_start_2
-    const-string/jumbo v2, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v2, "MicroMsg.FileOp"
 
     const-string/jumbo v3, "writeFile \'%s\' Failed: %s"
 
@@ -1010,7 +1039,7 @@
 
     aput-object v0, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -1179,7 +1208,7 @@
 
     .line 614
     :goto_4
-    const-string/jumbo v1, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v1, "MicroMsg.FileOp"
 
     const-string/jumbo v2, "readFromFile: %s [%d]"
 
@@ -1199,7 +1228,7 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -1212,7 +1241,7 @@
     .line 606
     :goto_5
     :try_start_4
-    const-string/jumbo v3, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v3, "MicroMsg.FileOp"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1242,7 +1271,7 @@
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
@@ -1335,7 +1364,7 @@
 
     .line 739
     :cond_1
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iH(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iY(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
 
     move-result-object v2
 
@@ -1343,7 +1372,7 @@
     if-eqz v2, :cond_3
 
     .line 742
-    iget-object v0, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cat:Ljava/lang/String;
+    iget-object v0, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUc:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -1354,28 +1383,28 @@
     move-result-object v0
 
     .line 743
-    iget-object v3, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iget-object v3, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
 
-    invoke-virtual {v3, v0}, Lcom/tencent/mm/modelsfs/SFSContext;->bo(Ljava/lang/String;)Z
+    invoke-virtual {v3, v0}, Lcom/tencent/mm/modelsfs/SFSContext;->jp(Ljava/lang/String;)Z
 
     move-result v0
 
     .line 744
     if-nez v0, :cond_2
 
-    iget-boolean v3, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cav:Z
+    iget-boolean v3, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUe:Z
 
     if-eqz v3, :cond_2
 
     .line 746
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->iT(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->jk(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
     .line 747
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->iU(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->jl(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1392,7 +1421,7 @@
     .line 759
     :cond_2
     :goto_2
-    sget-object v3, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v3, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -1401,7 +1430,7 @@
     invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->unlock()V
 
     .line 762
-    const-string/jumbo v3, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v3, "MicroMsg.FileOp"
 
     const-string/jumbo v4, "deleteFile: %s [%b, %s]"
 
@@ -1428,20 +1457,20 @@
     :goto_3
     aput-object v1, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 753
     :cond_3
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->iT(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->jk(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
     .line 754
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->iU(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->jl(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1475,12 +1504,12 @@
     goto :goto_1
 .end method
 
-.method public static iE(Ljava/lang/String;)V
+.method public static iV(Ljava/lang/String;)V
     .locals 3
 
     .prologue
     .line 246
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;
 
@@ -1489,7 +1518,7 @@
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->lock()V
 
     .line 248
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->cao:Ljava/util/TreeMap;
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTX:Ljava/util/TreeMap;
 
     invoke-virtual {v0, p0}, Ljava/util/TreeMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1498,7 +1527,7 @@
     check-cast v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
 
     .line 249
-    sget-object v1, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v1, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;
 
@@ -1509,18 +1538,18 @@
     .line 252
     if-eqz v0, :cond_0
 
-    iget-object v1, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iget-object v1, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
 
     if-eqz v1, :cond_0
 
     .line 253
-    iget-object v0, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iget-object v0, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
 
     invoke-virtual {v0}, Lcom/tencent/mm/modelsfs/SFSContext;->release()V
 
     .line 255
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -1551,10 +1580,10 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
     .line 261
-    invoke-static {}, Lcom/tencent/mm/modelsfs/FileOp;->Cg()V
+    invoke-static {}, Lcom/tencent/mm/modelsfs/FileOp;->Cn()V
 
     .line 262
-    const-string/jumbo v0, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v0, "MicroMsg.FileOp"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1570,13 +1599,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 263
     return-void
 .end method
 
-.method private static iF(Ljava/lang/String;)Z
+.method private static iW(Ljava/lang/String;)Z
     .locals 3
 
     .prologue
@@ -1584,7 +1613,7 @@
     const/4 v1, 0x1
 
     .line 337
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -1593,7 +1622,7 @@
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->lock()V
 
     .line 339
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->cao:Ljava/util/TreeMap;
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTX:Ljava/util/TreeMap;
 
     invoke-virtual {v0, p0}, Ljava/util/TreeMap;->floorEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;
 
@@ -1622,11 +1651,11 @@
     check-cast v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
 
     .line 342
-    iget-object v2, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cau:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUd:[Ljava/lang/String;
 
     if-nez v2, :cond_0
 
-    iget-boolean v0, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cav:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUe:Z
 
     if-nez v0, :cond_0
 
@@ -1635,7 +1664,7 @@
 
     .line 345
     :goto_0
-    sget-object v1, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v1, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -1652,7 +1681,7 @@
     goto :goto_0
 .end method
 
-.method private static iG(Ljava/lang/String;)Z
+.method private static iX(Ljava/lang/String;)Z
     .locals 3
 
     .prologue
@@ -1660,7 +1689,7 @@
     const/4 v1, 0x1
 
     .line 354
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -1669,7 +1698,7 @@
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->lock()V
 
     .line 356
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->cao:Ljava/util/TreeMap;
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTX:Ljava/util/TreeMap;
 
     invoke-virtual {v0, p0}, Ljava/util/TreeMap;->floorEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;
 
@@ -1709,7 +1738,7 @@
 
     .line 362
     :goto_0
-    sget-object v1, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v1, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -1726,7 +1755,7 @@
     goto :goto_0
 .end method
 
-.method private static iH(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
+.method private static iY(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
     .locals 8
 
     .prologue
@@ -1734,7 +1763,7 @@
 
     .line 369
     .line 371
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -1743,7 +1772,7 @@
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->lock()V
 
     .line 373
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->cao:Ljava/util/TreeMap;
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTX:Ljava/util/TreeMap;
 
     invoke-virtual {v0, p0}, Ljava/util/TreeMap;->floorEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;
 
@@ -1794,12 +1823,12 @@
     :goto_1
     if-eqz v0, :cond_4
 
-    iget-boolean v2, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->caw:Z
+    iget-boolean v2, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUf:Z
 
     if-nez v2, :cond_4
 
     .line 383
-    iget-object v2, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iget-object v2, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
 
     if-nez v2, :cond_0
 
@@ -1808,7 +1837,7 @@
 
     .line 385
     :try_start_0
-    iget-object v2, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iget-object v2, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1816,13 +1845,13 @@
 
     .line 387
     :try_start_1
-    iget-object v2, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cay:Lcom/tencent/mm/modelsfs/SFSContext$Builder;
+    iget-object v2, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUh:Lcom/tencent/mm/modelsfs/SFSContext$Builder;
 
     invoke-virtual {v2}, Lcom/tencent/mm/modelsfs/SFSContext$Builder;->create()Lcom/tencent/mm/modelsfs/SFSContext;
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iput-object v2, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1849,7 +1878,7 @@
 
     .line 389
     :try_start_3
-    const-string/jumbo v3, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v3, "MicroMsg.FileOp"
 
     const-string/jumbo v4, "Failed to create SFSContext for prefix \'%s\': %s"
 
@@ -1859,7 +1888,7 @@
 
     const/4 v6, 0x0
 
-    iget-object v7, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cat:Ljava/lang/String;
+    iget-object v7, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUc:Ljava/lang/String;
 
     aput-object v7, v5, v6
 
@@ -1871,12 +1900,12 @@
 
     aput-object v2, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 391
     const/4 v2, 0x1
 
-    iput-boolean v2, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->caw:Z
+    iput-boolean v2, v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUf:Z
 
     .line 392
     monitor-exit v0
@@ -1899,19 +1928,242 @@
     goto :goto_1
 .end method
 
-.method public static iI(Ljava/lang/String;)Ljava/io/OutputStream;
+.method public static iZ(Ljava/lang/String;)Ljava/io/OutputStream;
     .locals 1
 
     .prologue
     .line 442
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iJ(Ljava/lang/String;)Ljava/io/OutputStream;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->ja(Ljava/lang/String;)Ljava/io/OutputStream;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static iJ(Ljava/lang/String;)Ljava/io/OutputStream;
+.method public static init(Z)V
+    .locals 7
+
+    .prologue
+    const/4 v4, 0x0
+
+    .line 93
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    .line 94
+    new-instance v0, Ljava/io/File;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
+
+    move-result-object v1
+
+    const-string/jumbo v3, "fileop_mapping"
+
+    invoke-direct {v0, v1, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    sput-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTY:Ljava/io/File;
+
+    .line 96
+    if-eqz p0, :cond_0
+
+    .line 98
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTY:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
+
+    .line 181
+    :goto_0
+    return-void
+
+    .line 100
+    :cond_0
+    const-string/jumbo v0, "MicroMsg.FileOp"
+
+    const-string/jumbo v1, "Initializing FileOp mapping slave."
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 103
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTY:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 105
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTY:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, -0x1
+
+    invoke-static {v0, v4, v1}, Lcom/tencent/mm/modelsfs/FileOp;->c(Ljava/lang/String;II)[B
+
+    move-result-object v0
+
+    .line 106
+    if-eqz v0, :cond_3
+
+    .line 107
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    .line 108
+    array-length v3, v0
+
+    invoke-virtual {v1, v0, v4, v3}, Landroid/os/Parcel;->unmarshall([BII)V
+
+    .line 109
+    invoke-virtual {v1, v4}, Landroid/os/Parcel;->setDataPosition(I)V
+
+    .line 110
+    const-class v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Landroid/os/Parcel;->readBundle(Ljava/lang/ClassLoader;)Landroid/os/Bundle;
+
+    move-result-object v3
+
+    .line 111
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 113
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->lock()V
+
+    .line 114
+    invoke-virtual {v3}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    :goto_1
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 115
+    invoke-virtual {v3, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
+
+    .line 116
+    sget-object v5, Lcom/tencent/mm/modelsfs/FileOp;->bTX:Ljava/util/TreeMap;
+
+    invoke-virtual {v5, v0, v1}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
+
+    .line 117
+    if-eqz v1, :cond_1
+
+    iget-object v5, v1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
+
+    if-eqz v5, :cond_1
+
+    .line 118
+    iget-object v1, v1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
+
+    invoke-virtual {v1}, Lcom/tencent/mm/modelsfs/SFSContext;->release()V
+
+    .line 119
+    :cond_1
+    const-string/jumbo v1, "MicroMsg.FileOp"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v6, "Load mapping from file: "
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_1
+
+    .line 121
+    :cond_2
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->unlock()V
+
+    .line 126
+    :cond_3
+    new-instance v0, Lcom/tencent/mm/modelsfs/FileOp$1;
+
+    invoke-direct {v0}, Lcom/tencent/mm/modelsfs/FileOp$1;-><init>()V
+
+    .line 174
+    new-instance v1, Landroid/content/IntentFilter;
+
+    invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
+
+    .line 175
+    const-string/jumbo v3, "com.tencent.mm.FileOp.registerSFS"
+
+    invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 176
+    const-string/jumbo v3, "com.tencent.mm.FileOp.unregisterSFS"
+
+    invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 177
+    const-string/jumbo v3, "com.tencent.mm.FileOp.clearSFS"
+
+    invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 179
+    const-string/jumbo v3, "com.tencent.mm.permission.MM_MESSAGE"
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v0, v1, v3, v4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
+
+    goto/16 :goto_0
+.end method
+
+.method public static ja(Ljava/lang/String;)Ljava/io/OutputStream;
     .locals 7
 
     .prologue
@@ -1935,7 +2187,7 @@
 
     .line 448
     :cond_1
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iH(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iY(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
 
     move-result-object v1
 
@@ -1944,19 +2196,19 @@
 
     .line 455
     :try_start_0
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->iT(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->jk(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 456
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->iV(Ljava/lang/String;)J
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->jm(Ljava/lang/String;)J
 
     move-result-wide v2
 
     .line 457
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->iU(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->jl(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1969,7 +2221,7 @@
 
     .line 467
     :goto_0
-    sget-object v2, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v2, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -1978,7 +2230,7 @@
     invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->unlock()V
 
     .line 471
-    const-string/jumbo v2, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v2, "MicroMsg.FileOp"
 
     const-string/jumbo v3, "openWrite: %s [%s, %s]"
 
@@ -2005,7 +2257,7 @@
     :goto_1
     aput-object v1, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 473
     return-object v0
@@ -2025,7 +2277,7 @@
     :catchall_0
     move-exception v0
 
-    sget-object v1, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v1, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -2038,7 +2290,7 @@
     .line 463
     :cond_3
     :try_start_2
-    iget-object v0, v1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cat:Ljava/lang/String;
+    iget-object v0, v1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUc:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -2049,9 +2301,9 @@
     move-result-object v0
 
     .line 464
-    iget-object v2, v1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iget-object v2, v1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
 
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/modelsfs/SFSContext;->iI(Ljava/lang/String;)Ljava/io/OutputStream;
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/modelsfs/SFSContext;->iZ(Ljava/lang/String;)Ljava/io/OutputStream;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -2066,7 +2318,7 @@
     goto :goto_1
 .end method
 
-.method public static iK(Ljava/lang/String;)Z
+.method public static jb(Ljava/lang/String;)Z
     .locals 8
 
     .prologue
@@ -2094,7 +2346,7 @@
 
     .line 482
     :cond_1
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iH(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iY(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
 
     move-result-object v3
 
@@ -2102,7 +2354,7 @@
     if-nez v3, :cond_2
 
     .line 508
-    sget-object v1, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v1, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -2115,7 +2367,7 @@
     .line 486
     :cond_2
     :try_start_0
-    iget-object v4, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cat:Ljava/lang/String;
+    iget-object v4, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUc:Ljava/lang/String;
 
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
@@ -2126,7 +2378,7 @@
     move-result-object v4
 
     .line 487
-    iget-object v3, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iget-object v3, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
 
     invoke-virtual {v3, v4}, Lcom/tencent/mm/modelsfs/SFSContext;->openRead(Ljava/lang/String;)Ljava/io/InputStream;
     :try_end_0
@@ -2146,7 +2398,7 @@
     move-result-object v3
 
     .line 490
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v5
 
@@ -2205,7 +2457,7 @@
     .line 505
     :goto_2
     :try_start_3
-    const-string/jumbo v4, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v4, "MicroMsg.FileOp"
 
     const-string/jumbo v5, "Failed export \'%s\' to native: %s"
 
@@ -2225,7 +2477,7 @@
 
     aput-object v0, v6, v7
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
@@ -2250,7 +2502,7 @@
     .line 510
     :cond_5
     :goto_4
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -2278,7 +2530,7 @@
 
     .line 510
     :goto_6
-    sget-object v1, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v1, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -2315,7 +2567,7 @@
     .line 510
     :cond_8
     :goto_9
-    sget-object v1, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v1, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -2391,7 +2643,7 @@
     goto :goto_2
 .end method
 
-.method public static iL(Ljava/lang/String;)J
+.method public static jc(Ljava/lang/String;)J
     .locals 8
 
     .prologue
@@ -2406,7 +2658,7 @@
 
     .line 525
     :cond_0
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iH(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iY(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
 
     move-result-object v2
 
@@ -2414,7 +2666,7 @@
     if-eqz v2, :cond_3
 
     .line 527
-    iget-object v3, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cat:Ljava/lang/String;
+    iget-object v3, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUc:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -2425,9 +2677,9 @@
     move-result-object v3
 
     .line 528
-    iget-object v4, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iget-object v4, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
 
-    invoke-virtual {v4, v3}, Lcom/tencent/mm/modelsfs/SFSContext;->iX(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/SFSContext$FileEntry;
+    invoke-virtual {v4, v3}, Lcom/tencent/mm/modelsfs/SFSContext;->jo(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/SFSContext$FileEntry;
 
     move-result-object v3
 
@@ -2435,19 +2687,19 @@
     if-nez v3, :cond_2
 
     .line 530
-    iget-boolean v3, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cav:Z
+    iget-boolean v3, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUe:Z
 
     if-eqz v3, :cond_1
 
     .line 532
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->iT(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->jk(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
     .line 533
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->iU(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->jl(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2464,7 +2716,7 @@
     .line 549
     :cond_1
     :goto_2
-    sget-object v3, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v3, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -2473,7 +2725,7 @@
     invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->unlock()V
 
     .line 552
-    const-string/jumbo v3, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v3, "MicroMsg.FileOp"
 
     const-string/jumbo v4, "readFileLength: %s [%d, %s]"
 
@@ -2502,7 +2754,7 @@
     :goto_3
     aput-object v2, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -2514,14 +2766,14 @@
 
     .line 543
     :cond_3
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->iT(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->jk(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
     .line 544
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->iU(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->jl(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2555,7 +2807,7 @@
     goto :goto_1
 .end method
 
-.method public static iM(Ljava/lang/String;)J
+.method public static jd(Ljava/lang/String;)J
     .locals 8
 
     .prologue
@@ -2577,7 +2829,7 @@
 
     .line 561
     :cond_1
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iH(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iY(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
 
     move-result-object v2
 
@@ -2585,7 +2837,7 @@
     if-eqz v2, :cond_4
 
     .line 563
-    iget-object v3, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cat:Ljava/lang/String;
+    iget-object v3, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUc:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -2596,9 +2848,9 @@
     move-result-object v3
 
     .line 564
-    iget-object v4, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iget-object v4, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
 
-    invoke-virtual {v4, v3}, Lcom/tencent/mm/modelsfs/SFSContext;->iX(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/SFSContext$FileEntry;
+    invoke-virtual {v4, v3}, Lcom/tencent/mm/modelsfs/SFSContext;->jo(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/SFSContext$FileEntry;
 
     move-result-object v3
 
@@ -2606,7 +2858,7 @@
     if-nez v3, :cond_3
 
     .line 566
-    iget-boolean v3, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cav:Z
+    iget-boolean v3, v2, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUe:Z
 
     if-eqz v3, :cond_2
 
@@ -2622,7 +2874,7 @@
     .line 576
     :cond_2
     :goto_1
-    sget-object v3, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v3, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -2631,7 +2883,7 @@
     invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->unlock()V
 
     .line 579
-    const-string/jumbo v3, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v3, "MicroMsg.FileOp"
 
     const-string/jumbo v4, "getFileTime: %s [%d, %s]"
 
@@ -2660,7 +2912,7 @@
     :goto_2
     aput-object v2, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -2668,9 +2920,9 @@
     :cond_3
     iget-wide v0, v3, Lcom/tencent/mm/modelsfs/SFSContext$FileEntry;->timestamp:J
 
-    const-wide/16 v3, 0x3e8
+    const-wide/16 v4, 0x3e8
 
-    mul-long/2addr v0, v3
+    mul-long/2addr v0, v4
 
     .line 572
     goto :goto_1
@@ -2695,12 +2947,12 @@
     goto :goto_2
 .end method
 
-.method public static iN(Ljava/lang/String;)Ljava/lang/String;
+.method public static je(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
     .prologue
     .line 666
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->iU(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->jl(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2720,7 +2972,7 @@
     return-object v0
 .end method
 
-.method public static iO(Ljava/lang/String;)Z
+.method public static jf(Ljava/lang/String;)Z
     .locals 3
 
     .prologue
@@ -2746,12 +2998,12 @@
 
     .line 674
     :cond_2
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->iU(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->jl(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 675
-    invoke-static {v1}, Lcom/tencent/mm/modelsfs/FileOp;->iF(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/modelsfs/FileOp;->iW(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -2784,8 +3036,8 @@
     goto :goto_0
 .end method
 
-.method public static iP(Ljava/lang/String;)Z
-    .locals 7
+.method public static jg(Ljava/lang/String;)Z
+    .locals 8
 
     .prologue
     const/4 v2, 0x1
@@ -2810,7 +3062,7 @@
 
     .line 875
     :cond_1
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iH(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iY(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
 
     move-result-object v3
 
@@ -2819,7 +3071,7 @@
 
     .line 879
     :try_start_0
-    iget-object v0, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cat:Ljava/lang/String;
+    iget-object v0, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUc:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2828,13 +3080,13 @@
     if-eqz v0, :cond_3
 
     .line 880
-    iget-object v0, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iget-object v0, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
 
-    iget-wide v3, v0, Lcom/tencent/mm/modelsfs/SFSContext;->mNativePtr:J
+    iget-wide v4, v0, Lcom/tencent/mm/modelsfs/SFSContext;->mNativePtr:J
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
-    cmp-long v3, v3, v5
+    cmp-long v3, v4, v6
 
     if-nez v3, :cond_2
 
@@ -2853,7 +3105,7 @@
     move-exception v0
 
     .line 890
-    const-string/jumbo v2, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v2, "MicroMsg.FileOp"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2871,13 +3123,13 @@
 
     new-array v4, v1, [Ljava/lang/Object;
 
-    invoke-static {v2, v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
     .line 945
     :goto_1
-    sget-object v1, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v1, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -2890,9 +3142,9 @@
     .line 880
     :cond_2
     :try_start_1
-    iget-wide v3, v0, Lcom/tencent/mm/modelsfs/SFSContext;->mNativePtr:J
+    iget-wide v4, v0, Lcom/tencent/mm/modelsfs/SFSContext;->mNativePtr:J
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/modelsfs/SFSContext;->nativeClear(J)I
+    invoke-static {v4, v5}, Lcom/tencent/mm/modelsfs/SFSContext;->nativeClear(J)I
 
     move-result v0
 
@@ -2910,7 +3162,7 @@
 
     .line 882
     :cond_3
-    iget-object v0, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cat:Ljava/lang/String;
+    iget-object v0, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUc:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -2921,9 +3173,9 @@
     move-result-object p0
 
     .line 883
-    iget-object v0, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iget-object v0, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/modelsfs/SFSContext;->iW(Ljava/lang/String;)Ljava/util/List;
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/modelsfs/SFSContext;->jn(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
@@ -2946,11 +3198,11 @@
     check-cast v0, Lcom/tencent/mm/modelsfs/SFSContext$FileEntry;
 
     .line 885
-    iget-object v5, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iget-object v5, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
 
     iget-object v0, v0, Lcom/tencent/mm/modelsfs/SFSContext$FileEntry;->name:Ljava/lang/String;
 
-    invoke-virtual {v5, v0}, Lcom/tencent/mm/modelsfs/SFSContext;->bo(Ljava/lang/String;)Z
+    invoke-virtual {v5, v0}, Lcom/tencent/mm/modelsfs/SFSContext;->jp(Ljava/lang/String;)Z
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -2989,27 +3241,27 @@
     check-cast v0, Lcom/tencent/mm/modelsfs/FileOp$a;
 
     .line 915
-    iget-object v1, v0, Lcom/tencent/mm/modelsfs/FileOp$a;->cas:[Ljava/io/File;
+    iget-object v1, v0, Lcom/tencent/mm/modelsfs/FileOp$a;->bUb:[Ljava/io/File;
 
     if-nez v1, :cond_7
 
     .line 916
-    iget-object v1, v0, Lcom/tencent/mm/modelsfs/FileOp$a;->car:Ljava/io/File;
+    iget-object v1, v0, Lcom/tencent/mm/modelsfs/FileOp$a;->bUa:Ljava/io/File;
 
     invoke-virtual {v1}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/modelsfs/FileOp$a;->cas:[Ljava/io/File;
+    iput-object v1, v0, Lcom/tencent/mm/modelsfs/FileOp$a;->bUb:[Ljava/io/File;
 
     .line 917
     :cond_7
-    iget-object v1, v0, Lcom/tencent/mm/modelsfs/FileOp$a;->cas:[Ljava/io/File;
+    iget-object v1, v0, Lcom/tencent/mm/modelsfs/FileOp$a;->bUb:[Ljava/io/File;
 
     if-nez v1, :cond_8
 
     .line 918
-    iget-object v0, v0, Lcom/tencent/mm/modelsfs/FileOp$a;->car:Ljava/io/File;
+    iget-object v0, v0, Lcom/tencent/mm/modelsfs/FileOp$a;->bUa:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
@@ -3028,7 +3280,7 @@
 
     .line 923
     :cond_8
-    iget-object v4, v0, Lcom/tencent/mm/modelsfs/FileOp$a;->cas:[Ljava/io/File;
+    iget-object v4, v0, Lcom/tencent/mm/modelsfs/FileOp$a;->bUb:[Ljava/io/File;
 
     .line 924
     iget v1, v0, Lcom/tencent/mm/modelsfs/FileOp$a;->pos:I
@@ -3079,7 +3331,7 @@
 
     .line 938
     :cond_b
-    iget-object v0, v0, Lcom/tencent/mm/modelsfs/FileOp$a;->car:Ljava/io/File;
+    iget-object v0, v0, Lcom/tencent/mm/modelsfs/FileOp$a;->bUa:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
@@ -3089,7 +3341,7 @@
     goto :goto_3
 .end method
 
-.method public static iQ(Ljava/lang/String;)Z
+.method public static jh(Ljava/lang/String;)Z
     .locals 6
 
     .prologue
@@ -3113,7 +3365,7 @@
 
     .line 953
     :cond_1
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->ax(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->aB(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -3121,7 +3373,7 @@
 
     .line 955
     :try_start_0
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iJ(Ljava/lang/String;)Ljava/io/OutputStream;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->ja(Ljava/lang/String;)Ljava/io/OutputStream;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -3145,7 +3397,7 @@
     move-exception v2
 
     .line 958
-    const-string/jumbo v3, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v3, "MicroMsg.FileOp"
 
     const-string/jumbo v4, "createNewFile \'%s\' failed: %s"
 
@@ -3161,7 +3413,7 @@
 
     aput-object v2, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -3171,7 +3423,7 @@
     goto :goto_1
 .end method
 
-.method public static iR(Ljava/lang/String;)V
+.method public static ji(Ljava/lang/String;)V
     .locals 5
 
     .prologue
@@ -3191,7 +3443,7 @@
 
     .line 970
     :cond_1
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iF(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iW(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -3216,7 +3468,7 @@
     move-exception v0
 
     .line 974
-    const-string/jumbo v1, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v1, "MicroMsg.FileOp"
 
     const-string/jumbo v2, "markNoMedia \'%s\' failed: %s"
 
@@ -3236,17 +3488,17 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method public static iS(Ljava/lang/String;)Ljava/lang/String;
+.method public static jj(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
     .prologue
     .line 984
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->ax(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->aB(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -3261,7 +3513,7 @@
 
     .line 987
     :cond_0
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iL(Ljava/lang/String;)J
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->jc(Ljava/lang/String;)J
 
     move-result-wide v0
 
@@ -3292,281 +3544,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/a/g;->j([B)Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method public static init(Z)V
-    .locals 7
-
-    .prologue
-    const/4 v4, 0x0
-
-    .line 93
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    .line 94
-    new-instance v0, Ljava/io/File;
-
-    invoke-virtual {v2}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
-
-    move-result-object v1
-
-    const-string/jumbo v3, "fileop_mapping"
-
-    invoke-direct {v0, v1, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
-
-    sput-object v0, Lcom/tencent/mm/modelsfs/FileOp;->cap:Ljava/io/File;
-
-    .line 96
-    if-eqz p0, :cond_0
-
-    .line 98
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->cap:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->delete()Z
-
-    .line 181
-    :goto_0
-    return-void
-
-    .line 100
-    :cond_0
-    const-string/jumbo v0, "!24@/B4Tb64lLpJsxiXOTpu//A=="
-
-    const-string/jumbo v1, "Initializing FileOp mapping slave."
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 103
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->cap:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 105
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->cap:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, -0x1
-
-    invoke-static {v0, v4, v1}, Lcom/tencent/mm/modelsfs/FileOp;->c(Ljava/lang/String;II)[B
-
-    move-result-object v0
-
-    .line 106
-    if-eqz v0, :cond_3
-
-    .line 107
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    .line 108
-    array-length v3, v0
-
-    invoke-virtual {v1, v0, v4, v3}, Landroid/os/Parcel;->unmarshall([BII)V
-
-    .line 109
-    invoke-virtual {v1, v4}, Landroid/os/Parcel;->setDataPosition(I)V
-
-    .line 110
-    const-class v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Landroid/os/Parcel;->readBundle(Ljava/lang/ClassLoader;)Landroid/os/Bundle;
-
-    move-result-object v3
-
-    .line 111
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    .line 113
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->lock()V
-
-    .line 114
-    invoke-virtual {v3}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    :goto_1
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    .line 115
-    invoke-virtual {v3, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
-
-    .line 116
-    sget-object v5, Lcom/tencent/mm/modelsfs/FileOp;->cao:Ljava/util/TreeMap;
-
-    invoke-virtual {v5, v0, v1}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
-
-    .line 117
-    if-eqz v1, :cond_1
-
-    iget-object v5, v1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
-
-    if-eqz v5, :cond_1
-
-    .line 118
-    iget-object v1, v1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
-
-    invoke-virtual {v1}, Lcom/tencent/mm/modelsfs/SFSContext;->release()V
-
-    .line 119
-    :cond_1
-    const-string/jumbo v1, "!24@/B4Tb64lLpJsxiXOTpu//A=="
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v6, "Load mapping from file: "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    .line 121
-    :cond_2
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->unlock()V
-
-    .line 126
-    :cond_3
-    new-instance v0, Lcom/tencent/mm/modelsfs/FileOp$1;
-
-    invoke-direct {v0}, Lcom/tencent/mm/modelsfs/FileOp$1;-><init>()V
-
-    .line 174
-    new-instance v1, Landroid/content/IntentFilter;
-
-    invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
-
-    .line 175
-    const-string/jumbo v3, "com.tencent.mm.FileOp.registerSFS"
-
-    invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    .line 176
-    const-string/jumbo v3, "com.tencent.mm.FileOp.unregisterSFS"
-
-    invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    .line 177
-    const-string/jumbo v3, "com.tencent.mm.FileOp.clearSFS"
-
-    invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    .line 179
-    const-string/jumbo v3, "com.tencent.mm.permission.MM_MESSAGE"
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v0, v1, v3, v4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
-
-    goto/16 :goto_0
-.end method
-
-.method public static k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 2
-
-    .prologue
-    .line 768
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/modelsfs/FileOp;->X(Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static l(Ljava/lang/String;[B)I
+.method public static k(Ljava/lang/String;[B)I
     .locals 1
 
     .prologue
@@ -3580,7 +3565,7 @@
     return v0
 .end method
 
-.method public static o(Ljava/lang/String;Ljava/lang/String;)J
+.method public static n(Ljava/lang/String;Ljava/lang/String;)J
     .locals 10
 
     .prologue
@@ -3628,7 +3613,7 @@
 
     .line 694
     :try_start_1
-    invoke-static {p1}, Lcom/tencent/mm/modelsfs/FileOp;->iJ(Ljava/lang/String;)Ljava/io/OutputStream;
+    invoke-static {p1}, Lcom/tencent/mm/modelsfs/FileOp;->ja(Ljava/lang/String;)Ljava/io/OutputStream;
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_7
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -3667,7 +3652,7 @@
 
     .line 703
     :cond_3
-    const-string/jumbo v6, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v6, "MicroMsg.FileOp"
 
     const-string/jumbo v7, "copyFile: %s -> %s"
 
@@ -3683,7 +3668,7 @@
 
     aput-object p1, v8, v9
 
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_8
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
@@ -3722,7 +3707,7 @@
     .line 706
     :goto_3
     :try_start_5
-    const-string/jumbo v5, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v5, "MicroMsg.FileOp"
 
     const-string/jumbo v6, "copyFile \'%s\' -> \'%s\' failed: %s"
 
@@ -3746,7 +3731,7 @@
 
     aput-object v0, v7, v8
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
@@ -3865,6 +3850,50 @@
     goto :goto_3
 .end method
 
+.method public static n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 2
+
+    .prologue
+    .line 768
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/modelsfs/FileOp;->V(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public static openRead(Ljava/lang/String;)Ljava/io/InputStream;
     .locals 7
 
@@ -3889,7 +3918,7 @@
 
     .line 407
     :cond_1
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iH(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iY(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
 
     move-result-object v1
 
@@ -3898,19 +3927,19 @@
 
     .line 415
     :try_start_0
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->iT(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->jk(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 416
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->iV(Ljava/lang/String;)J
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->jm(Ljava/lang/String;)J
 
     move-result-wide v2
 
     .line 417
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->iU(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/f;->jl(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -3923,7 +3952,7 @@
 
     .line 432
     :goto_0
-    sget-object v2, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v2, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -3932,7 +3961,7 @@
     invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->unlock()V
 
     .line 436
-    const-string/jumbo v2, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v2, "MicroMsg.FileOp"
 
     const-string/jumbo v3, "openRead: %s [%s, %s]"
 
@@ -3959,7 +3988,7 @@
     :goto_1
     aput-object v1, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 438
     return-object v0
@@ -3979,7 +4008,7 @@
     :catchall_0
     move-exception v0
 
-    sget-object v1, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v1, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -3992,7 +4021,7 @@
     .line 424
     :cond_3
     :try_start_2
-    iget-object v0, v1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cat:Ljava/lang/String;
+    iget-object v0, v1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUc:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -4003,7 +4032,7 @@
     move-result-object v0
 
     .line 425
-    iget-object v2, v1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iget-object v2, v1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
 
     invoke-virtual {v2, v0}, Lcom/tencent/mm/modelsfs/SFSContext;->openRead(Ljava/lang/String;)Ljava/io/InputStream;
     :try_end_2
@@ -4020,7 +4049,7 @@
 
     .line 427
     :try_start_3
-    iget-boolean v2, v1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cav:Z
+    iget-boolean v2, v1, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUe:Z
 
     if-nez v2, :cond_4
 
@@ -4043,8 +4072,19 @@
     goto :goto_1
 .end method
 
-.method public static r(Ljava/lang/String;Z)Ljava/util/List;
+.method public static v(Ljava/lang/String;Z)Ljava/util/List;
     .locals 10
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Z)",
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/modelsfs/SFSContext$FileEntry;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
     const/4 v2, 0x0
@@ -4070,7 +4110,7 @@
 
     .line 796
     :cond_1
-    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iH(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
+    invoke-static {p0}, Lcom/tencent/mm/modelsfs/FileOp;->iY(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
 
     move-result-object v3
 
@@ -4078,7 +4118,7 @@
     if-eqz v3, :cond_9
 
     .line 801
-    iget-object v0, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cat:Ljava/lang/String;
+    iget-object v0, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUc:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -4119,9 +4159,9 @@
     .line 807
     :cond_2
     :try_start_0
-    iget-object v0, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
+    iget-object v0, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUg:Lcom/tencent/mm/modelsfs/SFSContext;
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/modelsfs/SFSContext;->iW(Ljava/lang/String;)Ljava/util/List;
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/modelsfs/SFSContext;->jn(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
@@ -4183,7 +4223,7 @@
     move-exception v0
 
     .line 828
-    const-string/jumbo v1, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v1, "MicroMsg.FileOp"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -4201,7 +4241,7 @@
 
     new-array v5, v2, [Ljava/lang/Object;
 
-    invoke-static {v1, v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 829
     new-instance v1, Ljava/util/ArrayList;
@@ -4213,11 +4253,11 @@
     :goto_2
     if-eqz v3, :cond_5
 
-    iget-object v0, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cau:[Ljava/lang/String;
+    iget-object v0, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUd:[Ljava/lang/String;
 
     if-nez v0, :cond_5
 
-    iget-boolean v0, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cav:Z
+    iget-boolean v0, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUe:Z
 
     if-eqz v0, :cond_c
 
@@ -4331,7 +4371,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v6, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cat:Ljava/lang/String;
+    iget-object v6, v3, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bUc:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4377,7 +4417,7 @@
 
     .line 864
     :cond_c
-    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->can:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    sget-object v0, Lcom/tencent/mm/modelsfs/FileOp;->bTW:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
@@ -4386,7 +4426,7 @@
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->unlock()V
 
     .line 866
-    const-string/jumbo v0, "!24@/B4Tb64lLpJsxiXOTpu//A=="
+    const-string/jumbo v0, "MicroMsg.FileOp"
 
     const-string/jumbo v3, "listFiles: %s [%d]"
 
@@ -4408,7 +4448,7 @@
 
     aput-object v5, v4, v2
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v1
 

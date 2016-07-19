@@ -11,8 +11,8 @@ final class AppInstallerUI$5
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((AppInstallerUI.e(jSU) != null) && (!AppInstallerUI.e(jSU).isShowing())) {
-      AppInstallerUI.e(jSU).show();
+    if ((AppInstallerUI.e(kso) != null) && (!AppInstallerUI.e(kso).isShowing())) {
+      AppInstallerUI.e(kso).show();
     }
   }
 }

@@ -12,9 +12,11 @@
 
 
 # instance fields
-.field public bLg:Z
+.field public bEA:Z
 
-.field public bLh:Lcom/tencent/mm/modelcdntran/f$a;
+.field public bEB:Lcom/tencent/mm/modelcdntran/f$a;
+
+.field public field_advideoflag:I
 
 .field public field_aesKey:Ljava/lang/String;
 
@@ -32,17 +34,23 @@
 
 .field public field_fileType:I
 
+.field public field_filemd5:Ljava/lang/String;
+
 .field public field_fullpath:Ljava/lang/String;
 
 .field public field_isStreamMedia:Z
 
 .field public field_lastProgressCallbackTime:J
 
+.field public field_limitrate:I
+
 .field public field_mediaId:Ljava/lang/String;
 
 .field public field_midFileLength:I
 
 .field public field_needStorage:Z
+
+.field public field_onlycheckexist:Z
 
 .field public field_priority:I
 
@@ -51,6 +59,8 @@
 .field public field_smallVideoFlag:I
 
 .field public field_startTime:J
+
+.field public field_svr_signature:Ljava/lang/String;
 
 .field public field_talker:Ljava/lang/String;
 
@@ -159,6 +169,25 @@
 
     .line 37
     iput-boolean v1, p0, Lcom/tencent/mm/modelcdntran/f;->field_autostart:Z
+
+    .line 38
+    iput v1, p0, Lcom/tencent/mm/modelcdntran/f;->field_limitrate:I
+
+    .line 39
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lcom/tencent/mm/modelcdntran/f;->field_filemd5:Ljava/lang/String;
+
+    .line 40
+    iput v1, p0, Lcom/tencent/mm/modelcdntran/f;->field_advideoflag:I
+
+    .line 43
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lcom/tencent/mm/modelcdntran/f;->field_svr_signature:Ljava/lang/String;
+
+    .line 44
+    iput-boolean v1, p0, Lcom/tencent/mm/modelcdntran/f;->field_onlycheckexist:Z
 
     return-void
 .end method

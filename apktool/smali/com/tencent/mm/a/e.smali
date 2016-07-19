@@ -147,7 +147,7 @@
     move-exception v1
 
     .line 63
-    const-string/jumbo v2, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v2, "MicroMsg.FileOperation"
 
     const-string/jumbo v3, "file op appendBuf close e type:%s, e msg:%s, fileDir:%s, fileName:%s, buf len:%d"
 
@@ -183,7 +183,7 @@
 
     aput-object v1, v4, v11
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -194,7 +194,7 @@
     .line 53
     :goto_1
     :try_start_3
-    const-string/jumbo v3, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v3, "MicroMsg.FileOperation"
 
     const-string/jumbo v4, "file op appendBuf e type:%s, e msg:%s, fileDir:%s, fileName:%s, buf len:%d"
 
@@ -240,7 +240,7 @@
 
     aput-object v6, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -265,7 +265,7 @@
     move-exception v1
 
     .line 63
-    const-string/jumbo v2, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v2, "MicroMsg.FileOperation"
 
     const-string/jumbo v3, "file op appendBuf close e type:%s, e msg:%s, fileDir:%s, fileName:%s, buf len:%d"
 
@@ -301,7 +301,7 @@
 
     aput-object v0, v4, v11
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_2
 
@@ -328,7 +328,7 @@
     move-exception v2
 
     .line 63
-    const-string/jumbo v3, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v3, "MicroMsg.FileOperation"
 
     const-string/jumbo v4, "file op appendBuf close e type:%s, e msg:%s, fileDir:%s, fileName:%s, buf len:%d"
 
@@ -364,7 +364,7 @@
 
     aput-object v0, v5, v11
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_4
 
@@ -457,7 +457,7 @@
     move-exception v1
 
     .line 117
-    const-string/jumbo v2, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v2, "MicroMsg.FileOperation"
 
     const-string/jumbo v3, "file op appendToFile close e type:%s, e msg:%s, fileName:%s, buf len:%d, bufOffset:%d, writeLen:%d"
 
@@ -505,7 +505,7 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -518,7 +518,7 @@
     .line 108
     :goto_1
     :try_start_3
-    const-string/jumbo v3, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v3, "MicroMsg.FileOperation"
 
     const-string/jumbo v4, "file op appendToFile e type:%s, e msg:%s, fileName:%s, buf len:%d, bufOffset:%d, writeLen:%d"
 
@@ -578,7 +578,7 @@
 
     aput-object v6, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -603,7 +603,7 @@
     move-exception v1
 
     .line 117
-    const-string/jumbo v2, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v2, "MicroMsg.FileOperation"
 
     const-string/jumbo v3, "file op appendToFile close e type:%s, e msg:%s, fileName:%s, buf len:%d, bufOffset:%d, writeLen:%d"
 
@@ -651,7 +651,7 @@
 
     aput-object v1, v4, v0
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_2
 
@@ -680,7 +680,7 @@
     move-exception v2
 
     .line 117
-    const-string/jumbo v3, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v3, "MicroMsg.FileOperation"
 
     const-string/jumbo v4, "file op appendToFile close e type:%s, e msg:%s, fileName:%s, buf len:%d, bufOffset:%d, writeLen:%d"
 
@@ -728,7 +728,7 @@
 
     aput-object v2, v5, v0
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_4
 
@@ -749,26 +749,26 @@
     .locals 6
 
     .prologue
-    .line 568
+    .line 613
     if-eqz p0, :cond_0
 
-    .line 569
+    .line 614
     :try_start_0
     invoke-virtual {p0}, Ljava/io/OutputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 576
+    .line 621
     :cond_0
     :goto_0
     return-void
 
-    .line 571
+    .line 616
     :catch_0
     move-exception v0
 
-    .line 572
-    const-string/jumbo v1, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    .line 617
+    const-string/jumbo v1, "MicroMsg.FileOperation"
 
     const-string/jumbo v2, "file op closeOutputStream e type:%s, e msg:%s, stream:%s"
 
@@ -800,7 +800,7 @@
 
     aput-object p0, v3, v0
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -809,26 +809,26 @@
     .locals 6
 
     .prologue
-    .line 580
+    .line 625
     if-eqz p0, :cond_0
 
-    .line 581
+    .line 626
     :try_start_0
     invoke-virtual {p0}, Ljava/io/Reader;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 588
+    .line 633
     :cond_0
     :goto_0
     return-void
 
-    .line 583
+    .line 628
     :catch_0
     move-exception v0
 
-    .line 584
-    const-string/jumbo v1, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    .line 629
+    const-string/jumbo v1, "MicroMsg.FileOperation"
 
     const-string/jumbo v2, "file op closeReader e type:%s, e msg:%s, reader:%s"
 
@@ -860,12 +860,211 @@
 
     aput-object p0, v3, v0
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method public static final aA(Ljava/lang/String;)Z
+.method public static aA(Ljava/lang/String;)I
+    .locals 3
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 268
+    if-nez p0, :cond_1
+
+    .line 276
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 272
+    :cond_1
+    new-instance v1, Ljava/io/File;
+
+    invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    .line 273
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 276
+    invoke-virtual {v1}, Ljava/io/File;->length()J
+
+    move-result-wide v0
+
+    long-to-int v0, v0
+
+    goto :goto_0
+.end method
+
+.method public static final aB(Ljava/lang/String;)Z
+    .locals 2
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 399
+    if-nez p0, :cond_1
+
+    .line 406
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 403
+    :cond_1
+    new-instance v1, Ljava/io/File;
+
+    invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    .line 404
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 405
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method
+
+.method public static final aC(Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
+
+    .prologue
+    .line 436
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-gtz v0, :cond_1
+
+    .line 437
+    :cond_0
+    const-string/jumbo v0, ""
+
+    .line 445
+    :goto_0
+    return-object v0
+
+    .line 439
+    :cond_1
+    new-instance v0, Ljava/io/File;
+
+    invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    .line 440
+    invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 441
+    const/16 v1, 0x2e
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->lastIndexOf(I)I
+
+    move-result v1
+
+    .line 442
+    if-lez v1, :cond_2
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, -0x1
+
+    if-ne v1, v2, :cond_3
+
+    .line 443
+    :cond_2
+    const-string/jumbo v0, ""
+
+    goto :goto_0
+
+    .line 445
+    :cond_3
+    add-int/lit8 v1, v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public static final aD(Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
+
+    .prologue
+    .line 449
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-gtz v0, :cond_2
+
+    .line 450
+    :cond_0
+    const-string/jumbo p0, ""
+
+    .line 461
+    :cond_1
+    :goto_0
+    return-object p0
+
+    .line 452
+    :cond_2
+    new-instance v0, Ljava/io/File;
+
+    invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    .line 453
+    invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 454
+    const/16 v1, 0x2e
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->lastIndexOf(I)I
+
+    move-result v1
+
+    .line 455
+    if-ltz v1, :cond_1
+
+    .line 458
+    if-nez v1, :cond_3
+
+    .line 459
+    const-string/jumbo p0, ""
+
+    goto :goto_0
+
+    .line 461
+    :cond_3
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_0
+.end method
+
+.method public static final aE(Ljava/lang/String;)Z
     .locals 9
 
     .prologue
@@ -874,7 +1073,7 @@
     const/4 v2, 0x0
 
     .line 465
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -940,7 +1139,7 @@
     .line 478
     aget-object v5, v4, v1
 
-    invoke-static {v5}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v5}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v5
 
@@ -1039,7 +1238,7 @@
     goto/16 :goto_0
 .end method
 
-.method public static aB(Ljava/lang/String;)Ljava/lang/String;
+.method public static aF(Ljava/lang/String;)Ljava/lang/String;
     .locals 11
 
     .prologue
@@ -1051,15 +1250,15 @@
 
     const/4 v7, 0x0
 
-    .line 517
+    .line 562
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 518
+    .line 563
     const/4 v2, 0x0
 
-    .line 520
+    .line 565
     :try_start_0
     new-instance v1, Ljava/io/BufferedReader;
 
@@ -1072,13 +1271,13 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 521
+    .line 566
     const/16 v2, 0x400
 
     :try_start_1
     new-array v2, v2, [C
 
-    .line 522
+    .line 567
     :goto_0
     invoke-virtual {v1, v2}, Ljava/io/BufferedReader;->read([C)I
 
@@ -1088,14 +1287,14 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 524
+    .line 569
     const/4 v4, 0x0
 
     invoke-static {v2, v4, v3}, Ljava/lang/String;->valueOf([CII)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 525
+    .line 570
     invoke-virtual {v0, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
@@ -1103,14 +1302,14 @@
 
     goto :goto_0
 
-    .line 527
+    .line 572
     :catch_0
     move-exception v0
 
-    .line 528
+    .line 573
     :goto_1
     :try_start_2
-    const-string/jumbo v2, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v2, "MicroMsg.FileOperation"
 
     const-string/jumbo v3, "file op readFileAsString e type:%s, e msg:%s, filePath:%s"
 
@@ -1142,40 +1341,40 @@
 
     aput-object p0, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 531
+    .line 576
     throw v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 534
+    .line 579
     :catchall_0
     move-exception v0
 
-    .line 535
+    .line 580
     :goto_2
     if-eqz v1, :cond_0
 
-    .line 536
+    .line 581
     :try_start_3
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 542
+    .line 587
     :cond_0
     :goto_3
     throw v0
 
-    .line 535
+    .line 580
     :cond_1
     :try_start_4
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 544
+    .line 589
     :goto_4
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -1183,12 +1382,12 @@
 
     return-object v0
 
-    .line 538
+    .line 583
     :catch_1
     move-exception v1
 
-    .line 539
-    const-string/jumbo v2, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    .line 584
+    const-string/jumbo v2, "MicroMsg.FileOperation"
 
     const-string/jumbo v3, "file op readFileAsString close e type:%s, e msg:%s, filePath:%s"
 
@@ -1212,16 +1411,16 @@
 
     aput-object p0, v4, v9
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_4
 
-    .line 538
+    .line 583
     :catch_2
     move-exception v1
 
-    .line 539
-    const-string/jumbo v2, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    .line 584
+    const-string/jumbo v2, "MicroMsg.FileOperation"
 
     const-string/jumbo v3, "file op readFileAsString close e type:%s, e msg:%s, filePath:%s"
 
@@ -1245,11 +1444,11 @@
 
     aput-object p0, v4, v9
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_3
 
-    .line 534
+    .line 579
     :catchall_1
     move-exception v0
 
@@ -1257,7 +1456,7 @@
 
     goto :goto_2
 
-    .line 527
+    .line 572
     :catch_3
     move-exception v0
 
@@ -1266,203 +1465,59 @@
     goto :goto_1
 .end method
 
-.method public static aw(Ljava/lang/String;)I
-    .locals 3
+.method public static aG(Ljava/lang/String;)V
+    .locals 4
 
     .prologue
-    const/4 v0, 0x0
+    .line 648
+    new-instance v0, Ljava/io/File;
 
-    .line 268
-    if-nez p0, :cond_1
+    invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 276
-    :cond_0
-    :goto_0
-    return v0
+    .line 649
+    invoke-virtual {v0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
-    .line 272
-    :cond_1
-    new-instance v1, Ljava/io/File;
+    move-result-object v0
 
-    invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    .line 650
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
-    .line 273
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+    move-result v1
 
-    move-result v2
+    if-nez v1, :cond_1
 
-    if-eqz v2, :cond_0
-
-    .line 276
-    invoke-virtual {v1}, Ljava/io/File;->length()J
-
-    move-result-wide v0
-
-    long-to-int v0, v0
-
-    goto :goto_0
-.end method
-
-.method public static final ax(Ljava/lang/String;)Z
-    .locals 2
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 399
-    if-nez p0, :cond_1
-
-    .line 406
-    :cond_0
-    :goto_0
-    return v0
-
-    .line 403
-    :cond_1
-    new-instance v1, Ljava/io/File;
-
-    invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    .line 404
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+    .line 651
+    invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 405
-    const/4 v0, 0x1
-
-    goto :goto_0
-.end method
-
-.method public static final ay(Ljava/lang/String;)Ljava/lang/String;
-    .locals 3
-
-    .prologue
-    .line 436
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    invoke-virtual {v0}, Ljava/io/File;->isDirectory()Z
 
     move-result v0
 
-    if-gtz v0, :cond_1
+    if-nez v0, :cond_1
 
-    .line 437
+    .line 652
     :cond_0
-    const-string/jumbo v0, ""
+    const-string/jumbo v0, "MicroMsg.FileOperation"
 
-    .line 445
-    :goto_0
-    return-object v0
+    const-string/jumbo v1, "mkParentDir mkdir error. %s"
 
-    .line 439
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p0, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 655
     :cond_1
-    new-instance v0, Ljava/io/File;
-
-    invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    .line 440
-    invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 441
-    const/16 v1, 0x2e
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->lastIndexOf(I)I
-
-    move-result v1
-
-    .line 442
-    if-lez v1, :cond_2
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, -0x1
-
-    if-ne v1, v2, :cond_3
-
-    .line 443
-    :cond_2
-    const-string/jumbo v0, ""
-
-    goto :goto_0
-
-    .line 445
-    :cond_3
-    add-int/lit8 v1, v1, 0x1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method public static final az(Ljava/lang/String;)Ljava/lang/String;
-    .locals 3
-
-    .prologue
-    .line 449
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-gtz v0, :cond_2
-
-    .line 450
-    :cond_0
-    const-string/jumbo p0, ""
-
-    .line 461
-    :cond_1
-    :goto_0
-    return-object p0
-
-    .line 452
-    :cond_2
-    new-instance v0, Ljava/io/File;
-
-    invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    .line 453
-    invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 454
-    const/16 v1, 0x2e
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->lastIndexOf(I)I
-
-    move-result v1
-
-    .line 455
-    if-ltz v1, :cond_1
-
-    .line 458
-    if-nez v1, :cond_3
-
-    .line 459
-    const-string/jumbo p0, ""
-
-    goto :goto_0
-
-    .line 461
-    :cond_3
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object p0
-
-    goto :goto_0
+    return-void
 .end method
 
 .method public static b(Ljava/lang/String;[BI)I
@@ -1539,7 +1594,7 @@
     move-exception v1
 
     .line 148
-    const-string/jumbo v2, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v2, "MicroMsg.FileOperation"
 
     const-string/jumbo v3, "file op writeFile close e type:%s, e msg:%s, fileName:%s, buf len:%d, bufOffset:%d, writeLen:%d"
 
@@ -1587,7 +1642,7 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -1600,7 +1655,7 @@
     .line 139
     :goto_1
     :try_start_3
-    const-string/jumbo v3, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v3, "MicroMsg.FileOperation"
 
     const-string/jumbo v4, "file op writeFile e type:%s, e msg:%s, fileName:%s, buf len:%d, bufOffset:%d, writeLen:%d"
 
@@ -1660,7 +1715,7 @@
 
     aput-object v6, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -1685,7 +1740,7 @@
     move-exception v1
 
     .line 148
-    const-string/jumbo v2, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v2, "MicroMsg.FileOperation"
 
     const-string/jumbo v3, "file op writeFile close e type:%s, e msg:%s, fileName:%s, buf len:%d, bufOffset:%d, writeLen:%d"
 
@@ -1733,7 +1788,7 @@
 
     aput-object v1, v4, v0
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_2
 
@@ -1762,7 +1817,7 @@
     move-exception v2
 
     .line 148
-    const-string/jumbo v3, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v3, "MicroMsg.FileOperation"
 
     const-string/jumbo v4, "file op writeFile close e type:%s, e msg:%s, fileName:%s, buf len:%d, bufOffset:%d, writeLen:%d"
 
@@ -1810,7 +1865,7 @@
 
     aput-object v2, v5, v0
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_4
 
@@ -1831,26 +1886,26 @@
     .locals 6
 
     .prologue
-    .line 556
+    .line 601
     if-eqz p0, :cond_0
 
-    .line 557
+    .line 602
     :try_start_0
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 564
+    .line 609
     :cond_0
     :goto_0
     return-void
 
-    .line 559
+    .line 604
     :catch_0
     move-exception v0
 
-    .line 560
-    const-string/jumbo v1, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    .line 605
+    const-string/jumbo v1, "MicroMsg.FileOperation"
 
     const-string/jumbo v2, "file op closeInputStream e type:%s, e msg:%s, stream:%s"
 
@@ -1882,9 +1937,75 @@
 
     aput-object p0, v3, v0
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
+.end method
+
+.method public static varargs c([Ljava/lang/String;)V
+    .locals 6
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 658
+    move v0, v1
+
+    :goto_0
+    const/16 v2, 0x11
+
+    if-ge v0, v2, :cond_2
+
+    aget-object v2, p0, v0
+
+    .line 659
+    new-instance v3, Ljava/io/File;
+
+    invoke-direct {v3, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    .line 660
+    invoke-virtual {v3}, Ljava/io/File;->exists()Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    .line 661
+    invoke-virtual {v3}, Ljava/io/File;->mkdirs()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-virtual {v3}, Ljava/io/File;->isDirectory()Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    .line 662
+    :cond_0
+    const-string/jumbo v3, "MicroMsg.FileOperation"
+
+    const-string/jumbo v4, "batchMkDirs mkdir error. %s"
+
+    const/4 v5, 0x1
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    aput-object v2, v5, v1
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 658
+    :cond_1
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 666
+    :cond_2
+    return-void
 .end method
 
 .method public static c(Ljava/lang/String;II)[B
@@ -1946,9 +2067,9 @@
 
     invoke-virtual {v1}, Ljava/io/File;->length()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    long-to-int v1, v3
+    long-to-int v1, v4
 
     if-gt v2, v1, :cond_0
 
@@ -1968,9 +2089,9 @@
     new-array v0, p2, [B
 
     .line 187
-    int-to-long v3, p1
+    int-to-long v4, p1
 
-    invoke-virtual {v2, v3, v4}, Ljava/io/RandomAccessFile;->seek(J)V
+    invoke-virtual {v2, v4, v5}, Ljava/io/RandomAccessFile;->seek(J)V
 
     .line 188
     invoke-virtual {v2, v0}, Ljava/io/RandomAccessFile;->readFully([B)V
@@ -1991,7 +2112,7 @@
     move-exception v1
 
     .line 199
-    const-string/jumbo v2, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v2, "MicroMsg.FileOperation"
 
     const-string/jumbo v3, "file op readFromFile close e type:%s, e msg:%s, fileName:%s, offset:%d, len:%d"
 
@@ -2031,7 +2152,7 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -2044,7 +2165,7 @@
     .line 191
     :goto_1
     :try_start_3
-    const-string/jumbo v3, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v3, "MicroMsg.FileOperation"
 
     const-string/jumbo v4, "file op readFromFile e type:%s, e msg:%s, fileName:%s, offset:%d, len:%d"
 
@@ -2092,7 +2213,7 @@
 
     aput-object v6, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -2112,7 +2233,7 @@
     move-exception v1
 
     .line 199
-    const-string/jumbo v2, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v2, "MicroMsg.FileOperation"
 
     const-string/jumbo v3, "file op readFromFile close e type:%s, e msg:%s, fileName:%s, offset:%d, len:%d"
 
@@ -2152,7 +2273,7 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
@@ -2183,7 +2304,7 @@
     move-exception v1
 
     .line 199
-    const-string/jumbo v2, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v2, "MicroMsg.FileOperation"
 
     const-string/jumbo v3, "file op readFromFile close e type:%s, e msg:%s, fileName:%s, offset:%d, len:%d"
 
@@ -2223,7 +2344,7 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_3
 
@@ -2240,70 +2361,294 @@
     goto/16 :goto_1
 .end method
 
-.method public static varargs d([Ljava/lang/String;)V
-    .locals 6
+.method public static d(Ljava/lang/String;[B)I
+    .locals 12
 
     .prologue
+    const/4 v11, 0x4
+
+    const/4 v10, 0x3
+
+    const/4 v9, 0x2
+
+    const/4 v8, 0x1
+
+    const/4 v0, 0x0
+
+    .line 74
+    if-eqz p1, :cond_0
+
+    array-length v1, p1
+
+    if-nez v1, :cond_1
+
+    .line 75
+    :cond_0
+    const/4 v0, -0x2
+
+    .line 96
+    :goto_0
+    return v0
+
+    .line 76
+    :cond_1
+    const/4 v3, 0x0
+
+    .line 78
+    :try_start_0
+    new-instance v2, Ljava/io/FileOutputStream;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v2, p0, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;Z)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 79
     const/4 v1, 0x0
 
-    .line 613
-    move v0, v1
+    :try_start_1
+    array-length v3, p1
 
-    :goto_0
-    const/16 v2, 0x11
+    invoke-virtual {v2, p1, v1, v3}, Ljava/io/FileOutputStream;->write([BII)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    if-ge v0, v2, :cond_2
-
-    aget-object v2, p0, v0
-
-    .line 614
-    new-instance v3, Ljava/io/File;
-
-    invoke-direct {v3, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    .line 615
-    invoke-virtual {v3}, Ljava/io/File;->exists()Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    .line 616
-    invoke-virtual {v3}, Ljava/io/File;->mkdirs()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    invoke-virtual {v3}, Ljava/io/File;->isDirectory()Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    .line 617
-    :cond_0
-    const-string/jumbo v3, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
-
-    const-string/jumbo v4, "batchMkDirs mkdir error. %s"
-
-    const/4 v5, 0x1
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    aput-object v2, v5, v1
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 613
-    :cond_1
-    add-int/lit8 v0, v0, 0x1
+    .line 86
+    :try_start_2
+    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
     goto :goto_0
 
-    .line 621
+    .line 89
+    :catch_0
+    move-exception v1
+
+    .line 90
+    const-string/jumbo v2, "MicroMsg.FileOperation"
+
+    const-string/jumbo v3, "file op appendToFile close e type:%s, e msg:%s, fileName:%s, buf len:%d"
+
+    new-array v4, v11, [Ljava/lang/Object;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v5
+
+    aput-object v5, v4, v0
+
+    invoke-virtual {v1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    aput-object v1, v4, v8
+
+    aput-object p0, v4, v9
+
+    array-length v1, p1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    aput-object v1, v4, v10
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 80
+    :catch_1
+    move-exception v1
+
+    move-object v2, v3
+
+    .line 81
+    :goto_1
+    :try_start_3
+    const-string/jumbo v3, "MicroMsg.FileOperation"
+
+    const-string/jumbo v4, "file op appendToFile e type:%s, e msg:%s, fileName:%s, buf len:%d"
+
+    const/4 v5, 0x4
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v7
+
+    aput-object v7, v5, v6
+
+    const/4 v6, 0x1
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    aput-object v1, v5, v6
+
+    const/4 v1, 0x2
+
+    aput-object p0, v5, v1
+
+    const/4 v1, 0x3
+
+    array-length v6, p1
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    aput-object v6, v5, v1
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 84
+    if-eqz v2, :cond_2
+
+    .line 88
+    :try_start_4
+    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
+
+    .line 93
     :cond_2
-    return-void
+    :goto_2
+    const/4 v0, -0x1
+
+    goto :goto_0
+
+    .line 89
+    :catch_2
+    move-exception v1
+
+    .line 90
+    const-string/jumbo v2, "MicroMsg.FileOperation"
+
+    const-string/jumbo v3, "file op appendToFile close e type:%s, e msg:%s, fileName:%s, buf len:%d"
+
+    new-array v4, v11, [Ljava/lang/Object;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v5
+
+    aput-object v5, v4, v0
+
+    invoke-virtual {v1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v4, v8
+
+    aput-object p0, v4, v9
+
+    array-length v0, p1
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v4, v10
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    .line 86
+    :catchall_0
+    move-exception v1
+
+    move-object v2, v3
+
+    :goto_3
+    if-eqz v2, :cond_3
+
+    .line 88
+    :try_start_5
+    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
+
+    .line 93
+    :cond_3
+    :goto_4
+    throw v1
+
+    .line 89
+    :catch_3
+    move-exception v2
+
+    .line 90
+    const-string/jumbo v3, "MicroMsg.FileOperation"
+
+    const-string/jumbo v4, "file op appendToFile close e type:%s, e msg:%s, fileName:%s, buf len:%d"
+
+    new-array v5, v11, [Ljava/lang/Object;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v6
+
+    aput-object v6, v5, v0
+
+    invoke-virtual {v2}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v5, v8
+
+    aput-object p0, v5, v9
+
+    array-length v0, p1
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v5, v10
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_4
+
+    .line 86
+    :catchall_1
+    move-exception v1
+
+    goto :goto_3
+
+    .line 80
+    :catch_4
+    move-exception v1
+
+    goto/16 :goto_1
 .end method
 
 .method public static d(Ljava/lang/String;II)[B
@@ -2356,9 +2701,9 @@
     .line 220
     invoke-virtual {v2}, Ljava/io/File;->length()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    long-to-int v0, v3
+    long-to-int v0, v4
 
     .line 223
     :goto_1
@@ -2442,7 +2787,7 @@
     move-exception v2
 
     .line 250
-    const-string/jumbo v3, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v3, "MicroMsg.FileOperation"
 
     const-string/jumbo v4, "file op readFromFileV2 close e type:%s, e msg:%s, fileName:%s, offset:%d, maxLen:%d"
 
@@ -2482,7 +2827,7 @@
 
     aput-object v0, v5, v2
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v1
 
@@ -2498,7 +2843,7 @@
     .line 242
     :goto_2
     :try_start_3
-    const-string/jumbo v4, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v4, "MicroMsg.FileOperation"
 
     const-string/jumbo v5, "file op readFromFileV2 e type:%s, e msg:%s, fileName:%s, offset:%d, maxLen:%d"
 
@@ -2546,7 +2891,7 @@
 
     aput-object v7, v6, v2
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -2569,7 +2914,7 @@
     move-exception v2
 
     .line 250
-    const-string/jumbo v3, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v3, "MicroMsg.FileOperation"
 
     const-string/jumbo v4, "file op readFromFileV2 close e type:%s, e msg:%s, fileName:%s, offset:%d, maxLen:%d"
 
@@ -2609,7 +2954,7 @@
 
     aput-object v0, v5, v2
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v1
 
@@ -2643,7 +2988,7 @@
     move-exception v2
 
     .line 250
-    const-string/jumbo v3, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v3, "MicroMsg.FileOperation"
 
     const-string/jumbo v4, "file op readFromFileV2 close e type:%s, e msg:%s, fileName:%s, offset:%d, maxLen:%d"
 
@@ -2683,7 +3028,7 @@
 
     aput-object v0, v5, v2
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_4
 
@@ -2710,294 +3055,34 @@
     goto/16 :goto_1
 .end method
 
-.method public static e(Ljava/lang/String;[B)I
-    .locals 12
+.method public static final deleteFile(Ljava/lang/String;)Z
+    .locals 2
 
     .prologue
-    const/4 v11, 0x4
+    .line 410
+    if-eqz p0, :cond_0
 
-    const/4 v10, 0x3
+    new-instance v0, Ljava/io/File;
 
-    const/4 v9, 0x2
+    invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    const/4 v8, 0x1
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
-    const/4 v0, 0x0
+    move-result v1
 
-    .line 74
-    if-eqz p1, :cond_0
+    if-eqz v1, :cond_0
 
-    array-length v1, p1
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    if-nez v1, :cond_1
+    move-result v0
 
-    .line 75
-    :cond_0
-    const/4 v0, -0x2
-
-    .line 96
     :goto_0
     return v0
 
-    .line 76
-    :cond_1
-    const/4 v3, 0x0
-
-    .line 78
-    :try_start_0
-    new-instance v2, Ljava/io/FileOutputStream;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v2, p0, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;Z)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 79
-    const/4 v1, 0x0
-
-    :try_start_1
-    array-length v3, p1
-
-    invoke-virtual {v2, p1, v1, v3}, Ljava/io/FileOutputStream;->write([BII)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    .line 86
-    :try_start_2
-    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+    :cond_0
+    const/4 v0, 0x1
 
     goto :goto_0
-
-    .line 89
-    :catch_0
-    move-exception v1
-
-    .line 90
-    const-string/jumbo v2, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
-
-    const-string/jumbo v3, "file op appendToFile close e type:%s, e msg:%s, fileName:%s, buf len:%d"
-
-    new-array v4, v11, [Ljava/lang/Object;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v5
-
-    aput-object v5, v4, v0
-
-    invoke-virtual {v1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    aput-object v1, v4, v8
-
-    aput-object p0, v4, v9
-
-    array-length v1, p1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    aput-object v1, v4, v10
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    .line 80
-    :catch_1
-    move-exception v1
-
-    move-object v2, v3
-
-    .line 81
-    :goto_1
-    :try_start_3
-    const-string/jumbo v3, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
-
-    const-string/jumbo v4, "file op appendToFile e type:%s, e msg:%s, fileName:%s, buf len:%d"
-
-    const/4 v5, 0x4
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v7
-
-    aput-object v7, v5, v6
-
-    const/4 v6, 0x1
-
-    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    aput-object v1, v5, v6
-
-    const/4 v1, 0x2
-
-    aput-object p0, v5, v1
-
-    const/4 v1, 0x3
-
-    array-length v6, p1
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    aput-object v6, v5, v1
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    .line 84
-    if-eqz v2, :cond_2
-
-    .line 88
-    :try_start_4
-    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
-
-    .line 93
-    :cond_2
-    :goto_2
-    const/4 v0, -0x1
-
-    goto :goto_0
-
-    .line 89
-    :catch_2
-    move-exception v1
-
-    .line 90
-    const-string/jumbo v2, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
-
-    const-string/jumbo v3, "file op appendToFile close e type:%s, e msg:%s, fileName:%s, buf len:%d"
-
-    new-array v4, v11, [Ljava/lang/Object;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v5
-
-    aput-object v5, v4, v0
-
-    invoke-virtual {v1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v4, v8
-
-    aput-object p0, v4, v9
-
-    array-length v0, p1
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    aput-object v0, v4, v10
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_2
-
-    .line 86
-    :catchall_0
-    move-exception v1
-
-    move-object v2, v3
-
-    :goto_3
-    if-eqz v2, :cond_3
-
-    .line 88
-    :try_start_5
-    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
-    :try_end_5
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
-
-    .line 93
-    :cond_3
-    :goto_4
-    throw v1
-
-    .line 89
-    :catch_3
-    move-exception v2
-
-    .line 90
-    const-string/jumbo v3, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
-
-    const-string/jumbo v4, "file op appendToFile close e type:%s, e msg:%s, fileName:%s, buf len:%d"
-
-    new-array v5, v11, [Ljava/lang/Object;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v6
-
-    aput-object v6, v5, v0
-
-    invoke-virtual {v2}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v5, v8
-
-    aput-object p0, v5, v9
-
-    array-length v0, p1
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    aput-object v0, v5, v10
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_4
-
-    .line 86
-    :catchall_1
-    move-exception v1
-
-    goto :goto_3
-
-    .line 80
-    :catch_4
-    move-exception v1
-
-    goto/16 :goto_1
 .end method
 
 .method public static final e(Ljava/io/File;)Z
@@ -3073,7 +3158,19 @@
     goto :goto_1
 .end method
 
-.method public static final f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public static final f(Ljava/io/File;)Z
+    .locals 1
+
+    .prologue
+    .line 432
+    invoke-static {p0}, Lcom/tencent/mm/loader/stub/b;->f(Ljava/io/File;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static final h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
     .prologue
@@ -3145,19 +3242,7 @@
     goto :goto_0
 .end method
 
-.method public static final f(Ljava/io/File;)Z
-    .locals 1
-
-    .prologue
-    .line 432
-    invoke-static {p0}, Lcom/tencent/mm/loader/stub/b;->f(Ljava/io/File;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static o(Ljava/lang/String;Ljava/lang/String;)J
+.method public static n(Ljava/lang/String;Ljava/lang/String;)J
     .locals 9
 
     .prologue
@@ -3242,7 +3327,7 @@
     .line 506
     :goto_3
     :try_start_5
-    const-string/jumbo v3, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v3, "MicroMsg.FileOperation"
 
     const-string/jumbo v4, "file op copyFile e type:%s, e msg:%s, src:%s, dest:%s"
 
@@ -3278,7 +3363,7 @@
 
     aput-object p1, v5, v0
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
@@ -3537,7 +3622,7 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_8
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 358
+    .line 357
     const/high16 v2, 0x10000
 
     :try_start_2
@@ -3572,7 +3657,7 @@
     .line 366
     :goto_3
     :try_start_3
-    const-string/jumbo v5, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v5, "MicroMsg.FileOperation"
 
     const-string/jumbo v6, "file op renameTo e type:%s, e msg:%s, path:%s, newPath:%s"
 
@@ -3608,7 +3693,7 @@
 
     aput-object p1, v7, v2
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
@@ -3639,7 +3724,7 @@
     move-exception v2
 
     .line 385
-    const-string/jumbo v3, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v3, "MicroMsg.FileOperation"
 
     const-string/jumbo v4, "file op renameTo close out e type:%s, e msg:%s, path:%s, newPath:%s"
 
@@ -3665,7 +3750,7 @@
 
     aput-object p1, v5, v11
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
@@ -3704,7 +3789,7 @@
     move-exception v2
 
     .line 375
-    const-string/jumbo v4, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v4, "MicroMsg.FileOperation"
 
     const-string/jumbo v5, "file op renameTo close in e type:%s, e msg:%s, path:%s, newPath:%s"
 
@@ -3730,7 +3815,7 @@
 
     aput-object p1, v6, v11
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_5
 
@@ -3739,7 +3824,7 @@
     move-exception v2
 
     .line 385
-    const-string/jumbo v3, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v3, "MicroMsg.FileOperation"
 
     const-string/jumbo v4, "file op renameTo close out e type:%s, e msg:%s, path:%s, newPath:%s"
 
@@ -3765,7 +3850,7 @@
 
     aput-object p1, v5, v11
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_6
 
@@ -3774,7 +3859,7 @@
     move-exception v2
 
     .line 375
-    const-string/jumbo v4, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v4, "MicroMsg.FileOperation"
 
     const-string/jumbo v5, "file op renameTo close in e type:%s, e msg:%s, path:%s, newPath:%s"
 
@@ -3800,7 +3885,7 @@
 
     aput-object p1, v6, v11
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_4
 
@@ -3844,7 +3929,7 @@
     move-exception v4
 
     .line 375
-    const-string/jumbo v5, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v5, "MicroMsg.FileOperation"
 
     const-string/jumbo v6, "file op renameTo close in e type:%s, e msg:%s, path:%s, newPath:%s"
 
@@ -3870,7 +3955,7 @@
 
     aput-object p1, v7, v11
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_8
 
@@ -3879,7 +3964,7 @@
     move-exception v3
 
     .line 385
-    const-string/jumbo v4, "!32@/B4Tb64lLpIz+MO3vrcjft/mMmhh0zwF"
+    const-string/jumbo v4, "MicroMsg.FileOperation"
 
     const-string/jumbo v5, "file op renameTo close out e type:%s, e msg:%s, path:%s, newPath:%s"
 
@@ -3905,7 +3990,7 @@
 
     aput-object p1, v6, v11
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_9
 

@@ -1,50 +1,67 @@
 package com.tencent.mm.ui.chatting;
 
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.tencent.mm.pluginsdk.ui.emoji.ChattingEmojiView;
+import com.tencent.mm.ae.a.a.c.a;
+import com.tencent.mm.ae.n;
+import com.tencent.mm.app.MMApplicationLifeCycle;
+import com.tencent.mm.p.a.a;
+import com.tencent.mm.ui.MMImageView;
 
 final class f
-  extends aa.a
+  extends ab.a
 {
-  ProgressBar fGG;
-  ImageView kQA;
-  ImageView kQB;
-  ImageView kQC;
-  ChattingEmojiView kQz;
+  public static final int lqo = (int)com.tencent.mm.az.a.getDensity(MMApplicationLifeCycle.applicationLifeCycle.getApplication()) * 64;
+  public TextView cuj;
+  public TextView cuk;
+  public MMImageView lqm;
+  public TextView lqn;
   
   public f(int paramInt)
   {
     super(paramInt);
   }
   
-  public final aa.a e(View paramView, boolean paramBoolean)
+  public final void a(a.a parama, String paramString, boolean paramBoolean)
   {
-    super.aC(paramView);
-    dUV = ((TextView)paramView.findViewById(2131165184));
-    kQz = ((ChattingEmojiView)paramView.findViewById(2131165387));
-    edK = ((CheckBox)paramView.findViewById(2131165186));
-    dMC = paramView.findViewById(2131165187);
-    kQB = ((ImageView)paramView.findViewById(2131165696));
-    if (paramBoolean) {
-      type = 14;
-    }
-    for (;;)
+    if (parama != null)
     {
-      if (kQA != null) {
-        ((ViewGroup)kQA.getParent()).setBackgroundDrawable(null);
+      cuj.setText(description);
+      cuk.setText(brm);
+      lqm.setVisibility(0);
+      if (paramBoolean)
+      {
+        parama = n.AC();
+        paramString = n.Ay().q(paramString, true);
+        MMImageView localMMImageView = lqm;
+        c.a locala = new c.a();
+        bNh = 1;
+        locala = locala.S(lqo, lqo);
+        bNp = 2131165244;
+        bNx = true;
+        parama.a(paramString, localMMImageView, locala.AM());
       }
-      gjr = ((TextView)paramView.findViewById(2131165268));
-      return this;
-      fGG = ((ProgressBar)paramView.findViewById(2131165399));
-      kQK = ((ImageView)paramView.findViewById(2131165314));
-      type = 15;
-      kQC = ((ImageView)paramView.findViewById(2131165313));
     }
+    else
+    {
+      return;
+    }
+    lqm.setImageResource(2130838922);
+  }
+  
+  public final f aA(View paramView)
+  {
+    super.aG(paramView);
+    dXd = ((TextView)hDZ.findViewById(2131755018));
+    ehl = ((CheckBox)paramView.findViewById(2131755013));
+    dOk = hDZ.findViewById(2131755017);
+    gtM = ((TextView)hDZ.findViewById(2131755288));
+    lqm = ((MMImageView)hDZ.findViewById(2131756055));
+    cuj = ((TextView)hDZ.findViewById(2131756056));
+    cuk = ((TextView)hDZ.findViewById(2131756057));
+    lqn = ((TextView)hDZ.findViewById(2131756058));
+    return this;
   }
 }
 

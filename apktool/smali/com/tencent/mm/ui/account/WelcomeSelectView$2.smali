@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/WelcomeSelectView;->bw(Landroid/content/Context;)V
+    value = Lcom/tencent/mm/ui/account/WelcomeSelectView;->br(Landroid/content/Context;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kwS:Lcom/tencent/mm/ui/account/WelcomeSelectView;
+.field final synthetic kVZ:Lcom/tencent/mm/ui/account/WelcomeSelectView;
 
 .field final synthetic val$context:Landroid/content/Context;
 
@@ -28,8 +28,8 @@
     .locals 0
 
     .prologue
-    .line 116
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/WelcomeSelectView$2;->kwS:Lcom/tencent/mm/ui/account/WelcomeSelectView;
+    .line 119
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/WelcomeSelectView$2;->kVZ:Lcom/tencent/mm/ui/account/WelcomeSelectView;
 
     iput-object p2, p0, Lcom/tencent/mm/ui/account/WelcomeSelectView$2;->val$context:Landroid/content/Context;
 
@@ -44,7 +44,7 @@
     .locals 3
 
     .prologue
-    .line 120
+    .line 123
     new-instance v0, Landroid/content/Intent;
 
     iget-object v1, p0, Lcom/tencent/mm/ui/account/WelcomeSelectView$2;->val$context:Landroid/content/Context;
@@ -53,18 +53,18 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 122
+    .line 125
     const-string/jumbo v1, "mobile_input_purpose"
 
     const/4 v2, 0x5
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 123
+    .line 126
     iget-object v1, p0, Lcom/tencent/mm/ui/account/WelcomeSelectView$2;->val$context:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 125
+    .line 128
     return-void
 .end method

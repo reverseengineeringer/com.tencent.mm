@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract i(Ljava/lang/CharSequence;)Z
+.method public abstract r(Ljava/lang/CharSequence;)Z
 .end method

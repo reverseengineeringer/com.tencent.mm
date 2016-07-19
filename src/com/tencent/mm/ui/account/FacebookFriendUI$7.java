@@ -14,18 +14,18 @@ final class FacebookFriendUI$7
 {
   FacebookFriendUI$7(FacebookFriendUI paramFacebookFriendUI) {}
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    paramAdapterView = (h)FacebookFriendUI.b(ksr).getItem(paramInt - FacebookFriendUI.e(ksr).getHeaderViewsCount());
+    paramAdapterView = (h)FacebookFriendUI.b(kRz).getItem(paramInt - FacebookFriendUI.e(kRz).getHeaderViewsCount());
     if ((status == 100) || (status == 101))
     {
       paramView = new Intent();
       paramView.putExtra("Contact_User", paramAdapterView.getUsername());
-      paramView.putExtra("Contact_Nick", paramAdapterView.ym());
-      paramView.putExtra("Contact_KFacebookId", aSw);
-      paramView.putExtra("Contact_KFacebookName", paramAdapterView.yw());
+      paramView.putExtra("Contact_Nick", paramAdapterView.yy());
+      paramView.putExtra("Contact_KFacebookId", aFf);
+      paramView.putExtra("Contact_KFacebookName", paramAdapterView.yI());
       paramView.putExtra("Contact_Scene", 31);
-      a.coa.d(paramView, ksr);
+      a.cjo.d(paramView, kRz);
     }
     if (status == 102) {}
   }

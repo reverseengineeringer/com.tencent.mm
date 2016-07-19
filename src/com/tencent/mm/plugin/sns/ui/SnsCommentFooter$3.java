@@ -3,8 +3,7 @@ package com.tencent.mm.plugin.sns.ui;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
-import com.tencent.mm.pluginsdk.ui.ChatFooterPanel;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.widget.MMEditText;
 
@@ -15,24 +14,23 @@ final class SnsCommentFooter$3
   
   public final void onClick(View paramView)
   {
-    hdG.setModeClick(true);
-    u.i("!44@/B4Tb64lLpIPhXvycW2PJqlaK/iQk5LCbM+7zl/KqGE=", "state onClick" + SnsCommentFooter.c(hdG));
-    if (SnsCommentFooter.c(hdG) == 0)
+    hst.fhj = true;
+    v.i("MicroMsg.SnsCommentFooter", "state onClick" + SnsCommentFooter.c(hst));
+    if (SnsCommentFooter.c(hst) == 0)
     {
-      SnsCommentFooter.d(hdG).age();
-      SnsCommentFooter.a(hdG).requestFocus();
-      SnsCommentFooter.e(hdG);
-      SnsCommentFooter.f(hdG).setImageResource(2130903660);
-      SnsCommentFooter.a(hdG, 1);
-      SnsCommentFooter.g(hdG);
+      SnsCommentFooter.d(hst).aiI();
+      SnsCommentFooter.a(hst).requestFocus();
+      SnsCommentFooter.e(hst);
+      SnsCommentFooter.f(hst).setImageResource(2130838039);
+      SnsCommentFooter.a(hst, 1);
+      SnsCommentFooter.g(hst);
       return;
     }
-    SnsCommentFooter.g(hdG);
-    SnsCommentFooter.a(hdG).requestFocus();
-    SnsCommentFooter.h(hdG).setVisibility(8);
-    SnsCommentFooter.d(hdG).apz();
-    SnsCommentFooter.f(hdG).setImageResource(2130903674);
-    SnsCommentFooter.a(hdG, 0);
+    SnsCommentFooter.g(hst);
+    SnsCommentFooter.a(hst).requestFocus();
+    SnsCommentFooter.d(hst).asv();
+    SnsCommentFooter.f(hst).setImageResource(2130838034);
+    SnsCommentFooter.a(hst, 0);
   }
 }
 

@@ -1,14 +1,14 @@
 package b.a.d;
 
 public final class d
-  implements Comparable
+  implements Comparable<d>
 {
-  final String buL;
+  final String DF;
   final String value;
   
   public d(String paramString1, String paramString2)
   {
-    buL = paramString1;
+    DF = paramString1;
     value = paramString2;
   }
   
@@ -25,13 +25,13 @@ public final class d
         }
       } while (!(paramObject instanceof d));
       paramObject = (d)paramObject;
-    } while ((!buL.equals(buL)) || (!value.equals(value)));
+    } while ((!DF.equals(DF)) || (!value.equals(value)));
     return true;
   }
   
   public final int hashCode()
   {
-    return buL.hashCode() + value.hashCode();
+    return DF.hashCode() + value.hashCode();
   }
 }
 

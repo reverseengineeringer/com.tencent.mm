@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+.field final synthetic lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 603
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$5;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$5;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,9 +53,9 @@
 
     .line 611
     :sswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$5;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$5;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$5;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$5;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/contact/AddressUI$a;->i(Lcom/tencent/mm/ui/contact/AddressUI$a;)Ljava/lang/String;
 
@@ -67,9 +67,9 @@
 
     .line 616
     :sswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$5;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$5;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$5;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$5;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/contact/AddressUI$a;->i(Lcom/tencent/mm/ui/contact/AddressUI$a;)Ljava/lang/String;
 

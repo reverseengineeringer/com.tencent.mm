@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.h;
 
 final class k$6
@@ -14,9 +14,9 @@ final class k$6
   
   public final void onClick(View paramView)
   {
-    u.d("!44@/B4Tb64lLpISOYcLaKm7W93grpYn2xfC5yJeWqznlqY=", "initMultiNew, goto FMessageConversationUI");
-    ah.tD().rn().set(143618, Integer.valueOf(0));
-    com.tencent.mm.ar.c.c(k.d(lkt), "subapp", ".ui.friend.FMessageConversationUI", new Intent());
+    v.d("MicroMsg.FMessageContactView", "initMultiNew, goto FMessageConversationUI");
+    ah.tE().ro().set(143618, Integer.valueOf(0));
+    com.tencent.mm.av.c.c(k.d(lKE), "subapp", ".ui.friend.FMessageConversationUI", new Intent());
   }
 }
 

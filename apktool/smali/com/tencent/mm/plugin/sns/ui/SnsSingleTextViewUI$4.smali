@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hiD:Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;
+.field final synthetic hxs:Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 115
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI$4;->hiD:Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;
+    .line 116
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI$4;->hxs:Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,12 +40,12 @@
     .locals 1
 
     .prologue
-    .line 119
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI$4;->hiD:Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;
+    .line 120
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI$4;->hxs:Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSingleTextViewUI;->finish()V
 
-    .line 120
+    .line 121
     const/4 v0, 0x1
 
     return v0

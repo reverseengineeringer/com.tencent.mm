@@ -10,7 +10,7 @@
 
 
 # instance fields
-.field public kGX:Landroid/graphics/SurfaceTexture;
+.field public lfZ:Landroid/graphics/SurfaceTexture;
 
 
 # direct methods
@@ -18,21 +18,21 @@
     .locals 1
 
     .prologue
-    .line 130
+    .line 147
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/graphics/SurfaceTexture;-><init>(I)V
 
-    .line 127
+    .line 144
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/r;->kGX:Landroid/graphics/SurfaceTexture;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/r;->lfZ:Landroid/graphics/SurfaceTexture;
 
-    .line 131
+    .line 148
     return-void
 .end method
 
-.method private static bcS()Ljava/lang/String;
+.method private static bir()Ljava/lang/String;
     .locals 12
 
     .prologue
@@ -40,31 +40,31 @@
 
     const/4 v10, 0x0
 
-    .line 196
+    .line 213
     new-instance v2, Ljava/lang/StringBuilder;
 
     const/16 v0, 0x100
 
     invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 197
+    .line 214
     new-instance v3, Landroid/util/StringBuilderPrinter;
 
     invoke-direct {v3, v2}, Landroid/util/StringBuilderPrinter;-><init>(Ljava/lang/StringBuilder;)V
 
-    .line 198
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    .line 215
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    .line 201
+    .line 218
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "#accinfo.revision="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v1, Lcom/tencent/mm/sdk/platformtools/e;->btx:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/sdk/platformtools/e;->boQ:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -76,14 +76,14 @@
 
     invoke-virtual {v3, v0}, Landroid/util/StringBuilderPrinter;->println(Ljava/lang/String;)V
 
-    .line 203
+    .line 220
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "#accinfo.build="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v1, Lcom/tencent/mm/sdk/platformtools/e;->bwS:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/sdk/platformtools/e;->boT:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -95,7 +95,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/tencent/mm/sdk/platformtools/e;->bwT:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/sdk/platformtools/e;->boU:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -107,7 +107,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/sdk/platformtools/f;->akC:I
+    sget v1, Lcom/tencent/mm/sdk/platformtools/f;->Xv:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -119,7 +119,7 @@
 
     invoke-virtual {v3, v0}, Landroid/util/StringBuilderPrinter;->println(Ljava/lang/String;)V
 
-    .line 204
+    .line 221
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string/jumbo v0, "#accinfo.env="
@@ -161,7 +161,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/tencent/mm/sdk/b/b;->jUB:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/sdk/b/b;->kuc:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -173,16 +173,16 @@
 
     invoke-virtual {v3, v0}, Landroid/util/StringBuilderPrinter;->println(Ljava/lang/String;)V
 
-    .line 207
+    .line 224
     const-string/jumbo v1, ""
 
-    .line 209
+    .line 226
     :try_start_0
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
     move-result-object v5
 
-    .line 210
+    .line 227
     new-instance v6, Landroid/os/StatFs;
 
     invoke-virtual {v5}, Ljava/io/File;->getPath()Ljava/lang/String;
@@ -191,14 +191,14 @@
 
     invoke-direct {v6, v0}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
 
-    .line 212
+    .line 229
     new-instance v7, Landroid/os/StatFs;
 
-    sget-object v0, Lcom/tencent/mm/compatible/util/d;->bxc:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/compatible/util/d;->bpe:Ljava/lang/String;
 
     invoke-direct {v7, v0}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
 
-    .line 214
+    .line 231
     const-string/jumbo v0, "activity"
 
     invoke-virtual {v4, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -211,7 +211,7 @@
 
     move-result v0
 
-    .line 216
+    .line 233
     const-string/jumbo v4, "%dMB %s:%d:%d:%d %s:%d:%d:%d"
 
     const/16 v8, 0x9
@@ -272,7 +272,7 @@
 
     const/4 v0, 0x5
 
-    sget-object v5, Lcom/tencent/mm/compatible/util/d;->bxc:Ljava/lang/String;
+    sget-object v5, Lcom/tencent/mm/compatible/util/d;->bpe:Ljava/lang/String;
 
     aput-object v5, v8, v0
 
@@ -318,7 +318,7 @@
 
     move-result-object v0
 
-    .line 222
+    .line 239
     :goto_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -336,12 +336,12 @@
 
     invoke-virtual {v3, v0}, Landroid/util/StringBuilderPrinter;->println(Ljava/lang/String;)V
 
-    .line 224
+    .line 241
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0}, Ljava/util/Date;-><init>()V
 
-    .line 225
+    .line 242
     new-instance v1, Ljava/text/SimpleDateFormat;
 
     const-string/jumbo v4, "yyyy-MM-dd HH:mm:ss.SSSZ"
@@ -352,7 +352,7 @@
 
     invoke-direct {v1, v4, v5}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 226
+    .line 243
     new-instance v4, Ljava/lang/StringBuilder;
 
     const-string/jumbo v5, "#accinfo.crashTime="
@@ -373,30 +373,30 @@
 
     invoke-virtual {v3, v0}, Landroid/util/StringBuilderPrinter;->println(Ljava/lang/String;)V
 
-    .line 227
+    .line 244
     const-string/jumbo v0, "#crashContent="
 
     invoke-virtual {v3, v0}, Landroid/util/StringBuilderPrinter;->println(Ljava/lang/String;)V
 
-    .line 229
+    .line 246
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 204
+    .line 221
     :cond_0
     const-string/jumbo v0, "b"
 
     goto/16 :goto_0
 
-    .line 219
+    .line 236
     :catch_0
     move-exception v0
 
-    .line 220
-    const-string/jumbo v4, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 237
+    const-string/jumbo v4, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v5, "check data size failed :%s"
 
@@ -408,7 +408,7 @@
 
     aput-object v0, v6, v10
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v1
 
@@ -421,19 +421,19 @@
     .locals 2
 
     .prologue
-    .line 234
-    const-string/jumbo v0, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 251
+    const-string/jumbo v0, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v1, "detect texture problem, attachToGLContext"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 235
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->kGX:Landroid/graphics/SurfaceTexture;
+    .line 252
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->lfZ:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0, p1}, Landroid/graphics/SurfaceTexture;->attachToGLContext(I)V
 
-    .line 236
+    .line 253
     return-void
 .end method
 
@@ -449,16 +449,16 @@
 
     const/4 v2, 0x0
 
-    .line 153
-    const-string/jumbo v0, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 170
+    const-string/jumbo v0, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v1, "detect texture problem, detachFromGLContext"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 157
+    .line 174
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->kGX:Landroid/graphics/SurfaceTexture;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->lfZ:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->detachFromGLContext()V
     :try_end_0
@@ -466,11 +466,11 @@
 
     move v1, v2
 
-    .line 163
+    .line 180
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 166
+    .line 183
     :try_start_1
     const-class v0, Landroid/graphics/SurfaceTexture;
 
@@ -484,13 +484,13 @@
 
     move-result-object v0
 
-    .line 170
+    .line 187
     const/4 v4, 0x1
 
     invoke-virtual {v0, v4}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 171
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/r;->kGX:Landroid/graphics/SurfaceTexture;
+    .line 188
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/r;->lfZ:Landroid/graphics/SurfaceTexture;
 
     const/4 v5, 0x0
 
@@ -513,12 +513,12 @@
 
     move-result v0
 
-    .line 172
+    .line 189
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/ui/base/r;->bcS()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/ui/base/r;->bir()Ljava/lang/String;
 
     move-result-object v5
 
@@ -550,7 +550,7 @@
 
     move-result-object v4
 
-    .line 186
+    .line 203
     invoke-virtual {v4}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v5
@@ -561,15 +561,15 @@
 
     const-string/jumbo v6, "DetachFromGLContext"
 
-    invoke-static {v5, v6}, Lcom/tencent/mm/sdk/b/b;->q(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lcom/tencent/mm/sdk/b/b;->o(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 188
-    const-string/jumbo v5, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 205
+    const-string/jumbo v5, "MicroMsg.MMSurfaceTextureWrap"
 
-    invoke-static {v5, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 189
-    const-string/jumbo v4, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 206
+    const-string/jumbo v4, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v5, "detect texture problem, err %s hasDetach %s hasError %s"
 
@@ -593,19 +593,19 @@
 
     aput-object v0, v6, v9
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 193
+    .line 210
     :cond_0
     :goto_1
     return-void
 
-    .line 158
+    .line 175
     :catch_0
     move-exception v0
 
-    .line 160
-    const-string/jumbo v1, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 177
+    const-string/jumbo v1, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v4, "%s"
 
@@ -615,19 +615,19 @@
 
     aput-object v6, v5, v2
 
-    invoke-static {v1, v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v1, v3
 
     goto/16 :goto_0
 
-    .line 173
+    .line 190
     :catch_1
     move-exception v0
 
-    .line 174
+    .line 191
     :try_start_2
-    const-string/jumbo v4, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    const-string/jumbo v4, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v5, "%s"
 
@@ -641,16 +641,16 @@
 
     aput-object v8, v6, v7
 
-    invoke-static {v4, v0, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v0, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 184
+    .line 201
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/ui/base/r;->bcS()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/ui/base/r;->bir()Ljava/lang/String;
 
     move-result-object v4
 
@@ -678,7 +678,7 @@
 
     move-result-object v0
 
-    .line 186
+    .line 203
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v4
@@ -689,15 +689,15 @@
 
     const-string/jumbo v5, "DetachFromGLContext"
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/b/b;->q(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/b/b;->o(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 188
-    const-string/jumbo v4, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 205
+    const-string/jumbo v4, "MicroMsg.MMSurfaceTextureWrap"
 
-    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 189
-    const-string/jumbo v0, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 206
+    const-string/jumbo v0, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v4, "detect texture problem, err %s hasDetach %s hasError %s"
 
@@ -721,17 +721,17 @@
 
     aput-object v1, v5, v9
 
-    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
-    .line 175
+    .line 192
     :catch_2
     move-exception v0
 
-    .line 176
+    .line 193
     :try_start_3
-    const-string/jumbo v4, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    const-string/jumbo v4, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v5, "%s"
 
@@ -745,16 +745,16 @@
 
     aput-object v8, v6, v7
 
-    invoke-static {v4, v0, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v0, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 184
+    .line 201
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/ui/base/r;->bcS()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/ui/base/r;->bir()Ljava/lang/String;
 
     move-result-object v4
 
@@ -782,7 +782,7 @@
 
     move-result-object v0
 
-    .line 186
+    .line 203
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v4
@@ -793,15 +793,15 @@
 
     const-string/jumbo v5, "DetachFromGLContext"
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/b/b;->q(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/b/b;->o(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 188
-    const-string/jumbo v4, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 205
+    const-string/jumbo v4, "MicroMsg.MMSurfaceTextureWrap"
 
-    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 189
-    const-string/jumbo v0, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 206
+    const-string/jumbo v0, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v4, "detect texture problem, err %s hasDetach %s hasError %s"
 
@@ -825,17 +825,17 @@
 
     aput-object v1, v5, v9
 
-    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_1
 
-    .line 177
+    .line 194
     :catch_3
     move-exception v0
 
-    .line 178
+    .line 195
     :try_start_4
-    const-string/jumbo v4, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    const-string/jumbo v4, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v5, "%s"
 
@@ -849,16 +849,16 @@
 
     aput-object v8, v6, v7
 
-    invoke-static {v4, v0, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v0, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 184
+    .line 201
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/ui/base/r;->bcS()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/ui/base/r;->bir()Ljava/lang/String;
 
     move-result-object v4
 
@@ -886,7 +886,7 @@
 
     move-result-object v0
 
-    .line 186
+    .line 203
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v4
@@ -897,15 +897,15 @@
 
     const-string/jumbo v5, "DetachFromGLContext"
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/b/b;->q(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/b/b;->o(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 188
-    const-string/jumbo v4, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 205
+    const-string/jumbo v4, "MicroMsg.MMSurfaceTextureWrap"
 
-    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 189
-    const-string/jumbo v0, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 206
+    const-string/jumbo v0, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v4, "detect texture problem, err %s hasDetach %s hasError %s"
 
@@ -929,17 +929,17 @@
 
     aput-object v1, v5, v9
 
-    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_1
 
-    .line 179
+    .line 196
     :catch_4
     move-exception v0
 
-    .line 180
+    .line 197
     :try_start_5
-    const-string/jumbo v4, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    const-string/jumbo v4, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v5, "%s"
 
@@ -953,16 +953,16 @@
 
     aput-object v8, v6, v7
 
-    invoke-static {v4, v0, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v0, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 184
+    .line 201
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/ui/base/r;->bcS()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/ui/base/r;->bir()Ljava/lang/String;
 
     move-result-object v4
 
@@ -990,7 +990,7 @@
 
     move-result-object v0
 
-    .line 186
+    .line 203
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v4
@@ -1001,15 +1001,15 @@
 
     const-string/jumbo v5, "DetachFromGLContext"
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/b/b;->q(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/b/b;->o(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 188
-    const-string/jumbo v4, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 205
+    const-string/jumbo v4, "MicroMsg.MMSurfaceTextureWrap"
 
-    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 189
-    const-string/jumbo v0, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 206
+    const-string/jumbo v0, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v4, "detect texture problem, err %s hasDetach %s hasError %s"
 
@@ -1033,17 +1033,17 @@
 
     aput-object v1, v5, v9
 
-    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_1
 
-    .line 181
+    .line 198
     :catch_5
     move-exception v0
 
-    .line 182
+    .line 199
     :try_start_6
-    const-string/jumbo v4, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    const-string/jumbo v4, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v5, "%s"
 
@@ -1057,16 +1057,16 @@
 
     aput-object v8, v6, v7
 
-    invoke-static {v4, v0, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v0, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 184
+    .line 201
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/ui/base/r;->bcS()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/ui/base/r;->bir()Ljava/lang/String;
 
     move-result-object v4
 
@@ -1094,7 +1094,7 @@
 
     move-result-object v0
 
-    .line 186
+    .line 203
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v4
@@ -1105,15 +1105,15 @@
 
     const-string/jumbo v5, "DetachFromGLContext"
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/b/b;->q(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/b/b;->o(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 188
-    const-string/jumbo v4, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 205
+    const-string/jumbo v4, "MicroMsg.MMSurfaceTextureWrap"
 
-    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 189
-    const-string/jumbo v0, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 206
+    const-string/jumbo v0, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v4, "detect texture problem, err %s hasDetach %s hasError %s"
 
@@ -1137,11 +1137,11 @@
 
     aput-object v1, v5, v9
 
-    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_1
 
-    .line 184
+    .line 201
     :catchall_0
     move-exception v0
 
@@ -1149,7 +1149,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/ui/base/r;->bcS()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/ui/base/r;->bir()Ljava/lang/String;
 
     move-result-object v5
 
@@ -1177,7 +1177,7 @@
 
     move-result-object v4
 
-    .line 186
+    .line 203
     invoke-virtual {v4}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v5
@@ -1188,15 +1188,15 @@
 
     const-string/jumbo v6, "DetachFromGLContext"
 
-    invoke-static {v5, v6}, Lcom/tencent/mm/sdk/b/b;->q(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lcom/tencent/mm/sdk/b/b;->o(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 188
-    const-string/jumbo v5, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 205
+    const-string/jumbo v5, "MicroMsg.MMSurfaceTextureWrap"
 
-    invoke-static {v5, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v4}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 189
-    const-string/jumbo v4, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 206
+    const-string/jumbo v4, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v5, "detect texture problem, err %s hasDetach %s hasError %s"
 
@@ -1220,9 +1220,9 @@
 
     aput-object v1, v6, v9
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 190
+    .line 207
     throw v0
 .end method
 
@@ -1230,8 +1230,8 @@
     .locals 1
 
     .prologue
-    .line 259
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->kGX:Landroid/graphics/SurfaceTexture;
+    .line 276
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->lfZ:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1244,15 +1244,15 @@
     .locals 2
 
     .prologue
-    .line 246
-    const-string/jumbo v0, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 263
+    const-string/jumbo v0, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v1, "detect texture problem, getTimestamp"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 247
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->kGX:Landroid/graphics/SurfaceTexture;
+    .line 264
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->lfZ:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->getTimestamp()J
 
@@ -1265,19 +1265,19 @@
     .locals 2
 
     .prologue
-    .line 240
-    const-string/jumbo v0, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 257
+    const-string/jumbo v0, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v1, "detect texture problem, getTransformMatrix"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 241
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->kGX:Landroid/graphics/SurfaceTexture;
+    .line 258
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->lfZ:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0, p1}, Landroid/graphics/SurfaceTexture;->getTransformMatrix([F)V
 
-    .line 242
+    .line 259
     return-void
 .end method
 
@@ -1285,8 +1285,8 @@
     .locals 1
 
     .prologue
-    .line 264
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->kGX:Landroid/graphics/SurfaceTexture;
+    .line 281
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->lfZ:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -1299,22 +1299,22 @@
     .locals 2
 
     .prologue
-    .line 252
+    .line 269
     invoke-super {p0}, Landroid/graphics/SurfaceTexture;->release()V
 
-    .line 253
-    const-string/jumbo v0, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 270
+    const-string/jumbo v0, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v1, "detect texture problem, release"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 254
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->kGX:Landroid/graphics/SurfaceTexture;
+    .line 271
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->lfZ:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->release()V
 
-    .line 255
+    .line 272
     return-void
 .end method
 
@@ -1325,19 +1325,19 @@
     .end annotation
 
     .prologue
-    .line 275
-    const-string/jumbo v0, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 292
+    const-string/jumbo v0, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v1, "detect texture problem, releaseTexImage"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 276
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->kGX:Landroid/graphics/SurfaceTexture;
+    .line 293
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->lfZ:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->releaseTexImage()V
 
-    .line 277
+    .line 294
     return-void
 .end method
 
@@ -1345,19 +1345,19 @@
     .locals 2
 
     .prologue
-    .line 141
-    const-string/jumbo v0, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 158
+    const-string/jumbo v0, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v1, "detect texture problem, setDefaultBufferSize"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 142
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->kGX:Landroid/graphics/SurfaceTexture;
+    .line 159
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->lfZ:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0, p1, p2}, Landroid/graphics/SurfaceTexture;->setDefaultBufferSize(II)V
 
-    .line 143
+    .line 160
     return-void
 .end method
 
@@ -1365,19 +1365,19 @@
     .locals 2
 
     .prologue
-    .line 135
-    const-string/jumbo v0, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 152
+    const-string/jumbo v0, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v1, "detect texture problem, setOnFrameAvailableListener"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 136
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->kGX:Landroid/graphics/SurfaceTexture;
+    .line 153
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->lfZ:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0, p1}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
 
-    .line 137
+    .line 154
     return-void
 .end method
 
@@ -1385,8 +1385,8 @@
     .locals 1
 
     .prologue
-    .line 269
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->kGX:Landroid/graphics/SurfaceTexture;
+    .line 286
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->lfZ:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -1399,18 +1399,18 @@
     .locals 2
 
     .prologue
-    .line 147
-    const-string/jumbo v0, "!44@/B4Tb64lLpIji2aKMA54mJWjbyTAa25LwXnin6H1oak="
+    .line 164
+    const-string/jumbo v0, "MicroMsg.MMSurfaceTextureWrap"
 
     const-string/jumbo v1, "detect texture problem, updateTexImage"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 148
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->kGX:Landroid/graphics/SurfaceTexture;
+    .line 165
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/r;->lfZ:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
 
-    .line 149
+    .line 166
     return-void
 .end method

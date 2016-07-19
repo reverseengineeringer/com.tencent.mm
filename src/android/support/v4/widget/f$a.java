@@ -8,7 +8,7 @@ public abstract class f$a
   
   public void a(View paramView, int paramInt1, int paramInt2) {}
   
-  public void aD() {}
+  public void aC() {}
   
   public abstract boolean d(View paramView, int paramInt);
   
@@ -17,9 +17,7 @@ public abstract class f$a
     return 0;
   }
   
-  public void h(int paramInt1, int paramInt2) {}
-  
-  public void t(int paramInt) {}
+  public void f(int paramInt1, int paramInt2) {}
   
   public void x(View paramView) {}
   
@@ -27,6 +25,8 @@ public abstract class f$a
   {
     return 0;
   }
+  
+  public void y(int paramInt) {}
   
   public int z(View paramView)
   {

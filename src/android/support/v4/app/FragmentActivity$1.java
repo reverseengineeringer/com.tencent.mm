@@ -1,10 +1,10 @@
 package android.support.v4.app;
 
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class FragmentActivity$1
-  extends aa
+  extends ac
 {
   FragmentActivity$1(FragmentActivity paramFragmentActivity) {}
   
@@ -18,12 +18,12 @@ final class FragmentActivity$1
       do
       {
         return;
-      } while (!bi.be);
-      bi.i(false);
+      } while (!bx.bt);
+      bx.h(false);
       return;
     }
-    bi.bb.dispatchResume();
-    bi.bb.execPendingActions();
+    bx.bp.dispatchResume();
+    bx.bp.execPendingActions();
   }
 }
 

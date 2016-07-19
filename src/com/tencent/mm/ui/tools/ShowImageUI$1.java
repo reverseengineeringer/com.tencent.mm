@@ -10,7 +10,7 @@ final class ShowImageUI$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    lxX.finish();
+    lYM.finish();
     return true;
   }
 }

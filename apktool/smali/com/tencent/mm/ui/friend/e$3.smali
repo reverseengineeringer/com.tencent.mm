@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lrX:Lcom/tencent/mm/ui/friend/e;
+.field final synthetic lSB:Lcom/tencent/mm/ui/friend/e;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 207
-    iput-object p1, p0, Lcom/tencent/mm/ui/friend/e$3;->lrX:Lcom/tencent/mm/ui/friend/e;
+    iput-object p1, p0, Lcom/tencent/mm/ui/friend/e$3;->lSB:Lcom/tencent/mm/ui/friend/e;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final ib(Z)V
+.method public final iF(Z)V
     .locals 1
 
     .prologue
@@ -44,7 +44,7 @@
     if-eqz p1, :cond_0
 
     .line 213
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/e$3;->lrX:Lcom/tencent/mm/ui/friend/e;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/e$3;->lSB:Lcom/tencent/mm/ui/friend/e;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/friend/e;->notifyDataSetChanged()V
 

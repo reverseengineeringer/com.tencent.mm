@@ -2,40 +2,21 @@
 .super Ljava/lang/Object;
 
 
-# static fields
-.field public static final a:[I
-
-
 # instance fields
-.field public b:J
+.field public a:I
 
-.field private c:Ljava/util/Map;
+.field public b:I
+
+.field public c:I
+
+.field public d:I
+
+.field public e:I
+
+.field public f:Lct/ak;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const/4 v0, 0x3
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_0
-
-    sput-object v0, Lct/d;->a:[I
-
-    return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x36b0
-        0x50
-        0x1f90
-    .end array-data
-.end method
-
 .method public constructor <init>()V
     .locals 0
 
@@ -44,305 +25,287 @@
     return-void
 .end method
 
-.method public constructor <init>(Lct/am;)V
-    .locals 6
+.method public constructor <init>(Lct/af;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-wide v0, p1, Lct/am;->b:J
+    iget v0, p1, Lct/af;->a:I
 
-    iput-wide v0, p0, Lct/d;->b:J
+    iput v0, p0, Lct/d;->a:I
 
-    new-instance v0, Ljava/util/HashMap;
+    iget v0, p1, Lct/af;->b:I
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    iput v0, p0, Lct/d;->b:I
 
-    iput-object v0, p0, Lct/d;->c:Ljava/util/Map;
+    iget v0, p1, Lct/af;->c:I
 
-    iget-object v0, p1, Lct/am;->a:Ljava/util/Map;
+    iput v0, p0, Lct/d;->c:I
 
-    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
+    iget v0, p1, Lct/af;->d:I
 
-    move-result-object v0
+    iput v0, p0, Lct/d;->d:I
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    iget v0, p1, Lct/af;->e:I
 
-    move-result-object v2
+    iput v0, p0, Lct/d;->e:I
 
-    :cond_0
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v0, p1, Lct/af;->f:Lct/ak;
 
-    move-result v0
+    iput-object v0, p0, Lct/d;->f:Lct/ak;
 
-    if-eqz v0, :cond_3
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-static {v0}, Lct/bb;->a(Ljava/lang/Integer;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p1, Lct/am;->a:Ljava/util/Map;
-
-    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/ArrayList;
-
-    new-instance v3, Ljava/util/ArrayList;
-
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    :cond_1
-    :goto_1
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    new-instance v5, Lct/t;
-
-    invoke-direct {v5}, Lct/t;-><init>()V
-
-    invoke-virtual {v5, v1}, Lct/t;->a(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v3, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_2
-    iget-object v1, p0, Lct/d;->c:Ljava/util/Map;
-
-    invoke-interface {v1, v0, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_3
     return-void
 .end method
 
-.method private static a(I)Ljava/lang/String;
-    .locals 2
+.method private c()V
+    .locals 5
 
-    const-string/jumbo v0, ""
+    const/16 v4, 0x7530
 
-    const/4 v1, 0x1
+    const/16 v3, 0x4e20
 
-    if-ne p0, v1, :cond_1
+    const/16 v1, 0x2710
 
-    const-string/jumbo v0, "access_cm"
+    const/4 v2, 0x5
+
+    iget v0, p0, Lct/d;->a:I
+
+    if-lt v0, v1, :cond_0
+
+    iget v0, p0, Lct/d;->a:I
+
+    if-le v0, v4, :cond_1
 
     :cond_0
-    :goto_0
-    return-object v0
+    iput v3, p0, Lct/d;->a:I
 
     :cond_1
-    const/4 v1, 0x2
+    iget v0, p0, Lct/d;->b:I
 
-    if-ne p0, v1, :cond_2
+    if-lt v0, v1, :cond_2
 
-    const-string/jumbo v0, "access_uni"
+    iget v0, p0, Lct/d;->b:I
 
-    goto :goto_0
+    if-le v0, v4, :cond_3
 
     :cond_2
+    iput v3, p0, Lct/d;->b:I
+
+    :cond_3
+    iget v0, p0, Lct/d;->c:I
+
     const/4 v1, 0x3
 
-    if-ne p0, v1, :cond_0
+    if-lt v0, v1, :cond_4
 
-    const-string/jumbo v0, "access_ct"
+    iget v0, p0, Lct/d;->c:I
 
-    goto :goto_0
+    const/16 v1, 0xf
+
+    if-le v0, v1, :cond_5
+
+    :cond_4
+    const/16 v0, 0x8
+
+    iput v0, p0, Lct/d;->c:I
+
+    :cond_5
+    iget v0, p0, Lct/d;->d:I
+
+    if-lez v0, :cond_6
+
+    iget v0, p0, Lct/d;->d:I
+
+    if-le v0, v2, :cond_7
+
+    :cond_6
+    const/4 v0, 0x2
+
+    iput v0, p0, Lct/d;->d:I
+
+    :cond_7
+    iget v0, p0, Lct/d;->e:I
+
+    if-lt v0, v2, :cond_8
+
+    iget v0, p0, Lct/d;->e:I
+
+    const/16 v1, 0xf0
+
+    if-le v0, v1, :cond_9
+
+    :cond_8
+    const/16 v0, 0x3c
+
+    iput v0, p0, Lct/d;->e:I
+
+    :cond_9
+    return-void
 .end method
 
 
 # virtual methods
 .method public final a()V
-    .locals 11
+    .locals 8
 
-    const/4 v10, 0x3
+    const/4 v0, 0x0
 
-    const/4 v3, 0x1
+    const/16 v4, 0x4e20
 
     const/4 v1, 0x0
 
-    invoke-static {}, Lct/q;->a()Landroid/content/Context;
+    invoke-static {}, Lct/p;->a()Landroid/content/Context;
 
-    move-result-object v0
+    move-result-object v2
 
-    const-string/jumbo v2, "Access_Preferences"
+    const-string/jumbo v3, "Access_Preferences"
 
-    invoke-virtual {v0, v2, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {v2, v3, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    move-result-object v4
+    move-result-object v2
 
-    const-string/jumbo v0, "timeStamp"
+    const-string/jumbo v3, "connectTimeout"
 
-    const-wide/16 v5, 0x0
+    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
-    invoke-interface {v4, v0, v5, v6}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+    move-result v3
 
-    move-result-wide v5
+    iput v3, p0, Lct/d;->a:I
 
-    iput-wide v5, p0, Lct/d;->b:J
+    const-string/jumbo v3, "readTimeout"
 
-    new-instance v0, Ljava/util/HashMap;
+    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    move-result v3
 
-    iput-object v0, p0, Lct/d;->c:Ljava/util/Map;
+    iput v3, p0, Lct/d;->b:I
 
-    move v2, v3
+    const-string/jumbo v3, "apnCachedNum"
 
-    :goto_0
-    if-gt v2, v10, :cond_7
+    const/16 v4, 0x8
 
-    invoke-static {v2}, Lct/d;->a(I)Ljava/lang/String;
+    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
-    move-result-object v0
+    move-result v3
 
-    const-string/jumbo v5, ""
+    iput v3, p0, Lct/d;->c:I
 
-    invoke-interface {v4, v0, v5}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string/jumbo v3, "parallelNum"
 
-    move-result-object v0
+    const/4 v4, 0x2
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
-    move-result v5
+    move-result v3
 
-    if-eqz v5, :cond_1
+    iput v3, p0, Lct/d;->d:I
 
-    const-string/jumbo v0, ""
+    const-string/jumbo v3, "expireTime"
 
-    if-ne v2, v3, :cond_3
+    const/16 v4, 0x1e
 
-    const-string/jumbo v0, "120.198.203.148:14000,117.135.171.182:14000"
+    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
-    :cond_0
-    :goto_1
-    const-string/jumbo v5, "SdkAccessInfo"
+    move-result v3
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    iput v3, p0, Lct/d;->e:I
 
-    const-string/jumbo v7, "getDefaultIpListByOpType:"
+    const-string/jumbo v3, "samplingInfo"
 
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-interface {v2, v3, v0}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    move-result-object v6
+    if-eqz v2, :cond_1
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string/jumbo v0, ";"
 
-    move-result-object v6
+    invoke-virtual {v2, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    invoke-static {v5, v6}, Lct/bc;->b(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v3
 
-    :cond_1
-    const-string/jumbo v5, ","
+    new-instance v2, Lct/ak;
 
-    invoke-virtual {v0, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-direct {v2}, Lct/ak;-><init>()V
 
-    move-result-object v5
+    new-instance v4, Ljava/util/HashMap;
 
-    array-length v0, v5
-
-    if-lez v0, :cond_6
-
-    new-instance v6, Ljava/util/ArrayList;
-
-    invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
-
-    array-length v7, v5
+    invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
     move v0, v1
 
-    :goto_2
-    if-ge v0, v7, :cond_5
+    :goto_0
+    array-length v5, v3
 
-    aget-object v8, v5, v0
+    add-int/lit8 v5, v5, -0x1
 
-    new-instance v9, Lct/t;
+    if-ge v0, v5, :cond_0
 
-    invoke-direct {v9}, Lct/t;-><init>()V
+    aget-object v5, v3, v0
 
-    invoke-virtual {v9, v8}, Lct/t;->a(Ljava/lang/String;)Z
+    const-string/jumbo v6, ","
 
-    move-result v8
-
-    if-eqz v8, :cond_2
-
-    invoke-virtual {v6, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_2
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_2
-
-    :cond_3
-    const/4 v5, 0x2
-
-    if-ne v2, v5, :cond_4
-
-    const-string/jumbo v0, "112.90.140.216:14000,140.206.160.244:14000"
-
-    goto :goto_1
-
-    :cond_4
-    if-ne v2, v10, :cond_0
-
-    const-string/jumbo v0, "14.17.41.159:14000,101.227.130.12:14000"
-
-    goto :goto_1
-
-    :cond_5
-    iget-object v0, p0, Lct/d;->c:Ljava/util/Map;
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v5, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-interface {v0, v5, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    aget-object v6, v5, v1
 
-    :cond_6
-    add-int/lit8 v0, v2, 0x1
+    invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    move v2, v0
+    move-result v6
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    const/4 v7, 0x1
+
+    aget-object v5, v5, v7
+
+    invoke-static {v5}, Ljava/lang/Byte;->parseByte(Ljava/lang/String;)B
+
+    move-result v5
+
+    invoke-static {v5}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+
+    move-result-object v5
+
+    invoke-interface {v4, v6, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    :cond_7
+    :cond_0
+    iput-object v4, v2, Lct/ak;->a:Ljava/util/Map;
+
+    array-length v0, v3
+
+    add-int/lit8 v0, v0, -0x1
+
+    aget-object v0, v3, v0
+
+    invoke-static {v0}, Ljava/lang/Byte;->parseByte(Ljava/lang/String;)B
+
+    move-result v0
+
+    iput v0, v2, Lct/ak;->b:I
+
+    move-object v0, v2
+
+    :cond_1
+    iput-object v0, p0, Lct/d;->f:Lct/ak;
+
+    invoke-direct {p0}, Lct/d;->c()V
+
     return-void
 .end method
 
 .method public final b()V
-    .locals 6
+    .locals 8
 
-    invoke-static {}, Lct/q;->a()Landroid/content/Context;
+    invoke-static {}, Lct/p;->a()Landroid/content/Context;
 
     move-result-object v0
 
@@ -352,326 +315,249 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    move-result-object v2
+    move-result-object v0
 
-    iget-object v0, p0, Lct/d;->c:Ljava/util/Map;
+    invoke-direct {p0}, Lct/d;->c()V
 
-    if-eqz v0, :cond_3
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    iget-object v0, p0, Lct/d;->c:Ljava/util/Map;
+    move-result-object v1
 
-    invoke-interface {v0}, Ljava/util/Map;->size()I
+    const-string/jumbo v2, "connectTimeout"
 
-    move-result v0
+    iget v3, p0, Lct/d;->a:I
 
-    if-lez v0, :cond_3
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    iget-object v0, p0, Lct/d;->c:Ljava/util/Map;
+    move-result-object v1
 
-    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "readTimeout"
+
+    iget v3, p0, Lct/d;->b:I
+
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "apnCachedNum"
+
+    iget v3, p0, Lct/d;->c:I
+
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "parallelNum"
+
+    iget v3, p0, Lct/d;->d:I
+
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "expireTime"
+
+    iget v3, p0, Lct/d;->e:I
+
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "samplingInfo"
+
+    iget-object v3, p0, Lct/d;->f:Lct/ak;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v0, v3, Lct/ak;->a:Ljava/util/Map;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, v3, Lct/ak;->a:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    move-result-object v3
-
-    :cond_0
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-static {v0}, Lct/bb;->a(Ljava/lang/Integer;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    invoke-static {v1}, Lct/d;->a(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    iget-object v1, p0, Lct/d;->c:Ljava/util/Map;
-
-    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/ArrayList;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    if-lez v1, :cond_0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v5, p0, Lct/d;->c:Ljava/util/Map;
-
-    invoke-interface {v5, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
     move-result-object v5
 
-    :goto_1
+    :goto_0
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lct/t;
+    check-cast v0, Ljava/util/Map$Entry;
 
-    invoke-virtual {v0}, Lct/t;->a()Ljava/lang/String;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    const-string/jumbo v0, ","
+    move-result-object v7
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    move-result-object v6
 
-    :cond_1
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
+    const-string/jumbo v7, ","
 
-    move-result v0
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    add-int/lit8 v0, v0, -0x1
+    move-result-object v6
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
-
-    invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {v0, v4, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    const-string/jumbo v6, ";"
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    :cond_2
-    invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    :cond_0
+    iget v0, v3, Lct/ak;->b:I
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "timesStamp"
-
-    iget-wide v2, p0, Lct/d;->b:J
-
-    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+    :goto_1
+    invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    :cond_3
     return-void
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_1
 .end method
 
-.method public final c()Ljava/util/ArrayList;
-    .locals 6
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const/4 v2, 0x0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lct/bb;->d()I
+    const-string/jumbo v1, "connectTimeout:"
 
-    move-result v3
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    new-instance v4, Ljava/util/ArrayList;
+    iget v1, p0, Lct/d;->a:I
 
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-static {v0}, Lct/bb;->a(Ljava/lang/Integer;)Z
+    const-string/jumbo v1, ",readTimeout:"
 
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lct/d;->c:Ljava/util/Map;
-
-    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    iget v1, p0, Lct/d;->b:I
 
-    move-result-object v5
-
-    :goto_0
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Integer;
+    const-string/jumbo v1, ",apnCachedNum:"
 
-    iget-object v1, p0, Lct/d;->c:Ljava/util/Map;
-
-    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    if-ne v3, v0, :cond_0
-
-    invoke-virtual {v4, v2, v1}, Ljava/util/ArrayList;->addAll(ILjava/util/Collection;)Z
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lct/d;->c:Ljava/util/Map;
-
-    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    iget v1, p0, Lct/d;->c:I
 
-    move-result-object v3
-
-    move v1, v2
-
-    :goto_1
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Integer;
+    const-string/jumbo v1, ",parallelNum:"
 
-    iget-object v5, p0, Lct/d;->c:Ljava/util/Map;
-
-    invoke-interface {v5, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/ArrayList;
+    iget v1, p0, Lct/d;->d:I
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    move v1, v0
-
-    goto :goto_1
-
-    :cond_2
-    add-int/lit8 v2, v2, 0x1
-
-    :cond_3
-    if-ge v2, v1, :cond_5
-
-    iget-object v0, p0, Lct/d;->c:Ljava/util/Map;
-
-    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    const-string/jumbo v1, ",expireTime:"
 
-    move-result-object v3
-
-    :cond_4
-    :goto_2
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Integer;
+    iget v1, p0, Lct/d;->e:I
 
-    iget-object v5, p0, Lct/d;->c:Ljava/util/Map;
-
-    invoke-interface {v5, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v5
-
-    if-ge v2, v5, :cond_4
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_2
-
-    :cond_5
-    return-object v4
+    return-object v0
 .end method

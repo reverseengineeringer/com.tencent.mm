@@ -1,35 +1,41 @@
 package ct;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import javax.crypto.Cipher;
+import javax.crypto.spec.SecretKeySpec;
 
 public final class am
-  extends bg
 {
-  private static Map c;
-  public Map a = null;
-  public long b = 0L;
+  private Cipher a;
+  private Cipher b;
   
-  public final void a(be parambe)
+  public am(byte[] paramArrayOfByte)
   {
-    if (c == null)
+    try
     {
-      c = new HashMap();
-      ArrayList localArrayList = new ArrayList();
-      localArrayList.add("");
-      c.put(Integer.valueOf(0), localArrayList);
+      paramArrayOfByte = new SecretKeySpec(paramArrayOfByte, "AES");
+      a = Cipher.getInstance("AES/ECB/PKCS5Padding");
+      a.init(1, paramArrayOfByte);
+      b = Cipher.getInstance("AES/ECB/PKCS5Padding");
+      b.init(2, paramArrayOfByte);
+      return;
     }
-    a = ((Map)parambe.a(c, 0, false));
-    b = parambe.a(b, 1, false);
+    catch (Exception paramArrayOfByte)
+    {
+      throw new RuntimeException(paramArrayOfByte);
+    }
   }
   
-  public final void a(bf parambf)
+  public final byte[] a(byte[] paramArrayOfByte)
   {
-    if (a != null) {
-      parambf.a(a, 0);
+    try
+    {
+      paramArrayOfByte = a.doFinal(paramArrayOfByte);
+      return paramArrayOfByte;
     }
-    parambf.a(b, 1);
+    catch (Exception paramArrayOfByte)
+    {
+      throw new RuntimeException(paramArrayOfByte);
+    }
   }
 }
 

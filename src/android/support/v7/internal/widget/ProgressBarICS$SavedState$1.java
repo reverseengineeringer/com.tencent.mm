@@ -3,7 +3,7 @@ package android.support.v7.internal.widget;
 import android.os.Parcelable.Creator;
 
 final class ProgressBarICS$SavedState$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<ProgressBarICS.SavedState>
 {}
 
 /* Location:

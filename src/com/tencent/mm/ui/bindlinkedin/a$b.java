@@ -6,17 +6,17 @@ import android.widget.TextView;
 
 final class a$b
 {
-  ImageView kOb = null;
-  TextView kOc = null;
-  TextView kOd = null;
-  TextView kOe = null;
+  ImageView lnr = null;
+  TextView lns = null;
+  TextView lnt = null;
+  TextView lnu = null;
   
   private a$b(View paramView)
   {
-    kOb = ((ImageView)paramView.findViewById(2131169218));
-    kOc = ((TextView)paramView.findViewById(2131169219));
-    kOd = ((TextView)paramView.findViewById(2131169220));
-    kOe = ((TextView)paramView.findViewById(2131169221));
+    lnr = ((ImageView)paramView.findViewById(2131757507));
+    lns = ((TextView)paramView.findViewById(2131757508));
+    lnt = ((TextView)paramView.findViewById(2131757509));
+    lnu = ((TextView)paramView.findViewById(2131757510));
   }
 }
 

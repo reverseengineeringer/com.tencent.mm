@@ -1,5 +1,6 @@
 package com.tencent.mm.ui.contact;
 
+import com.tencent.mm.modelsearch.m.g;
 import com.tencent.mm.modelsearch.m.j;
 import com.tencent.mm.modelsearch.m.k;
 import java.util.HashSet;
@@ -10,24 +11,24 @@ final class p$1
 {
   p$1(p paramp) {}
   
-  public final void a(m.k paramk, List paramList, HashSet paramHashSet, String[] paramArrayOfString, String paramString)
+  public final void a(m.k paramk, List<m.g> paramList, HashSet<String> paramHashSet, String[] paramArrayOfString, String paramString)
   {
-    if ((p.a(llt) == null) || (!p.a(llt).equals(paramk))) {
+    if ((p.a(lLG) == null) || (!p.a(lLG).equals(paramk))) {
       return;
     }
-    p.a(llt, paramArrayOfString);
-    p.a(llt, paramList);
-    p.b(llt, paramList);
-    p.b(llt);
-    p.a(llt, paramString, false);
+    p.a(lLG, paramArrayOfString);
+    p.a(lLG, paramList);
+    p.b(lLG, paramList);
+    p.b(lLG);
+    p.a(lLG, paramString, false);
   }
   
-  public final void iD(String paramString)
+  public final void iU(String paramString)
   {
-    if (!paramString.equals(p.c(llt))) {
+    if (!paramString.equals(p.c(lLG))) {
       return;
     }
-    p.b(llt);
+    p.b(lLG);
   }
 }
 

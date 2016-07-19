@@ -4,40 +4,40 @@ import com.tencent.mm.c.b.a;
 import com.tencent.mm.c.b.b;
 import com.tencent.mm.c.b.c;
 import com.tencent.mm.compatible.util.f.a;
-import com.tencent.mm.r.g.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.g.a;
 
 public final class t
   implements a
 {
-  private static int aoE = 100;
-  String anC = "";
-  private b arw;
-  private g.a chP = null;
+  private static int adf = 100;
+  String aaq = "";
+  private b add;
+  private g.a cdg = null;
   private int status = 0;
   
   public t(com.tencent.mm.compatible.b.b.a parama)
   {
-    arw = new b(parama);
+    add = new b(parama);
   }
   
   public final void a(g.a parama)
   {
-    chP = parama;
+    cdg = parama;
   }
   
-  public final boolean bp(String paramString)
+  public final boolean bh(String paramString)
   {
     f.a locala = new f.a();
-    if (anC.length() > 0)
+    if (aaq.length() > 0)
     {
-      u.e("!24@J/TNaXmTnT2mD815LCdsDw==", "Duplicate Call startRecord , maybe Stop Fail Before");
+      v.e("VoiceRecorder", "Duplicate Call startRecord , maybe Stop Fail Before");
       return false;
     }
-    anC = paramString;
+    aaq = paramString;
     try
     {
-      arw.a(new com.tencent.mm.c.b.b.a()
+      add.a(new com.tencent.mm.c.b.b.a()
       {
         public final void onError()
         {
@@ -52,24 +52,24 @@ public final class t
           }
           catch (Exception localException)
           {
-            u.e("!24@J/TNaXmTnT2mD815LCdsDw==", "setErrorListener File[" + anC + "] ErrMsg[" + localException.getStackTrace() + "]");
+            v.e("VoiceRecorder", "setErrorListener File[" + aaq + "] ErrMsg[" + localException.getStackTrace() + "]");
           }
         }
       });
-      arw.lK();
-      arw.lL();
-      arw.lJ();
-      arw.setOutputFile(anC);
-      arw.setMaxDuration(70000);
-      arw.prepare();
-      arw.start();
-      u.d("!24@J/TNaXmTnT2mD815LCdsDw==", "StartRecord File[" + anC + "] start time:" + locala.pa());
+      add.jU();
+      add.jV();
+      add.jT();
+      add.setOutputFile(aaq);
+      add.setMaxDuration(70000);
+      add.prepare();
+      add.start();
+      v.d("VoiceRecorder", "StartRecord File[" + aaq + "] start time:" + locala.ns());
       status = 1;
       return true;
     }
     catch (Exception paramString)
     {
-      u.e("!24@J/TNaXmTnT2mD815LCdsDw==", "StartRecord File[" + anC + "] ErrMsg[" + paramString.getMessage() + "]");
+      v.e("VoiceRecorder", "StartRecord File[" + aaq + "] ErrMsg[" + paramString.getMessage() + "]");
       status = -1;
     }
     return false;
@@ -79,11 +79,11 @@ public final class t
   {
     if (status == 1)
     {
-      int i = arw.getMaxAmplitude();
-      if (i > aoE) {
-        aoE = i;
+      int i = add.getMaxAmplitude();
+      if (i > adf) {
+        adf = i;
       }
-      return i * 100 / aoE;
+      return i * 100 / adf;
     }
     return 0;
   }
@@ -93,32 +93,32 @@ public final class t
     return status;
   }
   
-  public final boolean lH()
+  public final boolean jR()
   {
-    if (arw == null) {
+    if (add == null) {
       return true;
     }
     try
     {
-      arw.lv();
-      arw.release();
-      anC = "";
+      add.jW();
+      add.release();
+      aaq = "";
       status = 0;
       return true;
     }
     catch (Exception localException)
     {
-      u.e("!24@J/TNaXmTnT2mD815LCdsDw==", "StopRecord File[" + anC + "] ErrMsg[" + localException.getMessage() + "]");
+      v.e("VoiceRecorder", "StopRecord File[" + aaq + "] ErrMsg[" + localException.getMessage() + "]");
       status = -1;
     }
     return false;
   }
   
-  public final int lI()
+  public final int jS()
   {
-    b localb = arw;
-    if (((apM == com.tencent.mm.compatible.b.b.a.bpn) || (apM == com.tencent.mm.compatible.b.b.a.bpp)) && (apL != null)) {
-      return apL.aqy;
+    b localb = add;
+    if (((abe == com.tencent.mm.compatible.b.b.a.bdm) || (abe == com.tencent.mm.compatible.b.b.a.bdo)) && (abd != null)) {
+      return abd.abQ;
     }
     return 1;
   }

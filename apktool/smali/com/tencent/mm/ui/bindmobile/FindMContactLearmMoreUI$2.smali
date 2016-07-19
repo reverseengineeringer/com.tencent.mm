@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI;->Gb()V
+    value = Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kPd:Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI;
+.field final synthetic lot:Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 112
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI$2;->kPd:Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI$2;->lot:Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,11 +43,11 @@
     const/4 v3, 0x0
 
     .line 116
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -60,10 +60,10 @@
     invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
     .line 117
-    invoke-static {v3, v3}, Lcom/tencent/mm/platformtools/m;->d(ZZ)V
+    invoke-static {v3, v3}, Lcom/tencent/mm/platformtools/l;->d(ZZ)V
 
     .line 118
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI$2;->kPd:Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI$2;->lot:Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI;->b(Lcom/tencent/mm/ui/bindmobile/FindMContactLearmMoreUI;)V
 

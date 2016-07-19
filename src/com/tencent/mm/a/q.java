@@ -7,7 +7,7 @@ import java.util.zip.Inflater;
 public final class q
 {
   /* Error */
-  public static byte[] q(byte[] paramArrayOfByte)
+  public static byte[] m(byte[] paramArrayOfByte)
   {
     // Byte code:
     //   0: new 14	java/util/zip/Deflater
@@ -151,18 +151,18 @@ public final class q
     //   27	37	171	java/lang/Exception
   }
   
-  public static byte[] r(byte[] paramArrayOfByte)
+  public static byte[] n(byte[] paramArrayOfByte)
   {
     try
     {
-      byte[] arrayOfByte = s(paramArrayOfByte);
+      byte[] arrayOfByte = o(paramArrayOfByte);
       return arrayOfByte;
     }
     catch (Exception localException) {}
     return paramArrayOfByte;
   }
   
-  public static byte[] s(byte[] paramArrayOfByte)
+  public static byte[] o(byte[] paramArrayOfByte)
   {
     Inflater localInflater = new Inflater();
     localInflater.reset();

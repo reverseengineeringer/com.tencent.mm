@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kNX:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;
+.field final synthetic lnn:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 90
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2$1;->kNX:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2$1;->lnn:Lcom/tencent/mm/ui/bindlinkedin/InviteLinkedInFriendUI$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

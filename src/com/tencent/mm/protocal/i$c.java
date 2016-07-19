@@ -1,34 +1,18 @@
 package com.tencent.mm.protocal;
 
-public class i$c
+import com.tencent.mm.network.o;
+
+public abstract interface i$c
 {
-  public byte[] cWw = new byte[0];
-  public int hgJ = 0;
-  public int hgK = 0;
-  public String hgL = "";
-  public String hgM = "";
-  public int hgN = 0;
-  public y hgO = new y("", "", 0);
-  public long hgP = 0L;
+  public abstract o N(int paramInt1, int paramInt2);
   
-  public boolean aDr()
-  {
-    return false;
-  }
+  public abstract void a(i.g paramg, int paramInt1, int paramInt2, String paramString);
   
-  public void aX(int paramInt)
-  {
-    hgJ = paramInt;
-  }
+  public abstract int tW();
   
-  public int getCmdId()
+  public static final class a
   {
-    return 0;
-  }
-  
-  public boolean vH()
-  {
-    return true;
+    public static i.c jrR;
   }
 }
 

@@ -1,135 +1,48 @@
 package com.tencent.mm.s;
 
-import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.sdk.g.ae.a;
-import com.tencent.mm.sdk.g.af;
-import com.tencent.mm.sdk.g.ah;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.Iterator;
-import java.util.LinkedList;
+import com.tencent.mm.sdk.platformtools.be;
 
 public final class g
-  extends ah
+  extends com.tencent.mm.sdk.h.g
 {
-  public static final String[] aqU = { ah.a(e.aqp, "BizKF") };
-  private af aqT;
+  public static final String[] bkN = { "CREATE TABLE IF NOT EXISTS hdheadimginfo ( username text  PRIMARY KEY , imgwidth int  , imgheigth int  , imgformat text  , totallen int  , startpos int  , headimgtype int  , reserved1 text  , reserved2 text  , reserved3 int  , reserved4 int  ) " };
+  com.tencent.mm.bc.g bvG;
   
-  public g(af paramaf)
+  public g(com.tencent.mm.bc.g paramg)
   {
-    super(paramaf, e.aqp, "BizKF", null);
-    aqT = paramaf;
-    paramaf.bx("BizKF", "CREATE INDEX IF NOT EXISTS BizKFAppIdUsernameIndex ON BizKF ( brandUsername )");
-    paramaf.bx("BizKF", "CREATE INDEX IF NOT EXISTS BizKFOpenIdIndex ON BizKF ( openId )");
+    bvG = paramg;
   }
   
-  public static boolean a(e parame)
+  public final int a(String paramString, f paramf)
   {
-    boolean bool2 = false;
-    boolean bool1 = bool2;
-    if (parame != null)
-    {
-      bool1 = bool2;
-      if (System.currentTimeMillis() - field_updateTime >= 86400000L) {
-        bool1 = true;
-      }
-    }
-    return bool1;
+    paramf = paramf.kn();
+    return bvG.update("hdheadimginfo", paramf, "username=?", new String[] { paramString });
   }
   
-  private boolean b(e parame)
-  {
-    if ((parame == null) || (bn.iW(field_openId)) || (bn.iW(field_brandUsername)))
-    {
-      t.w("!32@/B4Tb64lLpKSLcAR0vYDyJvMHcauAymE", "wrong argument");
-      return false;
-    }
-    ContentValues localContentValues = parame.mA();
-    if (aqT.replace("BizKF", aqpibW, localContentValues) > 0L) {}
-    for (boolean bool = true;; bool = false)
-    {
-      t.i("!32@/B4Tb64lLpKSLcAR0vYDyJvMHcauAymE", "replace: openId=%s, brandUsername=%s, ret=%s ", new Object[] { field_openId, field_brandUsername, Boolean.valueOf(bool) });
-      return bool;
-    }
-  }
-  
-  public final int d(LinkedList paramLinkedList)
-  {
-    if (paramLinkedList.size() <= 0)
-    {
-      t.e("!32@/B4Tb64lLpKSLcAR0vYDyJvMHcauAymE", "null kfs");
-      return 0;
-    }
-    if ((aqT instanceof com.tencent.mm.ar.g)) {}
-    for (long l = ((com.tencent.mm.ar.g)aqT).cN(Thread.currentThread().getId());; l = 0L)
-    {
-      paramLinkedList = paramLinkedList.iterator();
-      int i = 0;
-      if (paramLinkedList.hasNext())
-      {
-        e locale = (e)paramLinkedList.next();
-        if ((locale == null) || (!b(locale))) {
-          break label132;
-        }
-        i += 1;
-      }
-      label132:
-      for (;;)
-      {
-        break;
-        if ((aqT instanceof com.tencent.mm.ar.g)) {
-          tlbnN.cO(l);
-        }
-        t.i("!32@/B4Tb64lLpKSLcAR0vYDyJvMHcauAymE", "insertOrUpdateBizKFs %d", new Object[] { Integer.valueOf(i) });
-        return i;
-      }
-    }
-  }
-  
-  public final e gh(String paramString)
+  public final f gp(String paramString)
   {
     Object localObject = null;
-    if ((paramString == null) || (paramString.length() <= 0)) {
-      return null;
-    }
-    Cursor localCursor = aqT.a("BizKF", null, "openId=?", new String[] { paramString }, null, null);
-    if (localCursor.getCount() <= 0)
-    {
-      t.w("!32@/B4Tb64lLpKSLcAR0vYDyJvMHcauAymE", "get null with openId:" + paramString);
-      localCursor.close();
+    paramString = "select hdheadimginfo.username,hdheadimginfo.imgwidth,hdheadimginfo.imgheigth,hdheadimginfo.imgformat,hdheadimginfo.totallen,hdheadimginfo.startpos,hdheadimginfo.headimgtype,hdheadimginfo.reserved1,hdheadimginfo.reserved2,hdheadimginfo.reserved3,hdheadimginfo.reserved4 from hdheadimginfo   where hdheadimginfo.username = \"" + be.lh(paramString) + "\"";
+    Cursor localCursor = bvG.rawQuery(paramString, null);
+    if (localCursor == null) {
       return null;
     }
     paramString = (String)localObject;
     if (localCursor.moveToFirst())
     {
-      paramString = new e();
-      paramString.c(localCursor);
-    }
-    localCursor.close();
-    return paramString;
-  }
-  
-  public final e gi(String paramString)
-  {
-    Object localObject = null;
-    if (bn.iW(paramString)) {
-      return null;
-    }
-    Cursor localCursor = aqT.a("BizKF", null, "brandUsername = ? order by kfType desc ", new String[] { paramString }, null, null);
-    if (localCursor.getCount() <= 0)
-    {
-      t.w("!32@/B4Tb64lLpKSLcAR0vYDyJvMHcauAymE", "get null with brandUsername:" + paramString);
-      localCursor.close();
-      return null;
-    }
-    paramString = (String)localObject;
-    if (localCursor.moveToFirst())
-    {
-      paramString = new e();
-      paramString.c(localCursor);
+      paramString = new f();
+      username = localCursor.getString(0);
+      bxx = localCursor.getInt(1);
+      bxy = localCursor.getInt(2);
+      bxz = localCursor.getString(3);
+      bxA = localCursor.getInt(4);
+      bxB = localCursor.getInt(5);
+      bxC = localCursor.getInt(6);
+      bxD = localCursor.getString(7);
+      bxE = localCursor.getString(8);
+      bxF = localCursor.getInt(9);
+      bxG = localCursor.getInt(10);
     }
     localCursor.close();
     return paramString;

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button android:layout_gravity="center|right" android:id="@id/bjn" android:layout_marginLeft="6.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="2.0dip" android:layout_marginBottom="4.0dip" android:minWidth="60.0dip" android:text="@string/dn" style="@style/MMSolidRedSmallButton"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,43 +1,42 @@
 package com.tencent.mm.plugin.sns;
 
-import com.tencent.mm.d.a.dr;
-import com.tencent.mm.d.a.dr.a;
+import com.tencent.mm.e.a.dv;
+import com.tencent.mm.e.a.dv.a;
 import com.tencent.mm.model.as.a;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.al.a;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.ak.a;
 import com.tencent.mm.pluginsdk.i.o.e.a;
 import com.tencent.mm.sdk.c.c;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class b
-  extends c
+  extends c<dv>
 {
   public b()
   {
-    super(0);
+    kum = dv.class.getName().hashCode();
   }
   
-  public final boolean a(final com.tencent.mm.sdk.c.b paramb)
+  private boolean a(final dv paramdv)
   {
-    if (!(paramb instanceof dr))
+    if (!(paramdv instanceof dv))
     {
-      u.f("!88@/B4Tb64lLpLJZ9jCciUMpLbht50tz8jyykPZLjWGhPcIw00AB+cOnTDrmSEZ3jUcaebNVrd8PWVxwrwIB/YnRg==", "mismatched event");
+      v.f("MicroMsg.ExtStartSnsServerAndCallbackOnFpSetSizeEventListener", "mismatched event");
       return false;
     }
-    paramb = (dr)paramb;
-    al.a locala = ad.ayZ();
-    locala.a(axv.type, axv.username, new i.o.e.a()
+    ak.a locala = ad.getSnsServer();
+    locala.a(aju.type, aju.username, new i.o.e.a()
     {
       public final void a(boolean paramAnonymousBoolean1, boolean paramAnonymousBoolean2, String paramAnonymousString, boolean paramAnonymousBoolean3)
       {
-        if (parambaxv != null) {
-          parambaxv.axz.a(null);
+        if (paramdvaju != null) {
+          paramdvaju.ajy.a(null);
         }
       }
       
       public final void b(boolean paramAnonymousBoolean1, String paramAnonymousString, boolean paramAnonymousBoolean2) {}
     });
-    locala.b(1, axv.username, axv.axx, axv.axy);
+    locala.b(1, aju.username, aju.ajw, aju.ajx);
     return true;
   }
 }

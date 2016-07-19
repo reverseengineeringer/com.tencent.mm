@@ -11,8 +11,8 @@ final class SnsNotInterestUI$2
   
   public final void onClick(View paramView)
   {
-    SnsNotInterestUI.a(hgH).requestFocus();
-    hgH.age();
+    SnsNotInterestUI.a(hvx).requestFocus();
+    hvx.aiI();
   }
 }
 

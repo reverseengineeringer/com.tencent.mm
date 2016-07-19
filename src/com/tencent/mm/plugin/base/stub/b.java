@@ -4,11 +4,11 @@ import com.tencent.mm.model.aa;
 
 public final class b
 {
-  private static aa cgF = null;
+  private static aa cbU = null;
   
   public static void a(aa paramaa)
   {
-    cgF = paramaa;
+    cbU = paramaa;
   }
 }
 

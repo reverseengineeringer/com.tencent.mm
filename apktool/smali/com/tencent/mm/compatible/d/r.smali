@@ -12,11 +12,11 @@
 
 
 # static fields
-.field private static bsU:Lcom/tencent/mm/compatible/d/r;
+.field private static bha:Lcom/tencent/mm/compatible/d/r;
 
 
 # instance fields
-.field public bsV:Lcom/tencent/mm/compatible/d/r$a;
+.field public bhb:Lcom/tencent/mm/compatible/d/r$a;
 
 
 # direct methods
@@ -24,10 +24,10 @@
     .locals 0
 
     .prologue
-    .line 54
+    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
+    .line 61
     return-void
 .end method
 
@@ -35,8 +35,8 @@
     .locals 5
 
     .prologue
-    .line 58
-    const-string/jumbo v0, "!44@/B4Tb64lLpLiQ7OrT4MAaUxp47ndvAyj3xaq2CE45Xw="
+    .line 64
+    const-string/jumbo v0, "MicroMsg.ExdeviceCfgHelper"
 
     const-string/jumbo v1, "putInt(%s, %s), process : %s"
 
@@ -62,33 +62,33 @@
 
     const/4 v3, 0x2
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aQC()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aVm()Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 59
-    invoke-static {}, Lcom/tencent/mm/compatible/d/r;->oM()Lcom/tencent/mm/compatible/d/r;
+    .line 65
+    invoke-static {}, Lcom/tencent/mm/compatible/d/r;->nc()Lcom/tencent/mm/compatible/d/r;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/compatible/d/r;->bsV:Lcom/tencent/mm/compatible/d/r$a;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/d/r;->bhb:Lcom/tencent/mm/compatible/d/r$a;
 
     if-eqz v0, :cond_0
 
-    .line 60
-    invoke-static {}, Lcom/tencent/mm/compatible/d/r;->oM()Lcom/tencent/mm/compatible/d/r;
+    .line 66
+    invoke-static {}, Lcom/tencent/mm/compatible/d/r;->nc()Lcom/tencent/mm/compatible/d/r;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/compatible/d/r;->bsV:Lcom/tencent/mm/compatible/d/r$a;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/d/r;->bhb:Lcom/tencent/mm/compatible/d/r$a;
 
     invoke-interface {v0, p0, p1}, Lcom/tencent/mm/compatible/d/r$a;->A(II)V
 
-    .line 62
+    .line 68
     :cond_0
     return-void
 .end method
@@ -97,8 +97,8 @@
     .locals 5
 
     .prologue
-    .line 65
-    const-string/jumbo v0, "!44@/B4Tb64lLpLiQ7OrT4MAaUxp47ndvAyj3xaq2CE45Xw="
+    .line 71
+    const-string/jumbo v0, "MicroMsg.ExdeviceCfgHelper"
 
     const-string/jumbo v1, "getInt(%s, %s), process : %s"
 
@@ -124,35 +124,35 @@
 
     const/4 v3, 0x2
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aQC()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aVm()Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 66
-    invoke-static {}, Lcom/tencent/mm/compatible/d/r;->oM()Lcom/tencent/mm/compatible/d/r;
+    .line 72
+    invoke-static {}, Lcom/tencent/mm/compatible/d/r;->nc()Lcom/tencent/mm/compatible/d/r;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/compatible/d/r;->bsV:Lcom/tencent/mm/compatible/d/r$a;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/d/r;->bhb:Lcom/tencent/mm/compatible/d/r$a;
 
     if-eqz v0, :cond_0
 
-    .line 67
-    invoke-static {}, Lcom/tencent/mm/compatible/d/r;->oM()Lcom/tencent/mm/compatible/d/r;
+    .line 73
+    invoke-static {}, Lcom/tencent/mm/compatible/d/r;->nc()Lcom/tencent/mm/compatible/d/r;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/compatible/d/r;->bsV:Lcom/tencent/mm/compatible/d/r$a;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/d/r;->bhb:Lcom/tencent/mm/compatible/d/r$a;
 
     invoke-interface {v0, p0, p1}, Lcom/tencent/mm/compatible/d/r$a;->getInt(II)I
 
     move-result p1
 
-    .line 69
+    .line 75
     :cond_0
     return p1
 .end method
@@ -161,8 +161,8 @@
     .locals 5
 
     .prologue
-    .line 79
-    const-string/jumbo v0, "!44@/B4Tb64lLpLiQ7OrT4MAaUxp47ndvAyj3xaq2CE45Xw="
+    .line 85
+    const-string/jumbo v0, "MicroMsg.ExdeviceCfgHelper"
 
     const-string/jumbo v1, "getLong(%s, %s), process : %s"
 
@@ -188,45 +188,45 @@
 
     const/4 v3, 0x2
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aQC()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aVm()Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 80
-    invoke-static {}, Lcom/tencent/mm/compatible/d/r;->oM()Lcom/tencent/mm/compatible/d/r;
+    .line 86
+    invoke-static {}, Lcom/tencent/mm/compatible/d/r;->nc()Lcom/tencent/mm/compatible/d/r;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/compatible/d/r;->bsV:Lcom/tencent/mm/compatible/d/r$a;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/d/r;->bhb:Lcom/tencent/mm/compatible/d/r$a;
 
     if-eqz v0, :cond_0
 
-    .line 81
-    invoke-static {}, Lcom/tencent/mm/compatible/d/r;->oM()Lcom/tencent/mm/compatible/d/r;
+    .line 87
+    invoke-static {}, Lcom/tencent/mm/compatible/d/r;->nc()Lcom/tencent/mm/compatible/d/r;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/compatible/d/r;->bsV:Lcom/tencent/mm/compatible/d/r$a;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/d/r;->bhb:Lcom/tencent/mm/compatible/d/r$a;
 
     invoke-interface {v0, p0, p1, p2}, Lcom/tencent/mm/compatible/d/r$a;->getLong(IJ)J
 
     move-result-wide p1
 
-    .line 83
+    .line 89
     :cond_0
     return-wide p1
 .end method
 
-.method public static j(IJ)V
+.method public static h(IJ)V
     .locals 5
 
     .prologue
-    .line 72
-    const-string/jumbo v0, "!44@/B4Tb64lLpLiQ7OrT4MAaUxp47ndvAyj3xaq2CE45Xw="
+    .line 78
+    const-string/jumbo v0, "MicroMsg.ExdeviceCfgHelper"
 
     const-string/jumbo v1, "putLong(%s, %s), process : %s"
 
@@ -252,56 +252,56 @@
 
     const/4 v3, 0x2
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aQC()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aVm()Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 73
-    invoke-static {}, Lcom/tencent/mm/compatible/d/r;->oM()Lcom/tencent/mm/compatible/d/r;
+    .line 79
+    invoke-static {}, Lcom/tencent/mm/compatible/d/r;->nc()Lcom/tencent/mm/compatible/d/r;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/compatible/d/r;->bsV:Lcom/tencent/mm/compatible/d/r$a;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/d/r;->bhb:Lcom/tencent/mm/compatible/d/r$a;
 
     if-eqz v0, :cond_0
 
-    .line 74
-    invoke-static {}, Lcom/tencent/mm/compatible/d/r;->oM()Lcom/tencent/mm/compatible/d/r;
+    .line 80
+    invoke-static {}, Lcom/tencent/mm/compatible/d/r;->nc()Lcom/tencent/mm/compatible/d/r;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/compatible/d/r;->bsV:Lcom/tencent/mm/compatible/d/r$a;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/d/r;->bhb:Lcom/tencent/mm/compatible/d/r$a;
 
-    invoke-interface {v0, p0, p1, p2}, Lcom/tencent/mm/compatible/d/r$a;->j(IJ)V
+    invoke-interface {v0, p0, p1, p2}, Lcom/tencent/mm/compatible/d/r$a;->h(IJ)V
 
-    .line 76
+    .line 82
     :cond_0
     return-void
 .end method
 
-.method public static oM()Lcom/tencent/mm/compatible/d/r;
+.method public static nc()Lcom/tencent/mm/compatible/d/r;
     .locals 1
 
     .prologue
-    .line 39
-    sget-object v0, Lcom/tencent/mm/compatible/d/r;->bsU:Lcom/tencent/mm/compatible/d/r;
+    .line 45
+    sget-object v0, Lcom/tencent/mm/compatible/d/r;->bha:Lcom/tencent/mm/compatible/d/r;
 
     if-nez v0, :cond_0
 
-    .line 40
+    .line 46
     new-instance v0, Lcom/tencent/mm/compatible/d/r;
 
     invoke-direct {v0}, Lcom/tencent/mm/compatible/d/r;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/compatible/d/r;->bsU:Lcom/tencent/mm/compatible/d/r;
+    sput-object v0, Lcom/tencent/mm/compatible/d/r;->bha:Lcom/tencent/mm/compatible/d/r;
 
-    .line 42
+    .line 48
     :cond_0
-    sget-object v0, Lcom/tencent/mm/compatible/d/r;->bsU:Lcom/tencent/mm/compatible/d/r;
+    sget-object v0, Lcom/tencent/mm/compatible/d/r;->bha:Lcom/tencent/mm/compatible/d/r;
 
     return-object v0
 .end method
@@ -312,8 +312,8 @@
     .locals 5
 
     .prologue
-    .line 46
-    const-string/jumbo v0, "!44@/B4Tb64lLpLiQ7OrT4MAaUxp47ndvAyj3xaq2CE45Xw="
+    .line 52
+    const-string/jumbo v0, "MicroMsg.ExdeviceCfgHelper"
 
     const-string/jumbo v1, "setCfgAccessible, process : %s"
 
@@ -323,17 +323,17 @@
 
     const/4 v3, 0x0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aQC()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aVm()Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 47
-    iput-object p1, p0, Lcom/tencent/mm/compatible/d/r;->bsV:Lcom/tencent/mm/compatible/d/r$a;
+    .line 53
+    iput-object p1, p0, Lcom/tencent/mm/compatible/d/r;->bhb:Lcom/tencent/mm/compatible/d/r$a;
 
-    .line 48
+    .line 54
     return-void
 .end method

@@ -1,31 +1,31 @@
 package com.tencent.mm.pluginsdk.model.app;
 
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.List;
 
 final class e$2
-  extends aa
+  extends ac
 {
   e$2(e parame) {}
   
   public final void handleMessage(Message paramMessage)
   {
     paramMessage = (t)obj;
-    q localq = new q(appId, cbf);
-    if (iAS.iAP.contains(localq))
+    q localq = new q(appId, bUR);
+    if (iXw.iXt.contains(localq))
     {
-      iAS.iAP.remove(localq);
-      if (!aj.aPR().d(appId, data, cbf)) {
-        u.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "handleMessage, saveIcon fail");
+      iXw.iXt.remove(localq);
+      if (!al.aUA().d(appId, data, bUR)) {
+        v.e("MicroMsg.AppIconService", "handleMessage, saveIcon fail");
       }
     }
-    while (iAS.gmw.size() > 0)
+    while (iXw.gwR.size() > 0)
     {
-      paramMessage = (q)iAS.gmw.remove(0);
-      if (iAS.a(paramMessage)) {
-        iAS.iAP.add(paramMessage);
+      paramMessage = (q)iXw.gwR.remove(0);
+      if (iXw.a(paramMessage)) {
+        iXw.iXt.add(paramMessage);
       }
     }
   }

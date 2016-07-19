@@ -4,11 +4,11 @@ public abstract interface h$a
 {
   public abstract void b(String paramString1, String paramString2, int paramInt, long paramLong, int[] paramArrayOfInt);
   
-  public abstract void dv(String paramString);
+  public abstract void dD(String paramString);
   
-  public abstract boolean qJ();
+  public abstract boolean pn();
   
-  public abstract long qK();
+  public abstract long po();
 }
 
 /* Location:

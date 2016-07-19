@@ -1,5 +1,8 @@
 package com.tencent.mm.ui.contact;
 
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.e;
+
 final class AddressUI$a$13
   implements Runnable
 {
@@ -7,7 +10,10 @@ final class AddressUI$a$13
   
   public final void run()
   {
-    AddressUI.a.m(liu);
+    a locala = AddressUI.a.a(lIF);
+    v.i(TAG, "newcursor resume ");
+    kJV = true;
+    locala.az("resume", true);
   }
 }
 

@@ -4,8 +4,8 @@
 
 
 # virtual methods
-.method public abstract avV()V
+.method public abstract ays()V
 .end method
 
-.method public abstract kW(I)V
+.method public abstract md(I)V
 .end method

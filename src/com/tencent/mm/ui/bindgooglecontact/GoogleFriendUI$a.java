@@ -1,6 +1,9 @@
 package com.tencent.mm.ui.bindgooglecontact;
 
-public enum GoogleFriendUI$a {}
+public enum GoogleFriendUI$a
+{
+  private GoogleFriendUI$a() {}
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.ui.bindgooglecontact.GoogleFriendUI.a

@@ -15,30 +15,29 @@ import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.ListView;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.model.ah;
 import com.tencent.mm.model.ar.a;
 import com.tencent.mm.model.i;
-import com.tencent.mm.modelmulti.l;
-import com.tencent.mm.modelmulti.n;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.modelmulti.m;
+import com.tencent.mm.modelmulti.o;
 import com.tencent.mm.pluginsdk.i.a;
 import com.tencent.mm.pluginsdk.i.t;
 import com.tencent.mm.pluginsdk.i.u;
 import com.tencent.mm.pluginsdk.ui.applet.ContactListExpandPreference;
 import com.tencent.mm.pluginsdk.ui.applet.ContactListExpandPreference.a;
 import com.tencent.mm.pluginsdk.ui.d;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.storage.an;
-import com.tencent.mm.storage.ao;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.storage.aj;
+import com.tencent.mm.storage.ap;
+import com.tencent.mm.storage.aq;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
-import com.tencent.mm.storage.s;
-import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.preference.CheckBoxPreference;
 import com.tencent.mm.ui.base.preference.MMPreference;
 import com.tencent.mm.ui.base.preference.Preference;
 import com.tencent.mm.ui.base.preference.f;
-import com.tencent.mm.ui.chatting.ChattingUI;
+import com.tencent.mm.ui.base.preference.h;
 import com.tencent.mm.ui.chatting.gallery.ImageGalleryGridUI;
 import com.tencent.mm.ui.contact.e;
 import java.util.LinkedList;
@@ -48,131 +47,136 @@ public class SingleChatInfoUI
   extends MMPreference
   implements i.t
 {
-  private static boolean cHw = false;
-  private String apb;
-  private SharedPreferences bxg = null;
-  private k cId;
-  private boolean cYC;
-  private d cYJ = new d(new AbsListView.OnScrollListener()
+  private static boolean cEA = false;
+  private String ajT;
+  private SharedPreferences bpi = null;
+  private k cFh;
+  private int cXP = -1;
+  private String cXY = "";
+  private ContactListExpandPreference cXe;
+  private CheckBoxPreference cXf;
+  private CheckBoxPreference cXg;
+  private boolean cXm;
+  private d cXt = new d(new AbsListView.OnScrollListener()
   {
     public final void onScroll(AbsListView paramAnonymousAbsListView, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
     
     public final void onScrollStateChanged(AbsListView paramAnonymousAbsListView, int paramAnonymousInt) {}
   });
-  boolean cYK = false;
-  private ContactListExpandPreference cYs;
-  private CheckBoxPreference cYt;
-  private CheckBoxPreference cYu;
-  private int cZj = -1;
-  private String cZs = "";
-  private f cpb;
-  private aa handler = new aa(Looper.getMainLooper());
+  boolean cXu = false;
+  private f ckp;
+  private ac handler = new ac(Looper.getMainLooper());
   
-  private void NU()
+  private void Pe()
   {
-    if (bxg == null) {
-      bxg = getSharedPreferences(getPackageName() + "_preferences", 0);
+    if (bpi == null) {
+      bpi = getSharedPreferences(getPackageName() + "_preferences", 0);
     }
-    cYC = cId.qr();
-    if (cYC)
+    cXm = cFh.oU();
+    if (cXm)
     {
-      qf(0);
-      if (cYt != null) {
-        bxg.edit().putBoolean("room_notify_new_msg", true).commit();
+      rV(0);
+      if (cXf != null) {
+        bpi.edit().putBoolean("room_notify_new_msg", true).commit();
       }
     }
     for (;;)
     {
-      cpb.notifyDataSetChanged();
+      ckp.notifyDataSetChanged();
       return;
-      qf(8);
-      if (cYt != null) {
-        bxg.edit().putBoolean("room_notify_new_msg", false).commit();
+      rV(8);
+      if (cXf != null) {
+        bpi.edit().putBoolean("room_notify_new_msg", false).commit();
       }
     }
   }
   
-  protected final void Gb()
+  public final int GK()
   {
-    cpb = kLL;
-    Gj(getString(2131432663));
-    cYs = ((ContactListExpandPreference)cpb.GB("roominfo_contact_anchor"));
-    cYs.a(cpb, cYs.cln);
-    cYs.gn(true).go(false);
-    if ((cId != null) && (cId.field_deleteFlag == 1)) {
-      cYs.gn(false);
+    return 2131099711;
+  }
+  
+  protected final void Gy()
+  {
+    ckp = lla;
+    Ah(getString(2131234676));
+    cXe = ((ContactListExpandPreference)ckp.IR("roominfo_contact_anchor"));
+    cXe.a(ckp, cXe.cgq);
+    cXe.gM(true).gN(false);
+    if ((cFh != null) && (cFh.field_deleteFlag == 1)) {
+      cXe.gM(false);
     }
-    cYt = ((CheckBoxPreference)cpb.GB("room_notify_new_msg"));
-    cYu = ((CheckBoxPreference)cpb.GB("room_placed_to_the_top"));
-    if (bxg == null) {
-      bxg = getSharedPreferences(getPackageName() + "_preferences", 0);
+    cXf = ((CheckBoxPreference)ckp.IR("room_notify_new_msg"));
+    cXg = ((CheckBoxPreference)ckp.IR("room_placed_to_the_top"));
+    if (bpi == null) {
+      bpi = getSharedPreferences(getPackageName() + "_preferences", 0);
     }
-    if (cId != null)
+    if (cFh != null)
     {
-      bxg.edit().putBoolean("room_placed_to_the_top", com.tencent.mm.model.ah.tD().rt().EG(cId.field_username)).commit();
-      cYC = cId.qr();
-      bxg.edit().putBoolean("room_notify_new_msg", cYC).commit();
+      bpi.edit().putBoolean("room_placed_to_the_top", ah.tE().ru().GU(cFh.field_username)).commit();
+      cXm = cFh.oU();
+      bpi.edit().putBoolean("room_notify_new_msg", cXm).commit();
     }
     for (;;)
     {
-      cZj = com.tencent.mm.model.ah.tD().rs().Fr(apb);
-      cpb.notifyDataSetChanged();
-      if (cYs != null)
+      cXP = ah.tE().rt().HI(ajT);
+      ckp.notifyDataSetChanged();
+      if (cXe != null)
       {
         LinkedList localLinkedList = new LinkedList();
-        localLinkedList.add(apb);
-        cYs.n(apb, localLinkedList);
-        gWB.setOnScrollListener(cYJ);
-        cYs.a(cYJ);
-        cYs.a(new ContactListExpandPreference.a()
+        localLinkedList.add(ajT);
+        cXe.p(ajT, localLinkedList);
+        eLC.setOnScrollListener(cXt);
+        cXe.a(cXt);
+        cXe.a(new ContactListExpandPreference.a()
         {
-          public final void Oa() {}
+          public final void Pl() {}
           
-          public final void Ob()
+          public final void Pm()
           {
             if (SingleChatInfoUI.b(SingleChatInfoUI.this) != null) {
-              SingleChatInfoUI.b(SingleChatInfoUI.this).aRr();
+              SingleChatInfoUI.b(SingleChatInfoUI.this).aWd();
             }
           }
           
-          public final void fH(int paramAnonymousInt) {}
-          
-          public final void fI(int paramAnonymousInt)
+          public final void gA(int paramAnonymousInt)
           {
-            String str = SingleChatInfoUI.b(SingleChatInfoUI.this).ox(paramAnonymousInt);
-            Object localObject2 = t.ky(SingleChatInfoUI.b(SingleChatInfoUI.this).oz(paramAnonymousInt));
+            SingleChatInfoUI.c(SingleChatInfoUI.this);
+          }
+          
+          public final void gy(int paramAnonymousInt) {}
+          
+          public final void gz(int paramAnonymousInt)
+          {
+            String str = SingleChatInfoUI.b(SingleChatInfoUI.this).qd(paramAnonymousInt);
+            Object localObject2 = com.tencent.mm.platformtools.s.li(SingleChatInfoUI.b(SingleChatInfoUI.this).qf(paramAnonymousInt));
             Object localObject1 = localObject2;
-            if (t.kz((String)localObject2))
+            if (com.tencent.mm.platformtools.s.kf((String)localObject2))
             {
-              an localan = com.tencent.mm.model.ah.tD().rr().FH(str);
+              ap localap = ah.tE().rs().HY(str);
               localObject1 = localObject2;
-              if (localan != null)
+              if (localap != null)
               {
                 localObject1 = localObject2;
-                if (!t.kz(field_encryptUsername)) {
+                if (!com.tencent.mm.platformtools.s.kf(field_encryptUsername)) {
                   localObject1 = field_conRemark;
                 }
               }
             }
-            if (t.kz(str)) {
+            if (com.tencent.mm.platformtools.s.kf(str)) {
               return;
             }
             localObject2 = new Intent();
             ((Intent)localObject2).putExtra("Contact_User", str);
             ((Intent)localObject2).putExtra("Contact_RemarkName", (String)localObject1);
-            ((Intent)localObject2).putExtra("Contact_Nick", t.ky(SingleChatInfoUI.b(SingleChatInfoUI.this).oy(paramAnonymousInt)));
+            ((Intent)localObject2).putExtra("Contact_Nick", com.tencent.mm.platformtools.s.li(SingleChatInfoUI.b(SingleChatInfoUI.this).qe(paramAnonymousInt)));
             ((Intent)localObject2).putExtra("Contact_RoomMember", true);
-            localObject1 = com.tencent.mm.model.ah.tD().rq().Ep(str);
-            if ((localObject1 != null) && ((int)bvi > 0) && (com.tencent.mm.h.a.ce(field_type))) {
+            localObject1 = ah.tE().rr().GD(str);
+            if ((localObject1 != null) && ((int)bjS > 0) && (com.tencent.mm.i.a.cy(field_type))) {
               e.a((Intent)localObject2, str);
             }
             ((Intent)localObject2).putExtra("Kdel_from", 0);
-            com.tencent.mm.ar.c.a(SingleChatInfoUI.this, "profile", ".ui.ContactInfoUI", (Intent)localObject2, 0);
-          }
-          
-          public final void fJ(int paramAnonymousInt)
-          {
-            SingleChatInfoUI.c(SingleChatInfoUI.this);
+            com.tencent.mm.av.c.a(SingleChatInfoUI.this, "profile", ".ui.ContactInfoUI", (Intent)localObject2, 0);
           }
         });
       }
@@ -185,17 +189,12 @@ public class SingleChatInfoUI
         }
       });
       return;
-      bxg.edit().putBoolean("room_notify_new_msg", false).commit();
-      cYC = false;
+      bpi.edit().putBoolean("room_notify_new_msg", false).commit();
+      cXm = false;
     }
   }
   
-  public final int Gn()
-  {
-    return 2131296257;
-  }
-  
-  public final com.tencent.mm.ui.base.preference.h a(SharedPreferences paramSharedPreferences)
+  public final h a(SharedPreferences paramSharedPreferences)
   {
     return new com.tencent.mm.ui.base.preference.a(this, paramSharedPreferences);
   }
@@ -203,22 +202,22 @@ public class SingleChatInfoUI
   public final boolean a(f paramf, Preference paramPreference)
   {
     boolean bool = true;
-    paramf = cln;
+    paramf = cgq;
     if (paramf.equals("room_notify_new_msg")) {
-      if (!cYC)
+      if (!cXm)
       {
-        cYC = bool;
-        if (!cYC) {
+        cXm = bool;
+        if (!cXm) {
           break label134;
         }
-        i.l(cId);
+        i.l(cFh);
         label42:
-        cId = com.tencent.mm.model.ah.tD().rq().Ep(apb);
-        if (bxg == null) {
-          bxg = getSharedPreferences(getPackageName() + "_preferences", 0);
+        cFh = ah.tE().rr().GD(ajT);
+        if (bpi == null) {
+          bpi = getSharedPreferences(getPackageName() + "_preferences", 0);
         }
-        bxg.edit().putBoolean("room_notify_new_msg", cYC).commit();
-        NU();
+        bpi.edit().putBoolean("room_notify_new_msg", cXm).commit();
+        Pe();
       }
     }
     label134:
@@ -230,36 +229,36 @@ public class SingleChatInfoUI
         return false;
         bool = false;
         break;
-        i.m(cId);
+        i.m(cFh);
         break label42;
         if (!paramf.equals("room_placed_to_the_top")) {
           break label253;
         }
-        paramf = getSharedPreferences(cZs, 0);
-      } while (cId == null);
-      if (com.tencent.mm.model.ah.tD().rt().EG(cId.field_username)) {
-        i.i(cId.field_username, true);
+        paramf = getSharedPreferences(cXY, 0);
+      } while (cFh == null);
+      if (ah.tE().ru().GU(cFh.field_username)) {
+        i.l(cFh.field_username, true);
       }
       for (;;)
       {
-        paramf.edit().putBoolean("room_placed_to_the_top", com.tencent.mm.model.ah.tD().rt().EG(cId.field_username)).commit();
+        paramf.edit().putBoolean("room_placed_to_the_top", ah.tE().ru().GU(cFh.field_username)).commit();
         return false;
-        i.h(cId.field_username, true);
+        i.k(cFh.field_username, true);
       }
       if (paramf.equals("room_chatting_images"))
       {
-        paramf = com.tencent.mm.plugin.report.service.h.fUJ;
-        com.tencent.mm.plugin.report.service.h.b(219L, 12L, 1L, true);
+        paramf = com.tencent.mm.plugin.report.service.g.gdY;
+        com.tencent.mm.plugin.report.service.g.b(219L, 12L, 1L, true);
         paramf = new Intent();
-        paramf.setClass(koJ.kpc, ImageGalleryGridUI.class);
+        paramf.setClass(kNN.kOg, ImageGalleryGridUI.class);
         paramf.addFlags(67108864);
         paramf.putExtra("kintent_intent_source", 1);
-        paramf.putExtra("kintent_talker", apb);
-        paramf.putExtra("kintent_image_count", cZj);
-        if (cZj > 0) {
-          paramf.putExtra("kintent_image_index", com.tencent.mm.model.ah.tD().rs().Fq(apb) - 1);
+        paramf.putExtra("kintent_talker", ajT);
+        paramf.putExtra("kintent_image_count", cXP);
+        if (cXP > 0) {
+          paramf.putExtra("kintent_image_index", ah.tE().rt().HH(ajT) - 1);
         }
-        com.tencent.mm.plugin.report.service.h.fUJ.g(11627, new Object[] { Integer.valueOf(1) });
+        com.tencent.mm.plugin.report.service.g.gdY.h(11627, new Object[] { Integer.valueOf(1) });
         startActivity(paramf);
         return false;
       }
@@ -267,39 +266,35 @@ public class SingleChatInfoUI
       {
         paramf = new Intent();
         paramf.putExtra("isApplyToAll", false);
-        paramf.putExtra("username", cId.field_username);
-        com.tencent.mm.ar.c.a(this, "setting", ".ui.setting.SettingsChattingBackgroundUI", paramf, 2);
+        paramf.putExtra("username", cFh.field_username);
+        com.tencent.mm.av.c.a(this, "setting", ".ui.setting.SettingsChattingBackgroundUI", paramf, 2);
         return false;
       }
       if (paramf.equals("room_search_chatting_content"))
       {
-        paramf = new Intent(this, ChattingUI.class);
-        paramf.putExtra("Chat_User", apb);
-        paramf.putExtra("search_chat_content", true);
-        paramf.putExtra("finish_direct", true);
-        startActivity(paramf);
+        paramf = new Intent();
+        paramf.putExtra("detail_username", ajT);
+        com.tencent.mm.av.c.c(this, "search", ".ui.FTSChattingTalkerUI", paramf);
         return false;
       }
       if (paramf.equals("room_clear_chatting_history"))
       {
-        paramf = getString(2131427490, new Object[] { cId.qz() });
-        g.a(koJ.kpc, paramf, "", getString(2131430892), getString(2131430884), new DialogInterface.OnClickListener()
+        paramf = getString(2131232841, new Object[] { cFh.pc() });
+        com.tencent.mm.ui.base.g.a(kNN.kOg, paramf, "", getString(2131230876), getString(2131230873), new DialogInterface.OnClickListener()
         {
           public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
           {
             SingleChatInfoUI.d(SingleChatInfoUI.this);
           }
-        }, null, 2131231219);
+        }, null, 2131689507);
         return false;
       }
     } while (!paramf.equals("room_expose"));
     paramf = new Intent();
-    paramf.setClass(koJ.kpc, ExposeWithProofUI.class);
-    paramf.putExtra("k_username", apb);
-    paramf.putExtra("k_expose_scene", 39);
-    paramf.putExtra("k_need_step_two", true);
-    paramf.putExtra("k_from_profile", true);
-    startActivity(paramf);
+    paramf.putExtra("k_username", ajT);
+    paramf.putExtra("showShare", false);
+    paramf.putExtra("rawUrl", "https://weixin110.qq.com/security/readtemplate?t=weixin_report/w_type&scene=39");
+    com.tencent.mm.av.c.c(this, "webview", ".ui.tools.WebViewUI", paramf);
     return false;
   }
   
@@ -322,20 +317,20 @@ public class SingleChatInfoUI
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    if (i.a.iyD != null) {
-      i.a.iyD.a(this);
+    if (i.a.iUZ != null) {
+      i.a.iUZ.a(this);
     }
-    apb = getIntent().getStringExtra("Single_Chat_Talker");
-    cId = com.tencent.mm.model.ah.tD().rq().Ep(apb);
-    cZs = (getPackageName() + "_preferences");
-    Gb();
+    ajT = getIntent().getStringExtra("Single_Chat_Talker");
+    cFh = ah.tE().rr().GD(ajT);
+    cXY = (getPackageName() + "_preferences");
+    Gy();
   }
   
   public void onDestroy()
   {
     
-    if (i.a.iyD != null) {
-      i.a.iyD.b(this);
+    if (i.a.iUZ != null) {
+      i.a.iUZ.b(this);
     }
     super.onDestroy();
   }
@@ -347,42 +342,42 @@ public class SingleChatInfoUI
   
   public void onResume()
   {
-    NU();
+    Pe();
     Object localObject;
-    if (cYs != null)
+    if (cXe != null)
     {
       localObject = new LinkedList();
-      ((List)localObject).add(apb);
-      cYs.n(apb, (List)localObject);
+      ((List)localObject).add(ajT);
+      cXe.p(ajT, (List)localObject);
     }
-    cpb.notifyDataSetChanged();
+    ckp.notifyDataSetChanged();
     super.onResume();
-    if (!cYK)
+    if (!cXu)
     {
       localObject = getIntent().getStringExtra("need_matte_high_light_item");
-      if (!t.kz((String)localObject))
+      if (!com.tencent.mm.platformtools.s.kf((String)localObject))
       {
-        final int i = cpb.GD((String)localObject);
+        final int i = ckp.IT((String)localObject);
         setSelection(i - 3);
-        new aa().postDelayed(new Runnable()
+        new ac().postDelayed(new Runnable()
         {
           public final void run()
           {
-            View localView = ((com.tencent.mm.ui.base.preference.a)SingleChatInfoUI.a(SingleChatInfoUI.this)).a(i, gWB);
+            View localView = ((com.tencent.mm.ui.base.preference.a)SingleChatInfoUI.a(SingleChatInfoUI.this)).a(i, eLC);
             if (localView != null) {
-              com.tencent.mm.ui.f.a.c(koJ.kpc, localView);
+              com.tencent.mm.ui.g.a.b(kNN.kOg, localView);
             }
           }
         }, 10L);
       }
-      cYK = true;
+      cXu = true;
     }
   }
   
-  public final void p(String paramString1, String paramString2, String paramString3)
+  public final void s(String paramString1, String paramString2, String paramString3)
   {
-    if ((paramString1.equals(apb)) && (cYs != null)) {
-      cYs.notifyChanged();
+    if ((paramString1.equals(ajT)) && (cXe != null)) {
+      cXe.notifyChanged();
     }
   }
   
@@ -391,7 +386,7 @@ public class SingleChatInfoUI
   {
     public final void onCancel(DialogInterface paramDialogInterface)
     {
-      SingleChatInfoUI.bbu();
+      SingleChatInfoUI.bgG();
     }
   }
 }

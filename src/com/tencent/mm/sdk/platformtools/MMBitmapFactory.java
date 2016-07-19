@@ -1,6 +1,5 @@
 package com.tencent.mm.sdk.platformtools;
 
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.content.res.AssetManager.AssetInputStream;
@@ -8,13 +7,17 @@ import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapFactory.Options;
+import android.graphics.BitmapRegionDecoder;
 import android.graphics.NinePatch;
 import android.graphics.Rect;
 import com.tencent.mm.a.g;
+import com.tencent.mm.compatible.d.m;
+import com.tencent.mm.compatible.loader.d;
 import com.tencent.mm.modelsfs.FileOp;
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.FileDescriptor;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -42,9 +45,23 @@ public class MMBitmapFactory
   private static final int ERROR_USER_DEFINED_BEGIN = 3000;
   public static final int STRATEGY_AUTO_DETECT = 0;
   public static final int STRATEGY_FORCE_SYSTEM_DECODER = 1;
-  private static final String TAG = "!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=";
+  private static final String TAG = "MicroMsg.MMBitmapFactory";
   private static boolean mIsInit = false;
   static Method mMthGetDefaultDensity = null;
+  
+  private static boolean checkIfHaveToUseMMDecoder(BitmapFactory.Options paramOptions)
+  {
+    if (paramOptions != null) {}
+    for (String str = outMimeType;; str = "")
+    {
+      v.d("MicroMsg.MMBitmapFactory", "mimetype: %s", new Object[] { str });
+      if ((paramOptions == null) || (outMimeType == null) || ((!outMimeType.toLowerCase().endsWith("png")) && (!outMimeType.toLowerCase().endsWith("vcodec")))) {
+        break;
+      }
+      return true;
+    }
+    return false;
+  }
   
   public static boolean checkIsImageLegal(InputStream paramInputStream)
   {
@@ -65,7 +82,7 @@ public class MMBitmapFactory
   {
     if (paramString == null)
     {
-      u.e("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "filePath is null.");
+      v.e("MicroMsg.MMBitmapFactory", "filePath is null.");
       if (paramDecodeResultLogger != null) {
         DecodeResultLogger.access$002(paramDecodeResultLogger, 1005);
       }
@@ -78,12 +95,12 @@ public class MMBitmapFactory
         FileInputStream localFileInputStream = new FileInputStream(paramString);
         long l = System.currentTimeMillis();
         boolean bool = checkIsImageLegalInternal(localFileInputStream, paramDecodeResultLogger);
-        u.d("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "check [%s] res:%b, cost:%d ms", new Object[] { paramString, Boolean.valueOf(bool), Long.valueOf(System.currentTimeMillis() - l) });
+        v.d("MicroMsg.MMBitmapFactory", "check [%s] res:%b, cost:%d ms", new Object[] { paramString, Boolean.valueOf(bool), Long.valueOf(System.currentTimeMillis() - l) });
         return bool;
       }
       catch (FileNotFoundException paramString)
       {
-        u.printErrStackTrace("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", paramString, "An exception was thrown.", new Object[0]);
+        v.printErrStackTrace("MicroMsg.MMBitmapFactory", paramString, "An exception was thrown.", new Object[0]);
       }
     } while (paramDecodeResultLogger == null);
     DecodeResultLogger.access$002(paramDecodeResultLogger, 1005);
@@ -99,7 +116,7 @@ public class MMBitmapFactory
   {
     if (paramArrayOfByte == null)
     {
-      u.e("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "buf is null.");
+      v.e("MicroMsg.MMBitmapFactory", "buf is null.");
       if (paramDecodeResultLogger != null) {
         DecodeResultLogger.access$002(paramDecodeResultLogger, 1005);
       }
@@ -112,7 +129,7 @@ public class MMBitmapFactory
   {
     if (paramInputStream == null)
     {
-      u.e("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "InputStream is null.");
+      v.e("MicroMsg.MMBitmapFactory", "InputStream is null.");
       if (paramDecodeResultLogger != null) {
         DecodeResultLogger.access$002(paramDecodeResultLogger, 1005);
       }
@@ -132,7 +149,7 @@ public class MMBitmapFactory
   private static void checkIsInit()
   {
     if (!mIsInit) {
-      u.w("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "MMBitmapFactory is not initialized.");
+      v.w("MicroMsg.MMBitmapFactory", "MMBitmapFactory is not initialized.");
     }
   }
   
@@ -165,7 +182,7 @@ public class MMBitmapFactory
   {
     long l = System.currentTimeMillis();
     paramArrayOfByte = decodeByteArrayInternal(paramArrayOfByte, paramInt1, paramInt2, paramOptions, paramDecodeResultLogger, paramInt3);
-    u.i("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "decode done, size:%d, cost:%d ms", new Object[] { Integer.valueOf(paramInt2), Long.valueOf(System.currentTimeMillis() - l) });
+    v.i("MicroMsg.MMBitmapFactory", "decode done, size:%d, cost:%d ms", new Object[] { Integer.valueOf(paramInt2), Long.valueOf(System.currentTimeMillis() - l) });
     return paramArrayOfByte;
   }
   
@@ -188,12 +205,12 @@ public class MMBitmapFactory
       switch (paramInt3)
       {
       default: 
-        u.i("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "Decoded by system BitmapFactory directly, isEnabled:%b", new Object[] { Boolean.valueOf(bool) });
+        v.i("MicroMsg.MMBitmapFactory", "Decoded by system BitmapFactory directly, isEnabled:%b", new Object[] { Boolean.valueOf(bool) });
         return decodeByteArrayWithSystemDecoder(paramArrayOfByte, paramInt1, paramInt2, paramOptions, paramDecodeResultLogger);
       }
       return decodeByteArrayWithMMDecoderIfPossible(paramArrayOfByte, paramInt1, paramInt2, paramOptions, paramDecodeResultLogger);
     }
-    u.i("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "Decoded by system BitmapFactory directly since strategy, isEnabled:%b", new Object[] { Boolean.valueOf(bool) });
+    v.i("MicroMsg.MMBitmapFactory", "Decoded by system BitmapFactory directly since strategy, isEnabled:%b", new Object[] { Boolean.valueOf(bool) });
     return decodeByteArrayWithSystemDecoder(paramArrayOfByte, paramInt1, paramInt2, paramOptions, paramDecodeResultLogger);
   }
   
@@ -234,7 +251,7 @@ public class MMBitmapFactory
           continue;
         }
         localObject = localBitmap;
-        u.i("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "mmimgdec decoder decodes failed, try system BitmapFactory.");
+        v.i("MicroMsg.MMBitmapFactory", "mmimgdec decoder decodes failed, try system BitmapFactory.");
         localObject = localBitmap;
         DecodeResultLogger.access$102(paramDecodeResultLogger, false);
         localObject = localBitmap;
@@ -258,7 +275,7 @@ public class MMBitmapFactory
           }
         }
         localObject = localBitmap;
-        u.i("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "System decoder decodes success.");
+        v.i("MicroMsg.MMBitmapFactory", "System decoder decodes success.");
         localObject = localBitmap;
         DecodeResultLogger.access$002(paramDecodeResultLogger, 0);
         paramArrayOfByte = paramDecodeResultLogger;
@@ -266,12 +283,12 @@ public class MMBitmapFactory
       }
       catch (Exception paramArrayOfByte)
       {
-        u.printErrStackTrace("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", paramArrayOfByte, "An exception was thrown when decode image.", new Object[0]);
+        v.printErrStackTrace("MicroMsg.MMBitmapFactory", paramArrayOfByte, "An exception was thrown when decode image.", new Object[0]);
         DecodeResultLogger.access$002(paramDecodeResultLogger, 1005);
         paramArrayOfByte = paramDecodeResultLogger;
         continue;
         localObject = localBitmap;
-        u.i("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "decoder [%s] decodes done, ret:%d.", new Object[] { mDecoderTag, Integer.valueOf(mDecodeResultCode) });
+        v.i("MicroMsg.MMBitmapFactory", "decoder [%s] decodes done, ret:%d.", new Object[] { mDecoderTag, Integer.valueOf(mDecodeResultCode) });
         localObject = localBitmap;
         paramArrayOfByte = paramDecodeResultLogger;
         if (localBitmap == null) {
@@ -299,10 +316,10 @@ public class MMBitmapFactory
         paramArrayOfByte = paramDecodeResultLogger;
         continue;
       }
-      u.i("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", paramArrayOfByte.toLogString());
+      v.i("MicroMsg.MMBitmapFactory", paramArrayOfByte.toLogString());
       return (Bitmap)localObject;
       localObject = localBitmap;
-      u.w("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "System decoder decodes failed.");
+      v.w("MicroMsg.MMBitmapFactory", "System decoder decodes failed.");
       localObject = localBitmap;
       DecodeResultLogger.access$002(paramDecodeResultLogger, 1006);
       localObject = localBitmap;
@@ -332,7 +349,7 @@ public class MMBitmapFactory
     label72:
     for (paramArrayOfByte = paramOptions.toString();; paramArrayOfByte = "null")
     {
-      u.i("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "decode bytearray by system decoder done, res: %s", new Object[] { paramArrayOfByte });
+      v.i("MicroMsg.MMBitmapFactory", "decode bytearray by system decoder done, res: %s", new Object[] { paramArrayOfByte });
       return paramOptions;
       paramInt1 = 1006;
       break;
@@ -385,6 +402,142 @@ public class MMBitmapFactory
     return decodeFile(paramString, null, paramDecodeResultLogger, paramInt);
   }
   
+  public static Bitmap decodeFileDescriptor(FileDescriptor paramFileDescriptor, BitmapFactory.Options paramOptions, DecodeResultLogger paramDecodeResultLogger)
+  {
+    if (!checkIfHaveToUseMMDecoder(paramOptions)) {}
+    for (;;)
+    {
+      try
+      {
+        Bitmap localBitmap = BitmapFactory.decodeFileDescriptor(paramFileDescriptor, null, paramOptions);
+        if (localBitmap == null) {
+          break;
+        }
+        if (paramDecodeResultLogger != null)
+        {
+          paramDecodeResultLogger.clear();
+          DecodeResultLogger.access$002(paramDecodeResultLogger, 0);
+          DecodeResultLogger.access$102(paramDecodeResultLogger, false);
+        }
+        return localBitmap;
+      }
+      catch (Exception localException) {}
+      Object localObject = null;
+    }
+    v.d("MicroMsg.MMBitmapFactory", "decodeFileDescriptor, fallback");
+    return decodeStream(new FileInputStream(paramFileDescriptor), null, paramOptions, paramDecodeResultLogger, 0);
+  }
+  
+  public static Bitmap decodeRegion(FileDescriptor paramFileDescriptor, Rect paramRect, BitmapFactory.Options paramOptions, DecodeResultLogger paramDecodeResultLogger)
+  {
+    Object localObject3 = null;
+    Object localObject1 = localObject3;
+    if (!checkIfHaveToUseMMDecoder(paramOptions)) {}
+    try
+    {
+      localObject1 = BitmapRegionDecoder.newInstance(paramFileDescriptor, true).decodeRegion(paramRect, paramOptions);
+      if (localObject1 != null)
+      {
+        if (paramDecodeResultLogger != null)
+        {
+          paramDecodeResultLogger.clear();
+          DecodeResultLogger.access$002(paramDecodeResultLogger, 0);
+          DecodeResultLogger.access$102(paramDecodeResultLogger, false);
+        }
+        return (Bitmap)localObject1;
+      }
+      v.d("MicroMsg.MMBitmapFactory", "decodeRegion with FileDescriptor, fallback");
+      return decodeRegionFallback(new FileInputStream(paramFileDescriptor), paramRect, paramOptions, paramDecodeResultLogger);
+    }
+    catch (Exception localException)
+    {
+      for (;;)
+      {
+        Object localObject2 = localObject3;
+      }
+    }
+  }
+  
+  public static Bitmap decodeRegion(InputStream paramInputStream, Rect paramRect, BitmapFactory.Options paramOptions, DecodeResultLogger paramDecodeResultLogger)
+  {
+    Object localObject3 = null;
+    Object localObject1 = localObject3;
+    if (!checkIfHaveToUseMMDecoder(paramOptions)) {}
+    try
+    {
+      localObject1 = BitmapRegionDecoder.newInstance(paramInputStream, true).decodeRegion(paramRect, paramOptions);
+      if (localObject1 != null)
+      {
+        if (paramDecodeResultLogger != null)
+        {
+          paramDecodeResultLogger.clear();
+          DecodeResultLogger.access$002(paramDecodeResultLogger, 0);
+          DecodeResultLogger.access$102(paramDecodeResultLogger, false);
+        }
+        return (Bitmap)localObject1;
+      }
+      v.d("MicroMsg.MMBitmapFactory", "decodeRegion with inputStream, fallback");
+      return decodeRegionFallback(paramInputStream, paramRect, paramOptions, paramDecodeResultLogger);
+    }
+    catch (Exception localException)
+    {
+      for (;;)
+      {
+        Object localObject2 = localObject3;
+      }
+    }
+  }
+  
+  public static Bitmap decodeRegion(byte[] paramArrayOfByte, int paramInt1, int paramInt2, Rect paramRect, BitmapFactory.Options paramOptions, DecodeResultLogger paramDecodeResultLogger)
+  {
+    Object localObject3 = null;
+    Object localObject1 = localObject3;
+    if (!checkIfHaveToUseMMDecoder(paramOptions)) {}
+    try
+    {
+      localObject1 = BitmapRegionDecoder.newInstance(paramArrayOfByte, paramInt1, paramInt2, true).decodeRegion(paramRect, paramOptions);
+      if (localObject1 != null)
+      {
+        if (paramDecodeResultLogger != null)
+        {
+          paramDecodeResultLogger.clear();
+          DecodeResultLogger.access$002(paramDecodeResultLogger, 0);
+          DecodeResultLogger.access$102(paramDecodeResultLogger, false);
+        }
+        return (Bitmap)localObject1;
+      }
+      v.d("MicroMsg.MMBitmapFactory", "decodeRegion with bytes, fallback");
+      return decodeRegionFallback(paramArrayOfByte, paramInt1, paramInt2, paramRect, paramOptions, paramDecodeResultLogger);
+    }
+    catch (Exception localException)
+    {
+      for (;;)
+      {
+        Object localObject2 = localObject3;
+      }
+    }
+  }
+  
+  private static Bitmap decodeRegionFallback(InputStream paramInputStream, Rect paramRect, BitmapFactory.Options paramOptions, DecodeResultLogger paramDecodeResultLogger)
+  {
+    Object localObject = null;
+    paramOptions = decodeStream(paramInputStream, null, paramOptions, paramDecodeResultLogger, 0);
+    paramInputStream = (InputStream)localObject;
+    if (paramOptions != null) {
+      paramInputStream = Bitmap.createBitmap(paramOptions, left, top, right - left, bottom - top);
+    }
+    return paramInputStream;
+  }
+  
+  private static Bitmap decodeRegionFallback(byte[] paramArrayOfByte, int paramInt1, int paramInt2, Rect paramRect, BitmapFactory.Options paramOptions, DecodeResultLogger paramDecodeResultLogger)
+  {
+    paramArrayOfByte = decodeByteArray(paramArrayOfByte, paramInt1, paramInt2, paramOptions, paramDecodeResultLogger, 0);
+    if (paramArrayOfByte != null) {
+      return Bitmap.createBitmap(paramArrayOfByte, left, top, right - left, bottom - top);
+    }
+    return null;
+  }
+  
   public static Bitmap decodeStream(InputStream paramInputStream)
   {
     return decodeStream(paramInputStream, null, null, null, 1);
@@ -421,7 +574,7 @@ public class MMBitmapFactory
       }
     }
     paramInputStream = decodeStreamInternal(paramInputStream, paramRect, paramOptions, paramDecodeResultLogger, paramInt);
-    u.i("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "decode done, size:%d, cost:%d ms", new Object[] { Long.valueOf(l1), Long.valueOf(System.currentTimeMillis() - l2) });
+    v.i("MicroMsg.MMBitmapFactory", "decode done, size:%d, cost:%d ms", new Object[] { Long.valueOf(l1), Long.valueOf(System.currentTimeMillis() - l2) });
     return paramInputStream;
   }
   
@@ -444,12 +597,12 @@ public class MMBitmapFactory
       switch (paramInt)
       {
       default: 
-        u.i("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "Decoded by system BitmapFactory directly, isEnabled:%b", new Object[] { Boolean.valueOf(bool) });
+        v.i("MicroMsg.MMBitmapFactory", "Decoded by system BitmapFactory directly, isEnabled:%b", new Object[] { Boolean.valueOf(bool) });
         return decodeStreamWithSystemDecoder(paramInputStream, paramRect, paramOptions, paramDecodeResultLogger);
       }
       return decodeStreamWithMMDecoderIfPossible(paramInputStream, paramRect, paramOptions, paramDecodeResultLogger);
     }
-    u.i("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "Decoded by system BitmapFactory directly, isEnabled:%b", new Object[] { Boolean.valueOf(bool) });
+    v.i("MicroMsg.MMBitmapFactory", "Decoded by system BitmapFactory directly, isEnabled:%b", new Object[] { Boolean.valueOf(bool) });
     return decodeStreamWithSystemDecoder(paramInputStream, paramRect, paramOptions, paramDecodeResultLogger);
   }
   
@@ -466,7 +619,7 @@ public class MMBitmapFactory
       if (!paramInputStream.markSupported())
       {
         if (!(paramInputStream instanceof FileInputStream)) {
-          break label237;
+          break label238;
         }
         localObject2 = new i((FileInputStream)paramInputStream);
       }
@@ -483,9 +636,9 @@ public class MMBitmapFactory
         }
         catch (IOException paramRect)
         {
-          label237:
+          label238:
           paramInputStream = null;
-          u.printErrStackTrace("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", paramRect, "An exception was thrown when decode image.", new Object[0]);
+          v.printErrStackTrace("MicroMsg.MMBitmapFactory", paramRect, "An exception was thrown when decode image.", new Object[0]);
           DecodeResultLogger.access$002(paramDecodeResultLogger, 1005);
           continue;
           continue;
@@ -508,7 +661,7 @@ public class MMBitmapFactory
             if (mDecodeResultCode < 2000)
             {
               paramInputStream = (InputStream)localObject1;
-              u.i("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "mmimgdec decoder decodes failed, try system BitmapFactory.");
+              v.i("MicroMsg.MMBitmapFactory", "mmimgdec decoder decodes failed, try system BitmapFactory.");
               paramInputStream = (InputStream)localObject1;
               DecodeResultLogger.access$102(paramDecodeResultLogger, false);
               paramInputStream = (InputStream)localObject1;
@@ -536,7 +689,7 @@ public class MMBitmapFactory
               else
               {
                 paramInputStream = paramRect;
-                u.i("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "System decoder decodes success.");
+                v.i("MicroMsg.MMBitmapFactory", "System decoder decodes success.");
                 paramInputStream = paramRect;
                 DecodeResultLogger.access$002(paramDecodeResultLogger, 0);
                 paramInputStream = paramRect;
@@ -552,7 +705,7 @@ public class MMBitmapFactory
         {
           ((InputStream)localObject2).reset();
           ((InputStream)localObject2).mark(8388608);
-          u.i("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", paramDecodeResultLogger.toLogString());
+          v.i("MicroMsg.MMBitmapFactory", paramDecodeResultLogger.toLogString());
           return paramInputStream;
         }
         catch (IOException paramRect)
@@ -562,13 +715,13 @@ public class MMBitmapFactory
         localObject2 = new BufferedInputStream(paramInputStream);
         continue;
         paramInputStream = paramRect;
-        u.w("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "System decoder decodes failed.");
+        v.w("MicroMsg.MMBitmapFactory", "System decoder decodes failed.");
         paramInputStream = paramRect;
         DecodeResultLogger.access$002(paramDecodeResultLogger, 1006);
         paramInputStream = paramRect;
         continue;
         paramInputStream = (InputStream)localObject1;
-        u.i("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "decoder [%s] decodes done, ret:%d.", new Object[] { mDecoderTag, Integer.valueOf(mDecodeResultCode) });
+        v.i("MicroMsg.MMBitmapFactory", "decoder [%s] decodes done, ret:%d.", new Object[] { mDecoderTag, Integer.valueOf(mDecodeResultCode) });
         paramRect = (Rect)localObject1;
         if (localObject1 != null)
         {
@@ -619,7 +772,7 @@ public class MMBitmapFactory
     label70:
     for (paramInputStream = paramRect.toString();; paramInputStream = "null")
     {
-      u.i("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "decode stream by system decoder done, res: %s", new Object[] { paramInputStream });
+      v.i("MicroMsg.MMBitmapFactory", "decode stream by system decoder done, res: %s", new Object[] { paramInputStream });
       return paramRect;
       i = 1006;
       break;
@@ -648,12 +801,15 @@ public class MMBitmapFactory
   
   public static boolean init()
   {
+    if (m.mH()) {
+      d.u(aa.getContext(), "libvoipCodec_v7a.so");
+    }
     boolean bool = nativeInit();
     mIsInit = bool;
     if (!bool)
     {
       DynamicConfigStorage.setValue(DynamicConfigStorage.PREF_KEY_IS_ENABLE_MM_BITMAP_FACTORY, false);
-      u.w("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "MMBitmapFactory initialize failed, force use system BitmapFactory instead.");
+      v.w("MicroMsg.MMBitmapFactory", "MMBitmapFactory initialize failed, force use system BitmapFactory instead.");
     }
     return mIsInit;
   }
@@ -665,6 +821,18 @@ public class MMBitmapFactory
   private static native Bitmap nativeDecodeStream(InputStream paramInputStream, byte[] paramArrayOfByte, Rect paramRect, BitmapFactory.Options paramOptions, DecodeResultLogger paramDecodeResultLogger);
   
   private static native boolean nativeInit();
+  
+  private static native int nativePinBitmap(Bitmap paramBitmap);
+  
+  private static native int nativeUnPinBitmap(Bitmap paramBitmap);
+  
+  public static Bitmap pinBitmap(Bitmap paramBitmap)
+  {
+    if ((paramBitmap != null) && (!paramBitmap.isRecycled()) && (nativePinBitmap(paramBitmap) < 0)) {
+      v.e("MicroMsg.MMBitmapFactory", "pinBitmap failed");
+    }
+    return paramBitmap;
+  }
   
   private static void setDensityFromOptions(Bitmap paramBitmap, BitmapFactory.Options paramOptions)
   {
@@ -717,9 +885,17 @@ public class MMBitmapFactory
     {
       DynamicConfigStorage.setValue(DynamicConfigStorage.PREF_KEY_IS_ENABLE_MM_BITMAP_FACTORY, paramBoolean);
       if (!paramBoolean) {
-        u.i("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "MMBitmapFactory is switched off, use system BitmapFactory directly.");
+        v.i("MicroMsg.MMBitmapFactory", "MMBitmapFactory is switched off, use system BitmapFactory directly.");
       }
     }
+  }
+  
+  public static Bitmap unPinBitmap(Bitmap paramBitmap)
+  {
+    if ((paramBitmap != null) && (!paramBitmap.isRecycled()) && (nativeUnPinBitmap(paramBitmap) < 0)) {
+      v.e("MicroMsg.MMBitmapFactory", "unpinBitmap failed");
+    }
+    return paramBitmap;
   }
   
   public static class DecodeResultLogger
@@ -792,36 +968,94 @@ public class MMBitmapFactory
   {
     public static String PREF_KEY_IS_ENABLE_MM_BITMAP_FACTORY = "pref_key_is_enable_MMBitmapFactory";
     private static final String PREF_NAME = "pref_MMBitmapFactory_dyncfg";
-    private static SharedPreferences mPref = y.getContext().getSharedPreferences("pref_MMBitmapFactory_dyncfg", 4);
+    private static SharedPreferences mPref = aj.aS(aa.getContext(), "pref_MMBitmapFactory_dyncfg");
     
     public static boolean getValue(String paramString, boolean paramBoolean)
     {
       
       if (mPref == null)
       {
-        u.w("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "SharedPreferences in DynamicConfigStorage initialize failed.");
+        v.w("MicroMsg.MMBitmapFactory", "SharedPreferences in DynamicConfigStorage initialize failed.");
         return paramBoolean;
       }
       paramBoolean = mPref.getBoolean(paramString, paramBoolean);
-      u.d("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "DynamicConfigStorage, getValue:%b", new Object[] { Boolean.valueOf(paramBoolean) });
+      v.d("MicroMsg.MMBitmapFactory", "DynamicConfigStorage, getValue:%b", new Object[] { Boolean.valueOf(paramBoolean) });
       return paramBoolean;
     }
     
     private static void reload()
     {
-      mPref = y.getContext().getSharedPreferences("pref_MMBitmapFactory_dyncfg", 4);
+      mPref = aj.aS(aa.getContext(), "pref_MMBitmapFactory_dyncfg");
     }
     
     public static void setValue(String paramString, boolean paramBoolean)
     {
       if (mPref == null)
       {
-        u.w("!44@/B4Tb64lLpIl/e1CO6ipq6cK13ewMndTUtzh8/WBq20=", "SharedPreferences in DynamicConfigStorage initialize failed.");
+        v.w("MicroMsg.MMBitmapFactory", "SharedPreferences in DynamicConfigStorage initialize failed.");
         return;
       }
       SharedPreferences.Editor localEditor = mPref.edit();
       localEditor.putBoolean(paramString, paramBoolean);
       localEditor.commit();
+    }
+  }
+  
+  public static class HEVCKVStatHelper
+  {
+    private static final String KVSTAT_STRING_SEPERATOR = ",";
+    public static final int SCENE_SNS = 0;
+    private static final long STAT_INTERVAL = 60000L;
+    private static long mLastStatTick = 0L;
+    
+    public static String getKVStatString(Object paramObject, int paramInt, long paramLong, BitmapFactory.Options paramOptions, MMBitmapFactory.DecodeResultLogger paramDecodeResultLogger)
+    {
+      StringBuilder localStringBuilder = new StringBuilder(128);
+      long l2 = -1L;
+      long l1;
+      if ((paramObject instanceof File))
+      {
+        paramObject = (File)paramObject;
+        l1 = l2;
+        if (((File)paramObject).exists())
+        {
+          l1 = l2;
+          if (((File)paramObject).isFile()) {
+            l1 = ((File)paramObject).length();
+          }
+        }
+      }
+      for (;;)
+      {
+        localStringBuilder.append(paramInt).append(",").append(mDecodeResultCode).append(",").append(l1).append(",").append(paramLong).append(",").append(be.li(outMimeType));
+        return localStringBuilder.toString();
+        if ((paramObject instanceof String))
+        {
+          paramObject = (String)paramObject;
+          l1 = l2;
+          if (FileOp.aB((String)paramObject)) {
+            l1 = FileOp.jc((String)paramObject);
+          }
+        }
+        else
+        {
+          l1 = l2;
+          if ((paramObject instanceof byte[])) {
+            l1 = ((byte[])paramObject).length;
+          }
+        }
+      }
+    }
+    
+    public static boolean isTimeToStat()
+    {
+      long l = be.Gq();
+      if (l - mLastStatTick > 60000L)
+      {
+        mLastStatTick = l;
+        return true;
+      }
+      return false;
     }
   }
   
@@ -846,17 +1080,15 @@ public class MMBitmapFactory
       Object localObject2 = "";
       long l2 = -1L;
       Object localObject1;
-      long l1;
       if ((paramObject instanceof File))
       {
         localObject1 = (File)paramObject;
         if ((!((File)localObject1).exists()) || (!((File)localObject1).isFile())) {
           break label314;
         }
-        paramObject = ay.ky(g.g((File)localObject1));
-        l1 = ((File)localObject1).length();
+        paramObject = be.li(g.g((File)localObject1));
       }
-      for (;;)
+      for (long l1 = ((File)localObject1).length();; l1 = -1L)
       {
         localObject1 = paramObject;
         for (;;)
@@ -866,9 +1098,9 @@ public class MMBitmapFactory
           if ((paramObject instanceof String))
           {
             String str2 = (String)paramObject;
-            l1 = l2;
             localObject1 = localObject2;
-            if (FileOp.ax(str2))
+            l1 = l2;
+            if (FileOp.aB(str2))
             {
               localObject1 = null;
               try
@@ -881,21 +1113,21 @@ public class MMBitmapFactory
                 String str1;
                 paramObject = paramObject;
                 paramObject = null;
-                l1 = l2;
                 localObject1 = localObject2;
+                l1 = l2;
                 if (paramObject == null) {
                   continue;
                 }
                 try
                 {
                   ((InputStream)paramObject).close();
-                  l1 = l2;
                   localObject1 = localObject2;
+                  l1 = l2;
                 }
                 catch (Exception paramObject)
                 {
-                  l1 = l2;
                   localObject1 = localObject2;
+                  l1 = l2;
                 }
                 continue;
               }
@@ -911,12 +1143,12 @@ public class MMBitmapFactory
             {
               ((InputStream)localObject1).close();
               throw ((Throwable)paramObject);
-              l1 = l2;
               localObject1 = localObject2;
+              l1 = l2;
               if ((paramObject instanceof byte[]))
               {
                 paramObject = (byte[])paramObject;
-                localObject1 = g.m((byte[])paramObject);
+                localObject1 = g.j((byte[])paramObject);
                 l1 = paramObject.length;
               }
             }
@@ -927,7 +1159,6 @@ public class MMBitmapFactory
           }
         }
         label314:
-        l1 = -1L;
         paramObject = "";
       }
     }

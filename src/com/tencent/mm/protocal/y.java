@@ -1,134 +1,114 @@
 package com.tencent.mm.protocal;
 
-import android.os.Binder;
-import android.os.IBinder;
-import android.os.IInterface;
-import android.os.Parcel;
+import com.tencent.mm.pointers.PByteArray;
+import com.tencent.mm.protocal.b.afs;
+import com.tencent.mm.protocal.b.aft;
+import com.tencent.mm.protocal.b.amb;
+import com.tencent.mm.protocal.b.ami;
+import com.tencent.mm.protocal.b.dg;
+import com.tencent.mm.protocal.b.lf;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.f;
+import com.tencent.mm.sdk.platformtools.v;
 
-public abstract interface y
-  extends IInterface
+public final class y
 {
-  public abstract byte[] tR();
-  
-  public abstract byte[] tS();
-  
-  public abstract int x(byte[] paramArrayOfByte);
-  
-  public static abstract class a
-    extends Binder
-    implements y
+  public static final class a
+    extends k.c
+    implements k.a
   {
-    public a()
+    public byte[] jrU;
+    public afs jsI = new afs();
+    
+    public final int getCmdId()
     {
-      attachInterface(this, "com.tencent.mm.protocal.MMSyncCheckCoder_AIDL");
+      return 0;
     }
     
-    public IBinder asBinder()
+    public final byte[] tZ()
     {
-      return this;
+      int j = -1;
+      jsg = ac.aYs();
+      jsI.jzd = new ami().aV(be.baN());
+      jsI.kfq = k.a(this);
+      jsI.kaM = f.kuF;
+      lf locallf = new lf();
+      jGE = 713;
+      Object localObject2 = new PByteArray();
+      Object localObject1 = new PByteArray();
+      int k = MMProtocalJni.generateECKey(jGE, (PByteArray)localObject2, (PByteArray)localObject1);
+      byte[] arrayOfByte = value;
+      localObject2 = value;
+      int m;
+      int i;
+      if (localObject2 != null)
+      {
+        localObject1 = localObject2;
+        jrU = ((byte[])localObject1);
+        m = jGE;
+        if (arrayOfByte != null) {
+          break label245;
+        }
+        i = -1;
+        label141:
+        if (localObject2 != null) {
+          break label252;
+        }
+      }
+      for (;;)
+      {
+        v.d("MicroMsg.MMReg2.Req", "summerecdh nid:%d ret:%d, pub len: %d, pri len:%d, pub:%s, pri:%s", new Object[] { Integer.valueOf(m), Integer.valueOf(k), Integer.valueOf(i), Integer.valueOf(j), be.O(arrayOfByte), be.O((byte[])localObject2) });
+        jxa = new ami().aV(arrayOfByte);
+        jsI.jxe = locallf;
+        return jsI.toByteArray();
+        localObject1 = new byte[0];
+        break;
+        label245:
+        i = arrayOfByte.length;
+        break label141;
+        label252:
+        j = localObject2.length;
+      }
     }
     
-    public boolean onTransact(int paramInt1, Parcel paramParcel1, Parcel paramParcel2, int paramInt2)
+    public final int ua()
     {
-      switch (paramInt1)
-      {
-      default: 
-        return super.onTransact(paramInt1, paramParcel1, paramParcel2, paramInt2);
-      case 1598968902: 
-        paramParcel2.writeString("com.tencent.mm.protocal.MMSyncCheckCoder_AIDL");
-        return true;
-      case 1: 
-        paramParcel1.enforceInterface("com.tencent.mm.protocal.MMSyncCheckCoder_AIDL");
-        paramParcel1 = tR();
-        paramParcel2.writeNoException();
-        paramParcel2.writeByteArray(paramParcel1);
-        return true;
-      case 2: 
-        paramParcel1.enforceInterface("com.tencent.mm.protocal.MMSyncCheckCoder_AIDL");
-        paramParcel1 = tS();
-        paramParcel2.writeNoException();
-        paramParcel2.writeByteArray(paramParcel1);
-        return true;
-      }
-      paramParcel1.enforceInterface("com.tencent.mm.protocal.MMSyncCheckCoder_AIDL");
-      paramInt1 = x(paramParcel1.createByteArray());
-      paramParcel2.writeNoException();
-      paramParcel2.writeInt(paramInt1);
-      return true;
+      return 126;
+    }
+  }
+  
+  public static final class b
+    extends k.d
+    implements k.b
+  {
+    public byte[] cdE;
+    public byte[] jrW;
+    public int jrX = 0;
+    public aft jsJ = new aft();
+    
+    public final int D(byte[] paramArrayOfByte)
+    {
+      jrX = 0;
+      jsJ = ((aft)new aft().au(paramArrayOfByte));
+      k.a(this, jsJ.kfH);
+      jrX = 0;
+      return jsJ.kfH.jxr;
     }
     
-    private static final class a
-      implements y
+    public final void aQ(byte[] paramArrayOfByte)
     {
-      private IBinder mRemote;
-      
-      public a(IBinder paramIBinder)
+      if (paramArrayOfByte != null) {}
+      for (;;)
       {
-        mRemote = paramIBinder;
+        cdE = paramArrayOfByte;
+        return;
+        paramArrayOfByte = new byte[0];
       }
-      
-      public final IBinder asBinder()
-      {
-        return mRemote;
-      }
-      
-      public final byte[] tR()
-      {
-        Parcel localParcel1 = Parcel.obtain();
-        Parcel localParcel2 = Parcel.obtain();
-        try
-        {
-          localParcel1.writeInterfaceToken("com.tencent.mm.protocal.MMSyncCheckCoder_AIDL");
-          mRemote.transact(1, localParcel1, localParcel2, 0);
-          localParcel2.readException();
-          byte[] arrayOfByte = localParcel2.createByteArray();
-          return arrayOfByte;
-        }
-        finally
-        {
-          localParcel2.recycle();
-          localParcel1.recycle();
-        }
-      }
-      
-      public final byte[] tS()
-      {
-        Parcel localParcel1 = Parcel.obtain();
-        Parcel localParcel2 = Parcel.obtain();
-        try
-        {
-          localParcel1.writeInterfaceToken("com.tencent.mm.protocal.MMSyncCheckCoder_AIDL");
-          mRemote.transact(2, localParcel1, localParcel2, 0);
-          localParcel2.readException();
-          byte[] arrayOfByte = localParcel2.createByteArray();
-          return arrayOfByte;
-        }
-        finally
-        {
-          localParcel2.recycle();
-          localParcel1.recycle();
-        }
-      }
-      
-      public final int x(byte[] paramArrayOfByte)
-      {
-        Parcel localParcel1 = Parcel.obtain();
-        Parcel localParcel2 = Parcel.obtain();
-        try
-        {
-          localParcel1.writeInterfaceToken("com.tencent.mm.protocal.MMSyncCheckCoder_AIDL");
-          localParcel1.writeByteArray(paramArrayOfByte);
-          mRemote.transact(3, localParcel1, localParcel2, 0);
-          localParcel2.readException();
-          int i = localParcel2.readInt();
-          return i;
-        }
-        finally
-        {
-          localParcel2.recycle();
-          localParcel1.recycle();
-        }
-      }
+    }
+    
+    public final int getCmdId()
+    {
+      return 0;
     }
   }
 }

@@ -10,7 +10,7 @@ final class SecurityImage$a$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    kzQ.onClick(paramDialogInterface, paramInt);
+    iGf.onClick(paramDialogInterface, paramInt);
   }
 }
 

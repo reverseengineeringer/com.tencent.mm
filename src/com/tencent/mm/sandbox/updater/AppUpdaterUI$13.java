@@ -2,7 +2,7 @@ package com.tencent.mm.sandbox.updater;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class AppUpdaterUI$13
   implements DialogInterface.OnCancelListener
@@ -11,9 +11,9 @@ final class AppUpdaterUI$13
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    u.d("!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/", "click cancel button");
-    AppUpdaterUI.a(jTb, 12);
-    AppUpdaterUI.i(jTb);
+    v.d("MicroMsg.AppUpdaterUI", "click cancel button");
+    AppUpdaterUI.a(ksv, 12);
+    AppUpdaterUI.i(ksv);
   }
 }
 

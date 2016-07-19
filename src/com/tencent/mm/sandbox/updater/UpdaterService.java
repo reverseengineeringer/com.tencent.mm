@@ -12,11 +12,11 @@ import android.os.Build.VERSION;
 import android.os.IBinder;
 import com.jg.JgClassChecked;
 import com.tencent.mm.sandbox.c;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ad;
 import com.tencent.mm.sdk.platformtools.ah;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 import java.util.Collection;
 import java.util.HashMap;
@@ -27,47 +27,47 @@ import java.util.Map;
 public class UpdaterService
   extends Service
 {
-  private static UpdaterService jUo = null;
-  static final long jUq = 1800000L;
-  private boolean bWL = false;
-  Map jUp = new HashMap();
-  private af jUr = new af(new af.a()
+  private static UpdaterService ktP = null;
+  static final long ktR = 1800000L;
+  private boolean bQo = false;
+  Map<Integer, a> ktQ = new HashMap();
+  private ah ktS = new ah(new ah.a()
   {
-    public final boolean lj()
+    public final boolean jK()
     {
       return !UpdaterService.a(UpdaterService.this);
     }
   }, true);
-  private a jUs = null;
+  private a ktT = null;
   
-  public static void aUk()
+  public static void aZj()
   {
-    u.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "UpdaterService stopInstance()");
-    if (jUo != null) {
-      jUo.aUm();
+    v.i("MicroMsg.UpdaterService", "UpdaterService stopInstance()");
+    if (ktP != null) {
+      ktP.aZl();
     }
   }
   
-  public static UpdaterService aUl()
+  public static UpdaterService aZk()
   {
-    return jUo;
+    return ktP;
   }
   
-  private boolean aUm()
+  private boolean aZl()
   {
-    if (jUp.size() > 0)
+    if (ktQ.size() > 0)
     {
-      Iterator localIterator = jUp.values().iterator();
+      Iterator localIterator = ktQ.values().iterator();
       while (localIterator.hasNext()) {
         if (((a)localIterator.next()).isBusy())
         {
-          u.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "checkAndTryStopSelf, dont stop, some download mgr still busy");
+          v.i("MicroMsg.UpdaterService", "checkAndTryStopSelf, dont stop, some download mgr still busy");
           return false;
         }
       }
     }
-    u.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "checkAndTryStopSelf, UpdaterService killed self");
-    ab.e(new Runnable()
+    v.i("MicroMsg.UpdaterService", "checkAndTryStopSelf, UpdaterService killed self");
+    ad.e(new Runnable()
     {
       public final void run()
       {
@@ -77,7 +77,7 @@ public class UpdaterService
     return true;
   }
   
-  private void h(Intent paramIntent)
+  private void i(Intent paramIntent)
   {
     if (paramIntent == null) {}
     boolean bool;
@@ -88,13 +88,13 @@ public class UpdaterService
       {
         return;
         int i = paramIntent.getIntExtra("intent_extra_download_type", 0);
-        u.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "handleCommand, downloadType = %d", new Object[] { Integer.valueOf(i) });
-        locala = (a)jUp.get(Integer.valueOf(i));
+        v.i("MicroMsg.UpdaterService", "handleCommand, downloadType = %d", new Object[] { Integer.valueOf(i) });
+        locala = (a)ktQ.get(Integer.valueOf(i));
       } while (locala == null);
-      bool = locala.H(paramIntent);
-      u.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "handleCommand ret = %b", new Object[] { Boolean.valueOf(bool) });
+      bool = locala.M(paramIntent);
+      v.i("MicroMsg.UpdaterService", "handleCommand ret = %b", new Object[] { Boolean.valueOf(bool) });
     } while (bool);
-    aUm();
+    aZl();
   }
   
   public IBinder onBind(Intent paramIntent)
@@ -105,65 +105,66 @@ public class UpdaterService
   public void onCreate()
   {
     super.onCreate();
-    u.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "onCreate");
-    c.c(hashCode(), this);
-    jUo = this;
-    jUp.put(Integer.valueOf(0), i.a.jUn);
-    jUp.put(Integer.valueOf(1), d.aTW());
-    MMActivity.dS(this);
-    jUr.ds(jUq);
+    v.i("MicroMsg.UpdaterService", "onCreate");
+    c.f(hashCode(), this);
+    ktP = this;
+    ktQ.put(Integer.valueOf(0), i.a.ktO);
+    ktQ.put(Integer.valueOf(1), d.aYT());
+    ktQ.put(Integer.valueOf(2), d.aYT());
+    MMActivity.dT(this);
+    ktS.dJ(ktR);
     IntentFilter localIntentFilter = new IntentFilter();
     localIntentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
-    jUs = new a();
-    registerReceiver(jUs, localIntentFilter);
+    ktT = new a();
+    registerReceiver(ktT, localIntentFilter);
   }
   
   public void onDestroy()
   {
-    u.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "onDestroy");
-    jUr.aUF();
-    if (jUs != null) {
-      unregisterReceiver(jUs);
+    v.i("MicroMsg.UpdaterService", "onDestroy");
+    ktS.aZJ();
+    if (ktT != null) {
+      unregisterReceiver(ktT);
     }
-    if (bWL) {
+    if (bQo) {
       stopForeground(true);
     }
-    Iterator localIterator = jUp.values().iterator();
+    Iterator localIterator = ktQ.values().iterator();
     while (localIterator.hasNext()) {
       ((a)localIterator.next()).onDestroy();
     }
-    jUp.clear();
-    jUo = null;
-    c.d(hashCode(), this);
+    ktQ.clear();
+    ktP = null;
+    c.g(hashCode(), this);
     super.onDestroy();
   }
   
   public void onStart(Intent paramIntent, int paramInt)
   {
-    u.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "onStart intent = %s", new Object[] { paramIntent });
-    h(paramIntent);
+    v.i("MicroMsg.UpdaterService", "onStart intent = %s", new Object[] { paramIntent });
+    i(paramIntent);
   }
   
   public int onStartCommand(Intent paramIntent, int paramInt1, int paramInt2)
   {
-    u.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "onStartCommand intent = %s", new Object[] { paramIntent });
+    v.i("MicroMsg.UpdaterService", "onStartCommand intent = %s", new Object[] { paramIntent });
     if (paramIntent != null)
     {
       if (!paramIntent.getBooleanExtra("intent_extra_run_in_foreground", false)) {
         break label109;
       }
-      u.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "runServiceInForground");
+      v.i("MicroMsg.UpdaterService", "runServiceInForground");
       PendingIntent localPendingIntent = PendingIntent.getService(this, 0, new Intent(), 0);
       startForeground(0, new Notification.Builder(this).setTicker("updater service running forground").setWhen(System.currentTimeMillis()).setContentTitle("Updater Service").setContentText("updater service running forground").setContentIntent(localPendingIntent).getNotification());
     }
-    for (bWL = true;; bWL = true)
+    for (bQo = true;; bQo = true)
     {
       label109:
       do
       {
-        h(paramIntent);
+        i(paramIntent);
         return 2;
-      } while ((Build.VERSION.SDK_INT >= 18) || (bWL));
+      } while ((Build.VERSION.SDK_INT >= 18) || (bQo));
       startForeground(64222, new Notification());
     }
   }
@@ -174,15 +175,15 @@ public class UpdaterService
   {
     public final void onReceive(Context paramContext, Intent paramIntent)
     {
-      if (UpdaterService.aUl() != null)
+      if (UpdaterService.aZk() != null)
       {
-        paramIntent = UpdaterService.aUl();
-        boolean bool = ah.dB(paramContext);
-        if (jUp.size() > 0)
+        paramIntent = UpdaterService.aZk();
+        boolean bool = ak.dC(paramContext);
+        if (ktQ.size() > 0)
         {
-          paramContext = jUp.values().iterator();
+          paramContext = ktQ.values().iterator();
           while (paramContext.hasNext()) {
-            ((a)paramContext.next()).gF(bool);
+            ((a)paramContext.next()).hd(bool);
           }
         }
       }

@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 509
+    .line 505
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
     .locals 1
 
     .prologue
-    .line 531
+    .line 527
     const/4 v0, 0x0
 
     return-object v0
@@ -41,10 +41,10 @@
     .locals 5
 
     .prologue
-    .line 512
+    .line 508
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
-    .line 515
+    .line 511
     const/16 v0, -0x4bd
 
     :try_start_0
@@ -56,19 +56,19 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 520
+    .line 516
     :goto_0
     invoke-virtual {p0}, Lcom/tencent/mm/booter/CoreService$InnerService;->stopSelf()V
 
-    .line 521
+    .line 517
     return-void
 
-    .line 516
+    .line 512
     :catch_0
     move-exception v0
 
-    .line 517
-    const-string/jumbo v1, "!32@/B4Tb64lLpIzvC/moQitzBn6RBAuk+sd"
+    .line 513
+    const-string/jumbo v1, "MicroMsg.CoreService"
 
     const-string/jumbo v2, "set service for push exception:%s."
 
@@ -80,7 +80,7 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -89,14 +89,14 @@
     .locals 1
 
     .prologue
-    .line 525
+    .line 521
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/booter/CoreService$InnerService;->stopForeground(Z)V
 
-    .line 526
+    .line 522
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
-    .line 527
+    .line 523
     return-void
 .end method

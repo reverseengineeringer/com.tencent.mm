@@ -1,9 +1,9 @@
 package com.tencent.mm.network;
 
-import com.tencent.mm.sdk.platformtools.at;
+import com.tencent.mm.sdk.platformtools.az;
 
 final class r$5
-  extends at
+  extends az<Object>
 {
   r$5(r paramr)
   {
@@ -12,7 +12,7 @@ final class r$5
   
   protected final Object run()
   {
-    r.a(ciT);
+    r.a(cek);
     return null;
   }
 }

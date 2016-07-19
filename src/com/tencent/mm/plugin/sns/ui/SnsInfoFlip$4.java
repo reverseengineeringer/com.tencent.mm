@@ -7,7 +7,7 @@ final class SnsInfoFlip$4
   
   public final void run()
   {
-    SnsInfoFlip.d(heR).fd(false);
+    SnsInfoFlip.d(htI).fm(false);
   }
 }
 

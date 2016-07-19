@@ -27,7 +27,7 @@
 
 
 # virtual methods
-.method public final ax()Ljava/lang/Object;
+.method public final aw()Ljava/lang/Object;
     .locals 1
 
     .prologue

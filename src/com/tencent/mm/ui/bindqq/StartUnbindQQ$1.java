@@ -10,8 +10,7 @@ final class StartUnbindQQ$1
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    kPF.age();
-    kPF.finish();
+    loT.finish();
     return true;
   }
 }

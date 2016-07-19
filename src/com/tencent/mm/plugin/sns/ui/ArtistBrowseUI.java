@@ -5,98 +5,97 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.ah.t;
+import com.tencent.mm.ak.n;
+import com.tencent.mm.ak.t;
 import com.tencent.mm.modelsfs.FileOp;
 import com.tencent.mm.modelsns.a;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.ai;
-import com.tencent.mm.plugin.sns.d.am;
-import com.tencent.mm.plugin.sns.d.as;
-import com.tencent.mm.plugin.sns.d.at;
-import com.tencent.mm.plugin.sns.d.g;
-import com.tencent.mm.plugin.sns.data.h;
-import com.tencent.mm.plugin.sns.h.i;
-import com.tencent.mm.plugin.sns.h.j;
-import com.tencent.mm.protocal.b.add;
-import com.tencent.mm.protocal.b.atp;
-import com.tencent.mm.protocal.b.iv;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.ah;
+import com.tencent.mm.plugin.sns.e.al;
+import com.tencent.mm.plugin.sns.e.ar;
+import com.tencent.mm.plugin.sns.e.as;
+import com.tencent.mm.plugin.sns.e.g;
+import com.tencent.mm.plugin.sns.i.j;
+import com.tencent.mm.protocal.b.adw;
+import com.tencent.mm.protocal.b.auf;
+import com.tencent.mm.protocal.b.je;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.LinkedList;
 import java.util.List;
 
 public class ArtistBrowseUI
   extends SnsBaseGalleryUI
-  implements o.a
+  implements q.a
 {
-  private String eJi = "";
-  private String gVY = "";
+  private String eQW = "";
+  private String hju = "";
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    eJi = getIntent().getStringExtra("sns_gallery_artist_lan");
+    eQW = getIntent().getStringExtra("sns_gallery_artist_lan");
     int i = getIntent().getIntExtra("sns_gallery_position", 0);
-    t.BA();
-    gVY = com.tencent.mm.ah.n.Bx();
+    t.BE();
+    hju = n.BA();
     h(false, 2);
-    hbK = new SnsInfoFlip(this);
-    List localList = ai.bo(eJi, gVY);
-    hbK.setShowTitle(true);
-    hbK.a(localList, "", i, hbF, this);
-    addView(hbK);
+    hqA = new SnsInfoFlip(this);
+    List localList = ah.bw(eQW, hju);
+    hqA.htk = true;
+    hqA.a(localList, "", i, hqv, this);
+    addView(hqA);
     b(new MenuItem.OnMenuItemClickListener()
     {
       public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
       {
-        hbH.aAZ();
+        hqx.aDU();
         return true;
       }
     });
-    qb(2131433003);
-    hh(false);
-    hbF.setCallBack(new n.a()
+    rR(2131235598);
+    hF(false);
+    hqv.hlr = new p.a()
     {
-      public final void aAO()
+      public final void aDE()
       {
-        Object localObject1 = hbK.getCntMedia();
+        Object localObject1 = hqA.aDT();
         if (localObject1 == null) {}
         do
         {
           return;
-          u.d("!32@/B4Tb64lLpJgMlxlfB4/di1XaeIJZ0CZ", "set bg the meida id " + iXW);
-          localObject2 = a.dQ(723);
-          ((a)localObject2).jf(eiq);
-          ((a)localObject2).CV();
-        } while (!FileOp.ax(am.bp(ad.ayV(), iXW) + h.k((add)localObject1)));
-        Object localObject2 = ad.azf();
+          v.d("MicroMsg.ArtistBrowseUI", "set bg the meida id " + jvB);
+          localObject2 = a.ex(723);
+          ((a)localObject2).jx(emu);
+          ((a)localObject2).Dg();
+        } while (!FileOp.aB(al.bx(ad.aBw(), jvB) + com.tencent.mm.plugin.sns.data.i.k((adw)localObject1)));
+        Object localObject2 = ad.aBF();
         Object localObject3;
         String str;
-        if ((((as)localObject2).ayN() != null) && (!((as)localObject2).ayN().equals("")))
+        if ((((ar)localObject2).aBo() != null) && (!((ar)localObject2).aBo().equals("")))
         {
-          localObject3 = am.bp(ad.ayV(), iXW) + h.k((add)localObject1);
-          str = am.bp(ad.ayV(), ((as)localObject2).ayN());
-          if (!FileOp.ax((String)localObject3)) {
+          localObject3 = al.bx(ad.aBw(), jvB) + com.tencent.mm.plugin.sns.data.i.k((adw)localObject1);
+          str = al.bx(ad.aBw(), ((ar)localObject2).aBo());
+          if (!FileOp.aB((String)localObject3)) {
             break label408;
           }
-          u.d("!32@/B4Tb64lLpKIXxD1/Zp7n65IPQkp1S0J", "bg file is exist!'");
-          FileOp.iO(str);
-          FileOp.deleteFile(str + ((as)localObject2).ayN() + "bg_");
-          FileOp.deleteFile(str + ((as)localObject2).ayN() + "tbg_");
-          FileOp.o((String)localObject3, str + ((as)localObject2).ayN() + "bg_");
+          v.d("MicroMsg.UploadManager", "bg file is exist!'");
+          FileOp.jf(str);
+          FileOp.deleteFile(str + ((ar)localObject2).aBo() + "bg_");
+          FileOp.deleteFile(str + ((ar)localObject2).aBo() + "tbg_");
+          FileOp.n((String)localObject3, str + ((ar)localObject2).aBo() + "bg_");
         }
         for (;;)
         {
-          localObject3 = ad.azk();
-          Object localObject4 = ((as)localObject2).ayN();
-          str = iXW;
-          localObject4 = ((j)localObject3).vr((String)localObject4);
+          localObject3 = ad.aBK();
+          Object localObject4 = ((ar)localObject2).aBo();
+          str = jvB;
+          localObject4 = ((j)localObject3).wD((String)localObject4);
           field_bgId = str;
-          ((j)localObject3).c((i)localObject4);
-          ((as)localObject2).azG();
-          localObject2 = new at(7);
-          jzz = 1;
-          aIv.jMx.jhw.add(localObject1);
-          ((at)localObject2).lF(2);
-          ((at)localObject2).commit();
+          ((j)localObject3).c((com.tencent.mm.plugin.sns.i.i)localObject4);
+          ((ar)localObject2).aCh();
+          localObject2 = new as(7);
+          jYm = 1;
+          auP.kli.jFv.add(localObject1);
+          ((as)localObject2).mP(2);
+          ((as)localObject2).commit();
           localObject1 = new Intent();
           ((Intent)localObject1).setClass(ArtistBrowseUI.this, SettingSnsBackgroundUI.class);
           ((Intent)localObject1).setFlags(536870912);
@@ -105,30 +104,30 @@ public class ArtistBrowseUI
           finish();
           return;
           label408:
-          FileOp.deleteFile(str + ((as)localObject2).ayN() + "bg_");
-          FileOp.deleteFile(str + ((as)localObject2).ayN() + "tbg_");
-          u.e("!32@/B4Tb64lLpKIXxD1/Zp7n65IPQkp1S0J", "bg file is not exist! wait to down it");
+          FileOp.deleteFile(str + ((ar)localObject2).aBo() + "bg_");
+          FileOp.deleteFile(str + ((ar)localObject2).aBo() + "tbg_");
+          v.e("MicroMsg.UploadManager", "bg file is not exist! wait to down it");
         }
       }
-    });
+    };
   }
   
-  public final void an(String paramString, int paramInt)
+  public final void ap(String paramString, int paramInt)
   {
-    if (hbK != null) {
-      hbK.aBT();
+    if (hqA != null) {
+      hqA.aET();
     }
   }
   
-  public final void ao(String paramString, int paramInt) {}
+  public final void aq(String paramString, int paramInt) {}
   
   public boolean dispatchKeyEvent(KeyEvent paramKeyEvent)
   {
     if ((paramKeyEvent.getKeyCode() == 4) && (paramKeyEvent.getAction() == 0))
     {
-      u.d("!32@/B4Tb64lLpJgMlxlfB4/di1XaeIJZ0CZ", "dispatchKeyEvent");
+      v.d("MicroMsg.ArtistBrowseUI", "dispatchKeyEvent");
       paramKeyEvent = new Intent();
-      paramKeyEvent.putExtra("sns_cmd_list", hbH.gYA);
+      paramKeyEvent.putExtra("sns_cmd_list", hqx.hlM);
       setResult(-1, paramKeyEvent);
       finish();
       return true;
@@ -138,40 +137,40 @@ public class ArtistBrowseUI
   
   protected final int getLayoutId()
   {
-    return 2131362870;
+    return 2130904432;
   }
   
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
   {
-    u.i("!32@/B4Tb64lLpJgMlxlfB4/di1XaeIJZ0CZ", "onAcvityResult requestCode:" + paramInt1);
+    v.i("MicroMsg.ArtistBrowseUI", "onAcvityResult requestCode:" + paramInt1);
     if (paramInt2 != -1) {
       return;
     }
     paramInt1 = paramIntent.getIntExtra("sns_gallery_op_id", 0);
-    hbH.lU(paramInt1);
+    hqx.nh(paramInt1);
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    Gb();
+    Gy();
   }
   
   public void onDestroy()
   {
-    if (hbK != null)
+    if (hqA != null)
     {
-      hbK.aBU();
-      hbK.onDestroy();
+      hqA.aEU();
+      hqA.onDestroy();
     }
-    ad.azg().L(this);
+    ad.aBG().G(this);
     super.onDestroy();
   }
   
   protected void onPause()
   {
-    if (hbK != null) {
-      hbK.onPause();
+    if (hqA != null) {
+      hqA.onPause();
     }
     super.onPause();
   }
@@ -179,8 +178,8 @@ public class ArtistBrowseUI
   public void onResume()
   {
     super.onResume();
-    if (hbK != null) {
-      hbK.aBT();
+    if (hqA != null) {
+      hqA.aET();
     }
   }
 }

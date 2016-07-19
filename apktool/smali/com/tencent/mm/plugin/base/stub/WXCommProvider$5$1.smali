@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/base/stub/WXCommProvider$5;->JC()Ljava/lang/Boolean;
+    value = Lcom/tencent/mm/plugin/base/stub/WXCommProvider$5;->Kl()Ljava/lang/Boolean;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic cBo:Lcom/tencent/mm/plugin/base/stub/WXCommProvider$5;
+.field final synthetic cyj:Lcom/tencent/mm/plugin/base/stub/WXCommProvider$5;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 544
-    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$5$1;->cBo:Lcom/tencent/mm/plugin/base/stub/WXCommProvider$5;
+    .line 588
+    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$5$1;->cyj:Lcom/tencent/mm/plugin/base/stub/WXCommProvider$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,8 +42,8 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 547
-    const-string/jumbo v0, "!32@/B4Tb64lLpLgtXhygZpWnw7CB4WuM5ph"
+    .line 591
+    const-string/jumbo v0, "MicroMsg.WXCommProvider"
 
     const-string/jumbo v1, "checkIsLogin onSceneEnd() hasLogin:%s"
 
@@ -51,7 +51,7 @@
 
     const/4 v3, 0x0
 
-    sget-boolean v4, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cBi:Z
+    sget-boolean v4, Lcom/tencent/mm/plugin/base/stub/WXCommProvider;->cyd:Z
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -59,17 +59,17 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 548
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$5$1;->cBo:Lcom/tencent/mm/plugin/base/stub/WXCommProvider$5;
+    .line 592
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$5$1;->cyj:Lcom/tencent/mm/plugin/base/stub/WXCommProvider$5;
 
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$5;->at(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/base/stub/WXCommProvider$5;->aO(Ljava/lang/Object;)V
 
-    .line 549
+    .line 593
     return-void
 .end method

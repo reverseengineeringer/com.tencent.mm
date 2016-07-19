@@ -1,8 +1,52 @@
 package ct;
 
-public abstract interface o
+import android.util.SparseArray;
+import java.util.concurrent.ScheduledExecutorService;
+
+public abstract class o
 {
-  public abstract void b();
+  private static o a;
+  
+  public static o a()
+  {
+    try
+    {
+      if (a == null) {
+        a = new a();
+      }
+      o localo = a;
+      return localo;
+    }
+    finally {}
+  }
+  
+  public abstract void a(Runnable paramRunnable);
+  
+  static final class a
+    extends o
+  {
+    private ScheduledExecutorService a = null;
+    
+    public a()
+    {
+      new SparseArray();
+    }
+    
+    public final void a(Runnable paramRunnable)
+    {
+      if (paramRunnable == null) {}
+      for (;;)
+      {
+        try
+        {
+          az.b();
+          return;
+        }
+        finally {}
+        a.execute(paramRunnable);
+      }
+    }
+  }
 }
 
 /* Location:

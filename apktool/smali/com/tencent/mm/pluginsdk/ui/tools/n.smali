@@ -12,17 +12,17 @@
 
 
 # instance fields
-.field private ggv:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+.field private gqU:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
-.field public iTf:Z
+.field public jqs:Z
 
-.field iTg:I
+.field jqt:I
 
-.field iTh:I
+.field jqu:I
 
-.field iTi:Lcom/tencent/mm/pluginsdk/ui/tools/n$a;
+.field jqv:Lcom/tencent/mm/pluginsdk/ui/tools/n$a;
 
-.field private iTj:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
+.field private jqw:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
 
 
 # direct methods
@@ -36,14 +36,14 @@
     .line 40
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->iTf:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->jqs:Z
 
     .line 46
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/n$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/n$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/n;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->iTj:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->jqw:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
 
     .line 86
     return-void
@@ -59,14 +59,14 @@
     invoke-direct {p0, v0, v0}, Lcom/tencent/mm/ui/tools/r;-><init>(ZZ)V
 
     .line 40
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->iTf:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->jqs:Z
 
     .line 46
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/n$1;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/n$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/n;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->iTj:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->jqw:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
 
     .line 90
     return-void
@@ -82,16 +82,16 @@
     invoke-super {p0, p1, p2}, Lcom/tencent/mm/ui/tools/r;->a(Landroid/app/Activity;Landroid/view/Menu;)V
 
     .line 158
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->ggv:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->gqU:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
     if-eqz v0, :cond_0
 
     .line 159
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->ggv:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->gqU:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->iTj:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->jqw:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->setOnSearchListener(Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;)V
+    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jev:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
 
     .line 161
     :cond_0
@@ -103,16 +103,16 @@
 
     .prologue
     .line 97
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->iTi:Lcom/tencent/mm/pluginsdk/ui/tools/n$a;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->jqv:Lcom/tencent/mm/pluginsdk/ui/tools/n$a;
 
     .line 98
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/r;->lxA:Lcom/tencent/mm/ui/tools/r$b;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/r;->lYp:Lcom/tencent/mm/ui/tools/r$b;
 
     .line 99
     return-void
 .end method
 
-.method protected final aST()Z
+.method protected final aXM()Z
     .locals 6
 
     .prologue
@@ -121,7 +121,7 @@
     const/4 v0, 0x0
 
     .line 137
-    const-string/jumbo v2, "!44@/B4Tb64lLpKCGRi+LcyHSIxOnXE6bSAHMOhyEEusEOY="
+    const-string/jumbo v2, "MicroMsg.VoiceSearchViewHelper"
 
     const-string/jumbo v3, "check has voice search, Enable %B, layout is null ? %B"
 
@@ -129,7 +129,7 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    iget-boolean v5, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->iTf:Z
+    iget-boolean v5, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->jqs:Z
 
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -137,7 +137,7 @@
 
     aput-object v5, v4, v0
 
-    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->ggv:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->gqU:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
     if-nez v5, :cond_0
 
@@ -150,49 +150,49 @@
 
     aput-object v0, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 138
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->iTf:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->jqs:Z
 
     return v0
 .end method
 
-.method protected final aSU()V
+.method protected final aXN()V
     .locals 3
 
     .prologue
     const/4 v2, 0x0
 
     .line 143
-    const-string/jumbo v0, "!44@/B4Tb64lLpKCGRi+LcyHSIxOnXE6bSAHMOhyEEusEOY="
+    const-string/jumbo v0, "MicroMsg.VoiceSearchViewHelper"
 
     const-string/jumbo v1, "do require voice search"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 144
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->lxz:Lcom/tencent/mm/ui/tools/g;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->lYo:Lcom/tencent/mm/ui/tools/g;
 
     if-eqz v0, :cond_0
 
     .line 145
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->lxz:Lcom/tencent/mm/ui/tools/g;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->lYo:Lcom/tencent/mm/ui/tools/g;
 
-    invoke-interface {v0, v2}, Lcom/tencent/mm/ui/tools/g;->setEditTextEnabled(Z)V
+    invoke-interface {v0, v2}, Lcom/tencent/mm/ui/tools/g;->iJ(Z)V
 
     .line 146
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->lxz:Lcom/tencent/mm/ui/tools/g;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->lYo:Lcom/tencent/mm/ui/tools/g;
 
-    invoke-interface {v0, v2}, Lcom/tencent/mm/ui/tools/g;->setStatusBtnEnabled(Z)V
+    invoke-interface {v0, v2}, Lcom/tencent/mm/ui/tools/g;->iK(Z)V
 
     .line 148
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->ggv:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->gqU:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->ggv:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->gqU:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
     invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->getVisibility()I
 
@@ -203,25 +203,25 @@
     if-ne v0, v1, :cond_1
 
     .line 149
-    const-string/jumbo v0, "!44@/B4Tb64lLpKCGRi+LcyHSIxOnXE6bSAHMOhyEEusEOY="
+    const-string/jumbo v0, "MicroMsg.VoiceSearchViewHelper"
 
     const-string/jumbo v1, "do voice search layout start"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 150
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->ggv:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->gqU:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
-    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->iTh:I
+    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->jqu:I
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->or(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->pW(I)V
 
     .line 153
     :cond_1
     return-void
 .end method
 
-.method protected final aSV()V
+.method protected final aXO()V
     .locals 0
 
     .prologue
@@ -239,37 +239,37 @@
     const/4 v2, 0x1
 
     .line 113
-    const-string/jumbo v0, "!44@/B4Tb64lLpKCGRi+LcyHSIxOnXE6bSAHMOhyEEusEOY="
+    const-string/jumbo v0, "MicroMsg.VoiceSearchViewHelper"
 
     const-string/jumbo v1, "do cancel"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 114
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->ggv:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->gqU:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
     if-eqz v0, :cond_0
 
     .line 115
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->ggv:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->gqU:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aRg()V
+    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aVS()V
 
     .line 117
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->lxz:Lcom/tencent/mm/ui/tools/g;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->lYo:Lcom/tencent/mm/ui/tools/g;
 
     if-eqz v0, :cond_1
 
     .line 118
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->lxz:Lcom/tencent/mm/ui/tools/g;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->lYo:Lcom/tencent/mm/ui/tools/g;
 
-    invoke-interface {v0, v2}, Lcom/tencent/mm/ui/tools/g;->setEditTextEnabled(Z)V
+    invoke-interface {v0, v2}, Lcom/tencent/mm/ui/tools/g;->iJ(Z)V
 
     .line 119
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->lxz:Lcom/tencent/mm/ui/tools/g;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->lYo:Lcom/tencent/mm/ui/tools/g;
 
-    invoke-interface {v0, v2}, Lcom/tencent/mm/ui/tools/g;->setStatusBtnEnabled(Z)V
+    invoke-interface {v0, v2}, Lcom/tencent/mm/ui/tools/g;->iK(Z)V
 
     .line 121
     :cond_1
@@ -290,11 +290,11 @@
     if-ne v0, p1, :cond_1
 
     .line 166
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->ggv:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->gqU:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->ggv:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->gqU:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
     invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->getVisibility()I
 
@@ -306,7 +306,7 @@
 
     .line 167
     :goto_0
-    const-string/jumbo v3, "!44@/B4Tb64lLpKCGRi+LcyHSIxOnXE6bSAHMOhyEEusEOY="
+    const-string/jumbo v3, "MicroMsg.VoiceSearchViewHelper"
 
     const-string/jumbo v4, "on back key down, try hide voice search panel, it is visiable[%B]"
 
@@ -318,7 +318,7 @@
 
     aput-object v6, v5, v2
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 168
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/n;->cancel()V
@@ -338,11 +338,11 @@
 
     .line 173
     :cond_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpKCGRi+LcyHSIxOnXE6bSAHMOhyEEusEOY="
+    const-string/jumbo v0, "MicroMsg.VoiceSearchViewHelper"
 
     const-string/jumbo v1, "not match key code, pass to super"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 174
     invoke-super {p0, p1, p2}, Lcom/tencent/mm/ui/tools/r;->onKeyDown(ILandroid/view/KeyEvent;)Z
@@ -359,20 +359,20 @@
     const/4 v1, 0x1
 
     .line 102
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->ggv:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->gqU:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;
 
     .line 103
-    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->iTh:I
+    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->jqu:I
 
     .line 105
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->iTh:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->jqu:I
 
     if-ne v1, v0, :cond_0
 
     .line 106
     const/4 v0, 0x2
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->iTg:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->jqt:I
 
     .line 110
     :goto_0
@@ -380,7 +380,7 @@
 
     .line 108
     :cond_0
-    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->iTg:I
+    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/n;->jqt:I
 
     goto :goto_0
 .end method

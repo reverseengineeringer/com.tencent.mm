@@ -7,14 +7,14 @@ import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class MMTextView
   extends TextView
 {
-  private boolean kHH = false;
-  private a kHI = null;
-  private GestureDetector kHJ = null;
+  private boolean lgJ = false;
+  public a lgK = null;
+  private GestureDetector lgL = null;
   
   public MMTextView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -30,22 +30,22 @@ public class MMTextView
   
   private void init()
   {
-    kHJ = new GestureDetector(getContext(), new GestureDetector.SimpleOnGestureListener()
+    lgL = new GestureDetector(getContext(), new GestureDetector.SimpleOnGestureListener()
     {
       public final boolean onDoubleTap(MotionEvent paramAnonymousMotionEvent)
       {
         if (MMTextView.a(MMTextView.this) == null) {
           return false;
         }
-        return MMTextView.a(MMTextView.this).at(MMTextView.this);
+        return MMTextView.a(MMTextView.this).ax(MMTextView.this);
       }
     });
   }
   
   public void cancelLongPress()
   {
-    u.d("!32@/B4Tb64lLpJ/g4sb0pugm9RTv6dIAy2a", "cancelLongPress , should ignore Action Up Event next time");
-    kHH = true;
+    v.d("MicroMsg.MMTextView", "cancelLongPress , should ignore Action Up Event next time");
+    lgJ = true;
     super.cancelLongPress();
   }
   
@@ -53,17 +53,17 @@ public class MMTextView
   {
     boolean bool2 = true;
     int j = paramMotionEvent.getAction();
-    if ((j == 1) && (kHH)) {}
+    if ((j == 1) && (lgJ)) {}
     for (int i = 1; i != 0; i = 0)
     {
-      u.d("!32@/B4Tb64lLpJ/g4sb0pugm9RTv6dIAy2a", "ignore Action Up Event this time");
+      v.d("MicroMsg.MMTextView", "ignore Action Up Event this time");
       return bool2;
     }
     if (j == 0) {
-      kHH = false;
+      lgJ = false;
     }
-    if ((kHI != null) && (kHJ != null)) {}
-    for (boolean bool1 = kHJ.onTouchEvent(paramMotionEvent);; bool1 = false)
+    if ((lgK != null) && (lgL != null)) {}
+    for (boolean bool1 = lgL.onTouchEvent(paramMotionEvent);; bool1 = false)
     {
       bool2 = bool1;
       if (bool1) {
@@ -75,19 +75,14 @@ public class MMTextView
   
   public boolean performLongClick()
   {
-    u.d("!32@/B4Tb64lLpJ/g4sb0pugm9RTv6dIAy2a", "performLongClick , should ignore Action Up Event next time");
-    kHH = true;
+    v.d("MicroMsg.MMTextView", "performLongClick , should ignore Action Up Event next time");
+    lgJ = true;
     return super.performLongClick();
-  }
-  
-  public void setOnDoubleClickLitsener(a parama)
-  {
-    kHI = parama;
   }
   
   public static abstract interface a
   {
-    public abstract boolean at(View paramView);
+    public abstract boolean ax(View paramView);
   }
 }
 

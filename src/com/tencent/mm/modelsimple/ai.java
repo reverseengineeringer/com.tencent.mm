@@ -1,55 +1,63 @@
 package com.tencent.mm.modelsimple;
 
-import com.tencent.mm.network.e;
-import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b.aca;
-import com.tencent.mm.protocal.b.acb;
-import com.tencent.mm.r.a;
-import com.tencent.mm.r.a.a;
-import com.tencent.mm.r.a.b;
-import com.tencent.mm.r.d;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.a.e;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.s.l;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
+import java.io.File;
 
 public final class ai
-  extends com.tencent.mm.r.j
-  implements com.tencent.mm.network.j
 {
-  private d anM;
-  private final a anN;
+  private static boolean bVC = false;
+  private static int bVD = 3;
+  private static long bVE = 0L;
+  private static com.tencent.mm.t.d bkT = null;
   
-  public ai(int paramInt)
+  public static void run()
   {
-    a.a locala = new a.a();
-    bFa = new aca();
-    bFb = new acb();
-    uri = "/cgi-bin/micromsg-bin/logoutwebwx";
-    bEY = 281;
-    bFc = 0;
-    bFd = 0;
-    anN = locala.vy();
-    anN.bEW.bFf).iVx = paramInt;
-  }
-  
-  public final int a(e parame, d paramd)
-  {
-    u.d("!44@/B4Tb64lLpK+IBX8XDgnvrHybRkRQaQCXLcqDx3Hb5M=", "doScene");
-    anM = paramd;
-    return a(parame, anN, this);
-  }
-  
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
-  {
-    if ((paramInt2 != 0) || (paramInt3 != 0)) {
-      u.d("!44@/B4Tb64lLpK+IBX8XDgnvrHybRkRQaQCXLcqDx3Hb5M=", "logout Error. ");
+    if (bVC)
+    {
+      v.i("MicroMsg.PostTaskUploadHDHeadImg", "is uploading hdHeadImg now!");
+      return;
     }
-    if (anM != null) {
-      anM.a(paramInt2, paramInt3, paramString, this);
+    if ((bVE == 0L) || (be.av(bVE) > 180000L))
+    {
+      bVE = be.Gq();
+      bVD = 3;
     }
-  }
-  
-  public final int getType()
-  {
-    return 281;
+    if (bVD <= 0)
+    {
+      v.i("MicroMsg.PostTaskUploadHDHeadImg", "frequency limit");
+      return;
+    }
+    bVD -= 1;
+    Object localObject = com.tencent.mm.compatible.util.d.biR + "temp.avatar.hd";
+    if (!new File((String)localObject).exists())
+    {
+      v.d("MicroMsg.PostTaskUploadHDHeadImg", "has uploaded HDHeadImg and delete it");
+      return;
+    }
+    if (bkT == null) {
+      bkT = new com.tencent.mm.t.d()
+      {
+        public final void onSceneEnd(int paramAnonymousInt1, int paramAnonymousInt2, String paramAnonymousString, j paramAnonymousj)
+        {
+          v.i("MicroMsg.PostTaskUploadHDHeadImg", "onSceneEnd errType:%d, erCode:%d, errMsg:%s", new Object[] { Integer.valueOf(paramAnonymousInt1), Integer.valueOf(paramAnonymousInt2), paramAnonymousString });
+          if ((paramAnonymousInt1 == 0) && (paramAnonymousInt2 == 0)) {
+            e.deleteFile(bVF);
+          }
+          ai.Da();
+          ah.tF().b(157, ai.Db());
+        }
+      };
+    }
+    ah.tF().a(157, bkT);
+    localObject = new l(1, (String)localObject);
+    ah.tF().a((j)localObject, 0);
+    bVC = true;
   }
 }
 

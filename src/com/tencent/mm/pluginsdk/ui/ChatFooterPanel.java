@@ -8,67 +8,62 @@ import com.tencent.mm.pluginsdk.ui.chat.f;
 public abstract class ChatFooterPanel
   extends LinearLayout
 {
-  public a iGi;
-  public f iGj;
-  protected int iGk;
+  public a jdd;
+  public f jde;
+  protected int jdf;
   
   public ChatFooterPanel(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
   }
   
-  public abstract void RN();
+  public abstract void Th();
   
-  public abstract void RO();
+  public abstract void Ti();
   
-  public abstract void RP();
+  public abstract void Tj();
   
-  public abstract void RQ();
+  public abstract void Tk();
   
-  public abstract void RR();
+  public abstract void Tn();
   
-  public abstract void RS();
+  public abstract void To();
+  
+  public void a(f paramf)
+  {
+    jde = paramf;
+  }
+  
+  public abstract void bI(boolean paramBoolean);
   
   public void destroy() {}
   
-  public abstract void j(boolean paramBoolean1, boolean paramBoolean2);
+  public abstract void hb(int paramInt);
+  
+  public abstract void k(boolean paramBoolean1, boolean paramBoolean2);
+  
+  public abstract void od(String paramString);
+  
+  public abstract void oe(String paramString);
   
   public abstract void onPause();
   
   public abstract void onResume();
   
-  public void setCallback(f paramf)
+  public final void pU(int paramInt)
   {
-    iGj = paramf;
+    jdf = paramInt;
   }
-  
-  public abstract void setDefaultEmojiByDetail(String paramString);
-  
-  public void setFooterType(int paramInt)
-  {
-    iGk = paramInt;
-  }
-  
-  public void setOnTextOperationListener(a parama)
-  {
-    iGi = parama;
-  }
-  
-  public abstract void setPortHeightPx(int paramInt);
-  
-  public abstract void setSendButtonEnable(boolean paramBoolean);
-  
-  public abstract void setTalkerName(String paramString);
   
   public static abstract interface a
   {
-    public abstract void ahA();
+    public abstract void akl();
     
-    public abstract void ahB();
+    public abstract void akm();
     
     public abstract void append(String paramString);
     
-    public abstract void dr(boolean paramBoolean);
+    public abstract void dq(boolean paramBoolean);
   }
 }
 

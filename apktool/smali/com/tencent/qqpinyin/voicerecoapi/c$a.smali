@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field public lQS:I
+.field public msF:I
 
-.field public lQT:I
+.field public msG:I
 
-.field public lQU:I
+.field public msH:I
 
-.field private lQV:I
+.field private msI:I
 
-.field public lQW:I
+.field public msJ:I
 
 
 # direct methods
@@ -37,23 +37,23 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 225
-    iput v1, p0, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->lQS:I
+    iput v1, p0, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->msF:I
 
     .line 232
     const/16 v0, 0x100
 
-    iput v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->lQT:I
+    iput v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->msG:I
 
     .line 239
     const/16 v0, 0x200
 
-    iput v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->lQU:I
+    iput v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->msH:I
 
     .line 240
-    iput v1, p0, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->lQV:I
+    iput v1, p0, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->msI:I
 
     .line 244
-    iput v1, p0, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->lQW:I
+    iput v1, p0, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->msJ:I
 
     .line 216
     return-void

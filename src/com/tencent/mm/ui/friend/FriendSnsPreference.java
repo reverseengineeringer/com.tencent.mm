@@ -11,8 +11,8 @@ public final class FriendSnsPreference
   extends IconPreference
 {
   private Context context;
-  public Bitmap dlQ = null;
-  public String lrA = null;
+  public Bitmap dlx = null;
+  public String lSe = null;
   
   public FriendSnsPreference(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -28,8 +28,8 @@ public final class FriendSnsPreference
   protected final void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    if (lrA != null) {
-      a.b.b(dlV, lrA);
+    if (lSe != null) {
+      a.b.a(dlC, lSe);
     }
   }
 }

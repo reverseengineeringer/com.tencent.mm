@@ -1,27 +1,15 @@
 package ct;
 
-import android.os.Handler;
-import android.os.Looper;
-import android.os.Message;
-
-final class bt$a
-  extends Handler
+ enum bt$a
 {
-  private bt$a(bt parambt, Looper paramLooper)
+  static
   {
-    super(paramLooper);
+    a locala = a;
+    locala = b;
+    locala = c;
   }
   
-  public final void handleMessage(Message paramMessage)
-  {
-    super.handleMessage(paramMessage);
-    if (!a.a) {
-      return;
-    }
-    sendEmptyMessageDelayed(0, 20000L);
-    paramMessage = cv.b(bt.a(a));
-    bt.a(a, paramMessage);
-  }
+  private bt$a() {}
 }
 
 /* Location:

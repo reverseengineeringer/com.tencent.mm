@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.model.app;
 
 public abstract interface u$a
 {
-  public abstract void aEY();
+  public abstract void oq();
 }
 
 /* Location:

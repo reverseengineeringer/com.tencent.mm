@@ -2,7 +2,7 @@ package com.tencent.mm.ui;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.d.a.mt;
+import com.tencent.mm.e.a.ng;
 import com.tencent.mm.sdk.c.a;
 import com.tencent.mm.ui.contact.VoipAddressUI;
 
@@ -13,10 +13,10 @@ final class s$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    mt localmt = new mt();
-    aJb.aJe = true;
-    a.jUF.j(localmt);
-    VoipAddressUI.eq(s.c(krb));
+    ng localng = new ng();
+    avv.avy = true;
+    a.kug.y(localng);
+    VoipAddressUI.et(s.c(kQi));
     paramDialogInterface.dismiss();
   }
 }

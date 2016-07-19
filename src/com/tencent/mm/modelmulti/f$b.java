@@ -2,16 +2,16 @@ package com.tencent.mm.modelmulti;
 
 import com.tencent.mm.compatible.d.p;
 import com.tencent.mm.network.o;
-import com.tencent.mm.protocal.b;
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.u.a;
-import com.tencent.mm.protocal.u.b;
+import com.tencent.mm.protocal.c;
+import com.tencent.mm.protocal.k.c;
+import com.tencent.mm.protocal.x.a;
+import com.tencent.mm.protocal.x.b;
 
 public final class f$b
   implements o
 {
-  private final u.a bVj = new u.a();
-  private final u.b bVk = new u.b();
+  private final x.a bOK = new x.a();
+  private final x.b bOL = new x.b();
   int uin;
   
   public final int getType()
@@ -24,21 +24,21 @@ public final class f$b
     return null;
   }
   
-  public final h.c vA()
+  public final k.c vC()
   {
-    bVj.iUH = p.ox();
-    bVj.iUG = b.bwR;
-    bVj.iUF = b.iUf;
-    bVj.ba(uin);
-    return bVj;
+    bOK.jse = p.mN();
+    bOK.jsd = c.boS;
+    bOK.jsc = c.jry;
+    bOK.bq(uin);
+    return bOK;
   }
   
-  public final boolean vB()
+  public final boolean vD()
   {
     return false;
   }
   
-  public final int vx()
+  public final int vz()
   {
     return 0;
   }

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lxI:Lcom/tencent/mm/ui/tools/r;
+.field final synthetic lYx:Lcom/tencent/mm/ui/tools/r;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 170
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/r$1;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 171
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/r$1;->lYx:Lcom/tencent/mm/ui/tools/r;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,19 +36,19 @@
 
 
 # virtual methods
-.method public final AD(Ljava/lang/String;)V
+.method public final CE(Ljava/lang/String;)V
     .locals 4
 
     .prologue
-    .line 190
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 191
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/ui/tools/r;->lxv:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/ui/tools/r;->lYk:Z
 
     if-nez v0, :cond_1
 
-    .line 191
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 192
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lYx:Lcom/tencent/mm/ui/tools/r;
 
     iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->TAG:Ljava/lang/String;
 
@@ -62,106 +62,106 @@
 
     aput-object p1, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 197
+    .line 198
     :cond_0
     :goto_0
     return-void
 
-    .line 194
+    .line 195
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lxI:Lcom/tencent/mm/ui/tools/r;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->lxA:Lcom/tencent/mm/ui/tools/r$b;
+    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->lYp:Lcom/tencent/mm/ui/tools/r$b;
 
     if-eqz v0, :cond_0
 
-    .line 195
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 196
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->lxA:Lcom/tencent/mm/ui/tools/r$b;
+    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->lYp:Lcom/tencent/mm/ui/tools/r$b;
 
-    invoke-interface {v0, p1}, Lcom/tencent/mm/ui/tools/r$b;->kF(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/tencent/mm/ui/tools/r$b;->lo(Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public final Gf()V
+.method public final GC()V
     .locals 1
 
     .prologue
-    .line 201
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lxI:Lcom/tencent/mm/ui/tools/r;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->lxA:Lcom/tencent/mm/ui/tools/r$b;
-
-    if-eqz v0, :cond_0
-
     .line 202
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lxI:Lcom/tencent/mm/ui/tools/r;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->lxA:Lcom/tencent/mm/ui/tools/r$b;
-
-    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/r$b;->Gf()V
-
-    .line 204
-    :cond_0
-    return-void
-.end method
-
-.method public final bim()V
-    .locals 1
-
-    .prologue
-    .line 183
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lxI:Lcom/tencent/mm/ui/tools/r;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->lxA:Lcom/tencent/mm/ui/tools/r$b;
+    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->lYp:Lcom/tencent/mm/ui/tools/r$b;
 
     if-eqz v0, :cond_0
 
-    .line 184
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 203
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->lxA:Lcom/tencent/mm/ui/tools/r$b;
+    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->lYp:Lcom/tencent/mm/ui/tools/r$b;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/r$b;->Gg()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/r$b;->GC()V
 
-    .line 186
+    .line 205
     :cond_0
     return-void
 .end method
 
-.method public final bin()V
+.method public final boj()V
+    .locals 1
+
+    .prologue
+    .line 184
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lYx:Lcom/tencent/mm/ui/tools/r;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->lYp:Lcom/tencent/mm/ui/tools/r$b;
+
+    if-eqz v0, :cond_0
+
+    .line 185
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lYx:Lcom/tencent/mm/ui/tools/r;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->lYp:Lcom/tencent/mm/ui/tools/r$b;
+
+    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/r$b;->GD()V
+
+    .line 187
+    :cond_0
+    return-void
+.end method
+
+.method public final bok()V
     .locals 2
 
     .prologue
-    .line 174
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 175
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/ui/tools/r;->lxv:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/ui/tools/r;->lYk:Z
 
     if-nez v0, :cond_0
 
-    .line 175
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 176
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lYx:Lcom/tencent/mm/ui/tools/r;
 
     iget-object v0, v0, Lcom/tencent/mm/ui/tools/r;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onVoiceSearchRequired, but not in searching"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 179
+    .line 180
     :goto_0
     return-void
 
-    .line 178
+    .line 179
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lxI:Lcom/tencent/mm/ui/tools/r;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$1;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/r;->aSU()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/r;->aXN()V
 
     goto :goto_0
 .end method

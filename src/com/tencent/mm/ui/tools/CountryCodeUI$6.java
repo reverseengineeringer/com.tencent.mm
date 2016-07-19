@@ -11,12 +11,12 @@ final class CountryCodeUI$6
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    luc.age();
+    lVe.aiI();
     paramMenuItem = new Intent();
-    paramMenuItem.putExtra("country_name", CountryCodeUI.d(luc));
-    paramMenuItem.putExtra("couttry_code", CountryCodeUI.e(luc));
-    luc.setResult(100, paramMenuItem);
-    luc.finish();
+    paramMenuItem.putExtra("country_name", CountryCodeUI.d(lVe));
+    paramMenuItem.putExtra("couttry_code", CountryCodeUI.e(lVe));
+    lVe.setResult(100, paramMenuItem);
+    lVe.finish();
     return true;
   }
 }

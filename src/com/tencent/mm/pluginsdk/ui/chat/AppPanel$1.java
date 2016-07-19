@@ -1,6 +1,6 @@
 package com.tencent.mm.pluginsdk.ui.chat;
 
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.MMFlipper.a;
 
 final class AppPanel$1
@@ -8,27 +8,27 @@ final class AppPanel$1
 {
   AppPanel$1(AppPanel paramAppPanel) {}
   
-  public final void aT(int paramInt1, int paramInt2)
+  public final void bb(int paramInt1, int paramInt2)
   {
-    u.d("!32@/B4Tb64lLpIswCbzJzq2kbhBmMfFikWd", "onMeasure width:" + paramInt1 + " height:" + paramInt2 + " isMeasured:" + AppPanel.a(iKi));
-    if ((AppPanel.a(iKi)) || (paramInt2 == 0) || (paramInt1 == 0))
+    v.d("MicroMsg.AppPanel", "onMeasure width:" + paramInt1 + " height:" + paramInt2 + " isMeasured:" + AppPanel.a(jhe));
+    if ((AppPanel.a(jhe)) || (paramInt2 == 0) || (paramInt1 == 0))
     {
       if ((paramInt2 == 0) || (paramInt1 == 0)) {
-        u.d("!32@/B4Tb64lLpIswCbzJzq2kbhBmMfFikWd", "onMeasure, width or height is 0");
+        v.d("MicroMsg.AppPanel", "onMeasure, width or height is 0");
       }
       return;
     }
-    if (AppPanel.b(iKi) == 2) {
-      u.d("!32@/B4Tb64lLpIswCbzJzq2kbhBmMfFikWd", "landspace");
+    if (AppPanel.b(jhe) == 2) {
+      v.d("MicroMsg.AppPanel", "landspace");
     }
     for (;;)
     {
-      AppPanel.c(iKi);
-      AppPanel.a(iKi, paramInt2);
-      AppPanel.b(iKi, paramInt1);
-      AppPanel.d(iKi);
+      AppPanel.c(jhe);
+      AppPanel.a(jhe, paramInt2);
+      AppPanel.b(jhe, paramInt1);
+      AppPanel.d(jhe);
       return;
-      u.d("!32@/B4Tb64lLpIswCbzJzq2kbhBmMfFikWd", "portrait");
+      v.d("MicroMsg.AppPanel", "portrait");
     }
   }
 }

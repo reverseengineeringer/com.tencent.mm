@@ -10,7 +10,7 @@ final class RegByMobileVoiceVerifyUI$3$2
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    kvr.kvq.finish();
+    kUy.kUx.finish();
   }
 }
 

@@ -1,19 +1,11 @@
 package com.tencent.mm.plugin.report.a;
 
-import com.tencent.mm.sdk.h.d;
 import com.tencent.mm.sdk.h.f;
 
 public final class b
-  extends f
+  extends f<a>
 {
-  public static final String[] aoY = { f.a(a.aot, "DuplicateKVLog") };
-  private d aoX;
-  
-  public b(d paramd)
-  {
-    super(paramd, a.aot, "DuplicateKVLog", null);
-    aoX = paramd;
-  }
+  public static final String[] bkN = { f.a(a.bjR, "DuplicateKVLog") };
 }
 
 /* Location:

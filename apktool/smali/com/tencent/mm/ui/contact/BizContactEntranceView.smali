@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field private dfr:Landroid/view/View;
+.field private deu:Landroid/view/View;
 
-.field private liU:Landroid/view/View;
+.field private lJf:Landroid/view/View;
 
-.field private liV:Landroid/widget/TextView;
+.field private lJg:Landroid/widget/TextView;
 
-.field private liW:Z
+.field private lJh:Z
 
-.field private liX:Z
+.field private lJi:Z
 
 .field private mContext:Landroid/content/Context;
 
@@ -28,12 +28,12 @@
     .line 31
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->dfr:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->deu:Landroid/view/View;
 
     .line 34
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->liW:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->lJh:Z
 
     .line 53
     iput-object p1, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->mContext:Landroid/content/Context;
@@ -42,7 +42,7 @@
     invoke-direct {p0}, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->init()V
 
     .line 55
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->bha()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->bmJ()V
 
     .line 56
     return-void
@@ -58,12 +58,12 @@
     .line 31
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->dfr:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->deu:Landroid/view/View;
 
     .line 34
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->liW:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->lJh:Z
 
     .line 46
     iput-object p1, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->mContext:Landroid/content/Context;
@@ -72,7 +72,7 @@
     invoke-direct {p0}, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->init()V
 
     .line 48
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->bha()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->bmJ()V
 
     .line 49
     return-void
@@ -88,12 +88,12 @@
     .line 31
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->dfr:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->deu:Landroid/view/View;
 
     .line 34
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->liW:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->lJh:Z
 
     .line 39
     iput-object p1, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->mContext:Landroid/content/Context;
@@ -102,7 +102,7 @@
     invoke-direct {p0}, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->init()V
 
     .line 41
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->bha()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->bmJ()V
 
     .line 42
     return-void
@@ -123,7 +123,7 @@
 
     .prologue
     .line 27
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->liX:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->lJi:Z
 
     return v0
 .end method
@@ -133,7 +133,7 @@
 
     .prologue
     .line 27
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->liV:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->lJg:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -145,39 +145,39 @@
     .line 59
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->liX:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->lJi:Z
 
     .line 60
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0a009f
+    const v1, 0x7f030075
 
     invoke-static {v0, v1, p0}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     .line 61
-    const v0, 0x7f0700a3
+    const v0, 0x7f1000fb
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->dfr:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->deu:Landroid/view/View;
 
     .line 62
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->dfr:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->deu:Landroid/view/View;
 
-    const v1, 0x7f0701ef
+    const v1, 0x7f100219
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->liU:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->lJf:Landroid/view/View;
 
     .line 63
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->dfr:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->deu:Landroid/view/View;
 
     new-instance v1, Lcom/tencent/mm/ui/contact/BizContactEntranceView$1;
 
@@ -186,7 +186,7 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 72
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->liU:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->lJf:Landroid/view/View;
 
     new-instance v1, Lcom/tencent/mm/ui/contact/BizContactEntranceView$2;
 
@@ -195,9 +195,9 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 83
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->liU:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->lJf:Landroid/view/View;
 
-    const v1, 0x7f070195
+    const v1, 0x7f10021a
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -206,24 +206,22 @@
     check-cast v0, Lcom/tencent/mm/ui/base/MaskLayout;
 
     .line 84
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MaskLayout;->getContentView()Landroid/view/View;
-
-    move-result-object v1
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/MaskLayout;->view:Landroid/view/View;
 
     check-cast v1, Landroid/widget/ImageView;
 
-    invoke-static {}, Lcom/tencent/mm/q/n;->vb()Lcom/tencent/mm/q/d;
+    invoke-static {}, Lcom/tencent/mm/s/n;->vd()Lcom/tencent/mm/s/d;
 
     const-string/jumbo v2, "service_officialaccounts"
 
-    invoke-static {v2}, Lcom/tencent/mm/q/d;->fX(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-static {v2}, Lcom/tencent/mm/s/d;->gk(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 86
-    const v1, 0x7f07006e
+    const v1, 0x7f1000ff
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/MaskLayout;->findViewById(I)Landroid/view/View;
 
@@ -231,7 +229,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->liV:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->lJg:Landroid/widget/TextView;
 
     .line 87
     return-void
@@ -239,8 +237,8 @@
 
 
 # virtual methods
-.method final bha()V
-    .locals 9
+.method final bmJ()V
+    .locals 10
 
     .prologue
     const/4 v7, 0x1
@@ -253,15 +251,15 @@
     move-result-wide v2
 
     .line 91
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rr()Lcom/tencent/mm/storage/q;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/q;->aWA()I
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/q;->bbO()I
 
     move-result v4
 
@@ -269,13 +267,13 @@
     if-lez v4, :cond_1
 
     .line 93
-    iput-boolean v7, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->liW:Z
+    iput-boolean v7, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->lJh:Z
 
     .line 99
     :goto_0
-    iget-object v5, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->liU:Landroid/view/View;
+    iget-object v5, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->lJf:Landroid/view/View;
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->liW:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->lJh:Z
 
     if-eqz v0, :cond_2
 
@@ -285,12 +283,12 @@
     invoke-virtual {v5, v0}, Landroid/view/View;->setVisibility(I)V
 
     .line 101
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->liW:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->lJh:Z
 
     if-eqz v0, :cond_0
 
     .line 102
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/sdk/platformtools/ab;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tw()Lcom/tencent/mm/sdk/platformtools/ad;
 
     move-result-object v0
 
@@ -298,11 +296,11 @@
 
     invoke-direct {v5, p0}, Lcom/tencent/mm/ui/contact/BizContactEntranceView$3;-><init>(Lcom/tencent/mm/ui/contact/BizContactEntranceView;)V
 
-    invoke-virtual {v0, v5}, Lcom/tencent/mm/sdk/platformtools/ab;->r(Ljava/lang/Runnable;)I
+    invoke-virtual {v0, v5}, Lcom/tencent/mm/sdk/platformtools/ad;->t(Ljava/lang/Runnable;)I
 
     .line 118
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpJcZAIZpKXu2mTdFdAbI/Q60cydqQUhVTI="
+    const-string/jumbo v0, "MicroMsg.BizContactEntranceView"
 
     const-string/jumbo v5, "biz contact Count %d, isEntranceShow %s, setStatus cost %d"
 
@@ -316,7 +314,7 @@
 
     aput-object v4, v6, v1
 
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->liW:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->lJh:Z
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -328,9 +326,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    sub-long v2, v7, v2
+    sub-long v2, v8, v2
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -338,14 +336,14 @@
 
     aput-object v2, v6, v1
 
-    invoke-static {v0, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 119
     return-void
 
     .line 95
     :cond_1
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->liW:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->lJh:Z
 
     goto :goto_0
 
@@ -356,14 +354,14 @@
     goto :goto_1
 .end method
 
-.method public setVisible(Z)V
+.method public final setVisible(Z)V
     .locals 6
 
     .prologue
     const/4 v0, 0x0
 
     .line 122
-    const-string/jumbo v1, "!44@/B4Tb64lLpJcZAIZpKXu2mTdFdAbI/Q60cydqQUhVTI="
+    const-string/jumbo v1, "MicroMsg.BizContactEntranceView"
 
     const-string/jumbo v2, "setVisible visible = %s, isEntranceShow = %s"
 
@@ -379,7 +377,7 @@
 
     const/4 v4, 0x1
 
-    iget-boolean v5, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->liW:Z
+    iget-boolean v5, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->lJh:Z
 
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -387,14 +385,14 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 123
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->dfr:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->deu:Landroid/view/View;
 
     if-eqz p1, :cond_0
 
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->liW:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/contact/BizContactEntranceView;->lJh:Z
 
     if-eqz v2, :cond_0
 

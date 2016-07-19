@@ -10,10 +10,14 @@ import android.content.DialogInterface.OnDismissListener;
 import android.os.Build.VERSION;
 import android.view.View;
 import android.widget.EditText;
-import com.tencent.mm.e.a;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.modelsimple.af;
+import com.tencent.mm.protocal.b.ami;
+import com.tencent.mm.protocal.b.axt;
+import com.tencent.mm.t.a.c;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.u;
 import com.tencent.mm.ui.applet.SecurityImage;
 import com.tencent.mm.ui.applet.SecurityImage.a;
 import com.tencent.mm.ui.applet.SecurityImage.b;
@@ -24,89 +28,135 @@ import com.tencent.mm.ui.base.p;
 public final class b
   implements d
 {
-  h apf;
   Context context;
-  private View fKJ;
-  private a kPy;
-  SecurityImage kqh;
-  p ksQ;
-  String ktJ;
-  private String ktL;
-  private String ktM;
-  private byte[] ktN;
+  h fTL;
+  private View fTM;
+  SecurityImage kPm;
+  p kRY;
+  String kSQ;
+  private String kSS;
+  private String kST;
+  private byte[] kSU;
+  private a loO;
   
   public b(Context paramContext, a parama)
   {
     context = paramContext;
-    fKJ = null;
-    ksQ = null;
-    apf = null;
-    ktJ = "";
-    kqh = null;
-    ktN = null;
-    ktL = "";
-    kPy = parama;
+    fTM = null;
+    kRY = null;
+    fTL = null;
+    kSQ = "";
+    kPm = null;
+    kSU = null;
+    kSS = "";
+    loO = parama;
+  }
+  
+  public final void bjn()
+  {
+    fTM = View.inflate(context, 2130904330, null);
+    final Object localObject = (EditText)fTM.findViewById(2131758864);
+    ((EditText)localObject).setHint(2131231721);
+    localObject = new DialogInterface.OnClickListener()
+    {
+      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+      {
+        fTL = null;
+        paramAnonymousDialogInterface = b.this;
+        Object localObject = localObject.getText().toString().trim();
+        paramAnonymousDialogInterface.rb();
+        kSQ = ((String)localObject);
+        localObject = context;
+        context.getString(2131231028);
+        kRY = g.a((Context)localObject, context.getString(2131234901), true, new b.3(paramAnonymousDialogInterface));
+        ah.tF().a(new af(5, kSQ, "", "", "", false, 1), 0);
+      }
+    };
+    DialogInterface.OnClickListener local2 = new DialogInterface.OnClickListener()
+    {
+      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+      {
+        fTL = null;
+        onDetach();
+      }
+    };
+    fTL = g.a(context, context.getString(2131231722), fTM, (DialogInterface.OnClickListener)localObject, local2);
+  }
+  
+  public final void onDetach()
+  {
+    ah.tF().b(384, this);
+    if (loO != null) {
+      loO.bjm();
+    }
   }
   
   @TargetApi(17)
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
   {
     onDetach();
     if ((paramj == null) || (paramj.getType() != 384)) {}
+    label20:
+    label498:
     do
     {
       do
       {
-        do
+        return;
+        if (kRY != null)
         {
-          do
+          kRY.dismiss();
+          kRY = null;
+        }
+        kSS = com.tencent.mm.platformtools.m.a(bkQ.byi.byq).jSC);
+        paramj = (af)paramj;
+        if ((bkQ.byi.byq).jwF != null) && (bkQ.byi.byq).jwF.kfQ > 0)) {}
+        for (paramj = ah.tu().M(bAc);; paramj = com.tencent.mm.platformtools.m.a(bkQ.byi.byq).jvb))
+        {
+          kSU = paramj;
+          if ((loO != null) && (loO.p(paramInt1, paramInt2, paramString))) {
+            break;
+          }
+          if ((context instanceof Activity))
           {
-            do
-            {
-              return;
-              if (ksQ != null)
-              {
-                ksQ.dismiss();
-                ksQ = null;
-              }
-              ktL = ((com.tencent.mm.modelsimple.ah)paramj).CO();
-              ktN = ((com.tencent.mm.modelsimple.ah)paramj).CN();
-            } while ((kPy != null) && (kPy.r(paramInt1, paramInt2, paramString)));
-            if (!(context instanceof Activity)) {
+            paramj = (Activity)context;
+            if ((paramj.isFinishing()) || ((Build.VERSION.SDK_INT >= 17) && (paramj.isDestroyed()))) {
               break;
             }
-            paramj = (Activity)context;
-          } while ((paramj.isFinishing()) || ((Build.VERSION.SDK_INT >= 17) && (paramj.isDestroyed())));
+          }
           if (paramInt1 != 4) {
-            break;
+            break label498;
           }
           switch (paramInt2)
           {
           default: 
-            paramString = a.cV(paramString);
+            paramString = com.tencent.mm.f.a.dc(paramString);
+            if (paramString == null) {
+              break label20;
+            }
+            paramString.a(context, null, null);
+            return;
           }
-        } while (paramString == null);
-        paramString.a(context, null, null);
-        return;
-      } while (!com.tencent.mm.model.ah.rh());
-      if (kqh == null)
+        }
+      } while (!ah.rg());
+      if (kPm == null)
       {
-        kqh = SecurityImage.a.a(context, 0, ktN, ktL, ktM, new DialogInterface.OnClickListener()
+        kPm = SecurityImage.a.a(context, 0, kSU, kSS, kST, new DialogInterface.OnClickListener()
         {
           public final void onClick(final DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
           {
-            paramAnonymousDialogInterface = new com.tencent.mm.modelsimple.ah(5, ktJ, kqh.getSecImgSid(), kqh.getSecImgCode(), kqh.getSecImgEncryptKey(), true, 1);
-            anm();
-            com.tencent.mm.model.ah.tE().d(paramAnonymousDialogInterface);
+            paramAnonymousDialogInterface = new af(5, kSQ, kPm.kSS, kPm.bhw(), kPm.kST, true, 1);
+            rb();
+            ah.tF().a(paramAnonymousDialogInterface, 0);
             b localb = b.this;
             Context localContext = context;
-            context.getString(2131430877);
-            ksQ = g.a(localContext, context.getString(2131427765), true, new DialogInterface.OnCancelListener()
+            context.getString(2131231028);
+            kRY = g.a(localContext, context.getString(2131233543), true, new DialogInterface.OnCancelListener()
             {
               public final void onCancel(DialogInterface paramAnonymous2DialogInterface)
               {
                 onDetach();
-                com.tencent.mm.model.ah.tE().c(paramAnonymousDialogInterface);
+                ah.tF().c(paramAnonymousDialogInterface);
               }
             });
           }
@@ -114,82 +164,43 @@ public final class b
         {
           public final void onDismiss(DialogInterface paramAnonymousDialogInterface)
           {
-            kqh = null;
+            kPm = null;
           }
         }, new b());
         return;
       }
-      kqh.a(0, ktN, ktL, ktM);
+      kPm.a(0, kSU, kSS, kST);
       return;
       paramString = new DialogInterface.OnClickListener()
       {
         public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
         {
-          apf = null;
+          fTL = null;
           onDetach();
-          bdG();
+          bjn();
         }
       };
-      apf = g.a(context, context.getString(2131427966), context.getString(2131430877), paramString, null);
+      fTL = g.a(context, context.getString(2131231646), context.getString(2131231028), paramString, null);
       return;
-      apf = g.e(context, 2131427967, 2131430877);
+      fTL = g.f(context, 2131231723, 2131231028);
       return;
-      apf = g.y(context, context.getString(2131428778), context.getString(2131430877));
+      fTL = g.b(context, context.getString(2131231335), context.getString(2131231028), true);
       return;
-      paramString = a.cV(paramString);
+      paramString = com.tencent.mm.f.a.dc(paramString);
     } while (paramString == null);
     paramString.a(context, null, null);
   }
   
-  public final void anm()
+  public final void rb()
   {
-    com.tencent.mm.model.ah.tE().a(384, this);
-  }
-  
-  public final void bdG()
-  {
-    fKJ = View.inflate(context, 2131363109, null);
-    final Object localObject = (EditText)fKJ.findViewById(2131169223);
-    ((EditText)localObject).setHint(2131427965);
-    localObject = new DialogInterface.OnClickListener()
-    {
-      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
-      {
-        apf = null;
-        paramAnonymousDialogInterface = b.this;
-        Object localObject = localObject.getText().toString().trim();
-        paramAnonymousDialogInterface.anm();
-        ktJ = ((String)localObject);
-        localObject = context;
-        context.getString(2131430877);
-        ksQ = g.a((Context)localObject, context.getString(2131431087), true, new b.3(paramAnonymousDialogInterface));
-        com.tencent.mm.model.ah.tE().d(new com.tencent.mm.modelsimple.ah(5, ktJ, "", "", "", false, 1));
-      }
-    };
-    DialogInterface.OnClickListener local2 = new DialogInterface.OnClickListener()
-    {
-      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
-      {
-        apf = null;
-        onDetach();
-      }
-    };
-    apf = g.a(context, context.getString(2131427964), fKJ, (DialogInterface.OnClickListener)localObject, local2);
-  }
-  
-  public final void onDetach()
-  {
-    com.tencent.mm.model.ah.tE().b(384, this);
-    if (kPy != null) {
-      kPy.bdF();
-    }
+    ah.tF().a(384, this);
   }
   
   public static abstract interface a
   {
-    public abstract void bdF();
+    public abstract void bjm();
     
-    public abstract boolean r(int paramInt1, int paramInt2, String paramString);
+    public abstract boolean p(int paramInt1, int paramInt2, String paramString);
   }
   
   final class b
@@ -197,11 +208,11 @@ public final class b
   {
     b() {}
     
-    public final void bby()
+    public final void bgK()
     {
-      anm();
-      com.tencent.mm.modelsimple.ah localah = new com.tencent.mm.modelsimple.ah(5, ktJ, kqh.getSecImgSid(), kqh.getSecImgCode(), kqh.getSecImgEncryptKey(), true, 1);
-      com.tencent.mm.model.ah.tE().d(localah);
+      rb();
+      af localaf = new af(5, kSQ, kPm.kSS, kPm.bhw(), kPm.kST, true, 1);
+      ah.tF().a(localaf, 0);
     }
   }
 }

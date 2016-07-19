@@ -1,25 +1,18 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.model.c;
-import com.tencent.mm.sdk.platformtools.am.a;
-import com.tencent.mm.storage.ag;
+import com.tencent.mm.e.a.nh;
+import com.tencent.mm.sdk.c.a;
 
 final class ChattingUI$a$127
-  implements am.a
+  implements Runnable
 {
-  ChattingUI$a$127(ChattingUI.a parama, long paramLong) {}
+  ChattingUI$a$127(ChattingUI.a parama) {}
   
-  public final boolean vd()
+  public final void run()
   {
-    ag localag = com.tencent.mm.model.ah.tD().rs().dz(gPj);
-    localag.aXs();
-    com.tencent.mm.model.ah.tD().rs().a(gPj, localag);
-    return false;
-  }
-  
-  public final boolean ve()
-  {
-    return false;
+    nh localnh = new nh();
+    avA.avC = true;
+    a.kug.y(localnh);
   }
 }
 

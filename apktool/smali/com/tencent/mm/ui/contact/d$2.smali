@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ljc:Lcom/tencent/mm/ui/contact/d;
+.field final synthetic lJn:Lcom/tencent/mm/ui/contact/d;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 152
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/d$2;->ljc:Lcom/tencent/mm/ui/contact/d;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/d$2;->lJn:Lcom/tencent/mm/ui/contact/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final dd(I)Ljava/lang/String;
+.method public final dI(I)Ljava/lang/String;
     .locals 3
 
     .prologue
@@ -45,7 +45,7 @@
     .line 156
     if-ltz p1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/d$2;->ljc:Lcom/tencent/mm/ui/contact/d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/d$2;->lJn:Lcom/tencent/mm/ui/contact/d;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/d;->getCount()I
 
@@ -55,11 +55,11 @@
 
     .line 157
     :cond_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpIELL9O96QoKLI7tZ4uMi2Pv5tXEtMBlz8="
+    const-string/jumbo v0, "MicroMsg.ChatroomContactAdapter"
 
     const-string/jumbo v2, "pos is invalid"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -69,7 +69,7 @@
 
     .line 161
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/d$2;->ljc:Lcom/tencent/mm/ui/contact/d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/d$2;->lJn:Lcom/tencent/mm/ui/contact/d;
 
     invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/contact/d;->getItem(I)Ljava/lang/Object;
 
@@ -85,17 +85,17 @@
     goto :goto_0
 
     :cond_2
-    iget-object v0, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     goto :goto_0
 .end method
 
-.method public final yz()I
+.method public final yM()I
     .locals 1
 
     .prologue
     .line 167
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/d$2;->ljc:Lcom/tencent/mm/ui/contact/d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/d$2;->lJn:Lcom/tencent/mm/ui/contact/d;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/d;->getCount()I
 

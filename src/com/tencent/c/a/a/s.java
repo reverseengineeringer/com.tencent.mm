@@ -21,7 +21,7 @@ import org.json.JSONObject;
 
 public final class s
 {
-  static boolean T(Context paramContext)
+  static boolean P(Context paramContext)
   {
     try
     {
@@ -38,11 +38,11 @@ public final class s
     return false;
   }
   
-  static String U(Context paramContext)
+  static String Q(Context paramContext)
   {
     try
     {
-      if (j(paramContext, "android.permission.READ_PHONE_STATE"))
+      if (k(paramContext, "android.permission.READ_PHONE_STATE"))
       {
         paramContext = ((TelephonyManager)paramContext.getSystemService("phone")).getDeviceId();
         if (paramContext != null) {
@@ -54,9 +54,9 @@ public final class s
     return "";
   }
   
-  static String V(Context paramContext)
+  static String R(Context paramContext)
   {
-    if (j(paramContext, "android.permission.ACCESS_WIFI_STATE")) {
+    if (k(paramContext, "android.permission.ACCESS_WIFI_STATE")) {
       try
       {
         paramContext = (WifiManager)paramContext.getSystemService("wifi");
@@ -75,9 +75,9 @@ public final class s
     return "";
   }
   
-  private static WifiInfo W(Context paramContext)
+  private static WifiInfo S(Context paramContext)
   {
-    if (j(paramContext, "android.permission.ACCESS_WIFI_STATE"))
+    if (k(paramContext, "android.permission.ACCESS_WIFI_STATE"))
     {
       paramContext = (WifiManager)paramContext.getApplicationContext().getSystemService("wifi");
       if (paramContext != null) {
@@ -87,11 +87,11 @@ public final class s
     return null;
   }
   
-  static String X(Context paramContext)
+  static String T(Context paramContext)
   {
     try
     {
-      paramContext = W(paramContext);
+      paramContext = S(paramContext);
       if (paramContext != null)
       {
         paramContext = paramContext.getBSSID();
@@ -102,11 +102,11 @@ public final class s
     return null;
   }
   
-  static String Y(Context paramContext)
+  static String U(Context paramContext)
   {
     try
     {
-      paramContext = W(paramContext);
+      paramContext = S(paramContext);
       if (paramContext != null)
       {
         paramContext = paramContext.getSSID();
@@ -117,12 +117,12 @@ public final class s
     return null;
   }
   
-  static JSONArray Z(Context paramContext)
+  static JSONArray V(Context paramContext)
   {
     JSONArray localJSONArray;
     try
     {
-      if ((j(paramContext, "android.permission.INTERNET")) && (j(paramContext, "android.permission.ACCESS_NETWORK_STATE")))
+      if ((k(paramContext, "android.permission.INTERNET")) && (k(paramContext, "android.permission.ACCESS_NETWORK_STATE")))
       {
         paramContext = (WifiManager)paramContext.getSystemService("wifi");
         if (paramContext != null)
@@ -151,29 +151,13 @@ public final class s
     return localJSONArray;
   }
   
-  static g a(g paramg1, g paramg2)
-  {
-    if ((paramg1 != null) && (paramg2 != null)) {
-      if (paramg1.a(paramg2) < 0) {}
-    }
-    while (paramg1 != null)
-    {
-      return paramg1;
-      return paramg2;
-    }
-    if (paramg2 != null) {
-      return paramg2;
-    }
-    return null;
-  }
-  
-  static String aa(Context paramContext)
+  static String W(Context paramContext)
   {
     Object localObject2 = null;
     Object localObject1 = localObject2;
     try
     {
-      if (j(paramContext, "android.permission.WRITE_EXTERNAL_STORAGE"))
+      if (k(paramContext, "android.permission.WRITE_EXTERNAL_STORAGE"))
       {
         paramContext = Environment.getExternalStorageState();
         localObject1 = localObject2;
@@ -200,11 +184,11 @@ public final class s
     return null;
   }
   
-  static String ab(Context paramContext)
+  static String X(Context paramContext)
   {
     try
     {
-      if ((j(paramContext, "android.permission.INTERNET")) && (j(paramContext, "android.permission.ACCESS_NETWORK_STATE")))
+      if ((k(paramContext, "android.permission.INTERNET")) && (k(paramContext, "android.permission.ACCESS_NETWORK_STATE")))
       {
         paramContext = ((ConnectivityManager)paramContext.getSystemService("connectivity")).getActiveNetworkInfo();
         if ((paramContext != null) && (paramContext.isConnected()))
@@ -244,19 +228,35 @@ public final class s
     return paramContext;
   }
   
-  static boolean as(String paramString)
+  static g a(g paramg1, g paramg2)
+  {
+    if ((paramg1 != null) && (paramg2 != null)) {
+      if (paramg1.a(paramg2) < 0) {}
+    }
+    while (paramg1 != null)
+    {
+      return paramg1;
+      return paramg2;
+    }
+    if (paramg2 != null) {
+      return paramg2;
+    }
+    return null;
+  }
+  
+  static boolean aw(String paramString)
   {
     return (paramString != null) && (paramString.trim().length() != 0);
   }
   
-  static boolean at(String paramString)
+  static boolean ax(String paramString)
   {
     return (paramString != null) && (paramString.trim().length() >= 40);
   }
   
   static void b(JSONObject paramJSONObject, String paramString1, String paramString2)
   {
-    if (as(paramString2)) {
+    if (aw(paramString2)) {
       paramJSONObject.put(paramString1, paramString2);
     }
   }
@@ -314,7 +314,21 @@ public final class s
     return paramString;
   }
   
-  static boolean j(Context paramContext, String paramString)
+  static String iK()
+  {
+    try
+    {
+      Object localObject = new StatFs(Environment.getDataDirectory().getPath());
+      long l1 = ((StatFs)localObject).getBlockSize();
+      long l2 = ((StatFs)localObject).getBlockCount() * l1 / 1000000L;
+      localObject = String.valueOf(((StatFs)localObject).getAvailableBlocks() * l1 / 1000000L) + "/" + String.valueOf(l2);
+      return (String)localObject;
+    }
+    catch (Throwable localThrowable) {}
+    return "";
+  }
+  
+  static boolean k(Context paramContext, String paramString)
   {
     boolean bool = false;
     try
@@ -327,20 +341,6 @@ public final class s
     }
     catch (Throwable paramContext) {}
     return false;
-  }
-  
-  static String kj()
-  {
-    try
-    {
-      Object localObject = new StatFs(Environment.getDataDirectory().getPath());
-      long l1 = ((StatFs)localObject).getBlockSize();
-      long l2 = ((StatFs)localObject).getBlockCount() * l1 / 1000000L;
-      localObject = String.valueOf(((StatFs)localObject).getAvailableBlocks() * l1 / 1000000L) + "/" + String.valueOf(l2);
-      return (String)localObject;
-    }
-    catch (Throwable localThrowable) {}
-    return "";
   }
 }
 

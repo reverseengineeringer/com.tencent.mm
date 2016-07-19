@@ -1,5 +1,8 @@
 package com.tencent.mm.modelvoice;
 
+import com.tencent.mm.model.ah;
+import com.tencent.mm.storage.aj;
+
 final class r$1
   implements Runnable
 {
@@ -7,7 +10,7 @@ final class r$1
   
   public final void run()
   {
-    cgI.l(com.tencent.mm.model.ah.tD().rs().x(chM.aEV, chM.bQd));
+    cbY.o(ah.tE().rt().C(cdd.ara, cdd.bJA));
   }
 }
 

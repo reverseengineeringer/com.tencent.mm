@@ -1,36 +1,57 @@
 package com.tencent.mm.ui.contact;
 
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemLongClickListener;
-import android.widget.ListView;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.c;
-import com.tencent.mm.ui.tools.eb;
-import com.tencent.mm.ui.voicesearch.g;
+import android.database.Cursor;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.storage.k;
+import com.tencent.mm.storage.q;
+import com.tencent.mm.ui.contact.a.a;
+import com.tencent.mm.ui.contact.a.e;
+import java.util.ArrayList;
 
-final class w
-  implements AdapterView.OnItemLongClickListener
+public final class w
+  extends n
 {
-  w(AddressUI.a parama) {}
+  private Cursor fmd;
+  private String lHF;
   
-  public final boolean onItemLongClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public w(MMBaseSelectContactUI paramMMBaseSelectContactUI, String paramString)
   {
-    t.i("!32@/B4Tb64lLpJvPADYHZ60V4qqnXgYeWWp", "onItemLongClick, targetview is SearchBar::ListView, pos = " + paramInt);
-    if (paramInt < AddressUI.a.c(jet).getHeaderViewsCount()) {
-      t.w("!32@/B4Tb64lLpJvPADYHZ60V4qqnXgYeWWp", "on item long click, but match header view");
-    }
-    do
+    super(paramMMBaseSelectContactUI, new ArrayList(), false, false);
+    lHF = paramString;
+    fmd = ah.tE().rr().d(lHF, "", crs);
+  }
+  
+  public final void finish()
+  {
+    super.finish();
+    v.i("MicroMsg.SpecialContactAdapter", "finish!");
+    if (fmd != null)
     {
-      do
-      {
-        return true;
-      } while ((AddressUI.a.e(jet) != null) && (ejet).jAq));
-      paramAdapterView = ajet).ci(paramInt - AddressUI.a.c(jet).getHeaderViewsCount())).field_username;
-    } while ((com.tencent.mm.model.w.em(paramAdapterView)) || (com.tencent.mm.model.w.en(paramAdapterView)));
-    AddressUI.a.b(jet, paramAdapterView);
-    AddressUI.a.h(jet).a(paramView, paramInt, paramLong, jet, AddressUI.a.g(jet));
-    return true;
+      fmd.close();
+      fmd = null;
+    }
+  }
+  
+  public final int getCount()
+  {
+    return fmd.getCount();
+  }
+  
+  protected final a jQ(int paramInt)
+  {
+    if ((paramInt >= 0) && (fmd.moveToPosition(paramInt)))
+    {
+      e locale = new e(paramInt);
+      k localk = new k();
+      localk.b(fmd);
+      cFh = localk;
+      lLe = azn();
+      return locale;
+    }
+    v.e("MicroMsg.SpecialContactAdapter", "create Data Item Error position=%d", new Object[] { Integer.valueOf(paramInt) });
+    return null;
   }
 }
 

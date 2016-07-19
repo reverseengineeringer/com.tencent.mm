@@ -4,10 +4,10 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.os.IInterface;
 import android.os.Parcel;
-import com.tencent.mm.protocal.e;
-import com.tencent.mm.protocal.e.a;
-import com.tencent.mm.protocal.f;
-import com.tencent.mm.protocal.f.a;
+import com.tencent.mm.protocal.g;
+import com.tencent.mm.protocal.g.a;
+import com.tencent.mm.protocal.h;
+import com.tencent.mm.protocal.h.a;
 
 public abstract class p$a
   extends Binder
@@ -18,7 +18,7 @@ public abstract class p$a
     attachInterface(this, "com.tencent.mm.network.IReqResp_AIDL");
   }
   
-  public static p ab(IBinder paramIBinder)
+  public static p D(IBinder paramIBinder)
   {
     if (paramIBinder == null) {
       return null;
@@ -37,8 +37,8 @@ public abstract class p$a
   
   public boolean onTransact(int paramInt1, Parcel paramParcel1, Parcel paramParcel2, int paramInt2)
   {
-    f localf = null;
-    e locale = null;
+    h localh = null;
+    g localg = null;
     switch (paramInt1)
     {
     default: 
@@ -60,38 +60,38 @@ public abstract class p$a
       return true;
     case 3: 
       paramParcel1.enforceInterface("com.tencent.mm.network.IReqResp_AIDL");
-      localf = wg();
+      localh = wi();
       paramParcel2.writeNoException();
-      paramParcel1 = locale;
-      if (localf != null) {
-        paramParcel1 = localf.asBinder();
+      paramParcel1 = localg;
+      if (localh != null) {
+        paramParcel1 = localh.asBinder();
       }
       paramParcel2.writeStrongBinder(paramParcel1);
       return true;
     case 4: 
       paramParcel1.enforceInterface("com.tencent.mm.network.IReqResp_AIDL");
-      locale = wf();
+      localg = wh();
       paramParcel2.writeNoException();
-      paramParcel1 = localf;
-      if (locale != null) {
-        paramParcel1 = locale.asBinder();
+      paramParcel1 = localh;
+      if (localg != null) {
+        paramParcel1 = localg.asBinder();
       }
       paramParcel2.writeStrongBinder(paramParcel1);
       return true;
     case 5: 
       paramParcel1.enforceInterface("com.tencent.mm.network.IReqResp_AIDL");
-      a(i.a.Z(paramParcel1.readStrongBinder()), paramParcel1.readInt(), paramParcel1.readInt());
+      a(i.a.B(paramParcel1.readStrongBinder()), paramParcel1.readInt(), paramParcel1.readInt());
       paramParcel2.writeNoException();
       return true;
     case 6: 
       paramParcel1.enforceInterface("com.tencent.mm.network.IReqResp_AIDL");
-      paramInt1 = vF();
+      paramInt1 = vI();
       paramParcel2.writeNoException();
       paramParcel2.writeInt(paramInt1);
       return true;
     case 7: 
       paramParcel1.enforceInterface("com.tencent.mm.network.IReqResp_AIDL");
-      boolean bool = vB();
+      boolean bool = vD();
       paramParcel2.writeNoException();
       if (bool) {}
       for (paramInt1 = 1;; paramInt1 = 0)
@@ -101,28 +101,28 @@ public abstract class p$a
       }
     case 8: 
       paramParcel1.enforceInterface("com.tencent.mm.network.IReqResp_AIDL");
-      paramInt1 = vx();
+      paramInt1 = vz();
       paramParcel2.writeNoException();
       paramParcel2.writeInt(paramInt1);
       return true;
     case 9: 
       paramParcel1.enforceInterface("com.tencent.mm.network.IReqResp_AIDL");
-      gk(paramParcel1.readString());
+      gx(paramParcel1.readString());
       paramParcel2.writeNoException();
       return true;
     case 10: 
       paramParcel1.enforceInterface("com.tencent.mm.network.IReqResp_AIDL");
-      a(i.a.Z(paramParcel1.readStrongBinder()), paramParcel1.readInt(), paramParcel1.readInt(), paramParcel1.readString());
+      a(i.a.B(paramParcel1.readStrongBinder()), paramParcel1.readInt(), paramParcel1.readInt(), paramParcel1.readString());
       paramParcel2.writeNoException();
       return true;
     case 11: 
       paramParcel1.enforceInterface("com.tencent.mm.network.IReqResp_AIDL");
-      a(d.a.W(paramParcel1.readStrongBinder()), i.a.Z(paramParcel1.readStrongBinder()), paramParcel1.readInt(), paramParcel1.readInt());
+      a(d.a.y(paramParcel1.readStrongBinder()), i.a.B(paramParcel1.readStrongBinder()), paramParcel1.readInt(), paramParcel1.readInt());
       paramParcel2.writeNoException();
       return true;
     }
     paramParcel1.enforceInterface("com.tencent.mm.network.IReqResp_AIDL");
-    paramInt1 = wh();
+    paramInt1 = wj();
     paramParcel2.writeNoException();
     paramParcel2.writeInt(paramInt1);
     return true;
@@ -396,7 +396,7 @@ public abstract class p$a
       }
     }
     
-    public final void gk(String paramString)
+    public final void gx(String paramString)
     {
       Parcel localParcel1 = Parcel.obtain();
       Parcel localParcel2 = Parcel.obtain();
@@ -415,7 +415,7 @@ public abstract class p$a
       }
     }
     
-    public final boolean vB()
+    public final boolean vD()
     {
       boolean bool = false;
       Parcel localParcel1 = Parcel.obtain();
@@ -438,7 +438,7 @@ public abstract class p$a
       }
     }
     
-    public final int vF()
+    public final int vI()
     {
       Parcel localParcel1 = Parcel.obtain();
       Parcel localParcel2 = Parcel.obtain();
@@ -457,7 +457,7 @@ public abstract class p$a
       }
     }
     
-    public final int vx()
+    public final int vz()
     {
       Parcel localParcel1 = Parcel.obtain();
       Parcel localParcel2 = Parcel.obtain();
@@ -476,7 +476,7 @@ public abstract class p$a
       }
     }
     
-    public final e wf()
+    public final g wh()
     {
       Parcel localParcel1 = Parcel.obtain();
       Parcel localParcel2 = Parcel.obtain();
@@ -485,8 +485,8 @@ public abstract class p$a
         localParcel1.writeInterfaceToken("com.tencent.mm.network.IReqResp_AIDL");
         mRemote.transact(4, localParcel1, localParcel2, 0);
         localParcel2.readException();
-        e locale = e.a.aq(localParcel2.readStrongBinder());
-        return locale;
+        g localg = g.a.S(localParcel2.readStrongBinder());
+        return localg;
       }
       finally
       {
@@ -495,7 +495,7 @@ public abstract class p$a
       }
     }
     
-    public final f wg()
+    public final h wi()
     {
       Parcel localParcel1 = Parcel.obtain();
       Parcel localParcel2 = Parcel.obtain();
@@ -504,8 +504,8 @@ public abstract class p$a
         localParcel1.writeInterfaceToken("com.tencent.mm.network.IReqResp_AIDL");
         mRemote.transact(3, localParcel1, localParcel2, 0);
         localParcel2.readException();
-        f localf = f.a.ar(localParcel2.readStrongBinder());
-        return localf;
+        h localh = h.a.T(localParcel2.readStrongBinder());
+        return localh;
       }
       finally
       {
@@ -514,7 +514,7 @@ public abstract class p$a
       }
     }
     
-    public final int wh()
+    public final int wj()
     {
       Parcel localParcel1 = Parcel.obtain();
       Parcel localParcel2 = Parcel.obtain();

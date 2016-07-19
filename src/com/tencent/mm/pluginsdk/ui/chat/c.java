@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.chat;
 
 import android.content.Context;
 import android.view.View;
-import com.tencent.mm.aw.a;
+import com.tencent.mm.az.a;
 import com.tencent.mm.plugin.gif.d;
 import com.tencent.mm.pluginsdk.ui.emoji.PreViewEmojiView;
 import com.tencent.mm.ui.base.o;
@@ -10,28 +10,28 @@ import com.tencent.mm.ui.base.s;
 
 public final class c
 {
-  private View cRI;
-  public com.tencent.mm.storage.a.c dmd;
-  public PreViewEmojiView iMb;
-  public o iMc;
-  public View iMd;
-  public int iMe;
-  public int iMf;
+  private View cPr;
+  public com.tencent.mm.storage.a.c dlK;
+  public PreViewEmojiView jiY;
+  public o jiZ;
+  public View jja;
+  public int jjb;
+  public int jjc;
   public Context mContext;
   
   public c(Context paramContext, View paramView)
   {
     mContext = paramContext;
-    iMd = paramView;
-    cRI = View.inflate(mContext, 2131363044, null);
-    iMb = ((PreViewEmojiView)cRI.findViewById(2131169061));
-    iMe = a.z(mContext, 2131034525);
-    iMc = new o(mContext);
-    iMc.setContentView(cRI);
-    iMc.setOutsideTouchable(false);
-    iMc.setFocusable(false);
-    iMc.setBackgroundDrawable(null);
-    iMf = s.eo(mContext);
+    jja = paramView;
+    cPr = View.inflate(mContext, 2130903259, null);
+    jiY = ((PreViewEmojiView)cPr.findViewById(2131755943));
+    jjb = a.D(mContext, 2131427821);
+    jiZ = new o(mContext);
+    jiZ.setContentView(cPr);
+    jiZ.setOutsideTouchable(false);
+    jiZ.setFocusable(false);
+    jiZ.setBackgroundDrawable(null);
+    jjc = s.er(mContext);
   }
 }
 

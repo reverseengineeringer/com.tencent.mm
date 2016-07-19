@@ -15,10 +15,10 @@ final class AppChooserUI$2
   
   public final void onClick(View paramView)
   {
-    if ((AppChooserUI.c(iRi) != null) && (ciRi).iRm != null))
+    if ((AppChooserUI.c(jos) != null) && (cjos).jow != null))
     {
-      ah.tD().rn().set(AppChooserUI.a(iRi, 274528), ciRi).iRm.activityInfo.packageName);
-      AppChooserUI.a(iRi, ciRi).iRm.activityInfo.packageName, true);
+      ah.tE().ro().set(AppChooserUI.a(jos, 274528), cjos).jow.activityInfo.packageName);
+      AppChooserUI.a(jos, cjos).jow.activityInfo.packageName, true);
     }
   }
 }

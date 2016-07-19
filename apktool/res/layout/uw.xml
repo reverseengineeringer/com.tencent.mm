@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/ak" android:gravity="center" android:background="@drawable/jd" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:text="@string/bbr" android:singleLine="false" style="@style/MMLineEditText" />
+    <FrameLayout android:padding="@dimen/hb" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.tencent.mm.ui.base.MMClearEditText android:id="@id/b54" android:background="@drawable/ed" android:hint="@string/bbq" android:imeOptions="actionDone" style="@style/MMLineEditPass" />
+    </FrameLayout>
+    <RelativeLayout android:orientation="horizontal" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_marginTop="15.0dip" style="@style/MMBlock">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true">
+            <Button android:layout_gravity="bottom|center|left" android:id="@id/b55" style="@style/RegUIHyperText" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

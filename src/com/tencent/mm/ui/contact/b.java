@@ -9,36 +9,36 @@ import android.view.View.OnTouchListener;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.tencent.mm.ar.c;
-import com.tencent.mm.q.d;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.av.c;
+import com.tencent.mm.s.d;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.MaskLayout;
 
 public final class b
   extends RelativeLayout
 {
-  private View cTx = null;
+  private View cQS = null;
   private TextView contentView = null;
   private Context context;
-  private View fig = null;
+  private View frc = null;
   
   public b(Context paramContext, final a parama)
   {
     super(paramContext);
     context = paramContext;
-    View.inflate(getContext(), 2131361933, this);
-    cTx = findViewById(2131165347);
-    fig = cTx.findViewById(2131165644);
-    contentView = ((TextView)fig.findViewById(2131165646));
-    cTx.setOnClickListener(new View.OnClickListener()
+    View.inflate(getContext(), 2130903080, this);
+    cQS = findViewById(2131755259);
+    frc = cQS.findViewById(2131755260);
+    contentView = ((TextView)frc.findViewById(2131755264));
+    cQS.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
-        switch (b.3.lix[parama.ordinal()])
+        switch (b.3.lII[parama.ordinal()])
         {
         default: 
-          u.e("!56@/B4Tb64lLpIELL9O96QoKLI7tZ4uMi2P+X69o6YV7p+XdPoFV/Hyaw==", "[cpan] unknow type for click. type:%s", new Object[] { parama });
+          v.e("MicroMsg.ChatroomContactEntranceView", "[cpan] unknow type for click. type:%s", new Object[] { parama });
           return;
         case 1: 
           paramAnonymousView = new Intent();
@@ -54,38 +54,38 @@ public final class b
         c.c(b.a(b.this), "ipcall", ".ui.IPCallAddressUI", paramAnonymousView);
       }
     });
-    fig.setOnTouchListener(new View.OnTouchListener()
+    frc.setOnTouchListener(new View.OnTouchListener()
     {
       public final boolean onTouch(View paramAnonymousView, MotionEvent paramAnonymousMotionEvent)
       {
         if ((b.a(b.this) instanceof MMActivity)) {
-          ((MMActivity)b.a(b.this)).age();
+          ((MMActivity)b.a(b.this)).aiI();
         }
         return false;
       }
     });
-    paramContext = (ImageView)((MaskLayout)fig.findViewById(2131165645)).getContentView();
-    switch (3.lix[parama.ordinal()])
+    paramContext = (ImageView)frc.findViewById(2131755261)).view;
+    switch (3.lII[parama.ordinal()])
     {
     default: 
       return;
     case 1: 
-      contentView.setText(2131428313);
-      d.a(getContext(), paramContext, 2130903656);
+      contentView.setText(2131230806);
+      d.a(getContext(), paramContext, 2131165362);
       return;
     case 2: 
-      contentView.setText(2131428314);
-      d.a(getContext(), paramContext, 2130903650);
+      contentView.setText(2131230810);
+      d.a(getContext(), paramContext, 2131165363);
       return;
     }
-    fig.setBackgroundResource(2130970354);
-    contentView.setText(2131428315);
-    d.a(getContext(), paramContext, 2130903652);
+    frc.setBackgroundResource(2130838071);
+    contentView.setText(2131230809);
+    d.a(getContext(), paramContext, 2131165368);
   }
   
   public final void setVisible(boolean paramBoolean)
   {
-    View localView = cTx;
+    View localView = cQS;
     if (paramBoolean) {}
     for (int i = 0;; i = 8)
     {
@@ -94,7 +94,10 @@ public final class b
     }
   }
   
-  public static enum a {}
+  public static enum a
+  {
+    private a() {}
+  }
 }
 
 /* Location:

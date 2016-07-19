@@ -10,17 +10,12 @@ import android.widget.AbsListView.LayoutParams;
 public class b
   extends ViewGroup
 {
-  private int fh = 48;
+  int fE = 48;
   
   public b(Context paramContext)
   {
     super(paramContext);
     setLayoutParams(new AbsListView.LayoutParams(-1, -2));
-  }
-  
-  public int getGravity()
-  {
-    return fh;
   }
   
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
@@ -29,7 +24,7 @@ public class b
     if (localView == null) {
       return;
     }
-    if (fh == 48)
+    if (fE == 48)
     {
       localView.layout(0, 0, getMeasuredWidth(), localView.getMeasuredHeight());
       return;
@@ -66,11 +61,6 @@ public class b
       setMeasuredDimension(j, paramInt1);
       return;
     }
-  }
-  
-  public void setGravity(int paramInt)
-  {
-    fh = paramInt;
   }
 }
 

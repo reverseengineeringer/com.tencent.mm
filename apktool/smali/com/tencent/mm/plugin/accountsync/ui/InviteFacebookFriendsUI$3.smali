@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI;->Gb()V
+    value = Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic coP:Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI;
+.field final synthetic ckd:Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI;
 
-.field final synthetic coQ:Landroid/widget/TextView;
+.field final synthetic cke:Landroid/widget/TextView;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 138
-    iput-object p1, p0, Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI$3;->coP:Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI$3;->ckd:Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI$3;->coQ:Landroid/widget/TextView;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI$3;->cke:Landroid/widget/TextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,19 +40,19 @@
 
 
 # virtual methods
-.method public final Gh()V
+.method public final GE()V
     .locals 2
 
     .prologue
     .line 142
-    invoke-static {}, Lcom/tencent/mm/model/h;->sC()Z
+    invoke-static {}, Lcom/tencent/mm/model/h;->sE()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 143
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI$3;->coP:Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI$3;->ckd:Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI;->a(Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI;)Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI$a;
 
@@ -65,7 +65,7 @@
     if-nez v0, :cond_1
 
     .line 144
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI$3;->coQ:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI$3;->cke:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
@@ -78,7 +78,7 @@
 
     .line 147
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI$3;->coQ:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/InviteFacebookFriendsUI$3;->cke:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 
@@ -87,7 +87,7 @@
     goto :goto_0
 .end method
 
-.method public final Gi()V
+.method public final GF()V
     .locals 0
 
     .prologue

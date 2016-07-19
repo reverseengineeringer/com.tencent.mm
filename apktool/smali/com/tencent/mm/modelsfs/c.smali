@@ -4,12 +4,12 @@
 
 
 # instance fields
-.field private cal:Lcom/tencent/mm/modelsfs/a;
+.field private bTU:Lcom/tencent/mm/modelsfs/a;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;J)V
-    .locals 1
+    .locals 2
 
     .prologue
     .line 30
@@ -20,7 +20,7 @@
 
     invoke-direct {v0, p2, p3}, Lcom/tencent/mm/modelsfs/a;-><init>(J)V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsfs/c;->cal:Lcom/tencent/mm/modelsfs/a;
+    iput-object v0, p0, Lcom/tencent/mm/modelsfs/c;->bTU:Lcom/tencent/mm/modelsfs/a;
 
     .line 32
     return-void
@@ -36,12 +36,12 @@
     invoke-super {p0}, Ljava/io/FileOutputStream;->close()V
 
     .line 48
-    iget-object v0, p0, Lcom/tencent/mm/modelsfs/c;->cal:Lcom/tencent/mm/modelsfs/a;
+    iget-object v0, p0, Lcom/tencent/mm/modelsfs/c;->bTU:Lcom/tencent/mm/modelsfs/a;
 
     if-eqz v0, :cond_0
 
     .line 49
-    iget-object v0, p0, Lcom/tencent/mm/modelsfs/c;->cal:Lcom/tencent/mm/modelsfs/a;
+    iget-object v0, p0, Lcom/tencent/mm/modelsfs/c;->bTU:Lcom/tencent/mm/modelsfs/a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/modelsfs/a;->free()V
 
@@ -55,7 +55,7 @@
 
     .prologue
     .line 41
-    iget-object v0, p0, Lcom/tencent/mm/modelsfs/c;->cal:Lcom/tencent/mm/modelsfs/a;
+    iget-object v0, p0, Lcom/tencent/mm/modelsfs/c;->bTU:Lcom/tencent/mm/modelsfs/a;
 
     invoke-virtual {v0, p1, p3}, Lcom/tencent/mm/modelsfs/a;->j([BI)I
 

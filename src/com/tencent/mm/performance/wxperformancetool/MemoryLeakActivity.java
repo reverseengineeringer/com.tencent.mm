@@ -7,7 +7,7 @@ import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import com.tencent.mm.ui.base.h;
 import com.tencent.mm.ui.base.h.a;
 import java.lang.ref.WeakReference;
@@ -17,13 +17,13 @@ import java.util.HashMap;
 public class MemoryLeakActivity
   extends Activity
 {
-  private h clm;
-  private String cln;
-  private aa mHandler = new aa()
+  private h cgp;
+  private String cgq;
+  private ac mHandler = new ac()
   {
     public final void handleMessage(Message paramAnonymousMessage)
     {
-      if (((WeakReference)d.clv.get(MemoryLeakActivity.a(MemoryLeakActivity.this))).get() == null)
+      if (((WeakReference)d.cgz.get(MemoryLeakActivity.a(MemoryLeakActivity.this))).get() == null)
       {
         finish();
         return;
@@ -35,10 +35,10 @@ public class MemoryLeakActivity
   protected void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    setContentView(2131361883);
+    setContentView(2130903114);
     h.a locala = new h.a(this);
-    locala.Gy("memory leak");
-    cln = getIntent().getStringExtra("key");
+    locala.IM("memory leak");
+    cgq = getIntent().getStringExtra("key");
     String str2 = getIntent().getStringExtra("tag");
     final String str1 = getIntent().getStringExtra("class");
     paramBundle = str1;
@@ -46,13 +46,13 @@ public class MemoryLeakActivity
       paramBundle = str1.substring(str1.indexOf(" "));
     }
     str1 = paramBundle.replace(".", "_");
-    locala.Gz(str2 + paramBundle + "\n\npath:" + com.tencent.mm.ba.a.kiO + str1 + ".zip");
-    locala.hw(true);
+    locala.IN(str2 + paramBundle + "\n\npath:" + com.tencent.mm.bd.a.kIX + str1 + ".zip");
+    locala.hU(true);
     locala.a("dumphprof", new DialogInterface.OnClickListener()
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
-        com.tencent.mm.ba.a.Gc(str1);
+        com.tencent.mm.bd.a.It(str1);
         if ((MemoryLeakActivity.b(MemoryLeakActivity.this) != null) && (MemoryLeakActivity.b(MemoryLeakActivity.this).isShowing())) {
           MemoryLeakActivity.b(MemoryLeakActivity.this).dismiss();
         }
@@ -76,7 +76,7 @@ public class MemoryLeakActivity
         finish();
       }
     });
-    clm = locala.bcu();
+    cgp = locala.bhJ();
     System.gc();
     System.gc();
     mHandler.sendEmptyMessageDelayed(0, 200L);
@@ -85,12 +85,12 @@ public class MemoryLeakActivity
   protected void onDestroy()
   {
     super.onDestroy();
-    d.clv.remove(cln);
+    d.cgz.remove(cgq);
     mHandler.removeCallbacksAndMessages(null);
-    if ((clm != null) && (clm.isShowing()))
+    if ((cgp != null) && (cgp.isShowing()))
     {
-      clm.dismiss();
-      clm = null;
+      cgp.dismiss();
+      cgp = null;
     }
   }
 }

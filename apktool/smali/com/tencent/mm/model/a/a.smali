@@ -4,15 +4,25 @@
 
 
 # instance fields
-.field public bDg:Ljava/lang/String;
+.field public bwq:Ljava/lang/String;
 
-.field public bDh:Ljava/lang/String;
+.field public bwr:Ljava/lang/String;
 
-.field public bDi:Ljava/lang/String;
+.field public bws:Ljava/lang/String;
 
-.field public bDj:Ljava/lang/String;
+.field public bwt:Ljava/lang/String;
 
-.field public bDk:Ljava/util/HashMap;
+.field public bwu:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/tencent/mm/model/a/d;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -28,23 +38,23 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/model/a/a;->bDk:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/model/a/a;->bwu:Ljava/util/HashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final fw(Ljava/lang/String;)Lcom/tencent/mm/model/a/d;
+.method public final fJ(Ljava/lang/String;)Lcom/tencent/mm/model/a/d;
     .locals 1
 
     .prologue
     .line 69
-    iget-object v0, p0, Lcom/tencent/mm/model/a/a;->bDk:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/model/a/a;->bwu:Ljava/util/HashMap;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/model/a/a;->bDk:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/model/a/a;->bwu:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -53,7 +63,7 @@
     if-eqz v0, :cond_0
 
     .line 70
-    iget-object v0, p0, Lcom/tencent/mm/model/a/a;->bDk:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/model/a/a;->bwu:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 

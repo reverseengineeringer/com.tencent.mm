@@ -4,9 +4,9 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import com.tencent.mm.ar.c;
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.h.a;
+import com.tencent.mm.av.c;
+import com.tencent.mm.e.b.p;
+import com.tencent.mm.i.a;
 import com.tencent.mm.pluginsdk.i.ai;
 import com.tencent.mm.pluginsdk.i.o.e;
 import com.tencent.mm.ui.MMActivity;
@@ -17,23 +17,23 @@ final class SnsLabelContactListUI$2
 {
   SnsLabelContactListUI$2(SnsLabelContactListUI paramSnsLabelContactListUI) {}
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
     paramAdapterView = new Intent();
-    paramView = (a)SnsLabelContactListUI.a(lmz).getItem(paramInt);
-    i.o.e locale = i.ai.izf;
+    paramView = (a)SnsLabelContactListUI.a(lMP).getItem(paramInt);
+    i.o.e locale = i.ai.iVB;
     if (locale == null)
     {
-      lmz.finish();
+      lMP.finish();
       return;
     }
     paramAdapterView = locale.e(paramAdapterView, field_username);
     if (paramAdapterView == null)
     {
-      lmz.finish();
+      lMP.finish();
       return;
     }
-    c.c(lmz.koJ.kpc, "sns", ".ui.SnsUserUI", paramAdapterView);
+    c.c(lMP.kNN.kOg, "sns", ".ui.SnsUserUI", paramAdapterView);
   }
 }
 

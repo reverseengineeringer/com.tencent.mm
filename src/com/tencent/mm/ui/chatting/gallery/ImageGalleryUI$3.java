@@ -1,12 +1,12 @@
 package com.tencent.mm.ui.chatting.gallery;
 
+import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
-import com.tencent.mm.ar.c;
-import com.tencent.mm.d.a.au;
+import com.tencent.mm.av.c;
+import com.tencent.mm.e.a.ax;
 import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
-import com.tencent.mm.ui.base.MMViewPager;
 import com.tencent.mm.ui.base.n.d;
 import com.tencent.mm.ui.j;
 import java.util.ArrayList;
@@ -29,23 +29,28 @@ final class ImageGalleryUI$3
       do
       {
         return;
-        ImageGalleryUI.e(lgM).rr(lgM.efi.getCurrentItem());
+        ImageGalleryUI.e(lGY).tt(lGY.eiK.gc);
         return;
         paramMenuItem = new ArrayList();
-        paramMenuItem.add(ImageGalleryUI.e(lgM).bgo());
-        b.b(lgM.koJ.kpc, paramMenuItem);
+        paramMenuItem.add(ImageGalleryUI.e(lGY).blY());
+        b.c(lGY.kNN.kOg, paramMenuItem);
         return;
-        ImageGalleryUI.e(lgM).rs(lgM.efi.getCurrentItem());
+        ImageGalleryUI.e(lGY).tu(lGY.eiK.gc);
         return;
-      } while (!c.yf("favorite"));
-      ImageGalleryUI.e(lgM).rt(lgM.efi.getCurrentItem());
+      } while (!c.zM("favorite"));
+      ImageGalleryUI.e(lGY).tv(lGY.eiK.gc);
+      return;
+    case 3: 
+      v.i("MicroMsg.ImageGalleryUI", "request deal QBAR string");
+      paramMenuItem = new ax();
+      afI.aeH = lGY;
+      afI.aeG = ImageGalleryUI.d(lGY);
+      afI.afJ = ImageGalleryUI.n(lGY);
+      afI.afK = ImageGalleryUI.o(lGY);
+      a.kug.y(paramMenuItem);
       return;
     }
-    u.i("!32@/B4Tb64lLpJSmuQVFTi9B2JvKOm4MTV5", "request deal QBAR string");
-    paramMenuItem = new au();
-    atX.asX = lgM;
-    atX.asW = ImageGalleryUI.d(lgM);
-    a.jUF.j(paramMenuItem);
+    ImageGalleryUI.p(lGY);
   }
 }
 

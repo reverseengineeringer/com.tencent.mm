@@ -1,6 +1,6 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 abstract class bb$a
 {
@@ -14,15 +14,15 @@ abstract class bb$a
     {
       i = j;
       if (paramVarArgs.length > 0) {
-        i = ay.g(paramVarArgs[0], 1);
+        i = be.h(paramVarArgs[0], 1);
       }
     }
-    bCF = (i + ay.getInt(bCF, 0));
+    bvP = (i + be.getInt(bvP, 0));
   }
   
   public abstract boolean a(az paramaz);
   
-  public az c(int paramInt, Object... paramVarArgs)
+  public az d(int paramInt, Object... paramVarArgs)
   {
     int j = 1;
     int i = j;
@@ -30,13 +30,13 @@ abstract class bb$a
     {
       i = j;
       if (paramVarArgs.length > 0) {
-        i = ay.g(paramVarArgs[0], 1);
+        i = be.h(paramVarArgs[0], 1);
       }
     }
     paramVarArgs = new az();
     key = paramInt;
-    bCF = String.valueOf(i);
-    bCG = 0L;
+    bvP = String.valueOf(i);
+    bvQ = 0L;
     return paramVarArgs;
   }
 }

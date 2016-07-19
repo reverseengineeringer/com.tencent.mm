@@ -3,7 +3,7 @@ package com.tencent.mm.ui.base;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class MMListPopupWindow$e
   implements View.OnTouchListener
@@ -15,14 +15,14 @@ final class MMListPopupWindow$e
     int i = paramMotionEvent.getAction();
     int j = (int)paramMotionEvent.getX();
     int k = (int)paramMotionEvent.getY();
-    if ((i == 0) && (MMListPopupWindow.b(kFn) != null) && (MMListPopupWindow.b(kFn).isShowing()) && (j >= 0) && (j < MMListPopupWindow.b(kFn).getWidth()) && (k >= 0) && (k < MMListPopupWindow.b(kFn).getHeight())) {
-      MMListPopupWindow.d(kFn).postDelayed(MMListPopupWindow.c(kFn), 250L);
+    if ((i == 0) && (MMListPopupWindow.b(ler) != null) && (MMListPopupWindow.b(ler).isShowing()) && (j >= 0) && (j < MMListPopupWindow.b(ler).getWidth()) && (k >= 0) && (k < MMListPopupWindow.b(ler).getHeight())) {
+      MMListPopupWindow.d(ler).postDelayed(MMListPopupWindow.c(ler), 250L);
     }
     for (;;)
     {
       return false;
       if (i == 1) {
-        MMListPopupWindow.d(kFn).removeCallbacks(MMListPopupWindow.c(kFn));
+        MMListPopupWindow.d(ler).removeCallbacks(MMListPopupWindow.c(ler));
       }
     }
   }

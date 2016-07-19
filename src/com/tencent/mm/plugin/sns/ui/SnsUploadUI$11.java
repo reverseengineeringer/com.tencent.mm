@@ -10,7 +10,7 @@ final class SnsUploadUI$11
   
   public final boolean onLongClick(View paramView)
   {
-    SnsUploadUI.h(hlY);
+    SnsUploadUI.h(hCb);
     return false;
   }
 }

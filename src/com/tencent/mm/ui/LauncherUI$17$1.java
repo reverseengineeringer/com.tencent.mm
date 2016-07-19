@@ -1,33 +1,28 @@
 package com.tencent.mm.ui;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.ui.base.s;
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class LauncherUI$17$1
-  implements DialogInterface.OnClickListener
+  implements Animation.AnimationListener
 {
   LauncherUI$17$1(LauncherUI.17 param17) {}
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public final void onAnimationEnd(Animation paramAnimation)
   {
-    if (ah.tD().isSDCardAvailable())
-    {
-      Intent localIntent = new Intent();
-      localIntent.putExtra("had_detected_no_sdcard_space", true);
-      com.tencent.mm.ar.c.c(kno.knl, "clean", ".ui.CleanUI", localIntent);
-    }
-    for (;;)
-    {
-      paramDialogInterface.dismiss();
-      paramDialogInterface = h.fUJ;
-      h.b(282L, 1L, 1L, false);
-      return;
-      s.em(kno.knl);
-    }
+    v.i("MicroMsg.LauncherUI", "klem animationEnd");
+    LauncherUI.v(kMw.kMs);
+    kMw.kMs.B(1.0F);
+  }
+  
+  public final void onAnimationRepeat(Animation paramAnimation) {}
+  
+  public final void onAnimationStart(Animation paramAnimation)
+  {
+    v.i("MicroMsg.LauncherUI", "klem onAnimationStart");
+    LauncherUI.u(kMw.kMs);
+    LauncherUI.c(kMw.kMs, false);
   }
 }
 

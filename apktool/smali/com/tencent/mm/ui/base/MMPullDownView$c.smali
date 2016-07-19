@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract Re()Z
+.method public abstract St()Z
 .end method

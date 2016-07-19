@@ -5,147 +5,149 @@
 
 # direct methods
 .method public static a([B[BJI[BI)C
-    .locals 29
+    .locals 30
 
     .prologue
     .line 176
-    new-instance v3, Lcom/tencent/mm/a/i;
+    new-instance v4, Lcom/tencent/mm/a/i;
 
     move-object/from16 v0, p0
 
-    invoke-direct {v3, v0}, Lcom/tencent/mm/a/i;-><init>([B)V
+    invoke-direct {v4, v0}, Lcom/tencent/mm/a/i;-><init>([B)V
 
     .line 177
-    new-instance v14, Lcom/tencent/mm/a/i;
+    new-instance v15, Lcom/tencent/mm/a/i;
 
     move-object/from16 v0, p1
 
-    invoke-direct {v14, v0}, Lcom/tencent/mm/a/i;-><init>([B)V
+    invoke-direct {v15, v0}, Lcom/tencent/mm/a/i;-><init>([B)V
 
     .line 179
-    const/16 v4, 0x10
+    const/16 v5, 0x10
 
-    new-array v5, v4, [Lcom/tencent/mm/a/i;
+    new-array v6, v5, [Lcom/tencent/mm/a/i;
 
     .line 180
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
     :goto_0
-    const/16 v6, 0x10
+    const/16 v7, 0x10
 
-    if-ge v4, v6, :cond_0
+    if-ge v5, v7, :cond_0
 
     .line 181
-    new-instance v6, Lcom/tencent/mm/a/i;
+    new-instance v7, Lcom/tencent/mm/a/i;
 
-    const/16 v7, 0x30
+    const/16 v8, 0x30
 
-    new-array v7, v7, [B
+    new-array v8, v8, [B
 
-    invoke-direct {v6, v7}, Lcom/tencent/mm/a/i;-><init>([B)V
+    invoke-direct {v7, v8}, Lcom/tencent/mm/a/i;-><init>([B)V
 
-    aput-object v6, v5, v4
+    aput-object v7, v6, v5
 
     .line 180
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
     .line 183
     :cond_0
-    new-instance v12, Lcom/tencent/mm/a/i;
+    new-instance v13, Lcom/tencent/mm/a/i;
 
-    const/16 v4, 0x100
+    const/16 v5, 0x100
 
-    new-array v4, v4, [B
+    new-array v5, v5, [B
 
-    invoke-direct {v12, v4}, Lcom/tencent/mm/a/i;-><init>([B)V
+    invoke-direct {v13, v5}, Lcom/tencent/mm/a/i;-><init>([B)V
 
     .line 184
-    new-instance v6, Lcom/tencent/mm/a/i;
+    new-instance v7, Lcom/tencent/mm/a/i;
 
-    const/16 v4, 0x18
+    const/16 v5, 0x18
 
-    new-array v4, v4, [B
+    new-array v5, v5, [B
 
-    invoke-direct {v6, v4}, Lcom/tencent/mm/a/i;-><init>([B)V
+    invoke-direct {v7, v5}, Lcom/tencent/mm/a/i;-><init>([B)V
 
     .line 185
-    new-instance v15, Lcom/tencent/mm/a/i;
-
-    const/16 v4, 0x40
-
-    new-array v4, v4, [B
-
-    invoke-direct {v15, v4}, Lcom/tencent/mm/a/i;-><init>([B)V
-
-    .line 186
     new-instance v16, Lcom/tencent/mm/a/i;
 
-    invoke-direct/range {v16 .. v16}, Lcom/tencent/mm/a/i;-><init>()V
+    const/16 v5, 0x40
 
+    new-array v5, v5, [B
+
+    move-object/from16 v0, v16
+
+    invoke-direct {v0, v5}, Lcom/tencent/mm/a/i;-><init>([B)V
+
+    .line 186
     new-instance v17, Lcom/tencent/mm/a/i;
 
     invoke-direct/range {v17 .. v17}, Lcom/tencent/mm/a/i;-><init>()V
 
-    new-instance v10, Lcom/tencent/mm/a/i;
+    new-instance v18, Lcom/tencent/mm/a/i;
 
-    invoke-direct {v10}, Lcom/tencent/mm/a/i;-><init>()V
+    invoke-direct/range {v18 .. v18}, Lcom/tencent/mm/a/i;-><init>()V
 
     new-instance v11, Lcom/tencent/mm/a/i;
 
     invoke-direct {v11}, Lcom/tencent/mm/a/i;-><init>()V
 
+    new-instance v12, Lcom/tencent/mm/a/i;
+
+    invoke-direct {v12}, Lcom/tencent/mm/a/i;-><init>()V
+
     .line 187
-    new-instance v7, Lcom/tencent/mm/a/i;
-
-    const/16 v4, 0x40
-
-    new-array v4, v4, [B
-
-    invoke-direct {v7, v4}, Lcom/tencent/mm/a/i;-><init>([B)V
-
-    .line 188
     new-instance v8, Lcom/tencent/mm/a/i;
 
-    const/16 v4, 0x30
+    const/16 v5, 0x40
 
-    new-array v4, v4, [B
+    new-array v5, v5, [B
 
-    invoke-direct {v8, v4}, Lcom/tencent/mm/a/i;-><init>([B)V
+    invoke-direct {v8, v5}, Lcom/tencent/mm/a/i;-><init>([B)V
 
-    .line 189
+    .line 188
     new-instance v9, Lcom/tencent/mm/a/i;
 
-    const/16 v4, 0x20
+    const/16 v5, 0x30
 
-    new-array v4, v4, [B
+    new-array v5, v5, [B
 
-    invoke-direct {v9, v4}, Lcom/tencent/mm/a/i;-><init>([B)V
+    invoke-direct {v9, v5}, Lcom/tencent/mm/a/i;-><init>([B)V
+
+    .line 189
+    new-instance v10, Lcom/tencent/mm/a/i;
+
+    const/16 v5, 0x20
+
+    new-array v5, v5, [B
+
+    invoke-direct {v10, v5}, Lcom/tencent/mm/a/i;-><init>([B)V
 
     .line 190
-    new-instance v4, Lcom/tencent/mm/a/i;
+    new-instance v5, Lcom/tencent/mm/a/i;
 
-    const/16 v13, 0x9
+    const/16 v14, 0x9
 
-    new-array v13, v13, [B
+    new-array v14, v14, [B
 
-    invoke-direct {v4, v13}, Lcom/tencent/mm/a/i;-><init>([B)V
+    invoke-direct {v5, v14}, Lcom/tencent/mm/a/i;-><init>([B)V
 
     .line 191
-    new-instance v13, Lcom/tencent/mm/a/i;
+    new-instance v14, Lcom/tencent/mm/a/i;
 
-    const/16 v18, 0x8
+    const/16 v19, 0x8
 
-    move/from16 v0, v18
+    move/from16 v0, v19
 
     new-array v0, v0, [B
 
-    move-object/from16 v18, v0
+    move-object/from16 v19, v0
 
-    move-object/from16 v0, v18
+    move-object/from16 v0, v19
 
-    invoke-direct {v13, v0}, Lcom/tencent/mm/a/i;-><init>([B)V
+    invoke-direct {v14, v0}, Lcom/tencent/mm/a/i;-><init>([B)V
 
     .line 195
     if-eqz p5, :cond_1
@@ -154,151 +156,145 @@
 
     array-length v0, v0
 
-    move/from16 v18, v0
+    move/from16 v19, v0
 
-    if-lez v18, :cond_1
+    if-lez v19, :cond_1
 
-    const-wide/16 v18, 0x7
+    const-wide/16 v20, 0x7
 
-    add-long v18, v18, p2
+    add-long v20, v20, p2
 
-    const-wide/16 v20, -0x8
+    const-wide/16 v22, -0x8
 
-    and-long v18, v18, v20
+    and-long v20, v20, v22
 
-    const-wide/16 v20, 0x0
+    const-wide/16 v22, 0x0
 
-    cmp-long v20, v18, v20
+    cmp-long v19, v20, v22
 
-    if-nez v20, :cond_2
+    if-nez v19, :cond_2
 
     .line 196
     :cond_1
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     .line 229
     :goto_1
-    return v3
+    return v4
 
     .line 199
     :cond_2
-    const/16 v20, 0x0
+    const/16 v19, 0x0
 
-    move/from16 v0, v20
-
-    move-object/from16 v1, v16
-
-    iput v0, v1, Lcom/tencent/mm/a/i;->akw:I
-
-    iget-object v0, v15, Lcom/tencent/mm/a/i;->akv:[B
-
-    move-object/from16 v20, v0
-
-    move-object/from16 v0, v20
-
-    move-object/from16 v1, v16
-
-    iput-object v0, v1, Lcom/tencent/mm/a/i;->akv:[B
-
-    const/16 v20, 0x1c
-
-    move/from16 v0, v20
+    move/from16 v0, v19
 
     move-object/from16 v1, v17
 
-    iput v0, v1, Lcom/tencent/mm/a/i;->akw:I
+    iput v0, v1, Lcom/tencent/mm/a/i;->Xp:I
 
-    iget-object v0, v15, Lcom/tencent/mm/a/i;->akv:[B
+    move-object/from16 v0, v16
 
-    move-object/from16 v20, v0
+    iget-object v0, v0, Lcom/tencent/mm/a/i;->Xo:[B
 
-    move-object/from16 v0, v20
+    move-object/from16 v19, v0
+
+    move-object/from16 v0, v19
 
     move-object/from16 v1, v17
 
-    iput-object v0, v1, Lcom/tencent/mm/a/i;->akv:[B
+    iput-object v0, v1, Lcom/tencent/mm/a/i;->Xo:[B
 
-    const/16 v20, 0x0
+    const/16 v19, 0x1c
 
-    move/from16 v0, v20
+    move/from16 v0, v19
 
-    iput v0, v10, Lcom/tencent/mm/a/i;->akw:I
+    move-object/from16 v1, v18
 
-    iget-object v0, v7, Lcom/tencent/mm/a/i;->akv:[B
+    iput v0, v1, Lcom/tencent/mm/a/i;->Xp:I
 
-    move-object/from16 v20, v0
+    move-object/from16 v0, v16
 
-    move-object/from16 v0, v20
+    iget-object v0, v0, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iput-object v0, v10, Lcom/tencent/mm/a/i;->akv:[B
+    move-object/from16 v19, v0
 
-    const/16 v20, 0x20
+    move-object/from16 v0, v19
 
-    move/from16 v0, v20
+    move-object/from16 v1, v18
 
-    iput v0, v11, Lcom/tencent/mm/a/i;->akw:I
+    iput-object v0, v1, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget-object v0, v7, Lcom/tencent/mm/a/i;->akv:[B
+    const/16 v19, 0x0
 
-    move-object/from16 v20, v0
+    move/from16 v0, v19
 
-    move-object/from16 v0, v20
+    iput v0, v11, Lcom/tencent/mm/a/i;->Xp:I
 
-    iput-object v0, v11, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v0, v8, Lcom/tencent/mm/a/i;->Xo:[B
+
+    move-object/from16 v19, v0
+
+    move-object/from16 v0, v19
+
+    iput-object v0, v11, Lcom/tencent/mm/a/i;->Xo:[B
+
+    const/16 v19, 0x20
+
+    move/from16 v0, v19
+
+    iput v0, v12, Lcom/tencent/mm/a/i;->Xp:I
+
+    iget-object v0, v8, Lcom/tencent/mm/a/i;->Xo:[B
+
+    move-object/from16 v19, v0
+
+    move-object/from16 v0, v19
+
+    iput-object v0, v12, Lcom/tencent/mm/a/i;->Xo:[B
 
     .line 200
-    const/16 v20, 0x18
+    const/16 v19, 0x18
 
-    move/from16 v0, v20
+    move/from16 v0, v19
 
-    invoke-static {v6, v0}, Lcom/tencent/mm/a/j;->a(Lcom/tencent/mm/a/i;I)V
+    invoke-static {v7, v0}, Lcom/tencent/mm/a/j;->a(Lcom/tencent/mm/a/i;I)V
 
-    new-instance v20, Lcom/tencent/mm/a/i;
+    new-instance v19, Lcom/tencent/mm/a/i;
 
-    move-object/from16 v0, v20
+    move-object/from16 v0, v19
 
     move-object/from16 v1, p5
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/a/i;-><init>([B)V
 
-    const/16 v21, 0x18
+    const/16 v22, 0x18
 
     move/from16 v0, p4
 
-    move/from16 v1, v21
+    move/from16 v1, v22
 
     if-le v0, v1, :cond_3
 
     const/16 p4, 0x18
 
     :cond_3
-    move-object/from16 v0, v20
+    move-object/from16 v0, v19
 
     move/from16 v1, p4
 
-    invoke-static {v6, v0, v1}, Lcom/tencent/mm/a/j;->d(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;I)V
+    invoke-static {v7, v0, v1}, Lcom/tencent/mm/a/j;->d(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;I)V
 
-    const/16 v20, 0x38
+    const/16 v19, 0x38
 
-    move/from16 v0, v20
-
-    new-array v0, v0, [B
-
-    move-object/from16 v20, v0
-
-    fill-array-data v20, :array_0
-
-    const/16 v21, 0x30
-
-    move/from16 v0, v21
+    move/from16 v0, v19
 
     new-array v0, v0, [B
 
-    move-object/from16 v21, v0
+    move-object/from16 v19, v0
 
-    fill-array-data v21, :array_1
+    fill-array-data v19, :array_0
 
-    const/16 v22, 0x10
+    const/16 v22, 0x30
 
     move/from16 v0, v22
 
@@ -306,169 +302,185 @@
 
     move-object/from16 v22, v0
 
-    fill-array-data v22, :array_2
+    fill-array-data v22, :array_1
 
-    const/16 v23, 0x40
+    const/16 v23, 0x10
 
     move/from16 v0, v23
 
-    invoke-static {v15, v6, v0}, Lcom/tencent/mm/a/j;->b(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;I)V
+    new-array v0, v0, [B
 
-    const/16 v6, 0x38
+    move-object/from16 v23, v0
 
-    move-object/from16 v0, v20
+    fill-array-data v23, :array_2
 
-    invoke-static {v15, v15, v0, v6, v12}, Lcom/tencent/mm/a/j;->a(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;[BILcom/tencent/mm/a/i;)V
-
-    const/4 v6, 0x0
-
-    :goto_2
-    const/16 v20, 0x10
-
-    move/from16 v0, v20
-
-    if-ge v6, v0, :cond_4
-
-    aget-byte v20, v22, v6
+    const/16 v24, 0x40
 
     move-object/from16 v0, v16
 
-    move/from16 v1, v20
+    move/from16 v1, v24
 
-    invoke-static {v0, v12, v1}, Lcom/tencent/mm/a/j;->c(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;I)V
+    invoke-static {v0, v7, v1}, Lcom/tencent/mm/a/j;->b(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;I)V
 
-    aget-byte v20, v22, v6
+    const/16 v7, 0x38
+
+    move-object/from16 v0, v16
+
+    move-object/from16 v1, v16
+
+    move-object/from16 v2, v19
+
+    invoke-static {v0, v1, v2, v7, v13}, Lcom/tencent/mm/a/j;->a(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;[BILcom/tencent/mm/a/i;)V
+
+    const/4 v7, 0x0
+
+    :goto_2
+    const/16 v19, 0x10
+
+    move/from16 v0, v19
+
+    if-ge v7, v0, :cond_4
+
+    aget-byte v19, v23, v7
 
     move-object/from16 v0, v17
 
-    move/from16 v1, v20
+    move/from16 v1, v19
 
-    invoke-static {v0, v12, v1}, Lcom/tencent/mm/a/j;->c(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;I)V
+    invoke-static {v0, v13, v1}, Lcom/tencent/mm/a/j;->c(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;I)V
 
-    aget-object v20, v5, v6
+    aget-byte v19, v23, v7
 
-    const/16 v23, 0x30
+    move-object/from16 v0, v18
 
-    move-object/from16 v0, v20
+    move/from16 v1, v19
 
-    move-object/from16 v1, v21
+    invoke-static {v0, v13, v1}, Lcom/tencent/mm/a/j;->c(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;I)V
 
-    move/from16 v2, v23
+    aget-object v19, v6, v7
 
-    invoke-static {v0, v15, v1, v2, v12}, Lcom/tencent/mm/a/j;->a(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;[BILcom/tencent/mm/a/i;)V
+    const/16 v24, 0x30
 
-    add-int/lit8 v6, v6, 0x1
+    move-object/from16 v0, v19
+
+    move-object/from16 v1, v16
+
+    move-object/from16 v2, v22
+
+    move/from16 v3, v24
+
+    invoke-static {v0, v1, v2, v3, v13}, Lcom/tencent/mm/a/j;->a(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;[BILcom/tencent/mm/a/i;)V
+
+    add-int/lit8 v7, v7, 0x1
 
     goto :goto_2
 
     .line 206
     :cond_4
-    iget v0, v14, Lcom/tencent/mm/a/i;->akw:I
-
-    move/from16 v25, v0
-
-    iget v0, v3, Lcom/tencent/mm/a/i;->akw:I
+    iget v0, v15, Lcom/tencent/mm/a/i;->Xp:I
 
     move/from16 v26, v0
+
+    iget v0, v4, Lcom/tencent/mm/a/i;->Xp:I
+
+    move/from16 v27, v0
 
     .line 207
     if-nez p6, :cond_5
 
-    move/from16 v6, p6
+    move/from16 v7, p6
 
     .line 210
-    invoke-static/range {v3 .. v12}, Lcom/tencent/mm/a/j;->a(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;[Lcom/tencent/mm/a/i;ILcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;)V
+    invoke-static/range {v4 .. v13}, Lcom/tencent/mm/a/j;->a(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;[Lcom/tencent/mm/a/i;ILcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;)V
 
     .line 211
-    const/16 v4, 0x8
+    const/16 v5, 0x8
 
-    invoke-static {v13, v3, v4}, Lcom/tencent/mm/a/j;->d(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;I)V
+    invoke-static {v14, v4, v5}, Lcom/tencent/mm/a/j;->d(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;I)V
 
     .line 212
-    iget v4, v3, Lcom/tencent/mm/a/i;->akw:I
+    iget v5, v4, Lcom/tencent/mm/a/i;->Xp:I
 
-    add-int/lit8 v4, v4, 0x8
+    add-int/lit8 v5, v5, 0x8
 
-    iput v4, v3, Lcom/tencent/mm/a/i;->akw:I
+    iput v5, v4, Lcom/tencent/mm/a/i;->Xp:I
 
     .line 213
-    const-wide/16 v15, 0x0
+    const-wide/16 v16, 0x0
 
-    const/4 v4, 0x3
+    const/4 v5, 0x3
 
-    shr-long v17, v18, v4
+    shr-long v18, v20, v5
 
     :goto_3
-    cmp-long v4, v15, v17
+    cmp-long v5, v16, v18
 
-    if-gez v4, :cond_6
+    if-gez v5, :cond_6
 
     .line 214
-    invoke-static {v13, v13, v14}, Lcom/tencent/mm/a/j;->a(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;)V
+    invoke-static {v14, v14, v15}, Lcom/tencent/mm/a/j;->a(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;)V
 
-    move-object v4, v13
+    move-object v5, v14
 
-    move/from16 v6, p6
+    move/from16 v7, p6
 
     .line 215
-    invoke-static/range {v3 .. v12}, Lcom/tencent/mm/a/j;->a(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;[Lcom/tencent/mm/a/i;ILcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;)V
+    invoke-static/range {v4 .. v13}, Lcom/tencent/mm/a/j;->a(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;[Lcom/tencent/mm/a/i;ILcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;)V
 
     .line 216
-    const/16 v4, 0x8
+    const/16 v5, 0x8
 
-    invoke-static {v13, v3, v4}, Lcom/tencent/mm/a/j;->d(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;I)V
+    invoke-static {v14, v4, v5}, Lcom/tencent/mm/a/j;->d(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;I)V
 
     .line 213
-    const-wide/16 v19, 0x1
+    const-wide/16 v20, 0x1
 
-    add-long v15, v15, v19
+    add-long v16, v16, v20
 
-    iget v4, v3, Lcom/tencent/mm/a/i;->akw:I
+    iget v5, v4, Lcom/tencent/mm/a/i;->Xp:I
 
-    add-int/lit8 v4, v4, 0x8
+    add-int/lit8 v5, v5, 0x8
 
-    iput v4, v3, Lcom/tencent/mm/a/i;->akw:I
+    iput v5, v4, Lcom/tencent/mm/a/i;->Xp:I
 
-    iget v4, v14, Lcom/tencent/mm/a/i;->akw:I
+    iget v5, v15, Lcom/tencent/mm/a/i;->Xp:I
 
-    add-int/lit8 v4, v4, 0x8
+    add-int/lit8 v5, v5, 0x8
 
-    iput v4, v14, Lcom/tencent/mm/a/i;->akw:I
+    iput v5, v15, Lcom/tencent/mm/a/i;->Xp:I
 
     goto :goto_3
 
     .line 219
     :cond_5
-    const/16 v6, 0x8
+    const/16 v7, 0x8
 
-    invoke-static {v4, v14, v6}, Lcom/tencent/mm/a/j;->d(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;I)V
+    invoke-static {v5, v15, v7}, Lcom/tencent/mm/a/j;->d(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;I)V
 
     .line 220
-    iget v6, v14, Lcom/tencent/mm/a/i;->akw:I
+    iget v7, v15, Lcom/tencent/mm/a/i;->Xp:I
 
-    add-int/lit8 v6, v6, 0x8
+    add-int/lit8 v7, v7, 0x8
 
-    iput v6, v14, Lcom/tencent/mm/a/i;->akw:I
+    iput v7, v15, Lcom/tencent/mm/a/i;->Xp:I
 
     .line 221
-    const-wide/16 v15, 0x1
+    const-wide/16 v16, 0x1
 
-    const/4 v6, 0x3
+    const/4 v7, 0x3
 
-    shr-long v27, v18, v6
+    shr-long v28, v20, v7
 
-    move-wide/from16 v23, v15
+    move-wide/from16 v24, v16
 
     :goto_4
-    cmp-long v6, v23, v27
+    cmp-long v7, v24, v28
 
-    if-gez v6, :cond_6
+    if-gez v7, :cond_6
 
-    move-object v15, v5
+    move-object/from16 v16, v6
 
-    move/from16 v16, p6
-
-    move-object/from16 v17, v7
+    move/from16 v17, p6
 
     move-object/from16 v18, v8
 
@@ -480,57 +492,57 @@
 
     move-object/from16 v22, v12
 
+    move-object/from16 v23, v13
+
     .line 222
-    invoke-static/range {v13 .. v22}, Lcom/tencent/mm/a/j;->a(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;[Lcom/tencent/mm/a/i;ILcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;)V
+    invoke-static/range {v14 .. v23}, Lcom/tencent/mm/a/j;->a(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;[Lcom/tencent/mm/a/i;ILcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;)V
 
     .line 223
-    invoke-static {v3, v13, v4}, Lcom/tencent/mm/a/j;->a(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;)V
+    invoke-static {v4, v14, v5}, Lcom/tencent/mm/a/j;->a(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;)V
 
     .line 224
-    const/16 v6, 0x8
+    const/16 v7, 0x8
 
-    invoke-static {v4, v14, v6}, Lcom/tencent/mm/a/j;->d(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;I)V
+    invoke-static {v5, v15, v7}, Lcom/tencent/mm/a/j;->d(Lcom/tencent/mm/a/i;Lcom/tencent/mm/a/i;I)V
 
     .line 221
-    const-wide/16 v15, 0x1
+    const-wide/16 v16, 0x1
 
-    add-long v15, v15, v23
+    add-long v16, v16, v24
 
-    iget v6, v3, Lcom/tencent/mm/a/i;->akw:I
+    iget v7, v4, Lcom/tencent/mm/a/i;->Xp:I
 
-    add-int/lit8 v6, v6, 0x8
+    add-int/lit8 v7, v7, 0x8
 
-    iput v6, v3, Lcom/tencent/mm/a/i;->akw:I
+    iput v7, v4, Lcom/tencent/mm/a/i;->Xp:I
 
-    iget v6, v14, Lcom/tencent/mm/a/i;->akw:I
+    iget v7, v15, Lcom/tencent/mm/a/i;->Xp:I
 
-    add-int/lit8 v6, v6, 0x8
+    add-int/lit8 v7, v7, 0x8
 
-    iput v6, v14, Lcom/tencent/mm/a/i;->akw:I
+    iput v7, v15, Lcom/tencent/mm/a/i;->Xp:I
 
-    move-wide/from16 v23, v15
+    move-wide/from16 v24, v16
 
     goto :goto_4
 
     .line 227
     :cond_6
-    move/from16 v0, v25
-
-    iput v0, v14, Lcom/tencent/mm/a/i;->akw:I
-
-    .line 228
     move/from16 v0, v26
 
-    iput v0, v3, Lcom/tencent/mm/a/i;->akw:I
+    iput v0, v15, Lcom/tencent/mm/a/i;->Xp:I
+
+    .line 228
+    move/from16 v0, v27
+
+    iput v0, v4, Lcom/tencent/mm/a/i;->Xp:I
 
     .line 229
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
     goto/16 :goto_1
 
     .line 200
-    nop
-
     :array_0
     .array-data 1
         0x39t
@@ -677,9 +689,9 @@
     if-ge v0, p1, :cond_0
 
     .line 241
-    iget-object v2, p0, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v2, p0, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v3, p0, Lcom/tencent/mm/a/i;->akw:I
+    iget v3, p0, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/2addr v3, v0
 
@@ -706,17 +718,17 @@
     if-ge v0, p2, :cond_0
 
     .line 29
-    iget-object v1, p0, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v1, p0, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v2, p0, Lcom/tencent/mm/a/i;->akw:I
+    iget v2, p0, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/2addr v2, v0
 
     aget-byte v3, v1, v2
 
-    iget-object v4, p1, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v4, p1, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v5, p1, Lcom/tencent/mm/a/i;->akw:I
+    iget v5, p1, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/2addr v5, v0
 
@@ -751,23 +763,23 @@
     if-ge v0, v1, :cond_0
 
     .line 22
-    iget-object v1, p0, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v1, p0, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v2, p0, Lcom/tencent/mm/a/i;->akw:I
+    iget v2, p0, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/2addr v2, v0
 
-    iget-object v3, p1, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v3, p1, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v4, p1, Lcom/tencent/mm/a/i;->akw:I
+    iget v4, p1, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/2addr v4, v0
 
     aget-byte v3, v3, v4
 
-    iget-object v4, p2, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v4, p2, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v5, p2, Lcom/tencent/mm/a/i;->akw:I
+    iget v5, p2, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/2addr v5, v0
 
@@ -1080,18 +1092,18 @@
 
     aput-object v4, v1, v3
 
-    iget v3, p2, Lcom/tencent/mm/a/i;->akw:I
+    iget v3, p2, Lcom/tencent/mm/a/i;->Xp:I
 
-    iget v4, p0, Lcom/tencent/mm/a/i;->akw:I
+    iget v4, p0, Lcom/tencent/mm/a/i;->Xp:I
 
     :goto_0
     const/16 v5, 0x8
 
     if-ge v0, v5, :cond_0
 
-    iget-object v5, p2, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v5, p2, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v6, p2, Lcom/tencent/mm/a/i;->akw:I
+    iget v6, p2, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/lit8 v6, v6, 0x0
 
@@ -1099,9 +1111,9 @@
 
     shl-int/lit8 v5, v5, 0x1
 
-    iget-object v6, p2, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v6, p2, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v7, p2, Lcom/tencent/mm/a/i;->akw:I
+    iget v7, p2, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/lit8 v7, v7, 0x5
 
@@ -1111,9 +1123,9 @@
 
     int-to-byte v5, v5
 
-    iget-object v6, p2, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v6, p2, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v7, p2, Lcom/tencent/mm/a/i;->akw:I
+    iget v7, p2, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/lit8 v7, v7, 0x1
 
@@ -1121,9 +1133,9 @@
 
     shl-int/lit8 v6, v6, 0x3
 
-    iget-object v7, p2, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v7, p2, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v8, p2, Lcom/tencent/mm/a/i;->akw:I
+    iget v8, p2, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/lit8 v8, v8, 0x2
 
@@ -1133,9 +1145,9 @@
 
     add-int/2addr v6, v7
 
-    iget-object v7, p2, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v7, p2, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v8, p2, Lcom/tencent/mm/a/i;->akw:I
+    iget v8, p2, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/lit8 v8, v8, 0x3
 
@@ -1145,9 +1157,9 @@
 
     add-int/2addr v6, v7
 
-    iget-object v7, p2, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v7, p2, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v8, p2, Lcom/tencent/mm/a/i;->akw:I
+    iget v8, p2, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/lit8 v8, v8, 0x4
 
@@ -1173,24 +1185,24 @@
 
     int-to-byte v0, v0
 
-    iget v5, p2, Lcom/tencent/mm/a/i;->akw:I
+    iget v5, p2, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/lit8 v5, v5, 0x6
 
-    iput v5, p2, Lcom/tencent/mm/a/i;->akw:I
+    iput v5, p2, Lcom/tencent/mm/a/i;->Xp:I
 
-    iget v5, p0, Lcom/tencent/mm/a/i;->akw:I
+    iget v5, p0, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/lit8 v5, v5, 0x4
 
-    iput v5, p0, Lcom/tencent/mm/a/i;->akw:I
+    iput v5, p0, Lcom/tencent/mm/a/i;->Xp:I
 
     goto :goto_0
 
     :cond_0
-    iput v3, p2, Lcom/tencent/mm/a/i;->akw:I
+    iput v3, p2, Lcom/tencent/mm/a/i;->Xp:I
 
-    iput v4, p0, Lcom/tencent/mm/a/i;->akw:I
+    iput v4, p0, Lcom/tencent/mm/a/i;->Xp:I
 
     .line 140
     const/16 v0, 0x20
@@ -1943,15 +1955,15 @@
     if-ge v0, p3, :cond_0
 
     .line 64
-    iget-object v1, p4, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v1, p4, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v2, p4, Lcom/tencent/mm/a/i;->akw:I
+    iget v2, p4, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/2addr v2, v0
 
-    iget-object v3, p1, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v3, p1, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v4, p1, Lcom/tencent/mm/a/i;->akw:I
+    iget v4, p1, Lcom/tencent/mm/a/i;->Xp:I
 
     aget-byte v5, p2, v0
 
@@ -2090,9 +2102,9 @@
 
     if-ge v0, v1, :cond_2
 
-    iget-object v1, p0, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v1, p0, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v2, p0, Lcom/tencent/mm/a/i;->akw:I
+    iget v2, p0, Lcom/tencent/mm/a/i;->Xp:I
 
     shr-int/lit8 v3, v0, 0x3
 
@@ -2100,9 +2112,9 @@
 
     aget-byte v3, v1, v2
 
-    iget-object v4, p4, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v4, p4, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v5, p4, Lcom/tencent/mm/a/i;->akw:I
+    iget v5, p4, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/2addr v5, v0
 
@@ -2278,17 +2290,17 @@
     if-ge v0, p2, :cond_0
 
     .line 36
-    iget-object v1, p0, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v1, p0, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v2, p0, Lcom/tencent/mm/a/i;->akw:I
+    iget v2, p0, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/2addr v2, v0
 
-    iget-object v3, p1, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v3, p1, Lcom/tencent/mm/a/i;->Xo:[B
 
     shr-int/lit8 v4, v0, 0x3
 
-    iget v5, p1, Lcom/tencent/mm/a/i;->akw:I
+    iget v5, p1, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/2addr v4, v5
 
@@ -2332,15 +2344,15 @@
     if-ge v1, v2, :cond_0
 
     .line 53
-    iget-object v2, p0, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v2, p0, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v3, p0, Lcom/tencent/mm/a/i;->akw:I
+    iget v3, p0, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/2addr v3, v1
 
-    iget-object v4, p0, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v4, p0, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v5, p0, Lcom/tencent/mm/a/i;->akw:I
+    iget v5, p0, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/2addr v5, v1
 
@@ -2361,9 +2373,9 @@
     if-ge v0, p2, :cond_1
 
     .line 57
-    iget-object v1, p0, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v1, p0, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v2, p0, Lcom/tencent/mm/a/i;->akw:I
+    iget v2, p0, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/2addr v2, v0
 
@@ -2371,9 +2383,9 @@
 
     sub-int/2addr v2, p2
 
-    iget-object v3, p1, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v3, p1, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v4, p1, Lcom/tencent/mm/a/i;->akw:I
+    iget v4, p1, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/2addr v4, v0
 
@@ -2402,15 +2414,15 @@
     if-ge v0, p2, :cond_0
 
     .line 235
-    iget-object v1, p0, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v1, p0, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v2, p0, Lcom/tencent/mm/a/i;->akw:I
+    iget v2, p0, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/2addr v2, v0
 
-    iget-object v3, p1, Lcom/tencent/mm/a/i;->akv:[B
+    iget-object v3, p1, Lcom/tencent/mm/a/i;->Xo:[B
 
-    iget v4, p1, Lcom/tencent/mm/a/i;->akw:I
+    iget v4, p1, Lcom/tencent/mm/a/i;->Xp:I
 
     add-int/2addr v4, v0
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field private eCG:Lcom/tencent/mm/sdk/platformtools/ai;
+.field private eJd:Lcom/tencent/mm/sdk/platformtools/al;
 
-.field final synthetic kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+.field final synthetic kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
 
 # direct methods
@@ -28,17 +28,17 @@
     .locals 1
 
     .prologue
-    .line 411
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$22;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 412
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$22;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 412
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ai;
+    .line 413
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/al;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/ai;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/al;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$22;->eCG:Lcom/tencent/mm/sdk/platformtools/ai;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$22;->eJd:Lcom/tencent/mm/sdk/platformtools/al;
 
     return-void
 .end method
@@ -49,12 +49,12 @@
     .locals 1
 
     .prologue
-    .line 415
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$22;->kuT:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
+    .line 416
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI$22;->kUa:Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;->b(Lcom/tencent/mm/ui/account/RegByMobileRegAIOUI;)Z
 
-    .line 416
+    .line 417
     return-void
 .end method
 
@@ -62,7 +62,7 @@
     .locals 0
 
     .prologue
-    .line 420
+    .line 421
     return-void
 .end method
 
@@ -70,6 +70,6 @@
     .locals 0
 
     .prologue
-    .line 424
+    .line 425
     return-void
 .end method

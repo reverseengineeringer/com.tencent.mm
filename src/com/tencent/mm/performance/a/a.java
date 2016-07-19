@@ -4,25 +4,25 @@ import android.app.Activity;
 import android.app.Instrumentation;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.performance.e.b;
+import com.tencent.mm.performance.d.b;
 import java.lang.reflect.Field;
 import java.util.Iterator;
 import java.util.Set;
 
 public final class a
-  extends com.tencent.mm.performance.e.a
+  extends com.tencent.mm.performance.d.a
 {
   public static String TYPE = "ActivityMonitorController";
-  private boolean cks = false;
-  public Set ckt = null;
-  private Object cku = null;
-  private Instrumentation ckv = null;
+  private boolean cfK = false;
+  public Set<a> cfL = null;
+  private Object cfM = null;
+  private Instrumentation cfN = null;
   
-  private void Fo()
+  private void FL()
   {
     try
     {
-      Iterator localIterator = ckt.iterator();
+      Iterator localIterator = cfL.iterator();
       while (localIterator.hasNext()) {
         localIterator.next();
       }
@@ -30,11 +30,11 @@ public final class a
     finally {}
   }
   
-  private void Fp()
+  private void FM()
   {
     try
     {
-      Iterator localIterator = ckt.iterator();
+      Iterator localIterator = cfL.iterator();
       while (localIterator.hasNext()) {
         localIterator.next();
       }
@@ -42,11 +42,11 @@ public final class a
     finally {}
   }
   
-  private void Fq()
+  private void FN()
   {
     try
     {
-      Iterator localIterator = ckt.iterator();
+      Iterator localIterator = cfL.iterator();
       while (localIterator.hasNext()) {
         localIterator.next();
       }
@@ -60,7 +60,7 @@ public final class a
     {
       try
       {
-        Iterator localIterator = ckt.iterator();
+        Iterator localIterator = cfL.iterator();
         if (!localIterator.hasNext()) {
           break;
         }
@@ -81,7 +81,7 @@ public final class a
     {
       try
       {
-        Iterator localIterator = ckt.iterator();
+        Iterator localIterator = cfL.iterator();
         if (!localIterator.hasNext()) {
           break;
         }
@@ -102,7 +102,49 @@ public final class a
     {
       try
       {
-        Iterator localIterator = ckt.iterator();
+        Iterator localIterator = cfL.iterator();
+        if (!localIterator.hasNext()) {
+          break;
+        }
+        a locala = (a)localIterator.next();
+        if (paramBoolean) {
+          locala.f(paramActivity);
+        } else {
+          locala.g(paramActivity);
+        }
+      }
+      finally {}
+    }
+  }
+  
+  private void b(Activity paramActivity, boolean paramBoolean)
+  {
+    for (;;)
+    {
+      try
+      {
+        Iterator localIterator = cfL.iterator();
+        if (!localIterator.hasNext()) {
+          break;
+        }
+        a locala = (a)localIterator.next();
+        if (paramBoolean) {
+          locala.h(paramActivity);
+        } else {
+          locala.i(paramActivity);
+        }
+      }
+      finally {}
+    }
+  }
+  
+  private void c(Activity paramActivity, boolean paramBoolean)
+  {
+    for (;;)
+    {
+      try
+      {
+        Iterator localIterator = cfL.iterator();
         if (!localIterator.hasNext()) {
           break;
         }
@@ -117,13 +159,13 @@ public final class a
     }
   }
   
-  private void b(Activity paramActivity, boolean paramBoolean)
+  private void d(Activity paramActivity, boolean paramBoolean)
   {
     for (;;)
     {
       try
       {
-        Iterator localIterator = ckt.iterator();
+        Iterator localIterator = cfL.iterator();
         if (!localIterator.hasNext()) {
           break;
         }
@@ -138,13 +180,13 @@ public final class a
     }
   }
   
-  private void c(Activity paramActivity, boolean paramBoolean)
+  private void e(Activity paramActivity, boolean paramBoolean)
   {
     for (;;)
     {
       try
       {
-        Iterator localIterator = ckt.iterator();
+        Iterator localIterator = cfL.iterator();
         if (!localIterator.hasNext()) {
           break;
         }
@@ -159,55 +201,13 @@ public final class a
     }
   }
   
-  private void d(Activity paramActivity, boolean paramBoolean)
-  {
-    for (;;)
-    {
-      try
-      {
-        Iterator localIterator = ckt.iterator();
-        if (!localIterator.hasNext()) {
-          break;
-        }
-        a locala = (a)localIterator.next();
-        if (paramBoolean) {
-          locala.p(paramActivity);
-        } else {
-          locala.q(paramActivity);
-        }
-      }
-      finally {}
-    }
-  }
-  
-  private void e(Activity paramActivity, boolean paramBoolean)
-  {
-    for (;;)
-    {
-      try
-      {
-        Iterator localIterator = ckt.iterator();
-        if (!localIterator.hasNext()) {
-          break;
-        }
-        a locala = (a)localIterator.next();
-        if (paramBoolean) {
-          locala.r(paramActivity);
-        } else {
-          locala.s(paramActivity);
-        }
-      }
-      finally {}
-    }
-  }
-  
-  public final boolean Fr()
+  public final boolean FO()
   {
     boolean bool = true;
     try
     {
-      cku = b.ac("android.app.ActivityThread", "currentActivityThread");
-      if (cku == null) {
+      cfM = b.aa("android.app.ActivityThread", "currentActivityThread");
+      if (cfM == null) {
         throw new IllegalStateException("Failed to get CurrentActivityThread.");
       }
     }
@@ -217,21 +217,21 @@ public final class a
     }
     for (;;)
     {
-      cks = bool;
+      cfK = bool;
       do
       {
         return bool;
-        ckv = ((Instrumentation)b.a(cku.getClass(), "mInstrumentation", cku));
-        if (ckv == null) {
+        cfN = ((Instrumentation)b.a(cfM.getClass(), "mInstrumentation", cfM));
+        if (cfN == null) {
           throw new IllegalStateException("Failed to get Instrumentation instance.");
         }
-      } while (ckv.getClass().equals(b.class));
-      if (!ckv.getClass().equals(Instrumentation.class)) {
+      } while (cfN.getClass().equals(b.class));
+      if (!cfN.getClass().equals(Instrumentation.class)) {
         throw new IllegalStateException("Not original Instrumentation instance, give up monitoring.");
       }
-      Object localObject2 = cku.getClass();
+      Object localObject2 = cfM.getClass();
       b localb = new b((byte)0);
-      Object localObject1 = cku;
+      Object localObject1 = cfM;
       try
       {
         localObject2 = ((Class)localObject2).getDeclaredField("mInstrumentation");
@@ -246,12 +246,12 @@ public final class a
     }
   }
   
-  public final String Fs()
+  public final String FP()
   {
     return TYPE;
   }
   
-  public final void Ft() {}
+  public final void FQ() {}
   
   public final void a(a parama)
   {
@@ -262,12 +262,12 @@ public final class a
       }
       finally {}
     }
-    boolean bool = cks;
+    boolean bool = cfK;
     if (!bool) {}
     for (;;)
     {
       return;
-      ckt.add(parama);
+      cfL.add(parama);
     }
   }
   
@@ -281,6 +281,14 @@ public final class a
     
     public void d(Activity paramActivity, Intent paramIntent) {}
     
+    public void f(Activity paramActivity) {}
+    
+    public void g(Activity paramActivity) {}
+    
+    public void h(Activity paramActivity) {}
+    
+    public void i(Activity paramActivity) {}
+    
     public void j(Activity paramActivity) {}
     
     public void k(Activity paramActivity) {}
@@ -292,14 +300,6 @@ public final class a
     public void n(Activity paramActivity) {}
     
     public void o(Activity paramActivity) {}
-    
-    public void p(Activity paramActivity) {}
-    
-    public void q(Activity paramActivity) {}
-    
-    public void r(Activity paramActivity) {}
-    
-    public void s(Activity paramActivity) {}
   }
   
   private class b

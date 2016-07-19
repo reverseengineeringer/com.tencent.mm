@@ -1,25 +1,25 @@
 package com.tencent.mm.pluginsdk.c;
 
-import com.tencent.mm.d.a.mn;
+import com.tencent.mm.e.a.na;
 import com.tencent.mm.sdk.c.a;
 
 public final class e
 {
-  public static void zA(String paramString)
+  public static na Bv(String paramString)
   {
-    mn localmn = new mn();
-    aIQ.axD = 2;
-    aIQ.aIR = paramString;
-    a.jUF.j(localmn);
+    na localna = new na();
+    avk.ajK = 1;
+    avk.avl = paramString;
+    a.kug.y(localna);
+    return localna;
   }
   
-  public static mn zz(String paramString)
+  public static void Bw(String paramString)
   {
-    mn localmn = new mn();
-    aIQ.axD = 1;
-    aIQ.aIR = paramString;
-    a.jUF.j(localmn);
-    return localmn;
+    na localna = new na();
+    avk.ajK = 2;
+    avk.avl = paramString;
+    a.kug.y(localna);
   }
 }
 

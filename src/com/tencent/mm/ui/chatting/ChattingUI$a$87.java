@@ -1,30 +1,97 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.d.a.x;
-import com.tencent.mm.d.a.x.a;
-import com.tencent.mm.d.b.p;
-import com.tencent.mm.sdk.c.b;
-import com.tencent.mm.sdk.c.c;
-import com.tencent.mm.sdk.platformtools.ay;
+import android.widget.ListView;
+import com.tencent.mm.plugin.report.service.f;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.base.MMPullDownView;
+import com.tencent.mm.ui.i.a;
+import com.tencent.mm.ui.j;
+import com.tencent.mm.ui.o;
 
 final class ChattingUI$a$87
-  extends c
+  implements i.a
 {
-  ChattingUI$a$87(ChattingUI.a parama)
-  {
-    super(0);
-  }
+  private int count = 0;
   
-  public final boolean a(b paramb)
+  ChattingUI$a$87(ChattingUI.a parama) {}
+  
+  public final void GE()
   {
-    if ((paramb instanceof x))
+    boolean bool = false;
+    if (lAY.ble()) {
+      v.i("MicroMsg.ChattingUI", "onPostRset fragment not foreground, return");
+    }
+    label289:
+    label295:
+    for (;;)
     {
-      paramb = (x)paramb;
-      if ((laF.kRI != null) && (!ay.kz(atg.username)) && (atg.username.equals(laF.kRI.field_username))) {
-        ChattingUI.a.g(laF);
+      return;
+      ChattingUI.a.f(lAY).aZJ();
+      ChattingUI.a locala;
+      if (ChattingUI.a.W(lAY))
+      {
+        ChattingUI.a.f(lAY).dJ(2000L);
+        ChattingUI.a.e(lAY).post(new Runnable()
+        {
+          public final void run()
+          {
+            f.ls(13);
+          }
+        });
+        ChattingUI.a.X(lAY).hY(lAY.lsL.bkf());
+        XlAY).leX = lAY.lsL.bkg();
+        if ((lAY.lsL.cvf - count > 0) && (!lAY.lsG))
+        {
+          v.v("MicroMsg.ChattingUI", "ncnt > 0 && (!isShowSearchChatResult) scroll to last");
+          lAY.a(false, false, null);
+        }
+        if ((ChattingUI.a.Y(lAY)) && (!ZlAY).lvU) && (lAY.lsL.bkd()))
+        {
+          v.v("MicroMsg.ChattingUI", "useEditSearchMode && !chattingMoreHelper.inShowMode() && adapter.triggerMoveToLast()");
+          lAY.a(false, false, null);
+        }
+        if (lAY.kNN.kOw == 1)
+        {
+          v.v("MicroMsg.ChattingUI", "kbshown scroll to last");
+          lAY.a(true, false, null);
+        }
+        locala = lAY;
+        if (!locala.ble()) {
+          break label289;
+        }
+      }
+      for (;;)
+      {
+        if (!bool) {
+          break label295;
+        }
+        com.tencent.mm.model.ah.tw().t(new Runnable()
+        {
+          public final void run()
+          {
+            long l = System.currentTimeMillis();
+            lAY.blp();
+            v.i("MicroMsg.ChattingUI", "ChattingUI writeOpLogAndMarkRead last : %d", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+          }
+        });
+        return;
+        ChattingUI.a.f(lAY).dJ(1000L);
+        break;
+        bool = kLh;
       }
     }
-    return false;
+  }
+  
+  public final void GF()
+  {
+    if (lAY.ble())
+    {
+      v.i("MicroMsg.ChattingUI", "onPreReset fragment not foreground, return");
+      return;
+    }
+    f.lr(13);
+    count = lAY.lsL.cvf;
   }
 }
 

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/az/g$b;
+.implements Lcom/tencent/mm/bc/g$b;
 
 
 # annotations
@@ -30,12 +30,12 @@
 
 
 # virtual methods
-.method public final lr()[Ljava/lang/String;
+.method public final kE()[Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 256
-    sget-object v0, Lcom/tencent/mm/modelfriend/p;->aoY:[Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/modelfriend/p;->bkN:[Ljava/lang/String;
 
     return-object v0
 .end method

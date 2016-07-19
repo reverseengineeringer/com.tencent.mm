@@ -4,20 +4,18 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.res.Resources;
-import com.tencent.mm.h.a;
+import com.tencent.mm.i.a;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.modelsimple.z;
-import com.tencent.mm.platformtools.n;
-import com.tencent.mm.protocal.b.amk;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.modelsimple.x;
+import com.tencent.mm.protocal.b.amv;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.RegionCodeDecoder;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
 import com.tencent.mm.ui.base.g;
 
 final class b$4
@@ -25,78 +23,78 @@ final class b$4
 {
   b$4(b paramb) {}
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    if (iId.dfT != null) {
-      iId.dfT.dismiss();
+    if (jfa.deV != null) {
+      jfa.deV.dismiss();
     }
-    if (iId.iIb != null) {
-      ah.tE().b(106, iId.iIb);
+    if (jfa.jeY != null) {
+      ah.tF().b(106, jfa.jeY);
     }
-    if (iId.dfT == null)
+    if (jfa.deV == null)
     {
-      u.e("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "has cancel the loading dialog");
-      iId.cd(-1);
+      v.e("MicroMsg.AddContactDialog", "has cancel the loading dialog");
+      jfa.cx(-1);
       return;
     }
     if ((paramInt1 != 0) || (paramInt2 != 0))
     {
-      u.e("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "searchContact onSceneEnd, errType = %d, errCode = %d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
-      iId.cd(-1);
+      v.e("MicroMsg.AddContactDialog", "searchContact onSceneEnd, errType = %d, errCode = %d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+      jfa.cx(-1);
       return;
     }
-    if (iId.mContext == null)
+    if (jfa.mContext == null)
     {
-      u.e("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "searchContact, context is null, msghandler has already been detached!");
-      iId.cd(-1);
+      v.e("MicroMsg.AddContactDialog", "searchContact, context is null, msghandler has already been detached!");
+      jfa.cx(-1);
       return;
     }
-    if (((iId.mContext instanceof Activity)) && (((Activity)iId.mContext).isFinishing()))
+    if (((jfa.mContext instanceof Activity)) && (((Activity)jfa.mContext).isFinishing()))
     {
-      u.e("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "searchContact, context isFinishing");
-      iId.cd(-1);
+      v.e("MicroMsg.AddContactDialog", "searchContact, context isFinishing");
+      jfa.cx(-1);
       return;
     }
-    paramString = ((z)paramj).CL();
-    paramj = n.a(jhS);
-    if (ay.kz(paramj))
+    paramString = ((x)paramj).CY();
+    paramj = com.tencent.mm.platformtools.m.a(jFX);
+    if (be.kf(paramj))
     {
-      u.e("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "searchContact, user is null");
-      g.ba(iId.mContext, iId.mContext.getResources().getString(2131428949));
-      iId.cd(-1);
+      v.e("MicroMsg.AddContactDialog", "searchContact, user is null");
+      g.aZ(jfa.mContext, jfa.mContext.getResources().getString(2131236689));
+      jfa.cx(-1);
       return;
     }
-    if ((iId.cNh == null) || (!iId.cNh.equals(paramj))) {
-      u.w("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "user not the same, %s, %s", new Object[] { iId.cNh, paramj });
+    if ((jfa.mUsername == null) || (!jfa.mUsername.equals(paramj))) {
+      v.w("MicroMsg.AddContactDialog", "user not the same, %s, %s", new Object[] { jfa.mUsername, paramj });
     }
-    iId.dsm = ah.tD().rq().Ep(paramj);
-    if ((iId.dsm == null) || ((int)iId.dsm.bvi == 0))
+    jfa.dsC = ah.tE().rr().GD(paramj);
+    if ((jfa.dsC == null) || ((int)jfa.dsC.bjS == 0))
     {
-      u.i("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "searchContact, no contact with username = " + paramj + ", try get by alias");
-      iId.dsm = ah.tD().rq().Em(paramj);
-      if ((iId.dsm == null) || ((int)iId.dsm.bvi == 0))
+      v.i("MicroMsg.AddContactDialog", "searchContact, no contact with username = " + paramj + ", try get by alias");
+      jfa.dsC = ah.tE().rr().GA(paramj);
+      if ((jfa.dsC == null) || ((int)jfa.dsC.bjS == 0))
       {
-        u.i("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "searchContact, no contact with alias, new Contact");
-        iId.dsm = new k(paramj);
-        iId.dsm.bE(bLR);
-        iId.dsm.bH(n.a(jwg));
-        iId.dsm.bI(n.a(jhI));
-        iId.dsm.bJ(n.a(jhJ));
-        iId.dsm.aZ(bLM);
-        iId.dsm.bW(RegionCodeDecoder.M(bLV, bLN, bLO));
-        iId.dsm.bQ(bLP);
-        iId.dsm.aV(jxg);
-        iId.dsm.bV(jxh);
-        iId.dsm.aU(jxk);
-        iId.dsm.bK(jxj);
-        iId.dsm.bU(jxi);
+        v.i("MicroMsg.AddContactDialog", "searchContact, no contact with alias, new Contact");
+        jfa.dsC = new k(paramj);
+        jfa.dsC.bz(bFl);
+        jfa.dsC.bC(com.tencent.mm.platformtools.m.a(jUO));
+        jfa.dsC.bD(com.tencent.mm.platformtools.m.a(jFN));
+        jfa.dsC.bE(com.tencent.mm.platformtools.m.a(jFO));
+        jfa.dsC.bp(bFg);
+        jfa.dsC.bV(RegionCodeDecoder.O(bFp, bFh, bFi));
+        jfa.dsC.bP(bFj);
+        jfa.dsC.bl(jVM);
+        jfa.dsC.bU(jVN);
+        jfa.dsC.bk(jVQ);
+        jfa.dsC.bF(jVP);
+        jfa.dsC.bT(jVO);
       }
     }
     for (;;)
     {
-      iId.H(iId.dsm);
+      jfa.H(jfa.dsC);
       return;
-      u.i("!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw=", "searchContact, contact in db, %s", new Object[] { paramj });
+      v.i("MicroMsg.AddContactDialog", "searchContact, contact in db, %s", new Object[] { paramj });
     }
   }
 }

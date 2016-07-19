@@ -1,6 +1,9 @@
 package com.tencent.mm.ui.chatting;
 
-public enum ChattingTranslateView$a {}
+public enum ChattingTranslateView$a
+{
+  private ChattingTranslateView$a() {}
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.ui.chatting.ChattingTranslateView.a

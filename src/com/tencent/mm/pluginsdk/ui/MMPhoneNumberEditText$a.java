@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui;
 
 public abstract interface MMPhoneNumberEditText$a
 {
-  public abstract void aQY();
+  public abstract void aVI();
   
   public abstract void f(MMPhoneNumberEditText paramMMPhoneNumberEditText);
   

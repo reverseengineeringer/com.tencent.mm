@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/hu" style="@style/PopupBgWithoutShadow">
+        <ListView android:id="@id/aex" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/jd" android:cacheColorHint="#00000000" android:divider="@null" />
+    </LinearLayout>
+</LinearLayout>

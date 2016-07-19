@@ -1,6 +1,7 @@
 package com.tencent.smtt.export.external.interfaces;
 
 import android.graphics.Bitmap;
+import android.os.Bundle;
 import android.os.Message;
 import android.view.KeyEvent;
 
@@ -25,10 +26,6 @@ public abstract interface IX5WebViewClient
   
   public abstract void doUpdateVisitedHistory(IX5WebViewBase paramIX5WebViewBase, String paramString, boolean paramBoolean);
   
-  public abstract boolean notifyHideADWebview();
-  
-  public abstract boolean notifyLoadADUrl(String paramString);
-  
   public abstract void onContentSizeChanged(IX5WebViewBase paramIX5WebViewBase, int paramInt1, int paramInt2);
   
   public abstract void onDetectedBlankScreen(IX5WebViewBase paramIX5WebViewBase, String paramString, int paramInt);
@@ -39,11 +36,17 @@ public abstract interface IX5WebViewClient
   
   public abstract void onPageFinished(IX5WebViewBase paramIX5WebViewBase, int paramInt1, int paramInt2, String paramString);
   
+  public abstract void onPageFinished(IX5WebViewBase paramIX5WebViewBase, String paramString);
+  
   public abstract void onPageStarted(IX5WebViewBase paramIX5WebViewBase, int paramInt1, int paramInt2, String paramString, Bitmap paramBitmap);
+  
+  public abstract void onPageStarted(IX5WebViewBase paramIX5WebViewBase, String paramString, Bitmap paramBitmap);
   
   public abstract void onReceivedError(IX5WebViewBase paramIX5WebViewBase, int paramInt, String paramString1, String paramString2);
   
   public abstract void onReceivedHttpAuthRequest(IX5WebViewBase paramIX5WebViewBase, HttpAuthHandler paramHttpAuthHandler, String paramString1, String paramString2);
+  
+  public abstract void onReceivedHttpError(IX5WebViewBase paramIX5WebViewBase, WebResourceRequest paramWebResourceRequest, WebResourceResponse paramWebResourceResponse);
   
   public abstract void onReceivedLoginRequest(IX5WebViewBase paramIX5WebViewBase, String paramString1, String paramString2, String paramString3);
   
@@ -57,6 +60,8 @@ public abstract interface IX5WebViewClient
   public abstract void onUnhandledKeyEvent(IX5WebViewBase paramIX5WebViewBase, KeyEvent paramKeyEvent);
   
   public abstract WebResourceResponse shouldInterceptRequest(IX5WebViewBase paramIX5WebViewBase, WebResourceRequest paramWebResourceRequest);
+  
+  public abstract WebResourceResponse shouldInterceptRequest(IX5WebViewBase paramIX5WebViewBase, WebResourceRequest paramWebResourceRequest, Bundle paramBundle);
   
   public abstract WebResourceResponse shouldInterceptRequest(IX5WebViewBase paramIX5WebViewBase, String paramString);
   

@@ -4,7 +4,7 @@ import b.a.d.i;
 
 public abstract interface f
 {
-  public abstract i IO(String paramString);
+  public abstract i Lp(String paramString);
 }
 
 /* Location:

@@ -7,7 +7,7 @@ final class b$2
   
   public final void run()
   {
-    bKE.aS(true);
+    bDY.ay(true);
   }
   
   public final String toString()

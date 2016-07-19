@@ -9,14 +9,14 @@ import android.view.Window;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class p
   extends q
 {
-  private View cRI;
-  private TextView kFG;
-  public ProgressBar kFH;
+  private View cPr;
+  private TextView leK;
+  public ProgressBar leL;
   private Context mContext;
   private int style;
   
@@ -29,11 +29,11 @@ public final class p
     switch (style)
     {
     }
-    for (paramInt1 = i;; paramInt1 = 2131363287)
+    for (paramInt1 = i;; paramInt1 = 2130904060)
     {
-      cRI = com.tencent.mm.ui.p.ee(mContext).inflate(paramInt1, null);
-      kFG = ((TextView)cRI.findViewById(2131165573));
-      kFH = ((ProgressBar)cRI.findViewById(2131165572));
+      cPr = com.tencent.mm.ui.p.ef(mContext).inflate(paramInt1, null);
+      leK = ((TextView)cPr.findViewById(2131755549));
+      leL = ((ProgressBar)cPr.findViewById(2131755548));
       setCanceledOnTouchOutside(true);
       return;
     }
@@ -41,11 +41,11 @@ public final class p
   
   public static p a(Context paramContext, CharSequence paramCharSequence, boolean paramBoolean, int paramInt, DialogInterface.OnCancelListener paramOnCancelListener)
   {
-    int i = 2131100061;
+    int i = 2131493483;
     switch (paramInt)
     {
     default: 
-      i = 2131100062;
+      i = 2131493487;
     }
     paramContext = new p(paramContext, i, paramInt);
     paramContext.setMessage(paramCharSequence);
@@ -71,14 +71,14 @@ public final class p
     }
     catch (Exception localException)
     {
-      u.e("!44@/B4Tb64lLpJDo00GMnWoAcVr9A609/EODCMtTr6hXKs=", "dismiss exception, e = " + localException.getMessage());
+      v.e("MicroMsg.MMProgressDialog", "dismiss exception, e = " + localException.getMessage());
     }
   }
   
   protected final void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    setContentView(cRI, new LinearLayout.LayoutParams(-1, -1));
+    setContentView(cPr, new LinearLayout.LayoutParams(-1, -1));
     paramBundle = getWindow().getAttributes();
     width = -1;
     height = -2;
@@ -98,7 +98,7 @@ public final class p
   
   public final void setMessage(CharSequence paramCharSequence)
   {
-    kFG.setText(paramCharSequence);
+    leK.setText(paramCharSequence);
   }
   
   public final void show()
@@ -110,7 +110,7 @@ public final class p
     }
     catch (Exception localException)
     {
-      u.printErrStackTrace("!44@/B4Tb64lLpJDo00GMnWoAcVr9A609/EODCMtTr6hXKs=", localException, "", new Object[0]);
+      v.printErrStackTrace("MicroMsg.MMProgressDialog", localException, "", new Object[0]);
     }
   }
 }

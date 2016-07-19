@@ -43,7 +43,7 @@
     return-void
 .end method
 
-.method public aD()V
+.method public aC()V
     .locals 0
 
     .prologue
@@ -64,19 +64,11 @@
     return v0
 .end method
 
-.method public h(II)V
+.method public f(II)V
     .locals 0
 
     .prologue
     .line 242
-    return-void
-.end method
-
-.method public t(I)V
-    .locals 0
-
-    .prologue
-    .line 161
     return-void
 .end method
 
@@ -96,6 +88,14 @@
     const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public y(I)V
+    .locals 0
+
+    .prologue
+    .line 161
+    return-void
 .end method
 
 .method public z(Landroid/view/View;)I

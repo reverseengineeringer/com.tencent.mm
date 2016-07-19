@@ -12,52 +12,52 @@ final class ChatFooter$11
 {
   ChatFooter$11(ChatFooter paramChatFooter) {}
   
-  public final void ahA()
+  public final void akl()
   {
-    ChatFooter.y(iLO);
-    ChatFooter.z(iLO).setVisibility(0);
-    ChatFooter.r(iLO).setVisibility(8);
-    ChatFooter.a(iLO, true);
-    ChatFooter.A(iLO);
-    if (ChatFooter.h(iLO) != null) {
-      ChatFooter.h(iLO).performClick();
+    ChatFooter.z(jiL);
+    ChatFooter.A(jiL).setVisibility(0);
+    ChatFooter.r(jiL).setVisibility(8);
+    ChatFooter.a(jiL, true);
+    ChatFooter.B(jiL);
+    if (ChatFooter.h(jiL) != null) {
+      ChatFooter.h(jiL).performClick();
     }
   }
   
-  public final void ahB()
+  public final void akm()
   {
-    ChatFooter.y(iLO);
-    ChatFooter.z(iLO).setVisibility(0);
-    ChatFooter.r(iLO).setVisibility(8);
-    ChatFooter.a(iLO, true);
-    ChatFooter.A(iLO);
-    ChatFooter.a(iLO).getInputConnection().sendKeyEvent(new KeyEvent(0, 67));
-    ChatFooter.a(iLO).getInputConnection().sendKeyEvent(new KeyEvent(1, 67));
+    ChatFooter.z(jiL);
+    ChatFooter.A(jiL).setVisibility(0);
+    ChatFooter.r(jiL).setVisibility(8);
+    ChatFooter.a(jiL, true);
+    ChatFooter.B(jiL);
+    ajiL).mfQ.sendKeyEvent(new KeyEvent(0, 67));
+    ajiL).mfQ.sendKeyEvent(new KeyEvent(1, 67));
   }
   
   public final void append(String paramString)
   {
-    ChatFooter.y(iLO);
-    ChatFooter.z(iLO).setVisibility(0);
-    ChatFooter.r(iLO).setVisibility(8);
-    ChatFooter.a(iLO, true);
-    ChatFooter.A(iLO);
+    ChatFooter.z(jiL);
+    ChatFooter.A(jiL).setVisibility(0);
+    ChatFooter.r(jiL).setVisibility(8);
+    ChatFooter.a(jiL, true);
+    ChatFooter.B(jiL);
     try
     {
-      ChatFooter.a(iLO).HO(paramString);
+      ChatFooter.a(jiL).Kd(paramString);
       return;
     }
     catch (Exception paramString) {}
   }
   
-  public final void dr(boolean paramBoolean)
+  public final void dq(boolean paramBoolean)
   {
-    ChatFooter.y(iLO);
-    ChatFooter.z(iLO).setVisibility(0);
-    ChatFooter.r(iLO).setVisibility(8);
-    ChatFooter.A(iLO);
-    if (ChatFooter.a(iLO) != null) {
-      iLO.setToSendTextColor(paramBoolean);
+    ChatFooter.z(jiL);
+    ChatFooter.A(jiL).setVisibility(0);
+    ChatFooter.r(jiL).setVisibility(8);
+    ChatFooter.B(jiL);
+    if (ChatFooter.a(jiL) != null) {
+      jiL.gV(paramBoolean);
     }
   }
 }

@@ -1,16 +1,16 @@
 package com.tencent.mm.ui.transmit;
 
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class ShareImageSelectorUI$2
-  extends aa
+  extends ac
 {
   ShareImageSelectorUI$2(ShareImageSelectorUI paramShareImageSelectorUI) {}
   
   public final void handleMessage(Message paramMessage)
   {
-    lBC.finish();
+    mcu.finish();
   }
 }
 

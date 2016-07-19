@@ -1,30 +1,14 @@
 package com.tencent.mm.plugin.sns;
 
-import com.tencent.mm.d.a.mc;
-import com.tencent.mm.d.a.mc.a;
-import com.tencent.mm.plugin.sns.i.a;
-import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.e.a.mj;
 import com.tencent.mm.sdk.c.c;
-import com.tencent.mm.sdk.platformtools.u;
 
 public final class i
-  extends c
+  extends c<mj>
 {
   public i()
   {
-    super(0);
-  }
-  
-  public final boolean a(b paramb)
-  {
-    if (!(paramb instanceof mc))
-    {
-      u.f("!56@/B4Tb64lLpKrJ2fjbPylzl2RuIjlbbyyokWbETEjkyLOsX52eEiS7A==", "mismatched event");
-      return false;
-    }
-    paramb = (mc)paramb;
-    aIq.atR = a.a(aIp.aIs, aIp.url, aIp.aIr);
-    return true;
+    kum = mj.class.getName().hashCode();
   }
 }
 

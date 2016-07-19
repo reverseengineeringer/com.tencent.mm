@@ -1,26 +1,26 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.afa;
+import com.tencent.mm.protocal.b.ami;
+import com.tencent.mm.protocal.b.we;
+import com.tencent.mm.sdk.platformtools.be;
 
 public final class t$a
-  extends h.c
-  implements h.a
+  extends k.c
+  implements k.a
 {
-  public afa iVj = new afa();
+  public we jsB = new we();
   
-  public final int getCmdId()
+  public final byte[] tZ()
   {
-    return 121;
+    jsg = ac.aYs();
+    jsB.jzd = new ami().aV(be.baN());
+    jsB.kfq = k.a(this);
+    return jsB.toByteArray();
   }
   
-  public final byte[] tY()
+  public final int ua()
   {
-    return iVj.toByteArray();
-  }
-  
-  public final int tZ()
-  {
-    return 138;
+    return 429;
   }
 }
 

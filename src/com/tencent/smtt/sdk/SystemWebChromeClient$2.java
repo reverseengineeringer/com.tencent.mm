@@ -9,11 +9,22 @@ class SystemWebChromeClient$2
   
   public void run()
   {
-    WebView localWebView = val$transport.getWebView();
-    if (localWebView != null) {
-      ((android.webkit.WebView.WebViewTransport)val$resultMsg.obj).setWebView(localWebView.getSysWebView());
+    Object localObject = val$transport.getWebView();
+    android.webkit.WebView.WebViewTransport localWebViewTransport;
+    if (localObject != null)
+    {
+      localWebViewTransport = (android.webkit.WebView.WebViewTransport)val$resultMsg.obj;
+      if (mvI) {
+        break label48;
+      }
     }
-    val$resultMsg.sendToTarget();
+    label48:
+    for (localObject = mvK;; localObject = null)
+    {
+      localWebViewTransport.setWebView((android.webkit.WebView)localObject);
+      val$resultMsg.sendToTarget();
+      return;
+    }
   }
 }
 

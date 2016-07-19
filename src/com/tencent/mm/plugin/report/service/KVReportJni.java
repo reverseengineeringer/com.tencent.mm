@@ -5,65 +5,64 @@ import android.os.Build.VERSION;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
-import com.tencent.mm.ag.b.a;
+import com.tencent.mm.aj.b.a;
 import com.tencent.mm.jni.platformcomm.PlatformComm.C2Java;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.plugin.report.b.f;
-import com.tencent.mm.protocal.b;
-import com.tencent.mm.protocal.b.yw;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.q;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.protocal.b.zl;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.r;
 import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 import java.util.ArrayList;
 import java.util.Map;
 
 public class KVReportJni
 {
-  private static final String TAG = "!32@/B4Tb64lLpKe2JfXcMjS1rQ+BzZzSUQb";
+  private static final String TAG = "MicroMsg.KVReportJni";
   public static IKVReportNotify kvReportNotify = null;
   
   public static void parseKVPluginMsg(String paramString)
   {
-    if (ay.kz(paramString))
+    if (be.kf(paramString))
     {
-      u.w("!32@/B4Tb64lLpKe2JfXcMjS1rQ+BzZzSUQb", "msg content is null");
+      v.w("MicroMsg.KVReportJni", "msg content is null");
       return;
     }
-    u.i("!32@/B4Tb64lLpKe2JfXcMjS1rQ+BzZzSUQb", "receive msg: " + paramString);
-    Map localMap = q.J(paramString, "sysmsg", null);
+    v.i("MicroMsg.KVReportJni", "receive msg: " + paramString);
+    Map localMap = r.cr(paramString, "sysmsg");
     if ((localMap == null) || (localMap.size() == 0))
     {
-      u.e("!32@/B4Tb64lLpKe2JfXcMjS1rQ+BzZzSUQb", "plugin msg parse fail:" + paramString);
+      v.e("MicroMsg.KVReportJni", "plugin msg parse fail:" + paramString);
       return;
     }
     String str = (String)localMap.get(".sysmsg.$type");
-    if ((ay.kz(str)) || (!str.equalsIgnoreCase("getkvidkeystg")))
+    if ((be.kf(str)) || (!str.equalsIgnoreCase("getkvidkeystg")))
     {
-      u.e("!32@/B4Tb64lLpKe2JfXcMjS1rQ+BzZzSUQb", "plugin msg parse fail:" + paramString);
+      v.e("MicroMsg.KVReportJni", "plugin msg parse fail:" + paramString);
       return;
     }
-    long l1 = ay.getLong((String)localMap.get(".sysmsg.getkvidkeystg.generalversion"), -1L);
-    long l2 = ay.getLong((String)localMap.get(".sysmsg.getkvidkeystg.specialversion"), -1L);
-    long l3 = ay.getLong((String)localMap.get(".sysmsg.getkvidkeystg.whiteorblackuinversion"), -1L);
-    long l4 = ay.getLong((String)localMap.get(".sysmsg.getkvidkeystg.timeinterval"), -1L);
-    long l5 = ay.getLong((String)localMap.get(".sysmsg.getkvidkeystg.kvgeneralversion"), -1L);
-    long l6 = ay.getLong((String)localMap.get(".sysmsg.getkvidkeystg.kvspecialversion"), -1L);
-    long l7 = ay.getLong((String)localMap.get(".sysmsg.getkvidkeystg.kvwhiteorblackuinversion"), -1L);
+    long l1 = be.getLong((String)localMap.get(".sysmsg.getkvidkeystg.generalversion"), -1L);
+    long l2 = be.getLong((String)localMap.get(".sysmsg.getkvidkeystg.specialversion"), -1L);
+    long l3 = be.getLong((String)localMap.get(".sysmsg.getkvidkeystg.whiteorblackuinversion"), -1L);
+    long l4 = be.getLong((String)localMap.get(".sysmsg.getkvidkeystg.timeinterval"), -1L);
+    long l5 = be.getLong((String)localMap.get(".sysmsg.getkvidkeystg.kvgeneralversion"), -1L);
+    long l6 = be.getLong((String)localMap.get(".sysmsg.getkvidkeystg.kvspecialversion"), -1L);
+    long l7 = be.getLong((String)localMap.get(".sysmsg.getkvidkeystg.kvwhiteorblackuinversion"), -1L);
     if ((l1 == -1L) || (l2 == -1L) || (l3 == -1L) || (l4 == -1L) || (-1L == l5) || (-1L == l6) || (-1L == l7))
     {
-      u.e("!32@/B4Tb64lLpKe2JfXcMjS1rQ+BzZzSUQb", "plugin msg parse fail:" + paramString);
+      v.e("MicroMsg.KVReportJni", "plugin msg parse fail:" + paramString);
       return;
     }
-    u.i("!32@/B4Tb64lLpKe2JfXcMjS1rQ+BzZzSUQb", "plugin msg version:" + l1 + ", " + l2 + ", " + l3);
+    v.i("MicroMsg.KVReportJni", "plugin msg version:" + l1 + ", " + l2 + ", " + l3);
     KVReportJava2C.onKVPluginMsg(l5, l6, l7, l1, l2, l3, l4);
   }
   
   public static class IDKeyDataInfo
     implements Parcelable
   {
-    public static final Parcelable.Creator CREATOR = new Parcelable.Creator()
+    public static final Parcelable.Creator<IDKeyDataInfo> CREATOR = new Parcelable.Creator()
     {
       public final KVReportJni.IDKeyDataInfo createFromParcel(Parcel paramAnonymousParcel)
       {
@@ -156,8 +155,8 @@ public class KVReportJni
   {
     public static int getClientVersion2()
     {
-      u.v("!32@/B4Tb64lLpKe2JfXcMjS1rQ+BzZzSUQb", "clientversion:" + b.iUf);
-      return b.iUf;
+      v.v("MicroMsg.KVReportJni", "clientversion:" + com.tencent.mm.protocal.c.jry);
+      return com.tencent.mm.protocal.c.jry;
     }
     
     public static String getKVCommPath()
@@ -172,7 +171,7 @@ public class KVReportJni
       deviceBrand = Build.BRAND;
       osName = ("android-" + Build.MANUFACTURER);
       osVersion = Build.VERSION.SDK_INT;
-      languageVer = t.aUB();
+      languageVer = u.aZF();
       return localKVCommBaseInfo;
     }
     
@@ -183,28 +182,28 @@ public class KVReportJni
     
     public static boolean onReportKVDaSelfMonitorOpLogReady(byte[] paramArrayOfByte)
     {
-      if ((!ah.rh()) || (ay.J(ah.tq())))
+      if ((!ah.rg()) || (be.P(ah.tr())))
       {
-        u.e("!32@/B4Tb64lLpKe2JfXcMjS1rQ+BzZzSUQb", "onReportKVDaSelfMonitorOpLogReady account not ready");
+        v.e("MicroMsg.KVReportJni", "onReportKVDaSelfMonitorOpLogReady account not ready");
         return false;
       }
-      yw localyw;
+      zl localzl;
       try
       {
-        localyw = new yw();
-        localyw.am(paramArrayOfByte);
-        if (jvL <= 0)
+        localzl = new zl();
+        localzl.au(paramArrayOfByte);
+        if (jUy <= 0)
         {
-          u.e("KVReportJni", "error selfmonitor count");
+          v.e("KVReportJni", "error selfmonitor count");
           return true;
         }
       }
       catch (Exception paramArrayOfByte)
       {
-        u.e("KVReportJni", paramArrayOfByte.getMessage());
+        v.e("KVReportJni", paramArrayOfByte.getMessage());
         return false;
       }
-      ah.tD().rp().b(new b.a(202, localyw));
+      ah.tE().rq().b(new b.a(202, localzl));
       return true;
     }
     
@@ -219,7 +218,7 @@ public class KVReportJni
       }
       catch (Exception paramArrayOfByte1)
       {
-        u.e("KVReportJni", paramArrayOfByte1.getMessage());
+        v.e("KVReportJni", paramArrayOfByte1.getMessage());
       }
     }
     
@@ -227,18 +226,18 @@ public class KVReportJni
     {
       try
       {
-        if (ah.tg())
+        if (ah.th())
         {
-          u.e("!32@/B4Tb64lLpKe2JfXcMjS1rQ+BzZzSUQb", "MMCore not inited");
+          v.e("MicroMsg.KVReportJni", "MMCore not inited");
           return false;
         }
         paramArrayOfByte = new f(paramArrayOfByte);
-        ah.tE().d(paramArrayOfByte);
+        ah.tF().a(paramArrayOfByte, 0);
         return true;
       }
       catch (Exception paramArrayOfByte)
       {
-        u.e("KVReportJni", "onRequestGetStrategy error: " + paramArrayOfByte.getMessage());
+        v.e("KVReportJni", "onRequestGetStrategy error: " + paramArrayOfByte.getMessage());
       }
       return false;
     }
@@ -252,20 +251,20 @@ public class KVReportJni
         localArrayList.add(new KVReportJni.IDKeyDataInfo(paramArrayOfInt1[i], paramArrayOfInt2[i], paramArrayOfInt3[i]));
         i += 1;
       }
-      paramArrayOfInt1 = h.fUJ;
-      h.d(localArrayList, paramBoolean);
+      paramArrayOfInt1 = g.gdY;
+      g.d(localArrayList, paramBoolean);
     }
     
     public static void reportIDKey(long paramLong1, long paramLong2, long paramLong3, boolean paramBoolean)
     {
-      h localh = h.fUJ;
-      h.b(paramLong1, paramLong2, paramLong3, paramBoolean);
+      g localg = g.gdY;
+      g.b(paramLong1, paramLong2, paramLong3, paramBoolean);
     }
     
     public static void reportKV(long paramLong, String paramString, boolean paramBoolean1, boolean paramBoolean2)
     {
-      h localh = h.fUJ;
-      h.c((int)paramLong, paramString, paramBoolean2, paramBoolean1);
+      g localg = g.gdY;
+      g.c((int)paramLong, paramString, paramBoolean2, paramBoolean1);
     }
   }
   
@@ -288,6 +287,8 @@ public class KVReportJni
     public static native void reportIDKey(long paramLong1, long paramLong2, long paramLong3, boolean paramBoolean);
     
     public static native void reportListIDKey(KVReportJni.IDKeyDataInfo[] paramArrayOfIDKeyDataInfo, boolean paramBoolean);
+    
+    public static native void setDebugFlag(boolean paramBoolean);
     
     public static native void setUin(long paramLong);
     

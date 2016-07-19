@@ -10,14 +10,14 @@
 .method public abstract getUri()Ljava/lang/String;
 .end method
 
-.method public abstract tX()Lcom/tencent/mm/protocal/h$d;
+.method public abstract tY()Lcom/tencent/mm/protocal/k$d;
 .end method
 
-.method public abstract vA()Lcom/tencent/mm/protocal/h$c;
+.method public abstract vC()Lcom/tencent/mm/protocal/k$c;
 .end method
 
-.method public abstract vB()Z
+.method public abstract vD()Z
 .end method
 
-.method public abstract vx()I
+.method public abstract vz()I
 .end method

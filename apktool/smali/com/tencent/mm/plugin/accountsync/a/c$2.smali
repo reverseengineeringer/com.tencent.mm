@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic cok:[I
+.field static final synthetic cjy:[I
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 86
-    invoke-static {}, Lcom/tencent/mm/plugin/accountsync/a/c$a;->FZ()[I
+    invoke-static {}, Lcom/tencent/mm/plugin/accountsync/a/c$a;->Gw()[I
 
     move-result-object v0
 
@@ -32,12 +32,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/tencent/mm/plugin/accountsync/a/c$2;->cok:[I
+    sput-object v0, Lcom/tencent/mm/plugin/accountsync/a/c$2;->cjy:[I
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/plugin/accountsync/a/c$2;->cok:[I
+    sget-object v0, Lcom/tencent/mm/plugin/accountsync/a/c$2;->cjy:[I
 
-    sget v1, Lcom/tencent/mm/plugin/accountsync/a/c$a;->com:I
+    sget v1, Lcom/tencent/mm/plugin/accountsync/a/c$a;->cjA:I
 
     add-int/lit8 v1, v1, -0x1
 
@@ -49,9 +49,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/tencent/mm/plugin/accountsync/a/c$2;->cok:[I
+    sget-object v0, Lcom/tencent/mm/plugin/accountsync/a/c$2;->cjy:[I
 
-    sget v1, Lcom/tencent/mm/plugin/accountsync/a/c$a;->col:I
+    sget v1, Lcom/tencent/mm/plugin/accountsync/a/c$a;->cjz:I
 
     add-int/lit8 v1, v1, -0x1
 
@@ -63,9 +63,9 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/tencent/mm/plugin/accountsync/a/c$2;->cok:[I
+    sget-object v0, Lcom/tencent/mm/plugin/accountsync/a/c$2;->cjy:[I
 
-    sget v1, Lcom/tencent/mm/plugin/accountsync/a/c$a;->con:I
+    sget v1, Lcom/tencent/mm/plugin/accountsync/a/c$a;->cjB:I
 
     add-int/lit8 v1, v1, -0x1
 

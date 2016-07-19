@@ -3,7 +3,7 @@ package com.tencent.mm.plugin.report.service;
 import android.os.Parcelable.Creator;
 
 final class KVReportDataInfo$1
-  implements Parcelable.Creator
+  implements Parcelable.Creator<KVReportDataInfo>
 {}
 
 /* Location:

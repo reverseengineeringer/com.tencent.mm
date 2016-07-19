@@ -12,17 +12,17 @@ final class SnsUploadConfigView$1
   
   public final void onClick(View paramView)
   {
-    if ((!SnsUploadConfigView.a(hlL)) && (SnsUploadConfigView.b(hlL)))
+    if ((!SnsUploadConfigView.a(hBN)) && (SnsUploadConfigView.b(hBN)))
     {
-      g.e(val$context, 2131433143, 2131430877);
+      g.f(val$context, 2131235560, 2131231028);
       return;
     }
-    paramView = hlL;
-    if (SnsUploadConfigView.a(hlL)) {}
+    paramView = hBN;
+    if (SnsUploadConfigView.a(hBN)) {}
     for (boolean bool = false;; bool = true)
     {
       SnsUploadConfigView.a(paramView, bool);
-      SnsUploadConfigView.c(hlL);
+      SnsUploadConfigView.c(hBN);
       return;
     }
   }

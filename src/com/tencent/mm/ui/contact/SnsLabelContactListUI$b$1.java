@@ -10,7 +10,7 @@ final class SnsLabelContactListUI$b$1
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    lmD.lmz.finish();
+    lMT.lMP.finish();
   }
 }
 

@@ -7,14 +7,14 @@ final class c$e
   
   public final void run()
   {
-    if (pD.pp)
+    if (pR.pD)
     {
-      if (pD.getAdapter() != null) {
-        pD.post(this);
+      if (pR.getAdapter() != null) {
+        pR.post(this);
       }
       return;
     }
-    c.b(pD);
+    c.b(pR);
   }
 }
 

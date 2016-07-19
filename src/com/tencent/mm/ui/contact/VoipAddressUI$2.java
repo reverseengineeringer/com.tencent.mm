@@ -12,7 +12,7 @@ final class VoipAddressUI$2
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     paramDialogInterface.dismiss();
-    lmM.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
+    lNc.startActivity(new Intent("android.settings.MANAGE_APPLICATIONS_SETTINGS"));
   }
 }
 

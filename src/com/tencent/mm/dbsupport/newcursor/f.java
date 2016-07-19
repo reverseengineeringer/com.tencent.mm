@@ -10,9 +10,9 @@ public final class f
   extends AbstractCursor
   implements e
 {
-  private e bvw;
-  public e[] bvx;
-  private DataSetObserver pX = new DataSetObserver()
+  private e bkp;
+  public e[] bkq;
+  private DataSetObserver ql = new DataSetObserver()
   {
     public final void onChanged()
     {
@@ -21,65 +21,31 @@ public final class f
     
     public final void onInvalidated()
     {
-      f.a(f.this);
+      f.b(f.this);
     }
   };
   
   public f(j[] paramArrayOfj)
   {
-    bvx = paramArrayOfj;
-    bvw = paramArrayOfj[0];
-    for (;;)
+    bkq = paramArrayOfj;
+    bkp = paramArrayOfj[0];
+    while (i < bkq.length)
     {
-      if (i >= bvx.length) {
-        return;
-      }
-      if (bvx[i] != null) {
-        bvx[i].registerDataSetObserver(pX);
+      if (bkq[i] != null) {
+        bkq[i].registerDataSetObserver(ql);
       }
       i += 1;
     }
-  }
-  
-  public final boolean T(Object paramObject)
-  {
-    boolean bool1 = false;
-    int j = bvx.length;
-    int i = 0;
-    for (;;)
-    {
-      if (i >= j) {
-        return bool1;
-      }
-      boolean bool2 = bool1;
-      if (bvx[i] != null)
-      {
-        bool2 = bool1;
-        if (bvx[i].T(paramObject)) {
-          bool2 = true;
-        }
-      }
-      i += 1;
-      bool1 = bool2;
-    }
-  }
-  
-  public final a V(Object paramObject)
-  {
-    return bvw.V(paramObject);
   }
   
   public final void a(j.a parama)
   {
-    int j = bvx.length;
+    int j = bkq.length;
     int i = 0;
-    for (;;)
+    while (i < j)
     {
-      if (i >= j) {
-        return;
-      }
-      if (bvx[i] != null) {
-        bvx[i].a(parama);
+      if (bkq[i] != null) {
+        bkq[i].a(parama);
       }
       i += 1;
     }
@@ -88,148 +54,154 @@ public final class f
   public final boolean a(Object paramObject, a parama)
   {
     boolean bool1 = false;
-    int j = bvx.length;
+    int j = bkq.length;
     int i = 0;
-    for (;;)
+    while (i < j)
     {
-      if (i >= j) {
-        return bool1;
-      }
       boolean bool2 = bool1;
-      if (bvx[i] != null)
+      if (bkq[i] != null)
       {
         bool2 = bool1;
-        if (bvx[i].a(paramObject, parama)) {
+        if (bkq[i].a(paramObject, parama)) {
           bool2 = true;
         }
       }
       i += 1;
       bool1 = bool2;
     }
+    return bool1;
   }
   
-  public final void aG(boolean paramBoolean)
+  public final boolean ae(Object paramObject)
   {
-    int j = bvx.length;
+    boolean bool1 = false;
+    int j = bkq.length;
     int i = 0;
-    for (;;)
+    while (i < j)
     {
-      if (i >= j) {
-        return;
+      boolean bool2 = bool1;
+      if (bkq[i] != null)
+      {
+        bool2 = bool1;
+        if (bkq[i].ae(paramObject)) {
+          bool2 = true;
+        }
       }
-      if (bvx[i] != null) {
-        bvx[i].aG(paramBoolean);
+      i += 1;
+      bool1 = bool2;
+    }
+    return bool1;
+  }
+  
+  public final a ag(Object paramObject)
+  {
+    return bkp.ag(paramObject);
+  }
+  
+  public final void al(boolean paramBoolean)
+  {
+    int j = bkq.length;
+    int i = 0;
+    while (i < j)
+    {
+      if (bkq[i] != null) {
+        bkq[i].al(paramBoolean);
       }
       i += 1;
     }
   }
   
-  public final a cj(int paramInt)
+  public final a cJ(int paramInt)
   {
-    int k = bvx.length;
+    int k = bkq.length;
     int j = 0;
     int i = paramInt;
     paramInt = j;
-    for (;;)
+    while (paramInt < k)
     {
-      if (paramInt >= k) {
-        return null;
-      }
-      j = bvx[paramInt].getCount();
+      j = bkq[paramInt].getCount();
       if (i < j) {
-        return bvx[paramInt].cj(i);
+        return bkq[paramInt].cJ(i);
       }
       i -= j;
       paramInt += 1;
     }
+    return null;
   }
   
-  public final void ck(int paramInt)
+  public final void cK(int paramInt)
   {
-    int j = bvx.length;
+    int j = bkq.length;
     int i = 0;
-    for (;;)
+    while (i < j)
     {
-      if (i >= j) {
-        return;
-      }
-      if (bvx[i] != null) {
-        bvx[i].ck(paramInt);
+      if (bkq[i] != null) {
+        bkq[i].cK(paramInt);
       }
       i += 1;
     }
   }
   
-  public final boolean cl(int paramInt)
+  public final boolean cL(int paramInt)
   {
-    int j = bvx.length;
+    int j = bkq.length;
     boolean bool1 = true;
     int i = 0;
-    for (;;)
+    while (i < j)
     {
-      if (i >= j) {
-        return bool1;
-      }
       boolean bool2 = bool1;
-      if (bvx[i] != null)
+      if (bkq[i] != null)
       {
         bool2 = bool1;
-        if (!bvx[i].cl(paramInt)) {
+        if (!bkq[i].cL(paramInt)) {
           bool2 = false;
         }
       }
       i += 1;
       bool1 = bool2;
     }
+    return bool1;
   }
   
   public final void close()
   {
-    int j = bvx.length;
+    int j = bkq.length;
     int i = 0;
-    for (;;)
+    while (i < j)
     {
-      if (i >= j)
-      {
-        super.close();
-        return;
-      }
-      if (bvx[i] != null) {
-        bvx[i].close();
+      if (bkq[i] != null) {
+        bkq[i].close();
       }
       i += 1;
     }
+    super.close();
   }
   
   public final void copyStringToBuffer(int paramInt, CharArrayBuffer paramCharArrayBuffer) {}
   
   public final void deactivate()
   {
-    int j = bvx.length;
+    int j = bkq.length;
     int i = 0;
-    for (;;)
+    while (i < j)
     {
-      if (i >= j)
-      {
-        super.deactivate();
-        return;
-      }
-      if (bvx[i] != null) {
-        bvx[i].deactivate();
+      if (bkq[i] != null) {
+        bkq[i].deactivate();
       }
       i += 1;
     }
+    super.deactivate();
   }
   
   public final byte[] getBlob(int paramInt)
   {
-    return bvw.getBlob(paramInt);
+    return bkp.getBlob(paramInt);
   }
   
   public final String[] getColumnNames()
   {
-    if (bvw != null) {
-      return bvw.getColumnNames();
+    if (bkp != null) {
+      return bkp.getColumnNames();
     }
     return new String[0];
   }
@@ -237,138 +209,129 @@ public final class f
   public final int getCount()
   {
     int j = 0;
-    int m = bvx.length;
+    int m = bkq.length;
     int i = 0;
-    for (;;)
+    while (i < m)
     {
-      if (i >= m) {
-        return j;
-      }
       int k = j;
-      if (bvx[i] != null) {
-        k = j + bvx[i].getCount();
+      if (bkq[i] != null) {
+        k = j + bkq[i].getCount();
       }
       i += 1;
       j = k;
     }
+    return j;
   }
   
   public final double getDouble(int paramInt)
   {
-    return bvw.getDouble(paramInt);
+    return bkp.getDouble(paramInt);
   }
   
   public final float getFloat(int paramInt)
   {
-    return bvw.getFloat(paramInt);
+    return bkp.getFloat(paramInt);
   }
   
   public final int getInt(int paramInt)
   {
-    return bvw.getInt(paramInt);
+    return bkp.getInt(paramInt);
   }
   
   public final long getLong(int paramInt)
   {
-    return bvw.getLong(paramInt);
+    return bkp.getLong(paramInt);
   }
   
   public final short getShort(int paramInt)
   {
-    return bvw.getShort(paramInt);
+    return bkp.getShort(paramInt);
   }
   
   public final String getString(int paramInt)
   {
-    return bvw.getString(paramInt);
+    return bkp.getString(paramInt);
   }
   
   public final boolean isNull(int paramInt)
   {
-    return bvw.isNull(paramInt);
+    return bkp.isNull(paramInt);
   }
   
   public final boolean onMove(int paramInt1, int paramInt2)
   {
-    bvw = null;
-    int k = bvx.length;
+    bkp = null;
+    int k = bkq.length;
     paramInt1 = 0;
     int j;
     for (int i = 0;; i = j)
     {
-      if (paramInt1 >= k) {}
-      for (;;)
+      if (paramInt1 < k)
       {
-        if (bvw == null) {
-          break label109;
-        }
-        return bvw.moveToPosition(paramInt2 - i);
         j = i;
-        if (bvx[paramInt1] == null) {
-          break label99;
+        if (bkq[paramInt1] == null) {
+          break label96;
         }
-        if (paramInt2 >= bvx[paramInt1].getCount() + i) {
+        if (paramInt2 < bkq[paramInt1].getCount() + i) {
+          bkp = bkq[paramInt1];
+        }
+      }
+      else
+      {
+        if (bkp == null) {
           break;
         }
-        bvw = bvx[paramInt1];
+        return bkp.moveToPosition(paramInt2 - i);
       }
-      j = i + bvx[paramInt1].getCount();
-      label99:
+      j = i + bkq[paramInt1].getCount();
+      label96:
       paramInt1 += 1;
     }
-    label109:
     return false;
   }
   
-  public final boolean qG()
+  public final boolean pk()
   {
-    int j = bvx.length;
+    int j = bkq.length;
     boolean bool1 = true;
     int i = 0;
-    for (;;)
+    while (i < j)
     {
-      if (i >= j) {
-        return bool1;
-      }
       boolean bool2 = bool1;
-      if (bvx[i] != null)
+      if (bkq[i] != null)
       {
         bool2 = bool1;
-        if (!bvx[i].qG()) {
+        if (!bkq[i].pk()) {
           bool2 = false;
         }
       }
       i += 1;
       bool1 = bool2;
     }
+    return bool1;
   }
   
-  public final SparseArray[] qH()
+  public final SparseArray<Object>[] pl()
   {
-    int j = bvx.length;
+    int j = bkq.length;
     SparseArray[] arrayOfSparseArray = new SparseArray[j];
     int i = 0;
-    for (;;)
+    while (i < j)
     {
-      if (i >= j) {
-        return arrayOfSparseArray;
-      }
-      arrayOfSparseArray[i] = bvx[i].qH()[0];
+      arrayOfSparseArray[i] = bkq[i].pl()[0];
       i += 1;
     }
+    return arrayOfSparseArray;
   }
   
   public final void registerContentObserver(ContentObserver paramContentObserver)
   {
-    int j = bvx.length;
+    int j = bkq.length;
     int i = 0;
-    for (;;)
+    while (i < j)
     {
-      if (i >= j) {
-        return;
-      }
-      if (bvx[i] != null) {
-        bvx[i].registerContentObserver(paramContentObserver);
+      if (bkq[i] != null) {
+        bkq[i].registerContentObserver(paramContentObserver);
       }
       i += 1;
     }
@@ -376,15 +339,12 @@ public final class f
   
   public final void registerDataSetObserver(DataSetObserver paramDataSetObserver)
   {
-    int j = bvx.length;
+    int j = bkq.length;
     int i = 0;
-    for (;;)
+    while (i < j)
     {
-      if (i >= j) {
-        return;
-      }
-      if (bvx[i] != null) {
-        bvx[i].registerDataSetObserver(paramDataSetObserver);
+      if (bkq[i] != null) {
+        bkq[i].registerDataSetObserver(paramDataSetObserver);
       }
       i += 1;
     }
@@ -392,38 +352,26 @@ public final class f
   
   public final boolean requery()
   {
-    boolean bool2 = false;
-    int j = bvx.length;
+    int j = bkq.length;
     int i = 0;
-    for (;;)
+    while (i < j)
     {
-      boolean bool1;
-      if (i >= j) {
-        bool1 = true;
+      if ((bkq[i] != null) && (!bkq[i].requery())) {
+        return false;
       }
-      do
-      {
-        return bool1;
-        if (bvx[i] == null) {
-          break;
-        }
-        bool1 = bool2;
-      } while (!bvx[i].requery());
       i += 1;
     }
+    return true;
   }
   
   public final void unregisterContentObserver(ContentObserver paramContentObserver)
   {
-    int j = bvx.length;
+    int j = bkq.length;
     int i = 0;
-    for (;;)
+    while (i < j)
     {
-      if (i >= j) {
-        return;
-      }
-      if (bvx[i] != null) {
-        bvx[i].unregisterContentObserver(paramContentObserver);
+      if (bkq[i] != null) {
+        bkq[i].unregisterContentObserver(paramContentObserver);
       }
       i += 1;
     }
@@ -431,15 +379,12 @@ public final class f
   
   public final void unregisterDataSetObserver(DataSetObserver paramDataSetObserver)
   {
-    int j = bvx.length;
+    int j = bkq.length;
     int i = 0;
-    for (;;)
+    while (i < j)
     {
-      if (i >= j) {
-        return;
-      }
-      if (bvx[i] != null) {
-        bvx[i].unregisterDataSetObserver(paramDataSetObserver);
+      if (bkq[i] != null) {
+        bkq[i].unregisterDataSetObserver(paramDataSetObserver);
       }
       i += 1;
     }

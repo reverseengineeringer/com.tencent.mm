@@ -2,7 +2,7 @@ package com.tencent.mm.ui.bindgooglecontact;
 
 abstract interface a$a
 {
-  public abstract void qV(int paramInt);
+  public abstract void sX(int paramInt);
 }
 
 /* Location:

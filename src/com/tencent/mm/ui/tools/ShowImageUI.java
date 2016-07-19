@@ -11,49 +11,51 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Gallery.LayoutParams;
 import android.widget.ImageView;
-import com.tencent.mm.ar.c;
-import com.tencent.mm.d.a.ay.a;
-import com.tencent.mm.d.a.ay.b;
-import com.tencent.mm.platformtools.k;
+import com.tencent.mm.av.c;
+import com.tencent.mm.e.a.bb;
+import com.tencent.mm.e.a.bb.a;
+import com.tencent.mm.e.a.bb.b;
+import com.tencent.mm.e.a.bz;
+import com.tencent.mm.e.a.bz.b;
 import com.tencent.mm.pluginsdk.model.d;
 import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.MultiTouchImageView;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.g.d;
-import com.tencent.mm.ui.j;
 import java.util.LinkedList;
 import java.util.List;
 
 public class ShowImageUI
   extends MMActivity
 {
-  private MMGestureGallery dQq;
-  private boolean lxU;
-  private a lxV;
-  private boolean lxW;
+  private MMGestureGallery dSv;
+  private boolean lYJ;
+  private a lYK;
+  private boolean lYL;
   
   protected final int getLayoutId()
   {
-    return 2131363088;
+    return 2130904372;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
     paramBundle = getIntent().getStringExtra("key_title");
-    if (!com.tencent.mm.sdk.platformtools.ay.kz(paramBundle)) {
-      Gj(paramBundle);
+    if (!be.kf(paramBundle)) {
+      Ah(paramBundle);
     }
-    lxU = getIntent().getBooleanExtra("key_favorite", false);
-    lxW = getIntent().getBooleanExtra("show_menu", true);
-    dQq = ((MMGestureGallery)findViewById(2131165381));
-    dQq.setVerticalFadingEdgeEnabled(false);
-    dQq.setHorizontalFadingEdgeEnabled(false);
-    lxV = new a((byte)0);
-    lxV.imagePath = getIntent().getStringExtra("key_image_path");
-    dQq.setAdapter(lxV);
+    lYJ = getIntent().getBooleanExtra("key_favorite", false);
+    lYL = getIntent().getBooleanExtra("show_menu", true);
+    dSv = ((MMGestureGallery)findViewById(2131756360));
+    dSv.setVerticalFadingEdgeEnabled(false);
+    dSv.setHorizontalFadingEdgeEnabled(false);
+    lYK = new a((byte)0);
+    lYK.imagePath = getIntent().getStringExtra("key_image_path");
+    dSv.setAdapter(lYK);
     b(new MenuItem.OnMenuItemClickListener()
     {
       public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
@@ -62,27 +64,35 @@ public class ShowImageUI
         return true;
       }
     });
-    if (lxW) {
-      a(0, 2130903583, new MenuItem.OnMenuItemClickListener()
+    if (lYL) {
+      a(0, 2131165715, new MenuItem.OnMenuItemClickListener()
       {
         public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
         {
           paramAnonymousMenuItem = new LinkedList();
           LinkedList localLinkedList = new LinkedList();
-          if ((ShowImageUI.a(ShowImageUI.this)) && (c.yf("favorite")))
+          if ((ShowImageUI.a(ShowImageUI.this)) && (c.zM("favorite")))
           {
             localLinkedList.add(Integer.valueOf(0));
-            paramAnonymousMenuItem.add(getString(2131427828));
+            paramAnonymousMenuItem.add(getString(2131234530));
             localLinkedList.add(Integer.valueOf(1));
-            paramAnonymousMenuItem.add(getString(2131431054));
+            paramAnonymousMenuItem.add(getString(2131234160));
             localLinkedList.add(Integer.valueOf(2));
-            paramAnonymousMenuItem.add(getString(2131427823));
+            paramAnonymousMenuItem.add(getString(2131234713));
           }
           for (;;)
           {
+            bz localbz = new bz();
+            ahe.agU = getIntent().getLongExtra("key_message_id", -1L);
+            a.kug.y(localbz);
+            if (ahf.agF)
+            {
+              localLinkedList.add(Integer.valueOf(3));
+              paramAnonymousMenuItem.add(getString(2131231704));
+            }
             g.a(ShowImageUI.this, "", paramAnonymousMenuItem, localLinkedList, "", false, new g.d()
             {
-              public final void aq(int paramAnonymous2Int1, int paramAnonymous2Int2)
+              public final void av(int paramAnonymous2Int1, int paramAnonymous2Int2)
               {
                 switch (paramAnonymous2Int2)
                 {
@@ -93,35 +103,38 @@ public class ShowImageUI
                   return;
                 case 1: 
                   ShowImageUI localShowImageUI = ShowImageUI.this;
-                  com.tencent.mm.d.a.ay localay = new com.tencent.mm.d.a.ay();
+                  bb localbb = new bb();
                   long l = localShowImageUI.getIntent().getLongExtra("key_message_id", -1L);
                   if (-1L == l) {
-                    u.w("!32@/B4Tb64lLpL/S4mvETx9l9B/T4NcFgMX", "msg id error, try fav simple data");
+                    v.w("MicroMsg.ShowImageUI", "msg id error, try fav simple data");
                   }
-                  for (boolean bool = d.a(localay, localShowImageUI.getIntent().getIntExtra("key_favorite_source_type", 1), localShowImageUI.getIntent().getStringExtra("key_image_path"));; bool = d.a(localay, l))
+                  for (boolean bool = d.a(localbb, localShowImageUI.getIntent().getIntExtra("key_favorite_source_type", 1), localShowImageUI.getIntent().getStringExtra("key_image_path"));; bool = d.a(localbb, l))
                   {
                     if (!bool) {
-                      break label177;
+                      break label181;
                     }
-                    a.jUF.j(localay);
-                    if (aue.ret != 0) {
+                    a.kug.y(localbb);
+                    if (afR.ret != 0) {
                       break;
                     }
-                    g.ba(koJ.kpc, koJ.kpc.getString(2131431055));
+                    g.aZ(kNN.kOg, kNN.kOg.getString(2131232638));
                     return;
                   }
-                  label177:
-                  g.e(koJ.kpc, aud.type, 0);
+                  g.f(kNN.kOg, afQ.type, 0);
+                  return;
+                case 2: 
+                  label181:
+                  ShowImageUI.c(ShowImageUI.this);
                   return;
                 }
-                ShowImageUI.c(ShowImageUI.this);
+                ShowImageUI.d(ShowImageUI.this);
               }
             });
             return true;
             localLinkedList.add(Integer.valueOf(0));
-            paramAnonymousMenuItem.add(getString(2131427828));
+            paramAnonymousMenuItem.add(getString(2131234530));
             localLinkedList.add(Integer.valueOf(2));
-            paramAnonymousMenuItem.add(getString(2131427823));
+            paramAnonymousMenuItem.add(getString(2131234713));
           }
         }
       });
@@ -150,10 +163,10 @@ public class ShowImageUI
     
     public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
     {
-      Object localObject = k.ku(imagePath);
+      Object localObject = com.tencent.mm.platformtools.j.ld(imagePath);
       if (localObject == null)
       {
-        u.w("!32@/B4Tb64lLpL/S4mvETx9l9B/T4NcFgMX", "get image fail");
+        v.w("MicroMsg.ShowImageUI", "get image fail");
         if (paramView != null)
         {
           localObject = paramView;
@@ -161,9 +174,9 @@ public class ShowImageUI
         }
         else
         {
-          localObject = View.inflate(paramViewGroup.getContext(), 2131363026, null);
+          localObject = View.inflate(paramViewGroup.getContext(), 2130904373, null);
         }
-        ((ImageView)((View)localObject).findViewById(2131166875)).setImageResource(2130903595);
+        ((ImageView)((View)localObject).findViewById(2131756743)).setImageResource(2131165394);
         ((View)localObject).setLayoutParams(new Gallery.LayoutParams(-1, -1));
         return (View)localObject;
       }
@@ -175,10 +188,10 @@ public class ShowImageUI
       {
         paramView.setLayoutParams(new Gallery.LayoutParams(-1, -1));
         paramView.setImageBitmap((Bitmap)localObject);
-        paramView.setMaxZoomDoubleTab(true);
+        lih = true;
         return paramView;
         paramView = (MultiTouchImageView)paramView;
-        paramView.bN(((Bitmap)localObject).getWidth(), ((Bitmap)localObject).getHeight());
+        paramView.bT(((Bitmap)localObject).getWidth(), ((Bitmap)localObject).getHeight());
       }
     }
   }

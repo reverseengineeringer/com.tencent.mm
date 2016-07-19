@@ -18,13 +18,13 @@
 
 
 # instance fields
-.field final synthetic ao:I
+.field final synthetic P:I
 
-.field final synthetic eYZ:Landroid/content/Intent;
+.field final synthetic fhw:Landroid/content/Intent;
 
-.field final synthetic haX:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
+.field final synthetic hoo:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
 
-.field final synthetic haY:I
+.field final synthetic hop:I
 
 
 # direct methods
@@ -33,13 +33,13 @@
 
     .prologue
     .line 195
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$4;->haX:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$4;->hoo:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
 
-    iput p2, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$4;->ao:I
+    iput p2, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$4;->P:I
 
-    iput p3, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$4;->haY:I
+    iput p3, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$4;->hop:I
 
-    iput-object p4, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$4;->eYZ:Landroid/content/Intent;
+    iput-object p4, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$4;->fhw:Landroid/content/Intent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,11 +53,11 @@
 
     .prologue
     .line 199
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$4;->haX:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$4;->hoo:Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$4;->ao:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$4;->P:I
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$4;->eYZ:Landroid/content/Intent;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI$4;->fhw:Landroid/content/Intent;
 
     invoke-static {v0, v1, v2}, Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;->a(Lcom/tencent/mm/plugin/sns/ui/SettingSnsBackgroundUI;ILandroid/content/Intent;)V
 

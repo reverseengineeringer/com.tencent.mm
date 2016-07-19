@@ -2,16 +2,16 @@ package com.tencent.mm.ui.contact;
 
 import android.view.View;
 import android.widget.ListView;
-import com.tencent.mm.ui.base.MMSlideDelView.g;
+import com.tencent.mm.ui.base.MMSlideDelView.f;
 
 final class ChatroomContactUI$9
-  implements MMSlideDelView.g
+  implements MMSlideDelView.f
 {
   ChatroomContactUI$9(ChatroomContactUI paramChatroomContactUI) {}
   
   public final void j(View paramView, int paramInt)
   {
-    ChatroomContactUI.b(ljg).performItemClick(paramView, paramInt, 0L);
+    ChatroomContactUI.b(lJr).performItemClick(paramView, paramInt, 0L);
   }
 }
 

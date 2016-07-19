@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic kxP:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+.field final synthetic kWW:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
-.field final synthetic kxQ:Lcom/tencent/mm/ui/account/mobile/c;
+.field final synthetic kWX:Lcom/tencent/mm/ui/account/mobile/c;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 119
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/c$6;->kxQ:Lcom/tencent/mm/ui/account/mobile/c;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/c$6;->kWX:Lcom/tencent/mm/ui/account/mobile/c;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/mobile/c$6;->kxP:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/mobile/c$6;->kWW:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,7 +50,7 @@
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     .line 124
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/c$6;->kxP:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/c$6;->kWW:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
     const-class v2, Lcom/tencent/mm/ui/account/LoginUI;
 
@@ -64,7 +64,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 126
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/c$6;->kxP:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/c$6;->kWW:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->startActivity(Landroid/content/Intent;)V
 

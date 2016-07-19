@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/voicesearch/b;->HL(Ljava/lang/String;)V
+    value = Lcom/tencent/mm/ui/voicesearch/b;->Ka(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic lCw:Lcom/tencent/mm/ui/voicesearch/b;
+.field final synthetic mdn:Lcom/tencent/mm/ui/voicesearch/b;
 
-.field final synthetic lCy:Ljava/lang/String;
+.field final synthetic mdo:Ljava/lang/String;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 222
-    iput-object p1, p0, Lcom/tencent/mm/ui/voicesearch/b$7;->lCw:Lcom/tencent/mm/ui/voicesearch/b;
+    iput-object p1, p0, Lcom/tencent/mm/ui/voicesearch/b$7;->mdn:Lcom/tencent/mm/ui/voicesearch/b;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/voicesearch/b$7;->lCy:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/ui/voicesearch/b$7;->mdo:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
 
     .prologue
     .line 227
-    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/b$7;->lCw:Lcom/tencent/mm/ui/voicesearch/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/b$7;->mdn:Lcom/tencent/mm/ui/voicesearch/b;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/voicesearch/b;->b(Lcom/tencent/mm/ui/voicesearch/b;)Lcom/tencent/mm/storage/k;
 
@@ -58,20 +58,16 @@
     if-eqz v0, :cond_1
 
     .line 228
-    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/b$7;->lCw:Lcom/tencent/mm/ui/voicesearch/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/b$7;->mdn:Lcom/tencent/mm/ui/voicesearch/b;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/voicesearch/b;->b(Lcom/tencent/mm/ui/voicesearch/b;)Lcom/tencent/mm/storage/k;
 
     move-result-object v0
 
-    iget v1, v0, Lcom/tencent/mm/d/b/p;->field_type:I
-
-    and-int/lit8 v1, v1, -0x21
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/h/a;->setType(I)V
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->oG()V
 
     .line 229
-    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/b$7;->lCw:Lcom/tencent/mm/ui/voicesearch/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/b$7;->mdn:Lcom/tencent/mm/ui/voicesearch/b;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/voicesearch/b;->c(Lcom/tencent/mm/ui/voicesearch/b;)Z
 
@@ -80,23 +76,25 @@
     if-eqz v0, :cond_0
 
     .line 230
-    new-instance v0, Lcom/tencent/mm/modelsimple/z;
+    new-instance v0, Lcom/tencent/mm/modelsimple/x;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/voicesearch/b$7;->lCy:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/voicesearch/b$7;->mdo:Ljava/lang/String;
 
     const/4 v2, 0x3
 
-    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/modelsimple/z;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/modelsimple/x;-><init>(Ljava/lang/String;I)V
 
     .line 231
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/t/m;->a(Lcom/tencent/mm/t/j;I)Z
 
     .line 232
-    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/b$7;->lCw:Lcom/tencent/mm/ui/voicesearch/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/b$7;->mdn:Lcom/tencent/mm/ui/voicesearch/b;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/voicesearch/b;->d(Lcom/tencent/mm/ui/voicesearch/b;)Z
 
@@ -107,13 +105,13 @@
 
     .line 242
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/b$7;->lCw:Lcom/tencent/mm/ui/voicesearch/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/b$7;->mdn:Lcom/tencent/mm/ui/voicesearch/b;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/voicesearch/b;->b(Lcom/tencent/mm/ui/voicesearch/b;)Lcom/tencent/mm/storage/k;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->qg()V
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/k;->oF()V
 
     goto :goto_0
 .end method

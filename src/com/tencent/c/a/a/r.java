@@ -11,31 +11,31 @@ import java.util.Set;
 
 public final class r
 {
-  private static r akl = null;
-  private Map akj = null;
-  private int akk = 0;
+  private static r We = null;
+  private Map<Integer, q> Wc = null;
+  private int Wd = 0;
   
   private r(Context paramContext)
   {
-    akj.put(Integer.valueOf(1), new o(paramContext));
-    akj.put(Integer.valueOf(2), new d(paramContext));
-    akj.put(Integer.valueOf(4), new k(paramContext));
+    Wc.put(Integer.valueOf(1), new o(paramContext));
+    Wc.put(Integer.valueOf(2), new d(paramContext));
+    Wc.put(Integer.valueOf(4), new k(paramContext));
   }
   
-  static r S(Context paramContext)
+  static r O(Context paramContext)
   {
     try
     {
-      if (akl == null) {
-        akl = new r(paramContext);
+      if (We == null) {
+        We = new r(paramContext);
       }
-      paramContext = akl;
+      paramContext = We;
       return paramContext;
     }
     finally {}
   }
   
-  private a i(List paramList)
+  private a l(List<Integer> paramList)
   {
     if (paramList.size() > 0) {
       paramList = paramList.iterator();
@@ -49,16 +49,16 @@ public final class r
           return new a();
         }
         localObject = (Integer)paramList.next();
-        localObject = (q)akj.get(localObject);
+        localObject = (q)Wc.get(localObject);
       } while (localObject == null);
-      localObject = ((q)localObject).ki();
+      localObject = ((q)localObject).iJ();
     } while (localObject == null);
     return (a)localObject;
   }
   
   final void b(a parama)
   {
-    Iterator localIterator = akj.entrySet().iterator();
+    Iterator localIterator = Wc.entrySet().iterator();
     for (;;)
     {
       if (!localIterator.hasNext()) {
@@ -70,7 +70,7 @@ public final class r
   
   final void b(g paramg)
   {
-    Iterator localIterator = akj.entrySet().iterator();
+    Iterator localIterator = Wc.entrySet().iterator();
     for (;;)
     {
       if (!localIterator.hasNext()) {
@@ -80,7 +80,17 @@ public final class r
     }
   }
   
-  final g h(List paramList)
+  final g iI()
+  {
+    return k(new ArrayList(Arrays.asList(new Integer[] { Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(4) })));
+  }
+  
+  final a iJ()
+  {
+    return l(new ArrayList(Arrays.asList(new Integer[] { Integer.valueOf(1), Integer.valueOf(4) })));
+  }
+  
+  final g k(List<Integer> paramList)
   {
     if (paramList.size() >= 0) {
       paramList = paramList.iterator();
@@ -94,21 +104,11 @@ public final class r
           return new g();
         }
         localObject = (Integer)paramList.next();
-        localObject = (q)akj.get(localObject);
+        localObject = (q)Wc.get(localObject);
       } while (localObject == null);
-      localObject = ((q)localObject).kh();
-    } while ((localObject == null) || (!s.at(ajR)));
+      localObject = ((q)localObject).iI();
+    } while ((localObject == null) || (!s.ax(VK)));
     return (g)localObject;
-  }
-  
-  final g kh()
-  {
-    return h(new ArrayList(Arrays.asList(new Integer[] { Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(4) })));
-  }
-  
-  final a ki()
-  {
-    return i(new ArrayList(Arrays.asList(new Integer[] { Integer.valueOf(1), Integer.valueOf(4) })));
   }
 }
 

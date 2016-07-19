@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/zg" android:background="@drawable/lj" android:paddingLeft="@dimen/hb" android:paddingTop="@dimen/hb" android:paddingRight="@dimen/hb" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/a0k" android:background="@drawable/t5" android:paddingBottom="@dimen/i7" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip">
+        <include layout="@layout/chatting_item_avatar_from" />
+        <TextView android:textSize="@dimen/i8" android:textColor="@color/j_" android:gravity="center_vertical" android:id="@id/gv" android:paddingLeft="@dimen/j8" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/i8" android:textColor="@color/j_" android:id="@id/dq" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="@dimen/jb" android:text="@string/fn" android:maxLines="2" />
+    <TextView android:textSize="12.0dip" android:textColor="#ffb2b2b2" android:id="@id/ui" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="11.0dip" android:text="@string/fn" />
+    <LinearLayout android:orientation="vertical" android:id="@id/a0l" android:paddingBottom="@dimen/hb" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:id="@id/a0m" android:background="@drawable/t5" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="@dimen/hb" />
+    <TextView android:textSize="14.0dip" android:textColor="@color/hc" android:id="@id/zo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/hb" android:text="@string/zb" />
+</LinearLayout>

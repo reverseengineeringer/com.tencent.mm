@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/ui/LauncherUI;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/ui/LauncherUI;->bfP()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,28 +18,16 @@
 
 
 # instance fields
-.field final synthetic knl:Lcom/tencent/mm/ui/LauncherUI;
-
-.field final synthetic knr:[I
-
-.field final synthetic kns:Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;
-
-.field final synthetic knt:Landroid/view/ViewGroup;
+.field final synthetic kMs:Lcom/tencent/mm/ui/LauncherUI;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/LauncherUI;[ILcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;Landroid/view/ViewGroup;)V
+.method constructor <init>(Lcom/tencent/mm/ui/LauncherUI;)V
     .locals 0
 
     .prologue
-    .line 3517
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$22;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    iput-object p2, p0, Lcom/tencent/mm/ui/LauncherUI$22;->knr:[I
-
-    iput-object p3, p0, Lcom/tencent/mm/ui/LauncherUI$22;->kns:Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;
-
-    iput-object p4, p0, Lcom/tencent/mm/ui/LauncherUI$22;->knt:Landroid/view/ViewGroup;
+    .line 3797
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$22;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,75 +36,68 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
     .prologue
-    const/4 v4, 0x0
+    .line 3801
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    .line 3520
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$22;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    move-result-wide v0
 
-    iget-object v0, v0, Landroid/support/v7/app/ActionBarActivity;->iF:Landroid/support/v7/app/a;
+    iget-object v2, p0, Lcom/tencent/mm/ui/LauncherUI$22;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    invoke-virtual {v0}, Landroid/support/v7/app/a;->aP()Landroid/support/v7/app/ActionBar;
+    invoke-static {v2}, Lcom/tencent/mm/ui/LauncherUI;->D(Lcom/tencent/mm/ui/LauncherUI;)J
+
+    move-result-wide v2
+
+    sub-long/2addr v0, v2
+
+    const-wide/16 v2, 0x12c
+
+    cmp-long v0, v0, v2
+
+    if-gez v0, :cond_0
+
+    .line 3803
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$22;->kMs:Lcom/tencent/mm/ui/LauncherUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->E(Lcom/tencent/mm/ui/LauncherUI;)Ljava/util/LinkedList;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v7/app/ActionBar;->getCustomView()Landroid/view/View;
+    invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
-    move-result-object v0
+    move-result-object v1
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUI$22;->knr:[I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->getLocationInWindow([I)V
-
-    .line 3522
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$22;->knr:[I
-
-    const/4 v1, 0x1
-
-    aget v0, v0, v1
-
-    .line 3523
-    if-lez v0, :cond_1
-
-    .line 3524
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUI$22;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    iget-object v2, p0, Lcom/tencent/mm/ui/LauncherUI$22;->kns:Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;
-
-    new-instance v3, Landroid/graphics/Rect;
-
-    invoke-direct {v3, v4, v0, v4, v4}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    iget-object v4, p0, Lcom/tencent/mm/ui/LauncherUI$22;->knt:Landroid/view/ViewGroup;
-
-    invoke-static {v1, v2, v0, v3, v4}, Lcom/tencent/mm/ui/LauncherUI;->a(Lcom/tencent/mm/ui/LauncherUI;Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;ILandroid/graphics/Rect;Landroid/view/ViewGroup;)V
-
-    .line 3547
-    :cond_0
     :goto_0
-    return-void
-
-    .line 3527
-    :cond_1
-    const/16 v0, 0x14
-
-    invoke-static {v0}, Lcom/tencent/mm/compatible/util/c;->bU(I)Z
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3528
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$22;->kns:Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    new-instance v1, Lcom/tencent/mm/ui/LauncherUI$22$1;
+    move-result-object v0
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/LauncherUI$22$1;-><init>(Lcom/tencent/mm/ui/LauncherUI$22;)V
+    check-cast v0, Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/LauncherUI$FitSystemWindowLayoutView;->setOnApplyWindowInsetsListener(Landroid/view/View$OnApplyWindowInsetsListener;)V
+    .line 3804
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
+
+    .line 3807
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$22;->kMs:Lcom/tencent/mm/ui/LauncherUI;
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v2
+
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/ui/LauncherUI;->a(Lcom/tencent/mm/ui/LauncherUI;J)J
+
+    .line 3808
+    return-void
 .end method

@@ -14,73 +14,89 @@
     }
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T::",
+        "Landroid/widget/Adapter;",
+        ">",
+        "Landroid/view/ViewGroup;"
+    }
+.end annotation
+
 
 # instance fields
-.field mInLayout:Z
+.field aO:Z
 
-.field na:Z
+.field nq:Z
 
-.field private pA:Z
+.field pA:I
 
-.field private pB:Landroid/support/v7/internal/widget/c$e;
+.field pB:Landroid/support/v7/internal/widget/c$d;
 
-.field pf:I
+.field pC:Landroid/support/v7/internal/widget/c$b;
+
+.field pD:Z
+
+.field pE:I
+    .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
+        category = "list"
+    .end annotation
+.end field
+
+.field pF:J
+
+.field pG:I
+    .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
+        category = "list"
+    .end annotation
+.end field
+
+.field pH:J
+
+.field private pI:Landroid/view/View;
+
+.field pJ:I
+    .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
+        category = "list"
+    .end annotation
+.end field
+
+.field pK:I
+
+.field pL:I
+
+.field pM:J
+
+.field private pN:Z
+
+.field private pO:Z
+
+.field private pP:Landroid/support/v7/internal/widget/c$e;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/support/v7/internal/widget/c",
+            "<TT;>.e;"
+        }
+    .end annotation
+.end field
+
+.field pt:I
     .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
         category = "scrolling"
     .end annotation
 .end field
 
-.field pg:I
-
-.field ph:I
-
-.field pi:J
-
-.field pj:J
-
-.field pk:Z
-
-.field pl:I
-
-.field pm:I
-
-.field pn:Landroid/support/v7/internal/widget/c$d;
-
-.field po:Landroid/support/v7/internal/widget/c$b;
-
-.field pp:Z
-
-.field pq:I
-    .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
-        category = "list"
-    .end annotation
-.end field
-
-.field pr:J
-
-.field ps:I
-    .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
-        category = "list"
-    .end annotation
-.end field
-
-.field pt:J
-
-.field private pu:Landroid/view/View;
+.field pu:I
 
 .field pv:I
-    .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
-        category = "list"
-    .end annotation
-.end field
 
-.field pw:I
+.field pw:J
 
-.field px:I
+.field px:J
 
-.field py:J
+.field py:Z
 
-.field private pz:Z
+.field pz:I
 
 
 # direct methods
@@ -88,9 +104,9 @@
     .locals 4
 
     .prologue
-    const/4 v3, -0x1
+    const/4 v1, -0x1
 
-    const-wide/high16 v1, -0x8000000000000000L
+    const-wide/high16 v2, -0x8000000000000000L
 
     const/4 v0, 0x0
 
@@ -98,37 +114,37 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 67
-    iput v0, p0, Landroid/support/v7/internal/widget/c;->pf:I
+    iput v0, p0, Landroid/support/v7/internal/widget/c;->pt:I
 
     .line 84
-    iput-wide v1, p0, Landroid/support/v7/internal/widget/c;->pi:J
+    iput-wide v2, p0, Landroid/support/v7/internal/widget/c;->pw:J
 
     .line 94
-    iput-boolean v0, p0, Landroid/support/v7/internal/widget/c;->pk:Z
+    iput-boolean v0, p0, Landroid/support/v7/internal/widget/c;->py:Z
 
     .line 126
-    iput-boolean v0, p0, Landroid/support/v7/internal/widget/c;->mInLayout:Z
+    iput-boolean v0, p0, Landroid/support/v7/internal/widget/c;->aO:Z
 
     .line 152
-    iput v3, p0, Landroid/support/v7/internal/widget/c;->pq:I
+    iput v1, p0, Landroid/support/v7/internal/widget/c;->pE:I
 
     .line 158
-    iput-wide v1, p0, Landroid/support/v7/internal/widget/c;->pr:J
+    iput-wide v2, p0, Landroid/support/v7/internal/widget/c;->pF:J
 
     .line 163
-    iput v3, p0, Landroid/support/v7/internal/widget/c;->ps:I
+    iput v1, p0, Landroid/support/v7/internal/widget/c;->pG:I
 
     .line 169
-    iput-wide v1, p0, Landroid/support/v7/internal/widget/c;->pt:J
+    iput-wide v2, p0, Landroid/support/v7/internal/widget/c;->pH:J
 
     .line 201
-    iput v3, p0, Landroid/support/v7/internal/widget/c;->px:I
+    iput v1, p0, Landroid/support/v7/internal/widget/c;->pL:I
 
     .line 206
-    iput-wide v1, p0, Landroid/support/v7/internal/widget/c;->py:J
+    iput-wide v2, p0, Landroid/support/v7/internal/widget/c;->pM:J
 
     .line 225
-    iput-boolean v0, p0, Landroid/support/v7/internal/widget/c;->na:Z
+    iput-boolean v0, p0, Landroid/support/v7/internal/widget/c;->nq:Z
 
     .line 237
     return-void
@@ -161,17 +177,17 @@
 
     .prologue
     .line 50
-    invoke-direct {p0}, Landroid/support/v7/internal/widget/c;->cc()V
+    invoke-direct {p0}, Landroid/support/v7/internal/widget/c;->ce()V
 
     return-void
 .end method
 
-.method private cc()V
+.method private ce()V
     .locals 2
 
     .prologue
     .line 891
-    iget-object v0, p0, Landroid/support/v7/internal/widget/c;->pn:Landroid/support/v7/internal/widget/c$d;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/c;->pB:Landroid/support/v7/internal/widget/c$d;
 
     if-nez v0, :cond_1
 
@@ -182,7 +198,7 @@
 
     .line 894
     :cond_1
-    iget v0, p0, Landroid/support/v7/internal/widget/c;->pq:I
+    iget v0, p0, Landroid/support/v7/internal/widget/c;->pE:I
 
     .line 895
     if-ltz v0, :cond_0
@@ -230,56 +246,56 @@
 
 
 # virtual methods
-.method final J(I)V
+.method final N(I)V
     .locals 2
 
     .prologue
     .line 1094
-    iput p1, p0, Landroid/support/v7/internal/widget/c;->ps:I
+    iput p1, p0, Landroid/support/v7/internal/widget/c;->pG:I
 
     .line 1095
     invoke-direct {p0, p1}, Landroid/support/v7/internal/widget/c;->getItemIdAtPosition(I)J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Landroid/support/v7/internal/widget/c;->pt:J
+    iput-wide v0, p0, Landroid/support/v7/internal/widget/c;->pH:J
 
     .line 1096
     return-void
 .end method
 
-.method final K(I)V
+.method final O(I)V
     .locals 2
 
     .prologue
     .line 1104
-    iput p1, p0, Landroid/support/v7/internal/widget/c;->pq:I
+    iput p1, p0, Landroid/support/v7/internal/widget/c;->pE:I
 
     .line 1105
     invoke-direct {p0, p1}, Landroid/support/v7/internal/widget/c;->getItemIdAtPosition(I)J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Landroid/support/v7/internal/widget/c;->pr:J
+    iput-wide v0, p0, Landroid/support/v7/internal/widget/c;->pF:J
 
     .line 1107
-    iget-boolean v0, p0, Landroid/support/v7/internal/widget/c;->pk:Z
+    iget-boolean v0, p0, Landroid/support/v7/internal/widget/c;->py:Z
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Landroid/support/v7/internal/widget/c;->pl:I
+    iget v0, p0, Landroid/support/v7/internal/widget/c;->pz:I
 
     if-nez v0, :cond_0
 
     if-ltz p1, :cond_0
 
     .line 1108
-    iput p1, p0, Landroid/support/v7/internal/widget/c;->ph:I
+    iput p1, p0, Landroid/support/v7/internal/widget/c;->pv:I
 
     .line 1109
-    iget-wide v0, p0, Landroid/support/v7/internal/widget/c;->pr:J
+    iget-wide v0, p0, Landroid/support/v7/internal/widget/c;->pF:J
 
-    iput-wide v0, p0, Landroid/support/v7/internal/widget/c;->pi:J
+    iput-wide v0, p0, Landroid/support/v7/internal/widget/c;->pw:J
 
     .line 1111
     :cond_0
@@ -291,7 +307,7 @@
 
     .prologue
     .line 282
-    iput-object p1, p0, Landroid/support/v7/internal/widget/c;->po:Landroid/support/v7/internal/widget/c$b;
+    iput-object p1, p0, Landroid/support/v7/internal/widget/c;->pC:Landroid/support/v7/internal/widget/c$b;
 
     .line 283
     return-void
@@ -364,7 +380,7 @@
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Landroid/support/v7/internal/widget/c;->pv:I
+    iget v0, p0, Landroid/support/v7/internal/widget/c;->pJ:I
 
     if-lez v0, :cond_0
 
@@ -379,7 +395,7 @@
     goto :goto_0
 .end method
 
-.method final cb()V
+.method final cd()V
     .locals 6
 
     .prologue
@@ -416,7 +432,7 @@
     :goto_1
     if-eqz v3, :cond_5
 
-    iget-boolean v0, p0, Landroid/support/v7/internal/widget/c;->pA:Z
+    iget-boolean v0, p0, Landroid/support/v7/internal/widget/c;->pO:Z
 
     if-eqz v0, :cond_5
 
@@ -428,7 +444,7 @@
     .line 721
     if-eqz v3, :cond_6
 
-    iget-boolean v0, p0, Landroid/support/v7/internal/widget/c;->pz:Z
+    iget-boolean v0, p0, Landroid/support/v7/internal/widget/c;->pN:Z
 
     if-eqz v0, :cond_6
 
@@ -438,7 +454,7 @@
     invoke-super {p0, v0}, Landroid/view/ViewGroup;->setFocusable(Z)V
 
     .line 722
-    iget-object v0, p0, Landroid/support/v7/internal/widget/c;->pu:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/c;->pI:Landroid/view/View;
 
     if-eqz v0, :cond_2
 
@@ -455,18 +471,18 @@
     :goto_4
     if-eqz v2, :cond_9
 
-    iget-object v0, p0, Landroid/support/v7/internal/widget/c;->pu:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/c;->pI:Landroid/view/View;
 
     if-eqz v0, :cond_8
 
-    iget-object v0, p0, Landroid/support/v7/internal/widget/c;->pu:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/c;->pI:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     invoke-virtual {p0, v5}, Landroid/support/v7/internal/widget/c;->setVisibility(I)V
 
     :goto_5
-    iget-boolean v0, p0, Landroid/support/v7/internal/widget/c;->pp:Z
+    iget-boolean v0, p0, Landroid/support/v7/internal/widget/c;->pD:Z
 
     if-eqz v0, :cond_2
 
@@ -531,11 +547,11 @@
     goto :goto_5
 
     :cond_9
-    iget-object v0, p0, Landroid/support/v7/internal/widget/c;->pu:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/c;->pI:Landroid/view/View;
 
     if-eqz v0, :cond_a
 
-    iget-object v0, p0, Landroid/support/v7/internal/widget/c;->pu:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/c;->pI:Landroid/view/View;
 
     invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
 
@@ -545,20 +561,20 @@
     goto :goto_6
 .end method
 
-.method final cd()V
+.method final cf()V
     .locals 4
 
     .prologue
     .line 983
-    iget v0, p0, Landroid/support/v7/internal/widget/c;->ps:I
+    iget v0, p0, Landroid/support/v7/internal/widget/c;->pG:I
 
-    iget v1, p0, Landroid/support/v7/internal/widget/c;->px:I
+    iget v1, p0, Landroid/support/v7/internal/widget/c;->pL:I
 
     if-ne v0, v1, :cond_0
 
-    iget-wide v0, p0, Landroid/support/v7/internal/widget/c;->pt:J
+    iget-wide v0, p0, Landroid/support/v7/internal/widget/c;->pH:J
 
-    iget-wide v2, p0, Landroid/support/v7/internal/widget/c;->py:J
+    iget-wide v2, p0, Landroid/support/v7/internal/widget/c;->pM:J
 
     cmp-long v0, v0, v2
 
@@ -566,20 +582,20 @@
 
     .line 984
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/internal/widget/c;->pn:Landroid/support/v7/internal/widget/c$d;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/c;->pB:Landroid/support/v7/internal/widget/c$d;
 
     if-eqz v0, :cond_3
 
-    iget-boolean v0, p0, Landroid/support/v7/internal/widget/c;->mInLayout:Z
+    iget-boolean v0, p0, Landroid/support/v7/internal/widget/c;->aO:Z
 
     if-nez v0, :cond_1
 
-    iget-boolean v0, p0, Landroid/support/v7/internal/widget/c;->na:Z
+    iget-boolean v0, p0, Landroid/support/v7/internal/widget/c;->nq:Z
 
     if-eqz v0, :cond_6
 
     :cond_1
-    iget-object v0, p0, Landroid/support/v7/internal/widget/c;->pB:Landroid/support/v7/internal/widget/c$e;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/c;->pP:Landroid/support/v7/internal/widget/c$e;
 
     if-nez v0, :cond_2
 
@@ -589,16 +605,16 @@
 
     invoke-direct {v0, p0, v1}, Landroid/support/v7/internal/widget/c$e;-><init>(Landroid/support/v7/internal/widget/c;B)V
 
-    iput-object v0, p0, Landroid/support/v7/internal/widget/c;->pB:Landroid/support/v7/internal/widget/c$e;
+    iput-object v0, p0, Landroid/support/v7/internal/widget/c;->pP:Landroid/support/v7/internal/widget/c$e;
 
     :cond_2
-    iget-object v0, p0, Landroid/support/v7/internal/widget/c;->pB:Landroid/support/v7/internal/widget/c$e;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/c;->pP:Landroid/support/v7/internal/widget/c$e;
 
     invoke-virtual {p0, v0}, Landroid/support/v7/internal/widget/c;->post(Ljava/lang/Runnable;)Z
 
     :cond_3
     :goto_0
-    iget v0, p0, Landroid/support/v7/internal/widget/c;->ps:I
+    iget v0, p0, Landroid/support/v7/internal/widget/c;->pG:I
 
     const/4 v1, -0x1
 
@@ -622,14 +638,14 @@
 
     .line 985
     :cond_4
-    iget v0, p0, Landroid/support/v7/internal/widget/c;->ps:I
+    iget v0, p0, Landroid/support/v7/internal/widget/c;->pG:I
 
-    iput v0, p0, Landroid/support/v7/internal/widget/c;->px:I
+    iput v0, p0, Landroid/support/v7/internal/widget/c;->pL:I
 
     .line 986
-    iget-wide v0, p0, Landroid/support/v7/internal/widget/c;->pt:J
+    iget-wide v0, p0, Landroid/support/v7/internal/widget/c;->pH:J
 
-    iput-wide v0, p0, Landroid/support/v7/internal/widget/c;->py:J
+    iput-wide v0, p0, Landroid/support/v7/internal/widget/c;->pM:J
 
     .line 988
     :cond_5
@@ -637,7 +653,7 @@
 
     .line 984
     :cond_6
-    invoke-direct {p0}, Landroid/support/v7/internal/widget/c;->cc()V
+    invoke-direct {p0}, Landroid/support/v7/internal/widget/c;->ce()V
 
     goto :goto_0
 .end method
@@ -681,6 +697,15 @@
 
 .method protected dispatchRestoreInstanceState(Landroid/util/SparseArray;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/util/SparseArray",
+            "<",
+            "Landroid/os/Parcelable;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
     .line 793
@@ -692,6 +717,15 @@
 
 .method protected dispatchSaveInstanceState(Landroid/util/SparseArray;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/util/SparseArray",
+            "<",
+            "Landroid/os/Parcelable;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
     .line 785
@@ -702,6 +736,11 @@
 .end method
 
 .method public abstract getAdapter()Landroid/widget/Adapter;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
 .end method
 
 .method public abstract getSelectedView()Landroid/view/View;
@@ -716,7 +755,7 @@
     const/4 v1, 0x0
 
     .line 303
-    iget-object v2, p0, Landroid/support/v7/internal/widget/c;->po:Landroid/support/v7/internal/widget/c$b;
+    iget-object v2, p0, Landroid/support/v7/internal/widget/c;->pC:Landroid/support/v7/internal/widget/c$b;
 
     if-eqz v2, :cond_1
 
@@ -731,7 +770,7 @@
 
     .line 308
     :cond_0
-    iget-object v1, p0, Landroid/support/v7/internal/widget/c;->po:Landroid/support/v7/internal/widget/c$b;
+    iget-object v1, p0, Landroid/support/v7/internal/widget/c;->pC:Landroid/support/v7/internal/widget/c$b;
 
     invoke-interface {v1, p1, p2}, Landroid/support/v7/internal/widget/c$b;->i(Landroid/view/View;I)V
 
@@ -746,177 +785,205 @@
 .end method
 
 .method final handleDataChanged()V
-    .locals 14
+    .locals 18
 
     .prologue
     .line 920
-    iget v7, p0, Landroid/support/v7/internal/widget/c;->pv:I
+    move-object/from16 v0, p0
+
+    iget v9, v0, Landroid/support/v7/internal/widget/c;->pJ:I
 
     .line 921
-    const/4 v4, 0x0
+    const/4 v6, 0x0
 
     .line 923
-    if-lez v7, :cond_f
+    if-lez v9, :cond_f
 
     .line 928
-    iget-boolean v0, p0, Landroid/support/v7/internal/widget/c;->pk:Z
+    move-object/from16 v0, p0
 
-    if-eqz v0, :cond_e
+    iget-boolean v2, v0, Landroid/support/v7/internal/widget/c;->py:Z
+
+    if-eqz v2, :cond_e
 
     .line 931
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    iput-boolean v0, p0, Landroid/support/v7/internal/widget/c;->pk:Z
+    move-object/from16 v0, p0
+
+    iput-boolean v2, v0, Landroid/support/v7/internal/widget/c;->py:Z
 
     .line 935
-    iget v8, p0, Landroid/support/v7/internal/widget/c;->pv:I
+    move-object/from16 v0, p0
 
-    if-eqz v8, :cond_d
+    iget v10, v0, Landroid/support/v7/internal/widget/c;->pJ:I
 
-    iget-wide v9, p0, Landroid/support/v7/internal/widget/c;->pi:J
+    if-eqz v10, :cond_d
 
-    iget v0, p0, Landroid/support/v7/internal/widget/c;->ph:I
+    move-object/from16 v0, p0
 
-    const-wide/high16 v1, -0x8000000000000000L
+    iget-wide v12, v0, Landroid/support/v7/internal/widget/c;->pw:J
 
-    cmp-long v1, v9, v1
+    move-object/from16 v0, p0
 
-    if-eqz v1, :cond_d
+    iget v2, v0, Landroid/support/v7/internal/widget/c;->pv:I
 
-    const/4 v1, 0x0
+    const-wide/high16 v4, -0x8000000000000000L
 
-    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
+    cmp-long v3, v12, v4
 
-    move-result v0
+    if-eqz v3, :cond_d
 
-    add-int/lit8 v1, v8, -0x1
+    const/4 v3, 0x0
 
-    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
+    invoke-static {v3, v2}, Ljava/lang/Math;->max(II)I
 
-    move-result v1
+    move-result v2
+
+    add-int/lit8 v3, v10, -0x1
+
+    invoke-static {v3, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v3
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    move-result-wide v2
+    move-result-wide v4
 
-    const-wide/16 v5, 0x64
+    const-wide/16 v14, 0x64
 
-    add-long v11, v2, v5
+    add-long/2addr v14, v4
 
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {p0}, Landroid/support/v7/internal/widget/c;->getAdapter()Landroid/widget/Adapter;
+    invoke-virtual/range {p0 .. p0}, Landroid/support/v7/internal/widget/c;->getAdapter()Landroid/widget/Adapter;
 
-    move-result-object v13
+    move-result-object v11
 
-    if-eqz v13, :cond_d
+    if-eqz v11, :cond_d
 
-    move v2, v1
+    move v4, v3
 
-    move v3, v1
+    move v5, v3
 
     :cond_0
     :goto_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    move-result-wide v5
+    move-result-wide v16
 
-    cmp-long v5, v5, v11
+    cmp-long v7, v16, v14
 
-    if-gtz v5, :cond_d
+    if-gtz v7, :cond_d
 
-    invoke-interface {v13, v3}, Landroid/widget/Adapter;->getItemId(I)J
+    invoke-interface {v11, v5}, Landroid/widget/Adapter;->getItemId(I)J
 
-    move-result-wide v5
+    move-result-wide v16
 
-    cmp-long v5, v5, v9
+    cmp-long v7, v16, v12
 
-    if-nez v5, :cond_6
+    if-nez v7, :cond_6
 
     .line 936
     :goto_1
-    if-ltz v3, :cond_e
+    if-ltz v5, :cond_e
 
     .line 939
-    if-ne v3, v3, :cond_e
+    if-ne v5, v5, :cond_e
 
     .line 941
-    invoke-virtual {p0, v3}, Landroid/support/v7/internal/widget/c;->K(I)V
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v5}, Landroid/support/v7/internal/widget/c;->O(I)V
 
     .line 942
-    const/4 v4, 0x1
+    const/4 v6, 0x1
 
-    move v0, v4
+    move v2, v6
 
     .line 946
     :goto_2
-    if-nez v0, :cond_4
+    if-nez v2, :cond_4
 
     .line 948
-    iget v1, p0, Landroid/support/v7/internal/widget/c;->pq:I
+    move-object/from16 v0, p0
+
+    iget v3, v0, Landroid/support/v7/internal/widget/c;->pE:I
 
     .line 951
-    if-lt v1, v7, :cond_1
+    if-lt v3, v9, :cond_1
 
     .line 952
-    add-int/lit8 v1, v7, -0x1
+    add-int/lit8 v3, v9, -0x1
 
     .line 954
     :cond_1
-    if-gez v1, :cond_2
+    if-gez v3, :cond_2
 
     .line 955
-    const/4 v1, 0x0
+    const/4 v3, 0x0
 
     .line 960
     :cond_2
-    if-gez v1, :cond_3
+    if-gez v3, :cond_3
 
     .line 964
     :cond_3
-    if-ltz v1, :cond_4
+    if-ltz v3, :cond_4
 
     .line 965
-    invoke-virtual {p0, v1}, Landroid/support/v7/internal/widget/c;->K(I)V
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v3}, Landroid/support/v7/internal/widget/c;->O(I)V
 
     .line 966
-    invoke-virtual {p0}, Landroid/support/v7/internal/widget/c;->cd()V
+    invoke-virtual/range {p0 .. p0}, Landroid/support/v7/internal/widget/c;->cf()V
 
     .line 967
-    const/4 v0, 0x1
+    const/4 v2, 0x1
 
     .line 971
     :cond_4
     :goto_3
-    if-nez v0, :cond_5
+    if-nez v2, :cond_5
 
     .line 973
-    const/4 v0, -0x1
+    const/4 v2, -0x1
 
-    iput v0, p0, Landroid/support/v7/internal/widget/c;->ps:I
+    move-object/from16 v0, p0
+
+    iput v2, v0, Landroid/support/v7/internal/widget/c;->pG:I
 
     .line 974
-    const-wide/high16 v0, -0x8000000000000000L
+    const-wide/high16 v2, -0x8000000000000000L
 
-    iput-wide v0, p0, Landroid/support/v7/internal/widget/c;->pt:J
+    move-object/from16 v0, p0
+
+    iput-wide v2, v0, Landroid/support/v7/internal/widget/c;->pH:J
 
     .line 975
-    const/4 v0, -0x1
+    const/4 v2, -0x1
 
-    iput v0, p0, Landroid/support/v7/internal/widget/c;->pq:I
+    move-object/from16 v0, p0
+
+    iput v2, v0, Landroid/support/v7/internal/widget/c;->pE:I
 
     .line 976
-    const-wide/high16 v0, -0x8000000000000000L
+    const-wide/high16 v2, -0x8000000000000000L
 
-    iput-wide v0, p0, Landroid/support/v7/internal/widget/c;->pr:J
+    move-object/from16 v0, p0
+
+    iput-wide v2, v0, Landroid/support/v7/internal/widget/c;->pF:J
 
     .line 977
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    iput-boolean v0, p0, Landroid/support/v7/internal/widget/c;->pk:Z
+    move-object/from16 v0, p0
+
+    iput-boolean v2, v0, Landroid/support/v7/internal/widget/c;->py:Z
 
     .line 978
-    invoke-virtual {p0}, Landroid/support/v7/internal/widget/c;->cd()V
+    invoke-virtual/range {p0 .. p0}, Landroid/support/v7/internal/widget/c;->cf()V
 
     .line 980
     :cond_5
@@ -924,80 +991,80 @@
 
     .line 935
     :cond_6
-    add-int/lit8 v5, v8, -0x1
+    add-int/lit8 v7, v10, -0x1
 
-    if-ne v1, v5, :cond_9
+    if-ne v3, v7, :cond_9
 
-    const/4 v5, 0x1
+    const/4 v7, 0x1
 
-    move v6, v5
+    move v8, v7
 
     :goto_4
-    if-nez v2, :cond_a
+    if-nez v4, :cond_a
 
-    const/4 v5, 0x1
+    const/4 v7, 0x1
 
     :goto_5
-    if-eqz v6, :cond_7
+    if-eqz v8, :cond_7
 
-    if-nez v5, :cond_d
+    if-nez v7, :cond_d
 
     :cond_7
-    if-nez v5, :cond_8
+    if-nez v7, :cond_8
 
-    if-eqz v0, :cond_b
+    if-eqz v2, :cond_b
 
-    if-nez v6, :cond_b
+    if-nez v8, :cond_b
 
     :cond_8
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v3, v3, 0x1
 
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    move v3, v1
+    move v5, v3
 
     goto :goto_0
 
     :cond_9
-    const/4 v5, 0x0
+    const/4 v7, 0x0
 
-    move v6, v5
+    move v8, v7
 
     goto :goto_4
 
     :cond_a
-    const/4 v5, 0x0
+    const/4 v7, 0x0
 
     goto :goto_5
 
     :cond_b
-    if-nez v6, :cond_c
+    if-nez v8, :cond_c
 
-    if-nez v0, :cond_0
+    if-nez v2, :cond_0
 
-    if-nez v5, :cond_0
+    if-nez v7, :cond_0
 
     :cond_c
-    add-int/lit8 v2, v2, -0x1
+    add-int/lit8 v4, v4, -0x1
 
-    const/4 v0, 0x1
+    const/4 v2, 0x1
 
-    move v3, v2
+    move v5, v4
 
     goto :goto_0
 
     :cond_d
-    const/4 v3, -0x1
+    const/4 v5, -0x1
 
     goto :goto_1
 
     :cond_e
-    move v0, v4
+    move v2, v6
 
     goto :goto_2
 
     :cond_f
-    move v0, v4
+    move v2, v6
 
     goto :goto_3
 .end method
@@ -1010,7 +1077,7 @@
     invoke-super {p0}, Landroid/view/ViewGroup;->onDetachedFromWindow()V
 
     .line 850
-    iget-object v0, p0, Landroid/support/v7/internal/widget/c;->pB:Landroid/support/v7/internal/widget/c$e;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/c;->pP:Landroid/support/v7/internal/widget/c$e;
 
     invoke-virtual {p0, v0}, Landroid/support/v7/internal/widget/c;->removeCallbacks(Ljava/lang/Runnable;)Z
 
@@ -1027,7 +1094,7 @@
 
     move-result v0
 
-    iput v0, p0, Landroid/support/v7/internal/widget/c;->pm:I
+    iput v0, p0, Landroid/support/v7/internal/widget/c;->pA:I
 
     .line 543
     return-void
@@ -1102,13 +1169,13 @@
 
     .line 692
     :goto_0
-    iput-boolean p1, p0, Landroid/support/v7/internal/widget/c;->pz:Z
+    iput-boolean p1, p0, Landroid/support/v7/internal/widget/c;->pN:Z
 
     .line 693
     if-nez p1, :cond_1
 
     .line 694
-    iput-boolean v1, p0, Landroid/support/v7/internal/widget/c;->pA:Z
+    iput-boolean v1, p0, Landroid/support/v7/internal/widget/c;->pO:Z
 
     .line 697
     :cond_1
@@ -1162,13 +1229,13 @@
 
     .line 705
     :goto_0
-    iput-boolean p1, p0, Landroid/support/v7/internal/widget/c;->pA:Z
+    iput-boolean p1, p0, Landroid/support/v7/internal/widget/c;->pO:Z
 
     .line 706
     if-eqz p1, :cond_1
 
     .line 707
-    iput-boolean v2, p0, Landroid/support/v7/internal/widget/c;->pz:Z
+    iput-boolean v2, p0, Landroid/support/v7/internal/widget/c;->pN:Z
 
     .line 710
     :cond_1

@@ -15,7 +15,7 @@
 # instance fields
 .field volatile a:Z
 
-.field private final b:Lct/bj;
+.field private final b:Lct/bg;
 
 .field private c:Landroid/telephony/CellInfo;
 
@@ -31,7 +31,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lct/bj;)V
+.method public constructor <init>(Lct/bg;)V
     .locals 1
 
     .prologue
@@ -50,30 +50,30 @@
     iput-object v0, p0, Lct/b;->e:Landroid/telephony/ServiceState;
 
     .line 42
-    iput-object p1, p0, Lct/b;->b:Lct/bj;
+    iput-object p1, p0, Lct/b;->b:Lct/bg;
 
     .line 43
     return-void
 .end method
 
-.method static synthetic a(Lct/b;)Lct/bj;
+.method static synthetic a(Lct/b;)Lct/bg;
     .locals 1
 
     .prologue
     .line 26
-    iget-object v0, p0, Lct/b;->b:Lct/bj;
+    iget-object v0, p0, Lct/b;->b:Lct/bg;
 
     return-object v0
 .end method
 
 .method private a(I)V
-    .locals 4
+    .locals 1
 
     .prologue
     .line 112
-    iget-object v0, p0, Lct/b;->b:Lct/bj;
+    iget-object v0, p0, Lct/b;->b:Lct/bg;
 
-    invoke-virtual {v0}, Lct/bj;->a()Landroid/telephony/TelephonyManager;
+    invoke-virtual {v0}, Lct/bg;->a()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
 
@@ -83,32 +83,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 118
+    .line 117
     :goto_0
     return-void
 
-    .line 115
+    .line 116
     :catch_0
     move-exception v0
-
-    .line 116
-    const-string/jumbo v1, "TxCellProvider"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v3, "listenCellState: failed! flags="
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2, v0}, Lct/b$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method
@@ -144,7 +125,7 @@
 
     .line 196
     :cond_1
-    invoke-static {p1}, Lct/cv;->a(Landroid/telephony/CellInfo;)Z
+    invoke-static {p1}, Lct/cq;->a(Landroid/telephony/CellInfo;)Z
 
     move-result v1
 
@@ -153,7 +134,7 @@
     .line 199
     iget-object v1, p0, Lct/b;->c:Landroid/telephony/CellInfo;
 
-    invoke-static {v1, p1}, Lct/cv;->a(Landroid/telephony/CellInfo;Landroid/telephony/CellInfo;)Z
+    invoke-static {v1, p1}, Lct/cq;->a(Landroid/telephony/CellInfo;Landroid/telephony/CellInfo;)Z
 
     move-result v1
 
@@ -166,7 +147,7 @@
 .end method
 
 .method private c()V
-    .locals 7
+    .locals 6
 
     .prologue
     .line 216
@@ -188,16 +169,16 @@
     .line 225
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     .line 227
-    iget-wide v3, p0, Lct/b;->f:J
+    iget-wide v0, p0, Lct/b;->f:J
 
-    sub-long v3, v1, v3
+    sub-long v0, v2, v0
 
-    const-wide/16 v5, 0x7d0
+    const-wide/16 v4, 0x7d0
 
-    cmp-long v0, v3, v5
+    cmp-long v0, v0, v4
 
     if-lez v0, :cond_3
 
@@ -208,14 +189,14 @@
     if-eqz v0, :cond_0
 
     .line 229
-    iput-wide v1, p0, Lct/b;->f:J
+    iput-wide v2, p0, Lct/b;->f:J
 
     .line 230
-    iget-object v0, p0, Lct/b;->b:Lct/bj;
+    iget-object v0, p0, Lct/b;->b:Lct/bg;
 
     iget-object v1, p0, Lct/b;->c:Landroid/telephony/CellInfo;
 
-    invoke-static {v0, v1}, Lct/ci;->a(Lct/bj;Landroid/telephony/CellInfo;)Lct/ci;
+    invoke-static {v0, v1}, Lct/cd;->a(Lct/bg;Landroid/telephony/CellInfo;)Lct/cd;
 
     move-result-object v0
 
@@ -230,11 +211,11 @@
 
     new-instance v1, Lct/b$c;
 
-    iget-object v2, p0, Lct/b;->b:Lct/bj;
+    iget-object v2, p0, Lct/b;->b:Lct/bg;
 
-    invoke-direct {v1, v2}, Lct/b$c;-><init>(Lct/bj;)V
+    invoke-direct {v1, v2}, Lct/b$c;-><init>(Lct/bg;)V
 
-    invoke-virtual {v1, v0}, Lct/b$c;->a(Lct/ci;)V
+    invoke-virtual {v1, v0}, Lct/b$c;->a(Lct/cd;)V
 
     iget-object v0, p0, Lct/b;->h:Landroid/os/Handler;
 
@@ -264,7 +245,7 @@
 
 # virtual methods
 .method public final a()V
-    .locals 5
+    .locals 6
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "NewApi"
@@ -288,7 +269,7 @@
 
     .line 50
     :cond_1
-    iget-object v2, p0, Lct/b;->b:Lct/bj;
+    iget-object v2, p0, Lct/b;->b:Lct/bg;
 
     if-eqz v2, :cond_0
 
@@ -323,18 +304,18 @@
 
     iget-object v2, p0, Lct/b;->h:Landroid/os/Handler;
 
-    const-wide/16 v3, 0xbb8
+    const-wide/16 v4, 0xbb8
 
-    invoke-virtual {v2, v1, v3, v4}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {v2, v1, v4, v5}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     :goto_1
     if-eqz v0, :cond_0
 
     .line 59
     :try_start_0
-    iget-object v0, p0, Lct/b;->b:Lct/bj;
+    iget-object v0, p0, Lct/b;->b:Lct/bg;
 
-    invoke-static {v0}, Lct/cv;->a(Lct/bj;)Landroid/telephony/CellInfo;
+    invoke-static {v0}, Lct/cq;->a(Lct/bg;)Landroid/telephony/CellInfo;
 
     move-result-object v0
 
@@ -346,9 +327,9 @@
     if-eqz v1, :cond_2
 
     .line 62
-    iget-object v1, p0, Lct/b;->b:Lct/bj;
+    iget-object v1, p0, Lct/b;->b:Lct/bg;
 
-    invoke-static {v1, v0}, Lct/ci;->a(Lct/bj;Landroid/telephony/CellInfo;)Lct/ci;
+    invoke-static {v1, v0}, Lct/cd;->a(Lct/bg;Landroid/telephony/CellInfo;)Lct/cd;
 
     move-result-object v1
 
@@ -359,9 +340,9 @@
     iput-object v0, p0, Lct/b;->c:Landroid/telephony/CellInfo;
 
     .line 65
-    iget-object v0, p0, Lct/b;->b:Lct/bj;
+    iget-object v0, p0, Lct/b;->b:Lct/bg;
 
-    invoke-virtual {v0, v1}, Lct/bj;->c(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lct/bg;->c(Ljava/lang/Object;)V
 
     .line 68
     :cond_2
@@ -404,7 +385,7 @@
 
     if-nez v0, :cond_0
 
-    .line 95
+    .line 94
     :goto_0
     return-void
 
@@ -462,15 +443,6 @@
 
     iput-wide v0, p0, Lct/b;->f:J
 
-    .line 94
-    const-string/jumbo v0, "TxCellProvider"
-
-    const-string/jumbo v1, "shutdown: state=[shutdown]"
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2, v1}, Lct/b$a;->a(Ljava/lang/String;ILjava/lang/String;)V
-
     goto :goto_0
 
     .line 88
@@ -490,6 +462,16 @@
         }
     .end annotation
 
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Landroid/telephony/CellInfo;",
+            ">;)V"
+        }
+    .end annotation
+
     .prologue
     const/4 v2, 0x1
 
@@ -502,15 +484,6 @@
     if-nez p1, :cond_0
 
     .line 168
-    const-string/jumbo v0, "TxCellProvider"
-
-    const-string/jumbo v1, "onCellInfoChanged: cellinfo list is null "
-
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2, v1}, Lct/b$a;->a(Ljava/lang/String;ILjava/lang/String;)V
-
-    .line 169
     invoke-direct {p0}, Lct/b;->c()V
 
     .line 189
@@ -616,28 +589,18 @@
 
     .line 185
     :cond_5
-    const-string/jumbo v1, "TxCellProvider"
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-string/jumbo v2, "onCellInfoChanged: illegal cell or same cell "
 
-    const-string/jumbo v3, "onCellInfoChanged: illegal cell or same cell "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     if-nez v0, :cond_6
 
     const-string/jumbo v0, "null cell"
 
     :goto_7
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lct/b$a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
@@ -719,17 +682,17 @@
     move v0, v1
 
     :goto_1
-    iget-object v3, p0, Lct/b;->b:Lct/bj;
+    iget-object v3, p0, Lct/b;->b:Lct/bg;
 
-    invoke-virtual {v3}, Lct/bj;->a()Landroid/telephony/TelephonyManager;
+    invoke-virtual {v3}, Lct/bg;->a()Landroid/telephony/TelephonyManager;
 
     move-result-object v3
 
-    iget-object v4, p0, Lct/b;->b:Lct/bj;
+    iget-object v4, p0, Lct/b;->b:Lct/bg;
 
-    iget-object v4, v4, Lct/bj;->a:Landroid/content/Context;
+    iget-object v4, v4, Lct/bg;->a:Landroid/content/Context;
 
-    invoke-static {v4}, Lct/cv;->a(Landroid/content/Context;)Z
+    invoke-static {v4}, Lct/cq;->a(Landroid/content/Context;)Z
 
     move-result v4
 
@@ -766,9 +729,9 @@
 
     iput v0, v1, Landroid/os/Message;->arg2:I
 
-    iget-object v0, p0, Lct/b;->b:Lct/bj;
+    iget-object v0, p0, Lct/b;->b:Lct/bg;
 
-    invoke-virtual {v0, v1}, Lct/bj;->c(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lct/bg;->c(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -821,18 +784,18 @@
     iget-object v0, p0, Lct/b;->d:Landroid/telephony/SignalStrength;
 
     .line 153
-    iget-object v1, p0, Lct/b;->b:Lct/bj;
+    iget-object v1, p0, Lct/b;->b:Lct/bg;
 
-    invoke-virtual {v1}, Lct/bj;->h()Lct/bk;
+    invoke-virtual {v1}, Lct/bg;->g()Lct/bh;
 
     move-result-object v1
 
-    iget v1, v1, Lct/bk;->b:I
+    iget v1, v1, Lct/bh;->b:I
 
     .line 155
     if-eqz v0, :cond_2
 
-    invoke-static {v1, v0, p1}, Lct/cv;->a(ILandroid/telephony/SignalStrength;Landroid/telephony/SignalStrength;)Z
+    invoke-static {v1, v0, p1}, Lct/cq;->a(ILandroid/telephony/SignalStrength;Landroid/telephony/SignalStrength;)Z
 
     move-result v0
 

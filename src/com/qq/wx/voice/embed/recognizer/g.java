@@ -6,16 +6,16 @@ import android.os.Message;
 
 final class g
 {
-  c ajq;
-  Handler ajr = new h(this);
+  c Vg;
+  Handler Vh = new h(this);
   
   public final void a(int paramInt)
   {
-    Message localMessage = ajr.obtainMessage(100);
+    Message localMessage = Vh.obtainMessage(100);
     Bundle localBundle = new Bundle();
     localBundle.putInt("errorCode", paramInt);
     localMessage.setData(localBundle);
-    ajr.sendMessage(localMessage);
+    Vh.sendMessage(localMessage);
   }
 }
 

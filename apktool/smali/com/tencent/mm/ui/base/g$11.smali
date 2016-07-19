@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kqd:Landroid/content/DialogInterface$OnClickListener;
+.field final synthetic iGg:Landroid/content/DialogInterface$OnClickListener;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 511
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/g$11;->kqd:Landroid/content/DialogInterface$OnClickListener;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/g$11;->iGg:Landroid/content/DialogInterface$OnClickListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,12 +41,12 @@
 
     .prologue
     .line 515
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$11;->kqd:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$11;->iGg:Landroid/content/DialogInterface$OnClickListener;
 
     if-eqz v0, :cond_0
 
     .line 516
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$11;->kqd:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/g$11;->iGg:Landroid/content/DialogInterface$OnClickListener;
 
     const/4 v1, 0x0
 

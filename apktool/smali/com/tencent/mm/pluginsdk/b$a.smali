@@ -15,7 +15,17 @@
 
 
 # static fields
-.field public static final iyw:Ljava/util/HashMap;
+.field public static final iUP:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -27,13 +37,13 @@
 
     const-wide/16 v4, 0x8
 
-    .line 911
+    .line 921
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 915
-    sput-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 925
+    sput-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "doc"
 
@@ -45,8 +55,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 916
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 926
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "docx"
 
@@ -58,8 +68,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 917
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 927
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "ppt"
 
@@ -71,8 +81,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 918
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 928
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "pptx"
 
@@ -84,8 +94,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 919
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 929
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "xls"
 
@@ -97,8 +107,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 920
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 930
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "xlsx"
 
@@ -110,8 +120,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 921
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 931
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "pdf"
 
@@ -123,8 +133,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 923
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 933
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "1"
 
@@ -136,8 +146,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 924
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 934
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "3"
 
@@ -149,8 +159,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 925
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 935
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "48"
 
@@ -162,8 +172,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 926
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 936
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "43"
 
@@ -173,8 +183,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 929
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 939
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "mp3"
 
@@ -184,8 +194,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 930
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 940
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "wav"
 
@@ -195,8 +205,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 931
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 941
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "wma"
 
@@ -206,8 +216,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 934
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 944
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "avi"
 
@@ -217,10 +227,10 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 935
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 945
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "rmvb "
+    const-string/jumbo v1, "rmvb"
 
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -228,8 +238,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 936
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 946
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "rm"
 
@@ -239,8 +249,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 937
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 947
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "mpg"
 
@@ -250,8 +260,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 938
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 948
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "mpeg"
 
@@ -261,8 +271,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 939
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 949
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "wmv"
 
@@ -272,8 +282,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 940
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 950
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "mp4"
 
@@ -283,8 +293,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 941
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    .line 951
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     const-string/jumbo v1, "mkv"
 
@@ -294,26 +304,26 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 942
+    .line 952
     return-void
 .end method
 
-.method public static zp(Ljava/lang/String;)Ljava/lang/Long;
+.method public static Bl(Ljava/lang/String;)Ljava/lang/Long;
     .locals 2
 
     .prologue
-    .line 905
+    .line 915
     if-nez p0, :cond_0
 
-    .line 906
+    .line 916
     const/4 v0, 0x0
 
-    .line 908
+    .line 918
     :goto_0
     return-object v0
 
     :cond_0
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iyw:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->iUP:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 

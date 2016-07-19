@@ -4,7 +4,7 @@ import android.app.Notification;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class NotifyReceiver$NotifyService$InnerService
   extends Service
@@ -27,7 +27,7 @@ public class NotifyReceiver$NotifyService$InnerService
     {
       for (;;)
       {
-        u.e("!32@/B4Tb64lLpKcoq2tqqkpMh2WNrKeFFpl", "set service for mm exception:%s", new Object[] { localNullPointerException });
+        v.e("MicroMsg.NotifyReceiver", "set service for mm exception:%s", new Object[] { localNullPointerException });
       }
     }
   }

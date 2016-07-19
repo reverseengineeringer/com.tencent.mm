@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sight.encode.ui;
 
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnErrorListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SightCameraSurfaceView$4$2
   implements MediaPlayer.OnErrorListener
@@ -11,7 +11,7 @@ final class SightCameraSurfaceView$4$2
   
   public final boolean onError(MediaPlayer paramMediaPlayer, int paramInt1, int paramInt2)
   {
-    u.i("!44@/B4Tb64lLpJusIoUV0UaqO6w8cKbz4Zp48YkOe0V9s4=", "play %s error", new Object[] { gDX.gDV });
+    v.i("MicroMsg.SightCameraSurfaceView", "play %s error", new Object[] { gKx.gKv });
     return false;
   }
 }

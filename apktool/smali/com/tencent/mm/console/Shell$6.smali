@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 102
+    .line 93
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,36 +30,40 @@
 
 
 # virtual methods
-.method public final i(Landroid/content/Intent;)V
+.method public final j(Landroid/content/Intent;)V
     .locals 5
 
     .prologue
-    .line 106
-    const-string/jumbo v0, "errmsg"
+    const/4 v4, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    .line 97
+    const-string/jumbo v0, "value"
 
-    move-result-object v0
+    invoke-virtual {p1, v0, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    sput-object v0, Lcom/tencent/mm/platformtools/r;->cno:Ljava/lang/String;
+    move-result v0
 
-    .line 107
-    const-string/jumbo v0, "!24@/B4Tb64lLpLOIdMtS2bKaA=="
+    sput v0, Lcom/tencent/mm/platformtools/q;->cip:I
 
-    const-string/jumbo v1, "tiger set tigerIDCErrMsg =%s"
+    .line 98
+    const-string/jumbo v0, "MicroMsg.Shell"
+
+    const-string/jumbo v1, "dkdnstd set Test.netDnsSimulateFault=%s"
 
     const/4 v2, 0x1
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    const/4 v3, 0x0
+    sget v3, Lcom/tencent/mm/platformtools/q;->cip:I
 
-    sget-object v4, Lcom/tencent/mm/platformtools/r;->cno:Ljava/lang/String;
+    invoke-static {v3}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
 
-    aput-object v4, v2, v3
+    move-result-object v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    aput-object v3, v2, v4
 
-    .line 108
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 99
     return-void
 .end method

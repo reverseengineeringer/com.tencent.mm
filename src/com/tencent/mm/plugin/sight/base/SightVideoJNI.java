@@ -2,12 +2,12 @@ package com.tencent.mm.plugin.sight.base;
 
 import android.graphics.Bitmap;
 import android.view.Surface;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.nio.ByteBuffer;
 
 public class SightVideoJNI
 {
-  private static final String TAG = "!32@/B4Tb64lLpJtjoEZ/uIRrTTiblOUU+JF";
+  private static final String TAG = "MicroMsg.SightVideoJNI";
   public static final int TYPE_BITMAP = 1;
   public static final int TYPE_SURFACE = 0;
   
@@ -56,7 +56,7 @@ public class SightVideoJNI
   public static int initDataBufferRef(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5, int paramInt6, int paramInt7, float paramFloat1, int paramInt8, int paramInt9, int paramInt10, int paramInt11, float paramFloat2, int paramInt12)
   {
     paramInt1 = initDataBuffer(paramInt1, paramInt2, paramInt3, paramInt4, paramInt5, paramInt6, paramInt7, paramFloat1, paramInt8, paramInt9, paramInt10, paramInt11, paramFloat2, paramInt12);
-    u.d("!32@/B4Tb64lLpJtjoEZ/uIRrTTiblOUU+JF", "ashutest::call initDataBuffer, ret %d", new Object[] { Integer.valueOf(paramInt1) });
+    v.d("MicroMsg.SightVideoJNI", "ashutest::call initDataBuffer, ret %d", new Object[] { Integer.valueOf(paramInt1) });
     return paramInt1;
   }
   
@@ -74,7 +74,7 @@ public class SightVideoJNI
   
   public static void releaseDataBufferRef(int paramInt)
   {
-    u.d("!32@/B4Tb64lLpJtjoEZ/uIRrTTiblOUU+JF", "ashutest::call release dataBufferRef %d", new Object[] { Integer.valueOf(paramInt) });
+    v.d("MicroMsg.SightVideoJNI", "ashutest::call release dataBufferRef %d", new Object[] { Integer.valueOf(paramInt) });
     releaseDataBuffer(paramInt);
   }
   
@@ -82,11 +82,11 @@ public class SightVideoJNI
   
   public static void releaseRecorderBufferRef(String paramString)
   {
-    u.d("!32@/B4Tb64lLpJtjoEZ/uIRrTTiblOUU+JF", "ashutest::call release recorder buffer, %s", new Object[] { paramString });
+    v.d("MicroMsg.SightVideoJNI", "ashutest::call release recorder buffer, %s", new Object[] { paramString });
     releaseRecorderBuffer();
   }
   
-  public static native int remuxing(String paramString1, String paramString2, int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5, int paramInt6, float paramFloat);
+  public static native int remuxing(String paramString1, String paramString2, int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5, int paramInt6, float paramFloat1, float paramFloat2);
   
   public static native int seekStream(double paramDouble, int paramInt);
   

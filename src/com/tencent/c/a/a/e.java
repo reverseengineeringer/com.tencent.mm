@@ -2,7 +2,7 @@ package com.tencent.c.a.a;
 
 final class e
 {
-  static long ajO = 86400000L;
+  static long VH = 86400000L;
 }
 
 /* Location:

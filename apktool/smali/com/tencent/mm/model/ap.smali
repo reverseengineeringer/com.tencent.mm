@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public asN:I
+.field public aex:I
 
 .field data:Ljava/lang/String;
 
@@ -25,7 +25,7 @@
     iput v0, p0, Lcom/tencent/mm/model/ap;->type:I
 
     .line 40
-    iput v0, p0, Lcom/tencent/mm/model/ap;->asN:I
+    iput v0, p0, Lcom/tencent/mm/model/ap;->aex:I
 
     .line 41
     const/4 v0, 0x0
@@ -36,7 +36,7 @@
     iput p1, p0, Lcom/tencent/mm/model/ap;->type:I
 
     .line 45
-    iput p2, p0, Lcom/tencent/mm/model/ap;->asN:I
+    iput p2, p0, Lcom/tencent/mm/model/ap;->aex:I
 
     .line 46
     iput-object p3, p0, Lcom/tencent/mm/model/ap;->data:Ljava/lang/String;

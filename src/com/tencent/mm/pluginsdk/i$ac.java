@@ -1,14 +1,14 @@
 package com.tencent.mm.pluginsdk;
 
-import com.tencent.mm.protocal.b.we;
+import com.tencent.mm.protocal.b.wp;
 
 public abstract interface i$ac
 {
-  public abstract int aOZ();
+  public abstract int aTB();
   
-  public abstract String[] aPa();
+  public abstract String[] aTC();
   
-  public abstract we aPb();
+  public abstract wp aTD();
 }
 
 /* Location:

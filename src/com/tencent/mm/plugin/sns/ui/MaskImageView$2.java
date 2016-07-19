@@ -11,10 +11,10 @@ final class MaskImageView$2
   
   public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    if (!MaskImageView.a(gZv)) {
+    if (!MaskImageView.a(hmN)) {
       return false;
     }
-    return gZv.b(paramView, paramMotionEvent);
+    return hmN.b(paramView, paramMotionEvent);
   }
 }
 

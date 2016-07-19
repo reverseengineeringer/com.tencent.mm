@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kOV:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
+.field final synthetic lol:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 512
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$3;->kOV:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI$3;->lol:Lcom/tencent/mm/ui/bindmobile/FindMContactAlertUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

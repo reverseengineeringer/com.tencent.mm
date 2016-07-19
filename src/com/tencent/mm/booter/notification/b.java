@@ -1,346 +1,508 @@
 package com.tencent.mm.booter.notification;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
+import android.app.ActivityManager;
+import android.app.ActivityManager.RunningTaskInfo;
 import android.app.Notification;
+import android.app.Notification.BigTextStyle;
+import android.app.Notification.Builder;
 import android.app.PendingIntent;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.graphics.Bitmap;
 import android.os.Build.VERSION;
-import android.support.v4.app.aa.d;
-import android.support.v4.app.aa.f;
-import android.support.v4.app.aa.h;
-import com.tencent.mm.a.h;
-import com.tencent.mm.booter.notification.a.c;
-import com.tencent.mm.booter.notification.a.h;
-import com.tencent.mm.booter.notification.queue.d;
-import com.tencent.mm.d.a.ea;
-import com.tencent.mm.d.a.ea.b;
-import com.tencent.mm.d.a.i;
-import com.tencent.mm.d.a.i.a;
-import com.tencent.mm.d.b.aq;
-import com.tencent.mm.g.g;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.v;
-import com.tencent.mm.model.w;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.ar;
-import java.io.IOException;
-import java.io.Serializable;
-import java.util.ArrayList;
+import android.os.Bundle;
+import android.os.Looper;
+import android.os.Message;
+import com.tencent.mm.e.a.kk;
+import com.tencent.mm.e.a.lf;
+import com.tencent.mm.e.a.lf.a;
+import com.tencent.mm.e.b.bj;
+import com.tencent.mm.e.b.t;
+import com.tencent.mm.h.g;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.ar;
+import com.tencent.mm.model.ar.b;
+import com.tencent.mm.model.i;
+import com.tencent.mm.model.j;
+import com.tencent.mm.model.y;
+import com.tencent.mm.modelmulti.n;
+import com.tencent.mm.platformtools.k.1;
+import com.tencent.mm.platformtools.k.2;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.r;
+import com.tencent.mm.storage.ai;
+import com.tencent.mm.storage.s;
+import com.tencent.mm.ui.LauncherUI;
+import com.tencent.mm.ui.account.mobile.MobileVerifyUI;
+import com.tencent.mm.ui.chatting.ChattingUI;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 public final class b
-  extends a
+  implements com.tencent.mm.model.aa, y
 {
-  public static String bdv = "com.tencent.preference.notification.key.unread.msg";
-  public static String bdw = "com.tencent.preference.notification.key.unread.talker";
-  public static String bdx = "com.tencent.preference.notification.key.all.notified.msgid";
-  public h aoI = new h(mContext);
-  public Context mContext = com.tencent.mm.sdk.platformtools.aa.getContext();
-  
-  public static void A(long paramLong)
+  String ajT;
+  ai arX;
+  private String bbn;
+  private String bbo;
+  String bbp;
+  Intent bbq;
+  private int bbr;
+  private boolean bbs;
+  private long bbt;
+  f bbu = f.a.lJ();
+  private com.tencent.mm.booter.notification.a.e bbv;
+  @SuppressLint({"HandlerLeak"})
+  ac bbw = new ac(Looper.getMainLooper())
   {
-    if (paramLong == 0L) {}
-    do
+    public final void handleMessage(Message paramAnonymousMessage)
     {
-      return;
-      String str2 = nI();
-      str1 = str2;
-      if (str2.length() > 3000) {
-        str1 = str2.substring(str2.length() / 2, str2.length());
-      }
-    } while (B(paramLong));
-    String str1 = str1 + paramLong + "%";
-    g.pp().edit().putString(bdx, str1).commit();
-    t.d("!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ==", "setNotifiedMsgId: %s", new Object[] { str1 });
-  }
-  
-  public static boolean B(long paramLong)
-  {
-    if (paramLong == 0L) {}
-    String str;
-    do
-    {
-      return false;
-      str = nI();
-      t.d("!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ==", "isAlreadyNotified: %s, msgId: %d", new Object[] { str, Long.valueOf(paramLong) });
-    } while (!str.contains(paramLong + "%"));
-    return true;
-  }
-  
-  public static a a(List paramList, String paramString)
-  {
-    if ((paramList == null) || (paramString == null)) {
-      return null;
-    }
-    paramList = paramList.iterator();
-    while (paramList.hasNext())
-    {
-      a locala = (a)paramList.next();
-      if (avY.equals(paramString)) {
-        return locala;
-      }
-    }
-    return null;
-  }
-  
-  public static boolean a(String paramString, ar paramar, int paramInt, boolean paramBoolean)
-  {
-    t.d("!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ==", "preNotificationCheck, talker: %s, tipsFlag: %s ", new Object[] { paramString, Integer.valueOf(paramInt) });
-    if (!ax.qZ())
-    {
-      t.i("!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ==", "[FALSE](MMCore.accHasReady())preNotificationCheck, talker: %s, tipsFlag: %s ", new Object[] { paramString, Integer.valueOf(paramInt) });
-      return false;
-    }
-    if ((paramar != null) && (B(field_msgSvrId)) && (!paramBoolean))
-    {
-      t.i("!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ==", "[FALSE](msgInfo != null && NotificationQueueManager.getImpl().isAlreadyNotify(msgInfo.getMsgSvrId()), msgId: %d", new Object[] { Long.valueOf(field_msgSvrId) });
-      return false;
-    }
-    if ((paramInt & 0x1) == 0)
-    {
-      t.i("!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ==", "[FALSE](tipsFlag & ConstantsProtocal.TEXT_NOTIFY_SVR_FLAG) == 0)preNotificationCheck, talker: %s, tipsFlag: %s ", new Object[] { paramString, Integer.valueOf(paramInt) });
-      return false;
-    }
-    if ((com.tencent.mm.model.b.cu(tlbnU)) && (!v.cv(v.rX())))
-    {
-      t.i("!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ==", "[NO NOTIFICATION](MMCore.getAccStg().isWebWXOnline() && !ConfigStorageLogic.isWebWXNotificationOpen())preNotificationCheck, talker: %s, tipsFlag: %s isWebWXOnline: %B,isWebWXNotificationOpen: %B ", new Object[] { paramString, Integer.valueOf(paramInt), Boolean.valueOf(com.tencent.mm.model.b.cu(tlbnU)), Boolean.valueOf(v.cv(v.rX())) });
-      return false;
-    }
-    if (w.dI(paramString))
-    {
-      paramar = new ea();
-      aAe.axw = 3;
-      com.tencent.mm.sdk.c.a.hXQ.g(paramar);
-      if (!aAf.auM)
-      {
-        paramar = new ea();
-        aAe.axw = 1;
-        aAe.aAg = paramString;
-        aAe.aAh = 3;
-        com.tencent.mm.sdk.c.a.hXQ.g(paramar);
-      }
-      t.i("!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ==", "[NO NOTIFICATION](ContactStorageLogic.isLbsRoom(talker))preNotificationCheck, talker: %s, tipsFlag: %s ", new Object[] { paramString, Integer.valueOf(paramInt) });
-      return false;
-    }
-    if ((w.eB(paramString)) || ((w.dh(paramString)) && (!w.eA(paramString)) && (paramar != null) && (!paramar.zu(v.rS()))))
-    {
-      t.i("!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ==", "[NO NOTIFICATION](ContactStorageLogic.isMuteContact(talker) || (ContactStorageLogic.isChatRoom(talker) && !ContactStorageLogic.isChatRoomNotify(talker) && !msgInfo.isAtSomeone(ConfigStorageLogic.getUsernameFromUserInfo())))preNotificationCheck, talker: %s, tipsFlag: %s ", new Object[] { paramString, Integer.valueOf(paramInt) });
-      return false;
-    }
-    return true;
-  }
-  
-  public static void bA(int paramInt)
-  {
-    paramInt = Math.max(0, paramInt);
-    g.pp().edit().putInt(bdv, paramInt).commit();
-    t.i("!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ==", "saveTotalUnreadMsg %d", new Object[] { Integer.valueOf(paramInt) });
-  }
-  
-  public static void d(ArrayList paramArrayList)
-  {
-    if (paramArrayList == null)
-    {
-      g.pp().edit().putString(bdw, "").commit();
-      if (paramArrayList != null) {
-        break label121;
-      }
-    }
-    label121:
-    for (paramArrayList = "null";; paramArrayList = paramArrayList.toString())
-    {
-      t.i("!56@/B4Tb64lLpKR3MWtFvfaIF4l6pC61SyjfSJIyQ5FZf4Quja9cBLWRQ==", "saveTotalUnreadTalker %s", new Object[] { paramArrayList });
-      return;
+      super.handleMessage(paramAnonymousMessage);
+      com.tencent.mm.sdk.platformtools.aa.getContext().getSharedPreferences("notify_prep", 0).edit().putBoolean("longNoopIntervalFlag", true).commit();
+      String str1 = paramAnonymousMessage.getData().getString("notification.show.talker");
+      String str2 = paramAnonymousMessage.getData().getString("notification.show.message.content");
+      int i = paramAnonymousMessage.getData().getInt("notification.show.message.type");
+      int j = paramAnonymousMessage.getData().getInt("notification.show.tipsflag");
+      com.tencent.mm.sdk.platformtools.v.i("MicroMsg.MMNotification", "notify need to deal: %s", new Object[] { str1 });
       try
       {
-        ArrayList localArrayList = new ArrayList(paramArrayList);
-        g.pp().edit().putString(bdw, d.a(localArrayList)).commit();
+        if (what == 1)
+        {
+          b.a(b.this, str1, str2, i, j, true);
+          return;
+        }
+        b.a(b.this, str1, str2, i, j, false);
+        return;
       }
-      catch (IOException localIOException)
+      catch (Exception paramAnonymousMessage)
       {
-        g.pp().edit().putString(bdw, "").commit();
+        com.tencent.mm.sdk.platformtools.v.printErrStackTrace("MicroMsg.MMNotification", paramAnonymousMessage, "showNotifiHandler", new Object[0]);
       }
-      break;
+    }
+  };
+  private final com.tencent.mm.sdk.c.c bbx = new com.tencent.mm.sdk.c.c() {};
+  private final com.tencent.mm.sdk.c.c bby = new com.tencent.mm.sdk.c.c()
+  {
+    private boolean a(lf paramAnonymouslf)
+    {
+      Object localObject1;
+      int i;
+      if ((paramAnonymouslf != null) && ((paramAnonymouslf instanceof lf)))
+      {
+        localObject1 = atM.asp;
+        i = atM.arf;
+        paramAnonymouslf = b.this;
+      }
+      try
+      {
+        com.tencent.mm.sdk.platformtools.v.w("showSendMsgFailNotification fromUserName:%s msgType:%d", (String)localObject1, new Object[] { Integer.valueOf(i) });
+        Object localObject2 = context.getSystemService("activity")).getRunningTasks(1).get(0)).topActivity;
+        if (!ChattingUI.class.getName().equals(((ComponentName)localObject2).getClassName()))
+        {
+          localObject2 = new Intent(context, ChattingUI.class);
+          ((Intent)localObject2).putExtra("nofification_type", "pushcontent_notification");
+          ((Intent)localObject2).putExtra("Intro_Is_Muti_Talker", true);
+          ((Intent)localObject2).putExtra("Chat_User", (String)localObject1);
+          ((Intent)localObject2).putExtra("MainUI_User_Last_Msg_Type", i);
+          ((Intent)localObject2).addFlags(536870912);
+          ((Intent)localObject2).addFlags(67108864);
+          localObject1 = PendingIntent.getActivity(context, 35, (Intent)localObject2, 1073741824);
+          localObject1 = new Notification.Builder(context).setTicker(null).setWhen(System.currentTimeMillis()).setContentTitle(context.getString(2131230995)).setContentText(context.getString(2131233830)).setContentIntent((PendingIntent)localObject1).getNotification();
+          icon = com.tencent.mm.au.a.aTs();
+          defaults |= 0x1;
+          flags |= 0x10;
+          paramAnonymouslf.a(35, (Notification)localObject1, true);
+        }
+        return false;
+      }
+      catch (Exception paramAnonymouslf) {}
+      return false;
+    }
+  };
+  Context context = null;
+  
+  public b(Context paramContext)
+  {
+    context = paramContext;
+    ajT = "";
+    bbp = "";
+    bbn = "";
+    bbt = 0L;
+    bbs = false;
+    bbq = null;
+    bbv = new com.tencent.mm.booter.notification.a.e();
+    n.a(this);
+    com.tencent.mm.modelvoice.e.a(this);
+    com.tencent.mm.plugin.base.stub.b.a(this);
+    com.tencent.mm.sdk.c.a.kug.d(bby);
+    com.tencent.mm.sdk.c.a.kug.d(bbx);
+  }
+  
+  static Message a(String paramString1, String paramString2, int paramInt1, int paramInt2, int paramInt3)
+  {
+    Message localMessage = Message.obtain();
+    Bundle localBundle = new Bundle();
+    localBundle.putString("notification.show.talker", paramString1);
+    localBundle.putString("notification.show.message.content", paramString2);
+    localBundle.putInt("notification.show.message.type", paramInt1);
+    localBundle.putInt("notification.show.tipsflag", paramInt2);
+    localMessage.setData(localBundle);
+    what = paramInt3;
+    return localMessage;
+  }
+  
+  private void cancel()
+  {
+    bbs = false;
+    e.cancel();
+  }
+  
+  public final void U(boolean paramBoolean)
+  {
+    d.V(paramBoolean);
+  }
+  
+  public final int a(Notification paramNotification, boolean paramBoolean)
+  {
+    return f.a.lJ().a(new NotificationItem(paramNotification, paramBoolean));
+  }
+  
+  public final Notification a(Notification paramNotification, int paramInt1, int paramInt2, PendingIntent paramPendingIntent, String paramString1, String paramString2, String paramString3, Bitmap paramBitmap, String paramString4)
+  {
+    return lJbbY.bbQ.a(paramNotification, paramInt1, paramInt2, paramPendingIntent, paramString1, paramString2, paramString3, paramBitmap, paramString4);
+  }
+  
+  public final Notification a(Notification paramNotification, int paramInt, PendingIntent paramPendingIntent1, String paramString1, String paramString2, String paramString3, Bitmap paramBitmap, String paramString4, PendingIntent paramPendingIntent2, String paramString5, PendingIntent paramPendingIntent3, String paramString6)
+  {
+    return lJbbY.bbQ.a(paramNotification, paramInt, 1, paramPendingIntent1, paramString1, paramString2, paramString3, paramBitmap, 2130838937, paramString4, paramPendingIntent2, 2130838936, paramString5, paramPendingIntent3, paramString6);
+  }
+  
+  public final Notification a(PendingIntent paramPendingIntent, String paramString1, String paramString2, String paramString3, Bitmap paramBitmap, String paramString4)
+  {
+    return a(null, -1, 0, paramPendingIntent, paramString1, paramString2, paramString3, paramBitmap, paramString4);
+  }
+  
+  public final void a(int paramInt, Notification paramNotification, boolean paramBoolean)
+  {
+    f.a.lJ().a(new NotificationItem(paramInt, paramNotification, paramBoolean));
+  }
+  
+  public final void a(int paramInt, String paramString1, String paramString2, String paramString3, String paramString4, Bundle paramBundle)
+  {
+    com.tencent.mm.av.c.a("webview", new k.1(paramString3, paramString4, paramBundle, paramString1, paramString2, paramInt), new k.2());
+  }
+  
+  public final void a(ai paramai)
+  {
+    if (paramai == null) {}
+    do
+    {
+      return;
+      if (field_isSend == 1)
+      {
+        com.tencent.mm.sdk.platformtools.v.w("MicroMsg.MMNotification", "notifyFirst is sender , msgid:%d ", new Object[] { Long.valueOf(field_msgSvrId) });
+        return;
+      }
+      localObject = ar.fB(aQk);
+    } while ((localObject != null) && (scene == 1));
+    int i = g.b(paramai);
+    arX = paramai;
+    ajT = field_talker;
+    Object localObject = field_content;
+    int j = field_type;
+    bbp = "";
+    bbq = null;
+    com.tencent.mm.sdk.platformtools.v.i("MicroMsg.MMNotification", "notifyFirst talker:%s msgid:%d type:%d tipsFlag:%d content:%s", new Object[] { ajT, Long.valueOf(field_msgSvrId), Integer.valueOf(j), Integer.valueOf(i), be.FO((String)localObject) });
+    if (!bbu.a(ajT, arX, i, false))
+    {
+      com.tencent.mm.sdk.platformtools.v.w("MicroMsg.MMNotification", "[no notificaion], preNotificationCheck");
+      return;
+    }
+    bbw.sendMessageDelayed(a(ajT, (String)localObject, j, i, 0), 200L);
+  }
+  
+  public final int b(Notification paramNotification)
+  {
+    return a(paramNotification, true);
+  }
+  
+  public final void bR(int paramInt)
+  {
+    Object localObject = new Intent(context, LauncherUI.class);
+    ((Intent)localObject).addFlags(536870912);
+    ((Intent)localObject).addFlags(67108864);
+    ((Intent)localObject).putExtra("nofification_type", "update_nofification");
+    ((Intent)localObject).putExtra("show_update_dialog", true);
+    ((Intent)localObject).putExtra("update_type", paramInt);
+    localObject = PendingIntent.getActivity(context, 0, (Intent)localObject, 0);
+    localObject = new Notification.Builder(context).setTicker(null).setWhen(System.currentTimeMillis()).setContentTitle(context.getString(2131231034)).setContentText(context.getString(2131230998)).setContentIntent((PendingIntent)localObject).getNotification();
+    flags |= 0x10;
+    a(34, (Notification)localObject, false);
+  }
+  
+  public final void bS(int paramInt)
+  {
+    d.bV(paramInt);
+  }
+  
+  public final void bT(int paramInt)
+  {
+    f.a.lJ();
+    Object localObject;
+    if (paramInt != 0)
+    {
+      localObject = lKbcf.bW(paramInt);
+      if (!((List)localObject).isEmpty()) {
+        break label29;
+      }
+    }
+    for (;;)
+    {
+      return;
+      label29:
+      android.support.v4.app.v localv = android.support.v4.app.v.g(com.tencent.mm.sdk.platformtools.aa.getContext());
+      localObject = ((List)localObject).iterator();
+      while (((Iterator)localObject).hasNext())
+      {
+        Integer localInteger = (Integer)((Iterator)localObject).next();
+        com.tencent.mm.booter.notification.queue.b.lK().a(localv, localInteger.intValue());
+      }
     }
   }
   
-  public static Notification nF()
+  public final void cR(String paramString)
   {
-    Notification localNotification = new Notification();
-    icon = a.h.icon;
-    ledARGB = -16711936;
-    ledOnMS = 300;
-    ledOffMS = 1000;
-    return localNotification;
+    bbn = paramString;
   }
   
-  public static int nG()
+  public final void cS(String paramString)
   {
-    return g.pp().getInt(bdv, 0);
+    Intent localIntent = new Intent(context, LauncherUI.class);
+    localIntent.putExtra("Intro_Notify", true);
+    localIntent.putExtra("Intro_Notify_User", ajT);
+    localIntent.addFlags(536870912);
+    localIntent.addFlags(67108864);
+    String str = paramString;
+    if (!be.kf(paramString))
+    {
+      str = paramString;
+      if (paramString.startsWith("autoauth_errmsg_")) {
+        str = paramString.substring(16);
+      }
+    }
+    paramString = str;
+    if (!be.kf(str))
+    {
+      paramString = str;
+      if (str.startsWith("<"))
+      {
+        Map localMap = r.cr(str, "e");
+        paramString = str;
+        if (localMap != null)
+        {
+          paramString = str;
+          if (!be.kf((String)localMap.get(".e.Content"))) {
+            paramString = (String)localMap.get(".e.Content");
+          }
+        }
+      }
+    }
+    paramString = new Notification.Builder(context).setContentTitle(paramString).setContentText(null).setContentIntent(PendingIntent.getActivity(context, 0, localIntent, 268435456)).getNotification();
+    icon = com.tencent.mm.au.a.aTs();
+    flags = 16;
+    a(paramString, true);
   }
   
-  public static ArrayList nH()
+  public final void cancel(int paramInt)
+  {
+    f.a.lJ();
+    com.tencent.mm.booter.notification.queue.b.lK().cancel(paramInt);
+  }
+  
+  public final void cancelNotification(String paramString)
+  {
+    int i = 1;
+    com.tencent.mm.sdk.platformtools.v.v("MicroMsg.MMNotification", "cancel notification talker:" + paramString + " last talker:" + bbo + "  curChattingTalker:" + bbn + " talker count:" + bbr);
+    if (!bbs) {}
+    do
+    {
+      return;
+      if ((bbo != null) && (bbo.equals(bbn)) && (bbr == 1)) {}
+      while (i != 0)
+      {
+        cancel();
+        return;
+        i = 0;
+      }
+      paramString = ah.tE().ru().GO(paramString);
+      if ((paramString != null) && (field_unReadCount != 0))
+      {
+        cancel();
+        return;
+      }
+    } while (j.b(i.bsZ, null) != 0);
+    cancel();
+  }
+  
+  public final Looper getLooper()
+  {
+    return Looper.getMainLooper();
+  }
+  
+  public final void i(String paramString, int paramInt)
+  {
+    d.j(paramString, paramInt);
+  }
+  
+  public final void j(int paramInt, String paramString)
+  {
+    f.a.lJ().j(paramInt, paramString);
+  }
+  
+  public final void jl()
+  {
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.MMNotification", "force cancelNotification");
+    cancel();
+  }
+  
+  public final void lA()
   {
     try
     {
-      ArrayList localArrayList2 = (ArrayList)d.cK(g.pp().getString(bdw, ""));
-      ArrayList localArrayList1 = localArrayList2;
-      if (localArrayList2 == null) {
-        localArrayList1 = new ArrayList();
-      }
-      return localArrayList1;
-    }
-    catch (ClassNotFoundException localClassNotFoundException)
-    {
-      return new ArrayList();
-    }
-    catch (IOException localIOException) {}
-    return new ArrayList();
-  }
-  
-  private static String nI()
-  {
-    return g.pp().getString(bdx, "");
-  }
-  
-  public static void nt()
-  {
-    g.pp().edit().putString(bdx, "").commit();
-  }
-  
-  public final int a(NotificationItem paramNotificationItem, h paramh)
-  {
-    if ((!bn.dj(mContext)) && (Build.VERSION.SDK_INT >= 16) && (paramNotificationItem != null) && (dS != null))
-    {
-      dS.priority = 1;
-      if ((!g.pq()) && ((bey) || (bex))) {
-        dS.vibrate = new long[0];
-      }
-    }
-    return super.a(paramNotificationItem, paramh);
-  }
-  
-  @TargetApi(21)
-  public final Notification a(Notification paramNotification, int paramInt1, int paramInt2, PendingIntent paramPendingIntent1, String paramString1, String paramString2, String paramString3, Bitmap paramBitmap, int paramInt3, String paramString4, PendingIntent paramPendingIntent2, int paramInt4, String paramString5, PendingIntent paramPendingIntent3, String paramString6)
-  {
-    if (Build.VERSION.SDK_INT >= 11)
-    {
-      aa.d locald = new aa.d(mContext);
-      int i = paramInt1;
-      if (paramInt1 == -1) {
-        i = c.nQ();
-      }
-      dS.ledARGB = -16711936;
-      dS.ledOnMS = 300;
-      dS.ledOffMS = 1000;
-      Notification localNotification;
-      int j;
-      if ((dS.ledOnMS != 0) && (dS.ledOffMS != 0))
+      Object localObject = com.tencent.mm.sdk.platformtools.aa.getContext().getSharedPreferences("notify_newfriend_prep", 0).getString("notify_newfriend_prep", null);
+      if (localObject != null)
       {
-        paramInt1 = 1;
-        localNotification = dS;
-        j = dS.flags;
-        if (paramInt1 == 0) {
-          break label411;
+        localObject = ((String)localObject).split(",");
+        int j = localObject.length;
+        int i = 0;
+        while (i < j)
+        {
+          int k = be.FG(localObject[i]);
+          if (k > 0) {
+            ah.jv().cancel(k);
+          }
+          i += 1;
         }
       }
-      label411:
-      for (paramInt1 = 1;; paramInt1 = 0)
+      return;
+    }
+    catch (Exception localException)
+    {
+      com.tencent.mm.sdk.platformtools.v.printErrStackTrace("MicroMsg.MMNotification", localException, "try cancel notification fail: %s", new Object[] { localException.getMessage() });
+    }
+  }
+  
+  @TargetApi(16)
+  public final boolean lB()
+  {
+    boolean bool = true;
+    Object localObject = context.getSystemService("activity")).getRunningTasks(1).get(0)).topActivity;
+    com.tencent.mm.sdk.platformtools.v.d("MicroMsg.MMNotification", "[oneliang][showMobileRegNoVerifyCodeNotification]:%s", new Object[] { ((ComponentName)localObject).getClassName() });
+    if (!MobileVerifyUI.class.getName().equals(((ComponentName)localObject).getClassName())) {
+      if (bool)
       {
-        flags = (paramInt1 | j & 0xFFFFFFFE);
-        kcdw = paramPendingIntent1;
-        dN = true;
-        if (paramString1 != null) {
-          locald.a(paramString1);
+        localObject = new Intent(context, MobileVerifyUI.class);
+        ((Intent)localObject).addFlags(2);
+        ((Intent)localObject).addFlags(536870912);
+        ((Intent)localObject).addFlags(67108864);
+        ((Intent)localObject).putExtra("nofification_type", "no_reg_notification");
+        localObject = PendingIntent.getActivity(context, 36, (Intent)localObject, 1073741824);
+        if (Build.VERSION.SDK_INT < 16) {
+          break label251;
         }
-        if (paramString2 != null) {
-          locald.b(paramString2);
-        }
-        dS.defaults = paramInt2;
-        if ((paramInt2 & 0x4) != 0)
-        {
-          paramPendingIntent1 = dS;
-          flags |= 0x1;
-        }
-        if (paramBitmap != null) {
-          dz = paramBitmap;
-        }
-        if (paramNotification != null)
-        {
-          if (sound != null)
-          {
-            paramPendingIntent1 = sound;
-            dS.sound = paramPendingIntent1;
-            dS.audioStreamType = -1;
-          }
-          if (vibrate != null)
-          {
-            paramNotification = vibrate;
-            dS.vibrate = paramNotification;
-          }
-        }
-        if (Build.VERSION.SDK_INT >= 16)
-        {
-          if (paramString4 != null) {
-            locald.a(paramInt3, paramString4, paramPendingIntent2);
-          }
-          if (paramString5 != null) {
-            locald.a(paramInt4, paramString5, paramPendingIntent3);
-          }
-        }
-        if (Build.VERSION.SDK_INT >= 21)
-        {
-          dO = "msg";
-          paramNotification = new i();
-          aue.username = paramString6;
-          aue.title = paramString1;
-          com.tencent.mm.sdk.c.a.hXQ.g(paramNotification);
-          if (aue.auf != null) {
-            aue.auf.a(locald);
-          }
-        }
-        return android.support.v4.app.aa.aj().b(locald);
-        paramInt1 = 0;
+        Notification.Builder localBuilder = new Notification.Builder(context);
+        localBuilder.setContentTitle(context.getString(2131230995));
+        localBuilder.setSmallIcon(com.tencent.mm.au.a.aTs());
+        localBuilder.setWhen(System.currentTimeMillis());
+        localBuilder.setContentIntent((PendingIntent)localObject);
+        localObject = new Notification.BigTextStyle(localBuilder).bigText(context.getString(2131233829)).build();
+        defaults |= 0x1;
+      }
+    }
+    for (flags |= 0x10;; flags |= 0x10)
+    {
+      a(36, (Notification)localObject, false);
+      return bool;
+      bool = false;
+      break;
+      label251:
+      localObject = new Notification.Builder(context).setTicker(null).setWhen(System.currentTimeMillis()).setContentTitle(context.getString(2131230995)).setContentText(context.getString(2131233829)).setContentIntent((PendingIntent)localObject).getNotification();
+      icon = com.tencent.mm.au.a.aTs();
+      defaults |= 0x1;
+    }
+  }
+  
+  public final void lC()
+  {
+    cancel(36);
+  }
+  
+  public final void lD()
+  {
+    f.a.lJ();
+    c.lD();
+  }
+  
+  public final String lz()
+  {
+    return bbn;
+  }
+  
+  public final void m(List<ai> paramList)
+  {
+    if ((paramList == null) || (paramList.size() <= 0))
+    {
+      if (paramList == null) {}
+      for (i = -1;; i = paramList.size())
+      {
+        com.tencent.mm.sdk.platformtools.v.w("MicroMsg.MMNotification", "notifyOther newMsgList:%d :%s", new Object[] { Integer.valueOf(i), be.baX() });
+        return;
+      }
+    }
+    int j = paramList.size() - 1;
+    int i = 0;
+    Object localObject;
+    for (;;)
+    {
+      if (j < 0) {
+        break label235;
+      }
+      localObject = (ai)paramList.get(j);
+      i = g.b((ai)localObject);
+      if (bbu.a(field_talker, (ai)localObject, i, false)) {
         break;
       }
+      j -= 1;
     }
-    paramBitmap = paramNotification;
-    if (paramNotification == null) {
-      paramBitmap = nF();
-    }
-    flags |= 0x1;
-    paramInt3 = paramInt1;
-    if (paramInt1 == -1) {
-      paramInt3 = c.nQ();
-    }
-    icon = paramInt3;
-    tickerText = paramString3;
-    defaults = paramInt2;
-    paramBitmap.setLatestEventInfo(mContext, paramString1, paramString2, paramPendingIntent1);
-    return paramBitmap;
-  }
-  
-  @TargetApi(11)
-  public final Notification a(Notification paramNotification, int paramInt1, int paramInt2, PendingIntent paramPendingIntent, String paramString1, String paramString2, String paramString3, Bitmap paramBitmap, String paramString4)
-  {
-    return a(paramNotification, paramInt1, paramInt2, paramPendingIntent, paramString1, paramString2, paramString3, paramBitmap, 0, null, null, 0, null, null, paramString4);
-  }
-  
-  private static final class a
-    implements Serializable
-  {
-    public String avY;
-    public int bdy;
-    
-    public final String toString()
+    label235:
+    for (paramList = (List<ai>)localObject;; paramList = null)
     {
-      return "[" + avY + "(" + bdy + ")]";
+      if (paramList == null)
+      {
+        com.tencent.mm.sdk.platformtools.v.w("MicroMsg.MMNotification", "notifyOther msg == null");
+        return;
+      }
+      bbp = "";
+      ajT = field_talker;
+      localObject = field_content;
+      j = field_type;
+      arX = paramList;
+      com.tencent.mm.sdk.platformtools.v.i("MicroMsg.MMNotification", "notifyOther talker:%s msgid:%d type:%d tipsFlag:%d content:%s", new Object[] { ajT, Long.valueOf(field_msgSvrId), Integer.valueOf(j), Integer.valueOf(i), be.FO((String)localObject) });
+      bbw.sendMessageDelayed(a(ajT, (String)localObject, j, i, 0), 200L);
+      return;
     }
+  }
+  
+  public final void notify(int paramInt, Notification paramNotification)
+  {
+    a(paramInt, paramNotification, true);
   }
 }
 

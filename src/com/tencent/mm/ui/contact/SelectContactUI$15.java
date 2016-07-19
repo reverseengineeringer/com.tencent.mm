@@ -2,7 +2,7 @@ package com.tencent.mm.ui.contact;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.List;
 
 final class SelectContactUI$15
@@ -12,19 +12,19 @@ final class SelectContactUI$15
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = SelectContactUI.c(lmm, r.aW(SelectContactUI.a(lmm), 8192));
-    if ((r.aW(SelectContactUI.a(lmm), 4096)) && (paramMenuItem.size() > 1)) {}
+    paramMenuItem = SelectContactUI.c(lMB, r.be(SelectContactUI.a(lMB), 8192));
+    if ((r.be(SelectContactUI.a(lMB), 4096)) && (paramMenuItem.size() > 1)) {}
     for (int i = 1; i != 0; i = 0)
     {
-      if (!SelectContactUI.c(lmm))
+      if (!SelectContactUI.c(lMB))
       {
-        SelectContactUI.d(lmm, true);
-        SelectContactUI.d(lmm);
+        SelectContactUI.d(lMB, true);
+        SelectContactUI.d(lMB);
       }
-      u.i("!44@/B4Tb64lLpJQGo7VtHU/gqcqIvwmEmrSejrKUoictEE=", "Create the chatroom");
+      v.i("MicroMsg.SelectContactUI", "Create the chatroom");
       return true;
     }
-    return SelectContactUI.b(lmm, SelectContactUI.a(lmm, r.aW(SelectContactUI.a(lmm), 8192)));
+    return SelectContactUI.b(lMB, SelectContactUI.a(lMB, r.be(SelectContactUI.a(lMB), 8192)));
   }
 }
 

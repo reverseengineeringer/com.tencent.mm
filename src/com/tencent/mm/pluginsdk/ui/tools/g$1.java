@@ -3,7 +3,7 @@ package com.tencent.mm.pluginsdk.ui.tools;
 import android.os.Looper;
 
 final class g$1
-  extends g.a
+  extends g.a<g.e>
 {
   g$1(g paramg, Looper paramLooper)
   {

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView style="@style/MMScroll">
+        <LinearLayout style="@style/MMBody">
+            <TextView android:text="@string/byg" android:layout_weight="1.0" style="@style/MMLineLabel" />
+            <EditText android:id="@id/byk" android:hint="@string/by_" style="@style/MMLineEditPass" />
+            <View style="@style/MMSplit" />
+            <EditText android:id="@id/byl" android:hint="@string/bya" style="@style/MMLineEditPass" />
+            <View style="@style/MMSplit" />
+            <TextView android:text="@string/byb" android:layout_weight="1.0" style="@style/MMLineLabel" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

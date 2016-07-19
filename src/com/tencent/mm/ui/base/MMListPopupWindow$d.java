@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.ListAdapter;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 
 final class MMListPopupWindow$d
   implements AbsListView.OnScrollListener
@@ -13,24 +13,24 @@ final class MMListPopupWindow$d
   
   public final void onScroll(AbsListView paramAbsListView, int paramInt1, int paramInt2, int paramInt3)
   {
-    if ((MMListPopupWindow.a(kFn) != null) && (MMListPopupWindow.e(kFn) != null) && (MMListPopupWindow.f(kFn) != null) && (MMListPopupWindow.a(kFn) != null))
+    if ((MMListPopupWindow.a(ler) != null) && (MMListPopupWindow.e(ler) != null) && (MMListPopupWindow.f(ler) != null) && (MMListPopupWindow.a(ler) != null))
     {
-      if ((MMListPopupWindow.a(kFn).getLastVisiblePosition() == MMListPopupWindow.f(kFn).getCount() - 1) && (MMListPopupWindow.a(kFn).getChildAt(MMListPopupWindow.a(kFn).getChildCount() - 1) != null) && (MMListPopupWindow.a(kFn).getChildAt(MMListPopupWindow.a(kFn).getChildCount() - 1).getBottom() <= MMListPopupWindow.a(kFn).getHeight())) {
-        MMListPopupWindow.e(kFn).setVisibility(8);
+      if ((MMListPopupWindow.a(ler).getLastVisiblePosition() == MMListPopupWindow.f(ler).getCount() - 1) && (MMListPopupWindow.a(ler).getChildAt(MMListPopupWindow.a(ler).getChildCount() - 1) != null) && (MMListPopupWindow.a(ler).getChildAt(MMListPopupWindow.a(ler).getChildCount() - 1).getBottom() <= MMListPopupWindow.a(ler).getHeight())) {
+        MMListPopupWindow.e(ler).setVisibility(8);
       }
     }
     else {
       return;
     }
-    MMListPopupWindow.e(kFn).setVisibility(0);
+    MMListPopupWindow.e(ler).setVisibility(0);
   }
   
   public final void onScrollStateChanged(AbsListView paramAbsListView, int paramInt)
   {
-    if ((paramInt == 1) && (!kFn.isInputMethodNotNeeded()) && (MMListPopupWindow.b(kFn).getContentView() != null))
+    if ((paramInt == 1) && (!ler.isInputMethodNotNeeded()) && (MMListPopupWindow.b(ler).getContentView() != null))
     {
-      MMListPopupWindow.d(kFn).removeCallbacks(MMListPopupWindow.c(kFn));
-      MMListPopupWindow.c(kFn).run();
+      MMListPopupWindow.d(ler).removeCallbacks(MMListPopupWindow.c(ler));
+      MMListPopupWindow.c(ler).run();
     }
   }
 }

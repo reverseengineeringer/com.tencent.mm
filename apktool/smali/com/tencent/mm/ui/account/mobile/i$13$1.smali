@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kyJ:Lcom/tencent/mm/ui/account/mobile/i$13;
+.field final synthetic kXQ:Lcom/tencent/mm/ui/account/mobile/i$13;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 296
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/i$13$1;->kyJ:Lcom/tencent/mm/ui/account/mobile/i$13;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/i$13$1;->kXQ:Lcom/tencent/mm/ui/account/mobile/i$13;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,13 +41,13 @@
 
     .prologue
     .line 299
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/i$13$1;->kyJ:Lcom/tencent/mm/ui/account/mobile/i$13;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/i$13$1;->kXQ:Lcom/tencent/mm/ui/account/mobile/i$13;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/mobile/i$13;->kyH:Lcom/tencent/mm/ui/account/mobile/i;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/mobile/i$13;->kXO:Lcom/tencent/mm/ui/account/mobile/i;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/mobile/i;->kyy:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/mobile/i;->kXF:Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
-    iput-object p1, v0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->coM:Landroid/app/ProgressDialog;
+    iput-object p1, v0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;->cka:Landroid/app/ProgressDialog;
 
     .line 300
     return-void

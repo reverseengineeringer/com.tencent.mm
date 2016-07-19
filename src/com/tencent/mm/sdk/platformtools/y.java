@@ -1,230 +1,160 @@
 package com.tencent.mm.sdk.platformtools;
 
-import android.app.ActivityManager;
-import android.app.ActivityManager.RunningAppProcessInfo;
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.content.res.Resources;
-import android.os.Build.VERSION;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import junit.framework.Assert;
 
 public final class y
 {
-  private static String alS;
-  private static Context context = null;
-  private static String jVA;
-  private static boolean jVB;
-  public static boolean jVC;
-  private static ActivityManager jVD = null;
-  private static String jVz = "com.tencent.mm";
-  private static Resources lL;
-  private static String processName;
+  public static b aZj;
+  private static int kvi;
+  public static Map<Integer, y> kvm = new HashMap();
+  private static boolean kvo = false;
+  public static boolean kvp;
+  public long ifj = 0L;
+  public final int kvj;
+  private final boolean kvk;
+  public long kvl = 0L;
+  private final a kvn;
   
-  static
+  public y(a parama)
   {
-    alS = "com.tencent.mm";
-    jVA = "com.tencent.mm.ui.LauncherUI";
-    processName = alS;
-    jVB = false;
-    jVC = false;
-    lL = null;
-  }
-  
-  public static void CP(String paramString)
-  {
-    processName = paramString;
-  }
-  
-  public static void a(Resources paramResources)
-  {
-    lL = paramResources;
-  }
-  
-  public static String aQC()
-  {
-    return processName;
-  }
-  
-  public static boolean aUH()
-  {
-    return jVB;
-  }
-  
-  public static String aUI()
-  {
-    return jVA;
-  }
-  
-  public static String aUJ()
-  {
-    return jVz;
-  }
-  
-  public static String aUK()
-  {
-    return alS + "_preferences";
-  }
-  
-  private static String aUL()
-  {
-    return alS + "_preferences_exdevice_";
-  }
-  
-  public static SharedPreferences aUM()
-  {
-    if (context != null) {
-      return context.getSharedPreferences(aUK(), 0);
+    Assert.assertTrue("bumper not initialized", kvo);
+    kvn = parama;
+    kvk = true;
+    if (kvi >= 8192) {
+      kvi = 0;
     }
-    return null;
+    int i = kvi + 1;
+    kvi = i;
+    kvj = i;
   }
   
-  public static SharedPreferences aUN()
+  public static void a(b paramb)
   {
-    if (context != null) {
-      return context.getSharedPreferences(alS + "_preferences_tools", 0);
-    }
-    return null;
+    kvo = true;
+    aZj = paramb;
   }
   
-  public static SharedPreferences aUO()
+  public static long aZI()
   {
-    if (context != null)
+    kvp = false;
+    LinkedList localLinkedList = new LinkedList();
+    Object localObject = new HashSet();
+    ((Set)localObject).addAll(kvm.keySet());
+    localObject = ((Set)localObject).iterator();
+    long l1 = Long.MAX_VALUE;
+    if (((Iterator)localObject).hasNext())
     {
-      if (Build.VERSION.SDK_INT >= 11) {
-        return context.getSharedPreferences(aUL(), 4);
+      Integer localInteger = (Integer)((Iterator)localObject).next();
+      y localy = (y)kvm.get(localInteger);
+      if (localy == null) {
+        break label273;
       }
-      return context.getSharedPreferences(aUL(), 0);
-    }
-    return null;
-  }
-  
-  public static String aUP()
-  {
-    return alS + "_tmp_preferences";
-  }
-  
-  public static boolean aUQ()
-  {
-    String str2 = processName;
-    String str1;
-    if (str2 != null)
-    {
-      str1 = str2;
-      if (str2.length() != 0) {}
-    }
-    else
-    {
-      str1 = alS;
-    }
-    return alS.equals(str1);
-  }
-  
-  public static boolean aUR()
-  {
-    String str2 = processName;
-    String str1;
-    if (str2 != null)
-    {
-      str1 = str2;
-      if (str2.length() != 0) {}
-    }
-    else
-    {
-      str1 = alS;
-    }
-    return "com.tencent.mm:push".equalsIgnoreCase(str1);
-  }
-  
-  public static boolean aUS()
-  {
-    String str2 = processName;
-    String str1;
-    if (str2 != null)
-    {
-      str1 = str2;
-      if (str2.length() != 0) {}
-    }
-    else
-    {
-      str1 = alS;
-    }
-    return "com.tencent.mm:tools".equalsIgnoreCase(str1);
-  }
-  
-  public static boolean aUT()
-  {
-    String str2 = processName;
-    String str1;
-    if (str2 != null)
-    {
-      str1 = str2;
-      if (str2.length() != 0) {}
-    }
-    else
-    {
-      str1 = alS;
-    }
-    return "com.tencent.mm:exdevice".equalsIgnoreCase(str1);
-  }
-  
-  public static boolean aUU()
-  {
-    if ((context == null) || (alS == null)) {
-      return false;
-    }
-    if (jVD == null) {
-      jVD = (ActivityManager)context.getSystemService("activity");
-    }
-    try
-    {
-      Iterator localIterator = jVD.getRunningAppProcesses().iterator();
-      while (localIterator.hasNext())
+      long l3 = be.av(kvl);
+      long l2 = l3;
+      if (l3 < 0L) {
+        l2 = 0L;
+      }
+      if (l2 > ifj)
       {
-        boolean bool = nextprocessName.equals(alS);
-        if (bool) {
-          return true;
+        if ((!kvn.jK()) || (!kvk)) {
+          localLinkedList.add(localInteger);
+        }
+        for (;;)
+        {
+          kvl = be.Gq();
+          break;
+          l1 = ifj;
         }
       }
+      if (ifj - l2 >= l1) {
+        break label273;
+      }
+      l1 = ifj - l2;
     }
-    catch (Exception localException)
+    label273:
+    for (;;)
     {
-      u.e("!44@/B4Tb64lLpIS+EmmM2BObaDFJ1Sw501WMp8gAMPZi0c=", "isMMProcessExist Exception: " + localException.toString());
-      return false;
+      break;
+      int i = 0;
+      while (i < localLinkedList.size())
+      {
+        kvm.remove(localLinkedList.get(i));
+        i += 1;
+      }
+      if ((!kvp) && (l1 == Long.MAX_VALUE) && (aZj != null))
+      {
+        aZj.cancel();
+        v.v("MicroMsg.MAlarmHandler", "cancel bumper for no more handler");
+      }
+      return l1;
     }
-    catch (Error localError)
+  }
+  
+  public static boolean dI(long paramLong)
+  {
+    v.d("MicroMsg.MAlarmHandler", "check need prepare: check=" + paramLong);
+    Iterator localIterator = kvm.entrySet().iterator();
+    long l1 = Long.MAX_VALUE;
+    while (localIterator.hasNext())
     {
-      u.e("!44@/B4Tb64lLpIS+EmmM2BObaDFJ1Sw501WMp8gAMPZi0c=", "isMMProcessExist Error: " + localError.toString());
-      return false;
+      y localy = (y)((Map.Entry)localIterator.next()).getValue();
+      if (localy == null) {
+        break label154;
+      }
+      long l3 = be.av(kvl);
+      long l2 = l3;
+      if (l3 < 0L) {
+        l2 = 0L;
+      }
+      if (l2 > ifj)
+      {
+        l1 = ifj;
+      }
+      else
+      {
+        if (ifj - l2 >= l1) {
+          break label154;
+        }
+        l1 = ifj - l2;
+      }
     }
-    return false;
+    label154:
+    for (;;)
+    {
+      break;
+      return l1 > paramLong;
+    }
   }
   
-  public static void gI(boolean paramBoolean)
+  public final void aZJ()
   {
-    jVB = paramBoolean;
+    kvm.remove(Integer.valueOf(kvj));
   }
   
-  public static Context getContext()
+  protected final void finalize()
   {
-    return context;
+    aZJ();
+    super.finalize();
   }
   
-  public static String getPackageName()
+  public static abstract interface a
   {
-    return alS;
+    public abstract boolean jK();
   }
   
-  public static Resources getResources()
+  public static abstract interface b
   {
-    return lL;
-  }
-  
-  public static void setContext(Context paramContext)
-  {
-    context = paramContext;
-    alS = paramContext.getPackageName();
-    u.d("!44@/B4Tb64lLpIS+EmmM2BObaDFJ1Sw501WMp8gAMPZi0c=", "setup application context for package: " + alS);
+    public abstract void cancel();
+    
+    public abstract void prepare();
   }
 }
 

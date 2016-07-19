@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hiu:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11;
+.field final synthetic hxj:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 700
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11$1;->hiu:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11;
+    .line 743
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11$1;->hxj:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,20 +42,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 703
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11$1;->hiu:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11;
+    .line 746
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11$1;->hxj:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11;->his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11;->hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->finish()V
 
-    .line 704
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11$1;->hiu:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11;
+    .line 747
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11$1;->hxj:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11;->his:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI$11;->hxh:Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;
 
     invoke-virtual {v0, v1, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsSightPlayerUI;->overridePendingTransition(II)V
 
-    .line 705
+    .line 748
     return-void
 .end method

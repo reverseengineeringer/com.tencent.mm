@@ -4,11 +4,11 @@ import android.view.View;
 
 public abstract interface b$g
 {
-  public abstract int avP();
+  public abstract int ayk();
   
-  public abstract View avQ();
+  public abstract View ayl();
   
-  public abstract int avR();
+  public abstract int aym();
 }
 
 /* Location:

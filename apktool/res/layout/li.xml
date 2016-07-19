@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:id="@id/afq" android:background="@drawable/eh" android:layout_width="fill_parent" android:layout_height="@dimen/j7">
+        <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="31.0dip" android:layout_height="31.0dip" android:layout_marginLeft="25.0dip" android:layout_marginRight="22.0dip">
+            <ImageView android:id="@id/afr" android:layout_width="23.0dip" android:layout_height="23.0dip" android:src="@raw/enterprise_brand_entry_icon" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/afs" android:visibility="gone" android:layout_marginTop="@dimen/i9" android:layout_marginRight="@dimen/cp" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/UnreadDotStyle" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/h4" android:textColor="#ff5d6063" android:id="@id/aft" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/agz" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:background="@color/hf" android:layout_width="fill_parent" android:layout_height="@dimen/i_" />
+    <LinearLayout android:orientation="horizontal" android:background="@color/lf" android:layout_width="fill_parent" android:layout_height="@dimen/ct" />
+    <LinearLayout android:orientation="horizontal" android:background="@color/hf" android:layout_width="fill_parent" android:layout_height="@dimen/i_" />
+</LinearLayout>

@@ -4,14 +4,14 @@
 
 
 # virtual methods
-.method public abstract kU()Lcom/tencent/mm/model/y;
+.method public abstract jv()Lcom/tencent/mm/model/y;
 .end method
 
-.method public abstract kV()Lcom/tencent/mm/storage/s$b;
+.method public abstract jw()Lcom/tencent/mm/storage/s$b;
 .end method
 
-.method public abstract kW()Lcom/tencent/mm/model/u;
+.method public abstract jx()Lcom/tencent/mm/model/u;
 .end method
 
-.method public abstract kX()Lcom/tencent/mm/model/q;
+.method public abstract jy()Lcom/tencent/mm/model/q;
 .end method

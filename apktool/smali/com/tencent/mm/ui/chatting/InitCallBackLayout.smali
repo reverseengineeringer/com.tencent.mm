@@ -6,7 +6,7 @@
 # instance fields
 .field private hasDrawed:Z
 
-.field private lcq:Lcom/tencent/mm/ui/chatting/ea;
+.field public lCH:Lcom/tencent/mm/ui/chatting/eb;
 
 
 # direct methods
@@ -41,27 +41,16 @@
     iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/InitCallBackLayout;->hasDrawed:Z
 
     .line 42
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/InitCallBackLayout;->lcq:Lcom/tencent/mm/ui/chatting/ea;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/InitCallBackLayout;->lCH:Lcom/tencent/mm/ui/chatting/eb;
 
     if-eqz v0, :cond_0
 
     .line 43
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/InitCallBackLayout;->lcq:Lcom/tencent/mm/ui/chatting/ea;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/InitCallBackLayout;->lCH:Lcom/tencent/mm/ui/chatting/eb;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/chatting/ea;->kw()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/chatting/eb;->iZ()V
 
     .line 46
     :cond_0
-    return-void
-.end method
-
-.method public setListener(Lcom/tencent/mm/ui/chatting/ea;)V
-    .locals 0
-
-    .prologue
-    .line 49
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/InitCallBackLayout;->lcq:Lcom/tencent/mm/ui/chatting/ea;
-
-    .line 50
     return-void
 .end method

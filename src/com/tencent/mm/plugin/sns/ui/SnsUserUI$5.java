@@ -1,16 +1,14 @@
 package com.tencent.mm.plugin.sns.ui;
 
+import com.tencent.mm.e.a.hd;
+import com.tencent.mm.sdk.c.c;
+
 final class SnsUserUI$5
-  extends SnsUserUI.a
+  extends c<hd>
 {
   SnsUserUI$5(SnsUserUI paramSnsUserUI)
   {
-    super(paramSnsUserUI);
-  }
-  
-  public final void bj(int paramInt1, int paramInt2)
-  {
-    super.bj(paramInt1, paramInt2);
+    kum = hd.class.getName().hashCode();
   }
 }
 

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lxN:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
+.field final synthetic lYC:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 76
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$1;->lxN:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$1;->lYC:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,7 +53,7 @@
 
     .line 89
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$1;->lxN:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$1;->lYC:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->a(Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;)Landroid/widget/ImageButton;
 
@@ -64,7 +64,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setVisibility(I)V
 
     .line 90
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$1;->lxN:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$1;->lYC:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->b(Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;)Landroid/widget/Button;
 
@@ -78,7 +78,7 @@
 
     .line 92
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$1;->lxN:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$1;->lYC:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->a(Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;)Landroid/widget/ImageButton;
 
@@ -87,7 +87,7 @@
     invoke-virtual {v0, v2}, Landroid/widget/ImageButton;->setVisibility(I)V
 
     .line 93
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$1;->lxN:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$1;->lYC:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->b(Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;)Landroid/widget/Button;
 

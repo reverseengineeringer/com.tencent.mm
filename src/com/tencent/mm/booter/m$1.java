@@ -1,6 +1,6 @@
 package com.tencent.mm.booter;
 
-import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.plugin.report.service.g;
 import com.tencent.mm.sdk.platformtools.f;
 
 final class m$1
@@ -10,7 +10,7 @@ final class m$1
   
   public final void run()
   {
-    h.fUJ.O(10675, bnf + "," + f.akC);
+    g.gdY.X(10675, baM + "," + f.Xv);
   }
 }
 

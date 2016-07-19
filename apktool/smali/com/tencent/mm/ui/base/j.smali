@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field public kEA:Lcom/tencent/mm/ui/base/j$a;
+.field public ldD:Lcom/tencent/mm/ui/base/j$a;
 
 
 # direct methods

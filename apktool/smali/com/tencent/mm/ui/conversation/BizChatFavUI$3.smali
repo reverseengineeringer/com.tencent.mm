@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnCancelListener;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # annotations
@@ -18,20 +18,16 @@
 
 
 # instance fields
-.field final synthetic cMf:Lcom/tencent/mm/t/w;
-
-.field final synthetic lnW:Lcom/tencent/mm/ui/conversation/BizChatFavUI;
+.field final synthetic lOv:Lcom/tencent/mm/ui/conversation/BizChatFavUI;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/conversation/BizChatFavUI;Lcom/tencent/mm/t/w;)V
+.method constructor <init>(Lcom/tencent/mm/ui/conversation/BizChatFavUI;)V
     .locals 0
 
     .prologue
-    .line 392
-    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizChatFavUI$3;->lnW:Lcom/tencent/mm/ui/conversation/BizChatFavUI;
-
-    iput-object p2, p0, Lcom/tencent/mm/ui/conversation/BizChatFavUI$3;->cMf:Lcom/tencent/mm/t/w;
+    .line 281
+    iput-object p1, p0, Lcom/tencent/mm/ui/conversation/BizChatFavUI$3;->lOv:Lcom/tencent/mm/ui/conversation/BizChatFavUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,19 +36,39 @@
 
 
 # virtual methods
-.method public final onCancel(Landroid/content/DialogInterface;)V
-    .locals 2
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
-    .line 395
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    .line 285
+    iget-object v0, p0, Lcom/tencent/mm/ui/conversation/BizChatFavUI$3;->lOv:Lcom/tencent/mm/ui/conversation/BizChatFavUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/conversation/BizChatFavUI;->c(Lcom/tencent/mm/ui/conversation/BizChatFavUI;)Lcom/tencent/mm/ui/conversation/b;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/conversation/BizChatFavUI$3;->cMf:Lcom/tencent/mm/t/w;
+    invoke-virtual {v0, p3}, Lcom/tencent/mm/ui/conversation/b;->getItem(I)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    move-result-object v0
 
-    .line 396
+    check-cast v0, Lcom/tencent/mm/v/d;
+
+    .line 286
+    iget-object v1, p0, Lcom/tencent/mm/ui/conversation/BizChatFavUI$3;->lOv:Lcom/tencent/mm/ui/conversation/BizChatFavUI;
+
+    iget-wide v2, v0, Lcom/tencent/mm/v/d;->field_bizChatLocalId:J
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/ui/conversation/BizChatFavUI;->b(Lcom/tencent/mm/ui/conversation/BizChatFavUI;J)V
+
+    .line 287
     return-void
 .end method

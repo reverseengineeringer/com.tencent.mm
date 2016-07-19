@@ -1,29 +1,29 @@
 package com.tencent.mm.modelsearch;
 
 import android.database.Cursor;
-import com.tencent.mm.az.g;
+import com.tencent.mm.bc.g;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import java.util.Comparator;
 import java.util.HashMap;
 
 public final class m$a
-  implements Comparator
+  implements Comparator<m.g>
 {
-  private HashMap bZC = null;
-  private g bZD = null;
-  private String[] bZE = null;
+  private HashMap<String, Long> bTl = null;
+  private g bTm = null;
+  private String[] bTn = null;
   
-  private Long iC(String paramString)
+  private Long iT(String paramString)
   {
     Cursor localCursor;
-    if (bZC == null)
+    if (bTl == null)
     {
-      bZC = new HashMap();
-      bZD = tDbzA;
-      bZE = new String[1];
-      bZE[0] = paramString;
-      localCursor = bZD.rawQuery("SELECT conversationTime FROM rconversation WHERE username=?;", bZE);
+      bTl = new HashMap();
+      bTm = tEbsy;
+      bTn = new String[1];
+      bTn[0] = paramString;
+      localCursor = bTm.rawQuery("SELECT conversationTime FROM rconversation WHERE username=?;", bTn);
       if (!localCursor.moveToFirst()) {
         break label113;
       }
@@ -32,9 +32,9 @@ public final class m$a
     for (Long localLong = Long.valueOf(localCursor.getLong(0));; localLong = Long.valueOf(0L))
     {
       localCursor.close();
-      bZC.put(paramString, localLong);
+      bTl.put(paramString, localLong);
       return localLong;
-      localLong = (Long)bZC.get(paramString);
+      localLong = (Long)bTl.get(paramString);
       if (localLong == null) {
         break;
       }

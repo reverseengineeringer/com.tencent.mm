@@ -1,57 +1,48 @@
 package com.tencent.mm.protocal.b;
 
+import a.a.a.b;
+
 public final class amc
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public int fUi;
-  public String jEQ;
-  public String jER;
-  public String jsM;
+  public int ret;
+  public String username;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (jsM != null) {
-        paramVarArgs.d(1, jsM);
+      if (username == null) {
+        throw new b("Not all required fields were included: username");
       }
-      if (jER != null) {
-        paramVarArgs.d(2, jER);
+      if (username != null) {
+        paramVarArgs.e(1, username);
       }
-      paramVarArgs.ci(3, fUi);
-      if (jEQ != null) {
-        paramVarArgs.d(4, jEQ);
-      }
+      paramVarArgs.cw(2, ret);
       return 0;
     }
     if (paramInt == 1) {
-      if (jsM == null) {
-        break label328;
+      if (username == null) {
+        break label244;
       }
     }
-    label328:
-    for (paramInt = a.a.a.b.b.a.e(1, jsM) + 0;; paramInt = 0)
+    label244:
+    for (paramInt = a.a.a.b.b.a.f(1, username) + 0;; paramInt = 0)
     {
-      int i = paramInt;
-      if (jER != null) {
-        i = paramInt + a.a.a.b.b.a.e(2, jER);
-      }
-      i += a.a.a.a.cg(3, fUi);
-      paramInt = i;
-      if (jEQ != null) {
-        paramInt = i + a.a.a.b.b.a.e(4, jEQ);
-      }
-      return paramInt;
+      return paramInt + a.a.a.a.cu(2, ret);
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
-        break;
+        if (username != null) {
+          break;
+        }
+        throw new b("Not all required fields were included: username");
       }
       if (paramInt == 3)
       {
@@ -62,16 +53,10 @@ public final class amc
         default: 
           return -1;
         case 1: 
-          jsM = maU.readString();
-          return 0;
-        case 2: 
-          jER = maU.readString();
-          return 0;
-        case 3: 
-          fUi = maU.jC();
+          username = mMY.readString();
           return 0;
         }
-        jEQ = maU.readString();
+        ret = mMY.id();
         return 0;
       }
       return -1;

@@ -1,62 +1,60 @@
 package com.tencent.mm.modelcdntran;
 
 import android.os.HandlerThread;
-import com.tencent.mm.model.ah;
 import com.tencent.mm.model.z.a;
-import com.tencent.mm.model.z.e;
-import com.tencent.mm.platformtools.n;
-import com.tencent.mm.platformtools.r;
-import com.tencent.mm.protocal.b.aly;
-import com.tencent.mm.protocal.b.gh;
-import com.tencent.mm.protocal.b.gi;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.af;
-import com.tencent.mm.sdk.platformtools.af.a;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.model.z.f;
+import com.tencent.mm.platformtools.q;
+import com.tencent.mm.protocal.b.amj;
+import com.tencent.mm.protocal.b.gm;
+import com.tencent.mm.protocal.b.gn;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.ah.a;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.io.ByteArrayOutputStream;
 import java.util.LinkedList;
 
 public class CdnTransportEngine
 {
-  public static int bJT = 1;
-  public static int bJU = 2;
-  public static int bJV = 3;
-  public static int bJW = 1;
-  public static int bJX = 2;
-  public static int bJY = 3;
-  public static int bJZ = 4;
-  public static int bKa = 5;
-  public static int bKb = 6;
-  public static int bKc = 10001;
-  public static int bKd = 10002;
-  public static int bKe = 20201;
-  public static int bKf = 20202;
-  public static int bKg = 20301;
-  public static int bKh = 20321;
-  public static int bKi = 20322;
-  public static int bKj = 100;
-  public static int bKk = 101;
-  public static int bKl = 102;
-  public static int bKm = 103;
-  public static int bKn = 32768;
-  public static int bKo = 7340033;
-  gh bKp = null;
-  a bKq = null;
-  private int bKr = 0;
-  private int bKs = 0;
-  private String bKt = "";
-  private af bKu = new af(tvjVF.getLooper(), new af.a()
+  public static int bDA = 20303;
+  public static int bDB = 20321;
+  public static int bDC = 20322;
+  public static int bDD = 100;
+  public static int bDE = 101;
+  public static int bDF = 102;
+  public static int bDG = 103;
+  public static int bDH = 32768;
+  public static int bDI = 7340033;
+  public static int bDl = 1;
+  public static int bDm = 2;
+  public static int bDn = 3;
+  public static int bDo = 1;
+  public static int bDp = 2;
+  public static int bDq = 3;
+  public static int bDr = 4;
+  public static int bDs = 5;
+  public static int bDt = 6;
+  public static int bDu = 7;
+  public static int bDv = 10001;
+  public static int bDw = 10002;
+  public static int bDx = 20201;
+  public static int bDy = 20202;
+  public static int bDz = 20301;
+  gm bDJ = null;
+  a bDK = null;
+  private int bDL = 0;
+  private int bDM = 0;
+  private String bDN = "";
+  private com.tencent.mm.sdk.platformtools.ah bDO = new com.tencent.mm.sdk.platformtools.ah(twkvy.getLooper(), new ah.a()
   {
-    public final boolean lj()
+    public final boolean jK()
     {
       if ((CdnTransportEngine.a(CdnTransportEngine.this) == 0) && (CdnTransportEngine.b(CdnTransportEngine.this) == 0)) {
         return false;
       }
-      u.i("!44@/B4Tb64lLpIOAjTgD1JTqYyjqbRxHUgGUCewsAH7DnA=", "CdnDataFlowStat id:%s send:%d recv:%d", new Object[] { CdnTransportEngine.c(CdnTransportEngine.this), Integer.valueOf(CdnTransportEngine.a(CdnTransportEngine.this)), Integer.valueOf(CdnTransportEngine.b(CdnTransportEngine.this)) });
-      z.a.bAt.K(CdnTransportEngine.b(CdnTransportEngine.this), CdnTransportEngine.a(CdnTransportEngine.this));
+      v.i("MicroMsg.CdnTransportEngine", "CdnDataFlowStat id:%s send:%d recv:%d", new Object[] { CdnTransportEngine.c(CdnTransportEngine.this), Integer.valueOf(CdnTransportEngine.a(CdnTransportEngine.this)), Integer.valueOf(CdnTransportEngine.b(CdnTransportEngine.this)) });
+      z.a.btw.M(CdnTransportEngine.b(CdnTransportEngine.this), CdnTransportEngine.a(CdnTransportEngine.this));
       CdnTransportEngine.d(CdnTransportEngine.this);
       CdnTransportEngine.e(CdnTransportEngine.this);
       return true;
@@ -66,48 +64,48 @@ public class CdnTransportEngine
   public CdnTransportEngine(String paramString, a parama)
   {
     init(paramString);
-    bKq = parama;
+    bDK = parama;
   }
   
-  private b a(gh paramgh)
+  private b a(gm paramgm)
   {
     b localb = new b();
-    field_frontips = new String[jdZ];
+    field_frontips = new String[jBK];
     int i = 0;
-    while (i < jdZ)
+    while (i < jBK)
     {
-      field_frontips[i] = n.a((aly)jea.get(i));
-      u.i("!44@/B4Tb64lLpIOAjTgD1JTqYyjqbRxHUgGUCewsAH7DnA=", "frontip[%d] = %s", new Object[] { Integer.valueOf(i), field_frontips[i] });
+      field_frontips[i] = com.tencent.mm.platformtools.m.a((amj)jBL.get(i));
+      v.i("MicroMsg.CdnTransportEngine", "frontip[%d] = %s", new Object[] { Integer.valueOf(i), field_frontips[i] });
       i += 1;
     }
-    field_zoneips = new String[jee];
+    field_zoneips = new String[jBP];
     i = 0;
-    while (i < jdZ)
+    while (i < jBK)
     {
-      field_zoneips[i] = n.a((aly)jef.get(i));
-      u.i("!44@/B4Tb64lLpIOAjTgD1JTqYyjqbRxHUgGUCewsAH7DnA=", "zoneip[%d] = %s", new Object[] { Integer.valueOf(i), field_zoneips[i] });
+      field_zoneips[i] = com.tencent.mm.platformtools.m.a((amj)jBQ.get(i));
+      v.i("MicroMsg.CdnTransportEngine", "zoneip[%d] = %s", new Object[] { Integer.valueOf(i), field_zoneips[i] });
       i += 1;
     }
-    field_ver = jdW;
-    field_uin = dyX;
-    field_frontid = jdY;
-    field_zoneid = jed;
-    field_nettype = c.aK(y.getContext());
-    field_authkey = n.a(jec);
-    int j = jeg.get(0)).jek;
+    field_ver = jBH;
+    field_uin = dAs;
+    field_frontid = jBJ;
+    field_zoneid = jBO;
+    field_nettype = c.aH(aa.getContext());
+    field_authkey = com.tencent.mm.platformtools.m.a(jBN);
+    int j = jBR.get(0)).jBV;
     field_frontports = new int[j];
     i = 0;
     while (i < j)
     {
-      field_frontports[i] = ((Integer)jeg.get(0)).jel.get(i)).intValue();
+      field_frontports[i] = ((Integer)jBR.get(0)).jBW.get(i)).intValue();
       i += 1;
     }
-    j = jeh.get(0)).jek;
+    j = jBS.get(0)).jBV;
     field_zoneports = new int[j];
     i = 0;
     while (i < j)
     {
-      field_zoneports[i] = ((Integer)jeh.get(0)).jel.get(i)).intValue();
+      field_zoneports[i] = ((Integer)jBS.get(0)).jBW.get(i)).intValue();
       i += 1;
     }
     return localb;
@@ -115,7 +113,7 @@ public class CdnTransportEngine
   
   private static void a(keep_SceneResult paramkeep_SceneResult)
   {
-    if ((paramkeep_SceneResult != null) && (!ay.kz(field_transInfo)))
+    if ((paramkeep_SceneResult != null) && (!be.kf(field_transInfo)))
     {
       int i = field_transInfo.indexOf("@,");
       if (i > 0)
@@ -123,7 +121,7 @@ public class CdnTransportEngine
         report_Part2 = field_transInfo.substring(i + 2);
         field_transInfo = field_transInfo.substring(0, i);
       }
-      u.v("!44@/B4Tb64lLpIOAjTgD1JTqYyjqbRxHUgGUCewsAH7DnA=", "transinfo:%s, report_part2:%s", new Object[] { field_transInfo, report_Part2 });
+      v.v("MicroMsg.CdnTransportEngine", "transinfo:%s, report_part2:%s", new Object[] { field_transInfo, report_Part2 });
     }
   }
   
@@ -133,7 +131,7 @@ public class CdnTransportEngine
   
   public static int keep_callFromJni(int paramInt1, int paramInt2, byte[] paramArrayOfByte)
   {
-    if (paramInt1 == bKj) {
+    if (paramInt1 == bDD) {
       c.a(paramArrayOfByte, "MicroMsg.CdnEngine", paramInt2);
     }
     return 0;
@@ -145,14 +143,14 @@ public class CdnTransportEngine
   
   public final void a(c paramc)
   {
-    u.i("!44@/B4Tb64lLpIOAjTgD1JTqYyjqbRxHUgGUCewsAH7DnA=", "set WXConfig:" + paramc);
+    v.i("MicroMsg.CdnTransportEngine", "set WXConfig:" + paramc);
     setWXConfig(paramc);
   }
   
-  public final boolean a(gh paramgh1, gh paramgh2, gh paramgh3, byte[] paramArrayOfByte)
+  public final boolean a(gm paramgm1, gm paramgm2, gm paramgm3, byte[] paramArrayOfByte)
   {
-    u.i("!44@/B4Tb64lLpIOAjTgD1JTqYyjqbRxHUgGUCewsAH7DnA=", "cdntra setCDNDnsInfo old [%s]  new [%s]", new Object[] { bKp, paramgh1 });
-    if ((paramgh1 == null) && (paramArrayOfByte == null)) {
+    v.i("MicroMsg.CdnTransportEngine", "cdntra setCDNDnsInfo old [%s]  new [%s]", new Object[] { bDJ, paramgm1 });
+    if ((paramgm1 == null) && (paramArrayOfByte == null)) {
       return false;
     }
     new b();
@@ -163,67 +161,67 @@ public class CdnTransportEngine
       b localb;
       try
       {
-        localb = a(paramgh1);
-        paramgh2 = a(paramgh2);
-        paramgh3 = a(paramgh3);
-        if (r.cnD)
+        localb = a(paramgm1);
+        paramgm2 = a(paramgm2);
+        paramgm3 = a(paramgm3);
+        if (q.ciI)
         {
-          u.w("!44@/B4Tb64lLpIOAjTgD1JTqYyjqbRxHUgGUCewsAH7DnA=", "setcdndns use DEBUG IP.");
-          if ((r.cnu != null) && (r.cnu.length() >= 7))
+          v.w("MicroMsg.CdnTransportEngine", "setcdndns use DEBUG IP.");
+          if ((q.ciz != null) && (q.ciz.length() >= 7))
           {
             i = 0;
             if (i >= field_frontips.length) {
               break label364;
             }
-            field_frontips[i] = r.cnu;
+            field_frontips[i] = q.ciz;
             i += 1;
             continue;
             if (i >= field_frontips.length) {
               break label370;
             }
-            field_frontips[i] = r.cnu;
+            field_frontips[i] = q.ciz;
             i += 1;
             continue;
             if (i < field_frontips.length)
             {
-              field_frontips[i] = r.cnu;
+              field_frontips[i] = q.ciz;
               i += 1;
               continue;
             }
           }
-          if ((r.cnv != null) && (r.cnv.length() >= 7))
+          if ((q.ciA != null) && (q.ciA.length() >= 7))
           {
             i = 0;
             if (i >= field_zoneips.length) {
               break label376;
             }
-            field_zoneips[i] = r.cnv;
+            field_zoneips[i] = q.ciA;
             i += 1;
             continue;
             if (i >= field_zoneips.length) {
               break label382;
             }
-            field_zoneips[i] = r.cnv;
+            field_zoneips[i] = q.ciA;
             i += 1;
             continue;
             if (i < field_zoneips.length)
             {
-              field_zoneips[i] = r.cnv;
+              field_zoneips[i] = q.ciA;
               i += 1;
               continue;
             }
           }
-          setCDNDnsInfo(localb, paramgh2, paramgh3, null);
+          setCDNDnsInfo(localb, paramgm2, paramgm3, null);
           return true;
         }
       }
-      catch (Exception paramgh1)
+      catch (Exception paramgm1)
       {
-        u.e("!44@/B4Tb64lLpIOAjTgD1JTqYyjqbRxHUgGUCewsAH7DnA=", "exception:%s", new Object[] { ay.b(paramgh1) });
+        v.e("MicroMsg.CdnTransportEngine", "exception:%s", new Object[] { be.f(paramgm1) });
         return false;
       }
-      bKp = paramgh1;
-      setCDNDnsInfo(localb, paramgh2, paramgh3, paramArrayOfByte);
+      bDJ = paramgm1;
+      setCDNDnsInfo(localb, paramgm2, paramgm3, paramArrayOfByte);
       return true;
       label364:
       int i = 0;
@@ -245,21 +243,21 @@ public class CdnTransportEngine
   
   public void keep_OnRequestDoGetCdnDnsInfo()
   {
-    ah.tE().d(new d(2));
+    com.tencent.mm.model.ah.tF().a(new d(2), 0);
   }
   
   public byte[] keep_cdnDecodePrepareResponse(String paramString, byte[] paramArrayOfByte)
   {
-    if (bKq != null) {
-      return bKq.i(paramString, paramArrayOfByte);
+    if (bDK != null) {
+      return bDK.h(paramString, paramArrayOfByte);
     }
     return null;
   }
   
   public void keep_cdnGetSkeyBuf(String paramString, ByteArrayOutputStream paramByteArrayOutputStream)
   {
-    if (bKq != null) {
-      bKq.a(paramString, paramByteArrayOutputStream);
+    if (bDK != null) {
+      bDK.a(paramString, paramByteArrayOutputStream);
     }
   }
   
@@ -269,73 +267,77 @@ public class CdnTransportEngine
     do
     {
       return;
-      bKr += paramInt1;
-      bKs += paramInt2;
-      if (!ay.kz(paramString)) {
-        bKt = paramString;
+      bDL += paramInt1;
+      bDM += paramInt2;
+      if (!be.kf(paramString)) {
+        bDN = paramString;
       }
-    } while (bKr + bKs <= 51200);
-    bKu.ds(500L);
+    } while (bDL + bDM <= 51200);
+    bDO.dJ(500L);
   }
   
   public int keep_onDownloadError(String paramString, keep_SceneResult paramkeep_SceneResult)
   {
-    if (bKq != null)
+    if (bDK != null)
     {
       a(paramkeep_SceneResult);
-      bKq.a(paramString, null, paramkeep_SceneResult);
+      bDK.a(paramString, null, paramkeep_SceneResult);
     }
     return 0;
   }
   
   public int keep_onDownloadProgress(String paramString, keep_ProgressInfo paramkeep_ProgressInfo)
   {
-    if (bKq != null) {
-      bKq.a(paramString, paramkeep_ProgressInfo, null);
+    if (bDK != null) {
+      bDK.a(paramString, paramkeep_ProgressInfo, null);
     }
     return 0;
   }
   
   public int keep_onDownloadSuccessed(String paramString, keep_SceneResult paramkeep_SceneResult)
   {
-    if (bKq != null)
+    if (bDK != null)
     {
       a(paramkeep_SceneResult);
-      bKq.a(paramString, null, paramkeep_SceneResult);
+      bDK.a(paramString, null, paramkeep_SceneResult);
     }
     return 0;
   }
   
   public int keep_onUploadError(String paramString, keep_SceneResult paramkeep_SceneResult)
   {
-    if (bKq != null)
+    if (bDK != null)
     {
       a(paramkeep_SceneResult);
-      bKq.a(paramString, null, paramkeep_SceneResult);
+      bDK.a(paramString, null, paramkeep_SceneResult);
     }
     return 0;
   }
   
   public int keep_onUploadProgress(String paramString, keep_ProgressInfo paramkeep_ProgressInfo)
   {
-    if (bKq != null)
+    if (bDK != null)
     {
-      u.v("!44@/B4Tb64lLpIOAjTgD1JTqYyjqbRxHUgGUCewsAH7DnA=", "klem keep_onUploadProgress mediaId:%s, totalLen%d, offset%d", new Object[] { paramString, Integer.valueOf(field_toltalLength), Integer.valueOf(field_finishedLength) });
-      bKq.a(paramString, paramkeep_ProgressInfo, null);
+      v.v("MicroMsg.CdnTransportEngine", "klem keep_onUploadProgress mediaId:%s, totalLen%d, offset%d", new Object[] { paramString, Integer.valueOf(field_toltalLength), Integer.valueOf(field_finishedLength) });
+      bDK.a(paramString, paramkeep_ProgressInfo, null);
     }
     return 0;
   }
   
   public int keep_onUploadSuccessed(String paramString, keep_SceneResult paramkeep_SceneResult)
   {
-    if (bKq != null)
+    if (bDK != null)
     {
-      u.v("!44@/B4Tb64lLpIOAjTgD1JTqYyjqbRxHUgGUCewsAH7DnA=", "klem keep_onUploadSuccessed mediaId:%s", new Object[] { paramString });
+      v.v("MicroMsg.CdnTransportEngine", "klem keep_onUploadSuccessed mediaId:%s", new Object[] { paramString });
       a(paramkeep_SceneResult);
-      bKq.a(paramString, null, paramkeep_SceneResult);
+      bDK.a(paramString, null, paramkeep_SceneResult);
     }
     return 0;
   }
+  
+  public native String nativeGenerateAesKey();
+  
+  public native String nativeGetFileMD5(String paramString);
   
   public native int preMakeCDNConnection();
   
@@ -351,7 +353,7 @@ public class CdnTransportEngine
     
     public abstract void a(String paramString, ByteArrayOutputStream paramByteArrayOutputStream);
     
-    public abstract byte[] i(String paramString, byte[] paramArrayOfByte);
+    public abstract byte[] h(String paramString, byte[] paramArrayOfByte);
   }
   
   final class b
@@ -373,14 +375,14 @@ public class CdnTransportEngine
   final class c
   {
     public int field_AckSlice = 8192;
-    public int field_C2COverloadDelaySeconds = 0;
-    public int field_EnableCDNVerifyConnect = 0;
-    public int field_EnableCDNVideoRedirectOC = 0;
-    public int field_EnableStreamUploadVideo = 0;
+    public int field_C2COverloadDelaySeconds = 10;
+    public int field_EnableCDNVerifyConnect = 1;
+    public int field_EnableCDNVideoRedirectOC = 1;
+    public int field_EnableStreamUploadVideo = 1;
     public int field_Ptl = 35;
-    public int field_SNSOverloadDelaySeconds = 0;
+    public int field_SNSOverloadDelaySeconds = 60;
     public int field_UseDynamicETL = 0;
-    public int field_UseStreamCDN = 0;
+    public int field_UseStreamCDN = 1;
     public int field_WifiEtl = 90;
     public int field_noWifiEtl = 70;
     public boolean field_onlyrecvPtl = false;

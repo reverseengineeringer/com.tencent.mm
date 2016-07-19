@@ -1,24 +1,24 @@
 package com.tencent.mm.performance.wxperformancetool;
 
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import com.tencent.mm.ui.base.h;
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
 
 final class MemoryLeakActivity$1
-  extends aa
+  extends ac
 {
   MemoryLeakActivity$1(MemoryLeakActivity paramMemoryLeakActivity) {}
   
   public final void handleMessage(Message paramMessage)
   {
-    if (((WeakReference)d.clv.get(MemoryLeakActivity.a(clo))).get() == null)
+    if (((WeakReference)d.cgz.get(MemoryLeakActivity.a(cgr))).get() == null)
     {
-      clo.finish();
+      cgr.finish();
       return;
     }
-    MemoryLeakActivity.b(clo).show();
+    MemoryLeakActivity.b(cgr).show();
   }
 }
 

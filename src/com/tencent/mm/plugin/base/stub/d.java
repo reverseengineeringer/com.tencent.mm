@@ -4,90 +4,90 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import com.tencent.mm.model.h;
-import com.tencent.mm.platformtools.t;
+import com.tencent.mm.platformtools.s;
 import com.tencent.mm.pluginsdk.i.a;
 import com.tencent.mm.pluginsdk.i.p;
-import com.tencent.mm.pluginsdk.model.app.aj;
+import com.tencent.mm.pluginsdk.model.app.al;
 import com.tencent.mm.pluginsdk.model.app.f;
 import com.tencent.mm.pluginsdk.model.app.m;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class d
 {
   protected String appId;
-  protected String cAU;
-  protected a cAV;
   protected Context context;
+  protected String cxP;
+  protected a cxQ;
   
   public d(Context paramContext, String paramString1, String paramString2, a parama)
   {
     context = paramContext;
     appId = paramString1;
-    cAU = paramString2;
-    cAV = parama;
+    cxP = paramString2;
+    cxQ = parama;
   }
   
-  protected void FB()
+  protected void FX()
   {
-    com.tencent.mm.ui.base.g.b(context, 2131428997, 2131430877, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+    com.tencent.mm.ui.base.g.b(context, 2131234131, 2131231028, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
-        paramAnonymousDialogInterface = i.a.iyK;
+        paramAnonymousDialogInterface = i.a.iVg;
         if (paramAnonymousDialogInterface != null) {
-          paramAnonymousDialogInterface.v(cAU, h.sf(), appId);
+          paramAnonymousDialogInterface.y(cxP, h.sh(), appId);
         }
-        cAV.bq(true);
+        cxQ.aY(true);
       }
     }, new DialogInterface.OnClickListener()
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
-        paramAnonymousDialogInterface = i.a.iyK;
+        paramAnonymousDialogInterface = i.a.iVg;
         if (paramAnonymousDialogInterface != null) {
-          paramAnonymousDialogInterface.v(cAU, h.sf(), appId);
+          paramAnonymousDialogInterface.y(cxP, h.sh(), appId);
         }
-        cAV.bq(false);
+        cxQ.aY(false);
       }
     });
   }
   
-  public final void Jz()
+  public final void Ki()
   {
-    if ((cAU == null) || (cAU.length() == 0))
+    if ((cxP == null) || (cxP.length() == 0))
     {
-      u.w("!32@/B4Tb64lLpJzC/9YxIg88yo3n7Lv0eKR", "doCheck, openId is null");
-      cAV.bq(true);
+      v.w("MicroMsg.OpenIdChecker", "doCheck, openId is null");
+      cxQ.aY(true);
       return;
     }
-    f localf = com.tencent.mm.pluginsdk.model.app.g.ai(appId, false);
+    f localf = com.tencent.mm.pluginsdk.model.app.g.ar(appId, false);
     if (localf == null)
     {
-      u.e("!32@/B4Tb64lLpJzC/9YxIg88yo3n7Lv0eKR", "doCheck fail, local app is null, appId = " + appId);
-      cAV.bq(true);
+      v.e("MicroMsg.OpenIdChecker", "doCheck fail, local app is null, appId = " + appId);
+      cxQ.aY(true);
       return;
     }
-    if (t.kz(field_openId))
+    if (s.kf(field_openId))
     {
-      u.w("!32@/B4Tb64lLpJzC/9YxIg88yo3n7Lv0eKR", "doCheck fail, local openId is null, appId = " + appId);
-      u.d("!32@/B4Tb64lLpJzC/9YxIg88yo3n7Lv0eKR", "doCheck, trigger getappsetting, appId = " + appId);
-      aj.aPV().zT(appId);
-      cAV.bq(true);
+      v.w("MicroMsg.OpenIdChecker", "doCheck fail, local openId is null, appId = " + appId);
+      v.d("MicroMsg.OpenIdChecker", "doCheck, trigger getappsetting, appId = " + appId);
+      al.aUE().BQ(appId);
+      cxQ.aY(true);
       return;
     }
-    if (cAU.equalsIgnoreCase(field_openId))
+    if (cxP.equalsIgnoreCase(field_openId))
     {
-      u.d("!32@/B4Tb64lLpJzC/9YxIg88yo3n7Lv0eKR", "doCheck succ, appId = " + appId);
-      cAV.bq(true);
+      v.d("MicroMsg.OpenIdChecker", "doCheck succ, appId = " + appId);
+      cxQ.aY(true);
       return;
     }
-    u.w("!32@/B4Tb64lLpJzC/9YxIg88yo3n7Lv0eKR", "doCheck fail, appId = " + appId + ", openId = " + cAU + ", localOpenId = " + field_openId);
-    FB();
+    v.w("MicroMsg.OpenIdChecker", "doCheck fail, appId = " + appId + ", openId = " + cxP + ", localOpenId = " + field_openId);
+    FX();
   }
   
   public static abstract interface a
   {
-    public abstract void bq(boolean paramBoolean);
+    public abstract void aY(boolean paramBoolean);
   }
 }
 

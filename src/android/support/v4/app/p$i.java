@@ -4,15 +4,15 @@ import android.app.Notification;
 import android.app.Notification.Builder;
 
 class p$i
-  extends p.o
+  extends p.n
 {
   public Notification b(p.d paramd)
   {
-    q.a locala = new q.a(mContext, dg, cH, cI, cN, cL, cO, cJ, cK, cM, cT, cU, cV, cP, cQ, mPriority, cS, da, dh, mExtras, cW, cX, cY);
-    p.a(locala, cZ);
-    p.a(locala, cR);
-    dw.setExtras(mExtras);
-    return dw.build();
+    q.a locala = new q.a(mContext, dw, cX, cY, dd, db, de, cZ, da, dc, dk, dl, dm, dg, dh, mPriority, dj, dr, dx, mExtras, dn, jdField_do, dp);
+    p.a(locala, dq);
+    p.a(locala, di);
+    dM.setExtras(mExtras);
+    return dM.build();
   }
 }
 

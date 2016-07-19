@@ -7,36 +7,36 @@ import android.view.accessibility.AccessibilityNodeInfo;
 
 public final class a
 {
-  public static final b gK = new e();
-  public final Object gL;
+  public static final b hf = new e();
+  public final Object hg;
   
   static
   {
     if ("JellyBeanMR2".equals(Build.VERSION.CODENAME))
     {
-      gK = new d();
+      hf = new d();
       return;
     }
     if (Build.VERSION.SDK_INT >= 16)
     {
-      gK = new c();
+      hf = new c();
       return;
     }
     if (Build.VERSION.SDK_INT >= 14)
     {
-      gK = new a();
+      hf = new a();
       return;
     }
   }
   
   public a(Object paramObject)
   {
-    gL = paramObject;
+    hg = paramObject;
   }
   
   public static a a(a parama)
   {
-    parama = gK.f(gL);
+    parama = hf.f(hg);
     if (parama != null) {
       return new a(parama);
     }
@@ -45,12 +45,12 @@ public final class a
   
   public final void addAction(int paramInt)
   {
-    gK.b(gL, paramInt);
+    hf.b(hg, paramInt);
   }
   
   public final void addChild(View paramView)
   {
-    gK.b(gL, paramView);
+    hf.b(hg, paramView);
   }
   
   public final boolean equals(Object paramObject)
@@ -68,171 +68,171 @@ public final class a
           return false;
         }
         paramObject = (a)paramObject;
-        if (gL != null) {
+        if (hg != null) {
           break;
         }
-      } while (gL == null);
+      } while (hg == null);
       return false;
-    } while (gL.equals(gL));
+    } while (hg.equals(hg));
     return false;
   }
   
   public final int getActions()
   {
-    return gK.g(gL);
+    return hf.g(hg);
   }
   
   public final void getBoundsInParent(Rect paramRect)
   {
-    gK.a(gL, paramRect);
+    hf.a(hg, paramRect);
   }
   
   public final void getBoundsInScreen(Rect paramRect)
   {
-    gK.b(gL, paramRect);
+    hf.b(hg, paramRect);
   }
   
   public final CharSequence getClassName()
   {
-    return gK.h(gL);
+    return hf.h(hg);
   }
   
   public final CharSequence getContentDescription()
   {
-    return gK.i(gL);
+    return hf.i(hg);
   }
   
   public final CharSequence getPackageName()
   {
-    return gK.j(gL);
+    return hf.j(hg);
   }
   
   public final int hashCode()
   {
-    if (gL == null) {
+    if (hg == null) {
       return 0;
     }
-    return gL.hashCode();
+    return hg.hashCode();
   }
   
   public final boolean isAccessibilityFocused()
   {
-    return gK.y(gL);
+    return hf.y(hg);
   }
   
   public final boolean isClickable()
   {
-    return gK.n(gL);
+    return hf.n(hg);
   }
   
   public final boolean isEnabled()
   {
-    return gK.o(gL);
+    return hf.o(hg);
   }
   
   public final boolean isFocusable()
   {
-    return gK.p(gL);
+    return hf.p(hg);
   }
   
   public final boolean isFocused()
   {
-    return gK.q(gL);
+    return hf.q(hg);
   }
   
   public final boolean isLongClickable()
   {
-    return gK.r(gL);
+    return hf.r(hg);
   }
   
   public final boolean isSelected()
   {
-    return gK.u(gL);
+    return hf.u(hg);
   }
   
   public final boolean isVisibleToUser()
   {
-    return gK.x(gL);
+    return hf.x(hg);
   }
   
   public final void recycle()
   {
-    gK.v(gL);
+    hf.v(hg);
   }
   
   public final void setAccessibilityFocused(boolean paramBoolean)
   {
-    gK.i(gL, paramBoolean);
+    hf.i(hg, paramBoolean);
   }
   
   public final void setBoundsInParent(Rect paramRect)
   {
-    gK.c(gL, paramRect);
+    hf.c(hg, paramRect);
   }
   
   public final void setBoundsInScreen(Rect paramRect)
   {
-    gK.d(gL, paramRect);
+    hf.d(hg, paramRect);
   }
   
   public final void setClassName(CharSequence paramCharSequence)
   {
-    gK.a(gL, paramCharSequence);
+    hf.a(hg, paramCharSequence);
   }
   
   public final void setClickable(boolean paramBoolean)
   {
-    gK.a(gL, paramBoolean);
+    hf.a(hg, paramBoolean);
   }
   
   public final void setContentDescription(CharSequence paramCharSequence)
   {
-    gK.b(gL, paramCharSequence);
+    hf.b(hg, paramCharSequence);
   }
   
   public final void setEnabled(boolean paramBoolean)
   {
-    gK.b(gL, paramBoolean);
+    hf.b(hg, paramBoolean);
   }
   
   public final void setFocusable(boolean paramBoolean)
   {
-    gK.c(gL, paramBoolean);
+    hf.c(hg, paramBoolean);
   }
   
   public final void setFocused(boolean paramBoolean)
   {
-    gK.d(gL, paramBoolean);
+    hf.d(hg, paramBoolean);
   }
   
   public final void setLongClickable(boolean paramBoolean)
   {
-    gK.e(gL, paramBoolean);
+    hf.e(hg, paramBoolean);
   }
   
   public final void setPackageName(CharSequence paramCharSequence)
   {
-    gK.c(gL, paramCharSequence);
+    hf.c(hg, paramCharSequence);
   }
   
   public final void setParent(View paramView)
   {
-    gK.c(gL, paramView);
+    hf.c(hg, paramView);
   }
   
   public final void setSelected(boolean paramBoolean)
   {
-    gK.g(gL, paramBoolean);
+    hf.g(hg, paramBoolean);
   }
   
   public final void setSource(View paramView)
   {
-    gK.d(gL, paramView);
+    hf.d(hg, paramView);
   }
   
   public final void setVisibleToUser(boolean paramBoolean)
   {
-    gK.h(gL, paramBoolean);
+    hf.h(hg, paramBoolean);
   }
   
   public final String toString()
@@ -246,19 +246,19 @@ public final class a
     localStringBuilder.append("; boundsInScreen: " + localObject);
     localStringBuilder.append("; packageName: ").append(getPackageName());
     localStringBuilder.append("; className: ").append(getClassName());
-    localStringBuilder.append("; text: ").append(gK.k(gL));
+    localStringBuilder.append("; text: ").append(hf.k(hg));
     localStringBuilder.append("; contentDescription: ").append(getContentDescription());
-    localStringBuilder.append("; viewId: ").append(gK.z(gL));
-    localStringBuilder.append("; checkable: ").append(gK.l(gL));
-    localStringBuilder.append("; checked: ").append(gK.m(gL));
+    localStringBuilder.append("; viewId: ").append(hf.z(hg));
+    localStringBuilder.append("; checkable: ").append(hf.l(hg));
+    localStringBuilder.append("; checked: ").append(hf.m(hg));
     localStringBuilder.append("; focusable: ").append(isFocusable());
     localStringBuilder.append("; focused: ").append(isFocused());
     localStringBuilder.append("; selected: ").append(isSelected());
     localStringBuilder.append("; clickable: ").append(isClickable());
     localStringBuilder.append("; longClickable: ").append(isLongClickable());
     localStringBuilder.append("; enabled: ").append(isEnabled());
-    localStringBuilder.append("; password: ").append(gK.s(gL));
-    localStringBuilder.append("; scrollable: " + gK.t(gL));
+    localStringBuilder.append("; password: ").append(hf.s(hg));
+    localStringBuilder.append("; scrollable: " + hf.t(hg));
     localStringBuilder.append("; [");
     int i = getActions();
     if (i != 0)

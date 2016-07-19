@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/azb" android:background="@color/a8" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <GridView android:scrollbarStyle="outsideOverlay" android:gravity="center" android:layout_gravity="center" android:id="@id/azc" android:paddingTop="1.0dip" android:fadingEdgeLength="0.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/jd" android:cacheColorHint="#00000000" android:horizontalSpacing="2.0dip" android:verticalSpacing="2.0dip" android:divider="@null" android:dividerHeight="0.0px" android:overScrollMode="never" />
+    <TextView android:textSize="@dimen/h4" android:textColor="@color/p5" android:gravity="center|left" android:id="@id/azd" android:background="@color/gg" android:paddingLeft="@dimen/j8" android:paddingTop="@dimen/jb" android:paddingRight="@dimen/j8" android:paddingBottom="@dimen/jb" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textSize="@dimen/i8" android:textColor="@color/j9" android:id="@id/aze" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="130.0dip" android:text="@string/cu" android:layout_centerHorizontal="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/azf" android:background="#cc000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/j7" android:layout_alignParentBottom="true">
+        <ImageButton android:id="@id/azg" android:background="@null" android:layout_width="0.0dip" android:layout_height="@dimen/j7" android:src="@drawable/k8" android:scaleType="center" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/azh" android:background="@null" android:layout_width="0.0dip" android:layout_height="@dimen/j7" android:src="@drawable/k5" android:scaleType="center" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/a5l" android:background="@null" android:layout_width="0.0dip" android:layout_height="@dimen/j7" android:src="@drawable/k6" android:scaleType="center" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/azi" android:background="@null" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="@dimen/j7" android:src="@drawable/k7" android:scaleType="center" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

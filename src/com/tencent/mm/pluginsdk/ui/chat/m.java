@@ -8,37 +8,37 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
-import com.tencent.mm.aw.a;
+import com.tencent.mm.az.a;
 import com.tencent.mm.compatible.util.c;
 import com.tencent.mm.pluginsdk.ui.VoiceSearchLayout;
 import com.tencent.mm.pluginsdk.ui.VoiceSearchLayout.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class m
   extends LinearLayout
 {
-  private Button eYN;
-  private int iKh = a.fromDPToPix(getContext(), 215);
-  VoiceSearchLayout iMC;
-  private Button iMD;
-  private a iME;
-  VoiceSearchLayout.a iMF = new VoiceSearchLayout.a()
+  private Button fhh;
+  private int jhd = a.fromDPToPix(getContext(), 215);
+  private Button jjA;
+  a jjB;
+  VoiceSearchLayout.a jjC = new VoiceSearchLayout.a()
   {
     public final void a(boolean paramAnonymousBoolean, String[] paramAnonymousArrayOfString, long paramAnonymousLong)
     {
       if ((m.a(m.this) != null) && (paramAnonymousArrayOfString != null) && (paramAnonymousArrayOfString.length > 0)) {
-        m.a(m.this).ww(paramAnonymousArrayOfString[0]);
+        m.a(m.this).xP(paramAnonymousArrayOfString[0]);
       }
       if (m.b(m.this) == null) {
         m.c(m.this);
       }
     }
     
-    public final void aRk() {}
+    public final void aVW() {}
     
-    public final void aRl() {}
+    public final void aVX() {}
   };
-  private boolean iMG = true;
+  private boolean jjD = true;
+  VoiceSearchLayout jjz;
   
   public m(Context paramContext)
   {
@@ -49,44 +49,44 @@ public final class m
   @TargetApi(16)
   private void init()
   {
-    u.d("!44@/B4Tb64lLpIbEKHKo7kTF7hRtkVut7/Dah097ExZqPw=", "init");
-    View.inflate(getContext(), 2131363013, this);
-    iMD = ((Button)findViewById(2131168992));
-    eYN = ((Button)findViewById(2131166676));
-    iMD.setOnClickListener(new View.OnClickListener()
+    v.d("MicroMsg.VoiceInputPanel", "init");
+    View.inflate(getContext(), 2130904560, this);
+    jjA = ((Button)findViewById(2131759426));
+    fhh = ((Button)findViewById(2131758217));
+    jjA.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
         if (m.a(m.this) != null) {
-          m.a(m.this).aSi();
+          m.a(m.this).aWZ();
         }
       }
     });
-    eYN.setOnClickListener(new View.OnClickListener()
+    fhh.setOnClickListener(new View.OnClickListener()
     {
       public final void onClick(View paramAnonymousView)
       {
         if (m.a(m.this) != null) {
-          m.a(m.this).aSj();
+          m.a(m.this).aXa();
         }
       }
     });
-    if (c.bU(16))
+    if (c.cm(16))
     {
-      findViewById(2131169062).setBackground(null);
+      findViewById(2131759446).setBackground(null);
       return;
     }
-    findViewById(2131169062).setBackgroundDrawable(null);
+    findViewById(2131759446).setBackgroundDrawable(null);
   }
   
-  public final void aRA()
+  public final void aWn()
   {
-    if (iMG)
+    if (jjD)
     {
-      iMG = false;
-      View localView = findViewById(2131168990);
+      jjD = false;
+      View localView = findViewById(2131759424);
       ViewGroup.LayoutParams localLayoutParams = localView.getLayoutParams();
-      int i = iKh;
+      int i = jhd;
       Object localObject = localLayoutParams;
       if (localLayoutParams == null) {
         localObject = new LinearLayout.LayoutParams(-1, i);
@@ -96,32 +96,27 @@ public final class m
     }
   }
   
-  public final void aSn()
+  public final void aXf()
   {
-    ((View)eYN.getParent()).setVisibility(0);
+    ((View)fhh.getParent()).setVisibility(0);
   }
   
-  public final void setCallback(a parama)
+  public final void qr(int paramInt)
   {
-    iME = parama;
-  }
-  
-  public final void setPortHeightPX(int paramInt)
-  {
-    if (iKh != paramInt)
+    if (jhd != paramInt)
     {
-      iKh = paramInt;
-      iMG = true;
+      jhd = paramInt;
+      jjD = true;
     }
   }
   
   public static abstract interface a
   {
-    public abstract void aSi();
+    public abstract void aWZ();
     
-    public abstract void aSj();
+    public abstract void aXa();
     
-    public abstract void ww(String paramString);
+    public abstract void xP(String paramString);
   }
 }
 

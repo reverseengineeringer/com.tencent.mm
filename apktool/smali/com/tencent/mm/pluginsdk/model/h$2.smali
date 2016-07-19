@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iAg:Lcom/tencent/mm/pluginsdk/model/h;
+.field final synthetic iWF:Lcom/tencent/mm/pluginsdk/model/h;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 215
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/h$2;->iAg:Lcom/tencent/mm/pluginsdk/model/h;
+    .line 230
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/h$2;->iWF:Lcom/tencent/mm/pluginsdk/model/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,20 +40,20 @@
     .locals 3
 
     .prologue
-    .line 219
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/h$2;->iAg:Lcom/tencent/mm/pluginsdk/model/h;
+    .line 234
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/h$2;->iWF:Lcom/tencent/mm/pluginsdk/model/h;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/model/h;->f(Lcom/tencent/mm/pluginsdk/model/h;)Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/h$2;->iAg:Lcom/tencent/mm/pluginsdk/model/h;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/h$2;->iWF:Lcom/tencent/mm/pluginsdk/model/h;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/model/h;->f(Lcom/tencent/mm/pluginsdk/model/h;)Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f0b0600
+    const v2, 0x7f0813e8
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -67,6 +67,6 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 220
+    .line 235
     return-void
 .end method

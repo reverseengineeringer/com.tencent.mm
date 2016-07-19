@@ -8,22 +8,22 @@ import android.widget.LinearLayout;
 final class SnsCommentDetailUI$29
   implements Animation.AnimationListener
 {
-  boolean hdj = false;
+  boolean hrW = false;
   
   SnsCommentDetailUI$29(SnsCommentDetailUI paramSnsCommentDetailUI, LinearLayout paramLinearLayout) {}
   
   public final void onAnimationEnd(Animation paramAnimation)
   {
-    if (hdk != null) {
-      hdk.setPressed(false);
+    if (hrX != null) {
+      hrX.setPressed(false);
     }
-    if (!hdj)
+    if (!hrW)
     {
-      hdj = true;
-      if (SnsCommentDetailUI.v(hda) != null)
+      hrW = true;
+      if (SnsCommentDetailUI.v(hrN) != null)
       {
-        SnsCommentDetailUI.v(hda).clearAnimation();
-        SnsCommentDetailUI.v(hda).setVisibility(8);
+        SnsCommentDetailUI.v(hrN).clearAnimation();
+        SnsCommentDetailUI.v(hrN).setVisibility(8);
       }
     }
   }

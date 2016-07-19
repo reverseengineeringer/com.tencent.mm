@@ -8,10 +8,7 @@ final class ChattingUI$a$94
 {
   ChattingUI$a$94(ChattingUI.a parama) {}
   
-  public final void onClick(View paramView)
-  {
-    ChattingUI.a.T(laF);
-  }
+  public final void onClick(View paramView) {}
 }
 
 /* Location:

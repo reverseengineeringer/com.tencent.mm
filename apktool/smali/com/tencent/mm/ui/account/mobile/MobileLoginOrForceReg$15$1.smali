@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic ktw:Lcom/tencent/mm/modelsimple/t;
+.field final synthetic kSE:Lcom/tencent/mm/modelsimple/r;
 
-.field final synthetic kyv:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$15;
+.field final synthetic kXC:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$15;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$15;Lcom/tencent/mm/modelsimple/t;)V
+.method constructor <init>(Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$15;Lcom/tencent/mm/modelsimple/r;)V
     .locals 0
 
     .prologue
     .line 375
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$15$1;->kyv:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$15;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$15$1;->kXC:Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$15;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$15$1;->ktw:Lcom/tencent/mm/modelsimple/t;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$15$1;->kSE:Lcom/tencent/mm/modelsimple/r;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,13 +45,13 @@
 
     .prologue
     .line 379
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$15$1;->ktw:Lcom/tencent/mm/modelsimple/t;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/MobileLoginOrForceReg$15$1;->kSE:Lcom/tencent/mm/modelsimple/r;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
     .line 380
     return-void

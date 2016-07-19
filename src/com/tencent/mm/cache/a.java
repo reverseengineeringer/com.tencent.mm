@@ -1,27 +1,27 @@
 package com.tencent.mm.cache;
 
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import java.util.HashMap;
 import java.util.Map;
 
 public abstract interface a
 {
-  public abstract void f(Object paramObject1, Object paramObject2);
-  
   public abstract Object get(Object paramObject);
+  
+  public abstract void i(Object paramObject1, Object paramObject2);
   
   public abstract Object remove(Object paramObject);
   
   public static final class a
   {
-    private static Map boW = new HashMap();
+    private static Map<String, a> bcV = new HashMap();
     
-    private static Object a(a parama, String paramString)
+    private static <T> T a(a parama, String paramString)
     {
       if (parama == null)
       {
-        u.e("!44@/B4Tb64lLpLHfqyLRpCoWpdGl5cyXLfncLG4kHo+hsY=", "null service");
+        v.e("MicroMsg.ICacheService.Factory", "null service");
         return null;
       }
       try
@@ -31,17 +31,17 @@ public abstract interface a
       }
       catch (Exception parama)
       {
-        u.e("!44@/B4Tb64lLpLHfqyLRpCoWpdGl5cyXLfncLG4kHo+hsY=", "cast failed, different type ?");
-        u.e("!44@/B4Tb64lLpLHfqyLRpCoWpdGl5cyXLfncLG4kHo+hsY=", "exception:%s", new Object[] { ay.b(parama) });
+        v.e("MicroMsg.ICacheService.Factory", "cast failed, different type ?");
+        v.e("MicroMsg.ICacheService.Factory", "exception:%s", new Object[] { be.f(parama) });
       }
       return null;
     }
     
-    private static Object a(a parama, String paramString, Object paramObject)
+    private static <T> T a(a parama, String paramString, T paramT)
     {
       if (parama == null)
       {
-        u.e("!44@/B4Tb64lLpLHfqyLRpCoWpdGl5cyXLfncLG4kHo+hsY=", "null service");
+        v.e("MicroMsg.ICacheService.Factory", "null service");
         return null;
       }
       try
@@ -51,41 +51,41 @@ public abstract interface a
       }
       catch (Exception parama)
       {
-        u.e("!44@/B4Tb64lLpLHfqyLRpCoWpdGl5cyXLfncLG4kHo+hsY=", "cast failed, different type ?");
-        u.e("!44@/B4Tb64lLpLHfqyLRpCoWpdGl5cyXLfncLG4kHo+hsY=", "exception:%s", new Object[] { ay.b(parama) });
+        v.e("MicroMsg.ICacheService.Factory", "cast failed, different type ?");
+        v.e("MicroMsg.ICacheService.Factory", "exception:%s", new Object[] { be.f(parama) });
       }
       return null;
     }
     
     public static void a(String paramString, a parama)
     {
-      boW.put(paramString, parama);
+      bcV.put(paramString, parama);
     }
     
-    public static void a(String paramString1, String paramString2, Object paramObject)
+    public static <T> void a(String paramString1, String paramString2, T paramT)
     {
-      paramString1 = cX(paramString1);
+      paramString1 = de(paramString1);
       if (paramString1 == null)
       {
-        u.e("!44@/B4Tb64lLpLHfqyLRpCoWpdGl5cyXLfncLG4kHo+hsY=", "null service");
+        v.e("MicroMsg.ICacheService.Factory", "null service");
         return;
       }
-      paramString1.f(paramString2, paramObject);
+      paramString1.i(paramString2, paramT);
     }
     
-    private static a cX(String paramString)
+    private static a de(String paramString)
     {
-      return (a)boW.get(paramString);
+      return (a)bcV.get(paramString);
     }
     
-    public static Object u(String paramString1, String paramString2)
+    public static <T> T s(String paramString1, String paramString2)
     {
-      return a(cX(paramString1), paramString2, null);
+      return (T)a(de(paramString1), paramString2, null);
     }
     
-    public static void x(String paramString1, String paramString2)
+    public static <T> void t(String paramString1, String paramString2)
     {
-      a(cX(paramString1), paramString2);
+      a(de(paramString1), paramString2);
     }
   }
 }

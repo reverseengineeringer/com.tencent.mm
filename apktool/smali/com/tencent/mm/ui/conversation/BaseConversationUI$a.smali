@@ -13,15 +13,24 @@
     name = "a"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;",
+        ">;"
+    }
+.end annotation
+
 
 # static fields
-.field public static final enum lnq:Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
+.field public static final enum lNK:Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
 
-.field public static final enum lnr:Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
+.field public static final enum lNL:Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
 
-.field public static final enum lns:Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
+.field public static final enum lNM:Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
 
-.field private static final synthetic lnt:[Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
+.field private static final synthetic lNN:[Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
 
 
 # direct methods
@@ -35,60 +44,65 @@
 
     const/4 v2, 0x0
 
-    .line 60
+    .line 63
     new-instance v0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
 
     const-string/jumbo v1, "ACTIVITY_CREATE"
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;->lnq:Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
+    sput-object v0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;->lNK:Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
 
-    .line 61
+    .line 64
     new-instance v0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
 
     const-string/jumbo v1, "ACTIVITY_RESUME"
 
     invoke-direct {v0, v1, v3}, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;->lnr:Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
+    sput-object v0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;->lNL:Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
 
-    .line 62
+    .line 65
     new-instance v0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
 
     const-string/jumbo v1, "ACTIVITY_PAUSE"
 
     invoke-direct {v0, v1, v4}, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;->lns:Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
+    sput-object v0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;->lNM:Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
 
-    .line 59
+    .line 62
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
 
-    sget-object v1, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;->lnq:Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
+    sget-object v1, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;->lNK:Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;->lnr:Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
+    sget-object v1, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;->lNL:Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;->lns:Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
+    sget-object v1, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;->lNM:Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
 
     aput-object v1, v0, v4
 
-    sput-object v0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;->lnt:[Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
+    sput-object v0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;->lNN:[Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .prologue
-    .line 59
+    .line 62
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -98,7 +112,7 @@
     .locals 1
 
     .prologue
-    .line 59
+    .line 62
     const-class v0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -114,8 +128,8 @@
     .locals 1
 
     .prologue
-    .line 59
-    sget-object v0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;->lnt:[Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
+    .line 62
+    sget-object v0, Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;->lNN:[Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;
 
     invoke-virtual {v0}, [Lcom/tencent/mm/ui/conversation/BaseConversationUI$a;->clone()Ljava/lang/Object;
 

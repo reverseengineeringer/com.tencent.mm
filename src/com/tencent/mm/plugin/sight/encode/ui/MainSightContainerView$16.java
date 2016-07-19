@@ -13,8 +13,8 @@ final class MainSightContainerView$16
   
   public final void run()
   {
-    egCA).iF.aP().show();
-    MainSightContainerView.e(gCA).getWindow().clearFlags(1024);
+    egJb).iW.aP().show();
+    MainSightContainerView.e(gJb).getWindow().clearFlags(1024);
   }
 }
 

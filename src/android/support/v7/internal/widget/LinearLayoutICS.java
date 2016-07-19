@@ -13,25 +13,25 @@ import com.tencent.mm.R.b;
 public class LinearLayoutICS
   extends LinearLayout
 {
-  private final Drawable pF;
-  private final int pG;
-  private final int pH;
-  private final int pI;
-  private final int pJ;
+  private final Drawable pT;
+  private final int pU;
+  private final int pV;
+  private final int pW;
+  private final int pX;
   
   public LinearLayoutICS(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.LinearLayoutICS);
-    pF = paramContext.getDrawable(0);
-    if (pF != null)
+    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.WD);
+    pT = paramContext.getDrawable(0);
+    if (pT != null)
     {
-      pG = pF.getIntrinsicWidth();
-      pH = pF.getIntrinsicHeight();
-      pI = paramContext.getInt(1, 0);
-      pJ = paramContext.getDimensionPixelSize(2, 0);
+      pU = pT.getIntrinsicWidth();
+      pV = pT.getIntrinsicHeight();
+      pW = paramContext.getInt(1, 0);
+      pX = paramContext.getDimensionPixelSize(2, 0);
       paramContext.recycle();
-      if (pF != null) {
+      if (pT != null) {
         break label105;
       }
     }
@@ -39,8 +39,8 @@ public class LinearLayoutICS
     {
       setWillNotDraw(bool);
       return;
-      pG = 0;
-      pH = 0;
+      pU = 0;
+      pV = 0;
       break;
       label105:
       bool = false;
@@ -49,20 +49,20 @@ public class LinearLayoutICS
   
   private void a(Canvas paramCanvas, int paramInt)
   {
-    pF.setBounds(getPaddingLeft() + pJ, paramInt, getWidth() - getPaddingRight() - pJ, pH + paramInt);
-    pF.draw(paramCanvas);
+    pT.setBounds(getPaddingLeft() + pX, paramInt, getWidth() - getPaddingRight() - pX, pV + paramInt);
+    pT.draw(paramCanvas);
   }
   
   private void b(Canvas paramCanvas, int paramInt)
   {
-    pF.setBounds(paramInt, getPaddingTop() + pJ, pG + paramInt, getHeight() - getPaddingBottom() - pJ);
-    pF.draw(paramCanvas);
+    pT.setBounds(paramInt, getPaddingTop() + pX, pU + paramInt, getHeight() - getPaddingBottom() - pX);
+    pT.draw(paramCanvas);
   }
   
-  public boolean A(int paramInt)
+  public boolean F(int paramInt)
   {
     if (paramInt == 0) {
-      if ((pI & 0x1) == 0) {}
+      if ((pW & 0x1) == 0) {}
     }
     do
     {
@@ -71,9 +71,9 @@ public class LinearLayoutICS
       if (paramInt != getChildCount()) {
         break;
       }
-    } while ((pI & 0x4) != 0);
+    } while ((pW & 0x4) != 0);
     return false;
-    if ((pI & 0x2) != 0)
+    if ((pW & 0x2) != 0)
     {
       paramInt -= 1;
       for (;;)
@@ -97,7 +97,7 @@ public class LinearLayoutICS
     int i;
     int j;
     LinearLayout.LayoutParams localLayoutParams;
-    if (pF != null)
+    if (pT != null)
     {
       i = indexOfChild(paramView);
       j = getChildCount();
@@ -105,25 +105,25 @@ public class LinearLayoutICS
       if (getOrientation() != 1) {
         break label97;
       }
-      if (!A(i)) {
+      if (!F(i)) {
         break label67;
       }
-      topMargin = pH;
+      topMargin = pV;
     }
     for (;;)
     {
       super.measureChildWithMargins(paramView, paramInt1, paramInt2, paramInt3, paramInt4);
       return;
       label67:
-      if ((i == j - 1) && (A(j)))
+      if ((i == j - 1) && (F(j)))
       {
-        bottomMargin = pH;
+        bottomMargin = pV;
         continue;
         label97:
-        if (A(i)) {
-          leftMargin = pG;
-        } else if ((i == j - 1) && (A(j))) {
-          rightMargin = pG;
+        if (F(i)) {
+          leftMargin = pU;
+        } else if ((i == j - 1) && (F(j))) {
+          rightMargin = pU;
         }
       }
     }
@@ -140,20 +140,20 @@ public class LinearLayoutICS
       while (i < j)
       {
         localView = getChildAt(i);
-        if ((localView != null) && (localView.getVisibility() != 8) && (A(i)))
+        if ((localView != null) && (localView.getVisibility() != 8) && (F(i)))
         {
           localLayoutParams = (LinearLayout.LayoutParams)localView.getLayoutParams();
           a(paramCanvas, localView.getTop() - topMargin);
         }
         i += 1;
       }
-      if (A(j))
+      if (F(j))
       {
         localView = getChildAt(j - 1);
         if (localView != null) {
           break label127;
         }
-        i = getHeight() - getPaddingBottom() - pH;
+        i = getHeight() - getPaddingBottom() - pV;
         a(paramCanvas, i);
       }
     }
@@ -168,17 +168,17 @@ public class LinearLayoutICS
       while (i < j)
       {
         localView = getChildAt(i);
-        if ((localView != null) && (localView.getVisibility() != 8) && (A(i)))
+        if ((localView != null) && (localView.getVisibility() != 8) && (F(i)))
         {
           localLayoutParams = (LinearLayout.LayoutParams)localView.getLayoutParams();
           b(paramCanvas, localView.getLeft() - leftMargin);
         }
         i += 1;
       }
-    } while (!A(j));
+    } while (!F(j));
     View localView = getChildAt(j - 1);
     if (localView == null) {}
-    for (int i = getWidth() - getPaddingRight() - pG;; i = localView.getRight())
+    for (int i = getWidth() - getPaddingRight() - pU;; i = localView.getRight())
     {
       b(paramCanvas, i);
       return;

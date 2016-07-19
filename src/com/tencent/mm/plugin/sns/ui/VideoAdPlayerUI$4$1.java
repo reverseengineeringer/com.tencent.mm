@@ -11,7 +11,7 @@ final class VideoAdPlayerUI$4$1
   
   public final void run()
   {
-    a.coa.j(val$intent, hne.hnc);
+    a.cjo.j(val$intent, hDz.hDx);
   }
 }
 

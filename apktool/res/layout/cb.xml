@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:form="http://schemas.android.com/apk/res-auto">
+    <com.tencent.mm.ui.bindqq.AutoBottomScrollView android:id="@id/nk" android:scrollbars="none" style="@style/MMScroll">
+        <LinearLayout android:gravity="center_horizontal" android:paddingLeft="@dimen/ct" android:paddingTop="@dimen/hb" android:paddingRight="@dimen/ct" android:paddingBottom="@dimen/hf" style="@style/MMBody">
+            <ImageView android:id="@id/ng" android:paddingBottom="@dimen/hf" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ui" />
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/gn" android:gravity="center" android:id="@id/ni" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/hf" android:text="@string/po" android:maxLines="4" android:singleLine="false" android:lineSpacingExtra="4.0dip" style="@style/MMPreferenceTextLarge" />
+            <com.tencent.mm.ui.base.MMFormInputView android:id="@id/nl" form:form_layout="@layout/y5" form:form_title="@string/bb2" form:form_hint="@string/q3" style="@style/MMFormInputView" />
+            <com.tencent.mm.ui.base.MMFormInputView android:id="@id/nm" form:form_layout="@layout/y7" form:form_title="@string/bzh" form:form_hint="@string/q2" style="@style/MMFormInputView" />
+            <TextView android:textSize="@dimen/h4" android:textColor="@color/om" android:gravity="center" android:id="@id/nn" android:paddingTop="@dimen/j8" android:paddingBottom="@dimen/j8" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/po" android:lineSpacingExtra="4.0dip" style="@style/MMBriefText" />
+            <LinearLayout android:id="@id/no" android:layout_marginTop="@dimen/he" style="@style/MMSolidGreenLargeButton">
+                <TextView android:textSize="20.0dip" android:gravity="center" android:layout_gravity="center" android:id="@id/np" android:background="@null" android:padding="0.0dip" android:text="@string/q5" style="@style/MMSolidGreenLargeButton" />
+                <ProgressBar android:layout_gravity="center" android:id="@id/nq" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/smallCustomProgressBar" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.tencent.mm.ui.bindqq.AutoBottomScrollView>
+</LinearLayout>

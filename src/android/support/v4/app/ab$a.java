@@ -4,7 +4,7 @@ import android.content.Intent;
 
 public abstract interface ab$a
 {
-  public abstract Intent ac();
+  public abstract Intent aa();
 }
 
 /* Location:

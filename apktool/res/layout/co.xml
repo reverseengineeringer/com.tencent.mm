@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout android:id="@id/p9" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.plugin.bottle.ui.BottleImageView android:id="@id/p_" android:background="@drawable/ux" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/w0" android:layout_x="0.0dip" android:layout_y="0.0dip" />
+    <TextView android:id="@id/pa" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</AbsoluteLayout>

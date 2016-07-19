@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:padding="10.0dip" style="@style/NavPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/j1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.tencent.mm.ui.widget.MMEditText android:gravity="top" android:id="@id/g6" android:background="@null" android:layout_width="fill_parent" android:layout_height="0.0dip" android:minHeight="130.0dip" android:singleLine="false" android:layout_weight="1.0" style="@style/MMEditText" />
+        <TextView android:layout_gravity="right" android:id="@id/a_b" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

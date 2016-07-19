@@ -1,24 +1,24 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import com.tencent.mm.ui.base.MMPullDownView.f;
+import android.widget.ListView;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.g;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class SnsTimeLineUI$11
-  implements MMPullDownView.f
+  implements Runnable
 {
   SnsTimeLineUI$11(SnsTimeLineUI paramSnsTimeLineUI) {}
   
-  public final void B(float paramFloat)
+  public final void run()
   {
-    if ((hkJ.gSN.getTop() >= rhkJ).hkY) || (paramFloat > 0.0F)) {
-      SnsTimeLineUI.r(hkJ).C(paramFloat);
+    if (SnsTimeLineUI.a(hzE) == null) {}
+    while (SnsTimeLineUI.i(hzE)) {
+      return;
     }
-    SnsTimeLineUI.g(hkJ).aAS();
-    hkJ.aAV();
-  }
-  
-  public final void aCK()
-  {
-    SnsTimeLineUI.r(hkJ).aCM();
+    v.v("MicroMsg.SnsTimeLineUI", "zeustest update onFling notify resume %s", new Object[] { Integer.valueOf(jhzE).eLC.getFirstVisiblePosition() - jhzE).eLC.getHeaderViewsCount()) });
+    ad.aBG().start();
+    ahzE).hAc.aFy();
   }
 }
 

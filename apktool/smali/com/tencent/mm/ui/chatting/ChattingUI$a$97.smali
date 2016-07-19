@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.field final synthetic lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 921
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$97;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 4869
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$97;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,15 +36,17 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 1
 
     .prologue
-    .line 923
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$97;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 4873
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$97;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->h(Lcom/tencent/mm/ui/chatting/ChattingUI$a;)V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->Xk()Z
 
-    .line 924
-    return-void
+    .line 4874
+    const/4 v0, 0x0
+
+    return v0
 .end method

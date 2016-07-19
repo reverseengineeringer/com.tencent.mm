@@ -2,9 +2,9 @@ package com.tencent.mm.model.b;
 
 public abstract interface d$a
 {
-  public abstract void uR();
+  public abstract void uT();
   
-  public abstract void uS();
+  public abstract void uU();
 }
 
 /* Location:

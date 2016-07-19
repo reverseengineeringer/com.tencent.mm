@@ -1,104 +1,71 @@
 package com.tencent.mm.protocal.b;
 
-import a.a.a.b;
-import java.util.LinkedList;
-
 public final class ajn
-  extends com.tencent.mm.at.a
+  extends com.tencent.mm.ax.a
 {
-  public aly iXb;
-  public aly jhS;
+  public String emC;
+  public String jDE;
+  public int jFr;
+  public int kdS;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (iXb == null) {
-        throw new b("Not all required fields were included: ChatRoomName");
+      if (emC != null) {
+        paramVarArgs.e(1, emC);
       }
-      if (jhS == null) {
-        throw new b("Not all required fields were included: UserName");
+      if (jDE != null) {
+        paramVarArgs.e(2, jDE);
       }
-      if (iXb != null)
-      {
-        paramVarArgs.cj(1, iXb.kn());
-        iXb.a(paramVarArgs);
-      }
-      if (jhS != null)
-      {
-        paramVarArgs.cj(2, jhS.kn());
-        jhS.a(paramVarArgs);
-      }
+      paramVarArgs.cw(3, kdS);
+      paramVarArgs.cw(4, jFr);
       return 0;
     }
     if (paramInt == 1) {
-      if (iXb == null) {
-        break label486;
+      if (emC == null) {
+        break label308;
       }
     }
-    label486:
-    for (paramInt = a.a.a.a.ch(1, iXb.kn()) + 0;; paramInt = 0)
+    label308:
+    for (paramInt = a.a.a.b.b.a.f(1, emC) + 0;; paramInt = 0)
     {
       int i = paramInt;
-      if (jhS != null) {
-        i = paramInt + a.a.a.a.ch(2, jhS.kn());
+      if (jDE != null) {
+        i = paramInt + a.a.a.b.b.a.f(2, jDE);
       }
-      return i;
+      return i + a.a.a.a.cu(3, kdS) + a.a.a.a.cu(4, jFr);
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
-        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.bog();
+            paramVarArgs.bve();
           }
         }
-        if (iXb == null) {
-          throw new b("Not all required fields were included: ChatRoomName");
-        }
-        if (jhS != null) {
-          break;
-        }
-        throw new b("Not all required fields were included: UserName");
+        break;
       }
       if (paramInt == 3)
       {
-        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
         ajn localajn = (ajn)paramVarArgs[1];
-        paramInt = ((Integer)paramVarArgs[2]).intValue();
-        Object localObject2;
-        boolean bool;
-        switch (paramInt)
+        switch (((Integer)paramVarArgs[2]).intValue())
         {
         default: 
           return -1;
         case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-          i = paramVarArgs.size();
-          paramInt = 0;
-          while (paramInt < i)
-          {
-            localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new aly();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-            for (bool = true; bool; bool = ((aly)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
-            iXb = ((aly)localObject1);
-            paramInt += 1;
-          }
+          emC = mMY.readString();
+          return 0;
+        case 2: 
+          jDE = mMY.readString();
+          return 0;
+        case 3: 
+          kdS = mMY.id();
+          return 0;
         }
-        paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
-        i = paramVarArgs.size();
-        paramInt = 0;
-        while (paramInt < i)
-        {
-          localObject2 = (byte[])paramVarArgs.get(paramInt);
-          localObject1 = new aly();
-          localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
-          for (bool = true; bool; bool = ((aly)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
-          jhS = ((aly)localObject1);
-          paramInt += 1;
-        }
-        break;
+        jFr = mMY.id();
+        return 0;
       }
       return -1;
     }

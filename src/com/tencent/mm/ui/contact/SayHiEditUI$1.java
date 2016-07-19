@@ -7,7 +7,7 @@ import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.pluginsdk.model.l;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.j;
@@ -21,21 +21,21 @@ final class SayHiEditUI$1
   
   public final boolean onMenuItemClick(final MenuItem paramMenuItem)
   {
-    llS.age();
+    lMh.aiI();
     paramMenuItem = new LinkedList();
-    paramMenuItem.add(dFW);
+    paramMenuItem.add(cJR);
     Object localObject = new LinkedList();
-    ((LinkedList)localObject).add(Integer.valueOf(fzb));
-    paramMenuItem = new l(2, paramMenuItem, (List)localObject, SayHiEditUI.a(llS), "");
-    ah.tE().d(paramMenuItem);
-    localObject = llS;
-    ActionBarActivity localActionBarActivity = llS.koJ.kpc;
-    llS.getString(2131430877);
-    SayHiEditUI.a((SayHiEditUI)localObject, g.a(localActionBarActivity, llS.getString(2131431087), true, new DialogInterface.OnCancelListener()
+    ((LinkedList)localObject).add(Integer.valueOf(fIf));
+    paramMenuItem = new l(2, paramMenuItem, (List)localObject, SayHiEditUI.a(lMh), "");
+    ah.tF().a(paramMenuItem, 0);
+    localObject = lMh;
+    ActionBarActivity localActionBarActivity = lMh.kNN.kOg;
+    lMh.getString(2131231028);
+    SayHiEditUI.a((SayHiEditUI)localObject, g.a(localActionBarActivity, lMh.getString(2131234901), true, new DialogInterface.OnCancelListener()
     {
       public final void onCancel(DialogInterface paramAnonymousDialogInterface)
       {
-        ah.tE().c(paramMenuItem);
+        ah.tF().c(paramMenuItem);
       }
     }));
     return false;

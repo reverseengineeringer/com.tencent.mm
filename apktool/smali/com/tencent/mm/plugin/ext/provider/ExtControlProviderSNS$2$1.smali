@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic dLz:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSNS$2;
+.field final synthetic dNg:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSNS$2;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 396
-    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSNS$2$1;->dLz:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSNS$2;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSNS$2$1;->dNg:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSNS$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 399
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSNS$2$1;->dLz:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSNS$2;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSNS$2$1;->dNg:Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSNS$2;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSNS$2;->dKP:Lcom/tencent/mm/pluginsdk/d/a/a;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderSNS$2;->dMy:Lcom/tencent/mm/pluginsdk/d/a/a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/d/a/a;->countDown()V
 

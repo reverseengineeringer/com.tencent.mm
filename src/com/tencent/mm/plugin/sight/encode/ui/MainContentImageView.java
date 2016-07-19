@@ -7,9 +7,9 @@ import android.widget.ImageView;
 public class MainContentImageView
   extends ImageView
 {
-  private final String TAG = "!44@/B4Tb64lLpKt6d5qnDZ0amuE1L9es0a5kVaOtBxYgA0=";
-  boolean gBH = false;
-  a gBI;
+  private final String TAG = "MicroMsg.MainContentImageView";
+  boolean gIj = false;
+  public a gIk;
   
   public MainContentImageView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -24,19 +24,14 @@ public class MainContentImageView
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
-    if (gBI != null) {
-      gBI.lb(paramInt2);
+    if (gIk != null) {
+      gIk.mi(paramInt2);
     }
-  }
-  
-  public void setIsTouchShow(boolean paramBoolean)
-  {
-    gBH = paramBoolean;
   }
   
   public static abstract interface a
   {
-    public abstract void lb(int paramInt);
+    public abstract void mi(int paramInt);
   }
 }
 

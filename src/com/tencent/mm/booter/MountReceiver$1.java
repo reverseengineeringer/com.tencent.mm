@@ -3,13 +3,11 @@ package com.tencent.mm.booter;
 import android.os.Looper;
 import android.os.Message;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.base.s;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class MountReceiver$1
-  extends aa
+  extends ac
 {
   MountReceiver$1(MountReceiver paramMountReceiver, Looper paramLooper)
   {
@@ -19,23 +17,23 @@ final class MountReceiver$1
   public final void handleMessage(Message paramMessage)
   {
     boolean bool1 = true;
-    paramMessage = MountReceiver.a(bmE);
-    boolean bool2 = ah.rh();
-    if (MountReceiver.b(bmE) == null)
+    paramMessage = MountReceiver.a(bak);
+    boolean bool2 = ah.rg();
+    if (MountReceiver.b(bak) == null)
     {
-      u.d("!32@/B4Tb64lLpL+FWZRD8Ro5jXlpJB9munM", "dkmount action:%s hasuin:%b ContextNull:%b SdcardFull:%b", new Object[] { paramMessage, Boolean.valueOf(bool2), Boolean.valueOf(bool1), Boolean.valueOf(t.FV()) });
-      if (MountReceiver.b(bmE) != null) {
+      v.d("MicroMsg.MountReceiver", "dkmount action:%s hasuin:%b ContextNull:%b SdcardFull:%b", new Object[] { paramMessage, Boolean.valueOf(bool2), Boolean.valueOf(bool1), Boolean.valueOf(com.tencent.mm.platformtools.s.Gs()) });
+      if (MountReceiver.b(bak) != null) {
         break label78;
       }
     }
     label78:
-    while (!t.FV())
+    while (!com.tencent.mm.platformtools.s.Gs())
     {
       return;
       bool1 = false;
       break;
     }
-    s.en(MountReceiver.b(bmE));
+    com.tencent.mm.ui.base.s.eq(MountReceiver.b(bak));
   }
 }
 

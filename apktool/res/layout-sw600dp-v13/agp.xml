@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/csa" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/csb" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/au9" android:scaleType="centerCrop" />
+    </FrameLayout>
+    <TextView android:textColor="#ffffffff" android:layout_gravity="right" android:id="@id/csd" android:paddingLeft="15.0dip" android:paddingBottom="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:layout_marginRight="13.0dip" />
+    <RelativeLayout android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/cse" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="55.0dip" android:layout_alignParentBottom="true">
+            <Button android:textSize="20.0dip" android:id="@id/c32" android:layout_width="140.0dip" android:layout_height="55.0dip" android:layout_marginLeft="130.0dip" android:text="@string/b5m" android:layout_alignParentLeft="true" style="@style/MMSolidGreenLargeButton" />
+            <Button android:textSize="20.0dip" android:id="@id/c31" android:layout_width="140.0dip" android:layout_height="55.0dip" android:layout_marginRight="130.0dip" android:text="@string/b5l" android:layout_alignParentRight="true" style="@style/MMSolidWhiteLargeButton" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -52,6 +52,8 @@ public abstract interface IX5WebViewBase
   
   public abstract IX5WebBackForwardList copyBackForwardList();
   
+  public abstract Object createPrintDocumentAdapter(String paramString);
+  
   public abstract void destroy();
   
   public abstract void documentHasImages(Message paramMessage);
@@ -78,8 +80,6 @@ public abstract interface IX5WebViewBase
   public abstract int getContentWidth();
   
   public abstract Bitmap getFavicon();
-  
-  public abstract Object getGamePlayerWebViewClient();
   
   public abstract HitTestResult getHitTestResult();
   
@@ -123,7 +123,7 @@ public abstract interface IX5WebViewBase
   
   public abstract void loadUrl(String paramString);
   
-  public abstract void loadUrl(String paramString, Map paramMap);
+  public abstract void loadUrl(String paramString, Map<String, String> paramMap);
   
   public abstract void onPause();
   
@@ -168,7 +168,7 @@ public abstract interface IX5WebViewBase
   
   public abstract void saveWebArchive(String paramString);
   
-  public abstract void saveWebArchive(String paramString, boolean paramBoolean, ValueCallback paramValueCallback);
+  public abstract void saveWebArchive(String paramString, boolean paramBoolean, ValueCallback<String> paramValueCallback);
   
   public abstract void setBackgroundColor(int paramInt);
   
@@ -177,8 +177,6 @@ public abstract interface IX5WebViewBase
   public abstract void setDownloadListener(DownloadListener paramDownloadListener);
   
   public abstract void setFindListener(FindListener paramFindListener);
-  
-  public abstract void setGamePlayerWebViewClient(Object paramObject);
   
   public abstract void setHorizontalScrollbarOverlay(boolean paramBoolean);
   
@@ -227,13 +225,17 @@ public abstract interface IX5WebViewBase
     public static final int PHONE_TYPE = 2;
     public static final int SRC_ANCHOR_TYPE = 7;
     public static final int SRC_IMAGE_ANCHOR_TYPE = 8;
-    public static final int TEXT_TYPE = 11;
     public static final int UNKNOWN_TYPE = 0;
     private Object mData;
     private String mExtra;
     private boolean mIsFromSinglePress = false;
     private Point mPoint;
     private int mType = 0;
+    
+    protected Bitmap getBitmapData()
+    {
+      return null;
+    }
     
     public Object getData()
     {
@@ -247,7 +249,7 @@ public abstract interface IX5WebViewBase
     
     public Point getHitTestPoint()
     {
-      return mPoint;
+      return new Point(mPoint);
     }
     
     public int getType()
@@ -309,6 +311,11 @@ public abstract interface IX5WebViewBase
       public long mRawDataSize;
       
       public ImageAnchorData() {}
+      
+      public Bitmap getBitmap()
+      {
+        return getBitmapData();
+      }
     }
     
     public class ImageData
@@ -318,6 +325,11 @@ public abstract interface IX5WebViewBase
       public long mRawDataSize;
       
       public ImageData() {}
+      
+      public Bitmap getBitmap()
+      {
+        return getBitmapData();
+      }
     }
   }
   

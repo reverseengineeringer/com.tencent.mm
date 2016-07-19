@@ -13,45 +13,45 @@
 
 
 # static fields
-.field private static final cJN:[I
+.field private static final cGR:[I
 
-.field private static final iHI:[I
+.field private static final jeE:[I
 
-.field private static final iHJ:[I
+.field private static final jeF:[I
 
 
 # instance fields
-.field private aBK:Z
+.field private aoc:Z
 
-.field private bUf:I
+.field private bNG:I
 
-.field private final cKj:Lcom/tencent/mm/sdk/platformtools/af;
+.field private final cHn:Lcom/tencent/mm/sdk/platformtools/ah;
 
-.field public cTx:Landroid/view/View;
+.field public cQS:Landroid/view/View;
 
-.field public iHA:Landroid/widget/Button;
+.field public jeA:Landroid/view/View;
 
-.field private iHB:Z
+.field public jeB:Landroid/graphics/drawable/AnimationDrawable;
 
-.field private iHC:I
+.field jeC:Lcom/tencent/mm/ar/d;
 
-.field private iHD:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$b;
+.field public jeD:Z
 
-.field public iHE:Landroid/view/View;
+.field private jeG:I
 
-.field public iHF:Landroid/graphics/drawable/AnimationDrawable;
+.field private jeH:I
 
-.field iHG:Lcom/tencent/mm/ao/d;
+.field private jeI:I
 
-.field public iHH:Z
+.field public jev:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
 
-.field private iHK:I
+.field public jew:Landroid/widget/Button;
 
-.field private iHL:I
+.field private jex:Z
 
-.field private iHz:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
+.field private jey:I
 
-.field private ts:I
+.field public jez:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$b;
 
 
 # direct methods
@@ -66,7 +66,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cJN:[I
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cGR:[I
 
     .line 55
     const/16 v0, 0xa
@@ -75,7 +75,7 @@
 
     fill-array-data v0, :array_1
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHI:[I
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeE:[I
 
     .line 60
     const/4 v0, 0x5
@@ -84,7 +84,7 @@
 
     fill-array-data v0, :array_2
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHJ:[I
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeF:[I
 
     return-void
 
@@ -93,45 +93,45 @@
 
     :array_0
     .array-data 4
-        0x7f04060e
-        0x7f040626
-        0x7f040608
-        0x7f0405f2
-        0x7f040610
-        0x7f0405fb
-        0x7f040600
-        0x7f0405ff
-        0x7f0405f9
-        0x7f04061f
-        0x7f040605
-        0x7f040617
-        0x7f0405ea
-        0x7f0405e0
+        0x7f02082d
+        0x7f02082e
+        0x7f02082f
+        0x7f020830
+        0x7f020819
+        0x7f02081a
+        0x7f02081b
+        0x7f02081c
+        0x7f02081d
+        0x7f02081e
+        0x7f02081f
+        0x7f020820
+        0x7f020821
+        0x7f020822
     .end array-data
 
     .line 55
     :array_1
     .array-data 4
-        0x7f04060e
-        0x7f04060e
-        0x7f04060e
-        0x7f040626
-        0x7f040608
-        0x7f040626
-        0x7f04060e
-        0x7f0405f2
-        0x7f04060e
-        0x7f04060e
+        0x7f02082d
+        0x7f02082d
+        0x7f02082d
+        0x7f02082e
+        0x7f02082f
+        0x7f02082e
+        0x7f02082d
+        0x7f020830
+        0x7f02082d
+        0x7f02082d
     .end array-data
 
     .line 60
     :array_2
     .array-data 4
-        0x7f0405f1
-        0x7f040621
-        0x7f040621
-        0x7f040621
-        0x7f0405f1
+        0x7f020823
+        0x7f02082c
+        0x7f02082c
+        0x7f02082c
+        0x7f020823
     .end array-data
 .end method
 
@@ -147,37 +147,37 @@
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     .line 34
-    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cTx:Landroid/view/View;
+    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cQS:Landroid/view/View;
 
     .line 35
-    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHz:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
+    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jev:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
 
     .line 37
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aBK:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aoc:Z
 
     .line 38
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHB:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jex:Z
 
     .line 39
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHC:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jey:I
 
     .line 47
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHH:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeD:Z
 
     .line 290
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->bUf:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->bNG:I
 
     .line 291
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->ts:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeG:I
 
     .line 292
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHK:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeH:I
 
     .line 293
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHL:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeI:I
 
     .line 301
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/af;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ah;
 
     new-instance v1, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$2;
 
@@ -185,9 +185,9 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;-><init>(Lcom/tencent/mm/sdk/platformtools/af$a;Z)V
+    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/ah;-><init>(Lcom/tencent/mm/sdk/platformtools/ah$a;Z)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cKj:Lcom/tencent/mm/sdk/platformtools/af;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cHn:Lcom/tencent/mm/sdk/platformtools/ah;
 
     .line 99
     invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->init(Landroid/content/Context;)V
@@ -208,37 +208,37 @@
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 34
-    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cTx:Landroid/view/View;
+    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cQS:Landroid/view/View;
 
     .line 35
-    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHz:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
+    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jev:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
 
     .line 37
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aBK:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aoc:Z
 
     .line 38
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHB:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jex:Z
 
     .line 39
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHC:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jey:I
 
     .line 47
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHH:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeD:Z
 
     .line 290
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->bUf:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->bNG:I
 
     .line 291
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->ts:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeG:I
 
     .line 292
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHK:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeH:I
 
     .line 293
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHL:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeI:I
 
     .line 301
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/af;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ah;
 
     new-instance v1, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$2;
 
@@ -246,9 +246,9 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;-><init>(Lcom/tencent/mm/sdk/platformtools/af$a;Z)V
+    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/ah;-><init>(Lcom/tencent/mm/sdk/platformtools/ah$a;Z)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cKj:Lcom/tencent/mm/sdk/platformtools/af;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cHn:Lcom/tencent/mm/sdk/platformtools/ah;
 
     .line 94
     invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->init(Landroid/content/Context;)V
@@ -272,37 +272,37 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 34
-    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cTx:Landroid/view/View;
+    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cQS:Landroid/view/View;
 
     .line 35
-    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHz:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
+    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jev:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
 
     .line 37
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aBK:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aoc:Z
 
     .line 38
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHB:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jex:Z
 
     .line 39
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHC:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jey:I
 
     .line 47
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHH:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeD:Z
 
     .line 290
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->bUf:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->bNG:I
 
     .line 291
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->ts:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeG:I
 
     .line 292
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHK:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeH:I
 
     .line 293
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHL:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeI:I
 
     .line 301
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/af;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ah;
 
     new-instance v1, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$2;
 
@@ -310,9 +310,9 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;-><init>(Lcom/tencent/mm/sdk/platformtools/af$a;Z)V
+    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/ah;-><init>(Lcom/tencent/mm/sdk/platformtools/ah$a;Z)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cKj:Lcom/tencent/mm/sdk/platformtools/af;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cHn:Lcom/tencent/mm/sdk/platformtools/ah;
 
     .line 89
     invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->init(Landroid/content/Context;)V
@@ -321,27 +321,27 @@
     return-void
 .end method
 
-.method private static Bq()V
+.method private static Bs()V
     .locals 3
 
     .prologue
     .line 393
-    const-string/jumbo v0, "!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY="
+    const-string/jumbo v0, "MicroMsg.VoiceSearchLayout"
 
     const-string/jumbo v1, "resumeMusic"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 394
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
-    iget-object v1, v0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    iget-object v1, v0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     if-eqz v1, :cond_0
 
-    iget-object v0, v0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     const/4 v1, 0x3
 
@@ -355,12 +355,19 @@
 .end method
 
 .method static synthetic a(Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;I)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 30
-    invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->setAmpImage(I)V
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jew:Landroid/widget/Button;
 
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jew:Landroid/widget/Button;
+
+    invoke-virtual {v0, p1}, Landroid/widget/Button;->setBackgroundResource(I)V
+
+    :cond_0
     return-void
 .end method
 
@@ -372,21 +379,21 @@
     if-eqz p1, :cond_1
 
     .line 342
-    const-string/jumbo v0, "!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY="
+    const-string/jumbo v0, "MicroMsg.VoiceSearchLayout"
 
     const-string/jumbo v1, "pauseMusic"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tG()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
-    iget-object v1, v0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    iget-object v1, v0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     if-eqz v1, :cond_0
 
-    iget-object v0, v0, Lcom/tencent/mm/compatible/b/d;->bpu:Landroid/media/AudioManager;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/b/d;->bdt:Landroid/media/AudioManager;
 
     const/4 v1, 0x3
 
@@ -428,7 +435,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "/2130903379"
+    const-string/jumbo v3, "/2131165726"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -487,7 +494,7 @@
 
     .line 344
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->Bq()V
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->Bs()V
 
     goto :goto_0
 
@@ -516,7 +523,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "/2130903392"
+    const-string/jumbo v3, "/2131165658"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -548,37 +555,37 @@
 
     .prologue
     .line 30
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aBK:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aoc:Z
 
     return v0
 .end method
 
-.method static synthetic aRh()[I
+.method static synthetic aVT()[I
     .locals 1
 
     .prologue
     .line 30
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHJ:[I
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeF:[I
 
     return-object v0
 .end method
 
-.method static synthetic aRi()[I
+.method static synthetic aVU()[I
     .locals 1
 
     .prologue
     .line 30
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHI:[I
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeE:[I
 
     return-object v0
 .end method
 
-.method static synthetic aRj()[I
+.method static synthetic aVV()[I
     .locals 1
 
     .prologue
     .line 30
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cJN:[I
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cGR:[I
 
     return-object v0
 .end method
@@ -588,7 +595,7 @@
 
     .prologue
     .line 30
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHC:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jey:I
 
     return v0
 .end method
@@ -598,7 +605,7 @@
 
     .prologue
     .line 30
-    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->ts:I
+    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeG:I
 
     return p1
 .end method
@@ -608,17 +615,17 @@
 
     .prologue
     .line 30
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHB:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jex:Z
 
     return v0
 .end method
 
-.method static synthetic d(Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;)Lcom/tencent/mm/ao/d;
+.method static synthetic d(Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;)Lcom/tencent/mm/ar/d;
     .locals 1
 
     .prologue
     .line 30
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHG:Lcom/tencent/mm/ao/d;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeC:Lcom/tencent/mm/ar/d;
 
     return-object v0
 .end method
@@ -628,7 +635,7 @@
 
     .prologue
     .line 30
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHL:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeI:I
 
     return v0
 .end method
@@ -638,11 +645,11 @@
 
     .prologue
     .line 30
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHL:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeI:I
 
     add-int/lit8 v1, v0, 0x1
 
-    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHL:I
+    iput v1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeI:I
 
     return v0
 .end method
@@ -652,9 +659,60 @@
 
     .prologue
     .line 30
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->bUf:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->bNG:I
 
     return v0
+.end method
+
+.method private gK(Z)V
+    .locals 2
+
+    .prologue
+    .line 244
+    if-eqz p1, :cond_1
+
+    .line 245
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jew:Landroid/widget/Button;
+
+    const v1, 0x7f020804
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
+
+    .line 246
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jew:Landroid/widget/Button;
+
+    invoke-virtual {v0}, Landroid/widget/Button;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/drawable/AnimationDrawable;
+
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeB:Landroid/graphics/drawable/AnimationDrawable;
+
+    .line 247
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeB:Landroid/graphics/drawable/AnimationDrawable;
+
+    if-eqz v0, :cond_0
+
+    .line 248
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeB:Landroid/graphics/drawable/AnimationDrawable;
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->start()V
+
+    .line 254
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 252
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jew:Landroid/widget/Button;
+
+    const v1, 0x7f020817
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
+
+    goto :goto_0
 .end method
 
 .method static synthetic h(Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;)I
@@ -662,7 +720,7 @@
 
     .prologue
     .line 30
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->ts:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeG:I
 
     return v0
 .end method
@@ -672,11 +730,11 @@
 
     .prologue
     .line 30
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHK:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeH:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHK:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeH:I
 
     return v0
 .end method
@@ -686,18 +744,18 @@
 
     .prologue
     .line 103
-    const v0, 0x7f0a04e5
+    const v0, 0x7f0305f9
 
     invoke-static {p1, v0, p0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cTx:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cQS:Landroid/view/View;
 
     .line 104
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cTx:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cQS:Landroid/view/View;
 
-    const v1, 0x7f070f28
+    const v1, 0x7f101158
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -705,23 +763,23 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHA:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jew:Landroid/widget/Button;
 
     .line 105
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cTx:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cQS:Landroid/view/View;
 
-    const v1, 0x7f070f27
+    const v1, 0x7f101157
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHE:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeA:Landroid/view/View;
 
     .line 107
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->setSearchStartBtnView(Z)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->gK(Z)V
 
     .line 108
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->reset()V
@@ -735,7 +793,7 @@
 
     .prologue
     .line 30
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHK:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeH:I
 
     return v0
 .end method
@@ -747,7 +805,7 @@
     .line 30
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHK:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeH:I
 
     return v0
 .end method
@@ -757,11 +815,11 @@
 
     .prologue
     .line 30
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->bUf:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->bNG:I
 
     add-int/lit8 v0, v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->bUf:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->bNG:I
 
     return v0
 .end method
@@ -771,11 +829,11 @@
 
     .prologue
     .line 30
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->bUf:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->bNG:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->bUf:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->bNG:I
 
     return v0
 .end method
@@ -787,9 +845,9 @@
     const/4 v0, 0x1
 
     .line 30
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHB:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jex:Z
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->setSearchStartBtnView(Z)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->gK(Z)V
 
     return-void
 .end method
@@ -808,12 +866,12 @@
     return-void
 .end method
 
-.method static synthetic p(Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;)Lcom/tencent/mm/sdk/platformtools/af;
+.method static synthetic p(Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;)Lcom/tencent/mm/sdk/platformtools/ah;
     .locals 1
 
     .prologue
     .line 30
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cKj:Lcom/tencent/mm/sdk/platformtools/af;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cHn:Lcom/tencent/mm/sdk/platformtools/ah;
 
     return-object v0
 .end method
@@ -823,89 +881,19 @@
 
     .prologue
     .line 30
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHz:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jev:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
 
     return-object v0
 .end method
 
-.method private setAmpImage(I)V
-    .locals 1
-
-    .prologue
-    .line 296
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHA:Landroid/widget/Button;
-
-    if-eqz v0, :cond_0
-
-    .line 297
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHA:Landroid/widget/Button;
-
-    invoke-virtual {v0, p1}, Landroid/widget/Button;->setBackgroundResource(I)V
-
-    .line 299
-    :cond_0
-    return-void
-.end method
-
-.method private setSearchStartBtnView(Z)V
-    .locals 2
-
-    .prologue
-    .line 244
-    if-eqz p1, :cond_1
-
-    .line 245
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHA:Landroid/widget/Button;
-
-    const v1, 0x7f04000b
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
-
-    .line 246
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHA:Landroid/widget/Button;
-
-    invoke-virtual {v0}, Landroid/widget/Button;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/drawable/AnimationDrawable;
-
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHF:Landroid/graphics/drawable/AnimationDrawable;
-
-    .line 247
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHF:Landroid/graphics/drawable/AnimationDrawable;
-
-    if-eqz v0, :cond_0
-
-    .line 248
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHF:Landroid/graphics/drawable/AnimationDrawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->start()V
-
-    .line 254
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 252
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHA:Landroid/widget/Button;
-
-    const v1, 0x7f0405de
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
-
-    goto :goto_0
-.end method
-
 
 # virtual methods
-.method public final aRf()V
+.method public final aVR()V
     .locals 3
 
     .prologue
     .line 121
-    const-string/jumbo v0, "!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY="
+    const-string/jumbo v0, "MicroMsg.VoiceSearchLayout"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -913,7 +901,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aBK:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aoc:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -923,34 +911,34 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 123
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aBK:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aoc:Z
 
     if-eqz v0, :cond_0
 
     .line 124
-    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aRg()V
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aVS()V
 
     .line 125
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aBK:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aoc:Z
 
     .line 127
     :cond_0
     return-void
 .end method
 
-.method public final aRg()V
+.method public final aVS()V
     .locals 4
 
     .prologue
     const/4 v3, 0x0
 
     .line 200
-    const-string/jumbo v0, "!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY="
+    const-string/jumbo v0, "MicroMsg.VoiceSearchLayout"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -958,7 +946,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aBK:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aoc:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -968,25 +956,25 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 202
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aBK:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aoc:Z
 
     if-eqz v0, :cond_0
 
     .line 203
-    iput-boolean v3, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aBK:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aoc:Z
 
     .line 204
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHz:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jev:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
 
     if-eqz v0, :cond_0
 
     .line 205
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHz:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jev:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;->aRl()V
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;->aVX()V
 
     .line 209
     :cond_0
@@ -1005,39 +993,39 @@
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->setVisibility(I)V
 
     .line 213
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHD:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$b;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jez:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$b;
 
     if-eqz v0, :cond_1
 
     .line 214
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHD:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$b;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jez:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$b;
 
-    invoke-interface {v0, v3}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$b;->gm(Z)V
+    invoke-interface {v0, v3}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$b;->gL(Z)V
 
     .line 218
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->Bq()V
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->Bs()V
 
     .line 219
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHG:Lcom/tencent/mm/ao/d;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeC:Lcom/tencent/mm/ar/d;
 
     if-eqz v0, :cond_2
 
     .line 220
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHG:Lcom/tencent/mm/ao/d;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeC:Lcom/tencent/mm/ar/d;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ao/d;->cancel()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ar/d;->cancel()V
 
     .line 223
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cKj:Lcom/tencent/mm/sdk/platformtools/af;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cHn:Lcom/tencent/mm/sdk/platformtools/ah;
 
     if-eqz v0, :cond_3
 
     .line 224
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cKj:Lcom/tencent/mm/sdk/platformtools/af;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cHn:Lcom/tencent/mm/sdk/platformtools/ah;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/af;->aUF()V
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ah;->aZJ()V
 
     .line 226
     :cond_3
@@ -1049,12 +1037,12 @@
 
     .prologue
     .line 113
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHB:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jex:Z
 
     if-nez v0, :cond_0
 
     .line 114
-    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aRf()V
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aVR()V
 
     .line 117
     :cond_0
@@ -1063,7 +1051,7 @@
     return v0
 .end method
 
-.method public final or(I)V
+.method public final pW(I)V
     .locals 7
 
     .prologue
@@ -1078,12 +1066,12 @@
 
     const-string/jumbo v3, "android.permission.RECORD_AUDIO"
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/pluginsdk/g/a;->aL(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v3}, Lcom/tencent/mm/pluginsdk/h/a;->aK(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
     .line 163
-    const-string/jumbo v3, "!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY="
+    const-string/jumbo v3, "MicroMsg.VoiceSearchLayout"
 
     const-string/jumbo v4, "summerper checkPermission checkMicrophone[%b]"
 
@@ -1095,13 +1083,13 @@
 
     aput-object v6, v5, v2
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 164
     if-eqz v0, :cond_3
 
     .line 165
-    const-string/jumbo v0, "!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY="
+    const-string/jumbo v0, "MicroMsg.VoiceSearchLayout"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1109,7 +1097,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-boolean v4, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aBK:Z
+    iget-boolean v4, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aoc:Z
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1119,64 +1107,64 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHC:I
+    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jey:I
 
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aBK:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aoc:Z
 
-    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHB:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jex:Z
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHz:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jev:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHz:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jev:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;->aRk()V
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;->aVW()V
 
     :cond_0
     invoke-virtual {p0, v2}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cKj:Lcom/tencent/mm/sdk/platformtools/af;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->cHn:Lcom/tencent/mm/sdk/platformtools/ah;
 
-    const-wide/16 v3, 0x32
+    const-wide/16 v4, 0x32
 
-    invoke-virtual {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/af;->ds(J)V
+    invoke-virtual {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/ah;->dJ(J)V
 
     const/4 v0, 0x0
 
     invoke-direct {p0, v1, v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->a(ZLcom/tencent/mm/pluginsdk/ui/g;)V
 
-    iput v2, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHL:I
+    iput v2, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeI:I
 
-    new-instance v0, Lcom/tencent/mm/ao/d;
+    new-instance v0, Lcom/tencent/mm/ar/d;
 
     new-instance v3, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$5;
 
     invoke-direct {v3, p0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$5;-><init>(Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;)V
 
-    invoke-direct {v0, v3, p1}, Lcom/tencent/mm/ao/d;-><init>(Lcom/tencent/mm/ao/d$b;I)V
+    invoke-direct {v0, v3, p1}, Lcom/tencent/mm/ar/d;-><init>(Lcom/tencent/mm/ar/d$b;I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHG:Lcom/tencent/mm/ao/d;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeC:Lcom/tencent/mm/ar/d;
 
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHG:Lcom/tencent/mm/ao/d;
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeC:Lcom/tencent/mm/ar/d;
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJjyqE6YDnAp3o91K/Zm7/t"
+    const-string/jumbo v0, "MicroMsg.SceneVoiceAddr"
 
     const-string/jumbo v4, "start record"
 
-    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget v0, v3, Lcom/tencent/mm/ao/d;->chW:I
+    iget v0, v3, Lcom/tencent/mm/ar/d;->cdn:I
 
     if-nez v0, :cond_2
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ah;->dx(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ak;->dy(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -1185,11 +1173,11 @@
     move v0, v1
 
     :goto_0
-    iput-boolean v0, v3, Lcom/tencent/mm/ao/d;->cih:Z
+    iput-boolean v0, v3, Lcom/tencent/mm/ar/d;->cdy:Z
 
-    new-instance v0, Lcom/tencent/mm/ao/d$a;
+    new-instance v0, Lcom/tencent/mm/ar/d$a;
 
-    invoke-direct {v0, v3}, Lcom/tencent/mm/ao/d$a;-><init>(Lcom/tencent/mm/ao/d;)V
+    invoke-direct {v0, v3}, Lcom/tencent/mm/ar/d$a;-><init>(Lcom/tencent/mm/ar/d;)V
 
     const-string/jumbo v1, "SceneVoiceAddr_record"
 
@@ -1237,81 +1225,12 @@
     goto :goto_1
 .end method
 
-.method public final reset()V
-    .locals 3
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 234
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aBK:Z
-
-    .line 235
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHB:Z
-
-    .line 236
-    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->setSearchStartBtnView(Z)V
-
-    .line 237
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aBK:Z
-
-    .line 238
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHB:Z
-
-    .line 239
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHA:Landroid/widget/Button;
-
-    const v1, 0x7f0405de
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
-
-    .line 240
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHE:Landroid/view/View;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f040014
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 241
-    return-void
-.end method
-
-.method public setOnSearchListener(Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;)V
-    .locals 0
-
-    .prologue
-    .line 83
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHz:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$a;
-
-    .line 84
-    return-void
-.end method
-
-.method public setOnVisibleChangeListener(Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$b;)V
-    .locals 0
-
-    .prologue
-    .line 79
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHD:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$b;
-
-    .line 80
-    return-void
-.end method
-
-.method public setTopMargin(I)V
+.method public final pX(I)V
     .locals 2
 
     .prologue
     .line 285
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHE:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeA:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -1323,11 +1242,58 @@
     iput p1, v0, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
     .line 287
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHE:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeA:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 288
+    return-void
+.end method
+
+.method public final reset()V
+    .locals 3
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 234
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aoc:Z
+
+    .line 235
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jex:Z
+
+    .line 236
+    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->gK(Z)V
+
+    .line 237
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->aoc:Z
+
+    .line 238
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jex:Z
+
+    .line 239
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jew:Landroid/widget/Button;
+
+    const v1, 0x7f020817
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
+
+    .line 240
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeA:Landroid/view/View;
+
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f020816
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 241
     return-void
 .end method
 
@@ -1342,7 +1308,7 @@
 
     if-eq v0, p1, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHH:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jeD:Z
 
     if-nez v0, :cond_0
 
@@ -1356,7 +1322,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020063
+    const v1, 0x7f040025
 
     invoke-static {v0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
@@ -1370,19 +1336,19 @@
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 268
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHD:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$b;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jez:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$b;
 
     if-eqz v0, :cond_0
 
     .line 269
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->iHD:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$b;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout;->jez:Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$b;
 
     if-nez p1, :cond_2
 
     const/4 v0, 0x1
 
     :goto_1
-    invoke-interface {v1, v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$b;->gm(Z)V
+    invoke-interface {v1, v0}, Lcom/tencent/mm/pluginsdk/ui/VoiceSearchLayout$b;->gL(Z)V
 
     .line 272
     :cond_0
@@ -1394,7 +1360,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020047
+    const v1, 0x7f040024
 
     invoke-static {v0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 

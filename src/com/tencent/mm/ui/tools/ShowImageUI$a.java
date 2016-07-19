@@ -6,8 +6,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Gallery.LayoutParams;
 import android.widget.ImageView;
-import com.tencent.mm.platformtools.k;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.platformtools.j;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.MultiTouchImageView;
 
 final class ShowImageUI$a
@@ -32,10 +32,10 @@ final class ShowImageUI$a
   
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
-    Object localObject = k.ku(imagePath);
+    Object localObject = j.ld(imagePath);
     if (localObject == null)
     {
-      u.w("!32@/B4Tb64lLpL/S4mvETx9l9B/T4NcFgMX", "get image fail");
+      v.w("MicroMsg.ShowImageUI", "get image fail");
       if (paramView != null)
       {
         localObject = paramView;
@@ -43,9 +43,9 @@ final class ShowImageUI$a
       }
       else
       {
-        localObject = View.inflate(paramViewGroup.getContext(), 2131363026, null);
+        localObject = View.inflate(paramViewGroup.getContext(), 2130904373, null);
       }
-      ((ImageView)((View)localObject).findViewById(2131166875)).setImageResource(2130903595);
+      ((ImageView)((View)localObject).findViewById(2131756743)).setImageResource(2131165394);
       ((View)localObject).setLayoutParams(new Gallery.LayoutParams(-1, -1));
       return (View)localObject;
     }
@@ -57,10 +57,10 @@ final class ShowImageUI$a
     {
       paramView.setLayoutParams(new Gallery.LayoutParams(-1, -1));
       paramView.setImageBitmap((Bitmap)localObject);
-      paramView.setMaxZoomDoubleTab(true);
+      lih = true;
       return paramView;
       paramView = (MultiTouchImageView)paramView;
-      paramView.bN(((Bitmap)localObject).getWidth(), ((Bitmap)localObject).getHeight());
+      paramView.bT(((Bitmap)localObject).getWidth(), ((Bitmap)localObject).getHeight());
     }
   }
 }

@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic kxP:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+.field final synthetic kWW:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
-.field final synthetic kxQ:Lcom/tencent/mm/ui/account/mobile/c;
+.field final synthetic kWX:Lcom/tencent/mm/ui/account/mobile/c;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 106
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kxQ:Lcom/tencent/mm/ui/account/mobile/c;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kWX:Lcom/tencent/mm/ui/account/mobile/c;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kxP:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kWW:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,9 +45,9 @@
 
     .prologue
     .line 110
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kxP:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kWW:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->ksI:Landroid/widget/TextView;
+    iget-object v0, v0, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->kRQ:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -62,48 +62,48 @@
     move-result-object v0
 
     .line 111
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kxP:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kWW:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kxP:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kWW:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->kus:Lcom/tencent/mm/ui/base/MMFormMobileInputView;
+    iget-object v2, v2, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->kTz:Lcom/tencent/mm/ui/base/MMFormMobileInputView;
 
     invoke-virtual {v2}, Lcom/tencent/mm/ui/base/MMFormMobileInputView;->getCountryCode()Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, v1, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->ksR:Ljava/lang/String;
+    iput-object v2, v1, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->kRZ:Ljava/lang/String;
 
     .line 112
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kxP:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kWW:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kxP:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kWW:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->kus:Lcom/tencent/mm/ui/base/MMFormMobileInputView;
+    iget-object v2, v2, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->kTz:Lcom/tencent/mm/ui/base/MMFormMobileInputView;
 
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/MMFormMobileInputView;->getMobileNumber()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/MMFormMobileInputView;->bhO()Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, v1, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->fvR:Ljava/lang/String;
+    iput-object v2, v1, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->fEW:Ljava/lang/String;
 
     .line 113
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kxP:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kWW:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->age()V
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->aiI()V
 
     .line 114
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kxP:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kWW:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kxP:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kWW:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->ksR:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->kRZ:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kxP:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/mobile/c$5;->kWW:Lcom/tencent/mm/ui/account/mobile/MobileInputUI;
 
-    iget-object v3, v3, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->fvR:Ljava/lang/String;
+    iget-object v3, v3, Lcom/tencent/mm/ui/account/mobile/MobileInputUI;->fEW:Ljava/lang/String;
 
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/ui/account/e;->g(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/ui/account/e;->f(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 115
     return-void

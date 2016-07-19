@@ -12,23 +12,23 @@ import android.view.View.OnFocusChangeListener;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import com.tencent.mm.R.b;
-import com.tencent.mm.sdk.platformtools.ai;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.al;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.p;
 import com.tencent.mm.ui.widget.MMEditText.c;
 
 public class MMFormMobileInputView
   extends LinearLayout
 {
-  private int kDL = -1;
-  private int[] kDM;
-  private EditText kDP;
-  private String kDQ = "";
-  private final int kDR = 13;
-  private a kDS = null;
-  private String ksS = "";
-  private EditText kur;
+  private String kSa = "";
+  public EditText kTy;
+  private int lcQ = -1;
+  private int[] lcR;
+  public EditText lcT;
+  private String lcU = "";
+  private final int lcV = 13;
+  public a lcW = null;
   private Context mContext = null;
   
   public MMFormMobileInputView(Context paramContext, AttributeSet paramAttributeSet)
@@ -40,88 +40,78 @@ public class MMFormMobileInputView
   public MMFormMobileInputView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet);
-    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.FormItemView, paramInt, 0);
-    kDL = paramAttributeSet.getResourceId(2, -1);
+    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.Wy, paramInt, 0);
+    lcQ = paramAttributeSet.getResourceId(2, -1);
     paramAttributeSet.recycle();
-    p.ee(paramContext).inflate(2131363244, this);
+    p.ef(paramContext).inflate(2130903969, this);
     mContext = paramContext;
   }
   
-  private void ar(View paramView)
+  private void av(View paramView)
   {
-    kDM = new int[] { paramView.getPaddingLeft(), paramView.getPaddingTop(), paramView.getPaddingRight(), paramView.getPaddingBottom() };
+    lcR = new int[] { paramView.getPaddingLeft(), paramView.getPaddingTop(), paramView.getPaddingRight(), paramView.getPaddingBottom() };
   }
   
-  private void as(View paramView)
+  private void aw(View paramView)
   {
-    if (kDM != null) {
-      paramView.setPadding(kDM[0], kDM[1], kDM[2], kDM[3]);
+    if (lcR != null) {
+      paramView.setPadding(lcR[0], lcR[1], lcR[2], lcR[3]);
     }
   }
   
-  public String getCountryCode()
+  public final String bhO()
   {
-    if (kur != null) {
-      return kur.getText().toString().trim();
-    }
-    return "";
-  }
-  
-  public EditText getCountryCodeEditText()
-  {
-    return kur;
-  }
-  
-  public String getMobileNumber()
-  {
-    if (kDP != null) {
-      return ai.CX(kDP.getText().toString());
+    if (lcT != null) {
+      return al.Fl(lcT.getText().toString());
     }
     return "";
   }
   
-  public EditText getMobileNumberEditText()
+  public final String getCountryCode()
   {
-    return kDP;
+    if (kTy != null) {
+      return kTy.getText().toString().trim();
+    }
+    return "";
   }
   
-  public final void hy(boolean paramBoolean)
+  public final void hW(boolean paramBoolean)
   {
-    ar(kur);
+    av(kTy);
     if (paramBoolean)
     {
-      kur.setBackgroundResource(2130970444);
-      as(kur);
-      ar(kDP);
+      kTy.setBackgroundResource(2130838514);
+      aw(kTy);
+      av(lcT);
       if (!paramBoolean) {
         break label71;
       }
-      kDP.setBackgroundResource(2130970444);
+      lcT.setBackgroundResource(2130838514);
     }
     for (;;)
     {
-      as(kDP);
+      aw(lcT);
       return;
-      kur.setBackgroundResource(2130970418);
+      kTy.setBackgroundResource(2130838515);
       break;
       label71:
-      kDP.setBackgroundResource(2130970418);
+      lcT.setBackgroundResource(2130838515);
     }
   }
   
   public void onFinishInflate()
   {
-    kur = ((EditText)findViewById(2131167043));
-    kDP = ((EditText)findViewById(2131169471));
-    if ((kur == null) || (kDP == null))
+    kTy = ((EditText)findViewById(2131755478));
+    lcT = ((EditText)findViewById(2131758051));
+    if ((kTy == null) || (lcT == null))
     {
-      u.w("!44@/B4Tb64lLpLJ0gQcBqq1VNhsQPYjnP2P5/VEOFZcz1c=", "countryCodeET : %s, mobileNumberET : %s", new Object[] { kur, kDP });
-      if ((kur != null) && (kDP != null))
+      v.w("MicroMsg.MMFormMobileInputView", "countryCodeET : %s, mobileNumberET : %s", new Object[] { kTy, lcT });
+      if ((kTy != null) && (lcT != null))
       {
-        if ((!kur.hasFocus()) && (!kDP.hasFocus())) {
+        if ((!kTy.hasFocus()) && (!lcT.hasFocus())) {
           break label203;
         }
-        hy(true);
+        hW(true);
       }
     }
     for (;;)
@@ -131,16 +121,16 @@ public class MMFormMobileInputView
         public final void onFocusChange(View paramAnonymousView, boolean paramAnonymousBoolean)
         {
           if ((paramAnonymousView == MMFormMobileInputView.a(MMFormMobileInputView.this)) || (paramAnonymousView == MMFormMobileInputView.b(MMFormMobileInputView.this))) {
-            hy(paramAnonymousBoolean);
+            hW(paramAnonymousBoolean);
           }
         }
       };
-      kur.setOnFocusChangeListener(local1);
-      kDP.setOnFocusChangeListener(local1);
-      kDP.addTextChangedListener(new MMEditText.c(kDP, null, 20));
-      kDP.addTextChangedListener(new TextWatcher()
+      kTy.setOnFocusChangeListener(local1);
+      lcT.setOnFocusChangeListener(local1);
+      lcT.addTextChangedListener(new MMEditText.c(lcT, null, 20));
+      lcT.addTextChangedListener(new TextWatcher()
       {
-        private ai eCG = new ai();
+        private al eJd = new al();
         
         public final void afterTextChanged(Editable paramAnonymousEditable)
         {
@@ -151,8 +141,8 @@ public class MMFormMobileInputView
           if ((paramAnonymousEditable != null) && (!paramAnonymousEditable.equals(MMFormMobileInputView.c(MMFormMobileInputView.this))))
           {
             str2 = MMFormMobileInputView.a(MMFormMobileInputView.this).getText().toString();
-            MMFormMobileInputView.a(MMFormMobileInputView.this, ai.formatNumber(str2.replace("+", ""), paramAnonymousEditable));
-            MMFormMobileInputView.b(MMFormMobileInputView.this, ai.formatNumber(str2.replace("+", ""), str1));
+            MMFormMobileInputView.a(MMFormMobileInputView.this, al.formatNumber(str2.replace("+", ""), paramAnonymousEditable));
+            MMFormMobileInputView.b(MMFormMobileInputView.this, al.formatNumber(str2.replace("+", ""), str1));
             if (!paramAnonymousEditable.equals(MMFormMobileInputView.c(MMFormMobileInputView.this))) {}
           }
           else
@@ -165,7 +155,7 @@ public class MMFormMobileInputView
           {
             try
             {
-              MMFormMobileInputView.b(MMFormMobileInputView.this, ai.formatNumber(str2.replace("+", ""), str1));
+              MMFormMobileInputView.b(MMFormMobileInputView.this, al.formatNumber(str2.replace("+", ""), str1));
               if ((paramAnonymousEditable.length() > 13) && (i <= j)) {
                 break label293;
               }
@@ -177,7 +167,7 @@ public class MMFormMobileInputView
             }
             catch (Exception paramAnonymousEditable)
             {
-              u.printErrStackTrace("!44@/B4Tb64lLpLJ0gQcBqq1VNhsQPYjnP2P5/VEOFZcz1c=", paramAnonymousEditable, "", new Object[0]);
+              v.printErrStackTrace("MicroMsg.MMFormMobileInputView", paramAnonymousEditable, "", new Object[0]);
               return;
             }
             MMFormMobileInputView.b(MMFormMobileInputView.this).setSelection(MMFormMobileInputView.d(MMFormMobileInputView.this).toString().length());
@@ -193,12 +183,12 @@ public class MMFormMobileInputView
         
         public final void onTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
       });
-      kur.addTextChangedListener(new TextWatcher()
+      kTy.addTextChangedListener(new TextWatcher()
       {
         public final void afterTextChanged(Editable paramAnonymousEditable)
         {
           String str1 = MMFormMobileInputView.a(MMFormMobileInputView.this).getText().toString();
-          if (ay.kz(str1))
+          if (be.kf(str1))
           {
             MMFormMobileInputView.a(MMFormMobileInputView.this).setText("+");
             MMFormMobileInputView.a(MMFormMobileInputView.this).setSelection(MMFormMobileInputView.a(MMFormMobileInputView.this).getText().toString().length());
@@ -212,7 +202,7 @@ public class MMFormMobileInputView
               for (;;)
               {
                 if (MMFormMobileInputView.e(MMFormMobileInputView.this) != null) {
-                  MMFormMobileInputView.e(MMFormMobileInputView.this).Gs(paramAnonymousEditable);
+                  MMFormMobileInputView.e(MMFormMobileInputView.this).IH(paramAnonymousEditable);
                 }
                 return;
                 if (str1.contains("+")) {
@@ -235,54 +225,19 @@ public class MMFormMobileInputView
         public final void onTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
       });
       return;
-      if (kDL == -1) {
+      if (lcQ == -1) {
         break;
       }
-      kDP.setHint(kDL);
+      lcT.setHint(lcQ);
       break;
       label203:
-      hy(false);
+      hW(false);
     }
-  }
-  
-  public void setCountryCode(String paramString)
-  {
-    if (kur != null)
-    {
-      kur.setText(paramString);
-      return;
-    }
-    u.e("!44@/B4Tb64lLpLJ0gQcBqq1VNhsQPYjnP2P5/VEOFZcz1c=", "countryCodeET is null!");
-  }
-  
-  public void setHint(String paramString)
-  {
-    if (kDP != null)
-    {
-      kDP.setHint(paramString);
-      return;
-    }
-    u.e("!44@/B4Tb64lLpLJ0gQcBqq1VNhsQPYjnP2P5/VEOFZcz1c=", "mobileNumberET is null!");
-  }
-  
-  public void setMobileNumber(String paramString)
-  {
-    if (kDP != null)
-    {
-      kDP.setText(paramString);
-      return;
-    }
-    u.e("!44@/B4Tb64lLpLJ0gQcBqq1VNhsQPYjnP2P5/VEOFZcz1c=", "mobileNumberET is null!");
-  }
-  
-  public void setOnCountryCodeChangedListener(a parama)
-  {
-    kDS = parama;
   }
   
   public static abstract interface a
   {
-    public abstract void Gs(String paramString);
+    public abstract void IH(String paramString);
   }
 }
 

@@ -1,11 +1,11 @@
 .class final Lcom/tencent/mm/network/r$11;
-.super Lcom/tencent/mm/sdk/platformtools/at;
+.super Lcom/tencent/mm/sdk/platformtools/az;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/network/r;->EK()V
+    value = Lcom/tencent/mm/network/r;->Ff()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -13,9 +13,18 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/sdk/platformtools/az",
+        "<",
+        "Ljava/lang/Object;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic ciT:Lcom/tencent/mm/network/r;
+.field final synthetic cek:Lcom/tencent/mm/network/r;
 
 
 # direct methods
@@ -24,11 +33,11 @@
 
     .prologue
     .line 777
-    iput-object p1, p0, Lcom/tencent/mm/network/r$11;->ciT:Lcom/tencent/mm/network/r;
+    iput-object p1, p0, Lcom/tencent/mm/network/r$11;->cek:Lcom/tencent/mm/network/r;
 
     const-wide/16 v0, 0xbb8
 
-    invoke-direct {p0, v0, v1, p2}, Lcom/tencent/mm/sdk/platformtools/at;-><init>(JLjava/lang/Object;)V
+    invoke-direct {p0, v0, v1, p2}, Lcom/tencent/mm/sdk/platformtools/az;-><init>(JLjava/lang/Object;)V
 
     return-void
 .end method

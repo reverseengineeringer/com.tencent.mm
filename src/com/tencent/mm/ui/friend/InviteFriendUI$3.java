@@ -10,7 +10,7 @@ final class InviteFriendUI$3
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    lrM.finish();
+    lSq.finish();
     return true;
   }
 }

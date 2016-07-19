@@ -1,43 +1,46 @@
 package com.tencent.mm.ui.tools;
 
+import android.view.View.OnFocusChangeListener;
 import android.widget.TextView.OnEditorActionListener;
 import java.util.ArrayList;
 
 public abstract interface g
 {
-  public abstract void bii();
+  public abstract void JL(String paramString);
   
-  public abstract boolean bij();
+  public abstract void U(ArrayList<String> paramArrayList);
   
-  public abstract boolean bik();
+  public abstract void a(View.OnFocusChangeListener paramOnFocusChangeListener);
   
-  public abstract String getSearchContent();
+  public abstract void a(ActionBarSearchView.a parama);
   
-  public abstract void id(boolean paramBoolean);
+  public abstract void a(ActionBarSearchView.b paramb);
   
-  public abstract void ie(boolean paramBoolean);
+  public abstract void a(SearchViewNotRealTimeHelper.a parama);
   
-  public abstract void setAutoMatchKeywords(boolean paramBoolean);
+  public abstract String aVM();
   
-  public abstract void setBackClickCallback(ActionBarSearchView.a parama);
+  public abstract void bof();
   
-  public abstract void setCallBack(ActionBarSearchView.b paramb);
+  public abstract boolean bog();
   
-  public abstract void setEditTextEnabled(boolean paramBoolean);
+  public abstract boolean boh();
+  
+  public abstract void iI(boolean paramBoolean);
+  
+  public abstract void iJ(boolean paramBoolean);
+  
+  public abstract void iK(boolean paramBoolean);
+  
+  public abstract void iL(boolean paramBoolean);
+  
+  public abstract void iM(boolean paramBoolean);
   
   public abstract void setHint(CharSequence paramCharSequence);
   
-  public abstract void setKeywords(ArrayList paramArrayList);
-  
-  public abstract void setNotRealCallBack(SearchViewNotRealTimeHelper.a parama);
-  
   public abstract void setOnEditorActionListener(TextView.OnEditorActionListener paramOnEditorActionListener);
   
-  public abstract void setSearchContent(String paramString);
-  
-  public abstract void setSearchTipIcon(int paramInt);
-  
-  public abstract void setStatusBtnEnabled(boolean paramBoolean);
+  public abstract void tU(int paramInt);
 }
 
 /* Location:

@@ -1,32 +1,14 @@
 package com.tencent.mm.ui.contact;
 
-import com.tencent.mm.d.a.nv;
-import com.tencent.mm.d.a.nv.a;
-import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.e.a.oi;
 import com.tencent.mm.sdk.c.c;
 
 final class VoipAddressUI$1
-  extends c
+  extends c<oi>
 {
   VoipAddressUI$1(VoipAddressUI paramVoipAddressUI)
   {
-    super(0);
-  }
-  
-  public final boolean a(b paramb)
-  {
-    if ((paramb instanceof nv)) {
-      switch (aKe.axL)
-      {
-      }
-    }
-    for (;;)
-    {
-      return false;
-      lmM.finish();
-      continue;
-      lmM.finish();
-    }
+    kum = oi.class.getName().hashCode();
   }
 }
 

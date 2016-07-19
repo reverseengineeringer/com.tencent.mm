@@ -1,40 +1,27 @@
 package com.tencent.mm.ui.chatting;
 
-import android.widget.ImageView;
-import com.tencent.mm.an.m;
-import com.tencent.mm.an.o;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.ui.widget.MMPinProgressBtn;
-import java.lang.ref.WeakReference;
-import java.util.Map;
+import android.content.Context;
+import android.view.MenuItem;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.i;
+import com.tencent.mm.modelmulti.h;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
+import com.tencent.mm.ui.base.n.d;
 
 final class du$1
-  implements Runnable
+  implements n.d
 {
-  du$1(m paramm) {}
+  du$1(String paramString, Context paramContext) {}
   
-  public final void run()
+  public final void d(MenuItem paramMenuItem, int paramInt)
   {
-    Object localObject = (WeakReference)du.bgl().get(kWg.getFileName());
-    if (localObject == null)
-    {
-      u.w("!44@/B4Tb64lLpI1d+8HkdT3mI7hefJjNVhVmbGBCo1YUo8=", "update status, filename %s, holder not found", new Object[] { kWg.getFileName() });
-      return;
-    }
-    localObject = (du)((WeakReference)localObject).get();
-    if (localObject == null)
-    {
-      u.w("!44@/B4Tb64lLpI1d+8HkdT3mI7hefJjNVhVmbGBCo1YUo8=", "update status, filename %s, holder gc!", new Object[] { kWg.getFileName() });
-      return;
-    }
-    hbl.setVisibility(0);
-    hbk.setVisibility(8);
-    if (kWg.status == 112)
-    {
-      hbl.setProgress(o.e(kWg));
-      return;
-    }
-    hbl.setProgress(o.f(kWg));
+    paramMenuItem = paramMenuItem.getTitle();
+    v.i("MicroMsg.LongClickBrandServiceHelper", "connector click[text]: to[%s] text[%s]", new Object[] { paramMenuItem, chu });
+    h localh = new h(paramMenuItem, chu, i.eW(paramMenuItem));
+    ah.tF().a(localh, 0);
+    com.tencent.mm.plugin.report.service.g.gdY.h(10424, new Object[] { Integer.valueOf(1), Integer.valueOf(1), paramMenuItem });
+    com.tencent.mm.ui.base.g.aZ(val$context, val$context.getString(2131231008));
   }
 }
 

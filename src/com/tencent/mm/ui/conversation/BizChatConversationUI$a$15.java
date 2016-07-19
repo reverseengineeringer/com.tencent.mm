@@ -1,29 +1,17 @@
 package com.tencent.mm.ui.conversation;
 
-import android.widget.ListView;
-import android.widget.TextView;
-import com.tencent.mm.model.i;
-import com.tencent.mm.ui.i.a;
+import android.view.View;
+import com.tencent.mm.ui.base.MMSlideDelView.c;
 
 final class BizChatConversationUI$a$15
-  implements i.a
+  implements MMSlideDelView.c
 {
   BizChatConversationUI$a$15(BizChatConversationUI.a parama) {}
   
-  public final void Gh()
+  public final int I(View paramView)
   {
-    lnN.Gj(i.dY(BizChatConversationUI.a.JT()));
-    if (BizChatConversationUI.a.b(lnN).getCount() <= 0)
-    {
-      BizChatConversationUI.a.c(lnN).setVisibility(0);
-      BizChatConversationUI.a.d(lnN).setVisibility(8);
-      return;
-    }
-    BizChatConversationUI.a.c(lnN).setVisibility(8);
-    BizChatConversationUI.a.d(lnN).setVisibility(0);
+    return BizChatConversationUI.a.e(lOo).getPositionForView(paramView);
   }
-  
-  public final void Gi() {}
 }
 
 /* Location:

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/account/LoginUI;->Gb()V
+    value = Lcom/tencent/mm/ui/account/LoginUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ktY:Lcom/tencent/mm/ui/account/LoginUI;
+.field final synthetic kTf:Lcom/tencent/mm/ui/account/LoginUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 210
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginUI$10;->ktY:Lcom/tencent/mm/ui/account/LoginUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginUI$10;->kTf:Lcom/tencent/mm/ui/account/LoginUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 232
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginUI$10;->ktY:Lcom/tencent/mm/ui/account/LoginUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginUI$10;->kTf:Lcom/tencent/mm/ui/account/LoginUI;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v0, v0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
     const/4 v1, 0x0
 

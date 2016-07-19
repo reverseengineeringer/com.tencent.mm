@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@drawable/m_" android:paddingLeft="@dimen/i7" android:paddingRight="@dimen/i7" style="@style/MMListItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/t5" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/j0" android:layout_width="@dimen/hz" android:layout_height="@dimen/hz" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+            <ImageView android:id="@id/ip" android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/j1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <TextView android:textSize="14.0dip" android:textColor="#ff737373" android:id="@id/j2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/j1" android:layout_toRightOf="@id/j0" android:layout_centerHorizontal="true">
+            <TextView android:id="@id/ir" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/cp" android:text="{Game Name}" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_centerHorizontal="true" style="@style/MMFontTitleInList" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

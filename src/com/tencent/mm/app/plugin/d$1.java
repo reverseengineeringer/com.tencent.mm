@@ -1,9 +1,10 @@
 package com.tencent.mm.app.plugin;
 
+import com.tencent.mm.pluginsdk.ui.applet.g;
 import java.util.Comparator;
 
 final class d$1
-  implements Comparator
+  implements Comparator<g>
 {
   d$1(d paramd) {}
 }

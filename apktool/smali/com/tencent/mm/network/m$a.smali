@@ -40,7 +40,7 @@
     return-void
 .end method
 
-.method public static aa(Landroid/os/IBinder;)Lcom/tencent/mm/network/m;
+.method public static C(Landroid/os/IBinder;)Lcom/tencent/mm/network/m;
     .locals 2
 
     .prologue
@@ -130,7 +130,7 @@
     move-result v1
 
     .line 50
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/network/m$a;->aK(I)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/network/m$a;->bc(I)V
 
     .line 51
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V

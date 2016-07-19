@@ -1,33 +1,33 @@
 package com.tencent.mm.booter;
 
-import com.tencent.mm.ah.k;
+import com.tencent.mm.ak.k;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.platformtools.t;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.r.m;
+import com.tencent.mm.platformtools.s;
 import com.tencent.mm.storage.h;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
+import com.tencent.mm.t.m;
 
 public final class l
 {
-  private static long bnd = 86400000L;
+  private static long baK = 86400000L;
   
   public static void run()
   {
-    if (t.am(Long.valueOf(t.c((Long)ah.tD().rn().get(81944, null))).longValue()) * 1000L > bnd) {}
+    if (s.at(Long.valueOf(s.c((Long)ah.tE().ro().get(81944, null))).longValue()) * 1000L > baK) {}
     for (int i = 1;; i = 0)
     {
       if (i != 0)
       {
-        Object localObject = com.tencent.mm.al.c.Dd();
-        com.tencent.mm.al.c.De();
-        if ((!bXC) && (ah.tD().isSDCardAvailable()))
+        Object localObject = com.tencent.mm.ao.c.Dn();
+        com.tencent.mm.ao.c.Do();
+        if ((!bRi) && (ah.tE().isSDCardAvailable()))
         {
-          ((com.tencent.mm.al.c)localObject).release();
-          bXC = true;
-          ah.tE().a(159, (d)localObject);
+          ((com.tencent.mm.ao.c)localObject).release();
+          bRi = true;
+          ah.tF().a(159, (d)localObject);
           localObject = new k(9);
-          ah.tE().d((j)localObject);
+          ah.tF().a((j)localObject, 0);
         }
       }
       return;

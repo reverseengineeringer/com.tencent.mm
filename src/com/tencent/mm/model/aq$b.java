@@ -2,7 +2,7 @@ package com.tencent.mm.model;
 
 public abstract interface aq$b
 {
-  public abstract void ud();
+  public abstract void ue();
 }
 
 /* Location:

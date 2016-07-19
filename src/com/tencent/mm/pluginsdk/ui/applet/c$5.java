@@ -10,7 +10,7 @@ final class c$5
   
   public final void onDismiss()
   {
-    if ((fqR != null) && (fqR.isRecycled())) {}
+    if ((fzX != null) && (fzX.isRecycled())) {}
   }
 }
 

@@ -6,20 +6,20 @@ import junit.framework.Assert;
 
 public final class a
 {
-  private ThreadGroup bTi;
-  private final AtomicInteger jYO = new AtomicInteger(1);
-  private e.b jYP;
+  private ThreadGroup bMH;
+  private final AtomicInteger kzl = new AtomicInteger(1);
+  private e.b kzm;
   
   a(e.b paramb)
   {
-    jYP = paramb;
-    bTi = new ThreadGroup("MM_FREE_THREAD_GROUP");
+    kzm = paramb;
+    bMH = new ThreadGroup("MM_FREE_THREAD_GROUP");
   }
   
-  final HandlerThread aN(String paramString, int paramInt)
+  final HandlerThread aX(String paramString, int paramInt)
   {
     Assert.assertNotNull("newThread arg name is null!", paramString);
-    return new a("MM_Thread_Pool_Free_Handler_Thread#" + jYO.getAndIncrement() + "#" + paramString, paramInt);
+    return new a("MM_Thread_Pool_Free_Handler_Thread#" + kzl.getAndIncrement() + "#" + paramString, paramInt);
   }
   
   static final class a

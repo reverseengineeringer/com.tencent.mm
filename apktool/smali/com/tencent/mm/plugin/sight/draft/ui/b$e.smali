@@ -15,21 +15,21 @@
 
 
 # instance fields
-.field cMz:Landroid/widget/TextView;
+.field cJv:Landroid/widget/TextView;
 
-.field cTx:Landroid/view/View;
+.field cQS:Landroid/view/View;
 
-.field cfv:Lcom/tencent/mm/an/f;
+.field caH:Lcom/tencent/mm/aq/j;
 
-.field dVm:Landroid/widget/ImageView;
+.field dXt:Landroid/widget/ImageView;
 
-.field gzA:Landroid/view/View;
+.field gGa:Landroid/view/View;
 
-.field gzB:Landroid/widget/ImageView;
+.field gGb:Lcom/tencent/mm/plugin/sight/decode/a/a;
 
-.field gzy:Landroid/view/View;
+.field gGc:Landroid/view/View;
 
-.field gzz:Lcom/tencent/mm/plugin/sight/decode/a/a;
+.field gGd:Landroid/widget/ImageView;
 
 
 # direct methods

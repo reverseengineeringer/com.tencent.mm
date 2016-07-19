@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;->Gb()V
+    value = Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lCE:Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
+.field final synthetic mdu:Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 103
-    iput-object p1, p0, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI$1;->lCE:Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI$1;->mdu:Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
     const/4 v4, 0x1
 
     .line 107
-    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI$1;->lCE:Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI$1;->mdu:Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;->a(Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;)Z
 
@@ -52,7 +52,7 @@
     if-nez v0, :cond_0
 
     .line 108
-    sget-object v1, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v1, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const/16 v2, 0x28d4
 
@@ -60,7 +60,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI$1;->lCE:Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI$1;->mdu:Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
 
     invoke-static {v3}, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;->b(Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;)I
 
@@ -76,7 +76,7 @@
 
     move-result-object v0
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI$1;->lCE:Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
+    iget-object v3, p0, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI$1;->mdu:Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
 
     invoke-static {v3}, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;->c(Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;)I
 
@@ -92,7 +92,7 @@
 
     move-result-object v3
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI$1;->lCE:Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI$1;->mdu:Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;->d(Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;)[Ljava/lang/String;
 
@@ -117,11 +117,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/plugin/report/service/h;->O(ILjava/lang/String;)V
+    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/plugin/report/service/g;->X(ILjava/lang/String;)V
 
     .line 110
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI$1;->lCE:Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI$1;->mdu:Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;->e(Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;)Z
 
@@ -130,13 +130,13 @@
     if-eqz v0, :cond_1
 
     .line 111
-    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI$1;->lCE:Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI$1;->mdu:Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
 
     invoke-virtual {v0, v4}, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;->moveTaskToBack(Z)Z
 
     .line 114
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI$1;->lCE:Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI$1;->mdu:Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;->finish()V
 
@@ -145,7 +145,7 @@
 
     .line 108
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI$1;->lCE:Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI$1;->mdu:Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;->d(Lcom/tencent/mm/ui/voicesearch/VoiceSearchResultUI;)[Ljava/lang/String;
 

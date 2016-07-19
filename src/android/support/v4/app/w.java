@@ -11,53 +11,53 @@ import android.os.Bundle;
 public final class w
   extends y.a
 {
-  private static final b dX;
-  public static final y.a.a dY;
-  private final String dT;
-  private final CharSequence dU;
-  private final CharSequence[] dV;
-  private final boolean dW;
+  private static final b en;
+  public static final y.a.a eo;
+  private final String ej;
+  private final CharSequence ek;
+  private final CharSequence[] el;
+  private final boolean em;
   private final Bundle mExtras;
   
   static
   {
     if (Build.VERSION.SDK_INT >= 20) {
-      dX = new c();
+      en = new c();
     }
     for (;;)
     {
-      dY = new y.a.a() {};
+      eo = new y.a.a() {};
       return;
       if (Build.VERSION.SDK_INT >= 16) {
-        dX = new e();
+        en = new e();
       } else {
-        dX = new d();
+        en = new d();
       }
     }
   }
   
   public w(String paramString, CharSequence paramCharSequence, CharSequence[] paramArrayOfCharSequence, boolean paramBoolean, Bundle paramBundle)
   {
-    dT = paramString;
-    dU = paramCharSequence;
-    dV = paramArrayOfCharSequence;
-    dW = paramBoolean;
+    ej = paramString;
+    ek = paramCharSequence;
+    el = paramArrayOfCharSequence;
+    em = paramBoolean;
     mExtras = paramBundle;
   }
   
   public static Bundle getResultsFromIntent(Intent paramIntent)
   {
-    return dX.getResultsFromIntent(paramIntent);
+    return en.getResultsFromIntent(paramIntent);
   }
   
   public final boolean getAllowFreeFormInput()
   {
-    return dW;
+    return em;
   }
   
   public final CharSequence[] getChoices()
   {
-    return dV;
+    return el;
   }
   
   public final Bundle getExtras()
@@ -67,25 +67,25 @@ public final class w
   
   public final CharSequence getLabel()
   {
-    return dU;
+    return ek;
   }
   
   public final String getResultKey()
   {
-    return dT;
+    return ej;
   }
   
   public static final class a
   {
-    public final String dT;
-    public CharSequence dU;
-    public CharSequence[] dV;
-    public boolean dW = true;
+    public final String ej;
+    public CharSequence ek;
+    public CharSequence[] el;
+    public boolean em = true;
     public Bundle mExtras = new Bundle();
     
     public a(String paramString)
     {
-      dT = paramString;
+      ej = paramString;
     }
   }
   

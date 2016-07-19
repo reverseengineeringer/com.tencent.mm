@@ -1,61 +1,33 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.protocal.b.ami;
+import com.tencent.mm.protocal.b.xa;
+import com.tencent.mm.sdk.platformtools.be;
 
 public final class u
 {
   public static final class a
-    extends h.c
-    implements h.a
+    extends k.c
+    implements k.a
   {
-    public byte[] ayo = null;
-    public long bWJ = -1L;
+    public xa jsD = new xa();
     
     public final int getCmdId()
     {
-      return 1000000190;
+      return 48;
     }
     
-    public final byte[] tY()
+    public final byte[] tZ()
     {
-      byte[] arrayOfByte = new byte[ayo.length + 8];
-      int i = (int)(ay.FS() - bWJ);
-      arrayOfByte[0] = ((byte)(i >> 24 & 0xFF));
-      arrayOfByte[1] = ((byte)(i >> 16 & 0xFF));
-      arrayOfByte[2] = ((byte)(i >> 8 & 0xFF));
-      arrayOfByte[3] = ((byte)(i & 0xFF));
-      arrayOfByte[4] = ((byte)(ayo.length >> 24 & 0xFF));
-      arrayOfByte[5] = ((byte)(ayo.length >> 16 & 0xFF));
-      arrayOfByte[6] = ((byte)(ayo.length >> 8 & 0xFF));
-      arrayOfByte[7] = ((byte)(ayo.length & 0xFF));
-      System.arraycopy(ayo, 0, arrayOfByte, 8, ayo.length);
-      ay.I(arrayOfByte);
-      return arrayOfByte;
+      jsg = ac.aYu();
+      jsD.jzd = new ami().aV(be.baN());
+      jsD.kfq = k.a(this);
+      return jsD.toByteArray();
     }
     
-    public final int tZ()
+    public final int ua()
     {
-      return 268369922;
-    }
-    
-    public final boolean we()
-    {
-      return false;
-    }
-  }
-  
-  public static final class b
-    extends h.d
-    implements h.b
-  {
-    public final int getCmdId()
-    {
-      return -1;
-    }
-    
-    public final int y(byte[] paramArrayOfByte)
-    {
-      return 0;
+      return 107;
     }
   }
 }

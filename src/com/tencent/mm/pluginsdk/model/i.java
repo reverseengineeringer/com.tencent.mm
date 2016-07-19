@@ -1,34 +1,34 @@
 package com.tencent.mm.pluginsdk.model;
 
 import android.os.Looper;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import junit.framework.Assert;
 
-public abstract class i
+public abstract class i<Params, Progress, Result>
 {
-  private boolean aBK = false;
-  aa handler = new aa(Looper.getMainLooper());
+  private boolean aoc = false;
+  ac handler = new ac(Looper.getMainLooper());
   
-  public abstract aa IA();
+  public abstract ac IZ();
   
-  public abstract Object IB();
+  public abstract Result Ja();
   
-  public final boolean h(final Object... paramVarArgs)
+  public final boolean m(final Params... paramVarArgs)
   {
-    if (aBK) {
-      Assert.assertTrue("!32@/B4Tb64lLpL08+XdcLam3T8/VZvkXk36 Should construct a new Task", false);
+    if (aoc) {
+      Assert.assertTrue("MicroMsg.MMAsyncTask Should construct a new Task", false);
     }
-    aBK = true;
-    i(paramVarArgs);
-    aa localaa = IA();
-    if (localaa == null) {
+    aoc = true;
+    n(paramVarArgs);
+    ac localac = IZ();
+    if (localac == null) {
       return false;
     }
-    localaa.post(new Runnable()
+    localac.post(new Runnable()
     {
       public final void run()
       {
-        final Object localObject = IB();
+        final Object localObject = Ja();
         handler.post(new Runnable()
         {
           public final void run()
@@ -41,9 +41,9 @@ public abstract class i
     return true;
   }
   
-  public void i(Object... paramVarArgs) {}
+  public void n(Params... paramVarArgs) {}
   
-  public void onPostExecute(Object paramObject) {}
+  public void onPostExecute(Result paramResult) {}
 }
 
 /* Location:

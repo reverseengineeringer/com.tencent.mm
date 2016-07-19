@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout style="@style/MMGameCenterHeaderTitle">
+        <TextView android:text="@string/b1a" style="@style/MMGameCenterHeaderTitleText" />
+    </RelativeLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/go" android:layout_marginRight="@dimen/go">
+        <ListView android:id="@id/ask" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/qg" android:transcriptMode="disabled" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="0.0dip" />
+        <RelativeLayout android:id="@id/arp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/cu" android:textColor="#ff737373" android:gravity="center" android:background="@null" android:layout_width="fill_parent" android:layout_height="60.0dip" android:text="@string/ayf" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

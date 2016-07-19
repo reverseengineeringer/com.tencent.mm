@@ -2,7 +2,7 @@ package com.tencent.mm.ui.conversation;
 
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class BaseConversationUI$4$1
   implements Animation.AnimationListener
@@ -11,18 +11,18 @@ final class BaseConversationUI$4$1
   
   public final void onAnimationEnd(Animation paramAnimation)
   {
-    u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "klem animationEnd");
-    BaseConversationUI.h(lno.lnn);
-    lno.lnn.D(1.0F);
+    v.i("MicroMsg.BaseConversationUI", "klem animationEnd");
+    BaseConversationUI.h(lNI.lNH);
+    lNI.lNH.B(1.0F);
   }
   
   public final void onAnimationRepeat(Animation paramAnimation) {}
   
   public final void onAnimationStart(Animation paramAnimation)
   {
-    u.i("!44@/B4Tb64lLpJLwCJC4Sgljkqtf3CBO/y2TybPLeN9Ej4=", "klem onAnimationStart");
-    BaseConversationUI.g(lno.lnn);
-    BaseConversationUI.a(lno.lnn, false);
+    v.i("MicroMsg.BaseConversationUI", "klem onAnimationStart");
+    BaseConversationUI.g(lNI.lNH);
+    BaseConversationUI.a(lNI.lNH, false);
   }
 }
 

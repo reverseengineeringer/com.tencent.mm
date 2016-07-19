@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field emW:Landroid/widget/TextView;
+.field erW:Landroid/widget/TextView;
 
-.field fAr:Landroid/widget/ImageView;
+.field fJv:Landroid/widget/ImageView;
 
-.field iJH:Landroid/widget/TextView;
+.field jgD:Landroid/widget/TextView;
 
-.field iJI:Landroid/view/View;
+.field jgE:Landroid/view/View;
 
-.field iJJ:Landroid/view/View;
+.field jgF:Landroid/view/View;
 
-.field final synthetic iJK:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;
+.field final synthetic jgG:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;
 
 
 # direct methods
@@ -33,8 +33,8 @@
     .locals 0
 
     .prologue
-    .line 476
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->iJK:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;
+    .line 482
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a$a;->jgG:Lcom/tencent/mm/pluginsdk/ui/chat/AppGrid$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

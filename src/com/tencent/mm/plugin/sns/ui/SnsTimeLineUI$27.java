@@ -1,29 +1,48 @@
 package com.tencent.mm.plugin.sns.ui;
 
-import android.widget.AbsoluteLayout.LayoutParams;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
 import android.widget.ListView;
-import com.tencent.mm.plugin.sns.d.al.a;
-import com.tencent.mm.ui.widget.QImageView;
+import com.tencent.mm.plugin.sns.a.a.a;
+import com.tencent.mm.plugin.sns.a.a.f;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.ui.widget.QFadeImageView;
 
 final class SnsTimeLineUI$27
-  implements Runnable
+  implements View.OnTouchListener
 {
   SnsTimeLineUI$27(SnsTimeLineUI paramSnsTimeLineUI) {}
   
-  public final void run()
+  public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    hkJ.gWB.setSelection(0);
-    SnsTimeLineUI.a locala = SnsTimeLineUI.r(hkJ);
-    if (hkZ)
+    if (paramMotionEvent.getAction() == 1)
     {
-      AbsoluteLayout.LayoutParams localLayoutParams = (AbsoluteLayout.LayoutParams)SnsTimeLineUI.l(hkJ).getLayoutParams();
-      y = hla;
-      SnsTimeLineUI.l(hkJ).setLayoutParams(localLayoutParams);
-      hkT = hlb;
-      hkV = hlc;
+      hzE.aDW();
+      if ((jhzE).eLC != null) && (jhzE).eLC.getFirstVisiblePosition() == 0))
+      {
+        v.d("MicroMsg.SnsTimeLineUI", "refreshIv onTouch set refreshIv visible");
+        SnsTimeLineUI.h(hzE).setVisibility(0);
+      }
+      SnsTimeLineUI.x(hzE).aFQ();
     }
-    SnsTimeLineUI.r(hkJ).aCL();
-    hkJ.gOC.b(1, hkJ.ajh, hkJ.axx, hkJ.axy);
+    if (paramMotionEvent.getAction() == 0)
+    {
+      if ((jhzE).eLC != null) && (jhzE).eLC.getFirstVisiblePosition() == 0)) {
+        SnsTimeLineUI.h(hzE).setVisibility(0);
+      }
+      SnsTimeLineUI.g(hzE).aDK();
+      ghzE).hkd.aGf();
+    }
+    if (SnsTimeLineUI.A(hzE) != null)
+    {
+      paramView = SnsTimeLineUI.A(hzE);
+      if ((gNi != null) && (ad.gVV)) {
+        gNi.azX();
+      }
+    }
+    return false;
   }
 }
 

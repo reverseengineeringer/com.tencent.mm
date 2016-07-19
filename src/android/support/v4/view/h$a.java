@@ -6,21 +6,21 @@ import android.view.MenuItem.OnActionExpandListener;
 final class h$a
   implements MenuItem.OnActionExpandListener
 {
-  private h.b eG;
+  private h.b fc;
   
   public h$a(h.b paramb)
   {
-    eG = paramb;
+    fc = paramb;
   }
   
   public final boolean onMenuItemActionCollapse(MenuItem paramMenuItem)
   {
-    return eG.ag();
+    return fc.ae();
   }
   
   public final boolean onMenuItemActionExpand(MenuItem paramMenuItem)
   {
-    return eG.af();
+    return fc.ad();
   }
 }
 

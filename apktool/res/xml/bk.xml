@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto">
+    <IconPreference android:title="@string/cam" android:key="share_micromsg_qzone" />
+    <IconPreference android:title="@string/can" android:key="share_micromsg_to_sina" />
+    <IconPreference android:title="@string/cal" android:key="share_micromsg_to_fuckbook" />
+</PreferenceScreen>

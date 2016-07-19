@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;->Gb()V
+    value = Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;->Gy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kOF:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
+.field final synthetic lnV:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 190
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$3;->kOF:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$3;->lnV:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 195
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$3;->kOF:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI$3;->lnV:Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;->d(Lcom/tencent/mm/ui/bindmobile/BindMContactVerifyUI;)V
 

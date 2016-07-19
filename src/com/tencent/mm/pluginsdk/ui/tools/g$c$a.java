@@ -2,25 +2,25 @@ package com.tencent.mm.pluginsdk.ui.tools;
 
 final class g$c$a
 {
-  public a iSC = null;
-  public a iSD = null;
-  public Object iSE;
-  public Object iSF;
+  public g.c<K, V>.a jpL = null;
+  public g.c<K, V>.a jpM = null;
+  public K jpN;
+  public V jpO;
   
   public g$c$a(g.c paramc)
   {
     this(paramc, null, null, (byte)0);
   }
   
-  public g$c$a(g.c paramc, Object paramObject1, Object paramObject2)
+  public g$c$a(K paramK, V paramV)
   {
-    this(paramc, paramObject1, paramObject2, (byte)0);
+    this(paramK, paramV, localObject, (byte)0);
   }
   
-  private g$c$a(g.c paramc, Object paramObject1, Object paramObject2, byte paramByte)
+  private g$c$a(g.c<K, V>.a paramc, V paramV, byte paramByte)
   {
-    iSE = paramObject1;
-    iSF = paramObject2;
+    jpN = paramV;
+    jpO = paramByte;
   }
 }
 

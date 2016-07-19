@@ -7,8 +7,8 @@ final class MMSwitchBtn$b$1$1
   
   public final void run()
   {
-    if (MMSwitchBtn.b(lFN.lFM.lFK) != null) {
-      MMSwitchBtn.b(lFN.lFM.lFK).fg(MMSwitchBtn.a(lFN.lFM.lFK));
+    if (MMSwitchBtn.b(mha.mgZ.mgX) != null) {
+      MMSwitchBtn.b(mha.mgZ.mgX).ft(MMSwitchBtn.a(mha.mgZ.mgX));
     }
   }
 }

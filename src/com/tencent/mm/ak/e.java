@@ -1,55 +1,64 @@
 package com.tencent.mm.ak;
 
-import com.tencent.mm.model.ah;
-import com.tencent.mm.pluginsdk.j.a.b;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
-
-public abstract class e
-  extends b
-  implements com.tencent.mm.network.j, com.tencent.mm.r.d
+public final class e
+  extends com.tencent.mm.ax.a
 {
-  int type;
+  public String bRr;
+  public String bRs;
   
-  public final void Db()
+  protected final int a(int paramInt, Object... paramVarArgs)
   {
-    com.tencent.mm.pluginsdk.j.d local1 = new com.tencent.mm.pluginsdk.j.d()
+    if (paramInt == 0)
     {
-      public final void g(int paramAnonymousInt, String paramAnonymousString1, String paramAnonymousString2)
-      {
-        u.i("!44@/B4Tb64lLpK+IBX8XDgnvuIIaENbcjIItLkd6kVoyzg=", "alvinluo: generate login auth key onProcessEnd errCode: %d, errMsg: %s");
-        if ((paramAnonymousInt == 0) && (!ay.kz(com.tencent.mm.pluginsdk.j.f.aM(y.getContext(), "SoteLoginAuthKeyName"))))
-        {
-          paramAnonymousString2 = e.this;
-          paramAnonymousString1 = null;
-          if (ah.rh())
-          {
-            type = 620;
-            ah.tE().a(type, paramAnonymousString2);
-            paramAnonymousString1 = new f();
-          }
-          if (paramAnonymousString1 != null) {
-            ah.tE().d(paramAnonymousString1);
-          }
-          return;
-        }
-        c(3, paramAnonymousInt, paramAnonymousString1);
+      paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
+      if (bRr != null) {
+        paramVarArgs.e(1, bRr);
       }
-    };
-    com.tencent.mm.pluginsdk.j.f.a(y.getContext(), "SoteLoginAuthKeyName", local1, false);
-  }
-  
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
-  {
-    ah.tE().b(type, this);
-    if ((paramInt1 == 0) && (paramInt2 == 0))
-    {
-      a(bFs, vI());
-      return;
+      if (bRs != null) {
+        paramVarArgs.e(2, bRs);
+      }
+      return 0;
     }
-    c(3, paramInt2, paramString);
+    if (paramInt == 1) {
+      if (bRr == null) {
+        break label234;
+      }
+    }
+    label234:
+    for (paramInt = a.a.a.b.b.a.f(1, bRr) + 0;; paramInt = 0)
+    {
+      int i = paramInt;
+      if (bRs != null) {
+        i = paramInt + a.a.a.b.b.a.f(2, bRs);
+      }
+      return i;
+      if (paramInt == 2)
+      {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = com.tencent.mm.ax.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.ax.a.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bve();
+          }
+        }
+        break;
+      }
+      if (paramInt == 3)
+      {
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        e locale = (e)paramVarArgs[1];
+        switch (((Integer)paramVarArgs[2]).intValue())
+        {
+        default: 
+          return -1;
+        case 1: 
+          bRr = mMY.readString();
+          return 0;
+        }
+        bRs = mMY.readString();
+        return 0;
+      }
+      return -1;
+    }
   }
 }
 

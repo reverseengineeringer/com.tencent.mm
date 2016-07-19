@@ -7,14 +7,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.preference.Preference;
 
 public class LanguagePreference
   extends Preference
 {
-  public a ksB;
+  public a kRJ;
   
   public LanguagePreference(Context paramContext)
   {
@@ -29,26 +29,26 @@ public class LanguagePreference
   public LanguagePreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(2131363286);
+    setLayoutResource(2130903981);
   }
   
   public final void a(a parama)
   {
-    if ((parama == null) || (ay.kz(ksE)))
+    if ((parama == null) || (be.kf(kRM)))
     {
-      u.e("!44@/B4Tb64lLpK8wYhJLCaWa94yEHo+P7srfIxUMMDGkJc=", "setInfo info error");
+      v.e("MicroMsg.LanguagePreference", "setInfo info error");
       return;
     }
-    ksB = parama;
-    setKey(ksE);
+    kRJ = parama;
+    setKey(kRM);
   }
   
   protected final void onBindView(View paramView)
   {
     int j = 1;
     super.onBindView(paramView);
-    TextView localTextView = (TextView)paramView.findViewById(2131167039);
-    paramView = (CheckBox)paramView.findViewById(2131167093);
+    TextView localTextView = (TextView)paramView.findViewById(2131755529);
+    paramView = (CheckBox)paramView.findViewById(2131758110);
     int i;
     if (localTextView != null)
     {
@@ -61,8 +61,8 @@ public class LanguagePreference
     {
       if ((j & i) != 0)
       {
-        localTextView.setText(ksB.ksC);
-        paramView.setChecked(ksB.ksF);
+        localTextView.setText(kRJ.kRK);
+        paramView.setChecked(kRJ.kRN);
       }
       return;
       i = 0;
@@ -76,25 +76,25 @@ public class LanguagePreference
   {
     paramViewGroup = super.onCreateView(paramViewGroup);
     LayoutInflater localLayoutInflater = (LayoutInflater)mContext.getSystemService("layout_inflater");
-    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131165377);
+    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131755262);
     localViewGroup.removeAllViews();
-    localLayoutInflater.inflate(2131362444, localViewGroup);
+    localLayoutInflater.inflate(2130904007, localViewGroup);
     return paramViewGroup;
   }
   
   public static final class a
   {
-    String ksC;
-    private String ksD;
-    public String ksE;
-    public boolean ksF;
+    String kRK;
+    private String kRL;
+    public String kRM;
+    public boolean kRN;
     
     public a(String paramString1, String paramString2, String paramString3, boolean paramBoolean)
     {
-      ksC = paramString1;
-      ksD = paramString2;
-      ksE = paramString3;
-      ksF = paramBoolean;
+      kRK = paramString1;
+      kRL = paramString2;
+      kRM = paramString3;
+      kRN = paramBoolean;
     }
   }
 }

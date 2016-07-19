@@ -4,15 +4,19 @@
 
 
 # instance fields
-.field private dfP:Ljava/lang/String;
+.field public deS:Ljava/lang/String;
 
-.field private exf:I
+.field private eDA:I
 
-.field private exg:I
+.field private eDB:I
 
-.field private exh:Z
+.field public eDx:I
 
-.field private mDensity:F
+.field private eDy:I
+
+.field private eDz:Z
+
+.field public mDensity:F
 
 
 # direct methods
@@ -20,43 +24,51 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 49
     const/4 v0, -0x1
 
     invoke-direct {p0, p1, p2, v0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 52
+    .line 50
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 55
+    const/4 v1, 0x0
+
+    .line 53
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 34
-    const v0, 0x7f04072a
+    const v0, 0x7f0202af
 
-    iput v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->exf:I
+    iput v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->eDx:I
 
     .line 35
-    const v0, 0x7f04078a
+    const v0, 0x7f02058e
 
-    iput v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->exg:I
+    iput v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->eDy:I
 
     .line 36
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->exh:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->eDz:Z
 
     .line 37
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->mDensity:F
 
-    .line 57
+    .line 41
+    iput v1, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->eDA:I
+
+    .line 42
+    iput v1, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->eDB:I
+
+    .line 54
     return-void
 .end method
 
@@ -66,27 +78,27 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 176
+    .line 141
     const/4 v1, 0x0
 
     :try_start_0
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 177
+    .line 142
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->setCacheKey(Ljava/lang/String;)V
+    iput-object v1, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->deS:Ljava/lang/String;
 
-    .line 178
-    invoke-static {}, Lcom/tencent/mm/plugin/gif/b;->acx()Lcom/tencent/mm/plugin/gif/b;
+    .line 143
+    invoke-static {}, Lcom/tencent/mm/plugin/gif/b;->aeV()Lcom/tencent/mm/plugin/gif/b;
 
     move-result-object v1
 
-    iget-object v2, v1, Lcom/tencent/mm/plugin/gif/b;->ewS:Lcom/tencent/mm/a/f;
+    iget-object v2, v1, Lcom/tencent/mm/plugin/gif/b;->eDl:Lcom/tencent/mm/a/f;
 
     const/4 v3, 0x0
 
@@ -96,7 +108,7 @@
 
     if-eqz v2, :cond_0
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/gif/b;->ewS:Lcom/tencent/mm/a/f;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/gif/b;->eDl:Lcom/tencent/mm/a/f;
 
     const/4 v2, 0x0
 
@@ -119,7 +131,7 @@
 
     invoke-direct {v0, p1, p2}, Lcom/tencent/mm/plugin/gif/a;-><init>(Landroid/content/res/Resources;I)V
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/gif/b;->ewS:Lcom/tencent/mm/a/f;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/gif/b;->eDl:Lcom/tencent/mm/a/f;
 
     const/4 v2, 0x0
 
@@ -129,19 +141,19 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/a/f;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 182
+    .line 147
     :cond_1
     :goto_0
     if-eqz p3, :cond_3
 
-    .line 183
+    .line 148
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 197
+    .line 162
     :goto_1
     return-void
 
-    .line 180
+    .line 145
     :cond_2
     new-instance v0, Lcom/tencent/mm/plugin/gif/a;
 
@@ -151,12 +163,12 @@
 
     goto :goto_0
 
-    .line 188
+    .line 153
     :catch_0
     move-exception v0
 
-    .line 190
-    const-string/jumbo v1, "!44@/B4Tb64lLpISAcxqEoGUAVQg2GsFw4s4HolE1VZb8OE="
+    .line 155
+    const-string/jumbo v1, "MicroMsg.GIF.MMGIFImageView"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -176,17 +188,17 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 192
+    .line 157
     if-eqz p3, :cond_4
 
-    .line 193
+    .line 158
     invoke-super {p0, p2}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_1
 
-    .line 185
+    .line 150
     :cond_3
     :try_start_1
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -195,11 +207,43 @@
 
     goto :goto_1
 
-    .line 195
+    .line 160
     :cond_4
     invoke-super {p0, p2}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
     goto :goto_1
+.end method
+
+.method private aeW()F
+    .locals 2
+
+    .prologue
+    .line 103
+    iget v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->mDensity:F
+
+    const/4 v1, 0x0
+
+    cmpl-float v0, v0, v1
+
+    if-nez v0, :cond_0
+
+    .line 104
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tencent/mm/az/a;->getDensity(Landroid/content/Context;)F
+
+    move-result v0
+
+    .line 106
+    :goto_0
+    return v0
+
+    :cond_0
+    iget v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->mDensity:F
+
+    goto :goto_0
 .end method
 
 
@@ -214,23 +258,21 @@
 
     const/4 v7, 0x0
 
-    .line 90
+    .line 87
     :try_start_0
-    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    invoke-virtual {p0, p2}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->setCacheKey(Ljava/lang/String;)V
+    iput-object p2, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->deS:Ljava/lang/String;
 
-    invoke-static {}, Lcom/tencent/mm/plugin/gif/b;->acx()Lcom/tencent/mm/plugin/gif/b;
+    invoke-static {}, Lcom/tencent/mm/plugin/gif/b;->aeV()Lcom/tencent/mm/plugin/gif/b;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->getCacheKey()Ljava/lang/String;
-
-    move-result-object v2
+    iget-object v2, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->deS:Ljava/lang/String;
 
     if-nez p1, :cond_1
 
@@ -238,13 +280,13 @@
     :goto_0
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 91
+    .line 88
     :goto_1
     return-void
 
-    .line 90
+    .line 87
     :cond_1
-    const-string/jumbo v3, "!56@/B4Tb64lLpISAcxqEoGUAVVVet2oG2nlZyTbTY9znHfD6n2sJWsfXA=="
+    const-string/jumbo v3, "MicroMsg.GIF.MMGIFDrawableCacheMgr"
 
     const-string/jumbo v4, "stream key:%s"
 
@@ -256,9 +298,9 @@
 
     aput-object v2, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v3, v1, Lcom/tencent/mm/plugin/gif/b;->ewS:Lcom/tencent/mm/a/f;
+    iget-object v3, v1, Lcom/tencent/mm/plugin/gif/b;->eDl:Lcom/tencent/mm/a/f;
 
     invoke-virtual {v3, v2}, Lcom/tencent/mm/a/f;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -266,7 +308,7 @@
 
     if-eqz v3, :cond_2
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/gif/b;->ewS:Lcom/tencent/mm/a/f;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/gif/b;->eDl:Lcom/tencent/mm/a/f;
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/a/f;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -287,7 +329,7 @@
 
     invoke-direct {v0, p1}, Lcom/tencent/mm/plugin/gif/a;-><init>(Ljava/io/InputStream;)V
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/gif/b;->ewS:Lcom/tencent/mm/a/f;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/gif/b;->eDl:Lcom/tencent/mm/a/f;
 
     new-instance v3, Ljava/lang/ref/WeakReference;
 
@@ -311,7 +353,7 @@
 
     if-ne v1, v2, :cond_5
 
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->getDensity()F
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->aeW()F
 
     move-result v0
 
@@ -339,7 +381,7 @@
     :catch_1
     move-exception v0
 
-    const-string/jumbo v1, "!44@/B4Tb64lLpISAcxqEoGUAVQg2GsFw4s4HolE1VZb8OE="
+    const-string/jumbo v1, "MicroMsg.GIF.MMGIFImageView"
 
     const-string/jumbo v2, "setMMGIFFileInputStream failed. %s"
 
@@ -351,7 +393,7 @@
 
     aput-object v0, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :goto_2
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->init()V
@@ -359,18 +401,18 @@
     goto :goto_1
 
     :cond_4
-    const-string/jumbo v0, "!44@/B4Tb64lLpISAcxqEoGUAVQg2GsFw4s4HolE1VZb8OE="
+    const-string/jumbo v0, "MicroMsg.GIF.MMGIFImageView"
 
     const-string/jumbo v1, "setMMGIFFileInputStream failedbitmap is null. bytes %s"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->init()V
 
     goto :goto_1
 
     :cond_5
-    const-string/jumbo v1, "!44@/B4Tb64lLpISAcxqEoGUAVQg2GsFw4s4HolE1VZb8OE="
+    const-string/jumbo v1, "MicroMsg.GIF.MMGIFImageView"
 
     const-string/jumbo v2, "setMMGIFFileInputStream failed. %s"
 
@@ -382,7 +424,7 @@
 
     aput-object v0, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_2
 .end method
@@ -391,35 +433,35 @@
     .locals 5
 
     .prologue
-    .line 208
+    .line 173
     :try_start_0
     new-instance v0, Lcom/tencent/mm/plugin/gif/a;
 
     invoke-direct {v0, p1}, Lcom/tencent/mm/plugin/gif/a;-><init>(Ljava/lang/String;)V
 
-    .line 209
+    .line 174
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 210
+    .line 175
     const/4 v1, 0x1
 
-    iput v1, v0, Lcom/tencent/mm/plugin/gif/a;->ewG:I
+    iput v1, v0, Lcom/tencent/mm/plugin/gif/a;->eCZ:I
 
-    .line 211
-    iput-object p2, v0, Lcom/tencent/mm/plugin/gif/a;->ewI:Lcom/tencent/mm/plugin/gif/d;
+    .line 176
+    iput-object p2, v0, Lcom/tencent/mm/plugin/gif/a;->eDb:Lcom/tencent/mm/plugin/gif/d;
     :try_end_0
     .catch Lcom/tencent/mm/plugin/gif/MMGIFException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 237
+    .line 202
     :goto_0
     return-void
 
-    .line 213
+    .line 178
     :catch_0
     move-exception v0
 
-    .line 215
+    .line 180
     :try_start_1
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/gif/MMGIFException;->getErrorCode()I
 
@@ -429,7 +471,7 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 216
+    .line 181
     new-instance v1, Ljava/io/FileInputStream;
 
     invoke-direct {v1, p1}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
@@ -438,11 +480,11 @@
 
     move-result-object v1
 
-    .line 217
+    .line 182
     if-eqz v1, :cond_1
 
-    .line 218
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->getDensity()F
+    .line 183
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->aeW()F
 
     move-result v2
 
@@ -450,19 +492,19 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Bitmap;->setDensity(I)V
 
-    .line 219
+    .line 184
     invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
     goto :goto_0
 
-    .line 229
+    .line 194
     :catch_1
     move-exception v1
 
-    .line 230
-    const-string/jumbo v2, "!44@/B4Tb64lLpISAcxqEoGUAVQg2GsFw4s4HolE1VZb8OE="
+    .line 195
+    const-string/jumbo v2, "MicroMsg.GIF.MMGIFImageView"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -482,11 +524,11 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 232
+    .line 197
     :cond_0
-    const-string/jumbo v1, "!44@/B4Tb64lLpISAcxqEoGUAVQg2GsFw4s4HolE1VZb8OE="
+    const-string/jumbo v1, "MicroMsg.GIF.MMGIFImageView"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -506,18 +548,18 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 236
+    .line 201
     :goto_1
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->init()V
 
     goto :goto_0
 
-    .line 221
+    .line 186
     :cond_1
     :try_start_2
-    const-string/jumbo v1, "!44@/B4Tb64lLpISAcxqEoGUAVQg2GsFw4s4HolE1VZb8OE="
+    const-string/jumbo v1, "MicroMsg.GIF.MMGIFImageView"
 
     const-string/jumbo v2, "setMMGIFFilePath failed bitmap is null. show default and delete file. path:%s"
 
@@ -529,24 +571,24 @@
 
     aput-object p1, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 223
+    .line 188
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->init()V
 
-    .line 225
-    invoke-static {p1}, Lcom/tencent/mm/loader/stub/b;->deleteFile(Ljava/lang/String;)Z
+    .line 190
+    invoke-static {p1}, Lcom/tencent/mm/a/e;->deleteFile(Ljava/lang/String;)Z
     :try_end_2
     .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_1
 
     goto :goto_0
 
-    .line 233
+    .line 198
     :catch_2
     move-exception v0
 
-    .line 234
-    const-string/jumbo v1, "!44@/B4Tb64lLpISAcxqEoGUAVQg2GsFw4s4HolE1VZb8OE="
+    .line 199
+    const-string/jumbo v1, "MicroMsg.GIF.MMGIFImageView"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -566,204 +608,51 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 .end method
 
-.method public final a(ZI[ILjava/lang/String;Ljava/lang/String;)V
-    .locals 8
+.method public final aO(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
     .prologue
-    const/4 v3, 0x0
+    .line 71
+    invoke-virtual {p0, p1, p2}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->aP(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v2, 0x0
-
-    .line 140
-    invoke-static {p5}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    .line 141
-    invoke-virtual {p0, p5}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->setCacheKey(Ljava/lang/String;)V
-
-    .line 142
-    invoke-static {}, Lcom/tencent/mm/plugin/gif/b;->acx()Lcom/tencent/mm/plugin/gif/b;
-
-    move-result-object v7
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {p4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    move-object v0, v3
-
-    .line 143
-    :cond_0
-    :goto_0
-    iget-boolean v1, v0, Lcom/tencent/mm/plugin/gif/c;->exa:Z
-
-    if-ne p1, v1, :cond_2
-
-    .line 144
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/gif/c;->start()V
-
-    .line 150
-    :goto_1
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 156
-    :goto_2
+    .line 72
     return-void
-
-    .line 142
-    :cond_1
-    iget-object v0, v7, Lcom/tencent/mm/plugin/gif/b;->ewR:Lcom/tencent/mm/a/f;
-
-    invoke-virtual {v0, p5}, Lcom/tencent/mm/a/f;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, v7, Lcom/tencent/mm/plugin/gif/b;->ewR:Lcom/tencent/mm/a/f;
-
-    invoke-virtual {v0, p5}, Lcom/tencent/mm/a/f;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, v7, Lcom/tencent/mm/plugin/gif/b;->ewR:Lcom/tencent/mm/a/f;
-
-    invoke-virtual {v0, p5}, Lcom/tencent/mm/a/f;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/plugin/gif/c;
-
-    :goto_3
-    if-nez v0, :cond_0
-
-    new-instance v0, Lcom/tencent/mm/plugin/gif/c;
-
-    move v3, p1
-
-    move v4, p2
-
-    move-object v5, p3
-
-    move-object v6, p4
-
-    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/plugin/gif/c;-><init>(Landroid/content/Context;ZZI[ILjava/lang/String;)V
-
-    iget-object v1, v7, Lcom/tencent/mm/plugin/gif/b;->ewR:Lcom/tencent/mm/a/f;
-
-    new-instance v3, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v3, v0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {v1, p5, v3}, Lcom/tencent/mm/a/f;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    .line 147
-    :cond_2
-    iput v2, v0, Lcom/tencent/mm/plugin/gif/c;->dve:I
-
-    iput v2, v0, Lcom/tencent/mm/plugin/gif/c;->exc:I
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Lcom/tencent/mm/plugin/gif/c;->exa:Z
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/gif/c;->start()V
-
-    goto :goto_1
-
-    .line 152
-    :cond_3
-    new-instance v0, Lcom/tencent/mm/plugin/gif/c;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    move v3, p1
-
-    move v4, p2
-
-    move-object v5, p3
-
-    move-object v6, p4
-
-    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/plugin/gif/c;-><init>(Landroid/content/Context;ZZI[ILjava/lang/String;)V
-
-    .line 153
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/gif/c;->start()V
-
-    .line 154
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    goto :goto_2
-
-    :cond_4
-    move-object v0, v3
-
-    goto :goto_3
 .end method
 
-.method public final aJ(Ljava/lang/String;Ljava/lang/String;)V
+.method public final aP(Ljava/lang/String;Ljava/lang/String;)V
     .locals 13
 
     .prologue
     const/4 v12, 0x1
 
-    const/4 v11, 0x0
+    const/4 v9, 0x0
 
-    .line 242
+    .line 207
     :try_start_0
-    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 243
-    invoke-virtual {p0, p2}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->setCacheKey(Ljava/lang/String;)V
+    .line 208
+    iput-object p2, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->deS:Ljava/lang/String;
 
-    .line 244
-    invoke-static {}, Lcom/tencent/mm/plugin/gif/b;->acx()Lcom/tencent/mm/plugin/gif/b;
+    .line 209
+    invoke-static {}, Lcom/tencent/mm/plugin/gif/b;->aeV()Lcom/tencent/mm/plugin/gif/b;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->getCacheKey()Ljava/lang/String;
-
-    move-result-object v2
+    iget-object v2, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->deS:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    iget-object v3, v1, Lcom/tencent/mm/plugin/gif/b;->ewS:Lcom/tencent/mm/a/f;
+    iget-object v3, v1, Lcom/tencent/mm/plugin/gif/b;->eDl:Lcom/tencent/mm/a/f;
 
     invoke-virtual {v3, v2}, Lcom/tencent/mm/a/f;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -771,7 +660,7 @@
 
     if-eqz v3, :cond_0
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/gif/b;->ewS:Lcom/tencent/mm/a/f;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/gif/b;->eDl:Lcom/tencent/mm/a/f;
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/a/f;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -790,13 +679,13 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
     new-instance v0, Lcom/tencent/mm/plugin/gif/a;
 
     invoke-direct {v0, p1}, Lcom/tencent/mm/plugin/gif/a;-><init>(Ljava/lang/String;)V
 
-    const-string/jumbo v5, "!56@/B4Tb64lLpISAcxqEoGUAVVVet2oG2nlZyTbTY9znHfD6n2sJWsfXA=="
+    const-string/jumbo v3, "MicroMsg.GIF.MMGIFDrawableCacheMgr"
 
     const-string/jumbo v6, "new MMGIFDrawable use time:%d"
 
@@ -808,19 +697,19 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v9
+    move-result-wide v10
 
-    sub-long v3, v9, v3
+    sub-long v4, v10, v4
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v3
+    move-result-object v4
 
-    aput-object v3, v7, v8
+    aput-object v4, v7, v8
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v6, v7}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/gif/b;->ewS:Lcom/tencent/mm/a/f;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/gif/b;->eDl:Lcom/tencent/mm/a/f;
 
     new-instance v3, Ljava/lang/ref/WeakReference;
 
@@ -828,16 +717,16 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/a/f;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 249
+    .line 214
     :cond_1
     :goto_0
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 286
+    .line 249
     :goto_1
     return-void
 
-    .line 246
+    .line 211
     :cond_2
     new-instance v0, Lcom/tencent/mm/plugin/gif/a;
 
@@ -848,145 +737,127 @@
 
     goto :goto_0
 
-    .line 255
+    .line 220
     :catch_0
     move-exception v0
 
-    .line 257
+    .line 222
     :try_start_1
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/gif/MMGIFException;->getErrorCode()I
 
+    move-result v0
+
+    const/16 v1, 0x67
+
+    if-ne v0, v1, :cond_3
+
+    .line 223
+    new-instance v0, Ljava/io/FileInputStream;
+
+    invoke-direct {v0, p1}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->aeW()F
+
     move-result v1
 
-    const/16 v2, 0x67
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/d;->a(Ljava/io/InputStream;F)Landroid/graphics/Bitmap;
 
-    if-ne v1, v2, :cond_3
+    move-result-object v0
 
-    .line 258
-    new-instance v1, Ljava/io/FileInputStream;
+    .line 224
+    if-eqz v0, :cond_4
 
-    invoke-direct {v1, p1}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
+    .line 227
+    const/16 v1, 0xf0
 
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->getDensity()F
+    invoke-virtual {v0, v1}, Landroid/graphics/Bitmap;->setDensity(I)V
 
-    move-result v2
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/d;->a(Ljava/io/InputStream;F)Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    .line 259
-    if-eqz v1, :cond_4
-
-    .line 262
-    const/16 v2, 0xf0
-
-    invoke-virtual {v1, v2}, Landroid/graphics/Bitmap;->setDensity(I)V
-
-    .line 263
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+    .line 228
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
     goto :goto_1
 
-    .line 276
+    .line 241
     :catch_1
-    move-exception v1
+    move-exception v0
 
-    .line 277
-    const-string/jumbo v2, "!44@/B4Tb64lLpISAcxqEoGUAVQg2GsFw4s4HolE1VZb8OE="
+    .line 242
+    const-string/jumbo v1, "MicroMsg.GIF.MMGIFImageView"
 
-    const-string/jumbo v3, "setMMGIFFilePath failed1. %s"
-
-    new-array v4, v12, [Ljava/lang/Object;
-
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object v1
-
-    aput-object v1, v4, v11
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 279
-    :cond_3
-    const-string/jumbo v1, "!44@/B4Tb64lLpISAcxqEoGUAVQg2GsFw4s4HolE1VZb8OE="
-
-    const-string/jumbo v2, "setMMGIFFilePath failed2.delet file %s"
+    const-string/jumbo v2, "setMMGIFFilePath failed1. %s"
 
     new-array v3, v12, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
-    aput-object v0, v3, v11
+    aput-object v0, v3, v9
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 280
-    invoke-static {p1}, Lcom/tencent/mm/loader/stub/b;->deleteFile(Ljava/lang/String;)Z
-
-    .line 285
+    .line 248
+    :cond_3
     :goto_2
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->init()V
 
     goto :goto_1
 
-    .line 266
+    .line 231
     :cond_4
     :try_start_2
-    const-string/jumbo v1, "!44@/B4Tb64lLpISAcxqEoGUAVQg2GsFw4s4HolE1VZb8OE="
+    const-string/jumbo v0, "MicroMsg.GIF.MMGIFImageView"
 
-    const-string/jumbo v2, "setMMGIFFilePath failedbitmap is null. show default and delete file. path %s"
+    const-string/jumbo v1, "setMMGIFFilePath failedbitmap is null. show default and delete file. path %s"
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
-    new-array v3, v3, [Ljava/lang/Object;
+    new-array v2, v2, [Ljava/lang/Object;
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
-    aput-object p1, v3, v4
+    aput-object p1, v2, v3
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 271
+    .line 236
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->init()V
 
-    .line 272
-    invoke-static {p1}, Lcom/tencent/mm/loader/stub/b;->deleteFile(Ljava/lang/String;)Z
+    .line 237
+    invoke-static {p1}, Lcom/tencent/mm/a/e;->deleteFile(Ljava/lang/String;)Z
     :try_end_2
     .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_1
 
     goto :goto_1
 
-    .line 281
+    .line 244
     :catch_2
     move-exception v0
 
-    .line 282
-    const-string/jumbo v1, "!44@/B4Tb64lLpISAcxqEoGUAVQg2GsFw4s4HolE1VZb8OE="
+    .line 245
+    const-string/jumbo v1, "MicroMsg.GIF.MMGIFImageView"
 
     const-string/jumbo v2, "setMMGIFFilePath failed3. %s"
 
     new-array v3, v12, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
-    aput-object v0, v3, v11
+    aput-object v0, v3, v9
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 283
-    invoke-static {p1}, Lcom/tencent/mm/loader/stub/b;->deleteFile(Ljava/lang/String;)Z
+    .line 246
+    invoke-static {p1}, Lcom/tencent/mm/a/e;->deleteFile(Ljava/lang/String;)Z
 
     goto :goto_2
 .end method
 
-.method public e([BLjava/lang/String;)V
+.method public c([BLjava/lang/String;)V
     .locals 5
 
     .prologue
@@ -994,39 +865,37 @@
 
     const/4 v4, 0x0
 
-    .line 291
+    .line 254
     :try_start_0
-    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 292
-    invoke-virtual {p0, p2}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->setCacheKey(Ljava/lang/String;)V
+    .line 255
+    iput-object p2, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->deS:Ljava/lang/String;
 
-    .line 293
-    invoke-static {}, Lcom/tencent/mm/plugin/gif/b;->acx()Lcom/tencent/mm/plugin/gif/b;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->getCacheKey()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1, p1}, Lcom/tencent/mm/plugin/gif/b;->o(Ljava/lang/String;[B)Lcom/tencent/mm/plugin/gif/a;
+    .line 256
+    invoke-static {}, Lcom/tencent/mm/plugin/gif/b;->aeV()Lcom/tencent/mm/plugin/gif/b;
 
     move-result-object v0
 
-    .line 297
+    iget-object v1, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->deS:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, p1}, Lcom/tencent/mm/plugin/gif/b;->n(Ljava/lang/String;[B)Lcom/tencent/mm/plugin/gif/a;
+
+    move-result-object v0
+
+    .line 260
     :goto_0
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 325
+    .line 287
     :goto_1
     return-void
 
-    .line 295
+    .line 258
     :cond_0
     new-instance v0, Lcom/tencent/mm/plugin/gif/a;
 
@@ -1037,11 +906,11 @@
 
     goto :goto_0
 
-    .line 303
+    .line 266
     :catch_0
     move-exception v0
 
-    .line 304
+    .line 267
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/gif/MMGIFException;->getErrorCode()I
 
     move-result v1
@@ -1050,22 +919,22 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 306
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/d;->aQ([B)Landroid/graphics/Bitmap;
+    .line 268
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/d;->aX([B)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 307
+    .line 269
     if-eqz v0, :cond_1
 
-    .line 308
+    .line 270
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     goto :goto_1
 
-    .line 311
+    .line 273
     :cond_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpISAcxqEoGUAVQg2GsFw4s4HolE1VZb8OE="
+    const-string/jumbo v0, "MicroMsg.GIF.MMGIFImageView"
 
     const-string/jumbo v1, "setMMGIFFileByteArray failedbitmap is null. bytes %s"
 
@@ -1077,16 +946,16 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 315
+    .line 277
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->init()V
 
     goto :goto_1
 
-    .line 319
+    .line 281
     :cond_2
-    const-string/jumbo v1, "!44@/B4Tb64lLpISAcxqEoGUAVQg2GsFw4s4HolE1VZb8OE="
+    const-string/jumbo v1, "MicroMsg.GIF.MMGIFImageView"
 
     const-string/jumbo v2, "setMMGIFFileByteArray failed. %s"
 
@@ -1098,20 +967,20 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 323
+    .line 285
     :goto_2
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->init()V
 
     goto :goto_1
 
-    .line 320
+    .line 282
     :catch_1
     move-exception v0
 
-    .line 321
-    const-string/jumbo v1, "!44@/B4Tb64lLpISAcxqEoGUAVQg2GsFw4s4HolE1VZb8OE="
+    .line 283
+    const-string/jumbo v1, "MicroMsg.GIF.MMGIFImageView"
 
     const-string/jumbo v2, "setMMGIFFileByteArray failed. %s"
 
@@ -1123,70 +992,35 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_2
 .end method
 
-.method public getCacheKey()Ljava/lang/String;
+.method public final getIntrinsicHeight()I
     .locals 1
 
     .prologue
-    .line 132
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->dfP:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getDensity()F
-    .locals 2
-
-    .prologue
-    .line 106
-    iget v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->mDensity:F
-
-    const/4 v1, 0x0
-
-    cmpl-float v0, v0, v1
-
-    if-nez v0, :cond_0
-
-    .line 107
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/tencent/mm/aw/a;->getDensity(Landroid/content/Context;)F
-
-    move-result v0
-
-    .line 109
-    :goto_0
-    return v0
-
-    :cond_0
-    iget v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->mDensity:F
-
-    goto :goto_0
-.end method
-
-.method public getIntrinsicHeight()I
-    .locals 1
-
-    .prologue
-    .line 383
+    .line 346
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     const/4 v0, 0x0
 
+    .line 347
     :goto_0
-    return v0
+    if-nez v0, :cond_0
+
+    iget v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->eDB:I
 
     :cond_0
+    return v0
+
+    .line 346
+    :cond_1
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -1198,23 +1032,30 @@
     goto :goto_0
 .end method
 
-.method public getIntrinsicWidth()I
+.method public final getIntrinsicWidth()I
     .locals 1
 
     .prologue
-    .line 379
+    .line 341
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     const/4 v0, 0x0
 
+    .line 342
     :goto_0
-    return v0
+    if-nez v0, :cond_0
+
+    iget v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->eDA:I
 
     :cond_0
+    return v0
+
+    .line 341
+    :cond_1
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -1230,8 +1071,8 @@
     .locals 1
 
     .prologue
-    .line 366
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    .line 328
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
@@ -1239,36 +1080,36 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->exh:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->eDz:Z
 
-    .line 367
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->exh:Z
+    .line 329
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->eDz:Z
 
     if-eqz v0, :cond_1
 
-    .line 368
-    iget v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->exf:I
+    .line 330
+    iget v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->eDx:I
 
     if-lez v0, :cond_0
 
-    .line 369
-    iget v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->exf:I
+    .line 331
+    iget v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->eDx:I
 
     invoke-super {p0, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 376
+    .line 338
     :cond_0
     :goto_0
     return-void
 
-    .line 372
+    .line 334
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->exg:I
+    iget v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->eDy:I
 
     if-lez v0, :cond_0
 
-    .line 373
-    iget v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->exg:I
+    .line 335
+    iget v0, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->eDy:I
 
     invoke-super {p0, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -1279,7 +1120,7 @@
     .locals 4
 
     .prologue
-    .line 406
+    .line 370
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -1294,28 +1135,28 @@
 
     if-eqz v0, :cond_0
 
-    .line 407
+    .line 371
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     check-cast v0, Lcom/tencent/mm/plugin/gif/a;
 
-    iget-boolean v1, v0, Lcom/tencent/mm/plugin/gif/a;->ewo:Z
+    iget-boolean v1, v0, Lcom/tencent/mm/plugin/gif/a;->eCH:Z
 
     if-nez v1, :cond_0
 
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lcom/tencent/mm/plugin/gif/a;->ewn:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/gif/a;->eCG:Z
 
-    iget-object v1, v0, Lcom/tencent/mm/plugin/gif/a;->ewK:Ljava/lang/Runnable;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/gif/a;->eDd:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x0
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/plugin/gif/a;->c(Ljava/lang/Runnable;J)V
 
-    .line 409
+    .line 373
     :cond_0
     return-void
 .end method
@@ -1324,7 +1165,7 @@
     .locals 2
 
     .prologue
-    .line 66
+    .line 63
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1333,64 +1174,7 @@
 
     invoke-direct {p0, v0, p1, v1}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->a(Landroid/content/res/Resources;IZ)V
 
-    .line 67
-    return-void
-.end method
-
-.method public setCacheKey(Ljava/lang/String;)V
-    .locals 0
-
-    .prologue
-    .line 136
-    iput-object p1, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->dfP:Ljava/lang/String;
-
-    .line 137
-    return-void
-.end method
-
-.method public setDefaultBackgroundResource(I)V
-    .locals 0
-
-    .prologue
-    .line 102
-    iput p1, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->exf:I
-
-    .line 103
-    return-void
-.end method
-
-.method public setDefaultImageResource(I)V
-    .locals 0
-
-    .prologue
-    .line 98
-    iput p1, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->exf:I
-
-    .line 99
-    return-void
-.end method
-
-.method public setDensity(F)V
-    .locals 0
-
-    .prologue
-    .line 113
-    iput p1, p0, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->mDensity:F
-
-    .line 114
-    return-void
-.end method
-
-.method public setImageFilePath(Ljava/lang/String;)V
-    .locals 1
-
-    .prologue
-    .line 70
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, v0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->aJ(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 71
+    .line 64
     return-void
 .end method
 
@@ -1398,7 +1182,7 @@
     .locals 2
 
     .prologue
-    .line 61
+    .line 58
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1407,6 +1191,6 @@
 
     invoke-direct {p0, v0, p1, v1}, Lcom/tencent/mm/plugin/gif/MMGIFImageView;->a(Landroid/content/res/Resources;IZ)V
 
-    .line 62
+    .line 59
     return-void
 .end method

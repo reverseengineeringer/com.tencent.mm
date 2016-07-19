@@ -3,40 +3,26 @@ package android.support.v4.app;
 import android.app.Notification;
 import android.app.Notification.Builder;
 import android.os.Bundle;
-import android.util.SparseArray;
-import java.util.Iterator;
-import java.util.Set;
 
 class p$n
-  extends p.k
+  extends p.m
 {
-  public Bundle a(Notification paramNotification)
+  public final Bundle a(Notification paramNotification)
   {
-    return t.a(paramNotification);
+    return extras;
   }
   
   public Notification b(p.d paramd)
   {
-    Object localObject = new t.a(mContext, dg, cH, cI, cN, cL, cO, cJ, cK, cM, cT, cU, cV, cQ, mPriority, cS, da, mExtras, cW, cX, cY);
-    p.a((n)localObject, cZ);
-    p.a((o)localObject, cR);
-    paramd = dw.build();
-    Bundle localBundle1 = t.a(paramd);
-    Bundle localBundle2 = new Bundle(mExtras);
-    Iterator localIterator = mExtras.keySet().iterator();
-    while (localIterator.hasNext())
-    {
-      String str = (String)localIterator.next();
-      if (localBundle1.containsKey(str)) {
-        localBundle2.remove(str);
-      }
+    u.a locala = new u.a(mContext, dw, cX, cY, dd, db, de, cZ, da, dc, dk, dl, dm, dg, dh, mPriority, dj, dr, dx, mExtras, dn, jdField_do, dp);
+    p.a(locala, dq);
+    p.a(locala, di);
+    paramd = t.c(dR);
+    if (paramd != null) {
+      mExtras.putSparseParcelableArray("android.support.actionExtras", paramd);
     }
-    localBundle1.putAll(localBundle2);
-    localObject = t.c(dB);
-    if (localObject != null) {
-      t.a(paramd).putSparseParcelableArray("android.support.actionExtras", (SparseArray)localObject);
-    }
-    return paramd;
+    dM.setExtras(mExtras);
+    return dM.build();
   }
 }
 

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+.field final synthetic lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 745
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$3;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    .line 744
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$3;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,6 +40,6 @@
     .locals 0
 
     .prologue
-    .line 749
+    .line 748
     return-void
 .end method

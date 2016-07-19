@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/h/j$b;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic knl:Lcom/tencent/mm/ui/LauncherUI;
+.field final synthetic kMs:Lcom/tencent/mm/ui/LauncherUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 2377
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$7;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    .line 2348
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUI$7;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,115 +36,58 @@
 
 
 # virtual methods
-.method public final a(ILcom/tencent/mm/sdk/h/j;Ljava/lang/Object;)V
-    .locals 8
+.method public final run()V
+    .locals 3
 
     .prologue
-    const/4 v7, 0x2
+    .line 2352
+    const-string/jumbo v0, "MicroMsg.LauncherUI"
 
-    const/4 v6, 0x1
+    const-string/jumbo v1, "onMainTabCreate, send refresh broadcast"
 
-    const/4 v5, 0x0
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2381
-    invoke-static {p3}, Lcom/tencent/mm/platformtools/t;->Y(Ljava/lang/Object;)I
+    .line 2353
+    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$7;->kMs:Lcom/tencent/mm/ui/LauncherUI;
 
-    move-result v0
+    new-instance v1, Landroid/content/Intent;
 
-    .line 2382
-    const-string/jumbo v1, "!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2"
+    const-string/jumbo v2, "com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP"
 
-    const-string/jumbo v2, "onNotifyChange event:%d obj:%d stg:%s"
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const/4 v3, 0x3
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/LauncherUI;->sendBroadcast(Landroid/content/Intent;)V
 
-    new-array v3, v3, [Ljava/lang/Object;
+    .line 2354
+    return-void
+.end method
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    move-result-object v4
+    .prologue
+    .line 2358
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    aput-object v4, v3, v5
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v3, v6
-
-    aput-object p2, v3, v7
-
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 2383
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
-
-    move-result-object v1
-
-    if-ne p2, v1, :cond_0
-
-    if-gtz v0, :cond_2
-
-    .line 2384
-    :cond_0
-    const-string/jumbo v1, "!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2"
-
-    const-string/jumbo v2, "onNotifyChange error obj:%d stg:%s"
-
-    new-array v3, v7, [Ljava/lang/Object;
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    aput-object v0, v3, v5
+    const-string/jumbo v1, "|sendBroadcast"
 
-    aput-object p2, v3, v6
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    move-result-object v0
 
-    .line 2399
-    :cond_1
-    :goto_0
-    return-void
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 2388
-    :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/LauncherUI$7;->knl:Lcom/tencent/mm/ui/LauncherUI;
+    move-result-object v0
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/LauncherUI;->baj()V
-
-    .line 2393
-    const v1, 0x23102
-
-    if-ne v0, v1, :cond_3
-
-    .line 2394
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$7;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->l(Lcom/tencent/mm/ui/LauncherUI;)V
-
-    goto :goto_0
-
-    .line 2395
-    :cond_3
-    const v1, 0x32011
-
-    if-eq v0, v1, :cond_4
-
-    const v1, 0x32014
-
-    if-ne v0, v1, :cond_1
-
-    .line 2396
-    :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/ui/LauncherUI$7;->knl:Lcom/tencent/mm/ui/LauncherUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/LauncherUI;->k(Lcom/tencent/mm/ui/LauncherUI;)V
-
-    goto :goto_0
+    return-object v0
 .end method

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kHF:Lcom/tencent/mm/ui/base/MMTagPanelScrollView;
+.field final synthetic lgH:Lcom/tencent/mm/ui/base/MMTagPanelScrollView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 26
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView$1;->kHF:Lcom/tencent/mm/ui/base/MMTagPanelScrollView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView$1;->lgH:Lcom/tencent/mm/ui/base/MMTagPanelScrollView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 31
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView$1;->kHF:Lcom/tencent/mm/ui/base/MMTagPanelScrollView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView$1;->lgH:Lcom/tencent/mm/ui/base/MMTagPanelScrollView;
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView$1;->kHF:Lcom/tencent/mm/ui/base/MMTagPanelScrollView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView$1;->lgH:Lcom/tencent/mm/ui/base/MMTagPanelScrollView;
 
     invoke-virtual {v2}, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;->getBottom()I
 

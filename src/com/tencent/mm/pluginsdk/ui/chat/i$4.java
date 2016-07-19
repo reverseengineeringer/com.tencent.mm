@@ -1,18 +1,18 @@
 package com.tencent.mm.pluginsdk.ui.chat;
 
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah.a;
 import com.tencent.mm.ui.base.o;
 
 final class i$4
-  implements af.a
+  implements ah.a
 {
   i$4(i parami) {}
   
-  public final boolean lj()
+  public final boolean jK()
   {
-    i locali = iMq;
-    if (iMm != null) {
-      iMm.dismiss();
+    i locali = jjn;
+    if (jjj != null) {
+      jjj.dismiss();
     }
     return false;
   }

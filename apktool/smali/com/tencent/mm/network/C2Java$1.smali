@@ -18,15 +18,15 @@
 
 
 # instance fields
-.field final synthetic aoU:I
+.field final synthetic ada:I
 
-.field final synthetic aoV:I
+.field final synthetic adb:I
 
-.field final synthetic bGb:Ljava/lang/String;
+.field final synthetic bzC:[B
 
-.field final synthetic bGr:[B
+.field final synthetic bzm:Ljava/lang/String;
 
-.field final synthetic cis:I
+.field final synthetic cdJ:I
 
 
 # direct methods
@@ -34,16 +34,16 @@
     .locals 0
 
     .prologue
-    .line 176
-    iput p1, p0, Lcom/tencent/mm/network/C2Java$1;->aoU:I
+    .line 181
+    iput p1, p0, Lcom/tencent/mm/network/C2Java$1;->ada:I
 
-    iput p2, p0, Lcom/tencent/mm/network/C2Java$1;->aoV:I
+    iput p2, p0, Lcom/tencent/mm/network/C2Java$1;->adb:I
 
-    iput-object p3, p0, Lcom/tencent/mm/network/C2Java$1;->bGb:Ljava/lang/String;
+    iput-object p3, p0, Lcom/tencent/mm/network/C2Java$1;->bzm:Ljava/lang/String;
 
-    iput p4, p0, Lcom/tencent/mm/network/C2Java$1;->cis:I
+    iput p4, p0, Lcom/tencent/mm/network/C2Java$1;->cdJ:I
 
-    iput-object p5, p0, Lcom/tencent/mm/network/C2Java$1;->bGr:[B
+    iput-object p5, p0, Lcom/tencent/mm/network/C2Java$1;->bzC:[B
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,30 +56,30 @@
     .locals 26
 
     .prologue
-    .line 179
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
+    .line 184
+    invoke-static {}, Lcom/tencent/mm/network/z;->FD()Lcom/tencent/mm/network/y;
 
     move-result-object v13
 
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/tencent/mm/network/C2Java$1;->aoU:I
+    iget v2, v0, Lcom/tencent/mm/network/C2Java$1;->ada:I
 
     move-object/from16 v0, p0
 
-    iget v4, v0, Lcom/tencent/mm/network/C2Java$1;->aoV:I
+    iget v4, v0, Lcom/tencent/mm/network/C2Java$1;->adb:I
 
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/tencent/mm/network/C2Java$1;->bGb:Ljava/lang/String;
+    iget-object v14, v0, Lcom/tencent/mm/network/C2Java$1;->bzm:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
-    iget v15, v0, Lcom/tencent/mm/network/C2Java$1;->cis:I
+    iget v15, v0, Lcom/tencent/mm/network/C2Java$1;->cdJ:I
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/tencent/mm/network/C2Java$1;->bGr:[B
+    iget-object v0, v0, Lcom/tencent/mm/network/C2Java$1;->bzC:[B
 
     move-object/from16 v16, v0
 
@@ -87,14 +87,14 @@
 
     const/4 v12, 0x0
 
-    iget-object v0, v13, Lcom/tencent/mm/network/y;->cjG:[Lcom/tencent/mm/network/y$a;
+    iget-object v0, v13, Lcom/tencent/mm/network/y;->ceX:[Lcom/tencent/mm/network/y$a;
 
     move-object/from16 v17, v0
 
     monitor-enter v17
 
     :try_start_0
-    invoke-virtual {v13, v15}, Lcom/tencent/mm/network/y;->eh(I)I
+    invoke-virtual {v13, v15}, Lcom/tencent/mm/network/y;->eQ(I)I
 
     move-result v18
 
@@ -104,7 +104,7 @@
 
     if-ne v5, v0, :cond_0
 
-    const-string/jumbo v3, "!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g="
+    const-string/jumbo v3, "MicroMsg.MMNativeNetTaskAdapter"
 
     const-string/jumbo v5, "mmcgi onGYNetEnd GET FROM QUEUE failed. native:[%d,%d] msg:%s hashCode:%d "
 
@@ -140,21 +140,21 @@
 
     aput-object v4, v6, v2
 
-    invoke-static {v3, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v5, v6}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     monitor-exit v17
 
-    .line 180
+    .line 185
     :goto_0
     return-void
 
-    .line 179
+    .line 184
     :cond_0
     const/4 v5, 0x0
 
     packed-switch v2, :pswitch_data_0
 
-    const-string/jumbo v6, "!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g="
+    const-string/jumbo v6, "MicroMsg.MMNativeNetTaskAdapter"
 
     const-string/jumbo v7, "c2JavaErrorType not exits c_errType:%d"
 
@@ -170,7 +170,7 @@
 
     aput-object v2, v8, v9
 
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->f(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/v;->f(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :goto_1
     if-nez v5, :cond_1
@@ -185,11 +185,11 @@
     const/4 v4, -0x1
 
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fc()Lcom/tencent/mm/network/aa;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fy()Lcom/tencent/mm/network/aa;
 
     move-result-object v2
 
-    iget-boolean v2, v2, Lcom/tencent/mm/network/aa;->cjX:Z
+    iget-boolean v2, v2, Lcom/tencent/mm/network/aa;->cfp:Z
 
     if-nez v2, :cond_3
 
@@ -197,42 +197,42 @@
 
     if-ne v5, v2, :cond_3
 
-    const-string/jumbo v2, "!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g="
+    const-string/jumbo v2, "MicroMsg.MMNativeNetTaskAdapter"
 
     const-string/jumbo v4, "network not available"
 
-    invoke-static {v2, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v5, 0x2
 
     const/4 v4, -0x1
 
     :cond_3
-    iget-object v2, v13, Lcom/tencent/mm/network/y;->cjG:[Lcom/tencent/mm/network/y$a;
+    iget-object v2, v13, Lcom/tencent/mm/network/y;->ceX:[Lcom/tencent/mm/network/y$a;
 
     aget-object v2, v2, v18
 
-    iget-object v0, v2, Lcom/tencent/mm/network/y$a;->cjK:Lcom/tencent/mm/network/p;
+    iget-object v0, v2, Lcom/tencent/mm/network/y$a;->cfb:Lcom/tencent/mm/network/p;
 
     move-object/from16 v19, v0
 
-    iget-object v2, v13, Lcom/tencent/mm/network/y;->cjG:[Lcom/tencent/mm/network/y$a;
+    iget-object v2, v13, Lcom/tencent/mm/network/y;->ceX:[Lcom/tencent/mm/network/y$a;
 
     aget-object v2, v2, v18
 
-    iget-object v0, v2, Lcom/tencent/mm/network/y$a;->cjL:Lcom/tencent/mm/network/k;
+    iget-object v0, v2, Lcom/tencent/mm/network/y$a;->cfc:Lcom/tencent/mm/network/k;
 
     move-object/from16 v20, v0
 
-    iget-object v2, v13, Lcom/tencent/mm/network/y;->cjG:[Lcom/tencent/mm/network/y$a;
+    iget-object v2, v13, Lcom/tencent/mm/network/y;->ceX:[Lcom/tencent/mm/network/y$a;
 
     aget-object v2, v2, v18
 
     iget-wide v0, v2, Lcom/tencent/mm/network/y$a;->startTime:J
 
-    move-wide/from16 v21, v0
+    move-wide/from16 v22, v0
 
-    iget-object v2, v13, Lcom/tencent/mm/network/y;->cjG:[Lcom/tencent/mm/network/y$a;
+    iget-object v2, v13, Lcom/tencent/mm/network/y;->ceX:[Lcom/tencent/mm/network/y$a;
 
     const/4 v6, 0x0
 
@@ -243,11 +243,11 @@
     if-nez v5, :cond_1e
 
     :try_start_1
-    invoke-interface/range {v19 .. v19}, Lcom/tencent/mm/network/p;->wg()Lcom/tencent/mm/protocal/f;
+    invoke-interface/range {v19 .. v19}, Lcom/tencent/mm/network/p;->wi()Lcom/tencent/mm/protocal/h;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/tencent/mm/protocal/f;->wj()I
+    invoke-interface {v2}, Lcom/tencent/mm/protocal/h;->wl()I
 
     move-result v2
 
@@ -255,11 +255,11 @@
 
     const/4 v5, 0x4
 
-    invoke-interface/range {v19 .. v19}, Lcom/tencent/mm/network/p;->wg()Lcom/tencent/mm/protocal/f;
+    invoke-interface/range {v19 .. v19}, Lcom/tencent/mm/network/p;->wi()Lcom/tencent/mm/protocal/h;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/tencent/mm/protocal/f;->wj()I
+    invoke-interface {v2}, Lcom/tencent/mm/protocal/h;->wl()I
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_5
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -280,15 +280,15 @@
     move-result v9
 
     :try_start_3
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fg()Lcom/tencent/mm/network/r;
+    invoke-static {}, Lcom/tencent/mm/network/z;->FC()Lcom/tencent/mm/network/r;
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_2
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    move-result-object v23
+    move-result-object v21
 
     :try_start_4
-    const-string/jumbo v2, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v2, "MicroMsg.AutoAuth"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -358,9 +358,9 @@
 
     move-result-object v3
 
-    move-object/from16 v0, v23
+    move-object/from16 v0, v21
 
-    iget v4, v0, Lcom/tencent/mm/network/r;->ciQ:I
+    iget v4, v0, Lcom/tencent/mm/network/r;->ceh:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -370,23 +370,23 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v10, :cond_b
 
-    move-object/from16 v0, v23
+    move-object/from16 v0, v21
 
-    iget v2, v0, Lcom/tencent/mm/network/r;->ciH:I
+    iget v2, v0, Lcom/tencent/mm/network/r;->cdY:I
 
     add-int/lit8 v2, v2, 0x1
 
-    move-object/from16 v0, v23
+    move-object/from16 v0, v21
 
-    iput v2, v0, Lcom/tencent/mm/network/r;->ciH:I
+    iput v2, v0, Lcom/tencent/mm/network/r;->cdY:I
 
     :cond_4
     :goto_3
-    invoke-interface/range {v19 .. v19}, Lcom/tencent/mm/network/p;->wg()Lcom/tencent/mm/protocal/f;
+    invoke-interface/range {v19 .. v19}, Lcom/tencent/mm/network/p;->wi()Lcom/tencent/mm/protocal/h;
 
     move-result-object v24
 
@@ -402,7 +402,7 @@
     :cond_5
     :goto_4
     :try_start_5
-    invoke-interface/range {v19 .. v19}, Lcom/tencent/mm/network/p;->vF()I
+    invoke-interface/range {v19 .. v19}, Lcom/tencent/mm/network/p;->vI()I
     :try_end_5
     .catch Landroid/os/RemoteException; {:try_start_5 .. :try_end_5} :catch_2
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
@@ -421,7 +421,7 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    const-string/jumbo v6, "!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g="
+    const-string/jumbo v6, "MicroMsg.MMNativeNetTaskAdapter"
 
     const-string/jumbo v7, "mmcgi onGYNetEnd type:%d time:%d hash[%d,%d] [%d,%d][%s]"
 
@@ -439,7 +439,7 @@
 
     const/4 v9, 0x1
 
-    invoke-static/range {v21 .. v22}, Lcom/tencent/mm/sdk/platformtools/ay;->an(J)J
+    invoke-static/range {v22 .. v23}, Lcom/tencent/mm/sdk/platformtools/be;->au(J)J
 
     move-result-wide v10
 
@@ -485,7 +485,7 @@
 
     aput-object v14, v8, v2
 
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 v2, 0x4
 
@@ -508,7 +508,7 @@
     if-ne v2, v5, :cond_7
 
     :cond_6
-    invoke-static {}, Lcom/tencent/mm/network/z;->Fe()Lcom/tencent/mm/sdk/platformtools/aa;
+    invoke-static {}, Lcom/tencent/mm/network/z;->FA()Lcom/tencent/mm/sdk/platformtools/ac;
 
     move-result-object v2
 
@@ -516,15 +516,15 @@
 
     invoke-direct {v6, v13, v3, v5}, Lcom/tencent/mm/network/y$1;-><init>(Lcom/tencent/mm/network/y;II)V
 
-    invoke-virtual {v2, v6}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v2, v6}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
 
     :cond_7
     :try_start_7
-    invoke-interface/range {v19 .. v19}, Lcom/tencent/mm/network/p;->wg()Lcom/tencent/mm/protocal/f;
+    invoke-interface/range {v19 .. v19}, Lcom/tencent/mm/network/p;->wi()Lcom/tencent/mm/protocal/h;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/tencent/mm/protocal/f;->wi()Ljava/lang/String;
+    invoke-interface {v2}, Lcom/tencent/mm/protocal/h;->wk()Ljava/lang/String;
 
     move-result-object v6
 
@@ -553,7 +553,7 @@
     :catch_0
     move-exception v2
 
-    const-string/jumbo v3, "!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g="
+    const-string/jumbo v3, "MicroMsg.MMNativeNetTaskAdapter"
 
     const-string/jumbo v4, "onGYNetEnd cb %s"
 
@@ -569,9 +569,9 @@
 
     aput-object v7, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    const-string/jumbo v3, "!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g="
+    const-string/jumbo v3, "MicroMsg.MMNativeNetTaskAdapter"
 
     const-string/jumbo v4, "exception:%s"
 
@@ -581,13 +581,13 @@
 
     const/4 v6, 0x0
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v2
 
     aput-object v2, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
@@ -676,9 +676,9 @@
 
     const/4 v2, 0x0
 
-    move-object/from16 v0, v23
+    move-object/from16 v0, v21
 
-    iput v2, v0, Lcom/tencent/mm/network/r;->ciH:I
+    iput v2, v0, Lcom/tencent/mm/network/r;->cdY:I
     :try_end_8
     .catch Landroid/os/RemoteException; {:try_start_8 .. :try_end_8} :catch_1
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
@@ -689,7 +689,7 @@
     move-exception v2
 
     :try_start_9
-    const-string/jumbo v3, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v3, "MicroMsg.AutoAuth"
 
     const-string/jumbo v4, "exception:%s"
 
@@ -699,13 +699,13 @@
 
     const/4 v6, 0x0
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v2
 
     aput-object v2, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_9
     .catch Landroid/os/RemoteException; {:try_start_9 .. :try_end_9} :catch_2
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
@@ -723,7 +723,7 @@
 
     :goto_6
     :try_start_a
-    const-string/jumbo v6, "!44@/B4Tb64lLpJ+CRpvz/hRUCYP4tiH2KC7OoUzhxHmm0g="
+    const-string/jumbo v6, "MicroMsg.MMNativeNetTaskAdapter"
 
     const-string/jumbo v7, "exception:%s"
 
@@ -733,13 +733,13 @@
 
     const/4 v9, 0x0
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->f(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v2
 
     aput-object v2, v8, v9
 
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_0
 
@@ -755,7 +755,7 @@
 
     :sswitch_0
     :try_start_b
-    const-string/jumbo v2, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v2, "MicroMsg.AutoAuth"
 
     const-string/jumbo v3, "summerauth end type: %d, ret:[%d,%d][%s]"
 
@@ -795,9 +795,9 @@
 
     aput-object v14, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/f;->wj()I
+    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/h;->wl()I
 
     move-result v2
 
@@ -816,7 +816,7 @@
 
     if-ne v2, v3, :cond_d
 
-    const-string/jumbo v2, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v2, "MicroMsg.AutoAuth"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -866,7 +866,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_b
     .catch Landroid/os/RemoteException; {:try_start_b .. :try_end_b} :catch_1
     .catchall {:try_start_b .. :try_end_b} :catchall_0
@@ -890,7 +890,7 @@
 
     :sswitch_1
     :try_start_d
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -920,7 +920,7 @@
 
     if-ne v10, v2, :cond_e
 
-    sget-object v2, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v2, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v2, 0x94
 
@@ -930,7 +930,7 @@
 
     const/4 v8, 0x0
 
-    invoke-static/range {v2 .. v8}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v2 .. v8}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
     goto/16 :goto_4
 
@@ -939,7 +939,7 @@
 
     if-ne v10, v2, :cond_f
 
-    sget-object v2, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v2, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v2, 0x94
 
@@ -949,7 +949,7 @@
 
     const/4 v8, 0x0
 
-    invoke-static/range {v2 .. v8}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v2 .. v8}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
     goto/16 :goto_4
 
@@ -958,7 +958,7 @@
 
     if-ne v10, v2, :cond_5
 
-    sget-object v2, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v2, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v2, 0x94
 
@@ -968,16 +968,16 @@
 
     const/4 v8, 0x0
 
-    invoke-static/range {v2 .. v8}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v2 .. v8}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
     goto/16 :goto_4
 
     :cond_10
-    invoke-interface/range {v19 .. v19}, Lcom/tencent/mm/network/p;->wh()I
+    invoke-interface/range {v19 .. v19}, Lcom/tencent/mm/network/p;->wj()I
 
     move-result v2
 
-    const-string/jumbo v3, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v3, "MicroMsg.AutoAuth"
 
     const-string/jumbo v4, "summerauth accinfo doAuthEnd type:%d, ret:%d loginDecodeFailedTry:%d"
 
@@ -1007,9 +1007,9 @@
 
     const/4 v6, 0x2
 
-    move-object/from16 v0, v23
+    move-object/from16 v0, v21
 
-    iget v7, v0, Lcom/tencent/mm/network/r;->cbn:I
+    iget v7, v0, Lcom/tencent/mm/network/r;->bVa:I
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1017,7 +1017,7 @@
 
     aput-object v7, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 v3, 0x2
 
@@ -1031,7 +1031,7 @@
 
     if-ne v2, v3, :cond_5
 
-    sget-object v2, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v2, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v2, 0x94
 
@@ -1041,31 +1041,31 @@
 
     const/4 v8, 0x0
 
-    invoke-static/range {v2 .. v8}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v2 .. v8}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
-    move-object/from16 v0, v23
+    move-object/from16 v0, v21
 
-    iget v2, v0, Lcom/tencent/mm/network/r;->cbn:I
+    iget v2, v0, Lcom/tencent/mm/network/r;->bVa:I
 
     add-int/lit8 v2, v2, 0x1
 
-    move-object/from16 v0, v23
+    move-object/from16 v0, v21
 
-    iput v2, v0, Lcom/tencent/mm/network/r;->cbn:I
+    iput v2, v0, Lcom/tencent/mm/network/r;->bVa:I
 
-    move-object/from16 v0, v23
+    move-object/from16 v0, v21
 
-    iget v2, v0, Lcom/tencent/mm/network/r;->cbn:I
+    iget v2, v0, Lcom/tencent/mm/network/r;->bVa:I
 
     const/4 v3, 0x1
 
     if-le v2, v3, :cond_11
 
-    const-string/jumbo v2, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v2, "MicroMsg.AutoAuth"
 
     const-string/jumbo v3, "summerauth loginDecodeFailedTry beyond 1 no more try!"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1075,7 +1075,7 @@
 
     const-string/jumbo v3, ""
 
-    invoke-static {v14, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v14, v3}, Lcom/tencent/mm/sdk/platformtools/be;->ab(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -1087,9 +1087,9 @@
 
     move-result-object v2
 
-    move-object/from16 v0, v23
+    move-object/from16 v0, v21
 
-    invoke-virtual {v0, v11, v10, v2}, Lcom/tencent/mm/network/r;->d(IILjava/lang/String;)V
+    invoke-virtual {v0, v11, v10, v2}, Lcom/tencent/mm/network/r;->c(IILjava/lang/String;)V
     :try_end_d
     .catch Landroid/os/RemoteException; {:try_start_d .. :try_end_d} :catch_1
     .catchall {:try_start_d .. :try_end_d} :catchall_0
@@ -1098,15 +1098,15 @@
 
     :cond_11
     :try_start_e
-    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/f;->rg()I
+    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/h;->rf()I
 
     move-result v4
 
-    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/f;->wk()[B
+    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/h;->wm()[B
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->J([B)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->P([B)Z
 
     move-result v3
 
@@ -1117,7 +1117,7 @@
     move-object v3, v2
 
     :goto_7
-    invoke-static/range {v16 .. v16}, Lcom/tencent/mm/sdk/platformtools/ay;->J([B)Z
+    invoke-static/range {v16 .. v16}, Lcom/tencent/mm/sdk/platformtools/be;->P([B)Z
 
     move-result v2
 
@@ -1132,18 +1132,18 @@
 
     if-eqz v2, :cond_14
 
-    move-object/from16 v0, v23
+    move-object/from16 v0, v21
 
-    iget-object v2, v0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    iget-object v2, v0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
     move-object/from16 v0, v16
 
-    iput-object v0, v2, Lcom/tencent/mm/network/a;->bGA:[B
+    iput-object v0, v2, Lcom/tencent/mm/network/a;->bzL:[B
 
     :goto_9
-    move-object/from16 v0, v23
+    move-object/from16 v0, v21
 
-    iget-object v2, v0, Lcom/tencent/mm/network/r;->ciN:Lcom/tencent/mm/network/r$a;
+    iget-object v2, v0, Lcom/tencent/mm/network/r;->cee:Lcom/tencent/mm/network/r$a;
 
     const/4 v3, 0x0
 
@@ -1162,7 +1162,7 @@
     move-exception v2
 
     :try_start_f
-    const-string/jumbo v3, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v3, "MicroMsg.AutoAuth"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1170,7 +1170,7 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static/range {v16 .. v16}, Lcom/tencent/mm/sdk/platformtools/ay;->aW([B)Ljava/lang/String;
+    invoke-static/range {v16 .. v16}, Lcom/tencent/mm/sdk/platformtools/be;->bd([B)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1186,9 +1186,9 @@
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    invoke-static {v3, v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->appenderFlush()V
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->appenderFlush()V
 
     throw v2
     :try_end_f
@@ -1197,7 +1197,7 @@
 
     :cond_12
     :try_start_10
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->aW([B)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->bd([B)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1206,18 +1206,18 @@
     goto :goto_7
 
     :cond_13
-    invoke-static/range {v16 .. v16}, Lcom/tencent/mm/sdk/platformtools/ay;->aW([B)Ljava/lang/String;
+    invoke-static/range {v16 .. v16}, Lcom/tencent/mm/sdk/platformtools/be;->bd([B)Ljava/lang/String;
 
     move-result-object v2
 
     goto :goto_8
 
     :cond_14
-    const-string/jumbo v2, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v2, "MicroMsg.AutoAuth"
 
     const-string/jumbo v3, "summerauth save serverid aak failed 1"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_10
     .catch Landroid/os/RemoteException; {:try_start_10 .. :try_end_10} :catch_3
     .catchall {:try_start_10 .. :try_end_10} :catchall_0
@@ -1228,11 +1228,11 @@
     const/4 v2, 0x0
 
     :try_start_11
-    move-object/from16 v0, v23
+    move-object/from16 v0, v21
 
-    iput v2, v0, Lcom/tencent/mm/network/r;->cbn:I
+    iput v2, v0, Lcom/tencent/mm/network/r;->bVa:I
 
-    invoke-interface/range {v19 .. v19}, Lcom/tencent/mm/network/p;->wf()Lcom/tencent/mm/protocal/e;
+    invoke-interface/range {v19 .. v19}, Lcom/tencent/mm/network/p;->wh()Lcom/tencent/mm/protocal/g;
     :try_end_11
     .catch Landroid/os/RemoteException; {:try_start_11 .. :try_end_11} :catch_1
     .catchall {:try_start_11 .. :try_end_11} :catchall_0
@@ -1240,7 +1240,7 @@
     move-result-object v4
 
     :try_start_12
-    const-string/jumbo v2, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v2, "MicroMsg.AutoAuth"
 
     const-string/jumbo v3, "summerauth accinfo %d: username:%s, wxusername:%s, ticket:%s, session:%s, uin:%d"
 
@@ -1262,7 +1262,7 @@
 
     const/4 v6, 0x1
 
-    invoke-interface {v4}, Lcom/tencent/mm/protocal/e;->getUserName()Ljava/lang/String;
+    invoke-interface {v4}, Lcom/tencent/mm/protocal/g;->getUserName()Ljava/lang/String;
 
     move-result-object v7
 
@@ -1270,7 +1270,7 @@
 
     const/4 v6, 0x2
 
-    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/f;->wo()Ljava/lang/String;
+    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/h;->wq()Ljava/lang/String;
 
     move-result-object v7
 
@@ -1278,15 +1278,15 @@
 
     const/4 v6, 0x3
 
-    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/f;->wk()[B
+    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/h;->wm()[B
 
     move-result-object v7
 
-    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/ay;->I([B)Ljava/lang/String;
+    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/be;->O([B)Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/ay;->Dz(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/be;->FO(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -1294,15 +1294,15 @@
 
     const/4 v6, 0x4
 
-    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/f;->tq()[B
+    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/h;->tr()[B
 
     move-result-object v7
 
-    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/ay;->I([B)Ljava/lang/String;
+    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/be;->O([B)Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/ay;->Dz(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v7}, Lcom/tencent/mm/sdk/platformtools/be;->FO(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -1310,7 +1310,7 @@
 
     const/4 v6, 0x5
 
-    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/f;->rg()I
+    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/h;->rf()I
 
     move-result v7
 
@@ -1320,17 +1320,17 @@
 
     aput-object v7, v5, v6
 
-    invoke-static {v2, v3, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v5}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/f;->rg()I
+    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/h;->rf()I
 
     move-result v5
 
-    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/f;->wk()[B
+    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/h;->wm()[B
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->J([B)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->P([B)Z
 
     move-result v3
 
@@ -1341,7 +1341,7 @@
     move-object v3, v2
 
     :goto_a
-    invoke-static/range {v16 .. v16}, Lcom/tencent/mm/sdk/platformtools/ay;->J([B)Z
+    invoke-static/range {v16 .. v16}, Lcom/tencent/mm/sdk/platformtools/be;->P([B)Z
 
     move-result v2
 
@@ -1356,59 +1356,59 @@
 
     if-eqz v2, :cond_18
 
-    move-object/from16 v0, v23
+    move-object/from16 v0, v21
 
-    iget-object v2, v0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    iget-object v2, v0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
     move-object/from16 v0, v16
 
-    iput-object v0, v2, Lcom/tencent/mm/network/a;->bGA:[B
+    iput-object v0, v2, Lcom/tencent/mm/network/a;->bzL:[B
 
-    move-object/from16 v0, v23
+    move-object/from16 v0, v21
 
-    iget-object v2, v0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    iget-object v2, v0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
-    invoke-interface {v4}, Lcom/tencent/mm/protocal/e;->getUserName()Ljava/lang/String;
+    invoke-interface {v4}, Lcom/tencent/mm/protocal/g;->getUserName()Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, v2, Lcom/tencent/mm/network/a;->username:Ljava/lang/String;
 
-    move-object/from16 v0, v23
+    move-object/from16 v0, v21
 
-    iget-object v2, v0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    iget-object v2, v0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
-    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/f;->wo()Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, v2, Lcom/tencent/mm/network/a;->ciq:Ljava/lang/String;
-
-    move-object/from16 v0, v23
-
-    iget-object v2, v0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
-
-    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/f;->tq()[B
+    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/h;->wq()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/f;->rg()I
+    iput-object v3, v2, Lcom/tencent/mm/network/a;->cdH:Ljava/lang/String;
+
+    move-object/from16 v0, v21
+
+    iget-object v2, v0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
+
+    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/h;->tr()[B
+
+    move-result-object v3
+
+    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/h;->rf()I
 
     move-result v4
 
     invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/network/a;->i([BI)V
 
-    move-object/from16 v0, v23
+    move-object/from16 v0, v21
 
-    iget-object v2, v0, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
+    iget-object v2, v0, Lcom/tencent/mm/network/r;->ced:Lcom/tencent/mm/network/a;
 
-    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/f;->vT()[B
+    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/h;->vV()[B
 
     move-result-object v3
 
-    iput-object v3, v2, Lcom/tencent/mm/network/a;->cip:[B
+    iput-object v3, v2, Lcom/tencent/mm/network/a;->cdG:[B
 
-    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/f;->rg()I
+    invoke-interface/range {v24 .. v24}, Lcom/tencent/mm/protocal/h;->rf()I
 
     move-result v2
 
@@ -1419,11 +1419,11 @@
 
     :goto_c
     :try_start_13
-    const-string/jumbo v2, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v2, "MicroMsg.AutoAuth"
 
     const-string/jumbo v3, "summerauth decode and save ok!"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_13
     .catch Landroid/os/RemoteException; {:try_start_13 .. :try_end_13} :catch_1
     .catchall {:try_start_13 .. :try_end_13} :catchall_0
@@ -1432,7 +1432,7 @@
 
     :cond_16
     :try_start_14
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->aW([B)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/be;->bd([B)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1441,14 +1441,14 @@
     goto :goto_a
 
     :cond_17
-    invoke-static/range {v16 .. v16}, Lcom/tencent/mm/sdk/platformtools/ay;->aW([B)Ljava/lang/String;
+    invoke-static/range {v16 .. v16}, Lcom/tencent/mm/sdk/platformtools/be;->bd([B)Ljava/lang/String;
 
     move-result-object v2
 
     goto :goto_b
 
     :cond_18
-    sget-object v2, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+    sget-object v2, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
 
     const-wide/16 v2, 0x94
 
@@ -1458,13 +1458,13 @@
 
     const/4 v8, 0x0
 
-    invoke-static/range {v2 .. v8}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+    invoke-static/range {v2 .. v8}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
 
-    const-string/jumbo v2, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v2, "MicroMsg.AutoAuth"
 
     const-string/jumbo v3, "summerauth save serverid aak failed 2"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->w(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_14
     .catch Landroid/os/RemoteException; {:try_start_14 .. :try_end_14} :catch_4
     .catchall {:try_start_14 .. :try_end_14} :catchall_0
@@ -1475,7 +1475,7 @@
     move-exception v2
 
     :try_start_15
-    const-string/jumbo v3, "!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb"
+    const-string/jumbo v3, "MicroMsg.AutoAuth"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1483,7 +1483,7 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static/range {v16 .. v16}, Lcom/tencent/mm/sdk/platformtools/ay;->aW([B)Ljava/lang/String;
+    invoke-static/range {v16 .. v16}, Lcom/tencent/mm/sdk/platformtools/be;->bd([B)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1499,9 +1499,9 @@
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    invoke-static {v3, v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/v;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->appenderFlush()V
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/v;->appenderFlush()V
 
     throw v2
 
@@ -1510,52 +1510,52 @@
 
     if-nez v10, :cond_19
 
-    invoke-interface/range {v19 .. v19}, Lcom/tencent/mm/network/p;->wg()Lcom/tencent/mm/protocal/f;
+    invoke-interface/range {v19 .. v19}, Lcom/tencent/mm/network/p;->wi()Lcom/tencent/mm/protocal/h;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/tencent/mm/protocal/f;->wl()Ljava/lang/String;
+    invoke-interface {v2}, Lcom/tencent/mm/protocal/h;->wn()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-interface/range {v19 .. v19}, Lcom/tencent/mm/network/p;->wg()Lcom/tencent/mm/protocal/f;
+    invoke-interface/range {v19 .. v19}, Lcom/tencent/mm/network/p;->wi()Lcom/tencent/mm/protocal/h;
 
     move-result-object v3
 
-    invoke-interface {v3}, Lcom/tencent/mm/protocal/f;->wm()Ljava/lang/String;
+    invoke-interface {v3}, Lcom/tencent/mm/protocal/h;->wo()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-interface/range {v19 .. v19}, Lcom/tencent/mm/network/p;->wg()Lcom/tencent/mm/protocal/f;
+    invoke-interface/range {v19 .. v19}, Lcom/tencent/mm/network/p;->wi()Lcom/tencent/mm/protocal/h;
 
     move-result-object v4
 
-    invoke-interface {v4}, Lcom/tencent/mm/protocal/f;->wn()I
+    invoke-interface {v4}, Lcom/tencent/mm/protocal/h;->wp()I
 
     move-result v4
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/protocal/z;->v(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/protocal/ac;->t(Ljava/lang/String;Ljava/lang/String;I)V
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    move-object/from16 v0, v23
+    move-object/from16 v0, v21
 
-    iput-wide v2, v0, Lcom/tencent/mm/network/r;->ciP:J
+    iput-wide v2, v0, Lcom/tencent/mm/network/r;->ceg:J
 
     :cond_19
-    sget v2, Lcom/tencent/mm/platformtools/r;->cnl:I
+    sget v2, Lcom/tencent/mm/platformtools/q;->ciq:I
 
     const/16 v3, 0x2713
 
     if-ne v2, v3, :cond_1d
 
-    sget v2, Lcom/tencent/mm/platformtools/r;->cnm:I
+    sget v2, Lcom/tencent/mm/platformtools/q;->cir:I
 
     if-lez v2, :cond_1d
 
-    sget v2, Lcom/tencent/mm/platformtools/r;->cnm:I
+    sget v2, Lcom/tencent/mm/platformtools/q;->cir:I
 
     const/4 v3, 0x1
 
@@ -1563,7 +1563,7 @@
 
     const/4 v2, 0x0
 
-    sput v2, Lcom/tencent/mm/platformtools/r;->cnm:I
+    sput v2, Lcom/tencent/mm/platformtools/q;->cir:I
 
     :cond_1a
     const/4 v2, 0x4
@@ -1574,12 +1574,12 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/protocal/z;->v(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/protocal/ac;->t(Ljava/lang/String;Ljava/lang/String;I)V
 
     :goto_d
-    move-object/from16 v0, v23
+    move-object/from16 v0, v21
 
-    iget v3, v0, Lcom/tencent/mm/network/r;->ciQ:I
+    iget v3, v0, Lcom/tencent/mm/network/r;->ceh:I
 
     const/4 v4, -0x1
 
@@ -1593,7 +1593,7 @@
 
     const/4 v3, 0x0
 
-    move-object/from16 v0, v23
+    move-object/from16 v0, v21
 
     move-object/from16 v1, v19
 
@@ -1602,9 +1602,9 @@
     :cond_1b
     const/4 v2, -0x1
 
-    move-object/from16 v0, v23
+    move-object/from16 v0, v21
 
-    iput v2, v0, Lcom/tencent/mm/network/r;->ciQ:I
+    iput v2, v0, Lcom/tencent/mm/network/r;->ceh:I
     :try_end_15
     .catch Landroid/os/RemoteException; {:try_start_15 .. :try_end_15} :catch_1
     .catchall {:try_start_15 .. :try_end_15} :catchall_0

@@ -13,9 +13,9 @@ final class c$6
   public final void onClick(View paramView)
   {
     paramView = new Intent();
-    paramView.setClass(kxP, LoginUI.class);
+    paramView.setClass(kWW, LoginUI.class);
     paramView.putExtra("login_type", 1);
-    kxP.startActivity(paramView);
+    kWW.startActivity(paramView);
   }
 }
 

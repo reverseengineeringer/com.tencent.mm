@@ -1,42 +1,26 @@
 package com.tencent.mm.performance.wxperformancetool;
 
-import android.content.Context;
-import android.content.Intent;
-import com.tencent.mm.performance.d.a.c;
-import com.tencent.mm.sdk.platformtools.u;
-import java.lang.ref.WeakReference;
-import java.util.HashMap;
+import com.tencent.mm.performance.b.a.a;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class d$2
-  implements a.c
+  implements a.a
 {
-  d$2(d paramd, Context paramContext) {}
+  d$2(d paramd) {}
   
-  public final void a(WeakReference paramWeakReference, boolean paramBoolean)
+  public final void a(long paramLong1, long paramLong2, long paramLong3)
   {
-    Object localObject = paramWeakReference.get();
-    if (localObject == null) {}
-    do
-    {
-      return;
-      u.e("!32@/B4Tb64lLpJDy+XtaqVVAmxMdLX9z03q", "memoryleak===" + localObject.getClass().toString() + "   " + paramBoolean);
-    } while (localObject.getClass().equals(MemoryLeakActivity.class));
-    Intent localIntent = new Intent();
-    if (paramBoolean) {
-      localIntent.putExtra("tag", "activity:");
-    }
-    for (;;)
-    {
-      String str = String.valueOf(System.currentTimeMillis());
-      localIntent.putExtra("key", str);
-      d.clv.put(str, paramWeakReference);
-      localIntent.putExtra("class", String.format("%s", new Object[] { localObject }));
-      localIntent.setClass(val$context, MemoryLeakActivity.class);
-      localIntent.addFlags(268435456);
-      val$context.startActivity(localIntent);
-      return;
-      localIntent.putExtra("tag", "object:");
-    }
+    v.e("MicroMsg.WxPerformace", "onMemoryDangerLow percentage:" + paramLong1 + " max:" + paramLong2 + " used:" + paramLong3);
+  }
+  
+  public final void b(long paramLong1, long paramLong2, long paramLong3)
+  {
+    v.e("MicroMsg.WxPerformace", "onMemoryDangerMiddle percentage:" + paramLong1 + " max:" + paramLong2 + " used:" + paramLong3);
+  }
+  
+  public final void c(long paramLong1, long paramLong2, long paramLong3)
+  {
+    v.e("MicroMsg.WxPerformace", "onMemoryDangerHigh percentage:" + paramLong1 + " max:" + paramLong2 + " used:" + paramLong3);
   }
 }
 

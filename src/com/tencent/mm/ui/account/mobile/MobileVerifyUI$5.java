@@ -2,7 +2,7 @@ package com.tencent.mm.ui.account.mobile;
 
 import android.text.InputFilter;
 import android.text.Spanned;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 final class MobileVerifyUI$5
   implements InputFilter
@@ -11,7 +11,7 @@ final class MobileVerifyUI$5
   
   public final CharSequence filter(CharSequence paramCharSequence, int paramInt1, int paramInt2, Spanned paramSpanned, int paramInt3, int paramInt4)
   {
-    return ay.v(paramCharSequence);
+    return be.E(paramCharSequence);
   }
 }
 

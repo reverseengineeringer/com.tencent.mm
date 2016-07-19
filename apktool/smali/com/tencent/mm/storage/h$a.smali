@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public bCF:Ljava/lang/String;
+.field public bvP:Ljava/lang/String;
 
 .field public type:I
 
@@ -36,7 +36,7 @@
     .line 68
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/storage/h$a;->bCF:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/storage/h$a;->bvP:Ljava/lang/String;
 
     .line 69
     return-void
@@ -75,12 +75,12 @@
     if-ne v1, v2, :cond_0
 
     .line 83
-    iget-object v1, p0, Lcom/tencent/mm/storage/h$a;->bCF:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/storage/h$a;->bvP:Ljava/lang/String;
 
     if-nez v1, :cond_2
 
     .line 84
-    iget-object v1, p1, Lcom/tencent/mm/storage/h$a;->bCF:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/storage/h$a;->bvP:Ljava/lang/String;
 
     if-nez v1, :cond_0
 
@@ -90,9 +90,9 @@
 
     .line 86
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/storage/h$a;->bCF:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/storage/h$a;->bvP:Ljava/lang/String;
 
-    iget-object v1, p1, Lcom/tencent/mm/storage/h$a;->bCF:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/storage/h$a;->bvP:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

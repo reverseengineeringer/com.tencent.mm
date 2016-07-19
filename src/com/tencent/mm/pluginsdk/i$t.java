@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk;
 
 public abstract interface i$t
 {
-  public abstract void p(String paramString1, String paramString2, String paramString3);
+  public abstract void s(String paramString1, String paramString2, String paramString3);
 }
 
 /* Location:

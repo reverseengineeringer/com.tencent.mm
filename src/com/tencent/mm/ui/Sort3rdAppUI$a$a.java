@@ -7,19 +7,19 @@ import com.tencent.mm.ui.widget.MMSwitchBtn;
 
 final class Sort3rdAppUI$a$a
 {
-  TextView cNT;
-  ImageView cNV;
-  View dfY;
-  ImageView dfZ;
-  MMSwitchBtn krr;
+  ImageView cKV;
+  TextView cuj;
+  View dfa;
+  ImageView dfb;
+  MMSwitchBtn kQy;
   
   public Sort3rdAppUI$a$a(View paramView)
   {
-    dfZ = ((ImageView)paramView.findViewById(2131168982));
-    cNV = ((ImageView)paramView.findViewById(2131165364));
-    cNT = ((TextView)paramView.findViewById(2131166509));
-    krr = ((MMSwitchBtn)paramView.findViewById(2131168983));
-    dfY = paramView.findViewById(2131165347);
+    dfb = ((ImageView)paramView.findViewById(2131759293));
+    cKV = ((ImageView)paramView.findViewById(2131756616));
+    cuj = ((TextView)paramView.findViewById(2131756615));
+    kQy = ((MMSwitchBtn)paramView.findViewById(2131759294));
+    dfa = paramView.findViewById(2131755259);
   }
 }
 

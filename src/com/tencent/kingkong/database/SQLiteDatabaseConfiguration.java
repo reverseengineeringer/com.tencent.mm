@@ -9,7 +9,7 @@ public final class SQLiteDatabaseConfiguration
 {
   private static final Pattern EMAIL_IN_DB_PATTERN = Pattern.compile("[\\w\\.\\-]+@[\\w\\.\\-]+");
   public static final String MEMORY_DB_PATH = ":memory:";
-  public final ArrayList customFunctions = new ArrayList();
+  public final ArrayList<SQLiteCustomFunction> customFunctions = new ArrayList();
   public boolean foreignKeyConstraintsEnabled;
   public final String label;
   public Locale locale;

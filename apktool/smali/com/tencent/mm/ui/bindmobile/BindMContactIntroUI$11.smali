@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;->a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    value = Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;->onSceneEnd(IILjava/lang/String;Lcom/tencent/mm/t/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kOs:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
+.field final synthetic lnI:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 617
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$11;->kOs:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$11;->lnI:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,9 +50,9 @@
     .line 622
     const-string/jumbo v1, "kintent_hint"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$11;->kOs:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$11;->lnI:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
 
-    const v3, 0x7f0b0385
+    const v3, 0x7f081164
 
     invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;->getString(I)Ljava/lang/String;
 
@@ -66,13 +66,13 @@
     invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 624
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$11;->kOs:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI$11;->lnI:Lcom/tencent/mm/ui/bindmobile/BindMContactIntroUI;
 
     const-string/jumbo v2, "accountsync"
 
     const-string/jumbo v3, "com.tencent.mm.ui.account.RegByMobileSetPwdUI"
 
-    invoke-static {v1, v2, v3, v0, v4}, Lcom/tencent/mm/ar/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
+    invoke-static {v1, v2, v3, v0, v4}, Lcom/tencent/mm/av/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
 
     .line 625
     return-void

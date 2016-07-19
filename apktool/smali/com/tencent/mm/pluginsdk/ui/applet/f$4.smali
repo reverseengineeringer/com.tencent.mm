@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic cqF:I
+.field final synthetic clS:I
 
-.field final synthetic iJk:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+.field final synthetic jgg:Lcom/tencent/mm/pluginsdk/ui/applet/f;
 
-.field final synthetic iJl:Landroid/view/ViewGroup;
+.field final synthetic jgh:Landroid/view/ViewGroup;
 
 
 # direct methods
@@ -31,11 +31,11 @@
 
     .prologue
     .line 117
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/f$4;->iJk:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/f$4;->jgg:Lcom/tencent/mm/pluginsdk/ui/applet/f;
 
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/f$4;->iJl:Landroid/view/ViewGroup;
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/f$4;->jgh:Landroid/view/ViewGroup;
 
-    iput p3, p0, Lcom/tencent/mm/pluginsdk/ui/applet/f$4;->cqF:I
+    iput p3, p0, Lcom/tencent/mm/pluginsdk/ui/applet/f$4;->clS:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,13 +49,13 @@
 
     .prologue
     .line 119
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/f$4;->iJk:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/f$4;->jgg:Lcom/tencent/mm/pluginsdk/ui/applet/f;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/f;->iJj:Lcom/tencent/mm/pluginsdk/ui/applet/f$b;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/f;->jgf:Lcom/tencent/mm/pluginsdk/ui/applet/f$b;
 
-    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/f$4;->cqF:I
+    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/f$4;->clS:I
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/f$b;->fK(I)Z
+    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/f$b;->gB(I)Z
 
     move-result v0
 

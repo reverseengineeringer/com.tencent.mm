@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field cVH:Landroid/widget/TextView;
+.field cTU:Landroid/widget/TextView;
 
-.field fAr:Landroid/widget/ImageView;
+.field fJv:Landroid/widget/ImageView;
 
-.field iHc:Landroid/view/View;
+.field jdX:Landroid/view/View;
 
-.field final synthetic lwT:Lcom/tencent/mm/ui/tools/n$a;
+.field final synthetic lXG:Lcom/tencent/mm/ui/tools/n$a;
 
 
 # direct methods
@@ -30,7 +30,7 @@
 
     .prologue
     .line 185
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/n$a$a;->lwT:Lcom/tencent/mm/ui/tools/n$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/n$a$a;->lXG:Lcom/tencent/mm/ui/tools/n$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

@@ -18,16 +18,16 @@ final class BindQQUI$7
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = new com.tencent.mm.ui.tools.m(kPv.koJ.kpc);
-    hle = new n.c()
+    paramMenuItem = new com.tencent.mm.ui.tools.m(loL.kNN.kOg);
+    hoS = new n.c()
     {
       public final void a(l paramAnonymousl)
       {
-        paramAnonymousl.setHeaderTitle(2131428650);
-        paramAnonymousl.bL(0, 2131428235);
+        paramAnonymousl.setHeaderTitle(2131231277);
+        paramAnonymousl.bR(0, 2131235171);
       }
     };
-    hlf = new n.d()
+    hoT = new n.d()
     {
       public final void d(MenuItem paramAnonymousMenuItem, int paramAnonymousInt)
       {
@@ -36,14 +36,14 @@ final class BindQQUI$7
         default: 
           return;
         }
-        paramAnonymousMenuItem = kPv;
-        h localh = new h(h.caQ);
-        ah.tE().d(localh);
-        paramAnonymousMenuItem.getString(2131430877);
-        coc = g.a(paramAnonymousMenuItem, paramAnonymousMenuItem.getString(2131428233), true, new BindQQUI.2(paramAnonymousMenuItem));
+        paramAnonymousMenuItem = loL;
+        h localh = new h(h.bUz);
+        ah.tF().a(localh, 0);
+        paramAnonymousMenuItem.getString(2131231028);
+        cjq = g.a(paramAnonymousMenuItem, paramAnonymousMenuItem.getString(2131235027), true, new BindQQUI.2(paramAnonymousMenuItem));
       }
     };
-    paramMenuItem.biF();
+    paramMenuItem.boB();
     return false;
   }
 }

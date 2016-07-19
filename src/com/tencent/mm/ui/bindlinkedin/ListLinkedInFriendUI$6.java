@@ -3,7 +3,7 @@ package com.tencent.mm.ui.bindlinkedin;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.r.m;
+import com.tencent.mm.t.m;
 
 final class ListLinkedInFriendUI$6
   implements DialogInterface.OnCancelListener
@@ -12,7 +12,7 @@ final class ListLinkedInFriendUI$6
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    ah.tE().c(ListLinkedInFriendUI.h(kOk));
+    ah.tF().c(ListLinkedInFriendUI.h(lnA));
   }
 }
 

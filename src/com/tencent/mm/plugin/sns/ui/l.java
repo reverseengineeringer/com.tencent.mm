@@ -6,22 +6,18 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
-import com.tencent.mm.ab.b;
-import com.tencent.mm.ab.n;
+import com.tencent.mm.ae.b;
+import com.tencent.mm.ae.n;
 import com.tencent.mm.modelsfs.FileOp;
-import com.tencent.mm.plugin.sns.d.ad;
-import com.tencent.mm.plugin.sns.d.as;
-import com.tencent.mm.plugin.sns.d.at;
-import com.tencent.mm.plugin.sns.g.c;
-import com.tencent.mm.plugin.sns.g.e;
-import com.tencent.mm.pluginsdk.i.a;
-import com.tencent.mm.pluginsdk.i.f;
+import com.tencent.mm.plugin.sns.e.ad;
+import com.tencent.mm.plugin.sns.e.ar;
+import com.tencent.mm.plugin.sns.e.as;
+import com.tencent.mm.plugin.sns.h.f;
 import com.tencent.mm.pluginsdk.ui.applet.CdnImageView;
-import com.tencent.mm.protocal.b.aby;
-import com.tencent.mm.protocal.b.arp;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.d;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.pointers.PInt;
+import com.tencent.mm.protocal.b.acn;
+import com.tencent.mm.protocal.b.asb;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.p;
 import java.util.Iterator;
@@ -29,126 +25,125 @@ import java.util.LinkedList;
 import java.util.List;
 
 public final class l
-  implements t
+  implements v
 {
-  private String aBm = "";
-  private String aHh;
+  private MMActivity adL;
+  private String anE = "";
   private String appId = "";
   private String appName = "";
-  private MMActivity arW;
-  private Bitmap bDT = null;
-  private String cbL = "";
-  private View cyN = null;
-  private TextView eMj = null;
-  private int gXA;
-  private CdnImageView gXB = null;
-  private TextView gXC = null;
-  private boolean gXD = false;
-  private int gXE;
-  private String gXF = "";
-  private String gXG = "";
-  private com.tencent.mm.modelsns.a gXH = null;
-  private String gXx = "";
-  private byte[] gXy = null;
-  private String gXz;
+  private String atA;
+  private String bVz = "";
+  private Bitmap bxe = null;
+  private View cvL = null;
+  private TextView eLK = null;
   private int h = -1;
+  private String hkJ = "";
+  private byte[] hkK = null;
+  private String hkL;
+  private int hkM;
+  private CdnImageView hkN = null;
+  private TextView hkO = null;
+  private boolean hkP = false;
+  private int hkQ;
+  private String hkR = "";
+  private String hkS = "";
+  private com.tencent.mm.modelsns.a hkT = null;
   private String title = "";
   private int w = -1;
   
   public l(MMActivity paramMMActivity)
   {
-    arW = paramMMActivity;
+    adL = paramMMActivity;
   }
   
-  public final boolean a(int paramInt1, int paramInt2, b.a.d.i parami, String paramString, List paramList1, aby paramaby, int paramInt3, boolean paramBoolean, List paramList2)
+  public final boolean a(int paramInt1, int paramInt2, b.a.d.i parami, String paramString1, List<String> paramList1, acn paramacn, int paramInt3, boolean paramBoolean, List<String> paramList2, PInt paramPInt, String paramString2)
   {
-    at localat = new at(10);
-    if (paramInt3 > com.tencent.mm.plugin.sns.b.a.gHo) {
-      localat.lE(2);
+    paramString2 = new as(23);
+    value = gYr;
+    if (paramInt3 > com.tencent.mm.plugin.sns.b.a.gOt) {
+      paramString2.mO(2);
     }
     if (parami != null) {
-      localat.bs(token, jzR);
+      paramString2.bA(token, jYE);
     }
-    localat.uX(title).uV(gXG).uW(cbL).uT(paramString);
+    paramString2.we(title).wc(hkS).wd(bVz).vZ(paramString1);
     boolean bool2 = false;
     boolean bool1;
-    if (!ay.kz(aBm))
+    if (!be.kf(anE))
     {
-      bool1 = localat.a(FileOp.c(aBm, 0, -1), gXG, title, gXE, gXF);
+      bool1 = paramString2.a(FileOp.c(anE, 0, -1), hkS, title, hkQ, hkR);
       bool2 = bool1;
       if (!bool1)
       {
-        u.i("!44@/B4Tb64lLpLngLmfycFXIr7uVLDk9CDdLZOcWJKFeZc=", "set userData user imgurl ");
-        bool2 = localat.a(gXx, gXx, gXG, gXE, gXF);
+        com.tencent.mm.sdk.platformtools.v.i("MicroMsg.EmotionListShareWidget", "set userData user imgurl ");
+        bool2 = paramString2.a(hkJ, hkJ, hkS, hkQ, hkR);
       }
       if (!bool2) {
-        u.e("!44@/B4Tb64lLpLngLmfycFXIr7uVLDk9CDdLZOcWJKFeZc=", "set userData faild");
+        com.tencent.mm.sdk.platformtools.v.e("MicroMsg.EmotionListShareWidget", "set userData faild");
       }
-      localat.lI(gXA);
-      localat.va(aHh);
-      localat.vb(gXz);
+      paramString2.mS(hkM);
+      paramString2.wh(atA);
+      paramString2.wi(hkL);
       if (!paramBoolean) {
-        break label422;
+        break label432;
       }
-      localat.lJ(1);
+      paramString2.mT(1);
     }
     for (;;)
     {
-      localat.aT(paramList2);
-      if (!ay.kz(appId))
+      paramString2.aZ(paramList2);
+      if (!be.kf(appId))
       {
-        localat.uY(appId);
-        localat.uZ(appName);
+        paramString2.wf(appId);
+        paramString2.wg(appName);
       }
       parami = new LinkedList();
       if (paramList1 == null) {
-        break label432;
+        break label442;
       }
       new LinkedList();
-      paramString = com.tencent.mm.model.i.sT();
+      paramString1 = com.tencent.mm.model.i.sS();
       paramList1 = paramList1.iterator();
       while (paramList1.hasNext())
       {
         paramList2 = (String)paramList1.next();
-        if (!paramString.contains(paramList2))
+        if (!paramString1.contains(paramList2))
         {
-          arp localarp = new arp();
-          eiB = paramList2;
-          parami.add(localarp);
+          paramPInt = new asb();
+          emC = paramList2;
+          parami.add(paramPInt);
         }
       }
       bool1 = bool2;
-      if (ay.kz(gXx)) {
+      if (be.kf(hkJ)) {
         break;
       }
       bool1 = bool2;
-      if (n.An() == null) {
+      if (n.Ax() == null) {
         break;
       }
-      n.An();
-      parami = b.hE(gXx);
+      n.Ax();
+      parami = b.hW(hkJ);
       bool1 = bool2;
       if (parami == null) {
         break;
       }
-      bool1 = localat.a(d.s(parami), gXG, title, gXE, gXF);
+      bool1 = paramString2.a(com.tencent.mm.sdk.platformtools.d.A(parami), hkS, title, hkQ, hkR);
       break;
-      label422:
-      localat.lJ(0);
+      label432:
+      paramString2.mT(0);
     }
-    label432:
-    localat.L(parami);
-    localat.a(paramaby);
-    paramInt1 = localat.commit();
-    if (gXH != null)
+    label442:
+    paramString2.O(parami);
+    paramString2.a(paramacn);
+    paramInt1 = paramString2.commit();
+    if (hkT != null)
     {
-      gXH.dS(paramInt1);
-      c.gTZ.c(gXH);
+      hkT.ez(paramInt1);
+      com.tencent.mm.plugin.sns.h.d.hdt.c(hkT);
     }
-    ad.azf().azE();
-    arW.finish();
-    parami = i.a.aOT().mK(gXF);
-    com.tencent.mm.plugin.report.service.h.fUJ.g(10993, new Object[] { Integer.valueOf(1), parami });
+    ad.aBF().aCf();
+    adL.finish();
     return false;
   }
   
@@ -157,76 +152,76 @@ public final class l
     return false;
   }
   
-  public final boolean aAW()
+  public final boolean aDO()
   {
     return true;
   }
   
-  public final View aAX()
+  public final View aDP()
   {
-    cyN = p.ee(arW).inflate(2131362820, null);
-    gXB = ((CdnImageView)cyN.findViewById(2131168526));
-    eMj = ((TextView)cyN.findViewById(2131168529));
-    gXC = ((TextView)cyN.findViewById(2131168530));
-    if (gXD)
+    cvL = p.ef(adL).inflate(2130904544, null);
+    hkN = ((CdnImageView)cvL.findViewById(2131757802));
+    eLK = ((TextView)cvL.findViewById(2131757804));
+    hkO = ((TextView)cvL.findViewById(2131757805));
+    if (hkP)
     {
-      cyN.findViewById(2131168527).setVisibility(0);
-      eMj.setText(title);
-      if (ay.kz(gXx)) {
-        break label164;
+      cvL.findViewById(2131757253).setVisibility(0);
+      eLK.setText(title);
+      if (be.kf(hkJ)) {
+        break label166;
       }
-      gXB.setVisibility(0);
-      gXB.setUrl(gXx);
+      hkN.setVisibility(0);
+      hkN.v(hkJ, 0, 0);
     }
     for (;;)
     {
-      com.tencent.mm.plugin.sns.data.h.b(gXB, arW);
-      return cyN;
-      cyN.findViewById(2131168527).setVisibility(8);
+      com.tencent.mm.plugin.sns.data.i.b(hkN, adL);
+      return cvL;
+      cvL.findViewById(2131757253).setVisibility(8);
       break;
-      label164:
-      if (!ay.J(gXy))
+      label166:
+      if (!be.P(hkK))
       {
-        gXB.setVisibility(0);
-        bDT = d.aQ(gXy);
-        gXB.setImageBitmap(bDT);
+        hkN.setVisibility(0);
+        bxe = com.tencent.mm.sdk.platformtools.d.aX(hkK);
+        hkN.setImageBitmap(bxe);
       }
       else
       {
-        gXB.setVisibility(8);
+        hkN.setVisibility(8);
       }
     }
   }
   
-  public final boolean aAY()
+  public final boolean aDQ()
   {
-    if ((bDT != null) && (!bDT.isRecycled())) {
-      bDT.recycle();
+    if ((bxe != null) && (!bxe.isRecycled())) {
+      bxe.recycle();
     }
     return false;
   }
   
-  public final void n(Bundle paramBundle)
+  public final void p(Bundle paramBundle)
   {
-    gXH = com.tencent.mm.modelsns.a.k(arW.getIntent());
-    w = arW.getIntent().getIntExtra("Ksnsupload_width", -1);
-    h = arW.getIntent().getIntExtra("Ksnsupload_height", -1);
-    gXA = arW.getIntent().getIntExtra("Ksnsupload_source", 0);
-    cbL = ay.ad(arW.getIntent().getStringExtra("Ksnsupload_link"), "");
-    title = ay.ad(arW.getIntent().getStringExtra("Ksnsupload_title"), "");
-    gXx = ay.ad(arW.getIntent().getStringExtra("Ksnsupload_imgurl"), "");
-    aBm = arW.getIntent().getStringExtra("KsnsUpload_imgPath");
-    gXD = arW.getIntent().getBooleanExtra("ksnsis_video", false);
-    aHh = ay.ad(arW.getIntent().getStringExtra("src_username"), "");
-    gXz = ay.ad(arW.getIntent().getStringExtra("src_displayname"), "");
-    gXG = ay.ad(arW.getIntent().getStringExtra("KContentObjDesc"), "");
-    gXF = ay.ad(arW.getIntent().getStringExtra("KUploadProduct_UserData"), "");
-    appName = ay.ad(arW.getIntent().getStringExtra("Ksnsupload_appname"), "");
-    appId = ay.ad(arW.getIntent().getStringExtra("Ksnsupload_appid"), "");
-    gXE = arW.getIntent().getIntExtra("KUploadProduct_subType", 0);
+    hkT = com.tencent.mm.modelsns.a.l(adL.getIntent());
+    w = adL.getIntent().getIntExtra("Ksnsupload_width", -1);
+    h = adL.getIntent().getIntExtra("Ksnsupload_height", -1);
+    hkM = adL.getIntent().getIntExtra("Ksnsupload_source", 0);
+    bVz = be.ab(adL.getIntent().getStringExtra("Ksnsupload_link"), "");
+    title = be.ab(adL.getIntent().getStringExtra("Ksnsupload_title"), "");
+    hkJ = be.ab(adL.getIntent().getStringExtra("Ksnsupload_imgurl"), "");
+    anE = adL.getIntent().getStringExtra("KsnsUpload_imgPath");
+    hkP = adL.getIntent().getBooleanExtra("ksnsis_video", false);
+    atA = be.ab(adL.getIntent().getStringExtra("src_username"), "");
+    hkL = be.ab(adL.getIntent().getStringExtra("src_displayname"), "");
+    hkS = be.ab(adL.getIntent().getStringExtra("KContentObjDesc"), "");
+    hkR = be.ab(adL.getIntent().getStringExtra("KUploadProduct_UserData"), "");
+    appName = be.ab(adL.getIntent().getStringExtra("Ksnsupload_appname"), "");
+    appId = be.ab(adL.getIntent().getStringExtra("Ksnsupload_appid"), "");
+    hkQ = adL.getIntent().getIntExtra("KUploadProduct_subType", 0);
   }
   
-  public final void o(Bundle paramBundle) {}
+  public final void q(Bundle paramBundle) {}
 }
 
 /* Location:

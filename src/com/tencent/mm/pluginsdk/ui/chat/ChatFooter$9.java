@@ -3,11 +3,11 @@ package com.tencent.mm.pluginsdk.ui.chat;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ac;
 import com.tencent.mm.ui.widget.MMEditText;
 
 final class ChatFooter$9
-  extends aa
+  extends ac
 {
   ChatFooter$9(ChatFooter paramChatFooter) {}
   
@@ -21,16 +21,16 @@ final class ChatFooter$9
     do
     {
       return;
-    } while ((ChatFooter.a(iLO) == null) || (obj == null));
+    } while ((ChatFooter.a(jiL) == null) || (obj == null));
     boolean bool = ((Boolean)obj).booleanValue();
     if (bool) {
-      ChatFooter.a(iLO).setAlpha(1.0F);
+      ChatFooter.a(jiL).setAlpha(1.0F);
     }
     for (;;)
     {
-      ChatFooter.a(iLO, bool);
+      ChatFooter.a(jiL, bool);
       return;
-      ChatFooter.a(iLO).setAlpha(0.5F);
+      ChatFooter.a(jiL).setAlpha(0.5F);
     }
   }
 }

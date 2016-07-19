@@ -1,6 +1,6 @@
 package com.tencent.mm.modelmulti;
 
-import com.tencent.mm.r.d;
+import com.tencent.mm.t.d;
 
 final class e$1$1
   implements Runnable
@@ -9,7 +9,7 @@ final class e$1$1
   
   public final void run()
   {
-    bVd.bVb.anM.a(bVc.errType, bVc.errCode, bVc.aCE, bVd.bVb);
+    bOE.bOC.bkT.onSceneEnd(bOD.errType, bOD.errCode, bOD.aoX, bOE.bOC);
   }
 }
 

@@ -1,39 +1,29 @@
 package android.support.v4.view;
 
-import android.os.Build.VERSION;
 import android.view.MotionEvent;
 
 public final class i
 {
-  static final c eH = new a();
-  
-  static
-  {
-    if (Build.VERSION.SDK_INT >= 5)
-    {
-      eH = new b();
-      return;
-    }
-  }
+  static final b fd = new a();
   
   public static int a(MotionEvent paramMotionEvent, int paramInt)
   {
-    return eH.a(paramMotionEvent, paramInt);
+    return fd.a(paramMotionEvent, paramInt);
   }
   
   public static int b(MotionEvent paramMotionEvent, int paramInt)
   {
-    return eH.b(paramMotionEvent, paramInt);
+    return fd.b(paramMotionEvent, paramInt);
   }
   
   public static float c(MotionEvent paramMotionEvent, int paramInt)
   {
-    return eH.c(paramMotionEvent, paramInt);
+    return fd.c(paramMotionEvent, paramInt);
   }
   
   public static float d(MotionEvent paramMotionEvent, int paramInt)
   {
-    return eH.d(paramMotionEvent, paramInt);
+    return fd.d(paramMotionEvent, paramInt);
   }
   
   public static int d(MotionEvent paramMotionEvent)
@@ -48,52 +38,11 @@ public final class i
   
   public static int f(MotionEvent paramMotionEvent)
   {
-    return eH.f(paramMotionEvent);
+    return fd.f(paramMotionEvent);
   }
   
   static final class a
-    implements i.c
-  {
-    public final int a(MotionEvent paramMotionEvent, int paramInt)
-    {
-      if (paramInt == 0) {
-        return 0;
-      }
-      return -1;
-    }
-    
-    public final int b(MotionEvent paramMotionEvent, int paramInt)
-    {
-      if (paramInt == 0) {
-        return 0;
-      }
-      throw new IndexOutOfBoundsException("Pre-Eclair does not support multiple pointers");
-    }
-    
-    public final float c(MotionEvent paramMotionEvent, int paramInt)
-    {
-      if (paramInt == 0) {
-        return paramMotionEvent.getX();
-      }
-      throw new IndexOutOfBoundsException("Pre-Eclair does not support multiple pointers");
-    }
-    
-    public final float d(MotionEvent paramMotionEvent, int paramInt)
-    {
-      if (paramInt == 0) {
-        return paramMotionEvent.getY();
-      }
-      throw new IndexOutOfBoundsException("Pre-Eclair does not support multiple pointers");
-    }
-    
-    public final int f(MotionEvent paramMotionEvent)
-    {
-      return 1;
-    }
-  }
-  
-  static final class b
-    implements i.c
+    implements i.b
   {
     public final int a(MotionEvent paramMotionEvent, int paramInt)
     {
@@ -121,7 +70,7 @@ public final class i
     }
   }
   
-  static abstract interface c
+  static abstract interface b
   {
     public abstract int a(MotionEvent paramMotionEvent, int paramInt);
     

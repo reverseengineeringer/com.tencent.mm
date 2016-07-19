@@ -1,16 +1,18 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.h.g.a;
+import com.tencent.mm.sdk.h.i;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class ChattingUI$a$58
-  implements af.a
+  implements g.a
 {
   ChattingUI$a$58(ChattingUI.a parama) {}
   
-  public final boolean lj()
+  public final void a(String paramString, i parami)
   {
-    laF.kSE.a(null, null);
-    return true;
+    v.v("MicroMsg.ChattingUI", "app attach info watcher notify");
+    lAY.lsL.a(null, null);
   }
 }
 

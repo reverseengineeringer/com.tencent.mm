@@ -13,17 +13,26 @@
     name = "b"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/tencent/mm/ui/chatting/gallery/b$b;",
+        ">;"
+    }
+.end annotation
+
 
 # static fields
-.field public static final enum leP:Lcom/tencent/mm/ui/chatting/gallery/b$b;
+.field public static final enum lFb:Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
-.field public static final enum leQ:Lcom/tencent/mm/ui/chatting/gallery/b$b;
+.field public static final enum lFc:Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
-.field public static final enum leR:Lcom/tencent/mm/ui/chatting/gallery/b$b;
+.field public static final enum lFd:Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
-.field public static final enum leS:Lcom/tencent/mm/ui/chatting/gallery/b$b;
+.field public static final enum lFe:Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
-.field private static final synthetic leT:[Lcom/tencent/mm/ui/chatting/gallery/b$b;
+.field private static final synthetic lFf:[Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
 
 # direct methods
@@ -39,14 +48,14 @@
 
     const/4 v2, 0x0
 
-    .line 60
+    .line 62
     new-instance v0, Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
     const-string/jumbo v1, "unkown"
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/ui/chatting/gallery/b$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/ui/chatting/gallery/b$b;->leP:Lcom/tencent/mm/ui/chatting/gallery/b$b;
+    sput-object v0, Lcom/tencent/mm/ui/chatting/gallery/b$b;->lFb:Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
     new-instance v0, Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
@@ -54,7 +63,7 @@
 
     invoke-direct {v0, v1, v3}, Lcom/tencent/mm/ui/chatting/gallery/b$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/ui/chatting/gallery/b$b;->leQ:Lcom/tencent/mm/ui/chatting/gallery/b$b;
+    sput-object v0, Lcom/tencent/mm/ui/chatting/gallery/b$b;->lFc:Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
     new-instance v0, Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
@@ -62,7 +71,7 @@
 
     invoke-direct {v0, v1, v4}, Lcom/tencent/mm/ui/chatting/gallery/b$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/ui/chatting/gallery/b$b;->leR:Lcom/tencent/mm/ui/chatting/gallery/b$b;
+    sput-object v0, Lcom/tencent/mm/ui/chatting/gallery/b$b;->lFd:Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
     new-instance v0, Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
@@ -70,39 +79,44 @@
 
     invoke-direct {v0, v1, v5}, Lcom/tencent/mm/ui/chatting/gallery/b$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/ui/chatting/gallery/b$b;->leS:Lcom/tencent/mm/ui/chatting/gallery/b$b;
+    sput-object v0, Lcom/tencent/mm/ui/chatting/gallery/b$b;->lFe:Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
-    .line 59
+    .line 61
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
-    sget-object v1, Lcom/tencent/mm/ui/chatting/gallery/b$b;->leP:Lcom/tencent/mm/ui/chatting/gallery/b$b;
+    sget-object v1, Lcom/tencent/mm/ui/chatting/gallery/b$b;->lFb:Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/tencent/mm/ui/chatting/gallery/b$b;->leQ:Lcom/tencent/mm/ui/chatting/gallery/b$b;
+    sget-object v1, Lcom/tencent/mm/ui/chatting/gallery/b$b;->lFc:Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/tencent/mm/ui/chatting/gallery/b$b;->leR:Lcom/tencent/mm/ui/chatting/gallery/b$b;
+    sget-object v1, Lcom/tencent/mm/ui/chatting/gallery/b$b;->lFd:Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/tencent/mm/ui/chatting/gallery/b$b;->leS:Lcom/tencent/mm/ui/chatting/gallery/b$b;
+    sget-object v1, Lcom/tencent/mm/ui/chatting/gallery/b$b;->lFe:Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
     aput-object v1, v0, v5
 
-    sput-object v0, Lcom/tencent/mm/ui/chatting/gallery/b$b;->leT:[Lcom/tencent/mm/ui/chatting/gallery/b$b;
+    sput-object v0, Lcom/tencent/mm/ui/chatting/gallery/b$b;->lFf:[Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .prologue
-    .line 59
+    .line 61
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -112,7 +126,7 @@
     .locals 1
 
     .prologue
-    .line 59
+    .line 61
     const-class v0, Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -128,8 +142,8 @@
     .locals 1
 
     .prologue
-    .line 59
-    sget-object v0, Lcom/tencent/mm/ui/chatting/gallery/b$b;->leT:[Lcom/tencent/mm/ui/chatting/gallery/b$b;
+    .line 61
+    sget-object v0, Lcom/tencent/mm/ui/chatting/gallery/b$b;->lFf:[Lcom/tencent/mm/ui/chatting/gallery/b$b;
 
     invoke-virtual {v0}, [Lcom/tencent/mm/ui/chatting/gallery/b$b;->clone()Ljava/lang/Object;
 

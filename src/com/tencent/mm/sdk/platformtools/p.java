@@ -1,144 +1,35 @@
 package com.tencent.mm.sdk.platformtools;
 
-import android.content.Intent;
-import android.os.Bundle;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public final class p
 {
-  public static Bundle J(Intent paramIntent)
+  private static final Pattern kuR = Pattern.compile("^(25[0-5]|2[0-4]\\d|[0-1]?\\d?\\d)(\\.(25[0-5]|2[0-4]\\d|[0-1]?\\d?\\d)){3}$");
+  private static final Pattern kuS = Pattern.compile("^(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$");
+  private static final Pattern kuT = Pattern.compile("^((?:[0-9A-Fa-f]{1,4}(?::[0-9A-Fa-f]{1,4})*)?)::((?:[0-9A-Fa-f]{1,4}(?::[0-9A-Fa-f]{1,4})*)?)$");
+  
+  public static InetAddress EW(String paramString)
   {
-    if (paramIntent == null) {
-      return null;
+    if (isIPv4Address(paramString)) {
+      return InetAddress.getByName(paramString);
     }
-    try
-    {
-      paramIntent = paramIntent.getExtras();
-      return paramIntent;
+    if (isIPv6Address(paramString)) {
+      return InetAddress.getByName(paramString);
     }
-    catch (Exception paramIntent)
-    {
-      u.e("!32@/B4Tb64lLpL6+V4f6dxuKfZvcpEyqYaQ", "getExtras exception:%s", new Object[] { paramIntent.getMessage() });
-    }
-    return null;
+    throw new UnknownHostException("invalid ipv4 or ipv6 dotted string");
   }
   
-  public static int a(Intent paramIntent, String paramString, int paramInt)
+  public static boolean isIPv4Address(String paramString)
   {
-    if (paramIntent == null) {
-      return paramInt;
-    }
-    try
-    {
-      int i = paramIntent.getIntExtra(paramString, paramInt);
-      return i;
-    }
-    catch (Exception paramIntent)
-    {
-      u.e("!32@/B4Tb64lLpL6+V4f6dxuKfZvcpEyqYaQ", "getIntExtra exception:%s", new Object[] { paramIntent.getMessage() });
-    }
-    return paramInt;
+    return kuR.matcher(paramString).matches();
   }
   
-  public static int a(Bundle paramBundle, String paramString, int paramInt)
+  public static boolean isIPv6Address(String paramString)
   {
-    if (paramBundle == null) {
-      return paramInt;
-    }
-    try
-    {
-      int i = paramBundle.getInt(paramString, paramInt);
-      return i;
-    }
-    catch (Exception paramBundle)
-    {
-      u.e("!32@/B4Tb64lLpL6+V4f6dxuKfZvcpEyqYaQ", "getIntExtra exception:%s", new Object[] { paramBundle.getMessage() });
-    }
-    return paramInt;
-  }
-  
-  public static boolean a(Intent paramIntent, String paramString, boolean paramBoolean)
-  {
-    if (paramIntent == null) {
-      return paramBoolean;
-    }
-    try
-    {
-      boolean bool = paramIntent.getBooleanExtra(paramString, paramBoolean);
-      return bool;
-    }
-    catch (Exception paramIntent)
-    {
-      u.e("!32@/B4Tb64lLpL6+V4f6dxuKfZvcpEyqYaQ", "getBooleanExtra exception:%s", new Object[] { paramIntent.getMessage() });
-    }
-    return paramBoolean;
-  }
-  
-  public static String c(Bundle paramBundle, String paramString)
-  {
-    if (paramBundle == null) {
-      return null;
-    }
-    try
-    {
-      paramBundle = paramBundle.getString(paramString);
-      return paramBundle;
-    }
-    catch (Exception paramBundle)
-    {
-      u.e("!32@/B4Tb64lLpL6+V4f6dxuKfZvcpEyqYaQ", "getStringExtra exception:%s", new Object[] { paramBundle.getMessage() });
-    }
-    return null;
-  }
-  
-  public static long f(Intent paramIntent, String paramString)
-  {
-    if (paramIntent == null) {
-      return 0L;
-    }
-    try
-    {
-      long l = paramIntent.getLongExtra(paramString, 0L);
-      return l;
-    }
-    catch (Exception paramIntent)
-    {
-      u.e("!32@/B4Tb64lLpL6+V4f6dxuKfZvcpEyqYaQ", "getIntExtra exception:%s", new Object[] { paramIntent.getMessage() });
-    }
-    return 0L;
-  }
-  
-  public static String g(Intent paramIntent, String paramString)
-  {
-    if (paramIntent == null) {
-      return null;
-    }
-    try
-    {
-      paramIntent = paramIntent.getStringExtra(paramString);
-      return paramIntent;
-    }
-    catch (Exception paramIntent)
-    {
-      u.e("!32@/B4Tb64lLpL6+V4f6dxuKfZvcpEyqYaQ", "getStringExtra exception:%s", new Object[] { paramIntent.getMessage() });
-    }
-    return null;
-  }
-  
-  public static byte[] h(Intent paramIntent, String paramString)
-  {
-    if (paramIntent == null) {
-      return null;
-    }
-    try
-    {
-      paramIntent = paramIntent.getByteArrayExtra(paramString);
-      return paramIntent;
-    }
-    catch (Exception paramIntent)
-    {
-      u.e("!32@/B4Tb64lLpL6+V4f6dxuKfZvcpEyqYaQ", "getByteArrayExtra exception:%s", new Object[] { paramIntent.getMessage() });
-    }
-    return null;
+    return (kuS.matcher(paramString).matches()) || (kuT.matcher(paramString).matches());
   }
 }
 

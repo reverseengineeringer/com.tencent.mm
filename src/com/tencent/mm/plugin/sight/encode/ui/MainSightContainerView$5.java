@@ -1,20 +1,20 @@
 package com.tencent.mm.plugin.sight.encode.ui;
 
 import android.content.Context;
-import com.tencent.mm.an.g.a;
-import com.tencent.mm.loader.stub.b;
+import com.tencent.mm.a.e;
+import com.tencent.mm.aq.k.a;
 import com.tencent.mm.ui.base.g;
 
 final class MainSightContainerView$5
-  implements g.a
+  implements k.a
 {
   MainSightContainerView$5(MainSightContainerView paramMainSightContainerView, String paramString1, String paramString2, boolean paramBoolean) {}
   
-  public final void ec(int paramInt)
+  public final void eK(int paramInt)
   {
-    b.deleteFile(gCC);
-    b.deleteFile(gCD);
-    if (!gCE) {
+    e.deleteFile(gJd);
+    e.deleteFile(gJe);
+    if (!gJf) {
       return;
     }
     switch (paramInt)
@@ -22,7 +22,7 @@ final class MainSightContainerView$5
     default: 
       return;
     }
-    g.ba(gCA.getContext(), gCA.getContext().getString(2131430526));
+    g.aZ(gJb.getContext(), gJb.getContext().getString(2131235361));
   }
 }
 

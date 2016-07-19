@@ -1,8 +1,7 @@
 package com.tencent.mm.booter;
 
-import com.tencent.mm.app.e.a;
-import com.tencent.mm.plugin.report.service.h;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.app.d.a;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class g {}
 

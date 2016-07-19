@@ -14,21 +14,21 @@ import android.view.View.OnFocusChangeListener;
 import android.view.View.OnTouchListener;
 import android.widget.EditText;
 import android.widget.TextView.SavedState;
-import com.tencent.mm.ay.g;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.bb.g;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 public class MMPhoneNumberEditText
   extends EditText
 {
-  private View.OnFocusChangeListener fPV = null;
-  public String iGN = "";
-  public boolean iGO = false;
-  public Drawable iGP;
-  private a iGQ;
-  public boolean iGR;
-  private boolean iGS = false;
-  int iGT = 0;
+  private View.OnFocusChangeListener fYY = null;
+  public String jdI = "";
+  public boolean jdJ = false;
+  public Drawable jdK;
+  a jdL;
+  public boolean jdM;
+  private boolean jdN = false;
+  int jdO = 0;
   
   public MMPhoneNumberEditText(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -42,10 +42,10 @@ public class MMPhoneNumberEditText
     init();
   }
   
-  private void Az(String paramString)
+  private void CA(String paramString)
   {
     int i = getSelectionStart();
-    setText(g.aWe().c(getContext(), paramString, getTextSize()));
+    setText(g.bbq().c(getContext(), paramString, getTextSize()));
     int j = getText().length() - paramString.length();
     if (j > 0)
     {
@@ -58,28 +58,28 @@ public class MMPhoneNumberEditText
     setSelection(i);
   }
   
-  private void aQV()
+  private void aVF()
   {
     if (getText().toString().equals(""))
     {
-      aQX();
+      aVH();
       return;
     }
-    aQW();
+    aVG();
   }
   
-  private void aQX()
+  private void aVH()
   {
     setCompoundDrawables(getCompoundDrawables()[0], getCompoundDrawables()[1], null, getCompoundDrawables()[3]);
   }
   
   private void init()
   {
-    iGP = getResources().getDrawable(2130970307);
-    iGP.setBounds(0, 0, iGP.getIntrinsicWidth(), iGP.getIntrinsicHeight());
-    u.d("!44@/B4Tb64lLpKV1gYdF8HNDrIV/d4j0/6hFGTPpQharhE=", "imgX width %d height %d", new Object[] { Integer.valueOf(iGP.getIntrinsicWidth()), Integer.valueOf(iGP.getIntrinsicHeight()) });
-    aQV();
-    setHeight(iGP.getIntrinsicHeight() + getResources().getDimensionPixelSize(2131034573) * 5);
+    jdK = getResources().getDrawable(2130838553);
+    jdK.setBounds(0, 0, jdK.getIntrinsicWidth(), jdK.getIntrinsicHeight());
+    v.d("MicroMsg.MMClearEditText", "imgX width %d height %d", new Object[] { Integer.valueOf(jdK.getIntrinsicWidth()), Integer.valueOf(jdK.getIntrinsicHeight()) });
+    aVF();
+    setHeight(jdK.getIntrinsicHeight() + getResources().getDimensionPixelSize(2131427668) * 5);
     clearFocus();
     setOnTouchListener(new View.OnTouchListener()
     {
@@ -98,7 +98,7 @@ public class MMPhoneNumberEditText
             return bool1;
             bool1 = bool2;
           } while (paramAnonymousMotionEvent.getAction() != 1);
-          if (paramAnonymousMotionEvent.getX() <= paramAnonymousView.getWidth() - paramAnonymousView.getPaddingRight() - iGP.getIntrinsicWidth()) {
+          if (paramAnonymousMotionEvent.getX() <= paramAnonymousView.getWidth() - paramAnonymousView.getPaddingRight() - jdK.getIntrinsicWidth()) {
             break;
           }
           if (paramAnonymousView.isFocused())
@@ -122,7 +122,7 @@ public class MMPhoneNumberEditText
       
       public final void beforeTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3)
       {
-        if (ay.kz(paramAnonymousCharSequence.toString()))
+        if (be.kf(paramAnonymousCharSequence.toString()))
         {
           MMPhoneNumberEditText.a(MMPhoneNumberEditText.this, true);
           return;
@@ -141,7 +141,7 @@ public class MMPhoneNumberEditText
         while ((paramAnonymousCharSequence.toString().equals("")) || (!MMPhoneNumberEditText.d(MMPhoneNumberEditText.this)) || (MMPhoneNumberEditText.b(MMPhoneNumberEditText.this) == null) || (!isFocused())) {
           return;
         }
-        MMPhoneNumberEditText.b(MMPhoneNumberEditText.this).aQY();
+        MMPhoneNumberEditText.b(MMPhoneNumberEditText.this).aVI();
       }
     });
     super.setOnFocusChangeListener(new View.OnFocusChangeListener()
@@ -156,9 +156,9 @@ public class MMPhoneNumberEditText
     });
   }
   
-  final void aQW()
+  final void aVG()
   {
-    setCompoundDrawables(getCompoundDrawables()[0], getCompoundDrawables()[1], iGP, getCompoundDrawables()[3]);
+    setCompoundDrawables(getCompoundDrawables()[0], getCompoundDrawables()[1], jdK, getCompoundDrawables()[3]);
   }
   
   public void onRestoreInstanceState(Parcelable paramParcelable)
@@ -168,7 +168,7 @@ public class MMPhoneNumberEditText
       super.onRestoreInstanceState(paramParcelable);
       return;
     }
-    if (!iGO) {
+    if (!jdJ) {
       paramParcelable = View.BaseSavedState.EMPTY_STATE;
     }
     super.onRestoreInstanceState(paramParcelable);
@@ -180,41 +180,36 @@ public class MMPhoneNumberEditText
     String str;
     if (paramInt == 16908322)
     {
-      iGT = 0;
+      jdO = 0;
       str = getText().toString();
     }
     try
     {
-      Az(str);
+      CA(str);
       return bool;
     }
     catch (IndexOutOfBoundsException localIndexOutOfBoundsException)
     {
-      u.e("!44@/B4Tb64lLpKV1gYdF8HNDrIV/d4j0/6hFGTPpQharhE=", "!!MMClearEditText Exception %d", new Object[] { Integer.valueOf(iGT) });
-      if (iGT < 3)
+      v.e("MicroMsg.MMClearEditText", "!!MMClearEditText Exception %d", new Object[] { Integer.valueOf(jdO) });
+      if (jdO < 3)
       {
-        iGT += 1;
-        Az(" " + str);
+        jdO += 1;
+        CA(" " + str);
         return bool;
       }
-      u.e("!44@/B4Tb64lLpKV1gYdF8HNDrIV/d4j0/6hFGTPpQharhE=", "!!MMClearEditText, IndexOutOfBoundsException cannot fix");
+      v.e("MicroMsg.MMClearEditText", "!!MMClearEditText, IndexOutOfBoundsException cannot fix");
     }
     return bool;
   }
   
-  public void setCallback(a parama)
-  {
-    iGQ = parama;
-  }
-  
   public void setOnFocusChangeListener(View.OnFocusChangeListener paramOnFocusChangeListener)
   {
-    fPV = paramOnFocusChangeListener;
+    fYY = paramOnFocusChangeListener;
   }
   
   public static abstract interface a
   {
-    public abstract void aQY();
+    public abstract void aVI();
     
     public abstract void f(MMPhoneNumberEditText paramMMPhoneNumberEditText);
     

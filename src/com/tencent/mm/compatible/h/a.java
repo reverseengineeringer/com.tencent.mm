@@ -1,27 +1,26 @@
 package com.tencent.mm.compatible.h;
 
-import android.view.MenuItem;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class a
 {
-  public static void a(MenuItem paramMenuItem, String paramString)
+  public String biw = null;
+  public long bix = -1L;
+  public int biy = -1;
+  public int biz = -1;
+  
+  public final String nl()
   {
-    if (paramMenuItem == null) {
-      u.w("!32@/B4Tb64lLpJKcBiDy6zxE3hSxe+6+uSO", "fixTitleCondensed fail, item is null");
-    }
-    do
-    {
-      return;
-      if (paramMenuItem.getTitleCondensed() == null)
-      {
-        u.w("!32@/B4Tb64lLpJKcBiDy6zxE3hSxe+6+uSO", "%s title condensed is null, fix it", new Object[] { paramString });
-        paramMenuItem.setTitleCondensed("");
-        return;
-      }
-    } while ((paramMenuItem.getTitleCondensed() instanceof String));
-    u.w("!32@/B4Tb64lLpJKcBiDy6zxE3hSxe+6+uSO", "%s title condensed is not String type, cur type[%s], cur value[%s], fix it", new Object[] { paramString, paramMenuItem.getTitleCondensed().getClass().getName(), paramMenuItem.getTitleCondensed() });
-    paramMenuItem.setTitleCondensed(paramMenuItem.getTitleCondensed().toString());
+    StringBuffer localStringBuffer = new StringBuffer();
+    localStringBuffer.append(biw);
+    localStringBuffer.append(",");
+    localStringBuffer.append(bix);
+    localStringBuffer.append(",");
+    localStringBuffer.append(biy);
+    localStringBuffer.append(",");
+    localStringBuffer.append(biz);
+    v.d("MicroMsg.AudioRecorderInfo", " getStatInfo " + localStringBuffer.toString());
+    return localStringBuffer.toString();
   }
 }
 

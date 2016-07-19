@@ -5,16 +5,16 @@ import com.tencent.smtt.export.external.interfaces.QuotaUpdater;
 final class e$a
   implements w.a
 {
-  QuotaUpdater lRL;
+  QuotaUpdater mtA;
   
   e$a(e parame, QuotaUpdater paramQuotaUpdater)
   {
-    lRL = paramQuotaUpdater;
+    mtA = paramQuotaUpdater;
   }
   
   public final void updateQuota(long paramLong)
   {
-    lRL.updateQuota(paramLong);
+    mtA.updateQuota(paramLong);
   }
 }
 

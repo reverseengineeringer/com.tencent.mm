@@ -160,7 +160,7 @@ public final class j
   }
   
   /* Error */
-  public static boolean ce(String paramString1, String paramString2)
+  public static boolean cq(String paramString1, String paramString2)
   {
     // Byte code:
     //   0: aconst_null
@@ -289,7 +289,7 @@ public final class j
     //   12	22	155	java/lang/Exception
   }
   
-  public static boolean i(String paramString1, String paramString2, boolean paramBoolean)
+  public static boolean l(String paramString1, String paramString2, boolean paramBoolean)
   {
     int i = 0;
     Object localObject = new File(paramString1);
@@ -303,7 +303,7 @@ public final class j
         break;
       }
     } while ((!localFile.isFile()) && (localFile.exists()));
-    ce(paramString1, paramString2);
+    cq(paramString1, paramString2);
     if (paramBoolean) {
       ((File)localObject).delete();
     }
@@ -321,14 +321,14 @@ public final class j
         localObject = ((File)localObject).list();
         while (i < localObject.length)
         {
-          i(paramString1 + "/" + localObject[i], paramString2 + "/" + localObject[i], paramBoolean);
+          l(paramString1 + "/" + localObject[i], paramString2 + "/" + localObject[i], paramBoolean);
           i += 1;
         }
       }
     }
   }
   
-  public static boolean w(Context paramContext, String paramString1, String paramString2)
+  public static boolean x(Context paramContext, String paramString1, String paramString2)
   {
     int i = 0;
     try
@@ -338,7 +338,7 @@ public final class j
     }
     catch (IOException localIOException)
     {
-      u.d("!32@/B4Tb64lLpKEimhusr6EBVHdaUJF77fu", "copy assets file srcpath=%s to=%s failed, try pattern now", new Object[] { paramString1, paramString2 });
+      v.e("MicroMsg.SDK.FilesCopy", "copy assets file srcpath=%s to=%s failed, try pattern now", new Object[] { paramString1, paramString2 });
       for (;;)
       {
         String str = paramString1 + "." + i;
@@ -346,7 +346,7 @@ public final class j
         {
           if (a(paramContext.getAssets().open(str), paramString2, true))
           {
-            u.d("!32@/B4Tb64lLpKEimhusr6EBVHdaUJF77fu", "copy pattern %s", new Object[] { str });
+            v.d("MicroMsg.SDK.FilesCopy", "copy pattern %s", new Object[] { str });
             i += 1;
           }
         }

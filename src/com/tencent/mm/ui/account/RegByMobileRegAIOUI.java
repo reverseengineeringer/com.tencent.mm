@@ -32,18 +32,18 @@ import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.tencent.mm.ac.b.a;
+import com.tencent.mm.af.b.a;
 import com.tencent.mm.compatible.util.e;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.aw;
 import com.tencent.mm.pluginsdk.f;
-import com.tencent.mm.r.m;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.ab.a;
-import com.tencent.mm.sdk.platformtools.ai;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.ad.a;
+import com.tencent.mm.sdk.platformtools.al;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.m;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.account.mobile.MobileVerifyUI;
 import com.tencent.mm.ui.base.MMFormInputView;
@@ -57,34 +57,41 @@ import java.util.Map;
 
 public class RegByMobileRegAIOUI
   extends MMActivity
-  implements com.tencent.mm.r.d
+  implements com.tencent.mm.t.d
 {
-  private String aJD = null;
-  private String bUu = null;
-  private ImageView czS;
-  private String fVw;
-  private String fvR = null;
-  private EditText ksG;
-  private LinearLayout ksH;
-  private TextView ksI;
-  private String ksK = null;
-  private Map ksN = new HashMap();
-  protected Map ksO = new HashMap();
-  private boolean ksP = true;
-  private p ksQ;
-  private String ksR = null;
-  private ResizeLayout ktn;
-  private boolean kuA = false;
-  private ImageView kuB;
-  private MMFormInputView kuC;
-  private int kuD = 0;
-  private boolean kuE;
-  private boolean kuF;
-  private ScrollView kuG;
-  private boolean kuH = false;
-  private ProgressBar kuI;
-  private h kuJ = null;
-  private aa kuK = new aa()
+  private String avX = null;
+  private String bNV = null;
+  private ImageView cui;
+  private String fEW = null;
+  private String geP;
+  private EditText kRO;
+  private LinearLayout kRP;
+  private TextView kRQ;
+  private String kRS = null;
+  private Map<String, String> kRV = new HashMap();
+  protected Map<String, String> kRW = new HashMap();
+  private boolean kRX = true;
+  private p kRY;
+  private String kRZ = null;
+  private ResizeLayout kSv;
+  private int kTA;
+  private String kTB;
+  private String kTC;
+  private TextView kTD;
+  private Button kTE;
+  private Button kTF;
+  private MMFormInputView kTG;
+  private boolean kTH = false;
+  private ImageView kTI;
+  private MMFormInputView kTJ;
+  private int kTK = 0;
+  private boolean kTL;
+  private boolean kTM;
+  private ScrollView kTN;
+  private boolean kTO = false;
+  private ProgressBar kTP;
+  private h kTQ = null;
+  private ac kTR = new ac()
   {
     public final void handleMessage(Message paramAnonymousMessage)
     {
@@ -107,66 +114,59 @@ public class RegByMobileRegAIOUI
       RegByMobileRegAIOUI.w(RegByMobileRegAIOUI.this);
     }
   };
-  private j kuL;
-  private boolean kuM = false;
-  private j.a kuN = new j.a()
+  private j kTS;
+  private boolean kTT = false;
+  private j.a kTU = new j.a()
   {
-    public final void Gr(String paramAnonymousString)
+    public final void IG(String paramAnonymousString)
     {
       paramAnonymousString = paramAnonymousString.trim();
       RegByMobileRegAIOUI.d(RegByMobileRegAIOUI.this, paramAnonymousString);
     }
     
-    public final void bbK()
+    public final void bgW()
     {
       RegByMobileRegAIOUI.w(RegByMobileRegAIOUI.this);
     }
   };
-  private int kuO;
-  private int kuP;
-  private boolean kuQ;
-  private boolean kuR;
-  private final int kuS = 128;
-  private EditText kur;
-  private MMFormMobileInputView kus;
-  private int kut;
-  private String kuu;
-  private String kuv;
-  private TextView kuw;
-  private Button kux;
-  private Button kuy;
-  private MMFormInputView kuz;
+  private int kTV;
+  private int kTW;
+  private boolean kTX;
+  private boolean kTY;
+  private final int kTZ = 128;
+  private EditText kTy;
+  private MMFormMobileInputView kTz;
   private int progress = 0;
   
-  private void Gq(String paramString)
+  private void IF(String paramString)
   {
     try
     {
-      if (kuL != null)
+      if (kTS != null)
       {
-        kuL.bbY();
-        kuL = null;
+        kTS.bhk();
+        kTS = null;
       }
-      if (!kuM)
+      if (!kTT)
       {
-        kuM = true;
+        kTT = true;
         finish();
         Intent localIntent = new Intent();
-        localIntent.putExtra("bindmcontact_mobile", ksR + " " + ksG.getText().toString());
-        localIntent.putExtra("bindmcontact_shortmobile", fvR);
-        localIntent.putExtra("country_name", bUu);
-        localIntent.putExtra("couttry_code", aJD);
-        localIntent.putExtra("login_type", kut);
-        localIntent.putExtra("mobileverify_countdownsec", kuO);
-        localIntent.putExtra("mobileverify_countdownstyle", kuP);
-        localIntent.putExtra("mobileverify_fb", kuQ);
-        localIntent.putExtra("mobileverify_reg_qq", kuR);
-        localIntent.putExtra("kintent_nickname", kuC.getText().toString());
-        localIntent.putExtra("kintent_password", kuz.getText().toString());
-        localIntent.putExtra("kintent_hasavatar", kuA);
+        localIntent.putExtra("bindmcontact_mobile", kRZ + " " + kRO.getText().toString());
+        localIntent.putExtra("bindmcontact_shortmobile", fEW);
+        localIntent.putExtra("country_name", bNV);
+        localIntent.putExtra("couttry_code", avX);
+        localIntent.putExtra("login_type", kTA);
+        localIntent.putExtra("mobileverify_countdownsec", kTV);
+        localIntent.putExtra("mobileverify_countdownstyle", kTW);
+        localIntent.putExtra("mobileverify_fb", kTX);
+        localIntent.putExtra("mobileverify_reg_qq", kTY);
+        localIntent.putExtra("kintent_nickname", kTJ.getText().toString());
+        localIntent.putExtra("kintent_password", kTG.getText().toString());
+        localIntent.putExtra("kintent_hasavatar", kTH);
         localIntent.putExtra("mobile_verify_purpose", 2);
         if ((paramString != null) && (paramString.length() > 0)) {
-          localIntent.putExtra("!32@/B4Tb64lLpKNhhU94SG29vC9zoVXGkMMIntent_sms_code", paramString);
+          localIntent.putExtra("MicroMsg.MobileVerifyUIIntent_sms_code", paramString);
         }
         a(MobileVerifyUI.class, localIntent);
       }
@@ -186,7 +186,7 @@ public class RegByMobileRegAIOUI
     }
     for (i = 0;; i = 1)
     {
-      if ((i != 0) && (ksP))
+      if ((i != 0) && (kRX))
       {
         return true;
         i += 1;
@@ -196,76 +196,76 @@ public class RegByMobileRegAIOUI
     }
   }
   
-  private void aqG()
+  private void atH()
   {
-    com.tencent.mm.plugin.a.b.kC(fVw);
-    com.tencent.mm.plugin.a.b.b(false, ah.tx() + "," + getClass().getName() + ",RE200_100," + ah.fd("RE200_100") + ",2");
+    com.tencent.mm.plugin.a.b.ll(geP);
+    com.tencent.mm.plugin.a.b.b(false, ah.ty() + "," + getClass().getName() + ",RE200_100," + ah.fq("RE200_100") + ",2");
     finish();
   }
   
-  private void qn(int paramInt)
+  private void sf(int paramInt)
   {
-    switch (17.kuq[(paramInt - 1)])
+    switch (17.kTx[(paramInt - 1)])
     {
     default: 
       return;
     case 1: 
-      com.tencent.mm.ui.base.g.e(this, 2131427654, 2131427653);
+      com.tencent.mm.ui.base.g.f(this, 2131234400, 2131234402);
       return;
     case 2: 
-      com.tencent.mm.ui.base.g.e(this, 2131427655, 2131427653);
+      com.tencent.mm.ui.base.g.f(this, 2131234401, 2131234402);
       return;
     case 3: 
-      com.tencent.mm.ui.base.g.e(this, 2131427538, 2131427525);
+      com.tencent.mm.ui.base.g.f(this, 2131235806, 2131230905);
       return;
     }
-    com.tencent.mm.ui.base.g.e(this, 2131427539, 2131427525);
+    com.tencent.mm.ui.base.g.f(this, 2131235808, 2131230905);
   }
   
-  protected final void Gb()
+  protected final void Gy()
   {
-    ksN.clear();
-    Object localObject1 = getString(2131428870).trim().split(",");
+    kRV.clear();
+    Object localObject1 = getString(2131232142).trim().split(",");
     int i = 0;
     if (i < localObject1.length)
     {
       localObject2 = localObject1[i].trim().split(":");
       if (localObject2.length < 2) {
-        com.tencent.mm.sdk.platformtools.u.e("!44@/B4Tb64lLpLrFBPJPItazeC2EyRjy73us9HlrmPyGsI=", "this country item has problem %s", new Object[] { localObject1[i] });
+        v.e("MicroMsg.RegByMobileRegAIOUI", "this country item has problem %s", new Object[] { localObject1[i] });
       }
       for (;;)
       {
         i += 1;
         break;
-        if (!ksN.containsKey(localObject2[0])) {
-          ksN.put(localObject2[0], localObject2[1]);
+        if (!kRV.containsKey(localObject2[0])) {
+          kRV.put(localObject2[0], localObject2[1]);
         }
-        ksO.put(localObject2[1], localObject2[0]);
+        kRW.put(localObject2[1], localObject2[0]);
       }
     }
-    ksH = ((LinearLayout)findViewById(2131166998));
-    ksI = ((TextView)findViewById(2131166999));
-    kus = ((MMFormMobileInputView)findViewById(2131167000));
-    ksG = kus.getMobileNumberEditText();
-    kur = kus.getCountryCodeEditText();
-    kur.setText(getString(2131428871));
-    kuw = ((TextView)findViewById(2131167005));
-    kuy = ((Button)findViewById(2131167134));
-    czS = ((ImageView)findViewById(2131167104));
-    kuB = ((ImageView)findViewById(2131167105));
-    kuz = ((MMFormInputView)findViewById(2131167133));
-    com.tencent.mm.ui.tools.a.c.a(kuz.getContentEditText()).rZ(16).a(null);
-    kuG = ((ScrollView)findViewById(2131167010));
-    ktn = ((ResizeLayout)findViewById(2131167009));
-    kuC = ((MMFormInputView)findViewById(2131167132));
-    kuC.getContentEditText().requestFocus();
-    ktn.setOnSizeChanged(new ResizeLayout.a()
+    kRP = ((LinearLayout)findViewById(2131755477));
+    kRQ = ((TextView)findViewById(2131755479));
+    kTz = ((MMFormMobileInputView)findViewById(2131758157));
+    kRO = kTz.lcT;
+    kTy = kTz.kTy;
+    kTy.setText(getString(2131232143));
+    kTD = ((TextView)findViewById(2131758161));
+    kTF = ((Button)findViewById(2131758683));
+    cui = ((ImageView)findViewById(2131758680));
+    kTI = ((ImageView)findViewById(2131758681));
+    kTG = ((MMFormInputView)findViewById(2131758682));
+    com.tencent.mm.ui.tools.a.c.a(kTG.fNQ).ud(16).a(null);
+    kTN = ((ScrollView)findViewById(2131757536));
+    kSv = ((ResizeLayout)findViewById(2131757535));
+    kTJ = ((MMFormInputView)findViewById(2131758678));
+    kTJ.fNQ.requestFocus();
+    kSv.kVC = new ResizeLayout.a()
     {
-      public final void bJ(int paramAnonymousInt1, int paramAnonymousInt2)
+      public final void bP(int paramAnonymousInt1, int paramAnonymousInt2)
       {
         RegByMobileRegAIOUI.a(RegByMobileRegAIOUI.this);
       }
-    });
+    };
     localObject1 = new View.OnFocusChangeListener()
     {
       public final void onFocusChange(View paramAnonymousView, boolean paramAnonymousBoolean)
@@ -275,59 +275,59 @@ public class RegByMobileRegAIOUI
         }
       }
     };
-    kuC.setFocusListener((View.OnFocusChangeListener)localObject1);
-    kuz.setFocusListener((View.OnFocusChangeListener)localObject1);
-    aw.uB();
-    kuF = true;
-    aw.uB();
-    kuE = true;
-    if (!kuE)
+    kTJ.iLN = ((View.OnFocusChangeListener)localObject1);
+    kTG.iLN = ((View.OnFocusChangeListener)localObject1);
+    aw.uD();
+    kTM = true;
+    aw.uD();
+    kTL = true;
+    if (!kTL)
     {
-      czS.setVisibility(8);
-      kuB.setVisibility(8);
+      cui.setVisibility(8);
+      kTI.setVisibility(8);
     }
-    if (!kuF) {
-      kuz.setVisibility(8);
+    if (!kTM) {
+      kTG.setVisibility(8);
     }
-    Object localObject2 = getString(2131427639);
+    Object localObject2 = getString(2131234420);
     localObject1 = localObject2;
-    if (com.tencent.mm.protocal.b.iUg) {
-      localObject1 = (String)localObject2 + getString(2131427771);
+    if (com.tencent.mm.protocal.c.jrz) {
+      localObject1 = (String)localObject2 + getString(2131230858);
     }
-    Gj((String)localObject1);
-    if (kux != null) {
-      kux.setOnClickListener(new View.OnClickListener()
+    Ah((String)localObject1);
+    if (kTE != null) {
+      kTE.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
-          ay.C(koJ.kpc, getString(2131432244));
+          be.D(kNN.kOg, getString(2131235761));
         }
       });
     }
-    localObject1 = getString(2131427597);
+    localObject1 = getString(2131233474);
     Object localObject3;
-    if (t.aUy())
+    if (com.tencent.mm.sdk.platformtools.u.aZC())
     {
-      localObject2 = getString(2131427598);
+      localObject2 = getString(2131233475);
       localObject3 = Spannable.Factory.getInstance().newSpannable((String)localObject1 + "  " + (String)localObject2);
       ((Spannable)localObject3).setSpan(new ClickableSpan()
       {
         public final void onClick(View paramAnonymousView)
         {
-          ay.C(koJ.kpc, getString(2131432244));
+          be.D(kNN.kOg, getString(2131235761));
         }
         
         public final void updateDrawState(TextPaint paramAnonymousTextPaint)
         {
-          paramAnonymousTextPaint.setColor(getResources().getColor(2131231118));
+          paramAnonymousTextPaint.setColor(getResources().getColor(2131689770));
           paramAnonymousTextPaint.setUnderlineText(true);
         }
       }, ((String)localObject1).length() + "  ".length(), ((String)localObject1).length() + ((String)localObject2).length() + "  ".length(), 33);
-      kuw.setText((CharSequence)localObject3);
-      kuw.setMovementMethod(LinkMovementMethod.getInstance());
-      ksG.addTextChangedListener(new TextWatcher()
+      kTD.setText((CharSequence)localObject3);
+      kTD.setMovementMethod(LinkMovementMethod.getInstance());
+      kRO.addTextChangedListener(new TextWatcher()
       {
-        private ai eCG = new ai();
+        private al eJd = new al();
         
         public final void afterTextChanged(Editable paramAnonymousEditable)
         {
@@ -338,18 +338,18 @@ public class RegByMobileRegAIOUI
         
         public final void onTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
       });
-      kus.setOnCountryCodeChangedListener(new MMFormMobileInputView.a()
+      kTz.lcW = new MMFormMobileInputView.a()
       {
-        public final void Gs(String paramAnonymousString)
+        public final void IH(String paramAnonymousString)
         {
           String str;
-          if ((!ay.kz(paramAnonymousString)) && (paramAnonymousString.length() > 1))
+          if ((!be.kf(paramAnonymousString)) && (paramAnonymousString.length() > 1))
           {
             paramAnonymousString = paramAnonymousString.substring(1);
             str = (String)RegByMobileRegAIOUI.d(RegByMobileRegAIOUI.this).get(paramAnonymousString);
-            if (ay.kz(str))
+            if (be.kf(str))
             {
-              RegByMobileRegAIOUI.c(RegByMobileRegAIOUI.this).setText(getString(2131427717));
+              RegByMobileRegAIOUI.c(RegByMobileRegAIOUI.this).setText(getString(2131233836));
               RegByMobileRegAIOUI.a(RegByMobileRegAIOUI.this, false);
             }
           }
@@ -357,16 +357,16 @@ public class RegByMobileRegAIOUI
           {
             RegByMobileRegAIOUI.b(RegByMobileRegAIOUI.this);
             return;
-            if ((ksO.get(RegByMobileRegAIOUI.c(RegByMobileRegAIOUI.this).getText()) == null) || (!((String)ksO.get(RegByMobileRegAIOUI.c(RegByMobileRegAIOUI.this).getText())).equals(paramAnonymousString))) {
+            if ((kRW.get(RegByMobileRegAIOUI.c(RegByMobileRegAIOUI.this).getText()) == null) || (!((String)kRW.get(RegByMobileRegAIOUI.c(RegByMobileRegAIOUI.this).getText())).equals(paramAnonymousString))) {
               RegByMobileRegAIOUI.c(RegByMobileRegAIOUI.this).setText(str);
             }
             RegByMobileRegAIOUI.a(RegByMobileRegAIOUI.this, true);
             continue;
-            RegByMobileRegAIOUI.c(RegByMobileRegAIOUI.this).setText(getString(2131427718));
+            RegByMobileRegAIOUI.c(RegByMobileRegAIOUI.this).setText(getString(2131233838));
           }
         }
-      });
-      kuz.addTextChangedListener(new TextWatcher()
+      };
+      kTG.addTextChangedListener(new TextWatcher()
       {
         public final void afterTextChanged(Editable paramAnonymousEditable)
         {
@@ -377,7 +377,7 @@ public class RegByMobileRegAIOUI
         
         public final void onTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
       });
-      kuC.addTextChangedListener(new TextWatcher()
+      kTJ.addTextChangedListener(new TextWatcher()
       {
         public final void afterTextChanged(Editable paramAnonymousEditable)
         {
@@ -388,83 +388,83 @@ public class RegByMobileRegAIOUI
         
         public final void onTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
       });
-      kuy.setOnClickListener(new View.OnClickListener()
+      kTF.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
-          paramAnonymousView = com.tencent.mm.ui.tools.a.c.a(RegByMobileRegAIOUI.i(RegByMobileRegAIOUI.this).getContentEditText()).bV(1, 32);
-          lzG = true;
+          paramAnonymousView = com.tencent.mm.ui.tools.a.c.a(ifNQ).cc(1, 32);
+          mav = true;
           paramAnonymousView.a(new c.a()
           {
-            public final void Om()
+            public final void Px()
             {
-              com.tencent.mm.ui.base.g.e(RegByMobileRegAIOUI.this, 2131428199, 2131428198);
+              com.tencent.mm.ui.base.g.f(RegByMobileRegAIOUI.this, 2131235044, 2131235047);
             }
             
-            public final void On()
+            public final void Py()
             {
-              com.tencent.mm.ui.base.g.e(RegByMobileRegAIOUI.this, 2131428200, 2131428198);
+              com.tencent.mm.ui.base.g.f(RegByMobileRegAIOUI.this, 2131235045, 2131235047);
             }
             
-            public final void mm(String paramAnonymous2String)
+            public final void ng(String paramAnonymous2String)
             {
               RegByMobileRegAIOUI.a(RegByMobileRegAIOUI.this, RegByMobileRegAIOUI.e(RegByMobileRegAIOUI.this).getText().toString().trim());
-              RegByMobileRegAIOUI.b(RegByMobileRegAIOUI.this, ai.CX(RegByMobileRegAIOUI.f(RegByMobileRegAIOUI.this).getText().toString()));
+              RegByMobileRegAIOUI.b(RegByMobileRegAIOUI.this, al.Fl(RegByMobileRegAIOUI.f(RegByMobileRegAIOUI.this).getText().toString()));
               paramAnonymous2String = RegByMobileRegAIOUI.g(RegByMobileRegAIOUI.this) + RegByMobileRegAIOUI.h(RegByMobileRegAIOUI.this);
-              age();
+              aiI();
               RegByMobileRegAIOUI.c(RegByMobileRegAIOUI.this, paramAnonymous2String);
             }
           });
         }
       });
-      kuy.setEnabled(false);
-      if ((ay.kz(bUu)) && (ay.kz(aJD))) {
+      kTF.setEnabled(false);
+      if ((be.kf(bNV)) && (be.kf(avX))) {
         break label1094;
       }
       label736:
-      if ((bUu != null) && (!bUu.equals(""))) {
-        ksI.setText(bUu);
+      if ((bNV != null) && (!bNV.equals(""))) {
+        kRQ.setText(bNV);
       }
-      if ((aJD != null) && (!aJD.equals(""))) {
-        kur.setText("+" + aJD);
+      if ((avX != null) && (!avX.equals(""))) {
+        kTy.setText("+" + avX);
       }
-      if ((ksK == null) || (ksK.equals(""))) {
+      if ((kRS == null) || (kRS.equals(""))) {
         break label1198;
       }
-      ksG.setText(ksK);
+      kRO.setText(kRS);
     }
     for (;;)
     {
-      ksH.setOnClickListener(new View.OnClickListener()
+      kRP.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
           paramAnonymousView = new Intent();
           paramAnonymousView.putExtra("country_name", RegByMobileRegAIOUI.k(RegByMobileRegAIOUI.this));
           paramAnonymousView.putExtra("couttry_code", RegByMobileRegAIOUI.j(RegByMobileRegAIOUI.this));
-          com.tencent.mm.plugin.a.a.coa.b(paramAnonymousView, RegByMobileRegAIOUI.this);
+          com.tencent.mm.plugin.a.a.cjo.b(paramAnonymousView, RegByMobileRegAIOUI.this);
         }
       });
       b(new MenuItem.OnMenuItemClickListener()
       {
         public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
         {
-          age();
+          aiI();
           RegByMobileRegAIOUI.l(RegByMobileRegAIOUI.this);
           finish();
           return true;
         }
       });
-      czS.setOnClickListener(new View.OnClickListener()
+      cui.setOnClickListener(new View.OnClickListener()
       {
         public final void onClick(View paramAnonymousView)
         {
-          com.tencent.mm.plugin.a.a.cob.g(RegByMobileRegAIOUI.this);
+          com.tencent.mm.plugin.a.a.cjp.c(RegByMobileRegAIOUI.this);
         }
       });
-      ah.tv().a(new ab.a()
+      ah.tw().a(new ad.a()
       {
-        String bNn;
+        String bGH;
         Bitmap bitmap;
         
         public final String toString()
@@ -472,34 +472,42 @@ public class RegByMobileRegAIOUI
           return super.toString() + "|initView2";
         }
         
-        public final boolean vd()
+        public final boolean vf()
         {
-          bNn = com.tencent.mm.modelsimple.c.aT(RegByMobileRegAIOUI.this);
-          bitmap = com.tencent.mm.modelsimple.c.aU(RegByMobileRegAIOUI.this);
+          bGH = com.tencent.mm.modelsimple.c.aP(RegByMobileRegAIOUI.this);
+          bitmap = com.tencent.mm.modelsimple.c.aQ(RegByMobileRegAIOUI.this);
           if ((bitmap != null) && (!bitmap.isRecycled())) {}
           try
           {
-            com.tencent.mm.sdk.platformtools.d.a(bitmap, 100, Bitmap.CompressFormat.PNG, com.tencent.mm.compatible.util.d.bur + "temp.avatar", false);
+            com.tencent.mm.sdk.platformtools.d.a(bitmap, 100, Bitmap.CompressFormat.PNG, com.tencent.mm.compatible.util.d.biR + "temp.avatar", false);
             return true;
           }
           catch (Exception localException)
           {
             for (;;)
             {
-              com.tencent.mm.sdk.platformtools.u.e("!44@/B4Tb64lLpLrFBPJPItazeC2EyRjy73us9HlrmPyGsI=", "save avatar fail." + localException.getMessage());
+              v.e("MicroMsg.RegByMobileRegAIOUI", "save avatar fail." + localException.getMessage());
             }
           }
         }
         
-        public final boolean ve()
+        public final boolean vg()
         {
-          if ((!ay.kz(bNn)) && (ay.kz(RegByMobileRegAIOUI.i(RegByMobileRegAIOUI.this).getText().trim()))) {
-            RegByMobileRegAIOUI.i(RegByMobileRegAIOUI.this).setText(bNn);
-          }
-          if (!e.oW())
+          if ((!be.kf(bGH)) && (be.kf(RegByMobileRegAIOUI.i(RegByMobileRegAIOUI.this).getText().trim())))
           {
-            com.tencent.mm.sdk.platformtools.u.e("!44@/B4Tb64lLpLrFBPJPItazeC2EyRjy73us9HlrmPyGsI=", "SDcard is not available");
+            MMFormInputView localMMFormInputView = RegByMobileRegAIOUI.i(RegByMobileRegAIOUI.this);
+            String str = bGH;
+            if (fNQ == null) {
+              break label85;
+            }
+            fNQ.setText(str);
+          }
+          while (!e.no())
+          {
+            v.e("MicroMsg.RegByMobileRegAIOUI", "SDcard is not available");
             return false;
+            label85:
+            v.e("MicroMsg.MMFormInputView", "contentET is null!");
           }
           if ((bitmap != null) && (!bitmap.isRecycled()) && (!RegByMobileRegAIOUI.m(RegByMobileRegAIOUI.this)))
           {
@@ -511,20 +519,20 @@ public class RegByMobileRegAIOUI
         }
       });
       return;
-      localObject2 = getString(2131427599);
-      localObject3 = getString(2131427601);
-      String str = getString(2131427600);
+      localObject2 = getString(2131233477);
+      localObject3 = getString(2131233476);
+      String str = getString(2131230864);
       Spannable localSpannable = Spannable.Factory.getInstance().newSpannable((String)localObject1 + "  " + (String)localObject2 + str + (String)localObject3);
       localSpannable.setSpan(new ClickableSpan()
       {
         public final void onClick(View paramAnonymousView)
         {
-          ay.C(koJ.kpc, getString(2131432245));
+          be.D(kNN.kOg, getString(2131235766));
         }
         
         public final void updateDrawState(TextPaint paramAnonymousTextPaint)
         {
-          paramAnonymousTextPaint.setColor(getResources().getColor(2131231118));
+          paramAnonymousTextPaint.setColor(getResources().getColor(2131689770));
           paramAnonymousTextPaint.setUnderlineText(true);
         }
       }, ((String)localObject1).length() + "  ".length(), ((String)localObject1).length() + "  ".length() + ((String)localObject2).length(), 33);
@@ -532,62 +540,62 @@ public class RegByMobileRegAIOUI
       {
         public final void onClick(View paramAnonymousView)
         {
-          ay.C(koJ.kpc, getString(2131432246));
+          be.D(kNN.kOg, getString(2131235765));
         }
         
         public final void updateDrawState(TextPaint paramAnonymousTextPaint)
         {
-          paramAnonymousTextPaint.setColor(getResources().getColor(2131231118));
+          paramAnonymousTextPaint.setColor(getResources().getColor(2131689770));
           paramAnonymousTextPaint.setUnderlineText(true);
         }
       }, ((String)localObject1).length() + ((String)localObject2).length() + "  ".length() + str.length(), ((String)localObject1).length() + ((String)localObject2).length() + "  ".length() + str.length() + ((String)localObject3).length(), 33);
-      kuw.setText(localSpannable);
+      kTD.setText(localSpannable);
       break;
       label1094:
       localObject1 = ((TelephonyManager)getSystemService("phone")).getSimCountryIso();
-      com.tencent.mm.sdk.platformtools.u.i("!44@/B4Tb64lLpLrFBPJPItazeC2EyRjy73us9HlrmPyGsI=", "tm.getSimCountryIso()" + (String)localObject1);
-      if (ay.kz((String)localObject1))
+      v.i("MicroMsg.RegByMobileRegAIOUI", "tm.getSimCountryIso()" + (String)localObject1);
+      if (be.kf((String)localObject1))
       {
-        com.tencent.mm.sdk.platformtools.u.e("!44@/B4Tb64lLpLrFBPJPItazeC2EyRjy73us9HlrmPyGsI=", "getDefaultCountryInfo error");
+        v.e("MicroMsg.RegByMobileRegAIOUI", "getDefaultCountryInfo error");
         break label736;
       }
-      localObject1 = com.tencent.mm.ac.b.h(this, (String)localObject1, getString(2131428870));
+      localObject1 = com.tencent.mm.af.b.f(this, (String)localObject1, getString(2131232142));
       if (localObject1 == null)
       {
-        com.tencent.mm.sdk.platformtools.u.e("!44@/B4Tb64lLpLrFBPJPItazeC2EyRjy73us9HlrmPyGsI=", "getDefaultCountryInfo error");
+        v.e("MicroMsg.RegByMobileRegAIOUI", "getDefaultCountryInfo error");
         break label736;
       }
-      bUu = bUu;
-      aJD = bUt;
+      bNV = bNV;
+      avX = bNU;
       break label736;
       label1198:
-      ah.tv().a(new ab.a()
+      ah.tw().a(new ad.a()
       {
-        String daR;
+        String cZx;
         
         public final String toString()
         {
           return super.toString() + "|initView1";
         }
         
-        public final boolean vd()
+        public final boolean vf()
         {
-          daR = com.tencent.mm.modelsimple.c.v(RegByMobileRegAIOUI.this, RegByMobileRegAIOUI.j(RegByMobileRegAIOUI.this));
+          cZx = com.tencent.mm.modelsimple.c.w(RegByMobileRegAIOUI.this, RegByMobileRegAIOUI.j(RegByMobileRegAIOUI.this));
           return true;
         }
         
-        public final boolean ve()
+        public final boolean vg()
         {
           EditText localEditText;
-          if (ay.kz(RegByMobileRegAIOUI.f(RegByMobileRegAIOUI.this).getText().trim()))
+          if (be.kf(RegByMobileRegAIOUI.f(RegByMobileRegAIOUI.this).getText().trim()))
           {
             localEditText = RegByMobileRegAIOUI.f(RegByMobileRegAIOUI.this);
-            if (!ay.kz(daR)) {
+            if (!be.kf(cZx)) {
               break label60;
             }
           }
           label60:
-          for (String str = "";; str = daR)
+          for (String str = "";; str = cZx)
           {
             localEditText.setText(str);
             return true;
@@ -597,156 +605,9 @@ public class RegByMobileRegAIOUI
     }
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
-  {
-    com.tencent.mm.sdk.platformtools.u.i("!44@/B4Tb64lLpLrFBPJPItazeC2EyRjy73us9HlrmPyGsI=", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
-    if (ksQ != null)
-    {
-      ksQ.dismiss();
-      ksQ = null;
-    }
-    if (paramInt2 == -75) {
-      com.tencent.mm.ui.base.g.e(this, 2131427769, 2131427604);
-    }
-    label734:
-    label780:
-    label790:
-    do
-    {
-      int i;
-      do
-      {
-        return;
-        if (paramj.getType() != 145) {
-          break label734;
-        }
-        i = ((com.tencent.mm.modelfriend.u)paramj).va();
-        if (i != 12) {
-          break;
-        }
-        if ((paramInt2 == -41) || (paramInt2 == -59))
-        {
-          paramString = com.tencent.mm.e.a.cV(paramString);
-          if (paramString != null)
-          {
-            paramString.a(this, null, null);
-            return;
-          }
-          com.tencent.mm.ui.base.g.e(this, 2131427663, 2131427662);
-          return;
-        }
-        if ((paramInt2 == -36) || (paramInt2 == -35) || (paramInt2 == -3))
-        {
-          paramj = ((com.tencent.mm.modelfriend.u)paramj).yP();
-          if (!ay.kz(paramj)) {
-            fvR = paramj.trim();
-          }
-          fvR = ai.CX(fvR);
-          kuv = (ksR + fvR);
-          com.tencent.mm.plugin.a.b.kB("RE200_100");
-          com.tencent.mm.plugin.a.b.b(true, ah.tx() + "," + getClass().getName() + ",RE200_200," + ah.fd("RE200_200") + ",1");
-          paramString = com.tencent.mm.e.a.cV(paramString);
-          if (paramString != null)
-          {
-            paramString.a(this, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
-            {
-              public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
-              {
-                paramAnonymousDialogInterface = RegByMobileRegAIOUI.this;
-                RegByMobileRegAIOUI localRegByMobileRegAIOUI = RegByMobileRegAIOUI.this;
-                getString(2131430877);
-                RegByMobileRegAIOUI.a(paramAnonymousDialogInterface, com.tencent.mm.ui.base.g.a(localRegByMobileRegAIOUI, getString(2131427730), true, new DialogInterface.OnCancelListener()
-                {
-                  public final void onCancel(DialogInterface paramAnonymous2DialogInterface) {}
-                }));
-                paramAnonymousDialogInterface = new com.tencent.mm.modelfriend.u(RegByMobileRegAIOUI.g(RegByMobileRegAIOUI.this) + RegByMobileRegAIOUI.h(RegByMobileRegAIOUI.this), 14, "", 0, "");
-                ah.tE().d(paramAnonymousDialogInterface);
-                com.tencent.mm.plugin.a.b.kC("RE200_250");
-                RegByMobileRegAIOUI.q(RegByMobileRegAIOUI.this);
-              }
-            }, new DialogInterface.OnClickListener()
-            {
-              public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
-              {
-                com.tencent.mm.plugin.a.b.b(false, ah.tx() + "," + getClass().getName() + ",RE200_200," + ah.fd("RE200_200") + ",2");
-                com.tencent.mm.plugin.a.b.kC("RE200_100");
-              }
-            });
-            return;
-          }
-          getString(2131430877);
-          ksQ = com.tencent.mm.ui.base.g.a(this, getString(2131427730), true, new DialogInterface.OnCancelListener()
-          {
-            public final void onCancel(DialogInterface paramAnonymousDialogInterface) {}
-          });
-          paramString = new com.tencent.mm.modelfriend.u(ksR + fvR, 14, "", 0, "");
-          ah.tE().d(paramString);
-          com.tencent.mm.plugin.a.b.kC("RE200_250");
-          kuH = false;
-          return;
-        }
-        if (paramInt2 == -34)
-        {
-          com.tencent.mm.ui.base.g.y(this, getString(2131428663), "");
-          return;
-        }
-      } while (com.tencent.mm.plugin.a.a.cob.a(this, paramInt1, paramInt2, paramString));
-      Toast.makeText(this, getString(2131428616, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
-      if (i == 14)
-      {
-        if ((paramInt2 != 0) && (paramString != null)) {
-          break label790;
-        }
-        kuO = ((com.tencent.mm.modelfriend.u)paramj).yR();
-        kuP = ((com.tencent.mm.modelfriend.u)paramj).yS();
-        kuQ = ((com.tencent.mm.modelfriend.u)paramj).yT();
-        kuR = ((com.tencent.mm.modelfriend.u)paramj).yV();
-        if (kuL == null)
-        {
-          kuL = new j(this, kuN);
-          kuL.bbX();
-        }
-        if (kuJ != null) {
-          break label780;
-        }
-        View localView = ((LayoutInflater)getSystemService("layout_inflater")).inflate(2131362454, null);
-        kuI = ((ProgressBar)localView.findViewById(2131167136));
-        TextView localTextView = (TextView)localView.findViewById(2131167135);
-        kuJ = com.tencent.mm.ui.base.g.a(this, false, getString(2131428610), localView, "", "", null, null);
-        localTextView.setText(kur.getText().toString() + " " + ksG.getText().toString());
-      }
-      for (;;)
-      {
-        progress = 0;
-        kuI.setIndeterminate(false);
-        kuK.sendEmptyMessage(10);
-        if ((com.tencent.mm.plugin.a.a.cob.a(this, paramInt1, paramInt2, paramString)) || (paramj.getType() != 701)) {
-          break;
-        }
-        paramString = com.tencent.mm.e.a.cV(paramString);
-        if ((paramString == null) || (!paramString.a(this, null, null))) {
-          break;
-        }
-        return;
-        kuJ.show();
-      }
-      if (paramInt2 == -41)
-      {
-        com.tencent.mm.ui.base.g.e(this, 2131427663, 2131427662);
-        return;
-      }
-      if (paramInt2 == -34)
-      {
-        com.tencent.mm.ui.base.g.y(this, getString(2131428663), "");
-        return;
-      }
-    } while (com.tencent.mm.plugin.a.a.cob.a(this, paramInt1, paramInt2, paramString));
-    Toast.makeText(this, getString(2131428616, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
-  }
-  
   protected final int getLayoutId()
   {
-    return 2131362453;
+    return 2130904257;
   }
   
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
@@ -755,49 +616,49 @@ public class RegByMobileRegAIOUI
     switch (paramInt2)
     {
     default: 
-      paramIntent = com.tencent.mm.plugin.a.a.cob.a(this, paramInt1, paramInt2, paramIntent);
+      paramIntent = com.tencent.mm.plugin.a.a.cjp.a(this, paramInt1, paramInt2, paramIntent);
       if (paramIntent != null)
       {
-        czS.setImageBitmap(paramIntent);
-        kuA = true;
-        kuB.setVisibility(8);
+        cui.setImageBitmap(paramIntent);
+        kTH = true;
+        kTI.setVisibility(8);
       }
       break;
     }
     do
     {
       return;
-      bUu = ay.ad(paramIntent.getStringExtra("country_name"), "");
-      aJD = ay.ad(paramIntent.getStringExtra("couttry_code"), "");
-      if (!bUu.equals("")) {
-        ksI.setText(bUu);
+      bNV = be.ab(paramIntent.getStringExtra("country_name"), "");
+      avX = be.ab(paramIntent.getStringExtra("couttry_code"), "");
+      if (!bNV.equals("")) {
+        kRQ.setText(bNV);
       }
-    } while (aJD.equals(""));
-    kur.setText("+" + aJD);
+    } while (avX.equals(""));
+    kTy.setText("+" + avX);
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    bUu = ay.ad(getIntent().getStringExtra("country_name"), "");
-    aJD = ay.ad(getIntent().getStringExtra("couttry_code"), "");
-    ksK = ay.ad(getIntent().getStringExtra("bindmcontact_shortmobile"), "");
-    kut = getIntent().getIntExtra("login_type", 0);
-    fVw = com.tencent.mm.plugin.a.b.FX();
-    aw.uB();
-    com.tencent.mm.plugin.a.b.en(20);
-    Gb();
+    bNV = be.ab(getIntent().getStringExtra("country_name"), "");
+    avX = be.ab(getIntent().getStringExtra("couttry_code"), "");
+    kRS = be.ab(getIntent().getStringExtra("bindmcontact_shortmobile"), "");
+    kTA = getIntent().getIntExtra("login_type", 0);
+    geP = com.tencent.mm.plugin.a.b.Gu();
+    aw.uD();
+    com.tencent.mm.plugin.a.b.eZ(20);
+    Gy();
   }
   
   protected void onDestroy()
   {
-    if (kuL != null)
+    if (kTS != null)
     {
-      kuL.bbY();
-      kuL = null;
+      kTS.bhk();
+      kTS = null;
     }
-    if (kuJ != null) {
-      kuJ.dismiss();
+    if (kTQ != null) {
+      kTQ.dismiss();
     }
     super.onDestroy();
   }
@@ -806,7 +667,7 @@ public class RegByMobileRegAIOUI
   {
     if ((paramInt == 4) && (paramKeyEvent.getRepeatCount() == 0))
     {
-      aqG();
+      atH();
       return true;
     }
     return super.onKeyDown(paramInt, paramKeyEvent);
@@ -815,35 +676,194 @@ public class RegByMobileRegAIOUI
   public void onPause()
   {
     super.onPause();
-    ah.tE().b(701, this);
-    ah.tE().b(145, this);
-    ah.tE().b(132, this);
-    com.tencent.mm.plugin.a.b.kB("RE200_100");
+    ah.tF().b(701, this);
+    ah.tF().b(145, this);
+    ah.tF().b(132, this);
+    com.tencent.mm.plugin.a.b.lk("RE200_100");
   }
   
   public void onRequestPermissionsResult(int paramInt, String[] paramArrayOfString, int[] paramArrayOfInt)
   {
-    com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpLrFBPJPItazeC2EyRjy73us9HlrmPyGsI=", "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(paramArrayOfInt[0]), Long.valueOf(Thread.currentThread().getId()) });
-    switch (paramInt)
-    {
+    int i;
+    if ((paramArrayOfInt == null) || (paramArrayOfInt.length <= 0)) {
+      if (paramArrayOfInt == null)
+      {
+        i = -1;
+        v.w("MicroMsg.RegByMobileRegAIOUI", "summerper onRequestPermissionsResult, grantResults length is:%d requestCode:%d, permissions:%s, stack:%s", new Object[] { Integer.valueOf(i), Integer.valueOf(paramInt), paramArrayOfString, be.baX() });
+      }
     }
     do
     {
       return;
-    } while ((paramArrayOfInt[0] != 0) || (kuL == null));
-    kuL.bbZ();
+      i = paramArrayOfInt.length;
+      break;
+      v.d("MicroMsg.RegByMobileRegAIOUI", "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(paramArrayOfInt[0]), Long.valueOf(Thread.currentThread().getId()) });
+      switch (paramInt)
+      {
+      default: 
+        return;
+      }
+    } while ((paramArrayOfInt[0] != 0) || (kTS == null));
+    kTS.bhl();
   }
   
   public void onResume()
   {
     super.onResume();
-    ah.tE().a(701, this);
-    ah.tE().a(145, this);
-    ah.tE().a(132, this);
-    com.tencent.mm.plugin.a.b.b(true, ah.tx() + "," + getClass().getName() + ",RE200_100," + ah.fd("RE200_100") + ",1");
-    kur.setSelection(kur.getText().toString().length());
-    apz();
-    kuD = 0;
+    ah.tF().a(701, this);
+    ah.tF().a(145, this);
+    ah.tF().a(132, this);
+    com.tencent.mm.plugin.a.b.b(true, ah.ty() + "," + getClass().getName() + ",RE200_100," + ah.fq("RE200_100") + ",1");
+    kTy.setSelection(kTy.getText().toString().length());
+    asv();
+    kTK = 0;
+  }
+  
+  public void onSceneEnd(int paramInt1, int paramInt2, String paramString, com.tencent.mm.t.j paramj)
+  {
+    v.i("MicroMsg.RegByMobileRegAIOUI", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
+    if (kRY != null)
+    {
+      kRY.dismiss();
+      kRY = null;
+    }
+    if (paramInt2 == -75) {
+      com.tencent.mm.ui.base.g.f(this, 2131230861, 2131234350);
+    }
+    label736:
+    label782:
+    label792:
+    do
+    {
+      int i;
+      do
+      {
+        return;
+        if (paramj.getType() != 145) {
+          break label736;
+        }
+        i = ((com.tencent.mm.modelfriend.u)paramj).vc();
+        if (i != 12) {
+          break;
+        }
+        if ((paramInt2 == -41) || (paramInt2 == -59))
+        {
+          paramString = com.tencent.mm.f.a.dc(paramString);
+          if (paramString != null)
+          {
+            paramString.a(this, null, null);
+            return;
+          }
+          com.tencent.mm.ui.base.g.f(this, 2131234394, 2131234395);
+          return;
+        }
+        if ((paramInt2 == -36) || (paramInt2 == -35) || (paramInt2 == -3))
+        {
+          paramj = ((com.tencent.mm.modelfriend.u)paramj).zc();
+          if (!be.kf(paramj)) {
+            fEW = paramj.trim();
+          }
+          fEW = al.Fl(fEW);
+          kTC = (kRZ + fEW);
+          com.tencent.mm.plugin.a.b.lk("RE200_100");
+          com.tencent.mm.plugin.a.b.b(true, ah.ty() + "," + getClass().getName() + ",RE200_200," + ah.fq("RE200_200") + ",1");
+          paramString = com.tencent.mm.f.a.dc(paramString);
+          if (paramString != null)
+          {
+            paramString.a(this, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+            {
+              public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+              {
+                paramAnonymousDialogInterface = RegByMobileRegAIOUI.this;
+                RegByMobileRegAIOUI localRegByMobileRegAIOUI = RegByMobileRegAIOUI.this;
+                getString(2131231028);
+                RegByMobileRegAIOUI.a(paramAnonymousDialogInterface, com.tencent.mm.ui.base.g.a(localRegByMobileRegAIOUI, getString(2131234382), true, new DialogInterface.OnCancelListener()
+                {
+                  public final void onCancel(DialogInterface paramAnonymous2DialogInterface) {}
+                }));
+                paramAnonymousDialogInterface = new com.tencent.mm.modelfriend.u(RegByMobileRegAIOUI.g(RegByMobileRegAIOUI.this) + RegByMobileRegAIOUI.h(RegByMobileRegAIOUI.this), 14, "", 0, "");
+                ah.tF().a(paramAnonymousDialogInterface, 0);
+                com.tencent.mm.plugin.a.b.ll("RE200_250");
+                RegByMobileRegAIOUI.q(RegByMobileRegAIOUI.this);
+              }
+            }, new DialogInterface.OnClickListener()
+            {
+              public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+              {
+                com.tencent.mm.plugin.a.b.b(false, ah.ty() + "," + getClass().getName() + ",RE200_200," + ah.fq("RE200_200") + ",2");
+                com.tencent.mm.plugin.a.b.ll("RE200_100");
+              }
+            });
+            return;
+          }
+          getString(2131231028);
+          kRY = com.tencent.mm.ui.base.g.a(this, getString(2131234382), true, new DialogInterface.OnCancelListener()
+          {
+            public final void onCancel(DialogInterface paramAnonymousDialogInterface) {}
+          });
+          paramString = new com.tencent.mm.modelfriend.u(kRZ + fEW, 14, "", 0, "");
+          ah.tF().a(paramString, 0);
+          com.tencent.mm.plugin.a.b.ll("RE200_250");
+          kTO = false;
+          return;
+        }
+        if (paramInt2 == -34)
+        {
+          com.tencent.mm.ui.base.g.b(this, getString(2131231262), "", true);
+          return;
+        }
+      } while (com.tencent.mm.plugin.a.a.cjp.a(this, paramInt1, paramInt2, paramString));
+      Toast.makeText(this, getString(2131231304, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
+      if (i == 14)
+      {
+        if ((paramInt2 != 0) && (paramString != null)) {
+          break label792;
+        }
+        kTV = ((com.tencent.mm.modelfriend.u)paramj).ze();
+        kTW = ((com.tencent.mm.modelfriend.u)paramj).zf();
+        kTX = ((com.tencent.mm.modelfriend.u)paramj).zg();
+        kTY = ((com.tencent.mm.modelfriend.u)paramj).zi();
+        if (kTS == null)
+        {
+          kTS = new j(this, kTU);
+          kTS.bhj();
+        }
+        if (kTQ != null) {
+          break label782;
+        }
+        View localView = ((LayoutInflater)getSystemService("layout_inflater")).inflate(2130904254, null);
+        kTP = ((ProgressBar)localView.findViewById(2131758478));
+        TextView localTextView = (TextView)localView.findViewById(2131758674);
+        kTQ = com.tencent.mm.ui.base.g.a(this, false, getString(2131231287), localView, "", "", null, null);
+        localTextView.setText(kTy.getText().toString() + " " + kRO.getText().toString());
+      }
+      for (;;)
+      {
+        progress = 0;
+        kTP.setIndeterminate(false);
+        kTR.sendEmptyMessage(10);
+        if ((com.tencent.mm.plugin.a.a.cjp.a(this, paramInt1, paramInt2, paramString)) || (paramj.getType() != 701)) {
+          break;
+        }
+        paramString = com.tencent.mm.f.a.dc(paramString);
+        if ((paramString == null) || (!paramString.a(this, null, null))) {
+          break;
+        }
+        return;
+        kTQ.show();
+      }
+      if (paramInt2 == -41)
+      {
+        com.tencent.mm.ui.base.g.f(this, 2131234394, 2131234395);
+        return;
+      }
+      if (paramInt2 == -34)
+      {
+        com.tencent.mm.ui.base.g.b(this, getString(2131231262), "", true);
+        return;
+      }
+    } while (com.tencent.mm.plugin.a.a.cjp.a(this, paramInt1, paramInt2, paramString));
+    Toast.makeText(this, getString(2131231304, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
   }
 }
 

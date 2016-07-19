@@ -5,7 +5,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
 import com.tencent.mm.model.i;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.c;
 import com.tencent.mm.ui.tools.m;
 import com.tencent.mm.ui.voicesearch.b;
@@ -15,28 +15,28 @@ final class AddressUI$a$2
 {
   AddressUI$a$2(AddressUI.a parama) {}
   
-  public final boolean onItemLongClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final boolean onItemLongClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    u.i("!32@/B4Tb64lLpJvPADYHZ60V4qqnXgYeWWp", "onItemLongClick, targetview is SearchBar::ListView, pos = " + paramInt);
-    if (paramInt < AddressUI.a.c(liu).getHeaderViewsCount()) {
-      u.w("!32@/B4Tb64lLpJvPADYHZ60V4qqnXgYeWWp", "on item long click, but match header view");
+    v.i("MicroMsg.AddressUI", "onItemLongClick, targetview is SearchBar::ListView, pos = " + paramInt);
+    if (paramInt < AddressUI.a.c(lIF).getHeaderViewsCount()) {
+      v.w("MicroMsg.AddressUI", "on item long click, but match header view");
     }
     do
     {
       do
       {
         return true;
-      } while ((AddressUI.a.e(liu) != null) && (eliu).lCu));
-      paramAdapterView = (c)AddressUI.a.a(liu).cj(paramInt - AddressUI.a.c(liu).getHeaderViewsCount());
+      } while ((AddressUI.a.e(lIF) != null) && (elIF).mdl));
+      paramAdapterView = (c)AddressUI.a.a(lIF).cJ(paramInt - AddressUI.a.c(lIF).getHeaderViewsCount());
       if (paramAdapterView == null)
       {
-        u.e("!32@/B4Tb64lLpJvPADYHZ60V4qqnXgYeWWp", "cont is null. position:%d, header count:%d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(AddressUI.a.c(liu).getHeaderViewsCount()) });
+        v.e("MicroMsg.AddressUI", "cont is null. position:%d, header count:%d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(AddressUI.a.c(lIF).getHeaderViewsCount()) });
         return true;
       }
       paramAdapterView = field_username;
-    } while ((i.ey(paramAdapterView)) || (i.ez(paramAdapterView)));
-    AddressUI.a.b(liu, paramAdapterView);
-    AddressUI.a.h(liu).a(paramView, paramInt, paramLong, liu, AddressUI.a.g(liu));
+    } while ((i.eK(paramAdapterView)) || (i.eL(paramAdapterView)));
+    AddressUI.a.b(lIF, paramAdapterView);
+    AddressUI.a.h(lIF).a(paramView, paramInt, paramLong, lIF, AddressUI.a.g(lIF));
     return true;
   }
 }

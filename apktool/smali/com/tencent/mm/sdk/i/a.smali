@@ -12,11 +12,11 @@
 
 
 # instance fields
-.field private bTi:Ljava/lang/ThreadGroup;
+.field private bMH:Ljava/lang/ThreadGroup;
 
-.field private final jYO:Ljava/util/concurrent/atomic/AtomicInteger;
+.field private final kzl:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field private jYP:Lcom/tencent/mm/sdk/i/e$b;
+.field private kzm:Lcom/tencent/mm/sdk/i/e$b;
 
 
 # direct methods
@@ -34,10 +34,10 @@
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/i/a;->jYO:Ljava/util/concurrent/atomic/AtomicInteger;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/i/a;->kzl:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 23
-    iput-object p1, p0, Lcom/tencent/mm/sdk/i/a;->jYP:Lcom/tencent/mm/sdk/i/e$b;
+    iput-object p1, p0, Lcom/tencent/mm/sdk/i/a;->kzm:Lcom/tencent/mm/sdk/i/e$b;
 
     .line 24
     new-instance v0, Ljava/lang/ThreadGroup;
@@ -46,7 +46,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/ThreadGroup;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/i/a;->bTi:Ljava/lang/ThreadGroup;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/i/a;->bMH:Ljava/lang/ThreadGroup;
 
     .line 25
     return-void
@@ -54,7 +54,7 @@
 
 
 # virtual methods
-.method final aN(Ljava/lang/String;I)Landroid/os/HandlerThread;
+.method final aX(Ljava/lang/String;I)Landroid/os/HandlerThread;
     .locals 3
 
     .prologue
@@ -72,7 +72,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/sdk/i/a;->jYO:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object v2, p0, Lcom/tencent/mm/sdk/i/a;->kzl:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 

@@ -9,7 +9,7 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.ui.contact.a.a.a;
 import com.tencent.mm.ui.contact.a.a.b;
@@ -25,12 +25,12 @@ public final class c$a
     super(paramInt);
   }
   
-  public final a.b ajt()
+  public final a.b amb()
   {
     return new b();
   }
   
-  protected final a.a awR()
+  protected final a.a azo()
   {
     return new a();
   }
@@ -38,8 +38,8 @@ public final class c$a
   public final class a
     extends e.a
   {
-    public View gCP;
-    public View gzA;
+    public View gGc;
+    public View gJq;
     
     public a()
     {
@@ -57,105 +57,105 @@ public final class c$a
     
     public final View a(Context paramContext, ViewGroup paramViewGroup)
     {
-      paramContext = LayoutInflater.from(paramContext).inflate(2131363050, paramViewGroup, false);
-      paramViewGroup = (c.a.a)awR();
-      czS = ((ImageView)paramContext.findViewById(2131165293));
-      cNT = ((TextView)paramContext.findViewById(2131165340));
-      cOd = ((TextView)paramContext.findViewById(2131165341));
-      cMt = paramContext.findViewById(2131167176);
-      czW = ((CheckBox)paramContext.findViewById(2131165695));
-      gzA = paramContext.findViewById(2131169080);
-      gCP = paramContext.findViewById(2131167586);
+      paramContext = LayoutInflater.from(paramContext).inflate(2130904388, paramViewGroup, false);
+      paramViewGroup = (c.a.a)azo();
+      cui = ((ImageView)paramContext.findViewById(2131755444));
+      cuj = ((TextView)paramContext.findViewById(2131755331));
+      cuk = ((TextView)paramContext.findViewById(2131755333));
+      cJf = paramContext.findViewById(2131758184);
+      cul = ((CheckBox)paramContext.findViewById(2131755446));
+      gGc = paramContext.findViewById(2131759006);
+      gJq = paramContext.findViewById(2131756382);
       paramContext.setTag(paramViewGroup);
-      cNT.setTextColor(-1);
+      cuj.setTextColor(-1);
       paramViewGroup = (AbsListView.LayoutParams)paramContext.getLayoutParams();
       width = -1;
       paramContext.setLayoutParams(paramViewGroup);
-      paramContext.setBackgroundResource(2131231101);
+      paramContext.setBackgroundResource(2131689519);
       return paramContext;
     }
     
     public final void a(Context paramContext, a.a parama, com.tencent.mm.ui.contact.a.a parama1, boolean paramBoolean1, boolean paramBoolean2)
     {
-      k localk = cId;
+      k localk = cFh;
       c.a.a locala = (c.a.a)parama;
-      cMt.setVisibility(0);
-      gCP.setVisibility(8);
-      gzA.setVisibility(8);
-      if (c.ub(field_username))
+      cJf.setVisibility(0);
+      gJq.setVisibility(8);
+      gGc.setVisibility(8);
+      if (c.vh(field_username))
       {
-        czS.setImageResource(2130903364);
-        cNT.setText(2131429021);
-        cOd.setText(2131429022);
-        cOd.setVisibility(0);
-        czW.setEnabled(false);
-        if (c.gCN)
+        cui.setImageResource(2131165829);
+        cuj.setText(2131235357);
+        cuk.setText(2131235355);
+        cuk.setVisibility(0);
+        cul.setEnabled(false);
+        if (c.gJo)
         {
-          cMt.setBackgroundResource(2130970118);
-          czW.setVisibility(0);
-          czW.setBackgroundResource(2130903391);
-          gzA.setVisibility(0);
+          cJf.setBackgroundResource(2130839321);
+          cul.setVisibility(0);
+          cul.setBackgroundResource(2131165836);
+          gGc.setVisibility(0);
         }
         for (;;)
         {
-          parama = gCO;
-          c.c(paramContext, cMt);
-          parama = czS.getLayoutParams();
-          width = com.tencent.mm.aw.a.z(paramContext, 2131034537);
-          height = com.tencent.mm.aw.a.z(paramContext, 2131034537);
-          czS.setLayoutParams(parama);
-          parama = (LinearLayout.LayoutParams)czW.getLayoutParams();
-          height = com.tencent.mm.aw.a.z(paramContext, 2131034535);
-          width = com.tencent.mm.aw.a.z(paramContext, 2131034535);
+          parama = gJp;
+          c.c(paramContext, cJf);
+          parama = cui.getLayoutParams();
+          width = com.tencent.mm.az.a.D(paramContext, 2131427922);
+          height = com.tencent.mm.az.a.D(paramContext, 2131427922);
+          cui.setLayoutParams(parama);
+          parama = (LinearLayout.LayoutParams)cul.getLayoutParams();
+          height = com.tencent.mm.az.a.D(paramContext, 2131427928);
+          width = com.tencent.mm.az.a.D(paramContext, 2131427928);
           parama.setMargins(leftMargin, topMargin, 0, bottomMargin);
-          czW.setLayoutParams(parama);
+          cul.setLayoutParams(parama);
           return;
-          cMt.setBackgroundResource(2130970021);
-          czW.setVisibility(8);
-          czW.setBackgroundResource(2130903353);
-          gzA.setVisibility(8);
+          cJf.setBackgroundResource(2130839325);
+          cul.setVisibility(8);
+          cul.setBackgroundResource(2131165838);
+          gGc.setVisibility(8);
         }
       }
-      if (c.tZ(field_username))
+      if (c.vf(field_username))
       {
-        czS.setImageResource(2130903374);
-        czW.setVisibility(8);
-        cNT.setText(paramContext.getString(2131429023));
-        cOd.setVisibility(8);
-        if (c.gCM)
+        cui.setImageResource(2131165835);
+        cul.setVisibility(8);
+        cuj.setText(paramContext.getString(2131235365));
+        cuk.setVisibility(8);
+        if (c.gJn)
         {
-          cMt.setBackgroundResource(2130970021);
-          gzA.setVisibility(8);
-          parama = gCO;
-          c.c(paramContext, cMt);
+          cJf.setBackgroundResource(2130839325);
+          gGc.setVisibility(8);
+          parama = gJp;
+          c.c(paramContext, cJf);
         }
       }
       for (;;)
       {
-        parama = czS.getLayoutParams();
-        width = com.tencent.mm.aw.a.z(paramContext, 2131034537);
-        height = com.tencent.mm.aw.a.z(paramContext, 2131034537);
-        czS.setLayoutParams(parama);
-        parama = (LinearLayout.LayoutParams)czW.getLayoutParams();
-        height = com.tencent.mm.aw.a.z(paramContext, 2131034535);
-        width = com.tencent.mm.aw.a.z(paramContext, 2131034535);
+        parama = cui.getLayoutParams();
+        width = com.tencent.mm.az.a.D(paramContext, 2131427922);
+        height = com.tencent.mm.az.a.D(paramContext, 2131427922);
+        cui.setLayoutParams(parama);
+        parama = (LinearLayout.LayoutParams)cul.getLayoutParams();
+        height = com.tencent.mm.az.a.D(paramContext, 2131427928);
+        width = com.tencent.mm.az.a.D(paramContext, 2131427928);
         parama.setMargins(leftMargin, topMargin, 0, bottomMargin);
-        czW.setLayoutParams(parama);
-        czW.setBackgroundResource(2130970031);
+        cul.setLayoutParams(parama);
+        cul.setBackgroundResource(2130839320);
         return;
-        cMt.setBackgroundResource(2130970118);
-        gzA.setVisibility(0);
+        cJf.setBackgroundResource(2130839321);
+        gGc.setVisibility(0);
         break;
-        if (c.ua(field_username))
+        if (c.vg(field_username))
         {
-          cMt.setVisibility(8);
-          gCP.setVisibility(0);
+          cJf.setVisibility(8);
+          gJq.setVisibility(0);
           return;
         }
         super.a(paramContext, parama, parama1, paramBoolean1, paramBoolean2);
-        cMt.setBackgroundResource(2130970021);
-        parama = gCO;
-        c.c(paramContext, cMt);
+        cJf.setBackgroundResource(2130839325);
+        parama = gJp;
+        c.c(paramContext, cJf);
       }
     }
   }

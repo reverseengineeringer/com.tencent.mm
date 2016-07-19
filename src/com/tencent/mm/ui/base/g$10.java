@@ -11,8 +11,8 @@ final class g$10
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    if (kqd != null) {
-      kqd.onClick(paramDialogInterface, 0);
+    if (iGg != null) {
+      iGg.onClick(paramDialogInterface, 0);
     }
   }
 }

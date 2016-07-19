@@ -12,15 +12,15 @@
     .locals 1
 
     .prologue
-    .line 122
+    .line 116
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0, p3}, Lcom/tencent/kingkong/database/SQLiteProgram;-><init>(Lcom/tencent/kingkong/database/SQLiteDatabase;Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
 
-    .line 124
+    .line 118
     iput-object p3, p0, Lcom/tencent/mm/dbsupport/newcursor/l;->mCancellationSignal:Lcom/tencent/kingkong/support/CancellationSignal;
 
-    .line 125
+    .line 119
     return-void
 .end method
 
@@ -30,19 +30,19 @@
     .locals 8
 
     .prologue
-    .line 55
+    .line 49
     invoke-virtual {p0}, Lcom/tencent/mm/dbsupport/newcursor/l;->acquireReference()V
 
-    .line 57
+    .line 51
     if-eqz p1, :cond_0
 
-    .line 58
+    .line 52
     :try_start_0
     invoke-virtual {p1}, Lcom/tencent/mm/dbsupport/newcursor/b;->acquireReference()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 60
+    .line 54
     :cond_0
     :try_start_1
     invoke-virtual {p0}, Lcom/tencent/mm/dbsupport/newcursor/l;->getSession()Lcom/tencent/kingkong/database/SQLiteSession;
@@ -77,67 +77,62 @@
 
     move-result v0
 
-    .line 62
+    .line 56
     if-eqz p1, :cond_1
 
-    .line 71
+    .line 65
     :try_start_2
     invoke-virtual {p1}, Lcom/tencent/mm/dbsupport/newcursor/b;->releaseReference()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 74
+    .line 68
     :cond_1
     invoke-virtual {p0}, Lcom/tencent/mm/dbsupport/newcursor/l;->releaseReference()V
 
-    .line 62
     return v0
 
-    .line 63
+    .line 57
     :catch_0
     move-exception v0
 
-    .line 64
+    .line 58
     :try_start_3
     invoke-virtual {p0}, Lcom/tencent/mm/dbsupport/newcursor/l;->onCorruption()V
 
-    .line 65
+    .line 59
     throw v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 69
+    .line 64
     :catchall_0
     move-exception v0
 
-    .line 70
     if-eqz p1, :cond_2
 
-    .line 71
+    .line 65
     :try_start_4
     invoke-virtual {p1}, Lcom/tencent/mm/dbsupport/newcursor/b;->releaseReference()V
 
-    .line 72
     :cond_2
     throw v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 73
+    .line 68
     :catchall_1
     move-exception v0
 
-    .line 74
     invoke-virtual {p0}, Lcom/tencent/mm/dbsupport/newcursor/l;->releaseReference()V
 
-    .line 75
     throw v0
 
-    .line 66
+    .line 60
     :catch_1
     move-exception v0
 
-    .line 67
+    .line 61
     :try_start_5
     const-string/jumbo v1, "MicroMsg.kkdb.SQLiteQuery"
 
@@ -175,7 +170,7 @@
 
     invoke-static {v1, v2}, Lcom/tencent/kingkong/support/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 68
+    .line 62
     throw v0
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
@@ -185,7 +180,7 @@
     .locals 2
 
     .prologue
-    .line 177
+    .line 167
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "SQLiteNewQuery: "

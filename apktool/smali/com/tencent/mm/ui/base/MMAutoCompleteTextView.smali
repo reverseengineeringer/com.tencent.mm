@@ -12,9 +12,9 @@
 
 
 # instance fields
-.field final iGP:Landroid/graphics/drawable/Drawable;
+.field final jdK:Landroid/graphics/drawable/Drawable;
 
-.field private kCX:Lcom/tencent/mm/ui/base/MMAutoCompleteTextView$a;
+.field public lcc:Lcom/tencent/mm/ui/base/MMAutoCompleteTextView$a;
 
 
 # direct methods
@@ -32,24 +32,24 @@
 
     move-result-object v0
 
-    const v1, 0x7f0406c3
+    const v1, 0x7f020419
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->iGP:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->jdK:Landroid/graphics/drawable/Drawable;
 
     .line 26
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->iGP:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->jdK:Landroid/graphics/drawable/Drawable;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->iGP:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->jdK:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->iGP:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->jdK:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -57,7 +57,7 @@
 
     invoke-virtual {v0, v3, v3, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->aQV()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->aVF()V
 
     new-instance v0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView$1;
 
@@ -86,12 +86,12 @@
 
     .prologue
     .line 15
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->aQX()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->aVH()V
 
     return-void
 .end method
 
-.method private aQV()V
+.method private aVF()V
     .locals 5
 
     .prologue
@@ -120,7 +120,7 @@
 
     .line 88
     :cond_0
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->aQX()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->aVH()V
 
     .line 93
     :goto_0
@@ -144,7 +144,7 @@
 
     aget-object v1, v1, v2
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->iGP:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->jdK:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->getCompoundDrawables()[Landroid/graphics/drawable/Drawable;
 
@@ -159,7 +159,7 @@
     goto :goto_0
 .end method
 
-.method private aQX()V
+.method private aVH()V
     .locals 5
 
     .prologue
@@ -201,37 +201,7 @@
 
     .prologue
     .line 15
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->aQV()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->aVF()V
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public setSpilter(Ljava/lang/String;)V
-    .locals 1
-
-    .prologue
-    .line 104
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 105
-    new-instance v0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView$a;
-
-    invoke-direct {v0, p0, p1}, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView$a;-><init>(Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;Ljava/lang/String;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->kCX:Lcom/tencent/mm/ui/base/MMAutoCompleteTextView$a;
-
-    .line 106
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->kCX:Lcom/tencent/mm/ui/base/MMAutoCompleteTextView$a;
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMAutoCompleteTextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
-
-    .line 108
-    :cond_0
     return-void
 .end method

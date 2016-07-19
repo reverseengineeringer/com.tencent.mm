@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic hfa:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+.field final synthetic htR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 789
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b$1;->hfa:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    .line 821
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b$1;->htR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,13 +40,13 @@
     .locals 2
 
     .prologue
-    .line 792
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b$1;->hfa:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
+    .line 824
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b$1;->htR:Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->fd(Z)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sns/ui/SnsInfoFlip$b;->fm(Z)V
 
-    .line 793
+    .line 825
     return-void
 .end method

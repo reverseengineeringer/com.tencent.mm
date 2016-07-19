@@ -1,31 +1,76 @@
 package com.tencent.mm.s;
 
-import com.tencent.mm.modelgeo.b.a;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.compatible.util.f;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.amj;
+import com.tencent.mm.protocal.b.dx;
+import com.tencent.mm.protocal.b.dy;
+import com.tencent.mm.protocal.b.zn;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.a;
+import com.tencent.mm.t.a.a;
+import com.tencent.mm.t.a.b;
+import com.tencent.mm.t.a.c;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j.b;
+import java.util.LinkedList;
 
-final class j
-  implements b.a
+public final class j
+  extends com.tencent.mm.t.j
+  implements com.tencent.mm.network.j
 {
-  long bwi = 0L;
+  private d bkT;
+  LinkedList<amj> bxN = null;
+  LinkedList<zn> bxO = null;
   
-  j(h paramh) {}
-  
-  public final boolean a(boolean paramBoolean, float paramFloat1, float paramFloat2, int paramInt, double paramDouble1, double paramDouble2)
+  public j(LinkedList<amj> paramLinkedList)
   {
-    if (!paramBoolean) {
-      return true;
-    }
-    t.i("!32@/B4Tb64lLpL9SB0DqhCSWgFPYrICdb5Q", "LBSManager notify. lat:%f, lng:%f", new Object[] { Float.valueOf(paramFloat2), Float.valueOf(paramFloat1) });
-    if (bn.DL() >= bwi + bwh.bwe)
+    bxN = paramLinkedList;
+  }
+  
+  public final int a(e parame, d paramd)
+  {
+    if ((bxN == null) || (bxN.size() <= 0))
     {
-      h.a(bwh.avY, 11, 0, paramFloat2, paramFloat1, (int)paramDouble2);
-      bwi = bn.DL();
+      v.e("MicroMsg.NetSceneBatchGetHeadImg", f.nr() + "doScene ReqSize==0");
+      return -1;
     }
-    if (bwh.bwb == 2) {
-      bwh.wM();
-    }
-    return true;
+    bkT = paramd;
+    paramd = new a.a();
+    byl = new dx();
+    bym = new dy();
+    uri = "/cgi-bin/micromsg-bin/batchgetheadimg";
+    byj = 123;
+    byn = 15;
+    byo = 1000000015;
+    paramd = paramd.vA();
+    dx localdx = (dx)byh.byq;
+    jys = bxN;
+    cmq = bxN.size();
+    return a(parame, paramd, this);
+  }
+  
+  protected final int a(o paramo)
+  {
+    return j.b.byT;
+  }
+  
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
+  {
+    v.d("MicroMsg.NetSceneBatchGetHeadImg", "errType:" + paramInt2 + " errCode:" + paramInt3);
+    bxO = byi.byq).jyv;
+    bkT.onSceneEnd(paramInt2, paramInt3, paramString, this);
+  }
+  
+  public final int getType()
+  {
+    return 123;
+  }
+  
+  protected final int px()
+  {
+    return 20;
   }
 }
 

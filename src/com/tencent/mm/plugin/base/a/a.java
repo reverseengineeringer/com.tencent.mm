@@ -7,67 +7,67 @@ import android.graphics.Bitmap;
 import android.os.Parcelable;
 import android.os.Process;
 import android.util.DisplayMetrics;
-import com.tencent.mm.d.b.p;
+import com.tencent.mm.e.b.p;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
 import com.tencent.mm.model.h;
 import com.tencent.mm.model.i;
 import com.tencent.mm.network.r;
 import com.tencent.mm.network.z;
-import com.tencent.mm.q.b;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.s.b;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.be;
 import com.tencent.mm.sdk.platformtools.d;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 
 public final class a
 {
-  public static final String cAN = ;
-  private static String cAO = "";
-  private static char[] cAP = { 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 97, 98, 99, 100, 101, 102 };
+  public static final String cxI = ;
+  private static String cxJ = "";
+  private static char[] cxK = { 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 97, 98, 99, 100, 101, 102 };
   
-  public static boolean E(Context paramContext, String paramString)
+  public static boolean G(Context paramContext, String paramString)
   {
-    cAO = h.sc();
-    String str = cAO;
+    cxJ = h.se();
+    String str = cxJ;
     if ((paramContext == null) || (paramString == null))
     {
-      u.e("!44@/B4Tb64lLpJv3kgS2w9BTA7O/1lmdHaqmVpYXAGd7wk=", "add fail, invalid argument");
+      v.e("MicroMsg.ShortcutManager", "add fail, invalid argument");
       return true;
     }
-    u.d("!44@/B4Tb64lLpJv3kgS2w9BTA7O/1lmdHaqmVpYXAGd7wk=", "add shortcut %s", new Object[] { paramString });
-    cAO = str;
-    paramString = a(paramContext, paramString, true, cAO);
+    v.d("MicroMsg.ShortcutManager", "add shortcut %s", new Object[] { paramString });
+    cxJ = str;
+    paramString = a(paramContext, paramString, true, cxJ);
     if (paramString == null)
     {
-      u.e("!44@/B4Tb64lLpJv3kgS2w9BTA7O/1lmdHaqmVpYXAGd7wk=", "add fail, intent is null");
+      v.e("MicroMsg.ShortcutManager", "add fail, intent is null");
       return true;
     }
     paramContext.sendBroadcast(paramString);
     return true;
   }
   
-  public static boolean F(Context paramContext, String paramString)
+  public static boolean H(Context paramContext, String paramString)
   {
     if ((paramContext == null) || (paramString == null))
     {
-      u.e("!44@/B4Tb64lLpJv3kgS2w9BTA7O/1lmdHaqmVpYXAGd7wk=", "remove fail, invalid argument");
+      v.e("MicroMsg.ShortcutManager", "remove fail, invalid argument");
       return false;
     }
-    cAO = h.sc();
-    paramString = a(paramContext, paramString, false, cAO);
+    cxJ = h.se();
+    paramString = a(paramContext, paramString, false, cxJ);
     if (paramString == null)
     {
-      u.e("!44@/B4Tb64lLpJv3kgS2w9BTA7O/1lmdHaqmVpYXAGd7wk=", "remove fail, intent is null");
+      v.e("MicroMsg.ShortcutManager", "remove fail, intent is null");
       return false;
     }
     paramContext.sendBroadcast(paramString);
     return true;
   }
   
-  private static String P(byte[] paramArrayOfByte)
+  private static String W(byte[] paramArrayOfByte)
   {
     if (paramArrayOfByte == null) {
       return null;
@@ -76,8 +76,8 @@ public final class a
     int i = 0;
     while (i < paramArrayOfByte.length)
     {
-      localStringBuilder.append(cAP[((paramArrayOfByte[i] & 0xF0) >>> 4)]);
-      localStringBuilder.append(cAP[(paramArrayOfByte[i] & 0xF)]);
+      localStringBuilder.append(cxK[((paramArrayOfByte[i] & 0xF0) >>> 4)]);
+      localStringBuilder.append(cxK[(paramArrayOfByte[i] & 0xF)]);
       i += 1;
     }
     return localStringBuilder.toString();
@@ -86,7 +86,7 @@ public final class a
   private static Intent a(Context paramContext, String paramString1, boolean paramBoolean, String paramString2)
   {
     if ((paramString1 == null) || (paramContext == null)) {
-      u.e("!44@/B4Tb64lLpJv3kgS2w9BTA7O/1lmdHaqmVpYXAGd7wk=", "getIntent, wrong parameters");
+      v.e("MicroMsg.ShortcutManager", "getIntent, wrong parameters");
     }
     Object localObject1;
     k localk;
@@ -99,25 +99,25 @@ public final class a
       localObject1 = localObject2;
       if (localObject2 == null)
       {
-        u.e("!44@/B4Tb64lLpJv3kgS2w9BTA7O/1lmdHaqmVpYXAGd7wk=", "getScaledBitmap fail, bmp is null");
-        localObject1 = d.pk(2130970523);
+        v.e("MicroMsg.ShortcutManager", "getScaledBitmap fail, bmp is null");
+        localObject1 = d.ra(2130838112);
       }
       if (localObject1 == null) {
-        u.e("!44@/B4Tb64lLpJv3kgS2w9BTA7O/1lmdHaqmVpYXAGd7wk=", "use default avatar, bmp is null");
+        v.e("MicroMsg.ShortcutManager", "use default avatar, bmp is null");
       }
       for (localObject1 = null; localObject1 == null; localObject1 = Bitmap.createScaledBitmap((Bitmap)localObject1, i, i, false))
       {
-        u.e("!44@/B4Tb64lLpJv3kgS2w9BTA7O/1lmdHaqmVpYXAGd7wk=", "no bmp");
+        v.e("MicroMsg.ShortcutManager", "no bmp");
         return null;
       }
-      localk = ah.tD().rq().Ep(paramString1);
-      if ((localk == null) || ((int)bvi <= 0))
+      localk = ah.tE().rr().GD(paramString1);
+      if ((localk == null) || ((int)bjS <= 0))
       {
-        u.e("!44@/B4Tb64lLpJv3kgS2w9BTA7O/1lmdHaqmVpYXAGd7wk=", "no such user");
+        v.e("MicroMsg.ShortcutManager", "no such user");
         return null;
       }
-      str = li(paramString1);
-    } while (ay.kz(str));
+      str = lT(paramString1);
+    } while (be.kf(str));
     if (paramBoolean) {}
     for (Object localObject2 = "com.android.launcher.action.INSTALL_SHORTCUT";; localObject2 = "com.android.launcher.action.UNINSTALL_SHORTCUT")
     {
@@ -132,8 +132,8 @@ public final class a
       paramString1.addFlags(67108864);
       ((Intent)localObject2).putExtra("android.intent.extra.shortcut.INTENT", paramString1);
       ((Intent)localObject2).putExtra("android.intent.extra.shortcut.ICON", (Parcelable)localObject1);
-      ((Intent)localObject2).putExtra("com.tencent.qlauncher.extra.EXTRA_PUSH_ITEM_SOURCE_KEY", cAN);
-      ((Intent)localObject2).putExtra("com.tencent.qlauncher.extra.EXTRA_PUSH_ITEM_OWNER_ID", li(paramString2));
+      ((Intent)localObject2).putExtra("com.tencent.qlauncher.extra.EXTRA_PUSH_ITEM_SOURCE_KEY", cxI);
+      ((Intent)localObject2).putExtra("com.tencent.qlauncher.extra.EXTRA_PUSH_ITEM_OWNER_ID", lT(paramString2));
       ((Intent)localObject2).putExtra("com.tencent.qlauncher.extra.EXTRA_PUSH_ITEM_UNIQUE_ID", str);
       ((Intent)localObject2).putExtra("com.tencent.qlauncher.extra.EXTRA_PUSH_ITEM_TYPE", w(localk));
       ((Intent)localObject2).putExtra("com.tencent.qlauncher.extra.EXTRA_PUSH_ITEM_CONTAINER", 0);
@@ -141,7 +141,7 @@ public final class a
     }
   }
   
-  public static String aj(String paramString1, String paramString2)
+  public static String ah(String paramString1, String paramString2)
   {
     int[] arrayOfInt;
     byte[] arrayOfByte;
@@ -156,7 +156,7 @@ public final class a
       }
       catch (Exception paramString1)
       {
-        u.e("!44@/B4Tb64lLpJv3kgS2w9BTA7O/1lmdHaqmVpYXAGd7wk=", "Exception in rc4, %s", new Object[] { paramString1.getMessage() });
+        v.e("MicroMsg.ShortcutManager", "Exception in rc4, %s", new Object[] { paramString1.getMessage() });
         return null;
       }
       if (i >= 256) {
@@ -207,7 +207,7 @@ public final class a
     }
   }
   
-  public static String lh(String paramString)
+  public static String lS(String paramString)
   {
     String str1;
     if ((paramString == null) || (paramString.length() <= 0)) {
@@ -216,60 +216,60 @@ public final class a
     for (;;)
     {
       return str1;
-      str1 = ay.d(y.getContext(), Process.myPid());
-      String str2 = y.getPackageName();
-      u.i("!44@/B4Tb64lLpJv3kgS2w9BTA7O/1lmdHaqmVpYXAGd7wk=", "process name: %s", new Object[] { str1 });
+      str1 = be.f(aa.getContext(), Process.myPid());
+      String str2 = aa.getPackageName();
+      v.i("MicroMsg.ShortcutManager", "process name: %s", new Object[] { str1 });
       try
       {
         if (str2.equals(str1)) {
-          if (!ah.rh()) {
+          if (!ah.rg()) {
             return null;
           }
         }
-        for (int i = tDuin;; i = FgciM.rg())
+        for (int i = tEuin;; i = FCced.rf())
         {
           str1 = paramString;
           if (!paramString.startsWith("shortcut_")) {
             break;
           }
-          return aj(new String(lj(paramString.substring(9))), String.valueOf(i));
+          return ah(new String(lU(paramString.substring(9))), String.valueOf(i));
         }
         return null;
       }
       catch (Exception paramString)
       {
-        u.printErrStackTrace("!44@/B4Tb64lLpJv3kgS2w9BTA7O/1lmdHaqmVpYXAGd7wk=", null, "exception: %s", new Object[] { paramString.getMessage() });
+        v.printErrStackTrace("MicroMsg.ShortcutManager", null, "exception: %s", new Object[] { paramString.getMessage() });
       }
     }
   }
   
-  public static String li(String paramString)
+  public static String lT(String paramString)
   {
     if ((paramString == null) || (paramString.length() <= 0)) {
       return null;
     }
-    String str1 = ay.d(y.getContext(), Process.myPid());
-    String str2 = y.getPackageName();
-    if ((str2.equals(str1)) && (!ah.rh())) {
+    String str1 = be.f(aa.getContext(), Process.myPid());
+    String str2 = aa.getPackageName();
+    if ((str2.equals(str1)) && (!ah.rg())) {
       return null;
     }
-    u.i("!44@/B4Tb64lLpJv3kgS2w9BTA7O/1lmdHaqmVpYXAGd7wk=", "process name: %s", new Object[] { str1 });
+    v.i("MicroMsg.ShortcutManager", "process name: %s", new Object[] { str1 });
     try
     {
       if (str2.equals(str1)) {}
-      for (paramString = aj(paramString, tDuin); ay.kz(paramString); paramString = aj(paramString, FgciM.rg())) {
+      for (paramString = ah(paramString, tEuin); be.kf(paramString); paramString = ah(paramString, FCced.rf())) {
         return null;
       }
-      return "shortcut_" + P(paramString.getBytes());
+      return "shortcut_" + W(paramString.getBytes());
     }
     catch (Exception paramString)
     {
-      u.printErrStackTrace("!44@/B4Tb64lLpJv3kgS2w9BTA7O/1lmdHaqmVpYXAGd7wk=", null, "exception: %s", new Object[] { paramString.getMessage() });
+      v.printErrStackTrace("MicroMsg.ShortcutManager", null, "exception: %s", new Object[] { paramString.getMessage() });
       return null;
     }
   }
   
-  private static byte[] lj(String paramString)
+  private static byte[] lU(String paramString)
   {
     if ((paramString == null) || (paramString.length() <= 0)) {
       return null;
@@ -286,10 +286,10 @@ public final class a
   
   public static int w(k paramk)
   {
-    if (paramk.aWp()) {
+    if (paramk.bbC()) {
       return 2;
     }
-    if (!i.eJ(field_username)) {
+    if (!i.eV(field_username)) {
       return 1;
     }
     return 0;

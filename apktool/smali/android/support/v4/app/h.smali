@@ -28,6 +28,9 @@
 .method public abstract a(Landroid/support/v4/app/Fragment;Ljava/lang/String;)Landroid/support/v4/app/h;
 .end method
 
+.method public abstract b(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/h;
+.end method
+
 .method public abstract b(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/h;
 .end method
 
@@ -38,7 +41,4 @@
 .end method
 
 .method public abstract commitAllowingStateLoss()I
-.end method
-
-.method public abstract d(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/h;
 .end method

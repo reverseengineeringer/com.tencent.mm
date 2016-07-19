@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res-auto">
+    <com.tencent.mm.pluginsdk.ui.preference.HeadImgPreference android:layout="@layout/yk" android:title="@string/r5" android:key="bottle_settings_change_avatar" />
+    <Preference android:layout="@layout/a01" android:title="@string/r6" android:key="bottle_settings_change_avatar_tip" />
+    <PreferenceSmallCategory />
+    <CheckBoxPreference android:layout="@layout/yk" android:title="@string/ra" android:key="bottle_settings_show_at_main" />
+    <Preference android:layout="@layout/yk" android:title="@string/a5b" android:key="bottle_settings_clear_data" />
+    <PreferenceSmallCategory />
+</PreferenceScreen>

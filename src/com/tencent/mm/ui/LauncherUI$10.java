@@ -1,24 +1,28 @@
 package com.tencent.mm.ui;
 
-import android.support.v7.app.ActionBar;
-import com.tencent.mm.model.ah;
-import com.tencent.mm.model.c;
-import com.tencent.mm.storage.h;
+import android.os.MessageQueue.IdleHandler;
+import android.view.LayoutInflater;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class LauncherUI$10
-  implements Runnable
+  implements MessageQueue.IdleHandler
 {
   LauncherUI$10(LauncherUI paramLauncherUI) {}
   
-  public final void run()
+  public final boolean queueIdle()
   {
-    LauncherUI.m(knl);
-    ah.tD().rn().setInt(327947, LauncherUI.n(knl).getHeight());
-  }
-  
-  public final String toString()
-  {
-    return super.toString() + "|updateTitle";
+    long l = System.currentTimeMillis();
+    if (LauncherUI.o(kMs) == null)
+    {
+      if (LauncherUI.p(kMs) == null) {
+        LauncherUI.a(kMs, p.ef(kMs).inflate(2130903256, null));
+      }
+      if (LauncherUI.q(kMs) == null) {
+        LauncherUI.b(kMs, p.ef(kMs).inflate(2130903064, null));
+      }
+    }
+    v.d("MicroMsg.LauncherUI", "prepare chattingUI view use %dms", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+    return false;
   }
 }
 

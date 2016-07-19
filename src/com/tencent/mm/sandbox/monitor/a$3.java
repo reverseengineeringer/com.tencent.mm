@@ -3,7 +3,7 @@ package com.tencent.mm.sandbox.monitor;
 import android.content.Context;
 import android.content.Intent;
 import com.tencent.mm.sandbox.updater.AppUpdaterUI;
-import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.aa;
 import java.util.Map;
 import java.util.TimerTask;
 
@@ -14,12 +14,12 @@ final class a$3
   
   public final void run()
   {
-    Intent localIntent = new Intent(y.getContext(), AppUpdaterUI.class);
+    Intent localIntent = new Intent(aa.getContext(), AppUpdaterUI.class);
     localIntent.addFlags(268435456);
-    localIntent.putExtra("intent_extra_desc", (String)jSC.get(".Response.desc"));
+    localIntent.putExtra("intent_extra_desc", (String)krW.get(".Response.desc"));
     localIntent.putExtra("intent_update_type", 999);
-    localIntent.putExtra("intent_extra_download_url", new String[] { (String)jSC.get(".Response.url") });
-    y.getContext().startActivity(localIntent);
+    localIntent.putExtra("intent_extra_download_url", new String[] { (String)krW.get(".Response.url") });
+    aa.getContext().startActivity(localIntent);
   }
 }
 

@@ -7,16 +7,16 @@ import android.widget.AdapterView.OnItemClickListener;
 final class c$c
   implements AdapterView.OnItemClickListener
 {
-  private final c.b pE;
+  private final c.b pS;
   
   public c$c(c paramc, c.b paramb)
   {
-    pE = paramb;
+    pS = paramb;
   }
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public final void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    pE.i(paramView, paramInt);
+    pS.i(paramView, paramInt);
   }
 }
 

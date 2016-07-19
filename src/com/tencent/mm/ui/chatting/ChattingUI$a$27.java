@@ -2,6 +2,7 @@ package com.tencent.mm.ui.chatting;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import com.tencent.mm.plugin.report.service.g;
 
 final class ChattingUI$a$27
   implements DialogInterface.OnClickListener
@@ -10,6 +11,7 @@ final class ChattingUI$a$27
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
+    g.gdY.h(10997, new Object[] { Integer.valueOf(14), Integer.valueOf(0), Integer.valueOf(0), Integer.valueOf(0) });
     paramDialogInterface.dismiss();
   }
 }

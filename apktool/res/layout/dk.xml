@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/lf" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ViewStub android:id="@id/th" android:layout="@layout/dw" android:inflatedId="@id/th" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ti" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/cp">
+                <TextView android:textSize="@dimen/ja" android:textColor="#ff6a6a6a" android:ellipsize="end" android:paddingTop="@dimen/hb" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hr" android:layout_marginRight="@dimen/hr" android:text="@string/uj" android:singleLine="true" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/ja" android:textColor="@color/pg" android:ellipsize="end" android:layout_gravity="right" android:id="@id/tj" android:paddingLeft="@dimen/hr" android:paddingTop="@dimen/hb" android:paddingRight="@dimen/hr" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/w4" android:singleLine="true" />
+            </LinearLayout>
+            <com.tencent.mm.ui.base.MaxListView android:id="@android:id/list" android:background="@null" android:focusable="true" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/kh" android:layout_marginRight="@dimen/kh" android:transcriptMode="disabled" style="@style/CardMMList" />
+            <include android:id="@id/tk" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/kh" android:layout_marginTop="@dimen/hj" android:layout_marginRight="@dimen/kh" layout="@layout/card_home_page_item" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/ja" android:textColor="#ff6a6a6a" android:ellipsize="end" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hr" android:layout_marginTop="@dimen/hb" android:layout_marginRight="@dimen/hr" android:text="@string/ti" android:singleLine="true" android:layout_weight="1.0" />
+        <include android:id="@id/tl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/kh" android:layout_marginTop="@dimen/hr" android:layout_marginRight="@dimen/kh" layout="@layout/card_home_page_item" />
+        <include android:id="@id/tm" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/kh" android:layout_marginTop="@dimen/hj" android:layout_marginRight="@dimen/kh" android:layout_marginBottom="@dimen/i7" layout="@layout/card_home_page_item" />
+    </LinearLayout>
+</ScrollView>

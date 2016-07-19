@@ -13,17 +13,26 @@
     name = "a"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;",
+        ">;"
+    }
+.end annotation
+
 
 # static fields
-.field public static final enum kzi:I
+.field public static final enum kYp:I
 
-.field public static final enum kzj:I
+.field public static final enum kYq:I
 
-.field public static final enum kzk:I
+.field public static final enum kYr:I
 
-.field public static final enum kzl:I
+.field public static final enum kYs:I
 
-.field private static final synthetic kzm:[I
+.field private static final synthetic kYt:[I
 
 
 # direct methods
@@ -40,46 +49,46 @@
     const/4 v3, 0x1
 
     .line 88
-    sput v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kzi:I
+    sput v3, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kYp:I
 
-    sput v4, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kzj:I
+    sput v4, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kYq:I
 
-    sput v5, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kzk:I
+    sput v5, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kYr:I
 
-    sput v0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kzl:I
+    sput v0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kYs:I
 
     .line 87
     new-array v0, v0, [I
 
     const/4 v1, 0x0
 
-    sget v2, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kzi:I
+    sget v2, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kYp:I
 
     aput v2, v0, v1
 
-    sget v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kzj:I
+    sget v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kYq:I
 
     aput v1, v0, v3
 
-    sget v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kzk:I
+    sget v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kYr:I
 
     aput v1, v0, v4
 
-    sget v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kzl:I
+    sget v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kYs:I
 
     aput v1, v0, v5
 
-    sput-object v0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kzm:[I
+    sput-object v0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kYt:[I
 
     return-void
 .end method
 
-.method public static bci()[I
+.method public static bhu()[I
     .locals 1
 
     .prologue
     .line 87
-    sget-object v0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kzm:[I
+    sget-object v0, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI$a;->kYt:[I
 
     invoke-virtual {v0}, [I->clone()Ljava/lang/Object;
 

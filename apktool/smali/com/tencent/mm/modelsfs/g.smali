@@ -14,6 +14,19 @@
 # direct methods
 .method static a(Ljava/lang/String;ILjava/lang/String;ILjava/util/EnumSet;)Z
     .locals 10
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "I",
+            "Ljava/lang/String;",
+            "I",
+            "Ljava/util/EnumSet",
+            "<",
+            "Lcom/tencent/mm/modelsfs/g$a;",
+            ">;)Z"
+        }
+    .end annotation
 
     .prologue
     .line 48
@@ -26,7 +39,7 @@
     if-lt p1, v0, :cond_3
 
     .line 49
-    sget-object v0, Lcom/tencent/mm/modelsfs/g$a;->caC:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v0, Lcom/tencent/mm/modelsfs/g$a;->bUl:Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-virtual {p4, v0}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 
@@ -116,7 +129,7 @@
 
     if-ne v1, v2, :cond_6
 
-    sget-object v1, Lcom/tencent/mm/modelsfs/g$a;->caA:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v1, Lcom/tencent/mm/modelsfs/g$a;->bUj:Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-virtual {p4, v1}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 
@@ -194,7 +207,7 @@
     if-ne p1, v1, :cond_d
 
     .line 81
-    sget-object v0, Lcom/tencent/mm/modelsfs/g$a;->caA:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v0, Lcom/tencent/mm/modelsfs/g$a;->bUj:Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-virtual {p4, v0}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 
@@ -203,7 +216,7 @@
     if-eqz v0, :cond_c
 
     .line 82
-    sget-object v0, Lcom/tencent/mm/modelsfs/g$a;->caC:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v0, Lcom/tencent/mm/modelsfs/g$a;->bUl:Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-virtual {p4, v0}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 
@@ -243,7 +256,7 @@
 
     if-ne v0, v1, :cond_10
 
-    sget-object v0, Lcom/tencent/mm/modelsfs/g$a;->caA:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v0, Lcom/tencent/mm/modelsfs/g$a;->bUj:Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-virtual {p4, v0}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 
@@ -278,7 +291,7 @@
 
     if-ne v0, v1, :cond_f
 
-    sget-object v0, Lcom/tencent/mm/modelsfs/g$a;->caA:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v0, Lcom/tencent/mm/modelsfs/g$a;->bUj:Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-virtual {p4, v0}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 
@@ -299,7 +312,7 @@
     if-ge p3, v0, :cond_12
 
     .line 96
-    sget-object v0, Lcom/tencent/mm/modelsfs/g$a;->caB:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v0, Lcom/tencent/mm/modelsfs/g$a;->bUk:Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-virtual {p4, v0}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 
@@ -313,7 +326,7 @@
     move-result-object p4
 
     .line 98
-    sget-object v0, Lcom/tencent/mm/modelsfs/g$a;->caB:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v0, Lcom/tencent/mm/modelsfs/g$a;->bUk:Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-virtual {p4, v0}, Ljava/util/EnumSet;->remove(Ljava/lang/Object;)Z
 
@@ -359,7 +372,7 @@
 
     if-ne v2, v3, :cond_14
 
-    sget-object v2, Lcom/tencent/mm/modelsfs/g$a;->caA:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v2, Lcom/tencent/mm/modelsfs/g$a;->bUj:Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-virtual {p4, v2}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 
@@ -439,7 +452,7 @@
     add-int/lit8 v2, v0, 0x1
 
     :goto_6
-    sget-object v4, Lcom/tencent/mm/modelsfs/g$a;->caD:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v4, Lcom/tencent/mm/modelsfs/g$a;->bUm:Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-virtual {p4, v4}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 
@@ -494,7 +507,7 @@
 
     if-ne v5, v4, :cond_29
 
-    sget-object v4, Lcom/tencent/mm/modelsfs/g$a;->caz:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v4, Lcom/tencent/mm/modelsfs/g$a;->bUi:Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-virtual {p4, v4}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 
@@ -513,7 +526,7 @@
 
     if-ne v5, v6, :cond_1d
 
-    sget-object v6, Lcom/tencent/mm/modelsfs/g$a;->caA:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v6, Lcom/tencent/mm/modelsfs/g$a;->bUj:Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-virtual {p4, v6}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 
@@ -526,7 +539,7 @@
     goto :goto_4
 
     :cond_1d
-    sget-object v6, Lcom/tencent/mm/modelsfs/g$a;->caD:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v6, Lcom/tencent/mm/modelsfs/g$a;->bUm:Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-virtual {p4, v6}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 
@@ -571,7 +584,7 @@
 
     if-ne v7, v4, :cond_28
 
-    sget-object v4, Lcom/tencent/mm/modelsfs/g$a;->caz:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v4, Lcom/tencent/mm/modelsfs/g$a;->bUi:Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-virtual {p4, v4}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 
@@ -597,7 +610,7 @@
     move-result v5
 
     :goto_9
-    sget-object v6, Lcom/tencent/mm/modelsfs/g$a;->caD:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v6, Lcom/tencent/mm/modelsfs/g$a;->bUm:Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-virtual {p4, v6}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 
@@ -641,7 +654,7 @@
 
     .line 135
     :sswitch_2
-    sget-object v2, Lcom/tencent/mm/modelsfs/g$a;->caz:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v2, Lcom/tencent/mm/modelsfs/g$a;->bUi:Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-virtual {p4, v2}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 
@@ -681,7 +694,7 @@
 
     if-eq v1, v0, :cond_26
 
-    sget-object v0, Lcom/tencent/mm/modelsfs/g$a;->caD:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v0, Lcom/tencent/mm/modelsfs/g$a;->bUm:Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-virtual {p4, v0}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 
@@ -754,6 +767,17 @@
 
 .method private static a(Ljava/lang/String;ILjava/util/EnumSet;)Z
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "I",
+            "Ljava/util/EnumSet",
+            "<",
+            "Lcom/tencent/mm/modelsfs/g$a;",
+            ">;)Z"
+        }
+    .end annotation
 
     .prologue
     const/4 v0, 0x0
@@ -775,7 +799,7 @@
     :cond_1
     if-eqz p1, :cond_2
 
-    sget-object v1, Lcom/tencent/mm/modelsfs/g$a;->caA:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v1, Lcom/tencent/mm/modelsfs/g$a;->bUj:Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-virtual {p2, v1}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 
@@ -802,7 +826,7 @@
 
     if-ne v1, v2, :cond_0
 
-    sget-object v1, Lcom/tencent/mm/modelsfs/g$a;->caB:Lcom/tencent/mm/modelsfs/g$a;
+    sget-object v1, Lcom/tencent/mm/modelsfs/g$a;->bUk:Lcom/tencent/mm/modelsfs/g$a;
 
     invoke-virtual {p2, v1}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 

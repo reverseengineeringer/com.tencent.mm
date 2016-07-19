@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic exw:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
+.field final synthetic eDQ:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 216
-    iput-object p1, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$2;->exw:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$2;->eDQ:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 220
-    const-string/jumbo v0, "!44@/B4Tb64lLpJlq3g3dssAoZZ5jyUwqm48qdJiAhkom5Q="
+    const-string/jumbo v0, "MicroMsg.GWalletQueryProvider"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -57,15 +57,15 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 221
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$2;->exw:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$2;->eDQ:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;->e(Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;)Z
 
     .line 222
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$2;->exw:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$2;->eDQ:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
 
     const-string/jumbo v1, "RESPONSE_QUERY_DETAIL_INFO"
 
@@ -76,7 +76,7 @@
     invoke-static {v0, v1}, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;->a(Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
     .line 223
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$2;->exw:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider$2;->eDQ:Lcom/tencent/mm/plugin/gwallet/GWalletQueryProvider;
 
     const-string/jumbo v1, "RESPONSE_CODE"
 

@@ -8,14 +8,14 @@ import android.graphics.drawable.Drawable.ConstantState;
 public final class c$a
   extends Drawable.ConstantState
 {
-  protected int hAC;
-  protected Picture kij;
-  protected Bitmap kik;
+  protected int hSw;
+  protected Picture kIH;
+  protected Bitmap kII;
   
   public c$a(Picture paramPicture, int paramInt)
   {
-    kij = paramPicture;
-    hAC = paramInt;
+    kIH = paramPicture;
+    hSw = paramInt;
   }
   
   public final int getChangingConfigurations()
@@ -25,7 +25,7 @@ public final class c$a
   
   public final Drawable newDrawable()
   {
-    return new c(kij, hAC);
+    return new c(kIH, hSw);
   }
 }
 

@@ -3,26 +3,26 @@ package com.tencent.mm.modelgeo;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
-import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.be;
 
 public class Addr
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
-  public String bNN;
-  public String bNO;
-  public String bNP;
-  public String bNQ;
-  public String bNR;
-  public String bNS;
-  public String bNT;
-  public String bNU;
-  public String bNV;
-  public String bNW;
-  public String bNX;
-  public float bNY;
-  public float bNZ;
-  public Object bOa = "";
+  public static final Parcelable.Creator<Addr> CREATOR = new Parcelable.Creator() {};
+  public String bHj;
+  public String bHk;
+  public String bHl;
+  public String bHm;
+  public String bHn;
+  public String bHo;
+  public String bHp;
+  public String bHq;
+  public String bHr;
+  public String bHs;
+  public String bHt;
+  public float bHu;
+  public float bHv;
+  public Object tag = "";
   
   public int describeContents()
   {
@@ -31,29 +31,29 @@ public class Addr
   
   public String toString()
   {
-    return "country：" + bNO + "administrative_area_level_1: " + bNP + " locality:" + bNR + " sublocality: " + bNS + " neighborhood: " + bNT + " route: " + bNU + " roughAddr: " + bNW;
+    return "country：" + bHk + "administrative_area_level_1: " + bHl + " locality:" + bHn + " sublocality: " + bHo + " neighborhood: " + bHp + " route: " + bHq + " roughAddr: " + bHs;
   }
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    paramParcel.writeString(ay.ad(bNN, ""));
-    paramParcel.writeString(ay.ad(bNO, ""));
-    paramParcel.writeString(ay.ad(bNP, ""));
-    paramParcel.writeString(ay.ad(bNQ, ""));
-    paramParcel.writeString(ay.ad(bNR, ""));
-    paramParcel.writeString(ay.ad(bNS, ""));
-    paramParcel.writeString(ay.ad(bNT, ""));
-    paramParcel.writeString(ay.ad(bNU, ""));
-    paramParcel.writeString(ay.ad(bNV, ""));
-    paramParcel.writeString(ay.ad(bNW, ""));
-    paramParcel.writeString(ay.ad(bNX, ""));
-    paramParcel.writeFloat(bNY);
-    paramParcel.writeFloat(bNZ);
+    paramParcel.writeString(be.ab(bHj, ""));
+    paramParcel.writeString(be.ab(bHk, ""));
+    paramParcel.writeString(be.ab(bHl, ""));
+    paramParcel.writeString(be.ab(bHm, ""));
+    paramParcel.writeString(be.ab(bHn, ""));
+    paramParcel.writeString(be.ab(bHo, ""));
+    paramParcel.writeString(be.ab(bHp, ""));
+    paramParcel.writeString(be.ab(bHq, ""));
+    paramParcel.writeString(be.ab(bHr, ""));
+    paramParcel.writeString(be.ab(bHs, ""));
+    paramParcel.writeString(be.ab(bHt, ""));
+    paramParcel.writeFloat(bHu);
+    paramParcel.writeFloat(bHv);
   }
   
-  public final String zA()
+  public final String zN()
   {
-    return ay.ad(bNR, "") + ay.ad(bNS, "") + ay.ad(bNT, "") + ay.ad(bNU, "") + ay.ad(bNV, "");
+    return be.ab(bHn, "") + be.ab(bHo, "") + be.ab(bHp, "") + be.ab(bHq, "") + be.ab(bHr, "");
   }
 }
 

@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic ksf:Lcom/tencent/mm/modelfriend/w;
+.field final synthetic kRn:Lcom/tencent/mm/modelfriend/w;
 
-.field final synthetic ksg:Lcom/tencent/mm/ui/account/EmailVerifyUI$3$1;
+.field final synthetic kRo:Lcom/tencent/mm/ui/account/EmailVerifyUI$3$1;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 138
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI$3$1$1;->ksg:Lcom/tencent/mm/ui/account/EmailVerifyUI$3$1;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI$3$1$1;->kRo:Lcom/tencent/mm/ui/account/EmailVerifyUI$3$1;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI$3$1$1;->ksf:Lcom/tencent/mm/modelfriend/w;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI$3$1$1;->kRn:Lcom/tencent/mm/modelfriend/w;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,13 +45,13 @@
 
     .prologue
     .line 142
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/t/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI$3$1$1;->ksf:Lcom/tencent/mm/modelfriend/w;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI$3$1$1;->kRn:Lcom/tencent/mm/modelfriend/w;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/t/m;->c(Lcom/tencent/mm/t/j;)V
 
     .line 143
     return-void

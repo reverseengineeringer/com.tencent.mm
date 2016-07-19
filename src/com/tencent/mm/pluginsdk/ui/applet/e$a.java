@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui.applet;
 
 public abstract interface e$a
 {
-  public abstract void aRm();
+  public abstract void aVY();
 }
 
 /* Location:

@@ -1,156 +1,156 @@
-.class public final Lcom/tencent/mm/ui/chatting/p;
-.super Ljava/lang/Object;
+.class final Lcom/tencent/mm/ui/chatting/p;
+.super Lcom/tencent/mm/ui/chatting/ab$a;
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/mm/ui/chatting/p$d;,
-        Lcom/tencent/mm/ui/chatting/p$b;,
-        Lcom/tencent/mm/ui/chatting/p$a;,
-        Lcom/tencent/mm/ui/chatting/p$c;
-    }
-.end annotation
+# instance fields
+.field fRM:Landroid/widget/LinearLayout;
+
+.field fWz:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/ui/chatting/o;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field lqJ:Lcom/tencent/mm/ui/chatting/ChattingItemFooter;
+
+.field lqu:Landroid/widget/TextView;
+
+.field lry:Lcom/tencent/mm/ui/chatting/r;
 
 
 # direct methods
-.method public static a(Ljava/lang/String;Landroid/content/Context;Lcom/tencent/mm/ui/o;Ljava/lang/String;)Z
-    .locals 4
+.method public constructor <init>(I)V
+    .locals 1
 
     .prologue
-    const/4 v1, 0x1
+    .line 594
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/chatting/ab$a;-><init>(I)V
 
-    const/4 v0, 0x0
+    .line 588
+    new-instance v0, Lcom/tencent/mm/ui/chatting/r;
 
-    .line 31
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-direct {v0}, Lcom/tencent/mm/ui/chatting/r;-><init>()V
 
-    move-result v2
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/p;->lry:Lcom/tencent/mm/ui/chatting/r;
 
-    if-eqz v2, :cond_1
+    .line 589
+    new-instance v0, Ljava/util/ArrayList;
 
-    .line 44
-    :cond_0
-    :goto_0
-    return v0
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 35
-    :cond_1
-    const/4 v2, 0x0
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/p;->fWz:Ljava/util/List;
 
-    .line 36
-    const-string/jumbo v3, "weixin://openNativeUrl/weixinHB"
+    .line 595
+    return-void
+.end method
 
-    invoke-virtual {p0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v3
+# virtual methods
+.method public final aF(Landroid/view/View;)Lcom/tencent/mm/ui/chatting/ab$a;
+    .locals 3
 
-    if-eqz v3, :cond_3
+    .prologue
+    .line 620
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/p;->lry:Lcom/tencent/mm/ui/chatting/r;
 
-    .line 37
-    new-instance v2, Lcom/tencent/mm/ui/chatting/p$a;
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/r;->fWm:Landroid/view/View;
 
-    invoke-direct {v2}, Lcom/tencent/mm/ui/chatting/p$a;-><init>()V
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    .line 44
-    :cond_2
-    :goto_1
-    if-eqz v2, :cond_0
+    move-result-object v0
 
-    invoke-interface {v2, p0, p1, p2, p3}, Lcom/tencent/mm/ui/chatting/p$c;->a(Ljava/lang/String;Landroid/content/Context;Lcom/tencent/mm/ui/o;Ljava/lang/String;)Z
+    check-cast v0, Landroid/view/ViewGroup;
 
-    move-result v2
+    .line 621
+    new-instance v2, Lcom/tencent/mm/ui/chatting/o;
 
-    if-eqz v2, :cond_0
+    invoke-direct {v2}, Lcom/tencent/mm/ui/chatting/o;-><init>()V
 
-    move v0, v1
+    .line 622
+    iput-object p1, v2, Lcom/tencent/mm/ui/chatting/o;->fWm:Landroid/view/View;
 
-    goto :goto_0
+    .line 623
+    const v1, 0x7f1000a4
 
-    .line 38
-    :cond_3
-    if-eqz p0, :cond_5
+    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    const-string/jumbo v3, "weixin://openNativeUrl/myDeviceList"
+    move-result-object v1
 
-    invoke-virtual {p0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    check-cast v1, Landroid/widget/TextView;
 
-    move-result v3
+    iput-object v1, v2, Lcom/tencent/mm/ui/chatting/o;->cTU:Landroid/widget/TextView;
 
-    if-nez v3, :cond_4
+    .line 624
+    const v1, 0x7f1003cf
 
-    const-string/jumbo v3, "weixin://openNativeUrl/bindMyDevice"
+    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {p0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    move-result-object v1
 
-    move-result v3
+    check-cast v1, Landroid/widget/TextView;
 
-    if-eqz v3, :cond_5
+    iput-object v1, v2, Lcom/tencent/mm/ui/chatting/o;->lrx:Landroid/widget/TextView;
 
-    :cond_4
-    move v3, v1
+    .line 625
+    const v1, 0x7f1003d0
 
-    :goto_2
-    if-eqz v3, :cond_6
+    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    .line 39
-    new-instance v2, Lcom/tencent/mm/ui/chatting/p$b;
+    move-result-object v1
 
-    invoke-direct {v2}, Lcom/tencent/mm/ui/chatting/p$b;-><init>()V
+    iput-object v1, v2, Lcom/tencent/mm/ui/chatting/o;->fWn:Landroid/view/View;
 
-    goto :goto_1
+    .line 626
+    const v1, 0x7f1003c6
 
-    :cond_5
-    move v3, v0
+    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    .line 38
-    goto :goto_2
+    move-result-object v1
 
-    .line 40
-    :cond_6
-    if-eqz p0, :cond_8
+    check-cast v1, Landroid/widget/ImageView;
 
-    const-string/jumbo v3, "weixin://wesport/recommend"
+    iput-object v1, v2, Lcom/tencent/mm/ui/chatting/o;->fWo:Landroid/widget/ImageView;
 
-    invoke-virtual {p0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    .line 627
+    const v1, 0x7f1003d1
 
-    move-result v3
+    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    if-nez v3, :cond_7
+    move-result-object v1
 
-    const-string/jumbo v3, "weixin://openNativeUrl/rankMyHomepage"
+    check-cast v1, Landroid/widget/ProgressBar;
 
-    invoke-virtual {p0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    iput-object v1, v2, Lcom/tencent/mm/ui/chatting/o;->fWq:Landroid/widget/ProgressBar;
 
-    move-result v3
+    .line 628
+    const v1, 0x7f1003d2
 
-    if-nez v3, :cond_7
+    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    const-string/jumbo v3, "weixin://openNativeUrl/rankSetting"
+    move-result-object v1
 
-    invoke-virtual {p0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    iput-object v1, v2, Lcom/tencent/mm/ui/chatting/o;->fWr:Landroid/view/View;
 
-    move-result v3
+    .line 629
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    if-eqz v3, :cond_8
+    move-result v1
 
-    :cond_7
-    move v3, v1
+    add-int/lit8 v1, v1, -0x1
 
-    :goto_3
-    if-eqz v3, :cond_2
+    invoke-virtual {v0, p1, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
 
-    .line 41
-    new-instance v2, Lcom/tencent/mm/ui/chatting/p$d;
+    .line 631
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/p;->fWz:Ljava/util/List;
 
-    invoke-direct {v2}, Lcom/tencent/mm/ui/chatting/p$d;-><init>()V
+    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    goto :goto_1
-
-    :cond_8
-    move v3, v0
-
-    .line 40
-    goto :goto_3
+    .line 632
+    return-object p0
 .end method

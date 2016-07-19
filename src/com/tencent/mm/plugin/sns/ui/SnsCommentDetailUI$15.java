@@ -8,11 +8,11 @@ final class SnsCommentDetailUI$15
 {
   SnsCommentDetailUI$15(SnsCommentDetailUI paramSnsCommentDetailUI) {}
   
-  public final void aBM()
+  public final void aEI()
   {
-    SnsCommentDetailUI.s(hda);
-    if ((SnsCommentDetailUI.d(hda).getFirstVisiblePosition() > 1) || (SnsCommentDetailUI.d(hda).getLastVisiblePosition() <= 0)) {
-      BackwardSupportUtil.c.b(SnsCommentDetailUI.d(hda), 1);
+    SnsCommentDetailUI.s(hrN);
+    if ((SnsCommentDetailUI.d(hrN).getFirstVisiblePosition() > 1) || (SnsCommentDetailUI.d(hrN).getLastVisiblePosition() <= 0)) {
+      BackwardSupportUtil.c.b(SnsCommentDetailUI.d(hrN), 1);
     }
   }
 }

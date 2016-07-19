@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kMI:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
+.field final synthetic llX:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 51
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$1;->kMI:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$1;->llX:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
     .line 54
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$1;->kMI:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$1;->llX:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
 
     const-class v2, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI;
 
@@ -52,7 +52,7 @@
     .line 55
     const-string/jumbo v1, "enter_scene"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$1;->kMI:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$1;->llX:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;->a(Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;)I
 
@@ -61,7 +61,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 56
-    iget-object v1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$1;->kMI:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI$1;->llX:Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/bindgooglecontact/BindGoogleContactIntroUI;->startActivity(Landroid/content/Intent;)V
 

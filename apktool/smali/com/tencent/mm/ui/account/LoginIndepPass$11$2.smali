@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ktG:Lcom/tencent/mm/ui/account/LoginIndepPass$11;
+.field final synthetic kSN:Lcom/tencent/mm/ui/account/LoginIndepPass$11;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 214
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$11$2;->ktG:Lcom/tencent/mm/ui/account/LoginIndepPass$11;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LoginIndepPass$11$2;->kSN:Lcom/tencent/mm/ui/account/LoginIndepPass$11;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

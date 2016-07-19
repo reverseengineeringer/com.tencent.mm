@@ -17,48 +17,48 @@ import java.util.Set;
 
 public final class p
 {
-  private static final h cA = new l();
+  private static final h cQ = new k();
   
   static
   {
     if (Build.VERSION.SDK_INT >= 21)
     {
-      cA = new j();
+      cQ = new j();
       return;
     }
     if (Build.VERSION.SDK_INT >= 20)
     {
-      cA = new i();
+      cQ = new i();
       return;
     }
     if (Build.VERSION.SDK_INT >= 19)
     {
-      cA = new o();
+      cQ = new n();
       return;
     }
     if (Build.VERSION.SDK_INT >= 16)
     {
-      cA = new n();
+      cQ = new m();
       return;
     }
     if (Build.VERSION.SDK_INT >= 14)
     {
-      cA = new m();
+      cQ = new l();
       return;
     }
   }
   
   public static Bundle a(Notification paramNotification)
   {
-    return cA.a(paramNotification);
+    return cQ.a(paramNotification);
   }
   
   public static final class a
     extends s.a
   {
-    public static final s.a.a cC = new s.a.a() {};
+    public static final s.a.a cS = new s.a.a() {};
     public PendingIntent actionIntent;
-    private final w[] cB;
+    private final w[] cR;
     public int icon;
     private final Bundle mExtras;
     public CharSequence title;
@@ -74,10 +74,10 @@ public final class p
       title = p.d.d(paramCharSequence);
       actionIntent = paramPendingIntent;
       mExtras = paramBundle;
-      cB = null;
+      cR = null;
     }
     
-    protected final PendingIntent X()
+    protected final PendingIntent W()
     {
       return actionIntent;
     }
@@ -99,47 +99,47 @@ public final class p
   }
   
   public static final class b
-    extends p.p
+    extends p.o
   {
-    Bitmap cD;
-    Bitmap cE;
-    boolean cF;
+    Bitmap cT;
+    Bitmap cU;
+    boolean cV;
   }
   
   public static final class c
-    extends p.p
+    extends p.o
   {
-    CharSequence cG;
+    CharSequence cW;
   }
   
   public static final class d
   {
-    CharSequence cH;
-    CharSequence cI;
-    public PendingIntent cJ;
-    PendingIntent cK;
-    RemoteViews cL;
-    public Bitmap cM;
-    CharSequence cN;
-    int cO;
-    boolean cP = true;
-    boolean cQ;
-    p.p cR;
-    CharSequence cS;
-    int cT;
-    int cU;
-    boolean cV;
-    String cW;
-    boolean cX;
-    String cY;
-    ArrayList cZ = new ArrayList();
-    public boolean da = false;
-    public String db;
-    int dc = 0;
-    int dd = 0;
-    Notification de;
-    public Notification dg = new Notification();
-    public ArrayList dh;
+    CharSequence cX;
+    CharSequence cY;
+    public PendingIntent cZ;
+    PendingIntent da;
+    RemoteViews db;
+    public Bitmap dc;
+    CharSequence dd;
+    int de;
+    boolean dg = true;
+    boolean dh;
+    p.o di;
+    CharSequence dj;
+    int dk;
+    int dl;
+    boolean dm;
+    String dn;
+    boolean jdField_do;
+    String dp;
+    ArrayList<p.a> dq = new ArrayList();
+    public boolean dr = false;
+    public String ds;
+    int dt = 0;
+    int du = 0;
+    Notification dv;
+    public Notification dw = new Notification();
+    public ArrayList<String> dx;
     Context mContext;
     Bundle mExtras;
     int mPriority;
@@ -147,10 +147,10 @@ public final class p
     public d(Context paramContext)
     {
       mContext = paramContext;
-      dg.when = System.currentTimeMillis();
-      dg.audioStreamType = -1;
+      dw.when = System.currentTimeMillis();
+      dw.audioStreamType = -1;
       mPriority = 0;
-      dh = new ArrayList();
+      dx = new ArrayList();
     }
     
     protected static CharSequence d(CharSequence paramCharSequence)
@@ -164,44 +164,50 @@ public final class p
     
     public final d a(int paramInt, CharSequence paramCharSequence, PendingIntent paramPendingIntent)
     {
-      cZ.add(new p.a(paramInt, paramCharSequence, paramPendingIntent));
+      dq.add(new p.a(paramInt, paramCharSequence, paramPendingIntent));
       return this;
     }
     
     public final d a(CharSequence paramCharSequence)
     {
-      cH = d(paramCharSequence);
+      cX = d(paramCharSequence);
       return this;
     }
     
     public final d b(int paramInt1, int paramInt2, boolean paramBoolean)
     {
-      cT = paramInt1;
-      cU = paramInt2;
-      cV = paramBoolean;
+      dk = paramInt1;
+      dl = paramInt2;
+      dm = paramBoolean;
       return this;
     }
     
     public final d b(CharSequence paramCharSequence)
     {
-      cI = d(paramCharSequence);
+      cY = d(paramCharSequence);
       return this;
     }
     
     public final Notification build()
     {
-      return p.W().b(this);
+      return p.V().b(this);
     }
     
     public final d c(long paramLong)
     {
-      dg.when = paramLong;
+      dw.when = paramLong;
       return this;
     }
     
     public final d c(CharSequence paramCharSequence)
     {
-      dg.tickerText = d(paramCharSequence);
+      dw.tickerText = d(paramCharSequence);
+      return this;
+    }
+    
+    public final d i(boolean paramBoolean)
+    {
+      i(16, paramBoolean);
       return this;
     }
     
@@ -209,23 +215,17 @@ public final class p
     {
       if (paramBoolean)
       {
-        localNotification = dg;
+        localNotification = dw;
         flags |= paramInt;
         return;
       }
-      Notification localNotification = dg;
+      Notification localNotification = dw;
       flags &= (paramInt ^ 0xFFFFFFFF);
     }
     
-    public final d j(boolean paramBoolean)
+    public final d m(int paramInt)
     {
-      i(16, paramBoolean);
-      return this;
-    }
-    
-    public final d l(int paramInt)
-    {
-      dg.icon = paramInt;
+      dw.icon = paramInt;
       return this;
     }
   }
@@ -233,9 +233,9 @@ public final class p
   public static final class e
     implements p.f
   {
-    private Bitmap cM;
-    private int dc = 0;
-    public a di;
+    private Bitmap dc;
+    private int dt = 0;
+    public a dy;
     
     public final p.d a(p.d paramd)
     {
@@ -243,14 +243,14 @@ public final class p
         return paramd;
       }
       Bundle localBundle = new Bundle();
-      if (cM != null) {
-        localBundle.putParcelable("large_icon", cM);
+      if (dc != null) {
+        localBundle.putParcelable("large_icon", dc);
       }
-      if (dc != 0) {
-        localBundle.putInt("app_color", dc);
+      if (dt != 0) {
+        localBundle.putInt("app_color", dt);
       }
-      if (di != null) {
-        localBundle.putBundle("car_conversation", p.W().a(di));
+      if (dy != null) {
+        localBundle.putBundle("car_conversation", p.V().a(dy));
       }
       if (mExtras == null) {
         mExtras = new Bundle();
@@ -262,61 +262,61 @@ public final class p
     public static final class a
       extends s.b
     {
-      static final s.b.a dp = new s.b.a() {};
-      private final String[] dj;
-      private final w dk;
-      private final PendingIntent dl;
-      private final PendingIntent dm;
-      private final String[] dn;
-      private final long jdField_do;
+      static final s.b.a dF = new s.b.a() {};
+      private final w dA;
+      private final PendingIntent dB;
+      private final PendingIntent dC;
+      private final String[] dD;
+      private final long dE;
+      private final String[] dz;
       
       public a(String[] paramArrayOfString1, w paramw, PendingIntent paramPendingIntent1, PendingIntent paramPendingIntent2, String[] paramArrayOfString2, long paramLong)
       {
-        dj = paramArrayOfString1;
-        dk = paramw;
-        dm = paramPendingIntent2;
-        dl = paramPendingIntent1;
-        dn = paramArrayOfString2;
-        jdField_do = paramLong;
+        dz = paramArrayOfString1;
+        dA = paramw;
+        dC = paramPendingIntent2;
+        dB = paramPendingIntent1;
+        dD = paramArrayOfString2;
+        dE = paramLong;
       }
       
       public final long getLatestTimestamp()
       {
-        return jdField_do;
+        return dE;
       }
       
       public final String[] getMessages()
       {
-        return dj;
+        return dz;
       }
       
       public final String[] getParticipants()
       {
-        return dn;
+        return dD;
       }
       
       public final PendingIntent getReadPendingIntent()
       {
-        return dm;
+        return dC;
       }
       
       public final PendingIntent getReplyPendingIntent()
       {
-        return dl;
+        return dB;
       }
       
       public static final class a
       {
-        public w dk;
-        public PendingIntent dl;
-        public PendingIntent dm;
-        public long jdField_do;
-        public final List dq = new ArrayList();
-        public final String dr;
+        public w dA;
+        public PendingIntent dB;
+        public PendingIntent dC;
+        public long dE;
+        public final List<String> dG = new ArrayList();
+        public final String dH;
         
         public a(String paramString)
         {
-          dr = paramString;
+          dH = paramString;
         }
       }
     }
@@ -328,9 +328,9 @@ public final class p
   }
   
   public static final class g
-    extends p.p
+    extends p.o
   {
-    ArrayList ds = new ArrayList();
+    ArrayList<CharSequence> dI = new ArrayList();
   }
   
   public static abstract interface h
@@ -343,15 +343,15 @@ public final class p
   }
   
   static class i
-    extends p.o
+    extends p.n
   {
     public Notification b(p.d paramd)
     {
-      q.a locala = new q.a(mContext, dg, cH, cI, cN, cL, cO, cJ, cK, cM, cT, cU, cV, cP, cQ, mPriority, cS, da, dh, mExtras, cW, cX, cY);
-      p.a(locala, cZ);
-      p.a(locala, cR);
-      dw.setExtras(mExtras);
-      return dw.build();
+      q.a locala = new q.a(mContext, dw, cX, cY, dd, db, de, cZ, da, dc, dk, dl, dm, dg, dh, mPriority, dj, dr, dx, mExtras, dn, jdField_do, dp);
+      p.a(locala, dq);
+      p.a(locala, di);
+      dM.setExtras(mExtras);
+      return dM.build();
     }
   }
   
@@ -384,7 +384,7 @@ public final class p
         i += 1;
       }
       localBundle1.putParcelableArray("messages", arrayOfParcelable);
-      localObject = paramb.Z();
+      localObject = paramb.Y();
       if (localObject != null) {
         localBundle1.putParcelable("remote_input", r.a((y.a)localObject));
       }
@@ -397,10 +397,10 @@ public final class p
     
     public final Notification b(p.d paramd)
     {
-      r.a locala = new r.a(mContext, dg, cH, cI, cN, cL, cO, cJ, cK, cM, cT, cU, cV, cP, cQ, mPriority, cS, da, db, dh, mExtras, dc, dd, de, cW, cX, cY);
-      p.a(locala, cZ);
-      p.a(locala, cR);
-      return dw.build();
+      r.a locala = new r.a(mContext, dw, cX, cY, dd, db, de, cZ, da, dc, dk, dl, dm, dg, dh, mPriority, dj, dr, ds, dx, mExtras, dt, du, dv, dn, jdField_do, dp);
+      p.a(locala, dq);
+      p.a(locala, di);
+      return dM.build();
     }
   }
   
@@ -428,71 +428,19 @@ public final class p
   {
     public final Notification b(p.d paramd)
     {
-      Object localObject2 = mContext;
-      Notification localNotification = dg;
-      Object localObject1 = cH;
-      CharSequence localCharSequence1 = cI;
-      CharSequence localCharSequence2 = cN;
-      RemoteViews localRemoteViews = cL;
-      int i = cO;
-      PendingIntent localPendingIntent2 = cJ;
-      PendingIntent localPendingIntent1 = cK;
-      paramd = cM;
-      localObject2 = new Notification.Builder((Context)localObject2).setWhen(when).setSmallIcon(icon, iconLevel).setContent(contentView).setTicker(tickerText, localRemoteViews).setSound(sound, audioStreamType).setVibrate(vibrate).setLights(ledARGB, ledOnMS, ledOffMS);
-      if ((flags & 0x2) != 0)
-      {
-        bool = true;
-        localObject2 = ((Notification.Builder)localObject2).setOngoing(bool);
-        if ((flags & 0x8) == 0) {
-          break label284;
-        }
-        bool = true;
-        label180:
-        localObject2 = ((Notification.Builder)localObject2).setOnlyAlertOnce(bool);
-        if ((flags & 0x10) == 0) {
-          break label289;
-        }
-        bool = true;
-        label201:
-        localObject1 = ((Notification.Builder)localObject2).setAutoCancel(bool).setDefaults(defaults).setContentTitle((CharSequence)localObject1).setContentText(localCharSequence1).setContentInfo(localCharSequence2).setContentIntent(localPendingIntent2).setDeleteIntent(deleteIntent);
-        if ((flags & 0x80) == 0) {
-          break label294;
-        }
-      }
-      label284:
-      label289:
-      label294:
-      for (boolean bool = true;; bool = false)
-      {
-        return ((Notification.Builder)localObject1).setFullScreenIntent(localPendingIntent1, bool).setLargeIcon(paramd).setNumber(i).getNotification();
-        bool = false;
-        break;
-        bool = false;
-        break label180;
-        bool = false;
-        break label201;
-      }
-    }
-  }
-  
-  static final class m
-    extends p.k
-  {
-    public final Notification b(p.d paramd)
-    {
       Context localContext = mContext;
-      Notification localNotification = dg;
-      CharSequence localCharSequence1 = cH;
-      CharSequence localCharSequence2 = cI;
-      CharSequence localCharSequence3 = cN;
-      RemoteViews localRemoteViews = cL;
-      int i = cO;
-      PendingIntent localPendingIntent2 = cJ;
-      PendingIntent localPendingIntent1 = cK;
-      Bitmap localBitmap = cM;
-      int j = cT;
-      int k = cU;
-      boolean bool2 = cV;
+      Notification localNotification = dw;
+      CharSequence localCharSequence1 = cX;
+      CharSequence localCharSequence2 = cY;
+      CharSequence localCharSequence3 = dd;
+      RemoteViews localRemoteViews = db;
+      int i = de;
+      PendingIntent localPendingIntent2 = cZ;
+      PendingIntent localPendingIntent1 = da;
+      Bitmap localBitmap = dc;
+      int j = dk;
+      int k = dl;
+      boolean bool2 = dm;
       paramd = new Notification.Builder(localContext).setWhen(when).setSmallIcon(icon, iconLevel).setContent(contentView).setTicker(tickerText, localRemoteViews).setSound(sound, audioStreamType).setVibrate(vibrate).setLights(ledARGB, ledOnMS, ledOffMS);
       if ((flags & 0x2) != 0)
       {
@@ -530,7 +478,7 @@ public final class p
     }
   }
   
-  static class n
+  static class m
     extends p.k
   {
     public Bundle a(Notification paramNotification)
@@ -540,10 +488,10 @@ public final class p
     
     public Notification b(p.d paramd)
     {
-      Object localObject = new t.a(mContext, dg, cH, cI, cN, cL, cO, cJ, cK, cM, cT, cU, cV, cQ, mPriority, cS, da, mExtras, cW, cX, cY);
-      p.a((n)localObject, cZ);
-      p.a((o)localObject, cR);
-      paramd = dw.build();
+      Object localObject = new t.a(mContext, dw, cX, cY, dd, db, de, cZ, da, dc, dk, dl, dm, dh, mPriority, dj, dr, mExtras, dn, jdField_do, dp);
+      p.a((n)localObject, dq);
+      p.a((o)localObject, di);
+      paramd = dM.build();
       Bundle localBundle1 = t.a(paramd);
       Bundle localBundle2 = new Bundle(mExtras);
       Iterator localIterator = mExtras.keySet().iterator();
@@ -555,7 +503,7 @@ public final class p
         }
       }
       localBundle1.putAll(localBundle2);
-      localObject = t.c(dB);
+      localObject = t.c(dR);
       if (localObject != null) {
         t.a(paramd).putSparseParcelableArray("android.support.actionExtras", (SparseArray)localObject);
       }
@@ -563,8 +511,8 @@ public final class p
     }
   }
   
-  static class o
-    extends p.n
+  static class n
+    extends p.m
   {
     public final Bundle a(Notification paramNotification)
     {
@@ -573,23 +521,23 @@ public final class p
     
     public Notification b(p.d paramd)
     {
-      u.a locala = new u.a(mContext, dg, cH, cI, cN, cL, cO, cJ, cK, cM, cT, cU, cV, cP, cQ, mPriority, cS, da, dh, mExtras, cW, cX, cY);
-      p.a(locala, cZ);
-      p.a(locala, cR);
-      paramd = t.c(dB);
+      u.a locala = new u.a(mContext, dw, cX, cY, dd, db, de, cZ, da, dc, dk, dl, dm, dg, dh, mPriority, dj, dr, dx, mExtras, dn, jdField_do, dp);
+      p.a(locala, dq);
+      p.a(locala, di);
+      paramd = t.c(dR);
       if (paramd != null) {
         mExtras.putSparseParcelableArray("android.support.actionExtras", paramd);
       }
-      dw.setExtras(mExtras);
-      return dw.build();
+      dM.setExtras(mExtras);
+      return dM.build();
     }
   }
   
-  public static abstract class p
+  public static abstract class o
   {
-    CharSequence dt;
-    CharSequence du;
-    boolean dv = false;
+    CharSequence dJ;
+    CharSequence dK;
+    boolean dL = false;
   }
 }
 

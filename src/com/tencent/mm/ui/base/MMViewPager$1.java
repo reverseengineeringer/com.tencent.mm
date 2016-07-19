@@ -9,26 +9,26 @@ final class MMViewPager$1
   
   public final void a(int paramInt1, float paramFloat, int paramInt2)
   {
-    if (MMViewPager.d(kIi) != null) {
-      MMViewPager.d(kIi).a(paramInt1, paramFloat, paramInt2);
+    if (MMViewPager.e(lhv) != null) {
+      MMViewPager.e(lhv).a(paramInt1, paramFloat, paramInt2);
     }
-    MMViewPager.a(kIi, paramFloat);
+    MMViewPager.a(lhv, paramFloat);
   }
   
-  public final void n(int paramInt)
+  public final void p(int paramInt)
   {
-    if (MMViewPager.d(kIi) != null) {
-      MMViewPager.d(kIi).n(paramInt);
+    if (MMViewPager.e(lhv) != null) {
+      MMViewPager.e(lhv).p(paramInt);
     }
   }
   
-  public final void o(int paramInt)
+  public final void q(int paramInt)
   {
-    if (MMViewPager.d(kIi) != null) {
-      MMViewPager.d(kIi).o(paramInt);
+    if (MMViewPager.e(lhv) != null) {
+      MMViewPager.e(lhv).q(paramInt);
     }
     if (paramInt == 0) {
-      MMViewPager.a(kIi, 0.0F);
+      MMViewPager.a(lhv, 0.0F);
     }
   }
 }

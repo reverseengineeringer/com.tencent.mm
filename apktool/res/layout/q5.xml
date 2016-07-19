@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.plugin.game.ui.GameFriendsPlayingView2 android:orientation="vertical" android:id="@id/ars" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/arw" android:text="@string/azd" style="@style/MMGameCenterSectionTitle" />
+        <include android:id="@id/arx" layout="@layout/game_list_item" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/ary" android:background="@drawable/m_" android:padding="@dimen/i7" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.tencent.mm.plugin.game.ui.GameFriendsPlayingView2>
+</LinearLayout>

@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.net.Uri;
 import com.tencent.mm.compatible.util.g;
 import com.tencent.mm.sandbox.monitor.c;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class AppUpdaterUI$10
   implements DialogInterface.OnClickListener
@@ -16,71 +16,71 @@ final class AppUpdaterUI$10
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    u.d("!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/", "getBtn (ok button) is click");
-    if (ejTb).jSR == 1) {
-      h.D(jTb, 6);
+    v.d("MicroMsg.AppUpdaterUI", "getBtn (ok button) is click");
+    if (eksv).ksl == 1) {
+      h.H(ksv, 6);
     }
     if (!g.getExternalStorageState().equals("mounted"))
     {
-      u.e("!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/", "no sdcard.");
-      AppUpdaterUI.b(jTb).dismiss();
-      AppUpdaterUI.c(jTb);
+      v.e("MicroMsg.AppUpdaterUI", "no sdcard.");
+      AppUpdaterUI.b(ksv).dismiss();
+      AppUpdaterUI.c(ksv);
       return;
     }
-    if ((ejTb).akG & 0x1) != 0)
+    if ((eksv).Xz & 0x1) != 0)
     {
-      u.e("!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/", "package has set external update mode");
-      paramDialogInterface = Uri.parse(ejTb).akK);
+      v.e("MicroMsg.AppUpdaterUI", "package has set external update mode");
+      paramDialogInterface = Uri.parse(eksv).XD);
       Intent localIntent = new Intent("android.intent.action.VIEW", paramDialogInterface).addFlags(268435456);
-      if ((paramDialogInterface == null) || (localIntent == null) || (!ay.n(jTb, localIntent)))
+      if ((paramDialogInterface == null) || (localIntent == null) || (!be.n(ksv, localIntent)))
       {
-        u.e("!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/", "parse market uri failed, jump to weixin.qq.com");
+        v.e("MicroMsg.AppUpdaterUI", "parse market uri failed, jump to weixin.qq.com");
         paramDialogInterface = new Intent("android.intent.action.VIEW", Uri.parse("http://weixin.qq.com")).addFlags(268435456);
-        jTb.startActivity(paramDialogInterface);
+        ksv.startActivity(paramDialogInterface);
       }
       for (;;)
       {
-        AppUpdaterUI.f(jTb);
+        AppUpdaterUI.f(ksv);
         return;
-        u.i("!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/", "parse market uri ok");
-        jTb.startActivity(localIntent);
+        v.i("MicroMsg.AppUpdaterUI", "parse market uri ok");
+        ksv.startActivity(localIntent);
       }
     }
-    paramDialogInterface = c.sM(ejTb).aut);
-    u.d("!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/", paramDialogInterface);
+    paramDialogInterface = c.uo(eksv).agg);
+    v.d("MicroMsg.AppUpdaterUI", paramDialogInterface);
     if (paramDialogInterface != null)
     {
-      u.i("!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/", "update package already exist.");
-      AppUpdaterUI.a(jTb, 8);
-      if (ejTb).jUe) {
-        AppUpdaterUI.a(jTb, 0);
+      v.i("MicroMsg.AppUpdaterUI", "update package already exist.");
+      AppUpdaterUI.a(ksv, 8);
+      if (eksv).ktD) {
+        AppUpdaterUI.a(ksv, 0);
       }
       for (;;)
       {
-        AppUpdaterUI.e(jTb).L(1, true);
-        AppUpdaterUI.h(jTb).Ct(paramDialogInterface);
+        AppUpdaterUI.e(ksv).L(1, true);
+        AppUpdaterUI.h(ksv).wt(paramDialogInterface);
         return;
-        AppUpdaterUI.a(jTb, 9);
+        AppUpdaterUI.a(ksv, 9);
       }
     }
-    u.d("!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/", "current downloadMode : %s", new Object[] { Integer.valueOf(ejTb).jSR) });
-    u.d("!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/", "current updateType : %s", new Object[] { Integer.valueOf(ejTb).jSL) });
-    if (ejTb).jSR == 0)
+    v.d("MicroMsg.AppUpdaterUI", "current downloadMode : %s", new Object[] { Integer.valueOf(eksv).ksl) });
+    v.d("MicroMsg.AppUpdaterUI", "current updateType : %s", new Object[] { Integer.valueOf(eksv).ksf) });
+    if (eksv).ksl == 0)
     {
-      AppUpdaterUI.e(jTb).aUg();
+      AppUpdaterUI.e(ksv).aZf();
       return;
     }
-    if (ejTb).jSR == 1)
+    if (eksv).ksl == 1)
     {
-      u.d("!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/", "gonna start UpdaterService");
-      AppUpdaterUI.f(jTb);
-      paramDialogInterface = new Intent(jTb.getIntent());
-      paramDialogInterface.setClass(jTb, UpdaterService.class);
+      v.d("MicroMsg.AppUpdaterUI", "gonna start UpdaterService");
+      AppUpdaterUI.f(ksv);
+      paramDialogInterface = new Intent(ksv.getIntent());
+      paramDialogInterface.setClass(ksv, UpdaterService.class);
       paramDialogInterface.putExtra("intent_extra_run_in_foreground", true);
-      jTb.startService(paramDialogInterface);
+      ksv.startService(paramDialogInterface);
       return;
     }
-    u.e("!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/", "silence download never go here!");
+    v.e("MicroMsg.AppUpdaterUI", "silence download never go here!");
   }
 }
 

@@ -10,10 +10,10 @@ import com.tencent.mm.ui.MMActivity;
 public class ResourcesExceedUI
   extends MMActivity
 {
-  private TextView ldm;
+  private TextView lDD;
   private int type = 0;
   
-  protected final void Gb()
+  protected final void Gy()
   {
     b(new MenuItem.OnMenuItemClickListener()
     {
@@ -23,32 +23,32 @@ public class ResourcesExceedUI
         return true;
       }
     });
-    ldm = ((TextView)findViewById(2131165668));
+    lDD = ((TextView)findViewById(2131756461));
     switch (type)
     {
     default: 
       return;
     case 0: 
-      ldm.setText(2131428908);
+      lDD.setText(2131235818);
       return;
     case 2: 
-      ldm.setText(2131428909);
+      lDD.setText(2131232730);
       return;
     }
-    ldm.setText(2131428888);
+    lDD.setText(2131233279);
   }
   
   protected final int getLayoutId()
   {
-    return 2131362001;
+    return 2130904267;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
     type = getIntent().getIntExtra("clean_view_type", 0);
-    Gj("");
-    Gb();
+    Ah("");
+    Gy();
   }
   
   public void onDestroy()

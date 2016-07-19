@@ -4,13 +4,13 @@
 
 
 # static fields
-.field public static clq:I
+.field public static cgu:I
 
 
 # instance fields
-.field private cky:Lcom/tencent/mm/performance/wxperformancetool/c;
+.field private cgt:Lcom/tencent/mm/performance/wxperformancetool/c;
 
-.field public clr:Z
+.field public cgv:Z
 
 .field public mHandler:Landroid/os/Handler;
 
@@ -23,7 +23,7 @@
     .line 12
     const/16 v0, 0x9c4
 
-    sput v0, Lcom/tencent/mm/performance/wxperformancetool/b;->clq:I
+    sput v0, Lcom/tencent/mm/performance/wxperformancetool/b;->cgu:I
 
     return-void
 .end method
@@ -38,10 +38,10 @@
     .line 14
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/performance/wxperformancetool/b;->clr:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/performance/wxperformancetool/b;->cgv:Z
 
     .line 18
-    iput-object p2, p0, Lcom/tencent/mm/performance/wxperformancetool/b;->cky:Lcom/tencent/mm/performance/wxperformancetool/c;
+    iput-object p2, p0, Lcom/tencent/mm/performance/wxperformancetool/b;->cgt:Lcom/tencent/mm/performance/wxperformancetool/c;
 
     .line 19
     return-void
@@ -52,7 +52,7 @@
 
     .prologue
     .line 8
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/b;->cky:Lcom/tencent/mm/performance/wxperformancetool/c;
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/b;->cgt:Lcom/tencent/mm/performance/wxperformancetool/c;
 
     return-object v0
 .end method
@@ -62,7 +62,7 @@
 
     .prologue
     .line 8
-    iget-boolean v0, p0, Lcom/tencent/mm/performance/wxperformancetool/b;->clr:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/performance/wxperformancetool/b;->cgv:Z
 
     return v0
 .end method

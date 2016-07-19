@@ -1,20 +1,24 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.alq;
-import com.tencent.mm.protocal.b.dd;
-import com.tencent.mm.protocal.b.eo;
+import com.tencent.mm.protocal.b.cj;
+import com.tencent.mm.sdk.platformtools.v;
 
 public final class j$b
-  extends h.d
-  implements h.b
+  extends k.d
+  implements k.b
 {
-  public eo iUQ = new eo();
+  public cj jsa = new cj();
   
-  public final int y(byte[] paramArrayOfByte)
+  public final int D(byte[] paramArrayOfByte)
   {
-    iUQ = ((eo)new eo().am(paramArrayOfByte));
-    h.a(this, iUQ.jHj);
-    return iUQ.jHj.iZL;
+    jsa = ((cj)new cj().au(paramArrayOfByte));
+    v.d("MicroMsg.MMBakchatCreateQRcodeOffline.Resp", "Ret:%d, QRCodeBuffer:%s, QRCodeUrl:%s", new Object[] { Integer.valueOf(jsa.jxr), jsa.jxs, jsa.jxt });
+    return jsa.jxr;
+  }
+  
+  public final int getCmdId()
+  {
+    return 1000;
   }
 }
 

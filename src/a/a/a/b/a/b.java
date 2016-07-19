@@ -10,27 +10,27 @@ public final class b
     super(paramString);
   }
   
-  static b boh()
+  static b bvf()
   {
     return new b("While parsing a protocol message, the input ended unexpectedly in the middle of a field.  This could mean either than the input has been truncated or that an embedded message misreported its own length.");
   }
   
-  static b boi()
+  static b bvg()
   {
     return new b("CodedInputStream encountered an embedded string or message which claimed to have negative size.");
   }
   
-  static b boj()
+  static b bvh()
   {
     return new b("CodedInputStream encountered a malformed varint.");
   }
   
-  public static b bok()
+  public static b bvi()
   {
     return new b("Protocol message contained an invalid tag (zero).");
   }
   
-  static b bol()
+  static b bvj()
   {
     return new b("Protocol message was too large.  May be malicious.  Use CodedInputStream.setSizeLimit() to increase the size limit.");
   }

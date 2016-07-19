@@ -6,19 +6,19 @@ public abstract interface i$m
 {
   public abstract void a(ImageView paramImageView, int paramInt, String paramString1, String paramString2);
   
-  public abstract int atl();
+  public abstract int awA();
   
-  public abstract int atm();
+  public abstract void awB();
   
-  public abstract void atn();
+  public abstract boolean awC();
   
-  public abstract boolean ato();
+  public abstract void awD();
   
-  public abstract void atp();
+  public abstract void awE();
   
-  public abstract void atq();
+  public abstract int awz();
   
-  public abstract String tn(String paramString);
+  public abstract String uP(String paramString);
 }
 
 /* Location:

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ui/contact/i$a;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+.field final synthetic lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 360
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$20;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    .line 342
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$20;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,51 +36,48 @@
 
 
 # virtual methods
-.method public final rL(I)V
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 7
 
     .prologue
-    .line 364
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$20;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    const-wide/16 v2, 0x1
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/contact/AddressUI$a;->d(Lcom/tencent/mm/ui/contact/AddressUI$a;)Lcom/tencent/mm/ui/contact/i;
+    .line 346
+    new-instance v0, Landroid/content/Intent;
 
-    move-result-object v0
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    if-nez v0, :cond_0
+    .line 347
+    const-string/jumbo v1, "Invite_friends"
 
-    .line 373
-    :goto_0
+    const/4 v4, 0x1
+
+    invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 348
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$20;->lIF:Lcom/tencent/mm/ui/contact/AddressUI$a;
+
+    iget-object v1, v1, Lcom/tencent/mm/ui/o;->kNN:Lcom/tencent/mm/ui/j;
+
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
+
+    const-string/jumbo v4, "subapp"
+
+    const-string/jumbo v5, ".ui.pluginapp.AddMoreFriendsUI"
+
+    invoke-static {v1, v4, v5, v0}, Lcom/tencent/mm/av/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+
+    .line 349
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/g;->gdY:Lcom/tencent/mm/plugin/report/service/g;
+
+    const-wide/16 v0, 0xe0
+
+    const/4 v6, 0x0
+
+    move-wide v4, v2
+
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/g;->b(JJJZ)V
+
+    .line 351
     return-void
-
-    .line 367
-    :cond_0
-    if-gtz p1, :cond_1
-
-    .line 369
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$20;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/contact/AddressUI$a;->d(Lcom/tencent/mm/ui/contact/AddressUI$a;)Lcom/tencent/mm/ui/contact/i;
-
-    move-result-object v0
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/contact/i;->setVisibility(I)V
-
-    goto :goto_0
-
-    .line 371
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/AddressUI$a$20;->liu:Lcom/tencent/mm/ui/contact/AddressUI$a;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/contact/AddressUI$a;->d(Lcom/tencent/mm/ui/contact/AddressUI$a;)Lcom/tencent/mm/ui/contact/i;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/contact/i;->setVisibility(I)V
-
-    goto :goto_0
 .end method

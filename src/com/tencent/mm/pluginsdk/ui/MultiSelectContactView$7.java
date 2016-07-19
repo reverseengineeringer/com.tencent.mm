@@ -10,7 +10,7 @@ final class MultiSelectContactView$7
   
   public final void run()
   {
-    MultiSelectContactView.j(iHi).scrollTo(MultiSelectContactView.h(iHi).getMeasuredWidth(), 0);
+    MultiSelectContactView.j(jed).scrollTo(MultiSelectContactView.h(jed).getMeasuredWidth(), 0);
   }
 }
 

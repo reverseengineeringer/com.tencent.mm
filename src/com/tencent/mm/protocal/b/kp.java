@@ -1,62 +1,78 @@
 package com.tencent.mm.protocal.b;
 
+import java.util.LinkedList;
+
 public final class kp
-  extends com.tencent.mm.al.a
+  extends alt
 {
-  public String akv;
-  public long eKb;
-  public int htX;
+  public String jGj;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.r(1, eKb);
-      if (akv != null) {
-        paramVarArgs.U(2, akv);
-      }
-      paramVarArgs.bM(3, htX);
-      return 0;
-    }
-    if (paramInt == 1)
-    {
-      int i = a.a.a.a.q(1, eKb) + 0;
-      paramInt = i;
-      if (akv != null) {
-        paramInt = i + a.a.a.b.b.a.T(2, akv);
-      }
-      return paramInt + a.a.a.a.bI(3, htX);
-    }
-    if (paramInt == 2)
-    {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-      for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.aVo();
-        }
-      }
-      return 0;
-    }
-    if (paramInt == 3)
-    {
-      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-      kp localkp = (kp)paramVarArgs[1];
-      switch (((Integer)paramVarArgs[2]).intValue())
+      if (kfq != null)
       {
-      default: 
-        return -1;
-      case 1: 
-        eKb = jMD.aVq();
-        return 0;
-      case 2: 
-        akv = jMD.readString();
-        return 0;
+        paramVarArgs.cx(1, kfq.iO());
+        kfq.a(paramVarArgs);
       }
-      htX = jMD.aVp();
+      if (jGj != null) {
+        paramVarArgs.e(2, jGj);
+      }
       return 0;
     }
-    return -1;
+    if (paramInt == 1) {
+      if (kfq == null) {
+        break label328;
+      }
+    }
+    label328:
+    for (paramInt = a.a.a.a.cv(1, kfq.iO()) + 0;; paramInt = 0)
+    {
+      int i = paramInt;
+      if (jGj != null) {
+        i = paramInt + a.a.a.b.b.a.f(2, jGj);
+      }
+      return i;
+      if (paramInt == 2)
+      {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], jrk);
+        for (paramInt = alt.a(paramVarArgs); paramInt > 0; paramInt = alt.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bve();
+          }
+        }
+        break;
+      }
+      if (paramInt == 3)
+      {
+        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
+        kp localkp = (kp)paramVarArgs[1];
+        paramInt = ((Integer)paramVarArgs[2]).intValue();
+        switch (paramInt)
+        {
+        default: 
+          return -1;
+        case 1: 
+          paramVarArgs = ((a.a.a.a.a)localObject1).vC(paramInt);
+          i = paramVarArgs.size();
+          paramInt = 0;
+          while (paramInt < i)
+          {
+            Object localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new df();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, jrk);
+            for (boolean bool = true; bool; bool = ((df)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.ax.a)localObject1, alt.a((a.a.a.a.a)localObject2))) {}
+            kfq = ((df)localObject1);
+            paramInt += 1;
+          }
+        }
+        jGj = mMY.readString();
+        return 0;
+      }
+      return -1;
+    }
   }
 }
 

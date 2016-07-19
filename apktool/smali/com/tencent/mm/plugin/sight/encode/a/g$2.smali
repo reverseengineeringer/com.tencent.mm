@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic bWD:I
+.field final synthetic bQf:I
 
-.field final synthetic gAS:Lcom/tencent/mm/plugin/sight/encode/a/g$a;
+.field final synthetic gHu:Lcom/tencent/mm/plugin/sight/encode/a/g$a;
 
 
 # direct methods
@@ -29,11 +29,11 @@
 
     .prologue
     .line 121
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$2;->gAS:Lcom/tencent/mm/plugin/sight/encode/a/g$a;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$2;->gHu:Lcom/tencent/mm/plugin/sight/encode/a/g$a;
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$2;->bWD:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/g$2;->bQf:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

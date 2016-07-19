@@ -1,20 +1,20 @@
 package com.tencent.mm.pluginsdk;
 
 import android.database.Cursor;
-import com.tencent.mm.az.g;
+import com.tencent.mm.bc.g;
 import java.util.ArrayList;
 
 public abstract interface i$o$d
 {
-  public abstract g aAB();
+  public abstract g aDq();
   
-  public abstract ArrayList aAC();
+  public abstract ArrayList<Long> aDr();
   
-  public abstract void cw(long paramLong);
+  public abstract void cL(long paramLong);
   
-  public abstract boolean lQ(int paramInt);
+  public abstract boolean nd(int paramInt);
   
-  public abstract Cursor vA(String paramString);
+  public abstract Cursor wM(String paramString);
 }
 
 /* Location:

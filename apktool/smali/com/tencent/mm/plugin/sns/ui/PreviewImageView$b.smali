@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;
-.super Lcom/tencent/mm/plugin/sns/d/h;
+.super Lcom/tencent/mm/plugin/sns/e/h;
 .source "SourceFile"
 
 
@@ -13,13 +13,24 @@
     name = "b"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/tencent/mm/plugin/sns/e/h",
+        "<",
+        "Ljava/lang/String;",
+        "Ljava/lang/Integer;",
+        "Ljava/lang/Boolean;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field private aAF:Landroid/widget/ImageView;
+.field private amO:Landroid/widget/ImageView;
 
-.field private bDT:Landroid/graphics/Bitmap;
+.field private bxe:Landroid/graphics/Bitmap;
 
-.field final synthetic hae:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;
+.field final synthetic hnw:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;
 
 .field private path:Ljava/lang/String;
 
@@ -30,12 +41,12 @@
 
     .prologue
     .line 206
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->hae:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->hnw:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;
 
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/d/h;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sns/e/h;-><init>()V
 
     .line 207
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->aAF:Landroid/widget/ImageView;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->amO:Landroid/widget/ImageView;
 
     .line 208
     iput-object p3, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->path:Ljava/lang/String;
@@ -46,19 +57,19 @@
 
 
 # virtual methods
-.method public final IA()Lcom/tencent/mm/sdk/platformtools/aa;
+.method public final IZ()Lcom/tencent/mm/sdk/platformtools/ac;
     .locals 1
 
     .prologue
     .line 238
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->ayS()Lcom/tencent/mm/sdk/platformtools/aa;
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBt()Lcom/tencent/mm/sdk/platformtools/ac;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final synthetic IB()Ljava/lang/Object;
+.method public final synthetic Ja()Ljava/lang/Object;
     .locals 7
 
     .prologue
@@ -67,7 +78,7 @@
     const/4 v5, 0x1
 
     .line 200
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->hae:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->hnw:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->a(Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;)Z
 
@@ -85,23 +96,19 @@
     :cond_0
     iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->path:Ljava/lang/String;
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azo()F
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBO()I
 
     move-result v1
 
-    float-to-int v1, v1
-
-    invoke-static {}, Lcom/tencent/mm/plugin/sns/d/ad;->azo()F
+    invoke-static {}, Lcom/tencent/mm/plugin/sns/e/ad;->aBO()I
 
     move-result v2
-
-    float-to-int v2, v2
 
     invoke-static {v0, v1, v2, v5}, Lcom/tencent/mm/sdk/platformtools/d;->b(Ljava/lang/String;IIZ)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->bDT:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->bxe:Landroid/graphics/Bitmap;
 
     iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->path:Ljava/lang/String;
 
@@ -113,7 +120,7 @@
 
     move-result v0
 
-    const-string/jumbo v1, "!32@/B4Tb64lLpL08+XdcLam3T8/VZvkXk36"
+    const-string/jumbo v1, "MicroMsg.MMAsyncTask"
 
     const-string/jumbo v2, "exifPath : %s degree : %d"
 
@@ -131,9 +138,9 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->bDT:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->bxe:Landroid/graphics/Bitmap;
 
     int-to-float v0, v0
 
@@ -141,7 +148,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->bDT:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->bxe:Landroid/graphics/Bitmap;
 
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -157,9 +164,9 @@
     .line 200
     check-cast p1, Ljava/lang/Boolean;
 
-    invoke-super {p0, p1}, Lcom/tencent/mm/plugin/sns/d/h;->onPostExecute(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/plugin/sns/e/h;->onPostExecute(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->hae:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->hnw:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->a(Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;)Z
 
@@ -167,15 +174,15 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->bDT:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->bxe:Landroid/graphics/Bitmap;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/data/h;->d(Landroid/graphics/Bitmap;)Z
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/data/i;->g(Landroid/graphics/Bitmap;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->hae:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->hnw:Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;
 
     invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;->b(Lcom/tencent/mm/plugin/sns/ui/PreviewImageView;)Ljava/util/HashMap;
 
@@ -183,11 +190,11 @@
 
     iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->path:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->bDT:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->bxe:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->aAF:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->amO:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getTag()Ljava/lang/Object;
 
@@ -195,7 +202,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->aAF:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->amO:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getTag()Ljava/lang/Object;
 
@@ -205,7 +212,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->aAF:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->amO:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getTag()Ljava/lang/Object;
 
@@ -219,9 +226,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->aAF:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->amO:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->bDT:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/PreviewImageView$b;->bxe:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 

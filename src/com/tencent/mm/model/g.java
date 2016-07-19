@@ -9,7 +9,7 @@ public final class g
   {
     String str = new SimpleDateFormat("ssHHmmMMddyy").format(new Date(paramLong));
     if ((paramString != null) && (paramString.length() > 1)) {}
-    for (paramString = str + com.tencent.mm.a.g.m(paramString.getBytes()).substring(0, 7);; paramString = str + "fffffff")
+    for (paramString = str + com.tencent.mm.a.g.j(paramString.getBytes()).substring(0, 7);; paramString = str + "fffffff")
     {
       paramString = paramString + String.format("%04x", new Object[] { Long.valueOf(paramLong % 65535L) });
       return paramString + (paramLong % 7L + 100L);

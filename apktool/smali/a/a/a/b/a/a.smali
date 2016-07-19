@@ -4,23 +4,23 @@
 
 
 # instance fields
-.field private aiA:I
+.field public Up:I
 
-.field public aiB:I
+.field private Uq:I
 
-.field public aiC:I
+.field public Ur:I
 
-.field private aiD:I
+.field public Us:I
 
-.field private aiG:I
+.field private Ut:I
 
-.field public aiz:I
+.field private Uw:I
 
 .field public buffer:[B
 
-.field private maY:Ljava/io/InputStream;
+.field private mNc:Ljava/io/InputStream;
 
-.field private maZ:I
+.field private mNd:I
 
 
 # direct methods
@@ -34,23 +34,23 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 385
-    iput v1, p0, La/a/a/b/a/a;->aiA:I
+    iput v1, p0, La/a/a/b/a/a;->Uq:I
 
     .line 388
-    iput v1, p0, La/a/a/b/a/a;->aiC:I
+    iput v1, p0, La/a/a/b/a/a;->Us:I
 
     .line 395
-    iput v1, p0, La/a/a/b/a/a;->maZ:I
+    iput v1, p0, La/a/a/b/a/a;->mNd:I
 
     .line 398
     const v0, 0x7fffffff
 
-    iput v0, p0, La/a/a/b/a/a;->aiD:I
+    iput v0, p0, La/a/a/b/a/a;->Ut:I
 
     .line 401
     const/high16 v0, 0x4000000
 
-    iput v0, p0, La/a/a/b/a/a;->aiG:I
+    iput v0, p0, La/a/a/b/a/a;->Uw:I
 
     .line 407
     iput-object p1, p0, La/a/a/b/a/a;->buffer:[B
@@ -58,21 +58,21 @@
     .line 408
     add-int/lit8 v0, p2, 0x0
 
-    iput v0, p0, La/a/a/b/a/a;->aiz:I
+    iput v0, p0, La/a/a/b/a/a;->Up:I
 
     .line 409
-    iput v1, p0, La/a/a/b/a/a;->aiB:I
+    iput v1, p0, La/a/a/b/a/a;->Ur:I
 
     .line 410
     const/4 v0, 0x0
 
-    iput-object v0, p0, La/a/a/b/a/a;->maY:Ljava/io/InputStream;
+    iput-object v0, p0, La/a/a/b/a/a;->mNc:Ljava/io/InputStream;
 
     .line 411
     return-void
 .end method
 
-.method private av(I)V
+.method private aN(I)V
     .locals 4
 
     .prologue
@@ -82,7 +82,7 @@
     if-gez p1, :cond_0
 
     .line 614
-    invoke-static {}, La/a/a/b/a/b;->boi()La/a/a/b/a/b;
+    invoke-static {}, La/a/a/b/a/b;->bvg()La/a/a/b/a/b;
 
     move-result-object v0
 
@@ -90,33 +90,33 @@
 
     .line 617
     :cond_0
-    iget v0, p0, La/a/a/b/a/a;->maZ:I
+    iget v0, p0, La/a/a/b/a/a;->mNd:I
 
-    iget v1, p0, La/a/a/b/a/a;->aiB:I
+    iget v1, p0, La/a/a/b/a/a;->Ur:I
 
     add-int/2addr v0, v1
 
     add-int/2addr v0, p1
 
-    iget v1, p0, La/a/a/b/a/a;->aiD:I
+    iget v1, p0, La/a/a/b/a/a;->Ut:I
 
     if-le v0, v1, :cond_1
 
     .line 619
-    iget v0, p0, La/a/a/b/a/a;->aiD:I
+    iget v0, p0, La/a/a/b/a/a;->Ut:I
 
-    iget v1, p0, La/a/a/b/a/a;->maZ:I
-
-    sub-int/2addr v0, v1
-
-    iget v1, p0, La/a/a/b/a/a;->aiB:I
+    iget v1, p0, La/a/a/b/a/a;->mNd:I
 
     sub-int/2addr v0, v1
 
-    invoke-direct {p0, v0}, La/a/a/b/a/a;->av(I)V
+    iget v1, p0, La/a/a/b/a/a;->Ur:I
+
+    sub-int/2addr v0, v1
+
+    invoke-direct {p0, v0}, La/a/a/b/a/a;->aN(I)V
 
     .line 621
-    invoke-static {}, La/a/a/b/a/b;->boh()La/a/a/b/a/b;
+    invoke-static {}, La/a/a/b/a/b;->bvf()La/a/a/b/a/b;
 
     move-result-object v0
 
@@ -124,20 +124,20 @@
 
     .line 624
     :cond_1
-    iget v0, p0, La/a/a/b/a/a;->aiz:I
+    iget v0, p0, La/a/a/b/a/a;->Up:I
 
-    iget v1, p0, La/a/a/b/a/a;->aiB:I
+    iget v1, p0, La/a/a/b/a/a;->Ur:I
 
     sub-int/2addr v0, v1
 
     if-ge p1, v0, :cond_3
 
     .line 626
-    iget v0, p0, La/a/a/b/a/a;->aiB:I
+    iget v0, p0, La/a/a/b/a/a;->Ur:I
 
     add-int/2addr v0, p1
 
-    iput v0, p0, La/a/a/b/a/a;->aiB:I
+    iput v0, p0, La/a/a/b/a/a;->Ur:I
 
     .line 645
     :cond_2
@@ -145,24 +145,24 @@
 
     .line 630
     :cond_3
-    iget v0, p0, La/a/a/b/a/a;->aiz:I
+    iget v0, p0, La/a/a/b/a/a;->Up:I
 
-    iget v1, p0, La/a/a/b/a/a;->aiB:I
+    iget v1, p0, La/a/a/b/a/a;->Ur:I
 
     sub-int/2addr v0, v1
 
     .line 631
-    iget v1, p0, La/a/a/b/a/a;->maZ:I
+    iget v1, p0, La/a/a/b/a/a;->mNd:I
 
     add-int/2addr v1, v0
 
-    iput v1, p0, La/a/a/b/a/a;->maZ:I
+    iput v1, p0, La/a/a/b/a/a;->mNd:I
 
     .line 632
-    iput v2, p0, La/a/a/b/a/a;->aiB:I
+    iput v2, p0, La/a/a/b/a/a;->Ur:I
 
     .line 633
-    iput v2, p0, La/a/a/b/a/a;->aiz:I
+    iput v2, p0, La/a/a/b/a/a;->Up:I
 
     move v1, v0
 
@@ -171,7 +171,7 @@
     if-ge v1, p1, :cond_2
 
     .line 637
-    iget-object v0, p0, La/a/a/b/a/a;->maY:Ljava/io/InputStream;
+    iget-object v0, p0, La/a/a/b/a/a;->mNc:Ljava/io/InputStream;
 
     if-nez v0, :cond_4
 
@@ -182,7 +182,7 @@
     if-gtz v0, :cond_5
 
     .line 639
-    invoke-static {}, La/a/a/b/a/b;->boh()La/a/a/b/a/b;
+    invoke-static {}, La/a/a/b/a/b;->bvf()La/a/a/b/a/b;
 
     move-result-object v0
 
@@ -190,7 +190,7 @@
 
     .line 637
     :cond_4
-    iget-object v0, p0, La/a/a/b/a/a;->maY:Ljava/io/InputStream;
+    iget-object v0, p0, La/a/a/b/a/a;->mNc:Ljava/io/InputStream;
 
     sub-int v2, p1, v1
 
@@ -209,47 +209,47 @@
     add-int/2addr v1, v0
 
     .line 642
-    iget v2, p0, La/a/a/b/a/a;->maZ:I
+    iget v2, p0, La/a/a/b/a/a;->mNd:I
 
     add-int/2addr v0, v2
 
-    iput v0, p0, La/a/a/b/a/a;->maZ:I
+    iput v0, p0, La/a/a/b/a/a;->mNd:I
 
     goto :goto_0
 .end method
 
-.method private jG()B
+.method private ih()B
     .locals 3
 
     .prologue
     .line 481
-    iget v0, p0, La/a/a/b/a/a;->aiB:I
+    iget v0, p0, La/a/a/b/a/a;->Ur:I
 
-    iget v1, p0, La/a/a/b/a/a;->aiz:I
+    iget v1, p0, La/a/a/b/a/a;->Up:I
 
     if-ne v0, v1, :cond_0
 
     .line 482
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, La/a/a/b/a/a;->iD(Z)Z
+    invoke-virtual {p0, v0}, La/a/a/b/a/a;->jn(Z)Z
 
     .line 484
     :cond_0
     iget-object v0, p0, La/a/a/b/a/a;->buffer:[B
 
-    iget v1, p0, La/a/a/b/a/a;->aiB:I
+    iget v1, p0, La/a/a/b/a/a;->Ur:I
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, La/a/a/b/a/a;->aiB:I
+    iput v2, p0, La/a/a/b/a/a;->Ur:I
 
     aget-byte v0, v0, v1
 
     return v0
 .end method
 
-.method private sK(I)[I
+.method private vD(I)[I
     .locals 7
 
     .prologue
@@ -397,7 +397,7 @@
     if-lt v0, v2, :cond_5
 
     .line 293
-    invoke-static {}, La/a/a/b/a/b;->boj()La/a/a/b/a/b;
+    invoke-static {}, La/a/a/b/a/b;->bvh()La/a/a/b/a/b;
 
     move-result-object v0
 
@@ -432,7 +432,7 @@
 
 
 # virtual methods
-.method public final au(I)[B
+.method public final aM(I)[B
     .locals 11
 
     .prologue
@@ -448,7 +448,7 @@
     if-gez p1, :cond_0
 
     .line 495
-    invoke-static {}, La/a/a/b/a/b;->boi()La/a/a/b/a/b;
+    invoke-static {}, La/a/a/b/a/b;->bvg()La/a/a/b/a/b;
 
     move-result-object v0
 
@@ -456,33 +456,33 @@
 
     .line 498
     :cond_0
-    iget v0, p0, La/a/a/b/a/a;->maZ:I
+    iget v0, p0, La/a/a/b/a/a;->mNd:I
 
-    iget v2, p0, La/a/a/b/a/a;->aiB:I
+    iget v2, p0, La/a/a/b/a/a;->Ur:I
 
     add-int/2addr v0, v2
 
     add-int/2addr v0, p1
 
-    iget v2, p0, La/a/a/b/a/a;->aiD:I
+    iget v2, p0, La/a/a/b/a/a;->Ut:I
 
     if-le v0, v2, :cond_1
 
     .line 500
-    iget v0, p0, La/a/a/b/a/a;->aiD:I
+    iget v0, p0, La/a/a/b/a/a;->Ut:I
 
-    iget v1, p0, La/a/a/b/a/a;->maZ:I
-
-    sub-int/2addr v0, v1
-
-    iget v1, p0, La/a/a/b/a/a;->aiB:I
+    iget v1, p0, La/a/a/b/a/a;->mNd:I
 
     sub-int/2addr v0, v1
 
-    invoke-direct {p0, v0}, La/a/a/b/a/a;->av(I)V
+    iget v1, p0, La/a/a/b/a/a;->Ur:I
+
+    sub-int/2addr v0, v1
+
+    invoke-direct {p0, v0}, La/a/a/b/a/a;->aN(I)V
 
     .line 502
-    invoke-static {}, La/a/a/b/a/b;->boh()La/a/a/b/a/b;
+    invoke-static {}, La/a/a/b/a/b;->bvf()La/a/a/b/a/b;
 
     move-result-object v0
 
@@ -490,9 +490,9 @@
 
     .line 505
     :cond_1
-    iget v0, p0, La/a/a/b/a/a;->aiz:I
+    iget v0, p0, La/a/a/b/a/a;->Up:I
 
-    iget v2, p0, La/a/a/b/a/a;->aiB:I
+    iget v2, p0, La/a/a/b/a/a;->Ur:I
 
     sub-int/2addr v0, v2
 
@@ -504,16 +504,16 @@
     .line 508
     iget-object v2, p0, La/a/a/b/a/a;->buffer:[B
 
-    iget v3, p0, La/a/a/b/a/a;->aiB:I
+    iget v3, p0, La/a/a/b/a/a;->Ur:I
 
     invoke-static {v2, v3, v0, v1, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 509
-    iget v1, p0, La/a/a/b/a/a;->aiB:I
+    iget v1, p0, La/a/a/b/a/a;->Ur:I
 
     add-int/2addr v1, p1
 
-    iput v1, p0, La/a/a/b/a/a;->aiB:I
+    iput v1, p0, La/a/a/b/a/a;->Ur:I
 
     .line 602
     :goto_0
@@ -527,32 +527,32 @@
     new-array v2, p1, [B
 
     .line 519
-    iget v0, p0, La/a/a/b/a/a;->aiz:I
+    iget v0, p0, La/a/a/b/a/a;->Up:I
 
-    iget v3, p0, La/a/a/b/a/a;->aiB:I
+    iget v3, p0, La/a/a/b/a/a;->Ur:I
 
     sub-int/2addr v0, v3
 
     .line 520
     iget-object v3, p0, La/a/a/b/a/a;->buffer:[B
 
-    iget v4, p0, La/a/a/b/a/a;->aiB:I
+    iget v4, p0, La/a/a/b/a/a;->Ur:I
 
     invoke-static {v3, v4, v2, v1, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 521
-    iget v3, p0, La/a/a/b/a/a;->aiz:I
+    iget v3, p0, La/a/a/b/a/a;->Up:I
 
-    iput v3, p0, La/a/a/b/a/a;->aiB:I
+    iput v3, p0, La/a/a/b/a/a;->Ur:I
 
     .line 528
-    invoke-virtual {p0, v5}, La/a/a/b/a/a;->iD(Z)Z
+    invoke-virtual {p0, v5}, La/a/a/b/a/a;->jn(Z)Z
 
     .line 530
     :goto_1
     sub-int v3, p1, v0
 
-    iget v4, p0, La/a/a/b/a/a;->aiz:I
+    iget v4, p0, La/a/a/b/a/a;->Up:I
 
     if-gt v3, v4, :cond_3
 
@@ -566,7 +566,7 @@
     .line 538
     sub-int v0, p1, v0
 
-    iput v0, p0, La/a/a/b/a/a;->aiB:I
+    iput v0, p0, La/a/a/b/a/a;->Ur:I
 
     move-object v0, v2
 
@@ -577,46 +577,46 @@
     :cond_3
     iget-object v3, p0, La/a/a/b/a/a;->buffer:[B
 
-    iget v4, p0, La/a/a/b/a/a;->aiz:I
+    iget v4, p0, La/a/a/b/a/a;->Up:I
 
     invoke-static {v3, v1, v2, v0, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 532
-    iget v3, p0, La/a/a/b/a/a;->aiz:I
+    iget v3, p0, La/a/a/b/a/a;->Up:I
 
     add-int/2addr v0, v3
 
     .line 533
-    iget v3, p0, La/a/a/b/a/a;->aiz:I
+    iget v3, p0, La/a/a/b/a/a;->Up:I
 
-    iput v3, p0, La/a/a/b/a/a;->aiB:I
+    iput v3, p0, La/a/a/b/a/a;->Ur:I
 
     .line 534
-    invoke-virtual {p0, v5}, La/a/a/b/a/a;->iD(Z)Z
+    invoke-virtual {p0, v5}, La/a/a/b/a/a;->jn(Z)Z
 
     goto :goto_1
 
     .line 559
     :cond_4
-    iget v5, p0, La/a/a/b/a/a;->aiB:I
+    iget v5, p0, La/a/a/b/a/a;->Ur:I
 
     .line 560
-    iget v6, p0, La/a/a/b/a/a;->aiz:I
+    iget v6, p0, La/a/a/b/a/a;->Up:I
 
     .line 563
-    iget v0, p0, La/a/a/b/a/a;->maZ:I
+    iget v0, p0, La/a/a/b/a/a;->mNd:I
 
-    iget v2, p0, La/a/a/b/a/a;->aiz:I
+    iget v2, p0, La/a/a/b/a/a;->Up:I
 
     add-int/2addr v0, v2
 
-    iput v0, p0, La/a/a/b/a/a;->maZ:I
+    iput v0, p0, La/a/a/b/a/a;->mNd:I
 
     .line 564
-    iput v1, p0, La/a/a/b/a/a;->aiB:I
+    iput v1, p0, La/a/a/b/a/a;->Ur:I
 
     .line 565
-    iput v1, p0, La/a/a/b/a/a;->aiz:I
+    iput v1, p0, La/a/a/b/a/a;->Up:I
 
     .line 568
     sub-int v0, v6, v5
@@ -692,7 +692,7 @@
 
     .line 575
     :cond_6
-    iget-object v2, p0, La/a/a/b/a/a;->maY:Ljava/io/InputStream;
+    iget-object v2, p0, La/a/a/b/a/a;->mNc:Ljava/io/InputStream;
 
     if-nez v2, :cond_7
 
@@ -703,7 +703,7 @@
     if-ne v2, v3, :cond_8
 
     .line 577
-    invoke-static {}, La/a/a/b/a/b;->boh()La/a/a/b/a/b;
+    invoke-static {}, La/a/a/b/a/b;->bvf()La/a/a/b/a/b;
 
     move-result-object v0
 
@@ -711,7 +711,7 @@
 
     .line 575
     :cond_7
-    iget-object v2, p0, La/a/a/b/a/a;->maY:Ljava/io/InputStream;
+    iget-object v2, p0, La/a/a/b/a/a;->mNc:Ljava/io/InputStream;
 
     array-length v9, v8
 
@@ -725,11 +725,11 @@
 
     .line 579
     :cond_8
-    iget v9, p0, La/a/a/b/a/a;->maZ:I
+    iget v9, p0, La/a/a/b/a/a;->mNd:I
 
     add-int/2addr v9, v2
 
-    iput v9, p0, La/a/a/b/a/a;->maZ:I
+    iput v9, p0, La/a/a/b/a/a;->mNd:I
 
     .line 580
     add-int/2addr v0, v2
@@ -762,198 +762,12 @@
     goto :goto_3
 .end method
 
-.method public final iD(Z)Z
-    .locals 4
-
-    .prologue
-    const/4 v1, -0x1
-
-    const/4 v2, 0x0
-
-    .line 440
-    iget v0, p0, La/a/a/b/a/a;->aiB:I
-
-    iget v3, p0, La/a/a/b/a/a;->aiz:I
-
-    if-ge v0, v3, :cond_0
-
-    .line 441
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string/jumbo v1, "refillBuffer() called when buffer wasn\'t empty."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 444
-    :cond_0
-    iget v0, p0, La/a/a/b/a/a;->maZ:I
-
-    iget v3, p0, La/a/a/b/a/a;->aiz:I
-
-    add-int/2addr v0, v3
-
-    iget v3, p0, La/a/a/b/a/a;->aiD:I
-
-    if-ne v0, v3, :cond_2
-
-    .line 446
-    if-eqz p1, :cond_1
-
-    .line 447
-    invoke-static {}, La/a/a/b/a/b;->boh()La/a/a/b/a/b;
-
-    move-result-object v0
-
-    throw v0
-
-    :cond_1
-    move v0, v2
-
-    .line 470
-    :goto_0
-    return v0
-
-    .line 453
-    :cond_2
-    iget v0, p0, La/a/a/b/a/a;->maZ:I
-
-    iget v3, p0, La/a/a/b/a/a;->aiz:I
-
-    add-int/2addr v0, v3
-
-    iput v0, p0, La/a/a/b/a/a;->maZ:I
-
-    .line 455
-    iput v2, p0, La/a/a/b/a/a;->aiB:I
-
-    .line 456
-    iget-object v0, p0, La/a/a/b/a/a;->maY:Ljava/io/InputStream;
-
-    if-nez v0, :cond_3
-
-    move v0, v1
-
-    :goto_1
-    iput v0, p0, La/a/a/b/a/a;->aiz:I
-
-    .line 457
-    iget v0, p0, La/a/a/b/a/a;->aiz:I
-
-    if-ne v0, v1, :cond_5
-
-    .line 458
-    iput v2, p0, La/a/a/b/a/a;->aiz:I
-
-    .line 459
-    if-eqz p1, :cond_4
-
-    .line 460
-    invoke-static {}, La/a/a/b/a/b;->boh()La/a/a/b/a/b;
-
-    move-result-object v0
-
-    throw v0
-
-    .line 456
-    :cond_3
-    iget-object v0, p0, La/a/a/b/a/a;->maY:Ljava/io/InputStream;
-
-    iget-object v3, p0, La/a/a/b/a/a;->buffer:[B
-
-    invoke-virtual {v0, v3}, Ljava/io/InputStream;->read([B)I
-
-    move-result v0
-
-    goto :goto_1
-
-    :cond_4
-    move v0, v2
-
-    .line 462
-    goto :goto_0
-
-    .line 465
-    :cond_5
-    iget v0, p0, La/a/a/b/a/a;->aiz:I
-
-    iget v1, p0, La/a/a/b/a/a;->aiA:I
-
-    add-int/2addr v0, v1
-
-    iput v0, p0, La/a/a/b/a/a;->aiz:I
-
-    iget v0, p0, La/a/a/b/a/a;->maZ:I
-
-    iget v1, p0, La/a/a/b/a/a;->aiz:I
-
-    add-int/2addr v0, v1
-
-    iget v1, p0, La/a/a/b/a/a;->aiD:I
-
-    if-le v0, v1, :cond_7
-
-    iget v1, p0, La/a/a/b/a/a;->aiD:I
-
-    sub-int/2addr v0, v1
-
-    iput v0, p0, La/a/a/b/a/a;->aiA:I
-
-    iget v0, p0, La/a/a/b/a/a;->aiz:I
-
-    iget v1, p0, La/a/a/b/a/a;->aiA:I
-
-    sub-int/2addr v0, v1
-
-    iput v0, p0, La/a/a/b/a/a;->aiz:I
-
-    .line 466
-    :goto_2
-    iget v0, p0, La/a/a/b/a/a;->maZ:I
-
-    iget v1, p0, La/a/a/b/a/a;->aiz:I
-
-    add-int/2addr v0, v1
-
-    iget v1, p0, La/a/a/b/a/a;->aiA:I
-
-    add-int/2addr v0, v1
-
-    .line 467
-    iget v1, p0, La/a/a/b/a/a;->aiG:I
-
-    if-gt v0, v1, :cond_6
-
-    if-gez v0, :cond_8
-
-    .line 468
-    :cond_6
-    invoke-static {}, La/a/a/b/a/b;->bol()La/a/a/b/a/b;
-
-    move-result-object v0
-
-    throw v0
-
-    .line 465
-    :cond_7
-    iput v2, p0, La/a/a/b/a/a;->aiA:I
-
-    goto :goto_2
-
-    .line 470
-    :cond_8
-    const/4 v0, 0x1
-
-    goto :goto_0
-.end method
-
-.method public final jC()I
+.method public final id()I
     .locals 3
 
     .prologue
     .line 311
-    invoke-direct {p0}, La/a/a/b/a/a;->jG()B
+    invoke-direct {p0}, La/a/a/b/a/a;->ih()B
 
     move-result v0
 
@@ -970,7 +784,7 @@
     and-int/lit8 v0, v0, 0x7f
 
     .line 316
-    invoke-direct {p0}, La/a/a/b/a/a;->jG()B
+    invoke-direct {p0}, La/a/a/b/a/a;->ih()B
 
     move-result v1
 
@@ -993,7 +807,7 @@
     or-int/2addr v0, v1
 
     .line 320
-    invoke-direct {p0}, La/a/a/b/a/a;->jG()B
+    invoke-direct {p0}, La/a/a/b/a/a;->ih()B
 
     move-result v1
 
@@ -1016,7 +830,7 @@
     or-int/2addr v0, v1
 
     .line 324
-    invoke-direct {p0}, La/a/a/b/a/a;->jG()B
+    invoke-direct {p0}, La/a/a/b/a/a;->ih()B
 
     move-result v1
 
@@ -1039,7 +853,7 @@
     or-int/2addr v0, v1
 
     .line 328
-    invoke-direct {p0}, La/a/a/b/a/a;->jG()B
+    invoke-direct {p0}, La/a/a/b/a/a;->ih()B
 
     move-result v1
 
@@ -1059,7 +873,7 @@
     if-lt v1, v2, :cond_5
 
     .line 335
-    invoke-static {}, La/a/a/b/a/b;->boj()La/a/a/b/a/b;
+    invoke-static {}, La/a/a/b/a/b;->bvh()La/a/a/b/a/b;
 
     move-result-object v0
 
@@ -1067,7 +881,7 @@
 
     .line 332
     :cond_5
-    invoke-direct {p0}, La/a/a/b/a/a;->jG()B
+    invoke-direct {p0}, La/a/a/b/a/a;->ih()B
 
     move-result v2
 
@@ -1079,7 +893,7 @@
     goto :goto_1
 .end method
 
-.method public final jD()J
+.method public final ie()J
     .locals 6
 
     .prologue
@@ -1096,7 +910,7 @@
     if-lt v2, v3, :cond_0
 
     .line 354
-    invoke-static {}, La/a/a/b/a/b;->boj()La/a/a/b/a/b;
+    invoke-static {}, La/a/a/b/a/b;->bvh()La/a/a/b/a/b;
 
     move-result-object v0
 
@@ -1104,7 +918,7 @@
 
     .line 348
     :cond_0
-    invoke-direct {p0}, La/a/a/b/a/a;->jG()B
+    invoke-direct {p0}, La/a/a/b/a/a;->ih()B
 
     move-result v3
 
@@ -1132,52 +946,238 @@
     goto :goto_0
 .end method
 
-.method public final readDouble()D
-    .locals 13
+.method public final jn(Z)Z
+    .locals 4
 
     .prologue
-    const-wide/16 v11, 0xff
+    const/4 v1, -0x1
 
-    .line 96
-    invoke-direct {p0}, La/a/a/b/a/a;->jG()B
+    const/4 v2, 0x0
+
+    .line 440
+    iget v0, p0, La/a/a/b/a/a;->Ur:I
+
+    iget v3, p0, La/a/a/b/a/a;->Up:I
+
+    if-ge v0, v3, :cond_0
+
+    .line 441
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string/jumbo v1, "refillBuffer() called when buffer wasn\'t empty."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 444
+    :cond_0
+    iget v0, p0, La/a/a/b/a/a;->mNd:I
+
+    iget v3, p0, La/a/a/b/a/a;->Up:I
+
+    add-int/2addr v0, v3
+
+    iget v3, p0, La/a/a/b/a/a;->Ut:I
+
+    if-ne v0, v3, :cond_2
+
+    .line 446
+    if-eqz p1, :cond_1
+
+    .line 447
+    invoke-static {}, La/a/a/b/a/b;->bvf()La/a/a/b/a/b;
+
+    move-result-object v0
+
+    throw v0
+
+    :cond_1
+    move v0, v2
+
+    .line 470
+    :goto_0
+    return v0
+
+    .line 453
+    :cond_2
+    iget v0, p0, La/a/a/b/a/a;->mNd:I
+
+    iget v3, p0, La/a/a/b/a/a;->Up:I
+
+    add-int/2addr v0, v3
+
+    iput v0, p0, La/a/a/b/a/a;->mNd:I
+
+    .line 455
+    iput v2, p0, La/a/a/b/a/a;->Ur:I
+
+    .line 456
+    iget-object v0, p0, La/a/a/b/a/a;->mNc:Ljava/io/InputStream;
+
+    if-nez v0, :cond_3
+
+    move v0, v1
+
+    :goto_1
+    iput v0, p0, La/a/a/b/a/a;->Up:I
+
+    .line 457
+    iget v0, p0, La/a/a/b/a/a;->Up:I
+
+    if-ne v0, v1, :cond_5
+
+    .line 458
+    iput v2, p0, La/a/a/b/a/a;->Up:I
+
+    .line 459
+    if-eqz p1, :cond_4
+
+    .line 460
+    invoke-static {}, La/a/a/b/a/b;->bvf()La/a/a/b/a/b;
+
+    move-result-object v0
+
+    throw v0
+
+    .line 456
+    :cond_3
+    iget-object v0, p0, La/a/a/b/a/a;->mNc:Ljava/io/InputStream;
+
+    iget-object v3, p0, La/a/a/b/a/a;->buffer:[B
+
+    invoke-virtual {v0, v3}, Ljava/io/InputStream;->read([B)I
 
     move-result v0
 
-    invoke-direct {p0}, La/a/a/b/a/a;->jG()B
+    goto :goto_1
+
+    :cond_4
+    move v0, v2
+
+    .line 462
+    goto :goto_0
+
+    .line 465
+    :cond_5
+    iget v0, p0, La/a/a/b/a/a;->Up:I
+
+    iget v1, p0, La/a/a/b/a/a;->Uq:I
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, La/a/a/b/a/a;->Up:I
+
+    iget v0, p0, La/a/a/b/a/a;->mNd:I
+
+    iget v1, p0, La/a/a/b/a/a;->Up:I
+
+    add-int/2addr v0, v1
+
+    iget v1, p0, La/a/a/b/a/a;->Ut:I
+
+    if-le v0, v1, :cond_7
+
+    iget v1, p0, La/a/a/b/a/a;->Ut:I
+
+    sub-int/2addr v0, v1
+
+    iput v0, p0, La/a/a/b/a/a;->Uq:I
+
+    iget v0, p0, La/a/a/b/a/a;->Up:I
+
+    iget v1, p0, La/a/a/b/a/a;->Uq:I
+
+    sub-int/2addr v0, v1
+
+    iput v0, p0, La/a/a/b/a/a;->Up:I
+
+    .line 466
+    :goto_2
+    iget v0, p0, La/a/a/b/a/a;->mNd:I
+
+    iget v1, p0, La/a/a/b/a/a;->Up:I
+
+    add-int/2addr v0, v1
+
+    iget v1, p0, La/a/a/b/a/a;->Uq:I
+
+    add-int/2addr v0, v1
+
+    .line 467
+    iget v1, p0, La/a/a/b/a/a;->Uw:I
+
+    if-gt v0, v1, :cond_6
+
+    if-gez v0, :cond_8
+
+    .line 468
+    :cond_6
+    invoke-static {}, La/a/a/b/a/b;->bvj()La/a/a/b/a/b;
+
+    move-result-object v0
+
+    throw v0
+
+    .line 465
+    :cond_7
+    iput v2, p0, La/a/a/b/a/a;->Uq:I
+
+    goto :goto_2
+
+    .line 470
+    :cond_8
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method
+
+.method public final readDouble()D
+    .locals 14
+
+    .prologue
+    const-wide/16 v12, 0xff
+
+    .line 96
+    invoke-direct {p0}, La/a/a/b/a/a;->ih()B
+
+    move-result v0
+
+    invoke-direct {p0}, La/a/a/b/a/a;->ih()B
 
     move-result v1
 
-    invoke-direct {p0}, La/a/a/b/a/a;->jG()B
+    invoke-direct {p0}, La/a/a/b/a/a;->ih()B
 
     move-result v2
 
-    invoke-direct {p0}, La/a/a/b/a/a;->jG()B
+    invoke-direct {p0}, La/a/a/b/a/a;->ih()B
 
     move-result v3
 
-    invoke-direct {p0}, La/a/a/b/a/a;->jG()B
+    invoke-direct {p0}, La/a/a/b/a/a;->ih()B
 
     move-result v4
 
-    invoke-direct {p0}, La/a/a/b/a/a;->jG()B
+    invoke-direct {p0}, La/a/a/b/a/a;->ih()B
 
     move-result v5
 
-    invoke-direct {p0}, La/a/a/b/a/a;->jG()B
+    invoke-direct {p0}, La/a/a/b/a/a;->ih()B
 
     move-result v6
 
-    invoke-direct {p0}, La/a/a/b/a/a;->jG()B
+    invoke-direct {p0}, La/a/a/b/a/a;->ih()B
 
     move-result v7
 
     int-to-long v8, v0
 
-    and-long/2addr v8, v11
+    and-long/2addr v8, v12
 
     int-to-long v0, v1
 
-    and-long/2addr v0, v11
+    and-long/2addr v0, v12
 
     const/16 v10, 0x8
 
@@ -1187,7 +1187,7 @@
 
     int-to-long v8, v2
 
-    and-long/2addr v8, v11
+    and-long/2addr v8, v12
 
     const/16 v2, 0x10
 
@@ -1197,7 +1197,7 @@
 
     int-to-long v2, v3
 
-    and-long/2addr v2, v11
+    and-long/2addr v2, v12
 
     const/16 v8, 0x18
 
@@ -1207,7 +1207,7 @@
 
     int-to-long v2, v4
 
-    and-long/2addr v2, v11
+    and-long/2addr v2, v12
 
     const/16 v4, 0x20
 
@@ -1217,7 +1217,7 @@
 
     int-to-long v2, v5
 
-    and-long/2addr v2, v11
+    and-long/2addr v2, v12
 
     const/16 v4, 0x28
 
@@ -1227,7 +1227,7 @@
 
     int-to-long v2, v6
 
-    and-long/2addr v2, v11
+    and-long/2addr v2, v12
 
     const/16 v4, 0x30
 
@@ -1237,7 +1237,7 @@
 
     int-to-long v2, v7
 
-    and-long/2addr v2, v11
+    and-long/2addr v2, v12
 
     const/16 v4, 0x38
 
@@ -1257,19 +1257,19 @@
 
     .prologue
     .line 101
-    invoke-direct {p0}, La/a/a/b/a/a;->jG()B
+    invoke-direct {p0}, La/a/a/b/a/a;->ih()B
 
     move-result v0
 
-    invoke-direct {p0}, La/a/a/b/a/a;->jG()B
+    invoke-direct {p0}, La/a/a/b/a/a;->ih()B
 
     move-result v1
 
-    invoke-direct {p0}, La/a/a/b/a/a;->jG()B
+    invoke-direct {p0}, La/a/a/b/a/a;->ih()B
 
     move-result v2
 
-    invoke-direct {p0}, La/a/a/b/a/a;->jG()B
+    invoke-direct {p0}, La/a/a/b/a/a;->ih()B
 
     move-result v3
 
@@ -1305,14 +1305,14 @@
 
     .prologue
     .line 188
-    invoke-virtual {p0}, La/a/a/b/a/a;->jC()I
+    invoke-virtual {p0}, La/a/a/b/a/a;->id()I
 
     move-result v1
 
     .line 189
-    iget v0, p0, La/a/a/b/a/a;->aiz:I
+    iget v0, p0, La/a/a/b/a/a;->Up:I
 
-    iget v2, p0, La/a/a/b/a/a;->aiB:I
+    iget v2, p0, La/a/a/b/a/a;->Ur:I
 
     sub-int/2addr v0, v2
 
@@ -1325,18 +1325,18 @@
 
     iget-object v2, p0, La/a/a/b/a/a;->buffer:[B
 
-    iget v3, p0, La/a/a/b/a/a;->aiB:I
+    iget v3, p0, La/a/a/b/a/a;->Ur:I
 
     const-string/jumbo v4, "UTF-8"
 
     invoke-direct {v0, v2, v3, v1, v4}, Ljava/lang/String;-><init>([BIILjava/lang/String;)V
 
     .line 193
-    iget v2, p0, La/a/a/b/a/a;->aiB:I
+    iget v2, p0, La/a/a/b/a/a;->Ur:I
 
     add-int/2addr v1, v2
 
-    iput v1, p0, La/a/a/b/a/a;->aiB:I
+    iput v1, p0, La/a/a/b/a/a;->Ur:I
 
     .line 197
     :goto_0
@@ -1345,7 +1345,7 @@
     :cond_0
     new-instance v0, Ljava/lang/String;
 
-    invoke-virtual {p0, v1}, La/a/a/b/a/a;->au(I)[B
+    invoke-virtual {p0, v1}, La/a/a/b/a/a;->aM(I)[B
 
     move-result-object v1
 
@@ -1356,8 +1356,15 @@
     goto :goto_0
 .end method
 
-.method public final sJ(I)Ljava/util/LinkedList;
+.method public final vC(I)Ljava/util/LinkedList;
     .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)",
+            "Ljava/util/LinkedList",
+            "<[B>;"
+        }
+    .end annotation
 
     .prologue
     const/4 v5, 0x0
@@ -1368,7 +1375,7 @@
     invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
 
     .line 151
-    invoke-virtual {p0}, La/a/a/b/a/a;->jC()I
+    invoke-virtual {p0}, La/a/a/b/a/a;->id()I
 
     move-result v0
 
@@ -1381,7 +1388,7 @@
     .line 158
     iget-object v3, p0, La/a/a/b/a/a;->buffer:[B
 
-    iget v4, p0, La/a/a/b/a/a;->aiB:I
+    iget v4, p0, La/a/a/b/a/a;->Ur:I
 
     invoke-static {v3, v4, v1, v5, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
@@ -1389,19 +1396,19 @@
     invoke-virtual {v2, v1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
     .line 160
-    iget v1, p0, La/a/a/b/a/a;->aiB:I
+    iget v1, p0, La/a/a/b/a/a;->Ur:I
 
     add-int/2addr v0, v1
 
-    iput v0, p0, La/a/a/b/a/a;->aiB:I
+    iput v0, p0, La/a/a/b/a/a;->Ur:I
 
     .line 161
-    iget v0, p0, La/a/a/b/a/a;->aiB:I
+    iget v0, p0, La/a/a/b/a/a;->Ur:I
 
     .line 162
-    iget v1, p0, La/a/a/b/a/a;->aiB:I
+    iget v1, p0, La/a/a/b/a/a;->Ur:I
 
-    iget v3, p0, La/a/a/b/a/a;->aiz:I
+    iget v3, p0, La/a/a/b/a/a;->Up:I
 
     if-ne v1, v3, :cond_0
 
@@ -1437,7 +1444,7 @@
 
     .line 166
     :cond_0
-    invoke-direct {p0, v0}, La/a/a/b/a/a;->sK(I)[I
+    invoke-direct {p0, v0}, La/a/a/b/a/a;->vD(I)[I
 
     move-result-object v1
 
@@ -1446,7 +1453,7 @@
 
     .line 168
     :goto_1
-    invoke-static {v0}, La/a/a/b/a;->aC(I)I
+    invoke-static {v0}, La/a/a/b/a;->aU(I)I
 
     move-result v0
 
@@ -1464,10 +1471,10 @@
 
     aget v0, v1, v0
 
-    iput v0, p0, La/a/a/b/a/a;->aiB:I
+    iput v0, p0, La/a/a/b/a/a;->Ur:I
 
     .line 170
-    invoke-virtual {p0}, La/a/a/b/a/a;->jC()I
+    invoke-virtual {p0}, La/a/a/b/a/a;->id()I
 
     move-result v0
 
@@ -1477,7 +1484,7 @@
     .line 172
     iget-object v3, p0, La/a/a/b/a/a;->buffer:[B
 
-    iget v4, p0, La/a/a/b/a/a;->aiB:I
+    iget v4, p0, La/a/a/b/a/a;->Ur:I
 
     invoke-static {v3, v4, v1, v5, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
@@ -1485,24 +1492,24 @@
     invoke-virtual {v2, v1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
     .line 174
-    iget v1, p0, La/a/a/b/a/a;->aiB:I
+    iget v1, p0, La/a/a/b/a/a;->Ur:I
 
     add-int/2addr v0, v1
 
-    iput v0, p0, La/a/a/b/a/a;->aiB:I
+    iput v0, p0, La/a/a/b/a/a;->Ur:I
 
     .line 175
-    iget v0, p0, La/a/a/b/a/a;->aiB:I
+    iget v0, p0, La/a/a/b/a/a;->Ur:I
 
-    iget v1, p0, La/a/a/b/a/a;->aiz:I
+    iget v1, p0, La/a/a/b/a/a;->Up:I
 
     if-eq v0, v1, :cond_1
 
     .line 176
-    iget v0, p0, La/a/a/b/a/a;->aiB:I
+    iget v0, p0, La/a/a/b/a/a;->Ur:I
 
     .line 179
-    invoke-direct {p0, v0}, La/a/a/b/a/a;->sK(I)[I
+    invoke-direct {p0, v0}, La/a/a/b/a/a;->vD(I)[I
 
     move-result-object v1
 

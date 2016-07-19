@@ -2,7 +2,7 @@ package com.tencent.mm.ui.chatting.gallery;
 
 public abstract interface ImageGalleryUI$a
 {
-  public abstract void f(Boolean paramBoolean);
+  public abstract void e(Boolean paramBoolean);
 }
 
 /* Location:

@@ -6,75 +6,29 @@ import android.content.Context;
 import android.os.Looper;
 import android.widget.Toast;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.q.l;
-import com.tencent.mm.r.d;
-import com.tencent.mm.r.j;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.s.l;
+import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.t.d;
+import com.tencent.mm.t.j;
 import com.tencent.mm.ui.base.g;
 import junit.framework.Assert;
 
 public final class m
   implements d
 {
-  private ProgressDialog cWw;
+  private ProgressDialog cUM;
   private Context context;
-  private Runnable iAr = null;
-  private Runnable iAs = null;
+  private Runnable iWR = null;
+  private Runnable iWS = null;
   private String path;
   
   public m(Context paramContext, String paramString)
   {
     context = paramContext;
     path = paramString;
-    cWw = null;
-    ah.tE().a(157, this);
-  }
-  
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
-  {
-    u.i("!44@/B4Tb64lLpIUGQfqwvb6VmX5eqzMRsqd7YUJg2KmvDA=", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
-    ah.tE().b(157, this);
-    if ((cWw != null) && (cWw.isShowing()) && ((context instanceof Activity)) && (!((Activity)context).isFinishing())) {}
-    label258:
-    for (;;)
-    {
-      try
-      {
-        cWw.dismiss();
-        if ((paramInt1 == 0) && (paramInt2 == 0))
-        {
-          Toast.makeText(context, 2131428206, 0).show();
-          if (iAr != null) {
-            new aa(Looper.getMainLooper()).post(iAr);
-          }
-          return;
-        }
-      }
-      catch (IllegalArgumentException paramString)
-      {
-        u.e("!44@/B4Tb64lLpIUGQfqwvb6VmX5eqzMRsqd7YUJg2KmvDA=", "dismiss dialog err" + paramString.getMessage());
-        continue;
-        if (iAs != null) {
-          new aa(Looper.getMainLooper()).post(iAs);
-        }
-        switch (paramInt1)
-        {
-        }
-      }
-      for (paramInt1 = 0;; paramInt1 = 1)
-      {
-        if (paramInt1 != 0) {
-          break label258;
-        }
-        Toast.makeText(context, 2131428207, 0).show();
-        return;
-        if (paramInt2 != -4) {
-          break;
-        }
-        Toast.makeText(context, 2131428506, 0).show();
-      }
-    }
+    cUM = null;
+    ah.tF().a(157, this);
   }
   
   public final boolean a(int paramInt, Runnable paramRunnable)
@@ -83,20 +37,20 @@ public final class m
     {
       bool = true;
       Assert.assertTrue(bool);
-      iAr = paramRunnable;
+      iWR = paramRunnable;
       Object localObject = context;
-      context.getString(2131430877);
-      cWw = g.a((Context)localObject, context.getString(2131428205), true, null);
+      context.getString(2131231028);
+      cUM = g.a((Context)localObject, context.getString(2131235180), true, null);
       localObject = new l(paramInt, path);
-      ah.tE().d((j)localObject);
+      ah.tF().a((j)localObject, 0);
       if (paramRunnable != null) {
-        break label125;
+        break label126;
       }
     }
-    label125:
+    label126:
     for (boolean bool = true;; bool = false)
     {
-      u.i("!44@/B4Tb64lLpIUGQfqwvb6VmX5eqzMRsqd7YUJg2KmvDA=", "post is null ? %B", new Object[] { Boolean.valueOf(bool) });
+      v.i("MicroMsg.ProcessUploadHDHeadImg", "post is null ? %B", new Object[] { Boolean.valueOf(bool) });
       return true;
       bool = false;
       break;
@@ -109,12 +63,58 @@ public final class m
     for (boolean bool = true;; bool = false)
     {
       Assert.assertTrue(bool);
-      iAr = paramRunnable1;
-      iAs = paramRunnable2;
+      iWR = paramRunnable1;
+      iWS = paramRunnable2;
       paramRunnable1 = new l(1, path);
-      ah.tE().d(paramRunnable1);
-      u.i("!44@/B4Tb64lLpIUGQfqwvb6VmX5eqzMRsqd7YUJg2KmvDA=", "post is null ? %B", new Object[] { Boolean.valueOf(false) });
+      ah.tF().a(paramRunnable1, 0);
+      v.i("MicroMsg.ProcessUploadHDHeadImg", "post is null ? %B", new Object[] { Boolean.valueOf(false) });
       return true;
+    }
+  }
+  
+  public final void onSceneEnd(int paramInt1, int paramInt2, String paramString, j paramj)
+  {
+    v.i("MicroMsg.ProcessUploadHDHeadImg", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
+    ah.tF().b(157, this);
+    if ((cUM != null) && (cUM.isShowing()) && ((context instanceof Activity)) && (!((Activity)context).isFinishing())) {}
+    label258:
+    for (;;)
+    {
+      try
+      {
+        cUM.dismiss();
+        if ((paramInt1 == 0) && (paramInt2 == 0))
+        {
+          Toast.makeText(context, 2131235179, 0).show();
+          if (iWR != null) {
+            new ac(Looper.getMainLooper()).post(iWR);
+          }
+          return;
+        }
+      }
+      catch (IllegalArgumentException paramString)
+      {
+        v.e("MicroMsg.ProcessUploadHDHeadImg", "dismiss dialog err" + paramString.getMessage());
+        continue;
+        if (iWS != null) {
+          new ac(Looper.getMainLooper()).post(iWS);
+        }
+        switch (paramInt1)
+        {
+        }
+      }
+      for (paramInt1 = 0;; paramInt1 = 1)
+      {
+        if (paramInt1 != 0) {
+          break label258;
+        }
+        Toast.makeText(context, 2131235178, 0).show();
+        return;
+        if (paramInt2 != -4) {
+          break;
+        }
+        Toast.makeText(context, 2131232000, 0).show();
+      }
     }
   }
 }

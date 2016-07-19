@@ -1,19 +1,23 @@
 package com.tencent.mm.plugin.sns.abtest;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.tencent.mm.plugin.sns.h.k;
+import com.tencent.mm.plugin.sns.i.k;
 
 final class a$4
-  implements View.OnClickListener
+  implements NotInterestMenu.c
 {
-  public final void onClick(View paramView)
+  public final void c(k paramk)
   {
-    if ((paramView.getTag() instanceof k))
-    {
-      k localk = (k)paramView.getTag();
-      a.a(paramView, paramView.getContext(), localk);
-    }
+    a.a(a.azQ(), paramk);
+  }
+  
+  public final void d(k paramk)
+  {
+    a.b(a.azQ(), paramk);
+  }
+  
+  public final void e(k paramk)
+  {
+    a.c(a.azQ(), paramk);
   }
 }
 

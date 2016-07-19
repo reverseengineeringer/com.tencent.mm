@@ -1,18 +1,14 @@
 package com.tencent.mm.ae;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
+import com.tencent.mm.e.a.io;
+import com.tencent.mm.sdk.c.c;
 
 final class a$2
-  implements DialogInterface.OnCancelListener
+  extends c<io>
 {
-  a$2(Runnable paramRunnable) {}
-  
-  public final void onCancel(DialogInterface paramDialogInterface)
+  a$2(a parama)
   {
-    if (bWT != null) {
-      bWT.run();
-    }
+    kum = io.class.getName().hashCode();
   }
 }
 

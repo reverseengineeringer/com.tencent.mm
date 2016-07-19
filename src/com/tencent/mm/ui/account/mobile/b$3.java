@@ -11,7 +11,7 @@ final class b$3
   
   public final void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    com.tencent.mm.plugin.a.b.b(true, ah.tx() + "," + getClass().getName() + ",F200_200," + ah.fd("F200_200") + ",2");
+    com.tencent.mm.plugin.a.b.b(true, ah.ty() + "," + getClass().getName() + ",F200_200," + ah.fq("F200_200") + ",2");
   }
 }
 

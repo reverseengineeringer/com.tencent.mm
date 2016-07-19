@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:paddingLeft="@dimen/j8" android:paddingRight="@dimen/j8" android:layout_width="fill_parent" android:layout_height="90.0dip">
+        <View android:id="@id/ai8" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginTop="40.5dip" android:layout_centerHorizontal="true" />
+        <View android:background="@drawable/ahk" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/ai8" />
+        <ImageView android:id="@id/ai9" android:layout_width="81.0dip" android:layout_height="81.0dip" android:src="@drawable/w5" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/ai_" android:layout_width="@dimen/i5" android:layout_height="@dimen/i5" android:src="@drawable/a15" android:layout_alignRight="@id/ai9" android:layout_alignBottom="@id/ai9" />
+    </RelativeLayout>
+    <include layout="@layout/exdevice_rank_info_item_other" />
+</LinearLayout>

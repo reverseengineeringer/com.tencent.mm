@@ -14,9 +14,9 @@
 # instance fields
 .field private final a:[B
 
-.field private final b:Lct/bj;
+.field private final b:Lct/bg;
 
-.field private final c:Lct/by;
+.field private final c:Lct/bv;
 
 
 # direct methods
@@ -24,33 +24,33 @@
     .locals 2
 
     .prologue
-    .line 49
+    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
+    .line 40
     const/4 v0, 0x0
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->a:[B
 
-    .line 55
-    invoke-static {p1}, Lct/bj;->a(Landroid/content/Context;)Lct/bj;
+    .line 54
+    invoke-static {p1}, Lct/bg;->a(Landroid/content/Context;)Lct/bg;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->b:Lct/bj;
+    iput-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->b:Lct/bg;
+
+    .line 55
+    new-instance v0, Lct/bv;
+
+    iget-object v1, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->b:Lct/bg;
+
+    invoke-direct {v0, v1}, Lct/bv;-><init>(Lct/bg;)V
+
+    iput-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->c:Lct/bv;
 
     .line 56
-    new-instance v0, Lct/by;
-
-    iget-object v1, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->b:Lct/bj;
-
-    invoke-direct {v0, v1}, Lct/by;-><init>(Lct/bj;)V
-
-    iput-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->c:Lct/by;
-
-    .line 60
     return-void
 .end method
 
@@ -58,15 +58,20 @@
     .locals 3
 
     .prologue
-    .line 74
+    .line 70
     const-class v1, Lcom/tencent/map/geolocation/TencentLocationManager;
 
     monitor-enter v1
 
+    :try_start_0
+    sget-object v0, Lcom/tencent/map/geolocation/TencentLocationManager;->d:Lcom/tencent/map/geolocation/TencentLocationManager;
+
+    if-nez v0, :cond_2
+
+    .line 71
     if-nez p0, :cond_0
 
-    .line 75
-    :try_start_0
+    .line 72
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string/jumbo v2, "context is null"
@@ -77,7 +82,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 74
+    .line 70
     :catchall_0
     move-exception v0
 
@@ -85,7 +90,7 @@
 
     throw v0
 
-    .line 77
+    .line 74
     :cond_0
     :try_start_1
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -94,7 +99,7 @@
 
     if-nez v0, :cond_1
 
-    .line 78
+    .line 75
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string/jumbo v2, "application context is null"
@@ -103,13 +108,8 @@
 
     throw v0
 
-    .line 80
+    .line 77
     :cond_1
-    sget-object v0, Lcom/tencent/map/geolocation/TencentLocationManager;->d:Lcom/tencent/map/geolocation/TencentLocationManager;
-
-    if-nez v0, :cond_2
-
-    .line 81
     new-instance v0, Lcom/tencent/map/geolocation/TencentLocationManager;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -120,7 +120,7 @@
 
     sput-object v0, Lcom/tencent/map/geolocation/TencentLocationManager;->d:Lcom/tencent/map/geolocation/TencentLocationManager;
 
-    .line 84
+    .line 80
     :cond_2
     sget-object v0, Lcom/tencent/map/geolocation/TencentLocationManager;->d:Lcom/tencent/map/geolocation/TencentLocationManager;
     :try_end_1
@@ -137,10 +137,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 296
+    .line 321
     if-nez p0, :cond_0
 
-    .line 299
+    .line 324
     :goto_0
     return v0
 
@@ -162,10 +162,10 @@
     .locals 2
 
     .prologue
-    .line 283
+    .line 308
     if-eqz p0, :cond_0
 
-    .line 284
+    .line 309
     invoke-virtual {p0}, Lcom/tencent/map/geolocation/TencentLocationRequest;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
@@ -174,7 +174,7 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 286
+    .line 311
     :cond_0
     return-object p0
 .end method
@@ -182,20 +182,22 @@
 
 # virtual methods
 .method public final getBuild()Ljava/lang/String;
-    .locals 1
+    .locals 4
 
     .prologue
-    .line 242
-    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->b:Lct/bj;
+    .line 267
+    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->b:Lct/bg;
 
-    invoke-virtual {v0}, Lct/bj;->i()Lct/bk;
+    const-wide/16 v2, -0x1
+
+    invoke-virtual {v0, v2, v3}, Lct/bg;->a(J)Lct/bh;
 
     move-result-object v0
 
-    .line 243
+    .line 268
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lct/bk;->e()Ljava/lang/String;
+    invoke-virtual {v0}, Lct/bh;->e()Ljava/lang/String;
 
     move-result-object v0
 
@@ -212,10 +214,10 @@
     .locals 1
 
     .prologue
-    .line 114
-    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->c:Lct/by;
+    .line 119
+    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->c:Lct/bv;
 
-    invoke-virtual {v0}, Lct/by;->d()I
+    invoke-virtual {v0}, Lct/bv;->f()I
 
     move-result v0
 
@@ -226,14 +228,14 @@
     .locals 1
 
     .prologue
-    .line 265
-    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->b:Lct/bj;
+    .line 290
+    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->b:Lct/bg;
 
-    invoke-virtual {v0}, Lct/bj;->h()Lct/bk;
+    invoke-virtual {v0}, Lct/bg;->g()Lct/bh;
 
     move-result-object v0
 
-    iget-object v0, v0, Lct/bk;->h:Ljava/lang/String;
+    iget-object v0, v0, Lct/bh;->h:Ljava/lang/String;
 
     invoke-static {v0}, Lct/b$a;->a(Ljava/lang/String;)Ljava/lang/String;
 
@@ -246,10 +248,10 @@
     .locals 1
 
     .prologue
-    .line 218
-    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->c:Lct/by;
+    .line 243
+    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->c:Lct/bv;
 
-    invoke-virtual {v0}, Lct/by;->a()Lcom/tencent/map/geolocation/TencentLocation;
+    invoke-virtual {v0}, Lct/bv;->a()Lcom/tencent/map/geolocation/TencentLocation;
 
     move-result-object v0
 
@@ -257,20 +259,22 @@
 .end method
 
 .method public final getVersion()Ljava/lang/String;
-    .locals 1
+    .locals 4
 
     .prologue
-    .line 247
-    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->b:Lct/bj;
+    .line 272
+    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->b:Lct/bg;
 
-    invoke-virtual {v0}, Lct/bj;->i()Lct/bk;
+    const-wide/16 v2, -0x1
+
+    invoke-virtual {v0, v2, v3}, Lct/bg;->a(J)Lct/bh;
 
     move-result-object v0
 
-    .line 248
+    .line 273
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lct/bk;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lct/bh;->d()Ljava/lang/String;
 
     move-result-object v0
 
@@ -283,22 +287,36 @@
     goto :goto_0
 .end method
 
+.method public final pauseLocationUpdates()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 203
+    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->c:Lct/bv;
+
+    invoke-virtual {v0}, Lct/bv;->e()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public final removeUpdates(Lcom/tencent/map/geolocation/TencentLocationListener;)V
     .locals 2
 
     .prologue
-    .line 230
+    .line 255
     iget-object v1, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->a:[B
 
     monitor-enter v1
 
-    .line 231
+    .line 256
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->c:Lct/by;
+    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->c:Lct/bv;
 
-    invoke-virtual {v0}, Lct/by;->c()V
+    invoke-virtual {v0}, Lct/bv;->c()V
 
-    .line 238
+    .line 263
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -317,7 +335,7 @@
     .locals 1
 
     .prologue
-    .line 132
+    .line 137
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -333,10 +351,10 @@
     .locals 2
 
     .prologue
-    .line 154
+    .line 159
     if-nez p1, :cond_0
 
-    .line 155
+    .line 160
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string/jumbo v1, "request is null"
@@ -345,11 +363,11 @@
 
     throw v0
 
-    .line 157
+    .line 162
     :cond_0
     if-nez p2, :cond_1
 
-    .line 158
+    .line 163
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string/jumbo v1, "listener is null"
@@ -358,11 +376,11 @@
 
     throw v0
 
-    .line 160
+    .line 165
     :cond_1
     if-nez p3, :cond_2
 
-    .line 161
+    .line 166
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string/jumbo v1, "looper is null"
@@ -371,17 +389,17 @@
 
     throw v0
 
-    .line 164
+    .line 169
     :cond_2
     iget-object v1, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->a:[B
 
     monitor-enter v1
 
-    .line 176
+    .line 181
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->c:Lct/by;
+    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->c:Lct/bv;
 
-    invoke-virtual {v0, p1, p2, p3}, Lct/by;->a(Lcom/tencent/map/geolocation/TencentLocationRequest;Lcom/tencent/map/geolocation/TencentLocationListener;Landroid/os/Looper;)I
+    invoke-virtual {v0, p1, p2, p3}, Lct/bv;->a(Lcom/tencent/map/geolocation/TencentLocationRequest;Lcom/tencent/map/geolocation/TencentLocationListener;Landroid/os/Looper;)I
 
     move-result v0
 
@@ -391,7 +409,7 @@
 
     return v0
 
-    .line 178
+    .line 183
     :catchall_0
     move-exception v0
 
@@ -400,30 +418,44 @@
     throw v0
 .end method
 
+.method public final resumeLocationUpdates()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 194
+    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->c:Lct/bv;
+
+    invoke-virtual {v0}, Lct/bv;->d()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public final setCoordinateType(I)V
     .locals 3
 
     .prologue
-    .line 99
+    .line 95
     const/4 v0, 0x1
 
     if-eq p1, v0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 101
+    .line 97
     :cond_0
     iget-object v1, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->a:[B
 
     monitor-enter v1
 
-    .line 102
+    .line 98
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->c:Lct/by;
+    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->c:Lct/bv;
 
-    invoke-virtual {v0, p1}, Lct/by;->a(I)V
+    invoke-virtual {v0, p1}, Lct/bv;->a(I)V
 
-    .line 103
+    .line 99
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -437,7 +469,7 @@
 
     throw v0
 
-    .line 105
+    .line 101
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -464,7 +496,7 @@
     .locals 3
 
     .prologue
-    .line 252
+    .line 277
     if-eqz p1, :cond_0
 
     const-string/jumbo v0, ""
@@ -496,17 +528,17 @@
 
     throw v0
 
-    .line 253
+    .line 278
     :cond_1
-    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->b:Lct/bj;
+    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->b:Lct/bg;
 
-    invoke-virtual {v0}, Lct/bj;->h()Lct/bk;
+    invoke-virtual {v0}, Lct/bg;->g()Lct/bh;
 
     move-result-object v0
 
-    iput-object p1, v0, Lct/bk;->h:Ljava/lang/String;
+    iput-object p1, v0, Lct/bh;->h:Ljava/lang/String;
 
-    .line 254
+    .line 279
     return-void
 .end method
 
@@ -514,10 +546,10 @@
     .locals 2
 
     .prologue
-    .line 192
+    .line 217
     if-nez p1, :cond_0
 
-    .line 193
+    .line 218
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string/jumbo v1, "listener is null"
@@ -526,17 +558,17 @@
 
     throw v0
 
-    .line 195
+    .line 220
     :cond_0
     iget-object v1, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->a:[B
 
     monitor-enter v1
 
-    .line 196
+    .line 221
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->c:Lct/by;
+    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->c:Lct/bv;
 
-    invoke-virtual {v0, p1}, Lct/by;->a(Lcom/tencent/map/geolocation/TencentDistanceListener;)I
+    invoke-virtual {v0, p1}, Lct/bv;->a(Lcom/tencent/map/geolocation/TencentDistanceListener;)I
 
     move-result v0
 
@@ -546,7 +578,7 @@
 
     return v0
 
-    .line 197
+    .line 222
     :catchall_0
     move-exception v0
 
@@ -559,16 +591,16 @@
     .locals 2
 
     .prologue
-    .line 209
+    .line 234
     iget-object v1, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->a:[B
 
     monitor-enter v1
 
-    .line 210
+    .line 235
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->c:Lct/by;
+    iget-object v0, p0, Lcom/tencent/map/geolocation/TencentLocationManager;->c:Lct/bv;
 
-    invoke-virtual {v0}, Lct/by;->b()Lcom/tencent/map/geolocation/TencentDistanceAnalysis;
+    invoke-virtual {v0}, Lct/bv;->b()Lcom/tencent/map/geolocation/TencentDistanceAnalysis;
 
     move-result-object v0
 
@@ -578,7 +610,7 @@
 
     return-object v0
 
-    .line 211
+    .line 236
     :catchall_0
     move-exception v0
 

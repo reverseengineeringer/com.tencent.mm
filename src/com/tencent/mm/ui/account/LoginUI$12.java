@@ -10,7 +10,7 @@ final class LoginUI$12
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    LoginUI.b(ktY);
+    LoginUI.b(kTf);
     return true;
   }
 }

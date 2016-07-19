@@ -7,7 +7,7 @@ import android.os.Parcelable.Creator;
 public class KVReportJni$IDKeyDataInfo
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new Parcelable.Creator()
+  public static final Parcelable.Creator<IDKeyDataInfo> CREATOR = new Parcelable.Creator()
   {
     public final KVReportJni.IDKeyDataInfo createFromParcel(Parcel paramAnonymousParcel)
     {

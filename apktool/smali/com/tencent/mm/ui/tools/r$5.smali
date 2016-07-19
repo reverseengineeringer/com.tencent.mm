@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic lxI:Lcom/tencent/mm/ui/tools/r;
+.field final synthetic lYx:Lcom/tencent/mm/ui/tools/r;
 
-.field final synthetic lxJ:Landroid/support/v4/app/FragmentActivity;
+.field final synthetic lYy:Landroid/support/v4/app/FragmentActivity;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 234
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/r$5;->lxI:Lcom/tencent/mm/ui/tools/r;
+    .line 235
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/r$5;->lYx:Lcom/tencent/mm/ui/tools/r;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/tools/r$5;->lxJ:Landroid/support/v4/app/FragmentActivity;
+    iput-object p2, p0, Lcom/tencent/mm/ui/tools/r$5;->lYy:Landroid/support/v4/app/FragmentActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,35 +40,35 @@
 
 
 # virtual methods
-.method public final af()Z
+.method public final ad()Z
     .locals 2
 
     .prologue
-    .line 238
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$5;->lxI:Lcom/tencent/mm/ui/tools/r;
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/r$5;->lxJ:Landroid/support/v4/app/FragmentActivity;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/r;->a(Landroid/support/v4/app/FragmentActivity;)V
-
     .line 239
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$5;->lYx:Lcom/tencent/mm/ui/tools/r;
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/r$5;->lYy:Landroid/support/v4/app/FragmentActivity;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/r;->d(Landroid/support/v4/app/FragmentActivity;)V
+
+    .line 240
     const/4 v0, 0x1
 
     return v0
 .end method
 
-.method public final ag()Z
+.method public final ae()Z
     .locals 2
 
     .prologue
-    .line 244
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$5;->lxI:Lcom/tencent/mm/ui/tools/r;
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/r$5;->lxJ:Landroid/support/v4/app/FragmentActivity;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/r;->b(Landroid/support/v4/app/FragmentActivity;)V
-
     .line 245
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/r$5;->lYx:Lcom/tencent/mm/ui/tools/r;
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/r$5;->lYy:Landroid/support/v4/app/FragmentActivity;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/r;->e(Landroid/support/v4/app/FragmentActivity;)V
+
+    .line 246
     const/4 v0, 0x1
 
     return v0

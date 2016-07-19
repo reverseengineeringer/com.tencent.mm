@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic krG:Lcom/tencent/mm/ui/account/a;
+.field final synthetic kQP:Lcom/tencent/mm/ui/account/a;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 56
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/a$1;->krG:Lcom/tencent/mm/ui/account/a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/a$1;->kQP:Lcom/tencent/mm/ui/account/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,7 +40,7 @@
     .locals 4
 
     .prologue
-    const v3, 0x7f0706d7
+    const v3, 0x7f100116
 
     const/4 v2, 0x0
 

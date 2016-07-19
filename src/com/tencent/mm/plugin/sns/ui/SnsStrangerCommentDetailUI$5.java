@@ -10,7 +10,7 @@ final class SnsStrangerCommentDetailUI$5
   
   public final boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    SnsStrangerCommentDetailUI.b(hiQ);
+    SnsStrangerCommentDetailUI.b(hxF);
     return true;
   }
 }

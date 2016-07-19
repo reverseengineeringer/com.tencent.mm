@@ -7,20 +7,20 @@ import android.os.Parcelable.Creator;
 public class BackwardSupportUtil$ExifHelper$LatLongData
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
-  public float aBn;
-  public float bRR;
+  public static final Parcelable.Creator<LatLongData> CREATOR = new Parcelable.Creator() {};
+  public float anF;
+  public float bLq;
   
   public BackwardSupportUtil$ExifHelper$LatLongData()
   {
-    aBn = 0.0F;
-    bRR = 0.0F;
+    anF = 0.0F;
+    bLq = 0.0F;
   }
   
   public BackwardSupportUtil$ExifHelper$LatLongData(float paramFloat1, float paramFloat2)
   {
-    aBn = paramFloat1;
-    bRR = paramFloat2;
+    anF = paramFloat1;
+    bLq = paramFloat2;
   }
   
   public int describeContents()
@@ -35,19 +35,19 @@ public class BackwardSupportUtil$ExifHelper$LatLongData
     {
       return false;
       paramObject = (LatLongData)paramObject;
-    } while ((Math.abs(aBn - aBn) >= 1.0E-6F) || (Math.abs(bRR - bRR) >= 1.0E-6F));
+    } while ((Math.abs(anF - anF) >= 1.0E-6F) || (Math.abs(bLq - bLq) >= 1.0E-6F));
     return true;
   }
   
   public int hashCode()
   {
-    return (int)(aBn * 10000.0F) + (int)(bRR * 10000.0F);
+    return (int)(anF * 10000.0F) + (int)(bLq * 10000.0F);
   }
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    paramParcel.writeFloat(aBn);
-    paramParcel.writeFloat(bRR);
+    paramParcel.writeFloat(anF);
+    paramParcel.writeFloat(bLq);
   }
 }
 

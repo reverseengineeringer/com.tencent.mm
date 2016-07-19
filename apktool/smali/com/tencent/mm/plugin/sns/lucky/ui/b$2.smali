@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic gJF:Landroid/app/Dialog;
+.field final synthetic gRg:Landroid/app/Dialog;
 
-.field final synthetic gJG:Landroid/view/View;
+.field final synthetic gRh:Landroid/view/View;
 
 
 # direct methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 62
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/b$2;->gJF:Landroid/app/Dialog;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/b$2;->gRg:Landroid/app/Dialog;
 
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/b$2;->gJG:Landroid/view/View;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/b$2;->gRh:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,18 +45,18 @@
 
     .prologue
     .line 65
-    const-string/jumbo v0, "!44@/B4Tb64lLpLSajhxpVlTMGlBinPXjNgyDjQxfdmLgIY="
+    const-string/jumbo v0, "MicroMsg.SnsLuckyCommentAlertUI"
 
     const-string/jumbo v1, "showTipsDialog onClick"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 67
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/b$2;->gJF:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/b$2;->gRg:Landroid/app/Dialog;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/b$2;->gJF:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/b$2;->gRg:Landroid/app/Dialog;
 
     invoke-virtual {v0}, Landroid/app/Dialog;->isShowing()Z
 
@@ -65,13 +65,13 @@
     if-eqz v0, :cond_0
 
     .line 68
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/b$2;->gJF:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/b$2;->gRg:Landroid/app/Dialog;
 
     invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
     .line 70
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/b$2;->gJG:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/lucky/ui/b$2;->gRh:Landroid/view/View;
 
     .line 71
     if-eqz v0, :cond_1

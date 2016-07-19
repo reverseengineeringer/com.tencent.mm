@@ -15,7 +15,7 @@ public class SQLiteCursor
 {
   static final int NO_COUNT = -1;
   static final String TAG = "MicroMsg.kkdb.SQLiteCursor";
-  private Map mColumnNameMap;
+  private Map<String, Integer> mColumnNameMap;
   private final String[] mColumns;
   private int mCount = -1;
   private int mCursorWindowCapacity;
@@ -87,40 +87,47 @@ public class SQLiteCursor
     mDriver.cursorDeactivated();
   }
   
+  protected void finalize()
+  {
+    try
+    {
+      if (mWindow != null) {
+        close();
+      }
+      return;
+    }
+    finally
+    {
+      super.finalize();
+    }
+  }
+  
   public int getColumnIndex(String paramString)
   {
-    Object localObject;
-    int j;
-    HashMap localHashMap;
-    int i;
     if (mColumnNameMap == null)
     {
       localObject = mColumns;
-      j = localObject.length;
-      localHashMap = new HashMap(j, 1.0F);
+      int j = localObject.length;
+      HashMap localHashMap = new HashMap(j, 1.0F);
       i = 0;
-    }
-    for (;;)
-    {
-      if (i >= j)
+      while (i < j)
       {
-        mColumnNameMap = localHashMap;
-        i = paramString.lastIndexOf('.');
-        localObject = paramString;
-        if (i != -1)
-        {
-          localObject = new Exception();
-          Log.e("MicroMsg.kkdb.SQLiteCursor", "requesting column name with table name -- " + paramString, new Object[] { localObject });
-          localObject = paramString.substring(i + 1);
-        }
-        paramString = (Integer)mColumnNameMap.get(localObject);
-        if (paramString == null) {
-          break;
-        }
-        return paramString.intValue();
+        localHashMap.put(localObject[i], Integer.valueOf(i));
+        i += 1;
       }
-      localHashMap.put(localObject[i], Integer.valueOf(i));
-      i += 1;
+      mColumnNameMap = localHashMap;
+    }
+    int i = paramString.lastIndexOf('.');
+    Object localObject = paramString;
+    if (i != -1)
+    {
+      localObject = new Exception();
+      Log.e("MicroMsg.kkdb.SQLiteCursor", "requesting column name with table name -- " + paramString, new Object[] { localObject });
+      localObject = paramString.substring(i + 1);
+    }
+    paramString = (Integer)mColumnNameMap.get(localObject);
+    if (paramString != null) {
+      return paramString.intValue();
     }
     return -1;
   }

@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk;
 
 public final class i$ah
 {
-  public static i.s iyY;
+  public static i.s iVu;
 }
 
 /* Location:

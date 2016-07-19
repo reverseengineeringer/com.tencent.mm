@@ -8,15 +8,15 @@ import java.io.RandomAccessFile;
 
 public final class a
 {
-  a akx;
-  public b aky = null;
+  a Xq;
+  public b Xr = null;
   
   public a(b paramb)
   {
-    aky = paramb;
+    Xr = paramb;
   }
   
-  public static a aG(String paramString)
+  public static a aL(String paramString)
   {
     int i = 0;
     if (paramString == null) {
@@ -38,15 +38,15 @@ public final class a
         i = (int)((File)localObject).length();
       }
       catch (Exception paramString) {}
-      localObject = a.t(d(paramString, i - 8, 8));
-    } while ((localObject == null) || (akA < 0));
-    paramString = new a(b.u(d(paramString, i - akA - 8, akA)));
-    akx = ((a)localObject);
+      localObject = a.p(d(paramString, i - 8, 8));
+    } while ((localObject == null) || (Xt < 0));
+    paramString = new a(b.q(d(paramString, i - Xt - 8, Xt)));
+    Xq = ((a)localObject);
     return paramString;
     return null;
   }
   
-  public static boolean aH(String paramString)
+  public static boolean aM(String paramString)
   {
     if (paramString == null) {}
     for (;;)
@@ -55,14 +55,14 @@ public final class a
       File localFile = new File(paramString);
       if (localFile.exists())
       {
-        a locala = aG(paramString);
-        if ((locala != null) && (aky != null)) {
+        a locala = aL(paramString);
+        if ((locala != null) && (Xr != null)) {
           try
           {
             paramString = new File(paramString);
             if (paramString.exists())
             {
-              boolean bool = aky.apkMd5.equalsIgnoreCase(g.a(paramString, (int)(localFile.length() - (akx.akA + 8) - 2L), new byte[] { 0, 0 }));
+              boolean bool = Xr.apkMd5.equalsIgnoreCase(g.a(paramString, (int)(localFile.length() - (Xq.Xt + 8) - 2L), new byte[] { 0, 0 }));
               return bool;
             }
           }
@@ -126,14 +126,14 @@ public final class a
   {
     try
     {
-      if (aG(paramFile.getAbsolutePath()) != null)
+      if (aL(paramFile.getAbsolutePath()) != null)
       {
         System.out.println("Error: duplicate append apk external info!");
         return -1;
       }
-      byte[] arrayOfByte = aky.toByteArray();
+      byte[] arrayOfByte = Xr.toByteArray();
       Object localObject = new a(arrayOfByte.length);
-      localObject = a.m(a.akz << 32 | akA);
+      localObject = a.n(a.Xs << 32 | Xt);
       int i = (byte)((arrayOfByte.length + 8) % 256);
       int j = (byte)((arrayOfByte.length + 8) / 256);
       RandomAccessFile localRandomAccessFile = new RandomAccessFile(paramFile, "rw");
@@ -153,15 +153,15 @@ public final class a
   
   public static final class a
   {
-    static final long akz = "Micromsg".hashCode();
-    public int akA = 0;
+    static final long Xs = "Micromsg".hashCode();
+    public int Xt = 0;
     
     public a(int paramInt)
     {
-      akA = paramInt;
+      Xt = paramInt;
     }
     
-    static byte[] m(long paramLong)
+    static byte[] n(long paramLong)
     {
       byte[] arrayOfByte = new byte[8];
       int i = 0;
@@ -175,7 +175,7 @@ public final class a
       }
     }
     
-    public static a t(byte[] paramArrayOfByte)
+    public static a p(byte[] paramArrayOfByte)
     {
       if (paramArrayOfByte.length == 8)
       {
@@ -185,7 +185,7 @@ public final class a
         {
           if (i >= paramArrayOfByte.length)
           {
-            if (l >> 32 != akz) {
+            if (l >> 32 != Xs) {
               break;
             }
             return new a((int)l);

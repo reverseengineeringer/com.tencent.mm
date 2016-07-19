@@ -3,17 +3,17 @@ package com.tencent.mm.ui.tools;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import com.tencent.mm.model.ah;
-import com.tencent.mm.modelsimple.t;
-import com.tencent.mm.r.m;
+import com.tencent.mm.modelsimple.r;
+import com.tencent.mm.t.m;
 
 final class NewTaskUI$2$1
   implements DialogInterface.OnCancelListener
 {
-  NewTaskUI$2$1(NewTaskUI.2 param2, t paramt) {}
+  NewTaskUI$2$1(NewTaskUI.2 param2, r paramr) {}
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    ah.tE().c(ktw);
+    ah.tF().c(kSE);
   }
 }
 

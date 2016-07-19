@@ -7,7 +7,7 @@ final class VideoPlayView$4
   
   public final void run()
   {
-    gzd.avZ();
+    gFG.ayw();
   }
 }
 

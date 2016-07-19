@@ -13,25 +13,53 @@
 
 
 # instance fields
-.field private cHr:Landroid/widget/TextView;
+.field private cEv:Landroid/widget/TextView;
 
-.field private faT:Ljava/util/List;
+.field private fjr:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/tencent/mm/storage/k;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private lkA:Lcom/tencent/mm/ui/contact/GroupCardSelectUI$a;
+.field private lKF:Z
 
-.field private lkB:Ljava/util/HashMap;
+.field private lKG:Z
 
-.field private lku:Z
+.field private lKH:Z
 
-.field private lkv:Z
+.field private lKI:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private lkw:Z
+.field private lKJ:I
 
-.field private lkx:Ljava/util/List;
+.field private lKK:Landroid/widget/ListView;
 
-.field private lky:I
+.field private lKL:Lcom/tencent/mm/ui/contact/GroupCardSelectUI$a;
 
-.field private lkz:Landroid/widget/ListView;
+.field private lKM:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -45,30 +73,30 @@
     .line 43
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lku:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKF:Z
 
     .line 46
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkw:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKH:Z
 
     .line 47
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkx:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKI:Ljava/util/List;
 
     .line 224
     return-void
 .end method
 
-.method private Nk()V
+.method private PH()V
     .locals 6
 
     .prologue
     const/4 v5, 0x1
 
     .line 303
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkw:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKH:Z
 
     if-eqz v0, :cond_0
 
@@ -77,7 +105,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v1, 0x7f0b0de8
+    const v1, 0x7f0800f7
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->getString(I)Ljava/lang/String;
 
@@ -87,7 +115,7 @@
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkx:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKI:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -101,7 +129,7 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkx:Ljava/util/List;
+    iget-object v4, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKI:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -126,7 +154,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v5, v0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->ad(ILjava/lang/String;)V
+    invoke-virtual {p0, v5, v0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->an(ILjava/lang/String;)V
 
     .line 306
     :cond_0
@@ -144,13 +172,13 @@
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkA:Lcom/tencent/mm/ui/contact/GroupCardSelectUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKL:Lcom/tencent/mm/ui/contact/GroupCardSelectUI$a;
 
     return-object v0
 .end method
 
 .method private a(ILcom/tencent/mm/storage/k;J)V
-    .locals 4
+    .locals 5
 
     .prologue
     .line 202
@@ -162,9 +190,9 @@
     if-ge v1, p1, :cond_0
 
     .line 203
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkB:Ljava/util/HashMap;
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKM:Ljava/util/HashMap;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->faT:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->fjr:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -172,7 +200,7 @@
 
     check-cast v0, Lcom/tencent/mm/storage/k;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -198,7 +226,7 @@
 
     .line 208
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->faT:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->fjr:Ljava/util/List;
 
     invoke-interface {v0, v1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
@@ -217,13 +245,13 @@
     const/4 v4, -0x1
 
     .line 40
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkw:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKH:Z
 
     if-eqz v2, :cond_3
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkx:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKI:Ljava/util/List;
 
-    iget-object v3, p1, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v3, p1, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     invoke-interface {v2, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -231,15 +259,15 @@
 
     if-eqz v2, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkx:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKI:Ljava/util/List;
 
-    iget-object v1, p1, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     :cond_0
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkA:Lcom/tencent/mm/ui/contact/GroupCardSelectUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKL:Lcom/tencent/mm/ui/contact/GroupCardSelectUI$a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI$a;->notifyDataSetChanged()V
 
@@ -247,25 +275,25 @@
     return-void
 
     :cond_1
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkw:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKH:Z
 
     if-eqz v2, :cond_2
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkx:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKI:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v2
 
-    iget v3, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lky:I
+    iget v3, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKJ:I
 
     if-lt v2, v3, :cond_2
 
-    const v2, 0x7f0b01ec
+    const v2, 0x7f08101f
 
     new-array v3, v0, [Ljava/lang/Object;
 
-    iget v4, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lky:I
+    iget v4, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKJ:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -277,11 +305,11 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+    iget-object v2, p0, Lcom/tencent/mm/ui/MMActivity;->kNN:Lcom/tencent/mm/ui/j;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v2, v2, Lcom/tencent/mm/ui/j;->kOg:Landroid/support/v7/app/ActionBarActivity;
 
-    const v3, 0x7f0b0e63
+    const v3, 0x7f080118
 
     invoke-virtual {p0, v3}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->getString(I)Ljava/lang/String;
 
@@ -296,9 +324,9 @@
     :goto_2
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkx:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKI:Ljava/util/List;
 
-    iget-object v1, p1, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -310,11 +338,11 @@
     goto :goto_2
 
     :cond_3
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lku:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKF:Z
 
     if-eqz v0, :cond_5
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkv:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKG:Z
 
     if-eqz v0, :cond_4
 
@@ -324,7 +352,7 @@
 
     const-string/jumbo v1, "Select_Conv_User"
 
-    iget-object v2, p1, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -347,7 +375,7 @@
 
     const-string/jumbo v1, "Chat_User"
 
-    iget-object v2, p1, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -362,17 +390,17 @@
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rw()Lcom/tencent/mm/storage/f;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->ry()Lcom/tencent/mm/storage/f;
 
     move-result-object v1
 
-    iget-object v2, p1, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/f;->DW(Ljava/lang/String;)Ljava/util/List;
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/f;->Gl(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
 
@@ -380,7 +408,7 @@
 
     const-string/jumbo v3, ","
 
-    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -388,9 +416,9 @@
 
     const-string/jumbo v1, "Select_room_name"
 
-    iget-object v2, p1, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/tencent/mm/model/i;->dY(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/model/i;->ej(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -408,13 +436,13 @@
 
     .prologue
     .line 40
-    invoke-direct {p0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->Nk()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->PH()V
 
     return-void
 .end method
 
-.method private bhn()V
-    .locals 13
+.method private bmX()V
+    .locals 14
 
     .prologue
     const/4 v10, 0x1
@@ -424,23 +452,23 @@
     const/4 v9, 0x0
 
     .line 176
-    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/s;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ru()Lcom/tencent/mm/storage/s;
 
     move-result-object v0
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v11
+    move-result-wide v12
 
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
-    iget-object v0, v0, Lcom/tencent/mm/storage/s;->aoX:Lcom/tencent/mm/sdk/h/d;
+    iget-object v0, v0, Lcom/tencent/mm/storage/s;->bkP:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v1, "rconversation"
 
@@ -479,17 +507,17 @@
     move-object v0, v8
 
     :goto_0
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkB:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKM:Ljava/util/HashMap;
 
     .line 177
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->faT:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->fjr:Ljava/util/List;
 
     .line 178
-    invoke-static {}, Lcom/tencent/mm/model/i;->sO()Ljava/util/List;
+    invoke-static {}, Lcom/tencent/mm/model/i;->sN()Ljava/util/List;
 
     move-result-object v3
 
@@ -566,7 +594,7 @@
     :cond_4
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpJN/RyYD3u7HK+YneAQ/0gN4D0Emw3Mmi8="
+    const-string/jumbo v0, "MicroMsg.ConversationStorage"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -578,7 +606,7 @@
 
     move-result-wide v2
 
-    sub-long/2addr v2, v11
+    sub-long/2addr v2, v12
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -588,7 +616,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v8
 
@@ -618,9 +646,9 @@
     check-cast v0, Lcom/tencent/mm/storage/k;
 
     .line 186
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkB:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKM:Ljava/util/HashMap;
 
-    iget-object v5, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v5, v0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     invoke-virtual {v1, v5}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -629,16 +657,16 @@
     if-nez v1, :cond_6
 
     .line 187
-    iget v1, v0, Lcom/tencent/mm/d/b/p;->field_type:I
+    iget v1, v0, Lcom/tencent/mm/e/b/p;->field_type:I
 
-    invoke-static {v1}, Lcom/tencent/mm/h/a;->ce(I)Z
+    invoke-static {v1}, Lcom/tencent/mm/i/a;->cy(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_8
 
     .line 188
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->faT:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->fjr:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -646,9 +674,9 @@
 
     .line 191
     :cond_6
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkB:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKM:Ljava/util/HashMap;
 
-    iget-object v5, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+    iget-object v5, v0, Lcom/tencent/mm/e/b/p;->field_username:Ljava/lang/String;
 
     invoke-virtual {v1, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -658,10 +686,10 @@
 
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v5
+    move-result-wide v6
 
     .line 192
-    invoke-direct {p0, v2, v0, v5, v6}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->a(ILcom/tencent/mm/storage/k;J)V
+    invoke-direct {p0, v2, v0, v6, v7}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->a(ILcom/tencent/mm/storage/k;J)V
 
     .line 193
     add-int/lit8 v0, v2, 0x1
@@ -689,7 +717,7 @@
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->faT:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->fjr:Ljava/util/List;
 
     return-object v0
 .end method
@@ -699,7 +727,7 @@
 
     .prologue
     .line 40
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkw:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKH:Z
 
     return v0
 .end method
@@ -709,19 +737,19 @@
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkx:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKI:Ljava/util/List;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method protected final Gb()V
+.method protected final Gy()V
     .locals 2
 
     .prologue
     .line 136
-    const v0, 0x7f07020d
+    const v0, 0x7f1008f4
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->findViewById(I)Landroid/view/View;
 
@@ -729,24 +757,24 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkz:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKK:Landroid/widget/ListView;
 
     .line 137
     new-instance v0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI$a;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI$a;-><init>(Lcom/tencent/mm/ui/contact/GroupCardSelectUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkA:Lcom/tencent/mm/ui/contact/GroupCardSelectUI$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKL:Lcom/tencent/mm/ui/contact/GroupCardSelectUI$a;
 
     .line 138
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkz:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKK:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkA:Lcom/tencent/mm/ui/contact/GroupCardSelectUI$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKL:Lcom/tencent/mm/ui/contact/GroupCardSelectUI$a;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 139
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkz:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKK:Landroid/widget/ListView;
 
     new-instance v1, Lcom/tencent/mm/ui/contact/GroupCardSelectUI$1;
 
@@ -755,7 +783,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 155
-    const v0, 0x7f07020e
+    const v0, 0x7f1008f5
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->findViewById(I)Landroid/view/View;
 
@@ -763,10 +791,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->cHr:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->cEv:Landroid/widget/TextView;
 
     .line 157
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkA:Lcom/tencent/mm/ui/contact/GroupCardSelectUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKL:Lcom/tencent/mm/ui/contact/GroupCardSelectUI$a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI$a;->getCount()I
 
@@ -775,7 +803,7 @@
     if-gtz v0, :cond_0
 
     .line 158
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->cHr:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->cEv:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
@@ -794,7 +822,7 @@
 
     .line 160
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->cHr:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->cEv:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 
@@ -808,7 +836,7 @@
 
     .prologue
     .line 214
-    const v0, 0x7f0a00b8
+    const v0, 0x7f0302cc
 
     return v0
 .end method
@@ -825,13 +853,13 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 60
-    const v0, 0x7f0b03ee
+    const v0, 0x7f08007b
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->Gj(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->Ah(Ljava/lang/String;)V
 
     .line 61
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->getIntent()Landroid/content/Intent;
@@ -844,7 +872,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lku:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKF:Z
 
     .line 62
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->getIntent()Landroid/content/Intent;
@@ -857,7 +885,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkv:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKG:Z
 
     .line 64
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->getIntent()Landroid/content/Intent;
@@ -870,10 +898,10 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkw:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKH:Z
 
     .line 65
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkw:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKH:Z
 
     if-eqz v0, :cond_0
 
@@ -889,7 +917,7 @@
     move-result-object v0
 
     .line 67
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->kf(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -900,7 +928,7 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkx:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKI:Ljava/util/List;
 
     .line 72
     :goto_0
@@ -914,22 +942,22 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lky:I
+    iput v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKJ:I
 
     .line 74
     :cond_0
-    invoke-direct {p0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->bhn()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->bmX()V
 
     .line 75
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->Gb()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->Gy()V
 
     .line 77
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkw:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKH:Z
 
     if-eqz v0, :cond_1
 
     .line 78
-    const v0, 0x7f0b0de8
+    const v0, 0x7f0800f7
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->getString(I)Ljava/lang/String;
 
@@ -939,13 +967,13 @@
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI$3;-><init>(Lcom/tencent/mm/ui/contact/GroupCardSelectUI;)V
 
-    sget v2, Lcom/tencent/mm/ui/j$b;->kpJ:I
+    sget v2, Lcom/tencent/mm/ui/j$b;->kOO:I
 
     invoke-virtual {p0, v3, v0, v1, v2}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->a(ILjava/lang/String;Landroid/view/MenuItem$OnMenuItemClickListener;I)V
 
     invoke-virtual {p0, v3, v3}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->M(IZ)V
 
-    invoke-direct {p0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->Nk()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->PH()V
 
     .line 80
     :cond_1
@@ -959,11 +987,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/t;->h([Ljava/lang/String;)Ljava/util/List;
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/s;->g([Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lkx:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/GroupCardSelectUI;->lKI:Ljava/util/List;
 
     goto :goto_0
 .end method

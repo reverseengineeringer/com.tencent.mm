@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # annotations
@@ -12,23 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
 .end annotation
 
 
-# instance fields
-.field final synthetic hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/plugin/sns/ui/aw;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 31
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,347 +30,53 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final onDismiss(Landroid/content/DialogInterface;)V
+    .locals 3
 
     .prologue
-    .line 34
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
+    const v2, 0x10b21
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/aw;->gWB:Landroid/widget/ListView;
+    .line 26
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
-    if-eqz v0, :cond_3
+    move-result-object v0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/aw;->gWB:Landroid/widget/ListView;
+    move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/ListView;->getCount()I
+    const/4 v1, 0x0
 
-    move-result v0
+    invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
+    move-result-object v0
 
-    iget v1, v1, Lcom/tencent/mm/plugin/sns/ui/aw;->position:I
+    check-cast v0, Ljava/lang/Integer;
 
-    if-le v0, v1, :cond_3
+    const/4 v1, 0x0
 
-    .line 35
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/aw;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->getTop()I
-
-    move-result v1
-
-    .line 36
-    const-string/jumbo v0, "!56@/B4Tb64lLpKrDzi69O5I2aq965KYeg3mKhByxKp1S2RFnuACj6WZIw=="
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v3, "limitCount: "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget v3, v3, Lcom/tencent/mm/plugin/sns/ui/aw;->hmI:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string/jumbo v3, " footerHeight:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/aw;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
-
-    invoke-virtual {v3}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->getHeight()I
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string/jumbo v3, " listOriginalBottom: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget v3, v3, Lcom/tencent/mm/plugin/sns/ui/aw;->hco:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 37
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sns/ui/aw;->a(Lcom/tencent/mm/plugin/sns/ui/aw;)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/lang/Integer;I)I
 
     move-result v0
 
-    if-lez v0, :cond_2
+    .line 27
+    add-int/lit8 v0, v0, 0x1
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
+    .line 28
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/model/c;
 
-    iget v0, v0, Lcom/tencent/mm/plugin/sns/ui/aw;->hdw:I
+    move-result-object v1
 
-    if-ne v0, v1, :cond_0
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->ro()Lcom/tencent/mm/storage/h;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
+    move-result-object v1
 
-    iget v0, v0, Lcom/tencent/mm/plugin/sns/ui/aw;->hco:I
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    add-int/lit16 v0, v0, -0xc8
+    move-result-object v0
 
-    if-gt v1, v0, :cond_0
+    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sns/ui/aw;->gWB:Landroid/widget/ListView;
-
-    invoke-virtual {v0}, Landroid/widget/ListView;->getBottom()I
-
-    move-result v0
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget v2, v2, Lcom/tencent/mm/plugin/sns/ui/aw;->hco:I
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/aw;->gWE:Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;
-
-    invoke-virtual {v3}, Lcom/tencent/mm/plugin/sns/ui/SnsCommentFooter;->getHeight()I
-
-    move-result v3
-
-    sub-int/2addr v2, v3
-
-    add-int/lit16 v2, v2, -0x96
-
-    if-le v0, v2, :cond_2
-
-    .line 38
-    :cond_0
-    const/16 v0, 0xa
-
-    .line 39
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget v2, v2, Lcom/tencent/mm/plugin/sns/ui/aw;->hmI:I
-
-    if-nez v2, :cond_1
-
-    .line 40
-    const/16 v0, 0xc8
-
-    .line 42
-    :cond_1
-    new-instance v2, Lcom/tencent/mm/sdk/platformtools/aa;
-
-    invoke-direct {v2}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
-
-    int-to-long v3, v0
-
-    invoke-virtual {v2, p0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/aa;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    .line 45
-    :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iput v1, v0, Lcom/tencent/mm/plugin/sns/ui/aw;->hdw:I
-
-    .line 46
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget v0, v0, Lcom/tencent/mm/plugin/sns/ui/aw;->hdw:I
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget v1, v1, Lcom/tencent/mm/plugin/sns/ui/aw;->hmG:I
-
-    sub-int/2addr v0, v1
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget v1, v1, Lcom/tencent/mm/plugin/sns/ui/aw;->hmE:I
-
-    sub-int/2addr v0, v1
-
-    .line 47
-    const-string/jumbo v1, "!56@/B4Tb64lLpKrDzi69O5I2aq965KYeg3mKhByxKp1S2RFnuACj6WZIw=="
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v3, "itemH:"
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget v3, v3, Lcom/tencent/mm/plugin/sns/ui/aw;->hmE:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string/jumbo v3, " footerTop"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget v3, v3, Lcom/tencent/mm/plugin/sns/ui/aw;->hdw:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string/jumbo v3, " list.bottom:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/aw;->gWB:Landroid/widget/ListView;
-
-    invoke-virtual {v3}, Landroid/widget/ListView;->getBottom()I
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string/jumbo v3, " position: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget v3, v3, Lcom/tencent/mm/plugin/sns/ui/aw;->position:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string/jumbo v3, " topselection: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 48
-    const-string/jumbo v1, "!56@/B4Tb64lLpKrDzi69O5I2aq965KYeg3mKhByxKp1S2RFnuACj6WZIw=="
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v3, "list.getTop(): "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/aw;->gWB:Landroid/widget/ListView;
-
-    invoke-virtual {v3}, Landroid/widget/ListView;->getTop()I
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string/jumbo v3, " marginTop: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget v3, v3, Lcom/tencent/mm/plugin/sns/ui/aw;->hmG:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string/jumbo v3, " footerTop "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget v3, v3, Lcom/tencent/mm/plugin/sns/ui/aw;->hdw:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 49
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sns/ui/aw;->gWB:Landroid/widget/ListView;
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget v2, v2, Lcom/tencent/mm/plugin/sns/ui/aw;->position:I
-
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sns/ui/aw$1;->hmN:Lcom/tencent/mm/plugin/sns/ui/aw;
-
-    iget-object v3, v3, Lcom/tencent/mm/plugin/sns/ui/aw;->gWB:Landroid/widget/ListView;
-
-    invoke-virtual {v3}, Landroid/widget/ListView;->getHeaderViewsCount()I
-
-    move-result v3
-
-    add-int/2addr v2, v3
-
-    invoke-virtual {v1, v2, v0}, Landroid/widget/ListView;->setSelectionFromTop(II)V
-
-    .line 52
-    :cond_3
+    .line 29
     return-void
 .end method

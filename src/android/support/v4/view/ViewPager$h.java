@@ -1,9 +1,10 @@
 package android.support.v4.view;
 
+import android.view.View;
 import java.util.Comparator;
 
 final class ViewPager$h
-  implements Comparator
+  implements Comparator<View>
 {}
 
 /* Location:

@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic pD:Landroid/support/v7/internal/widget/c;
+.field final synthetic pR:Landroid/support/v7/internal/widget/c;
 
-.field private final pE:Landroid/support/v7/internal/widget/c$b;
+.field private final pS:Landroid/support/v7/internal/widget/c$b;
 
 
 # direct methods
@@ -29,12 +29,12 @@
 
     .prologue
     .line 265
-    iput-object p1, p0, Landroid/support/v7/internal/widget/c$c;->pD:Landroid/support/v7/internal/widget/c;
+    iput-object p1, p0, Landroid/support/v7/internal/widget/c$c;->pR:Landroid/support/v7/internal/widget/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 266
-    iput-object p2, p0, Landroid/support/v7/internal/widget/c$c;->pE:Landroid/support/v7/internal/widget/c$b;
+    iput-object p2, p0, Landroid/support/v7/internal/widget/c$c;->pS:Landroid/support/v7/internal/widget/c$b;
 
     .line 267
     return-void
@@ -44,10 +44,19 @@
 # virtual methods
 .method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
     .line 271
-    iget-object v0, p0, Landroid/support/v7/internal/widget/c$c;->pE:Landroid/support/v7/internal/widget/c$b;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/c$c;->pS:Landroid/support/v7/internal/widget/c$b;
 
     invoke-interface {v0, p2, p3}, Landroid/support/v7/internal/widget/c$b;->i(Landroid/view/View;I)V
 

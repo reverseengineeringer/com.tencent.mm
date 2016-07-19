@@ -1,26 +1,26 @@
 package com.tencent.mm.plugin.sns.ui;
 
 import android.view.View;
-import com.tencent.mm.protocal.b.apz;
+import com.tencent.mm.protocal.b.aqk;
 
 public final class j
 {
-  public int asc = -1;
-  public Object bOa;
-  public String eiB = "";
-  public String fsI = "";
-  public apz gNf;
-  public String gXv = "";
-  public View gXw;
+  public String emC = "";
+  public String fBO = "";
+  public aqk gUR;
+  public String hkH = "";
+  public View hkI;
+  public int scene = -1;
+  public Object tag;
   
-  public j(String paramString1, apz paramapz, String paramString2, String paramString3, View paramView, int paramInt)
+  public j(String paramString1, aqk paramaqk, String paramString2, String paramString3, View paramView, int paramInt)
   {
-    gXv = paramString1;
-    gNf = paramapz;
-    eiB = paramString2;
-    fsI = paramString3;
-    gXw = paramView;
-    asc = paramInt;
+    hkH = paramString1;
+    gUR = paramaqk;
+    emC = paramString2;
+    fBO = paramString3;
+    hkI = paramView;
+    scene = paramInt;
   }
 }
 

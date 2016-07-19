@@ -2,11 +2,11 @@ package com.tencent.mm.ui.widget;
 
 public enum QImageView$a
 {
-  final int lGw;
+  final int mhK;
   
-  private QImageView$a(int paramInt1)
+  private QImageView$a(int paramInt)
   {
-    lGw = paramInt1;
+    mhK = paramInt;
   }
 }
 

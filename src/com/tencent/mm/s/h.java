@@ -1,121 +1,96 @@
 package com.tencent.mm.s;
 
-import com.tencent.mm.model.ap.a;
-import com.tencent.mm.model.ap.c;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.modelgeo.b.a;
-import com.tencent.mm.p.c;
-import com.tencent.mm.sdk.g.ao.b;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.q;
-import org.json.JSONObject;
+import android.content.ContentValues;
+import android.database.Cursor;
+import com.tencent.mm.sdk.platformtools.be;
 
 public final class h
 {
-  String avY = null;
-  int bwb = 0;
-  private com.tencent.mm.modelgeo.d bwc;
-  private int bwd = 2;
-  int bwe = 10;
-  ao.b bwf = new i(this);
-  private b.a bwg = new j(this);
+  public int aFc = 0;
+  public int aqQ = -1;
+  int bxH = 0;
+  public String bxI = "";
+  public String bxJ = "";
+  private int bxK = 0;
+  int bxL = 0;
+  public String username = "";
   
-  protected h()
+  public final void ap(boolean paramBoolean)
   {
-    if (bwe < bwd) {
-      bwe = bwd;
-    }
-    t.i("!32@/B4Tb64lLpL9SB0DqhCSWgFPYrICdb5Q", "reportLocation interval %d", new Object[] { Integer.valueOf(bwe) });
-  }
-  
-  public static void a(String paramString, int paramInt1, int paramInt2, float paramFloat1, float paramFloat2, int paramInt3)
-  {
-    if (paramInt2 == 3) {}
-    for (String str = "<event></event>";; str = String.format("<event><location><errcode>%d</errcode><data><latitude>%f</latitude><longitude>%f</longitude><precision>%d</precision></data></location></event>", new Object[] { Integer.valueOf(paramInt2), Float.valueOf(paramFloat1), Float.valueOf(paramFloat2), Integer.valueOf(paramInt3) }))
+    if (paramBoolean) {}
+    for (int i = 1;; i = 0)
     {
-      t.i("!32@/B4Tb64lLpL9SB0DqhCSWgFPYrICdb5Q", "doScene, info: %s", new Object[] { str });
-      ax.tm().d(new l(paramString, paramInt1, str));
+      bxK = i;
       return;
     }
   }
   
-  public final void gj(String paramString)
+  public final void b(Cursor paramCursor)
   {
-    t.i("!32@/B4Tb64lLpL9SB0DqhCSWgFPYrICdb5Q", "Start report");
-    avY = paramString;
-    Object localObject = d.gf(paramString);
-    if (localObject == null) {}
-    a.c localc;
-    label219:
-    label224:
-    do
-    {
-      do
-      {
-        return;
-        if (bwb != 0) {
-          wM();
-        }
-        bwb = 0;
-        if (((a)localObject).vX())
-        {
-          t.i("!32@/B4Tb64lLpL9SB0DqhCSWgFPYrICdb5Q", "need update contact %s", new Object[] { paramString });
-          ax.tl().ri().a(bwf);
-          bwb = 1;
-          ap.a.boA.u(paramString, "");
-          c.fv(paramString);
-          return;
-        }
-        localc = ((a)localObject).aM(false);
-      } while (localc == null);
-      if ((localc.vZ()) && (((a)localObject).vW()))
-      {
-        bwc = com.tencent.mm.modelgeo.d.yO();
-        localObject = ((a)localObject).aM(false);
-        boolean bool;
-        if (buO != null)
-        {
-          if (bn.getInt(buO.optString("ReportLocationType"), 0) == 2)
-          {
-            bool = true;
-            bvb = bool;
-          }
-        }
-        else {
-          if (!bvb) {
-            break label219;
-          }
-        }
-        for (int i = 3;; i = 2)
-        {
-          bwb = i;
-          if ((!com.tencent.mm.modelgeo.d.yP()) && (!com.tencent.mm.modelgeo.d.yQ())) {
-            break label224;
-          }
-          bwc.b(bwg);
-          return;
-          bool = false;
-          break;
-        }
-        a(paramString, 11, 2, 0.0F, 0.0F, 0);
-        return;
-      }
-    } while ((!localc.vZ()) || (((a)localObject).vW()));
-    a(paramString, 11, 1, 0.0F, 0.0F, 0);
+    username = paramCursor.getString(0);
+    aFc = paramCursor.getInt(1);
+    bxH = paramCursor.getInt(2);
+    bxJ = paramCursor.getString(3);
+    bxI = paramCursor.getString(4);
+    bxK = paramCursor.getInt(5);
+    bxL = paramCursor.getInt(6);
   }
   
-  public final void wM()
+  public final String getUsername()
   {
-    t.i("!32@/B4Tb64lLpL9SB0DqhCSWgFPYrICdb5Q", "Stop report");
-    bwb = 0;
-    if (bwc != null) {
-      bwc.c(bwg);
+    if (username == null) {
+      return "";
     }
-    if (ax.qZ()) {
-      ax.tl().ri().b(bwf);
+    return username;
+  }
+  
+  public final ContentValues vj()
+  {
+    ContentValues localContentValues = new ContentValues();
+    if ((aqQ & 0x1) != 0) {
+      localContentValues.put("username", getUsername());
     }
+    if ((aqQ & 0x2) != 0) {
+      localContentValues.put("imgflag", Integer.valueOf(aFc));
+    }
+    if ((aqQ & 0x4) != 0) {
+      localContentValues.put("lastupdatetime", Integer.valueOf(bxH));
+    }
+    if ((aqQ & 0x8) != 0) {
+      localContentValues.put("reserved1", vk());
+    }
+    if ((aqQ & 0x10) != 0) {
+      localContentValues.put("reserved2", vl());
+    }
+    if ((aqQ & 0x20) != 0) {
+      localContentValues.put("reserved3", Integer.valueOf(bxK));
+    }
+    if ((aqQ & 0x40) != 0) {
+      localContentValues.put("reserved4", Integer.valueOf(bxL));
+    }
+    return localContentValues;
+  }
+  
+  public final String vk()
+  {
+    if (bxJ == null) {
+      return "";
+    }
+    return bxJ;
+  }
+  
+  public final String vl()
+  {
+    if (bxI == null) {
+      return "";
+    }
+    return bxI;
+  }
+  
+  public final void vm()
+  {
+    bxL = ((int)(be.Go() / 60L));
+    aqQ |= 0x40;
   }
 }
 

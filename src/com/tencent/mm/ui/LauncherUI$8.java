@@ -1,22 +1,14 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.e.a.gk;
 import com.tencent.mm.sdk.c.c;
-import com.tencent.mm.sdk.platformtools.u;
 
 final class LauncherUI$8
-  extends c
+  extends c<gk>
 {
   LauncherUI$8(LauncherUI paramLauncherUI)
   {
-    super(0);
-  }
-  
-  public final boolean a(b paramb)
-  {
-    u.v("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "appTagUnreadChangeListener, event:%s", new Object[] { paramb.toString() });
-    knl.baj();
-    return false;
+    kum = gk.class.getName().hashCode();
   }
 }
 

@@ -10,17 +10,17 @@ final class MobileVerifyUI$1$1
   
   public final void run()
   {
-    MobileVerifyUI.b(kzd.kzc);
-    if (MobileVerifyUI.c(kzd.kzc) >= 0L)
+    MobileVerifyUI.b(kYk.kYj);
+    if (MobileVerifyUI.c(kYk.kYj) >= 0L)
     {
-      kzd.kzc.kyN.setText(kzd.kzc.getResources().getQuantityString(2131755014, (int)MobileVerifyUI.c(kzd.kzc), new Object[] { Integer.valueOf((int)MobileVerifyUI.c(kzd.kzc)) }));
+      kYk.kYj.kXU.setText(kYk.kYj.getResources().getQuantityString(2131361811, (int)MobileVerifyUI.c(kYk.kYj), new Object[] { Integer.valueOf((int)MobileVerifyUI.c(kYk.kYj)) }));
       return;
     }
-    kzd.kzc.kyN.setVisibility(8);
-    kzd.kzc.kyM.setVisibility(0);
-    MobileVerifyUI.d(kzd.kzc);
-    kzd.kzc.kyM.setEnabled(true);
-    kzd.kzc.kyM.setText(kzd.kzc.getString(2131427716));
+    kYk.kYj.kXU.setVisibility(8);
+    kYk.kYj.kXT.setVisibility(0);
+    MobileVerifyUI.d(kYk.kYj);
+    kYk.kYj.kXT.setEnabled(true);
+    kYk.kYj.kXT.setText(kYk.kYj.getString(2131233857));
   }
 }
 

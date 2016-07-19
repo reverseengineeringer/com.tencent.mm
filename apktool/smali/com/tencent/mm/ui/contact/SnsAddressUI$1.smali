@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lms:Lcom/tencent/mm/ui/contact/SnsAddressUI;
+.field final synthetic lMI:Lcom/tencent/mm/ui/contact/SnsAddressUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 65
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$1;->lms:Lcom/tencent/mm/ui/contact/SnsAddressUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$1;->lMI:Lcom/tencent/mm/ui/contact/SnsAddressUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,7 +46,7 @@
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
     .line 69
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$1;->lms:Lcom/tencent/mm/ui/contact/SnsAddressUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$1;->lMI:Lcom/tencent/mm/ui/contact/SnsAddressUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/SnsAddressUI;->a(Lcom/tencent/mm/ui/contact/SnsAddressUI;)Ljava/util/HashSet;
 
@@ -62,7 +62,7 @@
 
     check-cast v0, [Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->h([Ljava/lang/String;)Ljava/util/List;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/be;->g([Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
@@ -85,14 +85,14 @@
 
     .line 75
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$1;->lms:Lcom/tencent/mm/ui/contact/SnsAddressUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$1;->lMI:Lcom/tencent/mm/ui/contact/SnsAddressUI;
 
     const/4 v2, -0x1
 
     invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/ui/contact/SnsAddressUI;->setResult(ILandroid/content/Intent;)V
 
     .line 76
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$1;->lms:Lcom/tencent/mm/ui/contact/SnsAddressUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsAddressUI$1;->lMI:Lcom/tencent/mm/ui/contact/SnsAddressUI;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/SnsAddressUI;->finish()V
 
@@ -101,9 +101,9 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/contact/SnsAddressUI$1$1;-><init>(Lcom/tencent/mm/ui/contact/SnsAddressUI$1;)V
 
-    const-wide/16 v1, 0x64
+    const-wide/16 v2, 0x64
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/ab;->e(Ljava/lang/Runnable;J)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ad;->e(Ljava/lang/Runnable;J)V
 
     .line 85
     const/4 v0, 0x1
@@ -116,7 +116,7 @@
 
     const-string/jumbo v3, ","
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/be;->b(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

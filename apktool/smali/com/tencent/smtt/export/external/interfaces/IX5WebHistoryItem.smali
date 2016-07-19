@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # virtual methods

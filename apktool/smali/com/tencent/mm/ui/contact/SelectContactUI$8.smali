@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/contact/SelectContactUI;->bhx()V
+    value = Lcom/tencent/mm/ui/contact/SelectContactUI;->bnn()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+.field final synthetic lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 1083
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$8;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    .line 1085
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$8;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,8 +40,8 @@
     .locals 2
 
     .prologue
-    .line 1094
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$8;->lmm:Lcom/tencent/mm/ui/contact/SelectContactUI;
+    .line 1096
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SelectContactUI$8;->lMB:Lcom/tencent/mm/ui/contact/SelectContactUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/SelectContactUI;->l(Lcom/tencent/mm/ui/contact/SelectContactUI;)Landroid/widget/TextView;
 
@@ -51,7 +51,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1095
+    .line 1097
     return-void
 .end method
 
@@ -59,7 +59,7 @@
     .locals 0
 
     .prologue
-    .line 1090
+    .line 1092
     return-void
 .end method
 
@@ -67,6 +67,6 @@
     .locals 0
 
     .prologue
-    .line 1086
+    .line 1088
     return-void
 .end method

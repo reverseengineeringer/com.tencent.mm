@@ -9,24 +9,24 @@ public final class g
 {
   public g(i parami)
   {
-    mbE = 2064;
-    mbF = 2;
-    mbH = parami;
+    mNI = 2064;
+    mNJ = 2;
+    mNL = parami;
   }
   
-  public final byte[] bn(byte[] paramArrayOfByte)
+  public final byte[] bv(byte[] paramArrayOfByte)
   {
-    int k = mbH.mbR;
-    byte[] arrayOfByte1 = mbH.mbM.bor();
-    Object localObject = mbH.mbN;
-    byte[] arrayOfByte2 = new byte[mcz];
+    int k = mNL.mNV;
+    byte[] arrayOfByte1 = mNL.mNQ.bvp();
+    Object localObject = mNL.mNR;
+    byte[] arrayOfByte2 = new byte[mOD];
     int i;
-    if (mcz <= 0)
+    if (mOD <= 0)
     {
       localObject = new f();
       ao localao = new ao();
-      localObject = ((f)localObject).bo(arrayOfByte1);
-      paramArrayOfByte = localao.o(paramArrayOfByte, arrayOfByte2);
+      localObject = ((f)localObject).bw(arrayOfByte1);
+      paramArrayOfByte = localao.n(paramArrayOfByte, arrayOfByte2);
       arrayOfByte2 = new byte[localObject.length + paramArrayOfByte.length];
       if (arrayOfByte1.length <= 0) {
         break label209;
@@ -37,10 +37,10 @@ public final class g
     for (int j = 1;; j = 0)
     {
       System.arraycopy(paramArrayOfByte, 0, arrayOfByte2, i, paramArrayOfByte.length);
-      paramArrayOfByte = super.g(arrayOfByte2, mbF, j + 1);
-      a(mbz, mbE, mbA, mbH._uin, mbB, mbC, k, mbD, paramArrayOfByte);
-      return super.boo();
-      System.arraycopy(mby, mcB, arrayOfByte2, 0, mcz);
+      paramArrayOfByte = super.i(arrayOfByte2, mNJ, j + 1);
+      a(mND, mNI, mNE, mNL._uin, mNF, mNG, k, mNH, paramArrayOfByte);
+      return super.bvm();
+      System.arraycopy(mNC, mOF, arrayOfByte2, 0, mOD);
       break;
       label209:
       i = 0;

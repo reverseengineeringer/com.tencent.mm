@@ -15,21 +15,21 @@
 
 
 # instance fields
-.field coY:Landroid/widget/ImageView;
+.field ckm:Landroid/widget/ImageView;
 
-.field cqM:Landroid/widget/TextView;
+.field clZ:Landroid/widget/TextView;
 
-.field eEo:Landroid/widget/TextView;
+.field eKo:Landroid/widget/TextView;
 
-.field fxW:Ljava/lang/String;
+.field fHa:Ljava/lang/String;
 
-.field kMY:Landroid/widget/TextView;
+.field lmn:Landroid/widget/TextView;
 
-.field kMZ:Landroid/view/View;
+.field lmo:Landroid/view/View;
 
-.field kNa:Landroid/widget/ProgressBar;
+.field lmp:Landroid/widget/ProgressBar;
 
-.field final synthetic kNb:Lcom/tencent/mm/ui/bindgooglecontact/a;
+.field final synthetic lmq:Lcom/tencent/mm/ui/bindgooglecontact/a;
 
 .field position:I
 
@@ -40,12 +40,12 @@
 
     .prologue
     .line 204
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->kNb:Lcom/tencent/mm/ui/bindgooglecontact/a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->lmq:Lcom/tencent/mm/ui/bindgooglecontact/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 205
-    const v0, 0x7f070fb2
+    const v0, 0x7f1008d3
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -53,10 +53,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->coY:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->ckm:Landroid/widget/ImageView;
 
     .line 206
-    const v0, 0x7f070fb3
+    const v0, 0x7f1008d4
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -64,19 +64,19 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->cqM:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->clZ:Landroid/widget/TextView;
 
     .line 207
-    const v0, 0x7f070fb5
+    const v0, 0x7f1008d6
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->kMZ:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->lmo:Landroid/view/View;
 
     .line 208
-    const v0, 0x7f070fb6
+    const v0, 0x7f1008d7
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -84,10 +84,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eEo:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->eKo:Landroid/widget/TextView;
 
     .line 209
-    const v0, 0x7f070fb7
+    const v0, 0x7f1008d8
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -95,10 +95,10 @@
 
     check-cast v0, Landroid/widget/ProgressBar;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->kNa:Landroid/widget/ProgressBar;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->lmp:Landroid/widget/ProgressBar;
 
     .line 210
-    const v0, 0x7f070fb4
+    const v0, 0x7f1008d5
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -106,10 +106,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->kMY:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->lmn:Landroid/widget/TextView;
 
     .line 212
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->kMZ:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/a$b;->lmo:Landroid/view/View;
 
     new-instance v1, Lcom/tencent/mm/ui/bindgooglecontact/a$b$1;
 

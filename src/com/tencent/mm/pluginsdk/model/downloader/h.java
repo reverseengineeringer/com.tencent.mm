@@ -1,34 +1,34 @@
 package com.tencent.mm.pluginsdk.model.downloader;
 
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
-import com.tencent.mm.sdk.platformtools.x;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
+import com.tencent.mm.sdk.platformtools.z;
 import java.io.File;
 
 public abstract class h
   implements l
 {
-  protected a iCo;
+  protected a iYY;
   
   public h(a parama)
   {
-    iCo = parama;
+    iYY = parama;
   }
   
-  public static void Ah(String paramString)
+  public static void Ch(String paramString)
   {
-    if (!ay.kz(paramString))
+    if (!be.kf(paramString))
     {
       paramString = new File(paramString);
       if (paramString.exists()) {
-        u.i("!44@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXMAMxEF9mAhnQ=", "Delete previous file result: %b", new Object[] { Boolean.valueOf(paramString.delete()) });
+        v.i("MicroMsg.FileDownloaderImplBase", "Delete previous file result: %b", new Object[] { Boolean.valueOf(paramString.delete()) });
       }
     }
   }
   
-  public static String bn(String paramString)
+  public static String ko(String paramString)
   {
-    return x.CO(paramString + System.currentTimeMillis());
+    return z.Fb(paramString + System.currentTimeMillis());
   }
 }
 

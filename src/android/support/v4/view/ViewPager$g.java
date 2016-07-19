@@ -9,12 +9,12 @@ final class ViewPager$g
   
   public final void onChanged()
   {
-    gA.ai();
+    gV.ah();
   }
   
   public final void onInvalidated()
   {
-    gA.ai();
+    gV.ah();
   }
 }
 

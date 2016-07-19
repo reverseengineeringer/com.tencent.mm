@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kqe:Lcom/tencent/mm/ui/MMAppMgr$Receiver;
+.field final synthetic kPj:Lcom/tencent/mm/ui/MMAppMgr$Receiver;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 176
-    iput-object p1, p0, Lcom/tencent/mm/ui/MMAppMgr$Receiver$2;->kqe:Lcom/tencent/mm/ui/MMAppMgr$Receiver;
+    .line 182
+    iput-object p1, p0, Lcom/tencent/mm/ui/MMAppMgr$Receiver$2;->kPj:Lcom/tencent/mm/ui/MMAppMgr$Receiver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,9 +40,9 @@
     .locals 0
 
     .prologue
-    .line 179
-    invoke-static {}, Lcom/tencent/mm/ui/MMAppMgr;->bbd()V
+    .line 185
+    invoke-static {}, Lcom/tencent/mm/ui/MMAppMgr;->bgo()V
 
-    .line 180
+    .line 186
     return-void
 .end method

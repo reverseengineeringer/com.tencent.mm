@@ -21,7 +21,7 @@
 .method public abstract a(Landroid/support/v7/internal/view/menu/p;)Z
 .end method
 
-.method public abstract bj()Z
+.method public abstract bk()Z
 .end method
 
 .method public abstract d(Landroid/support/v7/internal/view/menu/h;)Z
@@ -30,5 +30,5 @@
 .method public abstract e(Landroid/support/v7/internal/view/menu/h;)Z
 .end method
 
-.method public abstract q(Z)V
+.method public abstract p(Z)V
 .end method

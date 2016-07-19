@@ -16,6 +16,16 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Lcom/tencent/mm/modelgeo/Addr;",
+        ">;"
+    }
+.end annotation
+
 
 # direct methods
 .method constructor <init>()V
@@ -43,79 +53,79 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bNN:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bHj:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bNO:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bHk:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bNP:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bHl:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bNQ:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bHm:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bNR:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bHn:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bNS:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bHo:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bNT:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bHp:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bNU:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bHq:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bNV:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bHr:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bNW:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bHs:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bNX:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bHt:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v1
 
-    iput v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bNY:F
+    iput v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bHu:F
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v1
 
-    iput v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bNZ:F
+    iput v1, v0, Lcom/tencent/mm/modelgeo/Addr;->bHv:F
 
     return-object v0
 .end method

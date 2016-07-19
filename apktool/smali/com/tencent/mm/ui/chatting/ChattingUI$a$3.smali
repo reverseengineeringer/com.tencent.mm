@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnCancelListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;->bfE()V
+    value = Lcom/tencent/mm/ui/chatting/ChattingUI$a;->U(Landroid/content/Intent;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+.field final synthetic fhw:Landroid/content/Intent;
 
-.field final synthetic laH:Lcom/tencent/mm/pluginsdk/model/h;
+.field final synthetic lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/chatting/ChattingUI$a;Lcom/tencent/mm/pluginsdk/model/h;)V
+.method constructor <init>(Lcom/tencent/mm/ui/chatting/ChattingUI$a;Landroid/content/Intent;)V
     .locals 0
 
     .prologue
-    .line 8169
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$3;->laF:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 8212
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$3;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$3;->laH:Lcom/tencent/mm/pluginsdk/model/h;
+    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$3;->fhw:Landroid/content/Intent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,15 +40,17 @@
 
 
 # virtual methods
-.method public final onCancel(Landroid/content/DialogInterface;)V
-    .locals 1
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 2
 
     .prologue
-    .line 8172
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$3;->laH:Lcom/tencent/mm/pluginsdk/model/h;
+    .line 8215
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$3;->lAY:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/model/h;->aPo()V
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingUI$a$3;->fhw:Landroid/content/Intent;
 
-    .line 8173
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->a(Lcom/tencent/mm/ui/chatting/ChattingUI$a;Landroid/content/Intent;)V
+
+    .line 8216
     return-void
 .end method

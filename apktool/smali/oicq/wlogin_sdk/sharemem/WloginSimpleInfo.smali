@@ -9,6 +9,15 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator",
+            "<",
+            "Loicq/wlogin_sdk/sharemem/WloginSimpleInfo;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private static final serialVersionUID:J = 0x1L
 

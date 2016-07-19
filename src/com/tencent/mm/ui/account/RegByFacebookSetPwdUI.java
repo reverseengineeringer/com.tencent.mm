@@ -10,68 +10,56 @@ import android.os.Bundle;
 import android.widget.EditText;
 import com.tencent.mm.model.ah;
 import com.tencent.mm.model.c;
-import com.tencent.mm.modelsimple.ad;
-import com.tencent.mm.protocal.b.alx;
-import com.tencent.mm.r.j;
+import com.tencent.mm.modelsimple.ab;
+import com.tencent.mm.protocal.b.ami;
 import com.tencent.mm.storage.h;
+import com.tencent.mm.t.j;
 import com.tencent.mm.ui.base.g;
 
 public class RegByFacebookSetPwdUI
   extends SetPwdUI
 {
-  protected final void Gb()
+  protected final void Gy()
   {
-    qb(2131427735);
+    rR(2131234391);
   }
   
   protected final ProgressDialog a(Context paramContext, String paramString1, String paramString2, DialogInterface.OnCancelListener paramOnCancelListener)
   {
-    return g.a(paramContext, getString(2131427730), true, paramOnCancelListener);
+    return g.a(paramContext, getString(2131234382), true, paramOnCancelListener);
   }
   
-  protected final j a(String paramString1, String paramString2, alx paramalx)
+  protected final j a(String paramString1, String paramString2, ami paramami)
   {
-    return new ad(paramString1);
+    return new ab(paramString1);
   }
   
-  protected final String bbH()
+  protected final String bgT()
   {
-    return ((EditText)findViewById(2131167036)).getText().toString();
+    return ((EditText)findViewById(2131758675)).getText().toString();
   }
   
-  protected final String bbI()
+  protected final String bgU()
   {
-    return ((EditText)findViewById(2131167037)).getText().toString();
+    return ((EditText)findViewById(2131758676)).getText().toString();
   }
   
-  protected final int bbJ()
+  protected final int bgV()
   {
     return 382;
   }
   
   protected final int getLayoutId()
   {
-    return 2131362426;
+    return 2130904255;
   }
   
-  public void onCreate(Bundle paramBundle)
-  {
-    super.onCreate(paramBundle);
-    avm = getIntent().getStringExtra("setpwd_ticket");
-    qb(2131427735);
-  }
-  
-  public void onDestroy()
-  {
-    super.onDestroy();
-  }
-  
-  protected final boolean q(int paramInt1, int paramInt2, String paramString)
+  protected final boolean o(int paramInt1, int paramInt2, String paramString)
   {
     if ((paramInt1 == 0) && (paramInt2 == 0))
     {
-      ah.tD().rn().set(57, Integer.valueOf(0));
-      g.a(this, getString(2131427731, new Object[] { (String)ah.tD().rn().get(5, null) }), getString(2131427740), new DialogInterface.OnClickListener()
+      ah.tE().ro().set(57, Integer.valueOf(0));
+      g.a(this, getString(2131234389, new Object[] { (String)ah.tE().ro().get(5, null) }), getString(2131234380), new DialogInterface.OnClickListener()
       {
         public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
         {
@@ -80,26 +68,38 @@ public class RegByFacebookSetPwdUI
       });
       return true;
     }
-    return m(paramInt1, paramInt2, paramString);
+    return k(paramInt1, paramInt2, paramString);
   }
   
-  protected final void qn(int paramInt)
+  public void onCreate(Bundle paramBundle)
   {
-    switch (2.kuq[(paramInt - 1)])
+    super.onCreate(paramBundle);
+    ahd = getIntent().getStringExtra("setpwd_ticket");
+    rR(2131234391);
+  }
+  
+  public void onDestroy()
+  {
+    super.onDestroy();
+  }
+  
+  protected final void sf(int paramInt)
+  {
+    switch (2.kTx[(paramInt - 1)])
     {
     default: 
       return;
     case 1: 
-      g.e(this, 2131427741, 2131427740);
+      g.f(this, 2131234378, 2131234380);
       return;
     case 2: 
-      g.e(this, 2131427742, 2131427740);
+      g.f(this, 2131234379, 2131234380);
       return;
     case 3: 
-      g.e(this, 2131427538, 2131427525);
+      g.f(this, 2131235806, 2131230905);
       return;
     }
-    g.e(this, 2131427539, 2131427525);
+    g.f(this, 2131235808, 2131230905);
   }
 }
 

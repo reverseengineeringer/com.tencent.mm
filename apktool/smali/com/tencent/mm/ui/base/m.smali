@@ -7,21 +7,21 @@
 
 
 # instance fields
-.field public eqd:Ljava/lang/String;
+.field public evo:Ljava/lang/String;
 
 .field private iconId:I
 
-.field private jK:I
+.field private kb:I
 
-.field private jR:I
+.field private ki:I
 
-.field private kFu:I
+.field public leA:Landroid/view/ContextMenu$ContextMenuInfo;
 
-.field private kFv:Landroid/graphics/drawable/Drawable;
+.field private leB:Landroid/view/MenuItem$OnMenuItemClickListener;
 
-.field public kFw:Landroid/view/ContextMenu$ContextMenuInfo;
+.field private ley:I
 
-.field private kFx:Landroid/view/MenuItem$OnMenuItemClickListener;
+.field private lez:Landroid/graphics/drawable/Drawable;
 
 .field private title:Ljava/lang/CharSequence;
 
@@ -35,10 +35,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 28
-    iput p1, p0, Lcom/tencent/mm/ui/base/m;->jR:I
+    iput p1, p0, Lcom/tencent/mm/ui/base/m;->ki:I
 
     .line 29
-    iput p2, p0, Lcom/tencent/mm/ui/base/m;->jK:I
+    iput p2, p0, Lcom/tencent/mm/ui/base/m;->kb:I
 
     .line 30
     return-void
@@ -113,7 +113,7 @@
 
     .prologue
     .line 39
-    iget v0, p0, Lcom/tencent/mm/ui/base/m;->jK:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/m;->kb:I
 
     return v0
 .end method
@@ -123,7 +123,7 @@
 
     .prologue
     .line 96
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/m;->kFv:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/m;->lez:Landroid/graphics/drawable/Drawable;
 
     if-nez v0, :cond_1
 
@@ -133,7 +133,7 @@
     if-eqz v0, :cond_0
 
     .line 98
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -159,7 +159,7 @@
 
     .line 102
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/m;->kFv:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/m;->lez:Landroid/graphics/drawable/Drawable;
 
     goto :goto_0
 .end method
@@ -179,7 +179,7 @@
 
     .prologue
     .line 34
-    iget v0, p0, Lcom/tencent/mm/ui/base/m;->jR:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/m;->ki:I
 
     return v0
 .end method
@@ -189,7 +189,7 @@
 
     .prologue
     .line 215
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/m;->kFw:Landroid/view/ContextMenu$ContextMenuInfo;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/m;->leA:Landroid/view/ContextMenu$ContextMenuInfo;
 
     return-object v0
 .end method
@@ -234,16 +234,16 @@
     if-nez v0, :cond_1
 
     .line 62
-    iget v0, p0, Lcom/tencent/mm/ui/base/m;->kFu:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/m;->ley:I
 
     if-eqz v0, :cond_0
 
     .line 63
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/m;->kFu:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/m;->ley:I
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -344,12 +344,12 @@
 
     .prologue
     .line 207
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/m;->kFx:Landroid/view/MenuItem$OnMenuItemClickListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/m;->leB:Landroid/view/MenuItem$OnMenuItemClickListener;
 
     if-eqz v0, :cond_0
 
     .line 208
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/m;->kFx:Landroid/view/MenuItem$OnMenuItemClickListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/m;->leB:Landroid/view/MenuItem$OnMenuItemClickListener;
 
     invoke-interface {v0, p0}, Landroid/view/MenuItem$OnMenuItemClickListener;->onMenuItemClick(Landroid/view/MenuItem;)Z
 
@@ -452,7 +452,7 @@
 
     .prologue
     .line 84
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/m;->kFv:Landroid/graphics/drawable/Drawable;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/m;->lez:Landroid/graphics/drawable/Drawable;
 
     .line 85
     return-object p0
@@ -492,7 +492,7 @@
 
     .prologue
     .line 202
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/m;->kFx:Landroid/view/MenuItem$OnMenuItemClickListener;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/m;->leB:Landroid/view/MenuItem$OnMenuItemClickListener;
 
     .line 203
     return-object p0
@@ -535,7 +535,7 @@
 
     .prologue
     .line 55
-    iput p1, p0, Lcom/tencent/mm/ui/base/m;->kFu:I
+    iput p1, p0, Lcom/tencent/mm/ui/base/m;->ley:I
 
     .line 56
     return-object p0

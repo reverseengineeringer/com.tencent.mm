@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private qj:Z
+.field private qx:Z
 
-.field private qk:Z
+.field private qy:Z
 
 
 # direct methods
@@ -28,12 +28,12 @@
     .line 1171
     const/4 v0, 0x0
 
-    const v1, 0x7f0100a7
+    const v1, 0x7f01001f
 
     invoke-direct {p0, p1, v0, v1}, Landroid/widget/ListView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 1172
-    iput-boolean p2, p0, Landroid/support/v7/internal/widget/ListPopupWindow$a;->qk:Z
+    iput-boolean p2, p0, Landroid/support/v7/internal/widget/ListPopupWindow$a;->qy:Z
 
     .line 1173
     const/4 v0, 0x0
@@ -49,7 +49,7 @@
 
     .prologue
     .line 1120
-    iput-boolean p1, p0, Landroid/support/v7/internal/widget/ListPopupWindow$a;->qj:Z
+    iput-boolean p1, p0, Landroid/support/v7/internal/widget/ListPopupWindow$a;->qx:Z
 
     return p1
 .end method
@@ -61,7 +61,7 @@
 
     .prologue
     .line 1249
-    iget-boolean v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$a;->qk:Z
+    iget-boolean v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$a;->qy:Z
 
     if-nez v0, :cond_0
 
@@ -88,7 +88,7 @@
 
     .prologue
     .line 1229
-    iget-boolean v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$a;->qk:Z
+    iget-boolean v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$a;->qy:Z
 
     if-nez v0, :cond_0
 
@@ -110,66 +110,7 @@
     goto :goto_0
 .end method
 
-.method public final isFocused()Z
-    .locals 1
-
-    .prologue
-    .line 1239
-    iget-boolean v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$a;->qk:Z
-
-    if-nez v0, :cond_0
-
-    invoke-super {p0}, Landroid/widget/ListView;->isFocused()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final isInTouchMode()Z
-    .locals 1
-
-    .prologue
-    .line 1219
-    iget-boolean v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$a;->qk:Z
-
-    if-eqz v0, :cond_0
-
-    iget-boolean v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$a;->qj:Z
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    invoke-super {p0}, Landroid/widget/ListView;->isInTouchMode()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    :cond_1
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_2
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method final k(II)I
+.method final i(II)I
     .locals 11
 
     .prologue
@@ -336,4 +277,63 @@
     move v2, v3
 
     goto :goto_5
+.end method
+
+.method public final isFocused()Z
+    .locals 1
+
+    .prologue
+    .line 1239
+    iget-boolean v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$a;->qy:Z
+
+    if-nez v0, :cond_0
+
+    invoke-super {p0}, Landroid/widget/ListView;->isFocused()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final isInTouchMode()Z
+    .locals 1
+
+    .prologue
+    .line 1219
+    iget-boolean v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$a;->qy:Z
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$a;->qx:Z
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    invoke-super {p0}, Landroid/widget/ListView;->isInTouchMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    :cond_1
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

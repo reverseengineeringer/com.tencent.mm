@@ -10,8 +10,8 @@ final class WXEntryActivity$2
   
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    WXEntryActivity.b(cBs);
-    cBs.finish();
+    WXEntryActivity.b(cym);
+    cym.finish();
   }
 }
 

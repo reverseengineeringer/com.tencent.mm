@@ -5,15 +5,15 @@ import java.util.List;
 
 public abstract class e
 {
-  public abstract h H();
+  public abstract h G();
   
-  public abstract List I();
+  public abstract List<Fragment> H();
   
   public abstract Fragment a(Bundle paramBundle, String paramString);
   
   public abstract void a(Bundle paramBundle, String paramString, Fragment paramFragment);
   
-  public abstract Fragment.SavedState e(Fragment paramFragment);
+  public abstract Fragment.SavedState d(Fragment paramFragment);
   
   public abstract boolean executePendingTransactions();
   

@@ -3,16 +3,16 @@ package com.tencent.mm.plugin.accountsync.ui;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
-import com.tencent.mm.ag.b.i;
-import com.tencent.mm.ag.b.i.a;
+import com.tencent.mm.aj.b.i;
+import com.tencent.mm.aj.b.i.a;
 import com.tencent.mm.modelfriend.q;
 import com.tencent.mm.modelfriend.r;
-import com.tencent.mm.sdk.platformtools.ay;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.be;
+import com.tencent.mm.sdk.platformtools.v;
 import com.tencent.mm.ui.base.g;
-import com.tencent.mm.ui.d.a.b;
-import com.tencent.mm.ui.d.a.c.a;
-import com.tencent.mm.ui.d.a.d;
+import com.tencent.mm.ui.e.a.b;
+import com.tencent.mm.ui.e.a.c.a;
+import com.tencent.mm.ui.e.a.d;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,21 +23,21 @@ final class InviteFacebookFriendsUI$10$1
   
   public final void a(b paramb)
   {
-    u.e("!56@/B4Tb64lLpI1xvkrLEXBhhg96dI0eWcb0x/iHQfmkIg6em4Z80TVkw==", "fbinvite error");
+    v.e("MicroMsg.InviteFacebookFriendsUI", "fbinvite error");
   }
   
   public final void a(d paramd)
   {
-    u.e("!56@/B4Tb64lLpI1xvkrLEXBhhg96dI0eWcb0x/iHQfmkIg6em4Z80TVkw==", "fbinvite error");
+    v.e("MicroMsg.InviteFacebookFriendsUI", "fbinvite error");
   }
   
-  public final void g(Bundle paramBundle)
+  public final void i(Bundle paramBundle)
   {
-    u.i("!56@/B4Tb64lLpI1xvkrLEXBhhg96dI0eWcb0x/iHQfmkIg6em4Z80TVkw==", "fbinvite oncomplete");
+    v.i("MicroMsg.InviteFacebookFriendsUI", "fbinvite oncomplete");
     paramBundle = new ArrayList();
-    paramBundle.add(new b.i.a(33, Integer.toString(coT.length)));
-    com.tencent.mm.model.ah.tD().rp().b(new b.i(paramBundle));
-    paramBundle = coT;
+    paramBundle.add(new b.i.a(33, Integer.toString(ckh.length)));
+    com.tencent.mm.model.ah.tE().rq().b(new b.i(paramBundle));
+    paramBundle = ckh;
     int j = paramBundle.length;
     int i = 0;
     while (i < j)
@@ -45,29 +45,29 @@ final class InviteFacebookFriendsUI$10$1
       long l = paramBundle[i];
       q localq = new q();
       username = Long.toString(l);
-      bMG = 5;
-      bIs = ((int)ay.FR());
-      com.tencent.mm.modelfriend.ah.zu().a(localq);
+      bGa = 5;
+      bBD = ((int)be.Go());
+      com.tencent.mm.modelfriend.ah.zH().a(localq);
       i += 1;
     }
-    g.a(coU.coP, 2131428257, 2131430877, 2131430901, 2131430902, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+    g.a(cki.ckd, 2131232570, 2131231028, 2131231050, 2131230966, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
-        InviteFacebookFriendsUI.a(coU.coP).Gk();
+        InviteFacebookFriendsUI.a(cki.ckd).GH();
       }
     }, new DialogInterface.OnClickListener()
     {
       public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
       {
-        coU.coP.finish();
+        cki.ckd.finish();
       }
     });
   }
   
   public final void onCancel()
   {
-    u.e("!56@/B4Tb64lLpI1xvkrLEXBhhg96dI0eWcb0x/iHQfmkIg6em4Z80TVkw==", "fbinvite cancle");
+    v.e("MicroMsg.InviteFacebookFriendsUI", "fbinvite cancle");
   }
 }
 

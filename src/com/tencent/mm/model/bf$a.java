@@ -2,7 +2,7 @@ package com.tencent.mm.model;
 
 public abstract interface bf$a
 {
-  public abstract boolean uK();
+  public abstract boolean uM();
 }
 
 /* Location:

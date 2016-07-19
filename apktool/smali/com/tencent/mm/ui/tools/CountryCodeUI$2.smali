@@ -16,9 +16,19 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/tencent/mm/ui/tools/d;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic luc:Lcom/tencent/mm/ui/tools/CountryCodeUI;
+.field final synthetic lVe:Lcom/tencent/mm/ui/tools/CountryCodeUI;
 
 
 # direct methods
@@ -27,7 +37,7 @@
 
     .prologue
     .line 109
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$2;->luc:Lcom/tencent/mm/ui/tools/CountryCodeUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CountryCodeUI$2;->lVe:Lcom/tencent/mm/ui/tools/CountryCodeUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,7 +57,7 @@
 
     new-instance v0, Ljava/lang/Integer;
 
-    iget v1, p1, Lcom/tencent/mm/ui/tools/d;->eCk:I
+    iget v1, p1, Lcom/tencent/mm/ui/tools/d;->eIJ:I
 
     invoke-direct {v0, v1}, Ljava/lang/Integer;-><init>(I)V
 
@@ -57,7 +67,7 @@
 
     new-instance v1, Ljava/lang/Integer;
 
-    iget v2, p2, Lcom/tencent/mm/ui/tools/d;->eCk:I
+    iget v2, p2, Lcom/tencent/mm/ui/tools/d;->eIJ:I
 
     invoke-direct {v1, v2}, Ljava/lang/Integer;-><init>(I)V
 

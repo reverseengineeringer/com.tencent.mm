@@ -18,30 +18,30 @@
 
 
 # instance fields
-.field final synthetic gGI:J
+.field final synthetic fkf:I
 
-.field final synthetic gGJ:Lcom/tencent/mm/plugin/sns/a/a/f;
+.field final synthetic gNk:J
 
-.field final synthetic gGK:I
+.field final synthetic gNl:Lcom/tencent/mm/plugin/sns/a/a/f;
 
-.field final synthetic gGL:Z
+.field final synthetic gNm:Z
 
 
 # direct methods
 .method constructor <init>(Lcom/tencent/mm/plugin/sns/a/a/f;JIZ)V
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 174
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/a/a/f$2;->gGJ:Lcom/tencent/mm/plugin/sns/a/a/f;
+    .line 179
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sns/a/a/f$2;->gNl:Lcom/tencent/mm/plugin/sns/a/a/f;
 
-    iput-wide p2, p0, Lcom/tencent/mm/plugin/sns/a/a/f$2;->gGI:J
+    iput-wide p2, p0, Lcom/tencent/mm/plugin/sns/a/a/f$2;->gNk:J
 
-    iput p4, p0, Lcom/tencent/mm/plugin/sns/a/a/f$2;->gGK:I
+    iput p4, p0, Lcom/tencent/mm/plugin/sns/a/a/f$2;->fkf:I
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/a/a/f$2;->gGL:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sns/a/a/f$2;->gNm:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -54,17 +54,17 @@
     .locals 5
 
     .prologue
-    .line 177
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/f$2;->gGJ:Lcom/tencent/mm/plugin/sns/a/a/f;
+    .line 182
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sns/a/a/f$2;->gNl:Lcom/tencent/mm/plugin/sns/a/a/f;
 
-    iget-wide v1, p0, Lcom/tencent/mm/plugin/sns/a/a/f$2;->gGI:J
+    iget-wide v2, p0, Lcom/tencent/mm/plugin/sns/a/a/f$2;->gNk:J
 
-    iget v3, p0, Lcom/tencent/mm/plugin/sns/a/a/f$2;->gGK:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sns/a/a/f$2;->fkf:I
 
-    iget-boolean v4, p0, Lcom/tencent/mm/plugin/sns/a/a/f$2;->gGL:Z
+    iget-boolean v4, p0, Lcom/tencent/mm/plugin/sns/a/a/f$2;->gNm:Z
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/tencent/mm/plugin/sns/a/a/f;->b(JIZ)V
+    invoke-virtual {v0, v2, v3, v1, v4}, Lcom/tencent/mm/plugin/sns/a/a/f;->b(JIZ)V
 
-    .line 178
+    .line 183
     return-void
 .end method

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic kRP:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
+.field final synthetic lrR:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 232
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$1;->kRP:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
+    .line 224
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$1;->lrR:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,34 +36,34 @@
 
 
 # virtual methods
-.method public final eu(I)V
+.method public final fg(I)V
     .locals 1
 
     .prologue
-    .line 235
+    .line 227
     packed-switch p1, :pswitch_data_0
 
-    .line 241
+    .line 233
     :goto_0
     return-void
 
-    .line 237
+    .line 229
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$1;->kRP:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$1;->lrR:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChatFooterCustom;->a(Lcom/tencent/mm/ui/chatting/ChatFooterCustom;)V
 
     goto :goto_0
 
-    .line 240
+    .line 232
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$1;->kRP:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$1;->lrR:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChatFooterCustom;->b(Lcom/tencent/mm/ui/chatting/ChatFooterCustom;)V
 
     goto :goto_0
 
-    .line 235
+    .line 227
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

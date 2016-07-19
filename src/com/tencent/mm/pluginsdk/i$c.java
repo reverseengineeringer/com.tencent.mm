@@ -8,7 +8,7 @@ public abstract interface i$c
 {
   public abstract boolean a(Context paramContext, g paramg, b paramb);
   
-  public abstract g p(Context paramContext, String paramString);
+  public abstract g q(Context paramContext, String paramString);
 }
 
 /* Location:

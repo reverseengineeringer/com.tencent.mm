@@ -57,12 +57,12 @@
 
 # virtual methods
 .method public toString()Ljava/lang/String;
-    .locals 8
+    .locals 9
 
     .prologue
     const/4 v1, 0x0
 
-    const/16 v7, 0xa
+    const/16 v8, 0xa
 
     .line 82
     new-instance v2, Ljava/lang/StringBuilder;
@@ -78,13 +78,13 @@
 
     move-result-object v0
 
-    iget-wide v3, p0, Lcom/tencent/mm/modelsfs/SFSContext$Statistics;->totalActualSize:J
+    iget-wide v4, p0, Lcom/tencent/mm/modelsfs/SFSContext$Statistics;->totalActualSize:J
 
-    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -94,13 +94,13 @@
 
     move-result-object v0
 
-    iget-wide v3, p0, Lcom/tencent/mm/modelsfs/SFSContext$Statistics;->blockSizeUsed:J
+    iget-wide v4, p0, Lcom/tencent/mm/modelsfs/SFSContext$Statistics;->blockSizeUsed:J
 
-    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -110,13 +110,13 @@
 
     move-result-object v0
 
-    iget-wide v3, p0, Lcom/tencent/mm/modelsfs/SFSContext$Statistics;->blockSizeEmpty:J
+    iget-wide v4, p0, Lcom/tencent/mm/modelsfs/SFSContext$Statistics;->blockSizeEmpty:J
 
-    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -126,13 +126,13 @@
 
     move-result-object v0
 
-    iget-wide v3, p0, Lcom/tencent/mm/modelsfs/SFSContext$Statistics;->overflowActualSize:J
+    iget-wide v4, p0, Lcom/tencent/mm/modelsfs/SFSContext$Statistics;->overflowActualSize:J
 
-    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move v0, v1
 
@@ -162,7 +162,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
@@ -178,7 +178,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
@@ -194,7 +194,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
@@ -204,13 +204,13 @@
 
     move-result-object v4
 
-    iget-wide v5, v3, Lcom/tencent/mm/modelsfs/SFSContext$Statistics$BlockType;->actualSize:J
+    iget-wide v6, v3, Lcom/tencent/mm/modelsfs/SFSContext$Statistics$BlockType;->actualSize:J
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 90
     add-int/lit8 v0, v0, 0x1
@@ -242,7 +242,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -258,7 +258,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -274,7 +274,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -290,7 +290,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -306,7 +306,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -322,7 +322,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 98
     add-int/lit8 v1, v1, 0x1

@@ -1,20 +1,20 @@
 package com.tencent.mm.model;
 
 import com.tencent.mm.compatible.util.a.a;
-import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.v;
 
 final class d$b
   implements a.a
 {
   private d$b(d paramd) {}
   
-  public final void bT(int paramInt)
+  public final void cl(int paramInt)
   {
     switch (paramInt)
     {
     case 0: 
     default: 
-      u.v("!44@/B4Tb64lLpKIvgnNzDIfLOmAua1hOQXldT/A4qy1crA=", "jacks UNKNOW_AUDIOFOCUS_LOSS DEFAULT");
+      v.v("MicroMsg.AudioHelperTool", "jacks UNKNOW_AUDIOFOCUS_LOSS DEFAULT");
     }
     do
     {
@@ -25,21 +25,21 @@ final class d$b
           do
           {
             return;
-            u.v("!44@/B4Tb64lLpKIvgnNzDIfLOmAua1hOQXldT/A4qy1crA=", "jacks AUDIOFOCUS_GAIN");
-          } while (bzR.bzP == null);
-          bzR.bzP.mM();
+            v.v("MicroMsg.AudioHelperTool", "jacks AUDIOFOCUS_GAIN");
+          } while (bsU.bsS == null);
+          bsU.bsS.kZ();
           return;
-          u.v("!44@/B4Tb64lLpKIvgnNzDIfLOmAua1hOQXldT/A4qy1crA=", "jacks AUDIOFOCUS_LOSS");
-        } while (bzR.bzP == null);
-        bzR.bzP.mN();
+          v.v("MicroMsg.AudioHelperTool", "jacks AUDIOFOCUS_LOSS");
+        } while (bsU.bsS == null);
+        bsU.bsS.la();
         return;
-        u.v("!44@/B4Tb64lLpKIvgnNzDIfLOmAua1hOQXldT/A4qy1crA=", "jacks AUDIOFOCUS_LOSS_TRANSIENT");
-      } while (bzR.bzP == null);
-      bzR.bzP.mO();
+        v.v("MicroMsg.AudioHelperTool", "jacks AUDIOFOCUS_LOSS_TRANSIENT");
+      } while (bsU.bsS == null);
+      bsU.bsS.lb();
       return;
-      u.v("!44@/B4Tb64lLpKIvgnNzDIfLOmAua1hOQXldT/A4qy1crA=", "jacks AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK");
-    } while (bzR.bzP == null);
-    bzR.bzP.mP();
+      v.v("MicroMsg.AudioHelperTool", "jacks AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK");
+    } while (bsU.bsS == null);
+    bsU.bsS.lc();
   }
 }
 

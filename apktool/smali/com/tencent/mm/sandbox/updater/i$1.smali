@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic jUl:I
+.field final synthetic ktM:I
 
-.field final synthetic jUm:Lcom/tencent/mm/sandbox/updater/i;
+.field final synthetic ktN:Lcom/tencent/mm/sandbox/updater/i;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 343
-    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/i$1;->jUm:Lcom/tencent/mm/sandbox/updater/i;
+    .line 371
+    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/i$1;->ktN:Lcom/tencent/mm/sandbox/updater/i;
 
-    iput p2, p0, Lcom/tencent/mm/sandbox/updater/i$1;->jUl:I
+    iput p2, p0, Lcom/tencent/mm/sandbox/updater/i$1;->ktM:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,8 +44,8 @@
     .locals 3
 
     .prologue
-    .line 347
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/i$1;->jUm:Lcom/tencent/mm/sandbox/updater/i;
+    .line 375
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/i$1;->ktN:Lcom/tencent/mm/sandbox/updater/i;
 
     iget-object v0, v0, Lcom/tencent/mm/sandbox/updater/i;->mContext:Landroid/content/Context;
 
@@ -57,13 +57,13 @@
 
     check-cast v0, Landroid/app/NotificationManager;
 
-    .line 348
+    .line 376
     const/16 v1, 0x63
 
     invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->cancel(I)V
 
-    .line 350
-    const-string/jumbo v0, "!32@/B4Tb64lLpJ7QNEsxPPC9wTRgf8U5GU7"
+    .line 378
+    const-string/jumbo v0, "MicroMsg.UpdaterManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -71,7 +71,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/sandbox/updater/i$1;->jUl:I
+    iget v2, p0, Lcom/tencent/mm/sandbox/updater/i$1;->ktM:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -81,36 +81,36 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 351
-    iget v0, p0, Lcom/tencent/mm/sandbox/updater/i$1;->jUl:I
+    .line 379
+    iget v0, p0, Lcom/tencent/mm/sandbox/updater/i$1;->ktM:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_0
 
-    .line 352
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/i$1;->jUm:Lcom/tencent/mm/sandbox/updater/i;
+    .line 380
+    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/i$1;->ktN:Lcom/tencent/mm/sandbox/updater/i;
 
-    iget v0, v0, Lcom/tencent/mm/sandbox/updater/i;->jSL:I
+    iget v0, v0, Lcom/tencent/mm/sandbox/updater/i;->ksf:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 353
+    .line 381
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 354
+    .line 382
     const-string/jumbo v1, "com.tencent.mm.sandbox.updater.intent.ACTION_EXIT_APP"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 355
-    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/i$1;->jUm:Lcom/tencent/mm/sandbox/updater/i;
+    .line 383
+    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/i$1;->ktN:Lcom/tencent/mm/sandbox/updater/i;
 
     iget-object v1, v1, Lcom/tencent/mm/sandbox/updater/i;->mContext:Landroid/content/Context;
 
@@ -118,7 +118,7 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 358
+    .line 386
     :cond_0
     return-void
 .end method
